@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TRUTH — Search the Scriptures</title>
+  <meta name="description" content="The TRUTH Bible Study App. Ask any question of the King James scriptures and receive an answer built precept upon precept, layer by layer." />
+  <meta name="author" content="Victor King" />
+  <meta name="robots" content="noindex" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg: #100f0d;
+      --bg-2: #18161300;
+      --panel: #1c1a16;
+      --panel-2: #232019;
+      --line: #34302700;
+      --line-solid: #353027;
+      --text: #ece6d8;
+      --text-soft: #b7af9c;
+      --text-faint: #7d766783;
+      --faint: #7d7667;
+      --gold: #c9a25a;
+      --oxblood: #b3543f;
+      --user: #2a2a3a;
+      --serif: "EB Garamond", Georgia, serif;
+      --mono: "Courier Prime", "Courier New", monospace;
+
+      /* Layer accents */
+      --l1: #c9a25a; /* gold — text */
+      --l2: #6fae9f; /* teal — language */
+      --l3: #7e9bd1; /* blue — cross-ref */
+      --l4: #b3543f; /* oxblood — inference */
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body { height: 100%; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--serif);
+      font-size: 1.12rem;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      overflow: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ---- Header ---- */
+    header {
+      flex: 0 0 auto;
+      border-bottom: 1px solid var(--line-solid);
+      background: linear-gradient(180deg, #161410, #100f0d);
+      padding: 0.9rem 1.4rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .id { display: flex; align-items: baseline; gap: 0.8rem; }
+    .id .mark {
+      font-family: var(--mono);
+      font-size: 1.05rem;
+      letter-spacing: 0.34em;
+      color: var(--gold);
+      text-transform: uppercase;
+    }
+    .id .sub {
+      font-family: var(--mono);
+      font-size: 0.64rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--faint);
+    }
+    header a.home {
+      font-family: var(--mono);
+      font-size: 0.66rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text-soft);
+      text-decoration: none;
+    }
+    header a.home:hover { color: var(--gold); }
+
+    /* ---- Layer legend ---- */
+    .legend {
+      flex: 0 0 auto;
+      display: flex;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+      padding: 0.6rem 1.4rem;
+      border-bottom: 1px solid var(--line-solid);
+      background: var(--bg);
+    }
+    .legend span {
+      font-family: var(--mono);
+      font-size: 0.66rem;
+      letter-spacing: 0.08em;
+      color: var(--text-faint);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .legend .dot {
+      width: 0.55rem; height: 0.55rem; border-radius: 50%;
+      display: inline-block;
+    }
+    .dot.l1 { background: var(--l1); }
+    .dot.l2 { background: var(--l2); }
+    .dot.l3 { background: var(--l3); }
+    .dot.l4 { background: var(--l4); }
+
+    /* ---- Chat stream ---- */
+    main {
+      flex: 1 1 auto;
+      overflow-y: auto;
+      padding: 2rem 1.4rem 1rem;
+    }
+    .stream {
+      max-width: 50rem;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1.6rem;
+    }
+
+    .msg { display: flex; flex-direction: column; gap: 0.4rem; }
+    .msg .who {
+      font-family: var(--mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-faint);
+    }
+    .msg.user { align-items: flex-end; }
+    .msg.user .bubble {
+      background: var(--user);
+      border: 1px solid #3a3a4d;
+      color: var(--text);
+      padding: 0.8rem 1.1rem;
+      border-radius: 4px 4px 0 4px;
+      max-width: 85%;
+      font-style: italic;
+    }
+    .msg.bot .bubble {
+      width: 100%;
+    }
+
+    /* Layer blocks inside an answer */
+    .layer-block {
+      border-left: 2px solid var(--line-solid);
+      padding: 0.5rem 0 0.5rem 1rem;
+      margin: 0 0 0.9rem;
+    }
+    .layer-block:last-child { margin-bottom: 0; }
+    .layer-block .ltag {
+      font-family: var(--mono);
+      font-size: 0.66rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.1rem 0.5rem;
+      border-radius: 3px;
+      display: inline-block;
+      margin-bottom: 0.5rem;
+      color: #100f0d;
+      font-weight: 700;
+    }
+    .layer-block .body { white-space: pre-wrap; }
+    .layer-block .body :where(p) { margin: 0 0 0.6rem; }
+
+    .layer-block.L1 { border-left-color: var(--l1); }
+    .layer-block.L1 .ltag { background: var(--l1); }
+    .layer-block.L2 { border-left-color: var(--l2); }
+    .layer-block.L2 .ltag { background: var(--l2); }
+    .layer-block.L3 { border-left-color: var(--l3); }
+    .layer-block.L3 .ltag { background: var(--l3); }
+    .layer-block.L4 { border-left-color: var(--l4); }
+    .layer-block.L4 .ltag { background: var(--l4); }
+
+    /* Plain (un-tagged) answer text */
+    .plain { white-space: pre-wrap; }
+
+    /* Scripture quotes rendered inside bodies */
+    .layer-block .body .ref {
+      font-family: var(--mono);
+      font-size: 0.85em;
+      color: var(--gold);
+    }
+
+    /* ---- Greeting / empty state ---- */
+    .greeting {
+      max-width: 50rem;
+      margin: 1.5rem auto 0;
+      text-align: center;
+      color: var(--text-soft);
+    }
+    .greeting .verse {
+      font-style: italic;
+      font-size: 1.35rem;
+      color: var(--text);
+      margin: 0 auto 0.6rem;
+      max-width: 36rem;
+    }
+    .greeting cite {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      color: var(--gold);
+      font-style: normal;
+    }
+    .suggest {
+      display: flex; flex-wrap: wrap; gap: 0.6rem;
+      justify-content: center;
+      margin-top: 1.8rem;
+    }
+    .suggest button {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 0.98rem;
+      color: var(--text-soft);
+      background: var(--panel);
+      border: 1px solid var(--line-solid);
+      padding: 0.55rem 1rem;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: border-color 0.15s, color 0.15s;
+    }
+    .suggest button:hover { border-color: var(--gold); color: var(--text); }
+
+    /* ---- Typing indicator ---- */
+    .typing { display: inline-flex; gap: 0.35rem; padding: 0.4rem 0; }
+    .typing i {
+      width: 0.5rem; height: 0.5rem; border-radius: 50%;
+      background: var(--gold); opacity: 0.4;
+      animation: blink 1.2s infinite ease-in-out;
+    }
+    .typing i:nth-child(2) { animation-delay: 0.2s; }
+    .typing i:nth-child(3) { animation-delay: 0.4s; }
+    @keyframes blink {
+      0%, 80%, 100% { opacity: 0.25; transform: translateY(0); }
+      40% { opacity: 1; transform: translateY(-3px); }
+    }
+
+    .error-note {
+      color: var(--oxblood);
+      font-family: var(--mono);
+      font-size: 0.8rem;
+    }
+
+    /* ---- Composer ---- */
+    footer.composer {
+      flex: 0 0 auto;
+      border-top: 1px solid var(--line-solid);
+      background: linear-gradient(0deg, #161410, #100f0d);
+      padding: 1rem 1.4rem 1.2rem;
+    }
+    .composer .row {
+      max-width: 50rem;
+      margin: 0 auto;
+      display: flex;
+      align-items: flex-end;
+      gap: 0.7rem;
+      background: var(--panel);
+      border: 1px solid var(--line-solid);
+      border-radius: 8px;
+      padding: 0.5rem 0.5rem 0.5rem 0.9rem;
+    }
+    .composer textarea {
+      flex: 1 1 auto;
+      resize: none;
+      background: transparent;
+      border: none;
+      color: var(--text);
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      line-height: 1.5;
+      max-height: 9rem;
+      padding: 0.4rem 0;
+    }
+    .composer textarea:focus { outline: none; }
+    .composer textarea::placeholder { color: var(--text-faint); font-style: italic; }
+    .composer button.send {
+      flex: 0 0 auto;
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #100f0d;
+      background: var(--gold);
+      border: none;
+      border-radius: 6px;
+      padding: 0.7rem 1.2rem;
+      cursor: pointer;
+      transition: opacity 0.15s;
+    }
+    .composer button.send:disabled { opacity: 0.4; cursor: default; }
+    .composer .hint {
+      max-width: 50rem;
+      margin: 0.55rem auto 0;
+      font-family: var(--mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.06em;
+      color: var(--text-faint);
+      text-align: center;
+    }
+
+    /* Scrollbar */
+    main::-webkit-scrollbar { width: 10px; }
+    main::-webkit-scrollbar-thumb {
+      background: #2a2620; border-radius: 6px;
+    }
+
+    @media (max-width: 600px) {
+      .legend { gap: 0.8rem; }
+      .id .sub { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="id">
+      <span class="mark">TRUTH</span>
+      <span class="sub">Search&nbsp;the&nbsp;Scriptures</span>
+    </div>
+    <a class="home" href="index.html">&larr; Home</a>
+  </header>
+
+  <div class="legend" aria-hidden="true">
+    <span><i class="dot l1"></i>L1 &middot; Text (KJV)</span>
+    <span><i class="dot l2"></i>L2 &middot; Hebrew / Greek</span>
+    <span><i class="dot l3"></i>L3 &middot; Cross-Reference</span>
+    <span><i class="dot l4"></i>L4 &middot; Flagged Inference</span>
+  </div>
+
+  <main id="main">
+    <div class="stream" id="stream">
+      <div class="greeting" id="greeting">
+        <p class="verse">"Search the scriptures; for in them ye think ye have eternal life: and they are they which testify of me."</p>
+        <cite>John 5:39 &mdash; KJV</cite>
+        <div class="suggest" id="suggest">
+          <button type="button">What does it mean to be born of water and of the Spirit?</button>
+          <button type="button">Trace the word &ldquo;atonement&rdquo; through the Old Testament.</button>
+          <button type="button">What is the first day of the week in scripture?</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="composer">
+    <form class="row" id="form">
+      <textarea
+        id="input"
+        rows="1"
+        placeholder="Ask of the scriptures&hellip;"
+        autocomplete="off"></textarea>
+      <button type="submit" class="send" id="send">Search</button>
+    </form>
+    <p class="hint">Precept upon precept &middot; King James Version only &middot; Inference is flagged [L4]</p>
+  </footer>
+
+  <script>
+    (function () {
+      "use strict";
+
+      var stream = document.getElementById("stream");
+      var main = document.getElementById("main");
+      var form = document.getElementById("form");
+      var input = document.getElementById("input");
+      var sendBtn = document.getElementById("send");
+      var greeting = document.getElementById("greeting");
+      var suggest = document.getElementById("suggest");
+
+      // Full conversation history sent to the API each turn.
+      var history = [];
+      var busy = false;
+
+      // ---- helpers ----------------------------------------------------
+
+      function scrollDown() {
+        main.scrollTop = main.scrollHeight;
+      }
+
+      function escapeHtml(s) {
+        return s
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;");
+      }
+
+      // Highlight KJV references like "John 5:39" or "Isaiah 28:10-12".
+      function markRefs(html) {
+        return html.replace(
+          /\b((?:[1-3]\s)?[A-Z][a-z]+(?:\sof\s[A-Z][a-z]+)?)\s(\d+):(\d+(?:-\d+)?)\b/g,
+          '<span class="ref">$1&nbsp;$2:$3</span>'
+        );
+      }
+
+      // Parse a model answer into layer blocks by its [L1].. tags.
+      // Falls back to a plain block if no tags are present.
+      function renderAnswer(text) {
+        var tagRe = /\[(L[1-4])\]/g;
+        var matches = [];
+        var m;
+        while ((m = tagRe.exec(text)) !== null) {
+          matches.push({ tag: m[1], index: m.index, end: tagRe.lastIndex });
+        }
+
+        if (matches.length === 0) {
+          var plain = document.createElement("div");
+          plain.className = "plain";
+          plain.innerHTML = markRefs(escapeHtml(text));
+          return plain;
+        }
+
+        var frag = document.createDocumentFragment();
+
+        // Any preamble before the first tag.
+        var lead = text.slice(0, matches[0].index).trim();
+        if (lead) {
+          var p = document.createElement("div");
+          p.className = "plain";
+          p.innerHTML = markRefs(escapeHtml(lead));
+          frag.appendChild(p);
+        }
+
+        var labels = {
+          L1: "L1 · Text",
+          L2: "L2 · Language",
+          L3: "L3 · Cross-Reference",
+          L4: "L4 · Flagged Inference",
+        };
+
+        for (var i = 0; i < matches.length; i++) {
+          var cur = matches[i];
+          var sliceEnd = i + 1 < matches.length ? matches[i + 1].index : text.length;
+          var bodyText = text.slice(cur.end, sliceEnd).trim();
+          // Strip a leading heading word the model may repeat (e.g. "TEXT —").
+          bodyText = bodyText.replace(/^[—\-:\s]+/, "");
+
+          var block = document.createElement("div");
+          block.className = "layer-block " + cur.tag;
+
+          var tag = document.createElement("span");
+          tag.className = "ltag";
+          tag.textContent = labels[cur.tag] || cur.tag;
+          block.appendChild(tag);
+
+          var body = document.createElement("div");
+          body.className = "body";
+          body.innerHTML = markRefs(escapeHtml(bodyText));
+          block.appendChild(body);
+
+          frag.appendChild(block);
+        }
+
+        return frag;
+      }
+
+      function addUser(text) {
+        var msg = document.createElement("div");
+        msg.className = "msg user";
+        var who = document.createElement("div");
+        who.className = "who";
+        who.textContent = "You";
+        var bubble = document.createElement("div");
+        bubble.className = "bubble";
+        bubble.textContent = text;
+        msg.appendChild(who);
+        msg.appendChild(bubble);
+        stream.appendChild(msg);
+        scrollDown();
+      }
+
+      function addBotShell() {
+        var msg = document.createElement("div");
+        msg.className = "msg bot";
+        var who = document.createElement("div");
+        who.className = "who";
+        who.textContent = "TRUTH";
+        var bubble = document.createElement("div");
+        bubble.className = "bubble";
+        var typing = document.createElement("div");
+        typing.className = "typing";
+        typing.innerHTML = "<i></i><i></i><i></i>";
+        bubble.appendChild(typing);
+        msg.appendChild(who);
+        msg.appendChild(bubble);
+        stream.appendChild(msg);
+        scrollDown();
+        return bubble;
+      }
+
+      function setBusy(state) {
+        busy = state;
+        sendBtn.disabled = state;
+        input.disabled = state;
+      }
+
+      // ---- send -------------------------------------------------------
+
+      function ask(question) {
+        if (busy) return;
+        question = question.trim();
+        if (!question) return;
+
+        if (greeting) {
+          greeting.remove();
+          greeting = null;
+        }
+
+        addUser(question);
+        history.push({ role: "user", content: question });
+        input.value = "";
+        autoGrow();
+        setBusy(true);
+
+        var bubble = addBotShell();
+
+        fetch("/api/chat", {
+          method: "POST",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify({ messages: history }),
+        })
+          .then(function (res) {
+            return res.json().then(function (data) {
+              return { ok: res.ok, data: data };
+            });
+          })
+          .then(function (r) {
+            if (!r.ok || !r.data || typeof r.data.reply !== "string") {
+              var errMsg =
+                (r.data && r.data.error) ||
+                "The study engine returned no answer. Please try again.";
+              bubble.innerHTML =
+                '<p class="error-note">' + escapeHtml(errMsg) + "</p>";
+              // Don't keep a failed turn in history.
+              history.pop();
+              return;
+            }
+            var reply = r.data.reply;
+            history.push({ role: "assistant", content: reply });
+            bubble.innerHTML = "";
+            bubble.appendChild(renderAnswer(reply));
+            scrollDown();
+          })
+          .catch(function () {
+            bubble.innerHTML =
+              '<p class="error-note">Could not reach the study engine. Check your connection and try again.</p>';
+            history.pop();
+          })
+          .finally(function () {
+            setBusy(false);
+            input.focus();
+            scrollDown();
+          });
+      }
+
+      // ---- composer behavior -----------------------------------------
+
+      function autoGrow() {
+        input.style.height = "auto";
+        input.style.height = Math.min(input.scrollHeight, 144) + "px";
+      }
+
+      input.addEventListener("input", autoGrow);
+
+      input.addEventListener("keydown", function (e) {
+        if (e.key === "Enter" && !e.shiftKey) {
+          e.preventDefault();
+          ask(input.value);
+        }
+      });
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        ask(input.value);
+      });
+
+      if (suggest) {
+        suggest.addEventListener("click", function (e) {
+          var btn = e.target.closest("button");
+          if (btn) ask(btn.textContent);
+        });
+      }
+
+      input.focus();
+    })();
+  </script>
+</body>
+</html>
