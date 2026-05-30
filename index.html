@@ -24,8 +24,6 @@
       <span class="brand">Search&nbsp;the&nbsp;Scriptures</span>
       <nav>
         <a href="#method">The Method</a>
-        <a href="#books">Books</a>
-        <a href="study.html">Open the App</a>
       </nav>
     </div>
   </header>
@@ -41,30 +39,8 @@
           <span class="app-name">The TRUTH Bible Study App</span>
         </h1>
         <p class="tagline">Precept upon precept. Line upon line.</p>
-        <a class="cta" href="study.html">Begin Studying</a>
+        <span class="cta cta-soon">Coming Soon</span>
         <a class="cta ghost" href="#method">See the Method</a>
-      </div>
-    </section>
-
-    <!-- ANCHOR + MISSION VERSES -->
-    <section class="verses">
-      <div class="wrap">
-        <div class="verse">
-          <p class="verse-label">The Anchor</p>
-          <blockquote>
-            "For precept must be upon precept, precept upon precept; line upon
-            line, line upon line; here a little, and there a little."
-          </blockquote>
-          <cite>Isaiah 28:10 &mdash; KJV</cite>
-        </div>
-        <div class="verse">
-          <p class="verse-label">The Mission</p>
-          <blockquote>
-            "Search the scriptures; for in them ye think ye have eternal life:
-            and they are they which testify of me."
-          </blockquote>
-          <cite>John 5:39 &mdash; KJV</cite>
-        </div>
       </div>
     </section>
 
@@ -123,51 +99,6 @@
       </div>
     </section>
 
-    <!-- BOOKS -->
-    <section class="block" id="books">
-      <div class="wrap">
-        <div class="section-head">
-          <span class="section-num">II &mdash; From the Press</span>
-          <h2>Two volumes, forthcoming.</h2>
-          <p>
-            Companion studies from Search the Scriptures Press, written in the
-            same four-layer discipline as the app.
-          </p>
-        </div>
-
-        <div class="books">
-          <article class="book">
-            <div class="cover">
-              <span class="cover-top">Search the Scriptures Press</span>
-              <span class="cover-title">Precept<br />Upon<br />Precept</span>
-              <span class="cover-author">Victor King</span>
-            </div>
-            <p class="status">Coming Soon</p>
-            <h3>Precept Upon Precept</h3>
-            <p>
-              The method itself, set down at length &mdash; how to let line build
-              upon line until the whole counsel of scripture stands plain.
-            </p>
-          </article>
-
-          <article class="book">
-            <div class="cover">
-              <span class="cover-top">Search the Scriptures Press</span>
-              <span class="cover-title">The<br />Calendar</span>
-              <span class="cover-author">Victor King</span>
-            </div>
-            <p class="status">Coming Soon</p>
-            <h3>The Calendar</h3>
-            <p>
-              The appointed times of scripture, traced from Genesis to the
-              feasts &mdash; the reckoning of days, months, and seasons by the
-              text alone.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
   </main>
 
   <footer>
@@ -184,5 +115,11 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
+
+  <!-- Vercel Analytics -->
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>

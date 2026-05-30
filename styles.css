@@ -1,15 +1,15 @@
 /* Search the Scriptures — landing styles. Scholarly, minimal, print-like. */
 
 :root {
-  --ink: #1a1814;
-  --ink-soft: #4a4640;
-  --ink-faint: #8a847a;
-  --paper: #f7f4ec;
-  --paper-2: #efeadd;
-  --rule: #d8d0bf;
-  --accent: #6b1f1f; /* oxblood */
-  --accent-soft: #8a3a2a;
-  --gold: #9a7b3f;
+  --ink: #1a1a1a;
+  --ink-soft: #4a4a4a;
+  --ink-faint: #8a8a8a;
+  --paper: #ffffff;
+  --paper-2: #f5f5f5;
+  --rule: #e2e2e2;
+  --accent: #0f1f3d; /* deep navy */
+  --accent-soft: #1c3257;
+  --gold: #5a6b85; /* muted slate */
   --serif: "EB Garamond", Georgia, "Times New Roman", serif;
   --mono: "Courier Prime", "Courier New", monospace;
   --measure: 42rem;
@@ -139,43 +139,13 @@ a:hover {
   background: var(--accent);
   color: var(--paper);
 }
-
-/* ---- Verse blocks ---- */
-.verses {
-  padding: 4rem 0;
-  border-bottom: 1px solid var(--rule);
+/* Non-interactive "Coming Soon" badge */
+.cta-soon {
+  cursor: default;
 }
-.verses .wrap {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  max-width: 56rem;
-}
-.verse {
-  position: relative;
-  padding-left: 1.4rem;
-  border-left: 2px solid var(--accent);
-}
-.verse-label {
-  font-family: var(--mono);
-  font-size: 0.7rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--ink-faint);
-  margin-bottom: 0.7rem;
-}
-.verse blockquote {
-  margin: 0 0 0.7rem;
-  font-size: 1.3rem;
-  font-style: italic;
-  line-height: 1.5;
-}
-.verse cite {
-  font-family: var(--mono);
-  font-size: 0.78rem;
-  letter-spacing: 0.1em;
-  font-style: normal;
-  color: var(--accent);
+.cta-soon:hover {
+  background: var(--accent);
+  color: var(--paper);
 }
 
 /* ---- Generic section ---- */
@@ -256,68 +226,6 @@ section.block {
   color: var(--accent);
 }
 
-/* ---- Books ---- */
-.books {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2.5rem;
-}
-.book {
-  border: 1px solid var(--rule);
-  background: var(--paper-2);
-  padding: 2.5rem 2rem;
-  position: relative;
-}
-.book .cover {
-  aspect-ratio: 3 / 4;
-  background: linear-gradient(160deg, #2a2520, #4a4036);
-  border: 1px solid var(--ink);
-  margin-bottom: 1.6rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 1.6rem 1.4rem;
-  color: var(--paper);
-  box-shadow: 0 18px 40px -28px rgba(0, 0, 0, 0.7);
-}
-.book .cover .cover-top {
-  font-family: var(--mono);
-  font-size: 0.62rem;
-  letter-spacing: 0.24em;
-  text-transform: uppercase;
-  color: var(--gold);
-}
-.book .cover .cover-title {
-  font-size: 1.7rem;
-  line-height: 1.12;
-  font-style: italic;
-}
-.book .cover .cover-author {
-  font-family: var(--mono);
-  font-size: 0.62rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: rgba(247, 244, 236, 0.7);
-}
-.book .status {
-  font-family: var(--mono);
-  font-size: 0.68rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 0.7rem;
-}
-.book h3 {
-  font-size: 1.7rem;
-  font-weight: 500;
-  margin: 0 0 0.6rem;
-}
-.book p {
-  margin: 0;
-  color: var(--ink-soft);
-  font-size: 1.05rem;
-}
-
 /* ---- Footer ---- */
 footer {
   padding: 3.5rem 0 4rem;
@@ -339,9 +247,7 @@ footer .ref {
 }
 
 @media (max-width: 720px) {
-  .verses .wrap,
-  .layers,
-  .books {
+  .layers {
     grid-template-columns: 1fr;
   }
   .masthead .wrap {
