@@ -3,185 +3,370 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Search the Scriptures — Precept upon precept. Line upon line.</title>
-  <meta name="description" content="The TRUTH Bible Study App. Search the scriptures the King James way: precept upon precept, line upon line. A four-layer study method anchored in Isaiah 28:10." />
+  <title>Search the Scriptures — The TRUTH Bible Study App</title>
+  <meta name="description" content="The TRUTH Bible Study App. Ask a question of the King James scriptures; answers come back precept upon precept, line upon line — tagged text, language, cross-reference, and flagged inference." />
   <meta name="author" content="Victor King" />
 
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Search the Scriptures — The TRUTH Bible Study App" />
-  <meta property="og:description" content="Precept upon precept. Line upon line. Search the scriptures: for in them ye think ye have eternal life." />
+  <meta property="og:description" content="Precept upon precept. Line upon line. Ask the King James scriptures and study the answer in four labeled layers." />
   <meta property="og:site_name" content="Search the Scriptures" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    :root {
+      --ink: #1a1a1a;
+      --ink-soft: #4a4a4a;
+      --ink-faint: #8a8a8a;
+      --paper: #ffffff;
+      --paper-2: #f5f5f5;
+      --rule: #e2e2e2;
+      --accent: #0f1f3d;       /* deep navy */
+      --accent-soft: #1c3257;
+      --slate: #5a6b85;
+      --serif: "EB Garamond", Georgia, "Times New Roman", serif;
+      --mono: "Courier Prime", "Courier New", monospace;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body { height: 100%; }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--serif);
+      font-size: 1.12rem;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+    }
+
+    .wrap {
+      width: 100%;
+      max-width: 52rem;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* ---- Header ---- */
+    header {
+      border-bottom: 1px solid var(--rule);
+      padding: 2.4rem 0 2rem;
+      text-align: center;
+    }
+    header h1 {
+      font-size: clamp(2.2rem, 6vw, 3.4rem);
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      line-height: 1.05;
+      margin: 0 0 0.5rem;
+    }
+    header .tagline {
+      font-style: italic;
+      color: var(--ink-soft);
+      font-size: clamp(1.1rem, 2.6vw, 1.4rem);
+      margin: 0;
+    }
+
+    /* ---- Chat ---- */
+    main {
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+    }
+    .chat {
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+      padding: 2rem 0 0;
+    }
+    .messages {
+      flex: 1 1 auto;
+      overflow-y: auto;
+      padding-bottom: 1.5rem;
+    }
+    .msg { margin-bottom: 2rem; }
+
+    .msg-role {
+      font-family: var(--mono);
+      font-size: 0.66rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      margin-bottom: 0.6rem;
+    }
+
+    /* User question */
+    .msg.user .bubble {
+      background: var(--paper-2);
+      border: 1px solid var(--rule);
+      border-left: 2px solid var(--accent);
+      padding: 1rem 1.2rem;
+      font-style: italic;
+      font-size: 1.18rem;
+    }
+
+    /* Assistant four-layer answer */
+    .layer {
+      border: 1px solid var(--rule);
+      border-top: none;
+      padding: 1.1rem 1.3rem;
+    }
+    .layer:first-child {
+      border-top: 1px solid var(--rule);
+    }
+    .layer-head {
+      display: flex;
+      align-items: baseline;
+      gap: 0.7rem;
+      margin-bottom: 0.5rem;
+    }
+    .layer-tag {
+      font-family: var(--mono);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: var(--paper);
+      background: var(--accent);
+      padding: 0.12rem 0.5rem;
+    }
+    .layer:nth-child(2) .layer-tag { background: var(--accent-soft); }
+    .layer:nth-child(3) .layer-tag { background: var(--slate); }
+    .layer:nth-child(4) .layer-tag { background: var(--ink-soft); }
+    .layer-name {
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+    }
+    .layer-body { color: var(--ink-soft); }
+    .layer-body .ref {
+      font-family: var(--mono);
+      font-size: 0.86rem;
+      color: var(--accent);
+    }
+    .layer-body blockquote {
+      margin: 0;
+      font-style: italic;
+      color: var(--ink);
+    }
+    .layer-body .orig {
+      font-family: var(--mono);
+      font-size: 0.9rem;
+      color: var(--accent);
+    }
+
+    .hint {
+      color: var(--ink-faint);
+      font-style: italic;
+      text-align: center;
+      padding: 1.5rem 0;
+    }
+
+    /* ---- Composer ---- */
+    .composer {
+      border-top: 1px solid var(--rule);
+      background: var(--paper);
+      padding: 1.2rem 0 1.4rem;
+      position: sticky;
+      bottom: 0;
+    }
+    .composer form {
+      display: flex;
+      gap: 0.6rem;
+      align-items: flex-end;
+    }
+    .composer textarea {
+      flex: 1 1 auto;
+      resize: none;
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      line-height: 1.5;
+      color: var(--ink);
+      background: var(--paper);
+      border: 1px solid var(--rule);
+      padding: 0.75rem 0.9rem;
+      max-height: 9rem;
+    }
+    .composer textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
+    .composer button {
+      font-family: var(--mono);
+      font-size: 0.78rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--paper);
+      background: var(--accent);
+      border: 1px solid var(--accent);
+      padding: 0.8rem 1.4rem;
+      cursor: pointer;
+      transition: background 0.18s ease, color 0.18s ease;
+      white-space: nowrap;
+    }
+    .composer button:hover {
+      background: transparent;
+      color: var(--accent);
+    }
+
+    /* ---- Footer ---- */
+    footer {
+      border-top: 1px solid var(--rule);
+      text-align: center;
+      padding: 1.6rem 0;
+    }
+    footer p {
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      margin: 0;
+    }
+
+    @media (max-width: 600px) {
+      .composer button { padding: 0.8rem 1rem; }
+    }
+  </style>
 </head>
 <body>
 
-  <header class="masthead">
+  <header>
     <div class="wrap">
-      <span class="brand">Search&nbsp;the&nbsp;Scriptures</span>
-      <nav>
-        <a href="#method">The Method</a>
-        <a href="study.html">Open the App</a>
-      </nav>
+      <h1>Search the Scriptures</h1>
+      <p class="tagline">Precept upon precept. Line upon line.</p>
     </div>
   </header>
 
   <main>
-
-    <!-- HERO -->
-    <section class="hero">
-      <div class="wrap">
-        <p class="eyebrow">Search the Scriptures Press</p>
-        <h1>
-          Search the Scriptures
-          <span class="app-name">The TRUTH Bible Study App</span>
-        </h1>
-        <p class="tagline">Precept upon precept. Line upon line.</p>
-        <span class="cta cta-soon">Coming Soon</span>
-        <a class="cta ghost" href="#method">See the Method</a>
+    <div class="wrap chat">
+      <div class="messages" id="messages" aria-live="polite">
+        <p class="hint" id="hint">
+          Ask a question of the King James scriptures. Each answer is laid out
+          precept upon precept — L1 the text, L2 the language, L3 the
+          cross-reference, L4 flagged inference.
+        </p>
       </div>
-    </section>
+    </div>
 
-    <!-- ANCHOR + MISSION VERSES -->
-    <section class="verses">
+    <div class="composer">
       <div class="wrap">
-        <div class="verse">
-          <p class="verse-label">The Anchor</p>
-          <blockquote>
-            "For precept must be upon precept, precept upon precept; line upon
-            line, line upon line; here a little, and there a little."
-          </blockquote>
-          <cite>Isaiah 28:10 &mdash; KJV</cite>
-        </div>
-        <div class="verse">
-          <p class="verse-label">The Mission</p>
-          <blockquote>
-            "Search the scriptures; for in them ye think ye have eternal life:
-            and they are they which testify of me."
-          </blockquote>
-          <cite>John 5:39 &mdash; KJV</cite>
-        </div>
+        <form id="ask-form">
+          <textarea
+            id="prompt"
+            rows="1"
+            placeholder="Ask the scriptures… e.g. “What does the Bible say about the Sabbath?”"
+            autocomplete="off"
+          ></textarea>
+          <button type="submit">Search</button>
+        </form>
       </div>
-    </section>
-
-    <!-- THE FOUR-LAYER METHOD -->
-    <section class="block" id="method">
-      <div class="wrap">
-        <div class="section-head">
-          <span class="section-num">I &mdash; The Method</span>
-          <h2>Four layers. The Bible interprets itself.</h2>
-          <p>
-            Every answer is built the way Isaiah commanded &mdash; precept laid
-            upon precept. Each layer is labeled so you always know what is
-            <em>text</em> and what is <em>inference</em>.
-          </p>
-        </div>
-
-        <div class="layers">
-          <div class="layer">
-            <span class="layer-tag">L1</span>
-            <h3>The Text</h3>
-            <p>
-              The King James Version, quoted verbatim with book, chapter, and
-              verse. The words stand on their own &mdash; never paraphrased,
-              never softened.
-            </p>
-          </div>
-          <div class="layer">
-            <span class="layer-tag">L2</span>
-            <h3>The Language</h3>
-            <p>
-              The underlying <span class="orig">&#1506;&#1489;&#1512;&#1497;&#1514;</span>
-              and <span class="orig">&Epsilon;&lambda;&lambda;&eta;&nu;&iota;&kappa;&aacute;</span>
-              &mdash; Hebrew and Greek roots, transliteration, and Strong's
-              numbers &mdash; showing what the English may conceal.
-            </p>
-          </div>
-          <div class="layer">
-            <span class="layer-tag">L3</span>
-            <h3>The Cross-Reference</h3>
-            <p>
-              Scripture laid beside scripture. Other passages that define,
-              qualify, and illuminate the text, so the Bible explains the Bible
-              &mdash; here a little, and there a little.
-            </p>
-          </div>
-          <div class="layer">
-            <span class="layer-tag">L4</span>
-            <h3>Flagged Inference</h3>
-            <p>
-              Anything reasoned rather than written is set apart and clearly
-              marked. Inference never masquerades as text; where the scripture
-              is silent, it is said so plainly.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- BOOKS -->
-    <section class="block" id="books">
-      <div class="wrap">
-        <div class="section-head">
-          <span class="section-num">II &mdash; From the Press</span>
-          <h2>Two volumes, forthcoming.</h2>
-          <p>
-            Companion studies from Search the Scriptures Press, written in the
-            same four-layer discipline as the app.
-          </p>
-        </div>
-
-        <div class="books">
-          <article class="book">
-            <div class="cover">
-              <span class="cover-top">Search the Scriptures Press</span>
-              <span class="cover-title">Precept<br />Upon<br />Precept</span>
-              <span class="cover-author">Victor King</span>
-            </div>
-            <p class="status">Coming Soon</p>
-            <h3>Precept Upon Precept</h3>
-            <p>
-              The method itself, set down at length &mdash; how to let line build
-              upon line until the whole counsel of scripture stands plain.
-            </p>
-          </article>
-
-          <article class="book">
-            <div class="cover">
-              <span class="cover-top">Search the Scriptures Press</span>
-              <span class="cover-title">The<br />Calendar</span>
-              <span class="cover-author">Victor King</span>
-            </div>
-            <p class="status">Coming Soon</p>
-            <h3>The Calendar</h3>
-            <p>
-              The appointed times of scripture, traced from Genesis to the
-              feasts &mdash; the reckoning of days, months, and seasons by the
-              text alone.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
+    </div>
   </main>
 
   <footer>
     <div class="wrap">
-      <p class="ref">"Search the scriptures&hellip;" &mdash; John 5:39</p>
-      <p class="colophon">
-        Search the Scriptures Press<br />
-        Written &amp; edited by Victor King<br />
-        &copy; <span id="year">2026</span> &middot; All rights reserved
-      </p>
+      <p>Search the Scriptures Press &middot; Victor King &middot; Isaiah 28:10</p>
     </div>
   </footer>
 
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+    const LAYERS = [
+      { tag: "L1", name: "The Text" },
+      { tag: "L2", name: "The Language" },
+      { tag: "L3", name: "The Cross-Reference" },
+      { tag: "L4", name: "Flagged Inference" },
+    ];
+
+    const messages = document.getElementById("messages");
+    const hint = document.getElementById("hint");
+    const form = document.getElementById("ask-form");
+    const prompt = document.getElementById("prompt");
+
+    // Grow the textarea with its content.
+    prompt.addEventListener("input", () => {
+      prompt.style.height = "auto";
+      prompt.style.height = prompt.scrollHeight + "px";
+    });
+
+    function el(tag, className, html) {
+      const node = document.createElement(tag);
+      if (className) node.className = className;
+      if (html != null) node.innerHTML = html;
+      return node;
+    }
+
+    function addUserMessage(text) {
+      const msg = el("div", "msg user");
+      msg.appendChild(el("div", "msg-role", "You ask"));
+      const bubble = el("div", "bubble");
+      bubble.textContent = text;
+      msg.appendChild(bubble);
+      messages.appendChild(msg);
+    }
+
+    // Render the four-layer answer scaffold. Wire `respond()` to a study
+    // engine to fill each layer with real KJV text, language, and references.
+    function addAnswer(layerContent) {
+      const msg = el("div", "msg assistant");
+      msg.appendChild(el("div", "msg-role", "The scriptures answer"));
+      LAYERS.forEach((layer, i) => {
+        const block = el("div", "layer");
+        const head = el("div", "layer-head");
+        head.appendChild(el("span", "layer-tag", layer.tag));
+        head.appendChild(el("span", "layer-name", layer.name));
+        block.appendChild(head);
+        block.appendChild(el("div", "layer-body", layerContent[i]));
+        msg.appendChild(block);
+      });
+      messages.appendChild(msg);
+    }
+
+    // Placeholder responder. Returns the four labeled layers for a question.
+    // Replace the bodies below with output from the study engine / API.
+    function respond(question) {
+      return [
+        'The King James text bearing on your question will be quoted here, ' +
+          'verbatim, with <span class="ref">book chapter:verse</span> — never ' +
+          'paraphrased, never softened.',
+        'The underlying <span class="orig">&#1506;&#1489;&#1512;&#1497;&#1514;</span> ' +
+          'and <span class="orig">&Epsilon;&lambda;&lambda;&eta;&nu;&iota;&kappa;&aacute;</span> ' +
+          '— Hebrew and Greek roots, transliteration, and Strong&rsquo;s numbers — ' +
+          'showing what the English may conceal.',
+        'Scripture laid beside scripture: the other passages that define, ' +
+          'qualify, and illuminate the text, so the Bible explains the Bible ' +
+          '— here a little, and there a little.',
+        'Anything reasoned rather than written is set apart here and clearly ' +
+          'marked. Where the scripture is silent, it is said so plainly.',
+      ];
+    }
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const text = prompt.value.trim();
+      if (!text) return;
+      if (hint) hint.remove();
+
+      addUserMessage(text);
+      addAnswer(respond(text));
+
+      prompt.value = "";
+      prompt.style.height = "auto";
+      messages.scrollTop = messages.scrollHeight;
+      prompt.focus();
+    });
   </script>
 
   <!-- Vercel Analytics -->
