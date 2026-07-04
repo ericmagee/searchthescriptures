@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Search the Scriptures — The TRUTH Bible Study App</title>
-  <meta name="description" content="The TRUTH Bible Study App. Ask a question of the King James scriptures; answers come back precept upon precept, line upon line — tagged text, language, cross-reference, and flagged inference." />
+  <title>Follow the Precepts — The TRUTH Bible Study App</title>
+  <meta name="description" content="Follow the Precepts — the TRUTH Bible Study App. Ask a question of the King James scriptures; answers come back precept upon precept, line upon line — tagged text, language, cross-reference, and flagged inference." />
   <meta name="author" content="Victor King" />
 
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Search the Scriptures — The TRUTH Bible Study App" />
+  <meta property="og:title" content="Follow the Precepts — The TRUTH Bible Study App" />
   <meta property="og:description" content="Precept upon precept. Line upon line. Ask the King James scriptures and study the answer in four labeled layers." />
-  <meta property="og:site_name" content="Search the Scriptures" />
+  <meta property="og:site_name" content="Follow the Precepts" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -27,6 +27,7 @@
       --accent: #0f1f3d;       /* deep navy */
       --accent-soft: #1c3257;
       --slate: #5a6b85;
+      --error: #7a1f1f;
       --serif: "EB Garamond", Georgia, "Times New Roman", serif;
       --mono: "Courier Prime", "Courier New", monospace;
     }
@@ -140,9 +141,9 @@
       background: var(--accent);
       padding: 0.12rem 0.5rem;
     }
-    .layer:nth-child(2) .layer-tag { background: var(--accent-soft); }
-    .layer:nth-child(3) .layer-tag { background: var(--slate); }
-    .layer:nth-child(4) .layer-tag { background: var(--ink-soft); }
+    .layer[data-tag="L2"] .layer-tag { background: var(--accent-soft); }
+    .layer[data-tag="L3"] .layer-tag { background: var(--slate); }
+    .layer[data-tag="L4"] .layer-tag { background: var(--ink-soft); }
     .layer-name {
       font-family: var(--mono);
       font-size: 0.7rem;
@@ -150,21 +151,23 @@
       text-transform: uppercase;
       color: var(--ink-faint);
     }
-    .layer-body { color: var(--ink-soft); }
-    .layer-body .ref {
-      font-family: var(--mono);
-      font-size: 0.86rem;
-      color: var(--accent);
+    .layer-body {
+      color: var(--ink-soft);
+      white-space: pre-wrap;
     }
-    .layer-body blockquote {
-      margin: 0;
+
+    /* Searching / error states */
+    .msg .searching {
+      border: 1px solid var(--rule);
+      padding: 1.1rem 1.3rem;
       font-style: italic;
-      color: var(--ink);
+      color: var(--ink-faint);
     }
-    .layer-body .orig {
-      font-family: var(--mono);
-      font-size: 0.9rem;
-      color: var(--accent);
+    .msg .engine-error {
+      border: 1px solid var(--rule);
+      border-left: 2px solid var(--error);
+      padding: 1.1rem 1.3rem;
+      color: var(--error);
     }
 
     .hint {
@@ -220,6 +223,14 @@
       background: transparent;
       color: var(--accent);
     }
+    .composer button:disabled {
+      opacity: 0.45;
+      cursor: default;
+    }
+    .composer button:disabled:hover {
+      background: var(--accent);
+      color: var(--paper);
+    }
 
     /* ---- Footer ---- */
     footer {
@@ -245,7 +256,7 @@
 
   <header>
     <div class="wrap">
-      <h1>Search the Scriptures</h1>
+      <h1>Follow the Precepts</h1>
       <p class="tagline">Precept upon precept. Line upon line.</p>
     </div>
   </header>
@@ -270,7 +281,7 @@
             placeholder="Ask the scriptures… e.g. “What does the Bible say about the Sabbath?”"
             autocomplete="off"
           ></textarea>
-          <button type="submit">Search</button>
+          <button type="submit" id="send-btn">Search</button>
         </form>
       </div>
     </div>
@@ -294,6 +305,11 @@
     const hint = document.getElementById("hint");
     const form = document.getElementById("ask-form");
     const prompt = document.getElementById("prompt");
+    const sendBtn = document.getElementById("send-btn");
+
+    // Conversation history sent to the engine so follow-up questions keep context.
+    const history = [];
+    let pending = false;
 
     // Grow the textarea with its content.
     prompt.addEventListener("input", () => {
@@ -301,11 +317,15 @@
       prompt.style.height = prompt.scrollHeight + "px";
     });
 
-    function el(tag, className, html) {
+    function el(tag, className, text) {
       const node = document.createElement(tag);
       if (className) node.className = className;
-      if (html != null) node.innerHTML = html;
+      if (text != null) node.textContent = text;
       return node;
+    }
+
+    function scrollToEnd() {
+      messages.scrollTop = messages.scrollHeight;
     }
 
     function addUserMessage(text) {
@@ -317,55 +337,114 @@
       messages.appendChild(msg);
     }
 
-    // Render the four-layer answer scaffold. Wire `respond()` to a study
-    // engine to fill each layer with real KJV text, language, and references.
-    function addAnswer(layerContent) {
+    // Split the engine reply into its labeled layers. The engine begins each
+    // layer with its tag on its own line: [L1] … [L4]. If no tags are found,
+    // the whole reply is shown as one block rather than lost.
+    function parseLayers(reply) {
+      const parts = reply.split(/^(?=\[L[1-4]\])/m);
+      const found = {};
+      let any = false;
+      for (const part of parts) {
+        const m = part.match(/^\[(L[1-4])\]\s*(?:TEXT|LANGUAGE|CROSS-REFERENCE|INFERENCE)?\s*[—–-]?\s*/i);
+        if (!m) continue;
+        const tag = m[1].toUpperCase();
+        const body = part.slice(m[0].length).trim();
+        if (body) { found[tag] = body; any = true; }
+      }
+      return any ? found : null;
+    }
+
+    function addAnswer(reply) {
       const msg = el("div", "msg assistant");
       msg.appendChild(el("div", "msg-role", "The scriptures answer"));
-      LAYERS.forEach((layer, i) => {
+
+      const layers = parseLayers(reply);
+      if (layers) {
+        LAYERS.forEach((layer) => {
+          if (!layers[layer.tag]) return;
+          const block = el("div", "layer");
+          block.dataset.tag = layer.tag;
+          const head = el("div", "layer-head");
+          head.appendChild(el("span", "layer-tag", layer.tag));
+          head.appendChild(el("span", "layer-name", layer.name));
+          block.appendChild(head);
+          block.appendChild(el("div", "layer-body", layers[layer.tag]));
+          msg.appendChild(block);
+        });
+      } else {
         const block = el("div", "layer");
-        const head = el("div", "layer-head");
-        head.appendChild(el("span", "layer-tag", layer.tag));
-        head.appendChild(el("span", "layer-name", layer.name));
-        block.appendChild(head);
-        block.appendChild(el("div", "layer-body", layerContent[i]));
+        block.dataset.tag = "L1";
+        block.appendChild(el("div", "layer-body", reply));
         msg.appendChild(block);
-      });
+      }
+
       messages.appendChild(msg);
     }
 
-    // Placeholder responder. Returns the four labeled layers for a question.
-    // Replace the bodies below with output from the study engine / API.
-    function respond(question) {
-      return [
-        'The King James text bearing on your question will be quoted here, ' +
-          'verbatim, with <span class="ref">book chapter:verse</span> — never ' +
-          'paraphrased, never softened.',
-        'The underlying <span class="orig">&#1506;&#1489;&#1512;&#1497;&#1514;</span> ' +
-          'and <span class="orig">&Epsilon;&lambda;&lambda;&eta;&nu;&iota;&kappa;&aacute;</span> ' +
-          '— Hebrew and Greek roots, transliteration, and Strong&rsquo;s numbers — ' +
-          'showing what the English may conceal.',
-        'Scripture laid beside scripture: the other passages that define, ' +
-          'qualify, and illuminate the text, so the Bible explains the Bible ' +
-          '— here a little, and there a little.',
-        'Anything reasoned rather than written is set apart here and clearly ' +
-          'marked. Where the scripture is silent, it is said so plainly.',
-      ];
+    function addSearching() {
+      const msg = el("div", "msg assistant");
+      msg.appendChild(el("div", "msg-role", "The scriptures answer"));
+      msg.appendChild(el("div", "searching", "Searching the scriptures…"));
+      messages.appendChild(msg);
+      return msg;
+    }
+
+    function showError(msg, text) {
+      msg.innerHTML = "";
+      msg.appendChild(el("div", "msg-role", "The engine"));
+      msg.appendChild(el("div", "engine-error", text));
+    }
+
+    async function askEngine(question) {
+      history.push({ role: "user", content: question });
+      const waiting = addSearching();
+      scrollToEnd();
+
+      try {
+        const res = await fetch("/api/chat", {
+          method: "POST",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify({ messages: history }),
+        });
+        const data = await res.json();
+
+        if (!res.ok) {
+          history.pop(); // don't keep a turn the engine never answered
+          showError(waiting, (data && data.error) || "The engine could not answer. Try again.");
+          return;
+        }
+
+        const reply = (data && data.reply) || "(No text returned.)";
+        history.push({ role: "assistant", content: reply });
+        waiting.remove();
+        addAnswer(reply);
+      } catch (err) {
+        history.pop();
+        showError(waiting, "Could not reach the study engine. Check your connection and try again.");
+      } finally {
+        pending = false;
+        sendBtn.disabled = false;
+        scrollToEnd();
+        prompt.focus();
+      }
     }
 
     form.addEventListener("submit", (e) => {
       e.preventDefault();
+      if (pending) return;
       const text = prompt.value.trim();
       if (!text) return;
       if (hint) hint.remove();
 
-      addUserMessage(text);
-      addAnswer(respond(text));
+      pending = true;
+      sendBtn.disabled = true;
 
+      addUserMessage(text);
       prompt.value = "";
       prompt.style.height = "auto";
-      messages.scrollTop = messages.scrollHeight;
-      prompt.focus();
+      scrollToEnd();
+
+      askEngine(text);
     });
   </script>
 
