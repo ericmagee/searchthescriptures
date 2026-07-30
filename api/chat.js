@@ -47,7 +47,6 @@ export default async function handler(req, res) {
       .json({ error: "Server is not configured. Missing ANTHROPIC_API_KEY." });
   }
 
-  // Vercel parses JSON bodies automatically, but guard against string bodies too.
   let body = req.body;
   if (typeof body === "string") {
     try {
@@ -64,7 +63,6 @@ export default async function handler(req, res) {
       .json({ error: "Request must include a non-empty `messages` array." });
   }
 
-  // Sanitize to the shape the Anthropic API expects: { role, content } only.
   const clean = [];
   for (const m of messages) {
     if (!m || (m.role !== "user" && m.role !== "assistant")) continue;
@@ -87,11 +85,11 @@ export default async function handler(req, res) {
       body: JSON.stringify({
         model: MODEL,
         max_tokens: MAX_TOKENS,
+        stream: true,
         system: [
           {
             type: "text",
             text: SYSTEM_PROMPT,
-            // Cache the protocol so repeat questions don't re-bill the system prompt.
             cache_control: { type: "ephemeral" },
           },
         ],
@@ -99,29 +97,36 @@ export default async function handler(req, res) {
       }),
     });
 
-    const data = await upstream.json();
-
     if (!upstream.ok) {
+      const data = await upstream.json();
       const detail =
         (data && data.error && data.error.message) || "Upstream API error.";
       return res.status(upstream.status).json({ error: detail });
     }
 
-    const text =
-      Array.isArray(data.content) &&
-      data.content
-        .filter((b) => b.type === "text")
-        .map((b) => b.text)
-        .join("\n")
-        .trim();
+    // Stream the Anthropic SSE response directly to the client.
+    res.setHeader("Content-Type", "text/event-stream");
+    res.setHeader("Cache-Control", "no-cache");
+    res.setHeader("Connection", "keep-alive");
+    res.setHeader("X-Accel-Buffering", "no");
+    res.flushHeaders();
 
-    return res.status(200).json({
-      reply: text || "(No text returned.)",
-      usage: data.usage || null,
-    });
+    const reader = upstream.body.getReader();
+    const decoder = new TextDecoder();
+
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+      res.write(decoder.decode(value, { stream: true }));
+    }
+
+    res.end();
   } catch (err) {
-    return res
-      .status(502)
-      .json({ error: "Could not reach the study engine. " + (err && err.message ? err.message : "") });
+    if (!res.headersSent) {
+      return res
+        .status(502)
+        .json({ error: "Could not reach the study engine. " + (err && err.message ? err.message : "") });
+    }
+    res.end();
   }
 }
