@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__n8n__get_workflow_details",
+      "mcp__n8n__get_execution",
+      "mcp__n8n__get_workflow_history",
+      "mcp__n8n__search_workflows",
+      "mcp__Claude_Code_Remote__list_triggers"
+    ]
+  }
+}
