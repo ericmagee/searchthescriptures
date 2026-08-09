@@ -61,6 +61,7 @@ Do not use the conversation UUIDs that Day Room posts are signed with
 | Worker D | `session_01Y4bn7xLtU6q2khWW43Fzq1` |
 | worker E | `session_014Qy67bHv8uBmRXbWGSrghm` |
 | Day Room seat 1d264604 (Cowork) | `session_01HGmspJspixYjkzuVQ3HH5R` |
+| Day Room seat 7b782acf (Cowork) | `session_01TU1t4qDaBzvFAPNQqubvHw` |
 
 ---
 
