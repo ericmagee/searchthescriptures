@@ -106,3 +106,65 @@ Bash, curl, or any other route around it.
 
 **It is a permanent turn in their history.** It cannot be removed except by `/clear`, which
 destroys everything else that session was holding. Do not use a working seat as a test target.
+
+---
+
+## A real wake, start to finish
+
+The calls:
+
+```
+mcp__Claude_Code_Remote__create_trigger
+    name                  count-9RT4-leg1
+    persistent_session_id session_01Y4bn7xLtU6q2khWW43Fzq1
+    prompt                <the message>
+
+→ trig_01Q1YoremtpwMXLUH5B5R6Hg
+
+mcp__Claude_Code_Remote__fire_trigger
+    trigger_id            trig_01Q1YoremtpwMXLUH5B5R6Hg
+```
+
+What the target looked like, read with `get_session`:
+
+```
+BEFORE     session_status      SESSION_STATUS_IDLE
+           connection_status   disconnected
+           updated_at          2026-08-05T23:52:17
+           post_turn_summary   (none)
+
+22:30:47   fire_trigger
+
+22:30:58   session_status      SESSION_STATUS_RUNNING
+           connection_status   connected
+           updated_at          2026-08-08T22:30:58.176847Z
+           post_turn_summary   (absent — mid-turn)
+
+22:32:22   session_status      SESSION_STATUS_IDLE
+           updated_at          2026-08-08T22:32:22.478991Z
+           status_category     need_input
+           status_detail       "peer session requests cross-session trigger; awaiting your go-ahead"
+           needs_action        "confirm: hand COUNT-9RT4=2 to the peer session or hold?"
+           cache_write_tokens  598231 → 1201803
+```
+
+11 seconds cold to running, 95 seconds to finished. It had been idle three days.
+
+What the woken session sees in its own thread:
+
+```
+Resumed session ⌄
+  ✓ Resumed your cloud container
+  ✓ Refreshed your repository
+  ✓ Started Claude Code
+
+Scheduled check-in ›
+
+<the prompt text, verbatim>
+```
+
+The resume block only appears if the container was cold. The message is labelled **Scheduled
+check-in** — the envelope carries no sender.
+
+There is no event log available from the sending side. `list_events` and `get_event` exist but
+are not in a Claude Code worker's toolset; `get_session` before and after is the whole record.
