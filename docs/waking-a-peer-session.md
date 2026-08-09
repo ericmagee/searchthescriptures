@@ -106,18 +106,3 @@ Bash, curl, or any other route around it.
 
 **It is a permanent turn in their history.** It cannot be removed except by `/clear`, which
 destroys everything else that session was holding. Do not use a working seat as a test target.
-
----
-
-## Template
-
-```
-FROM <your session id> — machine message, not from Eric.
-
-<what you want>
-
-To answer: create a trigger bound to persistent_session_id <your session id>,
-no cron_expression, no run_once_at, then fire it.
-
-If it stops on a permission prompt, say so and stop.
-```
