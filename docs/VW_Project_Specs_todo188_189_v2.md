@@ -23,6 +23,7 @@ and why so no one re-derives the argument.
 | B | Build order contradicted the reprioritised argument. | **Adopted, order corrected.** See §1.9. Load-bearers first; the tripwire last because it only leaves a mark. |
 | C | The lever has an unpriced frequency cost on quotations. | **Adopted.** Spec gains: *never paraphrase a quotation to clear the lint; leave the quote intact and take the lever.* Priced honestly: folds quote scripture and prior record, neither of which speaks in strengthen-verbs, so the lever stays a rare-act guard like its siblings. If usage proves otherwise that is a design review, not a paraphrase licence. |
 | D | `fold_history` already carries two triggers; firing order would be an artifact of the chosen name. | **Adopted as an explicit decision.** Named `zz_fold_verdict_lint` so it fires after the existing triggers, with the ordering rationale written into the trigger comment. Ordering by naming convention is fragile undocumented; documented, it is a fence. |
+| E | §1.7's streak condition ("zero CORRECTED/WEAKENED") would not have fired on entry 556, the specimen the spec was built from. Found during the build run, from the 556 author's own account. | **ERIC-RULED 2026-08-12.** APPROVED: drop `CORRECTED` from the set that breaks a streak — only `WEAKENED` and `BROKEN` break it. Fires correctly on 556. Needs no new column and nothing self-reported. DECLINED: splitting `CORRECTED` into label-vs-substantive classes — it would require a model to grade its own correction, which §2.7 forbids. `verdict_class` as built at W1 stands unchanged. Full finding at BB-0366. |
 
 ## §0.1 — Live-record verification performed during review
 
@@ -165,8 +166,30 @@ spec's own taxonomy, applied to this spec's own instrument. A gate that names it
 every output is the one surface that strain cannot colonise.
 
 ## 1.7 Anti-streak check (the 466/556 lesson, mechanized without self-report)
-The **server** computes the streak: when the last N (default 5) folds by the same session or by
-consecutive queue-order all returned HOLDS-family verdicts with zero CORRECTED/WEAKENED, the value is
+
+**ERIC-RULED 2026-08-12 — THE FIRING CONDITION IS "NO WEAKENED AND NO BROKEN". `CORRECTED` DOES
+NOT BREAK A STREAK.** v1 and the first draft of v2 fired the advisory on "zero CORRECTED/WEAKENED",
+and that condition **would not have fired on entry 556 — the specimen the whole spec was built
+from.** 556 produced two corrections in five folds, so the advisory would have stayed silent.
+
+The 556 author's own account is why: both corrections were word-labels (sun→meta, ha-yoledah→bare)
+and *"not one blade tonight ever landed against a held reading."* Worse, those corrections were
+then offered as proof of impartiality — *"evidence recruited for my own acquittal… the correction
+that feels like rigor."* Under the old condition a hand could bank a cosmetic correction, clear the
+advisory, and have the same fix serve as its own defence.
+
+By the enum's own definitions, `WEAKENED` and `BROKEN` are the only classes where evidence went
+**against** the held conclusion; `CORRECTED` is explicitly "status unchanged." So *"no correction
+landed against a held reading"* and *"no WEAKENED and no BROKEN in the window"* are the same
+statement — and the second one needs no new column, no new data, and nothing self-reported.
+
+Eric declined the companion proposal to split `CORRECTED` into label-vs-substantive classes: that
+would require a model to grade its own correction as cosmetic or real, which is self-report on
+exactly the judgment the reflex is worst at, and §2.7 forbids it. With `CORRECTED` no longer able to
+clear a streak, the incentive to claim it disappears on its own.
+
+**The mechanism.** The **server** computes the streak: when the last N (default 5) folds by the same
+session or by consecutive queue-order contain **no `WEAKENED` and no `BROKEN`**, the value is
 **injected into the F4 gate return**. The model's F4 evidence must **echo the server's number back**
 (`streak=<value>`, the `token=` pattern — reading live state, not self-report), and when the advisory
 fires the evidence carries `STREAK-ACK:`. The neutral-clerk report carries the flag to Eric.
