@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__n8n__get_workflow_details",
+      "mcp__n8n__get_execution",
+      "mcp__n8n__get_workflow_history",
+      "mcp__n8n__search_workflows",
+      "mcp__Claude_Code_Remote__list_triggers",
+      "mcp__Claude_Code_Remote__create_trigger",
+      "mcp__Claude_Code_Remote__fire_trigger",
+      "mcp__Claude_Code_Remote__update_trigger",
+      "mcp__Claude_Code_Remote__delete_trigger",
+      "mcp__Supabase__execute_sql",
+      "mcp__Supabase__apply_migration"
+    ]
+  }
+}
