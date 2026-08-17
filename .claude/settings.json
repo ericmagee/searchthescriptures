@@ -11,6 +11,9 @@
       "mcp__Claude_Code_Remote__get_session",
       "mcp__Claude_Code_Remote__list_sessions",
       "mcp__Claude_Code_Remote__list_triggers"
+    ],
+    "deny": [
+      "AskUserQuestion"
     ]
   }
 }
