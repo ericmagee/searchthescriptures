@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__n8n__get_workflow_details",
+      "mcp__n8n__get_execution",
+      "mcp__n8n__search_executions",
+      "mcp__n8n__get_workflow_history",
+      "mcp__n8n__get_workflow_version",
+      "mcp__n8n__search_workflows",
+      "mcp__Supabase__query_logs",
+      "mcp__Claude_Code_Remote__get_session",
+      "mcp__Claude_Code_Remote__list_sessions",
+      "mcp__Claude_Code_Remote__list_triggers"
+    ]
+  }
+}
