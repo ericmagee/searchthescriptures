@@ -1,3 +1,15 @@
 {
-  "outputStyle": "ELI5"
+  "outputStyle": "ELI5",
+  "permissions": {
+    "allow": [
+      "mcp__Claude_Code_Remote__get_session",
+      "mcp__Claude_Code_Remote__list_triggers",
+      "mcp__n8n__get_execution",
+      "mcp__n8n__get_workflow_details",
+      "mcp__n8n__get_workflow_history",
+      "mcp__n8n__search_executions",
+      "mcp__Supabase__list_projects",
+      "mcp__Supabase__query_logs"
+    ]
+  }
 }
