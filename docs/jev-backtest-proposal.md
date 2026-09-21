@@ -2,7 +2,7 @@
 
 Status: PROPOSAL, nothing built, nothing purchased. Written 2026-09-21 by Advisor_Code
 (seat 11, `session_01Y4bn7xLtU6q2khWW43Fzq1`) at the operator's request, to be revisited later.
-Companion todo: see "Record pointers" at the end. Carry-forward row: `md_notes` 891.
+Companion todo: 381. Carry-forward row: `md_notes` 891.
 
 ---
 
@@ -199,5 +199,5 @@ All steps are read-only against the lab until step 6. No edge function or workfl
 - Oracle surface read: edge function `ask` v35 (2026-09-21). Engine surface read: `engine_manual` v53 §A.3, §A.4.
 - Related open items: todo 121 (`scan_contamination`), the Oracle change protocol (operational_doc §15),
   the engine maintenance protocol (engine_manual §6).
-- Companion todo for this proposal: filed 2026-09-21 by Advisor_Code, title begins "Jev (TypeSafe AI) backtest".
+- Companion todo for this proposal: todo 381 (status deferred, priority medium), filed 2026-09-21 by Advisor_Code.
 - Repository path: `docs/jev-backtest-proposal.md`, branch `claude/truth-app-supabase-onboarding-c05dgu`.
