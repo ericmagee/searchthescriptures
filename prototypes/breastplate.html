@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Breastplate of Judgment</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=EB+Garamond:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#07060a; --gold:#c9a24a; --gold-hi:#f1d68a; --gold-lo:#7a5a1c; --ink:#e9e2cf; --dim:#a79f8a;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;min-height:100%;background:var(--bg);color:var(--ink);overflow-x:clip}
+  body>*{flex-shrink:0}
+  body{font-family:"EB Garamond",Georgia,serif;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;min-height:100vh;overflow-x:hidden;padding-top:12px}
+  .stage{position:relative;width:min(92vw,520px,calc((100vh - 190px) * 0.7));aspect-ratio:3/4.3;margin:8px 16px}
+  canvas#light{position:absolute;inset:-25%;width:150%;height:150%;pointer-events:none;z-index:2}
+  .plate-bg{position:absolute;left:8%;right:8%;top:10%;bottom:6%;border-radius:10px;z-index:1;
+    background:repeating-linear-gradient(90deg,rgba(255,255,255,.03) 0 2px,transparent 2px 5px),linear-gradient(160deg,#3b2a12,#1d140a 55%,#2c1f0d);
+    box-shadow:0 0 0 3px var(--gold-lo),0 0 0 6px var(--gold),0 0 0 8px var(--gold-lo),0 18px 60px rgba(0,0,0,.7);
+    opacity:0;transform:scale(.96);transition:opacity 1.2s ease,transform 1.6s ease}
+  .plate-bg.on{opacity:1;transform:scale(1)}
+  .halo{position:absolute;inset:0;z-index:4;pointer-events:none;mix-blend-mode:screen;opacity:0;transition:opacity 2.4s ease;
+    background:radial-gradient(circle at 50% 54%,rgba(255,250,235,.42),rgba(255,245,220,.10) 38%,transparent 62%)}
+  .halo.on{opacity:1}
+  .plate{position:absolute;left:8%;right:8%;top:10%;bottom:6%;border-radius:10px;
+    display:grid;grid-template-rows:repeat(4,1fr);padding:7% 6%;gap:4%;
+    opacity:0;transform:scale(.96);transition:opacity 1.2s ease,transform 1.6s ease;z-index:3}
+  .plate.on{opacity:1;transform:scale(1)}
+  .row{display:grid;grid-template-columns:repeat(3,1fr);gap:6%}
+  .cell{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px}
+  .stone{position:relative;width:78%;aspect-ratio:1/1.18;border-radius:46%/40%;
+    background:radial-gradient(ellipse at 35% 28%,rgba(255,255,255,.55),transparent 32%),
+               radial-gradient(ellipse at 50% 60%,var(--c),var(--c2) 75%);
+    box-shadow:0 0 0 2px var(--gold-lo),0 0 0 4px var(--gold),inset 0 -6px 14px rgba(0,0,0,.55);
+    filter:brightness(.18) saturate(.4);transition:filter 1s ease,box-shadow 1s ease}
+  .stone.lit{filter:brightness(1) saturate(1.1);
+    box-shadow:0 0 0 2px var(--gold-lo),0 0 0 4px var(--gold-hi),inset 0 -6px 14px rgba(0,0,0,.4),0 0 26px 4px var(--glow)}
+  .label{font-family:Cinzel,serif;font-size:clamp(9px,2.3vw,13px);letter-spacing:.12em;text-transform:uppercase;color:var(--gold-hi);
+    text-shadow:0 0 4px #000,0 0 8px #000,0 1px 2px #000;position:relative;z-index:5;
+    opacity:0;transform:translateY(4px);transition:opacity .8s ease,transform .8s ease}
+  .label.on{opacity:.9;transform:none}
+  .title{font-family:Cinzel,serif;font-weight:700;letter-spacing:.18em;text-align:center;font-size:clamp(14px,3.6vw,22px);color:var(--gold-hi);
+    position:absolute;top:0;left:0;right:0;opacity:0;transition:opacity 1.2s ease;z-index:4}
+  .title.on{opacity:1}
+  .verse{max-width:min(92vw,560px);text-align:center;font-style:italic;font-size:clamp(14px,3.6vw,18px);line-height:1.5;color:var(--ink);
+    opacity:0;transition:opacity 1.6s ease;padding:0 16px;min-height:9em}
+  .verse.on{opacity:1}
+  .verse cite{display:block;margin-top:6px;font-style:normal;font-family:Cinzel,serif;font-size:.8em;letter-spacing:.14em;color:var(--gold)}
+  .replay{margin:14px 0 24px;font-family:Cinzel,serif;letter-spacing:.14em;font-size:12px;color:var(--gold-hi);background:transparent;
+    border:1px solid var(--gold-lo);border-radius:999px;padding:8px 18px;cursor:pointer;opacity:0;transition:opacity .8s}
+  .replay.on{opacity:1}
+  .replay:hover{border-color:var(--gold)}
+  .notes{max-width:min(92vw,620px);padding:0 18px 40px;color:var(--ink);font-size:clamp(14px,3.4vw,17px);line-height:1.55;
+    opacity:0;transition:opacity 1.6s ease}
+  .notes.on{opacity:1}
+  .notes h2{font-family:Cinzel,serif;font-weight:500;letter-spacing:.14em;font-size:clamp(13px,3vw,15px);color:var(--gold-hi);
+    text-transform:uppercase;margin:28px 0 8px;border-top:1px solid rgba(201,162,74,.3);padding-top:18px}
+  .notes table{width:100%;border-collapse:collapse;margin:6px 0 4px;font-size:.95em}
+  .notes td,.notes th{text-align:left;padding:6px 8px;border-bottom:1px solid rgba(201,162,74,.18);vertical-align:top}
+  .notes th{font-family:Cinzel,serif;font-weight:500;font-size:.78em;letter-spacing:.1em;color:var(--gold)}
+  .notes .heb{font-size:1.15em}
+  .notes ul{padding-left:1.2em;margin:6px 0}
+  .notes li{margin:6px 0}
+  .notes .label-note{font-style:italic;color:var(--dim)}
+  .notes .comparison{margin-top:22px;padding:14px 16px;border:1px solid rgba(201,162,74,.35);border-radius:8px;background:rgba(201,162,74,.05)}
+  @media (prefers-reduced-motion: reduce){
+    .plate,.stone,.label,.title,.verse,.notes{transition:none!important}
+  }
+</style>
+</head>
+<body>
+  <div class="stage" id="stage">
+    <div class="title" id="title">The Breastplate of Judgment</div>
+    <div class="plate-bg" id="plateBg"></div>
+    <canvas id="light"></canvas>
+    <div class="plate" id="plate"></div>
+    <div class="halo" id="halo"></div>
+  </div>
+  <p class="verse" id="verse"></p>
+  <button class="replay" id="replay" type="button">Replay</button>
+
+  <section class="notes" id="notes" aria-label="Notes">
+    <h2>The words in the breastplate</h2>
+    <table>
+      <tr><th>KJV</th><th>Strong&rsquo;s</th><th>Hebrew</th><th>Lexicon entry</th></tr>
+      <tr><td>Urim</td><td>H224</td><td class="heb">&#x5D0;&#x5D5;&#x5BC;&#x5E8;&#x5B4;&#x5D9;&#x5DD;</td><td>&ldquo;plural of &#x5D0;&#x5D5;&#x5BC;&#x5E8;; lights&rdquo;; the root (H217) is &ldquo;flame; &hellip; fire, light&rdquo;</td></tr>
+      <tr><td>Thummim</td><td>H8550</td><td class="heb">&#x5EA;&#x5BC;&#x5BB;&#x5DE;&#x5BC;&#x5B4;&#x5D9;&#x5DD;</td><td>&ldquo;plural of &#x5EA;&#x5BC;&#x5B9;&#x5DD;; perfections&rdquo;</td></tr>
+    </table>
+    <p class="label-note">Stone names follow the KJV of Exodus 28:17&ndash;20. The text does not give the stones&rsquo; colors; the colors shown are display choices.</p>
+
+    <h2>Light and color</h2>
+    <ul>
+      <li><strong>White light holds every color.</strong> Sunlight is a continuous spectrum from about 380&nbsp;nm (violet) to 700&nbsp;nm (red); a prism spreads it into its colors.</li>
+      <li><strong>Light adds.</strong> Overlapping beams of colored light add together; the whole spectrum, or as few as three colors (red, green and blue), is seen as white.</li>
+      <li><strong>Stones filter.</strong> A gemstone makes no light of its own. It looks colored because it absorbs some wavelengths and passes or reflects the rest. Light sent through several colored stones in turn grows darker; stones set side by side do not, and from a distance their colors blend in the eye toward an average.</li>
+      <li><strong>Lamps fill the gaps.</strong> Common white LEDs leave gaps in the blue-green and deep red. Better lamps mix several narrow colored channels to come closer to natural daylight.</li>
+    </ul>
+
+    <div class="comparison">
+      <strong>A comparison, not a claim of the text.</strong> The breastplate&rsquo;s twelve names and the Urim, &ldquo;lights&rdquo;, invite reflection alongside how many colors relate to one white light. The animation above shows colored light adding to white as an illustration; the stones themselves filter light and do not make it.
+    </div>
+  </section>
+
+<script>
+/* Stone names: KJV Exodus 28:17-20, in row order. Colors are display choices, not text. */
+const STONES = [
+  {name:'Sardius',   c:'#e0283f', c2:'#6e0614', glow:'rgba(224,40,63,.8)'},
+  {name:'Topaz',     c:'#c9d84a', c2:'#5d6a0e', glow:'rgba(201,216,74,.8)'},
+  {name:'Carbuncle', c:'#22c06a', c2:'#0a4f27', glow:'rgba(34,192,106,.8)'},
+  {name:'Emerald',   c:'#2fd0c2', c2:'#0b5a54', glow:'rgba(47,208,194,.8)'},
+  {name:'Sapphire',  c:'#3558e0', c2:'#0c1a6b', glow:'rgba(53,88,224,.85)'},
+  {name:'Diamond',   c:'#f4fbff', c2:'#9fb4c6', glow:'rgba(240,250,255,.9)'},
+  {name:'Ligure',    c:'#f2a03a', c2:'#7a3f06', glow:'rgba(242,160,58,.8)'},
+  {name:'Agate',     c:'#8a7cc8', c2:'#3a2f63', glow:'rgba(138,124,200,.8)'},
+  {name:'Amethyst',  c:'#a24bf0', c2:'#3f0c6e', glow:'rgba(162,75,240,.85)'},
+  {name:'Beryl',     c:'#7fe3d6', c2:'#1f6e66', glow:'rgba(127,227,214,.8)'},
+  {name:'Onyx',      c:'#9a3a22', c2:'#1a0c08', glow:'rgba(170,70,40,.75)'},
+  {name:'Jasper',    c:'#3f9a6c', c2:'#123a26', glow:'rgba(63,154,108,.8)'},
+];
+const VERSE = 'And Aaron shall bear the names of the children of Israel in the breastplate of judgment upon his heart, when he goeth in unto the holy place, for a memorial before the LORD continually. And thou shalt put in the breastplate of judgment the Urim and the Thummim; and they shall be upon Aaron’s heart, when he goeth in before the LORD: and Aaron shall bear the judgment of the children of Israel upon his heart before the LORD continually.';
+const CITE = 'Exodus 28:29–30';
+
+const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const plate = document.getElementById('plate'), canvas = document.getElementById('light'), ctx = canvas.getContext('2d');
+const plateBg = document.getElementById('plateBg'), halo = document.getElementById('halo');
+const notesEl = document.getElementById('notes');
+const titleEl = document.getElementById('title'), verseEl = document.getElementById('verse'), replay = document.getElementById('replay');
+const stoneEls = [], labelEls = [];
+
+for (let r = 0; r < 4; r++) {
+  const row = document.createElement('div'); row.className = 'row';
+  for (let k = 0; k < 3; k++) {
+    const s = STONES[r*3+k];
+    const cell = document.createElement('div'); cell.className = 'cell';
+    const st = document.createElement('div'); st.className = 'stone' + (s.jasper ? ' jasper' : '');
+    st.style.setProperty('--c', s.c); st.style.setProperty('--c2', s.c2); st.style.setProperty('--glow', s.glow);
+    st.setAttribute('role','img'); st.setAttribute('aria-label', s.name);
+    const lb = document.createElement('div'); lb.className = 'label'; lb.textContent = s.name;
+    cell.append(st, lb); row.append(cell); plate.append(row);
+    stoneEls.push(st); labelEls.push(lb);
+  }
+}
+
+/* Timeline (seconds) */
+const T = { plate:0.3, title:0.6, firstStone:1.4, stoneGap:0.42, beamsStart:6.6, beamsFull:9.2, bloomPeak:10.4, verse:10.8, end:13.0 };
+let t0 = null, raf = null, verseShown = false;
+
+function resize(){
+  const r = canvas.getBoundingClientRect(), dpr = Math.min(window.devicePixelRatio||1, 2);
+  canvas.width = Math.round(r.width*dpr); canvas.height = Math.round(r.height*dpr);
+  ctx.setTransform(dpr,0,0,dpr,0,0);
+}
+function centers(){
+  const cr = canvas.getBoundingClientRect(), pr = plate.getBoundingClientRect();
+  const target = { x: pr.left + pr.width/2 - cr.left, y: pr.top + pr.height/2 - cr.top };
+  const pts = stoneEls.map(el => { const b = el.getBoundingClientRect(); return { x: b.left + b.width/2 - cr.left, y: b.top + b.height/2 - cr.top }; });
+  return { target, pts };
+}
+const ease = x => x<0?0:x>1?1:1-Math.pow(1-x,3);
+
+function draw(t){
+  const w = canvas.clientWidth, h = canvas.clientHeight;
+  ctx.clearRect(0,0,w,h);
+  const { target, pts } = centers();
+  const beam = ease((t - T.beamsStart) / (T.beamsFull - T.beamsStart));
+  const bloom = ease((t - T.beamsFull + 1.2) / (T.bloomPeak - T.beamsFull + 1.2));
+  ctx.globalCompositeOperation = 'lighter';
+  if (beam > 0) {
+    pts.forEach((p, i) => {
+      const s = STONES[i];
+      const ex = p.x + (target.x - p.x) * beam, ey = p.y + (target.y - p.y) * beam;
+      const g = ctx.createLinearGradient(p.x, p.y, ex, ey);
+      g.addColorStop(0, s.jasper ? 'rgba(255,255,255,.55)' : s.glow.replace(/[\d.]+\)$/, '.55)'));
+      g.addColorStop(1, s.jasper ? 'rgba(255,255,255,.15)' : s.glow.replace(/[\d.]+\)$/, '.18)'));
+      ctx.strokeStyle = g; ctx.lineCap = 'round';
+      ctx.lineWidth = 7; ctx.shadowColor = s.glow; ctx.shadowBlur = 18;
+      ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(ex, ey); ctx.stroke();
+      // colored mote travelling to the center
+      ctx.shadowBlur = 0;
+      const mg = ctx.createRadialGradient(ex, ey, 0, ex, ey, 22);
+      mg.addColorStop(0, s.glow); mg.addColorStop(1, 'rgba(0,0,0,0)');
+      ctx.fillStyle = mg; ctx.beginPath(); ctx.arc(ex, ey, 22, 0, Math.PI*2); ctx.fill();
+    });
+  }
+  if (bloom > 0) {
+    const R = Math.min(w, h) * (0.08 + 0.42 * bloom);
+    const pulse = 1 + 0.04 * Math.sin(t * 2.2);
+    const wg = ctx.createRadialGradient(target.x, target.y, 0, target.x, target.y, R * pulse);
+    wg.addColorStop(0, `rgba(255,255,255,${0.95*bloom})`);
+    wg.addColorStop(0.25, `rgba(255,252,240,${0.75*bloom})`);
+    wg.addColorStop(0.6, `rgba(255,245,220,${0.25*bloom})`);
+    wg.addColorStop(1, 'rgba(255,240,210,0)');
+    ctx.fillStyle = wg; ctx.beginPath(); ctx.arc(target.x, target.y, R*pulse, 0, Math.PI*2); ctx.fill();
+  }
+  ctx.globalCompositeOperation = 'source-over';
+}
+
+function frame(now){
+  if (t0 === null) t0 = now;
+  const t = (now - t0) / 1000;
+  if (t > T.plate) { plate.classList.add('on'); plateBg.classList.add('on'); }
+  if (t > T.bloomPeak - 1.2) halo.classList.add('on');
+  if (t > T.title) titleEl.classList.add('on');
+  stoneEls.forEach((el, i) => {
+    if (t > T.firstStone + i * T.stoneGap) { el.classList.add('lit'); labelEls[i].classList.add('on'); }
+  });
+  if (t > T.verse && !verseShown) { showVerse(); }
+  draw(t);
+  if (t > T.end) replay.classList.add('on');
+  raf = requestAnimationFrame(frame);
+}
+function showVerse(){ verseShown = true; verseEl.innerHTML = VERSE + '<cite>' + CITE + '</cite>'; verseEl.classList.add('on'); notesEl.classList.add('on'); }
+
+function start(){
+  cancelAnimationFrame(raf); t0 = null; verseShown = false;
+  [plate,plateBg,halo,titleEl,verseEl,replay,notesEl].forEach(e => e.classList.remove('on'));
+  stoneEls.forEach(e => e.classList.remove('lit')); labelEls.forEach(e => e.classList.remove('on'));
+  verseEl.innerHTML = '';
+  if (reduce) {               // final state, no motion
+    plate.classList.add('on'); plateBg.classList.add('on'); halo.classList.add('on'); titleEl.classList.add('on');
+    stoneEls.forEach(e => e.classList.add('lit')); labelEls.forEach(e => e.classList.add('on'));
+    showVerse(); resize(); draw(T.bloomPeak + 1); return;
+  }
+  raf = requestAnimationFrame(frame);
+}
+window.addEventListener('resize', () => { resize(); });
+replay.addEventListener('click', start);
+resize(); start();
+</script>
+</body>
+</html>
