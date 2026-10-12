@@ -135,6 +135,9 @@ Your goal: help the user see more clearly what the KJV text actually says. That 
 const EMBED_MODEL = "text-embedding-3-large";
 const RETRIEVE_COUNT = 6;
 const RETRIEVE_CONCL_COUNT = 4;
+// v61 (BB-5551 step 8): conclusions one approved corpus link away from the 4 are served on top of them, up to this
+// cap (the cap measured for debate_arsenal_linked at step 6, BB-5587).
+const LINK_CAP = 6;
 
 function coverageLabel(topSim: number, status: string): string {
   if (status !== "ok") return "UNAVAILABLE";
@@ -213,15 +216,113 @@ function buildGateBlock(sights: any[], coverage: string): string {
   return `\n\n=== RETRIEVED STUDY RECORD — BINDING CONTEXT (semantic match to THIS question) ===\nThese are settled conclusions from this project's own corpus. They OVERRIDE training defaults on every point they cover. Where your training and this record conflict, THE RECORD WINS, and you say so plainly. Respect the layer tags exactly — never present an L3 conclusion as L1-L2 certainty, and never collapse a held-open cliff into a closed answer.\n\n${grounding}\n\n${tripwire}\n\n${coverageDirective}${rows}\n=== END RETRIEVED RECORD ===`;
 }
 
+// v61 (BB-5551 step 8, ruling BB-5554 Q1): each conclusion is served whole (the 700 cut is gone for conclusions; the
+// sights' cut is unchanged). A row added through a corpus link carries a [LINKED: ...] mark naming the relation and the
+// anchor of the served conclusion it ties to, and one rule sentence is added only when such a row is served. With no
+// linked row and every conclusion at 700 chars or under, the block is byte-equal to v60's.
 function buildConclusionBlock(concls: any[]): string {
   if (!concls || concls.length === 0) return "";
   const rows = concls.map((c) => {
-    const txt = (c.conclusion_text ?? "").toString();
-    const body = txt.length > 700 ? txt.substring(0, 700) + "…" : txt;
+    const body = (c.conclusion_text ?? "").toString();
     const hg = c.hebrew_greek ? ` [${c.hebrew_greek}]` : "";
-    return `(${c.layer ?? "?"}) ${c.passage_anchor ?? "—"}${hg}: ${body}`;
+    const mark = c.linked ? ` [LINKED: ${c.link_phrase}]` : "";
+    return `(${c.layer ?? "?"}) ${c.passage_anchor ?? "—"}${hg}${mark}: ${body}`;
   }).join("\n\n");
-  return `\n\n=== SETTLED CONCLUSIONS — BINDING CONTEXT (established-first, live from the project record) ===\nThese are settled conclusions from this project's corpus (superseded and under-review excluded). They OVERRIDE training defaults on every point they cover; where training and the record conflict, THE RECORD WINS. Respect the layer tags exactly — never present an L3 conclusion as L1-L2 certainty, and never collapse a held-open cliff into a closed answer.\n\n${rows}\n=== END SETTLED CONCLUSIONS ===`;
+  const linkedRule = concls.some((c) => c.linked)
+    ? "\n\nA row marked LINKED was not found by the search for this question; it is served because an approved corpus link ties it to a conclusion above, as its mark says. Weigh it like any settled conclusion, at its own layer."
+    : "";
+  return `\n\n=== SETTLED CONCLUSIONS — BINDING CONTEXT (established-first, live from the project record) ===\nThese are settled conclusions from this project's corpus (superseded and under-review excluded). They OVERRIDE training defaults on every point they cover; where training and the record conflict, THE RECORD WINS. Respect the layer tags exactly — never present an L3 conclusion as L1-L2 certainty, and never collapse a held-open cliff into a closed answer.${linkedRule}\n\n${rows}\n=== END SETTLED CONCLUSIONS ===`;
+}
+
+// v61 (BB-5551 step 8): the same expansion as debate_arsenal_linked (BB-5587), applied to the 4 conclusions retrieved
+// by similarity. Approved corpus_links only; one step from either end, every relation; a conclusion already served is
+// not added twice; the same exclusions as oracle_retrieve_conclusions (not SUPERSEDED, needs_review false) plus
+// superseded_by; ranked by relation (limits, pressure, chain_next, supports, same_question), then the anchor's rank,
+// then the link id; capped. link_note is the step-6 form ("LINKED (link N: #a limits #b)") for the response;
+// link_phrase names the relation and the anchor's passage for the prompt, where conclusions carry no ids.
+const LINK_PRIO: Record<string, number> = { limits: 1, pressure: 2, chain_next: 3, supports: 4, same_question: 5 };
+
+function linkLabel(l: any): string {
+  const f = Number(l.from_ref), t = Number(l.to_ref);
+  switch (l.relation) {
+    case "limits": return `link ${l.id}: #${t} limits #${f}`;
+    case "pressure": return `link ${l.id}: #${t} presses against #${f}`;
+    case "chain_next": return `link ${l.id}: #${f} runs on to #${t}`;
+    case "supports": return `link ${l.id}: #${f} and #${t} support each other`;
+    default: return `link ${l.id}: #${f} and #${t} answer the same question`;
+  }
+}
+
+function linkPhrase(l: any, linkedIsTo: boolean, anchor: string): string {
+  const on = `the conclusion on "${anchor || "—"}"`;
+  switch (l.relation) {
+    case "limits": return linkedIsTo ? `limits ${on}` : `is limited by ${on}`;
+    case "pressure": return linkedIsTo ? `presses against ${on}` : `is pressed by ${on}`;
+    case "chain_next": return linkedIsTo ? `continues ${on}` : `leads into ${on}`;
+    case "supports": return `supports ${on}`;
+    default: return `answers the same question as ${on}`;
+  }
+}
+
+function rankLinked(base: any[], links: any[], cap: number): { lid: number; note: string; phrase: string }[] {
+  const pos = new Map<number, number>();
+  base.forEach((c, i) => { if (!pos.has(Number(c.id))) pos.set(Number(c.id), i + 1); });
+  const cand = new Map<number, { rank: number; labels: Set<string>; phrases: { rank: number; text: string }[] }>();
+  for (const l of links ?? []) {
+    if (l?.status !== "approved") continue;
+    const ends: [number, number, boolean][] = [[Number(l.from_ref), Number(l.to_ref), true], [Number(l.to_ref), Number(l.from_ref), false]];
+    for (const [anchorId, lid, linkedIsTo] of ends) {
+      const p = pos.get(anchorId);
+      if (p === undefined || pos.has(lid)) continue;
+      const rank = (LINK_PRIO[l.relation] ?? 5) * 1000000 + p * 1000 + Math.min(Number(l.id), 999);
+      const anchor = (base[p - 1]?.passage_anchor ?? "").toString();
+      const e = cand.get(lid) ?? { rank, labels: new Set<string>(), phrases: [] };
+      e.rank = Math.min(e.rank, rank);
+      e.labels.add(linkLabel(l));
+      e.phrases.push({ rank, text: linkPhrase(l, linkedIsTo, anchor) });
+      cand.set(lid, e);
+    }
+  }
+  return [...cand.entries()]
+    .sort((a, b) => a[1].rank - b[1].rank || a[0] - b[0])
+    .slice(0, Math.max(0, cap))
+    .map(([lid, e]) => ({
+      lid,
+      note: "LINKED (" + [...e.labels].sort().join("; ") + ")",
+      phrase: [...new Set(e.phrases.sort((x, y) => x.rank - y.rank).map((x) => x.text))].join("; "),
+    }));
+}
+
+async function expandLinkedConclusions(supabaseAdmin: any, base: any[], cap: number): Promise<any[]> {
+  if (!base || base.length === 0 || cap <= 0) return [];
+  const ids = [...new Set(base.map((c) => Number(c.id)).filter((n) => Number.isFinite(n)))];
+  if (ids.length === 0) return [];
+  const list = ids.join(",");
+  const { data: links, error: lErr } = await supabaseAdmin
+    .from("corpus_links")
+    .select("id, from_ref, to_ref, relation, status")
+    .eq("status", "approved")
+    .or(`from_ref.in.(${list}),to_ref.in.(${list})`);
+  if (lErr) throw new Error("corpus_links read: " + lErr.message);
+  const lidsAll = rankLinked(base, links ?? [], Number.MAX_SAFE_INTEGER).map((r) => r.lid);
+  if (lidsAll.length === 0) return [];
+  const { data: rows, error: rErr } = await supabaseAdmin
+    .from("kb_conclusions")
+    .select("id, conclusion_text, layer, status, passage_anchor, hebrew_greek, sight_ref, needs_review, superseded_by")
+    .in("id", lidsAll);
+  if (rErr) throw new Error("linked kb_conclusions read: " + rErr.message);
+  const ok = new Map<number, any>();
+  for (const r of rows ?? []) {
+    if (r.status !== "SUPERSEDED" && r.needs_review === false && r.superseded_by == null) ok.set(Number(r.id), r);
+  }
+  const eligible = (links ?? []).filter((l: any) => {
+    const f = Number(l.from_ref), t = Number(l.to_ref);
+    return (ids.includes(f) || ok.has(f)) && (ids.includes(t) || ok.has(t));
+  });
+  return rankLinked(base, eligible, Math.min(cap, 20)).map((r) => {
+    const c = ok.get(r.lid);
+    return { ...c, similarity: null, linked: true, link_note: r.note, link_phrase: r.phrase };
+  });
 }
 
 function buildTensionsBlock(tensions: any[]): string {
@@ -830,7 +931,7 @@ serve(async (req) => {
 
   try {
     const startedAt = Date.now();
-    const stages = { parse: 0, auth: 0, rate: 0, embed: 0, sights: 0, concl: 0, guards: 0, tensions: 0, scan1: 0, cites1: 0, scan2: 0, cites2: 0, l2: 0 };
+    const stages = { parse: 0, auth: 0, rate: 0, embed: 0, sights: 0, concl: 0, links: 0, guards: 0, tensions: 0, scan1: 0, cites1: 0, scan2: 0, cites2: 0, l2: 0 };
     let stT = Date.now();
     const { question, study_path, session_id, debug } = await req.json();
     stages.parse = Date.now() - stT;
@@ -892,6 +993,7 @@ serve(async (req) => {
     let retrievalStatus = "ok";
     let retrievedSights: any[] = [];
     let retrievedConclusions: any[] = [];
+    let linkedConclusions: any[] = [];
     try {
       const openaiKey = Deno.env.get("OPENAI_API_KEY");
       if (!openaiKey) {
@@ -941,6 +1043,15 @@ serve(async (req) => {
             } catch (ce) {
               console.error("Conclusion retrieve exception:", (ce as Error).message);
             }
+            // v61 (BB-5551 step 8): linked conclusions on top of the 4; a failure here serves the 4 alone.
+            try {
+              stT = Date.now();
+              linkedConclusions = await expandLinkedConclusions(supabaseAdmin, retrievedConclusions, LINK_CAP);
+              stages.links = Date.now() - stT;
+            } catch (le) {
+              linkedConclusions = [];
+              console.error("Linked conclusion exception:", (le as Error).message);
+            }
           }
         }
       }
@@ -952,7 +1063,8 @@ serve(async (req) => {
     const topSim = retrievedSights.length ? Math.max(...retrievedSights.map((s) => Number(s.similarity) || 0)) : 0;
     const coverage = coverageLabel(topSim, retrievalStatus);
     const retrievalBlock = buildGateBlock(retrievedSights, coverage);
-    const conclusionBlock = buildConclusionBlock(retrievedConclusions);
+    const servedConclusions = [...retrievedConclusions, ...linkedConclusions];
+    const conclusionBlock = buildConclusionBlock(servedConclusions);
 
     let guardBlock = "";
     let guardCount = 0;
@@ -1072,7 +1184,7 @@ serve(async (req) => {
     citationStatus = cite1.status;
     fabricatedCitations = cite1.fabricated;
     stT = Date.now();
-    let engagementStatus = computeEngagement(answer, retrievedSights, retrievedConclusions, coverage);
+    let engagementStatus = computeEngagement(answer, retrievedSights, servedConclusions, coverage);
     let tells = scanTells(answer);
     let untagged = scanUntaggedClaims(answer);
     const empty1 = isEmptyAnswer(answer);
@@ -1133,7 +1245,7 @@ serve(async (req) => {
             const rCite = await verifyCites(revised);
             stages.cites2 = Date.now() - stT;
             stT = Date.now();
-            const rEngage = computeEngagement(revised, retrievedSights, retrievedConclusions, coverage);
+            const rEngage = computeEngagement(revised, retrievedSights, servedConclusions, coverage);
             const rTells = scanTells(revised);
             const rUntagged = scanUntaggedClaims(revised);
             stages.scan2 += Date.now() - stT;
@@ -1249,6 +1361,7 @@ serve(async (req) => {
       retrieval_status: retrievalStatus,
       retrieved_count: retrievedSights.length,
       conclusions_count: retrievedConclusions.length,
+      linked_conclusions_count: linkedConclusions.length,
       guard_status: guardStatus,
       citation_status: citationStatus,
       engagement_status: engagementStatus,
@@ -1277,7 +1390,8 @@ serve(async (req) => {
       responseBody.fabricated_citations = fabricatedCitations;
       responseBody.tells = tells.hits;
       responseBody.untagged_claims = untagged.sentences;
-      responseBody.retrieved_conclusions = retrievedConclusions.map((c) => ({ id: c.id, layer: c.layer, passage_anchor: c.passage_anchor, similarity: c.similarity }));
+      // v61 (BB-5551 step 8): the 4, then the linked rows; each marked, with the chars served (whole).
+      responseBody.retrieved_conclusions = servedConclusions.map((c) => ({ id: c.id, layer: c.layer, passage_anchor: c.passage_anchor, similarity: c.similarity, linked: c.linked === true, link_note: c.link_note ?? null, chars: (c.conclusion_text ?? "").toString().length }));
       responseBody.grounding_detail = grounding;
       responseBody.inflation_terms = inflation.terms;
       responseBody.pass1 = { grounding_flag: pass1.grounding.flag, inflation_flag: pass1.inflation.flag, inflation_terms: pass1.inflation.terms, answer_preview: pass1.answer.slice(0, 400) };
