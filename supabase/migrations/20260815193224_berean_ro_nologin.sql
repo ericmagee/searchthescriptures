@@ -1,0 +1,38 @@
+-- CLOSE THE LAST berean_ro REACHABILITY PATH: DIRECT LOGIN.
+--
+-- Found by Worker B (BB-0599), and the framing is B's: the earlier decision not to rotate this
+-- credential was argued on failure-signal economics — one loud failure is a signal, two are noise.
+-- That reasoning is sound on its own axis and says NOTHING about credential exposure, which is a
+-- different axis. Separating them is B's correction, not mine.
+--
+-- STATE MEASURED IMMEDIATELY BEFORE THIS RUNS:
+--   rolcanlogin   true
+--   rolvaliduntil NULL      <- NO EXPIRY. The credential never lapses on its own.
+--   password      set, and CLEARTEXT in supabase_migrations.schema_migrations
+--                 (20260621192522_create_berean_readonly_role), read by two agents
+--   CONNECT       true
+--   grants        160 table grants, 0 of them anything but SELECT
+--   members       postgres only (authenticator removed in 20260815060000)
+--
+-- 20260815060000 closed the PostgREST path (REVOKE berean_ro FROM authenticator) and the ambient
+-- PUBLIC EXECUTE path. Direct login survived both, so a no-expiry credential to 160 tables was
+-- still live against a role that has executed ZERO statements in the entire pg_stat_statements
+-- window (reset 2026-07-31, dealloc 0 — nothing evicted, so the absence is real).
+--
+-- WHY NOLOGIN AND NOT ROTATION. Rotation leaves a live credential and creates a NEW secret that
+-- then needs somewhere to live; the cleartext one stays in migration history regardless, so
+-- rotation buys less than it costs. NOLOGIN blocks the login path outright, stores no new secret,
+-- keeps all 160 grants intact, and leaves the role available as a SET ROLE target for postgres.
+-- It also makes the exposed cleartext password inert without having to erase history.
+--
+-- FAILURE MODE, CHOSEN DELIBERATELY AND CONSISTENT WITH 20260815060000: if an unobserved job on a
+-- cadence longer than the 15-day window logs in directly, it fails LOUDLY with
+-- "role berean_ro is not permitted to log in" rather than degrading quietly.
+--
+-- REVERSAL, one statement, no secret required: ALTER ROLE berean_ro LOGIN;
+
+ALTER ROLE berean_ro NOLOGIN;
+
+-- Recorded, deliberately NOT acted on: postgres remains a member of berean_ro. Harmless — postgres
+-- already owns these objects and reaches them without the membership — but noted by B so that a
+-- later reader does not mistake it for an oversight.
