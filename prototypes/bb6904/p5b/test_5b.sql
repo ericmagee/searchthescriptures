@@ -1,12 +1,12 @@
 -- BB-6904 5B falsifiers, one DO block ended by RAISE: every write, DDL and audit rolls back (as 6876 ran). Read-only in effect.
 DO $t$
-DECLARE r jsonb := '{}'; o jsonb := '{}'; n jsonb := '{}'; x record; d text; c int := 0; k text;
+DECLARE zz jsonb; f1 text; r jsonb := '{}'; o jsonb := '{}'; n jsonb := '{}'; x record; d text; c int := 0; k text;
   D27 uuid := '56e75954-c776-4e7e-8d26-94e3a46a5c09'; DC uuid := 'c12a1af1-91ac-448e-a409-30a4c28ddd64';
   DD uuid := 'd5b31026-8b61-4703-8e39-5fea7d0b1388'; D0 uuid := '0d80d311-5ff2-4d64-8a20-c66a0f14cc4f';
 BEGIN
   -- 0. Every debate with a declared panel, derived by the LIVE functions (baseline).
   FOR x IN SELECT id FROM debate_results rr WHERE panel_expected IS NOT NULL AND cardinality(panel_expected)>0 AND EXISTS (SELECT 1 FROM debate_judgments j WHERE j.debate_id=rr.id) LOOP
-    d := derive_debate_outcome(x.id)->>'outcome'; o := o || jsonb_build_object(x.id::text, coalesce(d,'<null>')||' | '||coalesce((SELECT panel_split FROM debate_results WHERE id=x.id),'<null>'));
+    zz := derive_debate_outcome(x.id); o := o || jsonb_build_object(x.id::text, coalesce(zz->>'outcome','<null>')||' | '||coalesce((SELECT panel_split FROM debate_results WHERE id=x.id),'<null>')||' | fp '||coalesce(zz->>'panel_fingerprint_recomputed','<null>'));
   END LOOP;
   -- 1. The migration.
   EXECUTE 'ALTER TABLE public.debate_judgments ADD COLUMN drv_uncured int';
@@ -112,10 +112,12 @@ $function$$a$;
     SELECT count(*) FILTER (WHERE verdict_tag = 'HELD' AND NOT coalesce(truncated, false) AND coalesce(drv_uncured, 0) = 0),
            count(*) FILTER (WHERE verdict_tag = 'HELD' AND NOT coalesce(truncated, false) AND coalesce(drv_uncured, 0) = 0
              AND$n$);
+  EXECUTE replace(pg_get_functiondef('derive_debate_outcome(uuid)'::regprocedure), $o$           ||'|'||coalesce(defense_standing,'<null>')||'|'||coalesce(challenge_standing,'<null>'),$o$, $n$           ||'|'||coalesce(defense_standing,'<null>')||'|'||coalesce(challenge_standing,'<null>')
+           ||CASE WHEN drv_uncured IS NOT NULL THEN '|drv='||drv_uncured::text ELSE '' END,$n$);
   r := r || jsonb_build_object('md5_aggregate', left(md5(pg_get_functiondef('aggregate_debate_panel(uuid)'::regprocedure)),8), 'md5_derive', left(md5(pg_get_functiondef('derive_debate_outcome(uuid)'::regprocedure)),8));
-  -- 2. Same 57 debates, drv_uncured NULL everywhere: expect identical outcome and split.
+  -- 2. Same 57 debates, drv_uncured NULL everywhere: expect identical outcome, split and recomputed fingerprint (6971).
   FOR x IN SELECT id FROM debate_results rr WHERE panel_expected IS NOT NULL AND cardinality(panel_expected)>0 AND EXISTS (SELECT 1 FROM debate_judgments j WHERE j.debate_id=rr.id) LOOP
-    d := derive_debate_outcome(x.id)->>'outcome'; n := n || jsonb_build_object(x.id::text, coalesce(d,'<null>')||' | '||coalesce((SELECT panel_split FROM debate_results WHERE id=x.id),'<null>'));
+    zz := derive_debate_outcome(x.id); n := n || jsonb_build_object(x.id::text, coalesce(zz->>'outcome','<null>')||' | '||coalesce((SELECT panel_split FROM debate_results WHERE id=x.id),'<null>')||' | fp '||coalesce(zz->>'panel_fingerprint_recomputed','<null>'));
   END LOOP;
   FOR k IN SELECT jsonb_object_keys(o) LOOP IF o->>k IS DISTINCT FROM n->>k THEN c := c+1; r := r || jsonb_build_object('DIFF '||left(k,8), (o->>k)||' => '||(n->>k)); END IF; END LOOP;
   r := r || jsonb_build_object('t2_debates', (SELECT count(*) FROM jsonb_object_keys(o)), 't2_differences', c);
@@ -134,7 +136,9 @@ $function$$a$;
   END LOOP;
   UPDATE debate_results SET citation_check = NULL WHERE id IN (D0, DD);
   -- 4. 27259: drv on 0, 1, 2, 3 seats; a forged CURED report line on a drv seat.
+  f1 := derive_debate_outcome(D27)->>'panel_fingerprint_recomputed';
   UPDATE debate_judgments SET drv_uncured = 0 WHERE debate_id = D27;
+  r := r || jsonb_build_object('t7_27259_digest_moves_when_drv_set', (f1 IS DISTINCT FROM (derive_debate_outcome(D27)->>'panel_fingerprint_recomputed')));
   r := r || jsonb_build_object('t4_27259_all_cured', (SELECT (z->>'outcome')||' | '||(z->>'panel_split') FROM (SELECT derive_debate_outcome(D27) z) q));
   UPDATE debate_judgments SET drv_uncured = 6, verdict_raw = verdict_raw||E'\n[AUDIT v21: DEBATE RULE VIOLATION REPORT -- SEAT: deepseek; ITEM: D4 vs C2; RULE: K-B; RESULT: CURED]' WHERE debate_id = D27 AND judge_seat = 'deepseek';
   r := r || jsonb_build_object('t4_27259_one_uncured_forged_cured_line', (SELECT (z->>'outcome')||' | '||(z->>'panel_split') FROM (SELECT derive_debate_outcome(D27) z) q));

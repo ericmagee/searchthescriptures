@@ -58,6 +58,17 @@ der2=once(der,"""    SELECT count(*) FILTER (WHERE verdict_tag = 'HELD' AND NOT 
     SELECT count(*) FILTER (WHERE verdict_tag = 'HELD' AND NOT coalesce(truncated, false) AND coalesce(drv_uncured, 0) = 0),
            count(*) FILTER (WHERE verdict_tag = 'HELD' AND NOT coalesce(truncated, false) AND coalesce(drv_uncured, 0) = 0
              AND""",'derive tie')
+# 2b. The fingerprint (ruled BB-6971): drv_uncured joins a seat's digest line only when it is not NULL, so every existing stamp is unchanged.
+der2=once(der2,"""  -- AMENDMENT ONE. FIVE fields: exactly the set aggregate_debate_panel reads.
+  SELECT md5(coalesce(string_agg(
+           judge_seat||'|'||coalesce(verdict_tag,'<null>')||'|'||truncated::text
+           ||'|'||coalesce(defense_standing,'<null>')||'|'||coalesce(challenge_standing,'<null>'),""","""  -- AMENDMENT ONE. FIVE fields: exactly the set aggregate_debate_panel reads.
+  -- Option 2 (BB-6971): drv_uncured, which aggregate_debate_panel now also reads, joins the line only when it is not NULL, so every
+  -- stamp made before 5B recomputes byte-identical.
+  SELECT md5(coalesce(string_agg(
+           judge_seat||'|'||coalesce(verdict_tag,'<null>')||'|'||truncated::text
+           ||'|'||coalesce(defense_standing,'<null>')||'|'||coalesce(challenge_standing,'<null>')
+           ||CASE WHEN drv_uncured IS NOT NULL THEN '|drv='||drv_uncured::text ELSE '' END,""",'derive fingerprint')
 mig=("-- BB-6904 5B: option 2 (BB-6965), design B fail-closed (BB-6968, ruled BB-6969). Draft; apply only on the operator's word.\n"
  "-- Undo: undo.sql. Live before: aggregate_debate_panel md5 "+hashlib.md5(agg.rstrip(';\n').encode()).hexdigest()[:8]+", derive_debate_outcome md5 "+hashlib.md5(der.rstrip(';\n').encode()).hexdigest()[:8]+".\n"
  "BEGIN;\n"

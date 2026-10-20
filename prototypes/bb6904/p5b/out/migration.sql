@@ -295,9 +295,12 @@ BEGIN
   END IF;
 
   -- AMENDMENT ONE. FIVE fields: exactly the set aggregate_debate_panel reads.
+  -- Option 2 (BB-6971): drv_uncured, which aggregate_debate_panel now also reads, joins the line only when it is not NULL, so every
+  -- stamp made before 5B recomputes byte-identical.
   SELECT md5(coalesce(string_agg(
            judge_seat||'|'||coalesce(verdict_tag,'<null>')||'|'||truncated::text
-           ||'|'||coalesce(defense_standing,'<null>')||'|'||coalesce(challenge_standing,'<null>'),
+           ||'|'||coalesce(defense_standing,'<null>')||'|'||coalesce(challenge_standing,'<null>')
+           ||CASE WHEN drv_uncured IS NOT NULL THEN '|drv='||drv_uncured::text ELSE '' END,
            chr(10) ORDER BY judge_seat, verdict_tag, truncated, defense_standing, challenge_standing),''))
     INTO v_fp FROM debate_judgments WHERE debate_id = p_debate_id;
 

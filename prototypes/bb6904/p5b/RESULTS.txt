@@ -18,8 +18,10 @@ PASS Cure Check never ran (failure before it): falls back to the extractor
 PASS neither ran: null, as live
 failures 0
 
-# test_5b.sql (rolled-back DO block): RESULT
-md5_aggregate 3e655266, md5_derive 2ed9af46 (= migration.sql's texts); t2: 57 debates, 0 differences with drv NULL.
+# test_5b.sql (rolled-back DO block; second run, after the fingerprint ruling 6971; result read back 17:35 CDT): RESULT
+md5_aggregate 3e655266 (= migration.sql's text). md5_derive 0c3530c2 = migration.sql's derive (347c8a94) minus its two fingerprint
+  comment lines (the test's replace did not carry them; comments only, checked locally). t2: 57 debates, 0 differences in outcome,
+  split AND recomputed fingerprint with drv NULL (6971 falsifier). t7: setting drv_uncured on 27259 moves its digest: true.
 6876 cases (drv NULL / drv 0): 1 UNGRADED/UNGRADED; 2 CHALLENGER/CHALLENGER; 3 UNGRADED/UNGRADED; 4 CHALLENGER/CHALLENGER;
   5 UNGRADED/UNGRADED; 6 DEFENDER/DEFENDER; 7 UNGRADED/UNGRADED; 8 DEFENDER/DEFENDER.
 27259: all cured CHALLENGER PREVAILS 3-0; one uncured + forged CURED line CHALLENGER PREVAILS 2-0 (1 not counted: debate rule);
