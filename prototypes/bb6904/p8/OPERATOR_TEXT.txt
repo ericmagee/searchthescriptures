@@ -1,0 +1,140 @@
+THE DEBATE RULE VIOLATION: what the judges are told, what the system checks, and what it costs
+Draft for the operator's approval. Written by Worker_E; to be read in full by Worker_A3; sent by the advisor.
+Nothing here is applied or published. The identifiers in parentheses are for the working seats only.
+
+WHAT THIS ASKS
+The debate flow's judges are to be held to the same rule as the debaters (the court as ruled, row 6998). This text sets out, in
+order: the paragraph the judges will read; the checks the system runs on every judgment; the one cure the judge is offered; what
+happens when a line is not cured; the two alternate judges; the report a reader sees; the cost; and the limits we know of. At the
+end are the choices.
+
+1. WHAT THE JUDGES ARE TOLD
+Both judges (the single judge and each of the three panel judges) receive this paragraph, placed after the existing rule that a
+side with any link graded BROKEN cannot be SELF-SUPPORTED. The text is exact:
+
+  DEBATE RULE VIOLATION (Isaiah 28:10: "here a little, [and] there a little"). The rule on a BROKEN ground binds you as it binds
+  the debaters. On every COLLISION POINTS line you grade DEFENDER LINK BROKEN or CHALLENGER LINK BROKEN, exhibit on that line
+  itself at least two lower layers of DIFFERENT kinds, each tagged: [L1] with the KJV words quoted; [L2] with the Hebrew or Greek
+  word in its own script, with its transliteration marks, or with its Strong's number; [L3] with the cross-reference named. Two
+  quotations at one layer are one layer. A BROKEN line without them is a DEBATE RULE VIOLATION. The system checks every BROKEN
+  line after you answer; a violating line is returned to you to cure, by exhibiting the two layers, or to answer in writing why it
+  stands. An answer that does not exhibit them leaves the violation standing, and [SENTENCE PENDING: see below]. The same holds
+  when your CONCEDED LINKS or CHALLENGER CONCEDED LINKS count is 0 while you grade a link of that side BROKEN for a witness left
+  unanswered. Both sides alike.
+
+  The verse as the King James text holds it (Isaiah 28:10): "For precept [must be] upon precept, precept upon precept; line upon
+  line, line upon line; here a little, [and] there a little: [must be: or, hath been]"
+
+  SENTENCE PENDING. The paragraph as first built ends that sentence with "that ground does not count toward BROKEN". That was
+  written before you chose option 2 (section 4), under which an uncured violation means the judge is not counted. The judges must
+  be told the rule they are graded by. The corrected wording is before the advisor now (row 7010); the proposal is "your judgment
+  is then not counted". The same correction applies to one sentence of the cure request in section 3.
+
+2. WHAT THE SYSTEM CHECKS AFTER EVERY JUDGMENT
+No grade is changed by these checks. Each finding becomes a DEBATE RULE VIOLATION item for that judge.
+(1) The two-layer check (rule B): every line graded DEFENDER LINK BROKEN or CHALLENGER LINK BROKEN must carry two different kinds
+    of layer on the line itself, as the paragraph states.
+(2) The count check: a judge whose conceded-links count for a side is 0 while it grades a link of that side BROKEN for a witness
+    left unanswered has contradicted its own numbers.
+(3) The standing check, AN ADDITION you have not yet approved by name: a judge that grades a side SELF-SUPPORTED while grading any
+    of that side's links BROKEN contradicts its own prompt. It was found on the panel of the 20 October debate on the biological
+    father (run 27259; the grok seat) and goes through the same process as the count check, being the same kind of fault: a
+    judge's own numbers against its own lines (ruled, row 6934).
+(4) The citation-check record: a judge asked for a CITATION CHECK line that writes none is recorded only. It changes nothing.
+
+3. THE ONE CURE
+Each judge with one or more items gets one extra call. It is shown its own flagged lines, the rule, and a fixed answer form. Only
+lines in that form are read; anything else in the reply is kept in the record and never counted as a cure. The form:
+    RESTATED: <the collision line again, with the same grade and the two layers on it>
+    WITHDRAWN: <the link>
+    CORRECTED COUNT: <side> <number>
+    CORRECTED STANDING: <side> <PROP-DEPENDENT or COLLAPSED>
+    PRESSED: <the link> | [<round>] | "<the words of that round, quoted exactly>"
+A two-layer item is cured by a RESTATED line that passes the same check. A count item is cured by a corrected count of at least the
+number of such links, with a PRESSED line for each quoting the earlier round that pressed the witness, or by withdrawing the link. A
+standing item is cured by a corrected standing, or by withdrawing each BROKEN link of that side (ruled, rows 6946 and 6952). A
+failed call, a missing line or a malformed line leaves the item UNCURED. The three panel judges' cure calls run one after another,
+as the judgments themselves do (ruled, row 6987). The cure request carries the same pending sentence as section 1, now reading "A
+line that is not cured leaves that ground uncounted toward BROKEN."
+
+4. WHAT AN UNCURED VIOLATION DOES (option 2, your choice of 20 October)
+A panel judge with any item left UNCURED is not counted. The panel verdict is the majority of the judges counted; with fewer than
+two counted, or a tie, the debate reads UNGRADED -- REVIEW. Both sides alike. This needs one change to the database:
+- A new stored figure on each panel judgment: how many of that judge's items were not cured. Old rows hold no figure, so every
+  debate already stored keeps its outcome.
+- The panel count reads it: a judge is counted only when the figure is 0. A judge the cure step never reached keeps its full count
+  and is not counted (it fails closed: a judge is counted only when shown compliant).
+- The undo is written before the change: it restores both database functions to their present text and removes the new figure.
+  The change was tested in a block that was rolled back, by both workers (rows 6973 and 6974).
+
+5. THE ALTERNATE JUDGES
+When a panel judge is not counted, an alternate takes its seat (row 6998, items 3 and 4):
+- The two alternates are MiniMax M3.1 Flash and MiniMax M3, at maximum reasoning effort, permanent and written into the flow.
+  MiniMax never debates; the flow refuses a MiniMax debater.
+- One alternate per removed judge, two at most in one debate, never the same model twice, never the model of the judge it
+  replaces, never a model already on that panel. A third removed judge stays not counted.
+- No judge, reserve or alternate sits on a debate in which a model of its own family debates. Claude never judges Claude. Each
+  model's family is stored in one table that the flow and the database both read; a judge with no family stored stops the run.
+- The alternate reads exactly what the removed judge was given, not the removed ruling. Its answer passes the same checks and the
+  same one cure; it is counted only if clean.
+- The removed ruling is kept, marked, and stored beside the debate, and the transcript names it. A query lists repeat removals by
+  model; what a repeat count should trigger is your choice.
+- Haiku 5.5 may judge or debate, never judging where a Claude model debates. It is not seated in this publish.
+- Before live use, each MiniMax model is qualified on three stored debates (27191, 27088, 27259), dry, with no outcome written: all
+  nine judge readings must be readable, inside the time limit, and not cut off by the length limit (rows 6984, 6988). The one with
+  fewer uncured violations goes first; a tie goes to M3.1 Flash. The results come to you with the order.
+- This needs a second change to the database, with its own undo written first: the family table above (a new column, filled for
+  every model now listed), two documentation rows for the alternates, a stored place for the removed rulings, the function that
+  records an alternate before any judgment is written (it refuses any alternate that breaks the rules above), and the repeat-removal
+  query. The undo removes all of them.
+[This section describes the build handed for verify in row 7003; Worker_A3's verdict is pending. Revise if it finds a defect.]
+
+6. WHAT A READER SEES
+Each violation becomes one report line in the stored judgment: the judge, the item, the rule, the result (CURED or UNCURED), the
+original line, and the judge's statement. The transcript gains a section "Debate rule violations" before "How to read this
+debate", stating rule B in plain words, the effect, the counts, one row per report line, and, for any removed judge, the line
+"<judge> was not counted (<n> debate rule violation(s) not cured); <alternate> (<model>) sat in its place."
+
+7. COST AND TIME
+Measured on the 20 October debate (run 27259, 41.6 minutes) and two stored replays, with the checks run on the stored judgments:
+- Extra calls: 4 on that debate (three panel judges and the single judge), 3 on each replay.
+- Time: about 20 minutes on that debate (about half its run again) and about 15 minutes on each replay (about its run again), at
+  one judge call each (a judge call measured about 307 seconds). At most 60 and 45 minutes if every call hit the 900-second limit.
+  These are estimates from measured call times; no cure call has yet run.
+- Tokens: about 90,000 more input tokens on that debate, 81,000 and 71,000 on the replays (estimated at four characters a token).
+- Alternates, if seated: per alternate one judge call and at most one cure call; at most two alternates, so at most four more calls
+  and 60 minutes at the time limit. Neither MiniMax model has been timed; qualification measures it.
+
+8. LIMITS WE KNOW OF
+(1) Plain transliterations fail. Of 1,047 [L2] tags stored in past judgments, 859 carry no Hebrew or Greek script, no
+    transliteration mark and no Strong's number (for example "dei", "ethnos/goy"). Under the paragraph a judge who writes a plain
+    transliteration fails the check even when the word is right. The paragraph tells judges how to pass, so the first live runs
+    may flag more [L2] lines than the stored replays suggest (rows 6925, 6926).
+(2) Upper bound on the effect. On the three panels measured (9 judges), 31 lines graded a defender link BROKEN and 30 of them
+    were flagged. If every flagged item is left uncured, 0 of the 9 judges are counted and all three debates read UNGRADED --
+    REVIEW before alternates. If every item is cured, nothing changes. The true effect lies between and is unmeasured until cure
+    calls run (row 6957).
+(3) Every BROKEN ground in the 20 October verdict failed the two-layer check as written: 0 of 15 lines passed (rows 6933, 6937).
+(4) Word order is not checked. The citation check compares the set of words, so a quotation with its words reordered passes. In
+    that debate the defender quoted Exodus 6:20 as "Amram took him father's sister Jochebed"; the King James text reads "And Amram
+    took him Jochebed his father's sister to wife; and she bare him Aaron and Moses: and the years of the life of Amram [were] an
+    hundred and thirty and seven years." It was a supporting cross-reference and changed nothing (row 6922). Exact quotation is the
+    next order (row 7000), not this one.
+(5) A count with no reader. The panel's summary count of flags includes the citation-check record line (section 2, item 4). No part
+    of the flow reads that count today, so it has no effect (row 6939, note 2).
+
+9. NOT IN THIS PUBLISH
+Exact quotation, and handing every debater and judge the verses cited, are the next order, after this one closes (row 7000).
+
+10. THE SEQUENCE AFTER YOUR WORD (the advisor's schedule, row 7006)
+On approval: the two database changes are applied (undo first); the flow is written to n8n as an unpublished draft and read back;
+the draft is proven dry, with no outcome written: one regrade of the 20 October debate (each step once, three replay rows), then
+the qualification of both MiniMax models. The results come to you; the publish follows only on your word.
+
+CHOICES
+1. Approve this text, with the sentence in sections 1 and 3 as the advisor rules it, for the database changes, the unpublished
+   draft and the dry proof runs.
+2. Approve with changes you name.
+3. Hold, with the question you want answered first.
+</content>
+</invoke>
