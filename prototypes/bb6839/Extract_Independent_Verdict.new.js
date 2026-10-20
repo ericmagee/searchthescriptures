@@ -277,7 +277,7 @@ if(K3.d&&clause&&n!==null&&w!==null&&k!==null){const wa=w+K2.miss.length,ksa=(ke
 const asked=(prev&&(prev.audit_prompt==='W1-A1'||prev.audit_prompt==='ODV1-A1'||prev.audit_prompt==='ODV1-A2'));
 const askedD=(prev&&prev.audit_prompt==='ODV1-A2');
 const src0=raw0.replace(/[*_`]+/g,'');
-const oorSec=src0.match(/^[ \t]*(?:#+[ \t]*|[-•][ \t]*)?OUT-OF-ROUND CONCESSIONS[ \t]*:?[ \t]*\n?([\s\S]*?)(?=\n[ \t]*(?:#+[ \t]*|[-•][ \t]*)?(?:CHALLENGER CHAIN MARK|CITATION CHECK|COLLISION POINTS)\b|(?![\s\S]))/im);
+const oorSec=src0.match(/^[ \t]*(?:#+[ \t]*|[-•][ \t]*)?OUT-OF-ROUND CONCESSIONS[ \t]*:?[ \t]*\n?([\s\S]*?)(?=\n[ \t]*(?:#+[ \t]*|[-•][ \t]*)?(?:DEFENDER CHAIN MARK|CHALLENGER CHAIN MARK|CITATION CHECK|COLLISION POINTS)\b|(?![\s\S]))/im);
 let out_of_round_concessions=null,out_of_round_detail=null;
 if(oorSec){const b=(oorSec[1]||'').trim();if(/^NONE\b/i.test(b)){out_of_round_concessions=0;}else{const ls=b.split('\n').map(s=>s.replace(/^[-•\s]+/,'').trim()).filter(s=>s.length>0);const form=ls.filter(s=>/^(DEFENDER|CHALLENGER)[ \t]*\|/i.test(s));const off=ls.filter(s=>!/^(DEFENDER|CHALLENGER)[ \t]*\|/i.test(s));out_of_round_concessions=form.length;out_of_round_detail=form.length?form.join('\n'):null;for(const s of off){raw+='\n\n[AUDIT v18: OUT-OF-ROUND LINE NOT IN THE ASKED FORM, NOT COUNTED: "'+s.slice(0,60)+'". REVIEW THIS ROW.]';}}}
 if(out_of_round_concessions===null){raw+=asked?'\n\n[AUDIT v18: OUT-OF-ROUND CONCESSIONS SECTION ABSENT FROM A PROMPT THAT ASKS FOR IT. REVIEW THIS ROW.]':'\n\n[AUDIT v18: OUT-OF-ROUND CONCESSIONS not asked by the prompt that produced this text; null recorded, no flag.]';}
