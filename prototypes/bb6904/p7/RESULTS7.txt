@@ -11,6 +11,7 @@ PASS the alternates from the constants, in order, with no model_config row (6997
 PASS debaters with their family from model_config.family
 PASS a seat without a family fails closed (6993)
 PASS a panel judge of a debating family fails the run closed (Claude never judges Claude)
+PASS a debater of family minimax in model_config fails the run (7014 note 3)
 PASS a reserve of a debating family is dropped (no reserve), otherwise kept
 # Alternate Needed?, Calls?, Cure Needed?
 PASS Alternate Needed?: false when every seat is clean; true with an uncured seat or on a qualify run

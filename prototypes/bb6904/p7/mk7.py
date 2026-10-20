@@ -11,6 +11,8 @@ LIVE,P4,P5B,P6,OUT=sys.argv[1:6];os.makedirs(OUT,exist_ok=True)
 w=json.load(open(LIVE))['workflow'];N={n['name']:n for n in w['nodes']}
 ops4=json.load(open(os.path.join(P4,'ops.json')))
 blk=open(os.path.join(P4,'drv_block_0b3cbac.js')).read();lib=open(os.path.join(P6,'cure_lib.js')).read()
+# 7014: the cure sentence ruled for 7010, applied by anchor to step 6's cure_lib (Worker_A3's file is not edited).
+lib=once(lib,'A line that is not cured leaves that ground uncounted toward BROKEN.";','A line that is not cured leaves the violation standing, and this judgment is then not counted.";','cure sentence (7014)')
 lib_code=lambda body:blk+'\n'+lib+'\n'+body.strip()+'\n'
 pp=open(os.path.join(P5B,'Panel_Payloads.js')).read();k=pp.index('const bodies=[];const summary=[];');helpers=pp[:k]
 res={};files={}
@@ -68,8 +70,9 @@ edits.append({'node':'Resolve Seats','parameters':{**N['Resolve Seats']['paramet
 fm=open(os.path.join(P6,'Format_Markdown.js')).read()
 FM_ANCHOR="t += '---\\n\\n';\nt += '## How to read this debate"
 FM_ADD=("// ALTERNATES (BB-6904 g, step 7): a seat not counted for an uncured violation, and the alternate that sat (stored drv_removed).\n"
+ "const ALTN={alt_minimax31:'MiniMax M3.1 Flash',alt_minimax3:'MiniMax M3'}; // names for the alternates' seat ids (7014 note 4)\n"
  "const DRM=Array.isArray(r.drv_removed)?r.drv_removed:[];\n"
- "if(DRM.length){t += '## Alternate judges\\n\\n';DRM.forEach(x=>{t += '- ' + nm(x.seat) + ' was not counted (' + (x.drv_uncured||0) + ' debate rule violation(s) not cured); ' + String(x.replaced_by||'') + ' (' + String(x.replaced_by_model||'') + ') sat in its place.\\n';});t += '\\n';}\n")
+ "if(DRM.length){t += '## Alternate judges\\n\\n';DRM.forEach(x=>{t += '- ' + nm(x.seat) + ' was not counted (' + (x.drv_uncured||0) + ' debate rule violation(s) not cured); ' + (ALTN[x.replaced_by]||nm(x.replaced_by)) + ' (' + String(x.replaced_by_model||'') + ') sat in its place.\\n';});t += '\\n';}\n")
 fm2=once(fm,FM_ANCHOR,FM_ADD+FM_ANCHOR,'Format Markdown');save('Format Markdown',fm2)
 edits.append({'node':'Format Markdown','parameters':{**N['Format Markdown']['parameters'],'jsCode':fm2}})
 json.dump({'base':w['versionId'],'on_top_of':['p3 0b3cbac','p4 serial slots (BB-6987)','p6 2cc49d8','p5b'],'nodes_add':nodes,'connections_remove':conn_remove,'connections_add':conn_add,'edits':edits},open(os.path.join(OUT,'ops7.json'),'w'),indent=1,ensure_ascii=False)

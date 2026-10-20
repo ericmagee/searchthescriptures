@@ -32,6 +32,7 @@ ok(r1.alternates.map(x=>x.seat+'/'+x.api_model+'/'+x.family).join()==='alt_minim
 ok(r1.debaters.map(x=>x.engine+'/'+x.family).join()==='claude/anthropic,chatgpt/openai','debaters with their family from model_config.family');
 ok(/has no family in model_config/.test(throws(()=>run(src('Resolve_Seats'),rsMap(MC0),[{}]))),'a seat without a family fails closed (6993)');
 const famJ=MC.map(x=>x.seat==='grok'?{...x,family:'anthropic'}:x);ok(/judge seat "grok" is of family anthropic, which debates/.test(throws(()=>run(src('Resolve_Seats'),rsMap(famJ),[{}]))),'a panel judge of a debating family fails the run closed (Claude never judges Claude)');
+const famM=MC.map(x=>x.seat==='chatgpt'?{...x,family:'minimax'}:x);ok(/MiniMax never debates/.test(throws(()=>run(src('Resolve_Seats'),rsMap(famM),[{}]))),'a debater of family minimax in model_config fails the run (7014 note 3)');
 const a1r={...a1,panel_reserve:'mimo'};const famR=MC.map(x=>x.seat==='mimo'?{...x,family:'openai'}:x);
 ok(run(src('Resolve_Seats'),rsMap(MC,a1r),[{}])[0].reserve.seat==='mimo'&&run(src('Resolve_Seats'),rsMap(famR,a1r),[{}])[0].reserve===null,'a reserve of a debating family is dropped (no reserve), otherwise kept');
 console.log('# Alternate Needed?, Calls?, Cure Needed?');
@@ -95,6 +96,6 @@ console.log('# Format Markdown (stored drv_removed)');
 {const fm=src('Format_Markdown');const i=fm.indexOf('// ALTERNATES (BB-6904 g, step 7)');const j=fm.indexOf("t += '---\\n\\n';\nt += '## How to read this debate",i);const seg=fm.slice(i,j);
  const go=r=>new Function('r','nm','let t="";'+seg+';return t;')(r,x=>'NM('+x+')');
  const t1=go({drv_removed:[{seat:'grok',drv_uncured:4,replaced_by:'alt_minimax31',replaced_by_model:'minimax/minimax-m3.1-flash'}]});
- ok(t1==='## Alternate judges\n\n- NM(grok) was not counted (4 debate rule violation(s) not cured); alt_minimax31 (minimax/minimax-m3.1-flash) sat in its place.\n\n','one line per removed seat from the stored row');
+ ok(t1==='## Alternate judges\n\n- NM(grok) was not counted (4 debate rule violation(s) not cured); MiniMax M3.1 Flash (minimax/minimax-m3.1-flash) sat in its place.\n\n','one line per removed seat from the stored row');
  ok(go({drv_removed:null})===''&&go({})==='','no drv_removed: nothing added (the step 6 harness h6 also passes 22/22 on this file)');}
 console.log('failures',fails);

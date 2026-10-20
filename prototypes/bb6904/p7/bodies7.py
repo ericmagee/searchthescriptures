@@ -30,6 +30,8 @@ RS_ADD = r"""// FAMILIES (BB-6993; 6998 item 4): model_config.family is the one 
 // is dropped, an alternate is skipped. A seat whose row has no family fails closed. Claude never judges Claude (6995).
 const famOf=k=>{const x=M[k];const f=x&&x.family?String(x.family).trim().toLowerCase():'';if(!f)fail('seat "'+k+'" has no family in model_config (BB-6993).');return f;};
 const debFam=[famOf(D.mc_seat),famOf(C.mc_seat)];
+// MiniMax never debates (BB-6997), read here by family from model_config (7014 note 3); Init Seats' engine-name refusal stays as the first fence.
+if(debFam.indexOf('minimax')>=0)fail('MiniMax never debates (BB-6997): a debater seat is of family minimax in model_config.');
 S.panel_order.forEach(k=>{if(debFam.indexOf(famOf(k))>=0)fail('judge seat "'+k+'" is of family '+famOf(k)+', which debates in this debate (BB-6993).');});
 if(S.single_judge&&debFam.indexOf(famOf(S.single_judge))>=0)fail('single judge seat "'+S.single_judge+'" is of family '+famOf(S.single_judge)+', which debates in this debate (BB-6993).');
 const reserve=(reserve0&&debFam.indexOf(famOf(reserve0.seat))<0)?reserve0:null;

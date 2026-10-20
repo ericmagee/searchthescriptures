@@ -122,8 +122,9 @@ if (DRVR.length) {
   if (PR.length) t += 'The reply of ' + PR.join(', ') + ' also held prose. It is recorded in the stored row and was not read for a cure.\n\n';
 }
 // ALTERNATES (BB-6904 g, step 7): a seat not counted for an uncured violation, and the alternate that sat (stored drv_removed).
+const ALTN={alt_minimax31:'MiniMax M3.1 Flash',alt_minimax3:'MiniMax M3'}; // names for the alternates' seat ids (7014 note 4)
 const DRM=Array.isArray(r.drv_removed)?r.drv_removed:[];
-if(DRM.length){t += '## Alternate judges\n\n';DRM.forEach(x=>{t += '- ' + nm(x.seat) + ' was not counted (' + (x.drv_uncured||0) + ' debate rule violation(s) not cured); ' + String(x.replaced_by||'') + ' (' + String(x.replaced_by_model||'') + ') sat in its place.\n';});t += '\n';}
+if(DRM.length){t += '## Alternate judges\n\n';DRM.forEach(x=>{t += '- ' + nm(x.seat) + ' was not counted (' + (x.drv_uncured||0) + ' debate rule violation(s) not cured); ' + (ALTN[x.replaced_by]||nm(x.replaced_by)) + ' (' + String(x.replaced_by_model||'') + ') sat in its place.\n';});t += '\n';}
 t += '---\n\n';
 t += '## How to read this debate\n\n**The method.** Isaiah 28:10 (KJV): "' + verse + '" The case is not one verse; it is verses laid on verses until the point stands. That is how these debates are built and how they are judged.\n\n';
 t += '- **[L1] The KJV verse:** the verse itself, quoted exactly.\n- **[L2] Source language:** the Hebrew or Greek behind the English.\n- **[L3] Cross-reference:** what the rest of scripture says.\n- **[L4] Inference:** a conclusion the debater draws from at least two prior layers.\n\n';
