@@ -1,5 +1,5 @@
-BB-6904 (g), step 7: the alternate-judge design. TEXT ONLY. Nothing here is built; whether alternates join this publish is the
-operator's question 10 (6965). Every claim about live code names the node or function it was read from (db281705; SELECT only).
+BB-6904 (g), step 7: the alternate-judge design. TEXT ONLY. Nothing here is built yet. Alternates join this publish (operator,
+recorded in 6981). Every claim about live code names the node or function it was read from (db281705; SELECT only).
 
 1. WHEN AN ALTERNATE IS CALLED
 - A panel seat is not counted under option 2 (6965; 5B): drv_uncured > 0 after the cure path, that is, at least one K-B, K-G1 or
@@ -10,15 +10,16 @@ operator's question 10 (6965). Every claim about live code names the node or fun
 - The single judge is outside the panel and sets no outcome; it gets no alternate.
 
 2. WHO SITS
-- Pool, in order (6975, 6978): Claude Haiku 5.5 at max effort, then MiniMax M3.1 Flash at max effort, both through OpenRouter
+- Pool, in order (operator, recorded in 6981, which replaces the 6970 citation of 6975 and 6978): Claude Haiku 5.5 at max effort, then MiniMax M3.1 Flash at max effort, both through OpenRouter
   (paid route). Exact api_model ids: NOT
   CONFIRMED. No model_config row holds either today (read from model_config this session, SELECT only: chatgpt, claude_synthesis, deepseek,
   deepseek_debate, gemini, glm, grok, kimi, mimo, qwen). Each needs a model_config row (seat, provider openrouter, api_model,
   max_tokens), written only on the operator's word, after one test call.
 - Guards (6965): G1 never a model seated as a debater in that debate; G2 never the model of the seat it replaces.
-- Added by me, for the advisor to rule: G3 never a model already counted on that panel, and the alternates of one debate are
+- G3 (proposed in 6979, accepted in 6981): never a model already counted on that panel, and the alternates of one debate are
   distinct, so no model holds two votes.
-- OPEN, for the operator: Init Seats states "Claude never judges" (judge order BB-4607), and claude_synthesis (claude-sonnet-5-5)
+- The operator's rule, recorded in 6981: Haiku 5.5 is never a debater.
+- OPEN, with the operator (6981; nothing built on it until answered): Init Seats states "Claude never judges" (judge order BB-4607), and claude_synthesis (claude-sonnet-5-5)
   is also the debate challenger when the claude engine is seated. Haiku 5.5 is first in the pool. Two questions:
   (a) does 6965's list lift "Claude never judges" for alternates? (b) is G1 by model or by maker: may Haiku 5.5 judge a debate
   that Sonnet 5.5 argues?
