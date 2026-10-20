@@ -1,0 +1,20 @@
+# BB-6904 portion 1: node map (read-only), live flow moMxiV4Irg1uRBZN version db281705, read 2026-10-20 after the A4 publish.
+# Path, single judge:
+#   Regrade After Quotes? -> Build Independent Verdict (prompt; code 8513e9ae) -> Verdict Judge Route (switch, 6 families)
+#   -> Independent Verdict Call / Verdict Call <fam> -> Verdict Normalizer (2f254392) -> Extract Independent Verdict (489b62e5)
+#   -> Build Diagnostic Prompt (df5a5e77) -> ... -> Build Save Body (3dc5785e) -> Save to DB -> Check Save (1c313b38) -> Panel Build
+# Path, panel:
+#   Panel Build (prompt; e91f47e0) -> Panel Judge 1 Route -> Judge 1 <fam> -> Panel Judge 2 Route -> Judge 2 <fam>
+#   -> Panel Judge 3 Route -> Judge 3 <fam> -> Panel Check (e98e4080) -> Reserve Needed? -> [Reserve Build ... Panel Reserve <fam>]
+#   -> Panel Payloads (1026e0c0) -> Dry? -> (dry) Replay Rows (c7043e8f) -> Write Replay
+#                                        -> (live) Record Substitution -> Write Judgment 1/2/3 -> Derive Outcome -> Panel Done (e7fdc7e8)
+# Where each part of 6904 lands (proposal, for portion 2 onward):
+#   (a) prompt: Build Independent Verdict and Panel Build (both already carry rule B text; insert the label and the cure duty).
+#   (b) K-B form C, K-G1, K-G2: single judge in Extract Independent Verdict (before the save); panel in Panel Payloads
+#       (after reserves, before Dry?, so dry replays and live runs both carry it).
+#   (c) cure call: single judge between Extract Independent Verdict and Build Diagnostic Prompt; panel between
+#       Panel Payloads and Dry?. New nodes: Cure Build, Cure Route (switch by family, as the judge routes), Cure Call <fam>,
+#       Cure Check (K-B on the statement). One cure call per violating seat.
+#   (d) outcome effect: derive_debate_outcome reads the stored judgments; a removed ground must reach it through the
+#       stored row (debate_judgments / replay rows) or the flag text. Measured in portion 5.
+#   (e) report: Panel Payloads output, carried into Write Judgment / Write Replay and Format Markdown.
