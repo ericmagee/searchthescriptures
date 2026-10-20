@@ -1,15 +1,15 @@
-647 D3 (stored)                    A(ref/src only): 2  B(ref/src + quote): 0  C(by layer): 1
-647 D3 real exhibits removed       A(ref/src only): 0  B(ref/src + quote): 0  C(by layer): 0
-762 D4 (stored)                    A(ref/src only): 2  B(ref/src + quote): 0  C(by layer): 1
-762 D5 (stored)                    A(ref/src only): 1  B(ref/src + quote): 1  C(by layer): 1
-constructed compliant              A(ref/src only): 1  B(ref/src + quote): 1  C(by layer): 1
-constructed one exhibit            A(ref/src only): 1  B(ref/src + quote): 1  C(by layer): 1
-constructed denial only            A(ref/src only): 0  B(ref/src + quote): 0  C(by layer): 0
-235 grok D5 (replay)               A(ref/src only): 0  B(ref/src + quote): 0  C(by layer): 0
-constructed compliant, italic [L2] A(ref/src only): 2  B(ref/src + quote): 1  C(by layer): 2
-6898 D1 apostrophes (must fail)    A(ref/src only): 1  B(ref/src + quote): 0  C(by layer): 1
-6898 two [L1] quotes (question)    A(ref/src only): 0  B(ref/src + quote): 0  C(by layer): 2
-238 grok D4 vs C2                  A(ref/src only): 1  B(ref/src + quote): 0  C(by layer): 2
-238 grok D5 vs C3                  A(ref/src only): 1  B(ref/src + quote): 1  C(by layer): 1
-238 grok D6 vs C2                  A(ref/src only): 0  B(ref/src + quote): 0  C(by layer): 0
-238 grok D6 vs C6 (challenger)     A(ref/src only): 0  B(ref/src + quote): 0  C(by layer): 0
+647 D3 (stored)                    A(ref/src only): 2  B(ref/src + quote): 0  C tags: 1  C distinct layers: 1
+647 D3 real exhibits removed       A(ref/src only): 0  B(ref/src + quote): 0  C tags: 0  C distinct layers: 0
+762 D4 (stored)                    A(ref/src only): 2  B(ref/src + quote): 0  C tags: 1  C distinct layers: 1
+762 D5 (stored)                    A(ref/src only): 1  B(ref/src + quote): 1  C tags: 1  C distinct layers: 1
+constructed compliant              A(ref/src only): 1  B(ref/src + quote): 1  C tags: 1  C distinct layers: 1
+constructed one exhibit            A(ref/src only): 1  B(ref/src + quote): 1  C tags: 1  C distinct layers: 1
+constructed denial only            A(ref/src only): 0  B(ref/src + quote): 0  C tags: 0  C distinct layers: 0
+235 grok D5 (replay)               A(ref/src only): 0  B(ref/src + quote): 0  C tags: 0  C distinct layers: 0
+constructed compliant, italic [L2] A(ref/src only): 2  B(ref/src + quote): 1  C tags: 2  C distinct layers: 2
+6898 D1 apostrophes (must fail)    A(ref/src only): 1  B(ref/src + quote): 0  C tags: 1  C distinct layers: 1
+6898 two [L1] quotes (question)    A(ref/src only): 0  B(ref/src + quote): 0  C tags: 2  C distinct layers: 1
+238 grok D4 vs C2                  A(ref/src only): 1  B(ref/src + quote): 0  C tags: 2  C distinct layers: 2
+238 grok D5 vs C3                  A(ref/src only): 1  B(ref/src + quote): 1  C tags: 1  C distinct layers: 1
+238 grok D6 vs C2                  A(ref/src only): 0  B(ref/src + quote): 0  C tags: 0  C distinct layers: 0
+238 grok D6 vs C6 (challenger)     A(ref/src only): 0  B(ref/src + quote): 0  C tags: 0  C distinct layers: 0
