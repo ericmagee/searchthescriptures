@@ -18,14 +18,15 @@ BEGIN
  || E'  -- CITATION RULE (BB-6795 J2; ruled BB-6799, BB-6805, BB-6828, BB-6830). A side that would prevail with a load-bearing quotation\n'
  || E'  -- (an [L1] quotation in a LINK block of its link round, the link not conceded) whose wording is NOT FOUND in the book named, or\n'
  || E'  -- whose cited verse does not exist, does not prevail: the outcome is the review value and citation_block records why. Same test for\n'
- || E'  -- both sides. WORDS ARE AT <ref> does not trip it. An unavailable check fails open, recorded and audited (BB-6830). NULL = before J2.\n'
+ || E'  -- both sides. WORDS ARE AT <ref> does not trip it. A check that did not run holds a prevail to review too (operator, BB-6833). NULL = before J2.\n'
  || E'  SELECT citation_check, citation_block INTO v_cc, v_b_block FROM debate_results WHERE id = p_debate_id;\n'
  || E'  v_block := NULL;\n'
- || E'  IF v_cc IS NOT NULL AND coalesce((v_cc->>''unavailable'')::boolean, false) THEN\n'
+ || E'  v_side := CASE WHEN v_outcome IN (''DEFENDER PREVAILS'', ''DEFENDER PREVAILS, WEAKENED'') THEN ''DEFENDER''\n'
+ || E'                 WHEN v_outcome = ''CHALLENGER PREVAILS'' THEN ''CHALLENGER'' END;\n'
+ || E'  IF v_cc IS NOT NULL AND v_side IS NOT NULL AND coalesce((v_cc->>''unavailable'')::boolean, false) THEN\n'
  || E'    v_block := ''citation check unavailable'';\n'
+ || E'    v_outcome := v_review;\n'
  || E'  ELSIF v_cc IS NOT NULL THEN\n'
- || E'    v_side := CASE WHEN v_outcome IN (''DEFENDER PREVAILS'', ''DEFENDER PREVAILS, WEAKENED'') THEN ''DEFENDER''\n'
- || E'                   WHEN v_outcome = ''CHALLENGER PREVAILS'' THEN ''CHALLENGER'' END;\n'
  || E'    IF v_side IS NOT NULL THEN\n'
  || E'      SELECT string_agg((e->>''ref'')||'' (''||(e->>''status'')||'', LINK ''||coalesce(e->>''link'',''?'')||'', ''||(e->>''round'')||'')'', ''; '' ORDER BY o)\n'
  || E'        INTO v_bad FROM jsonb_array_elements(coalesce(v_cc->''items'', ''[]''::jsonb)) WITH ORDINALITY AS t(e, o)\n'
@@ -47,4 +48,4 @@ BEGIN
   INSERT INTO j2x VALUES (d);
 END
 $do$;
-SELECT md5(d) new_md5, length(d) new_len, (length(d)-15677) delta, substr(d, strpos(d,'-- CITATION RULE')-60, 300) head_ctx, (SELECT count(*) FROM regexp_matches(d,'citation_block','g')) n_cb FROM j2x;
+SELECT md5(d) new_md5, length(d) new_len, (length(d)-15677) delta, (SELECT count(*) FROM regexp_matches(d,'citation_block','g')) n_cb, substr(d, strpos(d,'  v_block := NULL;'), 420) ctx FROM j2x;

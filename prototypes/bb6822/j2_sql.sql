@@ -3,7 +3,7 @@
 ALTER TABLE debate_results ADD COLUMN citation_check jsonb;
 ALTER TABLE debate_results ADD COLUMN citation_block text;
 COMMENT ON COLUMN debate_results.citation_check IS 'KJV citation check per quotation, written at insert by ODV1 Build Save Body (BB-6795 J2): side, round, ref, status, link, load_bearing; or {"unavailable":true}. NULL = run before J2.';
-COMMENT ON COLUMN debate_results.citation_block IS 'Written by derive_debate_outcome only (BB-6795 J2): why the outcome was held to review under the citation rule, or "citation check unavailable". NULL otherwise.';
+COMMENT ON COLUMN debate_results.citation_block IS 'Written by derive_debate_outcome only (BB-6795 J2, BB-6833): why a prevail was held to review: a load-bearing quotation not found, or "citation check unavailable". NULL otherwise.';
 -- PART B: derive_debate_outcome, patched by anchors on the measured source (md5 379e6e5543f1a74020a060da3adeb64a, 15,677 chars).
 DO $do$
 DECLARE d text := pg_get_functiondef('derive_debate_outcome(uuid)'::regprocedure); n text;
@@ -24,14 +24,15 @@ BEGIN
  || E'  -- CITATION RULE (BB-6795 J2; ruled BB-6799, BB-6805, BB-6828, BB-6830). A side that would prevail with a load-bearing quotation\n'
  || E'  -- (an [L1] quotation in a LINK block of its link round, the link not conceded) whose wording is NOT FOUND in the book named, or\n'
  || E'  -- whose cited verse does not exist, does not prevail: the outcome is the review value and citation_block records why. Same test for\n'
- || E'  -- both sides. WORDS ARE AT <ref> does not trip it. An unavailable check fails open, recorded and audited (BB-6830). NULL = before J2.\n'
+ || E'  -- both sides. WORDS ARE AT <ref> does not trip it. A check that did not run holds a prevail to review too (operator, BB-6833). NULL = before J2.\n'
  || E'  SELECT citation_check, citation_block INTO v_cc, v_b_block FROM debate_results WHERE id = p_debate_id;\n'
  || E'  v_block := NULL;\n'
- || E'  IF v_cc IS NOT NULL AND coalesce((v_cc->>''unavailable'')::boolean, false) THEN\n'
+ || E'  v_side := CASE WHEN v_outcome IN (''DEFENDER PREVAILS'', ''DEFENDER PREVAILS, WEAKENED'') THEN ''DEFENDER''\n'
+ || E'                 WHEN v_outcome = ''CHALLENGER PREVAILS'' THEN ''CHALLENGER'' END;\n'
+ || E'  IF v_cc IS NOT NULL AND v_side IS NOT NULL AND coalesce((v_cc->>''unavailable'')::boolean, false) THEN\n'
  || E'    v_block := ''citation check unavailable'';\n'
+ || E'    v_outcome := v_review;\n'
  || E'  ELSIF v_cc IS NOT NULL THEN\n'
- || E'    v_side := CASE WHEN v_outcome IN (''DEFENDER PREVAILS'', ''DEFENDER PREVAILS, WEAKENED'') THEN ''DEFENDER''\n'
- || E'                   WHEN v_outcome = ''CHALLENGER PREVAILS'' THEN ''CHALLENGER'' END;\n'
  || E'    IF v_side IS NOT NULL THEN\n'
  || E'      SELECT string_agg((e->>''ref'')||'' (''||(e->>''status'')||'', LINK ''||coalesce(e->>''link'',''?'')||'', ''||(e->>''round'')||'')'', ''; '' ORDER BY o)\n'
  || E'        INTO v_bad FROM jsonb_array_elements(coalesce(v_cc->''items'', ''[]''::jsonb)) WITH ORDINALITY AS t(e, o)\n'
