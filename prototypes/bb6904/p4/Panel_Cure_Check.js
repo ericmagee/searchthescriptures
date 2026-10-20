@@ -80,12 +80,36 @@ function cureText(j){
  if(j&&Array.isArray(j.candidates)&&j.candidates[0]&&j.candidates[0].content&&Array.isArray(j.candidates[0].content.parts)){const t=j.candidates[0].content.parts.filter(p=>!p.thought&&typeof p.text==='string').map(p=>p.text).join('');if(t)return {ok:true,text:t,finish:j.candidates[0].finishReason||null};}
  const why=(j&&j.error)?('error: '+String(typeof j.error==='string'?j.error:(j.error.message||JSON.stringify(j.error))).slice(0,160)):('unrecognised reply, keys ['+Object.keys(j||{}).join(',')+']');
  return {ok:false,text:null,why};}
+// The round texts the judge was shown, read from its own request body: each transcript block opens with its label alone on a line
+// ([CR1], [DR1], [CR2], [DR2], [CR3 -- LINK ROUND ...], [DR3 -- LINK ROUND ...]) and runs to the next; [DR3] ends at the counting rule.
+function cureRounds(body){const parts=[];const add=c=>{if(typeof c==='string')parts.push(c);else if(Array.isArray(c))c.forEach(p=>{if(p&&typeof p.text==='string')parts.push(p.text);});};
+ try{(body.messages||[]).forEach(m=>{if(m&&m.role!=='assistant')add(m.content);});(body.contents||[]).forEach(m=>{if(m&&m.role!=='model')add(m.parts);});}catch(e){}
+ const t=parts.join('\n');const re=/^\[(CR1|DR1|CR2|DR2|CR3|DR3)(?: --[^\n]*)?\][ \t]*$/gm;const at=[];let m;while((m=re.exec(t)))at.push({k:m[1],s:m.index,e:m.index+m[0].length});
+ const out={};at.forEach((x,i)=>{if(out[x.k]!=null)return;let end=i+1<at.length?at[i+1].s:t.length;const c=t.indexOf('\n\nCOUNTING RULE',x.e);if(c>=0&&c<end)end=c;out[x.k]=t.slice(x.e,end);});
+ return out;}
+// The rounds that press a witness against each side (the judge prompt's UNANSWERED WITNESS rule).
+const CURE_PRESS={DEFENDER:['DR1','DR2'],CHALLENGER:['CR1','CR2','CR3']};
+const cureQ=s=>String(s).toLowerCase().replace(/[“”]/g,'"').replace(/[‘’]/g,"'").replace(/[—–]/g,'-').replace(/\s+/g,' ').trim();
+// Quotations in a statement: the same marks at word edges as DRV_QUOTE (BB-6898 D1).
+const cureQuotes=s=>{const re=/(?:^|[\s(\[{])["“'‘]([^"”\n]{4,}?)["”'’](?=$|[\s.,;:!?)\]}])/g;const o=[];let m;while((m=re.exec(s)))o.push(m[1]);return o;};
+// A quotation is found in a round when every piece of it (split at an ellipsis), stripped of edge punctuation, occurs in that round's text,
+// and the pieces hold at least three words.
+function cureFound(q,txt){const T=cureQ(txt);const ps=q.split(/\.{3}|…/).map(x=>cureQ(x).replace(/^[\s.,;:!?'"-]+|[\s.,;:!?'"-]+$/g,'')).filter(Boolean);
+ return ps.length>0&&ps.join(' ').split(' ').length>=3&&ps.every(x=>T.includes(x));}
+// Withdrawal clauses: a clause (cut at . ; ! ? before a space or the end, or a line end) holding WITHDRAW with no negation before it in that
+// clause and no NOTHING or NONE right after.
+const CURE_NEG=/\b(?:NOT|NO|NEVER|NOR|CANNOT|CAN'?T|WON'?T|DON'?T|DOESN'?T|DIDN'?T|SHAN'?T|DECLINES?|DECLINED|REFUSES?|REFUSED|WITHOUT)\b/;
+function cureWithdrawals(blockLines){const out=[];for(const l of blockLines)for(const c of String(l).toUpperCase().replace(/[’‘]/g,"'").split(/[.;!?]+(?=\s|$)/)){
+ const re=/\bWITHDRAW(?:S|N|ING)?\b/g;let m;while((m=re.exec(c))){if(CURE_NEG.test(c.slice(0,m.index)))continue;if(/^\s*(?:NOTHING|NONE)\b/.test(c.slice(m.index+m[0].length)))continue;out.push(c);break;}}
+ return out;}
 // Judge each item against the statement (6904 c; 6946). The reply is cut into blocks, each opened by a line that begins with an item's label.
-// K-B: the block's first line, alone, must pass the same K-B counter (two kinds). K-G1: CORRECT = a corrected conceded count for that side at
-// least the number of that side's K-G1 links, and in the block a quoted sentence and a named round ([DR1]..[CR3]); or WITHDRAW in the block.
-// K-G3: CORRECT = a corrected standing for that side other than SELF-SUPPORTED; or WITHDRAW naming every BROKEN link of that side.
+// K-B: the block's first line, alone, must pass the same K-B counter (two kinds) and keep the grade (that side's LINK BROKEN, found as
+// drvCheck finds it). K-G1: CORRECT = a corrected conceded count for that side at least the number of that side's K-G1 links, and a quotation
+// found in the text of a round named in the block that presses that side (defender [DR1], [DR2]; challenger [CR1]-[CR3]); or WITHDRAW.
+// K-G3: CORRECT = a corrected standing for that side other than SELF-SUPPORTED; or WITHDRAW, the withdrawal clauses naming every BROKEN
+// link of that side. A WITHDRAW counts only in a clause with no negation before it (BB-6948 defect 1).
 // Anything else, a missing block, a failed or unparsed call: UNCURED. No grade or count is changed (portion 5).
-function cureVerdicts(items,reply,broken){const norm=s=>String(s).replace(/[*_`]+/g,'').replace(/\s+/g,' ').trim().toUpperCase();
+function cureVerdicts(items,reply,broken,rounds){const norm=s=>String(s).replace(/[*_`]+/g,'').replace(/\s+/g,' ').trim().toUpperCase();
  const lines=reply&&reply.ok?String(reply.text).split('\n').map(s=>s.trim()).filter(Boolean):[];
  const labs=items.map(x=>norm(cureLabel(x)));const isLab=l=>labs.some(b=>norm(l).startsWith(b+':')||norm(l).startsWith(b+' :'));
  const block=lab=>{const k=lines.findIndex(l=>norm(l).startsWith(lab+':')||norm(l).startsWith(lab+' :'));if(k<0)return null;const b=[lines[k]];for(let i=k+1;i<lines.length&&!isLab(lines[i]);i++)b.push(lines[i]);return b;};
@@ -93,28 +117,33 @@ function cureVerdicts(items,reply,broken){const norm=s=>String(s).replace(/[*_`]
  return items.map(x=>{const lab=norm(cureLabel(x));const res=(status,why,statement,kinds)=>({...x,status,why,statement,kinds:kinds||[]});
   if(!reply||!reply.ok)return res('UNCURED','cure call failed: '+(reply?reply.why:'no reply'),null);
   const b=block(lab);if(!b)return res('UNCURED','no statement for '+cureLabel(x),null);const bt=norm(b.join(' '));
-  if(x.rule==='K-B'){const k=drvKinds(b[0]);return res(k.length>=2?'CURED':'UNCURED',k.length>=2?null:'statement exhibits '+k.length+' layer kind'+(k.length===1?'':'s'),b[0],k);}
-  if(/\bWITHDRAW(?:S|N|ING)?\b/.test(bt)){
+  if(x.rule==='K-B'){const k=drvKinds(b[0]);const g=norm(b[0]).slice(lab.length).match(/(DEFENDER LINK BROKEN|CHALLENGER LINK BROKEN|UNDERDETERMINED)/);
+   if(!g||g[1]!==x.side+' LINK BROKEN')return res('UNCURED','statement does not keep the grade '+x.side+' LINK BROKEN'+(g?' (it reads '+g[1]+')':''),b[0],k);
+   return res(k.length>=2?'CURED':'UNCURED',k.length>=2?null:'statement exhibits '+k.length+' layer kind'+(k.length===1?'':'s'),b[0],k);}
+  const wd=cureWithdrawals(b);
+  if(wd.length){const wt=norm(wd.join(' '));
    if(x.rule==='K-G1')return res('CURED','withdrawn',b.join(' '));
-   const need=((broken||{})[x.side]||[]).map(norm);if(!need.length)return res('UNCURED','the BROKEN links of '+x.side+' could not be read from the judgment',b.join(' '));const miss=need.filter(l=>!bt.includes(l));
+   const need=((broken||{})[x.side]||[]).map(norm);if(!need.length)return res('UNCURED','the BROKEN links of '+x.side+' could not be read from the judgment',b.join(' '));const miss=need.filter(l=>!wt.includes(l));
    return miss.length?res('UNCURED','withdrawal does not name '+miss.join(', '),b.join(' ')):res('CURED','withdrawn: '+need.join(', '),b.join(' '));}
   if(x.rule==='K-G1'){const lab2=x.side==='DEFENDER'?/(?:^|[^A-Z])CONCEDED LINKS\s*:\s*(\d+)/:/CHALLENGER CONCEDED LINKS\s*:\s*(\d+)/;
    const src=x.side==='DEFENDER'?whole.replace(/CHALLENGER CONCEDED LINKS\s*:\s*\d+/g,''):whole;const m=src.match(lab2);const n=m?+m[1]:null;
-   const q=DRV_QUOTE.test(b.join(' '));const rnd=/\[(?:DR1|DR2|CR1|CR2|CR3)\]/.test(bt);
-   if(n!==null&&n>=nK1[x.side]&&q&&rnd)return res('CURED','corrected: '+(x.side==='DEFENDER'?'CONCEDED':'CHALLENGER CONCEDED')+' LINKS '+n,b.join(' '));
-   return res('UNCURED','correction incomplete: count '+(n===null?'not given':n+(n<nK1[x.side]?' (below '+nK1[x.side]+')':''))+(q?'':', no quoted sentence')+(rnd?'':', no round named'),b.join(' '));}
+   const qs=cureQuotes(b.join(' '));const named=CURE_PRESS[x.side].filter(k=>bt.includes('['+k+']'));const R=rounds||{};
+   const inR=q=>named.filter(k=>typeof R[k]==='string'&&cureFound(q,R[k]));const hit=qs.find(q=>inR(q).length);const unread=named.length&&named.every(k=>typeof R[k]!=='string');
+   if(n!==null&&n>=nK1[x.side]&&hit)return res('CURED','corrected: '+(x.side==='DEFENDER'?'CONCEDED':'CHALLENGER CONCEDED')+' LINKS '+n+'; quotation found in '+inR(hit).join(', '),b.join(' '));
+   return res('UNCURED','correction incomplete: count '+(n===null?'not given':n+(n<nK1[x.side]?' (below '+nK1[x.side]+')':''))+(qs.length?'':', no quoted sentence')
+    +(named.length?'':', no round named of '+CURE_PRESS[x.side].join(', '))+(qs.length&&named.length&&!hit?(unread?', the named round text could not be read':', no quotation found in the named round'):''),b.join(' '));}
   if(x.rule==='K-G3'){const lab3=x.side==='DEFENDER'?'DEFENSE':'CHALLENGE';const m=whole.match(new RegExp(lab3+'\\s+STANDING\\s*:\\s*(SELF-SUPPORTED|PROP-DEPENDENT|COLLAPSED)'));
    if(m&&m[1]!=='SELF-SUPPORTED')return res('CURED','corrected: '+lab3+' STANDING '+m[1],b.join(' '));
    return res('UNCURED','correction incomplete: standing '+(m?m[1]:'not given'),b.join(' '));}
   return res('UNCURED','unknown rule',null);});}
 function cureReport(seat,v){return v.map(x=>'[AUDIT v21: DEBATE RULE VIOLATION REPORT -- '+(seat?seat+' ':'')+(x.rule==='K-G3'?x.side:x.link)+' ('+x.rule+'): '+x.status
- +(x.kinds&&x.kinds.length?' ('+x.kinds.join(', ')+')':'')+(x.why?'; '+x.why:'')+(x.statement?'. STATEMENT: '+x.statement.slice(0,600):'')+']');}
+ +(x.kinds&&x.kinds.length?' ('+x.kinds.join(', ')+')':'')+(x.why?'; '+x.why:'')+(x.statement?'. STATEMENT: '+x.statement.slice(0,600).replace(/\[/g,'(').replace(/\]/g,')'):'')+']');}
 
 const PP=$('Panel Payloads').first().json;let rs=[];try{if($('Panel Cure Normalize').isExecuted)rs=$('Panel Cure Normalize').all().map(x=>x.json);}catch(e){rs=[];}
 const bodies=PP.bodies.slice();const summary=(PP.summary||[]).map(s=>({...s}));
 summary.forEach((s,i)=>{const all=s.drv||[];s.cure=[];if(!all.length)return;
  const r=rs.find(x=>x.cure&&x.cure.idx===i)||null;
- const v=cureVerdicts(all,r?r.reply:{ok:false,why:'no cure call was made for this seat'},r&&r.cure?r.cure.broken:null);
+ const v=cureVerdicts(all,r?r.reply:{ok:false,why:'no cure call was made for this seat'},r&&r.cure?r.cure.broken:null,r&&r.cure?r.cure.rounds:null);
  s.cure=v.map(x=>({rule:x.rule,side:x.side,link:x.link,status:x.status,kinds:x.kinds,why:x.why}));
  const b=JSON.parse(bodies[i]);b.payload.verdict_raw=b.payload.verdict_raw+'\n'+cureReport(s.seat,v).join('\n');bodies[i]=JSON.stringify(b);});
 return [{json:{...PP,bodies,summary}}];

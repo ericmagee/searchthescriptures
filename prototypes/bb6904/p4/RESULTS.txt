@@ -17,7 +17,18 @@ PASS AMEND 1 no-cure path: Cure Check passes the item unchanged, empty report
 PASS Only K-G1: a call is made (6946)
 PASS K-G1 with no call reaching Check: UNCURED, named
 # 6946: K-G1 and K-G3, each way
-PASS K-G1 CORRECT (count 1 >= 1 link, quoted sentence, round named) -> CURED
+PASS K-G1 CORRECT (count 1 >= 1 link, a sentence quoted from the named round [DR2]) -> CURED
+PASS Round texts read from the judge's own prompt: six blocks, inline labels ignored, [DR3] ends at the counting rule
+# BB-6948 falsifiers
+PASS DEFECT 3: a quotation not in the named round -> UNCURED
+PASS DEFECT 3: a quotation from a round that does not press the defender ([CR3]) -> UNCURED
+PASS A quotation found in one of two named rounds -> CURED
+PASS DEFECT 1: "I do not withdraw" (K-G1) -> UNCURED
+PASS DEFECT 1: "withdraw nothing" -> UNCURED
+PASS DEFECT 1: "I will not withdraw" naming every link (K-G3) -> UNCURED
+PASS DEFECT 1: one link withdrawn, the other named only in a refusal -> UNCURED
+PASS DEFECT 2: a K-B restatement as UNDERDETERMINED, two kinds -> UNCURED
+PASS DEFECT 2: a K-B restatement graded for the other side -> UNCURED
 PASS K-G1 CORRECT incomplete (no quote, no round) -> UNCURED
 PASS K-G1 CORRECT with the count still too low -> UNCURED
 PASS K-G1 WITHDRAW -> CURED
@@ -37,6 +48,7 @@ PASS AMEND 2: exactly one item, three bodies
 PASS One seat cured (deepseek, both lines restated with two kinds)
 PASS Beside it a seat not cured: the failed call (gemini)
 PASS grok K-G3 WITHDRAW naming its one BROKEN link -> CURED
+PASS NOTE (b): each report line has one opening and one closing bracket; the statement's [L1] is written (L1)
 PASS Each body only gains report lines at its end
 PASS Other fields of the Panel Payloads item unchanged
 PASS Panel Cure Needed? false with no violation

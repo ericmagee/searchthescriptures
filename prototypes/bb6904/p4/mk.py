@@ -1,5 +1,5 @@
 # BB-6904 portion 4: build the cure path as a draft change set against live db281705. Writes ops.json (nodes to add, connections to change,
-# the 9 named-read edits) and one .js per new Code node. Usage: python3 -I mk.py <post-publish details json>. Nothing is written to the flow.
+# the 9 named-read edits) and one .js per new Code node. Usage: python3 mk.py <post-publish details json> (not -I: bodies.py must import from this folder). Nothing is written to the flow.
 import json,sys,hashlib,copy
 from bodies import *
 md5=lambda s:hashlib.md5((s if s.endswith('\n') else s+'\n').encode()).hexdigest()
