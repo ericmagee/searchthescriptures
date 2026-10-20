@@ -63,7 +63,10 @@ recorded in 6981). Every claim about live code names the node or function it was
   request field, qualify_alternate: <pool seat>, read by Init Seats and refused unless dry is true. It forces the alternate path
   for every panel seat of that dry run, whatever its drv_uncured, with the named pool model; Replay Rows records the alternates'
   rows in the removed seats' places. The qualification therefore runs the same Alternate nodes a live run would.
-- Proposed bar, for the advisor to rule: 3 of 3 readable, within the timeout, and finish_reason not "length". Violation and cure rates are reported, not
+  On a qualify run G3 is not applied (one pool model sits in all three seats; dry only, no outcome), and Alternate Needed? and
+  Record Alternates are not reached (6983 note 1).
+- Bar (ruled in 6981), per pool model: three qualify runs (27191, 27088, 27259), and in each run all three seat readings
+  readable, within the timeout, and finish_reason not "length": nine of nine seat readings (unit per 6983 note 2). Violation and cure rates are reported, not
   gated, since they are what alternates exist to absorb.
 
 8. WHERE IT WOULD SIT IN THE FLOW (for the later build; not now)
@@ -77,8 +80,9 @@ recorded in 6981). Every claim about live code names the node or function it was
 - Live path (AMEND 3, 6980): two writes, in this order, both before Write Judgment 1: Record Substitution (the reserve, today's
   function, unchanged), then Record Alternates (the new function). The new function writes drv_removed and rewrites panel_expected
   only; it never writes panel_substitution, so a debate may hold one reserve substitution and up to two alternates. It refuses
-  if any judgment row exists, if an alternate is a seated debater (G1), the replaced seat's model (G2) or already in
-  panel_expected (G3), and it reads panel_expected as the reserve write left it. Dry path: Replay Rows records the
+  if any judgment row exists, if an alternate is a seated debater (G1), the replaced seat's model (G2), or the api_model of any
+  counted seat or of the other alternate (G3, checked by model, not by seat name: 6983 note 3), and it reads panel_expected as
+  the reserve write left it. Dry path: Replay Rows records the
   alternate as the seat's replay row; drv_removed is not written on a dry run.
 
 9. COST AND TIME (ESTIMATE until qualification measures them)
