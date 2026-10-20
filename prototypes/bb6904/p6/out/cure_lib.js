@@ -9,7 +9,7 @@ const CURE_RULE="DEBATE RULE VIOLATION. After you answered, the system checked e
  +"[L2] with the Hebrew or Greek word in its own script, with its transliteration marks, or with its Strong's number; [L3] with the cross-reference named. "
  +"Two quotations at one layer are one layer. The lines below do not. For each one, either cure it with one RESTATED line: that collision line again, "
  +"beginning with its link, with the same grade and the two layers exhibited on it; or answer in prose why it stands (recorded; prose cures nothing). "
- +"Do not change any other line, grade or count. A line that is not cured leaves that ground uncounted toward BROKEN.";
+ +"Do not change any other line, grade or count. A line that is not cured leaves the violation standing, and this judgment is then not counted.";
 const CURE_RULE_G="COUNT AND STANDING (same rule). Your own numbers must agree with your own COLLISION POINTS lines. "
  +"K-G1 (a conceded count of 0 beside a link you graded BROKEN on a witness left unanswered): cure it either with CORRECTED COUNT for that side, "
  +"the number at least the number of that side's K-G1 links, together with, for each such link, a PRESSED line quoting the words of the earlier round "

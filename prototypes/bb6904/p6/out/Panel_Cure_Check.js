@@ -50,7 +50,7 @@ const CURE_RULE="DEBATE RULE VIOLATION. After you answered, the system checked e
  +"[L2] with the Hebrew or Greek word in its own script, with its transliteration marks, or with its Strong's number; [L3] with the cross-reference named. "
  +"Two quotations at one layer are one layer. The lines below do not. For each one, either cure it with one RESTATED line: that collision line again, "
  +"beginning with its link, with the same grade and the two layers exhibited on it; or answer in prose why it stands (recorded; prose cures nothing). "
- +"Do not change any other line, grade or count. A line that is not cured leaves that ground uncounted toward BROKEN.";
+ +"Do not change any other line, grade or count. A line that is not cured leaves the violation standing, and this judgment is then not counted.";
 const CURE_RULE_G="COUNT AND STANDING (same rule). Your own numbers must agree with your own COLLISION POINTS lines. "
  +"K-G1 (a conceded count of 0 beside a link you graded BROKEN on a witness left unanswered): cure it either with CORRECTED COUNT for that side, "
  +"the number at least the number of that side's K-G1 links, together with, for each such link, a PRESSED line quoting the words of the earlier round "
@@ -171,5 +171,5 @@ summary.forEach((s,i)=>{const all=s.drv||[];s.cure=[];if(!all.length)return;
  const r=rs.find(x=>x.cure&&x.cure.idx===i)||null;
  const v=cureVerdicts(all,r?r.reply:{ok:false,why:'no cure call was made for this seat'},r&&r.cure?r.cure.broken:null,r&&r.cure?r.cure.rounds:null);
  s.cure=v.map(x=>({rule:x.rule,side:x.side,link:x.link,status:x.status,kinds:x.kinds,why:x.why}));
- const b=JSON.parse(bodies[i]);b.payload.verdict_raw=b.payload.verdict_raw+'\n'+cureReport(s.seat,v).concat(cureProse(s.seat,r?r.reply:null)).join('\n');bodies[i]=JSON.stringify(b);});
+ const b=JSON.parse(bodies[i]);b.payload.drv_uncured=v.filter(x=>x.status!=='CURED').length;b.payload.verdict_raw=b.payload.verdict_raw+'\n'+cureReport(s.seat,v).concat(cureProse(s.seat,r?r.reply:null)).join('\n');bodies[i]=JSON.stringify(b);});
 return [{json:{...PP,bodies,summary}}];

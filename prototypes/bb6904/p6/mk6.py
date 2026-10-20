@@ -1,5 +1,7 @@
 # BB-6904 step 6 (Worker_A3): (e) report shape, (f) token accounting. Draft only: nothing is written to the flow.
-# Usage: python3 mk6.py <live workflow details json (db281705)> <Worker_E p4 dir at 6c36658> <out dir>
+# Usage: python3 mk6.py <live workflow details json (db281705)> <Worker_E p4 dir> <out dir> [<5B Panel_Cure_Check.js>]
+# Rev 4: the optional fourth argument is Worker_E's 5B Panel_Cure_Check.js (p5b/out); when given it replaces p4's file of that name, so
+# the step 6 patches land on top of 5B's drv_uncured change instead of beside it (both edit the same node).
 # Patches, each asserted to apply exactly once:
 #  1. cureReport (in cure_lib.js and the six cure nodes that embed it): fixed field order, original line added (6904 e).
 #  2. Format Markdown: a "Debate rule violations" section built from the stored rows (6913 note 1).
@@ -7,7 +9,7 @@
 #  4. Panel Tokens: the panel cure calls' tokens join the panel sums.
 import json,sys,hashlib,os
 md5=lambda s:hashlib.md5((s if s.endswith('\n') else s+'\n').encode()).hexdigest()
-w=json.load(open(sys.argv[1]))['workflow'];N={n['name']:n for n in w['nodes']};P4=sys.argv[2];OUT=sys.argv[3];os.makedirs(OUT,exist_ok=True)
+w=json.load(open(sys.argv[1]))['workflow'];N={n['name']:n for n in w['nodes']};P4=sys.argv[2];OUT=sys.argv[3];P5B=sys.argv[4] if len(sys.argv)>4 else None;os.makedirs(OUT,exist_ok=True)
 def once(src,old,new,what):
   n=src.count(old);assert n==1,'%s: anchor found %d times'%(what,n);return src.replace(old,new)
 OLD_SAFE="const cureSafe=s=>String(s).replace(/\\[/g,'(').replace(/\\]/g,')');"
@@ -21,8 +23,9 @@ NEW_REP=("// Report line (step 6, 6904 e): fixed fields in fixed order, read bac
 res={}
 # Worker_E's p4 at 6c36658 (serial slots, BB-6987): the panel Build and Normalize are three files each.
 for f in ['cure_lib.js','Cure_Build.js','Cure_Normalize.js','Cure_Check.js']+['Panel_Cure_%s_%d.js'%(n,k) for k in (1,2,3) for n in ('Build','Normalize')]+['Panel_Cure_Check.js']:
-  s=open(os.path.join(P4,f)).read();b=md5(s);s=once(s,OLD_SAFE,NEW_SAFE,f+' cureSafe');s=once(s,OLD_REP,NEW_REP,f+' cureReport')
-  open(os.path.join(OUT,f),'w').write(s);res[f]=(b[:8],md5(s)[:8],len(s)-len(open(os.path.join(P4,f)).read()))
+  src=P5B if (f=='Panel_Cure_Check.js' and P5B) else os.path.join(P4,f)
+  s=open(src).read();b=md5(s);s=once(s,OLD_SAFE,NEW_SAFE,f+' cureSafe');s=once(s,OLD_REP,NEW_REP,f+' cureReport')
+  open(os.path.join(OUT,f),'w').write(s);res[f]=(b[:8],md5(s)[:8],len(s)-len(open(src).read()))
 # 2. Format Markdown
 fm=N['Format Markdown']['parameters']['jsCode'];b=md5(fm)
 ANCH="t += '---\\n\\n';\nt += '## How to read this debate"

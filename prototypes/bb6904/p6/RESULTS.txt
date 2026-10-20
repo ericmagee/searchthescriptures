@@ -2,24 +2,29 @@ BB-6904 step 6 (Worker_A3): (e) report shape, (f) cost. Drafts only; nothing wri
 Rev 2: 6966 notes 1-3 taken. Rev 3: retargeted to Worker_E's p4 at 6c36658 (serial cure slots, BB-6987): the panel Build and Normalize
 are three files each; Panel Tokens counts Panel Cure Call 1-3 <family> and the step 7 alternate calls (Alternate Call openrouter,
 Alternate Cure Call openrouter), every item; a node absent from the flow is skipped.
-Built by: python3 mk6.py <live db281705 details json, read 15:50:44 CDT> <Worker_E p4 at 6c36658> out
-cure_lib.js              93b3e538 -> 665a834f  +557 chars
-Cure_Build.js            1d9360f4 -> 8ec7d62f  +557 chars
-Cure_Normalize.js        a1abaed0 -> c808ecd5  +557 chars
-Cure_Check.js            4691a1f5 -> 20bd6b01  +557 chars
-Panel_Cure_Build_1.js    2088971b -> 5d715ce4  +557 chars
-Panel_Cure_Normalize_1.js 65306fc4 -> 668614be  +557 chars
-Panel_Cure_Build_2.js    7a4043ca -> 209e98d3  +557 chars
-Panel_Cure_Normalize_2.js a3158c67 -> c12e559e  +557 chars
-Panel_Cure_Build_3.js    6cc05cbc -> c69793dc  +557 chars
-Panel_Cure_Normalize_3.js 26ff62e6 -> 15904d3f  +557 chars
-Panel_Cure_Check.js      d42c22c8 -> f24ecea3  +557 chars
+Rev 4 (BB-7017 re-verify): rebuilt on Worker_E's p4 at 6126331 (the 7014 cure sentence) and, for Panel Cure Check, on 5B's file
+(p5b/out at 6126331, 86dcec52), so this node carries both 5B's drv_uncured change and the step 6 report form. Before rev 4 the two
+builds edited the same node apart and neither file held both (my miss at 6974 and at rev 3).
+Built by: python3 mk6.py <live db281705 details json, read 15:50:44 CDT> <Worker_E p4 at 6126331> out <p5b/out/Panel_Cure_Check.js at 6126331>
+cure_lib.js              4966ee80 -> 7725f5d4  +557 chars
+Cure_Build.js            d0d0d3f6 -> baee1d70  +557 chars
+Cure_Normalize.js        5fc20f68 -> 37bb6257  +557 chars
+Cure_Check.js            11ab8277 -> 1f7d2e27  +557 chars
+Panel_Cure_Build_1.js    73d02b95 -> c65f75ec  +557 chars
+Panel_Cure_Normalize_1.js e4e15954 -> 7475c62d  +557 chars
+Panel_Cure_Build_2.js    22cad966 -> 6063c0dd  +557 chars
+Panel_Cure_Normalize_2.js 67308ea9 -> ef4f704a  +557 chars
+Panel_Cure_Build_3.js    e2dec253 -> a7675b89  +557 chars
+Panel_Cure_Normalize_3.js 27f909d9 -> ff3d396c  +557 chars
+Panel_Cure_Check.js      86dcec52 -> a12fb590  +557 chars
 Format Markdown          726810f0 -> ede7db49  +3236 chars
 Build Save Body          3dc5785e -> cb28a06d  +914 chars
 Panel Tokens             a8fccdbe -> 5c8ea63b  +990 chars
 
-Worker_E's harness (79 checks at 6c36658) with one line changed for the new report form (harness6.cjs):
-failures 0 of 79 checks passing
+Worker_E's harness (79 checks) with one line changed for the new report form (harness6.cjs), rev 4: run over p4 at 6126331 with these
+files in place: failures 0 of 79 checks passing.
+Worker_E's h5b (5B, at 6126331) with this Panel_Cure_Check.js in p5b/out's place: failures 0 (drv_uncured written full, lowered to the
+UNCURED count, carried on the salvage row).
 
 h6.cjs (live beside draft):
 PASS F1 no report lines stored: markdown byte-identical to live (21574 chars)
