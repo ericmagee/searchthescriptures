@@ -1,0 +1,96 @@
+# BB-6904 portion 3 results, 2026-10-20T21:17:40Z (UTC run stamp). Inputs in data/, each with the md5 of its database row.
+## mk.py
+Extract Independent Verdict base 489b62e5 36588 new cd49efce 41283 + 4695
+Panel Payloads base 1026e0c0 18749 new 2e4225c9 23539 + 4790
+block chars 4513 md5 760b257d
+## F1: inserts only
+Extract_Independent_Verdict.new.js [('insert', 35486, 4662), ('insert', 36584, 33)] all inserts: True
+Panel_Payloads.new.js [('insert', 14302, 4513), ('insert', 17732, 263), ('insert', 18002, 14)] all inserts: True
+## F2: node counter vs kb.cjs (29caa5c)
+lines 54 differences 0
+## F3: constructed cases
+PASS known-good: [L1] quoted + [L3] named reference | K-B items 0 expected 0
+PASS known-bad: one kind only ([L3]) | K-B items 1 expected 1
+PASS italic English as the only [L2], with [L1] | K-B items 1 expected 1
+PASS Greek script [L2] with [L1] | K-B items 0 expected 0
+PASS negated tags only | K-B items 1 expected 1
+PASS challenger side, one kind | K-B items 1 expected 1
+PASS STANDS line mentioning BROKEN is not selected | K-B items 0 expected 0
+PASS UNDERDETERMINED line is not selected | K-B items 0 expected 0
+PASS K-G1 conceded 0 + "unanswered" fires | 1 expected 1
+PASS K-G1 conceded 1 does not fire | 0 expected 0
+PASS K-G1 "does not answer" is not in the word list (stated limit) | 0 expected 0
+PASS K-G3 SELF-SUPPORTED with 2 BROKEN fires once | 1 expected 1
+PASS K-G3 PROP-DEPENDENT does not fire | 0 expected 0
+PASS K-G3 no BROKEN line does not fire | 0 expected 0
+PASS K-G2 absent and asked: one record line | 1 expected 1
+PASS K-G2 record line carries no REVIEW THIS ROW | 0 expected 0
+PASS K-G2 absent, not asked: nothing | 0 expected 0
+failures 0
+## whole node, single judge (27259 has BROKEN lines; 27088 has none: F4)
+== ODV1-27088-cg67a8be fields that differ: independent_verdict_raw, debate_rule_violations
+ raw: same prefix 3354 chars; base middle "" ; new middle:
+v21: CITATION CHECK LINE ABSENT FROM A PROMPT THAT ASKS FOR IT (K-G2); recorded, not counted as a violation.]
+
+[AUDIT 
+ debate_rule_violations: undefined -> []
+== ODV1-27259-75fg8o6t fields that differ: independent_verdict_raw, audit_flags, debate_rule_violations
+ raw: same prefix 3872 chars; base middle "FLAGS: 2" ; new middle:
+v21: DEBATE RULE VIOLATION -- D4 vs C2 DEFENDER LINK BROKEN exhibits 0 layer kinds of the two rule B requires on the line itself. REVIEW THIS ROW.]
+
+[AUDIT v21: DEBATE RULE VIOLATION (K-G1) -- D4 vs C2 DEFENDER LINK BROKEN rests on a witness left unanswered while CONCEDED LINKS is 0. REVIEW THIS ROW.]
+
+[AUDIT v21: DEBATE RULE VIOLATION -- D5 vs C2 DEFENDER LINK BROKEN exhibits 0 layer kinds of the two rule B requires on the line itself. REVIEW THIS ROW.]
+
+[AUDIT v21: DEBATE RULE VIOLATION -- D6 vs C2 DEFENDER LINK BROKEN exhibits 0 layer kinds of the two rule B requires on the line itself. REVIEW THIS ROW.]
+
+[AUDIT v21: DEBATE RULE VIOLATION (K-G1) -- D6 vs C2 DEFENDER LINK BROKEN rests on a witness left unanswered while CONCEDED LINKS is 0. REVIEW THIS ROW.]
+
+[AUDIT v21: CITATION CHECK LINE ABSENT FROM A PROMPT THAT ASKS FOR IT (K-G2); recorded, not counted as a violation.]
+
+[AUDIT FLAGS: 7
+ audit_flags: 2 -> 7
+ debate_rule_violations: undefined -> [{"rule":"K-B","side":"DEFENDER","link":"D4 vs C2","kinds":[],"line":"D4 vs C2 (Luke 1:34-35; Matthew 1:18): DEFENDER LINK BROKEN -- C2’s [L1]/[L2] chain says the “how” is answered by the Spirit and not the husband, while [CR3] answers only the title/no-begetting-verb point and leaves the Spirit-means witness unanswered."},{"rule":"K-G1","side":"DEFENDER","link":"D4 vs C2","line":"D4 vs C2 (Luke 1:34-35; Matthew 1:18): DEFENDER LINK BROKEN -- C2’s [L1]/[L2] chain says the “how” is answered by the Spirit and not the husband, while [CR3] answers only the title/no-begetting-verb point and leaves the Spirit-means witness unanswered."},{"rule":"K-B","side":"DEFENDER","link":"D5 vs C2","kinds":[],"line":"D5 vs C2 (Matthew 1:18, 1:25): DEFENDER LINK BROKEN -- C2 shows conception before union and knowing after birth; [CR3] quotes 1:25 but does not answer the timing and never answers 1:18’s “before they came together.”"},{"rule":"K-B","side":"DEFENDER","link":"D6 vs C2","kinds":[],"line":"D6 vs C2 (Matthew 1:18-25; Luke 1:34-35): DEFENDER LINK BROKEN -- The conclusion that Joseph is the biological father is contradicted by the same unanswered timing and Spirit-source witnesses, and [CR3]’s “HOW not narrated” does not meet them."},{"rule":"K-G1","side":"DEFENDER","link":"D6 vs C2","line":"D6 vs C2 (Matthew 1:18-25; Luke 1:34-35): DEFENDER LINK BROKEN -- The conclusion that Joseph is the biological father is contradicted by the same unanswered timing and Spirit-source witnesses, and [CR3]’s “HOW not narrated” does not meet them."}]
+## whole node, panel 771-773, CITATION CHECK asked
+== deepseek payload fields that differ: verdict_raw
+ base is a prefix of new: true ; added:
+[AUDIT v21: DEBATE RULE VIOLATION -- D4 vs C4 DEFENDER LINK BROKEN exhibits 0 layer kinds of the two rule B requires on the line itself. REVIEW THIS ROW.]
+[AUDIT v21: DEBATE RULE VIOLATION (K-G1) -- D4 vs C4 DEFENDER LINK BROKEN rests on a witness left unanswered while CONCEDED LINKS is 0. REVIEW THIS ROW.]
+[AUDIT v21: DEBATE RULE VIOLATION -- D5 vs C2 DEFENDER LINK BROKEN exhibits 0 layer kinds of the two rule B requires on the line itself. REVIEW THIS ROW.]
+[AUDIT v21: DEBATE RULE VIOLATION (K-G1) -- D5 vs C2 DEFENDER LINK BROKEN rests on a witness left unanswered while CONCEDED LINKS is 0. REVIEW THIS ROW.]
+[AUDIT v21: DEBATE RULE VIOLATION -- D6 vs C2 DEFENDER LINK BROKEN exhibits 0 layer kinds of the two rule B requires on the line itself. REVIEW THIS ROW.]
+[AUDIT v21: DEBATE RULE VIOLATION (K-G1) -- D6 vs C2 DEFENDER LINK BROKEN rests on a witness left unanswered while CONCEDED LINKS is 0. REVIEW THIS ROW.]
+ summary fields that differ: flags 0->6; drv ["K-B:D4 vs C4","K-G1:D4 vs C4","K-B:D5 vs C2","K-G1:D5 vs C2","K-B:D6 vs C2","K-G1:D6 vs C2"]
+== gemini payload fields that differ: verdict_raw
+ base is a prefix of new: true ; added:
+[AUDIT v21: DEBATE RULE VIOLATION -- D1 vs C5 DEFENDER LINK BROKEN exhibits 0 layer kinds of the two rule B requires on the line itself. REVIEW THIS ROW.]
+[AUDIT v21: DEBATE RULE VIOLATION -- D2 vs C3 DEFENDER LINK BROKEN exhibits 0 layer kinds of the two rule B requires on the line itself. REVIEW THIS ROW.]
+[AUDIT v21: DEBATE RULE VIOLATION -- D3 vs C6 DEFENDER LINK BROKEN exhibits 0 layer kinds of the two rule B requires on the line itself. REVIEW THIS ROW.]
+[AUDIT v21: DEBATE RULE VIOLATION -- D4 vs C2 DEFENDER LINK BROKEN exhibits 0 layer kinds of the two rule B requires on the line itself. REVIEW THIS ROW.]
+[AUDIT v21: DEBATE RULE VIOLATION -- D5 vs C4 DEFENDER LINK BROKEN exhibits 0 layer kinds of the two rule B requires on the line itself. REVIEW THIS ROW.]
+[AUDIT v21: DEBATE RULE VIOLATION -- D6 vs C6 DEFENDER LINK BROKEN exhibits 0 layer kinds of the two rule B requires on the line itself. REVIEW THIS ROW.]
+[AUDIT v21: CITATION CHECK LINE ABSENT FROM A PROMPT THAT ASKS FOR IT (K-G2); recorded, not counted as a violation.]
+ summary fields that differ: flags 0->7; drv ["K-B:D1 vs C5","K-B:D2 vs C3","K-B:D3 vs C6","K-B:D4 vs C2","K-B:D5 vs C4","K-B:D6 vs C6"]
+== grok payload fields that differ: verdict_raw
+ base is a prefix of new: true ; added:
+[AUDIT v21: DEBATE RULE VIOLATION -- D4 vs C2 DEFENDER LINK BROKEN exhibits 1 layer kind (L2) of the two rule B requires on the line itself. REVIEW THIS ROW.]
+[AUDIT v21: DEBATE RULE VIOLATION -- D5 vs C2 DEFENDER LINK BROKEN exhibits 0 layer kinds of the two rule B requires on the line itself. REVIEW THIS ROW.]
+[AUDIT v21: DEBATE RULE VIOLATION -- D6 vs C2 DEFENDER LINK BROKEN exhibits 0 layer kinds of the two rule B requires on the line itself. REVIEW THIS ROW.]
+[AUDIT v21: DEBATE RULE VIOLATION (K-G1) -- D6 vs C2 DEFENDER LINK BROKEN rests on a witness left unanswered while CONCEDED LINKS is 0. REVIEW THIS ROW.]
+[AUDIT v21: DEBATE RULE VIOLATION (K-G3) -- DEFENSE STANDING SELF-SUPPORTED while 3 DEFENDER LINK BROKEN lines stand. REVIEW THIS ROW.]
+ summary fields that differ: flags 0->5; drv ["K-B:D4 vs C2","K-B:D5 vs C2","K-B:D6 vs C2","K-G1:D6 vs C2","K-G3:DEFENDER"]
+## F4 panel: same judgments with every BROKEN grade made UNDERDETERMINED
+== deepseek payload fields that differ: none
+ summary fields that differ: drv []
+== gemini payload fields that differ: verdict_raw
+ base is a prefix of new: true ; added:
+[AUDIT v21: CITATION CHECK LINE ABSENT FROM A PROMPT THAT ASKS FOR IT (K-G2); recorded, not counted as a violation.]
+ summary fields that differ: flags 0->1; drv []
+== grok payload fields that differ: none
+ summary fields that differ: drv []
+== deepseek payload fields that differ: none
+ summary fields that differ: drv []
+== gemini payload fields that differ: none
+ summary fields that differ: drv []
+== grok payload fields that differ: none
+ summary fields that differ: drv []
