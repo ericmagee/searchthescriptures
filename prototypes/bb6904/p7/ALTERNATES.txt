@@ -9,7 +9,8 @@ operator's question 10 (6965). Every claim about live code names the node or fun
 - The single judge is outside the panel and sets no outcome; it gets no alternate.
 
 2. WHO SITS
-- Pool, in order (6975): Haiku 5.5, then MiniMax M3.1 Flash, both through OpenRouter (paid route). Exact api_model ids: NOT
+- Pool, in order (6975, 6978): Claude Haiku 5.5 at max effort, then MiniMax M3.1 Flash at max effort, both through OpenRouter
+  (paid route). Exact api_model ids: NOT
   CONFIRMED. No model_config row holds either today (read from model_config this session, SELECT only: chatgpt, claude_synthesis, deepseek,
   deepseek_debate, gemini, glm, grok, kimi, mimo, qwen). Each needs a model_config row (seat, provider openrouter, api_model,
   max_tokens), written only on the operator's word, after one test call.
@@ -26,8 +27,10 @@ operator's question 10 (6965). Every claim about live code names the node or fun
 - The same rulebook and transcript the removed seat was given: its own request's system and user text, read exactly as Reserve
   Build reads a failed slot's call today (b0.systemInstruction or b0.messages[0..1]). Not the removed seat's answer, not its
   report lines, not its cure exchange, not the other seats' rulings.
-- The body follows the OpenRouter family shape Reserve Build uses (model, max_tokens, reasoning effort, messages); the effort
-  for each pool model is settled in qualification (section 7), as glm's and qwen's were (BB-5693 rev 6).
+- The body follows the OpenRouter family shape Reserve Build uses (model, max_tokens, reasoning effort, messages). Effort is fixed
+  at the maximum for both pool models (operator, 6978): reasoning {effort:'max'}, written into each seat's configuration, never
+  left to a provider default. Qualification (section 7) runs at the same setting; if max spends the whole token cap before
+  answering, as glm's did (BB-5693 rev 6), that is reported to the operator, not changed by us.
 
 4. HOW IT IS ACCEPTED (mechanical)
 - The alternate's answer goes through the same code as a panel seat: Panel Payloads' verdict reader and closed-set checks, then
@@ -66,6 +69,9 @@ operator's question 10 (6965). Every claim about live code names the node or fun
 - Live path: the new record function runs before Write Judgment, beside Record Substitution. Dry path: Replay Rows records the
   alternate as the seat's replay row; drv_removed is not written on a dry run.
 
-9. COST (from step 6's derived figures; ESTIMATE)
-- Per alternate: one judge-sized call (about 307 s, derived from whole dry regrades) and at most one cure call. At most three
-  alternates a debate: about 30 min added at most, 90 min at the 900 s timeout. Tokens about the size of one panel seat each.
+9. COST AND TIME (ESTIMATE until qualification measures them)
+- Per alternate: one judge-sized call and at most one cure call. Neither pool model has been timed here. Step 6's derived figure
+  for a panel judge call is about 307 s (whole dry regrades / 3). 6978 gives MiniMax at max effort as thinking about a minute
+  per answer; that is the operator's figure, not a measurement here. Bound: at most three alternates a debate, two calls each,
+  90 min at the 900 s timeout. Qualification (section 7) gives the measured seconds per call for each model at max effort.
+  Tokens: about the size of one panel seat each.
