@@ -16,7 +16,7 @@ def show(rev,path):return subprocess.run(['git','-C',REPO,'show',rev+':'+path],c
 def ls(rev,folder):return [l for l in subprocess.run(['git','-C',REPO,'ls-tree','--name-only',rev,folder+'/'],capture_output=True,text=True,check=True).stdout.split('\n') if l]
 fail=[];err=lambda m:fail.append(m)
 P='prototypes/bb6904/'
-E_REV=subprocess.run(['git','-C',REPO,'rev-parse','--short','HEAD'],capture_output=True,text=True,check=True).stdout.strip()
+E_REV='404300a' # Worker_E's builds p2, p4, p5b, p7, pinned (BB-7024 AMEND 1): the last commit that changed any of them
 REVS={'p2':E_REV,'p3':'0b3cbac','p4':E_REV,'p5b':E_REV,'p6':'d0d5aab','p7':E_REV}
 # The one source of each changed Code node.
 SRC=[
@@ -77,6 +77,30 @@ for tag,path in (('p4','p4/ops.json'),('p7','p7/out/ops7.json')):
  for e in ops['edits']:
   if e['node'] not in nodes:err('%s edits missing node %s'%(tag,e['node']));continue
   nodes[e['node']]['parameters']=copy.deepcopy(e['parameters']);claims.setdefault(e['node'],[]).append(tag+' edit')
+# Nodes edited by both p4 and p7 (BB-7024 AMEND 2): p7's edit replaces the whole parameter set. Every leaf p4 changed must hold p4's
+# value in p7, or p4's value after the one declared supersession (p7 moves p4's named read on from Panel Cure Check to Alternate
+# Merge), or be listed in SUPERSEDED with its reason, where the named-read counts are still checked.
+SUP=("$('Panel Cure Check')","$('Alternate Merge')")
+SUPERSEDED={('Panel Done','jsCode'):'p7 adds its Record Alternates check (PD_ADD) on top of p4\'s moved read'}
+def leaves(x,pre=()):
+ if isinstance(x,dict):
+  for k,v in x.items():yield from leaves(v,pre+(k,))
+ elif isinstance(x,list):
+  for i,v in enumerate(x):yield from leaves(v,pre+(i,))
+ else:yield pre,x
+o4=json.loads(show(REVS['p4'],P+'p4/ops.json'));o7e={e['node']:e for e in json.loads(show(REVS['p7'],P+'p7/out/ops7.json'))['edits']}
+both=[e for e in o4['edits'] if e['node'] in o7e]
+for e4 in both:
+ n=e4['node'];L=dict(leaves(live[n]['parameters']));A=dict(leaves(e4['parameters']));B=dict(leaves(o7e[n]['parameters']))
+ for k,v in A.items():
+  if L.get(k)==v:continue
+  b=B.get(k);key=(n,k[-1] if k else '')
+  if b==v or (isinstance(v,str) and b==v.replace(*SUP)):continue
+  if key in SUPERSEDED and isinstance(v,str) and isinstance(b,str):
+   if b.count(SUP[1])>=v.count(SUP[0]) and b.count(e4['old'])==v.count(e4['old']):continue
+   err('%s %s: superseded leaf lost p4\'s moved read'%(n,'/'.join(map(str,k))));continue
+  err('%s %s: p4 changed it and p7 neither keeps nor supersedes it'%(n,'/'.join(map(str,k))))
+print('edited by both p4 and p7: %d nodes, every p4 change kept or superseded as declared'%len(both) if not fail else 'edited by both: see FAIL')
 ops7=json.loads(show(REVS['p7'],P+'p7/out/ops7.json'));o7code={n['name']:n['parameters'].get('jsCode') for n in ops7['nodes_add']}
 o7code.update({e['node']:e['parameters'].get('jsCode') for e in ops7['edits'] if e['parameters'].get('jsCode') is not None})
 # 3. Code: one source per node.

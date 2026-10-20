@@ -1,3 +1,4 @@
+edited by both p4 and p7: 7 nodes, every p4 change kept or superseded as declared
 base db281705-b448-4402-9188-43efb8ac286b | nodes 231 (live 180) | changed or new 69 | unchanged 162
 sources: p2@404300a, p3@0b3cbac, p4@404300a, p5b@404300a, p6@d0d5aab, p7@404300a
   Alternate Build                    new      15fd3b22  p7 add; code p7:p7/out/Alternate_Build.js
@@ -80,5 +81,7 @@ PASS SRC node not Code: refused, naming it
 PASS file unaccounted: refused, naming it
 PASS ops7 vs file: refused, naming it
 PASS missing reference: refused, naming it
+PASS p7 drops a p4 change: refused, naming it
+PASS superseded leaf loses the moved read: refused, naming it
 PASS connection to missing node: refused, naming it
 failures 0

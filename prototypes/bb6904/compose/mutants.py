@@ -15,6 +15,8 @@ M=[
  ('file unaccounted',mut(" 'p3/drv_check.js':'library (portion 3 checker for the harnesses); not a node',\n",""),src,'neither used nor listed: p3/drv_check.js'),
  ('ops7 vs file',mut("('Alternate Merge',('p7','p7/out/Alternate_Merge.js'))","('Alternate Merge',('p7','p7/out/Alternate_Build.js'))"),src,'ops7 code for Alternate Merge differs'),
  ('missing reference',mut(" nodes[name]['parameters']['jsCode']=code;"," nodes[name]['parameters']['jsCode']=code+(\"\\n$('No Such Node')\" if name=='Panel Done' else '');"),src,'Panel Done reads missing node No Such Node'),
+ ('p7 drops a p4 change',mut("A=dict(leaves(e4['parameters']));B=dict(leaves(o7e[n]['parameters']))","A=dict(leaves(e4['parameters']));B=dict(leaves(live[n]['parameters'] if n=='Write Judgment 1' else o7e[n]['parameters']))"),src,'p4 changed it and p7 neither keeps nor supersedes it'),
+ ('superseded leaf loses the moved read',mut("A=dict(leaves(e4['parameters']));B=dict(leaves(o7e[n]['parameters']))","A=dict(leaves(e4['parameters']));B={k:(v.replace(SUP[1],SUP[0].replace('Panel Cure Check','Panel Payloads')) if n=='Panel Done' and isinstance(v,str) else v) for k,v in leaves(o7e[n]['parameters'])}"),src,"superseded leaf lost p4's moved read"),
  ('connection to missing node',mut("# 3. Code: one source per node.","add_edge({'from':'Dry?','out':0,'to':'No Such Node'})\n# 3. Code: one source per node."),src,'missing node No Such Node'),
 ]
 fails=0
