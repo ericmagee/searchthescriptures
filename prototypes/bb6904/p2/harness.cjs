@@ -7,4 +7,4 @@ const J={json:{run_token:'tok',rulebook:rb,topic:'t',single_judge:'deepseek',pos
 const $=n=>({first:()=>n==='Fetch Models'?{json:{seat:'deepseek',api_model:'m'}}:J,all:()=>n==='Fetch Models'?[{json:{seat:'deepseek',api_model:'m'}}]:[J],isExecuted:false});
 const out=new Function('$','$input','$execution',src)($,{first:()=>J},{customData:{set(){}}});
 const j=out[0].json;const p=j.verdictBody?j.verdictBody.messages[1].content:j.judges[0].body.messages[0].content;
-console.log(process.argv[2],rb,'prompt chars',p.length,'DRV present',p.includes('DEBATE RULE VIOLATION (BB-6904'),'count',p.split('DEBATE RULE VIOLATION (BB-6904').length-1);
+console.log(process.argv[2],rb,'prompt chars',p.length,'DRV present',p.includes('DEBATE RULE VIOLATION (Isaiah 28:10'),'count',p.split('DEBATE RULE VIOLATION (Isaiah 28:10').length-1);
