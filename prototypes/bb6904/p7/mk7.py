@@ -1,4 +1,4 @@
-# BB-6904 (g), step 7 build: the alternate path as a draft change set. Writes ops7.json, migration7.sql, undo7.sql and one .js per
+# BB-6904 (g), step 7 build: the alternate path as a draft change set. Writes ops7.json and one .js per
 # new or changed Code node. Applies nothing. Built on: portion 3 + 5B Panel Payloads (p5b/out), portion 4 (p4: ops.json, cure lib),
 # step 6 (Worker_A3, 2cc49d8: cure_lib.js, Format_Markdown.js).
 # Usage: python3 mk7.py <live details json (db281705)> <p4 dir> <p5b out dir> <step 6 out dir (2cc49d8)> <out dir>

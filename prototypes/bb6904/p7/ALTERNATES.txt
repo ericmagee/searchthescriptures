@@ -63,13 +63,13 @@ recorded in 6981). Every claim about live code names the node or function it was
   request field, qualify_alternate: <one of the two ids> (6988), read by Init Seats and refused unless dry is true. It forces the alternate path
   for every panel seat of that dry run, whatever its drv_uncured, with the named pool model; Replay Rows records the alternates'
   rows in the removed seats' places. The qualification therefore runs the same Alternate nodes a live run would.
-  On a qualify run G3 is not applied (one pool model sits in all three seats; dry only, no outcome), and Alternate Needed? and
-  Record Alternates are not reached (6983 note 1).
+  On a qualify run G3 is not applied (one pool model sits in all three seats; dry only, no outcome). Alternate Needed? IS reached:
+  its condition ends "|| qualify_alternate", the only way in (7013); Record Alternates is not reached, the run being dry.
 - Bar (ruled 6981, unit 6984), per pool model: three qualify runs (27191, 27088, 27259), and in each run all three seat readings
   readable, within the timeout, and finish_reason not "length": nine of nine seat readings (unit per 6983 note 2). Violation and cure rates are reported, not
   gated, since they are what alternates exist to absorb.
 
-8. WHERE IT WOULD SIT IN THE FLOW (for the later build; not now)
+8. WHERE IT SITS IN THE FLOW (built in step 7, out/ops7.json)
 - After Panel Cure Check and before Dry?: Alternate Needed? (any seat drv_uncured > 0 and a pool model passes the guards) ->
   Alternate Build -> Alternate Route -> Alternate Call (OpenRouter) -> Alternate Payloads (the panel reader and drvCheck) ->
   the cure path again for the alternates (AMEND 4, 6980: Alternate Cure Build, a copy of Panel Cure Build that takes each

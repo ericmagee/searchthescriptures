@@ -50,10 +50,13 @@ PASS no drv_removed: nothing added (the step 6 harness h6 also passes 22/22 on t
 failures 0
 
 # test7.sql (migration7.sql executed whole in one rolled-back DO block; then odv1_record_panel_alternates on 27259)
-md5 of the function in the block b5a9ad07 = the file's. Family backfill: 12 rows (10 existing, 2 alternates), 0 without a family.
+Re-run 2026-10-20 after the 7013 fix (one family per debater): md5 of the function in the block 567284cb = the file's (function text
+with its trailing newline; b5a9ad07 before the fix). Family backfill: 12 rows (10 existing, 2 alternates), 0 without a family.
 t1 empty: ok, written false. t2 judgment rows present: refused. t4 payload model not the constant: refused. t5 removed seat not on
 the panel: refused. t6 the same alternate twice: refused. t7 three: refused. t8 removed ruling naming another seat: refused.
 t11 alt_haiku: "not one of the permanent alternates". t12 a debater of family minimax (mimo's family set to minimax in the block):
 refused, G1 by family. t13 a debater without a family: refused. t9 two alternates, distinct: accepted; panel_expected
 {alt_minimax3, alt_minimax31, deepseek}; drv_removed 2; panel_substitution null. t10 a second write: refused.
+t14 (7013) both debaters on one engine (challenger set to the defender's engine in a sub-block, mimo/mimo): accepted,
+panel_expected {alt_minimax3, deepseek, grok}; the sub-block's own RAISE restored mimo/claude and drv_removed null before t9.
 After: no new column, row, function or view; model_config 10 rows; 27259 keeps 3 judgment rows.

@@ -53,10 +53,11 @@ BEGIN
   IF r.drv_removed IS NOT NULL THEN RAISE EXCEPTION 'odv1_record_panel_alternates: debate % already holds alternates; one write per run', p_debate_id; END IF;
   SELECT count(*) INTO v_n FROM debate_judgments WHERE debate_id = p_debate_id;
   IF v_n > 0 THEN RAISE EXCEPTION 'odv1_record_panel_alternates: debate % already holds % judgment row(s); panel_expected is rewritten only before any', p_debate_id, v_n; END IF;
-  -- The debaters' families, by Init Seats' engine-to-seat map, from the one family table.
-  SELECT array_agg(lower(btrim(mc.family))) INTO v_deb_f FROM model_config mc
-   WHERE mc.seat = ANY (ARRAY(SELECT CASE e WHEN 'claude' THEN 'claude_synthesis' WHEN 'deepseek' THEN 'deepseek_debate' ELSE e END
-                              FROM unnest(ARRAY[r.defender_engine, r.challenger_engine]) e));
+  -- The debaters' families, by Init Seats' engine-to-seat map, from the one family table: one entry per debater, in seat order,
+  -- so two debaters on one engine give two entries (7013); a debater with no model_config row or no family gives NULL (fails closed).
+  SELECT array_agg(lower(btrim(mc.family)) ORDER BY e.ord) INTO v_deb_f
+    FROM unnest(ARRAY[r.defender_engine, r.challenger_engine]) WITH ORDINALITY AS e(eng, ord)
+    LEFT JOIN model_config mc ON mc.seat = CASE e.eng WHEN 'claude' THEN 'claude_synthesis' WHEN 'deepseek' THEN 'deepseek_debate' ELSE e.eng END;
   IF v_deb_f IS NULL OR cardinality(v_deb_f) < 2 OR array_position(v_deb_f, NULL) IS NOT NULL THEN RAISE EXCEPTION 'odv1_record_panel_alternates: the debaters'' families could not be read for debate %', p_debate_id; END IF;
   SELECT array_agg(mc.api_model) INTO v_pan_m FROM model_config mc WHERE mc.seat = ANY (r.panel_expected);
   v_new := r.panel_expected;
@@ -113,6 +114,13 @@ CREATE OR REPLACE VIEW public.odv1_drv_removals AS
   BEGIN x := odv1_record_panel_alternates(D, ('['||M3||']')::jsonb, '[{"seat":"gemini"}]'); r := r || jsonb_build_object('t13_debater_without_family','NOT REFUSED');
   EXCEPTION WHEN others THEN r := r || jsonb_build_object('t13_debater_without_family', SQLERRM); END;
   UPDATE model_config SET family = 'xiaomi' WHERE seat = 'mimo';
+  BEGIN -- t14 (7013): both debaters on one engine; must seat, not fail on the family read; undone by its own RAISE
+    UPDATE debate_results SET challenger_engine = defender_engine WHERE id = D;
+    x := odv1_record_panel_alternates(D, ('['||M3||']')::jsonb, '[{"seat":"gemini"}]');
+    r := r || jsonb_build_object('t14_same_engine_debaters', x, 't14_engines', (SELECT defender_engine||'/'||challenger_engine FROM debate_results WHERE id = D));
+    RAISE EXCEPTION 't14 undo';
+  EXCEPTION WHEN others THEN IF SQLERRM <> 't14 undo' THEN r := r || jsonb_build_object('t14_same_engine_debaters', 'REFUSED: '||SQLERRM); END IF; END;
+  r := r || jsonb_build_object('t14_after_undo', (SELECT jsonb_build_object('engines', defender_engine||'/'||challenger_engine, 'drv_removed', drv_removed IS NOT NULL) FROM debate_results WHERE id = D));
   BEGIN x := odv1_record_panel_alternates(D, ('['||M31||','||M3||']')::jsonb, '[{"seat":"grok"},{"seat":"gemini"}]');
     r := r || jsonb_build_object('t9_two', x, 't9_row', (SELECT jsonb_build_object('panel_expected', panel_expected, 'drv_removed_n', jsonb_array_length(drv_removed), 'panel_substitution', panel_substitution) FROM debate_results WHERE id = D));
   EXCEPTION WHEN others THEN r := r || jsonb_build_object('t9_two', 'REFUSED: '||SQLERRM); END;

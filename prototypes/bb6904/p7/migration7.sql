@@ -50,10 +50,11 @@ BEGIN
   IF r.drv_removed IS NOT NULL THEN RAISE EXCEPTION 'odv1_record_panel_alternates: debate % already holds alternates; one write per run', p_debate_id; END IF;
   SELECT count(*) INTO v_n FROM debate_judgments WHERE debate_id = p_debate_id;
   IF v_n > 0 THEN RAISE EXCEPTION 'odv1_record_panel_alternates: debate % already holds % judgment row(s); panel_expected is rewritten only before any', p_debate_id, v_n; END IF;
-  -- The debaters' families, by Init Seats' engine-to-seat map, from the one family table.
-  SELECT array_agg(lower(btrim(mc.family))) INTO v_deb_f FROM model_config mc
-   WHERE mc.seat = ANY (ARRAY(SELECT CASE e WHEN 'claude' THEN 'claude_synthesis' WHEN 'deepseek' THEN 'deepseek_debate' ELSE e END
-                              FROM unnest(ARRAY[r.defender_engine, r.challenger_engine]) e));
+  -- The debaters' families, by Init Seats' engine-to-seat map, from the one family table: one entry per debater, in seat order,
+  -- so two debaters on one engine give two entries (7013); a debater with no model_config row or no family gives NULL (fails closed).
+  SELECT array_agg(lower(btrim(mc.family)) ORDER BY e.ord) INTO v_deb_f
+    FROM unnest(ARRAY[r.defender_engine, r.challenger_engine]) WITH ORDINALITY AS e(eng, ord)
+    LEFT JOIN model_config mc ON mc.seat = CASE e.eng WHEN 'claude' THEN 'claude_synthesis' WHEN 'deepseek' THEN 'deepseek_debate' ELSE e.eng END;
   IF v_deb_f IS NULL OR cardinality(v_deb_f) < 2 OR array_position(v_deb_f, NULL) IS NOT NULL THEN RAISE EXCEPTION 'odv1_record_panel_alternates: the debaters'' families could not be read for debate %', p_debate_id; END IF;
   SELECT array_agg(mc.api_model) INTO v_pan_m FROM model_config mc WHERE mc.seat = ANY (r.panel_expected);
   v_new := r.panel_expected;
