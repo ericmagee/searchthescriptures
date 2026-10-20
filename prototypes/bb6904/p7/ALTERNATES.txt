@@ -65,7 +65,7 @@ recorded in 6981). Every claim about live code names the node or function it was
   rows in the removed seats' places. The qualification therefore runs the same Alternate nodes a live run would.
   On a qualify run G3 is not applied (one pool model sits in all three seats; dry only, no outcome), and Alternate Needed? and
   Record Alternates are not reached (6983 note 1).
-- Bar (ruled in 6981), per pool model: three qualify runs (27191, 27088, 27259), and in each run all three seat readings
+- Bar (ruled 6981, unit 6984), per pool model: three qualify runs (27191, 27088, 27259), and in each run all three seat readings
   readable, within the timeout, and finish_reason not "length": nine of nine seat readings (unit per 6983 note 2). Violation and cure rates are reported, not
   gated, since they are what alternates exist to absorb.
 
