@@ -1,0 +1,32 @@
+# SINGLE JUDGE
+PASS Cure Needed? true when K-B violations exist
+PASS Cure Build: one request, the two K-B lines, family deepseek
+PASS Cure body: the judge's own conversation, its answer, then the cure request naming each flagged line
+PASS Cure Route: deepseek to output 0
+PASS Cure Normalize: reply read, request paired
+PASS WRONG-IF LIMB 3 known-good: two kinds ([L1] quoted, [L2] Greek script) -> CURED
+PASS WRONG-IF LIMB 3 known-bad: no lower layer, an [L4] -> UNCURED
+PASS K-G1: UNCURED, cure test pending the ruling on 6945 AMEND 4
+PASS No grade or count changes (portion 5 is the operator's)
+PASS Report: three lines appended after the existing text, none counted as a new flag
+PASS Failed call: every line UNCURED with the failure named; no throw
+PASS Gemini envelope read
+PASS Gemini body: model turn then user turn
+PASS Cure Needed? false on a clean judgment
+PASS AMEND 1 no-cure path: Cure Check passes the item unchanged, empty report
+PASS Only K-G1: no call (cure test pending)
+PASS Only K-G1: reported UNCURED, pending
+# PANEL
+PASS Panel Cure Needed? true
+PASS Panel Cure Build: one request per seat with K-B lines (grok has K-G3 only: none)
+PASS Panel answer: the judge text before the audit lines
+PASS AMEND 2: exactly one item, three bodies
+PASS One seat cured (deepseek, both lines restated with two kinds)
+PASS Beside it a seat not cured: the failed call (gemini)
+PASS grok K-G3: UNCURED, pending
+PASS Each body only gains report lines at its end
+PASS Other fields of the Panel Payloads item unchanged
+PASS Panel Cure Needed? false with no violation
+PASS AMEND 1 panel no-cure path: item passes unchanged
+PASS Seat with no request body: skip item, routed to output 6, straight to Normalize
+failures 0

@@ -1,0 +1,830 @@
+{
+ "base": "db281705-b448-4402-9188-43efb8ac286b",
+ "nodes_add": [
+  {
+   "name": "Cure Needed?",
+   "type": "n8n-nodes-base.if",
+   "typeVersion": 2.2,
+   "position": [
+    8608,
+    400
+   ],
+   "parameters": {
+    "conditions": {
+     "combinator": "and",
+     "conditions": [
+      {
+       "id": "cure-needed",
+       "leftValue": "={{ ($json.debate_rule_violations||[]).some(x=>x.rule==='K-B') }}",
+       "operator": {
+        "operation": "true",
+        "singleValue": true,
+        "type": "boolean"
+       },
+       "rightValue": ""
+      }
+     ],
+     "options": {
+      "caseSensitive": true,
+      "leftValue": "",
+      "typeValidation": "loose"
+     }
+    },
+    "options": {}
+   }
+  },
+  {
+   "name": "Cure Build",
+   "type": "n8n-nodes-base.code",
+   "typeVersion": 2,
+   "position": [
+    8808,
+    400
+   ],
+   "parameters": {
+    "jsCode": "// BB-6904 (b), portion 3: DEBATE RULE VIOLATION, rule B on the judge's own BROKEN lines. A line graded DEFENDER LINK BROKEN or\n// CHALLENGER LINK BROKEN must exhibit, on the line itself, two lower layers of different kinds (6903): [L1] with quoted words, [L2] with\n// a source word (own script, transliteration marks, or a Strong's number; 6926; the Latin range narrowed to transliteration letters, 6936),\n// [L3] with a named reference. A tag after \"no\", \"without\", \"lacks\" or \"not\" never counts. K-G1 (6892): a BROKEN line resting on a\n// witness left unanswered while that side's stated conceded count is 0. K-G3 (6934): a side graded SELF-SUPPORTED while any of its\n// links is graded BROKEN. K-G2: an absent CITATION CHECK line on text from a prompt that asks for it, recorded only. The counter is\n// kb.cjs (git 29caa5c), names prefixed. Lines are chosen the extractor's way: a \"D<n> vs\" collision entry whose first grade is DEFENDER\n// or CHALLENGER LINK BROKEN. No grade is changed; each violation is a review line (6890 AMEND 2).\nconst DRV_REF=/(?:[1-3]\\s)?[A-Z][a-z]+\\.?\\s\\d{1,3}:\\d{1,3}/;\nconst DRV_SRC=/[\\u0590-\\u05FF\\u0100-\\u024F\\u00C2\\u00CA\\u00CE\\u00D4\\u00DB\\u00E2\\u00EA\\u00EE\\u00F4\\u00FB\\u0300-\\u036F\\u0370-\\u03FF\\u1E00-\\u1EFF\\u1F00-\\u1FFF\\u02BE\\u02BF]|\\b[GH]\\d{2,5}\\b/; // BB-6926 option A: own script (Hebrew, Greek), transliteration marks, or a Strong's number; no italic alternative\nconst DRV_QUOTE=/(?:^|[\\s(\\[{])[\"“'‘][^\"”\\n]{4,}?[\"”'’](?=$|[\\s.,;:!?)\\]}])/; // a mark inside a word (Joseph's) never opens or closes a quote (BB-6898 D1)\nconst DRV_NEG=/\\b(?:no|without|lacks?|lacking|not)\\s+(?:\\[L[1-4]\\]\\s*(?:or|and|\\/)\\s*)*$/i;\nfunction drvExhibits(line,needQuote,formC,distinct){\n  const re=/\\[L([1-3])\\](?:\\s*\\/\\s*\\[L[1-3]\\])*/g;let m,n=0;const met=new Set(); // distinct: count layer kinds met, not tags (BB-6899)\n  while((m=re.exec(line))!==null){\n    const before=line.slice(Math.max(0,m.index-30),m.index);\n    if(DRV_NEG.test(before))continue;\n    let rest=line.slice(m.index+m[0].length);\n    const cut=rest.search(/;|\\.\\s|\\s--\\s|\\s—\\s|\\[L[1-4]\\]/);if(cut>=0)rest=rest.slice(0,cut);\n    if(formC){const ts=[...m[0].matchAll(/L([1-3])/g)].map(x=>x[1]);const ok=ts.filter(t=>(t==='1'&&DRV_QUOTE.test(rest))||(t==='2'&&DRV_SRC.test(rest))||(t==='3'&&DRV_REF.test(rest)));if(ok.length){n++;ok.forEach(t=>met.add(t));}continue;}\n    const anchor=DRV_REF.test(rest)||DRV_SRC.test(rest);\n    if(anchor&&(!needQuote||DRV_QUOTE.test(rest)))n++;\n  }\n  return distinct?[...met].sort().map(t=>'L'+t):n;\n}\nconst drvKinds=(line)=>drvExhibits(line,false,true,true);\nconst DRV_WORDS=/\\b(?:unanswered|not answered|unnamed|not named|none named|neither named|unaddressed)\\b/i;\nfunction drvCheck(text,dConc,cConc,dStand,cStand,askedCC){const items=[],marks=[];if(typeof text!=='string')return {items,marks};const cnt={DEFENDER:0,CHALLENGER:0};\n for(const line of text.split('\\n')){const u=line.toUpperCase().replace(/[*_`]+/g,'').trim();\n  const m=u.match(/^(?:[-•]|\\d+[.)])?\\s*D(\\d+)\\b\\s*:?\\s*(?:D\\1\\b\\s*)?(.*)$/);if(!m||!/^VS\\.?\\s/.test(m[2]))continue;\n  const g=m[2].match(/(DEFENDER LINK BROKEN|CHALLENGER LINK BROKEN|UNDERDETERMINED)/);if(!g||g[1]==='UNDERDETERMINED')continue;\n  const side=g[1].split(' ')[0];cnt[side]++;const id=(u.match(/^(?:[-•]|\\d+[.)])?\\s*(D\\d+\\s+VS\\.?\\s+C\\d+)/)||[null,'D'+m[1]])[1].replace(/\\s+VS\\.?\\s+/,' vs ');\n  const k=drvKinds(line);\n  if(k.length<2){items.push({rule:'K-B',side,link:id,kinds:k,line});marks.push('[AUDIT v21: DEBATE RULE VIOLATION -- '+id+' '+g[1]+' exhibits '+k.length+' layer kind'+(k.length===1?'':'s')+(k.length?' ('+k.join(', ')+')':'')+' of the two rule B requires on the line itself. REVIEW THIS ROW.]');}\n  const conc=side==='DEFENDER'?dConc:cConc;\n  if(conc===0&&DRV_WORDS.test(line)){items.push({rule:'K-G1',side,link:id,line});marks.push('[AUDIT v21: DEBATE RULE VIOLATION (K-G1) -- '+id+' '+g[1]+' rests on a witness left unanswered while '+(side==='DEFENDER'?'CONCEDED LINKS':'CHALLENGER CONCEDED LINKS')+' is 0. REVIEW THIS ROW.]');}}\n for(const [side,st,lab] of [['DEFENDER',dStand,'DEFENSE'],['CHALLENGER',cStand,'CHALLENGE']]){\n  if(st==='SELF-SUPPORTED'&&cnt[side]>0){items.push({rule:'K-G3',side,link:null,line:null});marks.push('[AUDIT v21: DEBATE RULE VIOLATION (K-G3) -- '+lab+' STANDING SELF-SUPPORTED while '+cnt[side]+' '+side+' LINK BROKEN line'+(cnt[side]===1?'':'s')+' stand. REVIEW THIS ROW.]');}}\n if(askedCC&&!/^[ \\t]*(?:#+[ \\t]*|[-•][ \\t]*)?CITATION CHECK\\b/im.test(text.replace(/[*_`]+/g,'')))marks.push('[AUDIT v21: CITATION CHECK LINE ABSENT FROM A PROMPT THAT ASKS FOR IT (K-G2); recorded, not counted as a violation.]');\n return {items,marks};}\n\n// BB-6904 (c), portion 4: the cure call. One extra call per violating seat: its own flagged lines, the rule, and the instruction to cure\n// each line by exhibiting two lower layers of different kinds on it, or to answer in writing why it stands. The statement is run through\n// the same K-B counter (drvKinds, git 0b3cbac): a line is CURED only if its restated line passes; anything else, a missing line, a failed\n// or unparsed call, leaves it UNCURED (6945 AMEND 3). No grade, count or outcome is changed here (portion 5, the operator's choice).\nconst CURE_FAMS=['deepseek','openai','gemini','grok','mimo','openrouter']; // Cure Route output order; covers all six (6913 note 2)\nconst CURE_RULE=\"DEBATE RULE VIOLATION. After you answered, the system checked every COLLISION POINTS line you graded DEFENDER LINK BROKEN or CHALLENGER LINK BROKEN. \"\n +\"Each such line must exhibit, on the line itself, at least two lower layers of DIFFERENT kinds, each tagged: [L1] with the KJV words quoted; \"\n +\"[L2] with the Hebrew or Greek word in its own script, with its transliteration marks, or with its Strong's number; [L3] with the cross-reference named. \"\n +\"Two quotations at one layer are one layer. The lines below do not. For each one, either CURE it, by writing that one line again with the same grade and \"\n +\"the two layers exhibited on it, or ANSWER in writing why it stands. Reply with one line per flagged link and nothing else, each line beginning with \"\n +\"its label exactly as given below followed by a colon. Do not change any other line, grade or count. A line that is not cured leaves that ground \"\n +\"uncounted toward BROKEN.\";\nfunction cureAsk(items){return CURE_RULE+'\\n\\nFLAGGED LINES:\\n'+items.map(x=>x.link+': '+String(x.line||'').trim()).join('\\n');}\n// Append the judge's own answer and the cure request to the judge's own request body, per family envelope.\nfunction cureBody(fam,body,answer,ask){const b=JSON.parse(JSON.stringify(body));\n if(fam==='gemini'){b.contents=(b.contents||[]).concat([{role:'model',parts:[{text:answer}]},{role:'user',parts:[{text:ask}]}]);return b;}\n b.messages=(b.messages||[]).concat([{role:'assistant',content:answer},{role:'user',content:ask}]);\n if(b.response_format)delete b.response_format; // a JSON-only reserve (qwen) must be free to answer in lines\n return b;}\n// One reply envelope to text, never throwing: chat form, Gemini form, or a failure named.\nfunction cureText(j){\n if(j&&Array.isArray(j.choices)&&j.choices[0]&&j.choices[0].message&&typeof j.choices[0].message.content==='string')return {ok:true,text:j.choices[0].message.content,finish:j.choices[0].finish_reason||null};\n if(j&&Array.isArray(j.candidates)&&j.candidates[0]&&j.candidates[0].content&&Array.isArray(j.candidates[0].content.parts)){const t=j.candidates[0].content.parts.filter(p=>!p.thought&&typeof p.text==='string').map(p=>p.text).join('');if(t)return {ok:true,text:t,finish:j.candidates[0].finishReason||null};}\n const why=(j&&j.error)?('error: '+String(typeof j.error==='string'?j.error:(j.error.message||JSON.stringify(j.error))).slice(0,160)):('unrecognised reply, keys ['+Object.keys(j||{}).join(',')+']');\n return {ok:false,text:null,why};}\n// Judge each K-B item against the statement. The restated line is the statement line that begins with the item's label.\nfunction cureVerdicts(items,reply){const norm=s=>String(s).replace(/[*_`]+/g,'').replace(/\\s+/g,' ').trim().toUpperCase();\n const lines=reply&&reply.ok?String(reply.text).split('\\n').map(s=>s.trim()).filter(Boolean):[];\n return items.map(x=>{const lab=norm(x.link);\n  if(x.rule!=='K-B')return {...x,status:'UNCURED',why:'cure test for '+x.rule+' awaits the advisor ruling (6945 AMEND 4)',statement:null,kinds:[]};\n  if(!reply||!reply.ok)return {...x,status:'UNCURED',why:'cure call failed: '+(reply?reply.why:'no reply'),statement:null,kinds:[]};\n  const st=lines.find(l=>norm(l).startsWith(lab+':'))||lines.find(l=>norm(l).startsWith(lab));\n  if(!st)return {...x,status:'UNCURED',why:'no statement line for '+x.link,statement:null,kinds:[]};\n  const k=drvKinds(st);return {...x,status:k.length>=2?'CURED':'UNCURED',why:k.length>=2?null:'statement exhibits '+k.length+' layer kind'+(k.length===1?'':'s'),statement:st,kinds:k};});}\nfunction cureReport(seat,v){return v.map(x=>'[AUDIT v21: DEBATE RULE VIOLATION REPORT -- '+(seat?seat+' ':'')+x.link+' ('+x.rule+'): '+x.status\n +(x.kinds&&x.kinds.length?' ('+x.kinds.join(', ')+')':'')+(x.why?'; '+x.why:'')+(x.statement?'. STATEMENT: '+x.statement.slice(0,600):'')+']');}\n\nconst E=$input.first().json;const B=$('Build Independent Verdict').first().json;\nconst items=(E.debate_rule_violations||[]).filter(x=>x.rule==='K-B');const fam=CURE_FAMS[B.jidx];\nlet answer=null;try{answer=$('Verdict Normalizer').first().json.choices[0].message.content;}catch(e){answer=null;}\nif(!fam||typeof answer!=='string'||!items.length)return [{json:{cure:{who:'single',skip:'no request could be built (family '+B.jidx+')',items}}}];\nreturn [{json:{cure:{who:'single',seat:B.judge_model,fam,jidx:B.jidx,model:B.judge_model,items,body:cureBody(fam,B.verdictBody,answer,cureAsk(items))}}}];\n"
+   }
+  },
+  {
+   "name": "Cure Route",
+   "type": "n8n-nodes-base.switch",
+   "typeVersion": 3.2,
+   "position": [
+    9008,
+    400
+   ],
+   "parameters": {
+    "mode": "expression",
+    "numberOutputs": 7,
+    "output": "={{ $json.cure.skip ? 6 : $json.cure.jidx }}"
+   }
+  },
+  {
+   "name": "Cure Call deepseek",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.3,
+   "position": [
+    9208,
+    150
+   ],
+   "parameters": {
+    "method": "POST",
+    "url": "https://api.deepseek.com/v1/chat/completions",
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpHeaderAuth",
+    "sendBody": true,
+    "specifyBody": "json",
+    "jsonBody": "={{ $json.cure.body }}",
+    "options": {
+     "timeout": 900000
+    }
+   },
+   "credentials": {
+    "httpHeaderAuth": {
+     "id": "R3waesZPK7vpsV8E",
+     "name": "DeepSeek Key"
+    }
+   },
+   "onError": "continueRegularOutput",
+   "retryOnFail": false
+  },
+  {
+   "name": "Cure Call openai",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.3,
+   "position": [
+    9208,
+    250
+   ],
+   "parameters": {
+    "method": "POST",
+    "url": "https://api.openai.com/v1/chat/completions",
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpHeaderAuth",
+    "sendBody": true,
+    "specifyBody": "json",
+    "jsonBody": "={{ $json.cure.body }}",
+    "options": {
+     "timeout": 900000
+    }
+   },
+   "credentials": {
+    "httpHeaderAuth": {
+     "id": "dA6k9ZaS4cl8JimR",
+     "name": "OpenAI Key"
+    }
+   },
+   "onError": "continueRegularOutput",
+   "retryOnFail": false
+  },
+  {
+   "name": "Cure Call gemini",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.3,
+   "position": [
+    9208,
+    350
+   ],
+   "parameters": {
+    "method": "POST",
+    "url": "={{ 'https://generativelanguage.googleapis.com/v1beta/models/' + $json.cure.model + ':generateContent' }}",
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpHeaderAuth",
+    "sendBody": true,
+    "specifyBody": "json",
+    "jsonBody": "={{ $json.cure.body }}",
+    "options": {
+     "timeout": 900000
+    }
+   },
+   "credentials": {
+    "httpHeaderAuth": {
+     "id": "81PQ7Yd7S5c2ezLr",
+     "name": "Gemini API Key"
+    }
+   },
+   "onError": "continueRegularOutput",
+   "retryOnFail": false
+  },
+  {
+   "name": "Cure Call grok",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.3,
+   "position": [
+    9208,
+    450
+   ],
+   "parameters": {
+    "method": "POST",
+    "url": "https://api.x.ai/v1/chat/completions",
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpHeaderAuth",
+    "sendBody": true,
+    "specifyBody": "json",
+    "jsonBody": "={{ $json.cure.body }}",
+    "options": {
+     "timeout": 900000
+    }
+   },
+   "credentials": {
+    "httpHeaderAuth": {
+     "id": "2bQmRJpPY4najNac",
+     "name": "Grok API Key"
+    }
+   },
+   "onError": "continueRegularOutput",
+   "retryOnFail": false
+  },
+  {
+   "name": "Cure Call mimo",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.3,
+   "position": [
+    9208,
+    550
+   ],
+   "parameters": {
+    "method": "POST",
+    "url": "https://api.xiaomimimo.com/v1/chat/completions",
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpHeaderAuth",
+    "sendBody": true,
+    "specifyBody": "json",
+    "jsonBody": "={{ $json.cure.body }}",
+    "options": {
+     "timeout": 900000
+    }
+   },
+   "credentials": {
+    "httpHeaderAuth": {
+     "id": "ccfYSDcnTVvKUTRk",
+     "name": "MiMo-V2.6-Pro"
+    }
+   },
+   "onError": "continueRegularOutput",
+   "retryOnFail": false
+  },
+  {
+   "name": "Cure Call openrouter",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.3,
+   "position": [
+    9208,
+    650
+   ],
+   "parameters": {
+    "method": "POST",
+    "url": "https://openrouter.ai/api/v1/chat/completions",
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpHeaderAuth",
+    "sendBody": true,
+    "specifyBody": "json",
+    "jsonBody": "={{ $json.cure.body }}",
+    "options": {
+     "timeout": 900000
+    }
+   },
+   "credentials": {
+    "httpHeaderAuth": {
+     "id": "3KOXDCYCjkii6i56",
+     "name": "OpenRouter"
+    }
+   },
+   "onError": "continueRegularOutput",
+   "retryOnFail": false
+  },
+  {
+   "name": "Cure Normalize",
+   "type": "n8n-nodes-base.code",
+   "typeVersion": 2,
+   "position": [
+    9408,
+    400
+   ],
+   "parameters": {
+    "jsCode": "// BB-6904 (b), portion 3: DEBATE RULE VIOLATION, rule B on the judge's own BROKEN lines. A line graded DEFENDER LINK BROKEN or\n// CHALLENGER LINK BROKEN must exhibit, on the line itself, two lower layers of different kinds (6903): [L1] with quoted words, [L2] with\n// a source word (own script, transliteration marks, or a Strong's number; 6926; the Latin range narrowed to transliteration letters, 6936),\n// [L3] with a named reference. A tag after \"no\", \"without\", \"lacks\" or \"not\" never counts. K-G1 (6892): a BROKEN line resting on a\n// witness left unanswered while that side's stated conceded count is 0. K-G3 (6934): a side graded SELF-SUPPORTED while any of its\n// links is graded BROKEN. K-G2: an absent CITATION CHECK line on text from a prompt that asks for it, recorded only. The counter is\n// kb.cjs (git 29caa5c), names prefixed. Lines are chosen the extractor's way: a \"D<n> vs\" collision entry whose first grade is DEFENDER\n// or CHALLENGER LINK BROKEN. No grade is changed; each violation is a review line (6890 AMEND 2).\nconst DRV_REF=/(?:[1-3]\\s)?[A-Z][a-z]+\\.?\\s\\d{1,3}:\\d{1,3}/;\nconst DRV_SRC=/[\\u0590-\\u05FF\\u0100-\\u024F\\u00C2\\u00CA\\u00CE\\u00D4\\u00DB\\u00E2\\u00EA\\u00EE\\u00F4\\u00FB\\u0300-\\u036F\\u0370-\\u03FF\\u1E00-\\u1EFF\\u1F00-\\u1FFF\\u02BE\\u02BF]|\\b[GH]\\d{2,5}\\b/; // BB-6926 option A: own script (Hebrew, Greek), transliteration marks, or a Strong's number; no italic alternative\nconst DRV_QUOTE=/(?:^|[\\s(\\[{])[\"“'‘][^\"”\\n]{4,}?[\"”'’](?=$|[\\s.,;:!?)\\]}])/; // a mark inside a word (Joseph's) never opens or closes a quote (BB-6898 D1)\nconst DRV_NEG=/\\b(?:no|without|lacks?|lacking|not)\\s+(?:\\[L[1-4]\\]\\s*(?:or|and|\\/)\\s*)*$/i;\nfunction drvExhibits(line,needQuote,formC,distinct){\n  const re=/\\[L([1-3])\\](?:\\s*\\/\\s*\\[L[1-3]\\])*/g;let m,n=0;const met=new Set(); // distinct: count layer kinds met, not tags (BB-6899)\n  while((m=re.exec(line))!==null){\n    const before=line.slice(Math.max(0,m.index-30),m.index);\n    if(DRV_NEG.test(before))continue;\n    let rest=line.slice(m.index+m[0].length);\n    const cut=rest.search(/;|\\.\\s|\\s--\\s|\\s—\\s|\\[L[1-4]\\]/);if(cut>=0)rest=rest.slice(0,cut);\n    if(formC){const ts=[...m[0].matchAll(/L([1-3])/g)].map(x=>x[1]);const ok=ts.filter(t=>(t==='1'&&DRV_QUOTE.test(rest))||(t==='2'&&DRV_SRC.test(rest))||(t==='3'&&DRV_REF.test(rest)));if(ok.length){n++;ok.forEach(t=>met.add(t));}continue;}\n    const anchor=DRV_REF.test(rest)||DRV_SRC.test(rest);\n    if(anchor&&(!needQuote||DRV_QUOTE.test(rest)))n++;\n  }\n  return distinct?[...met].sort().map(t=>'L'+t):n;\n}\nconst drvKinds=(line)=>drvExhibits(line,false,true,true);\nconst DRV_WORDS=/\\b(?:unanswered|not answered|unnamed|not named|none named|neither named|unaddressed)\\b/i;\nfunction drvCheck(text,dConc,cConc,dStand,cStand,askedCC){const items=[],marks=[];if(typeof text!=='string')return {items,marks};const cnt={DEFENDER:0,CHALLENGER:0};\n for(const line of text.split('\\n')){const u=line.toUpperCase().replace(/[*_`]+/g,'').trim();\n  const m=u.match(/^(?:[-•]|\\d+[.)])?\\s*D(\\d+)\\b\\s*:?\\s*(?:D\\1\\b\\s*)?(.*)$/);if(!m||!/^VS\\.?\\s/.test(m[2]))continue;\n  const g=m[2].match(/(DEFENDER LINK BROKEN|CHALLENGER LINK BROKEN|UNDERDETERMINED)/);if(!g||g[1]==='UNDERDETERMINED')continue;\n  const side=g[1].split(' ')[0];cnt[side]++;const id=(u.match(/^(?:[-•]|\\d+[.)])?\\s*(D\\d+\\s+VS\\.?\\s+C\\d+)/)||[null,'D'+m[1]])[1].replace(/\\s+VS\\.?\\s+/,' vs ');\n  const k=drvKinds(line);\n  if(k.length<2){items.push({rule:'K-B',side,link:id,kinds:k,line});marks.push('[AUDIT v21: DEBATE RULE VIOLATION -- '+id+' '+g[1]+' exhibits '+k.length+' layer kind'+(k.length===1?'':'s')+(k.length?' ('+k.join(', ')+')':'')+' of the two rule B requires on the line itself. REVIEW THIS ROW.]');}\n  const conc=side==='DEFENDER'?dConc:cConc;\n  if(conc===0&&DRV_WORDS.test(line)){items.push({rule:'K-G1',side,link:id,line});marks.push('[AUDIT v21: DEBATE RULE VIOLATION (K-G1) -- '+id+' '+g[1]+' rests on a witness left unanswered while '+(side==='DEFENDER'?'CONCEDED LINKS':'CHALLENGER CONCEDED LINKS')+' is 0. REVIEW THIS ROW.]');}}\n for(const [side,st,lab] of [['DEFENDER',dStand,'DEFENSE'],['CHALLENGER',cStand,'CHALLENGE']]){\n  if(st==='SELF-SUPPORTED'&&cnt[side]>0){items.push({rule:'K-G3',side,link:null,line:null});marks.push('[AUDIT v21: DEBATE RULE VIOLATION (K-G3) -- '+lab+' STANDING SELF-SUPPORTED while '+cnt[side]+' '+side+' LINK BROKEN line'+(cnt[side]===1?'':'s')+' stand. REVIEW THIS ROW.]');}}\n if(askedCC&&!/^[ \\t]*(?:#+[ \\t]*|[-•][ \\t]*)?CITATION CHECK\\b/im.test(text.replace(/[*_`]+/g,'')))marks.push('[AUDIT v21: CITATION CHECK LINE ABSENT FROM A PROMPT THAT ASKS FOR IT (K-G2); recorded, not counted as a violation.]');\n return {items,marks};}\n\n// BB-6904 (c), portion 4: the cure call. One extra call per violating seat: its own flagged lines, the rule, and the instruction to cure\n// each line by exhibiting two lower layers of different kinds on it, or to answer in writing why it stands. The statement is run through\n// the same K-B counter (drvKinds, git 0b3cbac): a line is CURED only if its restated line passes; anything else, a missing line, a failed\n// or unparsed call, leaves it UNCURED (6945 AMEND 3). No grade, count or outcome is changed here (portion 5, the operator's choice).\nconst CURE_FAMS=['deepseek','openai','gemini','grok','mimo','openrouter']; // Cure Route output order; covers all six (6913 note 2)\nconst CURE_RULE=\"DEBATE RULE VIOLATION. After you answered, the system checked every COLLISION POINTS line you graded DEFENDER LINK BROKEN or CHALLENGER LINK BROKEN. \"\n +\"Each such line must exhibit, on the line itself, at least two lower layers of DIFFERENT kinds, each tagged: [L1] with the KJV words quoted; \"\n +\"[L2] with the Hebrew or Greek word in its own script, with its transliteration marks, or with its Strong's number; [L3] with the cross-reference named. \"\n +\"Two quotations at one layer are one layer. The lines below do not. For each one, either CURE it, by writing that one line again with the same grade and \"\n +\"the two layers exhibited on it, or ANSWER in writing why it stands. Reply with one line per flagged link and nothing else, each line beginning with \"\n +\"its label exactly as given below followed by a colon. Do not change any other line, grade or count. A line that is not cured leaves that ground \"\n +\"uncounted toward BROKEN.\";\nfunction cureAsk(items){return CURE_RULE+'\\n\\nFLAGGED LINES:\\n'+items.map(x=>x.link+': '+String(x.line||'').trim()).join('\\n');}\n// Append the judge's own answer and the cure request to the judge's own request body, per family envelope.\nfunction cureBody(fam,body,answer,ask){const b=JSON.parse(JSON.stringify(body));\n if(fam==='gemini'){b.contents=(b.contents||[]).concat([{role:'model',parts:[{text:answer}]},{role:'user',parts:[{text:ask}]}]);return b;}\n b.messages=(b.messages||[]).concat([{role:'assistant',content:answer},{role:'user',content:ask}]);\n if(b.response_format)delete b.response_format; // a JSON-only reserve (qwen) must be free to answer in lines\n return b;}\n// One reply envelope to text, never throwing: chat form, Gemini form, or a failure named.\nfunction cureText(j){\n if(j&&Array.isArray(j.choices)&&j.choices[0]&&j.choices[0].message&&typeof j.choices[0].message.content==='string')return {ok:true,text:j.choices[0].message.content,finish:j.choices[0].finish_reason||null};\n if(j&&Array.isArray(j.candidates)&&j.candidates[0]&&j.candidates[0].content&&Array.isArray(j.candidates[0].content.parts)){const t=j.candidates[0].content.parts.filter(p=>!p.thought&&typeof p.text==='string').map(p=>p.text).join('');if(t)return {ok:true,text:t,finish:j.candidates[0].finishReason||null};}\n const why=(j&&j.error)?('error: '+String(typeof j.error==='string'?j.error:(j.error.message||JSON.stringify(j.error))).slice(0,160)):('unrecognised reply, keys ['+Object.keys(j||{}).join(',')+']');\n return {ok:false,text:null,why};}\n// Judge each K-B item against the statement. The restated line is the statement line that begins with the item's label.\nfunction cureVerdicts(items,reply){const norm=s=>String(s).replace(/[*_`]+/g,'').replace(/\\s+/g,' ').trim().toUpperCase();\n const lines=reply&&reply.ok?String(reply.text).split('\\n').map(s=>s.trim()).filter(Boolean):[];\n return items.map(x=>{const lab=norm(x.link);\n  if(x.rule!=='K-B')return {...x,status:'UNCURED',why:'cure test for '+x.rule+' awaits the advisor ruling (6945 AMEND 4)',statement:null,kinds:[]};\n  if(!reply||!reply.ok)return {...x,status:'UNCURED',why:'cure call failed: '+(reply?reply.why:'no reply'),statement:null,kinds:[]};\n  const st=lines.find(l=>norm(l).startsWith(lab+':'))||lines.find(l=>norm(l).startsWith(lab));\n  if(!st)return {...x,status:'UNCURED',why:'no statement line for '+x.link,statement:null,kinds:[]};\n  const k=drvKinds(st);return {...x,status:k.length>=2?'CURED':'UNCURED',why:k.length>=2?null:'statement exhibits '+k.length+' layer kind'+(k.length===1?'':'s'),statement:st,kinds:k};});}\nfunction cureReport(seat,v){return v.map(x=>'[AUDIT v21: DEBATE RULE VIOLATION REPORT -- '+(seat?seat+' ':'')+x.link+' ('+x.rule+'): '+x.status\n +(x.kinds&&x.kinds.length?' ('+x.kinds.join(', ')+')':'')+(x.why?'; '+x.why:'')+(x.statement?'. STATEMENT: '+x.statement.slice(0,600):'')+']');}\n\n// One item per cure request, in; one item out, each carrying its own request (by pairing) and the reply read without throwing.\nreturn $input.all().map((it,i)=>{let src=null;try{src=$('Cure Build').itemMatching(i).json.cure;}catch(e){src=null;}\n if(!src){try{src=$('Cure Build').all()[i].json.cure;}catch(e){src=null;}}\n const reply=(it.json&&it.json.cure&&it.json.cure.skip)?{ok:false,text:null,why:it.json.cure.skip}:cureText(it.json);\n return {json:{cure:src||(it.json&&it.json.cure)||null,reply}};});\n"
+   }
+  },
+  {
+   "name": "Cure Check",
+   "type": "n8n-nodes-base.code",
+   "typeVersion": 2,
+   "position": [
+    9608,
+    400
+   ],
+   "parameters": {
+    "jsCode": "// BB-6904 (b), portion 3: DEBATE RULE VIOLATION, rule B on the judge's own BROKEN lines. A line graded DEFENDER LINK BROKEN or\n// CHALLENGER LINK BROKEN must exhibit, on the line itself, two lower layers of different kinds (6903): [L1] with quoted words, [L2] with\n// a source word (own script, transliteration marks, or a Strong's number; 6926; the Latin range narrowed to transliteration letters, 6936),\n// [L3] with a named reference. A tag after \"no\", \"without\", \"lacks\" or \"not\" never counts. K-G1 (6892): a BROKEN line resting on a\n// witness left unanswered while that side's stated conceded count is 0. K-G3 (6934): a side graded SELF-SUPPORTED while any of its\n// links is graded BROKEN. K-G2: an absent CITATION CHECK line on text from a prompt that asks for it, recorded only. The counter is\n// kb.cjs (git 29caa5c), names prefixed. Lines are chosen the extractor's way: a \"D<n> vs\" collision entry whose first grade is DEFENDER\n// or CHALLENGER LINK BROKEN. No grade is changed; each violation is a review line (6890 AMEND 2).\nconst DRV_REF=/(?:[1-3]\\s)?[A-Z][a-z]+\\.?\\s\\d{1,3}:\\d{1,3}/;\nconst DRV_SRC=/[\\u0590-\\u05FF\\u0100-\\u024F\\u00C2\\u00CA\\u00CE\\u00D4\\u00DB\\u00E2\\u00EA\\u00EE\\u00F4\\u00FB\\u0300-\\u036F\\u0370-\\u03FF\\u1E00-\\u1EFF\\u1F00-\\u1FFF\\u02BE\\u02BF]|\\b[GH]\\d{2,5}\\b/; // BB-6926 option A: own script (Hebrew, Greek), transliteration marks, or a Strong's number; no italic alternative\nconst DRV_QUOTE=/(?:^|[\\s(\\[{])[\"“'‘][^\"”\\n]{4,}?[\"”'’](?=$|[\\s.,;:!?)\\]}])/; // a mark inside a word (Joseph's) never opens or closes a quote (BB-6898 D1)\nconst DRV_NEG=/\\b(?:no|without|lacks?|lacking|not)\\s+(?:\\[L[1-4]\\]\\s*(?:or|and|\\/)\\s*)*$/i;\nfunction drvExhibits(line,needQuote,formC,distinct){\n  const re=/\\[L([1-3])\\](?:\\s*\\/\\s*\\[L[1-3]\\])*/g;let m,n=0;const met=new Set(); // distinct: count layer kinds met, not tags (BB-6899)\n  while((m=re.exec(line))!==null){\n    const before=line.slice(Math.max(0,m.index-30),m.index);\n    if(DRV_NEG.test(before))continue;\n    let rest=line.slice(m.index+m[0].length);\n    const cut=rest.search(/;|\\.\\s|\\s--\\s|\\s—\\s|\\[L[1-4]\\]/);if(cut>=0)rest=rest.slice(0,cut);\n    if(formC){const ts=[...m[0].matchAll(/L([1-3])/g)].map(x=>x[1]);const ok=ts.filter(t=>(t==='1'&&DRV_QUOTE.test(rest))||(t==='2'&&DRV_SRC.test(rest))||(t==='3'&&DRV_REF.test(rest)));if(ok.length){n++;ok.forEach(t=>met.add(t));}continue;}\n    const anchor=DRV_REF.test(rest)||DRV_SRC.test(rest);\n    if(anchor&&(!needQuote||DRV_QUOTE.test(rest)))n++;\n  }\n  return distinct?[...met].sort().map(t=>'L'+t):n;\n}\nconst drvKinds=(line)=>drvExhibits(line,false,true,true);\nconst DRV_WORDS=/\\b(?:unanswered|not answered|unnamed|not named|none named|neither named|unaddressed)\\b/i;\nfunction drvCheck(text,dConc,cConc,dStand,cStand,askedCC){const items=[],marks=[];if(typeof text!=='string')return {items,marks};const cnt={DEFENDER:0,CHALLENGER:0};\n for(const line of text.split('\\n')){const u=line.toUpperCase().replace(/[*_`]+/g,'').trim();\n  const m=u.match(/^(?:[-•]|\\d+[.)])?\\s*D(\\d+)\\b\\s*:?\\s*(?:D\\1\\b\\s*)?(.*)$/);if(!m||!/^VS\\.?\\s/.test(m[2]))continue;\n  const g=m[2].match(/(DEFENDER LINK BROKEN|CHALLENGER LINK BROKEN|UNDERDETERMINED)/);if(!g||g[1]==='UNDERDETERMINED')continue;\n  const side=g[1].split(' ')[0];cnt[side]++;const id=(u.match(/^(?:[-•]|\\d+[.)])?\\s*(D\\d+\\s+VS\\.?\\s+C\\d+)/)||[null,'D'+m[1]])[1].replace(/\\s+VS\\.?\\s+/,' vs ');\n  const k=drvKinds(line);\n  if(k.length<2){items.push({rule:'K-B',side,link:id,kinds:k,line});marks.push('[AUDIT v21: DEBATE RULE VIOLATION -- '+id+' '+g[1]+' exhibits '+k.length+' layer kind'+(k.length===1?'':'s')+(k.length?' ('+k.join(', ')+')':'')+' of the two rule B requires on the line itself. REVIEW THIS ROW.]');}\n  const conc=side==='DEFENDER'?dConc:cConc;\n  if(conc===0&&DRV_WORDS.test(line)){items.push({rule:'K-G1',side,link:id,line});marks.push('[AUDIT v21: DEBATE RULE VIOLATION (K-G1) -- '+id+' '+g[1]+' rests on a witness left unanswered while '+(side==='DEFENDER'?'CONCEDED LINKS':'CHALLENGER CONCEDED LINKS')+' is 0. REVIEW THIS ROW.]');}}\n for(const [side,st,lab] of [['DEFENDER',dStand,'DEFENSE'],['CHALLENGER',cStand,'CHALLENGE']]){\n  if(st==='SELF-SUPPORTED'&&cnt[side]>0){items.push({rule:'K-G3',side,link:null,line:null});marks.push('[AUDIT v21: DEBATE RULE VIOLATION (K-G3) -- '+lab+' STANDING SELF-SUPPORTED while '+cnt[side]+' '+side+' LINK BROKEN line'+(cnt[side]===1?'':'s')+' stand. REVIEW THIS ROW.]');}}\n if(askedCC&&!/^[ \\t]*(?:#+[ \\t]*|[-•][ \\t]*)?CITATION CHECK\\b/im.test(text.replace(/[*_`]+/g,'')))marks.push('[AUDIT v21: CITATION CHECK LINE ABSENT FROM A PROMPT THAT ASKS FOR IT (K-G2); recorded, not counted as a violation.]');\n return {items,marks};}\n\n// BB-6904 (c), portion 4: the cure call. One extra call per violating seat: its own flagged lines, the rule, and the instruction to cure\n// each line by exhibiting two lower layers of different kinds on it, or to answer in writing why it stands. The statement is run through\n// the same K-B counter (drvKinds, git 0b3cbac): a line is CURED only if its restated line passes; anything else, a missing line, a failed\n// or unparsed call, leaves it UNCURED (6945 AMEND 3). No grade, count or outcome is changed here (portion 5, the operator's choice).\nconst CURE_FAMS=['deepseek','openai','gemini','grok','mimo','openrouter']; // Cure Route output order; covers all six (6913 note 2)\nconst CURE_RULE=\"DEBATE RULE VIOLATION. After you answered, the system checked every COLLISION POINTS line you graded DEFENDER LINK BROKEN or CHALLENGER LINK BROKEN. \"\n +\"Each such line must exhibit, on the line itself, at least two lower layers of DIFFERENT kinds, each tagged: [L1] with the KJV words quoted; \"\n +\"[L2] with the Hebrew or Greek word in its own script, with its transliteration marks, or with its Strong's number; [L3] with the cross-reference named. \"\n +\"Two quotations at one layer are one layer. The lines below do not. For each one, either CURE it, by writing that one line again with the same grade and \"\n +\"the two layers exhibited on it, or ANSWER in writing why it stands. Reply with one line per flagged link and nothing else, each line beginning with \"\n +\"its label exactly as given below followed by a colon. Do not change any other line, grade or count. A line that is not cured leaves that ground \"\n +\"uncounted toward BROKEN.\";\nfunction cureAsk(items){return CURE_RULE+'\\n\\nFLAGGED LINES:\\n'+items.map(x=>x.link+': '+String(x.line||'').trim()).join('\\n');}\n// Append the judge's own answer and the cure request to the judge's own request body, per family envelope.\nfunction cureBody(fam,body,answer,ask){const b=JSON.parse(JSON.stringify(body));\n if(fam==='gemini'){b.contents=(b.contents||[]).concat([{role:'model',parts:[{text:answer}]},{role:'user',parts:[{text:ask}]}]);return b;}\n b.messages=(b.messages||[]).concat([{role:'assistant',content:answer},{role:'user',content:ask}]);\n if(b.response_format)delete b.response_format; // a JSON-only reserve (qwen) must be free to answer in lines\n return b;}\n// One reply envelope to text, never throwing: chat form, Gemini form, or a failure named.\nfunction cureText(j){\n if(j&&Array.isArray(j.choices)&&j.choices[0]&&j.choices[0].message&&typeof j.choices[0].message.content==='string')return {ok:true,text:j.choices[0].message.content,finish:j.choices[0].finish_reason||null};\n if(j&&Array.isArray(j.candidates)&&j.candidates[0]&&j.candidates[0].content&&Array.isArray(j.candidates[0].content.parts)){const t=j.candidates[0].content.parts.filter(p=>!p.thought&&typeof p.text==='string').map(p=>p.text).join('');if(t)return {ok:true,text:t,finish:j.candidates[0].finishReason||null};}\n const why=(j&&j.error)?('error: '+String(typeof j.error==='string'?j.error:(j.error.message||JSON.stringify(j.error))).slice(0,160)):('unrecognised reply, keys ['+Object.keys(j||{}).join(',')+']');\n return {ok:false,text:null,why};}\n// Judge each K-B item against the statement. The restated line is the statement line that begins with the item's label.\nfunction cureVerdicts(items,reply){const norm=s=>String(s).replace(/[*_`]+/g,'').replace(/\\s+/g,' ').trim().toUpperCase();\n const lines=reply&&reply.ok?String(reply.text).split('\\n').map(s=>s.trim()).filter(Boolean):[];\n return items.map(x=>{const lab=norm(x.link);\n  if(x.rule!=='K-B')return {...x,status:'UNCURED',why:'cure test for '+x.rule+' awaits the advisor ruling (6945 AMEND 4)',statement:null,kinds:[]};\n  if(!reply||!reply.ok)return {...x,status:'UNCURED',why:'cure call failed: '+(reply?reply.why:'no reply'),statement:null,kinds:[]};\n  const st=lines.find(l=>norm(l).startsWith(lab+':'))||lines.find(l=>norm(l).startsWith(lab));\n  if(!st)return {...x,status:'UNCURED',why:'no statement line for '+x.link,statement:null,kinds:[]};\n  const k=drvKinds(st);return {...x,status:k.length>=2?'CURED':'UNCURED',why:k.length>=2?null:'statement exhibits '+k.length+' layer kind'+(k.length===1?'':'s'),statement:st,kinds:k};});}\nfunction cureReport(seat,v){return v.map(x=>'[AUDIT v21: DEBATE RULE VIOLATION REPORT -- '+(seat?seat+' ':'')+x.link+' ('+x.rule+'): '+x.status\n +(x.kinds&&x.kinds.length?' ('+x.kinds.join(', ')+')':'')+(x.why?'; '+x.why:'')+(x.statement?'. STATEMENT: '+x.statement.slice(0,600):'')+']');}\n\nconst base=$('Extract Independent Verdict').first().json;let rs=[];try{if($('Cure Normalize').isExecuted)rs=$('Cure Normalize').all().map(x=>x.json);}catch(e){rs=[];}\nconst all=base.debate_rule_violations||[];if(!all.length)return [{json:{...base,debate_rule_report:[]}}];\nconst kb=all.filter(x=>x.rule==='K-B'),ot=all.filter(x=>x.rule!=='K-B');const r=rs[0]||null;\nconst v=(kb.length?cureVerdicts(kb,r?r.reply:{ok:false,why:'no cure call was made'}):[]).concat(cureVerdicts(ot,null));\nreturn [{json:{...base,independent_verdict_raw:base.independent_verdict_raw+'\\n\\n'+cureReport(null,v).join('\\n'),debate_rule_report:v.map(x=>({rule:x.rule,side:x.side,link:x.link,status:x.status,kinds:x.kinds,why:x.why,statement:x.statement}))}}];\n"
+   }
+  },
+  {
+   "name": "Panel Cure Needed?",
+   "type": "n8n-nodes-base.if",
+   "typeVersion": 2.2,
+   "position": [
+    11472,
+    400
+   ],
+   "parameters": {
+    "conditions": {
+     "combinator": "and",
+     "conditions": [
+      {
+       "id": "panel-cure-needed",
+       "leftValue": "={{ ($json.summary||[]).some(s=>(s.drv||[]).some(x=>x.rule==='K-B')) }}",
+       "operator": {
+        "operation": "true",
+        "singleValue": true,
+        "type": "boolean"
+       },
+       "rightValue": ""
+      }
+     ],
+     "options": {
+      "caseSensitive": true,
+      "leftValue": "",
+      "typeValidation": "loose"
+     }
+    },
+    "options": {}
+   }
+  },
+  {
+   "name": "Panel Cure Build",
+   "type": "n8n-nodes-base.code",
+   "typeVersion": 2,
+   "position": [
+    11672,
+    400
+   ],
+   "parameters": {
+    "jsCode": "// BB-6904 (b), portion 3: DEBATE RULE VIOLATION, rule B on the judge's own BROKEN lines. A line graded DEFENDER LINK BROKEN or\n// CHALLENGER LINK BROKEN must exhibit, on the line itself, two lower layers of different kinds (6903): [L1] with quoted words, [L2] with\n// a source word (own script, transliteration marks, or a Strong's number; 6926; the Latin range narrowed to transliteration letters, 6936),\n// [L3] with a named reference. A tag after \"no\", \"without\", \"lacks\" or \"not\" never counts. K-G1 (6892): a BROKEN line resting on a\n// witness left unanswered while that side's stated conceded count is 0. K-G3 (6934): a side graded SELF-SUPPORTED while any of its\n// links is graded BROKEN. K-G2: an absent CITATION CHECK line on text from a prompt that asks for it, recorded only. The counter is\n// kb.cjs (git 29caa5c), names prefixed. Lines are chosen the extractor's way: a \"D<n> vs\" collision entry whose first grade is DEFENDER\n// or CHALLENGER LINK BROKEN. No grade is changed; each violation is a review line (6890 AMEND 2).\nconst DRV_REF=/(?:[1-3]\\s)?[A-Z][a-z]+\\.?\\s\\d{1,3}:\\d{1,3}/;\nconst DRV_SRC=/[\\u0590-\\u05FF\\u0100-\\u024F\\u00C2\\u00CA\\u00CE\\u00D4\\u00DB\\u00E2\\u00EA\\u00EE\\u00F4\\u00FB\\u0300-\\u036F\\u0370-\\u03FF\\u1E00-\\u1EFF\\u1F00-\\u1FFF\\u02BE\\u02BF]|\\b[GH]\\d{2,5}\\b/; // BB-6926 option A: own script (Hebrew, Greek), transliteration marks, or a Strong's number; no italic alternative\nconst DRV_QUOTE=/(?:^|[\\s(\\[{])[\"“'‘][^\"”\\n]{4,}?[\"”'’](?=$|[\\s.,;:!?)\\]}])/; // a mark inside a word (Joseph's) never opens or closes a quote (BB-6898 D1)\nconst DRV_NEG=/\\b(?:no|without|lacks?|lacking|not)\\s+(?:\\[L[1-4]\\]\\s*(?:or|and|\\/)\\s*)*$/i;\nfunction drvExhibits(line,needQuote,formC,distinct){\n  const re=/\\[L([1-3])\\](?:\\s*\\/\\s*\\[L[1-3]\\])*/g;let m,n=0;const met=new Set(); // distinct: count layer kinds met, not tags (BB-6899)\n  while((m=re.exec(line))!==null){\n    const before=line.slice(Math.max(0,m.index-30),m.index);\n    if(DRV_NEG.test(before))continue;\n    let rest=line.slice(m.index+m[0].length);\n    const cut=rest.search(/;|\\.\\s|\\s--\\s|\\s—\\s|\\[L[1-4]\\]/);if(cut>=0)rest=rest.slice(0,cut);\n    if(formC){const ts=[...m[0].matchAll(/L([1-3])/g)].map(x=>x[1]);const ok=ts.filter(t=>(t==='1'&&DRV_QUOTE.test(rest))||(t==='2'&&DRV_SRC.test(rest))||(t==='3'&&DRV_REF.test(rest)));if(ok.length){n++;ok.forEach(t=>met.add(t));}continue;}\n    const anchor=DRV_REF.test(rest)||DRV_SRC.test(rest);\n    if(anchor&&(!needQuote||DRV_QUOTE.test(rest)))n++;\n  }\n  return distinct?[...met].sort().map(t=>'L'+t):n;\n}\nconst drvKinds=(line)=>drvExhibits(line,false,true,true);\nconst DRV_WORDS=/\\b(?:unanswered|not answered|unnamed|not named|none named|neither named|unaddressed)\\b/i;\nfunction drvCheck(text,dConc,cConc,dStand,cStand,askedCC){const items=[],marks=[];if(typeof text!=='string')return {items,marks};const cnt={DEFENDER:0,CHALLENGER:0};\n for(const line of text.split('\\n')){const u=line.toUpperCase().replace(/[*_`]+/g,'').trim();\n  const m=u.match(/^(?:[-•]|\\d+[.)])?\\s*D(\\d+)\\b\\s*:?\\s*(?:D\\1\\b\\s*)?(.*)$/);if(!m||!/^VS\\.?\\s/.test(m[2]))continue;\n  const g=m[2].match(/(DEFENDER LINK BROKEN|CHALLENGER LINK BROKEN|UNDERDETERMINED)/);if(!g||g[1]==='UNDERDETERMINED')continue;\n  const side=g[1].split(' ')[0];cnt[side]++;const id=(u.match(/^(?:[-•]|\\d+[.)])?\\s*(D\\d+\\s+VS\\.?\\s+C\\d+)/)||[null,'D'+m[1]])[1].replace(/\\s+VS\\.?\\s+/,' vs ');\n  const k=drvKinds(line);\n  if(k.length<2){items.push({rule:'K-B',side,link:id,kinds:k,line});marks.push('[AUDIT v21: DEBATE RULE VIOLATION -- '+id+' '+g[1]+' exhibits '+k.length+' layer kind'+(k.length===1?'':'s')+(k.length?' ('+k.join(', ')+')':'')+' of the two rule B requires on the line itself. REVIEW THIS ROW.]');}\n  const conc=side==='DEFENDER'?dConc:cConc;\n  if(conc===0&&DRV_WORDS.test(line)){items.push({rule:'K-G1',side,link:id,line});marks.push('[AUDIT v21: DEBATE RULE VIOLATION (K-G1) -- '+id+' '+g[1]+' rests on a witness left unanswered while '+(side==='DEFENDER'?'CONCEDED LINKS':'CHALLENGER CONCEDED LINKS')+' is 0. REVIEW THIS ROW.]');}}\n for(const [side,st,lab] of [['DEFENDER',dStand,'DEFENSE'],['CHALLENGER',cStand,'CHALLENGE']]){\n  if(st==='SELF-SUPPORTED'&&cnt[side]>0){items.push({rule:'K-G3',side,link:null,line:null});marks.push('[AUDIT v21: DEBATE RULE VIOLATION (K-G3) -- '+lab+' STANDING SELF-SUPPORTED while '+cnt[side]+' '+side+' LINK BROKEN line'+(cnt[side]===1?'':'s')+' stand. REVIEW THIS ROW.]');}}\n if(askedCC&&!/^[ \\t]*(?:#+[ \\t]*|[-•][ \\t]*)?CITATION CHECK\\b/im.test(text.replace(/[*_`]+/g,'')))marks.push('[AUDIT v21: CITATION CHECK LINE ABSENT FROM A PROMPT THAT ASKS FOR IT (K-G2); recorded, not counted as a violation.]');\n return {items,marks};}\n\n// BB-6904 (c), portion 4: the cure call. One extra call per violating seat: its own flagged lines, the rule, and the instruction to cure\n// each line by exhibiting two lower layers of different kinds on it, or to answer in writing why it stands. The statement is run through\n// the same K-B counter (drvKinds, git 0b3cbac): a line is CURED only if its restated line passes; anything else, a missing line, a failed\n// or unparsed call, leaves it UNCURED (6945 AMEND 3). No grade, count or outcome is changed here (portion 5, the operator's choice).\nconst CURE_FAMS=['deepseek','openai','gemini','grok','mimo','openrouter']; // Cure Route output order; covers all six (6913 note 2)\nconst CURE_RULE=\"DEBATE RULE VIOLATION. After you answered, the system checked every COLLISION POINTS line you graded DEFENDER LINK BROKEN or CHALLENGER LINK BROKEN. \"\n +\"Each such line must exhibit, on the line itself, at least two lower layers of DIFFERENT kinds, each tagged: [L1] with the KJV words quoted; \"\n +\"[L2] with the Hebrew or Greek word in its own script, with its transliteration marks, or with its Strong's number; [L3] with the cross-reference named. \"\n +\"Two quotations at one layer are one layer. The lines below do not. For each one, either CURE it, by writing that one line again with the same grade and \"\n +\"the two layers exhibited on it, or ANSWER in writing why it stands. Reply with one line per flagged link and nothing else, each line beginning with \"\n +\"its label exactly as given below followed by a colon. Do not change any other line, grade or count. A line that is not cured leaves that ground \"\n +\"uncounted toward BROKEN.\";\nfunction cureAsk(items){return CURE_RULE+'\\n\\nFLAGGED LINES:\\n'+items.map(x=>x.link+': '+String(x.line||'').trim()).join('\\n');}\n// Append the judge's own answer and the cure request to the judge's own request body, per family envelope.\nfunction cureBody(fam,body,answer,ask){const b=JSON.parse(JSON.stringify(body));\n if(fam==='gemini'){b.contents=(b.contents||[]).concat([{role:'model',parts:[{text:answer}]},{role:'user',parts:[{text:ask}]}]);return b;}\n b.messages=(b.messages||[]).concat([{role:'assistant',content:answer},{role:'user',content:ask}]);\n if(b.response_format)delete b.response_format; // a JSON-only reserve (qwen) must be free to answer in lines\n return b;}\n// One reply envelope to text, never throwing: chat form, Gemini form, or a failure named.\nfunction cureText(j){\n if(j&&Array.isArray(j.choices)&&j.choices[0]&&j.choices[0].message&&typeof j.choices[0].message.content==='string')return {ok:true,text:j.choices[0].message.content,finish:j.choices[0].finish_reason||null};\n if(j&&Array.isArray(j.candidates)&&j.candidates[0]&&j.candidates[0].content&&Array.isArray(j.candidates[0].content.parts)){const t=j.candidates[0].content.parts.filter(p=>!p.thought&&typeof p.text==='string').map(p=>p.text).join('');if(t)return {ok:true,text:t,finish:j.candidates[0].finishReason||null};}\n const why=(j&&j.error)?('error: '+String(typeof j.error==='string'?j.error:(j.error.message||JSON.stringify(j.error))).slice(0,160)):('unrecognised reply, keys ['+Object.keys(j||{}).join(',')+']');\n return {ok:false,text:null,why};}\n// Judge each K-B item against the statement. The restated line is the statement line that begins with the item's label.\nfunction cureVerdicts(items,reply){const norm=s=>String(s).replace(/[*_`]+/g,'').replace(/\\s+/g,' ').trim().toUpperCase();\n const lines=reply&&reply.ok?String(reply.text).split('\\n').map(s=>s.trim()).filter(Boolean):[];\n return items.map(x=>{const lab=norm(x.link);\n  if(x.rule!=='K-B')return {...x,status:'UNCURED',why:'cure test for '+x.rule+' awaits the advisor ruling (6945 AMEND 4)',statement:null,kinds:[]};\n  if(!reply||!reply.ok)return {...x,status:'UNCURED',why:'cure call failed: '+(reply?reply.why:'no reply'),statement:null,kinds:[]};\n  const st=lines.find(l=>norm(l).startsWith(lab+':'))||lines.find(l=>norm(l).startsWith(lab));\n  if(!st)return {...x,status:'UNCURED',why:'no statement line for '+x.link,statement:null,kinds:[]};\n  const k=drvKinds(st);return {...x,status:k.length>=2?'CURED':'UNCURED',why:k.length>=2?null:'statement exhibits '+k.length+' layer kind'+(k.length===1?'':'s'),statement:st,kinds:k};});}\nfunction cureReport(seat,v){return v.map(x=>'[AUDIT v21: DEBATE RULE VIOLATION REPORT -- '+(seat?seat+' ':'')+x.link+' ('+x.rule+'): '+x.status\n +(x.kinds&&x.kinds.length?' ('+x.kinds.join(', ')+')':'')+(x.why?'; '+x.why:'')+(x.statement?'. STATEMENT: '+x.statement.slice(0,600):'')+']');}\n\nconst PP=$input.first().json;const P=$('Panel Build').first().json;let R=null;try{if($('Reserve Build').isExecuted)R=$('Reserve Build').first().json;}catch(e){R=null;}\nconst out=[];\n(PP.summary||[]).forEach((s,i)=>{const items=(s.drv||[]).filter(x=>x.rule==='K-B');if(!items.length)return;\n const jd=(s.substitute&&R&&R.seat===s.seat)?R:(P.judges||[]).find(j=>j.seat===s.seat);\n let answer=null;try{const vr=JSON.parse(PP.bodies[i]).payload.verdict_raw;const k=vr.indexOf('\\n\\n[AUDIT v');answer=k>=0?vr.slice(0,k):vr;}catch(e){answer=null;}\n const jidx=jd?CURE_FAMS.indexOf(jd.fam):-1;\n if(!jd||jidx<0||typeof answer!=='string'){out.push({json:{cure:{who:'panel',idx:i,seat:s.seat,skip:'no request body for this seat',items}}});return;}\n out.push({json:{cure:{who:'panel',idx:i,seat:s.seat,fam:jd.fam,jidx,model:jd.api_model,items,body:cureBody(jd.fam,jd.body,answer,cureAsk(items))}}});});\nif(!out.length)out.push({json:{cure:{who:'panel',skip:'no seat to cure',items:[]}}});\nreturn out;\n"
+   }
+  },
+  {
+   "name": "Panel Cure Route",
+   "type": "n8n-nodes-base.switch",
+   "typeVersion": 3.2,
+   "position": [
+    11872,
+    400
+   ],
+   "parameters": {
+    "mode": "expression",
+    "numberOutputs": 7,
+    "output": "={{ $json.cure.skip ? 6 : $json.cure.jidx }}"
+   }
+  },
+  {
+   "name": "Panel Cure Call deepseek",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.3,
+   "position": [
+    12072,
+    150
+   ],
+   "parameters": {
+    "method": "POST",
+    "url": "https://api.deepseek.com/v1/chat/completions",
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpHeaderAuth",
+    "sendBody": true,
+    "specifyBody": "json",
+    "jsonBody": "={{ $json.cure.body }}",
+    "options": {
+     "timeout": 900000
+    }
+   },
+   "credentials": {
+    "httpHeaderAuth": {
+     "id": "R3waesZPK7vpsV8E",
+     "name": "DeepSeek Key"
+    }
+   },
+   "onError": "continueRegularOutput",
+   "retryOnFail": false
+  },
+  {
+   "name": "Panel Cure Call openai",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.3,
+   "position": [
+    12072,
+    250
+   ],
+   "parameters": {
+    "method": "POST",
+    "url": "https://api.openai.com/v1/chat/completions",
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpHeaderAuth",
+    "sendBody": true,
+    "specifyBody": "json",
+    "jsonBody": "={{ $json.cure.body }}",
+    "options": {
+     "timeout": 900000
+    }
+   },
+   "credentials": {
+    "httpHeaderAuth": {
+     "id": "dA6k9ZaS4cl8JimR",
+     "name": "OpenAI Key"
+    }
+   },
+   "onError": "continueRegularOutput",
+   "retryOnFail": false
+  },
+  {
+   "name": "Panel Cure Call gemini",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.3,
+   "position": [
+    12072,
+    350
+   ],
+   "parameters": {
+    "method": "POST",
+    "url": "={{ 'https://generativelanguage.googleapis.com/v1beta/models/' + $json.cure.model + ':generateContent' }}",
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpHeaderAuth",
+    "sendBody": true,
+    "specifyBody": "json",
+    "jsonBody": "={{ $json.cure.body }}",
+    "options": {
+     "timeout": 900000
+    }
+   },
+   "credentials": {
+    "httpHeaderAuth": {
+     "id": "81PQ7Yd7S5c2ezLr",
+     "name": "Gemini API Key"
+    }
+   },
+   "onError": "continueRegularOutput",
+   "retryOnFail": false
+  },
+  {
+   "name": "Panel Cure Call grok",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.3,
+   "position": [
+    12072,
+    450
+   ],
+   "parameters": {
+    "method": "POST",
+    "url": "https://api.x.ai/v1/chat/completions",
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpHeaderAuth",
+    "sendBody": true,
+    "specifyBody": "json",
+    "jsonBody": "={{ $json.cure.body }}",
+    "options": {
+     "timeout": 900000
+    }
+   },
+   "credentials": {
+    "httpHeaderAuth": {
+     "id": "2bQmRJpPY4najNac",
+     "name": "Grok API Key"
+    }
+   },
+   "onError": "continueRegularOutput",
+   "retryOnFail": false
+  },
+  {
+   "name": "Panel Cure Call mimo",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.3,
+   "position": [
+    12072,
+    550
+   ],
+   "parameters": {
+    "method": "POST",
+    "url": "https://api.xiaomimimo.com/v1/chat/completions",
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpHeaderAuth",
+    "sendBody": true,
+    "specifyBody": "json",
+    "jsonBody": "={{ $json.cure.body }}",
+    "options": {
+     "timeout": 900000
+    }
+   },
+   "credentials": {
+    "httpHeaderAuth": {
+     "id": "ccfYSDcnTVvKUTRk",
+     "name": "MiMo-V2.6-Pro"
+    }
+   },
+   "onError": "continueRegularOutput",
+   "retryOnFail": false
+  },
+  {
+   "name": "Panel Cure Call openrouter",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.3,
+   "position": [
+    12072,
+    650
+   ],
+   "parameters": {
+    "method": "POST",
+    "url": "https://openrouter.ai/api/v1/chat/completions",
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpHeaderAuth",
+    "sendBody": true,
+    "specifyBody": "json",
+    "jsonBody": "={{ $json.cure.body }}",
+    "options": {
+     "timeout": 900000
+    }
+   },
+   "credentials": {
+    "httpHeaderAuth": {
+     "id": "3KOXDCYCjkii6i56",
+     "name": "OpenRouter"
+    }
+   },
+   "onError": "continueRegularOutput",
+   "retryOnFail": false
+  },
+  {
+   "name": "Panel Cure Normalize",
+   "type": "n8n-nodes-base.code",
+   "typeVersion": 2,
+   "position": [
+    12272,
+    400
+   ],
+   "parameters": {
+    "jsCode": "// BB-6904 (b), portion 3: DEBATE RULE VIOLATION, rule B on the judge's own BROKEN lines. A line graded DEFENDER LINK BROKEN or\n// CHALLENGER LINK BROKEN must exhibit, on the line itself, two lower layers of different kinds (6903): [L1] with quoted words, [L2] with\n// a source word (own script, transliteration marks, or a Strong's number; 6926; the Latin range narrowed to transliteration letters, 6936),\n// [L3] with a named reference. A tag after \"no\", \"without\", \"lacks\" or \"not\" never counts. K-G1 (6892): a BROKEN line resting on a\n// witness left unanswered while that side's stated conceded count is 0. K-G3 (6934): a side graded SELF-SUPPORTED while any of its\n// links is graded BROKEN. K-G2: an absent CITATION CHECK line on text from a prompt that asks for it, recorded only. The counter is\n// kb.cjs (git 29caa5c), names prefixed. Lines are chosen the extractor's way: a \"D<n> vs\" collision entry whose first grade is DEFENDER\n// or CHALLENGER LINK BROKEN. No grade is changed; each violation is a review line (6890 AMEND 2).\nconst DRV_REF=/(?:[1-3]\\s)?[A-Z][a-z]+\\.?\\s\\d{1,3}:\\d{1,3}/;\nconst DRV_SRC=/[\\u0590-\\u05FF\\u0100-\\u024F\\u00C2\\u00CA\\u00CE\\u00D4\\u00DB\\u00E2\\u00EA\\u00EE\\u00F4\\u00FB\\u0300-\\u036F\\u0370-\\u03FF\\u1E00-\\u1EFF\\u1F00-\\u1FFF\\u02BE\\u02BF]|\\b[GH]\\d{2,5}\\b/; // BB-6926 option A: own script (Hebrew, Greek), transliteration marks, or a Strong's number; no italic alternative\nconst DRV_QUOTE=/(?:^|[\\s(\\[{])[\"“'‘][^\"”\\n]{4,}?[\"”'’](?=$|[\\s.,;:!?)\\]}])/; // a mark inside a word (Joseph's) never opens or closes a quote (BB-6898 D1)\nconst DRV_NEG=/\\b(?:no|without|lacks?|lacking|not)\\s+(?:\\[L[1-4]\\]\\s*(?:or|and|\\/)\\s*)*$/i;\nfunction drvExhibits(line,needQuote,formC,distinct){\n  const re=/\\[L([1-3])\\](?:\\s*\\/\\s*\\[L[1-3]\\])*/g;let m,n=0;const met=new Set(); // distinct: count layer kinds met, not tags (BB-6899)\n  while((m=re.exec(line))!==null){\n    const before=line.slice(Math.max(0,m.index-30),m.index);\n    if(DRV_NEG.test(before))continue;\n    let rest=line.slice(m.index+m[0].length);\n    const cut=rest.search(/;|\\.\\s|\\s--\\s|\\s—\\s|\\[L[1-4]\\]/);if(cut>=0)rest=rest.slice(0,cut);\n    if(formC){const ts=[...m[0].matchAll(/L([1-3])/g)].map(x=>x[1]);const ok=ts.filter(t=>(t==='1'&&DRV_QUOTE.test(rest))||(t==='2'&&DRV_SRC.test(rest))||(t==='3'&&DRV_REF.test(rest)));if(ok.length){n++;ok.forEach(t=>met.add(t));}continue;}\n    const anchor=DRV_REF.test(rest)||DRV_SRC.test(rest);\n    if(anchor&&(!needQuote||DRV_QUOTE.test(rest)))n++;\n  }\n  return distinct?[...met].sort().map(t=>'L'+t):n;\n}\nconst drvKinds=(line)=>drvExhibits(line,false,true,true);\nconst DRV_WORDS=/\\b(?:unanswered|not answered|unnamed|not named|none named|neither named|unaddressed)\\b/i;\nfunction drvCheck(text,dConc,cConc,dStand,cStand,askedCC){const items=[],marks=[];if(typeof text!=='string')return {items,marks};const cnt={DEFENDER:0,CHALLENGER:0};\n for(const line of text.split('\\n')){const u=line.toUpperCase().replace(/[*_`]+/g,'').trim();\n  const m=u.match(/^(?:[-•]|\\d+[.)])?\\s*D(\\d+)\\b\\s*:?\\s*(?:D\\1\\b\\s*)?(.*)$/);if(!m||!/^VS\\.?\\s/.test(m[2]))continue;\n  const g=m[2].match(/(DEFENDER LINK BROKEN|CHALLENGER LINK BROKEN|UNDERDETERMINED)/);if(!g||g[1]==='UNDERDETERMINED')continue;\n  const side=g[1].split(' ')[0];cnt[side]++;const id=(u.match(/^(?:[-•]|\\d+[.)])?\\s*(D\\d+\\s+VS\\.?\\s+C\\d+)/)||[null,'D'+m[1]])[1].replace(/\\s+VS\\.?\\s+/,' vs ');\n  const k=drvKinds(line);\n  if(k.length<2){items.push({rule:'K-B',side,link:id,kinds:k,line});marks.push('[AUDIT v21: DEBATE RULE VIOLATION -- '+id+' '+g[1]+' exhibits '+k.length+' layer kind'+(k.length===1?'':'s')+(k.length?' ('+k.join(', ')+')':'')+' of the two rule B requires on the line itself. REVIEW THIS ROW.]');}\n  const conc=side==='DEFENDER'?dConc:cConc;\n  if(conc===0&&DRV_WORDS.test(line)){items.push({rule:'K-G1',side,link:id,line});marks.push('[AUDIT v21: DEBATE RULE VIOLATION (K-G1) -- '+id+' '+g[1]+' rests on a witness left unanswered while '+(side==='DEFENDER'?'CONCEDED LINKS':'CHALLENGER CONCEDED LINKS')+' is 0. REVIEW THIS ROW.]');}}\n for(const [side,st,lab] of [['DEFENDER',dStand,'DEFENSE'],['CHALLENGER',cStand,'CHALLENGE']]){\n  if(st==='SELF-SUPPORTED'&&cnt[side]>0){items.push({rule:'K-G3',side,link:null,line:null});marks.push('[AUDIT v21: DEBATE RULE VIOLATION (K-G3) -- '+lab+' STANDING SELF-SUPPORTED while '+cnt[side]+' '+side+' LINK BROKEN line'+(cnt[side]===1?'':'s')+' stand. REVIEW THIS ROW.]');}}\n if(askedCC&&!/^[ \\t]*(?:#+[ \\t]*|[-•][ \\t]*)?CITATION CHECK\\b/im.test(text.replace(/[*_`]+/g,'')))marks.push('[AUDIT v21: CITATION CHECK LINE ABSENT FROM A PROMPT THAT ASKS FOR IT (K-G2); recorded, not counted as a violation.]');\n return {items,marks};}\n\n// BB-6904 (c), portion 4: the cure call. One extra call per violating seat: its own flagged lines, the rule, and the instruction to cure\n// each line by exhibiting two lower layers of different kinds on it, or to answer in writing why it stands. The statement is run through\n// the same K-B counter (drvKinds, git 0b3cbac): a line is CURED only if its restated line passes; anything else, a missing line, a failed\n// or unparsed call, leaves it UNCURED (6945 AMEND 3). No grade, count or outcome is changed here (portion 5, the operator's choice).\nconst CURE_FAMS=['deepseek','openai','gemini','grok','mimo','openrouter']; // Cure Route output order; covers all six (6913 note 2)\nconst CURE_RULE=\"DEBATE RULE VIOLATION. After you answered, the system checked every COLLISION POINTS line you graded DEFENDER LINK BROKEN or CHALLENGER LINK BROKEN. \"\n +\"Each such line must exhibit, on the line itself, at least two lower layers of DIFFERENT kinds, each tagged: [L1] with the KJV words quoted; \"\n +\"[L2] with the Hebrew or Greek word in its own script, with its transliteration marks, or with its Strong's number; [L3] with the cross-reference named. \"\n +\"Two quotations at one layer are one layer. The lines below do not. For each one, either CURE it, by writing that one line again with the same grade and \"\n +\"the two layers exhibited on it, or ANSWER in writing why it stands. Reply with one line per flagged link and nothing else, each line beginning with \"\n +\"its label exactly as given below followed by a colon. Do not change any other line, grade or count. A line that is not cured leaves that ground \"\n +\"uncounted toward BROKEN.\";\nfunction cureAsk(items){return CURE_RULE+'\\n\\nFLAGGED LINES:\\n'+items.map(x=>x.link+': '+String(x.line||'').trim()).join('\\n');}\n// Append the judge's own answer and the cure request to the judge's own request body, per family envelope.\nfunction cureBody(fam,body,answer,ask){const b=JSON.parse(JSON.stringify(body));\n if(fam==='gemini'){b.contents=(b.contents||[]).concat([{role:'model',parts:[{text:answer}]},{role:'user',parts:[{text:ask}]}]);return b;}\n b.messages=(b.messages||[]).concat([{role:'assistant',content:answer},{role:'user',content:ask}]);\n if(b.response_format)delete b.response_format; // a JSON-only reserve (qwen) must be free to answer in lines\n return b;}\n// One reply envelope to text, never throwing: chat form, Gemini form, or a failure named.\nfunction cureText(j){\n if(j&&Array.isArray(j.choices)&&j.choices[0]&&j.choices[0].message&&typeof j.choices[0].message.content==='string')return {ok:true,text:j.choices[0].message.content,finish:j.choices[0].finish_reason||null};\n if(j&&Array.isArray(j.candidates)&&j.candidates[0]&&j.candidates[0].content&&Array.isArray(j.candidates[0].content.parts)){const t=j.candidates[0].content.parts.filter(p=>!p.thought&&typeof p.text==='string').map(p=>p.text).join('');if(t)return {ok:true,text:t,finish:j.candidates[0].finishReason||null};}\n const why=(j&&j.error)?('error: '+String(typeof j.error==='string'?j.error:(j.error.message||JSON.stringify(j.error))).slice(0,160)):('unrecognised reply, keys ['+Object.keys(j||{}).join(',')+']');\n return {ok:false,text:null,why};}\n// Judge each K-B item against the statement. The restated line is the statement line that begins with the item's label.\nfunction cureVerdicts(items,reply){const norm=s=>String(s).replace(/[*_`]+/g,'').replace(/\\s+/g,' ').trim().toUpperCase();\n const lines=reply&&reply.ok?String(reply.text).split('\\n').map(s=>s.trim()).filter(Boolean):[];\n return items.map(x=>{const lab=norm(x.link);\n  if(x.rule!=='K-B')return {...x,status:'UNCURED',why:'cure test for '+x.rule+' awaits the advisor ruling (6945 AMEND 4)',statement:null,kinds:[]};\n  if(!reply||!reply.ok)return {...x,status:'UNCURED',why:'cure call failed: '+(reply?reply.why:'no reply'),statement:null,kinds:[]};\n  const st=lines.find(l=>norm(l).startsWith(lab+':'))||lines.find(l=>norm(l).startsWith(lab));\n  if(!st)return {...x,status:'UNCURED',why:'no statement line for '+x.link,statement:null,kinds:[]};\n  const k=drvKinds(st);return {...x,status:k.length>=2?'CURED':'UNCURED',why:k.length>=2?null:'statement exhibits '+k.length+' layer kind'+(k.length===1?'':'s'),statement:st,kinds:k};});}\nfunction cureReport(seat,v){return v.map(x=>'[AUDIT v21: DEBATE RULE VIOLATION REPORT -- '+(seat?seat+' ':'')+x.link+' ('+x.rule+'): '+x.status\n +(x.kinds&&x.kinds.length?' ('+x.kinds.join(', ')+')':'')+(x.why?'; '+x.why:'')+(x.statement?'. STATEMENT: '+x.statement.slice(0,600):'')+']');}\n\n// One item per cure request, in; one item out, each carrying its own request (by pairing) and the reply read without throwing.\nreturn $input.all().map((it,i)=>{let src=null;try{src=$('Panel Cure Build').itemMatching(i).json.cure;}catch(e){src=null;}\n if(!src){try{src=$('Panel Cure Build').all()[i].json.cure;}catch(e){src=null;}}\n const reply=(it.json&&it.json.cure&&it.json.cure.skip)?{ok:false,text:null,why:it.json.cure.skip}:cureText(it.json);\n return {json:{cure:src||(it.json&&it.json.cure)||null,reply}};});\n"
+   }
+  },
+  {
+   "name": "Panel Cure Check",
+   "type": "n8n-nodes-base.code",
+   "typeVersion": 2,
+   "position": [
+    12472,
+    400
+   ],
+   "parameters": {
+    "jsCode": "// BB-6904 (b), portion 3: DEBATE RULE VIOLATION, rule B on the judge's own BROKEN lines. A line graded DEFENDER LINK BROKEN or\n// CHALLENGER LINK BROKEN must exhibit, on the line itself, two lower layers of different kinds (6903): [L1] with quoted words, [L2] with\n// a source word (own script, transliteration marks, or a Strong's number; 6926; the Latin range narrowed to transliteration letters, 6936),\n// [L3] with a named reference. A tag after \"no\", \"without\", \"lacks\" or \"not\" never counts. K-G1 (6892): a BROKEN line resting on a\n// witness left unanswered while that side's stated conceded count is 0. K-G3 (6934): a side graded SELF-SUPPORTED while any of its\n// links is graded BROKEN. K-G2: an absent CITATION CHECK line on text from a prompt that asks for it, recorded only. The counter is\n// kb.cjs (git 29caa5c), names prefixed. Lines are chosen the extractor's way: a \"D<n> vs\" collision entry whose first grade is DEFENDER\n// or CHALLENGER LINK BROKEN. No grade is changed; each violation is a review line (6890 AMEND 2).\nconst DRV_REF=/(?:[1-3]\\s)?[A-Z][a-z]+\\.?\\s\\d{1,3}:\\d{1,3}/;\nconst DRV_SRC=/[\\u0590-\\u05FF\\u0100-\\u024F\\u00C2\\u00CA\\u00CE\\u00D4\\u00DB\\u00E2\\u00EA\\u00EE\\u00F4\\u00FB\\u0300-\\u036F\\u0370-\\u03FF\\u1E00-\\u1EFF\\u1F00-\\u1FFF\\u02BE\\u02BF]|\\b[GH]\\d{2,5}\\b/; // BB-6926 option A: own script (Hebrew, Greek), transliteration marks, or a Strong's number; no italic alternative\nconst DRV_QUOTE=/(?:^|[\\s(\\[{])[\"“'‘][^\"”\\n]{4,}?[\"”'’](?=$|[\\s.,;:!?)\\]}])/; // a mark inside a word (Joseph's) never opens or closes a quote (BB-6898 D1)\nconst DRV_NEG=/\\b(?:no|without|lacks?|lacking|not)\\s+(?:\\[L[1-4]\\]\\s*(?:or|and|\\/)\\s*)*$/i;\nfunction drvExhibits(line,needQuote,formC,distinct){\n  const re=/\\[L([1-3])\\](?:\\s*\\/\\s*\\[L[1-3]\\])*/g;let m,n=0;const met=new Set(); // distinct: count layer kinds met, not tags (BB-6899)\n  while((m=re.exec(line))!==null){\n    const before=line.slice(Math.max(0,m.index-30),m.index);\n    if(DRV_NEG.test(before))continue;\n    let rest=line.slice(m.index+m[0].length);\n    const cut=rest.search(/;|\\.\\s|\\s--\\s|\\s—\\s|\\[L[1-4]\\]/);if(cut>=0)rest=rest.slice(0,cut);\n    if(formC){const ts=[...m[0].matchAll(/L([1-3])/g)].map(x=>x[1]);const ok=ts.filter(t=>(t==='1'&&DRV_QUOTE.test(rest))||(t==='2'&&DRV_SRC.test(rest))||(t==='3'&&DRV_REF.test(rest)));if(ok.length){n++;ok.forEach(t=>met.add(t));}continue;}\n    const anchor=DRV_REF.test(rest)||DRV_SRC.test(rest);\n    if(anchor&&(!needQuote||DRV_QUOTE.test(rest)))n++;\n  }\n  return distinct?[...met].sort().map(t=>'L'+t):n;\n}\nconst drvKinds=(line)=>drvExhibits(line,false,true,true);\nconst DRV_WORDS=/\\b(?:unanswered|not answered|unnamed|not named|none named|neither named|unaddressed)\\b/i;\nfunction drvCheck(text,dConc,cConc,dStand,cStand,askedCC){const items=[],marks=[];if(typeof text!=='string')return {items,marks};const cnt={DEFENDER:0,CHALLENGER:0};\n for(const line of text.split('\\n')){const u=line.toUpperCase().replace(/[*_`]+/g,'').trim();\n  const m=u.match(/^(?:[-•]|\\d+[.)])?\\s*D(\\d+)\\b\\s*:?\\s*(?:D\\1\\b\\s*)?(.*)$/);if(!m||!/^VS\\.?\\s/.test(m[2]))continue;\n  const g=m[2].match(/(DEFENDER LINK BROKEN|CHALLENGER LINK BROKEN|UNDERDETERMINED)/);if(!g||g[1]==='UNDERDETERMINED')continue;\n  const side=g[1].split(' ')[0];cnt[side]++;const id=(u.match(/^(?:[-•]|\\d+[.)])?\\s*(D\\d+\\s+VS\\.?\\s+C\\d+)/)||[null,'D'+m[1]])[1].replace(/\\s+VS\\.?\\s+/,' vs ');\n  const k=drvKinds(line);\n  if(k.length<2){items.push({rule:'K-B',side,link:id,kinds:k,line});marks.push('[AUDIT v21: DEBATE RULE VIOLATION -- '+id+' '+g[1]+' exhibits '+k.length+' layer kind'+(k.length===1?'':'s')+(k.length?' ('+k.join(', ')+')':'')+' of the two rule B requires on the line itself. REVIEW THIS ROW.]');}\n  const conc=side==='DEFENDER'?dConc:cConc;\n  if(conc===0&&DRV_WORDS.test(line)){items.push({rule:'K-G1',side,link:id,line});marks.push('[AUDIT v21: DEBATE RULE VIOLATION (K-G1) -- '+id+' '+g[1]+' rests on a witness left unanswered while '+(side==='DEFENDER'?'CONCEDED LINKS':'CHALLENGER CONCEDED LINKS')+' is 0. REVIEW THIS ROW.]');}}\n for(const [side,st,lab] of [['DEFENDER',dStand,'DEFENSE'],['CHALLENGER',cStand,'CHALLENGE']]){\n  if(st==='SELF-SUPPORTED'&&cnt[side]>0){items.push({rule:'K-G3',side,link:null,line:null});marks.push('[AUDIT v21: DEBATE RULE VIOLATION (K-G3) -- '+lab+' STANDING SELF-SUPPORTED while '+cnt[side]+' '+side+' LINK BROKEN line'+(cnt[side]===1?'':'s')+' stand. REVIEW THIS ROW.]');}}\n if(askedCC&&!/^[ \\t]*(?:#+[ \\t]*|[-•][ \\t]*)?CITATION CHECK\\b/im.test(text.replace(/[*_`]+/g,'')))marks.push('[AUDIT v21: CITATION CHECK LINE ABSENT FROM A PROMPT THAT ASKS FOR IT (K-G2); recorded, not counted as a violation.]');\n return {items,marks};}\n\n// BB-6904 (c), portion 4: the cure call. One extra call per violating seat: its own flagged lines, the rule, and the instruction to cure\n// each line by exhibiting two lower layers of different kinds on it, or to answer in writing why it stands. The statement is run through\n// the same K-B counter (drvKinds, git 0b3cbac): a line is CURED only if its restated line passes; anything else, a missing line, a failed\n// or unparsed call, leaves it UNCURED (6945 AMEND 3). No grade, count or outcome is changed here (portion 5, the operator's choice).\nconst CURE_FAMS=['deepseek','openai','gemini','grok','mimo','openrouter']; // Cure Route output order; covers all six (6913 note 2)\nconst CURE_RULE=\"DEBATE RULE VIOLATION. After you answered, the system checked every COLLISION POINTS line you graded DEFENDER LINK BROKEN or CHALLENGER LINK BROKEN. \"\n +\"Each such line must exhibit, on the line itself, at least two lower layers of DIFFERENT kinds, each tagged: [L1] with the KJV words quoted; \"\n +\"[L2] with the Hebrew or Greek word in its own script, with its transliteration marks, or with its Strong's number; [L3] with the cross-reference named. \"\n +\"Two quotations at one layer are one layer. The lines below do not. For each one, either CURE it, by writing that one line again with the same grade and \"\n +\"the two layers exhibited on it, or ANSWER in writing why it stands. Reply with one line per flagged link and nothing else, each line beginning with \"\n +\"its label exactly as given below followed by a colon. Do not change any other line, grade or count. A line that is not cured leaves that ground \"\n +\"uncounted toward BROKEN.\";\nfunction cureAsk(items){return CURE_RULE+'\\n\\nFLAGGED LINES:\\n'+items.map(x=>x.link+': '+String(x.line||'').trim()).join('\\n');}\n// Append the judge's own answer and the cure request to the judge's own request body, per family envelope.\nfunction cureBody(fam,body,answer,ask){const b=JSON.parse(JSON.stringify(body));\n if(fam==='gemini'){b.contents=(b.contents||[]).concat([{role:'model',parts:[{text:answer}]},{role:'user',parts:[{text:ask}]}]);return b;}\n b.messages=(b.messages||[]).concat([{role:'assistant',content:answer},{role:'user',content:ask}]);\n if(b.response_format)delete b.response_format; // a JSON-only reserve (qwen) must be free to answer in lines\n return b;}\n// One reply envelope to text, never throwing: chat form, Gemini form, or a failure named.\nfunction cureText(j){\n if(j&&Array.isArray(j.choices)&&j.choices[0]&&j.choices[0].message&&typeof j.choices[0].message.content==='string')return {ok:true,text:j.choices[0].message.content,finish:j.choices[0].finish_reason||null};\n if(j&&Array.isArray(j.candidates)&&j.candidates[0]&&j.candidates[0].content&&Array.isArray(j.candidates[0].content.parts)){const t=j.candidates[0].content.parts.filter(p=>!p.thought&&typeof p.text==='string').map(p=>p.text).join('');if(t)return {ok:true,text:t,finish:j.candidates[0].finishReason||null};}\n const why=(j&&j.error)?('error: '+String(typeof j.error==='string'?j.error:(j.error.message||JSON.stringify(j.error))).slice(0,160)):('unrecognised reply, keys ['+Object.keys(j||{}).join(',')+']');\n return {ok:false,text:null,why};}\n// Judge each K-B item against the statement. The restated line is the statement line that begins with the item's label.\nfunction cureVerdicts(items,reply){const norm=s=>String(s).replace(/[*_`]+/g,'').replace(/\\s+/g,' ').trim().toUpperCase();\n const lines=reply&&reply.ok?String(reply.text).split('\\n').map(s=>s.trim()).filter(Boolean):[];\n return items.map(x=>{const lab=norm(x.link);\n  if(x.rule!=='K-B')return {...x,status:'UNCURED',why:'cure test for '+x.rule+' awaits the advisor ruling (6945 AMEND 4)',statement:null,kinds:[]};\n  if(!reply||!reply.ok)return {...x,status:'UNCURED',why:'cure call failed: '+(reply?reply.why:'no reply'),statement:null,kinds:[]};\n  const st=lines.find(l=>norm(l).startsWith(lab+':'))||lines.find(l=>norm(l).startsWith(lab));\n  if(!st)return {...x,status:'UNCURED',why:'no statement line for '+x.link,statement:null,kinds:[]};\n  const k=drvKinds(st);return {...x,status:k.length>=2?'CURED':'UNCURED',why:k.length>=2?null:'statement exhibits '+k.length+' layer kind'+(k.length===1?'':'s'),statement:st,kinds:k};});}\nfunction cureReport(seat,v){return v.map(x=>'[AUDIT v21: DEBATE RULE VIOLATION REPORT -- '+(seat?seat+' ':'')+x.link+' ('+x.rule+'): '+x.status\n +(x.kinds&&x.kinds.length?' ('+x.kinds.join(', ')+')':'')+(x.why?'; '+x.why:'')+(x.statement?'. STATEMENT: '+x.statement.slice(0,600):'')+']');}\n\nconst PP=$('Panel Payloads').first().json;let rs=[];try{if($('Panel Cure Normalize').isExecuted)rs=$('Panel Cure Normalize').all().map(x=>x.json);}catch(e){rs=[];}\nconst bodies=PP.bodies.slice();const summary=(PP.summary||[]).map(s=>({...s}));\nsummary.forEach((s,i)=>{const all=s.drv||[];s.cure=[];if(!all.length)return;\n const r=rs.find(x=>x.cure&&x.cure.idx===i)||null;const kb=all.filter(x=>x.rule==='K-B'),ot=all.filter(x=>x.rule!=='K-B');\n const v=(kb.length?cureVerdicts(kb,r?r.reply:{ok:false,why:'no cure call was made for this seat'}):[]).concat(cureVerdicts(ot,null));\n s.cure=v.map(x=>({rule:x.rule,link:x.link,status:x.status,kinds:x.kinds,why:x.why}));\n const b=JSON.parse(bodies[i]);b.payload.verdict_raw=b.payload.verdict_raw+'\\n'+cureReport(s.seat,v).join('\\n');bodies[i]=JSON.stringify(b);});\nreturn [{json:{...PP,bodies,summary}}];\n"
+   }
+  }
+ ],
+ "connections_remove": [
+  {
+   "from": "Extract Independent Verdict",
+   "out": 0,
+   "to": "Build Diagnostic Prompt"
+  },
+  {
+   "from": "Panel Payloads",
+   "out": 0,
+   "to": "Dry?"
+  }
+ ],
+ "connections_add": [
+  {
+   "from": "Extract Independent Verdict",
+   "out": 0,
+   "to": "Cure Needed?"
+  },
+  {
+   "from": "Cure Needed?",
+   "out": 0,
+   "to": "Cure Build"
+  },
+  {
+   "from": "Cure Needed?",
+   "out": 1,
+   "to": "Cure Check"
+  },
+  {
+   "from": "Cure Build",
+   "out": 0,
+   "to": "Cure Route"
+  },
+  {
+   "from": "Cure Route",
+   "out": 0,
+   "to": "Cure Call deepseek"
+  },
+  {
+   "from": "Cure Route",
+   "out": 1,
+   "to": "Cure Call openai"
+  },
+  {
+   "from": "Cure Route",
+   "out": 2,
+   "to": "Cure Call gemini"
+  },
+  {
+   "from": "Cure Route",
+   "out": 3,
+   "to": "Cure Call grok"
+  },
+  {
+   "from": "Cure Route",
+   "out": 4,
+   "to": "Cure Call mimo"
+  },
+  {
+   "from": "Cure Route",
+   "out": 5,
+   "to": "Cure Call openrouter"
+  },
+  {
+   "from": "Cure Route",
+   "out": 6,
+   "to": "Cure Normalize"
+  },
+  {
+   "from": "Cure Call deepseek",
+   "out": 0,
+   "to": "Cure Normalize"
+  },
+  {
+   "from": "Cure Call openai",
+   "out": 0,
+   "to": "Cure Normalize"
+  },
+  {
+   "from": "Cure Call gemini",
+   "out": 0,
+   "to": "Cure Normalize"
+  },
+  {
+   "from": "Cure Call grok",
+   "out": 0,
+   "to": "Cure Normalize"
+  },
+  {
+   "from": "Cure Call mimo",
+   "out": 0,
+   "to": "Cure Normalize"
+  },
+  {
+   "from": "Cure Call openrouter",
+   "out": 0,
+   "to": "Cure Normalize"
+  },
+  {
+   "from": "Cure Normalize",
+   "out": 0,
+   "to": "Cure Check"
+  },
+  {
+   "from": "Cure Check",
+   "out": 0,
+   "to": "Build Diagnostic Prompt"
+  },
+  {
+   "from": "Panel Payloads",
+   "out": 0,
+   "to": "Panel Cure Needed?"
+  },
+  {
+   "from": "Panel Cure Needed?",
+   "out": 0,
+   "to": "Panel Cure Build"
+  },
+  {
+   "from": "Panel Cure Needed?",
+   "out": 1,
+   "to": "Panel Cure Check"
+  },
+  {
+   "from": "Panel Cure Build",
+   "out": 0,
+   "to": "Panel Cure Route"
+  },
+  {
+   "from": "Panel Cure Route",
+   "out": 0,
+   "to": "Panel Cure Call deepseek"
+  },
+  {
+   "from": "Panel Cure Route",
+   "out": 1,
+   "to": "Panel Cure Call openai"
+  },
+  {
+   "from": "Panel Cure Route",
+   "out": 2,
+   "to": "Panel Cure Call gemini"
+  },
+  {
+   "from": "Panel Cure Route",
+   "out": 3,
+   "to": "Panel Cure Call grok"
+  },
+  {
+   "from": "Panel Cure Route",
+   "out": 4,
+   "to": "Panel Cure Call mimo"
+  },
+  {
+   "from": "Panel Cure Route",
+   "out": 5,
+   "to": "Panel Cure Call openrouter"
+  },
+  {
+   "from": "Panel Cure Route",
+   "out": 6,
+   "to": "Panel Cure Normalize"
+  },
+  {
+   "from": "Panel Cure Call deepseek",
+   "out": 0,
+   "to": "Panel Cure Normalize"
+  },
+  {
+   "from": "Panel Cure Call openai",
+   "out": 0,
+   "to": "Panel Cure Normalize"
+  },
+  {
+   "from": "Panel Cure Call gemini",
+   "out": 0,
+   "to": "Panel Cure Normalize"
+  },
+  {
+   "from": "Panel Cure Call grok",
+   "out": 0,
+   "to": "Panel Cure Normalize"
+  },
+  {
+   "from": "Panel Cure Call mimo",
+   "out": 0,
+   "to": "Panel Cure Normalize"
+  },
+  {
+   "from": "Panel Cure Call openrouter",
+   "out": 0,
+   "to": "Panel Cure Normalize"
+  },
+  {
+   "from": "Panel Cure Normalize",
+   "out": 0,
+   "to": "Panel Cure Check"
+  },
+  {
+   "from": "Panel Cure Check",
+   "out": 0,
+   "to": "Dry?"
+  }
+ ],
+ "edits": [
+  {
+   "node": "Build Diagnostic Prompt",
+   "old": "$('Extract Independent Verdict')",
+   "new": "$('Cure Check')",
+   "count": 1,
+   "parameters": {
+    "jsCode": "const d=$('Cure Check').first().json;const csf=$('Init with Guards').first().json.fref;const mc=$('Resolve Seats').first().json.deepseek;const vt=d.verdict_tag;const roles=$('Init with Guards').first().json.posline+'\\n';const up=vt==='BROKEN'?'TOPIC: '+d.topic+'\\n'+roles+'INDEPENDENT VERDICT: BROKEN\\n'+d.independent_verdict_raw+'\\n\\nSYNTHESIS:\\n'+d.synthesis+'\\n\\nTRANSCRIPT: [CR1]\\n'+d.cr1+'\\n[GR1]\\n'+d.gr1+'\\n[CR2]\\n'+d.cr2+'\\n[GR2]\\n'+d.gr2+'\\n[CR3 -- LINK ROUND]\\n'+(d.cr3||'(missing)')+'\\n[GR3 -- LINK ROUND]\\n'+(d.dr3||'(missing)')+'\\n\\nDIAGNOSTIC: 1.LAYER BREAK. 2.STRONGEST ARGUMENT. 3.TEXT or ARTICULATION? 4.DRIFT GUARD CANDIDATE. 5.TENSION CANDIDATE. 6.NEXT ACTION. Tag every claim.':'TOPIC: '+d.topic+'\\n'+roles+'INDEPENDENT VERDICT: '+vt+'\\n'+d.independent_verdict_raw+'\\n\\nSYNTHESIS:\\n'+d.synthesis+'\\n\\nBRIEF CONFIRMATION: 1.Accurate? 2.Tensions? 3.New? One paragraph.';const r1u=$('D1 Extract').first().json.usage||{};const r2u=$('D2 Extract').first().json.usage||{};const suRaw=$('Synthesis Normalizer').first().json?.usage||{};const su={input_tokens:suRaw.prompt_tokens||0,output_tokens:suRaw.completion_tokens||0};\n/* ODV1 step2 (BB-5435/BB-5462/BB-5465): single-judge call routed off hardcoded deepseek via family triad; deepseek branch byte-exact */\nconst __S2=$('Init Seats').first().json;const __RT2=' run_token='+__S2.run_token;\nconst __JFAM2={deepseek:'deepseek',gemini:'gemini',grok:'grok',chatgpt:'openai',mimo:'mimo',glm:'openrouter',qwen:'openrouter'};\nconst __sj2=__S2.single_judge;const __fam2=__JFAM2[__sj2];\nif(!__fam2)throw new Error('ORACLE_DEBATE_V1 Build Diagnostic Prompt refused: single_judge \"'+__sj2+'\" has no family map.'+__RT2);\nconst __M2={};$('Fetch Models').all().forEach(i=>{const x=i.json;if(x&&x.seat)__M2[x.seat]=x;});\nconst __row2=__M2[__sj2];\nif(!__row2||!__row2.api_model)throw new Error('ORACLE_DEBATE_V1 Build Diagnostic Prompt refused: single_judge \"'+__sj2+'\" has no ACTIVE model_config row with api_model.'+__RT2);\nconst __model2=__row2.api_model;const __base2=Math.max(Number(__row2.max_tokens)||0,6000);\nconst __JIDX2={deepseek:0,openai:1,gemini:2,grok:3,mimo:4,openrouter:5};const __jidx2=__JIDX2[__fam2];\nconst __out={...d,verdict_tag:vt,_r1u:r1u,_r2u:r2u,_su:su,requestBody:{model:mc.api_model,max_tokens:Math.max(mc.max_tokens||0,6000),messages:[{role:'system',content:csf},{role:'user',content:up}]}};\nconst __bf='requestBody';const __b0=__out[__bf];const __sys2=__b0.messages[0].content;const __usr2=__b0.messages[1].content;const __m2=[{role:'system',content:__sys2},{role:'user',content:__usr2}];\nlet __nb;\nif(__fam2==='gemini')__nb={systemInstruction:{parts:[{text:__sys2}]},contents:[{role:'user',parts:[{text:__usr2}]}],generationConfig:{maxOutputTokens:__base2+8192,temperature:0}};\nelse if(__fam2==='grok')__nb={model:__model2,max_tokens:__base2,temperature:0,messages:__m2};\nelse if(__fam2==='openai')__nb={model:__model2,max_completion_tokens:Math.max(__base2*2,8000),messages:__m2};\nelse if(__fam2==='openrouter')__nb={model:__model2,max_tokens:__base2,reasoning:{effort:'max'},messages:__m2};\nelse __nb={model:__model2,max_tokens:__base2,messages:__m2};\n__out[__bf]=__nb;__out.jidx=__jidx2;__out.judge_model=__model2;\nreturn [{json:__out}];\n"
+   }
+  },
+  {
+   "node": "Write Judgment 1",
+   "old": "$('Panel Payloads')",
+   "new": "$('Panel Cure Check')",
+   "count": 1,
+   "parameters": {
+    "method": "POST",
+    "url": "https://bhffmkginddovmdcpnty.supabase.co/rest/v1/rpc/record_debate_judgment",
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpHeaderAuth",
+    "sendBody": true,
+    "specifyBody": "json",
+    "jsonBody": "={{ $('Panel Cure Check').first().json.bodies[0] }}",
+    "options": {}
+   }
+  },
+  {
+   "node": "Write Judgment 2",
+   "old": "$('Panel Payloads')",
+   "new": "$('Panel Cure Check')",
+   "count": 1,
+   "parameters": {
+    "method": "POST",
+    "url": "https://bhffmkginddovmdcpnty.supabase.co/rest/v1/rpc/record_debate_judgment",
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpHeaderAuth",
+    "sendBody": true,
+    "specifyBody": "json",
+    "jsonBody": "={{ $('Panel Cure Check').first().json.bodies[1] }}",
+    "options": {}
+   }
+  },
+  {
+   "node": "Write Judgment 3",
+   "old": "$('Panel Payloads')",
+   "new": "$('Panel Cure Check')",
+   "count": 1,
+   "parameters": {
+    "method": "POST",
+    "url": "https://bhffmkginddovmdcpnty.supabase.co/rest/v1/rpc/record_debate_judgment",
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpHeaderAuth",
+    "sendBody": true,
+    "specifyBody": "json",
+    "jsonBody": "={{ $('Panel Cure Check').first().json.bodies[2] }}",
+    "options": {}
+   }
+  },
+  {
+   "node": "Derive Outcome",
+   "old": "$('Panel Payloads')",
+   "new": "$('Panel Cure Check')",
+   "count": 1,
+   "parameters": {
+    "method": "POST",
+    "url": "https://bhffmkginddovmdcpnty.supabase.co/rest/v1/rpc/derive_debate_outcome",
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpHeaderAuth",
+    "sendBody": true,
+    "specifyBody": "json",
+    "jsonBody": "={{ JSON.stringify({ p_debate_id: $('Panel Cure Check').first().json.debate_id }) }}",
+    "options": {}
+   }
+  },
+  {
+   "node": "Panel Done",
+   "old": "$('Panel Payloads')",
+   "new": "$('Panel Cure Check')",
+   "count": 1,
+   "parameters": {
+    "jsCode": "const TOK=$('Init Seats').first().json.run_token;const RT=' run_token='+TOK;\n// From the runner KXoI9 I8, plus the derive result. A failure here leaves the saved row ungraded; regrade path: the\n// panel runner KXoI9Jz6R4qTJfIK pinned to this debate_id (stays disarmed until ruled), or derive_debate_outcome again.\nconst P=$('Panel Cure Check').first().json;const S=$('Init Seats').first().json;const out=[];\n['Write Judgment 1','Write Judgment 2','Write Judgment 3'].forEach((n,i)=>{const it=$(n).all();if(!it||it.length!==1)throw new Error('FAIL-CLOSED: '+n+' returned '+(it?it.length:0)+' items.'+RT);const r=it[0].json;\n if(!r||r.recorded!==true)throw new Error('FAIL-CLOSED: '+n+' recorded is not true: '+JSON.stringify(r).slice(0,300)+RT);\n if(r.operation!=='inserted')throw new Error('FAIL-CLOSED: '+n+' operation is \"'+r.operation+'\", not \"inserted\".'+RT);\n if(r.truncated!==false)throw new Error('FAIL-CLOSED: '+n+' truncated is '+JSON.stringify(r.truncated)+'; the write guard quarantined it.'+RT);\n out.push({seat:P.summary[i].seat,id:r.id});});\n// PANEL FALLBACK (BB-5693): the substitution record must have been accepted before the judgments were written.\nlet RSB=null;try{RSB=$('Record Substitution').first().json;}catch(e){RSB=null;}\nif(!RSB||RSB.ok!==true)throw new Error('FAIL-CLOSED: Record Substitution did not return ok: '+JSON.stringify(RSB).slice(0,300)+RT);\nif(P.substitution&&RSB.written!==true)throw new Error('FAIL-CLOSED: a substitution was made but Record Substitution did not write it.'+RT);\nconst d=$input.first().json||{};\nif(d.written!==true)throw new Error('ORACLE_DEBATE_V1: derive_debate_outcome did not write: '+String(d.reason||JSON.stringify(d)).slice(0,300)+RT);\nconst jb=(d.judged_by||[]).slice().sort().join(',');const pe=P.panel_effective.slice().sort().join(',');\nif(jb!==pe)throw new Error('ORACLE_DEBATE_V1: judged_by ['+jb+'] differs from panel_expected ['+pe+'].'+RT);\n$execution.customData.set('outcome',String(d.outcome));\nreturn [{json:{run_token:TOK,debate_id:P.debate_id,judgments:out,outcome:d.outcome,panel_verdict:d.panel_verdict,panel_split:d.panel_split,judged_by:d.judged_by,panel_expected:P.panel_effective,substitution:P.substitution}}];\n"
+   }
+  },
+  {
+   "node": "Replay Rows",
+   "old": "$('Panel Payloads')",
+   "new": "$('Panel Cure Check')",
+   "count": 1,
+   "parameters": {
+    "jsCode": "// DRY REPLAY (operator ruling, Worker_A3 thread, 2026-10-10): the three judgments of a dry regrade go to debate_replay_judgments only.\nconst S=$('Init Seats').first().json;const P=$('Panel Cure Check').first().json;const RT=' run_token='+S.run_token;\nif(S.dry!==true)throw new Error('FAIL-CLOSED: Replay Rows reached on a run that is not a dry regrade.'+RT);\nconst rows=P.bodies.map(b=>{const p=JSON.parse(b).payload;const raw=String(p.verdict_raw||'');\n const m=raw.match(/RESULT:\\s*(DEFENDER WINS|CHALLENGER WINS|UNDERDETERMINED)/);const x=raw.match(/EXCLUSIVITY:\\s*D[^\\n\\\\]*/);\n return {...p,run_token:S.run_token,rulebook:S.rulebook,exec_id:String($execution.id),result_line:m?m[1]:null,exclusivity_line:x?x[0].slice(0,300):null};});\nif(rows.length!==3)throw new Error('FAIL-CLOSED: Replay Rows built '+rows.length+' rows, expected 3.'+RT);\nreturn [{json:{body:JSON.stringify({p_rows:rows})}}];\n"
+   }
+  },
+  {
+   "node": "Record Substitution",
+   "old": "$('Panel Payloads')",
+   "new": "$('Panel Cure Check')",
+   "count": 2,
+   "parameters": {
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpHeaderAuth",
+    "jsonBody": "={{ JSON.stringify({ p_debate_id: $('Panel Cure Check').first().json.debate_id, p_substitution: $('Panel Cure Check').first().json.substitution }) }}",
+    "method": "POST",
+    "options": {},
+    "sendBody": true,
+    "specifyBody": "json",
+    "url": "https://bhffmkginddovmdcpnty.supabase.co/rest/v1/rpc/odv1_record_panel_substitution"
+   }
+  }
+ ]
+}
