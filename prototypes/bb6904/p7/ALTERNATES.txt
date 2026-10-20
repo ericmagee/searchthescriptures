@@ -1,0 +1,71 @@
+BB-6904 (g), step 7: the alternate-judge design. TEXT ONLY. Nothing here is built; whether alternates join this publish is the
+operator's question 10 (6965). Every claim about live code names the node or function it was read from (db281705; SELECT only).
+
+1. WHEN AN ALTERNATE IS CALLED
+- A panel seat is not counted under option 2 (6965; 5B): drv_uncured > 0 after the cure path, that is, at least one K-B, K-G1 or
+  K-G3 item of that seat not CURED. Nothing else calls an alternate: an unreadable or truncated seat keeps today's reserve path
+  (Panel Check, Reserve Build, odv1_record_panel_substitution), which is separate and unchanged.
+- One alternate per removed seat per debate (6904 g). Up to three in a debate (every seat removed).
+- The single judge is outside the panel and sets no outcome; it gets no alternate.
+
+2. WHO SITS
+- Pool, in order (6975): Haiku 5.5, then MiniMax M3.1 Flash, both through OpenRouter (paid route). Exact api_model ids: NOT
+  CONFIRMED. No model_config row holds either today (read from model_config this session, SELECT only: chatgpt, claude_synthesis, deepseek,
+  deepseek_debate, gemini, glm, grok, kimi, mimo, qwen). Each needs a model_config row (seat, provider openrouter, api_model,
+  max_tokens), written only on the operator's word, after one test call.
+- Guards (6965): G1 never a model seated as a debater in that debate; G2 never the model of the seat it replaces.
+- Added by me, for the advisor to rule: G3 never a model already counted on that panel, and the alternates of one debate are
+  distinct, so no model holds two votes.
+- OPEN, for the operator: Init Seats states "Claude never judges" (judge order BB-4607), and claude_synthesis (claude-sonnet-5-5)
+  is also the debate challenger when the claude engine is seated. Haiku 5.5 is first in the pool. Two questions:
+  (a) does 6965's list lift "Claude never judges" for alternates? (b) is G1 by model or by maker: may Haiku 5.5 judge a debate
+  that Sonnet 5.5 argues?
+- If no pool model passes the guards, the seat stays not counted (today's option 2 result).
+
+3. WHAT THE ALTERNATE READS (a fresh read, without the removed ruling)
+- The same rulebook and transcript the removed seat was given: its own request's system and user text, read exactly as Reserve
+  Build reads a failed slot's call today (b0.systemInstruction or b0.messages[0..1]). Not the removed seat's answer, not its
+  report lines, not its cure exchange, not the other seats' rulings.
+- The body follows the OpenRouter family shape Reserve Build uses (model, max_tokens, reasoning effort, messages); the effort
+  for each pool model is settled in qualification (section 7), as glm's and qwen's were (BB-5693 rev 6).
+
+4. HOW IT IS ACCEPTED (mechanical)
+- The alternate's answer goes through the same code as a panel seat: Panel Payloads' verdict reader and closed-set checks, then
+  drvCheck (K-B, K-G1, K-G3), then the same cure path with its one cure call in the fixed form (6952). It is counted only if it is
+  clean and its drv_uncured is 0, exactly as any seat (5B). A failed call, an unreadable answer or an uncured item leaves the
+  seat not counted. No second alternate.
+
+5. THE REMOVED RULING IS KEPT AND MARKED
+- debate_judgments holds one row per seat in panel_expected; derive_debate_outcome refuses an undispatched seat (FENCE 4). So the
+  removed ruling cannot stay there beside its alternate. Proposed: a new debate_results column drv_removed jsonb, an array of
+  {seat, api_model, verdict_tag, standings, drv_uncured, verdict_raw with its report lines, replaced_by, at}, written once before
+  any judgment row, with panel_expected rewritten to name the alternate seat (as odv1_record_panel_substitution does today for a
+  reserve: before any judgment row, one call, every refusal raises). A new function, not that one: that one allows one
+  substitution per run and only the seven named engines.
+- The markdown (step 6's section) gains one line per removed seat: "<seat> was not counted (uncured: ...); <alternate> sat".
+- The alternate's row carries its own drv_uncured and report lines like any seat.
+
+6. REPEAT REMOVALS ARE REPORTED
+- A read-only query (or view) over drv_removed: removals per api_model over its last N panel seats, with the rules that removed it.
+  Reported in each run's markdown for the seats on that panel, and on demand. No automatic action: what a repeat count triggers
+  (benching a model, a review) is the operator's choice.
+
+7. QUALIFICATION BEFORE ANY LIVE USE (6975)
+- Each pool model is run as a dry regrade judge on 27191, 27088 and 27259 (replay rows only; record_replay_judgments; no outcome
+  written). Measured per run: finished within the 900 s timeout; finish_reason; verdict and standings in the closed sets;
+  K-B, K-G1, K-G3 items; the cure call's result; seconds and tokens.
+- Proposed bar, for the advisor to rule: 3 of 3 readable and within the timeout. Violation and cure rates are reported, not
+  gated, since they are what alternates exist to absorb.
+
+8. WHERE IT WOULD SIT IN THE FLOW (for the later build; not now)
+- After Panel Cure Check and before Dry?: Alternate Needed? (any seat drv_uncured > 0 and a pool model passes the guards) ->
+  Alternate Build -> Alternate Route -> Alternate Call (OpenRouter) -> Alternate Payloads (the panel reader and drvCheck) ->
+  the cure path again for the alternates -> Alternate Merge (bodies and summary with the alternate in the removed seat's place;
+  the removed ruling into drv_removed). The named reads of Panel Cure Check (Write Judgment 1-3, Derive Outcome, Panel Done,
+  Replay Rows, Record Substitution) move to Alternate Merge, as portion 4 moved them.
+- Live path: the new record function runs before Write Judgment, beside Record Substitution. Dry path: Replay Rows records the
+  alternate as the seat's replay row; drv_removed is not written on a dry run.
+
+9. COST (from step 6's derived figures; ESTIMATE)
+- Per alternate: one judge-sized call (about 307 s, derived from whole dry regrades) and at most one cure call. At most three
+  alternates a debate: about 30 min added at most, 90 min at the 900 s timeout. Tokens about the size of one panel seat each.
