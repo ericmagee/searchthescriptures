@@ -27,8 +27,10 @@ def codenode(name,src,pos):save(name,src);return {'name':name,'type':'n8n-nodes-
 def callnode(name,body,pos):
   j=copy.deepcopy(N['Panel Reserve openrouter']);p=j['parameters'];p['jsonBody']=body
   return {'name':name,'type':j['type'],'typeVersion':j['typeVersion'],'position':pos,'parameters':p,'credentials':j.get('credentials'),'onError':'continueRegularOutput','retryOnFail':False}
-NORM=[n for n in ops4['nodes_add'] if n['name']=='Panel Cure Normalize'][0]['parameters']['jsCode']
-NORM=NORM.replace("$('Panel Cure Build')","$('Alternate Cure Build')");assert NORM.count("$('Alternate Cure Build')")==2
+# The Normalize code of a panel cure slot (BB-6987), pointed at Alternate Cure Build. The alternates all run on one OpenRouter call
+# node, so its items reach Alternate Cure Normalize in one run; no fan-out join.
+NORM=[n for n in ops4['nodes_add'] if n['name']=='Panel Cure Normalize 1'][0]['parameters']['jsCode']
+NORM=NORM.replace("$('Panel Cure Build 1')","$('Alternate Cure Build')");assert NORM.count("$('Alternate Cure Build')")==2
 nodes=[ifnode('Alternate Needed?',ALT_NEED,[x0-900,y0+700]),
  codenode('Alternate Build',lib_code(ALT_BUILD),[x0-700,y0+700]),
  ifnode('Alternate Calls?',ALT_CALLS,[x0-500,y0+700]),
@@ -70,7 +72,7 @@ FM_ADD=("// ALTERNATES (BB-6904 g, step 7): a seat not counted for an uncured vi
  "if(DRM.length){t += '## Alternate judges\\n\\n';DRM.forEach(x=>{t += '- ' + nm(x.seat) + ' was not counted (' + (x.drv_uncured||0) + ' debate rule violation(s) not cured); ' + String(x.replaced_by||'') + ' (' + String(x.replaced_by_model||'') + ') sat in its place.\\n';});t += '\\n';}\n")
 fm2=once(fm,FM_ANCHOR,FM_ADD+FM_ANCHOR,'Format Markdown');save('Format Markdown',fm2)
 edits.append({'node':'Format Markdown','parameters':{**N['Format Markdown']['parameters'],'jsCode':fm2}})
-json.dump({'base':w['versionId'],'on_top_of':['p3 0b3cbac','p4 9106eda','p6 2cc49d8','p5b 686de7b'],'nodes_add':nodes,'connections_remove':conn_remove,'connections_add':conn_add,'edits':edits},open(os.path.join(OUT,'ops7.json'),'w'),indent=1,ensure_ascii=False)
+json.dump({'base':w['versionId'],'on_top_of':['p3 0b3cbac','p4 serial slots (BB-6987)','p6 2cc49d8','p5b'],'nodes_add':nodes,'connections_remove':conn_remove,'connections_add':conn_add,'edits':edits},open(os.path.join(OUT,'ops7.json'),'w'),indent=1,ensure_ascii=False)
 # 6. Migration and undo.
 mig=open(os.path.join(os.path.dirname(os.path.abspath(__file__)),'migration7.sql')).read()
 print('nodes added',len(nodes),'| connections -',len(conn_remove),'+',len(conn_add),'| named-read edits',[(e['node'],e.get('count')) for e in edits if e.get('count')])

@@ -22,21 +22,36 @@ def callnode(name,fam,pos):
     'onError':'continueRegularOutput','retryOnFail':False}
  return n
 nodes=[];x0,y0=N['Extract Independent Verdict']['position'];px,py=N['Panel Payloads']['position']
-for pre,base,(x,y),bld,nrm,chk,need in [('',  'S',(x0,y0+400),SINGLE_BUILD,'Cure Normalize',SINGLE_CHECK,"={{ ($json.debate_rule_violations||[]).length>0 }}"),
-                                        ('Panel ','P',(px,py+400),PANEL_BUILD,'Panel Cure Normalize',PANEL_CHECK,"={{ ($json.summary||[]).some(s=>(s.drv||[]).length>0) }}")]:
- nodes.append(ifnode(pre+'Cure Needed?',need,[x,y]))
- nodes.append(codenode(pre+'Cure Build',code(bld),[x+200,y]))
- nodes.append(routenode(pre+'Cure Route',[x+400,y]))
- for i,f in enumerate(FAMS):nodes.append(callnode(pre+'Cure Call '+f,f,[x+600,y-250+100*i]))
- nodes.append(codenode(nrm,code(NORMALIZE.replace('__BUILD__',pre+'Cure Build')),[x+800,y]))
- nodes.append(codenode(pre+'Cure Check',code(chk),[x+1000,y]))
+# Single judge: one item, so one branch fires at the route's join.
+x,y=x0,y0+400
+nodes.append(ifnode('Cure Needed?',"={{ ($json.debate_rule_violations||[]).length>0 }}",[x,y]))
+nodes.append(codenode('Cure Build',code(SINGLE_BUILD),[x+200,y]))
+nodes.append(routenode('Cure Route',[x+400,y]))
+for i,f in enumerate(FAMS):nodes.append(callnode('Cure Call '+f,f,[x+600,y-250+100*i]))
+nodes.append(codenode('Cure Normalize',code(NORMALIZE.replace('__BUILD__','Cure Build')),[x+800,y]))
+nodes.append(codenode('Cure Check',code(SINGLE_CHECK),[x+1000,y]))
+# Panel: three serial slots (ruled BB-6987), one item each, chained as the judges are; Panel Cure Check once, after slot 3.
+x,y=px,py+400
+nodes.append(ifnode('Panel Cure Needed?',"={{ ($json.summary||[]).some(s=>(s.drv||[]).length>0) }}",[x,y]))
+for k in (1,2,3):
+ X=x+200+(k-1)*800
+ nodes.append(codenode('Panel Cure Build %d'%k,code(PANEL_BUILD.replace('__I__',str(k-1))),[X,y]))
+ nodes.append(routenode('Panel Cure Route %d'%k,[X+200,y]))
+ for i,f in enumerate(FAMS):nodes.append(callnode('Panel Cure Call %d %s'%(k,f),f,[X+400,y-250+100*i]))
+ nodes.append(codenode('Panel Cure Normalize %d'%k,code(NORMALIZE.replace('__BUILD__','Panel Cure Build %d'%k)),[X+600,y]))
+nodes.append(codenode('Panel Cure Check',code(PANEL_CHECK),[x+2600,y]))
 def edge(a,b,out=0):return {'from':a,'out':out,'to':b}
 conn_remove=[edge('Extract Independent Verdict','Build Diagnostic Prompt'),edge('Panel Payloads','Dry?')]
 conn_add=[]
-for pre,src,dst in [('','Extract Independent Verdict','Build Diagnostic Prompt'),('Panel ','Panel Payloads','Dry?')]:
- conn_add+= [edge(src,pre+'Cure Needed?'),edge(pre+'Cure Needed?',pre+'Cure Build',0),edge(pre+'Cure Needed?',pre+'Cure Check',1),edge(pre+'Cure Build',pre+'Cure Route')]
- conn_add+= [edge(pre+'Cure Route',pre+'Cure Call '+f,i) for i,f in enumerate(FAMS)]+[edge(pre+'Cure Route',pre+'Cure Normalize',6)]
- conn_add+= [edge(pre+'Cure Call '+f,pre+'Cure Normalize') for f in FAMS]+[edge(pre+'Cure Normalize',pre+'Cure Check'),edge(pre+'Cure Check',dst)]
+conn_add+= [edge('Extract Independent Verdict','Cure Needed?'),edge('Cure Needed?','Cure Build',0),edge('Cure Needed?','Cure Check',1),edge('Cure Build','Cure Route')]
+conn_add+= [edge('Cure Route','Cure Call '+f,i) for i,f in enumerate(FAMS)]+[edge('Cure Route','Cure Normalize',6)]
+conn_add+= [edge('Cure Call '+f,'Cure Normalize') for f in FAMS]+[edge('Cure Normalize','Cure Check'),edge('Cure Check','Build Diagnostic Prompt')]
+conn_add+= [edge('Panel Payloads','Panel Cure Needed?'),edge('Panel Cure Needed?','Panel Cure Build 1',0),edge('Panel Cure Needed?','Panel Cure Check',1)]
+for k in (1,2,3):
+ conn_add+= [edge('Panel Cure Build %d'%k,'Panel Cure Route %d'%k)]+[edge('Panel Cure Route %d'%k,'Panel Cure Call %d %s'%(k,f),i) for i,f in enumerate(FAMS)]+[edge('Panel Cure Route %d'%k,'Panel Cure Normalize %d'%k,6)]
+ conn_add+= [edge('Panel Cure Call %d %s'%(k,f),'Panel Cure Normalize %d'%k) for f in FAMS]
+ conn_add+= [edge('Panel Cure Normalize %d'%k,'Panel Cure Build %d'%(k+1) if k<3 else 'Panel Cure Check')]
+conn_add+= [edge('Panel Cure Check','Dry?')]
 # The named reads move to the Cure Check nodes (shape A, 6944): 1 + 8 references in 8 nodes (6945 measured 9).
 edits=[];
 for name,old,new in [('Build Diagnostic Prompt',"$('Extract Independent Verdict')","$('Cure Check')")]+[(k,"$('Panel Payloads')","$('Panel Cure Check')") for k in ['Write Judgment 1','Write Judgment 2','Write Judgment 3','Derive Outcome','Panel Done','Replay Rows','Record Substitution']]:

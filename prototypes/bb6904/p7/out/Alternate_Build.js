@@ -168,7 +168,7 @@ function cureProse(seat,reply){const p=reply&&reply.ok?cureLines(reply.text).pro
 // One item per seat that needs an alternate, in panel order; each item either carries a call or a skip with its reason.
 const PP=$input.first().json;const P=$('Panel Build').first().json;const S=$('Init Seats').first().json;const RS=$('Resolve Seats').first().json;
 let R=null;try{if($('Reserve Build').isExecuted)R=$('Reserve Build').first().json;}catch(e){R=null;}
-const QA=S.dry===true&&S.qualify_alternate?S.qualify_alternate:null;const G1M=S.g1_by_maker!==false;
+const QA=S.dry===true&&S.qualify_alternate?S.qualify_alternate:null;const G1M=S.g1_by_maker===true;
 const pool=(RS.alternates||[]);const deb=(RS.debaters||[]);
 const pay=PP.bodies.map(b=>JSON.parse(b).payload);
 const used=[];const out=[];
@@ -180,7 +180,8 @@ pay.forEach((p,i)=>{if(!QA&&!((p.drv_uncured||0)>0))return;
   if(a.api_model===p.judge_api_model)return 'G2: '+a.api_model+' is the model of the seat it replaces';
   if(!QA&&pay.some(q=>q.judge_api_model===a.api_model))return 'G3: '+a.api_model+' already sits on this panel';
   if(!QA&&used.indexOf(a.api_model)>=0)return 'G3: '+a.api_model+' already sits as the other alternate';return null;};
- const cand=QA?pool.filter(a=>a.seat===QA):pool;const reasons=[];let a=null;
+ // A qualify run takes the id itself and needs no model_config row (6988).
+ const cand=QA?[{seat:(S.alt_ids||{})[QA]||'alt_q',fam:'openrouter',api_model:QA,max_tokens:32000,maker:String(QA).split('/')[0]}]:pool;const reasons=[];let a=null;
  for(const c of cand){const w=why(c);if(w){reasons.push(c.seat+' '+w);continue;}a=c;break;}
  if(!a){out.push({json:{alt:{...base,skip:'no pool model passes the guards'+(reasons.length?': '+reasons.join('; '):(cand.length?'':' (no active pool row)'))}}});return;}
  let SYS=null,user=null;try{const b0=src.body;if(b0.systemInstruction){SYS=b0.systemInstruction.parts[0].text;user=b0.contents[0].parts[0].text;}else{SYS=b0.messages[0].content;user=b0.messages[1].content;}}catch(e){SYS=null;}

@@ -101,15 +101,19 @@ const PP={run_token:'t',debate_id:'d',bodies:S.map(([s,t,d])=>mk(s,t,d).json),su
 const PTR='DEBATE TRANSCRIPT\n\n=== TOPIC ===\nt\n\n=== [CR1] DEFENDER R1 ===\nDECLARED CHAIN: D1..D6\n\n=== [DR1] CHALLENGER R1 ===\nLuke 1:35 answers the how.\n\n=== [CR2] DEFENDER R2 ===\nc2\n\n=== [DR2] CHALLENGER R2 ===\nMatthew 1:18 says "before they came together, she was found with child of the Holy Ghost."\n\n=== [CR3] DEFENDER R3 -- LINK ROUND (defender exhibit-or-concede) ===\nThe defender quotes 1:25 only.\n\n=== [DR3] CHALLENGER R3 -- LINK ROUND (challenger exhibit-or-concede) ===\nd3';
 const P={judges:[{seat:'deepseek',fam:'deepseek',api_model:'ds',body:{messages:[{role:'system',content:'S'},{role:'user',content:PTR}]}},{seat:'gemini',fam:'gemini',api_model:'gm',body:{contents:[{role:'user',parts:[{text:'U'}]}]}},{seat:'grok',fam:'grok',api_model:'gk',body:{messages:[]}}]};
 ok(evalIf(need('Panel Cure Needed?'),PP)===true,'Panel Cure Needed? true');
-const pb=run('Panel_Cure_Build',{'Panel Build':P},[PP]);ok(pb.length===3&&pb[0].cure.seat==='deepseek'&&pb[1].cure.seat==='gemini'&&pb[1].cure.jidx===2&&pb[2].cure.seat==='grok'&&pb[2].cure.jidx===3,'Panel Cure Build: one request per seat with any item (grok has K-G3 only: now requested, 6946)');
-ok(JSON.stringify(pb[2].cure.broken.DEFENDER)==='["D2 vs C1"]','Panel: BROKEN links read from the worked text (reasoning), not the JSON string');
-ok(pb[0].cure.body.messages[2].content==='{"reasoning":"DS"}','Panel answer: the judge text before the audit lines');
-const PR=pb[0].cure.rounds;ok(Object.keys(PR).join()==='CR1,DR1,CR2,DR2,CR3,DR3'&&/^\nMatthew 1:18 says/.test(PR.DR2)&&!/===/.test(PR.CR3)&&/d3$/.test(PR.DR3),'BB-6951 DEFECT 2: panel rounds (=== [CR1] ... === heads) read, six blocks');
-{const PPk={...PP,bodies:[PP.bodies[0]],summary:[{seat:'deepseek',drv:[V[2]],substitute:false}]};const b1=run('Panel_Cure_Build',{'Panel Build':P},[PPk]);
- const n1=run('Panel_Cure_Normalize',{'Panel Cure Build':b1},[{choices:[{message:{content:'CORRECTED COUNT: DEFENDER 1\nPRESSED: D5 vs C2 | [DR2] | "before they came together, she was found with child"'}}]}]);
- const c1=run('Panel_Cure_Check',{'Panel Payloads':PPk,'Panel Cure Normalize':n1},[n1[0]]);ok(c1[0].summary[0].cure[0].status==='CURED'&&/found in DR2/.test(c1[0].summary[0].cure[0].why),'Panel K-G1 CORRECT quoting the panel transcript\'s [DR2] -> CURED');}
-const pn=run('Panel_Cure_Normalize',{'Panel Cure Build':pb},[{choices:[{message:{content:GOOD+'\n'+'RESTATED: D5 vs C2: DEFENDER LINK BROKEN -- '+'[L1] Matthew 1:18 "before they came together" [L3] Matthew 1:25 names the bound.'}}]},{error:'503'},{choices:[{message:{content:'WITHDRAWN: D2 vs C1'}}]}]);
-const pc=run('Panel_Cure_Check',{'Panel Payloads':PP,'Panel Cure Normalize':pn},[pn[0]]);
+const slot=(PPx,Px,k,extra)=>run('Panel_Cure_Build_'+k,{'Panel Payloads':PPx,'Panel Build':Px,...(extra||{})},[{}]);
+const pb=[1,2,3].map(k=>slot(PP,P,k));ok(pb.every(x=>x.length===1),'BB-6987: each serial slot emits exactly one item, so its route fires one branch');
+ok(pb[0][0].cure.seat==='deepseek'&&pb[1][0].cure.seat==='gemini'&&pb[1][0].cure.jidx===2&&pb[2][0].cure.seat==='grok'&&pb[2][0].cure.jidx===3,'Slot k cures seat k only (grok has K-G3 only: requested, 6946)');
+ok(JSON.stringify(pb[2][0].cure.broken.DEFENDER)==='["D2 vs C1"]','Panel: BROKEN links read from the worked text (reasoning), not the JSON string');
+ok(pb[0][0].cure.body.messages[2].content==='{"reasoning":"DS"}','Panel answer: the judge text before the audit lines');
+const PR=pb[0][0].cure.rounds;ok(Object.keys(PR).join()==='CR1,DR1,CR2,DR2,CR3,DR3'&&/^\nMatthew 1:18 says/.test(PR.DR2)&&!/===/.test(PR.CR3)&&/d3$/.test(PR.DR3),'BB-6951 DEFECT 2: panel rounds (=== [CR1] ... === heads) read, six blocks');
+const nrm=(k,b,reply)=>run('Panel_Cure_Normalize_'+k,{['Panel Cure Build '+k]:b},[reply]);
+{const PPk={...PP,bodies:[PP.bodies[0]],summary:[{seat:'deepseek',drv:[V[2]],substitute:false}]};const b1=slot(PPk,P,1);
+ const n1=nrm(1,b1,{choices:[{message:{content:'CORRECTED COUNT: DEFENDER 1\nPRESSED: D5 vs C2 | [DR2] | "before they came together, she was found with child"'}}]});
+ const c1=run('Panel_Cure_Check',{'Panel Payloads':PPk,'Panel Cure Normalize 1':n1},[n1[0]]);ok(c1[0].summary[0].cure[0].status==='CURED'&&/found in DR2/.test(c1[0].summary[0].cure[0].why),'Panel K-G1 CORRECT quoting the panel transcript\'s [DR2] -> CURED');}
+const n=[nrm(1,pb[0],{choices:[{message:{content:GOOD+'\n'+'RESTATED: D5 vs C2: DEFENDER LINK BROKEN -- '+'[L1] Matthew 1:18 "before they came together" [L3] Matthew 1:25 names the bound.'}}]}),nrm(2,pb[1],{error:'503'}),nrm(3,pb[2],{choices:[{message:{content:'WITHDRAWN: D2 vs C1'}}]})];
+ok(n.every(x=>x.length===1&&x[0].cure&&x[0].reply),'Each slot Normalize: one item, its own request paired with its reply');
+const pc=run('Panel_Cure_Check',{'Panel Payloads':PP,'Panel Cure Normalize 1':n[0],'Panel Cure Normalize 2':n[1],'Panel Cure Normalize 3':n[2]},[n[2][0]]);
 ok(pc.length===1&&pc[0].bodies.length===3,'AMEND 2: exactly one item, three bodies');
 const st=s=>pc[0].summary.find(x=>x.seat===s).cure;
 ok(st('deepseek').every(x=>x.status==='CURED'),'One seat cured (deepseek, both lines restated with two kinds)');
@@ -120,5 +124,12 @@ ok(pc[0].bodies.every((b,i)=>JSON.parse(b).payload.verdict_raw.startsWith(JSON.p
 ok(pc[0].debate_id===PP.debate_id&&pc[0].substitution===PP.substitution&&JSON.stringify(pc[0].panel_effective)===JSON.stringify(PP.panel_effective),'Other fields of the Panel Payloads item unchanged');
 const PP0={...PP,summary:PP.summary.map(s=>({...s,drv:[]}))};ok(evalIf(need('Panel Cure Needed?'),PP0)===false,'Panel Cure Needed? false with no violation');
 const pc0=run('Panel_Cure_Check',{'Panel Payloads':PP0},[PP0]);ok(pc0.length===1&&JSON.stringify(pc0[0].bodies)===JSON.stringify(PP0.bodies),'AMEND 1 panel no-cure path: item passes unchanged');
-const pbs=run('Panel_Cure_Build',{'Panel Build':{judges:[]}},[PP]);ok(pbs.every(x=>x.cure.skip)&&route(pbs[0])===6,'Seat with no request body: skip item, routed to output 6, straight to Normalize');
+const pbs=[1,2,3].map(k=>slot(PP,{judges:[]},k));ok(pbs.every(x=>x.length===1&&x[0].cure.skip)&&pbs.every(x=>route(x[0])===6),'Seat with no request body: one skip item per slot, routed to output 6, straight to that slot\'s Normalize');
+const PPmix={...PP,summary:[PP.summary[0],{...PP.summary[1],drv:[]},PP.summary[2]]};const pmx=[1,2,3].map(k=>slot(PPmix,P,k));ok(pmx[1].length===1&&pmx[1][0].cure.skip==='no violation in this seat'&&route(pmx[1][0])===6&&!pmx[0][0].cure.skip,'A seat with no violation: its slot passes one skip item through');
+console.log('# BB-6987: every join has one firing branch (structure of ops.json)');
+const inc=t=>ops.connections_add.filter(e=>e.to===t).map(e=>e.from+':'+e.out).sort();
+ok(JSON.stringify(inc('Panel Cure Check'))===JSON.stringify(['Panel Cure Needed?:1','Panel Cure Normalize 3:0']),'Panel Cure Check: fed by Needed? false or slot 3 Normalize only; the two are exclusive, so it runs once');
+ok([1,2,3].every(k=>inc('Panel Cure Route '+k).join()==='Panel Cure Build '+k+':0'&&inc('Panel Cure Normalize '+k).length===7),'Each slot: its route fed by its Build alone; its Normalize by its six calls and the skip output, of which one fires for the one item');
+ok(inc('Panel Cure Build 1').join()==='Panel Cure Needed?:0'&&inc('Panel Cure Build 2').join()==='Panel Cure Normalize 1:0'&&inc('Panel Cure Build 3').join()==='Panel Cure Normalize 2:0','The slots chained in series, as Judge 1, 2 and 3 are');
+ok(!ops.nodes_add.some(x=>x.name==='Panel Cure Route'||x.name==='Panel Cure Build'||x.name==='Panel Cure Normalize'),'The fan-out route of 9106eda is gone');
 console.log('failures',fails);

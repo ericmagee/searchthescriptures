@@ -1,14 +1,14 @@
 -- BB-6904 (g), step 7: the alternate path (ALTERNATES.txt, passed 6983; ruled 6981, 6984). Draft; apply only on the operator's word,
 -- after 5B's migration (it needs debate_judgments.drv_uncured). Undo: undo7.sql. The model ids are as 6984 lists them; the qualify
--- runs confirm each (a wrong id fails the call and the run reads UNREADABLE).
+-- runs confirm each (a wrong id fails the call and the run reads UNREADABLE). Pool: MiniMax only (6991).
 BEGIN;
 ALTER TABLE public.debate_results ADD COLUMN drv_removed jsonb;
 COMMENT ON COLUMN public.debate_results.drv_removed IS 'BB-6904 (g): the rulings removed for uncured DEBATE RULE VIOLATIONS and the alternates that sat (seat, api_model, verdict_tag, standings, drv_uncured, verdict_raw, replaced_by, replaced_by_model, at). Written once, before any judgment row, by odv1_record_panel_alternates. NULL = no alternate sat.';
-INSERT INTO public.model_config (seat, provider, role, api_model, max_tokens, active, notes) VALUES
- ('alt_haiku', 'openrouter', 'alternate', 'anthropic/claude-haiku-5.5', 32000, true, 'BB-6904 (g) first alternate judge (operator, recorded BB-6981): Claude Haiku 5.5, reasoning effort max, never a debater. Id per BB-6984, confirmed by the qualify runs.'),
- ('alt_minimax', 'openrouter', 'alternate', 'minimax/minimax-m3.1-flash', 32000, true, 'BB-6904 (g) second alternate judge (operator, recorded BB-6981): MiniMax M3.1 Flash, paid route, reasoning effort max. Id per BB-6984, confirmed by the qualify runs.');
+-- The pool's model_config rows are NOT in this migration: only a qualifier gets one, on the operator's word (6988, 6991); see
+-- model_rows7.sql. Without a row a pool seat never sits; a qualify run needs none.
 
-CREATE OR REPLACE FUNCTION public.odv1_record_panel_alternates(p_debate_id uuid, p_alternates jsonb, p_drv_removed jsonb, p_g1_by_maker boolean DEFAULT true)
+
+CREATE OR REPLACE FUNCTION public.odv1_record_panel_alternates(p_debate_id uuid, p_alternates jsonb, p_drv_removed jsonb, p_g1_by_maker boolean DEFAULT false)
  RETURNS jsonb
  LANGUAGE plpgsql
  SECURITY DEFINER
@@ -20,7 +20,7 @@ AS $function$
   -- seated debater's model (and, when p_g1_by_maker, never its maker); G2 never the model of the seat it replaces; G3 never a model
   -- already on the panel, and the alternates distinct. At most two (the pool holds two). Every refusal raises.
 DECLARE
-  v_pool constant text[] := ARRAY['alt_haiku','alt_minimax'];
+  v_pool constant text[] := ARRAY['alt_minimax31','alt_minimax3'];
   r record; a jsonb; i int; v_n int; v_new text[]; v_used text[] := ARRAY[]::text[];
   v_rm text; v_alt text; v_am text; v_amk text; v_rmm text; v_deb_m text[]; v_deb_k text[]; v_pan_m text[];
 BEGIN

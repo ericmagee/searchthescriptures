@@ -59,11 +59,13 @@ PASS K-G3 request names the side and its BROKEN links
 PASS K-G3 report line names the side
 # PANEL
 PASS Panel Cure Needed? true
-PASS Panel Cure Build: one request per seat with any item (grok has K-G3 only: now requested, 6946)
+PASS BB-6987: each serial slot emits exactly one item, so its route fires one branch
+PASS Slot k cures seat k only (grok has K-G3 only: requested, 6946)
 PASS Panel: BROKEN links read from the worked text (reasoning), not the JSON string
 PASS Panel answer: the judge text before the audit lines
 PASS BB-6951 DEFECT 2: panel rounds (=== [CR1] ... === heads) read, six blocks
 PASS Panel K-G1 CORRECT quoting the panel transcript's [DR2] -> CURED
+PASS Each slot Normalize: one item, its own request paired with its reply
 PASS AMEND 2: exactly one item, three bodies
 PASS One seat cured (deepseek, both lines restated with two kinds)
 PASS Beside it a seat not cured: the failed call (gemini)
@@ -73,5 +75,11 @@ PASS Each body only gains report lines at its end
 PASS Other fields of the Panel Payloads item unchanged
 PASS Panel Cure Needed? false with no violation
 PASS AMEND 1 panel no-cure path: item passes unchanged
-PASS Seat with no request body: skip item, routed to output 6, straight to Normalize
+PASS Seat with no request body: one skip item per slot, routed to output 6, straight to that slot's Normalize
+PASS A seat with no violation: its slot passes one skip item through
+# BB-6987: every join has one firing branch (structure of ops.json)
+PASS Panel Cure Check: fed by Needed? false or slot 3 Normalize only; the two are exclusive, so it runs once
+PASS Each slot: its route fed by its Build alone; its Normalize by its six calls and the skip output, of which one fires for the one item
+PASS The slots chained in series, as Judge 1, 2 and 3 are
+PASS The fan-out route of 9106eda is gone
 failures 0

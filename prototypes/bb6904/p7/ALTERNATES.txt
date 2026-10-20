@@ -9,21 +9,19 @@ recorded in 6981). Every claim about live code names the node or function it was
   at most two alternates sit in a debate; a third removed seat stays not counted (AMEND 1, 6980).
 - The single judge is outside the panel and sets no outcome; it gets no alternate.
 
-2. WHO SITS
-- Pool, in order (operator, recorded in 6981, which replaces the 6970 citation of 6975 and 6978): Claude Haiku 5.5 at max effort, then MiniMax M3.1 Flash at max effort, both through OpenRouter
-  (paid route). Exact api_model ids: NOT
-  CONFIRMED. No model_config row holds either today (read from model_config this session, SELECT only: chatgpt, claude_synthesis, deepseek,
-  deepseek_debate, gemini, glm, grok, kimi, mimo, qwen). Each needs a model_config row (seat, provider openrouter, api_model,
-  max_tokens), written only on the operator's word, after one test call.
-- Guards (6965): G1 never a model seated as a debater in that debate; G2 never the model of the seat it replaces.
-- G3 (proposed in 6979, accepted in 6981): never a model already counted on that panel, and the alternates of one debate are
-  distinct, so no model holds two votes.
-- The operator's rule, recorded in 6981: Haiku 5.5 is never a debater.
-- OPEN, with the operator (6981; nothing built on it until answered): Init Seats states "Claude never judges" (judge order BB-4607), and claude_synthesis (claude-sonnet-5-5)
-  is also the debate challenger when the claude engine is seated. Haiku 5.5 is first in the pool. Two questions:
-  (a) does 6965's list lift "Claude never judges" for alternates? (b) is G1 by model or by maker: may Haiku 5.5 judge a debate
-  that Sonnet 5.5 argues?
-- If no pool model passes the guards, the seat stays not counted (today's option 2 result).
+2. WHO SITS (revised for 6987, 6988, 6991; 6992 open)
+- Pool: MiniMax only (6991). Both MiniMax M3.1 Flash (minimax/minimax-m3.1-flash) and MiniMax M3 (minimax/minimax-m3) are
+  qualified (6988), each at maximum effort. The one with fewer uncured violations on the qualify runs is the first alternate, the
+  other the second; a tie goes to M3.1 Flash (6988). If one fails, the pool is the one that passed. The order is the constant
+  ALT_POOL in Init Seats, set at publish from the results. Haiku 5.5 left the pool and is not qualified (6991).
+- A pool model sits only with an ACTIVE model_config row (alt_minimax31, alt_minimax3), written for a qualifier only, on the
+  operator's word (model_rows7.sql; not in migration7.sql). A qualify run needs no row: qualify_alternate takes the model id.
+- Guards: G1 never a model that debates in that debate (by model: G1_BY_MAKER false, the default ruled in 6991). 6992 relays the
+  operator's "one family can't judge their own" (by maker); it conflicts with 6991 ruling 3 and is the advisor's to rule. The switch
+  is one constant in Init Seats and one argument to Record Alternates; the harness and the DB test run both values. G2 never the
+  model of the seat it replaces. G3 (6979, accepted 6981) never a model already on that panel, and the alternates distinct.
+- Haiku 5.5 (6991): "never a debater" lifted; "Claude never judges" lifted for Haiku only; it is not seated in this publish.
+- If no pool model passes the guards, the seat stays not counted (option 2).
 
 3. WHAT THE ALTERNATE READS (a fresh read, without the removed ruling)
 - The same rulebook and transcript the removed seat was given: its own request's system and user text, read exactly as Reserve
@@ -59,8 +57,8 @@ recorded in 6981). Every claim about live code names the node or function it was
 - Each pool model is run as a dry regrade judge on 27191, 27088 and 27259 (replay rows only; record_replay_judgments; no outcome
   written). Measured per run: finished within the 900 s timeout; finish_reason; verdict and standings in the closed sets;
   K-B, K-G1, K-G3 items; the cure call's result; seconds and tokens.
-- MECHANISM (AMEND 2, 6980): today a dry regrade seats only the panel's three, so no path seats a pool model. Proposed: a dry-only
-  request field, qualify_alternate: <pool seat>, read by Init Seats and refused unless dry is true. It forces the alternate path
+- MECHANISM (AMEND 2, 6980): today a dry regrade seats only the panel's three, so no path seats a pool model. A dry-only
+  request field, qualify_alternate: <pool model id> (6988), read by Init Seats and refused unless dry is true. It forces the alternate path
   for every panel seat of that dry run, whatever its drv_uncured, with the named pool model; Replay Rows records the alternates'
   rows in the removed seats' places. The qualification therefore runs the same Alternate nodes a live run would.
   On a qualify run G3 is not applied (one pool model sits in all three seats; dry only, no outcome), and Alternate Needed? and

@@ -4,20 +4,22 @@
 # Init Seats: qualify_alternate (dry only) and the G1 switch (6984: default true, by maker, until the operator answers Q13).
 INIT_ANCHOR = "if((TFR||TNF)&&TFS===null)fail('test_fail_reserve and test_no_fallback need test_fail_seat.');"
 INIT_ADD = r"""
-// ALTERNATES (BB-6904 g, step 7; ruled 6981, 6984). ALT_POOL in order; G1_BY_MAKER: an alternate never shares a debater's maker
-// (true, the default until the operator answers Q13) or only never a debater's model (false). qualify_alternate (dry only) seats
-// one pool model in every panel seat of the run (6983 note 1: G3 not applied there; Record Alternates not reached).
-const ALT_POOL=['alt_haiku','alt_minimax'];const G1_BY_MAKER=true;
+// ALTERNATES (BB-6904 g, step 7; ruled 6984, 6988, 6991). ALT_POOL in order: MiniMax only (6991), the qualify winner first; the
+// order is set here at publish from the qualify results (a tie goes to M3.1 Flash, 6988). A pool seat sits only if it has an ACTIVE
+// model_config row, written for a qualifier on the operator's word. G1_BY_MAKER: false (6991: G1 by model, the default); true tests
+// the maker too (6992 asks for by family; the advisor rules). qualify_alternate (dry only) takes a pool model's id (6988) and seats it
+// in every panel seat of the run without a model_config row (6983 note 1: G3 not applied there; Record Alternates not reached).
+const ALT_POOL=['alt_minimax31','alt_minimax3'];const ALT_IDS={'minimax/minimax-m3.1-flash':'alt_minimax31','minimax/minimax-m3':'alt_minimax3'};const G1_BY_MAKER=false;
 const QA=(b.qualify_alternate===undefined||b.qualify_alternate===null||b.qualify_alternate==='')?null:String(b.qualify_alternate).trim().toLowerCase();
 if(QA!==null&&!DRY)fail('qualify_alternate runs only in a dry regrade.');
-if(QA!==null&&ALT_POOL.indexOf(QA)===-1)fail('qualify_alternate "'+QA+'" is not one of ['+ALT_POOL.join(', ')+'].');"""
+if(QA!==null&&!ALT_IDS[QA])fail('qualify_alternate "'+QA+'" is not one of ['+Object.keys(ALT_IDS).join(', ')+'].');"""
 INIT_RET_OLD = "test_no_fallback:TNF,"
-INIT_RET_NEW = "test_no_fallback:TNF,alt_pool:ALT_POOL,g1_by_maker:G1_BY_MAKER,qualify_alternate:QA,"
+INIT_RET_NEW = "test_no_fallback:TNF,alt_pool:ALT_POOL,alt_ids:ALT_IDS,g1_by_maker:G1_BY_MAKER,qualify_alternate:QA,"
 
 # Resolve Seats: the pool rows from model_config (Fetch Models reads every active row) and the debaters' models and makers.
 RS_ANCHOR = "// GUARDS and TENSIONS exactly as W1 Init"
 RS_ADD = r"""// ALTERNATES (step 7): the pool, in Init Seats' order, from the ACTIVE model_config rows; a pool seat without a row is left out
-// (no alternate from it). Every pool model runs on OpenRouter at maximum reasoning effort (operator, 6978/6981).
+// (no alternate from it). Every pool model runs on OpenRouter at maximum reasoning effort (operator, 6978; pool 6991).
 const makerOf=(fam,model)=>{const m=String(model||'');if(m.indexOf('/')>0)return m.split('/')[0].toLowerCase();return ({anthropic:'anthropic',openai:'openai',gemini:'google',grok:'xai',mimo:'xiaomi',deepseek:'deepseek',openrouter:'openrouter'})[fam]||fam;};
 const alternates=(S.alt_pool||[]).filter(k=>M[k]&&M[k].api_model&&Number(M[k].max_tokens)>0).map(k=>({seat:k,fam:'openrouter',api_model:M[k].api_model,max_tokens:Math.max(Number(M[k].max_tokens)||0,8000),maker:makerOf('openrouter',M[k].api_model)}));
 const debaters=[D,C].map(x=>({engine:x.engine,model:x.model,maker:makerOf(x.fam,x.model)}));
@@ -32,7 +34,7 @@ ALT_BUILD = r"""
 // One item per seat that needs an alternate, in panel order; each item either carries a call or a skip with its reason.
 const PP=$input.first().json;const P=$('Panel Build').first().json;const S=$('Init Seats').first().json;const RS=$('Resolve Seats').first().json;
 let R=null;try{if($('Reserve Build').isExecuted)R=$('Reserve Build').first().json;}catch(e){R=null;}
-const QA=S.dry===true&&S.qualify_alternate?S.qualify_alternate:null;const G1M=S.g1_by_maker!==false;
+const QA=S.dry===true&&S.qualify_alternate?S.qualify_alternate:null;const G1M=S.g1_by_maker===true;
 const pool=(RS.alternates||[]);const deb=(RS.debaters||[]);
 const pay=PP.bodies.map(b=>JSON.parse(b).payload);
 const used=[];const out=[];
@@ -44,7 +46,8 @@ pay.forEach((p,i)=>{if(!QA&&!((p.drv_uncured||0)>0))return;
   if(a.api_model===p.judge_api_model)return 'G2: '+a.api_model+' is the model of the seat it replaces';
   if(!QA&&pay.some(q=>q.judge_api_model===a.api_model))return 'G3: '+a.api_model+' already sits on this panel';
   if(!QA&&used.indexOf(a.api_model)>=0)return 'G3: '+a.api_model+' already sits as the other alternate';return null;};
- const cand=QA?pool.filter(a=>a.seat===QA):pool;const reasons=[];let a=null;
+ // A qualify run takes the id itself and needs no model_config row (6988).
+ const cand=QA?[{seat:(S.alt_ids||{})[QA]||'alt_q',fam:'openrouter',api_model:QA,max_tokens:32000,maker:String(QA).split('/')[0]}]:pool;const reasons=[];let a=null;
  for(const c of cand){const w=why(c);if(w){reasons.push(c.seat+' '+w);continue;}a=c;break;}
  if(!a){out.push({json:{alt:{...base,skip:'no pool model passes the guards'+(reasons.length?': '+reasons.join('; '):(cand.length?'':' (no active pool row)'))}}});return;}
  let SYS=null,user=null;try{const b0=src.body;if(b0.systemInstruction){SYS=b0.systemInstruction.parts[0].text;user=b0.contents[0].parts[0].text;}else{SYS=b0.messages[0].content;user=b0.messages[1].content;}}catch(e){SYS=null;}

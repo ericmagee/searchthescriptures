@@ -163,7 +163,7 @@ function cureProse(seat,reply){const p=reply&&reply.ok?cureLines(reply.text).pro
  return p?['[AUDIT v21: DEBATE RULE VIOLATION REPLY -- '+(seat?seat+' ':'')+'prose recorded, not read for a cure: '+cureSafe(p.slice(0,600))+']']:[];}
 
 // One item per cure request, in; one item out, each carrying its own request (by pairing) and the reply read without throwing.
-return $input.all().map((it,i)=>{let src=null;try{src=$('Panel Cure Build').itemMatching(i).json.cure;}catch(e){src=null;}
- if(!src){try{src=$('Panel Cure Build').all()[i].json.cure;}catch(e){src=null;}}
+return $input.all().map((it,i)=>{let src=null;try{src=$('Panel Cure Build 1').itemMatching(i).json.cure;}catch(e){src=null;}
+ if(!src){try{src=$('Panel Cure Build 1').all()[i].json.cure;}catch(e){src=null;}}
  const reply=(it.json&&it.json.cure&&it.json.cure.skip)?{ok:false,text:null,why:it.json.cure.skip}:cureText(it.json);
  return {json:{cure:src||(it.json&&it.json.cure)||null,reply}};});

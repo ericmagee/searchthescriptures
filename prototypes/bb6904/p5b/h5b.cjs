@@ -15,7 +15,8 @@ function payloads(rows){const slot=['Panel Judge 1 ','Panel Judge 2 ','Panel Jud
   return {isExecuted:ex,all:()=>ex?[{json:resp[i]}]:[],first:()=>({json:ex?resp[i]:{}})};};
  return {out:new Function('$',fs.readFileSync(OUT+'Panel_Payloads.js','utf8'))($)[0].json,judges};}
 function cureCheck(PP,normal){const $=n=>{if(n==='Panel Payloads')return {first:()=>({json:PP}),isExecuted:true};
-  if(n==='Panel Cure Normalize'){if(!normal)return {isExecuted:false,all(){throw new Error('not run');},first(){throw new Error('not run');}};return {isExecuted:true,all:()=>normal.map(j=>({json:j}))};}
+  // BB-6987: the panel cure runs in three serial slots; each normal item goes to the slot of its seat (cure.idx + 1).
+  const m=/^Panel Cure Normalize ([123])$/.exec(n);if(m){const its=(normal||[]).filter(j=>j.cure&&j.cure.idx===+m[1]-1);if(!its.length)return {isExecuted:false,all(){throw new Error('not run');},first(){throw new Error('not run');}};return {isExecuted:true,all:()=>its.map(j=>({json:j}))};}
   throw new Error('unstubbed '+n);};
  return new Function('$','$input',fs.readFileSync(OUT+'Panel_Cure_Check.js','utf8'))($,{first:()=>({json:PP}),all:()=>[{json:PP}]})[0].json;}
 const pay=b=>JSON.parse(b).payload;

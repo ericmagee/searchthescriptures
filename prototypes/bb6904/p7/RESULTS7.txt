@@ -1,27 +1,27 @@
 # Init Seats
-PASS live keys unchanged (run_token and the t0 clock aside); adds alt_pool, g1_by_maker, qualify_alternate
-PASS pool in order; G1_BY_MAKER true by default (6984); no qualify
+PASS live keys unchanged (run_token and the t0 clock aside); adds alt_pool, alt_ids, g1_by_maker, qualify_alternate
+PASS pool MiniMax only, M3.1 Flash first (6991, 6988); G1 by model by default (6991); no qualify
 PASS qualify_alternate refused on a live run
-PASS qualify_alternate outside the pool refused
-PASS dry qualify run accepted, name normalised
+PASS qualify_alternate outside the pool refused (Haiku left the pool, 6991)
+PASS dry qualify run takes a model id (6988), normalised
 # Resolve Seats
 PASS live keys unchanged with the pool rows present
 PASS pool from model_config, in order, makers read from the OpenRouter id
 PASS debaters with model and maker
-PASS no pool row: no alternate
+PASS no pool row: no alternate; only a qualifier's row present: only it sits
 # Alternate Needed?, Calls?, Cure Needed?
 PASS Alternate Needed?: false when every seat is clean; true with an uncured seat or on a qualify run
 PASS Alternate Calls?: per item, a skip item false, a call item true
 # Alternate Build
-PASS debaters claude and chatgpt, by maker (default): Haiku refused (anthropic), MiniMax sits for the removed seat
+PASS one removed seat: the first pool model (M3.1 Flash) sits
 PASS the call: removed seat, slot, OpenRouter id, effort max
 PASS fresh read: the removed seat's own rulebook and transcript only, not its answer
-PASS G1 by model (switch false): Haiku may judge a debate Sonnet argues; Haiku sits
-PASS no Claude debater: Haiku first
+PASS G1 by model (default): M3.1 Flash debates, so M3 sits
+PASS G1 by maker (switch true, 6992 pending): a MiniMax debater bars both MiniMax models; the seat stays not counted
 PASS three removed seats: two alternates, distinct (G3); the third is a skip carried on every item, naming G3
 PASS no pool row: one skip item, reason named
-PASS G2: the removed seat's own model is refused
-PASS qualify run: the named pool model in all three seats, distinct seat names, G3 not applied (6983 note 1)
+PASS G2: the removed seat's own model (M3.1 Flash) is refused; M3 sits
+PASS qualify run: the named id in all three seats, no model_config row needed (6988), distinct seat names, G3 not applied (6983 note 1)
 PASS a removed reserve seat: its rulebook read from Reserve Build
 # Alternate Payloads (never throws)
 PASS a readable answer: payload for the alternate seat, drv_uncured = its items (fail-closed)
@@ -47,12 +47,11 @@ PASS one line per removed seat from the stored row
 PASS no drv_removed: nothing added (the step 6 harness h6 also passes 22/22 on this file)
 failures 0
 
-# test7.sql (rolled-back DO block; odv1_record_panel_alternates on 27259: debaters mimo and claude, panel deepseek, gemini, grok)
-The block ran the function text of migration7.sql without its five leading comment lines (comments only).
-t1 empty array: ok, written false. t2 judgment rows present: refused ("already holds 3 judgment row(s)").
-t3 Haiku against a Claude debater, by maker: refused ("G1 (by maker): anthropic makes a seated debater").
-t4 payload model not model_config's: refused. t5 removed seat not on the panel: refused. t6 the same pool seat twice: refused
-("alt_minimax already sits on the panel"). t7 three alternates: refused. t8 removed ruling naming another seat: refused.
-t9 two alternates, distinct, by model (switch false): accepted; panel_expected {alt_haiku, alt_minimax, deepseek}; drv_removed 2;
-panel_substitution untouched (null). t10 a second write: refused ("one write per run").
-After: column absent, no alt rows, no function; 27259 keeps 3 judgment rows and panel {deepseek,gemini,grok}.
+# test7.sql (rolled-back DO block; odv1_record_panel_alternates on 27259: debaters mimo and claude; panel deepseek, gemini, grok)
+The block executed migration7.sql's function text exactly: md5 2a42fbeb in the block = 2a42fbeb of the file.
+t1 empty: ok, written false. t2 judgment rows present: refused. t4 payload model not model_config's: refused. t5 removed seat not on
+the panel: refused. t6 the same pool seat twice: refused. t7 three: refused. t8 removed ruling naming another seat: refused.
+t11 alt_haiku: "not a pool seat" (6991). t12 G1 by model (mimo's row pointed at M3 inside the block): M3 refused. t13 G1 by maker
+(switch true): M3.1 Flash refused ("minimax makes a seated debater"). t9 two alternates, distinct: accepted; panel_expected
+{alt_minimax3, alt_minimax31, deepseek}; drv_removed 2; panel_substitution null. t10 a second write: refused.
+After: column absent, no alt rows, no function, mimo row mimo-v2.6-pro; 27259 keeps 3 judgment rows and {deepseek,gemini,grok}.

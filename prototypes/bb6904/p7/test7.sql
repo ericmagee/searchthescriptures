@@ -1,14 +1,14 @@
--- BB-6904 (g) step 7: falsifiers for odv1_record_panel_alternates, one DO block ended by RAISE (every write rolls back). 27259 is
--- used (debaters mimo and claude; panel deepseek, gemini, grok); its judgment rows are deleted inside the block where a case needs none.
+-- BB-6904 (g) step 7: falsifiers for odv1_record_panel_alternates (pool MiniMax only, 6991), one DO block ended by RAISE: every
+-- write rolls back. 27259: debaters mimo and claude; panel deepseek, gemini, grok. Its judgment rows are deleted inside the block.
 DO $t$
 DECLARE r jsonb := '{}'; D uuid := '56e75954-c776-4e7e-8d26-94e3a46a5c09'; x jsonb;
-  rm jsonb := '[{"seat":"grok","api_model":"grok-4.7","verdict_raw":"X","replaced_by":"alt_minimax"}]';
+  M31 text := '{"removed_seat":"grok","alternate_seat":"alt_minimax31","alternate_api_model":"minimax/minimax-m3.1-flash"}';
+  M3 text := '{"removed_seat":"gemini","alternate_seat":"alt_minimax3","alternate_api_model":"minimax/minimax-m3"}';
 BEGIN
   EXECUTE 'ALTER TABLE public.debate_results ADD COLUMN drv_removed jsonb';
-  EXECUTE $i$INSERT INTO public.model_config (seat, provider, role, api_model, max_tokens, active, notes) VALUES
- ('alt_haiku', 'openrouter', 'alternate', 'anthropic/claude-haiku-5.5', 32000, true, 'BB-6904 (g) first alternate judge (operator, recorded BB-6981): Claude Haiku 5.5, reasoning effort max, never a debater. Id per BB-6984, confirmed by the qualify runs.'),
- ('alt_minimax', 'openrouter', 'alternate', 'minimax/minimax-m3.1-flash', 32000, true, 'BB-6904 (g) second alternate judge (operator, recorded BB-6981): MiniMax M3.1 Flash, paid route, reasoning effort max. Id per BB-6984, confirmed by the qualify runs.')$i$;
-  EXECUTE $f$CREATE OR REPLACE FUNCTION public.odv1_record_panel_alternates(p_debate_id uuid, p_alternates jsonb, p_drv_removed jsonb, p_g1_by_maker boolean DEFAULT true)
+  EXECUTE $i$INSERT INTO public.model_config (seat, provider, role, api_model, max_tokens, active, notes) VALUES ('alt_minimax31', 'openrouter', 'alternate', 'minimax/minimax-m3.1-flash', 32000, true, 'BB-6904 (g) alternate judge (pool ruled BB-6991): MiniMax M3.1 Flash, paid route, reasoning effort max; qualified on the dry runs of 27191, 27088, 27259.');
+INSERT INTO public.model_config (seat, provider, role, api_model, max_tokens, active, notes) VALUES ('alt_minimax3', 'openrouter', 'alternate', 'minimax/minimax-m3', 32000, true, 'BB-6904 (g) alternate judge (pool ruled BB-6991): MiniMax M3, reasoning effort max; qualified on the dry runs of 27191, 27088, 27259.');$i$;
+  EXECUTE $f$CREATE OR REPLACE FUNCTION public.odv1_record_panel_alternates(p_debate_id uuid, p_alternates jsonb, p_drv_removed jsonb, p_g1_by_maker boolean DEFAULT false)
  RETURNS jsonb
  LANGUAGE plpgsql
  SECURITY DEFINER
@@ -20,7 +20,7 @@ AS $function$
   -- seated debater's model (and, when p_g1_by_maker, never its maker); G2 never the model of the seat it replaces; G3 never a model
   -- already on the panel, and the alternates distinct. At most two (the pool holds two). Every refusal raises.
 DECLARE
-  v_pool constant text[] := ARRAY['alt_haiku','alt_minimax'];
+  v_pool constant text[] := ARRAY['alt_minimax31','alt_minimax3'];
   r record; a jsonb; i int; v_n int; v_new text[]; v_used text[] := ARRAY[]::text[];
   v_rm text; v_alt text; v_am text; v_amk text; v_rmm text; v_deb_m text[]; v_deb_k text[]; v_pan_m text[];
 BEGIN
@@ -70,36 +70,34 @@ BEGIN
   RETURN jsonb_build_object('ok', true, 'written', true, 'panel_expected', v_new);
 END;
 $function$$f$;
-  -- 1. empty: ok, nothing written
-  r := r || jsonb_build_object('t1_empty', odv1_record_panel_alternates(D, '[]'::jsonb, '[]'::jsonb, true));
-  -- 2. judgment rows exist: refused
-  BEGIN x := odv1_record_panel_alternates(D, '[{"removed_seat":"grok","alternate_seat":"alt_minimax","alternate_api_model":"minimax/minimax-m3.1-flash"}]', rm, true); r := r || jsonb_build_object('t2_rows_exist','NOT REFUSED');
+  r := r || jsonb_build_object('md5_fn', left(md5(pg_get_functiondef('odv1_record_panel_alternates(uuid,jsonb,jsonb,boolean)'::regprocedure)),8));
+  r := r || jsonb_build_object('t1_empty', odv1_record_panel_alternates(D, '[]'::jsonb, '[]'::jsonb, false));
+  BEGIN x := odv1_record_panel_alternates(D, ('['||M31||']')::jsonb, '[{"seat":"grok"}]', false); r := r || jsonb_build_object('t2_rows_exist','NOT REFUSED');
   EXCEPTION WHEN others THEN r := r || jsonb_build_object('t2_rows_exist', SQLERRM); END;
   DELETE FROM debate_judgments WHERE debate_id = D;
-  -- 3. G1 by maker: Haiku against a Claude debater (claude_synthesis, anthropic): refused
-  BEGIN x := odv1_record_panel_alternates(D, '[{"removed_seat":"grok","alternate_seat":"alt_haiku","alternate_api_model":"anthropic/claude-haiku-5.5"}]', '[{"seat":"grok"}]', true); r := r || jsonb_build_object('t3_g1_maker','NOT REFUSED');
-  EXCEPTION WHEN others THEN r := r || jsonb_build_object('t3_g1_maker', SQLERRM); END;
-  -- 4. a payload model that is not model_config's: refused
-  BEGIN x := odv1_record_panel_alternates(D, '[{"removed_seat":"grok","alternate_seat":"alt_minimax","alternate_api_model":"minimax/other"}]', rm, true); r := r || jsonb_build_object('t4_model_mismatch','NOT REFUSED');
+  BEGIN x := odv1_record_panel_alternates(D, '[{"removed_seat":"grok","alternate_seat":"alt_minimax31","alternate_api_model":"minimax/other"}]', '[{"seat":"grok"}]', false); r := r || jsonb_build_object('t4_model_mismatch','NOT REFUSED');
   EXCEPTION WHEN others THEN r := r || jsonb_build_object('t4_model_mismatch', SQLERRM); END;
-  -- 5. removed seat not on the panel: refused
-  BEGIN x := odv1_record_panel_alternates(D, '[{"removed_seat":"qwen","alternate_seat":"alt_minimax","alternate_api_model":"minimax/minimax-m3.1-flash"}]', '[{"seat":"qwen"}]', true); r := r || jsonb_build_object('t5_not_on_panel','NOT REFUSED');
+  BEGIN x := odv1_record_panel_alternates(D, '[{"removed_seat":"qwen","alternate_seat":"alt_minimax31","alternate_api_model":"minimax/minimax-m3.1-flash"}]', '[{"seat":"qwen"}]', false); r := r || jsonb_build_object('t5_not_on_panel','NOT REFUSED');
   EXCEPTION WHEN others THEN r := r || jsonb_build_object('t5_not_on_panel', SQLERRM); END;
-  -- 6. the same pool seat twice (G3): refused
-  BEGIN x := odv1_record_panel_alternates(D, '[{"removed_seat":"grok","alternate_seat":"alt_minimax","alternate_api_model":"minimax/minimax-m3.1-flash"},{"removed_seat":"gemini","alternate_seat":"alt_minimax","alternate_api_model":"minimax/minimax-m3.1-flash"}]', '[{"seat":"grok"},{"seat":"gemini"}]', false); r := r || jsonb_build_object('t6_g3_twice','NOT REFUSED');
-  EXCEPTION WHEN others THEN r := r || jsonb_build_object('t6_g3_twice', SQLERRM); END;
-  -- 7. three alternates: refused
-  BEGIN x := odv1_record_panel_alternates(D, '[{},{},{}]', '[{},{},{}]', true); r := r || jsonb_build_object('t7_three','NOT REFUSED');
+  BEGIN x := odv1_record_panel_alternates(D, ('['||M31||','||replace(M31,'"grok"','"gemini"')||']')::jsonb, '[{"seat":"grok"},{"seat":"gemini"}]', false); r := r || jsonb_build_object('t6_same_twice','NOT REFUSED');
+  EXCEPTION WHEN others THEN r := r || jsonb_build_object('t6_same_twice', SQLERRM); END;
+  BEGIN x := odv1_record_panel_alternates(D, '[{},{},{}]', '[{},{},{}]', false); r := r || jsonb_build_object('t7_three','NOT REFUSED');
   EXCEPTION WHEN others THEN r := r || jsonb_build_object('t7_three', SQLERRM); END;
-  -- 8. removed ruling naming another seat: refused
-  BEGIN x := odv1_record_panel_alternates(D, '[{"removed_seat":"grok","alternate_seat":"alt_minimax","alternate_api_model":"minimax/minimax-m3.1-flash"}]', '[{"seat":"gemini"}]', true); r := r || jsonb_build_object('t8_ruling_seat','NOT REFUSED');
+  BEGIN x := odv1_record_panel_alternates(D, ('['||M31||']')::jsonb, '[{"seat":"gemini"}]', false); r := r || jsonb_build_object('t8_ruling_seat','NOT REFUSED');
   EXCEPTION WHEN others THEN r := r || jsonb_build_object('t8_ruling_seat', SQLERRM); END;
-  -- 9. G1 by model only (switch false): Haiku may sit against a Sonnet debater; two alternates, distinct: accepted
-  BEGIN x := odv1_record_panel_alternates(D, '[{"removed_seat":"grok","alternate_seat":"alt_minimax","alternate_api_model":"minimax/minimax-m3.1-flash"},{"removed_seat":"gemini","alternate_seat":"alt_haiku","alternate_api_model":"anthropic/claude-haiku-5.5"}]', '[{"seat":"grok"},{"seat":"gemini"}]', false);
-    r := r || jsonb_build_object('t9_two_by_model', x, 't9_row', (SELECT jsonb_build_object('panel_expected', panel_expected, 'drv_removed_n', jsonb_array_length(drv_removed), 'panel_substitution', panel_substitution) FROM debate_results WHERE id = D));
-  EXCEPTION WHEN others THEN r := r || jsonb_build_object('t9_two_by_model', 'REFUSED: '||SQLERRM); END;
-  -- 10. a second write: refused
-  BEGIN x := odv1_record_panel_alternates(D, '[{"removed_seat":"deepseek","alternate_seat":"alt_minimax","alternate_api_model":"minimax/minimax-m3.1-flash"}]', '[{"seat":"deepseek"}]', true); r := r || jsonb_build_object('t10_second_write','NOT REFUSED');
+  BEGIN x := odv1_record_panel_alternates(D, '[{"removed_seat":"grok","alternate_seat":"alt_haiku","alternate_api_model":"anthropic/claude-haiku-5.5"}]', '[{"seat":"grok"}]', false); r := r || jsonb_build_object('t11_haiku_not_in_pool','NOT REFUSED');
+  EXCEPTION WHEN others THEN r := r || jsonb_build_object('t11_haiku_not_in_pool', SQLERRM); END;
+  -- G1 by model and by maker: inside the block only, the mimo debater's row is pointed at M3.
+  UPDATE model_config SET api_model = 'minimax/minimax-m3' WHERE seat = 'mimo';
+  BEGIN x := odv1_record_panel_alternates(D, ('['||M3||']')::jsonb, '[{"seat":"gemini"}]', false); r := r || jsonb_build_object('t12_g1_by_model','NOT REFUSED');
+  EXCEPTION WHEN others THEN r := r || jsonb_build_object('t12_g1_by_model', SQLERRM); END;
+  BEGIN x := odv1_record_panel_alternates(D, ('['||M31||']')::jsonb, '[{"seat":"grok"}]', true); r := r || jsonb_build_object('t13_g1_by_maker_switch_true','NOT REFUSED');
+  EXCEPTION WHEN others THEN r := r || jsonb_build_object('t13_g1_by_maker_switch_true', SQLERRM); END;
+  UPDATE model_config SET api_model = 'mimo-v2.6-pro' WHERE seat = 'mimo';
+  BEGIN x := odv1_record_panel_alternates(D, ('['||M31||','||M3||']')::jsonb, '[{"seat":"grok"},{"seat":"gemini"}]', false);
+    r := r || jsonb_build_object('t9_two', x, 't9_row', (SELECT jsonb_build_object('panel_expected', panel_expected, 'drv_removed_n', jsonb_array_length(drv_removed), 'panel_substitution', panel_substitution) FROM debate_results WHERE id = D));
+  EXCEPTION WHEN others THEN r := r || jsonb_build_object('t9_two', 'REFUSED: '||SQLERRM); END;
+  BEGIN x := odv1_record_panel_alternates(D, '[{"removed_seat":"deepseek","alternate_seat":"alt_minimax31","alternate_api_model":"minimax/minimax-m3.1-flash"}]', '[{"seat":"deepseek"}]', false); r := r || jsonb_build_object('t10_second_write','NOT REFUSED');
   EXCEPTION WHEN others THEN r := r || jsonb_build_object('t10_second_write', SQLERRM); END;
   RAISE EXCEPTION 'RESULT %', r;
 END $t$;

@@ -14,7 +14,7 @@ const judges=S.panel_order.map(k=>{const x=need(k);return {seat:k,fam:JFAM[k],ap
 // PANEL FALLBACK (BB-5693): the reserve judge, built as the three are; none when no seat is free or its model_config row is missing.
 const reserve=(S.panel_reserve&&M[S.panel_reserve]&&M[S.panel_reserve].api_model&&Number(M[S.panel_reserve].max_tokens)>0)?{seat:S.panel_reserve,fam:JFAM[S.panel_reserve],api_model:M[S.panel_reserve].api_model,max_tokens:Math.max(Number(M[S.panel_reserve].max_tokens)||0,4000)}:null;
 // ALTERNATES (step 7): the pool, in Init Seats' order, from the ACTIVE model_config rows; a pool seat without a row is left out
-// (no alternate from it). Every pool model runs on OpenRouter at maximum reasoning effort (operator, 6978/6981).
+// (no alternate from it). Every pool model runs on OpenRouter at maximum reasoning effort (operator, 6978; pool 6991).
 const makerOf=(fam,model)=>{const m=String(model||'');if(m.indexOf('/')>0)return m.split('/')[0].toLowerCase();return ({anthropic:'anthropic',openai:'openai',gemini:'google',grok:'xai',mimo:'xiaomi',deepseek:'deepseek',openrouter:'openrouter'})[fam]||fam;};
 const alternates=(S.alt_pool||[]).filter(k=>M[k]&&M[k].api_model&&Number(M[k].max_tokens)>0).map(k=>({seat:k,fam:'openrouter',api_model:M[k].api_model,max_tokens:Math.max(Number(M[k].max_tokens)||0,8000),maker:makerOf('openrouter',M[k].api_model)}));
 const debaters=[D,C].map(x=>({engine:x.engine,model:x.model,maker:makerOf(x.fam,x.model)}));
