@@ -34,7 +34,7 @@ ok(/has no family in model_config/.test(throws(()=>run(src('Resolve_Seats'),rsMa
 const famJ=MC.map(x=>x.seat==='grok'?{...x,family:'anthropic'}:x);ok(/judge seat "grok" is of family anthropic, which debates/.test(throws(()=>run(src('Resolve_Seats'),rsMap(famJ),[{}]))),'a panel judge of a debating family fails the run closed (Claude never judges Claude)');
 const a1r={...a1,panel_reserve:'mimo'};const famR=MC.map(x=>x.seat==='mimo'?{...x,family:'openai'}:x);
 ok(run(src('Resolve_Seats'),rsMap(MC,a1r),[{}])[0].reserve.seat==='mimo'&&run(src('Resolve_Seats'),rsMap(famR,a1r),[{}])[0].reserve===null,'a reserve of a debating family is dropped (no reserve), otherwise kept');
-onsole.log('# Alternate Needed?, Calls?, Cure Needed?');
+console.log('# Alternate Needed?, Calls?, Cure Needed?');
 const pl=(seat,model,drv)=>JSON.stringify({payload:{debate_id:'d',judge_seat:seat,judge_api_model:model,verdict_raw:'X '+seat,verdict_tag:'BROKEN',defense_standing:'PROP-DEPENDENT',challenge_standing:'PROP-DEPENDENT',drv_uncured:drv}});
 const PPof=drvs=>({run_token:'t',debate_id:'d',bodies:[pl('gemini','gemini-3.1-pro-preview',drvs[0]),pl('grok','grok-4.7',drvs[1]),pl('mimo','mimo-v2.6-pro',drvs[2])],summary:['gemini','grok','mimo'].map(s=>({seat:s,drv:[],substitute:false})),substitution:null,panel_effective:['gemini','grok','mimo']});
 const need=node('Alternate Needed?').parameters.conditions.conditions[0].leftValue;

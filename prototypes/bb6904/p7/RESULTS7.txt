@@ -12,3 +12,48 @@ PASS debaters with their family from model_config.family
 PASS a seat without a family fails closed (6993)
 PASS a panel judge of a debating family fails the run closed (Claude never judges Claude)
 PASS a reserve of a debating family is dropped (no reserve), otherwise kept
+# Alternate Needed?, Calls?, Cure Needed?
+PASS Alternate Needed?: false when every seat is clean; true with an uncured seat or on a qualify run
+PASS Alternate Calls?: per item, a skip item false, a call item true
+# Alternate Build
+PASS one removed seat: the first permanent alternate (M3.1 Flash) sits
+PASS the call: removed seat, slot, OpenRouter id, effort max
+PASS fresh read: the removed seat's own rulebook and transcript only, not its answer
+PASS G1 by family (kept as a guard; MiniMax never debates, so it cannot fire live): both alternates refused, the seat stays not counted
+PASS three removed seats: two alternates, distinct (G3); the third is a skip carried on every item, naming G3
+PASS an empty pool (both failed qualification): one skip item, reason named
+PASS G2: the removed seat's own model (M3.1 Flash) is refused; M3 sits
+PASS qualify run: the named one of the two in all three seats, distinct seat names, G3 not applied (6983 note 1)
+PASS a removed reserve seat: its rulebook read from Reserve Build
+# Alternate Payloads (never throws)
+PASS a readable answer: payload for the alternate seat, drv_uncured = its items (fail-closed)
+PASS a failed call (a wrong id): not ok, reason named, no throw
+PASS an unreadable answer and an out-of-set tag: not ok, no throw
+PASS clean answers: ok, no items, the alternate marked in its text
+PASS Alternate Cure Needed?: false when no answered alternate has items; true when one does
+# Alternate Merge
+PASS clean alternates take the removed seats; the counted seat stays
+PASS panel_effective and summary name the alternates
+PASS the removed rulings kept whole (6904 g), with who replaced them
+PASS an alternate with uncured items and no cure reply: not seated; the removed seat stays, still not counted; no second alternate
+PASS an alternate whose items are all cured in the fixed form: seated, drv_uncured 0, its report lines kept
+PASS only skips: bodies unchanged, the skip recorded
+PASS no alternate path run: the panel item passes on unchanged
+PASS qualify run: all three readings take the seats for the replay rows; nothing recorded for a live write
+# Panel Done (Record Alternates checked)
+PASS no alternate: Record Alternates ok, written false: passes
+PASS Record Alternates not ok: fails closed
+PASS alternates seated but not written: fails closed
+# Format Markdown (stored drv_removed)
+PASS one line per removed seat from the stored row
+PASS no drv_removed: nothing added (the step 6 harness h6 also passes 22/22 on this file)
+failures 0
+
+# test7.sql (migration7.sql executed whole in one rolled-back DO block; then odv1_record_panel_alternates on 27259)
+md5 of the function in the block b5a9ad07 = the file's. Family backfill: 12 rows (10 existing, 2 alternates), 0 without a family.
+t1 empty: ok, written false. t2 judgment rows present: refused. t4 payload model not the constant: refused. t5 removed seat not on
+the panel: refused. t6 the same alternate twice: refused. t7 three: refused. t8 removed ruling naming another seat: refused.
+t11 alt_haiku: "not one of the permanent alternates". t12 a debater of family minimax (mimo's family set to minimax in the block):
+refused, G1 by family. t13 a debater without a family: refused. t9 two alternates, distinct: accepted; panel_expected
+{alt_minimax3, alt_minimax31, deepseek}; drv_removed 2; panel_substitution null. t10 a second write: refused.
+After: no new column, row, function or view; model_config 10 rows; 27259 keeps 3 judgment rows.
