@@ -22,8 +22,8 @@ def callnode(name,fam,pos):
     'onError':'continueRegularOutput','retryOnFail':False}
  return n
 nodes=[];x0,y0=N['Extract Independent Verdict']['position'];px,py=N['Panel Payloads']['position']
-for pre,base,(x,y),bld,nrm,chk,need in [('',  'S',(x0,y0+400),SINGLE_BUILD,'Cure Normalize',SINGLE_CHECK,"={{ ($json.debate_rule_violations||[]).some(x=>x.rule==='K-B') }}"),
-                                        ('Panel ','P',(px,py+400),PANEL_BUILD,'Panel Cure Normalize',PANEL_CHECK,"={{ ($json.summary||[]).some(s=>(s.drv||[]).some(x=>x.rule==='K-B')) }}")]:
+for pre,base,(x,y),bld,nrm,chk,need in [('',  'S',(x0,y0+400),SINGLE_BUILD,'Cure Normalize',SINGLE_CHECK,"={{ ($json.debate_rule_violations||[]).length>0 }}"),
+                                        ('Panel ','P',(px,py+400),PANEL_BUILD,'Panel Cure Normalize',PANEL_CHECK,"={{ ($json.summary||[]).some(s=>(s.drv||[]).length>0) }}")]:
  nodes.append(ifnode(pre+'Cure Needed?',need,[x,y]))
  nodes.append(codenode(pre+'Cure Build',code(bld),[x+200,y]))
  nodes.append(routenode(pre+'Cure Route',[x+400,y]))
