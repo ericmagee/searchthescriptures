@@ -83,5 +83,8 @@ PASS ops7 vs file: refused, naming it
 PASS missing reference: refused, naming it
 PASS p7 drops a p4 change: refused, naming it
 PASS superseded leaf loses the moved read: refused, naming it
+PASS unpinned source: refused, naming it
+PASS pin older than the checkout: refused, naming it
 PASS connection to missing node: refused, naming it
+PASS dirty checkout: refused, naming it
 failures 0

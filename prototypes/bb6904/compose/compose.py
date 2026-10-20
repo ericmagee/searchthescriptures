@@ -10,14 +10,24 @@
 #   - the live file is not version db281705.
 # Usage: python3 compose.py <live workflow details json (db281705)> <repo root> <out dir>
 import json,sys,os,hashlib,subprocess,copy,re
+fail=[]
 md5=lambda s:hashlib.md5((s if s.endswith('\n') else s+'\n').encode()).hexdigest()[:8]
 LIVE,REPO,OUT=sys.argv[1:4];os.makedirs(OUT,exist_ok=True)
 def show(rev,path):return subprocess.run(['git','-C',REPO,'show',rev+':'+path],capture_output=True,text=True,check=True).stdout
 def ls(rev,folder):return [l for l in subprocess.run(['git','-C',REPO,'ls-tree','--name-only',rev,folder+'/'],capture_output=True,text=True,check=True).stdout.split('\n') if l]
-fail=[];err=lambda m:fail.append(m)
+err=lambda m:fail.append(m)
 P='prototypes/bb6904/'
 E_REV='404300a' # Worker_E's builds p2, p4, p5b, p7, pinned (BB-7024 AMEND 1): the last commit that changed any of them
 REVS={'p2':E_REV,'p3':'0b3cbac','p4':E_REV,'p5b':E_REV,'p6':'d0d5aab','p7':E_REV}
+# Pinned and clean (BB-7025 item 2a): every source is a commit id (never a branch or HEAD) that resolves; and where a source folder
+# exists in this checkout, its files must equal the pinned commit's (a folder edited after pinning fails until re-pinned).
+for tag,rev in REVS.items():
+ if not re.fullmatch(r'[0-9a-f]{7,40}',rev):fail.append('source %s is not pinned to a commit id: %s'%(tag,rev));continue
+ if subprocess.run(['git','-C',REPO,'rev-parse','--verify','-q',rev+'^{commit}'],capture_output=True).returncode:fail.append('source %s: commit %s not found'%(tag,rev));continue
+ if os.path.isdir(os.path.join(REPO,P+tag)):
+  d=subprocess.run(['git','-C',REPO,'status','--porcelain','--',P+tag],capture_output=True,text=True).stdout.strip()
+  c=subprocess.run(['git','-C',REPO,'diff','--quiet',rev,'--',P+tag],capture_output=True).returncode
+  if d or c:fail.append('source %s: the checkout differs from the pinned commit %s (dirty or changed since); re-pin or restore'%(tag,rev))
 # The one source of each changed Code node.
 SRC=[
  ('Build Independent Verdict',('p2','p2/Build_Independent_Verdict.new.js')),
