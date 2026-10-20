@@ -18,7 +18,7 @@ U5 drop the three columns (advisor's word only); U6 original CHECK (stops if a F
   a simulated publish of the seven files PASSES; the same with one extra node changed FAILS.
 - A6 `a6_j4_step3_rewrite_narrow.sql`: replaces bb6819 step 3 (its fixed 54-row list is stale). Every FORGED row saved before
   __T_PUB__ becomes FOOTED; refuses if a FORGED row was saved after it; CHECK narrowed. falsifier.sql before and after.
-- Then (6853): ODV1-TEST derive rows; dry regrades of 27191, then 27088; the live run on the operator's word.
+- Then (6853): ODV1-TEST derive rows; dry regrades of 27191, then 27088; the live run once approved.
 
 ## Why this order
 The CHECK is widened before the publish, so a save from either flow passes. The columns exist before the new Build Save Body writes them.
