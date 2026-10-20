@@ -7,9 +7,9 @@ The debate flow's judges are to be held to the same rule as the debaters (the co
 order: the paragraph the judges will read; the checks the system runs on every judgment; the one cure the judge is offered; what
 happens when a line is not cured; the two alternate judges; the report a reader sees; the cost; and the limits we know of. At the
 end are the choices.
-Three debates are named below by order. All three were held on 20 October on the question "Did Christ have a
-biological father?", MiMo defending and Claude challenging: the first (run 27088), the second (run 27191) and the third (run
-27259).
+Three debates are named below by order. All three were held on the question "Did Christ have a biological father?", MiMo
+defending and Claude challenging: the first on 19 October at 22:03 CDT (run 27088), the second on 20 October at 12:06 CDT (run
+27191) and the third on 20 October at 15:47 CDT (run 27259). The times are when each debate was stored.
 
 1. WHAT THE JUDGES ARE TOLD
 Every judge (the single judge and each of the three panel judges) receives this paragraph, placed after the existing rule that a
@@ -87,8 +87,6 @@ When a panel judge is not counted, an alternate takes its seat (BB-6998, items 3
   every model now listed), two documentation rows for the alternates, a stored place for the removed rulings, the function that
   records an alternate before any judgment is written (it refuses any alternate that breaks the rules above), and the repeat-removal
   query. The undo removes all of them.
-[Worker_A3's verify of this build found one defect: two debaters on the same engine made the alternate record fail (BB-7013). It
-is fixed and re-tested in a rolled-back block; Worker_A3's re-verify is pending. This line is removed before the text is sent.]
 
 6. WHAT A READER SEES
 Each violation becomes one report line in the stored judgment: the judge, the item, the rule, the result (CURED or UNCURED), the

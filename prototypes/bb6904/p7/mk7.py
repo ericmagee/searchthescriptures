@@ -1,7 +1,7 @@
 # BB-6904 (g), step 7 build: the alternate path as a draft change set. Writes ops7.json and one .js per
 # new or changed Code node. Applies nothing. Built on: portion 3 + 5B Panel Payloads (p5b/out), portion 4 (p4: ops.json, cure lib),
-# step 6 (Worker_A3, 2cc49d8: cure_lib.js, Format_Markdown.js).
-# Usage: python3 mk7.py <live details json (db281705)> <p4 dir> <p5b out dir> <step 6 out dir (2cc49d8)> <out dir>
+# step 6 (Worker_A3, rev 4 d0d5aab: cure_lib.js, Format_Markdown.js).
+# Usage: python3 mk7.py <live details json (db281705)> <p4 dir> <p5b out dir> <step 6 out dir (rev 4, d0d5aab)> <out dir>
 import json,sys,hashlib,os,copy
 from bodies7 import *
 md5=lambda s:hashlib.md5((s if s.endswith('\n') else s+'\n').encode()).hexdigest()
@@ -11,8 +11,6 @@ LIVE,P4,P5B,P6,OUT=sys.argv[1:6];os.makedirs(OUT,exist_ok=True)
 w=json.load(open(LIVE))['workflow'];N={n['name']:n for n in w['nodes']}
 ops4=json.load(open(os.path.join(P4,'ops.json')))
 blk=open(os.path.join(P4,'drv_block_0b3cbac.js')).read();lib=open(os.path.join(P6,'cure_lib.js')).read()
-# 7014: the cure sentence ruled for 7010, applied by anchor to step 6's cure_lib (Worker_A3's file is not edited).
-lib=once(lib,'A line that is not cured leaves that ground uncounted toward BROKEN.";','A line that is not cured leaves the violation standing, and this judgment is then not counted.";','cure sentence (7014)')
 lib_code=lambda body:blk+'\n'+lib+'\n'+body.strip()+'\n'
 pp=open(os.path.join(P5B,'Panel_Payloads.js')).read();k=pp.index('const bodies=[];const summary=[];');helpers=pp[:k]
 res={};files={}
@@ -75,7 +73,7 @@ FM_ADD=("// ALTERNATES (BB-6904 g, step 7): a seat not counted for an uncured vi
  "if(DRM.length){t += '## Alternate judges\\n\\n';DRM.forEach(x=>{t += '- ' + nm(x.seat) + ' was not counted (' + (x.drv_uncured||0) + ' debate rule violation(s) not cured); ' + (ALTN[x.replaced_by]||nm(x.replaced_by)) + ' (' + String(x.replaced_by_model||'') + ') sat in its place.\\n';});t += '\\n';}\n")
 fm2=once(fm,FM_ANCHOR,FM_ADD+FM_ANCHOR,'Format Markdown');save('Format Markdown',fm2)
 edits.append({'node':'Format Markdown','parameters':{**N['Format Markdown']['parameters'],'jsCode':fm2}})
-json.dump({'base':w['versionId'],'on_top_of':['p3 0b3cbac','p4 serial slots (BB-6987)','p6 2cc49d8','p5b'],'nodes_add':nodes,'connections_remove':conn_remove,'connections_add':conn_add,'edits':edits},open(os.path.join(OUT,'ops7.json'),'w'),indent=1,ensure_ascii=False)
+json.dump({'base':w['versionId'],'on_top_of':['p3 0b3cbac','p4 serial slots (BB-6987)','p6 rev 4 d0d5aab','p5b'],'nodes_add':nodes,'connections_remove':conn_remove,'connections_add':conn_add,'edits':edits},open(os.path.join(OUT,'ops7.json'),'w'),indent=1,ensure_ascii=False)
 # 6. Migration and undo.
 mig=open(os.path.join(os.path.dirname(os.path.abspath(__file__)),'migration7.sql')).read()
 print('nodes added',len(nodes),'| connections -',len(conn_remove),'+',len(conn_add),'| named-read edits',[(e['node'],e.get('count')) for e in edits if e.get('count')])
