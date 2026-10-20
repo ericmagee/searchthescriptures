@@ -155,9 +155,12 @@ function cureVerdicts(items,reply,broken,rounds){const U=s=>String(s).toUpperCas
    if(miss.length)return res('UNCURED',(sv[0]==='SELF-SUPPORTED'?'standing kept SELF-SUPPORTED; ':'')+'no WITHDRAWN line for '+miss.join(', '),ss.map(s=>s.line).concat(wl));
    return res('CURED','withdrawn: '+need.join(', '),wl);}
   return res('UNCURED','unknown rule',null);});}
-const cureSafe=s=>String(s).replace(/\[/g,'(').replace(/\]/g,')');
-function cureReport(seat,v){return v.map(x=>'[AUDIT v21: DEBATE RULE VIOLATION REPORT -- '+(seat?seat+' ':'')+(x.rule==='K-G3'?x.side:x.link)+' ('+x.rule+'): '+x.status
- +(x.kinds&&x.kinds.length?' ('+x.kinds.join(', ')+')':'')+(x.why?'; '+cureSafe(x.why):'')+(x.statement?'. STATEMENT: '+cureSafe(x.statement.slice(0,600)):'')+']');}
+const cureSafe=s=>String(s).replace(/\[/g,'(').replace(/\]/g,')').replace(/;(\s*(?:SEAT|ITEM|RULE|RESULT|KINDS|WHY|LINE|STATEMENT):)/g,',$1');
+// Report line (step 6, 6904 e): fixed fields in fixed order, read back by Format Markdown. SEAT (panel only), ITEM, RULE, RESULT, then
+// KINDS, WHY, LINE (the judge's original line, cut at 300 characters with "...") and STATEMENT when present; judge text has its brackets made round and any "; KEY:" broken.
+function cureReport(seat,v){return v.map(x=>'[AUDIT v21: DEBATE RULE VIOLATION REPORT -- '+(seat?'SEAT: '+seat+'; ':'')+'ITEM: '+(x.rule==='K-G3'?x.side+' STANDING':x.link)+'; RULE: '+x.rule+'; RESULT: '+x.status
+ +(x.kinds&&x.kinds.length?'; KINDS: '+x.kinds.join(', '):'')+(x.why?'; WHY: '+cureSafe(x.why):'')+(x.line?'; LINE: '+cureSafe((l=>l.length>300?l.slice(0,297)+'...':l)(String(x.line).replace(/\s+/g,' ').trim())):'')
+ +(x.statement?'; STATEMENT: '+cureSafe(x.statement.slice(0,600)):'')+']');}
 // The prose of the reply, recorded once and never read for a cure (BB-6952). Empty when the reply has no prose or the call failed.
 function cureProse(seat,reply){const p=reply&&reply.ok?cureLines(reply.text).prose.join(' ').replace(/\s+/g,' ').trim():'';
  return p?['[AUDIT v21: DEBATE RULE VIOLATION REPLY -- '+(seat?seat+' ':'')+'prose recorded, not read for a cure: '+cureSafe(p.slice(0,600))+']']:[];}

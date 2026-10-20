@@ -29,7 +29,9 @@ def callnode(name,body,pos):
   return {'name':name,'type':j['type'],'typeVersion':j['typeVersion'],'position':pos,'parameters':p,'credentials':j.get('credentials'),'onError':'continueRegularOutput','retryOnFail':False}
 # The Normalize code of a panel cure slot (BB-6987), pointed at Alternate Cure Build. The alternates all run on one OpenRouter call
 # node, so its items reach Alternate Cure Normalize in one run; no fan-out join.
-NORM=[n for n in ops4['nodes_add'] if n['name']=='Panel Cure Normalize 1'][0]['parameters']['jsCode']
+# Step 6 rev 4 patched the cure nodes' embedded lib (cureReport form); take its Normalize 1 so one lib version is composed (7022 item 4).
+_N6=os.path.join(P6,'Panel_Cure_Normalize_1.js')
+NORM=open(_N6).read() if os.path.exists(_N6) else [n for n in ops4['nodes_add'] if n['name']=='Panel Cure Normalize 1'][0]['parameters']['jsCode']
 NORM=NORM.replace("$('Panel Cure Build 1')","$('Alternate Cure Build')");assert NORM.count("$('Alternate Cure Build')")==2
 nodes=[ifnode('Alternate Needed?',ALT_NEED,[x0-900,y0+700]),
  codenode('Alternate Build',lib_code(ALT_BUILD),[x0-700,y0+700]),
