@@ -1,0 +1,11 @@
+# A4 NODES for the one publish (BB-6795 J2, J3, J4, J6, J7). Base: live af3c8f7c. Sources: Worker_E's branch claude/untitled-9jle0o at git 85bd79b.
+# md5 = md5 of the node code plus one newline. Every node not listed (172 of 180) stays byte for byte as in af3c8f7c.
+# node                         | live md5 (af3c8f7c) | target md5 | source file at 85bd79b                               | carries
+Build Independent Verdict      | 3b8684e2            | 8513e9ae   | prototypes/bb6839/Build_Independent_Verdict.new.js   | J4, J3, J6 (tag ODV1-A2)
+Panel Build                    | 34384f99            | e91f47e0   | prototypes/bb6839/Panel_Build.new.js                 | J4, J3, J6
+Extract Independent Verdict    | ecc39c4c            | 489b62e5   | prototypes/bb6839/Extract_Independent_Verdict.new.js | J4, J6 (with the 6850 fix)
+Build Save Body                | a1a6d0ec            | 3dc5785e   | prototypes/bb6839/Build_Save_Body.new.js             | J4, J2, J6
+Citation Scan                  | a93f7fa6            | 2a7678fe   | prototypes/bb6822/Citation_Scan.new.js               | J2
+Quote Compare                  | ff21bde4            | 9d42661c   | prototypes/bb6822/Quote_Compare.new.js               | J2
+Init with Guards               | ce368972            | 7b56c52f   | prototypes/bb6840/Init_with_Guards.new.js            | J7
+Quote Report                   | 826951f3            | 826951f3   | (unchanged)                                          | read in verify only
