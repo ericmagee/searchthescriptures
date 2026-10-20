@@ -1,4 +1,5 @@
 BB-6904 step 6 (Worker_A3): (e) report shape, (f) cost. Drafts only; nothing written to the flow.
+Rev 2: 6966 notes 1-3 taken (per-call seconds labelled derived; real challenger conceded and standing in cost.cjs and h6.cjs; [L2] in the prompt's words; DRV_EFFECT states option 2, ruled in 6965).
 Built by: python3 mk6.py <live db281705 details json, read 15:50:44 CDT> <Worker_E p4 at 9106eda> out
 cure_lib.js              93b3e538 -> 665a834f  +557 chars
 Cure_Build.js            1d9360f4 -> 8ec7d62f  +557 chars
@@ -7,7 +8,7 @@ Cure_Check.js            4691a1f5 -> 20bd6b01  +557 chars
 Panel_Cure_Build.js      fb5dcda3 -> 4a521a25  +557 chars
 Panel_Cure_Normalize.js  acebea35 -> f3cabd23  +557 chars
 Panel_Cure_Check.js      eea618ea -> 1df7cc57  +557 chars
-Format Markdown          726810f0 -> a61f34b6  +3002 chars
+Format Markdown          726810f0 -> ede7db49  +3236 chars
 Build Save Body          3dc5785e -> cb28a06d  +914 chars
 Panel Tokens             a8fccdbe -> 4bc7f43a  +760 chars
 
@@ -15,7 +16,7 @@ Worker_E's harness with one line changed for the new report form (harness6.cjs, 
 failures 0 of 72 checks passing
 
 h6.cjs (live beside draft):
-PASS F1 no report lines stored: markdown byte-identical to live (21579 chars)
+PASS F1 no report lines stored: markdown byte-identical to live (21574 chars)
 PASS F1 with reports: the draft adds only the new section; everything else equals live
 PASS Section sits after the Result table and citation check, before "How to read"
 PASS One table row per report line (17 rows, 17 items)
@@ -27,7 +28,8 @@ PASS A "; LINE:" inside the statement stays in the statement, not a field
 PASS gemini: every row UNCURED, the failed call named
 PASS grok (prose only): every row UNCURED
 PASS Prose note names grok only
-PASS Effect line reads record only (DRV_EFFECT, until the operator chooses 6904 d)
+PASS Effect line states option 2 (BB-6965)
+PASS [L2] in the prompt's own words (6926)
 PASS Outside the section no raw report line is printed (noMarkers, as live)
 PASS Single judge row read from independent_verdict_raw
 PASS Build Save Body, no cure call: saveBody identical to live (tokens 300/30/0/15)
@@ -39,7 +41,7 @@ PASS Panel Tokens on a dry replay still writes nothing (go false), as live
 failures 0
 
 COST (cost.cjs):
-MEASURED per judge call, dry regrades: 27252 296 s, 27257 318 s; mean 307 s. Run 27259 took 41.6 min.
+DERIVED per judge call (each dry regrade's whole time divided by 3, other nodes included; 6966 note 1): 27252 296 s, 27257 318 s; mean 307 s. Run 27259 took 41.6 min.
 27259: 4 extra calls (COUNTED: the portion 3 and 4 code on the stored judgments) | input about 360k chars, about 90k tokens at 4 chars a token (ESTIMATE) | time about 20 min at one judge call each, 49% of the run (ESTIMATE); at most 60 min at the 900 s timeout
    deepseek 6 items, ask 4469
    gemini 6 items, ask 2080

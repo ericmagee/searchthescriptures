@@ -1,7 +1,7 @@
 // DEBATE RULE VIOLATIONS (BB-6904 e, step 6): one row per report line the cure check stored in a judge's text (single judge:
 // independent_verdict_raw; panel: verdict_raw), read back by its fixed fields. The judge texts above drop these lines (noMarkers).
-// DRV_EFFECT states what the report does to the verdict; it follows the operator's choice in 6904 (d) and reads "record only" until then.
-const DRV_EFFECT = 'This report is a record. It does not change any judge\'s verdict or the outcome.';
+// DRV_EFFECT states what the report does to the outcome: the operator's ruling on 6904 (d), option 2 (BB-6965).
+const DRV_EFFECT = 'A panel judge with any violation not cured is not counted in the panel result; if fewer than two panel judges are counted, the result is ungraded and goes to review. The single judge\'s violations are reported here; the single judge does not set the outcome.';
 const DRV_RULE = { 'K-B': 'Two kinds of layer (K-B)', 'K-G1': 'Conceded count (K-G1)', 'K-G3': 'Standing (K-G3)' };
 const drvCell = x => String(x == null ? '' : x).replace(/\s+/g, ' ').replace(/\|/g, '\\|').trim();
 const drvRead = (who, raw) => { const rows = []; let prose = false;
@@ -13,7 +13,7 @@ const DRV = [drvRead('Single judge: ' + SJN, r.independent_verdict_raw)].concat(
 const DRVR = [].concat(...DRV.map(x => x.rows));
 if (DRVR.length) {
   const nc = DRVR.filter(x => x.RESULT === 'CURED').length;
-  t += '## Debate rule violations\n\n**Rule B.** A link a judge grades BROKEN must show, on its own line, at least two different kinds of lower layer: [L1] the KJV words quoted, [L2] the Hebrew or Greek word, or [L3] a cross-reference named. A judge whose line did not, or whose counts or standings disagreed with its own BROKEN lines, was asked once to cure it in a fixed form, and the cure was checked by the same count.\n\n';
+  t += '## Debate rule violations\n\n**Rule B.** A link a judge grades BROKEN must show, on its own line, at least two different kinds of lower layer: [L1] the KJV words quoted, [L2] the Hebrew or Greek word in its own script, with its transliteration marks, or with its Strong\'s number; or [L3] the cross-reference named. A judge whose line did not, or whose counts or standings disagreed with its own BROKEN lines, was asked once to cure it in a fixed form, and the cure was checked by the same count.\n\n';
   t += '**Effect on the verdict.** ' + DRV_EFFECT + '\n\n';
   t += DRVR.length + (DRVR.length === 1 ? ' violation' : ' violations') + ': ' + nc + ' cured, ' + (DRVR.length - nc) + ' not cured.\n\n';
   t += '| Judge | Item | Rule | Result | Original line | Cure statement, or why not cured |\n|---|---|---|---|---|---|\n';

@@ -1,8 +1,8 @@
 ## Debate rule violations
 
-**Rule B.** A link a judge grades BROKEN must show, on its own line, at least two different kinds of lower layer: [L1] the KJV words quoted, [L2] the Hebrew or Greek word, or [L3] a cross-reference named. A judge whose line did not, or whose counts or standings disagreed with its own BROKEN lines, was asked once to cure it in a fixed form, and the cure was checked by the same count.
+**Rule B.** A link a judge grades BROKEN must show, on its own line, at least two different kinds of lower layer: [L1] the KJV words quoted, [L2] the Hebrew or Greek word in its own script, with its transliteration marks, or with its Strong's number; or [L3] the cross-reference named. A judge whose line did not, or whose counts or standings disagreed with its own BROKEN lines, was asked once to cure it in a fixed form, and the cure was checked by the same count.
 
-**Effect on the verdict.** This report is a record. It does not change any judge's verdict or the outcome.
+**Effect on the verdict.** A panel judge with any violation not cured is not counted in the panel result; if fewer than two panel judges are counted, the result is ungraded and goes to review. The single judge's violations are reported here; the single judge does not set the outcome.
 
 17 violations: 1 cured, 16 not cured.
 

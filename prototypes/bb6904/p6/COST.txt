@@ -1,4 +1,4 @@
-MEASURED per judge call, dry regrades: 27252 296 s, 27257 318 s; mean 307 s. Run 27259 took 41.6 min.
+DERIVED per judge call (each dry regrade's whole time divided by 3, other nodes included; 6966 note 1): 27252 296 s, 27257 318 s; mean 307 s. Run 27259 took 41.6 min.
 27259: 4 extra calls (COUNTED: the portion 3 and 4 code on the stored judgments) | input about 360k chars, about 90k tokens at 4 chars a token (ESTIMATE) | time about 20 min at one judge call each, 49% of the run (ESTIMATE); at most 60 min at the 900 s timeout
    deepseek 6 items, ask 4469
    gemini 6 items, ask 2080

@@ -10,15 +10,17 @@ const runCode=(src,nodes,input)=>new Function('$','$input','$execution',src)(nod
 // ---- Format Markdown on the 9 judgments of 27259 and replays (p5 rows.json); a panel of three per run.
 const rows=JSON.parse(fs.readFileSync(ROWS,'utf8'));
 const panel=rows.filter(r=>r.src==='27259');
+// Challenger conceded and standing per row (SQL, debate_judgments, 2026-10-20); rows.json carries only the defender's.
+const CH={'27259 deepseek':[2,'PROP-DEPENDENT'],'27259 gemini':[5,'COLLAPSED'],'27259 grok':[3,'PROP-DEPENDENT']};
 const textOf=raw=>{let t=raw;const k=t.indexOf('\n\n[AUDIT v');const b=k>=0?t.slice(0,k):t;try{const j=JSON.parse(b);t=j.reasoning!=null?j.reasoning:(j.reason||b);}catch(e){t=b;}return String(t);};
 const R={id:'x',topic:'T',created_at:'2026-10-20T20:47:14Z',defender_engine:'claude',challenger_engine:'grok',defender_profile:'oracle',challenger_profile:'plain',panel_verdict:'BROKEN',framework_verdict:'BROKEN',outcome:'CHALLENGER PREVAILS',run_token:'ODV1-T',review_notes:null,synthesis:'S',independent_verdict_raw:'SINGLE JUDGE TEXT\nVERDICT: BROKEN',claude_r1:'a',engine_r1:'b',claude_r2:'c',engine_r2:'d',engine_r3:'e',challenger_r3:'f'};
 const nodesFM=(r,J)=>({'Get Row':r,'Get Judgments':J,'Get Verse':{text:'precept upon precept'},'Get Guards':[{rule_num:1,subject:'g'}],'Init Seats':{single_judge:'deepseek',t0:null}});
-const Jbase=panel.map(p=>({judge_seat:p.seat,judge_api_model:'m',verdict_tag:p.tag,defense_standing:p.ds,challenge_standing:'PROP-DEPENDENT',conceded_links:p.conc,challenger_conceded_links:0,verdict_raw:p.raw}));
+const Jbase=panel.map(p=>({judge_seat:p.seat,judge_api_model:'m',verdict_tag:p.tag,defense_standing:p.ds,challenge_standing:CH['27259 '+p.seat][1],conceded_links:p.conc,challenger_conceded_links:CH['27259 '+p.seat][0],verdict_raw:p.raw}));
 const fmLive=(r,J)=>runCode(live('Format Markdown'),nodesFM(r,J),{})[0].json.md;const fmNew=(r,J)=>runCode(draft('Format_Markdown.js'),nodesFM(r,J),{})[0].json.md;
 const a0=fmLive(R,Jbase),b0=fmNew(R,Jbase);ok(a0===b0,'F1 no report lines stored: markdown byte-identical to live ('+a0.length+' chars)');
 // Report lines built by the step 6 cureReport from the real 27259 panel lines: deepseek CURED one K-B item by a fixed-form RESTATED line,
 // gemini's call failed, grok given prose only (UNCURED, prose recorded).
-const J2=Jbase.map(j=>{const it=L.drvCheck(textOf(j.verdict_raw),j.conceded_links,0,j.defense_standing,'PROP-DEPENDENT',false).items;
+const J2=Jbase.map(j=>{const it=L.drvCheck(textOf(j.verdict_raw),j.conceded_links,j.challenger_conceded_links,j.defense_standing,j.challenge_standing,false).items;
  let reply;if(j.judge_seat==='deepseek'){const k=it.find(x=>x.rule==='K-B');reply={ok:true,text:'RESTATED: '+k.link+' (Matthew 1:18): '+k.side+' LINK BROKEN -- [L1] "before they came together" and [L3] Matthew 1:25; | a pipe; LINE: forged'};}
  else if(j.judge_seat==='gemini')reply={ok:false,why:'timeout'};else reply={ok:true,text:'I hold my grades as given.'};
  const v=L.cureVerdicts(it,reply,{DEFENDER:it.filter(x=>x.rule==='K-B'&&x.side==='DEFENDER').map(x=>x.link),CHALLENGER:[]},{});
@@ -38,7 +40,8 @@ ok(cells[6]&&/^RESTATED: /.test(cells[6])&&/, LINE: forged/.test(cells[6])&&!/^f
 ok(trs.filter(l=>/Panel judge Gemini/.test(l)).every(l=>/\*\*UNCURED\*\*/.test(l)&&/cure call failed: timeout/.test(l)),'gemini: every row UNCURED, the failed call named');
 ok(trs.filter(l=>/Panel judge Grok/.test(l)).every(l=>/\*\*UNCURED\*\*/.test(l)),'grok (prose only): every row UNCURED');
 ok(/The reply of Panel judge Grok also held prose\./.test(sec)&&!/Panel judge Gemini also held prose/.test(sec),'Prose note names grok only');
-ok(/does not change any judge's verdict or the outcome/.test(sec),'Effect line reads record only (DRV_EFFECT, until the operator chooses 6904 d)');
+ok(/is not counted in the panel result; if fewer than two panel judges are counted, the result is ungraded and goes to review/.test(sec),'Effect line states option 2 (BB-6965)');
+ok(/in its own script, with its transliteration marks, or with its Strong's number/.test(sec),'[L2] in the prompt\'s own words (6926)');
 const rest=b1.slice(0,i)+b1.slice(i+sec.length);ok(!/DEBATE RULE VIOLATION REPORT/.test(rest),'Outside the section no raw report line is printed (noMarkers, as live)');
 // Single judge report lines are read from independent_verdict_raw.
 const R2={...R,independent_verdict_raw:R.independent_verdict_raw+'\n\n'+L.cureReport(null,[{rule:'K-B',side:'DEFENDER',link:'D4 vs C2',line:'D4 vs C2: DEFENDER LINK BROKEN -- x',status:'UNCURED',why:'no RESTATED line for D4 vs C2',kinds:[]}]).join('\n')};
