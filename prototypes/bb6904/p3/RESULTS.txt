@@ -1,13 +1,28 @@
-# BB-6904 portion 3 results, 2026-10-20T21:17:40Z (UTC run stamp). Inputs in data/, each with the md5 of its database row.
+# BB-6904 portion 3 results, 2026-10-20T21:19:43Z (UTC run stamp). Inputs in data/, each with the md5 of its database row.
 ## mk.py
-Extract Independent Verdict base 489b62e5 36588 new cd49efce 41283 + 4695
-Panel Payloads base 1026e0c0 18749 new 2e4225c9 23539 + 4790
-block chars 4513 md5 760b257d
+Extract Independent Verdict base 489b62e5 36588 new 7dacc165 41415 + 4827
+Panel Payloads base 1026e0c0 18749 new d3e94674 23671 + 4922
+block chars 4645 md5 68585374
 ## F1: inserts only
-Extract_Independent_Verdict.new.js [('insert', 35486, 4662), ('insert', 36584, 33)] all inserts: True
-Panel_Payloads.new.js [('insert', 14302, 4513), ('insert', 17732, 263), ('insert', 18002, 14)] all inserts: True
-## F2: node counter vs kb.cjs (29caa5c)
+Extract_Independent_Verdict.new.js [('insert', 35486, 4794), ('insert', 36584, 33)] all inserts: True
+Panel_Payloads.new.js [('insert', 14302, 4645), ('insert', 17732, 263), ('insert', 18002, 14)] all inserts: True
+## F2: node counter vs kb.cjs (29caa5c) on real lines
 lines 54 differences 0
+## 6936 narrowing: probes, wide (kb.cjs 29caa5c) against narrow (node)
+probe café         kb 29caa5c (wide): 2  node (narrow): 1
+probe naïve        kb 29caa5c (wide): 2  node (narrow): 1
+probe ×2           kb 29caa5c (wide): 2  node (narrow): 1
+probe résumé       kb 29caa5c (wide): 2  node (narrow): 1
+probe ā (alef)     kb 29caa5c (wide): 2  node (narrow): 2
+probe ē            kb 29caa5c (wide): 2  node (narrow): 2
+probe ḥesed        kb 29caa5c (wide): 2  node (narrow): 2
+probe ʿalmah       kb 29caa5c (wide): 2  node (narrow): 2
+probe bêt          kb 29caa5c (wide): 2  node (narrow): 2
+probe ēmet        kb 29caa5c (wide): 1  node (narrow): 2
+probe γέννησις     kb 29caa5c (wide): 2  node (narrow): 2
+probe חסד          kb 29caa5c (wide): 2  node (narrow): 2
+probe H2617        kb 29caa5c (wide): 2  node (narrow): 2
+probe plain dei    kb 29caa5c (wide): 1  node (narrow): 1
 ## F3: constructed cases
 PASS known-good: [L1] quoted + [L3] named reference | K-B items 0 expected 0
 PASS known-bad: one kind only ([L3]) | K-B items 1 expected 1
@@ -79,7 +94,7 @@ v21: DEBATE RULE VIOLATION -- D4 vs C2 DEFENDER LINK BROKEN exhibits 0 layer kin
 [AUDIT v21: DEBATE RULE VIOLATION (K-G1) -- D6 vs C2 DEFENDER LINK BROKEN rests on a witness left unanswered while CONCEDED LINKS is 0. REVIEW THIS ROW.]
 [AUDIT v21: DEBATE RULE VIOLATION (K-G3) -- DEFENSE STANDING SELF-SUPPORTED while 3 DEFENDER LINK BROKEN lines stand. REVIEW THIS ROW.]
  summary fields that differ: flags 0->5; drv ["K-B:D4 vs C2","K-B:D5 vs C2","K-B:D6 vs C2","K-G1:D6 vs C2","K-G3:DEFENDER"]
-## F4 panel: same judgments with every BROKEN grade made UNDERDETERMINED
+## F4 panel: same judgments with every BROKEN grade made UNDERDETERMINED (asked, then not asked)
 == deepseek payload fields that differ: none
  summary fields that differ: drv []
 == gemini payload fields that differ: verdict_raw

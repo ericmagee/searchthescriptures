@@ -1,11 +1,11 @@
 // BB-6904 (b), portion 3: DEBATE RULE VIOLATION, rule B on the judge's own BROKEN lines. A line graded DEFENDER LINK BROKEN or
 // CHALLENGER LINK BROKEN must exhibit, on the line itself, two lower layers of different kinds (6903): [L1] with quoted words, [L2] with
-// a source word (own script, transliteration marks, or a Strong's number; 6926), [L3] with a named reference. A tag after "no",
-// "without", "lacks" or "not" never counts. K-G1 (6892): a BROKEN line resting on a witness left unanswered while that side's stated
-// conceded count is 0. K-G3 (6934): a side graded SELF-SUPPORTED while any of its links is graded BROKEN. K-G2: an absent CITATION CHECK
-// line on text from a prompt that asks for it, recorded only. The counter is kb.cjs (git 29caa5c), names prefixed. Lines are chosen the
-// extractor's way: a "D<n> vs" collision entry whose first grade is DEFENDER or CHALLENGER LINK BROKEN. No grade is changed; each
-// violation is a review line (6890 AMEND 2).
+// a source word (own script, transliteration marks, or a Strong's number; 6926; the Latin range narrowed to transliteration letters, 6936),
+// [L3] with a named reference. A tag after "no", "without", "lacks" or "not" never counts. K-G1 (6892): a BROKEN line resting on a
+// witness left unanswered while that side's stated conceded count is 0. K-G3 (6934): a side graded SELF-SUPPORTED while any of its
+// links is graded BROKEN. K-G2: an absent CITATION CHECK line on text from a prompt that asks for it, recorded only. The counter is
+// kb.cjs (git 29caa5c), names prefixed. Lines are chosen the extractor's way: a "D<n> vs" collision entry whose first grade is DEFENDER
+// or CHALLENGER LINK BROKEN. No grade is changed; each violation is a review line (6890 AMEND 2).
 __KB__
 const DRV_WORDS=/\b(?:unanswered|not answered|unnamed|not named|none named|neither named|unaddressed)\b/i;
 function drvCheck(text,dConc,cConc,dStand,cStand,askedCC){const items=[],marks=[];if(typeof text!=='string')return {items,marks};const cnt={DEFENDER:0,CHALLENGER:0};

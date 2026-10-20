@@ -294,14 +294,14 @@ if(challenger_chain_mark===null){raw+=asked?'\n\n[AUDIT v18: CHALLENGER CHAIN MA
 if(defender_chain_mark===null){raw+=askedD?'\n\n[AUDIT v20: DEFENDER CHAIN MARK LINE ABSENT FROM A PROMPT THAT ASKS FOR IT. REVIEW THIS ROW.]':'\n\n[AUDIT v20: DEFENDER CHAIN MARK not asked by the prompt that produced this text; null recorded, no flag.]';}
 // BB-6904 (b), portion 3: DEBATE RULE VIOLATION, rule B on the judge's own BROKEN lines. A line graded DEFENDER LINK BROKEN or
 // CHALLENGER LINK BROKEN must exhibit, on the line itself, two lower layers of different kinds (6903): [L1] with quoted words, [L2] with
-// a source word (own script, transliteration marks, or a Strong's number; 6926), [L3] with a named reference. A tag after "no",
-// "without", "lacks" or "not" never counts. K-G1 (6892): a BROKEN line resting on a witness left unanswered while that side's stated
-// conceded count is 0. K-G3 (6934): a side graded SELF-SUPPORTED while any of its links is graded BROKEN. K-G2: an absent CITATION CHECK
-// line on text from a prompt that asks for it, recorded only. The counter is kb.cjs (git 29caa5c), names prefixed. Lines are chosen the
-// extractor's way: a "D<n> vs" collision entry whose first grade is DEFENDER or CHALLENGER LINK BROKEN. No grade is changed; each
-// violation is a review line (6890 AMEND 2).
+// a source word (own script, transliteration marks, or a Strong's number; 6926; the Latin range narrowed to transliteration letters, 6936),
+// [L3] with a named reference. A tag after "no", "without", "lacks" or "not" never counts. K-G1 (6892): a BROKEN line resting on a
+// witness left unanswered while that side's stated conceded count is 0. K-G3 (6934): a side graded SELF-SUPPORTED while any of its
+// links is graded BROKEN. K-G2: an absent CITATION CHECK line on text from a prompt that asks for it, recorded only. The counter is
+// kb.cjs (git 29caa5c), names prefixed. Lines are chosen the extractor's way: a "D<n> vs" collision entry whose first grade is DEFENDER
+// or CHALLENGER LINK BROKEN. No grade is changed; each violation is a review line (6890 AMEND 2).
 const DRV_REF=/(?:[1-3]\s)?[A-Z][a-z]+\.?\s\d{1,3}:\d{1,3}/;
-const DRV_SRC=/[\u0590-\u05FF\u00C0-\u024F\u0370-\u03FF\u1E00-\u1EFF\u1F00-\u1FFF\u02BE\u02BF]|\b[GH]\d{2,5}\b/; // BB-6926 option A: own script (Hebrew, Greek), transliteration marks, or a Strong's number; no italic alternative
+const DRV_SRC=/[\u0590-\u05FF\u0100-\u024F\u00C2\u00CA\u00CE\u00D4\u00DB\u00E2\u00EA\u00EE\u00F4\u00FB\u0300-\u036F\u0370-\u03FF\u1E00-\u1EFF\u1F00-\u1FFF\u02BE\u02BF]|\b[GH]\d{2,5}\b/; // BB-6926 option A: own script (Hebrew, Greek), transliteration marks, or a Strong's number; no italic alternative
 const DRV_QUOTE=/(?:^|[\s(\[{])["“'‘][^"”\n]{4,}?["”'’](?=$|[\s.,;:!?)\]}])/; // a mark inside a word (Joseph's) never opens or closes a quote (BB-6898 D1)
 const DRV_NEG=/\b(?:no|without|lacks?|lacking|not)\s+(?:\[L[1-4]\]\s*(?:or|and|\/)\s*)*$/i;
 function drvExhibits(line,needQuote,formC,distinct){

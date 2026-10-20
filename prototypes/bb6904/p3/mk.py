@@ -11,6 +11,13 @@ body = '\n'.join(ren(x) for x in consts + fn)
 old_ret = 'return distinct?met.size:n;'
 assert body.count(old_ret) == 1
 body = body.replace(old_ret, "return distinct?[...met].sort().map(t=>'L'+t):n;")
+# BB-6936: narrow the Latin range. kb.cjs at 29caa5c takes all of U+00C0-024F, which admits accented English and symbols ("cafe" with
+# an acute accent, the multiplication sign). The node keeps Latin Extended-A and -B (macron, breve, caron letters), the five circumflex
+# vowels in both cases, combining marks U+0300-036F, Latin Extended Additional (dotted h, t, s) and the two half rings.
+old_src = "[\\u0590-\\u05FF\\u00C0-\\u024F\\u0370-\\u03FF\\u1E00-\\u1EFF\\u1F00-\\u1FFF\\u02BE\\u02BF]"
+new_src = "[\\u0590-\\u05FF\\u0100-\\u024F\\u00C2\\u00CA\\u00CE\\u00D4\\u00DB\\u00E2\\u00EA\\u00EE\\u00F4\\u00FB\\u0300-\\u036F\\u0370-\\u03FF\\u1E00-\\u1EFF\\u1F00-\\u1FFF\\u02BE\\u02BF]"
+assert body.count(old_src) == 1, body.count(old_src)
+body = body.replace(old_src, new_src)
 body += '\nconst drvKinds=(line)=>drvExhibits(line,false,true,true);'
 block = open('drv_check.js').read().replace('__KB__', body)
 open('drv_block.js', 'w').write(block)
