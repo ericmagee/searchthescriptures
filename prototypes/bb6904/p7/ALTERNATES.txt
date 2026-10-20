@@ -5,7 +5,8 @@ operator's question 10 (6965). Every claim about live code names the node or fun
 - A panel seat is not counted under option 2 (6965; 5B): drv_uncured > 0 after the cure path, that is, at least one K-B, K-G1 or
   K-G3 item of that seat not CURED. Nothing else calls an alternate: an unreadable or truncated seat keeps today's reserve path
   (Panel Check, Reserve Build, odv1_record_panel_substitution), which is separate and unchanged.
-- One alternate per removed seat per debate (6904 g). Up to three in a debate (every seat removed).
+- One alternate per removed seat per debate (6904 g). The pool holds two models and G3 makes one debate's alternates distinct, so
+  at most two alternates sit in a debate; a third removed seat stays not counted (AMEND 1, 6980).
 - The single judge is outside the panel and sets no outcome; it gets no alternate.
 
 2. WHO SITS
@@ -57,21 +58,31 @@ operator's question 10 (6965). Every claim about live code names the node or fun
 - Each pool model is run as a dry regrade judge on 27191, 27088 and 27259 (replay rows only; record_replay_judgments; no outcome
   written). Measured per run: finished within the 900 s timeout; finish_reason; verdict and standings in the closed sets;
   K-B, K-G1, K-G3 items; the cure call's result; seconds and tokens.
-- Proposed bar, for the advisor to rule: 3 of 3 readable and within the timeout. Violation and cure rates are reported, not
+- MECHANISM (AMEND 2, 6980): today a dry regrade seats only the panel's three, so no path seats a pool model. Proposed: a dry-only
+  request field, qualify_alternate: <pool seat>, read by Init Seats and refused unless dry is true. It forces the alternate path
+  for every panel seat of that dry run, whatever its drv_uncured, with the named pool model; Replay Rows records the alternates'
+  rows in the removed seats' places. The qualification therefore runs the same Alternate nodes a live run would.
+- Proposed bar, for the advisor to rule: 3 of 3 readable, within the timeout, and finish_reason not "length". Violation and cure rates are reported, not
   gated, since they are what alternates exist to absorb.
 
 8. WHERE IT WOULD SIT IN THE FLOW (for the later build; not now)
 - After Panel Cure Check and before Dry?: Alternate Needed? (any seat drv_uncured > 0 and a pool model passes the guards) ->
   Alternate Build -> Alternate Route -> Alternate Call (OpenRouter) -> Alternate Payloads (the panel reader and drvCheck) ->
-  the cure path again for the alternates -> Alternate Merge (bodies and summary with the alternate in the removed seat's place;
+  the cure path again for the alternates (AMEND 4, 6980: Alternate Cure Build, a copy of Panel Cure Build that takes each
+  alternate's own request body and model from Alternate Build, not from Panel Build's judges; the rest of the cure nodes are
+  shared code) -> Alternate Merge (bodies and summary with the alternate in the removed seat's place;
   the removed ruling into drv_removed). The named reads of Panel Cure Check (Write Judgment 1-3, Derive Outcome, Panel Done,
   Replay Rows, Record Substitution) move to Alternate Merge, as portion 4 moved them.
-- Live path: the new record function runs before Write Judgment, beside Record Substitution. Dry path: Replay Rows records the
+- Live path (AMEND 3, 6980): two writes, in this order, both before Write Judgment 1: Record Substitution (the reserve, today's
+  function, unchanged), then Record Alternates (the new function). The new function writes drv_removed and rewrites panel_expected
+  only; it never writes panel_substitution, so a debate may hold one reserve substitution and up to two alternates. It refuses
+  if any judgment row exists, if an alternate is a seated debater (G1), the replaced seat's model (G2) or already in
+  panel_expected (G3), and it reads panel_expected as the reserve write left it. Dry path: Replay Rows records the
   alternate as the seat's replay row; drv_removed is not written on a dry run.
 
 9. COST AND TIME (ESTIMATE until qualification measures them)
 - Per alternate: one judge-sized call and at most one cure call. Neither pool model has been timed here. Step 6's derived figure
   for a panel judge call is about 307 s (whole dry regrades / 3). 6978 gives MiniMax at max effort as thinking about a minute
-  per answer; that is the operator's figure, not a measurement here. Bound: at most three alternates a debate, two calls each,
-  90 min at the 900 s timeout. Qualification (section 7) gives the measured seconds per call for each model at max effort.
+  per answer; that is the operator's figure, not a measurement here. Bound: at most two alternates a debate (section 1), two calls each,
+  60 min at the 900 s timeout. Qualification (section 7) gives the measured seconds per call for each model at max effort.
   Tokens: about the size of one panel seat each.
