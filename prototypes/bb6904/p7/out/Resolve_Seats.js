@@ -12,12 +12,18 @@ const ds=need('deepseek');
 const JFAM={deepseek:'deepseek',gemini:'gemini',grok:'grok',chatgpt:'openai',mimo:'mimo',glm:'openrouter',qwen:'openrouter'};
 const judges=S.panel_order.map(k=>{const x=need(k);return {seat:k,fam:JFAM[k],api_model:x.api_model,max_tokens:Math.max(Number(x.max_tokens)||0,4000)};});
 // PANEL FALLBACK (BB-5693): the reserve judge, built as the three are; none when no seat is free or its model_config row is missing.
-const reserve=(S.panel_reserve&&M[S.panel_reserve]&&M[S.panel_reserve].api_model&&Number(M[S.panel_reserve].max_tokens)>0)?{seat:S.panel_reserve,fam:JFAM[S.panel_reserve],api_model:M[S.panel_reserve].api_model,max_tokens:Math.max(Number(M[S.panel_reserve].max_tokens)||0,4000)}:null;
-// ALTERNATES (step 7): the pool, in Init Seats' order, from the ACTIVE model_config rows; a pool seat without a row is left out
-// (no alternate from it). Every pool model runs on OpenRouter at maximum reasoning effort (operator, 6978; pool 6991).
-const makerOf=(fam,model)=>{const m=String(model||'');if(m.indexOf('/')>0)return m.split('/')[0].toLowerCase();return ({anthropic:'anthropic',openai:'openai',gemini:'google',grok:'xai',mimo:'xiaomi',deepseek:'deepseek',openrouter:'openrouter'})[fam]||fam;};
-const alternates=(S.alt_pool||[]).filter(k=>M[k]&&M[k].api_model&&Number(M[k].max_tokens)>0).map(k=>({seat:k,fam:'openrouter',api_model:M[k].api_model,max_tokens:Math.max(Number(M[k].max_tokens)||0,8000),maker:makerOf('openrouter',M[k].api_model)}));
-const debaters=[D,C].map(x=>({engine:x.engine,model:x.model,maker:makerOf(x.fam,x.model)}));
+const reserve0=(S.panel_reserve&&M[S.panel_reserve]&&M[S.panel_reserve].api_model&&Number(M[S.panel_reserve].max_tokens)>0)?{seat:S.panel_reserve,fam:JFAM[S.panel_reserve],api_model:M[S.panel_reserve].api_model,max_tokens:Math.max(Number(M[S.panel_reserve].max_tokens)||0,4000)}:null;
+// FAMILIES (BB-6993; 6998 item 4): model_config.family is the one family table, read here and by odv1_record_panel_alternates. No
+// judge, reserve or alternate sits on a debate in which a model of its own family debates: a judge fails the run closed, the reserve
+// is dropped, an alternate is skipped. A seat whose row has no family fails closed. Claude never judges Claude (6995).
+const famOf=k=>{const x=M[k];const f=x&&x.family?String(x.family).trim().toLowerCase():'';if(!f)fail('seat "'+k+'" has no family in model_config (BB-6993).');return f;};
+const debFam=[famOf(D.mc_seat),famOf(C.mc_seat)];
+S.panel_order.forEach(k=>{if(debFam.indexOf(famOf(k))>=0)fail('judge seat "'+k+'" is of family '+famOf(k)+', which debates in this debate (BB-6993).');});
+if(S.single_judge&&debFam.indexOf(famOf(S.single_judge))>=0)fail('single judge seat "'+S.single_judge+'" is of family '+famOf(S.single_judge)+', which debates in this debate (BB-6993).');
+const reserve=(reserve0&&debFam.indexOf(famOf(reserve0.seat))<0)?reserve0:null;
+// ALTERNATES (step 7): the permanent alternates from Init Seats' constants, in ALT_POOL order (6997: not read from model_config).
+const AM=S.alt_models||{};const alternates=(S.alt_pool||[]).filter(k=>AM[k]).map(k=>({seat:k,fam:'openrouter',api_model:AM[k].api_model,max_tokens:32000,family:AM[k].family})).filter(a=>debFam.indexOf(a.family)<0);
+const debaters=[D,C].map((x,i)=>({engine:x.engine,model:x.model,family:debFam[i]}));
 // GUARDS and TENSIONS exactly as W1 Init (dedupe by rule_num; the ruled filter).
 const gRaw=$('Fetch Drift Guards').all().map(i=>i.json);const gSeen=new Set();const g=[];for(const x of gRaw){if(x&&x.rule_num!==undefined&&!gSeen.has(x.rule_num)){gSeen.add(x.rule_num);g.push(x);}}
 const t=$('Fetch Tensions').all().map(i=>i.json).filter(x=>x&&x.item);

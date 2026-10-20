@@ -16,8 +16,8 @@ pp=open(os.path.join(P5B,'Panel_Payloads.js')).read();k=pp.index('const bodies=[
 res={};files={}
 def save(name,src):files[name]=src;open(os.path.join(OUT,name.replace(' ','_').replace('?','')+'.js'),'w').write(src)
 # 1. Init Seats and Resolve Seats (live code + the patches above).
-s=N['Init Seats']['parameters']['jsCode'];s2=once(s,INIT_ANCHOR,INIT_ANCHOR+INIT_ADD,'Init Seats');s2=once(s2,INIT_RET_OLD,INIT_RET_NEW,'Init Seats return');save('Init Seats',s2)
-s=N['Resolve Seats']['parameters']['jsCode'];s2=once(s,RS_ANCHOR,RS_ADD+RS_ANCHOR,'Resolve Seats');s2=once(s2,RS_RET_OLD,RS_RET_NEW,'Resolve Seats return');save('Resolve Seats',s2)
+s=N['Init Seats']['parameters']['jsCode'];s2=once(s,INIT_MM_ANCHOR,INIT_MM_ADD+INIT_MM_ANCHOR,'Init Seats MiniMax');s2=once(s2,INIT_ANCHOR,INIT_ANCHOR+INIT_ADD,'Init Seats');s2=once(s2,INIT_RET_OLD,INIT_RET_NEW,'Init Seats return');save('Init Seats',s2)
+s=N['Resolve Seats']['parameters']['jsCode'];s2=once(s,RS_RES_OLD,RS_RES_NEW,'Resolve Seats reserve');s2=once(s2,RS_ANCHOR,RS_ADD+RS_ANCHOR,'Resolve Seats');s2=once(s2,RS_RET_OLD,RS_RET_NEW,'Resolve Seats return');save('Resolve Seats',s2)
 # 2. New nodes.
 x0,y0=N['Dry?']['position']
 def ifnode(name,expr,pos):return {'name':name,'type':'n8n-nodes-base.if','typeVersion':N['Dry?']['typeVersion'],'position':pos,
@@ -43,7 +43,7 @@ nodes=[ifnode('Alternate Needed?',ALT_NEED,[x0-900,y0+700]),
  codenode('Alternate Merge',lib_code(ALT_MERGE),[x0+900,y0+700])]
 ra=copy.deepcopy(N['Record Substitution']);rp=ra['parameters']
 rp['url']='https://bhffmkginddovmdcpnty.supabase.co/rest/v1/rpc/odv1_record_panel_alternates'
-rp['jsonBody']="={{ JSON.stringify({ p_debate_id: $('Alternate Merge').first().json.debate_id, p_alternates: $('Alternate Merge').first().json.alternates_seated, p_drv_removed: $('Alternate Merge').first().json.drv_removed, p_g1_by_maker: $('Init Seats').first().json.g1_by_maker !== false }) }}"
+rp['jsonBody']="={{ JSON.stringify({ p_debate_id: $('Alternate Merge').first().json.debate_id, p_alternates: $('Alternate Merge').first().json.alternates_seated, p_drv_removed: $('Alternate Merge').first().json.drv_removed }) }}"
 nodes.append({'name':'Record Alternates','type':ra['type'],'typeVersion':ra['typeVersion'],'position':[ra['position'][0]+20,ra['position'][1]+120],'parameters':rp,'credentials':ra.get('credentials'),'onError':ra.get('onError')})
 # 3. Connections (on top of portion 4's: Panel Cure Check -> Dry? becomes Panel Cure Check -> Alternate Needed? ... Alternate Merge -> Dry?).
 def edge(a,b,out=0):return {'from':a,'out':out,'to':b}

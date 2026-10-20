@@ -1,5 +1,0 @@
--- BB-6904 (g), step 7: the pool's model_config rows. NOT part of migration7.sql. Run only the line(s) for the model(s) that pass
--- qualification (nine of nine seat readings readable, finish_reason not "length", 6984), on the operator's word (6988, 6991).
--- Undo: DELETE FROM public.model_config WHERE seat IN ('alt_minimax31','alt_minimax3');
-INSERT INTO public.model_config (seat, provider, role, api_model, max_tokens, active, notes) VALUES ('alt_minimax31', 'openrouter', 'alternate', 'minimax/minimax-m3.1-flash', 32000, true, 'BB-6904 (g) alternate judge (pool ruled BB-6991): MiniMax M3.1 Flash, paid route, reasoning effort max; qualified on the dry runs of 27191, 27088, 27259.');
-INSERT INTO public.model_config (seat, provider, role, api_model, max_tokens, active, notes) VALUES ('alt_minimax3', 'openrouter', 'alternate', 'minimax/minimax-m3', 32000, true, 'BB-6904 (g) alternate judge (pool ruled BB-6991): MiniMax M3, reasoning effort max; qualified on the dry runs of 27191, 27088, 27259.');

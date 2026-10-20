@@ -22,6 +22,8 @@ const seat=k=>{const s=b[k];if(!s||typeof s!=='object')fail(k+' seat missing; ex
  if(!ENG[e])fail(k+' engine "'+e+'" is not one of ['+Object.keys(ENG).join(', ')+'].');
  if(p!=='oracle'&&p!=='plain')fail(k+' profile "'+p+'" is neither oracle nor plain.');
  return {engine:e,profile:p,fam:ENG[e].fam,mc_seat:ENG[e].mc};};
+// MiniMax never debates (BB-6997): its models are the permanent alternates. A hard refusal, both seats alike.
+if([b.defender,b.challenger].some(x=>x&&typeof x==='object'&&/minimax/i.test(String(x.engine||''))))fail('MiniMax never debates (BB-6997): its models are the permanent alternates.');
 const D=seat('defender');const C=seat('challenger');
 if(D.profile==='oracle'&&C.profile==='oracle')fail('both seats as The Oracle; BB-4671 rules what each seat argues for one Oracle seat or none, not two.');
 // Position by profile (BB-4671 Q6 b): The Oracle holds the record's reading from either seat; a plain seat facing it
@@ -45,19 +47,19 @@ const TFR=b.test_fail_reserve===true;const TNF=b.test_no_fallback===true;
 if((TFS!==null||TFR||TNF)&&!DRY)fail('test_fail_seat, test_fail_reserve and test_no_fallback run only in a dry regrade.');
 if(TFS!==null&&panel_order.indexOf(TFS)===-1)fail('test_fail_seat "'+TFS+'" is not one of the panel ['+panel_order.join(', ')+'].');
 if((TFR||TNF)&&TFS===null)fail('test_fail_reserve and test_no_fallback need test_fail_seat.');
-// ALTERNATES (BB-6904 g, step 7; ruled 6984, 6988, 6991). ALT_POOL in order: MiniMax only (6991), the qualify winner first; the
-// order is set here at publish from the qualify results (a tie goes to M3.1 Flash, 6988). A pool seat sits only if it has an ACTIVE
-// model_config row, written for a qualifier on the operator's word. G1_BY_MAKER: false (6991: G1 by model, the default); true tests
-// the maker too (6992 asks for by family; the advisor rules). qualify_alternate (dry only) takes a pool model's id (6988) and seats it
-// in every panel seat of the run without a model_config row (6983 note 1: G3 not applied there; Record Alternates not reached).
-const ALT_POOL=['alt_minimax31','alt_minimax3'];const ALT_IDS={'minimax/minimax-m3.1-flash':'alt_minimax31','minimax/minimax-m3':'alt_minimax3'};const G1_BY_MAKER=false;
+// ALTERNATES (BB-6904 g, step 7; ruled 6997, 6998 item 3). The two MiniMax models are the permanent alternates, hard-coded, at
+// maximum effort. ALT_POOL is their order, set here at publish from the qualify results (fewer uncured violations first; a tie goes
+// to M3.1 Flash, 6988); a model that fails qualification is left out of ALT_POOL until fixed. qualify_alternate (dry only) takes one
+// of the two ids and seats it in every panel seat of the run (6983 note 1: G3 not applied there; Record Alternates not reached).
+const ALT_MODELS={alt_minimax31:{api_model:'minimax/minimax-m3.1-flash',family:'minimax'},alt_minimax3:{api_model:'minimax/minimax-m3',family:'minimax'}};
+const ALT_POOL=['alt_minimax31','alt_minimax3'];
 const QA=(b.qualify_alternate===undefined||b.qualify_alternate===null||b.qualify_alternate==='')?null:String(b.qualify_alternate).trim().toLowerCase();
 if(QA!==null&&!DRY)fail('qualify_alternate runs only in a dry regrade.');
-if(QA!==null&&!ALT_IDS[QA])fail('qualify_alternate "'+QA+'" is not one of ['+Object.keys(ALT_IDS).join(', ')+'].');
+if(QA!==null&&!Object.keys(ALT_MODELS).some(k=>ALT_MODELS[k].api_model===QA))fail('qualify_alternate "'+QA+'" is not one of ['+Object.keys(ALT_MODELS).map(k=>ALT_MODELS[k].api_model).join(', ')+'].');
 // TOPIC FENCE (WALL-0788 replies 823-837): a launch the operator overrode carries a one-use override id; Topic Fence consumes it.
 const FO=(b.fence_override_id===undefined||b.fence_override_id===null||b.fence_override_id==='')?null:String(b.fence_override_id).trim();
 if(FO!==null&&!/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(FO))fail('fence_override_id "'+FO.slice(0,60)+'" is not an override id.');
 const q=(b.queue_id===undefined||b.queue_id===null)?null:b.queue_id;
 $execution.customData.set('defender',D.engine+'/'+D.profile);$execution.customData.set('challenger',C.engine+'/'+C.profile);
-return [{json:{run_token:TOK,variant:'ORACLE_DEBATE_V1',topic:b.topic,defender:D,challenger:C,dpos,cpos,panel_order,panel_expected,panel_reserve,test_fail_seat:TFS,test_fail_reserve:TFR,test_no_fallback:TNF,alt_pool:ALT_POOL,alt_ids:ALT_IDS,g1_by_maker:G1_BY_MAKER,qualify_alternate:QA,single_judge:free[0],queue_id:q,fence_override_id:FO,regrade:!!RG,dry:DRY,rulebook:RB,sd:new Date().toISOString().split('T')[0],t0:new Date().toISOString()}}];
+return [{json:{run_token:TOK,variant:'ORACLE_DEBATE_V1',topic:b.topic,defender:D,challenger:C,dpos,cpos,panel_order,panel_expected,panel_reserve,test_fail_seat:TFS,test_fail_reserve:TFR,test_no_fallback:TNF,alt_pool:ALT_POOL,alt_models:ALT_MODELS,qualify_alternate:QA,single_judge:free[0],queue_id:q,fence_override_id:FO,regrade:!!RG,dry:DRY,rulebook:RB,sd:new Date().toISOString().split('T')[0],t0:new Date().toISOString()}}];
 
