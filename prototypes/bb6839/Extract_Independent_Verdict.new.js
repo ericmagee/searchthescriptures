@@ -274,7 +274,8 @@ if(K3.d&&clause&&n!==null&&w!==null&&k!==null){const wa=w+K2.miss.length,ksa=(ke
 // WO-6 OUT-OF-ROUND CONCESSIONS and WO-7 CHALLENGER CHAIN MARK, ported from the reference (3QGx 2140f650) onto the judge text
 // as received. A missing section is a flag only when the judge prompt that produced the text asked for it (audit_prompt
 // W1-A1, rulings BB-4503 Q3); on older text it is recorded without a flag.
-const asked=(prev&&(prev.audit_prompt==='W1-A1'||prev.audit_prompt==='ODV1-A1'));
+const asked=(prev&&(prev.audit_prompt==='W1-A1'||prev.audit_prompt==='ODV1-A1'||prev.audit_prompt==='ODV1-A2'));
+const askedD=(prev&&prev.audit_prompt==='ODV1-A2');
 const src0=raw0.replace(/[*_`]+/g,'');
 const oorSec=src0.match(/^[ \t]*(?:#+[ \t]*|[-•][ \t]*)?OUT-OF-ROUND CONCESSIONS[ \t]*:?[ \t]*\n?([\s\S]*?)(?=\n[ \t]*(?:#+[ \t]*|[-•][ \t]*)?(?:CHALLENGER CHAIN MARK|CITATION CHECK|COLLISION POINTS)\b|(?![\s\S]))/im);
 let out_of_round_concessions=null,out_of_round_detail=null;
@@ -284,11 +285,13 @@ if(out_of_round_concessions===null){raw+=asked?'\n\n[AUDIT v18: OUT-OF-ROUND CON
 const ccmM=src0.match(/^[ \t]*(?:#+[ \t]*|[-•][ \t]*)?CHALLENGER CHAIN MARK[ \t]*:?[ \t]*(FOOTED|FORGED|STRAINED|SLACK)\b/im);
 let challenger_chain_mark=ccmM?ccmM[1].toUpperCase():null;
 if(challenger_chain_mark==='FORGED')challenger_chain_mark='FOOTED';
-// ORDER (BB-6839): the defender's chain takes the same mark, read by the same rule. No REVIEW flag when its line is absent (raised, BB-6840).
+// ORDER (BB-6839, BB-6843): the defender's chain takes the same mark, read by the same rule; its absent line is flagged as the challenger's is,
+// but only on text from a prompt that asks for it (audit_prompt ODV1-A2, the J6 prompt); older text records it without a flag.
 const dcmM=src0.match(/^[ \t]*(?:#+[ \t]*|[-•][ \t]*)?DEFENDER CHAIN MARK[ \t]*:?[ \t]*(FOOTED|FORGED|STRAINED|SLACK)\b/im);
 let defender_chain_mark=dcmM?dcmM[1].toUpperCase():null;
 if(defender_chain_mark==='FORGED')defender_chain_mark='FOOTED';
 if(challenger_chain_mark===null){raw+=asked?'\n\n[AUDIT v18: CHALLENGER CHAIN MARK LINE ABSENT FROM A PROMPT THAT ASKS FOR IT. REVIEW THIS ROW.]':'\n\n[AUDIT v18: CHALLENGER CHAIN MARK not asked by the prompt that produced this text; null recorded, no flag.]';}
+if(defender_chain_mark===null){raw+=askedD?'\n\n[AUDIT v20: DEFENDER CHAIN MARK LINE ABSENT FROM A PROMPT THAT ASKS FOR IT. REVIEW THIS ROW.]':'\n\n[AUDIT v20: DEFENDER CHAIN MARK not asked by the prompt that produced this text; null recorded, no flag.]';}
 // FLAG COUNT AND DATA CLASS (rulings BB-4503 Q3). A flag is every marker this extractor appended that ends REVIEW THIS
 // ROW, truncation included; a verifier recomputes it from the stored text by counting that phrase after the judge text.
 // study iff flags <= 1, no ILLEGAL rejection, a parseable verdict and a judge output not cut at max_tokens; contested

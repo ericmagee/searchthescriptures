@@ -7,7 +7,10 @@ PD="In your LINK ROUND, quote every verse the challenger pressed against a link 
 PC="In your LINK ROUND, quote every verse the defender pressed against your chain and show from the text why it does not overturn your link: a verse you pass over is graded unanswered and costs the link."
 s=open('base/Init_with_Guards.js').read()
 for p in (PD,PC): assert s.count(p)==1
-t=s.replace(PD,A2+' '+B).replace(PC,A2+' '+B)
-assert t.count(A2+' '+B)==2 and 'a verse you pass over' not in t
+KD="In your LINK ROUND, quote every verse the challenger pressed against a link."
+KC="In your LINK ROUND, quote every verse the defender pressed against your chain."
+# ruled BB-6843 option (2): each seat keeps its first clause, then A2 and B verbatim
+t=s.replace(PD,KD+' '+A2+' '+B).replace(PC,KC+' '+A2+' '+B)
+assert t.count(A2+' '+B)==2 and t.count(KD+' '+A2)==1 and t.count(KC+' '+A2)==1 and 'a verse you pass over' not in t
 open('Init_with_Guards.new.js','w').write(t)
 print('Init with Guards',md5(s),len(s),'->',md5(t),len(t),'%+d'%(len(t)-len(s)))

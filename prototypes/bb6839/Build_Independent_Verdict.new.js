@@ -67,7 +67,8 @@ const __row2=__M2[__sj2];
 if(!__row2||!__row2.api_model)throw new Error('ORACLE_DEBATE_V1 Build Independent Verdict refused: single_judge "'+__sj2+'" has no ACTIVE model_config row with api_model.'+__RT2);
 const __model2=__row2.api_model;const __base2=Math.max(Number(__row2.max_tokens)||0,8000);
 const __JIDX2={deepseek:0,openai:1,gemini:2,grok:3,mimo:4,openrouter:5};const __jidx2=__JIDX2[__fam2];
-const __out={...d,audit_prompt:'ODV1-A1',verdictBody:{model:$('Resolve Seats').first().json.deepseek.api_model,max_tokens:Math.max($('Resolve Seats').first().json.deepseek.max_tokens||0,8000),messages:[{role:'system',content:'You are an independent judge bound by the same layer rules as all debate participants.'},{role:'user',content:vp}]}};
+// ORDER (BB-6843): ODV1-A2 = the J6 prompt, which asks for both chain-mark lines; the extractor flags either absent line only under it.
+const __out={...d,audit_prompt:'ODV1-A2',verdictBody:{model:$('Resolve Seats').first().json.deepseek.api_model,max_tokens:Math.max($('Resolve Seats').first().json.deepseek.max_tokens||0,8000),messages:[{role:'system',content:'You are an independent judge bound by the same layer rules as all debate participants.'},{role:'user',content:vp}]}};
 const __bf='verdictBody';const __b0=__out[__bf];const __sys2=__b0.messages[0].content;const __usr2=__b0.messages[1].content;const __m2=[{role:'system',content:__sys2},{role:'user',content:__usr2}];
 let __nb;
 if(__fam2==='gemini')__nb={systemInstruction:{parts:[{text:__sys2}]},contents:[{role:'user',parts:[{text:__usr2}]}],generationConfig:{maxOutputTokens:__base2+8192,temperature:0}};
