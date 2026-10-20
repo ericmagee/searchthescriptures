@@ -1,0 +1,84 @@
+base db281705-b448-4402-9188-43efb8ac286b | nodes 231 (live 180) | changed or new 69 | unchanged 162
+sources: p2@404300a, p3@0b3cbac, p4@404300a, p5b@404300a, p6@d0d5aab, p7@404300a
+  Alternate Build                    new      15fd3b22  p7 add; code p7:p7/out/Alternate_Build.js
+  Alternate Call openrouter          new      67654382  p7 add
+  Alternate Calls?                   new      3e23e3a6  p7 add
+  Alternate Cure Build               new      b8ff4190  p7 add; code p7:p7/out/Alternate_Cure_Build.js
+  Alternate Cure Call openrouter     new      6bcebeac  p7 add
+  Alternate Cure Needed?             new      c43904f8  p7 add
+  Alternate Cure Normalize           new      7b618607  p7 add; code p7:p7/out/Alternate_Cure_Normalize.js
+  Alternate Merge                    new      946b16d5  p7 add; code p7:p7/out/Alternate_Merge.js
+  Alternate Needed?                  new      d7ce892c  p7 add
+  Alternate Payloads                 new      f1ab9254  p7 add; code p7:p7/out/Alternate_Payloads.js
+  Build Diagnostic Prompt            changed  9318900d  p4 edit
+  Build Independent Verdict          changed  7fe63a4f  code p2:p2/Build_Independent_Verdict.new.js
+  Build Save Body                    changed  cb28a06d  code p6:p6/out/Build_Save_Body.js
+  Cure Build                         new      baee1d70  p4 add; code p6:p6/out/Cure_Build.js
+  Cure Call deepseek                 new      4d95a8c3  p4 add
+  Cure Call gemini                   new      79d91a52  p4 add
+  Cure Call grok                     new      1c51313f  p4 add
+  Cure Call mimo                     new      b148f653  p4 add
+  Cure Call openai                   new      278b281e  p4 add
+  Cure Call openrouter               new      6bcebeac  p4 add
+  Cure Check                         new      1f7d2e27  p4 add; code p6:p6/out/Cure_Check.js
+  Cure Needed?                       new      8c144bc3  p4 add
+  Cure Normalize                     new      37bb6257  p4 add; code p6:p6/out/Cure_Normalize.js
+  Cure Route                         new      7a96bfa8  p4 add
+  Derive Outcome                     changed  1a7a16ca  p4 edit; p7 edit
+  Extract Independent Verdict        changed  7dacc165  code p3:p3/Extract_Independent_Verdict.new.js
+  Failure Salvage                    changed  cb3659ad  code p5b:p5b/out/Failure_Salvage.js
+  Format Markdown                    changed  5fba9366  p7 edit; code p7:p7/out/Format_Markdown.js
+  Init Seats                         changed  615b6c54  p7 edit; code p7:p7/out/Init_Seats.js
+  Panel Build                        changed  7d012611  code p2:p2/Panel_Build.new.js
+  Panel Cure Build 1                 new      c65f75ec  p4 add; code p6:p6/out/Panel_Cure_Build_1.js
+  Panel Cure Build 2                 new      6063c0dd  p4 add; code p6:p6/out/Panel_Cure_Build_2.js
+  Panel Cure Build 3                 new      a7675b89  p4 add; code p6:p6/out/Panel_Cure_Build_3.js
+  Panel Cure Call 1 deepseek         new      4d95a8c3  p4 add
+  Panel Cure Call 1 gemini           new      79d91a52  p4 add
+  Panel Cure Call 1 grok             new      1c51313f  p4 add
+  Panel Cure Call 1 mimo             new      b148f653  p4 add
+  Panel Cure Call 1 openai           new      278b281e  p4 add
+  Panel Cure Call 1 openrouter       new      6bcebeac  p4 add
+  Panel Cure Call 2 deepseek         new      4d95a8c3  p4 add
+  Panel Cure Call 2 gemini           new      79d91a52  p4 add
+  Panel Cure Call 2 grok             new      1c51313f  p4 add
+  Panel Cure Call 2 mimo             new      b148f653  p4 add
+  Panel Cure Call 2 openai           new      278b281e  p4 add
+  Panel Cure Call 2 openrouter       new      6bcebeac  p4 add
+  Panel Cure Call 3 deepseek         new      4d95a8c3  p4 add
+  Panel Cure Call 3 gemini           new      79d91a52  p4 add
+  Panel Cure Call 3 grok             new      1c51313f  p4 add
+  Panel Cure Call 3 mimo             new      b148f653  p4 add
+  Panel Cure Call 3 openai           new      278b281e  p4 add
+  Panel Cure Call 3 openrouter       new      6bcebeac  p4 add
+  Panel Cure Check                   new      a12fb590  p4 add; code p6:p6/out/Panel_Cure_Check.js
+  Panel Cure Needed?                 new      436b553f  p4 add
+  Panel Cure Normalize 1             new      7475c62d  p4 add; code p6:p6/out/Panel_Cure_Normalize_1.js
+  Panel Cure Normalize 2             new      ef4f704a  p4 add; code p6:p6/out/Panel_Cure_Normalize_2.js
+  Panel Cure Normalize 3             new      ff3d396c  p4 add; code p6:p6/out/Panel_Cure_Normalize_3.js
+  Panel Cure Route 1                 new      7a96bfa8  p4 add
+  Panel Cure Route 2                 new      7a96bfa8  p4 add
+  Panel Cure Route 3                 new      7a96bfa8  p4 add
+  Panel Done                         changed  fbf17dcc  p4 edit; p7 edit; code p7:p7/out/Panel_Done.js
+  Panel Payloads                     changed  f600fd57  code p5b:p5b/out/Panel_Payloads.js
+  Panel Tokens                       changed  5c8ea63b  code p6:p6/out/Panel_Tokens.js
+  Record Alternates                  new      9846cd7d  p7 add
+  Record Substitution                changed  783ecb7a  p4 edit; p7 edit
+  Replay Rows                        changed  8d8a4f81  p4 edit; p7 edit
+  Resolve Seats                      changed  3fab8adb  p7 edit; code p7:p7/out/Resolve_Seats.js
+  Write Judgment 1                   changed  7d770aef  p4 edit; p7 edit
+  Write Judgment 2                   changed  ac89b503  p4 edit; p7 edit
+  Write Judgment 3                   changed  166315b8  p4 edit; p7 edit
+OK: every changed node has one source; every code file accounted for; every reference and connection resolves
+
+# mutants.py
+PASS unmutated: passes
+PASS live of another version: refused
+PASS duplicate SRC entry: refused, naming it
+PASS SRC node missing: refused, naming it
+PASS SRC node not Code: refused, naming it
+PASS file unaccounted: refused, naming it
+PASS ops7 vs file: refused, naming it
+PASS missing reference: refused, naming it
+PASS connection to missing node: refused, naming it
+failures 0
