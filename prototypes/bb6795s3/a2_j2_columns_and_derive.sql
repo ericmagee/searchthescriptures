@@ -24,7 +24,7 @@ BEGIN
  || E'  -- CITATION RULE (BB-6795 J2; ruled BB-6799, BB-6805, BB-6828, BB-6830). A side that would prevail with a load-bearing quotation\n'
  || E'  -- (an [L1] quotation in a LINK block of its link round, the link not conceded) whose wording is NOT FOUND in the book named, or\n'
  || E'  -- whose cited verse does not exist, does not prevail: the outcome is the review value and citation_block records why. Same test for\n'
- || E'  -- both sides. WORDS ARE AT <ref> does not trip it. A check that did not run holds a prevail to review too (operator, BB-6833). NULL = before J2.\n'
+ || E'  -- both sides. WORDS ARE AT <ref> does not trip it. A check that did not run holds a prevail to review too (BB-6833). NULL = before J2.\n'
  || E'  SELECT citation_check, citation_block INTO v_cc, v_b_block FROM debate_results WHERE id = p_debate_id;\n'
  || E'  v_block := NULL;\n'
  || E'  v_side := CASE WHEN v_outcome IN (''DEFENDER PREVAILS'', ''DEFENDER PREVAILS, WEAKENED'') THEN ''DEFENDER''\n'
