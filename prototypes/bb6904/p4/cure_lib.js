@@ -39,11 +39,12 @@ function cureText(j){
  if(j&&Array.isArray(j.candidates)&&j.candidates[0]&&j.candidates[0].content&&Array.isArray(j.candidates[0].content.parts)){const t=j.candidates[0].content.parts.filter(p=>!p.thought&&typeof p.text==='string').map(p=>p.text).join('');if(t)return {ok:true,text:t,finish:j.candidates[0].finishReason||null};}
  const why=(j&&j.error)?('error: '+String(typeof j.error==='string'?j.error:(j.error.message||JSON.stringify(j.error))).slice(0,160)):('unrecognised reply, keys ['+Object.keys(j||{}).join(',')+']');
  return {ok:false,text:null,why};}
-// The round texts the judge was shown, read from its own request body: each transcript block opens with its label alone on a line
-// ([CR1], [DR1], [CR2], [DR2], [CR3 -- LINK ROUND ...], [DR3 -- LINK ROUND ...]) and runs to the next; [DR3] ends at the counting rule.
+// The round texts the judge was shown, read from its own request body. Each transcript block opens with its label on a line of its own, in
+// either live form: single judge "[CR1]" or "[CR3 -- LINK ROUND ...]"; panel "=== [CR1] DEFENDER R1 ===" (BB-6951 defect 2). A block runs to
+// the next; [DR3] ends at the counting rule (single) or at the end of the text (panel).
 function cureRounds(body){const parts=[];const add=c=>{if(typeof c==='string')parts.push(c);else if(Array.isArray(c))c.forEach(p=>{if(p&&typeof p.text==='string')parts.push(p.text);});};
  try{(body.messages||[]).forEach(m=>{if(m&&m.role!=='assistant')add(m.content);});(body.contents||[]).forEach(m=>{if(m&&m.role!=='model')add(m.parts);});}catch(e){}
- const t=parts.join('\n');const re=/^\[(CR1|DR1|CR2|DR2|CR3|DR3)(?: --[^\n]*)?\][ \t]*$/gm;const at=[];let m;while((m=re.exec(t)))at.push({k:m[1],s:m.index,e:m.index+m[0].length});
+ const t=parts.join('\n');const re=/^(?:===[ \t]+)?\[(CR1|DR1|CR2|DR2|CR3|DR3)(?:\]|[ \t]--[^\n]*\])(?:[^\n]*===)?[ \t]*$/gm;const at=[];let m;while((m=re.exec(t)))at.push({k:m[1],s:m.index,e:m.index+m[0].length});
  const out={};at.forEach((x,i)=>{if(out[x.k]!=null)return;let end=i+1<at.length?at[i+1].s:t.length;const c=t.indexOf('\n\nCOUNTING RULE',x.e);if(c>=0&&c<end)end=c;out[x.k]=t.slice(x.e,end);});
  return out;}
 // The rounds that press a witness against each side (the judge prompt's UNANSWERED WITNESS rule).
@@ -56,11 +57,14 @@ const cureQuotes=s=>{const re=/(?:^|[\s(\[{])["“'‘]([^"”\n]{4,}?)["”'’
 function cureFound(q,txt){const T=cureQ(txt);const ps=q.split(/\.{3}|…/).map(x=>cureQ(x).replace(/^[\s.,;:!?'"-]+|[\s.,;:!?'"-]+$/g,'')).filter(Boolean);
  return ps.length>0&&ps.join(' ').split(' ').length>=3&&ps.every(x=>T.includes(x));}
 // Withdrawal clauses: a clause (cut at . ; ! ? before a space or the end, or a line end) holding WITHDRAW with no negation before it in that
-// clause and no NOTHING or NONE right after.
+// clause and no NOTHING or NONE right after. After the WITHDRAW, the clause is cut at the first negation or exception (BUT, EXCEPT, SAVE,
+// OTHER THAN, KEEP, RETAIN): what precedes the cut is kept, what follows is excepted (BB-6951 defect 1).
 const CURE_NEG=/\b(?:NOT|NO|NEVER|NOR|CANNOT|CAN'?T|WON'?T|DON'?T|DOESN'?T|DIDN'?T|SHAN'?T|DECLINES?|DECLINED|REFUSES?|REFUSED|WITHOUT)\b/;
-function cureWithdrawals(blockLines){const out=[];for(const l of blockLines)for(const c of String(l).toUpperCase().replace(/[’‘]/g,"'").split(/[.;!?]+(?=\s|$)/)){
- const re=/\bWITHDRAW(?:S|N|ING)?\b/g;let m;while((m=re.exec(c))){if(CURE_NEG.test(c.slice(0,m.index)))continue;if(/^\s*(?:NOTHING|NONE)\b/.test(c.slice(m.index+m[0].length)))continue;out.push(c);break;}}
- return out;}
+const CURE_EXC=new RegExp(CURE_NEG.source.replace('(?:','(?:BUT|EXCEPT|SAVE|OTHER THAN|KEEPS?|KEPT|RETAINS?|RETAINED|'));
+function cureWithdrawals(blockLines){const kept=[],except=[];for(const l of blockLines)for(const c of String(l).toUpperCase().replace(/[’‘]/g,"'").split(/[.;!?]+(?=\s|$)/)){
+ const re=/\bWITHDRAW(?:S|N|ING)?\b/g;let m;while((m=re.exec(c))){if(CURE_NEG.test(c.slice(0,m.index)))continue;const after=c.slice(m.index+m[0].length);if(/^\s*(?:NOTHING|NONE)\b/.test(after))continue;
+  const e=after.search(CURE_EXC);const cut=e<0?c.length:m.index+m[0].length+e;kept.push(c.slice(0,cut));if(cut<c.length)except.push(c.slice(cut));break;}}
+ return {kept,except};}
 // Judge each item against the statement (6904 c; 6946). The reply is cut into blocks, each opened by a line that begins with an item's label.
 // K-B: the block's first line, alone, must pass the same K-B counter (two kinds) and keep the grade (that side's LINK BROKEN, found as
 // drvCheck finds it). K-G1: CORRECT = a corrected conceded count for that side at least the number of that side's K-G1 links, and a quotation
@@ -79,10 +83,10 @@ function cureVerdicts(items,reply,broken,rounds){const norm=s=>String(s).replace
   if(x.rule==='K-B'){const k=drvKinds(b[0]);const g=norm(b[0]).slice(lab.length).match(/(DEFENDER LINK BROKEN|CHALLENGER LINK BROKEN|UNDERDETERMINED)/);
    if(!g||g[1]!==x.side+' LINK BROKEN')return res('UNCURED','statement does not keep the grade '+x.side+' LINK BROKEN'+(g?' (it reads '+g[1]+')':''),b[0],k);
    return res(k.length>=2?'CURED':'UNCURED',k.length>=2?null:'statement exhibits '+k.length+' layer kind'+(k.length===1?'':'s'),b[0],k);}
-  const wd=cureWithdrawals(b);
-  if(wd.length){const wt=norm(wd.join(' '));
-   if(x.rule==='K-G1')return res('CURED','withdrawn',b.join(' '));
-   const need=((broken||{})[x.side]||[]).map(norm);if(!need.length)return res('UNCURED','the BROKEN links of '+x.side+' could not be read from the judgment',b.join(' '));const miss=need.filter(l=>!wt.includes(l));
+  const wd=cureWithdrawals(b);const wx=norm(wd.except.join(' '));
+  if(wd.kept.length){const wt=norm(wd.kept.join(' '));
+   if(x.rule==='K-G1')return wx.includes(norm(x.link))?res('UNCURED','withdrawal excepts '+x.link,b.join(' ')):res('CURED','withdrawn',b.join(' '));
+   const need=((broken||{})[x.side]||[]).map(norm);if(!need.length)return res('UNCURED','the BROKEN links of '+x.side+' could not be read from the judgment',b.join(' '));const miss=need.filter(l=>!wt.includes(l)||wx.includes(l));
    return miss.length?res('UNCURED','withdrawal does not name '+miss.join(', '),b.join(' ')):res('CURED','withdrawn: '+need.join(', '),b.join(' '));}
   if(x.rule==='K-G1'){const lab2=x.side==='DEFENDER'?/(?:^|[^A-Z])CONCEDED LINKS\s*:\s*(\d+)/:/CHALLENGER CONCEDED LINKS\s*:\s*(\d+)/;
    const src=x.side==='DEFENDER'?whole.replace(/CHALLENGER CONCEDED LINKS\s*:\s*\d+/g,''):whole;const m=src.match(lab2);const n=m?+m[1]:null;

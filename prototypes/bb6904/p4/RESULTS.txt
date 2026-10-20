@@ -27,6 +27,11 @@ PASS DEFECT 1: "I do not withdraw" (K-G1) -> UNCURED
 PASS DEFECT 1: "withdraw nothing" -> UNCURED
 PASS DEFECT 1: "I will not withdraw" naming every link (K-G3) -> UNCURED
 PASS DEFECT 1: one link withdrawn, the other named only in a refusal -> UNCURED
+PASS BB-6951 DEFECT 1: a link named after BUT NOT in the withdrawal clause -> UNCURED
+PASS The same three links all withdrawn -> CURED
+PASS An EXCEPT list after WITHDRAW names links excepted, not withdrawn -> UNCURED
+PASS Passive withdrawal naming the links before WITHDRAWN -> CURED
+PASS K-G1 withdrawal that excepts its own link -> UNCURED
 PASS DEFECT 2: a K-B restatement as UNDERDETERMINED, two kinds -> UNCURED
 PASS DEFECT 2: a K-B restatement graded for the other side -> UNCURED
 PASS K-G1 CORRECT incomplete (no quote, no round) -> UNCURED
@@ -44,6 +49,8 @@ PASS Panel Cure Needed? true
 PASS Panel Cure Build: one request per seat with any item (grok has K-G3 only: now requested, 6946)
 PASS Panel: BROKEN links read from the worked text (reasoning), not the JSON string
 PASS Panel answer: the judge text before the audit lines
+PASS BB-6951 DEFECT 2: panel rounds (=== [CR1] ... === heads) read, six blocks
+PASS Panel K-G1 CORRECT quoting the panel transcript's [DR2] -> CURED
 PASS AMEND 2: exactly one item, three bodies
 PASS One seat cured (deepseek, both lines restated with two kinds)
 PASS Beside it a seat not cured: the failed call (gemini)
