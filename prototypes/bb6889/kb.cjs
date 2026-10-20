@@ -1,7 +1,7 @@
 // K-B exhibit counter, two variants. Clause = text up to the next ; or sentence end or " -- ".
 const REF=/(?:[1-3]\s)?[A-Z][a-z]+\.?\s\d{1,3}:\d{1,3}/;
 const SRC=/[\u00C0-\u024F\u0370-\u03FF\u1F00-\u1FFF]|\b[a-z]+[ēōāīū][a-z]*\b|\*[A-Za-z'-]+\*|\b[GH]\d{2,5}\b/;
-const QUOTE=/["“'‘][^"”'’]{4,}["”'’]/;
+const QUOTE=/(?:^|[\s(\[{])["“'‘][^"”\n]{4,}?["”'’](?=$|[\s.,;:!?)\]}])/; // a mark inside a word (Joseph's) never opens or closes a quote (BB-6898 D1)
 const NEG=/\b(?:no|without|lacks?|lacking|not)\s+(?:\[L[1-4]\]\s*(?:or|and|\/)\s*)*$/i;
 function exhibits(line,needQuote,formC){
   const re=/\[L([1-3])\](?:\s*\/\s*\[L[1-3]\])*/g;let m,n=0;
