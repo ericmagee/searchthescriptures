@@ -1,0 +1,45 @@
+BB-6904 (d), portion 5: the outcome effect of an uncured ground. Measured and proposed; no option chosen (the choice is the operator's).
+
+HOW A GROUND REACHES THE OUTCOME TODAY (live db281705 and the live database functions, read only)
+- outcome = derive_debate_outcome -> aggregate_debate_panel -> d5_outcome_for. The panel verdict is the majority verdict_tag
+  (HELD, PARTIAL, BROKEN) among clean seats; fewer than 2 clean seats, or a tie, is CONTESTED = UNGRADED -- REVIEW. Later in
+  derive_debate_outcome: the tie rule (HELD panel, most counted HELD seats writing RESULT: UNDERDETERMINED -> UNDERDETERMINED)
+  and the citation rule.
+- A seat is clean when its verdict_tag is HELD, PARTIAL or BROKEN and both standings are in their closed sets. The standings
+  move no outcome; they gate "clean" only.
+- verdict_tag is the judge's own line 1. Extract Independent Verdict (v9 N3) recomputes the clause from the judge's n/w/k,
+  keystone and defense standing, first match wins: k>=1 BROKEN-1; 2w>n or keystone WITHDRAWN BROKEN-2; w>=1 PARTIAL-1;
+  defense COLLAPSED PARTIAL-2; else HELD-1. A mismatch is marked, never rewritten ("a grade is never rewritten").
+- So only DEFENDER LINK BROKEN grounds can move an outcome. A removed CHALLENGER LINK BROKEN ground reaches no outcome.
+
+MEASURED (measure.cjs on rows.sql's 9 judgments; RESULT.txt). Upper bound: every K-B-flagged defender ground left UNCURED.
+All cured = no change. The real effect lies between; step 7's live run gives the cure rate.
+  27259:            now CHALLENGER PREVAILS (BROKEN 3-0)
+  replays 233-235:  now CHALLENGER PREVAILS
+  replays 236-238:  now CHALLENGER PREVAILS
+  Defender grounds: 31 DEFENDER LINK BROKEN lines over 9 seats, 30 flagged. 8 of 9 seats keep no BROKEN link; replay 238 (grok) keeps 1.
+  Every keystone (D6) was graded BROKEN on a flagged line only.
+
+OPTIONS
+1. Mechanical recount. A flagged line that stays UNCURED is dropped; each link is regraded from its remaining lines (BROKEN if
+   a passing BROKEN line remains, else WITHDRAWN if withdrawn, else STANDS); k and the keystone are recounted; the clause rule
+   above gives the seat's tag. This is 6904 item 1 read literally ("graded under the remaining rules").
+   Effect: all three panels become DEFENDER PREVAILS (seats: 6 HELD, 2 PARTIAL, 1 BROKEN).
+   Code: Cure Check and Panel Cure Check rewrite verdict_tag (and record the judge's own), which reverses the extractor's
+   "never rewritten" rule; or derive_debate_outcome reads a stored cure result (a migration). Calls: none.
+1b. As 1, but a seat whose k falls to 0 only by removal is held UNDERDETERMINED, so the live tie rule applies.
+   Effect: all three panels become UNDERDETERMINED. Code: as 1, plus writing RESULT: UNDERDETERMINED or an equivalent flag the
+   tie rule reads (the tie rule reads verdict_raw today). Calls: none.
+2. Seat not counted. A seat with any UNCURED defender ground is not clean.
+   Effect: 0 of 9 seats counted; all three panels UNGRADED -- REVIEW. Code: aggregate_debate_panel's clean test reads a new
+   stored flag (a migration); the single judge's data_class becomes contested. Calls: none.
+3. Re-grade call. The seat is asked once more for its verdict with the removed grounds named; the new answer goes through the
+   same extractor and K-B. Effect: not measurable without running; 9 extra calls here (one per affected seat), and the answer
+   may itself violate (one round only, or it loops). Code: a call path after Cure Check, as portion 4's.
+4. Record only. The report stands beside the judge's grade; no outcome changes. Effect: none (today's outcomes). Code: none.
+
+NOTES FOR THE OPERATOR
+- Direction: under 1 the defender wins every one of these debates because the challenger-side judges did not exhibit two layers
+  on their lines. The burden of rule B falls, in outcome terms, on grounds against the defender only (see the first section).
+- The measured rate is the upper bound because no cure call has run yet; options 1, 1b and 2 are only as strong as the cure rate.
+- Step 7 (the live run) measures the cure rate before any option reaches an outcome.
