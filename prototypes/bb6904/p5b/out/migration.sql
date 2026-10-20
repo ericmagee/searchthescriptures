@@ -1,5 +1,5 @@
 -- BB-6904 5B: option 2 (BB-6965), design B fail-closed (BB-6968, ruled BB-6969). Draft; apply only on the operator's word.
--- Undo: undo.sql. Live before: aggregate_debate_panel md5 e4f92713, derive_debate_outcome md5 29df558d.
+-- Undo: undo.sql. Live before: aggregate_debate_panel md5 a42ae225, derive_debate_outcome md5 5b30675a.
 BEGIN;
 ALTER TABLE public.debate_judgments ADD COLUMN drv_uncured int;
 COMMENT ON COLUMN public.debate_judgments.drv_uncured IS 'BB-6904 option 2 (BB-6965): uncured DEBATE RULE VIOLATION items (K-B, K-G1, K-G3) of this seat. Panel Payloads writes the full count; Panel Cure Check lowers it to the UNCURED count. >0 = not clean (aggregate_debate_panel). NULL = written before 5B, read as 0.';

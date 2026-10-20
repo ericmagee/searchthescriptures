@@ -70,7 +70,7 @@ der2=once(der2,"""  -- AMENDMENT ONE. FIVE fields: exactly the set aggregate_deb
            ||'|'||coalesce(defense_standing,'<null>')||'|'||coalesce(challenge_standing,'<null>')
            ||CASE WHEN drv_uncured IS NOT NULL THEN '|drv='||drv_uncured::text ELSE '' END,""",'derive fingerprint')
 mig=("-- BB-6904 5B: option 2 (BB-6965), design B fail-closed (BB-6968, ruled BB-6969). Draft; apply only on the operator's word.\n"
- "-- Undo: undo.sql. Live before: aggregate_debate_panel md5 "+hashlib.md5(agg.rstrip(';\n').encode()).hexdigest()[:8]+", derive_debate_outcome md5 "+hashlib.md5(der.rstrip(';\n').encode()).hexdigest()[:8]+".\n"
+ "-- Undo: undo.sql. Live before: aggregate_debate_panel md5 "+hashlib.md5((agg.rstrip('\n').rstrip(';')+'\n').encode()).hexdigest()[:8]+", derive_debate_outcome md5 "+hashlib.md5((der.rstrip('\n').rstrip(';')+'\n').encode()).hexdigest()[:8]+".\n"
  "BEGIN;\n"
  "ALTER TABLE public.debate_judgments ADD COLUMN drv_uncured int;\n"
  "COMMENT ON COLUMN public.debate_judgments.drv_uncured IS 'BB-6904 option 2 (BB-6965): uncured DEBATE RULE VIOLATION items (K-B, K-G1, K-G3) of this seat. Panel Payloads writes the full count; Panel Cure Check lowers it to the UNCURED count. >0 = not clean (aggregate_debate_panel). NULL = written before 5B, read as 0.';\n"
