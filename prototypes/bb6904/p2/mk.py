@@ -4,7 +4,7 @@ md5=lambda s:hashlib.md5((s if s.endswith('\n') else s+'\n').encode()).hexdigest
 w=json.load(open(sys.argv[1]))['workflow'];N={n['name']:n for n in w['nodes']}
 DRV=("DEBATE RULE VIOLATION (Isaiah 28:10: \"here a little, [and] there a little\"). The rule on a BROKEN ground binds you as it binds the debaters. "
 "On every COLLISION POINTS line you grade DEFENDER LINK BROKEN or CHALLENGER LINK BROKEN, exhibit on that line itself at least two lower layers of DIFFERENT kinds, each tagged: "
-"[L1] with the KJV words quoted; [L2] with the Hebrew or Greek word in *italics*; [L3] with the cross-reference named. Two quotations at one layer are one layer. "
+"[L1] with the KJV words quoted; [L2] with the Hebrew or Greek word in its own script, with its transliteration marks, or with its Strong's number; [L3] with the cross-reference named. Two quotations at one layer are one layer. "
 "A BROKEN line without them is a DEBATE RULE VIOLATION. The system checks every BROKEN line after you answer; a violating line is returned to you to cure, by exhibiting the two layers, "
 "or to answer in writing why it stands. An answer that does not exhibit them leaves the violation standing, and that ground does not count toward BROKEN. "
 "The same holds when your CONCEDED LINKS or CHALLENGER CONCEDED LINKS count is 0 while you grade a link of that side BROKEN for a witness left unanswered. Both sides alike.")
