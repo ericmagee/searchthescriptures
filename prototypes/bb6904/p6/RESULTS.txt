@@ -1,19 +1,25 @@
 BB-6904 step 6 (Worker_A3): (e) report shape, (f) cost. Drafts only; nothing written to the flow.
-Rev 2: 6966 notes 1-3 taken (per-call seconds labelled derived; real challenger conceded and standing in cost.cjs and h6.cjs; [L2] in the prompt's words; DRV_EFFECT states option 2, ruled in 6965).
-Built by: python3 mk6.py <live db281705 details json, read 15:50:44 CDT> <Worker_E p4 at 9106eda> out
+Rev 2: 6966 notes 1-3 taken. Rev 3: retargeted to Worker_E's p4 at 6c36658 (serial cure slots, BB-6987): the panel Build and Normalize
+are three files each; Panel Tokens counts Panel Cure Call 1-3 <family> and the step 7 alternate calls (Alternate Call openrouter,
+Alternate Cure Call openrouter), every item; a node absent from the flow is skipped.
+Built by: python3 mk6.py <live db281705 details json, read 15:50:44 CDT> <Worker_E p4 at 6c36658> out
 cure_lib.js              93b3e538 -> 665a834f  +557 chars
 Cure_Build.js            1d9360f4 -> 8ec7d62f  +557 chars
 Cure_Normalize.js        a1abaed0 -> c808ecd5  +557 chars
 Cure_Check.js            4691a1f5 -> 20bd6b01  +557 chars
-Panel_Cure_Build.js      fb5dcda3 -> 4a521a25  +557 chars
-Panel_Cure_Normalize.js  acebea35 -> f3cabd23  +557 chars
-Panel_Cure_Check.js      eea618ea -> 1df7cc57  +557 chars
+Panel_Cure_Build_1.js    2088971b -> 5d715ce4  +557 chars
+Panel_Cure_Normalize_1.js 65306fc4 -> 668614be  +557 chars
+Panel_Cure_Build_2.js    7a4043ca -> 209e98d3  +557 chars
+Panel_Cure_Normalize_2.js a3158c67 -> c12e559e  +557 chars
+Panel_Cure_Build_3.js    6cc05cbc -> c69793dc  +557 chars
+Panel_Cure_Normalize_3.js 26ff62e6 -> 15904d3f  +557 chars
+Panel_Cure_Check.js      d42c22c8 -> f24ecea3  +557 chars
 Format Markdown          726810f0 -> ede7db49  +3236 chars
 Build Save Body          3dc5785e -> cb28a06d  +914 chars
-Panel Tokens             a8fccdbe -> 4bc7f43a  +760 chars
+Panel Tokens             a8fccdbe -> 5c8ea63b  +990 chars
 
-Worker_E's harness with one line changed for the new report form (harness6.cjs, line 95):
-failures 0 of 72 checks passing
+Worker_E's harness (79 checks at 6c36658) with one line changed for the new report form (harness6.cjs):
+failures 0 of 79 checks passing
 
 h6.cjs (live beside draft):
 PASS F1 no report lines stored: markdown byte-identical to live (21574 chars)
@@ -36,8 +42,9 @@ PASS Build Save Body, no cure call: saveBody identical to live (tokens 300/30/0/
 PASS Build Save Body, Gemini cure call: +1000 in, +250 out (with thoughts), +10 cache read (1300/280/0/25)
 PASS Build Save Body, chat cure call: +300 in, +40 out
 PASS Panel Tokens, no cure call: identical to live
-PASS Panel Tokens: both items of one cure node and a Gemini cure call counted (+970 in, +100 out, 3 calls named)
+PASS Panel Tokens: cure calls in slots 1, 2 and 3, a Gemini one among them, all counted (+970 in, +100 out, 3 calls named)
 PASS Panel Tokens on a dry replay still writes nothing (go false), as live
+PASS Panel Tokens: step 7 alternate calls (two items) and the alternate cure call counted (+350 in, +35 out)
 failures 0
 
 COST (cost.cjs):

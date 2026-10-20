@@ -5,8 +5,9 @@ const add={i:0,o:0,w:0,r:0};const seen=[];
 for(const n of NODES){let j=null;try{if(!$(n).isExecuted)continue;j=$(n).first(0).json;}catch(x){continue;}if(!j)continue;
 if(j.usageMetadata){const m=j.usageMetadata;add.i+=Number(m.promptTokenCount)||0;add.o+=(Number(m.candidatesTokenCount)||0)+(Number(m.thoughtsTokenCount)||0);add.r+=Number(m.cachedContentTokenCount)||0;seen.push(n);}
 else if(j.usage){const u=j.usage;add.i+=Number(u.prompt_tokens)||0;add.o+=Number(u.completion_tokens)||0;add.r+=Number((u.prompt_tokens_details&&u.prompt_tokens_details.cached_tokens)||u.prompt_cache_hit_tokens)||0;seen.push(n);}}
-// Step 6 (6904 f): the panel cure calls join the sums, every item of each node.
-for(const f of ['deepseek','openai','gemini','grok','mimo','openrouter']){const n='Panel Cure Call '+f;let a=[];try{if(!$(n).isExecuted)continue;a=$(n).all().map(x=>x.json);}catch(x){continue;}
+// Step 6 (6904 f): the panel cure calls of the three serial slots (BB-6987) and the step 7 alternate calls (absent before step 7 is
+// published; a missing node is skipped) join the sums, every item of each node.
+for(const n of [1,2,3].flatMap(k=>['deepseek','openai','gemini','grok','mimo','openrouter'].map(f=>'Panel Cure Call '+k+' '+f)).concat(['Alternate Call openrouter','Alternate Cure Call openrouter'])){let a=[];try{if(!$(n).isExecuted)continue;a=$(n).all().map(x=>x.json);}catch(x){continue;}
  for(const j of a){if(!j)continue;if(j.usageMetadata){const m=j.usageMetadata;add.i+=Number(m.promptTokenCount)||0;add.o+=(Number(m.candidatesTokenCount)||0)+(Number(m.thoughtsTokenCount)||0);add.r+=Number(m.cachedContentTokenCount)||0;seen.push(n);}
   else if(j.usage){const u=j.usage;add.i+=Number(u.prompt_tokens)||0;add.o+=Number(u.completion_tokens)||0;add.r+=Number((u.prompt_tokens_details&&u.prompt_tokens_details.cached_tokens)||u.prompt_cache_hit_tokens)||0;seen.push(n);}}}
 const go=!!(pre&&S.regrade!==true&&S.dry!==true);

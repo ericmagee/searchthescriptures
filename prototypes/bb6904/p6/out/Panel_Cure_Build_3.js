@@ -165,8 +165,14 @@ function cureReport(seat,v){return v.map(x=>'[AUDIT v21: DEBATE RULE VIOLATION R
 function cureProse(seat,reply){const p=reply&&reply.ok?cureLines(reply.text).prose.join(' ').replace(/\s+/g,' ').trim():'';
  return p?['[AUDIT v21: DEBATE RULE VIOLATION REPLY -- '+(seat?seat+' ':'')+'prose recorded, not read for a cure: '+cureSafe(p.slice(0,600))+']']:[];}
 
-// One item per cure request, in; one item out, each carrying its own request (by pairing) and the reply read without throwing.
-return $input.all().map((it,i)=>{let src=null;try{src=$('Panel Cure Build').itemMatching(i).json.cure;}catch(e){src=null;}
- if(!src){try{src=$('Panel Cure Build').all()[i].json.cure;}catch(e){src=null;}}
- const reply=(it.json&&it.json.cure&&it.json.cure.skip)?{ok:false,text:null,why:it.json.cure.skip}:cureText(it.json);
- return {json:{cure:src||(it.json&&it.json.cure)||null,reply}};});
+// One slot of the serial panel cure (ruled BB-6987): seat 2 only, exactly one item out, so the route behind it fires one branch
+// and every node after the join runs once per execution, as Judge 1, 2 and 3 are chained today. No item for this seat: a skip item.
+const PP=$('Panel Payloads').first().json;const P=$('Panel Build').first().json;let R=null;try{if($('Reserve Build').isExecuted)R=$('Reserve Build').first().json;}catch(e){R=null;}
+const i=2;const s=(PP.summary||[])[i];const items=(s&&s.drv)||[];
+if(!s||!items.length)return [{json:{cure:{who:'panel',idx:i,seat:s?s.seat:null,skip:'no violation in this seat',items:[]}}}];
+const jd=(s.substitute&&R&&R.seat===s.seat)?R:(P.judges||[]).find(j=>j.seat===s.seat);
+let answer=null,wt=null;try{const vr=JSON.parse(PP.bodies[i]).payload.verdict_raw;const k=vr.indexOf('\n\n[AUDIT v');answer=k>=0?vr.slice(0,k):vr;}catch(e){answer=null;}
+try{const o=JSON.parse(answer);wt=(o.reasoning!=null?o.reasoning:o.reason);}catch(e){wt=answer;} // the worked text, as portion 3 reads it
+const jidx=jd?CURE_FAMS.indexOf(jd.fam):-1;
+if(!jd||jidx<0||typeof answer!=='string')return [{json:{cure:{who:'panel',idx:i,seat:s.seat,skip:'no request body for this seat',items}}}];
+return [{json:{cure:{who:'panel',idx:i,seat:s.seat,fam:jd.fam,jidx,model:jd.api_model,items,broken:cureBroken(wt),rounds:cureRounds(jd.body),body:cureBody(jd.fam,jd.body,answer,cureAsk(items,cureBroken(wt)))}}}];

@@ -1,5 +1,5 @@
 # BB-6904 step 6 (Worker_A3): (e) report shape, (f) token accounting. Draft only: nothing is written to the flow.
-# Usage: python3 mk6.py <live workflow details json (db281705)> <Worker_E p4 dir at 9106eda> <out dir>
+# Usage: python3 mk6.py <live workflow details json (db281705)> <Worker_E p4 dir at 6c36658> <out dir>
 # Patches, each asserted to apply exactly once:
 #  1. cureReport (in cure_lib.js and the six cure nodes that embed it): fixed field order, original line added (6904 e).
 #  2. Format Markdown: a "Debate rule violations" section built from the stored rows (6913 note 1).
@@ -19,7 +19,8 @@ NEW_REP=("// Report line (step 6, 6904 e): fixed fields in fixed order, read bac
  " +(x.kinds&&x.kinds.length?'; KINDS: '+x.kinds.join(', '):'')+(x.why?'; WHY: '+cureSafe(x.why):'')+(x.line?'; LINE: '+cureSafe((l=>l.length>300?l.slice(0,297)+'...':l)(String(x.line).replace(/\\s+/g,' ').trim())):'')\n"
  " +(x.statement?'; STATEMENT: '+cureSafe(x.statement.slice(0,600)):'')+']');}")
 res={}
-for f in ['cure_lib.js','Cure_Build.js','Cure_Normalize.js','Cure_Check.js','Panel_Cure_Build.js','Panel_Cure_Normalize.js','Panel_Cure_Check.js']:
+# Worker_E's p4 at 6c36658 (serial slots, BB-6987): the panel Build and Normalize are three files each.
+for f in ['cure_lib.js','Cure_Build.js','Cure_Normalize.js','Cure_Check.js']+['Panel_Cure_%s_%d.js'%(n,k) for k in (1,2,3) for n in ('Build','Normalize')]+['Panel_Cure_Check.js']:
   s=open(os.path.join(P4,f)).read();b=md5(s);s=once(s,OLD_SAFE,NEW_SAFE,f+' cureSafe');s=once(s,OLD_REP,NEW_REP,f+' cureReport')
   open(os.path.join(OUT,f),'w').write(s);res[f]=(b[:8],md5(s)[:8],len(s)-len(open(os.path.join(P4,f)).read()))
 # 2. Format Markdown
@@ -39,8 +40,8 @@ bs2=once(bs,OLDA,NEWA,'Build Save Body');open(os.path.join(OUT,'Build_Save_Body.
 # 4. Panel Tokens: every item of each panel cure call (one node may serve two seats of one family).
 pt=N['Panel Tokens']['parameters']['jsCode'];b=md5(pt)
 OLDG="const go=!!(pre&&S.regrade!==true&&S.dry!==true);"
-NEWG=("// Step 6 (6904 f): the panel cure calls join the sums, every item of each node.\n"
- "for(const f of ['deepseek','openai','gemini','grok','mimo','openrouter']){const n='Panel Cure Call '+f;let a=[];try{if(!$(n).isExecuted)continue;a=$(n).all().map(x=>x.json);}catch(x){continue;}\n"
+NEWG=("// Step 6 (6904 f): the panel cure calls of the three serial slots (BB-6987) and the step 7 alternate calls (absent before step 7 is\n// published; a missing node is skipped) join the sums, every item of each node.\n"
+ "for(const n of [1,2,3].flatMap(k=>['deepseek','openai','gemini','grok','mimo','openrouter'].map(f=>'Panel Cure Call '+k+' '+f)).concat(['Alternate Call openrouter','Alternate Cure Call openrouter'])){let a=[];try{if(!$(n).isExecuted)continue;a=$(n).all().map(x=>x.json);}catch(x){continue;}\n"
  " for(const j of a){if(!j)continue;if(j.usageMetadata){const m=j.usageMetadata;add.i+=Number(m.promptTokenCount)||0;add.o+=(Number(m.candidatesTokenCount)||0)+(Number(m.thoughtsTokenCount)||0);add.r+=Number(m.cachedContentTokenCount)||0;seen.push(n);}\n"
  "  else if(j.usage){const u=j.usage;add.i+=Number(u.prompt_tokens)||0;add.o+=Number(u.completion_tokens)||0;add.r+=Number((u.prompt_tokens_details&&u.prompt_tokens_details.cached_tokens)||u.prompt_cache_hit_tokens)||0;seen.push(n);}}}\n"
  +OLDG)

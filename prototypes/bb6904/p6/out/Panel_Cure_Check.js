@@ -165,7 +165,7 @@ function cureReport(seat,v){return v.map(x=>'[AUDIT v21: DEBATE RULE VIOLATION R
 function cureProse(seat,reply){const p=reply&&reply.ok?cureLines(reply.text).prose.join(' ').replace(/\s+/g,' ').trim():'';
  return p?['[AUDIT v21: DEBATE RULE VIOLATION REPLY -- '+(seat?seat+' ':'')+'prose recorded, not read for a cure: '+cureSafe(p.slice(0,600))+']']:[];}
 
-const PP=$('Panel Payloads').first().json;let rs=[];try{if($('Panel Cure Normalize').isExecuted)rs=$('Panel Cure Normalize').all().map(x=>x.json);}catch(e){rs=[];}
+const PP=$('Panel Payloads').first().json;const rs=[];for(const n of ['Panel Cure Normalize 1','Panel Cure Normalize 2','Panel Cure Normalize 3']){try{if($(n).isExecuted)$(n).all().forEach(x=>rs.push(x.json));}catch(e){}}
 const bodies=PP.bodies.slice();const summary=(PP.summary||[]).map(s=>({...s}));
 summary.forEach((s,i)=>{const all=s.drv||[];s.cure=[];if(!all.length)return;
  const r=rs.find(x=>x.cure&&x.cure.idx===i)||null;

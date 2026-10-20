@@ -61,7 +61,9 @@ const n2=sb(draft('Build_Save_Body.js'),{...baseBS,'Cure Call openai':{usage:{pr
 // ---- Panel Tokens.
 const baseP={'Init Seats':{run_token:'T'},'Build Save Body':{saveBody:{input_tokens:10,output_tokens:2,cache_write_tokens:0,cache_read_tokens:1}},'Panel Judge 1 deepseek':{usage}};
 const pt=(src,nodes)=>runCode(src,nodes,{})[0].json;const p0=pt(live('Panel Tokens'),baseP),q0=pt(draft('Panel_Tokens.js'),baseP);ok(JSON.stringify(p0)===JSON.stringify(q0),'Panel Tokens, no cure call: identical to live');
-const q1=pt(draft('Panel_Tokens.js'),{...baseP,'Panel Cure Call grok':[{usage:{prompt_tokens:500,completion_tokens:50}},{usage:{prompt_tokens:400,completion_tokens:40}}],'Panel Cure Call gemini':{usageMetadata:{promptTokenCount:70,candidatesTokenCount:7,thoughtsTokenCount:3}}});
-ok(q1.p_input===p0.p_input+970&&q1.p_output===p0.p_output+100&&q1.panel_calls.filter(n=>/Cure/.test(n)).length===3,'Panel Tokens: both items of one cure node and a Gemini cure call counted (+970 in, +100 out, 3 calls named)');
-const q2=pt(draft('Panel_Tokens.js'),{...baseP,'Init Seats':{run_token:'T',dry:true},'Panel Cure Call grok':{usage:{prompt_tokens:500,completion_tokens:50}}});ok(q2.go===false&&q2.p_input===0,'Panel Tokens on a dry replay still writes nothing (go false), as live');
+const q1=pt(draft('Panel_Tokens.js'),{...baseP,'Panel Cure Call 1 grok':{usage:{prompt_tokens:500,completion_tokens:50}},'Panel Cure Call 3 grok':{usage:{prompt_tokens:400,completion_tokens:40}},'Panel Cure Call 2 gemini':{usageMetadata:{promptTokenCount:70,candidatesTokenCount:7,thoughtsTokenCount:3}}});
+ok(q1.p_input===p0.p_input+970&&q1.p_output===p0.p_output+100&&q1.panel_calls.filter(n=>/Cure/.test(n)).length===3,'Panel Tokens: cure calls in slots 1, 2 and 3, a Gemini one among them, all counted (+970 in, +100 out, 3 calls named)');
+const q2=pt(draft('Panel_Tokens.js'),{...baseP,'Init Seats':{run_token:'T',dry:true},'Panel Cure Call 1 grok':{usage:{prompt_tokens:500,completion_tokens:50}}});ok(q2.go===false&&q2.p_input===0,'Panel Tokens on a dry replay still writes nothing (go false), as live');
+const q3=pt(draft('Panel_Tokens.js'),{...baseP,'Alternate Call openrouter':[{usage:{prompt_tokens:200,completion_tokens:20}},{usage:{prompt_tokens:100,completion_tokens:10}}],'Alternate Cure Call openrouter':{usage:{prompt_tokens:50,completion_tokens:5}}});
+ok(q3.p_input===p0.p_input+350&&q3.p_output===p0.p_output+35,'Panel Tokens: step 7 alternate calls (two items) and the alternate cure call counted (+350 in, +35 out)');
 console.log('failures',fails);
