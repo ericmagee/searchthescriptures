@@ -1,0 +1,14 @@
+MEASURED per judge call, dry regrades: 27252 296 s, 27257 318 s; mean 307 s. Run 27259 took 41.6 min.
+27259: 4 extra calls (COUNTED: the portion 3 and 4 code on the stored judgments) | input about 360k chars, about 90k tokens at 4 chars a token (ESTIMATE) | time about 20 min at one judge call each, 49% of the run (ESTIMATE); at most 60 min at the 900 s timeout
+   deepseek 6 items, ask 4469
+   gemini 6 items, ask 2080
+   grok 5 items, ask 3278
+   single judge 5 items, ask about 2400 (ESTIMATE)
+replays 233-235: 3 extra calls (COUNTED: the portion 3 and 4 code on the stored judgments) | input about 323k chars, about 81k tokens at 4 chars a token (ESTIMATE) | time about 15 min at one judge call each, 104% of the run (ESTIMATE); at most 45 min at the 900 s timeout
+   deepseek 2 items, ask 2039
+   gemini 10 items, ask 4943
+   grok 2 items, ask 2042
+replays 236-238: 3 extra calls (COUNTED: the portion 3 and 4 code on the stored judgments) | input about 285k chars, about 71k tokens at 4 chars a token (ESTIMATE) | time about 15 min at one judge call each, 97% of the run (ESTIMATE); at most 45 min at the 900 s timeout
+   deepseek 3 items, ask 2293
+   gemini 4 items, ask 2875
+   grok 3 items, ask 2226

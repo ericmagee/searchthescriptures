@@ -1,0 +1,55 @@
+BB-6904 step 6 (Worker_A3): (e) report shape, (f) cost. Drafts only; nothing written to the flow.
+Built by: python3 mk6.py <live db281705 details json, read 15:50:44 CDT> <Worker_E p4 at 9106eda> out
+cure_lib.js              93b3e538 -> 665a834f  +557 chars
+Cure_Build.js            1d9360f4 -> 8ec7d62f  +557 chars
+Cure_Normalize.js        a1abaed0 -> c808ecd5  +557 chars
+Cure_Check.js            4691a1f5 -> 20bd6b01  +557 chars
+Panel_Cure_Build.js      fb5dcda3 -> 4a521a25  +557 chars
+Panel_Cure_Normalize.js  acebea35 -> f3cabd23  +557 chars
+Panel_Cure_Check.js      eea618ea -> 1df7cc57  +557 chars
+Format Markdown          726810f0 -> a61f34b6  +3002 chars
+Build Save Body          3dc5785e -> cb28a06d  +914 chars
+Panel Tokens             a8fccdbe -> 4bc7f43a  +760 chars
+
+Worker_E's harness with one line changed for the new report form (harness6.cjs, line 95):
+failures 0 of 72 checks passing
+
+h6.cjs (live beside draft):
+PASS F1 no report lines stored: markdown byte-identical to live (21579 chars)
+PASS F1 with reports: the draft adds only the new section; everything else equals live
+PASS Section sits after the Result table and citation check, before "How to read"
+PASS One table row per report line (17 rows, 17 items)
+PASS Count line: 17 violations: 1 cured, 16 not cured.
+PASS deepseek: the cured row shows CURED and its kinds
+PASS The cured row has six cells; a pipe in the statement is escaped (6 cells)
+PASS Original line cell is the judge's own line, brackets round, cut at 300 with ...
+PASS A "; LINE:" inside the statement stays in the statement, not a field
+PASS gemini: every row UNCURED, the failed call named
+PASS grok (prose only): every row UNCURED
+PASS Prose note names grok only
+PASS Effect line reads record only (DRV_EFFECT, until the operator chooses 6904 d)
+PASS Outside the section no raw report line is printed (noMarkers, as live)
+PASS Single judge row read from independent_verdict_raw
+PASS Build Save Body, no cure call: saveBody identical to live (tokens 300/30/0/15)
+PASS Build Save Body, Gemini cure call: +1000 in, +250 out (with thoughts), +10 cache read (1300/280/0/25)
+PASS Build Save Body, chat cure call: +300 in, +40 out
+PASS Panel Tokens, no cure call: identical to live
+PASS Panel Tokens: both items of one cure node and a Gemini cure call counted (+970 in, +100 out, 3 calls named)
+PASS Panel Tokens on a dry replay still writes nothing (go false), as live
+failures 0
+
+COST (cost.cjs):
+MEASURED per judge call, dry regrades: 27252 296 s, 27257 318 s; mean 307 s. Run 27259 took 41.6 min.
+27259: 4 extra calls (COUNTED: the portion 3 and 4 code on the stored judgments) | input about 360k chars, about 90k tokens at 4 chars a token (ESTIMATE) | time about 20 min at one judge call each, 49% of the run (ESTIMATE); at most 60 min at the 900 s timeout
+   deepseek 6 items, ask 4469
+   gemini 6 items, ask 2080
+   grok 5 items, ask 3278
+   single judge 5 items, ask about 2400 (ESTIMATE)
+replays 233-235: 3 extra calls (COUNTED: the portion 3 and 4 code on the stored judgments) | input about 323k chars, about 81k tokens at 4 chars a token (ESTIMATE) | time about 15 min at one judge call each, 104% of the run (ESTIMATE); at most 45 min at the 900 s timeout
+   deepseek 2 items, ask 2039
+   gemini 10 items, ask 4943
+   grok 2 items, ask 2042
+replays 236-238: 3 extra calls (COUNTED: the portion 3 and 4 code on the stored judgments) | input about 285k chars, about 71k tokens at 4 chars a token (ESTIMATE) | time about 15 min at one judge call each, 97% of the run (ESTIMATE); at most 45 min at the 900 s timeout
+   deepseek 3 items, ask 2293
+   gemini 4 items, ask 2875
+   grok 3 items, ask 2226

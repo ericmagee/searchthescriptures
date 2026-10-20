@@ -1,0 +1,124 @@
+// BB-6904 portion 4 harness: runs the six new Code nodes with stubbed upstream nodes, both branches, and the falsifiers of 6945 AMEND 5.
+// Usage: node harness.cjs. Every check prints PASS or FAIL; the last line counts failures.
+const fs=require('fs');const src=n=>fs.readFileSync(__dirname+'/'+n+'.js','utf8');
+let fails=0;const ok=(c,m)=>{console.log((c?'PASS ':'FAIL ')+m);if(!c)fails++;};
+function run(file,nodes,input){const $=n=>{const v=nodes[n];if(v===undefined)return {isExecuted:false,first(){throw new Error('not run: '+n);},all(){throw new Error('not run: '+n);},itemMatching(){throw new Error('not run: '+n);}};
+  const arr=Array.isArray(v)?v:[v];return {isExecuted:true,first:()=>({json:arr[0]}),all:()=>arr.map(j=>({json:j})),itemMatching:i=>({json:arr[i]})};};
+ return new Function('$','$input',src(file))($,{first:()=>({json:input[0]}),all:()=>input.map(j=>({json:j}))}).map(x=>x.json);}
+const evalIf=(expr,j)=>new Function('$json','return '+expr.replace(/^=\{\{|\}\}$/g,''))(j);
+const ops=JSON.parse(fs.readFileSync(__dirname+'/ops.json','utf8'));const need=n=>ops.nodes_add.find(x=>x.name===n).parameters.conditions.conditions[0].leftValue;
+const route=j=>new Function('$json','return '+ops.nodes_add.find(x=>x.name==='Cure Route').parameters.output.replace(/^=\{\{|\}\}$/g,''))(j);
+// Real BROKEN lines from live run 27259 (debate_results 56e75954, single judge), as the portion 3 node lists them.
+const L4='D4 vs C2 (Luke 1:34-35; Matthew 1:18): DEFENDER LINK BROKEN -- C2’s [L1]/[L2] chain says the “how” is answered by the Spirit and not the husband, while [CR3] answers only the title/no-begetting-verb point and leaves the Spirit-means witness unanswered.';
+const L5='D5 vs C2 (Matthew 1:18, 1:25): DEFENDER LINK BROKEN -- C2 shows conception before union and knowing after birth; [CR3] quotes 1:25 but does not answer the timing and never answers 1:18’s “before they came together.”';
+const V=[{rule:'K-B',side:'DEFENDER',link:'D4 vs C2',kinds:[],line:L4},{rule:'K-B',side:'DEFENDER',link:'D5 vs C2',kinds:[],line:L5},{rule:'K-G1',side:'DEFENDER',link:'D5 vs C2',line:L5}];
+const GOOD='RESTATED: D4 vs C2: DEFENDER LINK BROKEN -- [L1] Luke 1:35 "The Holy Ghost shall come upon thee" answers the "how" of 1:34; [L2] ἐπελεύσεται, the coming-upon word; [CR3] leaves it unanswered.';
+const BAD='RESTATED: D5 vs C2: DEFENDER LINK BROKEN -- the timing stands unanswered, as I said; [L4] it follows that Joseph is excluded.';
+const base={verdict_tag:'BROKEN',defense_standing:'PROP-DEPENDENT',conceded_links:0,independent_verdict_raw:'JUDGE TEXT\n\n[AUDIT v21: ...]',debate_rule_violations:V};
+// A transcript in the judge prompt's own layout (Build Independent Verdict): each round's label alone on a line, then its text.
+const TR='RULES: [DR1] and [DR2] are cited inline here and are not blocks.\n\nTOPIC: t\n[CR1]\nDECLARED CHAIN: D1..D6\n[DR1]\nLuke 1:35 answers the how.\n[CR2]\nc2\n[DR2]\nMatthew 1:18 says "before they came together, she was found with child of the Holy Ghost." The defender must answer it.\n[CR3 -- LINK ROUND (defender exhibit-or-concede)]\nThe defender quotes 1:25 only.\n[DR3 -- LINK ROUND (challenger exhibit-or-concede)]\nd3\n\nCOUNTING RULE -- BINDING: x';
+const B={jidx:0,judge_model:'deepseek-flash',verdictBody:{model:'deepseek-flash',max_tokens:65536,messages:[{role:'system',content:'S'},{role:'user',content:TR}]}};
+const VN={choices:[{message:{content:'JUDGE TEXT'},finish_reason:'stop'}]};
+console.log('# SINGLE JUDGE');
+ok(evalIf(need('Cure Needed?'),base)===true,'Cure Needed? true when K-B violations exist');
+const cb=run('Cure_Build',{'Build Independent Verdict':B,'Verdict Normalizer':VN},[base]);
+ok(cb.length===1&&cb[0].cure.items.length===3&&cb[0].cure.fam==='deepseek','Cure Build: one request, every item (two K-B lines, one K-G1), family deepseek');
+const msgs=cb[0].cure.body.messages;ok(msgs.length===4&&msgs[2].role==='assistant'&&msgs[2].content==='JUDGE TEXT'&&msgs[3].content.includes('FLAGGED LINES:')&&msgs[3].content.includes('D4 vs C2:')&&msgs[3].content.includes('FLAGGED ITEMS:\nK-G1 D5 vs C2:'),'Cure body: the judge\'s own conversation, its answer, then the cure request naming each flagged line');
+ok(route(cb[0])===0,'Cure Route: deepseek to output 0');
+const reply={choices:[{message:{content:GOOD+'\n'+BAD},finish_reason:'stop'}]};
+const cn=run('Cure_Normalize',{'Cure Build':cb},[reply]);ok(cn.length===1&&cn[0].reply.ok&&cn[0].cure.items.length===3,'Cure Normalize: reply read, request paired');
+const ck=run('Cure_Check',{'Extract Independent Verdict':base,'Cure Normalize':cn},[cn[0]]);const r=ck[0].debate_rule_report;
+ok(r.find(x=>x.link==='D4 vs C2'&&x.rule==='K-B').status==='CURED','WRONG-IF LIMB 3 known-good: two kinds ([L1] quoted, [L2] Greek script) -> CURED');
+ok(r.find(x=>x.link==='D5 vs C2'&&x.rule==='K-B').status==='UNCURED','WRONG-IF LIMB 3 known-bad: no lower layer, an [L4] -> UNCURED');
+ok(r.find(x=>x.rule==='K-G1').status==='UNCURED'&&/no CORRECTED COUNT for DEFENDER and no WITHDRAWN line for D5 vs C2/.test(r.find(x=>x.rule==='K-G1').why),'K-G1 with no fixed line for it: UNCURED, named');
+ok(ck[0].verdict_tag==='BROKEN'&&ck[0].defense_standing==='PROP-DEPENDENT'&&ck[0].conceded_links===0,'No grade or count changes (portion 5 is the operator\'s)');
+ok(ck[0].independent_verdict_raw.startsWith(base.independent_verdict_raw)&&(ck[0].independent_verdict_raw.match(/DEBATE RULE VIOLATION REPORT/g)||[]).length===3&&!/REPORT[^\]]*REVIEW THIS ROW/.test(ck[0].independent_verdict_raw),'Report: three lines appended after the existing text, none counted as a new flag');
+// failed call
+const cnf=run('Cure_Normalize',{'Cure Build':cb},[{error:{message:'timeout of 900000ms exceeded'}}]);
+const ckf=run('Cure_Check',{'Extract Independent Verdict':base,'Cure Normalize':cnf},[cnf[0]]);
+ok(ckf[0].debate_rule_report.filter(x=>x.rule==='K-B').every(x=>x.status==='UNCURED'&&/cure call failed: error: timeout/.test(x.why)),'Failed call: every line UNCURED with the failure named; no throw');
+// gemini envelope
+const cng=run('Cure_Normalize',{'Cure Build':cb},[{candidates:[{content:{parts:[{text:GOOD}]},finishReason:'STOP'}]}]);ok(cng[0].reply.ok&&cng[0].reply.text===GOOD,'Gemini envelope read');
+const gb=run('Cure_Build',{'Build Independent Verdict':{...B,jidx:2,verdictBody:{contents:[{role:'user',parts:[{text:'U'}]}]}},'Verdict Normalizer':VN},[base]);
+ok(gb[0].cure.fam==='gemini'&&gb[0].cure.body.contents.length===3&&gb[0].cure.body.contents[1].role==='model','Gemini body: model turn then user turn');
+// no-cure branch
+const clean={...base,debate_rule_violations:[]};ok(evalIf(need('Cure Needed?'),clean)===false,'Cure Needed? false on a clean judgment');
+const ck0=run('Cure_Check',{'Extract Independent Verdict':clean},[clean]);ok(ck0.length===1&&ck0[0].independent_verdict_raw===clean.independent_verdict_raw&&ck0[0].debate_rule_report.length===0,'AMEND 1 no-cure path: Cure Check passes the item unchanged, empty report');
+const kg={...base,debate_rule_violations:[V[2]]};ok(evalIf(need('Cure Needed?'),kg)===true,'Only K-G1: a call is made (6946)');
+const ckg=run('Cure_Check',{'Extract Independent Verdict':kg},[kg]);ok(ckg[0].debate_rule_report.length===1&&ckg[0].debate_rule_report[0].status==='UNCURED'&&/no cure call was made/.test(ckg[0].debate_rule_report[0].why),'K-G1 with no call reaching Check: UNCURED, named');
+console.log('# 6946: K-G1 and K-G3, each way');
+const G=(items,ans,text)=>{const e={...base,debate_rule_violations:items};const b=run('Cure_Build',{'Build Independent Verdict':B,'Verdict Normalizer':{choices:[{message:{content:ans}}]}},[e]);
+ const n=run('Cure_Normalize',{'Cure Build':b},[{choices:[{message:{content:text}}]}]);return run('Cure_Check',{'Extract Independent Verdict':e,'Cure Normalize':n},[n[0]])[0].debate_rule_report;};
+const gb_ask=()=>run('Cure_Build',{'Build Independent Verdict':B,'Verdict Normalizer':VN},[base])[0].cure.body.messages[3].content;
+const ANS=L4+'\n'+L5+'\nDEFENSE STANDING: SELF-SUPPORTED\nCONCEDED LINKS: 0';const K1=[V[2]];const K3=[{rule:'K-G3',side:'DEFENDER',link:null,line:null}];
+const P2='PRESSED: D5 vs C2 | [DR2] | "before they came together, she was found with child"';
+let g=G(K1,ANS,'CORRECTED COUNT: DEFENDER 1\n'+P2);
+ok(g[0].status==='CURED'&&/DEFENDER COUNT 1; quotation found in DR2/.test(g[0].why),'K-G1 CORRECT (count 1 >= 1 link, PRESSED quoting the named round [DR2]) -> CURED');
+const RD=run('Cure_Build',{'Build Independent Verdict':B,'Verdict Normalizer':VN},[base])[0].cure.rounds;
+ok(Object.keys(RD).join()==='CR1,DR1,CR2,DR2,CR3,DR3'&&/^\nMatthew 1:18 says/.test(RD.DR2)&&!/COUNTING RULE/.test(RD.DR3)&&!/RULES/.test(RD.CR1),'Round texts read from the judge\'s own prompt: six blocks, inline labels ignored, [DR3] ends at the counting rule');
+ok(gb_ask().includes('ANSWER FORM.')&&gb_ask().includes('WITHDRAWN: D<n> vs C<m>')&&gb_ask().includes('PRESSED: D<n> vs C<m> | [<round>] |'),'The ask carries the fixed answer form (6952)');
+g=G(K1,ANS,'CORRECTED COUNT: DEFENDER 1\nPRESSED: D5 vs C2 | [DR2] | "words that no round ever said"');ok(g[0].status==='UNCURED'&&/no quotation found in the named round/.test(g[0].why),'6948 D3: a quotation not in the named round -> UNCURED');
+g=G(K1,ANS,'CORRECTED COUNT: DEFENDER 1\nPRESSED: D5 vs C2 | [CR3] | "The defender quotes 1:25 only"');ok(g[0].status==='UNCURED'&&/does not press the defender/.test(g[0].why),'6948 D3: a quotation from a round that does not press the defender ([CR3]) -> UNCURED');
+g=G(K1,ANS,'CORRECTED COUNT: DEFENDER 1\nPRESSED: D5 vs C2 | [DR1] | "no such words here"\n'+P2);ok(g[0].status==='CURED','Two PRESSED lines, one found -> CURED');
+g=G(K1,ANS,'CORRECTED COUNT: DEFENDER 0\n'+P2);ok(g[0].status==='UNCURED'&&/below 1/.test(g[0].why),'K-G1 count still too low -> UNCURED');
+g=G(K1,ANS,'CORRECTED COUNT: DEFENDER 1\nCORRECTED COUNT: DEFENDER 2\n'+P2);ok(g[0].status==='UNCURED'&&/two differing/.test(g[0].why),'Two differing counts -> UNCURED');
+g=G(K1,ANS,'CORRECTED COUNT: DEFENDER 1');ok(g[0].status==='UNCURED'&&/no PRESSED line/.test(g[0].why),'K-G1 count without PRESSED -> UNCURED');
+g=G(K1,ANS,'WITHDRAWN: D5 vs C2');ok(g[0].status==='CURED'&&g[0].why==='withdrawn','K-G1 WITHDRAWN line -> CURED');
+g=G(K3,ANS,'CORRECTED STANDING: DEFENDER PROP-DEPENDENT');ok(g[0].status==='CURED'&&/PROP-DEPENDENT/.test(g[0].why),'K-G3 CORRECTED STANDING -> CURED');
+g=G(K3,ANS,'CORRECTED STANDING: DEFENDER SELF-SUPPORTED');ok(g[0].status==='UNCURED','K-G3 standing kept SELF-SUPPORTED -> UNCURED');
+g=G(K3,ANS,'WITHDRAWN: D4 vs C2\nWITHDRAWN: D5 vs C2');ok(g[0].status==='CURED'&&/D4 VS C2, D5 VS C2/.test(g[0].why),'K-G3 WITHDRAWN for every BROKEN link of that side -> CURED');
+g=G(K3,ANS,'WITHDRAWN: D4 vs C2');ok(g[0].status==='UNCURED'&&/no WITHDRAWN line for D5 VS C2/.test(g[0].why),'K-G3 WITHDRAWN missing a link -> UNCURED, the link named');
+g=G(K3,'JUDGE TEXT','WITHDRAWN: D4 vs C2');ok(g[0].status==='UNCURED'&&/could not be read/.test(g[0].why),'K-G3 when no BROKEN link can be read -> UNCURED (6949)');
+g=G([V[0]],ANS,'RESTATED: D4 vs C2: UNDERDETERMINED -- [L1] Luke 1:35 "The Holy Ghost shall come upon thee"; [L2] ἐπελεύσεται.');ok(g[0].status==='UNCURED'&&/does not keep the grade DEFENDER LINK BROKEN \(it reads UNDERDETERMINED\)/.test(g[0].why),'6948 D2: RESTATED as UNDERDETERMINED, two kinds -> UNCURED');
+g=G([V[0]],ANS,'RESTATED: D4 vs C2: CHALLENGER LINK BROKEN -- [L1] Luke 1:35 "The Holy Ghost shall come upon thee"; [L2] ἐπελεύσεται.');ok(g[0].status==='UNCURED','6948 D2: RESTATED graded for the other side -> UNCURED');
+g=G([V[0]],ANS,GOOD+'\n'+GOOD.replace('[L2]','[L3] Luke 1:31;'));ok(g[0].status==='UNCURED'&&/two RESTATED lines/.test(g[0].why),'Two RESTATED lines for one link -> UNCURED');
+g=G([V[0]],ANS,GOOD.replace('RESTATED: ',''));ok(g[0].status==='UNCURED'&&/no RESTATED line/.test(g[0].why),'The old label form (no keyword) is prose now -> UNCURED');
+console.log('# 6952: 6948 and 6951 cases written as prose, all UNCURED; malformed lines cure nothing');
+const ANS6=ANS+'\nD6 vs C2 (Luke 2:5): DEFENDER LINK BROKEN -- y';
+for(const [it,an,t,m] of [[K1,ANS,'K-G1 D5 vs C2: I do not withdraw the BROKEN grade.','6948 D1 "I do not withdraw" (K-G1)'],[K1,ANS,'I withdraw nothing; the grade stands.','"withdraw nothing"'],
+ [K3,ANS6,'K-G3 DEFENDER: I will not withdraw D4 vs C2, D5 vs C2 or D6 vs C2.','6948 D1 "I will not withdraw" (K-G3)'],[K3,ANS6,'I withdraw D4 vs C2 and D5 vs C2 but not D6 vs C2.','6951 D1 "but not D6"'],
+ [K3,ANS6,'I withdraw D4 vs C2, D5 vs C2 and D6 vs C2.','even a full withdrawal in prose'],[K3,ANS6,'The BROKEN grades on D4 vs C2, D5 vs C2 and D6 vs C2 are withdrawn.','passive prose withdrawal'],
+ [K1,ANS,'K-G1 D5 vs C2: CONCEDED LINKS: 1 -- [DR2] "before they came together, she was found with child"','the 6946 prose correction'],[K3,ANS,'DEFENSE STANDING: PROP-DEPENDENT','the old standing line, not the keyword']])
+ {g=G(it,an,t);ok(g[0].status==='UNCURED','Prose: '+m+' -> UNCURED');}
+for(const [it,an,t,m] of [[K3,ANS6,'WITHDRAWN: D4 vs C2, D5 vs C2 and D6 vs C2','several links on one WITHDRAWN line'],[K3,ANS6,'WITHDRAWN: D4 vs C2 but not D6 vs C2','WITHDRAWN with a tail'],
+ [K1,ANS,'WITHDRAWN: not D5 vs C2','WITHDRAWN: not ...'],[K3,ANS,'CORRECTED STANDING: DEFENDER PROP-DEPENDENT, mostly','CORRECTED STANDING with a tail'],[K1,ANS,'CORRECTED COUNT: DEFENDER one\n'+P2,'CORRECTED COUNT in words'],
+ [K1,ANS,'CORRECTED COUNT: DEFENDER 1\nPRESSED: D5 vs C2 [DR2] "before they came together, she was found with child"','PRESSED without the bars']])
+ {g=G(it,an,t);ok(g[0].status==='UNCURED'&&/malformed line/.test(g[0].why),'Malformed: '+m+' -> UNCURED, the line named');}
+g=G(K1,ANS,JSON.stringify({reasoning:'WITHDRAWN: D5 vs C2'}));ok(g[0].status==='CURED','A JSON reply is read through its reasoning string');
+g=G(K1,ANS,'```json\n'+JSON.stringify({reason:'I do not withdraw D5 vs C2'})+'\n```');ok(g[0].status==='UNCURED','A fenced JSON reply of prose -> UNCURED');
+g=G(K3,ANS6,'**WITHDRAWN: D4 vs C2**\nWITHDRAWN: D5 vs c2\n`WITHDRAWN: D6 VS C2`');ok(g[0].status==='CURED','Fixed lines wrapped in ** or ` and with vs/VS, c/C case -> read');
+{const e={...base,debate_rule_violations:K1};const b=run('Cure_Build',{'Build Independent Verdict':B,'Verdict Normalizer':{choices:[{message:{content:ANS}}]}},[e]);
+ const n=run('Cure_Normalize',{'Cure Build':b},[{choices:[{message:{content:'I stand by [CR3] here.\nWITHDRAWN: D5 vs C2'}}]}]);const c=run('Cure_Check',{'Extract Independent Verdict':e,'Cure Normalize':n},[n[0]])[0].independent_verdict_raw;
+ ok(/\[AUDIT v21: DEBATE RULE VIOLATION REPLY -- prose recorded, not read for a cure: I stand by \(CR3\) here\.\]$/.test(c),'Prose recorded once, in its own REPLY line, brackets made round');}
+const gb3=run('Cure_Build',{'Build Independent Verdict':B,'Verdict Normalizer':{choices:[{message:{content:ANS}}]}},[{...base,debate_rule_violations:K3}]);
+ok(gb3[0].cure.body.messages[3].content.includes('K-G3 DEFENDER: DEFENDER STANDING SELF-SUPPORTED while these DEFENDER links are graded BROKEN: D4 vs C2, D5 vs C2'),'K-G3 request names the side and its BROKEN links');
+ok(/DEBATE RULE VIOLATION REPORT -- ITEM: DEFENDER STANDING; RULE: K-G3/.test(run('Cure_Check',{'Extract Independent Verdict':{...base,debate_rule_violations:K3}},[{}])[0].independent_verdict_raw),'K-G3 report line names the side');
+console.log('# PANEL');
+const mk=(seat,text,drv)=>({json:JSON.stringify({payload:{judge_seat:seat,verdict_raw:text+'\n\n[AUDIT v21: x. REVIEW THIS ROW.]',verdict_tag:'BROKEN'}}),drv});
+const S=[['deepseek','{"reasoning":"DS"}',V.slice(0,2)],['gemini','{"reasoning":"GE"}',[{rule:'K-B',side:'DEFENDER',link:'D1 vs C5',kinds:[],line:'D1 vs C5 (Hebrews 10:5): DEFENDER LINK BROKEN -- Defender left Hebrews 10:5 unanswered in [CR3].'}]],['grok',JSON.stringify({reasoning:'D2 vs C1 (John 1:14): DEFENDER LINK BROKEN -- x\nDEFENSE STANDING: SELF-SUPPORTED'}),[{rule:'K-G3',side:'DEFENDER',link:null,line:null}]]];
+const PP={run_token:'t',debate_id:'d',bodies:S.map(([s,t,d])=>mk(s,t,d).json),summary:S.map(([s,t,d])=>({seat:s,drv:d,substitute:false})),substitution:null,panel_effective:['deepseek','gemini','grok']};
+// The transcript in Panel Build's own layout: 'DEBATE TRANSCRIPT', then '=== <label> ===' heads joined by blank lines (live Panel Build, db281705).
+const PTR='DEBATE TRANSCRIPT\n\n=== TOPIC ===\nt\n\n=== [CR1] DEFENDER R1 ===\nDECLARED CHAIN: D1..D6\n\n=== [DR1] CHALLENGER R1 ===\nLuke 1:35 answers the how.\n\n=== [CR2] DEFENDER R2 ===\nc2\n\n=== [DR2] CHALLENGER R2 ===\nMatthew 1:18 says "before they came together, she was found with child of the Holy Ghost."\n\n=== [CR3] DEFENDER R3 -- LINK ROUND (defender exhibit-or-concede) ===\nThe defender quotes 1:25 only.\n\n=== [DR3] CHALLENGER R3 -- LINK ROUND (challenger exhibit-or-concede) ===\nd3';
+const P={judges:[{seat:'deepseek',fam:'deepseek',api_model:'ds',body:{messages:[{role:'system',content:'S'},{role:'user',content:PTR}]}},{seat:'gemini',fam:'gemini',api_model:'gm',body:{contents:[{role:'user',parts:[{text:'U'}]}]}},{seat:'grok',fam:'grok',api_model:'gk',body:{messages:[]}}]};
+ok(evalIf(need('Panel Cure Needed?'),PP)===true,'Panel Cure Needed? true');
+const pb=run('Panel_Cure_Build',{'Panel Build':P},[PP]);ok(pb.length===3&&pb[0].cure.seat==='deepseek'&&pb[1].cure.seat==='gemini'&&pb[1].cure.jidx===2&&pb[2].cure.seat==='grok'&&pb[2].cure.jidx===3,'Panel Cure Build: one request per seat with any item (grok has K-G3 only: now requested, 6946)');
+ok(JSON.stringify(pb[2].cure.broken.DEFENDER)==='["D2 vs C1"]','Panel: BROKEN links read from the worked text (reasoning), not the JSON string');
+ok(pb[0].cure.body.messages[2].content==='{"reasoning":"DS"}','Panel answer: the judge text before the audit lines');
+const PR=pb[0].cure.rounds;ok(Object.keys(PR).join()==='CR1,DR1,CR2,DR2,CR3,DR3'&&/^\nMatthew 1:18 says/.test(PR.DR2)&&!/===/.test(PR.CR3)&&/d3$/.test(PR.DR3),'BB-6951 DEFECT 2: panel rounds (=== [CR1] ... === heads) read, six blocks');
+{const PPk={...PP,bodies:[PP.bodies[0]],summary:[{seat:'deepseek',drv:[V[2]],substitute:false}]};const b1=run('Panel_Cure_Build',{'Panel Build':P},[PPk]);
+ const n1=run('Panel_Cure_Normalize',{'Panel Cure Build':b1},[{choices:[{message:{content:'CORRECTED COUNT: DEFENDER 1\nPRESSED: D5 vs C2 | [DR2] | "before they came together, she was found with child"'}}]}]);
+ const c1=run('Panel_Cure_Check',{'Panel Payloads':PPk,'Panel Cure Normalize':n1},[n1[0]]);ok(c1[0].summary[0].cure[0].status==='CURED'&&/found in DR2/.test(c1[0].summary[0].cure[0].why),'Panel K-G1 CORRECT quoting the panel transcript\'s [DR2] -> CURED');}
+const pn=run('Panel_Cure_Normalize',{'Panel Cure Build':pb},[{choices:[{message:{content:GOOD+'\n'+'RESTATED: D5 vs C2: DEFENDER LINK BROKEN -- '+'[L1] Matthew 1:18 "before they came together" [L3] Matthew 1:25 names the bound.'}}]},{error:'503'},{choices:[{message:{content:'WITHDRAWN: D2 vs C1'}}]}]);
+const pc=run('Panel_Cure_Check',{'Panel Payloads':PP,'Panel Cure Normalize':pn},[pn[0]]);
+ok(pc.length===1&&pc[0].bodies.length===3,'AMEND 2: exactly one item, three bodies');
+const st=s=>pc[0].summary.find(x=>x.seat===s).cure;
+ok(st('deepseek').every(x=>x.status==='CURED'),'One seat cured (deepseek, both lines restated with two kinds)');
+ok(st('gemini')[0].status==='UNCURED'&&/cure call failed/.test(st('gemini')[0].why),'Beside it a seat not cured: the failed call (gemini)');
+ok(st('grok')[0].status==='CURED'&&/withdrawn: D2 VS C1/.test(st('grok')[0].why),'grok K-G3 WITHDRAW naming its one BROKEN link -> CURED');
+ok(pc[0].bodies.every(b=>JSON.parse(b).payload.verdict_raw.split('\n').filter(l=>/DEBATE RULE VIOLATION REPORT/.test(l)).every(l=>(l.match(/\[/g)||[]).length===1&&(l.match(/\]/g)||[]).length===1&&l.endsWith(']'))),'NOTE (b): each report line has one opening and one closing bracket; the statement\'s [L1] is written (L1)');
+ok(pc[0].bodies.every((b,i)=>JSON.parse(b).payload.verdict_raw.startsWith(JSON.parse(PP.bodies[i]).payload.verdict_raw)),'Each body only gains report lines at its end');
+ok(pc[0].debate_id===PP.debate_id&&pc[0].substitution===PP.substitution&&JSON.stringify(pc[0].panel_effective)===JSON.stringify(PP.panel_effective),'Other fields of the Panel Payloads item unchanged');
+const PP0={...PP,summary:PP.summary.map(s=>({...s,drv:[]}))};ok(evalIf(need('Panel Cure Needed?'),PP0)===false,'Panel Cure Needed? false with no violation');
+const pc0=run('Panel_Cure_Check',{'Panel Payloads':PP0},[PP0]);ok(pc0.length===1&&JSON.stringify(pc0[0].bodies)===JSON.stringify(PP0.bodies),'AMEND 1 panel no-cure path: item passes unchanged');
+const pbs=run('Panel_Cure_Build',{'Panel Build':{judges:[]}},[PP]);ok(pbs.every(x=>x.cure.skip)&&route(pbs[0])===6,'Seat with no request body: skip item, routed to output 6, straight to Normalize');
+console.log('failures',fails);

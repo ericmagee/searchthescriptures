@@ -1,0 +1,2 @@
+function cureReport(seat,v){return v.map(x=>'[AUDIT v21: DEBATE RULE VIOLATION REPORT -- '+(seat?seat+' ':'')+(x.rule==='K-G3'?x.side:x.link)+' ('+x.rule+'): '+x.status
+ +(x.kinds&&x.kinds.length?' ('+x.kinds.join(', ')+')':'')+(x.why?'; '+cureSafe(x.why):'')+(x.statement?'. STATEMENT: '+cureSafe(x.statement.slice(0,600)):'')+']');}
