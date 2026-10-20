@@ -30,7 +30,7 @@ SINGLE_CHECK = r"""
 const base=$('Extract Independent Verdict').first().json;let rs=[];try{if($('Cure Normalize').isExecuted)rs=$('Cure Normalize').all().map(x=>x.json);}catch(e){rs=[];}
 const all=base.debate_rule_violations||[];if(!all.length)return [{json:{...base,debate_rule_report:[]}}];
 const r=rs[0]||null;const v=cureVerdicts(all,r?r.reply:{ok:false,why:'no cure call was made'},r&&r.cure?r.cure.broken:null,r&&r.cure?r.cure.rounds:null);
-return [{json:{...base,independent_verdict_raw:base.independent_verdict_raw+'\n\n'+cureReport(null,v).join('\n'),debate_rule_report:v.map(x=>({rule:x.rule,side:x.side,link:x.link,status:x.status,kinds:x.kinds,why:x.why,statement:x.statement}))}}];
+return [{json:{...base,independent_verdict_raw:base.independent_verdict_raw+'\n\n'+cureReport(null,v).concat(cureProse(null,r?r.reply:null)).join('\n'),debate_rule_report:v.map(x=>({rule:x.rule,side:x.side,link:x.link,status:x.status,kinds:x.kinds,why:x.why,statement:x.statement}))}}];
 """
 PANEL_CHECK = r"""
 const PP=$('Panel Payloads').first().json;let rs=[];try{if($('Panel Cure Normalize').isExecuted)rs=$('Panel Cure Normalize').all().map(x=>x.json);}catch(e){rs=[];}
@@ -39,6 +39,6 @@ summary.forEach((s,i)=>{const all=s.drv||[];s.cure=[];if(!all.length)return;
  const r=rs.find(x=>x.cure&&x.cure.idx===i)||null;
  const v=cureVerdicts(all,r?r.reply:{ok:false,why:'no cure call was made for this seat'},r&&r.cure?r.cure.broken:null,r&&r.cure?r.cure.rounds:null);
  s.cure=v.map(x=>({rule:x.rule,side:x.side,link:x.link,status:x.status,kinds:x.kinds,why:x.why}));
- const b=JSON.parse(bodies[i]);b.payload.verdict_raw=b.payload.verdict_raw+'\n'+cureReport(s.seat,v).join('\n');bodies[i]=JSON.stringify(b);});
+ const b=JSON.parse(bodies[i]);b.payload.verdict_raw=b.payload.verdict_raw+'\n'+cureReport(s.seat,v).concat(cureProse(s.seat,r?r.reply:null)).join('\n');bodies[i]=JSON.stringify(b);});
 return [{json:{...PP,bodies,summary}}];
 """

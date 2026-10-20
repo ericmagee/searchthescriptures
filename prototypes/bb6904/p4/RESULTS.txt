@@ -6,7 +6,7 @@ PASS Cure Route: deepseek to output 0
 PASS Cure Normalize: reply read, request paired
 PASS WRONG-IF LIMB 3 known-good: two kinds ([L1] quoted, [L2] Greek script) -> CURED
 PASS WRONG-IF LIMB 3 known-bad: no lower layer, an [L4] -> UNCURED
-PASS K-G1 with no answer block: UNCURED, named
+PASS K-G1 with no fixed line for it: UNCURED, named
 PASS No grade or count changes (portion 5 is the operator's)
 PASS Report: three lines appended after the existing text, none counted as a new flag
 PASS Failed call: every line UNCURED with the failure named; no throw
@@ -17,31 +17,44 @@ PASS AMEND 1 no-cure path: Cure Check passes the item unchanged, empty report
 PASS Only K-G1: a call is made (6946)
 PASS K-G1 with no call reaching Check: UNCURED, named
 # 6946: K-G1 and K-G3, each way
-PASS K-G1 CORRECT (count 1 >= 1 link, a sentence quoted from the named round [DR2]) -> CURED
+PASS K-G1 CORRECT (count 1 >= 1 link, PRESSED quoting the named round [DR2]) -> CURED
 PASS Round texts read from the judge's own prompt: six blocks, inline labels ignored, [DR3] ends at the counting rule
-# BB-6948 falsifiers
-PASS DEFECT 3: a quotation not in the named round -> UNCURED
-PASS DEFECT 3: a quotation from a round that does not press the defender ([CR3]) -> UNCURED
-PASS A quotation found in one of two named rounds -> CURED
-PASS DEFECT 1: "I do not withdraw" (K-G1) -> UNCURED
-PASS DEFECT 1: "withdraw nothing" -> UNCURED
-PASS DEFECT 1: "I will not withdraw" naming every link (K-G3) -> UNCURED
-PASS DEFECT 1: one link withdrawn, the other named only in a refusal -> UNCURED
-PASS BB-6951 DEFECT 1: a link named after BUT NOT in the withdrawal clause -> UNCURED
-PASS The same three links all withdrawn -> CURED
-PASS An EXCEPT list after WITHDRAW names links excepted, not withdrawn -> UNCURED
-PASS Passive withdrawal naming the links before WITHDRAWN -> CURED
-PASS K-G1 withdrawal that excepts its own link -> UNCURED
-PASS DEFECT 2: a K-B restatement as UNDERDETERMINED, two kinds -> UNCURED
-PASS DEFECT 2: a K-B restatement graded for the other side -> UNCURED
-PASS K-G1 CORRECT incomplete (no quote, no round) -> UNCURED
-PASS K-G1 CORRECT with the count still too low -> UNCURED
-PASS K-G1 WITHDRAW -> CURED
-PASS K-G3 CORRECT (standing other than SELF-SUPPORTED) -> CURED
-PASS K-G3 CORRECT that keeps SELF-SUPPORTED -> UNCURED
-PASS K-G3 WITHDRAW naming every BROKEN link of that side -> CURED
-PASS K-G3 WITHDRAW missing a link -> UNCURED, the link named
-PASS K-G3 WITHDRAW when no BROKEN link can be read -> UNCURED (no empty pass)
+PASS The ask carries the fixed answer form (6952)
+PASS 6948 D3: a quotation not in the named round -> UNCURED
+PASS 6948 D3: a quotation from a round that does not press the defender ([CR3]) -> UNCURED
+PASS Two PRESSED lines, one found -> CURED
+PASS K-G1 count still too low -> UNCURED
+PASS Two differing counts -> UNCURED
+PASS K-G1 count without PRESSED -> UNCURED
+PASS K-G1 WITHDRAWN line -> CURED
+PASS K-G3 CORRECTED STANDING -> CURED
+PASS K-G3 standing kept SELF-SUPPORTED -> UNCURED
+PASS K-G3 WITHDRAWN for every BROKEN link of that side -> CURED
+PASS K-G3 WITHDRAWN missing a link -> UNCURED, the link named
+PASS K-G3 when no BROKEN link can be read -> UNCURED (6949)
+PASS 6948 D2: RESTATED as UNDERDETERMINED, two kinds -> UNCURED
+PASS 6948 D2: RESTATED graded for the other side -> UNCURED
+PASS Two RESTATED lines for one link -> UNCURED
+PASS The old label form (no keyword) is prose now -> UNCURED
+# 6952: 6948 and 6951 cases written as prose, all UNCURED; malformed lines cure nothing
+PASS Prose: 6948 D1 "I do not withdraw" (K-G1) -> UNCURED
+PASS Prose: "withdraw nothing" -> UNCURED
+PASS Prose: 6948 D1 "I will not withdraw" (K-G3) -> UNCURED
+PASS Prose: 6951 D1 "but not D6" -> UNCURED
+PASS Prose: even a full withdrawal in prose -> UNCURED
+PASS Prose: passive prose withdrawal -> UNCURED
+PASS Prose: the 6946 prose correction -> UNCURED
+PASS Prose: the old standing line, not the keyword -> UNCURED
+PASS Malformed: several links on one WITHDRAWN line -> UNCURED, the line named
+PASS Malformed: WITHDRAWN with a tail -> UNCURED, the line named
+PASS Malformed: WITHDRAWN: not ... -> UNCURED, the line named
+PASS Malformed: CORRECTED STANDING with a tail -> UNCURED, the line named
+PASS Malformed: CORRECTED COUNT in words -> UNCURED, the line named
+PASS Malformed: PRESSED without the bars -> UNCURED, the line named
+PASS A JSON reply is read through its reasoning string
+PASS A fenced JSON reply of prose -> UNCURED
+PASS Fixed lines wrapped in ** or ` and with vs/VS, c/C case -> read
+PASS Prose recorded once, in its own REPLY line, brackets made round
 PASS K-G3 request names the side and its BROKEN links
 PASS K-G3 report line names the side
 # PANEL

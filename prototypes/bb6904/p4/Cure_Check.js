@@ -39,29 +39,36 @@ function drvCheck(text,dConc,cConc,dStand,cStand,askedCC){const items=[],marks=[
  if(askedCC&&!/^[ \t]*(?:#+[ \t]*|[-•][ \t]*)?CITATION CHECK\b/im.test(text.replace(/[*_`]+/g,'')))marks.push('[AUDIT v21: CITATION CHECK LINE ABSENT FROM A PROMPT THAT ASKS FOR IT (K-G2); recorded, not counted as a violation.]');
  return {items,marks};}
 
-// BB-6904 (c), portion 4: the cure call. One extra call per violating seat: its own flagged lines, the rule, and the instruction to cure
-// each line by exhibiting two lower layers of different kinds on it, or to answer in writing why it stands. The statement is run through
-// the same K-B counter (drvKinds, git 0b3cbac): a line is CURED only if its restated line passes; anything else, a missing line, a failed
-// or unparsed call, leaves it UNCURED (6945 AMEND 3). No grade, count or outcome is changed here (portion 5, the operator's choice).
+// BB-6904 (c), portion 4: the cure call. One extra call per violating seat: its own flagged items, the rule, and a FIXED ANSWER FORM
+// (BB-6952). The check reads only lines in that form; prose in the reply is recorded in the report and never read for a cure, so there is
+// no negation to parse: a link not on a WITHDRAWN line is not withdrawn, and a malformed line cures nothing. A RESTATED line is run through
+// the same K-B counter (drvKinds, git 0b3cbac). A missing line, a failed or unparsed call leaves the item UNCURED (6945 AMEND 3). No grade,
+// count or outcome is changed here (portion 5, the operator's choice).
 const CURE_FAMS=['deepseek','openai','gemini','grok','mimo','openrouter']; // Cure Route output order; covers all six (6913 note 2)
 const CURE_RULE="DEBATE RULE VIOLATION. After you answered, the system checked every COLLISION POINTS line you graded DEFENDER LINK BROKEN or CHALLENGER LINK BROKEN. "
  +"Each such line must exhibit, on the line itself, at least two lower layers of DIFFERENT kinds, each tagged: [L1] with the KJV words quoted; "
  +"[L2] with the Hebrew or Greek word in its own script, with its transliteration marks, or with its Strong's number; [L3] with the cross-reference named. "
- +"Two quotations at one layer are one layer. The lines below do not. For each one, either CURE it, by writing that one line again with the same grade and "
- +"the two layers exhibited on it, or ANSWER in writing why it stands. Reply with one line per flagged link and nothing else, each line beginning with "
- +"its label exactly as given below followed by a colon. Do not change any other line, grade or count. A line that is not cured leaves that ground "
- +"uncounted toward BROKEN.";
-const CURE_RULE_G="COUNT AND STANDING (same rule). Your own numbers must agree with your own COLLISION POINTS lines. For each item below, either CORRECT it or WITHDRAW. "
- +"K-G1 (a conceded count of 0 beside a link you graded BROKEN on a witness left unanswered): CORRECT by writing the corrected line, CONCEDED LINKS: <n> (or CHALLENGER CONCEDED LINKS: <n>), "
- +"with n at least the number of such links, and for each such link quoting the sentence of the earlier round that pressed the witness and naming that round ([DR1], [DR2], [CR1], [CR2] or [CR3]); "
- +"or WITHDRAW the BROKEN grade on that link. K-G3 (a standing graded SELF-SUPPORTED while links of that side are graded BROKEN): CORRECT by writing the corrected line, "
- +"DEFENSE STANDING: <PROP-DEPENDENT or COLLAPSED> (or CHALLENGE STANDING), or WITHDRAW the BROKEN grade on each such link, naming each. "
- +"Begin each answer with its label exactly as given below followed by a colon; an answer may run to the next label.";
+ +"Two quotations at one layer are one layer. The lines below do not. For each one, either cure it with one RESTATED line: that collision line again, "
+ +"beginning with its link, with the same grade and the two layers exhibited on it; or answer in prose why it stands (recorded; prose cures nothing). "
+ +"Do not change any other line, grade or count. A line that is not cured leaves that ground uncounted toward BROKEN.";
+const CURE_RULE_G="COUNT AND STANDING (same rule). Your own numbers must agree with your own COLLISION POINTS lines. "
+ +"K-G1 (a conceded count of 0 beside a link you graded BROKEN on a witness left unanswered): cure it either with CORRECTED COUNT for that side, "
+ +"the number at least the number of that side's K-G1 links, together with, for each such link, a PRESSED line quoting the words of the earlier round "
+ +"that pressed the witness (against the defender: [DR1] or [DR2]; against the challenger: [CR1], [CR2] or [CR3]); or with WITHDRAWN for that link. "
+ +"K-G3 (a standing graded SELF-SUPPORTED while links of that side are graded BROKEN): cure it either with CORRECTED STANDING for that side, "
+ +"PROP-DEPENDENT or COLLAPSED, or with one WITHDRAWN line for each BROKEN link of that side.";
+const CURE_FORM="ANSWER FORM. Write each cure as one line of its own, beginning with its keyword in capitals exactly as shown:\n"
+ +"RESTATED: <the full collision line, beginning D<n> vs C<m>>\n"
+ +"WITHDRAWN: D<n> vs C<m>\n"
+ +"CORRECTED COUNT: <DEFENDER or CHALLENGER> <number>\n"
+ +"CORRECTED STANDING: <DEFENDER or CHALLENGER> <PROP-DEPENDENT or COLLAPSED>\n"
+ +"PRESSED: D<n> vs C<m> | [<round>] | \"<the words of that round, quoted exactly>\"\n"
+ +"Only these lines are read. A link not on a WITHDRAWN line is not withdrawn. A line not in this form cures nothing. Any other text is recorded only.";
 const cureLabel=x=>x.rule==='K-B'?x.link:(x.rule==='K-G1'?'K-G1 '+x.link:'K-G3 '+x.side);
 function cureAsk(items,broken){const kb=items.filter(x=>x.rule==='K-B'),kg=items.filter(x=>x.rule!=='K-B');let t='';
  if(kb.length)t+=CURE_RULE+'\n\nFLAGGED LINES:\n'+kb.map(x=>x.link+': '+String(x.line||'').trim()).join('\n');
  if(kg.length)t+=(t?'\n\n':'')+CURE_RULE_G+'\n\nFLAGGED ITEMS:\n'+kg.map(x=>cureLabel(x)+': '+(x.rule==='K-G1'?String(x.line||'').trim():x.side+' STANDING SELF-SUPPORTED while these '+x.side+' links are graded BROKEN: '+((broken||{})[x.side]||[]).join(', '))).join('\n');
- return t;}
+ return t+'\n\n'+CURE_FORM;}
 // The BROKEN links of each side on the judge's own lines, selected as drvCheck selects them (portion 3).
 function cureBroken(text){const out={DEFENDER:[],CHALLENGER:[]};if(typeof text!=='string')return out;
  for(const line of text.split('\n')){const u=line.toUpperCase().replace(/[*_`]+/g,'').trim();const m=u.match(/^(?:[-•]|\d+[.)])?\s*D(\d+)\b\s*:?\s*(?:D\1\b\s*)?(.*)$/);if(!m||!/^VS\.?\s/.test(m[2]))continue;
@@ -91,59 +98,71 @@ function cureRounds(body){const parts=[];const add=c=>{if(typeof c==='string')pa
 // The rounds that press a witness against each side (the judge prompt's UNANSWERED WITNESS rule).
 const CURE_PRESS={DEFENDER:['DR1','DR2'],CHALLENGER:['CR1','CR2','CR3']};
 const cureQ=s=>String(s).toLowerCase().replace(/[“”]/g,'"').replace(/[‘’]/g,"'").replace(/[—–]/g,'-').replace(/\s+/g,' ').trim();
-// Quotations in a statement: the same marks at word edges as DRV_QUOTE (BB-6898 D1).
-const cureQuotes=s=>{const re=/(?:^|[\s(\[{])["“'‘]([^"”\n]{4,}?)["”'’](?=$|[\s.,;:!?)\]}])/g;const o=[];let m;while((m=re.exec(s)))o.push(m[1]);return o;};
 // A quotation is found in a round when every piece of it (split at an ellipsis), stripped of edge punctuation, occurs in that round's text,
 // and the pieces hold at least three words.
 function cureFound(q,txt){const T=cureQ(txt);const ps=q.split(/\.{3}|…/).map(x=>cureQ(x).replace(/^[\s.,;:!?'"-]+|[\s.,;:!?'"-]+$/g,'')).filter(Boolean);
  return ps.length>0&&ps.join(' ').split(' ').length>=3&&ps.every(x=>T.includes(x));}
-// Withdrawal clauses: a clause (cut at . ; ! ? before a space or the end, or a line end) holding WITHDRAW with no negation before it in that
-// clause and no NOTHING or NONE right after. After the WITHDRAW, the clause is cut at the first negation or exception (BUT, EXCEPT, SAVE,
-// OTHER THAN, KEEP, RETAIN): what precedes the cut is kept, what follows is excepted (BB-6951 defect 1).
-const CURE_NEG=/\b(?:NOT|NO|NEVER|NOR|CANNOT|CAN'?T|WON'?T|DON'?T|DOESN'?T|DIDN'?T|SHAN'?T|DECLINES?|DECLINED|REFUSES?|REFUSED|WITHOUT)\b/;
-const CURE_EXC=new RegExp(CURE_NEG.source.replace('(?:','(?:BUT|EXCEPT|SAVE|OTHER THAN|KEEPS?|KEPT|RETAINS?|RETAINED|'));
-function cureWithdrawals(blockLines){const kept=[],except=[];for(const l of blockLines)for(const c of String(l).toUpperCase().replace(/[’‘]/g,"'").split(/[.;!?]+(?=\s|$)/)){
- const re=/\bWITHDRAW(?:S|N|ING)?\b/g;let m;while((m=re.exec(c))){if(CURE_NEG.test(c.slice(0,m.index)))continue;const after=c.slice(m.index+m[0].length);if(/^\s*(?:NOTHING|NONE)\b/.test(after))continue;
-  const e=after.search(CURE_EXC);const cut=e<0?c.length:m.index+m[0].length+e;kept.push(c.slice(0,cut));if(cut<c.length)except.push(c.slice(cut));break;}}
- return {kept,except};}
-// Judge each item against the statement (6904 c; 6946). The reply is cut into blocks, each opened by a line that begins with an item's label.
-// K-B: the block's first line, alone, must pass the same K-B counter (two kinds) and keep the grade (that side's LINK BROKEN, found as
-// drvCheck finds it). K-G1: CORRECT = a corrected conceded count for that side at least the number of that side's K-G1 links, and a quotation
-// found in the text of a round named in the block that presses that side (defender [DR1], [DR2]; challenger [CR1]-[CR3]); or WITHDRAW.
-// K-G3: CORRECT = a corrected standing for that side other than SELF-SUPPORTED; or WITHDRAW, the withdrawal clauses naming every BROKEN
-// link of that side. A WITHDRAW counts only in a clause with no negation before it (BB-6948 defect 1).
-// Anything else, a missing block, a failed or unparsed call: UNCURED. No grade or count is changed (portion 5).
-function cureVerdicts(items,reply,broken,rounds){const norm=s=>String(s).replace(/[*_`]+/g,'').replace(/\s+/g,' ').trim().toUpperCase();
- const lines=reply&&reply.ok?String(reply.text).split('\n').map(s=>s.trim()).filter(Boolean):[];
- const labs=items.map(x=>norm(cureLabel(x)));const isLab=l=>labs.some(b=>norm(l).startsWith(b+':')||norm(l).startsWith(b+' :'));
- const block=lab=>{const k=lines.findIndex(l=>norm(l).startsWith(lab+':')||norm(l).startsWith(lab+' :'));if(k<0)return null;const b=[lines[k]];for(let i=k+1;i<lines.length&&!isLab(lines[i]);i++)b.push(lines[i]);return b;};
- const whole=norm(lines.join('\n'));const nK1={DEFENDER:items.filter(x=>x.rule==='K-G1'&&x.side==='DEFENDER').length,CHALLENGER:items.filter(x=>x.rule==='K-G1'&&x.side==='CHALLENGER').length};
- return items.map(x=>{const lab=norm(cureLabel(x));const res=(status,why,statement,kinds)=>({...x,status,why,statement,kinds:kinds||[]});
+// The reply in the fixed form (BB-6952). A line is read only when, after trimming and stripping * or ` at its ends, it begins with one of the
+// five keywords and a colon; it then must match its form exactly, or it is malformed. Every other line is prose.
+const CURE_KEY=/^(RESTATED|WITHDRAWN|CORRECTED COUNT|CORRECTED STANDING|PRESSED)[ \t]*:[ \t]*(.*)$/;
+const cureId=(d,c)=>'D'+d+' vs C'+c;
+// A reply that is one JSON object (a panel judge keeps its answer form) is read through its reasoning, reason or answer string.
+const cureUnwrap=t=>{try{const j=JSON.parse(String(t).trim().replace(/^```(?:json)?\s*|\s*```$/g,''));if(j&&typeof j==='object'){for(const k of ['reasoning','reason','answer'])if(typeof j[k]==='string')return j[k];}}catch(e){}return t;};
+function cureLines(text){text=cureUnwrap(text);const o={restated:[],withdrawn:[],count:[],standing:[],pressed:[],malformed:[],prose:[]};
+ for(const raw of String(text||'').split('\n')){const l=raw.trim().replace(/^[*`]+|[*`]+$/g,'').trim();if(!l)continue;const k=l.match(CURE_KEY);if(!k){o.prose.push(l);continue;}
+  const r=k[2].trim();let m;
+  if(k[1]==='WITHDRAWN'&&(m=r.match(/^D(\d+)\s+vs\.?\s+C(\d+)$/i)))o.withdrawn.push({link:cureId(m[1],m[2]),line:l});
+  else if(k[1]==='CORRECTED COUNT'&&(m=r.match(/^(DEFENDER|CHALLENGER)\s+(\d+)$/)))o.count.push({side:m[1],n:+m[2],line:l});
+  else if(k[1]==='CORRECTED STANDING'&&(m=r.match(/^(DEFENDER|CHALLENGER)\s+(SELF-SUPPORTED|PROP-DEPENDENT|COLLAPSED)$/)))o.standing.push({side:m[1],st:m[2],line:l});
+  else if(k[1]==='PRESSED'&&(m=r.match(/^D(\d+)\s+vs\.?\s+C(\d+)\s*\|\s*\[(DR1|DR2|CR1|CR2|CR3)\]\s*\|\s*["“](.+)["”]$/i)))o.pressed.push({link:cureId(m[1],m[2]),round:m[3].toUpperCase(),q:m[4],line:l});
+  else if(k[1]==='RESTATED'&&(m=r.match(/^D(\d+)\s+vs\.?\s+C(\d+)\b/i))){const g=r.slice(m[0].length).toUpperCase().match(/(DEFENDER LINK BROKEN|CHALLENGER LINK BROKEN|UNDERDETERMINED)/);
+   o.restated.push({link:cureId(m[1],m[2]),grade:g?g[1]:null,text:r,line:l});}
+  else o.malformed.push(l);}
+ return o;}
+// Judge each item against the fixed-form lines (6904 c; 6946; 6952).
+// K-B: exactly one RESTATED line for the link; its grade (the first after the link, as drvCheck finds it) is that side's LINK BROKEN; the line
+// passes the K-B counter (two kinds). K-G1: WITHDRAWN for the link; or one CORRECTED COUNT for that side at least the number of that side's
+// K-G1 links, and a PRESSED line for the link whose round presses that side (defender [DR1], [DR2]; challenger [CR1]-[CR3], 6950) and whose
+// quotation is found in that round's text. K-G3: one CORRECTED STANDING for that side other than SELF-SUPPORTED; or a WITHDRAWN line for every
+// BROKEN link of that side (none readable: UNCURED, 6949). Two differing lines for one count or standing, or two restatements: UNCURED.
+function cureVerdicts(items,reply,broken,rounds){const U=s=>String(s).toUpperCase();const o=cureLines(reply&&reply.ok?reply.text:'');const R=rounds||{};
+ const nK1={DEFENDER:items.filter(x=>x.rule==='K-G1'&&x.side==='DEFENDER').length,CHALLENGER:items.filter(x=>x.rule==='K-G1'&&x.side==='CHALLENGER').length};
+ const wd=new Set(o.withdrawn.map(w=>U(w.link)));
+ return items.map(x=>{const res=(status,why,lines,kinds)=>{const keys=x.rule==='K-B'?[x.link]:x.rule==='K-G1'?[x.link,x.side]:[x.side].concat((broken||{})[x.side]||[]);
+   const bad=status==='UNCURED'?o.malformed.find(l=>keys.some(k=>k&&U(l).includes(U(k)))):null;
+   return {...x,status,why:(why||'')+(bad?(why?'; ':'')+'malformed line: '+bad.slice(0,160):'')||null,statement:lines&&lines.length?lines.join(' / '):null,kinds:kinds||[]};};
   if(!reply||!reply.ok)return res('UNCURED','cure call failed: '+(reply?reply.why:'no reply'),null);
-  const b=block(lab);if(!b)return res('UNCURED','no statement for '+cureLabel(x),null);const bt=norm(b.join(' '));
-  if(x.rule==='K-B'){const k=drvKinds(b[0]);const g=norm(b[0]).slice(lab.length).match(/(DEFENDER LINK BROKEN|CHALLENGER LINK BROKEN|UNDERDETERMINED)/);
-   if(!g||g[1]!==x.side+' LINK BROKEN')return res('UNCURED','statement does not keep the grade '+x.side+' LINK BROKEN'+(g?' (it reads '+g[1]+')':''),b[0],k);
-   return res(k.length>=2?'CURED':'UNCURED',k.length>=2?null:'statement exhibits '+k.length+' layer kind'+(k.length===1?'':'s'),b[0],k);}
-  const wd=cureWithdrawals(b);const wx=norm(wd.except.join(' '));
-  if(wd.kept.length){const wt=norm(wd.kept.join(' '));
-   if(x.rule==='K-G1')return wx.includes(norm(x.link))?res('UNCURED','withdrawal excepts '+x.link,b.join(' ')):res('CURED','withdrawn',b.join(' '));
-   const need=((broken||{})[x.side]||[]).map(norm);if(!need.length)return res('UNCURED','the BROKEN links of '+x.side+' could not be read from the judgment',b.join(' '));const miss=need.filter(l=>!wt.includes(l)||wx.includes(l));
-   return miss.length?res('UNCURED','withdrawal does not name '+miss.join(', '),b.join(' ')):res('CURED','withdrawn: '+need.join(', '),b.join(' '));}
-  if(x.rule==='K-G1'){const lab2=x.side==='DEFENDER'?/(?:^|[^A-Z])CONCEDED LINKS\s*:\s*(\d+)/:/CHALLENGER CONCEDED LINKS\s*:\s*(\d+)/;
-   const src=x.side==='DEFENDER'?whole.replace(/CHALLENGER CONCEDED LINKS\s*:\s*\d+/g,''):whole;const m=src.match(lab2);const n=m?+m[1]:null;
-   const qs=cureQuotes(b.join(' '));const named=CURE_PRESS[x.side].filter(k=>bt.includes('['+k+']'));const R=rounds||{};
-   const inR=q=>named.filter(k=>typeof R[k]==='string'&&cureFound(q,R[k]));const hit=qs.find(q=>inR(q).length);const unread=named.length&&named.every(k=>typeof R[k]!=='string');
-   if(n!==null&&n>=nK1[x.side]&&hit)return res('CURED','corrected: '+(x.side==='DEFENDER'?'CONCEDED':'CHALLENGER CONCEDED')+' LINKS '+n+'; quotation found in '+inR(hit).join(', '),b.join(' '));
-   return res('UNCURED','correction incomplete: count '+(n===null?'not given':n+(n<nK1[x.side]?' (below '+nK1[x.side]+')':''))+(qs.length?'':', no quoted sentence')
-    +(named.length?'':', no round named of '+CURE_PRESS[x.side].join(', '))+(qs.length&&named.length&&!hit?(unread?', the named round text could not be read':', no quotation found in the named round'):''),b.join(' '));}
-  if(x.rule==='K-G3'){const lab3=x.side==='DEFENDER'?'DEFENSE':'CHALLENGE';const m=whole.match(new RegExp(lab3+'\\s+STANDING\\s*:\\s*(SELF-SUPPORTED|PROP-DEPENDENT|COLLAPSED)'));
-   if(m&&m[1]!=='SELF-SUPPORTED')return res('CURED','corrected: '+lab3+' STANDING '+m[1],b.join(' '));
-   return res('UNCURED','correction incomplete: standing '+(m?m[1]:'not given'),b.join(' '));}
+  if(x.rule==='K-B'){const rs=o.restated.filter(r=>U(r.link)===U(x.link));
+   if(!rs.length)return res('UNCURED','no RESTATED line for '+x.link,null);if(rs.length>1)return res('UNCURED','two RESTATED lines for '+x.link,rs.map(r=>r.line));
+   const k=drvKinds(rs[0].text);if(rs[0].grade!==x.side+' LINK BROKEN')return res('UNCURED','statement does not keep the grade '+x.side+' LINK BROKEN'+(rs[0].grade?' (it reads '+rs[0].grade+')':''),[rs[0].line],k);
+   return res(k.length>=2?'CURED':'UNCURED',k.length>=2?null:'statement exhibits '+k.length+' layer kind'+(k.length===1?'':'s'),[rs[0].line],k);}
+  if(x.rule==='K-G1'){if(wd.has(U(x.link)))return res('CURED','withdrawn',o.withdrawn.filter(w=>U(w.link)===U(x.link)).map(w=>w.line));
+   const cs=o.count.filter(c=>c.side===x.side);const ns=[...new Set(cs.map(c=>c.n))];const ps=o.pressed.filter(p=>U(p.link)===U(x.link));const lines=cs.map(c=>c.line).concat(ps.map(p=>p.line));
+   if(!ns.length)return res('UNCURED','no CORRECTED COUNT for '+x.side+' and no WITHDRAWN line for '+x.link,lines);
+   if(ns.length>1)return res('UNCURED','two differing CORRECTED COUNT lines for '+x.side,lines);
+   if(ns[0]<nK1[x.side])return res('UNCURED','corrected count '+ns[0]+' is below '+nK1[x.side],lines);
+   if(!ps.length)return res('UNCURED','no PRESSED line for '+x.link,lines);
+   const ok=ps.filter(p=>CURE_PRESS[x.side].includes(p.round));if(!ok.length)return res('UNCURED','PRESSED round '+ps.map(p=>'['+p.round+']').join(', ')+' does not press the '+x.side.toLowerCase()+' (it must be '+CURE_PRESS[x.side].map(k=>'['+k+']').join(', ')+')',lines);
+   const hit=ok.find(p=>typeof R[p.round]==='string'&&cureFound(p.q,R[p.round]));
+   if(hit)return res('CURED','corrected: '+x.side+' COUNT '+ns[0]+'; quotation found in '+hit.round,lines);
+   return res('UNCURED',ok.every(p=>typeof R[p.round]!=='string')?'the named round text could not be read':'no quotation found in the named round',lines);}
+  if(x.rule==='K-G3'){const ss=o.standing.filter(s=>s.side===x.side);const sv=[...new Set(ss.map(s=>s.st))];
+   if(sv.length>1)return res('UNCURED','two differing CORRECTED STANDING lines for '+x.side,ss.map(s=>s.line));
+   if(sv.length===1&&sv[0]!=='SELF-SUPPORTED')return res('CURED','corrected: '+x.side+' STANDING '+sv[0],ss.map(s=>s.line));
+   const need=((broken||{})[x.side]||[]).map(U);const wl=o.withdrawn.filter(w=>need.includes(U(w.link))).map(w=>w.line);
+   if(!need.length)return res('UNCURED','the BROKEN links of '+x.side+' could not be read from the judgment',ss.map(s=>s.line).concat(wl));
+   const miss=need.filter(l=>!wd.has(l));if(!wl.length&&!ss.length)return res('UNCURED','no CORRECTED STANDING for '+x.side+' and no WITHDRAWN line',null);
+   if(miss.length)return res('UNCURED',(sv[0]==='SELF-SUPPORTED'?'standing kept SELF-SUPPORTED; ':'')+'no WITHDRAWN line for '+miss.join(', '),ss.map(s=>s.line).concat(wl));
+   return res('CURED','withdrawn: '+need.join(', '),wl);}
   return res('UNCURED','unknown rule',null);});}
+const cureSafe=s=>String(s).replace(/\[/g,'(').replace(/\]/g,')');
 function cureReport(seat,v){return v.map(x=>'[AUDIT v21: DEBATE RULE VIOLATION REPORT -- '+(seat?seat+' ':'')+(x.rule==='K-G3'?x.side:x.link)+' ('+x.rule+'): '+x.status
- +(x.kinds&&x.kinds.length?' ('+x.kinds.join(', ')+')':'')+(x.why?'; '+x.why:'')+(x.statement?'. STATEMENT: '+x.statement.slice(0,600).replace(/\[/g,'(').replace(/\]/g,')'):'')+']');}
+ +(x.kinds&&x.kinds.length?' ('+x.kinds.join(', ')+')':'')+(x.why?'; '+cureSafe(x.why):'')+(x.statement?'. STATEMENT: '+cureSafe(x.statement.slice(0,600)):'')+']');}
+// The prose of the reply, recorded once and never read for a cure (BB-6952). Empty when the reply has no prose or the call failed.
+function cureProse(seat,reply){const p=reply&&reply.ok?cureLines(reply.text).prose.join(' ').replace(/\s+/g,' ').trim():'';
+ return p?['[AUDIT v21: DEBATE RULE VIOLATION REPLY -- '+(seat?seat+' ':'')+'prose recorded, not read for a cure: '+cureSafe(p.slice(0,600))+']']:[];}
 
 const base=$('Extract Independent Verdict').first().json;let rs=[];try{if($('Cure Normalize').isExecuted)rs=$('Cure Normalize').all().map(x=>x.json);}catch(e){rs=[];}
 const all=base.debate_rule_violations||[];if(!all.length)return [{json:{...base,debate_rule_report:[]}}];
 const r=rs[0]||null;const v=cureVerdicts(all,r?r.reply:{ok:false,why:'no cure call was made'},r&&r.cure?r.cure.broken:null,r&&r.cure?r.cure.rounds:null);
-return [{json:{...base,independent_verdict_raw:base.independent_verdict_raw+'\n\n'+cureReport(null,v).join('\n'),debate_rule_report:v.map(x=>({rule:x.rule,side:x.side,link:x.link,status:x.status,kinds:x.kinds,why:x.why,statement:x.statement}))}}];
+return [{json:{...base,independent_verdict_raw:base.independent_verdict_raw+'\n\n'+cureReport(null,v).concat(cureProse(null,r?r.reply:null)).join('\n'),debate_rule_report:v.map(x=>({rule:x.rule,side:x.side,link:x.link,status:x.status,kinds:x.kinds,why:x.why,statement:x.statement}))}}];
