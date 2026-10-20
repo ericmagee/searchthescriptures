@@ -1,0 +1,29 @@
+# Panel Payloads: every payload carries drv_uncured = that seat's items (fail-closed)
+PASS seat deepseek: drv_uncured 6 = its 6 items (K-B, K-G1, K-G3; no K-G2)
+PASS seat gemini: drv_uncured 6 = its 6 items (K-B, K-G1, K-G3; no K-G2)
+PASS seat grok: drv_uncured 5 = its 5 items (K-B, K-G1, K-G3; no K-G2)
+PASS the fixture has at least one seat with items
+PASS no BROKEN line anywhere: every seat drv_uncured 0
+# Panel Cure Check: drv_uncured lowered to the UNCURED count
+PASS cure path never reached Check with a reply (no Normalize run): every seat keeps its full count (6968 falsifier)
+PASS seat deepseek: drv_uncured 3 = its UNCURED items after the cure (3 cured of 6)
+PASS the cure statement cured at least one item (the lowering is exercised)
+PASS seats without a reply keep their full count
+PASS failed cure call: full count kept
+PASS no violations: Check passes 0 through
+# Failure Salvage: the cure report rides the salvage row
+PASS draft minus the one edit equals live byte for byte
+PASS after a cure: the salvage row takes Cure Check's text (report lines kept)
+PASS Cure Check never ran (failure before it): falls back to the extractor
+PASS neither ran: null, as live
+failures 0
+
+# test_5b.sql (rolled-back DO block): RESULT
+md5_aggregate 3e655266, md5_derive 2ed9af46 (= migration.sql's texts); t2: 57 debates, 0 differences with drv NULL.
+6876 cases (drv NULL / drv 0): 1 UNGRADED/UNGRADED; 2 CHALLENGER/CHALLENGER; 3 UNGRADED/UNGRADED; 4 CHALLENGER/CHALLENGER;
+  5 UNGRADED/UNGRADED; 6 DEFENDER/DEFENDER; 7 UNGRADED/UNGRADED; 8 DEFENDER/DEFENDER.
+27259: all cured CHALLENGER PREVAILS 3-0; one uncured + forged CURED line CHALLENGER PREVAILS 2-0 (1 not counted: debate rule);
+  two uncured UNGRADED -- REVIEW 1-0 (2 not counted); all uncured UNGRADED -- REVIEW 0-0 (3 not counted).
+Replays as panel: 233-235 and 236-238 all cured CHALLENGER PREVAILS 3-0; all uncured UNGRADED -- REVIEW 0-0 (3 not counted).
+Tie (d5b31026): no drv UNDERDETERMINED; drv on one UNDERDETERMINED seat DEFENDER PREVAILS 2-0 (1 not counted).
+After: column absent, functions a42ae225 / 5b30675a (live), rows as before, no DDL audit row left.
