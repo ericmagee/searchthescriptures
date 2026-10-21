@@ -1,0 +1,61 @@
+STEP 13 (Worker_A3), verify of draft 428fbdc3-279b-4edb-9079-9ec273f8f824, run 2026-10-21 18:19 CDT
+Draft fetched by me (get_workflow_version); live 5fd3b03c from my step 5 fetch (md5 1bb3f727); active version read: 5fd3b03c.
+STRUCTURE: nodes 231 names equal True | changed 16 | connections equal True | others equal 215
+== harness_12 full a3f base
+a3f mode full | expected status 56/56
+  Cure_Check Gemini D3 vs C4 -> UNCURED | the later round [CR2] luk 3:23; no SHORT line quoting its answer
+  Cure_Check Gemini D5 vs C1 -> CURED | pressed: quotation found in DR1; SHORT found for [CR2] mat 1:18; [CR3] mat 1:18
+  Cure_Check Grok D5 vs C1 -> UNCURED | the later round [CR2] mat 1:25; no SHORT line quoting its answer
+  Cure_Check Grok D6 vs C1 -> UNCURED | the later round [CR2] mat 1:25; no SHORT line quoting its answer
+base mode full | expected status 14/56
+  Cure_Check Gemini D3 vs C4 -> CURED | pressed: quotation found in DR1
+  Cure_Check Gemini D5 vs C1 -> CURED | pressed: quotation found in DR1; SHORT found in CR3's answer to mat 1:18
+  Cure_Check Grok D5 vs C1 -> CURED | pressed: quotation found in DR1
+  Cure_Check Grok D6 vs C1 -> CURED | pressed: quotation found in DR1
+== harness_12 nostmt a3f
+a3f mode nostmt | expected status 56/56
+  Cure_Check Gemini D3 vs C4 -> UNCURED | the later round [CR2] luk 3:23; no SHORT line quoting its answer
+  Cure_Check Gemini D5 vs C1 -> CURED | pressed: quotation found in DR1; SHORT found for [CR2] mat 1:18; [CR3] mat 1:18
+  Cure_Check Grok D5 vs C1 -> UNCURED | the later round [CR2] mat 1:25; no SHORT line quoting its answer
+  Cure_Check Grok D6 vs C1 -> UNCURED | the later round [CR2] mat 1:25; no SHORT line quoting its answer
+== neg_12 a3f14
+a3f14 nodes 14 | n0 press found, no SHORT: UNCURED 14/14 | n1 SHORT [CR2] quote not in CR2: UNCURED 14/14 | n2 SHORT [CR2] real answer: CURED 14/14 | n3 SHORT [CR2] one word changed: UNCURED 14/14 | n4 pressed in [DR2]: CR2 not an answering round 14/14 | n5 SHORT [CR2] quoting the verse words both sides quote: UNCURED 14/14 | n6 SHORT [CR3] for a verse CR3 does not name: UNCURED 14/14
+== ledger_12 a3f
+Build_Independent_Verdict.js
+  L1 defender: Luke 3:23 listed new false | Matthew 1:25 listed new false | Genesis 4:1 listed new false
+  L3 base lists Luke 3:23 true | base defender count 45 new 15 | added (must be none): none
+  dropped from defender list: Matthew 1:25, Genesis 4:1, 1 Samuel 1:19, Judges 11:39, Matthew 1:19, Matthew 1:2-16, Isaiah 7:14, Matthew 1:22, Luke 1:34, Luke 3:23, Luke 4:22, John 1:45, John 6:42, Mark 6:3, Jeremiah 22:30, Matthew 1:11-12, Matthew 1:24-25, Ezra 3:2, Matthew 1:12, Luke 3:27, Exodus 2:10, Genesis 48:5, Esther 2:7, Ezra 2:61-62, Hebrews 7:10, Luke 3:23-38, Genesis 16:10, Genesis 24:60, Leviticus 12:2, Matthew 1:22-23
+  L2 challenger: base 72 new 53 | added (must be none): none | dropped: Luke 2:33, Matthew 1:21, Ruth 4:10, 1 Chronicles 28:6, Romans 1:4, Luke 1:32, 1 Samuel 1:19, Judges 11:39, Matthew 1:19, Jeremiah 1:5, Isaiah 49:5, Psalms 139:13, Isaiah 7:16, Isaiah 8:3-4, Matthew 1:22, Acts 16:13, Luke 2:49, Haggai 2:23, Ruth 4:17
+  header line new: cited in [DR1] or [DR2] and not named in a later round of the defender, [CR2] or [CR3] (15 of 78): Matthew 1:1, Genesis 4:17, Isaiah 7:11, G
+Panel_Build.js
+  L1 defender: Luke 3:23 listed new false | Matthew 1:25 listed new false | Genesis 4:1 listed new false
+  L3 base lists Luke 3:23 true | base defender count 45 new 15 | added (must be none): none
+  dropped from defender list: Matthew 1:25, Genesis 4:1, 1 Samuel 1:19, Judges 11:39, Matthew 1:19, Matthew 1:2-16, Isaiah 7:14, Matthew 1:22, Luke 1:34, Luke 3:23, Luke 4:22, John 1:45, John 6:42, Mark 6:3, Jeremiah 22:30, Matthew 1:11-12, Matthew 1:24-25, Ezra 3:2, Matthew 1:12, Luke 3:27, Exodus 2:10, Genesis 48:5, Esther 2:7, Ezra 2:61-62, Hebrews 7:10, Luke 3:23-38, Genesis 16:10, Genesis 24:60, Leviticus 12:2, Matthew 1:22-23
+  L2 challenger: base 72 new 53 | added (must be none): none | dropped: Luke 2:33, Matthew 1:21, Ruth 4:10, 1 Chronicles 28:6, Romans 1:4, Luke 1:32, 1 Samuel 1:19, Judges 11:39, Matthew 1:19, Jeremiah 1:5, Isaiah 49:5, Psalms 139:13, Isaiah 7:16, Isaiah 8:3-4, Matthew 1:22, Acts 16:13, Luke 2:49, Haggai 2:23, Ruth 4:17
+  header line new: cited in [DR1] or [DR2] and not named in a later round of the defender, [CR2] or [CR3] (15 of 78): Matthew 1:1, Genesis 4:17, Isaiah 7:11, G
+L4 both nodes same ledger text: true | L5 prose names later rounds: true
+Build_Independent_Verdict.js | defender list with CR2 blanked equals base: true | challenger list with DR2 blanked equals base: true
+Panel_Build.js | defender list with CR2 blanked equals base: true | challenger list with DR2 blanked equals base: true
+== judge_check (new/ = my fetched judge nodes)
+Build_Independent_Verdict.js {"J1":true,"J2":true,"J3":true,"J4":true,"old_absent":true} | J5 reverse of all patch pairs (j_pairs.json) equals base: true | parse: true
+  J6 mutant (J1 only): J2 false old_absent false -> caught: true
+  base: {"J1":false,"J2":false,"J3":false,"J4":false,"old_absent":false}
+Panel_Build.js {"J1":true,"J2":true,"J3":true,"J4":true,"old_absent":true} | J5 reverse of all patch pairs (j_pairs.json) equals base: true | parse: true
+  J6 mutant (J1 only): J2 false old_absent false -> caught: true
+  base: {"J1":false,"J2":false,"J3":false,"J4":false,"old_absent":false}
+== l5x_a3 (my L5 fixtures through the draft's code)
+== stored
+   Gemini D3 vs C4 UNCURED 14/14
+   Gemini D5 vs C1 CURED 14/14
+   Grok D5 vs C1 UNCURED 14/14
+   Grok D6 vs C1 UNCURED 14/14
+== good
+   Gemini D3 vs C4 CURED 14/14
+   Gemini D5 vs C1 CURED 14/14
+   Grok D5 vs C1 CURED 14/14
+   Grok D6 vs C1 CURED 14/14
+== bad1
+   Gemini D3 vs C4 UNCURED 14/14
+   Gemini D5 vs C1 CURED 14/14
+   Grok D5 vs C1 UNCURED 14/14
+   Grok D6 vs C1 UNCURED 14/14

@@ -1,0 +1,38 @@
+- +"For a K-G1 or K-G4 link whose cited verse the answering link round names ([CR3] against the defender, [DR3] against the challenger), add a SHORT line "
+- +"quoting the words of that link round that answer it and saying from the text why they do not overturn the link; without it the link is not cured. "
++ +"For a K-G1 or K-G4 link whose cited verse any later round of the side that holds the link names ([CR2] or [CR3] against the defender, [DR2] or [DR3] against the challenger), add a SHORT line "
++ +"quoting the words of that round that answer it and saying from the text why they do not overturn the link; without it the link is not cured. "
+- +"SHORT: D<n> vs C<m> | [<link round>] | \"<the words of that link round, quoted exactly>\" | <why they do not overturn the link>\n"
++ +"SHORT: D<n> vs C<m> | [<answering round>] | \"<the words of that round, quoted exactly>\" | <why they do not overturn the link>\n"
+- +"item it must name the round that pressed the witness and quote that round's words; where the link round names the verse, it must also quote "
+- +"the link round's own answer. Cured if it passes; else the violation stands. "
++ +"item it must name the round that pressed the witness and quote that round's words; where a later round of the side that holds the link names the verse, it must also quote "
++ +"that round's own answer. Cured if it passes; else the violation stands. "
+-const cureQ=s=>String(s).replace(/[*_`]+/g,'').toLowerCase().replace(/[“”]/g,'"').replace(/[‘’]/g,"'").replace(/[—–]/g,'-').replace(/\s+/g,' ').trim();
++const cureQ=s=>String(s).replace(/[*_`]+/g,'').toLowerCase().replace(/[“”]/g,'"').replace(/[‘’]/g,"'").replace(/[—–]/g,'-').replace(/["']/g,'').replace(/\((l[1-4]|[cd]r[1-3])\)/g,'[$1]').replace(/\s+/g,' ').trim(); // BB-7357: quote marks folded, (Ln) read as [Ln], brackets kept
+-  else if(k[1]==='SHORT'&&(m=r.match(/^D(\d+)\s+vs\.?\s+C(\d+)\s*\|\s*\[(CR3|DR3)\]\s*\|\s*["“](.+?)["”]\s*\|\s*(\S.{9,})$/i)))o.short.push({link:cureId(m[1],m[2]),round:m[3].toUpperCase(),q:m[4],why:m[5],line:l});
++  else if(k[1]==='SHORT'&&(m=r.match(/^D(\d+)\s+vs\.?\s+C(\d+)\s*\|\s*\[(CR2|CR3|DR2|DR3)\]\s*\|\s*["“](.+?)["”]\s*\|\s*(\S.{9,})$/i)))o.short.push({link:cureId(m[1],m[2]),round:m[3].toUpperCase(),q:m[4],why:m[5],line:l});
+-  const lrK=x.side==='DEFENDER'?'CR3':'DR3';const LR=typeof R[lrK]==='string'?R[lrK]:'';
+-  const named=(x.rule==='K-G1'||x.rule==='K-G4')&&LR?cureNamed(x.line,LR):[];const namedTxt=named.map(n=>n.ref).join(', ');
+-  const shortOk=()=>!named.length||o.short.some(s=>U(s.link)===U(x.link)&&s.round===lrK&&named.some(n=>n.blocks.some(b=>cureFound(s.q,b))))||stmtQ(stmtOf(x)).some(q=>named.some(n=>n.blocks.some(b=>cureFound(q,b))));
++  // BB-6904 rev 12 (7374, 7377): the answer is read from any later round of the side that holds the link, its round 2 or its link round,
++  // that comes after the round named as pressing the witness (order CR1 DR1 CR2 DR2 CR3 DR3).
++  const ORD=['CR1','DR1','CR2','DR2','CR3','DR3'];const ansK=pr=>(x.side==='DEFENDER'?['CR2','CR3']:['DR2','DR3']).filter(k=>!pr||ORD.indexOf(k)>ORD.indexOf(pr));
++  const namedIn=pr=>(x.rule==='K-G1'||x.rule==='K-G4')?ansK(pr).filter(k=>typeof R[k]==='string'&&R[k]).map(k=>({k,n:cureNamed(x.line,R[k])})).filter(z=>z.n.length):[];
++  const nmTxt=pr=>namedIn(pr).map(z=>'['+z.k+'] '+z.n.map(n=>n.ref).join(', ')).join('; ');
++  // A quotation is the answer only in that round's own words: it is not also found in a round of the other side before it (a verse's own
++  // words, quoted by both sides, never count as the answer).
++  const ownQ=(q,k)=>!(x.side==='DEFENDER'?['DR1','DR2','DR3']:['CR1','CR2','CR3']).some(o2=>ORD.indexOf(o2)<ORD.indexOf(k)&&typeof R[o2]==='string'&&cureFound(q,R[o2]));
++  const shortOk=pr=>{const nm=namedIn(pr);return !nm.length||o.short.some(s=>U(s.link)===U(x.link)&&nm.some(z=>z.k===s.round&&ownQ(s.q,z.k)&&z.n.some(n=>n.blocks.some(b=>cureFound(s.q,b)))))||stmtQ(stmtOf(x)).some(q=>nm.some(z=>ownQ(q,z.k)&&z.n.some(n=>n.blocks.some(b=>cureFound(q,b)))));};
+-    if(!shortOk())return res('UNCURED','statement quotes '+sp.round+'; the link round '+lrK+' names '+namedTxt+' and neither a SHORT line nor the statement quotes its answer',lines.concat([sp.line]));
+-    return res('CURED','statement passes the check: quotation found in '+sp.round+(named.length?'; answer quoted from '+lrK:''),lines.concat([sp.line]));}
++    if(!shortOk(sp.round))return res('UNCURED','statement quotes '+sp.round+'; the later round '+nmTxt(sp.round)+' and neither a SHORT line nor the statement quotes its answer',lines.concat([sp.line]));
++    return res('CURED','statement passes the check: quotation found in '+sp.round+(nmTxt(sp.round)?'; answer quoted for '+nmTxt(sp.round):''),lines.concat([sp.line]));}
+-   if(!shortOk())return res('UNCURED','the link round '+lrK+' names '+namedTxt+'; no SHORT line quoting its answer',lines);
+-   return res('CURED','pressed: quotation found in '+hit.round+(named.length?'; SHORT found in '+lrK+"'s answer to "+namedTxt:''),lines);}
++   if(!shortOk(hit.round))return res('UNCURED','the later round '+nmTxt(hit.round)+'; no SHORT line quoting its answer',lines);
++   return res('CURED','pressed: quotation found in '+hit.round+(nmTxt(hit.round)?'; SHORT found for '+nmTxt(hit.round):''),lines);}
+-    if(!shortOk())return res('UNCURED','the link round '+lrK+' names '+namedTxt+'; neither a SHORT line nor the statement quotes its answer',lines.concat([sp.line]));
++    if(!shortOk(sp.round))return res('UNCURED','the later round '+nmTxt(sp.round)+'; neither a SHORT line nor the statement quotes its answer',lines.concat([sp.line]));
+-   if(hit&&!shortOk())return res('UNCURED','the link round '+lrK+' names '+namedTxt+'; no SHORT line quoting its answer',lines);
++   if(hit&&!shortOk(hit.round))return res('UNCURED','the later round '+nmTxt(hit.round)+'; no SHORT line quoting its answer',lines);
