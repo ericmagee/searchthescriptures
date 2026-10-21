@@ -1,0 +1,97 @@
+BB-6904 rev 12 step 12 (Worker_E) run record. Falsifiers: FALSIFIERS_12.txt (git b4692b9, 17:31:24 CDT, before any file change).
+Build: patch_12.py base new (anchors exactly once per node, else abort). NEW_MD5S.txt.
+
+== C7 diff hunks per node (md5 of diff lines)
+092351d6 Alternate_Build.js
+092351d6 Alternate_Cure_Build.js
+092351d6 Alternate_Cure_Normalize.js
+092351d6 Alternate_Merge.js
+7f352e9d Build_Independent_Verdict.js
+092351d6 Cure_Build.js
+092351d6 Cure_Check.js
+092351d6 Cure_Normalize.js
+53cefa6d Panel_Build.js
+092351d6 Panel_Cure_Build_1.js
+092351d6 Panel_Cure_Build_2.js
+092351d6 Panel_Cure_Build_3.js
+092351d6 Panel_Cure_Check.js
+092351d6 Panel_Cure_Normalize_1.js
+092351d6 Panel_Cure_Normalize_2.js
+092351d6 Panel_Cure_Normalize_3.js
+
+== parse
+ok Alternate_Build.js
+ok Alternate_Cure_Build.js
+ok Alternate_Cure_Normalize.js
+ok Alternate_Merge.js
+ok Build_Independent_Verdict.js
+ok Cure_Build.js
+ok Cure_Check.js
+ok Cure_Normalize.js
+ok Panel_Build.js
+ok Panel_Cure_Build_1.js
+ok Panel_Cure_Build_2.js
+ok Panel_Cure_Build_3.js
+ok Panel_Cure_Check.js
+ok Panel_Cure_Normalize_1.js
+ok Panel_Cure_Normalize_2.js
+ok Panel_Cure_Normalize_3.js
+
+== J1-J6 (judge_check.cjs)
+Build_Independent_Verdict.js {"J1":true,"J2":true,"J3":true,"J4":true,"old_absent":true} | J5 reverse equals base: true | parse: true
+  J6 mutant (J1 only): J2 false old_absent false -> caught: true
+  base: {"J1":false,"J2":false,"J3":false,"J4":false,"old_absent":false}
+Panel_Build.js {"J1":true,"J2":true,"J3":true,"J4":true,"old_absent":true} | J5 reverse equals base: true | parse: true
+  J6 mutant (J1 only): J2 false old_absent false -> caught: true
+  base: {"J1":false,"J2":false,"J3":false,"J4":false,"old_absent":false}
+
+== C3 (harness_12.cjs): full = cure lines plus the judge's own STATEMENT; nostmt = cure lines only
+new mode full | expected status 56/56
+  Cure_Check Gemini D3 vs C4 -> UNCURED | the later round [CR2] luk 3:23; no SHORT line quoting its answer
+  Cure_Check Gemini D5 vs C1 -> CURED | pressed: quotation found in DR1; SHORT found for [CR2] mat 1:18; [CR3] mat 1:18
+  Cure_Check Grok D5 vs C1 -> UNCURED | the later round [CR2] mat 1:25; no SHORT line quoting its answer
+  Cure_Check Grok D6 vs C1 -> UNCURED | the later round [CR2] mat 1:25; no SHORT line quoting its answer
+base mode full | expected status 14/56
+  Cure_Check Gemini D3 vs C4 -> CURED | pressed: quotation found in DR1
+  Cure_Check Gemini D5 vs C1 -> CURED | pressed: quotation found in DR1; SHORT found in CR3's answer to mat 1:18
+  Cure_Check Grok D5 vs C1 -> CURED | pressed: quotation found in DR1
+  Cure_Check Grok D6 vs C1 -> CURED | pressed: quotation found in DR1
+new mode nostmt | expected status 56/56
+  Cure_Check Gemini D3 vs C4 -> UNCURED | the later round [CR2] luk 3:23; no SHORT line quoting its answer
+  Cure_Check Gemini D5 vs C1 -> CURED | pressed: quotation found in DR1; SHORT found for [CR2] mat 1:18; [CR3] mat 1:18
+  Cure_Check Grok D5 vs C1 -> UNCURED | the later round [CR2] mat 1:25; no SHORT line quoting its answer
+  Cure_Check Grok D6 vs C1 -> UNCURED | the later round [CR2] mat 1:25; no SHORT line quoting its answer
+base mode nostmt | expected status 14/56
+  Cure_Check Gemini D3 vs C4 -> CURED | pressed: quotation found in DR1
+  Cure_Check Gemini D5 vs C1 -> CURED | pressed: quotation found in DR1; SHORT found in CR3's answer to mat 1:18
+  Cure_Check Grok D5 vs C1 -> CURED | pressed: quotation found in DR1
+  Cure_Check Grok D6 vs C1 -> CURED | pressed: quotation found in DR1
+
+== C6 one node (Panel Cure Check) at base, rest new: expect 53/56
+mix mode full | expected status 53/56
+
+== C4 + C8 negatives (neg_12.cjs)
+  cut quotes: press="On the defender's reading Joseph begat Jesus, yet the text says he did not know her before the" | ans="Held as written. And notice the actor at the end: **Joseph names the" | verse="knew her not till she had brought forth" | dr2="of the Holy Ghost" and sets that discovery "before they came together." Matt 1:25 "
+new14 nodes 14 | n0 press found, no SHORT: UNCURED 14/14 | n1 SHORT [CR2] quote not in CR2: UNCURED 14/14 | n2 SHORT [CR2] real answer: CURED 14/14 | n3 SHORT [CR2] one word changed: UNCURED 14/14 | n4 pressed in [DR2]: CR2 not an answering round 14/14 | n5 SHORT [CR2] quoting the verse words both sides quote: UNCURED 14/14 | n6 SHORT [CR3] for a verse CR3 does not name: UNCURED 14/14
+../fold/new nodes 14 | n0 press found, no SHORT: UNCURED 0/14 | n1 SHORT [CR2] quote not in CR2: UNCURED 0/14 | n2 SHORT [CR2] real answer: CURED 14/14 | n3 SHORT [CR2] one word changed: UNCURED 0/14 | n4 pressed in [DR2]: CR2 not an answering round 14/14 | n5 SHORT [CR2] quoting the verse words both sides quote: UNCURED 0/14 | n6 SHORT [CR3] for a verse CR3 does not name: UNCURED 0/14
+
+== C5 earlier harnesses on new14
+new14 nodes 14 | (1) 14/14 | (2) 14/14 | (3) 14/14 | (4) 27/27 | (5) 14/14 | (6) 14/14 | (7) 14/14 | (10) 14/14 | (x) 14/14 | (T) 14/14
+fail 0
+harness_w new14:
+new14 nodes 14 | (a) WITHDRAWN cures K-B,K-G1,K-G4 0 | (b) STATEMENT Withdrawn cures nothing 14 | (c) other link cures nothing 14 | (g) rule served once in place 0 | (h) 27563 gemini K-B cured 0
+harness_w fold/new (base, for comparison; this harness prints FAIL lines for any dir named new, here the base):
+new nodes 14 | (a) WITHDRAWN cures K-B,K-G1,K-G4 0 | (b) STATEMENT Withdrawn cures nothing 14 | (c) other link cures nothing 14 | (g) rule served once in place 0 | (h) 27563 gemini K-B cured 0
+/home/user/searchthescriptures/prototypes/bb6904/rev8/step12/new14 nodes 14 | quotes 7 | F1 found 84/84 | F2 7th refused 14 | F3 bold found 14 | F4 label-dropped refused 14 | F5 one word refused 14
+
+NOTES
+1. C3 first run (before the C8 change) gave new full 42/56: Grok D6 vs C1 CURED, because the judge's own STATEMENT quotes "knew her not" and
+   "before they came together", words the defender's round 2 also quotes beside Matthew 1:25. A verse's own words, quoted by both sides, were
+   counted as the answer. C8 added after that run: a quotation counts as the answer only if it is not also found in a round of the other side
+   before the answering round. Rerun: 56/56. The same rule now also binds the [CR3]/[DR3] path that was live before.
+2. harness_w (a), (g), (h) read 0 on both new14 and the current base: those checks test the WITHDRAWN keyword, replaced by RETRACTED in step 3d
+   (ee8f4b9). Not a change made here.
+3. Answering rounds are the side's round 2 and link round that come after the pressing round (order CR1 DR1 CR2 DR2 CR3 DR3); n4 tests it.
+4. The cure prompt wording uses "of the side that holds the link" in the cure nodes as well as the judge nodes (7377 ruled it for the judge
+   sentence; applied here for one wording). Flagged for the verifier and the advisor.
+NOT CHECKED: the system ledger ("CITED BEFORE THIS LINK ROUND"), left as live pending the advisor (BB-7378); live judge behaviour.
