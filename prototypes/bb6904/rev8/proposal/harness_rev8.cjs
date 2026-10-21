@@ -38,3 +38,15 @@ console.log('\n3. REFUSAL TEXT CHECK over 30 stored rounds');const RFT=/^\s*The 
 let fired=[];for(const x of D)for(const k of ['dr1','dr2','dlink','cr1','cr2','clink']){const body=String(x[k]||'').replace(/^[^\n]*-- ROUND \d[^\n]*\n\n/,'');if(RFT.test(body))fired.push(x.tok.slice(5,10)+':'+k);}
 console.log('fired on',JSON.stringify(fired));ok&=fired.length===1&&fired[0]==='27177:dlink';
 console.log('\nHARNESS', ok?'PASS':'FAIL');
+// 4. ITEM 5: the judge's own statement (7191), recorded, never curing by itself.
+{console.log('\n4. ITEM 5, the judge statement');let ok5=true;const T5=(n,c)=>{console.log((c?'PASS ':'FAIL ')+n);ok5&=!!c;};
+ const rep=`PRESSED: D4 vs C2 | [DR1] | "${dq}"\nSHORT: D4 vs C2 | [CR3] | "${cq}" | the link round restates the register and never shows why supposed does not overturn it\nSTATEMENT: K-G4 D4 vs C2 | The challenger pressed Luke 3:23 in its first round and the link round named it without answering the word supposed.`;
+ const v=N.cureVerdicts([item],{ok:true,text:rep},B,RR)[0];T5('statement attached to a cured item',v.status==='CURED'&&/pressed Luke 3:23/.test(v.judge_statement||''));
+ const v0=N.cureVerdicts([item],{ok:true,text:'WITHDRAWN: D4 vs C2'},B,RR)[0];T5('no statement written: null',v0.status==='CURED'&&v0.judge_statement===null);
+ const vs=N.cureVerdicts([item],{ok:true,text:'STATEMENT: D4 vs C2 | I stand by this line because the challenger is right about it.'},B,RR)[0];T5('a statement alone does not cure (option 1)',vs.status==='UNCURED'&&/stand by/.test(vs.judge_statement||''));
+ const g3={rule:'K-G3',side:'DEFENDER',link:null,line:null};const vg=N.cureVerdicts([g3],{ok:true,text:'CORRECTED STANDING: DEFENDER PROP-DEPENDENT\nSTATEMENT: K-G3 DEFENDER | My broken lines and my standing disagreed; the standing follows the lines.'},B,RR)[0];T5('K-G3 statement matched by side',vg.status==='CURED'&&/standing follows/.test(vg.judge_statement||''));
+ const rl=N.cureReport('gemini',[v,v0])[0],rl0=N.cureReport('gemini',[v0])[0];T5('report line carries JUDGE STATEMENT',/; JUDGE STATEMENT: The challenger pressed/.test(rl));T5('report line says none written',/; JUDGE STATEMENT: none written\]$/.test(rl0));
+ const rd=N.drvRead('Panel judge Gemini',rl).rows[0];T5('transcript parser reads it, statement kept apart',rd&&/The challenger pressed/.test(rd['JUDGE STATEMENT']||'')&&!/JUDGE/.test(rd.STATEMENT||''));
+ const rdl=L.drvRead('Panel judge Gemini',rl).rows[0];T5('the live parser would fold it into STATEMENT (why the parser changes)',rdl&&/JUDGE STATEMENT/.test(rdl.STATEMENT||''));
+ console.log('ITEM 5', ok5?'PASS':'FAIL');ok&=ok5;}
+console.log('\nHARNESS (with item 5)', ok?'PASS':'FAIL');

@@ -59,6 +59,37 @@ A.append(("if(RF)throw new Error(",
  "const RFT=(e.text&&/^\\s*The request was rejected because it was considered high risk\\.?\\s*$/i.test(e.text))?'reply text is the provider rejection \"'+String(e.text).trim().slice(0,80)+'\"':null; // BB-6904 rev 8: 27177\n"
  "if(RF||RFT)throw new Error("))
 A.append(("refused by the provider: '+RF+';", "refused by the provider: '+(RF||RFT)+';"))
+# ITEM 5 (7191): the judge's own written statement for every flagged item, recorded beside the code's WHY (option 1 of 5(c): it never cures by itself).
+# (a) the cure form asks for it; (b) the reply parser reads it; (c) each verdict carries it; (d) the report line prints it; (e) the transcript shows it.
+A.append(("+\"Only these lines are read. A link not on a WITHDRAWN line is not withdrawn.",
+ "+\"STATEMENT: <the flagged item, as labelled above> | <in your own words: why the line stands as you graded it, or what you corrected and why>\\n\"\n"
+ " +\"Write one STATEMENT line for every flagged item, cured or not. It is recorded beside the item in the report and does not by itself cure it. \"\n"
+ " +\"Only these lines are read. A link not on a WITHDRAWN line is not withdrawn."))
+A.append(("const CURE_KEY=/^(RESTATED|WITHDRAWN|CORRECTED COUNT|CORRECTED STANDING|PRESSED|SHORT)[ \\t]*:[ \\t]*(.*)$/;",
+ "const CURE_KEY=/^(RESTATED|WITHDRAWN|CORRECTED COUNT|CORRECTED STANDING|PRESSED|SHORT|STATEMENT)[ \\t]*:[ \\t]*(.*)$/;"))
+A.append(("const o={restated:[],withdrawn:[],count:[],standing:[],pressed:[],short:[],malformed:[],prose:[]};",
+ "const o={restated:[],withdrawn:[],count:[],standing:[],pressed:[],short:[],statement:[],malformed:[],prose:[]};"))
+A.append(("  else if(k[1]==='SHORT'&&",
+ "  else if(k[1]==='STATEMENT'&&(m=r.match(/^(.+?)\\s*\\|\\s*(\\S.{9,})$/)))o.statement.push({label:m[1].trim(),text:m[2].trim(),line:l});\n"
+ "  else if(k[1]==='SHORT'&&"))
+A.append(("const wd=new Set(o.withdrawn.map(w=>U(w.link)));",
+ "const wd=new Set(o.withdrawn.map(w=>U(w.link)));\n"
+ " // ITEM 5: the judge's own STATEMENT for this item: by its link, or for a standing item by its side; the first one written is kept.\n"
+ " const stmtOf=(x)=>{const st=o.statement.find(s=>x.link?U(s.label).includes(U(x.link)):(U(s.label).includes(x.side)&&U(s.label).includes(U(x.rule))));return st?st.text:null;};"))
+A.append(("return {...x,status,why:", "return {...x,judge_statement:stmtOf(x),status,why:"))
+A.append(("replace(/;(\\s*(?:SEAT|ITEM|RULE|RESULT|KINDS|WHY|LINE|STATEMENT):)/g,',$1');",
+ "replace(/;(\\s*(?:SEAT|ITEM|RULE|RESULT|KINDS|WHY|LINE|STATEMENT|JUDGE STATEMENT):)/g,',$1');"))
+A.append(("+(x.statement?'; STATEMENT: '+cureSafe(x.statement.slice(0,600)):'')+']');}",
+ "+(x.statement?'; STATEMENT: '+cureSafe(x.statement.slice(0,600)):'')+'; JUDGE STATEMENT: '+(x.judge_statement?cureSafe(String(x.judge_statement).slice(0,600)):'none written')+']');}"))
+# (e) Format Markdown: read the field and show it in its own column; name the new rule.
+A.append(("const p = m[1].split(/(?:^|; )(SEAT|ITEM|RULE|RESULT|KINDS|WHY|LINE|STATEMENT): /);",
+ "const p = m[1].split(/(?:^|; )(SEAT|ITEM|RULE|RESULT|KINDS|WHY|LINE|STATEMENT|JUDGE STATEMENT): /);"))
+A.append(("const DRV_RULE = { 'K-B': 'Two kinds of layer (K-B)', 'K-G1': 'Conceded count (K-G1)', 'K-G3': 'Standing (K-G3)' };",
+ "const DRV_RULE = { 'K-B': 'Two kinds of layer (K-B)', 'K-G1': 'Conceded count (K-G1)', 'K-G3': 'Standing (K-G3)', 'K-G4': 'Pressing sentence (K-G4)' };"))
+A.append(("t += '| Judge | Item | Rule | Result | Original line | Cure statement, or why not cured |\\n|---|---|---|---|---|---|\\n';",
+ "t += '| Judge | Item | Rule | Result | Original line | Cure statement, or why not cured | Judge\\'s own statement |\\n|---|---|---|---|---|---|---|\\n';"))
+A.append(("' | ' + drvCell(last) + ' |\\n'; });",
+ "' | ' + drvCell(last) + ' | ' + drvCell(x['JUDGE STATEMENT'] || 'not recorded') + ' |\\n'; });"))
 src=open(sys.argv[1]).read();out=src;done=[];
 for old,new in A:
     n=out.count(old)

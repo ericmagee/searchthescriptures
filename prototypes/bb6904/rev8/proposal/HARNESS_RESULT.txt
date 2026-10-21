@@ -35,3 +35,16 @@ PASS K-G4 with a verse the link round does not name, PRESSED true: CURED
 fired on ["27177:dlink"]
 
 HARNESS PASS
+
+4. ITEM 5, the judge statement
+PASS statement attached to a cured item
+PASS no statement written: null
+PASS a statement alone does not cure (option 1)
+PASS K-G3 statement matched by side
+PASS report line carries JUDGE STATEMENT
+PASS report line says none written
+PASS transcript parser reads it, statement kept apart
+PASS the live parser would fold it into STATEMENT (why the parser changes)
+ITEM 5 PASS
+
+HARNESS (with item 5) PASS
