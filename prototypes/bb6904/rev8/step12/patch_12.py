@@ -11,6 +11,15 @@ J=[
  ("broken side's link round left any of those witnesses UNANSWERED","broken side's later rounds left any of those witnesses UNANSWERED"),
  ("only when the link round answered every such witness","only when the side's later rounds answered every such witness"),
  ("a witness the link round leaves unanswered is graded","a witness the side's later rounds leave unanswered is graded"),
+ # BB-7379 option 1: the system ledger tests every later round of the side, its round 2 and its link round, after the round that first cites the verse.
+ ("dCited:citedNotNamed([['[DR1]',F.gr1],['[DR2]',F.gr2]],F.cr3),cCited:citedNotNamed([['[CR1]',F.cr1],['[CR2]',F.cr2],['[CR3]',F.cr3]],F.dr3)",
+  "dCited:citedNotNamed([['[DR1]',F.gr1],['[DR2]',F.gr2]],[['[CR2]',F.cr2],['[CR3]',F.cr3]]),cCited:citedNotNamed([['[CR1]',F.cr1],['[CR2]',F.cr2],['[CR3]',F.cr3]],[['[DR2]',F.gr2],['[DR3]',F.dr3]])"),
+ (" const citedNotNamed=(rounds,answering)=>{const N=namedIn(answering);let total=0;const not=[];for(const x of citedRounds(rounds))for(const i of x.items){total++;if(!i.r.cvs.some(cv=>isNamed(N,i.r.book,cv)))not.push(i.label);}return {total,not};};",
+  " // BB-6904 rev 12 (7379): a verse counts as named when any later round of the answering side names it, later than the round that first cites it.\n const citedNotNamed=(rounds,answers)=>{const O=['[CR1]','[DR1]','[CR2]','[DR2]','[CR3]','[DR3]'];const NA=answers.map(([k,t])=>[O.indexOf(k),namedIn(t)]);let total=0;const not=[];for(const x of citedRounds(rounds)){const at=O.indexOf(x.name);const Ns=NA.filter(a=>a[0]>at).map(a=>a[1]);for(const i of x.items){total++;if(!Ns.some(N=>i.r.cvs.some(cv=>isNamed(N,i.r.book,cv))))not.push(i.label);}}return {total,not};};"),
+ ("[citedLine(L.dCited,'[DR1] or [DR2]','[CR3]')]","[citedLine(L.dCited,'[DR1] or [DR2]','a later round of the defender, [CR2] or [CR3]')]"),
+ ("[citedLine(L.cCited,'[CR1], [CR2] or [CR3]','[DR3]')]","[citedLine(L.cCited,'[CR1], [CR2] or [CR3]','a later round of the challenger, [DR2] or [DR3]')]"),
+ ("lists every verse the opposing side cited in the rounds before that link round that the link round does not name;",
+  "lists every verse the opposing side cited before that link round that no later round of the side that holds the link names (for the defender [CR2] or [CR3], for the challenger [DR2] or [DR3], later than the round that first cites the verse);"),
 ]
 C=[
  ('+"For a K-G1 or K-G4 link whose cited verse the answering link round names ([CR3] against the defender, [DR3] against the challenger), add a SHORT line "\n +"quoting the words of that link round that answer it',
