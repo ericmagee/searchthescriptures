@@ -1,4 +1,4 @@
-# BB-6904 rev 8 step 6 draft (7223, 7224, 7227, 7229): guard removal A-C and E, then patch_rev8.py 61ee557a items 1, 2, 5 (item 3, the refused-round
+# BB-6904 rev 8 step 6 draft (7223, 7224, 7227, 7229): guard removal A-C, E and F (7235), item 8 (7234), then patch_rev8.py 61ee557a items 1, 2, 5 (item 3, the refused-round
 # check, anchors 11 and 12) released by 7230. Reads the active nodes (95f04001), writes composed/; nothing here writes to n8n.
 import sys,os,glob,hashlib,importlib.util
 here=os.path.dirname(os.path.abspath(__file__))
@@ -9,8 +9,9 @@ gspec=importlib.util.spec_from_file_location('g',os.path.join(here,'../gr/patch_
 os.makedirs(os.path.join(here,'composed'),exist_ok=True);rep=[]
 for f in sorted(glob.glob(os.path.join(here,'../rev8v/live/*.js'))):
     s=open(f).read();out=s;n_g=0;n_p=0
-    if os.path.basename(f) in ('Build_Independent_Verdict.js','Panel_Build.js'):out=g.patch(out);n_g=3
-    if os.path.basename(f)=='Format_Markdown.js':out=g.patch_fm(out);n_g=2
+    if os.path.basename(f) in ('Build_Independent_Verdict.js','Panel_Build.js'):out=g.patch_f(os.path.basename(f),g.patch(out));n_g=4
+    if os.path.basename(f)=='Format_Markdown.js':out=g.patch_item8_fm(g.patch_fm(out));n_g=3
+    if os.path.basename(f)=='Plain_Rule_Lines.js':out=g.patch_item8_prl(out);n_g=1
     for old,new in A:
         c=out.count(old)
         if c==0:continue

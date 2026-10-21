@@ -3,7 +3,7 @@ Alternate Cure Build           guard 0 patch 21  e338c7db -> a2325e39  29617
 Alternate Cure Normalize       guard 0 patch 21  0ed98daa -> 46911a61  29370
 Alternate Merge                guard 0 patch 21  b60a7835 -> 761947c0  31412
 Alternate Payloads             guard 0 patch  1  d517ca08 -> 1331c305  22826
-Build Independent Verdict      guard 3 patch  0  7fe63a4f -> 183305ac  32592
+Build Independent Verdict      guard 4 patch  0  7fe63a4f -> d21f38f7  32546
 C1 Extract                     guard 0 patch  2  e3d7c736 -> 13ac0141  4074
 C2 Extract                     guard 0 patch  2  d4ccad19 -> 13a7aa8c  4089
 C3 Extract                     guard 0 patch  2  d5d320ea -> f3103d50  4075
@@ -14,8 +14,8 @@ D1 Extract                     guard 0 patch  2  a9beb3b3 -> e8553945  4068
 D2 Extract                     guard 0 patch  2  051cc8e5 -> 335e1a12  4069
 D3 Extract                     guard 0 patch  2  76ea02bd -> 0feb635c  4071
 Extract Independent Verdict    guard 0 patch  1  732519a7 -> 03d915ab  41758
-Format Markdown                guard 2 patch  4  aad422cd -> 42b42ca5  25721
-Panel Build                    guard 3 patch  0  7d012611 -> a55dcf73  40287
+Format Markdown                guard 3 patch  4  aad422cd -> f5b0e08c  31664
+Panel Build                    guard 4 patch  0  7d012611 -> e18f5b75  40275
 Panel Cure Build 1             guard 0 patch 21  e615806b -> 60c2dde0  30273
 Panel Cure Build 2             guard 0 patch 21  949d30fd -> e4b8d0cc  30273
 Panel Cure Build 3             guard 0 patch 21  27ca79e4 -> 5f45753a  30273
@@ -24,4 +24,5 @@ Panel Cure Normalize 1         guard 0 patch 21  f2419922 -> 24df05c6  29366
 Panel Cure Normalize 2         guard 0 patch 21  ed924f46 -> bf1ec1b0  29366
 Panel Cure Normalize 3         guard 0 patch 21  5c4e8c5c -> 586ad973  29366
 Panel Payloads                 guard 0 patch  1  16cc2d16 -> 6f0437ef  24157
-26 nodes changed
+Plain Rule Lines               guard 1 patch  0  5ca481ca -> 24d67b50  1321
+27 nodes changed
