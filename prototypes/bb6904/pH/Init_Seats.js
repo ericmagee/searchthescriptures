@@ -47,16 +47,19 @@ const TFR=b.test_fail_reserve===true;const TNF=b.test_no_fallback===true;
 if((TFS!==null||TFR||TNF)&&!DRY)fail('test_fail_seat, test_fail_reserve and test_no_fallback run only in a dry regrade.');
 if(TFS!==null&&panel_order.indexOf(TFS)===-1)fail('test_fail_seat "'+TFS+'" is not one of the panel ['+panel_order.join(', ')+'].');
 if((TFR||TNF)&&TFS===null)fail('test_fail_reserve and test_no_fallback need test_fail_seat.');
-// ALTERNATES (BB-6904 g; 7126): the alternates are the flow's own reserve judges, drawn in reserve order from the seats free after the
-// panel, one per removed seat and two at most, under the guards already built. Resolve Seats keeps the seats the openrouter alternate call
-// serves. MiniMax is out of this publish (7126); qualify_alternate is refused.
-const ALT_ORDER=free.slice(3);
-if(!(b.qualify_alternate===undefined||b.qualify_alternate===null||b.qualify_alternate===''))fail('qualify_alternate is not in this publish (BB-7126).');
-const QA=null;
+// ALTERNATES (BB-6904 g; 7126, 7127): the alternates are the flow's own reserve judges: the seats free after the panel reserve whose
+// engine family is openrouter (the family the alternate call serves), in ORDER; one per removed seat, two at most, under the guards
+// already built. MiniMax is out of this publish (7126); ALT_MODELS stays only for the dry qualify path (qualify_alternate).
+const ALT_MODELS={alt_minimax31:{api_model:'minimax/minimax-m3.1-flash',family:'minimax',max_tokens:64000},alt_minimax3:{api_model:'minimax/minimax-m3',family:'minimax',max_tokens:64000}};
+const JFAM_I={deepseek:'deepseek',gemini:'gemini',grok:'grok',chatgpt:'openai',mimo:'mimo',glm:'openrouter',qwen:'openrouter'};
+const ALT_ORDER=free.slice(4).filter(s=>JFAM_I[s]==='openrouter');
+const QA=(b.qualify_alternate===undefined||b.qualify_alternate===null||b.qualify_alternate==='')?null:String(b.qualify_alternate).trim().toLowerCase();
+if(QA!==null&&!DRY)fail('qualify_alternate runs only in a dry regrade.');
+if(QA!==null&&!Object.keys(ALT_MODELS).some(k=>ALT_MODELS[k].api_model===QA))fail('qualify_alternate "'+QA+'" is not one of ['+Object.keys(ALT_MODELS).map(k=>ALT_MODELS[k].api_model).join(', ')+'].');
 // TOPIC FENCE (WALL-0788 replies 823-837): a launch the operator overrode carries a one-use override id; Topic Fence consumes it.
 const FO=(b.fence_override_id===undefined||b.fence_override_id===null||b.fence_override_id==='')?null:String(b.fence_override_id).trim();
 if(FO!==null&&!/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(FO))fail('fence_override_id "'+FO.slice(0,60)+'" is not an override id.');
 const q=(b.queue_id===undefined||b.queue_id===null)?null:b.queue_id;
 $execution.customData.set('defender',D.engine+'/'+D.profile);$execution.customData.set('challenger',C.engine+'/'+C.profile);
-return [{json:{run_token:TOK,variant:'ORACLE_DEBATE_V1',topic:b.topic,defender:D,challenger:C,dpos,cpos,panel_order,panel_expected,panel_reserve,test_fail_seat:TFS,test_fail_reserve:TFR,test_no_fallback:TNF,alt_order:ALT_ORDER,qualify_alternate:QA,single_judge:free[0],queue_id:q,fence_override_id:FO,regrade:!!RG,dry:DRY,rulebook:RB,sd:new Date().toISOString().split('T')[0],t0:new Date().toISOString()}}];
+return [{json:{run_token:TOK,variant:'ORACLE_DEBATE_V1',topic:b.topic,defender:D,challenger:C,dpos,cpos,panel_order,panel_expected,panel_reserve,test_fail_seat:TFS,test_fail_reserve:TFR,test_no_fallback:TNF,alt_order:ALT_ORDER,alt_models:ALT_MODELS,qualify_alternate:QA,single_judge:free[0],queue_id:q,fence_override_id:FO,regrade:!!RG,dry:DRY,rulebook:RB,sd:new Date().toISOString().split('T')[0],t0:new Date().toISOString()}}];
 

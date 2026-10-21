@@ -23,9 +23,9 @@ if(debFam.indexOf('minimax')>=0)fail('MiniMax never debates (BB-6997): a debater
 S.panel_order.forEach(k=>{if(debFam.indexOf(famOf(k))>=0)fail('judge seat "'+k+'" is of family '+famOf(k)+', which debates in this debate (BB-6993).');});
 if(S.single_judge&&debFam.indexOf(famOf(S.single_judge))>=0)fail('single judge seat "'+S.single_judge+'" is of family '+famOf(S.single_judge)+', which debates in this debate (BB-6993).');
 const reserve=(reserve0&&debFam.indexOf(famOf(reserve0.seat))<0)?reserve0:null;
-// ALTERNATES (7126): the reserve seats after the panel, in Init Seats' order, that the openrouter alternate call serves; each read from its
-// ACTIVE model_config row as the reserve is, and dropped if its family debates in this debate (6993).
-const alternates=(S.alt_order||[]).filter(k=>JFAM[k]==='openrouter'&&M[k]&&M[k].api_model&&Number(M[k].max_tokens)>0).map(k=>({seat:k,fam:'openrouter',api_model:M[k].api_model,max_tokens:Math.max(Number(M[k].max_tokens)||0,8000),family:famOf(k)})).filter(a=>debFam.indexOf(a.family)<0);
+// ALTERNATES (7126, 7127): Init Seats' alt_order, each read from its ACTIVE model_config row as a judge is (max_tokens at least 4000),
+// family by famOf, dropped if its family debates in this debate (6993). No MiniMax.
+const alternates=(S.alt_order||[]).filter(k=>JFAM[k]==='openrouter'&&M[k]&&M[k].api_model&&Number(M[k].max_tokens)>0).map(k=>({seat:k,fam:'openrouter',api_model:M[k].api_model,max_tokens:Math.max(Number(M[k].max_tokens)||0,4000),family:famOf(k)})).filter(a=>debFam.indexOf(a.family)<0);
 const debaters=[D,C].map((x,i)=>({engine:x.engine,model:x.model,family:debFam[i]}));
 // GUARDS and TENSIONS exactly as W1 Init (dedupe by rule_num; the ruled filter).
 const gRaw=$('Fetch Drift Guards').all().map(i=>i.json);const gSeen=new Set();const g=[];for(const x of gRaw){if(x&&x.rule_num!==undefined&&!gSeen.has(x.rule_num)){gSeen.add(x.rule_num);g.push(x);}}
