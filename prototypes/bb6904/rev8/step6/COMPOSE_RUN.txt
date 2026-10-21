@@ -1,0 +1,21 @@
+Alternate Build                guard 0 patch 21  88b4f1db -> 1fc86a78  32443
+Alternate Cure Build           guard 0 patch 21  e338c7db -> a2325e39  29617
+Alternate Cure Normalize       guard 0 patch 21  0ed98daa -> 46911a61  29370
+Alternate Merge                guard 0 patch 21  b60a7835 -> 761947c0  31412
+Alternate Payloads             guard 0 patch  1  d517ca08 -> 1331c305  22826
+Build Independent Verdict      guard 3 patch  0  7fe63a4f -> 183305ac  32592
+Cure Build                     guard 0 patch 21  ebaf4911 -> f71ac0e2  29493
+Cure Check                     guard 0 patch 21  440b94d7 -> 21bcbbee  29559
+Cure Normalize                 guard 0 patch 21  fbad2612 -> e8f8aeab  29350
+Extract Independent Verdict    guard 0 patch  1  732519a7 -> 03d915ab  41758
+Format Markdown                guard 0 patch  4  aad422cd -> b345d833  26141
+Panel Build                    guard 3 patch  0  7d012611 -> a55dcf73  40287
+Panel Cure Build 1             guard 0 patch 21  e615806b -> 60c2dde0  30273
+Panel Cure Build 2             guard 0 patch 21  949d30fd -> e4b8d0cc  30273
+Panel Cure Build 3             guard 0 patch 21  27ca79e4 -> 5f45753a  30273
+Panel Cure Check               guard 0 patch 21  e6213f84 -> 72238dac  30356
+Panel Cure Normalize 1         guard 0 patch 21  f2419922 -> 24df05c6  29366
+Panel Cure Normalize 2         guard 0 patch 21  ed924f46 -> bf1ec1b0  29366
+Panel Cure Normalize 3         guard 0 patch 21  5c4e8c5c -> 586ad973  29366
+Panel Payloads                 guard 0 patch  1  16cc2d16 -> 6f0437ef  24157
+20 nodes changed
