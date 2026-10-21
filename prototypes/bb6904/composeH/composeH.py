@@ -21,7 +21,7 @@ def ls(rev,folder):return [l for l in subprocess.run(['git','-C',REPO,'ls-tree',
 err=lambda m:fail.append(m)
 P='prototypes/bb6904/'
 E_REV='404300a' # Worker_E's builds p2, p4, p5b, p7, pinned (BB-7024 AMEND 1): the last commit that changed any of them
-REVS={'p2':E_REV,'p3':'0b3cbac','p4':E_REV,'p5b':E_REV,'p6':'d0d5aab','p7':E_REV,'pF':'afb3f19','pG':'2a110df','pH':'2b6a3e8'} # pF: portion F (BB-7072, 7078); pG: portion G (BB-7109)
+REVS={'p2':E_REV,'p3':'0b3cbac','p4':E_REV,'p5b':E_REV,'p6':'d0d5aab','p7':E_REV,'pF':'afb3f19','pG':'2a110df','pH':'32f0751'} # pF: portion F (BB-7072, 7078); pG: portion G (BB-7109)
 # Pinned and clean (BB-7025 item 2a): every source is a commit id (never a branch or HEAD) that resolves; and where a source folder
 # exists in this checkout, its files must equal the pinned commit's (a folder edited after pinning fails until re-pinned).
 for tag,rev in REVS.items():
