@@ -1,0 +1,6 @@
+== run27563_report.md
+rows 17 | L3 limb A FIRED: Panel judge (removed): Gemini D1 vs C7 Two kinds of layer (K-B); Panel judge (removed): Gemini D2 vs C6 Two kinds of layer (K-B); Panel judge (removed): Gemini D4 vs C7 Two kinds of layer (K-B) | limb B silent
+== fixture_l3_good.md
+rows 17 | L3 limb A silent | limb B silent
+== fixture_l3_badB.md
+rows 12 | L3 limb A silent | limb B FIRED: Panel judge (removed): Gemini D1 vs C7 Two kinds of layer (K-B); Panel judge (removed): Gemini D2 vs C6 Two kinds of layer (K-B); Panel judge (removed): Gemini D4 vs C7 Two kinds of layer (K-B)

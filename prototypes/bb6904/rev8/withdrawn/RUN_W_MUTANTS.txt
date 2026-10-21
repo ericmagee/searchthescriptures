@@ -1,0 +1,4 @@
+mutB nodes 14 | (a) WITHDRAWN cures K-B,K-G1,K-G4 14 | (b) STATEMENT Withdrawn cures nothing 0 | (c) other link cures nothing 14 | (g) rule served once in place 14 | (h) 27563 gemini K-B cured 14
+mutC nodes 14 | (a) WITHDRAWN cures K-B,K-G1,K-G4 14 | (b) STATEMENT Withdrawn cures nothing 14 | (c) other link cures nothing 0 | (g) rule served once in place 14 | (h) 27563 gemini K-B cured 14
+oneoff nodes 14 | (a) WITHDRAWN cures K-B,K-G1,K-G4 13 | (b) STATEMENT Withdrawn cures nothing 14 | (c) other link cures nothing 14 | (g) rule served once in place 13 | (h) 27563 gemini K-B cured 13
+fail 0
