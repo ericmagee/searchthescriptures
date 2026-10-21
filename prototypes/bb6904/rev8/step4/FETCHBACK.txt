@@ -1,0 +1,6 @@
+Step 4 fetch-back (Worker_E), BB-6904. Draft version 5fd3b03c-4e9d-4e16-8eeb-a89f199f75cc (get_workflow_version, saved by tool, 945,120 chars), created 20:49:37Z; active stays 14054eb4.
+fb.cjs <version file> <14054eb4 jsCode extract> <step4/new>: all 14 cure nodes' running jsCode byte-equal to the files (md5 per node = WRITE_MD5S.txt / NEW_MD5S e44f076f): Alternate Build bc4bbcfa, Alternate Cure Build 8b75d0bb, Alternate Cure Normalize 960834ce, Alternate Merge 01cfc508, Cure Build 3596dcc7, Cure Check b6f6cb42, Cure Normalize d05a8525, Panel Cure Build 1 ebfade24, Panel Cure Build 2 5de263ab, Panel Cure Build 3 524699cb, Panel Cure Check 4077204f, Panel Cure Normalize 1 9fdb32f4, Panel Cure Normalize 2 b4a400a4, Panel Cure Normalize 3 d31ed750.
+Other 49 code nodes equal to 14054eb4. No node carries parameters.parameters (0).
+Every node field outside the 14's parameters equal to 14054eb4 (231 nodes, 0 diffs); connections equal; Build Independent Verdict and Panel Build parameters equal to 14054eb4.
+Versions written this step: 88df4429, 40eab876 (stray nested copies, superseded), 7586de75 (Alternate Build rewrite), 11 more, 58deedac, 5fd3b03c.
+Not checked here: workflow settings (the version object carries none; only node updates were made).
