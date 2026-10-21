@@ -1,0 +1,18 @@
+== Worker_E harness_w.cjs at A3's seat
+base nodes 14 | (a) WITHDRAWN cures K-B,K-G1,K-G4 0 | (b) STATEMENT Withdrawn cures nothing 14 | (c) other link cures nothing 14 | (g) rule served once in place 0 | (h) 27563 gemini K-B cured 0
+only1 nodes 14 | (a) WITHDRAWN cures K-B,K-G1,K-G4 14 | (b) STATEMENT Withdrawn cures nothing 14 | (c) other link cures nothing 14 | (g) rule served once in place 0 | (h) 27563 gemini K-B cured 14
+only2 nodes 14 | (a) WITHDRAWN cures K-B,K-G1,K-G4 0 | (b) STATEMENT Withdrawn cures nothing 14 | (c) other link cures nothing 14 | (g) rule served once in place 14 | (h) 27563 gemini K-B cured 0
+new nodes 14 | (a) WITHDRAWN cures K-B,K-G1,K-G4 14 | (b) STATEMENT Withdrawn cures nothing 14 | (c) other link cures nothing 14 | (g) rule served once in place 14 | (h) 27563 gemini K-B cured 14
+fail 0
+== A3 harness.cjs (F1-F3) on Worker_E's new/
+base nodes 14 | F1 deepseek quote found 14 | F2 altered quote refused and grok kept 14 | F3 cureAsk right 14
+new nodes 14 | F1 deepseek quote found 14 | F2 altered quote refused and grok kept 14 | F3 cureAsk right 14
+fail 0
+== A3 probes
+P1 echo: withdrawn 0 malformed 1
+P2 K-G3 one of two withdrawn: [["UNCURED","no WITHDRAWN line for D6 VS C2"]]
+P2b K-G3 both withdrawn: [["CURED","withdrawn: D2 VS C4, D6 VS C2"]]
+== base equals A3 new/ (a47717b3)
+14
+== diff lines per node
+     14 3
