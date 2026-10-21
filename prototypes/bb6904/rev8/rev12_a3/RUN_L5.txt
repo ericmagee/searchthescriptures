@@ -1,0 +1,19 @@
+RUN_L5 2026-10-21 17:26 CDT
+== rows.md
+FIRES Panel judge Gemini D3 vs C4 luk 3:23 named in CR2 ; no SHORT quotation from those rounds
+SILENT Panel judge Gemini D5 vs C1 answer quoted from CR2/CR3
+FIRES Panel judge Grok D5 vs C1 mat 1:25 named in CR2 ; no SHORT quotation from those rounds
+FIRES Panel judge Grok D6 vs C1 mat 1:25 named in CR2 ; no SHORT quotation from those rounds
+L5 fired on 3
+== rows_good.md
+SILENT Panel judge Gemini D3 vs C4 answer quoted from CR2
+SILENT Panel judge Gemini D5 vs C1 answer quoted from CR2/CR3
+SILENT Panel judge Grok D5 vs C1 answer quoted from CR2
+SILENT Panel judge Grok D6 vs C1 answer quoted from CR2
+L5 fired on 0
+== rows_bad1.md
+FIRES Panel judge Gemini D3 vs C4 luk 3:23 named in CR2 ; no SHORT quotation from those rounds
+SILENT Panel judge Gemini D5 vs C1 answer quoted from CR2/CR3
+FIRES Panel judge Grok D5 vs C1 mat 1:25 named in CR2 ; no SHORT quotation from those rounds
+FIRES Panel judge Grok D6 vs C1 mat 1:25 named in CR2 ; no SHORT quotation from those rounds
+L5 fired on 3
