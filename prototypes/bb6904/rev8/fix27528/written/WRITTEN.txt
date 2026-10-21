@@ -1,0 +1,31 @@
+versionId 14054eb4-9b73-49ef-bc62-9ccbcad42439 activeVersionId 804b870a-0cc1-4990-9864-8c2188533de8
+Alternate Build: WRITTEN OK a61991ef78c6d2274e3febadc485b253
+Alternate Cure Build: WRITTEN OK 2c24695ca6a2f9006edb4fa9ba8f5719
+Alternate Cure Normalize: WRITTEN OK b130526e0b388cd8db63878bbb25b63a
+Alternate Merge: WRITTEN OK 2e527926a51f5818c78b00326a29cbc8
+Alternate Payloads: WRITTEN OK 56ef9cf837b11a74aee14f89956b9089
+Cure Build: WRITTEN OK 97a049dd3095ca4b1c027341fb1cd380
+Cure Check: WRITTEN OK 6d3ab0de3b18d88c99e6143b9097f2f6
+Cure Normalize: WRITTEN OK 8b5059687b84b3f31507060515c18561
+Extract Independent Verdict: WRITTEN OK ad63e71f98fda1a1d8b33ac80cb760a3
+Format Markdown: WRITTEN OK bdf24377498a960eb2e8dbadf119c5a6
+Panel Cure Build 1: WRITTEN OK 36e811c4223fdeacf77a3f129c2e723e
+Panel Cure Build 2: WRITTEN OK 08b20127dbddb396cbfc00d152b8519d
+Panel Cure Build 3: WRITTEN OK 711753b50b1cc0f73549532b5507bc8a
+Panel Cure Check: WRITTEN OK 3ba06b529a93aa3085e5688ab260b041
+Panel Cure Normalize 1: WRITTEN OK 5ef6861466004a6206ba6740e588f143
+Panel Cure Normalize 2: WRITTEN OK 0356cd13c8436bb07963438ef619779a
+Panel Cure Normalize 3: WRITTEN OK 1d7dd7bfe10d84c4a9b843b6f2a15d06
+Panel Payloads: WRITTEN OK c36cec2266ce44aacf59e8169c098ba9
+node names equal: True; other nodes (213) differing: []
+connections equal: True
+settings equal: True
+name equal: True
+nodeGroups equal: True
+tags equal: True
+active equal: True
+parentFolderId equal: True
+description equal: True
+activeVersion keys: ['sameAsDraft', 'nodes', 'connections', 'nodeGroups']; activeVersion.versionId None
+activeVersion.sameAsDraft False
+active snapshot nodes equal to step0 nodes: True
