@@ -31,7 +31,7 @@ for k in sorted(PATCHED):
     if k in dn:
         with tempfile.NamedTemporaryFile('w',suffix='.js',delete=False) as f:f.write('async function __n(){'+dn[k]['parameters']['jsCode']+'\n}');fn=f.name
         r=subprocess.run(['node','--check',fn],capture_output=True,text=True);os.unlink(fn);say(r.returncode==0,'%s: node --check'%k)
-BAD=['GUARD-INADMISSIBLE','who-belongs','Joshua 5:5','SEED-NOT-BLOOD']
+BAD=['GUARD-INADMISSIBLE','who-belongs','Joshua 5:5','SEED-NOT-BLOOD','posline','Roles this debate']  # removal F (7235): the roles sentence
 OLDK='WITHDRAWN if it is withdrawn or conceded, or if the GUARD-INADMISSIBLE block orders it graded unexhibited; BROKEN if it is graded DEFENDER LINK BROKEN at a collision; STANDS otherwise.'
 NEWK='WITHDRAWN if it is withdrawn or conceded; BROKEN if it is graded DEFENDER LINK BROKEN at a collision; STANDS otherwise.'
 TERMS='A defender link that the GUARD-INADMISSIBLE block orders graded unexhibited counts as WITHDRAWN.'
