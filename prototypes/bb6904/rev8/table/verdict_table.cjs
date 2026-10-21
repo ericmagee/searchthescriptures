@@ -5,7 +5,8 @@
 // five.json keys: dr1/dr2/dlink = defender rounds CR1/CR2/CR3; cr1/cr2/clink = challenger rounds DR1/DR2/DR3.
 const fs=require('fs');const [F,MN,RB]=process.argv.slice(2);const D=JSON.parse(fs.readFileSync(F,'utf8'));const N=require(MN);
 const ruleB=new Set(String(RB||'').split(',').filter(Boolean));
-const norm=s=>String(s||'').replace(/\s+/g,' ').toLowerCase();
+// 7213 D1: markdown emphasis (* _ `) is stripped before the match, on both the quote and the pressing rounds.
+const norm=s=>String(s||'').replace(/[*_`]+/g,'').replace(/\s+/g,' ').toLowerCase();
 const text=raw=>{const h=String(raw||'').split('\n\n[AUDIT')[0];try{return JSON.parse(h).reasoning||h;}catch(e){return h;}};
 const keys=t=>new Set(N.cureRefs(String(t||'')).map(x=>x.key));
 const QT=/"([^"]{15,})"|“([^”]{15,})”|'([^']{15,})'|‘([^’]{15,})’/g;

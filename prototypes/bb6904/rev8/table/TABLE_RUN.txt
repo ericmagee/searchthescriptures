@@ -111,7 +111,7 @@
 
 === 27433  rule (b) given: YES
  single   STORED BROKEN BROKEN-1 n=6 w=0 k=2 | CHALLENGER WINS | def SELF-SUPPORTED ch PROP-DEPENDENT | keystone 6 BROKEN
-    D4 vs C2 (Luke 3:23) namesDR1/2=false quotesFound=0 lateDR3=false CR3names=[luk 3:23] -> REMOVED: no pressing sentence and round (rule b)
+    D4 vs C2 (Luke 3:23) namesDR1/2=false quotesFound=1 lateDR3=false CR3names=[luk 3:23] -> REMOVED: no pressing sentence and round (rule b)
     D6 vs C4 (Isaiah 7:14/Matthew 1:23) namesDR1/2=false quotesFound=0 lateDR3=false CR3names=[] -> REMOVED: no pressing sentence and round (rule b)
     REGRADE (rules b, c): k=0 HELD-1 HELD | DEFENDER WINS
     REGRADE (+ class 1 removed): k=0 HELD-1 HELD | DEFENDER WINS
@@ -119,13 +119,13 @@
     REGRADE (rules b, c): k=0 HELD-1 HELD | DEFENDER WINS
     REGRADE (+ class 1 removed): k=0 HELD-1 HELD | DEFENDER WINS
  gemini   STORED BROKEN BROKEN-1 n=6 w=0 k=3 | CHALLENGER WINS | def SELF-SUPPORTED ch PROP-DEPENDENT | keystone 6 BROKEN
-    D3 vs C4 (Luke 2:49) namesDR1/2=false quotesFound=1 lateDR3=false CR3names=[] -> REMOVED: no pressing sentence and round (rule b)
-    D4 vs C4 (Acts 21:29) namesDR1/2=false quotesFound=0 lateDR3=false CR3names=[] -> REMOVED: no pressing sentence and round (rule b)
+    D3 vs C4 (Luke 2:49) namesDR1/2=false quotesFound=2 lateDR3=false CR3names=[] -> REMOVED: no pressing sentence and round (rule b)
+    D4 vs C4 (Acts 21:29) namesDR1/2=false quotesFound=1 lateDR3=false CR3names=[] -> REMOVED: no pressing sentence and round (rule b)
     D6 vs C6 (Matthew 1:19) namesDR1/2=false quotesFound=0 lateDR3=false CR3names=[] -> REMOVED: no pressing sentence and round (rule b)
     REGRADE (rules b, c): k=0 HELD-1 HELD | DEFENDER WINS
     REGRADE (+ class 1 removed): k=0 HELD-1 HELD | DEFENDER WINS
  grok     STORED BROKEN BROKEN-1 n=6 w=0 k=1 | CHALLENGER WINS | def PROP-DEPENDENT ch COLLAPSED | keystone 6 BROKEN
-    D6 vs C4 (Matthew 1:23) namesDR1/2=true quotesFound=0 lateDR3=false CR3names=[] -> REMOVED: no pressing sentence and round (rule b)
-    REGRADE (rules b, c): k=0 HELD-1 HELD | DEFENDER WINS
-    REGRADE (+ class 1 removed): k=0 HELD-1 HELD | DEFENDER WINS
- PANEL stored {"fv":"BROKEN","out":"CHALLENGER PREVAILS","split":"2-1"} | regrade {"fv":"HELD","out":"DEFENDER PREVAILS","split":"3-0"} | regrade+class1 {"fv":"HELD","out":"DEFENDER PREVAILS","split":"3-0"}
+    D6 vs C4 (Matthew 1:23) namesDR1/2=true quotesFound=1 lateDR3=false CR3names=[] -> kept
+    REGRADE (rules b, c): k=1 BROKEN-1 BROKEN | CHALLENGER WINS
+    REGRADE (+ class 1 removed): k=1 BROKEN-1 BROKEN | CHALLENGER WINS
+ PANEL stored {"fv":"BROKEN","out":"CHALLENGER PREVAILS","split":"2-1"} | regrade {"fv":"HELD","out":"DEFENDER PREVAILS","split":"2-1"} | regrade+class1 {"fv":"HELD","out":"DEFENDER PREVAILS","split":"2-1"}

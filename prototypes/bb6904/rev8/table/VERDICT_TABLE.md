@@ -60,9 +60,9 @@ unanswered witness. Removing a line that fails (b) and grading the link by the l
 | 27433 | YES | single | BROKEN-1 k=2 | 2 | D4 (b; also class 1, Luke 3:23); D6 (b; also (c): Jeremiah 31:22 is in DR3 only, note B) | HELD-1, DEFENDER WINS | same |
 | 27433 | YES | glm (alternate) | HELD-1 | 0 | none | HELD-1, DEFENDER WINS | same |
 | 27433 | YES | gemini | BROKEN-1 k=3 | 3 | all 3 (b) | HELD-1, DEFENDER WINS | same |
-| 27433 | YES | grok | BROKEN-1 k=1 | 1 | D6 (b): names [DR1]/[DR2], quotes nothing found there | HELD-1, DEFENDER WINS (note C) | same |
+| 27433 | YES | grok | BROKEN-1 k=1 | 1 | none: D6 names [DR1]/[DR2] and quotes words found in DR1 (7213 D1; note C) | BROKEN-1 k=1, CHALLENGER WINS | same |
 | 27433 | YES | deepseek (removed seat) | BROKEN-1 k=1 | 1 | D6 (b): names no round (read by hand from drv_removed) | HELD-1, DEFENDER WINS | same |
-| 27433 | | PANEL | CHALLENGER PREVAILS 2-1 | | | DEFENDER PREVAILS 3-0 (deepseek seated or glm) | same |
+| 27433 | | PANEL | CHALLENGER PREVAILS 2-1 | | | DEFENDER PREVAILS 2-1 (deepseek seated or glm) | same |
 
 Citation rule: no load-bearing DEFENDER quotation fails on 27259 or 27433 (citation_check read; 0 items), so a DEFENDER outcome is not
 held to review there. 27177, 27191 and 27208 have no citation check stored (before J2). Tie rule: no re-graded HELD seat on these rows
@@ -74,14 +74,18 @@ defense c=0 (not COLLAPSED; SELF-SUPPORTED or PROP-DEPENDENT is a footing judgme
 UNEXHIBITED items fall the same way, the 2 stated concessions stay: c=2, PROP-DEPENDENT. So HELD-1, DEFENDER WINS. Applied by hand.
 NOTE B (27433 single D6): the line's parentheses name Isaiah 7:14/Matthew 1:23; Jeremiah 31:22 is in its prose. The reader takes the
 first parentheses only (A3 7201 note 6), so (c) was confirmed by a separate read: Jeremiah 31:22 is in DR3, not in DR1, DR2 or CR3.
-NOTE C (27433 grok): its CONCEDED item P6 names [DR1] I.5 and [DR2] §6 but quotes no sentence; under (b) it does not count: defense c=0
-of L=4. Challenger P4 and P6 fall the same way; P1, P5 stated stay: c=2 of L=5, PROP-DEPENDENT. HELD-1, DEFENDER WINS. Applied by hand.
+NOTE C (27433 grok, corrected after A3 7213 D1): the first run compared text with markdown emphasis left in, so DR1's "**before they came
+together**, she was found with child of the Holy Ghost" did not match grok's quote; with emphasis stripped (verdict_table.cjs, norm) the line
+names a pressing round and quotes words found there, so it is KEPT and grok stays BROKEN-1 k=1. The words belong to a layer verse
+(Matthew 1:18), not the line's witness (Matthew 1:23): the test shows words found in a pressing round, not that they press that witness.
+The rerun changes no other grade (quote counts rise on three removed lines that name no round).
 
 ## 4. What the table shows
 
-1. Under the rules each judge was given, the stored outcome is wrong on 27259 and 27433: both become DEFENDER PREVAILS.
+1. Under the rules each judge was given, the stored outcome is wrong on 27259 and 27433: both become DEFENDER PREVAILS 2-1.
 2. 27177, 27191 and 27208 were judged without (b). Under their rules no BROKEN line falls mechanically. 27191 and 27208 turn only if
    the link round's naming of the verse is also an answer under (a); that needs a reading of [CR3] line by line (UNCOMPUTABLE here).
    27177 stands as stored under its rules.
-3. Limits: the (b) test is by words found, not meaning (the 27259 deepseek D4/D5 "quotes found" are text found in DR1/DR2, not shown to be
-   the sentence pressing that verse); the reader tests the first parentheses only; nothing here is a model call.
+3. Limits, both ways: the (b) test is by words found, not meaning. A kept line (27259 deepseek D4, D5; 27433 grok D6) shows words found in a
+   pressing round, not that those words press that witness; a removed line names no round or quotes nothing found there. The reader tests
+   the first parentheses only; nothing here is a model call.
