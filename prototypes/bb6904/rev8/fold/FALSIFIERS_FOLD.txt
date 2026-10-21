@@ -1,0 +1,13 @@
+Step 10, the quote-mark fold (P2D revision 11, BB-7357), builder Worker_E, declared before any file change.
+Base: Worker_A3's ee8f4b9 new/ = the live 5fd3b03c code (BB-7343), the 14 cure nodes (only carriers of cureQ).
+Edit (one anchor per node, in cureQ only): after the markdown strip and lowercasing, remove straight and curly quote marks ( " ' “ ” ‘ ’ ) and rewrite a round label written in parentheses, (L1)-(L4), (DR1)-(DR3), (CR1)-(CR3), to its bracket form [..]; brackets are never removed. The same cureQ serves both the quotation and the round text, so the fold is on both sides.
+F1 known-bad, must be found: the 6 rows of run 27613 "no quotation found" that are in the named round (single judge D4vC2 r2, D5vC1 r2, D6vC2 r1; deepseek D3vC4 r1, D4vC2 r2, D5vC1 r2), quotations as the report prints them, rounds from stored engine_r1/engine_r2.
+F2 known-good, must still refuse: deepseek D6vC6 (the round's [L1] dropped inside the quotation).
+F3 bold: gemini D5vC1 (bold marks) still found.
+F4 label dropped, synthetic: a quotation equal to a round passage with one [L1] removed is refused.
+F5 a quotation with one word changed is refused (the fold does not loosen word identity).
+F6 F1-F3 of 7300 (harness.cjs) and harness_r.cjs still pass.
+F7 one-node misedit: a probe set with the edit missing from one node fails F1 on that node.
+F8 node --check on all 14; each node differs from base in exactly the cureQ line.
+L4 (wrong-if, step 16 report): fires on a "no quotation found" row whose quotation, folded by an independent instrument (SQL), is in the named round; or on a CURED row whose quotation drops a bracketed label its round carries. Run on the 27613 report (must fire on the 6) and on a fixture with those 6 rows marked CURED (silent), before the completion row.
+Not checked: behaviour in n8n until step 15.
