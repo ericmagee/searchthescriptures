@@ -1,0 +1,8 @@
+Worker_E verify of Worker_A3's cure-code fix files (git 000eab1, prototypes/bb6904/rev8/curefix/), BB-7300. Files only; nothing written to n8n.
+1. Base = live: cfscan.cjs over my get_workflow_details read of 14054eb4 (fetched 13:36 CDT; 231 nodes): exactly 14 nodes hold cureQ/cureAsk; each md5 equals BASE_MD5S.txt; base/ equals my fix27528/patched byte for byte (cmp, 14 of 14). Not re-read since 13:36 CDT: recheck the active version at write time.
+2. Diff: each of the 14 nodes differs from base in exactly 2 lines (cureAsk line 83, cureQ line 113 in Cure_Check), the two edits as stated.
+3. harness.cjs rerun (base only1 only2 new): identical to RUN.txt; fail 0. syn.cjs: parsed 28 errors 0.
+4. Own probes (myprobe.cjs, new/, 14 nodes): stored DR2 holds "**[L1]** Matthew 1:18: the child was ..." (bold marks confirmed in text2_user); the deepseek quotation is found in 14 of 14; mutants "Holy Spirit" and "until" refused in 14 of 14; cureQ('a **b** _c_ `d`') = 'a b c d' in 14 of 14. Bad 0.
+5. Side effect, accepted: underscores are removed on both sides, so "snake_case" equals "snakecase". No scripture text uses underscores.
+6. Not checked: behaviour inside n8n; the raw cure replies; 7294 (c) and (f).
+RESULT: PASS.
