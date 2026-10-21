@@ -1,0 +1,12 @@
+PASS old code: gemini line counts ["L3"]
+PASS new code: gemini line counts ["L1","L3"] (L2 *parthenos* in Latin letters still not counted, by the rule)
+PASS a plain sentence end cuts as before: ["L3"]
+     note: quote ending in an ellipsis, old ["L1","L3"] new ["L1","L3"]
+     changed: 27528 gemini(removed) D6 vs C6 ["L3"] -> ["L1","L3"]
+     regression: 64 LINK BROKEN lines, 1 change their layer kinds
+PASS no line loses a layer kind under the new code
+PASS a read that throws is named with its message
+     LIMIT: a read that returns an object with an empty judges list is not named (fromNode sees an object); a thrown error and an empty item list are named.
+PASS the calls that were read are still grouped by md5 as before
+
+FIX TESTS PASS

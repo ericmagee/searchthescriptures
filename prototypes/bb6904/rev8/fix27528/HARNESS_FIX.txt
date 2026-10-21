@@ -1,0 +1,90 @@
+1. DETECTION (drvCheck), per judge: live K-G1 | new K-G1 K-G4
+27177 single   live 0 | new 0 4
+27177 deepseek live 0 | new 0 3
+27177 gemini   live 0 | new 0 6
+27177 grok     live 0 | new 0 3
+27191 single   live 1 | new 1 2
+27191 deepseek live 0 | new 0 3
+27191 gemini   live 0 | new 0 2
+27191 grok     live 0 | new 0 6
+27208 single   live 0 | new 0 3
+27208 deepseek live 0 | new 0 1
+27208 gemini   live 0 | new 0 1
+27208 grok     live 0 | new 0 2
+27259 single   live 2 | new 2 1
+27259 deepseek live 3 | new 3 0
+27259 gemini   live 0 | new 0 6
+27259 grok     live 1 | new 1 2
+27433 single   live 1 | new 1 1
+27433 glm      live 0 | new 0 0
+27433 gemini   live 0 | new 0 3
+27433 grok     live 0 | new 0 2
+TOTAL live {"K-G1":8,"K-G4":0} new {"K-G1":8,"K-G4":51}
+
+2. CURE VERDICTS (K-G4 and K-G5) on 27433 single judge D4 vs C2; the answer block names Luke 3:23: true ; DR1 quote: "Mary conceived by the Holy Ghost without a man." ; answer quote: "And Jesus himself began to be about thirty years of age, being (as was supposed
+PASS setup: the unrelated sentence is in the link round (same LINK block) but outside the answer window
+PASS PRESSED true, no SHORT: UNCURED -- the link round CR3 names luk 3:23; no SHORT line quoting its answer
+PASS PRESSED true + SHORT from the answer block: CURED -- pressed: quotation found in DR1; SHORT found in CR3's answer to luk 3:23
+PASS PRESSED true + SHORT quoting an unrelated link-round sentence (7194 defect 1): UNCURED -- the link round CR3 names luk 3:23; no SHORT line quoting its answer
+PASS PRESSED false quote: UNCURED -- no quotation found in the named round
+PASS PRESSED wrong round: UNCURED -- PRESSED round [CR1] does not press the defender
+PASS WITHDRAWN: CURED -- withdrawn
+PASS SHORT with a false quote: UNCURED -- the link round CR3 names luk 3:23; no SHORT line quoting its answer
+PASS prose only: UNCURED -- no PRESSED line, no WITHDRAWN line, and no statement that names a pressing round and quotes it, for D4 vs C2
+PASS K-G4 with a verse the link round does not name, PRESSED true: CURED
+PASS refs of "Matthew 1:16, 1:18": ["mat 1:16","mat 1:18"]
+PASS refs of "Matthew 1:16,18,20,25": ["mat 1:16","mat 1:18","mat 1:20","mat 1:25"]
+PASS refs of "Matthew 1:18-20": ["mat 1:18","mat 1:19","mat 1:20"]
+PASS refs of "Matt 1:25": ["mat 1:25"]
+PASS refs of "Jer 22:30; Luke 3:23": ["jer 22:30","luk 3:23"]
+PASS refs of "Isaiah 7:14/Matthew 1:23": ["isa 7:14","mat 1:23"]
+PASS refs of "1 Chronicles 3:5": ["1 chr 3:5"]
+PASS refs of "Matthew 1:18, 25": ["mat 1:18","mat 1:25"]
+K-G5 named over 56 lines: 21
+  27191 single D1 vs C3 [luk 1:35]
+  27191 single D5 vs C1 [mat 1:20, luk 1:35, luk 1:34]
+  27191 single D6 vs C1 [mat 1:20, luk 1:35, luk 1:34, mat 1:18, mat 1:25, mat 1:16]
+  27191 deepseek D5 vs C1 [mat 1:20, luk 1:35, luk 1:34, mat 1:18, mat 1:25]
+  27191 deepseek D6 vs C1 [luk 1:35, luk 1:34, mat 1:18, mat 1:25]
+  27191 gemini D5 vs C1 [mat 1:18]
+  27191 gemini D6 vs C1 [mat 1:18]
+  27208 single D4 vs C2 [mat 1:20]
+  27208 single D5 vs C3 [luk 1:35]
+  27208 single D6 vs C1 [mat 1:18, mat 1:16]
+  27208 deepseek D6 vs C1 [mat 1:18, luk 1:35, mat 1:25, luk 1:34, mat 1:16]
+  27208 grok D5 vs C3 [luk 1:35]
+  27208 grok D6 vs C5 [mat 1:20, mat 1:18, mat 1:25, mat 1:21]
+  27259 single D4 vs C2 [luk 1:35, luk 1:34]
+  27259 single D5 vs C2 [mat 1:25]
+  27259 single D6 vs C2 [mat 1:20, mat 1:25, mat 1:24, luk 1:35, luk 1:34, mat 1:19]
+  27259 deepseek D4 vs C4 [mat 1:20, luk 1:35, mat 1:19]
+  27259 deepseek D5 vs C2 [mat 1:25, luk 1:34]
+  27259 deepseek D6 vs C2 [mat 1:20, mat 1:25, luk 1:35]
+  27259 grok D6 vs C2 [mat 1:25]
+  27433 single D4 vs C2 [luk 3:23]
+PASS the 10 lines 7194 names are detected
+COST: judges sent to a cure call, live 18 of 20 ; new 19 of 20 (each cure call resends the judge's own request body plus its answer)
+
+3. REFUSAL TEXT CHECK over 30 stored rounds
+fired on ["27177:dlink"]
+
+HARNESS PASS
+
+4. ITEM 5, the judge statement
+PASS statement attached to a cured item
+PASS no statement written: null
+PASS a statement with no round named and no quotation does not cure
+PASS statement naming DR1, quoting it and quoting the answer cures
+PASS statement quoting DR1 but not the answer (Luke 3:23 named in CR3) does not cure
+PASS statement naming a round that does not press the defender does not cure
+PASS K-B statement exhibiting two layer kinds cures
+PASS K-B statement with one layer kind does not cure
+PASS K-G1: count corrected and a passing statement cures
+PASS K-G3 statement matched by side
+PASS report line carries JUDGE STATEMENT
+PASS report line says none written
+PASS transcript parser reads it, statement kept apart
+PASS the live parser would fold it into STATEMENT (why the parser changes)
+ITEM 5 PASS
+
+HARNESS (with item 5) PASS
