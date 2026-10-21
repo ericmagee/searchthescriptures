@@ -1,0 +1,8 @@
+== run27563_report.md
+L1 FIRED: Panel judge (removed): DeepSeek D6 vs C2 quotation found in DR2 of Text 1,Text 2
+L2 FIRED: 8 K-G4 items sent a standing sentence (D2 vs C4, D6 vs C6, D5 vs C6, D6 vs C2, D2 vs C2, D2 vs C5)
+== fixture_good_l2.md
+L1 FIRED: Panel judge (removed): DeepSeek D6 vs C2 quotation found in DR2 of Text 1,Text 2
+L2 silent
+== fixture_nosent.md
+L0 FIRED: no sent texts to read
