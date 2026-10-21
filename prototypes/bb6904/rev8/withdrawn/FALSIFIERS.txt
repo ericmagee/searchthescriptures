@@ -1,0 +1,12 @@
+WITHDRAWN wording portion (BB-7311 item 3), builder Worker_E, declared before building.
+Base: Worker_A3's curefix/new/ files (git 000eab1, NEW_MD5S a47717b3), 14 cure nodes.
+Edit (one anchor per node): in CURE_FORM, directly after the STATEMENT form line, insert one line:
+  "Your STATEMENT line records your reasons. It never withdraws anything. To withdraw a link, write a line of its own: WITHDRAWN: D<n> vs C<m>. The word withdrawn written anywhere else does nothing.\n"
+No change to the checker.
+W1 scope: the anchor occurs exactly once in each of the 14 nodes; each node differs from base/new by exactly that one inserted line.
+W2 served text: cureAsk, run from each node's own source, returns the new sentence exactly once, after the STATEMENT form line and before "Write one STATEMENT line".
+W3 checker unchanged and behaving: every function from "const CURE_KEY=" to the end of the cure block is byte-identical to base; a reply carrying only "STATEMENT: K-G4 D6 vs C2 | Withdrawn ..." leaves that K-G4 item UNCURED; a reply carrying "WITHDRAWN: D6 vs C2" cures it as withdrawn; both on every node, before and after.
+W4 the 7300 falsifiers F1-F3 (harness.cjs) still pass on the new files: deepseek quotation found, altered quotation refused, K-G4 own line.
+W5 node --check (as function bodies) passes on all 14.
+W6 single-site misedit: a probe set with the line missing from one node fails W1 and W2 for that node.
+Not checked: behaviour inside n8n; whether a judge obeys the sentence (only a live run shows that).
