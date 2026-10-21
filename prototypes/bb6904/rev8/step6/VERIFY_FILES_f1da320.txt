@@ -1,0 +1,92 @@
+PASS node set equal (231 against 231)
+PASS connections equal
+PASS settings equal
+PASS every node equal apart from the jsCode of the two judge nodes and the 18 patched nodes
+PASS Alternate Build: draft jsCode md5 1fc86a78 equals the verifier's own build 1fc86a78
+PASS Alternate Build: node --check
+PASS Alternate Cure Build: draft jsCode md5 a2325e39 equals the verifier's own build a2325e39
+PASS Alternate Cure Build: node --check
+PASS Alternate Cure Normalize: draft jsCode md5 46911a61 equals the verifier's own build 46911a61
+PASS Alternate Cure Normalize: node --check
+PASS Alternate Merge: draft jsCode md5 761947c0 equals the verifier's own build 761947c0
+PASS Alternate Merge: node --check
+PASS Alternate Payloads: draft jsCode md5 1331c305 equals the verifier's own build 1331c305
+PASS Alternate Payloads: node --check
+PASS Cure Build: draft jsCode md5 f71ac0e2 equals the verifier's own build f71ac0e2
+PASS Cure Build: node --check
+PASS Cure Check: draft jsCode md5 21bcbbee equals the verifier's own build 21bcbbee
+PASS Cure Check: node --check
+PASS Cure Normalize: draft jsCode md5 e8f8aeab equals the verifier's own build e8f8aeab
+PASS Cure Normalize: node --check
+PASS Extract Independent Verdict: draft jsCode md5 03d915ab equals the verifier's own build 03d915ab
+PASS Extract Independent Verdict: node --check
+PASS Format Markdown: draft jsCode md5 b345d833 equals the verifier's own build b345d833
+PASS Format Markdown: node --check
+PASS Panel Cure Build 1: draft jsCode md5 60c2dde0 equals the verifier's own build 60c2dde0
+PASS Panel Cure Build 1: node --check
+PASS Panel Cure Build 2: draft jsCode md5 e4b8d0cc equals the verifier's own build e4b8d0cc
+PASS Panel Cure Build 2: node --check
+PASS Panel Cure Build 3: draft jsCode md5 5f45753a equals the verifier's own build 5f45753a
+PASS Panel Cure Build 3: node --check
+PASS Panel Cure Check: draft jsCode md5 72238dac equals the verifier's own build 72238dac
+PASS Panel Cure Check: node --check
+PASS Panel Cure Normalize 1: draft jsCode md5 24df05c6 equals the verifier's own build 24df05c6
+PASS Panel Cure Normalize 1: node --check
+PASS Panel Cure Normalize 2: draft jsCode md5 bf1ec1b0 equals the verifier's own build bf1ec1b0
+PASS Panel Cure Normalize 2: node --check
+PASS Panel Cure Normalize 3: draft jsCode md5 586ad973 equals the verifier's own build 586ad973
+PASS Panel Cure Normalize 3: node --check
+PASS Panel Payloads: draft jsCode md5 6f0437ef equals the verifier's own build 6f0437ef
+PASS Panel Payloads: node --check
+
+== Build Independent Verdict  before md5 7fe63a4fe00bec0bc5a1e03c1b1c8b83 (34967 chars)  after md5 183305aca25ce6d371dcb999e0e0244c (32592 chars)
+PASS Build Independent Verdict: "GUARD-INADMISSIBLE" occurs 0 times after
+PASS Build Independent Verdict: "who-belongs" occurs 0 times after
+PASS Build Independent Verdict: "Joshua 5:5" occurs 0 times after
+PASS Build Independent Verdict: "SEED-NOT-BLOOD" occurs 0 times after
+PASS Build Independent Verdict: TERMS sentence gone
+PASS Build Independent Verdict: KEYSTONE new text once, old text gone
+changed segments: 3
+  delete before[12086:14299] (2213 chars, md5 9b794d9b) -> after[12086:12086] (0 chars)
+    OLD: '"GUARD-INADMISSIBLE: the text\'s lineage category is SEED, counted by promise not flesh (Rom 9:8). If either side rests an identity or belonging claim on a blood' ... ', Isaiah 56:6), held at [L3] with the census disclaimed, is graded by the ordinary footing rule, on either side."+NL+NL+'
+    NEW: ''
+  delete before[18765:18862] (97 chars, md5 ffe595b7) -> after[16552:16552] (0 chars)
+    OLD: 'A defender link that the GUARD-INADMISSIBLE block orders graded unexhibited counts as WITHDRAWN. '
+    NEW: ''
+  delete before[20894:20959] (65 chars, md5 81b91475) -> after[18584:18584] (0 chars)
+    OLD: 'ed, or if the GUARD-INADMISSIBLE block orders it graded unexhibit'
+    NEW: ''
+  block segment holds the block start at offset 1 of the removed text; removed text md5 9b794d9bd52a833c6efb0ff61a26ee3a
+PASS Build Independent Verdict: node --check
+remaining hits (guard, census, seed, cliff), with sentence:
+  @11025 Guard:  [L4]=Inference -- flag explicitly.'+NL+'Evaluate ONLY what was argued in this transcript.'+NL+$('Init with Guards').first().json.posline+NL+"THE FRAMEWORK IS NOT A COMBATANT.
+  @26904 Guard:  Both sides alike."+NL+NL+'CITATION CHECK, PER SEAT: held-record labels served to the DEFENDER this run: '+(($('Init with Guards').first().json.d_served.join(', '))||'(none)')+'.
+  @27013 Guard:  Served to the CHALLENGER this run: '+(($('Init with Guards').first().json.c_served.join(', '))||'(none)')+'.
+  @27137 guard:  Named inside the text served to the DEFENDER (a served conclusion, guard or tension names them; their own text was not served): '+((($('Init with Guards').first().json.d_named||[]).join(', '))||'(none)')+'.
+  @27216 Guard:  Named inside the text served to the DEFENDER (a served conclusion, guard or tension names them; their own text was not served): '+((($('Init with Guards').first().json.d_named||[]).join(', '))||'(none)')+'.
+  @27343 Guard:  Named inside the text served to the CHALLENGER: '+((($('Init with Guards').first().json.c_named||[]).join(', '))||'(none)')+'.
+
+== Panel Build  before md5 7d01261112b692c0501e43003c941e7e (42662 chars)  after md5 a55dcf73af6bb161b3b190d3b3a75a0c (40287 chars)
+PASS Panel Build: "GUARD-INADMISSIBLE" occurs 0 times after
+PASS Panel Build: "who-belongs" occurs 0 times after
+PASS Panel Build: "Joshua 5:5" occurs 0 times after
+PASS Panel Build: "SEED-NOT-BLOOD" occurs 0 times after
+PASS Panel Build: TERMS sentence gone
+PASS Panel Build: KEYSTONE new text once, old text gone
+changed segments: 3
+  delete before[15433:17646] (2213 chars, md5 79469e03) -> after[15433:15433] (0 chars)
+    OLD: '+NL+NL+"GUARD-INADMISSIBLE: the text\'s lineage category is SEED, counted by promise not flesh (Rom 9:8). If either side rests an identity or belonging claim on ' ... 'tranger, Isaiah 56:6), held at [L3] with the census disclaimed, is graded by the ordinary footing rule, on either side."'
+    NEW: ''
+  delete before[21813:21910] (97 chars, md5 ffe595b7) -> after[19600:19600] (0 chars)
+    OLD: 'A defender link that the GUARD-INADMISSIBLE block orders graded unexhibited counts as WITHDRAWN. '
+    NEW: ''
+  delete before[23942:24007] (65 chars, md5 81b91475) -> after[21632:21632] (0 chars)
+    OLD: 'ed, or if the GUARD-INADMISSIBLE block orders it graded unexhibit'
+    NEW: ''
+  block segment holds the block start at offset 8 of the removed text; removed text md5 79469e03e9fbe0f3a54f4312af47af8b
+PASS Panel Build: node --check
+remaining hits (guard, census, seed, cliff), with sentence:
+  @567 Guard: first().json;let RGL=null;try{if($('Regrade Load').isExecuted)RGL=$('Regrade Load').first().json;}catch(e){RGL=null;} // regrade: everything below from the saved row const IG=RGL?RGL.ig:$('Init with Guards').first().json;const F=RGL?RGL.f:$('Final Output').fir
+  @30116 guard:  Named inside the text served to the DEFENDER (a served conclusion, guard or tension names them; their own text was not served): '+(((IG.d_named||[]).join(', '))||'(none)')+'.
+
+VERIFY PASS
