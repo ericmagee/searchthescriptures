@@ -1,14 +1,17 @@
-# BB-6904 revision 8, proposal item 5: the judge's written statement (7191; order 6904 (c) and (e)).
-(a) and (b) are code, in patch_rev8.py (ITEM 5 block): the cure form asks every flagged judge for one line per item,
-    STATEMENT: <the flagged item, as labelled> | <in your own words: why the line stands as you graded it, or what you corrected and why>
-    the reply parser reads it; each verdict carries it (judge_statement); every report line prints "; JUDGE STATEMENT: <text>" or
-    "; JUDGE STATEMENT: none written"; the transcript reads the field and shows it in its own column, "Judge's own statement".
-    The ask's prompt text (the STATEMENT line and its sentence) is UNEXERCISED until the step 9 live run.
-(c) Whether a statement can keep a line standing: the operator's choice (6904 (d)). Two options, each with its cost:
-  1. A statement is recorded beside every item and never cures by itself; a line stands only through the checked forms
-     (RESTATED, PRESSED, SHORT, CORRECTED, WITHDRAWN). This is what the code above does.
-     Cost: a judge whose line is right but who cannot meet the form is not counted, and an alternate is seated in its place.
-  2. A statement alone keeps the line standing, recorded for review (6904 (c) as first written: "cure ... or state why").
-     Cost: any judge that writes a sentence keeps a broken line; the code cannot test the reason. On 27433 every deciding BROKEN line
-     would have stood if its judge wrote one sentence, so the verdict the operator ruled wrong would stand.
-  Recommendation: 1. It keeps the judge's words on the record (what (e) asks) without letting words replace the rule.
+# BB-6904 revision 8, proposal item 5: the judge's written statement (7191; 7195 D3; 7196).
+THE ORDER, quoted whole (6904 (c), the operator's "yes to all", 15:4x CDT 20 Oct):
+  "(c) One extra call per violating seat: its own flagged line(s), the rule, the instruction to cure by exhibiting two different kinds of
+  layer or to state why; the statement is run through K-B again: cured if it passes, else the violation stands and that ground does not count."
+WHAT THE CODE DOES (patch_rev8.py, ITEM 5 block and the two 6904 (c) anchors), which is the order as written:
+  (a) the cure form asks every flagged judge for one STATEMENT line per item, cured or not, and allows a statement in place of a cure line;
+  (b) the statement is run through the item's own check: a layer item (K-B) passes with two different kinds of layer on the statement;
+      a pressing item (K-G1, K-G4) passes when the statement names the round that pressed the witness and quotes words found in it, and,
+      where the link round names the verse, also quotes words found in the link round's answer (K-G5); K-G1 still needs its corrected count;
+      a standing item (K-G3) is cured only by CORRECTED STANDING or WITHDRAWN; its statement is recorded;
+  (c) cured if it passes; else the violation stands;
+  (d) every report line carries "; JUDGE STATEMENT: <text>" or "none written", and the transcript shows it in its own column.
+NOT IN THIS ITEM, for the advisor: the order's last words, "that ground does not count", and 6904 item 1, "An uncured violation removes that
+  ground: the link is graded under the remaining rules", with (d) "which code re-grades a link whose ground is removed. Measure and propose;
+  do not choose." The live flow instead removes the whole panel judge with any uncured violation and seats an alternate (BB-7152). The
+  re-grade of a removed ground was never proposed. That is verdict logic and the operator's choice.
+UNEXERCISED until the step 9 live run: what judges write to the new ask.

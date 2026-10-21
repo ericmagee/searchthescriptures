@@ -61,10 +61,12 @@ A.append(("  if(!reply||!reply.ok)return res('UNCURED','cure call failed: '+(rep
  "  // after, inside its LINK block). References are read by cureRefs (lists, ranges, short book names, inherited book).\n"
  "  const lrK=x.side==='DEFENDER'?'CR3':'DR3';const LR=typeof R[lrK]==='string'?R[lrK]:'';\n"
  "  const named=(x.rule==='K-G1'||x.rule==='K-G4')&&LR?cureNamed(x.line,LR):[];const namedTxt=named.map(n=>n.ref).join(', ');\n"
- "  const shortOk=()=>!named.length||o.short.some(s=>U(s.link)===U(x.link)&&s.round===lrK&&named.some(n=>n.blocks.some(b=>cureFound(s.q,b))));\n"
+ "  const shortOk=()=>!named.length||o.short.some(s=>U(s.link)===U(x.link)&&s.round===lrK&&named.some(n=>n.blocks.some(b=>cureFound(s.q,b))))||stmtQ(stmtOf(x)).some(q=>named.some(n=>n.blocks.some(b=>cureFound(q,b))));\n"
  "  if(x.rule==='K-G4'){if(wd.has(U(x.link)))return res('CURED','withdrawn',o.withdrawn.filter(w=>U(w.link)===U(x.link)).map(w=>w.line));\n"
  "   const ps=o.pressed.filter(p=>U(p.link)===U(x.link));const sl=o.short.filter(s=>U(s.link)===U(x.link)).map(s=>s.line);const lines=ps.map(p=>p.line).concat(sl);\n"
- "   if(!ps.length)return res('UNCURED','no PRESSED line and no WITHDRAWN line for '+x.link,lines);\n"
+ "   if(!ps.length){const sp=stmtPress(x);if(!sp)return res('UNCURED','no PRESSED line, no WITHDRAWN line, and no statement that names a pressing round and quotes it, for '+x.link,lines);\n"
+ "    if(!shortOk())return res('UNCURED','statement quotes '+sp.round+'; the link round '+lrK+' names '+namedTxt+' and neither a SHORT line nor the statement quotes its answer',lines.concat([sp.line]));\n"
+ "    return res('CURED','statement passes the check: quotation found in '+sp.round+(named.length?'; answer quoted from '+lrK:''),lines.concat([sp.line]));}\n"
  "   const ok=ps.filter(p=>CURE_PRESS[x.side].includes(p.round));if(!ok.length)return res('UNCURED','PRESSED round '+ps.map(p=>'['+p.round+']').join(', ')+' does not press the '+x.side.toLowerCase(),lines);\n"
  "   const hit=ok.find(p=>typeof R[p.round]==='string'&&cureFound(p.q,R[p.round]));if(!hit)return res('UNCURED',ok.every(p=>typeof R[p.round]!=='string')?'the named round text could not be read':'no quotation found in the named round',lines);\n"
  "   if(!shortOk())return res('UNCURED','the link round '+lrK+' names '+namedTxt+'; no SHORT line quoting its answer',lines);\n"
@@ -80,11 +82,16 @@ A.append(("if(RF)throw new Error(",
  "const RFT=(e.text&&/^\\s*The request was rejected because it was considered high risk\\.?\\s*$/i.test(e.text))?'reply text is the provider rejection \"'+String(e.text).trim().slice(0,80)+'\"':null; // BB-6904 rev 8: 27177\n"
  "if(RF||RFT)throw new Error("))
 A.append(("refused by the provider: '+RF+';", "refused by the provider: '+(RF||RFT)+';"))
-# ITEM 5 (7191): the judge's own written statement for every flagged item, recorded beside the code's WHY (option 1 of 5(c): it never cures by itself).
+# ITEM 5 (7191, 7195 D3, 7196): the judge's own written statement for every flagged item, recorded beside the code's WHY; per 6904 (c) as written,
+# a statement is run through the item's own check (K-B: two layer kinds; K-G1/K-G4: a pressing round named and quoted; K-G5: the answer quoted):
+# cured if it passes, else the violation stands.
 # (a) the cure form asks for it; (b) the reply parser reads it; (c) each verdict carries it; (d) the report line prints it; (e) the transcript shows it.
 A.append(("+\"Only these lines are read. A link not on a WITHDRAWN line is not withdrawn.",
- "+\"STATEMENT: <the flagged item, as labelled above> | <in your own words: why the line stands as you graded it, or what you corrected and why>\\n\"\n"
- " +\"Write one STATEMENT line for every flagged item, cured or not. It is recorded beside the item in the report and does not by itself cure it. \"\n"
+ "+\"STATEMENT: <the flagged item, as labelled above> | <in your own words, why the line stands as you graded it, or what you corrected and why>\\n\"\n"
+ " +\"Write one STATEMENT line for every flagged item, cured or not; it is recorded beside the item. Instead of a cure line you may state why the line stands: \"\n"
+ " +\"the statement is run through the same check as the cure. For a layer item it must exhibit two different kinds of layer; for a K-G1 or K-G4 \"\n"
+ " +\"item it must name the round that pressed the witness and quote that round's words; where the link round names the verse, it must also quote \"\n"
+ " +\"the link round's own answer. Cured if it passes; else the violation stands. \"\n"
  " +\"Only these lines are read. A link not on a WITHDRAWN line is not withdrawn."))
 A.append(("const CURE_KEY=/^(RESTATED|WITHDRAWN|CORRECTED COUNT|CORRECTED STANDING|PRESSED|SHORT)[ \\t]*:[ \\t]*(.*)$/;",
  "const CURE_KEY=/^(RESTATED|WITHDRAWN|CORRECTED COUNT|CORRECTED STANDING|PRESSED|SHORT|STATEMENT)[ \\t]*:[ \\t]*(.*)$/;"))
@@ -96,7 +103,10 @@ A.append(("  else if(k[1]==='SHORT'&&",
 A.append(("const wd=new Set(o.withdrawn.map(w=>U(w.link)));",
  "const wd=new Set(o.withdrawn.map(w=>U(w.link)));\n"
  " // ITEM 5: the judge's own STATEMENT for this item: by its link, or for a standing item by its side; the first one written is kept.\n"
- " const stmtOf=(x)=>{const st=o.statement.find(s=>x.link?U(s.label).includes(U(x.link)):(U(s.label).includes(x.side)&&U(s.label).includes(U(x.rule))));return st?st.text:null;};"))
+ " const stmtOf=(x)=>{const st=o.statement.find(s=>x.link?U(s.label).includes(U(x.link)):(U(s.label).includes(x.side)&&U(s.label).includes(U(x.rule))));return st?st.text:null;};\n"
+ " // 6904 (c): a statement is run through the item's own check. Quotations in it (straight or curly marks, 3+ words) and round names ([DR1] etc.).\n"
+ " const stmtQ=(t)=>[...String(t||'').matchAll(/[\"“]([^\"”]{8,})[\"”]/g)].map(m=>m[1]);\n"
+ " const stmtPress=(x)=>{const t=stmtOf(x);if(!t)return null;for(const rk of CURE_PRESS[x.side]){if(!new RegExp('\\\\['+rk+'\\\\]').test(t)||typeof R[rk]!=='string')continue;const q=stmtQ(t).find(q=>cureFound(q,R[rk]));if(q)return {round:rk,q,line:'STATEMENT: '+t};}return null;};"))
 A.append(("return {...x,status,why:", "return {...x,judge_statement:stmtOf(x),status,why:"))
 A.append(("replace(/;(\\s*(?:SEAT|ITEM|RULE|RESULT|KINDS|WHY|LINE|STATEMENT):)/g,',$1');",
  "replace(/;(\\s*(?:SEAT|ITEM|RULE|RESULT|KINDS|WHY|LINE|STATEMENT|JUDGE STATEMENT):)/g,',$1');"))
@@ -111,6 +121,14 @@ A.append(("t += '| Judge | Item | Rule | Result | Original line | Cure statement
  "t += '| Judge | Item | Rule | Result | Original line | Cure statement, or why not cured | Judge\\'s own statement |\\n|---|---|---|---|---|---|---|\\n';"))
 A.append(("' | ' + drvCell(last) + ' |\\n'; });",
  "' | ' + drvCell(last) + ' | ' + drvCell(x['JUDGE STATEMENT'] || 'not recorded') + ' |\\n'; });"))
+# 6904 (c) for K-B and K-G1 (7195 D3, 7196): the statement is run through the same check; cured if it passes.
+A.append(("if(!rs.length)return res('UNCURED','no RESTATED line for '+x.link,null);",
+ "if(!rs.length){const st=stmtOf(x);if(!st)return res('UNCURED','no RESTATED line and no statement for '+x.link,null);const sk=drvKinds(st);\n"
+ "    return res(sk.length>=2?'CURED':'UNCURED',sk.length>=2?'statement passes K-B':'statement exhibits '+sk.length+' layer kind'+(sk.length===1?'':'s')+'; the violation stands',['STATEMENT: '+st],sk);}"))
+A.append(("if(!ps.length)return res('UNCURED','no PRESSED line for '+x.link,lines);",
+ "if(!ps.length){const sp=stmtPress(x);if(!sp)return res('UNCURED','no PRESSED line and no statement that names a pressing round and quotes it, for '+x.link,lines);\n"
+ "    if(!shortOk())return res('UNCURED','the link round '+lrK+' names '+namedTxt+'; neither a SHORT line nor the statement quotes its answer',lines.concat([sp.line]));\n"
+ "    return res('CURED','corrected: '+x.side+' COUNT '+ns[0]+'; statement passes the check: quotation found in '+sp.round,lines.concat([sp.line]));}"))
 src=open(sys.argv[1]).read();out=src;done=[];
 for old,new in A:
     n=out.count(old)

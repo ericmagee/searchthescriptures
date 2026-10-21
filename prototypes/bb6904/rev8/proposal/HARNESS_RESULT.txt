@@ -30,7 +30,7 @@ PASS PRESSED false quote: UNCURED -- no quotation found in the named round
 PASS PRESSED wrong round: UNCURED -- PRESSED round [CR1] does not press the defender
 PASS WITHDRAWN: CURED -- withdrawn
 PASS SHORT with a false quote: UNCURED -- the link round CR3 names luk 3:23; no SHORT line quoting its answer
-PASS prose only: UNCURED -- no PRESSED line and no WITHDRAWN line for D4 vs C2
+PASS prose only: UNCURED -- no PRESSED line, no WITHDRAWN line, and no statement that names a pressing round and quotes it, for D4 vs C2
 PASS K-G4 with a verse the link round does not name, PRESSED true: CURED
 PASS refs of "Matthew 1:16, 1:18": ["mat 1:16","mat 1:18"]
 PASS refs of "Matthew 1:16,18,20,25": ["mat 1:16","mat 1:18","mat 1:20","mat 1:25"]
@@ -73,7 +73,13 @@ HARNESS PASS
 4. ITEM 5, the judge statement
 PASS statement attached to a cured item
 PASS no statement written: null
-PASS a statement alone does not cure (option 1)
+PASS a statement with no round named and no quotation does not cure
+PASS statement naming DR1, quoting it and quoting the answer cures
+PASS statement quoting DR1 but not the answer (Luke 3:23 named in CR3) does not cure
+PASS statement naming a round that does not press the defender does not cure
+PASS K-B statement exhibiting two layer kinds cures
+PASS K-B statement with one layer kind does not cure
+PASS K-G1: count corrected and a passing statement cures
 PASS K-G3 statement matched by side
 PASS report line carries JUDGE STATEMENT
 PASS report line says none written
