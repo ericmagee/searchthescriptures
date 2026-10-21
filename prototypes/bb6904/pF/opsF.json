@@ -1,0 +1,34 @@
+{
+ "note": "BB-6904 portion F (7069 option 1): Alternate Needed? reads the alt_needed field Panel Cure Check sets; every other parameter as ops7 at 404300a.",
+ "nodes_add": [],
+ "connections_remove": [],
+ "connections_add": [],
+ "edits": [
+  {
+   "node": "Alternate Needed?",
+   "parameters": {
+    "conditions": {
+     "combinator": "and",
+     "conditions": [
+      {
+       "id": "alternate-needed",
+       "leftValue": "={{ $json.alt_needed === true }}",
+       "operator": {
+        "operation": "true",
+        "singleValue": true,
+        "type": "boolean"
+       },
+       "rightValue": ""
+      }
+     ],
+     "options": {
+      "caseSensitive": true,
+      "leftValue": "",
+      "typeValidation": "loose"
+     }
+    },
+    "options": {}
+   }
+  }
+ ]
+}
