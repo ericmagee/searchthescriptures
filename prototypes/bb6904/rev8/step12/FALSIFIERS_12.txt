@@ -1,0 +1,22 @@
+BB-6904 revision 12, step 12 (Worker_E): falsifiers declared BEFORE any file change.
+Base: base/ = fold 0e03852 new/ (14 cure nodes, = live 5fd3b03c) + live 5fd3b03c Build Independent Verdict, Panel Build. BASE_MD5S.txt.
+
+JUDGE NODES (DoD 5), both nodes, same words, patch by anchor (each anchor found exactly once per node, else abort):
+ J1 COUNTING RULE opening becomes exactly (7377 1a): "grade and COUNT only from the two LINK ROUND blocks above, [CR3] (defender) and [DR3] (challenger); an ANSWER to a pressed witness is read from any later round of the side that holds the link, its round 2 or its link round."
+ J2 UNANSWERED WITNESS answer clause: "is ANSWERED only when this link round quotes it" absent; present once: "is ANSWERED when any later round of the side that holds the link (for the defender: [CR2] or [CR3]; for the challenger: [DR2] or [DR3]) quotes it". "in a round before this link round" becomes "in an earlier round".
+ J3 COLLISION rule: "the broken side's link round left any of those witnesses UNANSWERED" becomes "the broken side's later rounds left any of those witnesses UNANSWERED"; "only when the link round answered every such witness" becomes "only when the side's later rounds answered every such witness".
+ J4 "a witness the link round leaves unanswered is graded under UNANSWERED WITNESS" becomes "a witness the side's later rounds leave unanswered is graded under UNANSWERED WITNESS".
+ J5 nothing else in either node changes (diff against base shows only J1-J4 hunks); both parse (new Function).
+ J6 one-anchor misedit: a node with J1 only (J2 left old) must be caught by the J-check as WRONG (the old "only when this link round" present).
+
+CURE NODES (DoD 6, 7), all 14, the same edit:
+ C1 SHORT accepts [CR2], [CR3] (defender) and [DR2], [DR3] (challenger); the cure prompt clause reads "whose cited verse any later round of the side that holds the link names ([CR2] or [CR3] against the defender, [DR2] or [DR3] against the challenger)".
+ C2 the answering rounds tested for a line are the side's round 2 and link round that come after the round the PRESSED line (or statement) names; order CR1 DR1 CR2 DR2 CR3 DR3. A defender witness pressed in [DR2] is tested against [CR3] only.
+ C3 (L5, 27613 stored text, rounds from debate 8fec5e2e, cure lines from judgments 784/785 audit STATEMENT lines): UNCURED, reason naming [CR2], on Gemini D3 vs C4, Grok D5 vs C1, Grok D6 vs C1; CURED on Gemini D5 vs C1 (SHORT quotes CR3). On BASE the same four are CURED (the flag is new).
+ C4 negatives: SHORT naming [CR2] whose quote is not in CR2: UNCURED; SHORT [CR2] for a witness pressed in [DR2]: not accepted (CR2 precedes DR2); SHORT with one word changed: UNCURED; SHORT quoting CR2's real answer: CURED.
+ C5 the fold line (cureQ, BB-7357) unchanged in all 14; earlier harnesses (harness_r, harness_fold F1-F3, harness_w) pass, any changed expectation named in the run file with its reason.
+ C6 one-node revert: one cure node left at base fails C3 for its own path only.
+ C7 all 14 parse; the 14 changed regions are identical text.
+
+DRAFT (DoD 8): undo row first (BB-7378: restore 5fd3b03c-4e9d-4e16-8eeb-a89f199f75cc); first node written fetched back and compared before the rest; after all 16, fetch-back md5 per node equals new/; every other node equals 5fd3b03c.
+NOT COVERED: the system ledger "CITED BEFORE THIS LINK ROUND" (design question to the advisor, BB-7378); behaviour of live judges.
