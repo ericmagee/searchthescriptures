@@ -1,0 +1,34 @@
+Fetch-back of draft 804b870a (active 95f04001), read by fb.py and wd.py
+versionId 804b870a-0cc1-4990-9864-8c2188533de8 active 95f04001-de18-4222-aba6-657c15d18297 nodes 231
+WRITTEN OK Alternate Build 1fc86a78
+WRITTEN OK Alternate Cure Build a2325e39
+WRITTEN OK Alternate Cure Normalize 46911a61
+WRITTEN OK Alternate Merge 761947c0
+WRITTEN OK Alternate Payloads 1331c305
+WRITTEN OK Build Independent Verdict d21f38f7
+WRITTEN OK C1 Extract 13ac0141
+WRITTEN OK C2 Extract 13a7aa8c
+WRITTEN OK C3 Extract f3103d50
+WRITTEN OK Cure Build f71ac0e2
+WRITTEN OK Cure Check 21bcbbee
+WRITTEN OK Cure Normalize e8f8aeab
+WRITTEN OK D1 Extract e8553945
+WRITTEN OK D2 Extract 335e1a12
+WRITTEN OK D3 Extract 0feb635c
+WRITTEN OK Extract Independent Verdict 03d915ab
+WRITTEN OK Format Markdown f5b0e08c
+WRITTEN OK Panel Build e18f5b75
+WRITTEN OK Panel Cure Build 1 60c2dde0
+WRITTEN OK Panel Cure Build 2 e4b8d0cc
+WRITTEN OK Panel Cure Build 3 5f45753a
+WRITTEN OK Panel Cure Check 72238dac
+WRITTEN OK Panel Cure Normalize 1 24df05c6
+WRITTEN OK Panel Cure Normalize 2 bf1ec1b0
+WRITTEN OK Panel Cure Normalize 3 586ad973
+WRITTEN OK Panel Payloads 6f0437ef
+WRITTEN OK Plain Rule Lines 24d67b50
+written 27 pending 0 mismatch 0
+node sets equal True 231 231
+connections equal True
+nodes differing outside allowed jsCode: []
+changed jsCode count 27
