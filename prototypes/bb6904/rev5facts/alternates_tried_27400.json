@@ -1,0 +1,59 @@
+{
+ "exec_id": "27400",
+ "qualify": "minimax/minimax-m3",
+ "alternates_tried": [
+  {
+   "removed_seat": "deepseek",
+   "alternate": "alt_minimax3_q1",
+   "api_model": "minimax/minimax-m3",
+   "result": "NOT SEATED",
+   "why": "seat \"alt_minimax3_q1\" returned content null (finish_reason length). NO ROW IS WRITTEN. run_token=ODV1-27088-cg67a8be"
+  },
+  {
+   "removed_seat": "gemini",
+   "alternate": "alt_minimax3_q2",
+   "api_model": "minimax/minimax-m3",
+   "result": "SEATED"
+  },
+  {
+   "removed_seat": "grok",
+   "alternate": "alt_minimax3_q3",
+   "api_model": "minimax/minimax-m3",
+   "result": "SEATED"
+  }
+ ],
+ "panel_effective": [
+  "alt_minimax3_q2",
+  "alt_minimax3_q3",
+  "deepseek"
+ ],
+ "calls": [
+  {
+   "seat": "alt_minimax3_q1",
+   "removed_seat": "deepseek",
+   "api_model": "minimax/minimax-m3",
+   "max_tokens": 64000,
+   "finish_reason": "length",
+   "completion_tokens": 64000,
+   "reasoning_tokens": 64000
+  },
+  {
+   "seat": "alt_minimax3_q2",
+   "removed_seat": "gemini",
+   "api_model": "minimax/minimax-m3",
+   "max_tokens": 64000,
+   "finish_reason": "stop",
+   "completion_tokens": 14283,
+   "reasoning_tokens": 11090
+  },
+  {
+   "seat": "alt_minimax3_q3",
+   "removed_seat": "grok",
+   "api_model": "minimax/minimax-m3",
+   "max_tokens": 64000,
+   "finish_reason": "stop",
+   "completion_tokens": 39530,
+   "reasoning_tokens": 37637
+  }
+ ]
+}

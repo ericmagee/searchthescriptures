@@ -1,0 +1,61 @@
+{
+ "exec_id": "27383",
+ "qualify": "minimax/minimax-m3",
+ "alternates_tried": [
+  {
+   "removed_seat": "deepseek",
+   "alternate": "alt_minimax3_q1",
+   "api_model": "minimax/minimax-m3",
+   "result": "NOT SEATED",
+   "why": "seat \"alt_minimax3_q1\" returned no JSON object. First 200 chars: {\"verdict_tag\":\"HELD\",\"defense_standing\":\"SELF-SUPPORTED\",\"challenge_standing\":\"PROP-DEPENDENT\",\"conceded_links\":0,\"challenger_conceded_links\":1,\"reasoning\":\"[L1] verdict word first: HELD. [L2] All si run_token=ODV1-27088-cg67a8be"
+  },
+  {
+   "removed_seat": "gemini",
+   "alternate": "alt_minimax3_q2",
+   "api_model": "minimax/minimax-m3",
+   "result": "NOT SEATED",
+   "why": "seat \"alt_minimax3_q2\" returned an envelope this parser does not recognise. Top-level keys: [id,object,created,model,provider,system_fingerprint,service_tier,choices,usage]. NO ROW IS WRITTEN. run_token=ODV1-27088-cg67a8be"
+  },
+  {
+   "removed_seat": "grok",
+   "alternate": "alt_minimax3_q3",
+   "api_model": "minimax/minimax-m3",
+   "result": "NOT SEATED",
+   "why": "seat \"alt_minimax3_q3\" returned an envelope this parser does not recognise. Top-level keys: [id,object,created,model,provider,system_fingerprint,service_tier,choices,usage]. NO ROW IS WRITTEN. run_token=ODV1-27088-cg67a8be"
+  }
+ ],
+ "panel_effective": [
+  "deepseek",
+  "gemini",
+  "grok"
+ ],
+ "calls": [
+  {
+   "seat": "alt_minimax3_q1",
+   "removed_seat": "deepseek",
+   "api_model": "minimax/minimax-m3",
+   "max_tokens": 32000,
+   "finish_reason": "length",
+   "completion_tokens": 32000,
+   "reasoning_tokens": 29171
+  },
+  {
+   "seat": "alt_minimax3_q2",
+   "removed_seat": "gemini",
+   "api_model": "minimax/minimax-m3",
+   "max_tokens": 32000,
+   "finish_reason": "length",
+   "completion_tokens": 32000,
+   "reasoning_tokens": 27413
+  },
+  {
+   "seat": "alt_minimax3_q3",
+   "removed_seat": "grok",
+   "api_model": "minimax/minimax-m3",
+   "max_tokens": 32000,
+   "finish_reason": "length",
+   "completion_tokens": 32000,
+   "reasoning_tokens": 29310
+  }
+ ]
+}
