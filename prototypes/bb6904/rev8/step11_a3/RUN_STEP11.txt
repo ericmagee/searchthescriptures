@@ -1,0 +1,24 @@
+== base equals ee8f4b9 new/ (14), NEW_MD5S match, one line per node
+== L1 wrongif.cjs, NEW matcher
+L1 FIRED: Single judge: DeepSeek D4 vs C2 quotation found in DR2 of Text 1,Text 2; Single judge: DeepSeek D5 vs C1 quotation found in DR2 of Text 1,Text 2; Single judge: DeepSeek D6 vs C2 quotation found in DR1 of Text 1,Text 2; Panel judge (removed): DeepSeek D3 vs C4 quotation found in DR1 of Text 1,Text 2; Panel judge (removed): DeepSeek D4 vs C2 quotation found in DR2 of Text 1,Text 2; Panel judge (removed): DeepSeek D5 vs C1 quotation found in DR2 of Text 1,Text 2
+L2 silent
+== L1, BASE matcher
+L1 silent
+L2 silent
+== negatives
+ok   | good: D6 quote as written | new true | base false
+ok   | label dropped mid-quote (L2) removed | new false | base false
+ok   | label changed (L2)->(L3) | new false | base false
+ok   | one word changed causal->casual | new false | base false
+ok   | word added | new false | base false
+ok   | quote mark inserted where the round has none | new true | base false
+== harness_r
+new nodes 14 | (1) 14/14 | (2) 14/14 | (3) 14/14 | (4) 27/27 | (5) 14/14 | (6) 14/14 | (7) 14/14 | (10) 14/14 | (x) 14/14 | (T) 14/14
+fail 0
+== F1-F3
+/tmp/claude-0/-home-user-searchthescriptures/b26695b3-56b9-5f42-92b7-63fcf7fb72c9/scratchpad/step11/prototypes/bb6904/rev8/fold/new nodes 14 | F1 deepseek quote found 14 | F2 altered quote refused and grok kept 14 | F3 cureAsk right 14
+fail 0
+== L4
+rounds CR1,DR1,CR2,DR2 | L4 limb A FIRED: Single judge: DeepSeek D4 vs C2; Single judge: DeepSeek D5 vs C1; Single judge: DeepSeek D6 vs C2; Panel judge (removed): DeepSeek D3 vs C4; Panel judge (removed): DeepSeek D4 vs C2; Panel judge (removed): DeepSeek D5 vs C1 | limb B silent
+rounds CR1,DR1,CR2,DR2 | L4 limb A silent | limb B silent
+rounds CR1,DR1,CR2,DR2 | L4 limb A FIRED: Single judge: DeepSeek D4 vs C2; Single judge: DeepSeek D5 vs C1; Single judge: DeepSeek D6 vs C2; Panel judge (removed): DeepSeek D3 vs C4; Panel judge (removed): DeepSeek D4 vs C2; Panel judge (removed): DeepSeek D5 vs C1 | limb B FIRED: Panel judge (removed): DeepSeek D6 vs C6
