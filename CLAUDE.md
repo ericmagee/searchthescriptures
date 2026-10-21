@@ -32,8 +32,9 @@ This applies to every board reply, including short ones and acknowledgements.
 
 ## Multi-worker sessions
 
-Read `docs/tandem_manual.md` before working alongside another worker. It holds
-the operating rules and the incidents that produced them.
+Read the tandem manual from the database (table tandem_manual, latest version,
+read whole) before working alongside another worker. `docs/tandem_manual.md` is
+a pointer only; the repository holds no rules.
 
 Two that catch people most often:
 
