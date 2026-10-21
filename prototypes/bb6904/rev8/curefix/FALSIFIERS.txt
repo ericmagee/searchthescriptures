@@ -1,0 +1,11 @@
+Cure-code fix (BB-7297 item 2), builder Worker_A3, declared before building.
+Base: the 14 cure nodes of active 14054eb4 (my post-publish fetch, 12:36 CDT), equal byte for byte to Worker_E's fix27528 patched files.
+Edits: (1) cureQ strips * _ ` before comparing; (2) cureAsk gives K-G4 its own collision line, as K-G1 has.
+F1 reproduce: before the fix, deepseek's printed D6vC2 PRESSED quotation is NOT found in stored engine_r2; after, it IS found.
+F2 negative: a quotation with words not in the round (single judge D2vC4, "who is called Christ") is still NOT found after the fix.
+F3 cureAsk: a K-G4 item's FLAGGED ITEMS line carries its own collision line; a K-G3 item still carries the standing sentence; a K-G1 item unchanged; the K-B part unchanged.
+F4 scope: in each of the 14 nodes each anchor occurs exactly once; base-to-new diff is exactly the two edits, nothing else.
+F5 single-site misedit: a probe with only edit 1 still fails F3; a probe with only edit 2 still fails F1.
+F6 syntax: node --check passes on all 14 new files (wrapped as function bodies).
+F7 harness: the cureAsk text is run from the node's own source, not a copy.
+Not checked: behaviour inside n8n; the misplaced statements of 7294 (c); md5 against request bodies (7294 (f)).

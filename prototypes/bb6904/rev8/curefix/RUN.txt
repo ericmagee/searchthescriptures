@@ -1,0 +1,6 @@
+base nodes 14 | F1 deepseek quote found 0 | F2 altered quote refused and grok kept 14 | F3 cureAsk right 0
+only1 nodes 14 | F1 deepseek quote found 14 | F2 altered quote refused and grok kept 14 | F3 cureAsk right 0
+only2 nodes 14 | F1 deepseek quote found 0 | F2 altered quote refused and grok kept 14 | F3 cureAsk right 14
+new nodes 14 | F1 deepseek quote found 14 | F2 altered quote refused and grok kept 14 | F3 cureAsk right 14
+fail 0
+parsed 28 errors 0
