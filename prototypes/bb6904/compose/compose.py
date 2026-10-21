@@ -8,6 +8,7 @@
 #   - p7's code in ops7.json (a new node or an edit) differs from the same node's file in p7/out;
 #   - any $('Name') in any Code node, or any connection, names a node that does not exist;
 #   - the live file is not version db281705.
+#   - a node this draft writes carries a backslash-u escape outside its DRV_SRC line (step 3b, delivered bytes).
 # Usage: python3 compose.py <live workflow details json (db281705)> <repo root> <out dir>
 import json,sys,os,hashlib,subprocess,copy,re
 fail=[]
@@ -123,6 +124,24 @@ for name,(tag,path) in SRC:
  nodes[name]['parameters']['jsCode']=code;claims.setdefault(name,[]).append('code '+tag+':'+path)
 names=[k for k,_ in SRC];dup=[k for k in set(names) if names.count(k)>1]
 if dup:err('nodes named twice in SRC: %s'%dup)
+# 3b. Delivered bytes (BB-7043 option 1, ruled in Worker_E's thread 2026-10-20): the n8n update tool decodes a backslash-u escape into
+# its character (BB-4530; measured again at act 3 batch 3), so a node sent with one cannot be read back byte-exact. The reviewed escapes
+# sit only on the DRV_SRC line; there they are written as the characters the tool delivers. An escape on any other line of a node this
+# draft writes fails the run. Behaviour of the changed line is checked separately (delivered_check.cjs).
+ESC=re.compile(r'(?<!\\)\\u([0-9a-fA-F]{4})')
+def deliver(name,code):
+ out=[]
+ for line in code.split('\n'):
+  if ESC.search(line):
+   if not line.startswith('const DRV_SRC='):err('%s: backslash-u escape outside the DRV_SRC line: %s'%(name,line[:60]))
+   else:line=ESC.sub(lambda m:chr(int(m.group(1),16)),line)
+  out.append(line)
+ return '\n'.join(out)
+for name,n in nodes.items():
+ if n['type']!='n8n-nodes-base.code' or not isinstance(n['parameters'].get('jsCode'),str):continue
+ if name in live and live[name]['parameters']==n['parameters']:continue
+ c0=n['parameters']['jsCode'];c1=deliver(name,c0)
+ if c1!=c0:n['parameters']['jsCode']=c1;claims.setdefault(name,[]).append('delivered bytes')
 # 4. Every code file accounted for.
 for tag in ('p2','p3','p4','p5b','p6','p7'):
  folder={'p5b':'p5b/out','p6':'p6/out','p7':'p7/out'}.get(tag,tag)

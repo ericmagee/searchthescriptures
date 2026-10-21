@@ -19,6 +19,7 @@ M=[
  ('superseded leaf loses the moved read',mut("A=dict(leaves(e4['parameters']));B=dict(leaves(o7e[n]['parameters']))","A=dict(leaves(e4['parameters']));B={k:(v.replace(SUP[1],SUP[0].replace('Panel Cure Check','Panel Payloads')) if n=='Panel Done' and isinstance(v,str) else v) for k,v in leaves(o7e[n]['parameters'])}"),src,"superseded leaf lost p4's moved read"),
  ('unpinned source',mut("E_REV='404300a'","E_REV='HEAD'"),src,'is not pinned to a commit id: HEAD'),
  ('pin older than the checkout',mut("E_REV='404300a'","E_REV='d25f799'"),src,'the checkout differs from the pinned commit d25f799'),
+ ('escape outside the DRV_SRC line',mut("if not line.startswith('const DRV_SRC='):","if not line.startswith('const DRV_SRCX='):"),src,'backslash-u escape outside the DRV_SRC line'),
  ('connection to missing node',mut("# 3. Code: one source per node.","add_edge({'from':'Dry?','out':0,'to':'No Such Node'})\n# 3. Code: one source per node."),src,'missing node No Such Node'),
 ]
 fails=0

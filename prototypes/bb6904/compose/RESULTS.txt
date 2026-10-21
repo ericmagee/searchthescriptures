@@ -88,3 +88,11 @@ PASS pin older than the checkout: refused, naming it
 PASS connection to missing node: refused, naming it
 PASS dirty checkout: refused, naming it
 failures 0
+
+STEP 3b, DELIVERED BYTES (BB-7043 option 1, ruled in Worker_E's thread after BB-7043, the word "1")
+compose.py on live db281705 (a4/post.json): OK; 231 nodes, 69 changed or new; 17 nodes carry "delivered bytes".
+composed.json before 3b md5 cad38451; after 3b md5 71bb32b6. MANIFEST after 3b: MANIFEST_3b.txt.
+delivered_check.cjs (before vs after): 17 nodes changed, each on the DRV_SRC line only, 0 inputs matched differently; failures 0.
+  falsifiers: one character changed inside the delivered range -> FAIL (1 input differs); a second line changed -> FAIL (lines 8,9).
+mutants.py: 15/15 PASS (adds: escape outside the DRV_SRC line -> refused, naming it).
+Batch 3 as stored in the draft (83c99cdc) equals the after-3b composition for Extract Independent Verdict.
