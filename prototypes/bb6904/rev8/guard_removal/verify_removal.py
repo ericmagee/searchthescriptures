@@ -8,6 +8,9 @@ def wf(p):
 B,D=wf(sys.argv[1]),wf(sys.argv[2])
 EXP=json.load(open(sys.argv[3])) if len(sys.argv)>3 else {}
 PATCHED={k for k,v in EXP.items() if v['applied']}
+# --review=Name1,Name2 (7237): nodes whose change goes beyond the patch (E, item 8). Their diff against my build (or the baseline)
+# is printed in full for reading instead of an md5 match.
+REVIEW=set(next((a.split('=',1)[1].split(',') for a in sys.argv if a.startswith('--review=')),[]))
 JUDGE=['Build Independent Verdict','Panel Build']
 md5=lambda s:hashlib.md5(s.encode('utf-8')).hexdigest()
 ok=True
@@ -21,16 +24,23 @@ say(json.dumps(B.get('settings'),sort_keys=True)==json.dumps(D.get('settings'),s
 diffn=[]
 for k in sorted(set(bn)&set(dn)):
     a,b=dict(bn[k]),dict(dn[k])
-    if k in JUDGE or k in PATCHED:
+    if k in JUDGE or k in PATCHED or k in REVIEW:
         a=json.loads(json.dumps(a));b=json.loads(json.dumps(b));a['parameters'].pop('jsCode',None);b['parameters'].pop('jsCode',None)
     if json.dumps(a,sort_keys=True)!=json.dumps(b,sort_keys=True):diffn.append(k)
-say(not diffn,'every node equal apart from the jsCode of the two judge nodes and the %d patched nodes'%len(PATCHED)+(': differs '+', '.join(diffn) if diffn else ''))
-for k in sorted(PATCHED):
+say(not diffn,'every node equal apart from the jsCode of the two judge nodes, the %d patched nodes and the review nodes %s'%(len(PATCHED),sorted(REVIEW))+(': differs '+', '.join(diffn) if diffn else ''))
+for k in sorted(PATCHED-REVIEW):
     got=hashlib.md5(dn[k]['parameters']['jsCode'].encode('utf-8')).hexdigest() if k in dn else None
     say(got==EXP[k]['after_md5'],'%s: draft jsCode md5 %s equals the verifier\'s own build %s'%(k,(got or 'MISSING')[:8],EXP[k]['after_md5'][:8]))
     if k in dn:
         with tempfile.NamedTemporaryFile('w',suffix='.js',delete=False) as f:f.write('async function __n(){'+dn[k]['parameters']['jsCode']+'\n}');fn=f.name
         r=subprocess.run(['node','--check',fn],capture_output=True,text=True);os.unlink(fn);say(r.returncode==0,'%s: node --check'%k)
+for k in sorted(REVIEW):
+    ref=EXP[k]['after'] if k in EXP and EXP[k]['applied'] else bn[k]['parameters']['jsCode'];s1=dn[k]['parameters']['jsCode']
+    print('\n== REVIEW %s: reference %s (%s), draft md5 %s'%(k,'my build' if (k in EXP and EXP[k]['applied']) else 'baseline',md5(ref)[:8],md5(s1)[:8]))
+    for t,i1,i2,j1,j2 in [o for o in difflib.SequenceMatcher(None,ref,s1,autojunk=False).get_opcodes() if o[0]!='equal']:
+        print('  %s ref[%d:%d] -> draft[%d:%d]\n    OLD: %r\n    NEW: %r'%(t,i1,i2,j1,j2,ref[i1:i2],s1[j1:j2]))
+    with tempfile.NamedTemporaryFile('w',suffix='.js',delete=False) as f:f.write('async function __n(){'+s1+'\n}');fn=f.name
+    r=subprocess.run(['node','--check',fn],capture_output=True,text=True);os.unlink(fn);say(r.returncode==0,'%s: node --check'%k)
 BAD=['GUARD-INADMISSIBLE','who-belongs','Joshua 5:5','SEED-NOT-BLOOD','posline','Roles this debate']  # removal F (7235): the roles sentence
 OLDK='WITHDRAWN if it is withdrawn or conceded, or if the GUARD-INADMISSIBLE block orders it graded unexhibited; BROKEN if it is graded DEFENDER LINK BROKEN at a collision; STANDS otherwise.'
 NEWK='WITHDRAWN if it is withdrawn or conceded; BROKEN if it is graded DEFENDER LINK BROKEN at a collision; STANDS otherwise.'

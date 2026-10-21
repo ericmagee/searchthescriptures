@@ -1,0 +1,147 @@
+PASS node set equal (231 against 231)
+PASS connections equal
+PASS settings equal
+PASS every node equal apart from the jsCode of the two judge nodes, the 24 patched nodes and the review nodes ['Format Markdown', 'Plain Rule Lines']
+PASS Alternate Build: draft jsCode md5 1fc86a78 equals the verifier's own build 1fc86a78
+PASS Alternate Build: node --check
+PASS Alternate Cure Build: draft jsCode md5 a2325e39 equals the verifier's own build a2325e39
+PASS Alternate Cure Build: node --check
+PASS Alternate Cure Normalize: draft jsCode md5 46911a61 equals the verifier's own build 46911a61
+PASS Alternate Cure Normalize: node --check
+PASS Alternate Merge: draft jsCode md5 761947c0 equals the verifier's own build 761947c0
+PASS Alternate Merge: node --check
+PASS Alternate Payloads: draft jsCode md5 1331c305 equals the verifier's own build 1331c305
+PASS Alternate Payloads: node --check
+PASS C1 Extract: draft jsCode md5 13ac0141 equals the verifier's own build 13ac0141
+PASS C1 Extract: node --check
+PASS C2 Extract: draft jsCode md5 13a7aa8c equals the verifier's own build 13a7aa8c
+PASS C2 Extract: node --check
+PASS C3 Extract: draft jsCode md5 f3103d50 equals the verifier's own build f3103d50
+PASS C3 Extract: node --check
+PASS Cure Build: draft jsCode md5 f71ac0e2 equals the verifier's own build f71ac0e2
+PASS Cure Build: node --check
+PASS Cure Check: draft jsCode md5 21bcbbee equals the verifier's own build 21bcbbee
+PASS Cure Check: node --check
+PASS Cure Normalize: draft jsCode md5 e8f8aeab equals the verifier's own build e8f8aeab
+PASS Cure Normalize: node --check
+PASS D1 Extract: draft jsCode md5 e8553945 equals the verifier's own build e8553945
+PASS D1 Extract: node --check
+PASS D2 Extract: draft jsCode md5 335e1a12 equals the verifier's own build 335e1a12
+PASS D2 Extract: node --check
+PASS D3 Extract: draft jsCode md5 0feb635c equals the verifier's own build 0feb635c
+PASS D3 Extract: node --check
+PASS Extract Independent Verdict: draft jsCode md5 03d915ab equals the verifier's own build 03d915ab
+PASS Extract Independent Verdict: node --check
+PASS Panel Cure Build 1: draft jsCode md5 60c2dde0 equals the verifier's own build 60c2dde0
+PASS Panel Cure Build 1: node --check
+PASS Panel Cure Build 2: draft jsCode md5 e4b8d0cc equals the verifier's own build e4b8d0cc
+PASS Panel Cure Build 2: node --check
+PASS Panel Cure Build 3: draft jsCode md5 5f45753a equals the verifier's own build 5f45753a
+PASS Panel Cure Build 3: node --check
+PASS Panel Cure Check: draft jsCode md5 72238dac equals the verifier's own build 72238dac
+PASS Panel Cure Check: node --check
+PASS Panel Cure Normalize 1: draft jsCode md5 24df05c6 equals the verifier's own build 24df05c6
+PASS Panel Cure Normalize 1: node --check
+PASS Panel Cure Normalize 2: draft jsCode md5 bf1ec1b0 equals the verifier's own build bf1ec1b0
+PASS Panel Cure Normalize 2: node --check
+PASS Panel Cure Normalize 3: draft jsCode md5 586ad973 equals the verifier's own build 586ad973
+PASS Panel Cure Normalize 3: node --check
+PASS Panel Payloads: draft jsCode md5 6f0437ef equals the verifier's own build 6f0437ef
+PASS Panel Payloads: node --check
+
+== REVIEW Format Markdown: reference my build (b345d833), draft md5 f5b0e08c
+  replace ref[22897:22900] -> draft[22897:22899]
+    OLD: 'fou'
+    NEW: 'th'
+  insert ref[22901:22901] -> draft[22900:22902]
+    OLD: ''
+    NEW: 'ee'
+  delete ref[22940:23361] -> draft[22941:22941]
+    OLD: '\\n- **Who-belongs verdicts.** A \\"WHO-BELONGS VERDICT -- a claim that a person or a people-group is, or is not, of Israel, in any vocabulary\\", and \\"an identity closed from circumcision status\\", is \\"graded UNEXHIBITED whatever its footing, on either side\\" (DG-1/DG-60). Not in that class: \\"a cross-reference identification of a text\'s referent or structure held at [L3] and stated as L3 with the census disclaimed\\".'
+    NEW: ''
+  insert ref[25924:25924] -> draft[25504:31447]
+    OLD: ''
+    NEW: "// ITEM 8 (BB-7224, shape BB-7234): WHAT THE JUDGES WERE SENT. Each distinct text sent to a judge in this run is printed once, verbatim,\n// under a heading that names every seat and call that received it and gives the md5 of the text (its messages joined in order, UTF-8).\n// Each cure call prints the judge's re-sent answer and the cure request verbatim and names the text it followed. Appended; nothing above moves.\nconst MD5 = (str) => {\n  const s = unescape(encodeURIComponent(String(str))); const n = s.length; const w = [];\n  for (let i = 0; i < n; i++) w[i >> 2] |= s.charCodeAt(i) << ((i % 4) * 8);\n  w[n >> 2] |= 0x80 << ((n % 4) * 8); const L = (((n + 8) >> 6) + 1) * 16; for (let i = 0; i < L; i++) w[i] = w[i] | 0; w[L - 2] = n * 8;\n  const K = [], R = [7, 12, 17, 22, 5, 9, 14, 20, 4, 11, 16, 23, 6, 10, 15, 21];\n  for (let i = 0; i < 64; i++) K[i] = Math.floor(Math.abs(Math.sin(i + 1)) * 4294967296) | 0;\n  let a0 = 0x67452301, b0 = 0xefcdab89 | 0, c0 = 0x98badcfe | 0, d0 = 0x10325476;\n  for (let o = 0; o < L; o += 16) {\n    let a = a0, b = b0, c = c0, d = d0;\n    for (let i = 0; i < 64; i++) {\n      let f, g;\n      if (i < 16) { f = (b & c) | (~b & d); g = i; } else if (i < 32) { f = (d & b) | (~d & c); g = (5 * i + 1) % 16; }\n      else if (i < 48) { f = b ^ c ^ d; g = (3 * i + 5) % 16; } else { f = c ^ (b | ~d); g = (7 * i) % 16; }\n      const t = d; d = c; c = b; const x = (a + f + K[i] + w[o + g]) | 0; const r = R[(i >> 4) * 4 + (i % 4)];\n      b = (b + ((x << r) | (x >>> (32 - r)))) | 0; a = t;\n    }\n    a0 = (a0 + a) | 0; b0 = (b0 + b) | 0; c0 = (c0 + c) | 0; d0 = (d0 + d) | 0;\n  }\n  return [a0, b0, c0, d0].map(v => { let h = ''; for (let i = 0; i < 4; i++) h += ((v >>> (i * 8)) & 255).toString(16).padStart(2, '0'); return h; }).join('');\n};\nconst sentMsgs = (b) => {\n  if (!b || typeof b !== 'object') return null; const out = [];\n  if (b.systemInstruction || b.contents) {\n    if (b.systemInstruction) out.push({ role: 'system', text: (b.systemInstruction.parts || []).map(p => p.text || '').join('') });\n    (b.contents || []).forEach(c => out.push({ role: c.role || 'user', text: (c.parts || []).map(p => p.text || '').join('') }));\n    return out;\n  }\n  if (typeof b.system === 'string') out.push({ role: 'system', text: b.system });\n  else if (Array.isArray(b.system)) out.push({ role: 'system', text: b.system.map(x => x.text || '').join('') });\n  (b.messages || []).forEach(m => out.push({ role: m.role, text: typeof m.content === 'string' ? m.content : (Array.isArray(m.content) ? m.content.map(x => x.text || '').join('') : '') }));\n  return out;\n};\nconst fromNode = (name, f) => { try { return f($(name)); } catch (e) { return null; } };\nconst SENT = (() => {\n  const calls = [], cures = [];\n  const sj = fromNode('Build Independent Verdict', x => x.first().json);\n  if (sj && sj.verdictBody) calls.push({ who: 'single judge ' + SJN + ' (' + (sj.judge_model || '') + ')', m: sentMsgs(sj.verdictBody) });\n  const pb = fromNode('Panel Build', x => x.first().json);\n  if (pb && Array.isArray(pb.judges)) pb.judges.forEach((j, i) => calls.push({ who: 'panel judge ' + (i + 1) + ' ' + nm(j.seat) + ' (' + (j.api_model || '') + ')', m: sentMsgs(j.body) }));\n  (fromNode('Reserve Build', x => x.all().map(i => i.json)) || []).forEach(j => { if (j && j.body) calls.push({ who: 'reserve judge ' + nm(j.seat) + ' (' + (j.api_model || '') + ')', m: sentMsgs(j.body) }); });\n  (fromNode('Alternate Build', x => x.all().map(i => i.json.alt)) || []).forEach(a => { if (a && a.body && !a.skip) calls.push({ who: 'alternate judge ' + nm(a.pool_seat || a.seat) + ' (' + (a.api_model || '') + ') seated for ' + nm(a.removed_seat), m: sentMsgs(a.body) }); });\n  ['Cure Build', 'Panel Cure Build 1', 'Panel Cure Build 2', 'Panel Cure Build 3', 'Alternate Cure Build'].forEach(n => {\n    (fromNode(n, x => x.all().map(i => i.json.cure)) || []).forEach(c => { if (c && c.body && !c.skip) cures.push({ who: 'Cure call, ' + (c.who === 'single' ? 'single judge ' + SJN : (c.who === 'alternate' ? 'alternate ' : '') + nm(c.seat)) + ' (' + (c.model || '') + ')', m: sentMsgs(c.body) }); });\n  });\n  return { calls, cures };\n})();\nconst sentFence = (s) => { let n = 3; (String(s).match(/`{3,}/g) || []).forEach(r => { if (r.length >= n) n = r.length + 1; }); const f = '`'.repeat(n); return f + 'text\\n' + s + '\\n' + f; };\nconst sentBlock = (m) => m.map(x => '**' + x.role + ' message** (' + x.text.length + ' characters)\\n\\n' + sentFence(x.text) + '\\n\\n').join('');\nlet s8 = '## What the judges were sent\\n\\nEvery text the system sent to a judge in this debate, verbatim. Each distinct text is printed once; its heading names every seat and call that received it and gives the md5 of the text (its messages joined in order, UTF-8). A cure call re-sends its judge\\'s text with the judge\\'s answer and the cure request; those two are printed in full under the cure call, which names the text it followed.\\n\\n';\nconst SG = [];\nSENT.calls.forEach(c => { if (!c.m) return; const h = MD5(c.m.map(x => x.text).join('')); let g = SG.find(x => x.h === h); if (!g) { g = { h, m: c.m, who: [] }; SG.push(g); } g.who.push(c.who); });\nif (!SG.length && !SENT.cures.length) s8 += '*Not available: the texts sent to the judges are not in this run.*\\n\\n';\nSG.forEach((g, i) => { s8 += '### Text ' + (i + 1) + ', md5 ' + g.h + '\\n\\nSent to: ' + g.who.join('; ') + '.\\n\\n' + sentBlock(g.m); });\nSENT.cures.forEach(c => {\n  let k = -1, g = null;\n  for (let n = c.m.length; n > 0 && !g; n--) { const h = MD5(c.m.slice(0, n).map(x => x.text).join('')); g = SG.find(x => x.h === h) || null; if (g) k = n; }\n  s8 += '### ' + c.who + '\\n\\n';\n  if (g) s8 += 'Followed the ' + g.h + ' text above (Text ' + (SG.indexOf(g) + 1) + '), then:\\n\\n' + sentBlock(c.m.slice(k));\n  else s8 += 'md5 ' + MD5(c.m.map(x => x.text).join('')) + '; its opening matches no text above, so the whole call is printed:\\n\\n' + sentBlock(c.m);\n});\nt += '\\n---\\n\\n' + s8;\n"
+PASS Format Markdown: node --check
+
+== REVIEW Plain Rule Lines: reference baseline (5ca481ca), draft md5 24d67b50
+  insert ref[457:457] -> draft[457:584]
+    OLD: ''
+    NEW: '// ITEM 8 (BB-7234): the section "What the judges were sent" is verbatim judge text; only the text above it is rewritten here.\n'
+  replace ref[463:465] -> draft[590:597]
+    OLD: 'md'
+    NEW: 'SENT_AT'
+  insert ref[486:486] -> draft[618:817]
+    OLD: ''
+    NEW: ".indexOf('\\n## What the judges were sent\\n');\nconst HEAD = SENT_AT >= 0 ? String(x.md).slice(0, SENT_AT) : String(x.md || ''), TAIL = SENT_AT >= 0 ? String(x.md).slice(SENT_AT) : '';\nconst md0 = HEAD"
+  insert ref[818:818] -> draft[1149:1172]
+    OLD: ''
+    NEW: 'md = md0 + TAIL;\nconst '
+  insert ref[828:828] -> draft[1182:1183]
+    OLD: ''
+    NEW: '0'
+PASS Plain Rule Lines: node --check
+
+== Build Independent Verdict  before md5 7fe63a4fe00bec0bc5a1e03c1b1c8b83 (34967 chars)  after md5 d21f38f7e80074bf68797cc8ad25c71b (32546 chars)
+PASS Build Independent Verdict: "GUARD-INADMISSIBLE" occurs 0 times after
+PASS Build Independent Verdict: "who-belongs" occurs 0 times after
+PASS Build Independent Verdict: "Joshua 5:5" occurs 0 times after
+PASS Build Independent Verdict: "SEED-NOT-BLOOD" occurs 0 times after
+PASS Build Independent Verdict: "posline" occurs 0 times after
+PASS Build Independent Verdict: "Roles this debate" occurs 0 times after
+PASS Build Independent Verdict: TERMS sentence gone
+PASS Build Independent Verdict: KEYSTONE new text once, old text gone
+changed segments: 4
+  delete before[11012:11058] (46 chars, md5 b01a6a82) -> after[11012:11012] (0 chars)
+    OLD: "$('Init with Guards').first().json.posline+NL+"
+    NEW: ''
+  delete before[12077:14290] (2213 chars, md5 a3267179) -> after[12031:12031] (0 chars)
+    OLD: '."+NL+NL+"GUARD-INADMISSIBLE: the text\'s lineage category is SEED, counted by promise not flesh (Rom 9:8). If either side rests an identity or belonging claim o' ... ' stranger, Isaiah 56:6), held at [L3] with the census disclaimed, is graded by the ordinary footing rule, on either side'
+    NEW: ''
+  delete before[18765:18862] (97 chars, md5 ffe595b7) -> after[16506:16506] (0 chars)
+    OLD: 'A defender link that the GUARD-INADMISSIBLE block orders graded unexhibited counts as WITHDRAWN. '
+    NEW: ''
+  delete before[20894:20959] (65 chars, md5 81b91475) -> after[18538:18538] (0 chars)
+    OLD: 'ed, or if the GUARD-INADMISSIBLE block orders it graded unexhibit'
+    NEW: ''
+  block segment holds the block start at offset 10 of the removed text; removed text md5 a326717916922c2afaea93a69e2b5892
+PASS Build Independent Verdict: node --check
+remaining hits (guard, census, seed, cliff), with sentence:
+  @26858 Guard:  Both sides alike."+NL+NL+'CITATION CHECK, PER SEAT: held-record labels served to the DEFENDER this run: '+(($('Init with Guards').first().json.d_served.join(', '))||'(none)')+'.
+  @26967 Guard:  Served to the CHALLENGER this run: '+(($('Init with Guards').first().json.c_served.join(', '))||'(none)')+'.
+  @27091 guard:  Named inside the text served to the DEFENDER (a served conclusion, guard or tension names them; their own text was not served): '+((($('Init with Guards').first().json.d_named||[]).join(', '))||'(none)')+'.
+  @27170 Guard:  Named inside the text served to the DEFENDER (a served conclusion, guard or tension names them; their own text was not served): '+((($('Init with Guards').first().json.d_named||[]).join(', '))||'(none)')+'.
+  @27297 Guard:  Named inside the text served to the CHALLENGER: '+((($('Init with Guards').first().json.c_named||[]).join(', '))||'(none)')+'.
+
+== Panel Build  before md5 7d01261112b692c0501e43003c941e7e (42662 chars)  after md5 e18f5b7550abc0e7b923abb8b422bf1e (40275 chars)
+PASS Panel Build: "GUARD-INADMISSIBLE" occurs 0 times after
+PASS Panel Build: "who-belongs" occurs 0 times after
+PASS Panel Build: "Joshua 5:5" occurs 0 times after
+PASS Panel Build: "SEED-NOT-BLOOD" occurs 0 times after
+PASS Panel Build: "posline" occurs 0 times after
+PASS Panel Build: "Roles this debate" occurs 0 times after
+PASS Panel Build: TERMS sentence gone
+PASS Panel Build: KEYSTONE new text once, old text gone
+changed segments: 5
+  delete before[12812:12823] (11 chars, md5 22f837ec) -> after[12812:12812] (0 chars)
+    OLD: 'IG.posline+'
+    NEW: ''
+  delete before[12824:12825] (1 chars, md5 7215ee9c) -> after[12813:12813] (0 chars)
+    OLD: ' '
+    NEW: ''
+  delete before[15431:17644] (2213 chars, md5 a3267179) -> after[15419:15419] (0 chars)
+    OLD: '."+NL+NL+"GUARD-INADMISSIBLE: the text\'s lineage category is SEED, counted by promise not flesh (Rom 9:8). If either side rests an identity or belonging claim o' ... ' stranger, Isaiah 56:6), held at [L3] with the census disclaimed, is graded by the ordinary footing rule, on either side'
+    NEW: ''
+  delete before[21813:21910] (97 chars, md5 ffe595b7) -> after[19588:19588] (0 chars)
+    OLD: 'A defender link that the GUARD-INADMISSIBLE block orders graded unexhibited counts as WITHDRAWN. '
+    NEW: ''
+  delete before[23942:24007] (65 chars, md5 81b91475) -> after[21620:21620] (0 chars)
+    OLD: 'ed, or if the GUARD-INADMISSIBLE block orders it graded unexhibit'
+    NEW: ''
+  block segment holds the block start at offset 10 of the removed text; removed text md5 a326717916922c2afaea93a69e2b5892
+PASS Panel Build: node --check
+remaining hits (guard, census, seed, cliff), with sentence:
+  @567 Guard: first().json;let RGL=null;try{if($('Regrade Load').isExecuted)RGL=$('Regrade Load').first().json;}catch(e){RGL=null;} // regrade: everything below from the saved row const IG=RGL?RGL.ig:$('Init with Guards').first().json;const F=RGL?RGL.f:$('Final Output').fir
+  @30104 guard:  Named inside the text served to the DEFENDER (a served conclusion, guard or tension names them; their own text was not served): '+(((IG.d_named||[]).join(', '))||'(none)')+'.
+
+VERIFY PASS
