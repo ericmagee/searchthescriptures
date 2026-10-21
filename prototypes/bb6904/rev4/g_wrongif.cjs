@@ -9,7 +9,8 @@ const fired=[];
 ['Resolve Seats','Alternate Build'].forEach(k=>{if(/max_tokens\s*:\s*32000/.test(N[k]))fired.push(k+': literal max_tokens:32000');
  if(!/max_tokens\s*:\s*AM\[[^\]]+\]\.max_tokens/.test(N[k]))fired.push(k+': max_tokens not read from ALT_MODELS (AM[k].max_tokens)');});
 const am=N['Init Seats'].match(/const ALT_MODELS=(\{.*?\}\});/);
-if(!am)fired.push('Init Seats: ALT_MODELS not found');else{const M=Function('return '+am[1])();
+let M=null;if(am){try{M=Function('return '+am[1])();}catch(e){fired.push('Init Seats: ALT_MODELS is not a plain literal ('+String(e.message).slice(0,80)+')');}}
+if(!am)fired.push('Init Seats: ALT_MODELS not found');else if(M){
  Object.entries(M).forEach(([k,v])=>{if(!Number.isInteger(v.max_tokens))fired.push(k+': no integer max_tokens');else if(v.max_tokens>262144)fired.push(k+': max_tokens '+v.max_tokens+' above 262144');else if(v.max_tokens<=32000)fired.push(k+': max_tokens '+v.max_tokens+' not raised');});}
 const src=N['Alternate Payloads'];const i=src.indexOf('function envelope(');let j=-1;
 if(i>=0){let dp=0;for(let q=src.indexOf('{',i);q<src.length;q++){if(src[q]==='{')dp++;else if(src[q]==='}'){dp--;if(dp===0){j=q+1;break;}}}}
