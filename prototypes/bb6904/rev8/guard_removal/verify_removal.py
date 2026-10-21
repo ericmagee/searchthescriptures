@@ -1,10 +1,13 @@
 # BB-6904 step 6 verify (7223): the guard block removal A to C, draft against the active flow. Read-only.
-# Usage: python3 -I verify_removal.py <baseline workflow json> <draft workflow json>
+# Usage: python3 -I verify_removal.py <baseline workflow json> <draft workflow json> [<expected_step6.json from ../step6/expected_build.py>]
+# With the third argument, every node the patch touches must equal the verifier's own build by md5 (7227: items 1, 2, 5; item 3 held).
 # Each json is a get_workflow_details result ({"workflow": {...}}) or a bare workflow object.
 import json,sys,hashlib,difflib,re,subprocess,tempfile,os
 def wf(p):
     d=json.load(open(p));return d.get('workflow',d)
 B,D=wf(sys.argv[1]),wf(sys.argv[2])
+EXP=json.load(open(sys.argv[3])) if len(sys.argv)>3 else {}
+PATCHED={k for k,v in EXP.items() if v['applied']}
 JUDGE=['Build Independent Verdict','Panel Build']
 md5=lambda s:hashlib.md5(s.encode('utf-8')).hexdigest()
 ok=True
@@ -18,10 +21,16 @@ say(json.dumps(B.get('settings'),sort_keys=True)==json.dumps(D.get('settings'),s
 diffn=[]
 for k in sorted(set(bn)&set(dn)):
     a,b=dict(bn[k]),dict(dn[k])
-    if k in JUDGE:
+    if k in JUDGE or k in PATCHED:
         a=json.loads(json.dumps(a));b=json.loads(json.dumps(b));a['parameters'].pop('jsCode',None);b['parameters'].pop('jsCode',None)
     if json.dumps(a,sort_keys=True)!=json.dumps(b,sort_keys=True):diffn.append(k)
-say(not diffn,'every node other than the two judge jsCode strings equal'+(': differs '+', '.join(diffn) if diffn else ''))
+say(not diffn,'every node equal apart from the jsCode of the two judge nodes and the %d patched nodes'%len(PATCHED)+(': differs '+', '.join(diffn) if diffn else ''))
+for k in sorted(PATCHED):
+    got=hashlib.md5(dn[k]['parameters']['jsCode'].encode('utf-8')).hexdigest() if k in dn else None
+    say(got==EXP[k]['after_md5'],'%s: draft jsCode md5 %s equals the verifier\'s own build %s'%(k,(got or 'MISSING')[:8],EXP[k]['after_md5'][:8]))
+    if k in dn:
+        with tempfile.NamedTemporaryFile('w',suffix='.js',delete=False) as f:f.write('async function __n(){'+dn[k]['parameters']['jsCode']+'\n}');fn=f.name
+        r=subprocess.run(['node','--check',fn],capture_output=True,text=True);os.unlink(fn);say(r.returncode==0,'%s: node --check'%k)
 BAD=['GUARD-INADMISSIBLE','who-belongs','Joshua 5:5','SEED-NOT-BLOOD']
 OLDK='WITHDRAWN if it is withdrawn or conceded, or if the GUARD-INADMISSIBLE block orders it graded unexhibited; BROKEN if it is graded DEFENDER LINK BROKEN at a collision; STANDS otherwise.'
 NEWK='WITHDRAWN if it is withdrawn or conceded; BROKEN if it is graded DEFENDER LINK BROKEN at a collision; STANDS otherwise.'
