@@ -1,0 +1,6 @@
+== report27613.md
+rounds CR1,DR1,CR2,DR2 | L4 limb A FIRED: Single judge: DeepSeek D4 vs C2; Single judge: DeepSeek D5 vs C1; Single judge: DeepSeek D6 vs C2; Panel judge (removed): DeepSeek D3 vs C4; Panel judge (removed): DeepSeek D4 vs C2; Panel judge (removed): DeepSeek D5 vs C1 | limb B silent
+== fixture_l4_good.md
+rounds CR1,DR1,CR2,DR2 | L4 limb A silent | limb B silent
+== fixture_l4_badB.md
+rounds CR1,DR1,CR2,DR2 | L4 limb A FIRED: Single judge: DeepSeek D4 vs C2; Single judge: DeepSeek D5 vs C1; Single judge: DeepSeek D6 vs C2; Panel judge (removed): DeepSeek D3 vs C4; Panel judge (removed): DeepSeek D4 vs C2; Panel judge (removed): DeepSeek D5 vs C1 | limb B FIRED: Panel judge (removed): DeepSeek D6 vs C6
