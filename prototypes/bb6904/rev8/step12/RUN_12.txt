@@ -140,3 +140,23 @@ Panel Cure Normalize 1       OTHER md5 9fdb32f4636ecf7124e31ec325afd089 keys ['j
 Panel Cure Normalize 2       OTHER md5 b4a400a49ec95d50fc288b8301cbef20 keys ['jsCode']
 Panel Cure Normalize 3       OTHER md5 d31ed7501d455d71f070380fcfcf074c keys ['jsCode']
 other nodes 215 | differing from live: none | connections equal: True | node sets equal: True
+
+== FETCH-BACK after batch 1 (nodes 2-6), draft d224e417-0b22-4408-b7ab-c1a02b8391f0 (17:52:40 CDT)
+draft d224e417-0b22-4408-b7ab-c1a02b8391f0 2026-10-21T22:52:40.839Z nodes 231 | live 5fd3b03c-4e9d-4e16-8eeb-a89f199f75cc nodes 231
+Alternate Build              OTHER md5 bc4bbcfa460d8a343bb84a8f886ec146 keys ['jsCode']
+Alternate Cure Build         OTHER md5 8b75d0bb90f24aa00fc81bfa8b95144d keys ['jsCode']
+Alternate Cure Normalize     OTHER md5 960834ce8c6d6d14e4cebf5e943ae3c6 keys ['jsCode']
+Alternate Merge              OTHER md5 01cfc5081dfb799b83ae06f30ab4798c keys ['jsCode']
+Build Independent Verdict    BASE md5 d21f38f7e80074bf68797cc8ad25c71b keys ['jsCode']
+Cure Build                   NEW md5 977e66937ff47e5e3ed7dd09e2489a3b keys ['jsCode']
+Cure Check                   NEW md5 8d706420e0c469bd211d6055c04cd187 keys ['jsCode']
+Cure Normalize               NEW md5 a38f606a14fb2ca05d9664c89a341ce5 keys ['jsCode']
+Panel Build                  BASE md5 e18f5b7550abc0e7b923abb8b422bf1e keys ['jsCode']
+Panel Cure Build 1           NEW md5 ee8e78b03755aaaf54071134699ebd2d keys ['jsCode']
+Panel Cure Build 2           NEW md5 56e91febb62054285fd86867cf697069 keys ['jsCode']
+Panel Cure Build 3           NEW md5 12de367c109412454c264be006e48b8a keys ['jsCode']
+Panel Cure Check             OTHER md5 4077204f75029eeeb77a12167c883a4b keys ['jsCode']
+Panel Cure Normalize 1       OTHER md5 9fdb32f4636ecf7124e31ec325afd089 keys ['jsCode']
+Panel Cure Normalize 2       OTHER md5 b4a400a49ec95d50fc288b8301cbef20 keys ['jsCode']
+Panel Cure Normalize 3       OTHER md5 d31ed7501d455d71f070380fcfcf074c keys ['jsCode']
+other nodes 215 | differing from live: none | connections equal: True | node sets equal: True
