@@ -1,0 +1,10 @@
+== run27563_report.md
+rows 17 | judges listed 4 | limb A silent | limb B silent | limb C FIRED: Panel judge (removed): DeepSeek D2 vs C4 Conceded count (K-G1); Panel judge (removed): Gemini D1 vs C7 Conceded count (K-G1); Panel judge (removed): Gemini D2 vs C6 Conceded count (K-G1); Panel judge (removed): Gemini D4 vs C7 Conceded count (K-G1); Panel judge (removed): Gemini D5 vs C5 Conceded count (K-G1); Panel judge (removed): Gemini D6 vs C4 Conceded count (K-G1)
+== fixture_l3r_good.md
+rows 17 | judges listed 4 | limb A silent | limb B silent | limb C silent
+== fixture_l3r_badA.md
+rows 17 | judges listed 4 | limb A FIRED: Panel judge Gemini D1 vs C7 Two kinds of layer (K-B) | limb B silent | limb C silent
+== fixture_l3r_badB.md
+rows 17 | judges listed 4 | limb A silent | limb B FIRED: Gemini corrected HELD, listed BROKEN | limb C silent
+== fixture_l3r_badC.md
+rows 17 | judges listed 4 | limb A silent | limb B silent | limb C FIRED: Panel judge Gemini D1 vs C7 Two kinds of layer (K-B)

@@ -1,0 +1,54 @@
+== patch: python3 -I patch_retract.py base new
+refused 0
+rerun identical to new/
+== node harness_r.cjs base new new_mutA new_mutB new_mutC new_mutD
+base nodes 14 | (1) 0/14 | (2) 14/14 | (3) 0/14 | (4) 21/27 | (5) 14/14 | (6) 0/14 | (7) 14/14 | (10) 0/14 | (x) 14/14 | (T) 14/14
+new nodes 14 | (1) 14/14 | (2) 14/14 | (3) 14/14 | (4) 27/27 | (5) 14/14 | (6) 14/14 | (7) 14/14 | (10) 14/14 | (x) 14/14 | (T) 14/14
+new_mutA nodes 14 | (1) 14/14 | (2) 14/14 | (3) 14/14 | (4) 24/27 | (5) 14/14 | (6) 14/14 | (7) 14/14 | (10) 14/14 | (x) 14/14 | (T) 14/14
+new_mutB nodes 14 | (1) 14/14 | (2) 13/14 | (3) 14/14 | (4) 27/27 | (5) 14/14 | (6) 14/14 | (7) 14/14 | (10) 14/14 | (x) 14/14 | (T) 14/14
+new_mutC nodes 14 | (1) 13/14 | (2) 14/14 | (3) 14/14 | (4) 27/27 | (5) 14/14 | (6) 14/14 | (7) 14/14 | (10) 14/14 | (x) 14/14 | (T) 14/14
+new_mutD nodes 14 | (1) 14/14 | (2) 14/14 | (3) 14/14 | (4) 24/27 | (5) 14/14 | (6) 14/14 | (7) 14/14 | (10) 14/14 | (x) 14/14 | (T) 14/14
+  sample audit line (base): none
+  sample audit line (new): [AUDIT v21: CORRECTED RESULT -- SEAT: Gemini; ORIGINAL: BROKEN; COUNTED: HELD (HELD-1); RETRACTED: D1 vs C7]
+  sample audit line (new_mutA): [AUDIT v21: CORRECTED RESULT -- SEAT: Gemini; ORIGINAL: BROKEN; COUNTED: HELD (HELD-1); RETRACTED: D1 vs C7]
+  sample audit line (new_mutB): [AUDIT v21: CORRECTED RESULT -- SEAT: Gemini; ORIGINAL: BROKEN; COUNTED: HELD (HELD-1); RETRACTED: D1 vs C7]
+  sample audit line (new_mutC): [AUDIT v21: CORRECTED RESULT -- SEAT: Gemini; ORIGINAL: BROKEN; COUNTED: HELD (HELD-1); RETRACTED: D1 vs C7]
+  sample audit line (new_mutD): [AUDIT v21: CORRECTED RESULT -- SEAT: Gemini; ORIGINAL: BROKEN; COUNTED: HELD (HELD-1); RETRACTED: D1 vs C7]
+fail 0
+== node harness_w_r.cjs base new (Worker_E's harness_w, replies and rule moved to RETRACTED + CORRECTED RESULT; its labels still read WITHDRAWN)
+base nodes 14 | (a) WITHDRAWN cures K-B,K-G1,K-G4 0 | (b) STATEMENT Withdrawn cures nothing 14 | (c) other link cures nothing 14 | (g) rule served once in place 0 | (h) 27563 gemini K-B cured 0
+new nodes 14 | (a) WITHDRAWN cures K-B,K-G1,K-G4 14 | (b) STATEMENT Withdrawn cures nothing 14 | (c) other link cures nothing 14 | (g) rule served once in place 14 | (h) 27563 gemini K-B cured 14
+fail 0
+== (cd curefix && node harness.cjs retract/base retract/new) F1 to F3
+../retract/base nodes 14 | F1 deepseek quote found 14 | F2 altered quote refused and grok kept 14 | F3 cureAsk right 14
+../retract/new nodes 14 | F1 deepseek quote found 14 | F2 altered quote refused and grok kept 14 | F3 cureAsk right 14
+fail 0
+== syntax: node --check on each file wrapped in an async function
+syntax ok 14/14
+== WITHDRAWN left in new/: 0; TRUNCAT in new/: 0
+== diff lines per node (base to new)
+Alternate_Build.js 54
+Alternate_Cure_Build.js 54
+Alternate_Cure_Normalize.js 54
+Alternate_Merge.js 57
+Cure_Build.js 54
+Cure_Check.js 57
+Cure_Normalize.js 54
+Panel_Cure_Build_1.js 54
+Panel_Cure_Build_2.js 54
+Panel_Cure_Build_3.js 54
+Panel_Cure_Check.js 58
+Panel_Cure_Normalize_1.js 54
+Panel_Cure_Normalize_2.js 54
+Panel_Cure_Normalize_3.js 54
+== wrongif L3
+== run27563_report.md
+rows 17 | judges listed 4 | limb A silent | limb B silent | limb C FIRED: Panel judge (removed): DeepSeek D2 vs C4 Conceded count (K-G1); Panel judge (removed): Gemini D1 vs C7 Conceded count (K-G1); Panel judge (removed): Gemini D2 vs C6 Conceded count (K-G1); Panel judge (removed): Gemini D4 vs C7 Conceded count (K-G1); Panel judge (removed): Gemini D5 vs C5 Conceded count (K-G1); Panel judge (removed): Gemini D6 vs C4 Conceded count (K-G1)
+== fixture_l3r_good.md
+rows 17 | judges listed 4 | limb A silent | limb B silent | limb C silent
+== fixture_l3r_badA.md
+rows 17 | judges listed 4 | limb A FIRED: Panel judge Gemini D1 vs C7 Two kinds of layer (K-B) | limb B silent | limb C silent
+== fixture_l3r_badB.md
+rows 17 | judges listed 4 | limb A silent | limb B FIRED: Gemini corrected HELD, listed BROKEN | limb C silent
+== fixture_l3r_badC.md
+rows 17 | judges listed 4 | limb A silent | limb B silent | limb C FIRED: Panel judge Gemini D1 vs C7 Two kinds of layer (K-B)
