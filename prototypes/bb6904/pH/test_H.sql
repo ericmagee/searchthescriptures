@@ -1,4 +1,5 @@
 -- BB-6904 portion H: migrate_H.sql run inside one DO block ended by RAISE (all rolls back); falsifiers on a throwaway copy of 27259's row.
+BEGIN; SET LOCAL truth.session_id='session_015ZiVmTarESui8ub4mf2Dcr';
 DO $t$
 DECLARE D uuid := gen_random_uuid(); x jsonb; res text := '';
   PE text[];
@@ -64,8 +65,8 @@ BEGIN
 END;
 $function$
 $m$;
-  INSERT INTO debate_results SELECT (jsonb_populate_record(NULL::debate_results, to_jsonb(d) || jsonb_build_object('id', D, 'drv_removed', NULL, 'run_token', 'ODV1-0-throwaw1'))).*
-    FROM debate_results d WHERE id = '56e75954-c776-4e7e-8d26-94e3a46a5c09';
+  INSERT INTO debate_results SELECT (jsonb_populate_record(NULL::debate_results, to_jsonb(src) || jsonb_build_object('id', D, 'drv_removed', NULL, 'run_token', 'ODV1-0-throwaw1'))).*
+    FROM debate_results src WHERE src.id = '56e75954-c776-4e7e-8d26-94e3a46a5c09';
   SELECT panel_expected INTO PE FROM debate_results WHERE id = D;
   res := res || 'base ' || PE::text || '; ';
   -- good: one
@@ -89,3 +90,4 @@ $m$;
   RAISE EXCEPTION 'TEST_H RESULTS (rolled back): %', res;
 END
 $t$;
+COMMIT;
