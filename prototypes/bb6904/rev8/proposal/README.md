@@ -1,0 +1,11 @@
+# Revision 8 step 3: how to rebuild and rerun (no model call, no flow run)
+1. Rows: SQL, saved as five.json (md5 73ae11e1 at 2026-10-21 13:36Z):
+   SELECT json_agg(json_build_object('tok',d.run_token,'dr1',d.claude_r1,'dr2',d.claude_r2,'dlink',d.engine_r3,'cr1',d.engine_r1,'cr2',d.engine_r2,'clink',d.challenger_r3,'single',d.independent_verdict_raw,'judges',(SELECT json_agg(json_build_object('seat',j.judge_seat,'tag',j.verdict_tag,'ds',j.defense_standing,'raw',j.verdict_raw) ORDER BY j.id) FROM debate_judgments j WHERE j.debate_id=d.id))) FROM debate_results d WHERE run_token IN ('ODV1-27433-0lt3ljxt','ODV1-27177-z7igrc2p','ODV1-27191-bbe6uj76','ODV1-27208-ekasifv0','ODV1-27259-75fg8o6t');
+   (key names: dr* = defender rounds = flow tags CR*; cr* = challenger rounds = flow tags DR*.)
+2. Nodes: every Code node's jsCode from the active version (95f04001), one file per node; patch each: python3 patch_rev8.py <in> <out>.
+   Expected anchors applied: 10 in each cure node (Cure Build/Normalize/Check, Panel Cure Build 1-3, Panel Cure Normalize 1-3, Panel Cure Check,
+   Alternate Build, Alternate Cure Build, Alternate Cure Normalize, Alternate Merge); 2 in each round extract (D1, C1, D2, C2, D3, C3 Extract);
+   1 in Panel Payloads, Alternate Payloads, Extract Independent Verdict; 0 elsewhere.
+3. Modules: from Panel Payloads cut "const DRV_REF=" through the end of drvCheck, from Cure Build cut "const CURE_RULE=" through the end of
+   cureVerdicts, concatenate, export {drvCheck,cureVerdicts,cureAsk}; once from the live files (mod_live.js), once from the patched (mod_new.js).
+4. node harness_rev8.cjs five.json mod_live.js mod_new.js  -> HARNESS_RESULT.txt (expected: HARNESS PASS).
