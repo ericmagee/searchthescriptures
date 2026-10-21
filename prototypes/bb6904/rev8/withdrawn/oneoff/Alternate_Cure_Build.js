@@ -72,7 +72,7 @@ const CURE_FORM="ANSWER FORM. Write each cure as one line of its own, beginning 
  +"PRESSED: D<n> vs C<m> | [<round>] | \"<the words of that round, quoted exactly>\"\n"
  +"SHORT: D<n> vs C<m> | [<link round>] | \"<the words of that link round, quoted exactly>\" | <why they do not overturn the link>\n"
  +"STATEMENT: <the flagged item, as labelled above> | <in your own words, why the line stands as you graded it, or what you corrected and why>\n"
- +"WITHDRAWN: D<n> vs C<m> withdraws your BROKEN grade on that line; a withdrawn line is not a BROKEN line, so that one line cures every item flagged on it (layer, count, pressing, standing). A STATEMENT line never withdraws anything.\n"
+ +"WITHDRAWN: D<n> vs C<m> withdraws your BROKEN grade on that line; a withdrawn line is not a BROKEN line, so that one line cures every item flagged on it (layer, count, pressing). A STATEMENT line never withdraws anything.\n"
  +"Write one STATEMENT line for every flagged item, cured or not; it is recorded beside the item. Instead of a cure line you may state why the line stands: "
  +"the statement is run through the same check as the cure. For a layer item it must exhibit two different kinds of layer; for a K-G1 or K-G4 "
  +"item it must name the round that pressed the witness and quote that round's words; where the link round names the verse, it must also quote "

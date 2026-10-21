@@ -3,7 +3,7 @@
 const fs=require('fs'),path=require('path');
 const load=f=>{const s=fs.readFileSync(f,'utf8');const lines=s.split('\n');const i=lines.findIndex(l=>/\$\(['"]/.test(l)&&!/^\s*\/\//.test(l));
  const src=lines.slice(0,i<0?lines.length:i).join('\n');return new Function(src+'\n;return {cureVerdicts,cureAsk,cureLines};')();};
-const RULE='WITHDRAWN: D<n> vs C<m> withdraws your BROKEN grade on that line; a withdrawn line is not a BROKEN line, so that one line cures every item flagged on it (layer, count, pressing, standing). A STATEMENT line never withdraws anything.';
+const RULE='WITHDRAWN: D<n> vs C<m> withdraws your BROKEN grade on that line; a withdrawn line is not a BROKEN line, so that one line cures every item flagged on it (layer, count, pressing). A STATEMENT line never withdraws anything.';
 const L='D1 vs C7 (Galatians 4:4): DEFENDER LINK BROKEN -- (L1) "made of a woman" left unanswered in (CR3).';
 const items=[{rule:'K-B',side:'DEFENDER',link:'D1 vs C7',line:L},{rule:'K-G1',side:'DEFENDER',link:'D1 vs C7',line:L},{rule:'K-G4',side:'DEFENDER',link:'D1 vs C7',line:L}];
 const broken={DEFENDER:['D1 vs C7'],CHALLENGER:[]};const rounds={DR1:'x',DR2:'x',CR3:'nothing here'};
