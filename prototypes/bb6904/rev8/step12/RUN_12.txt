@@ -180,3 +180,34 @@ Panel Cure Normalize 1       NEW md5 54d9ceb7fb673959b073701650a0f0b9 keys ['jsC
 Panel Cure Normalize 2       NEW md5 c86b23681ea8dfde0820148cc819ba29 keys ['jsCode']
 Panel Cure Normalize 3       NEW md5 3780615574b58a1c49494561d0a312ac keys ['jsCode']
 other nodes 215 | differing from live: none | connections equal: True | node sets equal: True
+
+== FINAL FETCH-BACK, draft 428fbdc3-279b-4edb-9079-9ec273f8f824 (18:16:07 CDT), all 16 written
+draft 428fbdc3-279b-4edb-9079-9ec273f8f824 2026-10-21T23:16:07.397Z nodes 231 | live 5fd3b03c-4e9d-4e16-8eeb-a89f199f75cc nodes 231
+Alternate Build              NEW md5 2025e7c19d34be9b161b63f5eb960779 keys ['jsCode']
+Alternate Cure Build         NEW md5 f58ab1559aeffd73013fd1909d7a2ae6 keys ['jsCode']
+Alternate Cure Normalize     NEW md5 0718afe1fc28fb044fa388b75e752f05 keys ['jsCode']
+Alternate Merge              NEW md5 f514ba1f939f2ad74ef538a7ea32aea0 keys ['jsCode']
+Build Independent Verdict    NEW md5 b5c5ddff51e19b4018a519bb70d16e1c keys ['jsCode']
+Cure Build                   NEW md5 977e66937ff47e5e3ed7dd09e2489a3b keys ['jsCode']
+Cure Check                   NEW md5 8d706420e0c469bd211d6055c04cd187 keys ['jsCode']
+Cure Normalize               NEW md5 a38f606a14fb2ca05d9664c89a341ce5 keys ['jsCode']
+Panel Build                  NEW md5 4f959f38fc8bef17e6637a3fad7e0119 keys ['jsCode']
+Panel Cure Build 1           NEW md5 ee8e78b03755aaaf54071134699ebd2d keys ['jsCode']
+Panel Cure Build 2           NEW md5 56e91febb62054285fd86867cf697069 keys ['jsCode']
+Panel Cure Build 3           NEW md5 12de367c109412454c264be006e48b8a keys ['jsCode']
+Panel Cure Check             NEW md5 d5e48cc6fe486de1842db41f900b3e8a keys ['jsCode']
+Panel Cure Normalize 1       NEW md5 54d9ceb7fb673959b073701650a0f0b9 keys ['jsCode']
+Panel Cure Normalize 2       NEW md5 c86b23681ea8dfde0820148cc819ba29 keys ['jsCode']
+Panel Cure Normalize 3       NEW md5 3780615574b58a1c49494561d0a312ac keys ['jsCode']
+other nodes 215 | differing from live: none | connections equal: True | node sets equal: True
+
+fetched/ (jsCode saved by script from the tool's file) md5s equal new/: yes
+
+== Rerun from the fetched code
+fetched14 mode full | expected status 56/56
+fetched14 nodes 14 | n0 press found, no SHORT: UNCURED 14/14 | n1 SHORT [CR2] quote not in CR2: UNCURED 14/14 | n2 SHORT [CR2] real answer: CURED 14/14 | n3 SHORT [CR2] one word changed: UNCURED 14/14 | n4 pressed in [DR2]: CR2 not an answering round 14/14 | n5 SHORT [CR2] quoting the verse words both sides quote: UNCURED 14/14 | n6 SHORT [CR3] for a verse CR3 does not name: UNCURED 14/14
+  L1 defender: Luke 3:23 listed new false | Matthew 1:25 listed new false | Genesis 4:1 listed new false
+  L1 defender: Luke 3:23 listed new false | Matthew 1:25 listed new false | Genesis 4:1 listed new false
+L4 both nodes same ledger text: true | L5 prose names later rounds: true
+Build_Independent_Verdict.js | defender list with CR2 blanked equals base: true | challenger list with DR2 blanked equals base: true
+Panel_Build.js | defender list with CR2 blanked equals base: true | challenger list with DR2 blanked equals base: true
