@@ -19,7 +19,7 @@ def ls(rev,folder):return [l for l in subprocess.run(['git','-C',REPO,'ls-tree',
 err=lambda m:fail.append(m)
 P='prototypes/bb6904/'
 E_REV='404300a' # Worker_E's builds p2, p4, p5b, p7, pinned (BB-7024 AMEND 1): the last commit that changed any of them
-REVS={'p2':E_REV,'p3':'0b3cbac','p4':E_REV,'p5b':E_REV,'p6':'d0d5aab','p7':E_REV}
+REVS={'p2':E_REV,'p3':'0b3cbac','p4':E_REV,'p5b':E_REV,'p6':'d0d5aab','p7':E_REV,'pF':'afb3f19'} # pF: portion F (BB-7072, 7078)
 # Pinned and clean (BB-7025 item 2a): every source is a commit id (never a branch or HEAD) that resolves; and where a source folder
 # exists in this checkout, its files must equal the pinned commit's (a folder edited after pinning fails until re-pinned).
 for tag,rev in REVS.items():
@@ -39,7 +39,7 @@ SRC=[
  ('Build Save Body',('p6','p6/out/Build_Save_Body.js')),
  ('Panel Tokens',('p6','p6/out/Panel_Tokens.js')),
  ('Cure Build',('p6','p6/out/Cure_Build.js')),('Cure Normalize',('p6','p6/out/Cure_Normalize.js')),('Cure Check',('p6','p6/out/Cure_Check.js')),
- ('Panel Cure Check',('p6','p6/out/Panel_Cure_Check.js')),
+ ('Panel Cure Check',('pF','pF/Panel_Cure_Check.js')), # portion F: step 6 rev 4's file (d0d5aab) plus alt_needed (BB-7069 option 1)
  ('Init Seats',('p7','p7/out/Init_Seats.js')),('Resolve Seats',('p7','p7/out/Resolve_Seats.js')),
  ('Format Markdown',('p7','p7/out/Format_Markdown.js')),('Panel Done',('p7','p7/out/Panel_Done.js')),
  ('Alternate Build',('p7','p7/out/Alternate_Build.js')),('Alternate Payloads',('p7','p7/out/Alternate_Payloads.js')),
@@ -57,6 +57,7 @@ NOT_USED={
  'p5b/out/Panel_Cure_Check.js':'step 6 rev 4 is built on it and carries both changes (BB-7021)',
  'p6/out/Format_Markdown.js':'p7 builds Format Markdown on it (p7/out/Format_Markdown.js is used)',
  'p6/out/cure_lib.js':'library, embedded; not a node',
+ 'p6/out/Panel_Cure_Check.js':'portion F builds on it and adds alt_needed (pF/Panel_Cure_Check.js is used; BB-7073 handover)',
  'p3/drv_block.js':'library (portion 3 check block), embedded in the extractor nodes; not a node',
  'p3/drv_check.js':'library (portion 3 checker for the harnesses); not a node',
 }
@@ -77,8 +78,8 @@ def rm_edge(e):
  k=[x for x in l if x['node']==e['to']]
  if len(k)!=1:err('connection to remove not found once: %s'%e)
  else:l.remove(k[0])
-# 2. Structure: p4 then p7.
-for tag,path in (('p4','p4/ops.json'),('p7','p7/out/ops7.json')):
+# 2. Structure: p4, then p7, then portion F's one edit (Alternate Needed? reads alt_needed; BB-7069 option 1).
+for tag,path in (('p4','p4/ops.json'),('p7','p7/out/ops7.json'),('pF','pF/opsF.json')):
  ops=json.loads(show(REVS[tag],P+path))
  for n in ops['nodes_add']:
   if n['name'] in nodes:err('%s adds %s, which exists'%(tag,n['name']))
@@ -143,7 +144,7 @@ for name,n in nodes.items():
  c0=n['parameters']['jsCode'];c1=deliver(name,c0)
  if c1!=c0:n['parameters']['jsCode']=c1;claims.setdefault(name,[]).append('delivered bytes')
 # 4. Every code file accounted for.
-for tag in ('p2','p3','p4','p5b','p6','p7'):
+for tag in ('p2','p3','p4','p5b','p6','p7','pF'):
  folder={'p5b':'p5b/out','p6':'p6/out','p7':'p7/out'}.get(tag,tag)
  for f in ls(REVS[tag],P+folder):
   rel=f[len(P):]

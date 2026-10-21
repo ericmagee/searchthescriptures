@@ -1,0 +1,9 @@
+Portion F results (Worker_E, 2026-10-20 23:0x CDT), falsifiers as declared in BB-7078.
+compose.py with pF pinned at afb3f19, on live db281705 (scratchpad a4/post.json): OK; composed.json md5 bf4b4170.
+(4) recomposed vs 71bb32b6: node names equal, connections equal, settings equal; nodes differing: Panel Cure Check, Alternate Needed? only.
+    Panel Cure Check jsCode diff: line 175 return replaced by the alt_needed block (6 lines, ASCII only); every other field equal.
+(1) allexpr2.cjs (n8n engine @n8n/tournament 1.11.1): new or changed vs live: 41 nodes, 45 expressions, 0 parse failures;
+    all nodes: 160 nodes, 179 expressions, 0 parse failures. (71bb32b6 had 1, Alternate Needed?.)
+(2) fivebody.cjs on pF/Panel_Cure_Check.js and on the composed node's jsCode: 6 cases OK; mutants killed: fixed true (2 cases),
+    fixed false (4), malformed counted as above 0 (1). On the d0d5aab file (no alt_needed): 2 cases fail, as it must.
+(3) mutants.py: 15 PASS, failures 0. delivered_check: the change adds no non-ASCII and leaves the DRV_SRC line as composed.
