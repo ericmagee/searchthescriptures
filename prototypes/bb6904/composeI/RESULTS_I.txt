@@ -1,0 +1,24 @@
+composeI (base db281705 = live file a4/post.json): OK; composed.json md5 1c037eef; differs from composeH's d017da3a in Format Markdown only (jsCode = pI/Format_Markdown.js aad422cd); connections equal.
+allexpr2: 160 nodes, 179 expressions, parse failures 0 (same as H).
+harness rev7/render_harness.cjs on stored rows (no flow, no model call):
+  27433 (data md5 a34f798d): render wrong-if b240054 SILENT (1 removed seat(s); count 7 violations: 6 cured, 1 not cured); the H code's render FIRED all three limbs.
+  ODV1-27259-75fg8o6t (data md5 cb82224b, no drv_removed): composed I render byte-identical to H render.
+mutantsI:
+PASS unmutated: passes
+PASS live of another version: refused
+PASS duplicate SRC entry: refused, naming it
+PASS SRC node missing: refused, naming it
+PASS SRC node not Code: refused, naming it
+PASS file unaccounted: refused, naming it
+PASS ops7 vs file: refused, naming it
+PASS missing reference: refused, naming it
+PASS p7 drops a p4 change: refused, naming it
+PASS superseded leaf loses the moved read: refused, naming it
+PASS unpinned source: refused, naming it
+PASS pin older than the checkout: refused, naming it
+PASS escape outside the DRV_SRC line: refused, naming it
+PASS Format Markdown back on p7: refused, naming it
+PASS connection to missing node: refused, naming it
+PASS dirty checkout: refused, naming it
+PASS dirty pI: refused, naming it
+failures 0
