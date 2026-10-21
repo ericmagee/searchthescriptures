@@ -1,0 +1,37 @@
+1. DETECTION (drvCheck), per judge: live K-G1 | new K-G1 K-G4
+27177 single   live 0 | new 0 4
+27177 deepseek live 0 | new 0 3
+27177 gemini   live 0 | new 0 6
+27177 grok     live 0 | new 0 3
+27191 single   live 1 | new 1 2
+27191 deepseek live 0 | new 0 3
+27191 gemini   live 0 | new 0 2
+27191 grok     live 0 | new 0 6
+27208 single   live 0 | new 0 3
+27208 deepseek live 0 | new 0 1
+27208 gemini   live 0 | new 0 1
+27208 grok     live 0 | new 0 2
+27259 single   live 2 | new 2 1
+27259 deepseek live 3 | new 3 0
+27259 gemini   live 0 | new 0 6
+27259 grok     live 1 | new 1 2
+27433 single   live 1 | new 1 1
+27433 glm      live 0 | new 0 0
+27433 gemini   live 0 | new 0 3
+27433 grok     live 0 | new 0 2
+TOTAL live {"K-G1":8,"K-G4":0} new {"K-G1":8,"K-G4":51}
+
+2. CURE VERDICTS (K-G4 and K-G5) on 27433 single judge D4 vs C2, Luke 3:23 named in CR3; DR1 quote: "Mary conceived by the Holy Ghost without a man." ; CR3 quote: "I take thee, O Zerubbabel, my servant, the son of Shealtiel."
+PASS PRESSED true, no SHORT: UNCURED -- the link round CR3 names Luke 3:23; no SHORT line quoting it
+PASS PRESSED true + SHORT true: CURED -- pressed: quotation found in DR1; SHORT found in CR3
+PASS PRESSED false quote: UNCURED -- no quotation found in the named round
+PASS PRESSED wrong round: UNCURED -- PRESSED round [CR1] does not press the defender
+PASS WITHDRAWN: CURED -- withdrawn
+PASS SHORT with a false quote: UNCURED -- the link round CR3 names Luke 3:23; no SHORT line quoting it
+PASS prose only: UNCURED -- no PRESSED line and no WITHDRAWN line for D4 vs C2
+PASS K-G4 with a verse the link round does not name, PRESSED true: CURED
+
+3. REFUSAL TEXT CHECK over 30 stored rounds
+fired on ["27177:dlink"]
+
+HARNESS PASS
