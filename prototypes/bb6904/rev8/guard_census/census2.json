@@ -1,0 +1,845 @@
+[
+ {
+  "tok": "25502",
+  "at": "2026-10-13T02:02",
+  "dc": "contested",
+  "outcome": null,
+  "topic": "other sheep (John 10:16)",
+  "graded": [
+   "single"
+  ],
+  "keystone": [
+   "single"
+  ],
+  "judges": [
+   {
+    "seat": "single",
+    "graded": true,
+    "keystone": true,
+    "res": "CHALLENGER WINS ",
+    "ex": "RESULT: CHALLENGER WINS -- The defender\u2019s conclusion link was withdrawn under the guard-inadmissible test, so the standard reading failed and the challenger prevails on this round."
+   }
+  ]
+ },
+ {
+  "tok": "25572",
+  "at": "2026-10-13T16:52",
+  "dc": "study",
+  "outcome": "CHALLENGER PREVAILS",
+  "topic": "other sheep (John 10:16)",
+  "graded": [
+   "mimo",
+   "single",
+   "gemini"
+  ],
+  "keystone": [
+   "mimo",
+   "single",
+   "gemini"
+  ],
+  "judges": [
+   {
+    "seat": "mimo",
+    "graded": true,
+    "keystone": true,
+    "res": "CHALLENGER WINS ",
+    "ex": "[L3] The keystone D6 \u2014 'the other sheep of John 10:16 are ethnic outsiders, the nations, not the scattered Lo-ammi Northern Kingdom' \u2014 is a WHO-BELONGS verdict in named class vocabulary ('ethnic outsiders'), graded UNEXH"
+   },
+   {
+    "seat": "single",
+    "graded": true,
+    "keystone": true,
+    "res": "CHALLENGER WINS ",
+    "ex": "KEYSTONE: D6 -- WITHDRAWN \u2014 the last declared link itself (\u201cThe other sheep of John 10:16 are ethnic outsiders, the nations...\u201d) is a WHO-BELONGS verdict using class vocabulary and is graded unexhibited."
+   },
+   {
+    "seat": "gemini",
+    "graded": true,
+    "keystone": true,
+    "res": "CHALLENGER WINS",
+    "ex": "The defender's keystone link D6 assigns an 'ethnic outsiders' identity to the 'other sheep', which is a guard-inadmissible WHO-BELONGS VERDICT and is graded WITHDRAWN."
+   },
+   {
+    "seat": "deepseek",
+    "graded": false,
+    "keystone": false,
+    "res": "CHALLENGER WINS ",
+    "ex": ""
+   }
+  ]
+ },
+ {
+  "tok": "25581",
+  "at": "2026-10-13T18:35",
+  "dc": "contested",
+  "outcome": "CHALLENGER PREVAILS",
+  "topic": "other sheep (John 10:16)",
+  "graded": [
+   "deepseek",
+   "gemini",
+   "chatgpt",
+   "single"
+  ],
+  "keystone": [
+   "deepseek",
+   "gemini",
+   "single"
+  ],
+  "judges": [
+   {
+    "seat": "deepseek",
+    "graded": true,
+    "keystone": true,
+    "res": "CHALLENGER WINS ",
+    "ex": "BROKEN \u2014 The defender's keystone D6 was a WHO-BELONGS VERDICT (\"ethnic outsiders\u2014Gentiles, not the scattered Lo-ammi Northern Kingdom\") and is graded UNEXHIBITED and WITHDRAWN under the guard-inadmissible class."
+   },
+   {
+    "seat": "gemini",
+    "graded": true,
+    "keystone": true,
+    "res": "CHALLENGER WINS ",
+    "ex": "However, the defender's keystone conclusion (D6) that the \"other sheep\" are \"ethnic outsiders\" is a Guard-Inadmissible who-belongs verdict [L4] (DG-1/DG-60) graded unexhibited and counted as withdrawn, and the defender a"
+   },
+   {
+    "seat": "chatgpt",
+    "graded": true,
+    "keystone": false,
+    "res": "CHALLENGER WINS ",
+    "ex": "CONCEDED LINKS: 3 -- Premise 1, charged against D4: UNEXHIBITED (guard-inadmissible WHO-BELONGS inference distinguishing Gentile stock from returning Israelite seed;"
+   },
+   {
+    "seat": "single",
+    "graded": true,
+    "keystone": true,
+    "res": "CHALLENGER WINS ",
+    "ex": "KEYSTONE: D6 \u2014 WITHDRAWN \u2014 The declared conclusion link is guard-inadmissible as a WHO-BELONGS VERDICT using \u201cethnic outsiders\u2014Gentiles.\u201d"
+   }
+  ]
+ },
+ {
+  "tok": "25592",
+  "at": "2026-10-13T20:43",
+  "dc": "study",
+  "outcome": "CHALLENGER PREVAILS",
+  "topic": "other sheep (John 10:16)",
+  "graded": [
+   "deepseek",
+   "single",
+   "chatgpt",
+   "gemini"
+  ],
+  "keystone": [
+   "deepseek",
+   "single",
+   "chatgpt",
+   "gemini"
+  ],
+  "judges": [
+   {
+    "seat": "deepseek",
+    "graded": true,
+    "keystone": true,
+    "res": "CHALLENGER WINS ",
+    "ex": "BROKEN \u2014 The defender's [CR3] answer conceded D4, and the final D6 conclusion is a GUARD-INADMISSIBLE who-belongs verdict ('ethnic outsiders\u2014the Gentiles'), so D6 is graded unexhibited and withdrawn [L1][L4]."
+   },
+   {
+    "seat": "single",
+    "graded": true,
+    "keystone": true,
+    "res": "CHALLENGER WINS ",
+    "ex": "KEYSTONE: D6 -- WITHDRAWN -- the final \u201cethnic outsiders\u201d conclusion is a WHO-BELONGS VERDICT in the guard-inadmissible class, so it is unexhibited despite its L1/L3 footings."
+   },
+   {
+    "seat": "chatgpt",
+    "graded": true,
+    "keystone": true,
+    "res": "CHALLENGER WINS ",
+    "ex": "KEYSTONE: D6 -- WITHDRAWN -- The conclusion identifies the other sheep as ethnic outsiders rather than Israel, a guard-inadmissible who-belongs verdict."
+   },
+   {
+    "seat": "gemini",
+    "graded": true,
+    "keystone": true,
+    "res": "CHALLENGER WINS ",
+    "ex": "The defender's keystone link (D6) asserts that the \"other sheep\" of [L1] John 10:16 are \"ethnic outsiders,\" which is a who-belongs verdict in the GUARD-INADMISSIBLE class (DG-1/DG-60) and is therefore graded UNEXHIBITED "
+   }
+  ]
+ },
+ {
+  "tok": "25634",
+  "at": "2026-10-14T00:22",
+  "dc": "contested",
+  "outcome": null,
+  "topic": "other sheep (John 10:16)",
+  "graded": [
+   "single"
+  ],
+  "keystone": [],
+  "judges": [
+   {
+    "seat": "single",
+    "graded": true,
+    "keystone": false,
+    "res": "CHALLENGER WINS ",
+    "ex": "under GUARD-INADMISSIBLE that link is graded unexhibited and withdrawn."
+   }
+  ]
+ },
+ {
+  "tok": "25720",
+  "at": "2026-10-14T03:33",
+  "dc": "contested",
+  "outcome": null,
+  "topic": "other sheep (John 10:16)",
+  "graded": [
+   "single"
+  ],
+  "keystone": [
+   "single"
+  ],
+  "judges": [
+   {
+    "seat": "single",
+    "graded": true,
+    "keystone": true,
+    "res": "CHALLENGER WINS ",
+    "ex": "The declared chain\u2019s conclusion [L4] \u201cethnic outsiders (Gentiles), not the scattered Lo-ammi Northern Kingdom\u201d is a GUARD-INADMISSIBLE WHO-BELONGS verdict and is graded UNEXHIBITED;"
+   }
+  ]
+ },
+ {
+  "tok": "25804",
+  "at": "2026-10-14T14:46",
+  "dc": "study",
+  "outcome": "CHALLENGER PREVAILS",
+  "topic": "other sheep (John 10:16)",
+  "graded": [
+   "chatgpt",
+   "gemini"
+  ],
+  "keystone": [
+   "chatgpt"
+  ],
+  "judges": [
+   {
+    "seat": "chatgpt",
+    "graded": true,
+    "keystone": true,
+    "res": "CHALLENGER WINS ",
+    "ex": "KEYSTONE: D6 -- WITHDRAWN -- The conclusion identifying the other sheep as ethnic outsiders is guard-inadmissible;"
+   },
+   {
+    "seat": "gemini",
+    "graded": true,
+    "keystone": false,
+    "res": "CHALLENGER WINS ",
+    "ex": "The defender explicitly conceded Links 2, 3, 4, 5, and Premise 6 of Link 6 as floating [L4] inferences in [CR3], and its remaining defense of Link 6 Premise 5 (\"ethnic outsiders\") is a WHO-BELONGS VERDICT in the GUARD-IN"
+   }
+  ]
+ },
+ {
+  "tok": "25833",
+  "at": "2026-10-14T16:54",
+  "dc": "study",
+  "outcome": "CHALLENGER PREVAILS",
+  "topic": "other sheep (John 10:16)",
+  "graded": [
+   "chatgpt",
+   "single",
+   "deepseek",
+   "gemini"
+  ],
+  "keystone": [
+   "single",
+   "deepseek",
+   "gemini"
+  ],
+  "judges": [
+   {
+    "seat": "chatgpt",
+    "graded": true,
+    "keystone": false,
+    "res": "CHALLENGER WINS ",
+    "ex": "premise 6 against D5: UNEXHIBITED (guard-inadmissible belonging verdict), notwithstanding its displayed citations."
+   },
+   {
+    "seat": "single",
+    "graded": true,
+    "keystone": true,
+    "res": "CHALLENGER WINS ",
+    "ex": "KEYSTONE: D5 -- WITHDRAWN \u2014 The conclusion link asserts the other sheep are \u201cethnic outsiders,\u201d which is a guarded who-belongs verdict by ethnicity/outsider status, not a text-stated party held at [L3] with the census di"
+   },
+   {
+    "seat": "deepseek",
+    "graded": true,
+    "keystone": true,
+    "res": "CHALLENGER WINS",
+    "ex": "BROKEN: The defender's keystone D5 rests on the guard-inadmissible WHO-BELONGS verdict 'ethnic outsiders' (DG-60), so it is graded UNEXHIBITED and WITHDRAWN."
+   },
+   {
+    "seat": "gemini",
+    "graded": true,
+    "keystone": true,
+    "res": "CHALLENGER WINS ",
+    "ex": "The defender's declared chain breaks because the keystone conclusion D5 asserts that the other sheep of John 10:16 [L1] are \"ethnic outsiders,\" which is a GUARD-INADMISSIBLE who-belongs verdict by ethnicity/descent in wo"
+   }
+  ]
+ },
+ {
+  "tok": "25869",
+  "at": "2026-10-14T20:18",
+  "dc": "study",
+  "outcome": "CHALLENGER PREVAILS",
+  "topic": "other sheep (John 10:16)",
+  "graded": [
+   "chatgpt",
+   "gemini"
+  ],
+  "keystone": [
+   "gemini"
+  ],
+  "judges": [
+   {
+    "seat": "chatgpt",
+    "graded": true,
+    "keystone": false,
+    "res": "CHALLENGER WINS ",
+    "ex": "D3: WITHDRAWN -- Its declared 'ethnic foreigner' identification beyond Israel's outcasts is an ethnic who-belongs inference and is therefore UNEXHIBITED under GUARD-INADMISSIBLE;"
+   },
+   {
+    "seat": "gemini",
+    "graded": true,
+    "keystone": true,
+    "res": "",
+    "ex": "The challenger held the Ezekiel 34/37 shepherd-and-two-sticks gathering at [L3] (DG-19) while conceding three of its own [L4] extensions in [DR3].\\nRESULT: CHALLENGER WINS -- The defender conceded four of the six links i"
+   }
+  ]
+ },
+ {
+  "tok": "25907",
+  "at": "2026-10-14T22:22",
+  "dc": "study",
+  "outcome": "CHALLENGER PREVAILS",
+  "topic": "other sheep (John 10:16)",
+  "graded": [
+   "deepseek",
+   "gemini"
+  ],
+  "keystone": [
+   "deepseek",
+   "gemini"
+  ],
+  "judges": [
+   {
+    "seat": "deepseek",
+    "graded": true,
+    "keystone": true,
+    "res": "CHALLENGER WINS ",
+    "ex": "KEYSTONE: D5 \u2014 WITHDRAWN \u2014 the conclusion link is guard-inadmissible ('ethnic outsiders' who-belongs verdict) and counts withdrawn."
+   },
+   {
+    "seat": "chatgpt",
+    "graded": false,
+    "keystone": false,
+    "res": "CHALLENGER WINS ",
+    "ex": ""
+   },
+   {
+    "seat": "gemini",
+    "graded": true,
+    "keystone": true,
+    "res": "CHALLENGER WINS ",
+    "ex": "The defender explicitly conceded links 1, 2, and 3 in [CR3] as floating [L4] inferences without prior-layer footing, and the conclusion link D5 ('ethnic outsiders (Gentiles)') falls into the GUARD-INADMISSIBLE WHO-BELONG"
+   }
+  ]
+ },
+ {
+  "tok": "26085",
+  "at": "2026-10-15T05:04",
+  "dc": "study",
+  "outcome": "CHALLENGER PREVAILS",
+  "topic": "other sheep (John 10:16)",
+  "graded": [
+   "chatgpt"
+  ],
+  "keystone": [
+   "chatgpt"
+  ],
+  "judges": [
+   {
+    "seat": "gemini",
+    "graded": false,
+    "keystone": false,
+    "res": "CHALLENGER WINS ",
+    "ex": ""
+   },
+   {
+    "seat": "chatgpt",
+    "graded": true,
+    "keystone": true,
+    "res": "CHALLENGER WINS ",
+    "ex": "D3, D5 and D6 additionally assert the guard-inadmissible ethnic-outsider identity, so the conclusion link is WITHDRAWN regardless of its exhibited [L1][L2][L3] citations."
+   }
+  ]
+ },
+ {
+  "tok": "26086",
+  "at": "2026-10-15T05:20",
+  "dc": "contested",
+  "outcome": "DEFENDER PREVAILS",
+  "topic": "other sheep (John 10:16)",
+  "graded": [
+   "gemini",
+   "single",
+   "deepseek",
+   "chatgpt"
+  ],
+  "keystone": [],
+  "judges": [
+   {
+    "seat": "gemini",
+    "graded": true,
+    "keystone": false,
+    "res": "DEFENDER WINS --",
+    "ex": "The challenger conceded C1 in [DR3] and rested C2 through C6 on origin, stock, lineage, and birth-status who-belongs verdicts that fall into the guard-inadmissible class (DG-1/DG-21/DG-60) and are graded unexhibited."
+   },
+   {
+    "seat": "single",
+    "graded": true,
+    "keystone": false,
+    "res": "DEFENDER WINS --",
+    "ex": "The challenger's counter-identification rests on who-belongs verdicts (\"ethnic outsiders,\" \"wild by nature,\" \"another nation\") that the guard grades [L4] unexhibited."
+   },
+   {
+    "seat": "deepseek",
+    "graded": true,
+    "keystone": false,
+    "res": "DEFENDER WINS --",
+    "ex": "[L3] The challenger built a coherent Gentile reading, but its load-bearing who-belongs/ethnic-outsider verdicts are guard-inadmissible and therefore unexhibited whatever their footings, which collapses the challenge by t"
+   },
+   {
+    "seat": "chatgpt",
+    "graded": true,
+    "keystone": false,
+    "res": "DEFENDER WINS --",
+    "ex": "C2: UNEXHIBITED (guard-inadmissible), because its answer expressly places the woman outside the house of Israel by stock and excludes her from Lo-ammi Israel;"
+   }
+  ]
+ },
+ {
+  "tok": "26112",
+  "at": "2026-10-15T06:36",
+  "dc": "study",
+  "outcome": "CHALLENGER PREVAILS",
+  "topic": "other sheep (John 10:16)",
+  "graded": [
+   "single",
+   "deepseek",
+   "gemini",
+   "chatgpt"
+  ],
+  "keystone": [
+   "single",
+   "deepseek",
+   "gemini",
+   "chatgpt"
+  ],
+  "judges": [
+   {
+    "seat": "single",
+    "graded": true,
+    "keystone": true,
+    "res": "CHALLENGER WINS ",
+    "ex": "BROKEN \u2014 The keystone D6 claims the other sheep are \"ethnic outsiders, the Gentiles, not the scattered Lo-ammi House of Israel,\" which is a WHO-BELONGS VERDICT ordered UNEXHIBITED by the guard as a floating [L4] identity"
+   },
+   {
+    "seat": "deepseek",
+    "graded": true,
+    "keystone": true,
+    "res": "CHALLENGER WINS ",
+    "ex": "BROKEN -- The defender's own conclusion link is a guard-inadmissible who-belongs verdict: [L4] 'ethnic outsiders' assigns the other sheep to a non-Israelite people-group and is graded unexhibited whatever foothold it exh"
+   },
+   {
+    "seat": "gemini",
+    "graded": true,
+    "keystone": true,
+    "res": "CHALLENGER WINS ",
+    "ex": "The defender's declared chain fails under BROKEN-2 because five of six links, including the keystone D6, are withdrawn or ordered graded unexhibited under the GUARD-INADMISSIBLE rule (DG-1/DG-21/DG-60)."
+   },
+   {
+    "seat": "chatgpt",
+    "graded": true,
+    "keystone": true,
+    "res": "CHALLENGER WINS ",
+    "ex": "KEYSTONE: D6 -- WITHDRAWN -- The conclusion identifies the other sheep as ethnic outsiders and excludes the northern house, an expressly prohibited who-belongs verdict."
+   }
+  ]
+ },
+ {
+  "tok": "TEST-",
+  "at": "2026-10-15T08:35",
+  "dc": "contested",
+  "outcome": null,
+  "topic": "other sheep (John 10:16)",
+  "graded": [
+   "single"
+  ],
+  "keystone": [
+   "single"
+  ],
+  "judges": [
+   {
+    "seat": "single",
+    "graded": true,
+    "keystone": true,
+    "res": "CHALLENGER WINS ",
+    "ex": "BROKEN \u2014 The keystone D6 claims the other sheep are \"ethnic outsiders, the Gentiles, not the scattered Lo-ammi House of Israel,\" which is a WHO-BELONGS VERDICT ordered UNEXHIBITED by the guard as a floating [L4] identity"
+   }
+  ]
+ },
+ {
+  "tok": "26163",
+  "at": "2026-10-15T10:08",
+  "dc": "study",
+  "outcome": "CHALLENGER PREVAILS",
+  "topic": "other sheep (John 10:16)",
+  "graded": [
+   "chatgpt",
+   "gemini"
+  ],
+  "keystone": [
+   "chatgpt",
+   "gemini"
+  ],
+  "judges": [
+   {
+    "seat": "chatgpt",
+    "graded": true,
+    "keystone": true,
+    "res": "CHALLENGER WINS ",
+    "ex": "BROKEN \u2014 The defender's conclusion link D6 is WITHDRAWN under the guard against who-belongs verdicts, independently of the validity of the charge against it."
+   },
+   {
+    "seat": "gemini",
+    "graded": true,
+    "keystone": true,
+    "res": "",
+    "ex": "The challenger held its scattered-flock and two-house convergence at [L3] via [L1] Ezekiel 34:12, 23 and [L1] John 11:52 ([L2] dieskorpismena) while conceding only its overextended 'never' claim in C3.\\nRESULT: CHALLENGE"
+   }
+  ]
+ },
+ {
+  "tok": "26224",
+  "at": "2026-10-15T14:56",
+  "dc": "contested",
+  "outcome": "CHALLENGER PREVAILS",
+  "topic": "other sheep (John 10:16)",
+  "graded": [
+   "chatgpt",
+   "single",
+   "gemini",
+   "deepseek"
+  ],
+  "keystone": [
+   "chatgpt",
+   "single",
+   "gemini",
+   "deepseek"
+  ],
+  "judges": [
+   {
+    "seat": "chatgpt",
+    "graded": true,
+    "keystone": true,
+    "res": "CHALLENGER WINS ",
+    "ex": "The conclusion D6 assigns the sheep an ethnic-outsider identity and therefore is guard-inadmissible [L4], graded UNEXHIBITED and WITHDRAWN regardless of its cited footing."
+   },
+   {
+    "seat": "single",
+    "graded": true,
+    "keystone": true,
+    "res": "CHALLENGER WINS ",
+    "ex": "BROKEN \u2014 The defender\u2019s conclusion link D6 is a WHO-BELONGS VERDICT (\u201cethnic outsiders, the Gentiles\u201d) and is graded UNEXHIBITED under the guard, so the keystone is withdrawn [L4]."
+   },
+   {
+    "seat": "gemini",
+    "graded": true,
+    "keystone": true,
+    "res": "CHALLENGER WINS",
+    "ex": "The defender's conclusion link D6 claims the other sheep are \"ethnic outsiders,\" which is a who-belongs verdict explicitly barred by the GUARD-INADMISSIBLE rule and graded UNEXHIBITED."
+   },
+   {
+    "seat": "deepseek",
+    "graded": true,
+    "keystone": true,
+    "res": "",
+    "ex": "[L4] No defender link was broken by an exhibited contrary text, so the break is the keystone withdrawal under BROKEN-2.\\nRESULT: CHALLENGER WINS -- BROKEN sends the verdict to the challenger.\\nCLAUSE: BROKEN-2 -- n=6 w=1"
+   }
+  ]
+ },
+ {
+  "tok": "26240",
+  "at": "2026-10-15T16:10",
+  "dc": "study",
+  "outcome": "CHALLENGER PREVAILS",
+  "topic": "other sheep (John 10:16)",
+  "graded": [
+   "gemini",
+   "single",
+   "deepseek"
+  ],
+  "keystone": [
+   "gemini",
+   "single",
+   "deepseek"
+  ],
+  "judges": [
+   {
+    "seat": "gemini",
+    "graded": true,
+    "keystone": true,
+    "res": "",
+    "ex": "The defender's keystone link D6 concludes that the other sheep are \\\"ethnic outsiders,\\\" which is a guard-inadmissible who-belongs verdict [L4] and is graded unexhibited and withdrawn."
+   },
+   {
+    "seat": "single",
+    "graded": true,
+    "keystone": true,
+    "res": "CHALLENGER WINS ",
+    "ex": "RESULT: CHALLENGER WINS -- The defender\u2019s conclusion link is withdrawn by the guard-inadmissible rule as a who-belongs verdict, so the defense breaks and the challenger\u2019s reading prevails."
+   },
+   {
+    "seat": "chatgpt",
+    "graded": false,
+    "keystone": false,
+    "res": "CHALLENGER WINS ",
+    "ex": ""
+   },
+   {
+    "seat": "deepseek",
+    "graded": true,
+    "keystone": true,
+    "res": "CHALLENGER WINS ",
+    "ex": "RESULT: CHALLENGER WINS -- The defense's keystone conclusion was guard-inadmissible and withdrawn, so the challenger's L3 reading carries the debate."
+   }
+  ]
+ },
+ {
+  "tok": "26257",
+  "at": "2026-10-15T17:29",
+  "dc": "study",
+  "outcome": "CHALLENGER PREVAILS",
+  "topic": "other sheep (John 10:16)",
+  "graded": [
+   "chatgpt",
+   "deepseek"
+  ],
+  "keystone": [
+   "chatgpt"
+  ],
+  "judges": [
+   {
+    "seat": "chatgpt",
+    "graded": true,
+    "keystone": true,
+    "res": "CHALLENGER WINS ",
+    "ex": "Independently, D6's conclusion that the sheep are ethnic outsiders is a guard-inadmissible who-belongs verdict, graded UNEXHIBITED and therefore WITHDRAWN."
+   },
+   {
+    "seat": "deepseek",
+    "graded": true,
+    "keystone": false,
+    "res": "",
+    "ex": "The declared chain of six links was not maintained: [CR3] expressly conceded all six challenger-listed premises mapped to D1-D5, and D6's own claim ('ethnic outsiders') is a WHO-BELONGS VERDICT under the GUARD-INADMISSIB"
+   },
+   {
+    "seat": "gemini",
+    "graded": false,
+    "keystone": false,
+    "res": "CHALLENGER WINS",
+    "ex": ""
+   }
+  ]
+ },
+ {
+  "tok": "26285",
+  "at": "2026-10-15T21:57",
+  "dc": "study",
+  "outcome": "CHALLENGER PREVAILS",
+  "topic": "other sheep (John 10:16)",
+  "graded": [
+   "gemini",
+   "deepseek",
+   "single",
+   "chatgpt"
+  ],
+  "keystone": [
+   "gemini",
+   "deepseek",
+   "single"
+  ],
+  "judges": [
+   {
+    "seat": "gemini",
+    "graded": true,
+    "keystone": true,
+    "res": "CHALLENGER WINS",
+    "ex": "The defender's keystone link and two other declared links are guard-inadmissible who-belongs verdicts, which are graded unexhibited and count as withdrawn."
+   },
+   {
+    "seat": "deepseek",
+    "graded": true,
+    "keystone": true,
+    "res": "CHALLENGER WINS",
+    "ex": "BROKEN: The declared keystone D5 and the declared links D2-D4 each carry the who-belongs verdict 'ethnic outsiders'/'Jew with Gentile' in words the cited texts do not use, so DG-60 grades them UNEXHIBITED despite their L"
+   },
+   {
+    "seat": "single",
+    "graded": true,
+    "keystone": true,
+    "res": "CHALLENGER WINS ",
+    "ex": "D2\u2013D4 carry the same who-belongs claim at their own layer, so they are also WITHDRAWN, and with the keystone WITHDRAWN BROKEN-2 fires."
+   },
+   {
+    "seat": "chatgpt",
+    "graded": true,
+    "keystone": false,
+    "res": "CHALLENGER WINS ",
+    "ex": "CONCEDED LINKS: 1 -- Premise 1: UNEXHIBITED (guard-inadmissible who-belongs verdict, notwithstanding exhibited citations): \u201canother tribe, not the house of Israel under a mask.\u201d Premise 2: SUPPORTED, because CR3 expressl"
+   }
+  ]
+ },
+ {
+  "tok": "26296",
+  "at": "2026-10-15T23:11",
+  "dc": "study",
+  "outcome": "CHALLENGER PREVAILS",
+  "topic": "other sheep (John 10:16)",
+  "graded": [
+   "chatgpt",
+   "single",
+   "deepseek",
+   "grok"
+  ],
+  "keystone": [
+   "chatgpt",
+   "single",
+   "deepseek"
+  ],
+  "judges": [
+   {
+    "seat": "chatgpt",
+    "graded": true,
+    "keystone": true,
+    "res": "CHALLENGER WINS ",
+    "ex": "KEYSTONE: D4 -- WITHDRAWN -- The conclusion that the other sheep are ethnic outsiders is a guard-inadmissible who-belongs verdict."
+   },
+   {
+    "seat": "single",
+    "graded": true,
+    "keystone": true,
+    "res": "CHALLENGER WINS ",
+    "ex": "RESULT: CHALLENGER WINS \u2014 the defender's conclusion link identifying the \"other sheep\" as ethnic outsiders is a guard-inadmissible who-belongs verdict and is withdrawn, so the standard reading fails."
+   },
+   {
+    "seat": "deepseek",
+    "graded": true,
+    "keystone": true,
+    "res": "CHALLENGER WINS ",
+    "ex": "KEYSTONE: D4 -- WITHDRAWN -- D4 concludes that the other sheep are ethnic outsiders (Gentiles), an explicit who-belongs verdict graded UNEXHIBITED by the GUARD-INADMISSIBLE CLASS;"
+   },
+   {
+    "seat": "grok",
+    "graded": true,
+    "keystone": false,
+    "res": "CHALLENGER WINS ",
+    "ex": "Floating [L4]s named before weighing: defender D1 (ethnic Jews / the Circumcision), D2 (uncircumcised nations beyond all tribes of Jacob), D3 (ethnic Jew and ethnic Gentile), D4 (ethnic outsiders), and the [CR3] restatem"
+   }
+  ]
+ },
+ {
+  "tok": "26313",
+  "at": "2026-10-16T00:41",
+  "dc": "study",
+  "outcome": "CHALLENGER PREVAILS",
+  "topic": "other sheep (John 10:16)",
+  "graded": [
+   "chatgpt",
+   "deepseek",
+   "single"
+  ],
+  "keystone": [
+   "chatgpt",
+   "deepseek",
+   "single"
+  ],
+  "judges": [
+   {
+    "seat": "chatgpt",
+    "graded": true,
+    "keystone": true,
+    "res": "CHALLENGER WINS ",
+    "ex": "BROKEN \u2014 [L4] The declared ethnic-outsider conclusion falls within the expressly inadmissible who-belongs class, so D6 is WITHDRAWN notwithstanding its cited [L1]\u2013[L3] stack."
+   },
+   {
+    "seat": "deepseek",
+    "graded": true,
+    "keystone": true,
+    "res": "CHALLENGER WINS ",
+    "ex": "BROKEN: The defender's keystone D6 asserts the other sheep are 'ethnic outsiders (the nations)' and is a who-belongs verdict by the guard's explicit vocabulary, so it is guard-inadmissible and WITHDRAWN, firing BROKEN-2."
+   },
+   {
+    "seat": "single",
+    "graded": true,
+    "keystone": true,
+    "res": "CHALLENGER WINS ",
+    "ex": "BROKEN \u2014 The conclusion link D6 is a WHO-BELONGS VERDICT phrased as \u201cethnic outsiders,\u201d so the guard orders it graded UNEXHIBITED and WITHDRAWN;"
+   },
+   {
+    "seat": "gemini",
+    "graded": false,
+    "keystone": false,
+    "res": "CHALLENGER WINS",
+    "ex": ""
+   }
+  ]
+ },
+ {
+  "tok": "26919",
+  "at": "2026-10-19T17:31",
+  "dc": "study",
+  "outcome": "DEFENDER PREVAILS",
+  "topic": "What does Luke mean by \"as was supposed\" in Luke 3:23?",
+  "graded": [
+   "single",
+   "deepseek"
+  ],
+  "keystone": [
+   "single",
+   "deepseek"
+  ],
+  "judges": [
+   {
+    "seat": "single",
+    "graded": true,
+    "keystone": true,
+    "res": "CHALLENGER WINS ",
+    "ex": "The GUARD-INADMISSIBLE block therefore grades D6 UNEXHIBITED and, as the keystone, WITHDRAWN;"
+   },
+   {
+    "seat": "grok",
+    "graded": false,
+    "keystone": false,
+    "res": "DEFENDER WINS --",
+    "ex": ""
+   },
+   {
+    "seat": "deepseek",
+    "graded": true,
+    "keystone": true,
+    "res": "CHALLENGER WINS ",
+    "ex": "RESULT: CHALLENGER WINS \u2014 the defender's declared chain is broken because the conclusion link D6 is withdrawn as a guard-inadmissible who-belongs verdict."
+   }
+  ]
+ }
+]
