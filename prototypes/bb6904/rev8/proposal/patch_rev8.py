@@ -34,22 +34,43 @@ A.append(("  else if(k[1]==='RESTATED'&&",
  "  else if(k[1]==='SHORT'&&(m=r.match(/^D(\\d+)\\s+vs\\.?\\s+C(\\d+)\\s*\\|\\s*\\[(CR3|DR3)\\]\\s*\\|\\s*[\"“](.+?)[\"”]\\s*\\|\\s*(\\S.{9,})$/i)))o.short.push({link:cureId(m[1],m[2]),round:m[3].toUpperCase(),q:m[4],why:m[5],line:l});\n"
  "  else if(k[1]==='RESTATED'&&"))
 # F. cure verdicts: K-G4, and the SHORT requirement (K-G5) on K-G1 and K-G4 cures
+# K-G5 helpers (7194 defects 1 and 2): reference reader and the link round's answer blocks, inserted before cureVerdicts.
+A.append(("function cureVerdicts(items,reply,broken,rounds){",
+ "// BB-6904 rev 8 K-G5: verse references in a text, each with its position: a book (capitalised word, first three letters; 1-3 prefix kept;\n"
+ "// Mt Mk Lk Jn Ex Ro read as Matthew Mark Luke John Exodus Romans), chapter:verse, a range (at most 30 verses), comma lists (\"1:16, 1:18\",\n"
+ "// \"1:16,18,20\"); a bare chapter:verse with no book before it takes the last book named (\"Matthew 1:19 ... 1:25\").\n"
+ "const CURE_BK={mt:'mat',mk:'mar',lk:'luk',jn:'joh',ex:'exo',ro:'rom'};\n"
+ "function cureRefs(t){const out=[];const s=String(t||'');let last=null;const re=/(?:((?:[1-3]\\s)?[A-Z][a-z]+)\\.?\\s+)?(\\d{1,3}):(\\d{1,3})(?:\\s*[-–]\\s*(\\d{1,3}))?((?:\\s*,\\s*(?:\\d{1,3}:)?\\d{1,3}(?:\\s*[-–]\\s*\\d{1,3})?)*)/g;let m;\n"
+ " while((m=re.exec(s))){let bk=last;if(m[1]){const b=m[1].toLowerCase().replace(/\\s+/g,' ');const n=b.match(/^([1-3]) (.+)$/);const base0=n?n[2]:b;bk=(n?n[1]+' ':'')+(CURE_BK[base0]||base0.slice(0,3));last=bk;}\n"
+ "  if(!bk)continue;const add=(c,v1,v2)=>{if(!v2||v2<v1||v2-v1>30)v2=v1;for(let v=v1;v<=v2;v++)out.push({key:bk+' '+c+':'+v,pos:m.index});};\n"
+ "  let ch=+m[2];add(ch,+m[3],m[4]?+m[4]:0);\n"
+ "  for(const p of (m[5]||'').split(',').map(x=>x.trim()).filter(Boolean)){const q=p.match(/^(?:(\\d{1,3}):)?(\\d{1,3})(?:\\s*[-–]\\s*(\\d{1,3}))?$/);if(!q)continue;if(q[1])ch=+q[1];add(ch,+q[2],q[3]?+q[3]:0);}}\n"
+ " return out;}\n"
+ "// The verses of a line's first parentheses that the link round names, each with the link round's answer to it: the text from 300 characters\n"
+ "// before each naming to 1,200 after, kept inside the LINK block that holds the naming (7194 defect 1: a whole block let an unrelated sentence cure).\n"
+ "function cureNamed(line,LR){const p=String(line||'').match(/\\(([^)]*\\d+:\\d+[^)]*)\\)/);if(!p)return [];const want=new Set(cureRefs(p[1]).map(r=>r.key));if(!want.size)return [];\n"
+ " const heads=[];const hr=/^[ \\t>*#_-]*LINK\\s+\\d+/gmi;let h;while((h=hr.exec(LR)))heads.push(h.index);\n"
+ " const win=(pos)=>{let a=0,b=LR.length;for(const x of heads){if(x<=pos)a=x;else{b=x;break;}}return LR.slice(Math.max(a,pos-300),Math.min(b,pos+1200));};\n"
+ " const by={};for(const r of cureRefs(LR))if(want.has(r.key))(by[r.key]=by[r.key]||[]).push(win(r.pos));\n"
+ " return Object.keys(by).map(k=>({ref:k,blocks:by[k]}));}\n"
+  "function cureVerdicts(items,reply,broken,rounds){"))
 A.append(("  if(!reply||!reply.ok)return res('UNCURED','cure call failed: '+(reply?reply.why:'no reply'),null);",
  "  if(!reply||!reply.ok)return res('UNCURED','cure call failed: '+(reply?reply.why:'no reply'),null);\n"
- "  // BB-6904 rev 8 K-G5 (operational_doc 27 class 1): the verses in the line's parentheses that the answering link round names; for those a\n"
- "  // SHORT line quoting that link round (found in its text) must stand beside the PRESSED line.\n"
- "  const lrK=x.side==='DEFENDER'?'CR3':'DR3';const refsIn=(ln)=>{const p=String(ln||'').match(/\\(([^)]*\\d+:\\d+[^)]*)\\)/);return p?p[1].split(/;\\s*/).map(s=>s.trim()).filter(Boolean):[];};\n"
- "  const named=(x.rule==='K-G1'||x.rule==='K-G4')&&typeof R[lrK]==='string'?refsIn(x.line).filter(r=>cureQ(R[lrK]).includes(cureQ(r))):[];\n"
- "  const shortOk=()=>!named.length||o.short.some(s=>U(s.link)===U(x.link)&&s.round===lrK&&cureFound(s.q,R[lrK]));\n"
+ "  // BB-6904 rev 8 K-G5 (operational_doc 27 class 1): the verses of the line's parentheses that the answering link round names; for those a\n"
+ "  // SHORT line must quote that link round's own answer: words found near its naming of the verse (cureNamed: 300 characters before to 1,200\n"
+ "  // after, inside its LINK block). References are read by cureRefs (lists, ranges, short book names, inherited book).\n"
+ "  const lrK=x.side==='DEFENDER'?'CR3':'DR3';const LR=typeof R[lrK]==='string'?R[lrK]:'';\n"
+ "  const named=(x.rule==='K-G1'||x.rule==='K-G4')&&LR?cureNamed(x.line,LR):[];const namedTxt=named.map(n=>n.ref).join(', ');\n"
+ "  const shortOk=()=>!named.length||o.short.some(s=>U(s.link)===U(x.link)&&s.round===lrK&&named.some(n=>n.blocks.some(b=>cureFound(s.q,b))));\n"
  "  if(x.rule==='K-G4'){if(wd.has(U(x.link)))return res('CURED','withdrawn',o.withdrawn.filter(w=>U(w.link)===U(x.link)).map(w=>w.line));\n"
  "   const ps=o.pressed.filter(p=>U(p.link)===U(x.link));const sl=o.short.filter(s=>U(s.link)===U(x.link)).map(s=>s.line);const lines=ps.map(p=>p.line).concat(sl);\n"
  "   if(!ps.length)return res('UNCURED','no PRESSED line and no WITHDRAWN line for '+x.link,lines);\n"
  "   const ok=ps.filter(p=>CURE_PRESS[x.side].includes(p.round));if(!ok.length)return res('UNCURED','PRESSED round '+ps.map(p=>'['+p.round+']').join(', ')+' does not press the '+x.side.toLowerCase(),lines);\n"
  "   const hit=ok.find(p=>typeof R[p.round]==='string'&&cureFound(p.q,R[p.round]));if(!hit)return res('UNCURED',ok.every(p=>typeof R[p.round]!=='string')?'the named round text could not be read':'no quotation found in the named round',lines);\n"
- "   if(!shortOk())return res('UNCURED','the link round '+lrK+' names '+named.join(', ')+'; no SHORT line quoting it',lines);\n"
- "   return res('CURED','pressed: quotation found in '+hit.round+(named.length?'; SHORT found in '+lrK:''),lines);}"))
+ "   if(!shortOk())return res('UNCURED','the link round '+lrK+' names '+namedTxt+'; no SHORT line quoting its answer',lines);\n"
+ "   return res('CURED','pressed: quotation found in '+hit.round+(named.length?'; SHORT found in '+lrK+\"'s answer to \"+namedTxt:''),lines);}"))
 A.append(("   if(hit)return res('CURED','corrected: '+x.side+' COUNT '+ns[0]+'; quotation found in '+hit.round,lines);",
- "   if(hit&&!shortOk())return res('UNCURED','the link round '+lrK+' names '+named.join(', ')+'; no SHORT line quoting it',lines);\n"
+ "   if(hit&&!shortOk())return res('UNCURED','the link round '+lrK+' names '+namedTxt+'; no SHORT line quoting its answer',lines);\n"
  "   if(hit)return res('CURED','corrected: '+x.side+' COUNT '+ns[0]+'; quotation found in '+hit.round,lines);"))
 A.append(("const keys=x.rule==='K-B'?[x.link]:x.rule==='K-G1'?[x.link,x.side]:",
  "const keys=x.rule==='K-B'?[x.link]:(x.rule==='K-G1'||x.rule==='K-G4')?[x.link,x.side]:"))

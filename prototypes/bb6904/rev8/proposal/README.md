@@ -9,3 +9,8 @@
 3. Modules: from Panel Payloads cut "const DRV_REF=" through the end of drvCheck, from Cure Check cut "const CURE_RULE=" through the end of
    cureReport, from Format Markdown cut "const drvRead" through its end, concatenate, export {drvCheck,cureVerdicts,cureAsk,cureReport,drvRead}; once from the live files (mod_live.js), once from the patched (mod_new.js).
 4. node harness_rev8.cjs five.json mod_live.js mod_new.js  -> HARNESS_RESULT.txt (expected: HARNESS PASS).
+
+## Amendment for 7194 (git after be398cb)
+- K-G5 defect 1: a SHORT quote must sit in the link round's answer to the verse: 300 characters before to 1,200 after each naming, inside its LINK block (cureNamed). The unrelated same-block sentence 7194 named is now UNCURED (harness case).
+- K-G5 defect 2: cureRefs reads comma lists, ranges, short book names (Matt, Jer, Mt...), slash pairs, and a bare chapter:verse inherits the last book named. Detection over the 56 lines: 21 lines, including the 10 7194 names.
+- Note 3 (refusal check limit) and note 4 (cost) go into the operator text: the refusal check is one exact provider sentence measured on one row (27177); other wordings pass as a round. Cost on the five rows: judges sent to a cure call, live 18 of 20, new 19 of 20; the new items ride the same cure call as the old ones, so the added cost is mostly a longer ask and answer, plus one call in twenty.

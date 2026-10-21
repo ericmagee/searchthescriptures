@@ -18,14 +18,20 @@ console.log('TOTAL live',JSON.stringify(tot.live),'new',JSON.stringify(tot.new))
 // 2. CURE VERDICTS on synthetic replies (the code that grades a cure; the judge's actual reply needs a model call and is UNEXERCISED).
 const r=D.find(x=>x.tok.includes('27433'));const RR=R(r);
 const sent=(s)=>{const m=String(s).replace(/\s+/g,' ').match(/[A-Z][^.?!"“”*#\[\]]{40,140}[.?!]/);return m?m[0]:null;};
-const dq=sent(RR.DR1),cq=(()=>{const i=RR.CR3.indexOf('Luke 3:23');return sent(RR.CR3.slice(i));})();
+const dq=sent(RR.DR1);
+// The defender link round's own answer to Luke 3:23: a sentence of the LINK block that names it (7194 defect 1); and an unrelated
+// sentence of the same round from a block that does not name it (the quote 7189's harness wrongly let cure).
+const nm=N.cureNamed('D4 vs C2 (Luke 3:23): DEFENDER LINK BROKEN',RR.CR3);const blk=(nm[0]||{blocks:['']}).blocks[0];
+const cq=(()=>{const m=blk.match(/Luke 3:23, whole: "([^"]+)"/);return m?m[1]:null;})();const uq='I take thee, O Zerubbabel, my servant, the son of Shealtiel.';
 const line='D4 vs C2 (Luke 3:23): DEFENDER LINK BROKEN — [L1] Luke 3:23 says "being (as was supposed) the son of Joseph"; [CR3] never answers.';
 const item={rule:'K-G4',side:'DEFENDER',link:'D4 vs C2',line};const B={DEFENDER:['D4 vs C2'],CHALLENGER:[]};
 const T=(name,reply,exp)=>{const v=N.cureVerdicts([item],{ok:true,text:reply},B,RR)[0];console.log((v.status===exp?'PASS ':'FAIL ')+name+': '+v.status+' -- '+v.why);return v.status===exp;};
-console.log('\n2. CURE VERDICTS (K-G4 and K-G5) on 27433 single judge D4 vs C2, Luke 3:23 named in CR3; DR1 quote:',JSON.stringify(dq).slice(0,90),'; CR3 quote:',JSON.stringify(cq).slice(0,90));
-let ok=true;
+console.log('\n2. CURE VERDICTS (K-G4 and K-G5) on 27433 single judge D4 vs C2; the answer block names Luke 3:23:',nm.length===1,'; DR1 quote:',JSON.stringify(dq).slice(0,80),'; answer quote:',JSON.stringify(cq).slice(0,80));
+let ok=nm.length===1&&!!cq&&!nm[0].blocks.some(b=>b.includes(uq.slice(0,40)))&&RR.CR3.includes(uq.slice(0,40));
+console.log((ok?'PASS ':'FAIL ')+'setup: the unrelated sentence is in the link round (same LINK block) but outside the answer window');
 ok&=T('PRESSED true, no SHORT',`PRESSED: D4 vs C2 | [DR1] | "${dq}"`,'UNCURED');
-ok&=T('PRESSED true + SHORT true',`PRESSED: D4 vs C2 | [DR1] | "${dq}"\nSHORT: D4 vs C2 | [CR3] | "${cq}" | the link round restates the register and never shows why supposed does not overturn it`,'CURED');
+ok&=T('PRESSED true + SHORT from the answer block',`PRESSED: D4 vs C2 | [DR1] | "${dq}"\nSHORT: D4 vs C2 | [CR3] | "${cq}" | the link round restates the register and never shows why supposed does not overturn it`,'CURED');
+ok&=T('PRESSED true + SHORT quoting an unrelated link-round sentence (7194 defect 1)',`PRESSED: D4 vs C2 | [DR1] | "${dq}"\nSHORT: D4 vs C2 | [CR3] | "${uq}" | it falls short of the text`,'UNCURED');
 ok&=T('PRESSED false quote',`PRESSED: D4 vs C2 | [DR1] | "these words are not in the round at all anywhere"`,'UNCURED');
 ok&=T('PRESSED wrong round',`PRESSED: D4 vs C2 | [CR1] | "${dq}"`,'UNCURED');
 ok&=T('WITHDRAWN','WITHDRAWN: D4 vs C2','CURED');
@@ -33,6 +39,20 @@ ok&=T('SHORT with a false quote',`PRESSED: D4 vs C2 | [DR1] | "${dq}"\nSHORT: D4
 ok&=T('prose only','I stand by my line.','UNCURED');
 const item2={rule:'K-G4',side:'DEFENDER',link:'D3 vs C4',line:'D3 vs C4 (Genesis 99:99): DEFENDER LINK BROKEN'};
 const v2=N.cureVerdicts([item2],{ok:true,text:`PRESSED: D3 vs C4 | [DR1] | "${dq}"`},{DEFENDER:['D3 vs C4']},RR)[0];console.log((v2.status==='CURED'?'PASS ':'FAIL ')+'K-G4 with a verse the link round does not name, PRESSED true: '+v2.status);ok&=v2.status==='CURED';
+// 2b. K-G5 detection over every DEFENDER LINK BROKEN line of the five rows (7194 defect 2): reference shapes the reader must take.
+{const rf=(t)=>N.cureRefs(t).map(r=>r.key);const eq=(a,b)=>JSON.stringify(a)===JSON.stringify(b);
+ const cases=[['Matthew 1:16, 1:18',['mat 1:16','mat 1:18']],['Matthew 1:16,18,20,25',['mat 1:16','mat 1:18','mat 1:20','mat 1:25']],['Matthew 1:18-20',['mat 1:18','mat 1:19','mat 1:20']],['Matt 1:25',['mat 1:25']],['Jer 22:30; Luke 3:23',['jer 22:30','luk 3:23']],['Isaiah 7:14/Matthew 1:23',['isa 7:14','mat 1:23']],['1 Chronicles 3:5',['1 chr 3:5']],['Matthew 1:18, 25',['mat 1:18','mat 1:25']]];
+ for(const [t,e] of cases){const g=rf(t);console.log((eq(g,e)?'PASS ':'FAIL ')+'refs of "'+t+'": '+JSON.stringify(g));ok&=eq(g,e);}
+ let lines=0,hit=[];for(const r of D){const RRr=R(r);const js=[{seat:'single',raw:r.single}].concat((r.judges||[]).map(j=>({seat:j.seat,raw:j.raw})));
+  for(const j of js)for(const l of text(j.raw).split('\n')){if(!(l.includes('DEFENDER LINK BROKEN')&&/^\W*D\d+\s+vs/.test(l)))continue;lines++;const n=N.cureNamed(l,RRr.CR3||'');if(n.length)hit.push(r.tok.slice(5,10)+' '+j.seat+' '+l.match(/D\d+\s+vs\s+C\d+/)[0]+' ['+n.map(x=>x.ref).join(', ')+']');}}
+ console.log('K-G5 named over',lines,'lines:',hit.length);hit.forEach(h=>console.log('  '+h));
+ const need=['27433 single D4 vs C2','27191 gemini D5 vs C1','27191 gemini D6 vs C1','27208 single D6','27208 grok D6','27259 single D4','27259 single D5','27259 single D6','27259 deepseek D5','27259 grok D6'];
+ const miss=need.filter(n=>!hit.some(h=>h.startsWith(n)));console.log((miss.length?'FAIL ':'PASS ')+'the 10 lines 7194 names are detected'+(miss.length?'; missing: '+miss.join('; '):''));ok&=!miss.length;}
+// 2c. COST (7194 note 4): judges sent to a cure call, live against new, over the 20 judges of the five rows.
+{let cl=0,cn=0,n=0;for(const r of D){const js=[{raw:r.single}].concat((r.judges||[]).map(j=>({raw:j.raw})));for(const j of js){n++;let st={};try{st=JSON.parse(String(j.raw).split('\n\n[AUDIT')[0]);}catch(e){}const t=text(j.raw);const ds=(t.match(/DEFENSE STANDING:\s*([A-Z-]+)/)||[])[1]||null,cs=(t.match(/CHALLENGE STANDING:\s*([A-Z-]+)/)||[])[1]||null;
+  const dc=st.conceded_links!=null?st.conceded_links:(()=>{const m=t.match(/CONCEDED LINKS:\s*(\d+)/);return m?+m[1]:null;})();const cc=st.challenger_conceded_links!=null?st.challenger_conceded_links:(()=>{const m=t.match(/CHALLENGER CONCEDED LINKS:\s*(\d+)/);return m?+m[1]:null;})();
+  if(L.drvCheck(t,dc,cc,ds,cs,false).items.length)cl++;if(N.drvCheck(t,dc,cc,ds,cs,false).items.length)cn++;}}
+ console.log('COST: judges sent to a cure call, live',cl,'of',n,'; new',cn,'of',n,'(each cure call resends the judge\'s own request body plus its answer)');}
 // 3. The refusal check: the patched extract's pattern over every stored round of the five rows.
 console.log('\n3. REFUSAL TEXT CHECK over 30 stored rounds');const RFT=/^\s*The request was rejected because it was considered high risk\.?\s*$/i;
 let fired=[];for(const x of D)for(const k of ['dr1','dr2','dlink','cr1','cr2','clink']){const body=String(x[k]||'').replace(/^[^\n]*-- ROUND \d[^\n]*\n\n/,'');if(RFT.test(body))fired.push(x.tok.slice(5,10)+':'+k);}
