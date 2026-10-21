@@ -1,0 +1,13 @@
+WITHDRAWN cure portion, revised per BB-7321 (replaces W1-W6 and L3 of FALSIFIERS.txt). Builder Worker_E, declared before building.
+Base: Worker_A3's curefix/new/ files (git 000eab1, NEW_MD5S a47717b3), the 14 cure nodes.
+Edit 1 (checker, cureVerdicts, K-B branch): a K-B item whose link is named on a WITHDRAWN line in the exact form (WITHDRAWN: D<n> vs C<m>) is CURED 'withdrawn', as K-G1 and K-G4 already are. Anchor: "if(x.rule==='K-B'){const rs=o.restated.filter(r=>U(r.link)===U(x.link));" once per node.
+Edit 2 (cure text, CURE_FORM): directly after the STATEMENT form line, one line with the 7321 rule text verbatim.
+(a) one WITHDRAWN line cures K-B, K-G1 and K-G4 on its link, every node.
+(b) "Withdrawn" inside a STATEMENT cures nothing (a K-B, K-G1 and K-G4 item with only that statement stay UNCURED).
+(c) a WITHDRAWN line naming another link cures nothing on this link.
+(d) keystone and BROKEN-2 reading unchanged: each node differs from base in exactly the two edits (diff); no code outside cureVerdicts' K-B branch and CURE_FORM changes.
+(e) the 7300 falsifiers F1-F3 (harness.cjs) still pass on the new files.
+(f) single-site misedit: a probe set with edit 1 missing from one node fails (a) on that node; one with edit 2 missing fails the served-text check on that node.
+(g) served text: cureAsk run from each node's source returns the rule text once, after the STATEMENT line.
+(h) replay of 27563 gemini: rows 71, 73, 75 (K-B on D1 vs C7, D2 vs C6, D4 vs C7) read CURED 'withdrawn' from its stored WITHDRAWN lines.
+Not checked: behaviour inside n8n; whether a judge obeys the text (only the live run shows that).
