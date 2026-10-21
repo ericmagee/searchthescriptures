@@ -53,14 +53,14 @@ unanswered witness. Removing a line that fails (b) and grading the link by the l
 | 27208 | no | grok | BROKEN-1 k=2 | 2 | none; both class 1 | BROKEN-1 | HELD-1, DEFENDER WINS |
 | 27208 | | PANEL | CHALLENGER PREVAILS 3-0 | | | CHALLENGER PREVAILS 3-0 | DEFENDER PREVAILS 2-1 |
 | 27259 | YES | single | BROKEN-1 k=3 | 3 | all 3 (b) | HELD-1, DEFENDER WINS | same |
-| 27259 | YES | deepseek | BROKEN-1 k=3 | 3 | D6 (b); D4, D5 name [DR1]/[DR2] and quote text found there, kept | BROKEN-1 k=2 | HELD-1 (D4, D5 class 1) |
+| 27259 | YES | deepseek | BROKEN-1 k=3 | 3 | D6 (b); D4, D5 name [DR1]/[DR2] and quote text found there, kept (whether those words press the witness: UNCOMPUTABLE) | BROKEN-1 k=2 | HELD-1 (D4, D5 class 1) |
 | 27259 | YES | gemini | BROKEN-1 k=6, def COLLAPSED c=6 | 6 | all 6 (b) | HELD-1, DEFENDER WINS (note A) | same |
 | 27259 | YES | grok | BROKEN-1 k=3 | 3 | all 3 (b) | HELD-1, DEFENDER WINS | same |
 | 27259 | | PANEL | CHALLENGER PREVAILS 3-0 | | | DEFENDER PREVAILS 2-1 (note A) | DEFENDER PREVAILS 3-0 |
 | 27433 | YES | single | BROKEN-1 k=2 | 2 | D4 (b; also class 1, Luke 3:23); D6 (b; also (c): Jeremiah 31:22 is in DR3 only, note B) | HELD-1, DEFENDER WINS | same |
 | 27433 | YES | glm (alternate) | HELD-1 | 0 | none | HELD-1, DEFENDER WINS | same |
 | 27433 | YES | gemini | BROKEN-1 k=3 | 3 | all 3 (b) | HELD-1, DEFENDER WINS | same |
-| 27433 | YES | grok | BROKEN-1 k=1 | 1 | none: D6 names [DR1]/[DR2] and quotes words found in DR1 (7213 D1; note C) | BROKEN-1 k=1, CHALLENGER WINS | same |
+| 27433 | YES | grok | BROKEN-1 k=1 | 1 | none: D6 names [DR1]/[DR2] and quotes words found in DR1 (7213 D1; note C); the words are a layer verse's, so whether they press the witness: UNCOMPUTABLE | BROKEN-1 k=1, CHALLENGER WINS | same |
 | 27433 | YES | deepseek (removed seat) | BROKEN-1 k=1 | 1 | D6 (b): names no round (read by hand from drv_removed) | HELD-1, DEFENDER WINS | same |
 | 27433 | | PANEL | CHALLENGER PREVAILS 2-1 | | | DEFENDER PREVAILS 2-1 (deepseek seated or glm) | same |
 
