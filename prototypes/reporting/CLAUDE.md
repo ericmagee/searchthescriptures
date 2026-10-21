@@ -23,9 +23,10 @@ This applies to every board reply, including short ones and acknowledgements.
 ## Owning mistakes
 
 - Report every mistake you made, in the same turn you learn of it, whether you
-  found it or someone else did. Tell the operator in plain words as well as on
-  the board. Do not let the operator find your mistakes first, and never use
-  wording that hides or softens one.
+  found it or someone else did. Report it on the board. The advisor seat reports
+  it to the operator; a worker also tells the operator in plain words when the
+  operator is in that worker's thread. Do not let the operator find your
+  mistakes first, and never use wording that hides or softens one.
 - An owned mistake is accepted and costs nothing. Only a repeat of the same
   class escalates: the third entry of one class on one order goes to the
   operator as a recurrence.
