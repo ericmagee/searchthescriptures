@@ -160,3 +160,23 @@ Panel Cure Normalize 1       OTHER md5 9fdb32f4636ecf7124e31ec325afd089 keys ['j
 Panel Cure Normalize 2       OTHER md5 b4a400a49ec95d50fc288b8301cbef20 keys ['jsCode']
 Panel Cure Normalize 3       OTHER md5 d31ed7501d455d71f070380fcfcf074c keys ['jsCode']
 other nodes 215 | differing from live: none | connections equal: True | node sets equal: True
+
+== FETCH-BACK after batch 2 (nodes 7-11)
+draft 42a1afd4-ce86-4d66-b51c-bd99c2b2a6fe 2026-10-21T23:04:35.049Z nodes 231 | live 5fd3b03c-4e9d-4e16-8eeb-a89f199f75cc nodes 231
+Alternate Build              NEW md5 2025e7c19d34be9b161b63f5eb960779 keys ['jsCode']
+Alternate Cure Build         OTHER md5 8b75d0bb90f24aa00fc81bfa8b95144d keys ['jsCode']
+Alternate Cure Normalize     OTHER md5 960834ce8c6d6d14e4cebf5e943ae3c6 keys ['jsCode']
+Alternate Merge              OTHER md5 01cfc5081dfb799b83ae06f30ab4798c keys ['jsCode']
+Build Independent Verdict    BASE md5 d21f38f7e80074bf68797cc8ad25c71b keys ['jsCode']
+Cure Build                   NEW md5 977e66937ff47e5e3ed7dd09e2489a3b keys ['jsCode']
+Cure Check                   NEW md5 8d706420e0c469bd211d6055c04cd187 keys ['jsCode']
+Cure Normalize               NEW md5 a38f606a14fb2ca05d9664c89a341ce5 keys ['jsCode']
+Panel Build                  BASE md5 e18f5b7550abc0e7b923abb8b422bf1e keys ['jsCode']
+Panel Cure Build 1           NEW md5 ee8e78b03755aaaf54071134699ebd2d keys ['jsCode']
+Panel Cure Build 2           NEW md5 56e91febb62054285fd86867cf697069 keys ['jsCode']
+Panel Cure Build 3           NEW md5 12de367c109412454c264be006e48b8a keys ['jsCode']
+Panel Cure Check             NEW md5 d5e48cc6fe486de1842db41f900b3e8a keys ['jsCode']
+Panel Cure Normalize 1       NEW md5 54d9ceb7fb673959b073701650a0f0b9 keys ['jsCode']
+Panel Cure Normalize 2       NEW md5 c86b23681ea8dfde0820148cc819ba29 keys ['jsCode']
+Panel Cure Normalize 3       NEW md5 3780615574b58a1c49494561d0a312ac keys ['jsCode']
+other nodes 215 | differing from live: none | connections equal: True | node sets equal: True
