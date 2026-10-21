@@ -12,3 +12,10 @@ def patch(s):
        'WITHDRAWN if it is withdrawn or conceded; BROKEN if it is graded DEFENDER LINK BROKEN at a collision; STANDS otherwise.')
     assert s.count(C[0])==1;s=s.replace(*C)
     return s
+
+# E (7229): Format Markdown's reader section: drop the who-belongs bullet; three rules remain (UNEXHIBITED, VOID, KEYSTONE).
+def patch_fm(s):
+    i=s.index("- **Who-belongs verdicts.**");j=s.index("- **UNEXHIBITED.**",i)
+    old=s[i:j];assert s.count(old)==1;s=s.replace(old,'')
+    o2="The judges' rulebook adds four rules, quoted here in its own words.";assert s.count(o2)==1
+    return s.replace(o2,"The judges' rulebook adds three rules, quoted here in its own words.")
