@@ -1,0 +1,18 @@
+Step 3d (BB-7330, 7331, 7332), builder Worker_A3, declared before any file change.
+BASE: Worker_E's 9f5999c new/ files (NEW_MD5S 555cb67f), the 14 cure nodes.
+NODE SET, measured (read only): the 14 cure nodes and nothing else. Judgments are written by Write Judgment 1-3 from Alternate Merge's bodies through record_debate_judgment (a full-row replace, no tag check); the tally aggregate_debate_panel reads debate_judgments.verdict_tag; the write guard quarantines only on TRUNCAT, a length finish or an empty tag. So the counted verdict changes where the 14 set the payload: Panel Cure Check (panel seats), Alternate Merge (alternates), Cure Check (single judge, recorded, not counted).
+DESIGN: (A) keyword RETRACTED: D<n> vs C<m> replaces WITHDRAWN in CURE_KEY, the parser, every cure clause and form line, and the 9f5999c rule sentence; (B) new key CORRECTED RESULT: <CLAUSE tag>, tags measured from the judge prompts' CLAUSE line: BROKEN-1, BROKEN-2, PARTIAL-1, PARTIAL-2, PARTIAL-3 (Panel Build's exclusivity form), HELD-1; the counted word is the tag's prefix; (C) retractions cure only when exactly one valid CORRECTED RESULT line is present; (D) where a retraction cured, the payload's verdict_tag becomes the corrected word and one audit line records original, corrected and the retracted links; the judge's raw text is kept.
+FALSIFIERS, per 7330:
+ (1) no cure clause or form line says WITHDRAWN as the cure keyword; RETRACTED appears in each; the rule sentence reads RETRACTED.
+ (2) RETRACTED with no CORRECTED RESULT line cures nothing: each item it names stays UNCURED.
+ (3) RETRACTED with one valid CORRECTED RESULT cures every item on its link (K-B, K-G1, K-G4), as 9f5999c did.
+ (4) the payload verdict_tag equals the corrected word in Panel Cure Check and Alternate Merge wherever a retraction cured, else the original, byte for byte.
+ (5) CORRECTED RESULT with no RETRACTED line: recorded, verdict_tag unchanged.
+ (6) an old WITHDRAWN: D<n> vs C<m> line cures nothing.
+ (7) a tag outside the six (e.g. HELD, HELD-2, BROKEN) cures nothing and changes nothing.
+ (8) a one-node misedit fails (1) to (4) on that node.
+ (9) F1 to F3 (my harness) and (a) to (h) as rewritten for RETRACTED still pass.
+ (10) a 27563 gemini replay, rebuilt from the report and labelled so, with RETRACTED for its five links and CORRECTED RESULT HELD-1: 0 uncured, counted HELD; without the CORRECTED RESULT line: its retracted items UNCURED.
+ (L3) wrongif limbs per 7331, run on one good and one bad fixture before the completion row.
+ Also: no audit line carries the string TRUNCAT; node --check on all 14.
+NOT CHECKED: n8n behaviour; whether judges obey.
