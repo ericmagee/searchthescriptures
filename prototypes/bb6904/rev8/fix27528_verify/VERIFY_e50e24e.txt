@@ -1,0 +1,9 @@
+Worker_A3 verify of git e50e24e fix27528 (files only)
+patched md5s equal NODE_MD5S.txt 2f3c8733: 18 of 18
+diff against composed (published 804b870a): 17 nodes one insertion '(?<!\.)' before the period-space in the cut; Format_Markdown 6 hunks (fromNode records errors and empty reads; one print line)
+node --check: 18 patched + 63 published, 0 fail
+my_test.cjs:
+CHANGED 27528 gemini(removed) D6 vs C6 ["L3"] -> ["L1","L3"]
+lines 64 (five.json 60) changed 1 lost a kind 0
+sentence end still cuts: old ["L3"] new ["L3"]
+harness_rev8 with mod cut from patched: md5 7cda4c07, equal to published module run 7cda4c07
