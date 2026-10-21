@@ -1,0 +1,8 @@
+== wrongif L0-L2 (published matcher)
+L1 silent
+L2 silent
+== L1 with quote marks folded
+L1 FIRED: Single judge: DeepSeek D4 vs C2 quotation found in DR2 of Text 1,Text 2; Single judge: DeepSeek D5 vs C1 quotation found in DR2 of Text 1,Text 2; Single judge: DeepSeek D6 vs C2 quotation found in DR1 of Text 1,Text 2; Panel judge (removed): DeepSeek D3 vs C4 quotation found in DR1 of Text 1,Text 2; Panel judge (removed): DeepSeek D4 vs C2 quotation found in DR2 of Text 1,Text 2; Panel judge (removed): DeepSeek D5 vs C1 quotation found in DR2 of Text 1,Text 2
+L2 silent
+== L3
+rows 11 | judges listed 4 | limb A silent | limb B silent | limb C silent

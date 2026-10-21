@@ -1,0 +1,6 @@
+D4 vs C2 | raw false | brackets round false | quote marks made double false false
+D5 vs C1 | raw false | brackets round false | quote marks made double true true
+D6 vs C2 | raw false | brackets round false | quote marks made double false false
+D4 vs C2 | quote marks folded both sides true | folded + brackets round true
+D5 vs C1 | quote marks folded both sides true | folded + brackets round true
+D6 vs C2 | quote marks folded both sides false | folded + brackets round true
