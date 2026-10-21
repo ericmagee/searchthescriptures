@@ -1,0 +1,6 @@
+BB-6904 step 6, D (engine_manual v82), verifier's rebuild (BB-7242).
+v81 read from the database at the verifier's seat: engine_manual version 81, md5 c838fbb7b1cd0b233bb88b792f6ee5b5, 135685 chars; equal to A3's em81.txt (git 2c15d91).
+Pairs: A3 git 2c15d91 prototypes/bb6904/rev8/D/pairs_v82_six.json md5 4d567287 (six pairs; read whole).
+Each old occurs once in v81, and once in the working text when its pair is applied (no overlap). Applied in order by the verifier's own code (not build_v82.py).
+v82 rebuilt: md5 637c83db693a3171425fd9974ac50386, 135890 chars; equal to A3's em82.txt. P5 names 804b870a.
+V82 VERIFY: PASS
