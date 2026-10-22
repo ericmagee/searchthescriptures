@@ -1,0 +1,17 @@
+F14 RUN (Worker_E), new11 vs base11. Harnesses: h_f14.cjs (Citation Scan items), h_cite.cjs (Citation Scan -> Quote Compare -> Quote Report, KJV rows
+of the 25 books read by SQL), h_f14syn.cjs (constructed cases). Outputs: RUN_F14_BASE.txt, RUN_F14_CHAIN.txt, RUN_F14_SYN.txt.
+HARNESS CHECK: base11 reproduces the stored citation_check counts exactly: 27795 224/204/3/17 (row a0950904), 27665 162/155/0/7 (row 921f5530).
+F14.1 PASS  Luke 1:35 R3 link 5 opp_words true; left out (new 222 checked, 1 mismatch).
+F14.2 PASS  Acts 13:33 R3 link 5 opp_words true; left out.
+F14.3 PASS  Matthew 1:25 R1 opp_words false; WORDS ARE AT Matthew 1:21 still reported.
+F14.4 PASS  other side's words QUOTED, WORDS ARE AT Luke 1:32: reported on base and new.
+      F14.4x recorded: my first form of the case had the other side's words unquoted; the older OPP rule (BB-5773) already leaves that
+      item out on base and new, so it did not test this change. Rebuilt as F14.4.
+F14.5 PASS  WORDING NOT FOUND, not in the other side: reported.
+F14.6 PASS  same side earlier (a), other side later (b): reported.
+F14.7 PASS  pieces out of order: reported.
+F14.0 PASS  pieces in order, other side earlier: left out on new, reported on base.
+F14.8 PASS  27795: the only items whose report changes are F14.1 and F14.2; 27665: no item changes (multiset of side|round|ref|status equal).
+F14.9 PASS  by reading, no function called: judgments 789-791 HELD, truncated false, drv_uncured 0; RESULT lines deepseek UNDERDETERMINED, glm and
+      grok DEFENDER WINS; tie rule (derive 173f9465) needs 2*hu > h: 2*1 > 3 false; d5_outcome_for('HELD') = DEFENDER PREVAILS; with F14 no
+      DEFENDER load-bearing item is WORDING NOT FOUND, so citation_block is null. Outcome DEFENDER PREVAILS.
