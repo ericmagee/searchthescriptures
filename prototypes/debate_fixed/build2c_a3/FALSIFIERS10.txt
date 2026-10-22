@@ -1,0 +1,30 @@
+THE DEBATE FIXED (BB-7397), DoD 9 as typed arrays (ruling BB-7455; P2D rev 6 BB-7456), portion 2c. Builder Worker_A3. Declared BEFORE any file change.
+BASE: Worker_E's new9 at git 0779040 (claude/untitled-9jle0o), copied to base10/ (BASE10_MD5S.txt).
+THE FIELDS: the panel JSON schema (Panel Build SYS; the alternates and the reserve copy it) gains
+  "counted_premises_defender": the PRESSED-WITNESS LEDGER premise numbers counted in conceded_links ([] when none)
+  "counted_premises_challenger": the same for challenger_conceded_links ([] when none).
+The 2b text line sentence is removed from Panel Build and from Build Independent Verdict; the single judge stays prose.
+READING (all three raise nodes): absent (key missing or null): ABSENT. Present but not an array of integers >= 1: INVALID, the mark
+carries the raw value. Otherwise the set of those integers. No text in the judge's prose is read for the set; drvCP is removed.
+K-G6: a NOT NAMED premise of a side absent from that side's valid array is an item at ANY count; ABSENT or INVALID: (A), only at count 0.
+K-G7 defender: D<n> -> the ledger premises written (LINK n) (else premise n); an item when none is in the valid array; else (A).
+K-G8: a valid array whose size differs from that side's integer. Cure and uncured as in 2b.
+Single judge (Extract Independent Verdict): no fields, always ABSENT, so (A) only.
+CASES (ledger: defender premises 1-6, 1 and 3 NOT NAMED, premise n written (LINK n); challenger premise 1 NOT NAMED; D6 vs C3 DEFENDER LINK BROKEN):
+ T1 defender [1,3,6], count 3; challenger [1], count 1        -> no items
+ T2 defender [1,6], count 2                                    -> K-G6 DEFENDER premise 3 (count above 0)
+ T3 defender [], count 0                                       -> K-G6 D1, D3; K-G7 D6 vs C3
+ T4 defender key absent, count 2                               -> no K-G6/K-G7 for the defender; mark ABSENT
+ T5 defender key absent, count 0                               -> K-G6 D1, D3; K-G7 D6 vs C3 (A); mark ABSENT
+ T6 defender ["1","3"], count 2                                -> INVALID, mark carries ["1","3"]; (A): count 2, no items
+ T7 defender [1.5], count 1                                    -> INVALID
+ T8 defender "LINK 1, LINK 3", count 2                         -> INVALID, raw in mark
+ T9 defender [1,3], count 3                                    -> K-G8 DEFENDER; K-G7 D6 vs C3
+ T10 shifted ledger, premise 5 written (LINK 6): defender [5], count 1 -> no K-G7
+ T11 challenger [], count 0                                    -> K-G6 CHALLENGER premise 1
+ T12 the defender prose says "COUNTED PREMISES DEFENDER: 1, 3, 6" but the key is absent, count 0 -> the prose is not read: K-G6 D1, D3; K-G7 (A)
+ T13 Extract Independent Verdict on 27665's single judge: K-G6 D1, D3; K-G7 D6 vs C3 (counts 0 and 3)
+ T14 the 186 stored panel judgments (verdict_raw JSON): the key is absent in all; no item at a count >= 1 from the arrays
+ TEXT: Panel Build carries the two schema lines once and no COUNTED PREMISES line sentence; Build Independent Verdict carries none.
+ CURE (14 nodes): Q1-Q3 of FALSIFIERS9 unchanged (K-G8 cure through kCount).
+WRONG IF: rev 4's. The arrays stay UNEXERCISED until a live panel judge returns them.
