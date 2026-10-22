@@ -17,3 +17,13 @@ CURE (cureVerdicts and cureCorrected from each of the 14 cure nodes; item K-G7 D
  N3 nothing -> UNCURED.  N4 COUNT 0, PROP-DEPENDENT -> UNCURED.  N5 COUNT 1, SELF-SUPPORTED -> UNCURED.
  N6 with K-G6 DEFENDER premise 1 also raised: COUNT 1 PROP-DEPENDENT -> both UNCURED; COUNT 2 PROP-DEPENDENT -> both CURED.
 TEXT: the cure request labels the item "K-G7 D6 vs C3: <the line>"; Format Markdown names rule K-G7 in words.
+
+ADDENDUM (ruling BB-7430, option (c)), declared before its build: challenger-side K-G7 raises when CHALLENGER CONCEDED LINKS is 0 and a
+COLLISION line is CHALLENGER LINK BROKEN whose clause reads an unanswered witness (unanswered, not answered, unnamed, not named, never named,
+none named, neither named, unaddressed, unexhibited); no premise mapping; not raised where K-G1 raised the link (K-G1 already covers count 0
+with its own word list, which lacks "never named" and "unexhibited"). Limit: with the challenger count above 0 nothing is checked by number.
+ M5 27665: Gemini, Grok, GLM, single judge: no CHALLENGER K-G7 (M1 unchanged: only D6 vs C3 on Gemini and the single judge).
+ M6 challenger count 0, "D3 vs C2 (Luke 1:34): CHALLENGER LINK BROKEN -- ... never named"            -> K-G7 D3 vs C2
+ M7 the same line with "left unanswered"                                                              -> K-G1 only, no K-G7
+ M8 challenger count 1, the M6 line                                                                    -> none (the stated limit)
+ N7 cure of the M6 item: CORRECTED COUNT CHALLENGER 1, CORRECTED STANDING CHALLENGER PROP-DEPENDENT -> CURED; nothing -> UNCURED.

@@ -22,16 +22,24 @@ for(const n of ['Panel_Payloads','Alternate_Payloads']){let f;try{f=snip(n);}cat
  chk('M2c '+n,run(syn('CONCEDED LINKS: 1 -- premise 2 UNEXHIBITED'),1),'D6 vs C3');
  chk('M3 '+n,run(syn('CONCEDED LINKS: 0 -- none',BL.replace('named.','named; the witness was left unanswered.')),0),'none');
  chk('M4 '+n,run(syn('CONCEDED LINKS: 1 -- premise 2 UNEXHIBITED','D2 vs C4 (Luke 1:34): CHALLENGER LINK BROKEN -- [L1] "How shall this be" (Luke 1:34) and [L3] Matthew 1:18 named.'),1),'none');}
+ const CL='D3 vs C2 (Luke 1:34): CHALLENGER LINK BROKEN -- [L1] "How shall this be" (Luke 1:34) and [L3] Matthew 1:18 never named in [DR3].';
+ const synC=(cc,line)=>['CONCEDED LINKS: 1 -- premise 6 UNEXHIBITED','CHALLENGER CONCEDED LINKS: '+cc,'DEFENSE STANDING: PROP-DEPENDENT -- L=6 c=1','CHALLENGE STANDING: SELF-SUPPORTED -- L=6 c='+cc,'COLLISION POINTS:',line].join('\n');
+ const runC=(t,c)=>{try{const it=f(t,{body:{}},{body:{}},P(1,c,'PROP-DEPENDENT','SELF-SUPPORTED'),[]);return it.filter(x=>x.rule==='K-G7'||x.rule==='K-G1').map(x=>x.rule+' '+x.link).join(', ')||'none';}catch(x){return 'ERROR '+x.message;}};
+ chk('M6 '+n,runC(synC(0,CL),0),'K-G7 D3 vs C2');
+ chk('M7 '+n,runC(synC(0,CL.replace('never named in [DR3]','left unanswered')),0),'K-G1 D3 vs C2');
+ chk('M8 '+n,runC(synC(1,CL),1),'none');
 {const s=rd('Extract_Independent_Verdict');for(const [h,w,T,exp] of [J[3]]){const t=sec('## '+h);const body=t.slice(t.indexOf('\n')+1);
  const $=n=>({first:()=>({json:{verdictBody:{messages:[{role:'user',content:T}]}}}),all:()=>[],isExecuted:true});
  try{const r=new Function('$','$input',s)($,{first:()=>({json:{choices:[{message:{content:body},finish_reason:'stop'}]}})});chk('M1 Extract '+w,k7(r[0].json.debate_rule_violations||[]),exp);}catch(x){chk('M1 Extract '+w,'ERROR '+x.message,exp);}}}
 // cure, all 14 nodes
 const files=fs.readdirSync(dir).filter(f=>/Cure|Alternate_Build|Alternate_Merge/.test(f)&&f.endsWith('.js')).sort();
 const K7={rule:'K-G7',side:'DEFENDER',link:'D6 vs C3',line:BL,conc:0,st:'SELF-SUPPORTED',L:6,premise:6};
+const K7C={rule:'K-G7',side:'CHALLENGER',link:'D3 vs C2',line:'D3 vs C2 (Luke 1:34): CHALLENGER LINK BROKEN -- never named',conc:0,st:'SELF-SUPPORTED',L:6,premise:null};
 const K6={rule:'K-G6',side:'DEFENDER',link:'DEFENDER premise 1',line:'premise 1 (LINK 1): carried; NOT NAMED: Psalms 132:11',conc:0,st:'SELF-SUPPORTED',L:6};
 const CASES={N1:[[K7],['CORRECTED COUNT: DEFENDER 1','CORRECTED STANDING: DEFENDER PROP-DEPENDENT'],'CURED'],N2:[[K7],['RETRACTED: D6 vs C3','CORRECTED RESULT: HELD-1'],'CURED'],
  N3:[[K7],[],'UNCURED'],N4:[[K7],['CORRECTED COUNT: DEFENDER 0','CORRECTED STANDING: DEFENDER PROP-DEPENDENT'],'UNCURED'],N5:[[K7],['CORRECTED COUNT: DEFENDER 1','CORRECTED STANDING: DEFENDER SELF-SUPPORTED'],'UNCURED'],
- N6a:[[K6,K7],['CORRECTED COUNT: DEFENDER 1','CORRECTED STANDING: DEFENDER PROP-DEPENDENT'],'UNCURED UNCURED'],N6b:[[K6,K7],['CORRECTED COUNT: DEFENDER 2','CORRECTED STANDING: DEFENDER PROP-DEPENDENT'],'CURED CURED']};
+ N6a:[[K6,K7],['CORRECTED COUNT: DEFENDER 1','CORRECTED STANDING: DEFENDER PROP-DEPENDENT'],'UNCURED UNCURED'],N6b:[[K6,K7],['CORRECTED COUNT: DEFENDER 2','CORRECTED STANDING: DEFENDER PROP-DEPENDENT'],'CURED CURED'],
+ N7a:[[K7C],['CORRECTED COUNT: CHALLENGER 1','CORRECTED STANDING: CHALLENGER PROP-DEPENDENT'],'CURED'],N7b:[[K7C],[],'UNCURED']};
 const tally={};
 for(const f of files){const s=fs.readFileSync(dir+'/'+f,'utf8');const i=s.indexOf('\nfunction cureCorrected');const a=s.indexOf('function cureCorrected(');const b=s.indexOf('const cureCorrLine=');
  let F;try{F=new Function(s.slice(0,i)+'\n'+s.slice(a,b)+'\n;return {cureVerdicts,cureCorrected,cureSet,cureAsk};')();}catch(x){tally['load ERROR '+x.message]=(tally['load ERROR '+x.message]||0)+1;continue;}
