@@ -1,0 +1,6 @@
+Panel_Payloads items: K-G4 D6 vs C3, K-G3 null, K-G6 DEFENDER premise 1, K-G6 DEFENDER premise 3, K-G7 D6 vs C3
+Alternate_Payloads items: K-G4 D6 vs C3, K-G3 null, K-G6 DEFENDER premise 1, K-G6 DEFENDER premise 3, K-G7 D6 vs C3
+Extract items: DEFENDER premise 1, DEFENDER premise 3
+Panel_Cure_Check columns: PROP-DEPENDENT,1 | PROP-DEPENDENT,1
+Cure_Check columns: PROP-DEPENDENT,1 | PROP-DEPENDENT,1
+Alternate_Merge columns: PROP-DEPENDENT,1 | PROP-DEPENDENT,1 | seated 1
