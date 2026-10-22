@@ -1,0 +1,6 @@
+{"wt_is_reasoning":false,"broken":{"DEFENDER":[],"CHALLENGER":[]},"verdicts":[{"rule":"K-G3","side":"DEFENDER","status":"UNCURED","why":"the BROKEN links of DEFENDER could not be read from the judgment"}]}
+F12.1 stored form: two quotations joined by and => [{"rule":"K-G1","link":"D4 vs C3","status":"UNCURED","why":"no quotation found in the named round"}]
+F12.2 one quotation, found => [{"rule":"K-G1","link":"D4 vs C3","status":"UNCURED","why":"the later round [CR3] mat 1:18, mat 1:25; no SHORT line quoting its answer"}]
+F12.3 two quotations, second not in DR2 => [{"rule":"K-G1","link":"D4 vs C3","status":"UNCURED","why":"no quotation found in the named round"}]
+F12.4 one quotation not found => [{"rule":"K-G1","link":"D4 vs C3","status":"UNCURED","why":"no quotation found in the named round"}]
+F12.5 two PRESSED lines, one quotation each => [{"rule":"K-G1","link":"D4 vs C3","status":"UNCURED","why":"the later round [CR3] mat 1:18, mat 1:25; no SHORT line quoting its answer"}]

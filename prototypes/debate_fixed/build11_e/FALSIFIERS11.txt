@@ -24,3 +24,29 @@ F14 (DoD 14; the operator's 1, 7495; the test as 7498 states it and 7499 note 1 
  So on the base, F14.1 and F14.2 are reported as WORDING NOT FOUND (the defect, row a0950904 citation_block).
 
 F10-F13: declared in the next addendum of this file, after the drv library is read, and before any change to the files they cover.
+
+ADDENDUM 1, F11 and F12, declared BEFORE any change to the files they cover (the shared cure library and the panel and alternate cure builds).
+Stored text: fx/gemini_verdict_raw_27795.txt = row a0950904 drv_removed[0].verdict_raw (md5 933572ce, 9,085 chars; opens with a ```json fence).
+The cure replies are not stored (DoD 13's gap). The reply lines used are REBUILT from the report's violation table: Gemini (report lines 113-117)
+fx/gemini_cure_reply_27795_rebuilt.txt; the single judge's D4 line (report line 109) in fx/f12_cases.json, round tag [DR2] (the stored why is only
+reached after the PRESSED line parsed with a round). This is a stated limit: the stored replies may hold lines the table does not show.
+F11 (DoD 11) cause, measured: the panel and alternate cure builds parse the answer with JSON.parse; Gemini's answer is fenced, the parse fails,
+ the fallback is the raw answer whose line breaks are escaped, so cureBroken reads no BROKEN line. Panel Check's verdict() strips the fence first.
+ Fix: the same fence strip and {...} span before JSON.parse, at the four call sites (Panel Cure Build 1-3, Alternate Cure Build).
+ F11.1 base: K-G3 DEFENDER UNCURED "could not be read" (as stored). new: broken DEFENDER = D4 vs C3, D6 vs C3; with the two RETRACTED lines and
+       CORRECTED RESULT HELD-1, K-G3 CURED.
+ F11.2 an unfenced JSON answer: wt and broken identical on base and new.
+ F11.3 a fenced answer with no BROKEN line: broken empty, K-G3 not raised (no change).
+ F11.4 the item set the cure build sends (cureAsk) for Gemini lists D4 vs C3, D6 vs C3 on the K-G3 line (report line 2199 had none).
+F12 (DoD 12, choice (i)) cause, measured by A3 (7493): two non-contiguous quotations in one PRESSED slot.
+ Fix: a PRESSED quotation not found whole is split at a closing mark, a joiner (and, &, comma, semicolon) and an opening mark; it counts when
+ every piece is found in the named round. A quotation found whole is unchanged.
+ F12.1 the stored D4 form: the quotation is found (pieces q1, q2 both in [DR2]); the item stays UNCURED, reason "no SHORT line quoting its
+       answer", because [CR3] names Matthew 1:18 and 1:25 and the reply has no SHORT line for D4. CORRECTION TO THE PLAN TEXT: 7497 item 4
+       expects CURED; under the SHORT rule (6904 rev 8) the right result is UNCURED with the true reason. Base gives "no quotation found".
+ F12.2 one quotation found: unchanged (UNCURED, no SHORT) on base and new.
+ F12.3 two quotations, the second not in [DR2]: UNCURED "no quotation found" on base and new.
+ F12.4 one quotation not found: unchanged.
+ F12.5 two PRESSED lines, one quotation each: unchanged.
+ F12.6 the same two-quotation line with a SHORT line quoting [CR3]'s answer: CURED on new, UNCURED on base.
+BASE RUN: RUN_F11_F12_BASE.txt.
