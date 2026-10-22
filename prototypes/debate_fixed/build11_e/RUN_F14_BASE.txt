@@ -1,0 +1,39 @@
+{
+ "scanned": 240,
+ "n_items": 240,
+ "opp_true": 0,
+ "cite_false": 88,
+ "picked": [
+  {
+   "ref": "Matthew 1:25",
+   "round": "R1",
+   "quote": "thou shalt call his name JESUS",
+   "cite_form": true,
+   "load_bearing": false,
+   "link": null
+  },
+  {
+   "ref": "Luke 1:35",
+   "round": "R3",
+   "quote": "dio kai  is a causal connective",
+   "cite_form": true,
+   "load_bearing": true,
+   "link": 5
+  },
+  {
+   "ref": "Acts 13:33",
+   "round": "R3",
+   "quote": "raised up Jesus again  'again' is a supplied word",
+   "cite_form": true,
+   "load_bearing": true,
+   "link": 5
+  }
+ ]
+}
+{
+ "scanned": 167,
+ "n_items": 167,
+ "opp_true": 0,
+ "cite_false": 44,
+ "picked": []
+}

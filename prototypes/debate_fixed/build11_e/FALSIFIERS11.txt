@@ -1,0 +1,26 @@
+THE DEBATE FIXED (BB-7397), P2D rev 7 (7494 as amended 7497; shape 7499). Builder Worker_E, verifier Worker_A3.
+Falsifiers are declared here BEFORE any file change. Base: base11/ = every code node of 207435d3 (BASE11_MD5S.json), equal to new10 at d3f1fd9.
+Stored text: fx/rounds_27795.json (row a0950904, md5 of the six rounds dc933c47) and fx/rounds_27665.json (row 921f5530, bdba46ed);
+report ../after_e/report27795.md (6dc306fc) and ../../bb6904/rev8/step16_e/report27665.md (7f22d279).
+
+F14 (DoD 14; the operator's 1, 7495; the test as 7498 states it and 7499 note 1 binds it)
+ Rule: "A quotation of the other side's own words, quoted under the pressing rule, is not a scripture citation and is not checked against the KJV text."
+ Test: a quotation item is skipped only when (a) its words, after the check's own fold (marks stripped, quote marks removed, "..." splits the
+ quotation into pieces that must occur in order), occur in an earlier round of the other side, quoted or not, and (b) its status would be
+ WORDING NOT FOUND IN <book>. A quotation that MATCHES, or whose words ARE AT another verse, or that is not in the other side's earlier
+ rounds, is checked as now. No cue phrase is read.
+ Built in two nodes: Citation Scan sets opp_words on each item; Quote Report leaves out an item with opp_words and status WORDING NOT FOUND.
+ F14.1 27795, DEFENDER R3 Luke 1:35 "dio kai... is a causal connective" (link 5): opp_words true -> left out of the report.
+ F14.2 27795, DEFENDER R3 Acts 13:33 "raised up Jesus again... 'again' is a supplied word" (link 5): opp_words true -> left out.
+ F14.3 27795, DEFENDER R1 Matthew 1:25 "thou shalt call his name JESUS" (WORDS ARE AT Matthew 1:21): still reported.
+ F14.4 a quotation whose words are in the other side's earlier round but whose status is WORDS ARE AT another verse: still reported.
+ F14.5 a quotation not in any earlier round of the other side, WORDING NOT FOUND: still reported.
+ F14.6 a quotation found only in an earlier round of the SAME side, or only in a LATER round of the other side: opp_words false.
+ F14.7 a pieced quotation whose pieces occur in the other side's round but out of order: opp_words false.
+ F14.8 27795 whole: no item other than F14.1-2 changes report status; 27665 whole: no item changes (it has 0 mismatches).
+ F14.9 the outcome for 27795 by script from the stored rows and the F14 citation items (no function called): DEFENDER PREVAILS
+       (the citation block empty; panel HELD 3-0; the tie rule as derive_debate_outcome 173f9465 reads it).
+ BASE RUN (h_f14.cjs on base11/Citation_Scan.js, before any change): 27795 items 240; the three items have cite_form true; opp_words absent.
+ So on the base, F14.1 and F14.2 are reported as WORDING NOT FOUND (the defect, row a0950904 citation_block).
+
+F10-F13: declared in the next addendum of this file, after the drv library is read, and before any change to the files they cover.
