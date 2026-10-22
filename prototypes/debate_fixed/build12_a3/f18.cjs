@@ -31,3 +31,16 @@ run('F18b2 same reasons placed before the RETRACTED lines',links.map(l=>'STATEME
 run('F18d.1 a reason line naming the round only',reply+'\n'+links.map(l=>'STATEMENT: '+l+' | Retracted because [CR2] answered this line.').join('\n'));
 run('F18d.2 a reason line quoting words, no round',reply+'\n'+links.map(l=>'STATEMENT: '+l+' | Retracted because "the witness was answered by the defender" holds.').join('\n'));
 run('F18d.3 a reason line naming a verse, no round',reply+'\n'+links.map(l=>'STATEMENT: '+l+' | Retracted because Luke 2:44 does not carry it.').join('\n'));
+// ADDENDUM (amendment 3, 7571): the flagged item's own words are no reason. Grok's 27893 items K-G4 and K-G7 on D6 vs C1 (report lines
+// 1559-1560, the FLAGGED ITEMS lines, extracted as f15.cjs does); their lines carry [DR1], a verse and a quotation.
+const g4=rep.findIndex(l=>l.startsWith('K-G4 D6 vs C1: D6 vs C1 (Matthew 1:18): DEFENDER LINK BROKEN'));const G4=rep[g4],G7=rep[g4+1];
+const ln=s=>s.slice(s.indexOf(': ')+2);
+const gi=[{rule:'K-G4',side:'DEFENDER',link:'D6 vs C1',line:ln(G4)},{rule:'K-G7',side:'DEFENDER',link:'D6 vs C1',line:ln(G7),premise:6,conc:2,st:'PROP-DEPENDENT',L:6}];
+const gb={DEFENDER:['D6 vs C1'],CHALLENGER:[]};const base='RETRACTED: D6 vs C1\nCORRECTED RESULT: HELD-1\n';
+const run2=(name,text)=>{const v=L.cureVerdicts(gi,{ok:true,text},gb,R);const cc=L.cureCorrected({ok:true,text},v);
+ console.log(name,'=>',JSON.stringify(v.map(x=>(x.rule+' '+x.link+' '+x.status+' ('+x.why+')'))),'| counted on:',cc?cc.tag:'its own verdict (no retraction counted)');};
+run2('F18e.0 (E1) STATEMENT names the cure only',base+'STATEMENT: K-G4 D6 vs C1 | Retracted the broken grade, which cures the pressing violation.');
+run2('F18e (E2) the flagged item line copied in full as the label',base+'STATEMENT: '+G4+' | Retracted the broken grade, which cures the pressing violation.');
+run2('F18f (E3) the BROKEN line pasted as prose',base+'STATEMENT: K-G4 D6 vs C1 | Retracted the broken grade, which cures the pressing violation.\n'+ln(G4));
+run2('F18f2 the flagged item line pasted after the bar',base+'STATEMENT: K-G4 D6 vs C1 | '+G4);
+run2('F18g a reason in its own sentence, naming the round and the words the line rests on',base+'STATEMENT: K-G4 D6 vs C1 | Retracted: [CR3] answers the timing in "before they came together" and Matthew 1:25, so the witness was not left unanswered.');

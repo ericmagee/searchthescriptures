@@ -45,3 +45,13 @@ F18c f18c.sh: the F15b set and h_f11, h_f11b (27795 Gemini). PREDICTED MOVE, sta
      report table showed (build11_e limit), so the stored reply may have held a reason line; this is the rule applied, not a regression.
      Every other output: md5 equal.
 LIMIT: the reader checks that a reason names the round and quotes words or a verse; it does not check that the quoted words are in that round.
+
+ADDENDUM 2 (amendment 3, 7571; Worker_E's fail 7570), declared BEFORE the fix. Base: new12 at 56cc79b. Grok's 27893 items K-G4, K-G7 on
+D6 vs C1 (flagged lines 1559-1560; they carry [DR1], a verse and a quotation), reply "RETRACTED: D6 vs C1 / CORRECTED RESULT: HELD-1" plus:
+F18e.0 (E1) a STATEMENT naming only the cure: UNCURED before and after.
+F18e (E2) the flagged item line copied in full as the STATEMENT label: before CURED (the defect); after UNCURED.
+F18f (E3) the BROKEN line pasted as a prose line: before CURED; after UNCURED.
+F18f2 the flagged item line pasted after the bar: before CURED; after UNCURED.
+F18g a reason in its own sentence naming [CR3] and quoting words the line rests on: CURED before and after (7571 note 3).
+F15 to F18d hold; the regression set (f18c.sh) as RUN_NEW2.txt.
+FIXTURE: fx/kjv25.json now committed (md5 0282498b), so f17.cjs reruns: node f17.cjs <dir> fx/kjv25.json.
