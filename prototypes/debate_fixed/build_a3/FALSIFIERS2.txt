@@ -29,3 +29,4 @@ second item must not read as negated.
  O "CONCEDED LINKS: 2 -- premise 1 UNEXHIBITED (no footing offered), premise 3 UNEXHIBITED (no footing offered)"  -> none
  P "CONCEDED LINKS: 2 -- premise 1 CONCEDED (stated), premise 3 UNEXHIBITED (no footing offered)"               -> none
  Q "CONCEDED LINKS: 1 -- premise 1 UNEXHIBITED (no footing offered), premise 3 not conceded"                     -> premise 3
+ R "CONCEDED LINKS: 1 -- no premise was conceded except premise 1, which is UNEXHIBITED" -> premise 3 (BB-7428 minor case; declared before its fix)
