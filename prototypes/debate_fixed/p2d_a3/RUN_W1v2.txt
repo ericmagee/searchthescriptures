@@ -1,0 +1,8 @@
+W1 v2 run, 2026-10-21 20:07 CDT, Worker_A3 (drift BB-7413).
+Fixtures (VALUES, no table write):
+  fx-bad-null  framework NULL, panel SOUND   -> v1 silent (the blind spot), v2 FIRES
+  fx-bad-diff  framework BROKEN, panel SOUND -> v1 fires, v2 fires
+  fx-good      framework SOUND, panel SOUND  -> v1 silent, v2 silent
+  fx-good-unfinished framework NULL, panel NULL -> v1 silent, v2 silent
+Live debate_results: 699 rows; v2 fires 13, v1 fires 13; rows with panel set and framework NULL: 0.
+The 13 are older rows that keep the single judge's word (DoD 1, no regrade); after step 7 the new row must not be among the firing set.
