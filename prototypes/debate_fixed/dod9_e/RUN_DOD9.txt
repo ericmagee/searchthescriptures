@@ -1,16 +1,15 @@
-THE DEBATE FIXED DoD 9 build record (Worker_E), run 2026-10-22 01:47:50 UTC
-== patch (anchors once; each node reverses to base9)
+THE DEBATE FIXED DoD 9 build record (Worker_E), with D9-1 (BB-7447), run 2026-10-22 01:54:26 UTC
 Alternate_Build 5 60cd6732 -> ce29113d
 Alternate_Cure_Build 5 8d35ae4c -> 466655ca
 Alternate_Cure_Normalize 5 0e09c878 -> 7a342716
 Alternate_Merge 5 e0abe169 -> fae149dc
-Alternate_Payloads 5 916b98f3 -> 6cf906d0
+Alternate_Payloads 5 916b98f3 -> 8b3768fe
 Build_Independent_Verdict 1 7fc75ea3 -> 390de6db
 Build_Save_Body 0 eac5e866 -> eac5e866
 Cure_Build 5 962bb86a -> 8eed9fba
 Cure_Check 5 af48f092 -> aca77b86
 Cure_Normalize 5 93473953 -> 7c4b72fe
-Extract_Independent_Verdict 5 0d078cb9 -> 20b6f12f
+Extract_Independent_Verdict 5 0d078cb9 -> b2b60308
 Format_Markdown 1 fe574146 -> 07c63bb3
 Init_with_Guards 0 3b1262b0 -> 3b1262b0
 Panel_Build 1 a7c40e93 -> c30476cb
@@ -21,10 +20,12 @@ Panel_Cure_Check 5 5724213c -> f9bf9b3c
 Panel_Cure_Normalize_1 5 161765ce -> 9c3be949
 Panel_Cure_Normalize_2 5 dbb36f4f -> 825d1d8a
 Panel_Cure_Normalize_3 5 59787788 -> 4338c350
-Panel_Payloads 5 76a17150 -> 88c73e71
+Panel_Payloads 5 76a17150 -> 7eb36f62
 22 nodes written, 20 changed
 rebuilt equals new9: 0 differ
-== chain: live base (A3 base/, = live 428fbdc3 by my 20:01 fetch) -> patch_fixed.py at 3ac66c8 = base9 22/22 -> patch_dod9.py = new9 22/22
+chain live base -> A3 patch -> base9: 0 differ; -> my patch -> new9: 0 differ
+parse checked 22
+drvCounted occurrences: 0
 == h_dod9.cjs
 PASS P1 Panel_Payloads items                      got: none 
 PASS P1 Panel_Payloads absence                    got: none 
@@ -56,6 +57,24 @@ PASS P13d Panel_Payloads absence                  got: none
 PASS P13e Panel_Payloads items                    got: none 
 PASS P13e Panel_Payloads absence                  got: none 
 PASS P14 Panel_Payloads items                     got: K-G8 CHALLENGER COUNTED PREMISES 
+PASS R1 Panel_Payloads items                      got: none 
+PASS R1 Panel_Payloads absence                    got: none 
+PASS R2 Panel_Payloads items                      got: none 
+PASS R2 Panel_Payloads absence                    got: none 
+PASS R3 Panel_Payloads items                      got: none 
+PASS R3 Panel_Payloads absence                    got: none 
+PASS R4 Panel_Payloads items                      got: none 
+PASS R4 Panel_Payloads absence                    got: none 
+PASS R5 Panel_Payloads items                      got: K-G8 DEFENDER COUNTED PREMISES 
+PASS R6 Panel_Payloads items                      got: none 
+PASS R6 Panel_Payloads absence                    got: none 
+PASS R7 Panel_Payloads items                      got: K-G6 DEFENDER premise 1, K-G6 DEFENDER premise 3 
+PASS R8 Panel_Payloads items                      got: none 
+PASS R8 Panel_Payloads absence                    got: none 
+PASS R9 Panel_Payloads items                      got: none 
+PASS R9 Panel_Payloads absence                    got: none 
+PASS R10 Panel_Payloads items                     got: none 
+PASS R10 Panel_Payloads absence                   got: DEFENDER UNREADABLE 
 PASS P1 Alternate_Payloads items                  got: none 
 PASS P1 Alternate_Payloads absence                got: none 
 PASS P2 Alternate_Payloads items                  got: K-G6 DEFENDER premise 3 
@@ -86,6 +105,24 @@ PASS P13d Alternate_Payloads absence              got: none
 PASS P13e Alternate_Payloads items                got: none 
 PASS P13e Alternate_Payloads absence              got: none 
 PASS P14 Alternate_Payloads items                 got: K-G8 CHALLENGER COUNTED PREMISES 
+PASS R1 Alternate_Payloads items                  got: none 
+PASS R1 Alternate_Payloads absence                got: none 
+PASS R2 Alternate_Payloads items                  got: none 
+PASS R2 Alternate_Payloads absence                got: none 
+PASS R3 Alternate_Payloads items                  got: none 
+PASS R3 Alternate_Payloads absence                got: none 
+PASS R4 Alternate_Payloads items                  got: none 
+PASS R4 Alternate_Payloads absence                got: none 
+PASS R5 Alternate_Payloads items                  got: K-G8 DEFENDER COUNTED PREMISES 
+PASS R6 Alternate_Payloads items                  got: none 
+PASS R6 Alternate_Payloads absence                got: none 
+PASS R7 Alternate_Payloads items                  got: K-G6 DEFENDER premise 1, K-G6 DEFENDER premise 3 
+PASS R8 Alternate_Payloads items                  got: none 
+PASS R8 Alternate_Payloads absence                got: none 
+PASS R9 Alternate_Payloads items                  got: none 
+PASS R9 Alternate_Payloads absence                got: none 
+PASS R10 Alternate_Payloads items                 got: none 
+PASS R10 Alternate_Payloads absence               got: DEFENDER UNREADABLE 
 PASS P1 Extract_Independent_Verdict items         got: none 
 PASS P1 Extract_Independent_Verdict absence       got: none 
 PASS P2 Extract_Independent_Verdict items         got: K-G6 DEFENDER premise 3 
@@ -116,6 +153,24 @@ PASS P13d Extract_Independent_Verdict absence     got: none
 PASS P13e Extract_Independent_Verdict items       got: none 
 PASS P13e Extract_Independent_Verdict absence     got: none 
 PASS P14 Extract_Independent_Verdict items        got: K-G8 CHALLENGER COUNTED PREMISES 
+PASS R1 Extract_Independent_Verdict items         got: none 
+PASS R1 Extract_Independent_Verdict absence       got: none 
+PASS R2 Extract_Independent_Verdict items         got: none 
+PASS R2 Extract_Independent_Verdict absence       got: none 
+PASS R3 Extract_Independent_Verdict items         got: none 
+PASS R3 Extract_Independent_Verdict absence       got: none 
+PASS R4 Extract_Independent_Verdict items         got: none 
+PASS R4 Extract_Independent_Verdict absence       got: none 
+PASS R5 Extract_Independent_Verdict items         got: K-G8 DEFENDER COUNTED PREMISES 
+PASS R6 Extract_Independent_Verdict items         got: none 
+PASS R6 Extract_Independent_Verdict absence       got: none 
+PASS R7 Extract_Independent_Verdict items         got: K-G6 DEFENDER premise 1, K-G6 DEFENDER premise 3 
+PASS R8 Extract_Independent_Verdict items         got: none 
+PASS R8 Extract_Independent_Verdict absence       got: none 
+PASS R9 Extract_Independent_Verdict items         got: none 
+PASS R9 Extract_Independent_Verdict absence       got: none 
+PASS R10 Extract_Independent_Verdict items        got: none 
+PASS R10 Extract_Independent_Verdict absence      got: DEFENDER UNREADABLE 
 CURE 14/14 Q1 => CURED CURED
 CURE 14/14 Q2 => UNCURED UNCURED
 CURE 14/14 Q3a => CURED
@@ -150,12 +205,11 @@ PASS CORPUS Alternate_Payloads lines with a COUNTED line got: 0 of 285
 PASS CORPUS Alternate_Payloads items at a stated count >= 1 got: 0 
 PASS CORPUS Extract_Independent_Verdict lines with a COUNTED line got: 0 of 285 
 PASS CORPUS Extract_Independent_Verdict items at a stated count >= 1 got: 0 
-TOTAL pass 176 fail 0
-== rev 12 harnesses on the 14 cure nodes of new9
+TOTAL pass 230 fail 0
+== rev 12 harnesses
 /tmp/claude-0/-home-user-searchthescriptures/58ba9d31-f07a-5e6e-a230-4fe44a036213/scratchpad/fx14 mode full | expected status 56/56
 /tmp/claude-0/-home-user-searchthescriptures/58ba9d31-f07a-5e6e-a230-4fe44a036213/scratchpad/fx14 mode nostmt | expected status 56/56
 /tmp/claude-0/-home-user-searchthescriptures/58ba9d31-f07a-5e6e-a230-4fe44a036213/scratchpad/fx14 nodes 14 | n0 press found, no SHORT: UNCURED 14/14 | n1 SHORT [CR2] quote not in CR2: UNCURED 14/14 | n2 SHORT [CR2] real answer: CURED 14/14 | n3 SHORT [CR2] one word changed: UNCURED 14/14 | n4 pressed in [DR2]: CR2 not an answering round 14/14 | n5 SHORT [CR2] quoting the verse words both sides quote: UNCURED 14/14 | n6 SHORT [CR3] for a verse CR3 does not name: UNCURED 14/14
 L4 both nodes same ledger text: true | L5 prose names later rounds: true
 Build_Independent_Verdict.js | defender list with CR2 blanked equals base: true | challenger list with DR2 blanked equals base: true
 Panel_Build.js | defender list with CR2 blanked equals base: true | challenger list with DR2 blanked equals base: true
-== changed expectations vs Worker_A3's harnesses (consequence of (A), declared in FALSIFIERS9): F3a challenger items (Gemini C1, C6; GLM C1; single judge C1) are no longer raised, because those counts are above 0 and no judge wrote the line; h_count retired with drvCounted (0 occurrences).

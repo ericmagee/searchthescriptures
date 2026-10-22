@@ -328,10 +328,15 @@ function drvPromptText(body){try{const b=body||{};const out=[];if(b.systemInstru
 // is retired (BB-7431: it misread 97 of 285 stored count lines). "none" is the empty set; a value of numbers, commas, "and", "&" and the word
 // premise(s) gives those numbers; any other value is UNREADABLE and is treated as absent. Where the line is absent, the checks by number fall
 // back to the stated count (A): an item only at a count of 0.
-function drvCP(T,side){const m=T.match(new RegExp('^[ \\t>#-]*COUNTED PREMISES '+side+'[ \\t]*:[ \\t]*(.*)$','im'));if(!m)return {present:false,why:'absent'};
- const v=m[1].trim().replace(/[.;]+$/,'');if(/^none$/i.test(v))return {present:true,set:new Set(),line:m[0]};
- if(!/\d/.test(v)||/[^0-9,&\s]/.test(v.replace(/\b(?:and|premises?)\b/gi,'')))return {present:false,why:'unreadable',line:m[0]};
- return {present:true,set:new Set((v.match(/\d+/g)||[]).map(Number)),line:m[0]};}
+function drvCP(T,side,LK){const m=T.match(new RegExp('^[ \\t>#-]*COUNTED PREMISES '+side+'[ \\t]*:[ \\t]*(.*)$','im'));if(!m)return {present:false,why:'absent'};
+ const v=m[1].replace(/\([^()]*\)/g,' ').trim().replace(/[.;]+$/,'').trim();if(/^none$/i.test(v))return {present:true,set:new Set(),line:m[0]};
+ // BB-7447 D9-1: "premise(s)" or "LINK(s)" labels the numbers after it; "a-b", "a to b" are ranges; a defender LINK n maps through the
+ // ledger's "(LINK n)" (no map, or the challenger side: LINK n is premise n).
+ if(!/\d/.test(v)||/[^0-9,&\s]/.test(v.replace(/\b(?:and|premises?|links?|to)\b/gi,' ').replace(/[-–]/g,' ')))return {present:false,why:'unreadable',line:m[0]};
+ const set=new Set();let lab='P';const add=n=>{if(lab==='L'&&side==='DEFENDER'&&LK&&LK[n])LK[n].forEach(q=>set.add(q));else set.add(n);};
+ for(const t of v.matchAll(/(premises?)|(links?)|(\d+)\s*(?:-|–|\bto\b)\s*(\d+)|(\d+)/gi)){if(t[1])lab='P';else if(t[2])lab='L';
+  else if(t[3]){for(let z=+t[3];z<=+t[4]&&z-+t[3]<50;z++)add(z);}else add(+t[5]);}
+ return {present:true,set,line:m[0]};}
 // The ledger's own map from a defender link to the premises graded against it ("A challenger premise written LINK i: is graded against Di"):
 // LINK m -> the premise numbers written "(LINK m)". No LINK label in the ledger: null, and premise n stands for D<n>.
 function drvLinkMap(ptext){if(typeof ptext!=='string')return null;const i=ptext.indexOf('AGAINST THE DEFENDER, answered in [CR3]:');const j=i<0?-1:ptext.indexOf('AGAINST THE CHALLENGER, answered in [DR3]:',i);
@@ -348,7 +353,7 @@ function drvBroken(text,dConc,dStand,prior,cConc,cStand,ptext){const items=[],ma
  const cl=drvCountLine(T,'DEFENDER');const lm=T.match(/^[ \t>#-]*DEFENSE STANDING[ \t]*:[^\n]*?\bL\s*=\s*(\d+)/im);const L=lm?+lm[1]:null;
  const cm=T.match(/^[ \t>#-]*CHALLENGE STANDING[ \t]*:[^\n]*?\bL\s*=\s*(\d+)/im);const LC=cm?+cm[1]:null;
  // DoD 9: each side's COUNTED PREMISES line; its absence is written to the row; a line whose number differs from its count is K-G8.
- const CP={DEFENDER:drvCP(T,'DEFENDER'),CHALLENGER:drvCP(T,'CHALLENGER')};const LK=drvLinkMap(ptext);
+ const LK=drvLinkMap(ptext);const CP={DEFENDER:drvCP(T,'DEFENDER',LK),CHALLENGER:drvCP(T,'CHALLENGER',LK)};
  for(const sd of ['DEFENDER','CHALLENGER']){if(drvCountLine(T,sd)===null)continue;const cp=CP[sd],sc=sd==='DEFENDER'?dConc:cConc;
   if(!cp.present){marks.push('[AUDIT v21: COUNTED PREMISES '+sd+' LINE '+(cp.why==='unreadable'?'UNREADABLE':'ABSENT')+' -- the checks by number fall back to the stated count (A).]');continue;}
   if(typeof sc==='number'&&cp.set.size!==sc){items.push({rule:'K-G8',side:sd,link:sd+' COUNTED PREMISES',line:cp.line,premise:null,conc:cp.set.size,st:sd==='DEFENDER'?dStand:cStand,L:sd==='DEFENDER'?L:LC});
@@ -374,7 +379,7 @@ function drvLedger(text,ptext,dConc,cConc,dStand,cStand){const items=[],marks=[]
  const T=text.replace(/[*_`]+/g,'');
  const countLine=side=>drvCountLine(T,side);
 
- for(const side of ['DEFENDER','CHALLENGER']){const cl=countLine(side);if(cl===null)continue;const cp=drvCP(T,side);const sc=side==='DEFENDER'?dConc:cConc;
+ for(const side of ['DEFENDER','CHALLENGER']){const cl=countLine(side);if(cl===null)continue;const cp=drvCP(T,side,drvLinkMap(ptext));const sc=side==='DEFENDER'?dConc:cConc;
   if(!cp.present&&sc!==0)continue;
   for(const l of LG[side]){const m=l.match(/^premise (\d+)(?: \(LINK (\d+)\))?: .*NOT NAMED: (.+)$/);if(!m||/^none\s*$/i.test(m[3]))continue;
    if(cp.present&&cp.set.has(+m[1]))continue;

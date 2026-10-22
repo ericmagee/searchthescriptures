@@ -28,7 +28,18 @@ for(const n of NODES){const F=raiseF(n);const R=(k,o,over,exp,expAbs)=>{const r=
  R('P12',{d:2,dLine:'premises 1 and 3',c:0,cLine:'none'},null,'none','none');
  for(const [k,it] of [['a','premises 1 and 3 UNEXHIBITED'],['b','UNEXHIBITED: premise 1, premise 3'],['c','(UNEXHIBITED: premise 1, premise 3)'],['d','D1 UNEXHIBITED (no footing offered), D3 UNEXHIBITED (no footing offered)'],['e','premise 1 not conceded; premise 3 answered, not conceded']])
   R('P13'+k,{d:2,dItems:it,dLine:'1, 3',c:0,cLine:'none'},null,'none','none');
- R('P14',{d:2,dLine:'1, 3',c:0,cLine:'1'},{cnn:[1]},'K-G8 CHALLENGER COUNTED PREMISES');}
+ R('P14',{d:2,dLine:'1, 3',c:0,cLine:'1'},{cnn:[1]},'K-G8 CHALLENGER COUNTED PREMISES');
+ // D9-1 (BB-7447)
+ R('R1',{d:2,dLine:'LINK 1, LINK 3',c:0,cLine:'none'},null,'none','none');
+ R('R2',{d:3,dLine:'1-3',c:0,cLine:'none'},null,'none','none');
+ R('R3',{d:3,dLine:'1 to 3',c:0,cLine:'none'},null,'none','none');
+ R('R4',{d:2,dLine:'1, 3 (UNEXHIBITED)',c:0,cLine:'none'},null,'none','none');
+ R('R5',{d:3,dLine:'LINK 1, LINK 3',c:0,cLine:'none'},null,'K-G8 DEFENDER COUNTED PREMISES');
+ R('R6',{d:0,dLine:'none',c:1,cLine:'LINK 1'},{cnn:[1],1:{nn:false},3:{nn:false}},'none','none');
+ R('R7',{d:1,dLine:'LINK 6',c:0,cLine:'none',broken:BR},{5:{link:6},6:{link:7}},'K-G6 DEFENDER premise 1, K-G6 DEFENDER premise 3');
+ R('R8',{d:2,dLine:'links 1 and 3',c:0,cLine:'none'},null,'none','none');
+ R('R9',{d:4,dLine:'premises 1-3 and LINK 6',c:0,cLine:'none'},{5:{link:6},6:{link:7}},'none','none');
+ R('R10',{d:2,dLine:'1, 3, and the rest',c:0,cLine:'none'},null,'none','DEFENDER UNREADABLE');}
 // CURE, all 14 cure nodes
 const files=fs.readdirSync(dir).filter(f=>/Cure|Alternate_Build|Alternate_Merge/.test(f)&&f.endsWith('.js')).sort();
 const K8=(conc)=>({rule:'K-G8',side:'DEFENDER',link:'DEFENDER COUNTED PREMISES',line:'COUNTED PREMISES DEFENDER: 1',premise:null,conc,st:'PROP-DEPENDENT',L:6});
