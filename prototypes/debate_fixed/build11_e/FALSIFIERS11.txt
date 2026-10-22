@@ -112,3 +112,14 @@ F10c (the record half, 7504 item 5, as 7505 item 2 reads it): Cure Check writes 
  F10c.3 a CORRECTED COUNT whose items are all UNCURED: column unchanged.
  OPEN for the advisor (7505 item 2): whether the K-G1 UNCURED item on the same side blocks the write. I build "the items it answers" =
  the items the CORRECTED COUNT line is the cure of (K-G7 and K-G6 by count; K-G1 needs its PRESSED line too). Unconditional is a one-line change.
+
+ADDENDUM 5, F10c AS RULED (7508 (i): BB-7417 defect 3 stands), declared BEFORE the change. Replaces F10c of addendum 4.
+Rule: a side's count or standing column is written only when every count or standing item of that side is CURED (unchanged, every seat).
+New: when a reply holds one CORRECTED COUNT for a side and that side is not written, one AUDIT line records it: "[AUDIT v21: CORRECTED COUNT
+NOT WRITTEN -- [SEAT: s; ]SIDE: <side>; CORRECTED COUNT: <n>; NOT CURED: <rule> <item>, ...; written only when every count or standing item
+of the side is CURED (BB-7417)]". Added at the three places that apply cureSet: Cure Check (single judge), Panel Cure Check, Alternate Merge.
+ F10c.1 27795 single judge (CORRECTED COUNT: DEFENDER 2; K-G1 D4 vs C3 UNCURED): conceded_links stays 0; the AUDIT line names
+        CORRECTED COUNT 2 and NOT CURED: K-G1 D4 vs C3.
+ F10c.2 no CORRECTED COUNT line: no AUDIT line, columns unchanged.
+ F10c.3 every count item CURED: the column is written as before (cureSet) and no NOT WRITTEN line.
+ F10c.4 the AUDIT line holds no "[" or "]" inside it and no "; KEY:" break (cureSafe), so the report reader is not disturbed.
