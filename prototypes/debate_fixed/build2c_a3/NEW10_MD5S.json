@@ -1,0 +1,112 @@
+{
+ "Alternate_Build": {
+  "base10": "ce29113d164aef1e3c1e5cb8bd7f8094",
+  "new10": "7226d4da06ab8a24c241e70331b47b2d",
+  "pairs": 2
+ },
+ "Alternate_Cure_Build": {
+  "base10": "466655ca91339d4ca89ea7b19911c870",
+  "new10": "7f1ba08f4303d2c639ce56f01d2a82af",
+  "pairs": 2
+ },
+ "Alternate_Cure_Normalize": {
+  "base10": "7a342716be6fbb6b4141cea2e76af3e5",
+  "new10": "6f6aa5d98f9a9d75dd5336b5e6995e5e",
+  "pairs": 2
+ },
+ "Alternate_Merge": {
+  "base10": "fae149dcaa2a8a8de8b8d7c2050bffc8",
+  "new10": "3a225eab57496ca1dbe519235e1c2284",
+  "pairs": 2
+ },
+ "Alternate_Payloads": {
+  "base10": "6e0485942c745bcc57514f56366d8dbe",
+  "new10": "6dcaaf8ba37503e89893bcb37998c26b",
+  "pairs": 10
+ },
+ "Build_Independent_Verdict": {
+  "base10": "390de6db539803f36b8fa9f2f0d3710b",
+  "new10": "7fc75ea37d0e16a1a153fd43009c0bde",
+  "pairs": 1
+ },
+ "Build_Save_Body": {
+  "base10": "eac5e866df2b628be7806171f0b3d11f",
+  "new10": "eac5e866df2b628be7806171f0b3d11f",
+  "pairs": 0
+ },
+ "Cure_Build": {
+  "base10": "8eed9fba46ea04321b7c73ad1a0f7ab3",
+  "new10": "aca1ce86aa8b22aac658e4650e900f0d",
+  "pairs": 2
+ },
+ "Cure_Check": {
+  "base10": "aca77b862297cd16e8e839aab6f8d43d",
+  "new10": "7422412ff820c446d8631ac1c1687e88",
+  "pairs": 2
+ },
+ "Cure_Normalize": {
+  "base10": "7c4b72fe5c4b4f0c6180b4dfb7311833",
+  "new10": "c9509ff079ea13d447ff9efb7384eea0",
+  "pairs": 2
+ },
+ "Extract_Independent_Verdict": {
+  "base10": "e55c8cf052c2f098739b715d569f51da",
+  "new10": "da8db973eb0d40c498165e81335f48ed",
+  "pairs": 10
+ },
+ "Format_Markdown": {
+  "base10": "07c63bb3e4341ca6804419feb0b02576",
+  "new10": "976110249a5df4661109550c0e943b52",
+  "pairs": 1
+ },
+ "Init_with_Guards": {
+  "base10": "3b1262b05f49ab50001b144e98808948",
+  "new10": "3b1262b05f49ab50001b144e98808948",
+  "pairs": 0
+ },
+ "Panel_Build": {
+  "base10": "c30476cb771e8712b4456483626ba097",
+  "new10": "97df396c97666ca27c1bf200d534b69b",
+  "pairs": 3
+ },
+ "Panel_Cure_Build_1": {
+  "base10": "988ebe0b2e3f0e9fa44927fa9068f63a",
+  "new10": "340766345d15d7a6f26f7b93d91620ea",
+  "pairs": 2
+ },
+ "Panel_Cure_Build_2": {
+  "base10": "5c15810b25434c081c1863caf07d17a5",
+  "new10": "c0ce8a28e98f25837173efddd56a7b13",
+  "pairs": 2
+ },
+ "Panel_Cure_Build_3": {
+  "base10": "85add6bbce59d4f3407658f80e3c966f",
+  "new10": "b3ded6622e54290a5f72ee3e6bb6b1d8",
+  "pairs": 2
+ },
+ "Panel_Cure_Check": {
+  "base10": "f9bf9b3c21904d0357adcf25b9eaa0c9",
+  "new10": "e40b4a4cfdb0fb407e3c5fb3d83a0027",
+  "pairs": 2
+ },
+ "Panel_Cure_Normalize_1": {
+  "base10": "9c3be94905297f1415ba859e5c040952",
+  "new10": "72a5a7866a6e3a84f37e0c32d63f5745",
+  "pairs": 2
+ },
+ "Panel_Cure_Normalize_2": {
+  "base10": "825d1d8a725346c2dbade9870fe0e1e3",
+  "new10": "ca769ca2da6cb0131d1d94b6b76b9779",
+  "pairs": 2
+ },
+ "Panel_Cure_Normalize_3": {
+  "base10": "4338c350ad1ebe34b10b5a5cc346f603",
+  "new10": "2c26a5c965d1236a05564de22d2e6af0",
+  "pairs": 2
+ },
+ "Panel_Payloads": {
+  "base10": "06b20f326e6d241f02ca55d36d3e0fd6",
+  "new10": "c2635bb4af2e6070b4d5d2a416211a8f",
+  "pairs": 10
+ }
+}

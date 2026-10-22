@@ -1,0 +1,86 @@
+THE DEBATE FIXED 2c (DoD 9 as typed arrays, BB-7455/7456), Worker_A3, run 2026-10-21 21:21:36 CDT
+== patch from base10 (anchors once; reverse gives base)
+22 nodes written, 20 changed
+== parse
+parse checked: 22; drvCP( occurs in 0 nodes; BIV equals build_a3/new at 3ac66c8: yes
+== FALSIFIERS10 (d73882b) on new10
+PASS Panel T1 [1,3,6]/3, C [1]/1                          got: none 
+PASS Panel T2 [1,6]/2                                     got: K-G6 DEFENDER premise 3 
+PASS Panel T3 []/0                                        got: K-G6 DEFENDER premise 1, K-G6 DEFENDER premise 3, K-G7 D6 vs C3 
+PASS Panel T4 absent/2                                    got: none | marks: DEFENDER ABSENT 
+PASS Panel T5 absent/0                                    got: K-G6 DEFENDER premise 1, K-G6 DEFENDER premise 3, K-G7 D6 vs C3 | marks: DEFENDER ABSENT 
+PASS Panel T6 ["1","3"]/2                                 got: none | marks: DEFENDER INVALID ("1","3") 
+PASS Panel T7 [1.5]/1                                     got: none | marks: DEFENDER INVALID (1.5) 
+PASS Panel T8 "LINK 1, LINK 3"/2                          got: none | marks: DEFENDER INVALID "LINK 
+PASS Panel T9 [1,3]/3                                     got: K-G8 DEFENDER COUNTED PREMISES, K-G7 D6 vs C3 
+PASS Panel T10 shifted, [5]/1 (K-G7 only, as declared)    got: none 
+PASS Panel T11 C []/0                                     got: K-G6 CHALLENGER premise 1 
+PASS Panel T12 prose line, key absent/0                   got: K-G6 DEFENDER premise 1, K-G6 DEFENDER premise 3, K-G7 D6 vs C3 | marks: DEFENDER ABSENT 
+PASS Alter T1 [1,3,6]/3, C [1]/1                          got: none 
+PASS Alter T2 [1,6]/2                                     got: K-G6 DEFENDER premise 3 
+PASS Alter T3 []/0                                        got: K-G6 DEFENDER premise 1, K-G6 DEFENDER premise 3, K-G7 D6 vs C3 
+PASS Alter T4 absent/2                                    got: none | marks: DEFENDER ABSENT 
+PASS Alter T5 absent/0                                    got: K-G6 DEFENDER premise 1, K-G6 DEFENDER premise 3, K-G7 D6 vs C3 | marks: DEFENDER ABSENT 
+PASS Alter T6 ["1","3"]/2                                 got: none | marks: DEFENDER INVALID ("1","3") 
+PASS Alter T7 [1.5]/1                                     got: none | marks: DEFENDER INVALID (1.5) 
+PASS Alter T8 "LINK 1, LINK 3"/2                          got: none | marks: DEFENDER INVALID "LINK 
+PASS Alter T9 [1,3]/3                                     got: K-G8 DEFENDER COUNTED PREMISES, K-G7 D6 vs C3 
+PASS Alter T10 shifted, [5]/1 (K-G7 only, as declared)    got: none 
+PASS Alter T11 C []/0                                     got: K-G6 CHALLENGER premise 1 
+PASS Alter T12 prose line, key absent/0                   got: K-G6 DEFENDER premise 1, K-G6 DEFENDER premise 3, K-G7 D6 vs C3 | marks: DEFENDER ABSENT 
+PASS Extra T1 [1,3,6]/3, C [1]/1                          got: none 
+PASS Extra T2 [1,6]/2                                     got: K-G6 DEFENDER premise 3 
+PASS Extra T3 []/0                                        got: K-G6 DEFENDER premise 1, K-G6 DEFENDER premise 3, K-G7 D6 vs C3 
+PASS Extra T4 absent/2                                    got: none | marks: DEFENDER ABSENT 
+PASS Extra T5 absent/0                                    got: K-G6 DEFENDER premise 1, K-G6 DEFENDER premise 3, K-G7 D6 vs C3 | marks: DEFENDER ABSENT 
+PASS Extra T6 ["1","3"]/2                                 got: none | marks: DEFENDER INVALID ("1","3") 
+PASS Extra T7 [1.5]/1                                     got: none | marks: DEFENDER INVALID (1.5) 
+PASS Extra T8 "LINK 1, LINK 3"/2                          got: none | marks: DEFENDER INVALID "LINK 
+PASS Extra T9 [1,3]/3                                     got: K-G8 DEFENDER COUNTED PREMISES, K-G7 D6 vs C3 
+PASS Extra T10 shifted, [5]/1 (K-G7 only, as declared)    got: none 
+PASS Extra T11 C []/0                                     got: K-G6 CHALLENGER premise 1 
+PASS Extra T12 prose line, key absent/0                   got: K-G6 DEFENDER premise 1, K-G6 DEFENDER premise 3, K-G7 D6 vs C3 | marks: DEFENDER ABSENT 
+PASS T13 Extract on 27665 single judge                    got: K-G6 DEFENDER premise 1, K-G6 DEFENDER premise 3, K-G7 D6 vs C3 
+PASS TEXT schema lines in Panel Build                     got: 2 
+PASS TEXT no line sentence (Panel Build, BIV)             got: 0 
+MARKS md5 b019f38280a2b8be3b37db03df8b0b77
+TOTAL pass 39 fail 0
+== the same on base10 (must fail)
+MARKS md5 680556cec6fe6a64d6be5408691ed461
+TOTAL pass 13 fail 26
+== T14 by SQL 21:19:29 CDT: 186 stored judgments, 0 carry counted_premises (all ABSENT, so (A))
+== h_site2 (arrays on the parsed judge object)
+Panel_Payloads covering K-G4 D6 vs C3 | K-G3 null | K-G8 DEFENDER COUNTED PREMISES | K-G8 CHALLENGER COUNTED PREMISES | [AUDIT v21: DEBATE RULE VIOLATION (K-G4) -- D6 vs C3 DEFENDER LINK BROKEN counts
+Panel_Payloads short K-G4 D6 vs C3 | K-G3 null | K-G6 DEFENDER premise 1 | K-G6 DEFENDER premise 3 | K-G6 CHALLENGER premise 6 | K-G8 DEFENDER COUNTED PREMISES | [AUDIT v21: DEBATE RULE VIOLATION (K-G
+Alternate_Payloads covering K-G4 D6 vs C3 | K-G3 null | K-G8 DEFENDER COUNTED PREMISES | K-G8 CHALLENGER COUNTED PREMISES | [AUDIT v21: DEBATE RULE VIOLATION (K-G4) -- D6 vs C3 DEFENDER LINK BROKEN co
+Alternate_Payloads short K-G4 D6 vs C3 | K-G3 null | K-G6 DEFENDER premise 1 | K-G6 DEFENDER premise 3 | K-G6 CHALLENGER premise 6 | K-G8 DEFENDER COUNTED PREMISES | [AUDIT v21: DEBATE RULE VIOLATION 
+== h_cure
+quotation cut from Text 1: "LINK 1: SUPPORTED. [L1] The flesh seed is named as flesh: I" | nodes 14
+14/14 a_count_all => DEFENDER1:CURED DEFENDER3:CURED CHALLENGER1:CURED CHALLENGER6:CURED
+14/14 b_nothing => DEFENDER1:UNCURED DEFENDER3:UNCURED CHALLENGER1:UNCURED CHALLENGER6:UNCURED
+14/14 c_count_low => DEFENDER1:UNCURED DEFENDER3:UNCURED CHALLENGER1:CURED CHALLENGER6:CURED
+14/14 d_stmt_plus_count => DEFENDER1:CURED DEFENDER3:CURED CHALLENGER1:CURED CHALLENGER6:CURED
+14/14 e_stmt_quote_absent => DEFENDER1:UNCURED DEFENDER3:UNCURED CHALLENGER1:UNCURED CHALLENGER6:UNCURED
+14/14 f_wrong_standing => DEFENDER1:UNCURED DEFENDER3:UNCURED CHALLENGER1:UNCURED CHALLENGER6:UNCURED
+14/14 g_count_no_standing => DEFENDER1:UNCURED DEFENDER3:UNCURED CHALLENGER1:CURED CHALLENGER6:CURED
+F5 gemini after: {"defense_standing":"PROP-DEPENDENT","conceded_links":0,"challenge_standing":"PROP-DEPENDENT","challenger_conceded_links":1} | [AUDIT v21: CORRECTED STANDING -- SEAT: gemini; SIDE: DEFENDER; ORIGINAL: SELF-SUPPORTED, 0; COUNTED: PROP-DEPENDENT, 0]
+F5 glm (no reply): untouched {"defense_standing":"SELF-SUPPORTED","conceded_links":0,"challenge_standing":"PROP-DEPENDENT","challenger_conceded_links":3}
+== h_site
+Panel_Payloads items: K-G4 D6 vs C3, K-G3 null, K-G6 DEFENDER premise 1, K-G6 DEFENDER premise 3, K-G7 D6 vs C3
+Alternate_Payloads items: K-G4 D6 vs C3, K-G3 null, K-G6 DEFENDER premise 1, K-G6 DEFENDER premise 3, K-G7 D6 vs C3
+Extract items: DEFENDER premise 1, DEFENDER premise 3
+Panel_Cure_Check columns: PROP-DEPENDENT,1 | PROP-DEPENDENT,1
+Cure_Check columns: PROP-DEPENDENT,1 | PROP-DEPENDENT,1
+Alternate_Merge columns: PROP-DEPENDENT,1 | PROP-DEPENDENT,1 | seated 1
+== h_fm8
+| Single judge: DeepSeek | DEFENDER COUNTED PREMISES | Counted premises list differs from the count (K-G8) | **UNCURED** |  | Not cured: probe. | none written |
+== rev 12 harnesses (Worker_E) on the new 14
+fx14 mode full | expected status 56/56
+fx14 mode nostmt | expected status 56/56
+fx14 nodes 14 | n0 press found, no SHORT: UNCURED 14/14 | n1 SHORT [CR2] quote not in CR2: UNCURED 14/14 | n2 SHORT [CR2] real answer: CURED 14/14 | n3 SHORT [C
+L4 both nodes same ledger text: true | L5 prose names later rounds: true
+Build_Independent_Verdict.js | defender list with CR2 blanked equals base: true | challenger list with DR2 blanked equals base: true
+Panel_Build.js | defender list with CR2 blanked equals base: true | challenger list with DR2 blanked equals base: true
+== per-site probes
+sites 63 | DETECTED 61 | SILENT 2
+SILENT: Extract_Independent_Verdict pairs 8 and 9 pass null where base10 passed nothing; both are ABSENT, so no output can differ (equivalent by construction).
