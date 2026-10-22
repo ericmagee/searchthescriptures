@@ -1,9 +1,9 @@
-THE DEBATE FIXED 2c (DoD 9 as typed arrays, BB-7455/7456, with F-dup/F-range of BB-7457), Worker_A3, run 2026-10-21 21:23:09 CDT
+THE DEBATE FIXED 2c with the 2c-1 fix (typed checks on the JSON integer, L from the ledger; BB-7461), Worker_A3, run 2026-10-21 21:35:46 CDT
 == patch from base10 (anchors once; reverse gives base)
 22 nodes written, 20 changed
 == parse
 parse checked: 22; drvCP( in 0 nodes; BIV equals build_a3/new at 3ac66c8: yes
-== FALSIFIERS10 with the addendum (d73882b, fd2513a, aec2260) on new10
+== FALSIFIERS10 with the addenda (F-dup, F-range; U1-U5 of BB-7461; U6-U7 from the probe run) on new10
 PASS Panel T1 [1,3,6]/3, C [1]/1                          got: none 
 PASS Panel T2 [1,6]/2                                     got: K-G6 DEFENDER premise 3 
 PASS Panel T3 []/0                                        got: K-G6 DEFENDER premise 1, K-G6 DEFENDER premise 3, K-G7 D6 vs C3 
@@ -20,6 +20,13 @@ PASS Panel F-dup [1,1,3]/2                                got: K-G7 D6 vs C3
 PASS Panel F-range [0]/1                                  got: none | marks: DEFENDER INVALID (0) 
 PASS Panel F-range [7]/1 (6 premises)                     got: none | marks: DEFENDER INVALID (7) 
 PASS Panel F-range [-1]/1                                 got: none | marks: DEFENDER INVALID (-1) 
+PASS Panel U1 no count lines, [1]/1                       got: K-G6 DEFENDER premise 3, K-G7 D6 vs C3 
+PASS Panel U2 no count lines, [1,3]/2                     got: K-G7 D6 vs C3 
+PASS Panel U3 K-G7 L from the ledger                      got: 6 
+PASS Panel U4 no count lines, C count 0, C BROKEN never named got: K-G6 CHALLENGER premise 1, K-G7 D3 vs C2 
+PASS Panel U6 K-G7 challenger L from the ledger           got: 2 
+PASS Panel U7 no count lines, [1,3]/3                     got: K-G8 DEFENDER COUNTED PREMISES, K-G7 D6 vs C3 
+PASS Panel U5 no count lines, D count absent, [1]         got: none 
 PASS Panel T12 prose line, key absent/0                   got: K-G6 DEFENDER premise 1, K-G6 DEFENDER premise 3, K-G7 D6 vs C3 | marks: DEFENDER ABSENT 
 PASS Alter T1 [1,3,6]/3, C [1]/1                          got: none 
 PASS Alter T2 [1,6]/2                                     got: K-G6 DEFENDER premise 3 
@@ -37,6 +44,13 @@ PASS Alter F-dup [1,1,3]/2                                got: K-G7 D6 vs C3
 PASS Alter F-range [0]/1                                  got: none | marks: DEFENDER INVALID (0) 
 PASS Alter F-range [7]/1 (6 premises)                     got: none | marks: DEFENDER INVALID (7) 
 PASS Alter F-range [-1]/1                                 got: none | marks: DEFENDER INVALID (-1) 
+PASS Alter U1 no count lines, [1]/1                       got: K-G6 DEFENDER premise 3, K-G7 D6 vs C3 
+PASS Alter U2 no count lines, [1,3]/2                     got: K-G7 D6 vs C3 
+PASS Alter U3 K-G7 L from the ledger                      got: 6 
+PASS Alter U4 no count lines, C count 0, C BROKEN never named got: K-G6 CHALLENGER premise 1, K-G7 D3 vs C2 
+PASS Alter U6 K-G7 challenger L from the ledger           got: 2 
+PASS Alter U7 no count lines, [1,3]/3                     got: K-G8 DEFENDER COUNTED PREMISES, K-G7 D6 vs C3 
+PASS Alter U5 no count lines, D count absent, [1]         got: none 
 PASS Alter T12 prose line, key absent/0                   got: K-G6 DEFENDER premise 1, K-G6 DEFENDER premise 3, K-G7 D6 vs C3 | marks: DEFENDER ABSENT 
 PASS Extra T1 [1,3,6]/3, C [1]/1                          got: none 
 PASS Extra T2 [1,6]/2                                     got: K-G6 DEFENDER premise 3 
@@ -54,15 +68,22 @@ PASS Extra F-dup [1,1,3]/2                                got: K-G7 D6 vs C3
 PASS Extra F-range [0]/1                                  got: none | marks: DEFENDER INVALID (0) 
 PASS Extra F-range [7]/1 (6 premises)                     got: none | marks: DEFENDER INVALID (7) 
 PASS Extra F-range [-1]/1                                 got: none | marks: DEFENDER INVALID (-1) 
+PASS Extra U1 no count lines, [1]/1                       got: K-G6 DEFENDER premise 3, K-G7 D6 vs C3 
+PASS Extra U2 no count lines, [1,3]/2                     got: K-G7 D6 vs C3 
+PASS Extra U3 K-G7 L from the ledger                      got: 6 
+PASS Extra U4 no count lines, C count 0, C BROKEN never named got: K-G6 CHALLENGER premise 1, K-G7 D3 vs C2 
+PASS Extra U6 K-G7 challenger L from the ledger           got: 2 
+PASS Extra U7 no count lines, [1,3]/3                     got: K-G8 DEFENDER COUNTED PREMISES, K-G7 D6 vs C3 
+PASS Extra U5 no count lines, D count absent, [1]         got: none 
 PASS Extra T12 prose line, key absent/0                   got: K-G6 DEFENDER premise 1, K-G6 DEFENDER premise 3, K-G7 D6 vs C3 | marks: DEFENDER ABSENT 
 PASS T13 Extract on 27665 single judge                    got: K-G6 DEFENDER premise 1, K-G6 DEFENDER premise 3, K-G7 D6 vs C3 
 PASS TEXT schema lines in Panel Build                     got: 2 
 PASS TEXT no line sentence (Panel Build, BIV)             got: 0 
-MARKS md5 04d9da7167e9bdb17bd9f90d1de872c1
-TOTAL pass 54 fail 0
+MARKS md5 aec6df8b04b04b3bccbbbdb95190bc9b
+TOTAL pass 75 fail 0
 == the same on base10 (must fail)
-TOTAL pass 13 fail 41
-== T14 by SQL 21:19:29 CDT: 186 stored judgments, 0 carry counted_premises (all ABSENT, so (A))
+TOTAL pass 16 fail 59
+== T14 by SQL 21:19:29 CDT (2026-10-21): 186 stored judgments, 0 carry counted_premises (all ABSENT, so (A))
 == h_site2
 Panel_Payloads covering K-G4 D6 vs C3 | K-G3 null | K-G8 DEFENDER COUNTED PREMISES | K-G8 CHALLENGER COUNTED PREMISES | [AUDIT v21: DEBATE RULE VIOLATION (K-G4) -- D6 vs C3 DEFENDER LINK BROKEN counts
 Panel_Payloads short K-G4 D6 vs C3 | K-G3 null | K-G6 DEFENDER premise 1 | K-G6 DEFENDER premise 3 | K-G6 CHALLENGER premise 6 | K-G8 DEFENDER COUNTED PREMISES | [AUDIT v21: DEBATE RULE VIOLATION (K-G
@@ -96,8 +117,8 @@ L4 both nodes same ledger text: true | L5 prose names later rounds: true
 Build_Independent_Verdict.js | defender list with CR2 blanked equals base: true | challenger list with DR2 blanked equals base: true
 Panel_Build.js | defender list with CR2 blanked equals base: true | challenger list with DR2 blanked equals base: true
 == per-site probes
-sites 63 | DETECTED 61 | SILENT 2
-Extract_Independent_Verdict  pair  8  SILENT
-Extract_Independent_Verdict  pair  9  SILENT
-sites 63 | DETECTED 61 | SILENT 2
+sites 81 | DETECTED 79 | SILENT 2
+Extract_Independent_Verdict  pair 14  SILENT
+Extract_Independent_Verdict  pair 15  SILENT
+sites 81 | DETECTED 79 | SILENT 2
 SILENT by equivalence: the single judge's call sites pass null where base10 passed nothing; both are ABSENT.

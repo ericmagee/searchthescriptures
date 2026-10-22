@@ -33,7 +33,10 @@ for(const n of ['Panel_Payloads','Alternate_Payloads','Extract_Independent_Verdi
  chk(p+'U2 no count lines, [1,3]/2',run(F,std,2,1,{DEFENDER:[1,3],CHALLENGER:[1]},null,true),'K-G7 D6 vs C3');
  {const T=['COLLISION POINTS:',BL].join('\n');const L0=F.drvLedger(T,std,1,1,'X','Y',{DEFENDER:[1],CHALLENGER:[1]});const B=F.drvBroken(T,1,'X',L0.items,1,'Y',std,{DEFENDER:[1],CHALLENGER:[1]});
   chk(p+'U3 K-G7 L from the ledger',String((B.items.find(x=>x.rule==='K-G7')||{}).L),'6');}
- chk(p+'U4 no count lines, C count 0, C BROKEN never named',run(F,std,2,0,{DEFENDER:[1,3],CHALLENGER:[1]},null,true,'D3 vs C2 (Luke 1:34): CHALLENGER LINK BROKEN -- [L1] "How shall this be" and [L3] Matthew 1:18 never named in [DR3].'),'K-G7 D3 vs C2');
+ chk(p+'U4 no count lines, C count 0, C BROKEN never named',run(F,std,2,0,{DEFENDER:[1,3],CHALLENGER:[]},null,true,'D3 vs C2 (Luke 1:34): CHALLENGER LINK BROKEN -- [L1] "How shall this be" and [L3] Matthew 1:18 never named in [DR3].'),'K-G6 CHALLENGER premise 1, K-G7 D3 vs C2');
+ {const T=['COLLISION POINTS:','D3 vs C2 (Luke 1:34): CHALLENGER LINK BROKEN -- [L1] "How shall this be" and [L3] Matthew 1:18 never named in [DR3].'].join('\n');const L0=F.drvLedger(T,std,2,0,'X','Y',{DEFENDER:[1,3],CHALLENGER:[]});const B=F.drvBroken(T,2,'X',L0.items,0,'Y',std,{DEFENDER:[1,3],CHALLENGER:[]});
+  chk(p+'U6 K-G7 challenger L from the ledger',String((B.items.find(x=>x.rule==='K-G7'&&x.side==='CHALLENGER')||{}).L),'2');}
+ chk(p+'U7 no count lines, [1,3]/3',run(F,std,3,1,{DEFENDER:[1,3],CHALLENGER:[1]},null,true),'K-G8 DEFENDER COUNTED PREMISES, K-G7 D6 vs C3');
  chk(p+'U5 no count lines, D count absent, [1]',run(F,std,undefined,1,{DEFENDER:[1],CHALLENGER:[1]},null,true),'none');
  chk(p+'T12 prose line, key absent/0',run(F,std,0,1,{CHALLENGER:[1]},['COUNTED PREMISES DEFENDER: 1, 3, 6']),'K-G6 DEFENDER premise 1, K-G6 DEFENDER premise 3, K-G7 D6 vs C3 | marks: DEFENDER ABSENT');}
 // T13: Extract Independent Verdict, whole node, on the single judge's stored text and Text 1

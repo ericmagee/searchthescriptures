@@ -21,8 +21,8 @@
  },
  "Alternate_Payloads": {
   "base10": "6e0485942c745bcc57514f56366d8dbe",
-  "new10": "3a7ce5a1e6f5aa51222fffceddc73cd1",
-  "pairs": 10
+  "new10": "84b87f49765d67543463e832cb6ff7bb",
+  "pairs": 16
  },
  "Build_Independent_Verdict": {
   "base10": "390de6db539803f36b8fa9f2f0d3710b",
@@ -51,8 +51,8 @@
  },
  "Extract_Independent_Verdict": {
   "base10": "e55c8cf052c2f098739b715d569f51da",
-  "new10": "e3b3f00a037f5c64fe17e83c03a78595",
-  "pairs": 10
+  "new10": "d3aa496067e1c1b856503eadbf6c9822",
+  "pairs": 16
  },
  "Format_Markdown": {
   "base10": "07c63bb3e4341ca6804419feb0b02576",
@@ -106,7 +106,7 @@
  },
  "Panel_Payloads": {
   "base10": "06b20f326e6d241f02ca55d36d3e0fd6",
-  "new10": "3256d8f09cfff2460d33ad92e7ec5ced",
-  "pairs": 10
+  "new10": "c775280f3debff5e641542bf9f53d824",
+  "pairs": 16
  }
 }

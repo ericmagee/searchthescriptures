@@ -16,6 +16,12 @@ Alternate_Payloads           pair  6  DETECTED
 Alternate_Payloads           pair  7  DETECTED
 Alternate_Payloads           pair  8  DETECTED
 Alternate_Payloads           pair  9  DETECTED
+Alternate_Payloads           pair 10  DETECTED
+Alternate_Payloads           pair 11  DETECTED
+Alternate_Payloads           pair 12  DETECTED
+Alternate_Payloads           pair 13  DETECTED
+Alternate_Payloads           pair 14  DETECTED
+Alternate_Payloads           pair 15  DETECTED
 Build_Independent_Verdict    pair  0  DETECTED
 Cure_Build                   pair  0  DETECTED
 Cure_Build                   pair  1  DETECTED
@@ -31,8 +37,14 @@ Extract_Independent_Verdict  pair  4  DETECTED
 Extract_Independent_Verdict  pair  5  DETECTED
 Extract_Independent_Verdict  pair  6  DETECTED
 Extract_Independent_Verdict  pair  7  DETECTED
-Extract_Independent_Verdict  pair  8  SILENT
-Extract_Independent_Verdict  pair  9  SILENT
+Extract_Independent_Verdict  pair  8  DETECTED
+Extract_Independent_Verdict  pair  9  DETECTED
+Extract_Independent_Verdict  pair 10  DETECTED
+Extract_Independent_Verdict  pair 11  DETECTED
+Extract_Independent_Verdict  pair 12  DETECTED
+Extract_Independent_Verdict  pair 13  DETECTED
+Extract_Independent_Verdict  pair 14  SILENT
+Extract_Independent_Verdict  pair 15  SILENT
 Format_Markdown              pair  0  DETECTED
 Panel_Build                  pair  0  DETECTED
 Panel_Build                  pair  1  DETECTED
@@ -61,4 +73,10 @@ Panel_Payloads               pair  6  DETECTED
 Panel_Payloads               pair  7  DETECTED
 Panel_Payloads               pair  8  DETECTED
 Panel_Payloads               pair  9  DETECTED
-sites 63 | DETECTED 61 | SILENT 2
+Panel_Payloads               pair 10  DETECTED
+Panel_Payloads               pair 11  DETECTED
+Panel_Payloads               pair 12  DETECTED
+Panel_Payloads               pair 13  DETECTED
+Panel_Payloads               pair 14  DETECTED
+Panel_Payloads               pair 15  DETECTED
+sites 81 | DETECTED 79 | SILENT 2

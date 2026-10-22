@@ -37,5 +37,9 @@ ADDENDUM 2 (Worker_E's BB-7461, defect 2c-1; declared before its fix): the typed
  U1 no "CONCEDED LINKS:" lines in the reasoning; JSON defender count 1, array [1]; D6 BROKEN -> K-G6 DEFENDER premise 3; K-G7 D6 vs C3
  U2 no count lines; defender count 2, array [1,3]; D6 BROKEN                         -> K-G7 D6 vs C3 only
  U3 no count lines and no DEFENSE STANDING line; U1's K-G7 item carries L = 6, the ledger's defender premise count
- U4 no count lines; challenger count 0, a CHALLENGER LINK BROKEN line "never named" -> K-G7 challenger (option (c) on the integer too)
+ U4 no count lines; challenger count 0 with array [], a CHALLENGER LINK BROKEN line "never named" -> K-G7 challenger (option (c) on the integer too)
+   U4 fixture note (2c-1): the std ledger marks challenger premise 1 NOT NAMED and count 0 requires [], so K-G6 CHALLENGER premise 1 is also raised, correctly. Expectation stated as "K-G6 CHALLENGER premise 1, K-G7 D3 vs C2". The K-G7 challenger expectation is unchanged.
+    (fixture note: the harness first passed array [1] against count 0, which rightly also raises K-G8; the input was corrected to [], the expectation unchanged)
  U5 no count lines; defender count absent (not a number), array [1]                  -> no defender item (no integer to test against)
+ U6 no count lines and no CHALLENGE STANDING line; U4's K-G7 challenger item carries L = 2, the ledger's challenger premise count (added AFTER the 2c-1 fix: the probe run found this site SILENT, pair 9 in Panel and Alternate Payloads and Extract)
+ U7 no count lines; defender count 3, array [1,3]; D6 BROKEN -> K-G8 DEFENDER COUNTED PREMISES; K-G7 D6 vs C3 (K-G8 on the integer without the prose line; added AFTER the 2c-1 fix: the probe run found this site SILENT, pair 10 in the same three nodes)

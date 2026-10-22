@@ -38,6 +38,15 @@ def raise_pairs(src):
         (r"""'COUNTED PREMISES DEFENDER does not name premise '+ps.join(' or ')""", r"""'counted_premises_defender does not list premise '+ps.join(' or ')"""),
         (r'''function drvLedger(text,ptext,dConc,cConc,dStand,cStand){''', r'''function drvLedger(text,ptext,dConc,cConc,dStand,cStand,CPV){'''),
         (r'''const cp=drvCP(T,side,drvLinkMap(ptext));''', r'''const cp=drvCPA(CPV&&CPV[side],drvLedgerN(ptext,side));'''),
+        # BB-7461 defect 2c-1: the typed checks run on the JSON integer, not on a prose count line; L from the ledger.
+        (r'''const L=lm?+lm[1]:null;''', r'''const L=drvLedgerN(ptext,'DEFENDER')||(lm?+lm[1]:null);'''),
+        (r'''const LC=cm?+cm[1]:null;''', r'''const LC=drvLedgerN(ptext,'CHALLENGER')||(cm?+cm[1]:null);'''),
+        (r'''for(const sd of ['DEFENDER','CHALLENGER']){if(drvCountLine(T,sd)===null)continue;const cp=CP[sd],sc=sd==='DEFENDER'?dConc:cConc;''',
+         r'''for(const sd of ['DEFENDER','CHALLENGER']){const cp=CP[sd],sc=sd==='DEFENDER'?dConc:cConc;if(typeof sc!=='number')continue;'''),
+        (r'''const cZero=drvCountLine(T,'CHALLENGER')!==null&&cConc===0;''', r'''const cZero=cConc===0;'''),
+        (r'''if(cl===null)continue;const ps=LK?(LK[n]||[]):[n];''', r'''if(typeof dConc!=='number')continue;const ps=LK?(LK[n]||[]):[n];'''),
+        (r'''const cl=countLine(side);if(cl===null)continue;const cp=drvCPA(CPV&&CPV[side],drvLedgerN(ptext,side));const sc=side==='DEFENDER'?dConc:cConc;''',
+         r'''const cp=drvCPA(CPV&&CPV[side],drvLedgerN(ptext,side));const sc=side==='DEFENDER'?dConc:cConc;if(typeof sc!=='number')continue;'''),
     ]
 
 CPV = r''',{DEFENDER:v.counted_premises_defender,CHALLENGER:v.counted_premises_challenger}'''
