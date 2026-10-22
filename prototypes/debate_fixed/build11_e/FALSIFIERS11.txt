@@ -50,3 +50,32 @@ F12 (DoD 12, choice (i)) cause, measured by A3 (7493): two non-contiguous quotat
  F12.5 two PRESSED lines, one quotation each: unchanged.
  F12.6 the same two-quotation line with a SHORT line quoting [CR3]'s answer: CURED on new, UNCURED on base.
 BASE RUN: RUN_F11_F12_BASE.txt.
+
+ADDENDUM 2, F10b and F13 (b) (c), declared BEFORE any change to Build Save Body and Format Markdown.
+HARNESS: h_fm.cjs runs Format Markdown then Plain Rule Lines on 27795's stored row (fx/row_27795.json) and judgments (fx/judgments_27795.json),
+the Quote Report of the chain harness, the guards (fx/guards.json) and Isaiah 28:10 as stored. On base11 it reproduces the stored report
+(6dc306fc) above section 8 line for line except the run time (a clock read) and the blank lines at the section 8 boundary (section 8's
+inputs are not stored). cmp_fm.py prints the difference.
+SOURCE OF A FLAG'S CURE RESULT (both nodes, one helper): the cure check appends "[AUDIT v21: DEBATE RULE VIOLATION REPORT -- [SEAT: s; ]ITEM: i;
+RULE: r; RESULT: R ...]" to the judge's text. A review flag is CURED when the REPORT line for its rule and item reads RESULT: CURED. The flag's
+item is read from its own text: "(K-Gn) -- D<i> vs C<j>", "(K-G3) -- DEFENSE|CHALLENGE STANDING", "(K-G6) -- <SIDE> premise <n>", "(K-G8) --
+counted_premises_<side>", or the rule B form "VIOLATION -- D<i> vs C<j> ...". A flag with no REPORT line is unchanged.
+F10b (DoD 10, review_notes half) and F13c (DoD 13, cured marked), Build Save Body:
+ F10b.1 each review flag copied from the single judge's text into review_notes names the single judge: "[AUDIT v21: SINGLE JUDGE (second
+        opinion): DEBATE RULE VIOLATION ...]".
+ F10b.2 on 27795: K-G4 D3 vs C3, K-G4 D6 vs C3, K-G7 D3 vs C3, K-G7 D6 vs C3 read "CURED by the single judge's cure reply; recorded, not for
+        review." in place of "REVIEW THIS ROW."; K-G1 D4 vs C3 keeps "REVIEW THIS ROW.".
+ F10b.3 a flag with no REPORT line (an EXTRACTOR line, or a run with no cure call) keeps "REVIEW THIS ROW." and gains only the label.
+ F10b.4 nothing else in saveBody changes (all keys but review_notes equal on base and new, same inputs).
+F13c, Format Markdown (Result table):
+ F13c.1 on 27795 (stored row, base review_notes): the single judge's four cured flags print as "Cured flag (single judge)", the K-G1 D4 flag as
+        "Review flag (single judge)"; read from the REPORT lines in independent_verdict_raw, so old rows read the same.
+ F13c.2 a row whose review_notes already carry the new form prints the same rows (no double count).
+ F13c.3 panel judge flags: a flag cured by that seat's REPORT line prints "Cured flag (panel judge X)"; the SAME-MODEL DIVERGENCE flag on
+        DeepSeek (no REPORT line) stays "Review flag (panel judge DeepSeek)".
+ F13c.4 no other line above section 8 changes (cmp_fm.py: only the Result table rows above and the run time differ).
+F13b, Format Markdown (section 8): under each cure call, after the request, the judge's reply is printed in full ("**reply to the cure
+ request** (N characters)" and a fence), read from the Normalize node of that call (Cure Normalize, Panel Cure Normalize 1-3, Alternate Cure
+ Normalize) by seat and caller; a call whose reply was not read prints "*No reply was read: <why>*". Tested on constructed stubs (the stored
+ run holds no cure bodies or replies).
+F13a/F13d: the Panel Build read, held for 7503.
