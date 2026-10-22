@@ -75,6 +75,9 @@ E PASS got: premise 3 | expected: premise 3
 F PASS got: premise 1 | expected: premise 1
 G PASS got: none | expected: none
 H PASS got: none | expected: none
+O PASS got: none | expected: none
+P PASS got: none | expected: none
+Q PASS got: premise 3 | expected: premise 3
 I PASS got: not written | expected: not written
 J PASS got: 2 PROP-DEPENDENT | expected: 2 PROP-DEPENDENT
 K PASS got: not written | expected: not written

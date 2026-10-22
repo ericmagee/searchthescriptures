@@ -1,4 +1,4 @@
-THE DEBATE FIXED DoD 7 build (K-G7, ruling BB-7420), Worker_A3, run 2026-10-21 20:23:40 CDT
+THE DEBATE FIXED DoD 7 build (K-G7, BB-7420) and the comma-after-tag fix (BB-7426), Worker_A3, run 2026-10-21 20:26:05 CDT
 == patch from base
 22 nodes built
 == parse
@@ -33,7 +33,7 @@ M1 Extract DeepSeek PASS got: D6 vs C3 | expected: D6 vs C3
 14/14 LABEL PASS
 TEXT Format Markdown K-G7 label PASS got: named | expected: named
 FAILS 0
-== FALSIFIERS2 (818d373)
+== FALSIFIERS2 with O-Q (818d373, 18bbb26)
 A PASS got: none | expected: none
 B PASS got: none | expected: none
 C PASS got: premise 1, premise 3 | expected: premise 1, premise 3
@@ -42,6 +42,9 @@ E PASS got: premise 3 | expected: premise 3
 F PASS got: premise 1 | expected: premise 1
 G PASS got: none | expected: none
 H PASS got: none | expected: none
+O PASS got: none | expected: none
+P PASS got: none | expected: none
+Q PASS got: premise 3 | expected: premise 3
 I PASS got: not written | expected: not written
 J PASS got: 2 PROP-DEPENDENT | expected: 2 PROP-DEPENDENT
 K PASS got: not written | expected: not written

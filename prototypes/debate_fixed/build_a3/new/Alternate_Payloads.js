@@ -133,10 +133,13 @@ function drvPromptText(body){try{const b=body||{};const out=[];if(b.systemInstru
 // governs it is not negated. The governing word is the one in the number's own comma part, else the nearest in the clause; lists
 // ("premises 1 and 3", "1, 3") and ranges ("1-3") count every member; "not conceded" counts nothing; "no ... or UNEXHIBITED" counts nothing.
 function drvCounted(line){const P=new Set(),K=new Set();const NEG=/\b(?:not|no|never|none|neither|nor)\b/gi;
-  for(const cl of String(line).replace(/^[^:]*:/,'').split(/[;.](?=\s|$)/)){
-   const W=[...cl.matchAll(/\b(?:UNEXHIBITED|CONCEDED)\b/gi)].map(w=>{const pre=cl.slice(0,w.index);const ns=[...pre.matchAll(NEG)];const g=ns.length?ns[ns.length-1].index:-1;
+  for(const cl0 of String(line).replace(/^[^:]*:/,'').split(/[;.](?=\s|$)/)){
+   // a parenthesis (the prompt's own "(no footing offered)") is blanked, and a negation is read only inside the word's own comma part (BB-7426).
+   const cl=cl0.replace(/\([^()]*\)/g,z=>' '.repeat(z.length));const cuts=[0];for(const c of cl.matchAll(/,/g))cuts.push(c.index);cuts.push(cl.length);
+   const part=i=>cuts.findIndex((c,k)=>k<cuts.length-1&&i>=c&&i<cuts[k+1]);
+   const W=[...cl.matchAll(/\b(?:UNEXHIBITED|CONCEDED)\b/gi)].map(w=>{const pre=cl.slice(cuts[part(w.index)],w.index);const ns=[...pre.matchAll(NEG)];const g=ns.length?ns[ns.length-1].index:-1;
     return {at:w.index,end:w.index+w[0].length,neg:g>=0&&!/\b(?:and|but|so|thus|therefore|hence)\b/i.test(pre.slice(g))};});
-   if(!W.length)continue;const cuts=[0];for(const c of cl.matchAll(/,/g))cuts.push(c.index);cuts.push(cl.length);const part=i=>cuts.findIndex((c,k)=>k<cuts.length-1&&i>=c&&i<cuts[k+1]);
+   if(!W.length)continue;
    for(const m of cl.matchAll(/\b(premises?|links?)\s*((?:\d+(?:\s*(?:-|–|to)\s*\d+)?(?:\s*(?:,|and|&)\s*(?=\d))?)+)/gi)){
     const own=W.filter(w=>part(w.at)===part(m.index));const gap=w=>w.at>=m.index+m[0].length?w.at-(m.index+m[0].length):Math.abs(m.index-w.end);
     const gw=(own.length?own:W).reduce((x,y)=>gap(y)<gap(x)?y:x);if(gw.neg)continue;const T=/^link/i.test(m[1])?K:P;
