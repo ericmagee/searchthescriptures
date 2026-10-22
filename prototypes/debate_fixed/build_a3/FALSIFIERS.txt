@@ -1,0 +1,34 @@
+THE DEBATE FIXED (BB-7397), P2D rev 3 (BB-7407), shape BB-7409. Step 2 (Worker_A3): falsifiers declared BEFORE any file change.
+Base: live ORACLE_DEBATE_V1 428fbdc3-279b-4edb-9079-9ec273f8f824 (the publish read back at BB-7385); derive_debate_outcome(uuid)
+md5 347c8a9498aa1a5a0ef09f496e1be2fc, 18,337 characters. Stored ground: run 27665 (debate 921f5530), report27665.md md5 7f22d279.
+
+DoD 1, ONE VERDICT
+ F1a Function file: its diff against the saved prior definition holds exactly (i) one SET entry
+     "framework_verdict = CASE WHEN panel_verdict IS NULL THEN v_fv ELSE framework_verdict END" (first stamp only, frozen with
+     panel_verdict, so rows stamped before the publish never change), (ii) the AMENDMENT comment and the framework_verdict_semantic and
+     write_semantic notes rewritten; nothing else. The panel's word is CONTESTED when the panel is ungraded, as panel_verdict is.
+ F1b Format Markdown, run by a harness on 27665's stored row with framework_verdict set to the panel verdict (HELD): the Judges list
+     carries "- Verdict of the debate: **HELD** (the panel)"; every single-judge line and heading reads "SECOND OPINION (single
+     judge, not the verdict)" and shows the single judge's own word (BROKEN), read from independent_verdict_raw, never
+     framework_verdict. W2 silent on the new output; W2 fires on the base output.
+ F1c Mutant: a Format Markdown that prints r.framework_verdict as the single judge's word shows HELD there: caught by F1b.
+DoD 2, PLAIN LANGUAGE
+ F2 The 7348 sentence occurs exactly once in each of: the defender frame and the challenger frame (Init with Guards), the Build
+     Independent Verdict system text, the Panel Build system text; 0 times anywhere else in the flow.
+DoD 3, THE PER-PREMISE STANDING CHECK (K-G6, binding note BB-7409)
+ F3a Raised per premise the PRESSED-WITNESS LEDGER sent to that judge marks NOT NAMED and the judge's itemization does not count
+     (CONCEDED or UNEXHIBITED, by premise n or LINK m), both sides. On 27665: GLM defender premises 1, 3; Gemini defender 1, 3 and
+     challenger 1, 6; Grok none; the single judge challenger 1. DECLARED BEFORE THE RUN: GLM challenger premise 1 (Luke 1:31) is
+     also uncounted in GLM's itemization (it counts LINK 3, 5, 6), so the rule as written fires there; BB-7409's list omits it.
+ F3b Cure: cured by CORRECTED COUNT for that side at least the original count plus the side's uncured K-G6 premises, with a
+     CORRECTED STANDING that the count makes true (PROP-DEPENDENT, or COLLAPSED when 2c > L); or by a STATEMENT naming the premise
+     with a quotation found in the transcript rounds. Refused: no lines; a count too low; a statement with no quotation found.
+ F3c Uncured K-G6 counts in drv_uncured, so the seat is not counted, as K-G3.
+DoD 4
+ F4 Every node outside the changed set equals 428fbdc3 byte for byte; connections equal; each changed node reverses to base by its
+     own patch pairs.
+DoD 5, CORRECTED STANDING AND COUNT WRITTEN
+ F5 Panel Cure Check run by a harness on 27665's stored Gemini cure reply: Gemini's body payload defense_standing becomes
+     PROP-DEPENDENT, its original kept in verdict_raw by an AUDIT line; GLM's body (no cure lines) unchanged. Same function in
+     Alternate Merge and Cure Check (single judge).
+WRONG-IF (on the step 7 run): W1 to W4 at git 738cf4f; W1 must be silent on the run row.
