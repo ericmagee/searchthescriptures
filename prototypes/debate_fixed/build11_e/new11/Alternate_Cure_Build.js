@@ -129,6 +129,11 @@ const cureQ=s=>String(s).replace(/[*_`]+/g,'').toLowerCase().replace(/[“”]/g
 // and the pieces hold at least three words.
 function cureFound(q,txt){const T=cureQ(txt);const ps=q.split(/\.{3}|…/).map(x=>cureQ(x).replace(/^[\s.,;:!?'"-]+|[\s.,;:!?'"-]+$/g,'')).filter(Boolean);
  return ps.length>0&&ps.join(' ').split(' ').length>=3&&ps.every(x=>T.includes(x));}
+// DoD 12 (BB-7397 rev 7, choice (i) BB-7495): a PRESSED line may carry several quotations of the named round, joined as "..." and "..."; a
+// quotation not found whole is split at a closing mark, a joiner (and, &, a comma or a semicolon) and an opening mark, and counts when every piece
+// is found in that round. A quotation found whole is read as before.
+function cureFoundAll(q,txt){if(cureFound(q,txt))return true;const ps=String(q).split(/["”]\s*(?:and|&|,|;)\s*["“]/).map(s=>s.trim()).filter(Boolean);
+ return ps.length>1&&ps.every(p=>cureFound(p,txt));}
 // The reply in the fixed form (BB-6952). A line is read only when, after trimming and stripping * or ` at its ends, it begins with one of the
 // five keywords and a colon; it then must match its form exactly, or it is malformed. Every other line is prose.
 const CURE_KEY=/^(RESTATED|RETRACTED|CORRECTED RESULT|CORRECTED COUNT|CORRECTED STANDING|PRESSED|SHORT|STATEMENT)[ \t]*:[ \t]*(.*)$/;
@@ -204,7 +209,7 @@ function cureVerdicts(items,reply,broken,rounds){const U=s=>String(s).toUpperCas
     if(!shortOk(sp.round))return res('UNCURED','statement quotes '+sp.round+'; the later round '+nmTxt(sp.round)+' and neither a SHORT line nor the statement quotes its answer',lines.concat([sp.line]));
     return res('CURED','statement passes the check: quotation found in '+sp.round+(nmTxt(sp.round)?'; answer quoted for '+nmTxt(sp.round):''),lines.concat([sp.line]));}
    const ok=ps.filter(p=>CURE_PRESS[x.side].includes(p.round));if(!ok.length)return res('UNCURED','PRESSED round '+ps.map(p=>'['+p.round+']').join(', ')+' does not press the '+x.side.toLowerCase(),lines);
-   const hit=ok.find(p=>typeof R[p.round]==='string'&&cureFound(p.q,R[p.round]));if(!hit)return res('UNCURED',ok.every(p=>typeof R[p.round]!=='string')?'the named round text could not be read':'no quotation found in the named round',lines);
+   const hit=ok.find(p=>typeof R[p.round]==='string'&&cureFoundAll(p.q,R[p.round]));if(!hit)return res('UNCURED',ok.every(p=>typeof R[p.round]!=='string')?'the named round text could not be read':'no quotation found in the named round',lines);
    if(!shortOk(hit.round))return res('UNCURED','the later round '+nmTxt(hit.round)+'; no SHORT line quoting its answer',lines);
    return res('CURED','pressed: quotation found in '+hit.round+(nmTxt(hit.round)?'; SHORT found for '+nmTxt(hit.round):''),lines);}
   if(x.rule==='K-B'){if(wd.has(U(x.link)))return res('CURED','retracted',o.withdrawn.filter(w=>U(w.link)===U(x.link)).map(w=>w.line));const rs=o.restated.filter(r=>U(r.link)===U(x.link));
@@ -221,7 +226,7 @@ function cureVerdicts(items,reply,broken,rounds){const U=s=>String(s).toUpperCas
     if(!shortOk(sp.round))return res('UNCURED','the later round '+nmTxt(sp.round)+'; neither a SHORT line nor the statement quotes its answer',lines.concat([sp.line]));
     return res('CURED','corrected: '+x.side+' COUNT '+ns[0]+'; statement passes the check: quotation found in '+sp.round,lines.concat([sp.line]));}
    const ok=ps.filter(p=>CURE_PRESS[x.side].includes(p.round));if(!ok.length)return res('UNCURED','PRESSED round '+ps.map(p=>'['+p.round+']').join(', ')+' does not press the '+x.side.toLowerCase()+' (it must be '+CURE_PRESS[x.side].map(k=>'['+k+']').join(', ')+')',lines);
-   const hit=ok.find(p=>typeof R[p.round]==='string'&&cureFound(p.q,R[p.round]));
+   const hit=ok.find(p=>typeof R[p.round]==='string'&&cureFoundAll(p.q,R[p.round]));
    if(hit&&!shortOk(hit.round))return res('UNCURED','the later round '+nmTxt(hit.round)+'; no SHORT line quoting its answer',lines);
    if(hit)return res('CURED','corrected: '+x.side+' COUNT '+ns[0]+'; quotation found in '+hit.round,lines);
    return res('UNCURED',ok.every(p=>typeof R[p.round]!=='string')?'the named round text could not be read':'no quotation found in the named round',lines);}
@@ -290,7 +295,7 @@ function cureProse(seat,reply){const p=reply&&reply.ok?cureLines(reply.text).pro
 const out=[];
 $('Alternate Payloads').all().map(x=>x.json).forEach((r,k)=>{if(!r.ok||!(r.drv||[]).length)return;const a=r.alt;
  let answer=null,wt=null;try{const vr=JSON.parse(r.body).payload.verdict_raw;const j=vr.indexOf('\n\n[AUDIT v');answer=j>=0?vr.slice(0,j):vr;}catch(e){answer=null;}
- try{const o=JSON.parse(answer);wt=(o.reasoning!=null?o.reasoning:o.reason);}catch(e){wt=answer;}
+ wt=cureUnwrap(answer); /* DoD 11 (BB-7397 rev 7): the worked text read as the reply is read, a ```json fence stripped first (27795 Gemini) */
  if(typeof answer!=='string')return;
  out.push({json:{cure:{who:'alternate',k,idx:a.idx,seat:a.seat,fam:'openrouter',model:a.api_model,items:r.drv,broken:cureBroken(wt),rounds:cureRounds(a.body),body:cureBody('openrouter',a.body,answer,cureAsk(r.drv,cureBroken(wt)))}}});});
 if(!out.length)out.push({json:{cure:{who:'alternate',skip:'no alternate to cure',items:[]}}});

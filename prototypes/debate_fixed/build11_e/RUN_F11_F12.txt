@@ -1,0 +1,18 @@
+== base11
+{"wt_is_reasoning":false,"broken":{"DEFENDER":[],"CHALLENGER":[]},"verdicts":[{"rule":"K-G3","side":"DEFENDER","status":"UNCURED","why":"the BROKEN links of DEFENDER could not be read from the judgment"}]}
+{"F11_2_unfenced":{"wt_len":4816,"broken":{"DEFENDER":["D4 vs C3","D6 vs C3"],"CHALLENGER":[]}},"F11_3_fenced_noBroken":{"DEFENDER":[],"CHALLENGER":[]},"F11_4_ask_line":"K-G3 DEFENDER: DEFENDER STANDING SELF-SUPPORTED while these DEFENDER links are graded BROKEN: "}
+F12.1 stored form: two quotations joined by and => [{"rule":"K-G1","link":"D4 vs C3","status":"UNCURED","why":"no quotation found in the named round"}]
+F12.2 one quotation, found => [{"rule":"K-G1","link":"D4 vs C3","status":"UNCURED","why":"the later round [CR3] mat 1:18, mat 1:25; no SHORT line quoting its answer"}]
+F12.3 two quotations, second not in DR2 => [{"rule":"K-G1","link":"D4 vs C3","status":"UNCURED","why":"no quotation found in the named round"}]
+F12.4 one quotation not found => [{"rule":"K-G1","link":"D4 vs C3","status":"UNCURED","why":"no quotation found in the named round"}]
+F12.5 two PRESSED lines, one quotation each => [{"rule":"K-G1","link":"D4 vs C3","status":"UNCURED","why":"the later round [CR3] mat 1:18, mat 1:25; no SHORT line quoting its answer"}]
+F12.6 two quotations plus a SHORT line quoting [CR3] => [{"rule":"K-G1","link":"D4 vs C3","status":"UNCURED","why":"no quotation found in the named round"}]
+== new11
+{"wt_is_reasoning":true,"broken":{"DEFENDER":["D4 vs C3","D6 vs C3"],"CHALLENGER":[]},"verdicts":[{"rule":"K-G3","side":"DEFENDER","status":"CURED","why":"retracted: D4 VS C3, D6 VS C3"}]}
+{"F11_2_unfenced":{"wt_len":4816,"broken":{"DEFENDER":["D4 vs C3","D6 vs C3"],"CHALLENGER":[]}},"F11_3_fenced_noBroken":{"DEFENDER":[],"CHALLENGER":[]},"F11_4_ask_line":"K-G3 DEFENDER: DEFENDER STANDING SELF-SUPPORTED while these DEFENDER links are graded BROKEN: D4 vs C3, D6 vs C3"}
+F12.1 stored form: two quotations joined by and => [{"rule":"K-G1","link":"D4 vs C3","status":"UNCURED","why":"the later round [CR3] mat 1:18, mat 1:25; no SHORT line quoting its answer"}]
+F12.2 one quotation, found => [{"rule":"K-G1","link":"D4 vs C3","status":"UNCURED","why":"the later round [CR3] mat 1:18, mat 1:25; no SHORT line quoting its answer"}]
+F12.3 two quotations, second not in DR2 => [{"rule":"K-G1","link":"D4 vs C3","status":"UNCURED","why":"no quotation found in the named round"}]
+F12.4 one quotation not found => [{"rule":"K-G1","link":"D4 vs C3","status":"UNCURED","why":"no quotation found in the named round"}]
+F12.5 two PRESSED lines, one quotation each => [{"rule":"K-G1","link":"D4 vs C3","status":"UNCURED","why":"the later round [CR3] mat 1:18, mat 1:25; no SHORT line quoting its answer"}]
+F12.6 two quotations plus a SHORT line quoting [CR3] => [{"rule":"K-G1","link":"D4 vs C3","status":"CURED","why":"corrected: DEFENDER COUNT 2; quotation found in DR2"}]
