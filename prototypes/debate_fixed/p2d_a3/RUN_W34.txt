@@ -1,0 +1,18 @@
+W3 v2 bad (report27665 7f22d279):
+ledger premises with a NOT NAMED verse: defender 2 challenger 2
+Gemini defender count 0 FIRES | challenger count 1 silent
+Grok defender count 2 silent | challenger count 3 silent
+GLM defender count 0 FIRES | challenger count 3 silent
+W3 fired on 2
+W3 v2 good (fixture_w3b_good.md):
+ledger premises with a NOT NAMED verse: defender 0 challenger 0
+Gemini defender count 0 silent | challenger count 1 silent
+Grok defender count 2 silent | challenger count 3 silent
+GLM defender count 0 silent | challenger count 3 silent
+W3 fired on 0
+W4 bad (report27665):
+Gemini DEFENDER stored SELF-SUPPORTED corrected PROP-DEPENDENT FIRES
+W4 fired on 1
+W4 good (fixture_w4_good.md):
+Gemini DEFENDER stored PROP-DEPENDENT corrected PROP-DEPENDENT silent
+W4 fired on 0
