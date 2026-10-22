@@ -1,0 +1,112 @@
+{
+ "Alternate_Build": {
+  "base": "2025e7c19d34be9b161b63f5eb960779",
+  "new": "bcedaa54f99be9608c78c8c9695eadf3",
+  "pairs": 6
+ },
+ "Alternate_Cure_Build": {
+  "base": "f58ab1559aeffd73013fd1909d7a2ae6",
+  "new": "6f85f7116a792f4e284487e8974b8ceb",
+  "pairs": 6
+ },
+ "Alternate_Cure_Normalize": {
+  "base": "0718afe1fc28fb044fa388b75e752f05",
+  "new": "a7015f1a263a70a5aeb9f2a3489ef46d",
+  "pairs": 6
+ },
+ "Alternate_Merge": {
+  "base": "f514ba1f939f2ad74ef538a7ea32aea0",
+  "new": "724844e2cadd3b46cb8aacff2b2b7044",
+  "pairs": 7
+ },
+ "Alternate_Payloads": {
+  "base": "56ef9cf837b11a74aee14f89956b9089",
+  "new": "df440053d58b66a4c03987b9fa3ad074",
+  "pairs": 2
+ },
+ "Build_Independent_Verdict": {
+  "base": "b5c5ddff51e19b4018a519bb70d16e1c",
+  "new": "7fc75ea37d0e16a1a153fd43009c0bde",
+  "pairs": 1
+ },
+ "Build_Save_Body": {
+  "base": "3a2d435573d7f03f34cd8eb2bf011b68",
+  "new": "eac5e866df2b628be7806171f0b3d11f",
+  "pairs": 1
+ },
+ "Cure_Build": {
+  "base": "977e66937ff47e5e3ed7dd09e2489a3b",
+  "new": "17d1b17779bb94ef259c94c2fe30497d",
+  "pairs": 6
+ },
+ "Cure_Check": {
+  "base": "8d706420e0c469bd211d6055c04cd187",
+  "new": "ad32bb6cdffca824ad02f01904005a04",
+  "pairs": 7
+ },
+ "Cure_Normalize": {
+  "base": "a38f606a14fb2ca05d9664c89a341ce5",
+  "new": "2a7efedeec34f96b069cba0a27c0d80b",
+  "pairs": 6
+ },
+ "Extract_Independent_Verdict": {
+  "base": "ad63e71f98fda1a1d8b33ac80cb760a3",
+  "new": "6456a4c21132fc2ab84da1fd1b00a505",
+  "pairs": 2
+ },
+ "Format_Markdown": {
+  "base": "bdf24377498a960eb2e8dbadf119c5a6",
+  "new": "24545c22e07eb79e5c1068db104cf9ab",
+  "pairs": 6
+ },
+ "Init_with_Guards": {
+  "base": "1e9b9ceba51966bb2f24eea5e1a99a5c",
+  "new": "3b1262b05f49ab50001b144e98808948",
+  "pairs": 2
+ },
+ "Panel_Build": {
+  "base": "4f959f38fc8bef17e6637a3fad7e0119",
+  "new": "a7c40e93846d86989e7c92d5ab7aef33",
+  "pairs": 1
+ },
+ "Panel_Cure_Build_1": {
+  "base": "ee8e78b03755aaaf54071134699ebd2d",
+  "new": "9eb91333cb056e6d831de8979631b950",
+  "pairs": 6
+ },
+ "Panel_Cure_Build_2": {
+  "base": "56e91febb62054285fd86867cf697069",
+  "new": "6a6099d9f3bfc368c2c6e82623d830bf",
+  "pairs": 6
+ },
+ "Panel_Cure_Build_3": {
+  "base": "12de367c109412454c264be006e48b8a",
+  "new": "fab3c33ae426388d8f1a4a917f491ea1",
+  "pairs": 6
+ },
+ "Panel_Cure_Check": {
+  "base": "d5e48cc6fe486de1842db41f900b3e8a",
+  "new": "41fb4ab1c6e280714326148b0d615663",
+  "pairs": 7
+ },
+ "Panel_Cure_Normalize_1": {
+  "base": "54d9ceb7fb673959b073701650a0f0b9",
+  "new": "4fe38faeb613884f952c1cd7636da714",
+  "pairs": 6
+ },
+ "Panel_Cure_Normalize_2": {
+  "base": "c86b23681ea8dfde0820148cc819ba29",
+  "new": "b7a97e76df7c8f3121b3fd392b8dfd78",
+  "pairs": 6
+ },
+ "Panel_Cure_Normalize_3": {
+  "base": "3780615574b58a1c49494561d0a312ac",
+  "new": "932edf5e6ebf6fff566951da35505859",
+  "pairs": 6
+ },
+ "Panel_Payloads": {
+  "base": "c36cec2266ce44aacf59e8169c098ba9",
+  "new": "7913583698e92bbfae42235b41bb0f4a",
+  "pairs": 2
+ }
+}

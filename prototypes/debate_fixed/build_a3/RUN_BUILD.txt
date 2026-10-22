@@ -1,0 +1,54 @@
+THE DEBATE FIXED step 2 (Worker_A3) build record, run 2026-10-21 19:59:35 CDT
+== patch (anchors exactly once; each node reverses to base)
+Panel_Cure_Normalize_3 6 37806155 -> 932edf5e
+Panel_Payloads 2 c36cec22 -> 79135836
+22 nodes built
+rebuilt equals new/:
+== parse
+parse checked: 22 nodes
+== F1a function
+347c8a9498aa1a5a0ef09f496e1be2fc  derive_prior.sql
+81504a07270c6a3d7d204ce8d203a292  derive_new.sql
+14
+== F1b/F1c Format Markdown
+new/Format_Markdown.js panel | keys fileName,md,chars,judges,run_token
+   - Verdict of the debate: **HELD** (the panel) (a grade of the defender's chain: MiMo, arguing the record's reading)
+   - SECOND OPINION (single judge, not the verdict): DeepSeek (deepseek-flash): **BROKEN** (a grade of the defender's chain: MiMo, arguing the record's reading)
+   ## SECOND OPINION (single judge, not the verdict): DeepSeek (deepseek-flash): BROKEN (a grade of the defender's chain: MiMo, arguing the record's reading)
+single-judge lines 2 | unlabelled 0 | panel verdict line true => SILENT
+base/Format_Markdown.js stored | keys fileName,md,chars,judges,run_token
+   - Single judge: DeepSeek (deepseek-flash): **BROKEN** (a grade of the defender's chain: MiMo, arguing the record's reading)
+   ## Single judge: DeepSeek (deepseek-flash): BROKEN (a grade of the defender's chain: MiMo, arguing the record's reading)
+single-judge lines 2 | unlabelled 2 | panel verdict line false => FIRES
+   - SECOND OPINION (single judge, not the verdict): DeepSeek (deepseek-flash): **HELD** (a grade of the defender's chain: MiMo, arguing the record's reading)
+== F2 sentence
+{'new/Build_Independent_Verdict.js': 1, 'new/Init_with_Guards.js': 2, 'new/Panel_Build.js': 1}
+== F3a raise on 27665
+Gemini    items: DEFENDER premise 1, DEFENDER premise 3, CHALLENGER premise 1, CHALLENGER premise 6
+Grok      items: none
+GLM       items: DEFENDER premise 1, DEFENDER premise 3, CHALLENGER premise 1
+DeepSeek  items: DEFENDER premise 1, DEFENDER premise 3, CHALLENGER premise 1
+sent texts read: 2 | sent to: single judge || panel
+mutant (counted always true):
+Gemini    items: none
+Grok      items: none
+GLM       items: none
+DeepSeek  items: none
+== F3b/F5 cure
+quotation cut from Text 1: "LINK 1: SUPPORTED. [L1] The flesh seed is named as flesh: I" | nodes 14
+14/14 a_count_all => DEFENDER1:CURED DEFENDER3:CURED CHALLENGER1:CURED CHALLENGER6:CURED
+14/14 b_nothing => DEFENDER1:UNCURED DEFENDER3:UNCURED CHALLENGER1:UNCURED CHALLENGER6:UNCURED
+14/14 c_count_low => DEFENDER1:UNCURED DEFENDER3:UNCURED CHALLENGER1:CURED CHALLENGER6:CURED
+14/14 d_stmt_plus_count => DEFENDER1:CURED DEFENDER3:CURED CHALLENGER1:CURED CHALLENGER6:CURED
+14/14 e_stmt_quote_absent => DEFENDER1:UNCURED DEFENDER3:UNCURED CHALLENGER1:UNCURED CHALLENGER6:UNCURED
+14/14 f_wrong_standing => DEFENDER1:UNCURED DEFENDER3:UNCURED CHALLENGER1:UNCURED CHALLENGER6:UNCURED
+14/14 g_count_no_standing => DEFENDER1:UNCURED DEFENDER3:UNCURED CHALLENGER1:CURED CHALLENGER6:CURED
+F5 gemini after: {"defense_standing":"PROP-DEPENDENT","conceded_links":0,"challenge_standing":"PROP-DEPENDENT","challenger_conceded_links":1} | [AUDIT v21: CORRECTED STANDING -- SEAT: gemini; SIDE: DEFENDER; ORIGINAL: SELF-SUPPORTED, 0; COUNTED: PROP-DEPENDENT, 0]
+F5 glm (no reply): untouched {"defense_standing":"SELF-SUPPORTED","conceded_links":0,"challenge_standing":"PROP-DEPENDENT","challenger_conceded_links":3}
+== rev 12 harnesses on the new 14 (Worker_E, git 1b907c4)
+fx14 mode full | expected status 56/56
+fx14 mode nostmt | expected status 56/56
+fx14 nodes 14 | n0 press found, no SHORT: UNCURED 14/14 | n1 SHORT [CR2] quote not in CR2: UNCURED 14/14 | n2 SHORT [CR2] real answer: CURED 14/14 | n3 SHORT [CR2] one word changed: UNCURED 14/14 | n4 pressed in [DR2]: CR2 not an answering round 14/14 | n5 SHORT [CR2] quoting the verse words both sides quote: UNCURED 14/14 | n6 SHORT [CR3] for a verse CR3 does not name: UNCURED 14/14
+L4 both nodes same ledger text: true | L5 prose names later rounds: true
+Build_Independent_Verdict.js | defender list with CR2 blanked equals base: true | challenger list with DR2 blanked equals base: true
+Panel_Build.js | defender list with CR2 blanked equals base: true | challenger list with DR2 blanked equals base: true
