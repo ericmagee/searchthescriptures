@@ -180,14 +180,19 @@ function cureNamed(line,LR){const p=String(line||'').match(/\(([^)]*\d+:\d+[^)]*
 // BB-7397 rev 8 DoD 18 (rulings 105; the test of 7564 item 1): a RETRACTED line counts only beside a reason, a STATEMENT or prose line of the
 // reply that names the same link, a round ([CR1]-[DR3]) and words in quotation marks (3+ words) or a verse. Placement is free; a line that
 // names only the flag, the rule or the cure carries none of these and is no reason. Returns the links (upper case) that have a reason.
-function cureReasoned(o){const U=s=>String(s).toUpperCase();const out=new Set();
- const carriers=o.statement.map(s=>s.line).concat(o.prose);
+// Amendment 3 (7571, Worker_E's 7570): the flagged item's own words are the flag, not a reason. A STATEMENT is tested after its bar only, and
+// from every carrier the text of a flagged item's line (flags: the items' lines; whitespace and emphasis folded) is removed before the test.
+function cureReasoned(o,flags){const U=s=>String(s).toUpperCase();const out=new Set();
+ const fold=s=>String(s||'').replace(/[*_`]+/g,'').replace(/[“”]/g,'"').replace(/[‘’]/g,"'").replace(/\s+/g,' ').trim();
+ const F=[...new Set((flags||[]).map(fold).filter(Boolean))].sort((a,b)=>b.length-a.length);
+ const strip=s=>{let t=fold(s);for(const f of F)t=t.split(f).join(' ');return t.replace(/\s+/g,' ').trim();};
+ const carriers=o.statement.map(s=>({name:fold(s.label)+' '+strip(s.text),body:strip(s.text)})).concat(o.prose.map(p=>{const t=strip(p);return {name:t,body:t};}));
  for(const w of o.withdrawn){const m=String(w.link).match(/^D(\d+) vs C(\d+)$/);if(!m)continue;const re=new RegExp('\\bD'+m[1]+'\\s+vs\\.?\\s+C'+m[2]+'\\b','i');
-  if(carriers.some(l=>re.test(l)&&/[\[(]?\b[CD]R[1-3]\b/i.test(l)&&(/["“][^"”]*\S\s+\S+\s+\S[^"”]*["”]/.test(l)||cureRefs(l).length>0)))out.add(U(w.link));}
+  if(carriers.some(c=>re.test(c.name)&&/[\[(]?\b[CD]R[1-3]\b/i.test(c.body)&&(/["“][^"”]*\S\s+\S+\s+\S[^"”]*["”]/.test(c.body)||cureRefs(c.body).length>0)))out.add(U(w.link));}
  return out;}
 function cureVerdicts(items,reply,broken,rounds){const U=s=>String(s).toUpperCase();const o=cureLines(reply&&reply.ok?reply.text:'');const R=rounds||{};
  const nK1={DEFENDER:items.filter(x=>x.rule==='K-G1'&&x.side==='DEFENDER').length,CHALLENGER:items.filter(x=>x.rule==='K-G1'&&x.side==='CHALLENGER').length};
- const rsn=cureReasoned(o); // DoD 18
+ const rsn=cureReasoned(o,items.map(x=>x.line)); // DoD 18; amendment 3: the items' own lines are no reason
  const wd=new Set(o.result.length===1?o.withdrawn.filter(w=>rsn.has(U(w.link))).map(w=>U(w.link)):[]); // BB-7330: a retraction counts only beside exactly one CORRECTED RESULT line
  const rxNoWhy=new Set(o.result.length===1?o.withdrawn.filter(w=>!rsn.has(U(w.link))).map(w=>U(w.link)):[]); // DoD 18: retracted with no reason
  const rxNoRes=new Set(o.result.length!==1?o.withdrawn.map(w=>U(w.link)):[]);
@@ -276,7 +281,7 @@ function cureVerdicts(items,reply,broken,rounds){const U=s=>String(s).toUpperCas
   return res('UNCURED','unknown rule',null);});}
 // BB-7330 (option 2, the operator's "2" at 14:51 CDT): where a RETRACTED line cured an item, the seat is counted on its one CORRECTED RESULT.
 function cureCorrected(reply,v){const o=cureLines(reply&&reply.ok?reply.text:'');if(o.result.length!==1)return null;
- if(!(v||[]).some(x=>x.status==='CURED'&&/^retracted/.test(x.why||'')))return null;const rsn=cureReasoned(o);return {tag:o.result[0].tag,word:o.result[0].word,links:[...new Set(o.withdrawn.filter(w=>rsn.has(String(w.link).toUpperCase())).map(w=>w.link))]};}
+ if(!(v||[]).some(x=>x.status==='CURED'&&/^retracted/.test(x.why||'')))return null;const rsn=cureReasoned(o,(v||[]).map(x=>x.line));return {tag:o.result[0].tag,word:o.result[0].word,links:[...new Set(o.withdrawn.filter(w=>rsn.has(String(w.link).toUpperCase())).map(w=>w.link))]};}
 // THE DEBATE FIXED (BB-7397, DoD 5, BB-7406): a cure's CORRECTED STANDING and CORRECTED COUNT for a side with a CURED count or standing item
 // (K-G1, K-G3, K-G6, K-G7) are written to the row's columns; the original is kept in the judge's text by an AUDIT line.
 function cureSet(reply,v){const o=cureLines(reply&&reply.ok?reply.text:'');const out={};
