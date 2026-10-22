@@ -1,0 +1,27 @@
+ids 207435d3-53ca-4185-bd97-9b6a33a9e5df 428fbdc3-279b-4edb-9079-9ec273f8f824 nodes 231 231
+same names True
+BAD Alternate Build 7226d4da file_eq True md5json True base428_eq False otherfields_eq True
+BAD Alternate Cure Build 7f1ba08f file_eq True md5json True base428_eq False otherfields_eq True
+BAD Alternate Cure Normalize 6f6aa5d9 file_eq True md5json True base428_eq False otherfields_eq True
+BAD Alternate Merge 3a225eab file_eq True md5json True base428_eq False otherfields_eq True
+BAD Alternate Payloads 84b87f49 file_eq True md5json True base428_eq False otherfields_eq True
+BAD Build Independent Verdict 7fc75ea3 file_eq True md5json True base428_eq False otherfields_eq True
+BAD Build Save Body eac5e866 file_eq True md5json True base428_eq False otherfields_eq True
+BAD Cure Build aca1ce86 file_eq True md5json True base428_eq False otherfields_eq True
+BAD Cure Check 7422412f file_eq True md5json True base428_eq False otherfields_eq True
+BAD Cure Normalize c9509ff0 file_eq True md5json True base428_eq False otherfields_eq True
+BAD Extract Independent Verdict d3aa4960 file_eq True md5json True base428_eq False otherfields_eq True
+BAD Format Markdown 97611024 file_eq True md5json True base428_eq False otherfields_eq True
+BAD Init with Guards 3b1262b0 file_eq True md5json True base428_eq False otherfields_eq True
+BAD Panel Build 97df396c file_eq True md5json True base428_eq False otherfields_eq True
+BAD Panel Cure Build 1 34076634 file_eq True md5json True base428_eq False otherfields_eq True
+BAD Panel Cure Build 2 c0ce8a28 file_eq True md5json True base428_eq False otherfields_eq True
+BAD Panel Cure Build 3 b3ded662 file_eq True md5json True base428_eq False otherfields_eq True
+BAD Panel Cure Check e40b4a4c file_eq True md5json True base428_eq False otherfields_eq True
+BAD Panel Cure Normalize 1 72a5a786 file_eq True md5json True base428_eq False otherfields_eq True
+BAD Panel Cure Normalize 2 ca769ca2 file_eq True md5json True base428_eq False otherfields_eq True
+BAD Panel Cure Normalize 3 2c26a5c9 file_eq True md5json True base428_eq False otherfields_eq True
+BAD Panel Payloads c775280f file_eq True md5json True base428_eq False otherfields_eq True
+changed ok 0 of 22
+unchanged nodes differing from 428: 0 []
+connections equal True
