@@ -1,0 +1,25 @@
+THE DEBATE FIXED, step 3 NOT PASSED (BB-7417), ruling BB-7418 item 2: falsifiers for defects 1-3 declared BEFORE the fix, Worker_A3.
+Reading of 7418's wording: "raises" for cases A and B means "counts" (the premise is counted, so no K-G6 item). Stated so the advisor can correct it.
+
+DEFECTS 1-2: drvLedger's count reading. Fixture: a sent ledger with defender premises 1-6, premises 1 and 3 each NOT NAMED (others none),
+challenger count line 0 with no NOT NAMED. Each case is the DEFENDER count line; the expected K-G6 items:
+ A "CONCEDED LINKS: 2 -- premises 1 and 3 UNEXHIBITED"                              -> none
+ B "CONCEDED LINKS: 2 -- UNEXHIBITED: premise 1, premise 3"                          -> none
+ C "CONCEDED LINKS: 0 -- premise 1 not conceded"                                     -> premise 1, premise 3
+ D the single judge's line on 27665 (No ... CONCEDED ... or UNEXHIBITED ...; premises 1-6 were all answered) -> premise 1, premise 3
+ E "CONCEDED LINKS: 1 -- premise 1 CONCEDED, premise 3 not conceded"                 -> premise 3
+ F "CONCEDED LINKS: 1 -- premise 3 was not answered and is UNEXHIBITED"              -> premise 1
+ G "CONCEDED LINKS: 2 -- LINK 1 and LINK 3 UNEXHIBITED"                              -> none
+ H "CONCEDED LINKS: 3 -- premises 1-3 UNEXHIBITED"                                   -> none
+ plus F3a on 27665 unchanged: Gemini D1, D3, C1, C6; Grok none; GLM D1, D3, C1; single judge D1, D3, C1 (7412 item 1).
+ Run on base 428fbdc3's absence of drvLedger is meaningless; run on bfe88cc new/ (must show the defects: A, B or C wrong) and on the fix.
+
+DEFECT 3: cureSet writes a side only when every count or standing item of that side (K-G1, K-G3, K-G6) is CURED, and not when every
+cured item of the side is a K-G6 statement cure (no count was checked):
+ I  D1 CURED by statement, D3 UNCURED; reply "CORRECTED COUNT: DEFENDER 0 / CORRECTED STANDING: DEFENDER COLLAPSED" -> DEFENDER not written
+ J  D1, D3 CURED by count; reply COUNT 2, PROP-DEPENDENT                              -> DEFENDER written 2, PROP-DEPENDENT
+ K  D1, D3 CURED by statement; reply also carries COUNT 0, COLLAPSED                  -> DEFENDER not written
+ L  K-G3 DEFENDER CURED alone; reply STANDING PROP-DEPENDENT (F5)                     -> written PROP-DEPENDENT (unchanged)
+
+DEFECT 4: derive_new.sql's framework_verdict column note says the flow inserts null and W-D writes the panel's verdict at the first stamp;
+the words "inserts the single judge's tag" occur 0 times.
