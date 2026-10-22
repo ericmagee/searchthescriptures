@@ -1,0 +1,8 @@
+W3 bad (report27665.md 7f22d279):
+Gemini standing SELF-SUPPORTED -> corrected PROP-DEPENDENT | ledger 23 => SILENT
+Grok standing PROP-DEPENDENT  | ledger 23 => SILENT
+GLM standing SELF-SUPPORTED  | ledger 23 => FIRES
+W3 good (fixture_w3_good.md, ledger 0):
+Gemini standing SELF-SUPPORTED -> corrected PROP-DEPENDENT | ledger 0 => SILENT
+Grok standing PROP-DEPENDENT  | ledger 0 => SILENT
+GLM standing SELF-SUPPORTED  | ledger 0 => SILENT
