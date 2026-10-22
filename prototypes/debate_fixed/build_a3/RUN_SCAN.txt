@@ -1,0 +1,20 @@
+THE DEBATE FIXED DoD 6 (record_integrity_scan check 4, option (b) BB-7425), Worker_A3, run 2026-10-21 20:28:24 CDT (clock read by tool in the same query).
+scan_prior.sql md5 7c32c7654f5546179377af4a2a8c231f (live, read 20:27 CDT); scan_new.sql md5 9f2aec380188df65900344b97b3eaf72; __CUTOVER__ occurs 3 times (replaced at 6b by the publish time read by tool; CREATE refused while any remain).
+Test: the two check-4 SELECTs cut from scan_new.sql (s_test.sql), fixtures as CTEs named as the tables, cutover 2026-10-22 02:00:00+00 for S1-S3, now() for S4; read only.
+ S1 (i) judgment HELD+COLLAPSED: 1, fires (expected 1)
+ S2 (ii) results row after cutover: 0, silent (expected 0)
+ S3 (ii) results row before cutover: 1, fires (expected 1)
+ S4 live: (i) 0, (ii) 10 (expected 0 and 10)
+ S5 diff scan_prior.sql scan_new.sql: only the check 4 block and its detail line:
+<   -- 4. THE HELD+COLLAPSED ARTIFACT (pre-v11 rubric; Coupling B was written to
+<   SELECT count(*) INTO n FROM debate_results WHERE framework_verdict='HELD' AN
+>   -- 4. THE HELD+COLLAPSED ARTIFACT (pre-v11 rubric; Coupling B was written to
+>   --    standing of the same reading (THE DEBATE FIXED, BB-7397, DoD 6, BB-741
+>   --    its own standing; and a debate row created before __CUTOVER__ (the pub
+>   --    framework_verdict was still the single judge's own word beside its own
+>   --    with the single judge's standing, which is not one reading, so it is n
+>   SELECT count(*) INTO n FROM debate_judgments WHERE verdict_tag='HELD' AND de
+>   SELECT count(*) INTO m FROM debate_results WHERE framework_verdict='HELD' AN
+>   n := n + m;
+<       'detail','Rows graded HELD while the defense COLLAPSED -- the single-ver
+>       'detail','Judgments, and debate rows created before __CUTOVER__, graded 
