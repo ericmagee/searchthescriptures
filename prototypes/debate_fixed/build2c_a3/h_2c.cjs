@@ -9,7 +9,7 @@ const std=['AGAINST THE DEFENDER, answered in [CR3]:',pl(1,1,'Psalms 132:11'),pl
  'AGAINST THE CHALLENGER, answered in [DR3]:','premise 1: 1 verse(s); NOT NAMED: Luke 1:31','premise 2: 0; NOT NAMED: none','A verse marked NOT NAMED is unanswered by the rule.'].join('\n');
 const shifted=std.replace(pl(5,5,'none'),pl(5,6,'none')).replace(pl(6,6,'none')+'\n','');
 const BL='D6 vs C3 (Matthew 1:18): DEFENDER LINK BROKEN -- [L1] "before they came together" and [L3] Luke 1:34 named.';
-const run=(F,pt,d,c,CPV,extra)=>{const T=['CONCEDED LINKS: '+d+' -- x',...(extra||[]),'CHALLENGER CONCEDED LINKS: '+c+' -- y','DEFENSE STANDING: PROP-DEPENDENT -- L=6 c='+d,'CHALLENGE STANDING: PROP-DEPENDENT -- L=2 c='+c,'COLLISION POINTS:',BL].join('\n');
+const run=(F,pt,d,c,CPV,extra,bare,line)=>{const T=(bare?['COLLISION POINTS:',line||BL]:['CONCEDED LINKS: '+d+' -- x',...(extra||[]),'CHALLENGER CONCEDED LINKS: '+c+' -- y','DEFENSE STANDING: PROP-DEPENDENT -- L=6 c='+d,'CHALLENGE STANDING: PROP-DEPENDENT -- L=2 c='+c,'COLLISION POINTS:',line||BL]).join('\n');
  const P=F.drvCheck(T,d,c,'PROP-DEPENDENT','PROP-DEPENDENT',false);const L=F.drvLedger(T,pt,d,c,'PROP-DEPENDENT','PROP-DEPENDENT',CPV);const B=F.drvBroken(T,d,'PROP-DEPENDENT',P.items.concat(L.items),c,'PROP-DEPENDENT',pt,CPV);
  const it=L.items.concat(B.items).filter(x=>/K-G[678]/.test(x.rule)).map(x=>x.rule+' '+x.link).join(', ')||'none';MARKS.push(...L.marks,...B.marks);const mk=B.marks.filter(x=>/FIELD/.test(x)).map(x=>x.match(/PREMISES (\w+) FIELD ([A-Z]+)(?:: ([^ ]*))?/).slice(1).filter(Boolean).join(' ')).join('; ');return it+(mk?' | marks: '+mk:'');};
 for(const n of ['Panel_Payloads','Alternate_Payloads','Extract_Independent_Verdict']){let F;try{F=cutF(n);}catch(e){chk(n+' load',e.message,'ok');continue;}const p=n.slice(0,5)+' ';
@@ -29,6 +29,12 @@ for(const n of ['Panel_Payloads','Alternate_Payloads','Extract_Independent_Verdi
  chk(p+'F-range [0]/1',run(F,std,1,1,{DEFENDER:[0],CHALLENGER:[1]}),'none | marks: DEFENDER INVALID (0)');
  chk(p+'F-range [7]/1 (6 premises)',run(F,std,1,1,{DEFENDER:[7],CHALLENGER:[1]}),'none | marks: DEFENDER INVALID (7)');
  chk(p+'F-range [-1]/1',run(F,std,1,1,{DEFENDER:[-1],CHALLENGER:[1]}),'none | marks: DEFENDER INVALID (-1)');
+ chk(p+'U1 no count lines, [1]/1',run(F,std,1,1,{DEFENDER:[1],CHALLENGER:[1]},null,true),'K-G6 DEFENDER premise 3, K-G7 D6 vs C3');
+ chk(p+'U2 no count lines, [1,3]/2',run(F,std,2,1,{DEFENDER:[1,3],CHALLENGER:[1]},null,true),'K-G7 D6 vs C3');
+ {const T=['COLLISION POINTS:',BL].join('\n');const L0=F.drvLedger(T,std,1,1,'X','Y',{DEFENDER:[1],CHALLENGER:[1]});const B=F.drvBroken(T,1,'X',L0.items,1,'Y',std,{DEFENDER:[1],CHALLENGER:[1]});
+  chk(p+'U3 K-G7 L from the ledger',String((B.items.find(x=>x.rule==='K-G7')||{}).L),'6');}
+ chk(p+'U4 no count lines, C count 0, C BROKEN never named',run(F,std,2,0,{DEFENDER:[1,3],CHALLENGER:[1]},null,true,'D3 vs C2 (Luke 1:34): CHALLENGER LINK BROKEN -- [L1] "How shall this be" and [L3] Matthew 1:18 never named in [DR3].'),'K-G7 D3 vs C2');
+ chk(p+'U5 no count lines, D count absent, [1]',run(F,std,undefined,1,{DEFENDER:[1],CHALLENGER:[1]},null,true),'none');
  chk(p+'T12 prose line, key absent/0',run(F,std,0,1,{CHALLENGER:[1]},['COUNTED PREMISES DEFENDER: 1, 3, 6']),'K-G6 DEFENDER premise 1, K-G6 DEFENDER premise 3, K-G7 D6 vs C3 | marks: DEFENDER ABSENT');}
 // T13: Extract Independent Verdict, whole node, on the single judge's stored text and Text 1
 {const md=fs.readFileSync(rep,'utf8');const sec=h=>{const i=md.indexOf(h);const j=md.indexOf('\n## ',i+5);return md.slice(i,j);};const sent=md.slice(md.indexOf('## What the judges were sent'));

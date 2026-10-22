@@ -32,3 +32,10 @@ WRONG IF: rev 4's. The arrays stay UNEXERCISED until a live panel judge returns 
 ADDENDUM (Worker_E's BB-7457, posted 21:17:00 CDT, before my build row; declared here before its fix):
  F-dup   defender [1,1,3], count 3                     -> the array's size is its distinct members (2): K-G8; against count 2: no K-G8
  F-range defender [0]; [7] where the ledger lists 6 defender premises; [-1] -> INVALID, (A), the mark carries the raw value
+
+ADDENDUM 2 (Worker_E's BB-7461, defect 2c-1; declared before its fix): the typed checks run on the JSON integer, not on a prose count line.
+ U1 no "CONCEDED LINKS:" lines in the reasoning; JSON defender count 1, array [1]; D6 BROKEN -> K-G6 DEFENDER premise 3; K-G7 D6 vs C3
+ U2 no count lines; defender count 2, array [1,3]; D6 BROKEN                         -> K-G7 D6 vs C3 only
+ U3 no count lines and no DEFENSE STANDING line; U1's K-G7 item carries L = 6, the ledger's defender premise count
+ U4 no count lines; challenger count 0, a CHALLENGER LINK BROKEN line "never named" -> K-G7 challenger (option (c) on the integer too)
+ U5 no count lines; defender count absent (not a number), array [1]                  -> no defender item (no integer to test against)
