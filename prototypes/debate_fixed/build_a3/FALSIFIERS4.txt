@@ -1,0 +1,11 @@
+THE DEBATE FIXED, DoD 6 (BB-7418 item 3, option (b) ruled BB-7425): falsifiers declared BEFORE the build, Worker_A3.
+record_integrity_scan check 4 (held_with_collapsed_defense) counts (i) debate_judgments rows with verdict_tag HELD and their own
+defense_standing COLLAPSED, and (ii) debate_results rows with framework_verdict HELD and defense_standing COLLAPSED created before the
+publish time; the publish time is written into the file at step 6b in place of the token __CUTOVER__, read by tool at the act, and the
+CREATE OR REPLACE is refused at the seat while the token occurs (grep count must be 0).
+Run: the two SELECTs cut from scan_new.sql, each run with fixture CTEs named as the tables (read only, no write):
+ S1 one judgment HELD, COLLAPSED                                               -> (i) 1, fires
+ S2 one results row created after the cutover, framework HELD (the panel's), defense COLLAPSED (the single judge's) -> (ii) 0, silent
+ S3 one results row created before the cutover, HELD, COLLAPSED                 -> (ii) 1, fires
+ S4 live tables, cutover = now                                                  -> (i) 0, (ii) 10 (the July rows, BB-7425)
+ S5 everything else in the function byte-equal to scan_prior.sql (md5 7c32c765) outside check 4.
