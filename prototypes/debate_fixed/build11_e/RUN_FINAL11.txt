@@ -1,0 +1,24 @@
+FINAL RERUN (Worker_E) on new11 after the last change; each line compares to the committed run file named.
+F14 items 27795 md5 4841a309
+F14 chain 27795 222 204 1 17
+F14 chain 27665 162 155 0 7
+F14 syn left-out cases (expect 2: F14.4x, F14.0): 2
+{"wt_is_reasoning":true,"broken":{"DEFENDER":["D4 vs C3","D6 vs C3"],"CHALLENGER":[]},"verdicts":[{"rule":"K-G3","side":"DEFENDER","status":"CURED","why":"retracted: D4 VS C3, D6 VS C3"}]}
+{"F11_2_unfenced":{"wt_len":4816,"broken":{"DEFENDER":["D4 vs C3","D6 vs C3"],"CHALLENGER":[]}},"F11_3_fenced_noBroken":{"DEFENDER":[],"CHALLENGER":[]},"F11_4_ask_line":"K-G3 DEFENDER: DEFENDER STANDING SELF-SUPPORTED while these DEFENDER links are graded BROKEN: D4 vs C3, D6 vs C3"}
+F12.1 stored form: two quotations joined by and => [{"rule":"K-G1","link":"D4 vs C3","status":"UNCURED","why":"the later round [CR3] mat 1:18, mat 1:25; no SHORT line quoting its answer"}]
+F12.2 one quotation, found => [{"rule":"K-G1","link":"D4 vs C3","status":"UNCURED","why":"the later round [CR3] mat 1:18, mat 1:25; no SHORT line quoting its answer"}]
+F12.3 two quotations, second not in DR2 => [{"rule":"K-G1","link":"D4 vs C3","status":"UNCURED","why":"no quotation found in the named round"}]
+F12.4 one quotation not found => [{"rule":"K-G1","link":"D4 vs C3","status":"UNCURED","why":"no quotation found in the named round"}]
+F12.5 two PRESSED lines, one quotation each => [{"rule":"K-G1","link":"D4 vs C3","status":"UNCURED","why":"the later round [CR3] mat 1:18, mat 1:25; no SHORT line quoting its answer"}]
+F12.6 two quotations plus a SHORT line quoting [CR3] => [{"rule":"K-G1","link":"D4 vs C3","status":"CURED","why":"corrected: DEFENDER COUNT 2; quotation found in DR2"}]
+new 9 / 9
+F13b replies printed: 1
+F10b cured flags (expect 4): 4
+F10c.1 stored (K-G1 UNCURED), COUNT 2 | conceded_links 0 | applied 0 | held: [AUDIT v21: CORRECTED COUNT NOT WRITTEN -- SIDE: DEFENDER; CORRECTED COUNT: 2; NOT CURED: K-G1 D4 vs C3; written only when every count or standing item of the side is CURED (BB-7417)] | brackets inside: false
+F10c.2 no CORRECTED COUNT line | conceded_links 0 | applied 0 | held: none | brackets inside: false
+F10c.3 every count item CURED | conceded_links 2 | applied 1 | held: none | brackets inside: false
+h_2c identical to base
+h_cure identical to base
+h_site identical to base
+h_site2 identical to base
+h_ask identical to base

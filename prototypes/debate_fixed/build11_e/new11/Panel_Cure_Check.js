@@ -281,6 +281,13 @@ function cureSetApply(p,cs,seat){const F={DEFENDER:['defense_standing','conceded
   if(c.st)p[fs]=c.st;if(c.n!=null)p[fn]=c.n;
   lines.push('[AUDIT v21: CORRECTED STANDING -- '+(seat?'SEAT: '+seat+'; ':'')+'SIDE: '+side+'; ORIGINAL: '+was+'; COUNTED: '+(p[fs]||'?')+', '+(p[fn]==null?'?':p[fn])+']');}
  return lines;}
+// THE DEBATE FIXED rev 7, DoD 10 record half (ruled BB-7508 (i)): BB-7417 defect 3 stands, so a side whose count or standing items are not
+// all CURED is not written; when the reply holds one CORRECTED COUNT for that side, one AUDIT line records the count and the items not cured.
+function cureCountHeld(reply,v,cs,seat){const o=cureLines(reply&&reply.ok?reply.text:'');const lines=[];
+ for(const side of ['DEFENDER','CHALLENGER']){if(cs&&cs[side])continue;const ns=[...new Set(o.count.filter(c=>c.side===side).map(c=>c.n))];if(ns.length!==1)continue;
+  const nc=(v||[]).filter(x=>x.side===side&&(x.rule==='K-G1'||x.rule==='K-G3'||x.rule==='K-G6'||x.rule==='K-G7'||x.rule==='K-G8')&&x.status!=='CURED');if(!nc.length)continue;
+  lines.push('[AUDIT v21: CORRECTED COUNT NOT WRITTEN -- '+(seat?'SEAT: '+seat+'; ':'')+'SIDE: '+side+'; CORRECTED COUNT: '+ns[0]+'; NOT CURED: '+cureSafe(nc.map(x=>x.rule+' '+(x.rule==='K-G3'?x.side+' STANDING':x.link)).join(', '))+'; written only when every count or standing item of the side is CURED (BB-7417)]');}
+ return lines;}
 const cureCorrLine=(seat,orig,c)=>'[AUDIT v21: CORRECTED RESULT -- '+(seat?'SEAT: '+seat+'; ':'')+'ORIGINAL: '+orig+'; COUNTED: '+c.word+' ('+c.tag+'); RETRACTED: '+c.links.join(', ')+']';
 const cureSafe=s=>String(s).replace(/\[/g,'(').replace(/\]/g,')').replace(/;(\s*(?:SEAT|ITEM|RULE|RESULT|KINDS|WHY|LINE|STATEMENT|JUDGE STATEMENT):)/g,',$1');
 // Report line (step 6, 6904 e): fixed fields in fixed order, read back by Format Markdown. SEAT (panel only), ITEM, RULE, RESULT, then
@@ -301,6 +308,7 @@ summary.forEach((s,i)=>{const all=s.drv||[];s.cure=[];if(!all.length)return;
  const b=JSON.parse(bodies[i]);b.payload.drv_uncured=v.filter(x=>x.status!=='CURED').length;b.payload.verdict_raw=b.payload.verdict_raw+'\n'+cureReport(s.seat,v).concat(cureProse(s.seat,r?r.reply:null)).join('\n');
  const cc=cureCorrected(r?r.reply:null,v);if(cc){b.payload.verdict_raw=b.payload.verdict_raw+'\n'+cureCorrLine(s.seat,b.payload.verdict_tag,cc);b.payload.verdict_tag=cc.word;s.corrected=cc;}
  const cs=cureSet(r?r.reply:null,v);if(cs){b.payload.verdict_raw=b.payload.verdict_raw+'\n'+cureSetApply(b.payload,cs,s.seat).join('\n');s.corrected_standing=cs;}
+ {const ch=cureCountHeld(r?r.reply:null,v,cs,s.seat);if(ch.length)b.payload.verdict_raw=b.payload.verdict_raw+'\n'+ch.join('\n');}
  bodies[i]=JSON.stringify(b);});
 // BB-6904 portion F (7069 option 1): the alternate gate's decision is made here, so Alternate Needed? holds no logic of its own
 // (an n8n expression rejects a statement body: BB-7068). True when any body's drv_uncured is above 0 (a malformed body counts as not
