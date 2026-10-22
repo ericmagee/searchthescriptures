@@ -92,3 +92,23 @@ Fix: read Panel Build's output 0 explicitly, x.first(0), and the same for Reserv
         new prints the three panel seats' texts (fx/panel_build_27795.json, the item of the read above).
  F13d.1 with the panel seats read, the text Gemini's cure followed carries Gemini on its Text heading beside the GLM alternate when they are equal.
  F13a.2 no "Reads that gave no text" entry for Panel Build.
+
+ADDENDUM 4, DoD 10 as replaced by 7505 (his 1, 7504: readers never see the second opinion), declared BEFORE any change it covers.
+F10 (the reader report): on 27795's stored inputs (h_fm.cjs), the report file holds no text derived from the single judge:
+ F10.1 no "SECOND OPINION" anywhere; no section headed for the single judge; no "single judge" in the Judges block or the Result table.
+ F10.2 no diagnostic: no "## Diagnostic" section and no text of the stored synthesis after its separator ("--- ORACLE_DEBATE_V1 BROKEN
+       DIAGNOSTIC ---" or "--- ORACLE_DEBATE_V1 CONFIRMATION ---"); the synthesis above the separator is printed as before.
+ F10.3 the violation table holds no "Single judge:" rows; panel and alternate rows unchanged.
+ F10.4 section 8 holds no text sent only to the single judge and no single-judge cure call.
+ F10.5 the verdict block prints the panel verdict, the split, and for each counted seat its verdict and its RESULT sentence (the text after
+       "RESULT: <word> --" on that seat's line 2), and for a removed seat the line that says it was not counted and why.
+ F10.6 every line above section 8 that is not single-judge text is unchanged (cmp_fm.py, line for line).
+ F10.7 base11 on the same inputs prints "SECOND OPINION", the Diagnostic section and the Single judge rows (the defect).
+F10c (the record half, 7504 item 5, as 7505 item 2 reads it): Cure Check writes the single judge's CORRECTED COUNT for a side to that side's
+ count column when every item of that side that a count cures (K-G1, K-G6, K-G7, K-G8) reads CURED in its verdicts, else not; an AUDIT
+ line keeps the original count. On 27795's cure (the K-G7 items CURED by CORRECTED COUNT DEFENDER 2; K-G1 D4 UNCURED):
+ F10c.1 as 7505 item 2 reads it ("the items it answers"): the K-G7 items are CURED by that count, so conceded_links 2, AUDIT keeps 0.
+ F10c.2 a side with no CORRECTED COUNT: column unchanged, no AUDIT line.
+ F10c.3 a CORRECTED COUNT whose items are all UNCURED: column unchanged.
+ OPEN for the advisor (7505 item 2): whether the K-G1 UNCURED item on the same side blocks the write. I build "the items it answers" =
+ the items the CORRECTED COUNT line is the cure of (K-G7 and K-G6 by count; K-G1 needs its PRESSED line too). Unconditional is a one-line change.
