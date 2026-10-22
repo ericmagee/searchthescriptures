@@ -1,0 +1,5 @@
+W1 on stored rows 19:4x CDT: both_set 62, disagree 13; bad case 921f5530 fires true; good case 8fec5e2e fires false
+W2 bad (report27665.md, md5 7f22d279):
+single-judge lines 2 | unlabelled 2 | panel verdict line false => FIRES
+W2 good (fixture_w2_good.md):
+single-judge lines 2 | unlabelled 0 | panel verdict line true => SILENT
