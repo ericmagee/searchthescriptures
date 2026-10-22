@@ -25,6 +25,11 @@ for(const n of ['Panel_Payloads','Alternate_Payloads','Extract_Independent_Verdi
  chk(p+'T10 shifted, [5]/1 (K-G7 only, as declared)',(run(F,shifted,1,1,{DEFENDER:[5],CHALLENGER:[1]}).match(/K-G7[^,|]*/g)||['none']).join(', '),'none');
  chk(p+'T11 C []/0',run(F,std,3,0,{DEFENDER:[1,3,6],CHALLENGER:[]}),'K-G6 CHALLENGER premise 1');
  chk(p+'T12 prose line, key absent/0',run(F,std,0,1,{CHALLENGER:[1]},['COUNTED PREMISES DEFENDER: 1, 3, 6']),'K-G6 DEFENDER premise 1, K-G6 DEFENDER premise 3, K-G7 D6 vs C3 | marks: DEFENDER ABSENT');}
+ chk(p+'F-dup [1,1,3]/3',run(F,std,3,1,{DEFENDER:[1,1,3],CHALLENGER:[1]}),'K-G8 DEFENDER COUNTED PREMISES, K-G7 D6 vs C3');
+ chk(p+'F-dup [1,1,3]/2',run(F,std,2,1,{DEFENDER:[1,1,3],CHALLENGER:[1]}),'K-G7 D6 vs C3');
+ chk(p+'F-range [0]/1',run(F,std,1,1,{DEFENDER:[0],CHALLENGER:[1]}),'none | marks: DEFENDER INVALID (0)');
+ chk(p+'F-range [7]/1 (6 premises)',run(F,std,1,1,{DEFENDER:[7],CHALLENGER:[1]}),'none | marks: DEFENDER INVALID (7)');
+ chk(p+'F-range [-1]/1',run(F,std,1,1,{DEFENDER:[-1],CHALLENGER:[1]}),'none | marks: DEFENDER INVALID (-1)');
 // T13: Extract Independent Verdict, whole node, on the single judge's stored text and Text 1
 {const md=fs.readFileSync(rep,'utf8');const sec=h=>{const i=md.indexOf(h);const j=md.indexOf('\n## ',i+5);return md.slice(i,j);};const sent=md.slice(md.indexOf('## What the judges were sent'));
  const T1=sent.slice(sent.indexOf('### Text 1'),sent.indexOf('### Text 2'));const t=sec('## Single judge: DeepSeek');const body=t.slice(t.indexOf('\n')+1);
