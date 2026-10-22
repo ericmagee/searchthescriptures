@@ -1,0 +1,10 @@
+const fs=require("fs");
+const s=fs.readFileSync(process.argv[2],"utf8");
+const i=s.indexOf("const countedSet=");const e=s.indexOf("return {P,K};};",i)+"return {P,K};};".length;
+const countedSet=new Function(s.slice(i,e)+";return countedSet;")();
+const L=JSON.parse(fs.readFileSync(process.argv[3],"utf8"));
+const out=L.map(r=>{const {P,K}=countedSet(r.line);const U=new Set([...P,...K]);const c=U.size;
+ return {...r,P:[...P].sort((a,b)=>a-b),K:[...K].sort((a,b)=>a-b),nP:P.size,nK:K.size,counted:c,cls:c===r.stated?"MATCH":c<r.stated?"UNDER":"OVER"};});
+fs.writeFileSync(process.argv[4],JSON.stringify(out,null,1));
+const t={};out.forEach(o=>t[o.cls]=(t[o.cls]||0)+1);console.log(out.length,t);
+out.forEach((o,k)=>{if(o.cls!=="MATCH")console.log(`#${k} ${o.cls} ${o.who} st=${o.stated} P=[${o.P}] K=[${o.K}] :: ${o.line}\n`);});

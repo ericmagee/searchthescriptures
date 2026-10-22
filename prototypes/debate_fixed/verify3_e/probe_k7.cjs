@@ -1,0 +1,12 @@
+const fs=require('fs');const s=fs.readFileSync(process.argv[2],'utf8');
+const a=s.indexOf('function drvCounted(');const b=s.indexOf('function drvPromptText(');const c=s.indexOf('function drvCheck(');
+const F=new Function(s.slice(a,b)+'\n'+s.slice(b,c)+';return {drvCounted,drvBroken,drvLedger};')();
+const show=(k,t,exp)=>{const r=F.drvBroken(t,1,'PROP-DEPENDENT',[]);const got=r.items.map(x=>x.link).join(', ')||'none';console.log((got===exp?'ok  ':'FAIL'),k.padEnd(30),'got',got,'| want',exp);};
+const S='DEFENSE STANDING: PROP-DEPENDENT -- L=6 c=1\n';
+show('K1 premise n = D n, counted', S+'CONCEDED LINKS: 1 -- premise 6 UNEXHIBITED (no footing offered)\nD6 vs C3 (Matthew 1:18): DEFENDER LINK BROKEN -- x','none');
+show('K2 uncounted (27665 shape)', S+'CONCEDED LINKS: 0 -- All 6 links are SUPPORTED.\nD6 vs C3 (Matthew 1:18): DEFENDER LINK BROKEN -- x','D6 vs C3');
+show('K3 LINK 6 counted', S+'CONCEDED LINKS: 1 -- LINK 6 UNEXHIBITED (no footing offered)\nD6 vs C3: DEFENDER LINK BROKEN -- x','none');
+show('K4 "premise 5/D6" counted', S+'CONCEDED LINKS: 1 -- premise 5/D6: UNEXHIBITED (no footing offered)\nD6 vs C2: DEFENDER LINK BROKEN -- x','none');
+show('K5 D6 named in count', S+'CONCEDED LINKS: 1 -- D6 UNEXHIBITED (no footing offered)\nD6 vs C2: DEFENDER LINK BROKEN -- x','none');
+show('K6 parenthesized itemization', S+'CONCEDED LINKS: 1 (premise 6 UNEXHIBITED)\nD6 vs C3: DEFENDER LINK BROKEN -- x','none');
+show('K7 bullet + bold', S+'CONCEDED LINKS: 0\n- **D6 vs C3 (Matthew 1:18):** DEFENDER LINK BROKEN -- x','D6 vs C3');
