@@ -63,3 +63,19 @@ REGRESSION: rebuild from base equals new9/ for all 22 nodes. Each pair reverses 
 base9. My rev 12 harnesses rerun 56/56. h_cure F3b cases: K-G6 items are passed in directly, so the 7 cases are unchanged. h_f3a and h_k7 M1:
 their expected sets change as above, written in RUN_DOD9.txt with each change named. h_count (drvCounted) is retired with the reader.
 WRONG IF: rev 4's W1-W4. (B) stays UNEXERCISED until a live judge writes the line.
+
+ADDENDUM D9-1 (BB-7447, Worker_A3's verify), declared BEFORE the fix. The line reader accepts LINK labels, ranges and parenthesized tags:
+ the value is read left to right; "premise(s)" or "LINK(s)" sets the label for the numbers after it (default premise); "a-b", "a–b", "a to b"
+ give every number from a to b; a parenthesis is blanked. A defender LINK n maps through the ledger's "(LINK n)" to its premises; with no
+ LINK labels in the ledger, or on the challenger side (the ledger numbers challenger premises without LINK labels), LINK n stands for premise n.
+ Any other leftover text is still UNREADABLE.
+ R1 line D "LINK 1, LINK 3", count 2                                    -> no K-G6, no K-G8
+ R2 line D "1-3", count 3                                               -> no K-G6, no K-G8
+ R3 line D "1 to 3", count 3                                            -> no K-G6, no K-G8
+ R4 line D "1, 3 (UNEXHIBITED)", count 2                                -> no K-G6, no K-G8
+ R5 line D "LINK 1, LINK 3", count 3                                    -> K-G8 DEFENDER
+ R6 line C "LINK 1", count 1, challenger premise 1 NOT NAMED            -> no K-G6 CHALLENGER, no K-G8
+ R7 ledger premise 5 (LINK 6), 6 (LINK 7); line D "LINK 6", count 1; BROKEN D6 -> no K-G7; K-G6 DEFENDER premise 1, 3; no K-G8
+ R8 line D "links 1 and 3", count 2                                     -> no K-G6, no K-G8
+ R9 ledger premise 5 (LINK 6); line D "premises 1-3 and LINK 6", count 4 -> no K-G6, no K-G8
+ R10 line D "1, 3, and the rest", count 2                               -> UNREADABLE: absence mark DEFENDER, no K-G6 (count 2)
