@@ -1,0 +1,14 @@
+a "LINK 1, LINK 3" count 2                       items: K-G6 CHALLENGER premise 1, K-G7 D6 vs C3 | marks: none
+b "1, 3 (UNEXHIBITED)" count 2                   items: K-G6 CHALLENGER premise 1, K-G7 D6 vs C3 | marks: none
+c "1, 1" count 2                                 items: K-G6 DEFENDER premise 3, K-G6 CHALLENGER premise 1, K-G8 DEFENDER COUNTED PREMISES, K-G7 D6 vs C3 | marks: none
+d "none" count 0, D6 BROKEN                      items: K-G6 DEFENDER premise 1, K-G6 DEFENDER premise 3, K-G6 CHALLENGER premise 1, K-G7 D6 vs C3 | marks: none
+e "1, 3, 6" count 3, D6 BROKEN                   items: K-G6 CHALLENGER premise 1 | marks: none
+f bold "**...:** 1, 3" count 2                   items: K-G6 CHALLENGER premise 1, K-G7 D6 vs C3 | marks: none
+g lowercase, trailing period                     items: K-G6 CHALLENGER premise 1, K-G7 D6 vs C3 | marks: none
+h C line "none" count 0, challenger NOT NAMED 1  items: K-G6 CHALLENGER premise 1, K-G7 D6 vs C3 | marks: none
+i C line "1" count 1                             items: K-G7 D6 vs C3 | marks: none
+j no lines at all, counts 2 and 1                items: none | marks: DEFENDER ABSENT, CHALLENGER ABSENT
+k D "1, 3" count 2, K-G1 words on D6 line, count 0 would be K-G1 items: K-G6 DEFENDER premise 1, K-G6 DEFENDER premise 3, K-G6 CHALLENGER premise 1, K-G7 D6 vs C3 | marks: none
+l D line "premise 1, premise 3" count 2          items: K-G6 CHALLENGER premise 1, K-G7 D6 vs C3 | marks: none
+m D line "1 to 3" count 3                        items: K-G6 CHALLENGER premise 1, K-G7 D6 vs C3 | marks: none
+n D line "1-3" count 3                           items: K-G6 CHALLENGER premise 1, K-G7 D6 vs C3 | marks: none

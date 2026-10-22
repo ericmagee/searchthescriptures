@@ -1,0 +1,16 @@
+const fs=require('fs');const s=fs.readFileSync('N/Panel_Payloads.js','utf8');const a=s.indexOf('const DRV_REF=');const c=s.indexOf('function drvCheck(');
+const F=new Function(s.slice(a,c)+';return {drvLedger,drvBroken};')();
+const mk=(map)=>['AGAINST THE DEFENDER, answered in [CR3]:',...map.map(([p,l,nn])=>'premise '+p+' (LINK '+l+'): carried; NOT NAMED: '+nn),'AGAINST THE CHALLENGER, answered in [DR3]:','premise 1: 1; NOT NAMED: none','A verse marked NOT NAMED is unanswered by the rule.'].join('\n');
+const BL='D6 vs C3 (Matthew 1:18): DEFENDER LINK BROKEN -- [L1] "x" and [L3] y.';
+const run=(name,pt,line,d,want)=>{const T=['CONCEDED LINKS: '+d+' -- x',line,'CHALLENGER CONCEDED LINKS: 0 -- y','COUNTED PREMISES CHALLENGER: none','DEFENSE STANDING: PROP-DEPENDENT -- L=6 c='+d,'COLLISION POINTS:',BL].join('\n');
+ const L=F.drvLedger(T,pt,d,0,'PROP-DEPENDENT','PROP-DEPENDENT');const B=F.drvBroken(T,d,'PROP-DEPENDENT',L.items,0,'PROP-DEPENDENT',pt);
+ const it=L.items.concat(B.items).map(x=>x.rule+' '+x.link).join(', ')||'none';const m=B.marks.filter(x=>/UNREADABLE|ABSENT/.test(x)).join(' ');
+ console.log((it===want?'PASS ':'FAIL ')+name.padEnd(46),'items:',it,(it===want?'':'| want: '+want),m?'| mark: '+m.slice(0,120):'');};
+const std=mk([[1,1,'Psalms 132:11'],[2,2,'none'],[3,3,'Matthew 1:3'],[4,4,'none'],[5,5,'none'],[6,6,'none']]);
+const shifted=mk([[1,1,'none'],[2,2,'none'],[3,3,'none'],[4,4,'none'],[5,6,'none']]);
+run('x1 shifted ledger: "LINK 6" count 1, premise 5 (LINK 6)',shifted,'COUNTED PREMISES DEFENDER: LINK 6',1,'none');
+run('x2 shifted ledger: "LINK 4" count 1 (no D6 cover)',shifted,'COUNTED PREMISES DEFENDER: LINK 4',1,'K-G7 D6 vs C3');
+run('x3 unknown form "1, 3 and also 5" count 3',std,'COUNTED PREMISES DEFENDER: 1, 3 and also 5',3,'none');
+run('x4 "1-3" count 2 (mismatch)',std,'COUNTED PREMISES DEFENDER: 1-3',2,'K-G8 DEFENDER COUNTED PREMISES, K-G7 D6 vs C3');
+run('x5 "LINK 1 and LINK 3" count 2',std,'COUNTED PREMISES DEFENDER: LINK 1 and LINK 3',2,'K-G7 D6 vs C3');
+run('x6 "1, 3, 6 (UNEXHIBITED, CONCEDED)" count 3',std,'COUNTED PREMISES DEFENDER: 1, 3, 6 (UNEXHIBITED, CONCEDED)',3,'none');
