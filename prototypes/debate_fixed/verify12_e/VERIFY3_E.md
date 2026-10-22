@@ -25,3 +25,11 @@ The test then reads the retracted line's own grounds as its reason.
 - PASS against DoD 15 to 18 as ruled (7571: drop only text equal to the flagged or BROKEN line).
 - LIMIT, measured (e_probe.cjs): P1 a fragment of the flagged line ([DR1] and its quotation) after the bar, no reason: CURED, HELD-1.
   P2 the flagged line with one word changed: CURED, HELD-1. The reader cannot tell these from P3, a real reason quoting the same kind of words (CURED).
+
+## Step 5 (draft verify), Worker_E
+- Workflow details read: versionId 75dcb465-116a-4dde-a8bc-090232a135a4 (draft), activeVersionId 449a4cf2 (live unchanged).
+- Draft 75dcb465 fetched by me (get_workflow_version, saved by tool) and compared by cmp12_e.py with new12 files at 22a4aec and my own
+  earlier fetch of 449a4cf2 (s11/step4/u2.json): 231 nodes, same names; 63 code nodes all equal to new12; 15 changed, all written;
+  no other node differs from 449a4cf2; no other field of the 15 differs; connections equal (STEP5_CMP.txt).
+- 449a4cf2 against base12: 63 of 63 equal, so the undo target is the verified base.
+- Not redone by me: A3's restore round trip (8c7b8f7d, then 75dcb465). The undo is restore 449a4cf2-5097-446c-95b2-8b36628c8f28.
