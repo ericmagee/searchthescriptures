@@ -123,3 +123,13 @@ of the side is CURED (BB-7417)]". Added at the three places that apply cureSet: 
  F10c.2 no CORRECTED COUNT line: no AUDIT line, columns unchanged.
  F10c.3 every count item CURED: the column is written as before (cureSet) and no NOT WRITTEN line.
  F10c.4 the AUDIT line holds no "[" or "]" inside it and no "; KEY:" break (cureSafe), so the report reader is not disturbed.
+
+ADDENDUM 6, DoD 14 widened by 7513 item 2, declared BEFORE the change to Quote Report.
+Rule as ruled: a quotation whose folded words occur in order in an earlier round of the other side (opp_words) is skipped at every status the
+check would otherwise report (WORDING NOT FOUND, WORDS ARE AT another verse, CITED VERSE DOES NOT EXIST); a MATCHES item stays (a scripture
+quotation); NOT CHECKED stays as now (it reports nothing).
+ F14.4 FLIPS: other side's words quoted, WORDS ARE AT Luke 1:32 -> left out (was: reported).
+ F14.10 opp_words with CITED VERSE DOES NOT EXIST -> left out.
+ F14.11 opp_words with MATCHES -> kept and counted as a match.
+ F14.12 27795 and 27665 whole: counts as after addendum 1 (27795 222/204/1/17; 27665 162/155/0/7), item multiset unchanged from new11 at b469a60.
+ F14.1-3, F14.5-7, F14.0 as before.
