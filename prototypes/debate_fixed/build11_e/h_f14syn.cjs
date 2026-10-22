@@ -11,8 +11,10 @@ const cases={
  'F14.6a same side earlier, WORDING NOT FOUND -> reported':{cr1:'I say the angel never spoke of any begetting at all here.',gr1:'Nothing.',cr2:'As I said: "the angel never spoke of any begetting at all here" (Luke 1:35).'},
  'F14.6b other side LATER round, WORDING NOT FOUND -> reported':{gr1:'Nothing.',cr2:'Pressed: "the angel never spoke of any begetting at all here" (Luke 1:35).',gr2:'the angel never spoke of any begetting at all here'},
  'F14.7 pieces out of order -> reported':{gr1:'is a causal connective, and dio kai stands first in the verse',cr2:'Pressed: "dio kai... is a causal connective" (Luke 1:35).'},
+ 'F14.10 opp words, CITED VERSE DOES NOT EXIST -> left out':{gr1:'He wrote "the angel never spoke of any begetting at all here" plainly.',cr2:'Pressed: "the angel never spoke of any begetting at all here" (Luke 1:99). And "He shall be great, and shall be called the Son of the Highest" (Luke 1:32).'},
+ 'F14.11 opp words, MATCHES -> kept':{gr1:'The text: "The Holy Ghost shall come upon thee, and the power of the Highest shall overshadow thee" (Luke 1:35).',cr2:'Pressed: "The Holy Ghost shall come upon thee, and the power of the Highest shall overshadow thee" (Luke 1:35).'},
  'F14.0 pieces in order, other side earlier -> left out':{gr1:'dio kai (G1352, "wherefore") is a causal connective',cr2:'Pressed: "dio kai... is a causal connective" (Luke 1:35).'}};
 for(const [name,c] of Object.entries(cases)){const R={cr1:c.cr1||E,gr1:c.gr1||E,cr2:c.cr2||E,gr2:c.gr2||E,cr3:E,dr3:E};
  const f='/tmp/claude-0/-home-user-searchthescriptures/58ba9d31-f07a-5e6e-a230-4fe44a036213/scratchpad/s11/case.json';fs.writeFileSync(f,JSON.stringify(R));
- const st=d=>{const o=JSON.parse(execFileSync('node',['h_cite.cjs',d,f,'/tmp/claude-0/-home-user-searchthescriptures/58ba9d31-f07a-5e6e-a230-4fe44a036213/scratchpad/s11/mini.json']).toString());return o.keys.filter(k=>k.startsWith('DEFENDER|R2')).join(',')||'(left out)';};
+ const st=d=>{const o=JSON.parse(execFileSync('node',['h_cite.cjs',d,f,'/tmp/claude-0/-home-user-searchthescriptures/58ba9d31-f07a-5e6e-a230-4fe44a036213/scratchpad/s11/mini.json']).toString());return o.keys.filter(k=>k.startsWith('DEFENDER|R2')&&!/Luke 1:32\|MATCHES/.test(k)).join(',')||'(left out)';};
  console.log(name,'| base:',st('base11'),'| new:',st('new11'));}

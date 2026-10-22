@@ -7,8 +7,9 @@ const all=C.items.map(i=>{if(i.status!=='PENDING'){const {q,cited,...o}=i;return
  const status=!i.cited?'CITED VERSE DOES NOT EXIST':(best&&bs>=0.75)?'WORDS ARE AT '+best.book+' '+best.chapter+':'+best.verse:'WORDING NOT FOUND IN '+i.book;
  const {q,cited,...o}=i;return {...o,status};});
 // BB-5773: a non-matching quote not offered in citation form (Citation Scan cite_form false) is a phrase, not a quotation: left out of the report.
-// DoD 14 (BB-7397 rev 7, BB-7495): a quotation of the other side's own words (Citation Scan opp_words) that the KJV check would report as
-// WORDING NOT FOUND is not a scripture citation: left out of the report. MATCHES and WORDS ARE AT are reported as before.
-const items=all.filter(i=>i.status==='MATCHES'||i.status==='NOT CHECKED'||(i.cite_form!==false&&!(i.opp_words&&/^WORDING NOT FOUND IN /.test(i.status))));
+// DoD 14 (BB-7397 rev 7, BB-7495; widened BB-7513): a quotation of the other side's own words (Citation Scan opp_words) is not a scripture
+// citation and is not checked against the KJV text: left out of the report at every status the check would report (WORDING NOT FOUND,
+// WORDS ARE AT, CITED VERSE DOES NOT EXIST). A MATCHES item is a scripture quotation and stays; NOT CHECKED stays as before.
+const items=all.filter(i=>i.status==='MATCHES'||i.status==='NOT CHECKED'||(i.cite_form!==false&&!i.opp_words));
 const n=s=>items.filter(i=>i.status===s).length;
 return [{json:{checked:items.length,matches:n('MATCHES'),not_checked:n('NOT CHECKED'),mismatches:items.length-n('MATCHES')-n('NOT CHECKED'),items}}];

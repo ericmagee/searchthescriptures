@@ -1,7 +1,9 @@
 F14.4x (first form, recorded) opp words UNQUOTED, WORDS ARE AT -> left out by the older OPP rule on both | base: (left out) | new: (left out)
-F14.4 opp words QUOTED, WORDS ARE AT another verse -> reported | base: DEFENDER|R2|Luke 1:35|WORDS ARE AT Luke 1:32 | new: DEFENDER|R2|Luke 1:35|WORDS ARE AT Luke 1:32
+F14.4 opp words QUOTED, WORDS ARE AT another verse -> reported | base: DEFENDER|R2|Luke 1:35|WORDS ARE AT Luke 1:32 | new: (left out)
 F14.5 not in the other side, WORDING NOT FOUND -> reported | base: DEFENDER|R2|Luke 1:35|WORDING NOT FOUND IN Luke | new: DEFENDER|R2|Luke 1:35|WORDING NOT FOUND IN Luke
 F14.6a same side earlier, WORDING NOT FOUND -> reported | base: DEFENDER|R2|Luke 1:35|WORDING NOT FOUND IN Luke | new: DEFENDER|R2|Luke 1:35|WORDING NOT FOUND IN Luke
 F14.6b other side LATER round, WORDING NOT FOUND -> reported | base: DEFENDER|R2|Luke 1:35|WORDING NOT FOUND IN Luke | new: DEFENDER|R2|Luke 1:35|WORDING NOT FOUND IN Luke
 F14.7 pieces out of order -> reported | base: DEFENDER|R2|Luke 1:35|WORDING NOT FOUND IN Luke | new: DEFENDER|R2|Luke 1:35|WORDING NOT FOUND IN Luke
+F14.10 opp words, CITED VERSE DOES NOT EXIST -> left out | base: DEFENDER|R2|Luke 1:99|CITED VERSE DOES NOT EXIST | new: (left out)
+F14.11 opp words, MATCHES -> kept | base: DEFENDER|R2|Luke 1:35|MATCHES | new: DEFENDER|R2|Luke 1:35|MATCHES
 F14.0 pieces in order, other side earlier -> left out | base: DEFENDER|R2|Luke 1:35|WORDING NOT FOUND IN Luke | new: (left out)
