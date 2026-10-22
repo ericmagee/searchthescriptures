@@ -1,0 +1,19 @@
+THE DEBATE FIXED, DoD 7 (ruling BB-7420), rule K-G7: falsifiers declared BEFORE the build, Worker_A3.
+K-G7: a COLLISION POINTS line graded DEFENDER LINK BROKEN on D<n>, where the same judge's CONCEDED LINKS line does not count premise n
+or LINK n (the count reading of BB-7423), is one item. No word test. Skipped when K-G1 already raised that link. DEFENDER SIDE ONLY:
+the challenger count numbers premises from the defender's list, not by C<j>, so a CHALLENGER LINK BROKEN line has no stated premise;
+that mapping goes to the advisor. Cure: a CORRECTED COUNT for the side at least its count plus every K-G6 premise not cured by statement
+and every K-G7 premise not retracted (one union), with the CORRECTED STANDING that count makes true (L from the judge's own STANDING line);
+or a RETRACTED line for the link beside exactly one CORRECTED RESULT (the seat is then counted on that result). Uncured: as K-G1.
+RAISE (on each of Panel Payloads, Alternate Payloads, Extract Independent Verdict, from its own source):
+ M1 27665: Gemini K-G7 D6 vs C3; single judge (DeepSeek) K-G7 D6 vs C3; Grok none; GLM none.
+ M2 D6 BROKEN, "CONCEDED LINKS: 1 -- premise 6 UNEXHIBITED" -> none; "CONCEDED LINKS: 1 -- LINK 6 CONCEDED" -> none;
+    "CONCEDED LINKS: 1 -- premise 2 UNEXHIBITED" -> K-G7 D6 vs C3.
+ M3 D6 BROKEN with "left unanswered" and CONCEDED LINKS 0 -> K-G1 only, no K-G7.
+ M4 a CHALLENGER LINK BROKEN line with an uncounted premise -> no K-G7.
+CURE (cureVerdicts and cureCorrected from each of the 14 cure nodes; item K-G7 D6 vs C3, count 0, L 6):
+ N1 COUNT 1, STANDING PROP-DEPENDENT -> CURED; cureSet writes DEFENDER 1, PROP-DEPENDENT.
+ N2 RETRACTED D6 vs C3, CORRECTED RESULT HELD-1 -> CURED (retracted); cureCorrected gives HELD.
+ N3 nothing -> UNCURED.  N4 COUNT 0, PROP-DEPENDENT -> UNCURED.  N5 COUNT 1, SELF-SUPPORTED -> UNCURED.
+ N6 with K-G6 DEFENDER premise 1 also raised: COUNT 1 PROP-DEPENDENT -> both UNCURED; COUNT 2 PROP-DEPENDENT -> both CURED.
+TEXT: the cure request labels the item "K-G7 D6 vs C3: <the line>"; Format Markdown names rule K-G7 in words.
