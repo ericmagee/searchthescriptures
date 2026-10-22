@@ -30,4 +30,5 @@ for(const [name,c] of Object.entries(CASES)){
  console.log(name+':');
  o.bodies.forEach(b=>{const p=JSON.parse(b).payload;console.log('  body',p.judge_seat,'AUDIT lines:',JSON.stringify(au(p.verdict_raw)));});
  (o.drv_removed||[]).forEach(r=>console.log('  drv_removed',r.seat,'replaced_by',r.replaced_by,'AUDIT lines:',JSON.stringify(au(r.verdict_raw))));
+ if(name.startsWith('F16.1'))fs.writeFileSync('f16_1_judgments_'+require('path').basename(dir)+'.json',JSON.stringify(J.map((j,i)=>({...j,verdict_raw:JSON.parse(o.bodies[i]).payload.verdict_raw}))));
  console.log('  alternates_tried:',JSON.stringify((o.alternates_tried||[]).map(t=>({removed_seat:t.removed_seat,alternate:t.alternate,result:t.result,why:t.why}))));}
