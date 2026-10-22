@@ -1,0 +1,69 @@
+F3a Panel_Payloads
+Gemini    items: DEFENDER premise 1, DEFENDER premise 3, CHALLENGER premise 1, CHALLENGER premise 6
+Grok      items: none
+GLM       items: DEFENDER premise 1, DEFENDER premise 3, CHALLENGER premise 1
+DeepSeek  items: DEFENDER premise 1, DEFENDER premise 3, CHALLENGER premise 1
+sent texts read: 2 | sent to: single judge || panel
+F3a Alternate_Payloads
+Gemini    items: DEFENDER premise 1, DEFENDER premise 3, CHALLENGER premise 1, CHALLENGER premise 6
+Grok      items: none
+GLM       items: DEFENDER premise 1, DEFENDER premise 3, CHALLENGER premise 1
+DeepSeek  items: DEFENDER premise 1, DEFENDER premise 3, CHALLENGER premise 1
+sent texts read: 2 | sent to: single judge || panel
+F3a Extract_Independent_Verdict
+Gemini    items: DEFENDER premise 1, DEFENDER premise 3, CHALLENGER premise 1, CHALLENGER premise 6
+Grok      items: none
+GLM       items: DEFENDER premise 1, DEFENDER premise 3, CHALLENGER premise 1
+DeepSeek  items: DEFENDER premise 1, DEFENDER premise 3, CHALLENGER premise 1
+sent texts read: 2 | sent to: single judge || panel
+CURE
+quotation cut from Text 1: "LINK 1: SUPPORTED. [L1] The flesh seed is named as flesh: I" | nodes 14
+   a_count_all          DEFENDER premise 1 CURED | DEFENDER premise 3 CURED | CHALLENGER premise 1 CURED | CHALLENGER premise 6 CURED
+   b_nothing            DEFENDER premise 1 UNCURED (no CORRECTED COUNT for DEFENDER and no statement quoting the transcript for DEFENDER premise 1) | DEFENDER premise 3 UNCURED (no CORRECTED COUNT for DEFENDER and no statement quoting the transcript for DEFENDER premise 3) | CHALLENGER premise 1 UNCURED (no CORRECTED COUNT for CHALLENGER and no statement quoting the transcript for CHALLENGER premise 1) | CHALLENGER premise 6 UNCURED (no CORRECTED COUNT for CHALLENGER and no statement quoting the transcript for CHALLENGER premise 6)
+   c_count_low          DEFENDER premise 1 UNCURED (corrected count 1 is below 2) | DEFENDER premise 3 UNCURED (corrected count 1 is below 2) | CHALLENGER premise 1 CURED | CHALLENGER premise 6 CURED
+   d_stmt_plus_count    DEFENDER premise 1 CURED | DEFENDER premise 3 CURED | CHALLENGER premise 1 CURED | CHALLENGER premise 6 CURED
+   e_stmt_quote_absent  DEFENDER premise 1 UNCURED (corrected count 1 is below 2) | DEFENDER premise 3 UNCURED (corrected count 1 is below 2) | CHALLENGER premise 1 UNCURED (no CORRECTED COUNT for CHALLENGER and no statement quoting the transcript for CHALLENGER premise 1) | CHALLENGER premise 6 UNCURED (no CORRECTED COUNT for CHALLENGER and no statement quoting the transcript for CHALLENGER premise 6)
+   f_wrong_standing     DEFENDER premise 1 UNCURED (count 2 of 6 makes the DEFENDER standing PROP-DEPENDENT; it reads COLLAPSED) | DEFENDER premise 3 UNCURED (count 2 of 6 makes the DEFENDER standing PROP-DEPENDENT; it reads COLLAPSED) | CHALLENGER premise 1 UNCURED (count 3 of 6 makes the CHALLENGER standing PROP-DEPENDENT; it reads COLLAPSED) | CHALLENGER premise 6 UNCURED (count 3 of 6 makes the CHALLENGER standing PROP-DEPENDENT; it reads COLLAPSED)
+   g_count_no_standing  DEFENDER premise 1 UNCURED (count 2 of 6 makes the DEFENDER standing PROP-DEPENDENT; it reads SELF-SUPPORTED) | DEFENDER premise 3 UNCURED (count 2 of 6 makes the DEFENDER standing PROP-DEPENDENT; it reads SELF-SUPPORTED) | CHALLENGER premise 1 CURED | CHALLENGER premise 6 CURED
+14/14 a_count_all => DEFENDER1:CURED DEFENDER3:CURED CHALLENGER1:CURED CHALLENGER6:CURED
+14/14 b_nothing => DEFENDER1:UNCURED DEFENDER3:UNCURED CHALLENGER1:UNCURED CHALLENGER6:UNCURED
+14/14 c_count_low => DEFENDER1:UNCURED DEFENDER3:UNCURED CHALLENGER1:CURED CHALLENGER6:CURED
+14/14 d_stmt_plus_count => DEFENDER1:CURED DEFENDER3:CURED CHALLENGER1:CURED CHALLENGER6:CURED
+14/14 e_stmt_quote_absent => DEFENDER1:UNCURED DEFENDER3:UNCURED CHALLENGER1:UNCURED CHALLENGER6:UNCURED
+14/14 f_wrong_standing => DEFENDER1:UNCURED DEFENDER3:UNCURED CHALLENGER1:UNCURED CHALLENGER6:UNCURED
+14/14 g_count_no_standing => DEFENDER1:UNCURED DEFENDER3:UNCURED CHALLENGER1:CURED CHALLENGER6:CURED
+F5 gemini after: {"defense_standing":"PROP-DEPENDENT","conceded_links":0,"challenge_standing":"PROP-DEPENDENT","challenger_conceded_links":1} | [AUDIT v21: CORRECTED STANDING -- SEAT: gemini; SIDE: DEFENDER; ORIGINAL: SELF-SUPPORTED, 0; COUNTED: PROP-DEPENDENT, 0]
+F5 glm (no reply): untouched {"defense_standing":"SELF-SUPPORTED","conceded_links":0,"challenge_standing":"PROP-DEPENDENT","challenger_conceded_links":3}
+FM
+P/Format_Markdown.js panel | keys fileName,md,chars,judges,run_token
+   - Verdict of the debate: **HELD** (the panel) (a grade of the defender's chain: MiMo, arguing the record's reading)
+   - SECOND OPINION (single judge, not the verdict): DeepSeek (deepseek-flash): **BROKEN** (a grade of the defender's chain: MiMo, arguing the record's reading)
+   ## SECOND OPINION (single judge, not the verdict): DeepSeek (deepseek-flash): BROKEN (a grade of the defender's chain: MiMo, arguing the record's reading)
+single-judge lines 2 | unlabelled 0 | panel verdict line true => SILENT
+FM md5 f737daf96dd16df78a4acc1b22d8f82e
+ASK
+Alternate_Build.js           ["K-G6 DEFENDER premise 1: premise 1 (LINK 1): ... NOT NAMED: Psalm 132:11","K-G1 CHALLENGER LINK 2: LINK 2: CONCEDED","K-G3 DEFENDER: DEFENDER STANDING SELF-SUPPORTED while these DEFENDER links are graded BROKEN: LINK 4"]
+Alternate_Cure_Build.js      ["K-G6 DEFENDER premise 1: premise 1 (LINK 1): ... NOT NAMED: Psalm 132:11","K-G1 CHALLENGER LINK 2: LINK 2: CONCEDED","K-G3 DEFENDER: DEFENDER STANDING SELF-SUPPORTED while these DEFENDER links are graded BROKEN: LINK 4"]
+Alternate_Cure_Normalize.js  ["K-G6 DEFENDER premise 1: premise 1 (LINK 1): ... NOT NAMED: Psalm 132:11","K-G1 CHALLENGER LINK 2: LINK 2: CONCEDED","K-G3 DEFENDER: DEFENDER STANDING SELF-SUPPORTED while these DEFENDER links are graded BROKEN: LINK 4"]
+Alternate_Merge.js           ["K-G6 DEFENDER premise 1: premise 1 (LINK 1): ... NOT NAMED: Psalm 132:11","K-G1 CHALLENGER LINK 2: LINK 2: CONCEDED","K-G3 DEFENDER: DEFENDER STANDING SELF-SUPPORTED while these DEFENDER links are graded BROKEN: LINK 4"]
+Cure_Build.js                ["K-G6 DEFENDER premise 1: premise 1 (LINK 1): ... NOT NAMED: Psalm 132:11","K-G1 CHALLENGER LINK 2: LINK 2: CONCEDED","K-G3 DEFENDER: DEFENDER STANDING SELF-SUPPORTED while these DEFENDER links are graded BROKEN: LINK 4"]
+Cure_Check.js                ["K-G6 DEFENDER premise 1: premise 1 (LINK 1): ... NOT NAMED: Psalm 132:11","K-G1 CHALLENGER LINK 2: LINK 2: CONCEDED","K-G3 DEFENDER: DEFENDER STANDING SELF-SUPPORTED while these DEFENDER links are graded BROKEN: LINK 4"]
+Cure_Normalize.js            ["K-G6 DEFENDER premise 1: premise 1 (LINK 1): ... NOT NAMED: Psalm 132:11","K-G1 CHALLENGER LINK 2: LINK 2: CONCEDED","K-G3 DEFENDER: DEFENDER STANDING SELF-SUPPORTED while these DEFENDER links are graded BROKEN: LINK 4"]
+Panel_Cure_Build_1.js        ["K-G6 DEFENDER premise 1: premise 1 (LINK 1): ... NOT NAMED: Psalm 132:11","K-G1 CHALLENGER LINK 2: LINK 2: CONCEDED","K-G3 DEFENDER: DEFENDER STANDING SELF-SUPPORTED while these DEFENDER links are graded BROKEN: LINK 4"]
+Panel_Cure_Build_2.js        ["K-G6 DEFENDER premise 1: premise 1 (LINK 1): ... NOT NAMED: Psalm 132:11","K-G1 CHALLENGER LINK 2: LINK 2: CONCEDED","K-G3 DEFENDER: DEFENDER STANDING SELF-SUPPORTED while these DEFENDER links are graded BROKEN: LINK 4"]
+Panel_Cure_Build_3.js        ["K-G6 DEFENDER premise 1: premise 1 (LINK 1): ... NOT NAMED: Psalm 132:11","K-G1 CHALLENGER LINK 2: LINK 2: CONCEDED","K-G3 DEFENDER: DEFENDER STANDING SELF-SUPPORTED while these DEFENDER links are graded BROKEN: LINK 4"]
+Panel_Cure_Check.js          ["K-G6 DEFENDER premise 1: premise 1 (LINK 1): ... NOT NAMED: Psalm 132:11","K-G1 CHALLENGER LINK 2: LINK 2: CONCEDED","K-G3 DEFENDER: DEFENDER STANDING SELF-SUPPORTED while these DEFENDER links are graded BROKEN: LINK 4"]
+Panel_Cure_Normalize_1.js    ["K-G6 DEFENDER premise 1: premise 1 (LINK 1): ... NOT NAMED: Psalm 132:11","K-G1 CHALLENGER LINK 2: LINK 2: CONCEDED","K-G3 DEFENDER: DEFENDER STANDING SELF-SUPPORTED while these DEFENDER links are graded BROKEN: LINK 4"]
+Panel_Cure_Normalize_2.js    ["K-G6 DEFENDER premise 1: premise 1 (LINK 1): ... NOT NAMED: Psalm 132:11","K-G1 CHALLENGER LINK 2: LINK 2: CONCEDED","K-G3 DEFENDER: DEFENDER STANDING SELF-SUPPORTED while these DEFENDER links are graded BROKEN: LINK 4"]
+Panel_Cure_Normalize_3.js    ["K-G6 DEFENDER premise 1: premise 1 (LINK 1): ... NOT NAMED: Psalm 132:11","K-G1 CHALLENGER LINK 2: LINK 2: CONCEDED","K-G3 DEFENDER: DEFENDER STANDING SELF-SUPPORTED while these DEFENDER links are graded BROKEN: LINK 4"]
+SITE
+Panel_Payloads items: K-G4 D6 vs C3, K-G3 null, K-G6 DEFENDER premise 1, K-G6 DEFENDER premise 3, K-G6 CHALLENGER premise 1, K-G6 CHALLENGER premise 6
+Alternate_Payloads items: K-G4 D6 vs C3, K-G3 null, K-G6 DEFENDER premise 1, K-G6 DEFENDER premise 3, K-G6 CHALLENGER premise 1, K-G6 CHALLENGER premise 6
+Extract items: DEFENDER premise 1, DEFENDER premise 3, CHALLENGER premise 1
+Panel_Cure_Check columns: PROP-DEPENDENT,1 | PROP-DEPENDENT,1
+Cure_Check columns: PROP-DEPENDENT,1 | PROP-DEPENDENT,1
+Alternate_Merge columns: PROP-DEPENDENT,1 | PROP-DEPENDENT,1 | seated 1
+FM6
+P/Format_Markdown.js panel | keys fileName,md,chars,judges,run_token
+   | Single judge: DeepSeek | DEFENDER premise 1 | Unanswered premise not counted (K-G6) | **UNCURED** |  | Not cured: probe. | none written |
+TEXT {"Alternate_Build.js K-G6 rule text": 1, "Alternate_Build.js K-G6 statement text": 1, "Alternate_Cure_Build.js K-G6 rule text": 1, "Alternate_Cure_Build.js K-G6 statement text": 1, "Alternate_Cure_Normalize.js K-G6 rule text": 1, "Alternate_Cure_Normalize.js K-G6 statement text": 1, "Alternate_Merge.js K-G6 rule text": 1, "Alternate_Merge.js K-G6 statement text": 1, "Build_Independent_Verdict.js plain sentence": 1, "Build_Save_Body framework_verdict:null": 1, "Cure_Build.js K-G6 rule text": 1, "Cure_Build.js K-G6 statement text": 1, "Cure_Check.js K-G6 rule text": 1, "Cure_Check.js K-G6 statement text": 1, "Cure_Normalize.js K-G6 rule text": 1, "Cure_Normalize.js K-G6 statement text": 1, "Init_with_Guards.js plain sentence": 2, "Panel_Build.js plain sentence": 1, "Panel_Cure_Build_1.js K-G6 rule text": 1, "Panel_Cure_Build_1.js K-G6 statement text": 1, "Panel_Cure_Build_2.js K-G6 rule text": 1, "Panel_Cure_Build_2.js K-G6 statement text": 1, "Panel_Cure_Build_3.js K-G6 rule text": 1, "Panel_Cure_Build_3.js K-G6 statement text": 1, "Panel_Cure_Check.js K-G6 rule text": 1, "Panel_Cure_Check.js K-G6 statement text": 1, "Panel_Cure_Normalize_1.js K-G6 rule text": 1, "Panel_Cure_Normalize_1.js K-G6 statement text": 1, "Panel_Cure_Normalize_2.js K-G6 rule text": 1, "Panel_Cure_Normalize_2.js K-G6 statement text": 1, "Panel_Cure_Normalize_3.js K-G6 rule text": 1, "Panel_Cure_Normalize_3.js K-G6 statement text": 1}
