@@ -21,13 +21,13 @@ for(const n of ['Panel_Payloads','Alternate_Payloads']){let f;try{f=snip(n);}cat
  chk('M2b '+n,run(syn('CONCEDED LINKS: 1 -- LINK 6 CONCEDED'),1),'none');
  chk('M2c '+n,run(syn('CONCEDED LINKS: 1 -- premise 2 UNEXHIBITED'),1),'D6 vs C3');
  chk('M3 '+n,run(syn('CONCEDED LINKS: 0 -- none',BL.replace('named.','named; the witness was left unanswered.')),0),'none');
- chk('M4 '+n,run(syn('CONCEDED LINKS: 1 -- premise 2 UNEXHIBITED','D2 vs C4 (Luke 1:34): CHALLENGER LINK BROKEN -- [L1] "How shall this be" (Luke 1:34) and [L3] Matthew 1:18 named.'),1),'none');}
  const CL='D3 vs C2 (Luke 1:34): CHALLENGER LINK BROKEN -- [L1] "How shall this be" (Luke 1:34) and [L3] Matthew 1:18 never named in [DR3].';
  const synC=(cc,line)=>['CONCEDED LINKS: 1 -- premise 6 UNEXHIBITED','CHALLENGER CONCEDED LINKS: '+cc,'DEFENSE STANDING: PROP-DEPENDENT -- L=6 c=1','CHALLENGE STANDING: SELF-SUPPORTED -- L=6 c='+cc,'COLLISION POINTS:',line].join('\n');
  const runC=(t,c)=>{try{const it=f(t,{body:{}},{body:{}},P(1,c,'PROP-DEPENDENT','SELF-SUPPORTED'),[]);return it.filter(x=>x.rule==='K-G7'||x.rule==='K-G1').map(x=>x.rule+' '+x.link).join(', ')||'none';}catch(x){return 'ERROR '+x.message;}};
  chk('M6 '+n,runC(synC(0,CL),0),'K-G7 D3 vs C2');
  chk('M7 '+n,runC(synC(0,CL.replace('never named in [DR3]','left unanswered')),0),'K-G1 D3 vs C2');
  chk('M8 '+n,runC(synC(1,CL),1),'none');
+ chk('M4 '+n,run(syn('CONCEDED LINKS: 1 -- premise 2 UNEXHIBITED','D2 vs C4 (Luke 1:34): CHALLENGER LINK BROKEN -- [L1] "How shall this be" (Luke 1:34) and [L3] Matthew 1:18 named.'),1),'none');}
 {const s=rd('Extract_Independent_Verdict');for(const [h,w,T,exp] of [J[3]]){const t=sec('## '+h);const body=t.slice(t.indexOf('\n')+1);
  const $=n=>({first:()=>({json:{verdictBody:{messages:[{role:'user',content:T}]}}}),all:()=>[],isExecuted:true});
  try{const r=new Function('$','$input',s)($,{first:()=>({json:{choices:[{message:{content:body},finish_reason:'stop'}]}})});chk('M1 Extract '+w,k7(r[0].json.debate_rule_violations||[]),exp);}catch(x){chk('M1 Extract '+w,'ERROR '+x.message,exp);}}}
