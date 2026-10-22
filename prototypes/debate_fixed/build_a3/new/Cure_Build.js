@@ -73,7 +73,8 @@ const CURE_RULE_G="COUNT AND STANDING (same rule). Your own numbers must agree w
  +"K-G7 (a COLLISION POINTS line you graded DEFENDER LINK BROKEN on D<n> while your CONCEDED LINKS does not count premise n): a link is BROKEN "
  +"only for a witness left unanswered, and a premise whose witness goes unanswered is counted. Cure it either by counting it: CORRECTED COUNT "
  +"for DEFENDER, your count plus every such premise and every K-G6 premise of that side, with the CORRECTED STANDING that count makes true; "
- +"or by regrading it: a RETRACTED line for that link and exactly one CORRECTED RESULT.";
+ +"or by regrading it: a RETRACTED line for that link and exactly one CORRECTED RESULT. The same holds for a CHALLENGER LINK BROKEN line for "
+ +"a witness left unanswered while your CHALLENGER CONCEDED LINKS is 0: CORRECTED COUNT for CHALLENGER, or RETRACTED and one CORRECTED RESULT.";
 const CURE_FORM="ANSWER FORM. Write each cure as one line of its own, beginning with its keyword in capitals exactly as shown:\n"
  +"RESTATED: <the full collision line, beginning D<n> vs C<m>>\n"
  +"RETRACTED: D<n> vs C<m>\n"
@@ -239,7 +240,7 @@ function cureVerdicts(items,reply,broken,rounds){const U=s=>String(s).toUpperCas
   // RETRACTED line for the link beside exactly one CORRECTED RESULT (the seat is then counted on that result, cureCorrected).
   const sq=y=>{const q=stmtQ(stmtOf(y));return Object.keys(R).find(k=>typeof R[k]==='string'&&q.some(z=>cureFound(z,R[k])))||null;};
   const kNeed=sd=>{const ps=new Set();for(const y of items){if(y.side!==sd)continue;
-   if(y.rule==='K-G6'&&!sq(y))ps.add(+(String(y.link).match(/(\d+)\s*$/)||[0,-1])[1]);if(y.rule==='K-G7'&&!wd.has(U(y.link)))ps.add(+y.premise);}return ps.size;};
+   if(y.rule==='K-G6'&&!sq(y))ps.add('P'+(String(y.link).match(/(\d+)\s*$/)||[0,y.link])[1]);if(y.rule==='K-G7'&&!wd.has(U(y.link)))ps.add(y.premise!=null?'P'+y.premise:'L'+U(y.link));}return ps.size;};
   const kCount=(x,none)=>{const needN=(x.conc||0)+kNeed(x.side);
    const cs=o.count.filter(c=>c.side===x.side);const ns=[...new Set(cs.map(c=>c.n))];const ss=o.standing.filter(s=>s.side===x.side);const sv=[...new Set(ss.map(s=>s.st))];const lines=cs.map(c=>c.line).concat(ss.map(s=>s.line));
    if(!ns.length)return res('UNCURED','no CORRECTED COUNT for '+x.side+' and '+none+' for '+x.link,lines);

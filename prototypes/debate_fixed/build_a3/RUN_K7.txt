@@ -1,9 +1,9 @@
-THE DEBATE FIXED: DoD 7 (K-G7, BB-7420), count reading fixes (BB-7426/7428 defect 5 and the exception case), Worker_A3, run 2026-10-21 20:29:11 CDT
+THE DEBATE FIXED: DoD 7 both sides (K-G7, BB-7420, option (c) BB-7430) and the count-reading fixes, Worker_A3, run 2026-10-21 20:34:58 CDT
 == patch from base
 22 nodes built
 == parse
 parse checked: 22
-== FALSIFIERS3 (f52b8ac)
+== FALSIFIERS3 with M5-M8, N7 (f52b8ac, 1b2b3d7, b350259)
 M1 Panel_Payloads Gemini PASS got: D6 vs C3 | expected: D6 vs C3
 M1 Panel_Payloads Grok PASS got: none | expected: none
 M1 Panel_Payloads GLM PASS got: none | expected: none
@@ -12,6 +12,9 @@ M2a Panel_Payloads PASS got: none | expected: none
 M2b Panel_Payloads PASS got: none | expected: none
 M2c Panel_Payloads PASS got: D6 vs C3 | expected: D6 vs C3
 M3 Panel_Payloads PASS got: none | expected: none
+M6 Panel_Payloads PASS got: K-G7 D3 vs C2 | expected: K-G7 D3 vs C2
+M7 Panel_Payloads PASS got: K-G1 D3 vs C2 | expected: K-G1 D3 vs C2
+M8 Panel_Payloads PASS got: none | expected: none
 M4 Panel_Payloads PASS got: none | expected: none
 M1 Alternate_Payloads Gemini PASS got: D6 vs C3 | expected: D6 vs C3
 M1 Alternate_Payloads Grok PASS got: none | expected: none
@@ -21,6 +24,9 @@ M2a Alternate_Payloads PASS got: none | expected: none
 M2b Alternate_Payloads PASS got: none | expected: none
 M2c Alternate_Payloads PASS got: D6 vs C3 | expected: D6 vs C3
 M3 Alternate_Payloads PASS got: none | expected: none
+M6 Alternate_Payloads PASS got: K-G7 D3 vs C2 | expected: K-G7 D3 vs C2
+M7 Alternate_Payloads PASS got: K-G1 D3 vs C2 | expected: K-G1 D3 vs C2
+M8 Alternate_Payloads PASS got: none | expected: none
 M4 Alternate_Payloads PASS got: none | expected: none
 M1 Extract DeepSeek PASS got: D6 vs C3 | expected: D6 vs C3
 14/14 N1 PASS got: CURED | set 1 PROP-DEPENDENT | expected: CURED | set 1 PROP-DEPENDENT
@@ -30,10 +36,12 @@ M1 Extract DeepSeek PASS got: D6 vs C3 | expected: D6 vs C3
 14/14 N5 PASS got: UNCURED | expected: UNCURED
 14/14 N6a PASS got: UNCURED UNCURED | expected: UNCURED UNCURED
 14/14 N6b PASS got: CURED CURED | expected: CURED CURED
+14/14 N7a PASS got: CURED | expected: CURED
+14/14 N7b PASS got: UNCURED | expected: UNCURED
 14/14 LABEL PASS
 TEXT Format Markdown K-G7 label PASS got: named | expected: named
 FAILS 0
-== FALSIFIERS2 A-R (818d373, 18bbb26, f2b18cc)
+== FALSIFIERS2 A-R
 A PASS got: none | expected: none
 B PASS got: none | expected: none
 C PASS got: premise 1, premise 3 | expected: premise 1, premise 3

@@ -147,15 +147,23 @@ function drvCounted(line){const P=new Set(),K=new Set();const NEG=/\b(?:not|no|n
   return {P,K};}
 const drvCountLine=(T,side)=>{const m=T.match(side==='DEFENDER'?/^[ \t>#-]*CONCEDED LINKS[ \t]*:.*$/im:/^[ \t>#-]*CHALLENGER CONCEDED LINKS[ \t]*:.*$/im);return m?m[0]:null;};
 // DoD 7 (BB-7420) K-G7: a COLLISION POINTS line graded DEFENDER LINK BROKEN on D<n> whose premise n (or LINK n) the same judge's CONCEDED LINKS
-// line does not count. No word test. Not raised where K-G1 already raised the link. Defender side only: the challenger count numbers premises
-// from the defender's list, not by C<j>. L and the standing are read from the judge's DEFENSE STANDING line.
-function drvBroken(text,dConc,dStand,prior){const items=[],marks=[];if(typeof text!=='string')return {items,marks};const T=text.replace(/[*_`]+/g,'');
- const cl=drvCountLine(T,'DEFENDER');if(cl===null)return {items,marks};const CS=drvCounted(cl);const lm=T.match(/^[ \t>#-]*DEFENSE STANDING[ \t]*:[^\n]*?\bL\s*=\s*(\d+)/im);const L=lm?+lm[1]:null;
+// line does not count. No word test. Not raised where K-G1 already raised the link. The challenger count numbers premises from the defender's
+// list, not by C<j> (BB-7430, option (c)): a CHALLENGER LINK BROKEN line is raised only when CHALLENGER CONCEDED LINKS is 0 and the line reads an
+// unanswered witness (DRV_WORDS7). LIMIT: with the challenger count above 0, an uncounted challenger premise is not checked by number and is not
+// raised. L and the standing are read from the judge's own STANDING lines.
+const DRV_WORDS7=/\b(?:unanswered|not answered|unnamed|not named|never named|none named|neither named|unaddressed|unexhibited)\b/i;
+function drvBroken(text,dConc,dStand,prior,cConc,cStand){const items=[],marks=[];if(typeof text!=='string')return {items,marks};const T=text.replace(/[*_`]+/g,'');
+ const cl=drvCountLine(T,'DEFENDER');const CS=cl===null?null:drvCounted(cl);const lm=T.match(/^[ \t>#-]*DEFENSE STANDING[ \t]*:[^\n]*?\bL\s*=\s*(\d+)/im);const L=lm?+lm[1]:null;
+ const cm=T.match(/^[ \t>#-]*CHALLENGE STANDING[ \t]*:[^\n]*?\bL\s*=\s*(\d+)/im);const LC=cm?+cm[1]:null;const cZero=drvCountLine(T,'CHALLENGER')!==null&&cConc===0;
  for(const line of text.split('\n')){const u=line.toUpperCase().replace(/[*_`]+/g,'').trim();
   const m=u.match(/^(?:[-•]|\d+[.)])?\s*D(\d+)\b\s*:?\s*(?:D\1\b\s*)?(.*)$/);if(!m||!/^VS\.?\s/.test(m[2]))continue;
-  const g=m[2].match(/(DEFENDER LINK BROKEN|CHALLENGER LINK BROKEN|UNDERDETERMINED)/);if(!g||g[1]!=='DEFENDER LINK BROKEN')continue;
+  const g=m[2].match(/(DEFENDER LINK BROKEN|CHALLENGER LINK BROKEN|UNDERDETERMINED)/);if(!g||g[1]==='UNDERDETERMINED')continue;
   const id=(u.match(/^(?:[-•]|\d+[.)])?\s*(D\d+\s+VS\.?\s+C\d+)/)||[null,'D'+m[1]])[1].replace(/\s+VS\.?\s+/,' vs ');const n=+m[1];
-  if(CS.P.has(n)||CS.K.has(n))continue;if((prior||[]).some(x=>x.rule==='K-G1'&&x.link===id))continue;
+  if((prior||[]).some(x=>x.rule==='K-G1'&&x.link===id))continue;
+  if(g[1]==='CHALLENGER LINK BROKEN'){if(!cZero||!DRV_WORDS7.test(line))continue;
+   items.push({rule:'K-G7',side:'CHALLENGER',link:id,line,premise:null,conc:cConc,st:cStand,L:LC});
+   marks.push('[AUDIT v21: DEBATE RULE VIOLATION (K-G7) -- '+id+' CHALLENGER LINK BROKEN for a witness left unanswered while CHALLENGER CONCEDED LINKS is 0. REVIEW THIS ROW.]');continue;}
+  if(!CS||CS.P.has(n)||CS.K.has(n))continue;
   items.push({rule:'K-G7',side:'DEFENDER',link:id,line,premise:n,conc:dConc,st:dStand,L});
   marks.push('[AUDIT v21: DEBATE RULE VIOLATION (K-G7) -- '+id+' DEFENDER LINK BROKEN while CONCEDED LINKS does not count premise '+n+'. REVIEW THIS ROW.]');}
  return {items,marks};}
@@ -214,7 +222,7 @@ P.judges.forEach((jd0,i)=>{const isSub=!!(SUB&&SUB.slot===i);const jd=isSub?$('R
  for(const x of sameModelMarks(p,WT))marks.push(x);
  let drvAsk=false;try{drvAsk=JSON.stringify(jd.body||{}).includes('CITATION CHECK');}catch(e){drvAsk=false;}const DRV=drvCheck(WT,p.conceded_links,p.challenger_conceded_links,p.defense_standing,p.challenge_standing,drvAsk);for(const x of DRV.marks)marks.push(x);
  const DL=drvLedger(WT,drvPromptText(jd.body),p.conceded_links,p.challenger_conceded_links,p.defense_standing,p.challenge_standing);for(const x of DL.items)DRV.items.push(x);for(const x of DL.marks)marks.push(x);
- const DB=drvBroken(WT,p.conceded_links,p.defense_standing,DRV.items);for(const x of DB.items)DRV.items.push(x);for(const x of DB.marks)marks.push(x);
+ const DB=drvBroken(WT,p.conceded_links,p.defense_standing,DRV.items,p.challenger_conceded_links,p.challenge_standing);for(const x of DB.items)DRV.items.push(x);for(const x of DB.marks)marks.push(x);
  p.drv_uncured=DRV.items.length; // 5B (BB-6969): fail-closed; Panel Cure Check lowers it to the UNCURED count. K-G2 is a mark, never an item.
  if(marks.length)p.verdict_raw=p.verdict_raw+'\n\n'+marks.join('\n');
 bodies.push(JSON.stringify({payload:p}));summary.push({seat:jd.seat,node:r[0],api_model:jd.api_model,verdict_tag:p.verdict_tag,raw_chars:env.text.length,finish_reason:p.finish_reason,flags:marks.length,drv:DRV.items,substitute:isSub});}

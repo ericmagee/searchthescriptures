@@ -344,15 +344,23 @@ function drvCounted(line){const P=new Set(),K=new Set();const NEG=/\b(?:not|no|n
   return {P,K};}
 const drvCountLine=(T,side)=>{const m=T.match(side==='DEFENDER'?/^[ \t>#-]*CONCEDED LINKS[ \t]*:.*$/im:/^[ \t>#-]*CHALLENGER CONCEDED LINKS[ \t]*:.*$/im);return m?m[0]:null;};
 // DoD 7 (BB-7420) K-G7: a COLLISION POINTS line graded DEFENDER LINK BROKEN on D<n> whose premise n (or LINK n) the same judge's CONCEDED LINKS
-// line does not count. No word test. Not raised where K-G1 already raised the link. Defender side only: the challenger count numbers premises
-// from the defender's list, not by C<j>. L and the standing are read from the judge's DEFENSE STANDING line.
-function drvBroken(text,dConc,dStand,prior){const items=[],marks=[];if(typeof text!=='string')return {items,marks};const T=text.replace(/[*_`]+/g,'');
- const cl=drvCountLine(T,'DEFENDER');if(cl===null)return {items,marks};const CS=drvCounted(cl);const lm=T.match(/^[ \t>#-]*DEFENSE STANDING[ \t]*:[^\n]*?\bL\s*=\s*(\d+)/im);const L=lm?+lm[1]:null;
+// line does not count. No word test. Not raised where K-G1 already raised the link. The challenger count numbers premises from the defender's
+// list, not by C<j> (BB-7430, option (c)): a CHALLENGER LINK BROKEN line is raised only when CHALLENGER CONCEDED LINKS is 0 and the line reads an
+// unanswered witness (DRV_WORDS7). LIMIT: with the challenger count above 0, an uncounted challenger premise is not checked by number and is not
+// raised. L and the standing are read from the judge's own STANDING lines.
+const DRV_WORDS7=/\b(?:unanswered|not answered|unnamed|not named|never named|none named|neither named|unaddressed|unexhibited)\b/i;
+function drvBroken(text,dConc,dStand,prior,cConc,cStand){const items=[],marks=[];if(typeof text!=='string')return {items,marks};const T=text.replace(/[*_`]+/g,'');
+ const cl=drvCountLine(T,'DEFENDER');const CS=cl===null?null:drvCounted(cl);const lm=T.match(/^[ \t>#-]*DEFENSE STANDING[ \t]*:[^\n]*?\bL\s*=\s*(\d+)/im);const L=lm?+lm[1]:null;
+ const cm=T.match(/^[ \t>#-]*CHALLENGE STANDING[ \t]*:[^\n]*?\bL\s*=\s*(\d+)/im);const LC=cm?+cm[1]:null;const cZero=drvCountLine(T,'CHALLENGER')!==null&&cConc===0;
  for(const line of text.split('\n')){const u=line.toUpperCase().replace(/[*_`]+/g,'').trim();
   const m=u.match(/^(?:[-•]|\d+[.)])?\s*D(\d+)\b\s*:?\s*(?:D\1\b\s*)?(.*)$/);if(!m||!/^VS\.?\s/.test(m[2]))continue;
-  const g=m[2].match(/(DEFENDER LINK BROKEN|CHALLENGER LINK BROKEN|UNDERDETERMINED)/);if(!g||g[1]!=='DEFENDER LINK BROKEN')continue;
+  const g=m[2].match(/(DEFENDER LINK BROKEN|CHALLENGER LINK BROKEN|UNDERDETERMINED)/);if(!g||g[1]==='UNDERDETERMINED')continue;
   const id=(u.match(/^(?:[-•]|\d+[.)])?\s*(D\d+\s+VS\.?\s+C\d+)/)||[null,'D'+m[1]])[1].replace(/\s+VS\.?\s+/,' vs ');const n=+m[1];
-  if(CS.P.has(n)||CS.K.has(n))continue;if((prior||[]).some(x=>x.rule==='K-G1'&&x.link===id))continue;
+  if((prior||[]).some(x=>x.rule==='K-G1'&&x.link===id))continue;
+  if(g[1]==='CHALLENGER LINK BROKEN'){if(!cZero||!DRV_WORDS7.test(line))continue;
+   items.push({rule:'K-G7',side:'CHALLENGER',link:id,line,premise:null,conc:cConc,st:cStand,L:LC});
+   marks.push('[AUDIT v21: DEBATE RULE VIOLATION (K-G7) -- '+id+' CHALLENGER LINK BROKEN for a witness left unanswered while CHALLENGER CONCEDED LINKS is 0. REVIEW THIS ROW.]');continue;}
+  if(!CS||CS.P.has(n)||CS.K.has(n))continue;
   items.push({rule:'K-G7',side:'DEFENDER',link:id,line,premise:n,conc:dConc,st:dStand,L});
   marks.push('[AUDIT v21: DEBATE RULE VIOLATION (K-G7) -- '+id+' DEFENDER LINK BROKEN while CONCEDED LINKS does not count premise '+n+'. REVIEW THIS ROW.]');}
  return {items,marks};}
@@ -388,7 +396,7 @@ function drvCheck(text,dConc,cConc,dStand,cStand,askedCC){const items=[],marks=[
  return {items,marks};}
 const DRV=drvCheck(raw0,conceded_links,challenger_conceded_links,defense_standing,challenge_standing,askedD);for(const x of DRV.marks)raw+='\n\n'+x;
 const DL=drvLedger(raw0,drvPromptText(prev&&prev.verdictBody),conceded_links,challenger_conceded_links,defense_standing,challenge_standing);for(const x of DL.items)DRV.items.push(x);for(const x of DL.marks)raw+='\n\n'+x;
-const DB=drvBroken(raw0,conceded_links,defense_standing,DRV.items);for(const x of DB.items)DRV.items.push(x);for(const x of DB.marks)raw+='\n\n'+x;
+const DB=drvBroken(raw0,conceded_links,defense_standing,DRV.items,challenger_conceded_links,challenge_standing);for(const x of DB.items)DRV.items.push(x);for(const x of DB.marks)raw+='\n\n'+x;
 // FLAG COUNT AND DATA CLASS (rulings BB-4503 Q3). A flag is every marker this extractor appended that ends REVIEW THIS
 // ROW, truncation included; a verifier recomputes it from the stored text by counting that phrase after the judge text.
 // study iff flags <= 1, no ILLEGAL rejection, a parseable verdict and a judge output not cut at max_tokens; contested

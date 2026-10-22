@@ -1,5 +1,5 @@
-THE DEBATE FIXED, per-site misedit probes on the build with DoD 7 and the count-reading fixes, Worker_A3, run 2026-10-21 20:30 CDT.
-Same 104 sites; the suite adds h_count (FALSIFIERS2, A-R) and h_k7 (FALSIFIERS3). SILENT by nature: Format_Markdown pair 5, a code comment.
+THE DEBATE FIXED, per-site misedit probes on the build with DoD 7 both sides and the count-reading fixes, Worker_A3, run 2026-10-21 20:36 CDT.
+Same 104 sites; the suite includes h_count (A-R) and h_k7 (M1-M8, N1-N7). SILENT by nature: Format_Markdown pair 5, a code comment.
 NOT PROBED HERE: the 3 derive_debate_outcome sites (2 comment text; the SET clause runs only after step 6b, read by W1 v2 at step 8).
 
 Alternate_Build              pair 0  DETECTED TEXT {"Alternate_Build.js K-G6 statement text": 1, "Alternate_Cure_Build.js K-G6 rule text": 1, "Alternate_Cure_Build.js K-G6 statement text": 1, "Alt
@@ -7,25 +7,25 @@ Alternate_Build              pair 1  DETECTED TEXT {"Alternate_Build.js K-G6 rul
 Alternate_Build              pair 2  DETECTED Alternate_Build.js           ["K-G3 DEFENDER: premise 1 (LINK 1): ... NOT NAMED: Psalm 132:11","K-G1 CHALLENGER LINK 2: LINK 2: CONCEDED","K-G3 DEFEND
 Alternate_Build              pair 3  DETECTED Alternate_Build.js           ["K-G6 DEFENDER premise 1: DEFENDER STANDING SELF-SUPPORTED while these DEFENDER links are graded BROKEN: LINK 4","K-G1 C
 Alternate_Build              pair 4  DETECTED 1/14 a_count_all => DEFENDER1:UNCURED DEFENDER3:UNCURED CHALLENGER1:UNCURED CHALLENGER6:UNCURED
-Alternate_Build              pair 5  DETECTED <anonymous_script>:261
+Alternate_Build              pair 5  DETECTED <anonymous_script>:262
 Alternate_Cure_Build         pair 0  DETECTED TEXT {"Alternate_Build.js K-G6 rule text": 1, "Alternate_Build.js K-G6 statement text": 1, "Alternate_Cure_Build.js K-G6 statement text": 1, "Alternat
 Alternate_Cure_Build         pair 1  DETECTED TEXT {"Alternate_Build.js K-G6 rule text": 1, "Alternate_Build.js K-G6 statement text": 1, "Alternate_Cure_Build.js K-G6 rule text": 1, "Alternate_Cur
 Alternate_Cure_Build         pair 2  DETECTED Alternate_Cure_Build.js      ["K-G3 DEFENDER: premise 1 (LINK 1): ... NOT NAMED: Psalm 132:11","K-G1 CHALLENGER LINK 2: LINK 2: CONCEDED","K-G3 DEFEND
 Alternate_Cure_Build         pair 3  DETECTED Alternate_Cure_Build.js      ["K-G6 DEFENDER premise 1: DEFENDER STANDING SELF-SUPPORTED while these DEFENDER links are graded BROKEN: LINK 4","K-G1 C
 Alternate_Cure_Build         pair 4  DETECTED 13/14 a_count_all => DEFENDER1:CURED DEFENDER3:CURED CHALLENGER1:CURED CHALLENGER6:CURED
-Alternate_Cure_Build         pair 5  DETECTED <anonymous_script>:261
+Alternate_Cure_Build         pair 5  DETECTED <anonymous_script>:262
 Alternate_Cure_Normalize     pair 0  DETECTED TEXT {"Alternate_Build.js K-G6 rule text": 1, "Alternate_Build.js K-G6 statement text": 1, "Alternate_Cure_Build.js K-G6 rule text": 1, "Alternate_Cur
 Alternate_Cure_Normalize     pair 1  DETECTED TEXT {"Alternate_Build.js K-G6 rule text": 1, "Alternate_Build.js K-G6 statement text": 1, "Alternate_Cure_Build.js K-G6 rule text": 1, "Alternate_Cur
 Alternate_Cure_Normalize     pair 2  DETECTED Alternate_Cure_Normalize.js  ["K-G3 DEFENDER: premise 1 (LINK 1): ... NOT NAMED: Psalm 132:11","K-G1 CHALLENGER LINK 2: LINK 2: CONCEDED","K-G3 DEFEND
 Alternate_Cure_Normalize     pair 3  DETECTED Alternate_Cure_Normalize.js  ["K-G6 DEFENDER premise 1: DEFENDER STANDING SELF-SUPPORTED while these DEFENDER links are graded BROKEN: LINK 4","K-G1 C
 Alternate_Cure_Normalize     pair 4  DETECTED 13/14 a_count_all => DEFENDER1:CURED DEFENDER3:CURED CHALLENGER1:CURED CHALLENGER6:CURED
-Alternate_Cure_Normalize     pair 5  DETECTED <anonymous_script>:261
+Alternate_Cure_Normalize     pair 5  DETECTED <anonymous_script>:262
 Alternate_Merge              pair 0  DETECTED TEXT {"Alternate_Build.js K-G6 rule text": 1, "Alternate_Build.js K-G6 statement text": 1, "Alternate_Cure_Build.js K-G6 rule text": 1, "Alternate_Cur
 Alternate_Merge              pair 1  DETECTED TEXT {"Alternate_Build.js K-G6 rule text": 1, "Alternate_Build.js K-G6 statement text": 1, "Alternate_Cure_Build.js K-G6 rule text": 1, "Alternate_Cur
 Alternate_Merge              pair 2  DETECTED Alternate_Merge.js           ["K-G3 DEFENDER: premise 1 (LINK 1): ... NOT NAMED: Psalm 132:11","K-G1 CHALLENGER LINK 2: LINK 2: CONCEDED","K-G3 DEFEND
 Alternate_Merge              pair 3  DETECTED Alternate_Merge.js           ["K-G6 DEFENDER premise 1: DEFENDER STANDING SELF-SUPPORTED while these DEFENDER links are graded BROKEN: LINK 4","K-G1 C
 Alternate_Merge              pair 4  DETECTED 13/14 a_count_all => DEFENDER1:CURED DEFENDER3:CURED CHALLENGER1:CURED CHALLENGER6:CURED
-Alternate_Merge              pair 5  DETECTED <anonymous_script>:261
+Alternate_Merge              pair 5  DETECTED <anonymous_script>:262
 Alternate_Merge              pair 6  DETECTED Alternate_Merge columns: SELF-SUPPORTED,0 | PROP-DEPENDENT,1 | seated 1
 Alternate_Payloads           pair 0  DETECTED <anonymous_script>:3
 Alternate_Payloads           pair 1  DETECTED Alternate_Payloads items: K-G4 D6 vs C3, K-G3 null
@@ -36,20 +36,20 @@ Cure_Build                   pair 1  DETECTED TEXT {"Alternate_Build.js K-G6 rul
 Cure_Build                   pair 2  DETECTED Cure_Build.js                ["K-G3 DEFENDER: premise 1 (LINK 1): ... NOT NAMED: Psalm 132:11","K-G1 CHALLENGER LINK 2: LINK 2: CONCEDED","K-G3 DEFEND
 Cure_Build                   pair 3  DETECTED Cure_Build.js                ["K-G6 DEFENDER premise 1: DEFENDER STANDING SELF-SUPPORTED while these DEFENDER links are graded BROKEN: LINK 4","K-G1 C
 Cure_Build                   pair 4  DETECTED 13/14 a_count_all => DEFENDER1:CURED DEFENDER3:CURED CHALLENGER1:CURED CHALLENGER6:CURED
-Cure_Build                   pair 5  DETECTED <anonymous_script>:261
+Cure_Build                   pair 5  DETECTED <anonymous_script>:262
 Cure_Check                   pair 0  DETECTED TEXT {"Alternate_Build.js K-G6 rule text": 1, "Alternate_Build.js K-G6 statement text": 1, "Alternate_Cure_Build.js K-G6 rule text": 1, "Alternate_Cur
 Cure_Check                   pair 1  DETECTED TEXT {"Alternate_Build.js K-G6 rule text": 1, "Alternate_Build.js K-G6 statement text": 1, "Alternate_Cure_Build.js K-G6 rule text": 1, "Alternate_Cur
 Cure_Check                   pair 2  DETECTED Cure_Check.js                ["K-G3 DEFENDER: premise 1 (LINK 1): ... NOT NAMED: Psalm 132:11","K-G1 CHALLENGER LINK 2: LINK 2: CONCEDED","K-G3 DEFEND
 Cure_Check                   pair 3  DETECTED Cure_Check.js                ["K-G6 DEFENDER premise 1: DEFENDER STANDING SELF-SUPPORTED while these DEFENDER links are graded BROKEN: LINK 4","K-G1 C
 Cure_Check                   pair 4  DETECTED 13/14 a_count_all => DEFENDER1:CURED DEFENDER3:CURED CHALLENGER1:CURED CHALLENGER6:CURED
-Cure_Check                   pair 5  DETECTED <anonymous_script>:261
+Cure_Check                   pair 5  DETECTED <anonymous_script>:262
 Cure_Check                   pair 6  DETECTED Cure_Check columns: SELF-SUPPORTED,0 | PROP-DEPENDENT,1
 Cure_Normalize               pair 0  DETECTED TEXT {"Alternate_Build.js K-G6 rule text": 1, "Alternate_Build.js K-G6 statement text": 1, "Alternate_Cure_Build.js K-G6 rule text": 1, "Alternate_Cur
 Cure_Normalize               pair 1  DETECTED TEXT {"Alternate_Build.js K-G6 rule text": 1, "Alternate_Build.js K-G6 statement text": 1, "Alternate_Cure_Build.js K-G6 rule text": 1, "Alternate_Cur
 Cure_Normalize               pair 2  DETECTED Cure_Normalize.js            ["K-G3 DEFENDER: premise 1 (LINK 1): ... NOT NAMED: Psalm 132:11","K-G1 CHALLENGER LINK 2: LINK 2: CONCEDED","K-G3 DEFEND
 Cure_Normalize               pair 3  DETECTED Cure_Normalize.js            ["K-G6 DEFENDER premise 1: DEFENDER STANDING SELF-SUPPORTED while these DEFENDER links are graded BROKEN: LINK 4","K-G1 C
 Cure_Normalize               pair 4  DETECTED 13/14 a_count_all => DEFENDER1:CURED DEFENDER3:CURED CHALLENGER1:CURED CHALLENGER6:CURED
-Cure_Normalize               pair 5  DETECTED <anonymous_script>:261
+Cure_Normalize               pair 5  DETECTED <anonymous_script>:262
 Extract_Independent_Verdict  pair 0  DETECTED <anonymous_script>:3
 Extract_Independent_Verdict  pair 1  DETECTED Extract items: none
 Format_Markdown              pair 0  DETECTED <anonymous_script>:76
@@ -66,44 +66,44 @@ Panel_Cure_Build_1           pair 1  DETECTED TEXT {"Alternate_Build.js K-G6 rul
 Panel_Cure_Build_1           pair 2  DETECTED Panel_Cure_Build_1.js        ["K-G3 DEFENDER: premise 1 (LINK 1): ... NOT NAMED: Psalm 132:11","K-G1 CHALLENGER LINK 2: LINK 2: CONCEDED","K-G3 DEFEND
 Panel_Cure_Build_1           pair 3  DETECTED Panel_Cure_Build_1.js        ["K-G6 DEFENDER premise 1: DEFENDER STANDING SELF-SUPPORTED while these DEFENDER links are graded BROKEN: LINK 4","K-G1 C
 Panel_Cure_Build_1           pair 4  DETECTED 13/14 a_count_all => DEFENDER1:CURED DEFENDER3:CURED CHALLENGER1:CURED CHALLENGER6:CURED
-Panel_Cure_Build_1           pair 5  DETECTED <anonymous_script>:261
+Panel_Cure_Build_1           pair 5  DETECTED <anonymous_script>:262
 Panel_Cure_Build_2           pair 0  DETECTED TEXT {"Alternate_Build.js K-G6 rule text": 1, "Alternate_Build.js K-G6 statement text": 1, "Alternate_Cure_Build.js K-G6 rule text": 1, "Alternate_Cur
 Panel_Cure_Build_2           pair 1  DETECTED TEXT {"Alternate_Build.js K-G6 rule text": 1, "Alternate_Build.js K-G6 statement text": 1, "Alternate_Cure_Build.js K-G6 rule text": 1, "Alternate_Cur
 Panel_Cure_Build_2           pair 2  DETECTED Panel_Cure_Build_2.js        ["K-G3 DEFENDER: premise 1 (LINK 1): ... NOT NAMED: Psalm 132:11","K-G1 CHALLENGER LINK 2: LINK 2: CONCEDED","K-G3 DEFEND
 Panel_Cure_Build_2           pair 3  DETECTED Panel_Cure_Build_2.js        ["K-G6 DEFENDER premise 1: DEFENDER STANDING SELF-SUPPORTED while these DEFENDER links are graded BROKEN: LINK 4","K-G1 C
 Panel_Cure_Build_2           pair 4  DETECTED 13/14 a_count_all => DEFENDER1:CURED DEFENDER3:CURED CHALLENGER1:CURED CHALLENGER6:CURED
-Panel_Cure_Build_2           pair 5  DETECTED <anonymous_script>:261
+Panel_Cure_Build_2           pair 5  DETECTED <anonymous_script>:262
 Panel_Cure_Build_3           pair 0  DETECTED TEXT {"Alternate_Build.js K-G6 rule text": 1, "Alternate_Build.js K-G6 statement text": 1, "Alternate_Cure_Build.js K-G6 rule text": 1, "Alternate_Cur
 Panel_Cure_Build_3           pair 1  DETECTED TEXT {"Alternate_Build.js K-G6 rule text": 1, "Alternate_Build.js K-G6 statement text": 1, "Alternate_Cure_Build.js K-G6 rule text": 1, "Alternate_Cur
 Panel_Cure_Build_3           pair 2  DETECTED Panel_Cure_Build_3.js        ["K-G3 DEFENDER: premise 1 (LINK 1): ... NOT NAMED: Psalm 132:11","K-G1 CHALLENGER LINK 2: LINK 2: CONCEDED","K-G3 DEFEND
 Panel_Cure_Build_3           pair 3  DETECTED Panel_Cure_Build_3.js        ["K-G6 DEFENDER premise 1: DEFENDER STANDING SELF-SUPPORTED while these DEFENDER links are graded BROKEN: LINK 4","K-G1 C
 Panel_Cure_Build_3           pair 4  DETECTED 13/14 a_count_all => DEFENDER1:CURED DEFENDER3:CURED CHALLENGER1:CURED CHALLENGER6:CURED
-Panel_Cure_Build_3           pair 5  DETECTED <anonymous_script>:261
+Panel_Cure_Build_3           pair 5  DETECTED <anonymous_script>:262
 Panel_Cure_Check             pair 0  DETECTED TEXT {"Alternate_Build.js K-G6 rule text": 1, "Alternate_Build.js K-G6 statement text": 1, "Alternate_Cure_Build.js K-G6 rule text": 1, "Alternate_Cur
 Panel_Cure_Check             pair 1  DETECTED TEXT {"Alternate_Build.js K-G6 rule text": 1, "Alternate_Build.js K-G6 statement text": 1, "Alternate_Cure_Build.js K-G6 rule text": 1, "Alternate_Cur
 Panel_Cure_Check             pair 2  DETECTED Panel_Cure_Check.js          ["K-G3 DEFENDER: premise 1 (LINK 1): ... NOT NAMED: Psalm 132:11","K-G1 CHALLENGER LINK 2: LINK 2: CONCEDED","K-G3 DEFEND
 Panel_Cure_Check             pair 3  DETECTED Panel_Cure_Check.js          ["K-G6 DEFENDER premise 1: DEFENDER STANDING SELF-SUPPORTED while these DEFENDER links are graded BROKEN: LINK 4","K-G1 C
 Panel_Cure_Check             pair 4  DETECTED    a_count_all          DEFENDER premise 1 UNCURED (unknown rule) | DEFENDER premise 3 UNCURED (unknown rule) | CHALLENGER premise 1 UNCURED (unknown 
-Panel_Cure_Check             pair 5  DETECTED <anonymous_script>:261
+Panel_Cure_Check             pair 5  DETECTED <anonymous_script>:262
 Panel_Cure_Check             pair 6  DETECTED Panel_Cure_Check columns: SELF-SUPPORTED,0 | PROP-DEPENDENT,1
 Panel_Cure_Normalize_1       pair 0  DETECTED TEXT {"Alternate_Build.js K-G6 rule text": 1, "Alternate_Build.js K-G6 statement text": 1, "Alternate_Cure_Build.js K-G6 rule text": 1, "Alternate_Cur
 Panel_Cure_Normalize_1       pair 1  DETECTED TEXT {"Alternate_Build.js K-G6 rule text": 1, "Alternate_Build.js K-G6 statement text": 1, "Alternate_Cure_Build.js K-G6 rule text": 1, "Alternate_Cur
 Panel_Cure_Normalize_1       pair 2  DETECTED Panel_Cure_Normalize_1.js    ["K-G3 DEFENDER: premise 1 (LINK 1): ... NOT NAMED: Psalm 132:11","K-G1 CHALLENGER LINK 2: LINK 2: CONCEDED","K-G3 DEFEND
 Panel_Cure_Normalize_1       pair 3  DETECTED Panel_Cure_Normalize_1.js    ["K-G6 DEFENDER premise 1: DEFENDER STANDING SELF-SUPPORTED while these DEFENDER links are graded BROKEN: LINK 4","K-G1 C
 Panel_Cure_Normalize_1       pair 4  DETECTED 13/14 a_count_all => DEFENDER1:CURED DEFENDER3:CURED CHALLENGER1:CURED CHALLENGER6:CURED
-Panel_Cure_Normalize_1       pair 5  DETECTED <anonymous_script>:261
+Panel_Cure_Normalize_1       pair 5  DETECTED <anonymous_script>:262
 Panel_Cure_Normalize_2       pair 0  DETECTED TEXT {"Alternate_Build.js K-G6 rule text": 1, "Alternate_Build.js K-G6 statement text": 1, "Alternate_Cure_Build.js K-G6 rule text": 1, "Alternate_Cur
 Panel_Cure_Normalize_2       pair 1  DETECTED TEXT {"Alternate_Build.js K-G6 rule text": 1, "Alternate_Build.js K-G6 statement text": 1, "Alternate_Cure_Build.js K-G6 rule text": 1, "Alternate_Cur
 Panel_Cure_Normalize_2       pair 2  DETECTED Panel_Cure_Normalize_2.js    ["K-G3 DEFENDER: premise 1 (LINK 1): ... NOT NAMED: Psalm 132:11","K-G1 CHALLENGER LINK 2: LINK 2: CONCEDED","K-G3 DEFEND
 Panel_Cure_Normalize_2       pair 3  DETECTED Panel_Cure_Normalize_2.js    ["K-G6 DEFENDER premise 1: DEFENDER STANDING SELF-SUPPORTED while these DEFENDER links are graded BROKEN: LINK 4","K-G1 C
 Panel_Cure_Normalize_2       pair 4  DETECTED 13/14 a_count_all => DEFENDER1:CURED DEFENDER3:CURED CHALLENGER1:CURED CHALLENGER6:CURED
-Panel_Cure_Normalize_2       pair 5  DETECTED <anonymous_script>:261
+Panel_Cure_Normalize_2       pair 5  DETECTED <anonymous_script>:262
 Panel_Cure_Normalize_3       pair 0  DETECTED TEXT {"Alternate_Build.js K-G6 rule text": 1, "Alternate_Build.js K-G6 statement text": 1, "Alternate_Cure_Build.js K-G6 rule text": 1, "Alternate_Cur
 Panel_Cure_Normalize_3       pair 1  DETECTED TEXT {"Alternate_Build.js K-G6 rule text": 1, "Alternate_Build.js K-G6 statement text": 1, "Alternate_Cure_Build.js K-G6 rule text": 1, "Alternate_Cur
 Panel_Cure_Normalize_3       pair 2  DETECTED Panel_Cure_Normalize_3.js    ["K-G3 DEFENDER: premise 1 (LINK 1): ... NOT NAMED: Psalm 132:11","K-G1 CHALLENGER LINK 2: LINK 2: CONCEDED","K-G3 DEFEND
 Panel_Cure_Normalize_3       pair 3  DETECTED Panel_Cure_Normalize_3.js    ["K-G6 DEFENDER premise 1: DEFENDER STANDING SELF-SUPPORTED while these DEFENDER links are graded BROKEN: LINK 4","K-G1 C
 Panel_Cure_Normalize_3       pair 4  DETECTED 13/14 a_count_all => DEFENDER1:CURED DEFENDER3:CURED CHALLENGER1:CURED CHALLENGER6:CURED
-Panel_Cure_Normalize_3       pair 5  DETECTED <anonymous_script>:261
+Panel_Cure_Normalize_3       pair 5  DETECTED <anonymous_script>:262
 Panel_Payloads               pair 0  DETECTED <anonymous_script>:3
 Panel_Payloads               pair 1  DETECTED Panel_Payloads items: K-G4 D6 vs C3, K-G3 null
 sites 104 | DETECTED 103 | SILENT 1
