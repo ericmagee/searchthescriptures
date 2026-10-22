@@ -1,0 +1,125 @@
+PASS P1 Panel_Payloads items                      got: none 
+PASS P1 Panel_Payloads absence                    got: none 
+PASS P2 Panel_Payloads items                      got: K-G6 DEFENDER premise 3 
+PASS P3 Panel_Payloads items                      got: K-G6 DEFENDER premise 1, K-G6 DEFENDER premise 3 
+PASS P3 Panel_Payloads absence                    got: DEFENDER ABSENT 
+PASS P4 Panel_Payloads items                      got: none 
+PASS P4 Panel_Payloads absence                    got: DEFENDER ABSENT 
+PASS P5 Panel_Payloads items                      got: K-G6 DEFENDER premise 3, K-G8 DEFENDER COUNTED PREMISES 
+PASS P6 Panel_Payloads items                      got: K-G7 D6 vs C3 
+PASS P7 Panel_Payloads items                      got: none 
+PASS P8 Panel_Payloads items                      got: none 
+PASS P9 Panel_Payloads items                      got: K-G6 DEFENDER premise 1, K-G6 DEFENDER premise 3, K-G7 D6 vs C3 
+PASS P9 Panel_Payloads absence                    got: DEFENDER ABSENT 
+PASS P10 Panel_Payloads items                     got: none 
+PASS P10 Panel_Payloads absence                   got: DEFENDER ABSENT 
+PASS P11 Panel_Payloads items                     got: none 
+PASS P11 Panel_Payloads absence                   got: DEFENDER UNREADABLE 
+PASS P12 Panel_Payloads items                     got: none 
+PASS P12 Panel_Payloads absence                   got: none 
+PASS P13a Panel_Payloads items                    got: none 
+PASS P13a Panel_Payloads absence                  got: none 
+PASS P13b Panel_Payloads items                    got: none 
+PASS P13b Panel_Payloads absence                  got: none 
+PASS P13c Panel_Payloads items                    got: none 
+PASS P13c Panel_Payloads absence                  got: none 
+PASS P13d Panel_Payloads items                    got: none 
+PASS P13d Panel_Payloads absence                  got: none 
+PASS P13e Panel_Payloads items                    got: none 
+PASS P13e Panel_Payloads absence                  got: none 
+PASS P14 Panel_Payloads items                     got: K-G8 CHALLENGER COUNTED PREMISES 
+PASS P1 Alternate_Payloads items                  got: none 
+PASS P1 Alternate_Payloads absence                got: none 
+PASS P2 Alternate_Payloads items                  got: K-G6 DEFENDER premise 3 
+PASS P3 Alternate_Payloads items                  got: K-G6 DEFENDER premise 1, K-G6 DEFENDER premise 3 
+PASS P3 Alternate_Payloads absence                got: DEFENDER ABSENT 
+PASS P4 Alternate_Payloads items                  got: none 
+PASS P4 Alternate_Payloads absence                got: DEFENDER ABSENT 
+PASS P5 Alternate_Payloads items                  got: K-G6 DEFENDER premise 3, K-G8 DEFENDER COUNTED PREMISES 
+PASS P6 Alternate_Payloads items                  got: K-G7 D6 vs C3 
+PASS P7 Alternate_Payloads items                  got: none 
+PASS P8 Alternate_Payloads items                  got: none 
+PASS P9 Alternate_Payloads items                  got: K-G6 DEFENDER premise 1, K-G6 DEFENDER premise 3, K-G7 D6 vs C3 
+PASS P9 Alternate_Payloads absence                got: DEFENDER ABSENT 
+PASS P10 Alternate_Payloads items                 got: none 
+PASS P10 Alternate_Payloads absence               got: DEFENDER ABSENT 
+PASS P11 Alternate_Payloads items                 got: none 
+PASS P11 Alternate_Payloads absence               got: DEFENDER UNREADABLE 
+PASS P12 Alternate_Payloads items                 got: none 
+PASS P12 Alternate_Payloads absence               got: none 
+PASS P13a Alternate_Payloads items                got: none 
+PASS P13a Alternate_Payloads absence              got: none 
+PASS P13b Alternate_Payloads items                got: none 
+PASS P13b Alternate_Payloads absence              got: none 
+PASS P13c Alternate_Payloads items                got: none 
+PASS P13c Alternate_Payloads absence              got: none 
+PASS P13d Alternate_Payloads items                got: none 
+PASS P13d Alternate_Payloads absence              got: none 
+PASS P13e Alternate_Payloads items                got: none 
+PASS P13e Alternate_Payloads absence              got: none 
+PASS P14 Alternate_Payloads items                 got: K-G8 CHALLENGER COUNTED PREMISES 
+PASS P1 Extract_Independent_Verdict items         got: none 
+PASS P1 Extract_Independent_Verdict absence       got: none 
+PASS P2 Extract_Independent_Verdict items         got: K-G6 DEFENDER premise 3 
+PASS P3 Extract_Independent_Verdict items         got: K-G6 DEFENDER premise 1, K-G6 DEFENDER premise 3 
+PASS P3 Extract_Independent_Verdict absence       got: DEFENDER ABSENT 
+PASS P4 Extract_Independent_Verdict items         got: none 
+PASS P4 Extract_Independent_Verdict absence       got: DEFENDER ABSENT 
+PASS P5 Extract_Independent_Verdict items         got: K-G6 DEFENDER premise 3, K-G8 DEFENDER COUNTED PREMISES 
+PASS P6 Extract_Independent_Verdict items         got: K-G7 D6 vs C3 
+PASS P7 Extract_Independent_Verdict items         got: none 
+PASS P8 Extract_Independent_Verdict items         got: none 
+PASS P9 Extract_Independent_Verdict items         got: K-G6 DEFENDER premise 1, K-G6 DEFENDER premise 3, K-G7 D6 vs C3 
+PASS P9 Extract_Independent_Verdict absence       got: DEFENDER ABSENT 
+PASS P10 Extract_Independent_Verdict items        got: none 
+PASS P10 Extract_Independent_Verdict absence      got: DEFENDER ABSENT 
+PASS P11 Extract_Independent_Verdict items        got: none 
+PASS P11 Extract_Independent_Verdict absence      got: DEFENDER UNREADABLE 
+PASS P12 Extract_Independent_Verdict items        got: none 
+PASS P12 Extract_Independent_Verdict absence      got: none 
+PASS P13a Extract_Independent_Verdict items       got: none 
+PASS P13a Extract_Independent_Verdict absence     got: none 
+PASS P13b Extract_Independent_Verdict items       got: none 
+PASS P13b Extract_Independent_Verdict absence     got: none 
+PASS P13c Extract_Independent_Verdict items       got: none 
+PASS P13c Extract_Independent_Verdict absence     got: none 
+PASS P13d Extract_Independent_Verdict items       got: none 
+PASS P13d Extract_Independent_Verdict absence     got: none 
+PASS P13e Extract_Independent_Verdict items       got: none 
+PASS P13e Extract_Independent_Verdict absence     got: none 
+PASS P14 Extract_Independent_Verdict items        got: K-G8 CHALLENGER COUNTED PREMISES 
+CURE 14/14 Q1 => CURED CURED
+CURE 14/14 Q2 => UNCURED UNCURED
+CURE 14/14 Q3a => CURED
+CURE 14/14 Q3b => UNCURED
+PASS 27665 Panel_Payloads Gemini (d=0 c=1)        got: K-G6 DEFENDER premise 1, K-G6 DEFENDER premise 3, K-G7 D6 vs C3 
+PASS 27665 Panel_Payloads Gemini absence          got: 2 
+PASS 27665 Panel_Payloads Grok (d=2 c=3)          got: none 
+PASS 27665 Panel_Payloads Grok absence            got: 2 
+PASS 27665 Panel_Payloads GLM (d=0 c=3)           got: K-G6 DEFENDER premise 1, K-G6 DEFENDER premise 3 
+PASS 27665 Panel_Payloads GLM absence             got: 2 
+PASS 27665 Panel_Payloads DeepSeek (d=0 c=3)      got: K-G6 DEFENDER premise 1, K-G6 DEFENDER premise 3, K-G7 D6 vs C3 
+PASS 27665 Panel_Payloads DeepSeek absence        got: 2 
+PASS 27665 Alternate_Payloads Gemini (d=0 c=1)    got: K-G6 DEFENDER premise 1, K-G6 DEFENDER premise 3, K-G7 D6 vs C3 
+PASS 27665 Alternate_Payloads Gemini absence      got: 2 
+PASS 27665 Alternate_Payloads Grok (d=2 c=3)      got: none 
+PASS 27665 Alternate_Payloads Grok absence        got: 2 
+PASS 27665 Alternate_Payloads GLM (d=0 c=3)       got: K-G6 DEFENDER premise 1, K-G6 DEFENDER premise 3 
+PASS 27665 Alternate_Payloads GLM absence         got: 2 
+PASS 27665 Alternate_Payloads DeepSeek (d=0 c=3)  got: K-G6 DEFENDER premise 1, K-G6 DEFENDER premise 3, K-G7 D6 vs C3 
+PASS 27665 Alternate_Payloads DeepSeek absence    got: 2 
+PASS 27665 Extract_Independent_Verdict Gemini (d=0 c=1) got: K-G6 DEFENDER premise 1, K-G6 DEFENDER premise 3, K-G7 D6 vs C3 
+PASS 27665 Extract_Independent_Verdict Gemini absence got: 2 
+PASS 27665 Extract_Independent_Verdict Grok (d=2 c=3) got: none 
+PASS 27665 Extract_Independent_Verdict Grok absence got: 2 
+PASS 27665 Extract_Independent_Verdict GLM (d=0 c=3) got: K-G6 DEFENDER premise 1, K-G6 DEFENDER premise 3 
+PASS 27665 Extract_Independent_Verdict GLM absence got: 2 
+PASS 27665 Extract_Independent_Verdict DeepSeek (d=0 c=3) got: K-G6 DEFENDER premise 1, K-G6 DEFENDER premise 3, K-G7 D6 vs C3 
+PASS 27665 Extract_Independent_Verdict DeepSeek absence got: 2 
+PASS CORPUS Panel_Payloads lines with a COUNTED line got: 0 of 285 
+PASS CORPUS Panel_Payloads items at a stated count >= 1 got: 0 
+PASS CORPUS Alternate_Payloads lines with a COUNTED line got: 0 of 285 
+PASS CORPUS Alternate_Payloads items at a stated count >= 1 got: 0 
+PASS CORPUS Extract_Independent_Verdict lines with a COUNTED line got: 0 of 285 
+PASS CORPUS Extract_Independent_Verdict items at a stated count >= 1 got: 0 
+TOTAL pass 176 fail 0
