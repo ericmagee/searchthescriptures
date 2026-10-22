@@ -1,0 +1,65 @@
+THE DEBATE FIXED (BB-7397), DoD 9, design (B) (BB-7436), P2D rev 5 (BB-7438). Builder Worker_E. Falsifiers declared BEFORE any file change.
+Base: Worker_A3's new/ at git 3ac66c8 (copied to base9/, md5s in BASE9_MD5S.txt), which is live 428fbdc3 plus A3's build.
+
+THE LINE. Each judge text (Panel Build SYS, which the alternates and the reserve copy; Build Independent Verdict system text) carries one
+sentence directly after the plain-language sentence, asking for:
+  COUNTED PREMISES DEFENDER: <the ledger premise numbers counted in CONCEDED LINKS, comma-separated, or none>
+  COUNTED PREMISES CHALLENGER: <the same for CHALLENGER CONCEDED LINKS, or none>
+The sentence occurs exactly once in each of the two texts and nowhere else in the flow.
+
+READING THE LINE (all three raise nodes, one function): a line whose value is "none" gives the empty set; a line whose value holds only
+numbers, commas, "and", "&", spaces and the words premise/premises gives those numbers; any other value is UNREADABLE and is treated as
+absent. The prose reader (drvCounted) is retired: it occurs 0 times in the built nodes.
+
+K-G6 (NOT NAMED premise not counted), per side:
+ - Line present: a NOT NAMED ledger premise n not on the line is an item.
+ - Line absent: (A). If the side's stated count is 0, every NOT NAMED premise of that side is an item. If the count is above 0, no item.
+K-G7 defender (DEFENDER LINK BROKEN on D<n>), not raised where K-G1 raised the link:
+ - The premises graded against D<n> are the ledger premises written "(LINK n)". If no ledger premise carries a LINK label, premise n.
+ - Line present: an item when none of those premises is on the line. If no ledger premise maps to D<n>, the line cannot test it, so the
+   check falls to (A).
+ - Line absent: (A). An item when the defender's stated count is 0. If the count is above 0, no item.
+K-G7 challenger: (c), unchanged from e36f865.
+K-G8 (new): a present, readable line whose number of distinct premises differs from its side's stated count is one item for that side.
+ - Cure: CORRECTED COUNT for that side equal to the line's number plus the side's K-G6/K-G7 premises not cured otherwise, with the
+   standing that count makes true.
+ - Limit, stated: the judge cannot correct the line itself in the cure.
+ABSENCE written to the row: for each side whose count line is present and whose COUNTED PREMISES line is absent or unreadable, one mark
+"[AUDIT v21: COUNTED PREMISES <SIDE> LINE ABSENT ...]".
+
+CASES (constructed; ledger: defender premises 1-6 with 1 and 3 NOT NAMED, premise n written (LINK n); challenger premises 1-6 with none NOT
+NAMED, unless the case says otherwise):
+ P1  line D "1, 3", count 2; line C "none", count 0                                     -> no K-G6, no K-G8, no absence mark
+ P2  line D "1", count 1                                                                -> K-G6 DEFENDER premise 3
+ P3  no line D, count 0                                                                 -> K-G6 DEFENDER premise 1, 3; absence mark DEFENDER
+ P4  no line D, count 2                                                                 -> no K-G6; absence mark DEFENDER
+ P5  line D "1", count 2                                                                -> K-G8 DEFENDER; K-G6 DEFENDER premise 3
+ P6  line D "1, 3", count 2; "D6 vs C3: DEFENDER LINK BROKEN -- x"                      -> K-G7 D6 vs C3
+ P7  line D "1, 3, 6", count 3; the same BROKEN line                                    -> no K-G7
+ P8  ledger premise 5 written (LINK 6); line D "1, 3, 5", count 3; the BROKEN line on D6 -> no K-G7
+ P9  no line D, count 0; the BROKEN line                                                -> K-G7 D6 vs C3 (A)
+ P10 no line D, count 1 "premise 6 UNEXHIBITED"; the BROKEN line                        -> no K-G7 (A; the stated limit)
+ P11 line D "1 and three", count 2                                                      -> treated as absent: absence mark DEFENDER, no K-G6 (count 2)
+ P12 line D "premises 1 and 3", count 2                                                 -> no K-G6, no K-G8
+ P13 the 7431 cases that broke the prose reader, each with line D "1, 3", count 2: no K-G6 on any
+ P14 line C "1", count 0 on the challenger side, ledger challenger premise 1 NOT NAMED   -> K-G8 CHALLENGER; no K-G6 CHALLENGER premise 1
+ CURE (14 nodes):
+ Q1  K-G8 DEFENDER (line 1, count 2) with K-G6 premise 3; reply CORRECTED COUNT DEFENDER 2, STANDING PROP-DEPENDENT -> both CURED
+ Q2  the same, reply CORRECTED COUNT DEFENDER 1                                          -> K-G8 UNCURED
+ Q3  K-G8 alone (line "1, 3", count 1), reply COUNT 2 PROP-DEPENDENT                     -> CURED; reply nothing -> UNCURED
+
+27665 (no judge wrote the line; all through (A)), from report27665.md 7f22d279:
+ - Gemini: defender count 0, so K-G6 DEFENDER 1, 3 and K-G7 D6 vs C3. Challenger count 1, so no K-G6 there (a change from the 7412 set,
+   which was read by prose).
+ - GLM: defender count 0, so K-G6 DEFENDER 1, 3. Challenger count 3, so no K-G6 there (changed). No K-G7 (no BROKEN line).
+ - Grok: counts 2 and 3, so none.
+ - Single judge: defender count 0, so K-G6 DEFENDER 1, 3 and K-G7 D6 vs C3. Challenger count 3, so none there.
+ - Absence marks on every judge, both sides.
+
+CORPUS: the 285 stored count lines (verify3_e/regress/lines.json) carry no COUNTED PREMISES line. The new line reader returns absent on all
+285. The number of false items by number is 0 by construction; (A) raises only at a stated count of 0.
+
+REGRESSION: rebuild from base equals new9/ for all 22 nodes. Each pair reverses to base9. Parse 22. Every node outside the changed set equals
+base9. My rev 12 harnesses rerun 56/56. h_cure F3b cases: K-G6 items are passed in directly, so the 7 cases are unchanged. h_f3a and h_k7 M1:
+their expected sets change as above, written in RUN_DOD9.txt with each change named. h_count (drvCounted) is retired with the reader.
+WRONG IF: rev 4's W1-W4. (B) stays UNEXERCISED until a live judge writes the line.
