@@ -50,7 +50,7 @@ if(vsDef.n===0)FF.push('**Link round forfeited by the challenger:** the challeng
 if(vsCh.n===0)FF.push('**Link round forfeited by the defender:** the defender listed no claims against the challenger, so the challenger had nothing to answer in its link round. That round carries no information about the challenger.');
 
 const ONE_RULEBOOK = String(r.created_at || '') >= '2026-10-04T00:33';
-const RULES = ONE_RULEBOOK ? '**One rulebook.** All four judgments (the three panel judges and the single judge) apply these same rules.\n\n' : '**Note on this run.** It ran before 4 October 2026, 00:33 UTC. The single judge applied the rules above; the three panel judges were given only the three verdict words and graded by their own judgment, without these counting rules. From that time on, all four judges apply the same rules.\n\n';
+const RULES = ONE_RULEBOOK ? '**One rulebook.** Every panel judgment applies these same rules.\n\n' : '**Note on this run.** It ran before 4 October 2026, 00:33 UTC. The single judge applied the rules above; the three panel judges were given only the three verdict words and graded by their own judgment, without these counting rules. From that time on, all four judges apply the same rules.\n\n';
 // ORDER I (BB-6182, ruling BB-6185 (a)): worked text keyed "reason", not "reasoning" (ODV1-26257, debate_judgments 708), is read under "reason" here and in panelText.
 // A panel verdict whose reasoning carries unescaped quotation marks fails JSON.parse (ODV1-25869 Gemini, BB-5827); its six fields, in their fixed order with the reasoning last, are then read by position.
 const looseVerdict = s => { const m = String(s).match(/^\{\s*"verdict_tag"\s*:\s*"(\w+)"\s*,\s*"defense_standing"\s*:\s*"([^"]*)"\s*,\s*"challenge_standing"\s*:\s*"([^"]*)"\s*,\s*"conceded_links"\s*:\s*(\d+|null)\s*,\s*"challenger_conceded_links"\s*:\s*(\d+|null)\s*,\s*"reason(?:ing)?"\s*:\s*"([\s\S]*)"\s*\}$/); if (!m) return null; const num = x => x === 'null' ? null : +x; return { verdict_tag: m[1], defense_standing: m[2], challenge_standing: m[3], conceded_links: num(m[4]), challenger_conceded_links: num(m[5]), reasoning: m[6].replace(/\\(n|t|"|\\)/g, (q, c) => c === 'n' ? '\n' : c === 't' ? '\t' : c) }; };
@@ -60,7 +60,7 @@ const panelText = raw => { let o = null; const a = String(raw || '').indexOf('{'
 let t = '# TRUTH App Debate\n\n';
 // Panel failure notice and run time (operator order 2026-10-08, Worker_A3 thread).
 let PF = null; try { if ($('Panel Failure Note').isExecuted) PF = $('Panel Failure Note').first().json; } catch (e) { PF = null; }
-if (PF) t += '> **RUN INCOMPLETE: the panel stage failed.** It stopped at node "' + PF.failed_node + '": ' + PF.failed_msg + '\n>\n> The debate rounds, the synthesis and the single judge below are complete and saved. The panel verdict is missing or partial.\n\n';
+if (PF) t += '> **RUN INCOMPLETE: the panel stage failed.** It stopped at node "' + PF.failed_node + '": ' + PF.failed_msg + '\n>\n> The debate rounds and the synthesis below are complete and saved. The panel verdict is missing or partial.\n\n';
 const ct = x => x.toLocaleString('en-US', { timeZone: 'America/Chicago', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit', timeZoneName: 'short' });
 const runTime = () => { let s = null; try { s = $('Init Seats').first().json.t0; } catch (e) { s = null; } const end = new Date(); if (!s) return '**Run time:** not recorded (the run started before the start time was kept).'; const ms = end - new Date(s); const m = Math.floor(ms / 60000), sec = Math.round((ms % 60000) / 1000); let rg = false; try { rg = $('Init Seats').first().json.regrade === true; } catch (e) { rg = false; } if (rg) return '**Run time:** not kept for the original run. The panel stage failed on that run and was re-judged on ' + ct(new Date(s)) + '; the re-judging took ' + m + ' min ' + sec + ' s.'; return '**Run time:** ' + m + ' min ' + sec + ' s (started ' + ct(new Date(s)) + ', transcript written ' + ct(end) + ').'; };
 t += '**Topic:** ' + r.topic + '\n\n';
@@ -72,14 +72,18 @@ t += '**Judges:**\n\n';
 // own stored text (a CORRECTED RESULT line first), never from framework_verdict, which now carries the panel's verdict.
 const SJV = (() => { const s = String(r.independent_verdict_raw || ''); const c = s.match(/\[AUDIT v21: CORRECTED RESULT -- [^\]]*COUNTED: (HELD|PARTIAL|BROKEN)\b/); if (c) return c[1]; const m = s.replace(/[*_`#>\s]+/g, ' ').trim().match(/^"?\{?[^A-Z]*?\b(HELD|PARTIAL|BROKEN)\b/); return m ? m[1] : null; })();
 t += '- Verdict of the debate: ' + (r.panel_verdict ? '**' + r.panel_verdict + '** (the panel)' : '**UNGRADED** (the panel did not finish)') + VSIDE + '\n';
-J.forEach((j, i) => { t += '- Panel judge ' + (i + 1) + ': ' + nm(j.judge_seat) + ' (' + (j.judge_api_model || '') + '): **' + (j.verdict_tag || '?') + '**' + VSIDE + '\n'; });
+// THE DEBATE FIXED rev 7, DoD 10 (c) (his 1, BB-7504: readers never see the second opinion): each counted seat's verdict with its reason, the
+// sentence of its own RESULT line; a seat not in judged_by says so. The single judge's reading is kept in the stored row only.
+const seatReason = raw => { const m = String(raw || '').replace(/\\n/g, '\n').match(/RESULT[ \t*_]*:[ \t*_]*(?:DEFENDER WINS|CHALLENGER WINS|UNDERDETERMINED)[ \t*_]*(?:--|—|–)[ \t]*([^\n"]+)/); return m ? m[1].replace(/\\"/g, '"').trim() : null; };
+const COUNTED = Array.isArray(r.judged_by) ? r.judged_by : null;
+J.forEach((j, i) => { const why = seatReason(j.verdict_raw); const counted = !COUNTED || COUNTED.includes(j.judge_seat); t += '- Panel judge ' + (i + 1) + ': ' + nm(j.judge_seat) + ' (' + (j.judge_api_model || '') + '): **' + (j.verdict_tag || '?') + '**' + VSIDE + (counted ? '' : ' (not counted)') + (why ? '. Reason: ' + why : '') + '\n'; });
 if (!J.length) t += '- No panel judgments recorded\n';
 t += '- Panel result: **' + (r.panel_verdict || '?') + '**' + (r.panel_split ? ' (' + r.panel_split + ')' : '') + VSIDE + '\n';
-t += '- SECOND OPINION (single judge, not the verdict): ' + SJN + ' (' + (r.judge_model || '') + '): **' + (SJV || '?') + '**' + VSIDE + '\n\n';
+t += '\n';
 // DEBATE RULE VIOLATIONS (BB-6904 e, step 6): one row per report line the cure check stored in a judge's text (single judge:
 // independent_verdict_raw; panel: verdict_raw), read back by its fixed fields. The judge texts above drop these lines (noMarkers).
 // DRV_EFFECT states what the report does to the outcome: the operator's ruling on 6904 (d), option 2 (BB-6965).
-const DRV_EFFECT = 'A panel judge with any violation not cured is not counted in the panel result; if fewer than two panel judges are counted, the result is ungraded and goes to review. The single judge\'s violations are reported here; the single judge does not set the outcome.';
+const DRV_EFFECT = 'A panel judge with any violation not cured is not counted in the panel result; if fewer than two panel judges are counted, the result is ungraded and goes to review.';
 const DRV_RULE = { 'K-B': 'Two kinds of layer (K-B)', 'K-G1': 'Conceded count (K-G1)', 'K-G3': 'Standing (K-G3)', 'K-G4': 'Pressing sentence (K-G4)', 'K-G6': 'Unanswered premise not counted (K-G6)', 'K-G7': 'BROKEN on a premise the count leaves out (K-G7)', 'K-G8': 'Counted premises list differs from the count (K-G8)' };
 const drvCell = x => String(x == null ? '' : x).replace(/\s+/g, ' ').replace(/\|/g, '\\|').trim();
 const drvRead = (who, raw) => { const rows = []; let prose = false;
@@ -88,7 +92,7 @@ const drvRead = (who, raw) => { const rows = []; let prose = false;
     if (/^\[AUDIT v21: DEBATE RULE VIOLATION REPLY -- /.test(l)) prose = true; }
   return { rows, prose }; };
 // A panel seat removed for an uncured violation (drv_removed) keeps its report lines here, labelled removed (BB-7154 finding 1).
-const DRV = [drvRead('Single judge: ' + SJN, r.independent_verdict_raw)].concat(J.map(j => drvRead('Panel judge ' + nm(j.judge_seat), j.verdict_raw))).concat((Array.isArray(r.drv_removed) ? r.drv_removed : []).map(x => drvRead('Panel judge (removed): ' + nm(x.seat), x.verdict_raw)));
+const DRV = J.map(j => drvRead('Panel judge ' + nm(j.judge_seat), j.verdict_raw)).concat((Array.isArray(r.drv_removed) ? r.drv_removed : []).map(x => drvRead('Panel judge (removed): ' + nm(x.seat), x.verdict_raw)));
 const DRVR = [].concat(...DRV.map(x => x.rows));
 // The cure's corrected standing and conceded count, per judge and side, printed beside the stored values in the Result table
 // (BB-7154 finding 2, BB-7157). Only CURED rows correct. From BB-7406 (DoD 5) the stored columns carry the correction too; the judge's
@@ -99,14 +103,15 @@ const COR = {}; DRVR.filter(x => x.RESULT === 'CURED').forEach(x => { const s = 
 const cor = (who, side) => { const c = COR[who + '|' + side]; if (!c) return ''; const p = []; if (c.st) p.push(c.st); if (c.n != null) p.push(c.n + ' conceded'); return ' (corrected by the cure: ' + p.join(', ') + ')'; };
 t += '## Result\n\n| | |\n|---|---|\n';
 t += '| Outcome | ' + (r.outcome || 'not recorded') + ' |\n';
-t += '| Defense standing (single judge) | ' + (r.defense_standing || 'UNGRADED') + ', ' + cnt(r.conceded_links) + cor('Single judge: ' + SJN, 'DEFENDER') + ' |\n';
-t += '| Challenge standing (single judge) | ' + (r.challenge_standing || 'UNGRADED') + ', ' + cnt(r.challenger_conceded_links) + cor('Single judge: ' + SJN, 'CHALLENGER') + ' |\n';
 // Panel standings by seat, and review flags from review_notes (operator-approved 2026-10-13, BB-5678).
 J.forEach(j => { const w = 'Panel judge ' + nm(j.judge_seat); t += '| ' + w + ' | defense ' + (j.defense_standing || 'UNGRADED') + ', ' + cnt(j.conceded_links) + cor(w, 'DEFENDER') + '; challenge ' + (j.challenge_standing || 'UNGRADED') + ', ' + cnt(j.challenger_conceded_links) + cor(w, 'CHALLENGER') + ' |\n'; });
-const RVW = String(r.review_notes || '').match(/\[(?:EXTRACTOR|AUDIT) v\d+[^\]\n]*REVIEW THIS ROW[^\]\n]*\]/g) || [];
-RVW.forEach(x => { t += '| Review flag | ' + x.slice(1, -1).replace(/\|/g, '\\|') + ' |\n'; });
-// Panel judges' review flags (BB-5809 F5): the flag a panel row carries after its JSON.
-J.forEach(j => { (String(j.verdict_raw || '').match(/\[(?:EXTRACTOR|AUDIT) v\d+[^\]\n]*REVIEW THIS ROW[^\]\n]*\]/g) || []).forEach(x => { t += '| Review flag (panel judge ' + nm(j.judge_seat) + ') | ' + x.slice(1, -1).replace(/\|/g, '\\|') + ' |\n'; }); });
+// Panel judges' review flags (BB-5809 F5): the flag a panel row carries after its JSON. A flag whose item that seat's cure REPORT line reads
+// CURED is printed as cured, not for review (THE DEBATE FIXED rev 7, DoD 13). The single judge's flags stay in the row (DoD 10 (c)).
+const flagKey = x => { let m = x.match(/\((K-G\d)\) -- (D\d+ vs C\d+)/); if (m) return m[1] + '|' + m[2].toUpperCase(); m = x.match(/\((K-G3)\) -- (DEFENSE|CHALLENGE) STANDING/); if (m) return 'K-G3|' + (m[2] === 'DEFENSE' ? 'DEFENDER' : 'CHALLENGER') + ' STANDING';
+  m = x.match(/\((K-G6)\) -- ((?:DEFENDER|CHALLENGER) premise \d+)/); if (m) return 'K-G6|' + m[2].toUpperCase(); m = x.match(/\((K-G8)\) -- counted_premises_(defender|challenger)/); if (m) return 'K-G8|' + m[2].toUpperCase() + ' COUNTED PREMISES';
+  m = x.match(/VIOLATION -- (D\d+ vs C\d+) /); if (m) return 'K-B|' + m[1].toUpperCase(); return null; };
+const curedSet = raw => { const c = new Set(); drvRead('', raw).rows.forEach(o => { if (o.RESULT === 'CURED') c.add(String(o.RULE).trim() + '|' + String(o.ITEM).trim().toUpperCase()); }); return c; };
+J.forEach(j => { const cs = curedSet(j.verdict_raw); (String(j.verdict_raw || '').match(/\[(?:EXTRACTOR|AUDIT) v\d+[^\]\n]*REVIEW THIS ROW[^\]\n]*\]/g) || []).filter(x => !/single judge/i.test(x)).forEach(x => { const k = flagKey(x); const cured = k && cs.has(k); t += '| ' + (cured ? 'Cured flag' : 'Review flag') + ' (panel judge ' + nm(j.judge_seat) + ') | ' + (cured ? x.slice(1, -1).replace(/REVIEW THIS ROW\.?/, 'CURED by the seat\'s cure reply; recorded, not for review.') : x.slice(1, -1)).replace(/\|/g, '\\|') + ' |\n'; }); }); // a flag that compares a seat with the single judge (SAME-MODEL DIVERGENCE) stays in the judgment row only (DoD 10 (c))
 t += '| Run | ' + (r.run_token || '') + ', ' + date + ' |\n\n';
 FF.forEach(x => { t += x + '\n\n'; });
 // Citation check against the KJV (item 9): printed from the Quote Report step when it ran.
@@ -150,9 +155,8 @@ const rounds = [['Round 1 - Defender (' + D + ')', r.claude_r1], ['Round 1 - Cha
 rounds.forEach(x => { t += '## ' + x[0] + '\n\n' + (x[1] ? demote(nameGuards(x[1])) : '(not recorded)') + '\n\n---\n\n'; });
 const SP = synthParts(r.synthesis);
 t += '## Synthesis\n\n**Analyst:** ' + SJN + ', gives no verdict\n\n' + (r.synthesis ? synthClean(SP[0]) : '(not recorded)') + '\n\n---\n\n';
-if (SP[1] != null) t += '## Diagnostic\n\n**Analyst:** ' + SJN + ', after the single judge\'s BROKEN second opinion\n\n' + diagClean(SP[1]) + '\n\n---\n\n';
 J.forEach((j, i) => { t += '## Panel judge ' + (i + 1) + ': ' + nm(j.judge_seat) + ' (' + (j.judge_api_model || '') + '): ' + (j.verdict_tag || '?') + VSIDE + '\n\n' + panelText(j.verdict_raw) + '\n\n---\n\n'; });
-t += '## SECOND OPINION (single judge, not the verdict): ' + SJN + ' (' + (r.judge_model || '') + '): ' + (SJV || '?') + VSIDE + '\n\n' + (r.independent_verdict_raw ? demote(nameGuards(noMarkers(r.independent_verdict_raw))) : '(no text recorded)') + '\n\n' + (PF ? '*Debate incomplete: the panel stage failed (see the notice at the top).*' : '*Debate complete.*') + '\n\n' + runTime() + '\n';
+t += (PF ? '*Debate incomplete: the panel stage failed (see the notice at the top).*' : '*Debate complete.*') + '\n\n' + runTime() + '\n';
 // ITEM 8 (BB-7224, shape BB-7234): WHAT THE JUDGES WERE SENT. Each distinct text sent to a judge in this run is printed once, verbatim,
 // under a heading that names every seat and call that received it and gives the md5 of the text (its messages joined in order, UTF-8).
 // Each cure call prints the judge's re-sent answer and the cure request verbatim and names the text it followed. Appended; nothing above moves.
@@ -192,14 +196,14 @@ const SENT_ERR = [];
 const fromNode = (name, f) => { try { const r = f($(name)); if (r == null || (Array.isArray(r) && !r.length)) SENT_ERR.push(name + ': the read returned nothing'); return r; } catch (e) { SENT_ERR.push(name + ': ' + String((e && e.message) || e).slice(0, 300)); return null; } };
 const SENT = (() => {
   const calls = [], cures = [];
-  const sj = fromNode('Build Independent Verdict', x => x.first().json);
-  if (sj && sj.verdictBody) calls.push({ who: 'single judge ' + SJN + ' (' + (sj.judge_model || '') + ')', m: sentMsgs(sj.verdictBody) });
-  const pb = fromNode('Panel Build', x => x.first().json);
+  const pb = fromNode('Panel Build', x => x.first(0).json);
   if (pb && Array.isArray(pb.judges)) pb.judges.forEach((j, i) => calls.push({ who: 'panel judge ' + (i + 1) + ' ' + nm(j.seat) + ' (' + (j.api_model || '') + ')', m: sentMsgs(j.body) }));
-  (fromNode('Reserve Build', x => x.all().map(i => i.json)) || []).forEach(j => { if (j && j.body) calls.push({ who: 'reserve judge ' + nm(j.seat) + ' (' + (j.api_model || '') + ')', m: sentMsgs(j.body) }); });
+  (fromNode('Reserve Build', x => x.all(0).map(i => i.json)) || []).forEach(j => { if (j && j.body) calls.push({ who: 'reserve judge ' + nm(j.seat) + ' (' + (j.api_model || '') + ')', m: sentMsgs(j.body) }); });
   (fromNode('Alternate Build', x => x.all().map(i => i.json.alt)) || []).forEach(a => { if (a && a.body && !a.skip) calls.push({ who: 'alternate judge ' + nm(a.pool_seat || a.seat) + ' (' + (a.api_model || '') + ') seated for ' + nm(a.removed_seat), m: sentMsgs(a.body) }); });
-  ['Cure Build', 'Panel Cure Build 1', 'Panel Cure Build 2', 'Panel Cure Build 3', 'Alternate Cure Build'].forEach(n => {
-    (fromNode(n, x => x.all().map(i => i.json.cure)) || []).forEach(c => { if (c && c.body && !c.skip) cures.push({ who: 'Cure call, ' + (c.who === 'single' ? 'single judge ' + SJN : (c.who === 'alternate' ? 'alternate ' : '') + nm(c.seat)) + ' (' + (c.model || '') + ')', m: sentMsgs(c.body) }); });
+  // Each cure call's reply, read from the Normalize node that follows its build (THE DEBATE FIXED rev 7, DoD 13), matched by caller and seat.
+  const REPLY = {}; ['Panel Cure Normalize 1', 'Panel Cure Normalize 2', 'Panel Cure Normalize 3', 'Alternate Cure Normalize'].forEach(n => { try { if (!$(n).isExecuted) return; $(n).all().forEach(i => { const c = i.json && i.json.cure; if (c && c.seat) REPLY[(c.who || '') + '|' + c.seat] = i.json.reply || null; }); } catch (e) { } });
+  ['Panel Cure Build 1', 'Panel Cure Build 2', 'Panel Cure Build 3', 'Alternate Cure Build'].forEach(n => {
+    (fromNode(n, x => x.all().map(i => i.json.cure)) || []).forEach(c => { if (c && c.body && !c.skip) cures.push({ who: 'Cure call, ' + (c.who === 'alternate' ? 'alternate ' : '') + nm(c.seat) + ' (' + (c.model || '') + ')', m: sentMsgs(c.body), reply: REPLY[(c.who || '') + '|' + c.seat] }); });
   });
   return { calls, cures };
 })();
@@ -217,6 +221,7 @@ SENT.cures.forEach(c => {
   s8 += '### ' + c.who + '\n\n';
   if (g) s8 += 'Followed the ' + g.h + ' text above (Text ' + (SG.indexOf(g) + 1) + '), then:\n\n' + sentBlock(c.m.slice(k));
   else s8 += 'md5 ' + MD5(c.m.map(x => x.text).join('')) + '; its opening matches no text above, so the whole call is printed:\n\n' + sentBlock(c.m);
+  s8 += (c.reply && c.reply.ok && typeof c.reply.text === 'string') ? '**reply to the cure request** (' + c.reply.text.length + ' characters)\n\n' + sentFence(c.reply.text) + '\n\n' : '*No reply was read: ' + ((c.reply && c.reply.why) || 'the reply was not found') + '.*\n\n';
 });
 t += '\n---\n\n' + s8;
 const fileName = (PF ? 'INCOMPLETE - ' : '') + 'Debate [' + D + ' v ' + C + '] - ' + r.topic + ' - ' + date + '.md';

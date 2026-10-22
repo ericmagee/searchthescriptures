@@ -1,0 +1,177 @@
+F10/F13 RUN (Worker_E). h_fm.cjs on 27795 stored inputs; chk_f10.py; cmp_fm.py new vs base; constructed f13_ov.json.
+base 2 / 9
+   FAIL F10.1 no SECOND OPINION
+   FAIL F10.1 no "single judge" above s8
+   FAIL F10.2 no Diagnostic section
+   FAIL F10.3 no Single judge rows
+   PASS F10.4 s8 no single-judge text
+   FAIL F10.5 reasons on 3 seats
+   FAIL F13a.1 panel texts printed
+   FAIL F13a.2 no Panel Build read error
+   PASS Debate complete line
+new 9 / 9
+   PASS F10.1 no SECOND OPINION
+   PASS F10.1 no "single judge" above s8
+   PASS F10.2 no Diagnostic section
+   PASS F10.3 no Single judge rows
+   PASS F10.4 s8 no single-judge text
+   PASS F10.5 reasons on 3 seats
+   PASS F13a.1 panel texts printed
+   PASS F13a.2 no Panel Build read error
+   PASS Debate complete line
+
+F10.6 / F13c.4: full difference above section 8, new vs base:
+diff lines above section 8: 143
+-- Panel judge 1: DeepSeek (deepseek-flash): **HELD** (a grade of the defender's chain: MiMo, arguing the record's reading)
+-- Panel judge 2: Grok (grok-4.7): **HELD** (a grade of the defender's chain: MiMo, arguing the record's reading)
+-- Panel judge 3: GLM (z-ai/glm-5.3): **HELD** (a grade of the defender's chain: MiMo, arguing the record's reading)
++- Panel judge 1: DeepSeek (deepseek-flash): **HELD** (a grade of the defender's chain: MiMo, arguing the record's reading). Reason: both chains are built with layer footing and each side answered the other's pressed tex
++- Panel judge 2: Grok (grok-4.7): **HELD** (a grade of the defender's chain: MiMo, arguing the record's reading). Reason: The named-father chain was not refuted or given up, and the other side left a pressed point witho
++- Panel judge 3: GLM (z-ai/glm-5.3): **HELD** (a grade of the defender's chain: MiMo, arguing the record's reading). Reason: under the rulebook the defender's declared chain was neither withdrawn nor broken, and the cha
+-- SECOND OPINION (single judge, not the verdict): DeepSeek (deepseek-flash): **BROKEN** (a grade of the defender's chain: MiMo, arguing the record's reading)
+-| Defense standing (single judge) | PROP-DEPENDENT, 0 links conceded (corrected by the cure: PROP-DEPENDENT, 2 conceded) |
+-| Challenge standing (single judge) | SELF-SUPPORTED, 0 links conceded |
+-| Review flag | AUDIT v21: DEBATE RULE VIOLATION (K-G4) -- D3 vs C3 DEFENDER LINK BROKEN counts a witness as unanswered; the rule counts it only with the quoted pressing sentence and its round. REVIEW THIS ROW. |
+-| Review flag | AUDIT v21: DEBATE RULE VIOLATION (K-G1) -- D4 vs C3 DEFENDER LINK BROKEN rests on a witness left unanswered while CONCEDED LINKS is 0. REVIEW THIS ROW. |
+-| Review flag | AUDIT v21: DEBATE RULE VIOLATION (K-G4) -- D6 vs C3 DEFENDER LINK BROKEN counts a witness as unanswered; the rule counts it only with the quoted pressing sentence and its round. REVIEW THIS ROW. |
+-| Review flag | AUDIT v21: DEBATE RULE VIOLATION (K-G7) -- D3 vs C3 DEFENDER LINK BROKEN while CONCEDED LINKS is 0. REVIEW THIS ROW. |
+-| Review flag | AUDIT v21: DEBATE RULE VIOLATION (K-G7) -- D6 vs C3 DEFENDER LINK BROKEN while CONCEDED LINKS is 0. REVIEW THIS ROW. |
+-| Review flag (panel judge DeepSeek) | AUDIT v1: SAME-MODEL DIVERGENCE -- seat deepseek and the single judge both ran deepseek-flash; seat vs single judge: defense standing SELF-SUPPORTED vs PROP-DEPENDENT. Counts only;
+-Every quotation given with a verse reference was checked against the KJV text: 224 checked, 204 match the verse cited, 3 do not, 17 too short to check.
++Every quotation given with a verse reference was checked against the KJV text: 222 checked, 204 match the verse cited, 1 does not, 17 too short to check.
+-- Defender, round 3: cited Luke 1:35 for "dio kai  is a causal connective": this wording is not in Luke.
+-- Defender, round 3: cited Acts 13:33 for "raised up Jesus again  'again' is a supplied word": this wording is not in Acts.
+-**Effect on the verdict.** A panel judge with any violation not cured is not counted in the panel result; if fewer than two panel judges are counted, the result is ungraded and goes to review. The single judge's violati
+-
+-10 violations: 8 cured, 2 not cured.
++**Effect on the verdict.** A panel judge with any violation not cured is not counted in the panel result; if fewer than two panel judges are counted, the result is ungraded and goes to review.
++
++5 violations: 4 cured, 1 not cured.
+-| Single judge: DeepSeek | D3 vs C3 | Pressing sentence (K-G4) | **CURED** | D3 vs C3 (Matthew 1:20): DEFENDER LINK BROKEN -- (L1) “that which is conceived in her is of the Holy Ghost”; (L2) gennēthen (G1080, “begotten/
+-| Single judge: DeepSeek | D4 vs C3 | Conceded count (K-G1) | **UNCURED** | D4 vs C3 (Matthew 1:18, 25): DEFENDER LINK BROKEN -- (L1) “before they came together, she was found with child” and “knew her not till she had 
+-| Single judge: DeepSeek | D6 vs C3 | Pressing sentence (K-G4) | **CURED** | D6 vs C3 (Matthew 1:18-20): DEFENDER LINK BROKEN -- (L1) “before they came together, she was found with child of the Holy Ghost” and “that whi
+-| Single judge: DeepSeek | D3 vs C3 | BROKEN on a premise the count leaves out (K-G7) | **CURED** | D3 vs C3 (Matthew 1:20): DEFENDER LINK BROKEN -- (L1) “that which is conceived in her is of the Holy Ghost”; (L2) gennē
+-| Single judge: DeepSeek | D6 vs C3 | BROKEN on a premise the count leaves out (K-G7) | **CURED** | D6 vs C3 (Matthew 1:18-20): DEFENDER LINK BROKEN -- (L1) “before they came together, she was found with child of the Ho
+-**One rulebook.** All four judgments (the three panel judges and the single judge) apply these same rules.
++**One rulebook.** Every panel judgment applies these same rules.
+-
+-
+-## Diagnostic
+-
+-**Analyst:** DeepSeek, after the single judge's BROKEN second opinion
+-
+-#### DECLARATION BEFORE COMPOSITION ("PRE-EMPTIVE OVERRIDE DECLARATION" (DG-68))
+-
+-The collision is named out loud before the diagnostic, because it sits under every line below. **Training holds the pious default: a Spirit-conception means no human father, and that reading is reverent. The record's gu
+-
+-Also declared: **"Hellēnistai vs Hellēnas" (DG-5) did not fire** — no Hellēnistai/Hellēnas material appears in this transcript, so the spine is standing and the dependent guards were evaluated on a live spine rather tha
+-
+-
+-#### 1. LAYER BREAK
+-
+-**Primary break — [L4] asserted with no [L1] stating sentence, and asserted asymmetrically.** The challenger's load-bearing step is *"The canon gives the cause that excludes one"* [DR2]. That is [L4]: the rows name a ca
+-
+-**Secondary break — and the one that actually lost the round: articulation, not evidence.** D3 vs C3 broke because the defender's answer in [CR3] addressed the *ek* + *gennēthen* pairing as a canon-wide idiom (John 1:13
+-
+-**Procedural flags that go to the count, not the argument:**
+-- **D4 vs C3 carries an UNCURED K-G1 flag** — the pressing sentence and its round were not quoted, so the break rests on a witness the defender did address in [CR3] (it named 1:18 and 1:25 and argued "no verdict"). Of t
+-- **CHALLENGE STANDING reads L=6 c=0 while premise 6 is recorded as CONCEDED-BY-ITS-OWN-SIDE** [DR3, LINK 6: *"I do not assert that the text states Mary's genealogy, and I rest nothing on that"*]. A premise whose affirm
+-
+-
+-#### 2. STRONGEST ARGUMENT
+-
+-**In the debate as it stands, the strongest single move is the challenger's "for" argument — and it is unanswered anywhere in the transcript.** [L1] Matthew 1:19: Joseph "was minded to put her away privily." [L1] Matthe
+-
+-**Runner-up, structural:** [L1] Matthew 1:18 "before they came together" + 1:25 "knew her not **till**" with [L2] *heōs hou*. The defender **granted the bound in terms** [CR3, LINK 4]. [L4] Conception precedes birth; th
+-
+-**On the defender's side, the strongest and unanswered argument:** the seed rows, and their carrier. [L1] Romans 1:3 "made of the seed of David **according to the flesh**"; 2 Samuel 7:12 "proceed out of thy bowels"; Psa
+-
+-
+-#### 3. TEXT OR ARTICULATION?
+-
+-**Decisive links: articulation. Consequence: real text-pressure. Outcome: earned, but narrower than the challenger argued.**
+-
+-- **Articulation** [L4 on the round's own record]: D3 broke on an answer that answered a different question; question 3 was never answered; the D4 break carries an uncured procedural flag. The defense lost by failing to
+-- **Text-pressure** [L1]: the rows the challenger holds are not inference — Matthew 1:18, 1:20, 1:25, Luke 1:34-35 stand as written, and the defender conceded the marital sense of *ginōskō*, the "till" bound, and the *d
+-- **Width matters** [L4]: the RESULT line is *"the record does not make Joseph the biological father"* — an **absence** claim. The challenger's C5 was a **positive** claim: *"Davidic descent through Mary needs no Joseph
+-
+-
+-#### 4. DRIFT GUARD CANDIDATE
+-
+-**"Biological Father: Joseph Named, the Davidic Seed Honored Through the Named Line" (DG-8) [CRITICAL] — FIRES, challenger's seat, direction (a).** The forbidden list is explicit: *"no human father," "no biological fath
+-
+-**"Biological Father: Joseph Named, the Davidic Seed Honored Through the Named Line" (DG-8), direction (b) — FIRES, minor.** [DR2 §4] *"the conception fell inside the bound"* is a *when* claim about the begetting. The d
+-
+-**"Son of God = Davidic Covenant Title" (DG-18) [CRITICAL] — movement, not violation.** The defender quoted Psalm 2:7 with all three NT occasions and *monogenēs* with Hebrews 11:17's Isaac — both floor-measure rule addi
+-
+-**"No single verse is required" (DG-61) [HIGH] — FIRES, challenger's seat, method.** Q1 *"Which verse says 'Joseph begat Jesus'?"* is the retired single-stating-verse demand. The defender answered it in chain form rathe
+-
+-**"A purged genealogy construct" (DG-56) [CRITICAL] — candidate, contained.** [DR2 §3] *"Luke's second line runs through Nathan... not through Jechonias"* supplies a register identification for the throne claim that the
+-
+-**"Scripture never corrects Scripture" (DG-59) [CRITICAL] — did not fire.** No verse was set against verse. The seed rows were **orphaned**, not contradicted. The Salathiel divergence was held open by both seats.
+-
+-
+-#### 5. TENSION CANDIDATE
+-
+-**New, and it belongs on the wall as a standing cliff — not to be closed by either side:**
+-
+-**T-1. The scope of *ek pneumatos hagiou* at Matthew 1:18, 20.** [L1] *"she was found with child of the Holy Ghost"*; *"that which is conceived in her is of the Holy Ghost."* Two competing glosses, **both [L4]**, no [L1
+-
+-**T-2. The unnamed nearest link in the "according to the flesh" rows.** [L1] names David, Judah, bowels, loins, body. [L1] names no man at the nearest link. [L4] The defender's answer — the idiom "spans by including eac
+-
+-**T-3. Salathiel (already open, Matt 1:12 / Luke 3:27).** Touched again in [DR2 §3] and [CR3, LINK 2]; neither seat resolved it; no construct was applied. **Stays open exactly as the record leaves it.**
+-
+-
+-#### 6. NEXT ACTION
+-
+-1. **Log the verdict as rendered** — BROKEN, D3 / D4 / D6, with **D4's UNCURED K-G1 flag recorded on the row itself**, not in a note ["Substance lives in SQL" (DG-42)]. The break on D3 and D6 stands on [L1] Matthew 1:18
+-2. **Log the width correction** — the RESULT line ("the record does not make Joseph the biological father") is the defensible form; the challenger's C5 ("Davidic descent through Mary needs no Joseph-seed") was withdrawn
+-3. **File T-1 and T-2 on the tensions wall** with both glosses and both [L4] labels. **Do not close either.** A tension that names a gap is not an instruction to fill it ["A finding that names the fence is not permissio
+-4. **Do not supply Mary's genealogy** to close the Romans 1:3 gap. It was not asserted by the challenger, is not established in the record, and any reconstruction is barred ["A purged genealogy construct" (DG-56)].
+-5. **Operator ruling required on the guard "Biological Father: Joseph Named, the Davidic Seed Honored Through the Named Line" (DG-8) collision.** Present the two sentences side by side and stop: "Biological Father: Jose
+-6. **Rebuild task named, not performed here:** the record's reading needs an [L1]/[L2] answer to the object **"in her"** — an answer that is not the canon-wide *ek* register argument, and that does not narrate the how i
+-7. **Review the challenge count** — premise 6 entered L=6 after its affirmative leg was withdrawn in [DR3]. Whether narrowing-to-a-conditional counts as supported is a counting question, and it should be settled before 
+-## SECOND OPINION (single judge, not the verdict): DeepSeek (deepseek-flash): BROKEN (a grade of the defender's chain: MiMo, arguing the record's reading)
+-
+-BROKEN. The quiet-row link D4 is contradicted by [L1] “before they came together, she was found with child” (Matthew 1:18) and “knew her not till she had brought forth her firstborn son” (Matthew 1:25), read with [L2] h
+-RESULT: CHALLENGER WINS -- The child was conceived before Joseph came together with Mary and is said to be of the Holy Ghost, so the record does not make Joseph the biological father.
+-Rule applied: BROKEN, because the challenger refuted at least one of the defender's declared links from the text. The defender declared 6 links, withdrew 0, and the challenger refuted 3.
+-KEYSTONE: D6 -- BROKEN -- the last declared link, that Christ had a biological father, Joseph, is broken by the conception being of the Holy Ghost in Matthew 1:18-20.
+-DEFENSE STANDING: PROP-DEPENDENT -- L=6 c=0 -- the defender exhibited footing for all six challenged premises in [CR3], but D3, D4 and D6 are broken at collision, which bars SELF-SUPPORTED without reaching 2c>L; citatio
+-CONCEDED LINKS: 0 -- counted: none; spared: premise 1 (LINK 1), premise 2 (LINK 1), premise 3 (LINK 2), premise 4 (LINK 3), premise 5 (LINK 4), premise 6 (LINK 5), each SUPPORTED in [CR3].
+-CHALLENGE STANDING: SELF-SUPPORTED -- L=6 c=0 -- every defender-listed premise is answered in [DR3] with at least two lower layers, and no challenger link is graded broken.
+-CHALLENGER CONCEDED LINKS: 0 -- counted: none; spared: premise 1 ([DR3] LINK 1), premise 2 ([DR3] LINK 2), premise 3 ([DR3] LINK 3), premise 4 ([DR3] LINK 4), premise 5 ([DR3] LINK 5), premise 6 ([DR3] LINK 6), each SUP
+-COLLISION POINTS:
+-D1: STANDS
+-D2: STANDS
+-D3 vs C3 (Matthew 1:20): DEFENDER LINK BROKEN -- [L1] “that which is conceived in her is of the Holy Ghost”; [L2] gennēthen (G1080, “begotten/conceived”) with ek pneumatos hagiou (“of the Holy Ghost”); [L3] Luke 1:35’s 
+-D3 vs C4 (Luke 1:35): UNDERDETERMINED -- the same row also uses a “shall be called” designation, so it does not alone settle whether “Son of God” is paternity language.
+-D4 vs C3 (Matthew 1:18, 25): DEFENDER LINK BROKEN -- [L1] “before they came together, she was found with child” and “knew her not till she had brought forth her firstborn son”; [L2] heōs hou (G2193 + G3739, “until which
+-D4 vs C4 (Luke 1:34): UNDERDETERMINED -- “I know not a man” is a present-state statement, but read with the Matthew bound it supports C3 rather than adding an independent break.
+-D5 vs C4 (Luke 1:35): UNDERDETERMINED -- “shall be called the Son of God” is a designation, and the title’s covenant use on Solomon leaves the paternity point open.
+-D6 vs C3 (Matthew 1:18-20): DEFENDER LINK BROKEN -- [L1] “before they came together, she was found with child of the Holy Ghost” and “that which is conceived in her is of the Holy Ghost”; [L2] gennēthen (G1080, “begotte
+-D6 vs C4 (Luke 1:35): UNDERDETERMINED -- C4 independently supports the no-man source but is not needed for the break already taken on C3.
+-OUT-OF-ROUND CONCESSIONS
+-DEFENDER | [CR1] | The text equally forbids narrating the how: no verse states the mechanics of the conception, and Matthew 1:18, 1:25 and Luke 1:34 stand exactly as written, beside the father the mother names (Luke 2:4
+-CHALLENGER | [DR1] | Joseph is called "husband" (Matthew 1:16), "father" in the household sense (Luke 2:48), "son of David" (Matthew 1:20), and he names the child (1:25). All of that stands as legal and household father
+-CHALLENGER | [DR1] | The defender catalogues episkiazō (G1982, "overshadow") as presence-and-power. I accept that.
+-DEFENDER CHAIN MARK: FOOTED -- D4 is the load-bearing quiet-rows link and is footed on Matthew 1:18/25 with heōs hou and ginōskō, though it is broken at collision.
+-CHALLENGER CHAIN MARK: FOOTED -- C3 is the load-bearing conception-source link and exhibits Matthew 1:18-20 with gennēthen and ek pneumatos hagiou.
+-
+-**Run time:** 85 min 46 s (started Oct 21, 11:27 PM CDT, transcript written Oct 22, 12:53 AM CDT).
+-
+-
++**Run time:** 86 min 27 s (started Oct 21, 11:27 PM CDT, transcript written Oct 22, 12:53 AM CDT).
++
++---
++
+
+F13b, F13c.3 constructed:
+== base11 replies printed: 0
+| Review flag (panel judge DeepSeek) | AUDIT v21: DEBATE RULE VIOLATION (K-G4) -- D3 vs C3
+| Review flag (panel judge DeepSeek) | AUDIT v21: DEBATE RULE VIOLATION (K-G1) -- D4 vs C3
+== new11 replies printed: 1
+| Cured flag (panel judge DeepSeek) | AUDIT v21: DEBATE RULE VIOLATION (K-G4) -- D3 vs C3
+| Review flag (panel judge DeepSeek) | AUDIT v21: DEBATE RULE VIOLATION (K-G1) -- D4 vs C3
+
+RECORDED: F13c.3 declared the SAME-MODEL DIVERGENCE flag stays on the report; it compares a seat with the single judge, so under DoD 10 (c) (his 1, 7504) it stays in the judgment row only. F13c.1 is superseded by F10 (the single judge's flags are on the row only).
