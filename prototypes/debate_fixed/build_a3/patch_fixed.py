@@ -51,7 +51,10 @@ LIB = [
   r'''// THE DEBATE FIXED (BB-7397, DoD 5, BB-7406): a cure's CORRECTED STANDING and CORRECTED COUNT for a side with a CURED count or standing item
 // (K-G1, K-G3, K-G6) are written to the row's columns; the original is kept in the judge's text by an AUDIT line.
 function cureSet(reply,v){const o=cureLines(reply&&reply.ok?reply.text:'');const out={};
- for(const side of ['DEFENDER','CHALLENGER']){if(!(v||[]).some(x=>x.status==='CURED'&&x.side===side&&(x.rule==='K-G1'||x.rule==='K-G3'||x.rule==='K-G6')))continue;
+ // BB-7417 defect 3: a side is written only when every count or standing item of that side is CURED, and not when each is a K-G6
+ // statement cure (no count was checked).
+ for(const side of ['DEFENDER','CHALLENGER']){const ks=(v||[]).filter(x=>x.side===side&&(x.rule==='K-G1'||x.rule==='K-G3'||x.rule==='K-G6'));
+  if(!ks.length||ks.some(x=>x.status!=='CURED')||ks.every(x=>x.rule==='K-G6'&&/^statement/.test(String(x.why||''))))continue;
   const ns=[...new Set(o.count.filter(c=>c.side===side).map(c=>c.n))];const sv=[...new Set(o.standing.filter(s=>s.side===side).map(s=>s.st))];
   if(ns.length===1||sv.length===1)out[side]={n:ns.length===1?ns[0]:null,st:sv.length===1?sv[0]:null};}
  return Object.keys(out).length?out:null;}
@@ -96,10 +99,22 @@ function drvLedger(text,ptext,dConc,cConc,dStand,cStand){const items=[],marks=[]
  const prem=s=>s.split('\n').map(l=>l.trim()).filter(l=>/^premise \d+/.test(l));const LG={DEFENDER:prem(ptext.slice(i,j)),CHALLENGER:prem(ptext.slice(j,k))};
  const T=text.replace(/[*_`]+/g,'');
  const countLine=side=>{const m=T.match(side==='DEFENDER'?/^[ \t>#-]*CONCEDED LINKS[ \t]*:.*$/im:/^[ \t>#-]*CHALLENGER CONCEDED LINKS[ \t]*:.*$/im);return m?m[0]:null;};
- const counted=(line,ids)=>ids.some(id=>new RegExp('\\b(?:'+id+')\\b[^;.]{0,40}?\\b(?:UNEXHIBITED|CONCEDED)\\b','i').test(line));
- for(const side of ['DEFENDER','CHALLENGER']){const cl=countLine(side);if(cl===null)continue;
+ // The count line's own clauses (BB-7417 defects 1-2): a premise or LINK number is counted when the CONCEDED or UNEXHIBITED word that
+ // governs it is not negated. The governing word is the one in the number's own comma part, else the nearest in the clause; lists
+ // ("premises 1 and 3", "1, 3") and ranges ("1-3") count every member; "not conceded" counts nothing; "no ... or UNEXHIBITED" counts nothing.
+ const countedSet=line=>{const P=new Set(),K=new Set();const NEG=/\b(?:not|no|never|none|neither|nor)\b/gi;
+  for(const cl of String(line).replace(/^[^:]*:/,'').split(/[;.](?=\s|$)/)){
+   const W=[...cl.matchAll(/\b(?:UNEXHIBITED|CONCEDED)\b/gi)].map(w=>{const pre=cl.slice(0,w.index);const ns=[...pre.matchAll(NEG)];const g=ns.length?ns[ns.length-1].index:-1;
+    return {at:w.index,end:w.index+w[0].length,neg:g>=0&&!/\b(?:and|but|so|thus|therefore|hence)\b/i.test(pre.slice(g))};});
+   if(!W.length)continue;const cuts=[0];for(const c of cl.matchAll(/,/g))cuts.push(c.index);cuts.push(cl.length);const part=i=>cuts.findIndex((c,k)=>k<cuts.length-1&&i>=c&&i<cuts[k+1]);
+   for(const m of cl.matchAll(/\b(premises?|links?)\s*((?:\d+(?:\s*(?:-|–|to)\s*\d+)?(?:\s*(?:,|and|&)\s*(?=\d))?)+)/gi)){
+    const own=W.filter(w=>part(w.at)===part(m.index));const gap=w=>w.at>=m.index+m[0].length?w.at-(m.index+m[0].length):Math.abs(m.index-w.end);
+    const gw=(own.length?own:W).reduce((x,y)=>gap(y)<gap(x)?y:x);if(gw.neg)continue;const T=/^link/i.test(m[1])?K:P;
+    for(const q of m[2].split(/\s*(?:,|and|&)\s*/)){const r=q.match(/(\d+)\s*(?:-|–|to)\s*(\d+)/);if(r){for(let z=+r[1];z<=+r[2]&&z-+r[1]<50;z++)T.add(z);}else if(/\d/.test(q))T.add(+q.match(/\d+/)[0]);}}}
+  return {P,K};};
+ for(const side of ['DEFENDER','CHALLENGER']){const cl=countLine(side);if(cl===null)continue;const CS=countedSet(cl);
   for(const l of LG[side]){const m=l.match(/^premise (\d+)(?: \(LINK (\d+)\))?: .*NOT NAMED: (.+)$/);if(!m||/^none\s*$/i.test(m[3]))continue;
-   const ids=['premises?\\s*'+m[1]].concat(m[2]?['link\\s*'+m[2]]:['link\\s*'+m[1]]);if(counted(cl,ids))continue;
+   if(CS.P.has(+m[1])||CS.K.has(+(m[2]||m[1])))continue;
    const id=side+' premise '+m[1];
    items.push({rule:'K-G6',side,link:id,line:l,conc:side==='DEFENDER'?dConc:cConc,st:side==='DEFENDER'?dStand:cStand,L:LG[side].length});
    marks.push('[AUDIT v21: DEBATE RULE VIOLATION (K-G6) -- '+id+(m[2]?' (LINK '+m[2]+')':'')+': the PRESSED-WITNESS LEDGER marks '+m[3].trim()+' NOT NAMED and '+(side==='DEFENDER'?'CONCEDED LINKS':'CHALLENGER CONCEDED LINKS')+' does not count it. REVIEW THIS ROW.]');}}

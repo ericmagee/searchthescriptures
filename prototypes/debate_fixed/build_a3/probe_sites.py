@@ -23,7 +23,8 @@ def run(cmd, cwd):
 
 def suite(d):
     w = tempfile.mkdtemp(dir=os.path.dirname(d)); shutil.copy(os.path.join(HERE, 'row27665.json'), w)
-    for h in ('h_f3a.cjs', 'h_cure.cjs', 'h_fm.cjs', 'h_ask.cjs', 'h_site.cjs', 'h_fm6.cjs'): shutil.copy(os.path.join(HERE, h), w)
+    for h in ('h_f3a.cjs', 'h_cure.cjs', 'h_fm.cjs', 'h_ask.cjs', 'h_site.cjs', 'h_fm6.cjs', 'h_count.cjs'): shutil.copy(os.path.join(HERE, h), w)
+    shutil.copy(os.path.join(HERE, 'derive_new.sql'), os.path.dirname(d))  # h_count reads <dir>/../derive_new.sql
     os.symlink(d, os.path.join(w, 'P'))
     out = []
     for n in ('Panel_Payloads', 'Alternate_Payloads', 'Extract_Independent_Verdict'):
@@ -35,6 +36,7 @@ def suite(d):
     out.append('ASK\n' + run('node h_ask.cjs P', w))
     out.append('SITE\n' + run('node h_site.cjs P %s' % REP, w))
     out.append('FM6\n' + run('node h_fm6.cjs P/Format_Markdown.js panel', w))
+    out.append('COUNT\n' + run('node h_count.cjs P', w))
     # text outputs: the strings each node sends, counted per node (the request text is the node's output to the model)
     cnt = {}
     for f in sorted(os.listdir(d)):

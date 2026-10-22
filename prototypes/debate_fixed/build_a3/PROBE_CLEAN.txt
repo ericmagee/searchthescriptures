@@ -66,4 +66,19 @@ Alternate_Merge columns: PROP-DEPENDENT,1 | PROP-DEPENDENT,1 | seated 1
 FM6
 P/Format_Markdown.js panel | keys fileName,md,chars,judges,run_token
    | Single judge: DeepSeek | DEFENDER premise 1 | Unanswered premise not counted (K-G6) | **UNCURED** |  | Not cured: probe. | none written |
+COUNT
+A PASS got: none | expected: none
+B PASS got: none | expected: none
+C PASS got: premise 1, premise 3 | expected: premise 1, premise 3
+D PASS got: premise 1, premise 3 | expected: premise 1, premise 3
+E PASS got: premise 3 | expected: premise 3
+F PASS got: premise 1 | expected: premise 1
+G PASS got: none | expected: none
+H PASS got: none | expected: none
+I PASS got: not written | expected: not written
+J PASS got: 2 PROP-DEPENDENT | expected: 2 PROP-DEPENDENT
+K PASS got: not written | expected: not written
+L PASS got: null PROP-DEPENDENT | expected: null PROP-DEPENDENT
+4 PASS "inserts the single judge's tag" occurs 0
+FAILS 0
 TEXT {"Alternate_Build.js K-G6 rule text": 1, "Alternate_Build.js K-G6 statement text": 1, "Alternate_Cure_Build.js K-G6 rule text": 1, "Alternate_Cure_Build.js K-G6 statement text": 1, "Alternate_Cure_Normalize.js K-G6 rule text": 1, "Alternate_Cure_Normalize.js K-G6 statement text": 1, "Alternate_Merge.js K-G6 rule text": 1, "Alternate_Merge.js K-G6 statement text": 1, "Build_Independent_Verdict.js plain sentence": 1, "Build_Save_Body framework_verdict:null": 1, "Cure_Build.js K-G6 rule text": 1, "Cure_Build.js K-G6 statement text": 1, "Cure_Check.js K-G6 rule text": 1, "Cure_Check.js K-G6 statement text": 1, "Cure_Normalize.js K-G6 rule text": 1, "Cure_Normalize.js K-G6 statement text": 1, "Init_with_Guards.js plain sentence": 2, "Panel_Build.js plain sentence": 1, "Panel_Cure_Build_1.js K-G6 rule text": 1, "Panel_Cure_Build_1.js K-G6 statement text": 1, "Panel_Cure_Build_2.js K-G6 rule text": 1, "Panel_Cure_Build_2.js K-G6 statement text": 1, "Panel_Cure_Build_3.js K-G6 rule text": 1, "Panel_Cure_Build_3.js K-G6 statement text": 1, "Panel_Cure_Check.js K-G6 rule text": 1, "Panel_Cure_Check.js K-G6 statement text": 1, "Panel_Cure_Normalize_1.js K-G6 rule text": 1, "Panel_Cure_Normalize_1.js K-G6 statement text": 1, "Panel_Cure_Normalize_2.js K-G6 rule text": 1, "Panel_Cure_Normalize_2.js K-G6 statement text": 1, "Panel_Cure_Normalize_3.js K-G6 rule text": 1, "Panel_Cure_Normalize_3.js K-G6 statement text": 1}

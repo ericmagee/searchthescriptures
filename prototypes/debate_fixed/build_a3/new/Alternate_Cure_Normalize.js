@@ -248,7 +248,10 @@ function cureCorrected(reply,v){const o=cureLines(reply&&reply.ok?reply.text:'')
 // THE DEBATE FIXED (BB-7397, DoD 5, BB-7406): a cure's CORRECTED STANDING and CORRECTED COUNT for a side with a CURED count or standing item
 // (K-G1, K-G3, K-G6) are written to the row's columns; the original is kept in the judge's text by an AUDIT line.
 function cureSet(reply,v){const o=cureLines(reply&&reply.ok?reply.text:'');const out={};
- for(const side of ['DEFENDER','CHALLENGER']){if(!(v||[]).some(x=>x.status==='CURED'&&x.side===side&&(x.rule==='K-G1'||x.rule==='K-G3'||x.rule==='K-G6')))continue;
+ // BB-7417 defect 3: a side is written only when every count or standing item of that side is CURED, and not when each is a K-G6
+ // statement cure (no count was checked).
+ for(const side of ['DEFENDER','CHALLENGER']){const ks=(v||[]).filter(x=>x.side===side&&(x.rule==='K-G1'||x.rule==='K-G3'||x.rule==='K-G6'));
+  if(!ks.length||ks.some(x=>x.status!=='CURED')||ks.every(x=>x.rule==='K-G6'&&/^statement/.test(String(x.why||''))))continue;
   const ns=[...new Set(o.count.filter(c=>c.side===side).map(c=>c.n))];const sv=[...new Set(o.standing.filter(s=>s.side===side).map(s=>s.st))];
   if(ns.length===1||sv.length===1)out[side]={n:ns.length===1?ns[0]:null,st:sv.length===1?sv[0]:null};}
  return Object.keys(out).length?out:null;}
