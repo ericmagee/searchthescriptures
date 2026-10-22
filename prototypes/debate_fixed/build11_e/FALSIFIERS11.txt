@@ -79,3 +79,16 @@ F13b, Format Markdown (section 8): under each cure call, after the request, the 
  Normalize) by seat and caller; a call whose reply was not read prints "*No reply was read: <why>*". Tested on constructed stubs (the stored
  run holds no cure bodies or replies).
 F13a/F13d: the Panel Build read, held for 7503.
+
+ADDENDUM 3, F13a and F13d, declared BEFORE the change to Format Markdown's Panel Build read.
+MEASURED (the one filtered read 7504 allows: execution 27795, nodeNames Panel Build and Format Markdown, truncateData 1, saved to a scratch file
+and read by script only): Panel Build ran once and returned one item (judges deepseek, gemini, grok) on output 0; its output 1 is empty.
+Panel Build is set onError continueErrorOutput, and output 1 connects to Panel Failure Note, from which Format Markdown is also reached.
+Format Markdown's read fromNode('Panel Build', x => x.first().json) is resolved along that path and reads output 1, which is empty, so first()
+returns undefined (the stored error). Every other reader of Panel Build lies only on output 0. INFERENCE, labelled: the default branch chosen by
+first() is n8n's; the empty output 1 and the error text agree with it; it is not otherwise measured.
+Fix: read Panel Build's output 0 explicitly, x.first(0), and the same for Reserve Build and Build Independent Verdict if they carry an error output.
+ F13a.1 harness stub that holds the item on branch 0 only and returns undefined for the default: base reproduces the stored error line;
+        new prints the three panel seats' texts (fx/panel_build_27795.json, the item of the read above).
+ F13d.1 with the panel seats read, the text Gemini's cure followed carries Gemini on its Text heading beside the GLM alternate when they are equal.
+ F13a.2 no "Reads that gave no text" entry for Panel Build.
