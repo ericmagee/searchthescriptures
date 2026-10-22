@@ -140,7 +140,9 @@ function drvCounted(line){const P=new Set(),K=new Set();const NEG=/\b(?:not|no|n
    if(!W.length)continue;
    for(const m of cl.matchAll(/\b(premises?|links?)\s*((?:\d+(?:\s*(?:-|–|to)\s*\d+)?(?:\s*(?:,|and|&)\s*(?=\d))?)+)/gi)){
     const own=W.filter(w=>part(w.at)===part(m.index));const gap=w=>w.at>=m.index+m[0].length?w.at-(m.index+m[0].length):Math.abs(m.index-w.end);
-    const gw=(own.length?own:W).reduce((x,y)=>gap(y)<gap(x)?y:x);if(gw.neg)continue;const T=/^link/i.test(m[1])?K:P;
+    const gw=(own.length?own:W).reduce((x,y)=>gap(y)<gap(x)?y:x);
+    // "no premise was conceded except premise 1": an exception between a negated word and the number counts it (BB-7428).
+    if(gw.neg&&!(gw.end<=m.index&&/\b(?:except|save|but|other than)\b/i.test(cl.slice(gw.end,m.index))))continue;const T=/^link/i.test(m[1])?K:P;
     for(const q of m[2].split(/\s*(?:,|and|&)\s*/)){const r=q.match(/(\d+)\s*(?:-|–|to)\s*(\d+)/);if(r){for(let z=+r[1];z<=+r[2]&&z-+r[1]<50;z++)T.add(z);}else if(/\d/.test(q))T.add(+q.match(/\d+/)[0]);}}}
   return {P,K};}
 const drvCountLine=(T,side)=>{const m=T.match(side==='DEFENDER'?/^[ \t>#-]*CONCEDED LINKS[ \t]*:.*$/im:/^[ \t>#-]*CHALLENGER CONCEDED LINKS[ \t]*:.*$/im);return m?m[0]:null;};
