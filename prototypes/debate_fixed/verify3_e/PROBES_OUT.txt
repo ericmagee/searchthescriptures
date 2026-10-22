@@ -1,0 +1,10 @@
+count both   => none
+negated      => none
+word first   => DEFENDER premise 1, DEFENDER premise 3
+joint        => DEFENDER premise 3
+zero         => DEFENDER premise 1, DEFENDER premise 3
+premise 10   => DEFENDER premise 1, DEFENDER premise 3
+CORRECTED COUNT: DEFENDER 2  => DEFENDER premise 1 UNCURED (corrected count 2 is below 4) | DEFENDER premise 3 UNCURED (corrected count 2 is below 4)
+CORRECTED COUNT: DEFENDER 4  => DEFENDER premise 1 UNCURED (count 4 of 6 makes the DEFENDER standing COLLAPSED; it reads PROP-DEPENDENT) | DEFENDER premise 3 UNCURED (count 4 of 6 makes the DEFENDER standing COLLAPSED; it reads PROP-DEPENDENT)
+DEFENDER premise 1 CURED (statement quotes the transcript (CR3)) | DEFENDER premise 3 UNCURED (corrected count 0 is below 1)
+written to the row: {"DEFENDER":{"n":0,"st":"COLLAPSED"}}
