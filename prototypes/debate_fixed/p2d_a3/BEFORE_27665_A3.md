@@ -1,6 +1,6 @@
 # THE DEBATE FIXED (BB-7397), step 9 BEFORE read, Worker_A3 (ruling BB-7440)
 
-Run 27665 (debate 921f5530), as stored. Read whole: report27665.md (md5 7f22d279), all 1,761 lines, by Worker_A3 on 2026-10-21, 20:44 to 20:58 CDT.
+Run 27665 (debate 921f5530), as stored. Read whole: report27665.md (md5 7f22d279), all 1,761 lines, by Worker_A3 on 2026-10-21, between 20:42:44 CDT (ruling 7440 posted) and 20:47:53 CDT (clock read by tool after the row posted).
 Text 1 and Text 2 were checked line by line against the displayed rounds: every displayed line is in both texts, and nothing else is in them but the round headers and the rulebook.
 The stored rows were read by SQL: debate_results 921f5530 and debate_judgments 786, 787 and 788. The live flow was read by tool: versionId and activeVersionId are both 428fbdc3.
 Each item names the judge, the line and the rule sentence it breaks. Rule sentences are quoted from the rulebook as sent (Text 1 lines 1176-1228; Text 2 carries the same rule text).
@@ -55,13 +55,13 @@ Each item names the judge, the line and the rule sentence it breaks. Rule senten
 
 ## (f) Plain language (the plain-language sentence was not yet in the texts; listed as the BEFORE)
 
-24. **"the Boy"**: the challenger [DR1] line 205, "The Boy answers"; the defender [CR2] line 270, "The Boy's answer is a covenant title"; and quoted again in [DR2] premise 2, line 370. The KJV says "the child": Luke 2:40, "And the child grew, and waxed strong in spirit"; Luke 2:43, "the child Jesus tarried behind in Jerusalem" (pulled from kjv_verses, 20:59 CDT).
+24. **"the Boy"**: the challenger [DR1] line 205, "The Boy answers"; the defender [CR2] line 270, "The Boy's answer is a covenant title"; and quoted again in [DR2] premise 2, line 370. The KJV says "the child": Luke 2:40, "And the child grew, and waxed strong in spirit"; Luke 2:43, "the child Jesus tarried behind in Jerusalem" (pulled from kjv_verses before 20:47:53 CDT).
 25. **Capitalised pronouns for Christ ("His Father", "Him", "He") that the KJV does not use**: the challenger, throughout [DR1] and [DR2] (for example, lines 163, 205, 254), and the removed DeepSeek's RESULT line ("God is His Father").
 26. **Greek words with no plain English meaning beside them**, for example *Anastēsas* (line 236), *mnēstheusa* (glossed only as "betrothed" in the following clause) and *klēthēsetai* (line 276), alongside many glossed ones. Neither seat was bound by such a rule in 27665.
 
 ## (g) Anything else wrong
 
-27. **The challenger [DR2] line 307 says the defender's bracketed "[the son]" is "his own insertion".** The bracket is the KJV's own supplied words at Luke 3:23. kjv_verses reads "being (as was supposed) the son of Joseph, which was [the son] of Heli" (pulled, 20:59 CDT). This is a misstatement of fact by the challenger, and none of the four judgments named it.
+27. **The challenger [DR2] line 307 says the defender's bracketed "[the son]" is "his own insertion".** The bracket is the KJV's own supplied words at Luke 3:23. kjv_verses reads "being (as was supposed) the son of Joseph, which was [the son] of Heli" (pulled before 20:47:53 CDT). This is a misstatement of fact by the challenger, and none of the four judgments named it.
 28. **The synthesis and the diagnostic both name "Mary supplies the seed of David" as NO-FOOTING-EXHIBITED**, the challenger's load-bearing floating [L4]. Only Grok names floating [L4]s on both sides, as the rulebook orders ("Name every floating [L4] on either side before weighing it"). Gemini and GLM name none. The single judge names none in a CITATION CHECK line; its text has no such line.
 29. **Row fact correcting BB-7440 item 1.** Report line 1699 is under "Cure call, DeepSeek (deepseek-flash)", which "Followed ... Text 2". It is the removed panel DeepSeek's original judgment (count 2, D6 vs C6 BROKEN), not the single judge's cure reply. The single judge's cure call is at line 1640 and follows Text 1.
 
