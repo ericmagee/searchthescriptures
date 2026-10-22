@@ -23,3 +23,9 @@ cured item of the side is a K-G6 statement cure (no count was checked):
 
 DEFECT 4: derive_new.sql's framework_verdict column note says the flow inserts null and W-D writes the panel's verdict at the first stamp;
 the words "inserts the single judge's tag" occur 0 times.
+
+ADDENDUM (declared before its fix, after Worker_E's case at BB-7426): the prompt's own tag carries "(no footing offered)"; a comma then a
+second item must not read as negated.
+ O "CONCEDED LINKS: 2 -- premise 1 UNEXHIBITED (no footing offered), premise 3 UNEXHIBITED (no footing offered)"  -> none
+ P "CONCEDED LINKS: 2 -- premise 1 CONCEDED (stated), premise 3 UNEXHIBITED (no footing offered)"               -> none
+ Q "CONCEDED LINKS: 1 -- premise 1 UNEXHIBITED (no footing offered), premise 3 not conceded"                     -> premise 3

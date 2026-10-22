@@ -9,8 +9,9 @@ const ptext=['AGAINST THE DEFENDER, answered in [CR3]:',pl(1,'Psalm 132:11'),pl(
 const C={A:'CONCEDED LINKS: 2 -- premises 1 and 3 UNEXHIBITED',B:'CONCEDED LINKS: 2 -- UNEXHIBITED: premise 1, premise 3',C:'CONCEDED LINKS: 0 -- premise 1 not conceded',
  D:'CONCEDED LINKS: 0 -- No challenger-listed premise was CONCEDED (stated) or UNEXHIBITED (no footing offered) in [CR3]; premises 1-6 were all answered with layer footing',
  E:'CONCEDED LINKS: 1 -- premise 1 CONCEDED, premise 3 not conceded',F:'CONCEDED LINKS: 1 -- premise 3 was not answered and is UNEXHIBITED',
- G:'CONCEDED LINKS: 2 -- LINK 1 and LINK 3 UNEXHIBITED',H:'CONCEDED LINKS: 3 -- premises 1-3 UNEXHIBITED'};
-const X={A:'none',B:'none',C:'premise 1, premise 3',D:'premise 1, premise 3',E:'premise 3',F:'premise 1',G:'none',H:'none'};
+ G:'CONCEDED LINKS: 2 -- LINK 1 and LINK 3 UNEXHIBITED',H:'CONCEDED LINKS: 3 -- premises 1-3 UNEXHIBITED',
+ O:'CONCEDED LINKS: 2 -- premise 1 UNEXHIBITED (no footing offered), premise 3 UNEXHIBITED (no footing offered)',P:'CONCEDED LINKS: 2 -- premise 1 CONCEDED (stated), premise 3 UNEXHIBITED (no footing offered)',Q:'CONCEDED LINKS: 1 -- premise 1 UNEXHIBITED (no footing offered), premise 3 not conceded'};
+const X={A:'none',B:'none',C:'premise 1, premise 3',D:'premise 1, premise 3',E:'premise 3',F:'premise 1',G:'none',H:'none',O:'none',P:'none',Q:'premise 3'};
 let bad=0;
 for(const k of Object.keys(C)){const r=L(C[k]+'\nCHALLENGER CONCEDED LINKS: 0',ptext,0,0,'SELF-SUPPORTED','SELF-SUPPORTED');
  const got=r.items.map(x=>x.link.replace('DEFENDER ','')).join(', ')||'none';const ok=got===X[k];if(!ok)bad++;console.log(k,ok?'PASS':'FAIL','got:',got,'| expected:',X[k]);}
