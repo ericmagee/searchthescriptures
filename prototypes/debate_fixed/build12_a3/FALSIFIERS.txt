@@ -32,3 +32,16 @@ F17 (DoD 17) Format Markdown on row 6b95a298 as stored (f17.cjs): base reproduce
 WRONG IF: F15 or F12 or F17 silent on new; an F15b output moves; F15c reads CURED; F16 writes no line; a node outside the changed set differs.
 CHANGED SET (planned): the 14 library copies (cureQ), Alternate Merge (AUDIT line), Format Markdown (heads, counts, sent-to, alternates).
 LIMIT (7558 item 3): no second reserve is tried when the first fails.
+
+ADDENDUM 1 (7568, DoD 18), declared BEFORE any DoD 18 change. Base for DoD 18: pre18/ = new12 at d117817 (DoD 15-17 built).
+F18  f18.cjs: Gemini's 27893 cure exchange from the Drive report by script (reply lines 1531-1540, 747 chars, md5 f600353e; flagged
+     lines 1504-1513), six items (K-B D4 vs C6, D5 vs C8; K-G1 D4 vs C6, D5 vs C8, D6 vs C8; K-G3 DEFENDER), broken from Gemini's stored
+     judgment. pre18: all six CURED, counted on HELD-1 (as stored). new: every item cured by retraction UNCURED, counted on its own verdict.
+F18b one constructed STATEMENT line per link naming DR1 or CR2 and quoting words: pre18 and new CURED, HELD-1.
+F18b2 the same reason lines placed before the RETRACTED lines: CURED on new (placement free; the test is content).
+F18d.1 round only; F18d.2 quoted words, no round; F18d.3 a verse, no round: UNCURED on new.
+F18c f18c.sh: the F15b set and h_f11, h_f11b (27795 Gemini). PREDICTED MOVE, stated before the change: h_f11's K-G3 on Gemini's 27795
+     rebuilt reply (two RETRACTED lines, its one STATEMENT names no round) goes CURED to UNCURED. The rebuilt reply holds only what the
+     report table showed (build11_e limit), so the stored reply may have held a reason line; this is the rule applied, not a regression.
+     Every other output: md5 equal.
+LIMIT: the reader checks that a reason names the round and quotes words or a verse; it does not check that the quoted words are in that round.

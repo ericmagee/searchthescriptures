@@ -1,0 +1,19 @@
+BASE RUN for DoD 18 (Worker_A3) on pre18 (= new12 at d117817), before any DoD 18 change.
+== node f18.cjs pre18
+F18 source: report lines 1504 to 1513 (flagged), 1531 to 1540 (reply); 747 chars, md5 f600353e53946b275dbb5acd7b789446
+items: ["K-B D4 vs C6","K-B D5 vs C8","K-G1 D4 vs C6","K-G1 D5 vs C8","K-G1 D6 vs C8","K-G3 DEFENDER"] broken: {"DEFENDER":["D4 vs C6","D5 vs C8","D6 vs C8"],"CHALLENGER":[]}
+F18 as printed => ["K-B D4 vs C6 CURED (retracted)","K-B D5 vs C8 CURED (retracted)","K-G1 D4 vs C6 CURED (retracted)","K-G1 D5 vs C8 CURED (retracted)","K-G1 D6 vs C8 CURED (retracted)","K-G3 DEFENDER CURED (retracted: D4 VS C6, D5 VS C8, D6 VS C8)"] | counted on: HELD-1
+F18b with a reason line per link => ["K-B D4 vs C6 CURED (retracted)","K-B D5 vs C8 CURED (retracted)","K-G1 D4 vs C6 CURED (retracted)","K-G1 D5 vs C8 CURED (retracted)","K-G1 D6 vs C8 CURED (retracted)","K-G3 DEFENDER CURED (retracted: D4 VS C6, D5 VS C8, D6 VS C8)"] | counted on: HELD-1
+F18b2 same reasons placed before the RETRACTED lines => ["K-B D4 vs C6 CURED (retracted)","K-B D5 vs C8 CURED (retracted)","K-G1 D4 vs C6 CURED (retracted)","K-G1 D5 vs C8 CURED (retracted)","K-G1 D6 vs C8 CURED (retracted)","K-G3 DEFENDER CURED (retracted: D4 VS C6, D5 VS C8, D6 VS C8)"] | counted on: HELD-1
+F18d.1 a reason line naming the round only => ["K-B D4 vs C6 CURED (retracted)","K-B D5 vs C8 CURED (retracted)","K-G1 D4 vs C6 CURED (retracted)","K-G1 D5 vs C8 CURED (retracted)","K-G1 D6 vs C8 CURED (retracted)","K-G3 DEFENDER CURED (retracted: D4 VS C6, D5 VS C8, D6 VS C8)"] | counted on: HELD-1
+F18d.2 a reason line quoting words, no round => ["K-B D4 vs C6 CURED (retracted)","K-B D5 vs C8 CURED (retracted)","K-G1 D4 vs C6 CURED (retracted)","K-G1 D5 vs C8 CURED (retracted)","K-G1 D6 vs C8 CURED (retracted)","K-G3 DEFENDER CURED (retracted: D4 VS C6, D5 VS C8, D6 VS C8)"] | counted on: HELD-1
+F18d.3 a reason line naming a verse, no round => ["K-B D4 vs C6 CURED (retracted)","K-B D5 vs C8 CURED (retracted)","K-G1 D4 vs C6 CURED (retracted)","K-G1 D5 vs C8 CURED (retracted)","K-G1 D6 vs C8 CURED (retracted)","K-G3 DEFENDER CURED (retracted: D4 VS C6, D5 VS C8, D6 VS C8)"] | counted on: HELD-1
+== sh f18c.sh pre18 pre18
+d0b9494a7149571254be436158c6aa63  f15b_out_pre18/h_2c.txt
+3b818338c03d6f938d273ccdd30be393  f15b_out_pre18/h_ask.txt
+a13fa3fc67794d86de2b58c7eb2b9610  f15b_out_pre18/h_cure.txt
+f18e2da7eddb49d7717606dcd712abdc  f15b_out_pre18/h_f12_27795.txt
+9163e799212105b9844328b990bd344c  f15b_out_pre18/h_site.txt
+73569d5dc7f22913e40ae3755fdf46a4  f15b_out_pre18/h_site2.txt
+a9375ea66b174ae3b05aa44bb890de26  f15b_out_pre18/h_f11_27795.txt
+714ae64d35a022ab1882ebfe35dd1447  f15b_out_pre18/h_f11b_27795.txt
