@@ -45,8 +45,9 @@ BEGIN
   END IF;
 
   -- 4. THE HELD+COLLAPSED ARTIFACT (pre-v11 rubric; Coupling B was written to dissolve it). A verdict is paired with the defense
-  --    standing of the same reading (THE DEBATE FIXED, BB-7397, DoD 6, BB-7418, option (b) BB-7425): each counted panel judgment beside
-  --    its own standing; and a debate row created before __CUTOVER__ (the publish that made framework_verdict the panel's word), where
+  --    standing of the same reading (THE DEBATE FIXED, BB-7397, DoD 6, BB-7418, option (b) BB-7425): every stored judgment row (counted
+  --    seats, alternates and seats not counted alike) beside its own standing; and a debate row created before __CUTOVER__ (the publish that
+  --    made framework_verdict the panel's word), where
   --    framework_verdict was still the single judge's own word beside its own standing. A later debate row pairs the panel's verdict
   --    with the single judge's standing, which is not one reading, so it is not counted here.
   SELECT count(*) INTO n FROM debate_judgments WHERE verdict_tag='HELD' AND defense_standing='COLLAPSED';
