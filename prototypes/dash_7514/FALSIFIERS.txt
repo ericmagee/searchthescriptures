@@ -1,0 +1,13 @@
+FALSIFIERS (Worker_A3), order BB-7514, P2D BB-7518 as ruled in BB-7517 and BB-7519. Written BEFORE any change to odv1.js.
+These are PRE-WRITE CHECKS on stored data, not tests (BB-7519 item 1). The test of record is the live page after the ask.
+BASE: base/ = the five files of deployment dpl_DdjAqG4, each sha1 equal to its file id from the Vercel files API (BASE_SHA1.txt).
+DATA: fx/by_id_27795.json = dash_odv1_by_id('a0950904-...') read by SQL (a select; md5 4515aaad).
+CHECK: chk.cjs runs odOpen from a given odv1.js under node, with esc and turn copied from base/index.html and rpc stubbed to return the data.
+F1  base prints each of the five single-judge places; new prints none of them:
+    F1.1 Summary row labelled "Single judge"; F1.2 Judges-card row "Single judge"; F1.3 a "Synthesis" turn;
+    F1.4 a "Standings" turn (its standings and Framework line); F1.5 a "Single judge" turn.
+    Also: no 200-character piece of synthesis or of independent_verdict_raw (escaped as the page escapes) appears on the new page.
+F2  new still prints: Panel HELD (3-0); each of the three judgments (deepseek, grok, glm) with its verdict tag and its verdict_raw as the page prints it; the outcome tag; all six round turns.
+F3  index.html, patch-base.js, patch.js, queue.js of the build are byte-equal to base (sha1).
+F4  measured, not a check: do the older tabs' lists (debates, cc_debates) return rows of this flow.
+WRONG IF: any F1 marker on the new page; any F2 item missing; any F3 file differs.

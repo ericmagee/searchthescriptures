@@ -1,0 +1,12 @@
+F1.1 summary Single judge row                true
+F1.2 judges-card Single judge row            true
+F1.3 Synthesis turn                          true
+F1.4 Standings turn                          true
+F1.5 Single judge turn                       true
+F1.x synthesis pieces on page                30
+F1.x independent_verdict_raw pieces on page  13
+F2 Panel HELD (3-0)                          true
+F2 judgments printed                         deepseek:true,grok:true,glm:true
+F2 outcome tag                               true
+F2 round turns                               6
+page md5                                     0b91250c8551851c5da66b8e81df7814
