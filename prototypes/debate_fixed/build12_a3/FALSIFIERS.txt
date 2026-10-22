@@ -1,0 +1,34 @@
+THE DEBATE FIXED (BB-7397), P2D rev 8 (7555 as amended 7558; shape 7556, ruling 7559; E AGREED 7560). Builder Worker_A3, verifier Worker_E.
+Falsifiers are declared here BEFORE any file change. These are pre-write checks on stored text, not tests; the test is the live run.
+BASE: base12/ = the 63 code nodes of new11 at git 8e984ca (Worker_E, build11_e), md5 equal to build11_e NEW11_MD5S.json; active 449a4cf2.
+STORED TEXT:
+ fx/report27893.md   the Drive copy of the 27893 report, md5 de6a7448 (Grok's cure reply is printed there; cure replies are not stored).
+ fx/f15_grok_reply.txt  written by f15.cjs: report lines 1578-1584, 1839 chars, md5 869cd897, 18 backslash-quotes.
+ fx/rounds27893.json the six rounds of row 6b95a298, md5 b236c740.
+ fx/row_27893.json   row 6b95a298 by SQL (to_jsonb), md5 87b40317, equal to the SQL md5.
+ fx/judgments_27893.json  its three debate_judgments rows by SQL (json_agg by id), md5 f442649e, equal to the SQL md5.
+ fx/report27665.md (7f22d279), fx/report27795.md (6dc306fc), fx/rounds_27795.json, fx/f12_cases.json and reg/: as build11_e.
+ KJV rows for the chain harness: scratchpad kjv25.json, md5 0282498b (not committed; 4 MB).
+
+F15 (DoD 15) Grok's 27893 cure reply as printed, items K-G4 and K-G7 on D6 vs C1 as the report's FLAGGED ITEMS lines give them
+     (K-G7 fields as Panel Payloads builds them: premise 6, conc 2, st PROP-DEPENDENT, L 6).
+     base: K-G4 UNCURED "no quotation found in the named round" (as stored); K-G7 CURED, count 3 (as stored).
+     new: K-G4 CURED; K-G7 stays CURED, count 3.
+F12 (rev 8, C2) both PRESSED lines of that reply, cureFound in DR1. base: false, false. new: true, true.
+F15b every 27795 and 27665 cure check: f15b.sh (h_cure, h_2c, h_site, h_site2, h_ask on 27665; h_f12 cases on 27795).
+     new: every output md5 equal to base.
+F15c the single judge's stored K-G1 cure on D6 vs C3, rebuilt from its REPORT line in independent_verdict_raw (( ) back to [ ], " / " back
+     to line breaks). F15c.1 as stored; F15c.2 the same with its inner quotation marks backslash-escaped. base and new: UNCURED both.
+F16 (DoD 16) Alternate Merge on stubs, the three stored judgments, Grok removed:
+     F16.1 GLM's call failed: Grok's saved judgment carries one line "[AUDIT v21: ALTERNATE TRIED -- SEAT: grok; ALTERNATE: glm;
+           MODEL: z-ai/glm-5.3; RESULT: NOT SEATED; WHY: <the error text>]".
+     F16.2 GLM seated: drv_removed written as now; Grok's judgment there carries the line with RESULT: SEATED.
+     F16.3 no alternate passed the guards: Grok's judgment carries the line with ALTERNATE: none and the skip reason.
+     base: no such line in any case.
+F17 (DoD 17) Format Markdown on row 6b95a298 as stored (f17.cjs): base reproduces the stored report's lines 726-798 line for line.
+     new: Gemini's head and Verdict line both HELD; DeepSeek "1 link conceded", Grok "3 links conceded"; the GLM entry reads
+     "alternate judge GLM (z-ai/glm-5.3) sent as alternate for Grok, not seated"; with F16.1's judgment for Grok, the Alternate judges
+     section prints GLM tried, NOT SEATED, and the error text.
+WRONG IF: F15 or F12 or F17 silent on new; an F15b output moves; F15c reads CURED; F16 writes no line; a node outside the changed set differs.
+CHANGED SET (planned): the 14 library copies (cureQ), Alternate Merge (AUDIT line), Format Markdown (heads, counts, sent-to, alternates).
+LIMIT (7558 item 3): no second reserve is tried when the first fails.

@@ -1,0 +1,74 @@
+[
+{
+"name": "F12.1 stored form: two quotations joined by and",
+"items": [
+{
+"rule": "K-G1",
+"side": "DEFENDER",
+"link": "D4 vs C3",
+"line": "D4 vs C3 (Matthew 1:18, 25): DEFENDER LINK BROKEN -- x"
+}
+],
+"reply": "CORRECTED COUNT: DEFENDER 2\nPRESSED: D4 vs C3 | [DR2] | \"The defender grants that ginōskō (G1097, \"know\") carries the marital sense, and that the clause \"bounds the time to the birth.\"\" and \"conception precedes the birth. If Joseph did not know her up to the birth, the conception fell inside the bound.\"\n"
+},
+{
+"name": "F12.2 one quotation, found",
+"items": [
+{
+"rule": "K-G1",
+"side": "DEFENDER",
+"link": "D4 vs C3",
+"line": "D4 vs C3 (Matthew 1:18, 25): DEFENDER LINK BROKEN -- x"
+}
+],
+"reply": "CORRECTED COUNT: DEFENDER 2\nPRESSED: D4 vs C3 | [DR2] | \"conception precedes the birth. If Joseph did not know her up to the birth, the conception fell inside the bound.\"\n"
+},
+{
+"name": "F12.3 two quotations, second not in DR2",
+"items": [
+{
+"rule": "K-G1",
+"side": "DEFENDER",
+"link": "D4 vs C3",
+"line": "D4 vs C3 (Matthew 1:18, 25): DEFENDER LINK BROKEN -- x"
+}
+],
+"reply": "CORRECTED COUNT: DEFENDER 2\nPRESSED: D4 vs C3 | [DR2] | \"The defender grants that ginōskō (G1097, \"know\") carries the marital sense, and that the clause \"bounds the time to the birth.\"\" and \"the defender never answered the bound at all\"\n"
+},
+{
+"name": "F12.4 one quotation not found",
+"items": [
+{
+"rule": "K-G1",
+"side": "DEFENDER",
+"link": "D4 vs C3",
+"line": "D4 vs C3 (Matthew 1:18, 25): DEFENDER LINK BROKEN -- x"
+}
+],
+"reply": "CORRECTED COUNT: DEFENDER 2\nPRESSED: D4 vs C3 | [DR2] | \"the defender never answered the bound at all\"\n"
+},
+{
+"name": "F12.5 two PRESSED lines, one quotation each",
+"items": [
+{
+"rule": "K-G1",
+"side": "DEFENDER",
+"link": "D4 vs C3",
+"line": "D4 vs C3 (Matthew 1:18, 25): DEFENDER LINK BROKEN -- x"
+}
+],
+"reply": "CORRECTED COUNT: DEFENDER 2\nPRESSED: D4 vs C3 | [DR2] | \"The defender grants that ginōskō (G1097, \"know\") carries the marital sense, and that the clause \"bounds the time to the birth.\"\"\nPRESSED: D4 vs C3 | [DR2] | \"conception precedes the birth. If Joseph did not know her up to the birth, the conception fell inside the bound.\"\n"
+},
+{
+"name": "F12.6 two quotations plus a SHORT line quoting [CR3]",
+"items": [
+{
+"rule": "K-G1",
+"side": "DEFENDER",
+"link": "D4 vs C3",
+"line": "D4 vs C3 (Matthew 1:18, 25): DEFENDER LINK BROKEN -- x"
+}
+],
+"reply": "CORRECTED COUNT: DEFENDER 2\nPRESSED: D4 vs C3 | [DR2] | \"The defender grants that ginōskō (G1097, \"know\") carries the marital sense, and that the clause \"bounds the time to the birth.\"\" and \"conception precedes the birth. If Joseph did not know her up to the birth, the conception fell inside the bound.\"\nSHORT: D4 vs C3 | [CR3] | \"that is an inference about the when of the begetting, and the text states no verdict on the father from it\" | an inference about timing does not answer the bound\n"
+}
+]

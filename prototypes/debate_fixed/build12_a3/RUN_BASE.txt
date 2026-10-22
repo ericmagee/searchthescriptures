@@ -1,0 +1,47 @@
+BASE RUN (Worker_A3) on base12 (= new11 at 8e984ca, 63 nodes, md5s equal NEW11_MD5S of build11_e), before any change.
+== node f15.cjs base12
+F15 source: report lines 1559 1560 (items), 1578 to 1584 (reply); 1839 chars, md5 869cd897f48994ce31bb40b8c1714fa5 ; backslash-quotes 18
+F15 Grok 27893 reply as printed => [{"rule":"K-G4","status":"UNCURED","why":"no quotation found in the named round"},{"rule":"K-G7","status":"CURED","why":"counted: DEFENDER COUNT 3, STANDING PROP-DEPENDENT"}]
+F12 PRESSED 1 [DR1] found in DR1: false
+F12 PRESSED 2 [DR1] found in DR1: false
+F15c.1 single judge K-G1 stored cure => [{"rule":"K-G1","status":"UNCURED","why":"no quotation found in the named round"}]
+F15c.2 same, inner quotation marks escaped => [{"rule":"K-G1","status":"UNCURED","why":"no quotation found in the named round"}]
+fold sample: "a \\b\\ c\\\\d\\ne\\tf\\rg"
+== node f16.cjs base12
+F16.1 call failed:
+  body deepseek AUDIT lines: []
+  body gemini AUDIT lines: []
+  body grok AUDIT lines: []
+  alternates_tried: [{"removed_seat":"grok","alternate":"glm","result":"NOT SEATED","why":"call failed: Provider returned error {\"code\":502}"}]
+F16.2 seated:
+  body deepseek AUDIT lines: []
+  body gemini AUDIT lines: []
+  body glm AUDIT lines: []
+  drv_removed grok replaced_by glm AUDIT lines: []
+  alternates_tried: [{"removed_seat":"grok","alternate":"glm","result":"SEATED"}]
+F16.3 skip:
+  body deepseek AUDIT lines: []
+  body gemini AUDIT lines: []
+  body grok AUDIT lines: []
+  alternates_tried: [{"removed_seat":"grok","alternate":null,"result":"NOT SEATED","why":"no pool model passes the guards: glm G3: z-ai/glm-5.3 already sits on this panel"}]
+== node f17.cjs base12 kjv25.json (md5 0282498b)
+726: ## Panel judge 1: DeepSeek (deepseek-flash): BROKEN (a grade of the defender's chain: MiMo, arguing the record's reading)
+728: **Verdict:** BROKEN (a grade of the defender's chain: MiMo, arguing the record's reading)
+730: **Defense standing:** PROP-DEPENDENT, 0 links conceded
+732: **Challenge standing:** SELF-SUPPORTED, 0 links conceded
+759: ## Panel judge 2: Gemini (gemini-3.1-pro-preview): HELD (a grade of the defender's chain: MiMo, arguing the record's reading)
+761: **Verdict:** BROKEN (a grade of the defender's chain: MiMo, arguing the record's reading)
+763: **Defense standing:** SELF-SUPPORTED, 0 links conceded
+765: **Challenge standing:** SELF-SUPPORTED, 0 links conceded
+792: ## Panel judge 3: Grok (grok-4.7): BROKEN (a grade of the defender's chain: MiMo, arguing the record's reading)
+794: **Verdict:** BROKEN (a grade of the defender's chain: MiMo, arguing the record's reading)
+796: **Defense standing:** PROP-DEPENDENT, 2 links conceded
+798: **Challenge standing:** SELF-SUPPORTED, 0 links conceded
+845: Sent to: alternate judge GLM (z-ai/glm-5.3) seated for Grok.
+== sh f15b.sh base12 base12
+d0b9494a7149571254be436158c6aa63  f15b_out_base12/h_2c.txt
+3b818338c03d6f938d273ccdd30be393  f15b_out_base12/h_ask.txt
+a13fa3fc67794d86de2b58c7eb2b9610  f15b_out_base12/h_cure.txt
+f18e2da7eddb49d7717606dcd712abdc  f15b_out_base12/h_f12_27795.txt
+9163e799212105b9844328b990bd344c  f15b_out_base12/h_site.txt
+73569d5dc7f22913e40ae3755fdf46a4  f15b_out_base12/h_site2.txt
