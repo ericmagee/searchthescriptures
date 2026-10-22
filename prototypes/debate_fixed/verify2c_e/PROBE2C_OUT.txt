@@ -1,0 +1,31 @@
+ok   Panel_Pay valid covering             none | marks: 
+ok   Panel_Pay string member              none | marks:  FIELD INVALID: (1,"3") -- the checks by number fall 
+ok   Panel_Pay boolean member             none | marks:  FIELD INVALID: (true) -- the checks by number fall b
+ok   Panel_Pay object                     none | marks:  FIELD INVALID: {"a":1} -- the checks by number fall 
+ok   Panel_Pay boundary 6 ok              none | marks: 
+ok   Panel_Pay 7 out of range             none | marks:  FIELD INVALID: (1,3,7) -- the checks by number fall 
+ok   Panel_Pay dup [1,1,3] c3             K-G8 DEFENDER COUNTED PREMISES | marks: 
+ok   Panel_Pay missing 3 c1               K-G6 DEFENDER premise 3 | marks: 
+ok   Panel_Pay absent c0 + BROKEN         K-G6 DEFENDER premise 1, K-G6 DEFENDER premise 3, K-G7 D6 vs C3 | marks:  FIELD ABSENT -- the checks by number fall back to th
+ok   Panel_Pay [1,3] c2 + BROKEN D6       K-G7 D6 vs C3 | marks: 
+ok   Alternate valid covering             none | marks: 
+ok   Alternate string member              none | marks:  FIELD INVALID: (1,"3") -- the checks by number fall 
+ok   Alternate boolean member             none | marks:  FIELD INVALID: (true) -- the checks by number fall b
+ok   Alternate object                     none | marks:  FIELD INVALID: {"a":1} -- the checks by number fall 
+ok   Alternate boundary 6 ok              none | marks: 
+ok   Alternate 7 out of range             none | marks:  FIELD INVALID: (1,3,7) -- the checks by number fall 
+ok   Alternate dup [1,1,3] c3             K-G8 DEFENDER COUNTED PREMISES | marks: 
+ok   Alternate missing 3 c1               K-G6 DEFENDER premise 3 | marks: 
+ok   Alternate absent c0 + BROKEN         K-G6 DEFENDER premise 1, K-G6 DEFENDER premise 3, K-G7 D6 vs C3 | marks:  FIELD ABSENT -- the checks by number fall back to th
+ok   Alternate [1,3] c2 + BROKEN D6       K-G7 D6 vs C3 | marks: 
+ok   Extract_I valid covering             none | marks: 
+ok   Extract_I string member              none | marks:  FIELD INVALID: (1,"3") -- the checks by number fall 
+ok   Extract_I boolean member             none | marks:  FIELD INVALID: (true) -- the checks by number fall b
+ok   Extract_I object                     none | marks:  FIELD INVALID: {"a":1} -- the checks by number fall 
+ok   Extract_I boundary 6 ok              none | marks: 
+ok   Extract_I 7 out of range             none | marks:  FIELD INVALID: (1,3,7) -- the checks by number fall 
+ok   Extract_I dup [1,1,3] c3             K-G8 DEFENDER COUNTED PREMISES | marks: 
+ok   Extract_I missing 3 c1               K-G6 DEFENDER premise 3 | marks: 
+ok   Extract_I absent c0 + BROKEN         K-G6 DEFENDER premise 1, K-G6 DEFENDER premise 3, K-G7 D6 vs C3 | marks:  FIELD ABSENT -- the checks by number fall back to th
+ok   Extract_I [1,3] c2 + BROKEN D6       K-G7 D6 vs C3 | marks: 
+fails 0
