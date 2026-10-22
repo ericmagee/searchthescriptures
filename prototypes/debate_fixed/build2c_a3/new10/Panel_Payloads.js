@@ -129,10 +129,12 @@ function drvPromptText(body){try{const b=body||{};const out=[];if(b.systemInstru
  (b.messages||[]).forEach(m=>out.push(typeof m.content==='string'?m.content:JSON.stringify(m.content)));(b.contents||[]).forEach(c=>(c.parts||[]).forEach(p=>out.push(String(p.text||''))));return out.join('\n');}catch(e){return '';}}
 // THE DEBATE FIXED (BB-7397, DoD 9 as typed fields, BB-7455): the panel judge's own JSON fields counted_premises_defender and
 // counted_premises_challenger, each an array of ledger premise numbers. Missing or null: ABSENT. Anything but an array of integers >= 1:
-// INVALID, the raw value kept for the mark. No text of the judge's prose is read for the set. Where a field is ABSENT or INVALID the checks
+// INVALID, the raw value kept for the mark; so is a number above the count of that side's ledger premises (BB-7457 F-range). No text of the judge's prose is read for the set. Where a field is ABSENT or INVALID the checks
 // by number fall back to the stated count (A): an item only at a count of 0. The single judge returns no fields, so it is always (A).
-function drvCPA(val){if(val===undefined||val===null)return {present:false,why:'absent'};
- if(!Array.isArray(val)||!val.every(x=>Number.isInteger(x)&&x>=1)){let r;try{r=JSON.stringify(val);}catch(e){r=String(val);}return {present:false,why:'invalid',raw:String(r).slice(0,200)};}
+function drvLedgerN(ptext,side){if(typeof ptext!=='string')return null;const i=ptext.indexOf('AGAINST THE DEFENDER, answered in [CR3]:');const j=i<0?-1:ptext.indexOf('AGAINST THE CHALLENGER, answered in [DR3]:',i);
+ const k=j<0?-1:ptext.indexOf('A verse marked NOT NAMED',j);if(i<0||j<0||k<0)return null;const n=(side==='DEFENDER'?ptext.slice(i,j):ptext.slice(j,k)).split('\n').filter(l=>/^\s*premise \d+/.test(l)).length;return n||null;}
+function drvCPA(val,max){if(val===undefined||val===null)return {present:false,why:'absent'};
+ if(!Array.isArray(val)||!val.every(x=>Number.isInteger(x)&&x>=1&&(!max||x<=max))){let r;try{r=JSON.stringify(val);}catch(e){r=String(val);}return {present:false,why:'invalid',raw:String(r).slice(0,200)};}
  return {present:true,set:new Set(val),line:JSON.stringify(val)};}
 // The ledger's own map from a defender link to the premises graded against it ("A challenger premise written LINK i: is graded against Di"):
 // LINK m -> the premise numbers written "(LINK m)". No LINK label in the ledger: null, and premise n stands for D<n>.
@@ -150,7 +152,7 @@ function drvBroken(text,dConc,dStand,prior,cConc,cStand,ptext,CPV){const items=[
  const cl=drvCountLine(T,'DEFENDER');const lm=T.match(/^[ \t>#-]*DEFENSE STANDING[ \t]*:[^\n]*?\bL\s*=\s*(\d+)/im);const L=lm?+lm[1]:null;
  const cm=T.match(/^[ \t>#-]*CHALLENGE STANDING[ \t]*:[^\n]*?\bL\s*=\s*(\d+)/im);const LC=cm?+cm[1]:null;
  // DoD 9 (BB-7455): each side's counted_premises field; ABSENT or INVALID is written to the row; a valid array whose size differs from its count is K-G8.
- const LK=drvLinkMap(ptext);const CP={DEFENDER:drvCPA(CPV&&CPV.DEFENDER),CHALLENGER:drvCPA(CPV&&CPV.CHALLENGER)};
+ const LK=drvLinkMap(ptext);const CP={DEFENDER:drvCPA(CPV&&CPV.DEFENDER,drvLedgerN(ptext,'DEFENDER')),CHALLENGER:drvCPA(CPV&&CPV.CHALLENGER,drvLedgerN(ptext,'CHALLENGER'))};
  for(const sd of ['DEFENDER','CHALLENGER']){if(drvCountLine(T,sd)===null)continue;const cp=CP[sd],sc=sd==='DEFENDER'?dConc:cConc;
   if(!cp.present){marks.push('[AUDIT v21: COUNTED PREMISES '+sd+' FIELD '+(cp.why==='invalid'?'INVALID: '+String(cp.raw||'').replace(/\[/g,'(').replace(/\]/g,')'):'ABSENT')+' -- the checks by number fall back to the stated count (A).]');continue;}
   if(typeof sc==='number'&&cp.set.size!==sc){items.push({rule:'K-G8',side:sd,link:sd+' COUNTED PREMISES',line:cp.line,premise:null,conc:cp.set.size,st:sd==='DEFENDER'?dStand:cStand,L:sd==='DEFENDER'?L:LC});
@@ -176,7 +178,7 @@ function drvLedger(text,ptext,dConc,cConc,dStand,cStand,CPV){const items=[],mark
  const T=text.replace(/[*_`]+/g,'');
  const countLine=side=>drvCountLine(T,side);
 
- for(const side of ['DEFENDER','CHALLENGER']){const cl=countLine(side);if(cl===null)continue;const cp=drvCPA(CPV&&CPV[side]);const sc=side==='DEFENDER'?dConc:cConc;
+ for(const side of ['DEFENDER','CHALLENGER']){const cl=countLine(side);if(cl===null)continue;const cp=drvCPA(CPV&&CPV[side],drvLedgerN(ptext,side));const sc=side==='DEFENDER'?dConc:cConc;
   if(!cp.present&&sc!==0)continue;
   for(const l of LG[side]){const m=l.match(/^premise (\d+)(?: \(LINK (\d+)\))?: .*NOT NAMED: (.+)$/);if(!m||/^none\s*$/i.test(m[3]))continue;
    if(cp.present&&cp.set.has(+m[1]))continue;

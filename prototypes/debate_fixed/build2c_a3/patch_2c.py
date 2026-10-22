@@ -14,10 +14,12 @@ def cut(src, start, end):
 
 NEW_CPA = r'''// THE DEBATE FIXED (BB-7397, DoD 9 as typed fields, BB-7455): the panel judge's own JSON fields counted_premises_defender and
 // counted_premises_challenger, each an array of ledger premise numbers. Missing or null: ABSENT. Anything but an array of integers >= 1:
-// INVALID, the raw value kept for the mark. No text of the judge's prose is read for the set. Where a field is ABSENT or INVALID the checks
+// INVALID, the raw value kept for the mark; so is a number above the count of that side's ledger premises (BB-7457 F-range). No text of the judge's prose is read for the set. Where a field is ABSENT or INVALID the checks
 // by number fall back to the stated count (A): an item only at a count of 0. The single judge returns no fields, so it is always (A).
-function drvCPA(val){if(val===undefined||val===null)return {present:false,why:'absent'};
- if(!Array.isArray(val)||!val.every(x=>Number.isInteger(x)&&x>=1)){let r;try{r=JSON.stringify(val);}catch(e){r=String(val);}return {present:false,why:'invalid',raw:String(r).slice(0,200)};}
+function drvLedgerN(ptext,side){if(typeof ptext!=='string')return null;const i=ptext.indexOf('AGAINST THE DEFENDER, answered in [CR3]:');const j=i<0?-1:ptext.indexOf('AGAINST THE CHALLENGER, answered in [DR3]:',i);
+ const k=j<0?-1:ptext.indexOf('A verse marked NOT NAMED',j);if(i<0||j<0||k<0)return null;const n=(side==='DEFENDER'?ptext.slice(i,j):ptext.slice(j,k)).split('\n').filter(l=>/^\s*premise \d+/.test(l)).length;return n||null;}
+function drvCPA(val,max){if(val===undefined||val===null)return {present:false,why:'absent'};
+ if(!Array.isArray(val)||!val.every(x=>Number.isInteger(x)&&x>=1&&(!max||x<=max))){let r;try{r=JSON.stringify(val);}catch(e){r=String(val);}return {present:false,why:'invalid',raw:String(r).slice(0,200)};}
  return {present:true,set:new Set(val),line:JSON.stringify(val)};}'''
 
 def raise_pairs(src):
@@ -28,14 +30,14 @@ def raise_pairs(src):
         (r''' // DoD 9: each side's COUNTED PREMISES line; its absence is written to the row; a line whose number differs from its count is K-G8.
  const LK=drvLinkMap(ptext);const CP={DEFENDER:drvCP(T,'DEFENDER',LK),CHALLENGER:drvCP(T,'CHALLENGER',LK)};''',
          r''' // DoD 9 (BB-7455): each side's counted_premises field; ABSENT or INVALID is written to the row; a valid array whose size differs from its count is K-G8.
- const LK=drvLinkMap(ptext);const CP={DEFENDER:drvCPA(CPV&&CPV.DEFENDER),CHALLENGER:drvCPA(CPV&&CPV.CHALLENGER)};'''),
+ const LK=drvLinkMap(ptext);const CP={DEFENDER:drvCPA(CPV&&CPV.DEFENDER,drvLedgerN(ptext,'DEFENDER')),CHALLENGER:drvCPA(CPV&&CPV.CHALLENGER,drvLedgerN(ptext,'CHALLENGER'))};'''),
         (r'''marks.push('[AUDIT v21: COUNTED PREMISES '+sd+' LINE '+(cp.why==='unreadable'?'UNREADABLE: "'+String(cp.line||'').trim().slice(0,200).replace(/[\[\]]/g,'')+'"':'ABSENT')+' -- the checks by number fall back to the stated count (A).]');''',
          r'''marks.push('[AUDIT v21: COUNTED PREMISES '+sd+' FIELD '+(cp.why==='invalid'?'INVALID: '+String(cp.raw||'').replace(/\[/g,'(').replace(/\]/g,')'):'ABSENT')+' -- the checks by number fall back to the stated count (A).]');'''),
         (r'''marks.push('[AUDIT v21: DEBATE RULE VIOLATION (K-G8) -- COUNTED PREMISES '+sd+' names '+cp.set.size+' premise(s) while the count is '+sc+'. REVIEW THIS ROW.]');''',
          r'''marks.push('[AUDIT v21: DEBATE RULE VIOLATION (K-G8) -- counted_premises_'+sd.toLowerCase()+' lists '+cp.set.size+' premise(s) while the count is '+sc+'. REVIEW THIS ROW.]');'''),
         (r"""'COUNTED PREMISES DEFENDER does not name premise '+ps.join(' or ')""", r"""'counted_premises_defender does not list premise '+ps.join(' or ')"""),
         (r'''function drvLedger(text,ptext,dConc,cConc,dStand,cStand){''', r'''function drvLedger(text,ptext,dConc,cConc,dStand,cStand,CPV){'''),
-        (r'''const cp=drvCP(T,side,drvLinkMap(ptext));''', r'''const cp=drvCPA(CPV&&CPV[side]);'''),
+        (r'''const cp=drvCP(T,side,drvLinkMap(ptext));''', r'''const cp=drvCPA(CPV&&CPV[side],drvLedgerN(ptext,side));'''),
     ]
 
 CPV = r''',{DEFENDER:v.counted_premises_defender,CHALLENGER:v.counted_premises_challenger}'''

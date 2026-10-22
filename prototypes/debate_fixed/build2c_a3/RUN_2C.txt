@@ -1,9 +1,9 @@
-THE DEBATE FIXED 2c (DoD 9 as typed arrays, BB-7455/7456), Worker_A3, run 2026-10-21 21:21:36 CDT
+THE DEBATE FIXED 2c (DoD 9 as typed arrays, BB-7455/7456, with F-dup/F-range of BB-7457), Worker_A3, run 2026-10-21 21:23:09 CDT
 == patch from base10 (anchors once; reverse gives base)
 22 nodes written, 20 changed
 == parse
-parse checked: 22; drvCP( occurs in 0 nodes; BIV equals build_a3/new at 3ac66c8: yes
-== FALSIFIERS10 (d73882b) on new10
+parse checked: 22; drvCP( in 0 nodes; BIV equals build_a3/new at 3ac66c8: yes
+== FALSIFIERS10 with the addendum (d73882b, fd2513a, aec2260) on new10
 PASS Panel T1 [1,3,6]/3, C [1]/1                          got: none 
 PASS Panel T2 [1,6]/2                                     got: K-G6 DEFENDER premise 3 
 PASS Panel T3 []/0                                        got: K-G6 DEFENDER premise 1, K-G6 DEFENDER premise 3, K-G7 D6 vs C3 
@@ -15,6 +15,11 @@ PASS Panel T8 "LINK 1, LINK 3"/2                          got: none | marks: DEF
 PASS Panel T9 [1,3]/3                                     got: K-G8 DEFENDER COUNTED PREMISES, K-G7 D6 vs C3 
 PASS Panel T10 shifted, [5]/1 (K-G7 only, as declared)    got: none 
 PASS Panel T11 C []/0                                     got: K-G6 CHALLENGER premise 1 
+PASS Panel F-dup [1,1,3]/3                                got: K-G8 DEFENDER COUNTED PREMISES, K-G7 D6 vs C3 
+PASS Panel F-dup [1,1,3]/2                                got: K-G7 D6 vs C3 
+PASS Panel F-range [0]/1                                  got: none | marks: DEFENDER INVALID (0) 
+PASS Panel F-range [7]/1 (6 premises)                     got: none | marks: DEFENDER INVALID (7) 
+PASS Panel F-range [-1]/1                                 got: none | marks: DEFENDER INVALID (-1) 
 PASS Panel T12 prose line, key absent/0                   got: K-G6 DEFENDER premise 1, K-G6 DEFENDER premise 3, K-G7 D6 vs C3 | marks: DEFENDER ABSENT 
 PASS Alter T1 [1,3,6]/3, C [1]/1                          got: none 
 PASS Alter T2 [1,6]/2                                     got: K-G6 DEFENDER premise 3 
@@ -27,6 +32,11 @@ PASS Alter T8 "LINK 1, LINK 3"/2                          got: none | marks: DEF
 PASS Alter T9 [1,3]/3                                     got: K-G8 DEFENDER COUNTED PREMISES, K-G7 D6 vs C3 
 PASS Alter T10 shifted, [5]/1 (K-G7 only, as declared)    got: none 
 PASS Alter T11 C []/0                                     got: K-G6 CHALLENGER premise 1 
+PASS Alter F-dup [1,1,3]/3                                got: K-G8 DEFENDER COUNTED PREMISES, K-G7 D6 vs C3 
+PASS Alter F-dup [1,1,3]/2                                got: K-G7 D6 vs C3 
+PASS Alter F-range [0]/1                                  got: none | marks: DEFENDER INVALID (0) 
+PASS Alter F-range [7]/1 (6 premises)                     got: none | marks: DEFENDER INVALID (7) 
+PASS Alter F-range [-1]/1                                 got: none | marks: DEFENDER INVALID (-1) 
 PASS Alter T12 prose line, key absent/0                   got: K-G6 DEFENDER premise 1, K-G6 DEFENDER premise 3, K-G7 D6 vs C3 | marks: DEFENDER ABSENT 
 PASS Extra T1 [1,3,6]/3, C [1]/1                          got: none 
 PASS Extra T2 [1,6]/2                                     got: K-G6 DEFENDER premise 3 
@@ -39,17 +49,21 @@ PASS Extra T8 "LINK 1, LINK 3"/2                          got: none | marks: DEF
 PASS Extra T9 [1,3]/3                                     got: K-G8 DEFENDER COUNTED PREMISES, K-G7 D6 vs C3 
 PASS Extra T10 shifted, [5]/1 (K-G7 only, as declared)    got: none 
 PASS Extra T11 C []/0                                     got: K-G6 CHALLENGER premise 1 
+PASS Extra F-dup [1,1,3]/3                                got: K-G8 DEFENDER COUNTED PREMISES, K-G7 D6 vs C3 
+PASS Extra F-dup [1,1,3]/2                                got: K-G7 D6 vs C3 
+PASS Extra F-range [0]/1                                  got: none | marks: DEFENDER INVALID (0) 
+PASS Extra F-range [7]/1 (6 premises)                     got: none | marks: DEFENDER INVALID (7) 
+PASS Extra F-range [-1]/1                                 got: none | marks: DEFENDER INVALID (-1) 
 PASS Extra T12 prose line, key absent/0                   got: K-G6 DEFENDER premise 1, K-G6 DEFENDER premise 3, K-G7 D6 vs C3 | marks: DEFENDER ABSENT 
 PASS T13 Extract on 27665 single judge                    got: K-G6 DEFENDER premise 1, K-G6 DEFENDER premise 3, K-G7 D6 vs C3 
 PASS TEXT schema lines in Panel Build                     got: 2 
 PASS TEXT no line sentence (Panel Build, BIV)             got: 0 
-MARKS md5 b019f38280a2b8be3b37db03df8b0b77
-TOTAL pass 39 fail 0
+MARKS md5 04d9da7167e9bdb17bd9f90d1de872c1
+TOTAL pass 54 fail 0
 == the same on base10 (must fail)
-MARKS md5 680556cec6fe6a64d6be5408691ed461
-TOTAL pass 13 fail 26
+TOTAL pass 13 fail 41
 == T14 by SQL 21:19:29 CDT: 186 stored judgments, 0 carry counted_premises (all ABSENT, so (A))
-== h_site2 (arrays on the parsed judge object)
+== h_site2
 Panel_Payloads covering K-G4 D6 vs C3 | K-G3 null | K-G8 DEFENDER COUNTED PREMISES | K-G8 CHALLENGER COUNTED PREMISES | [AUDIT v21: DEBATE RULE VIOLATION (K-G4) -- D6 vs C3 DEFENDER LINK BROKEN counts
 Panel_Payloads short K-G4 D6 vs C3 | K-G3 null | K-G6 DEFENDER premise 1 | K-G6 DEFENDER premise 3 | K-G6 CHALLENGER premise 6 | K-G8 DEFENDER COUNTED PREMISES | [AUDIT v21: DEBATE RULE VIOLATION (K-G
 Alternate_Payloads covering K-G4 D6 vs C3 | K-G3 null | K-G8 DEFENDER COUNTED PREMISES | K-G8 CHALLENGER COUNTED PREMISES | [AUDIT v21: DEBATE RULE VIOLATION (K-G4) -- D6 vs C3 DEFENDER LINK BROKEN co
@@ -83,4 +97,7 @@ Build_Independent_Verdict.js | defender list with CR2 blanked equals base: true 
 Panel_Build.js | defender list with CR2 blanked equals base: true | challenger list with DR2 blanked equals base: true
 == per-site probes
 sites 63 | DETECTED 61 | SILENT 2
-SILENT: Extract_Independent_Verdict pairs 8 and 9 pass null where base10 passed nothing; both are ABSENT, so no output can differ (equivalent by construction).
+Extract_Independent_Verdict  pair  8  SILENT
+Extract_Independent_Verdict  pair  9  SILENT
+sites 63 | DETECTED 61 | SILENT 2
+SILENT by equivalence: the single judge's call sites pass null where base10 passed nothing; both are ABSENT.
