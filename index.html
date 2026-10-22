@@ -255,9 +255,12 @@
 <body>
 
   <header>
-    <div class="wrap">
-      <h1>Follow the Precepts</h1>
-      <p class="tagline">Precept upon precept. Line upon line.</p>
+    <div class="wrap" style="display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap">
+      <div style="flex:1;min-width:0">
+        <h1>Follow the Precepts</h1>
+        <p class="tagline">Precept upon precept. Line upon line.</p>
+      </div>
+      <a href="/community" style="font-family:var(--mono);font-size:0.68rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);border:1px solid var(--accent);padding:0.45rem 0.9rem;text-decoration:none;white-space:nowrap;transition:background .15s,color .15s" onmouseover="this.style.background='var(--accent)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--accent)'">Community</a>
     </div>
   </header>
 
@@ -397,8 +400,12 @@
 
     async function askEngine(question) {
       history.push({ role: "user", content: question });
+
       const waiting = addSearching();
       scrollToEnd();
+
+      let streamMsg = null;
+      let fullText = "";
 
       try {
         const res = await fetch("/api/chat", {
@@ -406,21 +413,72 @@
           headers: { "content-type": "application/json" },
           body: JSON.stringify({ messages: history }),
         });
-        const data = await res.json();
 
         if (!res.ok) {
-          history.pop(); // don't keep a turn the engine never answered
+          const data = await res.json().catch(() => ({}));
+          history.pop();
           showError(waiting, (data && data.error) || "The engine could not answer. Try again.");
           return;
         }
 
-        const reply = (data && data.reply) || "(No text returned.)";
-        history.push({ role: "assistant", content: reply });
+        // Replace the "searching" indicator with a live streaming block.
         waiting.remove();
-        addAnswer(reply);
+        streamMsg = el("div", "msg assistant");
+        streamMsg.appendChild(el("div", "msg-role", "The scriptures answer"));
+        const streamBlock = el("div", "layer");
+        streamBlock.dataset.tag = "L1";
+        const streamText = el("div", "layer-body");
+        streamBlock.appendChild(streamText);
+        streamMsg.appendChild(streamBlock);
+        messages.appendChild(streamMsg);
+        scrollToEnd();
+
+        // Consume the SSE stream from the server.
+        const reader = res.body.getReader();
+        const decoder = new TextDecoder();
+        let sseBuffer = "";
+
+        while (true) {
+          const { done, value } = await reader.read();
+          if (done) break;
+
+          sseBuffer += decoder.decode(value, { stream: true });
+          const lines = sseBuffer.split("\n");
+          sseBuffer = lines.pop() || "";
+
+          for (const line of lines) {
+            if (!line.startsWith("data:")) continue;
+            const raw = line.slice(5).trim();
+            if (!raw || raw === "[DONE]") continue;
+            try {
+              const evt = JSON.parse(raw);
+              if (
+                evt.type === "content_block_delta" &&
+                evt.delta &&
+                evt.delta.type === "text_delta"
+              ) {
+                fullText += evt.delta.text;
+                streamText.textContent = fullText;
+                scrollToEnd();
+              }
+            } catch { /* skip malformed SSE events */ }
+          }
+        }
+
+        // Stream complete — reformat the full text into labeled layers.
+        history.push({ role: "assistant", content: fullText || "(No text returned.)" });
+        streamMsg.remove();
+        addAnswer(fullText || "(No text returned.)");
+
       } catch (err) {
         history.pop();
-        showError(waiting, "Could not reach the study engine. Check your connection and try again.");
+        if (streamMsg) {
+          streamMsg.innerHTML = "";
+          streamMsg.appendChild(el("div", "msg-role", "The engine"));
+          streamMsg.appendChild(el("div", "engine-error", "Stream interrupted. Check your connection and try again."));
+        } else {
+          showError(waiting, "Could not reach the study engine. Check your connection and try again.");
+        }
       } finally {
         pending = false;
         sendBtn.disabled = false;
