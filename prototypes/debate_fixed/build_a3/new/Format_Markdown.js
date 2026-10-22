@@ -80,7 +80,7 @@ t += '- SECOND OPINION (single judge, not the verdict): ' + SJN + ' (' + (r.judg
 // independent_verdict_raw; panel: verdict_raw), read back by its fixed fields. The judge texts above drop these lines (noMarkers).
 // DRV_EFFECT states what the report does to the outcome: the operator's ruling on 6904 (d), option 2 (BB-6965).
 const DRV_EFFECT = 'A panel judge with any violation not cured is not counted in the panel result; if fewer than two panel judges are counted, the result is ungraded and goes to review. The single judge\'s violations are reported here; the single judge does not set the outcome.';
-const DRV_RULE = { 'K-B': 'Two kinds of layer (K-B)', 'K-G1': 'Conceded count (K-G1)', 'K-G3': 'Standing (K-G3)', 'K-G4': 'Pressing sentence (K-G4)', 'K-G6': 'Unanswered premise not counted (K-G6)' };
+const DRV_RULE = { 'K-B': 'Two kinds of layer (K-B)', 'K-G1': 'Conceded count (K-G1)', 'K-G3': 'Standing (K-G3)', 'K-G4': 'Pressing sentence (K-G4)', 'K-G6': 'Unanswered premise not counted (K-G6)', 'K-G7': 'BROKEN on a premise the count leaves out (K-G7)' };
 const drvCell = x => String(x == null ? '' : x).replace(/\s+/g, ' ').replace(/\|/g, '\\|').trim();
 const drvRead = (who, raw) => { const rows = []; let prose = false;
   for (const ln of String(raw || '').split('\n')) { const l = ln.trim(); const m = l.match(/^\[AUDIT v21: DEBATE RULE VIOLATION REPORT -- (.*)\]$/);

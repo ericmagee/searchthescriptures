@@ -1,0 +1,100 @@
+THE DEBATE FIXED DoD 7 build (K-G7, ruling BB-7420), Worker_A3, run 2026-10-21 20:23:40 CDT
+== patch from base
+22 nodes built
+== parse
+parse checked: 22
+== FALSIFIERS3 (f52b8ac)
+M1 Panel_Payloads Gemini PASS got: D6 vs C3 | expected: D6 vs C3
+M1 Panel_Payloads Grok PASS got: none | expected: none
+M1 Panel_Payloads GLM PASS got: none | expected: none
+M1 Panel_Payloads DeepSeek PASS got: D6 vs C3 | expected: D6 vs C3
+M2a Panel_Payloads PASS got: none | expected: none
+M2b Panel_Payloads PASS got: none | expected: none
+M2c Panel_Payloads PASS got: D6 vs C3 | expected: D6 vs C3
+M3 Panel_Payloads PASS got: none | expected: none
+M4 Panel_Payloads PASS got: none | expected: none
+M1 Alternate_Payloads Gemini PASS got: D6 vs C3 | expected: D6 vs C3
+M1 Alternate_Payloads Grok PASS got: none | expected: none
+M1 Alternate_Payloads GLM PASS got: none | expected: none
+M1 Alternate_Payloads DeepSeek PASS got: D6 vs C3 | expected: D6 vs C3
+M2a Alternate_Payloads PASS got: none | expected: none
+M2b Alternate_Payloads PASS got: none | expected: none
+M2c Alternate_Payloads PASS got: D6 vs C3 | expected: D6 vs C3
+M3 Alternate_Payloads PASS got: none | expected: none
+M4 Alternate_Payloads PASS got: none | expected: none
+M1 Extract DeepSeek PASS got: D6 vs C3 | expected: D6 vs C3
+14/14 N1 PASS got: CURED | set 1 PROP-DEPENDENT | expected: CURED | set 1 PROP-DEPENDENT
+14/14 N2 PASS got: CURED | result HELD | expected: CURED | result HELD
+14/14 N3 PASS got: UNCURED | expected: UNCURED
+14/14 N4 PASS got: UNCURED | expected: UNCURED
+14/14 N5 PASS got: UNCURED | expected: UNCURED
+14/14 N6a PASS got: UNCURED UNCURED | expected: UNCURED UNCURED
+14/14 N6b PASS got: CURED CURED | expected: CURED CURED
+14/14 LABEL PASS
+TEXT Format Markdown K-G7 label PASS got: named | expected: named
+FAILS 0
+== FALSIFIERS2 (818d373)
+A PASS got: none | expected: none
+B PASS got: none | expected: none
+C PASS got: premise 1, premise 3 | expected: premise 1, premise 3
+D PASS got: premise 1, premise 3 | expected: premise 1, premise 3
+E PASS got: premise 3 | expected: premise 3
+F PASS got: premise 1 | expected: premise 1
+G PASS got: none | expected: none
+H PASS got: none | expected: none
+I PASS got: not written | expected: not written
+J PASS got: 2 PROP-DEPENDENT | expected: 2 PROP-DEPENDENT
+K PASS got: not written | expected: not written
+L PASS got: null PROP-DEPENDENT | expected: null PROP-DEPENDENT
+4 PASS "inserts the single judge's tag" occurs 0
+FAILS 0
+== F1b/F1c
+   - Verdict of the debate: **HELD** (the panel) (a grade of the defender's chain: MiMo, arguing the record's reading)
+   - SECOND OPINION (single judge, not the verdict): DeepSeek (deepseek-flash): **BROKEN** (a grade of the defender's chain: MiMo, arguing the record's reading)
+   ## SECOND OPINION (single judge, not the verdict): DeepSeek (deepseek-flash): BROKEN (a grade of the defender's chain: MiMo, arguing the record's reading)
+single-judge lines 2 | unlabelled 0 | panel verdict line true => SILENT
+== F2
+new/Init_with_Guards.js:2
+new/Build_Independent_Verdict.js:1
+new/Panel_Build.js:1
+== F3a
+-- Panel_Payloads
+Gemini    items: DEFENDER premise 1, DEFENDER premise 3, CHALLENGER premise 1, CHALLENGER premise 6
+Grok      items: none
+GLM       items: DEFENDER premise 1, DEFENDER premise 3, CHALLENGER premise 1
+DeepSeek  items: DEFENDER premise 1, DEFENDER premise 3, CHALLENGER premise 1
+-- Alternate_Payloads
+Gemini    items: DEFENDER premise 1, DEFENDER premise 3, CHALLENGER premise 1, CHALLENGER premise 6
+Grok      items: none
+GLM       items: DEFENDER premise 1, DEFENDER premise 3, CHALLENGER premise 1
+DeepSeek  items: DEFENDER premise 1, DEFENDER premise 3, CHALLENGER premise 1
+-- Extract_Independent_Verdict
+Gemini    items: DEFENDER premise 1, DEFENDER premise 3, CHALLENGER premise 1, CHALLENGER premise 6
+Grok      items: none
+GLM       items: DEFENDER premise 1, DEFENDER premise 3, CHALLENGER premise 1
+DeepSeek  items: DEFENDER premise 1, DEFENDER premise 3, CHALLENGER premise 1
+== F3b/F5
+quotation cut from Text 1: "LINK 1: SUPPORTED. [L1] The flesh seed is named as flesh: I" | nodes 14
+14/14 a_count_all => DEFENDER1:CURED DEFENDER3:CURED CHALLENGER1:CURED CHALLENGER6:CURED
+14/14 b_nothing => DEFENDER1:UNCURED DEFENDER3:UNCURED CHALLENGER1:UNCURED CHALLENGER6:UNCURED
+14/14 c_count_low => DEFENDER1:UNCURED DEFENDER3:UNCURED CHALLENGER1:CURED CHALLENGER6:CURED
+14/14 d_stmt_plus_count => DEFENDER1:CURED DEFENDER3:CURED CHALLENGER1:CURED CHALLENGER6:CURED
+14/14 e_stmt_quote_absent => DEFENDER1:UNCURED DEFENDER3:UNCURED CHALLENGER1:UNCURED CHALLENGER6:UNCURED
+14/14 f_wrong_standing => DEFENDER1:UNCURED DEFENDER3:UNCURED CHALLENGER1:UNCURED CHALLENGER6:UNCURED
+14/14 g_count_no_standing => DEFENDER1:UNCURED DEFENDER3:UNCURED CHALLENGER1:CURED CHALLENGER6:CURED
+F5 gemini after: {"defense_standing":"PROP-DEPENDENT","conceded_links":0,"challenge_standing":"PROP-DEPENDENT","challenger_conceded_links":1} | [AUDIT v21: CORRECTED STANDING -- SEAT: gemini; SIDE: DEFENDER; ORIGINAL: SELF-SUPPORTED, 0; COUNTED: PROP-DEPENDENT, 0]
+F5 glm (no reply): untouched {"defense_standing":"SELF-SUPPORTED","conceded_links":0,"challenge_standing":"PROP-DEPENDENT","challenger_conceded_links":3}
+== call sites
+Panel_Payloads items: K-G4 D6 vs C3, K-G3 null, K-G6 DEFENDER premise 1, K-G6 DEFENDER premise 3, K-G6 CHALLENGER premise 1, K-G6 CHALLENGER premise 6, K-G7 D6 vs C3
+Alternate_Payloads items: K-G4 D6 vs C3, K-G3 null, K-G6 DEFENDER premise 1, K-G6 DEFENDER premise 3, K-G6 CHALLENGER premise 1, K-G6 CHALLENGER premise 6, K-G7 D6 vs C3
+Extract items: DEFENDER premise 1, DEFENDER premise 3, CHALLENGER premise 1
+Panel_Cure_Check columns: PROP-DEPENDENT,1 | PROP-DEPENDENT,1
+Cure_Check columns: PROP-DEPENDENT,1 | PROP-DEPENDENT,1
+Alternate_Merge columns: PROP-DEPENDENT,1 | PROP-DEPENDENT,1 | seated 1
+== rev 12 harnesses (Worker_E)
+fx14 mode full | expected status 56/56
+fx14 mode nostmt | expected status 56/56
+fx14 nodes 14 | n0 press found, no SHORT: UNCURED 14/14 | n1 SHORT [CR2] quote not in CR2: UNCURED 14/14 | n2 SHORT [CR2] real answer: CURED 14/14 | n3 SHORT [CR2] one word changed: UNCURED 14/14 | n4 pressed in [DR2]: CR2 not an answering round 14/14 | n5 SHORT [CR2] quoting the verse words both sides quote: UNCURED 14/14 | n6 SHORT [CR3] for a verse CR3 does not name: UNCURED 14/14
+L4 both nodes same ledger text: true | L5 prose names later rounds: true
+Build_Independent_Verdict.js | defender list with CR2 blanked equals base: true | challenger list with DR2 blanked equals base: true
+Panel_Build.js | defender list with CR2 blanked equals base: true | challenger list with DR2 blanked equals base: true

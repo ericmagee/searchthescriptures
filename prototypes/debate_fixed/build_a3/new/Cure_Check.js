@@ -69,7 +69,11 @@ const CURE_RULE_G="COUNT AND STANDING (same rule). Your own numbers must agree w
  +"unanswered is UNEXHIBITED: it counts toward CONCEDED LINKS and the standings\". Cure it either by counting it: CORRECTED COUNT for that side, "
  +"your count plus every K-G6 premise of that side you do not answer by statement, with CORRECTED STANDING for that side that the count makes true "
  +"(PROP-DEPENDENT, or COLLAPSED when twice the count exceeds the number of premises listed against that side); or by a STATEMENT for that premise "
- +"that quotes, word for word, the words of the transcript that show the verse is not a pressed witness of that premise.";
+ +"that quotes, word for word, the words of the transcript that show the verse is not a pressed witness of that premise. "
+ +"K-G7 (a COLLISION POINTS line you graded DEFENDER LINK BROKEN on D<n> while your CONCEDED LINKS does not count premise n): a link is BROKEN "
+ +"only for a witness left unanswered, and a premise whose witness goes unanswered is counted. Cure it either by counting it: CORRECTED COUNT "
+ +"for DEFENDER, your count plus every such premise and every K-G6 premise of that side, with the CORRECTED STANDING that count makes true; "
+ +"or by regrading it: a RETRACTED line for that link and exactly one CORRECTED RESULT.";
 const CURE_FORM="ANSWER FORM. Write each cure as one line of its own, beginning with its keyword in capitals exactly as shown:\n"
  +"RESTATED: <the full collision line, beginning D<n> vs C<m>>\n"
  +"RETRACTED: D<n> vs C<m>\n"
@@ -85,10 +89,10 @@ const CURE_FORM="ANSWER FORM. Write each cure as one line of its own, beginning 
  +"item it must name the round that pressed the witness and quote that round's words; where a later round of the side that holds the link names the verse, it must also quote "
  +"that round's own answer. For a K-G6 item it must quote, word for word, the transcript's words that show the verse is not a pressed witness of that premise. Cured if it passes; else the violation stands. "
  +"Only these lines are read. A link not on a RETRACTED line is not retracted. A line not in this form cures nothing. Any other text is recorded only.";
-const cureLabel=x=>x.rule==='K-B'?x.link:((x.rule==='K-G1'||x.rule==='K-G4'||x.rule==='K-G6')?x.rule+' '+x.link:'K-G3 '+x.side);
+const cureLabel=x=>x.rule==='K-B'?x.link:((x.rule==='K-G1'||x.rule==='K-G4'||x.rule==='K-G6'||x.rule==='K-G7')?x.rule+' '+x.link:'K-G3 '+x.side);
 function cureAsk(items,broken){const kb=items.filter(x=>x.rule==='K-B'),kg=items.filter(x=>x.rule!=='K-B');let t='';
  if(kb.length)t+=CURE_RULE+'\n\nFLAGGED LINES:\n'+kb.map(x=>x.link+': '+String(x.line||'').trim()).join('\n');
- if(kg.length)t+=(t?'\n\n':'')+CURE_RULE_G+'\n\nFLAGGED ITEMS:\n'+kg.map(x=>cureLabel(x)+': '+((x.rule==='K-G1'||x.rule==='K-G4'||x.rule==='K-G6')?String(x.line||'').trim():x.side+' STANDING SELF-SUPPORTED while these '+x.side+' links are graded BROKEN: '+((broken||{})[x.side]||[]).join(', '))).join('\n');
+ if(kg.length)t+=(t?'\n\n':'')+CURE_RULE_G+'\n\nFLAGGED ITEMS:\n'+kg.map(x=>cureLabel(x)+': '+((x.rule==='K-G1'||x.rule==='K-G4'||x.rule==='K-G6'||x.rule==='K-G7')?String(x.line||'').trim():x.side+' STANDING SELF-SUPPORTED while these '+x.side+' links are graded BROKEN: '+((broken||{})[x.side]||[]).join(', '))).join('\n');
  return t+'\n\n'+CURE_FORM;}
 // The BROKEN links of each side on the judge's own lines, selected as drvCheck selects them (portion 3).
 function cureBroken(text){const out={DEFENDER:[],CHALLENGER:[]};if(typeof text!=='string')return out;
@@ -230,27 +234,35 @@ function cureVerdicts(items,reply,broken,rounds){const U=s=>String(s).toUpperCas
   // THE DEBATE FIXED (BB-7397, DoD 3, binding note BB-7409) K-G6: a premise the ledger marks NOT NAMED that the judge's count does not
   // count. Cured by a statement quoting the transcript, or by a CORRECTED COUNT at least the original count plus the side's K-G6 premises
   // not answered by statement, with the CORRECTED STANDING that count makes true (COLLAPSED when 2c > L, else PROP-DEPENDENT).
-  if(x.rule==='K-G6'){const sq=y=>{const q=stmtQ(stmtOf(y));return Object.keys(R).find(k=>typeof R[k]==='string'&&q.some(z=>cureFound(z,R[k])))||null;};
-   const rk=sq(x);if(rk)return res('CURED','statement quotes the transcript ('+rk+')',['STATEMENT: '+stmtOf(x)]);
-   const k6=items.filter(y=>y.rule==='K-G6'&&y.side===x.side);const needN=(x.conc||0)+k6.filter(y=>!sq(y)).length;
+  // DoD 7 (BB-7420) K-G7: a DEFENDER LINK BROKEN line on a premise the judge's count leaves uncounted. K-G6 and K-G7 share one count: the
+  // side's count plus the union of its K-G6 premises not cured by statement and its K-G7 premises not retracted. K-G7 is also cured by a
+  // RETRACTED line for the link beside exactly one CORRECTED RESULT (the seat is then counted on that result, cureCorrected).
+  const sq=y=>{const q=stmtQ(stmtOf(y));return Object.keys(R).find(k=>typeof R[k]==='string'&&q.some(z=>cureFound(z,R[k])))||null;};
+  const kNeed=sd=>{const ps=new Set();for(const y of items){if(y.side!==sd)continue;
+   if(y.rule==='K-G6'&&!sq(y))ps.add(+(String(y.link).match(/(\d+)\s*$/)||[0,-1])[1]);if(y.rule==='K-G7'&&!wd.has(U(y.link)))ps.add(+y.premise);}return ps.size;};
+  const kCount=(x,none)=>{const needN=(x.conc||0)+kNeed(x.side);
    const cs=o.count.filter(c=>c.side===x.side);const ns=[...new Set(cs.map(c=>c.n))];const ss=o.standing.filter(s=>s.side===x.side);const sv=[...new Set(ss.map(s=>s.st))];const lines=cs.map(c=>c.line).concat(ss.map(s=>s.line));
-   if(!ns.length)return res('UNCURED','no CORRECTED COUNT for '+x.side+' and no statement quoting the transcript for '+x.link,lines);
+   if(!ns.length)return res('UNCURED','no CORRECTED COUNT for '+x.side+' and '+none+' for '+x.link,lines);
    if(ns.length>1)return res('UNCURED','two differing CORRECTED COUNT lines for '+x.side,lines);
    if(ns[0]<needN)return res('UNCURED','corrected count '+ns[0]+' is below '+needN,lines);
    if(sv.length>1)return res('UNCURED','two differing CORRECTED STANDING lines for '+x.side,lines);
    const want=(x.L&&2*ns[0]>x.L)?'COLLAPSED':'PROP-DEPENDENT';const got=sv.length===1?sv[0]:(x.st||null);
    if(got!==want)return res('UNCURED','count '+ns[0]+' of '+(x.L||'?')+' makes the '+x.side+' standing '+want+'; it reads '+(got||'none'),lines);
-   return res('CURED','counted: '+x.side+' COUNT '+ns[0]+', STANDING '+want,lines);}
+   return res('CURED','counted: '+x.side+' COUNT '+ns[0]+', STANDING '+want,lines);};
+  if(x.rule==='K-G6'){const rk=sq(x);if(rk)return res('CURED','statement quotes the transcript ('+rk+')',['STATEMENT: '+stmtOf(x)]);
+   return kCount(x,'no statement quoting the transcript');}
+  if(x.rule==='K-G7'){if(wd.has(U(x.link)))return res('CURED','retracted',o.withdrawn.filter(w=>U(w.link)===U(x.link)).map(w=>w.line));
+   return kCount(x,'no RETRACTED line with one CORRECTED RESULT');}
   return res('UNCURED','unknown rule',null);});}
 // BB-7330 (option 2, the operator's "2" at 14:51 CDT): where a RETRACTED line cured an item, the seat is counted on its one CORRECTED RESULT.
 function cureCorrected(reply,v){const o=cureLines(reply&&reply.ok?reply.text:'');if(o.result.length!==1)return null;
  if(!(v||[]).some(x=>x.status==='CURED'&&/^retracted/.test(x.why||'')))return null;return {tag:o.result[0].tag,word:o.result[0].word,links:[...new Set(o.withdrawn.map(w=>w.link))]};}
 // THE DEBATE FIXED (BB-7397, DoD 5, BB-7406): a cure's CORRECTED STANDING and CORRECTED COUNT for a side with a CURED count or standing item
-// (K-G1, K-G3, K-G6) are written to the row's columns; the original is kept in the judge's text by an AUDIT line.
+// (K-G1, K-G3, K-G6, K-G7) are written to the row's columns; the original is kept in the judge's text by an AUDIT line.
 function cureSet(reply,v){const o=cureLines(reply&&reply.ok?reply.text:'');const out={};
  // BB-7417 defect 3: a side is written only when every count or standing item of that side is CURED, and not when each is a K-G6
  // statement cure (no count was checked).
- for(const side of ['DEFENDER','CHALLENGER']){const ks=(v||[]).filter(x=>x.side===side&&(x.rule==='K-G1'||x.rule==='K-G3'||x.rule==='K-G6'));
+ for(const side of ['DEFENDER','CHALLENGER']){const ks=(v||[]).filter(x=>x.side===side&&(x.rule==='K-G1'||x.rule==='K-G3'||x.rule==='K-G6'||x.rule==='K-G7'));
   if(!ks.length||ks.some(x=>x.status!=='CURED')||ks.every(x=>x.rule==='K-G6'&&/^statement/.test(String(x.why||''))))continue;
   const ns=[...new Set(o.count.filter(c=>c.side===side).map(c=>c.n))];const sv=[...new Set(o.standing.filter(s=>s.side===side).map(s=>s.st))];
   if(ns.length===1||sv.length===1)out[side]={n:ns.length===1?ns[0]:null,st:sv.length===1?sv[0]:null};}

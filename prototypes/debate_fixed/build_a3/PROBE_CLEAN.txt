@@ -57,8 +57,8 @@ Panel_Cure_Normalize_1.js    ["K-G6 DEFENDER premise 1: premise 1 (LINK 1): ... 
 Panel_Cure_Normalize_2.js    ["K-G6 DEFENDER premise 1: premise 1 (LINK 1): ... NOT NAMED: Psalm 132:11","K-G1 CHALLENGER LINK 2: LINK 2: CONCEDED","K-G3 DEFENDER: DEFENDER STANDING SELF-SUPPORTED while these DEFENDER links are graded BROKEN: LINK 4"]
 Panel_Cure_Normalize_3.js    ["K-G6 DEFENDER premise 1: premise 1 (LINK 1): ... NOT NAMED: Psalm 132:11","K-G1 CHALLENGER LINK 2: LINK 2: CONCEDED","K-G3 DEFENDER: DEFENDER STANDING SELF-SUPPORTED while these DEFENDER links are graded BROKEN: LINK 4"]
 SITE
-Panel_Payloads items: K-G4 D6 vs C3, K-G3 null, K-G6 DEFENDER premise 1, K-G6 DEFENDER premise 3, K-G6 CHALLENGER premise 1, K-G6 CHALLENGER premise 6
-Alternate_Payloads items: K-G4 D6 vs C3, K-G3 null, K-G6 DEFENDER premise 1, K-G6 DEFENDER premise 3, K-G6 CHALLENGER premise 1, K-G6 CHALLENGER premise 6
+Panel_Payloads items: K-G4 D6 vs C3, K-G3 null, K-G6 DEFENDER premise 1, K-G6 DEFENDER premise 3, K-G6 CHALLENGER premise 1, K-G6 CHALLENGER premise 6, K-G7 D6 vs C3
+Alternate_Payloads items: K-G4 D6 vs C3, K-G3 null, K-G6 DEFENDER premise 1, K-G6 DEFENDER premise 3, K-G6 CHALLENGER premise 1, K-G6 CHALLENGER premise 6, K-G7 D6 vs C3
 Extract items: DEFENDER premise 1, DEFENDER premise 3, CHALLENGER premise 1
 Panel_Cure_Check columns: PROP-DEPENDENT,1 | PROP-DEPENDENT,1
 Cure_Check columns: PROP-DEPENDENT,1 | PROP-DEPENDENT,1
@@ -80,5 +80,35 @@ J PASS got: 2 PROP-DEPENDENT | expected: 2 PROP-DEPENDENT
 K PASS got: not written | expected: not written
 L PASS got: null PROP-DEPENDENT | expected: null PROP-DEPENDENT
 4 PASS "inserts the single judge's tag" occurs 0
+FAILS 0
+K7
+M1 Panel_Payloads Gemini PASS got: D6 vs C3 | expected: D6 vs C3
+M1 Panel_Payloads Grok PASS got: none | expected: none
+M1 Panel_Payloads GLM PASS got: none | expected: none
+M1 Panel_Payloads DeepSeek PASS got: D6 vs C3 | expected: D6 vs C3
+M2a Panel_Payloads PASS got: none | expected: none
+M2b Panel_Payloads PASS got: none | expected: none
+M2c Panel_Payloads PASS got: D6 vs C3 | expected: D6 vs C3
+M3 Panel_Payloads PASS got: none | expected: none
+M4 Panel_Payloads PASS got: none | expected: none
+M1 Alternate_Payloads Gemini PASS got: D6 vs C3 | expected: D6 vs C3
+M1 Alternate_Payloads Grok PASS got: none | expected: none
+M1 Alternate_Payloads GLM PASS got: none | expected: none
+M1 Alternate_Payloads DeepSeek PASS got: D6 vs C3 | expected: D6 vs C3
+M2a Alternate_Payloads PASS got: none | expected: none
+M2b Alternate_Payloads PASS got: none | expected: none
+M2c Alternate_Payloads PASS got: D6 vs C3 | expected: D6 vs C3
+M3 Alternate_Payloads PASS got: none | expected: none
+M4 Alternate_Payloads PASS got: none | expected: none
+M1 Extract DeepSeek PASS got: D6 vs C3 | expected: D6 vs C3
+14/14 N1 PASS got: CURED | set 1 PROP-DEPENDENT | expected: CURED | set 1 PROP-DEPENDENT
+14/14 N2 PASS got: CURED | result HELD | expected: CURED | result HELD
+14/14 N3 PASS got: UNCURED | expected: UNCURED
+14/14 N4 PASS got: UNCURED | expected: UNCURED
+14/14 N5 PASS got: UNCURED | expected: UNCURED
+14/14 N6a PASS got: UNCURED UNCURED | expected: UNCURED UNCURED
+14/14 N6b PASS got: CURED CURED | expected: CURED CURED
+14/14 LABEL PASS
+TEXT Format Markdown K-G7 label PASS got: named | expected: named
 FAILS 0
 TEXT {"Alternate_Build.js K-G6 rule text": 1, "Alternate_Build.js K-G6 statement text": 1, "Alternate_Cure_Build.js K-G6 rule text": 1, "Alternate_Cure_Build.js K-G6 statement text": 1, "Alternate_Cure_Normalize.js K-G6 rule text": 1, "Alternate_Cure_Normalize.js K-G6 statement text": 1, "Alternate_Merge.js K-G6 rule text": 1, "Alternate_Merge.js K-G6 statement text": 1, "Build_Independent_Verdict.js plain sentence": 1, "Build_Save_Body framework_verdict:null": 1, "Cure_Build.js K-G6 rule text": 1, "Cure_Build.js K-G6 statement text": 1, "Cure_Check.js K-G6 rule text": 1, "Cure_Check.js K-G6 statement text": 1, "Cure_Normalize.js K-G6 rule text": 1, "Cure_Normalize.js K-G6 statement text": 1, "Init_with_Guards.js plain sentence": 2, "Panel_Build.js plain sentence": 1, "Panel_Cure_Build_1.js K-G6 rule text": 1, "Panel_Cure_Build_1.js K-G6 statement text": 1, "Panel_Cure_Build_2.js K-G6 rule text": 1, "Panel_Cure_Build_2.js K-G6 statement text": 1, "Panel_Cure_Build_3.js K-G6 rule text": 1, "Panel_Cure_Build_3.js K-G6 statement text": 1, "Panel_Cure_Check.js K-G6 rule text": 1, "Panel_Cure_Check.js K-G6 statement text": 1, "Panel_Cure_Normalize_1.js K-G6 rule text": 1, "Panel_Cure_Normalize_1.js K-G6 statement text": 1, "Panel_Cure_Normalize_2.js K-G6 rule text": 1, "Panel_Cure_Normalize_2.js K-G6 statement text": 1, "Panel_Cure_Normalize_3.js K-G6 rule text": 1, "Panel_Cure_Normalize_3.js K-G6 statement text": 1}

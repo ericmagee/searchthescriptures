@@ -20,40 +20,52 @@ LIB = [
  +"unanswered is UNEXHIBITED: it counts toward CONCEDED LINKS and the standings\". Cure it either by counting it: CORRECTED COUNT for that side, "
  +"your count plus every K-G6 premise of that side you do not answer by statement, with CORRECTED STANDING for that side that the count makes true "
  +"(PROP-DEPENDENT, or COLLAPSED when twice the count exceeds the number of premises listed against that side); or by a STATEMENT for that premise "
- +"that quotes, word for word, the words of the transcript that show the verse is not a pressed witness of that premise.";'''),
+ +"that quotes, word for word, the words of the transcript that show the verse is not a pressed witness of that premise. "
+ +"K-G7 (a COLLISION POINTS line you graded DEFENDER LINK BROKEN on D<n> while your CONCEDED LINKS does not count premise n): a link is BROKEN "
+ +"only for a witness left unanswered, and a premise whose witness goes unanswered is counted. Cure it either by counting it: CORRECTED COUNT "
+ +"for DEFENDER, your count plus every such premise and every K-G6 premise of that side, with the CORRECTED STANDING that count makes true; "
+ +"or by regrading it: a RETRACTED line for that link and exactly one CORRECTED RESULT.";'''),
  # the statement check names K-G6
  (r'''that round's own answer. Cured if it passes; else the violation stands. "''',
   r'''that round's own answer. For a K-G6 item it must quote, word for word, the transcript's words that show the verse is not a pressed witness of that premise. Cured if it passes; else the violation stands. "'''),
  # labels and the request lines
  (r'''const cureLabel=x=>x.rule==='K-B'?x.link:((x.rule==='K-G1'||x.rule==='K-G4')?x.rule+' '+x.link:'K-G3 '+x.side);''',
-  r'''const cureLabel=x=>x.rule==='K-B'?x.link:((x.rule==='K-G1'||x.rule==='K-G4'||x.rule==='K-G6')?x.rule+' '+x.link:'K-G3 '+x.side);'''),
+  r'''const cureLabel=x=>x.rule==='K-B'?x.link:((x.rule==='K-G1'||x.rule==='K-G4'||x.rule==='K-G6'||x.rule==='K-G7')?x.rule+' '+x.link:'K-G3 '+x.side);'''),
  (r'''kg.map(x=>cureLabel(x)+': '+((x.rule==='K-G1'||x.rule==='K-G4')?String(x.line||'').trim():''',
-  r'''kg.map(x=>cureLabel(x)+': '+((x.rule==='K-G1'||x.rule==='K-G4'||x.rule==='K-G6')?String(x.line||'').trim():'''),
+  r'''kg.map(x=>cureLabel(x)+': '+((x.rule==='K-G1'||x.rule==='K-G4'||x.rule==='K-G6'||x.rule==='K-G7')?String(x.line||'').trim():'''),
  # the K-G6 check
  (r'''  return res('UNCURED','unknown rule',null);});}''',
   r'''  // THE DEBATE FIXED (BB-7397, DoD 3, binding note BB-7409) K-G6: a premise the ledger marks NOT NAMED that the judge's count does not
   // count. Cured by a statement quoting the transcript, or by a CORRECTED COUNT at least the original count plus the side's K-G6 premises
   // not answered by statement, with the CORRECTED STANDING that count makes true (COLLAPSED when 2c > L, else PROP-DEPENDENT).
-  if(x.rule==='K-G6'){const sq=y=>{const q=stmtQ(stmtOf(y));return Object.keys(R).find(k=>typeof R[k]==='string'&&q.some(z=>cureFound(z,R[k])))||null;};
-   const rk=sq(x);if(rk)return res('CURED','statement quotes the transcript ('+rk+')',['STATEMENT: '+stmtOf(x)]);
-   const k6=items.filter(y=>y.rule==='K-G6'&&y.side===x.side);const needN=(x.conc||0)+k6.filter(y=>!sq(y)).length;
+  // DoD 7 (BB-7420) K-G7: a DEFENDER LINK BROKEN line on a premise the judge's count leaves uncounted. K-G6 and K-G7 share one count: the
+  // side's count plus the union of its K-G6 premises not cured by statement and its K-G7 premises not retracted. K-G7 is also cured by a
+  // RETRACTED line for the link beside exactly one CORRECTED RESULT (the seat is then counted on that result, cureCorrected).
+  const sq=y=>{const q=stmtQ(stmtOf(y));return Object.keys(R).find(k=>typeof R[k]==='string'&&q.some(z=>cureFound(z,R[k])))||null;};
+  const kNeed=sd=>{const ps=new Set();for(const y of items){if(y.side!==sd)continue;
+   if(y.rule==='K-G6'&&!sq(y))ps.add(+(String(y.link).match(/(\d+)\s*$/)||[0,-1])[1]);if(y.rule==='K-G7'&&!wd.has(U(y.link)))ps.add(+y.premise);}return ps.size;};
+  const kCount=(x,none)=>{const needN=(x.conc||0)+kNeed(x.side);
    const cs=o.count.filter(c=>c.side===x.side);const ns=[...new Set(cs.map(c=>c.n))];const ss=o.standing.filter(s=>s.side===x.side);const sv=[...new Set(ss.map(s=>s.st))];const lines=cs.map(c=>c.line).concat(ss.map(s=>s.line));
-   if(!ns.length)return res('UNCURED','no CORRECTED COUNT for '+x.side+' and no statement quoting the transcript for '+x.link,lines);
+   if(!ns.length)return res('UNCURED','no CORRECTED COUNT for '+x.side+' and '+none+' for '+x.link,lines);
    if(ns.length>1)return res('UNCURED','two differing CORRECTED COUNT lines for '+x.side,lines);
    if(ns[0]<needN)return res('UNCURED','corrected count '+ns[0]+' is below '+needN,lines);
    if(sv.length>1)return res('UNCURED','two differing CORRECTED STANDING lines for '+x.side,lines);
    const want=(x.L&&2*ns[0]>x.L)?'COLLAPSED':'PROP-DEPENDENT';const got=sv.length===1?sv[0]:(x.st||null);
    if(got!==want)return res('UNCURED','count '+ns[0]+' of '+(x.L||'?')+' makes the '+x.side+' standing '+want+'; it reads '+(got||'none'),lines);
-   return res('CURED','counted: '+x.side+' COUNT '+ns[0]+', STANDING '+want,lines);}
+   return res('CURED','counted: '+x.side+' COUNT '+ns[0]+', STANDING '+want,lines);};
+  if(x.rule==='K-G6'){const rk=sq(x);if(rk)return res('CURED','statement quotes the transcript ('+rk+')',['STATEMENT: '+stmtOf(x)]);
+   return kCount(x,'no statement quoting the transcript');}
+  if(x.rule==='K-G7'){if(wd.has(U(x.link)))return res('CURED','retracted',o.withdrawn.filter(w=>U(w.link)===U(x.link)).map(w=>w.line));
+   return kCount(x,'no RETRACTED line with one CORRECTED RESULT');}
   return res('UNCURED','unknown rule',null);});}'''),
  # DoD 5: the corrected standing and count are written to the row
  (r'''const cureCorrLine=(seat,orig,c)=>''',
   r'''// THE DEBATE FIXED (BB-7397, DoD 5, BB-7406): a cure's CORRECTED STANDING and CORRECTED COUNT for a side with a CURED count or standing item
-// (K-G1, K-G3, K-G6) are written to the row's columns; the original is kept in the judge's text by an AUDIT line.
+// (K-G1, K-G3, K-G6, K-G7) are written to the row's columns; the original is kept in the judge's text by an AUDIT line.
 function cureSet(reply,v){const o=cureLines(reply&&reply.ok?reply.text:'');const out={};
  // BB-7417 defect 3: a side is written only when every count or standing item of that side is CURED, and not when each is a K-G6
  // statement cure (no count was checked).
- for(const side of ['DEFENDER','CHALLENGER']){const ks=(v||[]).filter(x=>x.side===side&&(x.rule==='K-G1'||x.rule==='K-G3'||x.rule==='K-G6'));
+ for(const side of ['DEFENDER','CHALLENGER']){const ks=(v||[]).filter(x=>x.side===side&&(x.rule==='K-G1'||x.rule==='K-G3'||x.rule==='K-G6'||x.rule==='K-G7'));
   if(!ks.length||ks.some(x=>x.status!=='CURED')||ks.every(x=>x.rule==='K-G6'&&/^statement/.test(String(x.why||''))))continue;
   const ns=[...new Set(o.count.filter(c=>c.side===side).map(c=>c.n))];const sv=[...new Set(o.standing.filter(s=>s.side===side).map(s=>s.st))];
   if(ns.length===1||sv.length===1)out[side]={n:ns.length===1?ns[0]:null,st:sv.length===1?sv[0]:null};}
@@ -93,16 +105,10 @@ LEDGER_FN = r'''
 // does not count as CONCEDED or UNEXHIBITED (by "premise n", or "LINK m"), is one item. No ledger or no count line in the text: no item.
 function drvPromptText(body){try{const b=body||{};const out=[];if(b.systemInstruction&&b.systemInstruction.parts)b.systemInstruction.parts.forEach(p=>out.push(String(p.text||'')));
  (b.messages||[]).forEach(m=>out.push(typeof m.content==='string'?m.content:JSON.stringify(m.content)));(b.contents||[]).forEach(c=>(c.parts||[]).forEach(p=>out.push(String(p.text||''))));return out.join('\n');}catch(e){return '';}}
-function drvLedger(text,ptext,dConc,cConc,dStand,cStand){const items=[],marks=[];if(typeof text!=='string'||typeof ptext!=='string')return {items,marks};
- const i=ptext.indexOf('AGAINST THE DEFENDER, answered in [CR3]:');const j=i<0?-1:ptext.indexOf('AGAINST THE CHALLENGER, answered in [DR3]:',i);const k=j<0?-1:ptext.indexOf('A verse marked NOT NAMED',j);
- if(i<0||j<0||k<0)return {items,marks};
- const prem=s=>s.split('\n').map(l=>l.trim()).filter(l=>/^premise \d+/.test(l));const LG={DEFENDER:prem(ptext.slice(i,j)),CHALLENGER:prem(ptext.slice(j,k))};
- const T=text.replace(/[*_`]+/g,'');
- const countLine=side=>{const m=T.match(side==='DEFENDER'?/^[ \t>#-]*CONCEDED LINKS[ \t]*:.*$/im:/^[ \t>#-]*CHALLENGER CONCEDED LINKS[ \t]*:.*$/im);return m?m[0]:null;};
- // The count line's own clauses (BB-7417 defects 1-2): a premise or LINK number is counted when the CONCEDED or UNEXHIBITED word that
- // governs it is not negated. The governing word is the one in the number's own comma part, else the nearest in the clause; lists
- // ("premises 1 and 3", "1, 3") and ranges ("1-3") count every member; "not conceded" counts nothing; "no ... or UNEXHIBITED" counts nothing.
- const countedSet=line=>{const P=new Set(),K=new Set();const NEG=/\b(?:not|no|never|none|neither|nor)\b/gi;
+// The count line's own clauses (BB-7417 defects 1-2): a premise or LINK number is counted when the CONCEDED or UNEXHIBITED word that
+// governs it is not negated. The governing word is the one in the number's own comma part, else the nearest in the clause; lists
+// ("premises 1 and 3", "1, 3") and ranges ("1-3") count every member; "not conceded" counts nothing; "no ... or UNEXHIBITED" counts nothing.
+function drvCounted(line){const P=new Set(),K=new Set();const NEG=/\b(?:not|no|never|none|neither|nor)\b/gi;
   for(const cl of String(line).replace(/^[^:]*:/,'').split(/[;.](?=\s|$)/)){
    const W=[...cl.matchAll(/\b(?:UNEXHIBITED|CONCEDED)\b/gi)].map(w=>{const pre=cl.slice(0,w.index);const ns=[...pre.matchAll(NEG)];const g=ns.length?ns[ns.length-1].index:-1;
     return {at:w.index,end:w.index+w[0].length,neg:g>=0&&!/\b(?:and|but|so|thus|therefore|hence)\b/i.test(pre.slice(g))};});
@@ -111,8 +117,29 @@ function drvLedger(text,ptext,dConc,cConc,dStand,cStand){const items=[],marks=[]
     const own=W.filter(w=>part(w.at)===part(m.index));const gap=w=>w.at>=m.index+m[0].length?w.at-(m.index+m[0].length):Math.abs(m.index-w.end);
     const gw=(own.length?own:W).reduce((x,y)=>gap(y)<gap(x)?y:x);if(gw.neg)continue;const T=/^link/i.test(m[1])?K:P;
     for(const q of m[2].split(/\s*(?:,|and|&)\s*/)){const r=q.match(/(\d+)\s*(?:-|–|to)\s*(\d+)/);if(r){for(let z=+r[1];z<=+r[2]&&z-+r[1]<50;z++)T.add(z);}else if(/\d/.test(q))T.add(+q.match(/\d+/)[0]);}}}
-  return {P,K};};
- for(const side of ['DEFENDER','CHALLENGER']){const cl=countLine(side);if(cl===null)continue;const CS=countedSet(cl);
+  return {P,K};}
+const drvCountLine=(T,side)=>{const m=T.match(side==='DEFENDER'?/^[ \t>#-]*CONCEDED LINKS[ \t]*:.*$/im:/^[ \t>#-]*CHALLENGER CONCEDED LINKS[ \t]*:.*$/im);return m?m[0]:null;};
+// DoD 7 (BB-7420) K-G7: a COLLISION POINTS line graded DEFENDER LINK BROKEN on D<n> whose premise n (or LINK n) the same judge's CONCEDED LINKS
+// line does not count. No word test. Not raised where K-G1 already raised the link. Defender side only: the challenger count numbers premises
+// from the defender's list, not by C<j>. L and the standing are read from the judge's DEFENSE STANDING line.
+function drvBroken(text,dConc,dStand,prior){const items=[],marks=[];if(typeof text!=='string')return {items,marks};const T=text.replace(/[*_`]+/g,'');
+ const cl=drvCountLine(T,'DEFENDER');if(cl===null)return {items,marks};const CS=drvCounted(cl);const lm=T.match(/^[ \t>#-]*DEFENSE STANDING[ \t]*:[^\n]*?\bL\s*=\s*(\d+)/im);const L=lm?+lm[1]:null;
+ for(const line of text.split('\n')){const u=line.toUpperCase().replace(/[*_`]+/g,'').trim();
+  const m=u.match(/^(?:[-•]|\d+[.)])?\s*D(\d+)\b\s*:?\s*(?:D\1\b\s*)?(.*)$/);if(!m||!/^VS\.?\s/.test(m[2]))continue;
+  const g=m[2].match(/(DEFENDER LINK BROKEN|CHALLENGER LINK BROKEN|UNDERDETERMINED)/);if(!g||g[1]!=='DEFENDER LINK BROKEN')continue;
+  const id=(u.match(/^(?:[-•]|\d+[.)])?\s*(D\d+\s+VS\.?\s+C\d+)/)||[null,'D'+m[1]])[1].replace(/\s+VS\.?\s+/,' vs ');const n=+m[1];
+  if(CS.P.has(n)||CS.K.has(n))continue;if((prior||[]).some(x=>x.rule==='K-G1'&&x.link===id))continue;
+  items.push({rule:'K-G7',side:'DEFENDER',link:id,line,premise:n,conc:dConc,st:dStand,L});
+  marks.push('[AUDIT v21: DEBATE RULE VIOLATION (K-G7) -- '+id+' DEFENDER LINK BROKEN while CONCEDED LINKS does not count premise '+n+'. REVIEW THIS ROW.]');}
+ return {items,marks};}
+function drvLedger(text,ptext,dConc,cConc,dStand,cStand){const items=[],marks=[];if(typeof text!=='string'||typeof ptext!=='string')return {items,marks};
+ const i=ptext.indexOf('AGAINST THE DEFENDER, answered in [CR3]:');const j=i<0?-1:ptext.indexOf('AGAINST THE CHALLENGER, answered in [DR3]:',i);const k=j<0?-1:ptext.indexOf('A verse marked NOT NAMED',j);
+ if(i<0||j<0||k<0)return {items,marks};
+ const prem=s=>s.split('\n').map(l=>l.trim()).filter(l=>/^premise \d+/.test(l));const LG={DEFENDER:prem(ptext.slice(i,j)),CHALLENGER:prem(ptext.slice(j,k))};
+ const T=text.replace(/[*_`]+/g,'');
+ const countLine=side=>drvCountLine(T,side);
+
+ for(const side of ['DEFENDER','CHALLENGER']){const cl=countLine(side);if(cl===null)continue;const CS=drvCounted(cl);
   for(const l of LG[side]){const m=l.match(/^premise (\d+)(?: \(LINK (\d+)\))?: .*NOT NAMED: (.+)$/);if(!m||/^none\s*$/i.test(m[3]))continue;
    if(CS.P.has(+m[1])||CS.K.has(+(m[2]||m[1])))continue;
    const id=side+' premise '+m[1];
@@ -127,6 +154,7 @@ RAISE = {
  p.drv_uncured=DRV.items.length;''',
    r'''const DRV=drvCheck(WT,p.conceded_links,p.challenger_conceded_links,p.defense_standing,p.challenge_standing,drvAsk);for(const x of DRV.marks)marks.push(x);
  const DL=drvLedger(WT,drvPromptText(jd.body),p.conceded_links,p.challenger_conceded_links,p.defense_standing,p.challenge_standing);for(const x of DL.items)DRV.items.push(x);for(const x of DL.marks)marks.push(x);
+ const DB=drvBroken(WT,p.conceded_links,p.defense_standing,DRV.items);for(const x of DB.items)DRV.items.push(x);for(const x of DB.marks)marks.push(x);
  p.drv_uncured=DRV.items.length;'''),
  ],
  'Alternate_Payloads': [
@@ -134,12 +162,14 @@ RAISE = {
   p.drv_uncured=DRV.items.length;''',
    r'''  const DRV=drvCheck(WT,p.conceded_links,p.challenger_conceded_links,p.defense_standing,p.challenge_standing,drvAsk);for(const x of DRV.marks)marks.push(x);
   const DL=drvLedger(WT,drvPromptText(a.body),p.conceded_links,p.challenger_conceded_links,p.defense_standing,p.challenge_standing);for(const x of DL.items)DRV.items.push(x);for(const x of DL.marks)marks.push(x);
+  const DB=drvBroken(WT,p.conceded_links,p.defense_standing,DRV.items);for(const x of DB.items)DRV.items.push(x);for(const x of DB.marks)marks.push(x);
   p.drv_uncured=DRV.items.length;'''),
  ],
  'Extract_Independent_Verdict': [
   (r'''const DRV=drvCheck(raw0,conceded_links,challenger_conceded_links,defense_standing,challenge_standing,askedD);for(const x of DRV.marks)raw+='\n\n'+x;''',
    r'''const DRV=drvCheck(raw0,conceded_links,challenger_conceded_links,defense_standing,challenge_standing,askedD);for(const x of DRV.marks)raw+='\n\n'+x;
-const DL=drvLedger(raw0,drvPromptText(prev&&prev.verdictBody),conceded_links,challenger_conceded_links,defense_standing,challenge_standing);for(const x of DL.items)DRV.items.push(x);for(const x of DL.marks)raw+='\n\n'+x;'''),
+const DL=drvLedger(raw0,drvPromptText(prev&&prev.verdictBody),conceded_links,challenger_conceded_links,defense_standing,challenge_standing);for(const x of DL.items)DRV.items.push(x);for(const x of DL.marks)raw+='\n\n'+x;
+const DB=drvBroken(raw0,conceded_links,defense_standing,DRV.items);for(const x of DB.items)DRV.items.push(x);for(const x of DB.marks)raw+='\n\n'+x;'''),
  ],
 }
 # the function goes in front of drvCheck in each raise node
@@ -160,7 +190,7 @@ t += '- Verdict of the debate: ' + (r.panel_verdict ? '**' + r.panel_verdict + '
   (r'''t += '## Single judge: ' + SJN + ' (' + (r.judge_model || '') + '): ' + (r.framework_verdict || '?') + VSIDE''',
    r'''t += '## SECOND OPINION (single judge, not the verdict): ' + SJN + ' (' + (r.judge_model || '') + '): ' + (SJV || '?') + VSIDE'''),
   (r'''const DRV_RULE = { 'K-B': 'Two kinds of layer (K-B)', 'K-G1': 'Conceded count (K-G1)', 'K-G3': 'Standing (K-G3)', 'K-G4': 'Pressing sentence (K-G4)' };''',
-   r'''const DRV_RULE = { 'K-B': 'Two kinds of layer (K-B)', 'K-G1': 'Conceded count (K-G1)', 'K-G3': 'Standing (K-G3)', 'K-G4': 'Pressing sentence (K-G4)', 'K-G6': 'Unanswered premise not counted (K-G6)' };'''),
+   r'''const DRV_RULE = { 'K-B': 'Two kinds of layer (K-B)', 'K-G1': 'Conceded count (K-G1)', 'K-G3': 'Standing (K-G3)', 'K-G4': 'Pressing sentence (K-G4)', 'K-G6': 'Unanswered premise not counted (K-G6)', 'K-G7': 'BROKEN on a premise the count leaves out (K-G7)' };'''),
   (r'''// (BB-7154 finding 2, BB-7157). Only CURED rows correct; the stored columns keep the judge's own answer.''',
    r'''// (BB-7154 finding 2, BB-7157). Only CURED rows correct. From BB-7406 (DoD 5) the stored columns carry the correction too; the judge's
 // own answer is kept in its text by an AUDIT v21 CORRECTED STANDING line.'''),
