@@ -15,3 +15,13 @@ FAIL, DoD 18 (E_ECHO_NEW12.txt): a retraction passes the reason test when its ST
  E1 control, no reason: UNCURED. E2 label copied in full, then "Retracted ... which cures the pressing violation": CURED, HELD-1.
  E3 the BROKEN line pasted as prose: CURED, HELD-1.
 The test then reads the retracted line's own grounds as its reason.
+
+## Re-verify after amendment 3 (22a4aec; falsifiers 5e8f598 committed first)
+- F18e, F18f, F18f2 CURED on 56cc79b (at56_f18e.txt), UNCURED on 22a4aec; F18e.0 UNCURED both; F18g CURED both.
+- My E1 to E3 (e_echo.cjs): all UNCURED on 22a4aec.
+- F15, F12, F15c, F18, F18b, F18b2, F18d.1-3, F16.1-3 as before; F17 rerun on fx/kjv25.json (0282498b): heads and Verdict HELD for Gemini, counts 1 and 3, "sent as alternate for Grok, not seated" (rerun3.txt).
+- Regression (regression3.txt): 7 of 8 equal to base; h_f11_27795 the declared move.
+- Changed set still the 15 of CHANGED12.txt; NEW12_MD5S.json 63 entries, 0 mismatches; cureReasoned identical in all 14; rulings 105 and 7564 text in 14 of 14.
+- PASS against DoD 15 to 18 as ruled (7571: drop only text equal to the flagged or BROKEN line).
+- LIMIT, measured (e_probe.cjs): P1 a fragment of the flagged line ([DR1] and its quotation) after the bar, no reason: CURED, HELD-1.
+  P2 the flagged line with one word changed: CURED, HELD-1. The reader cannot tell these from P3, a real reason quoting the same kind of words (CURED).
