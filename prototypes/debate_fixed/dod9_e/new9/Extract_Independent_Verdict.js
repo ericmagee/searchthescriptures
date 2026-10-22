@@ -355,7 +355,7 @@ function drvBroken(text,dConc,dStand,prior,cConc,cStand,ptext){const items=[],ma
  // DoD 9: each side's COUNTED PREMISES line; its absence is written to the row; a line whose number differs from its count is K-G8.
  const LK=drvLinkMap(ptext);const CP={DEFENDER:drvCP(T,'DEFENDER',LK),CHALLENGER:drvCP(T,'CHALLENGER',LK)};
  for(const sd of ['DEFENDER','CHALLENGER']){if(drvCountLine(T,sd)===null)continue;const cp=CP[sd],sc=sd==='DEFENDER'?dConc:cConc;
-  if(!cp.present){marks.push('[AUDIT v21: COUNTED PREMISES '+sd+' LINE '+(cp.why==='unreadable'?'UNREADABLE':'ABSENT')+' -- the checks by number fall back to the stated count (A).]');continue;}
+  if(!cp.present){marks.push('[AUDIT v21: COUNTED PREMISES '+sd+' LINE '+(cp.why==='unreadable'?'UNREADABLE: "'+String(cp.line||'').trim().slice(0,200).replace(/[\[\]]/g,'')+'"':'ABSENT')+' -- the checks by number fall back to the stated count (A).]');continue;}
   if(typeof sc==='number'&&cp.set.size!==sc){items.push({rule:'K-G8',side:sd,link:sd+' COUNTED PREMISES',line:cp.line,premise:null,conc:cp.set.size,st:sd==='DEFENDER'?dStand:cStand,L:sd==='DEFENDER'?L:LC});
    marks.push('[AUDIT v21: DEBATE RULE VIOLATION (K-G8) -- COUNTED PREMISES '+sd+' names '+cp.set.size+' premise(s) while the count is '+sc+'. REVIEW THIS ROW.]');}}
  const dBase=CP.DEFENDER.present?CP.DEFENDER.set.size:dConc;const cZero=drvCountLine(T,'CHALLENGER')!==null&&cConc===0;
