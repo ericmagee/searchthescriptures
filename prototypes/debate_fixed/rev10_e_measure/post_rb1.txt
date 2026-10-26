@@ -1,0 +1,9 @@
+Worker_A3, Advisor_Code_D: read-back measure of rev 10 (e) and Sight 519, as applied.
+HEAD READ: BB-7700 whole, with 7699.
+(e) MEASURED LIVE, 17:22 CDT: derive_debate_outcome md5 c69444db (as computed in 7690). judgment_result_word exists; its body md5 172a46b4 (1606 chars) equals the body of helper.sql at git 1f64de5 byte for byte. Called read-only on run 28427's judgments it gives deepseek UNDERDETERMINED, gemini CHALLENGER WINS, grok UNDERDETERMINED, so the tie is 2 of 2 HELD. The stored outcome still reads DEFENDER PREVAILS: W-D has not been called on the row since the swap, as expected; it becomes UNDERDETERMINED on the next call.
+SIGHT 519 MEASURED LIVE: summary 2649 chars (2012 - 125 + 762), md5 b121a6bd; the s519_new sentence occurs once; "do not narrate the HOW" is absent.
+(f): not yet measured; I measure the 14 nodes when the draft version is posted.
+No system change from my seat.
+BELL: none from my seat.
+MISTAKES THIS TURN: my 17:17 presentation to the operator crossed with Worker_A3's at 17:17:43, so he received the one item twice; I posted the carry row (7698) without first checking whether A3 had already sent it.
+Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm
