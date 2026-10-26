@@ -24,11 +24,12 @@ const raw=R.CR3;const qa=raw.indexOf(q.slice(0,60));const nm=L.cureRefs(raw).fil
 console.log('F19 geometry: quote chars',q.length,'| raw quote start',qa,'| namings',JSON.stringify(nm));
 console.log('F19 quote found in CR3 whole:',L.cureFound(q,R.CR3));
 // F19b / F19b2: a 60-character SHORT quote cut from CR3 at the window's left edge for the first naming in the LINK block that holds it
-// (lo = max(block start, naming - 300)). F19b ends two characters before lo (no overlap); F19b2 ends one character after lo (overlap 1).
+// (lo = max(block start, naming - 300)). F19b ends two characters before lo (no overlap); F19b2 ends at the first letter at or after lo (a space at the edge is stripped by the reader,
+// so the overlap is taken on a letter; corrected after the first run, see RUN_new13 notes).
 {const hr=/^[ \t>*#_-]*LINK\s+\d+/gmi;const H=[];let h;while((h=hr.exec(raw)))H.push(h.index);const p0=nm.find(x=>x>7000);const a0=Math.max(...H.filter(x=>x<=p0));const lo=Math.max(a0,p0-300);
  const mk=(end)=>raw.slice(end-60,end);const esc=x=>x.replace(/"/g,'\\"');
  const rp=(qq)=>reply.split('\n').map(l=>/^SHORT: D6 vs C3 \|/.test(l)?'SHORT: D6 vs C3 | [CR3] | "'+esc(qq)+'" | the answer relabels the rows and does not meet them':l).join('\n');
- for(const [nmF,end] of [['F19b  ends before the window (no overlap)',lo-1],['F19b2 ends inside the window (overlap 1)',lo+1]]){const qq=mk(end);
+ for(const [nmF,end] of [['F19b  ends before the window (no overlap)',lo-1],['F19b2 ends inside the window (its last letter is the first letter at or after lo)',(()=>{let e=lo;while(!/[A-Za-z]/.test(raw[e]))e++;return e+1;})()]]){const qq=mk(end);
   console.log(nmF+': naming',p0,'block',a0,'lo',lo,'quote',JSON.stringify(qq),'=>',show(L.cureVerdicts([it6],{ok:true,text:rp(qq)},BR,R)));}}
 // 27893 F15c
 const X2=JSON.parse(fs.readFileSync('fx/rounds27893.json','utf8'));const R2={CR1:X2.cr1,DR1:X2.gr1,CR2:X2.cr2,DR2:X2.gr2,CR3:X2.cr3,DR3:X2.dr3};

@@ -1,0 +1,13 @@
+F19  28269 DeepSeek D6 vs C3 => CURED | pressed: quotation found in DR2; SHORT found for [CR3] mat 1:18, luk 1:35
+F19a 28269 DeepSeek D3 vs C1 => UNCURED | no quotation found in the named round
+F19 geometry: quote chars 505 | raw quote start -1 | namings [4006,8071,8813,9200]
+F19 quote found in CR3 whole: true
+F19b  ends before the window (no overlap): naming 8071 block 6706 lo 7771 quote " and bare Cain\" (Genesis 4:1); \"Adam knew his wife again; an" => CURED | pressed: quotation found in DR2; SHORT found for [CR3] mat 1:18, luk 1:35
+F19b2 ends inside the window (overlap 1): naming 8071 block 6706 lo 7771 quote "nd bare Cain\" (Genesis 4:1); \"Adam knew his wife again; and " => CURED | pressed: quotation found in DR2; SHORT found for [CR3] mat 1:18, luk 1:35
+F19c.1 (F15c.1) => UNCURED | no quotation found in the named round
+F19c.2 (F15c.2) => UNCURED | no quotation found in the named round
+F19d geometry: unrelated sentence at 6401 length 60 | Luke 3:23 namings [3982,4567,12888]
+F19d SHORT from the answer block => CURED (base expectation CURED) | pressed: quotation found in DR1; SHORT found for [CR2] luk 3:23; [CR3] luk 3:23
+F19d SHORT quoting the unrelated sentence (7194 defect 1) => UNCURED (base expectation UNCURED) | the later round [CR2] luk 3:23; [CR3] luk 3:23; no SHORT line quoting its answer
+F19d PRESSED true, no SHORT => UNCURED (base expectation UNCURED) | the later round [CR2] luk 3:23; [CR3] luk 3:23; no SHORT line quoting its answer
+F19d SHORT with a false quote => UNCURED (base expectation UNCURED) | the later round [CR2] luk 3:23; [CR3] luk 3:23; no SHORT line quoting its answer

@@ -89,3 +89,17 @@ CHANGED SET (planned): the 14 library copies (cureNamed widen, shortOk, cureRepo
 Report, Panel Build, Panel Payloads, Alternate Payloads. DoD 20's writer after its ruling.
 LIMIT: F19's widening is by the quotation's length as given; a quotation whose matched text is much longer in the round (emphasis, escapes)
 is measured short. The audit reads C-labels by [DR3] LINK headings; a [DR3] without LINK headings gives no audit line (nothing to compare).
+
+ADDENDUM 1 (Worker_E, during the build; two build readings corrected; no falsifier expectation changed).
+A1. F19's build reading (window widened by the quotation's length) is not the same as overlap: the reader strips edge spaces and folds
+    escapes, so a match shorter than the quotation fits wholly in the margin. F19b caught it on the first build (RUN_new13_attempt1_cure.txt:
+    F19b CURED where UNCURED was declared). Rebuilt: each window is widened by 2 x the quotation's length + 40 and the two margins are kept
+    alone; a quotation counts when it is found in the widened text and in neither margin alone. That is overlap for a single occurrence;
+    a second occurrence inside a margin makes the test refuse (never accept). F19b2's construction is moved to end on the first letter at or
+    after the window edge (a space there is stripped by the reader, so no word overlaps); its expectation is unchanged.
+A2. F26's build reading of C<j> named "the defender's premise <i> by the ledger's LINK label". Wrong: the ledger's "(LINK m)" is the defender's
+    own link the premise props; [DR3] LINK j answers premise j (28269: LINK 1 Matthew 1:25 timing = premise 1, ... LINK 6 1 Chronicles 2:34 =
+    premise 6). Declared before the Panel Build change: the prompt block lists, in [DR3] order, "C<j> = [DR3] LINK <its heading number>: <the
+    verses that block names>", the same blocks the audit reads (c_audit.js), headed "CHALLENGER LINK NUMBERS -- computed by the system from
+    [DR3], not by a model". It is appended to the ledger text in Panel Build's system message, so a [DR3] without LINK headings adds nothing.
+    The audit's reason names the round as "DR3" without brackets, so the AUDIT line holds no inner "]".
