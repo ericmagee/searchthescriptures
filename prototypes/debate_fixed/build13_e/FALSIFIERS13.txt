@@ -103,3 +103,6 @@ A2. F26's build reading of C<j> named "the defender's premise <i> by the ledger'
     verses that block names>", the same blocks the audit reads (c_audit.js), headed "CHALLENGER LINK NUMBERS -- computed by the system from
     [DR3], not by a model". It is appended to the ledger text in Panel Build's system message, so a [DR3] without LINK headings adds nothing.
     The audit's reason names the round as "DR3" without brackets, so the AUDIT line holds no inner "]".
+A3. (before the run of F26 on new13 was taken as the result) The C list names only references written with their book: Panel Build's
+    reader gives a bare reference the last book named, and on 28269 that printed Genesis 1:19 and Luke 1:18 for Matthew's verses. The audit
+    keeps the library reader (its inherited extras only widen the union, never flag).

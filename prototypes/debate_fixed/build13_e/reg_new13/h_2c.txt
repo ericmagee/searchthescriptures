@@ -1,0 +1,77 @@
+PASS Panel T1 [1,3,6]/3, C [1]/1                          got: none 
+PASS Panel T2 [1,6]/2                                     got: K-G6 DEFENDER premise 3 
+PASS Panel T3 []/0                                        got: K-G6 DEFENDER premise 1, K-G6 DEFENDER premise 3, K-G7 D6 vs C3 
+PASS Panel T4 absent/2                                    got: none | marks: DEFENDER ABSENT 
+PASS Panel T5 absent/0                                    got: K-G6 DEFENDER premise 1, K-G6 DEFENDER premise 3, K-G7 D6 vs C3 | marks: DEFENDER ABSENT 
+PASS Panel T6 ["1","3"]/2                                 got: none | marks: DEFENDER INVALID ("1","3") 
+PASS Panel T7 [1.5]/1                                     got: none | marks: DEFENDER INVALID (1.5) 
+PASS Panel T8 "LINK 1, LINK 3"/2                          got: none | marks: DEFENDER INVALID "LINK 
+PASS Panel T9 [1,3]/3                                     got: K-G8 DEFENDER COUNTED PREMISES, K-G7 D6 vs C3 
+PASS Panel T10 shifted, [5]/1 (K-G7 only, as declared)    got: none 
+PASS Panel T11 C []/0                                     got: K-G6 CHALLENGER premise 1 
+PASS Panel F-dup [1,1,3]/3                                got: K-G8 DEFENDER COUNTED PREMISES, K-G7 D6 vs C3 
+PASS Panel F-dup [1,1,3]/2                                got: K-G7 D6 vs C3 
+PASS Panel F-range [0]/1                                  got: none | marks: DEFENDER INVALID (0) 
+PASS Panel F-range [7]/1 (6 premises)                     got: none | marks: DEFENDER INVALID (7) 
+PASS Panel F-range [-1]/1                                 got: none | marks: DEFENDER INVALID (-1) 
+PASS Panel U1 no count lines, [1]/1                       got: K-G6 DEFENDER premise 3, K-G7 D6 vs C3 
+PASS Panel U2 no count lines, [1,3]/2                     got: K-G7 D6 vs C3 
+PASS Panel U3 K-G7 L from the ledger                      got: 6 
+PASS Panel U4 no count lines, C count 0, C BROKEN never named got: K-G6 CHALLENGER premise 1, K-G7 D3 vs C2 
+PASS Panel U6 K-G7 challenger L from the ledger           got: 2 
+PASS Panel U7 no count lines, [1,3]/3                     got: K-G8 DEFENDER COUNTED PREMISES, K-G7 D6 vs C3 
+PASS Panel U5 no count lines, D count absent, [1]         got: none 
+PASS Panel T12 prose line, key absent/0                   got: K-G6 DEFENDER premise 1, K-G6 DEFENDER premise 3, K-G7 D6 vs C3 | marks: DEFENDER ABSENT 
+PASS Alter T1 [1,3,6]/3, C [1]/1                          got: none 
+PASS Alter T2 [1,6]/2                                     got: K-G6 DEFENDER premise 3 
+PASS Alter T3 []/0                                        got: K-G6 DEFENDER premise 1, K-G6 DEFENDER premise 3, K-G7 D6 vs C3 
+PASS Alter T4 absent/2                                    got: none | marks: DEFENDER ABSENT 
+PASS Alter T5 absent/0                                    got: K-G6 DEFENDER premise 1, K-G6 DEFENDER premise 3, K-G7 D6 vs C3 | marks: DEFENDER ABSENT 
+PASS Alter T6 ["1","3"]/2                                 got: none | marks: DEFENDER INVALID ("1","3") 
+PASS Alter T7 [1.5]/1                                     got: none | marks: DEFENDER INVALID (1.5) 
+PASS Alter T8 "LINK 1, LINK 3"/2                          got: none | marks: DEFENDER INVALID "LINK 
+PASS Alter T9 [1,3]/3                                     got: K-G8 DEFENDER COUNTED PREMISES, K-G7 D6 vs C3 
+PASS Alter T10 shifted, [5]/1 (K-G7 only, as declared)    got: none 
+PASS Alter T11 C []/0                                     got: K-G6 CHALLENGER premise 1 
+PASS Alter F-dup [1,1,3]/3                                got: K-G8 DEFENDER COUNTED PREMISES, K-G7 D6 vs C3 
+PASS Alter F-dup [1,1,3]/2                                got: K-G7 D6 vs C3 
+PASS Alter F-range [0]/1                                  got: none | marks: DEFENDER INVALID (0) 
+PASS Alter F-range [7]/1 (6 premises)                     got: none | marks: DEFENDER INVALID (7) 
+PASS Alter F-range [-1]/1                                 got: none | marks: DEFENDER INVALID (-1) 
+PASS Alter U1 no count lines, [1]/1                       got: K-G6 DEFENDER premise 3, K-G7 D6 vs C3 
+PASS Alter U2 no count lines, [1,3]/2                     got: K-G7 D6 vs C3 
+PASS Alter U3 K-G7 L from the ledger                      got: 6 
+PASS Alter U4 no count lines, C count 0, C BROKEN never named got: K-G6 CHALLENGER premise 1, K-G7 D3 vs C2 
+PASS Alter U6 K-G7 challenger L from the ledger           got: 2 
+PASS Alter U7 no count lines, [1,3]/3                     got: K-G8 DEFENDER COUNTED PREMISES, K-G7 D6 vs C3 
+PASS Alter U5 no count lines, D count absent, [1]         got: none 
+PASS Alter T12 prose line, key absent/0                   got: K-G6 DEFENDER premise 1, K-G6 DEFENDER premise 3, K-G7 D6 vs C3 | marks: DEFENDER ABSENT 
+PASS Extra T1 [1,3,6]/3, C [1]/1                          got: none 
+PASS Extra T2 [1,6]/2                                     got: K-G6 DEFENDER premise 3 
+PASS Extra T3 []/0                                        got: K-G6 DEFENDER premise 1, K-G6 DEFENDER premise 3, K-G7 D6 vs C3 
+PASS Extra T4 absent/2                                    got: none | marks: DEFENDER ABSENT 
+PASS Extra T5 absent/0                                    got: K-G6 DEFENDER premise 1, K-G6 DEFENDER premise 3, K-G7 D6 vs C3 | marks: DEFENDER ABSENT 
+PASS Extra T6 ["1","3"]/2                                 got: none | marks: DEFENDER INVALID ("1","3") 
+PASS Extra T7 [1.5]/1                                     got: none | marks: DEFENDER INVALID (1.5) 
+PASS Extra T8 "LINK 1, LINK 3"/2                          got: none | marks: DEFENDER INVALID "LINK 
+PASS Extra T9 [1,3]/3                                     got: K-G8 DEFENDER COUNTED PREMISES, K-G7 D6 vs C3 
+PASS Extra T10 shifted, [5]/1 (K-G7 only, as declared)    got: none 
+PASS Extra T11 C []/0                                     got: K-G6 CHALLENGER premise 1 
+PASS Extra F-dup [1,1,3]/3                                got: K-G8 DEFENDER COUNTED PREMISES, K-G7 D6 vs C3 
+PASS Extra F-dup [1,1,3]/2                                got: K-G7 D6 vs C3 
+PASS Extra F-range [0]/1                                  got: none | marks: DEFENDER INVALID (0) 
+PASS Extra F-range [7]/1 (6 premises)                     got: none | marks: DEFENDER INVALID (7) 
+PASS Extra F-range [-1]/1                                 got: none | marks: DEFENDER INVALID (-1) 
+PASS Extra U1 no count lines, [1]/1                       got: K-G6 DEFENDER premise 3, K-G7 D6 vs C3 
+PASS Extra U2 no count lines, [1,3]/2                     got: K-G7 D6 vs C3 
+PASS Extra U3 K-G7 L from the ledger                      got: 6 
+PASS Extra U4 no count lines, C count 0, C BROKEN never named got: K-G6 CHALLENGER premise 1, K-G7 D3 vs C2 
+PASS Extra U6 K-G7 challenger L from the ledger           got: 2 
+PASS Extra U7 no count lines, [1,3]/3                     got: K-G8 DEFENDER COUNTED PREMISES, K-G7 D6 vs C3 
+PASS Extra U5 no count lines, D count absent, [1]         got: none 
+PASS Extra T12 prose line, key absent/0                   got: K-G6 DEFENDER premise 1, K-G6 DEFENDER premise 3, K-G7 D6 vs C3 | marks: DEFENDER ABSENT 
+PASS T13 Extract on 27665 single judge                    got: K-G6 DEFENDER premise 1, K-G6 DEFENDER premise 3, K-G7 D6 vs C3 
+PASS TEXT schema lines in Panel Build                     got: 2 
+PASS TEXT no line sentence (Panel Build, BIV)             got: 0 
+MARKS md5 aec6df8b04b04b3bccbbbdb95190bc9b
+TOTAL pass 75 fail 0

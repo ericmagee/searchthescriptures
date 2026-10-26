@@ -1,0 +1,31 @@
+== node h13_cure.cjs new13
+F19  28269 DeepSeek D6 vs C3 => CURED | pressed: quotation found in DR2; SHORT found for [CR3] mat 1:18, luk 1:35
+F19a 28269 DeepSeek D3 vs C1 => UNCURED | no quotation found in the named round
+F19 geometry: quote chars 505 | raw quote start -1 | namings [4006,8071,8813,9200]
+F19 quote found in CR3 whole: true
+F19b  ends before the window (no overlap): naming 8071 block 6706 lo 7771 quote " and bare Cain\" (Genesis 4:1); \"Adam knew his wife again; an" => UNCURED | the later round [CR3] mat 1:18, luk 1:35; no SHORT line quoting its answer
+F19b2 ends inside the window (its last letter is the first letter at or after lo): naming 8071 block 6706 lo 7771 quote "d bare Cain\" (Genesis 4:1); \"Adam knew his wife again; and s" => CURED | pressed: quotation found in DR2; SHORT found for [CR3] mat 1:18, luk 1:35
+F19c.1 (F15c.1) => UNCURED | no quotation found in the named round
+F19c.2 (F15c.2) => UNCURED | no quotation found in the named round
+F19d geometry: unrelated sentence at 6401 length 60 | Luke 3:23 namings [3982,4567,12888]
+F19d SHORT from the answer block => CURED (base expectation CURED) | pressed: quotation found in DR1; SHORT found for [CR2] luk 3:23; [CR3] luk 3:23
+F19d SHORT quoting the unrelated sentence (7194 defect 1) => UNCURED (base expectation UNCURED) | the later round [CR2] luk 3:23; [CR3] luk 3:23; no SHORT line quoting its answer
+F19d PRESSED true, no SHORT => UNCURED (base expectation UNCURED) | the later round [CR2] luk 3:23; [CR3] luk 3:23; no SHORT line quoting its answer
+F19d SHORT with a false quote => UNCURED (base expectation UNCURED) | the later round [CR2] luk 3:23; [CR3] luk 3:23; no SHORT line quoting its answer
+== node h_qr.cjs new13 (28269 citation chain)
+166 148 1 17
+  CHALLENGER R1 Judges 11:39 WORDING NOT FOUND IN Judges "have not known man"
+b1c23cfb69069e1cc699f07bdccd9278  qr28269_new13.json
+== node h13_fm.cjs new13
+chars 204841 codes_left 5
+573f7036fd379fbf82c4af5f97206d9f  fm28269_new13.md
+== rev 8 set in A3's tree
+rev 8 set output: reg_new13.txt md5 631d07d3cd4c94f530c8214490d0e63c
+d0b9494a7149571254be436158c6aa63  reg_new13/h_2c.txt
+3b818338c03d6f938d273ccdd30be393  reg_new13/h_ask.txt
+a13fa3fc67794d86de2b58c7eb2b9610  reg_new13/h_cure.txt
+5617dd4b10b2c7be11cce2be654c2ae8  reg_new13/h_f11_27795.txt
+714ae64d35a022ab1882ebfe35dd1447  reg_new13/h_f11b_27795.txt
+f18e2da7eddb49d7717606dcd712abdc  reg_new13/h_f12_27795.txt
+9163e799212105b9844328b990bd344c  reg_new13/h_site.txt
+73569d5dc7f22913e40ae3755fdf46a4  reg_new13/h_site2.txt
