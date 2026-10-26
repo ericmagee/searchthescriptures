@@ -1,0 +1,19 @@
+DoD 20 database runs (Worker_E, 26 Oct). Status poll first: ODV1 newest execution 28269 status success, stopped 08:18:03Z; none running.
+Each run is a DO block that raises at its end, so every write in it rolls back (function replacement, row prep, judgment edits, audit rows).
+The patch: sql/derive_dod20_patch_fragment.sql (asserts md5 173f9465 and each of four anchors exactly once). The blocks: sql/test_F20*.sql.
+First attempt at F20: refused P3R01 at the replacement (the DDL audit trigger needs SET LOCAL truth.session_id); everything rolled back; rerun
+with the prefix.
+BASE (live function, prepared row: panel_verdict, panel_fingerprint, framework_verdict and the four fields null):
+ fn md5 173f9465687982ab2bcab5935897caab | four NULL NULL NULL NULL | review_notes md5 ed33f37293af42f113e2da8889c43398 | split 3-0 |
+ outcome UNDERDETERMINED | judged {gemini,glm,grok} | ud {gemini:COLLISION,glm:COLLISION,glm:RESULT,grok:COLLISION,grok:RESULT} | block NULL |
+ pv HELD | fv HELD | fp d2fe28eed88b58ab412f37f2dd9a3d42 | written true changed true
+F20 NEW (same prepared row): patched md5 450aebe1101a67a77aa9a812f5e4d497 = installed md5 | four SELF-SUPPORTED 0 SELF-SUPPORTED 0 |
+ review_notes md5 ed33f372 (unchanged) | added none | split, outcome, judged, ud, block, pv, fv, fp all equal to BASE | written true changed true
+ -> PASS.
+F20b NEW split (judgments' defense_standing gemini SELF-SUPPORTED, glm PROP-DEPENDENT, grok COLLAPSED): four NULL 0 SELF-SUPPORTED 0 |
+ added "[AUDIT v21: PANEL STANDINGS -- no majority among the 3 counted seat(s) on defense_standing; left null. Counted seats (defense standing,
+ conceded, challenge standing, challenger conceded): gemini SELF-SUPPORTED, 0, SELF-SUPPORTED, 0; glm PROP-DEPENDENT, 0, SELF-SUPPORTED, 0; grok
+ COLLAPSED, 0, SELF-SUPPORTED, 0.]" | fp cfcdd968 (moves because the judgments were edited) -> PASS.
+F20b2 NEW stamped row (no prep): four PROP-DEPENDENT 1 SELF-SUPPORTED 0 (as stored) | review_notes md5 ed33f372 | changed false -> PASS.
+AFTER all runs (read): live fn md5 173f9465; row panel_verdict HELD, fp d2fe28ee, defense_standing PROP-DEPENDENT, conceded 1, review_notes md5
+ ed33f372; judgments gemini, glm, grok SELF-SUPPORTED. Nothing persisted.

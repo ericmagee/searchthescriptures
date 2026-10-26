@@ -74,7 +74,10 @@ function k3Marks(text,dGiven,cGiven){if(typeof text!=='string')return [];
 // copied, the negation window widened from {0,2} to {0,4}). A review line in that seat's verdict_raw only; no grade, verdict, outcome
 // or fingerprint changes. Premise ids are not compared, so equal counts on different premises stay silent. Single judge: the saved row
 // on a regrade, Build Save Body's saveBody on a live run.
-let SJ=null;try{if(RGL){SJ=$('Regrade Row').all().map(i=>i.json).find(r=>r&&r.id)||null;}else if($('Build Save Body').isExecuted){SJ=$('Build Save Body').first().json.saveBody||null;}}catch(e){SJ=null;}
+// BB-7397 rev 9 DoD 20 (v): on a live run the single judge's four values come from Build Save Body's sj_values (saveBody carries null for them);
+// on a regrade the row's four are the single judge's only while panel_verdict is null; on a stamped row they are the panel's, so the check
+// compares the VOID counts only and its line says so.
+let SJ=null;try{if(RGL){const RR=$('Regrade Row').all().map(i=>i.json).find(r=>r&&r.id)||null;SJ=RR?(RR.panel_verdict==null?RR:Object.assign({},RR,{defense_standing:null,challenge_standing:null,conceded_links:null,challenger_conceded_links:null,sj_void_only:true})):null;}else if($('Build Save Body').isExecuted){const B=$('Build Save Body').first().json;SJ=B.saveBody?Object.assign({},B.saveBody,B.sj_values||{}):null;}}catch(e){SJ=null;}
 function voidCounts(text){if(typeof text!=='string')return null;
  const D='[\\s\\u2010-\\u2015\\u2212-]';const SEP='[\\s:'+D.slice(3,-1)+']*?';
  const upper=text.toUpperCase().replace(/[*_`]+/g,'');const upperD=upper.replace(/CHALLENGER\s+CONCEDED\s+LINKS/g,'XCHALLENGERCONCEDEDLINKSX');
@@ -94,7 +97,7 @@ function sameModelMarks(p,WT){if(!SJ||!SJ.judge_model||p.judge_api_model!==SJ.ju
  cmp('defender conceded count',p.conceded_links,SJ.conceded_links);cmp('challenger conceded count',p.challenger_conceded_links,SJ.challenger_conceded_links);
  const vp=voidCounts(WT),vs=voidCounts(SJ.independent_verdict_raw);if(vp&&vs){cmp('defender VOID count',vp.def,vs.def);cmp('challenger VOID count',vp.ch,vs.ch);}
  if(!diffs.length)return [];
- return ['[AUDIT v1: SAME-MODEL DIVERGENCE -- seat '+p.judge_seat+' and the single judge both ran '+p.judge_api_model+'; seat vs single judge: '+diffs.join('; ')+'. Counts only; premise ids are not compared. REVIEW THIS ROW.]'];}
+ return ['[AUDIT v1: SAME-MODEL DIVERGENCE -- seat '+p.judge_seat+' and the single judge both ran '+p.judge_api_model+'; seat vs single judge: '+diffs.join('; ')+'. Counts only; premise ids are not compared.'+(SJ.sj_void_only?' Stamped row: VOID counts only.':'')+' REVIEW THIS ROW.]'];}
 // BB-6904 (b), portion 3: DEBATE RULE VIOLATION, rule B on the judge's own BROKEN lines. A line graded DEFENDER LINK BROKEN or
 // CHALLENGER LINK BROKEN must exhibit, on the line itself, two lower layers of different kinds (6903): [L1] with quoted words, [L2] with
 // a source word (own script, transliteration marks, or a Strong's number; 6926; the Latin range narrowed to transliteration letters, 6936),
