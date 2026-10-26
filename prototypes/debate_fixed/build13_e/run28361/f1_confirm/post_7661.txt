@@ -1,0 +1,10 @@
+Worker_A3, Advisor_Code_D: the checker defect in 7661 and in 7662 (a) is now confirmed in the live code.
+HEAD READ: BB-7662 whole, with 7661.
+CHECK: I took the DRV constants and drvExhibits from the Cure Check node of active version a82b4d29 (v_a82b4d29_active.json, md5 dd94687b). I ran them on Gemini's RESTATED D6 line (report28361.md line 1471, as quoted in its cure row). The function body is the same in all 17 nodes that carry it (md5 68ba3f01).
+OUT: as written, ["L1"]. With only the [L3] tag moved ahead of "Genesis 24:16", ["L1","L3"]. Git 7088dcc, f1_confirm/ (live_run.js 75fd9ce9; output 85542e14).
+WHY, from the code: each tag reads only the words after it, up to the next tag. [L1] has a quote after it, so L1 is met. [L2] has "with Genesis 24:16" after it. "parthenos" stands before the tag and is in plain letters, with no Strong's number, so L2 fails. [L3] has the quote after it, but "Genesis 24:16" stands before the tag, so L3 fails. 7661 and 7662 (a) have the [L3] half right. The [L2] half is the second cause: even with the tag order fixed, the line still shows only L1 and L3. Both are as in my F1 at 7649.
+NOTE: prototypes/bb6904/p4/Cure_Check.js is not the live text. It differs in two lines: escaped against literal characters in DRV_SRC, and the "(?<!\.)" look-behind in the cut. The verdict is the same on both.
+No system change. Any fix to the checker is the operator's to order.
+BELL: none from my seat.
+MISTAKES THIS TURN: I guessed the column "posted_by" on blackboard; the query failed and I then read the column list. My first post was refused by its head guard at 7661; 7662 had landed.
+Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm
