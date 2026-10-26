@@ -1,0 +1,17 @@
+quotation cut from Text 1: "LINK 1: SUPPORTED. [L1] The flesh seed is named as flesh: I" | nodes 14
+   a_count_all          DEFENDER premise 1 CURED | DEFENDER premise 3 CURED | CHALLENGER premise 1 CURED | CHALLENGER premise 6 CURED
+   b_nothing            DEFENDER premise 1 UNCURED (no CORRECTED COUNT for DEFENDER and no statement quoting the transcript for DEFENDER premise 1) | DEFENDER premise 3 UNCURED (no CORRECTED COUNT for DEFENDER and no statement quoting the transcript for DEFENDER premise 3) | CHALLENGER premise 1 UNCURED (no CORRECTED COUNT for CHALLENGER and no statement quoting the transcript for CHALLENGER premise 1) | CHALLENGER premise 6 UNCURED (no CORRECTED COUNT for CHALLENGER and no statement quoting the transcript for CHALLENGER premise 6)
+   c_count_low          DEFENDER premise 1 UNCURED (corrected count 1 is below 2) | DEFENDER premise 3 UNCURED (corrected count 1 is below 2) | CHALLENGER premise 1 CURED | CHALLENGER premise 6 CURED
+   d_stmt_plus_count    DEFENDER premise 1 CURED | DEFENDER premise 3 CURED | CHALLENGER premise 1 CURED | CHALLENGER premise 6 CURED
+   e_stmt_quote_absent  DEFENDER premise 1 UNCURED (corrected count 1 is below 2) | DEFENDER premise 3 UNCURED (corrected count 1 is below 2) | CHALLENGER premise 1 UNCURED (no CORRECTED COUNT for CHALLENGER and no statement quoting the transcript for CHALLENGER premise 1) | CHALLENGER premise 6 UNCURED (no CORRECTED COUNT for CHALLENGER and no statement quoting the transcript for CHALLENGER premise 6)
+   f_wrong_standing     DEFENDER premise 1 UNCURED (count 2 of 6 makes the DEFENDER standing PROP-DEPENDENT; it reads COLLAPSED) | DEFENDER premise 3 UNCURED (count 2 of 6 makes the DEFENDER standing PROP-DEPENDENT; it reads COLLAPSED) | CHALLENGER premise 1 UNCURED (count 3 of 6 makes the CHALLENGER standing PROP-DEPENDENT; it reads COLLAPSED) | CHALLENGER premise 6 UNCURED (count 3 of 6 makes the CHALLENGER standing PROP-DEPENDENT; it reads COLLAPSED)
+   g_count_no_standing  DEFENDER premise 1 UNCURED (count 2 of 6 makes the DEFENDER standing PROP-DEPENDENT; it reads SELF-SUPPORTED) | DEFENDER premise 3 UNCURED (count 2 of 6 makes the DEFENDER standing PROP-DEPENDENT; it reads SELF-SUPPORTED) | CHALLENGER premise 1 CURED | CHALLENGER premise 6 CURED
+14/14 a_count_all => DEFENDER1:CURED DEFENDER3:CURED CHALLENGER1:CURED CHALLENGER6:CURED
+14/14 b_nothing => DEFENDER1:UNCURED DEFENDER3:UNCURED CHALLENGER1:UNCURED CHALLENGER6:UNCURED
+14/14 c_count_low => DEFENDER1:UNCURED DEFENDER3:UNCURED CHALLENGER1:CURED CHALLENGER6:CURED
+14/14 d_stmt_plus_count => DEFENDER1:CURED DEFENDER3:CURED CHALLENGER1:CURED CHALLENGER6:CURED
+14/14 e_stmt_quote_absent => DEFENDER1:UNCURED DEFENDER3:UNCURED CHALLENGER1:UNCURED CHALLENGER6:UNCURED
+14/14 f_wrong_standing => DEFENDER1:UNCURED DEFENDER3:UNCURED CHALLENGER1:UNCURED CHALLENGER6:UNCURED
+14/14 g_count_no_standing => DEFENDER1:UNCURED DEFENDER3:UNCURED CHALLENGER1:CURED CHALLENGER6:CURED
+F5 gemini after: {"defense_standing":"PROP-DEPENDENT","conceded_links":0,"challenge_standing":"PROP-DEPENDENT","challenger_conceded_links":1} | [AUDIT v21: CORRECTED STANDING -- SEAT: gemini; SIDE: DEFENDER; ORIGINAL: SELF-SUPPORTED, 0; COUNTED: PROP-DEPENDENT, 0]
+F5 glm (no reply): untouched {"defense_standing":"SELF-SUPPORTED","conceded_links":0,"challenge_standing":"PROP-DEPENDENT","challenger_conceded_links":3}

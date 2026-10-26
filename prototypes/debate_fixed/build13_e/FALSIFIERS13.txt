@@ -1,0 +1,91 @@
+THE DEBATE FIXED (BB-7397), P2D rev 9 (7606, amendments 1-2 at A3 git 06cdc3c; shape 7607; E AGREED 7608; rulings 7609, 7610). Builder Worker_E, verifier Worker_A3.
+Falsifiers are declared here BEFORE any file change. They are pre-write checks on stored text, not tests; the test is the live run.
+BASE: base13/ = the 63 code nodes of new12 (A3 git 22a4aec), byte-equal to NEW12_MD5S.json "new12" and to every jsCode of active version 75dcb465
+      (scratchpad fetch pub75dcb465.json, md5 f9a1db84). new13/ starts as a copy of base13.
+
+FIXTURES (fx/), each checked against the database by md5 this session (FIXTURES.txt lists them):
+ report28269.md       A3 step8 copy of the Drive report, md5 89fc9d23.
+ rounds28269.json     the six rounds of row fd6a5ca9; each round md5-equal to its column (claude_r1 CR1 5f9f73c1, engine_r1 DR1 1b0c19b0,
+                      claude_r2 CR2 654b1215, engine_r2 DR2 9700ed9d, engine_r3 CR3 1a60dc8e, challenger_r3 DR3 daeedd9b).
+ row28269_small.json  the row without the rounds, synthesis, citation_check, drv_removed, independent_verdict_raw: md5 bca3f251 = SQL md5.
+ drv_removed.json     drv_removed::text, md5 40b752b0 = SQL md5. vr_glm.txt def2fa73, vr_gemini.txt 4ab3ce4e, vr_grok.txt 51123607 = SQL md5s.
+ kjv28269.json        build12_a3 kjv25.json plus kjv_supp28269.json (14 rows of Judges and Mark read by SQL: the cited verses and the
+                      Find Words patterns the chain builds for the two books kjv25 lacks, by need_kjv.cjs).
+ rounds27433.json     row 27433's rounds from the bb6904 rev 8 five.json (md5 73ae11e1), for the 7194 defect 1 cases.
+ rounds27893.json b236c740, row_27893.json 87b40317, report27893.md de6a7448: copies of build12_a3/fx.
+HARNESSES: h13_cure.cjs (cure reader), h13_fm.cjs (Format Markdown + Plain Rule Lines on 28269), h_qr.cjs (A3's citation chain), c_audit.js
+ (the DoD 26 audit as built; prototype measured below). The rev 8 set is run unchanged from A3's tree at 22a4aec (run13.sh).
+HARNESS CHECK on base13: h13_fm.cjs reproduces fx/report28269.md line for line except the synthesis (stubbed) and the Run time line (clock).
+ h_qr.cjs on base13: 167 checked, 148 match, 2 do not, 17 too short, 26 nearer-reference matches (as the report).
+
+F19 (DoD 19, K-G5 window) BUILD READING: a SHORT or STATEMENT quotation counts when it is found in the answering round's LINK block within the
+    naming window widened on each side by the quotation's own length (characters as given), clipped to that LINK block. For a match of that
+    length this is the same as the match overlapping the window. Built in cureNamed / shortOk, 14 library copies, identically.
+ F19   28269 DeepSeek K-G4 D6 vs C3 (reply and item line from the report): base UNCURED "no SHORT line quoting its answer"; new CURED.
+       (Geometry: the 505-character SHORT quote begins at CR3 7647; the naming of Matthew 1:18 at 8071 opens its window at 7771.)
+ F19a  28269 DeepSeek K-G4 D3 vs C1: UNCURED both ("no quotation found in the named round"; PRESSED names [DR1], the words are [DR2]'s).
+ F19b  a 60-character SHORT quote cut from CR3 ending before the 7771 window edge, no overlap: UNCURED both.
+ F19b2 the same cut ending one character inside the window: base UNCURED; new CURED.
+ F19c  F15c.1 and F15c.2 (27893 single judge K-G1 D6 vs C3, A3's method): UNCURED both (7607 note (ii)).
+ F19d  the 7194 defect 1 cases on 27433 D4 vs C2 (Luke 3:23): the unrelated Zerubbabel sentence (CR3 6401, namings 3982, 4567, 12888) stays
+       UNCURED; the answer-block SHORT stays CURED; no SHORT and a false quote stay UNCURED.
+
+F20 (DoD 20) NOT DECLARED: the writer is open (BB-7611: Build Save Body runs before the panel; derive_debate_outcome is the sole writer of the
+    panel fields). F20 and F20b are declared after the ruling, before any DoD 20 change.
+
+F21 (DoD 21) BUILD READING: in Format Markdown's panel section, a judgment counted after its cure (its [AUDIT v21: CORRECTED RESULT -- ...
+    ORIGINAL: X; COUNTED: Y (CODE); RETRACTED: ...] line, with Y not X) prints first a line "CLAUSE: CODE -- counted after the judge's cure;
+    retracted: <links>" in place of its own CLAUSE line; Plain Rule Lines turns it into "Rule applied: <Y>, because <rule text of CODE>
+    (the clause counted after the judge's cure; retracted: <links>)." Under it one line "The judge's own lines before its cure, not counted:"
+    and the judge's RESULT, CLAUSE and KEYSTONE lines, each as a quoted line ("> "), the CLAUSE read by Plain Rule Lines as now.
+    The head's "Reason:" (from the judge's RESULT line) is not printed for such a judge.
+ F21  on 28269: Gemini's section shows "Rule applied: HELD, because none of the conditions for BROKEN or PARTIAL was met (the clause counted
+      after the judge's cure; retracted: D3 vs C1, D6 vs C1)." and the before-cure line over "> RESULT: CHALLENGER WINS", "> Rule applied:
+      BROKEN, ...", "> KEYSTONE: D6 -- BROKEN". Grok's and GLM's sections: unchanged text. base: as the report (lines 593-595).
+ F21b 27893 (A3's f17.cjs, the rev 8 F17 run): Gemini's section there moves the same way (PREDICTED MOVE of the rev 8 F17 output);
+      DeepSeek's (counted, its tag unchanged by the cure) does not.
+
+F22 (DoD 22) BUILD READING: built in Citation Scan, where the round texts are (Quote Report has only the items). A quotation whose words
+    (folded as OPPW folds them, at least 6 words) occur in order inside one sentence of an earlier round of the other side, the sentence's
+    matched span holding at most twice the quotation's word count, carries opp_short=true; Quote Report leaves out a WORDING NOT FOUND item with
+    opp_short as it leaves out opp_words (rulings 98, DoD 14): the other side's words, not a citation.
+ F22  on 28269: the Matthew 1:19 item ("a just man does not put away the mother of his own child", DR1 1029 "A just man does not plan to put away
+      the mother of his own child.") base WORDING NOT FOUND, in the report; new left out: 166 checked, 148 match, 1 does not, 17 too short.
+      Judges 11:39 "have not known man" stays WORDING NOT FOUND. Every other item key (side|round|ref|status) unchanged.
+ F22b the same items on 27893, 27795 and 27665 rounds (A3 h_qr fixtures): item lists unchanged, or each change named.
+
+F23 (DoD 23) "*Reads that gave no text:*" names the nodes only. 28269: base "Reserve Build: Node 'Reserve Build' hasn't been executed; Alternate
+    Cure Build: Node 'Alternate Cure Build' hasn't been executed."; new "Reserve Build; Alternate Cure Build."
+
+F24 (DoD 24) (1) cureReport cuts STATEMENT and JUDGE STATEMENT above 600 characters at the last space at or before 597 and adds "..." (the
+    LINE field's 300 cut is unchanged); (2) the report's violations cell for a row not cured reads "<STATEMENT> -- Not cured: <WHY>.".
+ F24  constructed 700-character statement: base cut mid-word, no "..."; new ends at a word with "...". 28269 report: DeepSeek D3 vs C1 and
+      D6 vs C3 cells read "... | Th -- Not cured: no quotation found in the named round." and "... relative to the -- Not cured: ...".
+
+F25 (DoD 25) BUILD READING: head and panel sections number judges by seat order (Panel Build's judges; without it, the ORDER list). A seat
+    removed for uncured violations keeps its number with its head line "Panel judge N: <name> (<model>): **<tag>** ... (removed: <k> debate
+    rule violation(s) not cured; not counted; <alternate> sat in its place)"; its alternate is "Panel judge N, alternate: ..." in the head and
+    in its section heading. Other lines and tables keep their order.
+ F25  28269 head: 1 DeepSeek (removed), 1 alternate GLM, 2 Gemini, 3 Grok; sections: "Panel judge 1, alternate: GLM", "Panel judge 2: Gemini",
+      "Panel judge 3: Grok" (base: 1 Gemini, 2 Grok, 3 GLM, report lines 12-14, 585, 614, 650). Sent to: line unchanged (696).
+
+F26 (DoD 26) BUILD READING: C<j> = the challenger's [DR3] LINK j (the guide's [DR3] order). (1) Panel Build's prompt carries, after the ledger,
+    "CHALLENGER LINK NUMBERS -- computed by the system from [DR3], not by a model" with one line per [DR3] LINK block: "C<j> = [DR3] LINK j,
+    answering the defender's premise <i>: <verses that premise carries>" (premise by the ledger's LINK label). Alternate and reserve judges
+    reuse Panel Build's bodies, so the block reaches every panel payload once. The single judge's prompt is not changed.
+    (2) Panel Payloads and Alternate Payloads append, per collision line off the guide, "[AUDIT v21: C-LABEL OFF THE GUIDE -- <label>: <why>;
+    recorded, not a violation, not counted.]"; Format Markdown prints each as a Result row "C-label off the guide (panel judge <name>)".
+    Not an item, not a cure, no count or verdict reads it (7607 note (i)).
+ F26b (pen-accepted, 7610) a compound label C1/C2/C3 passes when each number is within the count and the line's verses meet the union of those
+      LINKs' verses.
+ F26  measured on base text with the prototype (c_audit.js): Gemini D1 vs C5 (Luke 3:23), D2 vs C6 (Galatians 4:4), D4 vs C4 (John 1:13),
+      D5 vs C7 (1 Chronicles 2:34); GLM D1 vs C5 (Luke 3:23), D6 vs C7; none for Grok or DeepSeek. Equal to the pen's hand count (7606).
+      new: exactly these six lines in the judgments and the report; the prompt block once per panel body; no rendered line changes outside
+      F21-F26 (diff of fm28269 base vs new).
+
+WRONG IF: F19, F19b2, F21, F22, F23, F24, F25 or F26 silent on new; F19a, F19b, F19c or F19d moves; the rev 8 set moves outside its predicted
+moves (F21b, F25 on F17); a node outside the changed set differs.
+CHANGED SET (planned): the 14 library copies (cureNamed widen, shortOk, cureReport cut), Format Markdown, Plain Rule Lines, Citation Scan, Quote
+Report, Panel Build, Panel Payloads, Alternate Payloads. DoD 20's writer after its ruling.
+LIMIT: F19's widening is by the quotation's length as given; a quotation whose matched text is much longer in the round (emphasis, escapes)
+is measured short. The audit reads C-labels by [DR3] LINK headings; a [DR3] without LINK headings gives no audit line (nothing to compare).
