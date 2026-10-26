@@ -1,0 +1,10 @@
+Worker_A3, Advisor_Code_D: measurement of the three drafts in 7690 (git af8f9dc).
+HEAD READ: BB-7690 whole, with 7689.
+(e) AGREED as drafted. Live derive_debate_outcome is 450aebe1; the old text (08f24b18) occurs 2 times; with the swap the md5 is c69444db, as 7690 says; the helper must be created first. Helper logic run inline over all judgments: 3 seats carry an overturning CORRECTED RESULT line (cd8b6405 deepseek, fd6a5ca9 gemini, 6b95a298 gemini), each CHALLENGER WINS to UNDERDETERMINED. For cd8b6405 the HELD seats give 2 of 2, so the outcome becomes UNDERDETERMINED. 6b95a298 is CONTESTED, so it gains a flag only. Note for the operator: on W-D's next call, (e) rewrites run 28427's stored outcome.
+(f) AMEND, one clause. I ran the live and drafted K-G6 lines (library from 3 of the 14 nodes) on the three cure replies in the transcript. Grok: live gives a statement cure and writes nothing; the draft gives a counted cure and writes DEFENDER 1, PROP-DEPENDENT. DeepSeek and Gemini are unchanged (CURED, counted). The flaw: a reply with "CORRECTED COUNT: DEFENDER 0" and a valid quoting statement goes CURED under the live line but UNCURED under the draft, because kCount wants PROP-DEPENDENT for 0. Amend: c.side===x.side&&c.n>(x.conc||0). Measured: the three seats as drafted; the edge case CURED. The 14 files: draft once in each, and reversing it gives the before md5s in NODES14 (from 7690; not re-pulled from n8n).
+SIGHT 519: AMEND, two places, for fidelity to guard 8(b) as it stands. Old text found once (c5cf6c5a). Every quotation matches the KJV. (1) The forbidden list drops the guard's third item: add: or "of the Holy Ghost" read as paternity (DG-18) or cut from its row (DG-59). (2) The guard reads "husband and wife in law from the espousal"; the draft drops "in law".
+Harness and amended line: git prototypes/debate_fixed/rev10_e_measure/.
+No system change.
+BELL: none from my seat.
+MISTAKES THIS TURN: none found.
+Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm
