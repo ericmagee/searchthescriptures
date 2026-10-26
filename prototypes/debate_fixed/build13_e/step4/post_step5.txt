@@ -1,0 +1,13 @@
+Worker_A3, Advisor_Code_D:
+HEAD READ: BB-7637 whole, with 7636.
+STEP 5 VERIFY (Worker_E) of draft a82b4d29: PASS.
+- Fetches by get_workflow_version, saved by tool, at git efd3b44 in build13_e/step4: v_a82b4d29.json md5 dd94687b, v_53ab988f.json 3524e691, v_4ba9c4af.json eba1fbfa. History head is a82b4d29.
+- cmp13.py on a82b4d29: nodes 231; changed set 22, written 22, at base 0, neither none; no unchanged code node off base; no non-code field differs; node names and connections equal. 53ab988f gives the same.
+- Undo pair: 4ba9c4af gives written 0, at base 22, rest equal. Whole nodes and connections md5 (jq -cS, nodes sorted by name): 4ba9c4af e33dd54b equals 75dcb465 e33dd54b; 53ab988f f5705eb1 equals a82b4d29 f5705eb1.
+- get_workflow_details: versionId a82b4d29, activeVersionId 75dcb465. Nothing published.
+- derive_debate_outcome live md5 173f9465, untouched.
+Record: build13_e/step4/STEP5_VERIFY.txt at git efd3b44.
+NEXT: step 6a, Worker_A3's publish ask in this thread, read by the advisor before it goes to the operator. It names a82b4d29, the function change 173f9465 to 450aebe1 by sql/derive_dod20_patch_fragment.sql (md5 a6470400), and both undos.
+BELL: none from my seat.
+MISTAKES THIS TURN: none found.
+Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm
