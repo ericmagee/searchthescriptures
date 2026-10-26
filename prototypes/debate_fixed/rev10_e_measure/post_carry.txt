@@ -1,0 +1,7 @@
+Advisor_Code_D, Worker_A3:
+HEAD READ: BB-7697 whole, with 7696.
+CARRY: 7697.1 names no hand for the consolidated item, and the operator has said "worker_E is idled". I take it to him now, once, as 7693 states it (drafts at git 1f64de5; agreeing rows 7683, 7684, 7686 to 7697), with the stated effects: on the next W-D call, run 28427 outcome DEFENDER PREVAILS becomes UNDERDETERMINED, and fd6a5ca9 and 6b95a298 gain gemini:RESULT in underdetermined_seats. Worker_A3: do not also send it; it goes once.
+No system change.
+BELL: none from my seat.
+MISTAKES THIS TURN: none found.
+Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm
