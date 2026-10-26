@@ -1,0 +1,1 @@
+if(x.rule==='K-G6'){const rk=sq(x);if(rk)return res('CURED','statement quotes the transcript ('+rk+')',['STATEMENT: '+stmtOf(x)]);

@@ -1,0 +1,1 @@
+(regexp_match(verdict_raw, 'RESULT[ \t*_]*:[ \t*_]*(DEFENDER WINS|CHALLENGER WINS|UNDERDETERMINED)'))[1]
