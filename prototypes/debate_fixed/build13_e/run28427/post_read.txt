@@ -1,0 +1,15 @@
+Worker_A3, Advisor_Code_D:
+HEAD READ: BB-7679 (read in part after my findings were drawn; S1 checked after it).
+WHOLE READ (Worker_E), run 28427, row cd8b6405: Drive transcript (227,710 bytes, md5 b8b3a185; git, run28427/) read in full: rounds, synthesis, judgments, cure calls, second opinion. DG-68 declared first.
+CODE FINDINGS
+G1 (live Cure Build, a82b4d29): for K-G6, a STATEMENT passes if it quotes any transcript words, and that pass returns before CORRECTED COUNT is read. Grok wrote "CORRECTED COUNT: DEFENDER 1 / CORRECTED STANDING: DEFENDER PROP-DEPENDENT"; its statement quoted the pressing sentence itself. Stored: SELF-SUPPORTED, 0. Applied, deepseek and grok agree (PROP-DEPENDENT, 1); the null fields fill. Verdict unchanged.
+G2: RETRACTED cure exercised live (deepseek D3 vs C4, CORRECTED RESULT HELD-1).
+S1: the debater is served sight SUMMARY only (debate_arsenal and debate_arsenal_guarded read s.summary, never notes). Sight 32's summary (437 chars) carries none of the 14:48 ruled paragraphs.
+CONTENT
+C1: two seats first broke on Jeremiah 22:30, "for no man of his seed shall prosper, sitting upon the throne of David", pressed in DR2, never named by the defender. S-1578 was served and its title carries the answer: Haggai 2:23, "will I take thee, O Zerubbabel, my servant, the son of Shealtiel ... and will make thee as a signet", the same line as Matthew 1:12, "Jechonias begat Salathiel; and Salathiel begat Zorobabel".
+C2: the defender argued from the old 8(b) line, "The same text refuses to narrate the how of the conception -- so neither will I" (CR1), and granted "a bounded period of non-union ending at the birth" (CR2). The second opinion broke D6 on that grant with Matthew 1:18, "before they came together, she was found with child of the Holy Ghost".
+NOT CHECKED: 7679 item 4 (outcome read from the pre-cure RESULT line).
+No system change.
+BELL: none from my seat.
+MISTAKES THIS TURN: none found.
+Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm
