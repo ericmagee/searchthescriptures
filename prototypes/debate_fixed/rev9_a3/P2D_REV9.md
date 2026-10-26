@@ -8,9 +8,16 @@ Run 28269 = debate_results row fd6a5ca9; report copy build12_a3/step8/report2826
 19 (a; 7603; A3 F1, E F4) K-G5 window. A SHORT or STATEMENT quotation counts when it is found in the answering round's LINK block and
    its match overlaps a naming window (300 characters before the verse to 1,200 after), not only when it lies wholly inside one.
    Located: Cure_Check.js cureNamed / shortOk, the same in the 14 library copies.
-20 (b; 7603; E F1; Hermes item 5) The row's defense_standing, conceded_links, challenge_standing and challenger_conceded_links carry
-   the counted panel's values, not the single judge's. Located: Build_Save_Body.js (written from d, the single judge's extraction).
-   QUESTION 1 for the advisor, below.
+20 (b; 7603; E F1; Hermes item 5; Q1 RULED at BB-7607 item 3) The row's defense_standing, conceded_links, challenge_standing and
+   challenger_conceded_links carry the COUNTED PANEL's majority value for each field. Where the counted judges give no majority on a
+   field, the field is null and review_notes names each counted judge's value. The single judge's values never enter these fields
+   (rulings 99); they stay in independent_verdict_raw. Located: Build_Save_Body.js (written today from d, the single judge's extraction).
+   MEASURED for the sweep (pen, 26 Oct): the four columns are nullable, no CHECK names them, no debate_results trigger reads them; their
+   readers are 11 functions (aggregate_debate_panel, dash_cc_debates, dash_debate_by_id, dash_odv1_by_id, dash_odv1_debates,
+   dash_odv1_judges, debate_judgments_write_guard, derive_debate_outcome, judge_seat_parse_history, record_integrity_scan,
+   record_replay_judgments) and 1 view (debate_admissible). The builder reads each and states, before the change, which read
+   debate_results' four columns and what each does with a panel value and with a null; derive_debate_outcome and record_integrity_scan
+   are run on 28269 with the new values in a transaction that aborts, and their outputs are stated in F20.
 21 (c; 7603; A3 F3, E F3) Report, a judge counted after its cure: the "Rule applied" line is built from the counted clause, and the
    judge's own RESULT and KEYSTONE lines are printed under one line saying they are the judge's text before its cure.
    Located: Plain_Rule_Lines.js line 12 (built from the judge's original CLAUSE), Format_Markdown.js panelText.
@@ -32,10 +39,10 @@ Run 28269 = debate_results row fd6a5ca9; report copy build12_a3/step8/report2826
    (John 1:13), D5 vs C7, and GLM D1 vs C5 (Luke 3:23), D6 vs C7; no line of Grok or DeepSeek. GLM's compound labels (C1/C2/C3, C3/C4)
    pass on their ranges; how a compound label is read is the builder's to state in its falsifiers.
 
-## QUESTIONS FOR THE ADVISOR (design, tandem 11.2)
-Q1 (DoD 20) Which counted-panel value fills each row field when the counted judges differ?
-   1. The majority of the counted judges; with no majority, the single judge's value stays and a review note says so (recommended).
-   2. Leave the fields as the single judge's and label them so in the report and the dashboard.
+## RULINGS ON THIS PLAN
+BB-7607: shape approved; Q1 ruled as DoD 20 now reads; binding notes: (i) the C-LABEL OFF THE GUIDE audit of DoD 26 is recorded, never
+a cure or a count change; (ii) DoD 19 is falsified on DeepSeek D6 vs C3 of 28269 (must read CURED) and on F15c (must stay UNCURED);
+(iii) Hermes item 7 is answered at WALL-1786 and needs no step.
 
 ## RECORDED, NOT BUILT
 - (f; 7603; A3 F4, E F2) Head "Verdict of the debate: HELD" beside "Outcome: UNDERDETERMINED": wording, to him with the AAR (7603).
@@ -46,9 +53,10 @@ Q1 (DoD 20) Which counted-panel value fills each row field when the counted judg
   published 26 Oct (BB-7599), and its item 6 finds the four rev 8 changes in the published code.
 
 ## FALSIFIERS (pre-write checks, declared before any change; builder Worker_E adds its own)
-F19 DeepSeek D6 vs C3 on 28269 (build12_a3/step8/f8_ds.cjs): UNCURED on new12; CURED on new. The rev 7 case behind 7194 defect 1
+F19 DeepSeek D6 vs C3 on 28269 (build12_a3/step8/f8_ds.cjs): UNCURED on new12; CURED on new. F15c stays UNCURED (7607 (ii)). The rev 7 case behind 7194 defect 1
     (an unrelated sentence elsewhere in the block) stays UNCURED. D3 vs C1 stays UNCURED (wrong round).
-F20 Build Save Body on the 28269 inputs: row fields equal the counted panel's per Q1.
+F20 Build Save Body on the 28269 inputs: the four fields read SELF-SUPPORTED, 0, SELF-SUPPORTED, 0 (the three counted judges agree);
+    a constructed 1-1-1 split gives null with each value named in review_notes; the reader sweep of DoD 20 stated with its outputs.
 F21 Format Markdown on 28269: Gemini's section shows "Rule applied: HELD" and the before-cure line; Grok's and GLM's unchanged.
 F22 Quote Report on 28269: the Matthew 1:19 item reports the challenger's words; Judges 11:39 stays WORDING NOT FOUND.
 F23-F25 the report lines named above change as stated;
