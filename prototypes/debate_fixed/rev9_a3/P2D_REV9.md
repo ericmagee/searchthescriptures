@@ -39,7 +39,9 @@ Run 28269 = debate_results row fd6a5ca9; report copy build12_a3/step8/report2826
    (John 1:13), D5 vs C7, and GLM D1 vs C5 (Luke 3:23), D6 vs C7; no line of Grok or DeepSeek. GLM's compound labels (C1/C2/C3, C3/C4)
    pass on their ranges; how a compound label is read is the builder's to state in its falsifiers.
 
-## RULINGS ON THIS PLAN
+## RULINGS AND COUNTERS ON THIS PLAN
+BB-7608 (Worker_E): AGREED; counters 1 (strike Q2) and 2 (F26 wording) ABSORBED; counter 3 (DoD 20 per 7607) already made in amendment 1.
+Worker_E's added falsifiers F19b, F19c, F20b, F26b stand as written there; F26b's reading of compound labels is for the advisor.
 BB-7607: shape approved; Q1 ruled as DoD 20 now reads; binding notes: (i) the C-LABEL OFF THE GUIDE audit of DoD 26 is recorded, never
 a cure or a count change; (ii) DoD 19 is falsified on DeepSeek D6 vs C3 of 28269 (must read CURED) and on F15c (must stay UNCURED);
 (iii) Hermes item 7 is answered at WALL-1786 and needs no step.
@@ -61,11 +63,11 @@ F21 Format Markdown on 28269: Gemini's section shows "Rule applied: HELD" and th
 F22 Quote Report on 28269: the Matthew 1:19 item reports the challenger's words; Judges 11:39 stays WORDING NOT FOUND.
 F23-F25 the report lines named above change as stated;
 F26 the audit of DoD 26 (2) on 28269 flags exactly the six lines listed in DoD 26; the prompt block of (1) appears once in each
-    panel payload and nowhere else; nothing else in the report changes (diff of the rendered report).
+    panel payload and nowhere else; no rendered line changes outside those named in F21 to F26 (diff of the rendered report; E counter 2, BB-7608).
 WRONG IF: F19 or F22 silent on new; any output of the rev 8 set (F15 to F18e, f15b, f18c) moves; a node outside the changed set differs.
 
 ## WORKING ORDER: one portion, build Worker_E, verify Worker_A3
-[ ] 1 shape, advisor (with Q1, Q2)   [ ] 2 falsifiers then build, E   [ ] 3 verify, A3   [ ] 4 draft write, fetch-back, undo checked, E
+[ ] 1 shape, advisor (with Q1)   [ ] 2 falsifiers then build, E   [ ] 3 verify, A3   [ ] 4 draft write, fetch-back, undo checked, E
 [ ] 5 verify, A3   [ ] 6a ask, A3 thread (advisor reads first)   [ ] 6b [IRREVERSIBLE] publish, E   [ ] 7 [IRREVERSIBLE] live run, the
 27528 body, A3   [ ] 8/9 both read the run whole   [ ] 10 his word "fixed"   [ ] 11 AAR, advisor and both hands.
 UNDO: restore 75dcb465 and publish it.
