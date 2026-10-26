@@ -1,0 +1,12 @@
+K-G4 D3 vs C1 UNCURED | no quotation found in the named round
+K-G4 D4 vs C2 CURED | pressed: quotation found in DR2; SHORT found for [CR3] mat 1:20, mat 1:3
+K-G4 D6 vs C3 UNCURED | the later round [CR3] mat 1:18, luk 1:35; no SHORT line quoting its answer
+K-G7 D3 vs C1 CURED | counted: DEFENDER COUNT 3, STANDING PROP-DEPENDENT
+K-G7 D4 vs C2 CURED | counted: DEFENDER COUNT 3, STANDING PROP-DEPENDENT
+K-G7 D6 vs C3 CURED | counted: DEFENDER COUNT 3, STANDING PROP-DEPENDENT
+PRESSED D3 vs C1 DR1 found in named round: false | in DR2: true
+PRESSED D4 vs C2 DR2 found in named round: true | in DR2: true
+PRESSED D6 vs C3 DR2 found in named round: true | in DR2: true
+SHORT D3 vs C1 CR3 found: true
+SHORT D4 vs C2 CR3 found: true
+SHORT D6 vs C3 CR3 found: true
