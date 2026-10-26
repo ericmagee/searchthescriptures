@@ -1,0 +1,15 @@
+STEP 5 VERIFY (Worker_E, seat 3), P2D rev 9 amendment 5 (7633), on Worker_A3's 7637. Read 07:25 CDT 2026-10-26.
+Workflow moMxiV4Irg1uRBZN. Fetches by get_workflow_version, saved by tool, copied here:
+  v_a82b4d29.json md5 dd94687b  (current draft)
+  v_53ab988f.json md5 3524e691  (last write)
+  v_4ba9c4af.json md5 eba1fbfa  (undo: restore of 75dcb465)
+cmp13.py (base13 = 75dcb465 fetch v_75dcb465.json f9a1db84; new13 at 9217afe):
+  a82b4d29 | nodes 231 | changed set 22 written 22 at base 0 neither [] | unchanged code nodes off base [] | non-code fields differ [] | node names equal True | connections equal True
+  53ab988f | nodes 231 | changed set 22 written 22 at base 0 neither [] | unchanged code nodes off base [] | non-code fields differ [] | node names equal True | connections equal True
+  4ba9c4af | nodes 231 | changed set 22 written 0 at base 22 neither [] | unchanged code nodes off base [] | non-code fields differ [] | node names equal True | connections equal True
+Whole nodes+connections md5 (jq -cS, nodes sorted by name):
+  53ab988f f5705eb1 = a82b4d29 f5705eb1
+  4ba9c4af e33dd54b = 75dcb465 e33dd54b
+get_workflow_details: versionId a82b4d29, activeVersionId 75dcb465 (nothing published).
+derive_debate_outcome live md5 173f9465 (untouched).
+VERDICT: PASS.
