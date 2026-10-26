@@ -1,0 +1,36 @@
+base versionId: a82b4d29-89a2-44ca-b736-4d173f5a5a6c
+new  versionId: 23cf8db4-1ee1-4c30-ab2f-88d55a5f35eb
+new  name     : BB-7397 rev 10 (f) draft: Panel Cure Normalize 3 (14 of 14)
+
+node count base/new: 231 / 231
+node names equal (set): True
+node names equal (order): True
+
+== 14 target nodes ==
+node                       fetched md5 (new)                  expected after                     result
+Alternate Build            77377a548ebe5db550a2f716e1fa4460   77377a548ebe5db550a2f716e1fa4460   MATCH; base==before
+Alternate Cure Build       6f993a0f0f8a9b72a47f5b3cc4aef549   6f993a0f0f8a9b72a47f5b3cc4aef549   MATCH; base==before
+Alternate Cure Normalize   b045a6c870abefe634a3641ba2c69683   b045a6c870abefe634a3641ba2c69683   MATCH; base==before
+Alternate Merge            5c830e0eebb999c2710b411cf8df6064   5c830e0eebb999c2710b411cf8df6064   MATCH; base==before
+Cure Build                 d487c158ba1f768620eb732a73811de3   d487c158ba1f768620eb732a73811de3   MATCH; base==before
+Cure Check                 9d43d2c77387cf18e785217fe0cd3bf3   9d43d2c77387cf18e785217fe0cd3bf3   MATCH; base==before
+Cure Normalize             a6e2bb9f17100bf2784baf29b05a7406   a6e2bb9f17100bf2784baf29b05a7406   MATCH; base==before
+Panel Cure Build 1         2520e20a74b46af075bd3c0fcfafcf3b   2520e20a74b46af075bd3c0fcfafcf3b   MATCH; base==before
+Panel Cure Build 2         a2fda63082598f7948c8c890a390fc30   a2fda63082598f7948c8c890a390fc30   MATCH; base==before
+Panel Cure Build 3         f3e7b8ec556a05f00f48ff496a8da1dd   f3e7b8ec556a05f00f48ff496a8da1dd   MATCH; base==before
+Panel Cure Check           7eb05a5b5f1c1b50b9eeb9028282d191   7eb05a5b5f1c1b50b9eeb9028282d191   MATCH; base==before
+Panel Cure Normalize 1     43463eafb03dac3af67b624aa3e28f7b   43463eafb03dac3af67b624aa3e28f7b   MATCH; base==before
+Panel Cure Normalize 2     108b689e63672355c837f4820905dc96   108b689e63672355c837f4820905dc96   MATCH; base==before
+Panel Cure Normalize 3     ea856e2a3b017371b6c61433b561d4b2   ea856e2a3b017371b6c61433b561d4b2   MATCH; base==before
+
+== other Code nodes (jsCode must be unchanged) ==
+other Code nodes checked: 49
+other Code nodes changed: 0 
+
+== non-jsCode fields, all nodes ==
+nodes whose non-jsCode fields (or, for non-targets, any field) differ: 0 
+
+connections equal: True
+nodeGroups equal: True
+
+OVERALL: PASS
