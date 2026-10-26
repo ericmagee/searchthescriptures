@@ -1,0 +1,16 @@
+STATEMENT length 594 ends " word83 word84 word85..."
+JUDGE STATEMENT length 594 ends " word83 word84 word85..."
+(1) judgeBlock md5 26cf5f1915b72e61a4165a2c49f4b65a chars 2655
+(1) cList: 
+CHALLENGER LINK NUMBERS -- computed by the system from [DR3], not by a model. In COLLISION POINTS, C<j> is the challenger's j-th LINK block of [DR3], its answer to the defender's premise j, in the order the challenger answered them; label a challenger link only by this list. The verses each block names:
+C1 = [DR3] LINK 1: Matthew 1:25, Matthew 1:18, Luke 1:34, Genesis 4:1
+C2 = [DR3] LINK 2: Matthew 1:18, Matthew 1:3, Matthew 1:20, John 1:13
+C3 = [DR3] LINK 3: Luke 1:35, Acts 1:8, Luke 9:34, Acts 5:15, Luke 1:34, Luke 1:37
+C4 = [DR3] LINK 4: Luke 4:22, John 6:42, Luke 3:23, Acts 16:13, Luke 2:44, Acts 7:25, Acts 14:19, Acts 21:29, Luke 2:48, Mark 6:3
+C5 = [DR3] LINK 5: Job 14:1, Matthew 11:11, Romans 1:3, Galatians 4:4, Jeremiah 22:30, Matthew 1:11-12, Genesis 3:15, Luke 3:31
+C6 = [DR3] LINK 6: 1 Chronicles 2:34-35, 1 Chronicles 2:34, Ezra 2:61, Deuteronomy 25:6, Ruth 4:10, Numbers 27:1-8, 1 Chronicles 2:35, Matthew 1:16
+(1) the C list in the sent text (base): false
+(2) glm via Alternate Payloads ["[AUDIT v21: C-LABEL OFF THE GUIDE -- D1 vs C5 (Luke 3:23): DR3 LINK block 5 names none of Luke 3:23; recorded, not a violation, not counted.]","[AUDIT v21: C-LABEL OFF THE GUIDE -- D6 vs C7: C7 is above the 6 LINK blocks of DR3; recorded, not a violation, not counted.]"]
+(2) gemini via Panel Payloads ["[AUDIT v21: C-LABEL OFF THE GUIDE -- D1 vs C5 (Luke 3:23): DR3 LINK block 5 names none of Luke 3:23; recorded, not a violation, not counted.]","[AUDIT v21: C-LABEL OFF THE GUIDE -- D2 vs C6 (Galatians 4:4): DR3 LINK block 6 names none of Galatians 4:4; recorded, not a violation, not counted.]","[AUDIT v21: C-LABEL OFF THE GUIDE -- D4 vs C4 (John 1:13): DR3 LINK block 4 names none of John 1:13; recorded, not a violation, not counted.]","[AUDIT v21: C-LABEL OFF THE GUIDE -- D5 vs C7 (1 Chronicles 2:34): C7 is above the 6 LINK blocks of DR3; recorded, not a violation, not counted.]"]
+(2) grok via Panel Payloads []
+(2) deepseek (removed) via Panel Payloads []
