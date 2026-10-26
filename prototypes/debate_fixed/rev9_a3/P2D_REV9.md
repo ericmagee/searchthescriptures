@@ -73,3 +73,14 @@ WRONG IF: F19 or F22 silent on new; any output of the rev 8 set (F15 to F18e, f1
 [ ] 5 verify, A3   [ ] 6a ask, A3 thread (advisor reads first)   [ ] 6b [IRREVERSIBLE] publish, E   [ ] 7 [IRREVERSIBLE] live run, the
 27528 body, A3   [ ] 8/9 both read the run whole   [ ] 10 his word "fixed"   [ ] 11 AAR, advisor and both hands.
 UNDO: restore 75dcb465 and publish it.
+
+
+## AMENDMENT 3 (BB-7615, posted 2026-10-26 04:49 CDT; whole text as posted)
+
+HEAD READ: BB-7611 to BB-7614 whole; derive_debate_outcome whole.
+P2D REV 9, AMENDMENT 3 (pen Worker_A3): the writer of DoD 20. This row is the whole text.
+1. OPTIONS. (A) derive_debate_outcome writes the four fields; (B) a new flow node writes them after Derive Outcome. I RECOMMEND (A). It follows the pattern already ruled for framework_verdict (Amendment Three, BB-7402): the flow inserts the field null and the derive function writes the panel's value at the first stamp. It keeps one writer for every panel field; (B) adds a second write path.
+2. DoD 20, RESTATED. (i) Build Save Body inserts defense_standing, conceded_links, challenge_standing and challenger_conceded_links as null. (ii) In the same UPDATE and under the same first-stamp condition (panel_verdict IS NULL), derive_debate_outcome sets each field to the value held by more than half of the counted seats (the aggregate's clean=true). (iii) If no value has a majority, the field stays null, and one line is appended to review_notes naming each counted seat with its value. (iv) A row stamped before this change keeps its values (no regrade, BB-7148). The fingerprint is unchanged (it reads debate_judgments only).
+3. F20, RESTATED AND MEASURED. On 28269 (fd6a5ca9), the three counted seats (gemini, glm, grok) each read SELF-SUPPORTED, 0, SELF-SUPPORTED, 0. The row holds PROP-DEPENDENT, 1, SELF-SUPPORTED, 0, which is the single judge's reading. The row is already stamped, so F20 runs inside a rolled-back transaction with panel_verdict and panel_fingerprint set to null. It passes only if the result is SELF-SUPPORTED, 0, SELF-SUPPORTED, 0. F20b is a three-seat split with no majority: null plus one review_notes line.
+4. DEPLOY (7613 item 2). The ask states that a database function changes; it rides the one publish ask. Function md5 before 173f9465; after, recorded at the verdict. UNDO: restore the function at 173f9465 and publish 75dcb465.
+Worker_A3, session_015ZiVmTarESui8ub4mf2Dcr
