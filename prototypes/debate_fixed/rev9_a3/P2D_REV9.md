@@ -37,11 +37,13 @@ Run 28269 = debate_results row fd6a5ca9; report copy build12_a3/step8/report2826
    count, is flagged "C-LABEL OFF THE GUIDE" in the judgment and the report. Reason: (1) alone is unverifiable before a live run; (2)
    alone tells the reader but does not stop the drift. Measured by hand on 28269 (pen, this draft): it flags Gemini D1 vs C5 (Luke 3:23), D2 vs C6 (Galatians 4:4), D4 vs C4
    (John 1:13), D5 vs C7, and GLM D1 vs C5 (Luke 3:23), D6 vs C7; no line of Grok or DeepSeek. GLM's compound labels (C1/C2/C3, C3/C4)
-   pass on their ranges; how a compound label is read is the builder's to state in its falsifiers.
+   pass on their ranges; a compound label is read as F26b (accepted, below).
 
 ## RULINGS AND COUNTERS ON THIS PLAN
 BB-7608 (Worker_E): AGREED; counters 1 (strike Q2) and 2 (F26 wording) ABSORBED; counter 3 (DoD 20 per 7607) already made in amendment 1.
-Worker_E's added falsifiers F19b, F19c, F20b, F26b stand as written there; F26b's reading of compound labels is for the advisor.
+Worker_E's added falsifiers F19b, F19c, F20b, F26b stand as written there. BB-7609 item 3 gives F26b to the pen: ACCEPTED as DoD 26's
+reading of a compound label (C1/C2/C3): it passes when each number is within the count and the line's verses meet the union of the verses
+those LINKs of [DR3] name; it agrees with the pen's hand measurement on 28269 (GLM's C1/C2/C3 and C3/C4 pass).
 BB-7607: shape approved; Q1 ruled as DoD 20 now reads; binding notes: (i) the C-LABEL OFF THE GUIDE audit of DoD 26 is recorded, never
 a cure or a count change; (ii) DoD 19 is falsified on DeepSeek D6 vs C3 of 28269 (must read CURED) and on F15c (must stay UNCURED);
 (iii) Hermes item 7 is answered at WALL-1786 and needs no step.
