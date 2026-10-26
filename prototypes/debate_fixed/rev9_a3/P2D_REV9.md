@@ -1,40 +1,44 @@
-# THE DEBATE FIXED (BB-7397), P2D rev 9: the defects found on run 28269 (BB-7601, BB-7602, BB-7603; WALL-1785 and its reply)
+# THE DEBATE FIXED (BB-7397), P2D rev 9: the defects found on run 28269, list (a)-(i) of BB-7603 and BB-7605
+Opened on his word in Worker_A3's thread, 26 Oct, quoted: "I want you and worker_E to review and create a BB.  I want to get this resolve as quickly as possible" (read as: his tests are done for this round; 7605 item 4).
 Pen: Worker_A3 (session_015ZiVmTarESui8ub4mf2Dcr). Builder: Worker_E (session_014Qy67bHv8uBmRXbWGSrghm), per 7603 item 4 and 7575 item 3(c).
 Advisor of record: Advisor_Code_D, seat 29, session_01LydTRfwbofoJKfTbSePZwC. BASE: active 75dcb465 = new12 at git 22a4aec.
 Run 28269 = debate_results row fd6a5ca9; report copy build12_a3/step8/report28269.md (md5 89fc9d23).
 
 ## DEFINITION OF DONE (each measured on run 28269's stored text unless stated)
-19 (7603 a; A3 F1, E F4) K-G5 window. A SHORT or STATEMENT quotation counts when it is found in the answering round's LINK block and
+19 (a; 7603; A3 F1, E F4) K-G5 window. A SHORT or STATEMENT quotation counts when it is found in the answering round's LINK block and
    its match overlaps a naming window (300 characters before the verse to 1,200 after), not only when it lies wholly inside one.
    Located: Cure_Check.js cureNamed / shortOk, the same in the 14 library copies.
-20 (7603 b; E F1; Hermes item 5) The row's defense_standing, conceded_links, challenge_standing and challenger_conceded_links carry
+20 (b; 7603; E F1; Hermes item 5) The row's defense_standing, conceded_links, challenge_standing and challenger_conceded_links carry
    the counted panel's values, not the single judge's. Located: Build_Save_Body.js (written from d, the single judge's extraction).
    QUESTION 1 for the advisor, below.
-21 (7603 c; A3 F3, E F3) Report, a judge counted after its cure: the "Rule applied" line is built from the counted clause, and the
+21 (c; 7603; A3 F3, E F3) Report, a judge counted after its cure: the "Rule applied" line is built from the counted clause, and the
    judge's own RESULT and KEYSTONE lines are printed under one line saying they are the judge's text before its cure.
    Located: Plain_Rule_Lines.js line 12 (built from the judge's original CLAUSE), Format_Markdown.js panelText.
-22 (7603 d; A3 F2) Citation check: a quotation graded WORDING NOT FOUND whose words occur in order inside one sentence of the
+22 (d; 7603; A3 F2) Citation check: a quotation graded WORDING NOT FOUND whose words occur in order inside one sentence of the
    other side's earlier round is reported as the other side's words, not as a citation (rulings 98 extended to a shortened quote).
    Located: Quote_Report.js. Case: defender R2 "a just man does not put away the mother of his own child" against DR1 "A just man
    does not plan to put away the mother of his own child".
-23 (7603 e; A3 F5) "Reads that gave no text" names the nodes only; no error string. Located: Format_Markdown.js line 222.
-24 (WALL-1785 item 3a) The audit STATEMENT field is cut at a word boundary with "..." and the report separates it from its reason
+23 (e; 7603; A3 F5) "Reads that gave no text" names the nodes only; no error string. Located: Format_Markdown.js line 222.
+24 (g; 7605; WALL-1785 item 3a) The audit STATEMENT field is cut at a word boundary with "..." and the report separates it from its reason
    ("... -- Not cured: ..."). Located: Panel_Cure_Check.js line 313 (slice(0,600)), Format_Markdown.js line 139.
-25 (WALL-1785 item 3b) The report head numbers the panel judges as the sent-text section does (seat order; the removed judge named).
+25 (h; 7605; WALL-1785 item 3b) The report head numbers the panel judges as the sent-text section does (seat order; the removed judge named).
    Located: Format_Markdown.js head block; report lines 11-15 against 696.
-26 (WALL-1785 item 1; Hermes item 8) Collision C-numbers comparable across judges. QUESTION 2 for the advisor, below.
+26 (i; 7605; WALL-1785 item 1; WALL-1786 item 8) Collision C-numbers comparable across judges. PEN'S CHOICE (7605 item 2): both.
+   (1) The judge prompt carries the numbered C list the system computes from [DR3] order (C<j> = the defender's premise j as [DR3]
+   answered it, with its pressed verses), in Panel Payloads, beside the existing guide. (2) A recorded audit line, not a violation and
+   not a cure item: a collision line "D<i> vs C<j> (<verse>)" whose verses are none of the verses [DR3] LINK j names, and a C<j> with j above the
+   count, is flagged "C-LABEL OFF THE GUIDE" in the judgment and the report. Reason: (1) alone is unverifiable before a live run; (2)
+   alone tells the reader but does not stop the drift. Measured by hand on 28269 (pen, this draft): it flags Gemini D1 vs C5 (Luke 3:23), D2 vs C6 (Galatians 4:4), D4 vs C4
+   (John 1:13), D5 vs C7, and GLM D1 vs C5 (Luke 3:23), D6 vs C7; no line of Grok or DeepSeek. GLM's compound labels (C1/C2/C3, C3/C4)
+   pass on their ranges; how a compound label is read is the builder's to state in its falsifiers.
 
 ## QUESTIONS FOR THE ADVISOR (design, tandem 11.2)
 Q1 (DoD 20) Which counted-panel value fills each row field when the counted judges differ?
    1. The majority of the counted judges; with no majority, the single judge's value stays and a review note says so (recommended).
    2. Leave the fields as the single judge's and label them so in the report and the dashboard.
-Q2 (DoD 26) How the C-numbers are made comparable.
-   1. The judge prompt carries the numbered C list the system computes from [DR3] order (one added block in Panel Payloads); checked
-      by the live run only, since it changes model input (recommended).
-   2. The report states under COLLISION POINTS that C-numbers are as each judge wrote them; no prompt change.
 
 ## RECORDED, NOT BUILT
-- (7603 f; A3 F4, E F2) Head "Verdict of the debate: HELD" beside "Outcome: UNDERDETERMINED": wording, to him with the AAR (7603).
+- (f; 7603; A3 F4, E F2) Head "Verdict of the debate: HELD" beside "Outcome: UNDERDETERMINED": wording, to him with the AAR (7603).
 - (WALL-1785 item 2) The defender's five-register count overstates its exhibit (Luke 2:33, Matthew 1:20): model content; no
   judge rule grades a SUPPORTED link's L1 against its own claim; a rule for it would be his (recorded on the wall).
 - Model content: CR3 backslash-quotes; synthesis DG-61 charge.
@@ -47,7 +51,9 @@ F19 DeepSeek D6 vs C3 on 28269 (build12_a3/step8/f8_ds.cjs): UNCURED on new12; C
 F20 Build Save Body on the 28269 inputs: row fields equal the counted panel's per Q1.
 F21 Format Markdown on 28269: Gemini's section shows "Rule applied: HELD" and the before-cure line; Grok's and GLM's unchanged.
 F22 Quote Report on 28269: the Matthew 1:19 item reports the challenger's words; Judges 11:39 stays WORDING NOT FOUND.
-F23-F25 the report lines named above change as stated; nothing else in the report changes (diff of the rendered report).
+F23-F25 the report lines named above change as stated;
+F26 the audit of DoD 26 (2) on 28269 flags exactly the six lines listed in DoD 26; the prompt block of (1) appears once in each
+    panel payload and nowhere else; nothing else in the report changes (diff of the rendered report).
 WRONG IF: F19 or F22 silent on new; any output of the rev 8 set (F15 to F18e, f15b, f18c) moves; a node outside the changed set differs.
 
 ## WORKING ORDER: one portion, build Worker_E, verify Worker_A3
