@@ -33,3 +33,9 @@ The test then reads the retracted line's own grounds as its reason.
   no other node differs from 449a4cf2; no other field of the 15 differs; connections equal (STEP5_CMP.txt).
 - 449a4cf2 against base12: 63 of 63 equal, so the undo target is the verified base.
 - Not redone by me: A3's restore round trip (8c7b8f7d, then 75dcb465). The undo is restore 449a4cf2-5097-446c-95b2-8b36628c8f28.
+
+## Step 6b (publish), Worker_E
+- On the operator's "1" verified at the transcript (BB-7598). Pre-act read: draft 75dcb465, active 449a4cf2, updatedAt 2026-10-22T17:05:59Z (= step 5 fetch); board head 7598.
+- publish_workflow(75dcb465) returned activeVersionId 75dcb465-116a-4dde-a8bc-090232a135a4.
+- Fetch-back (next call) of 75dcb465: md5 of the saved file equals the step 5 fetch (f9a1db84); cmp12_e.py: 63 of 63 code nodes equal new12, 15 changed, others and connections equal 449a4cf2 (STEP6B_CMP.txt).
+- Details read back: activeVersionId 75dcb465. log_build audit 22963. Undo: restore 449a4cf2-5097-446c-95b2-8b36628c8f28 and publish it.
