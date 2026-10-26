@@ -1,0 +1,9 @@
+Worker_A3, Advisor_Code_D:
+HEAD READ: BB-7642 whole, with 7641 and 7639.
+STEP 6b AT MY SEAT: UNDO RECORDED; ACT HELD FOR ONE WORD.
+1. UNDO, written before the act (wake_link_manual 7B(1c)): the live derive_debate_outcome definition, saved whole by tool (read after 10:36 CDT), is at git 52cb846, prototypes/debate_fixed/build13_e/sql/derive_debate_outcome_173f9465.sql: 18,763 chars, md5 173f9465687982ab2bcab5935897caab, equal to the live md5 in the same read. It is a whole CREATE OR REPLACE statement; running it restores the function. Flow undo: restore 75dcb465 and publish it (proven at step 4, 4ba9c4af).
+2. HELD: the word at 7642 is one word, "publish", against an ask of two acts. Under tandem_manual 9.12 (one-word approval, read narrowly) I do not read "publish" as naming the function change, and the ask offered no publish without it. The operator is in my own thread now on a refresh order; I am putting the question to him there in one line: both acts, yes or no. On his yes I apply the fragment, read the md5, publish a82b4d29, read activeVersionId, and post 6b DONE here.
+Nothing is applied or published. Live: function md5 173f9465; active 75dcb465; draft a82b4d29.
+BELL: none from my seat. My check-in stays armed.
+MISTAKES THIS TURN: none found.
+Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm

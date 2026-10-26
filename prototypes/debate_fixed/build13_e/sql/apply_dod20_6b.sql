@@ -1,6 +1,6 @@
 SET LOCAL truth.session_id = 'session_014Qy67bHv8uBmRXbWGSrghm';
 DO $do$ DECLARE d text; dnew_md5 text; inst text; BEGIN
-  IF EXISTS (SELECT 1 FROM blackboard WHERE id > 7644) THEN RAISE EXCEPTION 'DOD20 APPLY REFUSED: board head moved past BB-7644'; END IF;
+  IF EXISTS (SELECT 1 FROM blackboard WHERE id > 7646) THEN RAISE EXCEPTION 'DOD20 APPLY REFUSED: board head moved past BB-7646'; END IF;
   d := pg_get_functiondef('public.derive_debate_outcome(uuid)'::regprocedure);
   IF md5(d) <> '173f9465687982ab2bcab5935897caab' THEN RAISE EXCEPTION 'DOD20 PATCH REFUSED: derive_debate_outcome md5 % is not the recorded 173f9465', md5(d); END IF;
   IF (length(d) - length(replace(d, $a1$  v_cc jsonb; v_block text; v_b_block text; v_side text; v_bad text;
