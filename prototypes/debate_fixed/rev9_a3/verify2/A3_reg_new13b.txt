@@ -1,0 +1,57 @@
+d0b9494a7149571254be436158c6aa63  f15b_out_new13b/h_2c.txt
+3b818338c03d6f938d273ccdd30be393  f15b_out_new13b/h_ask.txt
+a13fa3fc67794d86de2b58c7eb2b9610  f15b_out_new13b/h_cure.txt
+f18e2da7eddb49d7717606dcd712abdc  f15b_out_new13b/h_f12_27795.txt
+9163e799212105b9844328b990bd344c  f15b_out_new13b/h_site.txt
+73569d5dc7f22913e40ae3755fdf46a4  f15b_out_new13b/h_site2.txt
+5617dd4b10b2c7be11cce2be654c2ae8  f15b_out_new13b/h_f11_27795.txt
+714ae64d35a022ab1882ebfe35dd1447  f15b_out_new13b/h_f11b_27795.txt
+F15 source: report lines 1559 1560 (items), 1578 to 1584 (reply); 1839 chars, md5 869cd897f48994ce31bb40b8c1714fa5 ; backslash-quotes 18
+F15 Grok 27893 reply as printed => [{"rule":"K-G4","status":"CURED","why":"pressed: quotation found in DR1; SHORT found for [CR2] mat 1:18; [CR3] mat 1:18"},{"rule":"K-G7","status":"CURED","why":"counted: DEFENDER COUNT 3, STANDING PROP-DEPENDENT"}]
+F12 PRESSED 1 [DR1] found in DR1: true
+F12 PRESSED 2 [DR1] found in DR1: true
+F15c.1 single judge K-G1 stored cure => [{"rule":"K-G1","status":"UNCURED","why":"no quotation found in the named round"}]
+F15c.2 same, inner quotation marks escaped => [{"rule":"K-G1","status":"UNCURED","why":"no quotation found in the named round"}]
+fold sample: "a b c\\d e f g"
+F16.1 call failed:
+  body deepseek AUDIT lines: []
+  body gemini AUDIT lines: []
+  body grok AUDIT lines: ["[AUDIT v21: ALTERNATE TRIED -- SEAT: grok; ALTERNATE: glm; MODEL: z-ai/glm-5.3; RESULT: NOT SEATED; WHY: call failed: Provider returned error (\"code\":502)]"]
+  alternates_tried: [{"removed_seat":"grok","alternate":"glm","result":"NOT SEATED","why":"call failed: Provider returned error {\"code\":502}"}]
+F16.2 seated:
+  body deepseek AUDIT lines: []
+  body gemini AUDIT lines: []
+  body glm AUDIT lines: []
+  drv_removed grok replaced_by glm AUDIT lines: ["[AUDIT v21: ALTERNATE TRIED -- SEAT: grok; ALTERNATE: glm; MODEL: z-ai/glm-5.3; RESULT: SEATED]"]
+  alternates_tried: [{"removed_seat":"grok","alternate":"glm","result":"SEATED"}]
+F16.3 skip:
+  body deepseek AUDIT lines: []
+  body gemini AUDIT lines: []
+  body grok AUDIT lines: ["[AUDIT v21: ALTERNATE TRIED -- SEAT: grok; ALTERNATE: none; MODEL: none; RESULT: NOT SEATED; WHY: no pool model passes the guards: glm G3: z-ai/glm-5.3 already sits on this panel]"]
+  alternates_tried: [{"removed_seat":"grok","alternate":null,"result":"NOT SEATED","why":"no pool model passes the guards: glm G3: z-ai/glm-5.3 already sits on this panel"}]
+726: ## Panel judge 1: DeepSeek (deepseek-flash): BROKEN (a grade of the defender's chain: MiMo, arguing the record's reading)
+728: **Verdict:** BROKEN (a grade of the defender's chain: MiMo, arguing the record's reading)
+730: **Defense standing:** PROP-DEPENDENT, 1 link conceded (counted after its cure; the judge wrote 0)
+732: **Challenge standing:** SELF-SUPPORTED, 0 links conceded
+759: ## Panel judge 2: Gemini (gemini-3.1-pro-preview): HELD (a grade of the defender's chain: MiMo, arguing the record's reading)
+761: **Verdict:** HELD (a grade of the defender's chain: MiMo, arguing the record's reading) (counted after its cure; the judge wrote BROKEN)
+763: **Defense standing:** SELF-SUPPORTED, 0 links conceded
+765: **Challenge standing:** SELF-SUPPORTED, 0 links conceded
+797: ## Panel judge 3: Grok (grok-4.7): BROKEN (a grade of the defender's chain: MiMo, arguing the record's reading)
+799: **Verdict:** BROKEN (a grade of the defender's chain: MiMo, arguing the record's reading)
+801: **Defense standing:** PROP-DEPENDENT, 3 links conceded (counted after its cure; the judge wrote 2)
+803: **Challenge standing:** SELF-SUPPORTED, 0 links conceded
+850: Sent to: alternate judge GLM (z-ai/glm-5.3) sent as alternate for Grok, not seated.
+F18 source: report lines 1504 to 1513 (flagged), 1531 to 1540 (reply); 747 chars, md5 f600353e53946b275dbb5acd7b789446
+items: ["K-B D4 vs C6","K-B D5 vs C8","K-G1 D4 vs C6","K-G1 D5 vs C8","K-G1 D6 vs C8","K-G3 DEFENDER"] broken: {"DEFENDER":["D4 vs C6","D5 vs C8","D6 vs C8"],"CHALLENGER":[]}
+F18 as printed => ["K-B D4 vs C6 UNCURED (RETRACTED with no reason naming the round and its words or verse (rulings 105))","K-B D5 vs C8 UNCURED (RETRACTED with no reason naming the round and its words or verse (rulings 105))","K-G1 D4 vs C6 UNCURED (RETRACTED with no reason naming the round and its words or verse (rulings 105))","K-G1 D5 vs C8 UNCURED (RETRACTED with no reason naming the round and its words or verse (rulings 105))","K-G1 D6 vs C8 UNCURED (RETRACTED with no reason naming the round and its words or verse (rulings 105))","K-G3 DEFENDER UNCURED (RETRACTED with no reason naming the round and its words or verse (rulings 105); no counted RETRACTED line for D4 VS C6, D5 VS C8, D6 VS C8)"] | counted on: its own verdict (no retraction counted)
+F18b with a reason line per link => ["K-B D4 vs C6 CURED (retracted)","K-B D5 vs C8 CURED (retracted)","K-G1 D4 vs C6 CURED (retracted)","K-G1 D5 vs C8 CURED (retracted)","K-G1 D6 vs C8 CURED (retracted)","K-G3 DEFENDER CURED (retracted: D4 VS C6, D5 VS C8, D6 VS C8)"] | counted on: HELD-1
+F18b2 same reasons placed before the RETRACTED lines => ["K-B D4 vs C6 CURED (retracted)","K-B D5 vs C8 CURED (retracted)","K-G1 D4 vs C6 CURED (retracted)","K-G1 D5 vs C8 CURED (retracted)","K-G1 D6 vs C8 CURED (retracted)","K-G3 DEFENDER CURED (retracted: D4 VS C6, D5 VS C8, D6 VS C8)"] | counted on: HELD-1
+F18d.1 a reason line naming the round only => ["K-B D4 vs C6 UNCURED (RETRACTED with no reason naming the round and its words or verse (rulings 105))","K-B D5 vs C8 UNCURED (RETRACTED with no reason naming the round and its words or verse (rulings 105))","K-G1 D4 vs C6 UNCURED (RETRACTED with no reason naming the round and its words or verse (rulings 105))","K-G1 D5 vs C8 UNCURED (RETRACTED with no reason naming the round and its words or verse (rulings 105))","K-G1 D6 vs C8 UNCURED (RETRACTED with no reason naming the round and its words or verse (rulings 105))","K-G3 DEFENDER UNCURED (RETRACTED with no reason naming the round and its words or verse (rulings 105); no counted RETRACTED line for D4 VS C6, D5 VS C8, D6 VS C8)"] | counted on: its own verdict (no retraction counted)
+F18d.2 a reason line quoting words, no round => ["K-B D4 vs C6 UNCURED (RETRACTED with no reason naming the round and its words or verse (rulings 105))","K-B D5 vs C8 UNCURED (RETRACTED with no reason naming the round and its words or verse (rulings 105))","K-G1 D4 vs C6 UNCURED (RETRACTED with no reason naming the round and its words or verse (rulings 105))","K-G1 D5 vs C8 UNCURED (RETRACTED with no reason naming the round and its words or verse (rulings 105))","K-G1 D6 vs C8 UNCURED (RETRACTED with no reason naming the round and its words or verse (rulings 105))","K-G3 DEFENDER UNCURED (RETRACTED with no reason naming the round and its words or verse (rulings 105); no counted RETRACTED line for D4 VS C6, D5 VS C8, D6 VS C8)"] | counted on: its own verdict (no retraction counted)
+F18d.3 a reason line naming a verse, no round => ["K-B D4 vs C6 UNCURED (RETRACTED with no reason naming the round and its words or verse (rulings 105))","K-B D5 vs C8 UNCURED (RETRACTED with no reason naming the round and its words or verse (rulings 105))","K-G1 D4 vs C6 UNCURED (RETRACTED with no reason naming the round and its words or verse (rulings 105))","K-G1 D5 vs C8 UNCURED (RETRACTED with no reason naming the round and its words or verse (rulings 105))","K-G1 D6 vs C8 UNCURED (RETRACTED with no reason naming the round and its words or verse (rulings 105))","K-G3 DEFENDER UNCURED (RETRACTED with no reason naming the round and its words or verse (rulings 105); no counted RETRACTED line for D4 VS C6, D5 VS C8, D6 VS C8)"] | counted on: its own verdict (no retraction counted)
+F18e.0 (E1) STATEMENT names the cure only => ["K-G4 D6 vs C1 UNCURED (RETRACTED with no reason naming the round and its words or verse (rulings 105))","K-G7 D6 vs C1 UNCURED (RETRACTED with no reason naming the round and its words or verse (rulings 105))"] | counted on: its own verdict (no retraction counted)
+F18e (E2) the flagged item line copied in full as the label => ["K-G4 D6 vs C1 UNCURED (RETRACTED with no reason naming the round and its words or verse (rulings 105))","K-G7 D6 vs C1 UNCURED (RETRACTED with no reason naming the round and its words or verse (rulings 105))"] | counted on: its own verdict (no retraction counted)
+F18f (E3) the BROKEN line pasted as prose => ["K-G4 D6 vs C1 UNCURED (RETRACTED with no reason naming the round and its words or verse (rulings 105))","K-G7 D6 vs C1 UNCURED (RETRACTED with no reason naming the round and its words or verse (rulings 105))"] | counted on: its own verdict (no retraction counted)
+F18f2 the flagged item line pasted after the bar => ["K-G4 D6 vs C1 UNCURED (RETRACTED with no reason naming the round and its words or verse (rulings 105))","K-G7 D6 vs C1 UNCURED (RETRACTED with no reason naming the round and its words or verse (rulings 105))"] | counted on: its own verdict (no retraction counted)
+F18g a reason in its own sentence, naming the round and the words the line rests on => ["K-G4 D6 vs C1 CURED (retracted)","K-G7 D6 vs C1 CURED (retracted)"] | counted on: HELD-1
