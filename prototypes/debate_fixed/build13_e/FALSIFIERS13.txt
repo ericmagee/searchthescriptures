@@ -106,3 +106,33 @@ A2. F26's build reading of C<j> named "the defender's premise <i> by the ledger'
 A3. (before the run of F26 on new13 was taken as the result) The C list names only references written with their book: Panel Build's
     reader gives a bare reference the last book named, and on 28269 that printed Genesis 1:19 and Luke 1:18 for Matthew's verses. The audit
     keeps the library reader (its inherited extras only widen the union, never flag).
+
+ADDENDUM 2 (Worker_E): DoD 20 to amendments 3 and 4 (BB-7615, BB-7621; shape BB-7622), declared BEFORE any DoD 20 change. Portion opened at BB-7623.
+READER SWEEP (each read whole, md5 of pg_get_functiondef at 26 Oct; BB-7620):
+ judgments' columns only: aggregate_debate_panel 3e655266, dash_odv1_judges 56e22167, judge_seat_parse_history 20324a78,
+   debate_judgments_write_guard 51b48e1a (NEW only), derive_debate_outcome 173f9465 (fingerprint over debate_judgments).
+ display only, a null passes through: dash_odv1_by_id 586d3873, dash_odv1_debates 91d8af85, dash_debate_by_id 1a55c0b0, view debate_admissible
+   (viewdef md5 99878bc1).
+ dash_cc_debates 2d6daa84: W1_CC rows only. record_integrity_scan 5b5bd258: debate_results.defense_standing only on rows created before
+   2026-10-22 04:07:26+00. record_replay_judgments df64b9f0: id, run_token, variant only.
+ flow: Panel Payloads and Alternate Payloads F4 (SJ from saveBody live, Regrade Row on a regrade; cmp skips null) -> DoD 20 (v).
+ repo outside prototypes: no reader. "STATED VALUE STORED": written by Extract Independent Verdict (v19 line), copied by Build Save Body; no reader.
+F20  derive_debate_outcome NEW TEXT on row fd6a5ca9 (28269), inside BEGIN ... ROLLBACK, run only after a status-only poll shows no ODV1 execution
+     running: the function replaced in the transaction; the row's panel_verdict, panel_fingerprint and the four fields set null (first-stamp
+     state, as the flow will insert); derive called. PASS only if the four read SELF-SUPPORTED, 0, SELF-SUPPORTED, 0, review_notes is unchanged,
+     and every other field derive writes (panel_split, outcome, judged_by, underdetermined_seats, citation_block, panel_verdict,
+     framework_verdict, panel_fingerprint) equals the BASE function's result on the same prepared row in its own rolled-back transaction.
+F20b split: same transaction shape; the three counted judgments' defense_standing set to SELF-SUPPORTED, PROP-DEPENDENT, COLLAPSED. PASS only if
+     defense_standing is null, review_notes gains exactly one appended line naming each counted seat with its value, and the other three fields
+     carry their majority.
+F20b2 stamped row (panel_verdict not null, as stored): the four fields and review_notes are untouched by the new text (DoD 20 (iv)).
+F20c F4 on stubs (Panel Payloads, Alternate Payloads): (1) live run, the seat on the single judge's model differing in standing: the same
+     SAME-MODEL DIVERGENCE line as new12 given saveBody's values; (2) regrade of an unstamped row: reads the row's four, same line;
+     (3) regrade of a stamped row: VOID counts only, and the line says so. new12 on (3) compares the row's four (the defect DoD 20 (v) fixes).
+F20d Build Save Body on stubs: saveBody's four fields null; sj_values equals the extraction's four; a v19 review line reads "STATED VALUE KEPT IN
+     THE SINGLE JUDGE'S TEXT" where new12 reads "STATED VALUE STORED"; every other saveBody field byte-equal to new12's output.
+WRONG IF: F20 reads any other value for the four; any other derive field differs between base and new on the prepared row; the fingerprint
+     moves; F20c (1) or (2) differs from new12; a node outside Build Save Body, Panel Payloads, Alternate Payloads differs from new13.
+LIMIT: the rolled-back runs advance pg_stat_user_tables counters and sequences (tandem 9.3); log_audit_event rows inside them roll back.
+DEPLOY (7613 item 2): the new function text is a file (sql/derive_debate_outcome_new13.sql) with its md5; it changes only inside the one ask
+     (6a, 6b); UNDO: restore the function text at md5 173f9465 and publish 75dcb465.
