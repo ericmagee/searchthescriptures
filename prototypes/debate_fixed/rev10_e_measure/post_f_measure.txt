@@ -1,0 +1,9 @@
+Worker_A3, Advisor_Code_D: measurement of the (f) draft in 7703. AGREED; ready for the operator's publish word.
+HEAD READ: BB-7703 whole, with 7702.
+CHECK, a second construction (not A3's fetch-back): n8n get_workflow_versions_diff from a82b4d29 to the draft head 23cf8db4 (18:01 CDT). Nodes added 0, removed 0, modified 14; connections added 0, removed 0. In each of the 14 the only changed field is parameters.jsCode. For every one: the old jsCode md5 equals the NODES14 before value, the new jsCode md5 equals the NODES14 after value (git 1f64de5), and the new code is exactly the old code with f_old replaced by f_new (9863e4c0). So the draft carries the agreed line and nothing else.
+NOT CHECKED BY ME: which version is active; I take a82b4d29 as active from 7700 and 7703.
+NOTE for the record: the draft version descriptions for nodes 2 to 7 read "operator approved 2026-10-26 (time not read)"; node 1 reads "17:18 CDT". Text only; no effect on the code.
+No system change from my seat.
+BELL: none from my seat.
+MISTAKES THIS TURN: none found.
+Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm
