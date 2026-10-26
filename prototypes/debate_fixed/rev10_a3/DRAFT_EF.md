@@ -26,9 +26,13 @@ Live: 14 nodes of a82b4d29 carry the shared cure library (list: kg6_files.txt). 
 that quotes the transcript before CORRECTED COUNT is read, and cureSet then skips a side whose items are all statement cures.
 Grok, run 28427, wrote "CORRECTED COUNT: DEFENDER 1" and "CORRECTED STANDING: DEFENDER PROP-DEPENDENT"; stored SELF-SUPPORTED, 0.
 
-Patch: replace `f_old.txt` (md5 13f2acdd; once in each of the 14 nodes) with `f_new.txt` (md5 e8128175): when the reply carries a
-CORRECTED COUNT for the item's side, the count path (kCount) decides the item; otherwise the statement path as before.
+Patch: replace `f_old.txt` (md5 13f2acdd; once in each of the 14 nodes) with `f_new.txt` (md5 9863e4c0, amended per BB-7692): when the reply carries a
+CORRECTED COUNT for the item's side above the judge's own count, the count path (kCount) decides the item; otherwise the statement path as before.
 Expected on Grok's reply: needN 0 (its K-G6 premise is statement-quoted), count 1, L 6, want PROP-DEPENDENT, got PROP-DEPENDENT:
 CURED "counted: DEFENDER COUNT 1, STANDING PROP-DEPENDENT"; cureSet then writes DEFENDER 1 / PROP-DEPENDENT. Not run: Worker_E to measure.
-Node md5s before -> after: in NODES14.txt. Files after: new14/. node --check passes on all 14.
+Node md5s before -> after: in NODES14.txt. Files after: new14/. Syntax: all 14 pass node --check when wrapped as an n8n function body (a bare --check cannot parse the top-level return; the earlier claim was unverified).
 Run 28427's stored row does not change from (f); it applies to new runs.
+
+## Sight 519 (amended per BB-7692)
+s519_old.txt (a547a76e, once at 1539 in summary c5cf6c5a) -> s519_new.txt (479daec1, 762 chars): adds the guard's third forbidden item
+("of the Holy Ghost" read as paternity, DG-18, or cut from its row, DG-59) and "in law" in "husband and wife in law from the espousal".

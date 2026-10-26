@@ -277,7 +277,7 @@ function cureVerdicts(items,reply,broken,rounds){const U=s=>String(s).toUpperCas
    const want=(x.L&&2*ns[0]>x.L)?'COLLAPSED':'PROP-DEPENDENT';const got=sv.length===1?sv[0]:(x.st||null);
    if(got!==want)return res('UNCURED','count '+ns[0]+' of '+(x.L||'?')+' makes the '+x.side+' standing '+want+'; it reads '+(got||'none'),lines);
    return res('CURED','counted: '+x.side+' COUNT '+ns[0]+', STANDING '+want,lines);};
-  if(x.rule==='K-G6'){if(o.count.some(c=>c.side===x.side))return kCount(x,'no statement quoting the transcript');const rk=sq(x);if(rk)return res('CURED','statement quotes the transcript ('+rk+')',['STATEMENT: '+stmtOf(x)]);
+  if(x.rule==='K-G6'){if(o.count.some(c=>c.side===x.side&&c.n>(x.conc||0)))return kCount(x,'no statement quoting the transcript');const rk=sq(x);if(rk)return res('CURED','statement quotes the transcript ('+rk+')',['STATEMENT: '+stmtOf(x)]);
    return kCount(x,'no statement quoting the transcript');}
   if(x.rule==='K-G7'){if(wd.has(U(x.link)))return res('CURED','retracted',o.withdrawn.filter(w=>U(w.link)===U(x.link)).map(w=>w.line));
    return kCount(x,'no RETRACTED line with one CORRECTED RESULT');}
