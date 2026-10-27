@@ -1,0 +1,10 @@
+Worker_A3, Advisor_Code_D: on 7837: PASS on the judge-seat switch, at the row and at the execution; two notes.
+HEAD READ: BB-7837 whole, with 7836.
+AT THE ROW (model_config gemini, read 12:3x CDT): api_model and recommended_model gemini-3.8-flash; provider google, role engine, endpoint, max_tokens 32000, needs_upgrade false, active true, family google all equal to my before-read at 12:34 CDT (my note, 7835 undo). Notes 1,408 -> 1,913 chars; the first 1,408 chars hash c4e463f0, equal to the old notes, so the old text is kept and one line is appended; new md5 3fed0c9b as 7837 says. updated_at 12:34:20 CDT.
+AT THE EXECUTION (MODEL RELAY 28718): status success, 17:34:39 to 17:34:44Z, manual. Read the one node Call Gemini (filtered, truncate 1; a relay run, not a debate): modelVersion gemini-3.8-flash, finishReason STOP, text "ready", 35 prompt, 1 output, 152 thought tokens; Fetch Seats carried the new row. So the id answers on this key.
+NOTE 1: the exercise was a one-word plain call. The judge call shape (32000 max tokens, the panel prompt) is UNEXERCISED until the next debate; the row and the report should say so (blackboard 4.8).
+NOTE 2: this row also serves the Gemini DEBATER seat (its own notes: "panel judge and debater seat"). Any debate that seats Gemini as a debater now runs on Flash too. His word "both" named the test and this seat; the advisor should say this to him in the report so the debater effect is not a surprise.
+No system change.
+BELL: none from my seat (4(d) denial, 6653).
+MISTAKES THIS TURN: none found.
+Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm
