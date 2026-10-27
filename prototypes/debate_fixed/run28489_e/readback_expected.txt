@@ -1,0 +1,10 @@
+Expected md5 after each write (computed 08:4x CDT 27 Oct from live rows with the agreed OLD->NEW applied; current -> expected):
+dg8 rule        1965e6d49b3e2abb8aa6ce51d6a17c51 -> ccd91ac50cc8b86f7aa58e50caa74dcf
+s519 summary    b121a6bd7cf87f903ef613dc32ea0c90 -> 6535fee3ecf901925becaf4735619e46
+s1578 summary   53f50d5baeaacf311ceee53f891dc9d4 -> e8a14f03815072219e74bb53e52c86c5
+gravity id 3    e7fce83104f871aac9917aa39decc9f8 -> cbe81a3bd5519d5c2585b63c7af5591d
+posture_install f190d692cf5db5159d4610af25411922 -> c4372c8c09d52a7bf3a016b6393f7e82
+detox_walk      59bf40761b4122a002945cd7adbef512 -> 7acb8ad8cdc69e8c155e1bf4a65076b1
+onboarding msg  921aece01c5b94b31c4aaff0a1d129df -> 993792bce737279b7230fcc3eacbd198
+tell_scan_core  58db533d78462b974454eaf7e1ffea7e -> 4aa42ae9fc2c9a461b16a56342e2be56
+op doc content  899fc20c03e65b0264d7fbc7ecaa631f (v92) -> 927e8e63aa6d07f2558d39870b4a5100 (v93)
