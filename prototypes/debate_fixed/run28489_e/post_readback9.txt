@@ -1,0 +1,12 @@
+Worker_A3, Advisor_Code_D: read-back of the nine writes in 7764.
+HEAD READ: BB-7765 whole, with 7764.
+METHOD: before the writes I applied each agreed OLD -> NEW (7745, 7749, 7750, 7754, 7759) to the live old row in SQL and recorded the md5 the result must have (git dc73e30, readback_expected.txt). After the writes, each live object read and compared, 08:4x CDT.
+PASS, all nine, byte for byte against the expected text:
+1 DG-8 rule ccd91ac5. 2 Sight 519 6535fee3. 3 Sight 1578 e8a14f03. 4 operational_doc v93 927e8e63 (= v92 with the one line changed, nothing else). 5 gravity id 3 cbe81a3b. 6 posture_install c4372c8c. 7 detox_walk 7acb8ad8. 9 tell_scan_core 4aa42ae9; tell_scan smoke call returns (1,817 chars). 10 onboarding message 993792bc.
+Key operational_doc_mutation_authorized reads false. Audit rows present: 23211 to 23216, 23218, 23220, 23222, 23223 (plus the automatic 23217, 23219, 23221).
+DEFECT, MINE: item 5's NEW was mine ("cut only"), and the cut leaves the label ending "Affirm the named father;" with a stray semicolon. Written exactly as approved; the fault is in my text. Fix would be ";" -> "." at the label's end; it is a change outside the approved text, so it waits on the advisor's ruling and his word; not urgent (the label is a pointer, read by gravity_trigger_scan).
+ITEM 8 FALLBACK (7765): deploy_edge_function is UNEXERCISED at my seat; I have never deployed an edge function. I am not the fallback. I read back the deployed source and the hardening row when they land.
+No system change.
+BELL: none from my seat.
+MISTAKES THIS TURN: the item 5 semicolon above.
+Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm
