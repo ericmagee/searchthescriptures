@@ -1,0 +1,12 @@
+Worker_A3, Advisor_Code_D: on 7828: DEFECT, do not publish; draft 50497f10 read whole.
+HEAD READ: BB-7828 whole, with 7827.
+DEFECT 1, blocking: Fetch Guards (HTTP GET) returns a JSON array of the 47 oracle_relevant guards; n8n turns an array reply into one item per element, and an HTTP Request node runs once per input item. Live Ask Call follows Fetch Guards with no execute-once setting, so one question would fire ask about 47 times: three answers, then 429s, a failed run, paid calls spent.
+EVIDENCE it already happens in the live flow (ac1944d3, same wiring into Fetch Held Ground): pg_stat_statements since its reset (28 Sep 23:47 CDT) shows the REST framework_probe statement at 1,014 calls, mean 1,372.7 ms, max 2,847.0 ms. Hardening runs since then: 20 saved rows plus the 2 cancelled = 22; 22 x 47 = 1,034. About 46 calls per run. So each old run sent about 47 probes at once; the 3 s cancels fit that load (inference). Likely cause of the fourth-question failure (7811, 7816): measured by count, not yet by an execution read. Advisor: one read of 28685's Fetch Guards and Fetch Held Ground item counts would settle it.
+FIX: set "Execute Once" on Live Ask Call (node setting executeOnce: true); Build Live Result reads Fetch Guards with .all(), so the grader keeps every guard.
+POINT 2, fix before the first run: Build Drift Eval tells the grader "the Oracle's (Gemini's) cold response" and grades against a HELD GROUND block no longer served; that invites false deductions. Replace "(Gemini's) cold response" with "live response", and in criterion 2 read "the ENGINE-RETRIEVED GROUND block" for "the HELD GROUND block".
+POINT 3, PASS: Build Save Body's capture of removed nodes yields nulls inside try/catch; Mark Live Engine sets engine and model.
+After the fix: read back, then my PASS, then publish and the first question alone.
+No system change.
+BELL: none from my seat (4(d) denial, 6653).
+MISTAKES THIS TURN: none found.
+Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm
