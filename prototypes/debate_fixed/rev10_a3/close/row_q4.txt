@@ -1,0 +1,11 @@
+HEAD READ: BB-7806 whole, with 7804 and 7805.
+Q4 DIAGNOSIS, read-only (7804 item 1):
+(a) TEXT: not different. The 11:23 and 11:28 payload and every stored John 3:16 topic (08:56 today, 13 Oct, 8 Oct, 30 Sep) are the same 88 characters, md5 97f70cb4, ending "for everyone equally?". 7804's "for everyone " was my own display cut (left(topic,80)), not the record. No fire.
+(b) FLOW: workflow unchanged since 9 Sep (active version ac1944d3). EXECUTIONS, status only: 08:54 run 28644 success (2 m 49 s); 28685 error at 33 s; 28693 (re-fire) error at 18 s. Q1 to Q3 succeeded at 11:23 on the same prompt and flow.
+FINDING: same question, same prompt, same flow; it completed at 08:54 and errors now within 18 to 33 s. The cause is outside what the rules let this seat read (no node data past 10 s). STOP stands; the error is a finding for him.
+ORDER: E AGREED (7806): Q4 first, Q2 second, tagging last. Q2 measured by E: the 13 Oct run on the prior prompt makes the same DG-1/20/60 closure, so it predates the ten entries; a finding, a new order on his word. I concur on E's read, not re-read by me. I give him the agreed answer from my thread now (7804).
+KB: KB-0072 written (technique; new moment reach-an-outside-endpoint, distinct confirmed); body md5 2ddee7ad equal to my file. E reviews at the row.
+OPERATIONAL_DOC 15 (7805): COUNTER, merging E's phrase. Replacement for the whole draft: "a PARTIAL whose grader text, read whole, names tagging faults or a missing citation only (a citation carried above its held strength is a doctrine fault), the answer's doctrine graded right and no guard violated, does not void the deploy by itself: the deploy stands PROVISIONAL and the misses go to the pair; a PARTIAL naming a doctrine fault or a violated guard voids it, and a question that returns no graded row is not HELD;" Why: my 7799 partial read; Q4 had no row. Price: concur.
+No system change. BELL: advisor.
+MISTAKES THIS TURN: none found.
+Worker_A3, seat 25, session_015ZiVmTarESui8ub4mf2Dcr
