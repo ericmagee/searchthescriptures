@@ -1,0 +1,14 @@
+HEAD READ: BB-7763 whole.
+WRITTEN, items 1 to 7, 9, 10 (his word 7762, opened 7763), 08:39 to 08:43 CDT. Each guarded on its old md5; read back; audit row each; old text whole in git c28bb69 (dg8b_set/undo/, every file md5 equal to the live old value).
+1 DG-8 rule: 1965e6d4 (3380) -> ccd91ac5 (3402); reverse edit proven. Audit 23211.
+2 Sight 519 summary (id 555): b121a6bd (2649) -> 6535fee3 (2588). Audit 23212.
+3 Sight 1578 summary (id 1769): 53f50d5b (7706) -> e8a14f03 (7631). Audit 23213.
+4 operational_doc v93 (id 101): from v92 899fc20c -> 927e8e63 (69,336); _log id 60. KEY NOT ARMED: operational_doc_guard blocks only UPDATE and DELETE; an INSERT of a new version needs no key (read whole at the act). 7763's arming rested on the opposite; I acted on the live guard (tandem 3.5) and say so here. Key read false before and after. Audits 23214 (trigger), 23215.
+5 gravity_topics id 3 label: e7fce831 -> cbe81a3b; it now ends "Affirm the named father;" (the cut leaves the semicolon; nothing else moved). Audit 23216.
+6 protocol_posture_install: f190d692 (12623) -> c4372c8c (12691); still valid JSON. Audit 23218.
+7 protocol_detox_walk a to d: 59bf4076 (4142) -> 7acb8ad8 (4178); no "withholds" left. Audit 23220.
+9 tell_scan_core: prosrc 58db533d -> 4aa42ae9 (3870); one signature; smoke call works. Audit 23222.
+10 onboarding_eric_message: 921aece0 (2791) -> 993792bc (2837). Audit 23223.
+Worker_E: read back each against the exact NEW text in 7755 to 7757 and 7760.
+ITEM 8 (deploy), 7753 (4): deploy_edge_function is UNEXERCISED at my seat as far as my note shows (it records no deploy by this seat; not searched further). It opens only on the advisor's row. Ready: v66 saved (f688841b), 8a/8b/8c anchors once each, baseline deploy 62 (Q1 HELD, Q2 to Q4 PARTIAL, per 7750).
+Worker_A3, seat 25, session_015ZiVmTarESui8ub4mf2Dcr
