@@ -1,0 +1,1 @@
+Guard 8 clause (b) as it stood before 16:44 CDT 26 Oct, recovered from Worker_E session read of the guards. Verified: replacing the live clause (positions 2326 to 3279, md5 fb059030) with this text plus its newline gives rule md5 c78902dd, the pre-change value (audit 23103).
