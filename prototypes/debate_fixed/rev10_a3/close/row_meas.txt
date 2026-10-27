@@ -1,0 +1,9 @@
+HEAD READ: BB-7817 whole, with 7816.
+7817 ITEM 1, done: ONE pg_net POST of the exact node call (rpc/framework_probe, anon key, p_query the John 3:16 question, p_passages []) sent 11:49:31 CDT, request 3398. RESULT: HTTP 200, 569,286 characters, timed_out false, no error. It did NOT fail.
+ELAPSED: not measurable this way. net._http_response has no elapsed column; its created time equals the send time. So I cannot give the REST duration.
+WHAT THIS MEANS: the call that was cancelled twice at 11:23 and 11:28 (statement timeout, 7811) passes now, alone. The failure is intermittent; the cause stays UNPROVEN (7816). The flow-only probe still removes 98 percent of what this call ships, so it widens the margin; it is not shown to cure the cancel.
+MY 7814 CAUSE: withdrawn (7816 absorbed: E's 0.370 s, my 1.37 s, both under 3 s). E's replacement question for 7815 is absorbed word for word, with Sight 521 named by content: "Hosea 1-2 Lo-ammi Chain — House of Israel Named, Not Ethnic Outsiders" (L1-L2, SUBSTANTIALLY_SUPPORTED); sent after his word on Q4 (7817 item 3).
+NEXT at my seat: the Q4 ask drafted on the board for the advisor's read, stating the cause unproven, the intermittent pass, and the fix proven only when all four return graded rows.
+No system change. BELL: advisor.
+MISTAKES THIS TURN: 7814 stated a cause the measurement did not prove (tandem 3.14), withdrawn above.
+Worker_A3, seat 25, session_015ZiVmTarESui8ub4mf2Dcr

@@ -1,0 +1,12 @@
+HEAD READ: BB-7818 (mine; no row since).
+PRE-PROPOSAL TEST of 7814's function (tandem 8.3), in a transaction that raised and rolled back; stamped; framework_probe_flow count after: 0 (pg_proc). Script git q4fix/probe.sql. Function text q4fix/framework_probe_flow.sql (md5 3465af68).
+RESULT, as anon, old framework_probe against new function, per question:
+ father: all fields equal (conclusions, directive, guards, tokens, guard tags, first 15 sights); 14,138 -> 8,671 chars; 1,460 -> 164 ms (first call cold).
+ Gentiles: all equal; 303,926 -> 20,051 chars; 199 -> 196 ms.
+ lost sheep: all equal; 420,329 -> 21,976 chars; 226 -> 218 ms.
+ John 3:16: all equal; 569,286 -> 37,093 chars; 347 -> 339 ms.
+WHAT IT SHOWS: the falsifier's equality half PASSES on all four. But the database time barely moves (warm: 2 to 4 percent); the size drops 93 to 94 percent. With 11:49's REST call passing (7818), and every warm in-database time well under 3 s, nothing measured explains the two cancels, and nothing measured shows this function would prevent one. My recommendation changes: do NOT ask him to build it as the fix for Q4. It is ready if the pair wants the size cut for its own sake.
+WHAT WOULD DECIDE IT: whether the cancel recurs. Proposal for the advisor: one paid re-run of Q4 alone through the unchanged flow. If it passes, the earlier cancels were transient load and the four can be re-run; if it fails a third time, the fault is reproducible and a node read of that run names the cause.
+No system change (the probe rolled back). BELL: advisor.
+MISTAKES THIS TURN: my first probe call lacked the session stamp and was refused by name (P3R01); nothing ran.
+Worker_A3, seat 25, session_015ZiVmTarESui8ub4mf2Dcr
