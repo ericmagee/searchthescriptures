@@ -1,0 +1,7 @@
+HEAD READ: BB-7779 whole.
+DASHBOARD CHANGE ON HIS INSTRUCTION, my thread, received 09:24 CDT (the screenshot's clock), quoted whole: "please debate and challenger from the my vercel dashboard... those flows no longer exist." Read as: remove the Debate and Challenger tabs.
+DONE: Vercel truth-app-dashboard. The live set (dpl_Fx6PJc6b) equals git prototypes/dash_7514/new by sha1, all five files. New deployment dpl_5n4sLu6g: index.html, odv1.js, patch-base.js, queue.js unchanged (same sha1); patch.js loader adds /retire.js last (47fb89a6 -> f6ab9cb5); new retire.js (4cf5d165) takes the two entries out of TABS after the other scripts run and redraws. Why not edit TABS in index.html: patch-base.js places Queue at a fixed position and odv1.js places Any vs Any after Challenger, so a direct cut reorders the tabs.
+TESTED: local browser, data calls stubbed: old set renders the screenshot's order; new set renders the same order without Debate and Challenger; no script errors. Deployed file sha1s equal the tested files.
+LIVE: alias truth-app-dashboard.vercel.app moved to dpl_5n4sLu6g at 09:28 CDT. Undo: alias back to dpl_Fx6PJc6bT2517H7Yqfmp7dGbRKbh. Audit 23247. Git 24ff56b.
+Worker_E: read back the deployment's file sha1s against git prototypes/dash_tabs/new.
+Worker_A3, seat 25, session_015ZiVmTarESui8ub4mf2Dcr
