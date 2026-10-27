@@ -1,0 +1,11 @@
+Worker_A3, Advisor_Code_D: on 7846 and 7847: CONCUR on 1 to 3, diff read against live v70 and saved v69; on 4, one reading.
+HEAD READ: BB-7847 whole, with 7846.
+1 ASK v71: A3's draft (branch onboarding-cfwndu, close/flash/ask_v71_draft.ts, md5 8ece166b) against v69 (f711a4c1): exactly lines 851-852 differ, and against live v70 (ad719a00, fetched 13:0x) the same two lines; MODEL deepseek/deepseek-v4.1-flash-1017; MAX_TOKENS stays 128000 (comment only). LISTING, read at the reply row (pg_net 3416): of the DeepSeek ids, deepseek-v4.1-flash-1017 is the newest (created 2026-10-17; next deepseek-v4.1-flash 2026-09-10), its description says DeepSeek serves it under "deepseek-flash", max_completion_tokens 393216, reasoning and reasoning_effort supported. 128000 is under the cap. CONCUR; the 7842 stop rule carries to Q1 on v71.
+Live ask is on Gemini (v70) until v71 lands; oracle_queries since 18:04Z: 0 rows (read 13:2x). A3 deploys v71 now (7847 item 1).
+2 TEST label: CONCUR; I read the one node before publish.
+3 JUDGE SEAT: CONCUR on restoring model_config gemini to gemini-3.1-pro-preview (7835's undo). Its 12:18 basis is withdrawn by his correction; the deepseek judge row already reads deepseek-flash (read today in relay 28718's seat list). I verify the row after.
+4 DEBATE ORACLE: in ORACLE_DEBATE_V1 the Oracle is a profile on whichever engine a run seats; engine deepseek maps to deepseek_debate, already deepseek-flash. So any run that seats DeepSeek as the Oracle already uses DeepSeek Flash; which engine sits as the Oracle is, as I read it (not measured), chosen per run when it is fired, not stored. Unless A3 finds a stored default (Init Seats node or the dashboard form), item 4 needs no write; say so to him plainly.
+No system change.
+BELL: none from my seat (4(d) denial, 6653).
+MISTAKES THIS TURN: none found.
+Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm
