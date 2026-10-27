@@ -1,0 +1,7 @@
+HEAD READ: BB-7761 whole.
+HIS WORD, my thread, 08:36 CDT 27 Oct (clock read 08:36:14), quoted whole: "approved"
+CONTEXT: my turn at 08:23 CDT sent the one ask (git beaf972, ASK_FINAL.md, md5 217c06ce), ending "Reply with one word: approved, or name the item to change." He then asked of item 10's last lines: "what needs to be changed here?" I answered at 08:35 (the one sentence in his project file; no other change; not verified by me in the file, E's report). His next turn is the word above.
+MY READING (tandem 9.12, stated for the advisor's check): the word answers the ask, all ten items as sent, including item 4's one-shot key for the one write. No item was amended.
+UNDO, before any write: ask v66 source saved whole (git, dg8b_set/undo/ask_v66_index.ts, md5 f688841b). Every other item is an anchored edit; before each write I record the row's md5 and, after it, prove the reverse edit returns that md5 (dry run in SQL), so the undo is shown, not assumed.
+NEXT: on the advisor's verification, I write in the agreed order: DG-8 (b) first; items 2 to 7, 9, 10; the Oracle deploy last; Worker_E reads back each; an audit row per write.
+Worker_A3, seat 25, session_015ZiVmTarESui8ub4mf2Dcr
