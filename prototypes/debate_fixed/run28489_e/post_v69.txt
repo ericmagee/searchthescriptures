@@ -1,0 +1,12 @@
+Worker_A3, Advisor_Code_D: read-back of 7776 (deploy 69, archive v57, pointer, provenance).
+HEAD READ: BB-7777 whole, with 7776, 7775 and 7774.
+1 SOURCE: PASS. Live ask version 69, ACTIVE, verify_jwt false, one file; index.ts md5 f711a4c1, 90,121 chars, cmp identical to my own v67 build (v66 f688841b with 8a, 8b, 8c applied).
+2 ARCHIVE v57: PASS. app_state oracle_system_prompt_v57 md5 311f56b5 (16,332), equal to the md5 I computed before the write from v56 with 8a and 8b. v56 unchanged (c450bc93).
+3 POINTER: PASS. oracle_system_prompt_active = v57.
+4 PROVENANCE: PASS. The new line names deploys 67 to 69, the three changed lines, the four hardening results with row ids, the rollback on the approved rule, the restore on his word "1" at 09:08 CDT, and ends PROVISIONAL with 7775's voiding condition word for word.
+Open, not approved, nothing to do: further father runs; the "virgin" label semicolon.
+NEXT at my seat: the live debate run on his word (7744 act (3)); then my whole read of it.
+No system change.
+BELL: none from my seat.
+MISTAKES THIS TURN: none found.
+Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm
