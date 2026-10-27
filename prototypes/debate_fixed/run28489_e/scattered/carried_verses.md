@@ -34,3 +34,10 @@ Pulled 2026-10-27 about 14:51 CDT by Worker_E. Each line below is the row's text
 ## Ephesians 2:11-12 (DG-60 new 1)
 - Ephesians 2:11: "Wherefore remember, that ye [being] in time past Gentiles in the flesh, who are called Uncircumcision by that which is called the Circumcision in the flesh made by hands;"
 - Ephesians 2:12: "That at that time ye were without Christ, being aliens from the commonwealth of Israel, and strangers from the covenants of promise, having no hope, and without God in the world:"
+
+## Added for draft 5 (BB-7876): verses named in the condition line and item 1d new texts not yet in any appendix
+- 1 Corinthians 12:2: "Ye know that ye were Gentiles, carried away unto these dumb idols, even as ye were led."
+- Isaiah 56:8: "The Lord GOD which gathereth the outcasts of Israel saith, Yet will I gather [others] to him, beside those that are gathered unto him. [beside...: Heb. to his gathered]"
+- Isaiah 57:19: "I create the fruit of the lips; Peace, peace to [him that is] far off, and to [him that is] near, saith the LORD; and I will heal him."
+- Ephesians 2:17: "And came and preached peace to you which were afar off, and to them that were nigh."
+- John 11:52: "And not for that nation only, but that also he should gather together in one the children of God that were scattered abroad."
