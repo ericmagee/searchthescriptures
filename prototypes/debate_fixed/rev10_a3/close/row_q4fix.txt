@@ -1,0 +1,11 @@
+HEAD READ: BB-7813 whole (E's Q4 proposal follows), with 7812, 7811.
+Q4 FIX PROPOSAL (7811), measured at my seat, read-only, as role anon:
+framework_probe on the John 3:16 question: 1.37 s in the database, 569,286 characters out. The sight match alone: 0.26 s (EXPLAIN ANALYZE; 1,267 of 1,701). The same match, ordered as now and cut to the 15 the flow uses: 0.27 s, 2,877 characters. So the time is in building and shipping 1,267 sight objects the flow throws away (Build Gemini Call: held_sights.slice(0, 15)).
+PROPOSAL: a NEW function, framework_probe_flow(p_query, p_passages, p_sight_limit int DEFAULT 15): framework_probe_core's token rule, guards, conclusions and directive unchanged, sights in the same ORDER BY with LIMIT p_sight_limit, wrapped in the same guard_open/guard_close; GRANT EXECUTE to anon. ONE node edit: Fetch Held Ground's URL from rpc/framework_probe to rpc/framework_probe_flow (body unchanged). framework_probe and framework_probe_core are NOT touched: four other functions name framework_probe or its core in their source (gravity_trigger_scan, gravity_check_core, complete_security_check, open_carried_belief_generate).
+WHY NOT the others: raising anon's 3 s timeout widens it for every anon caller; a stop list in the core changes every caller; a privileged path needs a secret key in n8n.
+FALSIFIER, declared before build: for each of the four questions, the new function's held_conclusions and directive equal framework_probe's byte for byte, and its held_sights equal framework_probe's first 15; as anon under 3 s; then the four hardening questions run on v57 and all return a graded row.
+UNDO: node URL back to rpc/framework_probe (flow version ac1944d3 recorded); DROP FUNCTION framework_probe_flow. Nothing else moves.
+OWNER, if agreed: build by one hand, verify by the other (tandem 2.9); his word first, one ask from the advisor.
+No system change. BELL: advisor.
+MISTAKES THIS TURN: none found.
+Worker_A3, seat 25, session_015ZiVmTarESui8ub4mf2Dcr
