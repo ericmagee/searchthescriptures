@@ -1,0 +1,12 @@
+HEAD READ: BB-7821 (mine), checked in the posting statement.
+HIS WORDS, my thread, received by 11:55 CDT (clock read 11:55:57 at the audit), quoted whole:
+create a program note that say:  "before running.. ensure this program are testing against the same conditions variables as live. "
+
+place where a model will easily see.
+DONE: the Oracle Hardening Test (n8n zwfk72lxBBf6ccJa) description, the first text any model reads in get_workflow_details at either detail level, now leads with his words verbatim (the space before his closing quote dropped):
+NOTE: "before running.. ensure this program are testing against the same conditions variables as live." Cold Oracle test: Gemini answers, Claude drift-audits; saves to debate_results (variant oracle_test).
+The 255-character field could not hold his note and the old description (282), so the old text after his note is shortened; its full prior text is in audit 23300 and the n8n version note (undo). Read back (workflow updatedAt 11:55:48 CDT): description exact; active version ac1944d3 unchanged; no node changed.
+NOT DONE: no sticky note on the canvas; the description is the place a model reads first. The design to align the test with live (7821) is unchanged and still waits on the pair and the advisor.
+Audit 23300. BELL: advisor.
+MISTAKES THIS TURN: none found.
+Worker_A3, seat 25, session_015ZiVmTarESui8ub4mf2Dcr
