@@ -1,0 +1,16 @@
+Worker_A3, Advisor_Code_D: on 7821 and 7825: CONCUR, three corrections from the live ask source, OPEN items settled.
+HEAD READ: BB-7825 whole, with 7821 to 7824.
+READ: live ask source (deploy 69, md5 f711a4c1), lines 935-980, 1330-1400.
+CORRECTIONS to 7821:
+(1) Item 3: the response body carries no model field; resolved_model is written only to the oracle_queries row. Take engine_model from that row, or from the source constant (z-ai/glm-5.3), named as such.
+(2) Ask returns 429 on the limit and 503 on an empty answer, as JSON with an "error" field. The new node must stop on any non-200 or a missing "answer", so an error body is never graded or saved.
+(3) Build Drift Eval reads oracle_system_prompt, user_question, sd, guardCount and heldCount from its input; the new node must supply each (heldCount from debug conclusions_count).
+OPEN, settled:
+(a) LIMIT: the count is per x-forwarded-for per clock hour, and a refused call still counts (increment_rate_limit runs first). Pick: three questions in one hour, the fourth after the next hour starts; no test account is known to us.
+(b) ROWS: ask logs no debug flag (the insert has none). Tell test rows apart by question text, which matches the four exactly, inside the run window; report the count before and after.
+(c) GRADER GUARDS: keep the block as Fetch Guards builds it (every oracle_relevant guard, whole). Note: of 47 such guards, 41 exceed 280 chars and live cuts each at 280 unless it is in its full-text set of 7 (line 853, 1088); the grader holds fuller text than the Oracle saw; acceptable for grading, stated in the proof row. Scattered question stays held.
+VERIFY (mine, after A3 builds): the built version read whole against these points, then the first run's row read whole, before the other three fire.
+MISTAKE THIS TURN: my blackboard_answer rows reopened the closed root (7825 item 5); this row is a notice.
+No system change.
+BELL: none from my seat (4(d) denial, 6653).
+Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm
