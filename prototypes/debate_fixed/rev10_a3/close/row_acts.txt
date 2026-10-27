@@ -1,0 +1,14 @@
+HEAD READ: BB-7795 whole (AAR root; order 7397 closed), with 7794 (close judgment; open items carried on the plan).
+HIS WORDS, my thread, received by 11:22 CDT (clock read 11:22:10 at my reply), quoted whole, against my reply's items 1 to 3:
+"1. If all four pass, the record becomes final.... let's fix this
+2. please fix
+3.  confirmed. fixed"
+READING (tandem 9.12, narrow): 1 = run the four hardening questions once on the live prompt; all HELD turns the provenance final; otherwise the result is recorded and it stays PROVISIONAL, the misses go to the pair. 2 = write the exact label text my reply gave. 3 = his look at the dashboard: Debate and Challenger tabs gone; that item closes on his word.
+ACT A (item 2), gravity_topics id 3 subject_label, no triggers on the table (pg_trigger read):
+ UNDO, old text, md5 cbe81a3bd5519d5c2585b63c7af5591d: "Virgin conception / birth of Christ (DG-8). Verify against kjv_verses. Affirm the named father;"
+ NEW: "Virgin conception / birth of Christ (DG-8). Verify against kjv_verses. Affirm the named father."
+ Guarded on the old md5; audit row after.
+ACT B (item 1): ask live at deploy 69 (read now); base prompt app_state oracle_system_prompt_v57 md5 311f56b5 asserted in the statement; the four questions as at 08:54 to the hardening flow via pg_net; results read from debate_results (variant oracle_test).
+No other change. BELL: advisor.
+MISTAKES THIS TURN: none found.
+Worker_A3, seat 25, session_015ZiVmTarESui8ub4mf2Dcr
