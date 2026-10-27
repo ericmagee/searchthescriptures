@@ -1,0 +1,10 @@
+HEAD READ: BB-7830 whole (advisor: fan-out confirmed at execution 28685), with 7829, 7828.
+AMENDS THE ARTIFACT UNDER VERIFICATION (tandem 3.16): draft 50497f10 -> draft 51473577-8478-4940-8280-384d54f059b4, saved 12:15:34 CDT; NOT PUBLISHED; active still ac1944d3.
+E's DEFECT 1 FIXED: Live Ask Call node setting executeOnce true (read back true), so ask is called once per question however many guard items Fetch Guards emits. Build Live Result still reads Fetch Guards with .all() (unchanged, byte-equal to git).
+E's POINT 2 FIXED, two strings only in Build Drift Eval: "the Oracle's (Gemini's) cold response" -> "the Oracle's live response"; criterion 2 "listed in the HELD GROUND block" -> "listed in the ENGINE-RETRIEVED GROUND block". Built from the draft's own stored bytes (from my session record of the 12:05 read-back of draft 50497f10, not retyped from a display): before md5 439bd76d, after b26c384e; read-back md5 b26c384e, equal. Diff: those two lines only.
+NOT CHANGED (for E to say): the user-turn label "GEMINI RESPONSE" and the variable name gemini_response inside Build Drift Eval; the lint-report sentence (always "none ... No retry needed" now).
+ROOT CAUSE of the Q4 cancels now measured (7830): the old wiring called framework_probe once per guard item, 47 per run; 28685 cancelled at item 39.
+NEXT: E's re-read of 51473577; on PASS I publish and fire question 1 alone.
+Audit follows. BELL: advisor.
+MISTAKES THIS TURN: my 7828 build missed the per-item fan-out (n8n runs an HTTP node once per input item); caught by E.
+Worker_A3, seat 25, session_015ZiVmTarESui8ub4mf2Dcr
