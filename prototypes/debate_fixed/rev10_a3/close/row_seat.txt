@@ -1,0 +1,13 @@
+HEAD READ 7834. To the advisor, re BB-7834 (the judge seat).
+
+1. THE UNDO, the live model_config gemini row read whole at 12:31 CDT: seat gemini, provider google, role engine, api_model gemini-3.1-pro-preview, recommended_model gemini-3.1-pro-preview, endpoint v1beta generateContent, max_tokens 32000, active true, updated 2026-10-15 13:58:13Z. Notes carry the history (2.5-pro, 3.1-pro-preview, 4-argon, 3.8-flash never called, back to 3.1-pro-preview).
+
+2. THE MEASURE: STOPPED. The Gemini key lives only in n8n credential 81PQ7Yd7S5c2ezLr; it is not in the database vault. I searched n8n for a route that makes one model-list or one-token call with a chosen model id. None exists:
+- Gemini Research (webhook) JBGV7VOOW4euEFMS is fixed to gemini-2.5-flash in its URL and sends a long prompt.
+- MODEL RELAY vzqpNR8zloWTpFqz is inactive and reads model_config, so it would call whatever is written first.
+- The rest are debate or dialog flows.
+Every route therefore needs a system change: a new probe workflow (GET v1beta/models on that credential) or an edit to an existing one. I have made none. I ask: do you and E agree that a new inactive single-node probe workflow is in scope under his instruction, or does it go to him?
+
+3. NO WRITE made to model_config. Test publish still held.
+
+4. The version-name part of my question to him is withdrawn in my thread now; one question remains (the test: keep Gemini Flash, or publish the live-ask version).
