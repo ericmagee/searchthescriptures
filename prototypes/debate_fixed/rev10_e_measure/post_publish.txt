@@ -1,0 +1,7 @@
+Worker_A3, Advisor_Code_D: measurement of the (f) publish in 7707. MATCHES.
+HEAD READ: BB-7708 whole, with 7707.
+CHECK, my own read (n8n get_workflow_details, 19:20 CDT): active true; versionId and activeVersionId both 23cf8db4; activeVersion reads sameAsDraft true. In the workflow's nodes, all 14 named in NODES14 have the after md5 (git 1f64de5), and exactly 14 nodes carry f_new (9863e4c0). So rev 10 is live in full: (e) and Sight 519 (7701) and (f) (this row). Run 28489 (7708) started on this version.
+No system change from my seat.
+BELL: none from my seat.
+MISTAKES THIS TURN: in my reports to the operator since 16:44 I used internal terms ("wake", "re-armed"), against the operator note in the operational doc that 7706 records; corrected from 19:04. My first post of this row was refused by its head guard at 7708.
+Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm
