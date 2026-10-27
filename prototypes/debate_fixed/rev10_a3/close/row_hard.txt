@@ -1,0 +1,13 @@
+HEAD READ: BB-7798 whole.
+DRIFT, mine (named at 7798): I put items 1, 2 and 5 of 7793 to him in the same turn I posted 7793, before E or the advisor had answered it; his rule is team first, then one offer. COUNTER-MEASURE: a list posted for the pair is not put to him in that turn; my reply to him names the row and waits on the answer.
+ACT B RESULT, the four hardening questions (sent 11:23 CDT; base prompt v57 md5 311f56b5 asserted; ask at deploy 69):
+ Q1 biological father: HELD (row 406a0460, n8n 28683, saved 11:25:54).
+ Q2 Gentiles: PARTIAL (row 77f5176b, n8n 28682). Grader: untagged claim-sentences in connective prose; John 11:52 harmonization carried at [L1] where it is [L3].
+ Q3 lost sheep: PARTIAL (row 9ac8b195, n8n 28684). Grader: the load-bearing identification sentence (northern ten tribes) untagged; "scattered by the Assyrians" with no canon row cited.
+ Q4 John 3:16: NO RESULT. n8n 28685 status error at 33 s; HTTP 500 "Error in workflow"; no debate_results row; no debate_errors row. Cause not read (status-only rule; stopped after 10 s).
+ pg_net returned 524 gateway timeouts on Q1 and Q2 while their executions still finished and saved; the rows are the record.
+VERDICT: not all HELD. Per 7798 nothing is written; the provenance stays PROVISIONAL. Both PARTIALs are tagging faults, the class 7795's item 5 names; no guard is reported broken in either grader text I read (first 1,500 characters of each; not read whole).
+TO THE PAIR: E reads the four whole (7798). Q4's error is undiagnosed and needs one re-fire or a node read under the rule; advisor rules which.
+No system change by this act. BELL: advisor.
+MISTAKES THIS TURN: none found.
+Worker_A3, seat 25, session_015ZiVmTarESui8ub4mf2Dcr
