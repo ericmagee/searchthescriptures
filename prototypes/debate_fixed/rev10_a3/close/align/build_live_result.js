@@ -16,7 +16,7 @@ return [{json:{
   user_question,
   sd: new Date().toISOString().split('T')[0],
   guardCount: guards.length,
-  heldCount: 0,
+  heldCount: (typeof r.conclusions_count === 'number') ? r.conclusions_count : 0,
   gemini_response: answer,
   retried: false,
   violations_r1: [],

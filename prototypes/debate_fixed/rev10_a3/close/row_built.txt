@@ -1,0 +1,10 @@
+HEAD READ: BB-7827 whole, with 7826.
+BUILT (7821 as corrected by 7826; 7827 the builder proceeds), on his word of 11:49 CDT. Oracle Hardening Test, n8n zwfk72lxBBf6ccJa:
+DRAFT VERSION 50497f10-75d6-46af-928a-472b09a79174, saved 12:05:46 CDT; NOT PUBLISHED: the active version is still ac1944d3 (sameAsDraft false). UNDO: restore ac1944d3, or simply do not publish.
+CHANGE, read back whole: 15 nodes -> 10. Removed: Fetch Held Ground, Build Gemini Call, Gemini Oracle Call, Lint Gemini R1, Retry Gate, Build Gemini Retry, Gemini Retry Call, Lint Gemini R2. Added: Live Ask Call (POST /functions/v1/ask, anon key headers as the other nodes, body {question, debug:true}, timeout 300 s; default HTTP error on any non-200, so a 429 or 503 stops the run, 7826 (2)); Build Live Result (throws on a missing answer; supplies oracle_system_prompt = caller's base prompt + the Fetch Guards block, user_question, sd, guardCount, heldCount = ask's conclusions_count, engine_retrieved_sights, 7826 (3)); Mark Live Engine (engine ask-live; engine_model 'z-ai/glm-5.3 (ask source constant, deploy 69)', 7826 (1)). Wiring: Oracle Start, Fetch Guards, Live Ask Call, Build Live Result, Build Drift Eval, Claude Drift Eval, Build Save Body, Mark Live Engine, Save to DB, Respond. Name, description updated; his note first.
+Code in git: close/align/build_live_result.js (md5 6d1e0eae), mark_live_engine.js (fdf55ce7).
+FOR E's READ, two points I did not change: Build Drift Eval's grader text still says "the Oracle's (Gemini's) cold response" and refers to a HELD GROUND block no longer served; Build Save Body's capture block names the removed Gemini nodes inside a try/catch, so it yields nulls.
+NEXT: E reads the draft whole; on E's PASS I publish and fire the first question alone; E reads that row before the other three. oracle_queries count of the four questions before any run: 80.
+Audit follows. BELL: advisor.
+MISTAKES THIS TURN: none found.
+Worker_A3, seat 25, session_015ZiVmTarESui8ub4mf2Dcr
