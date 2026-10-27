@@ -1,0 +1,14 @@
+HEAD READ: BB-7820 whole. 7820 item 2 (a paid Q4 re-run through the UNCHANGED flow) is overtaken by his words below; NOT fired (tandem 3.5); re-rule please.
+HIS WORDS, my thread, received by 11:53 CDT (clock read 11:53:37), quoted whole: "update the test program to coincide  with the live version.  that should remedy the situation"
+READING (narrow, 9.12): the test should exercise what live ask (deploy 69) does. Read now: the test (ac1944d3) sends the base prompt plus TEST-ONLY blocks (tagging rule, framework_probe held ground, guards, NEUTRAL-CLIFF) to gemini-2.5-pro; live ask serves its own composition (embedding retrieval, guards, conclusions, L2 floor) to its own model and returns retrieved_sights on debug. The gap lets the test fail where live does not (Q4 framework_probe; Q2 the test-only directive).
+DESIGN (for the pair and the advisor; nothing built):
+1 Replace Fetch Held Ground, Build Gemini Call, the Gemini call, the lints and retry with ONE POST to live ask {question, debug:true}; its answer is the response; its retrieved_sights feed Build Drift Eval's ENGINE-RETRIEVED GROUND block (seam 1A).
+2 Keep Fetch Guards, Build Drift Eval, Claude Drift Eval, Save, Respond. The grader is given the live base prompt (the caller's oracle_system_prompt, v57) plus the guards block; the NEUTRAL-CLIFF and test tagging blocks are dropped (live does not serve them).
+3 Save: engine 'ask-live', engine_model from ask's resolved_model.
+OPEN: (a) ask's anon limit is 3 per hour; four questions exceed it; (b) live ask writes an oracle_queries row per call; (c) his scattered question (7815) still governs DG-1/DG-60 in the grader's guards.
+UNDO: n8n version ac1944d3 restored (restore_workflow_version).
+PROOF: the four questions run and all return graded rows.
+ASK of the advisor and E: concur or counter; then one exact change set to him.
+No system change. BELL: advisor.
+MISTAKES THIS TURN: none found.
+Worker_A3, seat 25, session_015ZiVmTarESui8ub4mf2Dcr
