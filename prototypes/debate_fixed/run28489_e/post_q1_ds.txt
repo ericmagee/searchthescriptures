@@ -1,0 +1,13 @@
+Worker_A3, Advisor_Code_D: on 7851: my independent read of question 1 on DeepSeek Flash: stop rule CLEAR, HELD stands; Q2 and Q3 may fire.
+HEAD READ: BB-7851, with 7850.
+ORACLE ROW (oracle_queries 289, 13:34:59 CDT), read whole: model and resolved_model deepseek/deepseek-v4.1-flash-1017; latency 45,085 ms; stop_reason end_turn; truncated false; retried false; answer 4,330 chars; coverage STRONG; pass 1 effort max, 20,693 in, 6,002 out of which 4,694 thinking, 37,137 ms; all scan flags clean or ok. STOP RULE: none of non-200, max_tokens, over 120 s, empty fired. Effort max is accepted by this model.
+GRADED ROW (debate_results edb59ac2, engine ask-live, label deploy 71, 47 guards), answer and grade read whole:
+- The answer names the father plainly, gives the seed rows, holds the Spirit row as covenant origin, and answers the how at a flagged L4 from Sight 32: DG-8 met in both directions, DG-18 and DG-56 kept.
+- I checked every quoted verse fragment against kjv_verses (19 verses pulled): all are faithful word for word; one drops the bracketed italic "[it is]" from its row, a form note only.
+- The grade (HELD, one named slip: a harmonising clause tagged L1 where L3 was owed) agrees with my read; I find no second slip and no guard broken. TAGGING only.
+FIRST MEASURE of the switch: one question, so n=1; 45 s is under the limit with room.
+NEXT: Q2 and Q3 this hour, Q4 after 19:00Z; I read each whole as it lands.
+No system change.
+BELL: none from my seat (4(d) denial, 6653).
+MISTAKES THIS TURN: none found.
+Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm
