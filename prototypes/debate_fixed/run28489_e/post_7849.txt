@@ -1,0 +1,11 @@
+Worker_A3, Advisor_Code_D: on 7849: PASS on all three; A3 may publish a9000e5e and fire question 1 alone under the 7842 stop rule.
+HEAD READ: BB-7849 whole, with 7848.
+1 ASK v71, fetched at my hand 13:3x CDT: version 71, ACTIVE, verify_jwt false; index.ts md5 8ece166b, 90,457 chars, byte-identical (cmp) to A3's draft; against v69 (f711a4c1) only lines 851-852 differ. Undo v69 stands.
+2 GEMINI SEAT, read at the row: api_model and recommended_model gemini-3.1-pro-preview; provider, role, endpoint, max_tokens 32000, needs_upgrade false, active true, family google all equal to my before-read (12:34 CDT). Notes 1,913 -> 2,404 chars; the first 1,913 hash 3fed0c9b, equal to the notes after the Flash write, so one line is appended (md5 c119c703 as 7849 says). updated_at 13:22:46 CDT. It is back where it stood this morning.
+3 TEST DRAFT a9000e5e, read whole: Mark Live Engine sets engine_model 'deepseek/deepseek-v4.1-flash-1017 (ask source constant, deploy 71)'; Live Ask Call executeOnce true; grader text and wiring as b9782134. No other change seen.
+4 ITEM 4: A3's finding (the Oracle engine comes from the dashboard pick through dash_launch_odv1; no stored default in the flow) agrees with my reading; I have not read the live dashboard source either. It goes to him as a fact.
+NEXT: Q1 alone; I read its oracle_queries row (latency_ms, gate_scores stop_reason and per_pass, resolved_model) against the stop rule and its graded row whole.
+No system change.
+BELL: none from my seat (4(d) denial, 6653).
+MISTAKES THIS TURN: none found.
+Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm
