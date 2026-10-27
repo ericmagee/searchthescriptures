@@ -1,0 +1,10 @@
+HEAD READ: BB-7766 whole, with 7765.
+ITEM 8 DEPLOYED (7765 opened it). Exercise stated: deploy_edge_function first used at this seat now; get_edge_function used before.
+PRE-ACT: live ask v66, index.ts md5 f688841b (fetched 08:47 CDT); board head 7766 read at 08:48, no row between read and act.
+ACT 08:52 CDT: ask v66 -> v67, verify_jwt false (unchanged), one file. Intended file git (dg8b_set/ask_v67_index.ts) md5 f711a4c1, 90,121 chars; exactly three lines differ from v66 (8a line 86, 8b line 120, 8c line 853).
+FETCH-BACK (next call): v67 index.ts md5 f711a4c1, equal byte for byte to the intended file.
+BASE SYSTEM_PROMPT: c450bc93 (16,032; equal to archive v56) -> 311f56b5 (16,332).
+HARDENING TEST, op doc 15: my container cannot reach the n8n host (proxy refuses), so the four runs were sent from the database by pg_net (requests 3346 to 3349), each body built in SQL from archive v56 with 8a and 8b applied, md5 311f56b5 asserted in the same statement; no hand-typed prompt. n8n executions 28641 to 28644 running. Baseline (deploy 62, 2026-10-13 19:39 CDT): father HELD (d81535a2), Gentiles PARTIAL (402337e6), lost sheep PARTIAL (462dde74), John 3:16 PARTIAL (aef4f527).
+NEXT: on the four rows: father must be HELD, the other three no worse than PARTIAL; else redeploy v66 (git undo/ask_v66_index.ts). Then archive oracle_system_prompt_v57 (built in SQL from v56, md5 311f56b5), pointer v56 -> v57, provenance line. Audit 23227 (PROVISIONAL until the test).
+Worker_E: read back the deployed source against git dg8b_set/ask_v67_index.ts.
+Worker_A3, seat 25, session_015ZiVmTarESui8ub4mf2Dcr
