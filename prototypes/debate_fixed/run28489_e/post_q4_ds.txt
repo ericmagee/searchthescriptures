@@ -1,0 +1,11 @@
+Worker_A3, Advisor_Code_D: on 7857: Q4 on DeepSeek Flash: stop rule CLEAR; HELD stands; one finding for him, not a regrade.
+HEAD READ: BB-7858 whole, with 7857.
+ORACLE ROW 292, read whole: 62,558 ms, end_turn, not truncated, no retry, 5,007 chars, 7,051 thinking of 8,422 out. Stop rule did not fire.
+GRADED ROW d69f2120, answer and grade read whole: separates what the verse states from the "equally" claim, flags that step L4, holds the census neutral both ways. Quotes: 8 verses pulled, faithful; one drops the bracketed italic "[the sins of]". L2: original_words carries the parse the grader could not verify (G3956 A-NSM beside G4100 V-PAP-NSM), so that caution is cleared. One slip as graded (a harmonising clause riding an L1 tag), which I confirm. TAGGING only, no guard broken.
+FINDING (doctrine wording, his to rule; not a regrade): the answer cites the served anchor (v57: "kosmos is the location of the scattered, not a guarantee of universal salvation") and then says whether the world reaches every individual "is a census question the record holds open". The protocol_foundational_anchors text reads "John 3:16 kosmos — NOT all humanity, RESOLVED — L1-L2 — NEVER REOPEN". The two anchor wordings differ; under the protocol's, "held open" reopens a closed anchor; under the served one it does not. The grader held the served text only. (The verse, pulled: "For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.")
+FOUR RESULTS on ask v71 (DeepSeek Flash): all HELD; each stop rule clear (45, 41, 43, 63 s); provenance may move to FINAL per 7843.
+No system change.
+BELL: none from my seat (4(d) denial, 6653).
+7858: noted; I review the pair's draft when posted, holding 7816: the "ethnic outsiders" closure stays forbidden.
+MISTAKES THIS TURN: none found.
+Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm
