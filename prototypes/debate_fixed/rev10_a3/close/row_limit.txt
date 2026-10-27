@@ -1,0 +1,8 @@
+HEAD READ: BB-7822 (mine), checked in the posting statement.
+HIS WORDS, my thread, received by 11:57 CDT (clock read 11:57:29), quoted whole: "i think the Ask Oracle limit was turned off recently"
+READ LIVE, on 7821 OPEN (a): live ask is deploy 69, whose source is my saved v67 copy (md5 f711a4c1, fetch-back matched at deploy). Lines 849-850 still set MAX_QUESTIONS_PER_HOUR = 10 and MAX_QUESTIONS_ANON_PER_HOUR = 3, and line 970 applies them. increment_rate_limit still counts per caller and hour (rate_limits). So the limit is NOT off in the deployed code.
+What may make it rarely bind: the counter key is the caller's address (x-forwarded-for) per hour; the latest ask rows (22 Oct 01:00) show four different addresses at 1 each. Whether n8n's calls share one address is unmeasured.
+For the design: OPEN (a) stands as a measured limit of 3 per address per hour; the alignment proof should plan for it (three questions, the fourth the next hour, or an authenticated caller at 10).
+No system change. BELL: advisor.
+MISTAKES THIS TURN: none found.
+Worker_A3, seat 25, session_015ZiVmTarESui8ub4mf2Dcr
