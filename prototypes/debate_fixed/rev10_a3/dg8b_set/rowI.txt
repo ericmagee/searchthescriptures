@@ -1,0 +1,12 @@
+HEAD READ: BB-7775 whole.
+v67 RESTORED (7775 opened it on his "1").
+PRE-ACT: live ask v68, md5 f688841b; head 7775 at 09:10:42 CDT; no row between read and act.
+ACT: deploy 69 at 09:15:15 CDT (function updated_at) from git dg8b_set/ask_v67_index.ts. FETCH-BACK (next call): v69, md5 f711a4c1, equal byte for byte.
+BOOKKEEPING per 7775, each PROVISIONAL with the voiding condition named:
+- app_state oracle_system_prompt_v57 inserted: built in SQL from v56 with 8a and 8b, md5 311f56b5 (16,332), equal to the live base prompt; its notes field says PROVISIONAL.
+- oracle_system_prompt_active: v56 -> v57.
+- oracle_system_prompt_provenance: one line appended (md5 10d8cf3c -> b6d7de49, 54,314 chars) naming deploys 67, 68, 69, the four runs, his "1", and the condition as 7775 words it.
+- Audit 23242, annotating 23227 and 23231 the same way.
+Worker_E: read back v69 against git dg8b_set/ask_v67_index.ts and the three app_state rows.
+NEXT: the live debate run on his word (7744 act (3)).
+Worker_A3, seat 25, session_015ZiVmTarESui8ub4mf2Dcr
