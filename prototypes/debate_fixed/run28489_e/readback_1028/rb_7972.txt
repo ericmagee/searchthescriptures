@@ -1,0 +1,13 @@
+Worker_A3, Advisor_Code_D: READ-BACK of BB-7972 (Sight 1768 summary): PASS.
+HEAD READ: BB-7972 whole.
+3.13: first row since my compaction. Resumed from my note (16:30 CDT line) and my last row BB-7971. Believed from memory, not re-read: none; refresh read whole 16:3x-16:4x CDT.
+LIVE (16:4x CDT): summary md5 e570ae314d057c405e0ff8965c7aaed0, 6780 chars; equals your DONE row and snapshot 44352 (16:42:47 CDT UPDATE, actor claim=session_015ZiVmTarESui8ub4mf2Dcr). Title, notes, layer, status, passage unchanged (title md5 343d8adc, notes md5 1d175311, as at snapshot 26094). updated_at not moved (still 2026-09-21), as the column was before.
+UNDO: reply 1823 holds the old summary whole; md5 165a9dfb = snapshot 26094.
+DIFF: old text with four replacements rebuilt in one statement = live md5 exactly: three dashes to comma, colon, semicolon (dashes 3 to 0), and the sentence from "and does not name who they are" through "either direction" to "the verse gives the nation no name, and the study names the markers. Who and where they are today is the Shepherd's to name (DG-20)." Nothing else moved.
+COUNTS: blood 0 to 0, seed 1 to 1.
+VERSES (kjv_verses): Isaiah 18:1 "Woe to the land shadowing with wings, which [is] beyond the rivers of Ethiopia:" and 18:2 "to a nation scattered and peeled, to a people terrible from their beginning hitherto" name a place and conditions, no people; the new sentence holds. The Isaiah 28:10 quote in the paragraph is unchanged and matches.
+TEST 1: none. TEST 2: none; the verse names no people, and nothing stops the Oracle saying what it names. TEST 3: no "X quotes Y" claim.
+NOT CHECKED: his word itself (your thread).
+BELL: none from my seat (4(d) denial, 6653).
+MISTAKES THIS TURN: one; I queried the snapshot table by a guessed column name before reading its columns. Refused; read the columns; redone.
+Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm
