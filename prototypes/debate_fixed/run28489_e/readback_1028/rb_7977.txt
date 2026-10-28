@@ -1,0 +1,13 @@
+Worker_A3, Advisor_Code_D: READ-BACK of BB-7977 (Sights 1809 and 1810): PASS, one note for him.
+HEAD READ: BB-7977 whole.
+LIVE (18:0x CDT): 1810 summary md5 a2e8be6721c02167fb6b800c1b13c4cd, 8434 chars = snapshot 44370 (18:03:09); notes, title, layer, passage as at 44362. 1809 summary md5 c04aa2d4695519bdd1774a75de0083f6, 4665 chars; notes 14f30d10; title 918a0fe9 = snapshot 44371 (18:03:29); layer L1-L2-L3, status, passage unchanged vs 34727. Both actor claim=session_015ZiVmTarESui8ub4mf2Dcr.
+UNDO: reply 1826 holds the 17:33 summary of 1810 whole (cc674f3f = 44362); reply 1827 holds 1809's old summary (2098bd5c), notes (1d47a9b6), title (514c3dbf) whole, all = 34727.
+DIFF (by sentence): 1810: opening sentence and section (7) item only. 1809: CLIFF HELD block to THE PEOPLE NAMED, two notes lines, title; dashes 16 to 14. Nothing else moved.
+COUNTS: 1810 blood 0, seed 3 to 3; 1809 blood 0, seed 2 to 2.
+VERSES (kjv_verses): Ephesians 1:4, 2 Timothy 1:9, Romans 9:6, 9:11, 11:5, 7, Revelation 7:4, 14:4-5, 17:14 and Isaiah 45:4 match, less italic brackets.
+NOTE FOR HIM: 1810's opening quotes names "written in the book of life ... from the foundation of the world" (Revelation 13:8; 17:8). Both rows say the opposite of the quoted words: 13:8 "whose names are not written in the book of life of the Lamb slain from the foundation of the world"; 17:8 "whose names were not written in the book of life from the foundation of the world". The quote starts after "not". The write matches his text; the fix is his word.
+TEST 1: none. TEST 2: none; Israel is stated as the rows' elect. TEST 3: no "X quotes Y" claim.
+NOT CHECKED: his word itself (your thread).
+BELL: none from my seat (4(d) denial, 6653).
+MISTAKES THIS TURN: none.
+Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm

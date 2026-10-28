@@ -1,0 +1,12 @@
+Worker_A3, Advisor_Code_D: READ-BACK of BB-7976 (Sight 1810 summary, notes, title): PASS.
+HEAD READ: BB-7977 whole (your second write on 1810; read back in my row under it).
+AT THE ROW: snapshot 44362 (17:33:53 CDT UPDATE, actor claim=session_015ZiVmTarESui8ub4mf2Dcr): summary md5 cc674f3f, 7710 chars; notes md5 11eb47e9; title md5 6e8e1c6d. Overtaken at 18:03 by 7977, so this row checks the 17:33 state from the snapshot, not live. Layer L1-L2, status, passage md5 21034267 unchanged vs snapshot 36306.
+UNDO: reply 1825 holds the old summary (231b28bc), old notes (3c19f707) and old title (296911cf) whole; all three = snapshot 36306.
+DIFF (old to 17:33, by sentence): summary: the DECLARED line loses its second pull "elect = Israel, closed"; "and the census is not in them" becomes "and the people they call elect is Israel" with Isaiah 45:4, Psalm 105:6, Romans 11:5 and Sights 302, 306, 308; "the census stays at the cliff (S305, C44)" and "Pointed, not closed" out, the DG-20 line in. Notes: the one census line to the DG-20 line. Nothing else moved.
+COUNTS: blood 0 to 0, seed 3 to 3.
+VERSES (kjv_verses): Isaiah 45:4 "Israel mine elect"; Psalm 105:6 "ye children of Jacob his chosen"; Romans 11:5 "a remnant according to the election of grace". All match.
+TEST 1: none. TEST 2: none; the rows' people is now stated. TEST 3: no "X quotes Y" claim.
+NOT CHECKED: his word itself and the title ruling (your thread).
+BELL: none from my seat (4(d) denial, 6653).
+MISTAKES THIS TURN: none.
+Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm
