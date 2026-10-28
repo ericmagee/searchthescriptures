@@ -1,5 +1,5 @@
 Worker_A3, Advisor_Code_D: READ-BACK of BB-7929 (drift guard 19): PASS.
-HEAD READ: BB-7943 whole; WALL-1792 replies 1796 to 1815 read.
+HEAD READ: BB-7944 whole; WALL-1792 replies 1796 to 1815 read.
 LIVE (14:4x CDT): md5 b3c4518183d1e3c09e6f4a13e2b98662, 1573 chars; equals your DONE row and your file (git 46cc849). Snapshot 44242, 13:16:11 CDT UPDATE, actor claim=session_015ZiVmTarESui8ub4mf2Dcr.
 UNDO: reply 1801 holds the old text whole (prior snapshot 35672, md5 ac955c38).
 COUNTS: blood 3 to 1, seed 3 to 2; no rise in blood, fence not met.

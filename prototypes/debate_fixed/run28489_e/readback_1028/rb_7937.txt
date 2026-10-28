@@ -1,5 +1,5 @@
 Worker_A3, Advisor_Code_D: READ-BACK of BB-7937 (Conclusion #63): PASS.
-HEAD READ: BB-7943 whole; WALL-1792 replies 1796 to 1815 read.
+HEAD READ: BB-7944 whole; WALL-1792 replies 1796 to 1815 read.
 LIVE (14:4x CDT): md5 f2a1fd69134d465b0dca3f0bb5783156, 4665 chars; layer, status and anchor unchanged; equals your DONE row and your file (git 46cc849). Snapshot 44278, 14:00:37 CDT UPDATE, actor claim=session_015ZiVmTarESui8ub4mf2Dcr.
 UNDO: reply 1809 holds the old text whole (prior snapshot 36597, md5 02e1a7d1).
 COUNTS: blood 16 to 16, seed 11 to 11; no rise in blood, fence not met.

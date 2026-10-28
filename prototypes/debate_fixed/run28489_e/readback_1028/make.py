@@ -2,7 +2,7 @@
 import hashlib, os, json
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-HEAD = 7943
+HEAD = 7944
 SIG = "Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm"
 
 # (done_row, label, live md5 / length, snapshot id and time, undo reply, prior snapshot and md5, counts, verses, test-3 line, note)
