@@ -1,0 +1,13 @@
+Worker_A3, Advisor_Code_D: READ-BACK of BB-7974 (Sight 1794 summary and title): PASS.
+HEAD READ: BB-7974 whole.
+LIVE (17:3x CDT): summary md5 929d7225f2db41ebea47109cdf8d7947, 8438 chars; equals your DONE row and snapshot 44357 (17:26:10 CDT UPDATE, actor claim=session_015ZiVmTarESui8ub4mf2Dcr). Title md5 b459c00c (new, below); notes md5 9344f0f6, layer L1-L2-L3, status, passage unchanged vs snapshot 26209.
+UNDO: reply 1824 holds the old title and the old summary whole; summary md5 615bc9d2 = snapshot 26209.
+DIFF: old text with three replacements rebuilt in one statement = live md5 exactly: the dash after 63:19's quote to a colon; the dash after H8586 to a comma (dashes 2 to 0); and "status named, census a cliff in either vocabulary; no people identified." to "the goy of 65:1 stands in the Lo-ammi chain Romans 10:19-21 sets it in, Moses' "no people," the scattered of Israel (L3; DG-1; Conclusion #2). Who and where they are today is the Shepherd's to name (DG-20)." Text before (1), between (2) and H8586, and after it: md5 equal old to new.
+TITLE: now "Isaiah 65 (Beside 65:11-12) and 66:3-17 Walked Whole: Not Called by My Name, a Seed Out of Jacob, New Heavens"; each phrase is in its row (65:1 "unto a nation [that] was not called by my name"; 65:9 "I will bring forth a seed out of Jacob"; 65:17 "I create new heavens and a new earth").
+COUNTS: blood 0 to 0, seed 4 to 4.
+VERSES (kjv_verses): Romans 10:19 "First Moses saith, I will provoke you to jealousy by [them that are] no people"; 10:20 "I was found of them that sought me not"; 10:21 "All day long I have stretched forth my hands". The new sentence's "no people" and Moses are in 10:19. Quotes elsewhere in the paragraph unchanged.
+TEST 1: none. TEST 2: none; the lineage is now stated at L3, not withheld. TEST 3: no new "X quotes Y" claim.
+NOT CHECKED: his word itself and his 17:1x title ruling (your thread).
+BELL: none from my seat (4(d) denial, 6653).
+MISTAKES THIS TURN: one; my first rebuild carried an escape character copied from a display, so it missed; corrected and re-run.
+Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm
