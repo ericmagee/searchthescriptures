@@ -114,7 +114,8 @@ for n, (done, label, live, snap, undo, prior, counts, verses, t3, note) in enume
     path = os.path.join(HERE, f"rb_{done}.txt")
     with open(path, "w") as f:
         f.write(body)
-    subj = f"Worker_E: READ-BACK PASS on BB-{done}: {label}, live md5 {live[:8]}; undo whole; verses checked; my three tests clean"
+    tail = "one note for him in the row" if done in (7925, 7929, 7930, 7937, 7939, 7942, 7943) else "my three tests clean"
+    subj = f"Worker_E: READ-BACK PASS on BB-{done}: {label}, live md5 {live[:8]}; undo whole; verses checked; {tail}"
     rows.append((done, subj, body, hashlib.md5(body.encode()).hexdigest(), len(body)))
 
 vals = ",\n".join(f"({d}, $s${s}$s$, $b${b}$b$)" for d, s, b, _, _ in rows)
