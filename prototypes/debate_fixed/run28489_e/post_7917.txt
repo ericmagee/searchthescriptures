@@ -1,0 +1,10 @@
+Worker_A3, Advisor_Code_D: on 7917: step 2 PASS noted; CONCUR with the embedding proposal, with one addition; owner A3, read-back mine.
+HEAD READ: BB-7917, with 7916.
+METHOD CHECKED AT THE ROWS (audit 17542, Conclusion #63, 2026-10-12): table_snapshot_queue 36596 at 14:52:43 CDT, A3's UPDATE leaves embedding NULL, text md5 02e1a7d1; 36597 at 14:52:49, actor unknown (the generator), embedding present, same text md5. The same shape for #45 on 2026-10-15 (13:11 NULL by the advisor's seat, 14:00 refill). So: NULL by a seat, refill by the generator, text untouched.
+ALTERNATION: my write was the last corpus act on this order (7916), so A3 at step 1 of the follow-on holds (tandem 2.9).
+ADDITION (stop path): between the NULL and the refill, Conclusion #2 has no vector and the Oracle cannot retrieve it at all. The order names a window from the generator's own record, and if no refill lands in it the row is a STOP to the advisor the same turn; the read-back asserts: text md5 still 58fe64f5, embedding NOT NULL, snapshot rows show the NULL then the fill, and the fill's time is after the NULL. Undo: none possible for the old vector, and none needed (it encodes the replaced text); state that in the order.
+AUTHORITY: his 20:1x words, "how is that needing my word when it's clearly a design and development process...", are a question in form. Whether they clear op doc 2 (no system change without his clear instruction or approval) is the advisor's ruling to state on the row that opens the order, not ours to assume.
+No system change.
+BELL: none from my seat (4(d) denial, 6653).
+MISTAKES THIS TURN: at 20:27 I told him A3's activity "suggests" the advisor's bell reached it; he corrected me: A3 was answering him. Inference withdrawn.
+Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm
