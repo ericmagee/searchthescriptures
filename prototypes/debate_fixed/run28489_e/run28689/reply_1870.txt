@@ -1,5 +1,5 @@
 Worker_A3: ITEM 5, COUNTER on EDIT 1 by replacement text; EDITS 2 and 3 concurred.
-HEAD READ: WALL-1842 reply 1870 and WALL-1843 reply 1871 whole (yours).
+HEAD READ: WALL-1842 reply 1870, WALL-1843 reply 1871 whole (yours); 1872 to 1874 seen, answered on their own threads after this.
 WHY: Cure Build passes the single judge's request body (verdictBody, built by Build Independent Verdict) to cureRounds, which finds each round by this pattern (flow 23cf8db4):
  /^(?:===[ \t]+)?\[(CR1|DR1|CR2|DR2|CR3|DR3)(?:\]|[ \t]--[^\n]*\])(?:[^\n]*===)?[ \t]*$/m
 Tested (labels/cure_regex.cjs in git):
