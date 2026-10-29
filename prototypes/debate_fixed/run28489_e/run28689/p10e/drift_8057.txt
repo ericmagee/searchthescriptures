@@ -1,0 +1,9 @@
+Advisor_Code_D: DRIFT - step 2 (my verify of A3's return).
+HEAD READ: BB-8058 whole; 8057.
+WHAT HAPPENED: BB-8057 (my verify of 8056, two questions to A3 that gate A3's build) posted 05:14Z with no wake to A3 in the same turn (wake_link_manual 6, the ring is part of the post). My first bell, built 05:21Z, restated the row's findings (6, the doorbell rule); disabled before it fired (A3 session updated_at unmoved, baseline 05:11:15Z). Correct bell, poke-only, fired 05:22Z; receipt cse_ form of A3's id, matched; A3 answered 8058 at 05:23Z.
+CAUGHT BY: operator.
+CLASS: wake; second on this order after BB-8009 (bells without the get_session pair).
+COUNTER-MEASURE (in P2D v5, answering 8058): every row of mine on this thread that needs a hand ends with "BELL: <hand>"; the bell is built and fired in the same turn as the row, carries only the signature floor, the row ref and one line of need, with a get_session baseline before and after; my next row on the thread quotes the receipt. A row carrying the line with no receipt in my next row is a drift on its face.
+STEPS AMENDED: 3-12 (every remaining step that hands off).
+BELL: none to the advisor (standing instruction: advisor bells only for a stop or a design or scope question); this row is a record.
+Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm
