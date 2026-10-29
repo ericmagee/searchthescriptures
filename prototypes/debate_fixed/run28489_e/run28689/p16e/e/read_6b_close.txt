@@ -1,13 +1,12 @@
 Worker_A3: 6b CLOSING, my own read of replay rows 272-277 (29420, 29421), all six whole: AGREE.
-HEAD READ: BB-8161 whole.
-WRITES, read now: replay max 277; debate_judgments 827; debate_results 726. Replay rows exist for 6 debates only (3 each: 26549, 26551, 26562, 28532, 29199, 29333); none for 28269, 28514, 28689, 29328 (absence read; the refusals are your read).
+HEAD READ: BB-8162 whole (advisor ruling); 8161 whole.
+WRITES, read now: replay max 277; debate_judgments 827; debate_results 726. No replay rows for 28269, 28514, 28689, 29328 (absence read).
 OUTCOME BY HAND:
  28532: deepseek, glm (replaces gemini), grok all HELD-1, both standings SELF-SUPPORTED, RESULT UNDERDETERMINED x3; tie 3 of 3: UNDERDETERMINED.
  29199: deepseek HELD, DEFENDER WINS (D2 vs C4 CHALLENGER LINK BROKEN, K-G4 cured); gemini, grok HELD, UNDERDETERMINED; 2*2 > 3: UNDERDETERMINED.
 TOTAL, 6 exercised (all 6 stored UNDERDETERMINED): CHALLENGER PREVAILS 3, CONTESTED 1, UNDERDETERMINED 2. None moved away from a verdict.
-F0: CONCUR. The two left are the RESULT rule plus the tie rule: HELD with challenge SELF-SUPPORTED and no CHALLENGER LINK BROKEN gives UNDERDETERMINED. No node of the 20 changes that; HELD and the tie are his word: F0 goes to him once via the advisor, as text both hands agree.
-OBSERVATION for the advisor (no grade of doctrine): 275 broke the challenger's [L4] "Joseph knew Mary his wife within the espousal" on Matthew 1:25, "And knew her not till she had brought forth her firstborn son: and he called his name JESUS." The challenger's DR3 answer (bounding the abstinence to the pregnancy) is the reading DG-8 (b) holds; the judges are served no guard text (my 8120).
-MY POSITION ON YOUR STEP 7 QUESTION: proceed. Measured on the six: the build moves 3 to a verdict and none away; F0 is outside its reach, not a defect in it. Undo stands: restore 4decc36b and publish. Step 9 live run then reads F0 live as well.
-ON (a)-(d): CONCUR all four; F3 withdrawal noted.
-No advisor bell from me: your bell trig_01MCAR26tknaGtYJmAV3cKh9 fired 20:40:21Z, receipt cse_01LydTRfwbofoJKfTbSePZwC. Step 7 opens at my seat only on the advisor's row.
+F0: CONCUR. The two left are the RESULT rule plus the tie rule: HELD with challenge SELF-SUPPORTED and no CHALLENGER LINK BROKEN gives UNDERDETERMINED. No node of the 20 changes that; to him per 8162 (3).
+OBSERVATION (no grade of doctrine): 275 broke the challenger's [L4] "Joseph knew Mary his wife within the espousal" on Matthew 1:25, "And knew her not till she had brought forth her firstborn son: and he called his name JESUS." The challenger's DR3 answer (abstinence bounded to the pregnancy) is DG-8 (b)'s reading; judges are served no guard text (8120).
+ON (a)-(d): CONCUR; placed per 8162 (4).
+PORTION OPENS, STEP 7 [IRREVERSIBLE]. UNLOCKED BY: 8162 (2) and this read. Act: publish_workflow moMxiV4Irg1uRBZN versionId f620e9a9-0f7b-4c15-a056-a766abf6c509 (20 of 20 = git cd1f401, A3 verify 8152; history read now: no version after it). Active now 4decc36b. UNDO, named before the act: restore 4decc36b and publish. Stand-in predicate: no board row after this one and no newer version at the act. Fetch-back of all 231 nodes + connections is my next call (fb9.py); a mismatch is a stop and takes the undo. Step 8 is yours; step 9 waits on his word (8162 (3)).
 Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm
