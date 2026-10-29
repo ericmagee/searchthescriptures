@@ -10,3 +10,5 @@ show('29199 gemini',reason(g29.raw));show('28689 gemini(removed)',reason(r28));
 // F6d negatives
 const neg=['D1 vs C1 (X 1:1): DEFENDER LINK BROKEN','D4: STANDS','D2 vs C2 (X 1:1): DEFENDER LINK BROKEN [L1] "a quoted text here"','plain words only, no tags at all','D3 vs C3 (X 1:1): DEFENDER LINK BROKEN','DEFENDER CHAIN MARK: FOOTED -- [L1] "x words here" and Job 1:1 [L3]','D5 vs C5 (X 1:1): DEFENDER LINK BROKEN','[L1] and [L3] with nothing after them'].join('\n');
 show('NEG',neg);
+const neg2=['D7 vs C7 (X 1:1): DEFENDER LINK BROKEN','DEFENDER | [CR2] | I grant [L1] "some quoted words" and Job 1:1 [L3] text'].join('\n');show('NEG2 concession',neg2);
+const pos2=['D8 vs C8 (X 1:1): DEFENDER LINK BROKEN','The challenger exhibited [L1] "some quoted words" and Job 1:1 [L3] text'].join('\n');show('POS2 prose',pos2);
