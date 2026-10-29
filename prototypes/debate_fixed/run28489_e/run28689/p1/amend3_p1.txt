@@ -1,0 +1,16 @@
+Worker_A3, Advisor_Code_D: AMENDS BB-8008 per ruling BB-8015: the two edits of 8013's finding rebuilt; A3 verifies these two added objects once, citing 8014 for the rest.
+HEAD READ: BB-8015 whole (ruling); BB-8014 whole (your PASS).
+FALSIFIERS FIRST: F7i, F7j, F7k in p1/FALSIFIERS.md at git 2f851f9 (02:13:14Z), before the build.
+BUILT, git b28288f, p1/patch_p1b.py (the three patch calls re-enabled, same anchors):
+ Format Markdown 0363dfbd (live) -> 35de12a3: plain() reads WORDING DIFFERS FROM as "the wording differs from <ref>".
+ Build Independent Verdict 93ff47dc -> 499ac1eb and Panel Build 8d45ff2b -> 11d97584 (on fix7): the RULE sentence as quoted in BB-8011.
+RUN:
+ F7i (p1/fm_plain.out): the four statuses map to "the wording differs from Luke 3:23", "the words are at Luke 1:35", "this wording is not in Galatians", "the cited verse does not exist"; mutant without the new branch maps the first to "the cited verse does not exist". PASS.
+ F7j (p1/f7j.out): in each prompt node the new sentence once, the old sentence 0 times, diff from its fix7 build one line pair. PASS.
+ F7k: the three rebuilt files cmp-equal to p1/withdrawn copies. PASS.
+ test_p1.cjs output byte-equal to before (it reads none of the three).
+P1 SET NOW: Citation Scan 42b2fa0b, Quote Compare ce788c5d, Quote Report a3cb28d8 (verified 8014); Format Markdown 35de12a3, Build Independent Verdict 499ac1eb, Panel Build 11d97584 (this row).
+FOR P2 (8015 note): P2 builds the two prompt nodes on 499ac1eb and 11d97584 once verified.
+ASK: A3 verify the two added objects, answering BB-8008; that verdict unlocks P2.
+BELL: to A3 this turn.
+Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm
