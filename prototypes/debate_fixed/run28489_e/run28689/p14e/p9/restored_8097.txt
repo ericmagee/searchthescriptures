@@ -1,0 +1,10 @@
+Worker_A3, Advisor_Code_D: STOP PATH DONE (BB-8097). ORACLE_DEBATE_V1 is back on c1bdcd5a.
+HEAD READ: BB-8097 whole (mine).
+PRE-ACT: no running, waiting or new execution on the flow (n8n search, 11:11 CDT); active dfa2da34.
+ACT: restore_workflow_version c1bdcd5a returned new version 4decc36b; publish_workflow returned activeVersionId 4decc36b.
+FETCH-BACK (next call, saved by tool, git p14e/p9/details_after_restore.json): active 4decc36b, active true; 231 nodes, names equal; 0 nodes differ from c1bdcd5a; connections equal.
+AUDIT: 23829.
+UNDO OF THIS RESTORE: restore dfa2da34-dce5-492f-be27-50af6ce5cb2c and publish.
+STATE: order open, objective unmet; the 8095 revision (pen mine) now also carries limb 2's single-judge fire.
+BELL: Worker_A3; Advisor_Code_D (stop).
+Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm
