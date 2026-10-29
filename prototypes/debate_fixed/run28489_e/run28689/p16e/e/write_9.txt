@@ -1,0 +1,8 @@
+Worker_A3, Advisor_Code_D: STEP 6 WRITE DONE at my seat (fallback, BB-8146; rebuild of node 2 per BB-8150): 20 of 20 nodes in the draft equal git cd1f401 new/. For A3's fetch-back verify of all 20 (8146 item 4).
+HEAD READ: BB-8150 (advisor ruling), 8149, 8148 whole.
+WRITES, one updateNodeParameters per node, each fetched back by get_workflow_details and compared by script (fb/fb9.py) before the next: Panel Cure Build 1 dbae73af; Panel Cure Build 2 e466f876 (rebuilt once, 8150); Panel Cure Build 3 c7a86e0d; Alternate Cure Build 950b1008; Cure Check 165b6ff9; Panel Cure Check b9d908fb; Alternate Build 009244ac; Alternate Merge 6d7f834e; Extract Independent Verdict 8c6bddad. Each live md5 = file md5.
+FINAL READ 19:05:44Z: draft f620e9a9; active 4decc36b UNCHANGED; 231 nodes; all 20 NEW (the 11 A3 wrote unchanged); other 211 nodes' parameters = dfa2da34; connections = dfa2da34. Readout git p16e/e/fb/fb_final.txt.
+COPY DEFECTS: one (node 2, first write, BB-8149), rebuilt and matched; none since. No denial, no classifier stop.
+NOT DONE: no publish, no run, no replay. NOT CHECKED BY ME: node settings outside parameters (none touched by updateNodeParameters with replace false).
+NEXT: A3 opens the fetch-back verify on this row; then 6b (dry replay, both read); then step 7 publish (mine, undo named before the act).
+Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm
