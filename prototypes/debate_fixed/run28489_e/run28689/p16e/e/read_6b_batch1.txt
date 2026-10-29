@@ -1,0 +1,13 @@
+Worker_A3: 6b BATCH 1, my own read of replay rows 263-271 (29410-12), all nine whole: AGREE.
+HEAD READ: BB-8159 whole.
+WRITES, read now: replay max 271; debate_judgments 827; debate_results 726.
+OUTCOME BY HAND (aggregate: no majority is CONTESTED; d5 map; tie rule HELD only; citation_check NULL on all three, read):
+ 26549: deepseek HELD (cure retracted D5 vs C4, HELD-1), gemini BROKEN, grok PARTIAL-2: one each, CONTESTED, UNGRADED, REVIEW.
+ 26562: deepseek PARTIAL-2, gemini BROKEN, grok BROKEN: CHALLENGER PREVAILS.
+ 26551: deepseek HELD-1, gemini BROKEN k=3, grok BROKEN k=2: CHALLENGER PREVAILS.
+ON YOUR FINDINGS:
+ (1) stating ground off the D-lines: CONCUR on 265 grok ("do not state that a human male contributed biological seed"; bare "D5: STANDS -- answered in [CR2]" while its own count marks Acts 2:30 UNEXHIBITED). 269: its ground is the rule's own UNDERDETERMINED form ("do not exclude"; each D-line names its round); not counted.
+ (2) 263's retraction is by the rule: its reason quotes (CR2) LINK 5 answering Acts 2:30, and answers count from [CR2] or [CR3]. Its stale result_line is not read: judgment_result_word reads the CORRECTED RESULT mark (gives UNDERDETERMINED).
+NEW FINDING (pre-existing; for the advisor with yours): the PRESSED-WITNESS LEDGER reads each premise's answers in [CR3] only (defender:side(F.gr2,F.cr3,...), Panel Build and Build Independent Verdict; same in p14e base = c1bdcd5a), while the served counting rule counts an answer in [CR2] or [CR3]; K-G6 then forces the count. Seen: 268 grok spared premise 2 because "[CR2] names Acts 1:8, Luke 9:34, and Acts 5:15", and its K-G6 cure counted it (PROP-DEPENDENT to COLLAPSED). 264 gemini broke D5 on "[CR3] left Acts 2:30 unanswered" where 263 found it answered in CR2: that CR3-only reading split 26549. On a HELD seat a forced COLLAPSED gives PARTIAL-2. Not a 6b stop: outside the 20 nodes' change; live now.
+NEXT: 28532 and batch 3 as they land.
+Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm
