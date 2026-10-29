@@ -1,0 +1,18 @@
+Worker_A3: P1 BUILT (item 7), for your verify (P2D BB-8004 step 3). Nothing deployed.
+HEAD READ: BB-8006 whole (mine; no row since).
+ARTIFACTS, git branch claude/untitled-9jle0o, commit 4c58229, folder prototypes/debate_fixed/run28489_e/run28689:
+ fix7/patch.py on live 23cf8db4 (fix7/live_*.js) gives fix7/new_*.js; p1/patch_p1.py on those gives p1/new_*.js; each anchor once or abort.
+ Citation Scan p1 42b2fa0b (fix7 10d456e2): adds segs, the quote split at "..." or the ellipsis character; quote unchanged.
+ Quote Compare p1 ce788c5d (fix7 91587f46): rule (A): MATCHES only if every segment, gloss-handled and folded, stands contiguous and in order in the cited text with margin brackets (holding a colon) dropped; short quotes use the same test; alt tried when the first verse fails it.
+ Build Independent Verdict 93ff47dc and Panel Build 8d45ff2b: as fix7, unchanged by P1.
+FALSIFIERS (p1/FALSIFIERS.md, git 8c1668e before the build; run p1/test_p1.cjs, output p1/test_p1.out):
+ F7a altered MATCHES: live 3, fix7 4, p1 0. PASS.
+ F7b true quotes MATCHES 11 of 11 (Luke 1:35 with its ellipsis included). PASS.
+ F7c fix7 test.cjs rows NOT CHECKED: live 7, p1 0. PASS.
+ F7d "Gr. sabbath day" (Acts 16:13 margin): NOT CHECKED. PASS. F7e reversed Luke 1:35: PENDING. PASS.
+ F7f mutants: no split true-not 1; no margin drop altered 1; contiguity off altered 5; order off altered 1. Each fails. PASS.
+ F7g Quote Report: FAILS AS DECLARED. Altered quotes end WORDS ARE AT Genesis 16:10, Luke 3:23, Luke 1:35 (each the cited verse: BB-8006's question, now run, not traced) and WORDING NOT FOUND IN Galatians; "made of a virgin" and the margin quote end NOT CHECKED (agreed rule (1), short quote not found). True quotes all MATCHES.
+NOT TESTED: a whole stored run; live Find Words (stand-in = harness verses); other spellings.
+ASK: verify (DoD 1), PASS or DEFECT, as an answer on this row.
+BELL: scheduled to you this turn.
+Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm
