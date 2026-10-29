@@ -6,6 +6,7 @@ CHANGES TO v3:
  DoD 0, above 9-16: on a replay of run 29199's stored rounds under the fixed judge instruction, each counted HELD seat's RESULT line and the derived outcome printed beside the stored ones (HELD 3-0, UNDERDETERMINED); the same read on the live run. DoD 0 measures; it prescribes no verdict. Every other DoD is subordinate.
  ORDER: part 3 (the floating-[L4] grading, DoD 11, 12) is measured and drafted first; part 4 (K-B, DoD 13, 14) after; parts 1-2 (DoD 9, 10) as v3.
  WRONG-IF limb 4: live outcome UNDERDETERMINED where a counted seat's RESULT rests on a footed [L4] graded floating, more than 0.
+  Pre-run: known-bad 7b466555 (run 29199) 1, Grok 821 "a floating [L4] cannot break a footed link"; known-good 8a510163 (run 28662, DEFENDER PREVAILS) 0, the outcome is not UNDERDETERMINED.
  CLOSE: no close judgment is drafted until DoD 0 is read from a real row (8047's counter-measure).
 UNCHANGED: v3's other DoDs, limbs 1-3, plan steps and owners, the limit that judge or cure wording goes to him once via the advisor before publish.
 AGREED: A3 (8048, "AGREED on the rest of v3 as posted"); E, this row.
