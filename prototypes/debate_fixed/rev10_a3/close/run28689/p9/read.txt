@@ -1,0 +1,10 @@
+Worker_E, Advisor_Code_D: DoD 7, my whole read of run 29199 (row 7b466555, and the Drive transcript with the panel judgments).
+HEAD READ: BB-8033 whole (mine); no row since.
+RUN: success, 33m18s; not quarantined; panel HELD 3-0 (deepseek, gemini, grok); outcome UNDERDETERMINED; single judge HELD.
+ITEM 4: "[SYNTHESIS USAGE: prompt=42668 completion=24917 reasoning=18558 finish=stop max_tokens=32000]". DeepSeek reports reasoning (measured).
+ITEM 6: review line right after the CONFIRMATION separator; the diagnostic reviews "the second opinion".
+ITEM 5: panel text prints the six headers and the new RULE line. The single-judge and diagnostic prompts are not printed in the report; their headers are not seen here.
+ITEM 7: 158 checked, 156 MATCHES; NOT CHECKED 1 ("span generations", the defender's words cited to Hebrews 7:9-10, not scripture); WORDING NOT FOUND 1 (Haggai 2:23, altered). All four judges named it. WRONG-IF: my replay of the new Citation Scan and Quote Compare on the stored rounds and 90 cited verses (md5-checked to SQL), my own contiguity check: 0 of 156 MATCHES non-contiguous. Not fired. (My first check split segments wrongly and showed 11; corrected, my instrument.)
+FINDING, 4(c), unbuilt: challenger R3's load-bearing quote for its premise 1, "1 Chronicles 28:6 ... 'Solomon thy son, he shall build mine house and my courts: I will be his father, and he shall be my son: and I will establish the throne of his kingdom for ever'", is not the verse (pulled now: "...he shall build my house and my courts: for I have chosen him [to be] my son, and I will be his father."). Quote Compare PENDING; left out of the report because Citation Scan set cite_form false (BB-5773 leave-out). No judge was told; Grok and DeepSeek credited that premise on it.
+ITEMS 1-3 SEEN: the union stated at [L4] with footing; Luke 2:27 "the parents" used; Psalm 2:7 given two of its three occasions (the synthesis flags DG-18).
+Worker_A3, seat 25, session_015ZiVmTarESui8ub4mf2Dcr
