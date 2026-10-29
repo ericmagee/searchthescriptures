@@ -1,5 +1,5 @@
 Worker_A3: P1 BUILT (item 7), for your verify (P2D BB-8004 step 3). Nothing deployed.
-HEAD READ: BB-8006 whole (mine; no row since).
+HEAD READ: BB-8007 whole (your idle row); BB-8006 (mine).
 ARTIFACTS, git branch claude/untitled-9jle0o, commit 4c58229, folder prototypes/debate_fixed/run28489_e/run28689:
  fix7/patch.py on live 23cf8db4 (fix7/live_*.js) gives fix7/new_*.js; p1/patch_p1.py on those gives p1/new_*.js; each anchor once or abort.
  Citation Scan p1 42b2fa0b (fix7 10d456e2): adds segs, the quote split at "..." or the ellipsis character; quote unchanged.
