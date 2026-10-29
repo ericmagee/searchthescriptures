@@ -1,0 +1,82 @@
+ROW 33263d94 F5a headers once each: 1,1,1,1,1,1 | cureRounds keys new 6, old 6, bare-form mutant 0
+   rounds equal new vs old: true
+   F8a changed lines: 6
+      8: [CR1] => === [CR1] DEFENDER R1 ===
+      10: [DR1] => === [DR1] CHALLENGER R1 ===
+      12: [CR2] => === [CR2] DEFENDER R2 ===
+      14: [DR2] => === [DR2] CHALLENGER R2 ===
+      16: [CR3 -- LINK ROUND (defender exhibit-or-concede)] => === [CR3] DEFENDER R3 -- LINK ROUND (defender exhibit-or-concede) ===
+      18: [DR3 -- LINK ROUND (challenger exhibit-or-concede)] => === [DR3] CHALLENGER R3 -- LINK ROUND (challenger exhibit-or-concede) ===
+   F8b extract new==old: true | audit_flags equal: true
+      framework_verdict          extract BROKEN           stored BROKEN
+      defense_standing           extract PROP-DEPENDENT   stored null   <- DIFFERS
+      conceded_links             extract 1                stored null   <- DIFFERS
+      challenge_standing         extract SELF-SUPPORTED   stored null   <- DIFFERS
+      challenger_conceded_links  extract 0                stored null   <- DIFFERS
+ROW 8a510163 F5a headers once each: 1,1,1,1,1,1 | cureRounds keys new 6, old 6, bare-form mutant 0
+   rounds equal new vs old: true
+   F8a changed lines: 6
+      8: [CR1] => === [CR1] DEFENDER R1 ===
+      93: [DR1] => === [DR1] CHALLENGER R1 ===
+      177: [CR2] => === [CR2] DEFENDER R2 ===
+      243: [DR2] => === [DR2] CHALLENGER R2 ===
+      277: [CR3 -- LINK ROUND (defender exhibit-or-concede)] => === [CR3] DEFENDER R3 -- LINK ROUND (defender exhibit-or-concede) ===
+      300: [DR3 -- LINK ROUND (challenger exhibit-or-concede)] => === [DR3] CHALLENGER R3 -- LINK ROUND (challenger exhibit-or-concede) ===
+   F8b extract new==old: true | audit_flags equal: true
+      framework_verdict          extract BROKEN           stored HELD   <- DIFFERS
+      defense_standing           extract PROP-DEPENDENT   stored SELF-SUPPORTED   <- DIFFERS
+      conceded_links             extract 0                stored 0
+      challenge_standing         extract PROP-DEPENDENT   stored PROP-DEPENDENT
+      challenger_conceded_links  extract 2                stored 3   <- DIFFERS
+ROW e6253a01 F5a headers once each: 1,1,1,1,1,1 | cureRounds keys new 6, old 6, bare-form mutant 0
+   rounds equal new vs old: true
+   F8a changed lines: 6
+      8: [CR1] => === [CR1] DEFENDER R1 ===
+      77: [DR1] => === [DR1] CHALLENGER R1 ===
+      125: [CR2] => === [CR2] DEFENDER R2 ===
+      256: [DR2] => === [DR2] CHALLENGER R2 ===
+      300: [CR3 -- LINK ROUND (defender exhibit-or-concede)] => === [CR3] DEFENDER R3 -- LINK ROUND (defender exhibit-or-concede) ===
+      358: [DR3 -- LINK ROUND (challenger exhibit-or-concede)] => === [DR3] CHALLENGER R3 -- LINK ROUND (challenger exhibit-or-concede) ===
+   F8b extract new==old: true | audit_flags equal: true
+      framework_verdict          extract BROKEN           stored HELD   <- DIFFERS
+      defense_standing           extract PROP-DEPENDENT   stored PROP-DEPENDENT
+      conceded_links             extract 1                stored 2   <- DIFFERS
+      challenge_standing         extract SELF-SUPPORTED   stored SELF-SUPPORTED
+      challenger_conceded_links  extract 0                stored 0
+DIAG BROKEN F5c headers 1,1,1,1,1,1 | "[GR" 0 | F5d neither line count 1, right after posline true | F6a label 1, "INDEPENDENT VERDICT" 0, second line 1 | old "INDEPENDENT VERDICT" 1
+   label line: SECOND OPINION (single judge, not the debate's verdict): BROKEN
+   E(c) DIAG BROKEN line diff old->new (17):
+      + You hold neither seat. The [CR] rounds are the DEFENDER's and the [DR] rounds are the CHALLENGER's. Write about both sides in the third person; never 
+      + SECOND OPINION (single judge, not the debate's verdict): BROKEN
+      + The debate's verdict is the panel's. The panel judges after this diagnostic is written, so it is not known here. Review the second opinion's break; do
+      + TRANSCRIPT:
+      + === [CR1] DEFENDER R1 ===
+      + === [DR1] CHALLENGER R1 ===
+      + === [CR2] DEFENDER R2 ===
+      + === [DR2] CHALLENGER R2 ===
+      + === [CR3] DEFENDER R3 -- LINK ROUND (defender exhibit-or-concede) ===
+      + === [DR3] CHALLENGER R3 -- LINK ROUND (challenger exhibit-or-concede) ===
+      - INDEPENDENT VERDICT: BROKEN
+      - TRANSCRIPT: [CR1]
+      - [GR1]
+      - [CR2]
+      - [GR2]
+      - [CR3 -- LINK ROUND]
+      - [GR3 -- LINK ROUND]
+DIAG HELD F5c headers 0,0,0,0,0,0 | "[GR" 0 | F5d neither line count 1, right after posline true | F6a label 1, "INDEPENDENT VERDICT" 0, second line 1 | old "INDEPENDENT VERDICT" 1
+   label line: SECOND OPINION (single judge, not the debate's verdict): HELD
+   E(c) DIAG HELD line diff old->new (4):
+      + You hold neither seat. The [CR] rounds are the DEFENDER's and the [DR] rounds are the CHALLENGER's. Write about both sides in the third person; never 
+      + SECOND OPINION (single judge, not the debate's verdict): HELD
+      + The debate's verdict is the panel's. The panel judges after this diagnostic is written, so it is not known here. Review the second opinion's break; do
+      - INDEPENDENT VERDICT: HELD
+F6b separators in new Extract Diagnostic: BROKEN 1, CONFIRMATION 1 (old 1, 1)
+FM lines read: const DIAG_MARK = '--- ORACLE_DEBATE_V1 BROKEN DIAGNOSTIC ---'; || const synthParts = x => { let y = String(x == null ? '' : x); const k = y.indexOf('--- ORACLE_DEBATE_V1 CONFIRMATION ---'); if (k > -1) y = y.slice(0, k); const d = y.indexOf(DIAG_MARK); return d > -1 ? [y.slice(0, d), y.slice(d + DIAG_MARK.length)] : [y, null]; };
+F6b BROKEN: synthesis = "THE SYNTHESIS TEXT.\n\n--- ORACLE_DEBATE_V1 BROKEN DIAGNOSTIC ---\n(A review of the single judge's second opinion, which was BROKEN. The debate's verdict is the panel's.)\nDIAG BODY"
+   line right after separator: "(A review of the single judge's second opinion, which was BROKEN. The debate's verdict is the panel's.)"
+F6b HELD: synthesis = "THE SYNTHESIS TEXT.\n\n--- ORACLE_DEBATE_V1 CONFIRMATION ---\n(A review of the single judge's second opinion, which was HELD. The debate's verdict is the panel's.)\nDIAG BODY"
+   line right after separator: "(A review of the single judge's second opinion, which was HELD. The debate's verdict is the panel's.)"
+E(e) Extract Diagnostic content "": old THROWS VALIDATION: Diagnostic empty run_token=ODV1-26145-ndg3p67l | new THROWS VALIDATION: Diagnostic empty run_token=ODV1-26145-ndg3p67l
+E(e) Extract Diagnostic content "DIAG BODY": old ok diag="DIAG BODY" du={"input_tokens":0,"output_tokens":0} | new ok diag="DIAG BODY" du={"input_tokens":0,"output_tokens":0}
+F6c synthParts: synthesis part "THE SYNTHESIS TEXT.\n\n" | diagnostic part "\n(A review of the single judge's second opinion, which was BROKEN. The debate's verdict is the panel's.)\nDIAG BODY"
+F6c mutant (separator renamed): diagnostic part null | synthesis part holds diagnostic: true
