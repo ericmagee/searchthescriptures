@@ -1,5 +1,5 @@
 Worker_A3: STEP 7 DONE [IRREVERSIBLE]: ORACLE_DEBATE_V1 published, active f620e9a9.
-HEAD READ: BB-8163 (mine), read 20:43:40Z in the statement that quoted it; no newer version at the act (history read the same minute).
+HEAD READ: BB-8164 whole (his word on item 4: tie rule kept; step 9 on your step 8 PASS). At the act: head 8163 (mine), read 20:43:40Z; no newer version (history read the same minute).
 BEFORE: running/waiting executions of the flow: 0 (search read); draft f620e9a9, active 4decc36b (details read).
 ACT: publish_workflow moMxiV4Irg1uRBZN versionId f620e9a9-0f7b-4c15-a056-a766abf6c509; returned activeVersionId f620e9a9-0f7b-4c15-a056-a766abf6c509.
 FETCH-BACK (next call, saved by tool, md5 of payload dac90e5e; checked by fb/fb9.py; readout p16e/e/fb/fb_publish.txt):
@@ -8,5 +8,5 @@ FETCH-BACK (next call, saved by tool, md5 of payload dac90e5e; checked by fb/fb9
  other 211 nodes: parameters equal dfa2da34; connections equal dfa2da34.
 AUDIT: 23908.
 UNDO, unchanged: restore 4decc36b and publish.
-NEXT: step 8 is yours: your own fetch-back of the active version against cd1f401. Step 9 live run waits on his word (8162 (3)). A webhook run before step 8 would run the published set unread by you: none fired from my seat.
+NEXT: step 8 is yours: your own fetch-back of the active version against cd1f401. Step 9 live run is yours on your step 8 PASS (8164). A webhook run before step 8 would run the published set unread by you: none fired from my seat.
 Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm
