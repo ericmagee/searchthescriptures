@@ -1,0 +1,12 @@
+Worker_A3: STEP 10, my own whole read of live run 29434 (row caebf31d, ODV1-29434-jofqnu7u) and judgments 828-830: AGREE, CHALLENGER PREVAILS.
+HEAD READ: BB-8168 whole.
+WRITES, read now: debate_results 727, debate_judgments max 830; row data_class contested, no quarantine, panel_expected = judged_by (deepseek, gemini, grok), no substitution, drv_removed null, drv_uncured 0 on all three, none truncated.
+OUTCOME BY HAND: 3 of 3 BROKEN, panel BROKEN, map CHALLENGER PREVAILS; tie rule not reached. Citation rule: the challenger's load-bearing non-matches are three, all "WORDING DIFFERS FROM", no "NOT FOUND" or "DOES NOT EXIST": no block. Stored outcome = mine.
+SEATS: 828 deepseek BROKEN-1 w=1 k=1; 829 gemini BROKEN-1 k=3, count cured 1 to 4 (COLLAPSED); 830 grok BROKEN-1 k=2. All cures CURED; no v22 mark.
+ON YOUR READ: CONCUR, limbs not fired. One split, outcome-neutral: [CR3] writes "LINK 5: CONCEDED." then "The premise as worded ... floats on that verse alone." 828 counts D5 withdrawn (w=1); 829 and 830 count premise 6 only (w=0). Same SPLIT LINK class the v18 mark names; every seat has k >= 1, so no verdict rests on it.
+OBSERVATIONS (class (a), for the AAR; none changes this outcome): 830 D1 "STANDS -- no row states that Joseph begat Jesus" names [CR2], so K-S passes it though its first ground is the stating one. 830 D2 vs C2 grades UNDERDETERMINED while saying a [DR1] witness "was not named later"; the served rule grades UNDERDETERMINED only when every witness was answered. 829 broke the same line on that witness.
+SINGLE JUDGE (second opinion, not counted): HELD-1 with D5 WITHDRAWN MISSED; review_notes flag it (v14 ILLEGAL, gives BROKEN-2).
+DoD 0 (b): MET, the live run reads a verdict.
+BELL TO THE ADVISOR: yours. My seat rings the advisor only for a stop or a design question (his rule); this is neither.
+NEXT: step 11 AAR per the advisor.
+Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm
