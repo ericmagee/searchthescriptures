@@ -1,0 +1,3 @@
+NEW changed=false DoD9=true DoD10=true
+MUTANT F1 removed changed=true DoD9=true DoD10=false
+MUTANT F2 removed changed=true DoD9=false DoD10=true
