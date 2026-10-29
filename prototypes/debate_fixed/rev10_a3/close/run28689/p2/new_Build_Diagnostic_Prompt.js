@@ -1,0 +1,21 @@
+const d=$('Cure Check').first().json;const csf=$('Init with Guards').first().json.fref;const mc=$('Resolve Seats').first().json.deepseek;const vt=d.verdict_tag;const roles=$('Init with Guards').first().json.posline+'\n'+'You hold neither seat. The [CR] rounds are the DEFENDER\'s and the [DR] rounds are the CHALLENGER\'s. Write about both sides in the third person; never call either side\'s rounds your own.\n';const up=vt==='BROKEN'?'TOPIC: '+d.topic+'\n'+roles+'SECOND OPINION (single judge, not the debate\'s verdict): BROKEN\nThe debate\'s verdict is the panel\'s. The panel judges after this diagnostic is written, so it is not known here. Review the second opinion\'s break; do not announce a verdict.\n'+d.independent_verdict_raw+'\n\nSYNTHESIS:\n'+d.synthesis+'\n\nTRANSCRIPT:\n=== [CR1] DEFENDER R1 ===\n'+d.cr1+'\n=== [DR1] CHALLENGER R1 ===\n'+d.gr1+'\n=== [CR2] DEFENDER R2 ===\n'+d.cr2+'\n=== [DR2] CHALLENGER R2 ===\n'+d.gr2+'\n=== [CR3] DEFENDER R3 -- LINK ROUND (defender exhibit-or-concede) ===\n'+(d.cr3||'(missing)')+'\n=== [DR3] CHALLENGER R3 -- LINK ROUND (challenger exhibit-or-concede) ===\n'+(d.dr3||'(missing)')+'\n\nDIAGNOSTIC: 1.LAYER BREAK. 2.STRONGEST ARGUMENT. 3.TEXT or ARTICULATION? 4.DRIFT GUARD CANDIDATE. 5.TENSION CANDIDATE. 6.NEXT ACTION. Tag every claim.':'TOPIC: '+d.topic+'\n'+roles+'SECOND OPINION (single judge, not the debate\'s verdict): '+vt+'\nThe debate\'s verdict is the panel\'s. The panel judges after this diagnostic is written, so it is not known here. Review the second opinion\'s break; do not announce a verdict.\n'+d.independent_verdict_raw+'\n\nSYNTHESIS:\n'+d.synthesis+'\n\nBRIEF CONFIRMATION: 1.Accurate? 2.Tensions? 3.New? One paragraph.';const r1u=$('D1 Extract').first().json.usage||{};const r2u=$('D2 Extract').first().json.usage||{};const suRaw=$('Synthesis Normalizer').first().json?.usage||{};const su={input_tokens:suRaw.prompt_tokens||0,output_tokens:suRaw.completion_tokens||0};
+/* ODV1 step2 (BB-5435/BB-5462/BB-5465): single-judge call routed off hardcoded deepseek via family triad; deepseek branch byte-exact */
+const __S2=$('Init Seats').first().json;const __RT2=' run_token='+__S2.run_token;
+const __JFAM2={deepseek:'deepseek',gemini:'gemini',grok:'grok',chatgpt:'openai',mimo:'mimo',glm:'openrouter',qwen:'openrouter'};
+const __sj2=__S2.single_judge;const __fam2=__JFAM2[__sj2];
+if(!__fam2)throw new Error('ORACLE_DEBATE_V1 Build Diagnostic Prompt refused: single_judge "'+__sj2+'" has no family map.'+__RT2);
+const __M2={};$('Fetch Models').all().forEach(i=>{const x=i.json;if(x&&x.seat)__M2[x.seat]=x;});
+const __row2=__M2[__sj2];
+if(!__row2||!__row2.api_model)throw new Error('ORACLE_DEBATE_V1 Build Diagnostic Prompt refused: single_judge "'+__sj2+'" has no ACTIVE model_config row with api_model.'+__RT2);
+const __model2=__row2.api_model;const __base2=Math.max(Number(__row2.max_tokens)||0,6000);
+const __JIDX2={deepseek:0,openai:1,gemini:2,grok:3,mimo:4,openrouter:5};const __jidx2=__JIDX2[__fam2];
+const __out={...d,verdict_tag:vt,_r1u:r1u,_r2u:r2u,_su:su,requestBody:{model:mc.api_model,max_tokens:Math.max(mc.max_tokens||0,6000),messages:[{role:'system',content:csf},{role:'user',content:up}]}};
+const __bf='requestBody';const __b0=__out[__bf];const __sys2=__b0.messages[0].content;const __usr2=__b0.messages[1].content;const __m2=[{role:'system',content:__sys2},{role:'user',content:__usr2}];
+let __nb;
+if(__fam2==='gemini')__nb={systemInstruction:{parts:[{text:__sys2}]},contents:[{role:'user',parts:[{text:__usr2}]}],generationConfig:{maxOutputTokens:__base2+8192,temperature:0}};
+else if(__fam2==='grok')__nb={model:__model2,max_tokens:__base2,temperature:0,messages:__m2};
+else if(__fam2==='openai')__nb={model:__model2,max_completion_tokens:Math.max(__base2*2,8000),messages:__m2};
+else if(__fam2==='openrouter')__nb={model:__model2,max_tokens:__base2,reasoning:{effort:'max'},messages:__m2};
+else __nb={model:__model2,max_tokens:__base2,messages:__m2};
+__out[__bf]=__nb;__out.jidx=__jidx2;__out.judge_model=__model2;
+return [{json:__out}];
