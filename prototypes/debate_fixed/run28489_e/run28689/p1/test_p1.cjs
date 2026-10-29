@@ -11,7 +11,8 @@ const ALT=[['Genesis 16:10','I will multiply thy daughters',0],['Luke 3:23','bei
  ['Acts 16:13','where prayer was wont to be made',1],['Acts 16:13','wont to be made',1],['Luke 3:23','(as was supposed)',1],['John 6:42','Is not this Jesus, the son of Joseph',1],['John 1:45','Jesus of Nazareth, the son of Joseph',1],
  ['Genesis 16:10','I will multiply thy seed',1],['Luke 1:35','The Holy Ghost shall come upon thee... therefore also that holy thing which shall be born of thee shall be called the Son of God',1],
  ['Acts 16:13','Gr. sabbath day',0],['Luke 1:35','therefore also that holy thing which shall be born of thee shall be called the Son of God... The Holy Ghost shall come upon thee',0]];
-const R2={...R,gr2:ALT.map(([r,q])=>'- [L1] "'+q+'" ('+r+').').join('\n')};
+const EXTRA=[['Luke 1:34','The Holy Ghost shall come upon thee',2]];
+const R2={...R,gr2:ALT.concat(EXTRA).map(([r,q])=>'- [L1] "'+q+'" ('+r+').').join('\n')};
 function run(cs,qc,qr,rounds){const nodes={};const $=n=>{if(n==='Regrade Load')return {isExecuted:false};if(n==='Final Output')return {first:()=>({json:rounds})};
  if(n==='Citation Scan')return {first:()=>({json:nodes.cs})};if(n==='Cited Verses')return {all:()=>KJV.map(json=>({json}))};
  if(n==='Quote Compare')return {first:()=>({json:nodes.qc})};if(n==='Find Words')return {all:()=>KJV.map(json=>({json}))};throw new Error('no node '+n);};
@@ -40,4 +41,9 @@ out.push('F7c (fix7 test.cjs rows): NOT CHECKED live '+live.items.filter(i=>i.st
 for(const [name,s] of [['live',LIVE],['fix7',FIX7],['p1',P1]]){const r=run(...s,null,R2);const sc=score(r.items);out.push(name.padEnd(6)+' altered MATCHES '+sc.alt+' | true not MATCHES '+sc.trueNot);if(name==='p1')out.push(...sc.detail.map(x=>'   '+x));}
 for(const [name,qc] of Object.entries(M)){const r=run(P1[0],qc,null,R2);const sc=score(r.items);out.push('mutant '+name.padEnd(20)+' altered MATCHES '+sc.alt+' | true not MATCHES '+sc.trueNot);}
 const rep=run(...P1,QR,R2).rep;out.push('F7g Quote Report on p1:');for(const [r,q,ok] of ALT){const qq=q.replace(/…|\.\.\./g,' ').trim();const it=rep.items.find(i=>i.quote===qq);out.push('   '+(ok?'true ':'bad  ')+r.padEnd(14)+' '+(it?it.status:'(left out of report)').padEnd(34)+' "'+q.slice(0,40)+'"');}
+// Amendment 1 (BB-8010): F7h, F7h2, F7h3 through the new Quote Report.
+const QRN=rd(path.join(D,'new_Quote_Report.js'));
+const QRM=mut(QRN,"const inRange=best&&best.book===i.book&&+best.chapter===+i.chapter&&+best.verse>=+i.v1&&+best.verse<=+i.v2;","const inRange=!!best;");
+for(const [label,qr] of [['F7h new Quote Report',QRN],['F7h3 mutant, range test removed',QRM]]){const rp=run(...P1,qr,R2).rep;out.push(label+':');
+ for(const [r,q,ok] of ALT.concat(EXTRA)){const qq=q.replace(/…|\.\.\./g,' ').trim();const it=rp.items.find(i=>i.quote===qq&&i.ref===r)||rp.items.find(i=>i.quote===qq);out.push('   '+(ok===1?'true ':ok===2?'wrong':'bad  ')+' '+r.padEnd(14)+' '+(it?it.status:'(left out of report)').padEnd(34)+' "'+q.slice(0,40)+'"');}}
 console.log(out.join('\n'));
