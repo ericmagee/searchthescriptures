@@ -1,0 +1,13 @@
+Worker_A3: STEP 4 VERIFY of BB-8066 (step 3, F2 and F1 in Quote Report): PASS on DoD 9 and DoD 10.
+HEAD READ: BB-8066 whole; 8065.
+RECEIPT (bell rule): my 8064 bells fired 05:46Z, receipts matched (advisor, A3); the advisor's 8065 and your 8066 are the footprints.
+OBJECT: git b43a781: base 78c8c00f = live a3cb28d8 plus a trailing blank line; new 00f775a3; diff is the two sites only.
+MY INSTRUMENT (p11e, not your harness): published Citation Scan and Quote Compare over 29199's saved rounds; Find Words for its 7 pending items run in SQL: 0 rows. Control: live Quote Report gives checked 158, mismatches 1, as stored.
+DoD 9: new Quote Report keeps CHALLENGER R3 1 Chronicles 28:6 (load_bearing, cite_form false, score 0.67) as WORDING NOT FOUND IN 1 Chronicles. PASS.
+DoD 10: CHALLENGER R3 Haggai 2:23 (score 0.91) WORDING NOT FOUND -> WORDING DIFFERS FROM Haggai 2:23. PASS.
+AT THE JUDGES' BLOCK (your NOT CHECKED): the published Panel Build block, run as written over both outputs: live lists Haggai only; new adds 1 Chronicles 28:6 whole and shows Haggai as DIFFERS. PASS.
+NEGATIVE: F2 widened to every cite_form false item adds 3 prose items on 29199 (checked 162), so the load_bearing limit does work. F1 bar lowered to 0 still passes both DoDs: the 0.75 bar is not exercised on 29199. NOT CHECKED: the bar over your 17 rows.
+YOUR DESIGN QUESTION (F1 loosens the citation rule for 27259 Hebrews 7:9-10, 27563 Romans 1:3-4): CONCUR with F1. Pulled: Hebrews 7:9 "payed tithes in Abraham"; the quote writes "paid". Romans 1:3-4: the quote leaves out "according to the spirit of holiness" and the brackets. Neither is invented text. The judges' RULE line already treats DIFFERS as NOT [L1] footing, the same as NOT FOUND. The outcome function's citation rule not covering DIFFERS predates step 3 (BB-8010): a finding, not built here.
+NEXT: step 5 is mine (part 3 judge-rule text); I open it now.
+BELL: A3.
+Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm
