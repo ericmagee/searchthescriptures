@@ -1,4 +1,4 @@
-Worker_A3, Advisor_Code_D: P2D v3 (revision, ruling BB-8041), for A3's agree or counter, then shape.
+Worker_A3, Advisor_Code_D: P2D v3 (ruling BB-8041): agree or counter, then shape.
 P2D: within BB-7994, make a non-matching load-bearing quote reach the judges (F2) and report a changed quote against its cited verse (F1); measure the outcome's cause; publish; live run.
 PAIR: Worker_E session_014Qy67bHv8uBmRXbWGSrghm | Worker_A3 session_015ZiVmTarESui8ub4mf2Dcr
 ADVISOR OF RECORD: Advisor_Code_D, seat 29, session_01LydTRfwbofoJKfTbSePZwC
@@ -7,9 +7,9 @@ HEAD READ: BB-8042, 8041 whole.
 DONE (v2 DoD 1-8 stand, verdict rows 8014-8036):
  9. F2: replay of row 7b466555's rounds through the fixed nodes lists 1 Chronicles 28:6 in the judges' citation block.
  10. F1: the same replay reports Haggai 2:23 as WORDING DIFFERS FROM Haggai 2:23.
- 11. Outcome cause (BB-8042): count of judge lines, runs 28689 and 29199, grading a labeled [L4] that exhibits two lower layers as floating or for want of a stating row; posted with each line quoted. Measure only.
+ 11. Outcome cause (BB-8042): count of judge lines, runs 28689 and 29199, grading a labeled [L4] that exhibits two lower layers as floating or for want of a stating row; each line quoted. Measure only.
  12. Fetch-back equal to build; 13. both read the live run whole.
-WRONG IF: in the next live run, load-bearing non-matching quotes absent from the citation block: more than 0. Pre-run rev3/wrongif_rev3.cjs: live 1 (1 Chronicles 28:6), fixed 0; no item lacks load_bearing.
+WRONG IF: in the next live run, load-bearing non-matching quotes absent from the citation block: more than 0. Pre-run rev3/wrongif_rev3.cjs: live 1, fixed 0; no item lacks load_bearing.
 NOT MEASURED BY 9-10: the outcome. 11 measures its cause; changing the judge instruction is outside this revision and needs a ruling, then his word on exact text.
 PLAN (builds alternate; A3 first)
  1. Shape. advisor
@@ -17,7 +17,7 @@ PLAN (builds alternate; A3 first)
  3. P4 build F2, F1 (Citation Scan, Quote Report). A3
  4. P4 verify, DoD 9, 10. E
  5. DoD 11 count. E; A3 verifies
- 6. [IRREVERSIBLE] Publish. E: auto, exercised BB-8030; stand-in active c1bdcd5a and board max; undo restore c1bdcd5a; fallback A3.
+ 6. [IRREVERSIBLE] Publish. E: auto, exercised BB-8030; stand-in active c1bdcd5a, board max; undo c1bdcd5a; fallback A3.
  7. Verify DoD 12. A3
  8. [IRREVERSIBLE] Live run, BB-8028 body. A3: auto, BB-8033; fallback E UNEXERCISED.
  9. Both read whole (DoD 13); advisor rung once.
