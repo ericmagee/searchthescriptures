@@ -1,0 +1,10 @@
+const fs=require('fs');const t=fs.readFileSync(process.argv[2],'utf8');const a=t.indexOf('{const K2W=k2Marks(WT);');const b=t.indexOf("p.verdict_tag=wd2;}}}",a)+"p.verdict_tag=wd2;}}}".length;
+const snip=t.slice(a,b);
+const run=(name,missed,nwk,ks,tag,ds)=>{const p={verdict_tag:tag,defense_standing:ds};const marks=[];const k2Marks=()=>{const o=['[flag]'];o.missed=missed;o.nwk=nwk;o.ks=ks;return o;};
+ new Function('k2Marks','WT','p','marks',snip)(k2Marks,'',p,marks);console.log(name.padEnd(34),tag,'->',p.verdict_tag,'|',marks.slice(1).join(' '));};
+run('29333 deepseek/grok: D5 missed',[5],[6,0,0],6,'HELD','PROP-DEPENDENT');
+run('keystone D6 missed',[6],[6,0,0],6,'HELD','PROP-DEPENDENT');
+run('27108 seat already BROKEN-1 (k=2)',[4],[6,0,2],6,'BROKEN','PROP-DEPENDENT');
+run('two missed of 3 (2w>n)',[1,2],[3,0,0],3,'HELD','PROP-DEPENDENT');
+run('no missed (28662)',undefined,[6,0,0],6,'HELD','SELF-SUPPORTED');
+run('missed but no clause counts',[5],null,6,'HELD','PROP-DEPENDENT');
