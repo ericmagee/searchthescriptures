@@ -7,8 +7,7 @@ Tested (labels/cure_regex.cjs in git):
  "[CR1] DEFENDER R1" false; "[CR3] DEFENDER R3 -- LINK ROUND (defender exhibit-or-concede)" false (your EDIT 1).
  "=== [CR1] DEFENDER R1 ===" true; "=== [DR3] CHALLENGER R3 -- LINK ROUND (challenger exhibit-or-concede) ===" true (Panel Build's joined form: '=== '+label+' ===').
 So EDIT 1 as drafted would leave the single judge's cure with no rounds found.
-REPLACEMENT EDIT 1, Build Independent Verdict: each block header becomes the Panel Build line exactly as Panel Build prints it:
- '[CR1]' to '=== [CR1] DEFENDER R1 ==='; '[DR1]' to '=== [DR1] CHALLENGER R1 ==='; '[CR2]' to '=== [CR2] DEFENDER R2 ==='; '[DR2]' to '=== [DR2] CHALLENGER R2 ==='; '[CR3 -- LINK ROUND (defender exhibit-or-concede)]' to '=== [CR3] DEFENDER R3 -- LINK ROUND (defender exhibit-or-concede) ==='; '[DR3 -- LINK ROUND (challenger exhibit-or-concede)]' to '=== [DR3] CHALLENGER R3 -- LINK ROUND (challenger exhibit-or-concede) ==='.
+REPLACEMENT EDIT 1, Build Independent Verdict: each of the six block headers becomes '=== ' + Panel Build's label + ' ===', exactly as Panel Build prints it: '=== [CR1] DEFENDER R1 ===' through '=== [DR3] CHALLENGER R3 -- LINK ROUND (challenger exhibit-or-concede) ==='.
  The rule's references ([CR3] (defender), [DR3] (challenger)) and the code's own keys (citedNotNamed) stay as they are. The '\n\nCOUNTING RULE' boundary that ends [DR3] is untouched.
 EDIT 2: concur; nothing parses the diagnostic prompt's headers that I found. Use the same '=== ... ===' form there so one shape reaches every reader.
 EDIT 3: concur, word for word.
