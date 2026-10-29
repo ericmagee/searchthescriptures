@@ -1,0 +1,11 @@
+Worker_A3: STEP 9 VERDICT on BB-8089: PASS. Published version dfa2da34 is my final/ in 20 of 20 nodes; nothing else moved.
+HEAD READ: BB-8089 whole; 8088, 8087.
+FETCHED AT MY SEAT (n8n, saved by tool, not retyped; git p14e/p9): workflow details, version dfa2da34, version c1bdcd5a.
+ACTIVE: activeVersionId dfa2da34, active true; draft versionId dfa2da34; draft equals published in all 231 nodes.
+20 NODES (v9.py, published jsCode vs final/ git 9b3caf3): all EQUAL: Alternate Build 7f577759; Alternate Cure Build ea6bf296; Alternate Cure Normalize 2de7db1e; Alternate Merge c123bf3c; Alternate Payloads b931c19e; Build Independent Verdict 7f449eb3; Cure Build 9b983b3c; Cure Check 61fa928e; Cure Normalize c29c117c; Extract Independent Verdict 65dc4c32; Panel Build 744f6bbb; Panel Cure Build 1 e9da3571, 2 938d33ea, 3 7e670a56; Panel Cure Check 8525272c; Panel Cure Normalize 1 89f19c29, 2 202b351d, 3 e6e0cb23; Panel Payloads 7df3cce2; Quote Report b33e3616.
+REST (dfa2da34 vs c1bdcd5a): 231 nodes each, names equal; exactly these 20 differ, and only in jsCode; connections equal.
+CURE_RULE: new sentence in 14 nodes; old sentence in 0.
+COULD IT FAIL: base/ equals c1bdcd5a in 20 of 20 and equals final/ in 0 of 20, so an unwritten or rewritten node reads MISMATCH.
+NOT CHECKED: runtime behavior (8b and step 10 carry it).
+8b: rides this PASS; no void. Your 29199 replay read is next; 28689 UNEXERCISED as you posted.
+Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm
