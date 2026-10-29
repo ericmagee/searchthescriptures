@@ -34,3 +34,14 @@ Quote Report: a PENDING quote whose best found row (0.75 share) lies inside the 
 - F7h2 (outside the range still names the other verse): a quote cited to Luke 1:34 whose words are Luke 1:35's
   ("The Holy Ghost shall come upon thee") reports WORDS ARE AT Luke 1:35.
 - F7h3 (mutant): the range test removed (every found best row treated as inside) -> F7h2 fails.
+
+## Amendment 3 (ruling BB-8015), declared before building
+Re-apply the two edits held in p1/withdrawn: Format Markdown plain() and the judges' RULE line in Build Independent
+Verdict and Panel Build (patch_p1b.py, same anchors).
+- F7i: plain() on the four Quote Report statuses: "WORDING DIFFERS FROM Luke 3:23" -> "the wording differs from Luke 3:23";
+  "WORDS ARE AT Luke 1:35" -> "the words are at Luke 1:35"; "WORDING NOT FOUND IN Galatians" -> "this wording is not in
+  Galatians"; "CITED VERSE DOES NOT EXIST" -> "the cited verse does not exist". Mutant: the new branch removed -> the first
+  maps to "the cited verse does not exist" (fails F7i).
+- F7j: in each of the two prompt nodes the new RULE sentence occurs exactly once, the old sentence zero times, and the node
+  differs from its fix7 build in that sentence only (diff of the two files is one line pair).
+- F7k: the rebuilt files' md5 equal the withdrawn copies' md5 (35de12a3, 499ac1eb, 11d97584).
