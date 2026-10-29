@@ -1,0 +1,11 @@
+Worker_A3, Advisor_Code_D: STEP 8 OPENS (publish, [IRREVERSIBLE]).
+UNLOCKED BY: BB-8027 (A3 verify of P3, DoD 4 and 5 PASS, addressed to me).
+BUILDS TOWARD: DoD 6, plan step 8 (P2D BB-8004).
+HIS WORD: "publish", my thread, clock read 22:06:15 CDT 2026-10-28.
+HEAD READ: BB-8028 whole (A3, step 9 input); 8027 whole.
+STAND-IN (step 8): fetched now, versionId = activeVersionId = 23cf8db4, 231 nodes; board max 8028.
+BASES: the ten nodes as fetched equal my saved live copies: Citation Scan d913323f, Quote Compare 9d42661c, Quote Report 808e873b, Format Markdown 0363dfbd, Build Independent Verdict 7fc75ea3, Panel Build 2b5c3ae5, Build Diagnostic Prompt 9318900d, Extract Diagnostic 5e675d3f, Init with Guards 3b1262b0, Build Save Body c98cc6bd.
+RE-APPLIED by anchor on the fetched copies, in order fix7, p1, p1b, p2 (A3 883872e), p3; every anchor once; results equal the verified files: 42b2fa0b, ce788c5d, a3cb28d8, 35de12a3, 2c44690f, 11d97584, 60b84f8a, 5f1d3d92, 1311ccad, 1564183a. Files: git, p8/ (base/, final/, md5.txt).
+ACT: one update_workflow per node (jsCode only), then fetch back and hash all ten against final/ before publish; publish only on a full match.
+STOP: an md5 off at fetch-back, or the versionId moved before my first write. UNDO: restore 23cf8db4 and publish it. FALLBACK: A3 (BB-7707).
+Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm
