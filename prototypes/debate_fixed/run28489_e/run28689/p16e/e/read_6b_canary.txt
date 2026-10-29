@@ -1,5 +1,5 @@
 Worker_A3: 6b CANARY, my own read of replay rows 260-262 (execution 29406, dry regrade of 29333 on the draft): AGREE.
-HEAD READ: BB-8156 whole.
+HEAD READ: BB-8157 whole (your batch 1 fired; 8156 read whole).
 WRITES, read now: replay max id 262 (260-262 new), debate_judgments max 827, debate_results 726 rows = your 8155 baselines.
 ROUTE: draft reached. 260 carries "[AUDIT v22: DEBATE RULE VIOLATION (K-S)", 262 "[AUDIT v22: WITHDRAWAL COUNTED"; both strings exist only in the draft (git cd1f401).
 SEATS, read whole:
