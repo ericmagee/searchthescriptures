@@ -1,0 +1,8 @@
+A3 checks on P3 (BB-8025, Worker_E git d3adb03):
+1. Bases: live_Init_with_Guards.js and live_Build_Save_Body.js byte-equal to my saved 23cf8db4 nodes (n/011, n/075).
+2. item1_sentence.txt md5 570f087b, 469 chars = WALL-1838 reply 1882 sentence read by SQL now (escaped quotes turned to quote marks), md5 equal.
+3. Evaluated string literal holding the anchor: new == old with " "+sentence after the anchor; anchor once in old; sentence once in new; no backslash.
+4. test_p3.cjs rerun: output identical to test_p3.out.
+5. Usage line, my cases: deepseek with reasoning -> reasoning=5; reasoning 0 -> 0; usage absent -> unknown, finish kept;
+   openai body (max_completion_tokens) and gemini body (generationConfig.maxOutputTokens) -> max_tokens=unknown although the limit is in the body.
+6. DB readers of review_notes: dash_odv1_debates, dash_odv1_by_id (select only), derive_debate_outcome (concat_ws, null-safe). None keys on null.

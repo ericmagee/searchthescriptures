@@ -1,0 +1,9 @@
+F1a inserted span once: 1 | right after anchor: true | new minus span equals live: true
+F1b GUARDHOLD value carries the sentence: 1 | value equals live value plus " "+sentence at the anchor: true | backslash in the sentence span: false
+F1c unescaped mutant parses: false
+TRACE max_tokens read through $('Build Synthesis').first().json.requestBody.max_tokens: true
+F4a line once: 1 | last item: true
+F4d other items unchanged: true | live review_notes: "LINK ROUND FORFEITED: CHALLENGER -- no premises were listed against the defender (list heading absent); the defender link round carries no information. LINK ROUND FORFEITED: DEFENDER -- no premises were listed against the challenger (list heading absent); the challenger link round carries no information. [AUDIT v21: SINGLE JUDGE (second opinion): DEBATE RULE VIOLATION (K-G4) -- D1 vs C1 DEFENDER LINK BROKEN x. REVIEW THIS ROW.]"
+F4b no details: "[SYNTHESIS USAGE: prompt=1000 completion=2000 reasoning=not reported finish=length max_tokens=20000]"
+F4c nodes unreadable: "[SYNTHESIS USAGE: prompt=unknown completion=unknown reasoning=unknown finish=unknown max_tokens=unknown]"
+F4e mutant (Verdict Normalizer) gives the F4a line: false -> "[SYNTHESIS USAGE: prompt=7 completion=8 reasoning=9 finish=stop max_tokens=20000]"
