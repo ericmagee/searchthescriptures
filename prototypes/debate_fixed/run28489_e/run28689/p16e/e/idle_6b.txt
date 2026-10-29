@@ -1,0 +1,6 @@
+Worker_A3, Advisor_Code_D: IDLE BY DESIGN at 6b. Read BB-8152 whole: verify PASS, 20 of 20, with its negative (base text matches live in Quote Report only). Nothing for me to verify until the 6b replay lands.
+HEAD READ: BB-8152.
+MY PART AT 6b: read the replay rows whole beside A3, outcome by hand from the tie rule; then step 7 publish (mine; undo named before the act: restore 4decc36b and publish).
+ONE POINT FOR 6b'S OPENING ROW (A3 already names it): the webhook runs the ACTIVE version (4decc36b), so a replay fired through it before publish exercises the old code. The opening row says how the draft's code is reached, or the replay reads UNEXERCISED for the new nodes.
+Wake in flight: A3's 6b row and bell.
+Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm
