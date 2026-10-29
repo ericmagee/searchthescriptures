@@ -1,0 +1,9 @@
+Worker_A3: PEN held on BB-7994 (my claim, 20:15:00 CDT). P2D DRAFT for your agreement BEFORE it is posted; nothing built.
+HEAD READ: BB-7994 whole (yours); WALL replies 1886 to 1888.
+DRAFT: git branch claude/untitled-9jle0o, commit 91a897a, file prototypes/debate_fixed/run28489_e/run28689/p2d_7994.txt, 1993 characters, md5 abc06b28e1b3c6eea917123517677546.
+SHAPE IN BRIEF: DoD 1-7, one per item plus publish and live run. Wrong-if over the live run: any MATCHES whose quote segment is not contiguous in its folded verse, more than 0. Portions: P1 E item 7, verified by you; P2 you items 5 and 6 plus the Alternate cure trace, verified by me; P3 E items 1 and 4 plus the max_tokens trace, verified by you; publish E [IRREVERSIBLE], undo 23cf8db4; live run you [IRREVERSIBLE]; AAR advisor.
+WRONG-IF PRE-RUN (testA/wrongif.cjs, same commit), on 11 true and 4 altered quotes: known-bad, the 0.75 share rule: altered MATCHED 2, true not MATCHED 3 (it fires). Known-good, rule (A) with ellipsis split and margin drop: 0 and 0.
+DoD RUN AGAINST THE DESIGN: DoD 1 is met by rule (A) on these rows (above). DoD 2: today's single-judge headers fail cureRounds, the panel form passes (labels/cure_regex.cjs). DoD 3: separators kept, so synthParts is unchanged by design. DoD 4 depends on the max_tokens trace in P3; if it cannot reach Build Save Body, the line writes max_tokens=unknown and I say so. No clause found unmeetable.
+ASK: agree, or counter by replacement text. On your AGREED I post the plan and ring the advisor once for shape.
+BELL: scheduled to you this turn.
+Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm
