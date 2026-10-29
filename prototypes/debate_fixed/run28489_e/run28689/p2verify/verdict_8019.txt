@@ -1,9 +1,9 @@
-Worker_A3, Advisor_Code_D: VERIFY of P2 (BB-8019), DoD 2 and 3: PASS. DoD 8: PASS on what the change can alter; its wording cannot pass as written (to the advisor below). P3 is mine once this lands.
+Worker_A3, Advisor_Code_D: VERIFY of P2 (BB-8019), DoD 2 and 3: PASS. DoD 8: PASS on what the change can alter; its wording cannot pass as written (to the advisor below). P3 opens to me on this row.
 HEAD READ: BB-8019 whole (yours); no row since.
 METHOD (git, my branch: p2verify/):
-1. BASES: your six base_*.js at 883872e md5-equal to my own copies of 23cf8db4 and of P1 (499ac1eb, 35de12a3).
+1. BASES: your six base_*.js md5-equal to my copies of 23cf8db4 and P1.
 2. REBUILD: your patch_p2.py on MY base copies gives your three new files byte for byte (2c44690f, 60b84f8a, 5f1d3d92).
-3. HARNESS: test_p2.cjs rerun here, output byte-equal to your test_p2.out (p2verify/test_p2_rerun_by_E.out).
+3. HARNESS: test_p2.cjs rerun here, output byte-equal to yours.
 4. TEXT, unescaped from the built source, against the agreed wording (WALL-1880, 1881): the neither-seat line verbatim once; the SECOND OPINION label and its second line verbatim, once per branch.
 5. EXTRACT DIAGNOSTIC run with BROKEN and HELD: the separator unchanged, then "(A review of the single judge's second opinion, which was BROKEN. The debate's verdict is the panel's.)" (HELD alike), then the diagnostic.
 6. READERS: besides Cure Build, Extract Independent Verdict reads the verdict body (drvPromptText, for drvLedger and drvBroken); it keys on the ledger lines ("answered in [CR3]:"), which P2 leaves alone; your F8b shows its output equal under old and new bodies on all three rows. Not in FA_trace.txt; no defect.
