@@ -1,0 +1,8 @@
+Step 5 (P2D v5a, BB-7994): part 3 judge-rule text, one rule for "floating" [L4] on both seats. Declared before building.
+OBJECTS: published Panel Build (11d97584) and Build Independent Verdict (2c44690f), copies p8/final = live c1bdcd5a.
+ANCHOR: "Name every floating [L4] on either side before weighing it;" occurs exactly once in each (measured 1 and 1). The new sentences go right after it, same text in both nodes.
+F5a: each patched node differs from its final only by the inserted text (diff shows one insert, no other line changed); anchor still once.
+F5b: the inserted text holds the floating test as layer count only (fewer than two exhibited prior layers), never a stating row; it names both seats; it requires the judge to name the layers seen and missing.
+F5c: the patched jsCode parses (new Function) and the built prompt string contains the insert once (Panel Build run on 29199's saved inputs where the harness reaches it; else stated UNEXERCISED).
+F5d (wrong-if limb 2's word anchors, 8052 (b)): the insert does not itself contain "no row states" as a demand, so limb 2's anchors do not match the instruction text when it is quoted back.
+NOT IN STEP 5: DoD 12 (judges replayed on 28689, 29199) is A3's verify at step 6; the wording goes to the operator once via the advisor at step 7 before publish.
