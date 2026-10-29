@@ -1,0 +1,12 @@
+== mut_123
+29199 gemini MUT_123 K-B:D2 vs C4[] K-G4:D2 vs C4 K-B:D4 vs C5[] K-G4:D4 vs C5 K-B:D6 vs C5[] K-G4:D6 vs C5
+28689 gemini(removed) MUT_123 K-B:D2 vs C2[] K-G4:D2 vs C2 K-B:D4 vs C6[] K-G4:D4 vs C6
+texts 83 K-B old 100 new 99
+== mut_245
+29199 gemini MUT_245 K-B:D2 vs C4[L1] K-G4:D2 vs C4 K-B:D4 vs C5[L1] K-G4:D4 vs C5 K-G4:D6 vs C5
+28689 gemini(removed) MUT_245 K-B:D2 vs C2[L1] K-G4:D2 vs C2 K-G4:D4 vs C6
+texts 83 K-B old 100 new 95
+== mut_1345
+29199 gemini MUT_1345 K-B:D2 vs C4[L3] K-G4:D2 vs C4 K-G4:D4 vs C5 K-G4:D6 vs C5
+28689 gemini(removed) MUT_1345 K-B:D2 vs C2[L1] K-G4:D2 vs C2 K-G4:D4 vs C6
+texts 83 K-B old 100 new 93
