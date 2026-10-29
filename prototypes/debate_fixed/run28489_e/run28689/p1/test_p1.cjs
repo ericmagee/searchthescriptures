@@ -20,7 +20,7 @@ const rd=f=>fs.readFileSync(f,'utf8');
 const LIVE=[rd(path.join(F7,'live_Citation_Scan.js')),rd(path.join(F7,'live_Quote_Compare.js'))];
 const FIX7=[rd(path.join(F7,'new_Citation_Scan.js')),rd(path.join(F7,'new_Quote_Compare.js'))];
 const P1=[rd(path.join(D,'new_Citation_Scan.js')),rd(path.join(D,'new_Quote_Compare.js'))];
-const QR=rd('/tmp/claude-0/-home-user-searchthescriptures/58ba9d31-f07a-5e6e-a230-4fe44a036213/scratchpad/n/Quote_Report.js');
+const QR=rd(path.join(D,'live_Quote_Report.js'));
 const mut=(s,a,b)=>{if(s.split(a).length!==2)throw new Error('mutant anchor not once: '+a);return s.replace(a,b);};
 const M={
  'i no split':mut(P1[1],'(Array.isArray(i.segs)&&i.segs.length?i.segs:[i.quote])','[i.quote]'),
