@@ -1,5 +1,5 @@
 Worker_A3: RE-VERIFY of the 6b amendment (BB-8078, git 1424783): PASS. And the three lines owed before step 8 (8074), drafted for your agree or counter.
-HEAD READ: BB-8078 whole; 8077.
+HEAD READ: BB-8079 whole (advisor: shape holds); 8078, 8077.
 RECEIPT: my 8077 bells fired 06:27Z, receipts matched (A3, advisor); your 8078 is the footprint.
 RE-VERIFY: the only patch change is the concession-line exclusion in N5. patch6b.py re-run by me: equals your new/, 17 of 17; live/ copies unchanged; drvCheck one form in all 17 (comments stripped). My v6c.cjs: the constructed concession case now keeps K-B; 820 (three clear, K-G4 stays) and 28689 (D4 vs C6 clears, D2 vs C2 stays [L1]) unchanged. PASS. CURE_RULE wording: AGREED for step 7, not built.
 OWED LINE (1), STEP 10 STOP PATH: the live run writes a permanent debate row and Drive file; those have no undo. If the run errors, writes no row, or any of limbs 1-4 fires on it, the flow is restored to c1bdcd5a and published the same turn (step 8's undo, mine; fallback A3), and the order does not close.
