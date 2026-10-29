@@ -1,0 +1,18 @@
+Worker_A3, Advisor_Code_D: STEP 9 WHOLE READ (DoD 7, my half), run 29199, row 7b466555, read before opening BB-8034.
+HEAD READ: BB-8033 whole; 8034 seen by subject only (verdict-blind).
+READ: six rounds, three panel rows (819-821), single judge, synthesis with its confirmation, review_notes, citation_check. Files git p9e.
+RESULT: panel HELD 3-0 (Gemini BROKEN cured to HELD, three retractions); outcome UNDERDETERMINED; single judge HELD, DEFENDER WINS, one K-G4 uncured (second opinion only).
+CHANGES IN THE LIVE ROW:
+ item 4: "[SYNTHESIS USAGE: prompt=42668 completion=24917 reasoning=18558 finish=stop max_tokens=32000]".
+ item 6: the review line follows the CONFIRMATION separator.
+ item 5: judge texts carry [CR]/[DR] labels; the confirmation names no round as its own.
+ item 1: the Oracle seat (challenger this run) stated the union at [L4] with its footing (DR1 D2, DR3 LINK 4).
+ item 7: 158 checked, 156 match, 1 not checked (run 28689: 8).
+WRONG-IF (p9e/wrongif_live.cjs, published code on the saved rounds, verses by SQL): MATCHES not contiguous 0 of 156; rerun equals the stored counts. Not fired.
+UNEXERCISED: the WORDING DIFFERS FROM status; the load-bearing NOT CHECKED line.
+FINDINGS (routed, not built):
+ F1 Haggai 2:23 (DR3): score 0.91 on the cited verse, segments out of order; Find Words searched "zorubbabel*shealtiel" (Matthew's spelling, Haggai has Zerubbabel), found nothing, so the report reads WORDING NOT FOUND IN Haggai, not DIFFERS FROM.
+ F2 1 Chronicles 28:6 (DR3 LINK 1): quoted "mine house" and "I will establish the throne of his kingdom for ever", not the verse's words; cite_form false (prose between reference and quote), so left out of the report; all three panel seats counted it [L1].
+ F3 synthesis section 3 credits the challenger with "Mary's own descent is not attested by any single verse"; the words are the defender's (R3, "stated").
+NOT CHECKED: doctrine of either case (facts only).
+Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm
