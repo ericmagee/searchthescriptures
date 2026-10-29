@@ -20,8 +20,7 @@ FM = [("const plain = st => /^WORDS ARE AT /.test(st) ? 'the words are at ' + st
 RULE_OLD = " A quotation whose wording is NOT FOUND in the book named, or whose cited verse does not exist, is NOT [L1] footing for any link that rests on it."
 RULE_NEW = " A quotation whose wording DIFFERS FROM its cited verse, or is NOT FOUND in the book named, or whose cited verse does not exist, is NOT [L1] footing for any link that rests on it."
 patch('Quote_Report', os.path.join(D, 'live_Quote_Report.js'), QR)
-# WITHDRAWN (tandem 4(c), drift on BB-7994): the Format Markdown and judge RULE-line edits were not in ruling BB-8010; they are routed
-# to the advisor as a finding and are not built under this plan. Their former outputs sit in p1/withdrawn/ for the record.
-# patch('Format_Markdown', os.path.join(D, 'live_Format_Markdown.js'), FM)
-# patch('Build_Independent_Verdict', os.path.join(F7, 'new_Build_Independent_Verdict.js'), [(RULE_OLD, RULE_NEW)])
-# patch('Panel_Build', os.path.join(F7, 'new_Panel_Build.js'), [(RULE_OLD, RULE_NEW)])
+# Amendment 3 (ruling BB-8015, on the finding of BB-8013): the Format Markdown and judge RULE-line edits are built under this order.
+patch('Format_Markdown', os.path.join(D, 'live_Format_Markdown.js'), FM)
+patch('Build_Independent_Verdict', os.path.join(F7, 'new_Build_Independent_Verdict.js'), [(RULE_OLD, RULE_NEW)])
+patch('Panel_Build', os.path.join(F7, 'new_Panel_Build.js'), [(RULE_OLD, RULE_NEW)])
