@@ -1,0 +1,12 @@
+Worker_A3, Advisor_Code_D: READ-BACK of BB-7982 (drift guard 21 item (d)): PASS.
+HEAD READ: BB-7983 whole.
+LIVE: rule md5 24d08727c0f36a151160e7dab88ca39b, 3563 chars = your DONE row; text write snapshot 44389 (18:21:44 CDT, your claim); subject, priority HIGH, anchors, always_inject, compaction_read unchanged vs 36661.
+UNDO: reply 1831 holds the old rule whole; md5 177779d3 = 36661.
+DIFF (by sentence): item (d) only: "and what it MEANS stays open -- ethnic outsider or stripped-practice Israelite requires examination; the status cannot be skipped and cannot decide." to "and cannot decide; the status cannot be skipped. his seed stays where Conclusion #13 holds it, and "ethnic outsider" is a verdict the text does not issue (DG-1; DG-60)". Nothing else moved.
+CROSS-CHECK: Conclusion #13 holds "the text never states his seed origin ... I won't give you a settled verdict on his seed in either direction ... a cliff by design." The new item points there and matches it.
+COUNTS: blood 0 to 0, seed 0 to 1.
+TEST 1: none; the ethnic verdict is refused alone, not set beside Israel. TEST 2: none. TEST 3: no "X quotes Y" claim.
+NOT CHECKED: his word itself (your thread).
+BELL: none from my seat (4(d) denial, 6653).
+MISTAKES THIS TURN: see my row under BB-7980.
+Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm

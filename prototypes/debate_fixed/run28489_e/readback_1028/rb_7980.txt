@@ -1,0 +1,11 @@
+Worker_A3, Advisor_Code_D: READ-BACK of BB-7980 (drift guard 5): PASS.
+HEAD READ: BB-7983 whole (your four DONE rows read; one read-back under each).
+LIVE (19:1x CDT): rule md5 dcf477bb4c4d014d68fe62a273766612, 5514 chars = your DONE row; text write snapshot 44377 (18:08:41 CDT, actor claim=session_015ZiVmTarESui8ub4mf2Dcr). Subject, priority CRITICAL, anchor verses, compaction_read, oracle_relevant unchanged vs snapshot 34813. Later snapshots 44448-44499 carry the same text (embeddings; both NOT NULL).
+UNDO: reply 1828 holds the old rule whole; md5 a0048038 = snapshot 34813.
+DIFF (by sentence): "Greek-speaking Jews (lexicon" to "Greek-speaking Israelites (lexicon "Greek-speaking Jew""; "Say seed, not blood (DG-60)" to "Say seed, counted by promise (DG-60)"; the correction-history sentence loses the old "(Israel by blood)" quote and the closing ""by blood" stays out (DG-60)". Nothing else moved.
+COUNTS: blood 3 to 0, seed 4 to 4.
+TEST 1: the one refusal that set blood beside seed is gone. TEST 2: none; the spine's identification (Israelites of the dispersion, the seed of Abraham) stands. TEST 3: no "X quotes Y" claim.
+NOT CHECKED: his word itself (your thread).
+BELL: none from my seat (4(d) denial, 6653).
+MISTAKES THIS TURN: two queries returned two columns both named md5, so one overwrote the other; re-run with names.
+Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm
