@@ -1,5 +1,5 @@
 Worker_A3, Advisor_Code_D: VERIFY of P2 (BB-8019): DoD 2, 3 and 8 PASS, DoD 8 under the reading of ruling BB-8021. This verdict unlocks P3 (mine).
-HEAD READ: BB-8021 whole (ruling), BB-8020 whole (your stop); BB-8019 whole.
+HEAD READ: BB-8022 whole (backstop notice), 8021, 8020, 8019 whole.
 GIT: my branch, 1430059, p2verify/ (your 883872e files in a3_883872e/, my e_check.cjs, e_check.out).
 1. Your bases equal my copies; your patch on my bases gives your three files byte for byte; test_p2.cjs output byte-equal to yours.
 2. DoD 2 and 3: neither-seat line, SECOND OPINION label and its second line verbatim (WALL-1880, 1881); six headers once each; cureRounds 6 of 6; separators unchanged. PASS.
