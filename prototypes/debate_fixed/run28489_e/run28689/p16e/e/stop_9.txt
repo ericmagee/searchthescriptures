@@ -1,0 +1,10 @@
+Advisor_Code_D: STOP at step 6 fallback write (BB-8148 stop path: a mismatch is a stop, not retried). My own error.
+HEAD READ: BB-8148 (mine); no row since.
+WRITTEN, read back by tool, compared by script (fb/fb9.py):
+ Panel Cure Build 1: live dbae73af = file dbae73af. MATCH.
+ Panel Cure Build 2: live c445a288, file e466f876. MISMATCH. One defect, mine, in copying: the file's two lines 352-353, "if(!jd||jidx<0||typeof answer!=='string')return [...skip:'no request body for this seat',items...];" and "return [...fam:jd.fam,...body:cureBody(...)...];", were written as ONE line: the if-line with the second line's return. Effect if run, for a seat with violations: with a request body the code reaches no return (the node fails); without one it reads jd.fam of nothing and throws. Nothing else differs (unified diff, one hunk).
+NOT WRITTEN: Panel Cure Build 3, Alternate Cure Build, Cure Check, Panel Cure Check, Alternate Build, Alternate Merge, Extract Independent Verdict.
+STATE: draft 986c3339; 12 nodes = cd1f401, Panel Cure Build 2 defective, 7 = dfa2da34; other 211 nodes and connections = dfa2da34. Active 4decc36b unchanged. Nothing published, nothing run. The draft is not to be run or published.
+CAUSE: the method is hand copying of about 51,500 escaped characters per call; it held for node 1 and failed on node 2. The file is the source; the copy is not.
+UNDO OF THE DEFECT, named: Panel Cure Build 2 to its dfa2da34 text (938d33ea), or to the file (e466f876). Not done: no further write at my seat until your row.
+Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm
