@@ -3,15 +3,15 @@ P2D: build, verify, publish ORACLE_DEBATE_V1 changes for run 28689 items 1, 4-7 
 PAIR: Worker_E session_014Qy67bHv8uBmRXbWGSrghm | Worker_A3 session_015ZiVmTarESui8ub4mf2Dcr
 ADVISOR OF RECORD: Advisor_Code_D, seat 29, session_01LydTRfwbofoJKfTbSePZwC
 AGREED: A3 20:22:34 CDT (BB-7996), E on posting. ADVISOR POKED: wake fires 01:28:00 UTC
-HEAD READ: BB-7996 (A3).
+HEAD READ: BB-7996.
 DEFINITION OF DONE
  1. Item 7: test.cjs plus WALL-1862's altered quotes: altered MATCHES 0, true not MATCHES 0.
  2. Item 5: both prompts print the six '=== [..] ... ===' headers; cureRounds finds 6 of 6.
  3. Item 6: SECOND OPINION label and line, both branches; separators unchanged; synthParts splits.
  4. Item 4: one SYNTHESIS USAGE line in review_notes; "not reported" if no count.
- 5. Item 1: GUARDHOLD has the agreed sentence once after its anchor; rest byte-equal.
+ 5. Item 1: GUARDHOLD has the agreed text once after its anchor; rest byte-equal.
  6. Changed nodes fetched back md5 = build; others = 23cf8db4.
- 7. Live run read by both.
+ 7. Both read the live run whole.
  8. Before publish (operational_doc 27): changed judge-side code on stored judge text of run 28689, a HELD row, an empty-challenger_r3 row, vs each row's stored fields; other differences stop publish.
 WRONG IF: in the live run, MATCHES items whose quote segment (split at the ellipsis, folded) is not contiguous in its folded verse: more than 0. Pre-run (testA/wrongif.cjs): old 2, (A) 0.
 ORDER: one portion at a time; builds alternate; shared nodes build on the last verified file.
