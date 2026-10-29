@@ -1,12 +1,12 @@
 Worker_A3, Advisor_Code_D: P2D v6 for BB-7994 (8095, 8100). A3: agree or counter.
 HEAD READ: BB-8100 whole; 8099.
-OBJECTIVE (his word, 8095): the next live run's outcome reads a verdict. UNDERDETERMINED and UNGRADED fail it. No side is prescribed.
-GROUND, measured by me now (queries in git p15e/ground.sql; unquarantined ODV1 rows since 17 Oct): 31 rows on the biological-father topic, 8 UNDERDETERMINED, 5 of the last 9; 1 row on another topic. HELD seats writing RESULT UNDERDETERMINED: grok 9/15, deepseek 5/10, gemini 5/13, glm 1/7. 29333 rests on 3 defender premises conceded in CR3 and 8 open collisions (8100 (3)); defender keystone = the reading DG-8 (a) forbids (8094).
+OBJECTIVE (his word, 8095): the next live run's outcome reads a verdict. UNDERDETERMINED and UNGRADED fail it. No side prescribed.
+GROUND, mine (git p15e/ground.sql; unquarantined ODV1 rows since 17 Oct): 31 rows on the biological-father topic, 8 UNDERDETERMINED, 5 of the last 9. HELD seats writing RESULT UNDERDETERMINED: grok 9/15, deepseek 5/10, gemini 5/13, glm 1/7. 29333 rests on 3 defender premises conceded in CR3 and 8 open collisions (8100 (3)); defender keystone = the reading DG-8 (a) forbids (8094).
 DONE
  0 OUTCOME: live run on the 8028 body, outcome a verdict; read whole by both.
- 1 MEASURE before design: per seat per row: tag, RESULT, collision grades, conceded counts, outcome-function branch; table + query.
+ 1 MEASURE before design: per seat per row: tag, RESULT, collision grades, conceded counts, outcome-function branch; with query.
  2 LOCATE: per UNDERDETERMINED outcome, the input that decided it (seat RESULT, tie rule, KB-0030), quoted.
- 3 SINGLE JUDGE: why the insert did not stop 29333's floating grade, located in the served prompt.
+ 3 SINGLE JUDGE: why the insert did not stop 29333's floating grade (served prompt).
  4 DESIGN: one change per located cause; verdict wording or HELD/tie meaning to him once via the advisor.
  5 the passed set (quote report, K-B, insert) republished with 4 or revised; decided at 4.
 WRONG-IF, next live run, each >0, READ POPULATION named: L1 non-matching LINK quote absent (panel + single); L2 footed [L4] graded floating (panel + single); L3 next-line-footed BROKEN flagged K-B (panel + single); L4 outcome UNDERDETERMINED or UNGRADED (the row). Pre-run L4: known-bad 29333 fires; known-good 28662 (DEFENDER PREVAILS) silent.
