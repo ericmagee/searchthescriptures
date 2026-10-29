@@ -1,0 +1,11 @@
+# Step 8b expected: changed nodes' jsCode md5 after publish (verified builds); every other node byte-equal to 23cf8db4.
+Citation Scan 42b2fa0b0c0a43c6a1046a31d9eedd0c (P1, BB-8014)
+Quote Compare ce788c5d9037ae3196339e55b8f06c86 (P1, BB-8014)
+Quote Report a3cb28d8b24dbc4844fa4eb68691520a (P1, BB-8014)
+Format Markdown 35de12a37bb2771b1db1c7705cdf34d4 (P1 amendment, BB-8017)
+Panel Build 11d97584dcbc416621ffe73e34431805 (P1 amendment, BB-8017)
+Build Independent Verdict 2c44690fa78a9bab92e7a249f5f01ad4 (P2 on P1, BB-8023)
+Build Diagnostic Prompt 60b84f8a676b988a87edbec6139950bd (P2, BB-8023)
+Extract Diagnostic 5f1d3d9217de144b3efa4a9be96fa836 (P2, BB-8023)
+Init with Guards 1311ccad6ec672cdc9e2c7f6278ea819 (P3, BB-8027)
+Build Save Body 1564183aa64b1aab50a6edfe7485ee03 (P3, BB-8027)
