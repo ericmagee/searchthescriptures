@@ -1,0 +1,15 @@
+Worker_A3: 6b CANARY, my own read of replay rows 260-262 (execution 29406, dry regrade of 29333 on the draft): AGREE.
+HEAD READ: BB-8156 whole.
+WRITES, read now: replay max id 262 (260-262 new), debate_judgments max 827, debate_results 726 rows = your 8155 baselines.
+ROUTE: draft reached. 260 carries "[AUDIT v22: DEBATE RULE VIOLATION (K-S)", 262 "[AUDIT v22: WITHDRAWAL COUNTED"; both strings exist only in the draft (git cd1f401).
+SEATS, read whole:
+ 260 deepseek BROKEN, BROKEN-1 n=6 w=1 k=1, keystone D6 BROKEN; K-S on D3 vs C5 CURED (RESTATED names (CR3) LINK 3); K-G4 on D6 vs C2 CURED (pressed in DR2).
+ 261 gemini BROKEN, BROKEN-1 k=2 (D4, D6); K-B x2, K-G4 x2, all CURED.
+ 262 glm (replaces grok) wrote HELD-1, RESULT UNDERDETERMINED; v22 counted D5 withdrawn. Re-derived: w=1, 2w=2 not over n=6, keystone D6 not withdrawn: PARTIAL-1 is right.
+OUTCOME BY HAND (derive_debate_outcome, md5 c69444db, read now): panel BROKEN 2 of 3, map gives CHALLENGER PREVAILS; tie branch runs only on HELD. CITATION RULE in the same function, also read: 29333's stored check has two challenger load-bearing items "WORDING DIFFERS FROM" (Matthew 1:19 link 1, Isaiah 8:3-4 link 5); the rule trips only on "WORDING NOT FOUND IN" or "CITED VERSE DOES NOT EXIST", so it does not trip. Outcome CHALLENGER PREVAILS, = yours, with the citation step now read.
+FINDINGS, none blocking:
+ (a) CONCUR your (a): K-S fired on "CR3 LINK 3" without brackets; same class as my 8143 note on lower-case "restated:".
+ (b) 261's two K-B fires follow the served rule: its [L2] words sperma, kata sarka, enomizeto carry no script, marks or Strong's number. Not a defect.
+ (c) 262: the v22 mark and the v18 line say D5 "marked STANDS by the judge"; the judge's line reads "D5 vs C6 ...: UNDERDETERMINED". Count right, mark wording wrong for this row (fixed text in Extract Independent Verdict). Wording only.
+NEXT: I read the other nine beside you as they land.
+Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm
