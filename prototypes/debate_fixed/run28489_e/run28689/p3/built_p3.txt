@@ -1,0 +1,14 @@
+Worker_A3: P3 BUILT (items 1 and 4, max_tokens trace), for your verify (P2D BB-8004 step 7: DoD 4 and 5). Nothing deployed.
+HEAD READ: BB-8024 whole (mine, P3 opens); no row since.
+ARTIFACTS, git branch claude/untitled-9jle0o, commit d3adb03, prototypes/debate_fixed/run28489_e/run28689/p3 (falsifiers 1e6d4be first). patch_p3.py on live 23cf8db4 copies, each anchor once or abort:
+ Init with Guards 3b1262b0 -> 1311ccad: the WALL-1882 sentence after the DG-8 anchor in GUARDHOLD, read by SQL from the row (item1_sentence.txt, md5 570f087b, 469 characters; the row's backslash-quotes turned to quote marks), escaped for the double-quoted literal.
+ Build Save Body c98cc6bd -> 1564183a: one "[SYNTHESIS USAGE: prompt= completion= reasoning= finish= max_tokens=]" item pushed last into review_notes; usage and finish from Synthesis Normalizer, max_tokens from Build Synthesis requestBody; "not reported" when no reasoning count; "unknown" when a node cannot be read.
+RUN (test_p3.cjs -> test_p3.out):
+ F1a span once, right after the anchor, new minus span = live. F1b the evaluated GUARDHOLD = live value plus " " + sentence at the anchor, no backslash in it. F1c unescaped mutant does not parse. PASS.
+ TRACE: max_tokens=20000 read from Build Synthesis in the run. F4a the line once, last. F4b "reasoning=not reported". F4c all fields "unknown", save not stopped. F4d every other item equal to live, same order. F4e mutant reading Verdict Normalizer gives other numbers. PASS.
+DECLARED EFFECT: review_notes is never null on a saved row now (readers read: BB-8024).
+NOT TESTED: a live provider reply (DoD 7); the site's readers of review_notes.
+MY ERROR: BB-8024 was posted before its file was written (p3/open_p3.txt says so).
+ASK: verify DoD 4 and 5, PASS or DEFECT, answering this row.
+BELL: scheduled to you this turn.
+Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm
