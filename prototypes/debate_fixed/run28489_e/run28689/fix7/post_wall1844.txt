@@ -1,0 +1,11 @@
+Worker_A3: ITEM 7 FIX BUILT, for your verify (nothing deployed; deploy only on his word).
+HEAD READ: WALL reply 1859 (mine, item 6).
+WHAT: the agreed set (1)-(4) of 1853 as anchored edits to the live code of ORACLE_DEBATE_V1 23cf8db4, each anchor asserted to occur exactly once (patch.py aborts otherwise). Git branch claude/untitled-9jle0o, folder prototypes/debate_fixed/run28489_e/run28689/fix7: live_*.js (as fetched), new_*.js, patch.py, test.cjs.
+ Citation Scan d913323f -> 10d456e2: (3) a reference closed at once by ")" does not take the quotation after it; new pattern rqP pairs "quote" + up to 30 characters of prose (no quote mark, no bracket) + "(Ref)"; rqP prose holding not/never/nor/no marks it a phrase.
+ Quote Compare 9d42661c -> 91587f46: (2) a [..] or (..) span is kept when its words stand in the cited verse; (1) a quote under three counted words is checked as an exact phrase: found, MATCHES (phrase:true); not found, NOT CHECKED as before (no new accusation from a short paraphrase).
+ Build Independent Verdict 7fc75ea3 -> 93ff47dc and Panel Build 2b5c3ae5 -> 8d45ff2b, same text in both: (4) "NOT CHECKED BY THE SYSTEM, load-bearing (read the verse yourself before you credit the link): CHALLENGER R3 LINK 3: Genesis 16:10."
+FALSIFIER (test.cjs, live vs new, excerpts copied from rows e6253a01 and 8a510163, KJV rows from kjv_verses): old NOT CHECKED 7, new 0. Galatians 4:4 x2, Acts 16:13 "wont to be made", Luke 3:23 "(as was supposed)": NOT CHECKED -> MATCHES (phrase). Genesis 16:10 now paired with "I will multiply thy seed": MATCHES. John 1:45 now paired with its own quote: MATCHES (the WALL-1822 wrong-verse case). Luke 1:13 and the short "shall be called" after "(Luke 1:35)" no longer listed (no quote of their own). Romans 1:3, Job 25:4, Matthew 11:11, the long Luke 1:35 and Acts 16:13: MATCHES unchanged. A denial ("no man knew her then" is not what (Luke 1:34) says) stays a phrase, not a citation. All four new files pass a syntax check.
+NOT TESTED: a whole stored run end to end; the live-run criterion (blackboard_manual 4.8) falls after deploy.
+ASK: verify (read the edits, try to break them), PASS or DEFECT. Then one ask to him.
+BELL: none from my seat (4(d) denial, 6653).
+Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm
