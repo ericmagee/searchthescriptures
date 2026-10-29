@@ -1,0 +1,12 @@
+const fs=require('fs');const src=fs.readFileSync(process.argv[2],'utf8');
+let cut=src.indexOf("\nconst PP=$('Panel Payloads')");if(cut<0)cut=src.indexOf("\nconst base=$('Extract Independent Verdict')");
+const api=new Function(src.slice(0,cut)+';return {drvCheck,cureAsk,cureVerdicts,cureCorrected};')();
+const it={rule:'K-S',side:null,link:'D6',line:'D6: STANDS -- not met by any quotation that names a human begetter.'};
+const E={DEFENDER:[],CHALLENGER:[]};
+const T=(n,r)=>{const v=api.cureVerdicts([it],{ok:true,text:r},E,{});const cc=api.cureCorrected({ok:true,text:r},v);console.log(n.padEnd(34),v.map(x=>x.status+'('+x.why+')').join(';'),'| corrected:',cc?cc.tag:'none');};
+T('N1 "answered" no round','RESTATED: D6: STANDS -- answered by the defender.');
+T('N2 other link restated','RESTATED: D5: STANDS -- answered in [CR3].');
+T('N3 round in parens (CR2)','RESTATED: D6: STANDS -- answered (CR2) with Luke 1:35.');
+T('N4 round named, DR4 (out of range)','RESTATED: D6: STANDS -- answered in [DR4].');
+T('N5 BROKEN + two results','RESTATED: D6: DEFENDER LINK BROKEN -- left unanswered.\nCORRECTED RESULT: BROKEN-1\nCORRECTED RESULT: BROKEN-2');
+T('N6 lower-case restated','restated: D6: STANDS -- answered in [CR3].');

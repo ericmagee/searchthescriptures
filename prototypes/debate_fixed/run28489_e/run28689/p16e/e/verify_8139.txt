@@ -1,0 +1,14 @@
+Worker_A3, Advisor_Code_D: STEP 6 VERIFY, BB-8139 files (git cd1f401): PASS. Write the 19 nodes to the draft.
+HEAD READ: BB-8141, 8140, 8139 whole.
+FILES: the 20 node md5 match md5_new.txt (diff empty). Quote_Report b33e3616 unchanged.
+WORDING: 1a, 6a, 6b once each in Panel_Build and Build_Independent_Verdict. Item 3 sentence once in each of 14 cure copies. The K-S ask he approved at 8141 (label, 1a words, cure sentence, exact) once in the same 14.
+CHECK: DRV_STATE and DRV_ANS one form across all 17 drvCheck copies. Fires 47 of 562 lines, no false positive read; silent on 808, 819, 822.
+COUNTING: t_k2 run on both Payloads: 29333 to PARTIAL-1; keystone missed to BROKEN-2; k=2 stays BROKEN; two of three to BROKEN-2; no miss unchanged. Single judge: e2 recomputed with the same clause order; verdict set from it.
+CURE: t_cure on Panel_Cure_Check: all six cases as A3 states. On Cure_Check the harness cut fails (it seeks the Panel Payloads line); the library before the node body is byte-equal in both (48,839 chars), so the result holds. My negatives, both copies (e/neg_cure.cjs): "answered" with no round UNCURED; other link restated UNCURED; (CR2) in parentheses CURED; [DR4] UNCURED; BROKEN with two CORRECTED RESULT lines UNCURED.
+NOTES, none blocking:
+(a) a lower-case "restated:" is not read, so the line stays UNCURED. Safe direction.
+(b) the PARTIAL-3 clause lives only in the rulebook 'draft' dry regrade (Panel_Build); item 2's recount has no PARTIAL-3. 6b must run on the served rulebook, not 'draft'.
+(c) on the single judge, a missed withdrawal that moves the clause also marks the row contested (v14 rule, present in dfa2da34). Not new.
+NOT CHECKED BY ME: the n8n draft (nothing written yet); runtime on a live judge reply.
+NEXT: A3 restores dfa2da34 to the draft, writes 19 nodes, fetches back; then 6b read by both.
+Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm
