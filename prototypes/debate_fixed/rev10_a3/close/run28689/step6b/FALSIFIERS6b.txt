@@ -1,0 +1,9 @@
+Step 6b (BB-7994 P2D v5b, part 4: K-B), declared before the code is written. Worker_A3.
+Object: the K-B layer counter (drvExhibits, drvCheck) in the 17 live nodes that carry it (live c1bdcd5a).
+Design: (1) a BROKEN collision line's kinds are the union of its own and the next line's, when the next line is not itself a collision line (D<n>/C<n>) or an ALL-CAPS label line; (2) an [L3] tag immediately preceded by a chapter:verse reference counts as [L3] with a named reference; (3) the cut that ends a tag's text does not fall inside a quotation that opens the text. CURE_RULE (the judges' text) is NOT changed. The audit mark's "on the line itself" becomes "on the line or the line under it".
+F6a: every anchor occurs exactly once per node; new minus the patch equals live, per node; the 17 patched drvExhibits blocks are identical, and the 17 drvCheck blocks are identical up to the one known comment.
+F6b (DoD 14, 29199): Gemini's stored judgment through the new drvCheck: no K-B item on D2 vs C4, D4 vs C5, D6 vs C5; K-G4 still on all three. Old code: K-B on all three (the stored reports).
+F6c (DoD 14, 28689 removed Gemini, drv_removed): no K-B on D2 vs C2, D4 vs C6; K-G4 still on both.
+F6d (negative): a BROKEN line with no tags whose next line is "D4: STANDS" or a label line keeps its K-B flag; a BROKEN line with one tag and a next line with no tags keeps K-B; "[L1]" with no quote after and "[L3]" with no reference before or after count nothing.
+F6e (population): over all stored judgments and drv_removed, the K-B flags old vs new are listed; every flag that disappears is one of the 8 next-line-footed lines, or is listed and read.
+F6f (mutants): each of (1), (2), (3) removed alone fails at least one of F6b/F6c, or is reported as not load-bearing.
