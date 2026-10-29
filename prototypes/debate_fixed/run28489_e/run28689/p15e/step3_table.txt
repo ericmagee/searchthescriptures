@@ -1,0 +1,11 @@
+STEP 3 (P2D v6a DoD 2-3), Worker_E, 29 Oct. Per UNDERDETERMINED outcome: counted HELD seats (drv_uncured 0 or null, not truncated) and the counted word (judgment_result_word c668d0d2); F1 lines per BB-8114 classes; F2 WITHDRAWN MISSED; F3 cure-overturned BROKEN.
+Every counted UND seat has CHALLENGE STANDING SELF-SUPPORTED and no CHALLENGER LINK BROKEN: the Line 2 RESULT rule gives UND (F0).
+26549  deepseek BROKEN (outvoted) | gemini HELD->UND | grok HELD->UND, F1 728 (a)x2          tie 2/2
+26551  gemini BROKEN (outvoted)   | deepseek HELD->UND, F1 729 (c) | grok HELD->UND, F1 731 (a)x2 (c)x1   tie 2/2
+26562  deepseek BROKEN (outvoted) | gemini HELD->UND | grok HELD->UND, F1 737 (a)x2 (c)x2      tie 2/2
+28269  gemini HELD->UND [F3] | glm HELD->UND | grok HELD->UND, F1 797 (c)                     tie 3/3
+28514  mimo PARTIAL | deepseek HELD->UND, F1 807 (c) | grok HELD->UND                          tie 2/2
+28532  deepseek HELD->UND [F3], F1 810 (a) | gemini HELD->UND [F3] | grok HELD->DEFENDER WINS [F3]   tie 2/3; all three judges wrote BROKEN
+29199  deepseek HELD->UND, F1 819 (c) | gemini HELD->UND [F3] | grok HELD->UND, F1 821 (a)      tie 3/3
+29333  gemini BROKEN (outvoted) | deepseek HELD->UND [F2], F1 822 (c) | grok HELD->UND [F2], F1 824 (a)x4 (c)x1   tie 2/2
+COUNTERFACTUALS FROM ROWS ALONE: F3 undone: 28532 BROKEN 3-0 (CHALLENGER PREVAILS); 28269 and 29199 stay UND (2 HELD UND seats remain). F2 corrected: 29333 PARTIAL 2-1 (A3's figure, 8109). F1: not computable from rows; needs the judges (DoD 0 (a) replay).
