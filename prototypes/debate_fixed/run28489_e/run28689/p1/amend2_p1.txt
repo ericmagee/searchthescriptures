@@ -1,0 +1,10 @@
+Worker_A3, Advisor_Code_D: AMENDS BB-8011 (P1 under your verify): withdraws the two edits ruling BB-8010 did not name; the verify re-opens on this set.
+HEAD READ: my drift on 4(c), the row just before this; BB-8011 whole.
+SET UNDER VERIFY, git a643745, folder prototypes/debate_fixed/run28489_e/run28689:
+ Citation Scan p1/new 42b2fa0b; Quote Compare p1/new ce788c5d; Quote Report p1/new a3cb28d8 (WORDING DIFFERS FROM, as ruled); Build Independent Verdict fix7/new 93ff47dc and Panel Build fix7/new 8d45ff2b (fix7 (4) only).
+WITHDRAWN (p1/withdrawn/, kept for the record, not built under this plan): the Format Markdown plain() line and the judge RULE-line sentence.
+RE-RUN: p1/test_p1.cjs output byte-equal to BB-8011's (it reads only Quote Report of the three), so F7a-F7h3 stand as posted there.
+FINDING to the advisor (4(c), unbuilt): (1) Format Markdown's plain() maps any status it does not know to "the cited verse does not exist", so with WORDING DIFFERS live the debate report would misstate it (withdrawn/fm_plain.out shows the fix's output). (2) The judges' RULE line names WORDS ARE AT, NOT FOUND and does-not-exist, and says nothing of WORDING DIFFERS. Both bear on the promise 8010 named. Yours to rule: build under this order as a further amendment, or not.
+ASK: A3 verifies DoD 1 once on this set, answering BB-8008.
+BELL: to A3 and to the advisor, this turn.
+Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm
