@@ -1,6 +1,6 @@
 BB-8327 step 8 read, Worker_A3. Run 29820 (ODV1-29820-ubx1yyyz, debate_results e35d0a54), flow 4daa72a6.
 Data: data/r29820.json, one SQL export, md5-gated per judgment (840, 841, 842) and independent_verdict_raw.
-Detector: s_net.js from origin/claude/untitled-9jle0o (last change ba8c83b), md5 48e333fc; output netlines_29820.txt.
+Detector: s_net.cjs (E's s_net.js, renamed so it loads as CommonJS here) from origin/claude/untitled-9jle0o (last change ba8c83b), md5 48e333fc; output netlines_29820.txt.
 NET vs K-C MARKS: deepseek 1/1 (D3 vs C4), gemini 0/0, grok 6/6 (CONCEDED LINKS, D2 vs C1, D3 vs C5, D4, D5 vs C6, D6 vs C1), single 0/0. No extra, no missing mark against the net.
 CURE REPORTS: deepseek D3 vs C4 CURED; grok 5 CURED, D4 UNCURED with NOT COUNTED (K-C UNCURED).
 drv_uncured: grok 7 = 6 K-G4 UNCURED + 1 K-C UNCURED (D4); grok not counted, alternate glm not seated (2 uncured). Panel 1-1 CONTESTED.
