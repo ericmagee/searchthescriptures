@@ -1,13 +1,13 @@
-# BB-8327 step 4 rebuild 2 (A3 8352 plural guard; BB-8351 nflag regex), Worker_E. base = live 0b025942 (e8327/live), new = d1/new.
-Alternate_Build.js	base 5b931e9dfbf60b00b1f2ab7146e008fe	new a4968dbe7b87eff33d43ece3dd9e3781
-Alternate_Cure_Build.js	base b3b82a953254f4b5cd9a379ce4f0a144	new 94bd2b1518c721653d27e523a770d239
+# BB-8327 step 4 amendment (8359 (1)): the 23 backslash-u escapes as literal characters. base = live 0b025942 (e8327/live), new = d1/new.
+Alternate_Build.js	base 5b931e9dfbf60b00b1f2ab7146e008fe	new 6c8e692dc2222b8d97af65fc2118a870
+Alternate_Cure_Build.js	base b3b82a953254f4b5cd9a379ce4f0a144	new 152b8edc4e121a74b7ebd753858b065b
 Alternate_Cure_Normalize.js	base 9ffe0f164972f3d3fb8089b92b61778f	new 1eb9ffe36d2f9c661ba1ed5bb264eb02
 Alternate_Merge.js	base 0bb2aa642abdac4d22b36e20c0bbddf6	new a676a96e96bdba98592c31dacb33da7f
-Alternate_Payloads.js	base 07199d9cda9978efe7bfc5c3b8d10b8b	new 4b03be4fab107ffc37aa8a2c2416b580
+Alternate_Payloads.js	base 07199d9cda9978efe7bfc5c3b8d10b8b	new eedd668369d13293c50ce6bfe818c752
 Cure_Build.js	base eaf9232a3012f16edff96e8cb9a64b61	new c30c85999bbeae882fff7c0515a5c1af
 Cure_Check.js	base dc28683f782309e77721003d77dbff19	new 3c260de70afcec6a0aee3fe27a84f411
 Cure_Normalize.js	base e67e9bf6ec28270d4bb77868d387535c	new 8039afe3863be95dbac3fcff3bd9c38b
-Extract_Independent_Verdict.js	base 4ec33e00d331432f215289fc6c3333c4	new f565848926dcc12ed4c09700f7ab05b0
+Extract_Independent_Verdict.js	base 4ec33e00d331432f215289fc6c3333c4	new 73b4c32cccc8eb9113b5a568d05769dd
 Panel_Cure_Build_1.js	base 31d5f3d4147a362f6916327fed7b7f2d	new a5173f98a901b88723344993656968fa
 Panel_Cure_Build_2.js	base 293405be9f180b43abdaedee02aab29a	new 6e6a88f6a9708aeae4a0bec89f2a131a
 Panel_Cure_Build_3.js	base a78db54063579c3dd1e753d885cd041a	new c20d9926f2e59b5b6bae273e7df4c188
@@ -15,7 +15,7 @@ Panel_Cure_Check.js	base 6b4757c111a256f629b4e002aba634ca	new db47c96af8688eb793
 Panel_Cure_Normalize_1.js	base e846d964ecec954acdb8635d8c11831e	new 070d07759e74c820d6e5554db2325c7d
 Panel_Cure_Normalize_2.js	base ff26d6bbf4d8cc8b57f6c4112245843d	new c3e17c42894838d3d962629543cfb539
 Panel_Cure_Normalize_3.js	base 9e734d10f2a200d159c05a03ad148133	new 7d5b819972d175156c9f4edb2ff25d49
-Panel_Payloads.js	base fb070dc533c6bd43e4e6dbd6c1bec890	new efb09f2d696bcc50ba71ea808bd78665
+Panel_Payloads.js	base fb070dc533c6bd43e4e6dbd6c1bec890	new 816da4fbc5c585e88b9c6283f66c06e0
 ../s_net.js	48e333fc1452e6bb117ac8f917e9dd36
 snip/lib.js	0d9bcef835ca0bffd2b630bd31c5fe3e
 snip/kc_check.js	3ebcd0ee81b087d92f7a22a02106e398

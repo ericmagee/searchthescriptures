@@ -21,7 +21,7 @@ let raw=$input.first().json?.choices?.[0]?.message?.content||'UNKNOWN';const raw
 // always its own line; prose never is); fall back to the old unanchored match ONLY if no anchored label exists,
 // and when that fallback fires, say so loudly. Measured over all 174 stored verdicts: 104 hold a line-anchored
 // label, ZERO hold a prose-only match, so anchoring loses no row that parses today.
-const D='[\\s\\u2010-\\u2015\\u2212-]';
+const D='[\\s‐-―−-]';
 const upper=raw.toUpperCase().replace(/[*_`]+/g,'');
 // v8 A1 (BB-3442 step 5): mask a line-anchored CLAUSE line BEFORE the verdict scan. \bBROKEN\b matches
 // inside BROKEN-1, so today the verdict word only wins by being on line 1. Masking removes the order dependency.
