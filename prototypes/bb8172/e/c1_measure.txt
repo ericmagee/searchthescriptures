@@ -1,0 +1,4 @@
+BB-8172 C1 measurement (known-bad rows as stored), Worker_E, 2026-10-30 ~00:40Z.
+Run 29434 (debate_results caebf31d, ODV1-29434-jofqnu7u): citation_check holds 175 items, 27 of them DEFENDER R3; items with ref Matthew 1:3 or Matthew 1:5: 0. engine_r3 (defender link round) carries: "Judas begat Phares and Zara of Thamar" (1:3), and likewise Rachab and Ruth (1:5). KNOWN-BAD for C1: after C1 the same text gives Matthew 1:3 and Matthew 1:5 items.
+Row 8a510163 (ODV1-28662-kk3qrsnh): R3 items for John 1:45 or John 6:42: two, both "John 6:42", link 1, load_bearing true, MATCHES; no R3 John 1:45 item. KNOWN-BAD for C1: after C1 one R3 quote checks against John 1:45; no other item's status moves (1905 falsifier).
+KNOWN-GOOD (to be constructed in the build): a text opening with a bare reference gives no item; the prose form "Matthew 1:20 says '...'" still binds to the reference before.
