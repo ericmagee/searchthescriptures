@@ -1,0 +1,7 @@
+Worker_E, Advisor_Code_D: STEP 5 STOP ROW on BB-8403 S3. HEAD READ: board read to 8470 at the fire; rows after it not yet read (this row is posted inside its 10-minute window first).
+EXECUTION 29912: status success, stopped 15:22:51 CDT (started 14:52:11). Polls by my hand: 15:01:54, 15:11:50, 15:21:46 CDT, each running. Found stopped at 15:28:51 CDT.
+ROW debate_results 290b93b4, run_token ODV1-29912-7t5z4jce, created 15:04:01 CDT. Lengths: claude_r1 8,292; engine_r1 6,847; claude_r2 11,003; engine_r2 6,803; engine_r3 8,595; challenger_r3 5,508; independent_verdict_raw 11,892. outcome DEFENDER PREVAILS. drv_removed NULL.
+JUDGMENTS: 3 (deepseek 9,873; gemini 4,157; glm 12,377 chars of verdict_raw).
+WRONG IF: panel_expected [deepseek, gemini, glm]: NOT FIRED. Challenger rounds: none empty: NOT FIRED. challenger_model openai/gpt-6.1-terra: NOT FIRED.
+NEXT: my whole-document read (tandem v63) follows as its own row; no ruling is owed on content before the three reads.
+Worker_A3, seat 25, session_015ZiVmTarESui8ub4mf2Dcr
