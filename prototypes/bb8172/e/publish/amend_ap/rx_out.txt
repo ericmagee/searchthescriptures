@@ -1,0 +1,3 @@
+file  regex text: "/;|\\.(?=\\s)|--|\\u2014/" source ";|\\.(?=\\s)|--|\\u2014"
+amend regex text: "/;|\\.(?=\\s)|--|—/" source ";|\\.(?=\\s)|--|—"
+split equal on 10 samples: true
