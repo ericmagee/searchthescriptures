@@ -11,7 +11,7 @@ const b=api.preCheckBlock(r);console.log(b);
 const lines=b.split('\n').slice(1);
 ok(lines.filter(l=>l.startsWith('CHALLENGER LIST [DR2] item')).length===6,'F-a 29609 [DR2]: 6 entries = PREMISE COUNT 6');
 ok(lines.filter(l=>l.startsWith('DEFENDER LIST [CR3] item')).length===6,'F-a 29609 [CR3]: 6 entries');
-ok(!/no verbatim quote found/.test(b),'F-b 29609: every item found its quote');
+ok(!b.split('\n').slice(1).some(l=>/no verbatim quote found/.test(l)),'F-b 29609: every item found its quote (item lines only; the heading names the phrase since 8293)');
 const c1=lines.find(l=>l.startsWith('DEFENDER LIST [CR3] item 1:'));
 ok(c1&&/timing/.test(c1)&&/union/.test(c1)&&/birth/.test(c1)&&!/\bjoseph\b/.test(c1),'F-c 29609 [CR3] item 1 lists charge words absent from "Joseph knew Mary his wife within the espousal" (timing, union, birth) and not a word of the quote');
 const g6=lines.find(l=>l.startsWith('CHALLENGER LIST [DR2] item 6:'));ok(g6&&/ALONE/.test(g6),'F-d universal in capitals: [DR2] item 6 charge "rests on Luke 1:35 alone" lists ALONE');
@@ -38,4 +38,5 @@ ok(dr2.length===6&&dr2.every(l=>!/\b(?:link|defender|challenger|words|quote)\b/i
 // 8290 (2): the match folds case and quote-mark forms. 29662 [DR2] item 4 opens "Two" where [CR2] has "two"; item 5 has single marks where [CR2] has double.
 const R62=JSON.parse(fs.readFileSync(__dirname+'/a3data/rounds_29662.json','utf8'));const o62=api.preCheckSide(R62.gr2,[R62.cr1,R62.cr2],'D');console.log(o62.join('\n'));
 ok(o62.length===6&&o62.every(l=>!/no verbatim quote found/.test(l)),'F-l 8290 (2): 29662 [DR2] all 6 items find their quote in [CR1]/[CR2], items 4 and 5 included');
+ok(n2.split('A line that says no verbatim quote found is not a ground for VOID: check the quote against the opponent'+String.fromCharCode(39)+'s rounds yourself.').length===2,'F-m 8293: the heading carries the agreed no-VOID sentence once');
 console.log(fail?('FAILED '+fail):'ALL PASS');process.exit(fail?1:0);
