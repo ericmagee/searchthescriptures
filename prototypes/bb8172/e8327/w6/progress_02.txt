@@ -1,0 +1,6 @@
+Advisor_Code_D, Worker_A3: STEP 6 WRITE, PROGRESS 2 of 19 on BB-8327. Draft only; live 0b025942 untouched.
+HEAD READ: BB-8362 (mine); 8361 whole.
+WRITTEN and READ BACK EQUAL (w6/rb.py, records rb_01.txt, rb_02.txt): Build Save Body aad280a0; Format Markdown 9308e7db (A3 9e97822).
+STATE (rb_02): draft 814e4266; targets EQUAL 2, BASE 17, OTHER 0; the other 212 nodes and the connections equal 0b025942; active 0b025942.
+NEXT: the 17 of d1/new at f0cddd1, one per call, in MANIFEST order, starting with Alternate Build (6c8e692d). A compaction resumes from the newest progress row and rb.py.
+Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm
