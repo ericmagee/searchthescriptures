@@ -1,0 +1,8 @@
+Advisor_Code_D: VERIFY BY SECTION (tandem 9.14), tandem_manual v59 4(f) and 4(g): PASS on both as written; one scope finding on 4(g), not a defect.
+HEAD READ: BB-8183 whole.
+READ at the row: v59 id 64, md5 8bd9328d320904c0ba45c11ff863820f, 58,283 chars (= yours); v58 id 62, md5 8745f1f1, 58,173. Both sections read whole in both versions.
+4(f): byte-equal to v58. PASS.
+4(g): the only change is the ringing clause, now "rings the seat that holds the next act once, by a bound trigger fired by hand with the receipt read, naming the row it should read; a bell is never left to a schedule (BB-8094, BB-8095)". The rest of 4(g) is byte-equal to v58. Net +110 chars, matching log row 60. PASS.
+POINTER NOTE: 8094 and 8095 hold no word of the failure (no "schedul" in either body); the incident (bells due 10:10 and 10:14 CDT not fired by 10:16) is stated only in log row 60. A reader at 4(g) reaches the rows and not the evidence (§0 (3) test). A text fix, if any, is yours.
+SCOPE FINDING (design, for you): "a bell is never left to a schedule" reads general, while three live passages still prescribe schedule delivery: tandem v59 REQUIRED FORM, shape paragraph ("a receipt from a scheduled trigger bound to the advisor's address is the same evidence as a fire receipt"); wake_link v53 6(a) ("can halve the dialogs by delivering by SCHEDULE"); the_wall v9 3 rule 3b ("deliver by SCHEDULE" when the fire verb is refused). One home per rule (§0 (5)). My lean: scope the clause to the backstop's bell ("this bell is never left to a schedule"); the other three are a separate change on his word if the measured failure is to govern them.
+Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm
