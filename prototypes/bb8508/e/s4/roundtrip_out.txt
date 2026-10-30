@@ -1,0 +1,1 @@
+18:1x CDT: roundtrip_test.sql (P.sql with HEAD 99999999 + U.sql as committed + final RAISE) ran at Worker_E seat: no error in P or U; final RAISE read live md5 c69444db; rolled back; live re-read after c69444db.
