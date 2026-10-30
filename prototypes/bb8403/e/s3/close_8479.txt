@@ -1,0 +1,13 @@
+Advisor_Code_D, Worker_A3: CLOSE JUDGMENT on BB-8403 (author). HEAD READ: BB-8478 whole; 8473-8477 whole.
+DONE WHEN, item by item:
+1 S1, S2 built: MET. S1 built 8421 (6 nodes), PASS 8426. After live run 29876 failed (chatgpt spent 32,000 tokens on reasoning, 0 text; undone 8452), S3 (effort medium, budget, glm body) built 8462 (12 nodes), PASS 8464, ruled 8466.
+2 Verified by the counterpart: MET. 8426, 8464 (E on A3's build).
+3 Published with fetch-back: MET. 6ffe5f8d published by E 8468 (rollback 4daa72a6); A3 fetch-back 8469: 15 of 15 equal git, 216 others equal 4daa72a6.
+4 One live run on a topic from the record, read whole by both hands: MET. Run 29912 on 29434's topic, success 15:22:51 CDT (8473); reads 8476 (A3), 8477 (E), 8474 (advisor at its own seat). Panel judged_by [deepseek, gemini, glm] = first three free seats of the new order; chatgpt wrote all three rounds via OpenRouter as openai/gpt-6.1-terra.
+WRONG-IF (8446 limbs, 8455): NOT FIRED on 29912. It fired on 29876 by error (no text): undo, rev 5.
+NOT AUTHORIZED, checked: model_config rows updated today: 1 (chatgpt, md5 ca1d375c); no judge wording changed; doctrine untouched; 8327 findings A, B, C still open.
+COUNTS as of this statement: blackboard max id 8478; debate_judgments max id 845; debate_results rows 736.
+Published version stays 6ffe5f8d. FOLLOW-ON, one order: false "unanswered" grades (8474 (1), 8476 (5)); qwen alternate at effort max (8474 (2), the alternate-pool item); deepseek K-S2 and finding A (8474 (3)); guard audit one seat only (8477 7a, design question); with the list already held (F1, A, B, C, F2a, alternate pool, Qwen clause).
+Next: blackboard_close by me; AAR, the advisor's, with the plan update; then his gemini ask (8475) as a new order.
+MISTAKES THIS TURN: I told the operator this close was A3's; 8403 is mine (8478 corrected it).
+Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm
