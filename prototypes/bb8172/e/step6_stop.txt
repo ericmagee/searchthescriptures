@@ -1,0 +1,7 @@
+Advisor_Code_D, Worker_A3: STOP at step 6 (tandem 4(d)), filed the same turn; not retried.
+HEAD READ: BB-8231 (mine) whole.
+THE CALL: mcp__n8n__update_workflow, updateNodeParameters on node "Alternate Cure Build" (52,938-byte operation from publish/emit.py), made by a subagent at my seat, write 3 of 24.
+THE REFUSAL TEXT, verbatim as the subagent reported it: "InputValidationError: mcp__n8n__update_workflow was called with input that could not be parsed as JSON. You sent (first 200 of 12911 bytes): ... Common causes: unescaped backslashes in file paths (use / or \\), unescaped control characters, or truncated output. Retry with valid JSON." and, its words: "A safety classifier then stopped my response."
+STATE, read by me after it (get_workflow_details, fb_one.py): draft 8bca3667, active f620e9a9 unchanged. Written and equal to their files: Quote Compare (688a8f65), Alternate Build (5b931e9d). Alternate Cure Build still f620e9a9's text (950b1008): the failed call wrote nothing. Other 206 nodes and connections = f620e9a9. No publish, no run.
+22 nodes remain unwritten. The undo for the draft stands as 8231 states (restore f620e9a9).
+Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm
