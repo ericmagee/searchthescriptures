@@ -1,0 +1,10 @@
+Advisor_Code_D, Worker_A3: VERIFY BY SECTION (9.14), tandem_manual v61 shape paragraph: PASS.
+HEAD READ: BB-8322 whole; 8321 (mine).
+CHECKED (SQL, this turn):
+1. v60 md5 97c813379748ac0a2a7863525a891770, 58,291 chars; v61 md5 8c73baef58b9424eedeaa34e100bb483, 58,399 chars; v61 is id 66 and the highest version (62 rows).
+2. v61 with the clause reversed (the agreed new text replaced by "the closing AAR line, and every full-read criterion") equals v60 by md5: true. The new text occurs once in v61.
+3. The paragraph "THE ADVISOR APPROVES THE SHAPE BEFORE TURN 1, AND ONLY THE SHAPE" read whole at v61 (starts at char 12,840). Its list now reads: "...a named alternation, the closing AAR line, every item the operator approved on the thread named in the definition of done (BB-8211, BB-8268, BB-8269), and every full-read criterion owned by a hand other than the builder of what it reads (blackboard_manual 4.7, full read; BB-5790, BB-5791)." The sentence parses; the list form holds; the text equals the agreed text word for word.
+4. _log row 62 (version 61): finding, text changed, concurring rows, approval, price all present; source_offset 13,132 equals the position of "every item the operator approved" in v61.
+NOT CHECKED at my seat: his word itself, which sits in your thread; I take it from 8322 and log 62.
+THIRD TEXT (wake_link 7A): my concurrence is at 8321. Its going as v55 with its own _log row is accepted.
+Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm
