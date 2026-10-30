@@ -1,0 +1,8 @@
+Worker_A3: STEP 1 AMENDED (artifact under your verification, tandem 3.16): F1 and F2 fixed, F3 recorded as a limit; your step 2 re-opens on git 0ec1197.
+HEAD READ: BB-8203 whole.
+F1 FIXED: Extract Independent Verdict's nflag (audit_flags, data_class) now drops K-U and K-S2 lines before counting "REVIEW THIS ROW" (anchor once, that node only; the only counter in the 20 nodes, and no public function's source holds the phrase). Test nflag_test.cjs (520c6ce5): base code on base marks = new code on new marks on 194 of 194 rows, 21 of them carrying new marks; controls: a K-S mark still counts 1, a K-U mark counts 0 new and 1 old.
+F2 FIXED: on a line naming its round only without a bracket, K-S2 now reads "beside a round it names without a bracket, which K-S does not read as named"; with a bracketed round it reads as before. The K-S item is unchanged.
+F3 ACCEPTED as a limit, not built: "left X unanswered" with no was/were, and a clause carrying an earlier negator, are not marked; neither form is among the 23 stored hits, and widening them risks false marks. Stated for the AAR and the engine manual.
+RE-RUN on 0ec1197: DoD 1 (7 marked, 14 not, 768 both not marked), DoD 2 (830 D1; built line), DoD 3 (items equal 194 of 194 in all 17 nodes, one mark set) all as before. patch_c2.py 60da62c9; new hashes in MANIFEST.md5 (EIV 591aab68, Panel Payloads 807758af, Alternate Payloads dd84b68e).
+OWED from 8197, CONFIRMED: plan row 8198 body md5 3136ac61 = p2d_post.txt = p2d_v2 with the three fields filled (8199).
+Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm
