@@ -4,7 +4,7 @@
 function preCheckSide(listText,oppTexts,side){const s=String(listText||'');const h=s.search(/UNSUPPORTED-?\s*\[?L4\]?\s*PREMISES/i);
  if(h<0)return [side+': no premise list found'];
  let body=s.slice(h);const stop=body.slice(1).search(/\n\s*(?:PREMISE COUNT\s*:|-{3,}|#{1,3}\s)/i);if(stop>=0)body=body.slice(0,stop+1);
- const items=body.split(/\n(?=[ \t]*(?:\*\*)?(?:\d+\.|LINK\s+\d+\s*:))/i).slice(1);
+ const items=body.split(/\n(?=[ \t]*(?:\*\*)?(?:\d+\.|LINK\s+(?:\d+|[A-Za-z][A-Za-z\/]{0,9})\s*:))/i).slice(1); // 8275 F1: also 'LINK none:'
  if(!items.length)return [side+': no premise list found'];
  const opp=oppTexts.map(x=>String(x||'')).join('\n');
  const NEG=/^(?:no|not|never|none|nor|neither|without|cannot)$/,UNI=/^(?:all|none|only|never|every|always|alone)$/;
@@ -14,7 +14,7 @@ function preCheckSide(listText,oppTexts,side){const s=String(listText||'');const
   const mk=it.search(/(?:words|Quote)\s*:\s*["“]/i);if(mk>=0){const tail=it.slice(mk).replace(/^[^"“]*["“]/,'').replace(/["”]\s*$/,'').trim();if(tail)qs.push(tail);}
   const q=qs.filter(x=>x.length>=8&&opp.includes(x)).sort((a,b)=>b.length-a.length)[0];const label=side+' item '+(k+1);
   if(!q)return label+': no verbatim quote found';
-  let charge=it.slice(0,it.indexOf(q));qs.forEach(x=>{charge=charge.split(x).join(' ');});charge=charge.replace(/\b(?:the\s+)?(?:defender|challenger)(?:'s|\u2019s)?\s+(?:own\s+)?words\b|\bquote\b|\blink\s+\d+\b/gi,' ');
+  let charge=it;qs.forEach(x=>{charge=charge.split(x).join(' ');}); // 8275 F2: the whole item, quote first or lastcharge=charge.replace(/\b(?:the\s+)?(?:defender|challenger)(?:'s|\u2019s)?\s+(?:own\s+)?words\b|\bquote\b|\blink\s+(?:\d+|[a-z][a-z\/]{0,9})\s*:/gi,' ');
   const qw=new Set(q.toLowerCase().match(/[a-z]+/g)||[]);const out=[];const seen=new Set();
   (charge.toLowerCase().match(/[a-z]+/g)||[]).forEach(w=>{if(seen.has(w))return;seen.add(w);
    const flag=NEG.test(w)||UNI.test(w);if((flag||(w.length>=4&&!STOP.has(w)))&&!qw.has(w))out.push(flag?w.toUpperCase():w);});

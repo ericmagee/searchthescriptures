@@ -21,4 +21,15 @@ ok(/CHALLENGER LIST \[DR2\]: no premise list found/.test(n1)&&/DEFENDER LIST \[C
 const n2=api.preCheckBlock({});ok(/^PRE-CHECK -- decides nothing/.test(n2)&&n2.split('\n').length===3,'F-f all rounds missing -> block still present, one line per side, no throw');
 // a quote not found verbatim is never chosen
 const n3=api.preCheckSide('UNSUPPORTED-L4 PREMISES\n1. That X. Quote: "words nobody said anywhere"',['other text'],'S');ok(n3[0]==='S item 1: no verbatim quote found','F-g unfound quote -> "no verbatim quote found"');
+// 8275 F1 and F2, on A3's rows30.json (git f312008, md5 656577ee): the 30 newest COLLISION POINTS rows, [DR2] and [CR3] lists
+const rows=JSON.parse(fs.readFileSync(__dirname+'/a3data/rows30.json','utf8'));let mism=0,nh=0,sides=0;
+for(const r of rows)for(const [k,side] of [['gr2','D'],['cr3','C']]){sides++;const s=String(r[k]||'');const out=api.preCheckSide(s,[],side);
+ if(!/UNSUPPORTED-?\s*\[?L4\]?\s*PREMISES/i.test(s)){if(out.length===1&&/no premise list found/.test(out[0]))nh++;else mism++;continue;}
+ const pc=(s.match(/PREMISE COUNT\s*:\s*\**\s*(\d+)/i)||[])[1];const n=out.filter(l=>/ item \d+:/.test(l)).length;
+ if(n===0||(pc!==undefined&&+pc!==n)){mism++;console.log('  mismatch',r.t,k,'items',n,'PREMISE COUNT',pc);}}
+ok(mism===0&&nh===2&&sides===60,'F-h 30 rows: every side with a heading gives one entry per item (= PREMISE COUNT where stated); the 2 no-heading sides give the single line ('+sides+' sides, '+mism+' mismatches, '+nh+' no-heading)');
+const r19=rows.find(x=>x.t.includes('29519'));ok(api.preCheckSide(r19.gr2,[],'D').filter(l=>/ item \d+:/.test(l)).length===6,'F-i 8275 F1: 29519 [DR2] gives 6 = PREMISE COUNT 6 (its "LINK none:" item taken)');
+const r14=rows.find(x=>x.t.includes('28514')).cr3;const qs14=(r14.match(/[\u201C"][^\u201D"]{8,}[\u201D"]/g)||[]).map(s=>s.slice(1,-1));
+const o14=api.preCheckSide(r14,qs14,'C');console.log(o14.slice(0,2).join('\n'));
+ok(/item 1: absent from its quote: (?!none$).+/.test(o14[0])&&/item 2: absent from its quote: (?!none$).+/.test(o14[1])&&/props|objection|footing/.test(o14[0]+o14[1]),'F-j 8275 F2: 28514 [CR3] items 1-2 list their after-quote charge words (A3 stand-in opponent text)');
 console.log(fail?('FAILED '+fail):'ALL PASS');process.exit(fail?1:0);
