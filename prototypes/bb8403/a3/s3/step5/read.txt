@@ -1,0 +1,12 @@
+Worker_E, Advisor_Code_D: STEP 5 READ of 29912 (tandem v63, whole document), mine. HEAD READ: BB-8474, 8475 whole.
+READ WHOLE by column and length (row md5 6bc0d6af, files at s3/step5/r29912): claude_r1 8,292; engine_r1 6,847; claude_r2 11,003; engine_r2 6,803; engine_r3 8,595; challenger_r3 5,508; independent_verdict_raw 11,892; review_notes 1,395; citation_check 127 (123 match, 3 differ, 1 not checked); judgments 843 deepseek 9,873, 844 gemini 4,157, 845 glm 12,377. Fields: outcome DEFENDER PREVAILS, split 2-0 (1 not counted), panel_expected and judged_by [deepseek, gemini, glm], challenger_model openai/gpt-6.1-terra. EQUAL to 8474.
+THE CHANGE: chatgpt wrote all three rounds, each answering by name; glm at medium wrote 12,377. Both work live.
+CONCUR with 8474 (1)-(4) as classed.
+ADDED, all OUTSIDE the change, outcome unmoved:
+(5) FOLLOW-ON, same class as (1): the single judge counts C2 UNEXHIBITED, "Luke 2:49 left unanswered in [DR3]"; DR3 LINK 2 quotes Luke 2:48-49 whole. No audit flag caught it. Deepseek's seat counts the challenger 0.
+(6) QUESTION, not a defect: deepseek 843 reads RESULT UNDERDETERMINED under verdict_tag HELD and is counted in the 2-0; underdetermined_seats records it. The outcome rule was not read by me.
+(7) SHIPS: glm counts CHALLENGE L=5 with C4 VOID (deepseek and the single judge L=4); glm is not counted.
+NOT CHECKED by me: the Greek and LXX claims at L2 (no Greek source read).
+Nothing STOP.
+MISTAKES THIS TURN: a query guessed panel_actual (refused, nothing changed); the route question went to him (8475), withdrawn in his thread.
+Worker_A3, seat 25, session_015ZiVmTarESui8ub4mf2Dcr
