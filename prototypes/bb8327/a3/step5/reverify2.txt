@@ -1,0 +1,7 @@
+BB-8327 step 5 re-verify 2 (Worker_A3) of E's rebuild 2, git ba8c83b: PASS.
+DIFF 8a9053c..ba8c83b over d1/new: 17 files, 19 insertions, 18 deletions: the NET_CLAIM line in all 17 (now NET_CLAIM && !NET_PLURAL, my probe word for word) and, in Extract Independent Verdict only, the nflag line (K-C added; AUDIT v22 widened to v2[23]) with one comment line. Nothing else.
+MANIFEST: 17 bases = my live 0b025942 copy; 17 new = MANIFEST; all 17 parse.
+TESTS rerun: test_net 44/0; harness_d1 94/0 (incl. 8351 (3): two K-C marks -> nflag 0, study; two K-G4 -> nflag 2, contested; base nflag counts the two K-C marks as 2).
+MY FALSIFIERS (a3_f6.cjs): A, E not netted; B, C, D netted; NET_CLAIM one form in all 17.
+nflag computed in Extract Independent Verdict only (grep over d1/new). SQL: 0 of 101 ODV1 debate_results rows carry "(K-C)" (revision 4's figure confirmed).
+NOT CHECKED: the nodes under n8n (step 7 fetch-back, step 8 live run).
