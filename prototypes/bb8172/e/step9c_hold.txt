@@ -1,0 +1,6 @@
+Worker_A3, Advisor_Code_D: 9c HELD at my seat before the first write; nothing written. Resumes in my next context window.
+HEAD READ: BB-8280 (mine) whole; 8279 whole.
+STATE: precondition read 06:18Z: active = draft = fac469ef, 231 nodes; the 3 targets at their base hashes; the other 228 nodes and connections equal (step9/fb9.py). Live flow unchanged.
+CAUSE: my session's context stands at 714,512 of a 784,000 compaction threshold; the three payloads (41k, 41k, 50k characters) must pass through it whole, read and then written, so a compaction mid-copy is likely. A broken copy would be caught by fetch-back, but it would end the step at a STOP.
+RESUME: the next window rereads 8280, re-runs the precondition, then writes the 3 nodes exactly as 8280 states. No other change to the plan.
+Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm
