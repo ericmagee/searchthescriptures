@@ -11,7 +11,7 @@ DoD
 3 D1 harness: netted lines in the seat's one report; regrade keeping the stating clause UNCURED (clause moves); naming chain footing CURED.
 4 D3: __FK, flagKey gain K-S and the new key; 29662's two cured K-S items read "CURED ... not for review" on replay; nflag: rows whose class flips, counted before build.
 5 Published; fetch-back: named nodes equal git, others equal 0b025942.
-6 Live run, 29434's topic, read whole by both hands and the advisor.
+6 Live run, 29434's topic, read whole by both and the advisor.
 WRONG IF: offline, the detector misses a line of 1 or marks one of 2's none-list; live, a counted line rests on the chain-stating test alone, either side, or a report falls outside the net.
 ORDER: T1 A3 verifies (E idle); T2 A3 D3, E; T3 E D1+D2, A3.
 PLAN
@@ -19,7 +19,7 @@ PLAN
 [ ] 1 verify by line  A3
 [ ] 2 D3 build + nflag count  A3
 [ ] 3 verify 2  E
-[ ] 4 D1+D2 build, detector, harness  E
+[ ] 4 D1+D2 build, detector, harness E
 [ ] 5 verify 4, full read  A3
 [ ] 6 publish, fetch-back [IRREVERSIBLE], undo 0b025942  E
 [ ] 7 own fetch-back  A3
