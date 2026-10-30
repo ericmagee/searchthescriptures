@@ -19,7 +19,7 @@ function preCheckSide(listText,oppTexts,side){const s=String(listText||'');const
   const mk=it.search(/(?:words|Quote)\s*:\s*["“]/i);if(mk>=0){const tail=it.slice(mk).replace(/^[^"“]*["“]/,'').replace(/["”]\s*$/,'').trim();if(tail)qs.push(tail);}
   const q=qs.filter(x=>x.length>=8&&opp.includes(x)).sort((a,b)=>b.length-a.length)[0];const label=side+' item '+(k+1);
   if(!q)return label+': no verbatim quote found';
-  let charge=it;qs.forEach(x=>{charge=charge.split(x).join(' ');}); // 8275 F2: the whole item, quote first or lastcharge=charge.replace(/\b(?:the\s+)?(?:defender|challenger)(?:'s|\u2019s)?\s+(?:own\s+)?words\b|\bquote\b|\blink\s+(?:\d+|[a-z][a-z\/]{0,9})\s*:/gi,' ');
+  let charge=it;qs.forEach(x=>{charge=charge.split(x).join(' ');});charge=charge.replace(/\b(?:the\s+)?(?:defender|challenger)(?:'s|\u2019s)?\s+(?:own\s+)?words\b|\bquote\b|\blink\s+(?:\d+|[a-z][a-z\/]{0,9})\s*:/gi,' ');
   const qw=new Set(q.toLowerCase().match(/[a-z]+/g)||[]);const out=[];const seen=new Set();
   (charge.toLowerCase().match(/[a-z]+/g)||[]).forEach(w=>{if(seen.has(w))return;seen.add(w);
    const flag=NEG.test(w)||UNI.test(w);if((flag||(w.length>=4&&!STOP.has(w)))&&!qw.has(w))out.push(flag?w.toUpperCase():w);});

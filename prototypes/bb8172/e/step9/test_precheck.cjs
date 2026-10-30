@@ -32,4 +32,7 @@ const r19=rows.find(x=>x.t.includes('29519'));ok(api.preCheckSide(r19.gr2,[],'D'
 const r14=rows.find(x=>x.t.includes('28514')).cr3;const qs14=(r14.match(/[\u201C"][^\u201D"]{8,}[\u201D"]/g)||[]).map(s=>s.slice(1,-1));
 const o14=api.preCheckSide(r14,qs14,'C');console.log(o14.slice(0,2).join('\n'));
 ok(/item 1: absent from its quote: (?!none$).+/.test(o14[0])&&/item 2: absent from its quote: (?!none$).+/.test(o14[1])&&/props|objection|footing/.test(o14[0]+o14[1]),'F-j 8275 F2: 28514 [CR3] items 1-2 list their after-quote charge words (A3 stand-in opponent text)');
+// 8277 F3: the marker strip runs: no 29609 [DR2] entry lists a marker word (its items carry "LINK n:" and "Defender's words:")
+const dr2=lines.filter(l=>l.startsWith('CHALLENGER LIST [DR2] item'));
+ok(dr2.length===6&&dr2.every(l=>!/\b(?:link|defender|challenger|words|quote)\b/i.test(l.split(': absent from its quote: ')[1]||'x link'))&&/item 1: absent from its quote: step, passive, verb/.test(dr2[0]),'F-k 8277 F3: 29609 [DR2] entries list no marker word; item 1 reads "step, passive, verb ..."');
 console.log(fail?('FAILED '+fail):'ALL PASS');process.exit(fail?1:0);
