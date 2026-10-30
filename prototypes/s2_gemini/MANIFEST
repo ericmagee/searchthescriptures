@@ -1,0 +1,34 @@
+Order BB-8510 S2/S3 build (Worker_A3, P2D BB-8511). Base: live 6ffe5f8d node code (s1/new Init_Seats, Resolve_Seats; s3/new 12). patch_s2.py: 19 anchored replacements in 14 nodes, each anchor counted once. Re-applies on S1's published version (same anchors) before publish.
+base  ca3b677162b08eb5c7979e9ec19a7f9b  Alternate_Build.js
+base  8f8b62e642212ef3efad550d48f90bc5  Build_Diagnostic_Prompt.js
+base  8ddb34ccfdece180a7a1527df8bbc86f  Build_Independent_Verdict.js
+base  b9a6cc8f5b630b9f48f5b4a55ee60072  Build_Synthesis.js
+base  3097f326cad2702f057aad27ec80a824  C1_Build.js
+base  df677a86c4deba3b5ca35d285ce8bf93  C2_Build.js
+base  75026806034824795e1a90a1670aa91d  C3_Build.js
+base  72b637b548a8ad104aa4f184b72da797  D1_Build.js
+base  bd5f823110aea79b871985f462479930  D2_Build.js
+base  1d89642aeb2a30b36965d6940d12fde4  D3_Build.js
+base  b7a81d51484374736a1fae0650b007fc  Init_Seats.js
+base  1f433818d80b0b098536f0192081e1de  Panel_Build.js
+base  d4b9b0a7ab02a3075f56697bf5f054ef  Reserve_Build.js
+base  fa39c1655ea6725984f3450ad6a96e76  Resolve_Seats.js
+new   a209ac5106b566daaf49e031a982552d  Alternate_Build.js
+new   066890c9f859cc6df32b5a3cb85b82ea  Build_Diagnostic_Prompt.js
+new   b27669ffaf52b41c5d5519febe1518e6  Build_Independent_Verdict.js
+new   e6134ef59c5bd0cd130f0e5a6c57552d  Build_Synthesis.js
+new   38a070c078f329af6abd609e109886ae  C1_Build.js
+new   a9686a7dcdde4a95525dd7ff28b006a1  C2_Build.js
+new   2da1cfa19c8e41b7e66764989f7547f7  C3_Build.js
+new   31028788b31feb6bbe9612f808e9f235  D1_Build.js
+new   28ecae285ffe070011807efcc65224b4  D2_Build.js
+new   e2eee8949e05a9be5f96cf0a4da8ac74  D3_Build.js
+new   790bce130eb4309431975f3c18bb49e2  Init_Seats.js
+new   bb6b453214b4cfd8e556b8ac78238974  Panel_Build.js
+new   ff5ca663ad618ca8800321061c4ba6a9  Reserve_Build.js
+new   335baa2f3dd723257cadd385748f356b  Resolve_Seats.js
+874ee78c71586ca88c59c58be5fb54a7  patch_s2.py
+58d0fe57897dbd24ff9cfc4365a3e3ac  harness_s2.cjs
+57408770385e581313f7c4f1df255289  update_gemini.sql
+42a818fe28f99016344ad66b1f345abe  mc.json
+harness_s2.cjs: pairs 56; gemini body sites 11; maps 6; PASS 671 FAIL 0. Mutant (new = base): PASS 582 FAIL 89 (it can fail).

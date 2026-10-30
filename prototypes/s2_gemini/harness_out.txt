@@ -1,0 +1,14 @@
+D1_Build gemini: base generationConfig {"maxOutputTokens":32000} -> new medium/32000
+C1_Build gemini: base generationConfig {"maxOutputTokens":32000} -> new medium/32000
+D2_Build gemini: base generationConfig {"maxOutputTokens":32000} -> new medium/32000
+C2_Build gemini: base generationConfig {"maxOutputTokens":32000} -> new medium/32000
+D3_Build gemini: base generationConfig {"maxOutputTokens":32000} -> new medium/32000
+C3_Build gemini: base generationConfig {"maxOutputTokens":32000} -> new medium/32000
+Build_Synthesis gemini: base generationConfig {"maxOutputTokens":40192,"temperature":0} -> new medium/40192/t0
+Build_Independent_Verdict gemini: base generationConfig {"maxOutputTokens":40192,"temperature":0} -> new medium/40192/t0
+Build_Diagnostic_Prompt gemini: base generationConfig {"maxOutputTokens":40192,"temperature":0} -> new medium/40192/t0
+Panel_Build gemini: base generationConfig {"maxOutputTokens":40192,"temperature":0} -> new medium/40192/t0
+Reserve_Build gemini: base generationConfig {"maxOutputTokens":40192,"temperature":0} -> new medium/40192/t0
+Reserve_Build qwen: max/32000 -> medium/64000
+Alternate_Build qwen: max/32000 -> medium/64000
+pairs 56; gemini body sites 11; maps 6; PASS 671 FAIL 0
