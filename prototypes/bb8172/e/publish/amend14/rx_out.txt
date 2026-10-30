@@ -1,0 +1,14 @@
+Alternate_Cure_Normalize.js: split equal on 10 samples: true
+Alternate_Merge.js: split equal on 10 samples: true
+Cure_Build.js: split equal on 10 samples: true
+Cure_Check.js: split equal on 10 samples: true
+Cure_Normalize.js: split equal on 10 samples: true
+Extract_Independent_Verdict.js: split equal on 10 samples: true
+Panel_Cure_Build_1.js: split equal on 10 samples: true
+Panel_Cure_Build_2.js: split equal on 10 samples: true
+Panel_Cure_Build_3.js: split equal on 10 samples: true
+Panel_Cure_Check.js: split equal on 10 samples: true
+Panel_Cure_Normalize_1.js: split equal on 10 samples: true
+Panel_Cure_Normalize_2.js: split equal on 10 samples: true
+Panel_Cure_Normalize_3.js: split equal on 10 samples: true
+Panel_Payloads.js: split equal on 10 samples: true

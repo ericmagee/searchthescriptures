@@ -1,0 +1,146 @@
+{
+ "rows": 194,
+ "lines": 1010,
+ "nodes": {
+  "Alternate_Build.js": {
+   "itemsEqual": 194,
+   "itemsDiff": [],
+   "newMarks": 33,
+   "sameAsFirst": true
+  },
+  "Alternate_Cure_Build.js": {
+   "itemsEqual": 194,
+   "itemsDiff": [],
+   "newMarks": 33,
+   "sameAsFirst": true
+  },
+  "Alternate_Cure_Normalize.js": {
+   "itemsEqual": 194,
+   "itemsDiff": [],
+   "newMarks": 33,
+   "sameAsFirst": true
+  },
+  "Alternate_Merge.js": {
+   "itemsEqual": 194,
+   "itemsDiff": [],
+   "newMarks": 33,
+   "sameAsFirst": true
+  },
+  "Alternate_Payloads.js": {
+   "itemsEqual": 194,
+   "itemsDiff": [],
+   "newMarks": 33,
+   "sameAsFirst": true
+  },
+  "Build_Independent_Verdict.js": "no drvCheck",
+  "Cure_Build.js": {
+   "itemsEqual": 194,
+   "itemsDiff": [],
+   "newMarks": 33,
+   "sameAsFirst": true
+  },
+  "Cure_Check.js": {
+   "itemsEqual": 194,
+   "itemsDiff": [],
+   "newMarks": 33,
+   "sameAsFirst": true
+  },
+  "Cure_Normalize.js": {
+   "itemsEqual": 194,
+   "itemsDiff": [],
+   "newMarks": 33,
+   "sameAsFirst": true
+  },
+  "Extract_Independent_Verdict.js": {
+   "itemsEqual": 194,
+   "itemsDiff": [],
+   "newMarks": 33,
+   "sameAsFirst": true
+  },
+  "Panel_Build.js": "no drvCheck",
+  "Panel_Cure_Build_1.js": {
+   "itemsEqual": 194,
+   "itemsDiff": [],
+   "newMarks": 33,
+   "sameAsFirst": true
+  },
+  "Panel_Cure_Build_2.js": {
+   "itemsEqual": 194,
+   "itemsDiff": [],
+   "newMarks": 33,
+   "sameAsFirst": true
+  },
+  "Panel_Cure_Build_3.js": {
+   "itemsEqual": 194,
+   "itemsDiff": [],
+   "newMarks": 33,
+   "sameAsFirst": true
+  },
+  "Panel_Cure_Check.js": {
+   "itemsEqual": 194,
+   "itemsDiff": [],
+   "newMarks": 33,
+   "sameAsFirst": true
+  },
+  "Panel_Cure_Normalize_1.js": {
+   "itemsEqual": 194,
+   "itemsDiff": [],
+   "newMarks": 33,
+   "sameAsFirst": true
+  },
+  "Panel_Cure_Normalize_2.js": {
+   "itemsEqual": 194,
+   "itemsDiff": [],
+   "newMarks": 33,
+   "sameAsFirst": true
+  },
+  "Panel_Cure_Normalize_3.js": {
+   "itemsEqual": 194,
+   "itemsDiff": [],
+   "newMarks": 33,
+   "sameAsFirst": true
+  },
+  "Panel_Payloads.js": {
+   "itemsEqual": 194,
+   "itemsDiff": [],
+   "newMarks": 33,
+   "sameAsFirst": true
+  },
+  "Quote_Report.js": "no drvCheck"
+ },
+ "marks": [
+  "647 [AUDIT v22: DEBATE RULE VIOLATION (K-S2) -- D2 vs C2 UNDERDETERMINED gives as a ground that a verse does not s",
+  "647 [AUDIT v22: DEBATE RULE VIOLATION (K-S2) -- D5 vs C2 UNDERDETERMINED gives as a ground that a verse does not s",
+  "650 [AUDIT v22: DEBATE RULE VIOLATION (K-S2) -- D5 vs C3 UNDERDETERMINED gives as a ground that a verse does not s",
+  "683 [AUDIT v22: DEBATE RULE VIOLATION (K-S2) -- D1 STANDS gives as a ground that a verse does not state a link or ",
+  "725 [AUDIT v22: DEBATE RULE VIOLATION (K-S2) -- D1 vs C1 UNDERDETERMINED gives as a ground that a verse does not s",
+  "725 [AUDIT v22: DEBATE RULE VIOLATION (K-S2) -- D3 vs C2 UNDERDETERMINED gives as a ground that a verse does not s",
+  "725 [AUDIT v22: DEBATE RULE VIOLATION (K-S2) -- D5 vs C4 UNDERDETERMINED gives as a ground that a verse does not s",
+  "728 [AUDIT v22: DEBATE RULE VIOLATION (K-S2) -- D5 vs C2 UNDERDETERMINED gives as a ground that a verse does not s",
+  "735 [AUDIT v22: DEBATE RULE VIOLATION (K-S2) -- D1 vs C4 UNDERDETERMINED gives as a ground that a verse does not s",
+  "735 [AUDIT v22: DEBATE RULE VIOLATION (K-S2) -- D2 vs C6 UNDERDETERMINED gives as a ground that a verse does not s",
+  "735 [AUDIT v22: DEBATE RULE VIOLATION (K-S2) -- D3 vs C3 UNDERDETERMINED gives as a ground that a verse does not s",
+  "735 [AUDIT v22: DEBATE RULE VIOLATION (K-S2) -- D4 vs C1 UNDERDETERMINED gives as a ground that a verse does not s",
+  "735 [AUDIT v22: DEBATE RULE VIOLATION (K-S2) -- D5 vs C5 UNDERDETERMINED gives as a ground that a verse does not s",
+  "737 [AUDIT v22: DEBATE RULE VIOLATION (K-S2) -- D1 vs C4 UNDERDETERMINED gives as a ground that a verse does not s",
+  "737 [AUDIT v22: DEBATE RULE VIOLATION (K-S2) -- D2 vs C4 UNDERDETERMINED gives as a ground that a verse does not s",
+  "737 [AUDIT v22: DEBATE RULE VIOLATION (K-S2) -- D3 vs C3 UNDERDETERMINED gives as a ground that a verse does not s",
+  "774 [AUDIT v22: DEBATE RULE VIOLATION (K-S2) -- D3 vs C4 UNDERDETERMINED gives as a ground that a verse does not s",
+  "774 [AUDIT v22: DEBATE RULE VIOLATION (K-U) -- D3 vs C4 UNDERDETERMINED says a witness went unanswered (\"was not n",
+  "780 [AUDIT v22: DEBATE RULE VIOLATION (K-S2) -- D4 STANDS gives as a ground that a verse does not state a link or ",
+  "782 [AUDIT v22: DEBATE RULE VIOLATION (K-S2) -- D3 STANDS gives as a ground that a verse does not state a link or ",
+  "783 [AUDIT v22: DEBATE RULE VIOLATION (K-S2) -- D1 vs C5 UNDERDETERMINED gives as a ground that a verse does not s",
+  "795 [AUDIT v22: DEBATE RULE VIOLATION (K-U) -- D1 vs C5 UNDERDETERMINED says a witness went unanswered (\"left Luke",
+  "797 [AUDIT v22: DEBATE RULE VIOLATION (K-U) -- D1 vs C4 UNDERDETERMINED says a witness went unanswered (\"the unans",
+  "803 [AUDIT v22: DEBATE RULE VIOLATION (K-U) -- D1 STANDS says a witness went unanswered (\", not named\"); a witness",
+  "808 [AUDIT v22: DEBATE RULE VIOLATION (K-S2) -- D1 STANDS gives as a ground that a verse does not state a link or ",
+  "817 [AUDIT v22: DEBATE RULE VIOLATION (K-U) -- D6 vs C4 UNDERDETERMINED says a witness went unanswered (\"was left ",
+  "819 [AUDIT v22: DEBATE RULE VIOLATION (K-S2) -- D2 vs C4 UNDERDETERMINED gives as a ground that a verse does not s",
+  "821 [AUDIT v22: DEBATE RULE VIOLATION (K-U) -- D4 STANDS says a witness went unanswered (\"unanswered 1 Chronicles ",
+  "822 [AUDIT v22: DEBATE RULE VIOLATION (K-S2) -- D1 vs C2 UNDERDETERMINED gives as a ground that a verse does not s",
+  "825 [AUDIT v22: DEBATE RULE VIOLATION (K-S2) -- D3 vs C3 UNDERDETERMINED gives as a ground that a verse does not s",
+  "830 [AUDIT v22: DEBATE RULE VIOLATION (K-S2) -- D1 STANDS gives as a ground that a verse does not state a link or ",
+  "830 [AUDIT v22: DEBATE RULE VIOLATION (K-U) -- D2 vs C2 UNDERDETERMINED says a witness went unanswered (\"was not n",
+  "830 [AUDIT v22: DEBATE RULE VIOLATION (K-S2) -- D4 vs C4 UNDERDETERMINED gives as a ground that a verse does not s"
+ ]
+}
