@@ -1,0 +1,147 @@
+{
+ "base": {
+  "items": 160,
+  "status": {
+   "MATCHES": 150,
+   "PENDING": 7,
+   "NOT CHECKED": 3
+  }
+ },
+ "new": {
+  "items": 167,
+  "status": {
+   "MATCHES": 156,
+   "PENDING": 8,
+   "NOT CHECKED": 3
+  }
+ },
+ "changes": [
+  {
+   "kind": "CHANGED",
+   "from": {
+    "ref": "Numbers 1:2",
+    "status": "MATCHES",
+    "rebound_from": "Luke 1:13,62-63"
+   },
+   "side": "DEFENDER",
+   "round": "R1",
+   "ref": "Numbers 1:2",
+   "status": "MATCHES",
+   "score": 1,
+   "rebound_from": null,
+   "after_first": true,
+   "order": null,
+   "cite_form": true,
+   "quote": "by the house of their fathers"
+  },
+  {
+   "kind": "NEW ITEM",
+   "side": "DEFENDER",
+   "round": "R1",
+   "ref": "Matthew 1:20",
+   "status": "MATCHES",
+   "score": 1,
+   "rebound_from": null,
+   "after_first": false,
+   "order": "quote-first",
+   "cite_form": true,
+   "quote": "Mary thy wife"
+  },
+  {
+   "kind": "NEW ITEM",
+   "side": "CHALLENGER",
+   "round": "R1",
+   "ref": "Luke 1:35",
+   "status": "MATCHES",
+   "score": 1,
+   "rebound_from": null,
+   "after_first": false,
+   "order": "quote-first",
+   "cite_form": true,
+   "quote": "The Holy Ghost shall come upon thee"
+  },
+  {
+   "kind": "NEW ITEM",
+   "side": "CHALLENGER",
+   "round": "R1",
+   "ref": "Luke 1:37",
+   "status": "MATCHES",
+   "score": 1,
+   "rebound_from": null,
+   "after_first": false,
+   "order": "quote-first",
+   "cite_form": true,
+   "quote": "For with God nothing shall be impossible"
+  },
+  {
+   "kind": "NEW ITEM",
+   "side": "CHALLENGER",
+   "round": "R1",
+   "ref": "Matthew 1:20",
+   "status": "MATCHES",
+   "score": 1,
+   "rebound_from": null,
+   "after_first": false,
+   "order": "quote-first",
+   "cite_form": true,
+   "quote": "take unto thee Mary thy wife"
+  },
+  {
+   "kind": "CHANGED",
+   "from": {
+    "ref": "Haggai 2:23",
+    "status": "MATCHES",
+    "rebound_from": "Jeremiah 22:24"
+   },
+   "side": "DEFENDER",
+   "round": "R2",
+   "ref": "Haggai 2:23",
+   "status": "MATCHES",
+   "score": 1,
+   "rebound_from": null,
+   "after_first": true,
+   "order": null,
+   "cite_form": true,
+   "quote": "Zerubbabel   the son of Shealtiel"
+  },
+  {
+   "kind": "NEW ITEM",
+   "side": "DEFENDER",
+   "round": "R2",
+   "ref": "Matthew 1:20",
+   "status": "MATCHES",
+   "score": 1,
+   "rebound_from": null,
+   "after_first": false,
+   "order": "quote-first",
+   "cite_form": true,
+   "quote": "Mary thy wife"
+  },
+  {
+   "kind": "NEW ITEM",
+   "side": "DEFENDER",
+   "round": "R3",
+   "ref": "Matthew 1:2",
+   "status": "MATCHES",
+   "score": 1,
+   "rebound_from": null,
+   "after_first": false,
+   "order": "quote-first",
+   "cite_form": true,
+   "quote": "Abraham begat Isaac"
+  },
+  {
+   "kind": "NEW ITEM",
+   "side": "DEFENDER",
+   "round": "R3",
+   "ref": "2 Samuel 1:20-21",
+   "status": "PENDING",
+   "score": 0,
+   "rebound_from": null,
+   "after_first": false,
+   "order": "quote-first",
+   "cite_form": true,
+   "quote": "thou son of David"
+  }
+ ]
+}

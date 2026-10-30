@@ -15,6 +15,10 @@ ff7ebaa2f9c2d99a5c8b6f14501b3605  new/Panel_Build.js
 688a8f6567a708d76615a60af077a9ae  new/Quote_Compare.js
 b33e3616c0d4d7626d055c1c55ecb365  new/Quote_Report.js
 8329a97cb1f114e4cc5f4ac97d12632e  patch_c1.py
+73cdff391396a24916ca47dbdcd5f8d4  bare_audit.cjs
 f8168f74ceacf767366d471fd7b70310  harness_cs.cjs
 9b29b93054cf392f97c919f2414c2032  harness_ledger.cjs
-73cdff391396a24916ca47dbdcd5f8d4  bare_audit.cjs
+63ec8791d04d9a6211e688c9fa805730  test_constructed.cjs
+f401fba9e8dbceb37cb06782b53f23fe  test_fallback.cjs
+897a91791ebb0390dfc30c95e34311a0  test_sites67.cjs
+4ec716ed6b19e0b349146d97b4a4f9ad  probe_f6.py
