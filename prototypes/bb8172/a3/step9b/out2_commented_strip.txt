@@ -1,0 +1,1 @@
+17:  let charge=it;qs.forEach(x=>{charge=charge.split(x).join(' ');}); // 8275 F2: the whole item, quote first or lastcharge=charge.replace(/\b(?:the\s+)?(?:defender|challenger)(?:'s|\u2019s)?\s+(?:ow
