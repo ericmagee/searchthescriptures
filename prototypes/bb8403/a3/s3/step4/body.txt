@@ -1,0 +1,7 @@
+Worker_E, Advisor_Code_D: STEP 4 PASS on BB-8403 S3. HEAD READ: BB-8468 whole.
+FLOW, fetched back at my seat (get_workflow_details) against 4daa72a6 (get_workflow_version) and git 37e3770 (s1/new 3, s3/new 12): versionId = activeVersionId = 6ffe5f8d, active, 231 nodes, name sets equal. TARGETS 15 of 15 EQUAL git (md5s of 8462 and s1: Init Seats b7a81d51, Resolve Seats fa39c165, Format Markdown 42bc64de); non-code fields of each equal base. OTHER 216 of 216 equal 4daa72a6. connections equal. settings: the version record carries none; live settings equal my 13:59 CDT export of the live flow.
+ROW by SQL: model_config chatgpt md5 ca1d375c (equal 8468): openrouter, openai/gpt-6.1-terra, openrouter.ai endpoint, family openai, max_tokens 32000, notes 706222be; updated_at 14:48:20 CDT. No other row updated today.
+POLL: 0 executions on the flow since 14:30 CDT.
+FILES: s3/step4/cmp4.py, step4_fetchback.txt, row_read.txt.
+STEP 5 next, at my hand, under 5b: same body as 29876 (topic 29434's, claude plain vs chatgpt oracle), production; status poll every 10 minutes from the fire; stop row within 10 minutes of a stop.
+Worker_A3, seat 25, session_015ZiVmTarESui8ub4mf2Dcr

@@ -1,0 +1,25 @@
+LIVE versionId 6ffe5f8d-4aeb-4fe8-9853-a5c9ce2d4921 activeVersionId 6ffe5f8d-4aeb-4fe8-9853-a5c9ce2d4921 active True nodes 231
+BASE versionId 4daa72a6-11ed-44f3-8674-9a3ac340c94c nodes 231
+name sets equal True
+EQUAL Alternate Build live ca3b6771 git ca3b6771 base 6c8e692d non-code equal base: True
+EQUAL Build Diagnostic Prompt live 8f8b62e6 git 8f8b62e6 base 60b84f8a non-code equal base: True
+EQUAL Build Independent Verdict live 8ddb34cc git 8ddb34cc base 8df9a3df non-code equal base: True
+EQUAL Build Synthesis live b9a6cc8f git b9a6cc8f base 969a4fe1 non-code equal base: True
+EQUAL C1 Build live 3097f326 git 3097f326 base c51775f2 non-code equal base: True
+EQUAL C2 Build live df677a86 git df677a86 base a46071b4 non-code equal base: True
+EQUAL C3 Build live 75026806 git 75026806 base 554fa8c1 non-code equal base: True
+EQUAL D1 Build live 72b637b5 git 72b637b5 base f3508d11 non-code equal base: True
+EQUAL D2 Build live bd5f8231 git bd5f8231 base dd7af475 non-code equal base: True
+EQUAL D3 Build live 1d89642a git 1d89642a base ea78d064 non-code equal base: True
+EQUAL Format Markdown live 42bc64de git 42bc64de base 9308e7db non-code equal base: True
+EQUAL Init Seats live b7a81d51 git b7a81d51 base 75443977 non-code equal base: True
+EQUAL Panel Build live 1f433818 git 1f433818 base b7e2ea41 non-code equal base: True
+EQUAL Reserve Build live d4b9b0a7 git d4b9b0a7 base b33b802f non-code equal base: True
+EQUAL Resolve Seats live fa39c165 git fa39c165 base 428c51ec non-code equal base: True
+TARGETS EQUAL 15 of 15
+OTHER nodes 216 equal base 216 diff []
+connections equal base True (live has True , base has True )
+settings equal base False (live has True , base has False )
+pinData equal base True (live has False , base has False )
+staticData equal base True (live has False , base has False )
+settings: the version record carries none; live 6ffe5f8d settings equal the live 64e6d7b7 settings of 13:59 CDT export: True
