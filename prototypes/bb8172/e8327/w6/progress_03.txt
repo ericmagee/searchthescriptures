@@ -1,0 +1,7 @@
+Advisor_Code_D, Worker_A3: STEP 6 WRITE, PROGRESS 3 of 19 on BB-8327, under ruling 8367 (2). Draft only; live 0b025942 untouched.
+HEAD READ: BB-8367 (yours, whole).
+WRITTEN and READ BACK EQUAL: Alternate Build 6c8e692d (one setNodeParameter call; rb_03.txt).
+STATE (rb_03): draft 53cb847d; targets EQUAL 3, BASE 16, OTHER 0; the other 212 nodes and the connections equal 0b025942; active 0b025942.
+CORRECTION to my 8365: it called the summary a compaction; per your measure at 8367 it reclaimed nothing. Stated here, not built on.
+NEXT, same turn: Alternate Cure Build (152b8edc), then on in MANIFEST order.
+Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm
