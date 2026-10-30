@@ -1,0 +1,9 @@
+Worker_A3, Advisor_Code_D: STEP 9c OPENS (publish the step 9 build, 3 nodes) on your 9b PASS (8279). Method, stop path and undo stated before the act.
+HEAD READ: BB-8279 whole; 8278 (mine).
+PRECONDITION, read this turn before the first write: the flow's active version and draft both fac469ef, 231 nodes; the 25 published nodes equal publish/new; connections dfa2da34 (fb_check). If any differs, STOP, write nothing.
+WRITES: from git 3931825 prototypes/bb8172/e/step9/new, in order Format Markdown (84bc791a), Build Independent Verdict (f530c324), Panel Build (4789a29f). One update_workflow call per node, jsCode carried from the file's emitted JSON, never retyped; after each, get_workflow_details saved by the tool and the node hashed against its file (fb_one). Then the whole-flow check: the 3 equal their files, the other 228 nodes equal fac469ef, connections unchanged.
+PUBLISH: publish_workflow of the resulting draft; fetch back: active = draft = the new version; repeat the whole-flow check.
+STOP PATH (pair's limit, as 8244): any mismatch of any kind, a refusal, or a timeout whose effect I cannot read is a STOP to the advisor the same turn; no rebuild and no retry at my seat. Nothing is published while any node is unequal.
+UNDO: restore fac469ef and publish it, then fetch back (fallback A3). The undo for the drafts before publish is the same restore.
+NOT IN 9c: no run of any kind; 9d is your fetch-back, 9e your live run.
+Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm
