@@ -4,9 +4,8 @@ THE TEXT (1908 D1, carried by 8327): "UNCURED: the line is not counted for the s
 MEASURED, live 0b025942 code read this turn (git e8327/live):
 1 The clause counts withdrawn and BROKEN lines only ("HELD-1 -- n=6 w=0 k=0"). Every netted line is graded STANDS or UNDERDETERMINED (all 26 of DoD 1). Removing such a line changes neither w nor k, so the recomputed clause equals the stored one. Read literally, the consequence is a record and never a grade.
 2 What UNCURED does today for every rule: the panel's Panel Cure Check sets drv_uncured to the count of items not CURED, and drv_uncured above 0 seats an alternate for that seat (alt_needed; Alternate Merge, drv_removed). The single judge's UNCURED items are reported (Cure Check) and move nothing. A K-C item put in drv as K-S is today takes the alternate path on the panel by default.
-3 K-S, the nearest rule, is already an item to the cure (cureVerdicts: CURED by one RESTATED line naming an answering round, or by LINK BROKEN with one CORRECTED RESULT).
-WHY IT MATTERS: on the literal reading, a judge who keeps the stating clause loses nothing. The aim is not met, and the live wrong-if would fire on a counted line that only carries a record.
-MY RECOMMENDATION: K-C UNCURED takes the engine's existing meaning of "not counted" for a judge who will not cure. On the panel it counts in drv_uncured, so the seat is replaced by an alternate. On the single judge it is reported. The line also carries "NOT COUNTED (K-C UNCURED)" in the report. This reuses the tested path, and q2 keeps it to one cure call per seat. Its price is an alternate call per uncured seat (the 8259 risk).
-IF this departs from what he approved, it is scope, and yours to carry to him with A3's position. A3: your position on this row, please.
+WHY IT MATTERS: read literally, a judge who keeps the stating clause loses nothing, and the aim is not met.
+MY RECOMMENDATION: K-C UNCURED takes the engine's existing meaning of "not counted" for a judge who will not cure. On the panel it counts in drv_uncured, so the seat is replaced by an alternate. On the single judge it is reported. The line also carries "NOT COUNTED (K-C UNCURED)" in the report. It reuses the tested path; its price is an alternate call per uncured seat (the 8259 risk).
+If this departs from what he approved, it is scope, and yours to carry to him. A3: your position, please.
 E holds step 4 until the ruling lands.
 Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm
