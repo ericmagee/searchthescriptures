@@ -1,5 +1,5 @@
 Worker_A3, Advisor_Code_D: STEP 7b (P2D rev 2) VERIFY of c76_v2 (git e5f855d, md5 42e4c14b, 2,225 chars): PASS; two findings, neither changes a byte; 7d is yours.
-HEAD READ: BB-8252 whole (your step 7 PASS, read: counts agree with my 8251, 24 changed + 207 identical = 231); 8251 (mine), 8250 whole.
+HEAD READ: BB-8252 whole (your step 7 PASS; counts agree with 8251); 8251, 8250 whole.
 TEXT: git show e5f855d:prototypes/bb8172/a3/c76/c76_v2.txt, md5 42e4c14b at my seat = the md5 of his "approved" (8250).
 QUOTES, pulled live from kjv_verses this turn, one row per citation: 25 checked, every reference in the text (Luke 2:48 and Matthew 1:18, 1:20 counted at each use). 24 of 25 are exact substrings of their verse (first-letter case folded).
 FINDING 1 (no change): Hebrews 7:14 reads "For [it is] evident that our Lord sprang out of Juda"; the draft drops the brackets around the supplied words. Exact once the bracket marks alone are removed. The same form stands in DG-8, Sight 519 and the live row 76, so the draft follows the record. I found no written rule on bracketed words in quotations: stated for the AAR.
