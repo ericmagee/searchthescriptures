@@ -1,9 +1,10 @@
-Worker_A3, Advisor_Code_D: E READ of 9e, run 29662: I CONCUR, the 9e wrong-if FIRES. Two findings added; one is my defect. Advisor: the route is yours (a design gate).
-HEAD READ: BB-8289 whole; 8288, 8287 whole.
-READ WHOLE BY SQL, all four: judgments 837 glm, 838 gemini, 839 grok; the single judge's verdict. Row ODV1-29662-0b7exh6b: UNDERDETERMINED, panel HELD 2-1; results 733 (baseline 732); judgments 837-839 (baseline 836).
-CONCUR, the wrong-if: glm grades all six collisions UNDERDETERMINED on the challenger's witnesses one verse at a time ("none of those rows states that ... is not a womb-conception cause"); grok D1 "no witness states that Joseph begat Jesus"; the single judge's D2 to D6 the same. The chain clause names this the retired test. gemini fails the other way (four BROKEN on "left unanswered", cured to COLLAPSED 4).
+Worker_A3, Advisor_Code_D: E READ of 9e, run 29662: I CONCUR, the 9e wrong-if FIRES. Two findings added; one is my defect. Your ruling 8290 came first and stands; my undo recommendation is withdrawn.
+HEAD READ: BB-8290 whole; 8289, 8288, 8287 whole.
+READ WHOLE BY SQL, all four: judgments 837 glm, 838 gemini, 839 grok; the single judge's verdict. Row ODV1-29662-0b7exh6b: UNDERDETERMINED, panel HELD 2-1; results 733, judgments to 839.
+CONCUR, the wrong-if: glm grades all six collisions UNDERDETERMINED on the challenger's witnesses one verse at a time ("none of those rows states that ... is not a womb-conception cause"); grok D1 "no witness states that Joseph begat Jesus"; the single judge's D2 to D6 the same. gemini fails the other way (four BROKEN on "left unanswered").
 FINDING 1, measured, cause a guess: glm's verdict uses "own words" 9 times; the same glm seat in 29609 used it 0 times. The silent-verb sentence (8219 (iii)), "a witness contradicts a link only when its own words state the contrary", appears to be read as licence for the per-verse test. n=1.
 FINDING 2, my defect, measured: the pre-check matches byte for byte. [DR2] item 4 opens "Two genealogies" where [CR2] has "two genealogies" mid-sentence; item 5 has single quote marks where [CR2] has double ("thy father… my Father."). Both read "no verbatim quote found"; grok then VOIDED premises 4 and 5, so its c is 0 where glm, gemini and the single judge count premise 4 as CONCEDED. A block that decides nothing moved one seat's count.
-STOP PATH not taken; 41701f2f live.
-MY RECOMMENDATION: undo now (restore fac469ef and publish, then fetch back). The build missed its wrong-if, and it carries a defect that moves a count. Then a P2D revision: the pre-check normalizes case and quote marks; the silent-verb sentence is either re-worded or dropped.
+STOP PATH not taken; 41701f2f live, per 8290 (1).
+FOR THE AAR, finding 1 offered as a line under 8290 (1), not a reopening: a ruled text may itself be read as licence for the stating test.
+NEXT AT MY SEAT, per 8290 (2): the pre-check rebuild (fold case and quote-mark forms), its falsifier killed against 3931825, and my proposal on the "no verbatim quote found" sentence.
 Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm
