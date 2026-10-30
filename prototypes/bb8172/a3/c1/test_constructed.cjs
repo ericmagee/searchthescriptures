@@ -11,6 +11,8 @@ const cases={
  SWAP_bare_after:'Matthew 1:19 "Joseph her husband", "Mary thy wife" (1:20).',
  CLAIMED_linebreak:'Matthew 1:2 begins the line.\n"Judas begat Phares and Zara of Thamar" (1:3).',
  NEG_prose_bare:'Matthew 1:2 is the line; "Judas begat Phares and Zara" is not said of David (1:3).',
+ POSSESSIVE:'Luke 1:35 says it. Matthew\'s own genealogy: "Judas begat Phares and Zara of Thamar" (1:3).',
+ CAPITALS:'Luke 1:35 is read first.\n**IV. MATTHEW 1:18-25**\nThe line "Mary thy wife" (1:20) is plain.',
  KEEP_no_after:'Luke 1:13 "thy wife Elisabeth shall bear thee a son" is the father row.'};
 const show=it=>it.map(i=>i.ref+(i.after_first?' [after_first, fallback '+(i.alt&&i.alt.ref)+(i.alt&&i.alt.v2&&i.alt.v2!==i.alt.verse?'-'+i.alt.v2:'')+']':'')+(i.order?' ['+i.order+']':'')+(i.cite_form===false?' [not cite form]':'')+' "'+i.quote.slice(0,30)+'"');
 const NODES=['Panel_Build','Build_Independent_Verdict','D3_Build','C3_Build'];const LBn={},LNn={};for(const x of NODES){LBn[x]=pwl('base',x);LNn[x]=pwl(ND,x);}

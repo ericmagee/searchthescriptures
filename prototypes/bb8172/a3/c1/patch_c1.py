@@ -69,6 +69,22 @@ edit(FM,"' (first reference before it: ' + i.rebound_from + ').\\n'; }); t += '\
  "  const ra = QRd.items.filter(i => i.status === 'MATCHES' && i.rebound_from && i.after_first);\n"
  "  if (ra.length) { t += ra.length + (ra.length === 1 ? ' match was' : ' matches were') + ' made on the reference before the quotation, after the reference written after it did not match:\\n\\n'; ra.forEach(i => { t += '- ' + (i.side === 'DEFENDER' ? 'Defender' : 'Challenger') + ', round ' + String(i.round).replace(/^R/, '') + ': \"' + String(i.quote).slice(0, 200) + '\" matches ' + i.ref + ' (reference after it: ' + i.rebound_from + ').\\n'; }); t += '\\n'; }\n")
 
+# --- OPTION 2 (BB-8212, BB-8214; ruled BB-8215; OPT2=0 builds the rule without it, for comparison): "a book named" also reads a book name written in
+# capitals ("LUKE 1:34-37") and a book name with a possessive ("Matthew's own genealogy"), in both readers. ---
+if os.environ.get('OPT2','1')=='1': # ruled BB-8215
+  RA=r"[A-Z][a-z]+(?:\\s(?:of\\s)?[A-Z][a-z]+)?)\\.?\\s)?(\\d{1,3}):(\\d{1,3})'+TAIL,'g');let lastBook=null;"
+  RN=(r"[A-Z][A-Za-z]+(?:\\s(?:of\\s)?[A-Z][A-Za-z]+)?)\\.?\\s)?(\\d{1,3}):(\\d{1,3})'+TAIL,'g');let lastBook=null;"
+      "\n  // BB-8172 C1 option 2 (BB-8212): a book name with a possessive (\"Matthew's own genealogy\") is a book named; a bare reference after it takes it."
+      "\n  const PO=[...T.matchAll(/(?<![A-Za-z0-9])((?:[1-3]\\s)?[A-Z][A-Za-z]+)['’]s\\b/g)].map(x=>({at:x.index,b:BK[key(x[1])]||null})).filter(x=>x.b);let pi=0,lastAt=-1;")
+  for f in ['Panel_Build.js','Build_Independent_Verdict.js','D3_Build.js','C3_Build.js']:
+    edit(f,RA,RN)
+    edit(f,"if(b)lastBook=b;","while(pi<PO.length&&PO[pi].at<m.index){if(PO[pi].at>lastAt){lastBook=PO[pi].b;lastAt=PO[pi].at;}pi++;}if(b){lastBook=b;lastAt=m.index;}")
+  E[CS]=[(o,n.replace("const BREF=/((?<![A-Za-z0-9])(?:[1-3]\\s)?[A-Z][a-z]+(?:\\s(?:of\\s)?[A-Z][a-z]+)?)\\.?\\s(\\d{1,3}):(\\d{1,3})/g;\n"
+      "const lastBook=(t,pos)=>{let b=null;for(const x of String(t).slice(0,pos).matchAll(BREF)){const k=BK[key(x[1])]||BK[key(String(x[1]).split(/\\s/).pop())];if(k)b=k;}return b;};\n",
+      "// Option 2 (BB-8212): a book name in capitals, or with a possessive (\"Matthew's own genealogy\"), is a book named.\n"
+      "const BREF=/((?<![A-Za-z0-9])(?:[1-3]\\s)?[A-Z][A-Za-z]+(?:\\s(?:of\\s)?[A-Z][A-Za-z]+)?)(?:\\.?\\s(\\d{1,3}):(\\d{1,3})|['’]s\\b)/g;\n"
+      "const lastBook=(t,pos)=>{let b=null;for(const x of String(t).slice(0,pos).matchAll(BREF)){const k=BK[key(x[1])]||BK[key(String(x[1]).split(/\\s/).pop())];if(k)b=k;}return b;};\n")) for (o,n) in E[CS]]
+
 for f in sorted(os.listdir(B)):
   t=open(os.path.join(B,f),encoding='utf-8').read();n=t
   for old,new in E.get(f,[]):

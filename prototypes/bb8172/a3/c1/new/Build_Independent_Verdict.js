@@ -10,9 +10,11 @@ const PWL=(()=>{
  const verses=(c,v,tail)=>{const out=[+v];let last=+v;for(const m of String(tail||'').matchAll(/([–—-]|,)\s?(\d{1,3})(?!\d|:)/g)){const n=+m[2];if(m[1]===','){out.push(n);last=n;}else{for(let x=last+1;x<=n&&x-last<=12;x++)out.push(x);last=n;}}return out.map(x=>c+':'+x);};
  const TAIL='((?:\\s?[–—-]\\s?\\d{1,3}(?![\\d:])|\\s?,\\s?\\d{1,3}(?![\\d:]|\\s+[A-Z]))*)';
  // Every verse a text names. Book-named ("Luke 2:33, 41") carry their book; bare ("(1:34)", "2:41") inherit the nearest book named before them in the same text, if any.
- const refs=t=>{const T=String(t||'');const out=[];const RE=new RegExp('(?<![A-Za-z0-9:])(?:((?:[1-3]\\s)?[A-Z][a-z]+(?:\\s(?:of\\s)?[A-Z][a-z]+)?)\\.?\\s)?(\\d{1,3}):(\\d{1,3})'+TAIL,'g');let lastBook=null;
+ const refs=t=>{const T=String(t||'');const out=[];const RE=new RegExp('(?<![A-Za-z0-9:])(?:((?:[1-3]\\s)?[A-Z][A-Za-z]+(?:\\s(?:of\\s)?[A-Z][A-Za-z]+)?)\\.?\\s)?(\\d{1,3}):(\\d{1,3})'+TAIL,'g');let lastBook=null;
+  // BB-8172 C1 option 2 (BB-8212): a book name with a possessive ("Matthew's own genealogy") is a book named; a bare reference after it takes it.
+  const PO=[...T.matchAll(/(?<![A-Za-z0-9])((?:[1-3]\s)?[A-Z][A-Za-z]+)['’]s\b/g)].map(x=>({at:x.index,b:BK[key(x[1])]||null})).filter(x=>x.b);let pi=0,lastAt=-1;
   for(const m of T.matchAll(RE)){let b=m[1]?BK[key(m[1])]:null;if(m[1]&&!b){const w=m[1].split(/\s/).pop();b=BK[key(w)]||null;}
-   if(b)lastBook=b;const tail=String(m[4]||'');const parts=tail.split(',');const rng=parts[0];
+   while(pi<PO.length&&PO[pi].at<m.index){if(PO[pi].at>lastAt){lastBook=PO[pi].b;lastAt=PO[pi].at;}pi++;}if(b){lastBook=b;lastAt=m.index;}const tail=String(m[4]||'');const parts=tail.split(',');const rng=parts[0];
    const head=verses(m[2],m[3],rng);out.push({book:b,cv:head[0],cvs:head,label:m[2]+':'+m[3]+rng.replace(/\s/g,''),ctx:b||lastBook});
    for(const c of parts.slice(1)){const mm=c.match(/(\d{1,3})(\s?[–—-]\s?\d{1,3})?/);if(!mm)continue;const vv=verses(m[2],mm[1],mm[2]||'');out.push({book:b,cv:vv[0],cvs:vv,label:m[2]+':'+mm[1]+(mm[2]||'').replace(/\s/g,''),ctx:b||lastBook});}}return out;};
  // 6643 (b): each answering reference is filed by chapter:verse, with the book it names explicitly, or as bare when it names none.
