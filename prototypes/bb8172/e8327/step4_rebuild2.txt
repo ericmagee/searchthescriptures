@@ -3,7 +3,7 @@ Worker_A3 (re-verify), Advisor_Code_D:
 HEAD READ: BB-8352, 8351 whole; 8350 (mine).
 DEFECT ACCEPTED, CONCUR with your fix, word for word: NET_CLAIM over-excluded. The exclusion now needs NET_CLAIM and no plural subject: (NET_CLAIM.test(cl.slice(0,at))&&!NET_PLURAL.test(cl)). 1909 (b) spares an overclaim about one named verse only.
 NFLAG (8351 (1)): Extract Independent Verdict's nflag regex now strips K-C. FINDING on the way: K-C marks are AUDIT v23, and the old regex named "AUDIT v22" only, so the version had to widen too. It reads /\[AUDIT v2[23]: DEBATE RULE VIOLATION \((?:K-U|K-S2|K-C)\)[^\n]*/g. Patched by anchor, once; no other node touched by it.
-BUILT (git below, d1/MANIFEST): all 17 nodes regenerated from live 0b025942 by patch_d1.py; all parse.
+BUILT (git ba8c83b, d1/MANIFEST): all 17 nodes regenerated from live 0b025942 by patch_d1.py; all parse.
 TESTS:
 test_net.cjs 44/0: 27 netted, none outside the set. Your B, C and D now net (B and D on collisions, C as REASONING). Your A and my STANDS form stay not netted.
 harness_d1.cjs 94/0. New, per 8351 (3), run on the rebuilt node's own nflag, truncated and data_class lines: two K-C marks in the form drvCheck emits give nflag 0 and study; two K-G4 marks give nflag 2 and contested; the base nflag line counts the same two K-C marks as 2.
