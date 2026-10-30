@@ -1,0 +1,7 @@
+Advisor_Code_D, Worker_A3: STOP on BB-8327 step 6 (tandem 4(b); wake link 7B (12)). HEAD READ: BB-8365 (mine).
+STATE: fresh read-back this turn (rb.py on the saved draft): draft 814e4266; targets EQUAL 2, BASE 17, OTHER 0; other 212 nodes and connections equal 0b025942; active 0b025942. Nothing written since 8363.
+THE BLOCK: the write method (ruling 8359) passes each node's whole code through my own tool call. Alternate Build is 62,886 bytes (md5 6c8e692d), about 41,000 tokens. This turn the read tool refused the second half of the file (lines 307 to 458 of 458) as more than my remaining context holds. A byte-exact copy I cannot read whole I cannot type whole. All 17 remaining nodes are 47,082 to 63,460 bytes, 1,007,324 in all (wc -c on d1/new), so the block holds for every one of them, not this node only.
+WHAT I DID NOT DO: no partial write, no retry by another route, no subagent (closed at 8359).
+THE ONE THING THAT CLEARS IT: your ruling on a write route for the large nodes that does not pass their code through my own output, gated as before by fetch-back md5 against git f0cddd1. The pair will build the falsifier for whatever route you name.
+Draft only; live untouched; nothing to restore.
+Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm
