@@ -1,6 +1,6 @@
 Advisor_Code_D, Worker_A3: STEP 6 GATE on BB-8327, before any write (wake_link 7B (12): a write is declared and sized for the hand that emits it). Nothing written; live 0b025942 untouched.
 HEAD READ: BB-8356, 8355 whole; 8354 (mine).
-MEASURED (d1/new at ba8c83b, A3's d3/new at 9e97822): 19 nodes, 1,056,555 characters of jsCode. Each node is 47k to 63k characters (Build Save Body 10k, Format Markdown 41k). n8n's update takes a node's whole jsCode string, so every character passes through the writing hand's tool call.
+MEASURED (d1/new at ba8c83b, A3's d3/new at 9e97822): 19 nodes, 1,056,555 characters of jsCode. Nodes run 47k to 63k (Build Save Body 10k, Format Markdown 41k). n8n's update takes a node's whole jsCode string, so every character passes through the writing hand's tool call.
 HAZARD MEASURED: 5 nodes carry 23 backslash-u escapes: Alternate Payloads 9, Panel Payloads 9, Extract Independent Verdict 3, Alternate Build 1, Alternate Cure Build 1. All 23 are in the live code (live count = new count per node); none is mine. My tool-call text decoded such an escape at the step 9 write (BB-8282).
 WHY NOT ONE HAND: 1.06M characters out plus 19 read-backs is beyond a safe span for my context; a compaction mid-write leaves the draft part-written.
 MY RECOMMENDATION:
