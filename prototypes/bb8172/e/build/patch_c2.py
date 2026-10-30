@@ -18,8 +18,11 @@ R2=("   if((gs==='UNDERDETERMINED'||gs==='STANDS')&&DRV_STATE.test(line)&&!DRV_A
     "    items.push({rule:'K-S',side:null,link:sid,line});marks.push('[AUDIT v22: DEBATE RULE VIOLATION (K-S) -- '+sid+' '+gs+' rests on a single verse not stating a link or its contrary and names no round that answered the witness. REVIEW THIS ROW.]');}\n"
     "   // BB-8172 C2: marks only, never items, so nothing here reaches the cure, drv_uncured or a grade (8192, 8193).\n"
     "   if(gs==='UNDERDETERMINED'||gs==='STANDS'){const sid=vs?(u.match(/^(?:[-•]|\\d+[.)])?\\s*(D\\d+\\s+VS\\.?\\s+C\\d+)/)||[null,'D'+ms[1]])[1].replace(/\\s+VS\\.?\\s+/,' vs '):'D'+ms[1];\n"
-    "    if(DRV_STATE.test(line)&&(DRV_ANS.test(line)||DRV_BARE.test(line)))marks.push('[AUDIT v22: DEBATE RULE VIOLATION (K-S2) -- '+sid+' '+gs+' gives as a ground that a verse does not state a link or its contrary, beside the round it names; that is never a ground. REVIEW THIS ROW.]');\n"
+    "    if(DRV_STATE.test(line)&&(DRV_ANS.test(line)||DRV_BARE.test(line)))marks.push('[AUDIT v22: DEBATE RULE VIOLATION (K-S2) -- '+sid+' '+gs+' gives as a ground that a verse does not state a link or its contrary, beside '+(DRV_ANS.test(line)?'the round it names':'a round it names without a bracket, which K-S does not read as named')+'; that is never a ground. REVIEW THIS ROW.]');\n"
     "    const un=drvUnans(line);if(un)marks.push('[AUDIT v22: DEBATE RULE VIOLATION (K-U) -- '+sid+' '+gs+' says a witness went unanswered (\"'+un+'\"); a witness left unanswered is a BROKEN ground. REVIEW THIS ROW.]');}}}\n")
+A3="const nflag=(raw.slice(raw0.length).match(/REVIEW THIS ROW/g)||[]).length;\n"
+R3=("// BB-8172 F1 (BB-8203): the K-U and K-S2 marks are not counted here, so they move neither audit_flags nor data_class.\n"
+ "const nflag=(raw.slice(raw0.length).replace(/\\[AUDIT v22: DEBATE RULE VIOLATION \\((?:K-U|K-S2)\\)[^\\n]*/g,'').match(/REVIEW THIS ROW/g)||[]).length;\n")
 out=[]
 for f in sorted(os.listdir(B)):
   t=open(os.path.join(B,f),encoding='utf-8').read()
@@ -27,6 +30,10 @@ for f in sorted(os.listdir(B)):
   if (c1,c2)==(0,0): open(os.path.join(N,f),'w',encoding='utf-8').write(t); out.append((f,'unchanged')); continue
   if (c1,c2)!=(1,1): sys.exit('REFUSED '+f+' anchors '+str((c1,c2)))
   n=t.replace(A1,R1).replace(A2,R2)
+  if(f=='Extract_Independent_Verdict.js'):
+    if n.count(A3)!=1: sys.exit('REFUSED '+f+' nflag anchor '+str(n.count(A3)))
+    n=n.replace(A3,R3)
+  elif n.count(A3): sys.exit('REFUSED nflag anchor outside EIV in '+f)
   assert n!=t
   open(os.path.join(N,f),'w',encoding='utf-8').write(n); out.append((f,'patched'))
 for f,s in out:
