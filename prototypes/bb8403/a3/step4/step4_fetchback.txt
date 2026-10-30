@@ -1,0 +1,15 @@
+LIVE versionId 64e6d7b7-64a8-4328-9ebc-3f38e521c679 activeVersionId 64e6d7b7-64a8-4328-9ebc-3f38e521c679 active True nodes 231
+BASE versionId 4daa72a6-11ed-44f3-8674-9a3ac340c94c nodes 231
+name sets equal True only_new [] only_old []
+EQUAL Build Diagnostic Prompt live dc6e4790 git dc6e4790 base 60b84f8a non-code fields equal base: True
+EQUAL Build Independent Verdict live bee95ba0 git bee95ba0 base 8df9a3df non-code fields equal base: True
+EQUAL Build Synthesis live de591095 git de591095 base 969a4fe1 non-code fields equal base: True
+EQUAL Format Markdown live 42bc64de git 42bc64de base 9308e7db non-code fields equal base: True
+EQUAL Init Seats live b7a81d51 git b7a81d51 base 75443977 non-code fields equal base: True
+EQUAL Resolve Seats live fa39c165 git fa39c165 base 428c51ec non-code fields equal base: True
+TARGETS EQUAL 6 of 6
+OTHER nodes 225 equal base 225 diff []
+connections equal base True
+settings equal base True
+pinData equal base True
+staticData equal base True
