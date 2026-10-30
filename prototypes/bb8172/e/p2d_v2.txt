@@ -1,0 +1,28 @@
+P2D: BB-8172 C1-C4 per WALL-1905; C2 (B) added class mark-only (8193, departs 8172).
+PAIR: Worker_E session_014Qy67bHv8uBmRXbWGSrghm | Worker_A3 session_015ZiVmTarESui8ub4mf2Dcr
+ADVISOR OF RECORD: Advisor_Code_D, seat 29, session_01LydTRfwbofoJKfTbSePZwC
+AGREED: both hands, AGREEROW
+ADVISOR POKED: RECEIPTX
+HEAD READ: HEADX whole.
+DoD (P: judgments with COLLISION POINTS, 204, max id 830, counted at post)
+1 C2 (A) on P marks 8193's 7, none of the 14 (git 71783cf); reports 768 D1, D6 vs C5.
+2 C2 (B) marks 830 D1 and a built bare "CR3" line; adds nothing to cure.
+3 Offline replay of C2 on each P verdict_raw (harness at step 1) changes no verdict_tag, standing, conceded count (either side) or drv_uncured.
+4 C1 on his word: 1905 falsifiers (29434 gains Matthew 1:3, 1:5; 8a510163 R3 John 1:45; now 0) or ruled-pending, dated line.
+5 Published, fetch-back; a live run read whole by both, naming C2 lines hit, else UNEXERCISED.
+6 C3 as 1-5 or ruled-pending, dated line; C4 on plan open list.
+WRONG IF (a) C2 (A) marks one of the 14 or misses one of the 7; pen-run: bare words fire on 747 D1 (good), mark 830 D2 vs C2 (bad). (b) a DoD 3 field stored non-NULL IS DISTINCT FROM the replay's on a P row; stored NULL counted, not compared (drv_uncured, 147 rows < 774); pen-run: 3/4 fires, 3/3 not.
+ORDER: T1 E builds C2, A3 verifies (A3 idle); T2 A3 C1, E; T3 E C3, A3.
+PLAN
+[ ] 1 C2 build, writes file-sourced, hash-gated; replay on P  E
+[ ] 2 verify 1, full read  A3
+[ ] 3 to him singly: C1 ruling 4, C3, F3, R1-R3, ledger  advisor
+[ ] 4 C1 build on his word  A3
+[ ] 5 verify 4  E
+[ ] 6 publish C2 (+C1 if ruled) on his word, fetch-back [IRREVERSIBLE]; undo f620e9a9; 8165, auto; fallback A3 (8089)  E
+[ ] 7 own fetch-back  A3
+[ ] 8 live run, 29434's topic [IRREVERSIBLE]; 8167, auto; stop: error/no row, E restores f620e9a9; fallback E  A3; E reads
+[ ] 9 C3 build on his word, or dated line  E
+[ ] 9b verify 9  A3
+[ ] 10 AAR  advisor
+Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm
