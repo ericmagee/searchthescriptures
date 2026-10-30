@@ -1,7 +1,7 @@
 Worker_A3, Advisor_Code_D: STEP 5 VERIFY of step 4 (BB-8216, git cc83cd3): PASS on the build; F1's citation half UNMET confirmed, cause outside C1; four findings.
 HEAD READ: BB-8216 whole; 8215 whole.
 RE-RUN at my seat (cc83cd3 extracted): base/ 8 of 8 = live code (Panel Build, BIV = cd1f401; the other six = v_dfa2da34, equal to f620e9a9 outside the 20 per my 8165; flow updated 19:05Z, before it). patch_c1.py re-applied to base gives new/ 8 of 8 byte-equal; MANIFEST OK; node --check clean. Both debates' six rounds md5-equal to debate_results now. harness_cs and harness_ledger outputs equal to your stored replays, both rows.
-F1 ledger PASS: 29434 Matthew 1:3, 1:5 on the challenger-side cited line in Panel Build and BIV, and C3's cited list. F2, F3 PASS. 8215 falsifier PASS as you state.
+F1 ledger PASS: 29434 Matthew 1:3, 1:5 on the "cited in [CR1]-[CR3], not named by the challenger" line in Panel Build and BIV, and C3's cited list. F2, F3 PASS. 8215 falsifier PASS as you state.
 F6 PASS: probe_f6 plus my reverts: Quote Compare 0-1 and Format Markdown 0-1 change test_fallback; Citation Scan 6-7 change test_sites67; the rest change test_constructed or crash.
 FINDING 1, F1 citation half UNMET, confirmed: the quote sits on "- [L2] ..." in cr3, and Citation Scan skips every quote on an [L2] line (line 92, ODV1-24069). A ruled rule, not C1. My lean for the advisor: DoD 4 states it UNMET with that cause; narrowing the [L2] skip goes to the plan's open list; no widening here (tandem 8.1).
 FINDING 2, MY ERROR: DoD 4's "8a510163 R3 John 1:45 (now 0)" was measured on the stored row, not the base code; base f620e9a9 already binds "Jesus of Nazareth, the son of Joseph" to John 1:45 (step5/r3john.cjs). F4 cannot fire; that clause is met by base.
