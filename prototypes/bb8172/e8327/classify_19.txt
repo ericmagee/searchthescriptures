@@ -1,0 +1,40 @@
+BB-8327 step: the 19 lines (WALL-1915) classified by line against the D1 net (WALL-1913), pen Worker_E, 2026-10-30.
+Source lists: Worker_A3 git 82023f8 classify_29662.txt (12) and git e6ad4f1 baseline_29609.txt (7).
+Texts read by SQL this turn: judgments 837 (glm), 839 (grok), 834 (glm), 836 (grok); single judge = debate_results.independent_verdict_raw of ODV1-29662-0b7exh6b and ODV1-29609-uo88rcr2.
+NET (1913): "a line that sets aside a chained premise, or the pressing side's own chain read together, on the ground that no one verse in it states the link or its contrary in its own words; a line that judges one pressed witness under the silent-verb sentence is not netted." Excluded (1909): a quoted debater row; a line answering a side's own claim that a named verse says what it does not.
+ROLE TEST USED: NETTED when the rows set aside are the pressing side's declared link (the collision's C-number, or rows weighed as one reading) or a declared link on its one verse (1916). NOT NETTED when each verse is a witness pressed on its own and judged by its own words (the silent-verb test), or the line reads one verse's wording without setting aside a chain.
+
+RUN 29662 (12)
+ 1 glm 837 D3 vs C1: "Isaiah 7:16 and 8:3-4 state the sign's span in Isaiah's day in their own words but do not state that Matthew 1:23 misapplies the virgin" -- NETTED (C1, two rows)
+ 2 glm 837 D4 vs C2: "'thy father' in the mother's mouth and 'his parents' in the narrator's mouth state an address and a household word but in their own words state no begetting" -- NETTED (C2, two rows)
+ 3 glm 837 D6 vs C2: "the seed rows state David's bowels, body, loins and flesh and never name Joseph as begetter, so they do not in their own words contradict the keystone" -- NETTED (C2, seed rows)
+ 4 grok 839 reasoning: "Named-father speeches and the Davidic seed rows were answered in [CR2] and [CR3], and read together they do not state that Joseph begat this child." -- NETTED (chain read together)
+ 5 grok 839 D5: "Job 14:1 and Matthew 11:11 pressed in [DR1] do not state a father for this child" -- NETTED (two rows weighed as one idiom; C6 at glm 837)
+ 6 single D1: "[CR2] answers John 1:45, John 6:42, and Luke 2:48 as reported speech; the passive ἐγεννήθη (egennēthē, \"was born\") does not state a begetting." -- NOT NETTED, BORDERLINE: the stating clause reads one verse (Matthew 1:16, the defender's own) and sets aside no chain; the named-father rows are answered on footing ("reported speech")
+ 7 single D2 vs C3: "the challenger's parallel does not state that the womb-conception is not of the Spirit" -- NETTED (one declared link, C3, on its one verse John 1:13; 1916)
+ 8 single D5 vs C6: "the Job/Matthew 11 idiom does not state a father for Christ" -- NETTED (C6)
+ 9 glm 837 D2 vs C3: "none of those rows states that Matthew 1:20 is not a womb-conception cause" -- NETTED (C3, four rows)
+10 glm 837 D5 vs C6: "none of them states that Galatians 4:4 does not, in this case, stand beside Matthew 1:16 and Luke 1:35" -- NETTED (C6, four rows)
+11 grok 839 D1: "John 1:45, John 6:42, and Luke 2:48 pressed in [DR1] ... ; no witness states that Joseph begat Jesus." -- NETTED (named-father rows, C2 at glm 837, dismissed verse by verse)
+12 single D6 vs C2: "the challenger's father-house link is not stated as Joseph's begetting" -- NETTED (a declared link)
+29662: NETTED 11, NOT NETTED 1 (line 6).
+
+RUN 29609 (7)
+13 glm 834 D1 vs C4 (Acts 2:30): "the rows do not name the immediate parent" -- NETTED (C4)
+14 glm 834 D6 vs C4 (Romans 1:3): "the seed rows state Davidic descent by the flesh but name no immediate begetter" -- NETTED (C4)
+15 grok 836 defense standing: "These verses do not in their own words state that Joseph begat the child, so they are not a broken-link ground; they still leave the listed premises unexhibited." -- NOT NETTED: "these verses" are [DR1] presses each on its own link (Job 15:14, Psalm 139:13-16, Numbers 1:2 on link 4; Jeremiah 22:24, Ezra 3:2, 1 Chronicles 3:17-18 on link 5; Hebrews 7:14 on link 6), each judged by its own words: the silent-verb test. A count-based detector marks this line (plural subject); the role test does not.
+16 grok 836 D1: "Hebrews 7:14 \"sprang out of Juda\" does not name a begetter of the child." -- NOT NETTED: one pressed witness ([DR1] press on link 6), no C-number
+17 single reasoning: "the challenger's seed rows do not name an immediate begetter" -- NETTED (seed rows)
+18 single D2 vs C2 (John 1:13): "the [L1] \"born of God\" rows do not state a human father" -- NETTED (C2)
+19 single D6 vs C4 (Acts 2:30): "[L1] \"fruit of his loins, according to the flesh\" does not state an immediate begetter" -- NETTED (one declared link, C4, on its one verse; 1916)
+29609: NETTED 5, NOT NETTED 2 (lines 15, 16).
+
+RESTATED COUNT: NETTED 16 of 19; NOT NETTED 3 (6, 15, 16), quoted above. All 16 favour the defender.
+
+OUTSIDE THE 19, read on the same texts, candidates for the netted set (for A3's verify; not counted above):
+ a single 29662 D3 vs C1: "Isaiah's timing leaves Joseph's begetting unstated" (C1)
+ b single 29662 D4 vs C2: "the seed line names David rather than Joseph's begetting" (C2)
+ c glm 837 D1 vs C2 (A3 BOTH): "the named-father rows (John 1:45, John 6:42, Luke 2:48, Luke 4:22) are reported speech that in their own words assert no begetting" (C2); its other limb reads one verse (Matthew 1:16)
+ d single 29609 D1 vs C4 (Romans 1:3): "[L1] \"seed of David according to the flesh\" does not by itself name an immediate begetter" (one declared link)
+ e glm 834 D3 vs C1: "the marriage-vocabulary rows do not by themselves state a union before the birth" (C1)
+So the 19 are a floor, not the whole netted set on these two runs.
