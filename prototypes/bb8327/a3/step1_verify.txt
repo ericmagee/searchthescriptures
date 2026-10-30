@@ -1,0 +1,28 @@
+BB-8327 step 1 (Worker_A3): verify by line of Worker_E's classify_19.txt (git 4f47e54) against the D1 net (WALL-1913) with the exclusions (WALL-1909) and 1916.
+Texts read whole by SQL, 2026-10-30, finished by 08:43 CDT (clock read): debate_judgments 837 (glm), 839 (grok) [run 29662]; 834 (glm), 836 (grok) [run 29609]; debate_results.independent_verdict_raw of ODV1-29662-0b7exh6b and ODV1-29609-uo88rcr2.
+QUOTES: all 24 (19 + a-e) found word for word in the named text on my whole read (line 11 carries E's ellipsis; the elided words are "were answered in [CR2] as reported speech under Luke 3:23, and the begat-pattern break was re-exhibited in [CR3]").
+
+THE 19
+ 1-5, 7-14, 17-19: NETTED, CONCUR (each sets aside a declared link or the pressing side's rows read together on the stating ground).
+ 6 (single 29662 D1, the passive at Matthew 1:16 "does not state a begetting"): NOT NETTED, CONCUR. One verse read for its own words, the defender's own row; no chain set aside.
+ 16 (grok 836 D1, "Hebrews 7:14 ... does not name a begetter of the child"): NOT NETTED, CONCUR. One pressed witness judged by its own words (silent-verb sentence).
+ 15 (grok 836 CONCEDED LINKS: "These verses do not in their own words state that Joseph begat the child, so they are not a broken-link ground"): COUNTER, NETTED. "These verses" are the [DR1] presses set out per link in the same paragraph, two to four rows against each link (link 1: Hebrews 7:14, Genesis 16:10, Genesis 24:60, Isaiah 54:3; link 4: Job 15:14, Psalm 139:13-16, Numbers 1:2; link 5: Jeremiah 22:24, Ezra 3:2, 1 Chronicles 3:17-18), dismissed together on the stating ground. That is the case of the ruled clause (BB-8266): "When the witnesses pressed against a link are the pressing side's own chain read together ... that no one of them states the contrary in its own words is the stating-verse test DG-61 retires". Role, not count: several rows against one link, read as one press.
+ Restated: NETTED 17 of 19; NOT NETTED 2 (6, 16).
+
+E's CANDIDATES a-e: all IN.
+ a single 29662 D3 vs C1 "Isaiah's timing leaves Joseph's begetting unstated": C1's rows set aside on the stating ground. IN.
+ b single 29662 D4 vs C2 "the seed line names David rather than Joseph's begetting": C2 seed rows. IN.
+ c glm 837 D1 vs C2 "the named-father rows (...) are reported speech that in their own words assert no begetting": four rows (C2) set aside on the stating ground (the reported-speech clause beside it is the defender's answer, not a substitute). IN.
+ d single 29609 D1 vs C4 "\"seed of David according to the flesh\" does not by itself name an immediate begetter": one declared link on its one verse (1916). IN.
+ e glm 834 D3 vs C1 "the marriage-vocabulary rows do not by themselves state a union before the birth": C1 rows. IN.
+
+FOUND ON THE WHOLE READ, NOT IN classify_19.txt (for E's concur or counter):
+ f glm 837 reasoning: "each collision resolved into two footed inferences, neither side's witnesses stating the other's contrary in their own words." Both sides' chains, read together, on the stating ground. IN (either side).
+ g single 29662 reasoning: "[L3] the seed rows name David's body, not Joseph's begetting". Same ground as b, in the reasoning sentence. IN.
+ i glm 834 KEYSTONE: "none of those witnesses, read together, names a human begetter of the child". The pressing side's rows read together. IN.
+ j glm 834 D5 vs C4 (Luke 1:5): "no verse states Mary's descent either way". Sets aside the DEFENDER's D5 chain (the Mary-line inference) as well as the challenger's; a stored defender-side specimen for DoD 2 beside the built one. IN (either side).
+ Reviewed and NOT netted: grok 839 D6 ("answered in [CR2] and [CR3] as naming David's body, not a begetting by Joseph": reports the defender's answer as the ground); grok 836 D5 vs C4 ("[CR3] ... stated that no verse names Mary's father": reports the defender's own statement); glm 834 D4 vs C5 ("the idiom rows alone do not exclude a father": favours the pressing side, no stating ground against it).
+
+NETTED SET ON RUNS 29609 AND 29662: 17 of the 19, plus a, b, c, d, e, f, g, i, j = 26 lines. NOT NETTED: 6, 16, and the three reviewed above.
+NOTE FOR D1's cure test (stored specimen): single 29609 D6 vs C4 was CURED under K-S by a restatement that keeps the stating clause ("does not by itself name an immediate begetter"); under D1 that restatement is UNCURED.
+NOT CHECKED: other judgments of these runs (gemini 835, 838 not in the 19 or a-e); E's strpos script itself (I read the texts whole instead).
