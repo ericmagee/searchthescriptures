@@ -3,8 +3,8 @@
 import os,sys,hashlib
 B='base';N='new'
 A1="const DRV_ANS=/[\\[(](?:CR|DR)[23]\\b/i;\n"
-R1=A1+("// BB-8172 C2 (B): a bare round (CR2, CR3, DR2, DR3 without a bracket) counts as a named round for the K-S2 mark only.\n"
- "const DRV_BARE=/(?:^|[^\\[(A-Za-z0-9])(?:CR|DR)[23]\\b/i;\n"
+R1=A1+("// BB-8172 C2 (B): a round named without a bracket after in, at, by or from (\"answered in CR3\") counts as named, for the K-S2 mark only.\n"
+ "const DRV_BARE=/\\b(?:in|at|by|from)\\s+(?:CR|DR)[23]\\b/i; // a round named as answering (\"answered in CR3\"), never a label such as \"Challenger-DR1/DR2\" (642)\n"
  "// BB-8172 C2 (A): K-U, a STANDS or UNDERDETERMINED line that itself says a witness went unnamed or unanswered (8193, the 7 MARK lines).\n"
  "// Positive forms only; a form counts only when the clause before it (since the last ; . or --) holds no negator, so \"no witness ...\n"
  "// was left unanswered\" and \"neither reading was left unanswered\" are not marked (8193, the 14 NO MARK lines).\n"

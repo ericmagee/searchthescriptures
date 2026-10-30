@@ -328,8 +328,8 @@ const DRV_WORDS=/\b(?:unanswered|not answered|unnamed|not named|none named|neith
 // contrary, naming no later round ([CR2], [CR3], [DR2], [DR3]) that answered the witness. Sent to the cure to be regraded on the answered test.
 const DRV_STATE=/\b(?:do|does|did)\s+not\s+state\b|\bnot\s+stated\b|\bnever\s+states?\b|\bneither\s+states?\b|\bnor\s+states?\b|\bno\s+(?:\S+\s+){0,4}?(?:verse|row|witness|quotation|passage|text)s?\b(?:\s+\S+){0,4}?\s+(?:states?|names?)\b|\bno\s+\[L[1-4]\](?:\s*\/\s*\[L[1-4]\])*\s+(?:states?|names?)\b|\b(?:met\s+by|without)\s+any\s+(?:verse|row|witness|quotation)\s+that\s+(?:states?|names?)\b/i;
 const DRV_ANS=/[\[(](?:CR|DR)[23]\b/i;
-// BB-8172 C2 (B): a bare round (CR2, CR3, DR2, DR3 without a bracket) counts as a named round for the K-S2 mark only.
-const DRV_BARE=/(?:^|[^\[(A-Za-z0-9])(?:CR|DR)[23]\b/i;
+// BB-8172 C2 (B): a round named without a bracket after in, at, by or from ("answered in CR3") counts as named, for the K-S2 mark only.
+const DRV_BARE=/\b(?:in|at|by|from)\s+(?:CR|DR)[23]\b/i; // a round named as answering ("answered in CR3"), never a label such as "Challenger-DR1/DR2" (642)
 // BB-8172 C2 (A): K-U, a STANDS or UNDERDETERMINED line that itself says a witness went unnamed or unanswered (8193, the 7 MARK lines).
 // Positive forms only; a form counts only when the clause before it (since the last ; . or --) holds no negator, so "no witness ...
 // was left unanswered" and "neither reading was left unanswered" are not marked (8193, the 14 NO MARK lines).

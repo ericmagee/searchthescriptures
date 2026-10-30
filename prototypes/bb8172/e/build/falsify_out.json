@@ -1,0 +1,33 @@
+{
+ "rowsLoaded": 194,
+ "DoD1_missed": [],
+ "DoD1_falseMarks": [],
+ "DoD1_reported": [
+  "768 D1: not marked",
+  "768 D6 vs C5: not marked"
+ ],
+ "KU_all": [
+  "774 D3 vs C4",
+  "795 D1 vs C5",
+  "797 D1 vs C4",
+  "803 D1",
+  "817 D6 vs C4",
+  "821 D4",
+  "830 D2 vs C2"
+ ],
+ "KU_outside_23": [],
+ "DoD2_830D1": true,
+ "KS2_count": 26,
+ "KS2_rows": 16,
+ "DoD2_bare": {
+  "new_KS2": true,
+  "new_items": [
+   "K-S"
+  ],
+  "base_items": [
+   "K-S"
+  ],
+  "itemsEqual": true
+ },
+ "control_no_state_no_mark": true
+}
