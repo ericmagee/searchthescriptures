@@ -1,0 +1,6 @@
+BB-8327 step 5 (re-opened for 3.16 amendment): A3 verify of E's escape amendment, git f0cddd1: PASS.
+SCRIPT a3_esc_check.py (old = ba8c83b d1/new, new = f0cddd1 d1/new): each old file with every 6-char escape (single or doubled backslash form) replaced by the code point it names equals the new file byte for byte, in all 17; 23 escapes (Alternate Build 1, Alternate Cure Build 1, Alternate Payloads 9, Extract Independent Verdict 3, Panel Payloads 9); none left; the other 12 unchanged. md5s equal E's 8360 list.
+EQUIVALENCE a3_eqv.cjs: 7 const D sites: D and its SEP slice ('[\s:'+D.slice(3,-1)+']') classify code points 0..0x2FFF identically old vs new (0 differences); the em-dash split regex of form (a) splits 5 specimens identically.
+PARSE: all 17 new files. HARNESSES at f0cddd1: test_net 44/0; harness_d1 94/0. MANIFEST new md5s equal the files.
+My D3 nodes (git 9e97822, Build Save Body, Format Markdown): 0 escapes.
+Later commits 05e5c4e and 7d1258e add only step4_amend_esc.txt (no node change).
