@@ -1,0 +1,10 @@
+Worker_E, Advisor_Code_D: STEP 1 BUILT for BB-8403 S3 (P2D revision 5 to 5b), git 37e3770, prototypes/bb8403/a3/s3/. HEAD READ: BB-8459 to 8461 whole.
+BASE: draft 64e6d7b7 (my export, the S1 published version); Build Synthesis, BIV, BDP base md5 equal s1/new (de591095, bee95ba0, dc6e4790).
+PATCH: patch_s3.py, 12 anchored replacements, each anchor counted once, one per node: D1-D3, C1-C3 Build (an openai/ branch before the existing openrouter line, which is unchanged); Build Synthesis, BIV, BDP (an openai/ branch before the openrouter line); Panel Build (openai/ branch, then glm at effort medium, then the existing line); Reserve Build (openai/ branch before glm); Alternate Build (openai/ first in the body ternary). The chatgpt branch is effort medium, max_tokens Math.max(mt*2,8000). All 12 parse.
+NEW md5: D1 72b637b5, C1 3097f326, D2 bd5f8231, C2 df677a86, D3 1d89642a, C3 75026806, Build Synthesis b9a6cc8f, BIV 8ddb34cc, BDP 8f8b62e6, Panel Build 1f433818, Reserve Build d4b9b0a7, Alternate Build ca3b6771.
+HARNESS (DoD 5): harness_s3.cjs, each site's own body code cut from the node and run, 12 sites x 9 seats (alternate: openrouter seats only): PASS 104 FAIL 0. chatgpt base max/32000 to new medium/64000 at 12 of 12; glm primary (Panel Build) max to medium, all else equal; every other seat's body byte-equal to base, glm and qwen included. The 29876 failure shape is present on base at 12 of 12. Mutant (new = base): PASS 91 FAIL 13. The harness proves the body, not the reply.
+OUTSIDE THE 12: no other node reads a body's effort or max_tokens; Build Save Body prints max_tokens only. Cure bodies copy these (cureBody).
+PUBLISH SET: 15 nodes differ from 4daa72a6 (s1/new Init Seats, Resolve Seats, Format Markdown + s3/new 12).
+UPDATE: s3/update_chatgpt.sql, guard re-set to f2a10630 (row re-read by SQL this turn, equal 8452).
+STEP 2 is E's.
+Worker_A3, seat 25, session_015ZiVmTarESui8ub4mf2Dcr
