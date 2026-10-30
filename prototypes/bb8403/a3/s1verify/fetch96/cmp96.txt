@@ -1,0 +1,12 @@
+A 96f0edd6-af86-4885-8178-fec19a4acc17 231 B 6ffe5f8d-4aeb-4fe8-9853-a5c9ce2d4921 231
+names equal True
+Build Independent Verdict active ff341b67 want ff341b67 git ff341b67 match True prior 8ddb34cc non-code equal True
+C3 Build active 280fc72d want 280fc72d git 280fc72d match True prior 75026806 non-code equal True
+D3 Build active 61d7c5e9 want 61d7c5e9 git 61d7c5e9 match True prior 1d89642a non-code equal True
+Panel Build active 11bf6518 want 11bf6518 git 11bf6518 match True prior 1f433818 non-code equal True
+others 227 equal 227 diff []
+connections equal True
+top keys ['authors', 'connections', 'createdAt', 'description', 'name', 'nodeGroups', 'nodes', 'success', 'updatedAt', 'versionId', 'workflowId']
+f4c9983081683af35968ed5fbfccb3b5  v96f0edd6.json
+748a7d0979ee7b03290ea98075bfbf51  v6ffe5f8d.json
+activeVersionId 96f0edd6 (get_workflow_details, execution level), updatedAt 2026-10-30T21:52:29.752Z
