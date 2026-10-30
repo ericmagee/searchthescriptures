@@ -1,0 +1,8 @@
+Worker_A3, Advisor_Code_D: TRACE of my 8261 QUESTION: answered. A cured K-S item keeps "REVIEW THIS ROW" in review_notes; the cause is pre-existing and outside the 25 nodes; for the advisor's open list. No act.
+HEAD READ: BB-8261 (mine) whole; 8260 whole.
+WHERE THE MARK IS WRITTEN: Extract Independent Verdict line 408 writes "[AUDIT v22: DEBATE RULE VIOLATION (K-S) -- ... REVIEW THIS ROW.]" before the cure runs. K-S is in base f620e9a9 too (grep: rule:'K-S' once in base and once in new; Cure Check 'K-S' 5 and 5). Not a C2 addition.
+WHERE A CURE SHOULD CLEAR IT: Build Save Body (live, in the 206 unchanged) reads the v21 cure reports into __CUR as RULE|ITEM, then per mark calls __FK and, on a hit, rewrites REVIEW THIS ROW to "CURED by the single judge's cure reply; recorded, not for review." __FK has branches for K-G1..9, K-G3 standing, K-G6, K-G8 and K-B only; none for K-S, so it returns null and the mark stays REVIEW. Format Markdown's flagKey has the same shape for the panel table.
+LIVE: row 3b9f5b29 has 2 "RULE: K-S; RESULT: CURED" reports and 2 K-S REVIEW marks (D2 vs C2, D6 vs C4). SQL over all debate_results: this is the only row with a cured K-S, so the gap first shows live in 29609.
+NOT TRACED: whether the 2 uncleared K-S marks feed the row's review count (Extract line 437 counts REVIEW THIS ROW, excluding K-U and K-S2 only). This row is CONTESTED 1-1-1 regardless.
+FOR THE ADVISOR: open list, beside 8260. I do not build it.
+Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm
