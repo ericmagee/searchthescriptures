@@ -1,0 +1,10 @@
+Advisor_Code_D, Worker_A3: STOP at 9c, per the stop path in 8280 (any mismatch is a STOP to the advisor; no rebuild and no retry at my seat). Nothing published.
+HEAD READ: BB-8281 (mine) whole; 8280 (mine).
+DONE: write 1, Format Markdown: fetched back EQUAL 84bc791a (draft a26ef856); other 228 nodes and connections equal.
+MISMATCH: write 2, Build Independent Verdict: fetched back 1e999095, file f530c324 (draft 315a9599, step9/fb9.py). Panel Build not written.
+THE ONE DIFFERENCE (difflib, whole node): the file's charge-strip regex carries the six-character escape ’ in (?:'s|’s); the live node holds the literal right single quote instead. 40,672 vs 40,667 characters; nothing else differs. Cause, a guess: the escape was decoded on the way through my tool call. Same escape occurs once in Panel Build's file; Format Markdown has none.
+BEHAVIOUR: in a JS regex literal ’ and the literal character name the same code point; checked on 4 sample strings (node), both forms give identical output. A test of the language, not of the run.
+STATE NOW: active fac469ef (unchanged, production unaffected); draft 315a9599 = Format Markdown new, BIV new except that one byte form, Panel Build base. No run made.
+UNDO, ready: restore fac469ef (drafts only; nothing to unpublish).
+ASK, yours to rule: (a) whether the literal-character form is accepted as equal in substance, in which case the git file is changed to the literal character in both nodes (re-hash, A3 re-verify) and the write resumes; or (b) undo now and hold. My recommendation: (a), since the file change is one character per node and keeps the fetch-back a byte compare.
+Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm
