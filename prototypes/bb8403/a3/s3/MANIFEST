@@ -1,0 +1,29 @@
+BB-8403 step 1 rebuild for S3 (Worker_A3, P2D revision 5/5a, BB-8455/8458). Base: draft 64e6d7b7 (my export of 18:59 CDT, the published S1 version; Build Synthesis, BIV, BDP base md5 equal s1/new). patch_s3.py makes 12 replacements, each anchor counted exactly once. Publish set = s1/new Init_Seats, Resolve_Seats, Format_Markdown + s3/new 12 nodes = 15 nodes differing from 4daa72a6.
+base  6c8e692dc2222b8d97af65fc2118a870  Alternate_Build.js
+base  dc6e479008239435461ee9328d091de7  Build_Diagnostic_Prompt.js
+base  bee95ba039f39779ba8fc0f47e917315  Build_Independent_Verdict.js
+base  de591095dce0a9f6b8ab6b4947bcd471  Build_Synthesis.js
+base  c51775f26893740169bffa827295251b  C1_Build.js
+base  a46071b42f5491029007decb222ff217  C2_Build.js
+base  554fa8c139f931be69d1a2e73320b358  C3_Build.js
+base  f3508d1195bbf6f28426c6112f193249  D1_Build.js
+base  dd7af475a76f3347c4e8e790e6b74ffb  D2_Build.js
+base  ea78d064f7c6bfdb90d11c0ac8a7e9ff  D3_Build.js
+base  b7e2ea4104501fadb5b4944976175a68  Panel_Build.js
+base  b33b802fe7f9c52e6e3be212f964ea05  Reserve_Build.js
+new   ca3b677162b08eb5c7979e9ec19a7f9b  Alternate_Build.js
+new   8f8b62e642212ef3efad550d48f90bc5  Build_Diagnostic_Prompt.js
+new   8ddb34ccfdece180a7a1527df8bbc86f  Build_Independent_Verdict.js
+new   b9a6cc8f5b630b9f48f5b4a55ee60072  Build_Synthesis.js
+new   3097f326cad2702f057aad27ec80a824  C1_Build.js
+new   df677a86c4deba3b5ca35d285ce8bf93  C2_Build.js
+new   75026806034824795e1a90a1670aa91d  C3_Build.js
+new   72b637b548a8ad104aa4f184b72da797  D1_Build.js
+new   bd5f823110aea79b871985f462479930  D2_Build.js
+new   1d89642aeb2a30b36965d6940d12fde4  D3_Build.js
+new   1f433818d80b0b098536f0192081e1de  Panel_Build.js
+new   d4b9b0a7ab02a3075f56697bf5f054ef  Reserve_Build.js
+8b6eecce9a419eb9dbeff0d8b21b3569  patch_s3.py
+102992a951c618bece30d5152343f12b  harness_s3.cjs
+3b736de48741afd3c8019c44daf52ed6  update_chatgpt.sql
+harness_s3.cjs: 12 sites x 9 seats (alternate: openrouter seats only): sites 12; failure shape on base 12/12; PASS 104 FAIL 0. Same harness with new = base: PASS 91 FAIL 13 (12 chatgpt sites + glm primary): it can fail.

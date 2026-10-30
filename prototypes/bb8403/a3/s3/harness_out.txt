@@ -1,0 +1,14 @@
+D1_Build chatgpt: base max/32000 -> new medium/64000
+C1_Build chatgpt: base max/32000 -> new medium/64000
+D2_Build chatgpt: base max/32000 -> new medium/64000
+C2_Build chatgpt: base max/32000 -> new medium/64000
+D3_Build chatgpt: base max/32000 -> new medium/64000
+C3_Build chatgpt: base max/32000 -> new medium/64000
+Build_Synthesis chatgpt: base max/32000 -> new medium/64000
+Build_Independent_Verdict chatgpt: base max/32000 -> new medium/64000
+Build_Diagnostic_Prompt chatgpt: base max/32000 -> new medium/64000
+Panel_Build chatgpt: base max/32000 -> new medium/64000
+Panel_Build glm primary: base max/32000 -> new medium/32000
+Reserve_Build chatgpt: base max/32000 -> new medium/64000
+Alternate_Build chatgpt: base max/32000 -> new medium/64000
+sites 12; failure shape on base 12/12; PASS 104 FAIL 0
