@@ -85,6 +85,17 @@ if os.environ.get('OPT2','1')=='1': # ruled BB-8215
       "const BREF=/((?<![A-Za-z0-9])(?:[1-3]\\s)?[A-Z][A-Za-z]+(?:\\s(?:of\\s)?[A-Z][A-Za-z]+)?)(?:\\.?\\s(\\d{1,3}):(\\d{1,3})|['’]s\\b)/g;\n"
       "const lastBook=(t,pos)=>{let b=null;for(const x of String(t).slice(0,pos).matchAll(BREF)){const k=BK[key(x[1])]||BK[key(String(x[1]).split(/\\s/).pop())];if(k)b=k;}return b;};\n")) for (o,n) in E[CS]]
 
+# --- (v), ruled BB-8219 (3.16 amendment to step 4): the judges' premises ledger reads the answering side's round 2 and link round, as the
+# judge text already states (BB-7374, rulings 86). Panel Build and Build Independent Verdict only (D3/C3 Build never call judgeBlock). ---
+for f in ['Panel_Build.js','Build_Independent_Verdict.js']:
+  edit(f,"const ledger=F=>({defender:side(F.gr2,F.cr3,DEF_RE),challenger:side(F.cr3,F.dr3,CH_RE),",
+   "// BB-8172 (v), BB-8219: answers are read from the answering side's round 2 and its link round (BB-7374, rulings 86).\n"
+   " const ledger=F=>({defender:side(F.gr2,String(F.cr2||'')+LF+String(F.cr3||''),DEF_RE),challenger:side(F.cr3,String(F.gr2||'')+LF+String(F.dr3||''),CH_RE),")
+  edit(f,"and whether the answering link round names each verse anywhere.",
+   "and whether the answering side\\'s round 2 or link round names each verse anywhere (the defender\\'s [CR2] or [CR3], the challenger\\'s [DR2] or [DR3]).")
+  edit(f,"sideLines(L.defender,'AGAINST THE DEFENDER, answered in [CR3]')","sideLines(L.defender,'AGAINST THE DEFENDER, answered in [CR2] or [CR3]')")
+  edit(f,"sideLines(L.challenger,'AGAINST THE CHALLENGER, answered in [DR3]')","sideLines(L.challenger,'AGAINST THE CHALLENGER, answered in [DR2] or [DR3]')")
+
 for f in sorted(os.listdir(B)):
   t=open(os.path.join(B,f),encoding='utf-8').read();n=t
   for old,new in E.get(f,[]):

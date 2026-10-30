@@ -1,12 +1,27 @@
 {
  "Panel_Build.judge": {
   "lines": 18,
-  "differ": 2,
+  "differ": 5,
   "diff": [
+   {
+    "line": 0,
+    "base": "PRESSED-WITNESS LEDGER -- computed by the system from the transcript text, not by a model, by one rule for both sides. SCOPE: the verses carried by each numbered premise of the list that closes [DR2] (pressed against the defender) and of the CHALLENGER'S UNSUPPORTED-L4 PREMISES list that closes [CR3] (pressed against the challenger), and whether the answering link round names each verse anywhere. The line beginning \"cited in\" under each side lists every verse the opposing side cited before that link round that no later round of the side that holds the link names (for the defender [CR2] or [CR3], for the challenger [DR2] or [DR3], later than the round that first cites the verse); which of those verses were quoted against a link or a listed premise is the judge's to decide. Not read by this ledger: ranges longer than 12 verses, references written with v., slash forms such as 24:16/43, and chapter-only references.",
+    "new": "PRESSED-WITNESS LEDGER -- computed by the system from the transcript text, not by a model, by one rule for both sides. SCOPE: the verses carried by each numbered premise of the list that closes [DR2] (pressed against the defender) and of the CHALLENGER'S UNSUPPORTED-L4 PREMISES list that closes [CR3] (pressed against the challenger), and whether the answering side's round 2 or link round names each verse anywhere (the defender's [CR2] or [CR3], the challenger's [DR2] or [DR3]). The line beginning \"cited in\" under each side lists every verse the opposing side cited before that link round that no later round of the side that holds the link names (for the defender [CR2] or [CR3], for the challenger [DR2] or [DR3], later than the round that first cites the verse); which of those verses were quoted against a link or a listed premise is the judge's to decide. Not read by this ledger: ranges longer than 12 verses, references written with v., slash forms such as 24:16/43, and chapter-only references."
+   },
+   {
+    "line": 1,
+    "base": "AGAINST THE DEFENDER, answered in [CR3]:",
+    "new": "AGAINST THE DEFENDER, answered in [CR2] or [CR3]:"
+   },
    {
     "line": 8,
     "base": "cited in [DR1] or [DR2] and not named in a later round of the defender, [CR2] or [CR3] (28 of 67): 1 John 3:9, Acts 1:8, 1 Samuel 16:13, Acts 5:15, 1 Chronicles 28:6, Psalms 2:7, Acts 13:33, 2 Samuel 7:12, Psalms 132:11, Hebrews 7:14, Genesis 3:15, Isaiah 54:3, 1 Chronicles 3:17-18, Jeremiah 22:24, Haggai 2:23, Job 25:4, Matthew 11:11, Luke 1:13, Luke 1:63, Luke 1:36, Hebrews 7:5, Hebrews 7:9-10, Luke 2:4, Deuteronomy 22:24, 1 Corinthians 7:5, Luke 1:62-63, Mark 6:3, Genesis 29:14",
     "new": "cited in [DR1] or [DR2] and not named in a later round of the defender, [CR2] or [CR3] (37 of 80): 1 John 3:9, 1 John 5:1, Acts 1:8, 1 Samuel 16:13, Acts 5:15, 1 Chronicles 28:6, Psalms 2:7, Acts 13:33, Luke 2:41, 2 Samuel 7:12, Psalms 132:11, Hebrews 7:14, Genesis 3:15, Genesis 16:10, Genesis 24:60, Isaiah 54:3, Isaiah 7:16, 1 Chronicles 3:17-18, Jeremiah 22:24, Haggai 2:23, Job 25:4, Matthew 11:11, Luke 1:13, Luke 1:63, Luke 1:36, Hebrews 7:5, Hebrews 7:9-10, Luke 2:4, Deuteronomy 22:24, 1 Corinthians 7:5, John 1:12, Matthew 1:21, Luke 1:62-63, Luke 2:33, Mark 6:3, Genesis 29:14, Jeremiah 1:16"
+   },
+   {
+    "line": 9,
+    "base": "AGAINST THE CHALLENGER, answered in [DR3]:",
+    "new": "AGAINST THE CHALLENGER, answered in [DR2] or [DR3]:"
    },
    {
     "line": 16,
@@ -17,12 +32,27 @@
  },
  "Build_Independent_Verdict.judge": {
   "lines": 18,
-  "differ": 2,
+  "differ": 5,
   "diff": [
+   {
+    "line": 0,
+    "base": "PRESSED-WITNESS LEDGER -- computed by the system from the transcript text, not by a model, by one rule for both sides. SCOPE: the verses carried by each numbered premise of the list that closes [DR2] (pressed against the defender) and of the CHALLENGER'S UNSUPPORTED-L4 PREMISES list that closes [CR3] (pressed against the challenger), and whether the answering link round names each verse anywhere. The line beginning \"cited in\" under each side lists every verse the opposing side cited before that link round that no later round of the side that holds the link names (for the defender [CR2] or [CR3], for the challenger [DR2] or [DR3], later than the round that first cites the verse); which of those verses were quoted against a link or a listed premise is the judge's to decide. Not read by this ledger: ranges longer than 12 verses, references written with v., slash forms such as 24:16/43, and chapter-only references.",
+    "new": "PRESSED-WITNESS LEDGER -- computed by the system from the transcript text, not by a model, by one rule for both sides. SCOPE: the verses carried by each numbered premise of the list that closes [DR2] (pressed against the defender) and of the CHALLENGER'S UNSUPPORTED-L4 PREMISES list that closes [CR3] (pressed against the challenger), and whether the answering side's round 2 or link round names each verse anywhere (the defender's [CR2] or [CR3], the challenger's [DR2] or [DR3]). The line beginning \"cited in\" under each side lists every verse the opposing side cited before that link round that no later round of the side that holds the link names (for the defender [CR2] or [CR3], for the challenger [DR2] or [DR3], later than the round that first cites the verse); which of those verses were quoted against a link or a listed premise is the judge's to decide. Not read by this ledger: ranges longer than 12 verses, references written with v., slash forms such as 24:16/43, and chapter-only references."
+   },
+   {
+    "line": 1,
+    "base": "AGAINST THE DEFENDER, answered in [CR3]:",
+    "new": "AGAINST THE DEFENDER, answered in [CR2] or [CR3]:"
+   },
    {
     "line": 8,
     "base": "cited in [DR1] or [DR2] and not named in a later round of the defender, [CR2] or [CR3] (28 of 67): 1 John 3:9, Acts 1:8, 1 Samuel 16:13, Acts 5:15, 1 Chronicles 28:6, Psalms 2:7, Acts 13:33, 2 Samuel 7:12, Psalms 132:11, Hebrews 7:14, Genesis 3:15, Isaiah 54:3, 1 Chronicles 3:17-18, Jeremiah 22:24, Haggai 2:23, Job 25:4, Matthew 11:11, Luke 1:13, Luke 1:63, Luke 1:36, Hebrews 7:5, Hebrews 7:9-10, Luke 2:4, Deuteronomy 22:24, 1 Corinthians 7:5, Luke 1:62-63, Mark 6:3, Genesis 29:14",
     "new": "cited in [DR1] or [DR2] and not named in a later round of the defender, [CR2] or [CR3] (37 of 80): 1 John 3:9, 1 John 5:1, Acts 1:8, 1 Samuel 16:13, Acts 5:15, 1 Chronicles 28:6, Psalms 2:7, Acts 13:33, Luke 2:41, 2 Samuel 7:12, Psalms 132:11, Hebrews 7:14, Genesis 3:15, Genesis 16:10, Genesis 24:60, Isaiah 54:3, Isaiah 7:16, 1 Chronicles 3:17-18, Jeremiah 22:24, Haggai 2:23, Job 25:4, Matthew 11:11, Luke 1:13, Luke 1:63, Luke 1:36, Hebrews 7:5, Hebrews 7:9-10, Luke 2:4, Deuteronomy 22:24, 1 Corinthians 7:5, John 1:12, Matthew 1:21, Luke 1:62-63, Luke 2:33, Mark 6:3, Genesis 29:14, Jeremiah 1:16"
+   },
+   {
+    "line": 9,
+    "base": "AGAINST THE CHALLENGER, answered in [DR3]:",
+    "new": "AGAINST THE CHALLENGER, answered in [DR2] or [DR3]:"
    },
    {
     "line": 16,
