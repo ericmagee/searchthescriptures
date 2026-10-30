@@ -1,0 +1,23 @@
+{
+ "conditions": {
+  "combinator": "and",
+  "conditions": [
+   {
+    "id": "alternate-cure-needed",
+    "leftValue": "={{ $('Alternate Payloads').all().some(x=>x.json.ok&&(x.json.drv||[]).length>0) }}",
+    "operator": {
+     "operation": "true",
+     "singleValue": true,
+     "type": "boolean"
+    },
+    "rightValue": ""
+   }
+  ],
+  "options": {
+   "caseSensitive": true,
+   "leftValue": "",
+   "typeValidation": "loose"
+  }
+ },
+ "options": {}
+}

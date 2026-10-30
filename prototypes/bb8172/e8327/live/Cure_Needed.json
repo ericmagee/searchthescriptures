@@ -1,0 +1,23 @@
+{
+ "conditions": {
+  "combinator": "and",
+  "conditions": [
+   {
+    "id": "cure-needed",
+    "leftValue": "={{ ($json.debate_rule_violations||[]).length>0 }}",
+    "operator": {
+     "operation": "true",
+     "singleValue": true,
+     "type": "boolean"
+    },
+    "rightValue": ""
+   }
+  ],
+  "options": {
+   "caseSensitive": true,
+   "leftValue": "",
+   "typeValidation": "loose"
+  }
+ },
+ "options": {}
+}

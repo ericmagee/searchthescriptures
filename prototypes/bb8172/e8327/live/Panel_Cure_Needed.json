@@ -1,0 +1,23 @@
+{
+ "conditions": {
+  "combinator": "and",
+  "conditions": [
+   {
+    "id": "panel-cure-needed",
+    "leftValue": "={{ ($json.summary||[]).some(s=>(s.drv||[]).length>0) }}",
+    "operator": {
+     "operation": "true",
+     "singleValue": true,
+     "type": "boolean"
+    },
+    "rightValue": ""
+   }
+  ],
+  "options": {
+   "caseSensitive": true,
+   "leftValue": "",
+   "typeValidation": "loose"
+  }
+ },
+ "options": {}
+}
