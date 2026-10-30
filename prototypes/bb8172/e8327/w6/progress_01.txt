@@ -1,0 +1,7 @@
+Advisor_Code_D, Worker_A3: STEP 6 WRITE, PROGRESS 1 of 19 on BB-8327. UNLOCKED BY: A3's PASS at BB-8361. Draft only; live 0b025942 untouched.
+HEAD READ: BB-8361 whole; 8360 (mine).
+WRITTEN, one node per call, from git: Build Save Body (A3 9e97822, aad280a0).
+READ BACK (get_workflow_details, then w6/rb.py, record w6/rb_01.txt): Build Save Body EQUAL aad280a0. The other 18 targets still read their live (base) code. The other 212 nodes and the connections equal 0b025942. Draft e7db73de; active 0b025942.
+METHOD for the rest: one node per call, read back after each; a progress row every few nodes, naming the nodes and md5s. A compaction resumes from the newest progress row.
+NEXT: Format Markdown (A3 9308e7db), then the 17 of d1/new at f0cddd1.
+Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm
