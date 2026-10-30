@@ -55,6 +55,9 @@ const NET_STATE=[
  /\bstating\b[^;.]{0,40}?\bin\s+(?:its|their)\s+own\s+words\b/i];
 // A clause that reports what a side itself stated or granted is that side's statement, not the judge's ground.
 const NET_REPORT=/\b(?:stated|granted|says|said|conceded|argued|admitted)\s+that\b/i;
+// 1909 (b): a clause that answers a side's own claim that a named verse says what it does not ("the challenger reads Matthew 1:16
+// as saying that Joseph begat Jesus, but the verse does not state that") is the judge answering an overclaim, not the stating test.
+const NET_CLAIM=/\b(?:challenger|defender)\s+(?:reads|read|claims|claimed|says|said|argues|argued|takes|took|holds|asserts|asserted|presses|pressed)\b[^;]{0,160}?\b(?:as\s+(?:saying|stating|meaning)|to\s+(?:say|state|mean))\b/i;
 const NET_PLURAL=/\b(?:rows|verses|witnesses|speeches|they|these|those|them|none|neither|read\s+together|idiom)\b|\bno\s+(?:verse|witness|row)\b|\b(?:\d?\s?[A-Z][a-z]+\s+\d+:\d+)[^;.]{0,40}?\band\s+(?:\d?\s?[A-Z][a-z]+\s+)?\d+:\d+/;
 const NET_HEAD=/^(RESULT|KEYSTONE|DEFENSE STANDING|CHALLENGE STANDING|CHALLENGER CONCEDED LINKS|CONCEDED LINKS)\s*:/;
 const NET_SKIP=/^(?:CLAUSE|CITATION CHECK|DEFENDER CHAIN MARK|CHALLENGER CHAIN MARK|COLLISION POINTS)\b/i;
@@ -78,7 +81,7 @@ function netLines(text,links){const out=[];const T=netUnwrap(text).replace(/[*_`
   if(!item||NET_SKIP.test(u))continue;
   const clauses=line.split(/;|(?<=[.!?])\s+(?=[A-Z\[])|\s--\s|\s—\s/);
   for(const cl of clauses){if(!NET_STATE.some(rx=>rx.test(cl)))continue;
-   const hit=NET_STATE.find(rx=>rx.test(cl));const at=cl.search(hit);if(NET_REPORT.test(cl.slice(0,at)))continue;
+   const hit=NET_STATE.find(rx=>rx.test(cl));const at=cl.search(hit);if(NET_REPORT.test(cl.slice(0,at))||NET_CLAIM.test(cl.slice(0,at)))continue;
    if(!vs&&!NET_PLURAL.test(cl))continue;
    out.push({item,side:netSide(cl,at),line});break;}}
  return out;}
