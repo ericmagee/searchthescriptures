@@ -1,0 +1,15 @@
+18:07 CDT, harness.sql (md5 616703da) at Worker_E seat, rolled back by its final RAISE:
+fails 0; md5 old c69444dbba3e0d8be2611731c3639a0e new 0d9d31832738778f1c92716439540e57;
+[2 seats 1W/1U after] old DEFENDER PREVAILS new UNDERDETERMINED expect UNDERDETERMINED
+[2 seats 2W after] old DEFENDER PREVAILS new DEFENDER PREVAILS expect DEFENDER PREVAILS
+[3 seats 1W/2U after] old UNDERDETERMINED new UNDERDETERMINED expect UNDERDETERMINED
+[3 seats 2W/1U after] old DEFENDER PREVAILS new DEFENDER PREVAILS expect DEFENDER PREVAILS
+[v_h 0 (all drv) after] old UNGRADED — REVIEW new UNGRADED — REVIEW expect SAME AS OLD   (fv is not HELD: v_h > 0 limb not reached)
+[1W/1U before constant] old DEFENDER PREVAILS new DEFENDER PREVAILS
+[1W/1U AT constant] old DEFENDER PREVAILS new UNDERDETERMINED expect UNDERDETERMINED
+[1W/1U 1 s before] old DEFENDER PREVAILS new DEFENDER PREVAILS
+[stored ODV1-27088-cg67a8be] stored DEFENDER PREVAILS new-text DEFENDER PREVAILS
+[stored ODV1-29912-7t5z4jce] stored DEFENDER PREVAILS new-text DEFENDER PREVAILS
+[stored ODV1-29955-stutnd4m] stored UNDERDETERMINED new-text UNDERDETERMINED
+[stored ODV1-29975-22lj8cbt] stored (null) new-text <null>  (panel not complete at 18:07)
+After: live md5 c69444db; 0 harness rows left; board head 8533.
