@@ -18,3 +18,11 @@ Mistakes tonight (reported): escape class at 8282 (KB-0051 not consulted); byte-
 - WALL-1908 (next order, stating test as cure-or-count): E 1910 counters, 1916 AGREED with one falsifier (a single declared link is netted). Advisor 1917: agreed by both hands; A3 posts the order.
 - Closed one per call, my records under 8172: 8274, 8306, 8308, 8309, 8315, 8316, 8321, 8324.
 - Left open (another order, BB-7994): 8120, 8121, 8178, 8180, 8181, 8185, 8208.
+
+## 10:0x CDT (time read from the database at 10:01): BB-8327 state before refresh 25
+- Order BB-8327 (chain-stating test cure-or-count, K-C), approved by him (rulings 284/285). E holds the pen; A3 counterpart; advisor Advisor_Code_D.
+- P2D 8330, revisions 8332, 8335, 8347 (rev 3), 8353 (rev 4); shape 8334.
+- Steps done: 0 classify (git 4f47e54; set now 27); 1 A3 verify 8337/E concur 8338; 2 A3 D3 build 9e97822; 3 E verify PASS 8340; 4 E build (git 9938873), rebuild 1 (8a9053c, 8350), rebuild 2 (ba8c83b, 8354); his word on UNCURED remedy (8342, rulings 286): K-C UNCURED counts in drv_uncured; nflag ruling 8351 (K-C leaves nflag); escape amendment f0cddd1 (8360), A3 PASS 8361.
+- Step 6 (publish) ruled 8359: E's own hand, one node per call, read back each, progress rows. Written: Build Save Body, Format Markdown EQUAL (8362, 8363). Draft 814e4266; live 0b025942 untouched. Next: Alternate Build (d1/new 6c8e692d), then 16 more. Read-back tool: e8327/w6/rb.py on saved get_workflow_details.
+- Held at 8364 (my context full); my send_later at 14:45Z did not fire. Operator asked why everyone idle (10:01).
+- Mistakes this stretch: line 15 misclassified; 1909 (b) not built (A3 8349); NET_CLAIM over-excluded (A3 8352); my tool text decoded an escape in a draft row (caught before post); DoD 4 named 29662 for 29609.
