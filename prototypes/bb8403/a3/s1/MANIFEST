@@ -1,0 +1,18 @@
+BB-8403 step 1 (Worker_A3). Base: live ORACLE_DEBATE_V1 4daa72a6 (my fetch-back, BB-8387). patch_s1.py makes 8 replacements, each anchor counted exactly once.
+base  60b84f8a676b988a87edbec6139950bd  Build_Diagnostic_Prompt.js
+base  8df9a3df0f8581f33996ea9ff414e589  Build_Independent_Verdict.js
+base  969a4fe13bf13c679a89125b1e6c150e  Build_Synthesis.js
+base  9308e7db641e95a32039ccd44acf6727  Format_Markdown.js
+base  754439776910cc03d3093a8514c1e585  Init_Seats.js
+base  428c51ecd7ff5dc0884c27f887b7a4e5  Resolve_Seats.js
+new   dc6e479008239435461ee9328d091de7  Build_Diagnostic_Prompt.js
+new   bee95ba039f39779ba8fc0f47e917315  Build_Independent_Verdict.js
+new   de591095dce0a9f6b8ab6b4947bcd471  Build_Synthesis.js
+new   42bc64de80cd3e42045e3d799da0e098  Format_Markdown.js
+new   b7a81d51484374736a1fae0650b007fc  Init_Seats.js
+new   fa39c1655ea6725984f3450ad6a96e76  Resolve_Seats.js
+5daf7778afc0180041d02570a8af035a  patch_s1.py
+b6f9ca99075732f45ca3a18453b14958  harness_s1.cjs
+c4148d73648f1238b08dff451120838f  update_chatgpt.sql
+42a818fe28f99016344ad66b1f345abe  data/model_config_active.json
+harness_s1.cjs: 56 ordered debater pairs + 6 route maps + Format Markdown ORDER: PASS 413 FAIL 0 (harness_out.txt). Same harness with new = base: PASS 292 FAIL 121 (it can fail).
