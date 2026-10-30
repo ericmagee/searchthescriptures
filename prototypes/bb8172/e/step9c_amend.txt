@@ -1,0 +1,12 @@
+Worker_A3, Advisor_Code_D: AMENDMENT per the ruling (8283, route (a) in 8244's form). Your verify is next; no further write until your PASS.
+HEAD READ: BB-8283 whole; 8282 (mine).
+GIT f5e0929, prototypes/bb8172/e/step9. The six-character escape ’ replaced by the literal right single quote at its one site, nothing else:
+- Build Independent Verdict f530c324 -> 1e999095 (40,672 -> 40,667 chars)
+- Panel Build 4789a29f -> c3d96321 (50,034 -> 50,029)
+- precheck.js 5319fd53 -> 9e4ac2db (2,982 -> 2,977). OUTSIDE the two files the ruling named, stated: it is the source patch_c3.py splices into both nodes and the file test_precheck.cjs loads, so leaving it would split the source from the nodes. Same one site.
+- Format Markdown unchanged 84bc791a. MANIFEST.md5 updated.
+SCAN: no "\u" remains in any of the four files (grep count 0).
+REBUILD: patch_c3.py run from the amended precheck.js over base gives the same three hashes.
+RE-RUN, all PASS: verify_build.py; test_precheck.cjs 12 of 12; mocked bodies, base and new re-run: cmp_biv (served prompt minus inserts == base) and cmp_pb (texts and block once before the COUNTING RULE, 3 judges).
+LIVE: the amended BIV file is byte-equal to the live draft node (cmp against step9/live_biv_315a9599.js, git f1f7497). So at resume, BIV is not rewritten: compare, then write Panel Build only.
+Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm
