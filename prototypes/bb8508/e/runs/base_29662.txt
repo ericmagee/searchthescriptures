@@ -1,0 +1,26 @@
+PRESSED-WITNESS LEDGER -- computed by the system from the transcript text, not by a model, by one rule for both sides. SCOPE: the verses carried by each numbered premise of the list that closes [DR2] (pressed against the defender) and of the CHALLENGER'S UNSUPPORTED-L4 PREMISES list that closes [CR3] (pressed against the challenger), and whether the answering side's round 2 or link round names each verse anywhere (the defender's [CR2] or [CR3], the challenger's [DR2] or [DR3]). The line beginning "cited in" under each side lists every verse the opposing side cited before that link round that no later round of the side that holds the link names (for the defender [CR2] or [CR3], for the challenger [DR2] or [DR3], later than the round that first cites the verse); which of those verses were quoted against a link or a listed premise is the judge's to decide. Not read by this ledger: ranges longer than 12 verses, references written with v., slash forms such as 24:16/43, and chapter-only references.
+AGAINST THE DEFENDER, answered in [CR2] or [CR3]:
+premise 1 (LINK 2): 2 verse(s) carried; 2 named; NOT NAMED: none
+premise 2 (LINK 2): 1 verse(s) carried; 1 named; NOT NAMED: none
+premise 3 (LINK 1): 2 verse(s) carried; 2 named; NOT NAMED: none
+premise 4 (LINK 4): 2 verse(s) carried; 2 named; NOT NAMED: none
+premise 5 (LINK 4): 2 verse(s) carried; 2 named; NOT NAMED: none
+premise 6 (LINK 6): 2 verse(s) carried; 2 named; NOT NAMED: none
+cited in [DR1] or [DR2] and not named in a later round of the defender, [CR2] or [CR3] (35 of 78): John 1:47, Numbers 1:2, Numbers 1:18, Luke 1:13, Luke 1:62-63, 1 Corinthians 7:5, 1 John 4:7, 1 John 5:1, Psalms 2:7, Acts 13:33, Hebrews 5:5, Acts 1:8, Luke 9:34, Acts 5:15, Genesis 24:16, Isaiah 7:16, Matthew 13:55-56, Galatians 1:19, Luke 2:41, Luke 2:33, Hebrews 7:14, Job 14:1, Job 15:14, Job 25:4, Matthew 11:11, Luke 1:57-63, Genesis 16:10, Genesis 24:60, Isaiah 54:3, 2 Timothy 2:8, Luke 1:36, Luke 1:5, Jeremiah 22:30, Haggai 1:1, Jeremiah 18:7-8
+AGAINST THE CHALLENGER, answered in [DR2] or [DR3]:
+premise 1: 1 verse(s) carried; 1 named; NOT NAMED: none
+premise 2: 0 verse(s) carried; 0 named; NOT NAMED: none
+premise 3: 0 verse(s) carried; 0 named; NOT NAMED: none
+premise 4: 1 verse(s) carried; 1 named; NOT NAMED: none
+premise 5: 0 verse(s) carried; 0 named; NOT NAMED: none
+premise 6: 1 verse(s) carried; 1 named; NOT NAMED: none
+cited in [CR1], [CR2] or [CR3] and not named in a later round of the challenger, [DR2] or [DR3] (22 of 69): Luke 1:16, Hebrews 10:5, Genesis 24:16, Genesis 24:43, Luke 1:42, Genesis 3:15, John 1:45, Luke 4:22, John 6:38, Luke 2:44, Acts 21:29, Exodus 2:10, Ruth 4:17, 2 Samuel 12:24, 2 Samuel 1:18, 2 Samuel 1:25, Hebrews 10:10, Isaiah 9:6, Luke 2:7, Exodus 13:2, Luke 1:73, Luke 3:27-31
+A verse marked NOT NAMED is unanswered by the rule; a verse marked NAMED may still be unanswered, and the judge decides that.
+
+CHALLENGER LINK NUMBERS -- computed by the system from [DR3], not by a model. In COLLISION POINTS, C<j> is the challenger's j-th LINK block of [DR3], its answer to the defender's premise j, in the order the challenger answered them; label a challenger link only by this list. The verses each block names:
+C1 = [DR3] LINK 1: Isaiah 7:14, Isaiah 7:16, Isaiah 8:3-4, Isaiah 8:8, Matthew 1:23, Matthew 1:22-23
+C2 = [DR3] LINK 2: 2 Samuel 7:12, Acts 2:30, Romans 1:3, Luke 1:27, Luke 2:4, Luke 2:48, John 6:42, Numbers 1:2, Numbers 1:18, Hebrews 7:14, Matthew 1:16, Luke 3:23, Acts 16:13, Luke 1:31-32
+C3 = [DR3] LINK 3: John 1:13, 1 John 3:9, 1 John 4:7, 1 John 5:1, Romans 1:3, Matthew 1:20, 2 Samuel 7:14, 1 Chronicles 28:6, Matthew 1:20-21, John 1:12, Luke 1:35, Acts 1:8, Luke 9:34, Acts 5:15
+C4 = [DR3] LINK 4: Matthew 1:25, Matthew 1:19, Matthew 1:20, Deuteronomy 22:24, Mark 6:3, Matthew 13:55-56, Matthew 1:18
+C5 = [DR3] LINK 5: Jeremiah 22:30, Jeremiah 22:24, Jeremiah 18:7-8, Haggai 2:23, Haggai 1:1, Ezra 3:2, Matthew 1:11-12
+C6 = [DR3] LINK 6: Job 14:1, Job 15:14, Job 25:4, Matthew 11:11, Luke 1:13, Galatians 4:4
