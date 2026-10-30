@@ -1,0 +1,216 @@
+{
+ "base": {
+  "items": 242,
+  "status": {
+   "PENDING": 230,
+   "NOT CHECKED": 12
+  }
+ },
+ "new": {
+  "items": 256,
+  "status": {
+   "PENDING": 242,
+   "NOT CHECKED": 14
+  }
+ },
+ "changes": [
+  {
+   "kind": "CHANGED",
+   "from": {
+    "ref": "Acts 13:33",
+    "status": "PENDING",
+    "rebound_from": null
+   },
+   "side": "CHALLENGER",
+   "round": "R1",
+   "ref": "Psalms 2:7",
+   "status": "PENDING",
+   "score": 0,
+   "rebound_from": null,
+   "after_first": true,
+   "order": null,
+   "cite_form": true,
+   "quote": "this day have I begotten thee"
+  },
+  {
+   "kind": "NEW ITEM",
+   "side": "CHALLENGER",
+   "round": "R1",
+   "ref": "Luke 2:41",
+   "status": "PENDING",
+   "score": 0,
+   "rebound_from": null,
+   "after_first": false,
+   "order": "quote-first",
+   "cite_form": true,
+   "quote": "his parents went to Jerusalem"
+  },
+  {
+   "kind": "NEW ITEM",
+   "side": "CHALLENGER",
+   "round": "R1",
+   "ref": "Luke 2:33",
+   "status": "PENDING",
+   "score": 0,
+   "rebound_from": null,
+   "after_first": false,
+   "order": "quote-first",
+   "cite_form": true,
+   "quote": "Joseph and his mother marvelled"
+  },
+  {
+   "kind": "NEW ITEM",
+   "side": "CHALLENGER",
+   "round": "R1",
+   "ref": "Deuteronomy 1:19",
+   "status": "PENDING",
+   "score": 0,
+   "rebound_from": null,
+   "after_first": false,
+   "order": "quote-first",
+   "cite_form": true,
+   "quote": "put her away"
+  },
+  {
+   "kind": "NEW ITEM",
+   "side": "CHALLENGER",
+   "round": "R1",
+   "ref": "Matthew 1:20",
+   "status": "PENDING",
+   "score": 0,
+   "rebound_from": null,
+   "after_first": false,
+   "order": "quote-first",
+   "cite_form": true,
+   "quote": "Mary thy wife"
+  },
+  {
+   "kind": "NEW ITEM",
+   "side": "CHALLENGER",
+   "round": "R1",
+   "ref": "Luke 1:5",
+   "status": "PENDING",
+   "score": 0,
+   "rebound_from": null,
+   "after_first": false,
+   "order": "quote-first",
+   "cite_form": true,
+   "quote": "of the daughters of Aaron"
+  },
+  {
+   "kind": "NEW ITEM",
+   "side": "DEFENDER",
+   "round": "R2",
+   "ref": "John 2:49",
+   "status": "NOT CHECKED",
+   "rebound_from": null,
+   "after_first": false,
+   "order": "quote-first",
+   "cite_form": true,
+   "quote": "my Father's business"
+  },
+  {
+   "kind": "NEW ITEM",
+   "side": "CHALLENGER",
+   "round": "R2",
+   "ref": "Matthew 1:21",
+   "status": "PENDING",
+   "score": 0,
+   "rebound_from": null,
+   "after_first": false,
+   "order": "quote-first",
+   "cite_form": true,
+   "quote": "thou shalt call his name JESUS"
+  },
+  {
+   "kind": "NEW ITEM",
+   "side": "CHALLENGER",
+   "round": "R2",
+   "ref": "Matthew 1:25",
+   "status": "PENDING",
+   "score": 0,
+   "rebound_from": null,
+   "after_first": false,
+   "order": "quote-first",
+   "cite_form": true,
+   "quote": "he called his name JESUS"
+  },
+  {
+   "kind": "NEW ITEM",
+   "side": "CHALLENGER",
+   "round": "R2",
+   "ref": "Matthew 1:20",
+   "status": "PENDING",
+   "score": 0,
+   "rebound_from": null,
+   "after_first": false,
+   "order": "quote-first",
+   "cite_form": true,
+   "quote": "Mary thy wife"
+  },
+  {
+   "kind": "NEW ITEM",
+   "side": "CHALLENGER",
+   "round": "R2",
+   "ref": "Deuteronomy 1:24",
+   "status": "PENDING",
+   "score": 0,
+   "rebound_from": null,
+   "after_first": false,
+   "order": "quote-first",
+   "cite_form": true,
+   "quote": "took unto him his wife"
+  },
+  {
+   "kind": "NEW ITEM",
+   "side": "CHALLENGER",
+   "round": "R2",
+   "ref": "Deuteronomy 1:20",
+   "status": "PENDING",
+   "score": 0,
+   "rebound_from": null,
+   "after_first": false,
+   "order": "quote-first",
+   "cite_form": true,
+   "quote": "fear not to take unto thee Mary thy wife: for that which is conceived in her is of the Hol"
+  },
+  {
+   "kind": "NEW ITEM",
+   "side": "CHALLENGER",
+   "round": "R2",
+   "ref": "Luke 2:49",
+   "status": "NOT CHECKED",
+   "rebound_from": null,
+   "after_first": false,
+   "order": "quote-first",
+   "cite_form": true,
+   "quote": "my Father's business"
+  },
+  {
+   "kind": "NEW ITEM",
+   "side": "CHALLENGER",
+   "round": "R2",
+   "ref": "Luke 2:33",
+   "status": "PENDING",
+   "score": 0,
+   "rebound_from": null,
+   "after_first": false,
+   "order": "quote-first",
+   "cite_form": true,
+   "quote": "Joseph and his mother marvelled"
+  },
+  {
+   "kind": "NEW ITEM",
+   "side": "CHALLENGER",
+   "round": "R3",
+   "ref": "Hebrews 7:14",
+   "status": "PENDING",
+   "score": 0,
+   "rebound_from": null,
+   "after_first": false,
+   "order": "quote-first",
+   "cite_form": true,
+   "quote": "it is evident that our Lord sprang out of Juda"
+  }
+ ]
+}
