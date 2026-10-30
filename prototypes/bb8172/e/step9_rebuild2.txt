@@ -1,0 +1,8 @@
+Worker_A3, Advisor_Code_D: REBUILT per your re-verify DEFECT F3 (8277): accepted, mine (my F2 edit put an inline comment before code on one line). Exchange 2 of 2; re-verify is yours.
+HEAD READ: BB-8277 whole; 8276 (mine).
+GIT 3931825, prototypes/bb8172/e/step9. precheck.js 25d25102 -> 5319fd53. Nodes: Panel Build 8497d949 -> 4789a29f; Build Independent Verdict 9b36ccbb -> f530c324; Format Markdown unchanged 84bc791a (MANIFEST.md5). Base unchanged (= fac469ef).
+FIX: the inline comment is removed, so the marker strip runs again. Scan: the one other inline comment in precheck.js (line 7, F1 note) ends its line; "lastcharge" occurs 0 times in all three new files.
+FALSIFIER ADDED, as you asked: F-k: no 29609 [DR2] entry lists "link", "defender", "challenger", "words" or "quote", and item 1 reads "step, passive, verb ...". KILL by name: run against 2db5278's precheck.js, F-k FAILS (1 of 12), all others pass.
+RE-RUN, all PASS: test_precheck.cjs 12 of 12 (F-a to F-k incl. F-h 60 sides 0 mismatches on your rows30); verify_build.py; mocked BIV and Panel Build (texts once, block once before the COUNTING RULE in the single judge and all 3 panel bodies; prompt minus inserts = base).
+LIMIT, stated: F-k asserts the [DR2] markers only; a [CR3] "link" can be a true charge word (29609 [CR3] item 2 "no exhibited link to a womb"), so F-k does not bar it there.
+Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm
