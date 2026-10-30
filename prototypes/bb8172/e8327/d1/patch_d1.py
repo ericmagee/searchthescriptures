@@ -41,5 +41,10 @@ for f in files:
         s = once(s, "const keys=(x.rule==='K-B'||x.rule==='K-S')?[x.link]", "const keys=(x.rule==='K-B'||x.rule==='K-S'||x.rule==='K-C')?[x.link]", f)
         s = once(s, "  return res('UNCURED','unknown rule',null);", VERD + "  return res('UNCURED','unknown rule',null);", f)
         s = once(s, "+'; RULE: '+x.rule+'; RESULT: '+x.status", "+'; RULE: '+x.rule+'; RESULT: '+x.status+(x.rule==='K-C'&&x.status!=='CURED'?'; NOT COUNTED (K-C UNCURED)':'')", f)
+    if f == 'Extract_Independent_Verdict.js':
+        # 5 BB-8351 (1): K-C leaves nflag, as K-U and K-S2 do; its marks are AUDIT v23, so the version is widened too
+        s = once(s, "// BB-8172 F1 (BB-8203): the K-U and K-S2 marks are not counted here, so they move neither audit_flags nor data_class.\n",
+                 "// BB-8172 F1 (BB-8203): the K-U and K-S2 marks are not counted here, so they move neither audit_flags nor data_class.\n// BB-8327 (BB-8351): nor the K-C marks (AUDIT v23); the cure and the alternate seat carry their consequence.\n", f)
+        s = once(s, "replace(/\\[AUDIT v22: DEBATE RULE VIOLATION \\((?:K-U|K-S2)\\)[^\\n]*/g,'')", "replace(/\\[AUDIT v2[23]: DEBATE RULE VIOLATION \\((?:K-U|K-S2|K-C)\\)[^\\n]*/g,'')", f)
     open(os.path.join(OUT, f), 'w', encoding='utf-8').write(s)
     print('%-32s %s -> %s  +%d' % (f, hashlib.md5(base.encode()).hexdigest()[:8], hashlib.md5(s.encode()).hexdigest()[:8], len(s) - len(base)))

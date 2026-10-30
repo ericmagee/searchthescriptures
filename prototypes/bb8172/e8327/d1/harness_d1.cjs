@@ -61,4 +61,15 @@ const ch=NEW.drvChains(pt,{link:'D4 vs C2',side:'CHALLENGER'});console.log('chai
 ok(/^DEFENDER CHAIN \(DECLARED CHAIN\): LINK 1 -- Matthew 1:16 breaks the "begat" pattern/.test(ch)&&/\|\| CHALLENGER CHAIN \(LEDGER \[DR3\]\): C1 -- The sign of Isaiah 7:14 expires in Isaiah's day\.; C2 -- Seed out of a man's body \(2 Samuel 7:12\)\.$/.test(ch),'both chains quoted on a collision line');
 ok(/CHALLENGER CHAIN: not found/.test(NEW.drvChains('[CR1]\nDECLARED CHAIN\n1. a link\n',{link:'D1 vs C1',side:'CHALLENGER'})),'no ledger: said so');
 ok(!/ \|\| /.test(NEW.drvChains(pt,{link:'D5',side:'CHALLENGER'})),'one chain on a STANDS line');
+// 8 BB-8351 (3): nflag and data_class, by the rebuilt node's own two lines (Extract Independent Verdict), on marks in the exact form drvCheck emits.
+{const src=rd(P+'/new/Extract_Independent_Verdict.js');const nl=src.match(/^const nflag=.*$/m)[0]+'\n'+src.match(/^const truncated=.*$/m)[0],dl=src.match(/^const data_class=.*$/m)[0];
+ const run=(raw0,marks)=>new Function('raw0','raw','verdict_rejected','verdict','$input',nl+'\n'+dl+'\nreturn {nflag,data_class};')(raw0,raw0+marks.map(x=>'\n\n'+x).join(''),false,'HELD',{first:()=>({json:{choices:[{finish_reason:'stop'}]}})});
+ const kcm=EIVN.drvCheck(T('839.txt'),0,0,'SELF-SUPPORTED','SELF-SUPPORTED',false).marks.filter(x=>/\(K-C\) -- /.test(x)).slice(0,2);
+ const t4='HELD. x\nCOLLISION POINTS:\nD1 vs C1 (Luke 1:35): DEFENDER LINK BROKEN -- [L1] "that holy thing" and [L3] Luke 1:31.\nD2 vs C2 (Luke 1:34): DEFENDER LINK BROKEN -- [L1] "I know not a man" and [L3] Luke 1:27.';
+ const g4=EIVN.drvCheck(t4,1,0,'PROP-DEPENDENT','SELF-SUPPORTED',false).marks.filter(x=>/\(K-G4\) -- /.test(x)).slice(0,2);
+ ok(kcm.length===2&&g4.length===2,'specimen marks built ('+kcm.length+', '+g4.length+')');
+ const a1=run('HELD.',kcm),a2=run('HELD.',g4);console.log('nflag K-C x2:',a1,' K-G4 x2:',a2);
+ ok(a1.nflag===0&&a1.data_class==='study','two K-C marks: nflag 0, study');ok(a2.nflag===2&&a2.data_class==='contested','two K-G4 marks: contested');
+ const b1=new Function('raw0','raw','verdict_rejected','verdict','$input',rd(P+'/../live/Extract_Independent_Verdict.js').match(/^const nflag=.*$/m)[0]+'\nreturn nflag;')('HELD.','HELD.'+kcm.map(x=>'\n\n'+x).join(''),false,'HELD',null);
+ ok(b1===2,'the base counted them (2), so the regex is what changed');}
 console.log(`asserts ${n}, fail ${fail}`);process.exit(fail?1:0);

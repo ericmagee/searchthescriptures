@@ -441,7 +441,7 @@ function netLines(text,links){const out=[];const T=netUnwrap(text).replace(/[*_`
   if(!item||NET_SKIP.test(u))continue;
   const clauses=line.split(/;|(?<=[.!?])\s+(?=[A-Z\[])|\s--\s|\s—\s/);
   for(const cl of clauses){if(!NET_STATE.some(rx=>rx.test(cl)))continue;
-   const hit=NET_STATE.find(rx=>rx.test(cl));const at=cl.search(hit);if(NET_REPORT.test(cl.slice(0,at))||NET_CLAIM.test(cl.slice(0,at)))continue;
+   const hit=NET_STATE.find(rx=>rx.test(cl));const at=cl.search(hit);if(NET_REPORT.test(cl.slice(0,at))||(NET_CLAIM.test(cl.slice(0,at))&&!NET_PLURAL.test(cl)))continue; // 1909 (b) spares an overclaim about one named verse only (A3, BB-8352)
    if(!vs&&!NET_PLURAL.test(cl))continue;
    out.push({item,side:netSide(cl,at),line});break;}}
  return out;}
@@ -493,7 +493,8 @@ const DB=drvBroken(raw0,conceded_links,defense_standing,DRV.items,challenger_con
 // study iff flags <= 1, no ILLEGAL rejection, a parseable verdict and a judge output not cut at max_tokens; contested
 // otherwise (truncation ruled a defect inside item 1, BB-4519).
 // BB-8172 F1 (BB-8203): the K-U and K-S2 marks are not counted here, so they move neither audit_flags nor data_class.
-const nflag=(raw.slice(raw0.length).replace(/\[AUDIT v22: DEBATE RULE VIOLATION \((?:K-U|K-S2)\)[^\n]*/g,'').match(/REVIEW THIS ROW/g)||[]).length;
+// BB-8327 (BB-8351): nor the K-C marks (AUDIT v23); the cure and the alternate seat carry their consequence.
+const nflag=(raw.slice(raw0.length).replace(/\[AUDIT v2[23]: DEBATE RULE VIOLATION \((?:K-U|K-S2|K-C)\)[^\n]*/g,'').match(/REVIEW THIS ROW/g)||[]).length;
 const truncated=($input.first().json?.choices?.[0]?.finish_reason==='length');
 const data_class=(nflag<=1&&!verdict_rejected&&verdict!=='UNKNOWN'&&!truncated)?'study':'contested';
 raw+='\n\n[AUDIT FLAGS: '+nflag+']';

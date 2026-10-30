@@ -29,6 +29,10 @@ ok(B('D3 vs C2 (Luke 2:48): UNDERDETERMINED -- the one row of the link, Luke 2:4
 ok(B("D4 vs C3 (Luke 1:35): UNDERDETERMINED -- the defender's rows Luke 1:35 and Matthew 1:20 do not state that no man begat the child.").join()==='D4 vs C3/DEFENDER','defender-side line not marked');
 // 1909 (b), A3's specimen at BB-8349 and a STANDS form: a judge answering a side's own overclaim.
 ok(B('D1 vs C2 (Matthew 1:16): UNDERDETERMINED -- the challenger reads Matthew 1:16 as saying that Joseph begat Jesus, but the verse does not state that.').length===0,'1909 (b) overclaim answer marked (A3 8349)');
+// A3's B, C, D (BB-8352): an overclaim about rows read together, answered by the stating test, still nets.
+ok(B('D6 vs C2 (Romans 1:3): UNDERDETERMINED -- the challenger reads the seed rows as saying that Joseph begat the child, but read together they do not state that.').join()==='D6 vs C2/CHALLENGER','A3 B not netted');
+ok(netLines('The challenger reads the seed rows as meaning a begetting by Joseph, but none of those rows states that Joseph begat the child.\nRESULT: UNDERDETERMINED -- open.').map(x=>x.item).join()==='REASONING','A3 C not netted');
+ok(B('D4 vs C2 (Luke 2:48): UNDERDETERMINED -- the challenger takes Luke 2:48 and John 6:42 to say that Joseph begat Jesus, but they do not state a begetting.').join()==='D4 vs C2/CHALLENGER','A3 D not netted');
 ok(B('D3: STANDS -- the defender takes Isaiah 7:14 to say that the sign names Mary, and the verse does not name her; the link stands on [CR2].').length===0,'1909 (b) STANDS form marked');
 ok(B('D5 vs C1 (Isaiah 7:14): UNDERDETERMINED -- [CR2] answered the sign by Matthew 1:22-23; the reading contest stays open.').length===0,'a line with no stating ground marked');
 console.log('outside the agreed set, marked:',extra.length?extra.join('; '):'none');

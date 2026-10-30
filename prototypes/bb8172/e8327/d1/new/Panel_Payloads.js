@@ -265,7 +265,7 @@ function netLines(text,links){const out=[];const T=netUnwrap(text).replace(/[*_`
   if(!item||NET_SKIP.test(u))continue;
   const clauses=line.split(/;|(?<=[.!?])\s+(?=[A-Z\[])|\s--\s|\s—\s/);
   for(const cl of clauses){if(!NET_STATE.some(rx=>rx.test(cl)))continue;
-   const hit=NET_STATE.find(rx=>rx.test(cl));const at=cl.search(hit);if(NET_REPORT.test(cl.slice(0,at))||NET_CLAIM.test(cl.slice(0,at)))continue;
+   const hit=NET_STATE.find(rx=>rx.test(cl));const at=cl.search(hit);if(NET_REPORT.test(cl.slice(0,at))||(NET_CLAIM.test(cl.slice(0,at))&&!NET_PLURAL.test(cl)))continue; // 1909 (b) spares an overclaim about one named verse only (A3, BB-8352)
    if(!vs&&!NET_PLURAL.test(cl))continue;
    out.push({item,side:netSide(cl,at),line});break;}}
  return out;}
