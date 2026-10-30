@@ -89,8 +89,13 @@ if os.environ.get('OPT2','1')=='1': # ruled BB-8215
 # judge text already states (BB-7374, rulings 86). Panel Build and Build Independent Verdict only (D3/C3 Build never call judgeBlock). ---
 for f in ['Panel_Build.js','Build_Independent_Verdict.js']:
   edit(f,"const ledger=F=>({defender:side(F.gr2,F.cr3,DEF_RE),challenger:side(F.cr3,F.dr3,CH_RE),",
-   "// BB-8172 (v), BB-8219: answers are read from the answering side's round 2 and its link round (BB-7374, rulings 86).\n"
-   " const ledger=F=>({defender:side(F.gr2,String(F.cr2||'')+LF+String(F.cr3||''),DEF_RE),challenger:side(F.cr3,String(F.gr2||'')+LF+String(F.dr3||''),CH_RE),")
+   "// BB-8172 (v), BB-8219, order per BB-8222: a premise verse is answered in the link round, or in the answering side's round 2 when the\n"
+   " // verse was already pressed before that round ([DR1] for the defender; [CR1] or [CR2] for the challenger): an answer counts only from a later round (BB-7374).\n"
+   " const ledger=F=>({defender:side(F.gr2,F.cr3,DEF_RE,F.cr2,F.gr1),challenger:side(F.cr3,F.dr3,CH_RE,F.gr2,String(F.cr1||'')+LF+String(F.cr2||'')),")
+  edit(f," const side=(pressing,answering,headRe)=>{const i=lastHead(pressing,headRe);if(i<0)return {list:false,premises:[]};\n  const list=String(pressing).slice(i);const N=namedIn(answering);",
+   " const side=(pressing,answering,headRe,early,earlier)=>{const i=lastHead(pressing,headRe);if(i<0)return {list:false,premises:[]};\n  const list=String(pressing).slice(i);const N=namedIn(answering);const NE=early?namedIn(early):null,PE=early?namedIn(earlier):null;")
+  edit(f,"if(r.cvs.some(cv=>isNamed(N,r.book||r.ctx||'',cv)))named++;",
+   "if(r.cvs.some(cv=>isNamed(N,r.book||r.ctx||'',cv)||(NE&&isNamed(PE,r.book||r.ctx||'',cv)&&isNamed(NE,r.book||r.ctx||'',cv))))named++;")
   edit(f,"and whether the answering link round names each verse anywhere.",
    "and whether the answering side\\'s round 2 or link round names each verse anywhere (the defender\\'s [CR2] or [CR3], the challenger\\'s [DR2] or [DR3]).")
   edit(f,"sideLines(L.defender,'AGAINST THE DEFENDER, answered in [CR3]')","sideLines(L.defender,'AGAINST THE DEFENDER, answered in [CR2] or [CR3]')")

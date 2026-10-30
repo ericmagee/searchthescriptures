@@ -31,17 +31,18 @@ const PWL=(()=>{
  const isNamed=(N,bk,cv)=>{const f=N.get(cv);if(!f)return false;if(!bk||f.books.has(bk)||f.inh.has(bk))return true;return f.bare&&f.books.size===0;};
  const lastHead=(t,re)=>{let i=-1;for(const m of String(t||'').matchAll(re))i=m.index;return i;};
  const items=t=>String(t||'').split(/\n(?=\s*\**\s*\d+[.)]\s)/).filter(x=>/^\s*\**\s*\d+[.)]\s/.test(x));
- const side=(pressing,answering,headRe)=>{const i=lastHead(pressing,headRe);if(i<0)return {list:false,premises:[]};
-  const list=String(pressing).slice(i);const N=namedIn(answering);
+ const side=(pressing,answering,headRe,early,earlier)=>{const i=lastHead(pressing,headRe);if(i<0)return {list:false,premises:[]};
+  const list=String(pressing).slice(i);const N=namedIn(answering);const NE=early?namedIn(early):null,PE=early?namedIn(earlier):null;
   const premises=items(list).map((x,k)=>{const lk=(x.match(/LINK\s+(\d+|none)\b/i)||[])[1]||null;const seen=new Set();const notNamed=[];let named=0;
    for(const r of refs(x)){const label=((r.book||r.ctx)?((r.book||r.ctx)+' '):'')+r.label;if(seen.has(label))continue;seen.add(label);
-    if(r.cvs.some(cv=>isNamed(N,r.book||r.ctx||'',cv)))named++;else notNamed.push(label);}
+    if(r.cvs.some(cv=>isNamed(N,r.book||r.ctx||'',cv)||(NE&&isNamed(PE,r.book||r.ctx||'',cv)&&isNamed(NE,r.book||r.ctx||'',cv))))named++;else notNamed.push(label);}
    return {n:k+1,link:lk,verses:seen.size,named,notNamed};});
   return {list:true,premises};};
  const LF=String.fromCharCode(10);
  const DEF_RE=/UNSUPPORTED-L4 PREMISES/gi, CH_RE=/CHALLENGER.S UNSUPPORTED-L4 PREMISES/gi;
- // BB-8172 (v), BB-8219: answers are read from the answering side's round 2 and its link round (BB-7374, rulings 86).
- const ledger=F=>({defender:side(F.gr2,String(F.cr2||'')+LF+String(F.cr3||''),DEF_RE),challenger:side(F.cr3,String(F.gr2||'')+LF+String(F.dr3||''),CH_RE),dCited:citedNotNamed([['[DR1]',F.gr1],['[DR2]',F.gr2]],[['[CR2]',F.cr2],['[CR3]',F.cr3]]),cCited:citedNotNamed([['[CR1]',F.cr1],['[CR2]',F.cr2],['[CR3]',F.cr3]],[['[DR2]',F.gr2],['[DR3]',F.dr3]])});
+ // BB-8172 (v), BB-8219, order per BB-8222: a premise verse is answered in the link round, or in the answering side's round 2 when the
+ // verse was already pressed before that round ([DR1] for the defender; [CR1] or [CR2] for the challenger): an answer counts only from a later round (BB-7374).
+ const ledger=F=>({defender:side(F.gr2,F.cr3,DEF_RE,F.cr2,F.gr1),challenger:side(F.cr3,F.dr3,CH_RE,F.gr2,String(F.cr1||'')+LF+String(F.cr2||'')),dCited:citedNotNamed([['[DR1]',F.gr1],['[DR2]',F.gr2]],[['[CR2]',F.cr2],['[CR3]',F.cr3]]),cCited:citedNotNamed([['[CR1]',F.cr1],['[CR2]',F.cr2],['[CR3]',F.cr3]],[['[DR2]',F.gr2],['[DR3]',F.dr3]])});
  const sideLines=(s,label)=>{if(!s.list)return [label+': no closing premise list found.'];
   return [label+':'].concat(s.premises.map(p=>'premise '+p.n+(p.link?' (LINK '+p.link+')':'')+': '+p.verses+' verse(s) carried; '+p.named+' named; NOT NAMED: '+(p.notNamed.length?p.notNamed.join(', '):'none')));};
  const judgeBlock=F=>{let L;try{L=ledger(F);}catch(e){return 'PRESSED-WITNESS LEDGER: not available this run; count witnesses as the rule says.';}
