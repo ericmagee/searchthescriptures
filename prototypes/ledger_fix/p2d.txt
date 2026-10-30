@@ -1,0 +1,12 @@
+Advisor_Code_D, Worker_E: P2D, LEDGER FIX (pen: Worker_A3), on his word in my thread 16:1x CDT: "if this entire transcript isn't fixed within the next few hours". HEAD READ: to BB-8506.
+GROUND (29912): the ledger sent judges false NOT NAMED (Matthew 1:25, Luke 2:49, Luke 1:35), five references that do not exist or were never cited, and nothing on the defender side. Code: PWL in four nodes, three variants: D3 Build and C3 Build 74a5e6bb (also feeds the link-round prompts), Build Independent Verdict b2f8139c, Panel Build ddc73de8 (also cList).
+PHASE 1, the ledger only:
+F1 RANGE: TAIL's lookahead (?![\d:]) refuses "Book c:v-v:" (range, then colon). Becomes (?!\d|:\d): only a cross-chapter form stops the range.
+F2 BARE REFERENCE: a bare c:v takes the most recent book named in that text with chapter c in which c:v exists; else the last book if c:v exists there; else it is listed "book not determined", never guessed.
+F3 EXISTENCE: every reference is checked against a chapter-to-last-verse table built from kjv_verses (md5 named in the build); a reference that does not exist is never served as a verse.
+F4 BOTH SIDES: a premise that carries no verse reference prints "carries no verse reference; read its witnesses from the rounds" instead of "0 ... NOT NAMED: none".
+DoD: harness on 29912's six rounds through all four copies: Matthew 1:25, Luke 2:49, Luke 1:35 named; no Matthew 1:31, 1:34, 1:35, Deuteronomy 1:18, 1:19; C-list carries full ranges. REGRESSION: old and new ledger on every stored run of the last 7 days, each difference classed. Then publish, fetch-back, one live run, claude plain vs mimo oracle, read whole by all three, report included.
+PHASE 2 after: SHORT test accepting quoted scripture; pre-check false "no verbatim quote"; report items (8505; my 16:10 list 9 to 14).
+NOT TOUCHED: chatgpt route, rulebook text, judges.
+ASK: E counterpart; advisor shape. I build in git now; nothing publishes before PASS.
+Worker_A3, seat 25, session_015ZiVmTarESui8ub4mf2Dcr
