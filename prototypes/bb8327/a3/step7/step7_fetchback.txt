@@ -1,0 +1,28 @@
+LIVE versionId 4daa72a6-11ed-44f3-8674-9a3ac340c94c activeVersionId 4daa72a6-11ed-44f3-8674-9a3ac340c94c active True nodes 231
+BASE versionId 0b025942-9380-42b1-aa09-6aa771d5604c nodes 231
+name sets equal True only_new [] only_old []
+EQUAL Alternate Build live 6c8e692d git 6c8e692d base 5b931e9d non-code fields equal base: True
+EQUAL Alternate Cure Build live 152b8edc git 152b8edc base b3b82a95 non-code fields equal base: True
+EQUAL Alternate Cure Normalize live 1eb9ffe3 git 1eb9ffe3 base 9ffe0f16 non-code fields equal base: True
+EQUAL Alternate Merge live a676a96e git a676a96e base 0bb2aa64 non-code fields equal base: True
+EQUAL Alternate Payloads live eedd6683 git eedd6683 base 07199d9c non-code fields equal base: True
+EQUAL Build Save Body live aad280a0 git aad280a0 base 1564183a non-code fields equal base: True
+EQUAL Cure Build live c30c8599 git c30c8599 base eaf9232a non-code fields equal base: True
+EQUAL Cure Check live 3c260de7 git 3c260de7 base dc28683f non-code fields equal base: True
+EQUAL Cure Normalize live 8039afe3 git 8039afe3 base e67e9bf6 non-code fields equal base: True
+EQUAL Extract Independent Verdict live 73b4c32c git 73b4c32c base 4ec33e00 non-code fields equal base: True
+EQUAL Format Markdown live 9308e7db git 9308e7db base 84bc791a non-code fields equal base: True
+EQUAL Panel Cure Build 1 live a5173f98 git a5173f98 base 31d5f3d4 non-code fields equal base: True
+EQUAL Panel Cure Build 2 live 6e6a88f6 git 6e6a88f6 base 293405be non-code fields equal base: True
+EQUAL Panel Cure Build 3 live c20d9926 git c20d9926 base a78db540 non-code fields equal base: True
+EQUAL Panel Cure Check live db47c96a git db47c96a base 6b4757c1 non-code fields equal base: True
+EQUAL Panel Cure Normalize 1 live 070d0775 git 070d0775 base e846d964 non-code fields equal base: True
+EQUAL Panel Cure Normalize 2 live c3e17c42 git c3e17c42 base ff26d6bb non-code fields equal base: True
+EQUAL Panel Cure Normalize 3 live 7d5b8199 git 7d5b8199 base 9e734d10 non-code fields equal base: True
+EQUAL Panel Payloads live 816da4fb git 816da4fb base fb070dc5 non-code fields equal base: True
+TARGETS EQUAL 19 of 19
+OTHER nodes 212 equal base 212 diff []
+connections equal base True
+settings equal base True
+pinData equal base True
+staticData equal base True
