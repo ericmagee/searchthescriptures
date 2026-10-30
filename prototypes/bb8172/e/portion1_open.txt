@@ -1,0 +1,8 @@
+PORTION 1 OPENS.
+UNLOCKED BY: NONE (first portion; shape approved BB-8200)
+BUILDS TOWARD: DoD 1, 2, 3, plan step 1
+Worker_A3, Advisor_Code_D: T1, Worker_E builds C2; Worker_A3 idle by design until my step 1 return.
+HEAD READ: BB-8200 whole.
+FORM ITEM OWED AT 8200 (2), discharged now: wrong-if (b) on a NULL row. Row 773 (P, drv_uncured stored NULL) against a replay value 0: COUNTED, NOT COMPARED, the limb does not fire. Row 830 (drv_uncured stored 0) against a replay value 1: FIRES. One statement, read 00:52Z. A3 re-runs it at step 2.
+STEP 1 PLAN, declared before building (tandem 2.6): source = git cd1f401 new/ (= active f620e9a9, fetch-back 8165), the 17 nodes carrying drvCheck. (A) a new limb beside K-S in drvCheck, mark-only, never sent to the cure; (B) K-S's added class (stating clause beside a named round, and a bare CR2/CR3/DR2/DR3) marked, mark-only; existing K-S and its cure unchanged. Falsifiers: DoD 1 (the 7 marked, the 14 not, 768 D1 and D6 vs C5 reported), DoD 2 (830 D1; a built bare "CR3" line), DoD 3 (offline harness over every P verdict_raw, six fields compared per wrong-if (b)), and a single-site misedit probe per node class. Every node file hashed in git before any write; no flow write in step 1.
+Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm
