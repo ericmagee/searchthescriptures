@@ -1,0 +1,150 @@
+{
+ "base": {
+  "items": 186,
+  "status": {
+   "MATCHES": 163,
+   "PENDING": 20,
+   "NOT CHECKED": 3
+  }
+ },
+ "new": {
+  "items": 196,
+  "status": {
+   "MATCHES": 172,
+   "PENDING": 21,
+   "NOT CHECKED": 3
+  }
+ },
+ "changes": [
+  {
+   "kind": "NEW ITEM",
+   "side": "CHALLENGER",
+   "round": "R1",
+   "ref": "Luke 2:41",
+   "status": "MATCHES",
+   "score": 1,
+   "rebound_from": null,
+   "after_first": false,
+   "order": "quote-first",
+   "cite_form": true,
+   "quote": "his parents went to Jerusalem"
+  },
+  {
+   "kind": "NEW ITEM",
+   "side": "CHALLENGER",
+   "round": "R1",
+   "ref": "Isaiah 7:16",
+   "status": "MATCHES",
+   "score": 1,
+   "rebound_from": null,
+   "after_first": false,
+   "order": "quote-first",
+   "cite_form": true,
+   "quote": "before the child shall know to refuse the evil, and choose the good"
+  },
+  {
+   "kind": "NEW ITEM",
+   "side": "CHALLENGER",
+   "round": "R1",
+   "ref": "Jeremiah 18:8",
+   "status": "MATCHES",
+   "score": 1,
+   "rebound_from": null,
+   "after_first": false,
+   "order": "quote-first",
+   "cite_form": true,
+   "quote": "If that nation, against whom I have pronounced, turn from their evil, I will repent of the"
+  },
+  {
+   "kind": "NEW ITEM",
+   "side": "CHALLENGER",
+   "round": "R1",
+   "ref": "Matthew 1:20",
+   "status": "MATCHES",
+   "score": 1,
+   "rebound_from": null,
+   "after_first": false,
+   "order": "quote-first",
+   "cite_form": true,
+   "quote": "Mary thy wife"
+  },
+  {
+   "kind": "NEW ITEM",
+   "side": "CHALLENGER",
+   "round": "R2",
+   "ref": "1 Corinthians 1:24",
+   "status": "PENDING",
+   "score": 0.2,
+   "rebound_from": null,
+   "after_first": false,
+   "order": "quote-first",
+   "cite_form": true,
+   "quote": "took unto him his wife"
+  },
+  {
+   "kind": "NEW ITEM",
+   "side": "CHALLENGER",
+   "round": "R2",
+   "ref": "Matthew 1:21",
+   "status": "MATCHES",
+   "score": 1,
+   "rebound_from": null,
+   "after_first": false,
+   "order": "quote-first",
+   "cite_form": true,
+   "quote": "THOU shalt call his name JESUS"
+  },
+  {
+   "kind": "NEW ITEM",
+   "side": "CHALLENGER",
+   "round": "R2",
+   "ref": "Luke 2:27",
+   "status": "MATCHES",
+   "score": 1,
+   "rebound_from": null,
+   "after_first": false,
+   "order": "quote-first",
+   "cite_form": true,
+   "quote": "the parents brought in the child Jesus"
+  },
+  {
+   "kind": "NEW ITEM",
+   "side": "CHALLENGER",
+   "round": "R2",
+   "ref": "Luke 2:41",
+   "status": "MATCHES",
+   "score": 1,
+   "rebound_from": null,
+   "after_first": false,
+   "order": "quote-first",
+   "cite_form": true,
+   "quote": "his parents went to Jerusalem"
+  },
+  {
+   "kind": "NEW ITEM",
+   "side": "CHALLENGER",
+   "round": "R2",
+   "ref": "Luke 2:33",
+   "status": "MATCHES",
+   "score": 1,
+   "rebound_from": null,
+   "after_first": false,
+   "order": "quote-first",
+   "cite_form": true,
+   "quote": "Joseph and his mother"
+  },
+  {
+   "kind": "NEW ITEM",
+   "side": "CHALLENGER",
+   "round": "R3",
+   "ref": "Luke 2:41",
+   "status": "MATCHES",
+   "score": 1,
+   "rebound_from": null,
+   "after_first": false,
+   "order": "quote-first",
+   "cite_form": true,
+   "quote": "his parents went to Jerusalem"
+  }
+ ]
+}
