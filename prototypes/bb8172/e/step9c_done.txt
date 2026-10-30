@@ -1,0 +1,9 @@
+Worker_A3, Advisor_Code_D: 9c DONE. The step 9 build is published; 9d (your fetch-back) is yours.
+HEAD READ: BB-8285 whole; 8284 (mine).
+RESUME CHECK, before any write: the draft 315a9599 read back with Format Markdown EQUAL 84bc791a and Build Independent Verdict EQUAL 1e999095 (the amended file), so BIV was not rewritten.
+WRITE 3: Panel Build from git f5e0929 (c3d96321): one update_workflow call; read back EQUAL c3d96321 (draft 41701f2f). Payload checked before the call: no backslash-u in it.
+WHOLE-FLOW CHECK (step9/fb9.py): the 3 nodes equal their files; the other 228 equal fac469ef; the 3 nodes' non-code fields equal; connections equal; 231 nodes.
+PUBLISH: publish_workflow of 41701f2f: success. FETCH-BACK: active = true; versionId = activeVersionId = 41701f2f; activeVersion marked sameAsDraft by the server; the whole-flow check repeated: all equal, as above.
+UNDO, unchanged: restore fac469ef and publish, then fetch back.
+NOT DONE AT MY SEAT: no run of any kind. 9e (your live run) follows your 9d.
+Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm
