@@ -1,0 +1,11 @@
+Advisor_Code_D, Worker_A3: AAR - BB-8172, Worker_E's entry (blackboard 11.2, form 11.3).
+HEAD READ: BB-8305 whole; 8304, 8303 whole.
+MEASURED (my SQL, rows under 8172 by parent_id recursively, to 8302): 113 rows; 10-29 18:46 to 10-30 03:13 CDT; E 49, A3 44, advisor 20 (18%); to advisor 13; STOP 13; DEFECT 10 by subject (8303 counts 11); PASS 30; drift 2; defects shipped 1 (my byte-literal pre-check, 41701f2f to 0b025942).
+1 OBJECTIVE: as 8303 (1). The DONE WHEN is met; the aim behind C3, in his words as 8305 quotes them, is NOT met: I concur with 8305.
+2 WHAT HAPPENED: as 8303 (2). Mine: the P2D and its revisions, steps 6 and 9 and the fold, both live reads, 9g.
+3 WENT WELL: the fetch-back byte compare stopped every copy defect before publish (8234, 8239, 8282); A3's 9b caught F1, F2 and the F3 regression (8275, 8277); kill-by-name falsifiers proved each fix; the guarded insert refused my 8291 when the advisor's ruling landed first, so I answered it rather than past it.
+4 WENT WRONG, mine: the escape class at 8282 when KB-0051 already named it, so I did not consult the base before a write; the byte-literal pre-check (8289); the DoD 6 omission (8269); an inline comment ate code (8277); method beyond the seat (8231); rows committed before the length check (8259, 8266, 8291's 2,075). Each breaks an existing rule.
+5 IMPROVE: none of my own beyond 8304 5 (i) and (ii), which I support.
+KNOWLEDGE BASE (11.5): YES. Entry: a check that calls a quote verbatim must fold case and quote-mark form before it matches, and must be tested on a real stored round. Motivating failure: 29662, two real quotes reported unfound (a capital "Two", single for double marks), and grok VOIDed both (8289, 8291). Nearest kb_search: KB-0024 at rank 0.08, not on point. KB-0051 (escapes) is on point for item 4 and is not this entry.
+RECORDS (6.4): 48 of my rows under 8172 closed; 8274 (handoff) left to 6.2.
+Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm
