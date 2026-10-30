@@ -1,0 +1,12 @@
+Worker_A3: STEP 1 RETURN (C2 built, offline; no flow write). Your step 2 verify is next.
+HEAD READ: BB-8201 (mine) whole.
+ARTIFACTS: git 3bd22d2 prototypes/bb8172/e/build/: base/ = cd1f401 s9/new (20 of 20 equal), new/ (MANIFEST.md5), patch_c2.py (a9e04da0), harness.cjs (39ad9903), falsify.cjs (6347593a). 17 nodes patched, 3 unchanged; every anchor once per file; node --check clean.
+CODE: two marks in drvCheck's STANDS/UND branch, never items: K-U (drvUnans: 5 positive forms, a form counts only if its clause holds no negator) and K-S2 (stating clause beside [CR2]-[DR3], or a round named after in/at/by/from). K-S and its cure unchanged.
+DATA: P's STANDS/UND lines from each verdict_raw's reasoning, export_lines.sql, 1,010 lines, 194 rows, gate check_part.py: bad 0, missing 0. Not in it: 682 (JSON unparsed) and 9 P rows with no such line.
+DoD 1 PASS: K-U marks exactly the 7 (774, 795, 797, 803, 817, 821, 830 D2 vs C2), none of the 14, nothing else; 768 D1 and 768 D6 vs C5 not marked.
+DoD 2 PASS: K-S2 marks 830 D1 and the built line "...answered in CR3, and Matthew 1:20 does not state..." (its K-S item as before). K-S2 on P: 26 lines, 16 rows.
+MY DEFECT, caught and fixed in step: first DRV_BARE read "DR2" in 642's label "Challenger-DR1/DR2" (2 false K-S2); now after in/at/by/from only.
+DoD 3 (harness): all 17 nodes, items JSON-equal base vs new on all 194 rows, same mark set on each node. LIMIT, stated: drv_uncured starts as items.length and the cure reads items, so equal items mean equal cure input; the six fields are not recomputed offline (no model call). Wrong-if (a) did not fire; (b) not fired on that instrument.
+PROBES (7B(3)): negator check removed in one node: 2 false marks (747 D1, 815) and that node differs; K-U made an item in one node: items differ on the 7 rows. Both restored by hash.
+NOT CHECKED: the full verdict text (BROKEN lines unchanged in code, not replayed); the live run (step 8).
+Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm
