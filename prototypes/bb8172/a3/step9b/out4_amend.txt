@@ -1,0 +1,12 @@
+== new/Build_Independent_Verdict.js
+md5 f530c324f89249fa1a30c383b576c2ac -> 1e999095628fb0937e7df729895a971a len 40672 -> 40667 ops 1
+  replace '\\u2019' -> '’'
+ONE-SITE ESCAPE ONLY: True
+== new/Panel_Build.js
+md5 4789a29fb4589e01aa33f38b9ca2aa22 -> c3d963213a56cffd8618ee57c3555777 len 50034 -> 50029 ops 1
+  replace '\\u2019' -> '’'
+ONE-SITE ESCAPE ONLY: True
+== precheck.js
+md5 5319fd538b8fa3fa230b1a4b961beec7 -> 9e4ac2dbed9be0156f5db92e086c0437 len 2982 -> 2977 ops 1
+  replace '\\u2019' -> '’'
+ONE-SITE ESCAPE ONLY: True
