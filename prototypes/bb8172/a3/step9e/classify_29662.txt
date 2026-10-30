@@ -1,0 +1,23 @@
+Run 29662 (ODV1-29662-0b7exh6b), dg61_scan.sql (git e6ad4f1, md5 b3137955), classified by hand by Worker_A3, 2026-10-30.
+Rule (8270/8272 wrong-if): a judge line that sets aside either side's chain because a verse does not state the conclusion.
+REGEX ROWS (13):
+glm  1 reasoning "neither side's witnesses stating the other's contrary in their own words" ............ BOTH
+glm  2 D1 vs C2 passive does not deny a begetter / named-father rows assert no begetting ............. BOTH
+glm  3 D2 vs C4 heos "states no union at all" (describes what heos says; not a dismissal) ............ NEITHER
+glm  4 D3 vs C1 Isaiah 7:16, 8:3-4 "do not state that Matthew 1:23 misapplies" ....................... CHALLENGER
+glm  5 D4 vs C2 thy father / his parents "in their own words state no begetting" ..................... CHALLENGER
+glm  6 D4 conceded premise-4 construct "does not state the contrary" (about the defender's concession) NEITHER
+glm  7 D6 vs C2 seed rows "never name Joseph as begetter, so they do not in their own words contradict" CHALLENGER
+glm  8 D6 census rows "state no biological paternity, so they do not state the contrary of D6" ......... DUPLICATE of 7
+grok 1 reasoning named-father speeches and seed rows "read together they do not state that Joseph begat" CHALLENGER
+grok 2 D5 Job 14:1, Matthew 11:11 "do not state a father for this child" ............................. CHALLENGER
+single 1 D1 passive "does not state a begetting" as the ground against the named-father rows ......... CHALLENGER
+single 2 D2 vs C3 challenger's John 1:13 parallel "does not state that the womb-conception is not" .... CHALLENGER
+single 3 D5 vs C6 Job/Matthew 11 idiom "does not state a father for Christ" ........................... CHALLENGER
+REGEX COUNT: CHALLENGER 8 (glm 3, grok 2, single 3); DEFENDER 0; BOTH 2; NEITHER 2; DUPLICATE 1; gemini 0.
+BASELINE 29609 (baseline_29609.txt): CHALLENGER 7, DEFENDER 0.
+OUTSIDE THE REGEX, by hand (wording "none of those rows states that", "no witness states", "not stated as"):
+glm D2 vs C3 (John 1:13 rows "none ... states that Matthew 1:20 is not"), glm D5 vs C6 ("none of them states that Galatians 4:4 does not"),
+grok D1 ("no witness states that Joseph begat Jesus"), single D6 vs C2 ("not stated as Joseph's begetting"): CHALLENGER 4 more.
+WRONG-IF: FIRES (any one line fires it).
+K-S2 marks on the row: single 4 (D1, D2, D5, D6), glm 3 (D3, D4, D6) + K-U 1, grok 2 (D1, D5).
