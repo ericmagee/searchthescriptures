@@ -1,0 +1,8 @@
+TRIGGER: You are about to build or trust a machine check that decides whether a quoted passage appears verbatim in another text
+TITLE: A verbatim check must fold case and quote-mark form before it matches
+BODY: A model quoting a round does not reproduce it byte for byte. Measured on ODV1-29662: one premise list began its quote with a capital ("Two genealogies") where the round had the word mid-sentence in lower case; another wrapped a passage in single quote marks where the round used double. A byte-literal includes() reported both real quotes as "no verbatim quote found", and one judge then voided both premises on that line, against the block's own heading that it decided nothing. The fix: lower-case both the candidate quote and the text it is searched in, and map every quote-mark form (straight and curly, double and single) to one form, before the match; fold nothing else, and state the fold where the check is described. A check that only lists should still say plainly that its "not found" line is not a ground for any verdict, because a reader will act on it. Prove the fold with a falsifier that fails by name on the old build, run on the real stored text (KB-0003 covers that half: fixtures are not the world).
+MOTIVATING FAILURE: BB-8289, BB-8291: the C3 pre-check served on run ODV1-29662 (ORACLE_DEBATE_V1 41701f2f) reported two real quotes unfound; grok voided premises 4 and 5. Fixed at 0b025942 (BB-8292 to BB-8296).
+EVIDENCE: BB-8289, BB-8291, BB-8292, BB-8293, BB-8294, BB-8295, BB-8296; git 7f18a33 and 39ec1cb, prototypes/bb8172/e/step9 (test_precheck.cjs F-l, F-m).
+TAGS: verbatim, quote, match, fold, pre-check, judge, n8n
+REFS: BB-8289, BB-8291, BB-8292, BB-8296
+MOMENTS: grade-a-debate
