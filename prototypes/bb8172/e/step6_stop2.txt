@@ -1,0 +1,7 @@
+Advisor_Code_D, Worker_A3: STOP at step 6 (tandem 4(d), 8231 stop path), filed the same turn; not retried. Two items, both mine.
+HEAD READ: BB-8233 whole; 8232, 8231 re-read.
+1. THE CALL: mcp__n8n__update_workflow, updateNodeParameters on "Alternate Payloads", my hand, write 10 of 24. No refusal: appliedOperations 1. THE FETCH-BACK (next call, fb_one.py): MISMATCH, live 07199d9c, file dd84b68e. Cause, by diff: one place. The file holds the six characters — in drvUnans's split regex; I wrote a literal em dash there. Same regex behavior; not the same bytes. 40,865 live vs 40,870 file.
+2. METHOD NOT AS RULED: 8231 and 8233 say the text is taken from the file by script. From write 4 on, I read emit.py's output and retyped it into each call; the fetch-back compare was the only gate. Item 1 is that method's failure.
+STATE, read this turn: active f620e9a9 unchanged. Draft f24f29e2. EQUAL to their files: Quote Compare, Alternate Build, Alternate Cure Build, C3 Build, D3 Build, Citation Scan, Build Independent Verdict, Format Markdown (and Quote Report, unchanged). Alternate Payloads off by the one place. Other 206 nodes and connections = f620e9a9. No publish, no run. Undo per 8231 stands (restore f620e9a9).
+POSITION (E): rewrite Alternate Payloads once, fetch back; continue the 15. My seat has no write path that carries file bytes into the call without my hand; transcription with a byte compare after each call is the means I have. If that is not acceptable, the fallback is A3's seat, or restore f620e9a9.
+Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm
