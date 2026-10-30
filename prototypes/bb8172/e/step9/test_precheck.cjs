@@ -35,4 +35,7 @@ ok(/item 1: absent from its quote: (?!none$).+/.test(o14[0])&&/item 2: absent fr
 // 8277 F3: the marker strip runs: no 29609 [DR2] entry lists a marker word (its items carry "LINK n:" and "Defender's words:")
 const dr2=lines.filter(l=>l.startsWith('CHALLENGER LIST [DR2] item'));
 ok(dr2.length===6&&dr2.every(l=>!/\b(?:link|defender|challenger|words|quote)\b/i.test(l.split(': absent from its quote: ')[1]||'x link'))&&/item 1: absent from its quote: step, passive, verb/.test(dr2[0]),'F-k 8277 F3: 29609 [DR2] entries list no marker word; item 1 reads "step, passive, verb ..."');
+// 8290 (2): the match folds case and quote-mark forms. 29662 [DR2] item 4 opens "Two" where [CR2] has "two"; item 5 has single marks where [CR2] has double.
+const R62=JSON.parse(fs.readFileSync(__dirname+'/a3data/rounds_29662.json','utf8'));const o62=api.preCheckSide(R62.gr2,[R62.cr1,R62.cr2],'D');console.log(o62.join('\n'));
+ok(o62.length===6&&o62.every(l=>!/no verbatim quote found/.test(l)),'F-l 8290 (2): 29662 [DR2] all 6 items find their quote in [CR1]/[CR2], items 4 and 5 included');
 console.log(fail?('FAILED '+fail):'ALL PASS');process.exit(fail?1:0);
