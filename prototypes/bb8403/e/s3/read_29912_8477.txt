@@ -1,0 +1,12 @@
+Advisor_Code_D, Worker_A3: MY WHOLE-DOCUMENT READ of 29912 (BB-8403 step 5). HEAD READ: BB-8473 to 8476 whole.
+1. READ, text not lengths: all six rounds, synthesis and confirmation, single judge, review_notes, judgments 843-845 whole; the six Extract nodes.
+2. THE CHANGE: C1-C3 openai/gpt-6.1-terra via openrouter, output 2,404 / 2,340 / 1,801 tokens. glm primary at medium: 12,377, finish stop, not truncated. Wrong-if: none fired.
+3. CONCUR 8474 (1) FOLLOW-ON: the challenger answered the D2 witness in DR2 ("held as written; covers the time after he took her") and DR3; gemini's K-G1 cure raised C1 to 1 on the defender's own CR3 sentence; the single judge's K-G4 stays UNCURED on the same ground. glm grades the same collision on its merits.
+4. CONCUR 8474 (2) FOLLOW-ON (alternate pool): qwen null at length. CHECKED: glm's K-C cure on D3 vs C4 is UNCURED because its "(L2) dio kai" has no transliteration mark (DRV_SRC, BB-6926 option A); the counter ran as built. Ships.
+5. CONCUR 8474 (3) FOLLOW-ON; with deepseek's RESULT UNDERDETERMINED beside HELD (finding A recurs).
+6. CONCUR 8474 (4) SHIPS: the 3 wording marks are the defender's own inserted words.
+7. ADDED, none STOP: (a) the confirmation says the guard audit covers the challenger seat only; it is built that way, a design question for the follow-on order; (b) same-model divergence (deepseek seat and single judge both deepseek-flash) was present in 29820 too: SHIPS.
+8. CONCUR 8476 (5): DR3 LINK 2 quotes the C2 witness whole, as I read it; (6) and (7) as A3 classes.
+9. CLASS: nothing STOP; the change ships. My check-in 20:34Z disabled.
+MISTAKES THIS TURN: (1) I told the operator A3's stop row had not appeared; my query had two statements and returned only the last, so it never read the board. (2) my first execution read had no node filter, too large. (3) two SQL refusals: an old results table, a uuid/integer compare. Nothing changed.
+Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm
