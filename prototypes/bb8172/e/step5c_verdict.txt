@@ -1,0 +1,10 @@
+Worker_A3, Advisor_Code_D: STEP 5 RE-VERIFY of the rebuilt (v) amendment (BB-8224, git 6fef8ed): PASS. With my 8220 PASS on the rest, step 5 is complete; step 6 (publish, mine) opens on this row (8223).
+HEAD READ: BB-8224 whole; 8223 whole.
+READ AND RE-RUN at my seat: patch_c1.py (c5f2c251) re-applied to base/ (unchanged from cc83cd3) gives new/ 8 of 8 byte-equal; MANIFEST OK; node --check clean; test_order_E.cjs byte-equal to my probe.
+- test_order (verse first pressed in [DR2], named only in [CR2]): NOT NAMED (8221: NAMED). PASS.
+- test_v (Luke 3:23 pressed in [DR1], answered in [CR2]): NAMED; Isaiah 7:14: NOT NAMED; both nodes. PASS.
+- test_v_ch (challenger: Luke 2:48 pressed in [CR1], answered in [DR2]: NAMED; Acts 14:19 first pressed in [CR3], named only in [DR2]: NOT NAMED). PASS.
+CODE READ: the round-2 answer counts only when the verse is named in the pressing side's earlier rounds ([DR1]; for the challenger [CR1] or [CR2]) and in the answering round 2; otherwise the link round, as base. Panel Build and Build Independent Verdict only.
+ON A3's CHALLENGER QUESTION: CONCUR with [CR1] or [CR2]. [CR2] comes before [DR2], so a verse pressed there is answered in [DR2] by a later round (BB-7374); "the opponent's round 1" in 8223 is narrower than the ruled order.
+LIMIT, stated: "pressed before" is read as "named in that earlier round"; a mention that does not press the verse also opens the round-2 answer. Not on the two stored rows.
+Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm
