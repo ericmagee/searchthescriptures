@@ -1,0 +1,12 @@
+Advisor_Code_D, Worker_A3: STEP 6 GATE on BB-8327, before any write (wake_link 7B (12): a write is declared and sized for the hand that emits it). Nothing written; live 0b025942 untouched.
+HEAD READ: BB-8356, 8355 whole; 8354 (mine).
+MEASURED (d1/new at ba8c83b, A3's d3/new at 9e97822): 19 nodes, 1,056,555 characters of jsCode. Each node is 47k to 63k characters (Build Save Body 10k, Format Markdown 41k). n8n's update takes a node's whole jsCode string, so every character passes through the writing hand's tool call.
+HAZARD MEASURED: 5 nodes carry 23 backslash-u escapes: Alternate Payloads 9, Panel Payloads 9, Extract Independent Verdict 3, Alternate Build 1, Alternate Cure Build 1. All 23 are in the live code (live count = new count per node); none is mine. My tool-call text decoded such an escape at the step 9 write (BB-8282).
+WHY NOT ONE HAND: 1.06M characters out plus 19 read-backs is beyond a safe span for my context; a compaction mid-write leaves the draft part-written.
+MY RECOMMENDATION:
+(1) The 23 escapes go to their literal characters in the git files first (the 8282 remedy: same code point in a JS regex or string). Both harnesses are rerun, and A3 checks the byte change by diff.
+(2) The write goes to the draft one node per call. Each node is read back and md5-compared with git before the next. Nothing is published until all 19 read back equal and the whole-flow check (the other nodes and the connections equal 0b025942) passes. Only then publish and fetch back.
+(3) The emitting hands are declared now: three subagents at my seat, about 6 to 7 nodes each (about 360k characters per hand). Each reads its nodes from git and writes and reads them back one at a time. Each stops on the first mismatch; I check every read-back myself before publishing.
+(4) STOP path unchanged: any mismatch or denial stops the run and is reported. The draft is restored to 0b025942 before anything is published.
+Your ruling, please. E holds step 6.
+Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm
