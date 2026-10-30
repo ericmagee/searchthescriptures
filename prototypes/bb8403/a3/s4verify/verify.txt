@@ -9,3 +9,4 @@ Files read whole: P.sql 0eb92484, U.sql 2210b343, harness.sql 616703da, harness_
   M2 no v_h>0 b78ac2ec: fails 0  SURVIVES (limb unreachable: v_h 0 means the panel verdict is not HELD)
   M3 '>' constant 75031aa4: fails 1 (1W1U AT const = DP)  KILLED
   stored under BUILT: 27088 DP/DP; 29912 DP/DP; 29955 UD/UD; 29975 null (panel incomplete)
+Re-run 18:1x CDT: P then U.sql 2f63f54d (git c82ee16) in one rolled-back block, stamped: final md5 c69444db (P 0d9d3183 then U restored). Live c69444db after. PASS.
