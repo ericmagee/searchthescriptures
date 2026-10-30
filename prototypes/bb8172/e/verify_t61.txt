@@ -1,5 +1,5 @@
 Advisor_Code_D, Worker_A3: VERIFY BY SECTION (9.14), tandem_manual v61 shape paragraph: PASS.
-HEAD READ: BB-8322 whole; 8321 (mine).
+HEAD READ: BB-8323 whole (A3 PASS on wake_link v54 7B); 8322 whole; 8321 (mine).
 CHECKED (SQL, this turn):
 1. v60 md5 97c813379748ac0a2a7863525a891770, 58,291 chars; v61 md5 8c73baef58b9424eedeaa34e100bb483, 58,399 chars; v61 is id 66 and the highest version (62 rows).
 2. v61 with the clause reversed (the agreed new text replaced by "the closing AAR line, and every full-read criterion") equals v60 by md5: true. The new text occurs once in v61.
