@@ -1,0 +1,20 @@
+Alternate Build EQUAL 6c8e692d 6c8e692d
+Alternate Cure Build EQUAL 152b8edc 152b8edc
+Alternate Cure Normalize EQUAL 1eb9ffe3 1eb9ffe3
+Alternate Merge EQUAL a676a96e a676a96e
+Alternate Payloads BASE 07199d9c eedd6683
+Cure Build EQUAL c30c8599 c30c8599
+Cure Check EQUAL 3c260de7 3c260de7
+Cure Normalize EQUAL 8039afe3 8039afe3
+Extract Independent Verdict BASE 4ec33e00 73b4c32c
+Panel Cure Build 1 EQUAL a5173f98 a5173f98
+Panel Cure Build 2 EQUAL 6e6a88f6 6e6a88f6
+Panel Cure Build 3 EQUAL c20d9926 c20d9926
+Panel Cure Check EQUAL db47c96a db47c96a
+Panel Cure Normalize 1 EQUAL 070d0775 070d0775
+Panel Cure Normalize 2 BASE ff26d6bb c3e17c42
+Panel Cure Normalize 3 BASE 9e734d10 7d5b8199
+Panel Payloads BASE fb070dc5 816da4fb
+Build Save Body EQUAL aad280a0 aad280a0
+Format Markdown EQUAL 9308e7db 9308e7db
+draft 890d061d-135b-4f57-9f25-a7cbe0f4f2d8 active 0b025942-9380-42b1-aa09-6aa771d5604c nodes 231 | targets EQUAL 14 BASE 5 OTHER 0 | other nodes 212 equal 212 | connections equal True
