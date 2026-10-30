@@ -3,3 +3,5 @@ Panel Cure Normalize 1 EQUAL e846d964 (draft e1b56a30). Panel Cure Normalize 2 E
 Panel Cure Normalize 3 EQUAL 9e734d10 (draft a32c1177). Cure Build EQUAL eaf9232a (draft 29dd1224). Cure Check: see fetch-back.
 Cure Check EQUAL dc28683f (draft 78d7a711). Panel Cure Build 1 EQUAL 31d5f3d4 (draft 3dbe1577). Panel Cure Build 2 EQUAL 293405be (draft 421aacd1). Panel Cure Build 3: see fetch-back.
 Panel Cure Build 3 EQUAL a78db540 (draft 066d581a). Panel Cure Check EQUAL 6b4757c1 (draft 69b1a1ac). Alternate Merge: see fetch-back.
+Alternate Merge EQUAL 0bb2aa64 (draft 96590b46). Extract Independent Verdict EQUAL 4ec33e00 (draft fac469ef). 25 of 25. fb_check: other 206 equal, connections dfa2da34.
+PUBLISHED fac469ef (publish_workflow, versionId given); fetch-back after: active = draft = fac469ef, active true, 231 nodes, 25 of 25 equal, 206 other equal, connections dfa2da34. updatedAt 2026-10-30T04:04:37Z.
