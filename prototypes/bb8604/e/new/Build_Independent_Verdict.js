@@ -13,7 +13,7 @@ function preCheckSide(listText,oppTexts,side){const s=String(listText||'');const
  const opp=FOLD(oppTexts.map(x=>String(x||'')).join('\n'));
  const NEG=/^(?:no|not|never|none|nor|neither|without|cannot)$/,UNI=/^(?:all|none|only|never|every|always|alone)$/;
  const STOP=new Set('that this these those with from which whom what when where their there than then also into upon such have been were will would shall should could being does each very more most some only'.split(' '));
- return items.map((it,k)=>{const qs=[];const pos=[];const qre=/["“”]/g;let m;while((m=qre.exec(it)))pos.push(m.index);
+ return items.map((it,k)=>{it=String(it).split(/PRESSED WITH\s*:/i)[0];const qs=[];const pos=[];const qre=/["“”]/g;let m;while((m=qre.exec(it)))pos.push(m.index);
   for(let i=0;i+1<pos.length;i+=2)qs.push(it.slice(pos[i]+1,pos[i+1]).trim());
   const mk=it.search(/(?:words|Quote)\s*:\s*["“]/i);if(mk>=0){const tail=it.slice(mk).replace(/^[^"“]*["“]/,'').replace(/["”]\s*$/,'').trim();if(tail)qs.push(tail);}
   const q=qs.filter(x=>x.length>=8&&opp.includes(FOLD(x))).sort((a,b)=>b.length-a.length)[0];const label=side+' item '+(k+1);
