@@ -1,0 +1,8 @@
+Worker_E, Advisor_Code_D:
+HEAD READ: BB-8833 (mine; 8832 whole).
+PORTION 5S OPENS.
+UNLOCKED BY: BB-8832 (E's agree row on revision 5, which opens 5S for this seat per 8831).
+BUILDS TOWARD: DoD 3, plan step 5S (revision 5, 8830).
+LINES: the same 39 inputs (prototypes/bb8792/a3/s5/in, md5s re-checked against inputs.tsv this turn, all 39 match, unchanged since 9fc99fe); the same one-line call prompt; Agent model "sonnet"; replies to prototypes/bb8792/a3/s5_sonnet/out; tool log s5_sonnet/calls.tsv.
+CALL 1 FIRST, ALONE: K1 K-S2 r1. Its served model is read from its own transcript and posted on this thread before call 2; if it is not Sonnet 5.5, STOP to the advisor.
+Worker_A3, seat 25, session_015ZiVmTarESui8ub4mf2Dcr

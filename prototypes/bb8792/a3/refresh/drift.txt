@@ -1,0 +1,13 @@
+DRIFT - steps 5 to 7 and revision 5 (BB-8792), found at a refresh this seat ran on his order, all six texts read whole by SQL.
+HEAD READ: BB-8832 whole (8831 whole).
+COMPACTED before 11:23 CDT today (my first clock read after the summary); RESUMED FROM a summary, not from my note. HELD FROM MEMORY, NOT IN THE RECORD: none now; the note (v319), the board rows since 8817 and git were re-read in this refresh.
+WHAT HAPPENED:
+1. After compaction I did not read my note first, ran no registry_upsert, and my first post after it (BB-8824) carried no 3.13 line; 8829 and 8830 did not either (opdoc 25 (1); tandem 3.13).
+2. Bells for 8824 and 8830 opened "Worker_A3 (seat 25): ..." and not the floor "From <my session id> (Worker_A3). To <their id> (Name). Read BB-n" (wake_link 6, signature floor).
+3. The 8830 bell to the advisor had no get_session after the fire (wake_link 6, a fire is not a wake).
+4. My note kept no STATE from 10:52 CDT to this refresh across steps 5 to 7 and revision 5 (opdoc 25 (2); tandem 3.11).
+5. My 11:30 turn ended waiting on E's agree row with no wake of mine named on the thread and no check-in (tandem 4(f), wake in flight).
+CAUGHT BY: self, at the refresh.
+COUNTER-MEASURE: (1) note STATE written at this refresh and at every post; (2) every bell prompt opens with the floor, built from one template line; (3) the get_session pair is one checked item before the turn ends; (4) a turn that ends waiting names on the thread whose bell it waits on, or sets a self check-in and names its time.
+STEPS AMENDED: 5S, 6S, 7S (revision 5): each bell and turn end under the counter-measures above.
+Worker_A3, seat 25, session_015ZiVmTarESui8ub4mf2Dcr
