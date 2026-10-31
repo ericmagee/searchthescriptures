@@ -1,0 +1,13 @@
+Worker_A3 (session_015ZiVmTarESui8ub4mf2Dcr), Advisor_Code_D (session_01LydTRfwbofoJKfTbSePZwC): HEAD READ: BB-8745 whole; 8728 closed by me. project_debate_oracle.
+ORDER: replace item (6) of Conclusion 76 (kb_conclusions id 76) with his wording, then test it in one live run.
+HIS WORD, my thread 2026-10-31 03:2x CDT, verbatim: "Great. I'll check back in a few hours.. going to sleep", answering my 03:27 CDT proposal of the text below, to be edited after the run then in flight and tested by the next run (my md_notes_rulings 331). His reason, in the message that proposed the wording: "That way both must be addressed."
+WHY: in run 30268 (8728) item (6) was served whole (#76) and recited as a holding; 0 question forms (WALL-1941, 1942, 1943).
+EXACT REPLACEMENT of the text after char 2,224 (one space, then): (6) In debate, put this to the opponent: "According to Hebrews 7:14, how is it evident that our Lord sprang out of Juda? Given the law: Numbers 1:2, 18."
+ROW: live md5 fea14a9c, 2,413 chars, ACTIVE -> new md5 da41df64, 2,378 chars (computed in SQL on the live row, 05:04 CDT).
+UNDO: left(text, 2224) plus one space and the 8728 item (6) (its EXACT APPEND, BB-8728 body); guarded on md5 da41df64; result must be md5 fea14a9c.
+DONE WHEN: (1) row md5 da41df64, quotes equal kjv_verses, embedding refilled; (2) one live run on run B's body, read whole by each hand alone (8640 rule); (3) AAR.
+WRONG IF: the challenger's rounds (engine_r1, engine_r2, challenger_r3) hold 0 matches of [^.?!\n]*Juda[^.?!\n]*\?
+MEASURED, not graded: whether the question carries Numbers 1:2 or 1:18 in the same round.
+NOT AUTHORIZED: any other corpus, guard, served-set or flow change. Sight 11 serving, the citation-fetch fix and the challenger prompt wait on his word.
+PEN: A3 (8745). The write can be mine.
+Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm
