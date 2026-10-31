@@ -1,0 +1,8 @@
+specimen: 4 of 5 (S-519, S-2, S-32, S-1583); unserved labels cited: none
+plain: 4 of 5 (S-519, S-2, S-32, #7); unserved labels cited: none
+E constructed: 5 of 7 (S-32, S-519, S-8, #7, #12); unserved labels cited: S-99999
+noise: 0 of 1; unserved labels cited: none
+
+specimen, served S-519 S-2 S-32 S-1583 #7: 0 of 5; unserved labels cited: #519, #2, #18, #8, #1583, #32
+expected: 4 of 5 (S-519, S-2, S-32, S-1583); unserved labels cited: none
+plain forms: 4 of 5 (S-519, S-2, S-32, #7); unserved labels cited: none
