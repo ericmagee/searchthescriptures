@@ -1,0 +1,6 @@
+K2 K-G4            expected C | Sonnet C   | Haiku CCC | right True | steady True
+K3a K-C            expected B | Sonnet BBB | Haiku BBB | right True | steady True
+K3b K-C            expected B | Sonnet BBB | Haiku CCC | right True | steady True
+K4 K-G4            expected B | Sonnet BCB | Haiku BCB | right False | steady False
+C_0ff61f2c K-S2    expected C | Sonnet BBB | Haiku BBB | right False | steady True
+C_25eae673 K-S2    expected C | Sonnet CCC | Haiku BBB | right True | steady True
