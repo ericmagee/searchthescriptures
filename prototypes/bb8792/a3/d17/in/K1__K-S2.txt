@@ -1,0 +1,25 @@
+You check one piece of a judge's written grading against one rule the judge was given. You do not judge the debate, its scripture or its doctrine. You decide only whether this judge text obeys this rule.
+
+Answer from the text given in this message only.
+Judge only the reasons the judge wrote. Do not guess at a reason it did not write.
+
+DEFINITION THE JUDGE WORKS UNDER:
+CHAIN (Isaiah 28:10: "For precept [must be] upon precept, precept upon precept; line upon line, line upon line; here a little, [and] there a little"): an argument built from many verses. Each LINK is one step, standing on its verses and on the steps before it. A link is judged by its support, never by whether any verse, or the chain as a whole, states it word for word; and a verse whose words leave the question open decides nothing by itself.
+A verse whose own words state the contrary is weighed with the chains. It does not decide alone.
+In the KJV, capitals mark who is meant: father and Father, god and God and GOD, lord and Lord and LORD are different words. A judge may not treat them as one word or as balancing each other.
+
+RULE K-S2, exactly as the judge was given it:
+That a single verse does not state a link or its contrary is never a ground for STANDS or UNDERDETERMINED, for either side. A verse that carries two senses at once is not open. Both senses stand. This is about one verse. It does not apply when the judge weighs two chains.
+
+ROUND LABELS: [CR1], [CR2], [CR3] are the defender's rounds 1 to 3; [DR1], [DR2], [DR3] are the challenger's rounds 1 to 3.
+
+JUDGE TEXT TO CHECK:
+HELD. The text states that before Mary and Joseph came together she was found with child of the Holy Ghost ([L1] Matthew 1:18, 20), with the active begetting verb withheld from Joseph in the record of the generations ([L2] egennēthē in Matthew 1:16). While the challenger demonstrated that Davidic lineage is reckoned according to the flesh ([L1] Romans 1:3; [L3] Acts 2:30), neither text states that Joseph begat the child ([L4]). Because the defender answered the witnesses pressed against the chain and neither withdrew nor suffered refutation of the declared links, the defense holds ([L4]).
+
+
+THE ROUNDS THE JUDGE TEXT NAMES, whole:
+(none named)
+
+Reply with exactly one JSON object and nothing else. Escape any double quote inside a value with a backslash.
+{"rule": "K-S2", "applies": "yes" or "no" or "unclear", "applies_why": "<one sentence: does this judge text do the thing the rule governs?>", "verdict": "BREACH" or "CLEAN", "quote": "<the judge's words that decide your verdict, copied exactly from JUDGE TEXT TO CHECK>", "rule_words": "<the words of the rule or the definition you relied on, copied exactly>", "room": "<the phrase of the rule or the definition you had to interpret, and the two readings you weighed; or none>", "why": "<one sentence>"}
+BREACH means the judge text does what the rule forbids, or leaves undone what the rule requires of it. CLEAN means it obeys the rule, or the rule does not apply to this text.
