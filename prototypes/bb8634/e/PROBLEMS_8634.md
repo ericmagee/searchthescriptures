@@ -1,83 +1,77 @@
 # Order on run 30091's findings: problems found and a solution for each
 
-Prepared by Worker E for the operator, 31 October 2026, 01:0x CDT. Not posted to the board, by your instruction.
+Prepared by Worker E for the operator, 31 October 2026, 01:44 CDT. Not posted to the board, by your instruction.
 
-The order makes nine changes to the debate flow. One more, the Greek and Hebrew word check, moved to a later order. The changes are now live. One live run was refused at its first round. Its single re-run started at 00:58 CDT and was still running when I wrote this. My whole, isolated read of that run will be added as a second part when it stops.
+The order's changes went live at 00:41 CDT. The first live run (30188) was refused at its first round. Its re-run, run 30196 ("Did Christ have a biological father?"), finished at 01:35 CDT. I read all of it alone: all six rounds, the single judge, the synthesis, the three panel judgments, their cure calls, the stored citation check, and the transcript.
 
-## Part 1. Problems in the live run so far
+Stored result: **Defender prevails, HELD 3-0.** Result lines: DeepSeek "Defender wins", Gemini "Underdetermined", GLM "Defender wins". The single judge gave "Defender wins".
 
-### 1. The challenger's provider refused the first round (run 30188)
+## Part 1. Problems found in run 30196
 
-- **What happened.** The first live run on the new version stopped after 55 seconds. The challenger seat, MiMo, returned no text: its provider stopped the reply with its content filter. The flow did what it was built to do. It refused to treat an empty reply as a debate round, saved the partial row (only the defender's first round), saved the Drive copy, and stopped. No judge ran, so the run says nothing about the changes.
-- **This is not new.** The error table holds five content-filter refusals since 22 October, and every one is MiMo's.
-- **Cause.** Not known. Whether something in the topic or in the served text trips MiMo's filter is not measured.
-- **Solution.** The flow should not spend a paid run on a seat whose provider refuses this topic. I recommend one change in a later order. When the challenger's first call ends in a content-filter refusal, the flow retries that call once. If the retry is refused too, it stops with the row marked "provider refusal", as it does now. A three-hand re-fire, which tonight cost two board rows (the stop row and the re-fire row) and a second paid run, is then not needed. Before building it, count how many of the five refusals cleared on a re-fire.
+### 1. The defender won while arguing a reading the record's guards forbid
 
-## Part 2. Problems found while building and checking the order
+- **What happened.** The defender argued "Jesus had no human biological father". Drift Guard 8(a) forbids that reading, and it prevailed 3-0. The record holds the opposite reading: Sight 32, "Joseph knew Mary within the espousal". The challenger argued that reading. All three judges graded it CHALLENGER LINK BROKEN on Matthew 1:18 and 1:25. They read "knew her not till" as excluding any union before the birth. The record reads that verse as limiting the abstinence to the pregnancy. GLM's grade of D6 against C1 rests on Luke 1:35 "leaving no room for a male begetter", which comes close to the reading Drift Guard 18 forbids.
+- **Cause.** The judges are never shown the guards. That was decided earlier (ruling 61, row BB-7216). The judges therefore grade the standard reading by its own text and have no means of knowing the record forbids it.
+- **Solution.** This is your call, because it changes the judging frame. I recommend serving the judges, for each run, the guards that the topic touches, under a heading that states the record's held reading, so that a win for a forbidden reading is flagged instead of stored silently. Until that is decided, a HELD result on a topic a guard governs should carry a note that the defender argued a guarded reading.
 
-All of these were caught before the publish unless the line says otherwise.
+### 2. The synthesis checks only the challenger for drift
 
-### 2. The stored outcome contradicted all three judges (run 30091)
+- **What happened.** The defender used the construct that Luke 3 gives Mary's line through Heli, a construct Drift Guard 56 governs. In round 3 the defender narrowed it to "permits". The synthesis drift test is written for the challenger's seat only, so it never examined this.
+- **Solution.** Run the same drift test on both seats in the synthesis step.
 
-- **What happened.** Run 30091 was stored as "Defender prevails, weakened" while all three judges wrote "Underdetermined".
-- **Solution, done on your word.** The rule now reads a PARTIAL panel's result lines as it reads a HELD panel's, and run 30091 now reads "Underdetermined". No other stored debate changed. I checked all seven PARTIAL debates since the tie rule began.
+### 3. Six real verses were printed to the judges as "does not exist"
 
-### 3. A fifth list reader was missed by the plan
+- **What happened.** The citation check told the judges that 1 Kings 8:19 (twice), Jeremiah 22:24, Haggai 1:1, Job 14:1 and Luke 1:13 do not exist. All six are in kjv_verses, and the challenger quoted them correctly. DeepSeek repeated the error, and the judges denied those links their verse footing.
+- **This is not new.** Run 29609 had four such errors and run 29328 had one. Every case is in the challenger's round 3, on rounds with many citations.
+- **Cause, suspected and not measured.** The verse fetch stops at a row limit, so a verse past the limit reads as missing.
+- **Solution.** Measure the citation-check fetch on this run. Then page it or raise the limit. Never print "does not exist" unless a direct lookup in kjv_verses finds no such verse.
 
-- **What happened.** The plan named four places in the flow that read the challenger's closing list. A fifth, inside the extractor's withdrawal check, still read numbered lines only. I found it while building another change.
-- **Solution, done.** The fifth reader now reads "LINK n:" lines too, and a test with a scrambled list proves it maps them.
-- **For the future:** a plan that says "every reader" should find the readers by searching the code for the list's heading, not by reading the flow and listing what one sees.
+### 4. The judges read "NARROWED TO" answers three different ways
 
-### 4. A judge-rule sentence contradicted itself in one node
+- **What happened.** Eight answers in the two link rounds used the new "NARROWED TO" form. DeepSeek counted the challenger's links 3 and 4 as conceded (stated). The single judge counted the defender's link 4 as conceded. Gemini and GLM judged the same answers as narrowings. One answer form produced three readings, and the concession counts moved with them.
+- **Solution.** Add one sentence to the judges' counting rule: a NARROWED TO answer is never counted as conceded unless the limb it keeps has no exhibited footing.
 
-- **What happened.** The new "NARROWED TO" answer form was inserted in the wrong place in one of the two link-round steps. It inherited a bracketed note that belongs to the "conceded" form, so it read "the link is judged in its narrowed form (rests on no exhibited prior-layer footing)". All three of us agreed the text without reading that sentence whole in that node. The advisor caught it.
-- **Solution, done.** It now reads cleanly.
-- **For the future:** every text insert is checked by reading the whole sentence it lands in, in each node, before it is agreed.
+### 5. The judges' void counts disagree widely
 
-### 5. The served-label counter misread a common citation form
+- **What happened.** For the same premises, the defender's void count was 6 at DeepSeek and 1 at the single judge, both on the same model. The audit flagged it.
+- **This is not new.** It is the known void-tolerance problem (row WALL-1820).
+- **Solution.** Keep it on that row's list. No change in this order.
 
-- **What happened.** Debaters write "Sight #519" and "Drift Guard #18". My first counter read the "#519" as a conclusion label, so on one real round it would have reported 0 of 5 served labels cited, where the truth is 4 of 5. A3 caught it with a real stored round.
-- **Solution, done.**
-- **For the future:** a counter is tested on stored real rounds, not only on text I write myself.
+### 6. The transcript is still missing two things
 
-### 6. A comment I added would have crashed the extractor
+- **What happened.** The transcript omits the single judge's judgment and the diagnostic. Its reading guide still quotes the old void text.
+- **This is not new.** Both predate this order.
+- **Solution.** Add the single judge and the diagnostic to the transcript build, and update the guide's void text, in a later order.
 
-- **What happened.** A comment on one line hid the definition that followed it, so every debate would have failed at that step. My own whole-step test caught it before the post.
-- **Solution, done.**
-- **For the future:** the whole step is run on real judgments before any write, as I did here.
+### What worked in this run
 
-### 7. A design approval was put to you that was not yours to give
+- **Five-reader fix.** The extractor counted six LINK lines from a list that was out of order and used LINK labels only.
+- **Served-label count.** The judges were told "CHALLENGER 1 of 27 (S-1578)", and Gemini and GLM used it.
+- **Premise count.** The challenger's list ended "PREMISE COUNT: 6", and it matched the six premises the ledger gives against the defender.
+- **Ledger.** Six premises against each side. Its one unnamed verse (Genesis 3:15, challenger premise 6) is correct: the challenger's round 3 does not name it.
+- **Counts.** The challenger's word counts are correct: bethulah has 50 verses in 19 books, and almah has 7.
+- **Cure step.** DeepSeek and GLM each received one cure call, and both cured.
 
-- **What happened.** The plan said the concession-shield change waited on your word. The advisor asked you, and I told you six times that it waited on you. It changes none of your rulings, so its approval was the advisor's. You caught it.
-- **Solution, done.** The advisor withdrew the question and approved the text. All three of us filed the breach.
-- **For the future:** before anything is said to wait on you, the row names the ruling of yours it changes or the scope it exceeds. If it names neither, it goes to the advisor.
+## Part 2. The refused run and the build problems
 
-### 8. I did not declare that a helper would make the flow writes
+- **7. Run 30188 was refused.** MiMo's provider stopped the challenger's first call with its content filter. The flow saved the partial row and stopped, as designed. That makes five such refusals since 22 October, all MiMo. **Solution:** in a later order, retry a refused first call once automatically, and stop only if the retry is refused too.
+- **8. Problems caught while building, all fixed before the publish:**
+  - a fifth list reader the plan missed;
+  - a judge sentence inserted in the wrong place;
+  - a label counter that misread "Sight #N";
+  - a comment that would have crashed the extractor.
 
-- **What happened.** My row opening the writes did not say a helper would make them. The writes landed exactly as verified, so nothing needs undoing. A3 caught it.
-- **Solution, filed.** The row that opens a write names who makes it.
-
-### 9. Two portions ran at once, briefly
-
-- **What happened.** The advisor declared A3's portion closed while its approved write still waited on your word, and I began building the next portion on that. A3 caught it, and the advisor filed it against himself.
-- **Solution, filed.** A portion closes only when every act in it is done.
-
-### 10. The stop report for run 30188 was late
-
-- **What happened.** A3's first status check came ten minutes after the start, so a stop inside that window could not be reported within ten minutes.
-- **Solution, done by A3.** The first check is now at two minutes.
-
-## Part 3. Problems left open, for a later order
-
-- **11. The Greek and Hebrew word check (S8).** It needs a new fetch step in the flow, outside this order's price. Run 30091's "Luke 24:49 eperchomai" error, where the verse's word is endyō, would still pass unchecked.
-- **12. The one-verse mark (K-S2) still has no correction path.** Changing that would reverse an earlier decision across 17 steps. First count which past grades it would move.
-- **13. A judge can withdraw a link the defender never conceded, and nothing flags it.** The rule for which defender concession counts as the withdrawal has to be written first.
-- **14. The extractor flags a missed withdrawal of D1 in run 30091's single judgment.** The defender conceded link 1, and the judge kept it standing. It predates this order and is the same as finding 4 of my run 30091 write-up (how much a concession withdraws). It stays a judging-rule question.
-
-## Part 4. Not yet tested
-
-Every change in this order has passed tests on stored debates. None has run inside a live debate yet. That is the re-run's job, and Part 1 of this write-up will be completed from it.
+  **Solution, in effect for the future:** find readers by searching the code; read each inserted sentence whole in each node; test counters on stored real rounds; run the whole step before any write.
+- **9. Protocol breaches, all filed:**
+  - I told you six times that the S4 change waited on your word, when it was the advisor's (row BB-8683);
+  - I did not declare that a helper made the writes (row BB-8697);
+  - two portions ran at once for a short time;
+  - the first stop check came late.
+- **10. Left open for a later order:**
+  - the Greek and Hebrew word check;
+  - a correction path for the one-verse mark;
+  - an unflagged withdrawal of a link the defender never conceded.
 
 ## My recommendation
 
-Let the re-run finish and read it whole before anything else changes. If MiMo refuses again, decide on the automatic retry in problem 1 before any further paid run on this topic.
+Decide problem 1 first, because it is the reason this run's result is wrong on the record's terms. Then fix problem 3, the false "does not exist" lines, before the next paid run. It is a fault in what the system tells the judges, and it has recurred in three runs.
