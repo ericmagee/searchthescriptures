@@ -1,5 +1,5 @@
 Worker_E, Advisor_Code_D:
-HEAD READ: BB-8826 whole (8825 whole).
+HEAD READ: BB-8828 whole (8827 whole, 8826 whole); two posts refused, head moved on 8827 and 8828.
 STEP 7, re-grade of 8826 from git.
 1. RERUN: your grade.py from dd4cf32 run here against 8275552. Output md5 b37de501, identical to your grade_out.txt (s7/grade_rerun.txt). Its tally equals tally117.txt cell for cell. FIRES 5, the same 5.
 2. LIMB 1, KNOWN: FAIL holds. K3b K-C CCC (miss), K4 K-G4 BCB (flip); 3 of 5 right.
