@@ -1,12 +1,12 @@
 Worker_E, Advisor_Code_D:
-HEAD READ: BB-8804 (mine; 8803 whole).
-STEP 4, VERIFY OF STEP 3 (8803, git 5ecf2bc), my seat, script s4.py (git next):
+HEAD READ: BB-8805 whole (8803 whole).
+STEP 4, VERIFY OF STEP 3 (8803, git 5ecf2bc), my seat, script s4.py (git c0ff7b8):
 1. LIVE: active version 8a7f48d3 (updatedAt 05:40:34.906Z, metadata read this turn) = my saved fetch (BB-8694); E's Panel Build and BIV EQUAL mine (eb0dee1e, eb53803a).
 2. RULES: K-S2, K-C, RESULT once each, literally, in both nodes; K-G4 0 literally, once each as JS source with escaped quotes, so its served text equals rules.json. md5s recomputed equal. 8803's "exactly once" holds for K-G4 after decoding only: noted.
 3. Template a3d629a4, context rule 73e1b756, expected 337bb830 read whole: rule, unit, round labels, answer form, nothing else; round mapping as operational_doc 27.
-4. CLEAN 9 and CANDIDATE 3: read against the served texts; CONCUR.
+4. CLEAN 9, CANDIDATE 3: read against the served texts; CONCUR.
 TWO ITEMS BEFORE STEP 5:
 (a) By sequence, not E's defect: rev 2 (8804) marks K2 and K6 EXCERPT. Add "{EXCERPT_NOTE}" after the unit, filled for K2 and K6 only: "NOTE: this judge text is the stored cure report; the record's audit line cut it short where it shows ...".
-(b) COUNTER on K6. The served RULE reads "HELD gives DEFENDER WINS only if CHALLENGE STANDING is not SELF-SUPPORTED or ...". Gemini 865's CHALLENGE STANDING line reads PROP-DEPENDENT. By the rule's letter the first limb is met; BREACH needs the further step that the standing went stale when its only ground was retracted. That is our reading, not a record answer: K6 joins the CANDIDATE group. Replacement text for expected.md: "K6 | RESULT | CANDIDATE: BREACH on our reading (standing grounded only on the retracted break); by the rule's letter the stored PROP-DEPENDENT standing meets the first limb. Called and reported, outside the pass bar." Known limb becomes 5 cases; calls unchanged at 117.
+(b) COUNTER on K6. The served RULE reads "HELD gives DEFENDER WINS only if CHALLENGE STANDING is not SELF-SUPPORTED or ...". Gemini 865's CHALLENGE STANDING line reads PROP-DEPENDENT. By the rule's letter the first limb is met; BREACH needs the further step that the standing went stale when its only ground was retracted. That is our reading, not a record answer: K6 joins the CANDIDATE group. Replacement text for expected.md: "K6 | RESULT | CANDIDATE: BREACH on our reading (standing grounded only on the retracted break); by the rule's letter the stored PROP-DEPENDENT standing meets the first limb. Called and reported, outside the pass bar." Known limb becomes 5 cases (a P2D change: to the advisor for shape if E concurs); calls stay 117.
 VERDICT: PASS on step 3 as built, with (a) and (b) for E to fold or answer before step 5 (my calls). Exchange 1 of 2 on (b).
 Worker_A3, seat 25, session_015ZiVmTarESui8ub4mf2Dcr
