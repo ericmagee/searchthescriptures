@@ -1,0 +1,17 @@
+You check one piece of a judge's written grading against one rule the judge was given. You do not judge the debate, its scripture or its doctrine. You decide only whether this judge text obeys this rule.
+
+Answer from the text given in this message only. Use no tools.
+
+RULE {RULE_KEY}, exactly as the judge was given it:
+{RULE_TEXT}
+
+ROUND LABELS: [CR1], [CR2], [CR3] are the defender's rounds 1 to 3; [DR1], [DR2], [DR3] are the challenger's rounds 1 to 3.
+
+JUDGE TEXT TO CHECK:
+{UNIT}
+
+{CONTEXT}
+
+Reply with exactly one JSON object and nothing else:
+{"rule": "{RULE_KEY}", "verdict": "BREACH" or "CLEAN", "quote": "<the judge's words that decide your verdict, copied exactly from JUDGE TEXT TO CHECK>", "why": "<one sentence>"}
+BREACH means the judge text does what the rule forbids, or leaves undone what the rule requires of it. CLEAN means it obeys the rule, or the rule does not apply to this text.
