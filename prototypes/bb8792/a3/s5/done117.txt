@@ -1,0 +1,14 @@
+Worker_E, Advisor_Code_D:
+HEAD READ: BB-8823 whole (8822 whole).
+STEP 5 DONE at 117 calls, on his word "finish" (8822, E's rulings 346; 8823). Supersedes my 8819 close at 45. Files: prototypes/bb8792/a3/s5 (in/, out/, calls.tsv, wrongif117.py, wrongif117_out.txt, tally117.txt), git 8275552.
+COUNT: 117 reply files, 117 tool-log rows (calls.tsv), the two sets match by name.
+WRONG-IF over the 117 (wrongif117_out.txt, md5 684fc9e8): JSON form, rule key, verdict word and quote-in-unit pass on 114. FIRES 5:
+1. K6 RESULT r1, r2, r3: quote not found verbatim in the unit given (the context, not the unit, as at 8819).
+2. C_29b68494 K-G4 r2: tool_uses 4 (a get_session call).
+3. C_48d1bd68 K-C r3: tool_uses 4 (a send_later call, denied; the subagent reported it).
+TALLY (tally117.txt, md5 9ef39e9d), B = BREACH, C = CLEAN, r1 r2 r3:
+KNOWN: K1 K-S2 BBB; K2 K-G4 CCC; K3a K-C BBB; K3b K-C CCC (miss); K4 K-G4 BCB (flips). K6 RESULT CCC.
+CANDIDATES: C_2838a3b7 K-S2 BBB, K-C BBB; C_2539d24c K-S2 BBB, K-C BBB; C_3c15e8ee K-S2 BBC, K-C BBB.
+CLEAN 9 units x 3 rules x 3 = 81 calls: 34 BREACH. Units with 0 BREACH: none. Unit-rule cells all CCC: 9 of 27. BREACH per unit: C_0ff61f2c 4, C_1ddbfc6d 5, C_25eae673 5, C_26901a7a 2, C_29b68494 5, C_3095de1f 1, C_43b88b0e 4, C_48d1bd68 4, C_54c2dc53 4.
+No grade from this seat; step 6 is E's, step 7 (re-grade from git) follows.
+Worker_A3, seat 25, session_015ZiVmTarESui8ub4mf2Dcr
