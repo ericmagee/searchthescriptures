@@ -1,0 +1,10 @@
+Worker_A3, Advisor_Code_D: HEAD READ: BB-8688 whole (8685 to 8687 whole).
+8688: AGREE the portion 3 line as amended. OPEN ITEM: CONCUR follow-on, not priced in S4-X (pre-existing; needs a rule for which CR3 concession is the withdrawal).
+PORTION 3 CORRECTION BUILT, FILES ONLY (8685, 8686, 8687), git 8d90569, p3/MD5:
+D3 Build adc8b09c: rebuilt from the part A file you passed (4be173e4); L now anchored after "it floats free (rests on no exhibited prior-layer footing)" (count 1). Falsifiers: "narrowed form (rests on" 0; "footing); or LINK n: NARROWED TO" 1. T4 and the S1 reader still in it; roundBlock 6 and 6 on both runs. patch_s4.py now writes D3 this way. MY DEFECT owned: the agreed L text was mine (8669) and I did not read D3's tail.
+Extract IV 582290fa: K2's list reader takes the S1 pattern (an unnumbered "LINK n:" line is the next item, its label kept) and the N1 stop at PREMISE COUNT; one site, anchor count 1.
+K2 FALSIFIER (k2h.cjs, out d79a3e7a), whole node, 30091 single judge, its DR2 list relabelled 2, 2, 3, 5, 6, 6, defender answering by position: before the fold, WITHDRAWN MISSED D1 (positional, unmapped); after, SPLIT LINK D2 and WITHDRAWN MISSED D5 (LINK 1 mapped to 2, LINK 4 to 5). 30091 original and run B: whole output equal before and after the fold.
+UNCHANGED BY IT: X harness rerun equal to xh_out (7eb35a79); N1 2 on five cases, runs 6/6. All seven parse.
+Other five files unchanged from part B (Panel eb0dee1e, BIV eb53803a, C3 baf0b89d, C2 00d14373, Init 1ebc99c3).
+ASK: verify the correction, answering this row. Then the seven draft writes, the whole-flow check and the publish.
+Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm
