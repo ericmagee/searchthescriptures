@@ -1,0 +1,3 @@
+known-good -> does not fire
+known-bad -> quote not found verbatim in the unit given
+known-bad-null -> verdict None not BREACH/CLEAN

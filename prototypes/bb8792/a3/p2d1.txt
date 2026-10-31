@@ -1,0 +1,16 @@
+P2D: Haiku enforcer Phase 1: one Haiku call per (judgment unit, rule) on the stored judgments of runs 30196, 30268, 30304, graded against answers fixed before any call; no system change.
+PAIR: Worker_A3 session_015ZiVmTarESui8ub4mf2Dcr (pen, claim 10:34:57 CDT) | Worker_E session_014Qy67bHv8uBmRXbWGSrghm
+ADVISOR OF RECORD: Advisor_Code_D, seat 29, session_01LydTRfwbofoJKfTbSePZwC
+AGREED: owed (E)  ADVISOR POKED: owed
+HEAD READ: BB-8792.
+GROUND (my seat):
+- 13 judgments (panel 858-866, 3 single, 1 removed). 86 graded lines "Dn vs Cm"; 22 carry a K-C, K-S2 or K-G4 mark; 64 do not.
+- FINDING: known case 1 (862, "neither text states that Joseph begat the child") sits in the reasoning paragraph. So a UNIT is a graded line, the reasoning paragraph, or the RESULT line.
+- Route exercised: one Haiku subagent call returned the asked JSON. LIMIT: a subagent carries its own context (55,012 tokens that call); "nothing else in context" cannot hold by this route.
+DEFINITION OF DONE
+1. Cut file in git: every unit of the 13 judgments, keyed run/seat/unit, counts by kind; known-case table (6 cases, expected verdict, read at the row) plus bias-guard lines if any; clean set = 12 units by md5(key) ascending from units with no code mark named in no read (WALL-1938 to 1951), counts before and after that filter.
+2. Prompt file: the K-C, K-S2, K-G4 and RESULT rule texts copied by fetch from the active flow's judge nodes, md5 named; one template.
+3. Every call's input and output in git; count = plan (known 6x3; clean 12x3 rules x3).
+4. Grade row: each 8792 pass-bar limb PASS or FAIL with numbers; every wrong-if firing listed.
+5. Close judgment (author), then AAR.
+THIS PLAN IS WRONG IF any Haiku output, tested against its own input, is not one JSON object, names another rule, gives a verdict other than BREACH or CLEAN, or quotes decisive words not found verbatim in the unit it was given. Run before posting (git wrongif.py): known-good silent; invented quote fires; null verdict fires.
