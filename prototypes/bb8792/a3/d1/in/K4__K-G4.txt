@@ -1,0 +1,22 @@
+You check one piece of a judge's written grading against one rule the judge was given. You do not judge the debate, its scripture or its doctrine. You decide only whether this judge text obeys this rule.
+
+Answer from the text given in this message only.
+
+DEFINITION THE JUDGE WORKS UNDER:
+CHAIN (Isaiah 28:10: "For precept [must be] upon precept, precept upon precept; line upon line, line upon line; here a little, [and] there a little"): a case built from many verses, in which each LINK is one step resting on the verses beneath it and on the links before it. Whether a single verse states a link is never the deciding test, for or against.
+
+RULE K-G4, exactly as the judge was given it:
+A verse on a side's 'cited in' line counts as an unanswered witness only when the judge quotes the sentence of the earlier round that pressed it against that link or a listed premise and names that round; a verse cited there but not pressed against the link does not count.
+
+ROUND LABELS: [CR1], [CR2], [CR3] are the defender's rounds 1 to 3; [DR1], [DR2], [DR3] are the challenger's rounds 1 to 3.
+
+JUDGE TEXT TO CHECK:
+D2 vs C3 (Matthew 1:18, 25): CHALLENGER LINK BROKEN -- [L1] Matthew 1:18 "before they came together, she was found with child of the Holy Ghost" and Matthew 1:25 "knew her not till she had brought forth her firstborn son" contradict C3's claim of espousal union; [L2] πρὶν ἢ συνελθεῖν (prin ē synelthein, Strong's G4250/G4905, before coming together) and οὐκ ἐγίνωσκεν (ouk eginōsken, Strong's G1097, was not knowing); [L3] Luke 1:34.
+
+
+THE ROUNDS THE JUDGE TEXT NAMES, whole:
+(none named)
+
+Reply with exactly one JSON object and nothing else. Inside text values use single quotes, never double quotes:
+{"rule": "K-G4", "applies": "yes" or "no" or "unclear", "applies_why": "<one sentence: does this judge text do the thing the rule governs?>", "verdict": "BREACH" or "CLEAN", "quote": "<the judge's words that decide your verdict, copied exactly from JUDGE TEXT TO CHECK>", "rule_words": "<the words of the rule or the definition you relied on, copied exactly>", "room": "<the phrase of the rule or the definition you had to interpret, and the two readings you weighed; or none>", "why": "<one sentence>"}
+BREACH means the judge text does what the rule forbids, or leaves undone what the rule requires of it. CLEAN means it obeys the rule, or the rule does not apply to this text.
