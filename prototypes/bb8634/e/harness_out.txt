@@ -1,22 +1,16 @@
-node:fs:560
-  return binding.open(
-                 ^
-
-Error: ENOENT: no such file or directory, open 'row_49774304-6140-4ac7-953d-e0577caf83a9.json'
-    at Object.openSync (node:fs:560:18)
-    at Object.readFileSync (node:fs:444:35)
-    at Object.<anonymous> (/home/user/searchthescriptures/prototypes/bb8634/e/harness.cjs:2:35)
-    at Module._compile (node:internal/modules/cjs/loader:1706:14)
-    at Object..js (node:internal/modules/cjs/loader:1839:10)
-    at Module.load (node:internal/modules/cjs/loader:1441:32)
-    at Function._load (node:internal/modules/cjs/loader:1263:12)
-    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
-    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
-    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5) {
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: 'row_49774304-6140-4ac7-953d-e0577caf83a9.json'
-}
-
-Node.js v22.22.0
+base Panel_Build 30091 premises AGAINST THE DEFENDER: 0 AGAINST THE CHALLENGER: 6
+base Panel_Build runB premises AGAINST THE DEFENDER: 6 AGAINST THE CHALLENGER: 6
+base Build_Independent_Verdict 30091 premises AGAINST THE DEFENDER: 0 AGAINST THE CHALLENGER: 6
+base Build_Independent_Verdict runB premises AGAINST THE DEFENDER: 6 AGAINST THE CHALLENGER: 6
+new Panel_Build 30091 premises AGAINST THE DEFENDER: 6 AGAINST THE CHALLENGER: 6
+new Panel_Build runB premises AGAINST THE DEFENDER: 6 AGAINST THE CHALLENGER: 6
+new Build_Independent_Verdict 30091 premises AGAINST THE DEFENDER: 6 AGAINST THE CHALLENGER: 6
+new Build_Independent_Verdict runB premises AGAINST THE DEFENDER: 6 AGAINST THE CHALLENGER: 6
+base D3 roundBlock 30091 premise lines: 0
+base D3 roundBlock runB premise lines: 6
+new D3 roundBlock 30091 premise lines: 6
+new D3 roundBlock runB premise lines: 6
+base Extract IV 30091 seqCount 0 seqLines 0
+base Extract IV runB seqCount 6 seqLines 6
+new Extract IV 30091 seqCount 6 seqLines 6
+new Extract IV runB seqCount 6 seqLines 6
