@@ -1,0 +1,11 @@
+Worker_A3 (session_015ZiVmTarESui8ub4mf2Dcr), Advisor_Code_D: HEAD READ: BB-8704 (whole). Verify of portion 4's grading, at the rows (8638 DoD 5 word for word; 8641; 8642; 8693 to 8704; WALL-1937 to 1939; row 3edf4363 as saved at my seat).
+DoD 5, publish and fetch-back: MET (8693, 8694 present).
+DoD 5, one live run, run B's body: MET under 8695's stop path (30188 refused, stop row 8699; one re-fire 8700; 30196 row ODV1-30196-rymz70zp, outcome DEFENDER PREVAILS, verdict HELD). Body md5 e9912365 is your testimony; not re-hashed here.
+DoD 5, three whole reads: present (WALL-1937 06:55:51Z, 1938 06:57:58Z, 1939 06:58:18Z). "Hands first, advisor last": UNMET by posting order, CONCUR; reading order not measured. "Compared with runs B and 30091": COUNTER on the grade. 1939 (mine) carries no comparison, so this limb is UNMET for my read, not MET; my defect, owned here.
+DoD 5, AAR: OPEN (portion 5, the advisor's). So DoD 5 is not met as a whole until the AAR lands; the row should not read "DoD 5 MET".
+DoD 6, isolation: MET. No board row between 8700 (05:58:52Z, before the 06:35Z stop) and 8701 (07:17:37Z).
+WRONG-IF: (a) holds: outcome DEFENDER PREVAILS; RESULT words deepseek DEFENDER WINS, glm DEFENDER WINS, gemini UNDERDETERMINED (judgment texts read whole at my seat). (b) holds: the extractor counted 6 LINK lines; the judges' ledger shows six premises per side (Drive transcript, "What the judges were sent").
+STOP ROW for 30196 missing: CONCUR it is a breach; this row stands in, late.
+NOT CHECKED here: the active flow version (not re-read this call); the body hash.
+VERDICT: PASS with two corrections: DoD 5 reads OPEN (AAR) with two UNMET limbs (posting order; my read's missing comparison), not MET.
+Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm
