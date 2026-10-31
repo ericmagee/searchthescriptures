@@ -1,0 +1,23 @@
+You check one piece of a judge's written grading against one rule the judge was given. You do not judge the debate, its scripture or its doctrine. You decide only whether this judge text obeys this rule.
+
+Answer from the text given in this message only. Use no tools.
+
+RULE RESULT, exactly as the judge was given it:
+HELD gives DEFENDER WINS only if CHALLENGE STANDING is not SELF-SUPPORTED or at least one collision is graded CHALLENGER LINK BROKEN.
+
+ROUND LABELS: [CR1], [CR2], [CR3] are the defender's rounds 1 to 3; [DR1], [DR2], [DR3] are the challenger's rounds 1 to 3.
+
+JUDGE TEXT TO CHECK:
+RESULT: DEFENDER WINS -- The defender's scriptural chain establishing Christ's conception by the Holy Ghost without human fatherhood stands intact, while the challenger's claim of marital union within the espousal is refuted by the text.
+
+[AUDIT v21: DEBATE RULE VIOLATION REPORT -- SEAT: gemini; ITEM: D2 vs C3; RULE: K-G4; RESULT: CURED; WHY: retracted; LINE: D2 vs C3 (Matthew 1:18, 25): CHALLENGER LINK BROKEN -- (L1) Matthew 1:18 "before they came together, she was found with child of the Holy Ghost" and Matthew 1:25 "knew her not till she had brought forth her firstborn son" contradict C3's claim of espousal union; (L2) πρὶν ἢ συνελθεῖν (prin ē syne...; STATEMENT: RETRACTED: D2 vs C3 / CORRECTED RESULT: HELD-1; JUDGE STATEMENT: The BROKEN grade is retracted because in (DR3) LINK 3 the challenger answered the pressed verses Matthew 1:18 and Matthew 1:25 with "dates the finding" and "bounds the stated abstinence," so the witness was not left unanswered under the counting rule.]
+NOTE: this judge text is the stored cure report; the record's audit line cut it short where it shows ...
+
+THE JUDGE'S OWN LINES THE RULE NAMES:
+CHALLENGE STANDING: PROP-DEPENDENT -- L=6 c=0 -- The challenger cannot be self-supported because link C3 was broken at collision against explicit conception bounds.
+D2 vs C3 (Matthew 1:18, 25): CHALLENGER LINK BROKEN -- [L1] Matthew 1:18 "before they came together, she was found with child of the Holy Ghost" and Matthew 1:25 "knew her not till she had brought forth her firstborn son" contradict C3's claim of espousal union; [L2] πρὶν ἢ συνελθεῖν (prin ē synelthein, Strong's G4250/G4905, before coming together) and οὐκ ἐγίνωσκεν (ouk eginōsken, Strong's G1097, was not knowing); [L3] Luke 1:34.
+[AUDIT v21: DEBATE RULE VIOLATION REPORT -- SEAT: gemini; ITEM: D2 vs C3; RULE: K-G4; RESULT: CURED; WHY: retracted; LINE: D2 vs C3 (Matthew 1:18, 25): CHALLENGER LINK BROKEN -- (L1) Matthew 1:18 "before they came together, she was found with child of the Holy Ghost" and Matthew 1:25 "knew her not till she had brought forth her firstborn son" contradict C3's claim of espousal union; (L2) πρὶν ἢ συνελθεῖν (prin ē syne...; STATEMENT: RETRACTED: D2 vs C3 / CORRECTED RESULT: HELD-1; JUDGE STATEMENT: The BROKEN grade is retracted because in (DR3) LINK 3 the challenger answered the pressed verses Matthew 1:18 and Matthew 1:25 with "dates the finding" and "bounds the stated abstinence," so the witness was not left unanswered under the counting rule.]
+
+Reply with exactly one JSON object and nothing else:
+{"rule": "RESULT", "verdict": "BREACH" or "CLEAN", "quote": "<the judge's words that decide your verdict, copied exactly from JUDGE TEXT TO CHECK>", "why": "<one sentence>"}
+BREACH means the judge text does what the rule forbids, or leaves undone what the rule requires of it. CLEAN means it obeys the rule, or the rule does not apply to this text.

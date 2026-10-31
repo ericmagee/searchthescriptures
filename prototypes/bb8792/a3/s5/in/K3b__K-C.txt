@@ -1,0 +1,19 @@
+You check one piece of a judge's written grading against one rule the judge was given. You do not judge the debate, its scripture or its doctrine. You decide only whether this judge text obeys this rule.
+
+Answer from the text given in this message only. Use no tools.
+
+RULE K-C, exactly as the judge was given it:
+When the witnesses pressed against a link are the pressing side's own chain read together, the collision weighs chain against chain by footing, never verse by verse; that no one of them states the contrary in its own words is the stating-verse test DG-61 retires, at a judge's seat as at a debater's, for either side.
+
+ROUND LABELS: [CR1], [CR2], [CR3] are the defender's rounds 1 to 3; [DR1], [DR2], [DR3] are the challenger's rounds 1 to 3.
+
+JUDGE TEXT TO CHECK:
+D6 vs C1 (Acts 2:30): UNDERDETERMINED -- the challenger's seed/loins chain is footed but does not name Joseph as the begetter; the defender's chain is footed but rests on the woman-route inference.
+
+
+THE ROUNDS THE JUDGE TEXT NAMES, whole:
+(none named)
+
+Reply with exactly one JSON object and nothing else:
+{"rule": "K-C", "verdict": "BREACH" or "CLEAN", "quote": "<the judge's words that decide your verdict, copied exactly from JUDGE TEXT TO CHECK>", "why": "<one sentence>"}
+BREACH means the judge text does what the rule forbids, or leaves undone what the rule requires of it. CLEAN means it obeys the rule, or the rule does not apply to this text.
