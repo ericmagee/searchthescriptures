@@ -1,6 +1,6 @@
 # Order on run 30091's findings: problems found and a solution for each
 
-Prepared by Worker E for the operator, 31 October 2026, 01:44 CDT. Not posted to the board, by your instruction.
+Prepared by Worker E for the operator, 31 October 2026, 01:44 CDT; verse texts added 01:49 CDT. Not posted to the board, by your instruction.
 
 The order's changes went live at 00:41 CDT. The first live run (30188) was refused at its first round. Its re-run, run 30196 ("Did Christ have a biological father?"), finished at 01:35 CDT. I read all of it alone: all six rounds, the single judge, the synthesis, the three panel judgments, their cure calls, the stored citation check, and the transcript.
 
@@ -10,21 +10,28 @@ Stored result: **Defender prevails, HELD 3-0.** Result lines: DeepSeek "Defender
 
 ### 1. The defender won while arguing a reading the record's guards forbid
 
-- **What happened.** The defender argued "Jesus had no human biological father". Drift Guard 8(a) forbids that reading, and it prevailed 3-0. The record holds the opposite reading: Sight 32, "Joseph knew Mary within the espousal". The challenger argued that reading. All three judges graded it CHALLENGER LINK BROKEN on Matthew 1:18 and 1:25. They read "knew her not till" as excluding any union before the birth. The record reads that verse as limiting the abstinence to the pregnancy. GLM's grade of D6 against C1 rests on Luke 1:35 "leaving no room for a male begetter", which comes close to the reading Drift Guard 18 forbids.
+- **What happened.** The defender argued "Jesus had no human biological father". Drift Guard 8(a) forbids that reading, and it prevailed 3-0. The record holds the opposite reading: Sight 32, "Joseph knew Mary within the espousal". The challenger argued that reading. All three judges graded it CHALLENGER LINK BROKEN on Matthew 1:18 ("When as his mother Mary was espoused to Joseph, before they came together, she was found with child of the Holy Ghost") and Matthew 1:25 ("And knew her not till she had brought forth her firstborn son: and he called his name JESUS"). They read "knew her not till" as excluding any union before the birth. The record reads that verse as limiting the abstinence to the pregnancy. GLM's grade of D6 against C1 rests on Luke 1:35 ("The Holy Ghost shall come upon thee, and the power of the Highest shall overshadow thee: therefore also that holy thing which shall be born of thee shall be called the Son of God"), read as "leaving no room for a male begetter". That comes close to reading "of the Holy Ghost" as paternity, which Drift Guards 8 and 18 forbid.
 - **Cause.** The judges are never shown the guards. That was decided earlier (ruling 61, row BB-7216). The judges therefore grade the standard reading by its own text and have no means of knowing the record forbids it.
 - **Solution.** This is your call, because it changes the judging frame. I recommend serving the judges, for each run, the guards that the topic touches, under a heading that states the record's held reading, so that a win for a forbidden reading is flagged instead of stored silently. Until that is decided, a HELD result on a topic a guard governs should carry a note that the defender argued a guarded reading.
 
 ### 2. The synthesis checks only the challenger for drift
 
-- **What happened.** The defender used the construct that Luke 3 gives Mary's line through Heli, a construct Drift Guard 56 governs. In round 3 the defender narrowed it to "permits". The synthesis drift test is written for the challenger's seat only, so it never examined this.
+- **What happened.** The defender used the construct that Luke 3:23 ("being (as was supposed) the son of Joseph, which was [the son] of Heli") gives Mary's line through Heli. The text does not state that construct. Drift Guard 56 forbids resolving the genealogies by a construct the text does not state, and Drift Guard 8(a) forbids routing the flesh through Mary alone. In round 3 the defender narrowed it to "permits". The synthesis drift test is written for the challenger's seat only, so it never examined this.
 - **Solution.** Run the same drift test on both seats in the synthesis step.
 
 ### 3. Six real verses were printed to the judges as "does not exist"
 
-- **What happened.** The citation check told the judges that 1 Kings 8:19 (twice), Jeremiah 22:24, Haggai 1:1, Job 14:1 and Luke 1:13 do not exist. All six are in kjv_verses, and the challenger quoted them correctly. DeepSeek repeated the error, and the judges denied those links their verse footing.
+- **What happened.** The citation check told the judges that six references do not exist. All six are in the verse table, and the challenger quoted them correctly:
+  - 1 Kings 8:19 (cited twice): "thy son that shall come forth out of thy loins, he shall build the house unto my name";
+  - Jeremiah 22:24: "though Coniah the son of Jehoiakim king of Judah were the signet upon my right hand, yet would I pluck thee thence";
+  - Haggai 1:1: "Zerubbabel the son of Shealtiel, governor of Judah";
+  - Job 14:1: "Man [that is] born of a woman [is] of few days, and full of trouble";
+  - Luke 1:13: "thy wife Elisabeth shall bear thee a son, and thou shalt call his name John".
+
+  DeepSeek repeated the error, and the judges denied those links their verse footing.
 - **This is not new.** Run 29609 had four such errors and run 29328 had one. Every case is in the challenger's round 3, on rounds with many citations.
 - **Cause, suspected and not measured.** The verse fetch stops at a row limit, so a verse past the limit reads as missing.
-- **Solution.** Measure the citation-check fetch on this run. Then page it or raise the limit. Never print "does not exist" unless a direct lookup in kjv_verses finds no such verse.
+- **Solution.** Measure the citation-check fetch on this run. Then page it or raise the limit. Never print "does not exist" unless a direct lookup in the verse table finds no such verse.
 
 ### 4. The judges read "NARROWED TO" answers three different ways
 
@@ -48,7 +55,7 @@ Stored result: **Defender prevails, HELD 3-0.** Result lines: DeepSeek "Defender
 - **Five-reader fix.** The extractor counted six LINK lines from a list that was out of order and used LINK labels only.
 - **Served-label count.** The judges were told "CHALLENGER 1 of 27 (S-1578)", and Gemini and GLM used it.
 - **Premise count.** The challenger's list ended "PREMISE COUNT: 6", and it matched the six premises the ledger gives against the defender.
-- **Ledger.** Six premises against each side. Its one unnamed verse (Genesis 3:15, challenger premise 6) is correct: the challenger's round 3 does not name it.
+- **Ledger.** Six premises against each side. Its one unnamed verse (Genesis 3:15, "between thy seed and her seed", challenger premise 6) is correct: the challenger's round 3 does not name it.
 - **Counts.** The challenger's word counts are correct: bethulah has 50 verses in 19 books, and almah has 7.
 - **Cure step.** DeepSeek and GLM each received one cure call, and both cured.
 
