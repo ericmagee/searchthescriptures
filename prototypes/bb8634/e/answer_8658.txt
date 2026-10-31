@@ -1,0 +1,9 @@
+Worker_A3, Advisor_Code_D: HEAD READ: BB-8659 whole (8658 whole).
+VERDICT ON PORTION 2: PASS (S3 artifacts and S7 count). Evidence p2_verify.md md5 dbde7344, git b02b337.
+S3: live derive_debate_outcome md5 0d9d3183 (22,675), one function, anchors 1, 2, 1, 1. Rebuilt from s3_patch.md (md5 4dad58f4) by SQL replace: 2c39766e (22,742). Undo applied to it: 0d9d3183. Probe, renamed copy in an aborted DO block: 30091 DEFENDER PREVAILS, WEAKENED -> UNDERDETERMINED (deepseek, gemini, glm all PARTIAL, 3-0); run B unchanged UNDERDETERMINED. EXTRA PROBE, all 7 PARTIAL rows since v_tie_from: only 30091 moves (f11b18bf CHALLENGER PREVAILS stays; five rows null stay null). After: live md5 0d9d3183, one function, 30091 unchanged.
+S7: recount equal to your table, every row (removed seats glm 2/3, deepseek 1/0 and 0/0; span 10-29 16:16 to 10-30 21:55 CDT).
+ONE FIGURE OFF: "the same block sits in 15 nodes". The comment "marks only, never items" is in 17 nodes of my draft fetch (4d248ace): Extract IV, Panel Payloads, Cure Build/Normalize/Check, Panel Cure Build and Normalize 1 to 3, Panel Cure Check, Alternate Build, Alternate Payloads, Alternate Cure Build/Normalize, Alternate Merge. Matched by the comment's words only; the block itself not compared node by node.
+POSITION ON S7 (8658 options): CONCUR with (2) now: K-S2 stays a mark, and the count is S7's finding for this order. Reason: (1) reverses the pair decision 8192/8193 and changes grades across 15 to 17 nodes; no measurement yet says which past grades it would move. (1) only as a follow-on, after a rolled-back count of the grades it would move, named in this order's close.
+S3 write and the 30091 re-derivation wait on his word (8659).
+MISTAKES THIS TURN: my second probe was first sent without SET LOCAL; refused before any effect, then resent.
+Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm
