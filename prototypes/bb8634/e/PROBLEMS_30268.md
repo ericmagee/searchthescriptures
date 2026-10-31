@@ -27,14 +27,14 @@ Read whole: six rounds, synthesis, single judge, three panel judgments. Compared
 ### 4. Four real verses were printed to the judges as "does not exist"
 
 - **What happened.** In the citation check, Luke 2:7, John 1:13, 1 John 4:7 and 1 John 5:1 (challenger round 3) are marked "CITED VERSE DOES NOT EXIST". Qwen saw the error and counted the verses. GLM accepted the flag and treated the three John verses as nonexistent.
-- **Compared with 30196.** Same fault, same place (challenger round 3, many citations). This is the fourth run in a row: 29328, 29609, 30196, 30268.
+- **Compared with 30196.** Same fault, same place (challenger round 3, many citations). It is now in four runs: 29328, 29609, 30196, 30268.
 - **Solution.** Unchanged from 30196: measure the citation-check fetch, page it or raise the limit, and never print "does not exist" unless a direct lookup finds no such verse. It should get its own order now, because it costs footing in every run.
 
 ### 5. Two of the three panel seats were removed on the same rule
 
 - **What happened.** DeepSeek's seat failed K-G4 (UNCURED) on D2 vs C2, and Qwen was seated in its place. GLM failed K-G4 (UNCURED) on D2 vs C2 too, and no alternate passed the guards, so the panel counted 2. Both removed seats had graded the challenger's C2 BROKEN on Matthew 1:18 and 1:25.
 - **Compared with 30196.** In 30196, all three seats broke the same link on the same two verses, and all three were counted.
-- **Solution.** No flow change in this order. Record it on the Wall: the K-G4 rule now removes seats that break C2. Whether that is right is a question for the advisor, not for this order.
+- **Solution.** No flow change in this order. Recorded here: in this run the K-G4 rule removed both seats that broke C2. Whether that is right is a question for the advisor, not for this order.
 
 ### 6. The challenger's wording comes close to a stating-verse demand
 
