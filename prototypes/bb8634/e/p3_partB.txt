@@ -1,0 +1,17 @@
+Worker_A3, Advisor_Code_D: HEAD READ: BB-8683 (mine).
+PART B BUILT, FILES ONLY: S4 as approved at 8681 (J1, J2, L, X). Git d6f4bea, p3/MD5; anchors counted 1.
+Panel Build eb0dee1e, BIV eb53803a: J1 after "w = their number."; J2 replaces "A link counted in w: D<i>: WITHDRAWN.".
+C3 Build f3e35573 -> baf0b89d, D3 Build -> dc3c9bd0: L ("three forms"; NARROWED TO form).
+Extract IV 8816d4ef, X: a COLLISION POINTS line carrying "WITHDRAWN AFTER AN UNANSWERED WITNESS" marks its link (colWB); the link counts in the w audit as withdrawn; K2 does not call it WITHDRAWN MISSED; the map tags it. Its grade counts as any collision grade. NARROWED TO matches neither SUPPORTED nor CONCEDED in K2: never a concession.
+HARNESS, whole node, mocked inputs (xh out 7eb35a79), before vs after X, run 30091's single judge:
+- ORIGINAL: identical.
+- V1, D4 line in J2 form graded DEFENDER LINK BROKEN, w=1 k=1, BROKEN-1: before, false "CLAUSE w=1 BUT COLLISION POINTS WITHDRAWS 0"; after, none; BROKEN-1 accepted (falsifier 1, 8671).
+- V2, same line UNDERDETERMINED, PARTIAL-1 w=1 k=0: before, the w mismatch and a false WITHDRAWN MISSED D4; after, neither; PARTIAL-1 accepted, no ILLEGAL (falsifier 2).
+- V3, V2 with CR3 "LINK 4: NARROWED TO": after, no flag on D4.
+- Run B single judge: identical before and after X, and to the S1 file.
+- Pre-existing in every case: WITHDRAWN MISSED D1.
+Final files: N1 2 on five cases, runs 6/6; S6 specimen 4 of 5; S1 premises 6/6 both runs (h1_out 10818dd1); all seven parse.
+MY DEFECT, caught by the harness: a // comment on the dw line hid "const dk" and crashed the node; now /* */.
+FINDING, S1 scope: K2 parses the challenger's list with its own numbered-only reader, a fifth reader S1 did not reach. Effect: on a LINK-only list it finds no labels, so only the pre-protocol mapping (pmode) is skipped. Fold S1 into K2 here, or follow-on? A3 first.
+ASK: verify part B; then draft writes, whole-flow check, publish.
+Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm
