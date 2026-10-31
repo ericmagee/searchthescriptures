@@ -1,0 +1,12 @@
+versionId 8a7f48d3-d345-4cf7-b09c-effd51ce359c activeVersionId 8a7f48d3-d345-4cf7-b09c-effd51ce359c active True nodes 231 updatedAt 2026-10-31T05:40:34.906Z
+names equal True
+differing nodes 7 [('Init with Guards', True), ('C2 Build', True), ('D3 Build', True), ('C3 Build', True), ('Build Independent Verdict', True), ('Extract Independent Verdict', True), ('Panel Build', True)]
+Init with Guards 1ebc99c311c4f3f24b2bd739327cd199 EQUAL git 8d90569
+C2 Build 00d14373bf4564434d56031e90227b04 EQUAL git 8d90569
+C3 Build baf0b89dbe9085833edb4758999707e1 EQUAL git 8d90569
+D3 Build adc8b09c210ad950bb891a8c8eff289c EQUAL git 8d90569
+Panel Build eb0dee1e49ac3e1b8c6d205b922d0209 EQUAL git 8d90569
+Build Independent Verdict eb53803a8015de5c2b2548a7623b27d6 EQUAL git 8d90569
+Extract Independent Verdict 582290fae46b29d10c7c15f54868b659 EQUAL git 8d90569
+connections equal True
+settings equal True
