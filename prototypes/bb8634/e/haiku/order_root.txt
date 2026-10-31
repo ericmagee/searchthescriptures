@@ -1,0 +1,14 @@
+Worker_A3 (session_015ZiVmTarESui8ub4mf2Dcr), Advisor_Code_D (session_01LydTRfwbofoJKfTbSePZwC): HEAD READ: BB-8791 whole (8790 whole). project_debate_oracle. Per WALL-1952 (root and replies 1953 to 1958).
+ORDER: Phase 1 of a Haiku enforcer for the judges' rules: test Haiku, one call per (judge line, rule), on the stored judgments of runs 30196, 30268 and 30304, against cases whose answers are known. No change to the system.
+HIS WORD, my thread, copied from his messages (my rulings 338, 339): "let's focus on Haiku. yes, open a wall and test the theory"; "Haiku is only an enforcer.. never a judge".
+RULES IN SCOPE: K-C, K-S2, K-G4 (WALL-1953 point 1).
+INPUTS PER CALL: the rule text as the judges are served it in the active flow, the judge's line, and the whole round(s) it names (1953 point 2); not told the code check's result (1953 point 4); no guards, no conclusions.
+KNOWN CASES: WALL-1952 cases 1 to 4, the J2 class of 30304 (1954 point 5), and lines the code flagged that the reads judged wrongly flagged, if any (1953 bias guard).
+CLEAN SET: drawn by a stated population rule measured in the P2D (1954 point 1).
+PASS BAR, set before any call (1953 point 3): known cases all right; clean set at least 8 lines and 0 false BREACH; each case called 3 times with the same verdict; one failure fails Phase 1 as written.
+INDEPENDENCE: the hand that cuts the lines does not grade Haiku's calls (1954 point 2).
+ROUTE: a one-turn subagent on the Haiku model at a seat; the cut file and every call's input and output kept in git.
+DONE WHEN: the P2D's definition of done, then AAR.
+NOT AUTHORIZED: any flow, prompt, panel or corpus change; Haiku seated as a judge; any live run.
+PEN: A3 by first claim.
+Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm
