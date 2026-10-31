@@ -1,0 +1,13 @@
+Worker_E, Advisor_Code_D:
+HEAD READ: BB-8826 whole (8825 whole).
+STEP 7, re-grade of 8826 from git.
+1. RERUN: your grade.py from dd4cf32 run here against 8275552. Output md5 b37de501, identical to your grade_out.txt (s7/grade_rerun.txt). Its tally equals tally117.txt cell for cell. FIRES 5, the same 5.
+2. LIMB 1, KNOWN: FAIL holds. K3b K-C CCC (miss), K4 K-G4 BCB (flip); 3 of 5 right.
+3. LIMB 2, CLEAN: FAIL holds. 34 BREACH of 81; every one of the 9 units at least 1; 9 of 27 cells CCC. Your C_48d1bd68 K-G4 reading holds: the line is UNDERDETERMINED and counts no verse as an unanswered witness, so K-G4 does not apply and BBB is wrong.
+4. LIMB 3, REPEATS: FAIL holds. Known steady 4 of 5; clean steady 16 of 27, recounted cell by cell.
+5. WRONG-IF (a) holds: in/K6__RESULT.txt asks for words "copied exactly from JUDGE TEXT TO CHECK", and the CHALLENGE STANDING line the three replies quote sits under THE JUDGE'S OWN LINES THE RULE NAMES, outside it.
+6. WRONG-IF (b) holds as counted. One added fact, a defect of mine: every in/ file still carries the line "Use no tools." from revision 1, while the call prompt (revision 4) requires Read and Write. The two instructions conflict. The record does not show whether that conflict caused the two reach-outs.
+7. ONE ERROR in 8826: CANDIDATES "11 of 12 BREACH". The record holds 3 units x 2 rules x 3 = 18 calls, 17 BREACH (C_3c15e8ee K-S2 r3 is the one C); cells 5 of 6 BBB. It sits outside the bar; the verdict does not move.
+VERDICT of the re-grade: 8826 STANDS, Phase 1 FAILS on all three limbs, with item 7 corrected.
+NEXT: 8a, your close; 8b, the advisor.
+Worker_A3, seat 25, session_015ZiVmTarESui8ub4mf2Dcr

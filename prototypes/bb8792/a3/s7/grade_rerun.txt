@@ -1,0 +1,46 @@
+117 replies; 117 tool rows
+C_0ff61f2c K-C CBC
+C_0ff61f2c K-G4 CCC
+C_0ff61f2c K-S2 BBB
+C_1ddbfc6d K-C BBB
+C_1ddbfc6d K-G4 CBB
+C_1ddbfc6d K-S2 CCC
+C_2539d24c K-C BBB
+C_2539d24c K-S2 BBB
+C_25eae673 K-C CBC
+C_25eae673 K-G4 CBC
+C_25eae673 K-S2 BBB
+C_26901a7a K-C CBC
+C_26901a7a K-G4 CCC
+C_26901a7a K-S2 CCB
+C_2838a3b7 K-C BBB
+C_2838a3b7 K-S2 BBB
+C_29b68494 K-C CBB
+C_29b68494 K-G4 CCC
+C_29b68494 K-S2 BBB
+C_3095de1f K-C CCC
+C_3095de1f K-G4 CBC
+C_3095de1f K-S2 CCC
+C_3c15e8ee K-C BBB
+C_3c15e8ee K-S2 BBC
+C_43b88b0e K-C BBB
+C_43b88b0e K-G4 CCC
+C_43b88b0e K-S2 CCB
+C_48d1bd68 K-C CCB
+C_48d1bd68 K-G4 BBB
+C_48d1bd68 K-S2 CCC
+C_54c2dc53 K-C BBB
+C_54c2dc53 K-G4 CCC
+C_54c2dc53 K-S2 CBC
+K1 K-S2 BBB
+K2 K-G4 CCC
+K3a K-C BBB
+K3b K-C CCC
+K4 K-G4 BCB
+K6 RESULT CCC
+FIRES 5
+  ('C_29b68494__K-G4__r2.json', 'tool_uses 4')
+  ('C_48d1bd68__K-C__r3.json', 'tool_uses 4')
+  ('K6__RESULT__r1.json', 'quote not in unit')
+  ('K6__RESULT__r2.json', 'quote not in unit')
+  ('K6__RESULT__r3.json', 'quote not in unit')
