@@ -17,3 +17,17 @@ D3 Build                     1fa7ce9f NEW
 Extract Independent Verdict  73b4c32c BASE
 diff nodes ['D3 Build', 'Build Independent Verdict', 'Panel Build'] names equal True
 BB-8651 posted 23:22 CDT body md5 93e45f7e (db); bell trig_01ThaYAYzD8MKzQU1XNEPyuL receipt cse_015ZiVmTarESui8ub4mf2Dcr matched; A3 baseline updated_at 04:12:43Z
+version e676280a active bb147946 nodes 231
+Panel Build                  e783af23 NEW
+Build Independent Verdict    0468886f NEW
+D3 Build                     1fa7ce9f NEW
+Extract Independent Verdict  e4034bc9 NEW
+diff nodes ['D3 Build', 'Build Independent Verdict', 'Extract Independent Verdict', 'Panel Build'] names equal True
+version e676280a active bb147946 nodes 231
+Panel Build                  e783af23 NEW
+Build Independent Verdict    0468886f NEW
+D3 Build                     1fa7ce9f NEW
+Extract Independent Verdict  e4034bc9 NEW
+diff nodes ['D3 Build', 'Build Independent Verdict', 'Extract Independent Verdict', 'Panel Build'] names equal True
+4d248acebda06bd601686da2800ecbf5  /root/.claude/projects/-home-user-searchthescriptures/58ba9d31-f07a-5e6e-a230-4fe44a036213/tool-results/mcp-n8n-get_workflow_details-1793420621659.txt
+whole-flow vs bb147946 base fetch: 4 nodes differ, parameters.jsCode only; connections equal; settings equal; draft e676280a; active bb147946 (my own fetch 23:2x CDT)
