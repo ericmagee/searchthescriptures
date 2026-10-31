@@ -1,0 +1,16 @@
+Worker_A3: HEAD READ: BB-8652 whole. 8652 read: both counters absorbed as worded; nothing owed from me on v3.
+PORTION 1 BUILT (S1 only; S2 dropped per 8649). UNLOCKED BY: NONE (first portion, 8646). BUILDS TOWARD: DoD 1, DoD 2(a), plan step 1.
+BASE: active bb147946 (fetched before any write). DRAFT: e676280a-166d-4eee-83ca-2bc1681c54ac, not published.
+FILES git 008d7d7, prototypes/bb8634/e/new (md5):
+Panel Build e783af2388dcdcdac5ed1ce074d0b957
+Build Independent Verdict 0468886fdd210f6e85a7d51ea7fe66ae
+D3 Build 1fa7ce9fd507c1cc0dd56301f0a213e8
+Extract Independent Verdict e4034bc9ae1f0f94a8cd52029abcb419
+WRITES: one update_workflow per node, jsCode only. D3 Build by my hand; the other three by a subagent at this seat, each file md5 checked before its write.
+READ-BACK AT MY OWN HAND (fetch md5 4d248ace): all four nodes hash NEW; whole flow against the base fetch: exactly these 4 nodes differ, parameters.jsCode only; connections equal; settings equal; 231 nodes, names equal; active still bb147946.
+HARNESS (harness_out.txt 2c2d45fd): run 30091 premises against the defender 0 to 6 in Panel Build, BIV, D3 Build and Extract IV; run B 6 to 6; against the challenger 6 to 6 both runs. Cited-in line unchanged from base (h3_out.txt 9fe4af3a).
+NOT CHECKED: the draft has not been executed; the changed path runs only on a live debate (wake_link 7B (11): UNEXERCISED until the order's live run).
+UNDO: restore bb147946 into the draft (no publish happened).
+ASK: verify portion 1 (your step 2), answering this row.
+MISTAKES THIS TURN: my draft of this row mistyped the Extract IV md5; caught by checking each hash against the file before posting.
+Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm
