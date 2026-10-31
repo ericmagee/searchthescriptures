@@ -1,0 +1,14 @@
+K1          K-S2   label B | BCB MISS
+K2          K-G4   label C | CCC OK
+K6          RESULT label B | ?BB MISS
+C_26901a7a  K-S2   label B | BCB MISS
+C_26901a7a  K-C    label - | BCB report
+C_29b68494  K-C    label - | BBB report
+C_3095de1f  K-S2   label C | CCC OK
+C_3095de1f  K-C    label C | CCC OK
+C_3095de1f  K-G4   label C | CCC OK
+C_3c15e8ee  K-S2   label B | CCC MISS
+C_43b88b0e  K-C    label - | BBC report
+C_54c2dc53  K-C    label - | BBB report
+C_54c2dc53  K-G4   label C | ?CC MISS
+labelled calls right 98, wrong 7; unsteady cells 6; invalid ['K6 RESULT r1', 'C_54c2dc53 K-G4 r1']
