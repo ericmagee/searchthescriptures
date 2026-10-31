@@ -11,7 +11,7 @@ K-S2 487343b6 | K-C 26542745 | K-G4 a1828be5 | RESULT e8f98881
 | K3a | K-C | BREACH |
 | K3b | K-C | BREACH |
 | K4 | K-G4 | BREACH |
-| K6 | RESULT | BREACH: after the retraction no collision is CHALLENGER LINK BROKEN, and the judge's CHALLENGE STANDING rests only on the retracted break ("link C3 was broken at collision"), so DEFENDER WINS lacks both conditions of the rule. Needs context rule 2 to be judgeable. |
+| K6 | RESULT | CANDIDATE: BREACH on our reading (standing grounded only on the retracted break); by the rule's letter the stored PROP-DEPENDENT standing meets the first limb. Called and reported, outside the pass bar. |
 
 ## Clean set: 12 drawn, expected fixed against the served texts
 CLEAN on K-S2, K-C and K-G4 (9 units): C_0ff61f2c, C_1ddbfc6d, C_25eae673, C_26901a7a, C_29b68494, C_3095de1f, C_43b88b0e, C_48d1bd68, C_54c2dc53. None grades BROKEN, so K-G4 does not apply; none rests UNDERDETERMINED on a verse not stating the link.

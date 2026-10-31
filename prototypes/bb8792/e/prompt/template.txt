@@ -9,6 +9,7 @@ ROUND LABELS: [CR1], [CR2], [CR3] are the defender's rounds 1 to 3; [DR1], [DR2]
 
 JUDGE TEXT TO CHECK:
 {UNIT}
+{EXCERPT_NOTE}
 
 {CONTEXT}
 

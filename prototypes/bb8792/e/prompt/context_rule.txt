@@ -2,3 +2,4 @@
 1. For K-C, K-S2 and K-G4: the heading "THE ROUNDS THE JUDGE TEXT NAMES, whole:" then each round label the unit names ([CR1] to [DR3]), in label order, each as "=== [label] ===" and the round's stored text whole. Mapping: CR1 claude_r1, CR2 claude_r2, CR3 engine_r3, DR1 engine_r1, DR2 engine_r2, DR3 challenger_r3 (operational_doc 27: the R3 columns are crossed). A unit naming no round gets the heading and the line "(none named)".
 2. For the RESULT rule: the heading "THE JUDGE'S OWN LINES THE RULE NAMES:" then, from the same judgment, its CHALLENGE STANDING line and every collision line graded CHALLENGER LINK BROKEN, each whole, and any cure report on such a line. No rounds.
 3. Nothing else: no guards, no conclusions, no code-check result, no other judgment.
+4. {EXCERPT_NOTE} is empty except for K2 and K6: "NOTE: this judge text is the stored cure report; the record's audit line cut it short where it shows ..."
