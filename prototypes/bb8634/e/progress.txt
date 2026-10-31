@@ -48,3 +48,85 @@ Panel Build                  e783af23 OTHER
 Build Independent Verdict    0468886f OTHER
 Extract Independent Verdict  e4034bc9 OTHER
 diff nodes ['Build Independent Verdict', 'D3 Build', 'Extract Independent Verdict', 'Panel Build'] | outside jsCode: [] | names equal True | connections equal True | settings equal True
+version 6d9902e0 active bb147946 nodes 231
+Init with Guards             1311ccad BASE
+C2 Build                     00d14373 NEW
+C3 Build                     f3e35573 BASE
+D3 Build                     1fa7ce9f OTHER
+Panel Build                  e783af23 OTHER
+Build Independent Verdict    0468886f OTHER
+Extract Independent Verdict  e4034bc9 OTHER
+diff nodes ['Build Independent Verdict', 'C2 Build', 'D3 Build', 'Extract Independent Verdict', 'Panel Build'] | outside jsCode: [] | names equal True | connections equal True | settings equal True
+version c069511a active bb147946 nodes 231
+Init with Guards             1311ccad BASE
+C2 Build                     00d14373 NEW
+C3 Build                     baf0b89d NEW
+D3 Build                     1fa7ce9f OTHER
+Panel Build                  e783af23 OTHER
+Build Independent Verdict    0468886f OTHER
+Extract Independent Verdict  e4034bc9 OTHER
+diff nodes ['Build Independent Verdict', 'C2 Build', 'C3 Build', 'D3 Build', 'Extract Independent Verdict', 'Panel Build'] | outside jsCode: [] | names equal True | connections equal True | settings equal True
+version e4c3a30f active bb147946 nodes 231
+Init with Guards             1311ccad BASE
+C2 Build                     00d14373 NEW
+C3 Build                     baf0b89d NEW
+D3 Build                     adc8b09c NEW
+Panel Build                  e783af23 OTHER
+Build Independent Verdict    0468886f OTHER
+Extract Independent Verdict  e4034bc9 OTHER
+diff nodes ['Build Independent Verdict', 'C2 Build', 'C3 Build', 'D3 Build', 'Extract Independent Verdict', 'Panel Build'] | outside jsCode: [] | names equal True | connections equal True | settings equal True
+version 66eb7684 active bb147946 nodes 231
+Init with Guards             1ebc99c3 NEW
+C2 Build                     00d14373 NEW
+C3 Build                     baf0b89d NEW
+D3 Build                     adc8b09c NEW
+Panel Build                  e783af23 OTHER
+Build Independent Verdict    0468886f OTHER
+Extract Independent Verdict  e4034bc9 OTHER
+diff nodes ['Build Independent Verdict', 'C2 Build', 'C3 Build', 'D3 Build', 'Extract Independent Verdict', 'Init with Guards', 'Panel Build'] | outside jsCode: [] | names equal True | connections equal True | settings equal True
+version 748e7f72 active bb147946 nodes 231
+Init with Guards             1ebc99c3 NEW
+C2 Build                     00d14373 NEW
+C3 Build                     baf0b89d NEW
+D3 Build                     adc8b09c NEW
+Panel Build                  e783af23 OTHER
+Build Independent Verdict    eb53803a NEW
+Extract Independent Verdict  e4034bc9 OTHER
+diff nodes ['Build Independent Verdict', 'C2 Build', 'C3 Build', 'D3 Build', 'Extract Independent Verdict', 'Init with Guards', 'Panel Build'] | outside jsCode: [] | names equal True | connections equal True | settings equal True
+version d65a355c active bb147946 nodes 231
+Init with Guards             1ebc99c3 NEW
+C2 Build                     00d14373 NEW
+C3 Build                     baf0b89d NEW
+D3 Build                     adc8b09c NEW
+Panel Build                  eb0dee1e NEW
+Build Independent Verdict    eb53803a NEW
+Extract Independent Verdict  e4034bc9 OTHER
+diff nodes ['Build Independent Verdict', 'C2 Build', 'C3 Build', 'D3 Build', 'Extract Independent Verdict', 'Init with Guards', 'Panel Build'] | outside jsCode: [] | names equal True | connections equal True | settings equal True
+version 8a7f48d3 active bb147946 nodes 231
+Init with Guards             1ebc99c3 NEW
+C2 Build                     00d14373 NEW
+C3 Build                     baf0b89d NEW
+D3 Build                     adc8b09c NEW
+Panel Build                  eb0dee1e NEW
+Build Independent Verdict    eb53803a NEW
+Extract Independent Verdict  582290fa NEW
+diff nodes ['Build Independent Verdict', 'C2 Build', 'C3 Build', 'D3 Build', 'Extract Independent Verdict', 'Init with Guards', 'Panel Build'] | outside jsCode: [] | names equal True | connections equal True | settings equal True
+version 8a7f48d3 active bb147946 nodes 231
+Init with Guards             1ebc99c3 NEW
+C2 Build                     00d14373 NEW
+C3 Build                     baf0b89d NEW
+D3 Build                     adc8b09c NEW
+Panel Build                  eb0dee1e NEW
+Build Independent Verdict    eb53803a NEW
+Extract Independent Verdict  582290fa NEW
+diff nodes ['Build Independent Verdict', 'C2 Build', 'C3 Build', 'D3 Build', 'Extract Independent Verdict', 'Init with Guards', 'Panel Build'] | outside jsCode: [] | names equal True | connections equal True | settings equal True
+version 8a7f48d3 active 8a7f48d3 nodes 231
+Init with Guards             1ebc99c3 NEW
+C2 Build                     00d14373 NEW
+C3 Build                     baf0b89d NEW
+D3 Build                     adc8b09c NEW
+Panel Build                  eb0dee1e NEW
+Build Independent Verdict    eb53803a NEW
+Extract Independent Verdict  582290fa NEW
+diff nodes ['Build Independent Verdict', 'C2 Build', 'C3 Build', 'D3 Build', 'Extract Independent Verdict', 'Init with Guards', 'Panel Build'] | outside jsCode: [] | names equal True | connections equal True | settings equal True
+PUBLISHED 8a7f48d3-d345-4cf7-b09c-effd51ce359c at 00:41 CDT (poll running 0; board head 8692 before and after); fetch-back md5 ed3bc68c: active=draft, sameAsDraft True, 7 NEW, exactly 7 differ jsCode only. ROLLBACK republish bb147946.
