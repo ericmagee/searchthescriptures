@@ -75,6 +75,26 @@ The defender now answers the three verses that went unanswered in run B: Hebrews
 - **What happened.** The advisor's binding note, reporting your words in my partner's thread, said the served sights had changed at 20:52 CDT, and asked each read to compare them with run B. The challenger's served list in this run is identical to run B's, the same 27 labels in the same order. The defender was served nothing in either run.
 - **Solution.** Confirm at the record what changed at 20:52 and why it did not reach this run's served list: either the change was to something the challenger's list does not show, or it did not take effect.
 
+## The saved transcript
+
+The transcript was saved to the Drive study folder at 22:02 CDT with the debate record, as the rule requires both or neither. It is titled "Debate [Claude v MiMo] - Did Christ have a biological father? - 2026-10-31", and its size is 192,613 bytes. I read it at my seat (git copy: `transcript_30091.md`). Three problems in it:
+
+### 10. The transcript leaves out the judge who gave the challenger the win
+
+- **What happened.** The single judge's verdict, "BROKEN, CHALLENGER WINS", and the diagnostic written on it appear nowhere in the transcript. The synthesis section stops before the diagnostic, and the word "DIAGNOSTIC" does not occur in the file. A reader sees "Outcome: DEFENDER PREVAILS, WEAKENED" and three PARTIAL grades, and never learns that one judge ruled the other way, or why.
+- **Solution.** Add the single judge's verdict and the diagnostic to the transcript as a labelled second opinion, below the panel. The debate's verdict stays the panel's.
+- **Not checked.** Whether earlier transcripts also leave it out, which would make this a standing design and not a fault of this run.
+
+### 11. The reader's guide quotes the old void rule
+
+- **What happened.** The section "How to read this debate" says it quotes the judges' rulebook "in its own words". Its quotation of the void rule is the old text: it leaves out the new sentence that a carried verse never voids a premise. The judges were sent the new rule, and it appears in the judges' text further down the file. The guide is built by a separate step in the flow, "Format Markdown", which keeps its own copy of the rule. My change did not touch that step.
+- **Solution.** Build the guide's quotation from the judges' rulebook text itself, so there is one copy of the rule. Until then, any change to the rule must also change "Format Markdown".
+
+### 12. The ledger the judges were sent is empty on the challenger's side
+
+- **What happened.** In "What the judges were sent", the section "AGAINST THE DEFENDER" lists no premises at all, only the "cited in" line. The section "AGAINST THE CHALLENGER" lists all six of the defender's premises with their verses. This is problem 1 seen in what the judges actually read. One side's pressed verses were laid out for the judges and the other side's were not.
+- **Solution.** As problem 1.
+
 ## Problems in how we three worked
 
 These are my reading of this order, and I include my own part first.
