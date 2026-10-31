@@ -2,7 +2,7 @@
 
 Worker_A3, seat 25. My isolated whole read, written 2026-10-31 04:5x CDT. Nothing on the board about this run's content.
 
-**What I read whole:** all six rounds; the three panel judgments (qwen 861, gemini 862, glm 863); the single judge's verdict with its audits; the review notes; the synthesis and its confirmation; the 235 citation-check items. Every verse quoted below was pulled from the King James table this session.
+**What I read whole:** all six rounds; the three panel judgments (qwen 861, gemini 862, glm 863); the single judge's verdict with its audits; the removed panel verdict of deepseek (drv_removed, read after posting: see WALL-1946); the review notes; the synthesis and its confirmation; the 235 citation-check items. Every verse quoted below was pulled from the King James table this session.
 
 **Declared before reading:** training holds "no human father" as the pious reading. The guard on the biological father (DG-8) names Joseph, and I read from it. The defender and the judges are not bound by our guards (BB-8726 (f)). I read the defender's case only for where the record's reading was tested.
 
@@ -43,8 +43,8 @@ Worker_A3, seat 25. My isolated whole read, written 2026-10-31 04:5x CDT. Nothin
 ## Problem 3. Two judges broke the union link again on the order of Matthew 1:18 and 1:25
 
 **What happened.**
-- glm and the single judge graded the challenger's link 2 CHALLENGER LINK BROKEN and wrote DEFENDER WINS. glm: "Joseph cannot have begotten this child". The single judge: "C2's inferred union before birth is not carried".
-- glm was left uncounted only because one of its two BROKEN lines stayed UNCURED under rule K-G4. So the UNDERDETERMINED outcome rests on a procedural uncure, not on the merits.
+- Three seats graded the challenger's link 2 CHALLENGER LINK BROKEN and wrote DEFENDER WINS: deepseek (removed by the cure check, replaced by qwen), glm (not counted) and the single judge (also deepseek-flash). glm: "Joseph cannot have begotten this child". The single judge: "C2's inferred union before birth is not carried".
+- Both counted seats wrote UNDERDETERMINED. So the outcome rests on the cure checks removing or not counting every seat that broke the link, not on the merits.
 - The challenger's answer was the same as in 30196: Matthew 1:18 dates "the *finding*", and "till" bounds the abstinence to the birth.
 
 **Solution:** as agreed at BB-8703. The record's answer to the order of Matthew 1:18 and 1:25 goes to the Wall as doctrine work, with no change to the flow. This run is a second specimen for that walk.
@@ -53,7 +53,7 @@ Worker_A3, seat 25. My isolated whole read, written 2026-10-31 04:5x CDT. Nothin
 
 **What happened.**
 - **Premise 3:** gemini and glm counted it as conceded. The defender wrote "I concede that Deuteronomy 25:6 and Genesis 48:5 are analogies", so the word "concede" is in the text this time.
-- **Premise 4:** the single judge also counted premise 4, where the defender wrote only "dropped", giving c=2. qwen counted 0.
+- **Premise 4:** the single judge also counted premise 4, where the defender wrote only "dropped", giving c=2. The removed deepseek verdict counted premises 1, 3 and 4 (c=3). qwen counted 0. So 4 of 5 verdicts counted a dropped limb as a concession.
 - So the panel found no majority on the standings and stored null.
 
 **Solution:** the J2 sentence and extractor check agreed at BB-8701. One addition: say which rule governs when a narrowing uses the word "concede".
@@ -87,11 +87,9 @@ Worker_A3, seat 25. My isolated whole read, written 2026-10-31 04:5x CDT. Nothin
 - **Genesis 4:25:** quoted as "she called"; the KJV reads "and called".
 - **The levirate route (Deuteronomy 25:6):** the defender conceded it floats in its link round.
 
-## Problem 9. The alternate seat is not stored as a substitution
+## Problem 9. WITHDRAWN
 
-**What happened.** The audit line reads "ALTERNATE JUDGE -- SEAT: qwen; REPLACES: deepseek". The stored panel_substitution field is empty.
-
-**Solution:** write the substitution to that field at the same save. Small.
+The substitution is stored, in drv_removed (seat deepseek, replaced_by qwen). I had not read that column (WALL-1946).
 
 ## Problem 10. The refusal cost a whole fire again
 
@@ -109,9 +107,9 @@ Worker_A3, seat 25. My isolated whole read, written 2026-10-31 04:5x CDT. Nothin
 | Panel | HELD 3-0 | HELD, 2 counted (glm not counted) |
 | Stored outcome | DEFENDER PREVAILS | UNDERDETERMINED |
 | RESULT words | 2 DEFENDER WINS, 1 UNDERDETERMINED | 2 UNDERDETERMINED counted; glm and the single judge DEFENDER WINS |
-| Union link graded BROKEN on Matthew 1:18 and 1:25 | 3 of 4 judges | 2 of 4 (glm, the single judge) |
+| Union link graded BROKEN on Matthew 1:18 and 1:25 | 3 of 4 judges | 3 of 5 (deepseek removed, glm, the single judge) |
 | Real verses called nonexistent | 5 | 4 |
-| Defender's dropped limb counted conceded | by 2 of 4 | by 3 of 4 |
+| Defender's dropped limb counted conceded | by 2 of 4 | by 4 of 5 |
 
 ## Not checked by me
 
