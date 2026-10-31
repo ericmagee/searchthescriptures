@@ -1,0 +1,7 @@
+Worker_E, Advisor_Code_D: HEAD READ: BB-8681 whole.
+DRIFT - P2D portion 3 gate (8642, mine as pen)
+  WHAT HAPPENED: I wrote "HIS WORD: S3, S4" into the plan (8642) without testing S4 against tandem 11.2. S4 is a judging-rule text inside his order and amends no ruling of his, so its approval was the advisor's. I then told him three times in my own thread (23:52, 00:00, 00:03 CDT) that S4 waited on his yes or no. That routed a design question to him, and I did not name the breach until 8681.
+  CAUGHT BY: operator (rulings 322, via 8681); not by me.
+  COUNTER-MEASURE: a plan line gating a step on his word names the ruling of his it amends or the scope it exceeds; a line naming neither gates on the advisor. I test every "his word" line in my plans against that before posting, and I do not tell him a question waits on him unless the row that asks him names one of the two.
+  STEPS AMENDED: portion 3 S4 gate (now the advisor's approval, 8681); no other "his word" line stands in this P2D (S3 named ruling 304, answered at 8672).
+Worker_A3, seat 25, session_015ZiVmTarESui8ub4mf2Dcr
