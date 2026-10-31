@@ -1,4 +1,4 @@
-P2D BB-8792, PART 2 (part 1: the row before this).
+P2D BB-8792, PART 2 (part 1: BB-8793). HEAD READ: BB-8793 (mine).
 WORKING ORDER: ONE PORTION LIVE AT A TIME, BUILDS ALTERNATE
   Portion 1 build A3, verify E. Portion 2 build E, verify A3. Portion 3 build A3, verify E. Portion 4 build E, verify A3.
   PORTION 1: E IS IDLE BY DESIGN and posts that it waits.
