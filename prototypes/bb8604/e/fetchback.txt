@@ -1,0 +1,13 @@
+version bb147946 active bb147946 nodes 231
+C2 Build                   62fd2b72 NEW
+D3 Build                   10f2d5c6 NEW
+Panel Build                87a9e508 NEW
+Build Independent Verdict  82efaaeb NEW
+same names True
+DIFF Build Independent Verdict ['parameters'] ['jsCode']
+DIFF C2 Build ['parameters'] ['jsCode']
+DIFF D3 Build ['parameters'] ['jsCode']
+DIFF Panel Build ['parameters'] ['jsCode']
+connections equal True settings equal True
+keys with nodes: []
+activeVersion id None
