@@ -7,3 +7,6 @@ for(const [k,r] of Object.entries(rows)){console.log(k,'DEFENDER',SLC([],[],[r.c
 const t='As Sight 32 holds, and S-519 too; Sights 8, 9; Conclusion #7; see #12; Sight 99999 is not served. Matthew 1:16.';
 console.log('constructed:',SLC(["S-32","S-519","S-8","S-9","#7","#12","S-1578"],["#12"],[t]));
 console.log('empty rounds:',SLC(["S-32"],[],[null,undefined,'']));
+console.log('8678 extra: (S519) alone:',SLC(["S-519"],[],['as held (S519).']));
+console.log('8678 extra: noise:',SLC(["S-1","#61","#18"],[],['DG-61 and S1 build; Drift Guard #18 holds; (Sirach 2:1); Psalm 2:7']));
+console.log('8678 extra: Sight #519 alone:',SLC(["S-519","#519"],[],['Sight #519']));

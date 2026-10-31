@@ -1,5 +1,5 @@
-// BB-8634 S6 (8668, 8669): served labels a side cites and labels it cites unserved, counted by code from its raw rounds. Forms: S-N, Sight N, Sights N (first number only); #N, Conclusion N.
-const SLX=(rounds)=>{const t=rounds.map(x=>String(x||'')).join('\n');const c=new Set();for(const m of t.matchAll(/(?:\bS-|\bSights?\s+)(\d+)(?!\d)/g))c.add('S-'+m[1]);for(const m of t.matchAll(/(?:#|\bConclusion\s+#?)(\d+)(?!\d)/g))c.add('#'+m[1]);return c;};
+// BB-8634 S6 (8668, 8669): served labels a side cites and labels it cites unserved, counted by code from its raw rounds. Forms: S-N, Sight N, Sight #N, Sights N (first number only), (SN); #N, Conclusion N, never the #N of Sight #N or Guard #N (8678).
+const SLX=(rounds)=>{const t=rounds.map(x=>String(x||'')).join('\n');const c=new Set();for(const m of t.matchAll(/(?:\bS-|\bSights?\s+#?|\(S)(\d+)(?!\d)/g))c.add('S-'+m[1]);for(const m of t.matchAll(/(?<!\b(?:Sights?|Guard)\s*)(?:#|\bConclusion\s+#?)(\d+)(?!\d)/g))c.add('#'+m[1]);return c;};
 const SLC=(served,named,rounds)=>{const L=Array.isArray(served)?served:[];const c=SLX(rounds);const ok=new Set([...L,...(Array.isArray(named)?named:[])]);const hit=L.filter(l=>c.has(l));const un=[...c].filter(x=>!ok.has(x));return hit.length+' of '+L.length+(hit.length?' ('+hit.join(', ')+')':'')+'; unserved labels cited: '+(un.length?un.join(', '):'none');};
 const TOK=$('Init Seats').first().json.run_token;const RT=' run_token='+TOK;
 // The panel in the flow (BB-4607, A5): the row is saved, then graded. Prompt from the runner KXoI9 H4b, with COLLAPSED
