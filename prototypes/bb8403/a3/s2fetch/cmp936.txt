@@ -1,0 +1,21 @@
+A 93631b7f-ca59-4f29-9290-9c5a85bfe2ec 231 B 96f0edd6-af86-4885-8178-fec19a4acc17 231
+names equal True
+differ 14
+Alternate Build new a209ac51 git a209ac51 match True prior ca3b6771 non-code equal True
+Build Diagnostic Prompt new 066890c9 git 066890c9 match True prior 8f8b62e6 non-code equal True
+Build Independent Verdict new eeb79d34 git eeb79d34 match True prior ff341b67 non-code equal True
+Build Synthesis new e6134ef5 git e6134ef5 match True prior b9a6cc8f non-code equal True
+C1 Build new 38a070c0 git 38a070c0 match True prior 3097f326 non-code equal True
+C2 Build new a9686a7d git a9686a7d match True prior df677a86 non-code equal True
+C3 Build new f3e35573 git f3e35573 match True prior 280fc72d non-code equal True
+D1 Build new 31028788 git 31028788 match True prior 72b637b5 non-code equal True
+D2 Build new 28ecae28 git 28ecae28 match True prior bd5f8231 non-code equal True
+D3 Build new a5357075 git a5357075 match True prior 61d7c5e9 non-code equal True
+Init Seats new 790bce13 git 790bce13 match True prior b7a81d51 non-code equal True
+Panel Build new dcc45bd4 git dcc45bd4 match True prior 11bf6518 non-code equal True
+Reserve Build new ff5ca663 git ff5ca663 match True prior d4b9b0a7 non-code equal True
+Resolve Seats new 335baa2f git 335baa2f match True prior fa39c165 non-code equal True
+git names all in diff True
+others 217 equal
+connections equal True
+{'active': True, 'isArchived': False, 'versionId': '93631b7f-ca59-4f29-9290-9c5a85bfe2ec', 'activeVersionId': '93631b7f-ca59-4f29-9290-9c5a85bfe2ec', 'nodeCount': 231, 'updatedAt': '2026-10-31T00:01:16.093Z'}
