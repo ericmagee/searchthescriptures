@@ -4,3 +4,15 @@ Build Independent Verdict    82efaaeb BASE
 D3 Build                     1fa7ce9f NEW
 Extract Independent Verdict  73b4c32c BASE
 diff nodes ['D3 Build'] names equal True
+version c08212d1 active bb147946 nodes 231
+Panel Build                  e783af23 NEW
+Build Independent Verdict    82efaaeb BASE
+D3 Build                     1fa7ce9f NEW
+Extract Independent Verdict  73b4c32c BASE
+diff nodes ['D3 Build', 'Panel Build'] names equal True
+version 18eb51e7 active bb147946 nodes 231
+Panel Build                  e783af23 NEW
+Build Independent Verdict    0468886f NEW
+D3 Build                     1fa7ce9f NEW
+Extract Independent Verdict  73b4c32c BASE
+diff nodes ['D3 Build', 'Build Independent Verdict', 'Panel Build'] names equal True
