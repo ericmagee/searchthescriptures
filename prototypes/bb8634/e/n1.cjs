@@ -1,0 +1,10 @@
+const fs=require('fs');const s=fs.readFileSync('new/Extract_Independent_Verdict.js','utf8');
+const a=s.indexOf('const seqCount=');const b=s.indexOf('const premise_sequence');const a2=s.indexOf('const seqLines=');const b2=s.indexOf('const premise_lines');
+const seqCount=eval('('+s.slice(a,b).replace('const seqCount=','').replace(/;\s*$/,'')+')');const seqLines=eval('('+s.slice(a2,b2).replace('const seqLines=','').replace(/;\s*$/,'')+')');
+const H=/^\s*#*\s*\**\s*UNSUPPORTED-L4 PREMISES\s*:?\s*\**\s*:?\s*$/i;
+const t='UNSUPPORTED-L4 PREMISES:\nLINK 1: a\nLINK 2: b\nPREMISE COUNT: 2\nLINK 3: stray';
+const t2='UNSUPPORTED-L4 PREMISES:\n1. a\n2. b\nPREMISE COUNT: 2\n3. stray';
+console.log('LINK form',seqCount(t,H),seqLines(t,H).length,'| numbered form',seqCount(t2,H),seqLines(t2,H).length);
+const t3='UNSUPPORTED-L4 PREMISES:\nLINK 1: a\nLINK 2: b\nPREMISE COUNT: 2\nLINK 7: stray';
+const t4='UNSUPPORTED-L4 PREMISES:\n1. a\n2. b\nPREMISE COUNT: 2\n7. stray';
+console.log('out of sequence: LINK form',seqCount(t3,H),'| numbered form',seqCount(t4,H));
