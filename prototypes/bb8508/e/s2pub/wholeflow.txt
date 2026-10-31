@@ -1,0 +1,22 @@
+base 96f0edd6-af86-4885-8178-fec19a4acc17 new 93631b7f-ca59-4f29-9290-9c5a85bfe2ec active 96f0edd6-af86-4885-8178-fec19a4acc17
+nodes 231 231 same names True
+DIFF Alternate Build keys ['parameters'] params ['jsCode']
+DIFF Build Diagnostic Prompt keys ['parameters'] params ['jsCode']
+DIFF Build Independent Verdict keys ['parameters'] params ['jsCode']
+DIFF Build Synthesis keys ['parameters'] params ['jsCode']
+DIFF C1 Build keys ['parameters'] params ['jsCode']
+DIFF C2 Build keys ['parameters'] params ['jsCode']
+DIFF C3 Build keys ['parameters'] params ['jsCode']
+DIFF D1 Build keys ['parameters'] params ['jsCode']
+DIFF D2 Build keys ['parameters'] params ['jsCode']
+DIFF D3 Build keys ['parameters'] params ['jsCode']
+DIFF Init Seats keys ['parameters'] params ['jsCode']
+DIFF Panel Build keys ['parameters'] params ['jsCode']
+DIFF Reserve Build keys ['parameters'] params ['jsCode']
+DIFF Resolve Seats keys ['parameters'] params ['jsCode']
+differing nodes 14
+connections equal True
+settings equal True
+top-level differs: activeVersion
+top-level differs: updatedAt
+top-level differs: versionId
