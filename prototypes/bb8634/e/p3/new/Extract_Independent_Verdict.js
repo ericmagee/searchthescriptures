@@ -81,11 +81,11 @@ const collLines=upper.split('\n').filter(L=>/^[ \t]*(?:[-•]|\d+[.)])?[ \t]*D\d
 // (STANDS, UNDERDETERMINED or CHALLENGER LINK BROKEN). It reads the entry shapes the v12 line filter dropped --
 // "D5: D5 vs C6 (...)" and "D3: vs C5 (...)" -- which made v17 count 0 broken and mark a false ILLEGAL on two stored rows.
 const colSec=(()=>{const L=upper.split('\n');const i=L.findIndex(x=>/^[ \t]*(?:#+[ \t]*|[-•][ \t]*)?COLLISION POINTS\b/.test(x));if(i<0)return null;const out=[];const f=L[i].replace(/^[ \t]*(?:#+[ \t]*|[-•][ \t]*)?COLLISION POINTS[ \t]*:?/,'');if(f.trim())out.push(f);for(let j=i+1;j<L.length;j++){const x=L[j];if(/^[ \t]*(?:#+[ \t]*|[-•][ \t]*)?(CITATION CHECK|OUT-OF-ROUND CONCESSIONS|CHALLENGER CHAIN MARK|KEYSTONE|CLAUSE|RESULT|DEFENSE STANDING|CHALLENGE STANDING|CONCEDED LINKS|CHALLENGER CONCEDED LINKS|LINK AUDIT)\b/.test(x))break;if(/^[ \t]*\[(EXTRACTOR|REVIEW|TRUNCATED|AUDIT)/.test(x))break;out.push(x);}return out;})();
-const colMap={};const colUnparsed=[];let chBroken=0;
-if(colSec){for(const x0 of colSec){const x=x0.trim();if(!x)continue;const m=x.match(/^(?:[-•]|\d+[.)])?\s*D(\d+)\b\s*:?\s*(?:D\1\b\s*)?(.*)$/);if(!m){colUnparsed.push(x.slice(0,60));continue;}const rest=m[2];let st=null;if(/^VS\.?\s/.test(rest)){const g=rest.match(/(DEFENDER LINK BROKEN|CHALLENGER LINK BROKEN|UNDERDETERMINED)/);st=g?g[1]:null;}else{const g=rest.match(/^(WITHDRAWN|STANDS)\b/);st=g?g[1]:null;}if(!st){colUnparsed.push(x.slice(0,60));continue;}if(st==='CHALLENGER LINK BROKEN')chBroken++;(colMap[+m[1]]=colMap[+m[1]]||[]).push(st);}}
+const colMap={};const colUnparsed=[];let chBroken=0;const colWB=new Set(); // BB-8634 S4-X: links on a WITHDRAWN AFTER AN UNANSWERED WITNESS line
+if(colSec){for(const x0 of colSec){const x=x0.trim();if(!x)continue;const m=x.match(/^(?:[-•]|\d+[.)])?\s*D(\d+)\b\s*:?\s*(?:D\1\b\s*)?(.*)$/);if(!m){colUnparsed.push(x.slice(0,60));continue;}const rest=m[2];if(/WITHDRAWN AFTER AN UNANSWERED WITNESS/.test(rest))colWB.add(+m[1]);let st=null;if(/^VS\.?\s/.test(rest)){const g=rest.match(/(DEFENDER LINK BROKEN|CHALLENGER LINK BROKEN|UNDERDETERMINED)/);st=g?g[1]:null;}else{const g=rest.match(/^(WITHDRAWN|STANDS)\b/);st=g?g[1]:null;}if(!st){colUnparsed.push(x.slice(0,60));continue;}if(st==='CHALLENGER LINK BROKEN')chBroken++;(colMap[+m[1]]=colMap[+m[1]]||[]).push(st);}}
 const colState=(i)=>{const a=colMap[i];if(!a)return null;const w=a.includes('WITHDRAWN'),b=a.includes('DEFENDER LINK BROKEN');return (w&&b)?'CONFLICT':w?'WITHDRAWN':b?'BROKEN':'STANDS';};
 const colIds=Object.keys(colMap).map(Number).sort((a,b)=>a-b);
-const dw=colIds.filter(i=>colState(i)==='WITHDRAWN').length;const dk=colIds.filter(i=>colState(i)==='BROKEN').length;
+const dw=colIds.filter(i=>colState(i)==='WITHDRAWN'||colWB.has(i)).length; /* S4-X: such a link is withdrawn (in w) and graded at its collision (in k when BROKEN) */const dk=colIds.filter(i=>colState(i)==='BROKEN').length;
 const defBroken=dk;
 // v8 A4: fail loud, GATED on the new format, so pre-v8 rows stay silent by construction.
 const newFormat=!!(clause||verdict_result||collisionsPresent||nwk);
@@ -207,7 +207,7 @@ if(colSec){
  for(const u of colUnparsed){raw+='\n\n[AUDIT v18: COLLISION POINTS ENTRY NOT READ: "'+u+'". REVIEW THIS ROW.]';}
  if(w!==null&&dw!==w){raw+='\n\n[AUDIT v18: CLAUSE w='+w+' BUT COLLISION POINTS WITHDRAWS '+dw+'. REVIEW THIS ROW.]';}
 }
-raw+='\n\n[AUDIT v18 COLLISION MAP: '+(colSec?colIds.map(i=>'D'+i+'='+colState(i)).join(' ')+' | w='+dw+' k='+dk:'NO COLLISION POINTS SECTION')+']';
+raw+='\n\n[AUDIT v18 COLLISION MAP: '+(colSec?colIds.map(i=>'D'+i+'='+colState(i)+(colWB.has(i)?'(WITHDRAWN AFTER WITNESS)':'')).join(' ')+' | w='+dw+' k='+dk:'NO COLLISION POINTS SECTION')+']';
 // CONCEDED COUNTS DERIVED FROM THE ITEMIZATION (WO-17 form on W1's clause scheme). Each item of the CONCEDED LINKS /
 // CHALLENGER CONCEDED LINKS line that carries a tag -- CONCEDED (stated|conditional) or UNEXHIBITED (...) -- counts the
 // links it names ("LINKs 3, 4, and 6" counts three; "LINK none" counts one each time). An item tagged VOID counts for
@@ -256,7 +256,7 @@ const K2=(()=>{const DM=(s)=>String(s||'').replace(/[‐-―−]/g,'-');
   const r2=/\b(LINKS?|PREMISES?)\s+(\d+(?:\s*(?:,\s*AND|,|AND|–|-|TO)\s*\d+)*)/g;
   while((m=r2.exec(it))!==null){const ids=[];for(const p of m[2].split(/\s*(?:,\s*AND|,|AND)\s*/)){const rg=p.match(/^(\d+)\s*(?:–|-|TO)\s*(\d+)$/);if(rg){for(let q=+rg[1];q<=+rg[2];q++)ids.push(q);}else if(/^\d+$/.test(p.trim()))ids.push(+p.trim());}
    for(const q of ids){if(/^PREMISE/.test(m[1])){const lb=labs[q-1];if(lb&&/^[0-9]+$/.test(lb))vIds.add(+lb);}else vIds.add(q);}}}}
- const nD=(chain_count!==null)?chain_count:n;const stands=(i)=>{const s=colState(i);return s==='STANDS'||(s===null&&keystone_link===i&&keystone_state==='STANDS');};
+ const nD=(chain_count!==null)?chain_count:n;const stands=(i)=>{if(colWB.has(i))return false;const s=colState(i);return s==='STANDS'||(s===null&&keystone_link===i&&keystone_state==='STANDS');};
  const miss=[],seq=[];if(nD!==null){for(let i=1;i<=nD;i++){if(!conc.has(i)||!stands(i)||vIds.has(i))continue;if(sup.has(i))seq.push([i,1]);else{miss.push(i);seq.push([i,0]);}}}
  return {miss,seq};})();
 for(const [i,sp] of K2.seq){raw+=sp?'\n\n[EXTRACTOR v18: SPLIT LINK D'+i+' -- CR3 concedes and supports premises mapped to it. REVIEW THIS ROW.]':'\n\n[EXTRACTOR v18: WITHDRAWN MISSED D'+i+' -- CR3 states LINK '+i+': CONCEDED; the judge marks it STANDS. REVIEW THIS ROW.]';}
