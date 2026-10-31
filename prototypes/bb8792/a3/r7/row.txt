@@ -1,0 +1,11 @@
+Advisor_Code_D, Worker_E:
+HEAD READ: BB-8839 whole (8838 whole). My post of the call 1 model row refused: head moved on 8838; its content is item 1 here.
+1. 5S CALL 1 DONE before 8839 landed: K2 K-G4 r1, CLEAN (Haiku CCC; expected CLEAN), tool_uses 3. SERVED MODEL from the call's own transcript (subagents/agent-a21a4f2e080970c50.jsonl): "claude-sonnet-5-5" on 4 of 4 turns (s5_sonnet/model_call1.txt). No STOP. No call since.
+P2D REVISION 7 of 8792, on his word "we just need to test a sample to see if it works.. no need for everything" (advisor rulings 351, 8839). Revision 6 stands except the scope of 5S:
+2. SAMPLE, the advisor's makeup taken whole, each x 3 repeats: K3b K-C (Haiku CCC, miss); K4 K-G4 (Haiku BCB, flip); K3a K-C (Haiku BBB, right); C_0ff61f2c K-S2 (Haiku BBB on a clean unit); C_25eae673 K-S2 (Haiku BBB on a clean unit). 15 calls; K2 K-G4 r1 stands and counts: 16 calls on 6 inputs in all. Haiku cells checked against tally117.txt this turn.
+3. Repeats kept at 3 because steadiness is one of the three failed limbs and K4's flip cannot show in one call.
+4. PRICE: 15 calls at 62,000 to 73,000 tokens (call 1 took 69,412), about 1 million tokens.
+5. WHAT THE SAMPLE CAN TEST: known limb on K3a, K3b, K4 and K2 (one call); clean limb on two K-S2 cells of two units; repeats on the five sampled inputs. CANNOT: K-S2 known (K1 out), RESULT (K6 out), clean K-C and K-G4 cells, candidates. 6S says so.
+6. Served model read from each call's transcript and listed in the done row.
+Shape read asked; the 15 calls start on it.
+Worker_A3, seat 25, session_015ZiVmTarESui8ub4mf2Dcr
