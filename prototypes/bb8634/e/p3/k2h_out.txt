@@ -1,0 +1,7 @@
+relabelled lines: 6
+== before fold | relabelled list: ["[EXTRACTOR v18: WITHDRAWN MISSED D1 -- CR3 states LINK 1: CONCEDED; the judge marks it STA"]
+== before fold | original 30091: ["[EXTRACTOR v18: WITHDRAWN MISSED D1 -- CR3 states LINK 1: CONCEDED; the judge marks it STA"]
+== after fold | relabelled list: ["[EXTRACTOR v18: SPLIT LINK D2 -- CR3 concedes and supports premises mapped to it. REVIEW T","[EXTRACTOR v18: WITHDRAWN MISSED D5 -- CR3 states LINK 5: CONCEDED; the judge marks it STA"]
+== after fold | original 30091: ["[EXTRACTOR v18: WITHDRAWN MISSED D1 -- CR3 states LINK 1: CONCEDED; the judge marks it STA"]
+30091 original, whole output equal before/after fold: true
+run B, whole output equal before/after fold: true

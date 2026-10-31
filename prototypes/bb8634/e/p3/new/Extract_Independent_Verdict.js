@@ -241,7 +241,7 @@ if(defVoid||chVoid){raw+='\n\n[AUDIT v18 VOID: defender '+defVoid+', challenger 
 // names VOID in its CONCEDED LINKS itemization (D<n>, LINK <n>, or premise <p> through the list) gets no line.
 const K2=(()=>{const DM=(s)=>String(s||'').replace(/[‐-―−]/g,'-');
  const gL=DM(prev&&prev.gr2).split('\n');let gh=-1;for(let i=0;i<gL.length;i++){if(/^\s*#*\s*\**\s*UNSUPPORTED-L4 PREMISES\s*:?\s*\**\s*:?\s*$/i.test(gL[i]))gh=i;}
- const labs=[];if(gh>=0){let c=0;for(let i=gh+1;i<gL.length;i++){const m=gL[i].match(/^(?:#+\s*)?\**([0-9]+)\./);if(!m)continue;if(parseInt(m[1],10)!==c+1)break;c++;const lm=gL[i].replace(/[*_`]+/g,'').match(/^(?:#+\s*)?[0-9]+\.\s*LINK\s*([0-9]+|NONE)\b/i);labs.push(lm?lm[1].toUpperCase():null);}}
+ const labs=[];if(gh>=0){let c=0;for(let i=gh+1;i<gL.length;i++){if(/^\s*(?:#+\s*)?\**\s*PREMISE COUNT/i.test(gL[i]))break;const m=gL[i].match(/^(?:#+\s*)?\**([0-9]+)\./);if(!m){const lk=gL[i].replace(/[*_`]+/g,'').match(/^(?:#+\s*)?\s*LINK\s+([0-9]+|NONE)\s*:/i);if(lk){c++;labs.push(lk[1].toUpperCase());}continue;} /* BB-8634 S1 in K2 (8684, 8687): an unnumbered LINK n: line is the next item; the list ends at PREMISE COUNT (N1) */if(parseInt(m[1],10)!==c+1)break;c++;const lm=gL[i].replace(/[*_`]+/g,'').match(/^(?:#+\s*)?[0-9]+\.\s*LINK\s*([0-9]+|NONE)\b/i);labs.push(lm?lm[1].toUpperCase():null);}}
  const ent=[];const seen=new Set();
  for(const x of DM(prev&&prev.cr3).replace(/[*_`]+/g,'').toUpperCase().split('\n')){if(/^[ \t#>]*CHALLENGER.{0,2}S UNSUPPORTED-L4 PREMISES[ \t:]*$/.test(x))break;
   const m=x.match(/^[ \t#>•-]*LINK[ \t]+([0-9]+|NONE)[ \t]*(?:\[[ \t]*PREMISE[ \t]*([0-9]+)[ \t]*\])?[ \t]*:?[ \t]*(SUPPORTED|CONCEDED)\b/);if(!m)continue;
