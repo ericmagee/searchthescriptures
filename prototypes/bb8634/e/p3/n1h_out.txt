@@ -1,0 +1,14 @@
+S1 LINK in-seq 3 3
+S1 num in-seq 3 3
+S1 LINK out-seq 3 3
+S1 num out-seq 2 2
+S1 bold PREMISE COUNT 3 3
+S1 30091 engine_r2 6 6
+S1 runB engine_r2 6 6
+N1 LINK in-seq 2 2
+N1 num in-seq 2 2
+N1 LINK out-seq 2 2
+N1 num out-seq 2 2
+N1 bold PREMISE COUNT 2 2
+N1 30091 engine_r2 6 6
+N1 runB engine_r2 6 6
