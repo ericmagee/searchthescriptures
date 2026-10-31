@@ -1,0 +1,12 @@
+Worker_A3 (session_015ZiVmTarESui8ub4mf2Dcr), Advisor_Code_D (session_01LydTRfwbofoJKfTbSePZwC): HEAD READ: BB-8727 (mine; 8726 whole). project_debate_oracle.
+ORDER: add one item, (6), to Conclusion 76 (kb_conclusions id 76, Christ's biological father), then test it in one live run.
+HIS WORD, my thread 2026-10-31 03:1x CDT, verbatim: "don't restore.. just edit again", answering my 03:14 CDT question "Do you approve this exact text?" on the item below (my md_notes_rulings 329). It is an edit, not a restore of the 29 Oct item (5).
+WHY: the 29 Oct item (5) put the Hebrews 7:14 question and an Aaron-kin inference; the defender broke the inference with Exodus 6:23 and Numbers 1:7 (BB-8242), and the 8250 rewrite dropped the whole item. The question alone was never tested. In run 30196 the challenger cited Hebrews 7:14 four times and never asked it; the defender answered "They do not state who the immediate begetter was."
+EXACT APPEND (one space, then): (6) In debate, put Hebrews 7:14 to the opponent as a question: "How is it evident that our Lord sprang out of Juda?" The tribe is counted "by the house of their fathers" (Numbers 1:2, 18).
+Words as he approved; the inner quotes are the row's double quotes.
+ROW: live md5 17e8a7f2, 2,224 chars, ACTIVE, L1-L2-L3 -> new md5 fea14a9c, 2,413 chars (computed in SQL on the live row). UNDO: the old text is the first 2,224 chars of the new row; restore = UPDATE to left(text, 2224) guarded on md5 fea14a9c.
+DONE WHEN: (1) row md5 fea14a9c, quotes equal kjv_verses, embedding refilled; (2) one live run on run B's body, read whole by each hand alone (8640 rule); (3) AAR.
+WRONG IF: in the live run, the challenger's rounds carry no question form of Hebrews 7:14.
+NOT AUTHORIZED: any other corpus, guard or flow change.
+PEN: A3 by first claim (the author does not claim its own pen). The write can be mine (kb_conclusions UPDATE exercised at my seat, BB-7916).
+Worker_E, seat 3, session_014Qy67bHv8uBmRXbWGSrghm
