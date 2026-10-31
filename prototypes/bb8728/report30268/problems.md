@@ -1,0 +1,119 @@
+# Live run 30268 (BB-8728): problems found, and a solution for each
+
+Worker_A3, seat 25. My isolated whole read, written 2026-10-31 04:5x CDT. Nothing on the board about this run's content.
+
+**What I read whole:** all six rounds; the three panel judgments (qwen 861, gemini 862, glm 863); the single judge's verdict with its audits; the review notes; the synthesis and its confirmation; the 235 citation-check items. Every verse quoted below was pulled from the King James table this session.
+
+**Declared before reading:** training holds "no human father" as the pious reading. The guard on the biological father (DG-8) names Joseph, and I read from it. The defender and the judges are not bound by our guards (BB-8726 (f)). I read the defender's case only for where the record's reading was tested.
+
+## The run
+
+- **The request:** the same as runs B, 30091 and 30196.
+- **The first fire, 30263:** refused by MiMo's provider at the challenger's first round (stop row 8738).
+- **The re-fire, 30268:** ran from 03:42 to 04:35 CDT, row ODV1-30268-3q7ubjd7.
+- **The panel:** HELD. gemini and qwen were counted; glm was not counted, by the rule on uncured violations. qwen sat as the alternate for deepseek.
+- **The stored outcome:** UNDERDETERMINED.
+- **The RESULT words:** qwen and gemini wrote UNDERDETERMINED. glm and the single judge wrote DEFENDER WINS.
+
+## Problem 1. The challenger never asked the question (the plan's wrong-if fired)
+
+**What happened.**
+- The plan's test finds no sentence ending in "?" that names Juda in the challenger's three rounds (0, 0 and 0). A second check agrees: "How is it" occurs 0 times.
+- The challenger quoted Hebrews 7:14 five times, every time as a statement: "For **it is evident that our Lord sprang out of Juda**". It used the second half of item (6) as written: "by the house of their fathers" (Numbers 1:2; 1:18).
+- **Item (6) was served whole.** The challenger's served list carries #76. The flow serves conclusions uncut; only sights are cut, to 300 characters (Init with Guards, active version 8a7f48d3, my stored copy ed3bc68c). The run fetched the row after the 03:22 edit.
+
+**Where the question would have bitten.** In its link round the defender dropped its claim that Mary carries David's line, "because no KJV verse states her descent". It then said the seed rows, Hebrews 7:14 among them, "do not name which parent carried it". The judges took that up: glm wrote "none of their own words names which parent carried the seed", and the single judge "C1 leaves the parent unnamed". That is the gap "How is it evident that our Lord sprang out of Juda?" asks about, with the tribe counted "by the house of their fathers" (Numbers 1:2). But the defender dropped the claim only in round 3, and the challenger has no round after it.
+
+**Cause, as I read it.** The flow serves conclusions under the header "build on these, never cite them by number or label in the debate; state what each holds and quote its verses". A tactic inside a conclusion is read as a holding to restate. This is the second failure of the item: the 29 October item (5) was not asked either.
+
+**Solution, options (none built):**
+1. Put the question in the challenger's round 2 instructions, so the defender must answer it in its round 3. This is a flow change, outside BB-8728, and needs your word.
+2. Keep item (6) in Conclusion 76 as the record, and add nothing to the corpus.
+3. A third try of the same text is not proposed. The record now holds two failures of a question placed in the conclusion.
+
+## Problem 2. The citation check again called real verses nonexistent
+
+**What happened.**
+- Luke 2:7, John 1:13, 1 John 4:7 and 1 John 5:1 were stored as "CITED VERSE DOES NOT EXIST", all in the challenger's link round. All four are in the table, for example John 1:13: "Which were born, not of blood, nor of the will of the flesh, nor of the will of man, but of God."
+- glm gave them "no [L1] weight". qwen called them "system errors" and counted them. gemini called them "system lookup mismatches".
+- Every other late reference matched, because each had been cited earlier and was already fetched. The four are the late verses cited for the first time. That fits the 90-group fetch cap (WALL-1937 T1).
+
+**Solution:** the agreed follow-on, first priority. Page the fetch, and print NOT CHECKED, never DOES NOT EXIST, for a verse that was not fetched. This is now the fifth run with the fault (29328, 29609, 30196, 30268).
+
+## Problem 3. Two judges broke the union link again on the order of Matthew 1:18 and 1:25
+
+**What happened.**
+- glm and the single judge graded the challenger's link 2 CHALLENGER LINK BROKEN and wrote DEFENDER WINS. glm: "Joseph cannot have begotten this child". The single judge: "C2's inferred union before birth is not carried".
+- glm was left uncounted only because one of its two BROKEN lines stayed UNCURED under rule K-G4. So the UNDERDETERMINED outcome rests on a procedural uncure, not on the merits.
+- The challenger's answer was the same as in 30196: Matthew 1:18 dates "the *finding*", and "till" bounds the abstinence to the birth.
+
+**Solution:** as agreed at BB-8703. The record's answer to the order of Matthew 1:18 and 1:25 goes to the Wall as doctrine work, with no change to the flow. This run is a second specimen for that walk.
+
+## Problem 4. A narrowed limb was again counted as a concession
+
+**What happened.**
+- **Premise 3:** gemini and glm counted it as conceded. The defender wrote "I concede that Deuteronomy 25:6 and Genesis 48:5 are analogies", so the word "concede" is in the text this time.
+- **Premise 4:** the single judge also counted premise 4, where the defender wrote only "dropped", giving c=2. qwen counted 0.
+- So the panel found no majority on the standings and stored null.
+
+**Solution:** the J2 sentence and extractor check agreed at BB-8701. One addition: say which rule governs when a narrowing uses the word "concede".
+
+## Problem 5. A real 1611 margin was graded as a wording error
+
+**What happened.**
+- The challenger quoted the Isaiah 7:14 margin: "or, thou, O virgin, shalt call". The row holds it: "[shall call: or, thou, O virgin, shalt call]".
+- The check stored "WORDING DIFFERS FROM Isaiah 7:14". glm gave it "no [L1] weight". qwen: "given no weight as [L1] main text".
+
+**Solution:** Quote Compare also matches the bracketed margin text of the row, with a status that says so, such as MATCHES MARGIN. Citation Scan only.
+
+## Problem 6. The bare-reference rule charged the defender with a false citation error
+
+**What happened.** The defender wrote "(1:20)" right after "Deuteronomy 22:23-24". The scan read it as Deuteronomy 1:20 and stored "WORDING NOT FOUND IN Deuteronomy". All three judges recited it as a citation error, though the words are Matthew 1:20's. This is the second instance after WALL-1937 T4.
+
+**Solution:** the rule is yours (ruling of 2026-10-29). I report the instance and propose nothing.
+
+## Problem 7. The challenger's own errors
+
+- **1 Chronicles 28:6 misquoted again,** as "he shall build an house for my name". The verse reads "he shall build my house and my courts". The same error was in 30196.
+- **Two universal negatives with no count,** flagged by the synthesis under DG-63:
+  1. "the ban is never cited against Jesus' throne anywhere in the New Testament", an argument from silence, as in 30196;
+  2. "Every row is covenant/spiritual origin", resting on four rows.
+
+**Solution:** none for the flow. Recorded.
+
+## Problem 8. The defender's errors (recorded, not breaches)
+
+- **"fifteen links":** Matthew 1:2-16 has 40 begetting verbs, 39 active and 1 passive (counted in the record's Greek table). The challenger's 39 is right.
+- **Genesis 4:25:** quoted as "she called"; the KJV reads "and called".
+- **The levirate route (Deuteronomy 25:6):** the defender conceded it floats in its link round.
+
+## Problem 9. The alternate seat is not stored as a substitution
+
+**What happened.** The audit line reads "ALTERNATE JUDGE -- SEAT: qwen; REPLACES: deepseek". The stored panel_substitution field is empty.
+
+**Solution:** write the substitution to that field at the same save. Small.
+
+## Problem 10. The refusal cost a whole fire again
+
+**What happened.** Run 30263 was refused at the challenger's first round after 17,164 output tokens. That is the second refusal of this request tonight, after 30188.
+
+**Solution:** the agreed in-run retry at the refused seat (BB-8701 (4)).
+
+## Compared with run 30196
+
+| | Run 30196 | Run 30268 |
+|---|---|---|
+| Conclusion 76 item (6) served | no | yes, whole |
+| Question form of Hebrews 7:14 by the challenger | 0 | 0 |
+| Hebrews 7:14 cited by the challenger | 6 | 5 |
+| Panel | HELD 3-0 | HELD, 2 counted (glm not counted) |
+| Stored outcome | DEFENDER PREVAILS | UNDERDETERMINED |
+| RESULT words | 2 DEFENDER WINS, 1 UNDERDETERMINED | 2 UNDERDETERMINED counted; glm and the single judge DEFENDER WINS |
+| Union link graded BROKEN on Matthew 1:18 and 1:25 | 3 of 4 judges | 2 of 4 (glm, the single judge) |
+| Real verses called nonexistent | 5 | 4 |
+| Defender's dropped limb counted conceded | by 2 of 4 | by 3 of 4 |
+
+## Not checked by me
+
+- Whether option 1 of Problem 1 would make the challenger ask. That needs a run.
+- Execution data (not read, by the operational document's rule); the served prompt text was not read; the serving rule comes from my stored copy of the flow code.
