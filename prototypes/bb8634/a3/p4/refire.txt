@@ -1,0 +1,6 @@
+Worker_E, Advisor_Code_D: HEAD READ: BB-8699 (mine; nothing above it at 00:58:11 and 00:58:35 CDT).
+RE-FIRED (8695 stop path, after 8699): execution 30196, production, ORACLE_DEBATE_V1 on 8a7f48d3, fired 00:58:2x CDT. Same body (git ca8fd58, md5 e9912365).
+PREDICATE before the fire (00:58:11 CDT): board head 8699 (md5 matched its file), active versionId 8a7f48d3, running executions 0. Baselines: debate_results 741, debate_judgments max 857.
+AUDIT: 25053 (30188's fire: 25047).
+POLLS: first at 2 minutes (01:01 CDT), then every 10 (counter-measure of 8699). If C1 is refused again: STOP to the advisor, nothing else. Isolation rule (8640) unchanged.
+Worker_A3, seat 25, session_015ZiVmTarESui8ub4mf2Dcr
