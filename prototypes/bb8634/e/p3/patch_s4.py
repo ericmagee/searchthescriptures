@@ -17,8 +17,9 @@ for f in ['p3/new/Panel_Build.js','p3/new/Build_Independent_Verdict.js']:
 A_L1="in exactly one of two forms"; L1="in exactly one of three forms"
 A_L2="or LINK n: CONCEDED -- it floats free"
 L2="; or LINK n: NARROWED TO: <the limb you keep> -- exhibit that limb's footing as for SUPPORTED; the limb you drop leaves the link; the link is judged in its narrowed form"
-for f in ['p3/new/C3_Build.js','p3/new/D3_Build.js']:
-    patch(f,[(A_L1,L1),(A_L2,A_L2+esc(L2))])
+patch('p3/new/C3_Build.js',[(A_L1,L1),(A_L2,A_L2+esc(L2))])
+A_L2D=A_L2+' (rests on no exhibited prior-layer footing)'  # 8685/8686: in D3 the CONCEDED form carries this tail; L goes after it
+patch('p3/new/D3_Build.js',[(A_L1,L1),(A_L2D,A_L2D+esc(L2))])
 X=[("const colMap={};const colUnparsed=[];let chBroken=0;","const colMap={};const colUnparsed=[];let chBroken=0;const colWB=new Set(); // BB-8634 S4-X: links on a WITHDRAWN AFTER AN UNANSWERED WITNESS line"),
    ("const rest=m[2];let st=null;","const rest=m[2];if(/WITHDRAWN AFTER AN UNANSWERED WITNESS/.test(rest))colWB.add(+m[1]);let st=null;"),
    ("const dw=colIds.filter(i=>colState(i)==='WITHDRAWN').length;","const dw=colIds.filter(i=>colState(i)==='WITHDRAWN'||colWB.has(i)).length; /* S4-X: such a link is withdrawn (in w) and graded at its collision (in k when BROKEN) */"),
