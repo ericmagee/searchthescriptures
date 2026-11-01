@@ -1,0 +1,8 @@
+K2          K-G4   label C | d18 BCB | d18b CBC | d20 CCB
+K3b         K-C    label B | d18 BCB | d18b BBB | d20 BCB
+C_1ddbfc6d  K-S2   label C | d18 BBC | d18b BBB | d20 BBB
+C_1ddbfc6d  K-C    label B | d18 BBB | d18b BBB | d20 CBB
+C_26901a7a  K-C    label - | d18 BCC | d18b BBB | d20 CBB
+C_29b68494  K-C    label - | d18 BBB | d18b CBB | d20 BBB
+C_43b88b0e  K-C    label - | d18 BBB | d18b BBC | d20 BCB
+d20: labelled calls right 99, wrong 6

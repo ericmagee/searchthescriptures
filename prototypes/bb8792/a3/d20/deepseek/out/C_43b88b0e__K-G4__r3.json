@@ -1,0 +1,10 @@
+{
+  "rule": "K-G4",
+  "applies": "yes",
+  "applies_why": "The judge text addresses whether the Isaiah 7:14 rows were answered by [CR2] G and does not count Isaiah 7:14 as an unanswered witness.",
+  "verdict": "CLEAN",
+  "quote": "D5 vs C5 (Isaiah 7:14): UNDERDETERMINED -- [CR2] G answers the 'almah/bethulah and near-fulfillment rows, leaving the sign's sense open.",
+  "rule_words": "A verse on a side's 'cited in' line counts as an unanswered witness only when the judge quotes the sentence of the earlier round that pressed it against that link or a listed premise and names that round; a verse cited there but not pressed against the link does not count. A verse the judge counts toward a broken link is counted this way. If the judge says a verse was answered, the judge must not count it. Not counting it obeys this rule.",
+  "room": "The phrase 'If the judge says a verse was answered, the judge must not count it': I weighed reading the judge's statement '[CR2] G answers the 'almah/bethulah and near-fulfillment rows' as saying the verse was answered, against reading it as merely labeling the issue underdetermined without counting an unanswered witness.",
+  "why": "Because the judge says [CR2] G answered the Isaiah 7:14 rows and does not count Isaiah 7:14 as an unanswered witness, not counting it obeys K-G4."
+}
