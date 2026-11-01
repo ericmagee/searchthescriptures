@@ -6,7 +6,7 @@ Outcome UNDERDETERMINED. Panel HELD 2-0; DeepSeek not counted (3 uncured debate-
 
 Each problem gives the evidence, the rule it breaks, and the proposed solution. Nothing here is applied. Each fix waits for your word.
 
-INCOMPLETE against the tandem manual's live-run read: not yet done are (1) each pressed witness traced by name into the answering side's later rounds, (2) the removed seats' verdicts (drv_removed), (3) each reader's column and length stated. Owed next.
+What was read: the six rounds whole (defender R1, R2 and link round R3 in claude_r1, claude_r2, engine_r3; challenger R1, closing R2 and link round R3 in engine_r1, engine_r2, challenger_r3 of debate_results row 5c1e3bb2; challenger_r3 length 11,596), the three panel judgments, the single verdict, the synthesis, the review notes, the citation check, and drv_removed (NULL). The other columns' lengths were read in the earlier dump and are not restated here.
 
 ---
 
@@ -67,6 +67,20 @@ INCOMPLETE against the tandem manual's live-run read: not yet done are (1) each 
 - In DR3 the challenger's "LINK 1–6" are its own premises, while the defender's "LINK 1–6" are the defender's chain. Defender LINK 2 is never pressed or answered by number.
 - Effect: judges must map links by content, which invites grading the wrong pair.
 - Solution: tag each side's links with a prefix (D-L1, C-L1) in the round prompts, and have the press name the target prefix. Then the collision builder matches by label.
+
+### B4a. Pressed witnesses traced by name
+- Challenger R2 pressed 32 witnesses (8, 4, 5, 6, 4, 5) across six links. The defender's link round names every one except two:
+  1. Luke 2:33 "Joseph and his mother marvelled" (pressed on link 1). Never named; unanswered.
+  2. 1 Chronicles 3:17-18, Jeconiah's sons named (pressed on the curse link). Never named; unanswered.
+- The defender's link round pressed 6 items (18 witnesses). The challenger's link round names every one.
+- Defender R2 laid Ruth 4:17, 1 Chronicles 3:19, Genesis 24:16 and 24:43, and Galatians 3:16. The challenger's closing (R2) names none of them. Its link round answers Galatians 4:4, not Galatians 3:16.
+- The challenger's three floating-premise charges come in the last round. The defender has no later round to answer them, by structure.
+- Solution: the judges should grade the two unanswered witnesses as unanswered. Whether any judge did is a check on the panel texts, which were read before this addendum, and is not re-run here. Add a per-witness answered/unanswered list to the collision builder input, so the judges do not have to find gaps by reading alone.
+
+### A6. Removed seat not recorded
+- DeepSeek's panel seat was not counted (3 uncured violations), and the alternate Qwen was not seated. Yet the run's row has drv_removed NULL.
+- Rule: the live-run read covers "the removed seats' verdicts (debate_results.drv_removed)". Here there is nothing to read.
+- Solution: check whether drv_removed is written only for a seat replaced by an alternate. If so, a seat that is dropped and not replaced is lost from that field. The fix is to write the dropped seat and its reason there too. This is unverified until the Save node's code is read.
 
 ### B5. Engagement gaps (from the synthesis)
 - Challenger left unanswered: monogenēs (John 3:16), Ruth 4:17, Ezra 2:61, and the enomizō tested-use list.
