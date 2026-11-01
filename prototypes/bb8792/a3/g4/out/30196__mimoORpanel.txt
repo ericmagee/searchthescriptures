@@ -1,0 +1,34 @@
+<tool_call>{
+"premise_checks": {
+"1": {
+"check": "Quote: \"the inference that Joseph's seed is barred from the throne, that the throne-promise's father is God, and that \\\"loins\\\" is only generational -- props the keystone's exclusion of Joseph as begetter. Defender's words: \\\"Joseph's seed cannot hold the throne, the father of the throne-seed is God, and \\\"loins\\\" is generational.\\\"\"",
+"verbatim_found_in": "[CR2], DECLARED CHAIN, link 5: \"Joseph's seed cannot hold the throne, the father of the throne-seed is God, and \\\"loins\\\" is generational.\"",
+"stronger_terms_check": "The charge words \"only\", \"props\" and \"keystone's exclusion\" are absent from the quote, but they paraphrase and frame the quote's own content: the limb words themselves match the quoted sentence (\"barred\" for \"cannot hold\", \"generational\" for \"generational\"). No negation or universal is added beyond the quote's \"cannot\"; the charge names the same three limbs the quote states. NOT stronger; NOT void."
+},
+"2": {
+"check": "Quote: \"So the passive at verse 16 is part of an announced shift of manner.\"",
+"verbatim_found_in": "[CR2] C1: \"So the passive at verse 16 is part of an announced shift of manner.\"",
+"stronger_terms_check": "The charge words \"formula\", \"rather than an un-narrated verb\", \"withholds\" etc. restate and frame the quoted claim in the defender's own terms ([CR2] C1: \"A formula repeated through the generations and altered at its last member is a datum\"); the quote is not expanded into a negation it does not make. NOT stronger; NOT void."
+},
+"3": {
+"check": "Quote: \"In Matthew 1:18-20, *ek* names the source of what is in the womb.\"",
+"verbatim_found_in": "[CR2] D1: \"In Matthew 1:18-20, *ek* names the source of what is in the womb.\"",
+"stronger_terms_check": "The charge word \"physical\" is not in the quote and narrows it beyond the quoted words, but the quoted claim itself -- *ek* names the SOURCE -- carries the exclusion at issue; \"rather than covenant origin\" mirrors the defender's own sentence in the same block (\"The challenger's covenant-origin reading of *ek* strips the term from its sentence\"). Framing only; NOT void."
+},
+"4": {
+"check": "Quote: \"So \\\"within the espousal\\\" has no row of union before the finding.\"",
+"verbatim_found_in": "[CR2] E: \"So \\\"within the espousal\\\" has no row of union before the finding.\"",
+"stronger_terms_check": "The charge words \"preceded\", \"against\", \"fell outside Joseph\" paraphrase the quoted claim; the quote itself is the same exclusion, stated in the same terms. NOT stronger; NOT void."
+},
+"5": {
+"check": "Quote: \"Added to Luke 1:35, the chain says the reckoning of Joseph as father is mistaken.\"",
+"verbatim_found_in": "[CR2] F2: \"Added to Luke 1:35, the chain says the reckoning of Joseph as father is mistaken.\"",
+"stronger_terms_check": "The charge words \"every\", \"appearance only\" expand the claim to a universal the quote's words do not make: the quote says the reckoning is mistaken, not that every father-reference is appearance only. CHARGED STRONGER than its quote -- the universal \"EVERY... ONLY\" is a claim the quote does not state. VOID."
+},
+"6": {
+"check": "Quote: \"These footings point to Luke giving the line through Mary, with Heli as her father, and Joseph entering as husband.\"",
+"verbatim_found_in": "[CR2] A5: \"These footings point to Luke giving the line through Mary, with Heli as her father, and Joseph entering as husband.\"",
+"stronger_terms_check": "The charge words \"NO human needed\" and \"the keystone's claim\" overstate the quote, which says \"point to\" and names the line's route, not the keystone's conclusion; but the quote's own content (Mary's line, Heli as her father) carries the same import as the charge's \"the flesh to Mary\". Framing; NOT a negation or universal beyond the quote's own hedged claim. NOT void."
+}
+}
+}
