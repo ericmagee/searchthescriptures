@@ -6,6 +6,8 @@ Outcome UNDERDETERMINED. Panel HELD 2-0; DeepSeek not counted (3 uncured debate-
 
 Each problem gives the evidence, the rule it breaks, and the proposed solution. Nothing here is applied. Each fix waits for your word.
 
+INCOMPLETE against the tandem manual's live-run read: not yet done are (1) each pressed witness traced by name into the answering side's later rounds, (2) the removed seats' verdicts (drv_removed), (3) each reader's column and length stated. Owed next.
+
 ---
 
 ## A. Judges
@@ -45,7 +47,7 @@ Each problem gives the evidence, the rule it breaks, and the proposed solution. 
 
 ### B1. Defender's false lexical claim (Luke 2:27)
 - Evidence (DR3, defender Link 5): "Luke 2:27 'the parents' and Acts 16:13 'where prayer was wont to be made' use the same family of verbs, nomizō".
-- Fault: "parents" at Luke 2:27 is goneis, a noun, not nomizō. The defender took the challenger's R2 press, which set Acts 16:13 beside Luke 2:27, and repeated it as fact.
+- Fault: "parents" at Luke 2:27 is goneis (G1118), a noun, not nomizō. Verified at original_words: Luke 2:27 position 14 goneiv G1118; "the custom of the law" there is eithismenon G1480 (position 23); enomizeto G3543 stands at Acts 16:13 (position 13) and Luke 3:23 (position 12). The defender took the challenger's R2 press, which set Acts 16:13 beside Luke 2:27, and repeated it as fact.
 - I did not re-check whether the panel flagged it. The panel texts were read before this write-up and not saved locally.
 - Solution: the citation check verifies wording, not Greek claims. Add a lexeme check: for each "[L2] word (gloss)" claim, look up the Strong's number on that verse in the record, and flag a mismatch to the judges.
 
