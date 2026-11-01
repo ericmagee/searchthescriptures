@@ -51,10 +51,11 @@ What was read: the six rounds whole (defender R1, R2 and link round R3 in claude
 - I did not re-check whether the panel flagged it. The panel texts were read before this write-up and not saved locally.
 - Solution: the citation check verifies wording, not Greek claims. Add a lexeme check: for each "[L2] word (gloss)" claim, look up the Strong's number on that verse in the record, and flag a mismatch to the judges.
 
-### B2. Challenger's unsupported grammar claim (Luke 1:34)
+### B2. Grammar claim at Luke 1:34 (CORRECTED: the claim is served by Sight 32)
 - Evidence (DR3, Link 6): "a standing negation would take ou mē (not at all) with the aorist subjunctive".
-- Fault: this is a grammar rule from no row. Whatever its truth, it is an L2 claim with no record footing.
-- Solution: same lexeme or grammar check as B1. A grammar rule with no row is marked unsupported.
+- My first reading was wrong. Sight 32's summary carries the same rule: "a permanent negation would take ou me + aorist subjunctive". The challenger took it from a served row; it is not training recall.
+- What stands: the rule is in Sight 32 with no row behind it (no original_words or lexicon footing for the grammar rule itself). The defect sits in the sight, not in the debater.
+- Solution: put it to the operator with the Sight 32 correction (Worker_G1's draft of 2026-11-01): keep, re-footed, or remove the grammar clause.
 
 ### B3. The challenger carries record labels into its text
 - Evidence (DR3): "count as served (S-9): episkiazō = 5 rows, every use the cloud or the shadow"; "Count as served (S-1578): Iechonias in the NT = 2 rows".
