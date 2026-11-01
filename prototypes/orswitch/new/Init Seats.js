@@ -52,7 +52,7 @@ if((TFR||TNF)&&TFS===null)fail('test_fail_reserve and test_no_fallback need test
 // already built. MiniMax is out of this publish (7126); ALT_MODELS stays only for the dry qualify path (qualify_alternate).
 const ALT_MODELS={alt_minimax31:{api_model:'minimax/minimax-m3.1-flash',family:'minimax',max_tokens:64000},alt_minimax3:{api_model:'minimax/minimax-m3',family:'minimax',max_tokens:64000}};
 const JFAM_I={deepseek:'deepseek',gemini:'openrouter',grok:'openrouter',chatgpt:'openrouter',mimo:'openrouter',glm:'openrouter',qwen:'openrouter'};
-const ALT_ORDER=free.slice(4).filter(s=>JFAM_I[s]==='openrouter'&&s!=='grok'&&s!=='mimo'');
+const ALT_ORDER=free.slice(4).filter(s=>JFAM_I[s]==='openrouter'&&s!=='grok'&&s!=='mimo');
 const QA=(b.qualify_alternate===undefined||b.qualify_alternate===null||b.qualify_alternate==='')?null:String(b.qualify_alternate).trim().toLowerCase();
 if(QA!==null&&!DRY)fail('qualify_alternate runs only in a dry regrade.');
 if(QA!==null&&!Object.keys(ALT_MODELS).some(k=>ALT_MODELS[k].api_model===QA))fail('qualify_alternate "'+QA+'" is not one of ['+Object.keys(ALT_MODELS).map(k=>ALT_MODELS[k].api_model).join(', ')+'].');

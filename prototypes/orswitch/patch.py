@@ -5,7 +5,7 @@ MAP_OLD="grok:'grok',chatgpt:'openrouter',mimo:'mimo'"; MAP_NEW="grok:'openroute
 P={}  # node -> list of (old,new,expected count)
 for nm in ['Init Seats','Resolve Seats','Build Synthesis','Build Independent Verdict','Build Diagnostic Prompt']: P.setdefault(nm,[]).extend([(MAP_OLD,MAP_NEW,None)])
 P['Init Seats']+= [("grok:{fam:'grok',mc:'grok'},mimo:{fam:'mimo',mc:'mimo'}","grok:{fam:'openrouter',mc:'grok'},mimo:{fam:'openrouter',mc:'mimo'}",1),
-  ("free.slice(4).filter(s=>JFAM_I[s]==='openrouter')","free.slice(4).filter(s=>JFAM_I[s]==='openrouter'&&s!=='grok'&&s!=='mimo'')",1),
+  ("free.slice(4).filter(s=>JFAM_I[s]==='openrouter')","free.slice(4).filter(s=>JFAM_I[s]==='openrouter'&&s!=='grok'&&s!=='mimo')",1),
   ("claude:{fam:'anthropic',mc:'claude_synthesis'}","claude:{fam:'openrouter',mc:'claude_synthesis'}",1)]
 DB="if(fam==='openrouter'&&/^google\\//.test(model))"
 for nm in ['D1 Build','C1 Build','D2 Build','C2 Build','D3 Build','C3 Build']:
