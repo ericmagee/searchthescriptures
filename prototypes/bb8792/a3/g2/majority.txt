@@ -1,0 +1,10 @@
+30196C1     K-S2   label B | calls BBB | majority B
+30196C2     K-S2   label B | calls BBB | majority B
+30196C3     K-S2   label - | calls BBB | majority B
+30268C1     K-S2   label B | calls BBB | majority B
+30268C2     K-S2   label B | calls BBB | majority B
+30268C3     K-S2   label B | calls BBB | majority B
+30304C1     K-S2   label B | calls BBB | majority B
+30304C2     K-S2   label B | calls BBB | majority B
+30304C3     K-S2   label B | calls BBB | majority B
+majority of three: labelled cases right 8, wrong 0
