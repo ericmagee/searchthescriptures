@@ -9,7 +9,7 @@ const tok=(fam,mt)=>fam==='anthropic'?Math.max(mt,6000):fam==='openai'?Math.max(
 const seatModel=s=>{const x=need(s.mc_seat);return {...s,model:x.api_model,tok:tok(s.fam,Number(x.max_tokens))};};
 const D=seatModel(S.defender);const C=seatModel(S.challenger);
 const ds=need('deepseek');
-const JFAM={deepseek:'openrouter',gemini:'openrouter',grok:'openrouter',chatgpt:'openrouter',mimo:'openrouter',glm:'openrouter',qwen:'openrouter'};
+const JFAM={deepseek:'deepseek',gemini:'openrouter',grok:'openrouter',chatgpt:'openrouter',mimo:'openrouter',glm:'openrouter',qwen:'openrouter'};
 const judges=S.panel_order.map(k=>{const x=need(k);return {seat:k,fam:JFAM[k],api_model:x.api_model,max_tokens:Math.max(Number(x.max_tokens)||0,4000)};});
 // PANEL FALLBACK (BB-5693): the reserve judge, built as the three are; none when no seat is free or its model_config row is missing.
 const reserve0=(S.panel_reserve&&M[S.panel_reserve]&&M[S.panel_reserve].api_model&&Number(M[S.panel_reserve].max_tokens)>0)?{seat:S.panel_reserve,fam:JFAM[S.panel_reserve],api_model:M[S.panel_reserve].api_model,max_tokens:Math.max(Number(M[S.panel_reserve].max_tokens)||0,4000)}:null;

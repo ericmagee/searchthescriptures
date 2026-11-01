@@ -16,7 +16,7 @@ if(RB!=='current'&&RB!=='draft'&&RB!=='chain')fail('rulebook "'+RB+'" is not cur
 if(RB!=='current'&&!DRY)fail('the '+RB+' rulebook runs only in a dry regrade.');
 if(b.topic===undefined||b.topic===null||String(b.topic).trim()==='')fail('topic missing or empty.');
 // Engine -> API family and model_config seat. claude resolves from the claude_synthesis row, as in W1.
-const ENG={claude:{fam:'openrouter',mc:'claude_synthesis'},chatgpt:{fam:'openrouter',mc:'chatgpt'},gemini:{fam:'openrouter',mc:'gemini'},grok:{fam:'openrouter',mc:'grok'},mimo:{fam:'openrouter',mc:'mimo'},glm:{fam:'openrouter',mc:'glm'},qwen:{fam:'openrouter',mc:'qwen'},deepseek:{fam:'openrouter',mc:'deepseek_debate'}};
+const ENG={claude:{fam:'openrouter',mc:'claude_synthesis'},chatgpt:{fam:'openrouter',mc:'chatgpt'},gemini:{fam:'openrouter',mc:'gemini'},grok:{fam:'openrouter',mc:'grok'},mimo:{fam:'openrouter',mc:'mimo'},glm:{fam:'openrouter',mc:'glm'},qwen:{fam:'openrouter',mc:'qwen'},deepseek:{fam:'deepseek',mc:'deepseek_debate'}};
 const seat=k=>{const s=b[k];if(!s||typeof s!=='object')fail(k+' seat missing; expected {engine, profile}.');
  const e=String(s.engine||'').trim().toLowerCase();const p=String(s.profile||'').trim().toLowerCase();
  if(!ENG[e])fail(k+' engine "'+e+'" is not one of ['+Object.keys(ENG).join(', ')+'].');
@@ -51,8 +51,8 @@ if((TFR||TNF)&&TFS===null)fail('test_fail_reserve and test_no_fallback need test
 // engine family is openrouter (the family the alternate call serves), in ORDER; one per removed seat, two at most, under the guards
 // already built. MiniMax is out of this publish (7126); ALT_MODELS stays only for the dry qualify path (qualify_alternate).
 const ALT_MODELS={alt_minimax31:{api_model:'minimax/minimax-m3.1-flash',family:'minimax',max_tokens:64000},alt_minimax3:{api_model:'minimax/minimax-m3',family:'minimax',max_tokens:64000}};
-const JFAM_I={deepseek:'openrouter',gemini:'openrouter',grok:'openrouter',chatgpt:'openrouter',mimo:'openrouter',glm:'openrouter',qwen:'openrouter'};
-const ALT_ORDER=free.slice(4).filter(s=>JFAM_I[s]==='openrouter'&&s!=='grok'&&s!=='mimo'&&s!=='deepseek');
+const JFAM_I={deepseek:'deepseek',gemini:'openrouter',grok:'openrouter',chatgpt:'openrouter',mimo:'openrouter',glm:'openrouter',qwen:'openrouter'};
+const ALT_ORDER=free.slice(4).filter(s=>JFAM_I[s]==='openrouter'&&s!=='grok'&&s!=='mimo'');
 const QA=(b.qualify_alternate===undefined||b.qualify_alternate===null||b.qualify_alternate==='')?null:String(b.qualify_alternate).trim().toLowerCase();
 if(QA!==null&&!DRY)fail('qualify_alternate runs only in a dry regrade.');
 if(QA!==null&&!Object.keys(ALT_MODELS).some(k=>ALT_MODELS[k].api_model===QA))fail('qualify_alternate "'+QA+'" is not one of ['+Object.keys(ALT_MODELS).map(k=>ALT_MODELS[k].api_model).join(', ')+'].');

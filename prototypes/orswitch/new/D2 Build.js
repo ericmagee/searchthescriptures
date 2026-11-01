@@ -9,7 +9,7 @@ const bodyFor=(fam,model,tok,sys,msgs)=>{
  // ORDER J (BB-6200): glm debates at reasoning effort medium, as qwen does; at max it returned no text (ODV1-26217 C1, ODV1-26238 C3).
  // BB-8403 S3: chatgpt via OpenRouter (openai/) at reasoning effort medium; at max it spent the whole 32,000 in reasoning and returned no text (ODV1-29876 C1). Token budget as its openai branch: max(mt*2,8000).
  // BB-8510 S2: gemini via OpenRouter (google/), effort medium; max_tokens and temperature as its former generationConfig (KB-0042, KB-0077).
- if(fam==='openrouter'&&/^anthropic\//.test(model))return {model,max_tokens:tok,messages:[{role:'system',content:[{type:'text',text:sys,cache_control:{type:'ephemeral',ttl:'1h'}}]},...msgs]};  if(fam==='openrouter'&&/^(?:x-ai|xiaomi|deepseek)\//.test(model))return {model,max_tokens:tok,messages:m};  if(fam==='openrouter'&&/^google\//.test(model))return {model,max_tokens:tok,reasoning:{effort:'medium'},messages:m};
+ if(fam==='openrouter'&&/^anthropic\//.test(model))return {model,max_tokens:tok,messages:[{role:'system',content:[{type:'text',text:sys,cache_control:{type:'ephemeral',ttl:'1h'}}]},...msgs]};  if(fam==='openrouter'&&/^(?:x-ai|xiaomi)\//.test(model))return {model,max_tokens:tok,messages:m};  if(fam==='openrouter'&&/^google\//.test(model))return {model,max_tokens:tok,reasoning:{effort:'medium'},messages:m};
  if(fam==='openrouter'&&/^openai\//.test(model))return {model,max_tokens:Math.max(tok*2,8000),reasoning:{effort:'medium'},messages:m};
  if(fam==='openrouter')return {model,max_tokens:tok,reasoning:{effort:/^(?:qwen\/|z-ai\/glm-)/.test(model)?'medium':'max'},messages:m};
  return {model,max_tokens:tok,messages:m};};
