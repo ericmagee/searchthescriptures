@@ -1,0 +1,5 @@
+DRAFT (item 3), not written anywhere live.
+(a) Judge prompt line, after each verdict-line instruction:
+End every verdict line with GROUND: and one short sentence naming the reason the verdict rests on.
+(b) Enforcer line:
+Check the GROUND the judge wrote. If a line has no GROUND, say so in "why".
