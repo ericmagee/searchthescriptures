@@ -1,4 +1,4 @@
--- judge_fix2 W2 (MIGRATION FILE, NOT APPLIED). Full storage of every enforcer exchange: one row per flagged item per seat (the cure prompt,
+-- judge_fix2 W2 (MIGRATION FILE, NOT APPLIED). Safe to apply once through apply_migration: no DROP; IF NOT EXISTS / CREATE OR REPLACE throughout. Full storage of every enforcer exchange: one row per flagged item per seat (the cure prompt,
 -- the full reply, the judge's RESPONSE line, the result), plus each alternate's first reply and the full first reply of a panel seat that
 -- failed closed. Written once per run by the flow node "Write Enforcer Log" (POST /rest/v1/rpc/record_enforcer_log), after Alternate Merge,
 -- in the same way record_debate_judgment is called by Write Judgment 1-3. The audit-line excerpts in verdict_raw stay as they are.
@@ -24,7 +24,9 @@ CREATE TABLE IF NOT EXISTS public.debate_enforcer_log (
 );
 CREATE INDEX IF NOT EXISTS debate_enforcer_log_run_idx ON public.debate_enforcer_log (run_token);
 CREATE INDEX IF NOT EXISTS debate_enforcer_log_debate_idx ON public.debate_enforcer_log (debate_id);
-ALTER TABLE public.debate_enforcer_log ENABLE ROW LEVEL SECURITY;  -- no policies: written only through the function below
+ALTER TABLE public.debate_enforcer_log ENABLE ROW LEVEL SECURITY;  -- no policies: no anon or authenticated read or write; rows go in only through the function below
+REVOKE ALL ON TABLE public.debate_enforcer_log FROM anon, authenticated;
+REVOKE ALL ON SEQUENCE public.debate_enforcer_log_id_seq FROM anon, authenticated;
 
 CREATE OR REPLACE FUNCTION public.record_enforcer_log(p_debate_id uuid, p_run_token text, p_rows jsonb)
  RETURNS jsonb

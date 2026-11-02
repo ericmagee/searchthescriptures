@@ -90,3 +90,27 @@
 - An answer in substance without the verse number (32212 Acts 1:8, Luke 1:5); a misread concession ("the challenger conceded the grammar",
   32205); an out-of-round concession that is an argument (32212 DeepSeek); DeepSeek's KEYSTONE accepting 1:18 as an answer to 1:25 (no
   exclusion words); "every pressed row answered" on a judge line needs the ledger at drvCheck (not built; Panel Payloads holds it).
+
+## Go-live package (prepared dry; nothing applied, nothing written)
+Order, each with its undo. Stop at any step whose check fails.
+1. Migration: apply sql/w2_debate_enforcer_log.sql (apply_migration). No DROP; IF NOT EXISTS and CREATE OR REPLACE; record_enforcer_log is
+   SECURITY DEFINER with search_path public, pg_temp; EXECUTE for anon, authenticated, service_role (the flow's HTTP nodes use the credential
+   "Supabase Anon Key", as Write Judgment 1-3 calling record_debate_judgment, which carries the same grants); RLS on, no policy, table
+   privileges revoked from anon and authenticated. Tested on a LOCAL scratch Postgres 16 (test/sql_migration_test.sql, out: test/
+   sql_migration_out.txt): BEGIN, create, one rpc call as anon with two rows ({"rows": 2, "recorded": true}), anon read refused (permission
+   denied), rows read back as owner, ROLLBACK, table gone. Not run on the project database: the standing rule for this work is SELECT only.
+   Undo: sql/undo_w2_debate_enforcer_log.sql, after step 3 is undone.
+2. Panel function: apply sql/item7_panel_ungraded.sql (d5_outcome_for, then d5_selftest, then aggregate_debate_panel; each CREATE OR REPLACE
+   on the live definition with the identical signature, so grants stay). Tested locally on the stored seats of runs 32212 and 32228
+   (test/sql_item7_test.sql, out: test/sql_item7_out.txt): the live functions reproduce the stored CONTESTED; inside the transaction 32212
+   becomes UNGRADED (0 counted), 32228 stays CONTESTED (1-1-1), both map to "UNGRADED — REVIEW", d5_selftest passes; after ROLLBACK, CONTESTED.
+   Undo: re-run sql/live_aggregate_debate_panel.sql, sql/live_d5_outcome_for.sql, sql/live_d5_selftest.sql (the live definitions as read).
+3. Flow package: `python3 write_package.py` (one PUT). Guards: base md5 of the 24 nodes, the connections leaving Write Judgment 3 and Derive
+   Outcome and the links into Derive Outcome as in version 52b05334, and no "Write Enforcer Log" yet. It replaces the 24 nodes' code, adds
+   "Write Enforcer Log", and rewires: - Write Judgment 3 main 0 -> Derive Outcome; + Write Judgment 3 main 0 -> Write Enforcer Log;
+   + Write Enforcer Log main 0 -> Derive Outcome; + Write Enforcer Log main 1 (error) -> Derive Outcome; kept: Write Judgment 3 error ->
+   Panel Failure Note. It reads back and checks code, the new node, the connections, and that nothing else moved. --dry ran clean on 52b05334.
+   Undo: restore version 52b05334 from the workflow history (n8n), or PUT the name, nodes, connections and settings of data/workflow_live.json.
+4. Fresh read-back: GET the workflow (versionId, the 24 md5s, the new node and connections, as write_package.py prints); SELECT
+   pg_get_functiondef of the three panel functions against sql/item7_panel_ungraded.sql; to_regclass('public.debate_enforcer_log') and
+   has_function_privilege('anon','public.record_enforcer_log(uuid,text,jsonb)','EXECUTE'); then one dry regrade before a live run.

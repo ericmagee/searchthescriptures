@@ -1,0 +1,16 @@
+anon reads the table (expect: permission denied):
+psql:test/sql_migration_test.sql:19: ERROR:  permission denied for table debate_enforcer_log
+ROLLBACK
+RESET
+ id |    run_token    |   seat   |     kind     | rule |        item        | reply_chars |   response_line    | cure_status 
+----+-----------------+----------+--------------+------+--------------------+-------------+--------------------+-------------
+  1 | ODV1-32212-test | deepseek | cure         | K-C  | D5                 |          60 | I accept the mark. | CURED
+  2 | ODV1-32212-test | glm      | failed_reply |      | no_usable_judgment |          25 |                    | 
+(2 rows)
+
+ROLLBACK
+ table_after_rollback 
+----------------------
+ 
+(1 row)
+

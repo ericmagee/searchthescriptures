@@ -1,0 +1,27 @@
+=== live functions
+  run  |  verdict  |              split               |      outcome      
+-------+-----------+----------------------------------+-------------------
+ 32212 | CONTESTED | 0-0 (3 not counted: debate rule) | UNGRADED — REVIEW
+ 32228 | CONTESTED | 1-1-1                            | UNGRADED — REVIEW
+(2 rows)
+
+BEGIN
+=== after the change (inside the transaction)
+  run  |  verdict  |              split               |      outcome      
+-------+-----------+----------------------------------+-------------------
+ 32212 | UNGRADED  | 0-0 (3 not counted: debate rule) | UNGRADED — REVIEW
+ 32228 | CONTESTED | 1-1-1                            | UNGRADED — REVIEW
+(2 rows)
+
+ selftest_pass | failed |    signature     
+---------------+--------+------------------
+ true          | 0      | p_debate_id uuid
+(1 row)
+
+ROLLBACK
+=== after ROLLBACK
+ run_32212_verdict 
+-------------------
+ CONTESTED
+(1 row)
+
