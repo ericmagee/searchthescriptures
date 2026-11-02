@@ -1,0 +1,29 @@
+OK  K-C netLines old 1 new 0 (expect new 0), nodes disagreeing 0/17 :: kc_fix 876 answer test
+OK  K-C netLines old 0 new 0 (expect new 0), nodes disagreeing 0/17 :: kc_fix 878 answer test
+OK  K-C netLines old 1 new 1 (expect new 1), nodes disagreeing 0/17 :: kc_fix 827 shape: stating ground stays
+OK  K-C netLines old 1 new 1 (expect new 1), nodes disagreeing 0/17 :: kc_fix true K-C stays
+OK  K-C netLines old 1 new 1 (expect new 1), nodes disagreeing 0/17 :: kc_fix true K-C stays (no verse states)
+OK  K-C netLines old 1 new 0 (expect new 0), nodes disagreeing 0/17 :: 32212 Gemini 886 CONCEDED LINKS (matched "unstated" in a CONCEDED (stated) clause)
+OK  K-C netLines old 1 new 0 (expect new 0), nodes disagreeing 0/17 :: 32212 DeepSeek 885 CONCEDED LINKS (matched quoted concessions)
+OK  K-C netLines old 1 new 1 (expect new 1), nodes disagreeing 0/17 :: 32212 DeepSeek 885 D5 (true: verse silence) stays
+OK  K-C netLines old 1 new 1 (expect new 1), nodes disagreeing 0/17 :: answer wording and a true ground in one clause
+OK  K-C netLines old 1 new 1 (expect new 1), nodes disagreeing 0/17 :: round left a witness unstated and a true ground in one clause
+OK  K-C netLines old 1 new 0 (expect new 0), nodes disagreeing 0/17 :: round left a witness unstated (answer test only)
+OK  K-C netLines old 1 new 0 (expect new 0), nodes disagreeing 0/17 :: judgment 872 shape: witness, which the defender did not name (answer test only)
+OK  K-C netLines old 1 new 1 (expect new 1), nodes disagreeing 0/17 :: quoted concession beside a true ground
+OK  K-C cure netKeeps old 1 new 0 (expect new 0), nodes disagreeing 0/14 :: 32212 Gemini 886 restated (stored to 600 chars)
+OK  K-C cure netKeeps old 1 new 0 (expect new 0), nodes disagreeing 0/14 :: 32212 DeepSeek 885 restated (stored to 600 chars)
+OK  K-C cure netKeeps old 1 new 1 (expect new 1), nodes disagreeing 0/14 :: restated line that keeps the ground
+OK  K-G4 32212 D2 vs C2 old UNCURED new CURED (expect UNCURED -> CURED), nodes disagreeing 0/14
+      new why: pressed: quotation found in DR2; the pressed witness is named in no later defender round
+OK  K-G4 32212 D4 vs C5 old UNCURED new CURED (expect UNCURED -> CURED), nodes disagreeing 0/14
+      new why: pressed: quotation found in CR2; the pressed witness is named in no later challenger round
+OK  K-G4 32212 D5 vs C2 old UNCURED new CURED (expect UNCURED -> CURED), nodes disagreeing 0/14
+      new why: pressed: quotation found in DR2; the pressed witness is named in no later defender round
+OK  K-G4 32212 D6 vs C4 old UNCURED new CURED (expect UNCURED -> CURED), nodes disagreeing 0/14
+      new why: pressed: quotation found in DR1; the pressed witness is named in no later defender round
+OK  K-G4 32194 D3 vs C1 old UNCURED new UNCURED (expect UNCURED -> UNCURED), nodes disagreeing 0/14
+      new why: unanswered-false: quotation found in CR1, but a later challenger round names the pressed witness: [DR1] isa 7:14 at 4078
+OK  K-G4 32194 D6 vs C1 old CURED new UNCURED (expect CURED -> UNCURED), nodes disagreeing 0/14
+      new why: unanswered-false: quotation found in CR1, but a later challenger round names the pressed witness: [DR1] isa 7:14 at 4078
+bad 0

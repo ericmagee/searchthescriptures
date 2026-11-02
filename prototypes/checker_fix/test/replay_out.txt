@@ -1,0 +1,31 @@
+32157 chatgpt  stored uncured 1 | base: marks 1, uncured 1 [K-C CONCEDED LINKS] counted NO | new: marks 0, uncured 0 [] counted yes
+     marks removed: K-C CONCEDED LINKS
+32157 gemini   stored uncured 2 | base: marks 1, uncured 2 [K-G4 D4 vs C5, K-G7 D4 vs C5] counted NO | new: marks 1, uncured 2 [K-G4 D4 vs C5, K-G7 D4 vs C5] counted NO
+32157 glm      stored uncured 0 | base: marks 1, uncured 0 [] counted yes | new: marks 1, uncured 0 [] counted yes
+32157 single   stored uncured 1 | base: marks 3, uncured 0 [] counted yes | new: marks 3, uncured 0 [] counted yes
+32194 chatgpt  stored uncured 1 | base: marks 2, uncured 1 [K-G4 D3 vs C1] counted NO | new: marks 2, uncured 2 [K-G4 D3 vs C1, K-G4 D6 vs C1] counted NO
+     status changed: K-G4 D6 vs C1 -> UNCURED: unanswered-false: quotation found in CR1, but a later challenger round names the pressed witness: [DR1] isa 7:14 at 4078
+32194 gemini   stored uncured 0 | base: marks 1, uncured 1 [K-G4 D3 vs C1] counted NO | new: marks 1, uncured 1 [K-G4 D3 vs C1] counted NO
+32194 glm      stored uncured 0 | base: marks 0, uncured 0 [] counted yes | new: marks 0, uncured 0 [] counted yes
+32194 single   stored uncured 0 | base: marks 3, uncured 0 [] counted yes | new: marks 3, uncured 0 [] counted yes
+32205 deepseek stored uncured 0 | base: marks 3, uncured 0 [] counted yes | new: marks 3, uncured 0 [] counted yes
+32205 gemini   stored uncured 0 | base: marks 0, uncured 0 [] counted yes | new: marks 0, uncured 0 [] counted yes
+32205 glm      stored uncured 0 | base: marks 1, uncured 0 [] counted yes | new: marks 1, uncured 0 [] counted yes
+32205 single   stored uncured 1 | base: marks 6, uncured 1 [K-C D6 vs C1] counted NO | new: marks 6, uncured 3 [K-G4 D1 vs C1, K-G4 D6 vs C1, K-C D6 vs C1] counted NO
+     status changed: K-G4 D1 vs C1 -> UNCURED: unanswered-false: quotation found in CR3, but a later challenger round names the pressed witness: [DR3] mat 1:25 at 784
+     status changed: K-G4 D6 vs C1 -> UNCURED: unanswered-false: quotation found in CR2, but a later challenger round names the pressed witness: [DR2] mat 1:25 at 1014; [DR3] mat 1:25 at 784
+32212 deepseek stored uncured 2 | base: marks 2, uncured 2 [K-C CONCEDED LINKS, K-C D5] counted NO | new: marks 1, uncured 1 [K-C D5] counted NO
+     marks removed: K-C CONCEDED LINKS
+32212 gemini   stored uncured 1 | base: marks 1, uncured 1 [K-C CONCEDED LINKS] counted NO | new: marks 0, uncured 0 [] counted yes
+     marks removed: K-C CONCEDED LINKS
+32212 chatgpt  stored uncured 4 | base: marks 5, uncured 4 [K-G4 D2 vs C2, K-G4 D4 vs C5, K-G4 D5 vs C2, K-G4 D6 vs C4] counted NO | new: marks 5, uncured 0 [] counted yes
+     status changed: K-G4 D2 vs C2 -> CURED: pressed: quotation found in DR2; the pressed witness is named in no later defender round
+     status changed: K-G4 D4 vs C5 -> CURED: pressed: quotation found in CR2; the pressed witness is named in no later challenger round
+     status changed: K-G4 D5 vs C2 -> CURED: pressed: quotation found in DR2, DR2; the pressed witness is named in no later defender round
+     status changed: K-G4 D6 vs C4 -> CURED: pressed: quotation found in DR1; the pressed witness is named in no later defender round
+32212 single   stored uncured 3 | base: marks 6, uncured 3 [K-C CONCEDED LINKS, K-C D2, K-C D6] counted NO | new: marks 4, uncured 2 [K-C D2, K-C D6] counted NO
+     marks removed: K-C REASONING, K-C CONCEDED LINKS
+
+base replay vs stored report, items that differ: 2
+  32157 single K-C D1: stored UNCURED, base replay CURED ()
+  32194 gemini K-G4 D3 vs C1: stored CURED, base replay UNCURED (the later round [DR3] mat 1:18; no SHORT line quoting its answer; malformed line: SHORT: D3 vs C1 | [DR3] | "M)
