@@ -1,0 +1,33 @@
+live versionId 6ff18a54-75f6-40f0-9e55-999ff1b378fa | base read versionId 6ff18a54-75f6-40f0-9e55-999ff1b378fa
+guards passed: base matched for 30 code nodes; versionId, connections (481) and node count (262) equal the base read
+  Alternate Build                base 859420c3 -> new 619e9e4f
+  Alternate Cure Build           base 3bc62e64 -> new 1025772e
+  Alternate Cure Normalize       base cf2c4ee7 -> new 06f36aba
+  Alternate Merge                base 2728378b -> new 6a6ae84f
+  Alternate Payloads             base fae86d68 -> new 51542dcd
+  Build Independent Verdict      base 1b12c4fc -> new 7471f59e
+  Build Save Body                base 0ca2f405 -> new 7a774c07
+  Build Synthesis                base 3211bf99 -> new 0c3c91ca
+  C4 Build                       base cb265cf0 -> new 504387f7
+  C4 Extract                     base 28afa436 -> new 2dbea7cd
+  Citation Scan                  base e267f69a -> new d6aa5e59
+  Cure Build                     base b6aee0d4 -> new 106158e0
+  Cure Check                     base 4028a8d2 -> new 4a22f7bd
+  Cure Normalize                 base e187b4d4 -> new 8249ea4e
+  D4 Build                       base d68275ee -> new 95860804
+  D4 Extract                     base f830d67e -> new 593b7848
+  Extract Independent Verdict    base 462b3031 -> new 862d5a50
+  Failure Salvage                base 89098967 -> new d9a87c9f
+  Format Markdown                base b18f2548 -> new 553e5140
+  Panel Build                    base c84ec7b6 -> new 0e4d79ae
+  Panel Cure Build 1             base 00ee34dc -> new e7f7b1e6
+  Panel Cure Build 2             base c39deab3 -> new 221d4d1f
+  Panel Cure Build 3             base 87e47834 -> new 862e46c7
+  Panel Cure Check               base c6417ed1 -> new 25206f00
+  Panel Cure Normalize 1         base fd8fb205 -> new 81b4e061
+  Panel Cure Normalize 2         base d5fce5f9 -> new f100caba
+  Panel Cure Normalize 3         base 84d960c6 -> new cacb8b70
+  Panel Payloads                 base bb97fddc -> new 61642cac
+  Quote Compare                  base 29b30746 -> new 7274ec10
+  Quote Report                   base 4c3b1113 -> new 473782fc
+DRY: would PUT 30 code nodes, 0 nodes added, 481 connections (unchanged); nothing written

@@ -1,0 +1,112 @@
+
+=== RUN 32293 (stored cure replies from debate_enforcer_log)
+STORED rows: gemini [HELD | SELF-SUPPORTED 0 | SELF-SUPPORTED 0 | UNDERDETERMINED | drv_uncured 0]; sol [HELD | SELF-SUPPORTED 0 | PROP-DEPENDENT 2 | DEFENDER WINS | drv_uncured 0]; chatgpt [HELD | SELF-SUPPORTED 0 | SELF-SUPPORTED 0 | UNDERDETERMINED | drv_uncured 0]
+STORED outcome (ported rules): HELD -> UNDERDETERMINED | RESULT words gemini:UNDERDETERMINED, sol:DEFENDER WINS, chatgpt:UNDERDETERMINED | as stored in the row: see README
+-- base
+base gemini   items 2: [HELD | SELF-SUPPORTED 0 | SELF-SUPPORTED 0 | UNDERDETERMINED | drv_uncured 0]
+        items: K-LB CHALLENGER premise 4, K-LB CHALLENGER premise 6
+base glm      items 3: [HELD | SELF-SUPPORTED 0 | SELF-SUPPORTED 0 | UNDERDETERMINED | drv_uncured 2]
+        items: K-C D5 vs C5, K-LB CHALLENGER premise 4, K-LB CHALLENGER premise 6 RECOMPUTED (RETRACTED D2 vs C4 (UNDERDETERMINED to UNDERDETERMINED); RETRACTED D2 vs C2 (UNDERDETERMINED to UNDERDETERMINED); RETRACTED D3 vs C2 (UNDERDETERMINED to UNDERDETERMINED); RETRACTED D6 vs C2 (UNDERDETERMINED to UNDERDETERMINED))
+        uncured: K-LB CHALLENGER premise 4 (no CORRECTED COUNT for CHALLENGER and no statement quoting [DR3] with two layer kinds for CHALLENGER premise 4); K-LB CHALLENGER premise 6 (no CORRECTED COUNT for CHALLENGER and no statement quoting [DR3] with two layer kinds for CHALLENGER premise 6)
+base   alternate sol for glm, items 3: [HELD | SELF-SUPPORTED 0 | PROP-DEPENDENT 2 | DEFENDER WINS | drv_uncured 0]
+        items: K-G4 D3 vs C2, K-LB CHALLENGER premise 4, K-LB CHALLENGER premise 6
+base chatgpt  items 2: [HELD | SELF-SUPPORTED 0 | SELF-SUPPORTED 0 | UNDERDETERMINED | drv_uncured 0]
+        items: K-LB CHALLENGER premise 4, K-LB CHALLENGER premise 6
+base single   items 3: [PARTIAL | COLLAPSED 4 | SELF-SUPPORTED 0 | UNDERDETERMINED | drv_uncured 1]
+        items: K-C D2 vs C4, K-LB CHALLENGER premise 4, K-LB CHALLENGER premise 6
+        uncured: K-LB CHALLENGER premise 4 (no CORRECTED COUNT for CHALLENGER and no statement quoting [DR3] with two layer kinds for CHALLENGER premise 4) RECOMPUTED (RETRACTED D3 vs C2 (UNDERDETERMINED to UNDERDETERMINED)) (no vote)
+BASE PANEL: gemini, sol, chatgpt -> HELD, UNDERDETERMINED | RESULT words gemini:UNDERDETERMINED, sol:DEFENDER WINS, chatgpt:UNDERDETERMINED
+-- new
+     items removed: K-LB CHALLENGER premise 4, K-LB CHALLENGER premise 6 | added: K-G9 CHALLENGER CITED-IN
+new  gemini   items 1: [HELD | SELF-SUPPORTED 0 | SELF-SUPPORTED 0 | UNDERDETERMINED | drv_uncured 0 (+1 TRIAL uncured, not counted)]
+        items: K-G9 CHALLENGER CITED-IN
+        [AUDIT v26: K-G9 PASS: 0 verses ruled -- DEFENDER CITED-IN 0; TRIAL rule]
+        uncured: K-G9 CHALLENGER CITED-IN [TRIAL] (no written response)
+     items removed: K-LB CHALLENGER premise 4, K-LB CHALLENGER premise 6 | added: K-G9 CHALLENGER CITED-IN
+new  glm      items 2: [HELD | SELF-SUPPORTED 0 | SELF-SUPPORTED 0 | UNDERDETERMINED | drv_uncured 0 (+1 TRIAL uncured, not counted)]
+        items: K-C D5 vs C5, K-G9 CHALLENGER CITED-IN
+        [AUDIT v26: K-G9 PASS: 0 verses ruled -- DEFENDER CITED-IN 0; TRIAL rule] RECOMPUTED (RETRACTED D2 vs C4 (UNDERDETERMINED to UNDERDETERMINED); RETRACTED D2 vs C2 (UNDERDETERMINED to UNDERDETERMINED); RETRACTED D3 vs C2 (UNDERDETERMINED to UNDERDETERMINED); RETRACTED D6 vs C2 (UNDERDETERMINED to UNDERDETERMINED))
+        uncured: K-G9 CHALLENGER CITED-IN [TRIAL] (no written response)
+     items removed: K-LB CHALLENGER premise 4, K-LB CHALLENGER premise 6 | added: K-G9 CHALLENGER CITED-IN
+new  chatgpt  items 1: [HELD | SELF-SUPPORTED 0 | SELF-SUPPORTED 0 | UNDERDETERMINED | drv_uncured 0 (+1 TRIAL uncured, not counted)]
+        items: K-G9 CHALLENGER CITED-IN
+        [AUDIT v26: K-G9 PASS: 0 verses ruled -- DEFENDER CITED-IN 0; TRIAL rule]
+        uncured: K-G9 CHALLENGER CITED-IN [TRIAL] (no written response)
+     single items removed: K-LB CHALLENGER premise 4, K-LB CHALLENGER premise 6 | added: K-G9 CHALLENGER CITED-IN
+new  single   items 2: [PARTIAL | COLLAPSED 4 | SELF-SUPPORTED 0 | UNDERDETERMINED | drv_uncured 0 (+1 TRIAL uncured, not counted)]
+        items: K-C D2 vs C4, K-G9 CHALLENGER CITED-IN
+        uncured: K-G9 CHALLENGER CITED-IN [TRIAL] (no written response) RECOMPUTED (RETRACTED D3 vs C2 (UNDERDETERMINED to UNDERDETERMINED)) (no vote)
+NEW PANEL: gemini, glm, chatgpt -> HELD, UNDERDETERMINED | RESULT words gemini:UNDERDETERMINED, glm:UNDERDETERMINED, chatgpt:UNDERDETERMINED
+
+=== RUN 32284 (stored cure replies from debate_enforcer_log)
+STORED rows: chatgpt [HELD | SELF-SUPPORTED 0 | PROP-DEPENDENT 3 | DEFENDER WINS | drv_uncured 0]; gemini [HELD | SELF-SUPPORTED 0 | SELF-SUPPORTED 0 | UNDERDETERMINED | drv_uncured 0]; glm [HELD | SELF-SUPPORTED 0 | SELF-SUPPORTED 0 | UNDERDETERMINED | drv_uncured 0]
+STORED outcome (ported rules): HELD -> UNDERDETERMINED | RESULT words chatgpt:DEFENDER WINS, gemini:UNDERDETERMINED, glm:UNDERDETERMINED | as stored in the row: see README
+-- base
+base chatgpt  items 2: [HELD | SELF-SUPPORTED 0 | PROP-DEPENDENT 3 | DEFENDER WINS | drv_uncured 2]
+        items: K-G9 CHALLENGER CITED-IN, K-LB DEFENDER premise 5
+        uncured: K-G9 CHALLENGER CITED-IN (cure call failed: no cure call was made for this seat); K-LB DEFENDER premise 5 (cure call failed: no cure call was made for this seat)
+base gemini   items 3: [HELD | SELF-SUPPORTED 0 | SELF-SUPPORTED 0 | UNDERDETERMINED | drv_uncured 3]
+        items: K-G9 CHALLENGER CITED-IN, K-LB DEFENDER premise 5, K-LB CHALLENGER premise 6 RECOMPUTED (RETRACTED D3 vs C1 (UNDERDETERMINED to UNDERDETERMINED))
+        uncured: K-G9 CHALLENGER CITED-IN (no written response); K-LB DEFENDER premise 5 (no written response); K-LB CHALLENGER premise 6 (no written response)
+base glm      items 3: [HELD | SELF-SUPPORTED 0 | SELF-SUPPORTED 0 | UNDERDETERMINED | drv_uncured 3]
+        items: K-G9 CHALLENGER CITED-IN, K-LB DEFENDER premise 5, K-LB CHALLENGER premise 6
+        uncured: K-G9 CHALLENGER CITED-IN (cure call failed: no cure call was made for this seat); K-LB DEFENDER premise 5 (cure call failed: no cure call was made for this seat); K-LB CHALLENGER premise 6 (cure call failed: no cure call was made for this seat)
+base single   items 4: [HELD | SELF-SUPPORTED 0 | SELF-SUPPORTED 0 | UNDERDETERMINED | drv_uncured 4]
+        items: K-C D1, K-G9 CHALLENGER CITED-IN, K-LB DEFENDER premise 5, K-LB CHALLENGER premise 6
+        uncured: K-C D1 (the restated line keeps the ground that a verse does not state the link); K-G9 CHALLENGER CITED-IN (no written response); K-LB DEFENDER premise 5 (no written response); K-LB CHALLENGER premise 6 (no written response) RECOMPUTED (RETRACTED D6 vs C1 (UNDERDETERMINED to UNDERDETERMINED)) (no vote)
+BASE PANEL: chatgpt, gemini, glm -> UNGRADED, UNGRADED — REVIEW | RESULT words 
+-- new
+new  chatgpt  items 2: [HELD | SELF-SUPPORTED 0 | PROP-DEPENDENT 3 | DEFENDER WINS | drv_uncured 0 (+2 TRIAL uncured, not counted)]
+        items: K-G9 CHALLENGER CITED-IN, K-LB DEFENDER premise 5
+        [AUDIT v26: K-G9 PASS: 0 verses ruled -- DEFENDER CITED-IN 0; TRIAL rule]
+        uncured: K-G9 CHALLENGER CITED-IN [TRIAL] (cure call failed: no cure call was made for this seat); K-LB DEFENDER premise 5 [TRIAL] (cure call failed: no cure call was made for this seat)
+new  gemini   items 3: [HELD | SELF-SUPPORTED 0 | SELF-SUPPORTED 0 | UNDERDETERMINED | drv_uncured 0 (+3 TRIAL uncured, not counted)]
+        items: K-G9 CHALLENGER CITED-IN, K-LB DEFENDER premise 5, K-LB CHALLENGER premise 6
+        [AUDIT v26: K-G9 PASS: 0 verses ruled -- DEFENDER CITED-IN 0; TRIAL rule] RECOMPUTED (RETRACTED D3 vs C1 (UNDERDETERMINED to UNDERDETERMINED))
+        uncured: K-G9 CHALLENGER CITED-IN [TRIAL] (no written response); K-LB DEFENDER premise 5 [TRIAL] (no written response); K-LB CHALLENGER premise 6 [TRIAL] (no written response)
+new  glm      items 3: [HELD | SELF-SUPPORTED 0 | SELF-SUPPORTED 0 | UNDERDETERMINED | drv_uncured 0 (+3 TRIAL uncured, not counted)]
+        items: K-G9 CHALLENGER CITED-IN, K-LB DEFENDER premise 5, K-LB CHALLENGER premise 6
+        [AUDIT v26: K-G9 PASS: 0 verses ruled -- DEFENDER CITED-IN 0; TRIAL rule]
+        uncured: K-G9 CHALLENGER CITED-IN [TRIAL] (cure call failed: no cure call was made for this seat); K-LB DEFENDER premise 5 [TRIAL] (cure call failed: no cure call was made for this seat); K-LB CHALLENGER premise 6 [TRIAL] (cure call failed: no cure call was made for this seat)
+new  single   items 4: [HELD | SELF-SUPPORTED 0 | SELF-SUPPORTED 0 | UNDERDETERMINED | drv_uncured 1 (+3 TRIAL uncured, not counted)]
+        items: K-C D1, K-G9 CHALLENGER CITED-IN, K-LB DEFENDER premise 5, K-LB CHALLENGER premise 6
+        uncured: K-C D1 (the restated line keeps the ground that a verse does not state the link); K-G9 CHALLENGER CITED-IN [TRIAL] (no written response); K-LB DEFENDER premise 5 [TRIAL] (no written response); K-LB CHALLENGER premise 6 [TRIAL] (no written response) RECOMPUTED (RETRACTED D6 vs C1 (UNDERDETERMINED to UNDERDETERMINED)) (no vote)
+NEW PANEL: chatgpt, gemini, glm -> HELD, UNDERDETERMINED | RESULT words chatgpt:DEFENDER WINS, gemini:UNDERDETERMINED, glm:UNDERDETERMINED
+
+=== RUN 32266 (stored cure replies from debate_enforcer_log)
+STORED rows: deepseek [HELD | SELF-SUPPORTED 0 | PROP-DEPENDENT 0 | DEFENDER WINS | drv_uncured 0]; gemini [HELD | SELF-SUPPORTED 0 | SELF-SUPPORTED 0 | UNDERDETERMINED | drv_uncured 0]; sol [HELD | PROP-DEPENDENT 1 | PROP-DEPENDENT 2 | DEFENDER WINS | drv_uncured 0]
+STORED outcome (ported rules): HELD -> DEFENDER PREVAILS | RESULT words deepseek:DEFENDER WINS, gemini:UNDERDETERMINED, sol:DEFENDER WINS | as stored in the row: see README
+-- base
+base deepseek items 6: [HELD | SELF-SUPPORTED 0 | SELF-SUPPORTED 0 | UNDERDETERMINED | drv_uncured 4]
+        items: K-G4 D6 vs C4, K-C REASONING, K-G9 DEFENDER CITED-IN, K-G9 CHALLENGER CITED-IN, K-LB DEFENDER premise 3, K-LB DEFENDER premise 5 RECOMPUTED (RETRACTED D6 vs C4 (CHALLENGER LINK BROKEN to UNDERDETERMINED))
+        uncured: K-G9 DEFENDER CITED-IN (no written response); K-G9 CHALLENGER CITED-IN (no written response); K-LB DEFENDER premise 3 (no written response); K-LB DEFENDER premise 5 (no written response)
+base gemini   items 4: [HELD | SELF-SUPPORTED 0 | SELF-SUPPORTED 0 | UNDERDETERMINED | drv_uncured 4]
+        items: K-G9 DEFENDER CITED-IN, K-G9 CHALLENGER CITED-IN, K-LB DEFENDER premise 3, K-LB DEFENDER premise 5
+        uncured: K-G9 DEFENDER CITED-IN (cure call failed: no cure call was made for this seat); K-G9 CHALLENGER CITED-IN (cure call failed: no cure call was made for this seat); K-LB DEFENDER premise 3 (cure call failed: no cure call was made for this seat); K-LB DEFENDER premise 5 (cure call failed: no cure call was made for this seat)
+base glm      items 18: [HELD | SELF-SUPPORTED 0 | SELF-SUPPORTED 0 | UNDERDETERMINED | drv_uncured 4]
+        items: K-G4 D1 vs C6, K-G4 D2 vs C4, K-G4 D2 vs C6, K-G4 D3 vs C1, K-G4 D4 vs C3, K-G4 D5 vs C5, K-G4 D5 vs C1, K-G4 D6 vs C4, K-G4 D6 vs C5, K-B D6 vs C6, K-G4 D6 vs C6, K-C REASONING, K-C KEYSTONE, K-C CONCEDED LINKS, K-G9 DEFENDER CITED-IN, K-G9 CHALLENGER CITED-IN, K-LB DEFENDER premise 3, K-LB DEFENDER premise 5 RECOMPUTED (RETRACTED D1 vs C6 (CHALLENGER LINK BROKEN to UNDERDETERMINED); RETRACTED D2 vs C4 (CHALLENGER LINK BROKEN to UNDERDETERMINED); RETRACTED D2 vs C6 (CHALLENGER LINK BROKEN to UNDERDETERMINED); RETRACTED D3 vs C1 (CHALLENGER LINK BROKEN to UNDERDETERMINED); RETRACTED D4 vs C3 (CHALLENGER LINK BROKEN to UNDERDETERMINED); RETRACTED D5 vs C5 (CHALLENGER LINK BROKEN to UNDERDETERMINED); RETRACTED D5 vs C1 (CHALLENGER LINK BROKEN to UNDERDETERMINED); RETRACTED D6 vs C4 (CHALLENGER LINK BROKEN to UNDERDETERMINED); RETRACTED D6 vs C5 (CHALLENGER LINK BROKEN to UNDERDETERMINED); RETRACTED D6 vs C6 (CHALLENGER LINK BROKEN to UNDERDETERMINED))
+        uncured: K-G9 DEFENDER CITED-IN (no written response); K-G9 CHALLENGER CITED-IN (no written response); K-LB DEFENDER premise 3 (no written response); K-LB DEFENDER premise 5 (no written response)
+base   alternate sol for glm, items 3: [HELD | PROP-DEPENDENT 1 | PROP-DEPENDENT 2 | DEFENDER WINS | drv_uncured 3]
+        items: K-G9 DEFENDER CITED-IN, K-G9 CHALLENGER CITED-IN, K-LB DEFENDER premise 3
+        uncured: K-G9 DEFENDER CITED-IN (no written response); K-G9 CHALLENGER CITED-IN (no written response); K-LB DEFENDER premise 3 (no written response)
+base single   items 6: [HELD | SELF-SUPPORTED 0 | SELF-SUPPORTED 0 | UNDERDETERMINED | drv_uncured 2]
+        items: K-G4 D1 vs C4, K-G4 D6 vs C6, K-N CONCEDED LINKS, K-SC D4, K-G9 DEFENDER CITED-IN, K-G9 CHALLENGER CITED-IN
+        uncured: K-G9 DEFENDER CITED-IN (no written response); K-G9 CHALLENGER CITED-IN (no written response) RECOMPUTED (RETRACTED D1 vs C4 (CHALLENGER LINK BROKEN to UNDERDETERMINED); RETRACTED D6 vs C6 (CHALLENGER LINK BROKEN to UNDERDETERMINED); COUNT DEFENDER 2 to 0) (no vote)
+BASE PANEL: deepseek, gemini, glm -> UNGRADED, UNGRADED — REVIEW | RESULT words 
+-- new
+     items removed: K-LB DEFENDER premise 5 | added: none
+new  deepseek items 5: [HELD | SELF-SUPPORTED 0 | SELF-SUPPORTED 0 | UNDERDETERMINED | drv_uncured 0 (+3 TRIAL uncured, not counted)]
+        items: K-G4 D6 vs C4, K-C REASONING, K-G9 DEFENDER CITED-IN, K-G9 CHALLENGER CITED-IN, K-LB DEFENDER premise 3 RECOMPUTED (RETRACTED D6 vs C4 (CHALLENGER LINK BROKEN to UNDERDETERMINED))
+        uncured: K-G9 DEFENDER CITED-IN [TRIAL] (no written response); K-G9 CHALLENGER CITED-IN [TRIAL] (no written response); K-LB DEFENDER premise 3 [TRIAL] (no written response)
+     items removed: K-LB DEFENDER premise 5 | added: none
+new  gemini   items 3: [HELD | SELF-SUPPORTED 0 | SELF-SUPPORTED 0 | UNDERDETERMINED | drv_uncured 0 (+3 TRIAL uncured, not counted)]
+        items: K-G9 DEFENDER CITED-IN, K-G9 CHALLENGER CITED-IN, K-LB DEFENDER premise 3
+        uncured: K-G9 DEFENDER CITED-IN [TRIAL] (cure call failed: no cure call was made for this seat); K-G9 CHALLENGER CITED-IN [TRIAL] (cure call failed: no cure call was made for this seat); K-LB DEFENDER premise 3 [TRIAL] (cure call failed: no cure call was made for this seat)
+     items removed: K-B D6 vs C6, K-LB DEFENDER premise 5 | added: none
+new  glm      items 16: [HELD | SELF-SUPPORTED 0 | SELF-SUPPORTED 0 | UNDERDETERMINED | drv_uncured 0 (+3 TRIAL uncured, not counted)]
+        items: K-G4 D1 vs C6, K-G4 D2 vs C4, K-G4 D2 vs C6, K-G4 D3 vs C1, K-G4 D4 vs C3, K-G4 D5 vs C5, K-G4 D5 vs C1, K-G4 D6 vs C4, K-G4 D6 vs C5, K-G4 D6 vs C6, K-C REASONING, K-C KEYSTONE, K-C CONCEDED LINKS, K-G9 DEFENDER CITED-IN, K-G9 CHALLENGER CITED-IN, K-LB DEFENDER premise 3 RECOMPUTED (RETRACTED D1 vs C6 (CHALLENGER LINK BROKEN to UNDERDETERMINED); RETRACTED D2 vs C4 (CHALLENGER LINK BROKEN to UNDERDETERMINED); RETRACTED D2 vs C6 (CHALLENGER LINK BROKEN to UNDERDETERMINED); RETRACTED D3 vs C1 (CHALLENGER LINK BROKEN to UNDERDETERMINED); RETRACTED D4 vs C3 (CHALLENGER LINK BROKEN to UNDERDETERMINED); RETRACTED D5 vs C5 (CHALLENGER LINK BROKEN to UNDERDETERMINED); RETRACTED D5 vs C1 (CHALLENGER LINK BROKEN to UNDERDETERMINED); RETRACTED D6 vs C4 (CHALLENGER LINK BROKEN to UNDERDETERMINED); RETRACTED D6 vs C5 (CHALLENGER LINK BROKEN to UNDERDETERMINED); RETRACTED D6 vs C6 (CHALLENGER LINK BROKEN to UNDERDETERMINED))
+        uncured: K-G9 DEFENDER CITED-IN [TRIAL] (no written response); K-G9 CHALLENGER CITED-IN [TRIAL] (no written response); K-LB DEFENDER premise 3 [TRIAL] (no written response)
+new  single   items 6: [HELD | SELF-SUPPORTED 0 | SELF-SUPPORTED 0 | UNDERDETERMINED | drv_uncured 0 (+2 TRIAL uncured, not counted)]
+        items: K-G4 D1 vs C4, K-G4 D6 vs C6, K-N CONCEDED LINKS, K-SC D4, K-G9 DEFENDER CITED-IN, K-G9 CHALLENGER CITED-IN
+        uncured: K-G9 DEFENDER CITED-IN [TRIAL] (no written response); K-G9 CHALLENGER CITED-IN [TRIAL] (no written response) RECOMPUTED (RETRACTED D1 vs C4 (CHALLENGER LINK BROKEN to UNDERDETERMINED); RETRACTED D6 vs C6 (CHALLENGER LINK BROKEN to UNDERDETERMINED); COUNT DEFENDER 2 to 0) (no vote)
+NEW PANEL: deepseek, gemini, glm -> HELD, UNDERDETERMINED | RESULT words deepseek:UNDERDETERMINED, gemini:UNDERDETERMINED, glm:UNDERDETERMINED

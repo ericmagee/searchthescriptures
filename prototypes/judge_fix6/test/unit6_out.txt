@@ -1,0 +1,98 @@
+== H1: K-LB, the one layer reader, VOID premises
+OK  H1 32293 [DR3] LINK 4 (kata sarka inside the [L2] text): base reads one kind (the false mark) | ["L1"]
+OK  H1 32293 [DR3] LINK 4: new reads two kinds | ["L1","L2"]
+OK  H1 32293 [DR3] LINK 6 (osphys, loins): base reads one kind (the false mark) | ["L1"]
+OK  H1 32293 [DR3] LINK 6: new reads two kinds | ["L1","L2"]
+OK  H1 32293 every [DR3] block shows two kinds (new) | [true,true,true,true,true,true]
+OK  H1 32293 every [CR3] block shows two kinds (new) | [true,true,true,true,true,true]
+OK  H1 control: an [L2] tag with an English gloss only and no source word is not read as L2
+OK  H1 control: "[L2] the house (of David)" style English word is read (known leniency, recorded) | ["L2"]
+OK  H1 control: [L2] after "no" never counts
+OK  H1 control: a tag stops at the next tag: [L1] with no quotation is not met by a quotation under the next [L3]
+OK  H1/H8 the status table and layer reader are one text in all 17 checker and cure nodes | cf77a27bf62d4d38babfdcf1887c7ef4
+OK  H1 K-B reads with drvKinds = drvLayers; K-LB lbKinds = drvLayers
+OK  H1 VOID: ChatGPT (902) rules all six challenger premises VOID | {"all":true,"set":[]}
+OK  H1 VOID: Sol (901) rules challenger premises 4, 5, 6 VOID | {"all":false,"set":[4,5,6]}
+OK  H1 VOID: Sol (901) rules defender premises 1 and 6 VOID | {"all":false,"set":[1,6]}
+OK  H1 VOID control: Gemini (900) rules nothing VOID | {"all":false,"set":[]}
+OK  H1 control: a one-kind link-round block not counted still fires K-LB (new) | ["CHALLENGER premise 1"]
+OK  H1 the same block ruled VOID by the seat is not marked (new) | []
+OK  H1 a K-LB mark says TRIAL
+== H2: the cure check reads single marks; a refused statement names its step
+OK  H2 32293 GLM (rows 75) premise 4 single-mark statement: base UNCURED | no CORRECTED COUNT for CHALLENGER and no statement quoting [DR3] with two layer kinds for CHALLENGER premise 4
+OK  H2 32293 GLM premise 4: new CURED | statement quotes [DR3] and exhibits L1 and L2
+OK  H2 32293 GLM (rows 76) premise 6 single-mark statement: base UNCURED | no CORRECTED COUNT for CHALLENGER and no statement quoting [DR3] with two layer kinds for CHALLENGER premise 6
+OK  H2 32293 GLM premise 6: new CURED | statement quotes [DR3] and exhibits L1 and L2
+OK  H2 32293 single judge (row 81) premise 4: base UNCURED, reason names no step | no CORRECTED COUNT for CHALLENGER and no statement quoting [DR3] with two layer kinds for CHALLENGER premise 4
+OK  H2 32293 single judge premise 4: new CURED (the refusing step was the layer reader: [L1] in nested double marks and [L2] not at the start were not read) | statement quotes [DR3] and exhibits L1 and L2 and L3
+OK  H2 diagnosis: the base layer reader reads the row 81 premise 4 statement as L3 only | ["L3"]
+OK  H2 control: a statement with one layer kind stays UNCURED and names step 3 | no CORRECTED COUNT for CHALLENGER and the STATEMENT was refused at step 3 (layer kinds): the STATEMENT exhibits L1 only, fewer than two for CHALLENGER premise 4
+OK  H2 control: a statement whose quotation is not in [DR3] stays UNCURED and names step 2 | no CORRECTED COUNT for CHALLENGER and the STATEMENT was refused at step 2 (quotation): no quotation in the STATEMENT stands in [DR3] for CHALLENGER premise 4
+OK  H2 control: no statement names step 1 | no CORRECTED COUNT for CHALLENGER and the STATEMENT was refused at step 1 (statement): no STATEMENT line for the item for CHALLENGER premise 4
+OK  H2 a single-mark statement with two kinds that quotes [DR3] is CURED | statement quotes [DR3] and exhibits L1 and L2
+== H3: the renumbering flag
+OK  H3 32293 D4 base flagged (the false flag) | 1
+OK  H3 32293 D4 new: no flag | []
+OK  H3 32293 C4 base flagged (the false flag) | 2
+OK  H3 32293 C4 new: no flag | []
+OK  H3 32284 D4 new: flagged | it states a numbering of its own ("answer under the challenger's C1–C6. I have not seen the text of my round 1 declaration, so I take D1–D6 in the order the challenger's blocks answer them: D1 J")
+OK  H3 32284 C4 new: flagged | it states a numbering of its own ("ws already offered and restate them now under my own numbers. Nothing new is pressed here. **C1 (the timing rows) — NARROWED TO: the abstinence of Matthew 1:25")
+OK  H3 32266 D4 new: flagged | it states a numbering of its own ("ary, who had not been known by any man. I number D1–D6 in the order of the link round: D1 the row of Matthew 1:16; D2 of a woman and her seed; D3 Isaiah 7:1")
+OK  H3 32266 C4 new: flagged | it states a numbering of its own ("seed is named, and the union is named. I number my chain as pressed: C1 the seed out of a man's body; C2 the father named; C3 the reckoning by the father's hou")
+OK  H3 control: labels that carry another declared link's verses and words are flagged | ["D1 (\"D1: NARROWED TO: Luke 3:23 marks enomizeto as supposition.\") shares no verse and no distinctive word with declared D1 and matches declared D2 (score 5)","D2 (\"D2: KEPT. Romans 1:3 kata sarka, the seed of David.\") shares no verse and no distinctive word with declared D2 and matches declared D3 (score 7)","D3 (\"D3: KEPT. Isaiah 7:14 gives a sign fulfilled in Matthew 1:23.\") shares no verse and no distinctive word with declared D3 and matches declared D1 (score 9)"]
+OK  H3 a two-label status line ("D2, D3") is skipped and a label stops at the next heading | []
+== H4: the close-round press check
+OK  H4 32293 [DR4] marks: "Not one of them says what D6 says"
+OK  H4 32293 [DR4] marks: "is not stated by any verse the defender has shown"
+OK  H4 32293 [DR4] marks: "D6 is the keystone"
+OK  H4 32293 [DR4] marks: "The passive at the last link after the active series is non-narration"
+OK  H4 32293 [DR4] marks: "The defender says Matthew 1:25 denies the knowing"
+OK  H4 32293 [DR4] marks: "The defender has already narrowed it"
+OK  H4 32293 [DR4] marks: "the defender answers Romans 1:3"
+OK  H4 32293 [DR4] does not mark the report "The defender grants enomizeto ... by lexicon alone" (base did)
+OK  H4 32293 [DR4] does not mark its own links ("C1 — NARROWED TO", "C5, C6")
+OK  H4 32293 [CR4] marks: "The challenger's chain needs Joseph to have known Mary within the espousal"
+OK  H4 32293 [CR4] marks: "It does not show a father undisturbed"
+OK  H4 32293 [CR4] marks: "The challenger dropped the silence-limb"
+OK  H4 32293 [CR4] marks: "The challenger granted that the Luke-Acts rows"
+OK  H4 32293 [CR4] marks no ANSWER block sentence and none of its own D labels
+OK  H4 32293 [CR4] does not mark "C6. Answered row by row below." (own)
+OK  H4 control 32284 [DR4] still marks "D1 is refused"
+OK  H4 control 32284 [DR4] still marks "each stand on an inference the named rows do not state"
+== H5: K-G9 NOT PRESSED needs a reason; the PASS line
+OK  H5 32293 Gemini wrote six NOT PRESSED rulings with no reason | ["Hebrews 10:5 / ","Luke 1:27 / ","Matthew 1:21 / ","Acts 13:33 / ","Romans 1:4 / ","Matthew 1:22 / "]
+OK  H5 32293 Gemini: new K-G9 item on the challenger lists Luke 1:27 and Matthew 1:22, "NOT PRESSED gives no reason" | the ledger lists 6 verse(s) cited against the challenger and not named in a later round of it; no valid ruling for 6: Hebrews 10:5, Luke 1:27, Matthew 1:21, Acts 13:33, Romans 1:4, Matthew 1:22 (Hebre
+OK  H5 base: no K-G9 item on the same text
+OK  H5 the passing defender side writes "K-G9 PASS: 0 verses ruled" | ["[AUDIT v26: K-G9 PASS: 0 verses ruled -- DEFENDER CITED-IN 0; TRIAL rule]"]
+OK  H5 the same rulings with a reason: no item, "K-G9 PASS: 6 verses ruled" | ["[AUDIT v26: K-G9 PASS: 6 verses ruled -- DEFENDER CITED-IN 0; CHALLENGER CITED-IN 6; TRIAL rule]"]
+OK  H5 parse: reason in parentheses, after a semicolon; none after a bare reference | [["Luke 1:27","quoted in [CR1] for D3, not against a challenger premise"],["Matthew 1:22","the verse is the defender's own footing"],["Hebrews 10:5",""]]
+OK  H5 parse: a reason that names another verse does not rule that verse | ["Luke 1:27"]
+OK  H5 control: a PRESSED ruling still reads as before
+OK  H5 cure: NOT PRESSED lines without a reason leave K-G9 UNCURED | no valid ruling line in the reply for 6 listed verse(s): Hebrews 10:5, Luke 1:27, Matthew 1:21, Acts 13:33, Romans 1:4, Matthew 1:22
+OK  H5 cure: the lines with a reason and a RESPONSE cure it | every listed verse ruled; none PRESSED and UNANSWERED
+OK  H5 the judge prompt asks for the reason (Panel Build, Build Independent Verdict)
+== H6: the citation report
+OK  H6 32293 base keeps 300 of 346 scanned items; the challenger's close has none | 295
+OK  H6 32293 new keeps every scanned item (cap 1000), the challenger's close included | {"scanned":346,"report":337,"cap":1000}
+OK  H6 32293 item 22: base "WORDS ARE AT Luke 1:32" (the false flag) | WORDS ARE AT Luke 1:32
+OK  H6 32293 item 22: new MATCHES Luke 1:32, rebound from Luke 1:34 | ["Luke 1:32","MATCHES","Luke 1:34"]
+OK  H6 control: the true misquote (defender round 2, Luke 1:35) still flags
+OK  H6 every NOT CHECKED carries a reason | ["1 Corinthians 7:5: a quotation of fewer than three words of three letters is checked only as an exact phrase, and \"came together\" is not in the text of 1 Corinthians 7:5"]
+OK  H6 an item past the cap is NOT CHECKED with its reason | past the citation scan's item cap (1000 items)
+OK  H6 an unread chapter is NOT CHECKED with its reason | the cited chapter was not read: the verse read's address was full (7,000 characters)
+OK  H6 the stored citation items keep reason and rebound_from
+== H7: Failure Salvage keeps the CACHE DIAG lines
+OK  H7 new: both CACHE DIAG lines in review_notes, in round order | [RUN INCOMPLETE: failed at node "unknown": call failed. Only what was produced before the failure is recorded; no verdict stands on this row. REVIEW THIS ROW.] [CACHE DIAG D1: cache_miss_reason=null (first Claude call of the seat, previous_message_id=null); read=0; write=900; uncached=12; previous_m
+OK  H7 base: the lines were lost
+== H8: LIVE and TRIAL
+OK  H8 the table: K-LB, K-G9, C4-RENUM, C4-PRESS TRIAL; the older rules LIVE | {"K-B":"LIVE","K-C":"LIVE","K-G1":"LIVE","K-G3":"LIVE","K-G4":"LIVE","K-G6":"LIVE","K-G7":"LIVE","K-G8":"LIVE","K-N":"LIVE","K-S":"LIVE","K-SC":"LIVE","K-LB":"TRIAL","K-G9":"TRIAL","C4-RENUM":"TRIAL","C4-PRESS":"TRIAL"}
+OK  H8 uncured TRIAL items count 0 in drv_uncured
+OK  H8 control: an uncured LIVE item still counts
+OK  H8 control: a rule not in the table is LIVE
+OK  H8 drv_uncured is set from LIVE items in Panel Payloads, Alternate Payloads, Panel Cure Check and Alternate Merge
+OK  H8 a TRIAL item's report line says so (WHY) | [AUDIT v21: DEBATE RULE VIOLATION REPORT -- SEAT: glm; ITEM: CHALLENGER premise 4; RULE: K-LB; RESULT: UNCURED; WHY: TRIAL rule (recorded and answered; it removes no seat): x; JUDGE STATEMENT: none wr
+OK  H8 a TRIAL item's enforcer row says so (cure_reason) | TRIAL rule (recorded and answered; it removes no seat): x
+OK  H8 base: the K-G6 count of 1 is refused because the K-LB premise is added to it | corrected count 1 is below 2
+OK  H8 new: the K-G6 count of 1 is cured; the TRIAL K-LB premise is not added | counted: CHALLENGER COUNT 1, STANDING PROP-DEPENDENT
+
+88 OK, 0 BAD
