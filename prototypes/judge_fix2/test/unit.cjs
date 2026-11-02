@@ -7,20 +7,34 @@ const drvNodes=NEW.filter(f=>has(f,'function drvCheck(')),cureNodes=NEW.filter(f
 const J=(run,seat)=>{const r=RL.run(run);return seat==='single'?RL.judgment(r.independent_verdict_raw,false):RL.judgment(r.judgments.find(j=>j.seat===seat).verdict_raw,true);};
 const marksOf=(lib,t)=>lib.drvCheck(t,null,null,null,null,false).items.map(x=>x.rule+' '+(x.link||x.side));
 const everyDrv=(t,pred)=>drvNodes.filter(f=>!pred(marksOf(drvLib(D+'new/'+f),t))).length;
-// ---- FIX 1a, 2: instruction text, identical in every copy ----
-const C1="A pressed witness left unanswered never makes a link UNEXHIBITED; it is graded on that link\\'s collision line as LINK BROKEN with its pressing sentence quoted.";
+// ---- R1 (ruling 372): fix 1 removed; FIX 2 kept, identical in every copy ----
 const C2="only when the block surrenders the link itself; a block that drops a limb and keeps the link in a narrowed form is not a concession: grade the narrowed link";
-for(const f of ['Panel Build.js','Build Independent Verdict.js']){const s=fs.readFileSync(D+'new/'+f,'utf8');ok(s.split(C1).length-1===2&&s.split(C2).length-1===2,'FIX 1a/2 '+f+': UNEXHIBITED clause x'+(s.split(C1).length-1)+', narrowing clause x'+(s.split(C2).length-1)+' (want 2 and 2)');}
-{const s=fs.readFileSync(D+'new/Format Markdown.js','utf8');ok(s.includes(C1.replace("\\'","'"))&&s.includes(C2),'FIX 1a/2 Format Markdown rule copy carries both clauses word for word');}
-// ---- FIX 1b K-X ----
+const LEDGER_S="A premise whose pressed witness goes unanswered is UNEXHIBITED: it counts toward CONCEDED LINKS and the standings.";
+{const left=NEW.filter(f=>/K-X|kxLines|KX_|never makes a link UNEXHIBITED/.test(fs.readFileSync(D+'new/'+f,'utf8')));ok(left.length===0,'R1 no K-X or fix-1 text left in new/ ('+(left.join(', ')||'none')+')');}
+for(const f of ['Panel Build.js','Build Independent Verdict.js']){const s=fs.readFileSync(D+'new/'+f,'utf8');ok(s.split(C2).length-1===2&&s.includes(LEDGER_S),'FIX 2 '+f+': narrowing clause x'+(s.split(C2).length-1)+' (want 2); R1 ledger sentence kept');}
+{const s=fs.readFileSync(D+'new/Format Markdown.js','utf8');ok(s.includes(C2)&&!/never makes a link UNEXHIBITED/.test(s),'FIX 2 Format Markdown rule copy carries the narrowing clause; no fix-1 clause');}
+ok(drvNodes.every(f=>/rule:'K-G6'/.test(fs.readFileSync(D+'new/'+f,'utf8'))===/rule:'K-G6'/.test(fs.readFileSync(D+'base/'+f,'utf8'))),'R1 K-G6 kept wherever it was');
+// ---- R2 (ruling 373): [DR1] answers for the challenger, in every copy and checker ----
+for(const f of ['Panel Build.js','Build Independent Verdict.js']){const s=fs.readFileSync(D+'new/'+f,'utf8');
+ ok(s.includes("(for the defender: [CR2] or [CR3]; for the challenger: [DR1], [DR2] or [DR3])")&&!/(?<!\[DR1\], )\[DR2\] or \[DR3\]/.test(s),'R2 '+f+': rule and ledger copies name [DR1], [DR2] or [DR3]; no "[DR2] or [DR3]" left');}
+ok(cureNodes.every(f=>!/(?<!\[DR1\], )\[DR2\] or \[DR3\]/.test(fs.readFileSync(D+'new/'+f,'utf8'))),'R2 cure prompts (K-G1 SHORT, K-S) name [DR1] on all '+cureNodes.length+' cure nodes');
+{const PWL=v=>{const s=fs.readFileSync(D+v+'/Panel Build.js','utf8');return new Function(s.slice(s.indexOf('const PWL='),s.indexOf('\nconst LEDGER='))+';return PWL;')();};
+ const r=RL.run('32194');const F={cr1:r.claude_r1,gr1:r.engine_r1,cr2:r.claude_r2,gr2:r.engine_r2,cr3:r.engine_r3,dr3:r.challenger_r3};
+ const b=PWL('base').judgeBlock(F),w=PWL('new').judgeBlock(F);const ch=t=>t.slice(t.indexOf('AGAINST THE CHALLENGER'));
+ ok(/NOT NAMED: Isaiah 7:14/.test(ch(b))&&!/NOT NAMED: Isaiah 7:14/.test(ch(w)),'R2 ledger 32194: Isaiah 7:14 pressed in [CR1] and named in [DR1] (engine_r1) was NOT NAMED, now answered');}
+{const t='D3 vs C1 (Isaiah 7:14): UNDERDETERMINED -- the witness was answered in [DR1], and no verse states the contrary.';
+ const o=drvLib(D+'base/Panel Payloads.js').drvCheck(t).items.map(x=>x.rule),w=drvLib(D+'new/Panel Payloads.js').drvCheck(t).items.map(x=>x.rule);
+ ok(o.includes('K-S')&&!w.includes('K-S')&&everyDrv(t,m=>!m.some(x=>x.startsWith('K-S ')))===0,'R2 K-S: a line naming [DR1] as the answering round is no longer K-S (base '+o.join(',')+'; new '+w.join(',')+')');}
+{const kg1={rule:'K-G1',side:'CHALLENGER',link:'D3 vs C1',line:'D3 vs C1 (Isaiah 7:14): CHALLENGER LINK BROKEN -- [CR1] pressed Isaiah 7:14 and the challenger left it unanswered.'};
+ const R=RL.rounds(RL.run('32194'));const L=fullLib(D+'new/Cure Check.js');const v=L.cureVerdicts([kg1],{ok:true,text:'RESPONSE: K-G1 D3 vs C1 | I accept the mark as stated.\nCORRECTED COUNT: CHALLENGER 1\nPRESSED: D3 vs C1 | [CR1] | "The prophetic record requires a conception without a human father"'},null,R)[0];
+ ok(v.status==='UNCURED'&&/\[DR1\]/.test(v.why),'R2 K-G1: a later [DR1] naming of the pressed verse now asks for its answer (SHORT may cite [DR1]): '+v.why.slice(0,90));}
+{const P=t=>'AGAINST THE DEFENDER, answered in [CR2] or [CR3]:\npremise 1 (LINK 1): 2 verse(s) carried; 1 named; NOT NAMED: Acts 1:8\n'+t+':\npremise 1: 1 verse(s) carried; 1 named; NOT NAMED: none\ncited in ...\nA verse marked NOT NAMED is unanswered by the rule.';
+ const txt='CONCEDED LINKS: 0 -- none.\nCHALLENGER CONCEDED LINKS: 0 -- none.';const pt=P('AGAINST THE CHALLENGER, answered in [DR1], [DR2] or [DR3]');
+ const o=drvLib(D+'base/Panel Payloads.js').drvLedger(txt,pt,0,0,'SELF-SUPPORTED','SELF-SUPPORTED',null).items,w=drvLib(D+'new/Panel Payloads.js').drvLedger(txt,pt,0,0,'SELF-SUPPORTED','SELF-SUPPORTED',null).items;
+ ok(o.length===0&&w.length===1&&w[0].rule==='K-G6','R2 K-G6 reads the judge prompt\'s ledger heading ("answered in [CR2] or [CR3]:"): base finds no ledger ('+o.length+' items), new marks DEFENDER premise 1 ('+w.length+')');}
+// ---- FIX 4 K-C ----
 const g=J('32212','gemini'),c=J('32212','chatgpt'),d=J('32212','deepseek');
 const ln=(j,re)=>j.text.split('\n').find(l=>re.test(l));
-ok(everyDrv(ln(g,/^CONCEDED LINKS/),m=>m.includes('K-X CONCEDED LINKS'))===0,'K-X 886 Gemini CONCEDED LINKS marked on all '+drvNodes.length+' nodes');
-ok(everyDrv(ln(g,/^CHALLENGER CONCEDED LINKS/),m=>m.includes('K-X CHALLENGER CONCEDED LINKS'))===0,'K-X 886 Gemini CHALLENGER CONCEDED LINKS marked');
-ok(everyDrv(ln(c,/^CONCEDED LINKS/),m=>m.includes('K-X CONCEDED LINKS'))===0,'K-X 887 ChatGPT CONCEDED LINKS marked');
-ok(everyDrv(ln(d,/^CONCEDED LINKS/),m=>!m.some(x=>x.startsWith('K-X')))===0,'K-X 885 DeepSeek CONCEDED LINKS not marked (its UNEXHIBITED item rests on "cites only [L1]")');
-ok(everyDrv('CONCEDED LINKS: 1 -- premise 2 UNEXHIBITED (no footing offered): the block asserts the link with no layer at all; Acts 1:8 also went unanswered.',m=>!m.some(x=>x.startsWith('K-X')))===0,'K-X a true UNEXHIBITED (no layer) with an unanswered witness beside it is not marked');
-// ---- FIX 4 K-C ----
 ok(everyDrv(ln(g,/^RESULT/),m=>m.includes('K-C RESULT'))===0,'K-C 886 RESULT "Scripture nowhere states" marked');
 ok(everyDrv(ln(g,/^CHALLENGER CHAIN MARK/),m=>m.includes('K-C CHALLENGER CHAIN MARK'))===0,'K-C 886 CHALLENGER CHAIN MARK "without a single biblical text stating" marked');
 ok(everyDrv(ln(d,/^DEFENDER CHAIN MARK/),m=>!m.some(x=>x.startsWith('K-C')))===0,'K-C 885 DEFENDER CHAIN MARK ("the defender conceding no verse names her line") not marked');
@@ -38,7 +52,7 @@ ok(everyDrv(ln(g,/^D5:/),m=>m.includes('K-DG8 D5'))===0,'K-DG8 886 D5 flesh "pre
 ok(everyDrv(ln(J('32194','gemini'),/^D3 vs C1/),m=>m.includes('K-DG8 D3 vs C1'))===0,'K-DG8 880 Gemini "directly exclude Joseph knowing Mary" marked');
 ok(everyDrv(ln(d,/^DEFENDER CHAIN MARK/),m=>!m.some(x=>x.startsWith('K-DG8')))===0,'K-DG8 885 chain mark that describes "routing the flesh descent through Mary" not marked');
 ok(everyDrv('D2 vs C1 (Matthew 1:18-25): UNDERDETERMINED -- the same verses are read two ways and neither reading is excluded by their own words.',m=>!m.length)===0,'K-DG8 hedged "neither reading is excluded" not marked (j843)');
-// ---- cure side: FIX 3, W1, K-X cure ----
+// ---- cure side: FIX 3, W1 ----
 const it=(rule,link,line,side)=>({rule,link,side:side||'DEFENDER',line});
 const reply=t=>({ok:true,text:t});const R=RL.rounds(RL.run('32212'));
 const D5L=ln(d,/^D5:/);const kc={rule:'K-C',side:'CHALLENGER',link:'D5',line:D5L};
@@ -50,11 +64,7 @@ const vb=fullLib(D+'base/Cure Check.js').cureVerdicts([kc],reply(restD5),null,R)
 ok(vb.status==='UNCURED'&&/no RESTATED line for D5/.test(vb.why)&&bn===0,'FIX 3 base refuses "D5 vs C5" ('+vb.why+'); new cures it with a RESPONSE line on all '+cureNodes.length+' cure nodes (bad '+bn+')');
 ok(br===0,'FIX 3 "C5 vs D5 ..." is read as the D5 vs C5 line and serves D5 (bad '+br+')');
 ok(bw===0,'W1 the same reply without a RESPONSE line: UNCURED "no written response" on every cure node (bad '+bw+')');
-{const kx={rule:'K-X',side:'DEFENDER',link:'CONCEDED LINKS',line:ln(g,/^CONCEDED LINKS/)};const L=fullLib(D+'new/Cure Check.js');
- const r1=L.cureVerdicts([kx],reply('RESTATED: CONCEDED LINKS: 1 -- Premise 5 is CONCEDED (stated): "I concede that no verse names Mary as daughter of Heli".\nRESPONSE: K-X CONCEDED LINKS | Accepted: premises 1, 2, 3 and 6 rested on unanswered witnesses, which belong on the collision lines.'),null,R)[0];
- const r2=L.cureVerdicts([kx],reply('RESTATED: CONCEDED LINKS: '+kx.line.replace(/^CONCEDED LINKS:\s*/,'')+'\nRESPONSE: K-X CONCEDED LINKS | I hold the mark is wrong because the ledger marks those verses NOT NAMED.'),null,R)[0];
- ok(r1.status==='CURED'&&r2.status==='UNCURED','K-X cure: a restated count line without the item cures ('+r1.status+'); the same line restated does not ('+r2.status+': '+r2.why+')');
- ok(L.cureAsk([kx],{}).includes('K-X (a CONCEDED LINKS')&&L.cureAsk([kx],{}).includes('RESPONSE: <the flagged item'),'K-X and RESPONSE appear in the cure prompt');}
+{const L=fullLib(D+'new/Cure Check.js');ok(L.cureAsk([kc],{}).includes('RESPONSE: <the flagged item'),'W1 RESPONSE appears in the cure prompt');}
 // ---- W2: the log rows carry the full text ----
 {const L=fullLib(D+'new/Panel Cure Check.js');const long='RESPONSE: K-C D5 | '+'x'.repeat(1500)+'\n'+restD5;const v=L.cureVerdicts([kc],reply(long),null,R);
  const rows=L.enfRows({run_token:'T',seat:'deepseek',role:'panel',model:'m'},v,reply(long),{messages:[{role:'system',content:'s'},{role:'user',content:'transcript'},{role:'assistant',content:'a'},{role:'user',content:'THE CURE ASK'}]});

@@ -1,7 +1,9 @@
 # patch.py (judge_fix2): builds new/<node>.js from base/<node>.js (the live code of ORACLE_DEBATE_V1 version 52b05334, read by GET).
 # Offline; writes only new/. Anchored replacements: it refuses when an anchor is not found the expected number of times.
-# FIX 1a and 2: judge instruction text (Panel Build, Build Independent Verdict; Format Markdown's rule copy).
-# FIX 1b: K-X mark and cure (every node that carries drvCheck; the cure in every node that carries cureVerdicts; flagKey in Format Markdown
+# FIX 1 (UNEXHIBITED clause and K-X): REMOVED by ruling 372 (2026-11-02); the ledger sentence and K-G6 stay.
+# FIX 2: judge instruction text (Panel Build, Build Independent Verdict; Format Markdown's rule copy).
+# R2 (ruling 373): the challenger's answering rounds include [DR1] in every rule copy and checker; the ledger readers find either label form.
+# Marks (every node that carries drvCheck; the cure in every node that carries cureVerdicts; flagKey in Format Markdown
 #         and Build Save Body; the REVIEW count exclusion in Extract Independent Verdict).
 # FIX 3: RESTATED "Dn vs Cm" accepted for Dn, and "Cn vs Dm" read as a collision line (every node that carries cureLines).
 # FIX 4: K-C reads the RESULT line with "nowhere states" and the CHAIN MARK lines (every node that carries netLines).
@@ -17,10 +19,10 @@ def rep(s,old,new,nm,count=1):
 # ---------- FIX 1a and 2: the instruction clause (Panel Build, Build Independent Verdict; single-quoted JS strings) ----------
 OLD_CL="CONCEDED (stated) when the block itself states the surrender; UNEXHIBITED (no footing offered) when the block asserted the link and offered no layer footing at all. A link whose"
 NEW_CL=("CONCEDED (stated) when the block itself states the surrender, only when the block surrenders the link itself; a block that drops a limb and keeps the link in a narrowed form is not a concession: grade the narrowed link; "
-        "UNEXHIBITED (no footing offered) when the block asserted the link and offered no layer footing at all. A pressed witness left unanswered never makes a link UNEXHIBITED; it is graded on that link\\'s collision line as LINK BROKEN with its pressing sentence quoted. A link whose")
+        "UNEXHIBITED (no footing offered) when the block asserted the link and offered no layer footing at all. A link whose")
 # Format Markdown's rule copy (double-quoted JS string).
 OLD_FM=r'''What else decides a link.** The judges' rulebook adds three rules, quoted here in its own words.\n\n- **UNEXHIBITED.** A link is graded UNEXHIBITED \"when the block asserted the link and offered no layer footing at all\"; it counts as conceded.\n'''
-NEW_FM=(r'''What else decides a link.** The judges' rulebook adds four rules, quoted here in its own words.\n\n- **UNEXHIBITED.** A link is graded UNEXHIBITED \"when the block asserted the link and offered no layer footing at all\"; it counts as conceded. It adds: \"A pressed witness left unanswered never makes a link UNEXHIBITED; it is graded on that link's collision line as LINK BROKEN with its pressing sentence quoted.\"\n'''
+NEW_FM=(r'''What else decides a link.** The judges' rulebook adds four rules, quoted here in its own words.\n\n- **UNEXHIBITED.** A link is graded UNEXHIBITED \"when the block asserted the link and offered no layer footing at all\"; it counts as conceded.\n'''
         r'''- **CONCEDED (stated).** A link is graded CONCEDED (stated) \"when the block itself states the surrender, only when the block surrenders the link itself; a block that drops a limb and keeps the link in a narrowed form is not a concession: grade the narrowed link\".\n''')
 
 # ---------- FIX 4: K-C net ----------
@@ -48,30 +50,16 @@ OLD_IT="  if(!item||NET_SKIP.test(u))continue;"
 NEW_IT="  if(!item||NET_SKIP.test(u)||/^(?:DEFENDER|CHALLENGER) CHAIN MARK\\s*:\\s*FOOTED\\b/.test(u))continue; // judge_fix2 FIX 4: a FOOTED chain mark sets nothing aside"
 NEW_PUSH="   out.push({item,side:item==='DEFENDER CHAIN MARK'?'DEFENDER':item==='CHALLENGER CHAIN MARK'?'CHALLENGER':netSide(cl,at),line});break;}} // judge_fix2 FIX 4: a chain mark names its side"
 
-# ---------- FIX 1b: K-X (before drvCheck; pushed after the K-C items) ----------
-KX_DEFS=r'''// judge_fix2 FIX 1b (run 32212, judgments 886 and 887): K-X. A CONCEDED LINKS or CHALLENGER CONCEDED LINKS item tagged UNEXHIBITED whose stated
-// reason is a pressed witness left unanswered. UNEXHIBITED is only "when the block asserted the link and offered no layer footing at all"; a
-// pressed witness left unanswered is graded on that link's collision line as LINK BROKEN with its pressing sentence quoted. The line (quoted
-// words masked) is cut into items at each "premise <n>"; an item is marked when it carries UNEXHIBITED (not "not UNEXHIBITED"), a witness
-// reason (unanswered, unaddressed, unnamed, not named, never names, pressed ... and left), and no footing reason of its own (no layer, no
-// footing, cites only, exhibits no or only, offers no), the tag's own words "(no footing offered)" set aside. One item per count line.
-const KX_HEAD=/^[ \t>#-]*(CHALLENGER CONCEDED LINKS|CONCEDED LINKS)\s*:/i;
-const KX_WIT=/\b(?:unanswered|not\s+answered|unaddressed|unnamed|not\s+named|never\s+name[sd]?|(?:do|does|did)\s+not\s+name|pressed\b[^;.]{0,120}?\b(?:left|went|goes|remain(?:s|ed)?)\s+(?:\S+\s+){0,3}?(?:unanswered|unaddressed|unnamed|unexhibited))/i;
-const KX_FOOT=/\b(?:no\s+(?:layer|prior\s+layer|footing|\[?L[1-4]\]?)|without\s+(?:any\s+)?(?:layer|footing)|cites?\s+only|exhibits?\s+(?:no|only)|offers?\s+no|offered\s+no|one\s+layer|single\s+layer)\b/i;
-function kxLines(text){const out=[];const T=netUnwrap(text).replace(/[*_`]+/g,'');
- for(const raw of T.split('\n')){const line=raw.trim();const h=line.match(KX_HEAD);if(!h)continue;const label=h[1].toUpperCase();
-  const parts=line.slice(h[0].length).replace(NET_QUOTE,'"[quote]"').split(/(?=\b[Pp]remises?\s+\d)/);
-  for(const p0 of parts){const p=p0.replace(/\(\s*no\s+footing\s+offered\s*\)/gi,' ');
-   if(!/\bUNEXHIBITED\b/.test(p)||/\b(?:not|never|nor)\s+UNEXHIBITED\b/i.test(p)||!KX_WIT.test(p)||KX_FOOT.test(p))continue;
-   out.push({item:label,side:label==='CONCEDED LINKS'?'DEFENDER':'CHALLENGER',line,part:p0.trim()});break;}}
- return out;}
+# ---------- marks K-N, K-SC, K-DG8 (before drvCheck; pushed before the K-C items) ----------
+JM_DEFS=r'''// judge_fix2: the count lines (CONCEDED LINKS, CHALLENGER CONCEDED LINKS), read by K-N and K-SC.
+const CNT_HEAD=/^[ \t>#-]*(CHALLENGER CONCEDED LINKS|CONCEDED LINKS)\s*:/i;
 // judge_fix2 E1 (K-N; run 32212, judgment 885): a CONCEDED LINKS item tagged CONCEDED (stated) whose quoted words are a narrowing ("drop any
 // claim that", "I do not claim", "no longer claim", "narrow", "only") and not a surrender (I concede, withdraw, surrender, CONCEDED). The rule:
 // "A limb the link round narrows counts in its narrowed form." Text only: whether the block keeps the link is read from the quotation.
 const KN_NARROW=/\b(?:drop(?:s|ped)?\s+(?:any|the|my|that)\s+(?:\S+\s+){0,2}?(?:claim|form|limb|reading)|no\s+longer\s+(?:claim|hold|assert|rest)|(?:do|does)\s+not\s+(?:claim|assert|need)|narrow\w*|limb\s+(?:is\s+)?dropped|\bonly\b|\balone\b)/i;
 const KN_SURR=/\b(?:I\s+concede|concede[sd]?\s+(?:the\s+|this\s+)?link|withdraw\w*|surrender\w*|CONCEDED\b|I\s+yield|I\s+grant\s+the\s+link)/i;
 function cntItems(text){const out=[];const T=netUnwrap(text).replace(/[*_`]+/g,'');
- for(const raw of T.split('\n')){const line=raw.trim();const h=line.match(KX_HEAD);if(!h)continue;const label=h[1].toUpperCase();const body=line.slice(h[0].length);
+ for(const raw of T.split('\n')){const line=raw.trim();const h=line.match(CNT_HEAD);if(!h)continue;const label=h[1].toUpperCase();const body=line.slice(h[0].length);
   const qs=[];const masked=body.replace(NET_QUOTE,q=>{qs.push(q);return '"[quote'+(qs.length-1)+']"';});
   for(const p0 of masked.split(/(?=\b[Pp]remises?\s+\d|\bLINK\s+\d+\s*(?:\(|:))/)){const pm=p0.match(/^[Pp]remises?\s+(\d+)(?:\s*\(\s*LINK\s+(\d+)\s*\))?/)||(m2=>m2?[m2[0],m2[2]||m2[1],m2[1]]:null)(p0.match(/^LINK\s+(\d+)\s*(?:\(\s*premise\s+(\d+)\s*\))?/i));if(!pm)continue;
    const quotes=[...p0.matchAll(/"\[quote(\d+)\]"/g)].map(m=>qs[+m[1]]);const one=/^(?:[Pp]remise|LINK)\s/.test(p0);
@@ -121,20 +109,15 @@ function dg8Lines(text){const out=[];const T=netUnwrap(text).replace(/[*_`]+/g,'
  return out;}
 '''
 OLD_KCPUSH=''' for(const n of netLines(text)){items.push({rule:'K-C',side:n.side,link:n.item,line:n.line});'''
-NEW_KCPUSH=''' // judge_fix2 FIX 1b (K-X): an UNEXHIBITED count item whose reason is an unanswered pressed witness.
- for(const n of kxLines(text)){items.push({rule:'K-X',side:n.side,link:n.item,line:n.line});marks.push('[AUDIT v23: DEBATE RULE VIOLATION (K-X) -- '+n.item+' tags a link UNEXHIBITED because a pressed witness went unanswered; UNEXHIBITED is only a link whose block offered no layer footing at all, and an unanswered witness is graded on its collision line as LINK BROKEN with its pressing sentence quoted. REVIEW THIS ROW.]');}
- // judge_fix2 E1, E2, E5 (K-N, K-SC, K-DG8): items with a cure, as K-C. (E4, K-K, is defined but not wired: the prompt's KEYSTONE form asks the judge to name the link's conclusion.)
+NEW_KCPUSH=''' // judge_fix2 E1, E2, E5 (K-N, K-SC, K-DG8): items with a cure, as K-C. (E4, K-K, is defined but not wired: the prompt's KEYSTONE form asks the judge to name the link's conclusion.)
  for(const n of knLines(text)){items.push({rule:'K-N',side:n.side,link:n.item,line:n.line});marks.push('[AUDIT v23: DEBATE RULE VIOLATION (K-N) -- '+n.item+' counts premise '+n.premise+' CONCEDED (stated) on words that narrow a limb; a limb the link round narrows counts in its narrowed form, and a narrowing is not a concession. REVIEW THIS ROW.]');}
  for(const n of scLines(text)){items.push({rule:'K-SC',side:n.side,link:n.item,line:n.line,premise:n.premise});marks.push('[AUDIT v23: DEBATE RULE VIOLATION (K-SC) -- '+n.item+' STANDS while '+(n.own?'its own line says the defender conceded':'CONCEDED LINKS counts premise '+n.premise+' (filed under that link) '+(n.tag==='CONCEDED'?'CONCEDED (stated)':'UNEXHIBITED'))+'; a link counted conceded does not stand. REVIEW THIS ROW.]');}
  for(const n of dg8Lines(text)){items.push({rule:'K-DG8',side:n.side,link:n.item,line:n.line});marks.push('[AUDIT v23: DEBATE RULE VIOLATION (K-DG8) -- '+n.item+' rests on Matthew 1:18 or 1:25 read as excluding the union, or on the flesh routed through Mary ("'+String(n.hit).replace(/[\[\]]/g,'')+'"); DG-8 holds that 1:25 bounds the abstinence to the pregnancy. REVIEW THIS ROW.]');}
  for(const n of netLines(text)){items.push({rule:'K-C',side:n.side,link:n.item,line:n.line});'''
 
-# ---------- cure side (K-X, FIX 3, FIX 4 labels) ----------
+# ---------- cure side (FIX 3, FIX 4 labels, new marks) ----------
 OLD_RG='''+"A restated line that keeps the ground is not a cure, and an uncured K-C line is not counted (K-C UNCURED).";'''
 NEW_RG='''+"A restated line that keeps the ground is not a cure, and an uncured K-C line is not counted (K-C UNCURED). "
- +"K-X (a CONCEDED LINKS or CHALLENGER CONCEDED LINKS item tagged UNEXHIBITED because a pressed witness went unanswered): UNEXHIBITED is only a link whose block asserted it and offered no layer footing at all. "
- +"A pressed witness left unanswered never makes a link UNEXHIBITED; it is graded on that link's collision line as LINK BROKEN with its pressing sentence quoted. "
- +"Cure it with one RESTATED line for that count line (its label, a colon, then the whole line) without that item; a restated line that still tags a link UNEXHIBITED for an unanswered witness is not a cure. "
  +"K-N (a CONCEDED LINKS or CHALLENGER CONCEDED LINKS item tagged CONCEDED (stated) on words that narrow a limb, such as \\"I drop any claim that\\"): a link is CONCEDED (stated) only when the block surrenders the link itself; a block that drops a limb and keeps the link in a narrowed form is not a concession: grade the narrowed link. "
  +"Cure it with one RESTATED line for that count line that no longer counts the narrowing as a concession. "
  +"K-SC (a link you graded STANDS while your own line says the defender conceded it, or while your CONCEDED LINKS counts the premise filed under it CONCEDED (stated)): a link counted conceded does not stand. Cure it with one RESTATED line for that link (D<n> or D<n> vs C<m>) that does not grade it STANDS; "
@@ -142,13 +125,13 @@ NEW_RG='''+"A restated line that keeps the ground is not a cure, and an uncured 
  +"K-DG8 (a line whose ground reads Matthew 1:18 \\"came together\\" or Matthew 1:25 \\"knew her not till\\" as excluding the union, or routes the flesh through Mary): the record holds that \\"knew her not till she had brought forth her firstborn son\\" bounds the abstinence to the pregnancy, and neither verse states that no union took place. "
  +"Cure it with one RESTATED line for that item whose ground does not rest on that reading.";'''
 OLD_FORM='''+"RESTATED: <for a K-C item on a REASONING, KEYSTONE, STANDING or CONCEDED line: that label, a colon, then the whole regraded sentence>\\n"'''
-NEW_FORM='''+"RESTATED: <for a K-C item on a REASONING, RESULT, KEYSTONE, STANDING, CONCEDED or CHAIN MARK line, or a K-X item on a CONCEDED line: that label, a colon, then the whole regraded sentence>\\n"'''
+NEW_FORM='''+"RESTATED: <for a K-C item on a REASONING, RESULT, KEYSTONE, STANDING, CONCEDED or CHAIN MARK line, or a K-N item on a CONCEDED line: that label, a colon, then the whole regraded sentence>\\n"'''
 OLD_LBL="const cureLabel=x=>x.rule==='K-B'?x.link:((x.rule==='K-G1'||x.rule==='K-G4'||x.rule==='K-G6'||x.rule==='K-G7'||x.rule==='K-G8'||x.rule==='K-S'||x.rule==='K-C')?x.rule+' '+x.link:'K-G3 '+x.side);"
-NEW_LBL="const cureLabel=x=>x.rule==='K-B'?x.link:((x.rule==='K-G1'||x.rule==='K-G4'||x.rule==='K-G6'||x.rule==='K-G7'||x.rule==='K-G8'||x.rule==='K-S'||x.rule==='K-C'||x.rule==='K-X'||x.rule==='K-N'||x.rule==='K-SC'||x.rule==='K-K'||x.rule==='K-DG8')?x.rule+' '+x.link:'K-G3 '+x.side);"
+NEW_LBL="const cureLabel=x=>x.rule==='K-B'?x.link:((x.rule==='K-G1'||x.rule==='K-G4'||x.rule==='K-G6'||x.rule==='K-G7'||x.rule==='K-G8'||x.rule==='K-S'||x.rule==='K-C'||x.rule==='K-N'||x.rule==='K-SC'||x.rule==='K-K'||x.rule==='K-DG8')?x.rule+' '+x.link:'K-G3 '+x.side);"
 OLD_ASK="kg.map(x=>cureLabel(x)+': '+((x.rule==='K-G1'||x.rule==='K-G4'||x.rule==='K-G6'||x.rule==='K-G7'||x.rule==='K-G8'||x.rule==='K-S'||x.rule==='K-C')?"
-NEW_ASK="kg.map(x=>cureLabel(x)+': '+((x.rule==='K-G1'||x.rule==='K-G4'||x.rule==='K-G6'||x.rule==='K-G7'||x.rule==='K-G8'||x.rule==='K-S'||x.rule==='K-C'||x.rule==='K-X'||x.rule==='K-N'||x.rule==='K-SC'||x.rule==='K-K'||x.rule==='K-DG8')?"
+NEW_ASK="kg.map(x=>cureLabel(x)+': '+((x.rule==='K-G1'||x.rule==='K-G4'||x.rule==='K-G6'||x.rule==='K-G7'||x.rule==='K-G8'||x.rule==='K-S'||x.rule==='K-C'||x.rule==='K-N'||x.rule==='K-SC'||x.rule==='K-K'||x.rule==='K-DG8')?"
 OLD_KEYS="const keys=(x.rule==='K-B'||x.rule==='K-S'||x.rule==='K-C')?[x.link]"
-NEW_KEYS="const keys=(x.rule==='K-B'||x.rule==='K-S'||x.rule==='K-C'||x.rule==='K-X'||x.rule==='K-N'||x.rule==='K-SC'||x.rule==='K-K'||x.rule==='K-DG8')?[x.link]"
+NEW_KEYS="const keys=(x.rule==='K-B'||x.rule==='K-S'||x.rule==='K-C'||x.rule==='K-N'||x.rule==='K-SC'||x.rule==='K-K'||x.rule==='K-DG8')?[x.link]"
 OLD_RL="  else if(k[1]==='RESTATED'&&(m=r.match(/^(REASONING|KEYSTONE|RESULT|DEFENSE STANDING|CHALLENGE STANDING|CHALLENGER CONCEDED LINKS|CONCEDED LINKS)\\s*[:\\-–—]+\\s*/i)))"
 NEW_RL="  else if(k[1]==='RESTATED'&&(m=r.match(/^(REASONING|KEYSTONE|RESULT|DEFENSE STANDING|CHALLENGE STANDING|CHALLENGER CONCEDED LINKS|CONCEDED LINKS|DEFENDER CHAIN MARK|CHALLENGER CHAIN MARK)\\s*[:\\-–—]+\\s*/i)))"
 OLD_RD="   o.restated.push({link:m[2]?cureId(m[1],m[2]):'D'+m[1],grade:g?g[1]:null,text:r,line:l});}"
@@ -165,12 +148,7 @@ function cureRest(o,x){const V=s=>String(s==null?'':s).toUpperCase().replace(/\\
 OLD_RF="o.restated.filter(r=>U(r.link)===U(x.link))"
 NEW_RF="cureRest(o,x)"
 OLD_UNK="  return res('UNCURED','unknown rule',null);});}"
-NEW_UNK='''  // judge_fix2 FIX 1b: K-X is cured by one RESTATED line for the count line that no longer tags a link UNEXHIBITED for an unanswered witness.
-  if(x.rule==='K-X'){const rs=cureRest(o,x);
-   if(!rs.length)return res('UNCURED','no RESTATED line for '+x.link,null);if(rs.length>1)return res('UNCURED','two RESTATED lines for '+x.link,rs.map(r=>r.line));
-   if(kxLines(x.link+': '+rs[0].text).length)return res('UNCURED','the restated line still tags a link UNEXHIBITED for a pressed witness left unanswered',[rs[0].line]);
-   return res('CURED','restated without the unanswered-witness UNEXHIBITED tag',[rs[0].line]);}
-  // judge_fix2 E1, E4, E5: K-N, K-K and K-DG8 are cured by one RESTATED line for the item that its own test no longer marks.
+NEW_UNK='''  // judge_fix2 E1, E4, E5: K-N, K-K and K-DG8 are cured by one RESTATED line for the item that its own test no longer marks.
   if(x.rule==='K-N'||x.rule==='K-K'||x.rule==='K-DG8'){const rs=cureRest(o,x);const test=x.rule==='K-N'?knLines:x.rule==='K-K'?kkLines:dg8Lines;
    if(!rs.length)return res('UNCURED','no RESTATED line for '+x.link,null);if(rs.length>1)return res('UNCURED','two RESTATED lines for '+x.link,rs.map(r=>r.line));
    const txt=/^D\d+/i.test(x.link)?rs[0].text:x.link+': '+rs[0].text;
@@ -243,9 +221,9 @@ NEW_PCR=" const at=new Date().toISOString();return [{json:{run_token:TOK,sub:{sl
 
 # ---------- flagKey (Format Markdown, Build Save Body) and the REVIEW count (Extract Independent Verdict) ----------
 OLD_FK="\\((K-S|K-C)\\) -- (D\\d+(?: vs C\\d+)?|REASONING|KEYSTONE|RESULT|(?:DEFENSE|CHALLENGE) STANDING|(?:CHALLENGER )?CONCEDED LINKS)(?=[ ;:.,\\]]|$)/"
-NEW_FK="\\((K-S|K-C|K-X|K-N|K-SC|K-K|K-DG8)\\) -- (D\\d+(?: vs C\\d+)?|REASONING|KEYSTONE|RESULT|(?:DEFENSE|CHALLENGE) STANDING|(?:DEFENDER|CHALLENGER) CHAIN MARK|(?:CHALLENGER )?CONCEDED LINKS)(?=[ ;:.,\\]]|$)/"
+NEW_FK="\\((K-S|K-C|K-N|K-SC|K-K|K-DG8)\\) -- (D\\d+(?: vs C\\d+)?|REASONING|KEYSTONE|RESULT|(?:DEFENSE|CHALLENGE) STANDING|(?:DEFENDER|CHALLENGER) CHAIN MARK|(?:CHALLENGER )?CONCEDED LINKS)(?=[ ;:.,\\]]|$)/"
 OLD_NF="DEBATE RULE VIOLATION \\((?:K-U|K-S2|K-C)\\)"
-NEW_NF="DEBATE RULE VIOLATION \\((?:K-U|K-S2|K-C|K-X|K-N|K-SC|K-K|K-DG8)\\)"
+NEW_NF="DEBATE RULE VIOLATION \\((?:K-U|K-S2|K-C|K-N|K-SC|K-K|K-DG8)\\)"
 
 # ---------- FIX 5: alternate pool ----------
 OLD_AB="  if(!QA&&used.indexOf(a.api_model)>=0)return 'G3: '+a.api_model+' already sits as the other alternate';return null;};"
@@ -313,6 +291,42 @@ NEW_RN=r"""// judge_fix2 E6 (runs 32157 E1-E3, 32205 G, 32212 H): checks on the 
  SX.forEach(x=>FF.push('[AUDIT v23: SYNTHESIS CHECK '+x+'. REVIEW THIS ROW.]'));}
 const RN=FF.length?FF.join(' '):null;"""
 
+# ---------- R2 (ruling 373): an answer counts in any later round of the side that holds the link; the challenger's round 1 included ----------
+R2_TEXT=[ # Panel Build and Build Independent Verdict (single-quoted JS strings)
+ ("(for the defender: [CR2] or [CR3]; for the challenger: [DR2] or [DR3])","(for the defender: [CR2] or [CR3]; for the challenger: [DR1], [DR2] or [DR3])"),
+ ("the challenger\\'s [DR2] or [DR3])","the challenger\\'s [DR1], [DR2] or [DR3], each after the round that pressed the verse)"),
+ ("for the challenger [DR2] or [DR3], later than","for the challenger [DR1], [DR2] or [DR3], later than"),
+ ("'AGAINST THE CHALLENGER, answered in [DR2] or [DR3]'","'AGAINST THE CHALLENGER, answered in [DR1], [DR2] or [DR3]'"),
+ ("'a later round of the challenger, [DR2] or [DR3]'","'a later round of the challenger, [DR1], [DR2] or [DR3]'"),
+ # the ledger code: a verse pressed in [CR1] and named in [DR1] is answered (as one pressed in [CR1] or [CR2] and named in [DR2] already was)
+ ("const side=(pressing,answering,headRe,early,earlier)=>{","const side=(pressing,answering,headRe,early,earlier,early2,earlier2)=>{ /* judge_fix2 R2: early2/earlier2, the round-1 answer */"),
+ ("const NE=early?namedIn(early):null,PE=early?namedIn(earlier):null;","const NE=early?namedIn(early):null,PE=early?namedIn(earlier):null,NE2=early2?namedIn(early2):null,PE2=early2?namedIn(earlier2):null;"),
+ ("if(r.cvs.some(cv=>isNamed(N,r.book||r.ctx||'',cv)||(NE&&isNamed(PE,r.book||r.ctx||'',cv)&&isNamed(NE,r.book||r.ctx||'',cv))))named++;",
+  "if(r.cvs.some(cv=>isNamed(N,r.book||r.ctx||'',cv)||(NE&&isNamed(PE,r.book||r.ctx||'',cv)&&isNamed(NE,r.book||r.ctx||'',cv))||(NE2&&isNamed(PE2,r.book||r.ctx||'',cv)&&isNamed(NE2,r.book||r.ctx||'',cv))))named++;"),
+ ("challenger:side(F.cr3,F.dr3,CH_RE,F.gr2,String(F.cr1||'')+LF+String(F.cr2||''))","challenger:side(F.cr3,F.dr3,CH_RE,F.gr2,String(F.cr1||'')+LF+String(F.cr2||''),F.gr1,F.cr1)"),
+ ("[['[DR2]',F.gr2],['[DR3]',F.dr3]])});","[['[DR1]',F.gr1],['[DR2]',F.gr2],['[DR3]',F.dr3]])}); // judge_fix2 R2: [DR1] answers what [CR1] cited (citedNotNamed keeps only rounds after the first citation)"),
+]
+R2_CURE=[ # every cure node
+ ("([CR2] or [CR3] against the defender, [DR2] or [DR3] against the challenger), add a SHORT line","([CR2] or [CR3] against the defender, [DR1], [DR2] or [DR3] against the challenger, each after the pressing round), add a SHORT line"),
+ ("([CR2] or [CR3] for a defender link, [DR2] or [DR3] for a challenger link)","([CR2] or [CR3] for a defender link, [DR1], [DR2] or [DR3] for a challenger link)"),
+ ("const ansK=pr=>(x.side==='DEFENDER'?['CR2','CR3']:['DR2','DR3']).filter(","const ansK=pr=>(x.side==='DEFENDER'?['CR2','CR3']:['DR1','DR2','DR3']).filter( /* judge_fix2 R2 */"),
+ ("\\[(CR2|CR3|DR2|DR3)\\]\\s*\\|\\s*[\"“](.+?)[\"”]\\s*\\|\\s*(\\S.{9,})$/i)))o.short.push(","\\[(CR2|CR3|DR1|DR2|DR3)\\]\\s*\\|\\s*[\"“](.+?)[\"”]\\s*\\|\\s*(\\S.{9,})$/i)))o.short.push("),
+]
+R2_DRV=[ # every node that carries drvCheck: the answering round K-S and K-S2 read
+ ("const DRV_ANS=/[\\[(](?:CR|DR)[23]\\b/i;","const DRV_ANS=/[\\[(](?:CR[23]|DR[1-3])\\b/i; // judge_fix2 R2: [DR1] answers a press made in [CR1]"),
+ ("const DRV_BARE=/\\b(?:in|at|by|from)\\s+(?:CR|DR)[23]\\b/i;","const DRV_BARE=/\\b(?:in|at|by|from)\\s+(?:CR[23]|DR[1-3])\\b/i; // judge_fix2 R2"),
+ ("naming no later round ([CR2], [CR3], [DR2], [DR3])","naming no later round ([CR2], [CR3], [DR1], [DR2], [DR3])"),
+]
+# The ledger readers (K-G6, the premise-to-link map, the counted-premise check, the K-C chain quote) looked for "AGAINST THE DEFENDER, answered
+# in [CR3]:" while Panel Build writes "... answered in [CR2] or [CR3]:" (BB-8172 (v)); found by judge_fix2: K-G6 has not fired since judgment 818.
+R2_LAB_DEF=r"""// judge_fix2 R2: the PRESSED-WITNESS LEDGER heading of a side, in whatever answering rounds it names ("answered in [CR3]:" in the link-round
+// prompts; "answered in [CR2] or [CR3]:" and "answered in [DR1], [DR2] or [DR3]:" in the judge prompt). Position, or -1.
+function drvLabAt(t,side,from){const re=new RegExp('AGAINST THE '+side+', answered in [^:\\n]{0,40}:','g');re.lastIndex=from||0;const m=re.exec(String(t));return m?m.index:-1;}
+"""
+R2_LAB=[("ptext.indexOf('AGAINST THE DEFENDER, answered in [CR3]:')","drvLabAt(ptext,'DEFENDER',0)"),
+ ("ptext.indexOf('AGAINST THE CHALLENGER, answered in [DR3]:',i)","drvLabAt(ptext,'CHALLENGER',i)"),
+ ("t.indexOf('AGAINST THE CHALLENGER, answered in [DR3]:')","drvLabAt(t,'CHALLENGER',0)")]
+
 done=[]
 for f in sorted(os.listdir(B)):
     s=open(f'{B}/{f}').read();nm=f[:-3];t=s
@@ -328,7 +342,7 @@ for f in sorted(os.listdir(B)):
     if 'function netLines' in s:
         t=rep(t,OLD_NS1,NEW_NS1,nm); t=rep(t,OLD_NP,NEW_NP,nm); t=rep(t,OLD_NH,NEW_NH,nm); t=rep(t,OLD_SK,NEW_SK,nm); t=rep(t,OLD_PUSH,NEW_PUSH,nm); t=rep(t,OLD_IT,NEW_IT,nm); t=rep(t,OLD_NR,NEW_NR,nm); t=rep(t,OLD_NM,NEW_NM,nm); t=rep(t,OLD_CLS,NEW_CLS,nm)
     if 'function drvCheck' in s:
-        t=rep(t,'function drvCheck(',KX_DEFS+'function drvCheck(',nm); t=rep(t,OLD_KCPUSH,NEW_KCPUSH,nm)
+        t=rep(t,'function drvCheck(',JM_DEFS+'function drvCheck(',nm); t=rep(t,OLD_KCPUSH,NEW_KCPUSH,nm)
     if 'function cureVerdicts' in s:
         t=rep(t,OLD_RG,NEW_RG,nm); t=rep(t,OLD_FORM,NEW_FORM,nm); t=rep(t,OLD_LBL,NEW_LBL,nm); t=rep(t,OLD_ASK,NEW_ASK,nm); t=rep(t,OLD_KEYS,NEW_KEYS,nm)
         t=rep(t,OLD_RL,NEW_RL,nm); t=rep(t,OLD_RD,NEW_RD,nm); t=rep(t,OLD_CID,NEW_CID,nm); t=rep(t,OLD_RF,NEW_RF,nm,3); t=rep(t,OLD_UNK,NEW_UNK,nm)
@@ -340,6 +354,18 @@ for f in sorted(os.listdir(B)):
     if nm=='Panel Check': t=rep(t,OLD_PCK,NEW_PCK,nm); t=rep(t,OLD_PCR,NEW_PCR,nm)
     if nm=='Citation Scan': t=rep(t,OLD_LB,NEW_LB,nm); t=rep(t,OLD_GR,NEW_GR,nm)
     if nm=='Quote Compare': t=rep(t,OLD_QC,NEW_QC,nm)
+    if nm in ('Panel Build','Build Independent Verdict'):
+        for a,b in R2_TEXT: t=rep(t,a,b,nm)
+    if 'function cureVerdicts' in s:
+        for a,b in R2_CURE: t=rep(t,a,b,nm)
+    if 'function drvCheck' in s:
+        for a,b in R2_DRV: t=rep(t,a,b,nm)
+    if "AGAINST THE CHALLENGER, answered in [DR3]:" in s and 'function drvChainOf' in s:
+        t=rep(t,'function drvChainOf(',R2_LAB_DEF+'function drvChainOf(',nm)
+        for a,b in R2_LAB:
+            c=t.count(a)
+            if c: t=t.replace(a,b)
+        if "answered in [DR3]:')" in t.replace("// (\"AGAINST","") and t.count("indexOf('AGAINST THE"): sys.exit(nm+': a ledger reader was left')
     if t!=s: open(f'{N}/{f}','w').write(t);done.append(nm)
     elif os.path.exists(f'{N}/{f}'): os.remove(f'{N}/{f}')
 print(len(done),'nodes written:',', '.join(done))

@@ -8,11 +8,8 @@
 - The database was read with SELECT only; data/ holds those reads. sql/ and flow/ hold drafts that are NOT applied.
 
 ## Faults verified against the stored rows
-- 1 UNEXHIBITED misapplied: 886 Gemini (premises 1, 2, 3, 6; challenger 5, 6) and 887 ChatGPT tag UNEXHIBITED "because ... was pressed and left
-  unanswered". CONFLICT: the judge prompt itself says (Panel Build, Build Independent Verdict) "A premise whose pressed witness goes unanswered is
-  UNEXHIBITED: it counts toward CONCEDED LINKS and the standings", and K-G6 (the PRESSED-WITNESS LEDGER check) makes a judge count such a premise.
-  The judges followed that sentence. The new clause contradicts it, and K-X and K-G6 can mark the same premise both ways. The sentence and K-G6 are
-  left as they are (not in the brief); both need a ruling before this goes live.
+- 1 UNEXHIBITED misapplied: verified (886, 887), then REMOVED by ruling 372: the prompt sentence "A premise whose pressed witness goes
+  unanswered is UNEXHIBITED: it counts toward CONCEDED LINKS and the standings" and K-G6 stay; no new clause, no K-X (none left in new/).
 - 2 Narrowing as concession: 885 DeepSeek counts "I drop any claim that ..." (premises 1, 3, 4; challenger 2, 3) as CONCEDED (stated).
 - 3 "no RESTATED line for D5": 885's report; the restated "D5 vs C5" line itself is not stored (UNCURED items keep no statement), so the fixture
   is typed from the review's quotation and the stored judge statement.
@@ -27,10 +24,16 @@
   stamped into panel_verdict by derive_debate_outcome and mapped by d5_outcome_for to "UNGRADED — REVIEW". No code node sets it.
 
 ## What changed (nodes)
-- FIX 1a, 2: Panel Build and Build Independent Verdict (both CONCEDED LINKS clauses each); Format Markdown's rule copy (same words; "three rules"
-  becomes "four"). Reserve Build and Alternate Build carry no rule text: they reuse Panel Build's prompt from its call body.
-- FIX 1b K-X: kxLines + a K-X item in drvCheck (17 nodes, as K-C); cure branch, CURE_RULE_G text, cureLabel/cureAsk/keys (14 cure nodes); flagKey
-  (Format Markdown, Build Save Body); REVIEW-count exclusion (Extract Independent Verdict). Cure: one RESTATED count line without the item.
+- FIX 2: Panel Build and Build Independent Verdict (both CONCEDED LINKS clauses each); Format Markdown's rule copy (a CONCEDED (stated) bullet,
+  same words; "three rules" becomes "four"). Reserve Build and Alternate Build carry no rule text: they reuse Panel Build's prompt.
+- R2 (ruling 373): an answer counts in any later round of the side that holds the link, the challenger's [DR1] included. Rule text and ledger
+  text in Panel Build and Build Independent Verdict; the K-G1 SHORT and K-S cure text, the SHORT parser and the K-G1 answer search (14 cure
+  nodes); DRV_ANS and DRV_BARE, which K-S and K-S2 read (17 nodes); the ledger code: a verse pressed in [CR1] and named in [DR1] is answered,
+  and the "cited in" line counts [DR1] after the first citation. K-G4 already searched [DR1] (checker_fix). K-U names no rounds. D3 Build and
+  C3 Build (the debaters' link-round ledgers) are not judge checks and are unchanged.
+- R2 finding: the ledger readers (K-G6, the premise-to-link map, the counted-premise count, the K-C chain quote; 17 nodes) looked for
+  "AGAINST THE DEFENDER, answered in [CR3]:", while Panel Build writes "answered in [CR2] or [CR3]:", so K-G6 has not fired since judgment 818
+  (SQL: 5 K-G6 marks, ids 801-818). drvLabAt now finds either form; K-G6 will fire again.
 - FIX 3: cureRest (14 nodes): a RESTATED "Dn vs Cm" serves a bare Dn item (and "Dm vs Cn" a bare Cn) when no line has the item's own label;
   "Cn vs Dm ..." is read as the Dm vs Cn line. Used by K-B, K-S, K-C and the new rules.
 - FIX 4 K-C (17 nodes): "nowhere states/names/says", "without a single ... text stating", and (E7) "no exhibit/passage/text ... says/states";
@@ -70,11 +73,11 @@
   same credential and retry as Write Judgment 1-3); write_nodes.py does not add it.
 
 ## Tests (node; outputs in test/)
-- compile_out.txt: 24 new files compile. unit_out.txt: 40 fixtures, 0 bad (every fixture runs on every node that carries the function).
+- compile_out.txt: 24 new files compile. unit_out.txt: 43 fixtures, 0 bad (R1 and R2 included) (every fixture runs on every node that carries the function).
 - replay_out.txt: four runs, every seat and the single judge; BASE, NEW (W1 makes every stored reply fail: none has RESPONSE lines) and NEW+R
   (a RESPONSE line added per item). New marks are UNCURED there because no stored reply answered them.
-- population_out.txt: 663 judge texts. New items: K-X 70 (47 texts), K-N 9, K-SC 0, K-DG8 34, K-K 0 (not wired); K-C 274 -> 290 (8 removed,
-  24 added). Samples of up to 20 read: K-X 20/20 true; K-N 8/9 (one premise quotation with "only"); K-DG8 18/20 (two hedged or reported);
+- population_out.txt: 663 judge texts. New items: K-N 9, K-SC 0, K-DG8 34; K-C 274 -> 290 (8 removed, 24 added). Samples of up to 20
+  read: K-N 8/9 (one premise quotation with "only"); K-DG8 18/20 (two hedged or reported);
   K-C added 18/20 true, 1 false (j834 single quote after a possessive), 1 unread to the end (j656). K-C removed: 6 confirmed reports or quotes;
   j656 D2 vs C2 probably a true mark lost ("grants"); j809 not resolved.
 - cite_replay_out.txt: the base replay equals the stored citation_check for both runs. 32205: DOES NOT EXIST 16 -> 0 (15 now MATCH, Job 25:4 now

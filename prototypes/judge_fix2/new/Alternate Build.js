@@ -31,11 +31,11 @@ function drvExhibits(line,needQuote,formC,distinct){
 const drvKinds=(line)=>drvExhibits(line,false,true,true);
 const DRV_WORDS=/\b(?:unanswered|not answered|unnamed|not named|none named|neither named|unaddressed)\b/i;
 // P2D v6a item 1b (BB-8136): K-S, a STANDS or UNDERDETERMINED line whose ground is that a single verse does not state a link or its
-// contrary, naming no later round ([CR2], [CR3], [DR2], [DR3]) that answered the witness. Sent to the cure to be regraded on the answered test.
+// contrary, naming no later round ([CR2], [CR3], [DR1], [DR2], [DR3]) that answered the witness. Sent to the cure to be regraded on the answered test.
 const DRV_STATE=/\b(?:do|does|did)\s+not\s+state\b|\bnot\s+stated\b|\bnever\s+states?\b|\bneither\s+states?\b|\bnor\s+states?\b|\bno\s+(?:\S+\s+){0,4}?(?:verse|row|witness|quotation|passage|text)s?\b(?:\s+\S+){0,4}?\s+(?:states?|names?)\b|\bno\s+\[L[1-4]\](?:\s*\/\s*\[L[1-4]\])*\s+(?:states?|names?)\b|\b(?:met\s+by|without)\s+any\s+(?:verse|row|witness|quotation)\s+that\s+(?:states?|names?)\b/i;
-const DRV_ANS=/[\[(](?:CR|DR)[23]\b/i;
+const DRV_ANS=/[\[(](?:CR[23]|DR[1-3])\b/i; // judge_fix2 R2: [DR1] answers a press made in [CR1]
 // BB-8172 C2 (B): a round named without a bracket after in, at, by or from ("answered in CR3") counts as named, for the K-S2 mark only.
-const DRV_BARE=/\b(?:in|at|by|from)\s+(?:CR|DR)[23]\b/i; // a round named as answering ("answered in CR3"), never a label such as "Challenger-DR1/DR2" (642)
+const DRV_BARE=/\b(?:in|at|by|from)\s+(?:CR[23]|DR[1-3])\b/i; // judge_fix2 R2 // a round named as answering ("answered in CR3"), never a label such as "Challenger-DR1/DR2" (642)
 // BB-8172 C2 (A): K-U, a STANDS or UNDERDETERMINED line that itself says a witness went unnamed or unanswered (8193, the 7 MARK lines).
 // Positive forms only; a form counts only when the clause before it (since the last ; . or --) holds no negator, so "no witness ...
 // was left unanswered" and "neither reading was left unanswered" are not marked (8193, the 14 NO MARK lines).
@@ -112,38 +112,27 @@ function netLines(text,links){const out=[];const T=netUnwrap(text).replace(/[*_`
 // BB-8327 D1 (q3): the chain a K-C line set aside, quoted from the judge's prompt; both chains on a collision line.
 // DEFENDER: the numbered lines under its first "DECLARED CHAIN" heading. CHALLENGER: the premises the ledger lists against it
 // ("AGAINST THE CHALLENGER, answered in [DR3]:"), which are the challenger's links as [DR3] answers them. Neither found: said so.
+// judge_fix2 R2: the PRESSED-WITNESS LEDGER heading of a side, in whatever answering rounds it names ("answered in [CR3]:" in the link-round
+// prompts; "answered in [CR2] or [CR3]:" and "answered in [DR1], [DR2] or [DR3]:" in the judge prompt). Position, or -1.
+function drvLabAt(t,side,from){const re=new RegExp('AGAINST THE '+side+', answered in [^:\\n]{0,40}:','g');re.lastIndex=from||0;const m=re.exec(String(t));return m?m.index:-1;}
 function drvChainOf(ptext,side){const t=String(ptext||'');const cut=s=>{s=s.replace(/[*_`#]+/g,'').replace(/\s+/g,' ').trim();return s.length>110?s.slice(0,107)+'...':s;};
  if(side==='DEFENDER'){const i=t.search(/DECLARED CHAIN\b/);if(i<0)return null;const L=[];
   for(const l of t.slice(i).split('\n').slice(1)){const m=l.match(/^\s*(\d+)[.)]\s+(\S.*)$/);if(m){L.push('LINK '+m[1]+' -- '+cut(m[2]));continue;}if(L.length&&l.trim())break;}
   return L.length?{where:'DECLARED CHAIN',links:L}:null;}
- const i=t.indexOf('AGAINST THE CHALLENGER, answered in [DR3]:');if(i<0)return null;const k=t.indexOf('A verse marked NOT NAMED',i);
+ const i=drvLabAt(t,'CHALLENGER',0);if(i<0)return null;const k=t.indexOf('A verse marked NOT NAMED',i);
  const L=t.slice(i,k<0?t.length:k).split('\n').map(l=>l.trim()).filter(l=>/^premise \d+/.test(l)).map(l=>{const m=l.match(/^premise (\d+)(?: \(LINK \d+\))?:\s*(.*)$/);return 'C'+m[1]+' -- '+cut(m[2].replace(/\s*NOT NAMED:.*$/,''));});
  return L.length?{where:'LEDGER [DR3]',links:L}:null;}
 function drvChains(ptext,x){const sides=(/ vs C\d+$/.test(x.link)||x.side==='BOTH')?['DEFENDER','CHALLENGER']:[x.side||'CHALLENGER'];
  return sides.map(sd=>{const c=drvChainOf(ptext,sd);return sd+' CHAIN'+(c?' ('+c.where+'): '+c.links.join('; '):': not found in the prompt; weigh its links as the rounds give them');}).join(' || ');}
-// judge_fix2 FIX 1b (run 32212, judgments 886 and 887): K-X. A CONCEDED LINKS or CHALLENGER CONCEDED LINKS item tagged UNEXHIBITED whose stated
-// reason is a pressed witness left unanswered. UNEXHIBITED is only "when the block asserted the link and offered no layer footing at all"; a
-// pressed witness left unanswered is graded on that link's collision line as LINK BROKEN with its pressing sentence quoted. The line (quoted
-// words masked) is cut into items at each "premise <n>"; an item is marked when it carries UNEXHIBITED (not "not UNEXHIBITED"), a witness
-// reason (unanswered, unaddressed, unnamed, not named, never names, pressed ... and left), and no footing reason of its own (no layer, no
-// footing, cites only, exhibits no or only, offers no), the tag's own words "(no footing offered)" set aside. One item per count line.
-const KX_HEAD=/^[ \t>#-]*(CHALLENGER CONCEDED LINKS|CONCEDED LINKS)\s*:/i;
-const KX_WIT=/\b(?:unanswered|not\s+answered|unaddressed|unnamed|not\s+named|never\s+name[sd]?|(?:do|does|did)\s+not\s+name|pressed\b[^;.]{0,120}?\b(?:left|went|goes|remain(?:s|ed)?)\s+(?:\S+\s+){0,3}?(?:unanswered|unaddressed|unnamed|unexhibited))/i;
-const KX_FOOT=/\b(?:no\s+(?:layer|prior\s+layer|footing|\[?L[1-4]\]?)|without\s+(?:any\s+)?(?:layer|footing)|cites?\s+only|exhibits?\s+(?:no|only)|offers?\s+no|offered\s+no|one\s+layer|single\s+layer)\b/i;
-function kxLines(text){const out=[];const T=netUnwrap(text).replace(/[*_`]+/g,'');
- for(const raw of T.split('\n')){const line=raw.trim();const h=line.match(KX_HEAD);if(!h)continue;const label=h[1].toUpperCase();
-  const parts=line.slice(h[0].length).replace(NET_QUOTE,'"[quote]"').split(/(?=\b[Pp]remises?\s+\d)/);
-  for(const p0 of parts){const p=p0.replace(/\(\s*no\s+footing\s+offered\s*\)/gi,' ');
-   if(!/\bUNEXHIBITED\b/.test(p)||/\b(?:not|never|nor)\s+UNEXHIBITED\b/i.test(p)||!KX_WIT.test(p)||KX_FOOT.test(p))continue;
-   out.push({item:label,side:label==='CONCEDED LINKS'?'DEFENDER':'CHALLENGER',line,part:p0.trim()});break;}}
- return out;}
+// judge_fix2: the count lines (CONCEDED LINKS, CHALLENGER CONCEDED LINKS), read by K-N and K-SC.
+const CNT_HEAD=/^[ \t>#-]*(CHALLENGER CONCEDED LINKS|CONCEDED LINKS)\s*:/i;
 // judge_fix2 E1 (K-N; run 32212, judgment 885): a CONCEDED LINKS item tagged CONCEDED (stated) whose quoted words are a narrowing ("drop any
 // claim that", "I do not claim", "no longer claim", "narrow", "only") and not a surrender (I concede, withdraw, surrender, CONCEDED). The rule:
 // "A limb the link round narrows counts in its narrowed form." Text only: whether the block keeps the link is read from the quotation.
 const KN_NARROW=/\b(?:drop(?:s|ped)?\s+(?:any|the|my|that)\s+(?:\S+\s+){0,2}?(?:claim|form|limb|reading)|no\s+longer\s+(?:claim|hold|assert|rest)|(?:do|does)\s+not\s+(?:claim|assert|need)|narrow\w*|limb\s+(?:is\s+)?dropped|\bonly\b|\balone\b)/i;
 const KN_SURR=/\b(?:I\s+concede|concede[sd]?\s+(?:the\s+|this\s+)?link|withdraw\w*|surrender\w*|CONCEDED\b|I\s+yield|I\s+grant\s+the\s+link)/i;
 function cntItems(text){const out=[];const T=netUnwrap(text).replace(/[*_`]+/g,'');
- for(const raw of T.split('\n')){const line=raw.trim();const h=line.match(KX_HEAD);if(!h)continue;const label=h[1].toUpperCase();const body=line.slice(h[0].length);
+ for(const raw of T.split('\n')){const line=raw.trim();const h=line.match(CNT_HEAD);if(!h)continue;const label=h[1].toUpperCase();const body=line.slice(h[0].length);
   const qs=[];const masked=body.replace(NET_QUOTE,q=>{qs.push(q);return '"[quote'+(qs.length-1)+']"';});
   for(const p0 of masked.split(/(?=\b[Pp]remises?\s+\d|\bLINK\s+\d+\s*(?:\(|:))/)){const pm=p0.match(/^[Pp]remises?\s+(\d+)(?:\s*\(\s*LINK\s+(\d+)\s*\))?/)||(m2=>m2?[m2[0],m2[2]||m2[1],m2[1]]:null)(p0.match(/^LINK\s+(\d+)\s*(?:\(\s*premise\s+(\d+)\s*\))?/i));if(!pm)continue;
    const quotes=[...p0.matchAll(/"\[quote(\d+)\]"/g)].map(m=>qs[+m[1]]);const one=/^(?:[Pp]remise|LINK)\s/.test(p0);
@@ -216,8 +205,6 @@ function drvCheck(text,dConc,cConc,dStand,cStand,askedCC){const items=[],marks=[
   if(st==='SELF-SUPPORTED'&&cnt[side]>0){items.push({rule:'K-G3',side,link:null,line:null});marks.push('[AUDIT v21: DEBATE RULE VIOLATION (K-G3) -- '+lab+' STANDING SELF-SUPPORTED while '+cnt[side]+' '+side+' LINK BROKEN line'+(cnt[side]===1?'':'s')+' stand. REVIEW THIS ROW.]');}}
  if(askedCC&&!/^[ \t]*(?:#+[ \t]*|[-•][ \t]*)?CITATION CHECK\b/im.test(text.replace(/[*_`]+/g,'')))marks.push('[AUDIT v21: CITATION CHECK LINE ABSENT FROM A PROMPT THAT ASKS FOR IT (K-G2); recorded, not counted as a violation.]');
  // BB-8327 D1 (K-C): a line that sets aside a chained premise, or a side's rows read together, on the ground that no one verse states the link or its contrary (netLines).
- // judge_fix2 FIX 1b (K-X): an UNEXHIBITED count item whose reason is an unanswered pressed witness.
- for(const n of kxLines(text)){items.push({rule:'K-X',side:n.side,link:n.item,line:n.line});marks.push('[AUDIT v23: DEBATE RULE VIOLATION (K-X) -- '+n.item+' tags a link UNEXHIBITED because a pressed witness went unanswered; UNEXHIBITED is only a link whose block offered no layer footing at all, and an unanswered witness is graded on its collision line as LINK BROKEN with its pressing sentence quoted. REVIEW THIS ROW.]');}
  // judge_fix2 E1, E2, E5 (K-N, K-SC, K-DG8): items with a cure, as K-C. (E4, K-K, is defined but not wired: the prompt's KEYSTONE form asks the judge to name the link's conclusion.)
  for(const n of knLines(text)){items.push({rule:'K-N',side:n.side,link:n.item,line:n.line});marks.push('[AUDIT v23: DEBATE RULE VIOLATION (K-N) -- '+n.item+' counts premise '+n.premise+' CONCEDED (stated) on words that narrow a limb; a limb the link round narrows counts in its narrowed form, and a narrowing is not a concession. REVIEW THIS ROW.]');}
  for(const n of scLines(text)){items.push({rule:'K-SC',side:n.side,link:n.item,line:n.line,premise:n.premise});marks.push('[AUDIT v23: DEBATE RULE VIOLATION (K-SC) -- '+n.item+' STANDS while '+(n.own?'its own line says the defender conceded':'CONCEDED LINKS counts premise '+n.premise+' (filed under that link) '+(n.tag==='CONCEDED'?'CONCEDED (stated)':'UNEXHIBITED'))+'; a link counted conceded does not stand. REVIEW THIS ROW.]');}
@@ -243,7 +230,7 @@ const CURE_RULE_G="COUNT AND STANDING (same rule). Your own numbers must agree w
  +"that pressed the witness (against the defender: [DR1] or [DR2]; against the challenger: [CR1], [CR2] or [CR3]); or with RETRACTED for that link. "
  +"K-G4 (any other link you graded BROKEN on a witness left unanswered): cure it with a PRESSED line quoting the words of the earlier round that "
  +"pressed the witness (rounds as for K-G1), or with RETRACTED for that link. "
- +"For a K-G1 link whose cited verse any later round of the side that holds the link names ([CR2] or [CR3] against the defender, [DR2] or [DR3] against the challenger), add a SHORT line "
+ +"For a K-G1 link whose cited verse any later round of the side that holds the link names ([CR2] or [CR3] against the defender, [DR1], [DR2] or [DR3] against the challenger, each after the pressing round), add a SHORT line "
  +"quoting the words of that round that answer it and saying from the text why they do not overturn the link; without it the link is not cured. "
  +"For a K-G4 link the system searches every later round of the side that holds the link ([CR2] or [CR3] against the defender; [DR1], [DR2] or [DR3] against the challenger, each after the pressing round) for each pressed witness your line and your PRESSED quotation name; if any of those rounds names the witness, it was answered, the BROKEN grade is unanswered-false and only RETRACTED cures it. "
  +"K-G3 (a standing graded SELF-SUPPORTED while links of that side are graded BROKEN): cure it either with CORRECTED STANDING for that side, "
@@ -259,13 +246,10 @@ const CURE_RULE_G="COUNT AND STANDING (same rule). Your own numbers must agree w
  +"for DEFENDER, your count plus every such premise and every K-G6 premise of that side, with the CORRECTED STANDING that count makes true; "
  +"or by regrading it: a RETRACTED line for that link and exactly one CORRECTED RESULT. The same holds for a CHALLENGER LINK BROKEN line for "
  +"a witness left unanswered while your CHALLENGER CONCEDED LINKS is 0: CORRECTED COUNT for CHALLENGER, or RETRACTED and one CORRECTED RESULT. "
- +"K-G8 (your counted_premises array for a side lists a different number of premises than that side's count): CORRECTED COUNT for that side equal to the number of premises your array lists plus every K-G6 or K-G7 premise of that side, with the CORRECTED STANDING that count makes true. K-S (a link marked STANDS, or a collision graded UNDERDETERMINED, whose ground is that a verse does not state a link or its contrary, with no round named that answered the witness): A link marked STANDS, or a collision graded UNDERDETERMINED, against a witness the other side exhibited names in the same line the round that answered that witness. A witness left unanswered is a BROKEN ground. That a single verse does not state a link or its contrary is never a ground for STANDS or UNDERDETERMINED, for either side. Cure it with one RESTATED line for that link (D<n> vs C<m>, or D<n> for a STANDS line), regraded: it names the round that answered the witness ([CR2] or [CR3] for a defender link, [DR2] or [DR3] for a challenger link), or it grades the line LINK BROKEN, with exactly one CORRECTED RESULT. "
+ +"K-G8 (your counted_premises array for a side lists a different number of premises than that side's count): CORRECTED COUNT for that side equal to the number of premises your array lists plus every K-G6 or K-G7 premise of that side, with the CORRECTED STANDING that count makes true. K-S (a link marked STANDS, or a collision graded UNDERDETERMINED, whose ground is that a verse does not state a link or its contrary, with no round named that answered the witness): A link marked STANDS, or a collision graded UNDERDETERMINED, against a witness the other side exhibited names in the same line the round that answered that witness. A witness left unanswered is a BROKEN ground. That a single verse does not state a link or its contrary is never a ground for STANDS or UNDERDETERMINED, for either side. Cure it with one RESTATED line for that link (D<n> vs C<m>, or D<n> for a STANDS line), regraded: it names the round that answered the witness ([CR2] or [CR3] for a defender link, [DR1], [DR2] or [DR3] for a challenger link), or it grades the line LINK BROKEN, with exactly one CORRECTED RESULT. "
  +"K-C (a line that sets aside a chained premise, or a side's rows read together, on the ground that no one verse in them states the link or its contrary in its own words; the item quotes the line and the chain it set aside): that is never a ground, for the rows are weighed together, line upon line. "
  +"Cure it with one RESTATED line for the item that grades it on the chain as a whole: it drops that ground and names the footing of the chain it weighed, exhibiting at least two kinds of layer. "
  +"A restated line that keeps the ground is not a cure, and an uncured K-C line is not counted (K-C UNCURED). "
- +"K-X (a CONCEDED LINKS or CHALLENGER CONCEDED LINKS item tagged UNEXHIBITED because a pressed witness went unanswered): UNEXHIBITED is only a link whose block asserted it and offered no layer footing at all. "
- +"A pressed witness left unanswered never makes a link UNEXHIBITED; it is graded on that link's collision line as LINK BROKEN with its pressing sentence quoted. "
- +"Cure it with one RESTATED line for that count line (its label, a colon, then the whole line) without that item; a restated line that still tags a link UNEXHIBITED for an unanswered witness is not a cure. "
  +"K-N (a CONCEDED LINKS or CHALLENGER CONCEDED LINKS item tagged CONCEDED (stated) on words that narrow a limb, such as \"I drop any claim that\"): a link is CONCEDED (stated) only when the block surrenders the link itself; a block that drops a limb and keeps the link in a narrowed form is not a concession: grade the narrowed link. "
  +"Cure it with one RESTATED line for that count line that no longer counts the narrowing as a concession. "
  +"K-SC (a link you graded STANDS while your own line says the defender conceded it, or while your CONCEDED LINKS counts the premise filed under it CONCEDED (stated)): a link counted conceded does not stand. Cure it with one RESTATED line for that link (D<n> or D<n> vs C<m>) that does not grade it STANDS; "
@@ -274,7 +258,7 @@ const CURE_RULE_G="COUNT AND STANDING (same rule). Your own numbers must agree w
  +"Cure it with one RESTATED line for that item whose ground does not rest on that reading.";
 const CURE_FORM="ANSWER FORM. Write each cure as one line of its own, beginning with its keyword in capitals exactly as shown:\n"
  +"RESTATED: <the full collision line, beginning D<n> vs C<m>>\n"
- +"RESTATED: <for a K-C item on a REASONING, RESULT, KEYSTONE, STANDING, CONCEDED or CHAIN MARK line, or a K-X item on a CONCEDED line: that label, a colon, then the whole regraded sentence>\n"
+ +"RESTATED: <for a K-C item on a REASONING, RESULT, KEYSTONE, STANDING, CONCEDED or CHAIN MARK line, or a K-N item on a CONCEDED line: that label, a colon, then the whole regraded sentence>\n"
  +"RETRACTED: D<n> vs C<m>\n"
  +"CORRECTED RESULT: <BROKEN-1 | BROKEN-2 | PARTIAL-1 | PARTIAL-2 | PARTIAL-3 | HELD-1>\n"
  +"CORRECTED COUNT: <DEFENDER or CHALLENGER> <number>\n"
@@ -289,10 +273,10 @@ const CURE_FORM="ANSWER FORM. Write each cure as one line of its own, beginning 
  +"that round's own answer; a K-G4 item whose pressed witness a later round of that side names is not cured by any statement. For a K-G6 item it must quote, word for word, the transcript's words that show the verse is not a pressed witness of that premise. Cured if it passes; else the violation stands. "
  +"RESPONSE: <the flagged item, as labelled above> | <in your own words: whether you accept the mark and why, or why the mark is wrong, naming the round and quoting its words>. Write one RESPONSE line for every flagged item, in addition to the cure line it needs; an item with no RESPONSE line is not cured, whatever else the reply holds. "
  +"Only these lines are read. A link not on a RETRACTED line is not retracted. A line not in this form cures nothing. Any other text is recorded only.";
-const cureLabel=x=>x.rule==='K-B'?x.link:((x.rule==='K-G1'||x.rule==='K-G4'||x.rule==='K-G6'||x.rule==='K-G7'||x.rule==='K-G8'||x.rule==='K-S'||x.rule==='K-C'||x.rule==='K-X'||x.rule==='K-N'||x.rule==='K-SC'||x.rule==='K-K'||x.rule==='K-DG8')?x.rule+' '+x.link:'K-G3 '+x.side);
+const cureLabel=x=>x.rule==='K-B'?x.link:((x.rule==='K-G1'||x.rule==='K-G4'||x.rule==='K-G6'||x.rule==='K-G7'||x.rule==='K-G8'||x.rule==='K-S'||x.rule==='K-C'||x.rule==='K-N'||x.rule==='K-SC'||x.rule==='K-K'||x.rule==='K-DG8')?x.rule+' '+x.link:'K-G3 '+x.side);
 function cureAsk(items,broken){const kb=items.filter(x=>x.rule==='K-B'),kg=items.filter(x=>x.rule!=='K-B');let t='';
  if(kb.length)t+=CURE_RULE+'\n\nFLAGGED LINES:\n'+kb.map(x=>x.link+': '+String(x.line||'').trim()).join('\n');
- if(kg.length)t+=(t?'\n\n':'')+CURE_RULE_G+'\n\nFLAGGED ITEMS:\n'+kg.map(x=>cureLabel(x)+': '+((x.rule==='K-G1'||x.rule==='K-G4'||x.rule==='K-G6'||x.rule==='K-G7'||x.rule==='K-G8'||x.rule==='K-S'||x.rule==='K-C'||x.rule==='K-X'||x.rule==='K-N'||x.rule==='K-SC'||x.rule==='K-K'||x.rule==='K-DG8')?String(x.line||'').trim()+(x.rule==='K-C'&&x.chain?'\n  '+x.chain:''):x.side+' STANDING SELF-SUPPORTED while these '+x.side+' links are graded BROKEN: '+((broken||{})[x.side]||[]).join(', '))).join('\n');
+ if(kg.length)t+=(t?'\n\n':'')+CURE_RULE_G+'\n\nFLAGGED ITEMS:\n'+kg.map(x=>cureLabel(x)+': '+((x.rule==='K-G1'||x.rule==='K-G4'||x.rule==='K-G6'||x.rule==='K-G7'||x.rule==='K-G8'||x.rule==='K-S'||x.rule==='K-C'||x.rule==='K-N'||x.rule==='K-SC'||x.rule==='K-K'||x.rule==='K-DG8')?String(x.line||'').trim()+(x.rule==='K-C'&&x.chain?'\n  '+x.chain:''):x.side+' STANDING SELF-SUPPORTED while these '+x.side+' links are graded BROKEN: '+((broken||{})[x.side]||[]).join(', '))).join('\n');
  return t+'\n\n'+CURE_FORM;}
 // The BROKEN links of each side on the judge's own lines, selected as drvCheck selects them (portion 3).
 function cureBroken(text){const out={DEFENDER:[],CHALLENGER:[]};if(typeof text!=='string')return out;
@@ -352,7 +336,7 @@ function cureLines(text){text=cureUnwrap(text);const o={restated:[],withdrawn:[]
   else if(k[1]==='PRESSED'&&(m=r.match(/^D(\d+)\s+vs\.?\s+C(\d+)\s*\|\s*\[(DR1|DR2|CR1|CR2|CR3)\]\s*\|\s*["“](.+)["”]$/i)))o.pressed.push({link:cureId(m[1],m[2]),round:m[3].toUpperCase(),q:m[4],line:l});
   else if(k[1]==='STATEMENT'&&(m=r.match(/^(.+?)\s*\|\s*(\S.{9,})$/)))o.statement.push({label:m[1].trim(),text:m[2].trim(),line:l});
   else if(k[1]==='RESPONSE'&&(m=r.match(/^(.+?)\s*\|\s*(\S.{9,})$/)))o.response.push({label:m[1].trim(),text:m[2].trim(),line:l}); // judge_fix2 W1
-  else if(k[1]==='SHORT'&&(m=r.match(/^D(\d+)\s+vs\.?\s+C(\d+)\s*\|\s*\[(CR2|CR3|DR2|DR3)\]\s*\|\s*["“](.+?)["”]\s*\|\s*(\S.{9,})$/i)))o.short.push({link:cureId(m[1],m[2]),round:m[3].toUpperCase(),q:m[4],why:m[5],line:l});
+  else if(k[1]==='SHORT'&&(m=r.match(/^D(\d+)\s+vs\.?\s+C(\d+)\s*\|\s*\[(CR2|CR3|DR1|DR2|DR3)\]\s*\|\s*["“](.+?)["”]\s*\|\s*(\S.{9,})$/i)))o.short.push({link:cureId(m[1],m[2]),round:m[3].toUpperCase(),q:m[4],why:m[5],line:l});
   else if(k[1]==='RESTATED'&&(m=r.match(/^(REASONING|KEYSTONE|RESULT|DEFENSE STANDING|CHALLENGE STANDING|CHALLENGER CONCEDED LINKS|CONCEDED LINKS|DEFENDER CHAIN MARK|CHALLENGER CHAIN MARK)\s*[:\-–—]+\s*/i)))o.restated.push({link:m[1].toUpperCase(),grade:null,text:r.slice(m[0].length),line:l}); // BB-8327 D1
   else if(k[1]==='RESTATED'&&(m=r.match(/^D(\d+)(?:\s+vs\.?\s+C(\d+))?\b/i))){const g=r.slice(m[0].length).toUpperCase().match(/(DEFENDER LINK BROKEN|CHALLENGER LINK BROKEN|UNDERDETERMINED|STANDS)/);
    o.restated.push({link:m[2]?cureId(m[1],m[2]):'D'+m[1],grade:g?g[1]:null,text:r,line:l});}
@@ -426,7 +410,7 @@ function cureVerdicts(items,reply,broken,rounds){const U=s=>String(s).toUpperCas
  // 6904 (c): a statement is run through the item's own check. Quotations in it (straight or curly marks, 3+ words) and round names ([DR1] etc.).
  const stmtQ=(t)=>[...String(t||'').matchAll(/["“]([^"”]{8,})["”]/g)].map(m=>m[1]);
  const stmtPress=(x)=>{const t=stmtOf(x);if(!t)return null;for(const rk of CURE_PRESS[x.side]){if(!new RegExp('\\['+rk+'\\]').test(t)||typeof R[rk]!=='string')continue;const q=stmtQ(t).find(q=>cureFound(q,R[rk]));if(q)return {round:rk,q,line:'STATEMENT: '+t};}return null;};
- return items.map(x=>{const res=(status,why,lines,kinds)=>{const keys=(x.rule==='K-B'||x.rule==='K-S'||x.rule==='K-C'||x.rule==='K-X'||x.rule==='K-N'||x.rule==='K-SC'||x.rule==='K-K'||x.rule==='K-DG8')?[x.link]:(x.rule==='K-G1'||x.rule==='K-G4')?[x.link,x.side]:[x.side].concat((broken||{})[x.side]||[]);
+ return items.map(x=>{const res=(status,why,lines,kinds)=>{const keys=(x.rule==='K-B'||x.rule==='K-S'||x.rule==='K-C'||x.rule==='K-N'||x.rule==='K-SC'||x.rule==='K-K'||x.rule==='K-DG8')?[x.link]:(x.rule==='K-G1'||x.rule==='K-G4')?[x.link,x.side]:[x.side].concat((broken||{})[x.side]||[]);
    const bad=status==='UNCURED'?o.malformed.find(l=>keys.some(k=>k&&U(l).includes(U(k)))):null;
    return {...x,judge_statement:stmtOf(x),response:respOf(x),status,why:(why||'')+(bad?(why?'; ':'')+'malformed line: '+bad.slice(0,160):'')||null,statement:(l=>l&&l.length?l.join(' / '):null)(status==='CURED'&&/^retracted/.test(why||'')&&o.result.length===1?(lines||[]).concat([o.result[0].line]):lines),kinds:kinds||[]};}; // BB-7330: a cure by retraction shows its CORRECTED RESULT line
   if(!reply||!reply.ok)return res('UNCURED','cure call failed: '+(reply?reply.why:'no reply'),null);
@@ -438,7 +422,7 @@ function cureVerdicts(items,reply,broken,rounds){const U=s=>String(s).toUpperCas
   // after, inside its LINK block). References are read by cureRefs (lists, ranges, short book names, inherited book).
   // BB-6904 rev 12 (7374, 7377): the answer is read from any later round of the side that holds the link, its round 2 or its link round,
   // that comes after the round named as pressing the witness (order CR1 DR1 CR2 DR2 CR3 DR3).
-  const ORD=['CR1','DR1','CR2','DR2','CR3','DR3'];const ansK=pr=>(x.side==='DEFENDER'?['CR2','CR3']:['DR2','DR3']).filter(k=>!pr||ORD.indexOf(k)>ORD.indexOf(pr));
+  const ORD=['CR1','DR1','CR2','DR2','CR3','DR3'];const ansK=pr=>(x.side==='DEFENDER'?['CR2','CR3']:['DR1','DR2','DR3']).filter( /* judge_fix2 R2 */k=>!pr||ORD.indexOf(k)>ORD.indexOf(pr));
   const namedIn=pr=>(x.rule==='K-G1'||x.rule==='K-G4')?ansK(pr).filter(k=>typeof R[k]==='string'&&R[k]).map(k=>({k,n:cureNamed(x.line,R[k])})).filter(z=>z.n.length):[];
   const nmTxt=pr=>namedIn(pr).map(z=>'['+z.k+'] '+z.n.map(n=>n.ref).join(', ')).join('; ');
   // A quotation is the answer only in that round's own words: it is not also found in a round of the other side before it (a verse's own
@@ -522,11 +506,6 @@ function cureVerdicts(items,reply,broken,rounds){const U=s=>String(s).toUpperCas
    const k=drvKinds(rs[0].text);if(k.length<2)return res('UNCURED','the restated line names no chain footing: it exhibits '+k.length+' layer kind'+(k.length===1?'':'s'),[rs[0].line],k);
    if(/LINK BROKEN$/.test(rs[0].grade||'')&&o.result.length!==1)return res('UNCURED','regraded LINK BROKEN without exactly one CORRECTED RESULT line',[rs[0].line],k);
    return res('CURED',null,[rs[0].line],k);}
-  // judge_fix2 FIX 1b: K-X is cured by one RESTATED line for the count line that no longer tags a link UNEXHIBITED for an unanswered witness.
-  if(x.rule==='K-X'){const rs=cureRest(o,x);
-   if(!rs.length)return res('UNCURED','no RESTATED line for '+x.link,null);if(rs.length>1)return res('UNCURED','two RESTATED lines for '+x.link,rs.map(r=>r.line));
-   if(kxLines(x.link+': '+rs[0].text).length)return res('UNCURED','the restated line still tags a link UNEXHIBITED for a pressed witness left unanswered',[rs[0].line]);
-   return res('CURED','restated without the unanswered-witness UNEXHIBITED tag',[rs[0].line]);}
   // judge_fix2 E1, E4, E5: K-N, K-K and K-DG8 are cured by one RESTATED line for the item that its own test no longer marks.
   if(x.rule==='K-N'||x.rule==='K-K'||x.rule==='K-DG8'){const rs=cureRest(o,x);const test=x.rule==='K-N'?knLines:x.rule==='K-K'?kkLines:dg8Lines;
    if(!rs.length)return res('UNCURED','no RESTATED line for '+x.link,null);if(rs.length>1)return res('UNCURED','two RESTATED lines for '+x.link,rs.map(r=>r.line));

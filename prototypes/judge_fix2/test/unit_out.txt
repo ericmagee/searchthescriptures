@@ -1,11 +1,15 @@
-OK  FIX 1a/2 Panel Build.js: UNEXHIBITED clause x2, narrowing clause x2 (want 2 and 2)
-OK  FIX 1a/2 Build Independent Verdict.js: UNEXHIBITED clause x2, narrowing clause x2 (want 2 and 2)
-OK  FIX 1a/2 Format Markdown rule copy carries both clauses word for word
-OK  K-X 886 Gemini CONCEDED LINKS marked on all 17 nodes
-OK  K-X 886 Gemini CHALLENGER CONCEDED LINKS marked
-OK  K-X 887 ChatGPT CONCEDED LINKS marked
-OK  K-X 885 DeepSeek CONCEDED LINKS not marked (its UNEXHIBITED item rests on "cites only [L1]")
-OK  K-X a true UNEXHIBITED (no layer) with an unanswered witness beside it is not marked
+OK  R1 no K-X or fix-1 text left in new/ (none)
+OK  FIX 2 Panel Build.js: narrowing clause x2 (want 2); R1 ledger sentence kept
+OK  FIX 2 Build Independent Verdict.js: narrowing clause x2 (want 2); R1 ledger sentence kept
+OK  FIX 2 Format Markdown rule copy carries the narrowing clause; no fix-1 clause
+OK  R1 K-G6 kept wherever it was
+OK  R2 Panel Build.js: rule and ledger copies name [DR1], [DR2] or [DR3]; no "[DR2] or [DR3]" left
+OK  R2 Build Independent Verdict.js: rule and ledger copies name [DR1], [DR2] or [DR3]; no "[DR2] or [DR3]" left
+OK  R2 cure prompts (K-G1 SHORT, K-S) name [DR1] on all 14 cure nodes
+OK  R2 ledger 32194: Isaiah 7:14 pressed in [CR1] and named in [DR1] (engine_r1) was NOT NAMED, now answered
+OK  R2 K-S: a line naming [DR1] as the answering round is no longer K-S (base K-S,K-C; new K-C)
+OK  R2 K-G1: a later [DR1] naming of the pressed verse now asks for its answer (SHORT may cite [DR1]): the later round [DR1] isa 7:14; no SHORT line quoting its answer
+OK  R2 K-G6 reads the judge prompt's ledger heading ("answered in [CR2] or [CR3]:"): base finds no ledger (0 items), new marks DEFENDER premise 1 (1)
 OK  K-C 886 RESULT "Scripture nowhere states" marked
 OK  K-C 886 CHALLENGER CHAIN MARK "without a single biblical text stating" marked
 OK  K-C 885 DEFENDER CHAIN MARK ("the defender conceding no verse names her line") not marked
@@ -25,8 +29,7 @@ OK  K-DG8 hedged "neither reading is excluded" not marked (j843)
 OK  FIX 3 base refuses "D5 vs C5" (no RESTATED line for D5); new cures it with a RESPONSE line on all 14 cure nodes (bad 0)
 OK  FIX 3 "C5 vs D5 ..." is read as the D5 vs C5 line and serves D5 (bad 0)
 OK  W1 the same reply without a RESPONSE line: UNCURED "no written response" on every cure node (bad 0)
-OK  K-X cure: a restated count line without the item cures (CURED); the same line restated does not (UNCURED: the restated line still tags a link UNEXHIBITED for a pressed witness left unanswered)
-OK  K-X and RESPONSE appear in the cure prompt
+OK  W1 RESPONSE appears in the cure prompt
 OK  W2 enfRows keeps the full reply (1790 chars), the cure ask, the full RESPONSE and the result
 OK  W2 Panel Cure Check output carries enforcer_log with the full reply (1190 chars)
 OK  FIX 5 Alternate Merge: qwen not seated for deepseek is seated for gemini; the chatgpt call is refused G3 at merge
@@ -39,4 +42,4 @@ OK  FIX 7 draft: aggregate_debate_panel writes UNGRADED when no seat is counted;
 OK  E6 32157: false "both agree" (S-A), "every link answered" (S-B) and "binds both seats" (S-D) marked
 OK  E6 32212: "enomizeto carries no verdict of its own" listed as uncharged (S-C) marked
 
-fixtures 40 | bad 0
+fixtures 43 | bad 0
