@@ -1,0 +1,49 @@
+ratio fitted: defender 2.48 chars/token, challenger 2.46 chars/token; C1 verse sheet (not stored) carried as 12809 tokens on C1's message 0
+
+== base
+WAS base D system identical in all four rounds | [1689,1689,144,144]
+OK  base D2 first message equals D1's as sent (without D1's last-message marker) | equal
+OK  base D1 no reasoning, effort or thinking field; cache_control breakpoints 3 (max 4), all ttl 1h
+OK  base D2 no reasoning, effort or thinking field; cache_control breakpoints 3 (max 4), all ttl 1h
+OK  base D3 no reasoning, effort or thinking field; cache_control breakpoints 2 (max 4), all ttl 1h
+OK  base D4 no reasoning, effort or thinking field; cache_control breakpoints 2 (max 4), all ttl 1h
+OK  base C system identical in all four rounds | [147,147,147,147]
+WAS base C2 first message equals C1's as sent (without C1's last-message marker) | differs at character 6867
+OK  base C1 no reasoning, effort or thinking field; cache_control breakpoints 2 (max 4), all ttl 1h
+OK  base C2 no reasoning, effort or thinking field; cache_control breakpoints 2 (max 4), all ttl 1h
+OK  base C3 no reasoning, effort or thinking field; cache_control breakpoints 2 (max 4), all ttl 1h
+OK  base C4 no reasoning, effort or thinking field; cache_control breakpoints 2 (max 4), all ttl 1h
+
+== new
+OK  new D system identical in all four rounds | [144,144,144,144]
+OK  new D2 first message equals D1's as sent (without D1's last-message marker) | equal
+OK  new D3 body identical to the live code's apart from the system | system also identical
+OK  new D4 body identical to the live code's apart from the system | system also identical
+OK  new D1 no reasoning, effort or thinking field; cache_control breakpoints 2 (max 4), all ttl 1h
+OK  new D2 no reasoning, effort or thinking field; cache_control breakpoints 2 (max 4), all ttl 1h
+OK  new D3 no reasoning, effort or thinking field; cache_control breakpoints 2 (max 4), all ttl 1h
+OK  new D4 no reasoning, effort or thinking field; cache_control breakpoints 2 (max 4), all ttl 1h
+OK  new C system identical in all four rounds | [147,147,147,147]
+OK  new C2 first message equals C1's as sent (without C1's last-message marker) | equal
+OK  new C3 body identical to the live code's apart from the system | system also identical
+OK  new C4 body identical to the live code's apart from the system | system also identical
+OK  new C1 no reasoning, effort or thinking field; cache_control breakpoints 2 (max 4), all ttl 1h
+OK  new C2 no reasoning, effort or thinking field; cache_control breakpoints 2 (max 4), all ttl 1h
+OK  new C3 no reasoning, effort or thinking field; cache_control breakpoints 2 (max 4), all ttl 1h
+OK  new C4 no reasoning, effort or thinking field; cache_control breakpoints 2 (max 4), all ttl 1h
+
+== input token estimate per round (32302 rounds; system sizes as measured; "read" is the prefix shared with the seat's previous request)
+round | measured 32302 (read / write / total) | base estimate (read / write / total) | new estimate (read / write / total) | messages new
+D1 | 2145 / 0 / 2149 | 2145 / 93 / 2238 | 2145 / 93 / 2238 | 1
+C1 | 0 / 79020 / 79024 | 0 / 79024 / 79024 | 0 / 79024 / 79024 | 1
+D2 | 2145 / 9605 / 11754 | 2238 / 9516 / 11754 | 2238 / 10104 / 12342 | 3
+C2 | 63162 / 14425 / 77591 | 63162 / 14429 / 77591 | 79024 / 11635 / 90659 | 3
+D3 | 1226 / 6950 / 8180 | 1226 / 7181 / 8407 | 1226 / 7181 / 8407 | 1
+C3 | 63162 / 7281 / 70447 | 63162 / 7114 / 70276 | 63162 / 7114 / 70276 | 1
+D4 | 1226 / 6590 / 7820 | 1226 / 6821 / 8047 | 1226 / 6821 / 8047 | 1
+C4 | 63162 / 8484 / 71650 | 63162 / 8335 / 71497 | 63162 / 8335 / 71497 | 1
+totals (read / written): measured 196228 / 132355; base 196321 / 132513; new 212183 / 130307
+base-input equivalents (1-hour write 2x, read 0.1x): base 284658, new 281832, saved 2826
+round 4 request size (new, as live): D4 about 8047 tokens, C4 about 71497 tokens; context window 1,000,000 (Claude Sonnet 5.5, Haiku 5.5, Opus 5.5); max_tokens 64,000; with max_tokens the largest request is 13.5% of the window
+
+16 OK, 0 BAD

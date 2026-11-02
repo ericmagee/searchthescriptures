@@ -1,0 +1,24 @@
+// judge_fix7 test library (from judge_fix6 lib6.cjs) (from judge_fix5's lib5.cjs) (from judge_fix4's): loads the shared library of a node file (everything before its main body), the checker block of a checker node,
+// and ports of the database's judgment_result_word and the panel aggregate and outcome (derive_debate_outcome, aggregate_debate_panel, d5_outcome_for).
+const fs=require('fs');const D=__dirname+'/../';const LIVE=D+'data/live_code/';
+const NAMES=['ciRulings','ciValid','ciLedger','ciRounds','cureAsk','cureLabel','CURE_FORM','REFP','drvKinds','drvCheck','drvLedger','drvBroken','drvPromptText','drvGround','drvLinks','netLines','netKeeps','scLines','knLines','cntItems','kg4Answered','cureRefs','cureLines','cureVerdicts','cureBroken','cureCorrected','cureSet','cureSetApply','cureCountHeld','cureCorrLine','cureReport','cureProse','cureRecompute','cureRewrite','cureJText','cureOwn','cureLabel','cureReasoned','cureRest','CURE_RULE_G','CURE_FORM','dg8Lines','enfRows','drvLayers','ENF_STATUS','enfLive','enfUncured','enfTrialWhy','ciNP','ciReasoned','stmtQ'];
+const cache={};
+function lib(v,node){const k=v+'/'+node;if(cache[k])return cache[k];const s=fs.readFileSync(D+v+'/'+node+'.js','utf8');const m=s.match(/\n[^\n]*(?:\$\(|\$input)/);const pre=s.slice(0,m.index);
+ return cache[k]=new Function('$','$input',pre+'\n;return {'+NAMES.map(n=>n+':typeof '+n+'!=="undefined"?'+n+':null').join(',')+'};')(()=>{throw new Error('no $')},null);}
+// the checker block of a checker node (Panel Payloads etc.): from its first DRV_ constant to the end of drvCheck, plus the ledger and K-G7 readers
+function chk(v,node){const k='chk:'+v+'/'+node;if(cache[k])return cache[k];const s=fs.readFileSync(D+v+'/'+node+'.js','utf8');const a=s.indexOf('const REFP=(()=>')>=0&&s.indexOf('const REFP=(()=>')<s.indexOf('const DRV_REF=')?s.indexOf('const REFP=(()=>'):s.indexOf('const DRV_REF=');const d=s.indexOf('function drvCheck(');const b=s.indexOf('\n return {items,marks};}',d)+'\n return {items,marks};}'.length;
+ const g='const g=n=>{try{return eval(n);}catch(e){return null;}};';return cache[k]=new Function(s.slice(a,b)+';'+g+'return {drvCheck,drvLedger:g("drvLedger"),drvBroken:g("drvBroken"),drvPromptText:g("drvPromptText"),drvLinks:g("drvLinks"),drvGround:g("drvGround"),netLines,scLines:g("scLines"),dg8Lines:g("dg8Lines"),drvCited:g("drvCited"),drvBlocks:g("drvBlocks"),drvLedgerN:g("drvLedgerN"),drvKinds:g("drvKinds"),cRefs:g("cRefs"),ciRulings:g("ciRulings"),lbKinds:g("lbKinds"),lbVoid:g("lbVoid"),drvLayers:g("drvLayers"),enfLive:g("enfLive"),ENF_STATUS:g("ENF_STATUS"),ciValid:g("ciValid"),ciRounds:g("ciRounds")};')();}
+// judgment_result_word (DB), ported
+function resultWord(raw,seat,cstand){const s=String(raw||'');const m=s.match(/\[AUDIT v21: CORRECTED RESULT -- SEAT: ([^;\]]*); ORIGINAL: (\w+); COUNTED: (\w+) \([A-Z]+-[0-9]\)(?:; RETRACTED: ([^\]]*))?\]/);
+ if(!m||m[1]!==seat||m[2]===m[3]){const r=s.match(/RESULT[ \t*_]*:[ \t*_]*(DEFENDER WINS|CHALLENGER WINS|UNDERDETERMINED)/);return r?r[1]:null;}
+ if(m[3]==='BROKEN')return 'CHALLENGER WINS';if(m[3]!=='HELD')return 'UNDERDETERMINED';const ret=(m[4]||'').trim()?m[4].trim().split(/\s*,\s*/):[];
+ const clb=[...s.matchAll(/(?:^|\n|\\n)[ \t*_>-]*(D[0-9]+ vs C[0-9]+)[^\n\\]*?:[ \t*_]*CHALLENGER LINK BROKEN/g)].some(x=>!ret.includes(x[1]));
+ if((cstand||'SELF-SUPPORTED')!=='SELF-SUPPORTED'||clb)return 'DEFENDER WINS';return 'UNDERDETERMINED';}
+// the panel outcome: counted rows (tag HELD/PARTIAL/BROKEN, valid standings, drv_uncured 0); majority tag; d5 outcome; the tie rule (both cut-offs passed)
+function outcome(rows){const ST=['SELF-SUPPORTED','PROP-DEPENDENT','COLLAPSED'];const C=rows.filter(r=>['HELD','PARTIAL','BROKEN'].includes(r.verdict_tag)&&ST.includes(r.defense_standing)&&ST.includes(r.challenge_standing)&&(r.drv_uncured||0)===0);
+ let pv;if(!C.length)pv='UNGRADED';else{const n={};C.forEach(r=>n[r.verdict_tag]=(n[r.verdict_tag]||0)+1);const top=Object.entries(n).sort((a,b)=>b[1]-a[1]);pv=(C.length<2||(top[1]&&top[1][1]===top[0][1]))?'CONTESTED':top[0][0];}
+ let out={HELD:'DEFENDER PREVAILS',BROKEN:'CHALLENGER PREVAILS',PARTIAL:'DEFENDER PREVAILS, WEAKENED'}[pv]||'UNGRADED — REVIEW';
+ const words=C.map(r=>r.seat+':'+resultWord(r.verdict_raw,r.seat,r.challenge_standing));
+ if(pv==='HELD'||pv==='PARTIAL'){const h=C.filter(r=>r.verdict_tag===pv);const hu=h.filter(r=>resultWord(r.verdict_raw,r.seat,r.challenge_standing)==='UNDERDETERMINED').length;if(hu*2>h.length||(h.length>0&&hu*2===h.length))out='UNDERDETERMINED';}
+ return {panel:pv,split:C.length+' counted of '+rows.length,outcome:out,words};}
+module.exports={lib,chk,resultWord,outcome,D};

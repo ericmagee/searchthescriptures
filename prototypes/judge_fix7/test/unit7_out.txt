@@ -1,0 +1,59 @@
+== J1: K-G4 judges each pressed witness on its own
+OK  J1 setup: the checker raises K-G4 D6 vs C4 on GLM (base and new)
+OK  J1 32302 row 92 (GLM D6 vs C4, ground Luke 3:31): base UNCURED unanswered-false (the false check) | unanswered-false: quotation found in CR3, but a later challenger round names the pressed witness: [DR3] Matthew 1:12 at 2614; [DR3] Jeremiah 22:30 at 3689
+OK  J1 32302 row 92: new CURED, naming Luke 3:31 as the unanswered witness | pressed: quotation found in CR3; the pressed witness Luke 3:31 is named in no later challenger round, so the grade stands
+OK  J1 control: the same line whose GROUND rests on Jeremiah 22:30 and Matthew 1:12 (both named in [DR3]) is unanswered-false (new) | unanswered-false: quotation found in CR3, but a later challenger round names every pressed witness the line rests on: [DR3] Matthew 1:12 at 2614; [DR3] Jeremiah 22:30 at 3689
+OK  J1 a line resting on two witnesses, one truly unanswered (Luke 3:31) and one answered (Jeremiah 22:30): new stands and names Luke 3:31 | pressed: quotation found in CR3; the pressed witness Luke 3:31 is named in no later challenger round, so the grade stands (answered, and not the ground: [DR3] Jeremiah 22:30 at 3689)
+OK  J1 the cure prompt states the per-witness rule
+OK  J1 control: run 32293 K-G4 cure verdicts are unchanged | no change
+OK  J1 control: run 32284 K-G4 cure verdicts are unchanged | no change
+== J2: K-G6 and K-G9 never mark a premise the seat ruled VOID; a cure never counts one
+OK  J2 ChatGPT (905): "Premises 1, 4, and 5 are VOID" read as 1, 4, 5 (new) | [1,4,5]
+OK  J2 ChatGPT (905): base read 1 and 4 only (the serial comma stopped the list) | [1,4]
+OK  J2 Sol (alternate): challenger premises 1, 4, 5 VOID | [1,4,5]
+OK  J2 Gemini (903): premise 1 VOID only | [1]
+OK  J2 32302 row 97: base marks K-G6 CHALLENGER premise 4 on ChatGPT
+OK  J2 32302 row 97: new does not (premise 4 ruled VOID) | []
+OK  J2 32302 row 98: base K-G9 uncounted holds Luke 3:31 and Matthew 1:1 (pressed under VOID premise 4) | ["Luke 3:31","Luke 1:13","Matthew 1:21","Matthew 1:1"]
+OK  J2 32302 row 98: new K-G9 uncounted drops them; Luke 1:13 and Matthew 1:21 (under no listed premise) stay | ["Luke 1:13","Matthew 1:21"]
+OK  J2 the K-G9 item carries the VOID set and the premise list | {"void":{"all":false,"set":[1,4,5]},"plist":[1,2,3,4,5]}
+OK  J2 Sol row 108: new raises no K-G6 on premise 4
+OK  J2 control: run 32293 K-G6/K-G9 items unchanged where no premise is ruled VOID, or note the change | no change
+OK  J2 control: run 32284 K-G6/K-G9 items unchanged where no premise is ruled VOID, or note the change | no change
+OK  J2 cure cap: row 97 as raised live, ChatGPT's CORRECTED COUNT 4 with premises 1, 4, 5 VOID of 5 is refused (new) | corrected count 4 counts a premise the seat ruled VOID (premises 1, 4, 5 of 5; a VOID premise counts for neither side, so the count is at most 2)
+OK  J2 cure cap: base accepted the same count | counted: CHALLENGER COUNT 4, STANDING COLLAPSED
+OK  J2 control: with no premise VOID the same count passes the cap (new) | CURED counted: CHALLENGER COUNT 4, STANDING COLLAPSED
+== J3: Sol's uncured K-C and K-G9 items (rows 107, 109)
+OK  J3 row 107: base K-C D3 vs C3 UNCURED (0 layer kinds in the restated line) | ["D3 vs C3 UNCURED the restated line names no chain footing: it exhibits 0 layer kinds"]
+OK  J3 row 107: new CURED (retracted under a counted RETRACTED line; restated UNDERDETERMINED) | ["D3 vs C3 CURED retracted under a counted RETRACTED line and restated UNDERDETERMINED without the stating ground"]
+OK  J3 row 109: base UNCURED (no CORRECTED COUNT) | ruled PRESSED and UNANSWERED (Luke 3:31, Luke 1:13, Matthew 1:21), but no CORRECTED COUNT for CHALLENGER (ruling 372: the premise is UNEXHIBITED and counts)
+OK  J3 row 109: new CURED by the VOID re-ruling of premises 1, 4, 5 | VOID: Luke 3:31, Luke 1:13, Matthew 1:21 were pressed only under premises ruled VOID (1, 4, 5; re-ruled in the STATEMENT, which quotes the transcript); a VOID premise counts for neither side
+OK  J3 control: without the VOID re-ruling, Luke 1:13 and Matthew 1:21 (no listed premise) still need a count | ruled PRESSED and UNANSWERED (Luke 1:13, Matthew 1:21), but no CORRECTED COUNT for CHALLENGER (ruling 372: the premise is UNEXHIBITED and counts)
+OK  J3 control: with no VOID ruling at all, Luke 3:31 needs a count too | ruled PRESSED and UNANSWERED (Luke 3:31, Luke 1:13, Matthew 1:21), but no CORRECTED COUNT for CHALLENGER (ruling 372: the premise is UNEXHIBITED and counts)
+OK  J3 control: single judge row 102, K-C D6 vs C4, stays UNCURED (keeps the stating ground) | ["D4 vs C5 CURED","D6 vs C4 UNCURED","D6 vs C6 CURED"]
+OK  J3 control: single judge rows 101 and 103 stay CURED | ["D4 vs C5 CURED","D6 vs C4 UNCURED","D6 vs C6 CURED"]
+== J5: the link-round format check
+OK  J5 32302 [DR3] (Haiku): fault, no LINK block and headed as the close | {"fault":true,"why":["it holds no \"LINK n:\" block","it is headed \"CLOSE ROUND (challenger)\", as another round"],"head":"CLOSE ROUND (challenger)"}
+OK  J5 32302 [CR3] (defender): no fault
+OK  J5 control 32293 [CR3] and [DR3]: no fault | [null,null]
+OK  J5 control 32284 [CR3] and [DR3]: no fault | [null,null]
+OK  J5 control: a round headed "CLOSE ROUND" that holds LINK blocks is a heading fault only
+OK  J5 control: "LINK ROUND (challenger)" with "LINK 3 [premise 4]:" is no fault
+OK  J5 control: "LINK none:" counts as a block
+OK  J5 the judges' line says it and grades nothing | 
+
+[LINK-ROUND FORMAT CHECK -- computed by the system, not by a model: [DR3] does not keep the link-round form: it holds no "LINK n:" block; it is headed "CLOSE ROUND (challenger)", as another round. A format fault only: it grades nothing; grade the round on its text.]
+OK  J5 the review_notes line | [AUDIT v27: LINK-ROUND FORMAT CHECK (C3) -- the challenger's link round does not keep the link-round form: it holds no "LINK n:" block; it is headed "CLOSE ROUND (challenger)", as another round. A format fault, recorded; no automatic grading. REVIEW THIS ROW.]
+OK  J5 ciRounds ends [DR3] before the note (K-LB and the cure read the round only)
+OK  J5 C3 Extract (new) records link_format on Haiku's round | {"fault":true,"why":["it holds no \"LINK n:\" block","it is headed \"CLOSE ROUND (challenger)\", as another round"],"head":"CLOSE ROUND (challenger)"}
+OK  J5 D3 Extract (new) records no fault on the defender's round | null
+OK  J5 Panel Build carries the check
+OK  J5 Build Independent Verdict carries the check
+OK  J5 Build Save Body carries the check
+OK  J5 Failure Salvage carries the check
+== J6: the engine opus
+OK  J6 Init Seats maps opus to model_config row opus
+OK  J6 Format Markdown names opus Claude Opus and keeps haiku
+OK  J6 Failure Salvage names opus Claude Opus and keeps haiku
+
+50 OK, 0 BAD

@@ -1,0 +1,32 @@
+live versionId 9165fb8a-6eaf-433d-a369-ed2481691b4c | base read versionId 9165fb8a-6eaf-433d-a369-ed2481691b4c
+guards passed: base matched for 29 code nodes; versionId, connections (481) and node count (262) equal the base read
+  Alternate Build                base 619e9e4f -> new 663ca59d
+  Alternate Cure Build           base 1025772e -> new 598ca239
+  Alternate Cure Normalize       base 06f36aba -> new 16df0e33
+  Alternate Merge                base 6a6ae84f -> new 4059ba89
+  Alternate Payloads             base 51542dcd -> new 4112a14d
+  Build Independent Verdict      base 7471f59e -> new 12550800
+  Build Save Body                base 7a774c07 -> new 66d20a16
+  C1 Build                       base 5ab41dde -> new af287247
+  C2 Build                       base 142c7ba1 -> new f6dd3633
+  C3 Extract                     base b706d282 -> new dfe7c01c
+  Cure Build                     base 106158e0 -> new d2fe13bb
+  Cure Check                     base 4a22f7bd -> new 8c5d35d4
+  Cure Normalize                 base 8249ea4e -> new c0a47093
+  D1 Build                       base 79850fcb -> new d7404ad9
+  D2 Build                       base 9aebc27f -> new 97852308
+  D3 Extract                     base e28f56ff -> new 27fa8aab
+  Extract Independent Verdict    base 862d5a50 -> new 9e0996ea
+  Failure Salvage                base d9a87c9f -> new ee6b99c9
+  Format Markdown                base 553e5140 -> new edfc1ed2
+  Init Seats                     base 7c2f097f -> new 3533fb15
+  Panel Build                    base 0e4d79ae -> new e503dab6
+  Panel Cure Build 1             base e7f7b1e6 -> new 19004afa
+  Panel Cure Build 2             base 221d4d1f -> new 2459d287
+  Panel Cure Build 3             base 862e46c7 -> new c8334d3c
+  Panel Cure Check               base 25206f00 -> new 836a14d1
+  Panel Cure Normalize 1         base 81b4e061 -> new de0f7a03
+  Panel Cure Normalize 2         base f100caba -> new f5b020e5
+  Panel Cure Normalize 3         base cacb8b70 -> new cf1cfa8f
+  Panel Payloads                 base 61642cac -> new c1877db0
+DRY: would PUT 29 code nodes, 0 nodes added, 481 connections (unchanged); nothing written

@@ -1,0 +1,11 @@
+base: Init Seats refused: ORACLE_DEBATE_V1 Init refused: challenger engine "opus" is not one of [claude, chatgpt, gemini, grok, mimo, haiku, glm, qwen, deepseek]. run_token=...
+== new (Init Seats new; Resolve Seats is unchanged, live code)
+defender: {"engine":"claude","profile":"plain","fam":"anthropic","mc_seat":"claude_synthesis","direct_model":"claude-sonnet-5-5","via_engine_fam":"openrouter","model":"anthropic/claude-sonnet-5.5","tok":64000}
+challenger: {"engine":"opus","profile":"oracle","fam":"anthropic","mc_seat":"opus","direct_model":"claude-opus-5-5","via_engine_fam":"openrouter","model":"anthropic/claude-opus-5.5","tok":64000}
+panel_order: gemini, glm, chatgpt | panel_expected: chatgpt, gemini, glm | reserve: mimo | single judge: deepseek
+judges: gemini=google/gemini-3.8-flash; glm=z-ai/glm-5.3; chatgpt=openai/gpt-6.1-terra
+reserve: mimo=xiaomi/mimo-v2.6-pro
+alt_order: sol | alternates: sol=openai/gpt-6.1-sol (openai)
+debaters: [{"engine":"claude","model":"anthropic/claude-sonnet-5.5","family":"anthropic"},{"engine":"opus","model":"anthropic/claude-opus-5.5","family":"anthropic"}]
+direct model id (challenger): claude-opus-5-5 | family anthropic | via openrouter | max_tokens 64000
+C1 Build maps anthropic/claude-opus-5.5 -> claude-opus-5-5 | known form: true
