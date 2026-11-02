@@ -1,0 +1,65 @@
+CREATE TABLE
+CREATE TABLE
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE TRIGGER
+CREATE FUNCTION
+CREATE FUNCTION
+== migration
+BEGIN
+ALTER TABLE
+ALTER TABLE
+COMMENT
+COMMENT
+DO
+COMMIT
+== insert: a truncated defender close round, and a clean row
+INSERT 0 1
+INSERT 0 1
+ run_token |                                         quarantine_reason                                          
+-----------+----------------------------------------------------------------------------------------------------
+ ODV1-T1   | AUTO-QUARANTINE at write: truncation marker present in [defender_r4]. (rest of the live message)
+ ODV1-T2   | AUTO-QUARANTINE at write: truncation marker present in [challenger_r4]. (rest of the live message)
+(2 rows)
+
+         notes         
+-----------------------
+ seats=[defender_r4]
+ seats=[challenger_r4]
+(2 rows)
+
+== an update that slips past the insert guard is found by the scan
+UPDATE 1
+        record_integrity_scan        
+-------------------------------------
+ {"unquarantined_truncated_rows": 1}
+(1 row)
+
+== dashboard read
+ def_r4 |      cha_r4       
+--------+-------------------
+ close  | c4 [TRUNCATED: x]
+(1 row)
+
+== migration again (columns exist; the function anchors are gone, so it must refuse and roll back)
+BEGIN
+psql:sql/b4_close_rounds.sql:8: NOTICE:  column "defender_r4" of relation "debate_results" already exists, skipping
+ALTER TABLE
+psql:sql/b4_close_rounds.sql:9: NOTICE:  column "challenger_r4" of relation "debate_results" already exists, skipping
+ALTER TABLE
+COMMENT
+COMMENT
+psql:sql/b4_close_rounds.sql:42: ERROR:  write guard already carries the close rounds: migration already applied
+CONTEXT:  PL/pgSQL function inline_code_block line 6 at RAISE
+ROLLBACK
+psql:test/sql_b4_test.sql:77: WARNING:  there is no transaction in progress
+ROLLBACK
+== undo
+BEGIN
+DO
+COMMIT
+ guard_after_undo | dash_after_undo | scan_after_undo 
+------------------+-----------------+-----------------
+                0 |               0 |               0
+(1 row)
+

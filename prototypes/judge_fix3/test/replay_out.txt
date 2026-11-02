@@ -1,0 +1,71 @@
+run   seat          stored-uncured | BASE items/uncured counted | NEW items/uncured counted | +R: BASE counted / NEW counted
+32212 deepseek                    2 |   8/8   NO             |   8/8   NO            | NO / NO (8 -> 8 uncured)
+      NEW uncured: K-N CONCEDED LINKS, K-N CHALLENGER CONCEDED LINKS, K-C D5, K-C D6, K-G6 DEFENDER premise 2, K-G6 DEFENDER premise 6, K-G6 CHALLENGER premise 5, K-G6 CHALLENGER premise 6
+32212 gemini                      1 |   5/5   NO             |   6/6   NO            | NO / NO (5 -> 6 uncured)
+      marks added:   K-G6 DEFENDER premise 4
+      NEW uncured: K-DG8 D3, K-DG8 D5, K-C RESULT, K-C D6, K-C CHALLENGER CHAIN MARK, K-G6 DEFENDER premise 4
+32212 chatgpt                     4 |   9/9   NO             |   9/9   NO            | NO / NO (3 -> 3 uncured)
+      NEW uncured: K-G4 D2 vs C2, K-G4 D4 vs C2, K-G4 D4 vs C5, K-G4 D5 vs C2, K-G4 D6 vs C4, K-G6 DEFENDER premise 3, K-G6 DEFENDER premise 4, K-G6 CHALLENGER premise 6, K-G7 D4 vs C2
+32212 single                      - |   6/6   NO             |   6/6   NO            | NO / NO (3 -> 3 uncured)
+      NEW uncured: K-N CONCEDED LINKS, K-N CHALLENGER CONCEDED LINKS, K-C D1 vs C1, K-C D2, K-C D5 vs C4, K-C D6
+32228 qwen                        0 |   0/0   yes            |   3/3   NO            | yes / NO (0 -> 3 uncured)
+      marks added:   K-G6 DEFENDER premise 4, K-G6 CHALLENGER premise 1, K-G6 CHALLENGER premise 6
+      NEW uncured: K-G6 DEFENDER premise 4, K-G6 CHALLENGER premise 1, K-G6 CHALLENGER premise 6
+32228 gemini                      0 |   0/0   yes            |   0/0   yes           | yes / yes (0 -> 0 uncured)
+32228 chatgpt                     0 |   2/2   NO             |   2/2   NO            | NO / NO (1 -> 1 uncured)
+      NEW uncured: K-G4 D2 vs C3, K-G6 CHALLENGER premise 1
+32228 single                      - |   4/4   NO             |   3/3   NO            | yes / yes (0 -> 0 uncured)
+      marks removed: K-G4 D5 vs C6
+      [AUDIT v24: K-G4 NOT RAISED -- D5 vs C6 DEFENDER LINK BROKEN rests on the defender's own concession of the link, not on a witness left unans
+      NEW uncured: K-C D1, K-C D2, K-C D6 vs C1
+32255 deepseek                    1 |   6/1   NO             |   6/0   yes           | -
+      status changed: K-C D5 vs C2: UNCURED -> CURED ()
+32255 gemini                      0 |   1/0   yes            |   2/1   NO            | -
+      marks added:   K-G6 DEFENDER premise 4
+      NEW uncured: K-G6 DEFENDER premise 4
+32255 chatgpt                     0 |   2/0   yes            |   2/0   yes           | -
+32255 single                      - |  11/1   NO             |  12/1   NO            | -
+      marks added:   K-DG8 RESULT
+      status changed: K-DG8 D1 vs C1: UNCURED -> CURED (restated)
+      NEW uncured: K-DG8 RESULT
+32255 qwen (alt)    13 (not seated) |  13/13  NO             |  16/15  NO            | -
+      marks added:   K-G6 DEFENDER premise 1, K-G6 DEFENDER premise 4, K-G6 DEFENDER premise 5
+      status changed: K-C D1 vs C1: UNCURED -> CURED ()
+      NEW uncured: K-S D1 vs C1, K-S D1 vs C4, K-S D2 vs C5, K-S D4 vs C2, K-S D5 vs C2, K-S D5 vs C3, K-C REASONING, K-C D1 vs C4, K-C D2 vs C5, K-C D4 vs C2, K-C D5 vs C2, K-C D5 vs C3, K-G6 DEFENDER premise 1, K-G6 DEFENDER premise 4, K-G6 DEFENDER premise 5
+
+ENFORCER LOG 32255, every row: id seat rule item | stored status -> new status | RESPONSE line: same or changed
+ 1 deepseek K-C    REASONING              | CURED -> CURED | RESPONSE same
+ 2 deepseek K-C    KEYSTONE               | CURED -> CURED | RESPONSE same
+ 3 deepseek K-C    D1                     | CURED -> CURED | RESPONSE same
+ 4 deepseek K-C    D5 vs C2               | UNCURED -> CURED | RESPONSE same
+ 5 deepseek K-C    D5 vs C5               | CURED -> CURED | RESPONSE same
+ 6 deepseek K-C    D6                     | CURED -> CURED | RESPONSE same
+ 7 gemini   K-C    REASONING              | CURED -> CURED | RESPONSE same
+ 8 chatgpt  K-G4   D3 vs C6               | CURED -> CURED | RESPONSE same
+ 9 chatgpt  K-G4   D5 vs C2               | CURED -> CURED | RESPONSE same
+10 single   K-G4   D1 vs C1               | CURED -> CURED | RESPONSE same
+11 single   K-S    D5 vs C2               | CURED -> CURED | RESPONSE same
+12 single   K-S    D6                     | CURED -> CURED | RESPONSE same
+13 single   K-DG8  D1 vs C1               | UNCURED -> CURED | RESPONSE CHANGED: "The mark is correct; the original ground read the timing rows too stro"
+14 single   K-C    REASONING              | CURED -> CURED | RESPONSE same
+15 single   K-C    KEYSTONE               | CURED -> CURED | RESPONSE same
+16 single   K-C    D5 vs C5               | CURED -> CURED | RESPONSE same
+17 single   K-C    D6                     | CURED -> CURED | RESPONSE CHANGED: "I accept the mark; D6 is restated on the chain as a whole and not on t"
+18 single   K-G6   DEFENDER premise 1     | CURED -> CURED | RESPONSE same
+19 single   K-G6   DEFENDER premise 4     | CURED -> CURED | RESPONSE same
+20 single   K-G6   DEFENDER premise 5     | CURED -> CURED | RESPONSE same
+21 qwen alternate_reply replaces deepseek | not a cure row (its judgment is replayed above as qwen (alt))
+22 qwen     K-S    D1 vs C1               | UNCURED -> UNCURED | RESPONSE same
+23 qwen     K-S    D1 vs C4               | UNCURED -> UNCURED | RESPONSE same
+24 qwen     K-S    D2 vs C5               | UNCURED -> UNCURED | RESPONSE same
+25 qwen     K-S    D4 vs C2               | UNCURED -> UNCURED | RESPONSE same
+26 qwen     K-S    D5 vs C2               | UNCURED -> UNCURED | RESPONSE same
+27 qwen     K-S    D5 vs C3               | UNCURED -> UNCURED | RESPONSE same
+28 qwen     K-C    REASONING              | UNCURED -> UNCURED | RESPONSE same
+29 qwen     K-C    D1 vs C1               | UNCURED -> CURED | RESPONSE CHANGED: "I accept the mark; the restated line weighs the chains together and ex"
+30 qwen     K-C    D1 vs C4               | UNCURED -> UNCURED | RESPONSE CHANGED: "I accept the mark; the restated line weighs the ek chains together and"
+31 qwen     K-C    D2 vs C5               | UNCURED -> UNCURED | RESPONSE CHANGED: "I accept the mark; the restated line weighs the register and father-ho"
+32 qwen     K-C    D4 vs C2               | UNCURED -> UNCURED | RESPONSE CHANGED: "I accept the mark; the restated line weighs the woman-seed and David-s"
+33 qwen     K-C    D5 vs C2               | UNCURED -> UNCURED | RESPONSE CHANGED: "I accept the mark; the restated line weighs the flesh-from-David and w"
+34 qwen     K-C    D5 vs C3               | UNCURED -> UNCURED | RESPONSE CHANGED: "I accept the mark; the restated line weighs the tribal-reckoning and r"
+35 glm failed_reply no_usable_judgment | not a cure row

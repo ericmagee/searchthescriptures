@@ -1,0 +1,28 @@
+live versionId e9f2a2dd-141e-4be0-9f75-4e140cacb3c1
+guards passed: base matched for 34 code nodes (30 to change, 4 templates); connections match the base; no D4/C4 node; templates unchanged
+nodes added (20): D4 Build, D4 Route, D4 Call anthropic, D4 Call openai, D4 Call gemini, D4 Call grok, D4 Call mimo, D4 Call openrouter, D4 Call deepseek, D4 Extract, C4 Build, C4 Route, C4 Call anthropic, C4 Call openai, C4 Call gemini, C4 Call grok, C4 Call mimo, C4 Call openrouter, C4 Call deepseek, C4 Extract
+connection diff (- removed, + added): - 1 + 49
+  - ('C3 Extract', 'main', 0, 'Build Synthesis', 'main', 0)
+  + ('C3 Extract', 'main', 0, 'D4 Build', 'main', 0)
+  + ('C4 Build', 'main', 0, 'C4 Route', 'main', 0)
+  + ('C4 Extract', 'main', 0, 'Build Synthesis', 'main', 0)
+  + ('C4 Extract', 'main', 1, 'Failure Salvage', 'main', 0)
+  + ('C4 Route', 'main', 0, 'C4 Call anthropic', 'main', 0)
+  + ('C4 Route', 'main', 1, 'C4 Call openai', 'main', 0)
+  + ('C4 Route', 'main', 2, 'C4 Call gemini', 'main', 0)
+  + ('C4 Route', 'main', 3, 'C4 Call grok', 'main', 0)
+  + ('C4 Route', 'main', 4, 'C4 Call mimo', 'main', 0)
+  + ('C4 Route', 'main', 5, 'C4 Call openrouter', 'main', 0)
+  + ('C4 Route', 'main', 6, 'C4 Call deepseek', 'main', 0)
+  + ('D4 Build', 'main', 0, 'D4 Route', 'main', 0)
+  + ('D4 Extract', 'main', 0, 'C4 Build', 'main', 0)
+  + ('D4 Extract', 'main', 1, 'Failure Salvage', 'main', 0)
+  + ('D4 Route', 'main', 0, 'D4 Call anthropic', 'main', 0)
+  + ('D4 Route', 'main', 1, 'D4 Call openai', 'main', 0)
+  + ('D4 Route', 'main', 2, 'D4 Call gemini', 'main', 0)
+  + ('D4 Route', 'main', 3, 'D4 Call grok', 'main', 0)
+  + ('D4 Route', 'main', 4, 'D4 Call mimo', 'main', 0)
+  + ('D4 Route', 'main', 5, 'D4 Call openrouter', 'main', 0)
+  + ('D4 Route', 'main', 6, 'D4 Call deepseek', 'main', 0)
+  + (and each of the 14 close-round call nodes: main 0 -> its Extract, main 1 -> Failure Salvage)
+DRY: would PUT 30 code nodes, add 20 nodes, rewire as above; nothing written (plan: flow/close_round_nodes.json)

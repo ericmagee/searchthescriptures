@@ -1,0 +1,80 @@
+drvCheck carried by 17 new nodes; cureVerdicts by 14
+OK  A1 base reads row 4 restated D5 vs C2 as L1 (stored: "exhibits 1 layer kind")
+OK  A1 new: row 4 restated D5 vs C2 reads L1,L2 ("[L2] sperma, seed", "[L2] genomenou (made, come to be)") on all 17 nodes
+OK  A1 Qwen [L2] tag after the word ("gar (for) and gennēthen (...) [L2]"): base  -> new L2
+OK  A1 an [L2] tag on English words or after "no" is still not counted (3 negatives)
+OK  A1 the cure prompt states the [L2] form (both rule blocks) and the bracket rule on all 14 cure nodes
+OK  A1 the judge rule (Panel Build, Build Independent Verdict) states the same [L2] form
+OK  A1 enforcer row 4 (K-C D5 vs C2, DeepSeek) on the stored reply: base UNCURED (the restated line names no chain footing: it exhibits 1 layer kind) -> new CURED
+OK  A2 56 pairings: qwen in no alternate pool or reserve; the panel unchanged in every pairing
+     base pool in every pairing: [qwen] or empty; new pool after the family guard (Resolve Seats): sol, EMPTY in 14 pairings (ChatGPT or a family match debates); qwen was the reserve in 20 pairings, now none
+       claude v mimo: alt qwen -> sol
+       chatgpt v claude: alt qwen -> EMPTY
+       chatgpt v gemini: alt - -> EMPTY | reserve qwen -> null
+       chatgpt v grok: alt qwen -> EMPTY
+       chatgpt v mimo: alt - -> EMPTY | reserve qwen -> null
+       chatgpt v glm: alt - -> EMPTY | reserve qwen -> null
+       chatgpt v qwen: alt - -> EMPTY
+       chatgpt v deepseek: alt - -> EMPTY | reserve qwen -> null
+OK  A2 Resolve Seats maps sol to the openrouter alternate call
+OK  A2 an openai/ alternate body is {model,max_tokens,messages}: no reasoning or effort field
+OK  A3 base: the disclaimed restated line marked (1), the timing RESULT missed (0)
+OK  A3 new: "does not rest on Matthew 1:25 or Matthew 1:18 as excluding any union" not marked; RESULT "contradicted by the stated timing" marked, on all nodes
+OK  A3 the judge_fix2 true marks stay (886 D3, 886 D5, 880 D3 vs C1) and the 32255 single judge D1 vs C1 line is still marked
+OK  A3 hedged "neither reading is excluded" still not marked
+OK  A3 enforcer row 13 on the stored reply: base UNCURED (the restated line keeps what K-DG8 marks) -> new CURED (restated)
+OK  A4 __orc turns a google/ system message into a cached array (as for Gemini and Qwen in 32255)
+OK  A4 K-G6 on Gemini 32255 (judgment 892) through the cached body: base none -> new DEFENDER premise 4
+OK  A4 the ledger premise lines read from that body: base 0, new 12
+OK  A4 Alternate Payloads.js reads the cached body the same way
+OK  A4 Extract Independent Verdict.js reads the cached body the same way
+OK  A5 base: K-G4 on the 32228 concession-ground BROKEN lines (single judge, DeepSeek)
+OK  A5 new: neither is K-G4 on any node (a "K-G4 NOT RAISED" audit line is written instead)
+OK  A5 the true K-G4 marks (32255 ChatGPT D3 vs C6, D5 vs C2) stay
+OK  A5 a challenger link whose ground names the OTHER side's concession and an unanswered witness is still K-G4
+OK  A6 row 13 K-DG8 D1 vs C1: base reproduces the stored (wrong) RESPONSE "I accept the mark. The line was wrong be..."; new "The mark is correct; the original ground read the ..."
+OK  A6 row 17 K-C D6: base reproduces the stored (wrong) RESPONSE "The mark is correct as to form; D6 stand..."; new "I accept the mark; D6 is restated on the chain as ..."
+OK  A6 respOf matches by rule and item on all 14 cure nodes (enfRows reads it)
+OK  A7 base on 32255: S-A 1, S-C 0, S-E none (no such check)
+OK  A7 new S-A: "Both use 3:38" and "Both now agree" marked
+OK  A7 new S-C fires on section 1 ("no charge on either side's list contests these"): 1 item(s)
+OK  A7 new S-E: "withdrew the Septuagint citation" against "I withdraw nothing" marked
+     new synthesis lines on 32255 (5):
+       [AUDIT v23: SYNTHESIS CHECK (S-A) -- a "both" item does not quote both sides' own words: "- **Matthew 1:16's last link.** The active "begat" stops at "Jacob begat Joseph"; the birth is passive with feminine *hēs*; Joseph is titled
+       [AUDIT v23: SYNTHESIS CHECK (S-A) -- a "both" item names a verse one side never names (3:38): "Both use 3:38.". REVIEW THIS ROW.]
+       [AUDIT v23: SYNTHESIS CHECK (S-A) -- a "both" item does not quote both sides' own words: "Both now agree; the defender narrowed to "the ground of the calling."". REVIEW THIS ROW.]
+       [AUDIT v23: SYNTHESIS CHECK (S-C) -- 9 item(s) listed as charged by neither side name verses a closing premise list carries: The L1 wording of the source rows. "she (Matt 1:18, Matt 1:20, Luke 1:35); Matthew 1:16's last link. The 
+       [AUDIT v23: SYNTHESIS CHECK (S-E) -- the synthesis says the defender withdrew (septuagint), but no defender round holds those words affirmed: "The defender accepted the challenger's rows outright and withdrew the Septuagint citati
+OK  A7 S-E is quiet when the side's round does withdraw it in words
+OK  A8 the judge rule (ruling 3) is in Panel Build and Build Independent Verdict (Alternate and Reserve Build reuse Panel Build's prompt)
+OK  A8 Format Markdown's rule copy carries ruling 3
+OK  A8 both debater frames (DEF_BURDEN, CH_BURDEN) carry the citation rule
+OK  A8 the cure rule copy carries ruling 3 on all cure nodes
+OK  A8 K-G4 (kg4Answered): an answer quoting the words without "Matthew 1:25" is not an answer (0 namings)
+OK  A8 the same answer with the reference named counts
+OK  A8 the ledger (K-G6's source): words without the reference leave Matthew 1:25 NOT NAMED
+OK  A8 Panel Build citation block: WORDING DIFFERS and WORDING NOT FOUND reach the judges "NOT COUNTED"; WORDS ARE AT unchanged
+OK  B2 verses cited before (a verse inside an earlier range; a bare 2:31 after Acts in the same sentence) are not new presses
+OK  B2 new verses in the close are new presses: Hebrews 7:14, Psalms 132:11
+OK  B2 a bare reference after a sentence end takes no book and is not read (no false press)
+OK  B2 the judges' note under [DR4] lists it as NOT COUNTED
+OK  B2 Panel Build.js carries the same C4P code
+OK  B2 Build Independent Verdict.js carries the same C4P code
+OK  B2 Build Save Body.js carries the same C4P code
+OK  B2 Format Markdown.js carries the same C4P code
+OK  B2 Build Synthesis.js carries the same C4P code
+OK  B2 marked for the panel and the single judge, recorded in review_notes
+OK  B3 cureRounds reads [CR4] and [DR4] as their own blocks (base: ["CR1","DR3"])
+OK  B3 K-S: [CR4] named as the answering round is read as named (base marked it)
+OK  B3 K-G4: a pressed witness named in the defender's close [CR4] makes the BROKEN grade unanswered-false
+OK  B3 K-G4: the challenger's close [DR4] answers nothing
+OK  B3 every cure node: the defender answers in [CR2], [CR3] or [CR4]; pressing rounds unchanged; no "[CR2] or [CR3]" text left
+OK  B3 the judges' ledger on 32255: the unanswered Deuteronomy 24:1, Psalm 2:7, Acts 13:33, Luke 1:5 become named when [CR4] names them
+OK  B3 the ledger headings: defender [CR2], [CR3] or [CR4]; challenger unchanged ([DR4] answers nothing)
+OK  B3 K-G6 reads the new ledger heading (drvLabAt)
+OK  B3 Panel Build.js: counting rule names [CR4] as an answering round and [DR4] as answering nothing, structurally last
+OK  B3 Build Independent Verdict.js: counting rule names [CR4] as an answering round and [DR4] as answering nothing, structurally last
+OK  B3 the synthesis, diagnostic, Format Markdown and the salvage file include both close rounds
+OK  B4 the save path carries defender_r4 and challenger_r4; Final Output and Regrade Load carry cr4/dr4
+
+62 fixtures, 0 bad
