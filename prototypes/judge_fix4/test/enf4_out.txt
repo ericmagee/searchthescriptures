@@ -1,0 +1,66 @@
+
+ENFORCER LOG 32255: id seat rule item | stored -> new | malformed line reported (stored -> new)
+ 1 deepseek K-C    REASONING              | CURED -> CURED () | - -> -
+ 2 deepseek K-C    KEYSTONE               | CURED -> CURED () | - -> -
+ 3 deepseek K-C    D1                     | CURED -> CURED () | - -> -
+ 4 deepseek K-C    D5 vs C2               | UNCURED -> CURED () | - -> -
+ 5 deepseek K-C    D5 vs C5               | CURED -> CURED () | - -> -
+ 6 deepseek K-C    D6                     | CURED -> CURED () | - -> -
+ 7 gemini   K-C    REASONING              | CURED -> CURED () | - -> -
+ 8 chatgpt  K-G4   D3 vs C6               | CURED -> CURED (pressed: quotation found in DR2; the pressed witness is named in no later defend) | - -> -
+ 9 chatgpt  K-G4   D5 vs C2               | CURED -> CURED (pressed: quotation found in DR2; the pressed witness is named in no later defend) | - -> -
+10 single   K-G4   D1 vs C1               | CURED -> CURED (retracted) | - -> -
+11 single   K-S    D5 vs C2               | CURED -> CURED (regraded: answering round named) | - -> -
+12 single   K-S    D6                     | CURED -> CURED (regraded: answering round named) | - -> -
+13 single   K-DG8  D1 vs C1               | UNCURED -> NO ITEM (F2: K-DG8 removed)
+14 single   K-C    REASONING              | CURED -> CURED () | - -> -
+15 single   K-C    KEYSTONE               | CURED -> CURED () | - -> -
+16 single   K-C    D5 vs C5               | CURED -> CURED () | - -> -
+17 single   K-C    D6                     | CURED -> CURED () | - -> -
+18 single   K-G6   DEFENDER premise 1     | CURED -> CURED (counted: DEFENDER COUNT 2, STANDING PROP-DEPENDENT) | - -> -
+19 single   K-G6   DEFENDER premise 4     | CURED -> CURED (counted: DEFENDER COUNT 2, STANDING PROP-DEPENDENT) | - -> -
+20 single   K-G6   DEFENDER premise 5     | CURED -> CURED (counted: DEFENDER COUNT 2, STANDING PROP-DEPENDENT) | - -> -
+21 qwen alternate_reply replaces deepseek | not a cure row
+22 qwen     K-S    D1 vs C1               | UNCURED -> UNCURED (the restated line names no round that answered the witness) | - -> -
+23 qwen     K-S    D1 vs C4               | UNCURED -> UNCURED (the restated line names no round that answered the witness) | - -> -
+24 qwen     K-S    D2 vs C5               | UNCURED -> UNCURED (the restated line names no round that answered the witness) | - -> -
+25 qwen     K-S    D4 vs C2               | UNCURED -> UNCURED (the restated line names no round that answered the witness) | - -> -
+26 qwen     K-S    D5 vs C2               | UNCURED -> UNCURED (the restated line names no round that answered the witness) | - -> -
+27 qwen     K-S    D5 vs C3               | UNCURED -> UNCURED (the restated line names no round that answered the witness) | - -> -
+28 qwen     K-C    REASONING              | UNCURED -> UNCURED (the restated line names no chain footing: it exhibits 1 layer kind) | - -> -
+29 qwen     K-C    D1 vs C1               | UNCURED -> CURED () | - -> -
+30 qwen     K-C    D1 vs C4               | UNCURED -> UNCURED (the restated line names no chain footing: it exhibits 1 layer kind) | - -> -
+31 qwen     K-C    D2 vs C5               | UNCURED -> UNCURED (the restated line names no chain footing: it exhibits 1 layer kind) | - -> -
+32 qwen     K-C    D4 vs C2               | UNCURED -> UNCURED (the restated line names no chain footing: it exhibits 1 layer kind) | - -> -
+33 qwen     K-C    D5 vs C2               | UNCURED -> UNCURED (the restated line names no chain footing: it exhibits 1 layer kind) | - -> -
+34 qwen     K-C    D5 vs C3               | UNCURED -> UNCURED (the restated line names no chain footing: it exhibits 1 layer kind) | - -> -
+35 glm failed_reply no_usable_judgment | not a cure row
+
+ENFORCER LOG 32266: id seat rule item | stored -> new | malformed line reported (stored -> new)
+36 deepseek K-G4   D6 vs C4               | CURED -> CURED (retracted) | - -> -
+37 deepseek K-DG8  D6 vs C4               | CURED -> NO ITEM (F2: K-DG8 removed)
+38 deepseek K-C    REASONING              | CURED -> CURED () | - -> -
+39 glm      K-G4   D1 vs C6               | UNCURED -> CURED (retracted) | RETRACTED: D1 vs C6 (Matthew 1:18) -- re -> -
+40 glm      K-G4   D2 vs C4               | UNCURED -> CURED (retracted) | RETRACTED: D1 vs C6 (Matthew 1:18) -- re -> -
+41 glm      K-G4   D2 vs C6               | UNCURED -> CURED (retracted) | RETRACTED: D1 vs C6 (Matthew 1:18) -- re -> -
+42 glm      K-G4   D3 vs C1               | UNCURED -> CURED (retracted) | RETRACTED: D1 vs C6 (Matthew 1:18) -- re -> -
+43 glm      K-G4   D4 vs C3               | UNCURED -> CURED (retracted) | RETRACTED: D1 vs C6 (Matthew 1:18) -- re -> -
+44 glm      K-G4   D5 vs C5               | UNCURED -> CURED (retracted) | RETRACTED: D1 vs C6 (Matthew 1:18) -- re -> -
+45 glm      K-G4   D5 vs C1               | UNCURED -> CURED (retracted) | RETRACTED: D1 vs C6 (Matthew 1:18) -- re -> -
+46 glm      K-G4   D6 vs C4               | UNCURED -> CURED (retracted) | RETRACTED: D1 vs C6 (Matthew 1:18) -- re -> -
+47 glm      K-G4   D6 vs C5               | UNCURED -> CURED (retracted) | RETRACTED: D1 vs C6 (Matthew 1:18) -- re -> -
+48 glm      K-B    D6 vs C6               | UNCURED -> CURED (retracted) | RETRACTED: D6 vs C6 (Genesis 4:1) -- reg -> -
+49 glm      K-G4   D6 vs C6               | UNCURED -> CURED (retracted) | RETRACTED: D1 vs C6 (Matthew 1:18) -- re -> -
+50 glm      K-DG8  KEYSTONE               | UNCURED -> NO ITEM (F2: K-DG8 removed)
+51 glm      K-DG8  D6 vs C6               | UNCURED -> NO ITEM (F2: K-DG8 removed)
+52 glm      K-C    REASONING              | CURED -> CURED () | - -> -
+53 glm      K-C    KEYSTONE               | CURED -> CURED () | - -> -
+54 glm      K-C    CONCEDED LINKS         | CURED -> CURED () | - -> -
+55 glm      K-C    D2 vs C4               | UNCURED -> UNCURED (the restated line names no chain footing: it exhibits 0 layer kinds) | RETRACTED: D2 vs C4 (Luke 1:34) -- regra -> -
+56 single   K-G4   D1 vs C4               | CURED -> CURED (retracted) | - -> -
+57 single   K-G4   D6 vs C6               | CURED -> CURED (retracted) | - -> -
+58 single   K-N    CONCEDED LINKS         | CURED -> CURED (restated) | - -> -
+59 single   K-SC   D4                     | CURED -> CURED (statement names CR4 and quotes it) | - -> -
+60 single   K-DG8  KEYSTONE               | CURED -> NO ITEM (F2: K-DG8 removed)
+61 sol alternate_reply replaces glm | not a cure row
+62 sol      K-DG8  KEYSTONE               | CURED -> NO ITEM (F2: K-DG8 removed)

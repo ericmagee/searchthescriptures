@@ -1,0 +1,136 @@
+ok  F1 Alternate Build: DeepSeek 32266 retraction of D6 vs C4 gives CHALLENGE SELF-SUPPORTED and RESULT UNDERDETERMINED (fields, text, DB reader)
+ok  F1 Alternate Cure Build: DeepSeek 32266 retraction of D6 vs C4 gives CHALLENGE SELF-SUPPORTED and RESULT UNDERDETERMINED (fields, text, DB reader)
+ok  F1 Alternate Cure Normalize: DeepSeek 32266 retraction of D6 vs C4 gives CHALLENGE SELF-SUPPORTED and RESULT UNDERDETERMINED (fields, text, DB reader)
+ok  F1 Alternate Merge: DeepSeek 32266 retraction of D6 vs C4 gives CHALLENGE SELF-SUPPORTED and RESULT UNDERDETERMINED (fields, text, DB reader)
+ok  F1 Cure Build: DeepSeek 32266 retraction of D6 vs C4 gives CHALLENGE SELF-SUPPORTED and RESULT UNDERDETERMINED (fields, text, DB reader)
+ok  F1 Cure Check: DeepSeek 32266 retraction of D6 vs C4 gives CHALLENGE SELF-SUPPORTED and RESULT UNDERDETERMINED (fields, text, DB reader)
+ok  F1 Cure Normalize: DeepSeek 32266 retraction of D6 vs C4 gives CHALLENGE SELF-SUPPORTED and RESULT UNDERDETERMINED (fields, text, DB reader)
+ok  F1 Panel Cure Build 1: DeepSeek 32266 retraction of D6 vs C4 gives CHALLENGE SELF-SUPPORTED and RESULT UNDERDETERMINED (fields, text, DB reader)
+ok  F1 Panel Cure Build 2: DeepSeek 32266 retraction of D6 vs C4 gives CHALLENGE SELF-SUPPORTED and RESULT UNDERDETERMINED (fields, text, DB reader)
+ok  F1 Panel Cure Build 3: DeepSeek 32266 retraction of D6 vs C4 gives CHALLENGE SELF-SUPPORTED and RESULT UNDERDETERMINED (fields, text, DB reader)
+ok  F1 Panel Cure Check: DeepSeek 32266 retraction of D6 vs C4 gives CHALLENGE SELF-SUPPORTED and RESULT UNDERDETERMINED (fields, text, DB reader)
+ok  F1 Panel Cure Normalize 1: DeepSeek 32266 retraction of D6 vs C4 gives CHALLENGE SELF-SUPPORTED and RESULT UNDERDETERMINED (fields, text, DB reader)
+ok  F1 Panel Cure Normalize 2: DeepSeek 32266 retraction of D6 vs C4 gives CHALLENGE SELF-SUPPORTED and RESULT UNDERDETERMINED (fields, text, DB reader)
+ok  F1 Panel Cure Normalize 3: DeepSeek 32266 retraction of D6 vs C4 gives CHALLENGE SELF-SUPPORTED and RESULT UNDERDETERMINED (fields, text, DB reader)
+ok  F1: a count corrected to 4 of L=6 recomputes DEFENSE COLLAPSED, PARTIAL-2, RESULT UNDERDETERMINED; the CORRECTED RESULT line the DB reads comes first
+ok  F1: a cure that retracts, regrades and recounts nothing triggers no recompute
+ok  F1 (Cure Check): the single judge 32266 recomputes to DEFENSE SELF-SUPPORTED 0, CHALLENGE SELF-SUPPORTED, RESULT UNDERDETERMINED in its text
+ok  F2 Alternate Build: no K-DG8 mark, item, cure test or cure text
+ok  F2 Alternate Cure Build: no K-DG8 mark, item, cure test or cure text
+ok  F2 Alternate Cure Normalize: no K-DG8 mark, item, cure test or cure text
+ok  F2 Alternate Merge: no K-DG8 mark, item, cure test or cure text
+ok  F2 Cure Build: no K-DG8 mark, item, cure test or cure text
+ok  F2 Cure Check: no K-DG8 mark, item, cure test or cure text
+ok  F2 Cure Normalize: no K-DG8 mark, item, cure test or cure text
+ok  F2 Panel Cure Build 1: no K-DG8 mark, item, cure test or cure text
+ok  F2 Panel Cure Build 2: no K-DG8 mark, item, cure test or cure text
+ok  F2 Panel Cure Build 3: no K-DG8 mark, item, cure test or cure text
+ok  F2 Panel Cure Check: no K-DG8 mark, item, cure test or cure text
+ok  F2 Panel Cure Normalize 1: no K-DG8 mark, item, cure test or cure text
+ok  F2 Panel Cure Normalize 2: no K-DG8 mark, item, cure test or cure text
+ok  F2 Panel Cure Normalize 3: no K-DG8 mark, item, cure test or cure text
+ok  F2 Panel Payloads: no K-DG8 mark, item, cure test or cure text
+ok  F2 Alternate Payloads: no K-DG8 mark, item, cure test or cure text
+ok  F2 Extract Independent Verdict: no K-DG8 mark, item, cure test or cure text
+ok  F2 Panel Payloads: a Matthew 1:25 ground draws no K-DG8 item
+ok  F2 Alternate Payloads: a Matthew 1:25 ground draws no K-DG8 item
+ok  F2 Extract Independent Verdict: a Matthew 1:25 ground draws no K-DG8 item
+ok  F2: the cure rule names no K-DG8 and carries no record doctrine on Matthew 1:18 or 1:25
+ok  F3 Alternate Build: GLM 32266 cure reply: ten RETRACTED lines read with their regrade and reason, none malformed
+ok  F3 Alternate Cure Build: GLM 32266 cure reply: ten RETRACTED lines read with their regrade and reason, none malformed
+ok  F3 Alternate Cure Normalize: GLM 32266 cure reply: ten RETRACTED lines read with their regrade and reason, none malformed
+ok  F3 Alternate Merge: GLM 32266 cure reply: ten RETRACTED lines read with their regrade and reason, none malformed
+ok  F3 Cure Build: GLM 32266 cure reply: ten RETRACTED lines read with their regrade and reason, none malformed
+ok  F3 Cure Check: GLM 32266 cure reply: ten RETRACTED lines read with their regrade and reason, none malformed
+ok  F3 Cure Normalize: GLM 32266 cure reply: ten RETRACTED lines read with their regrade and reason, none malformed
+ok  F3 Panel Cure Build 1: GLM 32266 cure reply: ten RETRACTED lines read with their regrade and reason, none malformed
+ok  F3 Panel Cure Build 2: GLM 32266 cure reply: ten RETRACTED lines read with their regrade and reason, none malformed
+ok  F3 Panel Cure Build 3: GLM 32266 cure reply: ten RETRACTED lines read with their regrade and reason, none malformed
+ok  F3 Panel Cure Check: GLM 32266 cure reply: ten RETRACTED lines read with their regrade and reason, none malformed
+ok  F3 Panel Cure Normalize 1: GLM 32266 cure reply: ten RETRACTED lines read with their regrade and reason, none malformed
+ok  F3 Panel Cure Normalize 2: GLM 32266 cure reply: ten RETRACTED lines read with their regrade and reason, none malformed
+ok  F3 Panel Cure Normalize 3: GLM 32266 cure reply: ten RETRACTED lines read with their regrade and reason, none malformed
+ok  F3: the bare form still parses
+ok  F3: a rule name before the label is allowed
+ok  F3: a "retraction" regraded to a LINK BROKEN grade is no retraction
+ok  F3: a retraction keeps its own reason: carried by its own line ([DR1] and a quotation)
+ok  F3: each item reports its own refused line, never another item's (old code gave D2 vs C4 the line "RESTATED: D1 vs C6 the challenger ...")
+ok  F3: cureOwn: "D1" is not "D10"
+ok  F4 Panel Payloads: K-S/K-S2 do not read a quotation of a side as the judge's ground
+ok  F4 Panel Payloads: the judge's own ground still draws K-S
+ok  F4 Panel Payloads: K-C does not read the declared link wording restated on a KEYSTONE line (base did)
+ok  F4 Panel Payloads: K-U does not read a quotation
+ok  F4 Panel Payloads: K-SC does not read a quoted concession
+ok  F4 Panel Payloads: K-SC still reads the judge's own ground
+ok  F4 Alternate Payloads: K-S/K-S2 do not read a quotation of a side as the judge's ground
+ok  F4 Alternate Payloads: the judge's own ground still draws K-S
+ok  F4 Alternate Payloads: K-C does not read the declared link wording restated on a KEYSTONE line (base did)
+ok  F4 Alternate Payloads: K-U does not read a quotation
+ok  F4 Alternate Payloads: K-SC does not read a quoted concession
+ok  F4 Alternate Payloads: K-SC still reads the judge's own ground
+ok  F4 Extract Independent Verdict: K-S/K-S2 do not read a quotation of a side as the judge's ground
+ok  F4 Extract Independent Verdict: the judge's own ground still draws K-S
+ok  F4 Extract Independent Verdict: K-C does not read the declared link wording restated on a KEYSTONE line (base did)
+ok  F4 Extract Independent Verdict: K-U does not read a quotation
+ok  F4 Extract Independent Verdict: K-SC does not read a quoted concession
+ok  F4 Extract Independent Verdict: K-SC still reads the judge's own ground
+ok  F4: the K-C cure test (netKeeps) reads the ground clause, so a quoted stating phrase is not kept
+ok  F5: 32266 [CR4] verses new in the close: Leviticus 15:16, Deuteronomy 22:23, Isaiah 7:13, Luke 3:38, 1 Corinthians 15:47 (Leviticus 15:16, Isaiah 7:13, Deuteronomy 22:23, Luke 3:38, 1 Corinthians 15:47)
+ok  F5: the [CR4] note marks them NEW IN CLOSE, NOT COUNTED and states the round-4 rule
+ok  F5: 32266 [DR4] new presses: none (the C4 check stays silent, as stored)
+ok  F5: both 32266 closes are flagged as renumbering ("I number D1-D6 ..."; "I number my chain as pressed ...")
+ok  F5: a close that keeps the numbering is not flagged
+ok  F5 Panel Build: the judges are told round-4 material counts only as an answer and a [CR4] sentence grading a challenger link is disregarded; the notes are under [CR4] and [DR4]
+ok  F5 Build Independent Verdict: the judges are told round-4 material counts only as an answer and a [CR4] sentence grading a challenger link is disregarded; the notes are under [CR4] and [DR4]
+ok  F5: D4 Build and C4 Build ask for the declared numbering; D4 Extract, C4 Extract, Build Save Body record the checks
+ok  F6: 32266 ledger: Matthew 1:24 (named by the defender only as "(1:24)") is now listed as not named; base listed none (cited in [DR1] or [DR2] and not named in a later round of the defender, [CR2], [CR3] or [CR4] (1 of 55): Matthew 1:24)
+ok  F6 (ledger reader): "(1:24)" in the sentence after "Matthew 1:18" does not name Matthew 1:24; "Matthew 1:20 and 1:24" does
+ok  F6 Alternate Build (K-G4): a later bare "(1:24)" in another sentence does not answer Matthew 1:24; with its book in the sentence it does
+ok  F6 Alternate Cure Build (K-G4): a later bare "(1:24)" in another sentence does not answer Matthew 1:24; with its book in the sentence it does
+ok  F6 Alternate Cure Normalize (K-G4): a later bare "(1:24)" in another sentence does not answer Matthew 1:24; with its book in the sentence it does
+ok  F6 Alternate Merge (K-G4): a later bare "(1:24)" in another sentence does not answer Matthew 1:24; with its book in the sentence it does
+ok  F6 Cure Build (K-G4): a later bare "(1:24)" in another sentence does not answer Matthew 1:24; with its book in the sentence it does
+ok  F6 Cure Check (K-G4): a later bare "(1:24)" in another sentence does not answer Matthew 1:24; with its book in the sentence it does
+ok  F6 Cure Normalize (K-G4): a later bare "(1:24)" in another sentence does not answer Matthew 1:24; with its book in the sentence it does
+ok  F6 Panel Cure Build 1 (K-G4): a later bare "(1:24)" in another sentence does not answer Matthew 1:24; with its book in the sentence it does
+ok  F6 Panel Cure Build 2 (K-G4): a later bare "(1:24)" in another sentence does not answer Matthew 1:24; with its book in the sentence it does
+ok  F6 Panel Cure Build 3 (K-G4): a later bare "(1:24)" in another sentence does not answer Matthew 1:24; with its book in the sentence it does
+ok  F6 Panel Cure Check (K-G4): a later bare "(1:24)" in another sentence does not answer Matthew 1:24; with its book in the sentence it does
+ok  F6 Panel Cure Normalize 1 (K-G4): a later bare "(1:24)" in another sentence does not answer Matthew 1:24; with its book in the sentence it does
+ok  F6 Panel Cure Normalize 2 (K-G4): a later bare "(1:24)" in another sentence does not answer Matthew 1:24; with its book in the sentence it does
+ok  F6 Panel Cure Normalize 3 (K-G4): a later bare "(1:24)" in another sentence does not answer Matthew 1:24; with its book in the sentence it does
+ok  F7: the 1611 margin quoted ("or, thou, O virgin, shalt call") is MATCHES (MARGIN); base gave PENDING (then WORDING DIFFERS)
+ok  F7: the verse read with the margin reading ("and thou, O virgin, shalt call his name Immanuel") is MATCHES (MARGIN)
+ok  F7: a wrong quotation is still not a match
+ok  F10: switch OFF (default): a part of the verse is MATCHES
+ok  F10: switch ON: a part of the verse is SHORTENED; the whole verse is MATCHES (both sides alike: the side is not read)
+ok  F7/F10 Quote Report: MATCHES (MARGIN) counts as a match; SHORTENED stays in the report as a mismatch
+ok  F7 Panel Build: MATCHES (MARGIN) is not listed NOT COUNTED to the judges; SHORTENED is
+ok  F7 Build Independent Verdict: MATCHES (MARGIN) is not listed NOT COUNTED to the judges; SHORTENED is
+ok  F8 Panel Build: both itemization copies define UNEXHIBITED as no footing offered or a pressed witness left unanswered (ruling 372)
+ok  F8 Build Independent Verdict: both itemization copies define UNEXHIBITED as no footing offered or a pressed witness left unanswered (ruling 372)
+ok  F8 Format Markdown: the reader's copy matches, and "How to read this debate" prints ruling 372
+ok  F9 Format Markdown: the synthesis checks of 32266 are printed (S-A three times, S-C, S-E)
+ok  F9: none flagged prints "none flagged."
+ok  R3 Panel Build: "a quotation may be part of a verse" with exact KJV words
+ok  R3 Build Independent Verdict: "a quotation may be part of a verse" with exact KJV words
+ok  R3 Format Markdown: "a quotation may be part of a verse" with exact KJV words
+ok  R3 Build Synthesis: "a quotation may be part of a verse" with exact KJV words
+ok  R3 Init with Guards: "a quotation may be part of a verse" with exact KJV words
+ok  R3 Alternate Build: "a quotation may be part of a verse" with exact KJV words
+ok  R3 Alternate Cure Build: "a quotation may be part of a verse" with exact KJV words
+ok  R3 Alternate Cure Normalize: "a quotation may be part of a verse" with exact KJV words
+ok  R3 Alternate Merge: "a quotation may be part of a verse" with exact KJV words
+ok  R3 Cure Build: "a quotation may be part of a verse" with exact KJV words
+ok  R3 Cure Check: "a quotation may be part of a verse" with exact KJV words
+ok  R3 Cure Normalize: "a quotation may be part of a verse" with exact KJV words
+ok  R3 Panel Cure Build 1: "a quotation may be part of a verse" with exact KJV words
+ok  R3 Panel Cure Build 2: "a quotation may be part of a verse" with exact KJV words
+ok  R3 Panel Cure Build 3: "a quotation may be part of a verse" with exact KJV words
+ok  R3 Panel Cure Check: "a quotation may be part of a verse" with exact KJV words
+ok  R3 Panel Cure Normalize 1: "a quotation may be part of a verse" with exact KJV words
+ok  R3 Panel Cure Normalize 2: "a quotation may be part of a verse" with exact KJV words
+ok  R3 Panel Cure Normalize 3: "a quotation may be part of a verse" with exact KJV words
+ok  R3 Init with Guards: both debater frames carry the new wording
+
+fixtures 134, bad 0

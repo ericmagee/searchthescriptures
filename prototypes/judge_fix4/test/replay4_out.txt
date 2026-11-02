@@ -1,0 +1,87 @@
+
+=== RUN 32212 (replies rebuilt from the stored report, +R)
+STORED rows: deepseek [PARTIAL | COLLAPSED 4 | PROP-DEPENDENT 2 | UNDERDETERMINED | unc 2]; gemini [PARTIAL | COLLAPSED 5 | PROP-DEPENDENT 2 | UNDERDETERMINED | unc 1]; chatgpt [BROKEN | COLLAPSED 4 | PROP-DEPENDENT 1 | CHALLENGER WINS | unc 4]
+STORED outcome (ported rules): UNGRADED -> UNGRADED — REVIEW | RESULT words  | as stored in the row: see README
+base deepseek items 8: [PARTIAL | COLLAPSED 4 | PROP-DEPENDENT 2 | UNDERDETERMINED | unc 8]
+        uncured: K-N CONCEDED LINKS (the restated line keeps what K-N marks); K-N CHALLENGER CONCEDED LINKS (no RESTATED line for CHALLENGER CONCEDED LINKS); K-C D5 (no RESTATED line for D5); K-C D6 (no RESTATED line for D6); K-G6 DEFENDER premise 2 (no CORRECTED COUNT for DEFENDER and no statement quoting the transcrip); K-G6 DEFENDER premise 6 (no CORRECTED COUNT for DEFENDER and no statement quoting the transcrip); K-G6 CHALLENGER premise 5 (no CORRECTED COUNT for CHALLENGER and no statement quoting the transcr); K-G6 CHALLENGER premise 6 (no CORRECTED COUNT for CHALLENGER and no statement quoting the transcr)
+base gemini   items 6: [PARTIAL | COLLAPSED 5 | PROP-DEPENDENT 2 | UNDERDETERMINED | unc 6]
+        uncured: K-DG8 D3 (no RESTATED line for D3); K-DG8 D5 (no RESTATED line for D5); K-C RESULT (no RESTATED line for RESULT); K-C D6 (no RESTATED line for D6); K-C CHALLENGER CHAIN MARK (no RESTATED line for CHALLENGER CHAIN MARK); K-G6 DEFENDER premise 4 (no CORRECTED COUNT for DEFENDER and no statement quoting the transcrip)
+base chatgpt  items 9: [BROKEN | COLLAPSED 4 | PROP-DEPENDENT 1 | CHALLENGER WINS | unc 3]
+        uncured: K-G6 DEFENDER premise 3 (no CORRECTED COUNT for DEFENDER and no statement quoting the transcrip); K-G6 DEFENDER premise 4 (no CORRECTED COUNT for DEFENDER and no statement quoting the transcrip); K-G6 CHALLENGER premise 6 (no CORRECTED COUNT for CHALLENGER and no statement quoting the transcr)
+base single   items 6: [PARTIAL | COLLAPSED 6 | COLLAPSED 4 | UNDERDETERMINED | unc 3] (no vote)
+BASE PANEL: deepseek, gemini, chatgpt -> UNGRADED, UNGRADED — REVIEW | RESULT words 
+new  deepseek items 8: [PARTIAL | COLLAPSED 4 | PROP-DEPENDENT 2 | UNDERDETERMINED | unc 8]
+        uncured: K-N CONCEDED LINKS (the restated line keeps what K-N marks); K-N CHALLENGER CONCEDED LINKS (no RESTATED line for CHALLENGER CONCEDED LINKS); K-C D5 (no RESTATED line for D5); K-C D6 (no RESTATED line for D6); K-G6 DEFENDER premise 2 (no CORRECTED COUNT for DEFENDER and no statement quoting the transcrip); K-G6 DEFENDER premise 6 (no CORRECTED COUNT for DEFENDER and no statement quoting the transcrip); K-G6 CHALLENGER premise 5 (no CORRECTED COUNT for CHALLENGER and no statement quoting the transcr); K-G6 CHALLENGER premise 6 (no CORRECTED COUNT for CHALLENGER and no statement quoting the transcr)
+     items removed: K-DG8 D3, K-DG8 D5 | added: none
+new  gemini   items 4: [PARTIAL | COLLAPSED 5 | PROP-DEPENDENT 2 | UNDERDETERMINED | unc 4]
+        uncured: K-C RESULT (no RESTATED line for RESULT); K-C D6 (no RESTATED line for D6); K-C CHALLENGER CHAIN MARK (no RESTATED line for CHALLENGER CHAIN MARK); K-G6 DEFENDER premise 4 (no CORRECTED COUNT for DEFENDER and no statement quoting the transcrip)
+new  chatgpt  items 9: [BROKEN | COLLAPSED 4 | PROP-DEPENDENT 1 | CHALLENGER WINS | unc 3] RECOMPUTED (RETRACTED D4 vs C2 (DEFENDER LINK BROKEN to UNDERDETERMINED))
+        uncured: K-G6 DEFENDER premise 3 (no CORRECTED COUNT for DEFENDER and no statement quoting the transcrip); K-G6 DEFENDER premise 4 (no CORRECTED COUNT for DEFENDER and no statement quoting the transcrip); K-G6 CHALLENGER premise 6 (no CORRECTED COUNT for CHALLENGER and no statement quoting the transcr)
+     single items removed: K-C D5 vs C4 | added: none
+new  single   items 5: [PARTIAL | COLLAPSED 6 | COLLAPSED 4 | UNDERDETERMINED | unc 3] (no vote)
+NEW PANEL: deepseek, gemini, chatgpt -> UNGRADED, UNGRADED — REVIEW | RESULT words 
+
+=== RUN 32228 (replies rebuilt from the stored report, +R)
+STORED rows: qwen [HELD | PROP-DEPENDENT 1 | SELF-SUPPORTED 0 | UNDERDETERMINED | unc 0]; gemini [PARTIAL | PROP-DEPENDENT 2 | PROP-DEPENDENT 2 | UNDERDETERMINED | unc 0]; chatgpt [BROKEN | COLLAPSED 4 | PROP-DEPENDENT 1 | CHALLENGER WINS | unc 0]
+STORED outcome (ported rules): CONTESTED -> UNGRADED — REVIEW | RESULT words qwen:UNDERDETERMINED, gemini:UNDERDETERMINED, chatgpt:CHALLENGER WINS | as stored in the row: see README
+base qwen     items 3: [HELD | PROP-DEPENDENT 1 | SELF-SUPPORTED 0 | UNDERDETERMINED | unc 3]
+        uncured: K-G6 DEFENDER premise 4 (cure call failed: no cure reply stored); K-G6 CHALLENGER premise 1 (cure call failed: no cure reply stored); K-G6 CHALLENGER premise 6 (cure call failed: no cure reply stored)
+base gemini   items 0: [PARTIAL | PROP-DEPENDENT 2 | PROP-DEPENDENT 2 | UNDERDETERMINED | unc 0]
+base chatgpt  items 2: [BROKEN | PROP-DEPENDENT 3 | PROP-DEPENDENT 1 | CHALLENGER WINS | unc 1]
+        uncured: K-G6 CHALLENGER premise 1 (no CORRECTED COUNT for CHALLENGER and no statement quoting the transcr)
+base single   items 3: [BROKEN | PROP-DEPENDENT 1 | PROP-DEPENDENT 2 | CHALLENGER WINS | unc 0] (no vote)
+BASE PANEL: qwen, gemini, chatgpt -> CONTESTED, UNGRADED — REVIEW | RESULT words gemini:UNDERDETERMINED
+new  qwen     items 3: [HELD | PROP-DEPENDENT 1 | SELF-SUPPORTED 0 | UNDERDETERMINED | unc 3]
+        uncured: K-G6 DEFENDER premise 4 (cure call failed: no cure reply stored); K-G6 CHALLENGER premise 1 (cure call failed: no cure reply stored); K-G6 CHALLENGER premise 6 (cure call failed: no cure reply stored)
+new  gemini   items 0: [PARTIAL | PROP-DEPENDENT 2 | PROP-DEPENDENT 2 | UNDERDETERMINED | unc 0]
+new  chatgpt  items 2: [BROKEN | PROP-DEPENDENT 3 | PROP-DEPENDENT 1 | CHALLENGER WINS | unc 1]
+        uncured: K-G6 CHALLENGER premise 1 (no CORRECTED COUNT for CHALLENGER and no statement quoting the transcr)
+new  single   items 3: [HELD | PROP-DEPENDENT 1 | PROP-DEPENDENT 2 | DEFENDER WINS | unc 0] RECOMPUTED (RETRACTED D5 vs C6 (DEFENDER LINK BROKEN to UNDERDETERMINED)) (no vote)
+NEW PANEL: qwen, gemini, chatgpt -> CONTESTED, UNGRADED — REVIEW | RESULT words gemini:UNDERDETERMINED
+
+=== RUN 32255 (stored cure replies from debate_enforcer_log)
+STORED rows: deepseek [HELD | PROP-DEPENDENT 3 | SELF-SUPPORTED 0 | UNDERDETERMINED | unc 1]; gemini [HELD | PROP-DEPENDENT 2 | SELF-SUPPORTED 0 | UNDERDETERMINED | unc 0]; chatgpt [BROKEN | PROP-DEPENDENT 3 | SELF-SUPPORTED 0 | CHALLENGER WINS | unc 0]
+STORED outcome (ported rules): CONTESTED -> UNGRADED — REVIEW | RESULT words gemini:UNDERDETERMINED, chatgpt:CHALLENGER WINS | as stored in the row: see README
+base deepseek items 6: [HELD | PROP-DEPENDENT 3 | SELF-SUPPORTED 0 | UNDERDETERMINED | unc 0]
+base gemini   items 2: [HELD | PROP-DEPENDENT 2 | SELF-SUPPORTED 0 | UNDERDETERMINED | unc 1]
+        uncured: K-G6 DEFENDER premise 4 (no written response)
+base chatgpt  items 2: [BROKEN | PROP-DEPENDENT 3 | SELF-SUPPORTED 0 | CHALLENGER WINS | unc 0]
+base single   items 12: [HELD | PROP-DEPENDENT 2 | PROP-DEPENDENT 0 | DEFENDER WINS | unc 1] (no vote)
+BASE PANEL: deepseek, gemini, chatgpt -> CONTESTED, UNGRADED — REVIEW | RESULT words deepseek:UNDERDETERMINED, chatgpt:CHALLENGER WINS
+     items removed: K-C D5 vs C2 | added: none
+new  deepseek items 5: [HELD | PROP-DEPENDENT 3 | SELF-SUPPORTED 0 | UNDERDETERMINED | unc 0]
+new  gemini   items 2: [HELD | PROP-DEPENDENT 2 | SELF-SUPPORTED 0 | UNDERDETERMINED | unc 1]
+        uncured: K-G6 DEFENDER premise 4 (no written response)
+new  chatgpt  items 2: [BROKEN | PROP-DEPENDENT 3 | SELF-SUPPORTED 0 | CHALLENGER WINS | unc 0]
+     single items removed: K-DG8 RESULT, K-DG8 D1 vs C1 | added: none
+new  single   items 10: [HELD | PROP-DEPENDENT 2 | SELF-SUPPORTED 0 | UNDERDETERMINED | unc 0] RECOMPUTED (RETRACTED D1 vs C1 (CHALLENGER LINK BROKEN to UNDERDETERMINED); CORRECTED COUNT DEFENDER 2) (no vote)
+NEW PANEL: deepseek, gemini, chatgpt -> CONTESTED, UNGRADED — REVIEW | RESULT words deepseek:UNDERDETERMINED, chatgpt:CHALLENGER WINS
+
+=== RUN 32266 (stored cure replies from debate_enforcer_log)
+STORED rows: deepseek [HELD | SELF-SUPPORTED 0 | PROP-DEPENDENT 0 | DEFENDER WINS | unc 0]; gemini [HELD | SELF-SUPPORTED 0 | SELF-SUPPORTED 0 | UNDERDETERMINED | unc 0]; sol [HELD | PROP-DEPENDENT 1 | PROP-DEPENDENT 2 | DEFENDER WINS | unc 0]
+STORED outcome (ported rules): HELD -> DEFENDER PREVAILS | RESULT words deepseek:DEFENDER WINS, gemini:UNDERDETERMINED, sol:DEFENDER WINS | as stored in the row: see README
+base deepseek items 3: [HELD | SELF-SUPPORTED 0 | PROP-DEPENDENT 0 | DEFENDER WINS | unc 0]
+base gemini   items 0: [HELD | SELF-SUPPORTED 0 | SELF-SUPPORTED 0 | UNDERDETERMINED | unc 0]
+base glm      items 17: [HELD | SELF-SUPPORTED 0 | PROP-DEPENDENT 0 | DEFENDER WINS | unc 14]
+        uncured: K-G4 D1 vs C6 (unanswered-false: statement quotes CR1, but a later challenger round n); K-G4 D2 vs C4 (unanswered-false: statement quotes CR1, but a later challenger round n); K-G4 D2 vs C6 (no PRESSED line, no RETRACTED line, and no statement that names a pres); K-G4 D3 vs C1 (no PRESSED line, no RETRACTED line, and no statement that names a pres); K-G4 D4 vs C3 (no PRESSED line, no RETRACTED line, and no statement that names a pres); K-G4 D5 vs C5 (unanswered-false: statement quotes CR3, but a later challenger round n); K-G4 D5 vs C1 (unanswered-false: statement quotes CR3, but a later challenger round n); K-G4 D6 vs C4 (no PRESSED line, no RETRACTED line, and no statement that names a pres); K-G4 D6 vs C5 (no PRESSED line, no RETRACTED line, and no statement that names a pres); K-B D6 vs C6 (statement exhibits 0 layer kinds; the violation stands; malformed line); K-G4 D6 vs C6 (no PRESSED line, no RETRACTED line, and no statement that names a pres); K-DG8 KEYSTONE (the restated line keeps what K-DG8 marks); K-DG8 D6 vs C6 (no RESTATED line for D6 vs C6; malformed line: RETRACTED: D6 vs C6 (Ge); K-C D2 vs C4 (no RESTATED line for D2 vs C4; malformed line: RETRACTED: D2 vs C4 (Lu)
+base   alternate sol for glm, items 1: [HELD | PROP-DEPENDENT 1 | PROP-DEPENDENT 2 | DEFENDER WINS | unc 0]
+base single   items 5: [HELD | PROP-DEPENDENT 2 | PROP-DEPENDENT 0 | DEFENDER WINS | unc 0] (no vote)
+BASE PANEL: deepseek, gemini, sol -> HELD, DEFENDER PREVAILS | RESULT words deepseek:DEFENDER WINS, gemini:UNDERDETERMINED, sol:DEFENDER WINS
+     items removed: K-DG8 D6 vs C4 | added: none
+new  deepseek items 2: [HELD | SELF-SUPPORTED 0 | SELF-SUPPORTED 0 | UNDERDETERMINED | unc 0] RECOMPUTED (RETRACTED D6 vs C4 (CHALLENGER LINK BROKEN to UNDERDETERMINED))
+new  gemini   items 0: [HELD | SELF-SUPPORTED 0 | SELF-SUPPORTED 0 | UNDERDETERMINED | unc 0]
+     items removed: K-DG8 KEYSTONE, K-DG8 D6 vs C6, K-C D2 vs C4 | added: none
+new  glm      items 14: [HELD | SELF-SUPPORTED 0 | SELF-SUPPORTED 0 | UNDERDETERMINED | unc 0] RECOMPUTED (RETRACTED D1 vs C6 (CHALLENGER LINK BROKEN to UNDERDETERMINED); RETRACTED D2 vs C4 (CHALLENGER LINK BROKEN to UNDERDETERMINED); RETRACTED D2 vs C6 (CHALLENGER LINK BROKEN to UNDERDETERMINED); RETRACTED D3 vs C1 (CHALLENGER LINK BROKEN to UNDERDETERMINED); RETRACTED D4 vs C3 (CHALLENGER LINK BROKEN to UNDERDETERMINED); RETRACTED D5 vs C5 (CHALLENGER LINK BROKEN to UNDERDETERMINED); RETRACTED D5 vs C1 (CHALLENGER LINK BROKEN to UNDERDETERMINED); RETRACTED D6 vs C4 (CHALLENGER LINK BROKEN to UNDERDETERMINED); RETRACTED D6 vs C5 (CHALLENGER LINK BROKEN to UNDERDETERMINED); RETRACTED D6 vs C6 (CHALLENGER LINK BROKEN to UNDERDETERMINED))
+     single items removed: K-DG8 KEYSTONE | added: none
+new  single   items 4: [HELD | SELF-SUPPORTED 0 | SELF-SUPPORTED 0 | UNDERDETERMINED | unc 0] RECOMPUTED (RETRACTED D1 vs C4 (CHALLENGER LINK BROKEN to UNDERDETERMINED); RETRACTED D6 vs C6 (CHALLENGER LINK BROKEN to UNDERDETERMINED); COUNT DEFENDER 2 to 0) (no vote)
+NEW PANEL: deepseek, gemini, glm -> HELD, UNDERDETERMINED | RESULT words deepseek:UNDERDETERMINED, gemini:UNDERDETERMINED, glm:UNDERDETERMINED
+F1 ON THE STORED PANEL deepseek: [HELD | SELF-SUPPORTED 0 | SELF-SUPPORTED 0 | UNDERDETERMINED | unc 0] RECOMPUTED (RETRACTED D6 vs C4 (CHALLENGER LINK BROKEN to UNDERDETERMINED))
+F1 ON THE STORED PANEL gemini  : [HELD | SELF-SUPPORTED 0 | SELF-SUPPORTED 0 | UNDERDETERMINED | unc 0] (no cure trigger)
+F1 ON THE STORED PANEL sol     : [HELD | PROP-DEPENDENT 1 | PROP-DEPENDENT 2 | DEFENDER WINS | unc 0] (no cure trigger)
+F1 ON THE STORED PANEL -> HELD, UNDERDETERMINED | RESULT words deepseek:UNDERDETERMINED, gemini:UNDERDETERMINED, sol:DEFENDER WINS
+DeepSeek stored text after the rewrite (lines read by the DB):
+  RESULT: UNDERDETERMINED -- recomputed after the cure from the cured lines (RETRACTED D6 vs C4 (CHALLENGER LINK BROKEN to UNDERDETERMINED)): HELD-1, CHALLENGE STANDING SELF-SUPPORTED, no collision line stands graded CHALLENGER LINK
+  CLAUSE: HELD-1 -- n=6 w=0 k=0
+  CHALLENGE STANDING: SELF-SUPPORTED -- L=6 c=0 -- recomputed after the cure from the cured lines (RETRACTED D6 vs C4 (CHALLENGER LINK BROKEN to UNDERDETERMINED)).
+  D6 vs C4 (Matthew 1:25): UNDERDETERMINED -- [L1] 'And knew her not till she had brought forth her firstborn son: and he called his name JESUS.' [L2] heōs hou (until which) [L3] with Genesis 4:1 'And Adam knew Eve his wife; and she
+  [AUDIT v25: RECOMPUTED AFTER CURE -- SEAT: deepseek; TRIGGER: RETRACTED D6 vs C4 (CHALLENGER LINK BROKEN to UNDERDETERMINED); ORIGINAL: HELD, DEFENSE SELF-SUPPORTED 0, CHALLENGE PROP-DEPENDENT 0, RESULT DEFENDER WINS; RECOMPUTED: HELD (HELD-1), DEFENSE SELF-SUPPORTED 0, CHALLENGE SELF-SUPPORTED 0, RESULT UNDERDETERMINED; RULE: engine_manual v85 section 8, STANDINGS, RESULT and VERDICT DEFINITIONS; ORIGINAL LINES: D6 vs C4 (Matthew 1:25): CHALLENGER LINK BROKEN -- (L1) 'And knew her not till she had brought forth her firstborn son: and he called his name JESUS.' (L2) heōs hou (until which) (L3)
