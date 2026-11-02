@@ -1,0 +1,114 @@
+[
+ [
+  "32174",
+  "Call OR",
+  {
+   "prompt_tokens": 12690,
+   "completion_tokens": 16,
+   "total_tokens": 12706,
+   "cost": 0,
+   "is_byok": true,
+   "prompt_tokens_details": {
+    "cached_tokens": 12686,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0014366,
+    "upstream_inference_prompt_cost": 0.0012766,
+    "upstream_inference_completions_cost": 0.00016
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "{\"verdict_tag\":\"HELD\",\"defense"
+ ],
+ [
+  "32174",
+  "Relay Out OR",
+  {
+   "prompt_tokens": 12690,
+   "completion_tokens": 16,
+   "total_tokens": 12706,
+   "cost": 0,
+   "is_byok": true,
+   "prompt_tokens_details": {
+    "cached_tokens": 12686,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0014366,
+    "upstream_inference_prompt_cost": 0.0012766,
+    "upstream_inference_completions_cost": 0.00016
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "{\"verdict_tag\":\"HELD\",\"defense"
+ ],
+ [
+  "32173",
+  "Call OR",
+  {
+   "prompt_tokens": 12690,
+   "completion_tokens": 16,
+   "total_tokens": 12706,
+   "cost": 0,
+   "is_byok": true,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 12686,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.050912,
+    "upstream_inference_prompt_cost": 0.050752,
+    "upstream_inference_completions_cost": 0.00016
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "{\"verdict_tag\":\"HELD\",\"defense"
+ ],
+ [
+  "32173",
+  "Relay Out OR",
+  {
+   "prompt_tokens": 12690,
+   "completion_tokens": 16,
+   "total_tokens": 12706,
+   "cost": 0,
+   "is_byok": true,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 12686,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.050912,
+    "upstream_inference_prompt_cost": 0.050752,
+    "upstream_inference_completions_cost": 0.00016
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "{\"verdict_tag\":\"HELD\",\"defense"
+ ]
+]
