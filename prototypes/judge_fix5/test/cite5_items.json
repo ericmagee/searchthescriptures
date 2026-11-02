@@ -1,0 +1,18 @@
+{
+ "base": [
+  "CR1 1 Chronicles 3:17-18: WORDING DIFFERS FROM 1 Chronicles 3:17-18",
+  "DR2 Esther 2:7: WORDING DIFFERS FROM Esther 2:7",
+  "DR2 Isaiah 7:11,7: WORDING NOT FOUND IN Isaiah",
+  "DR2 Isaiah 8:3: WORDING NOT FOUND IN Isaiah",
+  "CR3 Matthew 1:11: WORDING DIFFERS FROM Matthew 1:11"
+ ],
+ "new": [
+  "CR1 1 Chronicles 3:17-18: WORDING DIFFERS FROM 1 Chronicles 3:17-18",
+  "DR2 Esther 2:7: WORDING DIFFERS FROM Esther 2:7",
+  "DR2 Isaiah 8:3: WORDING NOT FOUND IN Isaiah",
+  "CR3 Matthew 1:11: WORDING DIFFERS FROM Matthew 1:11"
+ ],
+ "moved": [
+  "Isaiah 7:11,7:14 PENDING -> MATCHES"
+ ]
+}

@@ -1,0 +1,151 @@
+== G5 one reference parser
+ok  G5 "Luke 21:26, 35" is two references | ["Luke 21:26","Luke 21:35"]
+ok  G5 "Isaiah 7:11, 7:14" is two references | ["Isaiah 7:11","Isaiah 7:14"]
+ok  G5 a range keeps its span; a list after it | ["Matthew 1:24-25","Luke 2:33","Luke 2:41"]
+ok  G5 scoped: "(1:24)" after a sentence end names no book | ["Matthew 1:18","? 1:24"]
+ok  G5 bare reference in the same sentence takes the book
+ok  G5 REFP identical in Panel Build
+ok  G5 REFP identical in Build Independent Verdict
+ok  G5 REFP identical in D3 Build
+ok  G5 REFP identical in C3 Build
+ok  G5 REFP identical in D4 Build
+ok  G5 REFP identical in C4 Build
+ok  G5 REFP identical in D4 Extract
+ok  G5 REFP identical in C4 Extract
+ok  G5 REFP identical in Build Save Body
+ok  G5 REFP identical in Build Synthesis
+ok  G5 REFP identical in Format Markdown
+ok  G5 REFP identical in Citation Scan
+ok  G5 REFP identical in C1 Extract
+ok  G5 REFP identical in Init with Guards
+ok  G5 REFP identical in Panel Payloads
+ok  G5 REFP identical in Alternate Payloads
+ok  G5 REFP identical in Extract Independent Verdict
+ok  G5 REFP identical in Panel Cure Check
+ok  G5 REFP identical in Alternate Build
+ok  G5 REFP identical in Cure Check
+ok  G5 32284 new-in-close: base marks Luke 21:35 | ["Luke 1:31","Luke 21:35","Luke 2:5"]
+ok  G5 32284 new-in-close: new does not (Luke 1:31, Luke 2:5 stay) | ["Luke 1:31","Luke 2:5"]
+ok  G5 32284 C4 new-press check: none in either
+ok  G5 32266 new-in-close unchanged (5 verses) | ["Leviticus 15:16","Isaiah 7:13","Deuteronomy 22:23","Luke 3:38","1 Corinthians 15:47"]
+ok  G5 ledger cited-in lines, base | ["cited in [DR1] or [DR2] and not named in a later round of the defender, [CR2], [CR3] or [CR4] (0 of 72): none","cited in [CR1], [CR2] or [CR3] and not named in a later round of the challenger, [DR1], [DR2] or [DR3] (42 of 92): Matthew 1:23, Genesis 3:1"]
+ok  G5 ledger cited-in lines, new | ["cited in [DR1] or [DR2] and not named in a later round of the defender, [CR2], [CR3] or [CR4] (0 of 73): none","cited in [CR1], [CR2] or [CR3] and not named in a later round of the challenger, [DR1], [DR2] or [DR3] (43 of 93): Matthew 1:23, Genesis 3:1"]
+ok  G5 ledger premise lines unchanged on 32284
+ok  G5 cureRefs: "Luke 21:26, 35" names Luke 21:35 | ["Luke 21:26","Luke 21:35"]
+ok  G5 cureRefs: "Isaiah 7:11, 7:14" names Isaiah 7:14 (base read 7:14 under a guessed chapter key too) | [["Isaiah 7:11","Isaiah 7:14"],["isa 7:11","isa 7:14"]]
+ok  G5 kg4Answered finds Luke 21:35 in a "Luke 21:26, 35" round
+ok  G5 cRefs on REFP
+== G5, G6, G7 citation scan and quote match on 32284
+ok  G5 scan: base reads "Isaiah 7:11,7" | Isaiah 7:11,7
+ok  G5 scan: new reads two parts | Isaiah 7:11,7:14
+ok  G5 compare: base Isaiah 7:11 item PENDING (later "not in Isaiah")
+ok  G5 compare: new Isaiah 7:11, 7:14 MATCHES part by part | MATCHES
+ok  G5 "Matthew 1:18, 1:20" no longer read as "Matthew 1:18,1" | ["Matthew 1:18,1","Matthew 1:18,1:20","MATCHES"]
+ok  G5 compare status counts base | {"MATCHES":292,"PENDING":8}
+ok  G5 compare status counts new | {"MATCHES":293,"PENDING":7}
+ok  G5 items whose status moved | ["Isaiah 7:11,7:14 PENDING -> MATCHES"]
+ok  G7 switch OFF: Isaiah 8:3 "Maher-shalal-hash-baz" not matched | PENDING
+ok  G7 Quote Compare carries the switch, default false
+ok  G7 switch ON: Isaiah 8:3 MATCHES | MATCHES
+ok  G7 switch ON changes nothing else
+ok  G5 report non-matches, base (Find Words empty here) | ["CR1 1 Chronicles 3:17-18: WORDING DIFFERS FROM 1 Chronicles 3:17-18","DR2 Esther 2:7: WORDING DIFFERS FROM Esther 2:7","DR2 Isaiah 7:11,7: WORDING NOT FOUND IN Isaiah","DR2 Isaiah 8:3: WORDING NOT FOUND IN Isaiah","CR3 Matthew 1:11: WORDING DIFFERS FROM Matthew 1:11"]
+ok  G5 report non-matches, new | ["CR1 1 Chronicles 3:17-18: WORDING DIFFERS FROM 1 Chronicles 3:17-18","DR2 Esther 2:7: WORDING DIFFERS FROM Esther 2:7","DR2 Isaiah 8:3: WORDING NOT FOUND IN Isaiah","CR3 Matthew 1:11: WORDING DIFFERS FROM Matthew 1:11"]
+ok  G6 scan reads a \" quotation as a quotation
+ok  G6 pre-check base: item 4 "no verbatim quote found" | CHALLENGER LIST [DR2] item 4: no verbatim quote found
+ok  G6 pre-check new: item 4 quote found | CHALLENGER LIST [DR2] item 4: absent from its quote: none
+== G1 declared chain to the closes; numbering check
+ok  G1 32284 D4 numbering flag: base 0 item(s), new 4 | ["it states a numbering of its own (\"answer under the challenger's C1–C6. I have not seen the text of my round 1","D2 (\"the conception was of the Holy Ghost\") matches declared D1 better than declared D2","D4 (\"the seed of David came through Mary\") matches declared D5 better than declared D4","D6 (\"Jeremiah 22:30 bars the seed of Jechonias from the throne\") matches declared D5 better than declared D6"]
+ok  G1 32284 C4 numbering flag: base 0 item(s), new 6 | ["it states a numbering of its own (\"ws already offered and restate them now under my own numbers. Nothing new i","C2 (\"C2 (the seed rows) — RESTATED: the seed is out of a man's body, and th\") matches [DR3] LINK block C4 bett","C3 (\"C3 (the father named) — RESTATED: four registers name the father, and \") matches [DR3] LINK block C1 bett","C4 (\"C4 (the reckoning) — RESTATED: the register reckons by the father's ho\") matches [DR3] LINK block C5 bett","C5 (\"C5 (the title) — RESTATED: Son of God is a covenant and resurrection t\") matches [DR3] LINK block C3 bett","C6 (\"C6 (the throne and the curse) — NARROWED TO: Jeremiah 22:30 is never c\") matches [DR3] LINK block C1 bett"]
+ok  G1 32266 D4 numbering flag: base 1 item(s), new 4 | ["it states a numbering of its own (\"ary, who had not been known by any man. I number D1–D6 in the order of the ","D1 (\"the row of Matthew 1:16\") matches declared D3 better than declared D1","D3 (\"Isaiah 7:14\") matches declared D4 better than declared D3","D4 (\"Luke 1:34–35\") matches declared D2 better than declared D4"]
+ok  G1 32266 C4 numbering flag: base 1 item(s), new 3 | ["it states a numbering of its own (\"seed is named, and the union is named. I number my chain as pressed: C1 the","C1 (\"the seed out of a man's body\") matches [DR3] LINK block C6 better than [DR3] LINK block C1","C3 (\"the reckoning by the father's house\") matches [DR3] LINK block C5 better than [DR3] LINK block C3"]
+ok  G1 the note says the close numbering does not govern
+ok  G1 D4 request: base has no declared chain text
+ok  G1 D4 request: new carries the declared chain verbatim and the instruction
+ok  G1 D4 request: new carries the C list
+ok  G1 C4 request: new carries the C list with the instruction
+ok  G1 C4 request carries the declared chain (D numbers)
+== G3 close-round grading check
+ok  G3 32284 defender close: graded sentences found | ["concession claimed: ## Ground the challenger conceded","concession claimed: C1 grants that the abstinence of Matthew 1:25 (\"knew her not till she ","own measure: [L1] By the challenger's own measure, then, Joseph did not know Mary b","concession claimed: C6 dropped the entailment that the curse poses no bar.","no reading offered: Jeremiah 22:30 stands as written, and the challenger offered no readin","concession claimed: D6 holds because the challenger dropped the entailment and left Jeremi"]
+ok  G3 32284 challenger close: graded sentences found | ["link graded: D1 is refused: none of the conception rows says Joseph did not beget t","link argued against: D4 answers by routing the seed through Mary's body.","link argued against: D3 rests on \"therefore also\" (Luke 1:35, [L2] dio kai, for which reaso","inference graded: The defender's D1, D2, D3 and D4 each stand on an inference the named "]
+ok  G3 ANSWER lines are not read
+ok  G3 32266 closes: none flagged
+ok  G3 note printed beside both closes (DISREGARDED)
+ok  G3 Panel Build prints noteP beside [CR4] and [DR4]
+ok  G3 Build Independent Verdict prints noteP beside [CR4] and [DR4]
+ok  G3 Build Synthesis prints noteP beside [CR4] and [DR4]
+ok  G3 Format Markdown prints noteP beside [CR4] and [DR4]
+ok  G3 D4 Extract records graded sentences and renumbering | [6,4,["Luke 1:31","Luke 2:5"]]
+== G2 K-G9: the cited-in line ruled; G13 K-LB
+ok  G2 the ledger lists against the challenger | ["cited in [DR1] or [DR2] and not named in a later round of the defender, [CR2], [CR3] or [CR4] (0 of 73): none","cited in [CR1], [CR2] or [CR3] and not named in a later round of the challenger, [DR1], [DR2] or [DR3] (43 of 93): Matth"]
+ok  G2 32284 chatgpt as stored: K-G9 fires (no ruling lines) | ["CHALLENGER CITED-IN missing 43 uncounted 0"]
+ok  G2 32284 gemini as stored: K-G9 fires (no ruling lines) | ["CHALLENGER CITED-IN missing 43 uncounted 0"]
+ok  G2 32284 glm as stored: K-G9 fires (no ruling lines) | ["CHALLENGER CITED-IN missing 43 uncounted 0"]
+ok  G2 Luke 3:31 is on the list
+ok  G2 ChatGPT's count with the rulings: no item (its count of 3 names Luke 3:31) | []
+ok  G2 Gemini with the same rulings: K-G9 for the uncounted Luke 3:31 | ["ruled PRESSED and UNANSWERED but not counted in CHALLENGER CONCEDED LINKS: Luke 3:31"]
+ok  G2 a PRESSED quotation not found in the round named is no ruling | ["the ledger lists 43 verse(s) cited against the challenger and not named in a later round of it; no valid ruling for 1: Luke 3:31 (Luke 3:31: the quotation is not found in [CR2])"]
+ok  G2 ANSWERED IN a round that does not name the verse is no ruling (ruling 376) | d in a later round of it; no valid ruling for 1: Luke 3:31 (Luke 3:31: ANSWERED IN [DR3], which does not name Luke 3:31 by book, chapter and verse (ruling 376))
+ok  G2 a round that does not press that side is no ruling
+ok  G2 partial rulings: the rest listed as missing
+ok  G2 cure: counted under ruling 372 is CURED | counted under ruling 372: CHALLENGER COUNT 1, STANDING PROP-DEPENDENT
+ok  G2 cure: the count is written to the seat (cureSet) | {"CHALLENGER":{"n":1,"st":"PROP-DEPENDENT"}}
+ok  G2 recompute: Gemini HELD with the challenge PROP-DEPENDENT gives DEFENDER WINS | {"fields":{"verdict_tag":"HELD","defense_standing":"SELF-SUPPORTED","conceded_links":0,"challenge_standing":"PROP-DEPENDENT","challenger_conceded_links":1},"result":"DEFENDER WINS"}
+ok  G2 cure without a count stays UNCURED | ruled PRESSED and UNANSWERED (Luke 3:31), but no CORRECTED COUNT for CHALLENGER (ruling 372: the premise is UNEXHIBITED and counts)
+ok  G2 cure by re-ruling NOT PRESSED is CURED | every listed verse ruled; none PRESSED and UNANSWERED
+ok  G2 cure with no RESPONSE stays UNCURED | no written response
+ok  G2 GLM's silence cured by all rulings and a count | counted under ruling 372: CHALLENGER COUNT 1, STANDING PROP-DEPENDENT
+ok  G2 a ruling missing in the cure keeps it UNCURED | no valid ruling line in the reply for 1 listed verse(s): Matthew 1:23
+ok  G2 cure request carries the K-G9 rule and the ruling form
+ok  G2 judge prompt (Panel Build) requires CITED-IN RULINGS; BIV too
+ok  G13 32284 chatgpt K-LB items (counted_premises [[],[4,5,6]]) | ["DEFENDER premise 5: [CR3] LINK 5: NARROWED TO: the curse as written bars Jeconiah's seed from sitting on the t"]
+ok  G13 32284 gemini K-LB items (counted_premises [[],[]]) | ["DEFENDER premise 5: [CR3] LINK 5: NARROWED TO: the curse as written bars Jeconiah's seed from sitting on the t","CHALLENGER premise 6: [DR3] LINK 6: NARROWED TO: the citation statement only — the New Testament's rows naming J"]
+ok  G13 32284 glm K-LB items (counted_premises [[],[]]) | ["DEFENDER premise 5: [CR3] LINK 5: NARROWED TO: the curse as written bars Jeconiah's seed from sitting on the t","CHALLENGER premise 6: [DR3] LINK 6: NARROWED TO: the citation statement only — the New Testament's rows naming J"]
+ok  G13 at count 0: DR3 LINK 6 (one layer) and CR3 LINK 5 (one layer) marked | ["DEFENDER premise 5","CHALLENGER premise 6"]
+ok  G13 K-LB cured by counting it | counted: CHALLENGER COUNT 1, STANDING PROP-DEPENDENT
+ok  G13 K-LB cured by a statement quoting [DR3] with two layer kinds | statement quotes [DR3] and exhibits L1 and L3
+ok  G13 rule text in every copy
+== G4 reserve line; G9 retry
+ok  G4 empty content: reason "empty reply", body 0 | {"slot":0,"failed_seat":"deepseek","substitute":"chatgpt","failure_kind":"no_usable_judgment","detail":"FAIL-CLOSED: seat \"deepseek\" returned no JSON object. First 200 chars: ","at":"2026-11-02T20:37:15.750Z","reason":"empty reply","http_status":null,"body_chars":0,"retried":false}
+ok  G4 error: HTTP status recorded | {"slot":0,"failed_seat":"deepseek","substitute":"chatgpt","failure_kind":"error","detail":"status 502: Request failed with status code 502","at":"2026-11-02T20:37:15.752Z","reason":"error","http_status":"502","body_chars":null,"retried":false}
+ok  G4 unreadable | unreadable
+ok  G9 the retry ran and was empty too: its reply is read, retried recorded | {"slot":0,"failed_seat":"deepseek","substitute":"chatgpt","failure_kind":"no_usable_judgment","detail":"FAIL-CLOSED: seat \"deepseek\" returned no JSON object. First 200 chars: ","at":"2026-11-02T20:37:15.752Z","reason":"empty reply","http_status":null,"body_chars":0,"retried":true}
+ok  G9 the retry answered: no substitution
+ok  G4 the line for 32284 (stored substitution) | Reserve seated: panel seat DeepSeek gave no usable judgment (empty reply; HTTP status not exposed by the node; reply text 0 characters); the reserve ChatGPT judged in its place.
+ok  G4 the line for 32255 (GLM, unrecognised envelope)
+ok  G9 IF: empty content -> retry
+ok  G9 IF: empty body -> retry
+ok  G9 IF: an error -> no retry
+ok  G9 IF: an answer -> no retry
+ok  G9 the retry node sends the same request body (same parameters and credential)
+== G8 transcript header
+ok  G8 32284: outcome first, with the computed line | **Outcome:** UNDERDETERMINED. The defender's chain held (3-0); the challenger's chain also stood for two judges, so the question is left open.
+
+
+ok  G8 HELD and DEFENDER PREVAILS: no explanation
+ok  G8 32255 (CONTESTED) | **Outcome:** UNGRADED — REVIEW. The panel reached no majority verdict (1-1 (1 not counted: debate rule)); the outcome goes to review.
+
+
+ok  G8 a citation block
+ok  G8 placed before the Topic line
+== G10 synthesis checks; chain marks
+ok  G10 32284 synthesis: S-D reads the CONFIRMATION paragraph | ["[AUDIT v23: SYNTHESIS CHECK (S-D) -- the synthesis says the guards bind, or should bind, the defender; the guards bind the Debate Oracle seat only (ruling 383): \"**Confirmation — one paragraph.** Accu"]
+ok  G10 32284 synthesis: S-F reads "pressed nothing new" | ["[AUDIT v23: SYNTHESIS CHECK (S-F) -- the synthesis says the close pressed nothing new, while the system found 4 press(es) in the challenger's close (first: D1 is refused: none of the conception rows says Joseph did not b","[AUDIT v23: SYNTHESIS CHECK (S-F) -- the synthesis says the close pressed nothing new, while the system found 4 press(es) in the challenger's close (first: D1 is refused: none of the conception rows says Joseph did not b","[AUDIT v23: SYNTHESIS CHECK (S-F) -- the synthesis says the close pressed nothing new, while the system found 4 press(es) in the challenger's close (first: D1 is refused: none of the conception rows says Joseph did not b"]
+ok  G10 fixtures: "should bind the defender" and "pressed nothing new"
+ok  G10 no S-F when no press was found (32266)
+ok  G10 S-checks printed through S-F in the transcript
+ok  G10 sql: chain marks at the first stamp from the counted seats
+== G11 verse sheet
+ok  G11 sheet per round on 32284 (cap 150 verses / 24000 chars) | ["D2: 86 verses requested, URL 2871 chars, sheet 14503 chars, about 3626 tokens","C2: 115 verses requested, URL 4033 chars, sheet 19144 chars, about 4786 tokens | LEFT OFF THE SHEET: not in the KJV table as cited (no such verse, or the read failed): 1 Chronicles 22:30.","D3: 115 verses requested, URL 4033 chars, sheet 19144 chars, about 4786 tokens | LEFT OFF THE SHEET: not in the KJV table as cited (no such verse, or the read failed): 1 Chronicles 22:30.","C3: 122 verses requested, URL 4235 chars, sheet 20057 chars, about 5014 tokens | LEFT OFF THE SHEET: not in the KJV table as cited (no such verse, or the read failed): 1 Chronicles 22:30.","D4: 135 verses requested, URL 4674 chars, sheet 22267 chars, about 5567 tokens | LEFT OFF THE SHEET: not in the KJV table as cited (no such verse, or the read failed): 1 Chronicles 22:30.","C4: 137 verses requested, URL 4683 chars, sheet 22473 chars, about 5618 tokens | LEFT OFF THE SHEET: not in the KJV table as cited (no such verse, or the read failed): 1 Chronicles 22:30."]
+ok  G11 italics and margins kept as stored
+ok  G11 cap: a verse over the cap is listed
+ok  G11 D2 Build appends the VERSE SHEET to its last user message | 25567
+ok  G11 D1 with no served rows: no sheet
+ok  G11 Init with Guards plans the Oracle seat's round-1 sheet from its served rows
+ok  G11 eight Verse Sheet nodes, always output, error continues
+== G12 DeepSeek off the panel
+ok  G12 all 56 pairings seat three panel judges | []
+ok  G12 qwen and deepseek on no panel, reserve or alternate list (new)
+ok  G12 sol never judges beside chatgpt debating
+ok  G12 DeepSeek on no panel, reserve or alternate list; still the single judge when free | claude v mimo: base panel deepseek,gemini,glm reserve chatgpt alt sol single deepseek | new panel gemini,glm,chatgpt reserve grok alt sol single deepseek
+
+135 fixtures, 0 bad

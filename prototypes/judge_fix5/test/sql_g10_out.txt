@@ -1,0 +1,6 @@
+G10 chain marks, read-only SELECT on the live rows with the regex of sql/derive_debate_outcome_g10.sql (2026-11-02):
+run    row defender/challenger | seat: drv_uncured, defender mark, challenger mark
+32255  FOOTED/FOOTED   | chatgpt 0 FOOTED FOOTED; deepseek 1 (not counted) FOOTED FOOTED; gemini 0 FOOTED FOOTED -> majority FOOTED/FOOTED (row unchanged)
+32266  FOOTED/FOOTED   | deepseek 0 FOOTED FOOTED; gemini 0 FOOTED FOOTED; sol 0 STRAINED FOOTED -> majority FOOTED/FOOTED (row unchanged)
+32284  FOOTED/STRAINED | chatgpt 0 FOOTED FOOTED; gemini 0 FOOTED FOOTED; glm 0 FOOTED FOOTED -> majority FOOTED/FOOTED (the row's STRAINED was the single judge's)
+The function writes at the first stamp only; rows already stamped keep their values (no backfill).

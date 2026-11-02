@@ -1,0 +1,86 @@
+live versionId 681c085a-3c0f-470f-89b8-69d3d9a4519a | base read versionId 681c085a-3c0f-470f-89b8-69d3d9a4519a
+guards passed: base matched for 44 code nodes; connections (470) and node count (252) equal the base read; 10 nodes to add are absent; 9 links to remove exist
+  Alternate Build                base f0834f0d -> new 859420c3
+  Alternate Cure Build           base 67a7b1d4 -> new 3bc62e64
+  Alternate Cure Normalize       base 9a72fbd6 -> new cf2c4ee7
+  Alternate Merge                base c48433ed -> new 2728378b
+  Alternate Payloads             base 7ad8da72 -> new fae86d68
+  Build Independent Verdict      base 89955575 -> new 1b12c4fc
+  Build Save Body                base 270324c3 -> new 3c70cf8a
+  Build Synthesis                base 26dc7e16 -> new 3211bf99
+  C1 Build                       base da31728f -> new 741a9806
+  C1 Extract                     base 3ccfe45a -> new 91d58635
+  C2 Build                       base a2e5d6ce -> new 055b5550
+  C2 Extract                     base 4813ebe4 -> new bf32ce0f
+  C3 Build                       base 98ece946 -> new 174cd21e
+  C3 Extract                     base 8dbd9060 -> new d9ddee97
+  C4 Build                       base ecb772e9 -> new 875e892d
+  C4 Extract                     base 9120e82d -> new cb95378f
+  Citation Scan                  base d634f375 -> new e267f69a
+  Cure Build                     base ea18dee3 -> new b6aee0d4
+  Cure Check                     base ebfe47f3 -> new 4028a8d2
+  Cure Normalize                 base 015be988 -> new e187b4d4
+  D1 Build                       base eea63f38 -> new 40922b56
+  D2 Build                       base 22942200 -> new 28b920d9
+  D2 Extract                     base 0be034a1 -> new 5096deb0
+  D3 Build                       base eaa9b8e6 -> new 3c069fcc
+  D3 Extract                     base 9bd08c8d -> new 816b88bd
+  D4 Build                       base 49d8e8bf -> new d536ea93
+  D4 Extract                     base 21dd8e46 -> new a03192df
+  Extract Independent Verdict    base 53bd7f3a -> new 462b3031
+  Format Markdown                base 17924c3a -> new 6bbe3b5d
+  Init Seats                     base f18100f6 -> new 28e014cc
+  Init with Guards               base 015cbf09 -> new 67edcaee
+  Panel Build                    base 9612dc0b -> new c84ec7b6
+  Panel Check                    base 3c7b543a -> new 55582567
+  Panel Cure Build 1             base 942e83aa -> new 00ee34dc
+  Panel Cure Build 2             base 0fdff9bb -> new c39deab3
+  Panel Cure Build 3             base a5c6ba51 -> new 87e47834
+  Panel Cure Check               base d1196771 -> new c6417ed1
+  Panel Cure Normalize 1         base 53d9f60a -> new fd8fb205
+  Panel Cure Normalize 2         base 1bef3a3b -> new d5fce5f9
+  Panel Cure Normalize 3         base ca2514b7 -> new 84d960c6
+  Panel Payloads                 base 193f43d4 -> new bb97fddc
+  Panel Tokens                   base c48d3ec1 -> new 4246ef41
+  Quote Compare                  base f871f05e -> new 29b30746
+  Quote Report                   base d93aa3c8 -> new 4c3b1113
+  ADD Panel Judge 1 Empty?           n8n-nodes-base.if
+  ADD Panel Judge 1 deepseek retry   n8n-nodes-base.httpRequest
+  ADD D1 Verse Sheet                 n8n-nodes-base.httpRequest
+  ADD C1 Verse Sheet                 n8n-nodes-base.httpRequest
+  ADD D2 Verse Sheet                 n8n-nodes-base.httpRequest
+  ADD C2 Verse Sheet                 n8n-nodes-base.httpRequest
+  ADD D3 Verse Sheet                 n8n-nodes-base.httpRequest
+  ADD C3 Verse Sheet                 n8n-nodes-base.httpRequest
+  ADD D4 Verse Sheet                 n8n-nodes-base.httpRequest
+  ADD C4 Verse Sheet                 n8n-nodes-base.httpRequest
+  UNLINK Panel Judge 1 deepseek[0] -> Panel Judge 2 Route
+  UNLINK Init with Guards[0] -> D1 Build
+  UNLINK D1 Extract[0] -> C1 Build
+  UNLINK C1 Extract[0] -> D2 Build
+  UNLINK D2 Extract[0] -> C2 Build
+  UNLINK C2 Extract[0] -> D3 Build
+  UNLINK D3 Extract[0] -> C3 Build
+  UNLINK C3 Extract[0] -> D4 Build
+  UNLINK D4 Extract[0] -> C4 Build
+  LINK   Panel Judge 1 deepseek[0] -> Panel Judge 1 Empty?
+  LINK   Panel Judge 1 Empty?[0] -> Panel Judge 1 deepseek retry
+  LINK   Panel Judge 1 Empty?[1] -> Panel Judge 2 Route
+  LINK   Panel Judge 1 deepseek retry[0] -> Panel Judge 2 Route
+  LINK   Init with Guards[0] -> D1 Verse Sheet
+  LINK   D1 Verse Sheet[0] -> D1 Build
+  LINK   D1 Extract[0] -> C1 Verse Sheet
+  LINK   C1 Verse Sheet[0] -> C1 Build
+  LINK   C1 Extract[0] -> D2 Verse Sheet
+  LINK   D2 Verse Sheet[0] -> D2 Build
+  LINK   D2 Extract[0] -> C2 Verse Sheet
+  LINK   C2 Verse Sheet[0] -> C2 Build
+  LINK   C2 Extract[0] -> D3 Verse Sheet
+  LINK   D3 Verse Sheet[0] -> D3 Build
+  LINK   D3 Extract[0] -> C3 Verse Sheet
+  LINK   C3 Verse Sheet[0] -> C3 Build
+  LINK   C3 Extract[0] -> D4 Verse Sheet
+  LINK   D4 Verse Sheet[0] -> D4 Build
+  LINK   D4 Extract[0] -> C4 Verse Sheet
+  LINK   C4 Verse Sheet[0] -> C4 Build
+DRY: would PUT 44 code nodes, 10 added nodes, 481 connections (470 before); nothing written

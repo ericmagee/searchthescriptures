@@ -1,0 +1,460 @@
+{
+ "add_nodes": [
+  {
+   "id": "5378c0a5-8be8-50f9-bdb1-267a64a97b39",
+   "name": "Panel Judge 1 Empty?",
+   "type": "n8n-nodes-base.if",
+   "typeVersion": 2.2,
+   "position": [
+    10480,
+    -160
+   ],
+   "parameters": {
+    "conditions": {
+     "combinator": "and",
+     "conditions": [
+      {
+       "id": "g9-empty-reply",
+       "leftValue": "={{ (() => { const j = $json || {}; if (j.error) return false; const c = Array.isArray(j.choices) && j.choices[0] && j.choices[0].message ? j.choices[0].message.content : null; return !(typeof c === 'string' && c.trim() !== ''); })() }}",
+       "operator": {
+        "operation": "true",
+        "singleValue": true,
+        "type": "boolean"
+       },
+       "rightValue": ""
+      }
+     ],
+     "options": {
+      "caseSensitive": true,
+      "leftValue": "",
+      "typeValidation": "loose"
+     }
+    },
+    "options": {}
+   }
+  },
+  {
+   "id": "76a98fcc-56fe-51e8-971f-0a380e7b2e5c",
+   "name": "Panel Judge 1 deepseek retry",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.3,
+   "onError": "continueRegularOutput",
+   "position": [
+    10480,
+    -320
+   ],
+   "parameters": {
+    "method": "POST",
+    "url": "https://api.deepseek.com/v1/chat/completions",
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpHeaderAuth",
+    "sendBody": true,
+    "specifyBody": "json",
+    "jsonBody": "={{ $('Panel Build').first().json.judges[0].body }}",
+    "options": {
+     "timeout": 900000
+    }
+   },
+   "credentials": {
+    "httpHeaderAuth": {
+     "id": "R3waesZPK7vpsV8E",
+     "name": "DeepSeek Key"
+    }
+   }
+  },
+  {
+   "id": "a8040d87-6fef-5eea-906e-e3e7a9fecb95",
+   "name": "D1 Verse Sheet",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.3,
+   "alwaysOutputData": true,
+   "retryOnFail": true,
+   "maxTries": 3,
+   "waitBetweenTries": 3000,
+   "onError": "continueRegularOutput",
+   "position": [
+    2112,
+    176
+   ],
+   "parameters": {
+    "url": "={{ $('Init with Guards').first().json.sheet_url }}",
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpHeaderAuth",
+    "options": {}
+   },
+   "credentials": {
+    "httpHeaderAuth": {
+     "id": "uCS43YOAcWVctNfM",
+     "name": "Supabase Anon Key"
+    }
+   }
+  },
+  {
+   "id": "fbf91737-a30c-56f3-991c-86dcfbb56e60",
+   "name": "C1 Verse Sheet",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.3,
+   "alwaysOutputData": true,
+   "retryOnFail": true,
+   "maxTries": 3,
+   "waitBetweenTries": 3000,
+   "onError": "continueRegularOutput",
+   "position": [
+    2992,
+    176
+   ],
+   "parameters": {
+    "url": "={{ $('Init with Guards').first().json.sheet_url_c1 }}",
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpHeaderAuth",
+    "options": {}
+   },
+   "credentials": {
+    "httpHeaderAuth": {
+     "id": "uCS43YOAcWVctNfM",
+     "name": "Supabase Anon Key"
+    }
+   }
+  },
+  {
+   "id": "cc40ba5f-d346-5056-8066-c5d08c4e8fdb",
+   "name": "D2 Verse Sheet",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.3,
+   "alwaysOutputData": true,
+   "retryOnFail": true,
+   "maxTries": 3,
+   "waitBetweenTries": 3000,
+   "onError": "continueRegularOutput",
+   "position": [
+    3872,
+    176
+   ],
+   "parameters": {
+    "url": "={{ $('C1 Extract').first().json.sheet_url }}",
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpHeaderAuth",
+    "options": {}
+   },
+   "credentials": {
+    "httpHeaderAuth": {
+     "id": "uCS43YOAcWVctNfM",
+     "name": "Supabase Anon Key"
+    }
+   }
+  },
+  {
+   "id": "f53a8801-3e3e-51f0-b36c-c4648b69f3d9",
+   "name": "C2 Verse Sheet",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.3,
+   "alwaysOutputData": true,
+   "retryOnFail": true,
+   "maxTries": 3,
+   "waitBetweenTries": 3000,
+   "onError": "continueRegularOutput",
+   "position": [
+    4752,
+    176
+   ],
+   "parameters": {
+    "url": "={{ $('D2 Extract').first().json.sheet_url }}",
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpHeaderAuth",
+    "options": {}
+   },
+   "credentials": {
+    "httpHeaderAuth": {
+     "id": "uCS43YOAcWVctNfM",
+     "name": "Supabase Anon Key"
+    }
+   }
+  },
+  {
+   "id": "3fc18e2e-c508-5eed-8b92-c6886109206a",
+   "name": "D3 Verse Sheet",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.3,
+   "alwaysOutputData": true,
+   "retryOnFail": true,
+   "maxTries": 3,
+   "waitBetweenTries": 3000,
+   "onError": "continueRegularOutput",
+   "position": [
+    5632,
+    176
+   ],
+   "parameters": {
+    "url": "={{ $('C2 Extract').first().json.sheet_url }}",
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpHeaderAuth",
+    "options": {}
+   },
+   "credentials": {
+    "httpHeaderAuth": {
+     "id": "uCS43YOAcWVctNfM",
+     "name": "Supabase Anon Key"
+    }
+   }
+  },
+  {
+   "id": "fc5b877a-b32d-56e0-94c4-0d0d3f301a40",
+   "name": "C3 Verse Sheet",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.3,
+   "alwaysOutputData": true,
+   "retryOnFail": true,
+   "maxTries": 3,
+   "waitBetweenTries": 3000,
+   "onError": "continueRegularOutput",
+   "position": [
+    6512,
+    176
+   ],
+   "parameters": {
+    "url": "={{ $('D3 Extract').first().json.sheet_url }}",
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpHeaderAuth",
+    "options": {}
+   },
+   "credentials": {
+    "httpHeaderAuth": {
+     "id": "uCS43YOAcWVctNfM",
+     "name": "Supabase Anon Key"
+    }
+   }
+  },
+  {
+   "id": "f9f86ba2-ac04-5c07-ac86-f646a8a8e747",
+   "name": "D4 Verse Sheet",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.3,
+   "alwaysOutputData": true,
+   "retryOnFail": true,
+   "maxTries": 3,
+   "waitBetweenTries": 3000,
+   "onError": "continueRegularOutput",
+   "position": [
+    5632,
+    1776
+   ],
+   "parameters": {
+    "url": "={{ $('C3 Extract').first().json.sheet_url }}",
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpHeaderAuth",
+    "options": {}
+   },
+   "credentials": {
+    "httpHeaderAuth": {
+     "id": "uCS43YOAcWVctNfM",
+     "name": "Supabase Anon Key"
+    }
+   }
+  },
+  {
+   "id": "6811c4e6-ade7-5f5d-b742-dc66bb62cd20",
+   "name": "C4 Verse Sheet",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.3,
+   "alwaysOutputData": true,
+   "retryOnFail": true,
+   "maxTries": 3,
+   "waitBetweenTries": 3000,
+   "onError": "continueRegularOutput",
+   "position": [
+    6512,
+    1776
+   ],
+   "parameters": {
+    "url": "={{ $('D4 Extract').first().json.sheet_url }}",
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpHeaderAuth",
+    "options": {}
+   },
+   "credentials": {
+    "httpHeaderAuth": {
+     "id": "uCS43YOAcWVctNfM",
+     "name": "Supabase Anon Key"
+    }
+   }
+  }
+ ],
+ "remove_links": [
+  [
+   "Panel Judge 1 deepseek",
+   0,
+   "Panel Judge 2 Route",
+   0
+  ],
+  [
+   "Init with Guards",
+   0,
+   "D1 Build",
+   0
+  ],
+  [
+   "D1 Extract",
+   0,
+   "C1 Build",
+   0
+  ],
+  [
+   "C1 Extract",
+   0,
+   "D2 Build",
+   0
+  ],
+  [
+   "D2 Extract",
+   0,
+   "C2 Build",
+   0
+  ],
+  [
+   "C2 Extract",
+   0,
+   "D3 Build",
+   0
+  ],
+  [
+   "D3 Extract",
+   0,
+   "C3 Build",
+   0
+  ],
+  [
+   "C3 Extract",
+   0,
+   "D4 Build",
+   0
+  ],
+  [
+   "D4 Extract",
+   0,
+   "C4 Build",
+   0
+  ]
+ ],
+ "add_links": [
+  [
+   "Panel Judge 1 deepseek",
+   0,
+   "Panel Judge 1 Empty?",
+   0
+  ],
+  [
+   "Panel Judge 1 Empty?",
+   0,
+   "Panel Judge 1 deepseek retry",
+   0
+  ],
+  [
+   "Panel Judge 1 Empty?",
+   1,
+   "Panel Judge 2 Route",
+   0
+  ],
+  [
+   "Panel Judge 1 deepseek retry",
+   0,
+   "Panel Judge 2 Route",
+   0
+  ],
+  [
+   "Init with Guards",
+   0,
+   "D1 Verse Sheet",
+   0
+  ],
+  [
+   "D1 Verse Sheet",
+   0,
+   "D1 Build",
+   0
+  ],
+  [
+   "D1 Extract",
+   0,
+   "C1 Verse Sheet",
+   0
+  ],
+  [
+   "C1 Verse Sheet",
+   0,
+   "C1 Build",
+   0
+  ],
+  [
+   "C1 Extract",
+   0,
+   "D2 Verse Sheet",
+   0
+  ],
+  [
+   "D2 Verse Sheet",
+   0,
+   "D2 Build",
+   0
+  ],
+  [
+   "D2 Extract",
+   0,
+   "C2 Verse Sheet",
+   0
+  ],
+  [
+   "C2 Verse Sheet",
+   0,
+   "C2 Build",
+   0
+  ],
+  [
+   "C2 Extract",
+   0,
+   "D3 Verse Sheet",
+   0
+  ],
+  [
+   "D3 Verse Sheet",
+   0,
+   "D3 Build",
+   0
+  ],
+  [
+   "D3 Extract",
+   0,
+   "C3 Verse Sheet",
+   0
+  ],
+  [
+   "C3 Verse Sheet",
+   0,
+   "C3 Build",
+   0
+  ],
+  [
+   "C3 Extract",
+   0,
+   "D4 Verse Sheet",
+   0
+  ],
+  [
+   "D4 Verse Sheet",
+   0,
+   "D4 Build",
+   0
+  ],
+  [
+   "D4 Extract",
+   0,
+   "C4 Verse Sheet",
+   0
+  ],
+  [
+   "C4 Verse Sheet",
+   0,
+   "C4 Build",
+   0
+  ]
+ ]
+}
