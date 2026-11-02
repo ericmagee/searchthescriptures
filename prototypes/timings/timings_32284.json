@@ -1,0 +1,263 @@
+{
+ "32284": [
+  [
+   "19:04:18",
+   "D1 Call openrouter",
+   0,
+   39.5,
+   ""
+  ],
+  [
+   "19:05:00",
+   "C1 Call openrouter",
+   0,
+   183.6,
+   ""
+  ],
+  [
+   "19:08:05",
+   "D2 Call openrouter",
+   0,
+   106.2,
+   ""
+  ],
+  [
+   "19:09:53",
+   "C2 Call openrouter",
+   0,
+   192.3,
+   ""
+  ],
+  [
+   "19:13:07",
+   "D3 Call openrouter",
+   0,
+   118.9,
+   ""
+  ],
+  [
+   "19:15:08",
+   "C3 Call openrouter",
+   0,
+   243.6,
+   ""
+  ],
+  [
+   "19:19:13",
+   "D4 Call openrouter",
+   0,
+   116.4,
+   ""
+  ],
+  [
+   "19:21:11",
+   "C4 Call openrouter",
+   0,
+   194.3,
+   ""
+  ],
+  [
+   "19:24:27",
+   "Build Synthesis",
+   0,
+   0.1,
+   ""
+  ],
+  [
+   "19:24:27",
+   "Synthesis Judge Route",
+   0,
+   0.0,
+   ""
+  ],
+  [
+   "19:24:27",
+   "DeepSeek Synthesis Call",
+   0,
+   131.4,
+   ""
+  ],
+  [
+   "19:26:39",
+   "Synthesis Normalizer",
+   0,
+   1.8,
+   ""
+  ],
+  [
+   "19:26:43",
+   "Build Independent Verdict",
+   0,
+   0.1,
+   ""
+  ],
+  [
+   "19:26:43",
+   "Verdict Judge Route",
+   0,
+   0.0,
+   ""
+  ],
+  [
+   "19:26:43",
+   "Independent Verdict Call",
+   0,
+   240.2,
+   ""
+  ],
+  [
+   "19:30:44",
+   "Verdict Normalizer",
+   0,
+   1.7,
+   ""
+  ],
+  [
+   "19:30:45",
+   "Extract Independent Verdict",
+   0,
+   0.2,
+   ""
+  ],
+  [
+   "19:30:46",
+   "Cure Call deepseek",
+   0,
+   26.6,
+   ""
+  ],
+  [
+   "19:31:14",
+   "Build Diagnostic Prompt",
+   0,
+   0.1,
+   ""
+  ],
+  [
+   "19:31:14",
+   "Diagnostic Judge Route",
+   0,
+   0.0,
+   ""
+  ],
+  [
+   "19:31:14",
+   "DeepSeek Diagnostic Call",
+   0,
+   7.7,
+   ""
+  ],
+  [
+   "19:31:22",
+   "Diagnostic Normalizer",
+   0,
+   0.1,
+   ""
+  ],
+  [
+   "19:31:22",
+   "Extract Diagnostic",
+   0,
+   0.1,
+   ""
+  ],
+  [
+   "19:31:24",
+   "Panel Judge 1 Route",
+   0,
+   0.0,
+   ""
+  ],
+  [
+   "19:31:24",
+   "Panel Judge 1 deepseek",
+   0,
+   318.2,
+   ""
+  ],
+  [
+   "19:36:42",
+   "Panel Judge 2 Route",
+   0,
+   0.0,
+   ""
+  ],
+  [
+   "19:36:42",
+   "Panel Judge 2 openrouter",
+   0,
+   142.4,
+   ""
+  ],
+  [
+   "19:39:05",
+   "Panel Judge 3 Route",
+   0,
+   0.0,
+   ""
+  ],
+  [
+   "19:39:05",
+   "Panel Judge 3 openrouter",
+   0,
+   25.3,
+   ""
+  ],
+  [
+   "19:39:32",
+   "Reserve Needed?",
+   0,
+   0.0,
+   ""
+  ],
+  [
+   "19:39:32",
+   "Reserve Build",
+   0,
+   0.1,
+   ""
+  ],
+  [
+   "19:39:32",
+   "Reserve Route",
+   0,
+   0.0,
+   ""
+  ],
+  [
+   "19:39:32",
+   "Panel Reserve openrouter",
+   0,
+   132.3,
+   ""
+  ],
+  [
+   "19:41:47",
+   "Panel Cure Call 2 openrouter",
+   0,
+   32.2,
+   ""
+  ],
+  [
+   "19:42:22",
+   "Alternate Needed?",
+   0,
+   0.0,
+   ""
+  ],
+  [
+   "19:42:22",
+   "Alternate Merge",
+   0,
+   0.1,
+   ""
+  ],
+  [
+   "19:42:23",
+   "Record Alternates",
+   0,
+   0.4,
+   ""
+  ]
+ ]
+}
