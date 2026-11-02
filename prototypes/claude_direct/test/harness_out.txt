@@ -1,0 +1,57 @@
+== Resolve Seats: the route by model (any debater whose api_model starts with "anthropic/")
+ok   base: claude defender on openrouter
+ok   new: claude defender on anthropic, direct id claude-sonnet-5-5, tok 64000 :: {"engine":"claude","profile":"plain","fam":"anthropic","mc_seat":"claude_synthesis","direct_model":"claude-sonnet-5-5","via_engine_fam":"openrouter","model":"anthropic/claude-sonnet-5.5","tok":64000}
+ok   new: mimo challenger unchanged
+ok   new: every other Resolve output equal to base
+ok   model_config switch only: claude_synthesis = anthropic/claude-sonnet-5.5 -> fam anthropic, claude-sonnet-5-5
+ok   model_config switch only: claude_synthesis = anthropic/claude-opus-5.5 -> fam anthropic, claude-opus-5-5
+ok   model_config switch only: claude_synthesis = anthropic/claude-fable-5.1 -> fam anthropic, claude-fable-5-1
+ok   model_config switch only: claude_synthesis = anthropic/claude-haiku-5.5 -> fam anthropic, claude-haiku-5-5
+ok   prepared haiku engine (seat haiku) as challenger -> fam anthropic, claude-haiku-5-5; mimo defender unchanged
+ok   fails closed on anthropic/claude-sonnet-5.5:batch :: ORACLE_DEBATE_V1 Resolve refused: VALIDATION: seat "claude_synthesis" api_model "anthropic/claude-sonnet-5.5:batch" maps to the direct Anthropic id "claude-sonnet-5-5:batch", which is not a known form
+ok   fails closed on anthropic/claude-3.5-sonnet :: ORACLE_DEBATE_V1 Resolve refused: VALIDATION: seat "claude_synthesis" api_model "anthropic/claude-3.5-sonnet" maps to the direct Anthropic id "claude-3-5-sonnet", which is not a known form (claude-<op
+ok   fails closed on anthropic/sonnet :: ORACLE_DEBATE_V1 Resolve refused: VALIDATION: seat "claude_synthesis" api_model "anthropic/sonnet" maps to the direct Anthropic id "sonnet", which is not a known form (claude-<opus|sonnet|haiku|fable|
+== Build D1..D4 (run 32284, Claude defending), every model of the switch
+ok   claude-sonnet-5-5: D1..D4 on the anthropic route (fam_idx 0), model claude-sonnet-5-5, max_tokens 64000
+ok   claude-sonnet-5-5: diagnostics chain null, D1, D2, D3 :: [null,"msg_PLACEHOLDER_D1","msg_PLACEHOLDER_D2","msg_PLACEHOLDER_D3"]
+ok   claude-sonnet-5-5: no thinking/reasoning/effort/output_config field anywhere in D1..D4
+ok   claude-sonnet-5-5: no OpenRouter session_id on the direct body
+ok   claude-sonnet-5-5: 1-hour cache markers: every system block, the last message only :: ["2 system block(s), 1 message(s)","2 system block(s), 3 message(s)","1 system block(s), 1 message(s)","1 system block(s), 1 message(s)"]
+ok   claude-sonnet-5-5: the challenger (mimo) stays on openrouter, body unchanged from base
+ok   claude-opus-5-5: D1..D4 on the anthropic route (fam_idx 0), model claude-opus-5-5, max_tokens 64000
+ok   claude-opus-5-5: diagnostics chain null, D1, D2, D3 :: [null,"msg_PLACEHOLDER_D1","msg_PLACEHOLDER_D2","msg_PLACEHOLDER_D3"]
+ok   claude-opus-5-5: no thinking/reasoning/effort/output_config field anywhere in D1..D4
+ok   claude-opus-5-5: no OpenRouter session_id on the direct body
+ok   claude-opus-5-5: 1-hour cache markers: every system block, the last message only :: ["2 system block(s), 1 message(s)","2 system block(s), 3 message(s)","1 system block(s), 1 message(s)","1 system block(s), 1 message(s)"]
+ok   claude-opus-5-5: the challenger (mimo) stays on openrouter, body unchanged from base
+ok   claude-fable-5-1: D1..D4 on the anthropic route (fam_idx 0), model claude-fable-5-1, max_tokens 64000
+ok   claude-fable-5-1: diagnostics chain null, D1, D2, D3 :: [null,"msg_PLACEHOLDER_D1","msg_PLACEHOLDER_D2","msg_PLACEHOLDER_D3"]
+ok   claude-fable-5-1: no thinking/reasoning/effort/output_config field anywhere in D1..D4
+ok   claude-fable-5-1: no OpenRouter session_id on the direct body
+ok   claude-fable-5-1: 1-hour cache markers: every system block, the last message only :: ["2 system block(s), 1 message(s)","2 system block(s), 3 message(s)","1 system block(s), 1 message(s)","1 system block(s), 1 message(s)"]
+ok   claude-fable-5-1: the challenger (mimo) stays on openrouter, body unchanged from base
+ok   claude-haiku-5-5: D1..D4 on the anthropic route (fam_idx 0), model claude-haiku-5-5, max_tokens 64000
+ok   claude-haiku-5-5: diagnostics chain null, D1, D2, D3 :: [null,"msg_PLACEHOLDER_D1","msg_PLACEHOLDER_D2","msg_PLACEHOLDER_D3"]
+ok   claude-haiku-5-5: no thinking/reasoning/effort/output_config field anywhere in D1..D4
+ok   claude-haiku-5-5: no OpenRouter session_id on the direct body
+ok   claude-haiku-5-5: 1-hour cache markers: every system block, the last message only :: ["2 system block(s), 1 message(s)","2 system block(s), 3 message(s)","1 system block(s), 1 message(s)","1 system block(s), 1 message(s)"]
+ok   claude-haiku-5-5: the challenger (mimo) stays on openrouter, body unchanged from base
+ok   the anthropic body equals the base anthropic branch except model (mapped) and diagnostics (added): system, markers, messages, max_tokens unchanged
+ok   the system text and messages equal those of the OpenRouter body the live flow sends today
+== Claude as challenger (C1..C4): the chain is per seat
+ok   C1..C4 direct, chain null, C1, C2, C3 :: [null,"msg_PLACEHOLDER_C1","msg_PLACEHOLDER_C2","msg_PLACEHOLDER_C3"]
+ok   D1..D4 (mimo) unchanged on openrouter
+ok   Build fails closed too on an unknown direct id :: VALIDATION: D1 the model "anthropic/claude-sonnet-5.5:batch" maps to the direct Anthropic id "claude-sonnet-5-5:batch", which is not a known form; no call made.
+== Extract on sample direct Anthropic responses
+ok   D1 normal, first call: text read, whole prompt = 12+20500+0, line says first call :: [CACHE DIAG D1: cache_miss_reason=null (first Claude call of the seat, previous_message_id=null); read=0; write=20500; uncached=12; previous_message_id=null; message_id=msg_01A]
+ok   D2 normal, no divergence: read 20500, write 9000 :: [CACHE DIAG D2: cache_miss_reason=null (no divergence); read=20500; write=9000; uncached=40; previous_message_id=msg_01A; message_id=msg_01B]
+ok   D3 diagnostics system_changed with cache_missed_input_tokens :: [CACHE DIAG D3: cache_miss_reason=system_changed; cache_missed_input_tokens=41850; read=0; write=41850; uncached=42; previous_message_id=msg_01B; message_id=msg_01C]
+ok   D4 pending comparison :: [CACHE DIAG D4: cache_miss_reason=pending (comparison not finished); read=30000; write=0; uncached=5; previous_message_id=msg_01C; message_id=msg_01D]
+ok   max_tokens: kept with the TRUNCATED marker; previous_message_not_found named :: [CACHE DIAG D2: cache_miss_reason=previous_message_not_found; read=100; write=0; uncached=1; previous_message_id=msg_01A; message_id=msg_01E]
+ok   refusal: throws (a failed call, to Failure Salvage) and names the category :: VALIDATION: D2 (DEFENDER, anthropic anthropic/claude-sonnet-5.5) refused by the provider: stop_reason=refusal (category general_harms); output_tokens=0. A refusal is not a debate round. run_token=ODV1
+ok   empty reply: throws with finish_reason :: VALIDATION: D2 (DEFENDER, anthropic anthropic/claude-sonnet-5.5) returned no text: finish_reason=end_turn; output_tokens=0; reasoning_tokens
+ok   OpenRouter Extract unchanged: prompt_tokens as input_tokens, no CACHE DIAG line :: {"input_tokens":900,"output_tokens":50,"cache_creation_input_tokens":100,"cache_read_input_tokens":700}
+== Build Save Body: CACHE DIAG lines and the token sums
+ok   four lines, in round order, no REVIEW THIS ROW flag :: ["[CACHE DIAG D1: cache_miss_reason=null (first Claude call of the seat, previous_message_id=null); read=0; write=20500; uncached=12; previous_message_id=null; message_id=msg_01A]","[CACHE DIAG D2: cache_miss_reason=null (no divergence); read=20500; write=9000; uncached=40; previous_message_id=msg_01A; message_id=msg_01B]","[CACHE DIAG D3: cache_miss_reason=system_changed; cache_missed_input_tokens=41850; read=0; write=41850; uncached=42; previous_message_id=msg_01B; message_id=msg_01C]","[CACHE DIAG D4: cache_miss_reason=pending (comparison not finished); read=30000; write=0; uncached=5; previous_message_id=msg_01C; message_id=msg_01D]"]
+ok   Save Body sums usage.input_tokens / cache_* of the round Extracts as before (code unchanged)
+checks 51 | failures 0

@@ -1,0 +1,168 @@
+REQUEST BODIES, run 32284 inputs, Claude (claude_synthesis = anthropic/claude-sonnet-5.5) defending; long strings cut. POST https://api.anthropic.com/v1/messages via "D<n> Call anthropic".
+
+=== D1 Build -> call {fam:anthropic, fam_idx:0, model:anthropic/claude-sonnet-5.5, diag_prev:null}
+{
+ "model": "claude-sonnet-5-5",
+ "max_tokens": 64000,
+ "system": [
+  {
+   "type": "text",
+   "text": "You are the DEFENDER in a chain-scoped scripture debate.\n(sy...[3377 chars]",
+   "cache_control": {
+    "type": "ephemeral",
+    "ttl": "1h"
+   }
+  },
+  {
+   "type": "text",
+   "text": "\n\n=== DEFENSE DISCIPLINE (Eric-ruled 2026-07-18; protocol_de...[1461 chars]",
+   "cache_control": {
+    "type": "ephemeral",
+    "ttl": "1h"
+   }
+  }
+ ],
+ "messages": [
+  {
+   "role": "user",
+   "content": [
+    {
+     "type": "text",
+     "text": "DEBATE TOPIC: Did Christ have a biological father?\n\nOpen the...[1043 chars]",
+     "cache_control": {
+      "type": "ephemeral",
+      "ttl": "1h"
+     }
+    }
+   ]
+  }
+ ],
+ "diagnostics": {
+  "previous_message_id": null
+ }
+}
+
+=== D2 Build -> call {fam:anthropic, fam_idx:0, model:anthropic/claude-sonnet-5.5, diag_prev:msg_PLACEHOLDER_D1}
+{
+ "model": "claude-sonnet-5-5",
+ "max_tokens": 64000,
+ "system": [
+  {
+   "type": "text",
+   "text": "You are the DEFENDER in a chain-scoped scripture debate.\n(sy...[3377 chars]",
+   "cache_control": {
+    "type": "ephemeral",
+    "ttl": "1h"
+   }
+  },
+  {
+   "type": "text",
+   "text": "\n\n=== DEFENSE DISCIPLINE (Eric-ruled 2026-07-18; protocol_de...[1461 chars]",
+   "cache_control": {
+    "type": "ephemeral",
+    "ttl": "1h"
+   }
+  }
+ ],
+ "messages": [
+  {
+   "role": "user",
+   "content": "DEBATE TOPIC: Did Christ have a biological father?\n\nOpen the...[1043 chars]"
+  },
+  {
+   "role": "assistant",
+   "content": "# Opening: the child had no biological father\n\n**Definition....[6341 chars]"
+  },
+  {
+   "role": "user",
+   "content": [
+    {
+     "type": "text",
+     "text": "THE CHALLENGER ANSWERED:\n\n# Challenger's opening — the seed ...[10952 chars]",
+     "cache_control": {
+      "type": "ephemeral",
+      "ttl": "1h"
+     }
+    }
+   ]
+  }
+ ],
+ "diagnostics": {
+  "previous_message_id": "msg_PLACEHOLDER_D1"
+ }
+}
+
+=== D3 Build -> call {fam:anthropic, fam_idx:0, model:anthropic/claude-sonnet-5.5, diag_prev:msg_PLACEHOLDER_D2}
+{
+ "model": "claude-sonnet-5-5",
+ "max_tokens": 64000,
+ "system": [
+  {
+   "type": "text",
+   "text": "You are the DEFENDER in a chain-scoped scripture debate.\n(sy...[3377 chars]",
+   "cache_control": {
+    "type": "ephemeral",
+    "ttl": "1h"
+   }
+  }
+ ],
+ "messages": [
+  {
+   "role": "user",
+   "content": [
+    {
+     "type": "text",
+     "text": "SUBJECT: Did Christ have a biological father?\n\nYou opened as...[12664 chars]",
+     "cache_control": {
+      "type": "ephemeral",
+      "ttl": "1h"
+     }
+    }
+   ]
+  }
+ ],
+ "diagnostics": {
+  "previous_message_id": "msg_PLACEHOLDER_D2"
+ }
+}
+
+=== D4 Build -> call {fam:anthropic, fam_idx:0, model:anthropic/claude-sonnet-5.5, diag_prev:msg_PLACEHOLDER_D3}
+{
+ "model": "claude-sonnet-5-5",
+ "max_tokens": 64000,
+ "system": [
+  {
+   "type": "text",
+   "text": "You are the DEFENDER in a chain-scoped scripture debate.\n(sy...[3377 chars]",
+   "cache_control": {
+    "type": "ephemeral",
+    "ttl": "1h"
+   }
+  }
+ ],
+ "messages": [
+  {
+   "role": "user",
+   "content": [
+    {
+     "type": "text",
+     "text": "SUBJECT: Did Christ have a biological father?\n\nYou opened as...[14127 chars]",
+     "cache_control": {
+      "type": "ephemeral",
+      "ttl": "1h"
+     }
+    }
+   ]
+  }
+ ],
+ "diagnostics": {
+  "previous_message_id": "msg_PLACEHOLDER_D3"
+ }
+}
+
+SAMPLE CACHE DIAG LINES (Extract fed sample responses):
+[CACHE DIAG D1: cache_miss_reason=null (first Claude call of the seat, previous_message_id=null); read=0; write=20500; uncached=12; previous_message_id=null; message_id=msg_01A]
+[CACHE DIAG D2: cache_miss_reason=null (no divergence); read=20500; write=9000; uncached=40; previous_message_id=msg_01A; message_id=msg_01B]
+[CACHE DIAG D3: cache_miss_reason=system_changed; cache_missed_input_tokens=41850; read=0; write=41850; uncached=42; previous_message_id=msg_01B; message_id=msg_01C]
+[CACHE DIAG D4: cache_miss_reason=pending (comparison not finished); read=30000; write=0; uncached=5; previous_message_id=msg_01C; message_id=msg_01D]
+[CACHE DIAG D2: cache_miss_reason=previous_message_not_found; read=100; write=0; uncached=1; previous_message_id=msg_01A; message_id=msg_01E]

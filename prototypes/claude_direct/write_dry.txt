@@ -1,0 +1,21 @@
+live versionId 57222efa-c062-4bd4-8994-abefcdc799c6 | base read versionId 57222efa-c062-4bd4-8994-abefcdc799c6
+guards passed: base matched for 18 code nodes; connections (481) and node count (262) equal the base read; the 8 Call anthropic nodes and their links are as required
+  Build Save Body      base 3c70cf8a -> new 0ca2f405
+  C1 Build             base 741a9806 -> new 5ab41dde
+  C1 Extract           base 91d58635 -> new 676a5e61
+  C2 Build             base 055b5550 -> new 142c7ba1
+  C2 Extract           base bf32ce0f -> new 2d4bffb5
+  C3 Build             base 174cd21e -> new 512d8ac7
+  C3 Extract           base d9ddee97 -> new b706d282
+  C4 Build             base 875e892d -> new cb265cf0
+  C4 Extract           base cb95378f -> new 28afa436
+  D1 Build             base 40922b56 -> new 79850fcb
+  D1 Extract           base 6ef2e168 -> new 1c0f4d0c
+  D2 Build             base 28b920d9 -> new 9aebc27f
+  D2 Extract           base 5096deb0 -> new da126bbb
+  D3 Build             base 3c069fcc -> new 5d9f1435
+  D3 Extract           base 816b88bd -> new e28f56ff
+  D4 Build             base d536ea93 -> new d68275ee
+  D4 Extract           base a03192df -> new f830d67e
+  Resolve Seats        base d68840ad -> new db865c5f
+DRY: would PUT 18 code nodes, 0 added nodes, 481 connections unchanged; nothing written
