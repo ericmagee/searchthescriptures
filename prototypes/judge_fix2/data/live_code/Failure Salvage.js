@@ -1,0 +1,21 @@
+// ORDER D (BB-6036): a call or check that fails after Init keeps every round produced. This node builds a contested row (saved unless the save itself failed) and a RUN INCOMPLETE Drive file; Salvage Stop then fails the run.
+const S=$('Init Seats').first().json;const TEST=($execution.mode==='test');const TOK=TEST?String(S.run_token).replace(/^ODV1-/,'ODV1-TEST-'):S.run_token;
+const e=($input.first().json||{}).error;const msg=typeof e==='string'?e:((e&&(e.message||e.description))?String(e.message||'')+' '+String(e.description||''):JSON.stringify(e||{}));
+let node='unknown';try{node=$prevNode.name;}catch(x){}
+const failed_msg=String(msg).trim().slice(0,400);$execution.customData.set('call_failed',node);
+const save_failed=(node==='Save to DB'||node==='Check Save');
+// first(0): these nodes also feed this node through their error output (index 1); read their success output.
+const P=(n,f)=>{try{return f($(n).first(0).json);}catch(x){return null;}};
+let RS={};try{RS=$('Resolve Seats').first().json;}catch(x){RS={};}
+const R={claude_r1:P('D1 Extract',j=>j.labelled),engine_r1:P('C1 Extract',j=>j.labelled),claude_r2:P('D2 Extract',j=>j.labelled),engine_r2:P('C2 Extract',j=>j.labelled),engine_r3:P('D3 Extract',j=>j.labelled),challenger_r3:P('C3 Extract',j=>j.labelled)};
+const syn=P('Extract Diagnostic',j=>j.synthesis)||P('Final Output',j=>j.synthesis);const ivr=P('Cure Check',j=>j.independent_verdict_raw)||P('Extract Independent Verdict',j=>j.independent_verdict_raw);const vt=P('Cure Check',j=>j.verdict_tag)||P('Extract Independent Verdict',j=>j.verdict_tag); // 5B (BB-6969): the cure report rides the salvage row
+let body;if(save_failed){body=Object.assign({},P('Build Save Body',j=>j.saveBody)||{});}else{body={engine:S.challenger.engine,variant:'ORACLE_DEBATE_V1',topic:S.topic,debate_date:S.sd,defender_engine:S.defender.engine,defender_profile:S.defender.profile,defender_model:(RS.defender||{}).model||null,challenger_engine:S.challenger.engine,challenger_profile:S.challenger.profile,challenger_model:(RS.challenger||{}).model||null,claude_model:(RS.defender||{}).model||null,engine_model:(RS.challenger||{}).model||null,synthesis:syn||null,independent_verdict_raw:ivr||null,framework_verdict:vt||null};Object.assign(body,R);}
+const QR='RUN INCOMPLETE: failed at node "'+node+'": '+failed_msg.slice(0,300)+'. Only what was produced before the failure is recorded; no verdict stands on this row.';
+body.run_token=TOK;body.data_class='contested';body.quarantine_reason=QR;body.review_notes=(body.review_notes?body.review_notes+' ':'')+'['+QR+' REVIEW THIS ROW.]';delete body.queue_id;body.framework_verdict=null;
+const NAME={claude:'Claude',chatgpt:'ChatGPT',gemini:'Gemini',grok:'Grok',mimo:'MiMo',glm:'GLM',qwen:'Qwen',deepseek:'DeepSeek'};const nm=x=>NAME[x]||x||'?';const D=nm(S.defender.engine),C=nm(S.challenger.engine);
+let t='# TRUTH App Debate (RUN INCOMPLETE)\n\n> **RUN INCOMPLETE: the run failed at node "'+node+'".** '+failed_msg+'\n>\n> '+(save_failed?'The database save itself failed, so this file is the only copy of the text below.':'Everything produced before the failure is below; the same text is saved to the database as a contested row for this run token.')+' A section marked "(not produced)" was never written. No verdict is given for this run.\n\n';
+t+='**Topic:** '+S.topic+'\n\n**Defender:** '+D+' ('+(body.defender_model||'model not recorded')+'), '+S.defender.profile+'.\n\n**Challenger:** '+C+' ('+(body.challenger_model||'model not recorded')+'), '+S.challenger.profile+'.\n\n**Run token:** '+TOK+'\n\n---\n\n';
+[['Round 1 - Defender ('+D+')',body.claude_r1],['Round 1 - Challenger ('+C+')',body.engine_r1],['Round 2 - Defender ('+D+')',body.claude_r2],['Round 2 - Challenger ('+C+')',body.engine_r2],['Round 3 - Defender ('+D+'): link round',body.engine_r3],['Round 3 - Challenger ('+C+'): link round',body.challenger_r3]].forEach(x=>{t+='## '+x[0]+'\n\n'+(x[1]||'(not produced)')+'\n\n---\n\n';});
+t+='## Synthesis\n\n'+(body.synthesis||'(not produced)')+'\n\n---\n\n## Single judge\n\n'+(body.independent_verdict_raw||'(not produced)')+'\n';
+const fileName=(TEST?'TEST - ':'')+'INCOMPLETE - Debate ['+D+' v '+C+'] - '+S.topic+' - '+String(S.sd||'')+'.md';
+return [{json:{salvage:true,failed_node:node,failed_msg,save_failed,run_token:TOK,saveBody:body,md:t,fileName}}];

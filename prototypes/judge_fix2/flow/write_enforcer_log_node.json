@@ -1,0 +1,28 @@
+{
+  "_comment": "judge_fix2 W2 (NOT APPLIED). New HTTP node, placed between Write Judgment 3 and Derive Outcome (the row and the judgments exist by then). It posts the run's enforcer log that Alternate Merge builds (enforcer_log_body) to record_enforcer_log, as Write Judgment 1-3 post to record_debate_judgment, with the same credential, retry and error output. Connections: Write Judgment 3 (main 0) -> Write Enforcer Log; Write Enforcer Log (main 0) -> Derive Outcome; Write Enforcer Log (error output) -> Derive Outcome, so a failed log write never stops the grading. Requires sql/w2_debate_enforcer_log.sql applied first.",
+  "node": {
+    "name": "Write Enforcer Log",
+    "type": "n8n-nodes-base.httpRequest",
+    "typeVersion": 4.3,
+    "position": [12240, 160],
+    "retryOnFail": true,
+    "maxTries": 3,
+    "waitBetweenTries": 3000,
+    "onError": "continueErrorOutput",
+    "credentials": {"httpHeaderAuth": {"id": "uCS43YOAcWVctNfM", "name": "Supabase Anon Key"}},
+    "parameters": {
+      "method": "POST",
+      "url": "https://bhffmkginddovmdcpnty.supabase.co/rest/v1/rpc/record_enforcer_log",
+      "authentication": "genericCredentialType",
+      "genericAuthType": "httpHeaderAuth",
+      "sendBody": true,
+      "specifyBody": "json",
+      "jsonBody": "={{ JSON.stringify($('Alternate Merge').first().json.enforcer_log_body) }}",
+      "options": {}
+    }
+  },
+  "connections_change": {
+    "remove": [["Write Judgment 3", 0, "Derive Outcome"]],
+    "add": [["Write Judgment 3", 0, "Write Enforcer Log"], ["Write Enforcer Log", 0, "Derive Outcome"], ["Write Enforcer Log", 1, "Derive Outcome"]]
+  }
+}

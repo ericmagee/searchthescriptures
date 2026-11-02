@@ -1,0 +1,1970 @@
+{
+ "Manual Start": {},
+ "Debate Start": {
+  "httpMethod": "POST",
+  "path": "oracle-debate-v1",
+  "responseMode": "responseNode",
+  "options": {}
+ },
+ "Dry Run Config": {
+  "mode": "raw",
+  "jsonOutput": "{\"topic\": \"DRY RUN, manual path only: a seat configuration Init Seats refuses (BB-4666 F6, K6)\", \"defender\": {\"engine\": \"deepseek\", \"profile\": \"oracle\"}, \"challenger\": {\"engine\": \"chatgpt\", \"profile\": \"oracle\"}}",
+  "options": {}
+ },
+ "Fetch Models": {
+  "url": "https://bhffmkginddovmdcpnty.supabase.co/rest/v1/model_config?select=*&active=eq.true",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "options": {}
+ },
+ "Fetch Drift Guards": {
+  "url": "https://bhffmkginddovmdcpnty.supabase.co/rest/v1/drift_guards?priority=in.(CRITICAL,HIGH)&select=rule_num,subject,rule,anchor_verses,priority,always_inject&order=rule_num.asc",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "options": {}
+ },
+ "Fetch Tensions": {
+  "url": "https://bhffmkginddovmdcpnty.supabase.co/rest/v1/tensions_wall?status=eq.OPEN&select=item,anchor_verse&order=id.desc&limit=10",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "options": {}
+ },
+ "Respond Accepted": {
+  "respondWith": "json",
+  "responseBody": "={{ JSON.stringify({ status: 'accepted', variant: 'ORACLE_DEBATE_V1', run_token: $('Init Seats').first().json.run_token, defender: $('Init Seats').first().json.defender, challenger: $('Init Seats').first().json.challenger, panel_expected: $('Init Seats').first().json.panel_expected, note: 'Read debate_results by run_token; a failure leaves a debate_errors row whose error_message carries run_token=.' }) }}",
+  "options": {}
+ },
+ "Retrieve Held Conclusions": {
+  "method": "POST",
+  "url": "https://bhffmkginddovmdcpnty.supabase.co/rest/v1/rpc/debate_arsenal_guarded",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ JSON.stringify({ p_topic: $('Init Seats').first().json.topic || '' }) }}",
+  "options": {
+   "timeout": 15000
+  }
+ },
+ "D1 Route": {
+  "mode": "expression",
+  "numberOutputs": 7,
+  "output": "={{ $json.call.fam_idx }}"
+ },
+ "D1 Call anthropic": {
+  "method": "POST",
+  "url": "https://api.anthropic.com/v1/messages",
+  "authentication": "predefinedCredentialType",
+  "nodeCredentialType": "anthropicApi",
+  "sendHeaders": true,
+  "headerParameters": {
+   "parameters": [
+    {
+     "name": "anthropic-version",
+     "value": "2023-06-01"
+    }
+   ]
+  },
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $json.call.body }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "D1 Call openai": {
+  "method": "POST",
+  "url": "https://api.openai.com/v1/chat/completions",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $json.call.body }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "D1 Call gemini": {
+  "method": "POST",
+  "url": "={{ 'https://generativelanguage.googleapis.com/v1beta/models/' + $json.call.model + ':generateContent' }}",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $json.call.body }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "D1 Call grok": {
+  "method": "POST",
+  "url": "https://api.x.ai/v1/chat/completions",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $json.call.body }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "D1 Call mimo": {
+  "method": "POST",
+  "url": "https://api.xiaomimimo.com/v1/chat/completions",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $json.call.body }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "D1 Call openrouter": {
+  "method": "POST",
+  "url": "https://openrouter.ai/api/v1/chat/completions",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $json.call.body }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "C1 Route": {
+  "mode": "expression",
+  "numberOutputs": 7,
+  "output": "={{ $json.call.fam_idx }}"
+ },
+ "C1 Call anthropic": {
+  "method": "POST",
+  "url": "https://api.anthropic.com/v1/messages",
+  "authentication": "predefinedCredentialType",
+  "nodeCredentialType": "anthropicApi",
+  "sendHeaders": true,
+  "headerParameters": {
+   "parameters": [
+    {
+     "name": "anthropic-version",
+     "value": "2023-06-01"
+    }
+   ]
+  },
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $json.call.body }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "C1 Call openai": {
+  "method": "POST",
+  "url": "https://api.openai.com/v1/chat/completions",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $json.call.body }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "C1 Call gemini": {
+  "method": "POST",
+  "url": "={{ 'https://generativelanguage.googleapis.com/v1beta/models/' + $json.call.model + ':generateContent' }}",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $json.call.body }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "C1 Call grok": {
+  "method": "POST",
+  "url": "https://api.x.ai/v1/chat/completions",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $json.call.body }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "C1 Call mimo": {
+  "method": "POST",
+  "url": "https://api.xiaomimimo.com/v1/chat/completions",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $json.call.body }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "C1 Call openrouter": {
+  "method": "POST",
+  "url": "https://openrouter.ai/api/v1/chat/completions",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $json.call.body }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "D2 Route": {
+  "mode": "expression",
+  "numberOutputs": 7,
+  "output": "={{ $json.call.fam_idx }}"
+ },
+ "D2 Call anthropic": {
+  "method": "POST",
+  "url": "https://api.anthropic.com/v1/messages",
+  "authentication": "predefinedCredentialType",
+  "nodeCredentialType": "anthropicApi",
+  "sendHeaders": true,
+  "headerParameters": {
+   "parameters": [
+    {
+     "name": "anthropic-version",
+     "value": "2023-06-01"
+    }
+   ]
+  },
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $json.call.body }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "D2 Call openai": {
+  "method": "POST",
+  "url": "https://api.openai.com/v1/chat/completions",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $json.call.body }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "D2 Call gemini": {
+  "method": "POST",
+  "url": "={{ 'https://generativelanguage.googleapis.com/v1beta/models/' + $json.call.model + ':generateContent' }}",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $json.call.body }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "D2 Call grok": {
+  "method": "POST",
+  "url": "https://api.x.ai/v1/chat/completions",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $json.call.body }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "D2 Call mimo": {
+  "method": "POST",
+  "url": "https://api.xiaomimimo.com/v1/chat/completions",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $json.call.body }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "D2 Call openrouter": {
+  "method": "POST",
+  "url": "https://openrouter.ai/api/v1/chat/completions",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $json.call.body }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "C2 Route": {
+  "mode": "expression",
+  "numberOutputs": 7,
+  "output": "={{ $json.call.fam_idx }}"
+ },
+ "C2 Call anthropic": {
+  "method": "POST",
+  "url": "https://api.anthropic.com/v1/messages",
+  "authentication": "predefinedCredentialType",
+  "nodeCredentialType": "anthropicApi",
+  "sendHeaders": true,
+  "headerParameters": {
+   "parameters": [
+    {
+     "name": "anthropic-version",
+     "value": "2023-06-01"
+    }
+   ]
+  },
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $json.call.body }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "C2 Call openai": {
+  "method": "POST",
+  "url": "https://api.openai.com/v1/chat/completions",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $json.call.body }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "C2 Call gemini": {
+  "method": "POST",
+  "url": "={{ 'https://generativelanguage.googleapis.com/v1beta/models/' + $json.call.model + ':generateContent' }}",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $json.call.body }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "C2 Call grok": {
+  "method": "POST",
+  "url": "https://api.x.ai/v1/chat/completions",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $json.call.body }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "C2 Call mimo": {
+  "method": "POST",
+  "url": "https://api.xiaomimimo.com/v1/chat/completions",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $json.call.body }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "C2 Call openrouter": {
+  "method": "POST",
+  "url": "https://openrouter.ai/api/v1/chat/completions",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $json.call.body }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "D3 Route": {
+  "mode": "expression",
+  "numberOutputs": 7,
+  "output": "={{ $json.call.fam_idx }}"
+ },
+ "D3 Call anthropic": {
+  "method": "POST",
+  "url": "https://api.anthropic.com/v1/messages",
+  "authentication": "predefinedCredentialType",
+  "nodeCredentialType": "anthropicApi",
+  "sendHeaders": true,
+  "headerParameters": {
+   "parameters": [
+    {
+     "name": "anthropic-version",
+     "value": "2023-06-01"
+    }
+   ]
+  },
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $json.call.body }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "D3 Call openai": {
+  "method": "POST",
+  "url": "https://api.openai.com/v1/chat/completions",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $json.call.body }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "D3 Call gemini": {
+  "method": "POST",
+  "url": "={{ 'https://generativelanguage.googleapis.com/v1beta/models/' + $json.call.model + ':generateContent' }}",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $json.call.body }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "D3 Call grok": {
+  "method": "POST",
+  "url": "https://api.x.ai/v1/chat/completions",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $json.call.body }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "D3 Call mimo": {
+  "method": "POST",
+  "url": "https://api.xiaomimimo.com/v1/chat/completions",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $json.call.body }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "D3 Call openrouter": {
+  "method": "POST",
+  "url": "https://openrouter.ai/api/v1/chat/completions",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $json.call.body }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "C3 Route": {
+  "mode": "expression",
+  "numberOutputs": 7,
+  "output": "={{ $json.call.fam_idx }}"
+ },
+ "C3 Call anthropic": {
+  "method": "POST",
+  "url": "https://api.anthropic.com/v1/messages",
+  "authentication": "predefinedCredentialType",
+  "nodeCredentialType": "anthropicApi",
+  "sendHeaders": true,
+  "headerParameters": {
+   "parameters": [
+    {
+     "name": "anthropic-version",
+     "value": "2023-06-01"
+    }
+   ]
+  },
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $json.call.body }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "C3 Call openai": {
+  "method": "POST",
+  "url": "https://api.openai.com/v1/chat/completions",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $json.call.body }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "C3 Call gemini": {
+  "method": "POST",
+  "url": "={{ 'https://generativelanguage.googleapis.com/v1beta/models/' + $json.call.model + ':generateContent' }}",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $json.call.body }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "C3 Call grok": {
+  "method": "POST",
+  "url": "https://api.x.ai/v1/chat/completions",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $json.call.body }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "C3 Call mimo": {
+  "method": "POST",
+  "url": "https://api.xiaomimimo.com/v1/chat/completions",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $json.call.body }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "C3 Call openrouter": {
+  "method": "POST",
+  "url": "https://openrouter.ai/api/v1/chat/completions",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $json.call.body }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "DeepSeek Synthesis Call": {
+  "method": "POST",
+  "url": "https://api.deepseek.com/v1/chat/completions",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $json.requestBody }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "Independent Verdict Call": {
+  "method": "POST",
+  "url": "https://api.deepseek.com/v1/chat/completions",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $json.verdictBody }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "DeepSeek Diagnostic Call": {
+  "method": "POST",
+  "url": "https://api.deepseek.com/v1/chat/completions",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $('Build Diagnostic Prompt').first().json.requestBody }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "Save to DB": {
+  "method": "POST",
+  "url": "https://bhffmkginddovmdcpnty.supabase.co/rest/v1/rpc/record_debate_row",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ { payload: $json.saveBody } }}",
+  "options": {}
+ },
+ "Panel Judge 1 deepseek": {
+  "method": "POST",
+  "url": "https://api.deepseek.com/v1/chat/completions",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $('Panel Build').first().json.judges[0].body }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "Panel Judge 2 Route": {
+  "mode": "expression",
+  "numberOutputs": 5,
+  "output": "={{ $('Panel Build').first().json.judges[1].jidx }}"
+ },
+ "Panel Judge 2 openai": {
+  "method": "POST",
+  "url": "https://api.openai.com/v1/chat/completions",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $('Panel Build').first().json.judges[1].body }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "Panel Judge 2 gemini": {
+  "method": "POST",
+  "url": "={{ 'https://generativelanguage.googleapis.com/v1beta/models/' + $('Panel Build').first().json.judges[1].api_model + ':generateContent' }}",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $('Panel Build').first().json.judges[1].body }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "Panel Judge 2 grok": {
+  "method": "POST",
+  "url": "https://api.x.ai/v1/chat/completions",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $('Panel Build').first().json.judges[1].body }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "Panel Judge 2 mimo": {
+  "method": "POST",
+  "url": "https://api.xiaomimimo.com/v1/chat/completions",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $('Panel Build').first().json.judges[1].body }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "Panel Judge 2 openrouter": {
+  "method": "POST",
+  "url": "https://openrouter.ai/api/v1/chat/completions",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $('Panel Build').first().json.judges[1].body }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "Panel Judge 3 Route": {
+  "mode": "expression",
+  "numberOutputs": 5,
+  "output": "={{ $('Panel Build').first().json.judges[2].jidx }}"
+ },
+ "Panel Judge 3 openai": {
+  "method": "POST",
+  "url": "https://api.openai.com/v1/chat/completions",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $('Panel Build').first().json.judges[2].body }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "Panel Judge 3 gemini": {
+  "method": "POST",
+  "url": "={{ 'https://generativelanguage.googleapis.com/v1beta/models/' + $('Panel Build').first().json.judges[2].api_model + ':generateContent' }}",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $('Panel Build').first().json.judges[2].body }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "Panel Judge 3 grok": {
+  "method": "POST",
+  "url": "https://api.x.ai/v1/chat/completions",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $('Panel Build').first().json.judges[2].body }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "Panel Judge 3 mimo": {
+  "method": "POST",
+  "url": "https://api.xiaomimimo.com/v1/chat/completions",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $('Panel Build').first().json.judges[2].body }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "Panel Judge 3 openrouter": {
+  "method": "POST",
+  "url": "https://openrouter.ai/api/v1/chat/completions",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $('Panel Build').first().json.judges[2].body }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "Write Judgment 1": {
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "jsonBody": "={{ $('Alternate Merge').first().json.bodies[0] }}",
+  "method": "POST",
+  "options": {},
+  "sendBody": true,
+  "specifyBody": "json",
+  "url": "https://bhffmkginddovmdcpnty.supabase.co/rest/v1/rpc/record_debate_judgment"
+ },
+ "Write Judgment 2": {
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "jsonBody": "={{ $('Alternate Merge').first().json.bodies[1] }}",
+  "method": "POST",
+  "options": {},
+  "sendBody": true,
+  "specifyBody": "json",
+  "url": "https://bhffmkginddovmdcpnty.supabase.co/rest/v1/rpc/record_debate_judgment"
+ },
+ "Write Judgment 3": {
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "jsonBody": "={{ $('Alternate Merge').first().json.bodies[2] }}",
+  "method": "POST",
+  "options": {},
+  "sendBody": true,
+  "specifyBody": "json",
+  "url": "https://bhffmkginddovmdcpnty.supabase.co/rest/v1/rpc/record_debate_judgment"
+ },
+ "Derive Outcome": {
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "jsonBody": "={{ JSON.stringify({ p_debate_id: $('Alternate Merge').first().json.debate_id }) }}",
+  "method": "POST",
+  "options": {},
+  "sendBody": true,
+  "specifyBody": "json",
+  "url": "https://bhffmkginddovmdcpnty.supabase.co/rest/v1/rpc/derive_debate_outcome"
+ },
+ "Get Row": {
+  "url": "={{ 'https://bhffmkginddovmdcpnty.supabase.co/rest/v1/debate_results?select=*&run_token=eq.' + $('Init Seats').first().json.run_token }}",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "options": {}
+ },
+ "Get Judgments": {
+  "url": "={{ 'https://bhffmkginddovmdcpnty.supabase.co/rest/v1/debate_judgments?select=*&debate_id=eq.' + $('Get Row').first().json.id }}",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "options": {}
+ },
+ "Get Verse": {
+  "url": "https://bhffmkginddovmdcpnty.supabase.co/rest/v1/kjv_verses?select=text&book=eq.Isaiah&chapter=eq.28&verse=eq.10",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "options": {}
+ },
+ "Save to Drive": {
+  "operation": "createFromText",
+  "content": "={{ $json.md }}",
+  "name": "={{ $json.fileName }}",
+  "driveId": {
+   "__rl": true,
+   "mode": "list",
+   "value": "My Drive"
+  },
+  "folderId": {
+   "__rl": true,
+   "mode": "id",
+   "value": "1r2expT2tdtkutuc0hmCdqrA8r2g3n-AO"
+  },
+  "options": {
+   "convertToGoogleDocument": false
+  }
+ },
+ "Cited Verses": {
+  "url": "={{ $('Citation Scan').first().json.url_cited }}",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "options": {}
+ },
+ "Find Words": {
+  "url": "={{ $('Quote Compare').first().json.url_find }}",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "options": {}
+ },
+ "Synthesis Judge Route": {
+  "mode": "expression",
+  "numberOutputs": 6,
+  "output": "={{ $('Build Synthesis').first().json.jidx }}"
+ },
+ "Synthesis Call openai": {
+  "method": "POST",
+  "url": "https://api.openai.com/v1/chat/completions",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $('Build Synthesis').first().json.requestBody }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "Synthesis Call gemini": {
+  "method": "POST",
+  "url": "={{ 'https://generativelanguage.googleapis.com/v1beta/models/' + $('Build Synthesis').first().json.judge_model + ':generateContent' }}",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $('Build Synthesis').first().json.requestBody }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "Synthesis Call grok": {
+  "method": "POST",
+  "url": "https://api.x.ai/v1/chat/completions",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $('Build Synthesis').first().json.requestBody }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "Synthesis Call mimo": {
+  "method": "POST",
+  "url": "https://api.xiaomimimo.com/v1/chat/completions",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $('Build Synthesis').first().json.requestBody }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "Synthesis Call openrouter": {
+  "method": "POST",
+  "url": "https://openrouter.ai/api/v1/chat/completions",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $('Build Synthesis').first().json.requestBody }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "Diagnostic Judge Route": {
+  "mode": "expression",
+  "numberOutputs": 6,
+  "output": "={{ $('Build Diagnostic Prompt').first().json.jidx }}"
+ },
+ "Diagnostic Call openai": {
+  "method": "POST",
+  "url": "https://api.openai.com/v1/chat/completions",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $('Build Diagnostic Prompt').first().json.requestBody }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "Diagnostic Call gemini": {
+  "method": "POST",
+  "url": "={{ 'https://generativelanguage.googleapis.com/v1beta/models/' + $('Build Diagnostic Prompt').first().json.judge_model + ':generateContent' }}",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $('Build Diagnostic Prompt').first().json.requestBody }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "Diagnostic Call grok": {
+  "method": "POST",
+  "url": "https://api.x.ai/v1/chat/completions",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $('Build Diagnostic Prompt').first().json.requestBody }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "Diagnostic Call mimo": {
+  "method": "POST",
+  "url": "https://api.xiaomimimo.com/v1/chat/completions",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $('Build Diagnostic Prompt').first().json.requestBody }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "Diagnostic Call openrouter": {
+  "method": "POST",
+  "url": "https://openrouter.ai/api/v1/chat/completions",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $('Build Diagnostic Prompt').first().json.requestBody }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "Verdict Judge Route": {
+  "mode": "expression",
+  "numberOutputs": 6,
+  "output": "={{ $('Build Independent Verdict').first().json.jidx }}"
+ },
+ "Verdict Call openai": {
+  "method": "POST",
+  "url": "https://api.openai.com/v1/chat/completions",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $('Build Independent Verdict').first().json.verdictBody }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "Verdict Call gemini": {
+  "method": "POST",
+  "url": "={{ 'https://generativelanguage.googleapis.com/v1beta/models/' + $('Build Independent Verdict').first().json.judge_model + ':generateContent' }}",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $('Build Independent Verdict').first().json.verdictBody }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "Verdict Call grok": {
+  "method": "POST",
+  "url": "https://api.x.ai/v1/chat/completions",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $('Build Independent Verdict').first().json.verdictBody }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "Verdict Call mimo": {
+  "method": "POST",
+  "url": "https://api.xiaomimimo.com/v1/chat/completions",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $('Build Independent Verdict').first().json.verdictBody }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "Verdict Call openrouter": {
+  "method": "POST",
+  "url": "https://openrouter.ai/api/v1/chat/completions",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $('Build Independent Verdict').first().json.verdictBody }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "Panel Judge 1 Route": {
+  "mode": "expression",
+  "numberOutputs": 6,
+  "output": "={{ $('Panel Build').first().json.judges[0].jidx0 }}"
+ },
+ "Panel Judge 1 openai": {
+  "method": "POST",
+  "url": "https://api.openai.com/v1/chat/completions",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $('Panel Build').first().json.judges[0].body }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "Panel Judge 1 gemini": {
+  "method": "POST",
+  "url": "={{ 'https://generativelanguage.googleapis.com/v1beta/models/' + $('Panel Build').first().json.judges[0].api_model + ':generateContent' }}",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $('Panel Build').first().json.judges[0].body }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "Panel Judge 1 grok": {
+  "method": "POST",
+  "url": "https://api.x.ai/v1/chat/completions",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $('Panel Build').first().json.judges[0].body }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "Panel Judge 1 mimo": {
+  "method": "POST",
+  "url": "https://api.xiaomimimo.com/v1/chat/completions",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $('Panel Build').first().json.judges[0].body }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "Panel Judge 1 openrouter": {
+  "method": "POST",
+  "url": "https://openrouter.ai/api/v1/chat/completions",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $('Panel Build').first().json.judges[0].body }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "C1 Call deepseek": {
+  "method": "POST",
+  "url": "https://api.deepseek.com/v1/chat/completions",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $json.call.body }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "D1 Call deepseek": {
+  "method": "POST",
+  "url": "https://api.deepseek.com/v1/chat/completions",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $json.call.body }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "D2 Call deepseek": {
+  "method": "POST",
+  "url": "https://api.deepseek.com/v1/chat/completions",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $json.call.body }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "C2 Call deepseek": {
+  "method": "POST",
+  "url": "https://api.deepseek.com/v1/chat/completions",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $json.call.body }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "D3 Call deepseek": {
+  "method": "POST",
+  "url": "https://api.deepseek.com/v1/chat/completions",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $json.call.body }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "C3 Call deepseek": {
+  "method": "POST",
+  "url": "https://api.deepseek.com/v1/chat/completions",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $json.call.body }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "Regrade?": {
+  "conditions": {
+   "combinator": "and",
+   "conditions": [
+    {
+     "id": "regrade-flag",
+     "leftValue": "={{ $('Init Seats').first().json.regrade === true }}",
+     "operator": {
+      "operation": "true",
+      "singleValue": true,
+      "type": "boolean"
+     },
+     "rightValue": ""
+    }
+   ],
+   "options": {
+    "caseSensitive": true,
+    "leftValue": "",
+    "typeValidation": "loose"
+   }
+  },
+  "options": {}
+ },
+ "Regrade Row": {
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "options": {},
+  "url": "={{ 'https://bhffmkginddovmdcpnty.supabase.co/rest/v1/debate_results?select=*&run_token=eq.' + $('Init Seats').first().json.run_token }}"
+ },
+ "Regrade Judgments": {
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "options": {},
+  "url": "={{ 'https://bhffmkginddovmdcpnty.supabase.co/rest/v1/debate_judgments?select=debate_id&debate_id=eq.' + $('Regrade Row').first().json.id }}"
+ },
+ "Regrade After Quotes?": {
+  "conditions": {
+   "combinator": "and",
+   "conditions": [
+    {
+     "id": "regrade-flag-2",
+     "leftValue": "={{ $('Init Seats').first().json.regrade === true }}",
+     "operator": {
+      "operation": "true",
+      "singleValue": true,
+      "type": "boolean"
+     },
+     "rightValue": ""
+    }
+   ],
+   "options": {
+    "caseSensitive": true,
+    "leftValue": "",
+    "typeValidation": "loose"
+   }
+  },
+  "options": {}
+ },
+ "Dry?": {
+  "conditions": {
+   "combinator": "and",
+   "conditions": [
+    {
+     "id": "dry-flag",
+     "leftValue": "={{ $('Init Seats').first().json.dry === true }}",
+     "operator": {
+      "operation": "true",
+      "singleValue": true,
+      "type": "boolean"
+     },
+     "rightValue": ""
+    }
+   ],
+   "options": {
+    "caseSensitive": true,
+    "leftValue": "",
+    "typeValidation": "loose"
+   }
+  },
+  "options": {}
+ },
+ "Write Replay": {
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "jsonBody": "={{ $('Replay Rows').first().json.body }}",
+  "method": "POST",
+  "options": {
+   "timeout": 60000
+  },
+  "sendBody": true,
+  "specifyBody": "json",
+  "url": "https://bhffmkginddovmdcpnty.supabase.co/rest/v1/rpc/record_replay_judgments"
+ },
+ "Dry Failed?": {
+  "conditions": {
+   "combinator": "and",
+   "conditions": [
+    {
+     "id": "dry-failed-flag",
+     "leftValue": "={{ $('Init Seats').first().json.dry === true }}",
+     "operator": {
+      "operation": "true",
+      "singleValue": true,
+      "type": "boolean"
+     },
+     "rightValue": ""
+    }
+   ],
+   "options": {
+    "caseSensitive": true,
+    "leftValue": "",
+    "typeValidation": "loose"
+   }
+  },
+  "options": {}
+ },
+ "Topic Fence": {
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "jsonBody": "={{ JSON.stringify({p_topic: $('Init Seats').first().json.topic, p_override_id: $('Init Seats').first().json.fence_override_id, p_run_token: $('Init Seats').first().json.run_token, p_regrade: $('Init Seats').first().json.regrade === true}) }}",
+  "method": "POST",
+  "options": {
+   "timeout": 30000
+  },
+  "sendBody": true,
+  "specifyBody": "json",
+  "url": "https://bhffmkginddovmdcpnty.supabase.co/rest/v1/rpc/debate_topic_gate"
+ },
+ "Reserve Needed?": {
+  "conditions": {
+   "combinator": "and",
+   "conditions": [
+    {
+     "id": "reserve-needed",
+     "leftValue": "={{ $('Panel Check').first().json.sub !== null }}",
+     "operator": {
+      "operation": "true",
+      "singleValue": true,
+      "type": "boolean"
+     },
+     "rightValue": ""
+    }
+   ],
+   "options": {
+    "caseSensitive": true,
+    "leftValue": "",
+    "typeValidation": "loose"
+   }
+  },
+  "options": {}
+ },
+ "Reserve Route": {
+  "mode": "expression",
+  "numberOutputs": 6,
+  "output": "={{ $('Reserve Build').first().json.jidx0 }}"
+ },
+ "Panel Reserve deepseek": {
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "jsonBody": "={{ $('Reserve Build').first().json.body }}",
+  "method": "POST",
+  "options": {
+   "timeout": 900000
+  },
+  "sendBody": true,
+  "specifyBody": "json",
+  "url": "https://api.deepseek.com/v1/chat/completions"
+ },
+ "Panel Reserve openai": {
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "jsonBody": "={{ $('Reserve Build').first().json.body }}",
+  "method": "POST",
+  "options": {
+   "timeout": 900000
+  },
+  "sendBody": true,
+  "specifyBody": "json",
+  "url": "https://api.openai.com/v1/chat/completions"
+ },
+ "Panel Reserve gemini": {
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "jsonBody": "={{ $('Reserve Build').first().json.body }}",
+  "method": "POST",
+  "options": {
+   "timeout": 900000
+  },
+  "sendBody": true,
+  "specifyBody": "json",
+  "url": "={{ 'https://generativelanguage.googleapis.com/v1beta/models/' + $('Reserve Build').first().json.api_model + ':generateContent' }}"
+ },
+ "Panel Reserve grok": {
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "jsonBody": "={{ $('Reserve Build').first().json.body }}",
+  "method": "POST",
+  "options": {
+   "timeout": 900000
+  },
+  "sendBody": true,
+  "specifyBody": "json",
+  "url": "https://api.x.ai/v1/chat/completions"
+ },
+ "Panel Reserve mimo": {
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "jsonBody": "={{ $('Reserve Build').first().json.body }}",
+  "method": "POST",
+  "options": {
+   "timeout": 900000
+  },
+  "sendBody": true,
+  "specifyBody": "json",
+  "url": "https://api.xiaomimimo.com/v1/chat/completions"
+ },
+ "Panel Reserve openrouter": {
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "jsonBody": "={{ $('Reserve Build').first().json.body }}",
+  "method": "POST",
+  "options": {
+   "timeout": 900000
+  },
+  "sendBody": true,
+  "specifyBody": "json",
+  "url": "https://openrouter.ai/api/v1/chat/completions"
+ },
+ "Record Substitution": {
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "jsonBody": "={{ JSON.stringify({ p_debate_id: $('Alternate Merge').first().json.debate_id, p_substitution: $('Alternate Merge').first().json.substitution }) }}",
+  "method": "POST",
+  "options": {},
+  "sendBody": true,
+  "specifyBody": "json",
+  "url": "https://bhffmkginddovmdcpnty.supabase.co/rest/v1/rpc/odv1_record_panel_substitution"
+ },
+ "Get Guards": {
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "options": {},
+  "url": "https://bhffmkginddovmdcpnty.supabase.co/rest/v1/drift_guards?select=rule_num,subject&order=rule_num.asc"
+ },
+ "Salvage Save?": {
+  "conditions": {
+   "combinator": "and",
+   "conditions": [
+    {
+     "id": "salvage-save-needed",
+     "leftValue": "={{ $json.save_failed === false }}",
+     "operator": {
+      "operation": "true",
+      "singleValue": true,
+      "type": "boolean"
+     },
+     "rightValue": ""
+    }
+   ],
+   "options": {
+    "caseSensitive": true,
+    "leftValue": "",
+    "typeValidation": "loose"
+   }
+  },
+  "options": {}
+ },
+ "Salvage Save": {
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "jsonBody": "={{ { payload: $('Failure Salvage').first().json.saveBody } }}",
+  "method": "POST",
+  "options": {},
+  "sendBody": true,
+  "specifyBody": "json",
+  "url": "https://bhffmkginddovmdcpnty.supabase.co/rest/v1/rpc/record_debate_row"
+ },
+ "Save Incomplete to Drive": {
+  "content": "={{ $('Failure Salvage').first().json.md }}",
+  "driveId": {
+   "__rl": true,
+   "mode": "list",
+   "value": "My Drive"
+  },
+  "folderId": {
+   "__rl": true,
+   "mode": "id",
+   "value": "1r2expT2tdtkutuc0hmCdqrA8r2g3n-AO"
+  },
+  "name": "={{ $('Failure Salvage').first().json.fileName }}",
+  "operation": "createFromText",
+  "options": {
+   "convertToGoogleDocument": false
+  }
+ },
+ "Write Tokens?": {
+  "conditions": {
+   "combinator": "and",
+   "conditions": [
+    {
+     "id": "write-tokens-go",
+     "leftValue": "={{ $json.go === true }}",
+     "operator": {
+      "operation": "true",
+      "singleValue": true,
+      "type": "boolean"
+     },
+     "rightValue": ""
+    }
+   ],
+   "options": {
+    "caseSensitive": true,
+    "leftValue": "",
+    "typeValidation": "loose"
+   }
+  },
+  "options": {}
+ },
+ "Write Tokens": {
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "jsonBody": "={{ { p_run_token: $('Panel Tokens').first().json.run_token, p_input: $('Panel Tokens').first().json.p_input, p_output: $('Panel Tokens').first().json.p_output, p_cache_write: $('Panel Tokens').first().json.p_cache_write, p_cache_read: $('Panel Tokens').first().json.p_cache_read } }}",
+  "method": "POST",
+  "options": {},
+  "sendBody": true,
+  "specifyBody": "json",
+  "url": "https://bhffmkginddovmdcpnty.supabase.co/rest/v1/rpc/record_debate_row_tokens"
+ },
+ "Regrade Served Conclusions": {
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "options": {},
+  "url": "={{ 'https://bhffmkginddovmdcpnty.supabase.co/rest/v1/kb_conclusions?select=id,conclusion_text&id=in.(' + ([].concat($('Regrade Row').first().json.defender_served || [], $('Regrade Row').first().json.challenger_served || []).filter((x, i, a) => String(x).charAt(0) === '#' && a.indexOf(x) === i).map(x => String(x).slice(1)).join(',') || '0') + ')' }}"
+ },
+ "Regrade Served Sights": {
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "options": {},
+  "url": "={{ 'https://bhffmkginddovmdcpnty.supabase.co/rest/v1/kb_sights?select=sight_number,title,summary&sight_number=in.(' + ([].concat($('Regrade Row').first().json.defender_served || [], $('Regrade Row').first().json.challenger_served || []).filter((x, i, a) => String(x).indexOf('S-') === 0 && a.indexOf(x) === i).map(x => String(x).slice(2)).join(',') || '0') + ')' }}"
+ },
+ "Cure Needed?": {
+  "conditions": {
+   "combinator": "and",
+   "conditions": [
+    {
+     "id": "cure-needed",
+     "leftValue": "={{ ($json.debate_rule_violations||[]).length>0 }}",
+     "operator": {
+      "operation": "true",
+      "singleValue": true,
+      "type": "boolean"
+     },
+     "rightValue": ""
+    }
+   ],
+   "options": {
+    "caseSensitive": true,
+    "leftValue": "",
+    "typeValidation": "loose"
+   }
+  },
+  "options": {}
+ },
+ "Cure Route": {
+  "mode": "expression",
+  "numberOutputs": 7,
+  "output": "={{ $json.cure.skip ? 6 : $json.cure.jidx }}"
+ },
+ "Cure Call deepseek": {
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "jsonBody": "={{ $json.cure.body }}",
+  "method": "POST",
+  "options": {
+   "timeout": 900000
+  },
+  "sendBody": true,
+  "specifyBody": "json",
+  "url": "https://api.deepseek.com/v1/chat/completions"
+ },
+ "Cure Call openai": {
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "jsonBody": "={{ $json.cure.body }}",
+  "method": "POST",
+  "options": {
+   "timeout": 900000
+  },
+  "sendBody": true,
+  "specifyBody": "json",
+  "url": "https://api.openai.com/v1/chat/completions"
+ },
+ "Cure Call gemini": {
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "jsonBody": "={{ $json.cure.body }}",
+  "method": "POST",
+  "options": {
+   "timeout": 900000
+  },
+  "sendBody": true,
+  "specifyBody": "json",
+  "url": "={{ 'https://generativelanguage.googleapis.com/v1beta/models/' + $json.cure.model + ':generateContent' }}"
+ },
+ "Cure Call grok": {
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "jsonBody": "={{ $json.cure.body }}",
+  "method": "POST",
+  "options": {
+   "timeout": 900000
+  },
+  "sendBody": true,
+  "specifyBody": "json",
+  "url": "https://api.x.ai/v1/chat/completions"
+ },
+ "Cure Call mimo": {
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "jsonBody": "={{ $json.cure.body }}",
+  "method": "POST",
+  "options": {
+   "timeout": 900000
+  },
+  "sendBody": true,
+  "specifyBody": "json",
+  "url": "https://api.xiaomimimo.com/v1/chat/completions"
+ },
+ "Cure Call openrouter": {
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "jsonBody": "={{ $json.cure.body }}",
+  "method": "POST",
+  "options": {
+   "timeout": 900000
+  },
+  "sendBody": true,
+  "specifyBody": "json",
+  "url": "https://openrouter.ai/api/v1/chat/completions"
+ },
+ "Panel Cure Needed?": {
+  "conditions": {
+   "combinator": "and",
+   "conditions": [
+    {
+     "id": "panel-cure-needed",
+     "leftValue": "={{ ($json.summary||[]).some(s=>(s.drv||[]).length>0) }}",
+     "operator": {
+      "operation": "true",
+      "singleValue": true,
+      "type": "boolean"
+     },
+     "rightValue": ""
+    }
+   ],
+   "options": {
+    "caseSensitive": true,
+    "leftValue": "",
+    "typeValidation": "loose"
+   }
+  },
+  "options": {}
+ },
+ "Panel Cure Route 1": {
+  "mode": "expression",
+  "numberOutputs": 7,
+  "output": "={{ $json.cure.skip ? 6 : $json.cure.jidx }}"
+ },
+ "Panel Cure Call 1 deepseek": {
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "jsonBody": "={{ $json.cure.body }}",
+  "method": "POST",
+  "options": {
+   "timeout": 900000
+  },
+  "sendBody": true,
+  "specifyBody": "json",
+  "url": "https://api.deepseek.com/v1/chat/completions"
+ },
+ "Panel Cure Call 1 openai": {
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "jsonBody": "={{ $json.cure.body }}",
+  "method": "POST",
+  "options": {
+   "timeout": 900000
+  },
+  "sendBody": true,
+  "specifyBody": "json",
+  "url": "https://api.openai.com/v1/chat/completions"
+ },
+ "Panel Cure Call 1 gemini": {
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "jsonBody": "={{ $json.cure.body }}",
+  "method": "POST",
+  "options": {
+   "timeout": 900000
+  },
+  "sendBody": true,
+  "specifyBody": "json",
+  "url": "={{ 'https://generativelanguage.googleapis.com/v1beta/models/' + $json.cure.model + ':generateContent' }}"
+ },
+ "Panel Cure Call 1 grok": {
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "jsonBody": "={{ $json.cure.body }}",
+  "method": "POST",
+  "options": {
+   "timeout": 900000
+  },
+  "sendBody": true,
+  "specifyBody": "json",
+  "url": "https://api.x.ai/v1/chat/completions"
+ },
+ "Panel Cure Call 1 mimo": {
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "jsonBody": "={{ $json.cure.body }}",
+  "method": "POST",
+  "options": {
+   "timeout": 900000
+  },
+  "sendBody": true,
+  "specifyBody": "json",
+  "url": "https://api.xiaomimimo.com/v1/chat/completions"
+ },
+ "Panel Cure Call 1 openrouter": {
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "jsonBody": "={{ $json.cure.body }}",
+  "method": "POST",
+  "options": {
+   "timeout": 900000
+  },
+  "sendBody": true,
+  "specifyBody": "json",
+  "url": "https://openrouter.ai/api/v1/chat/completions"
+ },
+ "Panel Cure Route 2": {
+  "mode": "expression",
+  "numberOutputs": 7,
+  "output": "={{ $json.cure.skip ? 6 : $json.cure.jidx }}"
+ },
+ "Panel Cure Call 2 deepseek": {
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "jsonBody": "={{ $json.cure.body }}",
+  "method": "POST",
+  "options": {
+   "timeout": 900000
+  },
+  "sendBody": true,
+  "specifyBody": "json",
+  "url": "https://api.deepseek.com/v1/chat/completions"
+ },
+ "Panel Cure Call 2 openai": {
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "jsonBody": "={{ $json.cure.body }}",
+  "method": "POST",
+  "options": {
+   "timeout": 900000
+  },
+  "sendBody": true,
+  "specifyBody": "json",
+  "url": "https://api.openai.com/v1/chat/completions"
+ },
+ "Panel Cure Call 2 gemini": {
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "jsonBody": "={{ $json.cure.body }}",
+  "method": "POST",
+  "options": {
+   "timeout": 900000
+  },
+  "sendBody": true,
+  "specifyBody": "json",
+  "url": "={{ 'https://generativelanguage.googleapis.com/v1beta/models/' + $json.cure.model + ':generateContent' }}"
+ },
+ "Panel Cure Call 2 grok": {
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "jsonBody": "={{ $json.cure.body }}",
+  "method": "POST",
+  "options": {
+   "timeout": 900000
+  },
+  "sendBody": true,
+  "specifyBody": "json",
+  "url": "https://api.x.ai/v1/chat/completions"
+ },
+ "Panel Cure Call 2 mimo": {
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "jsonBody": "={{ $json.cure.body }}",
+  "method": "POST",
+  "options": {
+   "timeout": 900000
+  },
+  "sendBody": true,
+  "specifyBody": "json",
+  "url": "https://api.xiaomimimo.com/v1/chat/completions"
+ },
+ "Panel Cure Call 2 openrouter": {
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "jsonBody": "={{ $json.cure.body }}",
+  "method": "POST",
+  "options": {
+   "timeout": 900000
+  },
+  "sendBody": true,
+  "specifyBody": "json",
+  "url": "https://openrouter.ai/api/v1/chat/completions"
+ },
+ "Panel Cure Route 3": {
+  "mode": "expression",
+  "numberOutputs": 7,
+  "output": "={{ $json.cure.skip ? 6 : $json.cure.jidx }}"
+ },
+ "Panel Cure Call 3 deepseek": {
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "jsonBody": "={{ $json.cure.body }}",
+  "method": "POST",
+  "options": {
+   "timeout": 900000
+  },
+  "sendBody": true,
+  "specifyBody": "json",
+  "url": "https://api.deepseek.com/v1/chat/completions"
+ },
+ "Panel Cure Call 3 openai": {
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "jsonBody": "={{ $json.cure.body }}",
+  "method": "POST",
+  "options": {
+   "timeout": 900000
+  },
+  "sendBody": true,
+  "specifyBody": "json",
+  "url": "https://api.openai.com/v1/chat/completions"
+ },
+ "Panel Cure Call 3 gemini": {
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "jsonBody": "={{ $json.cure.body }}",
+  "method": "POST",
+  "options": {
+   "timeout": 900000
+  },
+  "sendBody": true,
+  "specifyBody": "json",
+  "url": "={{ 'https://generativelanguage.googleapis.com/v1beta/models/' + $json.cure.model + ':generateContent' }}"
+ },
+ "Panel Cure Call 3 grok": {
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "jsonBody": "={{ $json.cure.body }}",
+  "method": "POST",
+  "options": {
+   "timeout": 900000
+  },
+  "sendBody": true,
+  "specifyBody": "json",
+  "url": "https://api.x.ai/v1/chat/completions"
+ },
+ "Panel Cure Call 3 mimo": {
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "jsonBody": "={{ $json.cure.body }}",
+  "method": "POST",
+  "options": {
+   "timeout": 900000
+  },
+  "sendBody": true,
+  "specifyBody": "json",
+  "url": "https://api.xiaomimimo.com/v1/chat/completions"
+ },
+ "Panel Cure Call 3 openrouter": {
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "jsonBody": "={{ $json.cure.body }}",
+  "method": "POST",
+  "options": {
+   "timeout": 900000
+  },
+  "sendBody": true,
+  "specifyBody": "json",
+  "url": "https://openrouter.ai/api/v1/chat/completions"
+ },
+ "Alternate Needed?": {
+  "conditions": {
+   "combinator": "and",
+   "conditions": [
+    {
+     "id": "alternate-needed",
+     "leftValue": "={{ $json.alt_needed === true }}",
+     "operator": {
+      "operation": "true",
+      "singleValue": true,
+      "type": "boolean"
+     },
+     "rightValue": ""
+    }
+   ],
+   "options": {
+    "caseSensitive": true,
+    "leftValue": "",
+    "typeValidation": "loose"
+   }
+  },
+  "options": {}
+ },
+ "Alternate Calls?": {
+  "conditions": {
+   "combinator": "and",
+   "conditions": [
+    {
+     "id": "alternate-calls",
+     "leftValue": "={{ !$json.alt.skip }}",
+     "operator": {
+      "operation": "true",
+      "singleValue": true,
+      "type": "boolean"
+     },
+     "rightValue": ""
+    }
+   ],
+   "options": {
+    "caseSensitive": true,
+    "leftValue": "",
+    "typeValidation": "loose"
+   }
+  },
+  "options": {}
+ },
+ "Alternate Call openrouter": {
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "jsonBody": "={{ $json.alt.body }}",
+  "method": "POST",
+  "options": {
+   "timeout": 900000
+  },
+  "sendBody": true,
+  "specifyBody": "json",
+  "url": "https://openrouter.ai/api/v1/chat/completions"
+ },
+ "Alternate Cure Needed?": {
+  "conditions": {
+   "combinator": "and",
+   "conditions": [
+    {
+     "id": "alternate-cure-needed",
+     "leftValue": "={{ $('Alternate Payloads').all().some(x=>x.json.ok&&(x.json.drv||[]).length>0) }}",
+     "operator": {
+      "operation": "true",
+      "singleValue": true,
+      "type": "boolean"
+     },
+     "rightValue": ""
+    }
+   ],
+   "options": {
+    "caseSensitive": true,
+    "leftValue": "",
+    "typeValidation": "loose"
+   }
+  },
+  "options": {}
+ },
+ "Alternate Cure Call openrouter": {
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "jsonBody": "={{ $json.cure.body }}",
+  "method": "POST",
+  "options": {
+   "timeout": 900000
+  },
+  "sendBody": true,
+  "specifyBody": "json",
+  "url": "https://openrouter.ai/api/v1/chat/completions"
+ },
+ "Record Alternates": {
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "jsonBody": "={{ JSON.stringify({ p_debate_id: $('Alternate Merge').first().json.debate_id, p_alternates: $('Alternate Merge').first().json.alternates_seated, p_drv_removed: $('Alternate Merge').first().json.drv_removed }) }}",
+  "method": "POST",
+  "options": {},
+  "sendBody": true,
+  "specifyBody": "json",
+  "url": "https://bhffmkginddovmdcpnty.supabase.co/rest/v1/rpc/odv1_record_panel_alternates"
+ }
+}

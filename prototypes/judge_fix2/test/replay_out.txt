@@ -1,0 +1,49 @@
+run   seat      stored | BASE uncured counted | NEW uncured counted | NEW+R uncured counted
+32157 chatgpt       1 |    0 yes         |   1 NO          |   1 NO 
+      base uncured: -
+      NEW+R uncured: K-X CONCEDED LINKS
+32157 gemini        2 |    2 NO          |   2 NO          |   2 NO 
+      base uncured: K-G4 D4 vs C5, K-G7 D4 vs C5
+      NEW+R uncured: K-G4 D4 vs C5, K-G7 D4 vs C5
+32157 glm           0 |    0 yes         |   2 NO          |   1 NO 
+      base uncured: -
+      NEW+R uncured: K-X CONCEDED LINKS
+32157 single        - |    0 yes         |   3 NO          |   0 yes
+      base uncured: -
+      NEW+R uncured: -
+32194 chatgpt       1 |    2 NO          |   3 NO          |   3 NO 
+      base uncured: K-G4 D3 vs C1, K-G4 D6 vs C1
+      NEW+R uncured: K-G4 D3 vs C1, K-G4 D6 vs C1, K-X CHALLENGER CONCEDED LINKS
+32194 gemini        0 |    1 NO          |   2 NO          |   2 NO 
+      base uncured: K-G4 D3 vs C1
+      NEW+R uncured: K-G4 D3 vs C1, K-DG8 D3 vs C1
+32194 glm           0 |    0 yes         |   1 NO          |   1 NO 
+      base uncured: -
+      NEW+R uncured: K-N CONCEDED LINKS
+32194 single        - |    0 yes         |   3 NO          |   0 yes
+      base uncured: -
+      NEW+R uncured: -
+32205 deepseek      0 |    0 yes         |   4 NO          |   1 NO 
+      base uncured: -
+      NEW+R uncured: K-DG8 D3 vs C1
+32205 gemini        0 |    0 yes         |   0 yes         |   0 yes
+      base uncured: -
+      NEW+R uncured: -
+32205 glm           0 |    0 yes         |   1 NO          |   0 yes
+      base uncured: -
+      NEW+R uncured: -
+32205 single        - |    3 NO          |   8 NO          |   5 NO 
+      base uncured: K-G4 D1 vs C1, K-G4 D6 vs C1, K-C D6 vs C1
+      NEW+R uncured: K-G4 D1 vs C1, K-G4 D6 vs C1, K-DG8 D1 vs C1, K-DG8 D6 vs C1, K-C D6 vs C1
+32212 deepseek      2 |    1 NO          |   4 NO          |   4 NO 
+      base uncured: K-C D5
+      NEW+R uncured: K-N CONCEDED LINKS, K-N CHALLENGER CONCEDED LINKS, K-C D5, K-C D6
+32212 gemini        1 |    0 yes         |   7 NO          |   7 NO 
+      base uncured: -
+      NEW+R uncured: K-X CONCEDED LINKS, K-X CHALLENGER CONCEDED LINKS, K-DG8 D3, K-DG8 D5, K-C RESULT, K-C D6, K-C CHALLENGER CHAIN MARK
+32212 chatgpt       4 |    0 yes         |   7 NO          |   2 NO 
+      base uncured: -
+      NEW+R uncured: K-X CONCEDED LINKS, K-X CHALLENGER CONCEDED LINKS
+32212 single        - |    2 NO          |   8 NO          |   4 NO 
+      base uncured: K-C D2, K-C D6
+      NEW+R uncured: K-X CHALLENGER CONCEDED LINKS, K-N CHALLENGER CONCEDED LINKS, K-C D2, K-C D6

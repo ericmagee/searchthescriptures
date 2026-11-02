@@ -1,0 +1,42 @@
+OK  FIX 1a/2 Panel Build.js: UNEXHIBITED clause x2, narrowing clause x2 (want 2 and 2)
+OK  FIX 1a/2 Build Independent Verdict.js: UNEXHIBITED clause x2, narrowing clause x2 (want 2 and 2)
+OK  FIX 1a/2 Format Markdown rule copy carries both clauses word for word
+OK  K-X 886 Gemini CONCEDED LINKS marked on all 17 nodes
+OK  K-X 886 Gemini CHALLENGER CONCEDED LINKS marked
+OK  K-X 887 ChatGPT CONCEDED LINKS marked
+OK  K-X 885 DeepSeek CONCEDED LINKS not marked (its UNEXHIBITED item rests on "cites only [L1]")
+OK  K-X a true UNEXHIBITED (no layer) with an unanswered witness beside it is not marked
+OK  K-C 886 RESULT "Scripture nowhere states" marked
+OK  K-C 886 CHALLENGER CHAIN MARK "without a single biblical text stating" marked
+OK  K-C 885 DEFENDER CHAIN MARK ("the defender conceding no verse names her line") not marked
+OK  K-C a FOOTED chain mark is not marked (32194 GLM)
+OK  K-C 885 D6 "no exhibit anywhere says" marked (E7)
+OK  K-C checker_fix fixture still marked (NET_ANSWER mask kept)
+OK  K-C single-quoted round words not marked (j816)
+OK  K-N 885 "I drop any claim that ..." counted CONCEDED (stated) marked
+OK  K-N a surrender ("I withdraw", "CONCEDED") not marked
+OK  K-SC a STANDS line that says the defender round conceded the link is marked
+OK  K-SC 885 D5 ("conceded that no verse names her line, keeping only the inference") not marked: a narrowing (fix 2)
+OK  K-DG8 886 D3 "Matthew 1:25 confirm Mary had no sexual knowledge" marked
+OK  K-DG8 886 D5 flesh "preserved through the mother" (STANDS) marked
+OK  K-DG8 880 Gemini "directly exclude Joseph knowing Mary" marked
+OK  K-DG8 885 chain mark that describes "routing the flesh descent through Mary" not marked
+OK  K-DG8 hedged "neither reading is excluded" not marked (j843)
+OK  FIX 3 base refuses "D5 vs C5" (no RESTATED line for D5); new cures it with a RESPONSE line on all 14 cure nodes (bad 0)
+OK  FIX 3 "C5 vs D5 ..." is read as the D5 vs C5 line and serves D5 (bad 0)
+OK  W1 the same reply without a RESPONSE line: UNCURED "no written response" on every cure node (bad 0)
+OK  K-X cure: a restated count line without the item cures (CURED); the same line restated does not (UNCURED: the restated line still tags a link UNEXHIBITED for a pressed witness left unanswered)
+OK  K-X and RESPONSE appear in the cure prompt
+OK  W2 enfRows keeps the full reply (1790 chars), the cure ask, the full RESPONSE and the result
+OK  W2 Panel Cure Check output carries enforcer_log with the full reply (1190 chars)
+OK  FIX 5 Alternate Merge: qwen not seated for deepseek is seated for gemini; the chatgpt call is refused G3 at merge
+OK  W2 Alternate Merge enforcer_log_body: cure rows in full, each alternate's first reply, and the failed seat's full first reply (5 rows)
+OK  FIX 5 Alternate Build: base 1 call and 2 G3 skips (run 32212); new 3 calls, one per removed seat
+OK  FIX 6a 32212 Isaiah 8:18: base DOES NOT EXIST, new MATCHES
+OK  FIX 6b 32212 "(1:24)" no longer read as Genesis 1:24 (left unchecked)
+OK  FIX 6 32205: DOES NOT EXIST 16 -> 0; "Ezra 18:7-8" gone
+OK  FIX 7 draft: aggregate_debate_panel writes UNGRADED when no seat is counted; d5_outcome_for maps UNGRADED to "UNGRADED — REVIEW"
+OK  E6 32157: false "both agree" (S-A), "every link answered" (S-B) and "binds both seats" (S-D) marked
+OK  E6 32212: "enomizeto carries no verdict of its own" listed as uncharged (S-C) marked
+
+fixtures 40 | bad 0
