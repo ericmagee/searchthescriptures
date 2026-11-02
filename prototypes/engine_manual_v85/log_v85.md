@@ -1,0 +1,32 @@
+# engine_manual_log entry for version 85 (DRAFT; not inserted)
+
+version: 85
+entry_date: (the date of the INSERT)
+title: v85: retired flows removed; ODV1 brought to the live flow d9ec1e19
+char_len: 46,207 characters (draft file md5 8975b0be; recompute at the INSERT, the stored content must equal the file byte for byte)
+source_offset: null
+
+content:
+Rewrite, not an append. Order of the operator: "we have archived all the old debates. they are officially retired. now it's time to update the debate engine manual." (md_notes_rulings 381). Live flow read for every claim: ORACLE_DEBATE_V1 moMxiV4Irg1uRBZN, version d9ec1e19 (GET, public API); database read by SELECT only. v84 md5 cb8b865b (138,777) -> v85 (46,207).
+
+REMOVED from the body (text stays in v84 and in this log):
+- The W1, W1_CC (Defends-vs-Claude) and DS-W1 operating text, archived in n8n: v84 §1 template-flow paragraph (3QGx), §2 W1/W1_CC mode and path lines, §3 roster notes on W1/DS-W1 hardcoding and the tier3_config line, §4 W1-W7 result tables, §5 items 1-16 (W1-era troubleshooting; the n8n editing items are owned by operational_doc §7), §6 maintenance protocol (owned by operational_doc §7 and §27), §7 known-open items of July, §8 schedules and execution budget (owned by operational_doc §7), the W1_CC section, The Scored Challenger, Reading a W1_CC transcript, Arsenal v2 (history part), The Rulebook Correction (history part), Layer-Admissibility (history part), DS-W1 section, Appendix A.1-A.8 (W1 judge seat table, retry history, extractor md5, guard-injection history, persistence requirements, acceptance tests, disaster-recovery start).
+- The v84 header changelog (v3 to v20 change narratives) and every "added vN", date stamp, session and hand name.
+- The W2/W3/W4/W5/W7, audit and specialty mode lines and webhook paths (v84 §2). These flows are NOT archived in n8n (W2-W5, W7, Berean Audit, Tier-3, Independent Synthesis, L2/W9/W14/W16 and the Challenger Tribunal are active; the Three-Judge Panel runner KXoI9 and the Markdown prototype nEKoQJ8 are inactive). They are not this engine; v85 names them once in §17 and points to v84 §2.
+- The Gentile Repair Playbook (v84 §R): a method for repairing the record and the Oracle edge function, not the operation of ODV1; its verification step named W1 debates. Not rewritten here; if it still governs, it needs a home (operator's call).
+- Seed, Not Blood (v12) and Seed by Promise (v13) doctrine text: DG-60 owns the rule (always injected); v85 §5 states how it reaches ODV1 and points to DG-60 (one home per rule).
+- ODV1 history kept in v84: ODV1.0 status of the old flows; order/BB provenance on each rule; measured-on lines and "why" narratives for ORDER C1, D, E, F, G, H, I, J, K and BB-8172 step 9; the GUARD-INADMISSIBLE block's history (removed BB-7223); W2-W4 who-belongs history; measured durations of October runs; the 20-minute panel-latency figure (superseded: cures and alternates now run in the panel phase); dashboard duration text; the probe-function open item (the four functions no longer exist).
+
+REWRITTEN as rules for ODV1 (from W1-era sections): the rulebook law (framework not a combatant), layer-admissibility (two prior layers), the two-namespace ruling with the named lists, seed not blood (pointer to DG-60), the crossed-column map, the verification protocol (operational_doc §27 and v84 ODV1.9 merged, with the read-whole rule for a live run).
+
+BROUGHT UP TO THE LIVE FLOW (each from node code or a live table; see claims_checked.md):
+- Rounds 1 to 4: D4 defender close and C4 challenger close (md_notes_rulings 377), the NARROWED TO answer form, the close-round answer form and the no-new-press rule.
+- Column map: defender_r4, challenger_r4; engine_r3 and challenger_r3 crossed.
+- Seats, models and tokens as a query; the token rule (stored max_tokens, no doubling, no +8192; code floors); no reasoning, effort or thinking field; caching for every model; every engine but deepseek through OpenRouter; the family rule.
+- The panel: judge order from Init Seats, qwen time-removed (no reserve where it was fourth), sol added last as alternate only; reserve; alternates with G1-G3; validation; aggregate with UNGRADED (no counted seat) and CONTESTED (fewer than two or no majority); outcome map; tie; citation rule; framework_verdict and standings now the PANEL's (derive_debate_outcome, first stamp), the single judge a second opinion (v84 said the single judge wrote them: corrected).
+- The judges' rulebook as it stands: counting rule with the close rounds, ruling 373 (answer in any later round, challenger's round 1 included), ruling 372 (unanswered pressed witness makes the premise UNEXHIBITED and counted), ruling 3 (book, chapter and verse stated and quoted fully and correctly; NOT COUNTED citation lines), the narrowing clause, VOID, GROUND on every collision line, rule B with the plain-letter [L2] form.
+- Every enforcer mark (K-B, K-G1 to K-G8, K-S, K-S2, K-C with its answer-test mask, K-U, K-N, K-SC, K-DG8, K-K defined and unwired), the fixed answer form, the RESPONSE requirement (md_notes_rulings 371), the uncounted-seat consequence; synthesis checks S-A to S-E; the C4 new-press check; the table debate_enforcer_log and record_enforcer_log.
+- Citation check after judge_fix2 FIX 6 (chapter read, unread = NOT CHECKED, bare reference booked only from its own clause).
+- Troubleshooting and known-open items replaced with today's: dashboard def_r4/cha_r4; WORDS ARE AT still counts; K-G4 on a timing ground; UNEXHIBITED premise vs link grade; reserve empty in 20 pairings, alternate pool empty in 14; sol beside chatgpt; the 900 s timeout not a hard stop; MiMo content-filter refusals and the Haiku 5.5 swap ruling (prepared, not applied); GLM reasoning exhaustion; the Sight 32 correction; the open items found by the whole read of ODV1-32266 ("quoted fully" to rule, defender close citing new verses unmarked, the ledger not checking quoted words, K-DG8 on keystone lines and misses, RETRACTED with the regrade on one line refused); the Defense Discipline header naming the operator; stale node comments; the unread `chain` rulebook value; debate_variant_canon without the close-round columns; the live non-archived flows.
+
+Drafted by a subagent for Worker_A3 (seat 25), reviewed and inserted by Worker_A3. The open item "sol stored at 128,000" was dropped before the insert: sol was set to 64,000 under the operator's standing "set all to 64k". Undo after an INSERT: INSERT version+1 with v84's content (md5 cb8b865b).
