@@ -17,7 +17,7 @@ Run ODV1-32510-y45lvadj (debate 0bf2eac4-8545-4102-9494-e74872d43a0b), "Did Chri
 - Luke 1:5 and 1:36: Elisabeth "of the daughters of Aaron"; "thy cousin Elisabeth".
 - Romans 1:3: "made of the seed of David according to the flesh;"
 
-No row names Mary's house. The only kin the text gives her is of Aaron's house.
+No row pulled names Mary's house (Sight 6: "Mary's tribe is never explicitly named in the KJV."). The one kinswoman whose house the text names is Elisabeth, of Aaron's daughters (Luke 1:5, 1:36). Her sister (John 19:25, "his mother's sister, Mary the [wife] of Cleophas") is named with no house.
 
 **What the defender did:**
 1. **Round 1 (link D5):** "Biology came through the mother," footed on Galatians 4:4 and Romans 1:3. The link assumes the mother is of David's seed without saying so.
@@ -93,4 +93,9 @@ So the defender gave up every ground for Mary's Davidic descent, one by one, and
 4. P5 and P7: footing lines with MEANS, and the answer check reading meaning.
 5. Section 3 items.
 
-Test: re-run this run's rounds through the judges (dry regrade) after P4 to P7. On P4 the defender's D5 should come back CONCEDED or narrowed to a claim without Davidic seed through the mother. Then one live run after P1 to P3, to see whether the defender concedes the Mary route itself.
+Test: re-run this run's rounds through the judges (dry regrade) after P4 to P7. On P4 the defender's D5 should come back CONCEDED or narrowed to a claim without Davidic seed through the mother. Then one live run after P1 to P3, to see whether the defender concedes the Mary route itself. That run observes the debaters only; it does not verify the change (operational_doc §27, "A LIVE RUN IS NEVER THE VERIFICATION").
+
+## 5. Corrections to this review
+1. **P1 is misattributed.** The "answer every listed premise SUPPORTED" sentence sits in WIN THE PANEL, which reaches only the Oracle seat. This run's plain defender never received it. P1 does not explain this run; it stands for runs where the Oracle defends.
+2. **Section 3 item 1 is wrong.** DeepSeek did not sit as a panel seat; it entered as the reserve when MiniMax returned an empty reply. The live judge list (version e6f3364c) is Gemini, ChatGPT and Grok, reserve DeepSeek.
+3. **Section 1, scope.** The first text read "The only kin the text gives her is of Aaron's house." John 19:25 gives her a sister with no house named. Corrected in place.
