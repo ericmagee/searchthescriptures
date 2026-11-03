@@ -1,0 +1,11 @@
+const fs=require('fs');const file=process.argv[2],S=process.argv[3];
+const c=fs.readFileSync(file,'utf8');const L0=c.split('\n');
+const rA=L0.findIndex(l=>/^const REFP=/.test(l));let rB=rA;while(!/\}\)\(\);$/.test(L0[rB]))rB++;
+const capA=L0.findIndex(l=>/judge_fix8 R13 \(md_notes_rulings 393\)/.test(l));let capB=capA+1;while(!/^\/\/ posture v5/.test(L0[capB]))capB++;
+const d=JSON.parse(fs.readFileSync(S+'/row.json','utf8'))[0];
+const run=new Function('d',L0.slice(rA,rB+1).join('\n')+'\nconst FF=[];\n'+L0.slice(capA,capB).join('\n')+'\nreturn FF;');
+const FF=run({gr2:d.engine_r2,cr3:d.engine_r3});console.log(FF.length?FF.join('\n'):'(no cap lines)');
+const V=['Genesis 1:1','Genesis 1:2','Genesis 1:3','Genesis 1:4','Genesis 1:5','Genesis 1:6','Genesis 1:7','Genesis 1:8','Genesis 1:9'];
+const syn='UNSUPPORTED-L4 PREMISES\n\n1. LINK 1: a premise: "q."\nPRESSED WITH:\n'+V.map(v=>v+' "words" -- MEANS: the verse states it. -- [L3] Exodus 3:14 "I AM"').join('\n')+'\n';
+const F2=run({gr2:syn,cr3:''});console.log(F2.join('\n'));
+const ok=FF.length===0&&F2.length===1&&/carries 9 verses/.test(F2[0])&&/: Genesis 1:9\./.test(F2[0]);console.log(ok?'PASS':'FAIL');

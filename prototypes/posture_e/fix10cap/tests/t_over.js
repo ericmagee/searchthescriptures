@@ -1,0 +1,10 @@
+const fs=require('fs');const file=process.argv[2];
+const L0=fs.readFileSync(file,'utf8').split('\n');const ln=(a,b)=>L0.slice(a-1,b).join('\n');
+const find=(re,from)=>{for(let i=(from||1)-1;i<L0.length;i++)if(re.test(L0[i]))return i+1;throw new Error('anchor '+re);};
+const libEnd=find(/end judge_fix9 libraries/),rA=find(/^const REFP=/),rB=find(/\}\)\(\);$/,rA),ci=find(/^const ciKeys=/),pA=find(/^const PW_CAP=/),pB=find(/^const PW_SEG=/);
+const L=new Function('$',ln(1,libEnd)+'\n'+ln(rA,rB)+'\n'+ln(ci,ci)+'\n'+ln(pA,pB-1)+'\nreturn {pwList};')(()=>{throw 0});
+const V=['Genesis 1:1','Genesis 1:2','Genesis 1:3','Genesis 1:4','Genesis 1:5','Genesis 1:6','Genesis 1:7','Genesis 1:8','Genesis 1:9'];
+const lines=V.map(v=>v+' "some words of the verse" -- MEANS: the verse states this point plainly. -- [L2] word (a meaning) | [L3] Exodus 3:14 "I AM THAT I AM"').join('\n');
+const DR2='## UNSUPPORTED-L4 PREMISES\n\n1. LINK 1: a premise: "quote here."\nPRESSED WITH:\n'+lines+'\n';
+const p=L.pwList({DR2},'DEFENDER')[0];console.log('counted',p.all.size,'over',JSON.stringify(p.over));
+console.log(p.all.size===8&&p.over.length===1&&p.over[0]==='Genesis 1:9'?'PASS: the 9th head verse is over the cap; the [L3] verses are not counted':'FAIL');
