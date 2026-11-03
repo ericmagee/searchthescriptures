@@ -2,7 +2,7 @@
 # (OUT, get, rep, cut, lib, CHECK, CURE). Offline; anchored, refusing on a wrong count. Items:
 #  R1  close-round grading check marks only grades/verdicts of the other side's links and new premise lists or presses (lib/c4p_press.js)
 #  R2  the check computed once (Build Synthesis), stored (Build Save Body, review_notes AUDIT v27), printed from the stored result
-#  R3  the single judge printed in the transcript after the panel, with its flags and cures (Format Markdown)
+#  R3  WITHDRAWN (operator ruling 402: the single judge is not printed in the debate document)
 #  R4  a cure's corrected lines written in place, the originals kept as SUPERSEDED LINE audit lines and printed below them; a count cure's
 #      table row carries the item's own RESPONSE
 #  R5  K-LB reads footing, not tags (lib/lbfoot.js); FOOTING LAYERS in the rulebook and the cure prompt; the cure tests the block's own words
@@ -251,17 +251,7 @@ s=rep(s,"const panelText = (raw, j) => {",
  "const panelText = (raw, j) => {",'Format Markdown')
 s=rep(s,"demote(nameGuards(noMarkers(beforeCure((o.reasoning == null && o.reason != null ? o.reason : o.reasoning) || '(no reasoning given)', curedTo(raw)))))",
         "demote(nameGuards(noMarkers(superApply(beforeCure((o.reasoning == null && o.reason != null ? o.reason : o.reasoning) || '(no reasoning given)', curedTo(raw)), raw))))",'Format Markdown')
-SJSEC=("// judge_fix8 R3 (run 32306, Worker_E A3: the single judge wrote a 15,584-character second opinion, was flagged four times and cured all four, and none of it\n"
- "// was printed): the single judge's verdict, its text (its corrected lines in place), its flags and its cures, after the panel. A second opinion: not counted.\n"
- "{ const s = String(r.independent_verdict_raw || ''); if (s.trim()) { const i = s.indexOf('\\n\\n[AUDIT'); const txt = i < 0 ? s : s.slice(0, i); const tail = i < 0 ? '' : s.slice(i);\n"
- "  const flags = (tail.match(/\\[(?:EXTRACTOR|AUDIT) v\\d+[^\\]\\n]*REVIEW THIS ROW[^\\]\\n]*\\]/g) || []); const cs = curedSet(s); const rows = drvRead('Single judge ' + SJN, s).rows;\n"
- "  t += '## Single judge (second opinion): ' + SJN + ' (' + (r.judge_model || 'model not recorded') + '): ' + (SJV || '?') + VSIDE + '\\n\\n*A second opinion, not counted in the panel result. Its own text follows, with the lines its cure corrected written in place.*\\n\\n' + demote(nameGuards(noMarkers(superApply(beforeCure(txt, curedTo(s)), s)))) + '\\n\\n';\n"
- "  t += '**Its flags** (' + flags.length + '):' + (flags.length ? '\\n\\n' + flags.map(x => { const k = flagKey(x); const cured = k && cs.has(k); return '- ' + (cured ? 'Cured: ' : 'For review: ') + x.slice(1, -1).replace(/\\s*REVIEW THIS ROW\\.?/, '').trim(); }).join('\\n') : ' none') + '\\n\\n';\n"
- "  if (rows.length) { t += '**Its cures** (' + rows.filter(x => x.RESULT === 'CURED').length + ' cured of ' + rows.length + '):\\n\\n| Item | Rule | Result | Original line | Cure statement, or why not cured | Judge\\'s own statement |\\n|---|---|---|---|---|---|\\n';\n"
- "   rows.forEach(x => { const last = x.RESULT === 'CURED' ? (x.STATEMENT || x.WHY || '') : ((x.STATEMENT ? x.STATEMENT + ' -- ' : '') + (x.WHY ? 'Not cured: ' + x.WHY + '.' : 'Not cured.')); t += '| ' + drvCell(x.ITEM) + ' | ' + drvCell(DRV_RULE[x.RULE] || x.RULE) + ' | **' + drvCell(x.RESULT) + '** | ' + drvCell(x.LINE || '') + ' | ' + drvCell(last) + ' | ' + drvCell(x['JUDGE STATEMENT'] || '') + ' |\\n'; }); t += '\\n'; }\n"
- "  else t += '**Its cures:** none (no item was sent to its cure).\\n\\n';\n"
- "  t += '---\\n\\n'; } }\n")
-s=rep(s,"t += (PF ? '*Debate incomplete: the panel stage failed (see the notice at the top).*' : '*Debate complete.*')",SJSEC+"t += (PF ? '*Debate incomplete: the panel stage failed (see the notice at the top).*' : '*Debate complete.*')",'Format Markdown')
+# R3 (print the single judge) is withdrawn by operator ruling 402: the single judge is not printed in the debate document.
 s=rep(s,"'K-V': 'VOID ruling without the charge words or the kind (K-V)',","'K-V': 'VOID ruling without the charge words or the kind (K-V)', 'K-S2': 'Single-verse ground in another form (K-S2)', 'K-LXX': 'Septuagint reading said not to occur (K-LXX)',",'Format Markdown')
 s=rep(s,"x.match(/\\((K-S|K-C|K-N|K-SC|K-K|K-DG8)\\) -- (D\\d+(?: vs C\\d+)?|REASONING|","x.match(/\\((K-S|K-S2|K-LXX|K-C|K-N|K-SC|K-K|K-DG8)\\) -- (D\\d+(?: vs C\\d+)?|REASONING|CITATION CHECK|",'Format Markdown')
 OUT['Format Markdown']=s

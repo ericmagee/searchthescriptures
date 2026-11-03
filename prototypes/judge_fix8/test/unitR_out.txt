@@ -26,19 +26,16 @@ ok  the transcript prints the stored result from the saved row
 ok  Build Save Body stores the result once (no recomputation)
 ok  D4 Extract and C4 Extract no longer compute it
 ok  judges and transcript print the same note even from different round sets (32306 printed 34 against 37) -- 16
-== R3, R4: the transcript prints the single judge and the corrected lines
+== R4: the transcript prints the corrected lines (R3, printing the single judge, withdrawn by ruling 402)
 ok  GLM after its cure: the standing and count lines in its text read PROP-DEPENDENT, 1 (32306 printed SELF-SUPPORTED c=0)
 ok  GLM: each replaced line keeps its original on a SUPERSEDED LINE (the standing, the count and the four restated collision lines) -- D1 VS C5, D3 VS C2, D5 VS C6, D6 VS C2, DEFENSE STANDING, CONCEDED LINKS
 ok  GLM: the restated D5 vs C6 line stands in its text in place of the original
 ok  GLM: the fields are unchanged by the rewrite (PROP-DEPENDENT, 1)
 ok  the violation table row for premise 6 carries its own RESPONSE beside the count it shares -- CORRECTED COUNT: DEFENDER 1 / CORRECTED STANDING: DEFENDER PROP-DEPENDENT / RESPONSE: I accept the mark: (CR3) LINK 5 ta
 ok  the single judge: its retracted D1 vs C1 line is written in place, the original kept as SUPERSEDED
-ok  R3: the single judge is printed after the panel judgments
-ok  R3: its flags are printed (K-G4 on D1 vs C1 among them) -- 7
-ok  R3: its cures are printed (4 cured of 4)
+ok  R3 withdrawn (ruling 402): the single judge is not printed in the debate document
 ok  R4: GLM prints the corrected standing in place, the original below it marked superseded
 ok  R4: the restated D5 vs C6 line prints with its original below it
-ok  R4: the single judge prints its retracted lines corrected, originals superseded
 ok  R4: the violation table attaches GLM's premise 6 RESPONSE to that item
 ok  R2: the transcript prints the stored count for the challenger close (16), not a recount
      (the rebuilt transcript: test/transcript_32306_R.md)
@@ -113,4 +110,4 @@ ok  the judges' ledger lists 8 witnesses for premise 2 and names the rest as ove
 ok  the rulebook and both debaters' list instructions state the cap
 ok  Build Save Body lists them in a review line; D4 Build's still-unanswered list reads only the first 8
 
-86 fixtures, 0 bad
+83 fixtures, 0 bad

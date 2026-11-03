@@ -95,8 +95,9 @@ New TRIAL rules: K-S2 (now an item) and K-LXX (ENF_STATUS TRIAL in the 3 checker
 - R2 Computed once in Build Synthesis from every round (close_graded); Build Save Body stores it in full as one AUDIT v27 line per close (also when 0);
   Panel Build and Build Independent Verdict print Build Synthesis's result (on a regrade, the saved row's v27 line); Format Markdown prints the saved
   row's line. D4/C4 Extract no longer compute it. (34 vs 37 came from Format Markdown and C4 Extract reading fewer rounds.)
-- R3 Format Markdown prints "Single judge (second opinion)" after the panel: verdict, text (corrected lines in place), its flags, its cures table.
-  This reverses the earlier choice (DoD 10 (c)) to keep the single judge in the row only.
+- R3 WITHDRAWN (operator ruling 402: the single judge, DeepSeek's second opinion, is not printed in the debate document). Format Markdown keeps
+  its pre-R3 behavior for the single judge (it stays in the stored row only); R3 touched no other node. The R4 rewrite still applies to the single
+  judge's stored text (independent_verdict_raw).
 - R4 Cure nodes (cureRecompute/cureRewrite): the standing and count lines are compared with the text as the judge wrote it, not only the fields
   (GLM 32306: the fields were already PROP-DEPENDENT 1 from cureSetApply, so the text was never rewritten); a RESTATED collision line of the same grade
   is written in place (fields unchanged; AUDIT v27 RESTATED LINES WRITTEN); each replaced line's original is kept in full on an AUDIT v27 SUPERSEDED
@@ -106,7 +107,7 @@ New TRIAL rules: K-S2 (now an item) and K-LXX (ENF_STATUS TRIAL in the 3 checker
   Engine manual (v86 says recomputed values are written "to its fields and text"); v87 must say: after a cure the counted fields are written; in the
   judge's text, a retracted or restated collision line (any grade), the standing line, the count line, the RESULT and CLAUSE lines are replaced by the
   corrected ones whenever the text differs from the counted value; each original is kept on an AUDIT v27 SUPERSEDED LINE and printed below the
-  corrected line in the transcript; the violation table row of a count cure shows the item's own RESPONSE; the single judge is printed after the panel.
+  corrected line in the transcript; the violation table row of a count cure shows the item's own RESPONSE. (The single judge is not printed: ruling 402.)
 - R5 Footing read by one definition everywhere (lib/lbfoot.js, lbFoot), as amended by operator ruling 400 (md_notes_rulings 400: "L3 is supporting
   verse(s) for L1") and the coordinator's two corrections: each quotation is paired with its reference (written just after it in brackets, or the
   nearest before it); the first verse quoted is L1, tagged or not; any other verse quoted with its reference after it, as support, is L3, tagged or
@@ -147,7 +148,7 @@ New TRIAL rules: K-S2 (now an item) and K-LXX (ENF_STATUS TRIAL in the 3 checker
   32284 challenger list p1 +1, p5 +2.
 
 Tests (rerun after ruling 400): compile_out.txt (46 compile, part P included); unit8_out.txt (194, 0 bad: the 193, with the 32306 K-V fixture split into K6-alone 11 and R7 8);
-unitR_out.txt (86, 0 bad, R1-R13 on 32306; the R4 GLM fixture reruns GLM's stored cure on the items live cfcbb37b raised, since ruling 400 removes its K-LB premise 6); unitP_out.txt (74, 0 bad); transcript_32306_R.md (Format Markdown on the 32306 row with GLM's and the single judge's text re-cured); replay8_out.txt rerun: every
+unitR_out.txt (83, 0 bad, R1-R13 on 32306; the R3 fixtures replaced by one that checks the single judge is not printed (ruling 402); the R4 GLM fixture reruns GLM's stored cure on the items live cfcbb37b raised, since ruling 400 removes its K-LB premise 6); unitP_out.txt (74, 0 bad); transcript_32306_R.md (Format Markdown on the 32306 row with GLM's and the single judge's text re-cured); replay8_out.txt rerun: every
 panel outcome unchanged in base/new/ruled; every seat's verdict and result unchanged; two seat standings move after ruling 400 (above); otherwise only TRIAL items move (K-LB on footing, K-S2, K-LXX, K-V).
 
 ## Part P (the test instruments of the judge posture protocol, prototypes/judge_posture/JUDGE_POSTURE_DRAFT_v4.md Part 7): patch_p.py

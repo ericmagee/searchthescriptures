@@ -46,7 +46,7 @@ console.log('== R2: computed once, stored, printed from the stored result');
  // the same text in both places: Panel Build's note from the stored list equals Format Markdown's
  const noteJ=N.noteP(F06,'C',all.C),noteT=N.noteP({cr1:F06.cr1,dr3:F06.dr3,dr4:F06.dr4},'C',N.stored(line,'C'));ok(noteJ===noteT,'judges and transcript print the same note even from different round sets (32306 printed 34 against 37)',(noteJ.match(/holds (\d+)/)||[])[1]);}
 
-console.log('== R3, R4: the transcript prints the single judge and the corrected lines');
+console.log('== R4: the transcript prints the corrected lines (R3, printing the single judge, withdrawn by ruling 402)');
 const seat06=(s0,raw)=>{const pl=s0==='single';const r=R8.run('32306');raw=raw||(pl?r.independent_verdict_raw:r.judgments.find(j=>j.seat===s0).verdict_raw);return R8.seat('new','32306',r,s0,raw,!pl,R8.replyOf('32306',r,s0,raw,!pl),false);};
 // GLM: under ruling 400 the new check no longer raises K-LB on premise 6, so its cure is rerun here on the items live cfcbb37b raised (K-C x4,
 // K-LB premises 3 and 6, read from the base checker) with its stored cure reply, as Panel Cure Check runs it.
@@ -75,14 +75,11 @@ const fmRun=(row,J)=>RN.runNode('new','Format Markdown',{'Get Row':row,'Get Judg
 {const r=R8.run('32306');const J=r.judgments.map(j=>j.seat==='glm'?{...j,verdict_raw:glm.verdict_raw}:j);
  const sjv=sj.verdict_raw;const sjT=sjv.split('\n[AUDIT')[0].replace(/\n+$/,'');const sjL=sjv.split('\n').filter(l=>/^\[AUDIT v2[57]: /.test(l)).join('\n');const st=r.independent_verdict_raw;
  const row={...r,defender_engine:'claude',challenger_engine:'claude',topic:'Did Christ have a biological father?',independent_verdict_raw:sjT+st.slice(st.indexOf('\n\n[AUDIT'))+'\n'+sjL,review_notes:r.review_notes}; /* the stored flags and reports, with the replayed rewrite (text, AUDIT v25/v27 lines) */
- const md=fmRun(row,J);const sec=md.slice(md.indexOf('## Single judge (second opinion)'));
- ok(md.includes('## Single judge (second opinion): DeepSeek')&&md.indexOf('## Single judge')>md.lastIndexOf('## Panel judge'),'R3: the single judge is printed after the panel judgments');
- ok(/\*\*Its flags\*\* \(\d+\):/.test(sec)&&/K-G4\) -- D1 vs C1/.test(sec),'R3: its flags are printed (K-G4 on D1 vs C1 among them)',(sec.match(/\*\*Its flags\*\* \((\d+)\)/)||[])[1]);
- ok(/\*\*Its cures\*\* \(4 cured of 4\)/.test(sec),'R3: its cures are printed (4 cured of 4)');
- const g=md.slice(md.indexOf('Panel judge',md.indexOf('## Panel judge')),md.indexOf('## Single judge'));const gl=g.slice(g.indexOf(': GLM'));
+ const md=fmRun(row,J);
+ ok(!md.includes('## Single judge')&&!md.includes('Its flags')&&!md.includes('Its cures'),'R3 withdrawn (ruling 402): the single judge is not printed in the debate document');
+ const g=md.slice(md.indexOf('Panel judge',md.indexOf('## Panel judge')),md.indexOf('*Debate complete.*'));const gl=g.slice(g.indexOf(': GLM'));
  ok(/DEFENSE STANDING: PROP-DEPENDENT -- L=6 c=1 -- recomputed after the cure[^\n]*\*\(corrected by the cure\)\*/.test(gl)&&/> \*Superseded by the cure \(the judge's line before it\):\* DEFENSE STANDING: SELF-SUPPORTED -- L=6 c=0/.test(gl),'R4: GLM prints the corrected standing in place, the original below it marked superseded');
  ok(/> \*Superseded by the cure \(the judge's line before it\):\* D5 vs C6 \(Jeremiah 22:30\): UNDERDETERMINED -- every witness answered/.test(gl),'R4: the restated D5 vs C6 line prints with its original below it');
- const bsj=sec.slice(0,sec.indexOf('**Its flags'));ok(/\*\(corrected by the cure\)\*/.test(bsj)&&/Superseded by the cure/.test(bsj),'R4: the single judge prints its retracted lines corrected, originals superseded');
  ok(/\| Panel judge GLM \| DEFENDER premise 6 \|[^\n]*RESPONSE: I accept the mark/.test(md),'R4: the violation table attaches GLM\'s premise 6 RESPONSE to that item');
  // R2 in the transcript: the stored line is what prints
  const N=c4p('new');const all=N.all(F06);const row2={...row,review_notes:r.review_notes+' '+N.storeLine(all.D,'D')+' '+N.storeLine(all.C,'C')};const md2=fmRun(row2,J);

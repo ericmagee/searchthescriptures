@@ -374,16 +374,6 @@ t += '## Synthesis\n\n**Analyst:** ' + SJN + ', gives no verdict\n\n' + (r.synth
 { const SC = [...String(r.review_notes || '').matchAll(/\[AUDIT v\d+: SYNTHESIS CHECK \((S-[A-F])\) -- ([\s\S]*?)\. REVIEW THIS ROW\.\]/g)];
   t += '**Synthesis checks** (computed by the system, not by a model; each flags a synthesis sentence for review and changes no verdict): ' + (SC.length ? '\n\n' + SC.map(m => '- **' + m[1] + '.** ' + m[2].replace(/\s+/g, ' ').trim()).join('\n') : 'none flagged.') + '\n\n---\n\n'; }
 SEATS.filter(e => e.j).forEach(e => { const j = e.j; t += '## Panel judge ' + e.n + e.tag + ': ' + nm(j.judge_seat) + ' (' + (j.judge_api_model || '') + '): ' + (j.verdict_tag || '?') + VSIDE + '\n\n' + panelText(j.verdict_raw, j) + '\n\n---\n\n'; });
-// judge_fix8 R3 (run 32306, Worker_E A3: the single judge wrote a 15,584-character second opinion, was flagged four times and cured all four, and none of it
-// was printed): the single judge's verdict, its text (its corrected lines in place), its flags and its cures, after the panel. A second opinion: not counted.
-{ const s = String(r.independent_verdict_raw || ''); if (s.trim()) { const i = s.indexOf('\n\n[AUDIT'); const txt = i < 0 ? s : s.slice(0, i); const tail = i < 0 ? '' : s.slice(i);
-  const flags = (tail.match(/\[(?:EXTRACTOR|AUDIT) v\d+[^\]\n]*REVIEW THIS ROW[^\]\n]*\]/g) || []); const cs = curedSet(s); const rows = drvRead('Single judge ' + SJN, s).rows;
-  t += '## Single judge (second opinion): ' + SJN + ' (' + (r.judge_model || 'model not recorded') + '): ' + (SJV || '?') + VSIDE + '\n\n*A second opinion, not counted in the panel result. Its own text follows, with the lines its cure corrected written in place.*\n\n' + demote(nameGuards(noMarkers(superApply(beforeCure(txt, curedTo(s)), s)))) + '\n\n';
-  t += '**Its flags** (' + flags.length + '):' + (flags.length ? '\n\n' + flags.map(x => { const k = flagKey(x); const cured = k && cs.has(k); return '- ' + (cured ? 'Cured: ' : 'For review: ') + x.slice(1, -1).replace(/\s*REVIEW THIS ROW\.?/, '').trim(); }).join('\n') : ' none') + '\n\n';
-  if (rows.length) { t += '**Its cures** (' + rows.filter(x => x.RESULT === 'CURED').length + ' cured of ' + rows.length + '):\n\n| Item | Rule | Result | Original line | Cure statement, or why not cured | Judge\'s own statement |\n|---|---|---|---|---|---|\n';
-   rows.forEach(x => { const last = x.RESULT === 'CURED' ? (x.STATEMENT || x.WHY || '') : ((x.STATEMENT ? x.STATEMENT + ' -- ' : '') + (x.WHY ? 'Not cured: ' + x.WHY + '.' : 'Not cured.')); t += '| ' + drvCell(x.ITEM) + ' | ' + drvCell(DRV_RULE[x.RULE] || x.RULE) + ' | **' + drvCell(x.RESULT) + '** | ' + drvCell(x.LINE || '') + ' | ' + drvCell(last) + ' | ' + drvCell(x['JUDGE STATEMENT'] || '') + ' |\n'; }); t += '\n'; }
-  else t += '**Its cures:** none (no item was sent to its cure).\n\n';
-  t += '---\n\n'; } }
 t += (PF ? '*Debate incomplete: the panel stage failed (see the notice at the top).*' : '*Debate complete.*') + '\n\n' + runTime() + '\n';
 // ITEM 8 (BB-7224, shape BB-7234): WHAT THE JUDGES WERE SENT. Each distinct text sent to a judge in this run is printed once, verbatim,
 // under a heading that names every seat and call that received it and gives the md5 of the text (its messages joined in order, UTF-8).
