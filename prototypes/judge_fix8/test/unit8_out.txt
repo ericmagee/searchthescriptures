@@ -1,0 +1,215 @@
+== K1: the rule text
+ok  Panel Build: UNANSWERED WITNESS defines the witness by PRESSED WITH
+ok  Panel Build: the old "quoted against a link or a listed premise" is gone
+ok  Panel Build: ruling 392 stated
+ok  Panel Build: UNANSWERED WITNESS and 372 limited to PRESSED WITH verses
+ok  Panel Build: judges told the cited-in lines are not a list of witnesses
+ok  Panel Build: the old cited-in witness clause is gone
+ok  Panel Build: both UNEXHIBITED clauses carry ruling 392
+ok  Panel Build: the ledger header calls the cited-in line informational
+ok  Panel Build: the CITED-IN RULINGS requirement is removed
+ok  Panel Build: the ruling 372 sentence the K-G6 cure quotes is kept word for word
+ok  Build Independent Verdict: UNANSWERED WITNESS defines the witness by PRESSED WITH
+ok  Build Independent Verdict: the old "quoted against a link or a listed premise" is gone
+ok  Build Independent Verdict: ruling 392 stated
+ok  Build Independent Verdict: UNANSWERED WITNESS and 372 limited to PRESSED WITH verses
+ok  Build Independent Verdict: judges told the cited-in lines are not a list of witnesses
+ok  Build Independent Verdict: the old cited-in witness clause is gone
+ok  Build Independent Verdict: both UNEXHIBITED clauses carry ruling 392
+ok  Build Independent Verdict: the ledger header calls the cited-in line informational
+ok  Build Independent Verdict: the CITED-IN RULINGS requirement is removed
+ok  Build Independent Verdict: the ruling 372 sentence the K-G6 cure quotes is kept word for word
+ok  Panel Build: the reasoning field no longer lists CITED-IN RULINGS
+ok  Panel Build ledger (32302): the cited-in line is printed and labelled informational
+ok  Format Markdown: the reading guide states ruling 392
+ok  Format Markdown: the UNEXHIBITED quotation matches the new rulebook words
+ok  the quoted words stand in the rulebook (Panel Build)
+ok  Format Markdown flagKey reads a K-G10 mark
+ok  Format Markdown flagKey still reads a K-G6 mark
+ok  Format Markdown names the K-G10 rule
+ok  Build Save Body __FK reads a K-G10 mark
+ok  Init with Guards: both debater copies of the cited-in sentence carry ruling 392
+ok  Alternate Build: cure prompt asks for K-G10 (count or PRESSED WITH statement); K-G9 sentence and ruling forms gone
+ok  Alternate Cure Build: cure prompt asks for K-G10 (count or PRESSED WITH statement); K-G9 sentence and ruling forms gone
+ok  Alternate Cure Normalize: cure prompt asks for K-G10 (count or PRESSED WITH statement); K-G9 sentence and ruling forms gone
+ok  Alternate Merge: cure prompt asks for K-G10 (count or PRESSED WITH statement); K-G9 sentence and ruling forms gone
+ok  Cure Build: cure prompt asks for K-G10 (count or PRESSED WITH statement); K-G9 sentence and ruling forms gone
+ok  Cure Check: cure prompt asks for K-G10 (count or PRESSED WITH statement); K-G9 sentence and ruling forms gone
+ok  Cure Normalize: cure prompt asks for K-G10 (count or PRESSED WITH statement); K-G9 sentence and ruling forms gone
+ok  Panel Cure Build 1: cure prompt asks for K-G10 (count or PRESSED WITH statement); K-G9 sentence and ruling forms gone
+ok  Panel Cure Build 2: cure prompt asks for K-G10 (count or PRESSED WITH statement); K-G9 sentence and ruling forms gone
+ok  Panel Cure Build 3: cure prompt asks for K-G10 (count or PRESSED WITH statement); K-G9 sentence and ruling forms gone
+ok  Panel Cure Check: cure prompt asks for K-G10 (count or PRESSED WITH statement); K-G9 sentence and ruling forms gone
+ok  Panel Cure Normalize 1: cure prompt asks for K-G10 (count or PRESSED WITH statement); K-G9 sentence and ruling forms gone
+ok  Panel Cure Normalize 2: cure prompt asks for K-G10 (count or PRESSED WITH statement); K-G9 sentence and ruling forms gone
+ok  Panel Cure Normalize 3: cure prompt asks for K-G10 (count or PRESSED WITH statement); K-G9 sentence and ruling forms gone
+== K2: K-G9 retired, K-G10
+ok  Panel Payloads: drvCited no longer called; drvPressWith called; K-G10 TRIAL
+ok  Alternate Payloads: drvCited no longer called; drvPressWith called; K-G10 TRIAL
+ok  Extract Independent Verdict: drvCited no longer called; drvPressWith called; K-G10 TRIAL
+ok  ENF_STATUS: K-G10 is TRIAL (removes no seat)
+ok  cure nodes: an uncured K-G10 item never counts in drv_uncured
+ok  32284 ChatGPT: premises 4 and 5 counted on Luke 3:31 (under no PRESSED WITH of the [CR3] list) are marked -- CHALLENGER premise 4 Luke 3:31; CHALLENGER premise 5 Luke 3:31
+ok  32284 ChatGPT: premise 6 (inadequate footing) is not marked
+ok  32284 ChatGPT: the mark names the premise and the verse
+ok  32293 Sol: premise 2 (Luke 1:27) and premise 3 (Matthew 1:22) are marked; Matthew 1:23, named as no answer, is not read as a witness -- CHALLENGER premise 2:Luke 1:27; CHALLENGER premise 3:Matthew 1:22
+ok  32302 Gemini: Isaiah 7:11 and Luke 3:31 are under PRESSED WITH; nothing marked -- [AUDIT v26: K-G10 PASS: 2 UNEXHIBITED witness grounds read; every witness named is carried under a listed premise's PRESSED WITH; TRIAL rule]
+ok  32302 GLM: premise 4 rests on Luke 3:31 (under PRESSED WITH) and Matthew 1:1 (not) and on its footing; not marked
+ok  synthetic: a verse under PRESSED WITH (Romans 1:3, premise 4) is a witness; not marked
+ok  synthetic: a premise also counted on a footing ground is not marked
+ok  synthetic: a premise the seat ruled VOID is not marked
+ok  synthetic: a count of 0 is not read
+ok  synthetic: an item line under the count line ("- premise 3 UNEXHIBITED:") is read
+ok  synthetic: only the verse said to be unanswered is read as the witness -- Luke 3:31
+ok  pwList: PRESSED WITH: none carries no verse; a listed verse is read
+ok  cure: CORRECTED COUNT 1 (3 less premises 4 and 5) with PROP-DEPENDENT cures both items -- recounted under ruling 392: CHALLENGER COUNT 1, STANDING PROP-DEPENDENT | recounted under ruling 392: CHALLENGER COUNT 1, STANDING PROP-DEPENDENT
+ok  cureSet writes the corrected count of a K-G10 cure
+ok  cure: a count of 2 still counts a premise on Luke 3:31; UNCURED -- corrected count 2 still counts premises 4, 5 on a verse no listed premise carries under PRESSED WITH (the count is at most 1)
+ok  cure: a count of 1 with SELF-SUPPORTED is refused
+ok  cure: count 0 with SELF-SUPPORTED cures when no challenger link stands BROKEN
+ok  cure: count 0 with SELF-SUPPORTED is refused while a challenger link stands BROKEN (K-G3)
+ok  cure: a STATEMENT quoting the PRESSED WITH line that carries the verse cures -- statement quotes the PRESSED WITH line (CR3) that carries Romans 1:3
+ok  cureSet writes no count for a K-G10 statement cure
+ok  cure: a STATEMENT quoting the prose press (not a PRESSED WITH line) does not cure -- no CORRECTED COUNT for CHALLENGER and no STATEMENT quoting the PRESSED WITH line (CR3) that carries Luke 3:31 (ruling 392: a verse pressed without a premise is not a witness)
+ok  cureAsk lists the K-G10 item with its line and the rule
+== K3 and K7: the D4 close list
+ok  D4 (32302): part (b) is dropped from the close list
+ok  D4 (32302) K7: every verse part (a) lists for a premise is under that premise's PRESSED WITH line of the [DR2] list
+ok  D4 (32302) K7: the verses that drop out are under no PRESSED WITH line of their premise -- none
+     D4 (32302) part (a) base: 
+     D4 (32302) part (a) new : 
+ok  D4 (32302): the close message outside the still-unanswered list is unchanged
+ok  D4 (32306): part (b) is dropped from the close list
+ok  D4 (32306) K7: every verse part (a) lists for a premise is under that premise's PRESSED WITH line of the [DR2] list
+ok  D4 (32306) K7: the verses that drop out are under no PRESSED WITH line of their premise -- none
+     D4 (32306) part (a) base: 
+     D4 (32306) part (a) new : 
+ok  D4 (32306): the close message outside the still-unanswered list is unchanged
+     (32302 with the defender rounds 2 and 3 blanked, so no verse is named: part (a) shows every verse in scope)
+ok  D4 (32302, blanked): part (b) is dropped from the close list
+ok  D4 (32302) K7: every verse part (a) lists for a premise is under that premise's PRESSED WITH line of the [DR2] list
+ok  D4 (32302) K7: the verses that drop out are under no PRESSED WITH line of their premise -- none
+     D4 (32302) part (a) base: 1: Matthew 1:16, Matthew 1:1 | 2: Matthew 1:20, Matthew 1:19 | 3: Matthew 1:24, Matthew 1:25 | 4: Luke 2:51, Luke 2:49 | 5: Luke 1:27, Luke 2:4, Luke 1:32 | 6: Jeremiah 22:30, Matthew 1:12
+     D4 (32302) part (a) new : 1: Matthew 1:16, Matthew 1:1 | 2: Matthew 1:20, Matthew 1:19 | 3: Matthew 1:24, Matthew 1:25 | 4: Luke 2:51, Luke 2:49 | 5: Luke 1:27, Luke 2:4, Luke 1:32 | 6: Jeremiah 22:30, Matthew 1:12
+ok  D4 (32302): the close message outside the still-unanswered list is unchanged
+     (32306 with the defender rounds 2 and 3 blanked, so no verse is named: part (a) shows every verse in scope)
+ok  D4 (32306, blanked): part (b) is dropped from the close list
+ok  D4 (32306) K7: every verse part (a) lists for a premise is under that premise's PRESSED WITH line of the [DR2] list
+ok  D4 (32306) K7: the verses that drop out are under no PRESSED WITH line of their premise -- premise 2: Romans 1:3
+     D4 (32306) part (a) base: 1: Acts 2:30, Romans 1:3, 2 Samuel 7:12, Hebrews 7:14, Luke 2:4, Luke 1:27, Genesis 4:1, Deuteronomy 22:24 | 2: Romans 1:3, Galatians 4:4, Job 14:1, Matthew 11:11, Luke 1:13, Luke 1:36, Luke 1:5, Hebrews 7:10, Matthew 1:2, Genesis 3:15, Genesis 16:10, Genesis 24:60, Luke 1:35, Luke 9:34, Acts 5:15, Acts 1:8, Exodus 40:35, 1 Chronicles 28:6, Acts 13:33, Romans 1:4, Luke 1:32 | 3: Ezra 2:61, Ezra 2:62, Numbers 1:18, Numbers 1:2, Luke 2:48, Luke 2:27, Luke 2:41, Luke 2:33, John 6:42, John 1:45, Matthew 13:55, Acts 16:13, Luke 3:23, Matthew 1:16 | 4: Matthew 1:19, Matthew 1:20, Matthew 1:18, Matthew 1:24, Matthew 1:25, 1 Corinthians 7:5, Luke 1:34, Luke 1:31, John 1:13, 1 John 5:1 | 5: Isaiah 7:14, Genesis 24:16, Genesis 24:43, Isaiah 7:16, Isaiah 8:3, Isaiah 8:4, Isaiah 8:8, Matthew 1:22 | 6: Acts 2:30, Psalms 132:11, Jeremiah 22:30, Jeremiah 22:24, Matthew 1:12, Haggai 2:23, Jeremiah 18:8
+     D4 (32306) part (a) new : 1: Acts 2:30, Romans 1:3, 2 Samuel 7:12, Hebrews 7:14, Luke 2:4, Luke 1:27, Genesis 4:1, Deuteronomy 22:24 | 2: Galatians 4:4, Job 14:1, Matthew 11:11, Luke 1:13, Luke 1:36, Luke 1:5, Hebrews 7:10, Matthew 1:2, Genesis 3:15, Genesis 16:10, Genesis 24:60, Luke 1:35, Luke 9:34, Acts 5:15, Acts 1:8, Exodus 40:35, 1 Chronicles 28:6, Acts 13:33, Romans 1:4, Luke 1:32 | 3: Ezra 2:61, Ezra 2:62, Numbers 1:18, Numbers 1:2, Luke 2:48, Luke 2:27, Luke 2:41, Luke 2:33, John 6:42, John 1:45, Matthew 13:55, Acts 16:13, Luke 3:23, Matthew 1:16 | 4: Matthew 1:19, Matthew 1:20, Matthew 1:18, Matthew 1:24, Matthew 1:25, 1 Corinthians 7:5, Luke 1:34, Luke 1:31, John 1:13, 1 John 5:1 | 5: Isaiah 7:14, Genesis 24:16, Genesis 24:43, Isaiah 7:16, Isaiah 8:3, Isaiah 8:4, Isaiah 8:8, Matthew 1:22 | 6: Acts 2:30, Psalms 132:11, Jeremiah 22:30, Jeremiah 22:24, Matthew 1:12, Haggai 2:23, Jeremiah 18:8
+ok  D4 (32306): the close message outside the still-unanswered list is unchanged
+== K5 (1): ruling 392 at the collisions
+ok  Panel Build: the collision rule limits the BROKEN ground to PRESSED WITH verses
+ok  Panel Build: COUNTING RULE, BROKEN AT COLLISION and the count-0 sentence carry 392
+ok  Build Independent Verdict: the collision rule limits the BROKEN ground to PRESSED WITH verses
+ok  Build Independent Verdict: COUNTING RULE, BROKEN AT COLLISION and the count-0 sentence carry 392
+ok  Alternate Build: K-G1, K-G4, K-S, K-G7 cure text and K-G11 carry 392
+ok  Alternate Cure Build: K-G1, K-G4, K-S, K-G7 cure text and K-G11 carry 392
+ok  Alternate Cure Normalize: K-G1, K-G4, K-S, K-G7 cure text and K-G11 carry 392
+ok  Alternate Merge: K-G1, K-G4, K-S, K-G7 cure text and K-G11 carry 392
+ok  Cure Build: K-G1, K-G4, K-S, K-G7 cure text and K-G11 carry 392
+ok  Cure Check: K-G1, K-G4, K-S, K-G7 cure text and K-G11 carry 392
+ok  Cure Normalize: K-G1, K-G4, K-S, K-G7 cure text and K-G11 carry 392
+ok  Panel Cure Build 1: K-G1, K-G4, K-S, K-G7 cure text and K-G11 carry 392
+ok  Panel Cure Build 2: K-G1, K-G4, K-S, K-G7 cure text and K-G11 carry 392
+ok  Panel Cure Build 3: K-G1, K-G4, K-S, K-G7 cure text and K-G11 carry 392
+ok  Panel Cure Check: K-G1, K-G4, K-S, K-G7 cure text and K-G11 carry 392
+ok  Panel Cure Normalize 1: K-G1, K-G4, K-S, K-G7 cure text and K-G11 carry 392
+ok  Panel Cure Normalize 2: K-G1, K-G4, K-S, K-G7 cure text and K-G11 carry 392
+ok  Panel Cure Normalize 3: K-G1, K-G4, K-S, K-G7 cure text and K-G11 carry 392
+ok  Panel Payloads: the K-U, K-G4 and K-G1 marks carry 392; K-G11 TRIAL
+ok  Alternate Payloads: the K-U, K-G4 and K-G1 marks carry 392; K-G11 TRIAL
+ok  Extract Independent Verdict: the K-U, K-G4 and K-G1 marks carry 392; K-G11 TRIAL
+ok  Alternate Build: the K-U, K-G4 and K-G1 marks carry 392; K-G11 TRIAL
+ok  Alternate Cure Build: the K-U, K-G4 and K-G1 marks carry 392; K-G11 TRIAL
+ok  Alternate Cure Normalize: the K-U, K-G4 and K-G1 marks carry 392; K-G11 TRIAL
+ok  Alternate Merge: the K-U, K-G4 and K-G1 marks carry 392; K-G11 TRIAL
+ok  Cure Build: the K-U, K-G4 and K-G1 marks carry 392; K-G11 TRIAL
+ok  Cure Check: the K-U, K-G4 and K-G1 marks carry 392; K-G11 TRIAL
+ok  Cure Normalize: the K-U, K-G4 and K-G1 marks carry 392; K-G11 TRIAL
+ok  Panel Cure Build 1: the K-U, K-G4 and K-G1 marks carry 392; K-G11 TRIAL
+ok  Panel Cure Build 2: the K-U, K-G4 and K-G1 marks carry 392; K-G11 TRIAL
+ok  Panel Cure Build 3: the K-U, K-G4 and K-G1 marks carry 392; K-G11 TRIAL
+ok  Panel Cure Check: the K-U, K-G4 and K-G1 marks carry 392; K-G11 TRIAL
+ok  Panel Cure Normalize 1: the K-U, K-G4 and K-G1 marks carry 392; K-G11 TRIAL
+ok  Panel Cure Normalize 2: the K-U, K-G4 and K-G1 marks carry 392; K-G11 TRIAL
+ok  Panel Cure Normalize 3: the K-U, K-G4 and K-G1 marks carry 392; K-G11 TRIAL
+     Sol 32293 D3 vs C2: D3 vs C2 (Matthew 1:25; Luke 1:27): CHALLENGER LINK BROKEN -- [L1] Matthew 1:25 says "And knew her not till she had brought forth her firstb ...
+ok  Sol D3 vs C2: the part resting on an unanswered verse names Luke 1:27 only ("Luke 1:27 supplies the unanswered description"; GROUND "[DR3] leaves Luke 1:27 unanswered") -- Luke 1:27
+ok  Sol D3 vs C2: Luke 1:27 is under no PRESSED WITH of the [CR3] list; Matthew 1:25 is under premise 2
+ok  Sol D3 vs C2: its other ground, the chain read through Matthew 1:25 ([L1]), Genesis 4:1 ([L3]) and ginosko ([L2]), names one PRESSED WITH verse: Matthew 1:25 -- Matthew 1:25
+ok  Sol D3 vs C2: Matthew 1:25 is named in [DR1], [DR2] and [DR3], so by the rule it was answered: the line does not stand on its other ground, and K-G11 marks it -- DR1,DR2,DR3
+ok  counter-fixture: were Matthew 1:25 named in no later challenger round, the line would stand on that pressed witness, and K-G11 would not mark it
+ok  32284 chatgpt: no K-G11 mark
+ok  32284 gemini: no K-G11 mark
+ok  32284 glm: no K-G11 mark
+ok  32302 gemini: no K-G11 mark
+ok  32302 glm: no K-G11 mark
+ok  32302 chatgpt: no K-G11 mark
+ok  32293 gemini: no K-G11 mark
+ok  32293 chatgpt: no K-G11 mark
+ok  K-G11 cure: RETRACTED with one CORRECTED RESULT and a reason cures
+ok  K-G11 cure: a RESTATED line graded UNDERDETERMINED cures
+ok  K-G11 cure: restated BROKEN still resting on Luke 1:27 is refused
+ok  K-G11 cure: a statement alone does not cure
+== K5 (2): the ledger premise lines and K-G6
+     32302 new: premise 4: 4 verse(s) carried under PRESSED WITH; 3 named; other verses the premise names (informational, not witnesses): Matthew 1:1; NOT NAMED: Luke 3:31
+     32302 base: premise 4: 5 verse(s) carried; 3 named; NOT NAMED: Matthew 1:1, Luke 3:31
+ok  32302 premise 4 against the challenger: Matthew 1:1 (outside PRESSED WITH) is shown as informational, not in NOT NAMED
+ok  the K-G6 reader takes only the PRESSED WITH verses from the new line -- Luke 3:31
+ok  the ledger header says the premise lines count PRESSED WITH verses only
+ok  synthetic: PRESSED WITH: none carries no witness; the charge verse is informational
+ok  32284 chatgpt: K-G6 items base none | new none (same)
+ok  32284 gemini: K-G6 items base none | new none (same)
+ok  32284 glm: K-G6 items base none | new none (same)
+ok  32293 gemini: K-G6 items base none | new none (same)
+ok  32293 chatgpt: K-G6 items base none | new none (same)
+ok  32293 sol: K-G6 items base none | new none (same)
+ok  32302 gemini: K-G6 items base none | new none (same)
+ok  32302 glm: K-G6 items base none | new none (same)
+ok  32302 chatgpt: K-G6 items base none | new none (same)
+== K5 (3): the debaters' lists
+ok  C2 Build: the list instruction states ruling 392
+ok  D3 Build: the list instruction states ruling 392
+== K6: K-V, a VOID ruling quotes the charge words beyond the quote and names the kind
+ok  Panel Build: the VOID rule asks for the charge words and the kind
+ok  Build Independent Verdict: the VOID rule asks for the charge words and the kind
+ok  Alternate Build: K-V in the cure prompt, ENF_STATUS (TRIAL) and the label lists
+ok  Alternate Cure Build: K-V in the cure prompt, ENF_STATUS (TRIAL) and the label lists
+ok  Alternate Cure Normalize: K-V in the cure prompt, ENF_STATUS (TRIAL) and the label lists
+ok  Alternate Merge: K-V in the cure prompt, ENF_STATUS (TRIAL) and the label lists
+ok  Cure Build: K-V in the cure prompt, ENF_STATUS (TRIAL) and the label lists
+ok  Cure Check: K-V in the cure prompt, ENF_STATUS (TRIAL) and the label lists
+ok  Cure Normalize: K-V in the cure prompt, ENF_STATUS (TRIAL) and the label lists
+ok  Panel Cure Build 1: K-V in the cure prompt, ENF_STATUS (TRIAL) and the label lists
+ok  Panel Cure Build 2: K-V in the cure prompt, ENF_STATUS (TRIAL) and the label lists
+ok  Panel Cure Build 3: K-V in the cure prompt, ENF_STATUS (TRIAL) and the label lists
+ok  Panel Cure Check: K-V in the cure prompt, ENF_STATUS (TRIAL) and the label lists
+ok  Panel Cure Normalize 1: K-V in the cure prompt, ENF_STATUS (TRIAL) and the label lists
+ok  Panel Cure Normalize 2: K-V in the cure prompt, ENF_STATUS (TRIAL) and the label lists
+ok  Panel Cure Normalize 3: K-V in the cure prompt, ENF_STATUS (TRIAL) and the label lists
+ok  Panel Payloads: K-V checker present, TRIAL
+ok  Alternate Payloads: K-V checker present, TRIAL
+ok  Extract Independent Verdict: K-V checker present, TRIAL
+ok  32306 ChatGPT: 11 VOID rulings marked (defender premises 2-6, challenger 1-6); defender premise 1 (SUPPORTED) is not -- DEFENDER2 DEFENDER3 DEFENDER4 DEFENDER5 DEFENDER6 CHALLENGER1 CHALLENGER2 CHALLENGER3 CHALLENGER4 CHALLENGER5 CHALLENGER6
+ok  32306 ChatGPT premise 6 ("its [CR1] quote excludes Joseph's seed, not seed altogether"): no charge words quoted, no kind named
+ok  32306 ChatGPT premise 3 ("its [CR1] quote says legal fatherhood, not a register-name"): register-name is named, not quoted; marked
+ok  32306 ChatGPT: the K-V mark form
+ok  32306 gemini: voided none; no K-V mark ("No premise is VOID" is read as a denial)
+ok  32306 glm: voided none; no K-V mark ("No premise is VOID" is read as a denial)
+ok  synthetic: charge words quoted ("reduced to a register-name") and the kind named pass
+ok  synthetic: charge words without the kind are marked
+ok  synthetic: words of the quote itself are not charge words; marked
+ok  synthetic: a VOID for no verbatim quote needs no charge words
+ok  K-V cure: a STATEMENT quoting the charge words and naming the kind cures
+ok  K-V cure: the original ruling restated as a statement does not cure
+ok  K-V cure: premise regraded SUPPORTED in a RESTATED count cures
+ok  K-V cure: premise counted, with CORRECTED COUNT 1 and PROP-DEPENDENT, cures -- counted: DEFENDER COUNT 1, STANDING PROP-DEPENDENT
+ok  K-V cure: counted without a CORRECTED COUNT is refused
+ok  K-V cure: no statement and no regrade leaves it UNCURED
+ok  K-V is TRIAL: an uncured item removes no seat
+ok  cureSet: an open K-V item does not hold back another cured count of its side (run 32293 Sol, ruled)
+ok  cureSet: a K-V item cured by a count writes the count
+
+193 fixtures, 0 bad

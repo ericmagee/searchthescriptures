@@ -1,0 +1,28 @@
+live versionId cfcbb37b-86bf-474f-b847-82a72cc84d57 | base read versionId cfcbb37b-86bf-474f-b847-82a72cc84d57
+guards passed: base matched for 25 code nodes; versionId, connections (481) and node count (262) equal the base read
+  Alternate Build                base 663ca59d -> new e19f7024
+  Alternate Cure Build           base 598ca239 -> new b0795650
+  Alternate Cure Normalize       base 16df0e33 -> new 7c05b987
+  Alternate Merge                base 4059ba89 -> new 8dcdeef3
+  Alternate Payloads             base 4112a14d -> new e8071023
+  Build Independent Verdict      base 12550800 -> new 322c4815
+  Build Save Body                base 66d20a16 -> new 704c3b3c
+  C2 Build                       base f6dd3633 -> new c5673caa
+  Cure Build                     base d2fe13bb -> new e82dd4ea
+  Cure Check                     base 8c5d35d4 -> new 6edf72e9
+  Cure Normalize                 base c0a47093 -> new 88b321d9
+  D3 Build                       base 5d9f1435 -> new 19631593
+  D4 Build                       base 95860804 -> new 2e475a78
+  Extract Independent Verdict    base 9e0996ea -> new f431a087
+  Format Markdown                base edfc1ed2 -> new cdaa3b89
+  Init with Guards               base 67edcaee -> new 8ca328de
+  Panel Build                    base e503dab6 -> new 6c5347b5
+  Panel Cure Build 1             base 19004afa -> new 94cedb9b
+  Panel Cure Build 2             base 2459d287 -> new e0b87788
+  Panel Cure Build 3             base c8334d3c -> new 560e8e33
+  Panel Cure Check               base 836a14d1 -> new 19c03e7b
+  Panel Cure Normalize 1         base de0f7a03 -> new 1a3cb46f
+  Panel Cure Normalize 2         base f5b020e5 -> new f0f4cad8
+  Panel Cure Normalize 3         base cf1cfa8f -> new 7cfc5edd
+  Panel Payloads                 base c1877db0 -> new cbe2a4f0
+DRY: would PUT 25 code nodes, 0 nodes added, 481 connections (unchanged); nothing written
