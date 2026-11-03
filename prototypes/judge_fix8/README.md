@@ -4,9 +4,10 @@
   data/workflow_live.json; 67 code nodes in data/live_code/, each equal to judge_fix7/new or to judge_fix7's live read). base/ holds the live code
   of the 39 nodes changed (25 for K1-K7, 14 more for part R); new/<node>.js is built by `python3 patch.py` (which runs patch_r.py for part R) from
   base/ and lib/, anchored, refusing on a wrong count.
-- No node or connection is added or removed. write_package.py: one guarded PUT (versionId, base md5 of every base/ node, live connections and
-  node count equal the base read). Run only with --dry: write_dry.txt (rebuilt after part R against live cfcbb37b: guards passed; 39 code nodes;
-  481 connections, 262 nodes, unchanged).
+- Parts K and R add or remove no node or connection; part P (below) adds 9 nodes, removes 1 link and adds 13. write_package.py: one guarded PUT
+  (versionId, base md5 of every base/ node, live connections and node count equal the base read, added names and ids free, the removed link live).
+  Run only with --dry: write_dry.txt (rebuilt after part P against live cfcbb37b by one GET: guards passed; 42 code nodes changed, 9 added;
+  481 -> 493 connections, 262 -> 271 nodes).
 - Database read with SELECT only. data/ (runs 32284, 32293, 32302 and their enforcer logs) copied from judge_fix7; run 32306 (finished after the
   first build) read into data/run32306.json (row and three judgments) and data/enforcer_log_32306.json (rows 112 to 123).
 
@@ -138,3 +139,50 @@ New TRIAL rules: K-S2 (now an item) and K-LXX (ENF_STATUS TRIAL in the 3 checker
 Tests: compile_out.txt (39 compile); unit8_out.txt (194: the 193, with the 32306 K-V fixture split into K6-alone 11 and R7 8); unitR_out.txt (85, R1-R13
 on 32306); transcript_32306_R.md (Format Markdown on the 32306 row with GLM's and the single judge's text re-cured); replay8_out.txt rerun: every
 seat's verdict, standings and result and every panel outcome unchanged in base/new/ruled; only TRIAL items move (K-LB on footing, K-S2, K-LXX, K-V).
+
+## Part P (the test instruments of the judge posture protocol, prototypes/judge_posture/JUDGE_POSTURE_DRAFT_v4.md Part 7): patch_p.py
+P1 (swap mode) is dropped by the operator ("sides are not swapped until the bugs are worked through"): no swap code is built; new/ and add/ carry
+none (unitP checks it), and there is no swapped request body. P2, P3 and P4 are built.
+Each instrument is a request flag on a dry regrade (Init Seats: posture, accept_probe; boolean; dry regrade only, current rulebook only, one at
+a time, never with test_fail_* or qualify_alternate). Without a flag every body is byte-identical (unitP: Panel Build, Panel Payloads, Reserve
+Build, Alternate Build, the three Panel Cure Builds, Alternate Cure Build, Replay Rows and Init Seats against fix set 8 without part P, ref_noP/,
+or live). Results go to debate_replay_judgments only, through the existing record_replay_judgments; no schema change (its rulebook and
+verdict_tag columns are CHECK-closed sets, so the mode is stored as a fenced "=== REPLAY RECORD ... ===" block after the judge's text).
+Nodes changed: Panel Build, Panel Payloads, Alternate Payloads, Alternate Build, Alternate Cure Build, Panel Cure Build 1-3 (on top of fix set 8),
+and Init Seats, Reserve Build, Replay Rows (live code copied to base/). Added (add/, add/nodes_P.json): Accept Gate?, Accept Build, Accept Call
+openrouter, Accept Check, Accept Return?, Accept Return Build, Accept Return Call openrouter, Accept Final, Accept Probe?; the link Regrade After
+Quotes? -> Panel Build becomes Regrade After Quotes? -> Accept Gate? (false -> Panel Build). A live (non-regrade) run never enters the subflow.
+They must be added: the acceptance reply has to exist before Panel Build builds the judging call, and no existing node can make that call.
+- P2 posture (lib/posture.js, lib/posture_check.js). The acceptance turn (v4 Part 2 word for word, then the reply form) goes alone, with no
+  rulebook and no debate, to each panel seat, the reserve and the alternates (one call each, Accept Call openrouter). Code check: the six headings
+  and the acceptance line verbatim (markdown marks allowed); the own-words line under each heading kept, not graded. A fault (heading or line
+  omitted or altered) is returned once with the fault named; a refusal is recorded, not returned; a failed call is recorded. Statuses: ACCEPT,
+  HEDGE (passes, but qualifies its acceptance outside the six lines), ACCEPT_ON_RETURN, HEDGE_ON_RETURN, FAULT_RECORDED, REFUSE, ERROR. Every seat
+  sits. A seat that passed has its exchange (the return included) placed between the system rulebook and the transcript of its judging call, and
+  of its reserve or alternate call; a seat that did not pass judges without it (nothing of its own to quote). The rulebook gains v4 Part 3's
+  SILENCE and SAME TEST lines. Checks, TRIAL marks only (recorded in the row, never cured or counted): SILENCE absent; a SILENCE verse no premise
+  carries under PRESSED WITH within the cap; a ledger NOT NAMED verse SILENCE omits; SAME TEST absent; an entry testing one link and not the other;
+  a collision line resting on an own-words ground with no SAME TEST entry. The checkers' prompt text skips the acceptance exchange (same items
+  with and without it, unitP). Cure quote-back: each item whose rule maps to a commitment (K-LXX 1; K-LB 2; K-C, K-S, K-S2 3; K-G1, K-G4, K-G6,
+  K-G7, K-G10, K-G11, K-U 5; K-V 6) gets "You accepted: "<own words>". Your line: "<the line>"." appended to the cure prompt. Replay Rows stores
+  each seat's acceptance record (status, faults, own words, replies) with its row.
+- P3 accept_probe: the same subflow, then Accept Probe? ends the run at Replay Rows: three rows (the RPC takes exactly three distinct seats),
+  verdict_tag and standings null, the text = the acceptance exchange; the reserve's and the alternates' records ride in each row's record.
+- P4 negative control (unitP): ChatGPT's stored 32306 reply with a planted "D2 vs C1: UNDERDETERMINED. GROUND: the witnesses pressed against D2
+  are the challenger's own chain read together (...), and no witness's own words state union before the taking." K-S2 flags it; in posture mode
+  Panel Cure Build 3 quotes the seat's commitment 3 line beside it; a seat that refused gets none; without the flag the cure prompt is the live one.
+- Tests: compile_out.txt (46: 42 changed, 4 added); unit8_out.txt (194, 0 bad) and unitR_out.txt (85, 0 bad) unchanged; unitP_out.txt (74, 0
+  bad); replay8 rerun, output unchanged. Requests (test/requests_P/, no URL or secret): a_accept_probe_32306.json, c_posture_regrade_32306.json
+  (each: topic, the saved seats, regrade_run_token ODV1-32306-ccyhzcuy, regrade_dry, rulebook current, the flag).
+- Token estimate (32306 sizes, about 4 characters a token; reasoning tokens not included, they are not stored): panel prompt 136,660 characters
+  (~34K tokens) per judge; posture 137-142K (head and form); acceptance prompt 2,897 (~0.7K). (a) probe: 5 calls ~4K in, ~2K out, +~1.5K in per
+  return. (c) posture: acceptance ~4-6K in, ~2K out; 3 judging calls ~105K in, ~7-8K out; cures (fix set 8 finds items on all three 32306 seats;
+  a cure call re-sends the judge's body, its answer and a 12-18K-character ask) ~3 x 40-43K = ~125K in, ~4K out; ~235K in, ~13K out in all,
+  ~310K with one alternate and its cure. Prompt caching (session_id, Gemini cache_control) lowers the billed input of the cure calls.
+- Needs the operator (part P): (1) v4 Part 1 says the acceptance turn "adds no call and stays in the prompt cache"; as built it is one short call
+  per seat (two on a return), and since it carries Part 2 only (no rulebook) it shares no cached prefix with the judging call. Sending it after the
+  system rulebook would share the prefix but show the judge the rulebook at acceptance: a ruling. (2) SILENCE and SAME TEST are TRIAL marks, not
+  cure items (no cure rule exists for them). (3) Commitment 3's scoping of K-C and K-S2 to chain-against-chain collisions is still unbuilt; P4
+  fires through the unscoped K-S2. (4) A seat that refuses or faults twice judges without the head; HEDGE is a phrase test on the reply outside
+  the six lines; the probe includes the reserve (MiMo). (5) The probe's reserve and alternate records ride inside the three panel rows (the RPC
+  takes exactly three); per-model rows would need a new RPC (not written). (6) v4 Part 7 test 1 (swapped sides) has no instrument while P1 is dropped.

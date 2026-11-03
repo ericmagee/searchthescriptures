@@ -1,0 +1,332 @@
+{
+ "note": "judge_fix8 part P: the acceptance subflow (posture, accept_probe). Code of the code nodes: add/<name>.js. Same credential and settings as Alternate Call openrouter.",
+ "nodes": [
+  {
+   "id": "2585e332-e739-55f3-8fe3-b70eb099c9e6",
+   "name": "Accept Gate?",
+   "type": "n8n-nodes-base.if",
+   "typeVersion": 2.2,
+   "position": [
+    8752,
+    -640
+   ],
+   "parameters": {
+    "conditions": {
+     "combinator": "and",
+     "conditions": [
+      {
+       "id": "judge-fix8-p-accept-gate",
+       "leftValue": "={{ $('Init Seats').first().json.posture === true || $('Init Seats').first().json.accept_probe === true }}",
+       "operator": {
+        "operation": "true",
+        "singleValue": true,
+        "type": "boolean"
+       },
+       "rightValue": ""
+      }
+     ],
+     "options": {
+      "caseSensitive": true,
+      "leftValue": "",
+      "typeValidation": "loose"
+     }
+    },
+    "options": {}
+   }
+  },
+  {
+   "id": "42415a34-1d1b-5699-a18e-ae6e3b00234d",
+   "name": "Accept Build",
+   "type": "n8n-nodes-base.code",
+   "typeVersion": 2,
+   "position": [
+    8952,
+    -640
+   ],
+   "parameters": {
+    "jsCode": "@file:add/Accept Build.js"
+   }
+  },
+  {
+   "id": "f8fa7c1e-eb60-5f77-84de-1246bc29f03c",
+   "name": "Accept Call openrouter",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.3,
+   "retryOnFail": false,
+   "onError": "continueRegularOutput",
+   "position": [
+    9152,
+    -640
+   ],
+   "credentials": {
+    "httpHeaderAuth": {
+     "id": "3KOXDCYCjkii6i56",
+     "name": "OpenRouter"
+    }
+   },
+   "parameters": {
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpHeaderAuth",
+    "jsonBody": "={{ $json.acc.body }}",
+    "method": "POST",
+    "options": {
+     "timeout": 900000
+    },
+    "sendBody": true,
+    "specifyBody": "json",
+    "url": "https://openrouter.ai/api/v1/chat/completions"
+   }
+  },
+  {
+   "id": "aea55859-2209-5e4e-bf88-53dbc968668c",
+   "name": "Accept Check",
+   "type": "n8n-nodes-base.code",
+   "typeVersion": 2,
+   "position": [
+    9352,
+    -640
+   ],
+   "parameters": {
+    "jsCode": "@file:add/Accept Check.js"
+   }
+  },
+  {
+   "id": "8387eb64-20f9-528e-b74a-6c24258cb1cb",
+   "name": "Accept Return?",
+   "type": "n8n-nodes-base.if",
+   "typeVersion": 2.2,
+   "position": [
+    9552,
+    -640
+   ],
+   "parameters": {
+    "conditions": {
+     "combinator": "and",
+     "conditions": [
+      {
+       "id": "judge-fix8-p-accept-return",
+       "leftValue": "={{ ($json.acc.ret || []).length > 0 }}",
+       "operator": {
+        "operation": "true",
+        "singleValue": true,
+        "type": "boolean"
+       },
+       "rightValue": ""
+      }
+     ],
+     "options": {
+      "caseSensitive": true,
+      "leftValue": "",
+      "typeValidation": "loose"
+     }
+    },
+    "options": {}
+   }
+  },
+  {
+   "id": "b21a1867-2053-52ac-868e-2adba4a83a63",
+   "name": "Accept Return Build",
+   "type": "n8n-nodes-base.code",
+   "typeVersion": 2,
+   "position": [
+    9752,
+    -800
+   ],
+   "parameters": {
+    "jsCode": "@file:add/Accept Return Build.js"
+   }
+  },
+  {
+   "id": "9826d683-7336-5098-bb2c-fb29088484b5",
+   "name": "Accept Return Call openrouter",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.3,
+   "retryOnFail": false,
+   "onError": "continueRegularOutput",
+   "position": [
+    9952,
+    -800
+   ],
+   "credentials": {
+    "httpHeaderAuth": {
+     "id": "3KOXDCYCjkii6i56",
+     "name": "OpenRouter"
+    }
+   },
+   "parameters": {
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpHeaderAuth",
+    "jsonBody": "={{ $json.acc.body }}",
+    "method": "POST",
+    "options": {
+     "timeout": 900000
+    },
+    "sendBody": true,
+    "specifyBody": "json",
+    "url": "https://openrouter.ai/api/v1/chat/completions"
+   }
+  },
+  {
+   "id": "7cc79b18-fcc4-5902-9deb-f352c34922ef",
+   "name": "Accept Final",
+   "type": "n8n-nodes-base.code",
+   "typeVersion": 2,
+   "position": [
+    10152,
+    -640
+   ],
+   "parameters": {
+    "jsCode": "@file:add/Accept Final.js"
+   }
+  },
+  {
+   "id": "a41616bd-ebf0-509a-86c2-ecc9fd53b805",
+   "name": "Accept Probe?",
+   "type": "n8n-nodes-base.if",
+   "typeVersion": 2.2,
+   "position": [
+    10352,
+    -640
+   ],
+   "parameters": {
+    "conditions": {
+     "combinator": "and",
+     "conditions": [
+      {
+       "id": "judge-fix8-p-accept-probe",
+       "leftValue": "={{ $json.acc.probe === true }}",
+       "operator": {
+        "operation": "true",
+        "singleValue": true,
+        "type": "boolean"
+       },
+       "rightValue": ""
+      }
+     ],
+     "options": {
+      "caseSensitive": true,
+      "leftValue": "",
+      "typeValidation": "loose"
+     }
+    },
+    "options": {}
+   }
+  }
+ ],
+ "remove_links": [
+  [
+   "Regrade After Quotes?",
+   "main",
+   0,
+   "Panel Build",
+   "main",
+   0
+  ]
+ ],
+ "add_links": [
+  [
+   "Regrade After Quotes?",
+   "main",
+   0,
+   "Accept Gate?",
+   "main",
+   0
+  ],
+  [
+   "Accept Gate?",
+   "main",
+   0,
+   "Accept Build",
+   "main",
+   0
+  ],
+  [
+   "Accept Gate?",
+   "main",
+   1,
+   "Panel Build",
+   "main",
+   0
+  ],
+  [
+   "Accept Build",
+   "main",
+   0,
+   "Accept Call openrouter",
+   "main",
+   0
+  ],
+  [
+   "Accept Call openrouter",
+   "main",
+   0,
+   "Accept Check",
+   "main",
+   0
+  ],
+  [
+   "Accept Check",
+   "main",
+   0,
+   "Accept Return?",
+   "main",
+   0
+  ],
+  [
+   "Accept Return?",
+   "main",
+   0,
+   "Accept Return Build",
+   "main",
+   0
+  ],
+  [
+   "Accept Return?",
+   "main",
+   1,
+   "Accept Final",
+   "main",
+   0
+  ],
+  [
+   "Accept Return Build",
+   "main",
+   0,
+   "Accept Return Call openrouter",
+   "main",
+   0
+  ],
+  [
+   "Accept Return Call openrouter",
+   "main",
+   0,
+   "Accept Final",
+   "main",
+   0
+  ],
+  [
+   "Accept Final",
+   "main",
+   0,
+   "Accept Probe?",
+   "main",
+   0
+  ],
+  [
+   "Accept Probe?",
+   "main",
+   0,
+   "Replay Rows",
+   "main",
+   0
+  ],
+  [
+   "Accept Probe?",
+   "main",
+   1,
+   "Panel Build",
+   "main",
+   0
+  ]
+ ]
+}

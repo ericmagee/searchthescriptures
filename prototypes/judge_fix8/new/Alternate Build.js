@@ -1093,6 +1093,58 @@ function cureProse(seat,reply){const p=reply&&reply.ok?cureLines(reply.text).pro
 const PP=$input.first().json;const P=$('Panel Build').first().json;const S=$('Init Seats').first().json;const RS=$('Resolve Seats').first().json;
 let R=null;try{if($('Reserve Build').isExecuted)R=$('Reserve Build').first().json;}catch(e){R=null;}
 const QA=S.dry===true&&S.qualify_alternate?S.qualify_alternate:null;
+// judge_fix8 P2 (posture regrade): the alternates' acceptance turn was taken with the panel's (Accept Final).
+// judge_fix8 P2, P3 (JUDGE_POSTURE_DRAFT_v4 Parts 1-3): the acceptance turn, its code check, the return, the quote-back at a cure, and the
+// posture answer form. POSTURE.PART2 is v4 Part 2 word for word (test/unitP.cjs compares it with the draft file). Nothing here grades a debate.
+const POSTURE=(()=>{
+ const PART2="You are an adjudicator of a debate record. You are not deciding what is true. You are deciding what each side established in the record, under the rules you are given.\n\n### Commitment 1. The record is the only evidence.\nThe evidence is the rounds of both sides. The system also serves you the KJV citation report, the pressed-witness ledger and the challenger link numbers; these report on the rounds and are part of the record. The pre-checks are aids that decide nothing. Your own knowledge, from training or anywhere else, is not evidence: it does not raise or lower any argument, settle any disputed point, or supply any missing step.\n\n### Commitment 2. I repair nothing.\nYou supply no missing step for either side. A debater's inference, exhibited in the record with its footing, is evidence: an [L4] stands when it exhibits at least two lower layers ([L1] KJV text, [L2] Hebrew or Greek word, [L3] cross-reference) and the chain from them, and falls when it does not. Any inference of your own shows two lower layers, as a debater's must.\n\n### Commitment 3. Each test in its place.\nA pressed witness contradicts a link only when its own words state the contrary.\nA collision where the witnesses pressed against a link are the other side's own chain read together is weighed chain against chain, by footing. There, \"no verse states it\", \"the text nowhere narrates it\" or \"no witness's own words state it\" is never a ground, for either side (DG-61).\n\n### Commitment 4. One standard for both sides.\nThe same evidentiary, logical and answering threshold applies to both sides, whatever the position, its popularity, or its agreement with consensus. No side receives heightened scrutiny. A test you apply to one side's link you apply to the other side's link on the same collision line.\n\n### Commitment 5. Silence is not neutral.\nA witness carried under a listed premise's PRESSED WITH line, and left unanswered by the later rounds of the side that holds the link, makes that premise UNEXHIBITED (ruling 372). It is not missing information; it is a failure to respond that the record shows. A verse pressed with no listed premise behind it is not a witness (ruling 392). A premise carries at most eight witnesses (ruling 393).\nWhere both sides answered and the record still leaves a point open, it is UNDERDETERMINED, by the same test for both sides.\n\n### Commitment 6. I void only by quoting.\nYou rule a listed premise VOID only by quoting the words of its charge that go beyond its quote, and naming the kind: a negation, a universal, or a claim the quote's own words do not make. Paraphrase, reordering and dropped words are not stronger.";
+ const HEADS=[...PART2.matchAll(/^### (Commitment \d\. [^\n]+)$/gm)].map(m=>m[1]);
+ const LINE='I ACCEPT THIS POSTURE AND WILL BE HELD TO IT.';
+ const FORM='Reply with each commitment\'s heading above, copied verbatim (for example "'+HEADS[0]+'"), each followed by one line in your own words; then the line: '+LINE;
+ const PROMPT='POSTURE FOR ACCEPTANCE\n\n'+PART2+'\n\n'+FORM;
+ const RET=f=>'POSTURE RETURNED (once)\n\nYour reply is returned once. Fault'+(f.length===1?'':'s')+': '+f.join('; ')+'.\n\n'+FORM;
+ // v4 Part 3, the answer form in posture mode only (SILENCE, SAME TEST); the panel writes them inside "reasoning"
+ const ANSWER='POSTURE ANSWER FORM (this judgment). Each judgment carries two checkable lines blocks, after the collision points (in "reasoning"):\nSILENCE: <each pressed witness you counted unanswered: verse, premise, rounds searched>\nSAME TEST: <each test you applied on a collision line: "test T on D<i>; on C<j>: <result>">\nSILENCE is checked against the ledger. SAME TEST is checked for a test applied to one link of a collision line and not to the other.';
+ const strip=l=>String(l).replace(/^[\s>#*_\-•]+/,'').replace(/[\s*_]+$/,'').trim();
+ const REFUSE=/\b(?:I\s+(?:can(?:no|')t|cannot|won't|will\s+not|am\s+(?:not\s+able|unable)|'m\s+(?:not\s+able|unable)|must\s+decline|decline)|not\s+comfortable|unable\s+to\s+(?:accept|agree|commit))\b/i;
+ const HEDGE=/\b(?:however|but\s+I|with\s+(?:the\s+|one\s+|a\s+)?(?:reservation|caveat|qualification)s?|provided\s+that|to\s+the\s+extent|reserve\s+the\s+right|cannot\s+(?:fully|entirely|guarantee)|subject\s+to|where\s+possible|as\s+far\s+as\s+(?:I\s+can|possible))\b/i;
+ // the code check (v4 Part 1, step 3): every heading verbatim, the acceptance line verbatim; the own-words lines kept, not graded
+ function check(text){const t=String(text==null?'':text);if(!t.trim())return {status:'REFUSE',faults:['empty reply'],lines:{},accept_line:false};
+  const L=t.split('\n').map(strip);const used=new Set();const faults=[];const lines={};
+  HEADS.forEach((h,k)=>{const n=k+1;const at=L.findIndex(l=>l.startsWith(h));
+   if(at<0){const alt=L.findIndex(l=>new RegExp('^Commitment\\s*'+n+'\\b','i').test(l));faults.push('heading '+n+(alt<0?' missing':' altered ("'+L[alt].slice(0,80)+'")'));if(alt>=0)used.add(alt);return;}
+   used.add(at);let own=L[at].slice(h.length).replace(/^[\s:\-–—*_]+/,'').trim();
+   if(!own){for(let i=at+1;i<L.length;i++){if(!L[i])continue;if(/^Commitment\s*\d/i.test(L[i])||L[i].includes('I ACCEPT'))break;own=L[i];used.add(i);break;}}else used.add(at);
+   lines[n]=own||null;});
+  const al=L.findIndex(l=>l===LINE);let accept_line=al>=0;if(al>=0)used.add(al);
+  if(al<0){const alt=L.findIndex(l=>/\bI\s+ACCEPT\b/i.test(l));faults.push('acceptance line '+(alt<0?'missing':'altered ("'+L[alt].slice(0,80)+'")'));if(alt>=0)used.add(alt);
+   if(alt<0&&REFUSE.test(t))return {status:'REFUSE',faults,lines,accept_line:false};}
+  if(faults.length)return {status:'FAULT',faults,lines,accept_line};
+  const extra=L.filter((l,i)=>l&&!used.has(i)).join(' ');
+  return {status:HEDGE.test(extra)?'HEDGE':'ACCEPT',faults:[],lines,accept_line,extra:extra.slice(0,400)||null};}
+ // the reply envelope of a chat call, or the failure named
+ function env(j){if(j&&Array.isArray(j.choices)&&j.choices[0]&&j.choices[0].message&&typeof j.choices[0].message.content==='string')return {ok:true,text:j.choices[0].message.content,finish:j.choices[0].finish_reason||null};
+  if(j&&j.error){const e=j.error;return {ok:false,why:String(typeof e==='string'?e:(e.message||e.description||JSON.stringify(e))).slice(0,300)};}
+  return {ok:false,why:'no reply text ('+Object.keys(j||{}).join(',')+')'};}
+ // the final status of a seat after at most one return (v4 Part 1, steps 4 and 5): the seat sits whatever it is
+ const PLACED=['ACCEPT','HEDGE','ACCEPT_ON_RETURN','HEDGE_ON_RETURN'];
+ function final(first,second){if(!first)return 'ERROR';if(first.status!=='FAULT')return first.status;if(!second)return 'FAULT_RECORDED';
+  return second.status==='ACCEPT'?'ACCEPT_ON_RETURN':second.status==='HEDGE'?'HEDGE_ON_RETURN':second.status==='FAULT'?'FAULT_RECORDED':second.status;}
+ // the accepted exchange placed at the head of the judging conversation (chat form; Gemini form for a gemini family body)
+ function head(a,gem){if(!a||PLACED.indexOf(a.status)<0||!Array.isArray(a.exchange))return [];
+  return gem?a.exchange.map(m=>({role:m.role==='assistant'?'model':'user',parts:[{text:m.content}]})):a.exchange.map(m=>({role:m.role,content:m.content}));}
+ // the commitment a flagged rule breaks (v4 Part 5); a rule not listed there gets no quote-back
+ const RULE_C={'K-LXX':1,'K-LB':2,'K-C':3,'K-S':3,'K-S2':3,'SAME TEST':4,'K-G1':5,'K-G4':5,'K-G6':5,'K-G7':5,'K-G10':5,'K-G11':5,'K-U':5,'SILENCE':5,'K-V':6};
+ // the cure quote-back (v4 Part 1, step 6): "You accepted: <its words>. Your line: <the line>." per item whose commitment the seat accepted
+ function quote(items,a){if(!a||PLACED.indexOf(a.status)<0||!a.lines)return '';const out=[];
+  for(const x of (items||[])){const c=RULE_C[x&&x.rule];if(!c||!a.lines[c])continue;const ln=String(x.line||'').replace(/\s+/g,' ').trim();if(!ln)continue;
+   out.push('- '+(x.link?x.link+' ':'')+'('+x.rule+', commitment '+c+'): You accepted: "'+a.lines[c]+'". Your line: "'+ln.slice(0,600)+'".');}
+  return out.length?'\n\nTHE POSTURE YOU ACCEPTED, QUOTED BACK (your own words at the acceptance turn, beside the line the item flags):\n'+out.join('\n'):'';}
+ // the posture head is never read as the debate record (the checkers' prompt text skips it)
+ const isHead=(a,i)=>{const m=a[i];if(!m)return false;const tx=c=>typeof c==='string'?c:Array.isArray(c)?c.map(p=>p&&p.text||'').join(''):'';
+  if(m.role==='user')return /^POSTURE (?:FOR ACCEPTANCE|RETURNED)/.test(tx(m.content));if(m.role==='assistant'){const p=a[i-1];return !!p&&p.role==='user'&&/^POSTURE (?:FOR ACCEPTANCE|RETURNED)/.test(tx(p.content));}return false;};
+ return {PART2,HEADS,LINE,FORM,PROMPT,RET,ANSWER,check,env,final,head,quote,isHead,PLACED,RULE_C};})();
+const __PALT=$('Init Seats').first().json.posture===true?$('Accept Final').first().json.acc:null;
 const pool=(RS.alternates||[]);const deb=(RS.debaters||[]);
 const pay=PP.bodies.map(b=>JSON.parse(b).payload);
 const used=[];const out=[];
@@ -1110,15 +1162,16 @@ pay.forEach((p,i)=>{if(!QA&&!((p.drv_uncured||0)>0))return;
  const cand=QA?(qk?[{seat:qk,fam:'openrouter',api_model:AM[qk].api_model,max_tokens:AM[qk].max_tokens,family:AM[qk].family}]:[]):pool;const reasons=[];let a=null;
  for(const c of cand){const w=why(c);if(w){reasons.push(c.seat+' '+w);continue;}a=c;break;}
  if(!a){out.push({json:{alt:{...base,skip:'no pool model passes the guards'+(reasons.length?': '+reasons.join('; '):(cand.length?'':' (the pool is empty)'))}}});return;}
- let SYS=null,user=null;try{const b0=src.body;if(b0.systemInstruction){SYS=b0.systemInstruction.parts[0].text;user=b0.contents[0].parts[0].text;}else{SYS=b0.messages[0].content;user=b0.messages[1].content;}}catch(e){SYS=null;}
+ let SYS=null,user=null;try{const b0=src.body;if(b0.systemInstruction){SYS=b0.systemInstruction.parts[0].text;user=b0.contents[b0.contents.length-1].parts[0].text;}else{SYS=b0.messages[0].content;user=b0.messages[b0.messages.length-1].content;}}catch(e){SYS=null;} // judge_fix8 P2: the transcript is the last user turn
  if(typeof SYS!=='string'||typeof user!=='string'||!SYS||!user){out.push({json:{alt:{...base,skip:'the removed seat\'s rulebook and transcript could not be read'}}});return;}
  used.push(a.api_model);
  // A fresh read: the removed seat's own system and user text only; never its answer, report lines or cure exchange (6904 g).
  // The reserve's own openrouter body per seat (Reserve Build, BB-5693 rev 6): glm at effort medium; qwen at effort max with JSON output.
- const msgs=[{role:'system',content:SYS},{role:'user',content:user}];
+ const __AA=__PALT?((__PALT.seats||[]).find(x=>x.seat===a.seat)||{status:'ERROR',lines:{}}):null; // judge_fix8 P2: the alternate's own acceptance (Accept Final)
+ const msgs=[{role:'system',content:SYS}].concat(__AA?POSTURE.head(__AA,false):[],[{role:'user',content:user}]);
  // BB-8403 S3: chatgpt via OpenRouter (openai/) at reasoning effort medium; at max it spent the whole 32,000 in reasoning and returned no text (ODV1-29876 C1). Token budget as its openai branch: max(mt*2,8000).
  const body=/^openai\//.test(a.api_model)?{model:a.api_model,max_tokens:a.max_tokens,messages:msgs}:a.seat==='glm'?{model:a.api_model,max_tokens:a.max_tokens,messages:msgs}:a.seat==='qwen'?{model:a.api_model,max_tokens:a.max_tokens,messages:msgs,response_format:{type:'json_object'}}:{model:a.api_model,max_tokens:a.max_tokens,messages:msgs};
- out.push({json:{alt:{...base,seat:QA?a.seat+'_q'+(i+1):a.seat,pool_seat:a.seat,api_model:a.api_model,max_tokens:a.max_tokens,body:__orc(body,'openrouter',a.api_model,$('Init Seats').first().json.run_token+':alternate:'+a.seat)}}});});
+ out.push({json:{alt:{...base,seat:QA?a.seat+'_q'+(i+1):a.seat,pool_seat:a.seat,api_model:a.api_model,max_tokens:a.max_tokens,body:__orc(body,'openrouter',a.api_model,$('Init Seats').first().json.run_token+':alternate:'+a.seat),...(__AA?{posture:{status:__AA.status,placed:!!__AA.placed,lines:__AA.lines||{}}}:{})}}});});
 // Either every item is a call or there is one skip item (an IF routes per item, so a mix would fire both branches and run the
 // join twice); every item carries the skips, which Alternate Merge records.
 const calls=out.filter(x=>!x.json.alt.skip),skips=out.filter(x=>x.json.alt.skip).map(x=>x.json.alt);

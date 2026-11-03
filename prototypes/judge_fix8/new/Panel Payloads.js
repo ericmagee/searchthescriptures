@@ -230,11 +230,14 @@ function cAudit(text,ptext){const P=String(ptext||'');const i=P.lastIndexOf('===
   else if(m[3]){const want=cRefs(m[3]).map(r=>r.key);const U=new Set();js.forEach(j=>links[j-1].forEach(k=>U.add(k)));if(want.length&&!want.some(k=>U.has(k)))why='DR3 LINK block '+js.join('/')+' names none of '+m[3].trim();}
   if(why)out.push('[AUDIT v21: C-LABEL OFF THE GUIDE -- '+m[1]+' vs '+m[2].replace(/\s+/g,'')+(m[3]?' ('+m[3].trim()+')':'')+': '+why.replace(/[\[\]]/g,'')+'; recorded, not a violation, not counted.]');}
  return out;}
+// judge_fix8 P2: the posture head (the acceptance exchange) is not the debate record; the prompt text the checks read skips it.
+function __pIsHead(a,i){const tx=c=>typeof c==='string'?c:Array.isArray(c)?c.map(p=>p&&p.text||'').join(''):'';const R=/^POSTURE (?:FOR ACCEPTANCE|RETURNED)/;const m=a[i];if(!m)return false;
+ if(m.role==='user')return R.test(tx(m.content));if(m.role==='assistant'){const p=a[i-1];return !!p&&p.role==='user'&&R.test(tx(p.content));}return false;}
 function drvPromptText(body){try{const b=body||{};const out=[];if(b.systemInstruction&&b.systemInstruction.parts)b.systemInstruction.parts.forEach(p=>out.push(String(p.text||'')));
  // judge_fix3 A4 (run 32255: no K-G6 on Gemini or Qwen; their K-C cure prompts read "CHALLENGER CHAIN: not found in the prompt"): __orc marks the
  // system message of google/ and qwen/ models for caching as [{type:'text',text,cache_control}]; JSON.stringify of that array turned every line
  // break into the two characters \\n, so the ledger's premise lines and the chain were never found. The text parts are read as text.
- (b.messages||[]).forEach(m=>{const c=m&&m.content;if(typeof c==='string')out.push(c);else if(Array.isArray(c))c.forEach(p=>out.push(p&&typeof p.text==='string'?p.text:JSON.stringify(p)));else out.push(JSON.stringify(c));});(b.contents||[]).forEach(c=>(c.parts||[]).forEach(p=>out.push(String(p.text||''))));return out.join('\n');}catch(e){return '';}}
+ (b.messages||[]).filter((m,i,a)=>!__pIsHead(a,i)).forEach(m=>{const c=m&&m.content;if(typeof c==='string')out.push(c);else if(Array.isArray(c))c.forEach(p=>out.push(p&&typeof p.text==='string'?p.text:JSON.stringify(p)));else out.push(JSON.stringify(c));});(b.contents||[]).forEach(c=>(c.parts||[]).forEach(p=>out.push(String(p.text||''))));return out.join('\n');}catch(e){return '';}}
 // THE DEBATE FIXED (BB-7397, DoD 9 as typed fields, BB-7455): the panel judge's own JSON fields counted_premises_defender and
 // counted_premises_challenger, each an array of ledger premise numbers. Missing or null: ABSENT. Anything but an array of integers >= 1:
 // INVALID, the raw value kept for the mark; so is a number above the count of that side's ledger premises (BB-7457 F-range). No text of the judge's prose is read for the set. Where a field is ABSENT or INVALID the checks
@@ -791,6 +794,36 @@ function drvCheck(text,dConc,cConc,dStand,cStand,askedCC,DL){ /* judge_fix4 F4: 
  for(const n of netLines(text,null,DL)){items.push({rule:'K-C',side:n.side,link:n.item,line:n.line});marks.push('[AUDIT v23: DEBATE RULE VIOLATION (K-C) -- '+n.item+' sets aside '+(n.side==='BOTH'?'both chains':'the '+n.side.toLowerCase()+"'s chain")+' on the ground that no one verse in it states the link or its contrary in its own words; the chain is weighed as a whole. REVIEW THIS ROW.]');}
  {const kc=new Set(items.filter(x=>x.rule==='K-C').map(x=>String(x.link).toUpperCase()));const k2=ks2Lines(text,kc);k2.items.forEach(x=>items.push(x));k2.marks.forEach(x=>marks.push(x));} // judge_fix8 R6: K-S2 (TRIAL, lib/ks2.js)
  return {items,marks};}
+// judge_fix8 P2 (posture): the posture checks (TRIAL marks).
+// judge_fix8 P2 (JUDGE_POSTURE_DRAFT_v4 Part 3; TRIAL, marks only, posture mode only): the SILENCE block read against the ledger and the
+// pressed lists, the SAME TEST block read for a test applied to one link of a collision line and not to the other. Recorded, never cured,
+// never counted. Uses the checker's own readers (ciRounds, pwList, ciKeys, ks2Grounds, ks2Hit, netUnwrap).
+function postureBlock(T,head){const L=T.split('\n');const i=L.findIndex(l=>new RegExp('^\\s*(?:[-•#>]\\s*)?'+head+'\\s*:','i').test(l));if(i<0)return null;
+ const out=[L[i].replace(new RegExp('^\\s*(?:[-•#>]\\s*)?'+head+'\\s*:\\s*','i'),'')];
+ for(let k=i+1;k<L.length;k++){const l=L[k];if(/^\s*(?:[-•#>]\s*)?(?:SILENCE|SAME TEST|RESULT|CLAUSE|VERDICT|DEFENSE STANDING|CHALLENGE STANDING|CONCEDED LINKS|CITATION CHECK|COLLISION POINTS|KEYSTONE)\b/i.test(l))break;if(!l.trim()){if(out.length>1)break;continue;}out.push(l);}
+ return out.map(x=>x.replace(/^\s*(?:[-•*]|\d+[.)])\s*/,'').trim()).join('\n').split(/\n|;\s*(?=[1-3]?\s?[A-Z][a-z]+\.?\s+\d)/).map(x=>x.trim()).filter(Boolean);}
+function postureCheck(text,ptext){const marks=[];if(typeof text!=='string')return {marks};const T=netUnwrap(text).replace(/[*_`]+/g,'');
+ const tag=(k,m)=>'[AUDIT v28: POSTURE CHECK ('+k+', TRIAL) -- '+m.replace(/[\[\]]/g,'')+' Recorded, not cured, not counted.]';
+ // SILENCE against the lists and the ledger
+ const S=postureBlock(T,'SILENCE');
+ if(!S)marks.push(tag('SILENCE','the judgment has no SILENCE line.'));
+ else{const R=ciRounds(String(ptext||''));const PW=new Map();
+  for(const side of ['DEFENDER','CHALLENGER']){const PL=pwList(R,side)||[];PL.forEach(p=>p.keys.forEach(k=>{if(!PW.has(k))PW.set(k,side.toLowerCase()+' premise '+p.n);}));}
+  const said=new Set();
+  for(const e of S){if(/^\s*none\b/i.test(e))continue;for(const k of ciKeys(e)){said.add(k);if(!PW.has(k))marks.push(tag('SILENCE','SILENCE counts '+k+' unanswered, but no listed premise carries it under PRESSED WITH within the cap of 8 (rulings 392, 393): "'+e.slice(0,160)+'".'));}}
+  const nn=[];for(const l of String(ptext||'').split('\n')){const m=l.match(/^\s*premise \d+[^\n]*NOT NAMED: (.+)$/);if(m&&!/^none\b/i.test(m[1].trim()))for(const k of ciKeys(m[1]))nn.push(k);}
+  for(const k of nn)if(!said.has(k))marks.push(tag('SILENCE','the ledger marks '+k+' NOT NAMED (unanswered by the rule); the SILENCE line does not count it.'));}
+ // SAME TEST: a test written for one link of a collision line and not the other; an own-words ground on a collision line with no entry
+ const Q=postureBlock(T,'SAME TEST');
+ if(!Q)marks.push(tag('SAME TEST','the judgment has no SAME TEST line.'));
+ else{const pairs=new Set();
+  for(const e of Q){if(/^\s*none\b/i.test(e))continue;const d=e.match(/\bon\s+(D\d+)\b/i),c=e.match(/\bon\s+(C\d+)\b/i);
+   if(d&&c)pairs.add(d[1].toUpperCase()+' vs '+c[1].toUpperCase());
+   const one=!d||!c||/\bon\s+[CD]\d+\s*:\s*(?:not\s+applied|n\/a|none|not\s+tested|-|—|no\s+test)\b/i.test(e)||/\b(?:not\s+applied|only)\s+(?:to|on)\s+(?:D|C)\d+/i.test(e);
+   if(one)marks.push(tag('SAME TEST','"'+e.slice(0,200)+'" applies a test to one link of a collision line and not to the other.'));}
+  for(const l of T.split('\n')){const m=l.match(/^\s*(?:[-•]|\d+[.)])?\s*(D\d+)\s+vs\.?\s+(C\d+)\b/i);if(!m)continue;const id=m[1].toUpperCase()+' vs '+m[2].toUpperCase();
+   if(!pairs.has(id)&&ks2Hit(ks2Grounds(l)))marks.push(tag('SAME TEST',id+' rests on a witness\'s-own-words test, and the SAME TEST line has no entry applying it to both links of that line.'));}}
+ return {marks};}
 const bodies=[];const summary=[];
 P.judges.forEach((jd0,i)=>{const isSub=!!(SUB&&SUB.slot===i);const jd=isSub?$('Reserve Build').first().json:jd0;try{const r=ran(isSub?RESERVE_NODES:SLOT_NODES[i]);if(r.length!==1)throw new Error('FAIL-CLOSED: panel slot '+(i+1)+' ('+jd.seat+') ran '+r.length+' judge nodes ['+r.join(', ')+'], expected exactly 1.'+RT);
  const items=$(isSub?r[0]:g9Node(r[0])).all();if(!items||items.length!==1)throw new Error('FAIL-CLOSED: '+r[0]+' produced '+(items?items.length:0)+' items.'+RT);
@@ -826,6 +859,7 @@ for(const x of DRV.items)if(x.rule==='K-C')x.chain=drvChains(drvPromptText(jd.bo
   const LB=drvBlocks(WT,PT,p.conceded_links,p.challenger_conceded_links,p.defense_standing,p.challenge_standing,CPV,LN);for(const x of LB.items)DRV.items.push(x);for(const x of LB.marks)marks.push(x);}
  for(const x of cAudit(WT,drvPromptText(jd.body)))marks.push(x); // BB-7397 rev 9 DoD 26 (2), recorded only
  if(isSub){const gl=g4Line(SUB);if(gl)marks.push('[AUDIT v26: '+gl.replace(/[\[\]]/g,'')+']');} // judge_fix5 G4: the reserve's own row says why it sat
+ if(S.posture===true)for(const x of postureCheck(WT,drvPromptText(jd.body)).marks)marks.push(x); // judge_fix8 P2: SILENCE, SAME TEST (TRIAL marks)
  p.drv_uncured=DRV.items.filter(enfLive).length; // judge_fix6 H8: LIVE items only (ENF_STATUS). 5B (BB-6969): fail-closed; Panel Cure Check lowers it to the UNCURED count. K-G2 is a mark, never an item.
  if(marks.length)p.verdict_raw=p.verdict_raw+'\n\n'+marks.join('\n');
 bodies.push(JSON.stringify({payload:p}));summary.push({seat:jd.seat,node:r[0],api_model:jd.api_model,verdict_tag:p.verdict_tag,raw_chars:env.text.length,finish_reason:p.finish_reason,flags:marks.length,drv:DRV.items,substitute:isSub});}

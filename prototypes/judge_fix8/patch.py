@@ -15,6 +15,7 @@
 #  K7 (coordinator): D4 Build part (a) lists only verses under PRESSED WITH:
 #  K6 (coordinator, run 32306): K-V (TRIAL, lib/kv.js, lib/kv_cure.js): a VOID ruling quotes the charge words beyond the quote and names the kind
 #  R1-R13 (the reviews of run 32306 by Worker_E and Worker_G1; ruling 393): patch_r.py
+#  P1-P3 (the judge posture protocol's test instruments, JUDGE_POSTURE_DRAFT_v4 Part 7: swap, posture, accept_probe): patch_p.py; added nodes in add/
 import os,sys
 H=os.path.dirname(os.path.abspath(__file__));B=H+'/base';N=H+'/new';L=H+'/lib';os.makedirs(N,exist_ok=True)
 def rep(s,old,new,nm,count=1):
@@ -263,6 +264,13 @@ OUT['D4 Build']=s
 
 # ======================= part R (the reviews of run 32306; ruling 393): patch_r.py =======================
 exec(open(H+'/patch_r.py').read())
+
+# ======================= part P (the test instruments of the judge posture protocol, v4 Part 7): patch_p.py =======================
+PRE_P=dict(OUT) # fix set 8 without part P: written to ref_noP/ for the nodes part P changes, the reference of test/unitP.cjs's byte-identity fixtures
+exec(open(H+'/patch_p.py').read())
+os.makedirs(H+'/ref_noP',exist_ok=True)
+for nm in OUT:
+    if nm in PRE_P and PRE_P[nm]!=OUT[nm]: open(f'{H}/ref_noP/{nm}.js','w').write(PRE_P[nm])
 
 base=sorted(f[:-3] for f in os.listdir(B) if f.endswith('.js'))
 miss=[n for n in base if n not in OUT]

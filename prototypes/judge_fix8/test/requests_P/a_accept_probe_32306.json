@@ -1,0 +1,15 @@
+{
+ "topic": "Did Christ have a biological father?",
+ "defender": {
+  "engine": "claude",
+  "profile": "plain"
+ },
+ "challenger": {
+  "engine": "opus",
+  "profile": "oracle"
+ },
+ "regrade_run_token": "ODV1-32306-ccyhzcuy",
+ "regrade_dry": true,
+ "rulebook": "current",
+ "accept_probe": true
+}

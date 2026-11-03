@@ -1,0 +1,84 @@
+== a normal run is unchanged (no flag): every body the changed nodes build is the live one, byte for byte
+ok  Panel Build (32306 regrade, no flag): the output is byte-identical to the live node -- 410959 chars
+ok  Panel Payloads (the three stored first replies, no flag): byte-identical to the live node
+ok  Init Seats (a live launch): the same output; no flag key appears
+ok  Reserve Build (no flag): byte-identical to the live node
+ok  Panel Cure Build 1 (no flag): the cure body is byte-identical -- 2 items
+ok  Panel Cure Build 2 (no flag): the cure body is byte-identical -- 13 items
+ok  Panel Cure Build 3 (no flag): the cure body is byte-identical -- 8 items
+ok  Replay Rows (a plain dry regrade): byte-identical rows
+== P2, P3: the request flags (Init Seats)
+ok  posture or accept_probe outside a dry regrade: refused
+ok  two flags at once: refused (one change per run)
+ok  a flag with the draft rulebook: refused
+ok  a flag with a test input: refused
+ok  a flag that is not a boolean: refused
+ok  each flag passes alone in a dry regrade and is carried on
+ok  there is no swap flag: a body carrying swap is read as a plain dry regrade (P1 dropped)
+== P2 posture: the acceptance turn, the head of the conversation, the answer form
+ok  the text the judge accepts is v4 Part 2 word for word -- 2642 chars
+ok  the acceptance prompt: Part 2, then the reply form (six headings verbatim, own words, the acceptance line)
+ok  the answer form carries v4 Part 3's SILENCE and SAME TEST lines word for word
+ok  Accept Build: one call per panel seat, the reserve and the alternate -- gemini glm chatgpt mimo sol
+ok  each call carries Part 2 and the reply form only: no system rulebook, no debate
+ok  no reasoning, effort or thinking field in any acceptance body
+ok  the panel's own per-model body shape (google temperature 0, xiaomi 65,536, glm its row's 131,072)
+ok  Accept Build fails closed on a run without posture or accept_probe
+ok  Accept Check: accept, an altered heading (fault), a policy refusal, a hedge, a failed call -- gemini:ACCEPT glm:FAULT chatgpt:REFUSE mimo:HEDGE sol:ERROR
+ok  only the fault is returned (a refusal is recorded, not returned) -- heading 3 altered ("Commitment 3. Each test in the right place.** A pressed witness is read by its o")
+ok  the own-words lines are kept (commitment 3: "A pressed witness is read by its own words; chain ...")
+ok  Accept Return Build: GLM's own exchange, then the fault named, once
+ok  Accept Final: GLM accepts on its return; ChatGPT's refusal and Sol's failed call are recorded and not placed -- gemini:ACCEPT glm:ACCEPT_ON_RETURN chatgpt:REFUSE mimo:HEDGE sol:ERROR
+ok  a second fault is recorded (FAULT_RECORDED) and the seat still sits without the head
+ok  Gemini (accepted): system, the acceptance turn and its reply, then the transcript unchanged
+ok  GLM (accepted on return): the whole exchange, the return included, heads its conversation
+ok  ChatGPT (refused): the seat sits; no head is placed
+ok  the rulebook is the live one with the posture answer form (SILENCE, SAME TEST) added at its end, in posture mode only
+ok  each judge carries its status and accepted lines for the cure
+ok  Panel Build fails closed on a posture run without Accept Final
+ok  gemini: with the acceptance exchange at the head the checks find the same items as without it -- 2 items
+ok  gemini: the stored reply (written without the form) is marked for the two absent lines, as TRIAL marks
+ok  glm: with the acceptance exchange at the head the checks find the same items as without it -- 13 items
+ok  glm: the stored reply (written without the form) is marked for the two absent lines, as TRIAL marks
+ok  chatgpt: with the acceptance exchange at the head the checks find the same items as without it -- 8 items
+ok  chatgpt: the stored reply (written without the form) is marked for the two absent lines, as TRIAL marks
+ok  no posture mark on a run without the flag
+ok  the checkers' prompt text skips the acceptance exchange
+ok  SAME TEST: an own-words ground on D3 vs C2 with no entry is marked
+ok  SAME TEST: a test written for D3 and "not applied" to C2 is marked
+ok  SAME TEST: both collision lines covered, both links tested: no mark
+ok  SILENCE: a verse no premise carries as a witness (John 6:42, ninth and later under premise 3, over the cap of ruling 393) is marked
+ok  SILENCE: a pressed witness of the list (Acts 2:30 under premise 1's PRESSED WITH) is not marked
+ok  SILENCE: a verse the ledger marks NOT NAMED and the SILENCE line omits is marked (a planted ledger line)
+ok  Reserve Build (posture): the reserve's own acceptance (MiMo, a hedge) heads its call; the transcript is the slot's last user turn, not the slot's acceptance
+ok  Alternate Build (no flag): the alternate's call is byte-identical -- sol
+ok  Alternate Build (posture): Sol's acceptance call failed, so it sits with no head; its transcript is the removed seat's last user turn, not that seat's acceptance
+ok  Alternate Build (posture): an alternate that accepted carries its own exchange at the head of its call
+ok  Alternate Cure Build (posture): the alternate's own commitment 3 line is quoted back
+ok  Alternate Cure Build (no posture): byte-identical to the node without part P
+ok  Replay Rows (posture): each row carries its seat's acceptance record (status, faults, own words, replies) after the judge's text; rulebook and verdict_tag stay in the table's closed sets
+ok  the result line is read from the judge's text as before
+== P3 acceptance probe: the acceptance turn alone, recorded; no debate judged
+ok  Accept Final marks the probe, so Accept Probe? ends the run at Replay Rows
+ok  three rows (the RPC takes exactly three distinct seats): the panel; no verdict, no standing; rulebook current (the table's CHECK constraints hold)
+ok  each row records its seat (status, faults, own words, replies); the reserve and the alternate ride in every row's record
+ok  the row's text is the acceptance exchange, the return included
+== P4 negative control: a planted "states in its own words" ground on a chain-against-chain collision; the quote-back fires in posture mode
+ok  the planted line is flagged (K-S2) -- K-S2 D2 vs C1; K-V DEFENDER premise 2; K-V DEFENDER premise 3; K-V DEFENDER premise 4; K-V DEFENDER premise 5; K-V DEFENDER premise 6; K-V CHALLENGER premise 1; K-V CHALLENGER premise 4; K-V CHALLENGER premise 5
+ok  the cure prompt quotes the judge's own commitment 3 line beside the flagged line -- THE POSTURE YOU ACCEPTED, QUOTED BACK (your own words at the acceptance turn, beside the line the item flags): | - D2 vs C1 (K-S2, commitment 3): You accepted: "A pressed witness is read by its own words; chain against chain is weighed by footing, and "no verse 
+ok  counter-case: a seat that did not accept gets no quote-back (nothing of its own to quote)
+ok  counter-case: without the flag the same planted line gets the live cure prompt, byte for byte, with no quote-back
+== the flow change: the added acceptance subflow, planned on the live cfcbb37b read (data/workflow_live.json)
+ok  one live link is removed (Regrade After Quotes? to Panel Build), thirteen are added; 9 nodes added
+ok  a regrade without posture or accept_probe goes Accept Gate? (false) to Panel Build; posture reaches Panel Build after Accept Final; the probe ends at Replay Rows
+ok  the return branch and the no-return branch both reach Accept Final (only one fires)
+ok  a live (non-regrade) run reaches Panel Build as before (Check Save), never through the subflow
+ok  every node a changed or added node reads by name exists in the planned flow -- none missing
+ok  the two added calls use the OpenRouter credential, URL, timeout and error setting of Alternate Call openrouter
+== the request bodies (test/requests_P/) and the prompt sizes the cost estimate reads
+ok  a_accept_probe_32306.json: Init Seats takes it (dry regrade of 32306, the saved seats and panel, accept_probe); it holds no URL or secret
+ok  c_posture_regrade_32306.json: Init Seats takes it (dry regrade of 32306, the saved seats and panel, posture); it holds no URL or secret
+     panel input characters per judge (gemini, glm, chatgpt): live 136660, 136660, 136660; posture 140777, 141919, 137115; acceptance prompt 2897; stored first replies 5202, 13976, 7117
+ok  P1 dropped: no node in new/ or add/ carries swap code; lib/swap.js and the swapped request body are gone
+
+74 fixtures, 0 bad

@@ -27,6 +27,7 @@ OK   D4 Build.js
 OK   D4 Extract.js
 OK   Extract Independent Verdict.js
 OK   Format Markdown.js
+OK   Init Seats.js
 OK   Init with Guards.js
 OK   Panel Build.js
 OK   Panel Cure Build 1.js
@@ -37,4 +38,10 @@ OK   Panel Cure Normalize 1.js
 OK   Panel Cure Normalize 2.js
 OK   Panel Cure Normalize 3.js
 OK   Panel Payloads.js
-new files 39 | compile failures 0
+OK   Replay Rows.js
+OK   Reserve Build.js
+OK   Accept Build.js
+OK   Accept Check.js
+OK   Accept Final.js
+OK   Accept Return Build.js
+new files 46 | compile failures 0

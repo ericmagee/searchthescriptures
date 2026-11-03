@@ -339,10 +339,68 @@ if(S.rulebook==='draft'){const rep=(a,b)=>{const n=SYS.split(a).length-1;if(n!==
  rep('COLLISION POINTS, the citation check,','COLLISION POINTS, EXCLUSIVITY, the citation check,');
  rep('FORFEIT: if the challenger listed no premises against the defender',"LET STAND: if the challenger's list carries a LINK audit line for every declared defender link and marks none of them CHARGED, it is a reasoned let-stand, not a forfeit: L = 0, c = 0, CONCEDED LINKS is 0, DEFENSE STANDING cannot be COLLAPSED, and you add the line LINK ROUND LET STAND: CHALLENGER in place of the forfeit line. Otherwise "+'FORFEIT: if the challenger listed no premises against the defender');
  rep('FORFEIT: if the defender listed no premises against the challenger',"LET STAND: if the defender's list carries a LINK audit line for every challenger link and marks none of them CHARGED, it is a reasoned let-stand, not a forfeit: L = 0, c = 0, CHALLENGER CONCEDED LINKS is 0, CHALLENGE STANDING cannot be COLLAPSED, and you add the line LINK ROUND LET STAND: DEFENDER in place of the forfeit line. Otherwise "+'FORFEIT: if the defender listed no premises against the challenger');}
+// judge_fix8 P2 (JUDGE_POSTURE_DRAFT_v4 Part 7; a posture dry regrade only, Init Seats): the seat's accepted exchange (Accept Final) heads its
+// conversation and the answer form carries
+// SILENCE and SAME TEST. Without the flags every body is byte-identical to the live one.
+// judge_fix8 P2, P3 (JUDGE_POSTURE_DRAFT_v4 Parts 1-3): the acceptance turn, its code check, the return, the quote-back at a cure, and the
+// posture answer form. POSTURE.PART2 is v4 Part 2 word for word (test/unitP.cjs compares it with the draft file). Nothing here grades a debate.
+const POSTURE=(()=>{
+ const PART2="You are an adjudicator of a debate record. You are not deciding what is true. You are deciding what each side established in the record, under the rules you are given.\n\n### Commitment 1. The record is the only evidence.\nThe evidence is the rounds of both sides. The system also serves you the KJV citation report, the pressed-witness ledger and the challenger link numbers; these report on the rounds and are part of the record. The pre-checks are aids that decide nothing. Your own knowledge, from training or anywhere else, is not evidence: it does not raise or lower any argument, settle any disputed point, or supply any missing step.\n\n### Commitment 2. I repair nothing.\nYou supply no missing step for either side. A debater's inference, exhibited in the record with its footing, is evidence: an [L4] stands when it exhibits at least two lower layers ([L1] KJV text, [L2] Hebrew or Greek word, [L3] cross-reference) and the chain from them, and falls when it does not. Any inference of your own shows two lower layers, as a debater's must.\n\n### Commitment 3. Each test in its place.\nA pressed witness contradicts a link only when its own words state the contrary.\nA collision where the witnesses pressed against a link are the other side's own chain read together is weighed chain against chain, by footing. There, \"no verse states it\", \"the text nowhere narrates it\" or \"no witness's own words state it\" is never a ground, for either side (DG-61).\n\n### Commitment 4. One standard for both sides.\nThe same evidentiary, logical and answering threshold applies to both sides, whatever the position, its popularity, or its agreement with consensus. No side receives heightened scrutiny. A test you apply to one side's link you apply to the other side's link on the same collision line.\n\n### Commitment 5. Silence is not neutral.\nA witness carried under a listed premise's PRESSED WITH line, and left unanswered by the later rounds of the side that holds the link, makes that premise UNEXHIBITED (ruling 372). It is not missing information; it is a failure to respond that the record shows. A verse pressed with no listed premise behind it is not a witness (ruling 392). A premise carries at most eight witnesses (ruling 393).\nWhere both sides answered and the record still leaves a point open, it is UNDERDETERMINED, by the same test for both sides.\n\n### Commitment 6. I void only by quoting.\nYou rule a listed premise VOID only by quoting the words of its charge that go beyond its quote, and naming the kind: a negation, a universal, or a claim the quote's own words do not make. Paraphrase, reordering and dropped words are not stronger.";
+ const HEADS=[...PART2.matchAll(/^### (Commitment \d\. [^\n]+)$/gm)].map(m=>m[1]);
+ const LINE='I ACCEPT THIS POSTURE AND WILL BE HELD TO IT.';
+ const FORM='Reply with each commitment\'s heading above, copied verbatim (for example "'+HEADS[0]+'"), each followed by one line in your own words; then the line: '+LINE;
+ const PROMPT='POSTURE FOR ACCEPTANCE\n\n'+PART2+'\n\n'+FORM;
+ const RET=f=>'POSTURE RETURNED (once)\n\nYour reply is returned once. Fault'+(f.length===1?'':'s')+': '+f.join('; ')+'.\n\n'+FORM;
+ // v4 Part 3, the answer form in posture mode only (SILENCE, SAME TEST); the panel writes them inside "reasoning"
+ const ANSWER='POSTURE ANSWER FORM (this judgment). Each judgment carries two checkable lines blocks, after the collision points (in "reasoning"):\nSILENCE: <each pressed witness you counted unanswered: verse, premise, rounds searched>\nSAME TEST: <each test you applied on a collision line: "test T on D<i>; on C<j>: <result>">\nSILENCE is checked against the ledger. SAME TEST is checked for a test applied to one link of a collision line and not to the other.';
+ const strip=l=>String(l).replace(/^[\s>#*_\-•]+/,'').replace(/[\s*_]+$/,'').trim();
+ const REFUSE=/\b(?:I\s+(?:can(?:no|')t|cannot|won't|will\s+not|am\s+(?:not\s+able|unable)|'m\s+(?:not\s+able|unable)|must\s+decline|decline)|not\s+comfortable|unable\s+to\s+(?:accept|agree|commit))\b/i;
+ const HEDGE=/\b(?:however|but\s+I|with\s+(?:the\s+|one\s+|a\s+)?(?:reservation|caveat|qualification)s?|provided\s+that|to\s+the\s+extent|reserve\s+the\s+right|cannot\s+(?:fully|entirely|guarantee)|subject\s+to|where\s+possible|as\s+far\s+as\s+(?:I\s+can|possible))\b/i;
+ // the code check (v4 Part 1, step 3): every heading verbatim, the acceptance line verbatim; the own-words lines kept, not graded
+ function check(text){const t=String(text==null?'':text);if(!t.trim())return {status:'REFUSE',faults:['empty reply'],lines:{},accept_line:false};
+  const L=t.split('\n').map(strip);const used=new Set();const faults=[];const lines={};
+  HEADS.forEach((h,k)=>{const n=k+1;const at=L.findIndex(l=>l.startsWith(h));
+   if(at<0){const alt=L.findIndex(l=>new RegExp('^Commitment\\s*'+n+'\\b','i').test(l));faults.push('heading '+n+(alt<0?' missing':' altered ("'+L[alt].slice(0,80)+'")'));if(alt>=0)used.add(alt);return;}
+   used.add(at);let own=L[at].slice(h.length).replace(/^[\s:\-–—*_]+/,'').trim();
+   if(!own){for(let i=at+1;i<L.length;i++){if(!L[i])continue;if(/^Commitment\s*\d/i.test(L[i])||L[i].includes('I ACCEPT'))break;own=L[i];used.add(i);break;}}else used.add(at);
+   lines[n]=own||null;});
+  const al=L.findIndex(l=>l===LINE);let accept_line=al>=0;if(al>=0)used.add(al);
+  if(al<0){const alt=L.findIndex(l=>/\bI\s+ACCEPT\b/i.test(l));faults.push('acceptance line '+(alt<0?'missing':'altered ("'+L[alt].slice(0,80)+'")'));if(alt>=0)used.add(alt);
+   if(alt<0&&REFUSE.test(t))return {status:'REFUSE',faults,lines,accept_line:false};}
+  if(faults.length)return {status:'FAULT',faults,lines,accept_line};
+  const extra=L.filter((l,i)=>l&&!used.has(i)).join(' ');
+  return {status:HEDGE.test(extra)?'HEDGE':'ACCEPT',faults:[],lines,accept_line,extra:extra.slice(0,400)||null};}
+ // the reply envelope of a chat call, or the failure named
+ function env(j){if(j&&Array.isArray(j.choices)&&j.choices[0]&&j.choices[0].message&&typeof j.choices[0].message.content==='string')return {ok:true,text:j.choices[0].message.content,finish:j.choices[0].finish_reason||null};
+  if(j&&j.error){const e=j.error;return {ok:false,why:String(typeof e==='string'?e:(e.message||e.description||JSON.stringify(e))).slice(0,300)};}
+  return {ok:false,why:'no reply text ('+Object.keys(j||{}).join(',')+')'};}
+ // the final status of a seat after at most one return (v4 Part 1, steps 4 and 5): the seat sits whatever it is
+ const PLACED=['ACCEPT','HEDGE','ACCEPT_ON_RETURN','HEDGE_ON_RETURN'];
+ function final(first,second){if(!first)return 'ERROR';if(first.status!=='FAULT')return first.status;if(!second)return 'FAULT_RECORDED';
+  return second.status==='ACCEPT'?'ACCEPT_ON_RETURN':second.status==='HEDGE'?'HEDGE_ON_RETURN':second.status==='FAULT'?'FAULT_RECORDED':second.status;}
+ // the accepted exchange placed at the head of the judging conversation (chat form; Gemini form for a gemini family body)
+ function head(a,gem){if(!a||PLACED.indexOf(a.status)<0||!Array.isArray(a.exchange))return [];
+  return gem?a.exchange.map(m=>({role:m.role==='assistant'?'model':'user',parts:[{text:m.content}]})):a.exchange.map(m=>({role:m.role,content:m.content}));}
+ // the commitment a flagged rule breaks (v4 Part 5); a rule not listed there gets no quote-back
+ const RULE_C={'K-LXX':1,'K-LB':2,'K-C':3,'K-S':3,'K-S2':3,'SAME TEST':4,'K-G1':5,'K-G4':5,'K-G6':5,'K-G7':5,'K-G10':5,'K-G11':5,'K-U':5,'SILENCE':5,'K-V':6};
+ // the cure quote-back (v4 Part 1, step 6): "You accepted: <its words>. Your line: <the line>." per item whose commitment the seat accepted
+ function quote(items,a){if(!a||PLACED.indexOf(a.status)<0||!a.lines)return '';const out=[];
+  for(const x of (items||[])){const c=RULE_C[x&&x.rule];if(!c||!a.lines[c])continue;const ln=String(x.line||'').replace(/\s+/g,' ').trim();if(!ln)continue;
+   out.push('- '+(x.link?x.link+' ':'')+'('+x.rule+', commitment '+c+'): You accepted: "'+a.lines[c]+'". Your line: "'+ln.slice(0,600)+'".');}
+  return out.length?'\n\nTHE POSTURE YOU ACCEPTED, QUOTED BACK (your own words at the acceptance turn, beside the line the item flags):\n'+out.join('\n'):'';}
+ // the posture head is never read as the debate record (the checkers' prompt text skips it)
+ const isHead=(a,i)=>{const m=a[i];if(!m)return false;const tx=c=>typeof c==='string'?c:Array.isArray(c)?c.map(p=>p&&p.text||'').join(''):'';
+  if(m.role==='user')return /^POSTURE (?:FOR ACCEPTANCE|RETURNED)/.test(tx(m.content));if(m.role==='assistant'){const p=a[i-1];return !!p&&p.role==='user'&&/^POSTURE (?:FOR ACCEPTANCE|RETURNED)/.test(tx(p.content));}return false;};
+ return {PART2,HEADS,LINE,FORM,PROMPT,RET,ANSWER,check,env,final,head,quote,isHead,PLACED,RULE_C};})();
+const __PACC=(()=>{if(S.posture!==true)return null;let A=null;try{A=$('Accept Final').first().json.acc;}catch(e){A=null;}
+ if(!A||!Array.isArray(A.seats))throw new Error('FAIL-CLOSED: posture regrade without the acceptance turn (Accept Final).'+RT);const o={};A.seats.forEach(x=>{o[x.seat]=x;});return o;})();
+if(S.posture===true)SYS=SYS+NL+NL+POSTURE.ANSWER;
+const __PH=(seat,gem)=>__PACC?POSTURE.head(__PACC[seat],gem):[];
+const __PJ=seat=>__PACC?{posture:{status:(__PACC[seat]||{}).status||'ERROR',placed:!!(__PACC[seat]||{}).placed,lines:(__PACC[seat]||{}).lines||{}}}:{};
 const JIDX={openai:0,gemini:1,grok:2,mimo:3,openrouter:4};const JIDX0={deepseek:0,openai:1,gemini:2,grok:3,mimo:4,openrouter:5};
 const judges=RS.judges.map(j0=>{const j={...j0,max_tokens:Math.max(Number(j0.max_tokens)||0,8000)};const user='DEBATE TRANSCRIPT\n\n'+T;let body;
- if(j.fam==='gemini')body={systemInstruction:{parts:[{text:SYS}]},contents:[{role:'user',parts:[{text:user}]}],generationConfig:{maxOutputTokens:j.max_tokens,temperature:0}};
- else{const m=[{role:'system',content:SYS},{role:'user',content:user}];
+ if(j.fam==='gemini')body={systemInstruction:{parts:[{text:SYS}]},contents:__PH(j.seat,true).concat([{role:'user',parts:[{text:user}]}]),generationConfig:{maxOutputTokens:j.max_tokens,temperature:0}};
+ else{const m=[{role:'system',content:SYS}].concat(__PH(j.seat,false),[{role:'user',content:user}]);
   // deepseek judge cap (BB-5700 step 5): its reasoning spent the whole 32,000 before answering (ODV1-25720; ODV1-25744 also returned empty content, cause not read); 65,536 passed at judge size (exec 25745).
   if(j.fam==='deepseek')body={model:j.api_model,max_tokens:Math.max(j.max_tokens,65536),temperature:0,messages:m};
   else if(j.fam==='grok')body={model:j.api_model,max_tokens:j.max_tokens,temperature:0,messages:m};
@@ -359,6 +417,6 @@ const judges=RS.judges.map(j0=>{const j={...j0,max_tokens:Math.max(Number(j0.max
   // mimo judge (BB-5700 step 8a): thinking disabled. With thinking on, max_tokens 65,536 did not answer within the 900 s limit (exec 25738) and max_completion_tokens 32,000 took 645 s; disabled answered in 57 s (exec 25753).
   else if(j.fam==='mimo')body={model:j.api_model,max_tokens:Math.max(j.max_tokens,65536),messages:m};
   else body={model:j.api_model,max_tokens:j.max_tokens,messages:m};}
- return {seat:j.seat,fam:j.fam,jidx:(j.fam in JIDX)?JIDX[j.fam]:-1,jidx0:(j.fam in JIDX0)?JIDX0[j.fam]:-1,api_model:j.api_model,body:__orc(body,j.fam,j.api_model,TOK+':panel:'+j.seat)};});
+ return {seat:j.seat,fam:j.fam,jidx:(j.fam in JIDX)?JIDX[j.fam]:-1,jidx0:(j.fam in JIDX0)?JIDX0[j.fam]:-1,api_model:j.api_model,body:__orc(body,j.fam,j.api_model,TOK+':panel:'+j.seat),...__PJ(j.seat)};});
 if(judges.length!==3||judges[0].jidx0<0||judges[1].jidx<0||judges[2].jidx<0)throw new Error('FAIL-CLOSED: panel slots not [routed, routed, routed]: '+judges.map(x=>x.seat).join(',')+RT);
 return [{json:{run_token:TOK,debate_id,transcript_chars:T.length,judges}}];

@@ -1,10 +1,10 @@
 live versionId cfcbb37b-86bf-474f-b847-82a72cc84d57 | base read versionId cfcbb37b-86bf-474f-b847-82a72cc84d57
-guards passed: base matched for 39 code nodes; versionId, connections (481) and node count (262) equal the base read
-  Alternate Build                base 663ca59d -> new 34edd40d
-  Alternate Cure Build           base 598ca239 -> new 4293b4eb
+guards passed: base matched for 42 code nodes; versionId, connections (481) and node count (262) equal the base read; 9 added names and ids free
+  Alternate Build                base 663ca59d -> new ffd866ce
+  Alternate Cure Build           base 598ca239 -> new 2a7c21c9
   Alternate Cure Normalize       base 16df0e33 -> new 5e5269a0
   Alternate Merge                base 4059ba89 -> new 27af2a6c
-  Alternate Payloads             base 4112a14d -> new 8e7046fc
+  Alternate Payloads             base 4112a14d -> new 5991d19d
   Build Independent Verdict      base 12550800 -> new d53e9bc1
   Build Save Body                base 66d20a16 -> new 7df90871
   Build Synthesis                base 0c3c91ca -> new 1bec9c94
@@ -29,14 +29,40 @@ guards passed: base matched for 39 code nodes; versionId, connections (481) and 
   D4 Extract                     base 593b7848 -> new f1738c04
   Extract Independent Verdict    base 9e0996ea -> new 6bc7ef3c
   Format Markdown                base edfc1ed2 -> new 29698945
+  Init Seats                     base 3533fb15 -> new 97c71392
   Init with Guards               base 67edcaee -> new 413a233b
-  Panel Build                    base e503dab6 -> new 65de85c7
-  Panel Cure Build 1             base 19004afa -> new 376bf96c
-  Panel Cure Build 2             base 2459d287 -> new 248670e6
-  Panel Cure Build 3             base c8334d3c -> new 8698e537
+  Panel Build                    base e503dab6 -> new 00313743
+  Panel Cure Build 1             base 19004afa -> new bcf16671
+  Panel Cure Build 2             base 2459d287 -> new d5ab4327
+  Panel Cure Build 3             base c8334d3c -> new be8c236d
   Panel Cure Check               base 836a14d1 -> new 4c4a46eb
   Panel Cure Normalize 1         base de0f7a03 -> new 23297e4f
   Panel Cure Normalize 2         base f5b020e5 -> new 092ba2db
   Panel Cure Normalize 3         base cf1cfa8f -> new fb7bd554
-  Panel Payloads                 base c1877db0 -> new d751bcbd
-DRY: would PUT 39 code nodes, 0 nodes added, 481 connections (unchanged); nothing written
+  Panel Payloads                 base c1877db0 -> new 46165e20
+  Replay Rows                    base 8d8a4f81 -> new 94d03ea9
+  Reserve Build                  base e24d7fc8 -> new 0c93ed40
+  + Accept Gate?                 if           
+  + Accept Build                 code         9bf2d4af
+  + Accept Call openrouter       httpRequest  
+  + Accept Check                 code         1526a3ec
+  + Accept Return?               if           
+  + Accept Return Build          code         57419fe1
+  + Accept Return Call openrouter httpRequest  
+  + Accept Final                 code         38c1e2f2
+  + Accept Probe?                if           
+  - link Regrade After Quotes? [0] -> Panel Build
+  + link Accept Build [0] -> Accept Call openrouter
+  + link Accept Call openrouter [0] -> Accept Check
+  + link Accept Check [0] -> Accept Return?
+  + link Accept Final [0] -> Accept Probe?
+  + link Accept Gate? [0] -> Accept Build
+  + link Accept Gate? [1] -> Panel Build
+  + link Accept Probe? [0] -> Replay Rows
+  + link Accept Probe? [1] -> Panel Build
+  + link Accept Return Build [0] -> Accept Return Call openrouter
+  + link Accept Return Call openrouter [0] -> Accept Final
+  + link Accept Return? [0] -> Accept Return Build
+  + link Accept Return? [1] -> Accept Final
+  + link Regrade After Quotes? [0] -> Accept Gate?
+DRY: would PUT 42 code nodes changed, 9 nodes added (271 nodes), 493 connections (1 removed, 13 added); nothing written
