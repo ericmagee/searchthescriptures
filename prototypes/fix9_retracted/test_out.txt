@@ -1,0 +1,16 @@
+== base/Panel Cure Check.js
+FAIL GLM 32341 D3 (should withdraw) withdrawn=0 malformed=1
+PASS GLM 32341 D5 (should withdraw) withdrawn=1 malformed=0
+PASS regrade to broken (should refuse) withdrawn=0 malformed=1
+PASS stays broken (should refuse) withdrawn=0 malformed=1
+PASS plain broken (should refuse) withdrawn=0 malformed=1
+PASS not broken form (should withdraw) withdrawn=1 malformed=0
+full GLM reply: withdrawn D5 vs C4:null malformed 1
+== new/Panel Cure Check.js
+PASS GLM 32341 D3 (should withdraw) withdrawn=1 malformed=0
+PASS GLM 32341 D5 (should withdraw) withdrawn=1 malformed=0
+PASS regrade to broken (should refuse) withdrawn=0 malformed=1
+PASS stays broken (should refuse) withdrawn=0 malformed=1
+PASS plain broken (should refuse) withdrawn=0 malformed=1
+PASS not broken form (should withdraw) withdrawn=1 malformed=0
+full GLM reply: withdrawn D3 vs C4:null,D5 vs C4:null malformed 0

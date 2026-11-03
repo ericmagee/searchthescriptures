@@ -1,0 +1,154 @@
+--- "base/Alternate Build.js"	2026-11-03 07:05:55.674376000 +0000
++++ "new/Alternate Build.js"	2026-11-03 07:07:46.016060123 +0000
+@@ -538,7 +538,7 @@
+   // judge_fix4 F3 (run 32266: GLM's "RETRACTED: D1 vs C6 (Matthew 1:18) -- regraded UNDERDETERMINED -- [DR1] answered ..." was refused as
+   // malformed, ten times): a RETRACTED line counts when it opens with the item label (D<n> vs C<m>, a rule name before it allowed); whatever
+   // follows is read as its regrade (the first grade word) and its reason. A regrade to a LINK BROKEN grade is no retraction (malformed).
+-  if(k[1]==='RETRACTED'&&(m=r.match(/^(?:K-[A-Z]+\d*\s+)?D(\d+)\s+vs\.?\s+C(\d+)\b(.*)$/i))&&!/\bLINK\s+BROKEN\b/i.test(m[3].replace(/\bnot\s+(?:a\s+)?(?:\S+\s+)?LINK\s+BROKEN\b/ig,''))){const rest=m[3].trim();const g=(rest.toUpperCase().match(/\b(UNDERDETERMINED|STANDS)\b/)||[])[1]||null;
++  if(k[1]==='RETRACTED'&&(m=r.match(/^(?:K-[A-Z]+\d*\s+)?D(\d+)\s+vs\.?\s+C(\d+)\b(.*)$/i))&&!/\bLINK\s+BROKEN\b/i.test(m[3].replace(/\bnot\s+(?:a\s+)?(?:\S+\s+)?LINK\s+BROKEN\b/ig,'').replace(/\b(?:(?:DEFENDER|CHALLENGER)\s+)?LINK\s+BROKEN\s+(?:grade|ruling|mark|label|line|verdict)s?\b/ig,''))){const rest=m[3].trim();const g=(rest.toUpperCase().match(/\b(UNDERDETERMINED|STANDS)\b/)||[])[1]||null;
+    o.withdrawn.push({link:cureId(m[1],m[2]),line:l,regrade:g,reason:rest.replace(/^\([^)]*\)\s*/,'').replace(/^(?:--|—|-|:)\s*/,'').replace(/^(?:re)?grade[sd]?\s+(?:to\s+)?(?:UNDERDETERMINED|STANDS)\s*(?:--|—|-|:)?\s*/i,'').trim()||null});}
+   else if((k[1]==='PRESSED'||k[1]==='NOT PRESSED')&&ciForm(k[1],r)){for(const z of ciRulings(l))o.cited.push(z);} // judge_fix5 G2: a K-G9 ruling line
+   else if(k[1]==='CORRECTED RESULT'&&(m=r.match(/^(BROKEN-1|BROKEN-2|PARTIAL-1|PARTIAL-2|PARTIAL-3|HELD-1)$/)))o.result.push({tag:m[1],word:m[1].split('-')[0],line:l});
+--- "base/Alternate Cure Build.js"	2026-11-03 07:05:55.676645564 +0000
++++ "new/Alternate Cure Build.js"	2026-11-03 07:07:46.017315117 +0000
+@@ -536,7 +536,7 @@
+   // judge_fix4 F3 (run 32266: GLM's "RETRACTED: D1 vs C6 (Matthew 1:18) -- regraded UNDERDETERMINED -- [DR1] answered ..." was refused as
+   // malformed, ten times): a RETRACTED line counts when it opens with the item label (D<n> vs C<m>, a rule name before it allowed); whatever
+   // follows is read as its regrade (the first grade word) and its reason. A regrade to a LINK BROKEN grade is no retraction (malformed).
+-  if(k[1]==='RETRACTED'&&(m=r.match(/^(?:K-[A-Z]+\d*\s+)?D(\d+)\s+vs\.?\s+C(\d+)\b(.*)$/i))&&!/\bLINK\s+BROKEN\b/i.test(m[3].replace(/\bnot\s+(?:a\s+)?(?:\S+\s+)?LINK\s+BROKEN\b/ig,''))){const rest=m[3].trim();const g=(rest.toUpperCase().match(/\b(UNDERDETERMINED|STANDS)\b/)||[])[1]||null;
++  if(k[1]==='RETRACTED'&&(m=r.match(/^(?:K-[A-Z]+\d*\s+)?D(\d+)\s+vs\.?\s+C(\d+)\b(.*)$/i))&&!/\bLINK\s+BROKEN\b/i.test(m[3].replace(/\bnot\s+(?:a\s+)?(?:\S+\s+)?LINK\s+BROKEN\b/ig,'').replace(/\b(?:(?:DEFENDER|CHALLENGER)\s+)?LINK\s+BROKEN\s+(?:grade|ruling|mark|label|line|verdict)s?\b/ig,''))){const rest=m[3].trim();const g=(rest.toUpperCase().match(/\b(UNDERDETERMINED|STANDS)\b/)||[])[1]||null;
+    o.withdrawn.push({link:cureId(m[1],m[2]),line:l,regrade:g,reason:rest.replace(/^\([^)]*\)\s*/,'').replace(/^(?:--|—|-|:)\s*/,'').replace(/^(?:re)?grade[sd]?\s+(?:to\s+)?(?:UNDERDETERMINED|STANDS)\s*(?:--|—|-|:)?\s*/i,'').trim()||null});}
+   else if((k[1]==='PRESSED'||k[1]==='NOT PRESSED')&&ciForm(k[1],r)){for(const z of ciRulings(l))o.cited.push(z);} // judge_fix5 G2: a K-G9 ruling line
+   else if(k[1]==='CORRECTED RESULT'&&(m=r.match(/^(BROKEN-1|BROKEN-2|PARTIAL-1|PARTIAL-2|PARTIAL-3|HELD-1)$/)))o.result.push({tag:m[1],word:m[1].split('-')[0],line:l});
+--- "base/Alternate Cure Normalize.js"	2026-11-03 07:05:55.678664928 +0000
++++ "new/Alternate Cure Normalize.js"	2026-11-03 07:07:46.018385465 +0000
+@@ -536,7 +536,7 @@
+   // judge_fix4 F3 (run 32266: GLM's "RETRACTED: D1 vs C6 (Matthew 1:18) -- regraded UNDERDETERMINED -- [DR1] answered ..." was refused as
+   // malformed, ten times): a RETRACTED line counts when it opens with the item label (D<n> vs C<m>, a rule name before it allowed); whatever
+   // follows is read as its regrade (the first grade word) and its reason. A regrade to a LINK BROKEN grade is no retraction (malformed).
+-  if(k[1]==='RETRACTED'&&(m=r.match(/^(?:K-[A-Z]+\d*\s+)?D(\d+)\s+vs\.?\s+C(\d+)\b(.*)$/i))&&!/\bLINK\s+BROKEN\b/i.test(m[3].replace(/\bnot\s+(?:a\s+)?(?:\S+\s+)?LINK\s+BROKEN\b/ig,''))){const rest=m[3].trim();const g=(rest.toUpperCase().match(/\b(UNDERDETERMINED|STANDS)\b/)||[])[1]||null;
++  if(k[1]==='RETRACTED'&&(m=r.match(/^(?:K-[A-Z]+\d*\s+)?D(\d+)\s+vs\.?\s+C(\d+)\b(.*)$/i))&&!/\bLINK\s+BROKEN\b/i.test(m[3].replace(/\bnot\s+(?:a\s+)?(?:\S+\s+)?LINK\s+BROKEN\b/ig,'').replace(/\b(?:(?:DEFENDER|CHALLENGER)\s+)?LINK\s+BROKEN\s+(?:grade|ruling|mark|label|line|verdict)s?\b/ig,''))){const rest=m[3].trim();const g=(rest.toUpperCase().match(/\b(UNDERDETERMINED|STANDS)\b/)||[])[1]||null;
+    o.withdrawn.push({link:cureId(m[1],m[2]),line:l,regrade:g,reason:rest.replace(/^\([^)]*\)\s*/,'').replace(/^(?:--|—|-|:)\s*/,'').replace(/^(?:re)?grade[sd]?\s+(?:to\s+)?(?:UNDERDETERMINED|STANDS)\s*(?:--|—|-|:)?\s*/i,'').trim()||null});}
+   else if((k[1]==='PRESSED'||k[1]==='NOT PRESSED')&&ciForm(k[1],r)){for(const z of ciRulings(l))o.cited.push(z);} // judge_fix5 G2: a K-G9 ruling line
+   else if(k[1]==='CORRECTED RESULT'&&(m=r.match(/^(BROKEN-1|BROKEN-2|PARTIAL-1|PARTIAL-2|PARTIAL-3|HELD-1)$/)))o.result.push({tag:m[1],word:m[1].split('-')[0],line:l});
+--- "base/Alternate Merge.js"	2026-11-03 07:05:55.680543320 +0000
++++ "new/Alternate Merge.js"	2026-11-03 07:07:46.019864154 +0000
+@@ -536,7 +536,7 @@
+   // judge_fix4 F3 (run 32266: GLM's "RETRACTED: D1 vs C6 (Matthew 1:18) -- regraded UNDERDETERMINED -- [DR1] answered ..." was refused as
+   // malformed, ten times): a RETRACTED line counts when it opens with the item label (D<n> vs C<m>, a rule name before it allowed); whatever
+   // follows is read as its regrade (the first grade word) and its reason. A regrade to a LINK BROKEN grade is no retraction (malformed).
+-  if(k[1]==='RETRACTED'&&(m=r.match(/^(?:K-[A-Z]+\d*\s+)?D(\d+)\s+vs\.?\s+C(\d+)\b(.*)$/i))&&!/\bLINK\s+BROKEN\b/i.test(m[3].replace(/\bnot\s+(?:a\s+)?(?:\S+\s+)?LINK\s+BROKEN\b/ig,''))){const rest=m[3].trim();const g=(rest.toUpperCase().match(/\b(UNDERDETERMINED|STANDS)\b/)||[])[1]||null;
++  if(k[1]==='RETRACTED'&&(m=r.match(/^(?:K-[A-Z]+\d*\s+)?D(\d+)\s+vs\.?\s+C(\d+)\b(.*)$/i))&&!/\bLINK\s+BROKEN\b/i.test(m[3].replace(/\bnot\s+(?:a\s+)?(?:\S+\s+)?LINK\s+BROKEN\b/ig,'').replace(/\b(?:(?:DEFENDER|CHALLENGER)\s+)?LINK\s+BROKEN\s+(?:grade|ruling|mark|label|line|verdict)s?\b/ig,''))){const rest=m[3].trim();const g=(rest.toUpperCase().match(/\b(UNDERDETERMINED|STANDS)\b/)||[])[1]||null;
+    o.withdrawn.push({link:cureId(m[1],m[2]),line:l,regrade:g,reason:rest.replace(/^\([^)]*\)\s*/,'').replace(/^(?:--|—|-|:)\s*/,'').replace(/^(?:re)?grade[sd]?\s+(?:to\s+)?(?:UNDERDETERMINED|STANDS)\s*(?:--|—|-|:)?\s*/i,'').trim()||null});}
+   else if((k[1]==='PRESSED'||k[1]==='NOT PRESSED')&&ciForm(k[1],r)){for(const z of ciRulings(l))o.cited.push(z);} // judge_fix5 G2: a K-G9 ruling line
+   else if(k[1]==='CORRECTED RESULT'&&(m=r.match(/^(BROKEN-1|BROKEN-2|PARTIAL-1|PARTIAL-2|PARTIAL-3|HELD-1)$/)))o.result.push({tag:m[1],word:m[1].split('-')[0],line:l});
+--- "base/Cure Build.js"	2026-11-03 07:05:55.660684214 +0000
++++ "new/Cure Build.js"	2026-11-03 07:07:46.021399133 +0000
+@@ -536,7 +536,7 @@
+   // judge_fix4 F3 (run 32266: GLM's "RETRACTED: D1 vs C6 (Matthew 1:18) -- regraded UNDERDETERMINED -- [DR1] answered ..." was refused as
+   // malformed, ten times): a RETRACTED line counts when it opens with the item label (D<n> vs C<m>, a rule name before it allowed); whatever
+   // follows is read as its regrade (the first grade word) and its reason. A regrade to a LINK BROKEN grade is no retraction (malformed).
+-  if(k[1]==='RETRACTED'&&(m=r.match(/^(?:K-[A-Z]+\d*\s+)?D(\d+)\s+vs\.?\s+C(\d+)\b(.*)$/i))&&!/\bLINK\s+BROKEN\b/i.test(m[3].replace(/\bnot\s+(?:a\s+)?(?:\S+\s+)?LINK\s+BROKEN\b/ig,''))){const rest=m[3].trim();const g=(rest.toUpperCase().match(/\b(UNDERDETERMINED|STANDS)\b/)||[])[1]||null;
++  if(k[1]==='RETRACTED'&&(m=r.match(/^(?:K-[A-Z]+\d*\s+)?D(\d+)\s+vs\.?\s+C(\d+)\b(.*)$/i))&&!/\bLINK\s+BROKEN\b/i.test(m[3].replace(/\bnot\s+(?:a\s+)?(?:\S+\s+)?LINK\s+BROKEN\b/ig,'').replace(/\b(?:(?:DEFENDER|CHALLENGER)\s+)?LINK\s+BROKEN\s+(?:grade|ruling|mark|label|line|verdict)s?\b/ig,''))){const rest=m[3].trim();const g=(rest.toUpperCase().match(/\b(UNDERDETERMINED|STANDS)\b/)||[])[1]||null;
+    o.withdrawn.push({link:cureId(m[1],m[2]),line:l,regrade:g,reason:rest.replace(/^\([^)]*\)\s*/,'').replace(/^(?:--|—|-|:)\s*/,'').replace(/^(?:re)?grade[sd]?\s+(?:to\s+)?(?:UNDERDETERMINED|STANDS)\s*(?:--|—|-|:)?\s*/i,'').trim()||null});}
+   else if((k[1]==='PRESSED'||k[1]==='NOT PRESSED')&&ciForm(k[1],r)){for(const z of ciRulings(l))o.cited.push(z);} // judge_fix5 G2: a K-G9 ruling line
+   else if(k[1]==='CORRECTED RESULT'&&(m=r.match(/^(BROKEN-1|BROKEN-2|PARTIAL-1|PARTIAL-2|PARTIAL-3|HELD-1)$/)))o.result.push({tag:m[1],word:m[1].split('-')[0],line:l});
+--- "base/Cure Check.js"	2026-11-03 07:05:55.663192273 +0000
++++ "new/Cure Check.js"	2026-11-03 07:07:46.022126873 +0000
+@@ -536,7 +536,7 @@
+   // judge_fix4 F3 (run 32266: GLM's "RETRACTED: D1 vs C6 (Matthew 1:18) -- regraded UNDERDETERMINED -- [DR1] answered ..." was refused as
+   // malformed, ten times): a RETRACTED line counts when it opens with the item label (D<n> vs C<m>, a rule name before it allowed); whatever
+   // follows is read as its regrade (the first grade word) and its reason. A regrade to a LINK BROKEN grade is no retraction (malformed).
+-  if(k[1]==='RETRACTED'&&(m=r.match(/^(?:K-[A-Z]+\d*\s+)?D(\d+)\s+vs\.?\s+C(\d+)\b(.*)$/i))&&!/\bLINK\s+BROKEN\b/i.test(m[3].replace(/\bnot\s+(?:a\s+)?(?:\S+\s+)?LINK\s+BROKEN\b/ig,''))){const rest=m[3].trim();const g=(rest.toUpperCase().match(/\b(UNDERDETERMINED|STANDS)\b/)||[])[1]||null;
++  if(k[1]==='RETRACTED'&&(m=r.match(/^(?:K-[A-Z]+\d*\s+)?D(\d+)\s+vs\.?\s+C(\d+)\b(.*)$/i))&&!/\bLINK\s+BROKEN\b/i.test(m[3].replace(/\bnot\s+(?:a\s+)?(?:\S+\s+)?LINK\s+BROKEN\b/ig,'').replace(/\b(?:(?:DEFENDER|CHALLENGER)\s+)?LINK\s+BROKEN\s+(?:grade|ruling|mark|label|line|verdict)s?\b/ig,''))){const rest=m[3].trim();const g=(rest.toUpperCase().match(/\b(UNDERDETERMINED|STANDS)\b/)||[])[1]||null;
+    o.withdrawn.push({link:cureId(m[1],m[2]),line:l,regrade:g,reason:rest.replace(/^\([^)]*\)\s*/,'').replace(/^(?:--|—|-|:)\s*/,'').replace(/^(?:re)?grade[sd]?\s+(?:to\s+)?(?:UNDERDETERMINED|STANDS)\s*(?:--|—|-|:)?\s*/i,'').trim()||null});}
+   else if((k[1]==='PRESSED'||k[1]==='NOT PRESSED')&&ciForm(k[1],r)){for(const z of ciRulings(l))o.cited.push(z);} // judge_fix5 G2: a K-G9 ruling line
+   else if(k[1]==='CORRECTED RESULT'&&(m=r.match(/^(BROKEN-1|BROKEN-2|PARTIAL-1|PARTIAL-2|PARTIAL-3|HELD-1)$/)))o.result.push({tag:m[1],word:m[1].split('-')[0],line:l});
+--- "base/Cure Normalize.js"	2026-11-03 07:05:55.661845735 +0000
++++ "new/Cure Normalize.js"	2026-11-03 07:07:46.023006973 +0000
+@@ -536,7 +536,7 @@
+   // judge_fix4 F3 (run 32266: GLM's "RETRACTED: D1 vs C6 (Matthew 1:18) -- regraded UNDERDETERMINED -- [DR1] answered ..." was refused as
+   // malformed, ten times): a RETRACTED line counts when it opens with the item label (D<n> vs C<m>, a rule name before it allowed); whatever
+   // follows is read as its regrade (the first grade word) and its reason. A regrade to a LINK BROKEN grade is no retraction (malformed).
+-  if(k[1]==='RETRACTED'&&(m=r.match(/^(?:K-[A-Z]+\d*\s+)?D(\d+)\s+vs\.?\s+C(\d+)\b(.*)$/i))&&!/\bLINK\s+BROKEN\b/i.test(m[3].replace(/\bnot\s+(?:a\s+)?(?:\S+\s+)?LINK\s+BROKEN\b/ig,''))){const rest=m[3].trim();const g=(rest.toUpperCase().match(/\b(UNDERDETERMINED|STANDS)\b/)||[])[1]||null;
++  if(k[1]==='RETRACTED'&&(m=r.match(/^(?:K-[A-Z]+\d*\s+)?D(\d+)\s+vs\.?\s+C(\d+)\b(.*)$/i))&&!/\bLINK\s+BROKEN\b/i.test(m[3].replace(/\bnot\s+(?:a\s+)?(?:\S+\s+)?LINK\s+BROKEN\b/ig,'').replace(/\b(?:(?:DEFENDER|CHALLENGER)\s+)?LINK\s+BROKEN\s+(?:grade|ruling|mark|label|line|verdict)s?\b/ig,''))){const rest=m[3].trim();const g=(rest.toUpperCase().match(/\b(UNDERDETERMINED|STANDS)\b/)||[])[1]||null;
+    o.withdrawn.push({link:cureId(m[1],m[2]),line:l,regrade:g,reason:rest.replace(/^\([^)]*\)\s*/,'').replace(/^(?:--|—|-|:)\s*/,'').replace(/^(?:re)?grade[sd]?\s+(?:to\s+)?(?:UNDERDETERMINED|STANDS)\s*(?:--|—|-|:)?\s*/i,'').trim()||null});}
+   else if((k[1]==='PRESSED'||k[1]==='NOT PRESSED')&&ciForm(k[1],r)){for(const z of ciRulings(l))o.cited.push(z);} // judge_fix5 G2: a K-G9 ruling line
+   else if(k[1]==='CORRECTED RESULT'&&(m=r.match(/^(BROKEN-1|BROKEN-2|PARTIAL-1|PARTIAL-2|PARTIAL-3|HELD-1)$/)))o.result.push({tag:m[1],word:m[1].split('-')[0],line:l});
+--- "base/Panel Cure Build 1.js"	2026-11-03 07:05:55.664521142 +0000
++++ "new/Panel Cure Build 1.js"	2026-11-03 07:07:46.024369815 +0000
+@@ -536,7 +536,7 @@
+   // judge_fix4 F3 (run 32266: GLM's "RETRACTED: D1 vs C6 (Matthew 1:18) -- regraded UNDERDETERMINED -- [DR1] answered ..." was refused as
+   // malformed, ten times): a RETRACTED line counts when it opens with the item label (D<n> vs C<m>, a rule name before it allowed); whatever
+   // follows is read as its regrade (the first grade word) and its reason. A regrade to a LINK BROKEN grade is no retraction (malformed).
+-  if(k[1]==='RETRACTED'&&(m=r.match(/^(?:K-[A-Z]+\d*\s+)?D(\d+)\s+vs\.?\s+C(\d+)\b(.*)$/i))&&!/\bLINK\s+BROKEN\b/i.test(m[3].replace(/\bnot\s+(?:a\s+)?(?:\S+\s+)?LINK\s+BROKEN\b/ig,''))){const rest=m[3].trim();const g=(rest.toUpperCase().match(/\b(UNDERDETERMINED|STANDS)\b/)||[])[1]||null;
++  if(k[1]==='RETRACTED'&&(m=r.match(/^(?:K-[A-Z]+\d*\s+)?D(\d+)\s+vs\.?\s+C(\d+)\b(.*)$/i))&&!/\bLINK\s+BROKEN\b/i.test(m[3].replace(/\bnot\s+(?:a\s+)?(?:\S+\s+)?LINK\s+BROKEN\b/ig,'').replace(/\b(?:(?:DEFENDER|CHALLENGER)\s+)?LINK\s+BROKEN\s+(?:grade|ruling|mark|label|line|verdict)s?\b/ig,''))){const rest=m[3].trim();const g=(rest.toUpperCase().match(/\b(UNDERDETERMINED|STANDS)\b/)||[])[1]||null;
+    o.withdrawn.push({link:cureId(m[1],m[2]),line:l,regrade:g,reason:rest.replace(/^\([^)]*\)\s*/,'').replace(/^(?:--|—|-|:)\s*/,'').replace(/^(?:re)?grade[sd]?\s+(?:to\s+)?(?:UNDERDETERMINED|STANDS)\s*(?:--|—|-|:)?\s*/i,'').trim()||null});}
+   else if((k[1]==='PRESSED'||k[1]==='NOT PRESSED')&&ciForm(k[1],r)){for(const z of ciRulings(l))o.cited.push(z);} // judge_fix5 G2: a K-G9 ruling line
+   else if(k[1]==='CORRECTED RESULT'&&(m=r.match(/^(BROKEN-1|BROKEN-2|PARTIAL-1|PARTIAL-2|PARTIAL-3|HELD-1)$/)))o.result.push({tag:m[1],word:m[1].split('-')[0],line:l});
+--- "base/Panel Cure Build 2.js"	2026-11-03 07:05:55.667228546 +0000
++++ "new/Panel Cure Build 2.js"	2026-11-03 07:07:46.025285992 +0000
+@@ -536,7 +536,7 @@
+   // judge_fix4 F3 (run 32266: GLM's "RETRACTED: D1 vs C6 (Matthew 1:18) -- regraded UNDERDETERMINED -- [DR1] answered ..." was refused as
+   // malformed, ten times): a RETRACTED line counts when it opens with the item label (D<n> vs C<m>, a rule name before it allowed); whatever
+   // follows is read as its regrade (the first grade word) and its reason. A regrade to a LINK BROKEN grade is no retraction (malformed).
+-  if(k[1]==='RETRACTED'&&(m=r.match(/^(?:K-[A-Z]+\d*\s+)?D(\d+)\s+vs\.?\s+C(\d+)\b(.*)$/i))&&!/\bLINK\s+BROKEN\b/i.test(m[3].replace(/\bnot\s+(?:a\s+)?(?:\S+\s+)?LINK\s+BROKEN\b/ig,''))){const rest=m[3].trim();const g=(rest.toUpperCase().match(/\b(UNDERDETERMINED|STANDS)\b/)||[])[1]||null;
++  if(k[1]==='RETRACTED'&&(m=r.match(/^(?:K-[A-Z]+\d*\s+)?D(\d+)\s+vs\.?\s+C(\d+)\b(.*)$/i))&&!/\bLINK\s+BROKEN\b/i.test(m[3].replace(/\bnot\s+(?:a\s+)?(?:\S+\s+)?LINK\s+BROKEN\b/ig,'').replace(/\b(?:(?:DEFENDER|CHALLENGER)\s+)?LINK\s+BROKEN\s+(?:grade|ruling|mark|label|line|verdict)s?\b/ig,''))){const rest=m[3].trim();const g=(rest.toUpperCase().match(/\b(UNDERDETERMINED|STANDS)\b/)||[])[1]||null;
+    o.withdrawn.push({link:cureId(m[1],m[2]),line:l,regrade:g,reason:rest.replace(/^\([^)]*\)\s*/,'').replace(/^(?:--|—|-|:)\s*/,'').replace(/^(?:re)?grade[sd]?\s+(?:to\s+)?(?:UNDERDETERMINED|STANDS)\s*(?:--|—|-|:)?\s*/i,'').trim()||null});}
+   else if((k[1]==='PRESSED'||k[1]==='NOT PRESSED')&&ciForm(k[1],r)){for(const z of ciRulings(l))o.cited.push(z);} // judge_fix5 G2: a K-G9 ruling line
+   else if(k[1]==='CORRECTED RESULT'&&(m=r.match(/^(BROKEN-1|BROKEN-2|PARTIAL-1|PARTIAL-2|PARTIAL-3|HELD-1)$/)))o.result.push({tag:m[1],word:m[1].split('-')[0],line:l});
+--- "base/Panel Cure Build 3.js"	2026-11-03 07:05:55.669700903 +0000
++++ "new/Panel Cure Build 3.js"	2026-11-03 07:07:46.025915809 +0000
+@@ -536,7 +536,7 @@
+   // judge_fix4 F3 (run 32266: GLM's "RETRACTED: D1 vs C6 (Matthew 1:18) -- regraded UNDERDETERMINED -- [DR1] answered ..." was refused as
+   // malformed, ten times): a RETRACTED line counts when it opens with the item label (D<n> vs C<m>, a rule name before it allowed); whatever
+   // follows is read as its regrade (the first grade word) and its reason. A regrade to a LINK BROKEN grade is no retraction (malformed).
+-  if(k[1]==='RETRACTED'&&(m=r.match(/^(?:K-[A-Z]+\d*\s+)?D(\d+)\s+vs\.?\s+C(\d+)\b(.*)$/i))&&!/\bLINK\s+BROKEN\b/i.test(m[3].replace(/\bnot\s+(?:a\s+)?(?:\S+\s+)?LINK\s+BROKEN\b/ig,''))){const rest=m[3].trim();const g=(rest.toUpperCase().match(/\b(UNDERDETERMINED|STANDS)\b/)||[])[1]||null;
++  if(k[1]==='RETRACTED'&&(m=r.match(/^(?:K-[A-Z]+\d*\s+)?D(\d+)\s+vs\.?\s+C(\d+)\b(.*)$/i))&&!/\bLINK\s+BROKEN\b/i.test(m[3].replace(/\bnot\s+(?:a\s+)?(?:\S+\s+)?LINK\s+BROKEN\b/ig,'').replace(/\b(?:(?:DEFENDER|CHALLENGER)\s+)?LINK\s+BROKEN\s+(?:grade|ruling|mark|label|line|verdict)s?\b/ig,''))){const rest=m[3].trim();const g=(rest.toUpperCase().match(/\b(UNDERDETERMINED|STANDS)\b/)||[])[1]||null;
+    o.withdrawn.push({link:cureId(m[1],m[2]),line:l,regrade:g,reason:rest.replace(/^\([^)]*\)\s*/,'').replace(/^(?:--|—|-|:)\s*/,'').replace(/^(?:re)?grade[sd]?\s+(?:to\s+)?(?:UNDERDETERMINED|STANDS)\s*(?:--|—|-|:)?\s*/i,'').trim()||null});}
+   else if((k[1]==='PRESSED'||k[1]==='NOT PRESSED')&&ciForm(k[1],r)){for(const z of ciRulings(l))o.cited.push(z);} // judge_fix5 G2: a K-G9 ruling line
+   else if(k[1]==='CORRECTED RESULT'&&(m=r.match(/^(BROKEN-1|BROKEN-2|PARTIAL-1|PARTIAL-2|PARTIAL-3|HELD-1)$/)))o.result.push({tag:m[1],word:m[1].split('-')[0],line:l});
+--- "base/Panel Cure Check.js"	2026-11-03 07:05:55.673011688 +0000
++++ "new/Panel Cure Check.js"	2026-11-03 07:07:46.026729213 +0000
+@@ -536,7 +536,7 @@
+   // judge_fix4 F3 (run 32266: GLM's "RETRACTED: D1 vs C6 (Matthew 1:18) -- regraded UNDERDETERMINED -- [DR1] answered ..." was refused as
+   // malformed, ten times): a RETRACTED line counts when it opens with the item label (D<n> vs C<m>, a rule name before it allowed); whatever
+   // follows is read as its regrade (the first grade word) and its reason. A regrade to a LINK BROKEN grade is no retraction (malformed).
+-  if(k[1]==='RETRACTED'&&(m=r.match(/^(?:K-[A-Z]+\d*\s+)?D(\d+)\s+vs\.?\s+C(\d+)\b(.*)$/i))&&!/\bLINK\s+BROKEN\b/i.test(m[3].replace(/\bnot\s+(?:a\s+)?(?:\S+\s+)?LINK\s+BROKEN\b/ig,''))){const rest=m[3].trim();const g=(rest.toUpperCase().match(/\b(UNDERDETERMINED|STANDS)\b/)||[])[1]||null;
++  if(k[1]==='RETRACTED'&&(m=r.match(/^(?:K-[A-Z]+\d*\s+)?D(\d+)\s+vs\.?\s+C(\d+)\b(.*)$/i))&&!/\bLINK\s+BROKEN\b/i.test(m[3].replace(/\bnot\s+(?:a\s+)?(?:\S+\s+)?LINK\s+BROKEN\b/ig,'').replace(/\b(?:(?:DEFENDER|CHALLENGER)\s+)?LINK\s+BROKEN\s+(?:grade|ruling|mark|label|line|verdict)s?\b/ig,''))){const rest=m[3].trim();const g=(rest.toUpperCase().match(/\b(UNDERDETERMINED|STANDS)\b/)||[])[1]||null;
+    o.withdrawn.push({link:cureId(m[1],m[2]),line:l,regrade:g,reason:rest.replace(/^\([^)]*\)\s*/,'').replace(/^(?:--|—|-|:)\s*/,'').replace(/^(?:re)?grade[sd]?\s+(?:to\s+)?(?:UNDERDETERMINED|STANDS)\s*(?:--|—|-|:)?\s*/i,'').trim()||null});}
+   else if((k[1]==='PRESSED'||k[1]==='NOT PRESSED')&&ciForm(k[1],r)){for(const z of ciRulings(l))o.cited.push(z);} // judge_fix5 G2: a K-G9 ruling line
+   else if(k[1]==='CORRECTED RESULT'&&(m=r.match(/^(BROKEN-1|BROKEN-2|PARTIAL-1|PARTIAL-2|PARTIAL-3|HELD-1)$/)))o.result.push({tag:m[1],word:m[1].split('-')[0],line:l});
+--- "base/Panel Cure Normalize 1.js"	2026-11-03 07:05:55.665785886 +0000
++++ "new/Panel Cure Normalize 1.js"	2026-11-03 07:07:46.027308494 +0000
+@@ -536,7 +536,7 @@
+   // judge_fix4 F3 (run 32266: GLM's "RETRACTED: D1 vs C6 (Matthew 1:18) -- regraded UNDERDETERMINED -- [DR1] answered ..." was refused as
+   // malformed, ten times): a RETRACTED line counts when it opens with the item label (D<n> vs C<m>, a rule name before it allowed); whatever
+   // follows is read as its regrade (the first grade word) and its reason. A regrade to a LINK BROKEN grade is no retraction (malformed).
+-  if(k[1]==='RETRACTED'&&(m=r.match(/^(?:K-[A-Z]+\d*\s+)?D(\d+)\s+vs\.?\s+C(\d+)\b(.*)$/i))&&!/\bLINK\s+BROKEN\b/i.test(m[3].replace(/\bnot\s+(?:a\s+)?(?:\S+\s+)?LINK\s+BROKEN\b/ig,''))){const rest=m[3].trim();const g=(rest.toUpperCase().match(/\b(UNDERDETERMINED|STANDS)\b/)||[])[1]||null;
++  if(k[1]==='RETRACTED'&&(m=r.match(/^(?:K-[A-Z]+\d*\s+)?D(\d+)\s+vs\.?\s+C(\d+)\b(.*)$/i))&&!/\bLINK\s+BROKEN\b/i.test(m[3].replace(/\bnot\s+(?:a\s+)?(?:\S+\s+)?LINK\s+BROKEN\b/ig,'').replace(/\b(?:(?:DEFENDER|CHALLENGER)\s+)?LINK\s+BROKEN\s+(?:grade|ruling|mark|label|line|verdict)s?\b/ig,''))){const rest=m[3].trim();const g=(rest.toUpperCase().match(/\b(UNDERDETERMINED|STANDS)\b/)||[])[1]||null;
+    o.withdrawn.push({link:cureId(m[1],m[2]),line:l,regrade:g,reason:rest.replace(/^\([^)]*\)\s*/,'').replace(/^(?:--|—|-|:)\s*/,'').replace(/^(?:re)?grade[sd]?\s+(?:to\s+)?(?:UNDERDETERMINED|STANDS)\s*(?:--|—|-|:)?\s*/i,'').trim()||null});}
+   else if((k[1]==='PRESSED'||k[1]==='NOT PRESSED')&&ciForm(k[1],r)){for(const z of ciRulings(l))o.cited.push(z);} // judge_fix5 G2: a K-G9 ruling line
+   else if(k[1]==='CORRECTED RESULT'&&(m=r.match(/^(BROKEN-1|BROKEN-2|PARTIAL-1|PARTIAL-2|PARTIAL-3|HELD-1)$/)))o.result.push({tag:m[1],word:m[1].split('-')[0],line:l});
+--- "base/Panel Cure Normalize 2.js"	2026-11-03 07:05:55.668488012 +0000
++++ "new/Panel Cure Normalize 2.js"	2026-11-03 07:07:46.028127793 +0000
+@@ -536,7 +536,7 @@
+   // judge_fix4 F3 (run 32266: GLM's "RETRACTED: D1 vs C6 (Matthew 1:18) -- regraded UNDERDETERMINED -- [DR1] answered ..." was refused as
+   // malformed, ten times): a RETRACTED line counts when it opens with the item label (D<n> vs C<m>, a rule name before it allowed); whatever
+   // follows is read as its regrade (the first grade word) and its reason. A regrade to a LINK BROKEN grade is no retraction (malformed).
+-  if(k[1]==='RETRACTED'&&(m=r.match(/^(?:K-[A-Z]+\d*\s+)?D(\d+)\s+vs\.?\s+C(\d+)\b(.*)$/i))&&!/\bLINK\s+BROKEN\b/i.test(m[3].replace(/\bnot\s+(?:a\s+)?(?:\S+\s+)?LINK\s+BROKEN\b/ig,''))){const rest=m[3].trim();const g=(rest.toUpperCase().match(/\b(UNDERDETERMINED|STANDS)\b/)||[])[1]||null;
++  if(k[1]==='RETRACTED'&&(m=r.match(/^(?:K-[A-Z]+\d*\s+)?D(\d+)\s+vs\.?\s+C(\d+)\b(.*)$/i))&&!/\bLINK\s+BROKEN\b/i.test(m[3].replace(/\bnot\s+(?:a\s+)?(?:\S+\s+)?LINK\s+BROKEN\b/ig,'').replace(/\b(?:(?:DEFENDER|CHALLENGER)\s+)?LINK\s+BROKEN\s+(?:grade|ruling|mark|label|line|verdict)s?\b/ig,''))){const rest=m[3].trim();const g=(rest.toUpperCase().match(/\b(UNDERDETERMINED|STANDS)\b/)||[])[1]||null;
+    o.withdrawn.push({link:cureId(m[1],m[2]),line:l,regrade:g,reason:rest.replace(/^\([^)]*\)\s*/,'').replace(/^(?:--|—|-|:)\s*/,'').replace(/^(?:re)?grade[sd]?\s+(?:to\s+)?(?:UNDERDETERMINED|STANDS)\s*(?:--|—|-|:)?\s*/i,'').trim()||null});}
+   else if((k[1]==='PRESSED'||k[1]==='NOT PRESSED')&&ciForm(k[1],r)){for(const z of ciRulings(l))o.cited.push(z);} // judge_fix5 G2: a K-G9 ruling line
+   else if(k[1]==='CORRECTED RESULT'&&(m=r.match(/^(BROKEN-1|BROKEN-2|PARTIAL-1|PARTIAL-2|PARTIAL-3|HELD-1)$/)))o.result.push({tag:m[1],word:m[1].split('-')[0],line:l});
+--- "base/Panel Cure Normalize 3.js"	2026-11-03 07:05:55.671818514 +0000
++++ "new/Panel Cure Normalize 3.js"	2026-11-03 07:07:46.028655192 +0000
+@@ -536,7 +536,7 @@
+   // judge_fix4 F3 (run 32266: GLM's "RETRACTED: D1 vs C6 (Matthew 1:18) -- regraded UNDERDETERMINED -- [DR1] answered ..." was refused as
+   // malformed, ten times): a RETRACTED line counts when it opens with the item label (D<n> vs C<m>, a rule name before it allowed); whatever
+   // follows is read as its regrade (the first grade word) and its reason. A regrade to a LINK BROKEN grade is no retraction (malformed).
+-  if(k[1]==='RETRACTED'&&(m=r.match(/^(?:K-[A-Z]+\d*\s+)?D(\d+)\s+vs\.?\s+C(\d+)\b(.*)$/i))&&!/\bLINK\s+BROKEN\b/i.test(m[3].replace(/\bnot\s+(?:a\s+)?(?:\S+\s+)?LINK\s+BROKEN\b/ig,''))){const rest=m[3].trim();const g=(rest.toUpperCase().match(/\b(UNDERDETERMINED|STANDS)\b/)||[])[1]||null;
++  if(k[1]==='RETRACTED'&&(m=r.match(/^(?:K-[A-Z]+\d*\s+)?D(\d+)\s+vs\.?\s+C(\d+)\b(.*)$/i))&&!/\bLINK\s+BROKEN\b/i.test(m[3].replace(/\bnot\s+(?:a\s+)?(?:\S+\s+)?LINK\s+BROKEN\b/ig,'').replace(/\b(?:(?:DEFENDER|CHALLENGER)\s+)?LINK\s+BROKEN\s+(?:grade|ruling|mark|label|line|verdict)s?\b/ig,''))){const rest=m[3].trim();const g=(rest.toUpperCase().match(/\b(UNDERDETERMINED|STANDS)\b/)||[])[1]||null;
+    o.withdrawn.push({link:cureId(m[1],m[2]),line:l,regrade:g,reason:rest.replace(/^\([^)]*\)\s*/,'').replace(/^(?:--|—|-|:)\s*/,'').replace(/^(?:re)?grade[sd]?\s+(?:to\s+)?(?:UNDERDETERMINED|STANDS)\s*(?:--|—|-|:)?\s*/i,'').trim()||null});}
+   else if((k[1]==='PRESSED'||k[1]==='NOT PRESSED')&&ciForm(k[1],r)){for(const z of ciRulings(l))o.cited.push(z);} // judge_fix5 G2: a K-G9 ruling line
+   else if(k[1]==='CORRECTED RESULT'&&(m=r.match(/^(BROKEN-1|BROKEN-2|PARTIAL-1|PARTIAL-2|PARTIAL-3|HELD-1)$/)))o.result.push({tag:m[1],word:m[1].split('-')[0],line:l});
