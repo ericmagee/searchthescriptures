@@ -10,7 +10,7 @@ Debate 31941712-85a9-4117-a13d-cabae2cde840. Outcome UNDERDETERMINED (3 of 3 sea
 - single (deepseek): K-G4 x3 retracted (the challenger had answered Matthew 1:18, 1:20, 1:25 in [DR3]); K-G9 answered.
 
 ## Timings
-Rounds D1-C4 on anthropic direct: 47-95 s each. Panel: gemini 112 s, glm 507 s + cure 223 s, chatgpt 84 s + cure 81 s. Single verdict 492 s.
+Rounds D1-C4 on anthropic direct: 47-95 s each. Panel: gemini 112 s + cure 81 s, glm 507 s + cure 223 s, chatgpt 84 s (no cure). Corrected: the first write-up gave the 81 s cure to chatgpt; Panel Cure Call 1 was gemini's (enforcer rows 112-113), per Worker_E A9. Single verdict 492 s.
 timings: prototypes/timings/timings_32306.json
 
 ## Reading
