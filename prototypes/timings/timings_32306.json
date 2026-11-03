@@ -1,0 +1,249 @@
+{
+ "32306": [
+  [
+   "00:00:04",
+   "Synthesis Normalizer",
+   0,
+   1.7,
+   ""
+  ],
+  [
+   "00:00:07",
+   "Build Independent Verdict",
+   0,
+   0.2,
+   ""
+  ],
+  [
+   "00:00:07",
+   "Verdict Judge Route",
+   0,
+   0.0,
+   ""
+  ],
+  [
+   "00:00:07",
+   "Independent Verdict Call",
+   0,
+   491.9,
+   ""
+  ],
+  [
+   "00:08:19",
+   "Verdict Normalizer",
+   0,
+   1.8,
+   ""
+  ],
+  [
+   "00:08:21",
+   "Extract Independent Verdict",
+   0,
+   0.2,
+   ""
+  ],
+  [
+   "00:08:21",
+   "Cure Call deepseek",
+   0,
+   59.0,
+   ""
+  ],
+  [
+   "00:09:23",
+   "Build Diagnostic Prompt",
+   0,
+   0.1,
+   ""
+  ],
+  [
+   "00:09:23",
+   "Diagnostic Judge Route",
+   0,
+   0.0,
+   ""
+  ],
+  [
+   "00:09:23",
+   "DeepSeek Diagnostic Call",
+   0,
+   40.9,
+   ""
+  ],
+  [
+   "00:10:04",
+   "Diagnostic Normalizer",
+   0,
+   1.7,
+   ""
+  ],
+  [
+   "00:10:05",
+   "Extract Diagnostic",
+   0,
+   0.1,
+   ""
+  ],
+  [
+   "00:10:07",
+   "Panel Judge 1 Route",
+   0,
+   0.0,
+   ""
+  ],
+  [
+   "00:10:07",
+   "Panel Judge 1 openrouter",
+   0,
+   111.8,
+   ""
+  ],
+  [
+   "00:11:59",
+   "Panel Judge 2 Route",
+   0,
+   0.0,
+   ""
+  ],
+  [
+   "00:11:59",
+   "Panel Judge 2 openrouter",
+   0,
+   506.9,
+   ""
+  ],
+  [
+   "00:20:26",
+   "Panel Judge 3 Route",
+   0,
+   0.0,
+   ""
+  ],
+  [
+   "00:20:26",
+   "Panel Judge 3 openrouter",
+   0,
+   83.7,
+   ""
+  ],
+  [
+   "00:21:52",
+   "Reserve Needed?",
+   0,
+   0.0,
+   ""
+  ],
+  [
+   "00:21:52",
+   "Panel Cure Call 1 openrouter",
+   0,
+   80.8,
+   ""
+  ],
+  [
+   "00:23:15",
+   "Panel Cure Call 2 openrouter",
+   0,
+   222.9,
+   ""
+  ],
+  [
+   "00:27:01",
+   "Alternate Needed?",
+   0,
+   0.0,
+   ""
+  ],
+  [
+   "00:27:01",
+   "Alternate Merge",
+   0,
+   0.1,
+   ""
+  ],
+  [
+   "00:27:02",
+   "Record Alternates",
+   0,
+   0.3,
+   ""
+  ],
+  [
+   "23:47:46",
+   "D1 Call anthropic",
+   0,
+   47.3,
+   ""
+  ],
+  [
+   "23:48:37",
+   "C1 Call anthropic",
+   0,
+   79.8,
+   ""
+  ],
+  [
+   "23:49:59",
+   "D2 Call anthropic",
+   0,
+   75.8,
+   ""
+  ],
+  [
+   "23:51:17",
+   "C2 Call anthropic",
+   0,
+   95.2,
+   ""
+  ],
+  [
+   "23:52:55",
+   "D3 Call anthropic",
+   0,
+   90.2,
+   ""
+  ],
+  [
+   "23:54:28",
+   "C3 Call anthropic",
+   0,
+   76.4,
+   ""
+  ],
+  [
+   "23:55:47",
+   "D4 Call anthropic",
+   0,
+   86.4,
+   ""
+  ],
+  [
+   "23:57:17",
+   "C4 Call anthropic",
+   0,
+   71.5,
+   ""
+  ],
+  [
+   "23:58:30",
+   "Build Synthesis",
+   0,
+   0.1,
+   ""
+  ],
+  [
+   "23:58:30",
+   "Synthesis Judge Route",
+   0,
+   0.0,
+   ""
+  ],
+  [
+   "23:58:30",
+   "DeepSeek Synthesis Call",
+   0,
+   93.9,
+   ""
+  ]
+ ]
+}
