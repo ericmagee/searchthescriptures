@@ -36,5 +36,10 @@ You rule a listed premise VOID only by quoting the words of its charge that go b
 4. A judge that refuses, or fails the check twice, does not judge. A replacement judge takes the seat and must also accept. If no replacement accepts, the debate is marked not graded.
 5. The accepted exchange stays at the head of that judge's conversation while it judges.
 6. At every cure, the system quotes the judge's own accepted line for the commitment the flagged line breaks, beside that line.
-## Part C. Where it goes in the live debate (to settle after B)
+## Part C. Where it goes (APPROVED by the operator, 2026-11-03 01:5x CST: "yes approved.. one rule for all judges")
+
+1. The agreement runs once per debate, after the debaters finish and before any judge reads the debate.
+2. Every judge that may grade takes it: the single judge, the three panel judges, the reserve and the replacements. One rule for all judges.
+3. Each judge's agreement and its status are saved with the debate; the transcript prints them under "The judges' agreement".
+4. The judges' rulebook drops sentence (B) ("A witness contradicts a link only when its own words state the contrary"), so it agrees with Commitment 3.
 ## Part D. The live test (to settle after C)
