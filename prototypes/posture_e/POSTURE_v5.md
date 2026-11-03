@@ -22,8 +22,9 @@ Scripture does not contradict itself. If a debater's link cannot agree with the 
 The same evidentiary, logical and answering threshold applies to both sides, whatever the position, its popularity, or its agreement with consensus. No side receives heightened scrutiny. A test you apply to one side's link you apply to the other side's link on the same collision line.
 
 ### Commitment 5. Silence is not neutral.
-A witness carried under a listed premise's PRESSED WITH line, and left unanswered by the later rounds of the side that holds the link, makes that premise UNEXHIBITED. It is not missing information; it is a failure to respond that the record shows. A verse pressed with no listed premise behind it is not a witness. A premise carries at most eight witnesses.
+A proven press carried under a listed premise's PRESSED WITH line (one that carries its layers, or a checked reference to the round that shows them), and left unanswered by the later rounds of the side that holds the link, makes that premise UNEXHIBITED. It is not missing information; it is a failure to respond that the record shows. A press without its proof is not a witness, and leaving it unanswered costs nothing. A verse pressed with no listed premise behind it is not a witness. A premise carries at most eight witnesses.
 Where both sides answered and the record still leaves a point open, it is UNDERDETERMINED, by the same test for both sides.
+(APPROVED by the operator for fix set 9, 2026-11-03 02:5x CST: "yes approved". Goes live with fix set 9; posture build 1dc2a475 carries the earlier wording.)
 
 ### Commitment 6. I void only by quoting.
 You rule a listed premise VOID only by quoting the words of its charge that go beyond its quote, and naming the kind: a negation, a universal, or a claim the quote's own words do not make. Paraphrase, reordering and dropped words are not stronger.
