@@ -6,8 +6,8 @@ ROOT=os.path.dirname(os.path.abspath(__file__));URL='https://truthapp.app.n8n.cl
 def req(m,b=None):
     r=urllib.request.Request(URL,method=m,data=None if b is None else json.dumps(b).encode(),headers={'X-N8N-API-KEY':KEY,'Content-Type':'application/json','Accept':'application/json'})
     return json.load(urllib.request.urlopen(r,timeout=180))
-BASE=json.load(open(os.path.join(ROOT,'..','trim1','fetchback_trim1.json')))
-W1="={{ (__b=>(__b&&typeof __b==='object'&&/^z-ai\\//.test(String(__b.model||'')))?Object.assign({},__b,{provider:{order:['z-ai'],allow_fallbacks:false}}):__b)("
+BASE=json.load(open(os.path.join(ROOT,'fetchback_rollback.json')))
+W1="={{ (__b=>(__b&&typeof __b==='object'&&/^z-ai\\//.test(String(__b.model||'')))?Object.assign({},__b,{provider:{order:['z-ai'],allow_fallbacks:false} }):__b)("
 W2=") }}"
 def targets(wf):
     out=[]
@@ -36,6 +36,6 @@ LN={n['name']:n for n in live['nodes']}
 for nm,n in LN.items():
     if nm not in changed and json.dumps(BN[nm]['parameters'],sort_keys=True)!=json.dumps(n['parameters'],sort_keys=True):fail.append('moved '+nm)
 if json.dumps(back['connections'],sort_keys=True)!=json.dumps(live['connections'],sort_keys=True):fail.append('connections')
-json.dump(back,open(os.path.join(ROOT,'fetchback_zai.json'),'w'))
+json.dump(back,open(os.path.join(ROOT,'fetchback_zai2.json'),'w'))
 if back.get('activeVersionId')!=back.get('versionId') or not back.get('active'):fail.append('NOT PUBLISHED')
 print('FETCH-BACK','OK' if not fail else 'FAIL '+str(fail),'| versionId',back.get('versionId'),'| active',back.get('active'),'| nodes',len(back['nodes']))
