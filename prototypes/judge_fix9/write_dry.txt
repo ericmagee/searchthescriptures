@@ -1,0 +1,121 @@
+mode DRY (read-only; --write not given) | live versionId cb4b94e0-93f0-4b80-85f5-1f78ac2e9daa | base read versionId cb4b94e0-93f0-4b80-85f5-1f78ac2e9daa
+guards passed: base matched for 44 code nodes; versionId, connections (493) and node count (271) equal the base read; 30 added names and ids free; 7 links to remove are live
+  Accept Build                   base 9bf2d4af -> new dcaf622f
+  Accept Check                   base 1526a3ec -> new f8bcd702
+  Accept Final                   base 38c1e2f2 -> new 5852c8a7
+  Accept Return Build            base 57419fe1 -> new 92f6d43e
+  Alternate Build                base 710f3ff6 -> new 8545a455
+  Alternate Cure Build           base d1dc6566 -> new 0e474610
+  Alternate Cure Normalize       base 037af2d1 -> new 4a665b8e
+  Alternate Merge                base e68b0a8d -> new 61e35dde
+  Alternate Payloads             base b9b9cd4a -> new 1e057378
+  Build Independent Verdict      base 090890ef -> new 5e52c150
+  Build Save Body                base 7df90871 -> new eed73864
+  Build Synthesis                base 1bec9c94 -> new efda041e
+  C1 Build                       base 02adbf01 -> new 760aaf39
+  C1 Extract                     base 442a0aff -> new 91e4ef01
+  C2 Build                       base 8fd4d397 -> new 437b01cc
+  C2 Extract                     base 13340c5e -> new 39702b59
+  C3 Build                       base f7abecc4 -> new d2f2329d
+  C3 Extract                     base c9a6896a -> new a10d3539
+  C4 Build                       base fec538e0 -> new b57e3b1d
+  Citation Scan                  base d6aa5e59 -> new 2068d022
+  Cure Build                     base 4748e32f -> new bab3113d
+  Cure Check                     base 2f1bcb8d -> new 6d312364
+  Cure Normalize                 base 2ae0c88c -> new 6c86803c
+  D1 Build                       base 071211bd -> new 332a6673
+  D2 Build                       base 78333fdf -> new 5054994d
+  D2 Extract                     base e7af246d -> new 47e8a613
+  D3 Build                       base 9321ada5 -> new 5f80d7c8
+  D3 Extract                     base 6b19317f -> new 79c56c3d
+  D4 Build                       base c4d7ba5a -> new c19a1131
+  D4 Extract                     base f1738c04 -> new 920bf68a
+  Extract Independent Verdict    base fd2db2c4 -> new d2a4292b
+  Format Markdown                base dc097443 -> new 9b808347
+  Init with Guards               base 413a233b -> new cd826b88
+  Panel Build                    base b0d87896 -> new c6bc2813
+  Panel Cure Build 1             base a5c4a5d1 -> new 7aaac1c7
+  Panel Cure Build 2             base 2c324f74 -> new 0ebd6d96
+  Panel Cure Build 3             base a85bc587 -> new 4c0906e9
+  Panel Cure Check               base 8fe8020f -> new f15d19f6
+  Panel Cure Normalize 1         base fbdf616b -> new 2c1d3212
+  Panel Cure Normalize 2         base 7c28557f -> new 7795274d
+  Panel Cure Normalize 3         base 7cde00c3 -> new 176fb4d2
+  Panel Payloads                 base 970cf767 -> new e83114d3
+  Quote Report                   base 473782fc -> new a2769e68
+  Reserve Build                  base 0c93ed40 -> new 9aeb8492
+  + D2 Words Plan                code         5aa8224d
+  + D2 Words Sheet               httpRequest  
+  + D2 Lexicon Plan              code         baba4554
+  + D2 Lexicon Sheet             httpRequest  
+  + C2 Words Plan                code         458498ea
+  + C2 Words Sheet               httpRequest  
+  + C2 Lexicon Plan              code         e516463e
+  + C2 Lexicon Sheet             httpRequest  
+  + D3 Words Plan                code         d07354b0
+  + D3 Words Sheet               httpRequest  
+  + D3 Lexicon Plan              code         0adc5710
+  + D3 Lexicon Sheet             httpRequest  
+  + C3 Words Plan                code         ebdfa9fd
+  + C3 Words Sheet               httpRequest  
+  + C3 Lexicon Plan              code         beb29769
+  + C3 Lexicon Sheet             httpRequest  
+  + D4 Words Plan                code         96cad104
+  + D4 Words Sheet               httpRequest  
+  + D4 Lexicon Plan              code         55bc6040
+  + D4 Lexicon Sheet             httpRequest  
+  + C4 Words Plan                code         8a813366
+  + C4 Words Sheet               httpRequest  
+  + C4 Lexicon Plan              code         fcdbd3b3
+  + C4 Lexicon Sheet             httpRequest  
+  + L2 Words Plan                code         40477fe4
+  + L2 Words                     httpRequest  
+  + L2 Lexicon Plan              code         e6ee7a28
+  + L2 Lexicon                   httpRequest  
+  + L2 Count Plan                code         a874785b
+  + L2 Counts                    httpRequest  
+  - link C2 Verse Sheet [0] -> C2 Build
+  - link C3 Verse Sheet [0] -> C3 Build
+  - link C4 Verse Sheet [0] -> C4 Build
+  - link D2 Verse Sheet [0] -> D2 Build
+  - link D3 Verse Sheet [0] -> D3 Build
+  - link D4 Verse Sheet [0] -> D4 Build
+  - link Find Words [0] -> Quote Report
+  + link C2 Lexicon Plan [0] -> C2 Lexicon Sheet
+  + link C2 Lexicon Sheet [0] -> C2 Build
+  + link C2 Verse Sheet [0] -> C2 Words Plan
+  + link C2 Words Plan [0] -> C2 Words Sheet
+  + link C2 Words Sheet [0] -> C2 Lexicon Plan
+  + link C3 Lexicon Plan [0] -> C3 Lexicon Sheet
+  + link C3 Lexicon Sheet [0] -> C3 Build
+  + link C3 Verse Sheet [0] -> C3 Words Plan
+  + link C3 Words Plan [0] -> C3 Words Sheet
+  + link C3 Words Sheet [0] -> C3 Lexicon Plan
+  + link C4 Lexicon Plan [0] -> C4 Lexicon Sheet
+  + link C4 Lexicon Sheet [0] -> C4 Build
+  + link C4 Verse Sheet [0] -> C4 Words Plan
+  + link C4 Words Plan [0] -> C4 Words Sheet
+  + link C4 Words Sheet [0] -> C4 Lexicon Plan
+  + link D2 Lexicon Plan [0] -> D2 Lexicon Sheet
+  + link D2 Lexicon Sheet [0] -> D2 Build
+  + link D2 Verse Sheet [0] -> D2 Words Plan
+  + link D2 Words Plan [0] -> D2 Words Sheet
+  + link D2 Words Sheet [0] -> D2 Lexicon Plan
+  + link D3 Lexicon Plan [0] -> D3 Lexicon Sheet
+  + link D3 Lexicon Sheet [0] -> D3 Build
+  + link D3 Verse Sheet [0] -> D3 Words Plan
+  + link D3 Words Plan [0] -> D3 Words Sheet
+  + link D3 Words Sheet [0] -> D3 Lexicon Plan
+  + link D4 Lexicon Plan [0] -> D4 Lexicon Sheet
+  + link D4 Lexicon Sheet [0] -> D4 Build
+  + link D4 Verse Sheet [0] -> D4 Words Plan
+  + link D4 Words Plan [0] -> D4 Words Sheet
+  + link D4 Words Sheet [0] -> D4 Lexicon Plan
+  + link Find Words [0] -> L2 Words Plan
+  + link L2 Count Plan [0] -> L2 Counts
+  + link L2 Counts [0] -> Quote Report
+  + link L2 Lexicon [0] -> L2 Count Plan
+  + link L2 Lexicon Plan [0] -> L2 Lexicon
+  + link L2 Words [0] -> L2 Lexicon Plan
+  + link L2 Words Plan [0] -> L2 Words
+DRY: would PUT 44 code nodes changed, 30 nodes added (301 nodes), 523 connections (7 removed, 37 added); nothing written (run with --write to write)

@@ -1,0 +1,152 @@
+== S1: the judges' rulebook -- sentence (B) removed everywhere, ruling 396 in its place, the FORCED line, K-F
+ok  no changed node carries sentence (B), in either form -- none
+ok  every live node that carried sentence (B) is changed -- all changed
+ok  Panel Build: ruling 396 and the FORCED line form stand where sentence (B) stood
+ok  Build Independent Verdict: ruling 396 and the FORCED line form stand where sentence (B) stood
+ok  posture Commitment 3 replaced by ruling 396 in the 11 nodes that carry it -- 11 of 11
+ok  the cure prompt of all 14 cure nodes carries ruling 396 and the K-F, K-P, K-R, K-L2 items
+ok  K-F: a FORCED line whose three quotations stand in [DR2] and [CR3] passes
+ok  K-F: a MEANS quotation the round does not hold is marked -- the MEANS quotation is not in [DR2]
+ok  K-F: a forced-link grade with no FORCED line is marked
+ok  K-F: a malformed FORCED line is marked
+ok  K-F: a BROKEN line on an unanswered witness is not a forced-link line
+ok  K-F cure: one FORCED line whose quotations stand cures
+ok  K-F cure: a FORCED line with a quotation the round does not hold does not cure
+ok  K-F cure: RETRACTED with one CORRECTED RESULT cures
+== S2: the debaters -- every critical point carries its layers; the Oracle seat; the PRESS FORM; counts name their unit
+ok  Init with Guards: the Oracle seat is told to prove every position with the layers
+ok  Init with Guards: the PROVEN STRUCTURE text goes to both seat profiles (Oracle and plain)
+ok  D1 Build: the PROVEN STRUCTURE text is appended to the round's last user message
+ok  C1 Build: the PROVEN STRUCTURE text is appended to the round's last user message
+ok  D2 Build: the PROVEN STRUCTURE text is appended to the round's last user message
+ok  C2 Build: the PROVEN STRUCTURE text is appended to the round's last user message
+ok  D3 Build: the PROVEN STRUCTURE text is appended to the round's last user message
+ok  C3 Build: the PROVEN STRUCTURE text is appended to the round's last user message
+ok  D4 Build: the PROVEN STRUCTURE text is appended to the round's last user message
+ok  C4 Build: the PROVEN STRUCTURE text is appended to the round's last user message
+ok  C2 Build: the list asks every press in the fixed PRESS FORM
+ok  D3 Build: the list asks every press in the fixed PRESS FORM
+ok  the text: counts name their unit (verses or tokens); the charge sentence is exempt
+ok  C3 Extract (32306): the [L2] read plan covers every cited verse (85), pressed first, in batches of 20, no cap -- 85 verses in 5 requests; first Acts 2:30, Romans 1:3, 2 Samuel 7:12
+ok  D4 Words Plan: one item (one request) per batch -- 5 items
+ok  the rows of all 85 verses read (data/ow_l2.json)
+ok  D4 Lexicon Plan: the Strong's numbers read, function words left out (G3588 the, G2532 and, G1722 in), gloss read -- 461 numbers in 2 requests
+ok  D4 Build (32306): runs; its request carries the PROVEN STRUCTURE text and the [L2] SHEET -- [L2] SHEET -- read by the system from the record's original-words table (original_words: t
+ok  D4 Build: the [L2] sheet quotes the lexicon gloss whole (with its source tag) -- function words (articles, conjunctions, prepositions, particles, pronouns) are left out G1080, G3708, G4773, G4815, G1094, G3376, G1623, G4723, G2250, G2264, G935, G2409, G2183, G7, G2364, G2, G2089, G3962, G4876, G3198, G11, G2464, 
+ok  D4 Build: every one of the 85 verses read; no function word on the sheet -- LEFT OFF THE [L2] SHEET: numbers over the sheet cap of 26000 characters: H1697, H6031, H7453, H1197, H7451, H7130, G3753, G2064, G4138, G5550, G1821, G1135, G3551, H7116, H7649, H7267,
+ok  D4 Build without the sheet reads (a normal run with no new input shape): runs, no [L2] sheet -- ok
+ok  D4 Build: base runs on the same input (the new request differs by the appended texts)
+ok  Init with Guards runs: the Oracle seat (here the challenger) carries the line; the plain seat does not
+ok  Init with Guards: both seats get the PROVEN STRUCTURE text, nothing else changes
+== S3: the press parse, the ledger, ruling 372 counting (K-G1, K-G4, K-G6, K-G10, K-G11, D4), REFERENCE and K-R
+ok  parse: MEANS with an [L2] word (meaning) in place is PROVEN
+ok  parse: MEANS with an [L3] verse "quote" in place is PROVEN
+ok  parse: reference and quotation alone ([L1] only, the stored format) is UNPROVEN
+ok  parse: MEANS with no second layer is UNPROVEN
+ok  parse: an [L3] that is the same verse is no second layer
+ok  parse: an [L2] without its meaning is not in the form
+ok  proof by reference: [CR2] quotes Romans 1:3 with its reference in a block of two layer kinds -- PROVEN IN [CR2]: quoted there, its block carries L1+L2+L3
+ok  proof by reference: a round after the press does not prove it -- PROVEN IN [DR3]: a round after the press
+ok  proof by reference: a round that does not quote the verse in a block of two kinds does not prove it -- PROVEN IN [CR1]: the verse is not named there
+ok  proof by reference: a verse named but not quoted there does not prove it -- PROVEN IN [CR2]: the verse is named there but not quoted with its reference
+ok  parse: the cap of 8 pressed verses per premise (ruling 393) holds -- Matthew 1:9, Matthew 1:10
+ok  ledger (32302, stored format): base lists NOT NAMED verses; new lists none, every press shown UNPROVEN, not a witness -- Isaiah 7:11 | Luke 3:31
+ok  ledger (32302 rewritten in the PRESS FORM): new counts the proven presses and lists the same NOT NAMED verses as base -- Isaiah 7:11 | Luke 3:31
+ok  ledger lines keep the form K-G6 reads (premise n (LINK m): ... NOT NAMED: ...)
+ok  K-P (32302 Gemini): challenger premises 2 and 4 counted UNEXHIBITED on presses the ledger marks UNPROVEN -- K-P CHALLENGER premise 2, K-P CHALLENGER premise 4
+ok  K-P (the same seat, the presses rewritten in the PRESS FORM): no K-P and no K-G10 -- the count rests on proven presses
+ok  K-G4 (32302 GLM, D6 vs C4 rests on Luke 3:31 and on unproven presses): not raised; K-P raised instead
+ok  K-G4 (the presses rewritten in the PRESS FORM): raised again as in base; no K-P
+ok  K-P cure (count): CORRECTED COUNT without the two premises and its standing cures -- 3 -> 1
+ok  K-P cure (count): the same count does not cure
+ok  K-P cure (count): a STATEMENT quoting the PRESSED WITH line does not cure (an unproven press stays unproven)
+ok  K-P cure (BROKEN line): RETRACTED with one CORRECTED RESULT cures
+ok  K-P cure (BROKEN line): no RETRACTED or RESTATED line does not cure
+ok  D4 Build (32302, defender rounds 2-3 blanked): base lists every pressed verse still unanswered; new lists no unproven press there and names them apart -- 6 -> 0
+ok  D4 Build (presses rewritten in the PRESS FORM): the still-pressed list equals base
+ok  K-R fixture: a [DR2] premise whose press is proven by reference to [CR2] -- PROVEN IN [CR2]: quoted there, its block carries L1+L2+L3
+ok  K-R: a referenced press with no REFERENCE line is marked
+ok  K-R: a REFERENCE line whose quotations stand passes
+ok  K-R: a REFERENCE line whose first quotation the round does not hold is marked
+ok  K-R: a REFERENCE line naming another round is marked
+ok  K-R cure: one REFERENCE line whose quotations stand cures
+ok  K-R cure: a REFERENCE line with a bad quotation does not cure
+ok  the judges' rulebook states the REFERENCE line form
+== S4: the [L2] sheet (debaters only), the [L2] check, the count check, K-L2
+ok  [L2] check: a dictionary form (gennaō) of a word in the cited verse is COUNTED (dictionary route)
+ok  [L2] check: the inflected Greek form in the verse is COUNTED (second route)
+ok  [L2] check: a Hebrew word with its prefix (ha-almah) is COUNTED (prefix stripped; H5959)
+ok  [L2] check: a tag that names no Hebrew or Greek word is IGNORED (no [L2] claim)
+ok  [L2] check: a Strong's number written directly is matched by itself
+ok  [L2] check: a word in no verse the block cites is NOT COUNTED ("not in the cited verse") -- not in the cited verse: gennaō (cited: Genesis 4:1)
+ok  [L2] check: an [L2] on an Apocrypha verse is UNVERIFIABLE -- Apocrypha (Sirach 25:24): the original-words table holds the 66 books only
+ok  [L2] check: a verse whose words were not read is UNVERIFIABLE -- the words of Luke 1:34 were not read this run
+ok  count check: "H5959 ... 7 verses" matches the record (7 verses, 7 tokens)
+ok  count check: "9 verses" is marked DIFFERS FROM THE RECORD (7 verses, 7 tokens)
+ok  count check: a count with no unit (rows) is checked against both and says the unit was not named
+ok  [L2] sheet: one row per Strong's number, dictionary form and the lexicon gloss quoted whole -- H3651 כֵּן kên: from כּוּן; properly, set upright; hence (figuratively as adjective) just; but usually (as adverb or conjunction) rightly or so (in various applications to manner, time and relation; often with other particles); [phrase] after that (this, -ward, -wards), as... as, [phrase] (for-) asm
+ok  [L2] sheet (all 138 verses): capped at 26,000 characters, every number left off listed -- 30821 characters
+ok  Citation Scan (32306): the 56 [L2] tags and a read of every verse their blocks cite, in batches -- 71 verses in 4 requests
+ok  L2 Words Plan: one item per batch
+ok  L2 Lexicon Plan (the judges' path): no gloss read; every number, function words included (the check reads them)
+ok  L2 Count Plan (32306): the check, run as the node runs it -- 54 COUNTED of 56
+ok  Quote Report: carries the [L2] check and the rows read (for K-L2)
+ok  S5 Quote Report: the synthesis's quotations are checked and reported apart; the judges' items hold the debaters' only -- []
+ok  S5: the synthesis verdict scan finds "The defender wins" -- t our Lord sprang out of Juda" and the debate turned on it. The defender wins.
+ok  S5 Quote Report: the debaters' items are those the live node reports
+ok  Quote Report with no [L2] nodes run (a normal run of the old shape): runs, no [L2] block
+ok  Panel Build: the judges get the [L2] check results, and no lexicon gloss
+ok  Panel Build with no [L2] check (old-shape Quote Report): runs and says the check is not available
+ok  Panel Build base and new both build the three judging calls -- 3
+ok  K-L2: a judge's [L2] whose word is in no verse the line cites is marked -- not in the cited verse: anēr (cited: Matthew 1:20)
+ok  K-L2: a judge's [L2] whose word stands in the cited verse passes
+ok  every added read runs once per plan item (one request per batch), always outputs, continues on error, with the Verse Sheet credential -- 15 HTTP nodes
+ok  D2 Words Plan with no plan (an Extract of the old shape): one read that returns nothing
+ok  D2 Lexicon Plan with no word read: one read that returns nothing
+ok  30 nodes added; links: 7 removed (Verse Sheet -> Build x6, Find Words -> Quote Report), 37 added
+== S5: the synthesis prompt
+ok  Build Synthesis: quotes only the record, gives no verdict, is told its quotations are checked
+ok  Format Markdown prints the synthesis citation check
+ok  Build Save Body records the [L2] check, counts that differ, the synthesis check and its verdict scan in review_notes
+== S6 and TRIAL status: every new rule is TRIAL in the 3 checkers and the 14 cure nodes
+ok  checkers: K-P, K-F, K-R, K-L2 are TRIAL (ENF_STATUS)
+ok  cure nodes: K-P, K-F, K-R, K-L2 are TRIAL
+ok  enfLive: a new item never counts toward drv_uncured
+== F1 (live run 32341, enforcer row 124): a RETRACTED line is a retraction unless it regrades the link LINK BROKEN
+ok  base (live cb4b94e0) reproduces the fault: GLM 32341's RETRACTED D3 vs C4 is refused as malformed
+ok  Alternate Build: GLM 32341 row 124: both RETRACTED lines read as retractions, none malformed -- D3 vs C4, D5 vs C4
+ok  Alternate Cure Build: GLM 32341 row 124: both RETRACTED lines read as retractions, none malformed -- D3 vs C4, D5 vs C4
+ok  Alternate Cure Normalize: GLM 32341 row 124: both RETRACTED lines read as retractions, none malformed -- D3 vs C4, D5 vs C4
+ok  Alternate Merge: GLM 32341 row 124: both RETRACTED lines read as retractions, none malformed -- D3 vs C4, D5 vs C4
+ok  Cure Build: GLM 32341 row 124: both RETRACTED lines read as retractions, none malformed -- D3 vs C4, D5 vs C4
+ok  Cure Check: GLM 32341 row 124: both RETRACTED lines read as retractions, none malformed -- D3 vs C4, D5 vs C4
+ok  Cure Normalize: GLM 32341 row 124: both RETRACTED lines read as retractions, none malformed -- D3 vs C4, D5 vs C4
+ok  Panel Cure Build 1: GLM 32341 row 124: both RETRACTED lines read as retractions, none malformed -- D3 vs C4, D5 vs C4
+ok  Panel Cure Build 2: GLM 32341 row 124: both RETRACTED lines read as retractions, none malformed -- D3 vs C4, D5 vs C4
+ok  Panel Cure Build 3: GLM 32341 row 124: both RETRACTED lines read as retractions, none malformed -- D3 vs C4, D5 vs C4
+ok  Panel Cure Check: GLM 32341 row 124: both RETRACTED lines read as retractions, none malformed -- D3 vs C4, D5 vs C4
+ok  Panel Cure Normalize 1: GLM 32341 row 124: both RETRACTED lines read as retractions, none malformed -- D3 vs C4, D5 vs C4
+ok  Panel Cure Normalize 2: GLM 32341 row 124: both RETRACTED lines read as retractions, none malformed -- D3 vs C4, D5 vs C4
+ok  Panel Cure Normalize 3: GLM 32341 row 124: both RETRACTED lines read as retractions, none malformed -- D3 vs C4, D5 vs C4
+ok  GLM 32266 (row 39): its ten RETRACTED lines read exactly as before (regraded UNDERDETERMINED) -- 10
+ok  a true regrade to LINK BROKEN stays refused: RETRACTED: D2 vs C5 -- regraded CHALLENGER LINK BROKEN
+ok  a true regrade to LINK BROKEN stays refused: RETRACTED: D3 vs C2 (Matthew 1:18): CHALLENGER LINK BROKEN -- the chal
+ok  a true regrade to LINK BROKEN stays refused: RETRACTED: D3 vs C2 -- DEFENDER LINK BROKEN -- [CR3] never answers it
+ok  a true regrade to LINK BROKEN stays refused: RETRACTED: D3 vs C2 -- the line is now CHALLENGER LINK BROKEN on Luke 
+ok  a true regrade to LINK BROKEN stays refused: RETRACTED: D3 vs C2 -- graded as LINK BROKEN after all
+ok  a reason naming the retracted LINK BROKEN grade is allowed
+ok  "not LINK BROKEN" is allowed (as before)
+ok  GLM 32341 K-G4 D3 vs C4 with its stored cure reply: UNCURED on base (the seat drop), CURED on new -- retracted
+== a normal run (32306 dry regrade, the stored first replies): Panel Build, Panel Payloads and the three Panel Cure Builds run, base and new
+ok  base Panel Build runs
+ok  base Panel Payloads runs on the three stored replies -- gemini:K-LXX glm:K-C/K-C/K-C/K-C/K-S2/K-S2/K-S2/K-S2/K-S2/K-S2/K-S2/K-G8 chatgpt:K-V/K-V/K-V/K-V/K-V/K-V/K-V/K-V
+ok  base Panel Cure Build 1 runs -- 1 items
+ok  base Panel Cure Build 2 runs -- 12 items
+ok  base Panel Cure Build 3 runs -- 8 items
+ok  new Panel Build runs
+ok  new Panel Payloads runs on the three stored replies -- gemini:K-LXX glm:K-C/K-C/K-C/K-C/K-S2/K-S2/K-S2/K-S2/K-S2/K-S2/K-S2/K-G8 chatgpt:K-V/K-V/K-V/K-V/K-V/K-V/K-V/K-V
+ok  new Panel Cure Build 1 runs -- 1 items
+ok  new Panel Cure Build 2 runs -- 12 items
+ok  new Panel Cure Build 3 runs -- 8 items
+
+142 passed, 0 bad of 142
