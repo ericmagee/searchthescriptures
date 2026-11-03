@@ -95,9 +95,9 @@ ok  D4 (32302): the close message outside the still-unanswered list is unchanged
      (32306 with the defender rounds 2 and 3 blanked, so no verse is named: part (a) shows every verse in scope)
 ok  D4 (32306, blanked): part (b) is dropped from the close list
 ok  D4 (32306) K7: every verse part (a) lists for a premise is under that premise's PRESSED WITH line of the [DR2] list
-ok  D4 (32306) K7: the verses that drop out are under no PRESSED WITH line of their premise -- premise 2: Romans 1:3
+ok  D4 (32306) K7: the verses that drop out are under no PRESSED WITH line of their premise -- premise 2: Romans 1:3; premise 2: Genesis 3:15; premise 2: Genesis 16:10; premise 2: Genesis 24:60; premise 2: Luke 1:35; premise 2: Luke 9:34; premise 2: Acts 5:15; premise 2: Acts 1:8; premise 2: Exodus 40:35; premise 2: 1 Chronicles 28:6; premise 2: Acts 13:33; premise 2: Romans 1:4; premise 2: Luke 1:32; premise 3: John 6:42; premise 3: John 1:45; premise 3: Matthew 13:55; premise 3: Acts 16:13; premise 3: Luke 3:23; premise 3: Matthew 1:16; premise 4: John 1:13; premise 4: 1 John 5:1
      D4 (32306) part (a) base: 1: Acts 2:30, Romans 1:3, 2 Samuel 7:12, Hebrews 7:14, Luke 2:4, Luke 1:27, Genesis 4:1, Deuteronomy 22:24 | 2: Romans 1:3, Galatians 4:4, Job 14:1, Matthew 11:11, Luke 1:13, Luke 1:36, Luke 1:5, Hebrews 7:10, Matthew 1:2, Genesis 3:15, Genesis 16:10, Genesis 24:60, Luke 1:35, Luke 9:34, Acts 5:15, Acts 1:8, Exodus 40:35, 1 Chronicles 28:6, Acts 13:33, Romans 1:4, Luke 1:32 | 3: Ezra 2:61, Ezra 2:62, Numbers 1:18, Numbers 1:2, Luke 2:48, Luke 2:27, Luke 2:41, Luke 2:33, John 6:42, John 1:45, Matthew 13:55, Acts 16:13, Luke 3:23, Matthew 1:16 | 4: Matthew 1:19, Matthew 1:20, Matthew 1:18, Matthew 1:24, Matthew 1:25, 1 Corinthians 7:5, Luke 1:34, Luke 1:31, John 1:13, 1 John 5:1 | 5: Isaiah 7:14, Genesis 24:16, Genesis 24:43, Isaiah 7:16, Isaiah 8:3, Isaiah 8:4, Isaiah 8:8, Matthew 1:22 | 6: Acts 2:30, Psalms 132:11, Jeremiah 22:30, Jeremiah 22:24, Matthew 1:12, Haggai 2:23, Jeremiah 18:8
-     D4 (32306) part (a) new : 1: Acts 2:30, Romans 1:3, 2 Samuel 7:12, Hebrews 7:14, Luke 2:4, Luke 1:27, Genesis 4:1, Deuteronomy 22:24 | 2: Galatians 4:4, Job 14:1, Matthew 11:11, Luke 1:13, Luke 1:36, Luke 1:5, Hebrews 7:10, Matthew 1:2, Genesis 3:15, Genesis 16:10, Genesis 24:60, Luke 1:35, Luke 9:34, Acts 5:15, Acts 1:8, Exodus 40:35, 1 Chronicles 28:6, Acts 13:33, Romans 1:4, Luke 1:32 | 3: Ezra 2:61, Ezra 2:62, Numbers 1:18, Numbers 1:2, Luke 2:48, Luke 2:27, Luke 2:41, Luke 2:33, John 6:42, John 1:45, Matthew 13:55, Acts 16:13, Luke 3:23, Matthew 1:16 | 4: Matthew 1:19, Matthew 1:20, Matthew 1:18, Matthew 1:24, Matthew 1:25, 1 Corinthians 7:5, Luke 1:34, Luke 1:31, John 1:13, 1 John 5:1 | 5: Isaiah 7:14, Genesis 24:16, Genesis 24:43, Isaiah 7:16, Isaiah 8:3, Isaiah 8:4, Isaiah 8:8, Matthew 1:22 | 6: Acts 2:30, Psalms 132:11, Jeremiah 22:30, Jeremiah 22:24, Matthew 1:12, Haggai 2:23, Jeremiah 18:8
+     D4 (32306) part (a) new : 1: Acts 2:30, Romans 1:3, 2 Samuel 7:12, Hebrews 7:14, Luke 2:4, Luke 1:27, Genesis 4:1, Deuteronomy 22:24 | 2: Galatians 4:4, Job 14:1, Matthew 11:11, Luke 1:13, Luke 1:36, Luke 1:5, Hebrews 7:10, Matthew 1:2 | 3: Ezra 2:61, Ezra 2:62, Numbers 1:18, Numbers 1:2, Luke 2:48, Luke 2:27, Luke 2:41, Luke 2:33 | 4: Matthew 1:19, Matthew 1:20, Matthew 1:18, Matthew 1:24, Matthew 1:25, 1 Corinthians 7:5, Luke 1:34, Luke 1:31 | 5: Isaiah 7:14, Genesis 24:16, Genesis 24:43, Isaiah 7:16, Isaiah 8:3, Isaiah 8:4, Isaiah 8:8, Matthew 1:22 | 6: Acts 2:30, Psalms 132:11, Jeremiah 22:30, Jeremiah 22:24, Matthew 1:12, Haggai 2:23, Jeremiah 18:8
 ok  D4 (32306): the close message outside the still-unanswered list is unchanged
 == K5 (1): ruling 392 at the collisions
 ok  Panel Build: the collision rule limits the BROKEN ground to PRESSED WITH verses
@@ -192,7 +192,8 @@ ok  Panel Cure Normalize 3: K-V in the cure prompt, ENF_STATUS (TRIAL) and the l
 ok  Panel Payloads: K-V checker present, TRIAL
 ok  Alternate Payloads: K-V checker present, TRIAL
 ok  Extract Independent Verdict: K-V checker present, TRIAL
-ok  32306 ChatGPT: 11 VOID rulings marked (defender premises 2-6, challenger 1-6); defender premise 1 (SUPPORTED) is not -- DEFENDER2 DEFENDER3 DEFENDER4 DEFENDER5 DEFENDER6 CHALLENGER1 CHALLENGER2 CHALLENGER3 CHALLENGER4 CHALLENGER5 CHALLENGER6
+ok  32306 ChatGPT, K6 test alone (no universal test): 11 VOID rulings fail (defender premises 2-6, challenger 1-6); defender premise 1 (SUPPORTED) is not ruled VOID -- D2 D3 D4 D5 D6 C1 C2 C3 C4 C5 C6
+ok  32306 ChatGPT with judge_fix8 R7: challenger premises 2 ("only"), 3 ("adds nothing") and 6 ("a reversal") name the word the universal test lists and pass; 8 marked -- DEFENDER2 DEFENDER3 DEFENDER4 DEFENDER5 DEFENDER6 CHALLENGER1 CHALLENGER4 CHALLENGER5
 ok  32306 ChatGPT premise 6 ("its [CR1] quote excludes Joseph's seed, not seed altogether"): no charge words quoted, no kind named
 ok  32306 ChatGPT premise 3 ("its [CR1] quote says legal fatherhood, not a register-name"): register-name is named, not quoted; marked
 ok  32306 ChatGPT: the K-V mark form
@@ -212,4 +213,4 @@ ok  K-V is TRIAL: an uncured item removes no seat
 ok  cureSet: an open K-V item does not hold back another cured count of its side (run 32293 Sol, ruled)
 ok  cureSet: a K-V item cured by a count writes the count
 
-193 fixtures, 0 bad
+194 fixtures, 0 bad

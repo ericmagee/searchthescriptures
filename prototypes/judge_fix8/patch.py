@@ -14,6 +14,7 @@
 #     (3) C2 Build and D3 Build: a verse pressed without a listed premise's PRESSED WITH: line is not a witness
 #  K7 (coordinator): D4 Build part (a) lists only verses under PRESSED WITH:
 #  K6 (coordinator, run 32306): K-V (TRIAL, lib/kv.js, lib/kv_cure.js): a VOID ruling quotes the charge words beyond the quote and names the kind
+#  R1-R13 (the reviews of run 32306 by Worker_E and Worker_G1; ruling 393): patch_r.py
 import os,sys
 H=os.path.dirname(os.path.abspath(__file__));B=H+'/base';N=H+'/new';L=H+'/lib';os.makedirs(N,exist_ok=True)
 def rep(s,old,new,nm,count=1):
@@ -259,6 +260,9 @@ s=rep(s,"out.push('(a) PRESSED PREMISES (the list that closes the challenger\\'s
  "out.push('(a) PRESSED PREMISES (the list that closes the challenger\\'s round 2), verses carried under PRESSED WITH that no defender round after it names:'); // judge_fix8 K7",'D4 Build')
 s=rep(s,"'none: every verse those premises carry is named in your round 2 or your link round'","'none: every verse those premises carry under PRESSED WITH is named in your round 2 or your link round'",'D4 Build')
 OUT['D4 Build']=s
+
+# ======================= part R (the reviews of run 32306; ruling 393): patch_r.py =======================
+exec(open(H+'/patch_r.py').read())
 
 base=sorted(f[:-3] for f in os.listdir(B) if f.endswith('.js'))
 miss=[n for n in base if n not in OUT]

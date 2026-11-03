@@ -1,5 +1,5 @@
 # write_package.py (judge_fix8): the whole flow change as ONE guarded PUT to ORACLE_DEBATE_V1 (moMxiV4Irg1uRBZN) through the n8n public API.
-# NOT RUN except with --dry in this package. It replaces the code of the 25 nodes in new/ (byte for byte) and nothing else: no node is added or
+# NOT RUN except with --dry in this package. It replaces the code of the nodes in new/ (byte for byte) and nothing else: no node is added or
 # removed and no connection changes. Guards (it refuses and writes nothing unless all hold): the live code of every base/ file equals it (md5;
 # base/ is the live cfcbb37b code of those nodes); the live connections and node count equal those of the base read (data/workflow_live.json);
 # the live versionId equals the base read's. After the PUT it reads the workflow back and checks the code, the connections and that no other node

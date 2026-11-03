@@ -342,7 +342,7 @@ const REFP=(()=>{const BOOKS="Genesis|Exodus|Leviticus|Numbers|Deuteronomy|Joshu
 // the count another item's cure must reach. A rule not in the table is LIVE. A new check enters as TRIAL and becomes LIVE only by an edit here,
 // after it has proved itself on stored text. C4-RENUM and C4-PRESS (the close-round numbering and press checks) make notes, never items.
 const ENF_STATUS={'K-B':'LIVE','K-C':'LIVE','K-G1':'LIVE','K-G3':'LIVE','K-G4':'LIVE','K-G6':'LIVE','K-G7':'LIVE','K-G8':'LIVE','K-N':'LIVE','K-S':'LIVE','K-SC':'LIVE',
- 'K-LB':'TRIAL','K-G9':'TRIAL','K-G10':'TRIAL','K-G11':'TRIAL','K-V':'TRIAL','C4-RENUM':'TRIAL','C4-PRESS':'TRIAL'};
+ 'K-LB':'TRIAL','K-G9':'TRIAL','K-G10':'TRIAL','K-G11':'TRIAL','K-V':'TRIAL','K-S2':'TRIAL','K-LXX':'TRIAL','C4-RENUM':'TRIAL','C4-PRESS':'TRIAL'};
 const enfStatus=r=>ENF_STATUS[String(r||'')]==='TRIAL'?'TRIAL':'LIVE';
 const enfLive=x=>enfStatus(x&&x.rule)==='LIVE';
 const enfUncured=v=>(v||[]).filter(x=>x&&x.status!=='CURED'&&enfLive(x)).length;
@@ -565,6 +565,9 @@ function drvCited(text,ptext,dConc,cConc,dStand,cStand,LN){const items=[],marks=
 // segment states no footing ground as well (fewer than two layers, only [L1], no footing): a premise also counted on a true witness, or on its
 // footing, is counted rightly (run 32302 GLM, premise 4: Luke 3:31 under PRESSED WITH, Matthew 1:1 not). A premise the seat ruled VOID is skipped. Cure: a CORRECTED COUNT without the premise (and the standing that count makes true), or a STATEMENT
 // for the item quoting the PRESSED WITH: line that carries the verse.
+// judge_fix8 R13 (the operator, md_notes_rulings 393): a listed premise carries at most 8 pressed verses under PRESSED WITH:, both sides; the
+// verses after the 8th (in the order written) are not witnesses (ruling 392 applies to them) and the system lists them as over the cap.
+const PW_CAP=8;
 const PW_ROUND={DEFENDER:'DR2',CHALLENGER:'CR3'};
 const pwHead=side=>side==='CHALLENGER'?/CHALLENGER.{0,2}S\s+UNSUPPORTED-?\s*\[?L4\]?\s*PREMISES/gi:/UNSUPPORTED-?\s*\[?L4\]?\s*PREMISES/gi;
 // The listed premises against a side, each with its PRESSED WITH: segment (to the item's end or its first blank line) and the verses it carries.
@@ -572,7 +575,8 @@ function pwList(R,side){const t=String((R&&R[PW_ROUND[side]])||'');let i=-1;for(
  const its=t.slice(i).split(/\n(?=\s*\**\s*(?:\d+[.)]\s|LINK\s+(?:\d+|none)\s*:))/i).filter(x=>/^\s*\**\s*(?:\d+[.)]\s|LINK\s+(?:\d+|none)\s*:)/i.test(x));
  return its.map((x,k)=>{const j=x.search(/PRESSED WITH\s*:/i);let seg=j<0?'':x.slice(j);const b=seg.search(/\n\s*\n/);if(b>=0)seg=seg.slice(0,b);
   const body=seg.replace(/^PRESSED WITH\s*:\s*/i,'');const none=/^[\s*_]*none\b/i.test(body);
-  return {n:k+1,has:j>=0,seg:none?'':seg,keys:none||j<0?new Set():ciKeys(body)};});}
+  const K=none||j<0?[]:[...ciKeys(body)]; /* judge_fix8 R13 (md_notes_rulings 393): at most PW_CAP pressed verses per premise; a verse beyond the cap is not a witness */
+  return {n:k+1,has:j>=0,seg:none?'':seg,keys:new Set(K.slice(0,PW_CAP)),over:K.slice(PW_CAP)};});}
 const PW_SEG=/(^|\n|[;.]\s+|--\s*|—\s*|:\s+)(?:[-•>]\s*)?(?:\d+[.)]\s*)?[*_]*\s*premises?\s+(\d+(?:(?:\s*,\s*(?:and\s+)?|\s+and\s+|\s*&\s*)\d+)*)\b(?:\s*\(LINK\s+(?:\d+|none)\))?[*_]*(?=\s*(?:is\b|are\b|:|--|—|\(|UNEXHIBITED|CONCEDED|VOID|SUPPORTED|SPARED|STANDS|NOT\b))/gi;
 const PW_WIT=/unanswer|unnamed|not named|no later|pressed|witness|ruling 372|\b372\b/i;
 const PW_FOOT=/\bexhibit|\bfooting\b|\[L[1-3]\]|\bquotations\b|prior layers?/i;
@@ -633,15 +637,47 @@ function kvSegments(text,side){const T=String(text||'').replace(/\\n/g,'\n').rep
  const out=[];for(const src of [cs,st]){if(!src)continue;const at=[];let m;PW_SEG.lastIndex=0;while((m=PW_SEG.exec(src)))at.push({i:m.index+m[1].length,ns:m[2].split(/\s*(?:,|and|&)\s*/).map(Number).filter(n=>n>0)});
   at.forEach((x,k)=>{const seg=src.slice(x.i,k+1<at.length?at[k+1].i:src.length);if(!/\bVOID\b/.test(seg)||/\b(?:not|never)\s+(?:be\s+)?VOID\b|\bno\s+(?:premise|charge|link)s?\s+(?:is|are|was|were)\s+VOID\b|\bnone\s+(?:is|are|of\s+them\s+(?:is|are))\s+VOID\b/i.test(seg))return; /* as lbVoid reads a denial */out.push({ns:x.ns,seg:seg.trim()});});}
  return out;}
-function kvRulingOk(seg,n,CH){if(KV_NOQ.test(seg))return {ok:true,why:'no verbatim quote'};const kind=KV_KIND.test(seg);const c=(CH||[]).find(p=>p.n===n);
- const q=c?kvQuotes(seg).find(q=>c.charge.includes(' '+kvNorm(q)+' ')):null;return {ok:kind&&!!q,kind,q:q||null};}
+// judge_fix8 R7 (run 32306, Worker_E A7, Worker_G1 #1): the universal test, computed in code and served to the judges as a pre-check: a negation or
+// universal word in a premise's charge that none of its quoted passages holds (only, never, all, none, no, not, every, always, alone, nothing,
+// nowhere, neither, nor, without, cannot, any, reversed, excludes). A VOID ruling also passes K-V when it names such a word of that premise, quoted
+// ("only") or in capitals (ONLY) or after "the word", "adds" or "universal"/"negation" -- the word that makes the charge stronger.
+const KV_UNI=/^(?:only|never|all|none|no|not|every|always|alone|nothing|nowhere|neither|nor|without|cannot|any|reversed|excludes?|excluded)$/;
+function kvUni(R,side){const t=String((R&&R[PW_ROUND[side]])||'');let i=-1;for(const m of t.matchAll(pwHead(side)))i=m.index;if(i<0)return [];
+ const its=t.slice(i).split(/\n(?=\s*\**\s*(?:\d+[.)]\s|LINK\s+(?:\d+|none)\s*:))/i).filter(x=>/^\s*\**\s*(?:\d+[.)]\s|LINK\s+(?:\d+|none)\s*:)/i.test(x));
+ return its.map((x,k)=>{const j=x.search(/PRESSED WITH\s*:/i);const pre=(j<0?x:x.slice(0,j)).replace(/^\s*\**\s*(?:\d+[.)]\s|LINK\s+(?:\d+|none)\s*:)/i,'');const qs=kvQuotes(pre).map(kvNorm);const qw=new Set(qs.join(' ').split(' '));
+  const ch=kvNorm(pre.replace(/["“][^"”]*["”]/g,' ').replace(/(^|[\s(\[:;,])['‘][^'’\n]{2,}?['’](?=$|[\s.,;:!?)\]])/g,'$1 '));const w=[...new Set(ch.split(' ').filter(x=>KV_UNI.test(x)&&!qw.has(x)))];return {n:k+1,words:w};});}
+function kvNames(seg,words){const S=String(seg);return (words||[]).find(w=>{const st=w.replace(/(?:ed|es|s)$/,'');const loose=!/^(?:no|not|any|all|nor)$/.test(w); /* a common word counts only quoted, in capitals or after adds/the word */
+ return new RegExp('["“\'‘]'+w+'["”\'’]|\\b'+w.toUpperCase()+'\\b|\\b(?:the\\s+word|adds?|added|universal|negation)\\s+["“\'‘]?'+w+'\\b','').test(S)||(loose&&new RegExp('\\b'+st+'[a-z]{0,3}\\b','i').test(S));})||null;}
+function kvRulingOk(seg,n,CH,UNI){if(KV_NOQ.test(seg))return {ok:true,why:'no verbatim quote'};const kind=KV_KIND.test(seg);const c=(CH||[]).find(p=>p.n===n);
+ const q=c?kvQuotes(seg).find(q=>c.charge.includes(' '+kvNorm(q)+' ')):null;if(kind&&q)return {ok:true,kind,q};const u=(UNI||[]).find(p=>p.n===n);const w=u?kvNames(seg,u.words):null;
+ return w?{ok:true,kind:true,q:w,why:'names the word '+w}:{ok:false,kind,q:q||null};}
 function drvVoid(text,ptext,dConc,cConc,dStand,cStand,LN){const items=[],marks=[];if(typeof text!=='string'||typeof ptext!=='string')return {items,marks};const R=ciRounds(ptext);let read=0;
- for(const side of ['DEFENDER','CHALLENGER']){const CH=kvCharges(R,side);if(!CH)continue;const done=new Set();
-  for(const sg of kvSegments(text,side))for(const n of sg.ns){if(done.has(n)||n>CH.length)continue;done.add(n);read++;const v=kvRulingOk(sg.seg,n,CH);if(v.ok)continue;
+ for(const side of ['DEFENDER','CHALLENGER']){const CH=kvCharges(R,side);if(!CH)continue;const UNI=kvUni(R,side);const done=new Set();
+  for(const sg of kvSegments(text,side))for(const n of sg.ns){if(done.has(n)||n>CH.length)continue;done.add(n);read++;const v=kvRulingOk(sg.seg,n,CH,UNI);if(v.ok)continue;
    const id=side+' premise '+n;const miss=(v.q?'':'quotes no charge words of premise '+n+' that go beyond its quote')+(!v.q&&!v.kind?' and ':'')+(v.kind?'':'names no kind (a negation, a universal, or a claim the words of the quote do not make)');
    items.push({rule:'K-V',side,link:id,premise:n,line:'premise '+n+' ruled VOID: '+sg.seg.replace(/\s+/g,' ').slice(0,400)+' -- the ruling '+miss,conc:side==='DEFENDER'?dConc:cConc,st:side==='DEFENDER'?dStand:cStand,L:(LN&&LN[side])||CH.length});
-   marks.push('[AUDIT v26: DEBATE RULE VIOLATION (K-V) -- '+id+': ruled VOID, but the ruling '+miss+'. A charge is VOID as stronger than its quote only when it asserts what the quote does not; the ruling quotes those charge words and names the kind. TRIAL rule: answer it in the cure; it removes no seat. REVIEW THIS ROW.]');}}
+   marks.push('[AUDIT v26: DEBATE RULE VIOLATION (K-V) -- '+id+': ruled VOID, but the ruling '+miss+(()=>{const u=UNI.find(p=>p.n===n);return u&&u.words.length?' The system\'s universal test found in its charge, not in its quote: '+u.words.join(', ').toUpperCase()+'.':' The system\'s universal test found no negation or universal word in its charge that its quote lacks.';})()+' A charge is VOID as stronger than its quote only when it asserts what the quote does not; the ruling names the word that makes it stronger (as the universal test lists it) or quotes those charge words and names the kind. TRIAL rule: answer it in the cure; it removes no seat. REVIEW THIS ROW.]');}}
  if(!items.length&&read)marks.push('[AUDIT v26: K-V PASS: '+read+' VOID ruling'+(read===1?'':'s')+' read; each quotes the charge words and names the kind; TRIAL rule]');
+ return {items,marks};}
+// judge_fix8 R11 (run 32306, Worker_E B1, Worker_G1 #8: the defender's round 1 rested "overshadow" on "the Greek Old Testament ... (Exodus
+// 40:35)"; GLM and ChatGPT named it; Gemini wrote "No citation errors or Septuagint references occurred"). lxxScan reads the debaters' rounds for a
+// sentence that rests a reading on the Septuagint (Septuagint, LXX, the Greek Old Testament or Greek translation) beside a verse reference and
+// does not itself refuse it as footing. The scan is served to the judges with the pre-check; K-LXX (TRIAL) marks a judge whose text says no
+// Septuagint reading or reference occurred while the scan found one. Cure: a STATEMENT for the item naming the Septuagint (or LXX, or the Greek
+// Old Testament) with the round and words of the round quoted, or a RESTATED CITATION CHECK line that names it.
+const LXX_RX=/\bSeptuagint\b|\bLXX\b|\bGreek\s+Old\s+Testament\b|\bGreek\s+(?:translation|version)\s+of\s+the\s+(?:Old\s+Testament|Hebrew)\b/i;
+const LXX_REFUSE=/\bnot\s+(?:the\s+Hebrew|footing|a\s+KJV)|\bis\s+not\b|\brefus|\bno\s+weight\b|\bstrik|\bwithdr[ae]w|\bnot\s+(?:rest|stand)|\bcannot\b|\bnever\b/i;
+function lxxScan(R){const out=[];for(const rk of ['CR1','DR1','CR2','DR2','CR3','DR3','CR4','DR4']){const t=String((R&&R[rk])||'');if(!t)continue;
+  for(const s0 of t.replace(/[*_]+/g,'').split(/\n+|(?<=[.!?]["”’']?)\s+(?=[A-Z\[(])/)){const s=s0.trim();if(!LXX_RX.test(s)||LXX_REFUSE.test(s))continue;const ref=(s.match(/(?:[1-3]\s)?[A-Z][a-z]+\.?\s\d{1,3}:\d{1,3}/)||[])[0];if(!ref)continue;
+   out.push({round:rk,ref,s:s.replace(/\s+/g,' ').slice(0,200)});}}
+ return out;}
+function lxxLine(R){const L=lxxScan(R);return 'SEPTUAGINT SCAN (computed by the system, not by a model): '+(L.length?L.map(x=>'['+x.round+'] rests a reading on the Greek Old Testament at '+x.ref+': "'+x.s.replace(/"/g,"'")+'"').join('; ')+'. A Septuagint reading is a citation error for either side: name it at the citation check.':'no round rests a reading on the Septuagint.');}
+const LXX_DENY=/\bno\b[^.\n]{0,60}\b(?:Septuagint|LXX)\b[^.\n]{0,60}\b(?:occurred|occur|found|appear(?:ed|s)?|made|cited|used|references?|readings?)\b|\b(?:Septuagint|LXX)\b[^.\n]{0,40}\b(?:none|not\s+(?:cited|used|found|occur))\b|\bno\s+(?:Septuagint|LXX)\b/i;
+function drvLxx(text,ptext){const items=[],marks=[];if(typeof text!=='string'||typeof ptext!=='string')return {items,marks};const L=lxxScan(ciRounds(ptext));if(!L.length)return {items,marks};
+ const T=netUnwrap(text).replace(/[*_`]+/g,'');const m=T.match(LXX_DENY);if(!m)return {items,marks};const side=/^C/.test(L[0].round)?'DEFENDER':'CHALLENGER';
+ const line=(T.split('\n').find(l=>LXX_DENY.test(l))||m[0]).trim();
+ items.push({rule:'K-LXX',side,link:'CITATION CHECK',line,lxx:L});
+ marks.push('[AUDIT v27: DEBATE RULE VIOLATION (K-LXX) -- CITATION CHECK: the text says no Septuagint reading occurred ("'+m[0].replace(/[\[\]"]/g,'').slice(0,120)+'"), but the system scan found '+L.map(x=>'['+x.round+'] at '+x.ref).join(', ')+'. TRIAL rule: answer it in the cure; it removes no seat. REVIEW THIS ROW.]');
  return {items,marks};}
 function drvPressWith(text,ptext,dConc,cConc,dStand,cStand,LN){const items=[],marks=[];if(typeof text!=='string'||typeof ptext!=='string')return {items,marks};
  const R=ciRounds(ptext);let read=0;
@@ -655,6 +691,7 @@ function drvPressWith(text,ptext,dConc,cConc,dStand,cStand,LN){const items=[],ma
  const pass=!items.length; // judge_fix8 K5 (1): the collision check K-G11 (lib/kg11.js) runs in the same call
  {const B=drvBrokenPW(text,R);B.items.forEach(x=>items.push(x));B.marks.forEach(x=>marks.push(x));}
  {const V=drvVoid(text,ptext,dConc,cConc,dStand,cStand,LN);V.items.forEach(x=>items.push(x));V.marks.forEach(x=>marks.push(x));} // judge_fix8 K6: K-V (lib/kv.js)
+ {const X=drvLxx(text,ptext);X.items.forEach(x=>items.push(x));X.marks.forEach(x=>marks.push(x));} // judge_fix8 R11: K-LXX (lib/klxx.js)
  if(pass)marks.push('[AUDIT v26: K-G10 PASS: '+read+' UNEXHIBITED witness ground'+(read===1?'':'s')+' read; every witness named is carried under a listed premise\'s PRESSED WITH; TRIAL rule]');
  return {items,marks};}
 // judge_fix5 G13 (operator, on "is a link-round block with only one valid layer UNEXHIBITED or SUPPORTED?": "what makes any other round count?";
@@ -668,7 +705,7 @@ function drvPressWith(text,ptext,dConc,cConc,dStand,cStand,LN){const items=[],ma
 // layer reader rule B's K-B and the cure checks use (a plain-letter source word with its meaning counts anywhere in an [L2] tag's text); a
 // premise the seat ruled VOID is never marked (a VOID premise enters no count, whatever its block shows: ChatGPT's six and Sol's 4 and 6 in
 // 32293); K-LB is a TRIAL rule (ENF_STATUS), so an uncured K-LB item never removes a seat.
-const lbKinds=block=>drvLayers(block);
+const lbKinds=block=>lbFoot(block); /* judge_fix8 R5: the block's footing (FOOTING LAYERS), not its tags */
 function lbBlocks(t,stopRe){let s=String(t||'');if(stopRe){const c=s.search(stopRe);if(c>=0)s=s.slice(0,c);}const H=[...s.matchAll(/^[ \t>*#_-]*LINK\s+(\d+)[^\n]*/gmi)];
  return H.map((h,i)=>({j:i+1,n:+h[1],head:h[0].replace(/^[ \t>*#_-]+/,'').replace(/[*_]+/g,'').trim(),text:s.slice(h.index,i+1<H.length?H[i+1].index:s.length)}));}
 // The premises a seat rules VOID for one side, read from that side's count section (CONCEDED LINKS or CHALLENGER CONCEDED LINKS and the lines
@@ -835,6 +872,63 @@ function drvGround(line,dl){let t=String(line||'').replace(/[*_`]+/g,'');const g
 function drvLinks(ptext){const t=String(ptext||'');const i=t.search(/DECLARED CHAIN\b/);if(i<0)return [];const L=[];
  for(const l of t.slice(i).split('\n').slice(1)){const m=l.match(/^\s*\**\s*(\d+)[.)]\s+(\S.*)$/);if(m){L.push(m[2].replace(/\s*Footing\s*:.*$/i,'').replace(/[*_`]+/g,''));continue;}if(L.length&&l.trim()&&!/^\s/.test(l))break;}
  return L;}
+// judge_fix8 R6 (run 32306, Worker_E A6, Worker_G1 #4: GLM rested its collision lines and its reasoning line on the retired single-verse ground
+// in forms the patterns missed: "no witness's own words state union before the taking", "state no father for this child", "none states that
+// the coming-upon ... was not the means", "no exhibited witness states in its own words"; and the K-S2 marks on D1 vs C1 and D6 vs C1 were
+// never sent to cure). K-S2 (TRIAL) reads every GROUND clause of a collision line (not only the last) and the reasoning line (the first line),
+// quotations and the side's own reported words masked as the K-C net masks them, for the K-C forms, the K-S forms and these: "no (exhibited)
+// witness('s own words) state(s)", "none states that", "state(s) no ...", "in its own words". A line K-C already marks is left to K-C. Each hit is
+// an item sent to the cure as K-C items are (a RESTATED line that drops the ground, or a retraction); TRIAL: it removes no seat.
+const KS2_FORMS=[/\bno\s+(?:\S+\s+){0,2}?witness(?:['’]s|es)?\s+(?:own\s+words\s+)?(?:\S+\s+){0,3}?(?:states?|says?|names?)\b/i,/\bnone\s+(?:of\s+(?:\S+\s+){1,2})?states?\s+that\b/i,
+ /\bstates?\s+no\s+(?!round\b|later\b|answer\b)[a-z]+/i,/\bin\s+(?:its|their|his|her)\s+own\s+words\b/i];
+function ks2Grounds(line){const t=String(line||'').replace(/[*_`]+/g,'');const gs=[...t.matchAll(/\bGROUND\s*:/gi)];if(!gs.length)return [drvGround(line,null)];
+ return gs.map((g,k)=>t.slice(g.index+g[0].length,k+1<gs.length?gs[k+1].index:t.length)).map(s=>s.replace(NET_QUOTE,'"[quote]"').replace(NET_QUOTE1,"'[quote]'"));}
+function ks2Hit(text){for(const g of (Array.isArray(text)?text:[text]))for(const c0 of String(g).split(/;|(?<=[.!?])\s+(?=[A-Z\[])|\s--\s|\s—\s/)){const cl=netMask(c0);
+  const hit=KS2_FORMS.concat(NET_STATE,[DRV_STATE]).find(rx=>rx.test(cl));if(!hit)continue;const at=cl.search(hit);if(NET_REPORT.test(cl.slice(0,at))||NET_CONC.test(cl.slice(0,at)))continue;return cl.trim();}
+ return null;}
+// the cure test of a RESTATED line: true when any of its GROUND clauses keeps a K-S2 form
+function ks2Keeps(text){return !!ks2Hit(ks2Grounds(text));}
+function ks2Lines(text,done){const items=[],marks=[];const T=netUnwrap(text).replace(/[*_`]+/g,'');let first=true;const D=done||new Set();
+ for(const raw of T.split('\n')){const line=raw.trim();if(!line)continue;const u=line.toUpperCase();let item=null;
+  const mc=u.match(/^(?:[-•]|\d+[.)])?\s*(D\d+)\s+VS\.?\s+(C\d+)\b/);if(mc)item=mc[1]+' vs '+mc[2];else if(first&&line[0]!=='['&&line[0]!=='{')item='REASONING';first=false;
+  if(!item||D.has(item.toUpperCase()))continue;if(item!=='REASONING'&&!/\b(?:UNDERDETERMINED|STANDS)\b/.test(u))continue; /* a BROKEN line is K-B's and K-G4's */
+  const h=ks2Hit(item==='REASONING'?[netMask(line.replace(NET_QUOTE,'"[quote]"').replace(NET_QUOTE1,"'[quote]'"))]:ks2Grounds(line));if(!h)continue;D.add(item.toUpperCase());
+  const at=line.search(/GROUND\s*:/i);const side=netSide(h,h.length);
+  items.push({rule:'K-S2',side,link:item,line});
+  marks.push('[AUDIT v27: DEBATE RULE VIOLATION (K-S2) -- '+item+' rests on the retired single-verse ground ("'+h.replace(/[\[\]"]/g,'').slice(0,160)+'"): that a verse or witness does not state the point in its own words is never a ground (DG-61); the chains are weighed as wholes. TRIAL rule: answer it in the cure; it removes no seat. REVIEW THIS ROW.]');}
+ return {items,marks};}
+// judge_fix8 R5 (run 32306, Worker_E A5, Worker_G1 #2: K-LB read tags, not footing. Defender premise 3, [CR3] LINK 4, quoted "as was supposed"
+// (Luke 3:23) with [L2] enomizeto (was reckoned) but wrote no [L1] tag, and was marked; premise 6, LINK 5, tags three verses [L1], and Gemini cured
+// the mark by calling Matthew 1:12 "[L3]"). The link-round block is read for its footing, by the definition the judges' rulebook states in the
+// same words (FOOTING LAYERS): a quoted KJV verse with its reference is [L1], tagged or not; a named Hebrew or Greek word with its meaning is [L2]
+// (its own script or transliteration marks with a meaning beside it, or a word with its meaning under an [L2] tag or after the word Greek or
+// Hebrew); a second verse from another place is [L3] only when the block reads it as a cross-reference to the first (read with, the same word
+// at, compare, quotes, applies ...); a second verse merely quoted beside the first is one more [L1]. A tag alone makes no layer. The footing is
+// the block before its answers to the pressed verses ("The pressed verses:"), unless full is asked.
+const LB_REF=/(?:[1-3]\s)?[A-Z][a-z]+\.?\s\d{1,3}:\d{1,3}/g;
+const LB_XREF=/\b(?:read\s+(?:with|beside|together\s+with|against|through|by)|cross-?references?|compare[sd]?|cf\.|the\s+same\s+(?:word|verb|form|phrase|term|title|formula|idiom|expression|sense|usage)|same\s+(?:word|verb|form|phrase|term)\s+(?:as|at|in)|where\s+the\s+same|echo(?:es|ed)?|quot(?:es|ed|ing)|cites?|cited|appl(?:ies|ied)|fulfil(?:s|led|ls|ment)?|answers\s+to|parallels?|likewise|is\s+used\s+(?:of|at|in))\b/i;
+const LB_GLOSS=/(?:^|[\s(,;:"“'‘])[*_]*([^\s()"“”,;:]{2,24}(?:\s+[^\s()"“”,;:]{2,24}){0,2})[*_]*\s*\(\s*([a-z][^()\n]{1,80}?)\s*\)/g;
+const LB_CMP=/\b(?:already|also|same|likewise|elsewhere|again|too|as\s+(?:at|in|of)|read\s+(?:with|beside)|compare[sd]?|cf\.|cross-?ref|beside|parallel|echo|quot|cit(?:es|ed)|appl(?:ies|ied)|fulfil|answers\s+to|matches|calls)\b/i;
+const LB_TL=/(?:^|[\s(,;:"“'‘])([*_]*)([a-zà-ɏḀ-ỿ][a-zà-ɏḀ-ỿʼ'’-]{1,24}(?:\s+[a-zà-ɏḀ-ỿ][a-zà-ɏḀ-ỿʼ'’-]{1,24}){0,2})\1\s*\(\s*["“'‘]?([a-z][^()\n\d]{1,80}?)["”'’]?\s*\)/g;
+function lbFoot(block,full){let t=String(block==null?'':block).replace(/\*\*/g,'').replace(/__/g,'');
+ if(!full){const c=t.search(/^[ \t>*_#-]*(?:the\s+)?pressed(?:\s+(?:verses|witnesses))?\s*[.:]/im);if(c>0)t=t.slice(0,c);}
+ const met=new Set();const src=/\[L2\]|\b(?:Greek|Hebrew|Aramaic)\b/i.test(t);
+ for(const s of t.split(/\n+|(?<=[.!?]["”’']?)\s+(?=[A-Z\[(])/)){const refs=[...s.matchAll(LB_REF)].map(m=>m[0].replace(/\.\s/,' '));
+  const hasQ=/["“][^"”\n]{4,}?["”]|(?:^|[\s(:])['‘][^'’\n]{4,}?['’](?=$|[\s.,;:)\]])/.test(s);
+  if(refs.length&&hasQ)met.add('L1');
+  for(const m of s.matchAll(LB_TL)){const w=m[2];const last=w.split(/\s+/).pop();if(DRV_TL_STOP.test(last)||DRV_TL_STOP.test(w.split(/\s+/)[0]))continue;
+   if(DRV_SRC.test(w)||m[1]||src){met.add('L2');break;}}
+  for(const m of s.matchAll(/([*_])([^*_\n]{2,40})\1\s*\(\s*["“'‘]?[a-z][^()\n\d]{1,80}?["”'’]?\s*\)/g)){if(m[2].split(/\s+/).some(w=>!DRV_TL_STOP.test(w)&&!/^[A-Z]/.test(w))){met.add('L2');break;}} // an italic source word with its meaning
+  if(DRV_SRC.test(s.replace(LB_REF,' ').replace(/["“][^"”]*["”]/g,' '))&&/\(\s*["“'‘]?[a-z][^()\n]{1,80}\)/.test(s))met.add('L2');
+  const places=new Set(refs.map(r=>r.replace(/:\d+$/,'')));if(places.size>=2&&LB_XREF.test(s))met.add('L3');}
+ // an [L3] tag counts only when what it covers names a verse and reads it as a cross-reference (a comparison word); a tag alone makes no layer
+ const stem=w=>w.toLowerCase().replace(/(?:es|s|ed|ing)$/,'');const CW=x=>new Set((String(x).replace(/["“][^"”]*["”]/g,' ').match(/[A-Za-z]{5,}/g)||[]).map(stem).filter(w=>!DRV_TL_STOP.test(w)&&!/^(?:verse|which|their|there|these|those|chain|footing|premise|link|round)$/.test(w)));
+ for(const m of t.matchAll(/\[L3\]/g)){const tail=t.slice(m.index+4);let e=tail.search(/\[L[1-4]\]|\n\s*\n/);const sc=e<0?tail:tail.slice(0,e);const rs=[...sc.matchAll(LB_REF)].map(x=>x[0].replace(/:\d+$/,''));if(!rs.length)continue;
+  const rest=t.slice(0,m.index)+' '+(e<0?'':tail.slice(e));const other=[...t.slice(0,m.index).matchAll(LB_REF)].map(x=>x[0].replace(/:\d+$/,''));if(!other.length||rs.every(p=>other.includes(p)))continue; /* a verse from another place */
+  const RW=CW(rest);if(LB_CMP.test(sc)||[...CW(sc)].some(w=>RW.has(w)))met.add('L3');} /* read as a cross-reference: a comparison word, or a term it shares with the block */
+ return [...met].sort();}
+// the j-th LINK block of a link round (the cure reads the block's own words)
+function lbBlockText(round,j){const s=String(round||'');const c=s.search(/CHALLENGER.{0,2}S\s+UNSUPPORTED-?\s*\[?L4\]?\s*PREMISES/i);const t=c>=0?s.slice(0,c):s;const H=[...t.matchAll(/^[ \t>*#_-]*LINK\s+(\d+)[^\n]*/gmi)];const h=H[j-1];return h?t.slice(h.index,j<H.length?H[j].index:t.length):'';}
 function drvCheck(text,dConc,cConc,dStand,cStand,askedCC,DL){ /* judge_fix4 F4: DL, the declared link wording */const items=[],marks=[];if(typeof text!=='string')return {items,marks};const cnt={DEFENDER:0,CHALLENGER:0};
  const LS=text.split('\n');for(let li=0;li<LS.length;li++){const line=LS[li];const u=line.toUpperCase().replace(/[*_`]+/g,'').trim();
   {const ms=u.match(/^(?:[-•]|\d+[.)])?\s*D(\d+)\b\s*:?\s*(?:D\1\b\s*)?(.*)$/);if(ms){const vs=/^VS\.?\s/.test(ms[2]);const gs=vs?((ms[2].match(/(DEFENDER LINK BROKEN|CHALLENGER LINK BROKEN|UNDERDETERMINED)/)||[])[1]||null):(/^STANDS\b/.test(ms[2])?'STANDS':null);
@@ -842,7 +936,7 @@ function drvCheck(text,dConc,cConc,dStand,cStand,askedCC,DL){ /* judge_fix4 F4: 
     items.push({rule:'K-S',side:null,link:sid,line});marks.push('[AUDIT v22: DEBATE RULE VIOLATION (K-S) -- '+sid+' '+gs+' rests on a single verse not stating a link or its contrary and names no round that answered the witness. REVIEW THIS ROW.]');}
    // BB-8172 C2: marks only, never items, so nothing here reaches the cure, drv_uncured or a grade (8192, 8193).
    if(gs==='UNDERDETERMINED'||gs==='STANDS'){const sid=vs?(u.match(/^(?:[-•]|\d+[.)])?\s*(D\d+\s+VS\.?\s+C\d+)/)||[null,'D'+ms[1]])[1].replace(/\s+VS\.?\s+/,' vs '):'D'+ms[1];
-    if(DRV_STATE.test(drvGround(line,DL))&&(DRV_ANS.test(line)||DRV_BARE.test(line)))marks.push('[AUDIT v22: DEBATE RULE VIOLATION (K-S2) -- '+sid+' '+gs+' gives as a ground that a verse does not state a link or its contrary, beside '+(DRV_ANS.test(line)?'the round it names':'a round it names without a bracket, which K-S does not read as named')+'; that is never a ground. REVIEW THIS ROW.]');
+    if(false&&DRV_STATE.test(drvGround(line,DL))&&(DRV_ANS.test(line)||DRV_BARE.test(line)))marks.push('[AUDIT v22: DEBATE RULE VIOLATION (K-S2) -- '+sid+' '+gs+' gives as a ground that a verse does not state a link or its contrary, beside '+(DRV_ANS.test(line)?'the round it names':'a round it names without a bracket, which K-S does not read as named')+'; that is never a ground. REVIEW THIS ROW.]');
     const un=drvUnans(drvGround(line,DL));if(un)marks.push('[AUDIT v22: DEBATE RULE VIOLATION (K-U) -- '+sid+' '+gs+' says a witness went unanswered ("'+un+'"); a pressed witness (a verse a listed premise carries under PRESSED WITH, ruling 392) left unanswered is a BROKEN ground; a verse under no PRESSED WITH line is not. REVIEW THIS ROW.]');}}}
   const m=u.match(/^(?:[-•]|\d+[.)])?\s*D(\d+)\b\s*:?\s*(?:D\1\b\s*)?(.*)$/);if(!m||!/^VS\.?\s/.test(m[2]))continue;
   const g=m[2].match(/(DEFENDER LINK BROKEN|CHALLENGER LINK BROKEN|UNDERDETERMINED)/);if(!g||g[1]==='UNDERDETERMINED')continue;
@@ -868,6 +962,7 @@ function drvCheck(text,dConc,cConc,dStand,cStand,askedCC,DL){ /* judge_fix4 F4: 
  for(const n of knLines(text)){items.push({rule:'K-N',side:n.side,link:n.item,line:n.line});marks.push('[AUDIT v23: DEBATE RULE VIOLATION (K-N) -- '+n.item+' counts premise '+n.premise+' CONCEDED (stated) on words that narrow a limb; a limb the link round narrows counts in its narrowed form, and a narrowing is not a concession. REVIEW THIS ROW.]');}
  for(const n of scLines(text,DL)){items.push({rule:'K-SC',side:n.side,link:n.item,line:n.line,premise:n.premise});marks.push('[AUDIT v23: DEBATE RULE VIOLATION (K-SC) -- '+n.item+' STANDS while '+(n.own?'its own line says the defender conceded':'CONCEDED LINKS counts premise '+n.premise+' (filed under that link) '+(n.tag==='CONCEDED'?'CONCEDED (stated)':'UNEXHIBITED'))+'; a link counted conceded does not stand. REVIEW THIS ROW.]');}
  for(const n of netLines(text,null,DL)){items.push({rule:'K-C',side:n.side,link:n.item,line:n.line});marks.push('[AUDIT v23: DEBATE RULE VIOLATION (K-C) -- '+n.item+' sets aside '+(n.side==='BOTH'?'both chains':'the '+n.side.toLowerCase()+"'s chain")+' on the ground that no one verse in it states the link or its contrary in its own words; the chain is weighed as a whole. REVIEW THIS ROW.]');}
+ {const kc=new Set(items.filter(x=>x.rule==='K-C').map(x=>String(x.link).toUpperCase()));const k2=ks2Lines(text,kc);k2.items.forEach(x=>items.push(x));k2.marks.forEach(x=>marks.push(x));} // judge_fix8 R6: K-S2 (TRIAL, lib/ks2.js)
  return {items,marks};}
 const DRV=drvCheck(raw0,conceded_links,challenger_conceded_links,defense_standing,challenge_standing,askedD,drvLinks(drvPromptText(prev&&prev.verdictBody)));for(const x of DRV.marks)raw+='\n\n'+x;
 for(const x of DRV.items)if(x.rule==='K-C')x.chain=drvChains(drvPromptText(prev&&prev.verdictBody),x); // BB-8327 D1 (q3)

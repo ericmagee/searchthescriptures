@@ -1,28 +1,42 @@
 live versionId cfcbb37b-86bf-474f-b847-82a72cc84d57 | base read versionId cfcbb37b-86bf-474f-b847-82a72cc84d57
-guards passed: base matched for 25 code nodes; versionId, connections (481) and node count (262) equal the base read
-  Alternate Build                base 663ca59d -> new e19f7024
-  Alternate Cure Build           base 598ca239 -> new b0795650
-  Alternate Cure Normalize       base 16df0e33 -> new 7c05b987
-  Alternate Merge                base 4059ba89 -> new 8dcdeef3
-  Alternate Payloads             base 4112a14d -> new e8071023
-  Build Independent Verdict      base 12550800 -> new 322c4815
-  Build Save Body                base 66d20a16 -> new 704c3b3c
-  C2 Build                       base f6dd3633 -> new c5673caa
-  Cure Build                     base d2fe13bb -> new e82dd4ea
-  Cure Check                     base 8c5d35d4 -> new 6edf72e9
-  Cure Normalize                 base c0a47093 -> new 88b321d9
-  D3 Build                       base 5d9f1435 -> new 19631593
-  D4 Build                       base 95860804 -> new 2e475a78
-  Extract Independent Verdict    base 9e0996ea -> new f431a087
-  Format Markdown                base edfc1ed2 -> new cdaa3b89
-  Init with Guards               base 67edcaee -> new 8ca328de
-  Panel Build                    base e503dab6 -> new 6c5347b5
-  Panel Cure Build 1             base 19004afa -> new 94cedb9b
-  Panel Cure Build 2             base 2459d287 -> new e0b87788
-  Panel Cure Build 3             base c8334d3c -> new 560e8e33
-  Panel Cure Check               base 836a14d1 -> new 19c03e7b
-  Panel Cure Normalize 1         base de0f7a03 -> new 1a3cb46f
-  Panel Cure Normalize 2         base f5b020e5 -> new f0f4cad8
-  Panel Cure Normalize 3         base cf1cfa8f -> new 7cfc5edd
-  Panel Payloads                 base c1877db0 -> new cbe2a4f0
-DRY: would PUT 25 code nodes, 0 nodes added, 481 connections (unchanged); nothing written
+guards passed: base matched for 39 code nodes; versionId, connections (481) and node count (262) equal the base read
+  Alternate Build                base 663ca59d -> new 34edd40d
+  Alternate Cure Build           base 598ca239 -> new 4293b4eb
+  Alternate Cure Normalize       base 16df0e33 -> new 5e5269a0
+  Alternate Merge                base 4059ba89 -> new 27af2a6c
+  Alternate Payloads             base 4112a14d -> new 8e7046fc
+  Build Independent Verdict      base 12550800 -> new d53e9bc1
+  Build Save Body                base 66d20a16 -> new 7df90871
+  Build Synthesis                base 0c3c91ca -> new 1bec9c94
+  C1 Build                       base af287247 -> new 02adbf01
+  C1 Extract                     base 676a5e61 -> new 442a0aff
+  C2 Build                       base f6dd3633 -> new 8fd4d397
+  C2 Extract                     base 2d4bffb5 -> new 13340c5e
+  C3 Build                       base 512d8ac7 -> new f7abecc4
+  C3 Extract                     base dfe7c01c -> new c9a6896a
+  C4 Build                       base 504387f7 -> new fec538e0
+  C4 Extract                     base 2dbea7cd -> new 4c641a0c
+  Cure Build                     base d2fe13bb -> new d9e1e563
+  Cure Check                     base 8c5d35d4 -> new 3110b086
+  Cure Normalize                 base c0a47093 -> new 3799cb2c
+  D1 Build                       base d7404ad9 -> new 071211bd
+  D1 Extract                     base 1c0f4d0c -> new 8bc0952f
+  D2 Build                       base 97852308 -> new 78333fdf
+  D2 Extract                     base da126bbb -> new e7af246d
+  D3 Build                       base 5d9f1435 -> new 9321ada5
+  D3 Extract                     base 27fa8aab -> new 6b19317f
+  D4 Build                       base 95860804 -> new c4d7ba5a
+  D4 Extract                     base 593b7848 -> new f1738c04
+  Extract Independent Verdict    base 9e0996ea -> new 6bc7ef3c
+  Format Markdown                base edfc1ed2 -> new 29698945
+  Init with Guards               base 67edcaee -> new 413a233b
+  Panel Build                    base e503dab6 -> new 65de85c7
+  Panel Cure Build 1             base 19004afa -> new 376bf96c
+  Panel Cure Build 2             base 2459d287 -> new 248670e6
+  Panel Cure Build 3             base c8334d3c -> new 8698e537
+  Panel Cure Check               base 836a14d1 -> new 4c4a46eb
+  Panel Cure Normalize 1         base de0f7a03 -> new 23297e4f
+  Panel Cure Normalize 2         base f5b020e5 -> new 092ba2db
+  Panel Cure Normalize 3         base cf1cfa8f -> new fb7bd554
+  Panel Payloads                 base c1877db0 -> new d751bcbd
+DRY: would PUT 39 code nodes, 0 nodes added, 481 connections (unchanged); nothing written

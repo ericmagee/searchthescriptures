@@ -5,12 +5,26 @@ OK   Alternate Merge.js
 OK   Alternate Payloads.js
 OK   Build Independent Verdict.js
 OK   Build Save Body.js
+OK   Build Synthesis.js
+OK   C1 Build.js
+OK   C1 Extract.js
 OK   C2 Build.js
+OK   C2 Extract.js
+OK   C3 Build.js
+OK   C3 Extract.js
+OK   C4 Build.js
+OK   C4 Extract.js
 OK   Cure Build.js
 OK   Cure Check.js
 OK   Cure Normalize.js
+OK   D1 Build.js
+OK   D1 Extract.js
+OK   D2 Build.js
+OK   D2 Extract.js
 OK   D3 Build.js
+OK   D3 Extract.js
 OK   D4 Build.js
+OK   D4 Extract.js
 OK   Extract Independent Verdict.js
 OK   Format Markdown.js
 OK   Init with Guards.js
@@ -23,4 +37,4 @@ OK   Panel Cure Normalize 1.js
 OK   Panel Cure Normalize 2.js
 OK   Panel Cure Normalize 3.js
 OK   Panel Payloads.js
-new files 25 | compile failures 0
+new files 39 | compile failures 0

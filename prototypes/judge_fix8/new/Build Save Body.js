@@ -126,36 +126,58 @@ const C4P=(()=>{
   ['concedes',/\bconced(?:es|ed)\b|\bgrant(?:s|ed)\b|\badmit(?:s|ted)\b/i],
   ['breaks',/\b(?:breaks?|broke|collapses?|collapsed)\b/i],
   ['none of them',/\bnot\s+one\s+of\b|\bnone\s+of\s+(?:them|these|those|its|his|her|their)\b/i]];
- const press=(F,sd)=>{const t=String((sd==='D'?F.cr4:F.dr4)||'');if(!t)return [];const O=sd==='D'?'C':'D';
-  const other=sd==='D'?/\bchallenger(?:['’]s)?\b|\bC\d+\b/i:/\bdefen(?:der|ce|se)(?:['’]s)?\b|\bD\d+\b/i;const ownL=new RegExp('\\b'+sd+'\\d+\\b'),othL=new RegExp('\\b'+O+'\\d+\\b');
-  // a sentence that only reports the other side's own words: "The defender grants enomizeto (was supposed) carries no verdict by lexicon alone."
-  // (the defender's close: "I do not claim enomizeto (was supposed) carries a verdict by lexicon alone"): after its reporting verb, its words of
-  // four letters or more stand in that order inside one sentence of the other side's rounds, within three times their number of words.
+ // judge_fix8 R1 (run 32306, Worker_E A1, Worker_G1 #6: the check disregarded 23 defender close sentences, among them its quotations of
+ // Matthew 1:18-20 for its own link and its grants, and the challenger's restatement of its own rows): a close sentence is marked only when it
+ // (a) states a grade or verdict of the other side's link (CONCEDED, BROKEN, UNEXHIBITED, fails, is circular, does not carry ...), naming that
+ // side or one of its links in the same sentence, or (b) stands in a new list or press against it (a premise list heading, a PRESSED WITH: line,
+ // and every sentence under such a heading). Never: a plain verse quotation for the side's own link, the side's own concession or grant, a
+ // report of the other side's own words, or a side's restatement of its own rows. The marks under a heading or a link label alone are gone.
+ const press=(F,sd)=>{const t=String((sd==='D'?F.cr4:F.dr4)||'');if(!t)return [];
+  const other=sd==='D'?/\bchallenger(?:['’]s)?\b|\bC\d+\b/i:/\bdefen(?:der|ce|se)(?:['’]s)?\b|\bD\d+\b/i;
   const QW=x=>String(x).toLowerCase().replace(/[^a-z\u00c0-\u024f\u1e00-\u1eff ]+/g,' ').split(/\s+/).filter(w=>w.length>=4&&!/^(?:that|this|with|from|have|been)$/.test(w));
   const OS=(sd==='D'?[F.gr1,F.gr2,F.dr3,F.dr4]:[F.cr1,F.cr2,F.cr3,F.cr4]).map(x=>String(x||'').replace(/[*_]+/g,'')).join('\n').split(/[.!?](?:\s|$)|\n/).map(QW).filter(w=>w.length);
   const said=q=>q.length>=2&&OS.some(w=>{for(let st=0;st<w.length;st++){if(w[st]!==q[0])continue;let k=1,e=st;for(let i=st+1;i<w.length&&k<q.length;i++)if(w[i]===q[k]){k++;e=i;}if(k===q.length&&e-st+1<=3*q.length)return true;}return false;});
   const REPORT=/^(?:[DC]\d+\W+)?(?:the\s+)?(?:defender|challenger)(?:['’]s)?\s+(?:grants|granted|says|said|holds|held|states|stated|writes|wrote|narrows|narrowed|answers|answered|concedes|conceded|admits|admitted|drops|dropped|files|filed|claims|claimed|reads|read)\b/i;
   const report=s=>{if(!REPORT.test(s)||/[—–]|\s--\s|;|\bbut\b|\byet\b|\bso\b/i.test(s))return false;return said(QW(s.replace(REPORT,'')));};
-  const ownOnly=s0=>{const s=s0.replace(new RegExp('^[\\s>*_-]*'+O+'\\d+\\b[.:)]?\\s*'),'');return !other.test(s)&&(/^(?:I|My|We|Our)\b/.test(s)||ownL.test(s)&&!othL.test(s)||/^(?:Answered|See|Below)\b/i.test(s));};
-  const headOther=h=>!/\b(?:my|our)\b/i.test(h)&&(other.test(h)||/\b(?:chain|keystone|links?|case)\b/i.test(h)&&/\b(?:not|no|fails?|cannot|against|why)\b/i.test(h));
-  const out=[];const seen=new Set();let scope=null;
+  // the side's own grant or concession, never a grade of the other side
+  const OWN=/^(?:I|We)\s+(?:grant|concede|accept|withdraw|drop|narrow|do\s+not\s+(?:argue|claim|press|rest))\b|\b(?:I|we)\s+(?:grant|concede|accept|withdraw|drop)\b|\bis\s+accepted\b|^(?:Granted|Conceded)\b/i;
+  const VERD=[['own measure',/\b(?:by|on|in)\s+(?:the\s+)?(?:challenger|defender|defence|defense)['’]s\s+own\s+(?:measure|reading|terms|words|account|admission|rows?)\b/i],
+   ['no reading offered',/\b(?:offered|offers|gave|gives|has|had|left|leaves)\s+no\s+(?:reading|answer|footing|row|reply|response|account|ground)\b/i],
+   ['concession claimed',/\b(?:(?:the\s+)?(?:challenger|defender)(?:['’]s\s+own\s+(?:answer|reading|round|close))?|\b[CD]\d+)\s+(?:has\s+|had\s+)?(?:conced(?:es|ed)|grant(?:s|ed)|admit(?:s|ted)|dropp(?:ed)|drops|abandon(?:s|ed)|gave\s+up|gives\s+up)\b/i],
+   ['link graded',/\b[CD]\d+(?:\s*(?:,|and|&)\s*[CD]\d+)*\s+(?:is|are|was|were|stands?|lies)\s+(?:refused|broken|refuted|false|unfooted|unsupported|unexhibited|void|collapsed|defeated|overturned|unanswered|circular|conceded|withdrawn|floating)\b/i],
+   ['grade word',/\b(?:CONCEDED|BROKEN|UNEXHIBITED|UNSUPPORTED|VOID|COLLAPSED)\b/],
+   ['inference graded',/\b(?:stands?|rests?)\s+on\s+(?:an?\s+)?inferences?\b[^.]{0,60}\b(?:do(?:es)?\s+not|never|no)\b/i],
+   ['left unanswered',/\b(?:left|leaves)\s+[^.]{0,80}\bunanswered\b/i],
+   ['refused',/\brefused\b|\brefutes?\b|\brefuted\b/i],['fails',/\bfail(?:s|ed)?\b/i],['circular',/\bcircular\b|\bbegs\s+the\s+question\b/i],
+   ['does not carry',/\b(?:does|do|did)\s+not\s+(?:stand|hold|carry|follow|reach|bear)\b|\bcannot\s+(?:stand|hold|carry|bear)\b|\bis\s+not\s+(?:stated|shown|written)\s+(?:by|in)\b/i],
+   ['breaks',/\b(?:breaks?|broke|collapses?|collapsed)\b/i],['floats',/\bfloats?\b|\bunfooted\b/i]];
+  // (b) a new list or press: a premise list heading, or a PRESSED WITH: line
+  const LISTH=/\bUNSUPPORTED-?\s*\[?L4\]?\s*PREMISES\b|\bPREMISES?\s+(?:LIST|AGAINST)\b|\bPREMISE\s+COUNT\s*:/i;const PW=/\bPRESSED\s+WITH\s*:/i;
+  const out=[];const seen=new Set();let list=null;
   const add=(s0,why)=>{const s=s0.replace(/\*+/g,'').replace(/\s+/g,' ').trim();if(s.length<12)return;const c=s.slice(0,220);if(seen.has(c))return;seen.add(c);out.push({why,s:c});};
-  for(const p0 of t.split(/\n[ \t]*\n/)){let L=p0.split('\n');while(L.length&&/^[ \t]*#{1,6}\s/.test(L[0])){scope=headOther(L[0].replace(/^[ \t]*#+\s*/,''))?'heading "'+L[0].replace(/^[ \t]*#+\s*/,'').replace(/[*_]+/g,'').trim().slice(0,60)+'"':null;L=L.slice(1);}
+  for(const p0 of t.split(/\n[ \t]*\n/)){let L=p0.split('\n');while(L.length&&/^[ \t]*#{1,6}\s/.test(L[0])){const h=L[0].replace(/^[ \t]*#+\s*/,'').replace(/[*_]+/g,'').trim();list=LISTH.test(h)?'new premise list "'+h.slice(0,60)+'"':null;L=L.slice(1);}
    const p=L.join('\n').trim();if(!p)continue;if(/^[ \t>*_-]*\**\s*ANSWER\s*:/i.test(p))continue; // an answer to a witness pressed against this side is not a press
-   const lead=p.replace(/^[ \t>*_#-]+/,'').match(/^\**\s*([DC])(\d+)\b/);const bold=p.match(/^[ \t>_-]*\*\*([^*\n]{4,160})\*\*/);
-   const ps=lead?(lead[1]===O?'under '+lead[1]+lead[2]:'own'):(bold&&headOther(bold[1]))?'under the lead "'+bold[1].trim().slice(0,60)+'"':scope;
+   const bold=p.match(/^[ \t>_-]*\*\*([^*\n]{4,160})\*\*/);if(bold&&LISTH.test(bold[1]))list='new premise list "'+bold[1].trim().slice(0,60)+'"';else if(LISTH.test(p.split('\n')[0])&&p.split('\n')[0].length<160)list='new premise list "'+p.split('\n')[0].replace(/[*_#]+/g,'').trim().slice(0,60)+'"';
    for(const s0 of p.split(/\n|(?<=[.!?])["”'’)\]]*\s+(?=["“(\[*_]*[A-Z])/)){const s=s0.replace(/\*+/g,'').replace(/^[ \t>_-]+/,'').trim();if(s.length<12)continue;
-    if(report(s))continue;const g=GRADE.find(([k,rx])=>rx.test(s));
-    if(g&&(other.test(s)||g[0]==='inference graded')){add(s,g[0]);continue;}
-    if(ps&&ps!=='own'&&!ownOnly(s))add(s,ps);}}
+    if(list){add(s,list);continue;}if(PW.test(s)){add(s,'PRESSED WITH line');continue;}
+    if(report(s)||OWN.test(s))continue;if(!other.test(s))continue;const g=VERD.find(([k,rx])=>rx.test(s)&&(k!=='concession claimed'||/\b[CD]\d+\b|\b(?:link|chain|premise|ground|point|case)s?\b/i.test(s)));if(g)add(s,g[0]);}} // a concession claimed of a link, chain, ground or point; not a report of a granted reading
   return out;};
- const noteP=(F,sd)=>{const p=press(F,sd);return p.length?'\n\n[CLOSE-ROUND GRADING CHECK -- computed by the system, not by a model; a TRIAL check: ['+(sd==='D'?'CR4':'DR4')+'] holds '+p.length+' sentence(s) that grade or press the '+(sd==='D'?'challenger':'defender')+'\'s links. A close round presses nothing (ruling 377): each is DISREGARDED, not a ground for any grade or count: '+p.map((x,i)=>'('+(i+1)+') "'+x.s.replace(/[\[\]"]/g,'')+'"').join(' ')+']':'';};
- return {refs,fresh,of,note,ofD,noteD,renum,noteR,declared,dlinks,cblocks,press,noteP};})();
+ // judge_fix8 R2 (run 32306: the judges were sent 34 sentences under the challenger's close, the transcript printed 37, because each node read
+ // the check from a different set of rounds): the check is computed once, in Build Synthesis, from every round; stored in review_notes by Build
+ // Save Body (one AUDIT v27 line per close, its sentences in full); and printed from the stored result for the judges and in the transcript.
+ const noteL=(p,sd)=>p&&p.length?'\n\n[CLOSE-ROUND GRADING CHECK -- computed by the system, not by a model; a TRIAL check: ['+(sd==='D'?'CR4':'DR4')+'] holds '+p.length+' sentence(s) that grade or press the '+(sd==='D'?'challenger':'defender')+'\'s links. A close round presses nothing (ruling 377): each is DISREGARDED, not a ground for any grade or count: '+p.map((x,i)=>'('+(i+1)+') "'+String(x).replace(/[\[\]"]/g,'')+'"').join(' ')+']':'';
+ const noteP=(F,sd,stored)=>noteL(Array.isArray(stored)?stored:press(F,sd).map(x=>x.s),sd);
+ const all=F=>({D:F&&F.cr4?press(F,'D').map(x=>x.s):[],C:F&&F.dr4?press(F,'C').map(x=>x.s):[]});
+ const storeLine=(p,sd)=>'[AUDIT v27: CLOSE-ROUND GRADING CHECK ('+sd+'4) -- STORED, computed once from every round; a TRIAL check: the '+(sd==='D'?'defender':'challenger')+'\'s close round holds '+p.length+' sentence(s) that grade or press the '+(sd==='D'?'challenger':'defender')+'\'s links; each is marked DISREGARDED for the judges'+(p.length?': '+p.map((x,i)=>'('+(i+1)+') "'+String(x).replace(/[\[\]"]/g,'')+'"').join(' ')+'. REVIEW THIS ROW.]':'.]');
+ const stored=(notes,sd)=>{const m=String(notes||'').match(new RegExp('\\[AUDIT v27: CLOSE-ROUND GRADING CHECK \\('+sd+'4\\) -- STORED[^\\]]*?holds (\\d+) sentence\\(s\\)[^\\]]*\\]'));if(!m)return null;
+  const p=[...m[0].matchAll(/\((\d+)\) "([^"]*)"/g)].map(x=>x[2]);return p.length===+m[1]?p:null;};
+ return {refs,fresh,of,note,ofD,noteD,renum,noteR,declared,dlinks,cblocks,press,noteP,noteL,all,storeLine,stored};})();
 const TOK=$('Init Seats').first().json.run_token;const RT=' run_token='+TOK;
 // Mapping (WALL-0586 594, A9): engine = challenger engine; claude_model = defender model; engine_model = challenger model;
 // claude_r1/claude_r2 = defender R1/R2; engine_r1/engine_r2 = challenger R1/R2; engine_r3 = defender link round;
 // challenger_r3 = challenger link round. Each round text carries its self-label. Per-seat columns are the truth.
 const d=$input.first().json;const S=$('Init Seats').first().json;
+const __CGB=()=>{try{if($('Build Synthesis').isExecuted){const g=$('Build Synthesis').first().json.close_graded;if(g&&Array.isArray(g.D)&&Array.isArray(g.C))return g;}}catch(e){}return C4P.all(d);}; /* judge_fix8 R2 */
 // ORDER (BB-6805, BB-6827): the KJV citation check is stored per quotation, so the outcome rule reads stored data; unavailable is stored as such.
 const __CC=(()=>{try{const q=$('Quote Report').first().json;if(!q||q.unavailable)return {unavailable:true};return {checked:q.checked,matches:q.matches,not_checked:q.not_checked,mismatches:q.mismatches,items:(q.items||[]).map(i=>({side:i.side,round:i.round,ref:i.ref,status:i.status,link:(i.link==null?null:i.link),load_bearing:i.load_bearing===true,...(i.reason?{reason:i.reason}:{}),...(i.rebound_from?{rebound_from:i.rebound_from}:{})})),...(q.scanned!=null?{scanned:q.scanned,item_cap:q.item_cap}:{})}; /* judge_fix6 H6 */}catch(e){return {unavailable:true};}})();
 const RS=$('Resolve Seats').first().json;const IG=$('Init with Guards').first().json;// ORDER E (BB-6037): the row sums every model call before the save: the six rounds (Extract usage) and the synthesis, single-judge and diagnostic calls (Normalizer usage, chat form). The panel calls run after the save and are added by a later write.
@@ -171,7 +193,7 @@ const FZ=$('Fence Check').first().json.fence||{};if(FZ.override_reason)FF.push('
 const RVW=String(d.independent_verdict_raw||'').match(/\[(?:EXTRACTOR|AUDIT) v\d+[^\]\n]*REVIEW THIS ROW[^\]\n]*\]/g)||[];// THE DEBATE FIXED rev 7, DoD 10 (c) (his 1, BB-7504) and DoD 13: these flags are the single judge's reading, kept on the row only; each is
 // labelled as the single judge's own, and a flag whose item the single judge's cure REPORT line reads CURED is recorded as cured, not for review.
 const __CUR=new Set();(String(d.independent_verdict_raw||'').match(/\[AUDIT v21: DEBATE RULE VIOLATION REPORT -- [^\]\n]*\]/g)||[]).forEach(x=>{const m=x.match(/ITEM: ([^;\]]+); RULE: ([^;\]]+); RESULT: ([A-Z]+)/);if(m&&m[3]==='CURED')__CUR.add(m[2].trim()+'|'+m[1].trim().toUpperCase());});
-const __FK=x=>{let m=x.match(/\((K-S|K-C|K-N|K-SC|K-K|K-DG8)\) -- (D\d+(?: vs C\d+)?|REASONING|KEYSTONE|RESULT|(?:DEFENSE|CHALLENGE) STANDING|(?:DEFENDER|CHALLENGER) CHAIN MARK|(?:CHALLENGER )?CONCEDED LINKS)(?=[ ;:.,\]]|$)/);if(m)return m[1]+'|'+m[2].toUpperCase();m=x.match(/\((K-G\d+)\) -- (D\d+ vs C\d+)/); /* judge_fix8 K5: K-G11 */if(m)return m[1]+'|'+m[2].toUpperCase();m=x.match(/\((K-G3)\) -- (DEFENSE|CHALLENGE) STANDING/);if(m)return 'K-G3|'+(m[2]==='DEFENSE'?'DEFENDER':'CHALLENGER')+' STANDING';m=x.match(/\((K-G6|K-G10|K-V)\) -- ((?:DEFENDER|CHALLENGER) premise \d+)/);if(m)return m[1]+'|'+m[2].toUpperCase(); /* judge_fix8 K2: K-G10 */m=x.match(/\((K-G9)\) -- ((?:DEFENDER|CHALLENGER) CITED-IN)/);if(m)return 'K-G9|'+m[2].toUpperCase();m=x.match(/\((K-LB)\) -- ((?:DEFENDER|CHALLENGER) premise \d+)/);if(m)return 'K-LB|'+m[2].toUpperCase();m=x.match(/\((K-G8)\) -- counted_premises_(defender|challenger)/);if(m)return 'K-G8|'+m[2].toUpperCase()+' COUNTED PREMISES';m=x.match(/VIOLATION -- (D\d+ vs C\d+) /);if(m)return 'K-B|'+m[1].toUpperCase();return null;};
+const __FK=x=>{let m=x.match(/\((K-S|K-S2|K-LXX|K-C|K-N|K-SC|K-K|K-DG8)\) -- (D\d+(?: vs C\d+)?|REASONING|CITATION CHECK|KEYSTONE|RESULT|(?:DEFENSE|CHALLENGE) STANDING|(?:DEFENDER|CHALLENGER) CHAIN MARK|(?:CHALLENGER )?CONCEDED LINKS)(?=[ ;:.,\]]|$)/);if(m)return m[1]+'|'+m[2].toUpperCase();m=x.match(/\((K-G\d+)\) -- (D\d+ vs C\d+)/); /* judge_fix8 K5: K-G11 */if(m)return m[1]+'|'+m[2].toUpperCase();m=x.match(/\((K-G3)\) -- (DEFENSE|CHALLENGE) STANDING/);if(m)return 'K-G3|'+(m[2]==='DEFENSE'?'DEFENDER':'CHALLENGER')+' STANDING';m=x.match(/\((K-G6|K-G10|K-V)\) -- ((?:DEFENDER|CHALLENGER) premise \d+)/);if(m)return m[1]+'|'+m[2].toUpperCase(); /* judge_fix8 K2: K-G10 */m=x.match(/\((K-G9)\) -- ((?:DEFENDER|CHALLENGER) CITED-IN)/);if(m)return 'K-G9|'+m[2].toUpperCase();m=x.match(/\((K-LB)\) -- ((?:DEFENDER|CHALLENGER) premise \d+)/);if(m)return 'K-LB|'+m[2].toUpperCase();m=x.match(/\((K-G8)\) -- counted_premises_(defender|challenger)/);if(m)return 'K-G8|'+m[2].toUpperCase()+' COUNTED PREMISES';m=x.match(/VIOLATION -- (D\d+ vs C\d+) /);if(m)return 'K-B|'+m[1].toUpperCase();return null;};
 // BB-7397 rev 9 DoD 20 (i): the row's four standings fields are inserted null (derive_debate_outcome writes the counted panel's at the first
 // stamp), so a single-judge line saying its value was stored says where the value is kept instead.
 RVW.forEach(x=>{const k=__FK(x);let y=x.replace(/^\[((?:EXTRACTOR|AUDIT) v\d+): /,'[$1: SINGLE JUDGE (second opinion): ').replace(/STATED VALUE STORED\./,"STATED VALUE KEPT IN THE SINGLE JUDGE'S TEXT.");if(k&&__CUR.has(k))y=y.replace(/REVIEW THIS ROW\.?/,"CURED by the single judge's cure reply; recorded, not for review.");FF.push(y);});
@@ -225,14 +247,19 @@ const __SU=(()=>{const g=f=>{try{return f();}catch(e){return undefined;}};const 
    if(/\b(?:no|not|never|nothing|neither|nor)\b/i.test((m[2]||'')+' '+s.slice(Math.max(0,m.index-40),m.index)))continue; // a negated claim ("No challenger link was conceded") is no claim of a withdrawal
    const side=(m[1]||m[5]).toUpperCase();const verb=(m[3]||m[4]).toLowerCase();const fr=FAM[verb[0]==='w'?'w':verb[0]==='c'?'c':verb[0]==='r'?'r':'d'];
    const objs=QF(s.slice(s.toLowerCase().indexOf(verb)+verb.length).replace(/["“][^"”]*["”]/g,' ')).split(' ').filter(w=>w.length>=5&&!STOPW.has(w)&&!/^\d/.test(w)).slice(0,6);
-   if(!affirmed(SIDEC[side],fr,objs))SX.push('(S-E) -- the synthesis says the '+side.toLowerCase()+' '+verb+(objs.length?' ('+objs.slice(0,3).join(', ')+')':'')+', but no '+side.toLowerCase()+' round holds those words affirmed: "'+cut(s)+'"');}}
+   /* judge_fix8 R10 (run 32306: "C3 (Galatians 4:4 says what Job 14:1 and Matthew 11:11 say) ... conceded by the defender", while the defender's close reads
+      "Galatians 4:4, 'made of a woman,' says what Job 14:1 and Matthew 11:11 say of every mortal"): the claim's own references, read before the verb, standing
+      together within 300 characters of a round of that side (its close included), hold the words */
+   const held=(()=>{const pre=s.slice(0,s.toLowerCase().indexOf(verb));const rf=[...new Set([...pre.matchAll(/\b((?:[1-3]\s)?[A-Z][a-z]+)\.?\s+(\d{1,3}):(\d{1,3})/g)].map(m=>m[1]+' '+m[2]+':'+m[3]))];if(rf.length<2)return false;
+    const T=String(SIDEC[side]||'').replace(/[*_]+/g,'');const at=rf.map(x=>{const o=[];let i=-1;while((i=T.indexOf(x,i+1))>=0)o.push(i);return o;});return at[0].some(p=>at.every(a=>a.some(q=>Math.abs(q-p)<=300)));})();
+   if(!held&&!affirmed(SIDEC[side],fr,objs))SX.push('(S-E) -- the synthesis says the '+side.toLowerCase()+' '+verb+(objs.length?' ('+objs.slice(0,3).join(', ')+')':'')+', but no '+side.toLowerCase()+' round holds those words affirmed: "'+cut(s)+'"');}}
  SL.forEach(l=>{if(/\bguards?\b[^.\n]{0,80}\bbinds?\b[^.\n]{0,40}\bboth\s+(?:seats|sides)\b|\bbinds?\s+both\s+seats\b|\bboth\s+seats\b[^.\n]{0,40}\bbound\s+by\b[^.\n]{0,30}\bguards?\b/i.test(l))SX.push('(S-D) -- the synthesis says the guards bind both seats; the guards bind the record seat only: "'+cut(l)+'"');
   // judge_fix5 G10 (run 32284: "the defender's seat is never run against the guards ... that omission is the largest unchecked surface"; ruling 383): S-D
   // also reads a sentence that the guards bind, should bind, or should be run against the defender.
   else if(/\bguards?\b[^.\n]{0,80}\b(?:binds?|bound|should\s+bind|must\s+bind|run\s+against|tested\s+against|applied\s+to)\b[^.\n]{0,60}\bdefen(?:der|ce|se)(?:['’]s)?\b|\bdefen(?:der|ce|se)(?:['’]s)?\s+seat\b[^.\n]{0,60}\b(?:never|not)\s+(?:run|tested|checked|held)\s+against\s+the\s+guards?\b|\bshould\s+bind\s+the\s+defen(?:der|ce|se)\b|\bguard-tests?\s+the\s+challenger\s+seat\s+only\b/i.test(l))SX.push('(S-D) -- the synthesis says the guards bind, or should bind, the defender; the guards bind the Debate Oracle seat only (ruling 383): "'+cut(l)+'"');});
  // judge_fix5 G10 (run 32284: "The close round pressed nothing new" while the challenger's close graded D1 to D4): (S-F) a sentence that says a close
  // pressed nothing (new) while the C4 new-press check or the close-round grading check (G3) found a press in that close.
- {let pC=[],pD=[];try{pC=C4P.of(d).concat(C4P.press(d,'C').map(x=>x.s));pD=C4P.press(d,'D').map(x=>x.s);}catch(e){}
+ {let pC=[],pD=[];try{const CG=__CGB();pC=C4P.of(d).concat(CG.C||[]);pD=CG.D||[]; /* judge_fix8 R2 */}catch(e){}
   SL.forEach(l=>{for(const s of l.split(/(?<=[.!?])\s+(?=[A-Z*_"“])/)){if(!/\bpress(?:ed|es)?\s+nothing(?:\s+new)?\b|\bno\s+new\s+press\b|\bdid\s+not\s+press\b|\bnothing\s+new\s+(?:was\s+)?pressed\b/i.test(s))continue;
    const who=/\bchallenger\b|\bDR4\b/i.test(s)?'C':/\bdefen(?:der|ce|se)\b|\bCR4\b/i.test(s)?'D':'?';const hit=who==='C'?pC:who==='D'?pD:pC.concat(pD);
    if(hit.length)SX.push('(S-F) -- the synthesis says the close pressed nothing new, while the system found '+hit.length+' press(es) in '+(who==='D'?"the defender's":who==='C'?"the challenger's":'a')+' close (first: '+String(hit[0]).slice(0,100).replace(/[\[\]"]/g,'')+'): "'+cut(s)+'"');}});}
@@ -240,9 +267,18 @@ const __SU=(()=>{const g=f=>{try{return f();}catch(e){return undefined;}};const 
 // judge_fix3 B2: the challenger's close-round new presses, marked NOT COUNTED for the judges, recorded here.
 {let nd=[];try{nd=C4P.ofD(d);}catch(e){nd=[];}if(nd.length)FF.push('[AUDIT v25: CLOSE-ROUND NEW-VERSE CHECK (D4) -- the defender\'s close round names '+nd.length+' verse reference(s) no earlier round of either side names ('+nd.join(', ')+'); each is NEW IN CLOSE, marked NOT COUNTED for the judges. REVIEW THIS ROW.]');} // judge_fix4 F5
 for(const sd of ['D','C']){let rn=[];try{rn=C4P.renum(d,sd);}catch(e){rn=[];}if(rn.length)FF.push('[AUDIT v25: CLOSE-ROUND NUMBERING CHECK ('+sd+'4) -- a TRIAL check: the '+(sd==='D'?'defender':'challenger')+'\'s close round does not keep the declared numbering: '+rn.join('; ').replace(/[\[\]]/g,'')+'; the judges grade by the declared numbers. REVIEW THIS ROW.]');} // judge_fix4 F5
-for(const sd of ['D','C']){let gp=[];try{gp=C4P.press(d,sd);}catch(e){gp=[];}if(gp.length)FF.push('[AUDIT v26: CLOSE-ROUND GRADING CHECK ('+sd+'4) -- a TRIAL check: the '+(sd==='D'?'defender':'challenger')+'\'s close round holds '+gp.length+' sentence(s) that grade or press the '+(sd==='D'?'challenger':'defender')+'\'s links; each is marked DISREGARDED for the judges: '+gp.map(x=>'"'+x.s.slice(0,140).replace(/[\[\]"]/g,'')+'"').join('; ')+'. REVIEW THIS ROW.]');} // judge_fix5 G3
+{let CG={D:[],C:[]};try{CG=__CGB();}catch(e){}for(const sd of ['D','C']){if(!(sd==='D'?d.cr4:d.dr4))continue;FF.push(C4P.storeLine(CG[sd]||[],sd));}} // judge_fix8 R2 (judge_fix5 G3): the stored close-round grading check, in full, read back by Panel Build on a regrade and by Format Markdown
 for(const sd of ['D','C']){let a='';try{a=LRF.audit(sd==='D'?d.cr3:d.dr3,sd);}catch(e){a='';}if(a)FF.push(a);} // judge_fix7 J5
 {let np=[];try{np=C4P.of(d);}catch(e){np=[];}if(np.length)FF.push('[AUDIT v24: CLOSE-ROUND PRESS CHECK (C4) -- the challenger\'s close round names '+np.length+' verse reference(s) no earlier challenger round names ('+np.join(', ')+'); each is a new press, marked NOT COUNTED for the judges. REVIEW THIS ROW.]');}
+// judge_fix8 R8, R9: the placeholder stripped from a defender round and a round heading normalized, as the extracts record them.
+for(const nd of ['D1','C1','D2','C2','D3','C3','D4','C4']){let fx=null;try{if($(nd+' Extract').isExecuted)fx=$(nd+' Extract').first().json.round_fix;}catch(e){fx=null;}if(!fx)continue;
+ if(fx.placeholder)FF.push('[AUDIT v27: DEFENDER PLACEHOLDER STRIPPED ('+nd+') -- the round held the placeholder "Noted. Not conceding here. Goes to review." '+fx.placeholder+' time(s); the system removed it: it stands in for an answer and is a defect, not method. REVIEW THIS ROW.]');
+ if(fx.heading)FF.push('[AUDIT v27: ROUND HEADING NORMALIZED ('+nd+') -- the model headed the round "'+String(fx.heading).replace(/[\[\]"]/g,'').slice(0,120)+'", which contradicts its round label; the heading now names round '+nd.slice(1)+'. REVIEW THIS ROW.]');}
+// judge_fix8 R13 (md_notes_rulings 393): a listed premise carries at most 8 pressed verses under PRESSED WITH:; those after the 8th are listed.
+for(const [rk,who,txt,re] of [['DR2','challenger',d.gr2,/UNSUPPORTED-?\s*\[?L4\]?\s*PREMISES/gi],['CR3','defender',d.cr3,/CHALLENGER.{0,2}S\s+UNSUPPORTED-?\s*\[?L4\]?\s*PREMISES/gi]]){const t=String(txt||'');let i=-1;for(const m of t.matchAll(re))i=m.index;if(i<0)continue;
+ const its=t.slice(i).split(/\n(?=\s*\**\s*(?:\d+[.)]\s|LINK\s+(?:\d+|none)\s*:))/i).filter(x=>/^\s*\**\s*(?:\d+[.)]\s|LINK\s+(?:\d+|none)\s*:)/i.test(x));
+ its.forEach((x,k)=>{const j=x.search(/PRESSED WITH\s*:/i);if(j<0)return;let seg=x.slice(j);const b=seg.search(/\n\s*\n/);if(b>=0)seg=seg.slice(0,b);let K=[];try{K=[...new Set(REFP.keys(seg.replace(/^PRESSED WITH\s*:\s*/i,''),{scoped:true,cap:12}).map(z=>z.key))];}catch(e){K=[];}
+  if(K.length>8)FF.push('[AUDIT v27: PRESSED-WITH CAP (md_notes_rulings 393) -- the '+who+'\'s list ['+rk+'] premise '+(k+1)+' carries '+K.length+' verses under PRESSED WITH:; the '+(K.length-8)+' after the 8th are over the cap and are not witnesses (ruling 392 applies to them): '+K.slice(8).join(', ')+'. REVIEW THIS ROW.]');});}
 const RN=FF.length?FF.join(' '):null;
 // BB-7397 rev 9 DoD 20 (v): the single judge's four values ride beside saveBody, for the same-model check of Panel and Alternate Payloads.
 const sj_values={challenge_standing:d.challenge_standing||null,challenger_conceded_links:(typeof d.challenger_conceded_links==='number'&&isFinite(d.challenger_conceded_links)?d.challenger_conceded_links:null),defense_standing:d.defense_standing||null,conceded_links:(typeof d.conceded_links==='number'&&isFinite(d.conceded_links)?d.conceded_links:null)};

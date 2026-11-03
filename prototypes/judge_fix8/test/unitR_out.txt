@@ -1,0 +1,115 @@
+== R1: the close-round grading check marks grades and new presses only
+ok  base, as the transcript computed it: 23 defender and 37 challenger close sentences -- 23 / 37
+ok  defender close items 3-13 and 19-22 (its Matthew 1:18-20 quotations and answers, its grants) come back unmarked -- 0 still marked
+ok  challenger close items 23-37 (its new UNSUPPORTED-L4 PREMISES list) all come back marked -- 0 missing
+ok  challenger close items 5-9 (Jeremiah 22:30, Matthew 1:12, Jeremiah 22:24, Haggai 2:23, Jeremiah 18:8) and 13-22 (its own rows) come back unmarked -- 
+     new: defender 0 marked; challenger 16 marked
+     challenger marks outside the list: concession claimed: The defender's own answer granted this point: being "of God" stands be
+ok  synthetic: "C2 is circular", "the challenger's C4 fails" are marked
+ok  synthetic: the side's own grant and a verse quoted for its own link are not marked
+ok  synthetic: a PRESSED WITH: line in a close is marked
+ok  Build Independent Verdict: carries the new check (one copy of the library in 9 nodes)
+ok  Build Save Body: carries the new check (one copy of the library in 9 nodes)
+ok  Build Synthesis: carries the new check (one copy of the library in 9 nodes)
+ok  C4 Build: carries the new check (one copy of the library in 9 nodes)
+ok  C4 Extract: carries the new check (one copy of the library in 9 nodes)
+ok  D4 Build: carries the new check (one copy of the library in 9 nodes)
+ok  D4 Extract: carries the new check (one copy of the library in 9 nodes)
+ok  Format Markdown: carries the new check (one copy of the library in 9 nodes)
+ok  Panel Build: carries the new check (one copy of the library in 9 nodes)
+ok  the 9 copies are identical
+== R2: computed once, stored, printed from the stored result
+ok  the stored AUDIT v27 line reads back sentence for sentence -- 16 sentences
+ok  Build Synthesis computes it once from every round, prints it to the synthesis and outputs close_graded
+ok  the judges are sent the stored result (Build Synthesis; on a regrade, the saved row)
+ok  the transcript prints the stored result from the saved row
+ok  Build Save Body stores the result once (no recomputation)
+ok  D4 Extract and C4 Extract no longer compute it
+ok  judges and transcript print the same note even from different round sets (32306 printed 34 against 37) -- 16
+== R3, R4: the transcript prints the single judge and the corrected lines
+ok  GLM after its cure: the standing and count lines in its text read PROP-DEPENDENT, 1 (32306 printed SELF-SUPPORTED c=0)
+ok  GLM: each replaced line keeps its original on a SUPERSEDED LINE (the standing, the count and the four restated collision lines) -- D1 VS C5, D3 VS C2, D5 VS C6, D6 VS C2, DEFENSE STANDING, CONCEDED LINKS
+ok  GLM: the restated D5 vs C6 line stands in its text in place of the original
+ok  GLM: the fields are unchanged by the rewrite (PROP-DEPENDENT, 1)
+ok  the violation table row for premise 6 carries its own RESPONSE beside the count it shares -- CORRECTED COUNT: DEFENDER 1 / CORRECTED STANDING: DEFENDER PROP-DEPENDENT / RESPONSE: I accept the mark: (CR3) LINK 5 ta
+ok  the single judge: its retracted D1 vs C1 line is written in place, the original kept as SUPERSEDED
+ok  R3: the single judge is printed after the panel judgments
+ok  R3: its flags are printed (K-G4 on D1 vs C1 among them) -- 7
+ok  R3: its cures are printed (4 cured of 4)
+ok  R4: GLM prints the corrected standing in place, the original below it marked superseded
+ok  R4: the restated D5 vs C6 line prints with its original below it
+ok  R4: the single judge prints its retracted lines corrected, originals superseded
+ok  R4: the violation table attaches GLM's premise 6 RESPONSE to that item
+ok  R2: the transcript prints the stored count for the challenger close (16), not a recount
+     (the rebuilt transcript: test/transcript_32306_R.md)
+== R5: K-LB reads footing, not tags
+ok  premise 3 ([CR3] LINK 4): footing L1 (Luke 3:23 "as was supposed", untagged) and L2 (enomizeto); the tags alone gave L2 -- L1,L2
+ok  premise 6 ([CR3] LINK 5): three quoted verses, one layer (L1)
+ok  32306 gemini: premise 3 does not fire; premise 6 fires -- DEFENDER premise 6
+ok  32306 glm: premise 3 does not fire; premise 6 fires -- DEFENDER premise 6
+ok  Gemini's cure calling Matthew 1:12 "[L3]" does not cure premise 6 (the block, read by FOOTING LAYERS, shows L1 only) -- the item's own answer says the premise is not counted, and the STATEMENT was refused at step 3 (layer kinds): the block, read by FOOTING LAYERS, exhibits L1 onl
+ok  a synthetic relabelling statement ([L3] on Matthew 1:12) does not cure
+ok  counting premise 6 cures it
+ok  the same FOOTING LAYERS words stand in Panel Build, Build Independent Verdict and the 14 cure prompts
+ok  the 3 checkers read the block by lbFoot
+ok  synthetic: two quotations are one layer; untagged quotation plus a source word is two; a verse read as the source of the other is L3
+== R6: K-S2, GLM's forms of the single-verse ground, sent to the cure
+ok  32306 GLM: K-S2 catches the reasoning line, D1 vs C1, D6 vs C1 (marked only before), D2 vs C1, D3 vs C3, D3 vs C4 and D4 vs C2 -- REASONING, D1 vs C1, D2 vs C1, D3 vs C3, D3 vs C4, D4 vs C2, D6 vs C1
+ok  32306 GLM: the four K-C lines stay K-C (11 lines caught in all) -- D1 vs C5, D3 vs C2, D5 vs C6, D6 vs C2
+ok  the old v22 K-S2 marks give way to 7 K-S2 items with their marks
+ok  K-S2 is TRIAL: it removes no seat
+ok  K-S2 cure: a RESTATED line on the chains' footing cures
+ok  K-S2 cure: a RESTATED line that keeps "no witness's own words state" is refused
+     32284 chatgpt: K-S2 none
+     32284 gemini: K-S2 none
+     32284 glm: K-S2 none
+     32302 gemini: K-S2 none
+     32302 glm: K-S2 none
+     32302 chatgpt: K-S2 none
+== R7: the universal test (pre-check) and K-V
+     item 1: UNIVERSAL TEST: no negation or universal word beyond its quote
+     item 2: UNIVERSAL TEST: the charge adds ONLY, which its quote lacks
+     item 3: UNIVERSAL TEST: the charge adds NOTHING, which its quote lacks
+     item 4: UNIVERSAL TEST: the charge adds NEVER, which its quote lacks
+     item 5: UNIVERSAL TEST: no negation or universal word beyond its quote
+     item 6: UNIVERSAL TEST: the charge adds REVERSED, which its quote lacks
+ok  32306 the defender's list: the test lists ONLY (premise 2), NEVER (premise 4), REVERSED (premise 6)
+ok  both judge prompts give the test with the pre-check, and the VOID rule asks a ruling to name the word
+ok  the checker computes the same test (K-V) -- [[],["only"],["nothing"],["never"],[],["reversed"]]
+ok  K-V: a VOID ruling that names the word the test lists ("only") passes
+ok  K-V: a VOID ruling that names no word and quotes no claim is marked
+ok  C2 Build: each listed premise quotes a whole claim sentence, not a fragment
+ok  D3 Build: each listed premise quotes a whole claim sentence, not a fragment
+== R8: the defender placeholder
+ok  D1 Build: DD-2 no longer prescribes the placeholder
+ok  D2 Build: DD-2 no longer prescribes the placeholder
+ok  D2 Extract on 32306: the placeholder is stripped 3 times -- 3
+ok  Build Save Body writes a review line; the synthesis is told it is a defect, not method
+== R9: the challenger close and a contradicting round heading
+ok  C4 Build: no premise list and no charge against defender links in round 4
+ok  C2 Extract on 32306: "# Challenger, Round 3 (close): ..." becomes "# Challenger, Round 2: ..." -- # Challenger, Round 2: the oath runs through loins, and the defender's
+ok  D2 Extract on 32306: its correct heading ("Defender, Round 2") is left alone
+== R10: S-E reads the claim's words in the close rounds
+ok  base: the 32306 S-E flag on C3 reproduces
+ok  new: the defender's close holds Galatians 4:4, Job 14:1 and Matthew 11:11 together; no S-E flag
+ok  new: a claim whose references stand together in no round of that side is still flagged
+== R11: K-LXX
+ok  the scan finds the defender's round 1 Greek Old Testament footing at Exodus 40:35
+ok  Gemini ("No citation errors or Septuagint references occurred") is marked
+ok  GLM and ChatGPT, who named it, are not
+ok  K-LXX cure: a STATEMENT naming it and quoting [CR1] cures
+ok  K-LXX cure: naming it without the round quoted does not
+ok  K-LXX is TRIAL; the scan is served with the pre-check
+== R12: the verse sheet serves the three occasions of Psalm 2:7 together
+ok  a sheet that serves Psalm 2:7 serves Acts 13:33, Hebrews 1:5 and Hebrews 5:5 -- Psalms 2:7, Acts 13:33, Hebrews 1:5, Hebrews 5:5
+ok  a sheet that serves Acts 13:33 serves Hebrews 1:5 and Hebrews 5:5
+ok  a sheet without them is unchanged
+ok  the 15 copies of the sheet are identical
+     32306 challenger rounds 1 and 3: the sheet now carries Acts 13:33, Hebrews 1:5, Hebrews 5:5
+== R13: at most 8 pressed verses per listed premise (md_notes_rulings 393)
+ok  32306 challenger premise 2 (its [DR2] list, 20 distinct verses): 8 witnesses kept under PRESSED WITH, 12 over the cap -- 8 kept, 12 over: Genesis 3:15, Genesis 16:10, Genesis 24:60, Luke 1:35 ...
+ok  the judges' ledger lists 8 witnesses for premise 2 and names the rest as over the cap, before NOT NAMED -- premise 2 (LINK 3): 8 verse(s) carried under PRESSED WITH; 8 named; other verses the premise names (informational, not witnesses): Romans 1:3; over the cap of 8
+ok  the rulebook and both debaters' list instructions state the cap
+ok  Build Save Body lists them in a review line; D4 Build's still-unanswered list reads only the first 8
+
+85 fixtures, 0 bad
