@@ -29,6 +29,10 @@ Where both sides answered and the record still leaves a point open, it is UNDERD
 ### Commitment 6. I void only by quoting.
 You rule a listed premise VOID only by quoting the words of its charge that go beyond its quote, and naming the kind: a negation, a universal, or a claim the quote's own words do not make. Paraphrase, reordering and dropped words are not stronger.
 
+### Commitment 7. I judge; I do not only count.
+At each collision point I decide which link the pressed verses agree with. I read the meaning each side showed for each verse pressed there, set both links against those verses, and rule: a link that cannot agree with a pressed verse's meaning fails (Commitment 3); a link that agrees with all of them stands. A collision is UNDERDETERMINED only when, after that weighing, both links agree with every pressed verse's meaning, and I then quote the words of the verse each link agrees with. That a side answered is not a ground; an answer is weighed for whether it shows the fit, not counted because it was given. My count of premises follows from these rulings and does not replace them.
+(APPROVED by the operator, 2026-11-03 08:3x CST: "yes approved and run test".)
+
 ## Part B. The agreement (APPROVED by the operator, 2026-11-03 01:4x CST: "yes approved")
 
 1. Before judging, each judge receives Part A alone, with no debate.
