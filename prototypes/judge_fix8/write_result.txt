@@ -1,0 +1,110 @@
+live versionId cfcbb37b-86bf-474f-b847-82a72cc84d57 | base read versionId cfcbb37b-86bf-474f-b847-82a72cc84d57
+guards passed: base matched for 42 code nodes; versionId, connections (481) and node count (262) equal the base read; 9 added names and ids free
+  Alternate Build                base 663ca59d -> new 710f3ff6
+  Alternate Cure Build           base 598ca239 -> new d1dc6566
+  Alternate Cure Normalize       base 16df0e33 -> new 037af2d1
+  Alternate Merge                base 4059ba89 -> new e68b0a8d
+  Alternate Payloads             base 4112a14d -> new b9b9cd4a
+  Build Independent Verdict      base 12550800 -> new 090890ef
+  Build Save Body                base 66d20a16 -> new 7df90871
+  Build Synthesis                base 0c3c91ca -> new 1bec9c94
+  C1 Build                       base af287247 -> new 02adbf01
+  C1 Extract                     base 676a5e61 -> new 442a0aff
+  C2 Build                       base f6dd3633 -> new 8fd4d397
+  C2 Extract                     base 2d4bffb5 -> new 13340c5e
+  C3 Build                       base 512d8ac7 -> new f7abecc4
+  C3 Extract                     base dfe7c01c -> new c9a6896a
+  C4 Build                       base 504387f7 -> new fec538e0
+  C4 Extract                     base 2dbea7cd -> new 4c641a0c
+  Cure Build                     base d2fe13bb -> new 4748e32f
+  Cure Check                     base 8c5d35d4 -> new 2f1bcb8d
+  Cure Normalize                 base c0a47093 -> new 2ae0c88c
+  D1 Build                       base d7404ad9 -> new 071211bd
+  D1 Extract                     base 1c0f4d0c -> new 8bc0952f
+  D2 Build                       base 97852308 -> new 78333fdf
+  D2 Extract                     base da126bbb -> new e7af246d
+  D3 Build                       base 5d9f1435 -> new 9321ada5
+  D3 Extract                     base 27fa8aab -> new 6b19317f
+  D4 Build                       base 95860804 -> new c4d7ba5a
+  D4 Extract                     base 593b7848 -> new f1738c04
+  Extract Independent Verdict    base 9e0996ea -> new fd2db2c4
+  Format Markdown                base edfc1ed2 -> new dc097443
+  Init Seats                     base 3533fb15 -> new 97c71392
+  Init with Guards               base 67edcaee -> new 413a233b
+  Panel Build                    base e503dab6 -> new b0d87896
+  Panel Cure Build 1             base 19004afa -> new a5c4a5d1
+  Panel Cure Build 2             base 2459d287 -> new 2c324f74
+  Panel Cure Build 3             base c8334d3c -> new a85bc587
+  Panel Cure Check               base 836a14d1 -> new 8fe8020f
+  Panel Cure Normalize 1         base de0f7a03 -> new fbdf616b
+  Panel Cure Normalize 2         base f5b020e5 -> new 7c28557f
+  Panel Cure Normalize 3         base cf1cfa8f -> new 7cde00c3
+  Panel Payloads                 base c1877db0 -> new 970cf767
+  Replay Rows                    base 8d8a4f81 -> new 94d03ea9
+  Reserve Build                  base e24d7fc8 -> new 0c93ed40
+  + Accept Gate?                 if           
+  + Accept Build                 code         9bf2d4af
+  + Accept Call openrouter       httpRequest  
+  + Accept Check                 code         1526a3ec
+  + Accept Return?               if           
+  + Accept Return Build          code         57419fe1
+  + Accept Return Call openrouter httpRequest  
+  + Accept Final                 code         38c1e2f2
+  + Accept Probe?                if           
+  - link Regrade After Quotes? [0] -> Panel Build
+  + link Accept Build [0] -> Accept Call openrouter
+  + link Accept Call openrouter [0] -> Accept Check
+  + link Accept Check [0] -> Accept Return?
+  + link Accept Final [0] -> Accept Probe?
+  + link Accept Gate? [0] -> Accept Build
+  + link Accept Gate? [1] -> Panel Build
+  + link Accept Probe? [0] -> Replay Rows
+  + link Accept Probe? [1] -> Panel Build
+  + link Accept Return Build [0] -> Accept Return Call openrouter
+  + link Accept Return Call openrouter [0] -> Accept Final
+  + link Accept Return? [0] -> Accept Return Build
+  + link Accept Return? [1] -> Accept Final
+  + link Regrade After Quotes? [0] -> Accept Gate?
+Alternate Build                file 710f3ff6 live 710f3ff6 OK
+Alternate Cure Build           file d1dc6566 live d1dc6566 OK
+Alternate Cure Normalize       file 037af2d1 live 037af2d1 OK
+Alternate Merge                file e68b0a8d live e68b0a8d OK
+Alternate Payloads             file b9b9cd4a live b9b9cd4a OK
+Build Independent Verdict      file 090890ef live 090890ef OK
+Build Save Body                file 7df90871 live 7df90871 OK
+Build Synthesis                file 1bec9c94 live 1bec9c94 OK
+C1 Build                       file 02adbf01 live 02adbf01 OK
+C1 Extract                     file 442a0aff live 442a0aff OK
+C2 Build                       file 8fd4d397 live 8fd4d397 OK
+C2 Extract                     file 13340c5e live 13340c5e OK
+C3 Build                       file f7abecc4 live f7abecc4 OK
+C3 Extract                     file c9a6896a live c9a6896a OK
+C4 Build                       file fec538e0 live fec538e0 OK
+C4 Extract                     file 4c641a0c live 4c641a0c OK
+Cure Build                     file 4748e32f live 4748e32f OK
+Cure Check                     file 2f1bcb8d live 2f1bcb8d OK
+Cure Normalize                 file 2ae0c88c live 2ae0c88c OK
+D1 Build                       file 071211bd live 071211bd OK
+D1 Extract                     file 8bc0952f live 8bc0952f OK
+D2 Build                       file 78333fdf live 78333fdf OK
+D2 Extract                     file e7af246d live e7af246d OK
+D3 Build                       file 9321ada5 live 9321ada5 OK
+D3 Extract                     file 6b19317f live 6b19317f OK
+D4 Build                       file c4d7ba5a live c4d7ba5a OK
+D4 Extract                     file f1738c04 live f1738c04 OK
+Extract Independent Verdict    file fd2db2c4 live fd2db2c4 OK
+Format Markdown                file dc097443 live dc097443 OK
+Init Seats                     file 97c71392 live 97c71392 OK
+Init with Guards               file 413a233b live 413a233b OK
+Panel Build                    file b0d87896 live b0d87896 OK
+Panel Cure Build 1             file a5c4a5d1 live a5c4a5d1 OK
+Panel Cure Build 2             file 2c324f74 live 2c324f74 OK
+Panel Cure Build 3             file a85bc587 live a85bc587 OK
+Panel Cure Check               file 8fe8020f live 8fe8020f OK
+Panel Cure Normalize 1         file fbdf616b live fbdf616b OK
+Panel Cure Normalize 2         file 7c28557f live 7c28557f OK
+Panel Cure Normalize 3         file 7cde00c3 live 7cde00c3 OK
+Panel Payloads                 file 970cf767 live 970cf767 OK
+Replay Rows                    file 94d03ea9 live 94d03ea9 OK
+Reserve Build                  file 0c93ed40 live 0c93ed40 OK
+other nodes changed: none | versionId cb4b94e0-93f0-4b80-85f5-1f78ac2e9daa | failures none
