@@ -107,12 +107,22 @@ New TRIAL rules: K-S2 (now an item) and K-LXX (ENF_STATUS TRIAL in the 3 checker
   judge's text, a retracted or restated collision line (any grade), the standing line, the count line, the RESULT and CLAUSE lines are replaced by the
   corrected ones whenever the text differs from the counted value; each original is kept on an AUDIT v27 SUPERSEDED LINE and printed below the
   corrected line in the transcript; the violation table row of a count cure shows the item's own RESPONSE; the single judge is printed after the panel.
-- R5 K-LB reads footing (lib/lbfoot.js): a quoted verse with its reference is L1, tagged or not; a source word with its meaning (script, marks,
-  italics, or under [L2]/Greek/Hebrew) is L2; a verse from another place is L3 only when read as a cross-reference (a sentence with two places and
-  a cross-reference word, or an [L3] scope naming another place with a comparison word or a term it shares with the block). The answers to the
-  pressed verses are not footing. FOOTING LAYERS, same words, in Panel Build, Build Independent Verdict and the 14 cure prompts. The K-LB statement
-  cure tests the block's own words (lbFoot on the block), never the judge's tags; a reply whose own RESPONSE says the premise is not counted is not
-  cured by another premise's count. 32306: premise 3 no longer fires (L1 untagged + L2); premise 6 fires; Gemini's "[L3]" statement no longer cures it.
+- R5 Footing read by one definition everywhere (lib/lbfoot.js, lbFoot), as amended by operator ruling 400 (md_notes_rulings 400: "L3 is supporting
+  verse(s) for L1") and the coordinator's two corrections: each quotation is paired with its reference (written just after it in brackets, or the
+  nearest before it); the first verse quoted is L1, tagged or not; any other verse quoted with its reference after it, as support, is L3, tagged or
+  not, the same chapter included; a source word with its meaning (script, marks, italics, or under [L2]/Greek/Hebrew) is L2. A reference with no
+  quotation, or a tag alone, adds nothing; in a link-round block the answers to the pressed verses are not footing. The cross-reference,
+  comparison-word, shared-term and same-chapter tests are withdrawn.
+  Where it stands: FOOTING LAYERS (one text) in the link-round rule and in the judges' BROKEN-line rule (Panel Build, Build Independent Verdict; it
+  replaces "each tagged ... [L3] with the cross-reference named. Two quotations at one layer are one layer."), the same in the BROKEN-line rule and
+  the K-LB item of the 14 cure prompts, and Format Markdown's Rule B note. Code: K-LB (lbKinds) and drvLayers, which the K-B BROKEN-line count and
+  the K-C, K-SC and K-LB cure tests use, are lbFoot in the 3 checkers and the 14 cure nodes (the tag reader is kept as drvLayersByTag, unused).
+  The K-LB statement cure tests the block's own words; a reply whose own RESPONSE says the premise is not counted is not cured by another premise's count.
+  32306 premise 3 ([CR3] LINK 4): L1 Luke 3:23, L2 enomizeto and hes, L3 Matthew 1:16. Premise 6 ([CR3] LINK 5): L1 Jeremiah 22:30, L3 Matthew 1:12
+  and Luke 1:32 (all tagged [L1]). Neither fires. On the four stored runs no link-round block now fires (32284 challenger premise 6, Matthew 1:11 then
+  1:12, reads L1+L3); the 3 stored first-reply BROKEN lines read the same kinds-count under both readers, and no K-B item moves in the replay.
+  Seat moves (results and panels unchanged): 32302 Gemini D PROP-DEPENDENT 2 -> SELF-SUPPORTED 0 and 32306 GLM D PROP-DEPENDENT 1 -> SELF-SUPPORTED 0,
+  because the K-LB items their stored cures counted no longer exist (their first answers were SELF-SUPPORTED 0).
 - R6 K-S2 (lib/ks2.js): every GROUND clause of an UNDERDETERMINED/STANDS collision line and the reasoning line, for the K-C and K-S forms and "no
   (exhibited) witness('s own words) state(s)", "none states that", "state(s) no ...", "in its own words"; a line K-C marks is left to K-C. Items go
   to the cure and are cured as K-C (ks2Keeps tests the restated line). The old v22 K-S2 mark is disabled. 32306 GLM: 7 K-S2 + 4 K-C = 11 lines.
@@ -136,9 +146,9 @@ New TRIAL rules: K-S2 (now an item) and K-LXX (ENF_STATUS TRIAL in the 3 checker
   review line. Rulebook and C2/D3 list instructions state it. 32306 challenger premise 2: 20 verses, 8 kept, 12 over; 32306 also p3 +6, p4 +2;
   32284 challenger list p1 +1, p5 +2.
 
-Tests: compile_out.txt (39 compile); unit8_out.txt (194: the 193, with the 32306 K-V fixture split into K6-alone 11 and R7 8); unitR_out.txt (85, R1-R13
-on 32306); transcript_32306_R.md (Format Markdown on the 32306 row with GLM's and the single judge's text re-cured); replay8_out.txt rerun: every
-seat's verdict, standings and result and every panel outcome unchanged in base/new/ruled; only TRIAL items move (K-LB on footing, K-S2, K-LXX, K-V).
+Tests (rerun after ruling 400): compile_out.txt (46 compile, part P included); unit8_out.txt (194, 0 bad: the 193, with the 32306 K-V fixture split into K6-alone 11 and R7 8);
+unitR_out.txt (86, 0 bad, R1-R13 on 32306; the R4 GLM fixture reruns GLM's stored cure on the items live cfcbb37b raised, since ruling 400 removes its K-LB premise 6); unitP_out.txt (74, 0 bad); transcript_32306_R.md (Format Markdown on the 32306 row with GLM's and the single judge's text re-cured); replay8_out.txt rerun: every
+panel outcome unchanged in base/new/ruled; every seat's verdict and result unchanged; two seat standings move after ruling 400 (above); otherwise only TRIAL items move (K-LB on footing, K-S2, K-LXX, K-V).
 
 ## Part P (the test instruments of the judge posture protocol, prototypes/judge_posture/JUDGE_POSTURE_DRAFT_v4.md Part 7): patch_p.py
 P1 (swap mode) is dropped by the operator ("sides are not swapped until the bugs are worked through"): no swap code is built; new/ and add/ carry

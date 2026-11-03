@@ -115,10 +115,9 @@ for nm,who in [('C2 Build','defender'),('D3 Build','challenger')]:
       "(operator ruling 392: a press must have a premise behind it). PRESSED WITH: carries at most 8 verses for one premise (operator ruling 393): a verse after the 8th is not a witness and is not weighed, so carry the 8 that bear most. The verbatim quote of each listed premise is a whole claim sentence of the "+who+", copied from its first word to its full stop, never a fragment of one.",nm)
 
 # ---------------- R5, R7, R11, R13: the judges' rulebook and pre-check (Panel Build, Build Independent Verdict) ----------------
-FOOT_DEF=("FOOTING LAYERS (judge_fix8; the definition the system link-round check uses): a quoted KJV verse given with its book, chapter and verse is [L1], whether or not it is tagged; "
- "a named Hebrew or Greek word given with its meaning is [L2]; a second verse from another place is [L3] only when the block reads it as a cross-reference to the first (read with it, "
- "the same word or phrase at, compare, quotes, applies); a second verse merely quoted beside the first is one more [L1], and two quotations at one layer are one layer. A tag alone "
- "makes no layer, and relabelling a verse in a judgment does not change what the block shows.")
+FOOT_DEF=("FOOTING LAYERS (judge_fix8; the definition the system link-round check uses; md_notes_rulings 400: L3 is supporting verse(s) for L1): a quoted KJV verse given with its book, chapter and verse is [L1], whether or not it is tagged; "
+ "a named Hebrew or Greek word given with its meaning is [L2]; any other verse quoted with its book, chapter and verse after that [L1] verse, as its support, is [L3], whether or not it is tagged, the same chapter included. A reference with no quotation adds no layer. "
+ "A tag alone makes no layer, and relabelling a verse in a judgment does not change what the block shows.")
 KLXX=lib('klxx.js')
 for nm in JB:
     s=get(nm)
@@ -146,6 +145,21 @@ s=rep(s,"   for(const r of refs(xw)){const label=((r.book||r.ctx)?((r.book||r.ct
   "   let nk=0;const kk=new Set(); /* judge_fix8 R13 (md_notes_rulings 393): only the first 8 pressed verses of a premise are witnesses */\n"
   "   for(const r of refs(xw)){const label=((r.book||r.ctx)?((r.book||r.ctx)+' '):'')+r.label;if(seen.has(label))continue;const nw=r.cvs.filter(cv=>!kk.has((r.book||r.ctx||'')+' '+cv));if(nk>=8&&nw.length)continue;nw.forEach(cv=>kk.add((r.book||r.ctx||'')+' '+cv));nk+=nw.length;seen.add(label);\n    if(r.cvs.some(cv=>isNamed(N,r.book||r.ctx||'',cv)))named++;",'D4 Build')
 OUT['D4 Build']=s
+
+
+# judge_fix8 R5 as amended by ruling 400 (coordinator): one definition everywhere. The judges' BROKEN-line rule (rulebook and the 14 cure prompts)
+# reads layers by FOOTING LAYERS, and the BROKEN-line checker (drvLayers, the K-B count and the K-C/K-LB cure tests) uses the same reader, lbFoot.
+for nm in JB+CURE:
+    s=get(nm)
+    s=span(s,"at least two lower layers of DIFFERENT kinds, each tagged: [L1] with the KJV words quoted;","Two quotations at one layer are one layer.",
+           "at least two lower layers of DIFFERENT kinds, read by FOOTING LAYERS (md_notes_rulings 400). "+FOOT_DEF,nm)
+    OUT[nm]=s
+for nm in CHECK+CURE:
+    OUT[nm]=rep(get(nm),"function drvLayers(text){","function drvLayers(text){return lbFoot(text,true);} /* judge_fix8 R5, ruling 400: the layer kinds of a line or block, read by FOOTING LAYERS (lib/lbfoot.js) */\nfunction drvLayersByTag(text){",nm)
+s=get('Format Markdown')
+s=rep(s,"[L1] the KJV words quoted, [L2] the Hebrew","[L1] the first KJV verse quoted with its reference (tagged or not), [L2] the Hebrew",'Format Markdown')
+s=rep(s,"or [L3] the cross-reference named. A judge whose line","or [L3] any other verse quoted with its reference after it, as its support (operator ruling 400); a tag alone makes no layer. A judge whose line",'Format Markdown')
+OUT['Format Markdown']=s
 
 # ---------------- R5, R6, R11: the checkers (3) and the checker copies in the cure nodes (14) ----------------
 KS2=lib('ks2.js');LBF=lib('lbfoot.js')

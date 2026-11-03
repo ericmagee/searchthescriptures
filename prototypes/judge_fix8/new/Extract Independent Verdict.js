@@ -376,7 +376,8 @@ const drvTranslit=(rest,before)=>{const ok=m=>{if(!m)return false;const w=m[1].s
 // a tag after "no", "without", "lacks" or "not" never counts. [L1] needs KJV words in quotation marks (double or single); [L2] a source word (its
 // script, transliteration marks, a Strong's number, or plain letters with the English meaning beside it, anywhere in the tag's text); [L3] a
 // reference by book, chapter and verse (in the text, or written just before the tag). It returns the layer kinds met, sorted.
-function drvLayers(text){const t=String(text==null?'':text).replace(/\*\*/g,'').replace(/__/g,'');const re=/\[L([1-3])\](?:\s*(?:\/|and|,)?\s*\[L([1-3])\])*/g;const at=[];let m;
+function drvLayers(text){return lbFoot(text,true);} /* judge_fix8 R5, ruling 400: the layer kinds of a line or block, read by FOOTING LAYERS (lib/lbfoot.js) */
+function drvLayersByTag(text){const t=String(text==null?'':text).replace(/\*\*/g,'').replace(/__/g,'');const re=/\[L([1-3])\](?:\s*(?:\/|and|,)?\s*\[L([1-3])\])*/g;const at=[];let m;
  while((m=re.exec(t)))at.push({i:m.index,e:m.index+m[0].length,ts:[...m[0].matchAll(/L([1-3])/g)].map(x=>x[1])});const met=new Set();
  at.forEach(x=>{if(DRV_NEG.test(t.slice(Math.max(0,x.i-30),x.i)))return;const tail=t.slice(x.e);let end=tail.search(/\[L[1-4]\]|\n\s*\n/);end=end<0?t.length:x.e+end;
   const rest=t.slice(x.e,end);
@@ -902,30 +903,31 @@ function ks2Lines(text,done){const items=[],marks=[];const T=netUnwrap(text).rep
 // the mark by calling Matthew 1:12 "[L3]"). The link-round block is read for its footing, by the definition the judges' rulebook states in the
 // same words (FOOTING LAYERS): a quoted KJV verse with its reference is [L1], tagged or not; a named Hebrew or Greek word with its meaning is [L2]
 // (its own script or transliteration marks with a meaning beside it, or a word with its meaning under an [L2] tag or after the word Greek or
-// Hebrew); a second verse from another place is [L3] only when the block reads it as a cross-reference to the first (read with, the same word
-// at, compare, quotes, applies ...); a second verse merely quoted beside the first is one more [L1]. A tag alone makes no layer. The footing is
+// Hebrew); amended by operator ruling 400 ("L3 is supporting verse(s) for L1"): any other verse quoted with its reference after the first, the same
+// chapter included, is [L3], tagged or not (the earlier cross-reference / shared-term test is withdrawn). A tag alone makes no layer. The footing is
 // the block before its answers to the pressed verses ("The pressed verses:"), unless full is asked.
 const LB_REF=/(?:[1-3]\s)?[A-Z][a-z]+\.?\s\d{1,3}:\d{1,3}/g;
-const LB_XREF=/\b(?:read\s+(?:with|beside|together\s+with|against|through|by)|cross-?references?|compare[sd]?|cf\.|the\s+same\s+(?:word|verb|form|phrase|term|title|formula|idiom|expression|sense|usage)|same\s+(?:word|verb|form|phrase|term)\s+(?:as|at|in)|where\s+the\s+same|echo(?:es|ed)?|quot(?:es|ed|ing)|cites?|cited|appl(?:ies|ied)|fulfil(?:s|led|ls|ment)?|answers\s+to|parallels?|likewise|is\s+used\s+(?:of|at|in))\b/i;
 const LB_GLOSS=/(?:^|[\s(,;:"“'‘])[*_]*([^\s()"“”,;:]{2,24}(?:\s+[^\s()"“”,;:]{2,24}){0,2})[*_]*\s*\(\s*([a-z][^()\n]{1,80}?)\s*\)/g;
-const LB_CMP=/\b(?:already|also|same|likewise|elsewhere|again|too|as\s+(?:at|in|of)|read\s+(?:with|beside)|compare[sd]?|cf\.|cross-?ref|beside|parallel|echo|quot|cit(?:es|ed)|appl(?:ies|ied)|fulfil|answers\s+to|matches|calls)\b/i;
 const LB_TL=/(?:^|[\s(,;:"“'‘])([*_]*)([a-zà-ɏḀ-ỿ][a-zà-ɏḀ-ỿʼ'’-]{1,24}(?:\s+[a-zà-ɏḀ-ỿ][a-zà-ɏḀ-ỿʼ'’-]{1,24}){0,2})\1\s*\(\s*["“'‘]?([a-z][^()\n\d]{1,80}?)["”'’]?\s*\)/g;
+// judge_fix8 R5 as amended by operator ruling 400 (md_notes_rulings 400: "L3 is supporting verse(s) for L1"): the first quoted verse with its
+// reference is [L1]; any other verse quoted with its reference after it, as its support, is [L3], tagged or not, the same chapter included. No
+// shared-term or comparison-word test. A source word with its meaning is [L2]. A reference with no quotation, or a tag alone, adds nothing.
 function lbFoot(block,full){let t=String(block==null?'':block).replace(/\*\*/g,'').replace(/__/g,'');
  if(!full){const c=t.search(/^[ \t>*_#-]*(?:the\s+)?pressed(?:\s+(?:verses|witnesses))?\s*[.:]/im);if(c>0)t=t.slice(0,c);}
- const met=new Set();const src=/\[L2\]|\b(?:Greek|Hebrew|Aramaic)\b/i.test(t);
+ const met=new Set();const src=/\[L2\]|\b(?:Greek|Hebrew|Aramaic)\b/i.test(t);let first=null;
  for(const s of t.split(/\n+|(?<=[.!?]["”’']?)\s+(?=[A-Z\[(])/)){const refs=[...s.matchAll(LB_REF)].map(m=>m[0].replace(/\.\s/,' '));
   const hasQ=/["“][^"”\n]{4,}?["”]|(?:^|[\s(:])['‘][^'’\n]{4,}?['’](?=$|[\s.,;:)\]])/.test(s);
-  if(refs.length&&hasQ)met.add('L1');
+
   for(const m of s.matchAll(LB_TL)){const w=m[2];const last=w.split(/\s+/).pop();if(DRV_TL_STOP.test(last)||DRV_TL_STOP.test(w.split(/\s+/)[0]))continue;
    if(DRV_SRC.test(w)||m[1]||src){met.add('L2');break;}}
   for(const m of s.matchAll(/([*_])([^*_\n]{2,40})\1\s*\(\s*["“'‘]?[a-z][^()\n\d]{1,80}?["”'’]?\s*\)/g)){if(m[2].split(/\s+/).some(w=>!DRV_TL_STOP.test(w)&&!/^[A-Z]/.test(w))){met.add('L2');break;}} // an italic source word with its meaning
-  if(DRV_SRC.test(s.replace(LB_REF,' ').replace(/["“][^"”]*["”]/g,' '))&&/\(\s*["“'‘]?[a-z][^()\n]{1,80}\)/.test(s))met.add('L2');
-  const places=new Set(refs.map(r=>r.replace(/:\d+$/,'')));if(places.size>=2&&LB_XREF.test(s))met.add('L3');}
- // an [L3] tag counts only when what it covers names a verse and reads it as a cross-reference (a comparison word); a tag alone makes no layer
- const stem=w=>w.toLowerCase().replace(/(?:es|s|ed|ing)$/,'');const CW=x=>new Set((String(x).replace(/["“][^"”]*["”]/g,' ').match(/[A-Za-z]{5,}/g)||[]).map(stem).filter(w=>!DRV_TL_STOP.test(w)&&!/^(?:verse|which|their|there|these|those|chain|footing|premise|link|round)$/.test(w)));
- for(const m of t.matchAll(/\[L3\]/g)){const tail=t.slice(m.index+4);let e=tail.search(/\[L[1-4]\]|\n\s*\n/);const sc=e<0?tail:tail.slice(0,e);const rs=[...sc.matchAll(LB_REF)].map(x=>x[0].replace(/:\d+$/,''));if(!rs.length)continue;
-  const rest=t.slice(0,m.index)+' '+(e<0?'':tail.slice(e));const other=[...t.slice(0,m.index).matchAll(LB_REF)].map(x=>x[0].replace(/:\d+$/,''));if(!other.length||rs.every(p=>other.includes(p)))continue; /* a verse from another place */
-  const RW=CW(rest);if(LB_CMP.test(sc)||[...CW(sc)].some(w=>RW.has(w)))met.add('L3');} /* read as a cross-reference: a comparison word, or a term it shares with the block */
+  if(DRV_SRC.test(s.replace(LB_REF,' ').replace(/["“][^"”]*["”]/g,' '))&&/\(\s*["“'‘]?[a-z][^()\n]{1,80}\)/.test(s))met.add('L2');}
+ // each quotation with the reference it carries (written just after it in brackets, or the nearest reference before it): the first verse quoted
+ // is [L1]; any other verse quoted after it is [L3] (ruling 400). Quotations in one sentence are read one by one.
+ {const R=[...t.matchAll(LB_REF)].map(m=>({k:m[0].replace(/\.\s/,' '),a:m.index,b:m.index+m[0].length}));
+  const Q=[...t.matchAll(/["“][^"”\n]{4,}?["”]|(?<=^|[\s(:])['‘][^'’\n]{4,}?['’](?=$|[\s.,;:)\]])/g)].map(m=>({a:m.index,b:m.index+m[0].length}));
+  for(const q of Q){const aft=R.find(r=>r.a>=q.b&&r.a-q.b<=4&&/^[\s(]*$/.test(t.slice(q.b,r.a)));const bef=R.filter(r=>r.b<=q.a&&q.a-r.b<=80).pop();const r=aft||bef;if(!r)continue;
+   if(first===null){first=r.k;met.add('L1');}else if(r.k!==first)met.add('L3');}}
  return [...met].sort();}
 // the j-th LINK block of a link round (the cure reads the block's own words)
 function lbBlockText(round,j){const s=String(round||'');const c=s.search(/CHALLENGER.{0,2}S\s+UNSUPPORTED-?\s*\[?L4\]?\s*PREMISES/i);const t=c>=0?s.slice(0,c):s;const H=[...t.matchAll(/^[ \t>*#_-]*LINK\s+(\d+)[^\n]*/gmi)];const h=H[j-1];return h?t.slice(h.index,j<H.length?H[j].index:t.length):'';}

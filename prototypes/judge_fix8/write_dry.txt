@@ -1,11 +1,11 @@
 live versionId cfcbb37b-86bf-474f-b847-82a72cc84d57 | base read versionId cfcbb37b-86bf-474f-b847-82a72cc84d57
 guards passed: base matched for 42 code nodes; versionId, connections (481) and node count (262) equal the base read; 9 added names and ids free
-  Alternate Build                base 663ca59d -> new ffd866ce
-  Alternate Cure Build           base 598ca239 -> new 2a7c21c9
-  Alternate Cure Normalize       base 16df0e33 -> new 5e5269a0
-  Alternate Merge                base 4059ba89 -> new 27af2a6c
-  Alternate Payloads             base 4112a14d -> new 5991d19d
-  Build Independent Verdict      base 12550800 -> new d53e9bc1
+  Alternate Build                base 663ca59d -> new 710f3ff6
+  Alternate Cure Build           base 598ca239 -> new d1dc6566
+  Alternate Cure Normalize       base 16df0e33 -> new 037af2d1
+  Alternate Merge                base 4059ba89 -> new e68b0a8d
+  Alternate Payloads             base 4112a14d -> new b9b9cd4a
+  Build Independent Verdict      base 12550800 -> new 090890ef
   Build Save Body                base 66d20a16 -> new 7df90871
   Build Synthesis                base 0c3c91ca -> new 1bec9c94
   C1 Build                       base af287247 -> new 02adbf01
@@ -16,9 +16,9 @@ guards passed: base matched for 42 code nodes; versionId, connections (481) and 
   C3 Extract                     base dfe7c01c -> new c9a6896a
   C4 Build                       base 504387f7 -> new fec538e0
   C4 Extract                     base 2dbea7cd -> new 4c641a0c
-  Cure Build                     base d2fe13bb -> new d9e1e563
-  Cure Check                     base 8c5d35d4 -> new 3110b086
-  Cure Normalize                 base c0a47093 -> new 3799cb2c
+  Cure Build                     base d2fe13bb -> new 4748e32f
+  Cure Check                     base 8c5d35d4 -> new 2f1bcb8d
+  Cure Normalize                 base c0a47093 -> new 2ae0c88c
   D1 Build                       base d7404ad9 -> new 071211bd
   D1 Extract                     base 1c0f4d0c -> new 8bc0952f
   D2 Build                       base 97852308 -> new 78333fdf
@@ -27,19 +27,19 @@ guards passed: base matched for 42 code nodes; versionId, connections (481) and 
   D3 Extract                     base 27fa8aab -> new 6b19317f
   D4 Build                       base 95860804 -> new c4d7ba5a
   D4 Extract                     base 593b7848 -> new f1738c04
-  Extract Independent Verdict    base 9e0996ea -> new 6bc7ef3c
-  Format Markdown                base edfc1ed2 -> new 29698945
+  Extract Independent Verdict    base 9e0996ea -> new fd2db2c4
+  Format Markdown                base edfc1ed2 -> new 856aab95
   Init Seats                     base 3533fb15 -> new 97c71392
   Init with Guards               base 67edcaee -> new 413a233b
-  Panel Build                    base e503dab6 -> new 00313743
-  Panel Cure Build 1             base 19004afa -> new bcf16671
-  Panel Cure Build 2             base 2459d287 -> new d5ab4327
-  Panel Cure Build 3             base c8334d3c -> new be8c236d
-  Panel Cure Check               base 836a14d1 -> new 4c4a46eb
-  Panel Cure Normalize 1         base de0f7a03 -> new 23297e4f
-  Panel Cure Normalize 2         base f5b020e5 -> new 092ba2db
-  Panel Cure Normalize 3         base cf1cfa8f -> new fb7bd554
-  Panel Payloads                 base c1877db0 -> new 46165e20
+  Panel Build                    base e503dab6 -> new b0d87896
+  Panel Cure Build 1             base 19004afa -> new a5c4a5d1
+  Panel Cure Build 2             base 2459d287 -> new 2c324f74
+  Panel Cure Build 3             base c8334d3c -> new a85bc587
+  Panel Cure Check               base 836a14d1 -> new 8fe8020f
+  Panel Cure Normalize 1         base de0f7a03 -> new fbdf616b
+  Panel Cure Normalize 2         base f5b020e5 -> new 7c28557f
+  Panel Cure Normalize 3         base cf1cfa8f -> new 7cde00c3
+  Panel Payloads                 base c1877db0 -> new 970cf767
   Replay Rows                    base 8d8a4f81 -> new 94d03ea9
   Reserve Build                  base e24d7fc8 -> new 0c93ed40
   + Accept Gate?                 if           

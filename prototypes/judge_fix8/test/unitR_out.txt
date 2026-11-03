@@ -42,17 +42,18 @@ ok  R4: the single judge prints its retracted lines corrected, originals superse
 ok  R4: the violation table attaches GLM's premise 6 RESPONSE to that item
 ok  R2: the transcript prints the stored count for the challenger close (16), not a recount
      (the rebuilt transcript: test/transcript_32306_R.md)
-== R5: K-LB reads footing, not tags
-ok  premise 3 ([CR3] LINK 4): footing L1 (Luke 3:23 "as was supposed", untagged) and L2 (enomizeto); the tags alone gave L2 -- L1,L2
-ok  premise 6 ([CR3] LINK 5): three quoted verses, one layer (L1)
-ok  32306 gemini: premise 3 does not fire; premise 6 fires -- DEFENDER premise 6
-ok  32306 glm: premise 3 does not fire; premise 6 fires -- DEFENDER premise 6
-ok  Gemini's cure calling Matthew 1:12 "[L3]" does not cure premise 6 (the block, read by FOOTING LAYERS, shows L1 only) -- the item's own answer says the premise is not counted, and the STATEMENT was refused at step 3 (layer kinds): the block, read by FOOTING LAYERS, exhibits L1 onl
-ok  a synthetic relabelling statement ([L3] on Matthew 1:12) does not cure
-ok  counting premise 6 cures it
-ok  the same FOOTING LAYERS words stand in Panel Build, Build Independent Verdict and the 14 cure prompts
+== R5: K-LB reads footing, not tags (as amended by ruling 400: L3 is supporting verse(s) for L1)
+ok  premise 3 ([CR3] LINK 4): L1 Luke 3:23 "as was supposed" (untagged), L2 enomizeto and hes, L3 Matthew 1:16 "of whom was born Jesus" quoted after it; the tags alone gave L2 -- L1,L2,L3
+ok  premise 6 ([CR3] LINK 5): L1 Jeremiah 22:30, then Matthew 1:12 and Luke 1:32 quoted after it: L3 (ruling 400), though all three are tagged [L1] -- L1,L3
+ok  32306 gemini: neither premise 3 nor premise 6 fires -- none
+ok  32306 glm: neither premise 3 nor premise 6 fires -- none
+ok  synthetic: Matthew 1:12 quoted after Matthew 1:11 is L3, the same chapter included (ruling 400, as the coordinator corrected it)
+ok  synthetic block: one quoted verse and an unquoted [L3] reference are one layer
+ok  a statement that quotes Matthew 1:12 for the block, which only names it, does not cure (the block, read by FOOTING LAYERS, shows L1 only) -- the item's own answer says the premise is not counted, and the STATEMENT was refused at step 3 (layer kinds): the block, read by FOOTING LAY
+ok  counting the premise cures it
+ok  the same FOOTING LAYERS words (ruling 400) stand in Panel Build, Build Independent Verdict and the 14 cure prompts
 ok  the 3 checkers read the block by lbFoot
-ok  synthetic: two quotations are one layer; untagged quotation plus a source word is two; a verse read as the source of the other is L3
+ok  synthetic: a second quoted verse from another place is L3 tagged or not; a lone quoted verse is L1 whatever its tag; an unquoted reference makes no layer
 == R6: K-S2, GLM's forms of the single-verse ground, sent to the cure
 ok  32306 GLM: K-S2 catches the reasoning line, D1 vs C1, D6 vs C1 (marked only before), D2 vs C1, D3 vs C3, D3 vs C4 and D4 vs C2 -- REASONING, D1 vs C1, D2 vs C1, D3 vs C3, D3 vs C4, D4 vs C2, D6 vs C1
 ok  32306 GLM: the four K-C lines stay K-C (11 lines caught in all) -- D1 vs C5, D3 vs C2, D5 vs C6, D6 vs C2
@@ -112,4 +113,4 @@ ok  the judges' ledger lists 8 witnesses for premise 2 and names the rest as ove
 ok  the rulebook and both debaters' list instructions state the cap
 ok  Build Save Body lists them in a review line; D4 Build's still-unanswered list reads only the first 8
 
-85 fixtures, 0 bad
+86 fixtures, 0 bad

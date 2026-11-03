@@ -1,10 +1,10 @@
 == a normal run is unchanged (no flag): every body the changed nodes build is the live one, byte for byte
-ok  Panel Build (32306 regrade, no flag): the output is byte-identical to the live node -- 410959 chars
+ok  Panel Build (32306 regrade, no flag): the output is byte-identical to the live node -- 411499 chars
 ok  Panel Payloads (the three stored first replies, no flag): byte-identical to the live node
 ok  Init Seats (a live launch): the same output; no flag key appears
 ok  Reserve Build (no flag): byte-identical to the live node
-ok  Panel Cure Build 1 (no flag): the cure body is byte-identical -- 2 items
-ok  Panel Cure Build 2 (no flag): the cure body is byte-identical -- 13 items
+ok  Panel Cure Build 1 (no flag): the cure body is byte-identical -- 1 items
+ok  Panel Cure Build 2 (no flag): the cure body is byte-identical -- 12 items
 ok  Panel Cure Build 3 (no flag): the cure body is byte-identical -- 8 items
 ok  Replay Rows (a plain dry regrade): byte-identical rows
 == P2, P3: the request flags (Init Seats)
@@ -36,9 +36,9 @@ ok  ChatGPT (refused): the seat sits; no head is placed
 ok  the rulebook is the live one with the posture answer form (SILENCE, SAME TEST) added at its end, in posture mode only
 ok  each judge carries its status and accepted lines for the cure
 ok  Panel Build fails closed on a posture run without Accept Final
-ok  gemini: with the acceptance exchange at the head the checks find the same items as without it -- 2 items
+ok  gemini: with the acceptance exchange at the head the checks find the same items as without it -- 1 items
 ok  gemini: the stored reply (written without the form) is marked for the two absent lines, as TRIAL marks
-ok  glm: with the acceptance exchange at the head the checks find the same items as without it -- 13 items
+ok  glm: with the acceptance exchange at the head the checks find the same items as without it -- 12 items
 ok  glm: the stored reply (written without the form) is marked for the two absent lines, as TRIAL marks
 ok  chatgpt: with the acceptance exchange at the head the checks find the same items as without it -- 8 items
 ok  chatgpt: the stored reply (written without the form) is marked for the two absent lines, as TRIAL marks
@@ -78,7 +78,7 @@ ok  the two added calls use the OpenRouter credential, URL, timeout and error se
 == the request bodies (test/requests_P/) and the prompt sizes the cost estimate reads
 ok  a_accept_probe_32306.json: Init Seats takes it (dry regrade of 32306, the saved seats and panel, accept_probe); it holds no URL or secret
 ok  c_posture_regrade_32306.json: Init Seats takes it (dry regrade of 32306, the saved seats and panel, posture); it holds no URL or secret
-     panel input characters per judge (gemini, glm, chatgpt): live 136660, 136660, 136660; posture 140777, 141919, 137115; acceptance prompt 2897; stored first replies 5202, 13976, 7117
+     panel input characters per judge (gemini, glm, chatgpt): live 136840, 136840, 136840; posture 140957, 142099, 137295; acceptance prompt 2897; stored first replies 5202, 13976, 7117
 ok  P1 dropped: no node in new/ or add/ carries swap code; lib/swap.js and the swapped request body are gone
 
 74 fixtures, 0 bad

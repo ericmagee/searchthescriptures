@@ -337,7 +337,7 @@ if (QRd && !QRd.unavailable && Array.isArray(QRd.items)) {
 }
 if (DRVR.length) {
   const nc = DRVR.filter(x => x.RESULT === 'CURED').length;
-  t += '## Debate rule violations\n\n**Rule B.** A link a judge grades BROKEN must show, on its own line, at least two different kinds of lower layer: [L1] the KJV words quoted, [L2] the Hebrew or Greek word in its own script, with its transliteration marks, with its Strong\'s number, or in plain letters with its English meaning beside it; or [L3] the cross-reference named. A judge whose line did not, or whose counts or standings disagreed with its own BROKEN lines, was asked once to cure it in a fixed form, and the cure was checked by the same count.\n\n';
+  t += '## Debate rule violations\n\n**Rule B.** A link a judge grades BROKEN must show, on its own line, at least two different kinds of lower layer: [L1] the first KJV verse quoted with its reference (tagged or not), [L2] the Hebrew or Greek word in its own script, with its transliteration marks, with its Strong\'s number, or in plain letters with its English meaning beside it; or [L3] any other verse quoted with its reference after it, as its support (operator ruling 400); a tag alone makes no layer. A judge whose line did not, or whose counts or standings disagreed with its own BROKEN lines, was asked once to cure it in a fixed form, and the cure was checked by the same count.\n\n';
   t += '**Effect on the verdict.** ' + DRV_EFFECT + '\n\n';
   t += DRVR.length + (DRVR.length === 1 ? ' violation' : ' violations') + ': ' + nc + ' cured, ' + (DRVR.length - nc) + ' not cured.\n\n';
   t += '| Judge | Item | Rule | Result | Original line | Cure statement, or why not cured | Judge\'s own statement |\n|---|---|---|---|---|---|---|\n';
