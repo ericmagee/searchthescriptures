@@ -1,0 +1,151 @@
+
+=== RUN 32284 (stored cure replies from debate_enforcer_log)
+STORED rows: chatgpt [HELD | D SELF-SUPPORTED 0 | C PROP-DEPENDENT 3 | DEFENDER WINS]; gemini [HELD | D SELF-SUPPORTED 0 | C SELF-SUPPORTED 0 | UNDERDETERMINED]; glm [HELD | D SELF-SUPPORTED 0 | C SELF-SUPPORTED 0 | UNDERDETERMINED]
+STORED outcome (row): UNDERDETERMINED | judged_by chatgpt, gemini, glm
+base  chatgpt  HELD    D SELF-SUPPORTED 0 | C PROP-DEPENDENT 3 | RESULT DEFENDER WINS | drv_uncured 0 (+3 TRIAL)
+new   chatgpt  HELD    D SELF-SUPPORTED 0 | C PROP-DEPENDENT 3 | RESULT DEFENDER WINS | drv_uncured 0 (+3 TRIAL)
+ruled chatgpt  HELD    D SELF-SUPPORTED 0 | C PROP-DEPENDENT 3 | RESULT DEFENDER WINS | drv_uncured 0 (+3 TRIAL)
+      items base: K-G10 CHALLENGER premise 4, K-G10 CHALLENGER premise 5, K-V DEFENDER premise 1
+      items new : K-G10 CHALLENGER premise 4, K-G10 CHALLENGER premise 5, K-V DEFENDER premise 1
+      new uncured: K-G10 CHALLENGER premise 4 [TRIAL] (cure call failed: no cure call was made for this seat); K-G10 CHALLENGER premise 5 [TRIAL] (cure call failed: no cure call was made for this seat); K-V DEFENDER premise 1 [TRIAL] (cure call failed: no cure call was made for this seat)
+      ruled uncured: K-G10 CHALLENGER premise 4 [TRIAL] (cure call failed: no cure call was made for this seat); K-G10 CHALLENGER premise 5 [TRIAL] (cure call failed: no cure call was made for this seat); K-V DEFENDER premise 1 [TRIAL] (cure call failed: no cure call was made for this seat)
+base  gemini   HELD    D SELF-SUPPORTED 0 | C SELF-SUPPORTED 0 | RESULT UNDERDETERMINED | drv_uncured 0
+new   gemini   HELD    D SELF-SUPPORTED 0 | C SELF-SUPPORTED 0 | RESULT UNDERDETERMINED | drv_uncured 0
+ruled gemini   HELD    D SELF-SUPPORTED 0 | C SELF-SUPPORTED 0 | RESULT UNDERDETERMINED | drv_uncured 0
+      items base: none
+      items new : none
+base  glm      HELD    D SELF-SUPPORTED 0 | C SELF-SUPPORTED 0 | RESULT UNDERDETERMINED | drv_uncured 0
+new   glm      HELD    D SELF-SUPPORTED 0 | C SELF-SUPPORTED 0 | RESULT UNDERDETERMINED | drv_uncured 0
+ruled glm      HELD    D SELF-SUPPORTED 0 | C SELF-SUPPORTED 0 | RESULT UNDERDETERMINED | drv_uncured 0
+      items base: none
+      items new : none
+base  single   HELD    D SELF-SUPPORTED 0 | C SELF-SUPPORTED 0 | RESULT UNDERDETERMINED | drv_uncured 1
+new   single   HELD    D SELF-SUPPORTED 0 | C SELF-SUPPORTED 0 | RESULT UNDERDETERMINED | drv_uncured 1
+ruled single   HELD    D SELF-SUPPORTED 0 | C SELF-SUPPORTED 0 | RESULT UNDERDETERMINED | drv_uncured 1
+      items base: K-C D1
+      items new : K-C D1
+      new uncured: K-C D1 (the restated line keeps the ground that a verse does not state the link)
+      ruled uncured: K-C D1 (the restated line keeps the ground that a verse does not state the link)
+BASE PANEL (replayed slots): chatgpt, gemini, glm -> HELD, UNDERDETERMINED | chatgpt:DEFENDER WINS, gemini:UNDERDETERMINED, glm:UNDERDETERMINED
+NEW PANEL (replayed slots): chatgpt, gemini, glm -> HELD, UNDERDETERMINED | chatgpt:DEFENDER WINS, gemini:UNDERDETERMINED, glm:UNDERDETERMINED
+RULED PANEL (replayed slots): chatgpt, gemini, glm -> HELD, UNDERDETERMINED | chatgpt:DEFENDER WINS, gemini:UNDERDETERMINED, glm:UNDERDETERMINED
+
+=== RUN 32293 (stored cure replies from debate_enforcer_log)
+STORED rows: gemini [HELD | D SELF-SUPPORTED 0 | C SELF-SUPPORTED 0 | UNDERDETERMINED]; sol [HELD | D SELF-SUPPORTED 0 | C PROP-DEPENDENT 2 | DEFENDER WINS]; chatgpt [HELD | D SELF-SUPPORTED 0 | C SELF-SUPPORTED 0 | UNDERDETERMINED]
+STORED outcome (row): UNDERDETERMINED | judged_by chatgpt, gemini, sol
+base  gemini   HELD    D SELF-SUPPORTED 0 | C SELF-SUPPORTED 0 | RESULT UNDERDETERMINED | drv_uncured 0
+new   gemini   HELD    D SELF-SUPPORTED 0 | C SELF-SUPPORTED 0 | RESULT UNDERDETERMINED | drv_uncured 0
+ruled gemini   HELD    D SELF-SUPPORTED 0 | C SELF-SUPPORTED 0 | RESULT UNDERDETERMINED | drv_uncured 0
+      items base: none
+      items new : none
+base  glm      HELD    D SELF-SUPPORTED 0 | C SELF-SUPPORTED 0 | RESULT UNDERDETERMINED | drv_uncured 0
+new   glm      HELD    D SELF-SUPPORTED 0 | C SELF-SUPPORTED 0 | RESULT UNDERDETERMINED | drv_uncured 0
+ruled glm      HELD    D SELF-SUPPORTED 0 | C SELF-SUPPORTED 0 | RESULT UNDERDETERMINED | drv_uncured 0
+      items base: K-C D5 vs C5
+      items new : K-C D5 vs C5
+base  chatgpt  HELD    D SELF-SUPPORTED 0 | C SELF-SUPPORTED 0 | RESULT UNDERDETERMINED | drv_uncured 0 (+1 TRIAL)
+new   chatgpt  HELD    D SELF-SUPPORTED 0 | C SELF-SUPPORTED 0 | RESULT UNDERDETERMINED | drv_uncured 0 (+1 TRIAL)
+ruled chatgpt  HELD    D SELF-SUPPORTED 0 | C SELF-SUPPORTED 0 | RESULT UNDERDETERMINED | drv_uncured 0 (+1 TRIAL)
+      items base: K-V DEFENDER premise 1
+      items new : K-V DEFENDER premise 1
+      new uncured: K-V DEFENDER premise 1 [TRIAL] (no written response)
+      ruled uncured: K-V DEFENDER premise 1 [TRIAL] (no written response)
+base  sol      HELD    D SELF-SUPPORTED 0 | C PROP-DEPENDENT 2 | RESULT DEFENDER WINS | drv_uncured 0 (+6 TRIAL)
+new   sol      HELD    D SELF-SUPPORTED 0 | C PROP-DEPENDENT 2 | RESULT DEFENDER WINS | drv_uncured 0 (+6 TRIAL)
+ruled sol      HELD    D SELF-SUPPORTED 0 | C PROP-DEPENDENT 2 | RESULT DEFENDER WINS | drv_uncured 0 (+6 TRIAL)
+      items base: K-G4 D3 vs C2, K-G10 CHALLENGER premise 2, K-G10 CHALLENGER premise 3, K-G11 D3 vs C2, K-V DEFENDER premise 6, K-V CHALLENGER premise 5, K-V CHALLENGER premise 6
+      items new : K-G4 D3 vs C2, K-G10 CHALLENGER premise 2, K-G10 CHALLENGER premise 3, K-G11 D3 vs C2, K-V DEFENDER premise 6, K-V CHALLENGER premise 5, K-V CHALLENGER premise 6
+      new uncured: K-G10 CHALLENGER premise 2 [TRIAL] (no written response); K-G10 CHALLENGER premise 3 [TRIAL] (no written response); K-G11 D3 vs C2 [TRIAL] (no written response); K-V DEFENDER premise 6 [TRIAL] (no written response); K-V CHALLENGER premise 5 [TRIAL] (no written response); K-V CHALLENGER premise 6 [TRIAL] (no written response)
+      ruled uncured: K-G10 CHALLENGER premise 2 [TRIAL] (no written response); K-G10 CHALLENGER premise 3 [TRIAL] (no written response); K-G11 D3 vs C2 [TRIAL] (no written response); K-V DEFENDER premise 6 [TRIAL] (no written response); K-V CHALLENGER premise 5 [TRIAL] (no written response); K-V CHALLENGER premise 6 [TRIAL] (no written response)
+base  single   PARTIAL D COLLAPSED 4 | C SELF-SUPPORTED 0 | RESULT UNDERDETERMINED | drv_uncured 0 (+1 TRIAL)
+new   single   PARTIAL D COLLAPSED 4 | C SELF-SUPPORTED 0 | RESULT UNDERDETERMINED | drv_uncured 0 (+1 TRIAL)
+ruled single   PARTIAL D COLLAPSED 4 | C SELF-SUPPORTED 0 | RESULT UNDERDETERMINED | drv_uncured 0 (+1 TRIAL)
+      items base: K-C D2 vs C4, K-S2 D6 vs C1
+      items new : K-C D2 vs C4, K-S2 D6 vs C1
+      new uncured: K-S2 D6 vs C1 [TRIAL] (no written response)
+      ruled uncured: K-S2 D6 vs C1 [TRIAL] (no written response)
+BASE PANEL (replayed slots): gemini, glm, chatgpt -> HELD, UNDERDETERMINED | gemini:UNDERDETERMINED, glm:UNDERDETERMINED, chatgpt:UNDERDETERMINED
+BASE PANEL (as stored: chatgpt, gemini, sol) -> HELD, UNDERDETERMINED | chatgpt:UNDERDETERMINED, gemini:UNDERDETERMINED, sol:DEFENDER WINS
+NEW PANEL (replayed slots): gemini, glm, chatgpt -> HELD, UNDERDETERMINED | gemini:UNDERDETERMINED, glm:UNDERDETERMINED, chatgpt:UNDERDETERMINED
+NEW PANEL (as stored: chatgpt, gemini, sol) -> HELD, UNDERDETERMINED | chatgpt:UNDERDETERMINED, gemini:UNDERDETERMINED, sol:DEFENDER WINS
+RULED PANEL (replayed slots): gemini, glm, chatgpt -> HELD, UNDERDETERMINED | gemini:UNDERDETERMINED, glm:UNDERDETERMINED, chatgpt:UNDERDETERMINED
+RULED PANEL (as stored: chatgpt, gemini, sol) -> HELD, UNDERDETERMINED | chatgpt:UNDERDETERMINED, gemini:UNDERDETERMINED, sol:DEFENDER WINS
+
+=== RUN 32302 (stored cure replies from debate_enforcer_log)
+STORED rows: gemini [HELD | D PROP-DEPENDENT 2 | C COLLAPSED 3 | DEFENDER WINS]; glm [HELD | D PROP-DEPENDENT 2 | C COLLAPSED 3 | DEFENDER WINS]; chatgpt [HELD | D SELF-SUPPORTED 0 | C COLLAPSED 4 | DEFENDER WINS]
+STORED outcome (row): DEFENDER PREVAILS | judged_by chatgpt, gemini, glm
+base  gemini   HELD    D SELF-SUPPORTED 0 | C COLLAPSED 3 | RESULT DEFENDER WINS | drv_uncured 0 (+1 TRIAL)
+new   gemini   HELD    D SELF-SUPPORTED 0 | C COLLAPSED 3 | RESULT DEFENDER WINS | drv_uncured 0 (+3 TRIAL)
+ruled gemini   HELD    D SELF-SUPPORTED 0 | C PROP-DEPENDENT 1 | RESULT DEFENDER WINS | drv_uncured 0 (+1 TRIAL)
+      items base: K-V CHALLENGER premise 1
+      items new : K-P CHALLENGER premise 2, K-P CHALLENGER premise 4, K-V CHALLENGER premise 1
+      removed: none | added: K-P CHALLENGER premise 2, K-P CHALLENGER premise 4
+      new uncured: K-P CHALLENGER premise 2 [TRIAL] (no written response); K-P CHALLENGER premise 4 [TRIAL] (no written response); K-V CHALLENGER premise 1 [TRIAL] (no written response)
+      ruled uncured: K-V CHALLENGER premise 1 [TRIAL] (no written response)
+base  glm      HELD    D PROP-DEPENDENT 2 | C COLLAPSED 3 | RESULT DEFENDER WINS | drv_uncured 0
+new   glm      HELD    D PROP-DEPENDENT 2 | C COLLAPSED 3 | RESULT DEFENDER WINS | drv_uncured 0 (+1 TRIAL)
+ruled glm      HELD    D PROP-DEPENDENT 2 | C COLLAPSED 3 | RESULT DEFENDER WINS | drv_uncured 0
+      items base: K-G4 D6 vs C4, K-C REASONING, K-C CHALLENGER CHAIN MARK
+      items new : K-C REASONING, K-C CHALLENGER CHAIN MARK, K-P D6 vs C4
+      removed: K-G4 D6 vs C4 | added: K-P D6 vs C4
+      new uncured: K-P D6 vs C4 [TRIAL] (no written response)
+base  chatgpt  HELD    D SELF-SUPPORTED 0 | C PROP-DEPENDENT 2 | RESULT DEFENDER WINS | drv_uncured 0 (+3 TRIAL)
+new   chatgpt  HELD    D SELF-SUPPORTED 0 | C PROP-DEPENDENT 2 | RESULT DEFENDER WINS | drv_uncured 0 (+3 TRIAL)
+ruled chatgpt  HELD    D SELF-SUPPORTED 0 | C PROP-DEPENDENT 2 | RESULT DEFENDER WINS | drv_uncured 0 (+3 TRIAL)
+      items base: K-V CHALLENGER premise 1, K-V CHALLENGER premise 4, K-V CHALLENGER premise 5
+      items new : K-V CHALLENGER premise 1, K-V CHALLENGER premise 4, K-V CHALLENGER premise 5
+      new uncured: K-V CHALLENGER premise 1 [TRIAL] (no written response); K-V CHALLENGER premise 4 [TRIAL] (no written response); K-V CHALLENGER premise 5 [TRIAL] (no written response)
+      ruled uncured: K-V CHALLENGER premise 1 [TRIAL] (no written response); K-V CHALLENGER premise 4 [TRIAL] (no written response); K-V CHALLENGER premise 5 [TRIAL] (no written response)
+base  sol      HELD    D SELF-SUPPORTED 0 | C PROP-DEPENDENT 2 | RESULT DEFENDER WINS | drv_uncured 0 (+2 TRIAL)
+new   sol      HELD    D SELF-SUPPORTED 0 | C PROP-DEPENDENT 2 | RESULT DEFENDER WINS | drv_uncured 0 (+2 TRIAL)
+ruled sol      HELD    D SELF-SUPPORTED 0 | C PROP-DEPENDENT 2 | RESULT DEFENDER WINS | drv_uncured 0 (+2 TRIAL)
+      items base: K-G4 D3 vs C3, K-C D3 vs C3, K-V CHALLENGER premise 4, K-V CHALLENGER premise 5
+      items new : K-G4 D3 vs C3, K-C D3 vs C3, K-V CHALLENGER premise 4, K-V CHALLENGER premise 5
+      new uncured: K-V CHALLENGER premise 4 [TRIAL] (no written response); K-V CHALLENGER premise 5 [TRIAL] (no written response)
+      ruled uncured: K-V CHALLENGER premise 4 [TRIAL] (no written response); K-V CHALLENGER premise 5 [TRIAL] (no written response)
+base  single   HELD    D PROP-DEPENDENT 2 | C COLLAPSED 3 | RESULT DEFENDER WINS | drv_uncured 1
+new   single   HELD    D PROP-DEPENDENT 2 | C COLLAPSED 3 | RESULT DEFENDER WINS | drv_uncured 1
+ruled single   HELD    D PROP-DEPENDENT 2 | C COLLAPSED 3 | RESULT DEFENDER WINS | drv_uncured 1
+      items base: K-C D4 vs C5, K-C D6 vs C4, K-C D6 vs C6
+      items new : K-C D4 vs C5, K-C D6 vs C4, K-C D6 vs C6
+      new uncured: K-C D6 vs C4 (the restated line keeps the ground that a verse does not state the link)
+      ruled uncured: K-C D6 vs C4 (the restated line keeps the ground that a verse does not state the link)
+BASE PANEL (replayed slots): gemini, glm, chatgpt -> HELD, DEFENDER PREVAILS | gemini:DEFENDER WINS, glm:DEFENDER WINS, chatgpt:DEFENDER WINS
+BASE PANEL (as stored: chatgpt, gemini, glm) -> HELD, DEFENDER PREVAILS | chatgpt:DEFENDER WINS, gemini:DEFENDER WINS, glm:DEFENDER WINS
+NEW PANEL (replayed slots): gemini, glm, chatgpt -> HELD, DEFENDER PREVAILS | gemini:DEFENDER WINS, glm:DEFENDER WINS, chatgpt:DEFENDER WINS
+NEW PANEL (as stored: chatgpt, gemini, glm) -> HELD, DEFENDER PREVAILS | chatgpt:DEFENDER WINS, gemini:DEFENDER WINS, glm:DEFENDER WINS
+RULED PANEL (replayed slots): gemini, glm, chatgpt -> HELD, DEFENDER PREVAILS | gemini:DEFENDER WINS, glm:DEFENDER WINS, chatgpt:DEFENDER WINS
+RULED PANEL (as stored: chatgpt, gemini, glm) -> HELD, DEFENDER PREVAILS | chatgpt:DEFENDER WINS, gemini:DEFENDER WINS, glm:DEFENDER WINS
+
+=== RUN 32306 (stored cure replies from debate_enforcer_log)
+STORED rows: gemini [HELD | D SELF-SUPPORTED 0 | C SELF-SUPPORTED 0 | UNDERDETERMINED]; glm [HELD | D PROP-DEPENDENT 1 | C SELF-SUPPORTED 0 | UNDERDETERMINED]; chatgpt [HELD | D SELF-SUPPORTED 0 | C SELF-SUPPORTED 0 | UNDERDETERMINED]
+STORED outcome (row): UNDERDETERMINED | judged_by chatgpt, gemini, glm
+base  chatgpt  HELD    D SELF-SUPPORTED 0 | C SELF-SUPPORTED 0 | RESULT UNDERDETERMINED | drv_uncured 0 (+8 TRIAL)
+new   chatgpt  HELD    D SELF-SUPPORTED 0 | C SELF-SUPPORTED 0 | RESULT UNDERDETERMINED | drv_uncured 0 (+8 TRIAL)
+ruled chatgpt  HELD    D SELF-SUPPORTED 0 | C SELF-SUPPORTED 0 | RESULT UNDERDETERMINED | drv_uncured 0 (+8 TRIAL)
+      items base: K-V DEFENDER premise 2, K-V DEFENDER premise 3, K-V DEFENDER premise 4, K-V DEFENDER premise 5, K-V DEFENDER premise 6, K-V CHALLENGER premise 1, K-V CHALLENGER premise 4, K-V CHALLENGER premise 5
+      items new : K-V DEFENDER premise 2, K-V DEFENDER premise 3, K-V DEFENDER premise 4, K-V DEFENDER premise 5, K-V DEFENDER premise 6, K-V CHALLENGER premise 1, K-V CHALLENGER premise 4, K-V CHALLENGER premise 5
+      new uncured: K-V DEFENDER premise 2 [TRIAL] (cure call failed: no cure call was made for this seat); K-V DEFENDER premise 3 [TRIAL] (cure call failed: no cure call was made for this seat); K-V DEFENDER premise 4 [TRIAL] (cure call failed: no cure call was made for this seat); K-V DEFENDER premise 5 [TRIAL] (cure call failed: no cure call was made for this seat); K-V DEFENDER premise 6 [TRIAL] (cure call failed: no cure call was made for this seat); K-V CHALLENGER premise 1 [TRIAL] (cure call failed: no cure call was made for this seat); K-V CHALLENGER premise 4 [TRIAL] (cure call failed: no cure call was made for this seat); K-V CHALLENGER premise 5 [TRIAL] (cure call failed: no cure call was made for this seat)
+      ruled uncured: K-V DEFENDER premise 2 [TRIAL] (cure call failed: no cure call was made for this seat); K-V DEFENDER premise 3 [TRIAL] (cure call failed: no cure call was made for this seat); K-V DEFENDER premise 4 [TRIAL] (cure call failed: no cure call was made for this seat); K-V DEFENDER premise 5 [TRIAL] (cure call failed: no cure call was made for this seat); K-V DEFENDER premise 6 [TRIAL] (cure call failed: no cure call was made for this seat); K-V CHALLENGER premise 1 [TRIAL] (cure call failed: no cure call was made for this seat); K-V CHALLENGER premise 4 [TRIAL] (cure call failed: no cure call was made for this seat); K-V CHALLENGER premise 5 [TRIAL] (cure call failed: no cure call was made for this seat)
+base  gemini   HELD    D SELF-SUPPORTED 0 | C SELF-SUPPORTED 0 | RESULT UNDERDETERMINED | drv_uncured 0 (+1 TRIAL)
+new   gemini   HELD    D SELF-SUPPORTED 0 | C SELF-SUPPORTED 0 | RESULT UNDERDETERMINED | drv_uncured 0 (+1 TRIAL)
+ruled gemini   HELD    D SELF-SUPPORTED 0 | C SELF-SUPPORTED 0 | RESULT UNDERDETERMINED | drv_uncured 0 (+1 TRIAL)
+      items base: K-LXX CITATION CHECK
+      items new : K-LXX CITATION CHECK
+      new uncured: K-LXX CITATION CHECK [TRIAL] (no written response)
+      ruled uncured: K-LXX CITATION CHECK [TRIAL] (no written response)
+base  glm      HELD    D SELF-SUPPORTED 0 | C SELF-SUPPORTED 0 | RESULT UNDERDETERMINED | drv_uncured 0 (+7 TRIAL)
+new   glm      HELD    D SELF-SUPPORTED 0 | C SELF-SUPPORTED 0 | RESULT UNDERDETERMINED | drv_uncured 0 (+7 TRIAL)
+ruled glm      HELD    D SELF-SUPPORTED 0 | C SELF-SUPPORTED 0 | RESULT UNDERDETERMINED | drv_uncured 0 (+7 TRIAL)
+      items base: K-C D1 vs C5, K-C D3 vs C2, K-C D5 vs C6, K-C D6 vs C2, K-S2 REASONING, K-S2 D1 vs C1, K-S2 D2 vs C1, K-S2 D3 vs C3, K-S2 D3 vs C4, K-S2 D4 vs C2, K-S2 D6 vs C1
+      items new : K-C D1 vs C5, K-C D3 vs C2, K-C D5 vs C6, K-C D6 vs C2, K-S2 REASONING, K-S2 D1 vs C1, K-S2 D2 vs C1, K-S2 D3 vs C3, K-S2 D3 vs C4, K-S2 D4 vs C2, K-S2 D6 vs C1
+      new uncured: K-S2 REASONING [TRIAL] (no written response); K-S2 D1 vs C1 [TRIAL] (no written response); K-S2 D2 vs C1 [TRIAL] (no written response); K-S2 D3 vs C3 [TRIAL] (no written response); K-S2 D3 vs C4 [TRIAL] (no written response); K-S2 D4 vs C2 [TRIAL] (no written response); K-S2 D6 vs C1 [TRIAL] (no written response)
+      ruled uncured: K-S2 REASONING [TRIAL] (no written response); K-S2 D1 vs C1 [TRIAL] (no written response); K-S2 D2 vs C1 [TRIAL] (no written response); K-S2 D3 vs C3 [TRIAL] (no written response); K-S2 D3 vs C4 [TRIAL] (no written response); K-S2 D4 vs C2 [TRIAL] (no written response); K-S2 D6 vs C1 [TRIAL] (no written response)
+base  single   HELD    D PROP-DEPENDENT 1 | C PROP-DEPENDENT 1 | RESULT DEFENDER WINS | drv_uncured 0
+new   single   HELD    D PROP-DEPENDENT 1 | C PROP-DEPENDENT 1 | RESULT DEFENDER WINS | drv_uncured 0
+ruled single   HELD    D PROP-DEPENDENT 1 | C PROP-DEPENDENT 1 | RESULT DEFENDER WINS | drv_uncured 0
+      items base: none
+      items new : none
+BASE PANEL (replayed slots): chatgpt, gemini, glm -> HELD, UNDERDETERMINED | chatgpt:UNDERDETERMINED, gemini:UNDERDETERMINED, glm:UNDERDETERMINED
+NEW PANEL (replayed slots): chatgpt, gemini, glm -> HELD, UNDERDETERMINED | chatgpt:UNDERDETERMINED, gemini:UNDERDETERMINED, glm:UNDERDETERMINED
+RULED PANEL (replayed slots): chatgpt, gemini, glm -> HELD, UNDERDETERMINED | chatgpt:UNDERDETERMINED, gemini:UNDERDETERMINED, glm:UNDERDETERMINED
