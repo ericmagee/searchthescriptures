@@ -28,6 +28,13 @@ Where both sides answered and the record still leaves a point open, it is UNDERD
 ### Commitment 6. I void only by quoting.
 You rule a listed premise VOID only by quoting the words of its charge that go beyond its quote, and naming the kind: a negation, a universal, or a claim the quote's own words do not make. Paraphrase, reordering and dropped words are not stronger.
 
-## Part B. The agreement (to settle next)
+## Part B. The agreement (APPROVED by the operator, 2026-11-03 01:4x CST: "yes approved")
+
+1. Before judging, each judge receives Part A alone, with no debate.
+2. It replies with each commitment's heading, copied exactly, each followed by one line in its own words, and then the line: I ACCEPT THIS POSTURE AND WILL BE HELD TO IT.
+3. Code checks the headings and the closing line. A reply with a heading or the line missing or changed is returned once, with the fault named.
+4. A judge that refuses, or fails the check twice, does not judge. A replacement judge takes the seat and must also accept. If no replacement accepts, the debate is marked not graded.
+5. The accepted exchange stays at the head of that judge's conversation while it judges.
+6. At every cure, the system quotes the judge's own accepted line for the commitment the flagged line breaks, beside that line.
 ## Part C. Where it goes in the live debate (to settle after B)
 ## Part D. The live test (to settle after C)
