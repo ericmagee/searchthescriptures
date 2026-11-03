@@ -42,4 +42,11 @@ You rule a listed premise VOID only by quoting the words of its charge that go b
 2. Every judge that may grade takes it: the single judge, the three panel judges, the reserve and the replacements. One rule for all judges.
 3. Each judge's agreement and its status are saved with the debate; the transcript prints them under "The judges' agreement".
 4. The judges' rulebook drops sentence (B) ("A witness contradicts a link only when its own words state the contrary"), so it agrees with Commitment 3.
-## Part D. The live test (to settle after C)
+## Part E. The debaters (APPROVED by the operator, 2026-11-03 01:5x CST: "yes approved"; ruling 397)
+
+Given to both debaters, the Debate Oracle and the other seat alike:
+
+**Prove every position with the layers. A statement of your position is not proof of it.**
+Every claim that a verse means, shows, requires or excludes something carries its layers: the verse quoted with its reference [L1], and at least one more layer, either a Hebrew or Greek word with its meaning [L2] or another verse quoted with its reference [L3]. A claim given without its layers carries no weight with the judges.
+
+## Part D. The build and the live test (awaiting approval)
