@@ -7,7 +7,7 @@ const SYS=side=>'You are the '+side.toUpperCase()+' in a finished debate. A judg
 const rec=[];const items=[];
 C.forEach((c,i)=>{let qs=c.qs,faults=c.faults,second=null;
  if(c.retry){second=qrText(R[i]);const o=qrParse(second);qs={};faults={};for(const side of ['defender','challenger']){const q=o&&o[side];qs[side]=q||null;faults[side]=qrCheck(q,side,F);}}
- for(const side of ['defender','challenger']){const q=qs[side];const ok=faults[side].length===0;rec.push({judge:c.seat,side,round:q&&q.round,quote:q&&q.quote,question:q&&q.question,status:ok?(c.retry?'PASSED ON RETURN':'PASSED'):'DROPPED',faults:faults[side],first_faults:c.faults[side]});
+ for(const side of ['defender','challenger']){const q=qs[side];const ok=faults[side].length===0;rec.push({judge:c.seat,side,round:q&&q.round,quote:q&&q.quote,question:q&&q.question,status:ok?(c.retry?'PASSED ON RETURN':'PASSED'):'DROPPED',faults:faults[side],first_faults:c.faults[side],...(ok?{}:{first_reply:String(c.first_text==null?'(none)':c.first_text).slice(0,2000),second_reply:second==null?null:String(second).slice(0,2000),second_raw:second==null&&c.retry?JSON.stringify(R[i]).slice(0,1500):null})});
   if(!ok)continue;const rd=String(q.round).toUpperCase().replace(/[\[\]\s]/g,'');
   const rounds=QR_SIDE[side].filter(k=>F[QR_KEY[k]]).map(k=>'['+k+']\n'+F[QR_KEY[k]]).join('\n\n');
   items.push({json:{judge:c.seat,side,round:rd,quote:q.quote,question:q.question,body:{model:MODEL[side],max_tokens:4000,messages:[{role:'system',content:SYS(side)},{role:'user',content:'YOUR ROUNDS IN THIS DEBATE:\n\n'+rounds+'\n\n=== A JUDGE\'S QUESTION ===\nThe judge quotes your round '+rd+': "'+q.quote+'"\nQuestion: '+q.question}]}}});}});

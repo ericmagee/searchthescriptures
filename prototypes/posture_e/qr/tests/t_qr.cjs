@@ -23,4 +23,5 @@ const M=run('QR Merge',[reply('Cohabiting means living together as husband and w
 ok(M[0].judges.length===3&&M[0].judges.every(j=>/=== QUESTION ROUND \(TRIAL\) ===/.test(j.body.messages[3].content)&&j.body.messages[3].content.startsWith('DEBATE')),'merge: Q&A appended after the judging request for all three judges');
 ok(M[0].qa[1].new_verses.includes('Genesis 2:24')&&/NEW VERSE, NOT COUNTED: Genesis 2:24/.test(M[0].qa_text),'merge: a verse the debater never cited is marked NOT COUNTED');
 ok(store['Panel Build'].first().json.judges[0].body.messages[3].content==='DEBATE ... judge now.','merge: Panel Build bodies untouched');
+const M2=run('QR Merge',[reply('So 1:18 in my reading, and In Matthew 1:18 the word is synerchomai.'),reply('x'),reply('y'),reply('z')]);ok(M2[0].qa[0].new_verses.length===0,'merge: "So 1:18" and "In Matthew 1:18" are not new verses');
 console.log(fail?'FAIL ('+fail+')':'ALL PASS');
