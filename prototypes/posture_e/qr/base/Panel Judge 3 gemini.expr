@@ -1,0 +1,1 @@
+={{ $('Panel Build').first().json.judges[2].body }}
