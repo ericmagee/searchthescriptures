@@ -31,4 +31,4 @@ P6. Gemini graded five challenger links BROKEN and retracted all five under the 
 S6. Trim A4 (recommended earlier today, not yet applied).
 
 ## Recommendation
-S1 first: it is the only one that changes what the defender is told, and it is why the defender never concedes. Not testable on stored rows (it changes the debater's request); it needs one live run. S2 and S3 change the judges and can be tested by a dry re-grade of 32510.
+S1 first: it is the only one that changes what the defender is told, and it is why the defender never concedes. Not testable on stored rows (it changes the debater's request); it needs one live run. S2 and S3 change the judges; a dry re-grade of 32510 is now refused because its saved panel differs from the new one (run 32525), so they too need a live run, or an offline replay of the stored judge text.
