@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""s435 (WALL-1963 revision 8, piece 4a): E-OOR and E-CHAIN code checks, E-WD model reading, built on top of s434's new nodes. The base for the
+"""s435 (WALL-1963 revision 8, piece 4a): E-OOR and E-CHAIN code checks (E-WD dropped, ruling 445), and the Send Back Build K-W exclusion (ruling 445), built on top of s434's new nodes. The base for the
 write is s434's base (live cf21f231): pieces 3 and 4 are written together (WALL-1963 reply 2003)."""
 import json,os,shutil
 R=os.path.dirname(os.path.abspath(__file__));P=os.path.join(R,'..','s434')
@@ -12,11 +12,11 @@ def rep(nm,a,b):
     OUT[nm]=OUT[nm].replace(a,b)
 A="if(!items.length)return [{json:{je_skip:true,why:'no judge decision line and no synthesis claim was read',items:[],code_rows}}];"
 rep('Judge Enforcer Build',A,open(os.path.join(R,'items4.js')).read()+A)
-rep('Judge Enforcer Build'," +'NO ANSWER, for every rule:",open(os.path.join(R,'rules4.txt')).read()+" +'NO ANSWER, for every rule:")
-rep('Judge Enforcer Build',"| FOLLOWS | DOES NOT FOLLOW | TRUE | OVERSTATED --","| FOLLOWS | DOES NOT FOLLOW | WITHDRAWN | NOT WITHDRAWN | TRUE | OVERSTATED --")
-rep('Judge Enforcer Record',"([BVKYHZPR]\\d+\\.\\d+)","([BVKYHZPRW]\\d+\\.\\d+)")
-rep('Judge Enforcer Record',"|DOES NOT FOLLOW|FOLLOWS|TRUE|OVERSTATED)","|DOES NOT FOLLOW|FOLLOWS|NOT WITHDRAWN|WITHDRAWN|TRUE|OVERSTATED)")
-rep('Judge Enforcer Record',"'E-HOLD','E-KEY','E-PREM','E-RES']","'E-HOLD','E-KEY','E-PREM','E-RES','E-WD']")
+# E-WD (rules4.txt, the W ids, the WITHDRAWN values) dropped: ruling 445 (WALL-1963 reply 2009). rules4.txt is kept in git as the record.
+# Send Back Build (ruling 445): a withdrawal row (rule K-W, rulings 421/424) is never sent back. Base: live cf21f231 (sbbase/).
+SB='Send Back Build';shutil.copy(os.path.join(R,'sbbase',SB+'.js'),os.path.join(R,'base',SB+'.js'));OUT[SB]=open(os.path.join(R,'sbbase',SB+'.js')).read();M['nodes']=M['nodes']+[SB]
+rep(SB,"x.seat_role==='panel'&&/^ENFORCER","x.seat_role==='panel'&&x.rule!=='K-W' /* ruling 445: \"withdrawals will not be included in send-backs\" */&&/^ENFORCER")
+rep(SB,"// an enforcer DISAGREES with (the withdrawal enforcer of rulings 421/424, and E-ANS, E-VOID, E-COL of ruling 428)","// an enforcer DISAGREES with (E-ANS, E-VOID, E-COL of ruling 428 and the later enforcer rules; never a withdrawal row, K-W, ruling 445)")
 for nm,c in OUT.items(): open(os.path.join(R,'new',nm+'.js'),'w').write(c)
 json.dump({'base_versionId':M['base_versionId'],'nodes':M['nodes']},open(os.path.join(R,'manifest.json'),'w'),indent=1)
 print('built',sorted(OUT))

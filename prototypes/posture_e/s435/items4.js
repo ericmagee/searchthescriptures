@@ -1,7 +1,7 @@
 // s435 (WALL-1963 revision 8, piece 4a; rulings 428, 439, 443). Code checks, a row only on a violation: E-OOR, each OUT-OF-ROUND CONCESSIONS line
 // against its own rule (a round outside the link rounds, the sentence verbatim in that round, COUNTED only on a close-round line); E-CHAIN, a chain mark
-// FOOTED while a block of that side's link round exhibits fewer than two prior layers. Model reading: E-WD, each "D<i>: WITHDRAWN" line, read
-// against the defender's own give-up sentences.
+// FOOTED while a block of that side's link round exhibits fewer than two prior layers.
+// E-WD (the withdrawal reading) is not built: ruling 445, "withdrawals will not be included in send-backs"; a reading that can never act is barred (443).
 const RT={CR1:R&&R.CR1,CR2:R&&R.CR2,CR3:R&&R.CR3,CR4:R&&R.CR4,DR1:R&&R.DR1,DR2:R&&R.DR2,DR3:R&&R.DR3,DR4:R&&R.DR4};
 const NQ=s=>N(s).replace(/[^a-z0-9:\s]/g,' ').replace(/\s+/g,' ').trim();
 const cv4=(rule,seat,line,why)=>code_rows.push({run_token:S.run_token,seat,seat_role:'panel',judge_model:null,kind:'enforcer_check',rule,item:rule==='E-OOR'?'OUT-OF-ROUND CONCESSION':'CHAIN MARK',flagged_line:String(line||'').slice(0,1500),prompt_sent:null,full_reply:null,reply_error:null,response_line:String(line||'').slice(0,700),cure_status:null,
@@ -22,9 +22,3 @@ for(const j of judges){const ls=linesOf(j.t);const i0=ls.findIndex(l=>/^OUT-OF-R
   const nm=clause.match(/\b(?:[DC]|LINK\s*)(\d+)\b/i);const ln=nm?+nm[1]:(/\bkeystone\b/i.test(clause)?Math.max(...bl.map(b=>b.link)):null);if(ln===null)continue;
   const named=bl.filter(b=>b.link===ln);if(!named.length)continue;const best=Math.max(...named.map(b=>layersOf(b.t)));
   if(best<2)cv4('E-CHAIN',j.seat,ml,sd+' CHAIN MARK is FOOTED, but the link its own clause names (LINK '+ln+') exhibits '+best+' prior layer(s) in its link round; "a link floats only when the block that states it exhibits fewer than two prior layers" (STRAINED)');}}
-const WG=[];
-for(const j of judges)for(const l of linesOf(j.t)){const m=l.match(/^D(\d+)\s*:\s*WITHDRAWN\b\s*(?:--|—|–|-)?\s*(?:GROUND\s*:\s*)?([\s\S]*)$/);if(!m)continue;WG.push({seat:j.seat,line:l,link:'D'+m[1],ground:m[2]||''});}
-let wi=0;
-for(const g of WG){wi++;const id='W'+wi+'.1';const gu=giveUp([R&&R.CR3,R&&R.CR4].join('\n'),g.ground+' '+g.link);
- items.push({ids:[{id,rule:'E-WD',seat:g.seat,grade:'WITHDRAWN',item:'WITHDRAWN '+g.link,flagged_line:g.line.slice(0,1500),response_line:g.line.slice(0,700)}],
-  text:'ITEM W'+wi+' (E-WD, a defender link graded WITHDRAWN):\nTHE LINE ('+id+', '+g.seat+'): '+cut(g.line,700)+'\nTHE DEFENDER\'S OWN GIVE-GROUND SENTENCES IN [CR3] AND [CR4]:\n'+(gu||'(none found)')});}
