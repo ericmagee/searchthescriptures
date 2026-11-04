@@ -1,0 +1,2 @@
+const rx=/\b(?:no|neither|nor)\s+(?:\S+\s+){0,2}?(?:verse|witness|row|passage|text)(?:['’]s|s)?\s+own\s+words\s+(?:\S+\s+){0,2}?(?:states?|names?|says?)\b/i;
+for(const [t,w] of [["neither row's own words state that Joseph begat the child",true],["no witness's own words state it",true],["neither row’s own words state",true],["the row's own words state the source",false],["[CR3] answered Acts 2:30 in its own words",false],["neither side showed those rows closing into one answer",false]])console.log(rx.test(t)===w?'OK  ':'FAIL',t);
