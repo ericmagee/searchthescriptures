@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """s432 (NO ANSWER rows sent back): writes the new/ nodes named in manifest.json over the live version it names. Dry by default;
---write writes. Guards: live versionId e250a807; 332 nodes; live code of each of the twelve equals base/; every new node parses; no running
+--write writes. Guards: live versionId as in manifest.json; 332 nodes; live code of each changed node equals base/; every new node parses; no running
 execution. After: fetch back; the changed nodes equal new/, every other node's parameters and the connections unchanged; published."""
 import json, os, sys, subprocess, urllib.request
 R = os.path.dirname(os.path.abspath(__file__))
