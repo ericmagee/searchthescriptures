@@ -1,0 +1,52 @@
+RULE E-ANS (an answer to a pressed verse). Decide FIRST what the right grade is: MEETS only when the answer shows, in its own words, how the verse fits the answering side's case, or why the stated meaning does not follow from what the verse says. MISSES when the answer rests on an absence (it says only that the verse, or the other side, names no, states no, does not name, gives no, or is silent on something) without a fit of its own, or when it does not address the stated meaning. Then for each judge's grade: AGREE when it matches the right grade, DISAGREE when it does not.
+RULE E-VOID (a listed premise ruled VOID). A premise is VOID only when its charge says the opponent's quoted words state something they do not state (a negation, a universal, or another claim beyond the quote). Read only the words the charge says the quote states; a clause describing what the premise props, or the objection it serves, is not part of the charge. AGREE with the VOID ruling when the charge goes beyond its quote; DISAGREE when it does not.
+RULE E-COL (a collision line: FORCED, or LINK BROKEN). A link is broken only when the answer's own quoted words cannot agree with the meaning pressed, as the line quotes them; it is not broken because no verse states it, or because of an absence. AGREE when the quoted words show the answer cannot agree with the meaning; DISAGREE when they do carry a meaning the link can agree with, or the line rests on an absence or on a demand for a stating verse.
+RULE E-SYN (a sentence of the synthesis saying a side withdrew, conceded, granted, dropped or narrowed something). AGREE when that side's own sentences given you give up that same thing at the same scope; DISAGREE when they do not, or give up less (for example, "no row I cite" is not "no biblical text").
+Reply with exactly one line per judge id, and nothing else, in this form:
+ENFORCER: <judge id> -- AGREE | DISAGREE | NO ANSWER -- RIGHT: MEETS | MISSES | VOID | NOT VOID | BROKEN | STANDS | TRUE | OVERSTATED -- <one sentence that quotes the words that decide it>
+
+ITEM V1 (E-VOID, a premise the challenger listed against the defender, number 6):
+THE LIST ENTRY: 6. LINK 5: The keystone, which leaves the Davidic oath without loins. Defender: "Therefore Christ had no biological father."
+PRESSED WITH:
+2 Samuel 7:12 "I will set up thy seed after thee, which shall proceed out of thy bowels" -- MEANS: the promised seed comes out of a man's body. -- [L2] zera H2233 (seed) | [L3] Psalms 132:11 "Of the fruit of thy body will I set upon thy throne"
+Acts 2:30 "of the fruit of his loins, according to the flesh, he would raise up Christ to sit on his throne" -- MEANS: Christ is of David's loins by the flesh. -- [L2] sarx G4561 (flesh) | [L3] Hebrews 7:10 "For he was yet in the loins of his father"
+Romans 1:3 "which was made of the seed of David according to the flesh" -- MEANS: the flesh of Christ is David's seed. -- [L2] sarx G4561 (flesh) | PROVEN IN [Round 1]
+Hebrews 7:10 "For he was yet in the loins of his father, when Melchisedec met him." -- MEANS: loins pass across generations through begetting fathers, so the last link must be a man of David's loins. -- [L3] Matthew 1:2 "Abraham begat Isaac; and Isaac begat Jacob"
+Hebrews 7:14 "that our Lord sprang out of Juda" -- MEANS: his descent is evident as a springing out of the tribe. -- [L2] anatellō G393 (spring up) | [L3] Numbers 1:18 "by the house of their fathers"
+Ezra 2:59 "they could not shew their father's house, and their seed" -- MEANS: the register of the father's house is a register of seed. -- [L3] Ezra 2:62 "therefore were they, as polluted, put from the priesthood"
+Numbers 1:18 "they declared their pedigrees after their families, by the house of their fathers" -- MEANS: descent is reckoned through the father's house, and the only Davidic house named in this family is Joseph's. -- [L3] Luke 2:4 "because he was of the house and lineage of David"
+Job 14:1 "Man that is born of a woman is of few days" -- MEANS: "made of a woman" (Galatians 4:4) is the idiom for mortality, used of men with named fathers. -- [L3] Matthew 11:11 "Among them that are born of women there hath not risen a greater than John the Baptist" | PROVEN IN [Round 1]
+
+PREMISE COUNT: 6
+THE JUDGES' VOID RULINGS:
+- V1.1 (chatgpt): Premise 6 is VOID: its charge that the conclusion leaves the oath "without loins" makes a claim the [CR1] quotation, "Therefore Christ had no biological father," does not make about descent from David.
+
+ITEM V2 (E-VOID, a premise the defender listed against the challenger, number 5):
+THE LIST ENTRY: 5. The grounds of Joseph's intent are claimed to be closed. Challenger: "The ground of the intent in Matthew 1:19 is stated as "being a just man" and "not willing to make her a publick example.""
+PRESSED WITH:
+Matthew 1:20 "fear not to take unto thee Mary thy wife: for that which is conceived in her is of the Holy Ghost" -- MEANS: the angel's answer shows what Joseph's fear concerned, the source of the conceiving. -- [L2] gennaō G1080 (beget) | [L3] Matthew 1:19 "was minded to put her away privily"
+Matthew 1:19 "was minded to put her away privily" -- MEANS: putting away presupposes a cause, and the verse's own words name none in Joseph. -- [L2] apolyō G630 (put away) | [L3] Deuteronomy 22:24 "because he hath humbled his neighbour's wife"
+Deuteronomy 22:24 "because he hath humbled his neighbour's wife" -- MEANS: the public example the law gave a betrothed wife was for another man's act. -- [L2] anah H6031 (humble) | [L3] Matthew 1:19 "not willing to make her a publick example"
+Matthew 1:18 "she was found with child of the Holy Ghost" -- MEANS: the finding itself is attributed to the Holy Ghost. -- [L2] heuriskō G2147 (find) | [L3] Matthew 1:20 "that which is conceived in her is of the Holy Ghost"
+THE JUDGES' VOID RULINGS:
+- V2.1 (chatgpt): Premise 5 is VOID: the charge that the grounds are "closed" claims an exclusion the [DR2] quotation, "The ground of the intent in Matthew 1:19 is stated as ‘being a just man’ and ‘not willing to make her a publick example,’" does not assert.
+
+ITEM Y1 (E-SYN, a sentence of the synthesis about the defender):
+THE SENTENCE: - **Galatians 4:4's phrase is also used of men with fathers** — "made of a woman"; Job 14:1 "Man that is born of a woman is of few days"; Matthew 11:11 "Among them that are born of women." Defender conceded: "I withdraw them as decisive and keep them as confirming."
+THAT SIDE'S OWN SENTENCES THAT GIVE GROUND (withdraw, drop, grant, concede, narrow):
+- Job 14:1, "Man that is born of a woman is of few days". Matthew 11:11, "Among them that are born of women there hath not risen a greater than John the Baptist". Romans 1:3, "which was made of the seed of David according to the flesh". Acts 2:30, "of the fruit of his loins, according to the flesh". I grant "of a woman" is an idiom of mortality there. In Galatians 4:4 it follows "God sent forth his Son", so the sending comes before the making.
+- John 1:13, "Which were born, not of blood, nor of the will of the flesh, nor of the will of man, but of God." 1 John 5:1, "every one that loveth him that begat loveth him also that is begotten of him." I grant that "of God" is said of believers who had fathers. For them it is a new birth after a fleshly one. In Matthew 1:20 it is "conceived in her", and the thing conceived is "born of thee" (Luke 1:35). The verb alone does not exclude a father. The womb event and its stated source carry the point.
+- Matthew 1:18, "before they came together". Matthew 1:24, "and took unto him his wife". Deuteronomy 20:7, "that hath betrothed a wife, and hath not taken her". Deuteronomy 22:24, "because he hath humbled his neighbour's wife". I grant that *synerchomai* (G4905) may mean the taking, that betrothal made them husband and wife in law, and that the verse dates the finding. This is why Matthew 1:19 speaks of "put her away." The source is stated in Matthew 1:18 and 1:20.
+- [L4] I grant that "of a woman" is also the mortality idiom. But where the idiom is used of others (Job 14:1, Matthew 11:11), a father stands behind. Here the Son is "sent forth" by God (*exapostellō*, "send forth") and "made of a woman", with no human father named. D5 does not rest on Galatians 4:4 alone.
+D1, D2, D3 and D5 stand on Matthew 1:16, 1:18, 1:20 and Luke 1:34–35. D4 stands narrowed to Luke 3:23 and the acts of Matthew 1:21 and 1:24. I have withdrawn Jeremiah 22:30, Ezra 2:61 and Matthew 1:25 as independent grounds. I have granted that "till" bounds only the abstinence and that no verse states Mary's Davidic descent. The Davidic claim in the text is carried by Joseph's house and the legal father's acts (Matthew 1:20, Luke 1:32). The text names the begetting source of the conception as the Holy Ghost (Matthew 1:20, margin "Gr. begotten", *gennaō*), and it names no human begetter.
+Conceded above (Concession 3). I withdraw them as decisive and keep them as confirming.
+- Acts 1:8, "ye shall receive power, after that the Holy Ghost is come upon you". Luke 24:49, "until ye be endued with power from on high". Luke 9:34, "there came a cloud, and overshadowed them". Acts 5:15, "the shadow of Peter passing by might overshadow some of them". I grant that *eperchomai* (G1904, "come upon") and overshadowing alone do not mean begetting. In Luke 1:35 the verbs answer the question of Luke 1:34, and the result is "that holy thing which shall be born of thee."
+ANSWER ID: Y1.1
+
+ITEM Y2 (E-SYN, a sentence of the synthesis about the challenger):
+THE SENTENCE: The challenger conceded no link.
+THAT SIDE'S OWN SENTENCES THAT GIVE GROUND (withdraw, drop, grant, concede, narrow):
+Luke 1:27 "espoused to a man whose name was Joseph, of the house of David" -- MEANS: the Davidic house is attached to Joseph, as the defender conceded. -- [L2] anēr G435 (man, husband) | PROVEN IN [Round 1]
+**LINK 6: NARROWED TO:** the register the text gives is reckoned by the father's house, and both of its lines run through Joseph. I drop the wording "one thing" as more than the rows state.
+## C6 — NARROWED TO: the register the text gives is reckoned by the father's house, and both of its lines run through Joseph.
+ANSWER ID: Y2.1
