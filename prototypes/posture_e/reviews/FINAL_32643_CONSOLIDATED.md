@@ -63,6 +63,7 @@ Worker_E, session_014Qy67bHv8uBmRXbWGSrghm, 2026-11-04. This document is private
     - **Correction to A3:** the DG-63 wording "needs MORE proof than a positive claim, not less" stands in DG-63 itself (drift_guards rule 63, at character 1884). The synthesis quoted the guard; that is not a fault, and S-J does not read guard wording.
 14. **The single judge's audit floods its output** (C 6): about 50 false "NOT READ" flags.
     - **Lower priority.** Ruling 402 already places the single judge outside the debate.
+    - **Built 4 Nov, s425b, live 1a3cf903:** a line is flagged only when it opens as an entry (D<n> or C<n>). On six stored runs the flags fall from 175 to 0 and the entries read are unchanged.
 
 ## C. Order
 1. Build 6, 3, 7, 4, 5, 8, 11 and 12. These are defect fixes, computed checks, marks and TRIAL items, and none removes a seat. Test them by a re-grade of 32643, then one live run.
