@@ -2,7 +2,8 @@
 // debate_enforcer_log row per judge grade (kind enforcer_check); nothing goes back to a judge. Passes Enforcer Record's output on unchanged.
 const PASS=$('Enforcer Record').first().json;
 const B=$('Judge Enforcer Build').all().map(x=>x.json);const first=B[0]||{};
-if(first.je_skip)return [{json:{...PASS,enf428:{skipped:true,why:first.why||''},enf428_rows:[]}}];
+const CODE=first.code_rows||[]; /* s434: code-checked violations of the verdict lines (ruling 443) */
+if(first.je_skip)return [{json:{...PASS,enf428:{skipped:true,why:first.why||'',code_violations:CODE.length},enf428_rows:CODE}}];
 const T=new Date().toISOString();
 const R=$input.all().map(x=>x.json);const V={};const errors=[];
 R.forEach((r,i)=>{let txt='';try{txt=String(r.choices[0].message.content||'');}catch(e){errors.push('call '+(i+1)+': no reply ('+String(r.error&&r.error.message||r.message||'unknown').slice(0,120)+')');return;}
@@ -14,4 +15,5 @@ B.forEach((b,ci)=>{(b.ids||[]).forEach((x,k)=>{const v=V[x.id.toUpperCase()];con
  rows.push({run_token:b.run_token,seat:x.seat,seat_role:x.rule==='E-SYN'?'synthesis':'panel',judge_model:b.model,kind:'enforcer_check',rule:x.rule,item:x.item,flagged_line:x.flagged_line,
   prompt_sent:k===0?b.body.messages[1].content:null,full_reply:full,reply_error:errors[ci]||null,response_line:x.response_line,cure_status:null,
   cure_reason:'ENFORCER '+verdict+(v&&v.right?' (right: '+v.right+')':'')+(v&&v.why?': '+v.why.slice(0,600):'')+' (judge wrote '+x.grade+'; RECORD-ONLY TRIAL, ruling 428)',at:T});});});
-return [{json:{...PASS,enf428:{skipped:false,calls:B.length,counts:first.counts||{},not_checked:(first.not_checked||[]).length,tally,errors},enf428_rows:rows}}];
+rows.push(...CODE);
+return [{json:{...PASS,enf428:{code_violations:CODE.length,skipped:false,calls:B.length,counts:first.counts||{},not_checked:(first.not_checked||[]).length,tally,errors},enf428_rows:rows}}];
