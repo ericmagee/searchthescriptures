@@ -1,0 +1,3 @@
+const fs=require('fs');const blk=fs.readFileSync(__dirname+'/block.js','utf8');const SP=process.argv[2];
+function run(rounds,dp,cp){const d={cr1:rounds.D1,cr2:rounds.D2,cr3:rounds.D3,cr4:rounds.D4,gr1:rounds.C1,gr2:rounds.C2,dr3:rounds.C3,dr4:rounds.C4};const SX=[];new Function('d','S','SX',blk)(d,{defender:{profile:dp},challenger:{profile:cp}},SX);return SX;}
+for(const [n,f] of [['32643',SP+'/r32643/rounds_doc.json'],['32510',SP+'/r32510/rounds.json'],['32595',SP+'/r32595/rounds.json'],['32605',SP+'/r32605/rounds.json']])console.log(n,JSON.stringify(run(JSON.parse(fs.readFileSync(f,'utf8')),'plain','oracle')));
