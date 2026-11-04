@@ -6,7 +6,7 @@ Worker_E, session_014Qy67bHv8uBmRXbWGSrghm, 2026-11-04. This document is private
 
 ## A. Corrections to the reviews and to my own reports
 1. **A3 is right that all three judges voided the Oracle's charge** "This assumes Mary is of David's house, which no quoted row gives". Grok's words: "Premise 5 VOID: the charge adds NO". My earlier report named only ChatGPT and Gemini.
-2. **C's table is wrong on ChatGPT at Matthew 1:19.** ChatGPT's own answer-check line is "MEETS", not MISSES. ChatGPT still counted the same link unexhibited, "Matthew 1:19 was not answered on the meaning pressed", so it contradicts itself (problem 7).
+2. **WITHDRAWN 4 Nov (journal 2061): C's table is right; this correction was wrong.** ChatGPT's line on the Oracle's answer at [DR3] reads: Matthew 1:19 ... ANSWER: "No verb of knowing stands in the verse." -- MISSES. The MEETS line I read is on the defender's [CR4] answer, a press the ledger marks unproven. ChatGPT does not contradict itself in 32643, so problem 7 has no case here. B7 was still built, and it compares only lines of the same side.
 3. **C is right on DG-18, and my check missed it** (journal 2059). The Oracle quoted "this day have I begotten thee" in rounds 1, 2 and 4, with Acts 13:33 and Hebrews 5:5 and without Hebrews 1:5. My Psalm 2:7 check looked for the reference only.
    - **Fixed and live** (version 425d5fbc, log 26617). The check now reads the words as well as the reference.
    - **Tested:** 32643 now flags Hebrews 1:5; 32510 still flags both verses; 32595 and 32605 stay silent.
@@ -35,7 +35,7 @@ Worker_E, session_014Qy67bHv8uBmRXbWGSrghm, 2026-11-04. This document is private
 6. **The count does not match the cure** (A3 4). Grok's cure added premise 4, but the stored count kept [6].
    - **Solution:** after a cure, counted_premises is rebuilt from the cured lines.
    - **Build;** this is a defect fix.
-7. **A judge contradicts itself** (C 3 as corrected; A3 6). ChatGPT graded the Oracle's Matthew 1:19 answer MEETS and then counted the same link unexhibited, "not answered on the meaning pressed".
+7. **A judge contradicts itself** (A3 6). **No case in 32643 (journal 2061):** ChatGPT graded the Oracle's Matthew 1:19 answer MISSES, which agrees with its UNEXHIBITED count. The check below guards future runs.
    - **Solution:** a computed check that flags a premise counted UNEXHIBITED for a verse whose own ANSWER CHECK line, by the same judge, reads MEETS.
    - **Build.**
 8. **Glosses are not checked** (C 5, A3 5.4 and 7).
