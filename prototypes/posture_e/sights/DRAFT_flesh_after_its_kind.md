@@ -84,11 +84,8 @@ So a begetting of the flesh by the Holy Ghost, with the flesh routed through the
 2. Choose the challenge wording. This draft uses the operator's 3 Nov wording. Conclusion 76, item 6 carries the 31 Oct wording: "According to Hebrews 7:14, How is it evident that our Lord sprang out of Juda?  Given the law: Numbers 1:2, 18."
 3. Write the carrier so the Oracle has this where it needs it. A filed sight is served only when retrieval picks it. For the biological-father topic, the carrier is the Oracle seat's own served material: the DG-8 guard text or the topic's held rows. That text is drafted after this sight is ruled.
 
-## Provenance: the operator's words, 3 Nov (verbatim)
+## Provenance: the operator's words, 3 Nov (his corrected version, verbatim)
 
-> "i do have something for the "through the woman nonsense" impregnated by an angel.  I'm not sure if we can put it in a sight... it's heavy on Isaiah 28:20.   A very good response to "conceived by the Holy Grost":    This is not a natural selection or oder of the Creator.  This is strictly supported and illustrated by straight forward scripture:  1 Corinthians 15:37-40; Gen 1:12.   mix seeds is forbidden Leviticus 19:19; Deuteronomy 22:9;  Hebrew 2:17-18; John 1:1;14.   Human flesh has only 1 mechanism of existence according to scripture.   Linage and heritage is carried through the seed (sperma) of the father Numbers 1:2;18
-> In a debate, challenge:  Explain how is it evident Christ sprang out of Judah given the Law in Numbers (Hebrews 7:14)"
+> "i do have something for the "through the woman nonsense" being impregnated by an angel.  I'm not sure if we can put it in a sight... it's heavy on Isaiah 28:10.   A very good response to "conceived by the Holy Grost" dogma.   Which is not a natural selection or order of the Creator.  My spill is strictly supported and illustrated by straight forward scripture:  1 Corinthians 15:37-40; Gen 1:12.   mix seeds is forbidden Leviticus 19:19; Deuteronomy 22:9;  Hebrew 2:17-18; John 1:1;14.   Human flesh has only 1 mechanism of existence according to scripture.   Linage and heritage is carried through the seed (sperma) of the father Numbers 1:2;18.  In a debate, challenge:  Explain how is it evident Christ sprang out of Judah given the Law in Numbers (Hebrews 7:14).
 
-**Corrections by the operator.**
-- "Isaiah 28:20" is Isaiah 28:10 (3 Nov: "correct my Isaiah 28:20 error").
-- "clean it up for final review": the summary states his claims in standard spelling ("Holy Ghost", "order", "Lineage", "Hebrews 2:17-18", "John 1:1, 14", "Numbers 1:2, 18"). The meaning is unchanged; his exact words stand above.
+**Cleanup.** "clean it up for final review" (operator, 3 Nov): the summary states his claims in standard spelling ("Holy Ghost", "Lineage", "Hebrews 2:17-18", "John 1:1, 14", "Numbers 1:2, 18"). The meaning is unchanged; his exact words stand above.
