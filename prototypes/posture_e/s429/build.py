@@ -73,6 +73,16 @@ rep('Judge Enforcer Record',"(?:RIGHT\\s*:\\s*(MEETS|MISSES|NOT VOID|VOID)","(?:
 rep('Judge Enforcer Record',"const tally={'E-ANS':{AGREE:0,DISAGREE:0,'NO ANSWER':0,'NO VERDICT':0},'E-VOID':{AGREE:0,DISAGREE:0,'NO ANSWER':0,'NO VERDICT':0}};",
  "const tally={};for(const k of ['E-ANS','E-VOID','E-COL','E-SYN'])tally[k]={AGREE:0,DISAGREE:0,'NO ANSWER':0,'NO VERDICT':0};")
 rep('Judge Enforcer Record',"rows.push({run_token:b.run_token,seat:x.seat,seat_role:'panel',","rows.push({run_token:b.run_token,seat:x.seat,seat_role:x.rule==='E-SYN'?'synthesis':'panel',")
+# F13 (run 32717; my repair): the alternate and reserve builders read the removed seat's system message as a string, but google/ and qwen/ seats
+# carry it as [{type:'text',text,cache_control}] (__orc), so Gemini could never be replaced: "the removed seat's rulebook and transcript could not be
+# read". The text parts are joined back into the one string they were cut from.
+A13="else{SYS=b0.messages[0].content;user=b0.messages[b0.messages.length-1].content;}"
+B13="else{const __tx=c=>Array.isArray(c)?c.map(p=>p&&typeof p.text==='string'?p.text:'').join(''):c;SYS=__tx(b0.messages[0].content);user=__tx(b0.messages[b0.messages.length-1].content);} /* s429 F13 (run 32717): a cached system message is a list of text parts */"
+for nm in ['Alternate Build','Reserve Build']: rep(nm,A13,B13)
+# F14 (run 32717): the enforcer read the E-VOID rule's "a clause describing what the premise props" as covering the premise's own head ("The inference
+# that loins run only through fathers") and ruled both ChatGPT VOIDs NOT VOID; the head is the charge.
+rep('Judge Enforcer Build',"Read only the words the charge says the quote states; a clause describing what the premise props, or the objection it serves, is not part of the charge.",
+ "The charge is the premise\\'s own words before its quote (for example \"The inference that ...\"), read against the words of that quote. Set aside only a clause saying what the premise props (\"which props ...\") or a sentence naming the objection it serves (\"The objection it props is ...\"); those are not part of the charge.")
 if __name__=='__main__':
     for nm,c in OUT.items():open(f'{R}/new/{nm}.js','w').write(c)
     print('built',sorted(OUT))

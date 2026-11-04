@@ -1539,7 +1539,7 @@ pay.forEach((p,i)=>{if(!QA&&!((p.drv_uncured||0)>0))return;
  const cand=QA?(qk?[{seat:qk,fam:'openrouter',api_model:AM[qk].api_model,max_tokens:AM[qk].max_tokens,family:AM[qk].family}]:[]):pool;const reasons=[];let a=null;
  for(const c of cand){const w=why(c);if(w){reasons.push(c.seat+' '+w);continue;}a=c;break;}
  if(!a){out.push({json:{alt:{...base,skip:'no pool model passes the guards'+(reasons.length?': '+reasons.join('; '):(cand.length?'':' (the pool is empty)'))}}});return;}
- let SYS=null,user=null;try{const b0=src.body;if(b0.systemInstruction){SYS=b0.systemInstruction.parts[0].text;user=b0.contents[b0.contents.length-1].parts[0].text;}else{SYS=b0.messages[0].content;user=b0.messages[b0.messages.length-1].content;}}catch(e){SYS=null;} // judge_fix8 P2: the transcript is the last user turn
+ let SYS=null,user=null;try{const b0=src.body;if(b0.systemInstruction){SYS=b0.systemInstruction.parts[0].text;user=b0.contents[b0.contents.length-1].parts[0].text;}else{const __tx=c=>Array.isArray(c)?c.map(p=>p&&typeof p.text==='string'?p.text:'').join(''):c;SYS=__tx(b0.messages[0].content);user=__tx(b0.messages[b0.messages.length-1].content);} /* s429 F13 (run 32717): a cached system message is a list of text parts */}catch(e){SYS=null;} // judge_fix8 P2: the transcript is the last user turn
  if(typeof SYS!=='string'||typeof user!=='string'||!SYS||!user){out.push({json:{alt:{...base,skip:'the removed seat\'s rulebook and transcript could not be read'}}});return;}
  used.push(a.api_model);
  // A fresh read: the removed seat's own system and user text only; never its answer, report lines or cure exchange (6904 g).

@@ -1,52 +1,1019 @@
 RULE E-ANS (an answer to a pressed verse). Decide FIRST what the right grade is: MEETS only when the answer shows, in its own words, how the verse fits the answering side's case, or why the stated meaning does not follow from what the verse says. MISSES when the answer rests on an absence (it says only that the verse, or the other side, names no, states no, does not name, gives no, or is silent on something) without a fit of its own, or when it does not address the stated meaning. Then for each judge's grade: AGREE when it matches the right grade, DISAGREE when it does not.
-RULE E-VOID (a listed premise ruled VOID). A premise is VOID only when its charge says the opponent's quoted words state something they do not state (a negation, a universal, or another claim beyond the quote). Read only the words the charge says the quote states; a clause describing what the premise props, or the objection it serves, is not part of the charge. AGREE with the VOID ruling when the charge goes beyond its quote; DISAGREE when it does not.
+RULE E-VOID (a listed premise ruled VOID). A premise is VOID only when its charge says the opponent's quoted words state something they do not state (a negation, a universal, or another claim beyond the quote). The charge is the premise's own words before its quote (for example "The inference that ..."), read against the words of that quote. Set aside only a clause saying what the premise props ("which props ...") or a sentence naming the objection it serves ("The objection it props is ..."); those are not part of the charge. AGREE with the VOID ruling when the charge goes beyond its quote; DISAGREE when it does not.
 RULE E-COL (a collision line: FORCED, or LINK BROKEN). A link is broken only when the answer's own quoted words cannot agree with the meaning pressed, as the line quotes them; it is not broken because no verse states it, or because of an absence. AGREE when the quoted words show the answer cannot agree with the meaning; DISAGREE when they do carry a meaning the link can agree with, or the line rests on an absence or on a demand for a stating verse.
 RULE E-SYN (a sentence of the synthesis saying a side withdrew, conceded, granted, dropped or narrowed something). AGREE when that side's own sentences given you give up that same thing at the same scope; DISAGREE when they do not, or give up less (for example, "no row I cite" is not "no biblical text").
 Reply with exactly one line per judge id, and nothing else, in this form:
 ENFORCER: <judge id> -- AGREE | DISAGREE | NO ANSWER -- RIGHT: MEETS | MISSES | VOID | NOT VOID | BROKEN | STANDS | TRUE | OVERSTATED -- <one sentence that quotes the words that decide it>
 
-ITEM V1 (E-VOID, a premise the challenger listed against the defender, number 6):
-THE LIST ENTRY: 6. LINK 5: The keystone, which leaves the Davidic oath without loins. Defender: "Therefore Christ had no biological father."
-PRESSED WITH:
-2 Samuel 7:12 "I will set up thy seed after thee, which shall proceed out of thy bowels" -- MEANS: the promised seed comes out of a man's body. -- [L2] zera H2233 (seed) | [L3] Psalms 132:11 "Of the fruit of thy body will I set upon thy throne"
-Acts 2:30 "of the fruit of his loins, according to the flesh, he would raise up Christ to sit on his throne" -- MEANS: Christ is of David's loins by the flesh. -- [L2] sarx G4561 (flesh) | [L3] Hebrews 7:10 "For he was yet in the loins of his father"
-Romans 1:3 "which was made of the seed of David according to the flesh" -- MEANS: the flesh of Christ is David's seed. -- [L2] sarx G4561 (flesh) | PROVEN IN [Round 1]
-Hebrews 7:10 "For he was yet in the loins of his father, when Melchisedec met him." -- MEANS: loins pass across generations through begetting fathers, so the last link must be a man of David's loins. -- [L3] Matthew 1:2 "Abraham begat Isaac; and Isaac begat Jacob"
-Hebrews 7:14 "that our Lord sprang out of Juda" -- MEANS: his descent is evident as a springing out of the tribe. -- [L2] anatellō G393 (spring up) | [L3] Numbers 1:18 "by the house of their fathers"
-Ezra 2:59 "they could not shew their father's house, and their seed" -- MEANS: the register of the father's house is a register of seed. -- [L3] Ezra 2:62 "therefore were they, as polluted, put from the priesthood"
-Numbers 1:18 "they declared their pedigrees after their families, by the house of their fathers" -- MEANS: descent is reckoned through the father's house, and the only Davidic house named in this family is Joseph's. -- [L3] Luke 2:4 "because he was of the house and lineage of David"
-Job 14:1 "Man that is born of a woman is of few days" -- MEANS: "made of a woman" (Galatians 4:4) is the idiom for mortality, used of men with named fathers. -- [L3] Matthew 11:11 "Among them that are born of women there hath not risen a greater than John the Baptist" | PROVEN IN [Round 1]
+ITEM B1 (E-ANS; the answering side wrote this in [CR2]):
+PRESSED VERSE: Isaiah 7:14
+WHAT THE PRESS SAYS THE VERSE MEANS: "the Hebrew word is the young-woman word, with no clause of not-knowing"
+THE ANSWER: "parthenos (G3933) is the word Matthew's Greek uses for the Isaiah quotation... Matthew applies the word as fulfilled in Mary"
+THE JUDGES' GRADES:
+- B1.1 (gemini): MEETS -- "a virgin shall conceive"
 
-PREMISE COUNT: 6
+ITEM B2 (E-ANS; the answering side wrote this in [CR2]):
+PRESSED VERSE: Genesis 24:16
+WHAT THE PRESS SAYS THE VERSE MEANS: "even bethulah needs a clause to state that no man had known her, as the defender grants"
+THE ANSWER: "The word there is bᵉthûwlâh (H1330). The text still adds 'neither had any man known her,' so the clause, not the noun alone, carries the exclusion."
+THE JUDGES' GRADES:
+- B2.1 (gemini): MEETS -- "neither had any man known her"
+
+ITEM B3 (E-ANS; the answering side wrote this in [CR2]):
+PRESSED VERSE: Genesis 24:43
+WHAT THE PRESS SAYS THE VERSE MEANS: "almah here has no clause of not-knowing, so the exclusion is not carried by the word"
+THE ANSWER: "This is the same Rebekah, called by ʿalmāh (H5959) in that verse, though verse 16 had called her bᵉthûwlâh. So the two Hebrew words are used of the same woman, a virgin."
+THE JUDGES' GRADES:
+- B3.1 (gemini): MEETS -- "the virgin cometh forth"
+
+ITEM B4 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: Proverbs 30:19
+WHAT THE PRESS SAYS THE VERSE MEANS: "almah stands with a man's way, so the word does not by itself carry exclusion"
+THE ANSWER: "Conceded for the Hebrew words. almah (H5959, 'a lass, damsel, maid, virgin') and bethulah (H1330) do not carry the exclusion by themselves. The link rests on the Greek, which Matthew chose in 1:23."
+THE JUDGES' GRADES:
+- B4.1 (gemini): MEETS -- "the way of a man with a maid"
+
+ITEM B5 (E-ANS; the answering side wrote this in [CR2]):
+PRESSED VERSE: Isaiah 7:16
+WHAT THE PRESS SAYS THE VERSE MEANS: "the sign is bounded in Isaiah's day"
+THE ANSWER: "The sign's near-term setting in Isaiah 7:16 does not erase the word's sense."
+THE JUDGES' GRADES:
+- B5.1 (gemini): MEETS -- "before the child shall know to refuse the evil"
+
+ITEM B6 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: Isaiah 8:3
+WHAT THE PRESS SAYS THE VERSE MEANS: "the sign-period child is conceived by the prophet's approach"
+THE ANSWER: "Isaiah 8:3: 'Call his name Mahershalalhashbaz.' ... The child of 8:3-4 is named Mahershalalhashbaz. The child of Isaiah 7:14 is the one who 'shall call his name Immanuel.'"
+THE JUDGES' GRADES:
+- B6.1 (gemini): MEETS -- "Call his name Mahershalalhashbaz"
+
+ITEM B7 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: Isaiah 8:4
+WHAT THE PRESS SAYS THE VERSE MEANS: "the child of the sign-period has a father"
+THE ANSWER: "A near-day child is no ground to deny the fulfilment Matthew 1:22 states. A different name in 8:3 marks a different child, and the challenger's chain does not join them."
+THE JUDGES' GRADES:
+- B7.1 (gemini): MEETS -- "before the child shall have knowledge to cry, My father"
+
+ITEM B8 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: Isaiah 8:8
+WHAT THE PRESS SAYS THE VERSE MEANS: "Immanuel is addressed in Isaiah's own day"
+THE ANSWER: "Isaiah 8:8 does not carry Immanuel's birth or his father. It addresses the land as his."
+THE JUDGES' GRADES:
+- B8.1 (gemini): MEETS -- "fill the breadth of thy land, O Immanuel"
+- B8.2 (grok): MEETS -- "addresses the land as his."
+
+ITEM B9 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: Matthew 1:25
+WHAT THE PRESS SAYS THE VERSE MEANS: "the not-knowing runs from the taking to the birth"
+THE ANSWER: "Conceded: heōs hou (G2193, 'until') bounds only the time after the taking... Deuteronomy 20:7 shows that betrothed and taken are two steps. The pregnancy found at 'before they came together' belongs to the first step."
+THE JUDGES' GRADES:
+- B9.1 (gemini): MEETS -- "knew her not till she had brought forth"
+
+ITEM B10 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: Matthew 1:24
+WHAT THE PRESS SAYS THE VERSE MEANS: "the taking is the coming-together that 1:25 follows"
+THE ANSWER: "The pregnancy found at 'before they came together' belongs to the first step. So the link does not rest on 1:25."
+THE JUDGES' GRADES:
+- B10.1 (gemini): MEETS -- "took unto him his wife"
+
+ITEM B11 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: Deuteronomy 20:7
+WHAT THE PRESS SAYS THE VERSE MEANS: "the law separates betrothal from taking, so 'before they came together' is before the taking"
+THE ANSWER: "Deuteronomy 20:7 shows that betrothed and taken are two steps. The pregnancy found at 'before they came together' belongs to the first step."
+THE JUDGES' GRADES:
+- B11.1 (gemini): MEETS -- "betrothed a wife, and hath not taken her"
+
+ITEM B12 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: Deuteronomy 22:24
+WHAT THE PRESS SAYS THE VERSE MEANS: "the betrothed is already a wife"
+THE ANSWER: "Within the espousal, the law treats the man's lying with her as humbling her, an offence worth stoning. So the title 'wife' carries no licence to know her before the taking."
+THE JUDGES' GRADES:
+- B12.1 (gemini): MEETS -- "humbled his neighbour's wife"
+
+ITEM B13 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: Genesis 4:1
+WHAT THE PRESS SAYS THE VERSE MEANS: "the stated means of conceiving is a husband knowing his wife"
+THE ANSWER: "Genesis 4:1 states how Adam's wife conceived. It does not say a betrothed wife conceives that way before the taking."
+THE JUDGES' GRADES:
+- B13.1 (gemini): MEETS -- "Adam knew Eve his wife; and she conceived"
+
+ITEM B14 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: 1 John 5:1
+WHAT THE PRESS SAYS THE VERSE MEANS: "the begetting verb with God is used of people who have natural fathers"
+THE ANSWER: "Granted: gennaō with God as source is used of believers... 1 John 5:1 describes believers' second birth, which stands beside a natural first birth, and nothing in Matthew 1:18 or 1:20 describes a second one."
+THE JUDGES' GRADES:
+- B14.1 (gemini): MEETS -- "begotten of him"
+
+ITEM B15 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: John 1:13
+WHAT THE PRESS SAYS THE VERSE MEANS: "'of God' names an origin in God that the defender grants stands beside a natural first birth"
+THE ANSWER: "John 1:13 sets that 'of God' against blood and 'the will of man.' So 'of God' is the very word that names an origin apart from man's will."
+THE JUDGES' GRADES:
+- B15.1 (gemini): MEETS -- "not of the will of man, but of God"
+
+ITEM B16 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: Luke 1:35
+WHAT THE PRESS SAYS THE VERSE MEANS: "the verbs are empowerment and presence"
+THE ANSWER: "In Luke 1:35 their object is a woman who has just said 'I know not a man,' and the verse ends 'therefore.' The answer is to a question about the means."
+THE JUDGES' GRADES:
+- B16.1 (gemini): MEETS -- "The Holy Ghost shall come upon thee"
+
+ITEM B17 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: Luke 9:34
+WHAT THE PRESS SAYS THE VERSE MEANS: "episkiazō is the presence cloud"
+THE ANSWER: "Conceded: the verbs alone mean presence and power... Luke 1:35 says the one born is 'of thee' and gives 'therefore' as the reason for 'Son of God.' No man appears in the verse."
+THE JUDGES' GRADES:
+- B17.1 (gemini): MEETS -- "there came a cloud, and overshadowed them"
+
+ITEM B18 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: Acts 13:33
+WHAT THE PRESS SAYS THE VERSE MEANS: "the Psalm's 'begotten' is set at the resurrection"
+THE ANSWER: "Conceded: that Psalm is set at the raising and the priesthood. Matthew 1:20 sets its begetting 'in her,' so the two verses do not share a time."
+THE JUDGES' GRADES:
+- B18.1 (gemini): MEETS -- "this day have I begotten thee"
+
+ITEM B19 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: Matthew 1:3
+WHAT THE PRESS SAYS THE VERSE MEANS: "'of her' names the mother where a father begets"
+THE ANSWER: "There the verb 'begat' is stated of the father. In 1:16 the father's verb is replaced by 'was born.'"
+THE JUDGES' GRADES:
+- B19.1 (gemini): MEETS -- "Judas begat Phares and Zara of Thamar"
+
+ITEM B20 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: Acts 16:13
+WHAT THE PRESS SAYS THE VERSE MEANS: "enomizeto carries no verdict of falsehood"
+THE ANSWER: "Conceded: nomizō alone carries no falsehood verdict. The weight rests on Luke 3:23's 'as was supposed' beside Matthew 1:16."
+THE JUDGES' GRADES:
+- B20.1 (gemini): MEETS -- "where prayer was wont to be made"
+
+ITEM B21 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: Luke 2:41
+WHAT THE PRESS SAYS THE VERSE MEANS: "the narrator names Joseph as parent"
+THE ANSWER: "Conceded: they name Joseph in the household as parent and father. They do not exclude him by themselves. Luke 2:33: 'Joseph and his mother marvelled.' There the narrator uses his name."
+THE JUDGES' GRADES:
+- B21.1 (gemini): MEETS -- "his parents went to Jerusalem"
+
+ITEM B22 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: Luke 2:48
+WHAT THE PRESS SAYS THE VERSE MEANS: "Mary names Joseph as father"
+THE ANSWER: "Luke 2:49 answers Mary's 'thy father' with 'my Father's.'"
+THE JUDGES' GRADES:
+- B22.1 (gemini): MEETS -- "thy father and I have sought thee"
+
+ITEM B23 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: Luke 2:49
+WHAT THE PRESS SAYS THE VERSE MEANS: "God's fatherhood stands beside Joseph's, as with David's son"
+THE ANSWER: "The child answers 'thy father' with 'my Father's,' and Luke records that they did not understand. The reply sets a different Father beside Joseph"
+THE JUDGES' GRADES:
+- B23.1 (gemini): MEETS -- "about my Father's business"
+
+ITEM B24 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: Luke 2:51
+WHAT THE PRESS SAYS THE VERSE MEANS: "after 2:49-50 Luke keeps both parents"
+THE ANSWER: "Conceded: they name Joseph in the household as parent and father. They do not exclude him by themselves."
+THE JUDGES' GRADES:
+- B24.1 (gemini): MEETS -- "was subject unto them"
+
+ITEM B25 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: Luke 1:27
+WHAT THE PRESS SAYS THE VERSE MEANS: "the house of David is said of the man"
+THE ANSWER: "Granted, and the link needs it. Matthew 1:20 calls him 'thou son of David.' It supports the legal heir, and Luke 3:23 '(as was supposed)' bears the same sense."
+THE JUDGES' GRADES:
+- B25.1 (gemini): MEETS -- "of the house of David"
+
+ITEM B26 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: Luke 1:36
+WHAT THE PRESS SAYS THE VERSE MEANS: "Mary's named kin is a kinswoman of Aaron's house, side unnamed, as the defender grants"
+THE ANSWER: "Granted: the side is unnamed, and the link does not rest on it."
+THE JUDGES' GRADES:
+- B26.1 (gemini): MEETS -- "thy cousin Elisabeth"
+
+ITEM B27 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: Galatians 4:4
+WHAT THE PRESS SAYS THE VERSE MEANS: "the mortality idiom, said of men whose fathers are named"
+THE ANSWER: "Galatians 4:4 is joined to Romans 1:3 by the one verb, and that does not depend on the idiom."
+THE JUDGES' GRADES:
+- B27.1 (gemini): MEETS -- "made of a woman"
+
+ITEM B28 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: Matthew 11:11
+WHAT THE PRESS SAYS THE VERSE MEANS: "said of John, whose father is named"
+THE ANSWER: "Granted: the idiom is general... For John, Luke 1:13 states the father... Galatians 4:4 does not use it as an idiom of mortality alone."
+THE JUDGES' GRADES:
+- B28.1 (gemini): MEETS -- "born of women"
+
+ITEM B29 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: 2 Samuel 7:12
+WHAT THE PRESS SAYS THE VERSE MEANS: "the seed comes out of the man's body"
+THE ANSWER: "Granted: the rows run through fathers... Acts 2:30's agent is God ('he would raise up Christ'), and Hebrews 7:10 shows loins spanning generations. Nothing in them names Joseph as the begetter of this child."
+THE JUDGES' GRADES:
+- B29.1 (gemini): MEETS -- "proceed out of thy bowels"
+
+ITEM B30 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: Acts 2:30
+WHAT THE PRESS SAYS THE VERSE MEANS: "the line to Christ is a loins line"
+THE ANSWER: "Acts 2:30's agent is God ('he would raise up Christ'), and Hebrews 7:10 shows loins spanning generations. Nothing in them names Joseph as the begetter of this child."
+THE JUDGES' GRADES:
+- B30.1 (gemini): MEETS -- "fruit of his loins"
+
+ITEM B31 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: Hebrews 7:10
+WHAT THE PRESS SAYS THE VERSE MEANS: "loins pass through fathers at each step"
+THE ANSWER: "Hebrews 7:10 shows loins-language covering a descendant three generations on... The pressed witnesses name descent and do not name an immediate human begetter."
+THE JUDGES' GRADES:
+- B31.1 (gemini): MEETS -- "in the loins of his father"
+
+ITEM B32 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: Romans 1:3
+WHAT THE PRESS SAYS THE VERSE MEANS: "the flesh is David's seed"
+THE ANSWER: "The origin is carried by Link 4's chain through Mary, with Joseph the legal heir."
+THE JUDGES' GRADES:
+- B32.1 (gemini): MEETS -- "seed of David according to the flesh"
+
+ITEM B33 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: Hebrews 7:14
+WHAT THE PRESS SAYS THE VERSE MEANS: "the origin is evident by the father's house"
+THE ANSWER: "anatellō (G393, 'to spring up') states an origin. The verse does not name a father. The origin is carried by Link 4's chain through Mary, with Joseph the legal heir."
+THE JUDGES' GRADES:
+- B33.1 (gemini): MEETS -- "our Lord sprang out of Juda"
+
+ITEM B34 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: Numbers 1:18
+WHAT THE PRESS SAYS THE VERSE MEANS: "pedigree is by the father's house"
+THE ANSWER: "Conceded: the register reckons by fathers' houses, and that was the custom. Matthew 1:16 and Luke 3:23 supply the legal register, 'husband of Mary' and 'as was supposed.'"
+THE JUDGES' GRADES:
+- B34.1 (gemini): MEETS -- "by the house of their fathers"
+
+ITEM B35 (E-ANS; the answering side wrote this in [DR3]):
+PRESSED VERSE: Deuteronomy 22:24
+WHAT THE PRESS SAYS THE VERSE MEANS: "lying with a betrothed damsel is an offence of humbling, so 'wife' gives no licence to know her before the taking"
+THE ANSWER: "The law calls the betrothed damsel the husband's wife and charges the other man... The offence it names is against the husband, not by him."
+THE JUDGES' GRADES:
+- B35.1 (gemini): MEETS -- "he hath humbled his neighbour's wife"
+
+ITEM B36 (E-ANS; the answering side wrote this in [DR3]):
+PRESSED VERSE: Matthew 1:18
+WHAT THE PRESS SAYS THE VERSE MEANS: "the pregnancy is found before any coming together of the two"
+THE ANSWER: "The verse dates the finding before the taking... So 1:18 and 1:25 together say nothing against the espousal step."
+THE JUDGES' GRADES:
+- B36.1 (gemini): MEETS -- "before they came together"
+
+ITEM B37 (E-ANS; the answering side wrote this in [DR3]):
+PRESSED VERSE: Matthew 1:19
+WHAT THE PRESS SAYS THE VERSE MEANS: "the husband is called just and was minded to put her away, which no husband who had known her would be"
+THE ANSWER: "No verb of knowing stands in the verse. 'No husband who had known her would be' so minded is the defender's inference"
+THE JUDGES' GRADES:
+- B37.1 (gemini): MEETS -- "being a just man"
+
+ITEM B38 (E-ANS; the answering side wrote this in [DR3]):
+PRESSED VERSE: Matthew 1:16
+WHAT THE PRESS SAYS THE VERSE MEANS: "the verb 'begat' is dropped for Jesus and the birth is 'of whom,' feminine, so the text itself separates the husband's register from the child's birth"
+THE ANSWER: "The passive gennaō (G1080) names the mother of the birth. It does not narrate the begetting, and it says no word against Joseph."
+THE JUDGES' GRADES:
+- B38.1 (gemini): MEETS -- "of whom was born Jesus"
+
+ITEM B39 (E-ANS; the answering side wrote this in [DR3]):
+PRESSED VERSE: Luke 3:23
+WHAT THE PRESS SAYS THE VERSE MEANS: "Luke's narrator states the sonship to Joseph as supposed"
+THE ANSWER: "'As was supposed' is the reckoning by law and usage. That is the father's-house register of Numbers 1:2, standing with the parents Luke names."
+THE JUDGES' GRADES:
+- B39.1 (gemini): MEETS -- "being (as was supposed) the son of Joseph"
+
+ITEM B40 (E-ANS; the answering side wrote this in [DR3]):
+PRESSED VERSE: John 1:13
+WHAT THE PRESS SAYS THE VERSE MEANS: "where the text gives 'of God' as the source, it sets it against blood and man's will"
+THE ANSWER: "The verse denies blood as the source of becoming sons of God. The persons themselves all had fathers in the flesh. So 'of God' stands beside a natural father in the very verse the defender pressed."
+THE JUDGES' GRADES:
+- B40.1 (gemini): MEETS -- "not of the will of man, but of God"
+
+ITEM B41 (E-ANS; the answering side wrote this in [DR3]):
+PRESSED VERSE: Luke 1:35
+WHAT THE PRESS SAYS THE VERSE MEANS: "'therefore' makes the Sonship follow from the Holy Ghost's coming upon the woman"
+THE ANSWER: "'Therefore' ties the title to the anointing presence."
+THE JUDGES' GRADES:
+- B41.1 (gemini): MEETS -- "therefore also that holy thing"
+- B41.2 (chatgpt): MEETS -- The causal connection to the coming upon is accepted.
+
+ITEM B42 (E-ANS; the answering side wrote this in [DR3]):
+PRESSED VERSE: Luke 1:13
+WHAT THE PRESS SAYS THE VERSE MEANS: "the angel states the child to Zacharias as born 'thee,' his own"
+THE ANSWER: "The 'thee' names the man the angel addresses. Where the angel addresses the husband in this birth, he speaks the same way. Matthew 1:21: 'thou shalt call his name JESUS.'"
+THE JUDGES' GRADES:
+- B42.1 (gemini): MEETS -- "shall bear thee a son"
+
+ITEM B43 (E-ANS; the answering side wrote this in [DR3]):
+PRESSED VERSE: Luke 1:31
+WHAT THE PRESS SAYS THE VERSE MEANS: "to Mary no 'thee' is added, and the answer in 1:35 names the Holy Ghost"
+THE ANSWER: "A woman addressed as the one who conceives and bears is not told her husband's part, any more than Elisabeth's own verbs in Luke 1:24 tell Zacharias's part."
+THE JUDGES' GRADES:
+- B43.1 (gemini): MEETS -- "thou shalt conceive in thy womb"
+
+ITEM B44 (E-ANS; the answering side wrote this in [DR3]):
+PRESSED VERSE: Acts 2:30
+WHAT THE PRESS SAYS THE VERSE MEANS: "God is the agent who 'would raise up Christ,' and the verse names David's body as the source, not Joseph"
+THE ANSWER: "God raising up the seed and a father begetting it stand in one chain."
+THE JUDGES' GRADES:
+- B44.1 (gemini): MEETS -- "fruit of his loins, according to the flesh"
+- B44.2 (grok): MEETS -- 2 Samuel 12:24 is offered beside 2 Samuel 7:12.
+
+ITEM B45 (E-ANS; the answering side wrote this in [DR3]):
+PRESSED VERSE: Luke 1:32
+WHAT THE PRESS SAYS THE VERSE MEANS: "David is called 'his father' across generations, so 'father' and 'loins' span descent and do not name Joseph"
+THE ANSWER: "The span the defender names is the line of fathers my link claims. The throne passes 'by the house of their fathers' (Numbers 1:2)."
+THE JUDGES' GRADES:
+- B45.1 (gemini): MEETS -- "throne of his father David"
+
+ITEM B46 (E-ANS; the answering side wrote this in [DR3]):
+PRESSED VERSE: Galatians 4:4
+WHAT THE PRESS SAYS THE VERSE MEANS: "the same verb 'made' joins the child to the woman as Romans 1:3 joins him to David's seed"
+THE ANSWER: "Ginomai (G1096, 'to be made') is the defender's link-word. It also joins 'under the law' in the same verse, so the verb alone carries no line of descent."
+THE JUDGES' GRADES:
+- B46.1 (gemini): MEETS -- "made of a woman"
+
+ITEM B47 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: Isaiah 7:14
+WHAT THE PRESS SAYS THE VERSE MEANS: "the Hebrew word is the young-woman word, with no clause of not-knowing"
+THE ANSWER: "Conceded for the Hebrew words."
+THE JUDGES' GRADES:
+- B47.1 (chatgpt): MEETS -- "do not carry the exclusion by themselves."
+
+ITEM B48 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: Genesis 24:16
+WHAT THE PRESS SAYS THE VERSE MEANS: "even bethulah needs a clause to state that no man had known her, as the defender grants"
+THE ANSWER: "Conceded for the Hebrew words."
+THE JUDGES' GRADES:
+- B48.1 (chatgpt): MEETS -- "do not carry the exclusion by themselves."
+
+ITEM B49 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: Genesis 24:43
+WHAT THE PRESS SAYS THE VERSE MEANS: "almah here has no clause of not-knowing, so the exclusion is not carried by the word"
+THE ANSWER: "Conceded for the Hebrew words."
+THE JUDGES' GRADES:
+- B49.1 (chatgpt): MEETS -- "do not carry the exclusion by themselves."
+
+ITEM B50 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: Proverbs 30:19
+WHAT THE PRESS SAYS THE VERSE MEANS: "almah stands with a man's way, so the word does not by itself carry exclusion"
+THE ANSWER: "Conceded for the Hebrew words."
+THE JUDGES' GRADES:
+- B50.1 (chatgpt): MEETS -- "do not carry the exclusion by themselves."
+
+ITEM B51 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: Isaiah 7:16
+WHAT THE PRESS SAYS THE VERSE MEANS: "the sign is bounded in Isaiah's day"
+THE ANSWER: "A near-day child is no ground to deny the fulfilment Matthew 1:22 states."
+THE JUDGES' GRADES:
+- B51.1 (chatgpt): MEETS -- "A near-day child" is allowed alongside the claimed fulfilment.
+
+ITEM B52 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: Isaiah 8:3
+WHAT THE PRESS SAYS THE VERSE MEANS: "the sign-period child is conceived by the prophet's approach"
+THE ANSWER: "A near-day child is no ground to deny the fulfilment Matthew 1:22 states."
+THE JUDGES' GRADES:
+- B52.1 (chatgpt): MEETS -- The answer allows a near-day child and distinguishes the claimed fulfilment.
+
+ITEM B53 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: Isaiah 8:4
+WHAT THE PRESS SAYS THE VERSE MEANS: "the child of the sign-period has a father"
+THE ANSWER: "A different name in 8:3 marks a different child"
+THE JUDGES' GRADES:
+- B53.1 (chatgpt): MEETS -- The answer distinguishes that child from the claimed fulfilment.
+
+ITEM B54 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: Isaiah 8:8
+WHAT THE PRESS SAYS THE VERSE MEANS: "Immanuel is addressed in Isaiah's own day"
+THE ANSWER: "It addresses the land as his."
+THE JUDGES' GRADES:
+- B54.1 (chatgpt): MEETS -- The answer accepts the address while disputing what it proves about birth.
+
+ITEM B55 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: Matthew 1:25
+WHAT THE PRESS SAYS THE VERSE MEANS: "the not-knowing runs from the taking to the birth"
+THE ANSWER: "Conceded: heōs hou (until) bounds only the time after the taking."
+THE JUDGES' GRADES:
+- B55.1 (chatgpt): MEETS -- The temporal limit is conceded.
+
+ITEM B56 (E-ANS; the answering side wrote this in [CR4]):
+PRESSED VERSE: Matthew 1:24
+WHAT THE PRESS SAYS THE VERSE MEANS: "the taking is the coming-together that 1:25 follows"
+THE ANSWER: "I take the challenger's own fix from Matthew 1:24, 'took unto him his wife.'"
+THE JUDGES' GRADES:
+- B56.1 (chatgpt): MEETS -- The answer accepts the proposed timing.
+
+ITEM B57 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: Deuteronomy 20:7
+WHAT THE PRESS SAYS THE VERSE MEANS: "the law separates betrothal from taking, so 'before they came together' is before the taking"
+THE ANSWER: "Deuteronomy 20:7 shows that betrothed and taken are two steps."
+THE JUDGES' GRADES:
+- B57.1 (chatgpt): MEETS -- The two steps are accepted.
+
+ITEM B58 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: Deuteronomy 22:24
+WHAT THE PRESS SAYS THE VERSE MEANS: "the betrothed is already a wife"
+THE ANSWER: "the title 'wife' carries no licence to know her before the taking."
+THE JUDGES' GRADES:
+- B58.1 (chatgpt): MEETS -- The answer accepts the title and disputes the further inference.
+
+ITEM B59 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: Genesis 4:1
+WHAT THE PRESS SAYS THE VERSE MEANS: "the stated means of conceiving is a husband knowing his wife"
+THE ANSWER: "Genesis 4:1 states how Adam's wife conceived."
+THE JUDGES' GRADES:
+- B59.1 (chatgpt): MEETS -- The described means is accepted for Adam's wife.
+
+ITEM B60 (E-ANS; the answering side wrote this in [CR2]):
+PRESSED VERSE: 1 John 5:1
+WHAT THE PRESS SAYS THE VERSE MEANS: "the begetting verb with God is used of people who have natural fathers"
+THE ANSWER: "1 John 5:1 describes believers' second birth, which stands beside a natural first birth"
+THE JUDGES' GRADES:
+- B60.1 (chatgpt): MEETS -- The natural first birth is granted.
+
+ITEM B61 (E-ANS; the answering side wrote this in [CR4]):
+PRESSED VERSE: John 1:13
+WHAT THE PRESS SAYS THE VERSE MEANS: "'of God' names an origin in God that the defender grants stands beside a natural first birth"
+THE ANSWER: "Their birth 'of God' is a later second birth added to a fleshly one."
+THE JUDGES' GRADES:
+- B61.1 (chatgpt): MEETS -- The answer expressly accepts both births.
+
+ITEM B62 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: Matthew 1:20
+WHAT THE PRESS SAYS THE VERSE MEANS: "the verse gives an origin and lacks the flesh qualifier"
+THE ANSWER: "Romans 1:3 gives the flesh qualifier for David's seed. Matthew 1:20 gives 'in her' for the conception."
+THE JUDGES' GRADES:
+- B62.1 (chatgpt): MEETS -- The difference in qualifiers is accepted.
+
+ITEM B63 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: Luke 1:35
+WHAT THE PRESS SAYS THE VERSE MEANS: "the verbs are empowerment and presence"
+THE ANSWER: "Conceded: the verbs alone mean presence and power."
+THE JUDGES' GRADES:
+- B63.1 (chatgpt): MEETS -- The meaning of the verbs alone is conceded.
+
+ITEM B64 (E-ANS; the answering side wrote this in [CR4]):
+PRESSED VERSE: Luke 9:34
+WHAT THE PRESS SAYS THE VERSE MEANS: "episkiazō (to overshadow) is the presence cloud"
+THE ANSWER: "episkiazō means presence. I grant it does not state the mechanism."
+THE JUDGES' GRADES:
+- B64.1 (chatgpt): MEETS -- Presence is granted.
+
+ITEM B65 (E-ANS; the answering side wrote this in [CR4]):
+PRESSED VERSE: Acts 1:8
+WHAT THE PRESS SAYS THE VERSE MEANS: "the same verb is used of the apostles' empowering"
+THE ANSWER: "The same coming-upon yields 'witnesses' where the object is men"
+THE JUDGES' GRADES:
+- B65.1 (chatgpt): MEETS -- The application to the apostles is accepted; the ledger marks it unproven.
+
+ITEM B66 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: Acts 5:15
+WHAT THE PRESS SAYS THE VERSE MEANS: "the same verb is used of Peter's shadow, with no begetting"
+THE ANSWER: "Conceded: the verbs alone mean presence and power."
+THE JUDGES' GRADES:
+- B66.1 (chatgpt): MEETS -- The ledger marks this entry unproven, not a witness.
+
+ITEM B67 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: Matthew 1:3
+WHAT THE PRESS SAYS THE VERSE MEANS: "'of her' names the mother where a father begets"
+THE ANSWER: "Granted: 'of her' names the mother where a father begets."
+THE JUDGES' GRADES:
+- B67.1 (chatgpt): MEETS -- The pressed meaning is granted.
+
+ITEM B68 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: Matthew 1:5
+WHAT THE PRESS SAYS THE VERSE MEANS: "the same 'of' construction stands with a begetting father"
+THE ANSWER: "Granted: 'of her' names the mother where a father begets."
+THE JUDGES' GRADES:
+- B68.1 (chatgpt): MEETS -- The ledger marks this entry unproven, not a witness.
+
+ITEM B69 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: Acts 16:13
+WHAT THE PRESS SAYS THE VERSE MEANS: "enomizeto (was supposed) carries no verdict of falsehood"
+THE ANSWER: "Conceded: nomizō (to suppose) alone carries no falsehood verdict."
+THE JUDGES' GRADES:
+- B69.1 (chatgpt): MEETS -- The limited meaning is conceded.
+
+ITEM B70 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: Luke 2:41
+WHAT THE PRESS SAYS THE VERSE MEANS: "the narrator names Joseph as parent"
+THE ANSWER: "Conceded: they name Joseph in the household as parent and father."
+THE JUDGES' GRADES:
+- B70.1 (chatgpt): MEETS -- The naming is conceded.
+
+ITEM B71 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: Luke 2:48
+WHAT THE PRESS SAYS THE VERSE MEANS: "Mary names Joseph as father"
+THE ANSWER: "Conceded: they name Joseph in the household as parent and father."
+THE JUDGES' GRADES:
+- B71.1 (chatgpt): MEETS -- The naming is conceded.
+
+ITEM B72 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: Luke 2:49
+WHAT THE PRESS SAYS THE VERSE MEANS: "God's fatherhood stands beside Joseph's, as with David's son"
+THE ANSWER: "Conceded: a son can have both."
+THE JUDGES' GRADES:
+- B72.1 (chatgpt): MEETS -- The possibility of both is conceded.
+
+ITEM B73 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: Luke 2:51
+WHAT THE PRESS SAYS THE VERSE MEANS: "after 2:49-50 Luke keeps both parents"
+THE ANSWER: "Conceded: they name Joseph in the household as parent and father."
+THE JUDGES' GRADES:
+- B73.1 (chatgpt): MEETS -- The household relation is conceded.
+
+ITEM B74 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: Luke 1:27
+WHAT THE PRESS SAYS THE VERSE MEANS: "the house of David is said of the man"
+THE ANSWER: "Granted, and the link needs it."
+THE JUDGES' GRADES:
+- B74.1 (chatgpt): MEETS -- The identification of the man's house is granted; premise 5 is VOID.
+
+ITEM B75 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: Luke 1:36
+WHAT THE PRESS SAYS THE VERSE MEANS: "Mary's named kin is a kinswoman of Aaron's house, side unnamed, as the defender grants"
+THE ANSWER: "Granted: the side is unnamed"
+THE JUDGES' GRADES:
+- B75.1 (chatgpt): MEETS -- The relationship and its unspecified side are granted; premise 5 is VOID.
+
+ITEM B76 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: Galatians 4:4
+WHAT THE PRESS SAYS THE VERSE MEANS: "the mortality idiom, said of men whose fathers are named"
+THE ANSWER: "Granted: the idiom is general."
+THE JUDGES' GRADES:
+- B76.1 (chatgpt): MEETS -- The general usage is granted; premise 5 is VOID.
+
+ITEM B77 (E-ANS; the answering side wrote this in [CR4]):
+PRESSED VERSE: Matthew 11:11
+WHAT THE PRESS SAYS THE VERSE MEANS: "said of John, whose father is named"
+THE ANSWER: "For John, Luke 1:13 states the father."
+THE JUDGES' GRADES:
+- B77.1 (chatgpt): MEETS -- John's named father is granted; premise 5 is VOID.
+
+ITEM B78 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: Luke 1:5
+WHAT THE PRESS SAYS THE VERSE MEANS: "the kinswoman's house is Aaron's"
+THE ANSWER: "Granted: the side is unnamed"
+THE JUDGES' GRADES:
+- B78.1 (chatgpt): MEETS -- The ledger marks this entry unproven, not a witness.
+
+ITEM B79 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: 2 Samuel 7:12
+WHAT THE PRESS SAYS THE VERSE MEANS: "the seed comes out of the man's body"
+THE ANSWER: "name descent from the body of the forefather"
+THE JUDGES' GRADES:
+- B79.1 (chatgpt): MEETS -- Descent from the forefather's body is granted.
+
+ITEM B80 (E-ANS; the answering side wrote this in [CR4]):
+PRESSED VERSE: Acts 2:30
+WHAT THE PRESS SAYS THE VERSE MEANS: "the line to Christ is a loins line"
+THE ANSWER: "I grant it requires descent."
+THE JUDGES' GRADES:
+- B80.1 (chatgpt): MEETS -- The loins descent is granted.
+
+ITEM B81 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: Hebrews 7:10
+WHAT THE PRESS SAYS THE VERSE MEANS: "loins pass through fathers at each step"
+THE ANSWER: "Granted: the rows run through fathers."
+THE JUDGES' GRADES:
+- B81.1 (chatgpt): MEETS -- The cited rows' paternal sequence is granted, though its application to every possible line is disputed.
+
+ITEM B82 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: Romans 1:3
+WHAT THE PRESS SAYS THE VERSE MEANS: "the flesh is David's seed"
+THE ANSWER: "Romans 1:3 calls his flesh David's seed."
+THE JUDGES' GRADES:
+- B82.1 (chatgpt): MEETS -- The pressed meaning is accepted.
+
+ITEM B83 (E-ANS; the answering side wrote this in [CR2]):
+PRESSED VERSE: Hebrews 7:14
+WHAT THE PRESS SAYS THE VERSE MEANS: "the origin is evident by the father's house"
+THE ANSWER: "So Judah is evident in the public register."
+THE JUDGES' GRADES:
+- B83.1 (chatgpt): MEETS -- The answer accepts public evidence through the father's house and distinguishes it from fleshly descent.
+
+ITEM B84 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: Numbers 1:18
+WHAT THE PRESS SAYS THE VERSE MEANS: "pedigree is by the father's house"
+THE ANSWER: "Conceded: the register reckons by fathers' houses"
+THE JUDGES' GRADES:
+- B84.1 (chatgpt): MEETS -- The register's rule is conceded.
+- B84.2 (grok): MEETS -- "Matthew 1:16 and Luke 3:23 supply the legal register."
+
+ITEM B85 (E-ANS; the answering side wrote this in [DR3]):
+PRESSED VERSE: Deuteronomy 22:24
+WHAT THE PRESS SAYS THE VERSE MEANS: "lying with a betrothed damsel is an offence of humbling, so 'wife' gives no licence to know her before the taking"
+THE ANSWER: "The offence it names is against the husband, not by him."
+THE JUDGES' GRADES:
+- B85.1 (chatgpt): MEETS -- The answer distinguishes the other man's offence from the proposed act by the husband.
+- B85.2 (grok): MEETS -- "a man find her" is a second man.
+
+ITEM B86 (E-ANS; the answering side wrote this in [DR3]):
+PRESSED VERSE: Matthew 1:18
+WHAT THE PRESS SAYS THE VERSE MEANS: "the pregnancy is found before any coming together of the two"
+THE ANSWER: "The verse dates the finding before the taking."
+THE JUDGES' GRADES:
+- B86.1 (chatgpt): MEETS -- The answer accepts the timing and identifies the coming together with the taking.
+- B86.2 (grok): MEETS -- "took unto him his wife" is offered as the sense of came together.
+
+ITEM B87 (E-ANS; the answering side wrote this in [DR3]):
+PRESSED VERSE: Matthew 1:19
+WHAT THE PRESS SAYS THE VERSE MEANS: "the husband is called just and was minded to put her away, which no husband who had known her would be"
+THE ANSWER: "No verb of knowing stands in the verse."
+THE JUDGES' GRADES:
+- B87.1 (chatgpt): MISSES -- That absence does not show how the proposed knowing fits the pressed inference from Joseph's intended action.
+- B87.2 (grok): MEETS -- the answer engages the intent words and denies they state knowing.
+
+ITEM B88 (E-ANS; the answering side wrote this in [DR3]):
+PRESSED VERSE: Matthew 1:16
+WHAT THE PRESS SAYS THE VERSE MEANS: "the verb 'begat' is dropped for Jesus and the birth is 'of whom,' feminine, so the text itself separates the husband's register from the child's birth"
+THE ANSWER: "The passive gennaō (to beget) names the mother of the birth."
+THE JUDGES' GRADES:
+- B88.1 (chatgpt): MEETS -- The grammatical distinction is accepted, with a further argument from the naming act.
+
+ITEM B89 (E-ANS; the answering side wrote this in [DR3]):
+PRESSED VERSE: Luke 3:23
+WHAT THE PRESS SAYS THE VERSE MEANS: "Luke's narrator states the sonship to Joseph as supposed"
+THE ANSWER: "'As was supposed' is the reckoning by law and usage."
+THE JUDGES' GRADES:
+- B89.1 (chatgpt): MEETS -- The answer accepts the narrated reckoning, although its gloss is trimmed.
+- B89.2 (grok): MEETS -- "the defender has conceded that it carries no verdict."
+
+ITEM B90 (E-ANS; the answering side wrote this in [DR3]):
+PRESSED VERSE: John 1:13
+WHAT THE PRESS SAYS THE VERSE MEANS: "where the text gives 'of God' as the source, it sets it against blood and man's will"
+THE ANSWER: "The verse denies blood as the source of becoming sons of God."
+THE JUDGES' GRADES:
+- B90.1 (chatgpt): MEETS -- The contrast is accepted for becoming sons of God.
+
+ITEM B91 (E-ANS; the answering side wrote this in [DR3]):
+PRESSED VERSE: Luke 1:13
+WHAT THE PRESS SAYS THE VERSE MEANS: "the angel states the child to Zacharias as born 'thee,' his own"
+THE ANSWER: "The 'thee' names the man the angel addresses."
+THE JUDGES' GRADES:
+- B91.1 (chatgpt): MEETS -- The addressee is accepted; premise 4 is VOID.
+
+ITEM B92 (E-ANS; the answering side wrote this in [DR3]):
+PRESSED VERSE: Luke 1:31
+WHAT THE PRESS SAYS THE VERSE MEANS: "to Mary no 'thee' is added, and the answer in 1:35 names the Holy Ghost"
+THE ANSWER: "A woman addressed as the one who conceives and bears is not told her husband's part"
+THE JUDGES' GRADES:
+- B92.1 (chatgpt): MEETS -- The answer accepts the wording and disputes its implication; premise 4 is VOID.
+- B92.2 (grok): MEETS -- Elisabeth's verbs are the comparison.
+
+ITEM B93 (E-ANS; the answering side wrote this in [DR3]):
+PRESSED VERSE: Acts 2:30
+WHAT THE PRESS SAYS THE VERSE MEANS: "God is the agent who 'would raise up Christ,' and the verse names David's body as the source, not Joseph"
+THE ANSWER: "God is the agent, and the seed comes out of the body."
+THE JUDGES' GRADES:
+- B93.1 (chatgpt): MEETS -- Both the agent and David's bodily descent are accepted.
+
+ITEM B94 (E-ANS; the answering side wrote this in [DR3]):
+PRESSED VERSE: Luke 1:32
+WHAT THE PRESS SAYS THE VERSE MEANS: "David is called 'his father' across generations, so 'father' and 'loins' span descent and do not name Joseph"
+THE ANSWER: "Patēr (father) across generations."
+THE JUDGES' GRADES:
+- B94.1 (chatgpt): MEETS -- The span is accepted, while the route is disputed.
+
+ITEM B95 (E-ANS; the answering side wrote this in [DR3]):
+PRESSED VERSE: Galatians 4:4
+WHAT THE PRESS SAYS THE VERSE MEANS: "the same verb 'made' joins the child to the woman as Romans 1:3 joins him to David's seed"
+THE ANSWER: "It also joins 'under the law' in the same verse, so the verb alone carries no line of descent."
+THE JUDGES' GRADES:
+- B95.1 (chatgpt): MEETS -- The shared verb is accepted and its inference contested.
+
+ITEM B96 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: Isaiah 7:14
+WHAT THE PRESS SAYS THE VERSE MEANS: "the Hebrew word is the young-woman word, with no clause of not-knowing"
+THE ANSWER: "Conceded for the Hebrew words... The link rests on the Greek"
+THE JUDGES' GRADES:
+- B96.1 (grok): MEETS -- "the link rests on the Greek, which Matthew chose in 1:23."
+
+ITEM B97 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: Genesis 24:16
+WHAT THE PRESS SAYS THE VERSE MEANS: "even bethulah needs a clause to state that no man had known her"
+THE ANSWER: "almah and bethulah do not carry the exclusion by themselves"
+THE JUDGES' GRADES:
+- B97.1 (grok): MEETS -- "do not carry the exclusion by themselves."
+
+ITEM B98 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: Genesis 24:43
+WHAT THE PRESS SAYS THE VERSE MEANS: "almah here has no clause of not-knowing"
+THE ANSWER: "Conceded for the Hebrew words"
+THE JUDGES' GRADES:
+- B98.1 (grok): MEETS -- "do not carry the exclusion by themselves."
+
+ITEM B99 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: Proverbs 30:19
+WHAT THE PRESS SAYS THE VERSE MEANS: "almah stands with a man's way"
+THE ANSWER: "Conceded for the Hebrew words"
+THE JUDGES' GRADES:
+- B99.1 (grok): MEETS -- the Hebrew limb is dropped.
+
+ITEM B100 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: Isaiah 7:16
+WHAT THE PRESS SAYS THE VERSE MEANS: "the sign is bounded in Isaiah's day"
+THE ANSWER: "A near-day child is no ground to deny the fulfilment Matthew 1:22 states"
+THE JUDGES' GRADES:
+- B100.1 (grok): MEETS -- "A different name in 8:3 marks a different child."
+
+ITEM B101 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: Isaiah 8:4
+WHAT THE PRESS SAYS THE VERSE MEANS: "the child of the sign-period has a father"
+THE ANSWER: "The child of 8:3-4 is named Mahershalalhashbaz"
+THE JUDGES' GRADES:
+- B101.1 (grok): MEETS -- a different child is named.
+
+ITEM B102 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: Matthew 1:25
+WHAT THE PRESS SAYS THE VERSE MEANS: "the not-knowing runs from the taking to the birth"
+THE ANSWER: "Conceded: heos hou bounds only the time after the taking"
+THE JUDGES' GRADES:
+- B102.1 (grok): MEETS -- "the link does not rest on 1:25."
+
+ITEM B103 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: Matthew 1:24
+WHAT THE PRESS SAYS THE VERSE MEANS: "the taking is the coming-together that 1:25 follows"
+THE ANSWER: "The pregnancy found at before they came together belongs to the first step"
+THE JUDGES' GRADES:
+- B103.1 (grok): MEETS -- betrothed and taken are two steps.
+
+ITEM B104 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: Deuteronomy 20:7
+WHAT THE PRESS SAYS THE VERSE MEANS: "the law separates betrothal from taking"
+THE ANSWER: "Deuteronomy 20:7 shows that betrothed and taken are two steps"
+THE JUDGES' GRADES:
+- B104.1 (grok): MEETS -- "belongs to the first step."
+
+ITEM B105 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: Deuteronomy 22:24
+WHAT THE PRESS SAYS THE VERSE MEANS: "the betrothed is already a wife"
+THE ANSWER: "the law treats the man's lying with her as humbling her"
+THE JUDGES' GRADES:
+- B105.1 (grok): MEETS -- "the title wife carries no licence to know her before the taking."
+
+ITEM B106 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: Genesis 4:1
+WHAT THE PRESS SAYS THE VERSE MEANS: "the stated means of conceiving is a husband knowing his wife"
+THE ANSWER: "It does not say a betrothed wife conceives that way before the taking"
+THE JUDGES' GRADES:
+- B106.1 (grok): MEETS -- the answer distinguishes Adam's wife from the betrothal step.
+
+ITEM B107 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: 1 John 5:1
+WHAT THE PRESS SAYS THE VERSE MEANS: "the begetting verb with God is used of people who have natural fathers"
+THE ANSWER: "Granted: gennao with God as source is used of believers"
+THE JUDGES' GRADES:
+- B107.1 (grok): MEETS -- the verb-alone limb is dropped.
+
+ITEM B108 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: John 1:13
+WHAT THE PRESS SAYS THE VERSE MEANS: "of God names an origin in God that stands beside a natural first birth"
+THE ANSWER: "John 1:13 sets that of God against blood and the will of man"
+THE JUDGES' GRADES:
+- B108.1 (grok): MEETS -- "names an origin apart from man's will."
+
+ITEM B109 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: Matthew 1:20
+WHAT THE PRESS SAYS THE VERSE MEANS: "the verse gives an origin and lacks the flesh qualifier"
+THE ANSWER: "Romans 1:3 gives the flesh qualifier... Matthew 1:20 gives in her"
+THE JUDGES' GRADES:
+- B109.1 (grok): MEETS -- "two sides of one child."
+
+ITEM B110 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: Luke 1:35
+WHAT THE PRESS SAYS THE VERSE MEANS: "the verbs are empowerment and presence"
+THE ANSWER: "Conceded: the verbs alone mean presence and power"
+THE JUDGES' GRADES:
+- B110.1 (grok): MEETS -- "their object is a woman who has just said I know not a man."
+
+ITEM B111 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: Luke 9:34
+WHAT THE PRESS SAYS THE VERSE MEANS: "episkiazo is the presence cloud"
+THE ANSWER: "Conceded: the verbs alone mean presence and power"
+THE JUDGES' GRADES:
+- B111.1 (grok): MEETS -- the verb-alone limb is conceded.
+
+ITEM B112 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: Matthew 1:3
+WHAT THE PRESS SAYS THE VERSE MEANS: "of her names the mother where a father begets"
+THE ANSWER: "Granted: of her names the mother where a father begets"
+THE JUDGES' GRADES:
+- B112.1 (grok): MEETS -- "In 1:16 the father's verb is replaced by was born."
+
+ITEM B113 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: Acts 16:13
+WHAT THE PRESS SAYS THE VERSE MEANS: "enomizeto carries no verdict of falsehood"
+THE ANSWER: "Conceded: nomizo alone carries no falsehood verdict"
+THE JUDGES' GRADES:
+- B113.1 (grok): MEETS -- "The weight rests on Luke 3:23."
+
+ITEM B114 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: Luke 2:41
+WHAT THE PRESS SAYS THE VERSE MEANS: "the narrator names Joseph as parent"
+THE ANSWER: "Conceded: they name Joseph in the household as parent and father. They do not exclude him by themselves."
+THE JUDGES' GRADES:
+- B114.1 (grok): MEETS -- household naming is kept as reckoned.
+
+ITEM B115 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: Luke 2:48
+WHAT THE PRESS SAYS THE VERSE MEANS: "Mary names Joseph as father"
+THE ANSWER: "Conceded: they name Joseph in the household as parent and father"
+THE JUDGES' GRADES:
+- B115.1 (grok): MEETS -- "Luke 2:49 answers Mary's thy father."
+
+ITEM B116 (E-ANS; the answering side wrote this in [CR4]):
+PRESSED VERSE: Luke 2:49
+WHAT THE PRESS SAYS THE VERSE MEANS: "God's fatherhood stands beside Joseph's"
+THE ANSWER: "thy father and I have sought thee is answered by my Father's business"
+THE JUDGES' GRADES:
+- B116.1 (grok): MEETS -- the reply is engaged with Luke 2:50.
+
+ITEM B117 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: Luke 2:51
+WHAT THE PRESS SAYS THE VERSE MEANS: "after 2:49-50 Luke keeps both parents"
+THE ANSWER: "They do not exclude him by themselves"
+THE JUDGES' GRADES:
+- B117.1 (grok): MEETS -- the exclusion limb is dropped.
+
+ITEM B118 (E-ANS; the answering side wrote this in [CR4]):
+PRESSED VERSE: Romans 1:3
+WHAT THE PRESS SAYS THE VERSE MEANS: "the flesh is David's seed"
+THE ANSWER: "made of the seed of David according to the flesh" joined to "made of a woman"
+THE JUDGES' GRADES:
+- B118.1 (grok): MEETS -- the answer accepts the flesh is David's seed and offers Galatians 4:4.
+
+ITEM B119 (E-ANS; the answering side wrote this in [CR3]):
+PRESSED VERSE: Hebrews 7:14
+WHAT THE PRESS SAYS THE VERSE MEANS: "the origin is evident by the father's house"
+THE ANSWER: "anatello states an origin. The verse does not name a father."
+THE JUDGES' GRADES:
+- B119.1 (grok): MISSES -- "does not name a father" does not engage "by the house of their fathers."
+
+ITEM B120 (E-ANS; the answering side wrote this in [DR3]):
+PRESSED VERSE: Matthew 1:16
+WHAT THE PRESS SAYS THE VERSE MEANS: "the verb begat is dropped and the birth is of whom"
+THE ANSWER: "Ex hes is the same preposition as of Thamar... It says no word against Joseph."
+THE JUDGES' GRADES:
+- B120.1 (grok): MEETS -- the of-her parallel is engaged.
+
+ITEM B121 (E-ANS; the answering side wrote this in [DR3]):
+PRESSED VERSE: Luke 1:13
+WHAT THE PRESS SAYS THE VERSE MEANS: "the angel states the child to Zacharias as born thee, his own"
+THE ANSWER: "The thee names the man the angel addresses... thou shalt call his name JESUS."
+THE JUDGES' GRADES:
+- B121.1 (grok): MISSES -- the answer swaps bear thee for the naming command.
+
+ITEM B122 (E-ANS; the answering side wrote this in [DR3]):
+PRESSED VERSE: Luke 1:32
+WHAT THE PRESS SAYS THE VERSE MEANS: "David is called his father across generations, so father and loins do not name Joseph"
+THE ANSWER: "The span the defender names is the line of fathers my link claims."
+THE JUDGES' GRADES:
+- B122.1 (grok): MEETS -- the generational span is accepted as paternal.
+
+ITEM B123 (E-ANS; the answering side wrote this in [DR3]):
+PRESSED VERSE: Galatians 4:4
+WHAT THE PRESS SAYS THE VERSE MEANS: "the same verb made joins the child to the woman as Romans 1:3 joins him to David's seed"
+THE ANSWER: "the verb alone carries no line of descent"
+THE JUDGES' GRADES:
+- B123.1 (grok): MEETS -- "made under the law" is engaged.
+
+ITEM V1 (E-VOID, a premise the defender listed against the challenger, number 3):
+THE LIST ENTRY: 3. The inference that the begetting verb with God as source leaves a natural father, which props Matthew 1:20 as no bar to Joseph. Quote: "So the begetting verb with God as its source does not, by its use, remove a natural father."
+ PRESSED WITH:
+ - John 1:13 "born, not of blood, nor of the will of the flesh, nor of the will of man, but of God" -- MEANS: where the text gives "of God" as the source, it sets it against blood and man's will -- [L2] *ek* (G1537, "out of") | [L3] 1 John 5:1 "every one that loveth him that begat loveth him also that is begotten of him" | PROVEN IN [defender link round]
+ - Luke 1:35 "therefore also that holy thing which shall be born of thee shall be called the Son of God" -- MEANS: "therefore" makes the Sonship follow from the Holy Ghost's coming upon the woman -- [L2] *episkiazō* (G1982, "to overshadow") | [L3] Matthew 1:20 "that which is conceived in her is of the Holy Ghost" | PROVEN IN [defender link round]
 THE JUDGES' VOID RULINGS:
-- V1.1 (chatgpt): Premise 6 is VOID: its charge that the conclusion leaves the oath "without loins" makes a claim the [CR1] quotation, "Therefore Christ had no biological father," does not make about descent from David.
+- V1.1 (gemini): Premise 3 is also VOID for adding the negation "no" beyond its quote; none were conceded, but links are broken at collision.
+- V1.2 (grok): CHALLENGER CONCEDED LINKS: 1 -- Premise 3 VOID: the charge adds NO ("as no bar to Joseph"), a negation its quote "does not, by its use, remove a natural father" lacks; excluded.
 
-ITEM V2 (E-VOID, a premise the defender listed against the challenger, number 5):
-THE LIST ENTRY: 5. The grounds of Joseph's intent are claimed to be closed. Challenger: "The ground of the intent in Matthew 1:19 is stated as "being a just man" and "not willing to make her a publick example.""
-PRESSED WITH:
-Matthew 1:20 "fear not to take unto thee Mary thy wife: for that which is conceived in her is of the Holy Ghost" -- MEANS: the angel's answer shows what Joseph's fear concerned, the source of the conceiving. -- [L2] gennaō G1080 (beget) | [L3] Matthew 1:19 "was minded to put her away privily"
-Matthew 1:19 "was minded to put her away privily" -- MEANS: putting away presupposes a cause, and the verse's own words name none in Joseph. -- [L2] apolyō G630 (put away) | [L3] Deuteronomy 22:24 "because he hath humbled his neighbour's wife"
-Deuteronomy 22:24 "because he hath humbled his neighbour's wife" -- MEANS: the public example the law gave a betrothed wife was for another man's act. -- [L2] anah H6031 (humble) | [L3] Matthew 1:19 "not willing to make her a publick example"
-Matthew 1:18 "she was found with child of the Holy Ghost" -- MEANS: the finding itself is attributed to the Holy Ghost. -- [L2] heuriskō G2147 (find) | [L3] Matthew 1:20 "that which is conceived in her is of the Holy Ghost"
+ITEM V2 (E-VOID, a premise the challenger listed against the defender, number 5):
+THE LIST ENTRY: 5. **LINK 4:** The fleshly seed of David that the child bears is Mary's. This assumes Mary is of David's house, which no quoted row gives. Quote: "So the fleshly seed of David that the child bears is Mary's."
+ PRESSED WITH:
+ - Luke 1:27 "a man whose name was Joseph, of the house of David" -- MEANS: the house of David is said of the man -- [L3] Luke 2:4 "he was of the house and lineage of David" | PROVEN IN [challenger R1]
+ - Luke 1:36 "thy cousin Elisabeth" -- MEANS: Mary's named kin is a kinswoman of Aaron's house, side unnamed, as the defender grants -- [L3] Luke 1:5 "his wife was of the daughters of Aaron" | PROVEN IN [challenger R1]
+ - Luke 1:5 "his wife was of the daughters of Aaron" -- MEANS: the kinswoman's house is Aaron's -- PROVEN IN [challenger R1]
+ - Galatians 4:4 "made of a woman" -- MEANS: the mortality idiom, said of men whose fathers are named -- [L3] Job 14:1 "Man that is born of a woman is of few days" | PROVEN IN [challenger R1]
+ - Matthew 11:11 "Among them that are born of women there hath not risen a greater than John the Baptist" -- MEANS: said of John, whose father is named -- [L3] Luke 1:13 "thy wife Elisabeth shall bear thee a son" | PROVEN IN [challenger R1]
+ - Genesis 3:15 "between thy seed and her seed" -- MEANS: seed said of a woman, not Davidic -- [L3] Genesis 16:10 "I will multiply thy seed exceedingly" | PROVEN IN [challenger R1]
+ - Genesis 24:60 "let thy seed possess the gate of those which hate them" -- MEANS: seed said of Rebekah, not Davidic -- [L3] Isaiah 54:3 "thy seed shall inherit the Gentiles"
+ - Numbers 36:8 "shall be wife unto one of the family of the tribe of her father" -- MEANS: a daughter's tribe is reckoned by her father, so the inheritance runs by the fathers -- [L2] *ab* (H1, "father")
 THE JUDGES' VOID RULINGS:
-- V2.1 (chatgpt): Premise 5 is VOID: the charge that the grounds are "closed" claims an exclusion the [DR2] quotation, "The ground of the intent in Matthew 1:19 is stated as ‘being a just man’ and ‘not willing to make her a publick example,’" does not assert.
+- V2.1 (chatgpt): Premise 5 is VOID: the charge 'assumes Mary is of David's house, which no quoted row gives' adds the negation 'no' and an asserted assumption to the quote, 'So the fleshly seed of David that the child bears is Mary's'; that quote states an inference, not an assumption.
 
-ITEM Y1 (E-SYN, a sentence of the synthesis about the defender):
-THE SENTENCE: - **Galatians 4:4's phrase is also used of men with fathers** — "made of a woman"; Job 14:1 "Man that is born of a woman is of few days"; Matthew 11:11 "Among them that are born of women." Defender conceded: "I withdraw them as decisive and keep them as confirming."
+ITEM V3 (E-VOID, a premise the defender listed against the challenger, number 4):
+THE LIST ENTRY: 4. The inference that the "how" of Luke 1:34 is answered by husband and wife as in Luke 1:18, which props the claim that a husband remains. Quote: "A question of that form does not remove the husband."
+ PRESSED WITH:
+ - Luke 1:13 "thy wife Elisabeth shall bear thee a son" -- MEANS: the angel states the child to Zacharias as born "thee," his own -- [L2] *gennaō* (G1080, "to bear") | [L3] Luke 1:24 "his wife Elisabeth conceived" | PROVEN IN [defender link round]
+ - Luke 1:31 "thou shalt conceive in thy womb, and bring forth a son" -- MEANS: to Mary no "thee" is added, and the answer in 1:35 names the Holy Ghost -- [L2] *tiktō* (G5088, "to bring forth") | [L3] Luke 1:35 "The Holy Ghost shall come upon thee" | PROVEN IN [defender link round]
+THE JUDGES' VOID RULINGS:
+- V3.1 (chatgpt): Premise 4 is VOID: the charge that the question in Luke 1:34 'is answered by husband and wife as in Luke 1:18' asserts an answer that its quote, 'A question of that form does not remove the husband,' does not make.
+
+ITEM K1 (E-COL, a collision line graded against a link):
+THE LINE: FORCED: D4 vs C5 -- MEANS [DR2]: "loins pass through fathers at each step -- [L3] Hebrews 7:5 \\"though they come out of the loins of Abraham\\"" -- ANSWER [CR4]: "\\"Loins\\" reaches descendants at any remove. It requires David's descent, not that each link to Christ be a male begetter. I grant it requires descent." -- FAILS: "not that each link to Christ be a male begetter" is not carried by "Levi was in Abraham's loins" or "they come out of the loins of Abraham."
+THE JUDGES WHO WROTE IT: K1.1 (grok)
+
+ITEM K2 (E-COL, a collision line graded against a link):
+THE LINE: FORCED: D5 vs C5 -- MEANS [DR2]: "the seed comes out of the man's body -- [L2] me'eh (H4578, \\"bowels\\")" -- ANSWER [CR3]: "Granted: the rows run through fathers. Nothing in them names Joseph as the begetter of this child." -- FAILS: "Nothing in them names Joseph as the begetter of this child" does not show how no human father fits "proceed out of thy bowels."
+THE JUDGES WHO WROTE IT: K2.1 (grok)
+
+ITEM Y1 (E-SYN, a sentence of the synthesis about the challenger):
+THE SENTENCE: - Against this, the challenger in its link round granted a limb of the defender's answering point: "**The defender is right that loins can span generations, but in each span the line passes through fathers: Abraham, then Isaac, then Jacob, then Levi.
 THAT SIDE'S OWN SENTENCES THAT GIVE GROUND (withdraw, drop, grant, concede, narrow):
-- Job 14:1, "Man that is born of a woman is of few days". Matthew 11:11, "Among them that are born of women there hath not risen a greater than John the Baptist". Romans 1:3, "which was made of the seed of David according to the flesh". Acts 2:30, "of the fruit of his loins, according to the flesh". I grant "of a woman" is an idiom of mortality there. In Galatians 4:4 it follows "God sent forth his Son", so the sending comes before the making.
-- John 1:13, "Which were born, not of blood, nor of the will of the flesh, nor of the will of man, but of God." 1 John 5:1, "every one that loveth him that begat loveth him also that is begotten of him." I grant that "of God" is said of believers who had fathers. For them it is a new birth after a fleshly one. In Matthew 1:20 it is "conceived in her", and the thing conceived is "born of thee" (Luke 1:35). The verb alone does not exclude a father. The womb event and its stated source carry the point.
-- Matthew 1:18, "before they came together". Matthew 1:24, "and took unto him his wife". Deuteronomy 20:7, "that hath betrothed a wife, and hath not taken her". Deuteronomy 22:24, "because he hath humbled his neighbour's wife". I grant that *synerchomai* (G4905) may mean the taking, that betrothal made them husband and wife in law, and that the verse dates the finding. This is why Matthew 1:19 speaks of "put her away." The source is stated in Matthew 1:18 and 1:20.
-- [L4] I grant that "of a woman" is also the mortality idiom. But where the idiom is used of others (Job 14:1, Matthew 11:11), a father stands behind. Here the Son is "sent forth" by God (*exapostellō*, "send forth") and "made of a woman", with no human father named. D5 does not rest on Galatians 4:4 alone.
-D1, D2, D3 and D5 stand on Matthew 1:16, 1:18, 1:20 and Luke 1:34–35. D4 stands narrowed to Luke 3:23 and the acts of Matthew 1:21 and 1:24. I have withdrawn Jeremiah 22:30, Ezra 2:61 and Matthew 1:25 as independent grounds. I have granted that "till" bounds only the abstinence and that no verse states Mary's Davidic descent. The Davidic claim in the text is carried by Joseph's house and the legal father's acts (Matthew 1:20, Luke 1:32). The text names the begetting source of the conception as the Holy Ghost (Matthew 1:20, margin "Gr. begotten", *gennaō*), and it names no human begetter.
-Conceded above (Concession 3). I withdraw them as decisive and keep them as confirming.
-- Acts 1:8, "ye shall receive power, after that the Holy Ghost is come upon you". Luke 24:49, "until ye be endued with power from on high". Luke 9:34, "there came a cloud, and overshadowed them". Acts 5:15, "the shadow of Peter passing by might overshadow some of them". I grant that *eperchomai* (G1904, "come upon") and overshadowing alone do not mean begetting. In Luke 1:35 the verbs answer the question of Luke 1:34, and the result is "that holy thing which shall be born of thee."
+- **[L2]** *Nomizō* (G3543). The lexicon reads "properly, to do by law (usage)." The form *enomizeto* is the form of Acts 16:13, "where prayer was wont to be made." The defender has conceded that it carries no verdict.
+## C5: NARROWED TO: "Fruit of his loins, according to the flesh" requires the seed to come out of David's loins, and the one Davidic house the conception accounts name is Joseph's.
+- **[L2]** *Episkiazō* (G1982, "overshadow") and *eperchomai* (G1904, "come upon") stand in Luke 1:35. The defender has conceded they mean presence and power.
 ANSWER ID: Y1.1
+RULE E-ANS (an answer to a pressed verse). Decide FIRST what the right grade is: MEETS only when the answer shows, in its own words, how the verse fits the answering side's case, or why the stated meaning does not follow from what the verse says. MISSES when the answer rests on an absence (it says only that the verse, or the other side, names no, states no, does not name, gives no, or is silent on something) without a fit of its own, or when it does not address the stated meaning. Then for each judge's grade: AGREE when it matches the right grade, DISAGREE when it does not.
+RULE E-VOID (a listed premise ruled VOID). A premise is VOID only when its charge says the opponent's quoted words state something they do not state (a negation, a universal, or another claim beyond the quote). The charge is the premise's own words before its quote (for example "The inference that ..."), read against the words of that quote. Set aside only a clause saying what the premise props ("which props ...") or a sentence naming the objection it serves ("The objection it props is ..."); those are not part of the charge. AGREE with the VOID ruling when the charge goes beyond its quote; DISAGREE when it does not.
+RULE E-COL (a collision line: FORCED, or LINK BROKEN). A link is broken only when the answer's own quoted words cannot agree with the meaning pressed, as the line quotes them; it is not broken because no verse states it, or because of an absence. AGREE when the quoted words show the answer cannot agree with the meaning; DISAGREE when they do carry a meaning the link can agree with, or the line rests on an absence or on a demand for a stating verse.
+RULE E-SYN (a sentence of the synthesis saying a side withdrew, conceded, granted, dropped or narrowed something). AGREE when that side's own sentences given you give up that same thing at the same scope; DISAGREE when they do not, or give up less (for example, "no row I cite" is not "no biblical text").
+Reply with exactly one line per judge id, and nothing else, in this form:
+ENFORCER: <judge id> -- AGREE | DISAGREE | NO ANSWER -- RIGHT: MEETS | MISSES | VOID | NOT VOID | BROKEN | STANDS | TRUE | OVERSTATED -- <one sentence that quotes the words that decide it>
 
-ITEM Y2 (E-SYN, a sentence of the synthesis about the challenger):
-THE SENTENCE: The challenger conceded no link.
+ITEM Y2 (E-SYN, a sentence of the synthesis about the defender):
+THE SENTENCE: The defender has granted that 'till' in Matthew 1:25 ... bounds only the time after the taking.
 THAT SIDE'S OWN SENTENCES THAT GIVE GROUND (withdraw, drop, grant, concede, narrow):
-Luke 1:27 "espoused to a man whose name was Joseph, of the house of David" -- MEANS: the Davidic house is attached to Joseph, as the defender conceded. -- [L2] anēr G435 (man, husband) | PROVEN IN [Round 1]
-**LINK 6: NARROWED TO:** the register the text gives is reckoned by the father's house, and both of its lines run through Joseph. I drop the wording "one thing" as more than the rows state.
-## C6 — NARROWED TO: the register the text gives is reckoned by the father's house, and both of its lines run through Joseph.
+## LINK 1 [premise 2]: SUPPORTED, on Matthew 1:18-20 and Luke 1:13, 1:31-35. Matthew 1:25 alone is conceded to bound only the time after the taking.
+- Conceded: *heōs hou* (G2193, "until") bounds only the time after the taking.
+## LINK 2: NARROWED TO: Matthew 1:20 gives "that which is conceived in her" as of the Holy Ghost, with "therefore" in Luke 1:35 making the Son of God follow from that conception. The claim that the verb *gennaō* alone fixes fatherhood is dropped.
+- [L4] The challenger grants "reckoning by law and usage." That is the limb I keep. I drop the word "only" where it would require a verse that states an exclusion.
+## LINK 1 [premise 1]: NARROWED TO: the Greek *parthenos* (G3933, "virgin") in Matthew 1:23, read with Luke 1:27. The claim that the Hebrew word alone excludes a man is dropped.
+- [L3] The angel says this to Mary. Luke 1:31 gives it to her: "thou shalt conceive in thy womb." So the Davidic promise is stated of her son without naming Joseph. I do not claim Mary's line is stated. I claim only that no row requires Joseph as the begetter.
+- [L3] Matthew 11:11: "Among them that are born of women there hath not risen a greater than John the Baptist." For John, Luke 1:13 states the father. I grant the idiom of mortality (Job 14:1).
+- Conceded: that Psalm is set at the raising and the priesthood.
+## LINK 3: NARROWED TO: Joseph is called husband and was supposed father. The text's own verbs break the pattern of "begat" at Matthew 1:16. The verses of Luke 2 are conceded not to exclude him alone.
+- **Acts 16:13** "where prayer was wont to be made." Conceded: *nomizō* alone carries no falsehood verdict. The weight rests on Luke 3:23's "as was supposed" beside Matthew 1:16.
+## LINK 5: SUPPORTED, on Matthew 1:16, 1:18-20, Luke 1:34-35 and Luke 3:23. The loins and register rows are conceded to describe descent lines. They do not name Joseph as begetter of this child.
+- Conceded: the register reckons by fathers' houses, and that was the custom.
+I grant that *ginōskō* is a present state. The angel answers Zacharias's how and Mary's how differently:
+- [L4] "Loins" reaches descendants at any remove. It requires David's descent, not that each link to Christ be a male begetter. I grant it requires descent.
+**Close.** I do not claim a verse that states the denial in its own words. My case is the affirmative rows:
+**[L4]** Luke 1:27 speaks of the man Joseph's house, and I grant it. It does not exclude Mary's house. The footing for her line is Romans 1:3 with Luke 1:35, as above.
+- Conceded for the Hebrew words. *almah* (H5959, "a lass, damsel, maid, virgin") and *bethulah* (H1330) do not carry the exclusion by themselves.
+- Conceded: the verbs alone mean presence and power.
+- Conceded: they name Joseph in the household as parent and father. They do not exclude him by themselves.
+- Conceded: a son can have both.
+## LINK 4: NARROWED TO: the child was "born of thee" (Luke 1:35), and Romans 1:3 calls his flesh David's seed. No verse is claimed to name Mary's house.
+- [L2] *kaleō* (G2564, to call). I grant it is a calling.
+## D3: NARROWED TO: Joseph is father by law and reckoning, and the text records no begetting by him.
+## D4: NARROWED TO: the "father" and "seed of David" texts do not require Joseph as the begetter.
+- [L2] *episkiazō* means presence. I grant it does not state the mechanism.
 ANSWER ID: Y2.1
+
+ITEM Y3 (E-SYN, a sentence of the synthesis about the defender):
+THE SENTENCE: - Own words on Luke 3:23: "The defender has conceded that it carries no verdict."
+THAT SIDE'S OWN SENTENCES THAT GIVE GROUND (withdraw, drop, grant, concede, narrow):
+## LINK 2: NARROWED TO: Matthew 1:20 gives "that which is conceived in her" as of the Holy Ghost, with "therefore" in Luke 1:35 making the Son of God follow from that conception. The claim that the verb *gennaō* alone fixes fatherhood is dropped.
+- **Acts 16:13** "where prayer was wont to be made." Conceded: *nomizō* alone carries no falsehood verdict. The weight rests on Luke 3:23's "as was supposed" beside Matthew 1:16.
+## LINK 5: SUPPORTED, on Matthew 1:16, 1:18-20, Luke 1:34-35 and Luke 3:23. The loins and register rows are conceded to describe descent lines. They do not name Joseph as begetter of this child.
+**[L4]** Luke 1:27 speaks of the man Joseph's house, and I grant it. It does not exclude Mary's house. The footing for her line is Romans 1:3 with Luke 1:35, as above.
+## LINK 1 [premise 1]: NARROWED TO: the Greek *parthenos* (G3933, "virgin") in Matthew 1:23, read with Luke 1:27. The claim that the Hebrew word alone excludes a man is dropped.
+- Conceded for the Hebrew words. *almah* (H5959, "a lass, damsel, maid, virgin") and *bethulah* (H1330) do not carry the exclusion by themselves.
+## LINK 1 [premise 2]: SUPPORTED, on Matthew 1:18-20 and Luke 1:13, 1:31-35. Matthew 1:25 alone is conceded to bound only the time after the taking.
+- Conceded: that Psalm is set at the raising and the priesthood.
+## LINK 3: NARROWED TO: Joseph is called husband and was supposed father. The text's own verbs break the pattern of "begat" at Matthew 1:16. The verses of Luke 2 are conceded not to exclude him alone.
+- Conceded: the register reckons by fathers' houses, and that was the custom.
+- [L4] The challenger grants "reckoning by law and usage." That is the limb I keep. I drop the word "only" where it would require a verse that states an exclusion.
+- [L3] The angel says this to Mary. Luke 1:31 gives it to her: "thou shalt conceive in thy womb." So the Davidic promise is stated of her son without naming Joseph. I do not claim Mary's line is stated. I claim only that no row requires Joseph as the begetter.
+- [L3] Matthew 11:11: "Among them that are born of women there hath not risen a greater than John the Baptist." For John, Luke 1:13 states the father. I grant the idiom of mortality (Job 14:1).
+**Close.** I do not claim a verse that states the denial in its own words. My case is the affirmative rows:
+- Conceded: *heōs hou* (G2193, "until") bounds only the time after the taking.
+- Conceded: the verbs alone mean presence and power.
+- Conceded: they name Joseph in the household as parent and father. They do not exclude him by themselves.
+- Conceded: a son can have both.
+## LINK 4: NARROWED TO: the child was "born of thee" (Luke 1:35), and Romans 1:3 calls his flesh David's seed. No verse is claimed to name Mary's house.
+I grant that *ginōskō* is a present state. The angel answers Zacharias's how and Mary's how differently:
+- [L4] "Loins" reaches descendants at any remove. It requires David's descent, not that each link to Christ be a male begetter. I grant it requires descent.
+- [L2] *kaleō* (G2564, to call). I grant it is a calling.
+## D3: NARROWED TO: Joseph is father by law and reckoning, and the text records no begetting by him.
+## D4: NARROWED TO: the "father" and "seed of David" texts do not require Joseph as the begetter.
+- [L2] *episkiazō* means presence. I grant it does not state the mechanism.
+ANSWER ID: Y3.1
+
+ITEM Y4 (E-SYN, a sentence of the synthesis about the defender):
+THE SENTENCE: **5.5 The Spirit-rows.** On [L1] Luke 1:35 the defender conceded "the verbs alone mean presence and power," resting instead on "therefore"; the challenger answers with [L3] Acts 1:8: "ye shall receive power, after that the Holy Ghost is come upon you," and [L3] Luke 9:34: "there came a cloud, and overshadowed them." What "therefore" is tied to is the unresolved point.
+THAT SIDE'S OWN SENTENCES THAT GIVE GROUND (withdraw, drop, grant, concede, narrow):
+## LINK 2: NARROWED TO: Matthew 1:20 gives "that which is conceived in her" as of the Holy Ghost, with "therefore" in Luke 1:35 making the Son of God follow from that conception. The claim that the verb *gennaō* alone fixes fatherhood is dropped.
+- Conceded: the verbs alone mean presence and power.
+## LINK 1 [premise 1]: NARROWED TO: the Greek *parthenos* (G3933, "virgin") in Matthew 1:23, read with Luke 1:27. The claim that the Hebrew word alone excludes a man is dropped.
+## LINK 1 [premise 2]: SUPPORTED, on Matthew 1:18-20 and Luke 1:13, 1:31-35. Matthew 1:25 alone is conceded to bound only the time after the taking.
+## LINK 3: NARROWED TO: Joseph is called husband and was supposed father. The text's own verbs break the pattern of "begat" at Matthew 1:16. The verses of Luke 2 are conceded not to exclude him alone.
+- **Acts 16:13** "where prayer was wont to be made." Conceded: *nomizō* alone carries no falsehood verdict. The weight rests on Luke 3:23's "as was supposed" beside Matthew 1:16.
+## LINK 5: SUPPORTED, on Matthew 1:16, 1:18-20, Luke 1:34-35 and Luke 3:23. The loins and register rows are conceded to describe descent lines. They do not name Joseph as begetter of this child.
+- [L3] Matthew 11:11: "Among them that are born of women there hath not risen a greater than John the Baptist." For John, Luke 1:13 states the father. I grant the idiom of mortality (Job 14:1).
+**[L4]** Luke 1:27 speaks of the man Joseph's house, and I grant it. It does not exclude Mary's house. The footing for her line is Romans 1:3 with Luke 1:35, as above.
+- [L4] The challenger grants "reckoning by law and usage." That is the limb I keep. I drop the word "only" where it would require a verse that states an exclusion.
+- Conceded: *heōs hou* (G2193, "until") bounds only the time after the taking.
+- Conceded: that Psalm is set at the raising and the priesthood.
+- Conceded: the register reckons by fathers' houses, and that was the custom.
+I grant that *ginōskō* is a present state. The angel answers Zacharias's how and Mary's how differently:
+- [L3] The angel says this to Mary. Luke 1:31 gives it to her: "thou shalt conceive in thy womb." So the Davidic promise is stated of her son without naming Joseph. I do not claim Mary's line is stated. I claim only that no row requires Joseph as the begetter.
+**Close.** I do not claim a verse that states the denial in its own words. My case is the affirmative rows:
+- Conceded for the Hebrew words. *almah* (H5959, "a lass, damsel, maid, virgin") and *bethulah* (H1330) do not carry the exclusion by themselves.
+- Conceded: they name Joseph in the household as parent and father. They do not exclude him by themselves.
+- Conceded: a son can have both.
+## LINK 4: NARROWED TO: the child was "born of thee" (Luke 1:35), and Romans 1:3 calls his flesh David's seed. No verse is claimed to name Mary's house.
+- [L4] "Loins" reaches descendants at any remove. It requires David's descent, not that each link to Christ be a male begetter. I grant it requires descent.
+- [L2] *episkiazō* means presence. I grant it does not state the mechanism.
+- [L2] *kaleō* (G2564, to call). I grant it is a calling.
+## D3: NARROWED TO: Joseph is father by law and reckoning, and the text records no begetting by him.
+## D4: NARROWED TO: the "father" and "seed of David" texts do not require Joseph as the begetter.
+ANSWER ID: Y4.1
