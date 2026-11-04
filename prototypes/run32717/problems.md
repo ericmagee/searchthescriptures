@@ -64,11 +64,12 @@ Run ODV1-32717-j5nhhdh2 (debate 0e6de296), "Did Christ have a biological father?
 - **The same judge passed the defender's "It does not say through whom"** on the same verse. That is one standard for one side and another for the other (posture commitment 4).
 - **Fix:** K-C reads FAILS and MISSES reasons as well as GROUND clauses, both sides alike.
 
-## 5. The void rule still voids for words in the description
+## 5. The "only" voids were correct (finding withdrawn)
 
-- **Gemini, ChatGPT and Grok all voided defender premises 4 and 5** against the challenger for "ONLY". The descriptions read "The inference that loins run only through fathers" and "The inference that the child's standing as Son of God is covenant and resurrection only". The quotes themselves are "The defender's own witness counts loins through fathers" and "The title is covenant and resurrection."
-- **The "only" is the defender's description of what it charges,** not a word it attributes to the quote. It is the same scope fault as 32677 section 5, now on the defender's side.
-- **Fix:** as before. The void test reads only the words the charge attributes to the quote.
+- **The three judges voided defender premises 4 and 5 for "ONLY", and the voids were right.**
+  - The charges read "The inference that loins run only through fathers" and "The inference that the child's standing as Son of God is covenant and resurrection only".
+  - "The inference that ..." states what the charge says the quote claims. The quotes ("The defender's own witness counts loins through fathers"; "The title is covenant and resurrection") carry no "only". The charge added it.
+- **The first version of this section called these voids wrong.** It treated the "inference that" clause as a description outside the charge. That was a misreading of the charge, corrected after the operator's feedback (2026-11-04). The enforcer's contrary flag was wrong, and that is now fixed live.
 
 ## 6. The cure parser marked correct cures UNCURED
 
@@ -109,5 +110,5 @@ Run ODV1-32717-j5nhhdh2 (debate 0e6de296), "Did Christ have a biological father?
 1. Keystone propagation: a counted UNEXHIBITED premise that carries the keystone's needed fact reaches the keystone, with B7 wired to a cure (sections 1 and 7). It decided this run.
 2. The alternate build after a seat removal (section 2). It made this run UNGRADED.
 3. Absence answers FAIL, and K-C reads ANSWER and FAILS reasons on both sides (sections 3 and 4).
-4. Void test scope (section 5). Cure parser fields and the K-V segmenter (section 6).
+4. Cure parser fields and the K-V segmenter (section 6).
 5. Debater and synthesis items (sections 8 to 10).

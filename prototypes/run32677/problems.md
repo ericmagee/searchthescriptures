@@ -73,8 +73,9 @@ Run ODV1-32677-dbhfgk43 (debate 2a42fe10), "Did Christ have a biological father?
 
 - **Grok voided challenger premise 2** with "the charge adds EXCLUDE, a negation its quote lacks". The charge's description was "the inference that 'of the Holy Ghost' and the timing rows exclude the husband's begetting". "Exclude" is not on the debaters' barred list.
 - **All three voided defender premise 2.** Its description read "The objection it props is that Joseph's intent in Matthew 1:19 had no ground in the child's source." Grok: "adds NO". ChatGPT: "a negation not made by the quoted claim". Gemini: "adding the negation 'no'".
-- **In both cases the void word sits in the sentence that describes what the premise props, not in the claim made about the quote.**
-- **Fix:** the void test reads only the words the charge attributes to the quote. The "which props / the objection it props is" clause is not part of the charge for the test.
+- **Correction (2026-11-04, after the operator's feedback on run 32717):** the first bullet is withdrawn as an example of this fault. "The inference that ..." is the charge's own statement of what the quote claims, so the void test reads it. The quote there was "So no human male begot the child." Whether "exclude" goes beyond it is a separate question, and it is not the scope fault named here.
+- **The second bullet stands:** "The objection it props is that ..." states what the premise supports, not what the quote claims.
+- **Fix:** the void test reads the words the charge attributes to the quote, including "The inference that ...". It does not read the "which props / the objection it props is" clause.
 
 ## 6. The challenger's errors
 
