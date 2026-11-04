@@ -26,7 +26,7 @@ for(const [seat,list] of bySeat){const j=PB.judges.find(q=>q.seat===seat);
  list.slice(MAX).forEach(x=>not_sent.push({seat,rule:x.rule,item:x.item,why:'over the '+MAX+'-item transport limit'}));
  const msg='An enforcer has read some of your lines against the debate record and disagrees with them. Its reasons are quoted below. You keep the decision. For each item, KEEP your line or CHANGE it, and give one sentence that quotes the debate\'s own words that decide it. Bring nothing from outside the record.\n\n'
   +items.map(i=>'ITEM '+i.sid+' ('+i.rule+(i.item?', '+cut(i.item,200):'')+'):\nYOUR LINE: '+cut(i.line,1500)+'\nTHE ENFORCER: '+cut(i.reason,900)).join('\n\n')
-  +'\n\nReply with exactly one line per item, and nothing else, in this form (the fields are separated by two vertical bars):\nSENDBACK: <item id> || KEEP || <one sentence quoting the words that decide it>\nSENDBACK: <item id> || CHANGE TO: <your corrected line> || <one sentence quoting the words that decide it>';
+  +'\n\nThis reply is not a judgment and is not JSON: write plain lines only.\nReply with exactly one line per item, and nothing else, in this form (the fields are separated by two vertical bars):\nSENDBACK: <item id> || KEEP || <one sentence quoting the words that decide it>\nSENDBACK: <item id> || CHANGE TO: <your corrected line> || <one sentence quoting the words that decide it>';
  const body={...j.body,messages:[...j.body.messages,{role:'assistant',content:said[seat]},{role:'user',content:msg}]};
  out.push({json:{sb_skip:false,seat,api_model:j.api_model,run_token:PB.run_token||null,items:items.map(i=>({sid:i.sid,rule:i.rule,item:i.item,line:i.line,reason:i.reason})),msg,body}});}
 if(!out.length)return skip('no disagreement could be sent',not_sent);
