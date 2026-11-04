@@ -14,16 +14,16 @@ Ruling: each judge writes one OBJECTION line per surviving objection, SUSTAINED 
 Close rounds (fix 4): an objection to a round-4 statement has no later round to answer it; it goes straight to the judges' ruling, and if SUSTAINED the link it serves is CONCEDED.
 Status: TRIAL first (marks written and ruled, no seat removed), LIVE after the stored-text test passes.
 
-## F2. Cross-examination (fix 2; operator: "I recommend longer examination")
-A new phase between round 2 and round 3: three exchanges, challenger asks, defender answers.
-- X1..X3 Challenger: up to 5 questions per exchange, each closed, naming a declared link D<n> and a verse, e.g. "Which verse states that Mary is of the house of David?"
-- X1..X3 Defender: one ANSWER line per question, beginning YES, NO or THE TEXT DOES NOT SAY, then the verse quoted exactly. An answer to a question of fact with no verse quoted counts as THE TEXT DOES NOT SAY.
-- An admission (THE TEXT DOES NOT SAY) is listed by code and binds the link round: a link that needs the admitted fact is CONCEDED unless the defender's link round shows the verse.
-- The enforcer (F1) runs on each defender answer turn.
-Cost: 6 debater calls and 3 enforcer calls per debate.
+## F2. Cross-examination, both ways (operator: "I recommend longer examination"; ruling 418: "cross examination should run both ways.. if not someone can launch a lie that's never discredited")
+A new phase between round 2 and round 3: three exchanges each way, alternating, the challenger first (XC1, XD1, XC2, XD2, XC3, XD3).
+- The asking side: up to 5 questions per exchange, each closed, naming a declared link (D<n> or C<n>) and a verse, e.g. "Which verse states that Mary is of the house of David?"
+- The answering side: one ANSWER line per question, beginning YES, NO or THE TEXT DOES NOT SAY, then the verse quoted exactly. An answer to a question of fact with no verse quoted counts as THE TEXT DOES NOT SAY.
+- An admission (THE TEXT DOES NOT SAY) about the answerer's own link's fact is listed by code in that side's withdrawal list; the judges grade the link without that fact (S2, S3). An admission about the conclusion of a footed [L4] costs nothing (DG-61).
+- The enforcer (F1) runs on each answer turn.
+Cost: 12 debater calls and 6 enforcer calls per debate.
 
-## Debater instruction (from the concession review, S1)
-D3 Build and D4 Build: CONCEDED also when a pressed verse, read with the meaning the challenger showed with its layers, cannot agree with the link and the side cannot show a meaning that does (ruling 405).
+## Grading, not instruction (ruling 417: "we can't tell someone when to concede... that's their strategy ... We need to ensure lies don't reap rewards")
+No seat is told when to concede. The judges grade every link of both seats by what its scripture carries, whatever the seat answers: a link that cannot agree with the meaning of the scripture pressed against it is BROKEN (ruling 405); a step naming a person, house, time or act no quoted row names is unexhibited and counts as CONCEDED (ruling 397).
 
 ## Test on stored text before any live write
 Run the enforcer on the eight rounds of 32510 (rounds.json, sheet.json; 8 DeepSeek calls). Pass bar, fixed before the run:

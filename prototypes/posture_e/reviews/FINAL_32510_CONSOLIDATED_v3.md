@@ -108,10 +108,9 @@ The defender gave up every verse that could carry the claim, and kept the claim.
     - A sustained objection strikes the sentence and its weight.
     - It concedes the link only when the link has no other exhibited footing left.
     - A round-4 statement goes straight to the judges' ruling.
-  - **Cross-examination.** Three exchanges between rounds 2 and 3: closed questions naming a link and a verse, answered YES, NO or THE TEXT DOES NOT SAY with the verse quoted.
+  - **Cross-examination, both ways** (ruling 418: "if not someone can launch a lie that's never discredited"). Between rounds 2 and 3, three exchanges each way, alternating, the challenger first: each side asks the other up to five closed questions naming a link and a verse, answered YES, NO or THE TEXT DOES NOT SAY with the verse quoted. Same rules, same binding effect for both seats.
     - An answer THE TEXT DOES NOT SAY about the answerer's own link's fact enters that side's withdrawal list (A3 D.7).
     - Such an answer about the conclusion of a footed [L4] costs nothing (G1 D.8, DG-61).
-    - **For the operator's ruling:** the operator named the challenger as the one who examines. G1 D.8 asks, under ruling 30 and Commitment 4, that the defender examine the challenger the same way.
   - **The enforcer model** is chosen by the stored-text test on 32510's eight rounds, not carried by default (A3 D.6, Worker_C C.10).
     - Ruling 402 is cited for this; its text reads: "it's it not a part of the debate process it trash ... what sense would it make to turn on something that doesn't work". Worker_E has not checked which seat it was said of.
     - The test, fixed before it runs: catch "two lines" and the Romans 1:3 "through the woman" claims; leave "Joseph knew Mary his wife within the espousal" alone.
@@ -155,7 +154,6 @@ The defender gave up every verse that could carry the claim, and kept the claim.
 3. **S2 and S3, with S3 as one change.** Test: an offline replay of 32510's stored judge text on the fixture pair. Pass: D5 "through the woman" earns no footing and counts as CONCEDED although the defender labelled it NARROWED; C1 stands. (A dry re-grade of 32510 is refused under the new panel.) Then a live run.
 4. **S5** by the same replay.
 5. **S7,** the DG-18 Psalm 2:7 check, run by code over the stored rounds.
-6. **S6, the court.** The enforcer test runs on 32510's stored rounds first, then the build. Cross-examination waits on the operator's ruling about who examines.
+6. **S6, the court.** The enforcer test runs on 32510's stored rounds first, then the build. Cross-examination runs both ways (ruling 418).
 
-**Decision for the operator:**
-1. S6: cross-examination both ways, or the challenger only? (Cross-examination is a rule of the debate, so ruling 30 would apply it to both seats.)
+**Decisions recorded:** ruling 417 (rules for both seats, never when to concede; lies earn no reward) and ruling 418 (cross-examination both ways). No decision is open.
