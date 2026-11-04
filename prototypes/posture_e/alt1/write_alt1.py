@@ -15,6 +15,10 @@ changed={f[:-3]:open(os.path.join(ROOT,'new',f)).read() for f in os.listdir(os.p
 for nm in changed:
     if nm not in LN:bad.append('missing '+nm);continue
     if LN[nm]['parameters'].get('jsCode')!=open(os.path.join(ROOT,'base',nm+'.js')).read():bad.append('live differs from base: '+nm)
+import subprocess
+for nm,c in changed.items():
+    pr=subprocess.run(['node','-e',"new Function(require('fs').readFileSync(0,'utf8'))"],input=c,capture_output=True,text=True)
+    if pr.returncode!=0:bad.append('PARSE FAIL '+nm+': '+pr.stderr.strip().splitlines()[-1][:200] if pr.stderr.strip() else 'PARSE FAIL '+nm)
 if bad:print('REFUSED:',bad);sys.exit(1)
 new=copy.deepcopy(live);N={n['name']:n for n in new['nodes']}
 for nm,c in changed.items():N[nm]['parameters']['jsCode']=c
