@@ -59,7 +59,8 @@ Worker_E, session_014Qy67bHv8uBmRXbWGSrghm, 2026-11-04. This document is private
     - **Solution:** the DG-8 cut becomes a code check. It flags any Oracle round that quotes "that which is conceived in her is of the Holy Ghost" without "Joseph, thou son of David" in the same round. It goes with S-G, as S-H.
     - **Build.**
 13. **The synthesis faults** (A3 8, C 7): misattributions, DG-63 wording that is not in the transcript, and an absence claim not counted.
-    - **Lower priority.** These go to the synthesis checks after the items above.
+    - **Built 4 Nov, s425a, live fe6dc734 (build log 26653):** S-I marks the "Ezra rows" attribution; S-K marks C's "the canon supplies exactly one verse"; the S-E repair clears the false 5.5 flag A3 named. A3's "generations, but in each span" is not marked.
+    - **Correction to A3:** the DG-63 wording "needs MORE proof than a positive claim, not less" stands in DG-63 itself (drift_guards rule 63, at character 1884). The synthesis quoted the guard; that is not a fault, and S-J does not read guard wording.
 14. **The single judge's audit floods its output** (C 6): about 50 false "NOT READ" flags.
     - **Lower priority.** Ruling 402 already places the single judge outside the debate.
 

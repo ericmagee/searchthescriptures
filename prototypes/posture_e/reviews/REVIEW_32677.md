@@ -22,7 +22,8 @@ Worker_E, session_014Qy67bHv8uBmRXbWGSrghm, 2026-11-04. This review is private a
    - The other guards were UNCHECKED.
 7. **Synthesis against the transcript:**
    - S-C: 7 items are listed as "charged by neither side" although a closing premise list carries them.
-   - S-E: twice, the synthesis credits the defender with words no defender round affirms.
+   - S-E: fired twice. **Corrected 4 Nov (s425a):** the first flag is false. The defender's CR4 holds "[L4] I withdraw the bare sentence "he knew the child was not his" ...", which the synthesis quotes in its block quote. The second flag is true: the defender wrote "No row I cite says outright that Mary was of David's house", and the synthesis widened it to "no biblical text places Mary in the house of David".
+   - S-C: each of the 7 items names a verse that stands in a closing list, which is all the check reads. Whether each item states only a wording or also a contested reading (for example the almah gloss "young woman", or Matthew 1:16 "pointing to Mary") is UNCHECKED.
    - The synthesis was not read whole.
 8. **Review notes:** read whole (7,262 characters).
 
