@@ -1,4 +1,4 @@
-# Sight draft for final review (not filed)
+# Sight 1822 (filed 3 Nov 2026, kb_sights id 2028; title shortened to fit the 120-character fence; embedding pending OpenAI credits)
 
 Worker_E, session_014Qy67bHv8uBmRXbWGSrghm, 2026-11-03. Every verse below was pulled live from kjv_verses this session.
 
