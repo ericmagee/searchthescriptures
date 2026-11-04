@@ -71,6 +71,17 @@ The quotations:
 2. Defender CR4 names two verses new in close: Isaiah 7:11 and Genesis 3:15. The system check excluded both.
 3. ChatGPT's tag reads HELD while its RESULT reads UNDERDETERMINED. The outcome counts the tag. This is still open.
 
+## 7b. Correction (refresh 39, journal 2056): the review checklist, item by item
+The first version of this review did not run every item of my debate run review checklist, and it did not say which items went unchecked. Each item is listed here.
+1. **Every panel seat accounted for.** CHECKED. The Gemini seat is not counted: 3 uncured items, all pressing-sentence (K-G4). The run's own words are "Gemini: alternate none tried, NOT SEATED: no pool model passes the guards (the pool is empty)." No alternate could sit. So section 5's "Gemini and Grok broke C1" is a reading by one counted judge (Grok) and one judge that was not counted (Gemini). The cause of the empty pool is UNCHECKED. The first suspect is the MiniMax removal (e6f3364c).
+2. **Ledger NOT NAMED lines against each judge (ruling 372).** UNCHECKED. The document carries 63 "NOT NAMED" hits, and none of them was tested.
+3. **Recompute after the cure; no judge removed on format.** UNCHECKED.
+4. **Removed seats' verdicts and the review notes.** UNCHECKED.
+5. **Closes, renumbering and new verses in close.** PARTLY CHECKED. The new-in-close check shows Isaiah 7:11 and Genesis 3:15 in the defender's close. Renumbering was not checked.
+6. **Synthesis against the transcript.** PARTLY CHECKED (the DG-61 clearance in section 4).
+7. **The Oracle seat against the guards.** CHECKED (section 4).
+8. **The "nth run" counts.** Not applicable. This review states no count of runs.
+
 ## 8. What this sets for the next fixes (order unchanged)
 1. S4, the challenger's breaking rule. Section 5 shows the need: the Oracle must answer a pressed row on its own words, from the DG-8(b) chain.
 2. S2 and S3, as one change: grade by what scripture carries; the narrowed-link and counting rule (section 3).
