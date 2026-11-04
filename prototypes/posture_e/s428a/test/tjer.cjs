@@ -1,0 +1,10 @@
+const fs=require('fs');const e=JSON.parse(fs.readFileSync(process.argv[2],'utf8'));const rd=e.data.resultData.runData;
+const one=n=>{const r=rd[n];return r?r[0].data.main[0]:null;};
+const $b=n=>{if(n==='Resolve Seats')return {first:()=>({json:{deepseek:{api_model:'deepseek-x',max_tokens:8000}}})};const it=one(n);return {isExecuted:!!it,first:()=>it?it[0]:{json:{}},all:()=>it||[]};};
+const built=new Function('$','$input',fs.readFileSync(__dirname+'/../new/Judge Enforcer Build.js','utf8'))($b,{first:()=>({json:{}})});
+const ids=built.flatMap(x=>x.json.ids);const v=ids.find(x=>x.rule==='E-VOID');const a=ids.find(x=>x.rule==='E-ANS');
+const replies=built.map((b,i)=>({json:{choices:[{message:{content:i===0?'ENFORCER: ITEM '+a.id+' -- DISAGREE -- RIGHT: MISSES -- "names no Joseph" is an absence.\n**ENFORCER: '+v.id+' -- DISAGREE -- RIGHT: NOT VOID -- the props clause is not the charge.':'' }}]}}));
+const $r=n=>n==='Enforcer Record'?{first:()=>({json:{alt_needed:false,run_token:'T'}})}:n==='Judge Enforcer Build'?{all:()=>built}:$b(n);
+const out=new Function('$','$input',fs.readFileSync(__dirname+'/../new/Judge Enforcer Record.js','utf8'))($r,{all:()=>replies})[0].json;
+console.log('alt_needed passed:',out.alt_needed,'| rows',out.enf428_rows.length,'| tally',JSON.stringify(out.enf428.tally));
+console.log(out.enf428_rows.filter(r=>/DISAGREE/.test(r.cure_reason)).map(r=>r.rule+' '+r.seat+' '+r.cure_reason.slice(0,140)).join('\n'));
