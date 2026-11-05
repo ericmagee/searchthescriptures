@@ -7,7 +7,7 @@ Run ODV1-32717-j5nhhdh2 (debate 0e6de296), "Did Christ have a biological father?
   - Gemini HELD ("DEFENDER WINS"), removed under a debate rule; no alternate seated.
   - ChatGPT PARTIAL (RESULT UNDERDETERMINED).
   - Grok HELD ("DEFENDER WINS").
-- Split "1-1 (1 not counted: debate rule)". Outcome UNGRADED — REVIEW.
+- Split "1-1 (1 not counted: debate rule)". Outcome "UNGRADED — REVIEW" (the stored outcome string).
 
 **Read by me, whole:**
 - Every round: claude_r1 8049, engine_r1 7789, claude_r2 11695, engine_r2 20154, engine_r3 19448, challenger_r3 15779, defender_r4 17976, challenger_r4 7972.
