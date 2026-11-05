@@ -1,0 +1,25 @@
+// WALL-2024 check 2 (withdrawn-premise flag, narrow form; wpf.cjs cb3019c, run 1 eb2bd0f, S1/S2 c63e754; W2 cross-check).
+// Rides on K-W (ruling 421, TRIAL): it removes no seat, changes no count, and ruling 445 keeps K-W out of send-backs.
+// A side's own later mind-verb claim, same actor, same verse, shared object stem, after that side withdrew it.
+function wpLines2024(R){const items=[],marks=[];if(!R)return {items,marks};
+ const MIND=/\b(thought|think|thinks|thinking|believed|believe|believes|supposed|suppose|supposes|knew|know|knows|knowing|known|accounted|account|counted|esteemed|reckoned|considered|took|take|takes|taken)\b/gi;
+ const TK=/^(took|take|takes|taken)$/i,NEG=/\b(not|no|never|nor|none|without|neither)\b/i,WD=/\bI\s+(drop|withdraw|retract|concede|abandon)\b/i;
+ const NAMES=/\b(Joseph|Mary|Elisabeth|Zacharias|Adam|Eve|Jacob|Abraham|David|Herod|Jesus|Heli|Cain|Abel|Seth|Noah)\b/g,REF=/\b((?:[1-3]\s)?[A-Z][a-z]+)\s+(\d+):(\d+)/g;
+ const STOP=new Set('a an the of to and or but that which who whom this these those his her him he she it its they them their be is was were been being by with for from in on at as so not no into unto upon than then there here what when where whose would should could shall will may might must have has had do does did own same one i me my we us our thou thee thy ye you your'.split(' '));
+ const norm=s=>String(s||'').toLowerCase().replace(/[^a-z\s']/g,' '),stem=w=>w.replace(/'s$/,'').slice(0,5);
+ const inQ=(l,i)=>((l.slice(0,i).match(/["“”]/g)||[]).length%2)===1;
+ const refs=l=>{const s=new Set();let m;REF.lastIndex=0;while((m=REF.exec(l)))s.add(m[1]+' '+m[2]+':'+m[3]);return s;};
+ const objW=a=>norm(a.split(/[,;.]|\band\b/i)[0]).split(/\s+/).filter(w=>w&&!STOP.has(w)&&w.length>=3).map(stem);
+ const sents=l=>l.split(/(?<=[.!?])\s+/);
+ const mc=t=>{const o=[];let x;MIND.lastIndex=0;while((x=MIND.exec(t))){const v=x[1],b=t.slice(0,x.index),a=t.slice(x.index+v.length);
+  if(TK.test(v)&&!/^\s+.{0,40}?\bto be\b/i.test(a))continue;if(NEG.test(b.trim().split(/\s+/).slice(-3).join(' ')))continue;if(/\bof\s*$/i.test(b))continue;if(inQ(t,x.index))continue;
+  o.push({v,i:x.index,obj:objW(a)});}return o;};
+ for(const [side,rks] of [['DEFENDER',['CR1','CR2','CR3','CR4']],['CHALLENGER',['DR1','DR2','DR3','DR4']]]){let n=0;
+  rks.forEach((rk,ri)=>{for(const line of String(R[rk]||'').split('\n'))for(const s of sents(line)){const m=s.match(WD);if(!m||inQ(s,m.index))continue;const cl=s.slice(m.index+m[0].length);
+   for(const c of mc(cl)){const nm=cl.slice(0,c.i).match(NAMES)||[];if(!nm.length)continue;const actor=nm[nm.length-1],wv=refs(line);
+    for(const rk2 of rks.slice(ri+1))for(const l2 of String(R[rk2]||'').split('\n')){if(!new RegExp('\\b'+actor+'\\b').test(l2))continue;const lv=refs(l2);const sv=[...wv].filter(v=>lv.has(v));if(!sv.length)continue;
+     for(const s2 of sents(l2))for(const c2 of mc(s2)){const sh=c2.obj.filter(o=>c.obj.includes(o));if(!sh.length||n>=10)continue;n++;
+      const ws=s.trim().slice(0,200),ls=s2.trim().slice(0,200),id=side+' '+rk2+' withdrawn in '+rk+' #'+n;
+      items.push({rule:'K-W',side,link:id,line:'['+rk2+'] reasserts what ['+rk+'] withdrew ('+actor+', '+sv.join(', ')+'): "'+ls+'" after "'+ws+'"'});
+      marks.push('[AUDIT v31: WITHDRAWN PREMISE REASSERTED (K-W; WALL-2024 check 2) -- '+id+': ['+rk+'] "'+ws.replace(/[\[\]"]/g,'')+'"; ['+rk2+'] "'+ls.replace(/[\[\]"]/g,'')+'" ('+actor+', '+sv.join(', ')+', shared: '+sh.join(', ')+'); the judge answers STANDS WITHOUT IT because <layer>, or CONCEDED. TRIAL rule: it removes no seat. REVIEW THIS ROW.]');}}}}});}
+ return {items,marks};}
