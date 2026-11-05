@@ -7,10 +7,13 @@ console.log('TURNED by the floor:');rows.filter(r=>r.base!==r.floor).forEach(r=>
 const find=(run,round,sub)=>rows.filter(r=>r.run===run&&(!round||r.round===round)&&r.means.includes(sub));
 const T3e=PRS.entries('Matthew 1:19 "Then Joseph her husband, being a just [man], and not willing to make her a publick example, was minded to put her away privily." -- MEANS: Joseph thought her wronged by another. -- [L3] Matthew 1:20 "while he thought on these things" | [L3] Deuteronomy 22:24 "he hath humbled his neighbour\'s wife"')[0];
 const T3=floor(T3e);
+const T4e=PRS.entries('Matthew 1:19 "Then Joseph her husband, being a just [man], and not willing to make her a publick example, was minded to put her away privily." -- MEANS: Joseph intends a quiet dismissal, which shows he took the child not to be his. -- [L2] paradeigmatizō (G3856, to expose to infamy) | [L3] Deuteronomy 22:24 "because he hath humbled his neighbour\'s wife" | [L3] Matthew 2:14 "he took the young child and his mother"')[0];
+const T4=floor(T4e);
 const cases=[
  ['T1','turn',find('32791','CR3','presupposes he thought her wronged')],
  ['T2','turn',find('32717','CR3','took the child not to be his')],
  ['T3','turn',[{run:'synthetic',base:'(n/a)',floor:T3.cls||'PROVEN',fails:T3.fails,claims:T3.claims,means:T3e.means}]],
+ ['T4','turn',[{run:'synthetic',base:'(n/a)',floor:T4.cls||'PROVEN',fails:T4.fails,claims:T4.claims,means:T4e.means}]],
  ['L1','limit',find('32677','CR3','was a shame')],
  ['L2','limit',find('32643','CR3','no husband who had known her')],
  ['H1','hold',find('32717','DR2','contains no verb of knowing')],

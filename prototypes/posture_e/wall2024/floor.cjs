@@ -30,8 +30,13 @@ function claims(means){ // positive belief claims about a person: [{verb, actor,
 function layerQuotes(e){const q=[];if(e.quote)q.push({kind:'L1',text:e.quote});
  (e.l2||[]).forEach(x=>q.push({kind:'L2',text:x.text}));
  (e.l3||[]).forEach(x=>{const m=String(x.text).match(/["“]([^"”]+)["”]/);q.push({kind:'L3',text:m?m[1]:x.text});});return q;}
-function held(c,quotes){ // one quote holds a verb of that kind AND every object word
- for(const q of quotes){const t=norm(q.text);MIND.lastIndex=0;const hasVerb=MIND.test(q.text);MIND.lastIndex=0;if(!hasVerb)continue;
+function held(c,quotes){ // one quote holds a verb of that kind AND every object word (WALL-2024 reply after W2's cross-check:
+ // the layer side now applies the same verb rule as the MEANS side: a "take" verb counts only in the form "took ... to be";
+ // and where the claim's actor is a proper name, the quote must hold that name or a personal pronoun)
+ for(const q of quotes){const t=norm(q.text);let hasVerb=false;let x;MIND.lastIndex=0;
+  while((x=MIND.exec(q.text))){const after=q.text.slice(x.index+x[1].length);if(TOOK_TO_BE.test(x[1])&&!/^\s+.{0,40}?\bto be\b/i.test(after))continue;hasVerb=true;break;}
+  MIND.lastIndex=0;if(!hasVerb)continue;
+  if(/^[A-Z]/.test(c.actor)&&!/^(he|she|they|him|her|the |a )/i.test(c.actor)){const re=new RegExp('\\b('+c.actor+'|he|she|him|her|i|me|thou|thee)\\b','i');if(!re.test(q.text))continue;}
   const words=t.split(/\s+/).map(stem);if(c.object.every(o=>words.includes(stem(o))))return q;}
  return null;}
 function floor(e){const cs=claims(e.means);const fails=[];
