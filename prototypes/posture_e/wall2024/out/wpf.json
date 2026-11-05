@@ -1,0 +1,148 @@
+[
+ {
+  "run": "ODV1-32643-ypd6cswa",
+  "withdrawals": [],
+  "flags": [],
+  "near": []
+ },
+ {
+  "run": "ODV1-32677-dbhfgk43",
+  "withdrawals": [],
+  "flags": [],
+  "near": []
+ },
+ {
+  "run": "ODV1-32717-j5nhhdh2",
+  "withdrawals": [],
+  "flags": [],
+  "near": []
+ },
+ {
+  "run": "ODV1-32791-j2p7xo25",
+  "withdrawals": [],
+  "flags": [],
+  "near": []
+ },
+ {
+  "run": "ODV1-32905-domzf7yq",
+  "withdrawals": [
+   {
+    "side": "D",
+    "round": "cr3",
+    "sentence": "I drop the clause that Joseph knew the child's origin before the angel spoke.",
+    "actor": "Joseph",
+    "verb": "knew",
+    "object": [
+     "child",
+     "origi",
+     "befor",
+     "angel",
+     "spoke"
+    ],
+    "verses": [
+     "Matthew 1:19"
+    ]
+   }
+  ],
+  "flags": [
+   {
+    "side": "D",
+    "from": "cr3",
+    "withdrawn": "I drop the clause that Joseph knew the child's origin before the angel spoke.",
+    "actor": "Joseph",
+    "round": "cr4",
+    "sentence": "Matthew 1:19 shows Joseph reasoning as a man who knows the child is not his: he means to put her away privately.",
+    "verb": "knows",
+    "object": [
+     "child",
+     "means",
+     "put",
+     "away",
+     "priva"
+    ],
+    "sameVerse": [
+     "Matthew 1:19"
+    ],
+    "shared": [
+     "child"
+    ],
+    "flag": true
+   }
+  ],
+  "near": [
+   {
+    "side": "D",
+    "from": "cr3",
+    "withdrawn": "I drop the clause that Joseph knew the child's origin before the angel spoke.",
+    "actor": "Joseph",
+    "round": "cr4",
+    "sentence": "An answer that said Joseph would know her would answer \"How?\" with a man, and the text answers with God.",
+    "verb": "know",
+    "object": [
+     "answe",
+     "how",
+     "man"
+    ],
+    "sameVerse": [],
+    "shared": [],
+    "flag": false
+   },
+   {
+    "side": "D",
+    "from": "cr3",
+    "withdrawn": "I drop the clause that Joseph knew the child's origin before the angel spoke.",
+    "actor": "Joseph",
+    "round": "cr4",
+    "sentence": "### C1 (Joseph knew Mary within the espousal)",
+    "verb": "knew",
+    "object": [
+     "mary",
+     "withi",
+     "espou"
+    ],
+    "sameVerse": [],
+    "shared": [],
+    "flag": false
+   },
+   {
+    "side": "D",
+    "from": "cr3",
+    "withdrawn": "I drop the clause that Joseph knew the child's origin before the angel spoke.",
+    "actor": "Joseph",
+    "round": "cr4",
+    "sentence": "- Genesis 4:1 gives the usual order: the husband knows, then she conceives.",
+    "verb": "knows",
+    "object": [],
+    "sameVerse": [],
+    "shared": [],
+    "flag": false
+   },
+   {
+    "side": "D",
+    "from": "cr3",
+    "withdrawn": "I drop the clause that Joseph knew the child's origin before the angel spoke.",
+    "actor": "Joseph",
+    "round": "cr4",
+    "sentence": "Luke 3:23 marks \"son of Joseph\" as supposed.",
+    "verb": "supposed",
+    "object": [],
+    "sameVerse": [],
+    "shared": [],
+    "flag": false
+   },
+   {
+    "side": "D",
+    "from": "cr3",
+    "withdrawn": "I drop the clause that Joseph knew the child's origin before the angel spoke.",
+    "actor": "Joseph",
+    "round": "cr4",
+    "sentence": "The challenger's counters come to this: Joseph and Mary were husband and wife in law, but that does not state that he knew her.",
+    "verb": "knew",
+    "object": [],
+    "sameVerse": [],
+    "shared": [],
+    "flag": false
+   }
+  ]
+ }
+]

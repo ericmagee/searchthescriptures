@@ -1,0 +1,17 @@
+
+== 32643 withdrawals with a mind-verb claim: 0, flags: 0, same-actor later lines not flagged: 0
+
+== 32677 withdrawals with a mind-verb claim: 0, flags: 0, same-actor later lines not flagged: 0
+
+== 32717 withdrawals with a mind-verb claim: 0, flags: 0, same-actor later lines not flagged: 0
+
+== 32791 withdrawals with a mind-verb claim: 0, flags: 0, same-actor later lines not flagged: 0
+
+== 32905 withdrawals with a mind-verb claim: 1, flags: 1, same-actor later lines not flagged: 5
+  W D cr3 actor=Joseph verb=knew obj=[child,origi,befor,angel,spoke] verses=[Matthew 1:19] :: I drop the clause that Joseph knew the child's origin before the angel spoke.
+  FLAG cr3->cr4 verse=[Matthew 1:19] shared=[child] :: Matthew 1:19 shows Joseph reasoning as a man who knows the child is not his: he means to put her away privately.
+  near cr3->cr4 verse=[] shared=[] :: An answer that said Joseph would know her would answer "How?" with a man, and the text answers with God.
+  near cr3->cr4 verse=[] shared=[] :: ### C1 (Joseph knew Mary within the espousal)
+  near cr3->cr4 verse=[] shared=[] :: - Genesis 4:1 gives the usual order: the husband knows, then she conceives.
+  near cr3->cr4 verse=[] shared=[] :: Luke 3:23 marks "son of Joseph" as supposed.
+  near cr3->cr4 verse=[] shared=[] :: The challenger's counters come to this: Joseph and Mary were husband and wife in law, but that does not state that he knew her.
