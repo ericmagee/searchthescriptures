@@ -1,0 +1,113 @@
+{
+ "base_versionId": "cf21f231-743c-4c65-ad0e-62b8950c8c62",
+ "nodes": {
+  "D1 Call openrouter": [
+   "jsonBody",
+   "={{ (__b=>(__b&&typeof __b==='object'&&/^z-ai\\//.test(String(__b.model||'')))?Object.assign({},__b,{provider:{order:['z-ai'],allow_fallbacks:false} }):__b)($json.call.body) }}"
+  ],
+  "C1 Call openrouter": [
+   "jsonBody",
+   "={{ (__b=>(__b&&typeof __b==='object'&&/^z-ai\\//.test(String(__b.model||'')))?Object.assign({},__b,{provider:{order:['z-ai'],allow_fallbacks:false} }):__b)($json.call.body) }}"
+  ],
+  "D2 Call openrouter": [
+   "jsonBody",
+   "={{ (__b=>(__b&&typeof __b==='object'&&/^z-ai\\//.test(String(__b.model||'')))?Object.assign({},__b,{provider:{order:['z-ai'],allow_fallbacks:false} }):__b)($json.call.body) }}"
+  ],
+  "C2 Call openrouter": [
+   "jsonBody",
+   "={{ (__b=>(__b&&typeof __b==='object'&&/^z-ai\\//.test(String(__b.model||'')))?Object.assign({},__b,{provider:{order:['z-ai'],allow_fallbacks:false} }):__b)($json.call.body) }}"
+  ],
+  "D3 Call openrouter": [
+   "jsonBody",
+   "={{ (__b=>(__b&&typeof __b==='object'&&/^z-ai\\//.test(String(__b.model||'')))?Object.assign({},__b,{provider:{order:['z-ai'],allow_fallbacks:false} }):__b)($json.call.body) }}"
+  ],
+  "C3 Call openrouter": [
+   "jsonBody",
+   "={{ (__b=>(__b&&typeof __b==='object'&&/^z-ai\\//.test(String(__b.model||'')))?Object.assign({},__b,{provider:{order:['z-ai'],allow_fallbacks:false} }):__b)($json.call.body) }}"
+  ],
+  "Panel Judge 2 openrouter": [
+   "jsonBody",
+   "={{ (__b=>(__b&&typeof __b==='object'&&/^z-ai\\//.test(String(__b.model||'')))?Object.assign({},__b,{provider:{order:['z-ai'],allow_fallbacks:false} }):__b)($('Init Seats').first().json.question_trial === true ? $('QR Merge').first().json.judges[1].body : $('Panel Build').first().json.judges[1].body) }}"
+  ],
+  "Panel Judge 3 openrouter": [
+   "jsonBody",
+   "={{ (__b=>(__b&&typeof __b==='object'&&/^z-ai\\//.test(String(__b.model||'')))?Object.assign({},__b,{provider:{order:['z-ai'],allow_fallbacks:false} }):__b)($('Init Seats').first().json.question_trial === true ? $('QR Merge').first().json.judges[2].body : $('Panel Build').first().json.judges[2].body) }}"
+  ],
+  "Synthesis Call openrouter": [
+   "jsonBody",
+   "={{ (__b=>(__b&&typeof __b==='object'&&/^z-ai\\//.test(String(__b.model||'')))?Object.assign({},__b,{provider:{order:['z-ai'],allow_fallbacks:false} }):__b)($('Build Synthesis').first().json.requestBody) }}"
+  ],
+  "Diagnostic Call openrouter": [
+   "jsonBody",
+   "={{ (__b=>(__b&&typeof __b==='object'&&/^z-ai\\//.test(String(__b.model||'')))?Object.assign({},__b,{provider:{order:['z-ai'],allow_fallbacks:false} }):__b)($('Build Diagnostic Prompt').first().json.requestBody) }}"
+  ],
+  "Verdict Call openrouter": [
+   "jsonBody",
+   "={{ (__b=>(__b&&typeof __b==='object'&&/^z-ai\\//.test(String(__b.model||'')))?Object.assign({},__b,{provider:{order:['z-ai'],allow_fallbacks:false} }):__b)($('Build Independent Verdict').first().json.verdictBody) }}"
+  ],
+  "Panel Judge 1 openrouter": [
+   "jsonBody",
+   "={{ (__b=>(__b&&typeof __b==='object'&&/^z-ai\\//.test(String(__b.model||'')))?Object.assign({},__b,{provider:{order:['z-ai'],allow_fallbacks:false} }):__b)($('Init Seats').first().json.question_trial === true ? $('QR Merge').first().json.judges[0].body : $('Panel Build').first().json.judges[0].body) }}"
+  ],
+  "Panel Reserve openrouter": [
+   "jsonBody",
+   "={{ (__b=>(__b&&typeof __b==='object'&&/^z-ai\\//.test(String(__b.model||'')))?Object.assign({},__b,{provider:{order:['z-ai'],allow_fallbacks:false} }):__b)($('Reserve Build').first().json.body) }}"
+  ],
+  "Cure Call openrouter": [
+   "jsonBody",
+   "={{ (__b=>(__b&&typeof __b==='object'&&/^z-ai\\//.test(String(__b.model||'')))?Object.assign({},__b,{provider:{order:['z-ai'],allow_fallbacks:false} }):__b)($json.cure.body) }}"
+  ],
+  "Panel Cure Call 1 openrouter": [
+   "jsonBody",
+   "={{ (__b=>(__b&&typeof __b==='object'&&/^z-ai\\//.test(String(__b.model||'')))?Object.assign({},__b,{provider:{order:['z-ai'],allow_fallbacks:false} }):__b)($json.cure.body) }}"
+  ],
+  "Panel Cure Call 2 openrouter": [
+   "jsonBody",
+   "={{ (__b=>(__b&&typeof __b==='object'&&/^z-ai\\//.test(String(__b.model||'')))?Object.assign({},__b,{provider:{order:['z-ai'],allow_fallbacks:false} }):__b)($json.cure.body) }}"
+  ],
+  "Panel Cure Call 3 openrouter": [
+   "jsonBody",
+   "={{ (__b=>(__b&&typeof __b==='object'&&/^z-ai\\//.test(String(__b.model||'')))?Object.assign({},__b,{provider:{order:['z-ai'],allow_fallbacks:false} }):__b)($json.cure.body) }}"
+  ],
+  "Alternate Call openrouter": [
+   "jsonBody",
+   "={{ (__b=>(__b&&typeof __b==='object'&&/^z-ai\\//.test(String(__b.model||'')))?Object.assign({},__b,{provider:{order:['z-ai'],allow_fallbacks:false} }):__b)($json.alt.body) }}"
+  ],
+  "Alternate Cure Call openrouter": [
+   "jsonBody",
+   "={{ (__b=>(__b&&typeof __b==='object'&&/^z-ai\\//.test(String(__b.model||'')))?Object.assign({},__b,{provider:{order:['z-ai'],allow_fallbacks:false} }):__b)($json.cure.body) }}"
+  ],
+  "D4 Call openrouter": [
+   "jsonBody",
+   "={{ (__b=>(__b&&typeof __b==='object'&&/^z-ai\\//.test(String(__b.model||'')))?Object.assign({},__b,{provider:{order:['z-ai'],allow_fallbacks:false} }):__b)($json.call.body) }}"
+  ],
+  "C4 Call openrouter": [
+   "jsonBody",
+   "={{ (__b=>(__b&&typeof __b==='object'&&/^z-ai\\//.test(String(__b.model||'')))?Object.assign({},__b,{provider:{order:['z-ai'],allow_fallbacks:false} }):__b)($json.call.body) }}"
+  ],
+  "Accept Call openrouter": [
+   "jsonBody",
+   "={{ (__b=>(__b&&typeof __b==='object'&&/^z-ai\\//.test(String(__b.model||'')))?Object.assign({},__b,{provider:{order:['z-ai'],allow_fallbacks:false} }):__b)($json.acc.body) }}"
+  ],
+  "Accept Return Call openrouter": [
+   "jsonBody",
+   "={{ (__b=>(__b&&typeof __b==='object'&&/^z-ai\\//.test(String(__b.model||'')))?Object.assign({},__b,{provider:{order:['z-ai'],allow_fallbacks:false} }):__b)($json.acc.body) }}"
+  ],
+  "QR Ask": [
+   "jsonBody",
+   "={{ (__b=>(__b&&typeof __b==='object'&&/^z-ai\\//.test(String(__b.model||'')))?Object.assign({},__b,{provider:{order:['z-ai'],allow_fallbacks:false} }):__b)($json.body) }}"
+  ],
+  "QR Retry Ask": [
+   "jsonBody",
+   "={{ (__b=>(__b&&typeof __b==='object'&&/^z-ai\\//.test(String(__b.model||'')))?Object.assign({},__b,{provider:{order:['z-ai'],allow_fallbacks:false} }):__b)($json.body) }}"
+  ],
+  "QR Answer": [
+   "jsonBody",
+   "={{ (__b=>(__b&&typeof __b==='object'&&/^z-ai\\//.test(String(__b.model||'')))?Object.assign({},__b,{provider:{order:['z-ai'],allow_fallbacks:false} }):__b)($json.body) }}"
+  ],
+  "Send Back Call openrouter": [
+   "jsonBody",
+   "={{ (__b=>(__b&&typeof __b==='object'&&/^z-ai\\//.test(String(__b.model||'')))?Object.assign({},__b,{provider:{order:['z-ai'],allow_fallbacks:false} }):__b)($json.body) }}"
+  ]
+ }
+}
