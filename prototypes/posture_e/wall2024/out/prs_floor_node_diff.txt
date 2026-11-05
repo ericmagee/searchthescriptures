@@ -1,6 +1,6 @@
 --- /tmp/claude-0/-home-claude-searchthescriptures/25c53118-408e-5b9f-a314-6593b8f02ba2/scratchpad/old_slice.js	2026-11-05 20:50:33.393801379 +0000
-+++ /tmp/claude-0/-home-claude-searchthescriptures/25c53118-408e-5b9f-a314-6593b8f02ba2/scratchpad/new_slice.js	2026-11-05 20:50:33.393902567 +0000
-@@ -48,12 +48,56 @@
++++ /tmp/claude-0/-home-claude-searchthescriptures/25c53118-408e-5b9f-a314-6593b8f02ba2/scratchpad/new_slice.js	2026-11-05 20:51:21.074102161 +0000
+@@ -48,12 +48,61 @@
    return {ok:false,why:'PROVEN IN ['+rk+']: the verse is named there but not quoted with its reference'};}
   // one entry's class. l2bad(text): true when the [L2] check marks that tag NOT COUNTED
  
@@ -12,7 +12,7 @@
    const bad=e.l2.filter(x=>x.ok&&l2bad&&l2bad(x.text));
    return {cls:'UNPROVEN',why:bad.length?'its [L2] is NOT COUNTED by the [L2] check':(e.l2.length||e.l3.length)?'its [L2] or [L3] is not in the form (a word with its meaning; a verse with its reference and quotation)':'no [L2] or [L3] layer and no PROVEN IN reference'};}
 +
-+ // WALL-2024 floor (position 1; fixture commits 5ae27a9, afa9460): after the form test, a press whose MEANS asserts what a named person
++ // WALL-2024 floor (position 1): after the form test, a press whose MEANS asserts what a named person
 + // believed or knew, with no single layer quote holding a verb of that kind and its object, is UNPROVEN, not a witness (ruling 398).
 + const FLOOR=(()=>{const MIND=/\b(thought|think|thinks|thinking|believed|believe|believes|supposed|suppose|supposes|knew|know|knows|knowing|known|accounted|account|counted|esteemed|reckoned|considered|took|take|takes|taken)\b/gi;
 + const TOOK_TO_BE=/^(took|take|takes|taken)$/i; // a "take" verb counts only in the form "took ... to be"
@@ -43,8 +43,13 @@
 +  (e.l2||[]).forEach(x=>q.push({kind:'L2',text:x.text}));
 +  (e.l3||[]).forEach(x=>{const m=String(x.text).match(/["“]([^"”]+)["”]/);q.push({kind:'L3',text:m?m[1]:x.text});});return q;}
 +
-+ function held(c,quotes){ // one quote holds a verb of that kind AND every object word
-+  for(const q of quotes){const t=norm(q.text);MIND.lastIndex=0;const hasVerb=MIND.test(q.text);MIND.lastIndex=0;if(!hasVerb)continue;
++ function held(c,quotes){ // one quote holds a verb of that kind AND every object word (WALL-2024 reply after W2's cross-check:
++  // the layer side now applies the same verb rule as the MEANS side: a "take" verb counts only in the form "took ... to be";
++  // and where the claim's actor is a proper name, the quote must hold that name or a personal pronoun)
++  for(const q of quotes){const t=norm(q.text);let hasVerb=false;let x;MIND.lastIndex=0;
++   while((x=MIND.exec(q.text))){const after=q.text.slice(x.index+x[1].length);if(TOOK_TO_BE.test(x[1])&&!/^\s+.{0,40}?\bto be\b/i.test(after))continue;hasVerb=true;break;}
++   MIND.lastIndex=0;if(!hasVerb)continue;
++   if(/^[A-Z]/.test(c.actor)&&!/^(he|she|they|him|her|the |a )/i.test(c.actor)){const re=new RegExp('\\b('+c.actor+'|he|she|him|her|i|me|thou|thee)\\b','i');if(!re.test(q.text))continue;}
 +   const words=t.split(/\s+/).map(stem);if(c.object.every(o=>words.includes(stem(o))))return q;}
 +  return null;}
 +
