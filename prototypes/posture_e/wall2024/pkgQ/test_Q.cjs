@@ -17,8 +17,17 @@ for(const [h,rows] of Object.entries(g)){const seat=RP[h].seat;const [N,O]=seat=
  T(ch.length===0,seat+' 32973: K-W status unchanged on all '+items.length+' items'+(ch.length?' CHANGED: '+ch.join('; '):''));
  v.forEach((x,i)=>{if(/conceded/i.test(x.reason||x.why||''))console.log('     CONCEDED cure kept: '+seat+' '+rows[i].item+' | '+String((x.lines||x.line||[''])[0]||'').slice(0,90));});
  if(seat==='gemini'){const i=rows.findIndex(r=>r.item==='DEFENDER CR3 LINK 1 #3');T(i>=0&&v[i].status==='CURED'&&/stands without/i.test(v[i].reason||v[i].why||''),'gemini DEFENDER CR3 LINK 1 #3 stays CURED, by STANDS WITHOUT IT on its RESPONSE line (not by its STATEMENT prose "conceded")');}}
+// ---- 32949 replay (W2, Wall 2226): sentence-start anchor keeps the "Fact: .... CONCEDED; ..." form
+{const F9=JSON.parse(fs.readFileSync('pkgS/fixture_32949_cure_rows.json','utf8'));const R9={};F9.replies.forEach(r=>R9[r.h]=r.full_reply);
+ const g9={};F9.rows.filter(r=>r.rule==='K-W').forEach(r=>{(g9[r.seat+' '+r.h]=g9[r.seat+' '+r.h]||[]).push(r)});
+ const exp={'gemini a750dd48':[10,10],'chatgpt d7c13b3f':[11,9],'grok af20ea15':[12,12],'sol 6d710d40':[11,10],'sol a4717fdd':[10,8]};
+ for(const [k,rows] of Object.entries(g9)){const it=rows.map(r=>({rule:'K-W',side:side(r),link:r.item,line:r.flagged_line}));const rp={ok:true,text:R9[rows[0].h]};
+  const v=NP.cureVerdicts(it,rp,null,null).slice(0,it.length),v0=OP.cureVerdicts(it,rp,null,null).slice(0,it.length);const c=a=>a.filter(x=>x.status==='CURED').length;
+  const key=k.split(' ')[0]+' '+k.split(' ')[1].slice(0,8);const lost=v.map((x,i)=>v0[i].status==='CURED'&&x.status!=='CURED'?rows[i].item:null).filter(Boolean);
+  T(exp[key]&&c(v0)===exp[key][0]&&c(v)===exp[key][1],'32949 '+key+': K-W CURED '+c(v0)+' -> '+c(v)+'/'+it.length+(lost.length?' (un-cured, no form word: '+lost.join('; ')+')':''));}}
 const it={rule:'K-W',side:'DEFENDER',link:'DEFENDER CR3 LINK 2 #4',line:'x'};const run=(N,t)=>N.cureVerdicts([it],{ok:true,text:t},null,null)[0];
 const C=[
+ ['STATEMENT: K-W DEFENDER CR3 LINK 2 #4 | Fact: the taking was into the house. CONCEDED; [CR3] grants it.\nRESPONSE: K-W DEFENDER CR3 LINK 2 #4 | I accept the grant.','CURED','"Fact: .... CONCEDED;" (32949 chatgpt form)'],
  ['RESPONSE: K-W DEFENDER CR3 LINK 2 #4 | CONCEDED.','CURED','"| CONCEDED."'],
  ['RESPONSE: K-W DEFENDER CR3 LINK 2 #4 | CONCEDED: the link falls without the footing.','CURED','"| CONCEDED:"'],
  ['RESPONSE: K-W DEFENDER CR3 LINK 2 #4 | CONCEDED','CURED','"| CONCEDED" at the end'],

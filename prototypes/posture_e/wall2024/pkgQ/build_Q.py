@@ -2,7 +2,7 @@
 import glob,os,json,hashlib
 OUT='patched'; os.makedirs(OUT,exist_ok=True)
 OLD="const kwCo=t=>/\\bCONCEDED\\b/i.test(String(t).replace(/\\b(?:NOT|NEVER|NO\\s+LONGER)\\s+(?:(?:BEEN|BE)\\s+)?CONCEDED\\b/gi,' ').replace(/\\bCONCEDED\\s+LINKS?\\b/gi,' '));"
-NEW="const kwCo=t=>/^\\s*\\**\\s*CONCEDED(?!\\s+LINKS?\\b)\\b\\s*\\**\\s*(?::|\\.|--|\\u2014|$)/.test(String(t)); /* pkgQ (WALL-2024 2224): CONCEDED is the form word right after the item's bar, uppercase, then \":\", \".\", \"--\" or the end; never \"conceded\" in prose */"
+NEW="const kwCo=t=>/(?:^|[.;!?]\\s+|:\\s+)\\**CONCEDED\\**(?!\\s+LINKS?\\b)\\s*(?::|;|\\.|--|\\u2014|$)/.test(String(t)); /* pkgQ (WALL-2024 2224, 2226): CONCEDED is the uppercase form word at a sentence start (start of text, or after . ; ! ? :), then : ; . -- or the end; never conceded in prose, never CONCEDED LINKS */"
 sha=lambda s:hashlib.sha256(s.encode()).hexdigest()[:16]
 plan={'base':'merged_PW','nodes':[]}
 for f in sorted(glob.glob('../merged_PW/*.js')):
