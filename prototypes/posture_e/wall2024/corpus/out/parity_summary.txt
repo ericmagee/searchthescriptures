@@ -1,22 +1,26 @@
-texts 2167, adapters 17 (sbApply2024: GR (pkgCP2), shared library: KF_LINE, sbApply2024: PR/FR (pkgCP), sbApply2024: SB_FORM, sbApply2024: SB_ROW, ciLedger: CI_LINE/CI_PRESSED, cureLines: CURE_KEY (+pkgCR tag), gateLineFor2024: ac(), gateRead2024, K-AG: kagRow, K-CMT: kcmtGrade2024, sbApply2024: keyChecks KEYSTONE, K-RUL: krulRulings collision, Alternate Merge: rcLines, shared library: sbLabel, selfLines421: ANSWER CHECK, Send Back Record: SENDBACK reply), disagreement rows 310
+texts 2167, adapters 17 (sbApply2024: GR (pkgCP2), shared library: KF_LINE, sbApply2024: PR/FR (pkgCP), sbApply2024: SB_FORM, sbApply2024: SB_ROW, ciLedger: CI_LINE/CI_PRESSED, cureLines: CURE_KEY (+pkgCR tag), gateLineFor2024: ac(), gateRead2024, K-AG: kagRow, K-CMT: kcmtGrade2024, sbApply2024: keyChecks KEYSTONE, K-RUL: krulRulings collision, Alternate Merge: rcLines, shared library: sbLabel, selfLines421: ANSWER CHECK, Send Back Record: SENDBACK reply), disagreement rows 414
 DIS field Alternate Merge: rcLines.grade: 53
 DIS field K-AG: kagRow.grade: 8
 DIS field K-AG: kagRow.roundRaw: 16
+DIS field Send Back Record: SENDBACK reply.sentence: 6
 DIS field gateLineFor2024: ac().roundRaw: 17
 DIS field gateLineFor2024: ac().verse: 1
 DIS field gateRead2024.sentence: 4
-DIS field sbApply2024: SB_ROW.sentence: 76
-DIS field shared library: KF_LINE.fails: 11
-DIS old-only K-CMT: kcmtGrade2024: 54
+DIS field sbApply2024: SB_ROW.sentence: 106
+DIS field shared library: KF_LINE.answer: 58
+DIS field shared library: KF_LINE.fails: 34
+DIS field shared library: KF_LINE.means: 34
+DIS old-only K-CMT: kcmtGrade2024: 48
 DIS old-only Send Back Record: SENDBACK reply: 6
-DIS old-only cureLines: CURE_KEY (+pkgCR tag): 7
+DIS old-only cureLines: CURE_KEY (+pkgCR tag): 2
 DIS old-only gateRead2024: 4
-DIS old-only sbApply2024: PR/FR (pkgCP): 9
-DIS old-only sbApply2024: SB_FORM: 44
+DIS old-only sbApply2024: PR/FR (pkgCP): 6
+DIS old-only sbApply2024: SB_FORM: 11
 new form without an old reader CHAIN MARK: 98
 new form without an old reader CITATION CHECK: 40
 new form without an old reader HEADING: 53
-new form without an old reader LINK STATE: 108
+new form without an old reader LINK STATE: 121
+new form without an old reader PREMISE: 19
 new form without an old reader RULING: 213
 new form without an old reader RULING PART: 852
 old Alternate Merge: rcLines: 893
