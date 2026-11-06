@@ -1,0 +1,12 @@
+OK   K4a ESV-style Isaiah 7:14 items=1
+OK   K4b NIV-style Matthew 1:19 items=1
+OK   K5a exact Matthew 1:19 with [man] items=0
+OK   K5b exact without italics bracket items=0
+OK   K5c Luke 3:23 parenthesis items=0
+OK   K6a NIV named items=0 ["OTHER VERSION NAMED (listed only): The NIV renders it otherwise; I rule that out."]
+OK   K6b LXX named items=0 ["OTHER VERSION NAMED (listed only): The LXX parthenos is not footing."]
+OK   Z2a case and punctuation items=0
+OK   Z2b ellipsis join items=0
+OK   NC not served items=0 ["NOT CHECKED (the verse was not read this run): Romans 1:3 \"made of the seed of David according to the flesh\""]
+OK   one wrong word items=1
+ALL OK
