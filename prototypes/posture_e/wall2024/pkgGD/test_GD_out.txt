@@ -1,0 +1,66 @@
+OK   19 nodes: base and final shas match the plan
+OK   every node parses as an n8n Code node body
+OK   the 3 Payloads nodes carry one drvCheck text and one __kfHas text
+OK   library drvCheck is identical to the Payloads drvCheck in all 19 nodes (diff empty; sha a7b32c992cd5a586)
+OK   __kfHas is identical to the Payloads __kfHas in all 19 nodes
+OK   before: the library drvCheck differed from Payloads in all 19 nodes (old sha 87d671190dfd7ab7)
+OK   each of the 19 nodes defines drvCheck, __kfHas, prsUnprovenOnly and KF_LINE once
+OK   drvCheck is called only in the 6 gate-library nodes (the 13 cure nodes define it and do not call it)
+OK   ruling 411 at the gate: old library raises K-G1/K-G4 on a BROKEN line with its FORCED line (1); new raises none and marks v29 (0, true)
+OK   KEEP + FORCED: the item is CURED and one FORCED change G1F is added
+OK   KEEP + FORCED: E-APPLY keeps the collision line and writes the FORCED line on the next line
+OK   KEEP + FORCED: the verdict is unchanged (BROKEN, D4 vs C5 still DEFENDER LINK BROKEN) and G1F is listed as applied
+OK   KEEP + FORCED: the stored judgment (cureRewrite) carries the FORCED line after the collision line
+OK   KEEP + FORCED: drvCheck on the corrected text raises no K-G4 on D4 vs C5
+OK   CHANGE TO <FORCED line>: the item is CURED and one FORCED change G1F is added
+OK   CHANGE TO <FORCED line>: E-APPLY keeps the collision line and writes the FORCED line on the next line
+OK   CHANGE TO <FORCED line>: the verdict is unchanged (BROKEN, D4 vs C5 still DEFENDER LINK BROKEN) and G1F is listed as applied
+OK   CHANGE TO <FORCED line>: the stored judgment (cureRewrite) carries the FORCED line after the collision line
+OK   CHANGE TO <FORCED line>: drvCheck on the corrected text raises no K-G4 on D4 vs C5
+OK   base (pkgGF): CHANGE TO <FORCED line> replaced the collision line (the grade was lost)
+OK   a FORCED line that fails K-F adds nothing and stays UNCURED
+OK   a FORCED line for another link adds nothing
+OK   a FORCED change whose collision line is not in the text is NOT APPLIED (recorded)
+OK   the same FORCED line twice is written once
+OK   after a send-back rewrite of the collision line, the FORCED line follows the rewritten line; both S1 and G1F are applied
+OK   a send-back change with no forced_add flag applies as before
+OK   32998 gemini: the live library (pkgG4W, be10d6ae) reproduces the live gate items (none)
+OK   32998 chatgpt: the live library (pkgG4W, be10d6ae) reproduces the live gate items (G1 NOT APPLIED, G2 NOT APPLIED, G3 NOT APPLIED, G4 NOT APPLIED, G5 RULE K-G4)
+OK   32998 chatgpt: the live library reproduces the live gate decisions
+OK   32998 grok: the live library (pkgG4W, be10d6ae) reproduces the live gate items (G1 CONTRADICTION, G2 CONTRADICTION)
+OK   32998 grok: the live library reproduces the live gate decisions
+OK   32998 sol: the live library (pkgG4W, be10d6ae) reproduces the live gate items (G1 RULE K-G4)
+OK   32998 sol: the live library reproduces the live gate decisions
+OK   replay: no new gate item appears under the new library
+
+--- replay (old = pkgGF library, new = pkgGD library) ---
+32949 chatgpt: gate items old 2, new 2; rounds read
+32949 grok: gate items old 3, new 3; rounds read
+32973 chatgpt: gate items old 2, new 2; rounds read
+32973 gemini: gate items old 1, new 1; rounds read
+32973 grok: gate items old 4, new 4; rounds read
+32980 gemini: gate items old 1, new 1; rounds read
+32980 grok: gate items old 2, new 2; rounds read
+32980 sol: gate items old 0, new 0; rounds read from a panel judge's prompt (alternate seat)
+32985: no gate ran (n8n execution 32985 has no Gate Build or Gate Record data; debate_enforcer_log has no E-GATE row for ODV1-32985-1fvddvps).
+32998 gemini (panel): gate items on the stack head (pkgGF) 0 [], on pkgGD 0
+32998 chatgpt (panel): gate items on the stack head (pkgGF) 2 [NOT APPLIED E-APPLY S1; RULE K-G4 K re-read], on pkgGD 2
+   the stored gate reply, decided on the live items:
+   same    G1 NOT APPLIED (E-APPLY S1): live CURED, pkgGF CURED, pkgGD CURED
+   same    G2 NOT APPLIED (E-APPLY S2): live CURED, pkgGF CURED, pkgGD CURED
+   same    G3 NOT APPLIED (E-APPLY S3): live CURED, pkgGF CURED, pkgGD CURED
+   same    G4 NOT APPLIED (E-APPLY S4): live CURED, pkgGF CURED, pkgGD CURED
+   same    G5 RULE K-G4 (K re-read): live UNCURED, pkgGF UNCURED, pkgGD UNCURED
+   uncured counted: live 1, pkgGF 1, pkgGD 1; FORCED lines added by pkgGD: 0
+32998 grok (panel): gate items on the stack head (pkgGF) 2 [CONTRADICTION E-APPLY S19; CONTRADICTION E-GATE B], on pkgGD 2
+   the stored gate reply, decided on the live items:
+   same    G1 CONTRADICTION (E-APPLY S19): live UNCURED, pkgGF CURED, pkgGD CURED (live to pkgGF: KEEP: change withdrawn (the refused send-back change S19 is dropped, and its contradiction is not in the judge text; W3 2299))
+   same    G2 CONTRADICTION (E-GATE B): live CURED, pkgGF CURED, pkgGD CURED
+   uncured counted: live 1, pkgGF 0, pkgGD 0; FORCED lines added by pkgGD: 0
+32998 sol (alternate): gate items on the stack head (pkgGF) 1 [RULE K-G4 K re-read], on pkgGD 1
+   the stored gate reply, decided on the live items:
+   same    G1 RULE K-G4 (K re-read): live UNCURED, pkgGF UNCURED, pkgGD UNCURED
+   uncured counted: live 1, pkgGF 1, pkgGD 1; FORCED lines added by pkgGD: 0
+--- 20 gate items replayed (old library), 0 change ---
+
+34 OK, 0 FAIL
