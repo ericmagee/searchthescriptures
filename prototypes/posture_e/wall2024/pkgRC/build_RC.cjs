@@ -1,11 +1,13 @@
 // pkgRC (reader phase 2, Group 2; W3 spec section 10): rcLines reads each collision line with the shared readLine.
 // A collision line the reader refuses keeps grade null and carries `unread` (the refusal code). Every caller tests the explicit grade:
-// null is never STANDS and never "not broken". Base pkgPS/patched (22 library nodes). Each anchor is asserted per node.
-const fs=require('fs'),cr=require('crypto');const D=__dirname,B=D+'/../pkgPS/patched/';const sha=s=>cr.createHash('sha256').update(s).digest('hex').slice(0,16);
+// null is never STANDS and never "not broken". Base pkgSBR/patched (W1 08f8b61, on pkgPS; 22 library nodes). Each anchor is asserted per node.
+const fs=require('fs'),cr=require('crypto');const D=__dirname,B=D+'/../pkgSBR/patched/';const sha=s=>cr.createHash('sha256').update(s).digest('hex').slice(0,16);
 const R=[
  // 1. rcLines: the collision grade from readLine (19 nodes)
  {n:19,a:"if(m){const g=(u.slice(m[0].length).match(/(DEFENDER LINK BROKEN|CHALLENGER LINK BROKEN|UNDERDETERMINED)/)||[])[1]||null;out.col.push({link:m[1]+' vs '+m[2],grade:g,raw});continue;}",
   b:"if(m){const r=__RL.readLine(raw);const ok=r.form==='COLLISION'&&!(r.f&&r.f.restated);out.col.push(ok?{link:m[1]+' vs '+m[2],grade:r.f.grade,raw}:{link:m[1]+' vs '+m[2],grade:null,raw,unread:r.detail||r.code||'NO_LINE_FORM'});continue;} /* pkgRC (W3 spec 10): the shared reader; STANDS and WITHDRAWN are read; a refused line has grade null and never counts as not broken */"},
+ // 1b. spec 14 (W3 Wall 2459): a pair line the reader refuses is skipped when the same pair has a read COLLISION line in the text; otherwise it stays UNREAD
+ {n:19,a:"if(c&&!out.cn[c[1]])out.cn[c[1]]={raw,u};}\n return out;}",b:"if(c&&!out.cn[c[1]])out.cn[c[1]]={raw,u};}\n out.col=out.col.filter(z=>z.grade||!out.col.some(y=>y.grade&&y.link===z.link)); /* pkgRC, spec 14: a note on a pair with a read collision line is skipped */\n return out;}"},
  // 2. keyChecks rule 0: KEYSTONE BROKEN with no broken collision is a contradiction only when every keystone collision is read
  {n:6,a:"if(m[2]==='BROKEN'&&!br&&!sbKeyExempt2024(P.key.raw,P,RD))",b:"if(m[2]==='BROKEN'&&!br&&kc.every(z=>z.grade)&&!sbKeyExempt2024(P.key.raw,P,RD))"},
  // 3. keyChecks rule 2: only an explicit "not BROKEN" (false), never an unknown (null)

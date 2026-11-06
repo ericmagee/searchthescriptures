@@ -1768,6 +1768,7 @@ function rcLines(text){const out={col:[],clause:null,key:null,result:null,st:{},
   if(/^CLAUSE\s*:/.test(u)){if(!out.clause)out.clause={raw,u};continue;}if(/^KEYSTONE\s*:/.test(u)){if(!out.key)out.key={raw,u};continue;}if(/^RESULT\s*:/.test(u)){if(!out.result)out.result={raw,u};continue;}
   const s=u.match(/^(DEFENSE|CHALLENGE) STANDING\s*:/);if(s){if(!out.st[s[1]])out.st[s[1]]={raw,u};continue;}
   const c=u.match(/^(CHALLENGER CONCEDED LINKS|CONCEDED LINKS)\s*:/);if(c&&!out.cn[c[1]])out.cn[c[1]]={raw,u};}
+ out.col=out.col.filter(z=>z.grade||!out.col.some(y=>y.grade&&y.link===z.link)); /* pkgRC, spec 14: a note on a pair with a read collision line is skipped */
  return out;}
 const rcOne=s=>String(s||'').replace(/\s+/g,' ').trim();
 const rcCut=s=>{s=rcOne(s);return s.length>300?s.slice(0,297)+'...':s;};

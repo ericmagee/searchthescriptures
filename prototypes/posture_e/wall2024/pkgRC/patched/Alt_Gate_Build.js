@@ -1768,6 +1768,7 @@ function rcLines(text){const out={col:[],clause:null,key:null,result:null,st:{},
   if(/^CLAUSE\s*:/.test(u)){if(!out.clause)out.clause={raw,u};continue;}if(/^KEYSTONE\s*:/.test(u)){if(!out.key)out.key={raw,u};continue;}if(/^RESULT\s*:/.test(u)){if(!out.result)out.result={raw,u};continue;}
   const s=u.match(/^(DEFENSE|CHALLENGE) STANDING\s*:/);if(s){if(!out.st[s[1]])out.st[s[1]]={raw,u};continue;}
   const c=u.match(/^(CHALLENGER CONCEDED LINKS|CONCEDED LINKS)\s*:/);if(c&&!out.cn[c[1]])out.cn[c[1]]={raw,u};}
+ out.col=out.col.filter(z=>z.grade||!out.col.some(y=>y.grade&&y.link===z.link)); /* pkgRC, spec 14: a note on a pair with a read collision line is skipped */
  return out;}
 const rcOne=s=>String(s||'').replace(/\s+/g,' ').trim();
 const rcCut=s=>{s=rcOne(s);return s.length>300?s.slice(0,297)+'...':s;};
@@ -1844,7 +1845,11 @@ function cureRecompute(seat,text,F,items,v,reply){const o=cureLines(reply&&reply
 // RECORD-ONLY part: a SEND-BACK ITEM is written to the row and the enforcer log; no further call is made, so it removes no seat yet.
 const SB_ROW=/^(DEFENDER|CHALLENGER)\s*\|\s*\[?\s*([CD]R\d)\s*\]?\s*\|\s*(.+?)(?:\s+(?:--|\u2014)\s+.*)?$/i; /* an OUT-OF-ROUND CONCESSIONS row: SIDE | [round] | quote -- tag */
 const SB_FORM=/^(?:(?:DEFENDER|CHALLENGER)\s*\|\s*\[?\s*[CD]R\d\s*\]?\s*\||D\d+\s+vs\.?\s+C\d+\b|D\d+\s*(?::|--|\u2014)|(?:CHALLENGER\s+)?CONCEDED LINKS\s*:|(?:DEFENSE|CHALLENGE) STANDING\s*:|KEYSTONE\s*:|CLAUSE\s*:|ANSWER CHECK\s*:|FORCED(?:\s*\(\s*Commitment\s+\d+\s*\))?\s*:|PREMISE\s+\d+\b|RULING\b|(?:DEFENDER|CHALLENGER)\s+CHAIN MARK\s*:\s*(?:FOOTED|STRAINED|SLACK)\b)/i; /* pkgCM (a): the CHAIN MARK form, spec section 13 (W3 2395) */
-function sbLabel(l){const u=String(l||'').replace(/\\+/g,'').replace(/[*_`]+/g,'').trim().replace(/^(?:[-\u2022]|\d+[.)])?\s*/,'').toUpperCase();const m=u.match(/^(D\d+)\s+VS\.?\s+(C\d+)\b/);if(m)return m[1]+' VS '+m[2];const k=u.match(/^(KEYSTONE|CHALLENGER CONCEDED LINKS|CONCEDED LINKS|DEFENSE STANDING|CHALLENGE STANDING|CLAUSE)\s*:/);return k?k[1]:null;}
+function __sbRL(l){try{return __RL.readLine(String(l==null?'':l));}catch(e){return {form:null};}} /* pkgSBR: the shared reader on one line, never throwing */
+function sbLabel(l){const r=__sbRL(l);if(r&&r.form){const f=r.f||{};if(f.restated)return null; /* pkgSBR (1) */
+ if(r.form==='COLLISION')return String(f.pair).toUpperCase().replace(/\s+VS\.?\s+/,' VS ');if(r.form==='KEYSTONE')return 'KEYSTONE';if(r.form==='CONCEDED')return f.side==='CHALLENGER'?'CHALLENGER CONCEDED LINKS':'CONCEDED LINKS';
+ if(r.form==='STANDING')return f.side+' STANDING';if(r.form==='CLAUSE')return 'CLAUSE';return null;}return sbLabel0(l);}
+function sbLabel0(l){const u=String(l||'').replace(/\\+/g,'').replace(/[*_`]+/g,'').trim().replace(/^(?:[-\u2022]|\d+[.)])?\s*/,'').toUpperCase();const m=u.match(/^(D\d+)\s+VS\.?\s+(C\d+)\b/);if(m)return m[1]+' VS '+m[2];const k=u.match(/^(KEYSTONE|CHALLENGER CONCEDED LINKS|CONCEDED LINKS|DEFENSE STANDING|CHALLENGE STANDING|CLAUSE)\s*:/);return k?k[1]:null;}
 // pkgPS: premise grades of a CONCEDED LINKS line
 function psGrades(l){const g={};let t=String(l==null?'':l).replace(/\\+"/g,'"').replace(/[*_`]+/g,'');const m=t.match(/^\s*(?:[-•]\s*|\d+[.)]\s*)?(DEFENDER\s+|CHALLENGER\s+)?CONCEDED LINKS\s*:\s*(\d+)?\s*(?:--|—|–)?/i);if(!m)return null;t=t.slice(m[0].length);
  t=t.replace(/\([^()]*\)/g,' ').replace(/"[^"\n]*"|“[^”\n]*”/g,' ').replace(/(^|[\s(\[:;,])['‘](?:[^'’\n]|['’](?=[A-Za-z]))+?['’](?=$|[\s.,;:!?)\]])/g,'$1 ')
@@ -1867,7 +1872,8 @@ function sbApply2024(seat,raw,F,its,RD){const one=s=>String(s==null?'':s).replac
   let o=find(x.line);if(!o){const n=nrm(x.line);for(const [o2,c2] of map){if(n&&nrm(c2.to)===n){o=o2;break;}}} /* E-GATE: a gate change may name a line as an earlier change rewrote it */
   /* a K-S3 item names the concession as "DEFENDER CR4: <quote>" (an engine line, not the judge's): a CHANGE TO in the row form replaces the
      judge's own row of that side, round and quote */
-  if(!o){const m=to.match(SB_ROW);const rq=s=>{const t=nrm(s);const k=t.match(/["\u201c]([^"\u201d]+)["\u201d]/);return (k?k[1]:t.replace(/\s+(?:TOUCHES NO LINK|COUNTED)\b[\s\S]*$/i,'').replace(/^["\u201c]+|["\u201d]+$/g,'')).trim().toUpperCase();}; /* pkgGK (c): the row's first quoted span, so a tag written without "--" is not read into the quote (32998 chatgpt S2 to S4) */if(m){const q=rq(m[3]);o=lines.find(l=>{const r=nrm(l).match(SB_ROW);return r&&r[1].toUpperCase()===m[1].toUpperCase()&&r[2].toUpperCase()===m[2].toUpperCase()&&rq(r[3])===q;})||null;}}
+  if(!o){const __a=__sbRL(to);const __oo=r=>r&&r.form==='OUT-OF-ROUND'?r.f:null;const __sk=s=>String(s||'').replace(/^["\u201c]+|["\u201d]+$/g,'').replace(/\s+/g,' ').trim().toUpperCase(); /* pkgSBR (2) */
+  if(__oo(__a)){const a=__oo(__a);o=lines.find(l=>{const b=__oo(__sbRL(l));return b&&b.side===a.side&&b.round===a.round&&__sk(b.sentence)===__sk(a.sentence);})||null;}else{const m=to.match(SB_ROW);const rq=s=>{const t=nrm(s);const k=t.match(/["\u201c]([^"\u201d]+)["\u201d]/);return (k?k[1]:t.replace(/\s+(?:TOUCHES NO LINK|COUNTED)\b[\s\S]*$/i,'').replace(/^["\u201c]+|["\u201d]+$/g,'')).trim().toUpperCase();}; /* pkgGK (c): the row's first quoted span, so a tag written without "--" is not read into the quote (32998 chatgpt S2 to S4) */if(m){const q=rq(m[3]);o=lines.find(l=>{const r=nrm(l).match(SB_ROW);return r&&r[1].toUpperCase()===m[1].toUpperCase()&&r[2].toUpperCase()===m[2].toUpperCase()&&rq(r[3])===q;})||null;}}}
   if(/^NOT HELD\b/i.test(to)){items.push({sid:x.sid,kind:'NOT APPLIED',why:'a NOT HELD dispute written under CHANGE TO, not a line change',to,lines:o?[o]:[]});continue;} /* W1, 2239: run 32949 grok S2, S3 */
   if(!o){items.push({sid:x.sid,kind:'NOT APPLIED',why:'the flagged line is not in the judge text',to});continue;}
   if(!to||!SB_FORM.test(to)){items.push({sid:x.sid,kind:'NOT APPLIED',why:'the CHANGE TO line has no line form the engine reads',to,lines:[o]});continue;} /* pkgCL (33025 chatgpt): the gate item names the refused line */
@@ -1988,7 +1994,8 @@ function gateItems2024(seat,raw,F,its,ctx){const R1=sbApply2024(seat,raw,F,its,c
  items.forEach((x,i)=>x.gid='G'+(i+1));return {R1,items,T1,newk_error:NK.error||null};}
 const GATE_LINE=/GATE\s*:?\s*(?:ITEM\s*)?#?\s*(G\s*\d+)\s*:?\s*\|\|\s*(KEEP|CHANGE\s+TO\s*:?([\s\S]*?))\s*(?:\|\|\s*(.*))?$/i;
 function gateRead2024(txt){const A={};const J=/^\s*[{\[]/.test(txt);const T2=String(txt||'').replace(/\\n/g,'\n').replace(/\\"/g,'"');
- for(const l0 of T2.split('\n')){const l=l0.replace(/[*_`]+/g,'').trim();const m=l.match(GATE_LINE);if(!m)continue;const id=m[1].replace(/\s+/g,'').toUpperCase();if(A[id])continue;
+ for(const l0 of T2.split('\n')){const l=l0.replace(/[*_`]+/g,'').trim();{const r=__sbRL(l);if(r&&r.form==='REPLY'&&r.f&&r.f.kind==='GATE'){const id=r.f.id;if(A[id])continue; /* pkgSBR (3) */
+  A[id]={ans:r.f.answer,to:String(r.f.to||'').trim(),why:(J?String(r.f.sentence||'').replace(/"\s*,?\s*[}\]]*\s*$/,''):String(r.f.sentence||'')).trim(),line:l};continue;}}const m=l.match(GATE_LINE);if(!m)continue;const id=m[1].replace(/\s+/g,'').toUpperCase();if(A[id])continue;
   A[id]={ans:/^KEEP$/i.test(m[2].trim())?'KEEP':'CHANGE',to:(m[3]||'').trim(),why:(J?String(m[4]||'').replace(/"\s*,?\s*[}\]]*\s*$/,''):String(m[4]||'')).trim(),line:l};}
  return A;}
 // The line a gate CHANGE replaces: the item's line with the same label (collision, KEYSTONE, count, standing) or the same ANSWER CHECK verse and round.

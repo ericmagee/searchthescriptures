@@ -3,9 +3,11 @@ OK   a grade word in the reason is not the grade (base read it as broken)
 OK   lower-case grade: refused (CP2), null with the code
 OK   no colon: refused (CP2)
 OK   pair note line ("not FORCED", 33040 grok): unread, not STANDS
+OK   spec 14.1: a note on a pair with a read COLLISION line is skipped
+OK   spec 14.2: a note on a pair with no read COLLISION line stays UNREAD
 OK   sbBrokenWord2024: an unread line and none broken is null (unknown), not false
    base : {"f":{"verdict_tag":"HELD","defense_standing":"SELF-SUPPORTED","conceded_links":0,"challenge_standing":"SELF-SUPPORTED","challenger_conceded_links":0},"res":"UNDERDETERMINED","tag":"HELD-1","trig":["RESTATED D1 vs C1 (DEFENDER LINK BROKEN to UNDERDETERMINED)"]}
    pkgRC: {"f":{"verdict_tag":"BROKEN","defense_standing":"PROP-DEPENDENT","conceded_links":0,"challenge_standing":"SELF-SUPPORTED","challenger_conceded_links":0},"res":"CHALLENGER WINS","tag":"UNREAD","trig":["RESTATED D1 vs C1 (DEFENDER LINK BROKEN to UNDERDETERMINED)","UNREAD D2 vs C2 (COLLISION_NO_GRADE_WORD)"]}
 OK   cureRecompute: base derives HELD from the unread line (null read as not broken)
 OK   cureRecompute: pkgRC holds: verdict, result and clause are the judge's own, and the unread line is named
-8 OK, 0 FAIL
+10 OK, 0 FAIL
