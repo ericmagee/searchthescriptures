@@ -1,0 +1,18 @@
+OK   6 nodes: base (pkgCL) and final shas match the plan
+OK   every node parses
+OK   the 6 nodes carry one identical sbApply2024 and gateCure2024
+Every changed gate item, pkgCL -> pkgKY:
+  33020 gemini G1 CONTRADICTION: pkgCL CURED (the gate change is already in the corrected text (another change wrote the same line), and) -> pkgKY CURED (the later gate change G2 of this judge rewrote the same line (the last change wins), and the item is no longer raised)
+     33020 gemini: counted pkgCL 0 -> pkgKY 0
+  33025 grok G2 CONTRADICTION: pkgCL UNCURED (the gate change was not applied) -> pkgKY CURED (the later gate change G3 of this judge rewrote the same line (the last change wins), and the item is no longer raised)
+  33025 grok G3 CONTRADICTION: pkgCL UNCURED (the gate change was not applied) -> pkgKY UNCURED (the gate change raised a new LIVE item: RULE K-G4 -- DEBATE RULE VIOLATION (K-G4) -- D5 vs C4 DEFENDER LINK BROKEN count)
+     33025 grok: counted pkgCL 2 -> pkgKY 1
+OK   the only cure flip is 33025 grok G2 (UNCURED -> CURED, superseded by G3); the only count change is grok 2 -> 1
+OK   grok G3 stays UNCURED, now for the new LIVE K-G4 the K re-read raises (was: not applied)
+OK   the one reason-only change elsewhere: 33020 gemini G1 stays CURED, now attributed to the later change G2 on the same line; gemini counted 0 -> 0
+   33025 grok corrected text: KEYSTONE: D5 -- BROKEN -- derived by the engine from the collision grade D5 vs C4 DEFENDER LINK BROKEN after the change of S22, G3 (E-APPLY, W3 2362)
+   D5 vs C4 (Matthew 1:20): DEFENDER LINK BROKEN -- the [CR4] answer to Matthew 1:20 misses, so that press stands for the c
+OK   33025 grok: the KEYSTONE line is re-derived BROKEN from D5 vs C4 DEFENDER LINK BROKEN and recorded as derived; D5 vs C4 carries G3's grade
+OK   unit: the judge's own KEYSTONE change that contradicts is still refused (CONTRADICTION, not derived)
+OK   unit: a lone collision regrade to DEFENDER LINK BROKEN applies with KEYSTONE (derived)
+9 OK, 0 FAIL

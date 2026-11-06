@@ -1,0 +1,36 @@
+// pkgKY test (W3 2362). Run from wall2024/: node pkgKY/test_KY.cjs
+const fs=require('fs');const crypto=require('crypto');const rd=f=>fs.readFileSync(f,'utf8');const sha=s=>crypto.createHash('sha256').update(s).digest('hex').slice(0,16);
+let ok=0,bad=0;const T=(n,c)=>{if(c){ok++;console.log('OK   '+n);}else{bad++;console.log('FAIL '+n);}};
+const plan=JSON.parse(rd('pkgKY/plan_KY.json'));
+T('6 nodes: base (pkgCL) and final shas match the plan',plan.nodes.length===6&&plan.nodes.every(n=>sha(rd('pkgCL/patched/'+n.file))===n.base_sha&&sha(rd('pkgKY/patched/'+n.file))===n.final_sha));
+T('every node parses',plan.nodes.every(n=>{try{new Function('$','$input',rd('pkgKY/patched/'+n.file));return true;}catch(e){console.log(e.message);return false;}}));
+const lib=f=>{const s=rd(f);return s.slice(s.indexOf('function sbApply2024('),s.indexOf('function sbApply2024(')+40000);};
+T('the 6 nodes carry one identical sbApply2024 and gateCure2024',(()=>{const {fnText}=require('../pkgGD/fn.cjs');const a=plan.nodes.map(n=>fnText(rd('pkgKY/patched/'+n.file),'sbApply2024')+fnText(rd('pkgKY/patched/'+n.file),'gateCure2024'));return a.every(x=>x===a[0]&&x.length>1000);})());
+const mk=p=>{const AM=rd(p+'/patched/Alternate_Merge.js');return new Function('$','$input',AM.slice(0,AM.indexOf("const AM=$('Alternate Merge Seat')"))+'\nreturn {gateItems2024,gateCure2024,ciRounds,gatePromptText2024,drvLinks,sbApply2024};')(()=>{throw 0},null);};
+const O=mk('pkgCL'),N=mk('pkgKY');
+const run=(L,X,seat,rep)=>{const b=X.bodies.find(b=>b.seat===seat);const its=X.sb_items.filter(x=>x.seat===seat&&x.rule!=='E-GATE');if(!its.length)return {G:[],c:{res:[],uncured:0,fresh:[]},T1:''};const PT=L.gatePromptText2024(X.PB.judges.find(q=>q.seat===seat).body);const ctx={R:L.ciRounds(PT),DL:L.drvLinks(PT),ask:PT.includes('CITATION CHECK')};
+ const R=L.gateItems2024(seat,b.verdict_raw,b.fields,its,ctx);const c=rep&&R.items.length?L.gateCure2024(seat,b.verdict_raw,b.fields,its,R.items,rep,ctx):{res:[],uncured:0,fresh:[]};return {G:R.items,c,T1:(c.R2&&c.R2.T1)||R.T1||''};};
+const sig=r=>JSON.stringify([r.G.map(g=>g.gid+' '+g.kind+' '+g.key),r.c.res.map(x=>x.gid+' '+x.cured+' '+x.why),r.c.uncured]);
+const REP21={gemini:'GATE: G1 || CHANGE TO: D1: STANDS -- GROUND: Answered in [CR4]; Matthew 1:18 dates the finding before they came together, which can agree with the finding preceding the taking of Matthew 1:24. || In [DR3], the challenger explains that "before they came together" means before the taking of 1:24, which can agree with the finding preceding the taking.'};
+const RUNS=[['32998',JSON.parse(rd('pkgGD/fixture_32998.json')),null],['33014',JSON.parse(rd('pkgKF/fixture_33014.json')),null],['33020',JSON.parse(rd('pkgGD/probe_33020/fixture_33020.json')),null],['33021',JSON.parse(rd('probe_33021/fixture_33021.json')),REP21],['33025',JSON.parse(rd('probe_33025/fixture_33025.json')),JSON.parse(rd('probe_33025/gate_replies.json'))]];
+const changes=[];
+for(const [name,X0,REP] of RUNS){for(const X of [X0,X0.alt].filter(x=>x&&x.bodies&&x.bodies.length)){for(const b of X.bodies){const rep=(REP||X.gate_replies||{})[b.seat];const a=run(O,X,b.seat,rep),n=run(N,X,b.seat,rep);
+  if(sig(a)!==sig(n)){n.G.forEach((g,i)=>{const ra=a.c.res[i],rn=n.c.res[i];if(!ra||!rn||ra.cured!==rn.cured||ra.why!==rn.why)changes.push(name+' '+b.seat+' '+g.gid+' '+g.kind+': pkgCL '+(ra?(ra.cured?'CURED':'UNCURED')+' ('+ra.why.slice(0,90)+')':'-')+' -> pkgKY '+(rn?(rn.cured?'CURED':'UNCURED')+' ('+rn.why.slice(0,120)+')':'-'));});
+   changes.push('   '+name+' '+b.seat+': counted pkgCL '+a.c.uncured+' -> pkgKY '+n.c.uncured);}}}}
+console.log('Every changed gate item, pkgCL -> pkgKY:');changes.forEach(c=>console.log('  '+c));
+const flips=changes.filter(c=>/: pkgCL (CURED|UNCURED) .*-> pkgKY (CURED|UNCURED)/.test(c)&&c.match(/pkgCL (CURED|UNCURED)/)[1]!==c.match(/pkgKY (CURED|UNCURED)/)[1]);const counts=changes.filter(c=>/counted pkgCL (\d+) -> pkgKY (\d+)/.test(c)&&(m=>m[1]!==m[2])(c.match(/counted pkgCL (\d+) -> pkgKY (\d+)/)));
+T('the only cure flip is 33025 grok G2 (UNCURED -> CURED, superseded by G3); the only count change is grok 2 -> 1',flips.length===1&&/^33025 grok G2 .*-> pkgKY CURED \(the later gate change G3/.test(flips[0])&&counts.length===1&&/33025 grok: counted pkgCL 2 -> pkgKY 1/.test(counts[0]));
+T('grok G3 stays UNCURED, now for the new LIVE K-G4 the K re-read raises (was: not applied)',changes.some(c=>/^33025 grok G3 .*pkgCL UNCURED \(the gate change was not applied\) -> pkgKY UNCURED \(the gate change raised a new LIVE item: RULE K-G4/.test(c)));
+T('the one reason-only change elsewhere: 33020 gemini G1 stays CURED, now attributed to the later change G2 on the same line; gemini counted 0 -> 0',changes.filter(c=>!/^ *33025 grok/.test(c)).length===2&&changes.some(c=>/^33020 gemini G1 .*pkgCL CURED .*-> pkgKY CURED \(the later gate change G2/.test(c)));
+{const X=JSON.parse(rd('probe_33025/fixture_33025.json'));const REP=JSON.parse(rd('probe_33025/gate_replies.json'));const n=run(N,X,'grok',REP.grok);const k=n.T1.split('\n').filter(l=>/KEYSTONE\s*:/.test(l)&&!/AUDIT/.test(l));const c=n.T1.split('\n').filter(l=>/^\s*D5 vs C4/.test(l));
+ console.log('   33025 grok corrected text: '+k.map(l=>l.slice(0,200)).join(' / ')+'\n   '+c.map(l=>l.slice(0,120)).join(' / '));
+ T('33025 grok: the KEYSTONE line is re-derived BROKEN from D5 vs C4 DEFENDER LINK BROKEN and recorded as derived; D5 vs C4 carries G3\'s grade',k.length===1&&/KEYSTONE: D5 -- BROKEN -- derived by the engine from the collision grade D5 vs C4 DEFENDER LINK BROKEN after the change of S22, G3 \(E-APPLY, W3 2362\)/.test(k[0])&&c.length>=1&&c.every(l=>/DEFENDER LINK BROKEN/.test(l)));}
+// units on the 33025 grok judgment: a judge that changes its KEYSTONE line itself is still checked; a regrade away from BROKEN under KEYSTONE BROKEN derives STANDS
+{const X=JSON.parse(rd('probe_33025/fixture_33025.json'));const b=X.bodies.find(b=>b.seat==='grok');const PT=N.gatePromptText2024(X.PB.judges.find(q=>q.seat==='grok').body);const R=N.ciRounds(PT);
+ const its=X.sb_items.filter(x=>x.seat==='grok'&&x.rule!=='E-GATE');const col=String(N.sbApply2024('grok',b.verdict_raw,b.fields,its,R).text).split('\n').find(l=>/^\s*D5 vs C4/.test(l));const key=String(N.sbApply2024('grok',b.verdict_raw,b.fields,its,R).text).split('\n').find(l=>/^\s*KEYSTONE\s*:/.test(l));
+ const br='D5 vs C4 (Matthew 1:20): DEFENDER LINK BROKEN -- x (Commitment 3) -- GROUND: y';
+ const r1=N.sbApply2024('grok',b.verdict_raw,b.fields,its.concat([{seat:'grok',sid:'U1',ans:'CHANGE',line:col,to:br},{seat:'grok',sid:'U2',ans:'CHANGE',line:key,to:'KEYSTONE: D5 -- STANDS -- the judge keeps it'}]),R);
+ T('unit: the judge\'s own KEYSTONE change that contradicts is still refused (CONTRADICTION, not derived)',(r1.items||[]).some(z=>z.kind==='CONTRADICTION')&&!/KEYSTONE \(derived\)/.test(JSON.stringify(r1.applied||[])));
+ const r2=N.sbApply2024('grok',b.verdict_raw,b.fields,its.concat([{seat:'grok',sid:'U1',ans:'CHANGE',line:col,to:br}]),R);
+ T('unit: a lone collision regrade to DEFENDER LINK BROKEN applies with KEYSTONE (derived)',(r2.applied||[]).includes('U1')&&(r2.applied||[]).includes('KEYSTONE (derived)')&&!(r2.items||[]).some(z=>z.kind==='CONTRADICTION'));}
+console.log(ok+' OK, '+bad+' FAIL');process.exit(bad?1:0);
