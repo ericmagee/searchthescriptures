@@ -16,7 +16,7 @@ for(const t of T){const X=REPLY_SRC.test(t.src)?String(t.jtext).replace(/\\n/g,'
  const newBy=new Map();for(const r of NEW)if(r&&r.form){const k=r.form+'|'+r.n;if(!newBy.has(k))newBy.set(k,r);}
  const oldSeen=new Set();
  for(const A of ad){let OLD=[];try{if(A.scope==='text')OLD=(A.read(X)||[]);else lines.forEach((l,n)=>{const f=A.read(l);if(f)OLD.push({n,fields:f});});}catch(e){err.push(t.tid+' '+A.name+': '+e.message);continue;}
-  for(const o of OLD){const fm=(o.fields&&o.fields.form)||A.form;const k=fm+'|'+o.n; /* W1: a reader of several forms names the row's form in fields.form */oldSeen.add(k);const nw=fm==='ANY'?NEW.find(r=>r&&r.form&&r.n===o.n):newBy.get(k); /* W1: a form-free old test (SB_FORM, K-CMT) matches any new form on the line */const line=lines[o.n];bump('old '+A.name);
+  for(const o of OLD){const fm=(o.fields&&o.fields.form)||A.form;const k=fm+'|'+o.n; /* W1: a reader of several forms names the row's form in fields.form */oldSeen.add(k);const nw=fm==='ANY'?NEW.find(r=>r&&r.form&&r.n===o.n):newBy.get(k); /* W1: a form-free old test (SB_FORM, K-CMT) matches any new form on the line */if(fm==='ANY'&&nw)oldSeen.add(nw.form+'|'+o.n);const line=lines[o.n];bump('old '+A.name);
    const base=[t.tid,t.run,t.seat,t.src,o.n,fm,A.name];
    if(!nw){rows.push([...base,'*','read','not read',line]);bump('DIS old-only '+A.name);continue;}
    if(fm==='ANY')continue;for(const f of Object.keys(o.fields)){if(f==='form')continue;if(!eq(o.fields[f],nw.fields&&nw.fields[f])){rows.push([...base,f,o.fields[f],nw.fields&&nw.fields[f],line]);bump('DIS field '+A.name+'.'+f);}}}}
