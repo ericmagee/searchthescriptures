@@ -65,7 +65,8 @@ const FNB='const f=l.match(/--\\s*FAILS\\s*:\\s*"([\\s\\S]+?)"\\s*(?:--\\s*GROUN
 const LIBN=['Panel Cure Build 1','Panel Cure Build 2','Panel Cure Build 3','Alternate Build','Alternate Cure Build'];
 const P2N=['Panel Build','Reserve Build','Panel Cure Build 1','Panel Cure Build 2','Panel Cure Build 3','Alternate Build','Alternate Cure Build','Accept Build','Accept Check','Accept Return Build','Accept Final','Accept DS Return Build','Enforcer Build','Judge Enforcer Build','Alt Judge Enforcer Build','Build Independent Verdict'];
 for(const n of P2N){const f=n.replace(/ /g,'_')+'.js';let base,s0;
- if(LIBN.includes(n)){base='pkgKVP/patched';s0=fs.readFileSync(base+'/'+f,'utf8');}else if(/Judge Enforcer Build/.test(n)){base='pkgECF/patched';s0=fs.readFileSync(base+'/'+f,'utf8');}else{base='live prewrite_lib_66adcc25';s0=liveSrc(n);}
+ if(LIBN.includes(n)){base='pkgKVP/patched';s0=fs.readFileSync(base+'/'+f,'utf8');}else if(/Judge Enforcer Build/.test(n)){base='pkgECF/patched';s0=fs.readFileSync(base+'/'+f,'utf8');}else if(n==='Accept Build'){base='pkgECL/base';s0=liveSrc(n).split("const ORDER=['gemini','chatgpt','qwen','sol','grok','glm'];").join("const ORDER=['gemini','chatgpt','qwen','sol','grok'];");fs.mkdirSync(base,{recursive:true});fs.writeFileSync(base+'/'+f,s0);} /* live 862c3d54: GLM removed from ORDER (Eric); W3 2556 */
+ else{base='live prewrite_lib_66adcc25';s0=liveSrc(n);}
  let s=s0,k=0;
  if(n!=='Build Independent Verdict'){s=rep(s,P2END,P2END.slice(0,-2)+C13JS+'";',f);k++;}
  if(n==='Panel Build'||n==='Build Independent Verdict'){s=rep(s,R396A,R396B,f);s=rep(s,COLA,COLB,f);k+=2;}

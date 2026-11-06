@@ -52,7 +52,7 @@ const __SRC=(()=>{for(const n of ['Debate Start','Dry Run Config']){try{if($(n).
 const __B=(__SRC&&__SRC.body&&typeof __SRC.body==='object')?__SRC.body:__SRC;const RT=' execution='+$execution.id;
 const __orc=(b,model,key)=>{if(!b||!Array.isArray(b.messages))return b;return {...b,session_id:String(key).slice(0,128)};};
 const ENG_SEAT={deepseek:'deepseek',gemini:'gemini',glm:'glm',alt_minimax31:'alt_minimax31',chatgpt:'chatgpt',mimo:'mimo',qwen:'qwen',grok:'grok',sol:'sol'};
-const ORDER=['gemini','chatgpt','qwen','sol','grok','glm']; // ruling 421: DeepSeek judges nowhere, so it takes no agreement // 2026-11-03: GLM, mimo and MiniMax M3.1 Flash judge no more
+const ORDER=['gemini','chatgpt','qwen','sol','grok']; // ruling 421: DeepSeek judges nowhere, so it takes no agreement // 2026-11-03: GLM, mimo and MiniMax M3.1 Flash judge no more
 const deb=[__B.defender,__B.challenger].map(x=>String((x&&x.engine)||'').trim().toLowerCase());
 const M={};$input.all().forEach(i=>{const x=i.json;if(x&&x.seat)M[x.seat]=x;});
 const seats=ORDER.filter(s=>deb.indexOf(s)<0&&s!=='qwen');
