@@ -17,10 +17,11 @@ const $input={first:()=>({json:{}}),last:()=>({json:{}}),all:()=>[],item:{json:{
 // the nodes stamp rows with the clock ("at"); the clock is frozen for both sides so the comparison sees only the code
 {const RD=Date,FX=RD.parse('2026-11-06T16:00:00Z');global.Date=class extends RD{constructor(...a){a.length?super(...a):super(FX);}static now(){return FX;}};}
 const go=async(src,$)=>{try{return 'OUT '+JSON.stringify(await new AF('$','$input',src)($,$input));}catch(e){return 'ERR '+String(e&&e.message||e);}};
-(async()=>{let n=0,same=0,outs=0;const diff=[];
+(async()=>{let n=0,same=0,outs=0;const diff=[];const per={};
  for(const run of runs){const N=JSON.parse(zlib.gunzipSync(fs.readFileSync('corpus/raw/nodes_'+run+'.json.gz')));
-  for(const nd of plan.nodes){const a=await go(rd(B+nd.file),mock(N)),b=await go(rd('pkgLIB/patched/'+nd.file),mock(N));n++;if(a===b){same++;if(a.startsWith('OUT'))outs++;}else diff.push(run+' '+nd.name+'\n        full: '+a.slice(0,200)+'\n        stub: '+b.slice(0,200));}}
+  for(const nd of plan.nodes){const a=await go(rd(B+nd.file),mock(N)),b=await go(rd('pkgLIB/patched/'+nd.file),mock(N));n++;per[nd.name]=per[nd.name]||{out:0,err:0,why:new Set()};if(a.startsWith('OUT'))per[nd.name].out++;else{per[nd.name].err++;per[nd.name].why.add(a.slice(4,60));}if(a===b){same++;if(a.startsWith('OUT'))outs++;}else diff.push(run+' '+nd.name+'\n        full: '+a.slice(0,200)+'\n        stub: '+b.slice(0,200));}}
  console.log('   '+runs.length+' saved runs x 22 nodes = '+n+' node runs; identical '+same+' ('+outs+' produce output, '+(same-outs)+' stop at the same missing upstream node in both)');diff.forEach(d=>console.log('     '+d));
+ Object.entries(per).forEach(([k,v])=>console.log('     '+k.padEnd(30)+' real output on '+v.out+' of '+runs.length+' runs'+(v.err?'; stops in both on: '+[...v.why].join(' | '):'')));
  T('every node run gives byte-identical output (or the identical error) full vs stub',same===n);
  T('the cure path nodes produce real output on the saved runs (not only errors)',outs>=runs.length*5);
  // 3. timing: one whole fixture (33040 Panel Cure Check), each side in a fresh process (no compile cache shared), 5 runs each

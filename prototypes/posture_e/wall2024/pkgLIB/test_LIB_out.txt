@@ -1,11 +1,33 @@
-OK   plan: 22 nodes, base shas match pkgKW/patched, stub shas match pkgLIB/patched
+OK   plan: 22 nodes, base shas match pkgPAY/patched, stub shas match pkgLIB/patched
 OK   every stub rebuilds its full source byte for byte from the Shared Library (22 of 22)
 OK   every stub and the Shared Library parse
 OK   the stubs read only $('Shared Library') and the node's own $/$input (no other global)
    6 saved runs x 22 nodes = 132 node runs; identical 132 (58 produce output, 74 stop at the same missing upstream node in both)
+     Alt Gate Build                 real output on 6 of 6 runs
+     Alt Gate Record                real output on 0 of 6 runs; stops in both on: node not saved: Alt Send Back Record
+     Alternate Build                real output on 0 of 6 runs; stops in both on: node not saved: Panel Build
+     Alternate Cure Build           real output on 4 of 6 runs; stops in both on: node not saved: Alternate Payloads
+     Alternate Cure Normalize       real output on 6 of 6 runs
+     Alternate Merge                real output on 0 of 6 runs; stops in both on: node not saved: Alternate Merge Seat
+     Alternate Merge Seat           real output on 6 of 6 runs
+     Alternate Payloads             real output on 0 of 6 runs; stops in both on: node not saved: Panel Build
+     Cure Build                     real output on 0 of 6 runs; stops in both on: node not saved: Build Independent Verdict
+     Cure Check                     real output on 0 of 6 runs; stops in both on: node not saved: Extract Independent Verdict
+     Cure Normalize                 real output on 6 of 6 runs
+     Extract Independent Verdict    real output on 0 of 6 runs; stops in both on: node not saved: Build Independent Verdict
+     Gate Build                     real output on 6 of 6 runs
+     Gate Record                    real output on 0 of 6 runs; stops in both on: node not saved: Send Back Record
+     Panel Cure Build 1             real output on 0 of 6 runs; stops in both on: node not saved: Panel Build
+     Panel Cure Build 2             real output on 0 of 6 runs; stops in both on: node not saved: Panel Build
+     Panel Cure Build 3             real output on 0 of 6 runs; stops in both on: node not saved: Panel Build
+     Panel Cure Check               real output on 6 of 6 runs
+     Panel Cure Normalize 1         real output on 6 of 6 runs
+     Panel Cure Normalize 2         real output on 6 of 6 runs
+     Panel Cure Normalize 3         real output on 6 of 6 runs
+     Panel Payloads                 real output on 0 of 6 runs; stops in both on: node not saved: Panel Build
 OK   every node run gives byte-identical output (or the identical error) full vs stub
 OK   the cure path nodes produce real output on the saved runs (not only errors)
-   timing, Panel Cure Check on 33040, median of 5 fresh processes: full source 52.7 ms, stub 53.0 ms (+0.4 ms per node run)
-   size: the 22 nodes hold 6859943 bytes of code before, 562139 after (Shared Library 420772 included)
+   timing, Panel Cure Check on 33040, median of 5 fresh processes: full source 55.6 ms, stub 59.9 ms (+4.3 ms per node run)
+   size: the 22 nodes hold 6886265 bytes of code before, 563580 after (Shared Library 422213 included)
 OK   the stub adds under 50 ms per node run
 7 OK, 0 FAIL
