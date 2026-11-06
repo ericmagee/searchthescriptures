@@ -1,0 +1,244 @@
+{
+ "base": "pkgNHQK/patched",
+ "nodes": [
+  {
+   "file": "Alt_Gate_Build.js",
+   "name": "Alt Gate Build",
+   "base_sha": "40ab653969827be0",
+   "final_sha": "08e6eafdbae0d119",
+   "cure": true,
+   "edits": [
+    "rechk2024 helper",
+    "cureRewrite K-RECHK marks"
+   ]
+  },
+  {
+   "file": "Alt_Gate_Record.js",
+   "name": "Alt Gate Record",
+   "base_sha": "bbd500688dfeeaf4",
+   "final_sha": "cb74a48b2050d56c",
+   "cure": true,
+   "edits": [
+    "rechk2024 helper",
+    "cureRewrite K-RECHK marks"
+   ]
+  },
+  {
+   "file": "Alternate_Build.js",
+   "name": "Alternate Build",
+   "base_sha": "03d842c2332a5401",
+   "final_sha": "2aac1931de2437fd",
+   "cure": true,
+   "edits": [
+    "rechk2024 helper",
+    "cureRewrite K-RECHK marks"
+   ]
+  },
+  {
+   "file": "Alternate_Cure_Build.js",
+   "name": "Alternate Cure Build",
+   "base_sha": "7e70abd758e2b1ce",
+   "final_sha": "29b100e354edc952",
+   "cure": true,
+   "edits": [
+    "rechk2024 helper",
+    "cureRewrite K-RECHK marks"
+   ]
+  },
+  {
+   "file": "Alternate_Cure_Normalize.js",
+   "name": "Alternate Cure Normalize",
+   "base_sha": "76a4c00235c3e49a",
+   "final_sha": "b63cfebb1cbbf570",
+   "cure": true,
+   "edits": [
+    "rechk2024 helper",
+    "cureRewrite K-RECHK marks"
+   ]
+  },
+  {
+   "file": "Alternate_Merge.js",
+   "name": "Alternate Merge",
+   "base_sha": "9bd26b392ba9b8b6",
+   "final_sha": "d82848ea084d748b",
+   "cure": true,
+   "edits": [
+    "rechk2024 helper",
+    "cureRewrite K-RECHK marks"
+   ]
+  },
+  {
+   "file": "Alternate_Merge_Seat.js",
+   "name": "Alternate Merge Seat",
+   "base_sha": "03962f3b7ccac31c",
+   "final_sha": "6fd86043febe47b2",
+   "cure": true,
+   "edits": [
+    "rechk2024 helper",
+    "cureRewrite K-RECHK marks"
+   ]
+  },
+  {
+   "file": "Alternate_Payloads.js",
+   "name": "Alternate Payloads",
+   "base_sha": "b5c66eac1b48cfbc",
+   "final_sha": "5764762c51d72385",
+   "cure": false,
+   "edits": [
+    "rechk2024 helper"
+   ]
+  },
+  {
+   "file": "Cure_Build.js",
+   "name": "Cure Build",
+   "base_sha": "2c651d788bf1f193",
+   "final_sha": "b5f9205e981c821b",
+   "cure": true,
+   "edits": [
+    "rechk2024 helper",
+    "cureRewrite K-RECHK marks"
+   ]
+  },
+  {
+   "file": "Cure_Check.js",
+   "name": "Cure Check",
+   "base_sha": "71a8466f0604b7f1",
+   "final_sha": "febec098f0a5ae20",
+   "cure": true,
+   "edits": [
+    "rechk2024 helper",
+    "cureRewrite K-RECHK marks"
+   ]
+  },
+  {
+   "file": "Cure_Normalize.js",
+   "name": "Cure Normalize",
+   "base_sha": "4f9ab764b05d8bff",
+   "final_sha": "7a629be576959701",
+   "cure": true,
+   "edits": [
+    "rechk2024 helper",
+    "cureRewrite K-RECHK marks"
+   ]
+  },
+  {
+   "file": "Extract_Independent_Verdict.js",
+   "name": "Extract Independent Verdict",
+   "base_sha": "d6c823510b0451e8",
+   "final_sha": "de7ada2571423a19",
+   "cure": false,
+   "edits": [
+    "rechk2024 helper"
+   ]
+  },
+  {
+   "file": "Gate_Build.js",
+   "name": "Gate Build",
+   "base_sha": "cfd1059e9d3eabe8",
+   "final_sha": "db9bc3615cff24ec",
+   "cure": true,
+   "edits": [
+    "rechk2024 helper",
+    "cureRewrite K-RECHK marks"
+   ]
+  },
+  {
+   "file": "Gate_Record.js",
+   "name": "Gate Record",
+   "base_sha": "29f6886e8d69debb",
+   "final_sha": "8d179777e70b8e48",
+   "cure": true,
+   "edits": [
+    "rechk2024 helper",
+    "cureRewrite K-RECHK marks"
+   ]
+  },
+  {
+   "file": "Panel_Cure_Build_1.js",
+   "name": "Panel Cure Build 1",
+   "base_sha": "783834afe0c7841d",
+   "final_sha": "98b9a53a6894659d",
+   "cure": true,
+   "edits": [
+    "rechk2024 helper",
+    "cureRewrite K-RECHK marks"
+   ]
+  },
+  {
+   "file": "Panel_Cure_Build_2.js",
+   "name": "Panel Cure Build 2",
+   "base_sha": "bf4a58d2cf045008",
+   "final_sha": "f8ba959a6b3c908b",
+   "cure": true,
+   "edits": [
+    "rechk2024 helper",
+    "cureRewrite K-RECHK marks"
+   ]
+  },
+  {
+   "file": "Panel_Cure_Build_3.js",
+   "name": "Panel Cure Build 3",
+   "base_sha": "cd01371809c814f1",
+   "final_sha": "6cb16c66d1e993d0",
+   "cure": true,
+   "edits": [
+    "rechk2024 helper",
+    "cureRewrite K-RECHK marks"
+   ]
+  },
+  {
+   "file": "Panel_Cure_Check.js",
+   "name": "Panel Cure Check",
+   "base_sha": "9ebc1de6ac93c181",
+   "final_sha": "48207f9299488176",
+   "cure": true,
+   "edits": [
+    "rechk2024 helper",
+    "cureRewrite K-RECHK marks"
+   ]
+  },
+  {
+   "file": "Panel_Cure_Normalize_1.js",
+   "name": "Panel Cure Normalize 1",
+   "base_sha": "727c8b7dcca1bd88",
+   "final_sha": "cddad40afa5b50fd",
+   "cure": true,
+   "edits": [
+    "rechk2024 helper",
+    "cureRewrite K-RECHK marks"
+   ]
+  },
+  {
+   "file": "Panel_Cure_Normalize_2.js",
+   "name": "Panel Cure Normalize 2",
+   "base_sha": "bd1bb319354de680",
+   "final_sha": "95244aa3ff1b34ec",
+   "cure": true,
+   "edits": [
+    "rechk2024 helper",
+    "cureRewrite K-RECHK marks"
+   ]
+  },
+  {
+   "file": "Panel_Cure_Normalize_3.js",
+   "name": "Panel Cure Normalize 3",
+   "base_sha": "99a4cae874960ea7",
+   "final_sha": "ef46f77dcded3cb5",
+   "cure": true,
+   "edits": [
+    "rechk2024 helper",
+    "cureRewrite K-RECHK marks"
+   ]
+  },
+  {
+   "file": "Panel_Payloads.js",
+   "name": "Panel Payloads",
+   "base_sha": "ea4b621be88d0222",
+   "final_sha": "dfa8af2ecc412cb3",
+   "cure": false,
+   "edits": [
+    "rechk2024 helper"
+   ]
+  }
+ ]
+}

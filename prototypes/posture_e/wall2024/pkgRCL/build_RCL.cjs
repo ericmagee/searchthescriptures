@@ -33,10 +33,10 @@ const A_EARLY="if(!Array.isArray(AS.alt_seats)||!AS.alt_seats.length)return [{js
 const A_EARLY2="if(!Array.isArray(AS.alt_seats)||!AS.alt_seats.length){const __rk=rechkRows2024(AM,AS);if(!__rk.length)return [{json:AM}];const __b=AM.enforcer_log_body||{};\n return [{json:{...AM,enforcer_log:(AM.enforcer_log||[]).concat(__rk),enforcer_log_body:{...__b,p_rows:(Array.isArray(__b.p_rows)?__b.p_rows:(AM.enforcer_log||[])).concat(__rk)}}}];} /* pkgRCL: K-RECHK rows */";
 const A_END="const panel_effective=summary.map(x=>x.seat).sort();\nreturn [{json:{...AM,bodies,summary,panel_effective,";
 const A_END2="const panel_effective=summary.map(x=>x.seat).sort();\nrechkRows2024({...AM,bodies,alternates_tried:tried},AS).forEach(r=>log.push(r)); /* pkgRCL: K-RECHK rows */\nreturn [{json:{...AM,bodies,summary,panel_effective,";
-const BASE=(process.argv[2]||'pkgSQ')+'/patched';const plan={base:BASE,nodes:[]};fs.rmSync('pkgRCL/patched',{recursive:true,force:true});fs.mkdirSync('pkgRCL/patched',{recursive:true});
+const BASE=(process.argv[2]||'pkgSQ')+'/patched';const OUT=process.argv[3]||'pkgRCL'; /* [base] [out] (pkgRCLN, W3 2511) */const plan={base:BASE,nodes:[]};fs.rmSync(OUT+'/patched',{recursive:true,force:true});fs.mkdirSync(OUT+'/patched',{recursive:true});
 for(const f of fs.readdirSync(BASE).filter(f=>f.endsWith('.js')).sort()){const b=fs.readFileSync(BASE+'/'+f,'utf8');let t=b;const ed=[];
  for(const [o,n,why] of E){const k=t.split(o).length-1;if(k>1)throw new Error(f+' '+why+' x'+k);if(k){t=t.split(o).join(n);ed.push(why);}}
  if(f==='Alternate_Merge.js'){const i=t.indexOf("const AM=$('Alternate Merge Seat')");if(i<0)throw new Error('AM anchor');t=t.slice(0,i)+ROWS+t.slice(i);
   for(const [o,n] of [[A_EARLY,A_EARLY2],[A_END,A_END2]]){if(t.split(o).length!==2)throw new Error('AM '+o.slice(0,40));t=t.replace(o,()=>n);}ed.push('K-RECHK rows (both returns)');}
- new Function('$','$input','$json',t);fs.writeFileSync('pkgRCL/patched/'+f,t);plan.nodes.push({file:f,base_sha:sha(b),final_sha:sha(t),edits:ed});}
-fs.writeFileSync('pkgRCL/plan_RCL.json',JSON.stringify(plan,null,1));plan.nodes.forEach(x=>console.log(x.file.padEnd(32),x.base_sha,'->',x.final_sha,x.edits.length,x.edits.join('; ')));
+ new Function('$','$input','$json',t);fs.writeFileSync(OUT+'/patched/'+f,t);plan.nodes.push({file:f,base_sha:sha(b),final_sha:sha(t),edits:ed});}
+fs.writeFileSync(OUT+'/plan_RCL.json',JSON.stringify(plan,null,1));plan.nodes.forEach(x=>console.log(x.file.padEnd(32),x.base_sha,'->',x.final_sha,x.edits.length,x.edits.join('; ')));
