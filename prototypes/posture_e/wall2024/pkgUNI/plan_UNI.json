@@ -1,0 +1,41 @@
+{
+ "base": "live ff8967bb (pkgKGW/patched 926914f)",
+ "nodes": [
+  {
+   "node": "Gate Build",
+   "base_sha": "6349b9ad6111d241",
+   "new_sha": "ee28b04d3fe7040b",
+   "edits": 6
+  },
+  {
+   "node": "Gate Record",
+   "base_sha": "9da27680612aad5b",
+   "new_sha": "81c6f68cedcbb9a5",
+   "edits": 6
+  },
+  {
+   "node": "Alt Gate Build",
+   "base_sha": "dfe316f216318a6c",
+   "new_sha": "fb9956f5ccf27834",
+   "edits": 6
+  },
+  {
+   "node": "Alt Gate Record",
+   "base_sha": "d8f1f8e899d6849f",
+   "new_sha": "3f1cfcb4f1bd3b83",
+   "edits": 6
+  },
+  {
+   "node": "Alternate Merge",
+   "base_sha": "d186784d23df5d22",
+   "new_sha": "e3843659f7183062",
+   "edits": 6
+  },
+  {
+   "node": "Alternate Merge Seat",
+   "base_sha": "903b8ff9cccc6ddd",
+   "new_sha": "c693a2238ef6e794",
+   "edits": 6
+  }
+ ]
+}

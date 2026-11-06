@@ -1,0 +1,28 @@
+33040 gemini: same (gate items 0, live 0)
+33040 chatgpt: same (gate items 2, live 2)
+33040 grok: same (gate items 4, live 4)
+33060 gemini: same (gate items 0, live 0)
+33060 chatgpt: same (gate items 0, live 0)
+33083 gemini: same (gate items 1, live 1)
+33083 chatgpt: same (gate items 0, live 0)
+33083 sol: same (gate items 1, live 1)
+33107 gemini: same (gate items 0, live 0)
+33107 chatgpt: same (gate items 0, live 0)
+33107 sol: same (gate items 0, live 0)
+33129 gemini: same (gate items 1, live 1)
+33129 chatgpt: same (gate items 2, live 2)
+33129 sol: same (gate items 0, live 0)
+33149 gemini: same (gate items 1, live 1)
+33149 chatgpt: same (gate items 1, live 1)
+33149 sol: same (gate items 0, live 0)
+33160 gemini: CHANGED
+   base: gate items 5 (live 5), applied [S1,S2,S3,S5,S7,S10,S14,S15,S16,S17,S18], result UNDERDETERMINED, fields {"verdict_tag":"HELD","defense_standing":"SELF-SUPPORTED","conceded_links":0,"challenge_standing":"SELF-SUPPORTED","challenger_conceded_links":0}
+   pkg : gate items 1 (live 1), applied [S1,S2,S3,S11,S7,S9,S10,S12,S13,S14,S15,S16,S17,S18], result UNDERDETERMINED, fields {"verdict_tag":"HELD","defense_standing":"SELF-SUPPORTED","conceded_links":0,"challenge_standing":"SELF-SUPPORTED","challenger_conceded_links":0}
+   - item G2 NOT APPLIED LIVE the flagged line is not in the judge text
+   - item G3 NOT APPLIED LIVE the flagged line is not in the judge text
+   - item G4 NOT APPLIED LIVE the flagged line is not in the judge text
+   - item G5 NOT APPLIED LIVE the flagged line is not in the judge text
+33160 chatgpt: same (gate items 2, live 2)
+33160 sol: same (gate items 1, live 1)
+
+runs 33040 33060 33083 33107 33129 33149 33160; seats with send-back items 20; changed 1

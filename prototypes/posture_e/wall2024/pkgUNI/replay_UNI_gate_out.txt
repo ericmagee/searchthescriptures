@@ -1,0 +1,12 @@
+pkgKGW: gate items 5, uncured counted 4, new items 4 -> REMOVED
+   G1 NOT APPLIED CURED -- KEEP: the change stays unapplied
+   G2 NOT APPLIED UNCURED -- the gate change was not applied
+   G3 NOT APPLIED UNCURED -- the gate change was not applied
+   G4 NOT APPLIED UNCURED -- the gate change was not applied
+   G5 NOT APPLIED UNCURED -- the gate change was not applied
+   NEW NOT APPLIED (E-APPLY G2): the flagged line is not in the judge text
+   NEW NOT APPLIED (E-APPLY G3): the flagged line is not in the judge text
+   NEW NOT APPLIED (E-APPLY G4): the flagged line is not in the judge text
+   NEW NOT APPLIED (E-APPLY G5): the flagged line is not in the judge text
+pkgUNI: gate items 1, uncured counted 0, new items 0 -> kept
+   G1 NOT APPLIED CURED -- KEEP: the change stays unapplied
