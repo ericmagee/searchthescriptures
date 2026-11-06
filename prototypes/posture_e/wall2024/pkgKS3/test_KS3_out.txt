@@ -1,0 +1,59 @@
+OK   22 nodes: base (pkgKC2) and final shas match the plan
+OK   no node keeps K-S3 TRIAL; every node has K-S3 LIVE
+   cure rows replayed: 516; status changes pkgKC2 -> pkgKS3: 27
+     32998 chatgpt K-S3 S3 DEFENDER CR4: #1: CURED (log UNCURED) -- answered on the STATEMENT line: it touches no declared link or listed premise, with its reason (pkgKS3)
+     32998 chatgpt K-S3 S3 DEFENDER CR4: #2: CURED (log UNCURED) -- answered on the STATEMENT line: it touches no declared link or listed premise, with its reason (pkgKS3)
+     32998 chatgpt K-S3 S3 DEFENDER CR4: #3: CURED (log UNCURED) -- answered on the STATEMENT line: it touches no declared link or listed premise, with its reason (pkgKS3)
+     32998 chatgpt K-S3 S3 DEFENDER CR4: #4: CURED (log UNCURED) -- answered on the STATEMENT line: it touches no declared link or listed premise, with its reason (pkgKS3)
+     33006 sol K-S3 S3 DEFENDER CR4: #1: CURED (log UNCURED) -- answered on the STATEMENT line: it touches no declared link or listed premise, with its reason (pkgKS3)
+     33006 sol K-S3 S3 DEFENDER CR4: #2: CURED (log UNCURED) -- answered on the STATEMENT line: it touches no declared link or listed premise, with its reason (pkgKS3)
+     33006 sol K-S3 S3 DEFENDER CR4: #3: CURED (log UNCURED) -- answered on the STATEMENT line: it touches no declared link or listed premise, with its reason (pkgKS3)
+     33006 sol K-S3 S3 DEFENDER CR4: #4: CURED (log UNCURED) -- answered on the STATEMENT line: it touches no declared link or listed premise, with its reason (pkgKS3)
+     33006 sol K-S3 S3 DEFENDER CR4: #5: CURED (log UNCURED) -- answered on the STATEMENT line: it touches no declared link or listed premise, with its reason (pkgKS3)
+     33006 sol K-S3 S3 DEFENDER CR4: #6: CURED (log UNCURED) -- answered on the STATEMENT line: it touches no declared link or listed premise, with its reason (pkgKS3)
+     33006 sol K-S3 S3 DEFENDER CR4: #7: CURED (log UNCURED) -- answered on the STATEMENT line: it touches no declared link or listed premise, with its reason (pkgKS3)
+     33006 sol K-S3 S3 DEFENDER CR4: #8: CURED (log UNCURED) -- answered on the STATEMENT line: it touches no declared link or listed premise, with its reason (pkgKS3)
+     33006 sol K-S3 S3 DEFENDER CR4: #9: CURED (log UNCURED) -- answered on the STATEMENT line: it touches no declared link or listed premise, with its reason (pkgKS3)
+     33021 chatgpt K-S3 S3 DEFENDER CR4: #1: CURED (log UNCURED) -- answered on the STATEMENT line: it touches no declared link or listed premise, with its reason (pkgKS3)
+     33021 chatgpt K-S3 S3 DEFENDER CR4: #2: CURED (log UNCURED) -- answered on the STATEMENT line: it touches no declared link or listed premise, with its reason (pkgKS3)
+     33021 chatgpt K-S3 S3 DEFENDER CR4: #3: CURED (log UNCURED) -- answered on the STATEMENT line: it touches no declared link or listed premise, with its reason (pkgKS3)
+     33025 sol K-S3 S3 DEFENDER CR4: #1: CURED (log UNCURED) -- answered on the STATEMENT line: it touches no declared link or listed premise, with its reason (pkgKS3)
+     33040 chatgpt K-S3 S3 DEFENDER CR4: #1: CURED (log UNCURED) -- answered on the STATEMENT line: it touches no declared link or listed premise, with its reason (pkgKS3)
+     33040 chatgpt K-S3 S3 CHALLENGER DR4: #2: CURED (log UNCURED) -- answered on the STATEMENT line: it touches no declared link or listed premise, with its reason (pkgKS3)
+     33040 sol K-S3 S3 DEFENDER CR4: #1: CURED (log UNCURED) -- answered on the STATEMENT line: it touches no declared link or listed premise, with its reason (pkgKS3)
+     33040 sol K-S3 S3 DEFENDER CR4: #2: CURED (log UNCURED) -- answered on the STATEMENT line: it touches no declared link or listed premise, with its reason (pkgKS3)
+     33040 sol K-S3 S3 DEFENDER CR4: #3: CURED (log UNCURED) -- answered on the STATEMENT line: it touches no declared link or listed premise, with its reason (pkgKS3)
+     33040 sol K-S3 S3 DEFENDER CR4: #4: CURED (log UNCURED) -- answered on the STATEMENT line: it touches no declared link or listed premise, with its reason (pkgKS3)
+     33040 sol K-S3 S3 DEFENDER CR4: #5: CURED (log UNCURED) -- answered on the STATEMENT line: it touches no declared link or listed premise, with its reason (pkgKS3)
+     33040 sol K-S3 S3 DEFENDER CR4: #6: CURED (log UNCURED) -- answered on the STATEMENT line: it touches no declared link or listed premise, with its reason (pkgKS3)
+     33040 sol K-S3 S3 DEFENDER CR4: #7: CURED (log UNCURED) -- answered on the STATEMENT line: it touches no declared link or listed premise, with its reason (pkgKS3)
+     33040 sol K-S3 S3 DEFENDER CR4: #8: CURED (log UNCURED) -- answered on the STATEMENT line: it touches no declared link or listed premise, with its reason (pkgKS3)
+OK   every status change is a K-S3 item UNCURED -> CURED (27: 32998 chatgpt 4, 33006 sol 9, 33021 chatgpt 3, 33025 sol 1, 33040 chatgpt 2, 33040 sol 8)
+OK   all 58 K-S3 cure rows replay CURED (57 log items; 33040 single counted once more in the replay)
+OK   no seat's LIVE uncured count rises with K-S3 LIVE (per seat, log replay)
+   pkgKC2 LIVE uncured stored 1, replay 1 | pkgKS3 32998 gemini: cure items 14, LIVE uncured stored 1, replay 1
+   pkgKC2 LIVE uncured stored 0, replay 0 | pkgKS3 32998 chatgpt: cure items 18, LIVE uncured stored 4, replay 0
+   pkgKC2 LIVE uncured stored 1, replay 1 | pkgKS3 32998 grok: cure items 19, LIVE uncured stored 1, replay 1
+   pkgKC2 LIVE uncured stored 0, replay 0 | pkgKS3 33014 gemini: cure items 12, LIVE uncured stored 0, replay 0
+   pkgKC2 LIVE uncured stored 3, replay 0 | pkgKS3 33014 chatgpt: cure items 18, LIVE uncured stored 3, replay 0
+   pkgKC2 LIVE uncured stored 0, replay 0 | pkgKS3 33014 grok: cure items 18, LIVE uncured stored 0, replay 0
+   pkgKC2 LIVE uncured stored 0, replay 0 | pkgKS3 33020 gemini: cure items 14, LIVE uncured stored 0, replay 0
+   pkgKC2 LIVE uncured stored 0, replay 0 | pkgKS3 33020 chatgpt: cure items 15, LIVE uncured stored 0, replay 0
+   pkgKC2 LIVE uncured stored 0, replay 0 | pkgKS3 33020 grok: cure items 17, LIVE uncured stored 0, replay 0
+   pkgKC2 LIVE uncured stored 0, replay 0 | pkgKS3 33021 gemini: cure items 14, LIVE uncured stored 0, replay 0
+   pkgKC2 LIVE uncured stored 0, replay 0 | pkgKS3 33021 chatgpt: cure items 18, LIVE uncured stored 3, replay 0
+   pkgKC2 LIVE uncured stored 0, replay 0 | pkgKS3 33021 grok: cure items 20, LIVE uncured stored 0, replay 0
+   pkgKC2 LIVE uncured stored 1, replay 1 | pkgKS3 33025 gemini: cure items 6, LIVE uncured stored 1, replay 1
+   pkgKC2 LIVE uncured stored 0, replay 0 | pkgKS3 33025 chatgpt: cure items 13, LIVE uncured stored 0, replay 0
+   pkgKC2 LIVE uncured stored 0, replay 0 | pkgKS3 33025 grok: cure items 11, LIVE uncured stored 0, replay 0
+   pkgKC2 LIVE uncured stored 0, replay 0 | pkgKS3 33040 gemini: cure items 11, LIVE uncured stored 0, replay 0
+   pkgKC2 LIVE uncured stored 0, replay 0 | pkgKS3 33040 chatgpt: cure items 19, LIVE uncured stored 2, replay 0
+   pkgKC2 LIVE uncured stored 0, replay 0 | pkgKS3 33040 grok: cure items 12, LIVE uncured stored 0, replay 0
+OK   whole-node Panel Cure Check on saved inputs: every seat's replayed LIVE uncured count equals pkgKC2's (K-S3 LIVE adds none)
+OK   unit: STATEMENT TOUCHES NO LINK with a reason cures when a RESPONSE line is written (33021 chatgpt form)
+OK   unit: a STATEMENT with no RESPONSE line stays UNCURED (the general rule: every item needs its RESPONSE)
+OK   unit: RESPONSE NOT HELD with a reason cures
+OK   unit: a bare NOT HELD does not cure
+OK   unit: no answer does not cure
+OK   unit: TOUCHES NO LINK with under 5 words does not cure
+12 OK, 0 FAIL
