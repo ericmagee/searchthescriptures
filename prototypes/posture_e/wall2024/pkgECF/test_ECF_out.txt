@@ -1,0 +1,65 @@
+OK   6 nodes; base and final shas match
+OK   33083: gemini D1 vs C1, D2 vs C6, D3 vs C1, D4 vs C5, D5 vs C4 are fed to E-COL, each as its LINK BROKEN line and its cure FORCED line (none was fed before)
+OK   33060: the premise 4 collision, D2 vs C4, is fed for sol (LINK BROKEN and FORCED) and chatgpt (LINK BROKEN)
+OK   side-neutral: the defender's broken links are fed alike (33083 chatgpt D5 vs C1, D6 vs C1; sol D5 vs C1)
+OK   33040, 33060, 33083: no E-COL item lost, every other item identical
+     33040: E-COL 1 -> 2, calls 4 -> 4; 33060: E-COL 1 -> 4, calls 4 -> 4; 33083: E-COL 0 -> 14, calls 4 -> 5
+OK   unit: no answer: UNCURED
+     no answer to the send-back
+OK   unit: KEEP with no quotation: UNCURED
+     KEEP whose sentence quotes no 6 words in a row of the answering side's round
+OK   unit: KEEP quoting the defender's own MEANS (the pressing side), on a FORCED line: UNCURED
+     KEEP whose sentence quotes no 6 words in a row of the answering side's round
+OK   unit: KEEP quoting the challenger's own FAILS words from [DR3] (the judge keeps the decision, ruling 428): CURED
+     KEEP whose sentence quotes the answering side's round: "so before they came together is"
+OK   unit: CHANGE TO: RETRACTED: D1 vs C1: CURED
+     CHANGE TO a line that does not grade the pair BROKEN or FORCED
+OK   unit: CHANGE TO the pair UNDERDETERMINED: CURED
+     CHANGE TO a line that does not grade the pair BROKEN or FORCED
+OK   unit: CHANGE TO the pair still BROKEN, no quotation: UNCURED
+     CHANGE TO keeps the break (BROKEN or FORCED) and quotes no 6 words in a row of the answering side's round
+OK   unit: LINK BROKEN line resting on an unanswered press: KEEP quoting the pressing sentence from a round (ruling 392): CURED
+     KEEP whose sentence quotes a round: "coniah the son of jehoiakim king"
+OK   the logged E-COL send-backs (runs 32905 to 33040, 36 answers) are read: {"CHANGE -> CURED":29,"KEEP -> CURED":3,"KEEP -> UNCURED":3,"CHANGE -> UNCURED":1}
+     32905 grok    CHANGE CURED    CHANGE TO a line that does not grade the pair BROKEN or FORCED
+     32905 grok    CHANGE CURED    CHANGE TO a line that does not grade the pair BROKEN or FORCED
+     32905 grok    CHANGE CURED    CHANGE TO a line that does not grade the pair BROKEN or FORCED
+     32924 grok    CHANGE CURED    CHANGE TO a line that does not grade the pair BROKEN or FORCED
+     32924 grok    CHANGE CURED    CHANGE TO a line that does not grade the pair BROKEN or FORCED
+     32973 gemini  CHANGE CURED    CHANGE TO a line that does not grade the pair BROKEN or FORCED
+     32973 grok    CHANGE CURED    CHANGE TO a line that does not grade the pair BROKEN or FORCED
+     32973 grok    CHANGE CURED    CHANGE TO a line that does not grade the pair BROKEN or FORCED
+     32973 grok    CHANGE CURED    CHANGE TO a line that does not grade the pair BROKEN or FORCED
+     32980 grok    CHANGE CURED    CHANGE TO a line that does not grade the pair BROKEN or FORCED
+     32998 grok    CHANGE CURED    CHANGE TO a line that does not grade the pair BROKEN or FORCED
+     32998 grok    CHANGE CURED    CHANGE TO a line that does not grade the pair BROKEN or FORCED
+     32998 grok    CHANGE CURED    CHANGE TO a line that does not grade the pair BROKEN or FORCED
+     32998 grok    CHANGE CURED    CHANGE TO a line that does not grade the pair BROKEN or FORCED
+     32998 grok    CHANGE CURED    CHANGE TO a line that does not grade the pair BROKEN or FORCED
+     32998 gemini  KEEP   CURED    KEEP whose sentence quotes the answering side's round: "before they came together she was"
+     33014 grok    CHANGE CURED    CHANGE TO a line that does not grade the pair BROKEN or FORCED
+     33014 grok    CHANGE CURED    CHANGE TO a line that does not grade the pair BROKEN or FORCED
+     33014 grok    CHANGE CURED    CHANGE TO a line that does not grade the pair BROKEN or FORCED
+     33014 grok    CHANGE CURED    CHANGE TO a line that does not grade the pair BROKEN or FORCED
+     33014 grok    CHANGE CURED    CHANGE TO a line that does not grade the pair BROKEN or FORCED
+     33020 chatgpt CHANGE CURED    CHANGE TO keeps the break and quotes the answering side's round: "1 18 dates the finding before"
+     33020 grok    CHANGE CURED    CHANGE TO a line that does not grade the pair BROKEN or FORCED
+     33020 grok    CHANGE CURED    CHANGE TO a line that does not grade the pair BROKEN or FORCED
+     33020 grok    CHANGE CURED    CHANGE TO a line that does not grade the pair BROKEN or FORCED
+     33021 grok    KEEP   UNCURED  KEEP whose sentence quotes no 6 words in a row of the answering side's round
+     33021 grok    CHANGE CURED    CHANGE TO a line that does not grade the pair BROKEN or FORCED
+     33021 grok    KEEP   CURED    KEEP whose sentence quotes the answering side's round: "that which is conceived in her"
+     33021 grok    KEEP   CURED    KEEP whose sentence quotes the answering side's round: "the power of the highest shall"
+     33021 gemini  CHANGE CURED    CHANGE TO keeps the break and quotes the answering side's round: "matthew 1 18 dates the finding"
+     33025 grok    CHANGE CURED    CHANGE TO a line that does not grade the pair BROKEN or FORCED
+     33025 grok    CHANGE CURED    CHANGE TO a line that does not grade the pair BROKEN or FORCED
+     33025 grok    CHANGE CURED    CHANGE TO a line that does not grade the pair BROKEN or FORCED
+     33025 sol     KEEP   UNCURED  KEEP whose sentence quotes no 6 words in a row of the answering side's round
+     33025 sol     KEEP   UNCURED  KEEP whose sentence quotes no 6 words in a row of the answering side's round
+     33040 grok    CHANGE UNCURED  CHANGE TO keeps the break (BROKEN or FORCED) and quotes no 6 words in a row of the answering side's round
+OK   Record: S1 (KEEP, no quotation) UNCURED and counted; S2 (RETRACTED) CURED; S3 (silent) counted once by the silence rule: gemini drv_uncured 2, AUDIT v41 names S1 only
+     drv_uncured 2 | rows UNCURED,CURED, | [AUDIT v41: E-COL UNCURED (pkgECF, W3 2534) -- SEAT: gemini; ITEMS: S1 (COLLISION D1 vs C1: KEEP whose sentence quotes no 6 words in a row o / [AUDIT v40: SEND-BACK SILENCE -- SEAT: gemini; ITEMS: S3; no written answer to this send-back item; counted in drv_uncured (silence rule, WA
+OK   base Record on the same input: only the silent S3 counts (E-COL was record-only)
+OK   the rows use kind send_back and cure_status CURED/UNCURED/null, inside the table's CHECK constraints
+OK   Alt Record carries the same E-COL edits, reading bodies from Alt Seated
+18 OK, 0 FAIL

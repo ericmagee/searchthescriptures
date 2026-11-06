@@ -1,0 +1,306 @@
+[
+{
+"run": "32749",
+"seat": "grok",
+"item": "COLLISION D5 vs C6",
+"line": "FORCED: D5 vs C6 -- MEANS [DR2]: \"\\\\\"of the house of David\\\\\" follows the man named Joseph.\" -- ANSWER [CR3]: \"Granted that the phrase follows Joseph.\" -- FAILS: \"The same verb says Christ was made of David's seed and made of a woman. Neither verse names a human father.\"",
+"resp": "SENDBACK: S15 || CHANGE TO: D5: STANDS -- GROUND: [CR3] answers Luke 1:27 with \"Granted that the phrase follows Joseph\" and \"That is the legal right I keep,\" which agrees with \"of the house of David\" following Joseph. || \"Granted that the phrase follows Joseph\" agrees with the pressed meaning, and \"Neither verse names a human father\" is an absence, so the FORCED grade does not stand.",
+"cr": "SEND-BACK CHANGE TO: D5: STANDS -- GROUND: [CR3] answers Luke 1:27 with \"Granted that the phrase follows Joseph\" and \"That is the legal right I keep,\" which agrees with \"of the house of David\" following Joseph. -- \"Granted that the phrase follows Joseph\" agrees with the pressed meaning, and \"Neither verse names a human father\" is an absence, so the FORCED grade does not stand. | ENFORCER: (right: STANDS): The answer \"Granted that the phrase follows Joseph\" agrees with the meaning, and the FAILS rests on \"Neither verse names a human father,\" an absence. (judge wrote FORCED; RECORD-ONLY TRIAL, ruling 428) (ruling 428; the judge keeps the decision)"
+},
+{
+"run": "32749",
+"seat": "grok",
+"item": "COLLISION D6 vs C1",
+"line": "FORCED: D6 vs C1 -- MEANS [DR2]: \"the flesh is David's seed, a seed of flesh, which a legal father does not supply.\" -- ANSWER [CR3]: \"The flesh is David's seed. Granted that a legal father does not supply it.\" -- FAILS: \"Link 5 as narrowed shows who does: the woman of whom he was \\\\\"made\\\\\" (Galatians 4:4).\"",
+"resp": "SENDBACK: S16 || CHANGE TO: D6: STANDS -- GROUND: [CR3] answers Romans 1:3 with \"The flesh is David's seed. Granted that a legal father does not supply it,\" which agrees with that pressed meaning. || \"The flesh is David's seed. Granted that a legal father does not supply it\" agrees with the meaning, so those words do not show the link cannot agree.",
+"cr": "SEND-BACK CHANGE TO: D6: STANDS -- GROUND: [CR3] answers Romans 1:3 with \"The flesh is David's seed. Granted that a legal father does not supply it,\" which agrees with that pressed meaning. -- \"The flesh is David's seed. Granted that a legal father does not supply it\" agrees with the meaning, so those words do not show the link cannot agree. | ENFORCER: (right: STANDS): The answer \"The flesh is David's seed. Granted that a legal father does not supply it\" agrees with the meaning, so the quoted words do not show it cannot agree. (judge wrote FORCED; RECORD-ONLY TRIAL, ruling 428) (ruling 428; the judge keeps the decision)"
+},
+{
+"run": "32905",
+"seat": "grok",
+"item": "COLLISION D1 vs C1",
+"line": "FORCED: D1 vs C1 -- MEANS [CR3]: \"the not-knowing runs through the pregnancy to the birth\" -- ANSWER [DR3]: \"The knowing therefore falls between Luke 1:34 and the finding of Matthew 1:18, within the espousal. It fits the link.\" -- FAILS: \"The knowing therefore falls between Luke 1:34 and the finding of Matthew 1:18, within the espousal.\"",
+"resp": "SENDBACK: S10 || CHANGE TO: D1 vs C1 (Matthew 1:25): STANDS -- GROUND: \"The knowing therefore falls between Luke 1:34 and the finding of Matthew 1:18, within the espousal\" can agree with \"the not-knowing runs through the pregnancy to the birth.\" || The challenger wrote \"The knowing therefore falls between Luke 1:34 and the finding of Matthew 1:18, within the espousal,\" which can agree with not-knowing through the pregnancy.",
+"cr": "SEND-BACK CHANGE TO: D1 vs C1 (Matthew 1:25): STANDS -- GROUND: \"The knowing therefore falls between Luke 1:34 and the finding of Matthew 1:18, within the espousal\" can agree with \"the not-knowing runs through the pregnancy to the birth.\" -- The challenger wrote \"The knowing therefore falls between Luke 1:34 and the finding of Matthew 1:18, within the espousal,\" which can agree with not-knowing through the pregnancy. | ENFORCER: (right: STANDS): \"The knowing therefore falls between Luke 1:34 and the finding of Matthew 1:18\" can agree with not-knowing through the pregnancy. (judge wrote FORCED; RECORD-ONLY TRIAL, ruling 428) (ruling 428; the judge keeps the decision)"
+},
+{
+"run": "32905",
+"seat": "grok",
+"item": "COLLISION D3 vs C6",
+"line": "FORCED: D3 vs C6 -- MEANS [CR3]: \"in the pattern each man is the subject of the active \"begat\" and the woman follows \"of\", a form verse 16 does not use for Jesus\" -- ANSWER [DR3]: \"The woman stands with \"of\" in 1:5. The woman stands with \"of whom\" in 1:16. It is the same mother's slot, and the husband is named in the same verse.\" -- FAILS: \"It is the same mother's slot, and the husband is named in the same verse.\"",
+"resp": "SENDBACK: S11 || CHANGE TO: D3 vs C6 (Matthew 1:16): STANDS -- GROUND: \"The woman stands with \"of whom\" in 1:16\" can agree with the active-begat form not being used for Jesus. || The challenger wrote \"The woman stands with \"of whom\" in 1:16. It is the same mother's slot,\" which can agree with \"a form verse 16 does not use for Jesus.\"",
+"cr": "SEND-BACK CHANGE TO: D3 vs C6 (Matthew 1:16): STANDS -- GROUND: \"The woman stands with \"of whom\" in 1:16\" can agree with the active-begat form not being used for Jesus. -- The challenger wrote \"The woman stands with \"of whom\" in 1:16. It is the same mother's slot,\" which can agree with \"a form verse 16 does not use for Jesus.\" | ENFORCER: (right: STANDS): \"The woman stands with 'of whom' in 1:16\" can agree with the active-begat form being absent. (judge wrote FORCED; RECORD-ONLY TRIAL, ruling 428) (ruling 428; the judge keeps the decision)"
+},
+{
+"run": "32905",
+"seat": "grok",
+"item": "COLLISION D4 vs C6",
+"line": "FORCED: D4 vs C6 -- MEANS [CR3]: \"the narrator marks the title as reputed\" -- ANSWER [DR3]: \"Luke 2:49's \"my Father's business\" is the covenant title. It stands beside Mary's \"thy father,\" as Luke 1:32 sets the Highest beside David. It fits the link.\" -- FAILS: \"It stands beside Mary's \"thy father,\" as Luke 1:32 sets the Highest beside David.\"",
+"resp": "SENDBACK: S12 || CHANGE TO: D4 vs C6 (Luke 3:23): STANDS -- GROUND: \"my Father's business\" as \"the covenant title\" can coexist with the title being reputed. || The challenger wrote \"Luke 2:49's \"my Father's business\" is the covenant title,\" which can stand with \"the narrator marks the title as reputed.\"",
+"cr": "SEND-BACK CHANGE TO: D4 vs C6 (Luke 3:23): STANDS -- GROUND: \"my Father's business\" as \"the covenant title\" can coexist with the title being reputed. -- The challenger wrote \"Luke 2:49's \"my Father's business\" is the covenant title,\" which can stand with \"the narrator marks the title as reputed.\" | ENFORCER: (right: STANDS): \"my Father's business is the covenant title\" can coexist with the title being reputed. (judge wrote FORCED; RECORD-ONLY TRIAL, ruling 428) (ruling 428; the judge keeps the decision)"
+},
+{
+"run": "32924",
+"seat": "grok",
+"item": "COLLISION D1 vs C1",
+"line": "FORCED: D1 vs C1 -- MEANS [DR2]: \"the woman's seed and God's appointing stand with the husband's knowing named\" -- ANSWER [CR3]: \"Genesis 4:1, \\\\\"And Adam knew Eve his wife; and she conceived\\\\\", and Genesis 4:25, \\\\\"Adam knew his wife again\\\\\":: yada' (H3045, \\\\\"to know... lie by man\\\\\") is the very idiom of Luke 1:34, \\\\\"I know not a man.\\\\\" That is why the question is asked, and the answer supplies another agent.\" -- FAILS: \"the answer supplies another agent.\"",
+"resp": "SENDBACK: S4 || CHANGE TO: D1 vs C1 (Genesis 4:25): STANDS -- GROUND: answered in [CR3]; \"the answer supplies another agent\" does not show the answer cannot agree with the husband's knowing named in Genesis 4:25. || [CR3] says \"Adam knew his wife again\" and \"the answer supplies another agent,\" which does not show that answer cannot agree with the husband's knowing.",
+"cr": "SEND-BACK CHANGE TO: D1 vs C1 (Genesis 4:25): STANDS -- GROUND: answered in [CR3]; \"the answer supplies another agent\" does not show the answer cannot agree with the husband's knowing named in Genesis 4:25. -- [CR3] says \"Adam knew his wife again\" and \"the answer supplies another agent,\" which does not show that answer cannot agree with the husband's knowing. | ENFORCER: (right: STANDS): The quoted 'the answer supplies another agent' does not show the answer cannot agree with the husband's knowing named in Genesis 4:25. (judge wrote FORCED; RECORD-ONLY TRIAL, ruling 428) (ruling 428; the judge keeps the decision)"
+},
+{
+"run": "32924",
+"seat": "grok",
+"item": "COLLISION D4 vs C5",
+"line": "FORCED: D4 vs C5 -- MEANS [DR2]: \"the sign is bounded within the child's early years in Ahaz's day\" -- ANSWER [CR3]: \"Isaiah 7:16, 8:3-4 and 8:8: in Isaiah 8:3 \\\\\"I went unto the prophetess\\\\\" has the margin \\\\\"Heb. approached\\\\\". In Matthew 1:18-25 there is no approach, only \\\\\"before they came together.\\\\\" Matthew 1:22 states the fulfilment of this birth.\" -- FAILS: \"in Isaiah 8:3 \\\\\"I went unto the prophetess\\\\\" has the margin \\\\\"Heb. approached\\\\\".\"",
+"resp": "SENDBACK: S5 || CHANGE TO: D4 vs C5 (Isaiah 7:16): STANDS -- GROUND: answered in [CR3]; \"has the margin \"Heb. approached\"\" does not show the answer cannot agree with the early-years bound. || [CR3] says \"Matthew 1:22 states the fulfilment of this birth\" after naming Isaiah 7:16, and the margin words do not show that answer cannot agree with the bound.",
+"cr": "SEND-BACK CHANGE TO: D4 vs C5 (Isaiah 7:16): STANDS -- GROUND: answered in [CR3]; \"has the margin \"Heb. approached\"\" does not show the answer cannot agree with the early-years bound. -- [CR3] says \"Matthew 1:22 states the fulfilment of this birth\" after naming Isaiah 7:16, and the margin words do not show that answer cannot agree with the bound. | ENFORCER: (right: STANDS): The quoted 'has the margin \"Heb. approached\"' does not show the answer cannot agree with the early-years bound. (judge wrote FORCED; RECORD-ONLY TRIAL, ruling 428) (ruling 428; the judge keeps the decision)"
+},
+{
+"run": "32973",
+"seat": "gemini",
+"item": "COLLISION D1 vs C1",
+"line": "FORCED: D1 vs C1 -- MEANS [CR3]: \"the finding is dated before the coming together. -- [L2] synerchomai (G4905, come together, lexicon: cohabit conjugally) | [L3] Luke 2:5 \\\\\"his espoused wife, being great with child\\\\\"\" -- ANSWER [DR3]: \"The verse dates the finding. A child found already exists, so the conceiving came earlier still, inside the espousal, which is where my link places the knowing.\" -- FAILS: \"A child found already exists, so the conceiving came earlier still, inside the espousal, which is where my link places the knowing.\"",
+"resp": "SENDBACK: S8 || CHANGE TO: D1 vs C1 (Matthew 1:18): UNDERDETERMINED -- both sides claim the timing row of Matthew 1:18 fits their link -- GROUND: The challenger argues \"A child found already exists, so the conceiving came earlier still, inside the espousal\" while the defender argues the pregnancy was \"before they came together\". (Commitment 7) || In [DR3] the challenger contends \"The verse dates the finding. A child found already exists, so the conceiving came earlier still, inside the espousal\" while [CR3] rests on \"before they came together, she was found with child of the Holy Ghost.\"",
+"cr": "SEND-BACK CHANGE TO: D1 vs C1 (Matthew 1:18): UNDERDETERMINED -- both sides claim the timing row of Matthew 1:18 fits their link -- GROUND: The challenger argues \"A child found already exists, so the conceiving came earlier still, inside the espousal\" while the defender argues the pregnancy was \"before they came together\". (Commitment 7) -- In [DR3] the challenger contends \"The verse dates the finding. A child found already exists, so the conceiving came earlier still, inside the espousal\" while [CR3] rests on \"before they came together, she was found with child of the Holy Ghost.\" | ENFORCER: (right: UNDERDETERMINED): The answer says \"The verse dates the finding\" and places \"the conceiving came earlier still, inside the espousal,\" which agrees with the timing meaning rather than contradicting it. (judge wrote FORCED; RECORD-ONLY TRIAL, ruling 428) (ruling 428; the judge keeps the decision)"
+},
+{
+"run": "32973",
+"seat": "grok",
+"item": "COLLISION D1 vs C1",
+"line": "FORCED: D1 vs C1 -- MEANS [CR3]: \"the finding is dated before the coming together.\" -- ANSWER [DR3]: \"The verse dates the finding. A child found already exists, so the conceiving came earlier still, inside the espousal, which is where my link places the knowing.\" -- FAILS: \"A child found already exists, so the conceiving came earlier still\"",
+"resp": "SENDBACK: S25 || CHANGE TO: D1 vs C1 (Matthew 1:18): UNDERDETERMINED -- the answer agrees with the timing pressed rather than contradicting it -- GROUND: [DR3] \"The verse dates the finding\" and \"the conceiving came earlier still, inside the espousal\" agree with [CR3] \"the finding is dated before the coming together\" (Commitment 7). || [DR3] says \"The verse dates the finding\" and \"the conceiving came earlier still, inside the espousal.\"",
+"cr": "SEND-BACK CHANGE TO: D1 vs C1 (Matthew 1:18): UNDERDETERMINED -- the answer agrees with the timing pressed rather than contradicting it -- GROUND: [DR3] \"The verse dates the finding\" and \"the conceiving came earlier still, inside the espousal\" agree with [CR3] \"the finding is dated before the coming together\" (Commitment 7). -- [DR3] says \"The verse dates the finding\" and \"the conceiving came earlier still, inside the espousal.\" | ENFORCER: (right: UNDERDETERMINED): The answer says \"The verse dates the finding\" and places \"the conceiving came earlier still, inside the espousal,\" which agrees with the timing meaning rather than contradicting it. (judge wrote FORCED; RECORD-ONLY TRIAL, ruling 428) (ruling 428; the judge keeps the decision)"
+},
+{
+"run": "32973",
+"seat": "grok",
+"item": "COLLISION D6 vs C3",
+"line": "FORCED: D6 vs C3 -- MEANS [DR2]: \"the flesh-line is David's seed, which the oath sets in the loins.\" -- ANSWER [CR3]: \"ginomai (G1096, to become) gives \"made\", the verb of a Son already named in the verse.\" -- FAILS: \"the verb of a Son already named in the verse\"",
+"resp": "SENDBACK: S26 || CHANGE TO: D6 vs C3 (Romans 1:3): STANDS -- GROUND: [CR3] \"the verb of a Son already named in the verse\" does not contradict [DR2] \"the flesh-line is David's seed,\" and silence about the seed is no broken ground (Commitment 3). || [CR3] says \"the verb of a Son already named in the verse,\" which does not contradict \"made of the seed of David according to the flesh.\"",
+"cr": "SEND-BACK CHANGE TO: D6 vs C3 (Romans 1:3): STANDS -- GROUND: [CR3] \"the verb of a Son already named in the verse\" does not contradict [DR2] \"the flesh-line is David's seed,\" and silence about the seed is no broken ground (Commitment 3). -- [CR3] says \"the verb of a Son already named in the verse,\" which does not contradict \"made of the seed of David according to the flesh.\" | ENFORCER: (right: STANDS): The answer's \"the verb of a Son already named in the verse\" does not contradict \"the flesh-line is David's seed\"; the line rests on the answer's silence about the seed. (judge wrote FORCED; RECORD-ONLY TRIAL, ruling 428) (ruling 428; the judge keeps the decision)"
+},
+{
+"run": "32973",
+"seat": "grok",
+"item": "COLLISION D6 vs C1",
+"line": "FORCED: D6 vs C1 -- MEANS [CR3]: \"the finding is dated before the coming together.\" -- ANSWER [DR3]: \"The verse dates the finding. A child found already exists, so the conceiving came earlier still, inside the espousal, which is where my link places the knowing.\" -- FAILS: \"A child found already exists, so the conceiving came earlier still\"",
+"resp": "SENDBACK: S27 || CHANGE TO: D6 vs C1 (Matthew 1:18): UNDERDETERMINED -- the answer agrees with the timing pressed rather than contradicting it -- GROUND: [DR3] \"The verse dates the finding\" and \"the conceiving came earlier still, inside the espousal\" agree with [CR3] \"the finding is dated before the coming together\" (Commitment 7). || [DR3] says \"The verse dates the finding\" and \"the conceiving came earlier still, inside the espousal.\"",
+"cr": "SEND-BACK CHANGE TO: D6 vs C1 (Matthew 1:18): UNDERDETERMINED -- the answer agrees with the timing pressed rather than contradicting it -- GROUND: [DR3] \"The verse dates the finding\" and \"the conceiving came earlier still, inside the espousal\" agree with [CR3] \"the finding is dated before the coming together\" (Commitment 7). -- [DR3] says \"The verse dates the finding\" and \"the conceiving came earlier still, inside the espousal.\" | ENFORCER: (right: UNDERDETERMINED): The answer says \"The verse dates the finding\" and places \"the conceiving came earlier still, inside the espousal,\" which agrees with the timing meaning rather than contradicting it. (judge wrote FORCED; RECORD-ONLY TRIAL, ruling 428) (ruling 428; the judge keeps the decision)"
+},
+{
+"run": "32980",
+"seat": "grok",
+"item": "COLLISION D6 vs C6",
+"line": "FORCED: D6 vs C6 -- MEANS [DR2]: \"Christ's flesh is the fruit of loins, which carry seed through fathers.\" -- ANSWER [CR3]: \"The promise names David's body and God's act, and the child's body is described as prepared. Neither verse routes the seed through a father at the last step.\" -- FAILS: \"Neither verse routes the seed through a father at the last step.\" (Commitment 3)",
+"resp": "SENDBACK: S14 || CHANGE TO: D6 vs C6 (Acts 2:30): STANDS -- GROUND: [CR3] \"The promise names David's body and God's act, and the child's body is described as prepared\" is a fit, and \"Neither verse routes the seed through a father at the last step\" is an absence. (Commitment 3) || [CR3] gives the fit in \"The promise names David's body and God's act, and the child's body is described as prepared.\"",
+"cr": "SEND-BACK CHANGE TO: D6 vs C6 (Acts 2:30): STANDS -- GROUND: [CR3] \"The promise names David's body and God's act, and the child's body is described as prepared\" is a fit, and \"Neither verse routes the seed through a father at the last step\" is an absence. (Commitment 3) -- [CR3] gives the fit in \"The promise names David's body and God's act, and the child's body is described as prepared.\" | ENFORCER: (right: STANDS): The answer gives a fit -- \"The promise names David's body and God's act, and the child's body is described as prepared\" -- while the line's \"Neither verse routes the seed through a father at the last step\" is an absence. (judge wrote FORCED; RECORD-ONLY TRIAL, ruling 428) (ruling 428; the judge keeps the decision)"
+},
+{
+"run": "32998",
+"seat": "grok",
+"item": "COLLISION D1 vs C1",
+"line": "FORCED: D1 vs C1 -- MEANS [CR3]: \"the finding with child came before any coming together\" -- ANSWER [DR3]: \"The verse dates the finding.\" -- FAILS: \"It fits the link: the finding falls inside the espousal, before the taking.\"",
+"resp": "SENDBACK: S14 || CHANGE TO: D1 vs C1 (Matthew 1:18): STANDS -- GROUND: [DR3] \"The verse dates the finding\" can agree with Matthew 1:18 \"before they came together, she was found with child of the Holy Ghost.\" || [DR3] says \"The verse dates the finding\" and \"the finding falls inside the espousal, before the taking.\"",
+"cr": "SEND-BACK CHANGE TO: D1 vs C1 (Matthew 1:18): STANDS -- GROUND: [DR3] \"The verse dates the finding\" can agree with Matthew 1:18 \"before they came together, she was found with child of the Holy Ghost.\" -- [DR3] says \"The verse dates the finding\" and \"the finding falls inside the espousal, before the taking.\" | ENFORCER: (right: STANDS): The answer \"The verse dates the finding\" does not show it cannot agree with finding before coming together. (judge wrote FORCED; RECORD-ONLY TRIAL, ruling 428) (ruling 428; the judge keeps the decision)"
+},
+{
+"run": "32998",
+"seat": "grok",
+"item": "COLLISION D1 vs C3",
+"line": "FORCED: D1 vs C3 -- MEANS [CR3]: \"the ground given is the source of the conceiving, with the margin \\\\\"begotten\\\\\"\" -- ANSWER [DR3]: \"So the \\\\\"for\\\\\" tells David's son to take his wife because the child is the seed God claims as his own (2 Samuel 7:14; 1 Chronicles 28:6).\" -- FAILS: \"\\\\\"begotten... of the Holy Ghost\\\\\" is the covenant begetting, and the father of the house is named in the same row.\"",
+"resp": "SENDBACK: S15 || CHANGE TO: D1 vs C3 (Matthew 1:20): STANDS -- GROUND: [DR3] \"the child is the seed God claims as his own\" can agree with Matthew 1:20 \"that which is conceived in her is of the Holy Ghost.\" || [DR3] says \"because the child is the seed God claims as his own,\" which can agree with \"conceived in her is of the Holy Ghost.\"",
+"cr": "SEND-BACK CHANGE TO: D1 vs C3 (Matthew 1:20): STANDS -- GROUND: [DR3] \"the child is the seed God claims as his own\" can agree with Matthew 1:20 \"that which is conceived in her is of the Holy Ghost.\" -- [DR3] says \"because the child is the seed God claims as his own,\" which can agree with \"conceived in her is of the Holy Ghost.\" | ENFORCER: (right: STANDS): The answer \"the child is the seed God claims as his own\" can agree with the source. (judge wrote FORCED; RECORD-ONLY TRIAL, ruling 428) (ruling 428; the judge keeps the decision)"
+},
+{
+"run": "32998",
+"seat": "grok",
+"item": "COLLISION D2 vs C6",
+"line": "FORCED: D2 vs C6 -- MEANS [CR3]: \"the \\\\\"begat\\\\\" line stops at Joseph the husband, and the birth clause names Mary\" -- ANSWER [DR3]: \"It fits the link: the line runs to Joseph, and the birth clause names his wife.\" -- FAILS: \"The passive \\\\\"was born\\\\\" with the feminine \\\\\"of whom\\\\\" is the mother's clause.\"",
+"resp": "SENDBACK: S16 || CHANGE TO: D2 vs C6 (Matthew 1:16): STANDS -- GROUND: [DR3] \"the line runs to Joseph, and the birth clause names his wife\" can agree with Matthew 1:16 \"of whom was born Jesus.\" || [DR3] says \"the line runs to Joseph, and the birth clause names his wife.\"",
+"cr": "SEND-BACK CHANGE TO: D2 vs C6 (Matthew 1:16): STANDS -- GROUND: [DR3] \"the line runs to Joseph, and the birth clause names his wife\" can agree with Matthew 1:16 \"of whom was born Jesus.\" -- [DR3] says \"the line runs to Joseph, and the birth clause names his wife.\" | ENFORCER: (right: STANDS): The answer \"the line runs to Joseph, and the birth clause names his wife\" can agree. (judge wrote FORCED; RECORD-ONLY TRIAL, ruling 428) (ruling 428; the judge keeps the decision)"
+},
+{
+"run": "32998",
+"seat": "grok",
+"item": "COLLISION D3 vs C1",
+"line": "FORCED: D3 vs C1 -- MEANS [CR3]: \"at the announcing of the conception Mary knows no man\" -- ANSWER [DR3]: \"It fits the link: the conception follows the word, inside the espousal to Joseph of David's house.\" -- FAILS: \"Her words state her condition on the day the angel spoke.\"",
+"resp": "SENDBACK: S17 || CHANGE TO: D3 vs C1 (Luke 1:34): STANDS -- GROUND: [DR3] \"the conception follows the word, inside the espousal\" can agree with Luke 1:34 \"seeing I know not a man.\" || [DR3] says \"the conception follows the word, inside the espousal to Joseph of David's house.\"",
+"cr": "SEND-BACK CHANGE TO: D3 vs C1 (Luke 1:34): STANDS -- GROUND: [DR3] \"the conception follows the word, inside the espousal\" can agree with Luke 1:34 \"seeing I know not a man.\" -- [DR3] says \"the conception follows the word, inside the espousal to Joseph of David's house.\" | ENFORCER: (right: STANDS): The answer \"the conception follows the word, inside the espousal\" can agree. (judge wrote FORCED; RECORD-ONLY TRIAL, ruling 428) (ruling 428; the judge keeps the decision)"
+},
+{
+"run": "32998",
+"seat": "grok",
+"item": "COLLISION D5 vs C6",
+"line": "FORCED: D5 vs C6 -- MEANS [CR3]: \"the narrator marks \\\\\"son of Joseph\\\\\" as an opinion\" -- ANSWER [DR3]: \"the customary reckoning.\" -- FAILS: \"being (as was supposed) the son of Joseph.\"",
+"resp": "SENDBACK: S18 || CHANGE TO: D5 vs C6 (Luke 3:23): STANDS -- GROUND: [DR3] \"the customary reckoning\" can agree with Luke 3:23 \"as was supposed.\" || [DR3] says \"the customary reckoning\" beside \"being (as was supposed) the son of Joseph.\"",
+"cr": "SEND-BACK CHANGE TO: D5 vs C6 (Luke 3:23): STANDS -- GROUND: [DR3] \"the customary reckoning\" can agree with Luke 3:23 \"as was supposed.\" -- [DR3] says \"the customary reckoning\" beside \"being (as was supposed) the son of Joseph.\" | ENFORCER: (right: STANDS): The answer \"the customary reckoning\" can agree with \"as was supposed.\" (judge wrote FORCED; RECORD-ONLY TRIAL, ruling 428) (ruling 428; the judge keeps the decision)"
+},
+{
+"run": "32998",
+"seat": "gemini",
+"item": "COLLISION D3 vs C1",
+"line": "FORCED: D3 vs C1 -- MEANS [Defender R3]: \"the finding with child came before any coming together -- [L2] synerchomai (G4905, come together) | [L3] Matthew 1:25 \\\\\"And knew her not till she had brought forth her firstborn son\\\\\"\" -- ANSWER [Challenger R3]: \"The verse dates the finding. Matthew sets the coming together by what follows: 'Then Joseph being raised from sleep did as the angel of the Lord had bidden him, and took unto him his wife' (Matthew 1:24). That is the taking of Deuteronomy 20:7, 'hath betrothed a wife, and hath not taken her.' The order is Matthew's own: espoused, found with child before the taking, then taken. 'Of the Holy Ghost' uses the same ek ('of') as 1 John 5:1: 'every one that loveth him that begat loveth him also that is begotten of him.' Those born of God there have fathers in the flesh. John 3:6 keeps the two kinds apart: 'That which is born of the flesh is flesh; and that which is born of the Spirit is spirit.' It fits the link: the finding falls inside the espousal, before the taking.\" -- FAILS: \"It fits the link: the finding falls inside the espousal, before the taking.\"",
+"resp": "SENDBACK: S1 || KEEP || The words \"before they came together, she was found with child of the Holy Ghost\" (Matthew 1:18) cannot fit the challenger's claim that \"the finding falls inside the espousal, before the taking\" while asserting that Joseph knew her before the finding (Commitment 3).",
+"cr": "SEND-BACK KEEP -- The words \"before they came together, she was found with child of the Holy Ghost\" (Matthew 1:18) cannot fit the challenger's claim that \"the finding falls inside the espousal, before the taking\" while asserting that Joseph knew her before the finding (Commitment 3). | ENFORCER: (right: STANDS): The answer \"It fits the link: the finding falls inside the espousal, before the taking\" can agree. (judge wrote FORCED; RECORD-ONLY TRIAL, ruling 428) (ruling 428; the judge keeps the decision)"
+},
+{
+"run": "33014",
+"seat": "grok",
+"item": "COLLISION D1 vs C4",
+"line": "FORCED: D1 vs C4 -- MEANS [CR3]: \"the margin \\\\\"Gr. begotten\\\\\" gives the begetting to the Holy Ghost\" -- ANSWER [DR3]: \"\\\\\"Of the Holy Ghost\\\\\" names the covenant origin, and in the same row the angel names \\\\\"Joseph, thou son of David\\\\\" and \\\\\"Mary thy wife.\\\\\" It fits the link.\" -- FAILS: \"The same verb with \\\\\"of God\\\\\" is said of believers: \\\\\"Whosoever believeth that Jesus is the Christ is born of God\\\\\" (1 John 5:1 [is born: Gr. has been born]).\"",
+"resp": "SENDBACK: S11 || CHANGE TO: D1 vs C4 (Matthew 1:20): STANDS -- GROUND: the [DR3] answer \"names the covenant origin\" and names \"Joseph, thou son of David\" and \"Mary thy wife\" in the same row, which the pressed meaning can agree with. || The [DR3] answer says \"\"Of the Holy Ghost\" names the covenant origin, and in the same row the angel names \"Joseph, thou son of David\" and \"Mary thy wife.\"\"",
+"cr": "SEND-BACK CHANGE TO: D1 vs C4 (Matthew 1:20): STANDS -- GROUND: the [DR3] answer \"names the covenant origin\" and names \"Joseph, thou son of David\" and \"Mary thy wife\" in the same row, which the pressed meaning can agree with. -- The [DR3] answer says \"\"Of the Holy Ghost\" names the covenant origin, and in the same row the angel names \"Joseph, thou son of David\" and \"Mary thy wife.\"\" | ENFORCER: (right: STANDS): The quoted answer \"names the covenant origin\" does not show it cannot agree, and the line's FAILS rests on 1 John 5:1 rather than the answer's words. (judge wrote FORCED; RECORD-ONLY TRIAL, ruling 428) (ruling 428; the judge keeps the decision)"
+},
+{
+"run": "33014",
+"seat": "grok",
+"item": "COLLISION D2 vs C2",
+"line": "FORCED: D2 vs C2 -- MEANS [CR3]: \"the finding with child comes before any coming together\" -- ANSWER [DR3]: \"So 1:18 dates the finding before the taking into his house. The finding falls inside the espousal, where she is already \\\\\"his espoused wife, being great with child\\\\\" (Luke 2:5 [taxed: or, enrolled]). It fits the link.\" -- FAILS: \"Therefore Joseph knew Mary his wife within the espousal.\"",
+"resp": "SENDBACK: S12 || CHANGE TO: D2 vs C2 (Matthew 1:18): STANDS -- GROUND: the [DR3] answer says \"1:18 dates the finding before the taking into his house\" and \"It fits the link,\" which the meaning pressed can agree with. || The [DR3] answer says \"So 1:18 dates the finding before the taking into his house\" and \"It fits the link.\"",
+"cr": "SEND-BACK CHANGE TO: D2 vs C2 (Matthew 1:18): STANDS -- GROUND: the [DR3] answer says \"1:18 dates the finding before the taking into his house\" and \"It fits the link,\" which the meaning pressed can agree with. -- The [DR3] answer says \"So 1:18 dates the finding before the taking into his house\" and \"It fits the link.\" | ENFORCER: (right: STANDS): The quoted answer says \"1:18 dates the finding before the taking into his house\" and \"It fits the link,\" which the meaning pressed can agree with. (judge wrote FORCED; RECORD-ONLY TRIAL, ruling 428) (ruling 428; the judge keeps the decision)"
+},
+{
+"run": "33014",
+"seat": "grok",
+"item": "COLLISION D4 vs C1",
+"line": "FORCED: D4 vs C1 -- MEANS [CR3]: \"the sonship by Joseph is reckoned by supposition\" -- ANSWER [DR3]: \"The sonship to Joseph stands in the word of law and usage. That is the reckoning of Numbers 1:18.\" -- FAILS: \"The sonship to Joseph stands in the word of law and usage.\"",
+"resp": "SENDBACK: S13 || CHANGE TO: D4 vs C1 (Luke 3:23): STANDS -- GROUND: the [DR3] answer \"The sonship to Joseph stands in the word of law and usage\" does not show it cannot agree with the pressed supposition. || The [DR3] answer says \"The sonship to Joseph stands in the word of law and usage.\"",
+"cr": "SEND-BACK CHANGE TO: D4 vs C1 (Luke 3:23): STANDS -- GROUND: the [DR3] answer \"The sonship to Joseph stands in the word of law and usage\" does not show it cannot agree with the pressed supposition. -- The [DR3] answer says \"The sonship to Joseph stands in the word of law and usage.\" | ENFORCER: (right: STANDS): The quoted answer \"The sonship to Joseph stands in the word of law and usage\" does not show it cannot agree with the pressed supposition. (judge wrote FORCED; RECORD-ONLY TRIAL, ruling 428) (ruling 428; the judge keeps the decision)"
+},
+{
+"run": "33014",
+"seat": "grok",
+"item": "COLLISION D6 vs C3",
+"line": "FORCED: D6 vs C3 -- MEANS [CR3]: \"the verb changes from \\\\\"begat\\\\\" to \\\\\"was born\\\\\" at the last link\" -- ANSWER [DR3]: \"The seed passes by \\\\\"begat\\\\\" down to Joseph, \\\\\"the husband\\\\\" (anēr, G435). The passive names the wife the child was born of.\" -- FAILS: \"So the seed of David according to the flesh came to the child through Joseph.\"",
+"resp": "SENDBACK: S14 || CHANGE TO: D6 vs C3 (Matthew 1:16): STANDS -- GROUND: the [DR3] answer \"The passive names the wife the child was born of\" can agree with the pressed change from \"begat\" to \"was born.\" || The [DR3] answer says \"The passive names the wife the child was born of.\"",
+"cr": "SEND-BACK CHANGE TO: D6 vs C3 (Matthew 1:16): STANDS -- GROUND: the [DR3] answer \"The passive names the wife the child was born of\" can agree with the pressed change from \"begat\" to \"was born.\" -- The [DR3] answer says \"The passive names the wife the child was born of.\" | ENFORCER: (right: STANDS): The quoted answer \"The passive names the wife the child was born of\" can agree with the pressed change from \"begat\" to \"was born.\" (judge wrote FORCED; RECORD-ONLY TRIAL, ruling 428) (ruling 428; the judge keeps the decision)"
+},
+{
+"run": "33014",
+"seat": "grok",
+"item": "COLLISION D6 vs C4",
+"line": "FORCED: D6 vs C4 -- MEANS [CR3]: \"the margin \\\\\"Gr. begotten\\\\\" gives the begetting to the Holy Ghost\" -- ANSWER [DR3]: \"\\\\\"Of the Holy Ghost\\\\\" names the covenant origin, and in the same row the angel names \\\\\"Joseph, thou son of David\\\\\" and \\\\\"Mary thy wife.\\\\\" It fits the link.\" -- FAILS: \"Therefore Christ had a biological father, and the text names him Joseph.\"",
+"resp": "SENDBACK: S15 || CHANGE TO: D6 vs C4 (Matthew 1:20): STANDS -- GROUND: the [DR3] answer \"names the covenant origin\" does not show it cannot agree with the pressed margin. || The [DR3] answer says \"\"Of the Holy Ghost\" names the covenant origin, and in the same row the angel names \"Joseph, thou son of David\" and \"Mary thy wife.\"\"",
+"cr": "SEND-BACK CHANGE TO: D6 vs C4 (Matthew 1:20): STANDS -- GROUND: the [DR3] answer \"names the covenant origin\" does not show it cannot agree with the pressed margin. -- The [DR3] answer says \"\"Of the Holy Ghost\" names the covenant origin, and in the same row the angel names \"Joseph, thou son of David\" and \"Mary thy wife.\"\" | ENFORCER: (right: STANDS): The quoted answer \"names the covenant origin\" does not show it cannot agree, and the line's FAILS adds \"Christ had a biological father\" not stated in the answer. (judge wrote FORCED; RECORD-ONLY TRIAL, ruling 428) (ruling 428; the judge keeps the decision)"
+},
+{
+"run": "33020",
+"seat": "chatgpt",
+"item": "COLLISION D1 vs C2",
+"line": "FORCED: D1 vs C2 -- MEANS [CR3]: \"the pregnancy was found before the marital union\" -- ANSWER [DR3]: \"So 1:18 dates the finding before the taking into his house, inside the espousal. That is where my link places the knowing. It fits the link.\" -- FAILS: \"In 1 Corinthians 7:5 the word \"again\" names a couple already dwelling as one, resuming.\"",
+"resp": "SENDBACK: S14 || CHANGE TO: FORCED (Commitment 7): D1 vs C2 -- MEANS [CR3]: \"the pregnancy was found before the marital union\" -- ANSWER [DR3]: \"So 1:18 dates the finding before the taking into his house, inside the espousal. That is where my link places the knowing. It fits the link.\" -- FAILS: \"Matthew sets what 'came together' means by what follows: 'took unto him his wife' (Matthew 1:24).\" || [DR3] places the knowing before the taking, while [CR3] presses that \"the pregnancy was found before the marital union.\"",
+"cr": "SEND-BACK CHANGE TO: FORCED (Commitment 7): D1 vs C2 -- MEANS [CR3]: \"the pregnancy was found before the marital union\" -- ANSWER [DR3]: \"So 1:18 dates the finding before the taking into his house, inside the espousal. That is where my link places the knowing. It fits the link.\" -- FAILS: \"Matthew sets what 'came together' means by what follows: 'took unto him his wife' (Matthew 1:24).\" -- [DR3] places the knowing before the taking, while [CR3] presses that \"the pregnancy was found before the marital union. | ENFORCER: (right: STANDS): The answer \"inside the espousal. That is where my link places the knowing. It fits the link\" can agree; the FAILS line rests on 1 Corinthians 7:5, not the answer's quoted words. (judge wrote FORCED; RECORD-ONLY TRIAL, ruling 428) (ruling 428; the judge keeps the decision)"
+},
+{
+"run": "33020",
+"seat": "grok",
+"item": "COLLISION D1 vs C2",
+"line": "FORCED: D1 vs C2 -- MEANS [CR3]: \"the pregnancy was found before the marital union\" -- ANSWER [DR3]: \"So 1:18 dates the finding before the taking into his house, inside the espousal. That is where my link places the knowing. It fits the link.\" -- FAILS: \"In 1 Corinthians 7:5 the word \"again\" names a couple already dwelling as one, resuming.\"",
+"resp": "SENDBACK: S11 || CHANGE TO: D1 vs C2 (Matthew 1:18): STANDS -- GROUND: [DR3] \"inside the espousal. That is where my link places the knowing. It fits the link\" can agree with the finding dated before the taking. || [DR3] says \"So 1:18 dates the finding before the taking into his house, inside the espousal. That is where my link places the knowing. It fits the link.\"",
+"cr": "SEND-BACK CHANGE TO: D1 vs C2 (Matthew 1:18): STANDS -- GROUND: [DR3] \"inside the espousal. That is where my link places the knowing. It fits the link\" can agree with the finding dated before the taking. -- [DR3] says \"So 1:18 dates the finding before the taking into his house, inside the espousal. That is where my link places the knowing. It fits the link.\" | ENFORCER: (right: STANDS): The answer \"inside the espousal. That is where my link places the knowing. It fits the link\" can agree; the FAILS line rests on 1 Corinthians 7:5, not the answer's quoted words. (judge wrote FORCED; RECORD-ONLY TRIAL, ruling 428) (ruling 428; the judge keeps the decision)"
+},
+{
+"run": "33020",
+"seat": "grok",
+"item": "COLLISION D1 vs C6",
+"line": "FORCED: D1 vs C6 -- MEANS [CR3]: \"the \\\\\"of God\\\\\" birth of John 1:13 belongs to believers who become sons after they exist\" -- ANSWER [DR3]: \"These persons each had a father in the flesh. The row names the origin of their \\\\\"of God\\\\\" birth beside their fleshly birth, the two kinds John 3:6 keeps apart. So \\\\\"of God\\\\\" stands over persons begotten of fathers. It fits the link.\" -- FAILS: \"So \\\\\"of God\\\\\" stands over persons begotten of fathers.\"",
+"resp": "SENDBACK: S12 || CHANGE TO: D1 vs C6 (Matthew 1:20): STANDS -- GROUND: [DR3] \"the two kinds John 3:6 keeps apart. So \"of God\" stands over persons begotten of fathers. It fits the link\" can agree with the pressed meaning. || [DR3] says \"the two kinds John 3:6 keeps apart\" and \"It fits the link.\"",
+"cr": "SEND-BACK CHANGE TO: D1 vs C6 (Matthew 1:20): STANDS -- GROUND: [DR3] \"the two kinds John 3:6 keeps apart. So \"of God\" stands over persons begotten of fathers. It fits the link\" can agree with the pressed meaning. -- [DR3] says \"the two kinds John 3:6 keeps apart\" and \"It fits the link.\" | ENFORCER: (right: STANDS): The answer \"the two kinds John 3:6 keeps apart. So 'of God' stands over persons begotten of fathers. It fits the link\" can agree with the pressed meaning. (judge wrote FORCED; RECORD-ONLY TRIAL, ruling 428) (ruling 428; the judge keeps the decision)"
+},
+{
+"run": "33020",
+"seat": "grok",
+"item": "COLLISION D5 vs C1",
+"line": "FORCED: D5 vs C1 -- MEANS [DR2]: \"the tribe is plain before all men as an offshoot he sprang from. -- [L2] phylē G5443 (an offshoot, race or clan) | [L2] prodēlos G4271 (plain before all men)\" -- ANSWER [CR3]: \"The verse gives the tribe and says it is plain. It does not say by whose seed. What is plain before all men is the public reckoning of John 1:45, \\\\\"Jesus of Nazareth, the son of Joseph.\\\\\"\" -- FAILS: \"It does not say by whose seed.\"",
+"resp": "SENDBACK: S13 || CHANGE TO: D5 vs C1 (Hebrews 7:14): STANDS -- GROUND: [CR3] \"What is plain before all men is the public reckoning of John 1:45, \"Jesus of Nazareth, the son of Joseph\"\" offers the public reckoning as the fit for \"evident.\" || [CR3] says \"What is plain before all men is the public reckoning of John 1:45, \"Jesus of Nazareth, the son of Joseph.\"\"",
+"cr": "SEND-BACK CHANGE TO: D5 vs C1 (Hebrews 7:14): STANDS -- GROUND: [CR3] \"What is plain before all men is the public reckoning of John 1:45, \"Jesus of Nazareth, the son of Joseph\"\" offers the public reckoning as the fit for \"evident.\" -- [CR3] says \"What is plain before all men is the public reckoning of John 1:45, \"Jesus of Nazareth, the son of Joseph.\"\" | ENFORCER: (right: STANDS): \"It does not say by whose seed\" is an absence, and the answer also offers \"the public reckoning\" as a fit. (judge wrote FORCED; RECORD-ONLY TRIAL, ruling 428) (ruling 428; the judge keeps the decision)"
+},
+{
+"run": "33021",
+"seat": "grok",
+"item": "COLLISION D1 vs C1",
+"line": "FORCED: D1 vs C1 -- MEANS [CR3]: \"the finding precedes any coming together, so no union lies behind it\" -- ANSWER [DR3]: \"So \\\\\"before they came together\\\\\" means before the taking of 1:24. The espousal, in which she is already his wife, precedes it.\" -- FAILS: \"Matthew shows the coming together six verses later with the verb of 1:20's command, paralambanō (G3880, \\\\\"to receive near... take unto\\\\\").\" (Commitment 3)",
+"resp": "SENDBACK: S8 || KEEP || The FAILS quote stands in the DR3 answer: \"Matthew shows the coming together six verses later with the verb of 1:20's command, paralambanō (G3880, \"to receive near... take unto\").\"",
+"cr": "SEND-BACK KEEP -- The FAILS quote stands in the DR3 answer: \"Matthew shows the coming together six verses later with the verb of 1:20's command, paralambanō (G3880, \"to receive near... take unto\").\" | ENFORCER: (right: STANDS): the answer \"So 'before they came together'...\" carries a compatible meaning, and the FAILS quote \"Matthew shows...\" is not the answer's words. (judge wrote FORCED; RECORD-ONLY TRIAL, ruling 428) (ruling 428; the judge keeps the decision)"
+},
+{
+"run": "33021",
+"seat": "grok",
+"item": "COLLISION D2 vs C1",
+"line": "FORCED: D2 vs C1 -- MEANS [CR3]: \"the \\\\\"till\\\\\" runs to the birth, so no knowing is stated before it\" -- ANSWER [DR3]: \"The span 1:25 bounds starts at the taking. The espousal stands before it, as Matthew 1:18-19 shows (\\\\\"espoused,\\\\\" \\\\\"her husband\\\\\").\" -- FAILS: \"The span 1:25 bounds starts at the taking.\" (Commitment 3)",
+"resp": "SENDBACK: S9 || CHANGE TO: D2 vs C1 (Matthew 1:25): STANDS -- GROUND: both sides place the till from the taking to the birth, the defender writing \"The abstinence runs from the taking to the birth, and the finding is before the taking.\" || The answer \"The span 1:25 bounds starts at the taking\" agrees with that span, so the verse does not force the link.",
+"cr": "SEND-BACK CHANGE TO: D2 vs C1 (Matthew 1:25): STANDS -- GROUND: both sides place the till from the taking to the birth, the defender writing \"The abstinence runs from the taking to the birth, and the finding is before the taking.\" -- The answer \"The span 1:25 bounds starts at the taking\" agrees with that span, so the verse does not force the link. | ENFORCER: (right: STANDS): \"The span 1:25 bounds starts at the taking\" is compatible with no knowing before the birth. (judge wrote FORCED; RECORD-ONLY TRIAL, ruling 428) (ruling 428; the judge keeps the decision)"
+},
+{
+"run": "33021",
+"seat": "grok",
+"item": "COLLISION D3 vs C1",
+"line": "FORCED: D3 vs C1 -- MEANS [CR3]: \"the angel gives the Holy Ghost as the origin\" -- ANSWER [DR3]: \"So the \\\\\"of\\\\\" with the Spirit sits in the same row as the husband of the house. This fits the link.\" -- FAILS: \"Each of them had a father in the flesh.\" (Commitment 7)",
+"resp": "SENDBACK: S10 || KEEP || The FAILS quote stands in the DR3 answer, \"Each of them had a father in the flesh,\" and that believer row does not carry \"that which is conceived in her.\"",
+"cr": "SEND-BACK KEEP -- The FAILS quote stands in the DR3 answer, \"Each of them had a father in the flesh,\" and that believer row does not carry \"that which is conceived in her.\" | ENFORCER: (right: STANDS): the answer says \"This fits the link,\" and the FAILS quote \"Each of them had a father in the flesh\" is not the answer. (judge wrote FORCED; RECORD-ONLY TRIAL, ruling 428) (ruling 428; the judge keeps the decision)"
+},
+{
+"run": "33021",
+"seat": "grok",
+"item": "COLLISION D4 vs C2",
+"line": "FORCED: D4 vs C2 -- MEANS [CR3]: \"the title follows the coming upon the woman, and the birth is of her\" -- ANSWER [DR3]: \"The \\\\\"therefore also\\\\\" (dio kai) connects back to verse 32, not forward to divine paternity of flesh.\" -- FAILS: \"connects back to verse 32, not forward to divine paternity of flesh.\" (Commitment 3)",
+"resp": "SENDBACK: S11 || KEEP || Luke 1:35 places \"therefore also\" after \"the power of the Highest shall overshadow thee,\" so \"connects back to verse 32, not forward to divine paternity of flesh\" does not show a fit with the title following the coming.",
+"cr": "SEND-BACK KEEP -- Luke 1:35 places \"therefore also\" after \"the power of the Highest shall overshadow thee,\" so \"connects back to verse 32, not forward to divine paternity of flesh\" does not show a fit with the title following the coming. | ENFORCER: (right: STANDS): \"connects back to verse 32\" does not show the answer cannot agree with the title/birth point; the line rests on non-engagement. (judge wrote FORCED; RECORD-ONLY TRIAL, ruling 428) (ruling 428; the judge keeps the decision)"
+},
+{
+"run": "33021",
+"seat": "gemini",
+"item": "COLLISION D1 vs C1",
+"line": "FORCED: D1 vs C1 -- MEANS [CR3]: \"the finding precedes any coming together, so no union lies behind it -- [L3] Matthew 1:25 \"And knew her not till she had brought forth her firstborn son\" | PROVEN IN [Challenger R1]\" -- ANSWER [DR3]: \"So \"before they came together\" means before the taking of 1:24. The espousal, in which she is already his wife, precedes it.\" -- FAILS: \"So \"before they came together\" means before the taking of 1:24.\"",
+"resp": "SENDBACK: S9 || CHANGE TO: D1: STANDS -- GROUND: Answered in [CR4]; Matthew 1:18 dates the finding before coming together, and the challenger's reading of the taking can agree with the finding preceding it. || The challenger's explanation that \"before they came together\" means before the taking of Matthew 1:24 can agree with the finding preceding the taking, so link D1 stands without forcing.",
+"cr": "SEND-BACK CHANGE TO: D1: STANDS -- GROUND: Answered in [CR4]; Matthew 1:18 dates the finding before coming together, and the challenger's reading of the taking can agree with the finding preceding it. -- The challenger's explanation that \"before they came together\" means before the taking of Matthew 1:24 can agree with the finding preceding the taking, so link D1 stands without forcing. | ENFORCER: (right: STANDS): \"before they came together means before the taking of 1:24\" can agree with the finding preceding the taking. (judge wrote FORCED; RECORD-ONLY TRIAL, ruling 428) (ruling 428; the judge keeps the decision)"
+},
+{
+"run": "33025",
+"seat": "grok",
+"item": "COLLISION D2 vs C4",
+"line": "FORCED: D2 vs C4 -- MEANS [CR3]: \"the finding with child precedes any coming together\" -- ANSWER [DR3]: \"\\\\\"Came together,\\\\\" taken as the taking into his house (cohabiting), dates the finding before the taking. The espousal stands before it. It fits the link.\" -- FAILS: \"The espousal stands before it. It fits the link.\"",
+"resp": "SENDBACK: S20 || CHANGE TO: D2 vs C4 (Matthew 1:18): STANDS -- [DR3] \"dates the finding before the taking\" agrees with \"the finding with child precedes any coming together\" -- GROUND: [L1] Matthew 1:18 \"before they came together, she was found with child of the Holy Ghost\" || [DR3] says \"dates the finding before the taking,\" which agrees with \"the finding with child precedes any coming together.\"",
+"cr": "SEND-BACK CHANGE TO: D2 vs C4 (Matthew 1:18): STANDS -- [DR3] \"dates the finding before the taking\" agrees with \"the finding with child precedes any coming together\" -- GROUND: [L1] Matthew 1:18 \"before they came together, she was found with child of the Holy Ghost\" -- [DR3] says \"dates the finding before the taking,\" which agrees with \"the finding with child precedes any coming together.\" | ENFORCER: (right: STANDS): \"dates the finding before the taking\" agrees with \"the finding with child precedes any coming together.\" (judge wrote FORCED; RECORD-ONLY TRIAL, ruling 428) (ruling 428; the judge keeps the decision)"
+},
+{
+"run": "33025",
+"seat": "grok",
+"item": "COLLISION D3 vs C5",
+"line": "FORCED: D3 vs C5 -- MEANS [CR3]: \"the chain moves from \\\\\"begat\\\\\" to \\\\\"of whom was born,\\\\\" and Joseph is \\\\\"the husband of Mary\\\\\"\" -- ANSWER [DR3]: \"The \\\\\"of whom was born\\\\\" in 1:16 names Mary's bearing in that same form.\" -- FAILS: \"names Mary's bearing in that same form\"",
+"resp": "SENDBACK: S21 || CHANGE TO: D3 vs C5 (Matthew 1:16): STANDS -- [DR3] \"names Mary's bearing in that same form\" can agree with the chain to \"of whom was born\" -- GROUND: [L1] Matthew 1:16 \"Jacob begat Joseph the husband of Mary, of whom was born Jesus, who is called Christ\" || [DR3] says \"The \"of whom was born\" in 1:16 names Mary's bearing in that same form.\"",
+"cr": "SEND-BACK CHANGE TO: D3 vs C5 (Matthew 1:16): STANDS -- [DR3] \"names Mary's bearing in that same form\" can agree with the chain to \"of whom was born\" -- GROUND: [L1] Matthew 1:16 \"Jacob begat Joseph the husband of Mary, of whom was born Jesus, who is called Christ\" -- [DR3] says \"The \"of whom was born\" in 1:16 names Mary's bearing in that same form.\" | ENFORCER: (right: STANDS): \"names Mary's bearing in that same form\" can agree with the chain to \"of whom was born.\" (judge wrote FORCED; RECORD-ONLY TRIAL, ruling 428) (ruling 428; the judge keeps the decision)"
+},
+{
+"run": "33025",
+"seat": "grok",
+"item": "COLLISION D5 vs C5",
+"line": "FORCED: D5 vs C5 -- MEANS [CR3]: \"the verb says he arose from the tribe and does not say he was begotten by a father\" -- ANSWER [DR3]: \"The evidence of Hebrews 7:14 therefore rests on a begetting father of Juda, and the father named of David's house is Joseph.\" -- FAILS: \"rests on a begetting father of Juda, and the father named of David's house is Joseph\"",
+"resp": "SENDBACK: S22 || CHANGE TO: D5 vs C5 (Hebrews 7:14): STANDS -- \"rests on a begetting father of Juda\" does not contradict the verb's silence that \"does not say he was begotten by a father\" -- GROUND: [L1] Hebrews 7:14 \"For [it is] evident that our Lord sprang out of Juda\" || [DR3] says \"The evidence of Hebrews 7:14 therefore rests on a begetting father of Juda,\" and that does not contradict \"does not say he was begotten by a father.\"",
+"cr": "SEND-BACK CHANGE TO: D5 vs C5 (Hebrews 7:14): STANDS -- \"rests on a begetting father of Juda\" does not contradict the verb's silence that \"does not say he was begotten by a father\" -- GROUND: [L1] Hebrews 7:14 \"For [it is] evident that our Lord sprang out of Juda\" -- [DR3] says \"The evidence of Hebrews 7:14 therefore rests on a begetting father of Juda,\" and that does not contradict \"does not say he was begotten by a father.\" | ENFORCER: (right: STANDS): \"rests on a begetting father\" does not contradict the verb's silence that \"does not say he was begotten by a father.\" (judge wrote FORCED; RECORD-ONLY TRIAL, ruling 428) (ruling 428; the judge keeps the decision)"
+},
+{
+"run": "33025",
+"seat": "sol",
+"item": "COLLISION D2 vs C4",
+"line": "FORCED: D2 vs C4 -- MEANS [CR3]: \"Matthew applies the virgin-conceives sign to this birth\" -- ANSWER [DR3]: \"\\\\\"Virgin\\\\\" names the woman at the word. In Isaiah's own days the sign's conception comes when the man approaches. Matthew 1:25's \\\\\"till\\\\\" sets the knowing after the bearing. It fits the link.\" -- FAILS: \"In Isaiah's own days the sign's conception comes when the man approaches.\"",
+"resp": "SENDBACK: S6 || KEEP || The answer's \"In Isaiah's own days the sign's conception comes when the man approaches\" addresses its proposed Isaiah conception rather than the pressed meaning \"Matthew applies the virgin-conceives sign to this birth,\" while its Matthew 1:23 quotation is expressly NOT COUNTED, leaving the particular application unanswered (Commitments 3 and 5).",
+"cr": "SEND-BACK KEEP -- The answer's \"In Isaiah's own days the sign's conception comes when the man approaches\" addresses its proposed Isaiah conception rather than the pressed meaning \"Matthew applies the virgin-conceives sign to this birth,\" while its Matthew 1:23 quotation is expressly NOT COUNTED, leaving the particular application unanswered (Commitments 3 and 5). | ENFORCER: (right: STANDS): The answer's words \"In Isaiah's own days the sign's conception comes when the man approaches\" distinguish a historical fulfillment and do not show it cannot agree with Matthew's application. (judge wrote FORCED; RECORD-ONLY TRIAL, ruling 428) (ruling 428; the judge keeps the decision)"
+},
+{
+"run": "33025",
+"seat": "sol",
+"item": "COLLISION D3 vs C5",
+"line": "FORCED: D3 vs C5 -- MEANS [DR2]: \"Moses' house is Levi's, by his begetter.\" -- ANSWER [CR4]: \"In both verses \\\\\"took to wife\\\\\" is one act, and begetting is another. Matthew 1:24-25 separates them in Joseph's own case. Exodus 2:1 does not overturn D3.\" -- FAILS: \"In both verses \\\\\"took to wife\\\\\" is one act, and begetting is another.\"",
+"resp": "SENDBACK: S7 || KEEP || The pressed meaning is \"Moses' house is Levi's, by his begetter,\" whereas \"In both verses \\\\\"took to wife\\\\\" is one act, and begetting is another\" distinguishes marriage from begetting rather than showing that reception supplies the asserted tribal pedigree (Commitments 3 and 5).",
+"cr": "SEND-BACK KEEP -- The pressed meaning is \"Moses' house is Levi's, by his begetter,\" whereas \"In both verses \\\\\"took to wife\\\\\" is one act, and begetting is another\" distinguishes marriage from begetting rather than showing that reception supplies the asserted tribal pedigree (Commitments 3 and 5). | ENFORCER: (right: STANDS): The answer says \"took to wife\" and \"begetting\" are separate and that \"Exodus 2:1 does not overturn D3.\" (judge wrote FORCED; RECORD-ONLY TRIAL, ruling 428) (ruling 428; the judge keeps the decision)"
+},
+{
+"run": "33040",
+"seat": "grok",
+"item": "COLLISION D2 vs C3",
+"line": "FORCED: D2 vs C3 -- MEANS [CR3]: \"the pregnancy is dated before the coming together, and its stated source is the Holy Ghost\" -- ANSWER [DR3]: \"The verse dates the finding inside the espousal. It fits the link.\" -- FAILS: \"The verse dates the finding inside the espousal.\"",
+"resp": "SENDBACK: S16 || CHANGE TO: D2 vs C3 (Matthew 1:18): not FORCED -- the answer can agree with the pressed timing -- GROUND: [DR3] \"The verse dates the finding inside the espousal. It fits the link.\" || [DR3] says \"The verse dates the finding inside the espousal. It fits the link,\" which can agree with \"the pregnancy is dated before the coming together.\"",
+"cr": "SEND-BACK CHANGE TO: D2 vs C3 (Matthew 1:18): not FORCED -- the answer can agree with the pressed timing -- GROUND: [DR3] \"The verse dates the finding inside the espousal. It fits the link.\" -- [DR3] says \"The verse dates the finding inside the espousal. It fits the link,\" which can agree with \"the pregnancy is dated before the coming together.\" | ENFORCER: (right: STANDS): \"The verse dates the finding inside the espousal. It fits the link\" can agree with the pressed meaning, so it is not FORCED. (judge wrote FORCED; RECORD-ONLY TRIAL, ruling 428) (ruling 428; the judge keeps the decision)"
+}
+]
