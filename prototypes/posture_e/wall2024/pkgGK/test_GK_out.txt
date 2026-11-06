@@ -1,0 +1,28 @@
+OK   19 nodes: base and final shas match the plan
+OK   (d) is in all 19 cure-library nodes, once
+OK   every node parses as an n8n Code node body
+OK   gateG4Cure2024 is one text, once, in each of the 6 gate-library nodes
+OK   the 13 other nodes differ from pkgG4W only by (d)
+OK   fixture: the stored rows are found in the judge text by cureJText
+OK   base (pkgGKW, as live): S2, S3, S4 NOT APPLIED, "the flagged line is not in the judge text" (32998 rows 5065 to 5067)
+OK   pkgGK: S2, S3, S4 applied, and each judge row now carries TOUCHES NO LINK
+OK   a row written with "--" before the tag applies on base and pkgGK alike
+OK   a row whose quote is not in the judge text is still NOT APPLIED
+OK   the round must match: a CR3 row does not replace the CR4 row
+OK   chatgpt G5 (32998): stays UNCURED, for the right reason: unanswered-false, the defender's CR3 and CR4 name Isaiah 7:16 and 8:8 (needs (d))
+OK   without (d) (pkgGKW library), the same test reads no witness from chatgpt G5, so it would cure
+   why: unanswered-false: the pressing quotation is found in DR2, but a later defender round names every pressed witness the line rests on: [CR3] Isaiah 7:16 at 4; [CR4] Isaiah 7:16 at 10; [CR3] Isaiah 8:8 at 169; [CR4] Isaiah 8:8 at 47
+OK   the same change CURES when no later defender round names Isaiah 7:16 or 8:8 (a truly unanswered press)
+   why: pressed: quotation found in DR2; the pressed witness Isaiah 7:16, Isaiah 8:8 is each named in no later defender round, so the grade stands
+OK   a meaning-break ground stays UNCURED: only a FORCED line cures it (ruling 421)
+OK   a quotation not found in the named round stays UNCURED (ruling 392)
+OK   a round that does not press the defender (CR3) is not read as the pressing round
+OK   sol G1 (32998): stays UNCURED as unanswered-false: DR3 names Deuteronomy 22:24, its pressed witness
+   why: unanswered-false: the pressing quotation is found in CR3, but a later challenger round names every pressed witness the line rests on: [DR3] Deuteronomy 22:24 at 195
+OK   gateCure2024 routes only RULE K-G4, applied and still raised, to gateG4Cure2024
+OK   grok G1 (32998 shape): KEEP on the E-APPLY CONTRADICTION is CURED, "change withdrawn" (pkgGKW, kept)
+   (d) replay: 27 stored K-G4 items; witnesses changed: 0
+OK   (d) changes no witness on the 27 stored K-G4 items
+   32998 chatgpt G5: witnesses before (d) [], after [Isaiah 7:16,Isaiah 8:8]; answered by [CR3] Isaiah 7:16, [CR4] Isaiah 7:16, [CR3] Isaiah 8:8, [CR4] Isaiah 8:8
+   32998 sol G1: witnesses before (d) [Deuteronomy 22:24], after [Deuteronomy 22:24]; answered by [DR3] Deuteronomy 22:24
+21 OK 0 FAIL
