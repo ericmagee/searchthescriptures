@@ -1,0 +1,15 @@
+STORED 33060 (engine output)  (K-V items as stored)
+   gemini   HELD    drv_uncured 0  LIVE uncured 0
+   chatgpt  HELD    drv_uncured 0  LIVE uncured 0
+   sol      HELD    drv_uncured 2  LIVE uncured 3  [K-S3 S3 CHALLENGER DR4: #11; K-F D2 vs C4; K-W DEFENDER CR2 LINK 1 #1]
+   counted seats (drv_uncured 0): chatgpt, gemini -> HELD, HELD  (BROKEN 0, HELD 2, PARTIAL 0)
+BASE pkgKVP  (K-V items as stored)
+   gemini   HELD    drv_uncured 0  LIVE uncured 0
+   chatgpt  HELD    drv_uncured 0  LIVE uncured 0
+   sol      HELD    drv_uncured 1  LIVE uncured 1  [K-W DEFENDER CR2 LINK 1 #1]
+   counted seats (drv_uncured 0): chatgpt, gemini -> HELD, HELD  (BROKEN 0, HELD 2, PARTIAL 0)
+PATCHED pkgKVQ  (K-V items as stored)
+   gemini   HELD    drv_uncured 0  LIVE uncured 0
+   chatgpt  HELD    drv_uncured 0  LIVE uncured 0
+   sol      HELD    drv_uncured 1  LIVE uncured 1  [K-W DEFENDER CR2 LINK 1 #1]
+   counted seats (drv_uncured 0): chatgpt, gemini -> HELD, HELD  (BROKEN 0, HELD 2, PARTIAL 0)
