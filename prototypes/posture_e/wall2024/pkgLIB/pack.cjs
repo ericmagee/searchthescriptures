@@ -6,7 +6,7 @@
 //  pkgLIB/patched/<node>.js          a stub per node: a list of library line numbers (and ranges) plus the node's own lines, which rebuilds the node's
 //                                    full source byte for byte and runs it with the same $ and $input.
 // The full sources stay the source of truth (pkg*/patched); every later package patches full sources and re-packs. unpack.cjs rebuilds them.
-const fs=require('fs');const crypto=require('crypto');const sha=s=>crypto.createHash('sha256').update(s).digest('hex').slice(0,16);
+const fs=require('fs');const crypto=require('crypto');const {needs}=require('./runner_model.cjs');const sha=s=>crypto.createHash('sha256').update(s).digest('hex').slice(0,16);
 // several package dirs may be given, base first: a later package's patched file replaces the earlier one (pkgPS patches 6 of the 22 on pkgPAY)
 const DIRS=(process.argv.length>2?process.argv.slice(2):['pkgKW']).map(d=>d.replace(/\/$/,''));const BASE=DIRS.join('+');const SRCOF={};
 for(const d of DIRS)for(const f of fs.readdirSync(d+'/patched/').filter(f=>f.endsWith('.js')&&f!=='Shared_Library.js'))SRCOF[f]=d+'/patched/'+f;
@@ -34,8 +34,10 @@ fs.writeFileSync('pkgLIB/patched/Shared_Library.js',LIBCODE);
 F.forEach((f,k)=>{const P=[];for(const l of LINES[k]){if(cnt.get(l)>=2){const i=IDX.get(l);const t=P[P.length-1];
    if(typeof t==='number'&&t+1===i)P[P.length-1]=[t,i];else if(Array.isArray(t)&&typeof t[0]==='number'&&t.length===2&&t[1]+1===i)t[1]=i;else P.push(i);}
   else P.push([l]);} /* number: one library line; [a,b]: library lines a..b; [string]: a line only this node has */
- const name=f.replace(/\.js$/,'').replace(/_/g,' ');const stub=STUBHEAD(name,SRC[k])+'const __N='+SRC[k].length+';\nconst __P='+JSON.stringify(P)+';\n'+STUBRUN;
- fs.writeFileSync('pkgLIB/patched/'+f,stub);plan.nodes.push({file:f,name,src:SRCOF[f],base_sha:sha(SRC[k]),base_bytes:SRC[k].length,stub_sha:sha(stub),stub_bytes:stub.length,own_lines:P.filter(e=>Array.isArray(e)&&typeof e[0]==='string').length});});
+ const name=f.replace(/\.js$/,'').replace(/_/g,' ');const RN=needs(SRC[k]);if(!RN.parsed||RN.env||RN.execution||RN.prevNode)throw new Error(f+': full source needs runner data pkgLIB v2 does not pass on');
+ const REFS=[...RN.nodes].sort();const REFLINE=REFS.length||RN.all?'if(false){'+REFS.map(r=>'$('+JSON.stringify(r)+');').join('')+(RN.all?'$(String());':'')+'} /* pkgLIB v2: never runs. The task runner sends a Code node only the nodes its code text names in literal $() calls (all nodes on a non-literal $() call); the rebuilt source below is string data the runner cannot see, so its reads are named here. Run 33094. */\n':'';
+ const stub=STUBHEAD(name,SRC[k])+REFLINE+'const __N='+SRC[k].length+';\nconst __P='+JSON.stringify(P)+';\n'+STUBRUN;
+ fs.writeFileSync('pkgLIB/patched/'+f,stub);plan.nodes.push({file:f,name,src:SRCOF[f],base_sha:sha(SRC[k]),base_bytes:SRC[k].length,stub_sha:sha(stub),stub_bytes:stub.length,refs:REFS,all_nodes:RN.all,own_lines:P.filter(e=>Array.isArray(e)&&typeof e[0]==='string').length});});
 const tb=plan.nodes.reduce((a,n)=>a+n.base_bytes,0),ts=plan.nodes.reduce((a,n)=>a+n.stub_bytes,0)+LIBCODE.length;plan.bytes_before=tb;plan.bytes_after=ts;
 fs.writeFileSync('pkgLIB/plan_LIB.json',JSON.stringify(plan,null,1));
 plan.nodes.forEach(n=>console.log(n.name.padEnd(30),String(n.base_bytes).padStart(7),'->',String(n.stub_bytes).padStart(6),'own lines',n.own_lines));
