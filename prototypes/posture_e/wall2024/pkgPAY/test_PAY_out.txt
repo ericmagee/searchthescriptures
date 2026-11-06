@@ -1,0 +1,12 @@
+OK   22 nodes; base shas = pkgKV/patched, final shas = pkgPAY/patched; only the 5 Normalize nodes change
+   32998 Panel Cure Check output equal (1894 KB)
+   33014 Panel Cure Check output equal (1726 KB)
+   33020 Panel Cure Check output equal (1635 KB)
+   33021 Panel Cure Check output equal (1823 KB)
+   33025 Panel Cure Check output equal (1147 KB)
+   33040 Panel Cure Check output equal (1497 KB)
+OK   every Normalize output (22 seat items, 6 runs): every cure field but body is forwarded unchanged
+OK   enfPrompt (prompt_sent) of the slim body equals that of the full body, every seat
+OK   Panel Cure Check on the slim Normalize outputs equals its output on the stored ones, every run (prompt_sent included)
+OK   size: Normalize outputs 8664 KB -> 3562 KB over the corpus
+5 OK, 0 FAIL
