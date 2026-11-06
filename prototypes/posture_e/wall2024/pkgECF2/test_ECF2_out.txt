@@ -1,0 +1,37 @@
+OK   4 nodes on pkgECF/patched (both Send Back Records and Builds); shas match
+OK   unit: FAILS words only: UNCURED (pkgECF: CURED)
+     KEEP that quotes the answering side ("so before they came together is") but no 6 words in a row of the quoted verse it cannot agree with
+OK   unit: FAILS words plus the verse words: CURED (pkgECF: CURED)
+     KEEP that quotes the answer ("so before they came together is") and the verse ("when as his mother mary was")
+OK   unit: verse words only: UNCURED (pkgECF: CURED)
+     KEEP that quotes no 6 words in a row of the answering side's own words
+OK   unit: RETRACTED: CURED (pkgECF: CURED)
+     CHANGE TO a line that does not grade the pair BROKEN or FORCED
+OK   unit: CHANGE TO the pair UNDERDETERMINED: CURED (pkgECF: CURED)
+     CHANGE TO a line that does not grade the pair BROKEN or FORCED
+OK   unit: CHANGE TO still BROKEN quoting the FAILS words only: UNCURED (pkgECF: CURED)
+     CHANGE TO keeps the break and quotes the answering side ("so before they came together is") but no 6 words in a row of the quoted verse it cannot agree with
+OK   unit: LINK BROKEN on an unanswered press, KEEP quoting the pressing sentence (ruling 392): CURED (pkgECF: CURED)
+     KEEP that quotes the unanswered pressing sentence ("the plucked signet is set again"), ruling 392
+OK   unit: LINK BROKEN on meaning (gemini), KEEP quoting a pressing sentence with no "unanswered": UNCURED (pkgECF: CURED)
+     KEEP that quotes no 6 words in a row of the answering side's own words
+OK   logged E-COL answers (32905-33040): 36 read; 5 change between pkgECF and pkgECF2; pkgECF2 UNCURED 9
+     32998 gemini KEEP CURED -> UNCURED -- KEEP that quotes no 6 words in a row of the answering side's own words
+     33020 chatgpt CHANGE CURED -> UNCURED -- CHANGE TO keeps the break and quotes the answering side ("1 18 dates the finding before") but no 6 words in a row of the quoted verse it cannot agree 
+     33021 grok KEEP CURED -> UNCURED -- KEEP that quotes no 6 words in a row of the answering side's own words
+     33021 grok KEEP CURED -> UNCURED -- KEEP that quotes no 6 words in a row of the answering side's own words
+     33021 gemini CHANGE CURED -> UNCURED -- CHANGE TO keeps the break and quotes the answering side ("matthew 1 18 dates the finding") but no 6 words in a row of the quoted verse it cannot agree
+  UNCURED 32998 gemini KEEP -- KEEP that quotes no 6 words in a row of the answering side's own words
+  UNCURED 33020 chatgpt CHANGE -- CHANGE TO keeps the break and quotes the answering side ("1 18 dates the finding before") but no 6 words in a row of the quoted verse it can
+  UNCURED 33021 grok KEEP -- KEEP that quotes no 6 words in a row of the answering side's own words
+  UNCURED 33021 grok KEEP -- KEEP that quotes no 6 words in a row of the answering side's own words
+  UNCURED 33021 grok KEEP -- KEEP that quotes no 6 words in a row of the answering side's own words
+  UNCURED 33021 gemini CHANGE -- CHANGE TO keeps the break and quotes the answering side ("matthew 1 18 dates the finding") but no 6 words in a row of the quoted verse it ca
+  UNCURED 33025 sol KEEP -- KEEP that quotes no 6 words in a row of the answering side's own words
+  UNCURED 33025 sol KEEP -- KEEP that quotes no 6 words in a row of the answering side's own words
+  UNCURED 33040 grok CHANGE -- CHANGE TO keeps the break and quotes no 6 words in a row of the answering side's own words
+OK   Alt Record carries the same E-COL cure
+OK   Record end to end: S1 (FAILS words only) UNCURED and counted, S2 (FAILS plus verse) CURED: drv_uncured 1
+     [AUDIT v41: E-COL UNCURED (pkgECF, W3 2534) -- SEAT: gemini; ITEMS: S1 (COLLISION D1 vs C1: KEEP that quotes the answering side ("so before they came together is") but no 6 words in a row of the quoted verse it cannot ag
+OK   Send Back Build and Alt state the two-sided cure
+13 OK, 0 FAIL
