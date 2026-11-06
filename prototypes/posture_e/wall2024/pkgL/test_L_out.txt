@@ -1,0 +1,10 @@
+OK   17 nodes; base_sha equals 6b077f9e + pkgT, final_sha equals the patched file
+OK   every node with the status table is in the package
+OK   reverse edit: the status entry and the K-CON mark sentence are the only changes
+OK   in all 17 status tables K-CON is LIVE and every other entry is unchanged
+OK   no K-CON mark still says TRIAL; Panel Payloads carries both K-CON marks
+OK   an answered but uncured K-CON item counts 1 (it counted 0 before)
+OK   its stored reason no longer carries the TRIAL prefix: no CONTRADICTION, NOT HELD or REASSERTED IN line quotes the flagged sentence
+OK   32949: the panel K-CON items (gemini CURED, grok CURED) are CURED, so drv_uncured does not change
+OK   the single judge verified-contradiction row stays kind enforcer_check (record-only; no cure call is made)
+ALL OK
