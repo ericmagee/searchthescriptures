@@ -24,9 +24,15 @@ for(const [h,rows] of Object.entries(g)){const seat=RP[h].seat;const [N,O]=seat=
  for(const [k,rows] of Object.entries(g9)){const it=rows.map(r=>({rule:'K-W',side:side(r),link:r.item,line:r.flagged_line}));const rp={ok:true,text:R9[rows[0].h]};
   const v=NP.cureVerdicts(it,rp,null,null).slice(0,it.length),v0=OP.cureVerdicts(it,rp,null,null).slice(0,it.length);const c=a=>a.filter(x=>x.status==='CURED').length;
   const key=k.split(' ')[0]+' '+k.split(' ')[1].slice(0,8);const lost=v.map((x,i)=>v0[i].status==='CURED'&&x.status!=='CURED'?rows[i].item:null).filter(Boolean);
+  if(key==='chatgpt d7c13b3f'){const rest=v.map((x,i)=>x.status==='CURED'&&/conceded/i.test(x.reason||x.why||'')&&!/^\s*\**CONCEDED/.test(String((x.lines||[''])[0]||'').replace(/^.*?\|\s*/,''))?rows[i].item:null).filter(Boolean);
+   T(rest.length===8,'32949 chatgpt: 8 "Fact: .... CONCEDED" answers restored by the sentence-start anchor (refused by the answer-start anchor): '+rest.join('; '));}
+  {const U={'chatgpt d7c13b3f':['DEFENDER CR3 LINK 2 [premise 2] #6','CHALLENGER DR2 no link heading #1'],'sol 6d710d40':['CHALLENGER DR2 no link heading #1'],'sol a4717fdd':['DEFENDER CR2 D3 #3','CHALLENGER DR2 no link heading #1']}[key];
+   if(U)T(U.every(u=>{const i=rows.findIndex(r=>r.item===u);return i>=0&&v[i].status!=='CURED';}),'32949 '+key+': stays uncured (no unqualified form word): '+U.join('; '));}
   T(exp[key]&&c(v0)===exp[key][0]&&c(v)===exp[key][1],'32949 '+key+': K-W CURED '+c(v0)+' -> '+c(v)+'/'+it.length+(lost.length?' (un-cured, no form word: '+lost.join('; ')+')':''));}}
 const it={rule:'K-W',side:'DEFENDER',link:'DEFENDER CR3 LINK 2 #4',line:'x'};const run=(N,t)=>N.cureVerdicts([it],{ok:true,text:t},null,null)[0];
 const C=[
+ ['RESPONSE: K-W DEFENDER CR3 LINK 2 #4 | NOT CONCEDED.','UNCURED','"NOT CONCEDED."'],
+ ['RESPONSE: K-W DEFENDER CR3 LINK 2 #4 | Fact: the taking. **CONCEDED**: the link falls.','CURED','"x. **CONCEDED**:"'],
  ['STATEMENT: K-W DEFENDER CR3 LINK 2 #4 | Fact: the taking was into the house. CONCEDED; [CR3] grants it.\nRESPONSE: K-W DEFENDER CR3 LINK 2 #4 | I accept the grant.','CURED','"Fact: .... CONCEDED;" (32949 chatgpt form)'],
  ['RESPONSE: K-W DEFENDER CR3 LINK 2 #4 | CONCEDED.','CURED','"| CONCEDED."'],
  ['RESPONSE: K-W DEFENDER CR3 LINK 2 #4 | CONCEDED: the link falls without the footing.','CURED','"| CONCEDED:"'],

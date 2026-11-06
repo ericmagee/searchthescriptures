@@ -18,10 +18,16 @@ OK   sol 32973: K-W status unchanged on all 12 items
      CONCEDED cure kept: sol DEFENDER CR3 LINK 3 #8 | [
      CONCEDED cure kept: sol CHALLENGER DR3 LINK 4 #2 | [
 OK   32949 gemini a750dd48: K-W CURED 10 -> 10/12
+OK   32949 chatgpt: 8 "Fact: .... CONCEDED" answers restored by the sentence-start anchor (refused by the answer-start anchor): DEFENDER CR2 D1 #1; DEFENDER CR2 D2 #2; DEFENDER CR2 D3 #3; DEFENDER CR2 D5 #4; DEFENDER CR3 LINK 2 [premise 2] #5; DEFENDER CR3 LINK 2 [premise 3] #7; DEFENDER CR3 LINK 3 #8; DEFENDER CR3 LINK 6 #10
+OK   32949 chatgpt d7c13b3f: stays uncured (no unqualified form word): DEFENDER CR3 LINK 2 [premise 2] #6; CHALLENGER DR2 no link heading #1
 OK   32949 chatgpt d7c13b3f: K-W CURED 11 -> 9/12 (un-cured, no form word: DEFENDER CR3 LINK 2 [premise 2] #6; CHALLENGER DR2 no link heading #1)
 OK   32949 grok af20ea15: K-W CURED 12 -> 12/12
+OK   32949 sol 6d710d40: stays uncured (no unqualified form word): CHALLENGER DR2 no link heading #1
 OK   32949 sol 6d710d40: K-W CURED 11 -> 10/12 (un-cured, no form word: CHALLENGER DR2 no link heading #1)
+OK   32949 sol a4717fdd: stays uncured (no unqualified form word): DEFENDER CR2 D3 #3; CHALLENGER DR2 no link heading #1
 OK   32949 sol a4717fdd: K-W CURED 10 -> 8/12 (un-cured, no form word: DEFENDER CR2 D3 #3; CHALLENGER DR2 no link heading #1)
+OK   synthetic: "NOT CONCEDED." -> UNCURED
+OK   synthetic: "x. **CONCEDED**:" -> CURED
 OK   synthetic: "Fact: .... CONCEDED;" (32949 chatgpt form) -> CURED
 OK   synthetic: "| CONCEDED." -> CURED
 OK   synthetic: "| CONCEDED:" -> CURED
