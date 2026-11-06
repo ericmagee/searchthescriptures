@@ -33,4 +33,9 @@ OK   units: FORCED->pair STANDS applies (grok 33021 S9 form); FORCED->FORCED sam
    33021 grok: send-back applied pkgKF [S3,S5,S9] pkgCP [S3,S5,S9] | gate same [] counted 0
    changed: 33021 gemini S9 gate
 OK   the only changes across 32998, 33014, 33020 and 33021 are 33021 gemini (S9 NOT APPLIED; its gate set changes)
-9 OK, 0 FAIL
+   pkgCP gate item: NOT APPLIED E-APPLY S9 line: FORCED: D1 vs C1 -- MEANS [CR3]: "the finding precedes any coming toge
+     regrade: CURED -- the gate change was applied
+     KEEP: CURED -- KEEP: the change stays unapplied
+     D1: STANDS: UNCURED -- the gate change was not applied
+OK   pkgCP gate item G1 NOT APPLIED (S9) names the FORCED D1 vs C1 line; a same-pair regrade CURES, KEEP CURES, "D1: STANDS" stays UNCURED
+10 OK, 0 FAIL

@@ -44,4 +44,10 @@ for(const [nm,X] of sets){for(const b of X.bodies){const its=X.sb_items.filter(x
  if(na.length||!same)diffs.push(nm+' '+b.seat+(na.length?' '+na.map(z=>z.sid).join(','):'')+(same?'':' gate'));}}
 console.log('   changed: '+(diffs.join('; ')||'none'));
 T('the only changes across 32998, 33014, 33020 and 33021 are 33021 gemini (S9 NOT APPLIED; its gate set changes)',diffs.length===1&&/^33021 gemini S9 gate$/.test(diffs[0]));
+// 6. on pkgCP the gate sends gemini G1 NOT APPLIED (S9); the item names the FORCED line, so a same-pair regrade applies and cures, KEEP cures, and "D1: STANDS" again is refused (W2 2355)
+{const c=ctxOf(CP,X21,'gemini');const G=CP.gateItems2024('gemini',gb.verdict_raw,gb.fields,gIts,c).items;const g1=G.find(g=>g.gid==='G1');
+ const cu=r=>CP.gateCure2024('gemini',gb.verdict_raw,gb.fields,gIts,G,r,c).res[0];
+ const rg=cu('GATE: G1 || CHANGE TO: D1 vs C1 (Matthew 1:18): UNDERDETERMINED -- [DR3] reads "came together" as the taking. GROUND: the parties exhibit different readings of Matthew 1:18. || reason'),kp=cu('GATE: G1 || KEEP || reason'),st=cu('GATE: G1 || CHANGE TO: D1: STANDS -- GROUND: x || reason');
+ console.log('   pkgCP gate item: '+(g1?g1.kind+' '+g1.src+' line: '+String((g1.lines||[])[0]||'').slice(0,70):'none')+'\n     regrade: '+(rg.cured?'CURED':'UNCURED')+' -- '+rg.why+'\n     KEEP: '+(kp.cured?'CURED':'UNCURED')+' -- '+kp.why+'\n     D1: STANDS: '+(st.cured?'CURED':'UNCURED')+' -- '+st.why);
+ T('pkgCP gate item G1 NOT APPLIED (S9) names the FORCED D1 vs C1 line; a same-pair regrade CURES, KEEP CURES, "D1: STANDS" stays UNCURED',g1&&g1.kind==='NOT APPLIED'&&/^FORCED: D1 vs C1/.test((g1.lines||[])[0]||'')&&rg.cured&&kp.cured&&!st.cured);}
 console.log(ok+' OK, '+bad+' FAIL');process.exit(bad?1:0);

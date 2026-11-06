@@ -1746,7 +1746,7 @@ function sbApply2024(seat,raw,F,its,RD){const one=s=>String(s==null?'':s).replac
    const pOf=l=>{const m=nrm(l).match(PR);return m?(m[1]+' VS '+m[2]).toUpperCase():null;};const pk=pOf(o);
    const GR=/^\s*(?:[-\u2022]|\d+[.)])?\s*D\d+\s+VS\.?\s+C\d+\b\s*(?:\([^)]*\))?\s*(?::|--|\u2014|\u2013)?\s*(?:DEFENDER LINK BROKEN|CHALLENGER LINK BROKEN|UNDERDETERMINED|STANDS)\b/i; /* the grade word follows the label (W2 2352 C: a label with no grade word is no regrade) */
    if(pk){const tp=pOf(to);const ok=tp===pk&&(FR.test(nrm(to))?FR.test(nrm(o)):GR.test(nrm(to)));
-    if(!ok){items.push({sid:x.sid,kind:'NOT APPLIED',why:'the change drops the collision '+pk.replace(' VS ',' vs ')+' (W3 2351: a change to a collision or FORCED line must be a collision line for the same pair)',to});continue;}}}
+    if(!ok){items.push({sid:x.sid,kind:'NOT APPLIED',why:'the change drops the collision '+pk.replace(' VS ',' vs ')+' (W3 2351: a change to a collision or FORCED line must be a collision line for the same pair)',to,lines:[o]});continue;}}} /* lines: the gate item names the line, so a same-pair regrade at the gate finds it (W2 2355) */
   /* a judge may write one collision, KEYSTONE, count or standing line twice (or rewrite another line under that label): every
      line of that label takes the change, or the old grade would stand beside the new one */
   const lk=sbLabel(to);const same=lk?lines.filter(l=>sbLabel(l)===lk):[]; /* run 32973 grok S26: its FORCED line rewritten as "D6 vs C3 ...: STANDS" also replaces the D6 vs C3 collision line */
