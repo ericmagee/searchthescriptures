@@ -34,6 +34,10 @@ OK   rule 1: a GROUND naming a premise the CONCEDED LINKS line counts is exempt
 OK   rule 1: a premise the line does not count is not exempt
 OK   rule 2: KEYSTONE BROKEN left with no broken collision by a change is a CONTRADICTION; the change is refused
 OK   rule 2: a change that agrees with the keystone is applied
+OK   32973 gemini S9 changes D5 vs C5 to DEFENDER LINK BROKEN, and the KEYSTONE is D6 STANDS
+OK   32973 gemini: S9 applied, no item, BROKEN-1
+OK   synthetic S9 shape: applied, no item, BROKEN-1
+OK   rule 0 still refuses the keystone's own collision broken under KEYSTONE STANDS
 OK   Gate Build: two calls (gemini, grok)
 OK   Gate Build: gemini G1 is the B item, grok G1 and G2 the keystone pair
 OK   Gate Build: the request continues the send-back conversation and states the forms
@@ -54,4 +58,4 @@ OK   Gate Build: no send-back answers -> skip
 OK   Gate Record: skip passes Send Back Record on unchanged, with gate.skipped
 OK   Alternate Merge: reads Gate Record bodies, sb_items and gate_rows, and passes the rounds to E-APPLY
 OK   sbRoundsOf2024 reads the 8 rounds from Panel Build
-40 OK 0 FAIL
+44 OK 0 FAIL

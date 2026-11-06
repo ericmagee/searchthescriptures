@@ -39,6 +39,16 @@ T('item B fires on 32949 grok and 32973 grok (Matthew 1:25)',BX.some(s=>/^32949 
  const R=M.sbApply2024('s',raw,F,its,null);T('rule 2: KEYSTONE BROKEN left with no broken collision by a change is a CONTRADICTION; the change is refused',R.items.some(z=>z.kind==='CONTRADICTION'&&/derived/.test(z.why))&&!R.applied.includes('S1'),JSON.stringify(R.items));
  const its2=[{seat:'s',sid:'S1',ans:'CHANGE',line:'D2 vs C2 (Luke 1:34): UNDERDETERMINED -- GROUND: y.',to:'D2 vs C2 (Luke 1:34): DEFENDER LINK BROKEN -- GROUND: y.'}];
  const R2=M.sbApply2024('s',raw,F,its2,null);T('rule 2: a change that agrees with the keystone is applied',R2.applied.includes('S1')&&!R2.items.length,JSON.stringify(R2.items));}
+// 5b. W3 2261 (b): the 32973 gemini S9 shape, a non-keystone collision changed to BROKEN under KEYSTONE STANDS, raises no item
+{const r=runs[0];const M=mk(null);const b=r.bodies.find(x=>x.run==='32973'&&x.seat==='gemini');const its=r.SB.filter(x=>x.run==='32973'&&x.seat==='gemini');
+ const s9=its.find(x=>x.sid==='S9');T('32973 gemini S9 changes D5 vs C5 to DEFENDER LINK BROKEN, and the KEYSTONE is D6 STANDS',s9&&/^D5 vs C5/.test(s9.to)&&/DEFENDER LINK BROKEN/.test(s9.to)&&/KEYSTONE\s*:\s*D6\s*--\s*STANDS/i.test(M.cureJText(b.verdict_raw,true)),s9&&s9.to.slice(0,120));
+ const R=M.sbApply2024(b.seat,b.verdict_raw,b.fields,its,null);T('32973 gemini: S9 applied, no item, BROKEN-1',R.applied.includes('S9')&&!R.items.length&&R.tag==='BROKEN-1',JSON.stringify([R.applied,R.items,R.tag]));
+ const raw='KEYSTONE: D6 -- STANDS -- GROUND: x.\nD5 vs C5 (Luke 3:23): UNDERDETERMINED -- GROUND: y.\nD6 vs C6 (Acts 2:30): CHALLENGER LINK BROKEN -- GROUND: z.\nCLAUSE: HELD-1 n=6 w=0 k=0\nRESULT: DEFENDER WINS';
+ const F={verdict_tag:'HELD',defense_standing:'SELF-SUPPORTED',conceded_links:0,challenge_standing:'PROP-DEPENDENT',challenger_conceded_links:0};
+ const R2=M.sbApply2024('s',raw,F,[{seat:'s',sid:'S9',ans:'CHANGE',line:'D5 vs C5 (Luke 3:23): UNDERDETERMINED -- GROUND: y.',to:'D5 vs C5 (Luke 3:23): DEFENDER LINK BROKEN -- GROUND: y.'}],null);
+ T('synthetic S9 shape: applied, no item, BROKEN-1',R2.applied.includes('S9')&&!R2.items.length&&R2.tag==='BROKEN-1',JSON.stringify([R2.items,R2.tag]));
+ const R3=M.sbApply2024('s',raw,F,[{seat:'s',sid:'S1',ans:'CHANGE',line:'D6 vs C6 (Acts 2:30): CHALLENGER LINK BROKEN -- GROUND: z.',to:'D6 vs C6 (Acts 2:30): DEFENDER LINK BROKEN -- GROUND: z.'}],null);
+ T('rule 0 still refuses the keystone\'s own collision broken under KEYSTONE STANDS',R3.items.some(z=>z.kind==='CONTRADICTION')&&!R3.applied.includes('S1'),JSON.stringify(R3.items));}
 // 6. the two nodes, end to end, on 32980 (gemini B item; grok keystone pair)
 const r=runs[1];const bodies=r.bodies.map(b=>JSON.stringify({payload:{judge_seat:b.seat,verdict_raw:b.verdict_raw,...b.fields,drv_uncured:0}}));
 const SBB=r.bodies.filter(b=>r.SB.some(x=>x.seat===b.seat)).map(b=>{const j=r.PB.judges.find(q=>q.seat===b.seat);return {seat:b.seat,api_model:j.body.model,run_token:r.PB.run_token,body:j.body,items:[]};});

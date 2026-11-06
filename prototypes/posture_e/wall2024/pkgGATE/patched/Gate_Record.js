@@ -1694,7 +1694,7 @@ function sbApply2024(seat,raw,F,its,RD){const one=s=>String(s==null?'':s).replac
   for(const o2 of [...new Set([o].concat(same))]){const p=map.get(o2);map.set(o2,{sid:x.sid,to,over:p&&p.sid!==x.sid?(p.over||[]).concat(p.sid):(p?p.over:[])});}}
  const build=M=>{let t=text;for(const [o,c] of M)t=t.split(o).join(c.to);return t;};
  // the keystone check (E-GATE, WALL-2024 2251): on the corrected text, the KEYSTONE line agrees with the keystone's collision lines (rule 0), and
- // with the verdict derived from all the collision lines (rule 2). Rule 1: a KEYSTONE BROKEN line with no broken keystone collision is exempt
+ // with the verdict derived from all the collision lines when it says BROKEN (rule 2). Rule 1: a KEYSTONE BROKEN line with no broken keystone collision is exempt
  // from rule 0 when its GROUND quotes a defender grant standing in the named defender round, or names a premise its CONCEDED LINKS line counts.
  // Only a change that touches a line of the contradiction is refused; a contradiction no change touched was already in the judgment.
  const keyChecks=(T)=>{const P=rcLines(T);if(!P.key)return [];const m=P.key.u.match(/^KEYSTONE\s*:\s*(D\d+)\s*(?:--|—|-|:)?\s*(STANDS|BROKEN|WITHDRAWN)\b/);if(!m)return [];const out=[];
@@ -1702,8 +1702,7 @@ function sbApply2024(seat,raw,F,its,RD){const one=s=>String(s==null?'':s).replac
   if(m[2]==='STANDS'&&br)out.push({k:m[1],rule:0,why:'KEYSTONE '+m[1]+' STANDS while '+kc.filter(z=>z.grade==='DEFENDER LINK BROKEN').map(z=>z.link).join(', ')+' is graded DEFENDER LINK BROKEN',lines:[P.key.raw].concat(kc.map(z=>z.raw))});
   if(m[2]==='BROKEN'&&!br&&!sbKeyExempt2024(P.key.raw,P,RD))out.push({k:m[1],rule:0,why:'KEYSTONE '+m[1]+' BROKEN while no '+m[1]+' collision line is graded DEFENDER LINK BROKEN, and its GROUND quotes no defender grant found in the named defender round and names no premise its CONCEDED LINKS line counts',lines:[P.key.raw].concat(kc.map(z=>z.raw))});
   if(m[2]!=='WITHDRAWN'){const bw=sbBrokenWord2024(P);const g0=new Map(rcLines(text).col.map(z=>[U(z.link),z.grade]));const fl=P.col.filter(z=>g0.has(U(z.link))&&(g0.get(U(z.link))==='DEFENDER LINK BROKEN')!==(z.grade==='DEFENDER LINK BROKEN'));
-   if(m[2]==='BROKEN'&&!bw)out.push({k:m[1],rule:2,why:'KEYSTONE '+m[1]+' BROKEN while the verdict derived from the corrected collision lines is not BROKEN',lines:[P.key.raw].concat(fl.map(z=>z.raw))});
-   if(m[2]==='STANDS'&&bw&&fl.length)out.push({k:m[1],rule:2,why:'KEYSTONE '+m[1]+' STANDS while the verdict derived from the corrected collision lines is BROKEN ('+fl.map(z=>z.link+' now '+(z.grade||'no grade')).join(', ')+')',lines:[P.key.raw].concat(fl.map(z=>z.raw))});}
+   if(m[2]==='BROKEN'&&!bw)out.push({k:m[1],rule:2,why:'KEYSTONE '+m[1]+' BROKEN while the verdict derived from the corrected collision lines is not BROKEN',lines:[P.key.raw].concat(fl.map(z=>z.raw))}); /* W3 2261 (b): no reverse half; a non-keystone collision broken under KEYSTONE STANDS is normal (BROKEN-1). Rule 0 covers the keystone's own collision. */}
   return out;};
  {const seen=new Set();for(const kx of keyChecks(build(map))){const kn=new Set(kx.lines.map(nrm));const hit=new Set();for(const [o,c] of [...map]){if(kn.has(nrm(c.to))||kn.has(nrm(o)))hit.add(c.sid);}for(const [o,c] of [...map]){if(hit.has(c.sid))map.delete(o);}for(const sid of hit){if(seen.has(sid))continue;seen.add(sid);const c=(ch.find(z=>z.sid===sid)||{});items.push({sid,kind:'CONTRADICTION',why:kx.why+' (the change is not applied)',to:String(c.to||''),lines:kx.lines});}}}
  if(!map.size&&!items.length&&!resTo)return null;
