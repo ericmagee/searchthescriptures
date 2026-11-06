@@ -1,0 +1,33 @@
+OK   base is live 683c995f (683c995f-22ea-4402-a74e-de1c7ee632d0)
+OK   17 nodes carry the status table; 14 of them hold cureVerdicts and get the silent flag
+OK   every live_sha equals this fetch, every final_sha equals the patched file
+OK   no node that defines enfUncured is left out
+OK   reverse edit: undoing exactly the three edits gives the live text in all 17 nodes
+OK   Panel Cure Check and Alternate Merge set drv_uncured through enfUncured, unchanged call sites
+OK   gemini: every silent item is UNCURED
+OK   gemini: every status and reason is unchanged by the build
+OK   gemini: silent items 0 = stored rows whose only reason is no written response (0); by rule {}
+OK   chatgpt: every silent item is UNCURED
+OK   chatgpt: every status and reason is unchanged by the build
+OK   chatgpt: silent items 1 = stored rows whose only reason is no written response (1); by rule {"K-CMT":1}
+OK   grok: every silent item is UNCURED
+OK   grok: every status and reason is unchanged by the build
+OK   grok: silent items 4 = stored rows whose only reason is no written response (4); by rule {"K-S3":3,"K-CMT":1}
+OK   sol: every silent item is UNCURED
+OK   sol: every status and reason is unchanged by the build
+OK   sol: silent items 13 = stored rows whose only reason is no written response (13); by rule {"K-S3":13}
+OK   sol: every silent item is UNCURED
+OK   sol: every status and reason is unchanged by the build
+OK   sol: silent items 19 = stored rows whose only reason is no written response (19); by rule {"K-S3":18,"K-CMT":1}
+INFO replayed statuses equal the stored cure_status on 115 of 122 rows (items are rebuilt from the log without rounds, so rules that read the rounds can differ; the build itself changes no status, checked above)
+     gemini   items  16  drv_uncured before 1  after 1  (silent 0; written but malformed, not counted 2)
+     chatgpt  items  22  drv_uncured before 1  after 2  (silent 1; written but malformed, not counted 0)
+     grok     items  24  drv_uncured before 0  after 4  (silent 4; written but malformed, not counted 0)
+     sol      items  27  drv_uncured before 0  after 13  (silent 13; written but malformed, not counted 0)
+     sol      items  33  drv_uncured before 0  after 19  (silent 19; written but malformed, not counted 0)
+OK   a TRIAL item the reply does not answer is silent and counts 1
+OK   its stored reason says in plain words that it counts: TRIAL rule, NO WRITTEN RESPONSE: counts in drv_uncured like a LIVE item (silence count): no written response
+OK   a failed cure call is not silence (counts 0 for a TRIAL item)
+OK   a written response that fails the TRIAL form stays recorded only (counts 0): no written response; malformed line: RESPONSE: K-W DEFENDER CR9 D9 #1: TOUCHES NO LINK because it is a recital.
+OK   a LIVE item counts as before (1 before, 1 after)
+ALL OK
