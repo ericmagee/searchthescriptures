@@ -1,0 +1,175 @@
+{
+ "base": "pkgRCLN/patched",
+ "nodes": [
+  {
+   "file": "Alt_Gate_Build.js",
+   "base_sha": "30046448d935b100",
+   "final_sha": "37ce62dfb59be275",
+   "edits": [
+    "kcmf2024 after the cure items"
+   ]
+  },
+  {
+   "file": "Alt_Gate_Record.js",
+   "base_sha": "2bb6fb7305de0495",
+   "final_sha": "bc07cda294559f9f",
+   "edits": [
+    "kcmf2024 after the cure items"
+   ]
+  },
+  {
+   "file": "Alternate_Build.js",
+   "base_sha": "cc5fea93aa7bba23",
+   "final_sha": "c258d18b74492de5",
+   "edits": [
+    "kcmf2024 after the cure items"
+   ]
+  },
+  {
+   "file": "Alternate_Cure_Build.js",
+   "base_sha": "e50df853fe94a07f",
+   "final_sha": "4c1ded9e4a7c19a1",
+   "edits": [
+    "kcmf2024 after the cure items"
+   ]
+  },
+  {
+   "file": "Alternate_Cure_Normalize.js",
+   "base_sha": "f4899b922cabe5cd",
+   "final_sha": "9b30ac729ad906eb",
+   "edits": [
+    "kcmf2024 after the cure items"
+   ]
+  },
+  {
+   "file": "Alternate_Merge.js",
+   "base_sha": "9894a9698a4a37fb",
+   "final_sha": "c021767781e1d69a",
+   "edits": [
+    "kcmf2024 after the cure items"
+   ]
+  },
+  {
+   "file": "Alternate_Merge_Seat.js",
+   "base_sha": "b31c3575a74855a7",
+   "final_sha": "deb045b44aaf45f0",
+   "edits": [
+    "kcmf2024 after the cure items"
+   ]
+  },
+  {
+   "file": "Alternate_Payloads.js",
+   "base_sha": "9d29564b0fee46a5",
+   "final_sha": "9d29564b0fee46a5",
+   "edits": []
+  },
+  {
+   "file": "Cure_Build.js",
+   "base_sha": "0c8f6688aa3a86f4",
+   "final_sha": "59506c773e75fb9f",
+   "edits": [
+    "kcmf2024 after the cure items"
+   ]
+  },
+  {
+   "file": "Cure_Check.js",
+   "base_sha": "12cb961e787dbba5",
+   "final_sha": "e1d81e43ebe4ed79",
+   "edits": [
+    "kcmf2024 after the cure items"
+   ]
+  },
+  {
+   "file": "Cure_Normalize.js",
+   "base_sha": "5e24b02b54beedc7",
+   "final_sha": "08518dcbc012ffd9",
+   "edits": [
+    "kcmf2024 after the cure items"
+   ]
+  },
+  {
+   "file": "Extract_Independent_Verdict.js",
+   "base_sha": "6b88948376dbe558",
+   "final_sha": "6b88948376dbe558",
+   "edits": []
+  },
+  {
+   "file": "Gate_Build.js",
+   "base_sha": "489503509b8e3cd7",
+   "final_sha": "adb9f71b801b351e",
+   "edits": [
+    "kcmf2024 after the cure items"
+   ]
+  },
+  {
+   "file": "Gate_Record.js",
+   "base_sha": "efd120c32fc1541c",
+   "final_sha": "01c0aee7d93d03d1",
+   "edits": [
+    "kcmf2024 after the cure items"
+   ]
+  },
+  {
+   "file": "Panel_Cure_Build_1.js",
+   "base_sha": "fb5695edea9e62e4",
+   "final_sha": "92e82b1dfb018b85",
+   "edits": [
+    "kcmf2024 after the cure items"
+   ]
+  },
+  {
+   "file": "Panel_Cure_Build_2.js",
+   "base_sha": "54660674d23a8594",
+   "final_sha": "91a1150674048ae1",
+   "edits": [
+    "kcmf2024 after the cure items"
+   ]
+  },
+  {
+   "file": "Panel_Cure_Build_3.js",
+   "base_sha": "5008be63afda8a84",
+   "final_sha": "5b47706a6aee075c",
+   "edits": [
+    "kcmf2024 after the cure items"
+   ]
+  },
+  {
+   "file": "Panel_Cure_Check.js",
+   "base_sha": "0b47ef2219cc0e76",
+   "final_sha": "288e5150efe687b6",
+   "edits": [
+    "kcmf2024 after the cure items"
+   ]
+  },
+  {
+   "file": "Panel_Cure_Normalize_1.js",
+   "base_sha": "0cd247529ebaae83",
+   "final_sha": "83f781e9596a5ecf",
+   "edits": [
+    "kcmf2024 after the cure items"
+   ]
+  },
+  {
+   "file": "Panel_Cure_Normalize_2.js",
+   "base_sha": "67d27dfb71090004",
+   "final_sha": "99aed94e7076e1a8",
+   "edits": [
+    "kcmf2024 after the cure items"
+   ]
+  },
+  {
+   "file": "Panel_Cure_Normalize_3.js",
+   "base_sha": "947499825d90801c",
+   "final_sha": "b45a73cd61f8f4a1",
+   "edits": [
+    "kcmf2024 after the cure items"
+   ]
+  },
+  {
+   "file": "Panel_Payloads.js",
+   "base_sha": "c70274c9107ba1ec",
+   "final_sha": "c70274c9107ba1ec",
+   "edits": []
+  }
+ ]
+}

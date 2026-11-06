@@ -1,0 +1,49 @@
+OK   22 nodes: shas match the plan; 19 cure nodes edited, 3 unchanged
+   gemini K-G4 D1 vs C1: log CURED, base CURED, pkgKCMF CURED
+   gemini K-G4 D2 vs C6: log CURED, base CURED, pkgKCMF CURED
+   gemini K-G4 D3 vs C1: log CURED, base CURED, pkgKCMF CURED
+   gemini K-G4 D4 vs C5: log CURED, base CURED, pkgKCMF CURED
+   gemini K-G4 D5 vs C4: log CURED, base CURED, pkgKCMF CURED
+   gemini K-G3 CHALLENGER STANDING: log CURED, base CURED, pkgKCMF CURED
+   gemini K-W DEFENDER CR2 no link heading #1: log CURED, base CURED, pkgKCMF CURED
+   gemini K-W DEFENDER CR2 no link heading #2: log CURED, base CURED, pkgKCMF CURED
+   gemini K-W DEFENDER CR2 no link heading #3: log CURED, base CURED, pkgKCMF CURED
+   gemini K-W DEFENDER CR3 LINK 1 #4: log CURED, base CURED, pkgKCMF CURED
+   gemini K-W DEFENDER CR3 LINK 3 #5: log CURED, base CURED, pkgKCMF CURED
+   gemini K-W DEFENDER CR3 LINK 5 #6: log CURED, base CURED, pkgKCMF CURED
+   gemini K-W DEFENDER CR3 LINK 5 #7: log CURED, base CURED, pkgKCMF CURED
+   gemini K-W DEFENDER CR3 LINK 6 #8: log CURED, base CURED, pkgKCMF CURED
+   gemini K-CMT contested grades without a commitment: log UNCURED, base UNCURED, pkgKCMF CURED  <-- every contested line is answered on K-CMTL (6 lines, each naming its commitment or NOT A GRADE); the grouped RESPONSE al
+   gemini K-CMTL line 1: log CURED, base CURED, pkgKCMF CURED
+   gemini K-CMTL line 2: log CURED, base CURED, pkgKCMF CURED
+   gemini K-CMTL line 3: log CURED, base CURED, pkgKCMF CURED
+   gemini K-CMTL line 4: log CURED, base CURED, pkgKCMF CURED
+   gemini K-CMTL line 5: log CURED, base CURED, pkgKCMF CURED
+   gemini K-CMTL line 6: log CURED, base CURED, pkgKCMF CURED
+   gemini K-RUL D1 vs C1: log CURED, base CURED, pkgKCMF CURED
+   gemini K-RUL D2 vs C6: log CURED, base CURED, pkgKCMF CURED
+   gemini K-RUL D3 vs C1: log CURED, base CURED, pkgKCMF CURED
+   gemini K-RUL D4 vs C5: log CURED, base CURED, pkgKCMF CURED
+   gemini K-RUL D5 vs C4: log CURED, base CURED, pkgKCMF CURED
+   sol K-G4 D5 vs C1: log CURED, base CURED, pkgKCMF CURED
+   sol K-S3 S3 DEFENDER CR4: #1: log CURED, base CURED, pkgKCMF CURED
+   sol K-V CHALLENGER premise 3: log UNCURED, base UNCURED, pkgKCMF UNCURED
+   sol K-W DEFENDER CR2 no link heading #1: log CURED, base CURED, pkgKCMF CURED
+   sol K-W DEFENDER CR2 no link heading #2: log CURED, base CURED, pkgKCMF CURED
+   sol K-W DEFENDER CR2 no link heading #3: log CURED, base CURED, pkgKCMF CURED
+   sol K-W DEFENDER CR3 LINK 1 #4: log CURED, base CURED, pkgKCMF CURED
+   sol K-W DEFENDER CR3 LINK 3 #5: log CURED, base CURED, pkgKCMF CURED
+   sol K-W DEFENDER CR3 LINK 5 #6: log CURED, base CURED, pkgKCMF CURED
+   sol K-W DEFENDER CR3 LINK 5 #7: log CURED, base CURED, pkgKCMF CURED
+   sol K-W DEFENDER CR3 LINK 6 #8: log CURED, base CURED, pkgKCMF CURED
+   sol K-CMT contested grades without a commitment: log CURED, base CURED, pkgKCMF CURED
+   sol K-CMTL line 1: log CURED, base CURED, pkgKCMF CURED
+   sol K-RUL D5 vs C1: log CURED, base CURED, pkgKCMF CURED
+OK   self-check: the base replay gives the log status on every gemini and sol row
+OK   33083 gemini: the grouped K-CMT item goes UNCURED -> CURED (all 6 K-CMTL lines CURED); LIVE uncured 1 -> 0
+OK   every other row is unchanged (gemini and sol)
+OK   unit: one K-CMTL line unanswered keeps the grouped item UNCURED
+OK   unit: no K-CMTL items: the grouped item as before
+OK   unit: all K-CMTL lines answered: CURED
+7 OK, 0 FAIL
+corpus/replay_cure.cjs pkgRCLN vs pkgKCMF: 516 cure rows, output identical line for line
