@@ -1,0 +1,24 @@
+OK   9 nodes; base and final shas match
+OK   33107: Eric's example "I grant these state David's descent for the promised king." is harvested from [CR3]
+OK   every harvested grant stands word for word in its round
+OK   unit: a quoted grant, a heading and "I grant nothing" are not harvested
+OK   33149: a DR4 that lists every grant word for word passes (17 of 17)
+OK   33149: an omitted grant is caught: G3
+OK   33149: a misquoted grant is caught: G2 (the quotation does not stand in [CR2])
+OK   33149: a grant under the wrong round is caught: G2 (the quotation does not stand in [CR3])
+OK   33149: a G+ line whose quotation the round does not hold is caught
+OK   33149: no section: every grant missing
+OK   strip: the section quotation (Deuteronomy 22:24) is removed; the SUPPORTS verse and the text after the section are kept
+     OPPONENT'S GRANTS: | G1 [CR2] "" -- SUPPORTS: the marriage-knowing claim (Matthew 1:19) |  | My close names Exodus 3:14 anew.
+OK   strip: a DR4 with no section is unchanged
+OK   Build_Synthesis.js: C4P.of reads the stripped [DR4]
+OK   Build_Independent_Verdict.js: C4P.of reads the stripped [DR4]
+OK   Build_Save_Body.js: C4P.of reads the stripped [DR4]
+OK   Panel_Build.js: C4P.of reads the stripped [DR4]
+OK   Format_Markdown.js: C4P.of reads the stripped [DR4]
+OK   D4_Build.js: C4P.of reads the stripped [DR4]
+OK   D4_Extract.js: C4P.of reads the stripped [DR4]
+OK   C4_Build.js: C4P.of reads the stripped [DR4]
+OK   C4_Extract.js: C4P.of reads the stripped [DR4]
+OK   C4 Build: 17 grants on the item; the request carries the list and the OPPONENT'S GRANTS instruction before CLOSE ROUND
+22 OK, 0 FAIL

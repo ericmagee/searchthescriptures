@@ -1,0 +1,68 @@
+{
+ "base": "live ff8967bb",
+ "nodes": [
+  {
+   "file": "Build_Synthesis.js",
+   "base": "prewrite_kgw_7796fc67.json",
+   "base_sha": "b086cba704efd1e2",
+   "final_sha": "ed06903c77ed3a82",
+   "edits": 1
+  },
+  {
+   "file": "Build_Independent_Verdict.js",
+   "base": "pkgUND/patched",
+   "base_sha": "79b5529a71fff7b2",
+   "final_sha": "939523826959bd9e",
+   "edits": 1
+  },
+  {
+   "file": "Build_Save_Body.js",
+   "base": "prewrite_kgw_7796fc67.json",
+   "base_sha": "2e0f16be5489db61",
+   "final_sha": "8eeee5fa1b7a2e10",
+   "edits": 1
+  },
+  {
+   "file": "Panel_Build.js",
+   "base": "pkgUND/patched",
+   "base_sha": "60b853645aabf085",
+   "final_sha": "23ddbb052c202089",
+   "edits": 1
+  },
+  {
+   "file": "Format_Markdown.js",
+   "base": "prewrite_kgw_7796fc67.json",
+   "base_sha": "0d32f77790d2783c",
+   "final_sha": "4938379250d6bc3f",
+   "edits": 1
+  },
+  {
+   "file": "D4_Build.js",
+   "base": "prewrite_kgw_7796fc67.json",
+   "base_sha": "1e1d4d2843deb140",
+   "final_sha": "3ec856b5a6f399dd",
+   "edits": 1
+  },
+  {
+   "file": "D4_Extract.js",
+   "base": "prewrite_kgw_7796fc67.json",
+   "base_sha": "d161c3c235ba8b9c",
+   "final_sha": "aa959136745a9103",
+   "edits": 1
+  },
+  {
+   "file": "C4_Build.js",
+   "base": "prewrite_kgw_7796fc67.json",
+   "base_sha": "fb9993664bbb2696",
+   "final_sha": "6f00eb72a25fe8c9",
+   "edits": 5
+  },
+  {
+   "file": "C4_Extract.js",
+   "base": "prewrite_kgw_7796fc67.json",
+   "base_sha": "106704497b20c9ec",
+   "final_sha": "30f727ad3b60723a",
+   "edits": 4
+  }
+ ]
+}
