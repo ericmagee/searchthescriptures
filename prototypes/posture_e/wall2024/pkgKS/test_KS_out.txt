@@ -1,0 +1,16 @@
+OK   22 nodes: base and final shas match the plan
+OK   every node parses as an n8n Code node body
+OK   the 6 gate-library nodes carry all 7 edits, the 13 other cure-library nodes 6, the 3 payload/verdict nodes 5
+OK   base (pkgFC, as live): grok 33020 G2 line raises nothing beside its FORCED line
+OK   pkgKS: grok 33020 G2 line raises K-G4 DEFENDER D1 vs C2 (the FORCED line breaks the challenger)
+OK   pkgKS: the same line graded CHALLENGER LINK BROKEN is still exempt by that FORCED line
+OK   pkgKS: a FORCED line with MEANS [DR2] exempts a DEFENDER LINK BROKEN line
+OK   K-G4 cure: base cures a DEFENDER item with a FORCED line that breaks the challenger
+OK   K-G4 cure: pkgKS does not
+OK   K-G4 cure: pkgKS cures it with a FORCED line that breaks the defender (MEANS [DR2])
+OK   K-F: base finds the challenger-side FORCED line enough for a DEFENDER forced break; pkgKS raises "no FORCED line"
+OK   gate: a FORCED line that breaks the challenger does not cure a DEFENDER RULE K-G4 item, and says why
+   replay of 35 stored judgments with a FORCED line; changes:
+     judgment 983 grok (debate fcbaf09e-4855-4302-b357-c6929d961666): drvCheck +[K-G4 DEFENDER D1 vs C2] -[] kfLines +[] -[]
+OK   replay: every change only adds an item (no exemption is gained)
+13 OK, 0 FAIL
