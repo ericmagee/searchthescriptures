@@ -1,0 +1,30 @@
+OK   4 nodes; base (pkgABS/patched) and final shas match
+OK   the UND module is byte-identical in all 4 pkgUNP nodes
+== 33040  pressed: p1->D1 p2->D2 p3->D3 p4->D4 p5->D5 p6->D6
+   gemini   live E-UNG [D1, D2, D3, D4, D5, D6]  ->  pkgUNP [D1(p1), D2(p2), D3(p3), D4(p4), D5(p5), D6(p6)]
+   chatgpt  live E-UNG []  ->  pkgUNP []
+   grok     live E-UNG [D1, D3, D4, D5, D6]  ->  pkgUNP [D1(p1), D3(p3), D4(p4), D5(p5), D6(p6)]
+== 33060  pressed: p1->D1 p2->D2 p3->D3 p4->D4 p5->D5 p6->D6
+   gemini   live E-UNG [D1, D2, D3, D4, D5, D6]  ->  pkgUNP [D1(p1), D2(p2), D3(p3), D4(p4), D5(p5), D6(p6)]
+   chatgpt  live E-UNG []  ->  pkgUNP []
+== 33083  pressed: p1->D1 p2->D2 p3->D3 p4->D4 p5->D5 p6->D6
+   gemini   live E-UNG [D6]  ->  pkgUNP [D6(p6)]
+   chatgpt  live E-UNG []  ->  pkgUNP []
+   sol      live E-UNG [D6]  ->  pkgUNP [D6(p6)]
+== 33107  pressed: p1->D1 p2->D2 p3->D3 p4->D4 p5->D5 p6->D6
+   gemini   live E-UNG [D1, D2, D3, D4, D5, D6]  ->  pkgUNP [D1(p1), D2(p2), D3(p3), D4(p4), D5(p5), D6(p6)]
+   chatgpt  live E-UNG []  ->  pkgUNP []
+   sol      live E-UNG [D1]  ->  pkgUNP [D1(p1)]
+== 33129  pressed: p1->D1 p2->D2 p3->D3 p4->D4 p5->D5 p6->D6
+   gemini   live E-UNG [D1, D2, D3, D4, D5, D6]  ->  pkgUNP [D1(p1), D2(p2), D3(p3), D4(p4), D5(p5), D6(p6)]
+   chatgpt  live E-UNG []  ->  pkgUNP []
+   sol      live E-UNG [D4]  ->  pkgUNP [D4(p4)]
+== 33149  pressed: p1->D6 p4->D2 p5->D3 p6->D4
+   gemini   live E-UNG [D5]  ->  pkgUNP []
+   chatgpt  live E-UNG [D1, D5]  ->  pkgUNP []
+   sol      live E-UNG [D5]  ->  pkgUNP []
+OK   33149: live raised gemini D5, sol D5, chatgpt D1 and D5; pkgUNP raises none of them (the list presses D6, D2, D3, D4)
+OK   unit: LINK k presses D<k>, once; no token keeps its place number; LINK none is skipped
+     [[1,6],[3,2],[4,4]]
+
+4 OK, 0 FAIL
