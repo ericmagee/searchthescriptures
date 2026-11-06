@@ -1,0 +1,53 @@
+OK   19 nodes
+OK   Alt Gate Build: shas match
+OK   Alt Gate Build: parses; the cure check and the label both use g4Unans2024; DRV_WORDS unchanged
+OK   Alt Gate Record: shas match
+OK   Alt Gate Record: parses; the cure check and the label both use g4Unans2024; DRV_WORDS unchanged
+OK   Alternate Build: shas match
+OK   Alternate Build: parses; the cure check and the label both use g4Unans2024; DRV_WORDS unchanged
+OK   Alternate Cure Build: shas match
+OK   Alternate Cure Build: parses; the cure check and the label both use g4Unans2024; DRV_WORDS unchanged
+OK   Alternate Cure Normalize: shas match
+OK   Alternate Cure Normalize: parses; the cure check and the label both use g4Unans2024; DRV_WORDS unchanged
+OK   Alternate Merge: shas match
+OK   Alternate Merge: parses; the cure check and the label both use g4Unans2024; DRV_WORDS unchanged
+OK   Alternate Merge Seat: shas match
+OK   Alternate Merge Seat: parses; the cure check and the label both use g4Unans2024; DRV_WORDS unchanged
+OK   Cure Build: shas match
+OK   Cure Build: parses; the cure check and the label both use g4Unans2024; DRV_WORDS unchanged
+OK   Cure Check: shas match
+OK   Cure Check: parses; the cure check and the label both use g4Unans2024; DRV_WORDS unchanged
+OK   Cure Normalize: shas match
+OK   Cure Normalize: parses; the cure check and the label both use g4Unans2024; DRV_WORDS unchanged
+OK   Gate Build: shas match
+OK   Gate Build: parses; the cure check and the label both use g4Unans2024; DRV_WORDS unchanged
+OK   Gate Record: shas match
+OK   Gate Record: parses; the cure check and the label both use g4Unans2024; DRV_WORDS unchanged
+OK   Panel Cure Build 1: shas match
+OK   Panel Cure Build 1: parses; the cure check and the label both use g4Unans2024; DRV_WORDS unchanged
+OK   Panel Cure Build 2: shas match
+OK   Panel Cure Build 2: parses; the cure check and the label both use g4Unans2024; DRV_WORDS unchanged
+OK   Panel Cure Build 3: shas match
+OK   Panel Cure Build 3: parses; the cure check and the label both use g4Unans2024; DRV_WORDS unchanged
+OK   Panel Cure Check: shas match
+OK   Panel Cure Check: parses; the cure check and the label both use g4Unans2024; DRV_WORDS unchanged
+OK   Panel Cure Normalize 1: shas match
+OK   Panel Cure Normalize 1: parses; the cure check and the label both use g4Unans2024; DRV_WORDS unchanged
+OK   Panel Cure Normalize 2: shas match
+OK   Panel Cure Normalize 2: parses; the cure check and the label both use g4Unans2024; DRV_WORDS unchanged
+OK   Panel Cure Normalize 3: shas match
+OK   Panel Cure Normalize 3: parses; the cure check and the label both use g4Unans2024; DRV_WORDS unchanged
+   K-G4 items replayed: 27 (32973 2, 32980 10, 32985 15)
+OK   no item loses UNANSWERED-WITNESS
+   items whose class changes (4):
+     32980 chatgpt D3 vs C2 (UNCURED on the run): MEANING -> UNANSWERED-WITNESS | GROUND: The challenger does not answer the pressed explanation of Joseph's intention.
+     32985 chatgpt D2 vs C2 (UNCURED on the run): MEANING -> UNANSWERED-WITNESS | GROUND: The defender did not answer the pressed claim that the sign was bounded to a child of Isaiah's day.
+     32985 chatgpt D5 vs C5 (UNCURED on the run): MEANING -> UNANSWERED-WITNESS | GROUND: The defender did not answer the pressed meaning that the line from Abraham to Levi runs through fathers.
+     32985 sol D1 vs C1 (UNCURED on the run): MEANING -> UNANSWERED-WITNESS | GROUND: The proven non-conception application of the begetting-word receives no answer showing its fit with the asserted conception-exclusive argument.
+OK   2294 (c): chatgpt D2 vs C2, D5 vs C5 and sol D1 vs C1 in 32985 move to UNANSWERED-WITNESS
+OK   a phrase inside a quotation in the GROUND does not count
+OK   a phrase before GROUND (in the header or verses) does not count
+OK   a line with no GROUND keeps the old class
+OK   each new phrase counts in the GROUND
+OK   an apostrophe inside a word does not open a quotation
+46 OK 0 FAIL
