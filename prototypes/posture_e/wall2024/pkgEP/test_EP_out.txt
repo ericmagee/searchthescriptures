@@ -1,0 +1,7 @@
+OK   2 nodes; base shas = pkgCM/patched, final shas = pkgEP/patched
+OK   Judge Enforcer Build: RULES evaluates; it equals the base plus exactly the two new sentences
+OK   Judge Enforcer Build: the source minus the two new sentences is byte-identical to the base
+OK   Alt Judge Enforcer Build: RULES evaluates; it equals the base plus exactly the two new sentences
+OK   Alt Judge Enforcer Build: the source minus the two new sentences is byte-identical to the base
+OK   E-ANS and E-PREM stay RECORD-ONLY TRIAL (the row text is unchanged)
+6 OK, 0 FAIL

@@ -1,0 +1,25 @@
+{
+ "base": "pkgCM/patched",
+ "nodes": [
+  {
+   "file": "Judge_Enforcer_Build.js",
+   "name": "Judge Enforcer Build",
+   "base_sha": "ff64541ae67fd48b",
+   "final_sha": "0f266283753919da",
+   "edits": [
+    "E-ANS second-limb line",
+    "E-PREM NARROWED is SPARED line"
+   ]
+  },
+  {
+   "file": "Alt_Judge_Enforcer_Build.js",
+   "name": "Alt Judge Enforcer Build",
+   "base_sha": "722fadebf8fe0c9f",
+   "final_sha": "29a06ca7c0f31f99",
+   "edits": [
+    "E-ANS second-limb line",
+    "E-PREM NARROWED is SPARED line"
+   ]
+  }
+ ]
+}

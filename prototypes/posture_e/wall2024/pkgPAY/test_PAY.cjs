@@ -1,5 +1,5 @@
 // pkgPAY test. Run from wall2024/: node pkgPAY/test_PAY.cjs
-// pkgPAY/readers: Judge_Enforcer_Build and Alt_Judge_Enforcer_Build are the live code (pkgCM/patched, 868b0814); Enforcer_Build and Format_Markdown are W2's workflow snapshot of 2026-11-05 20:41 CST (the n8n read failed today): the live-test thread checks those two against live before the write.
+// pkgPAY/readers: all four reader files are the live code from /mnt/project-files/wall2024/prewrite_stack9_868b0814.json (the saved live workflow before the 9-package write; that write touched none of these 4 nodes). Every live node naming a cure Normalize node: Format Markdown, Cure Check, Panel Cure Check, Alternate Merge Seat, Enforcer Build, Judge Enforcer Build, Alt Judge Enforcer Build; all are covered here or above.
 // For each saved run: (1) the new Normalize code forwards every cure field unchanged except body, and enfPrompt of the slim body equals
 // enfPrompt of the full body; (2) Panel Cure Check run on the slim Normalize outputs gives the same output as on the stored ones (the
 // enforcer_log time stamp 'at' aside), prompt_sent included; (3) the size saved.
