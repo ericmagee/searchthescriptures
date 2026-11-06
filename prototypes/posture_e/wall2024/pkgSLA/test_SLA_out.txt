@@ -1,0 +1,13 @@
+OK   6 nodes; base (pkgSLA/base = live 22e92b40) and final shas match
+OK   sbApply2024 is the same in all 6 patched nodes
+OK   33175 shape: base refuses the CHALLENGER CONCEDED LINKS change ("the flagged line is not in the judge text")
+OK   33175 shape: pkgSLA applies it over the judge's own CHALLENGER CONCEDED LINKS line
+     [["CHALLENGER CONCEDED LINKS: 1 -- Premise ","VOID; its charge is the challenger's quoted claim."]]
+OK   33175 shape: the defender CONCEDED LINKS line is untouched
+OK   a CHANGE TO with no label ("Premise 4: NOT VOID ...", 33175 S9/S11) is still refused
+OK   two judge lines with the label: refused as before
+OK   one collision line with the label: applied over it
+  REPLAY: 321 send-back items; changes:
+   33160 gemini: NOT APPLIED ["S4","G2","G3","G4","G5"] -> ["S4"]; fields {"verdict_tag":"HELD","defense_standing":"SELF-SUPPORTED","conceded_links":0,"challenge_standing":"SELF-SUPPORTED","challenger_conceded_links":0} -> {"verdict_tag":"HELD","defense_standing":"SELF-SUPPORTED","conceded_links":0,"challenge_standing":"SELF-SUPPORTED","challenger_conceded_links":0} | 1
+OK   replay ran on stored items
+9 OK, 0 FAIL
