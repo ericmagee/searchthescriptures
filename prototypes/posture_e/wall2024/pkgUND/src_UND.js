@@ -27,7 +27,8 @@ const UND=(()=>{
   return {ok:!f.length,l1:c.l1,faults:f,why:f.length?f.join(' | '):'[L1] '+c.l1+'; states what the record leaves open'};}
  const isUndBroken=x=>x&&x.rule==='E-HOLD'&&/UNDERDETERMINED/.test(String(x.flagged_line||x.line||''))&&/\(right:\s*BROKEN\)/i.test(String(x.cure_reason||x.reason||''));
  const CURE_UNG=n=>'MISSING COLLISION GRADE (E-UNG, ENFORCED, pkgUND): the challenger presses D'+n+' in the list that closes [DR2], and your COLLISION POINTS has no graded D'+n+' vs C<j> line. A "D'+n+': STANDS" line does not grade a pressed link. CHANGE TO the graded line: D'+n+' vs C<j> (<verse>): DEFENDER LINK BROKEN | CHALLENGER LINK BROKEN | UNDERDETERMINED -- <one clause of why> -- GROUND: <a BROKEN grade in its layers (Commitment 13); an UNDERDETERMINED grade with [L1] <reference> "<the KJV words both readings rest on>" and what the record leaves open>. Any grade may be chosen; the grade is yours. A KEEP does not cure this item.';
- const CURE_UND='UNDERDETERMINED GIVES ITS GROUNDS (E-HOLD on UNDERDETERMINED, ENFORCED, pkgUND): the enforcer reads this line as BROKEN; the decision stays yours. Either regrade it (CHANGE TO the BROKEN line in its counted layers, Commitment 13, or a STANDS line), or CHANGE TO: RETRACTED, or keep UNDERDETERMINED by CHANGE TO the same line with, after GROUND:, [L1] <reference> "<the KJV words both readings rest on>" and what the record leaves open (for example: "the record leaves open whether ..."). A KEEP does not cure this item.';
+ const CURE_UND='UNDERDETERMINED GIVES ITS GROUNDS (E-HOLD on UNDERDETERMINED, ENFORCED, pkgUND): the enforcer reads this line as BROKEN; the decision stays yours. Either regrade it (CHANGE TO the BROKEN line in its counted layers, Commitment 13, or a STANDS line that quotes the answer\'s positive fit, [CR<n>] "<the answer\'s words>", with [L1] <reference> "<KJV words>"), or CHANGE TO: RETRACTED, or keep UNDERDETERMINED by CHANGE TO the same line with, after GROUND:, [L1] <reference> "<the KJV words both readings rest on>" and what the record leaves open (for example: "the record leaves open whether ..."). A KEEP does not cure this item.';
+ const FIT=/\[(?:CR|DR)[1-4]\][^"“\n]{0,60}["“][^"”]{6,}["”]|\bANSWER\b[^"“\n]{0,40}["“][^"”]{6,}["”]/;
  const GRADED1=n=>new RegExp('\\bD'+n+'\\s+vs\\.?\\s+C\\d+\\b[^\\n]{0,200}?:\\s*\\**\\s*(DEFENDER LINK BROKEN|CHALLENGER LINK BROKEN|UNDERDETERMINED|WITHDRAWN AFTER)','i');
  // the cure of one item from the judge's send-back answer a = {ans:'KEEP'|'CHANGE'|'NO ANSWER', to}
  function cure(it,a,ctx){const res=(c,why)=>({status:c?'CURED':'UNCURED',why});a=a||{ans:'NO ANSWER'};const to=String(a.to||'').replace(/\\+"/g,'"').trim();
@@ -39,6 +40,8 @@ const UND=(()=>{
   // E-HOLD on an UNDERDETERMINED line
   if(/\bUNDERDETERMINED\b/.test(to)){const u=undOk(to,ctx);return res(u.ok,'kept UNDERDETERMINED; '+u.why);}
   if(/\bLINK BROKEN\b/.test(to)||/^\s*FORCED\b/i.test(to)){const c=ECL.check(to,ctx);return res(!c.faults.length,'regraded BROKEN; '+c.why);}
-  if(/\bSTANDS\b/.test(to))return res(true,'regraded STANDS');
+  if(/\b(?:STANDS|MEETS)\b/.test(to)){const c=ECL.check('FORCED: X -- GROUND: '+to,ctx);const fit=FIT.test(to); /* W3: a STANDS or MEETS regrade quotes the answer's positive fit with a counted [L1] */
+   const f=[];if(c.l1==='NONE')f.push('no [L1]');else if(c.l1==='NOT COUNTED')f.push('no counted [L1]');if(!fit)f.push('no quote of the answer\'s fit (the answer\'s own words with its round, e.g. [CR3] "<words>")');
+   return res(!f.length,'regraded '+(/\bMEETS\b/.test(to)?'MEETS':'STANDS')+(f.length?'; '+f.join(' | '):'; [L1] '+c.l1+', quotes the answer\'s fit'));}
   return res(false,'the CHANGE TO neither regrades the line, retracts it, nor keeps UNDERDETERMINED with its grounds');}
  return {rounds,pressed,graded,missing,undOk,isUndBroken,cure,CURE_UNG,CURE_UND};})();

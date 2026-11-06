@@ -25,8 +25,12 @@ OK   cure: E-HOLD-UND kept UNDERDETERMINED without [L1]: UNCURED
      kept UNDERDETERMINED; no [L1]: no verse is quoted with its reference under an [L1] tag | the line does not state what the record leaves open (for example: "the record leaves open whether ...", "both readings agree with ...")
 OK   cure: E-HOLD-UND regraded DEFENDER LINK BROKEN with counted layers: CURED
      regraded BROKEN; layers counted: [L1] COUNTED
-OK   cure: E-HOLD-UND regraded STANDS: CURED
-     regraded STANDS
+OK   cure: E-HOLD-UND regraded to a bare STANDS (W3): UNCURED
+     regraded STANDS; no [L1] | no quote of the answer's fit (the answer's own words with its round, e.g. [CR3] "<words>")
+OK   cure: E-HOLD-UND regraded STANDS quoting the answer's fit with a counted [L1] (W3): CURED
+     regraded STANDS; [L1] COUNTED, quotes the answer's fit
+OK   cure: E-HOLD-UND regraded MEETS quoting the fit but no [L1] (W3): UNCURED
+     regraded MEETS; no [L1]
 OK   cure: no answer: UNCURED
      no answer (pkgUND)
   == 33040: base 51 items, pkgUND 62 (E-UNG 11, E-HOLD on UNDERDETERMINED marked 2)
@@ -79,4 +83,4 @@ OK   Send_Back_Record.js: UND.cure on E-UNG and marked items; UNCURED counted in
 OK   Alt_Send_Back_Record.js: UND.cure on E-UNG and marked items; UNCURED counted in drv_uncured with an AUDIT v42 line; reported in und_counted
 OK   Panel Build and Build Independent Verdict state the pressed-link rule and the UNDERDETERMINED ground, once each
 
-26 OK, 0 FAIL
+28 OK, 0 FAIL

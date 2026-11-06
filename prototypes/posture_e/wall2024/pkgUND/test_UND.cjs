@@ -26,7 +26,9 @@ const cu=[['E-UNG KEEP',ung,{ans:'KEEP'},'UNCURED'],['E-UNG CHANGE TO "D1: STAND
  ['E-HOLD-UND KEEP',hu,{ans:'KEEP'},'UNCURED'],['E-HOLD-UND RETRACTED',hu,{ans:'CHANGE',to:'RETRACTED: D6 vs C6'},'CURED'],
  ['E-HOLD-UND kept UNDERDETERMINED with its grounds',hu,{ans:'CHANGE',to:c6ok},'CURED'],['E-HOLD-UND kept UNDERDETERMINED without [L1]',hu,{ans:'CHANGE',to:c6},'UNCURED'],
  ['E-HOLD-UND regraded DEFENDER LINK BROKEN with counted layers',hu,{ans:'CHANGE',to:'D6 vs C6 (Luke 1:36): DEFENDER LINK BROKEN -- x -- GROUND: [L1] Luke 1:36 "thy cousin Elisabeth"'},'CURED'],
- ['E-HOLD-UND regraded STANDS',hu,{ans:'CHANGE',to:'D6 vs C6 (Luke 1:36): STANDS -- GROUND: x'},'CURED'],['no answer',hu,{ans:'NO ANSWER'},'UNCURED']];
+ ['E-HOLD-UND regraded to a bare STANDS (W3)',hu,{ans:'CHANGE',to:'D6 vs C6 (Luke 1:36): STANDS -- GROUND: x'},'UNCURED'],
+ ['E-HOLD-UND regraded STANDS quoting the answer\'s fit with a counted [L1] (W3)',hu,{ans:'CHANGE',to:'D6 vs C6 (Luke 1:36): STANDS -- [CR3] "I grant this states Mary\'s kin and no father" fits the kin reading -- GROUND: [L1] Luke 1:36 "thy cousin Elisabeth"'},'CURED'],
+ ['E-HOLD-UND regraded MEETS quoting the fit but no [L1] (W3)',hu,{ans:'CHANGE',to:'D6 vs C6 (Luke 1:36): MEETS -- [CR3] "I grant this states Mary\'s kin and no father" fits -- GROUND: x'},'UNCURED'],['no answer',hu,{ans:'NO ANSWER'},'UNCURED']];
 cu.forEach(([n,it,a,w])=>{const r=U.cure(it,a,D);T('cure: '+n+': '+r.status,r.status===w,r.why);});
 // (3) Send Back Build replay 33040 to 33107: the enforcer rows as stored (Gate Record), the judges' texts (Panel Cure Check), the verses each run read
 const I=(run,n)=>{const f='/mnt/project-files/wall2024/inputs/'+run+'_'+n+'.json';if(!fs.existsSync(f))return null;const r=JSON.parse(fs.readFileSync(f,'utf8'))[0];return ((r.main||(r.data&&r.data.main))[0]).map(x=>x.json);};
