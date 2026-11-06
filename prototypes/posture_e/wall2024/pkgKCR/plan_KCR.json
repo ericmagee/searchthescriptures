@@ -1,0 +1,176 @@
+{
+ "base": "pkgKCON/patched (Panel Payloads: pkgVC/patched)",
+ "nodes": [
+  {
+   "file": "Alternate_Build.js",
+   "name": "Alternate Build",
+   "base": "pkgKCON/patched/Alternate_Build.js",
+   "base_sha": "9cac04e9965df507",
+   "final_sha": "6746895fee68afe7",
+   "edits": [
+    "krulCure K-CON reads labelled lines"
+   ]
+  },
+  {
+   "file": "Alternate_Cure_Build.js",
+   "name": "Alternate Cure Build",
+   "base": "pkgKCON/patched/Alternate_Cure_Build.js",
+   "base_sha": "579b148f0d493d82",
+   "final_sha": "377fb0da84dd545c",
+   "edits": [
+    "krulCure K-CON reads labelled lines"
+   ]
+  },
+  {
+   "file": "Alternate_Cure_Normalize.js",
+   "name": "Alternate Cure Normalize",
+   "base": "pkgKCON/patched/Alternate_Cure_Normalize.js",
+   "base_sha": "91ac709799e341e6",
+   "final_sha": "f62d0c0314a31d30",
+   "edits": [
+    "krulCure K-CON reads labelled lines"
+   ]
+  },
+  {
+   "file": "Alternate_Merge.js",
+   "name": "Alternate Merge",
+   "base": "pkgKCON/patched/Alternate_Merge.js",
+   "base_sha": "a3c9ef0da3354237",
+   "final_sha": "1326d20acb152b32",
+   "edits": [
+    "krulCure K-CON reads labelled lines"
+   ]
+  },
+  {
+   "file": "Alternate_Payloads.js",
+   "name": "Alternate Payloads",
+   "base": "pkgKCON/patched/Alternate_Payloads.js",
+   "base_sha": "5920f6d5ce6bacc8",
+   "final_sha": "b20dacb6b48a0bdc",
+   "edits": [
+    "krulCure K-CON reads labelled lines"
+   ]
+  },
+  {
+   "file": "Cure_Build.js",
+   "name": "Cure Build",
+   "base": "pkgKCON/patched/Cure_Build.js",
+   "base_sha": "d461b8c06678a881",
+   "final_sha": "ccd6e86ac156efce",
+   "edits": [
+    "krulCure K-CON reads labelled lines"
+   ]
+  },
+  {
+   "file": "Cure_Check.js",
+   "name": "Cure Check",
+   "base": "pkgKCON/patched/Cure_Check.js",
+   "base_sha": "6b0975371424bd03",
+   "final_sha": "6b201a1c11f022d5",
+   "edits": [
+    "krulCure K-CON reads labelled lines"
+   ]
+  },
+  {
+   "file": "Cure_Normalize.js",
+   "name": "Cure Normalize",
+   "base": "pkgKCON/patched/Cure_Normalize.js",
+   "base_sha": "89c40105cf5d2237",
+   "final_sha": "2b4ea3da29114d61",
+   "edits": [
+    "krulCure K-CON reads labelled lines"
+   ]
+  },
+  {
+   "file": "Extract_Independent_Verdict.js",
+   "name": "Extract Independent Verdict",
+   "base": "pkgKCON/patched/Extract_Independent_Verdict.js",
+   "base_sha": "0013dd3fce4df3f2",
+   "final_sha": "138d0b15254c4110",
+   "edits": [
+    "krulCure K-CON reads labelled lines"
+   ]
+  },
+  {
+   "file": "Panel_Cure_Build_1.js",
+   "name": "Panel Cure Build 1",
+   "base": "pkgKCON/patched/Panel_Cure_Build_1.js",
+   "base_sha": "2e630a2b7761f4a5",
+   "final_sha": "81fe5497c8d757b9",
+   "edits": [
+    "krulCure K-CON reads labelled lines"
+   ]
+  },
+  {
+   "file": "Panel_Cure_Build_2.js",
+   "name": "Panel Cure Build 2",
+   "base": "pkgKCON/patched/Panel_Cure_Build_2.js",
+   "base_sha": "310c208671b4e035",
+   "final_sha": "d039fc1ba9498e0f",
+   "edits": [
+    "krulCure K-CON reads labelled lines"
+   ]
+  },
+  {
+   "file": "Panel_Cure_Build_3.js",
+   "name": "Panel Cure Build 3",
+   "base": "pkgKCON/patched/Panel_Cure_Build_3.js",
+   "base_sha": "235f879bbadb2212",
+   "final_sha": "50eb2d40d8d1939b",
+   "edits": [
+    "krulCure K-CON reads labelled lines"
+   ]
+  },
+  {
+   "file": "Panel_Cure_Check.js",
+   "name": "Panel Cure Check",
+   "base": "pkgKCON/patched/Panel_Cure_Check.js",
+   "base_sha": "10187fb3fad602da",
+   "final_sha": "0ab1c6e359bec5af",
+   "edits": [
+    "krulCure K-CON reads labelled lines"
+   ]
+  },
+  {
+   "file": "Panel_Cure_Normalize_1.js",
+   "name": "Panel Cure Normalize 1",
+   "base": "pkgKCON/patched/Panel_Cure_Normalize_1.js",
+   "base_sha": "4a63497d5960537e",
+   "final_sha": "e238974f1d6527c3",
+   "edits": [
+    "krulCure K-CON reads labelled lines"
+   ]
+  },
+  {
+   "file": "Panel_Cure_Normalize_2.js",
+   "name": "Panel Cure Normalize 2",
+   "base": "pkgKCON/patched/Panel_Cure_Normalize_2.js",
+   "base_sha": "c665c787d6ccf5d7",
+   "final_sha": "8338dea5d2048bba",
+   "edits": [
+    "krulCure K-CON reads labelled lines"
+   ]
+  },
+  {
+   "file": "Panel_Cure_Normalize_3.js",
+   "name": "Panel Cure Normalize 3",
+   "base": "pkgKCON/patched/Panel_Cure_Normalize_3.js",
+   "base_sha": "d6625e994ed8b101",
+   "final_sha": "a4272a0aa9150a8e",
+   "edits": [
+    "krulCure K-CON reads labelled lines"
+   ]
+  },
+  {
+   "file": "Panel_Payloads.js",
+   "name": "Panel Payloads",
+   "base": "pkgVC/patched/Panel_Payloads.js",
+   "base_sha": "7d66c395624868dc",
+   "final_sha": "d35d6999657f972b",
+   "edits": [
+    "krulCure K-CON reads labelled lines",
+    "vcCaught2024 reads labelled lines"
+   ]
+  }
+ ]
+}
