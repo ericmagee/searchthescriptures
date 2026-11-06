@@ -1,0 +1,80 @@
+OK   20 nodes; base and final shas match
+OK   PART2 with Commitment 13 in 15 nodes, byte-identical
+OK   13 headings; the last is Commitment 13
+     Commitment 13. I give the layers of every break I grade.
+OK   both example lines pass the layer check ([L1] and [L2] counted)
+     layers counted: [L1] COUNTED; [L2] COUNTED / layers counted: [L1] COUNTED; [L2] COUNTED
+OK   PART2 changes only by the appended Commitment 13
+OK   unit: FORCED, no [L1]: RAISED
+     no [L1]: no verse is quoted with its reference under an [L1] tag
+OK   unit: FORCED with GROUND [L1] counted: not raised
+     layers counted: [L1] COUNTED
+OK   unit: [L1] in the ANSWER only does not count: RAISED
+     no [L1]: no verse is quoted with its reference under an [L1] tag
+OK   unit: [L1] words not in the verse: RAISED
+     no counted [L1]: Matthew 1:25 "he knew her never at all before the birth" does not stand in the KJV verse
+OK   unit: form <ref> "<words>" [L1]: not raised
+     layers counted: [L1] COUNTED
+OK   unit: meaning ground, no [L2]: RAISED
+     the ground turns on a word's meaning and carries no [L2]
+OK   unit: meaning ground, [L2] in another verse: RAISED
+     the ground turns on a word's meaning and no [L2] is counted: kaleo (G2564, to call): NOT COUNTED (not in the cited verse: G2564 (cited: Luke 3:23))
+OK   unit: meaning ground, [L2] counted: not raised
+     layers counted: [L1] COUNTED; [L2] COUNTED
+OK   unit: unanswered press: exempt: not raised
+     rests on an unanswered press (ruling 392), not on meaning
+OK   unit: verse not read this run: UNVERIFIABLE, not raised: not raised
+     layers counted: [L1] UNVERIFIABLE
+OK   unit: STANDS line: not checked: not raised
+     not a FORCED or LINK BROKEN line
+OK   33083 gemini D1 to D5 raised (each through its FORCED line)
+     COLLISION D1 vs C1 FORCED, COLLISION D2 vs C6 FORCED, COLLISION D3 vs C1 FORCED, COLLISION D4 vs C5 FORCED, COLLISION D5 vs C4 FORCED
+OK   no line that already carries counted layers is raised (8 lines carry them)
+  == 33040: 2 E-COL lines, 1 raised
+   layers grok    LINK BROKEN COLLISION D2 vs C3    layers counted: [L1] COUNTED; [L2] COUNTED
+   RAISED grok    FORCED      COLLISION D2 vs C3    no [L1]: no verse is quoted with its reference under an [L1] tag
+  == 33060: 4 E-COL lines, 2 raised
+   layers chatgpt LINK BROKEN COLLISION D2 vs C4    layers counted: [L1] COUNTED
+   RAISED chatgpt FORCED      COLLISION D2 vs C4    no [L1]: no verse is quoted with its reference under an [L1] tag
+   layers sol     LINK BROKEN COLLISION D2 vs C4    layers counted: [L1] COUNTED
+   RAISED sol     FORCED      COLLISION D2 vs C4    no [L1]: no verse is quoted with its reference under an [L1] tag
+  == 33083: 14 E-COL lines, 6 raised
+   layers gemini  LINK BROKEN COLLISION D1 vs C1    layers counted: [L1] COUNTED; [L2] COUNTED
+   layers gemini  LINK BROKEN COLLISION D2 vs C6    layers counted: [L1] COUNTED; [L2] COUNTED
+   layers gemini  LINK BROKEN COLLISION D3 vs C1    layers counted: [L1] COUNTED; [L2] COUNTED
+   layers gemini  LINK BROKEN COLLISION D4 vs C5    layers counted: [L1] COUNTED; [L2] COUNTED
+   layers gemini  LINK BROKEN COLLISION D5 vs C4    layers counted: [L1] COUNTED; [L2] COUNTED
+   exempt chatgpt LINK BROKEN COLLISION D5 vs C1    rests on an unanswered press (ruling 392), not on meaning
+   exempt chatgpt LINK BROKEN COLLISION D6 vs C1    rests on an unanswered press (ruling 392), not on meaning
+   exempt sol     LINK BROKEN COLLISION D5 vs C1    rests on an unanswered press (ruling 392), not on meaning
+   RAISED gemini  FORCED      COLLISION D1 vs C1    no [L1]: no verse is quoted with its reference under an [L1] tag
+   RAISED gemini  FORCED      COLLISION D2 vs C6    no [L1]: no verse is quoted with its reference under an [L1] tag
+   RAISED gemini  FORCED      COLLISION D3 vs C1    no [L1]: no verse is quoted with its reference under an [L1] tag
+   RAISED gemini  FORCED      COLLISION D4 vs C5    no [L1]: no verse is quoted with its reference under an [L1] tag | the ground turns on a word's meaning and no [L2] is counted: *kaleō* (G2564, to call)": NOT COUNTED (not in the cited verse: G2564, k
+   RAISED gemini  FORCED      COLLISION D5 vs C4    no [L1]: no verse is quoted with its reference under an [L1] tag | the ground turns on a word's meaning and no [L2] is counted: *nomizō* (G3543, to deem, suppose)": NOT COUNTED (not in the cited verse
+   RAISED chatgpt FORCED      COLLISION D6 vs C1    no [L1]: no verse is quoted with its reference under an [L1] tag
+OK   Send Back Build 33040 (enforcer agreed on all): 1 layer items sent
+     grok S1 COLLISION D2 vs C3
+OK   Send Back Build 33060 (enforcer agreed on all): 1 layer items sent, 1 recorded NOT SENT (no panel request for this seat)
+     chatgpt S1 COLLISION D2 vs C4
+OK   Send Back Build 33083 (enforcer agreed on all): 6 layer items sent
+     gemini S1 COLLISION D1 vs C1, gemini S2 COLLISION D2 vs C6, gemini S3 COLLISION D3 vs C1, gemini S4 COLLISION D4 vs C5, gemini S5 COLLISION D5 vs C4, chatgpt S1 COLLISION D6 vs C1
+OK   cure: KEEP: UNCURED (Alt UNCURED)
+     a KEEP does not cure a layer fault (pkgECL, Commitment 13): no [L1]: no verse is quoted with its reference under an [L1] tag
+OK   cure: RETRACTED: CURED (Alt CURED)
+     CHANGE TO RETRACTED (pkgECL)
+OK   cure: CHANGE TO the pair UNDERDETERMINED: CURED (Alt CURED)
+     CHANGE TO a line that does not grade the pair BROKEN or FORCED (pkgECL)
+OK   cure: CHANGE TO the FORCED line with counted layers: CURED (Alt CURED)
+     CHANGE TO carries its layers (pkgECL): layers counted: [L1] COUNTED; [L2] COUNTED
+OK   cure: CHANGE TO the FORCED line still without [L1]: UNCURED (Alt UNCURED)
+     CHANGE TO still fails the layer check (pkgECL): no [L1]: no verse is quoted with its reference under an [L1] tag
+OK   cure: no answer: UNCURED (Alt UNCURED)
+     no answer to the send-back
+OK   enforcer also disagreed: past the layer check the pkgECF2 both-sides test decides: CURED
+     CHANGE TO keeps the break and quotes the answer ("from the taking to the birth") and the verse ("bounds the abstinence to the pregnancy")
+OK   an E-COL item with no layer fault reads as in pkgECF2: CURED
+OK   enforcer Build 33083: same calls, ids and item texts as pkgECF (only the RULES sentence and PART2 differ)
+OK   FAILS note reads a FAILS quote with or without a GROUND tail
+
+31 OK, 0 FAIL

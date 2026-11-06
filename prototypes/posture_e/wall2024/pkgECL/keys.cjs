@@ -1,0 +1,4 @@
+const fs=require('fs');const L2C=new Function(fs.readFileSync(__dirname+'/src_REFP.js','utf8')+fs.readFileSync(__dirname+'/src_L2C.js','utf8')+';return L2C;')();
+module.exports=function(run){let R=null;for(const k of [1,2,3]){const f='/mnt/project-files/wall2024/inputs/'+run+'_Panel_Cure_Normalize_'+k+'.json';if(!fs.existsSync(f))continue;for(const x of JSON.parse(fs.readFileSync(f,'utf8'))[0].main[0]){const c=x.json&&x.json.cure;if(c&&c.rounds){R=c.rounds;break;}}if(R)break;}
+ const ks=new Set();for(const t of Object.values(R||{}))for(const k of L2C.refsIn(String(t)))ks.add(k);return {R,keys:[...ks]};};
+if(require.main===module){const all=new Set();for(const r of ['33040','33060','33083']){const o=module.exports(r);console.error(r,Object.keys(o.R||{}),o.keys.length);o.keys.forEach(k=>all.add(k));}console.log(JSON.stringify([...all]));}

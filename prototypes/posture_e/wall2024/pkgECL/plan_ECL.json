@@ -1,0 +1,145 @@
+{
+ "base": "live 862c3d54 (pkgECF2 on pkgECF; library nodes pkgKVP)",
+ "nodes": [
+  {
+   "file": "Send_Back_Build.js",
+   "base": "pkgECF2/patched",
+   "base_sha": "4ac373fe996d7fcf",
+   "final_sha": "c05e5645473ca198",
+   "edits": 6
+  },
+  {
+   "file": "Alt_Send_Back_Build.js",
+   "base": "pkgECF2/patched",
+   "base_sha": "91b0c949322e3a10",
+   "final_sha": "6de4eaa578ae1be3",
+   "edits": 6
+  },
+  {
+   "file": "Send_Back_Record.js",
+   "base": "pkgECF2/patched",
+   "base_sha": "8e31fb97a9b347dd",
+   "final_sha": "37ee50bb1fb88386",
+   "edits": 3
+  },
+  {
+   "file": "Alt_Send_Back_Record.js",
+   "base": "pkgECF2/patched",
+   "base_sha": "351425bb4aa6d930",
+   "final_sha": "2099caf47f46d4aa",
+   "edits": 3
+  },
+  {
+   "file": "Panel_Build.js",
+   "base": "live prewrite_lib_66adcc25",
+   "base_sha": "aeb31db20d01cdb6",
+   "final_sha": "63f842b8230eb8fb",
+   "edits": 3
+  },
+  {
+   "file": "Reserve_Build.js",
+   "base": "live prewrite_lib_66adcc25",
+   "base_sha": "cd447322b3a1dec9",
+   "final_sha": "f8c5b3395741a534",
+   "edits": 1
+  },
+  {
+   "file": "Panel_Cure_Build_1.js",
+   "base": "pkgKVP/patched",
+   "base_sha": "dc2768644112ed21",
+   "final_sha": "abe8f8fb0fcc3671",
+   "edits": 1
+  },
+  {
+   "file": "Panel_Cure_Build_2.js",
+   "base": "pkgKVP/patched",
+   "base_sha": "f3fe5a634b278bcf",
+   "final_sha": "5b616a74a19e4121",
+   "edits": 1
+  },
+  {
+   "file": "Panel_Cure_Build_3.js",
+   "base": "pkgKVP/patched",
+   "base_sha": "fc2357cf7dc0e010",
+   "final_sha": "2f984645357220ab",
+   "edits": 1
+  },
+  {
+   "file": "Alternate_Build.js",
+   "base": "pkgKVP/patched",
+   "base_sha": "c8c6134237f27733",
+   "final_sha": "f816317b2b6cad31",
+   "edits": 1
+  },
+  {
+   "file": "Alternate_Cure_Build.js",
+   "base": "pkgKVP/patched",
+   "base_sha": "fb99e6a4776fd38e",
+   "final_sha": "da0506ace38aef5b",
+   "edits": 1
+  },
+  {
+   "file": "Accept_Build.js",
+   "base": "live prewrite_lib_66adcc25",
+   "base_sha": "5560e59cc0453b43",
+   "final_sha": "7758668f894e947f",
+   "edits": 1
+  },
+  {
+   "file": "Accept_Check.js",
+   "base": "live prewrite_lib_66adcc25",
+   "base_sha": "8d0bf50f3c6322ac",
+   "final_sha": "5123bfca7861a7fb",
+   "edits": 1
+  },
+  {
+   "file": "Accept_Return_Build.js",
+   "base": "live prewrite_lib_66adcc25",
+   "base_sha": "9e9ff7edd44d2722",
+   "final_sha": "c17b85f884cc74b2",
+   "edits": 1
+  },
+  {
+   "file": "Accept_Final.js",
+   "base": "live prewrite_lib_66adcc25",
+   "base_sha": "4e06bc0e5b1a0f3c",
+   "final_sha": "c78ea8aeb4b0f32d",
+   "edits": 1
+  },
+  {
+   "file": "Accept_DS_Return_Build.js",
+   "base": "live prewrite_lib_66adcc25",
+   "base_sha": "3c9ddb1d1669101a",
+   "final_sha": "fd681ecfe029a16d",
+   "edits": 1
+  },
+  {
+   "file": "Enforcer_Build.js",
+   "base": "live prewrite_lib_66adcc25",
+   "base_sha": "b293d2c56ae5ff50",
+   "final_sha": "3c4d8a08a0def470",
+   "edits": 1
+  },
+  {
+   "file": "Judge_Enforcer_Build.js",
+   "base": "pkgECF/patched",
+   "base_sha": "5519818d1fc2380c",
+   "final_sha": "bd871fb97c41b5ff",
+   "edits": 3
+  },
+  {
+   "file": "Alt_Judge_Enforcer_Build.js",
+   "base": "pkgECF/patched",
+   "base_sha": "28b1173da02e8ebc",
+   "final_sha": "dca278c2c8349a50",
+   "edits": 3
+  },
+  {
+   "file": "Build_Independent_Verdict.js",
+   "base": "live prewrite_lib_66adcc25",
+   "base_sha": "47113ec56ec14ab7",
+   "final_sha": "5a9e56cf10b8dcc9",
+   "edits": 2
+  }
+ ]
+}
