@@ -1,0 +1,181 @@
+{
+ "base": "pkgKCMF/patched",
+ "nodes": [
+  {
+   "file": "Alt_Gate_Build.js",
+   "base_sha": "37ce62dfb59be275",
+   "final_sha": "94db902a3939a11e",
+   "edits": [
+    "kvpOwn2024 in kvSegments"
+   ]
+  },
+  {
+   "file": "Alt_Gate_Record.js",
+   "base_sha": "bc07cda294559f9f",
+   "final_sha": "41bae3c65d6ec992",
+   "edits": [
+    "kvpOwn2024 in kvSegments"
+   ]
+  },
+  {
+   "file": "Alternate_Build.js",
+   "base_sha": "c258d18b74492de5",
+   "final_sha": "c8c6134237f27733",
+   "edits": [
+    "kvpOwn2024 in kvSegments"
+   ]
+  },
+  {
+   "file": "Alternate_Cure_Build.js",
+   "base_sha": "4c1ded9e4a7c19a1",
+   "final_sha": "fb99e6a4776fd38e",
+   "edits": [
+    "kvpOwn2024 in kvSegments"
+   ]
+  },
+  {
+   "file": "Alternate_Cure_Normalize.js",
+   "base_sha": "9b30ac729ad906eb",
+   "final_sha": "00038755dedd658a",
+   "edits": [
+    "kvpOwn2024 in kvSegments"
+   ]
+  },
+  {
+   "file": "Alternate_Merge.js",
+   "base_sha": "c021767781e1d69a",
+   "final_sha": "d37113e6003cb7f8",
+   "edits": [
+    "kvpOwn2024 in kvSegments"
+   ]
+  },
+  {
+   "file": "Alternate_Merge_Seat.js",
+   "base_sha": "deb045b44aaf45f0",
+   "final_sha": "5fe50845cec9a805",
+   "edits": [
+    "kvpOwn2024 in kvSegments"
+   ]
+  },
+  {
+   "file": "Alternate_Payloads.js",
+   "base_sha": "9d29564b0fee46a5",
+   "final_sha": "dcf8f5df3ff09844",
+   "edits": [
+    "kvpOwn2024 in kvSegments"
+   ]
+  },
+  {
+   "file": "Cure_Build.js",
+   "base_sha": "59506c773e75fb9f",
+   "final_sha": "96cebb9895f0d475",
+   "edits": [
+    "kvpOwn2024 in kvSegments"
+   ]
+  },
+  {
+   "file": "Cure_Check.js",
+   "base_sha": "e1d81e43ebe4ed79",
+   "final_sha": "c42c94a097c139df",
+   "edits": [
+    "kvpOwn2024 in kvSegments"
+   ]
+  },
+  {
+   "file": "Cure_Normalize.js",
+   "base_sha": "08518dcbc012ffd9",
+   "final_sha": "51a5fd9c3d628f77",
+   "edits": [
+    "kvpOwn2024 in kvSegments"
+   ]
+  },
+  {
+   "file": "Extract_Independent_Verdict.js",
+   "base_sha": "6b88948376dbe558",
+   "final_sha": "f410edf7879f14cf",
+   "edits": [
+    "kvpOwn2024 in kvSegments"
+   ]
+  },
+  {
+   "file": "Gate_Build.js",
+   "base_sha": "adb9f71b801b351e",
+   "final_sha": "146bb3286bdf1fa5",
+   "edits": [
+    "kvpOwn2024 in kvSegments"
+   ]
+  },
+  {
+   "file": "Gate_Record.js",
+   "base_sha": "01c0aee7d93d03d1",
+   "final_sha": "baf3e35d0a732824",
+   "edits": [
+    "kvpOwn2024 in kvSegments"
+   ]
+  },
+  {
+   "file": "Panel_Cure_Build_1.js",
+   "base_sha": "92e82b1dfb018b85",
+   "final_sha": "dc2768644112ed21",
+   "edits": [
+    "kvpOwn2024 in kvSegments"
+   ]
+  },
+  {
+   "file": "Panel_Cure_Build_2.js",
+   "base_sha": "91a1150674048ae1",
+   "final_sha": "f3fe5a634b278bcf",
+   "edits": [
+    "kvpOwn2024 in kvSegments"
+   ]
+  },
+  {
+   "file": "Panel_Cure_Build_3.js",
+   "base_sha": "5b47706a6aee075c",
+   "final_sha": "fc2357cf7dc0e010",
+   "edits": [
+    "kvpOwn2024 in kvSegments"
+   ]
+  },
+  {
+   "file": "Panel_Cure_Check.js",
+   "base_sha": "288e5150efe687b6",
+   "final_sha": "d95e8ee949407256",
+   "edits": [
+    "kvpOwn2024 in kvSegments"
+   ]
+  },
+  {
+   "file": "Panel_Cure_Normalize_1.js",
+   "base_sha": "83f781e9596a5ecf",
+   "final_sha": "4ee3b3ed13cf0fa5",
+   "edits": [
+    "kvpOwn2024 in kvSegments"
+   ]
+  },
+  {
+   "file": "Panel_Cure_Normalize_2.js",
+   "base_sha": "99aed94e7076e1a8",
+   "final_sha": "aec6555b8bd97d91",
+   "edits": [
+    "kvpOwn2024 in kvSegments"
+   ]
+  },
+  {
+   "file": "Panel_Cure_Normalize_3.js",
+   "base_sha": "b45a73cd61f8f4a1",
+   "final_sha": "d0e499e6906fbe76",
+   "edits": [
+    "kvpOwn2024 in kvSegments"
+   ]
+  },
+  {
+   "file": "Panel_Payloads.js",
+   "base_sha": "c70274c9107ba1ec",
+   "final_sha": "3281a714c2121756",
+   "edits": [
+    "kvpOwn2024 in kvSegments"
+   ]
+  }
+ ]
+}

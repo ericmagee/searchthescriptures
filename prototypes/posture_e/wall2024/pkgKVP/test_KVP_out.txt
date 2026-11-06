@@ -1,0 +1,9 @@
+OK   22 nodes: shas match the plan, each with the one kvSegments edit
+   27 judge texts; K-V item changes: 1
+     33083 sol: [CHALLENGER premise 3] -> []
+OK   33083 sol: the false "CHALLENGER premise 3" K-V item is gone
+OK   no other judge text changes its K-V items (a new item would be listed)
+   unit segments: [{"ns":[6],"seg":"premise 6 is VOID."}]
+OK   unit: segments are premise 6 ("premise 6 is VOID.") only; premise 3 is not read as VOID
+OK   unit: a VOID clause naming the segment's own premises is kept (premises 3 and 6 are VOID)
+5 OK, 0 FAIL
