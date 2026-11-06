@@ -1,0 +1,28 @@
+{
+ "nodes": [
+  {
+   "file": "Send_Back_Record.js",
+   "name": "Send Back Record",
+   "base": "pkgSBP/patched/Send_Back_Record.js",
+   "base_sha": "da4973fd666beeac",
+   "final_sha": "a084cfd1fff25c34",
+   "edits": 4
+  },
+  {
+   "file": "Alt_Send_Back_Record.js",
+   "name": "Alt Send Back Record",
+   "base": "pkgALT/patched/Alt_Send_Back_Record.js",
+   "base_sha": "14142a4bb94d4310",
+   "final_sha": "9605942e1e47bb14",
+   "edits": 4
+  },
+  {
+   "file": "Alternate_Merge.js",
+   "name": "Alternate Merge",
+   "base": "pkgALT/patched/Alternate_Merge.js",
+   "base_sha": "0da04437a89952a8",
+   "final_sha": "0e56c8828d9f8ddc",
+   "edits": 1
+  }
+ ]
+}

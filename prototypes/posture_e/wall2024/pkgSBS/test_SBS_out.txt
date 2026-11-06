@@ -1,0 +1,19 @@
+OK   Send Back Record: base and final shas match the plan
+OK   Alt Send Back Record: base and final shas match the plan
+OK   Alternate Merge: base and final shas match the plan
+OK   Alt Send Back Record is still the clone of Send Back Record (same edit on both)
+OK   32980: every send-back item is read exactly as before
+   32980: NO ANSWER 0; counted as silence: []; written, not read: 
+OK   32949 and 32973: every send-back item is read exactly as before
+   32949 and 32973: NO ANSWER 0; counted as silence: []; written, not read: 
+OK   two silent items on seat a add 2 to its drv_uncured and set alt_needed; seat b answered all and is unchanged
+OK   the silent seat carries one SEND-BACK SILENCE audit line naming S2 and S3
+OK   the silent rows say SILENT and counted; the answered row does not
+OK   a written but unparsed answer naming S2 is not silence: not counted, row says WRITTEN, NOT READ
+OK   S12 named does not stop S1 from being silent
+OK   a failed call is not silence: nothing counted, no bodies output
+OK   all answered: output equals the base output plus silent_counted [] and alt_needed false
+OK   PASS.bodies are used when present and the count adds to an existing drv_uncured (1 + 1)
+OK   Alt Send Back Record counts sol S2 on the Alt Seated body
+OK   Alt Apply adds the silent send-back items to the unseat line
+16 OK 0 FAIL
