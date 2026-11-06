@@ -1,0 +1,138 @@
+{
+ "base": "live 98daac9e + n19 + n20",
+ "nodes": [
+  {
+   "file": "Send_Back_Build.js",
+   "base": "pkgMNP/patched",
+   "base_sha": "4016d555b7c465ab",
+   "final_sha": "59d315ad2bcbb773",
+   "edits": 6
+  },
+  {
+   "file": "Alt_Send_Back_Build.js",
+   "base": "pkgMNP/patched",
+   "base_sha": "99f0d5f9c39e0134",
+   "final_sha": "1ebaff4d16113b00",
+   "edits": 6
+  },
+  {
+   "file": "Send_Back_Record.js",
+   "base": "pkgMNP/patched",
+   "base_sha": "5bd2b6dc3137d11f",
+   "final_sha": "81b88a391bdddf46",
+   "edits": 7
+  },
+  {
+   "file": "Alt_Send_Back_Record.js",
+   "base": "pkgMNP/patched",
+   "base_sha": "a4079806d1545eb4",
+   "final_sha": "59908035e7f321cc",
+   "edits": 7
+  },
+  {
+   "file": "Panel_Build.js",
+   "base": "pkgIMP/base",
+   "base_sha": "23ddbb052c202089",
+   "final_sha": "fd866a912cebf5c9",
+   "edits": 1
+  },
+  {
+   "file": "Reserve_Build.js",
+   "base": "pkgIMP/base",
+   "base_sha": "f8c5b3395741a534",
+   "final_sha": "12791a3fa2038e3d",
+   "edits": 1
+  },
+  {
+   "file": "Panel_Cure_Build_1.js",
+   "base": "pkgKWA/patched",
+   "base_sha": "33de4ccb0d63d5ba",
+   "final_sha": "418ecb74f77f493e",
+   "edits": 1
+  },
+  {
+   "file": "Panel_Cure_Build_2.js",
+   "base": "pkgKWA/patched",
+   "base_sha": "ed8aa8a317f9fd65",
+   "final_sha": "f7fcc34e2b2d66eb",
+   "edits": 1
+  },
+  {
+   "file": "Panel_Cure_Build_3.js",
+   "base": "pkgKWA/patched",
+   "base_sha": "74108a0a89ec8d42",
+   "final_sha": "b411fa25ad25da5d",
+   "edits": 1
+  },
+  {
+   "file": "Alternate_Build.js",
+   "base": "pkgKWA/patched",
+   "base_sha": "f75b3605f01ea6dc",
+   "final_sha": "92e1d79e7ac4959d",
+   "edits": 1
+  },
+  {
+   "file": "Alternate_Cure_Build.js",
+   "base": "pkgKWA/patched",
+   "base_sha": "60e75d07ede1cf99",
+   "final_sha": "21424f0060c3b5a8",
+   "edits": 1
+  },
+  {
+   "file": "Accept_Build.js",
+   "base": "pkgIMP/base",
+   "base_sha": "84b4242ead0074eb",
+   "final_sha": "2c62561e087298ea",
+   "edits": 1
+  },
+  {
+   "file": "Accept_Check.js",
+   "base": "pkgIMP/base",
+   "base_sha": "5123bfca7861a7fb",
+   "final_sha": "0e5cd578368e02e3",
+   "edits": 1
+  },
+  {
+   "file": "Accept_Return_Build.js",
+   "base": "pkgIMP/base",
+   "base_sha": "c17b85f884cc74b2",
+   "final_sha": "6b7412e13bc90f72",
+   "edits": 1
+  },
+  {
+   "file": "Accept_Final.js",
+   "base": "pkgIMP/base",
+   "base_sha": "c78ea8aeb4b0f32d",
+   "final_sha": "17a9035e7a5db895",
+   "edits": 1
+  },
+  {
+   "file": "Accept_DS_Return_Build.js",
+   "base": "pkgIMP/base",
+   "base_sha": "fd681ecfe029a16d",
+   "final_sha": "ed5a6549890ce8ed",
+   "edits": 1
+  },
+  {
+   "file": "Enforcer_Build.js",
+   "base": "pkgIMP/base",
+   "base_sha": "3c4d8a08a0def470",
+   "final_sha": "c1297938d67041ad",
+   "edits": 1
+  },
+  {
+   "file": "Judge_Enforcer_Build.js",
+   "base": "pkgIMP/base",
+   "base_sha": "bd871fb97c41b5ff",
+   "final_sha": "5e21e08e1c229f9f",
+   "edits": 1
+  },
+  {
+   "file": "Alt_Judge_Enforcer_Build.js",
+   "base": "pkgIMP/base",
+   "base_sha": "dca278c2c8349a50",
+   "final_sha": "c1c7adb8cf362b28",
+   "edits": 1
+  }
+ ]
+}
