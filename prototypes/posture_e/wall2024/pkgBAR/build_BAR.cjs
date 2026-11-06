@@ -53,14 +53,14 @@ for(const n of ['D3 Build','C3 Build','D4 Build','C4 Build'])setCode(n,rep(code(
  if(k!==7)throw new Error('Failure Salvage: '+k+' round reads, expected 7');setCode(n,s);}
 // Build Save Body: AUDIT v47 lines, one per re-call and one per VOID sentence, in round order
 {const n='Build Save Body';const a='for(const x of __L2RV)FF.push(x);';
- setCode(n,rep(code(n),a,a+"\n/* pkgBAR: the barred-move re-calls and the VOID sentences, named in the run's review notes */\nfor(const r of "+JSON.stringify(RR)+"){try{const nd=r+'B Extract';if(!$(nd).isExecuted)continue;const b=$(nd).first().json.bar;if(!b||!b.applies||!b.resent)continue;"
+ setCode(n,rep(code(n),a,a+"\n/* pkgBAR: the barred-move re-calls and the VOID sentences, named in the run's review notes */\nconst __BARB=[];"+RR.map(r=>"try{if($('"+r+"B Extract').isExecuted)__BARB.push($('"+r+"B Extract').first().json.bar);}catch(e){}").join('')+" /* literal names: the task runner sends only these nodes' data */\nfor(const b of __BARB){try{if(!b||!b.applies||!b.resent)continue;"
  +"FF.push('[AUDIT v47: BARRED MOVE RE-CALL (pkgBAR) -- SEAT: '+b.seat+' ('+b.side+'); ROUND: ['+b.round+']; SENT BACK: '+((b.first&&b.first.hits)||[]).length+' sentence(s); KEPT: '+b.kept+' round ('+b.why+'); VOID: '+(b.void||[]).length+'.]');"
  +"for(const v of (b.void||[]))FF.push('[AUDIT v47: BARRED MOVE VOID (pkgBAR) -- SEAT: '+v.seat+' ('+v.side+'); ROUND: ['+v.round+']; SENTENCE: \"'+String(v.sentence).slice(0,300)+'\"; '+v.move+'; '+(v.struck?'struck from the round':'not found in the round to strike')+'; the press it answered counts as unanswered. REVIEW THIS ROW.]');}catch(e){}}",n));}
 // the stages
 const stageCodes={};
 for(const r of RR){NN=N();const g=G[r];const src=g?g.src:r+' Extract',P=r+'B',L=LAB(r),side=r[0]==='D'?'DEFENDER':'CHALLENGER';
  const prior=ORDER.slice(0,ORDER.indexOf(r)).map(x=>[FIN(x),LAB(x)]);
- const RD="const __RD=(own)=>{const o={};for(const [n,k] of "+JSON.stringify(prior)+"){try{if($(n).isExecuted){const j=$(n).first().json;if(j&&typeof j.raw==='string')o[k]=j.raw;}}catch(e){}}o['"+L+"']=own;return o;};\n";
+ const RD="const __RD=(own)=>{const o={};const rd=(k,f)=>{try{const j=f();if(j&&typeof j.raw==='string')o[k]=j.raw;}catch(e){}};"+prior.map(([n,k])=>"if((()=>{try{return $('"+n+"').isExecuted;}catch(e){return false;}})())rd('"+k+"',()=>$('"+n+"').first().json);").join('')+"o['"+L+"']=own;return o;}; /* literal names: the task runner sends only these nodes' data */\n";
  const B="// pkgBAR "+P+" Build (W3 spec, Wall 2632, part 2): the one barred-move re-call of the "+side.toLowerCase()+"'s round ["+L+"]. The pkgIMP harvest reads the round\n"
   +"// ("+src+"); a sentence with a verified NOT A REQUIREMENT line under it is not a hit. No hit: the item passes through (resend false) and\n"
   +"// "+P+" Route sends it to "+P+" Extract. A hit: one call that continues the debater's own conversation (the round's request"+(g?", the "+r+"G re-call when that round was kept":"")+",\n"

@@ -104,7 +104,7 @@ const BAR=(()=>{
  const LABEL=n=>(n[0]==='D'?'CR':'DR')+n[1];
  return {check,note,strike,loc,move,LABEL,MARK,NAR};})();
 
-const __RD=(own)=>{const o={};for(const [n,k] of [["D1 Extract","CR1"]]){try{if($(n).isExecuted){const j=$(n).first().json;if(j&&typeof j.raw==='string')o[k]=j.raw;}}catch(e){}}o['DR1']=own;return o;};
+const __RD=(own)=>{const o={};const rd=(k,f)=>{try{const j=f();if(j&&typeof j.raw==='string')o[k]=j.raw;}catch(e){}};if((()=>{try{return $('D1 Extract').isExecuted;}catch(e){return false;}})())rd('CR1',()=>$('D1 Extract').first().json);o['DR1']=own;return o;}; /* literal names: the task runner sends only these nodes' data */
 const __X1=$('C1 Extract').first().json;const __G=$('C1B Build').first().json;const __in=$input.first().json||{};
 const __seat=(()=>{const c=(__G&&__G.call)||{};return (c.fam||__X1.fam||'?')+'/'+(c.model||__X1.model||'?');})();
 const __rec=o=>({applies:!!(__G&&__G.bar_check&&__G.bar_check.applies),round:'DR1',node:'C1',seat:__seat,side:'CHALLENGER',first:(__G&&__G.bar_check)||null,...o});

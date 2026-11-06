@@ -104,7 +104,7 @@ const BAR=(()=>{
  const LABEL=n=>(n[0]==='D'?'CR':'DR')+n[1];
  return {check,note,strike,loc,move,LABEL,MARK,NAR};})();
 
-const __RD=(own)=>{const o={};for(const [n,k] of [["D1 Extract","CR1"],["C1B Extract","DR1"],["D2B Extract","CR2"],["C2B Extract","DR2"],["D3B Extract","CR3"]]){try{if($(n).isExecuted){const j=$(n).first().json;if(j&&typeof j.raw==='string')o[k]=j.raw;}}catch(e){}}o['DR3']=own;return o;};
+const __RD=(own)=>{const o={};const rd=(k,f)=>{try{const j=f();if(j&&typeof j.raw==='string')o[k]=j.raw;}catch(e){}};if((()=>{try{return $('D1 Extract').isExecuted;}catch(e){return false;}})())rd('CR1',()=>$('D1 Extract').first().json);if((()=>{try{return $('C1B Extract').isExecuted;}catch(e){return false;}})())rd('DR1',()=>$('C1B Extract').first().json);if((()=>{try{return $('D2B Extract').isExecuted;}catch(e){return false;}})())rd('CR2',()=>$('D2B Extract').first().json);if((()=>{try{return $('C2B Extract').isExecuted;}catch(e){return false;}})())rd('DR2',()=>$('C2B Extract').first().json);if((()=>{try{return $('D3B Extract').isExecuted;}catch(e){return false;}})())rd('CR3',()=>$('D3B Extract').first().json);o['DR3']=own;return o;}; /* literal names: the task runner sends only these nodes' data */
 const __X1=$('C3G Extract').first().json;const __G=$('C3B Build').first().json;const __in=$input.first().json||{};
 const __seat=(()=>{const c=(__G&&__G.call)||{};return (c.fam||__X1.fam||'?')+'/'+(c.model||__X1.model||'?');})();
 const __rec=o=>({applies:!!(__G&&__G.bar_check&&__G.bar_check.applies),round:'DR3',node:'C3',seat:__seat,side:'CHALLENGER',first:(__G&&__G.bar_check)||null,...o});

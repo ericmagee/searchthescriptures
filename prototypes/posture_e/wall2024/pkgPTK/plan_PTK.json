@@ -1,0 +1,19 @@
+{
+ "base": "pkgBAR/out/workflow_BAR.json",
+ "nodes": [
+  {
+   "node": "Panel Tokens",
+   "base_sha": "ced3f781c5b93345",
+   "final_sha": "1a9da686fe589fc3",
+   "computed_calls": 4,
+   "table": 43
+  },
+  {
+   "node": "Build Save Body",
+   "base_sha": "b1243909caf2ab7d",
+   "final_sha": "998f456ece870ddd",
+   "computed_calls": 4,
+   "table": 11
+  }
+ ]
+}

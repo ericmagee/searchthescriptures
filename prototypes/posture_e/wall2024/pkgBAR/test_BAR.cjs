@@ -3,7 +3,7 @@ const fs=require('fs');const crypto=require('crypto');const sha=s=>crypto.create
 let ok=0,bad=0;const T=(n,c,d)=>{console.log((c?'OK  ':'FAIL')+' '+n+(d?'\n     '+d:''));c?ok++:bad++;};
 const R=require('./rounds.cjs');const IMP=require('../pkgIMP/lib_IMP.cjs');
 const BAR=new Function('IMP',rd('pkgBAR/src_BAR.js')+';return BAR;')(IMP);
-const W0=JSON.parse(rd('pkgBAR/base/workflow_base.json')),W1=JSON.parse(rd('pkgBAR/out/workflow_BAR.json'));const plan=JSON.parse(rd('pkgBAR/plan_BAR.json'));
+const plan=JSON.parse(rd('pkgBAR/plan_BAR.json'));const W0=JSON.parse(rd(plan.base)),W1=JSON.parse(rd('pkgBAR/out/workflow_BAR.json'));
 const N0=Object.fromEntries(W0.nodes.map(n=>[n.name,n])),N1=Object.fromEntries(W1.nodes.map(n=>[n.name,n]));const C1=W1.connections;
 const RR=['C1','D2','C2','D3','C3','D4','C4'];const LAB=r=>(r[0]==='D'?'CR':'DR')+r[1];
 // ---- plan and structure ----

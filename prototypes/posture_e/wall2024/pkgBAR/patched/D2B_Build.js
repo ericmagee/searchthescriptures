@@ -104,7 +104,7 @@ const BAR=(()=>{
  const LABEL=n=>(n[0]==='D'?'CR':'DR')+n[1];
  return {check,note,strike,loc,move,LABEL,MARK,NAR};})();
 
-const __RD=(own)=>{const o={};for(const [n,k] of [["D1 Extract","CR1"],["C1B Extract","DR1"]]){try{if($(n).isExecuted){const j=$(n).first().json;if(j&&typeof j.raw==='string')o[k]=j.raw;}}catch(e){}}o['CR2']=own;return o;};
+const __RD=(own)=>{const o={};const rd=(k,f)=>{try{const j=f();if(j&&typeof j.raw==='string')o[k]=j.raw;}catch(e){}};if((()=>{try{return $('D1 Extract').isExecuted;}catch(e){return false;}})())rd('CR1',()=>$('D1 Extract').first().json);if((()=>{try{return $('C1B Extract').isExecuted;}catch(e){return false;}})())rd('DR1',()=>$('C1B Extract').first().json);o['CR2']=own;return o;}; /* literal names: the task runner sends only these nodes' data */
 const X=$('D2 Extract').first().json;const C=$('D2 Build').first().json;let B=C.call,__base='D2 Build';
 const pass=(why,c)=>[{json:{run_token:X.run_token,round:'D2B',resend:false,why,bar_check:c||null}}];
 let c;try{c=BAR.check('CR2',X.raw,__RD(X.raw));}catch(e){return pass('check error: '+String(e&&e.message||e).slice(0,200));}
