@@ -1,0 +1,120 @@
+OK   Alt Gate Build: final sha matches the plan
+OK   Alt Gate Build: every log kind literal is allowed by the table check
+OK   Alt Gate Build: only the kind literals differ from its package file
+OK   Alt Gate Build: parses
+OK   Alt Gate Record: final sha matches the plan
+OK   Alt Gate Record: every log kind literal is allowed by the table check
+OK   Alt Gate Record: only the kind literals differ from its package file
+OK   Alt Gate Record: parses
+OK   Alt Judge Enforcer Build: final sha matches the plan
+OK   Alt Judge Enforcer Build: every log kind literal is allowed by the table check
+OK   Alt Judge Enforcer Build: only the kind literals differ from its package file
+OK   Alt Judge Enforcer Build: parses
+OK   Alt Judge Enforcer Record: final sha matches the plan
+OK   Alt Judge Enforcer Record: every log kind literal is allowed by the table check
+OK   Alt Judge Enforcer Record: only the kind literals differ from its package file
+OK   Alt Judge Enforcer Record: parses
+OK   Alt Seated: final sha matches the plan
+OK   Alt Seated: every log kind literal is allowed by the table check
+OK   Alt Seated: only the kind literals differ from its package file
+OK   Alt Seated: parses
+OK   Alt Send Back Build: final sha matches the plan
+OK   Alt Send Back Build: every log kind literal is allowed by the table check
+OK   Alt Send Back Build: only the kind literals differ from its package file
+OK   Alt Send Back Build: parses
+OK   Alt Send Back Record: final sha matches the plan
+OK   Alt Send Back Record: every log kind literal is allowed by the table check
+OK   Alt Send Back Record: only the kind literals differ from its package file
+OK   Alt Send Back Record: parses
+OK   Alternate Build: final sha matches the plan
+OK   Alternate Build: every log kind literal is allowed by the table check
+OK   Alternate Build: only the kind literals differ from its package file
+OK   Alternate Build: parses
+OK   Alternate Cure Build: final sha matches the plan
+OK   Alternate Cure Build: every log kind literal is allowed by the table check
+OK   Alternate Cure Build: only the kind literals differ from its package file
+OK   Alternate Cure Build: parses
+OK   Alternate Cure Normalize: final sha matches the plan
+OK   Alternate Cure Normalize: every log kind literal is allowed by the table check
+OK   Alternate Cure Normalize: only the kind literals differ from its package file
+OK   Alternate Cure Normalize: parses
+OK   Alternate Merge: final sha matches the plan
+OK   Alternate Merge: every log kind literal is allowed by the table check
+OK   Alternate Merge: only the kind literals differ from its package file
+OK   Alternate Merge: parses
+OK   Alternate Merge Seat: final sha matches the plan
+OK   Alternate Merge Seat: every log kind literal is allowed by the table check
+OK   Alternate Merge Seat: only the kind literals differ from its package file
+OK   Alternate Merge Seat: parses
+OK   Alternate Payloads: final sha matches the plan
+OK   Alternate Payloads: every log kind literal is allowed by the table check
+OK   Alternate Payloads: only the kind literals differ from its package file
+OK   Alternate Payloads: parses
+OK   Cure Build: final sha matches the plan
+OK   Cure Build: every log kind literal is allowed by the table check
+OK   Cure Build: only the kind literals differ from its package file
+OK   Cure Build: parses
+OK   Cure Check: final sha matches the plan
+OK   Cure Check: every log kind literal is allowed by the table check
+OK   Cure Check: only the kind literals differ from its package file
+OK   Cure Check: parses
+OK   Cure Normalize: final sha matches the plan
+OK   Cure Normalize: every log kind literal is allowed by the table check
+OK   Cure Normalize: only the kind literals differ from its package file
+OK   Cure Normalize: parses
+OK   Extract Independent Verdict: final sha matches the plan
+OK   Extract Independent Verdict: every log kind literal is allowed by the table check
+OK   Extract Independent Verdict: only the kind literals differ from its package file
+OK   Extract Independent Verdict: parses
+OK   Gate Build: final sha matches the plan
+OK   Gate Build: every log kind literal is allowed by the table check
+OK   Gate Build: only the kind literals differ from its package file
+OK   Gate Build: parses
+OK   Gate Record: final sha matches the plan
+OK   Gate Record: every log kind literal is allowed by the table check
+OK   Gate Record: only the kind literals differ from its package file
+OK   Gate Record: parses
+OK   Judge Enforcer Build: final sha matches the plan
+OK   Judge Enforcer Build: every log kind literal is allowed by the table check
+OK   Judge Enforcer Build: only the kind literals differ from its package file
+OK   Judge Enforcer Build: parses
+OK   Panel Cure Build 1: final sha matches the plan
+OK   Panel Cure Build 1: every log kind literal is allowed by the table check
+OK   Panel Cure Build 1: only the kind literals differ from its package file
+OK   Panel Cure Build 1: parses
+OK   Panel Cure Build 2: final sha matches the plan
+OK   Panel Cure Build 2: every log kind literal is allowed by the table check
+OK   Panel Cure Build 2: only the kind literals differ from its package file
+OK   Panel Cure Build 2: parses
+OK   Panel Cure Build 3: final sha matches the plan
+OK   Panel Cure Build 3: every log kind literal is allowed by the table check
+OK   Panel Cure Build 3: only the kind literals differ from its package file
+OK   Panel Cure Build 3: parses
+OK   Panel Cure Check: final sha matches the plan
+OK   Panel Cure Check: every log kind literal is allowed by the table check
+OK   Panel Cure Check: only the kind literals differ from its package file
+OK   Panel Cure Check: parses
+OK   Panel Cure Normalize 1: final sha matches the plan
+OK   Panel Cure Normalize 1: every log kind literal is allowed by the table check
+OK   Panel Cure Normalize 1: only the kind literals differ from its package file
+OK   Panel Cure Normalize 1: parses
+OK   Panel Cure Normalize 2: final sha matches the plan
+OK   Panel Cure Normalize 2: every log kind literal is allowed by the table check
+OK   Panel Cure Normalize 2: only the kind literals differ from its package file
+OK   Panel Cure Normalize 2: parses
+OK   Panel Cure Normalize 3: final sha matches the plan
+OK   Panel Cure Normalize 3: every log kind literal is allowed by the table check
+OK   Panel Cure Normalize 3: only the kind literals differ from its package file
+OK   Panel Cure Normalize 3: parses
+OK   Panel Payloads: final sha matches the plan
+OK   Panel Payloads: every log kind literal is allowed by the table check
+OK   Panel Payloads: only the kind literals differ from its package file
+OK   Panel Payloads: parses
+OK   Send Back Record: final sha matches the plan
+OK   Send Back Record: every log kind literal is allowed by the table check
+OK   Send Back Record: only the kind literals differ from its package file
+OK   Send Back Record: parses
+OK   E-APPLY rows keep rule E-APPLY, E-GATE rows keep rule E-GATE
+   32985 log body kinds: {"cure":68,"enforcer_check":180,"send_back":8,"alternate_reply":1,"send_back_apply":2} (259 rows)
+OK   32985: every one of the 259 rows passes the kind check after the mapping
+118 OK 0 FAIL

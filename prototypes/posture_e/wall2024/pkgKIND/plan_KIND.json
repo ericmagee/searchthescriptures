@@ -1,0 +1,274 @@
+{
+ "live": "68fe69cd code (7071068c)",
+ "nodes": [
+  {
+   "file": "Alt_Gate_Build.js",
+   "name": "Alt Gate Build",
+   "from": "pkgEANS/patched2/Alt_Gate_Build.js",
+   "live_base": "NEW NODE",
+   "live_base_sha": null,
+   "final_sha": "e4d63f940c4adb5b",
+   "kind_edits": {}
+  },
+  {
+   "file": "Alt_Gate_Record.js",
+   "name": "Alt Gate Record",
+   "from": "pkgEANS/patched2/Alt_Gate_Record.js",
+   "live_base": "NEW NODE",
+   "live_base_sha": null,
+   "final_sha": "f23778a33e5f2d7a",
+   "kind_edits": {
+    "kind:'gate'": 2
+   }
+  },
+  {
+   "file": "Alt_Judge_Enforcer_Build.js",
+   "name": "Alt Judge Enforcer Build",
+   "from": "pkgEANS/patched2/Alt_Judge_Enforcer_Build.js",
+   "live_base": "NEW NODE",
+   "live_base_sha": null,
+   "final_sha": "0a6a2bae6ae0612a",
+   "kind_edits": {}
+  },
+  {
+   "file": "Alt_Judge_Enforcer_Record.js",
+   "name": "Alt Judge Enforcer Record",
+   "from": "pkgALT/patched/Alt_Judge_Enforcer_Record.js",
+   "live_base": "NEW NODE",
+   "live_base_sha": null,
+   "final_sha": "66db5da092d2b4fb",
+   "kind_edits": {}
+  },
+  {
+   "file": "Alt_Seated.js",
+   "name": "Alt Seated",
+   "from": "pkgALT/patched/Alt_Seated.js",
+   "live_base": "NEW NODE",
+   "live_base_sha": null,
+   "final_sha": "78f20c2e8bcba283",
+   "kind_edits": {}
+  },
+  {
+   "file": "Alt_Send_Back_Build.js",
+   "name": "Alt Send Back Build",
+   "from": "pkgALT/patched/Alt_Send_Back_Build.js",
+   "live_base": "NEW NODE",
+   "live_base_sha": null,
+   "final_sha": "5c2ea5e2be76afbd",
+   "kind_edits": {}
+  },
+  {
+   "file": "Alt_Send_Back_Record.js",
+   "name": "Alt Send Back Record",
+   "from": "pkgSBS/patched/Alt_Send_Back_Record.js",
+   "live_base": "NEW NODE",
+   "live_base_sha": null,
+   "final_sha": "9605942e1e47bb14",
+   "kind_edits": {}
+  },
+  {
+   "file": "Alternate_Build.js",
+   "name": "Alternate Build",
+   "from": "pkgEANS/patched2/Alternate_Build.js",
+   "live_base": "merged_TLRN/Alternate_Build.js",
+   "live_base_sha": "5b73334311b88db9",
+   "final_sha": "dc3530667e47e91f",
+   "kind_edits": {}
+  },
+  {
+   "file": "Alternate_Cure_Build.js",
+   "name": "Alternate Cure Build",
+   "from": "pkgEANS/patched2/Alternate_Cure_Build.js",
+   "live_base": "merged_TLRN/Alternate_Cure_Build.js",
+   "live_base_sha": "5ce22ffbc4455857",
+   "final_sha": "67de2afe5424bef8",
+   "kind_edits": {}
+  },
+  {
+   "file": "Alternate_Cure_Normalize.js",
+   "name": "Alternate Cure Normalize",
+   "from": "pkgEANS/patched2/Alternate_Cure_Normalize.js",
+   "live_base": "merged_TLRN/Alternate_Cure_Normalize.js",
+   "live_base_sha": "bafc789109bbe9f2",
+   "final_sha": "c1355e419e03fd08",
+   "kind_edits": {}
+  },
+  {
+   "file": "Alternate_Merge.js",
+   "name": "Alternate Merge",
+   "from": "pkgEANS/patched2/Alternate_Merge.js",
+   "live_base": "NEW NODE",
+   "live_base_sha": null,
+   "final_sha": "3e34a0641e0b013b",
+   "kind_edits": {
+    "kind:'send_back_apply'": 2
+   }
+  },
+  {
+   "file": "Alternate_Merge_Seat.js",
+   "name": "Alternate Merge Seat",
+   "from": "pkgEANS/patched2/Alternate_Merge_Seat.js",
+   "live_base": "merged_TLRN/Alternate_Merge.js (node \"Alternate Merge\", renamed)",
+   "live_base_sha": "f85a5765ed9612fb",
+   "final_sha": "cf1225fee0015d06",
+   "kind_edits": {
+    "kind:'send_back_apply'": 3
+   }
+  },
+  {
+   "file": "Alternate_Payloads.js",
+   "name": "Alternate Payloads",
+   "from": "pkgEANS/patched2/Alternate_Payloads.js",
+   "live_base": "merged_TLRN/Alternate_Payloads.js",
+   "live_base_sha": "eeb22b7a25bf2b27",
+   "final_sha": "adc132d2357d372f",
+   "kind_edits": {}
+  },
+  {
+   "file": "Cure_Build.js",
+   "name": "Cure Build",
+   "from": "pkgEANS/patched2/Cure_Build.js",
+   "live_base": "merged_TLRN/Cure_Build.js",
+   "live_base_sha": "e7fd03f669958322",
+   "final_sha": "06954136fd563623",
+   "kind_edits": {}
+  },
+  {
+   "file": "Cure_Check.js",
+   "name": "Cure Check",
+   "from": "pkgEANS/patched2/Cure_Check.js",
+   "live_base": "merged_TLRN/Cure_Check.js",
+   "live_base_sha": "f6ab3202f20c1060",
+   "final_sha": "3be15e88b2f3f804",
+   "kind_edits": {}
+  },
+  {
+   "file": "Cure_Normalize.js",
+   "name": "Cure Normalize",
+   "from": "pkgEANS/patched2/Cure_Normalize.js",
+   "live_base": "merged_TLRN/Cure_Normalize.js",
+   "live_base_sha": "9150f638a9774a61",
+   "final_sha": "92533fbbe8d4be44",
+   "kind_edits": {}
+  },
+  {
+   "file": "Extract_Independent_Verdict.js",
+   "name": "Extract Independent Verdict",
+   "from": "pkgEANS/patched2/Extract_Independent_Verdict.js",
+   "live_base": "merged_TLRN/Extract_Independent_Verdict.js",
+   "live_base_sha": "5b5e58941fa92c88",
+   "final_sha": "fb9d094086544564",
+   "kind_edits": {}
+  },
+  {
+   "file": "Gate_Build.js",
+   "name": "Gate Build",
+   "from": "pkgEANS/patched2/Gate_Build.js",
+   "live_base": "NEW NODE",
+   "live_base_sha": null,
+   "final_sha": "be796e05676cd408",
+   "kind_edits": {}
+  },
+  {
+   "file": "Gate_Record.js",
+   "name": "Gate Record",
+   "from": "pkgEANS/patched2/Gate_Record.js",
+   "live_base": "NEW NODE",
+   "live_base_sha": null,
+   "final_sha": "3be0c041a8d7b2c5",
+   "kind_edits": {
+    "kind:'gate'": 2
+   }
+  },
+  {
+   "file": "Judge_Enforcer_Build.js",
+   "name": "Judge Enforcer Build",
+   "from": "pkgEANS/patched2/Judge_Enforcer_Build.js",
+   "live_base": "pkgALT/base_nodes_68fe.json",
+   "live_base_sha": "4ecd4e1382c62c03",
+   "final_sha": "2772cf0892c7aee9",
+   "kind_edits": {}
+  },
+  {
+   "file": "Panel_Cure_Build_1.js",
+   "name": "Panel Cure Build 1",
+   "from": "pkgEANS/patched2/Panel_Cure_Build_1.js",
+   "live_base": "merged_TLRN/Panel_Cure_Build_1.js",
+   "live_base_sha": "f77703873e4d69b2",
+   "final_sha": "b87e7f8b3313218c",
+   "kind_edits": {}
+  },
+  {
+   "file": "Panel_Cure_Build_2.js",
+   "name": "Panel Cure Build 2",
+   "from": "pkgEANS/patched2/Panel_Cure_Build_2.js",
+   "live_base": "merged_TLRN/Panel_Cure_Build_2.js",
+   "live_base_sha": "fef3f1f9d8b8808f",
+   "final_sha": "ca404495520880c7",
+   "kind_edits": {}
+  },
+  {
+   "file": "Panel_Cure_Build_3.js",
+   "name": "Panel Cure Build 3",
+   "from": "pkgEANS/patched2/Panel_Cure_Build_3.js",
+   "live_base": "merged_TLRN/Panel_Cure_Build_3.js",
+   "live_base_sha": "175f7a7e6cd528f0",
+   "final_sha": "3bcc6e716e01019c",
+   "kind_edits": {}
+  },
+  {
+   "file": "Panel_Cure_Check.js",
+   "name": "Panel Cure Check",
+   "from": "pkgEANS/patched2/Panel_Cure_Check.js",
+   "live_base": "merged_TLRN/Panel_Cure_Check.js",
+   "live_base_sha": "46ae2ec26ace989c",
+   "final_sha": "36c62d74cddc7b56",
+   "kind_edits": {}
+  },
+  {
+   "file": "Panel_Cure_Normalize_1.js",
+   "name": "Panel Cure Normalize 1",
+   "from": "pkgEANS/patched2/Panel_Cure_Normalize_1.js",
+   "live_base": "merged_TLRN/Panel_Cure_Normalize_1.js",
+   "live_base_sha": "d87fa730f9cb8e89",
+   "final_sha": "14ddcd9208cdf282",
+   "kind_edits": {}
+  },
+  {
+   "file": "Panel_Cure_Normalize_2.js",
+   "name": "Panel Cure Normalize 2",
+   "from": "pkgEANS/patched2/Panel_Cure_Normalize_2.js",
+   "live_base": "merged_TLRN/Panel_Cure_Normalize_2.js",
+   "live_base_sha": "f7a6bbb649c55b43",
+   "final_sha": "14444f413df75de3",
+   "kind_edits": {}
+  },
+  {
+   "file": "Panel_Cure_Normalize_3.js",
+   "name": "Panel Cure Normalize 3",
+   "from": "pkgEANS/patched2/Panel_Cure_Normalize_3.js",
+   "live_base": "merged_TLRN/Panel_Cure_Normalize_3.js",
+   "live_base_sha": "e3dcebfb8c289796",
+   "final_sha": "4377217615ef510c",
+   "kind_edits": {}
+  },
+  {
+   "file": "Panel_Payloads.js",
+   "name": "Panel Payloads",
+   "from": "pkgEANS/patched2/Panel_Payloads.js",
+   "live_base": "merged_TLRN/Panel_Payloads.js",
+   "live_base_sha": "72ab80e677b579cc",
+   "final_sha": "728f1da9dc01f145",
+   "kind_edits": {}
+  },
+  {
+   "file": "Send_Back_Record.js",
+   "name": "Send Back Record",
+   "from": "pkgSBS/patched/Send_Back_Record.js",
+   "live_base": "pkgSBP/base/Send_Back_Record.js",
+   "live_base_sha": "2a78ae168e941a36",
+   "final_sha": "a084cfd1fff25c34",
+   "kind_edits": {}
+  }
+ ]
+}
