@@ -1,0 +1,15 @@
+STORED 33083 (engine output)  (K-V items as stored)
+   gemini   HELD    drv_uncured 1  LIVE uncured 1  [K-CMT contested grades without a commitment]
+   chatgpt  BROKEN  drv_uncured 0  LIVE uncured 0
+   sol      BROKEN  drv_uncured 1  LIVE uncured 1  [K-V CHALLENGER premise 3]
+   counted seats (drv_uncured 0): chatgpt -> BROKEN  (BROKEN 1, HELD 0, PARTIAL 0)
+BASE pkgRCLN  (K-V items as stored)
+   gemini   HELD    drv_uncured 1  LIVE uncured 1  [K-CMT contested grades without a commitment]
+   chatgpt  BROKEN  drv_uncured 0  LIVE uncured 0
+   sol      BROKEN  drv_uncured 1  LIVE uncured 1  [K-V CHALLENGER premise 3]
+   counted seats (drv_uncured 0): chatgpt -> BROKEN  (BROKEN 1, HELD 0, PARTIAL 0)
+PATCHED pkgKVP  (Panel Payloads K-V recomputed: sol K-V [CHALLENGER premise 3] -> [])
+   gemini   HELD    drv_uncured 0  LIVE uncured 0
+   chatgpt  BROKEN  drv_uncured 0  LIVE uncured 0
+   sol      BROKEN  drv_uncured 0  LIVE uncured 0
+   counted seats (drv_uncured 0): chatgpt, gemini, sol -> BROKEN, HELD, BROKEN  (BROKEN 2, HELD 1, PARTIAL 0)
