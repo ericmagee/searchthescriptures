@@ -1,4 +1,4 @@
-OK   plan: 22 nodes, base shas match pkgRCLN/patched, stub shas match pkgLIB/patched
+OK   plan: 22 nodes, base shas match pkgKVP/patched, stub shas match pkgLIB/patched
 OK   every stub rebuilds its full source byte for byte from the Shared Library (22 of 22)
 OK   every stub and the Shared Library parse
 OK   the stubs read only $('Shared Library') and the node's own $/$input (no other global)
@@ -51,7 +51,7 @@ OK   the cure path nodes produce real output on the saved runs (not only errors)
      Panel Cure Normalize 3         $input Panel Cure Build 3        SAME output 153491 bytes
      Panel Payloads                 $input Panel Build               SAME stops: node not saved: Panel Check
 OK   run 33040, all saved node outputs: every node identical full vs stub
-   timing, Panel Cure Check on 33040, median of 5 fresh processes: full source 78.1 ms, stub 81.0 ms (+2.9 ms per node run)
-   size: the 22 nodes hold 7054453 bytes of code before, 579764 after (Shared Library 433497 included)
+   timing, Panel Cure Check on 33040, median of 5 fresh processes: full source 81.0 ms, stub 79.3 ms (-1.8 ms per node run)
+   size: the 22 nodes hold 7076558 bytes of code before, 580862 after (Shared Library 434595 included)
 OK   the stub adds under 50 ms per node run
 8 OK, 0 FAIL
