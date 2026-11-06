@@ -1,0 +1,5 @@
+// Save the named node outputs of a saved n8n get_workflow_execution file as corpus/raw/nodes_<run>.json.gz: {run, nodes:{name:[json items of each run of the node]}, skipped:[...]}
+const fs=require('fs'),zlib=require('zlib');const f=process.argv[2];const X=JSON.parse(fs.readFileSync(f,'utf8'));const run=X.execution.id;const rd=X.data.resultData.runData;
+const want=['Init Seats','Panel Payloads','Quote Report','Panel Cure Build 1','Panel Cure Build 2','Panel Cure Build 3','Panel Cure Normalize 1','Panel Cure Normalize 2','Panel Cure Normalize 3','Panel Cure Check','Alternate Payloads','Alternate Cure Build','Alternate Cure Normalize'];
+const out={run,nodes:{},skipped:[]};for(const n of want){if(!rd[n]){out.skipped.push(n);continue;}out.nodes[n]=rd[n].map(r=>((r.data&&r.data.main&&r.data.main[0])||[]).map(i=>i.json));}
+fs.writeFileSync('corpus/raw/nodes_'+run+'.json.gz',zlib.gzipSync(JSON.stringify(out)));console.log(run,Object.keys(out.nodes).length,'nodes; skipped:',out.skipped.join(', ')||'none');

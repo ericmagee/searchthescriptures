@@ -21,7 +21,13 @@ Run everything from prototypes/posture_e/wall2024/.
   - The other 12 are TRIAL rules that need inputs the log does not hold (K-RUL, K-P, K-V, K-KJV, K-AG), so they change no removal.
   - W3 cure labels: 33014 chatgpt kept MATCH; 33025 gemini removed MATCH.
 
+- `node corpus/replay_cure_node.cjs <pkgDir>...`: runs the whole Panel_Cure_Check node offline on each run's saved n8n inputs (corpus/raw/nodes_<run>.json.gz, written by save_nodes.cjs; replay_node.cjs mocks $). It compares the result with the engine's stored Panel Cure Check, for the main panel only.
+  - pkgKS (live) matches 224 of 227 rows. The 3 differences are the pkgCR fix to 33014 chatgpt.
+  - Each older package differs only by its known fixes: on pkgCR, 33025 gemini has 0 uncured (KS is what removes it); on pkgGD, 33025 chatgpt has 3 (before FC).
+  - The live-test thread saves the same nodes from 33040 on, to /mnt/project-files/wall2024/inputs/.
+
 Gaps:
 - 33006 has no node data (the run crashed), so it has texts but no replay fixture.
 - 33006 grok has no stored verdict text.
+- The alternate's cure (Alternate Merge) is not whole-node replayed yet.
 - 33040 is added once it finishes.
