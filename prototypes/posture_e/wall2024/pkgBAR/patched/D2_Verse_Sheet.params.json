@@ -1,0 +1,6 @@
+{
+ "url": "={{ $('C1B Extract').first().json.sheet_url }}",
+ "authentication": "genericCredentialType",
+ "genericAuthType": "httpHeaderAuth",
+ "options": {}
+}

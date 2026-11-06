@@ -1,0 +1,508 @@
+{
+ "base": "pkgBAR/base/workflow_base.json",
+ "base_nodes": 370,
+ "changed": [
+  {
+   "node": "Init with Guards",
+   "file": "Init_with_Guards.js",
+   "base_sha": "323cc5b76e4760a8",
+   "final_sha": "a84776beb0c2275b",
+   "readers": 0
+  },
+  {
+   "node": "Panel Build",
+   "file": "Panel_Build.js",
+   "base_sha": "01304f5e94d525e7",
+   "final_sha": "6d226bf0f67623a9",
+   "readers": 0
+  },
+  {
+   "node": "Reserve Build",
+   "file": "Reserve_Build.js",
+   "base_sha": "975d043e67ad5a8e",
+   "final_sha": "db3bdc0a0e67429e",
+   "readers": 0
+  },
+  {
+   "node": "Panel Cure Build 1",
+   "file": "Panel_Cure_Build_1.js",
+   "base_sha": "ee4ff0d207dd4d87",
+   "final_sha": "98f97f0de7d93793",
+   "readers": 0
+  },
+  {
+   "node": "Panel Cure Build 2",
+   "file": "Panel_Cure_Build_2.js",
+   "base_sha": "e8c216600155ff80",
+   "final_sha": "0c43922b593d795c",
+   "readers": 0
+  },
+  {
+   "node": "Panel Cure Build 3",
+   "file": "Panel_Cure_Build_3.js",
+   "base_sha": "2126481cbcbaa62e",
+   "final_sha": "357cbb917cdf79f8",
+   "readers": 0
+  },
+  {
+   "node": "Alternate Build",
+   "file": "Alternate_Build.js",
+   "base_sha": "9e1f9bd85385ffd9",
+   "final_sha": "6c466c3ec4a47ec8",
+   "readers": 0
+  },
+  {
+   "node": "Alternate Cure Build",
+   "file": "Alternate_Cure_Build.js",
+   "base_sha": "2eef7f77873e131a",
+   "final_sha": "1714cec371e13921",
+   "readers": 0
+  },
+  {
+   "node": "Accept Build",
+   "file": "Accept_Build.js",
+   "base_sha": "7ac549ae73e1d7f0",
+   "final_sha": "0ec2b8a154e0140f",
+   "readers": 0
+  },
+  {
+   "node": "Accept Check",
+   "file": "Accept_Check.js",
+   "base_sha": "0e3ca2bc0ef8d1c3",
+   "final_sha": "20806c4e5e3bd9e0",
+   "readers": 0
+  },
+  {
+   "node": "Accept Return Build",
+   "file": "Accept_Return_Build.js",
+   "base_sha": "004549b3baa652c2",
+   "final_sha": "5070ccdb8e94502f",
+   "readers": 0
+  },
+  {
+   "node": "Accept Final",
+   "file": "Accept_Final.js",
+   "base_sha": "c7d554f0169c3d32",
+   "final_sha": "4e1d0200db8f270d",
+   "readers": 0
+  },
+  {
+   "node": "Accept DS Return Build",
+   "file": "Accept_DS_Return_Build.js",
+   "base_sha": "6b88fe404c8dfb23",
+   "final_sha": "6e1516c1f6b61ad3",
+   "readers": 0
+  },
+  {
+   "node": "Enforcer Build",
+   "file": "Enforcer_Build.js",
+   "base_sha": "c1e1b4d5573a1a92",
+   "final_sha": "390501a05b153e5a",
+   "readers": 0
+  },
+  {
+   "node": "Judge Enforcer Build",
+   "file": "Judge_Enforcer_Build.js",
+   "base_sha": "6b3501b44563dc80",
+   "final_sha": "06cd0b2fefee0a10",
+   "readers": 0
+  },
+  {
+   "node": "Alt Judge Enforcer Build",
+   "file": "Alt_Judge_Enforcer_Build.js",
+   "base_sha": "dfc5633314f5b723",
+   "final_sha": "22641723ace0ea69",
+   "readers": 0
+  },
+  {
+   "node": "D2 Build",
+   "file": "D2_Build.js",
+   "base_sha": "d449d8cec02666fb",
+   "final_sha": "8e625d2dc8302e4c",
+   "readers": 3
+  },
+  {
+   "node": "D2 Extract",
+   "file": "D2_Extract.js",
+   "base_sha": "efbdd4f6bb671993",
+   "final_sha": "008ea16a52bf7659",
+   "readers": 1
+  },
+  {
+   "node": "C2 Build",
+   "file": "C2_Build.js",
+   "base_sha": "28e7f35d167ffdac",
+   "final_sha": "44105095b0094008",
+   "readers": 4
+  },
+  {
+   "node": "C2 Extract",
+   "file": "C2_Extract.js",
+   "base_sha": "08c6a17c4eb922a4",
+   "final_sha": "476dc0b84cc5985d",
+   "readers": 2
+  },
+  {
+   "node": "D3 Build",
+   "file": "D3_Build.js",
+   "base_sha": "c2706719ca5b8e9e",
+   "final_sha": "39670ee690705bfc",
+   "readers": 6
+  },
+  {
+   "node": "D3 Extract",
+   "file": "D3_Extract.js",
+   "base_sha": "bf0f4fa4148d57a0",
+   "final_sha": "176953316a8848e2",
+   "readers": 3
+  },
+  {
+   "node": "C3 Build",
+   "file": "C3_Build.js",
+   "base_sha": "a910667be1fd092a",
+   "final_sha": "cc978bdae4507cbb",
+   "readers": 7
+  },
+  {
+   "node": "C3 Extract",
+   "file": "C3_Extract.js",
+   "base_sha": "259e1a5ac11c224b",
+   "final_sha": "1f4a79361bd4b6da",
+   "readers": 5
+  },
+  {
+   "node": "Build Synthesis",
+   "file": "Build_Synthesis.js",
+   "base_sha": "0582c7831328cf61",
+   "final_sha": "1655b937fb2c3842",
+   "readers": 7
+  },
+  {
+   "node": "Build Diagnostic Prompt",
+   "file": "Build_Diagnostic_Prompt.js",
+   "base_sha": "1c1f050d62246035",
+   "final_sha": "41b7a73022844a5b",
+   "readers": 1
+  },
+  {
+   "node": "D4 Build",
+   "file": "D4_Build.js",
+   "base_sha": "e14e9ec3dc325f22",
+   "final_sha": "d8ef60212dc3cb3a",
+   "readers": 9
+  },
+  {
+   "node": "D4 Extract",
+   "file": "D4_Extract.js",
+   "base_sha": "49b54582f3af8d38",
+   "final_sha": "0c0310d56d419c94",
+   "readers": 10
+  },
+  {
+   "node": "C4 Build",
+   "file": "C4_Build.js",
+   "base_sha": "5a3b81945f001979",
+   "final_sha": "9bcab180e4159764",
+   "readers": 10
+  },
+  {
+   "node": "C4 Extract",
+   "file": "C4_Extract.js",
+   "base_sha": "8684839668f77d36",
+   "final_sha": "7febe420d8f569f5",
+   "readers": 7
+  },
+  {
+   "node": "D2 Verse Sheet",
+   "file": "D2_Verse_Sheet.params.json",
+   "base_sha": "b9e4937b9e583d16",
+   "final_sha": "f5af5cd50ce4236f",
+   "readers": 1
+  },
+  {
+   "node": "C2 Verse Sheet",
+   "file": "C2_Verse_Sheet.params.json",
+   "base_sha": "b901b2c1c9a90a8d",
+   "final_sha": "941fafff5bad6000",
+   "readers": 1
+  },
+  {
+   "node": "D3 Verse Sheet",
+   "file": "D3_Verse_Sheet.params.json",
+   "base_sha": "7fbc964a10ae1f0c",
+   "final_sha": "15a5e83e96a13981",
+   "readers": 1
+  },
+  {
+   "node": "C3 Verse Sheet",
+   "file": "C3_Verse_Sheet.params.json",
+   "base_sha": "3f3841961a004486",
+   "final_sha": "a4a9a4a452923a3c",
+   "readers": 1
+  },
+  {
+   "node": "D4 Verse Sheet",
+   "file": "D4_Verse_Sheet.params.json",
+   "base_sha": "0bfcdf7ba2e260bd",
+   "final_sha": "2ea1d754addea0eb",
+   "readers": 1
+  },
+  {
+   "node": "C4 Verse Sheet",
+   "file": "C4_Verse_Sheet.params.json",
+   "base_sha": "0ed094920b7d4a92",
+   "final_sha": "8efdc9ec3c042000",
+   "readers": 1
+  },
+  {
+   "node": "D2 Words Plan",
+   "file": "D2_Words_Plan.js",
+   "base_sha": "04fe4174bd163cc2",
+   "final_sha": "6c4eda39c061f458",
+   "readers": 1
+  },
+  {
+   "node": "C2 Words Plan",
+   "file": "C2_Words_Plan.js",
+   "base_sha": "ba1349ee6446dc17",
+   "final_sha": "0cbfaffcb7fafc61",
+   "readers": 1
+  },
+  {
+   "node": "D3 Words Plan",
+   "file": "D3_Words_Plan.js",
+   "base_sha": "963ca9358a73b2ca",
+   "final_sha": "4ee386fc5514a40e",
+   "readers": 1
+  },
+  {
+   "node": "C3 Words Plan",
+   "file": "C3_Words_Plan.js",
+   "base_sha": "ff03c6a88f023af9",
+   "final_sha": "df5e50aa48911ad0",
+   "readers": 1
+  },
+  {
+   "node": "D4 Words Plan",
+   "file": "D4_Words_Plan.js",
+   "base_sha": "553def8844099646",
+   "final_sha": "608f69581596138d",
+   "readers": 1
+  },
+  {
+   "node": "C4 Words Plan",
+   "file": "C4_Words_Plan.js",
+   "base_sha": "4c6b1cad8608d1f4",
+   "final_sha": "cbdd118ba1d5b852",
+   "readers": 1
+  },
+  {
+   "node": "C4G Extract",
+   "file": "C4G_Extract.js",
+   "base_sha": "ee0c6f6d5506d9d7",
+   "final_sha": "2ff804b6e6bb22b0",
+   "readers": 7
+  },
+  {
+   "node": "C3G Extract",
+   "file": "C3G_Extract.js",
+   "base_sha": "e0585d4be7b032bd",
+   "final_sha": "fb98b10b9a948222",
+   "readers": 5
+  },
+  {
+   "node": "Failure Salvage",
+   "file": "Failure_Salvage.js",
+   "base_sha": "e124b889d1188d84",
+   "final_sha": "23a4dbbfd6b74a15",
+   "readers": 0
+  },
+  {
+   "node": "Build Save Body",
+   "file": "Build_Save_Body.js",
+   "base_sha": "5b6b680ded0ea0ae",
+   "final_sha": "2d9652c69464bb15",
+   "readers": 0
+  }
+ ],
+ "added": [
+  "C1B Build",
+  "C1B Route",
+  "C1B Call anthropic",
+  "C1B Call openai",
+  "C1B Call gemini",
+  "C1B Call grok",
+  "C1B Call mimo",
+  "C1B Call openrouter",
+  "C1B Call deepseek",
+  "C1B Extract",
+  "D2B Build",
+  "D2B Route",
+  "D2B Call anthropic",
+  "D2B Call openai",
+  "D2B Call gemini",
+  "D2B Call grok",
+  "D2B Call mimo",
+  "D2B Call openrouter",
+  "D2B Call deepseek",
+  "D2B Extract",
+  "C2B Build",
+  "C2B Route",
+  "C2B Call anthropic",
+  "C2B Call openai",
+  "C2B Call gemini",
+  "C2B Call grok",
+  "C2B Call mimo",
+  "C2B Call openrouter",
+  "C2B Call deepseek",
+  "C2B Extract",
+  "D3B Build",
+  "D3B Route",
+  "D3B Call anthropic",
+  "D3B Call openai",
+  "D3B Call gemini",
+  "D3B Call grok",
+  "D3B Call mimo",
+  "D3B Call openrouter",
+  "D3B Call deepseek",
+  "D3B Extract",
+  "C3B Build",
+  "C3B Route",
+  "C3B Call anthropic",
+  "C3B Call openai",
+  "C3B Call gemini",
+  "C3B Call grok",
+  "C3B Call mimo",
+  "C3B Call openrouter",
+  "C3B Call deepseek",
+  "C3B Extract",
+  "D4B Build",
+  "D4B Route",
+  "D4B Call anthropic",
+  "D4B Call openai",
+  "D4B Call gemini",
+  "D4B Call grok",
+  "D4B Call mimo",
+  "D4B Call openrouter",
+  "D4B Call deepseek",
+  "D4B Extract",
+  "C4B Build",
+  "C4B Route",
+  "C4B Call anthropic",
+  "C4B Call openai",
+  "C4B Call gemini",
+  "C4B Call grok",
+  "C4B Call mimo",
+  "C4B Call openrouter",
+  "C4B Call deepseek",
+  "C4B Extract"
+ ],
+ "stages": {
+  "C1B": {
+   "src": "C1 Extract",
+   "next": [
+    "D2 Verse Sheet"
+   ],
+   "fam": [
+    "anthropic",
+    "openai",
+    "gemini",
+    "grok",
+    "mimo",
+    "openrouter",
+    "deepseek"
+   ]
+  },
+  "D2B": {
+   "src": "D2 Extract",
+   "next": [
+    "C2 Verse Sheet"
+   ],
+   "fam": [
+    "anthropic",
+    "openai",
+    "gemini",
+    "grok",
+    "mimo",
+    "openrouter",
+    "deepseek"
+   ]
+  },
+  "C2B": {
+   "src": "C2 Extract",
+   "next": [
+    "D3 Verse Sheet"
+   ],
+   "fam": [
+    "anthropic",
+    "openai",
+    "gemini",
+    "grok",
+    "mimo",
+    "openrouter",
+    "deepseek"
+   ]
+  },
+  "D3B": {
+   "src": "D3 Extract",
+   "next": [
+    "C3 Verse Sheet"
+   ],
+   "fam": [
+    "anthropic",
+    "openai",
+    "gemini",
+    "grok",
+    "mimo",
+    "openrouter",
+    "deepseek"
+   ]
+  },
+  "C3B": {
+   "src": "C3G Extract",
+   "next": [
+    "D4 Verse Sheet"
+   ],
+   "fam": [
+    "anthropic",
+    "openai",
+    "gemini",
+    "grok",
+    "mimo",
+    "openrouter",
+    "deepseek"
+   ]
+  },
+  "D4B": {
+   "src": "D4 Extract",
+   "next": [
+    "C4 Verse Sheet"
+   ],
+   "fam": [
+    "anthropic",
+    "openai",
+    "gemini",
+    "grok",
+    "mimo",
+    "openrouter",
+    "deepseek"
+   ]
+  },
+  "C4B": {
+   "src": "C4G Extract",
+   "next": [
+    "Build Synthesis"
+   ],
+   "fam": [
+    "anthropic",
+    "openai",
+    "gemini",
+    "grok",
+    "mimo",
+    "openrouter",
+    "deepseek"
+   ]
+  }
+ },
+ "final_nodes": 440
+}
