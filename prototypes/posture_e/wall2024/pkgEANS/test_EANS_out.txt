@@ -1,0 +1,19 @@
+OK   Alt Judge Enforcer Build is still the clone of Judge Enforcer Build under the mask
+OK   only the E-ANS reader changed (4 edits)
+OK   32980 sol: before, no Romans 1:3 E-ANS item; after, one item [CR3; CR4]
+OK   the item tells the enforcer where the answer stands, after looking in both listed rounds
+   E-ANS; the answering side wrote this in [CR3; CR4]; its opening words are found in [CR3])
+OK   sol: every other item is unchanged (old items are a subset of new)
+   32980 gemini: ANSWER CHECK lines 42; E-ANS before 42, after 42
+   32980 grok: ANSWER CHECK lines 37; E-ANS before 34, after 34; still unread 3 {"no MEETS or MISSES grade":3}
+   32980 sol: ANSWER CHECK lines 85; E-ANS before 44, after 47; now read: ANSWER CHECK Romans 1:3 [CR3; CR4] | ANSWER CHECK Hebrews 7:14 [CR3; CR4] | ANSWER CHECK 2 Samuel 7:12 [CR3; CR4]; still unread 2 {"other":1,"no MEETS or MISSES grade":1}: ANSWER CHECK: Matthew 1:19 -- [DR3] -- MEANS: "a husband who knew he was the cause would have no ground to put her away." -- ANSWER: "The angel restores what th
+   32980 chatgpt: ANSWER CHECK lines 85; E-ANS before 0, after 0; still unread 49 {"single-quoted MEANS":49}
+   32949 chatgpt: ANSWER CHECK lines 72; E-ANS before 49, after 49; still unread 6 {"no MEETS or MISSES grade":6}
+   32949 grok: ANSWER CHECK lines 66; E-ANS before 49, after 49; still unread 17 {"no MEETS or MISSES grade":12,"other":1,"ANSWER: NONE":4}: ANSWER CHECK: Luke 1:56 -- [CR3] -- MEANS: "she had not yet been taken into Joseph's house, which fits before they came together as the taking" -- ANSWER: "is c
+   32973 chatgpt: ANSWER CHECK lines 50; E-ANS before 49, after 49; still unread 1 {"no MEETS or MISSES grade":1}
+   32973 gemini: ANSWER CHECK lines 50; E-ANS before 49, after 49; still unread 1 {"no MEETS or MISSES grade":1}
+   32973 grok: ANSWER CHECK lines 117; E-ANS before 48, after 48; still unread 69 {"ANSWER: NONE":67,"no MEETS or MISSES grade":2}
+   32949 sol: ANSWER CHECK lines 72; E-ANS before 58, after 58
+OK   the new reader only adds items: no seat loses an E-ANS item
+   lines newly read: 3; lines still unread (other forms, listed above): 148
+6 OK 0 FAIL
