@@ -1,0 +1,89 @@
+OK   19 nodes carry cureAsk
+OK   Alt Gate Build: shas match
+OK   Alt Gate Build: parses
+OK   Alt Gate Build: the label is printed only on K-G4 items
+OK   Alt Gate Record: shas match
+OK   Alt Gate Record: parses
+OK   Alt Gate Record: the label is printed only on K-G4 items
+OK   Alternate Build: shas match
+OK   Alternate Build: parses
+OK   Alternate Build: the label is printed only on K-G4 items
+OK   Alternate Cure Build: shas match
+OK   Alternate Cure Build: parses
+OK   Alternate Cure Build: the label is printed only on K-G4 items
+OK   Alternate Cure Normalize: shas match
+OK   Alternate Cure Normalize: parses
+OK   Alternate Cure Normalize: the label is printed only on K-G4 items
+OK   Alternate Merge: shas match
+OK   Alternate Merge: parses
+OK   Alternate Merge: the label is printed only on K-G4 items
+OK   Alternate Merge Seat: shas match
+OK   Alternate Merge Seat: parses
+OK   Alternate Merge Seat: the label is printed only on K-G4 items
+OK   Cure Build: shas match
+OK   Cure Build: parses
+OK   Cure Build: the label is printed only on K-G4 items
+OK   Cure Check: shas match
+OK   Cure Check: parses
+OK   Cure Check: the label is printed only on K-G4 items
+OK   Cure Normalize: shas match
+OK   Cure Normalize: parses
+OK   Cure Normalize: the label is printed only on K-G4 items
+OK   Gate Build: shas match
+OK   Gate Build: parses
+OK   Gate Build: the label is printed only on K-G4 items
+OK   Gate Record: shas match
+OK   Gate Record: parses
+OK   Gate Record: the label is printed only on K-G4 items
+OK   Panel Cure Build 1: shas match
+OK   Panel Cure Build 1: parses
+OK   Panel Cure Build 1: the label is printed only on K-G4 items
+OK   Panel Cure Build 2: shas match
+OK   Panel Cure Build 2: parses
+OK   Panel Cure Build 2: the label is printed only on K-G4 items
+OK   Panel Cure Build 3: shas match
+OK   Panel Cure Build 3: parses
+OK   Panel Cure Build 3: the label is printed only on K-G4 items
+OK   Panel Cure Check: shas match
+OK   Panel Cure Check: parses
+OK   Panel Cure Check: the label is printed only on K-G4 items
+OK   Panel Cure Normalize 1: shas match
+OK   Panel Cure Normalize 1: parses
+OK   Panel Cure Normalize 1: the label is printed only on K-G4 items
+OK   Panel Cure Normalize 2: shas match
+OK   Panel Cure Normalize 2: parses
+OK   Panel Cure Normalize 2: the label is printed only on K-G4 items
+OK   Panel Cure Normalize 3: shas match
+OK   Panel Cure Normalize 3: parses
+OK   Panel Cure Normalize 3: the label is printed only on K-G4 items
+OK   the cure check classes K-G4 by the same DRV_WORDS test
+OK   32985 has 9 uncured K-G4 items
+OK   32985 chatgpt D2 vs C2: engine class MEANING, label agrees
+     GROUND: The defender did not answer the pressed claim that the sign was bounded to a child of Isaiah's day.
+     label:  [MEANING BREAK: your GROUND names no pressed witness left u ...
+OK   32985 chatgpt D2 vs C4: engine class MEANING, label agrees
+     GROUND: The challenger's answer uses a quotation marked NOT COUNTED.
+     label:  [MEANING BREAK: your GROUND names no pressed witness left u ...
+OK   32985 chatgpt D5 vs C5: engine class MEANING, label agrees
+     GROUND: The defender did not answer the pressed meaning that the line from Abraham to Levi runs through fathers.
+     label:  [MEANING BREAK: your GROUND names no pressed witness left u ...
+OK   32985 grok D2 vs C4: engine class MEANING, label agrees
+     GROUND: [L1] Isaiah 7:14 "Behold, a virgin shall conceive, and bear a son, and shall call his name Immanuel" and [L3] Matthew 1:23 "Behold, a virgin
+     label:  [MEANING BREAK: your GROUND names no pressed witness left u ...
+OK   32985 grok D3 vs C5: engine class MEANING, label agrees
+     GROUND: [L1] Luke 2:4 "he was of the house and lineage of David" and [L3] Matthew 1:16 "of whom was born Jesus," answered as legal reckoning in [CR4
+     label:  [MEANING BREAK: your GROUND names no pressed witness left u ...
+OK   32985 grok D5 vs C2: engine class MEANING, label agrees
+     GROUND: [L1] Acts 2:30 "of the fruit of his loins, according to the flesh" names David's loins, and [L3] Matthew 1:25 "knew her not till she had bro
+     label:  [MEANING BREAK: your GROUND names no pressed witness left u ...
+OK   32985 sol D1 vs C1: engine class MEANING, label agrees
+     GROUND: The proven non-conception application of the begetting-word receives no answer showing its fit with the asserted conception-exclusive argume
+     label:  [MEANING BREAK: your GROUND names no pressed witness left u ...
+OK   32985 sol D2 vs C4: engine class UNANSWERED-WITNESS, label agrees
+     GROUND: The challenger names this witness only in an answer that the citation check marks NOT COUNTED, leaving its scale-of-the-offered-sign meaning
+     label:  [UNANSWERED-WITNESS BREAK: your GROUND says a pressed witne ...
+OK   32985 sol D5 vs C5: engine class MEANING, label agrees
+     GROUND: The proven press concerning descent through fathers receives an answer about Judah rather than an answer engaging the Abraham-to-Levi meanin
+     label:  [MEANING BREAK: your GROUND names no pressed witness left u ...
+OK   cureAsk prints a MEANING BREAK label on the first and an UNANSWERED-WITNESS label on the second
+70 OK 0 FAIL
