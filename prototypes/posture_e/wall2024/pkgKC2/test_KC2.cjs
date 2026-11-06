@@ -19,10 +19,10 @@ T('reversing the edits gives the base byte for byte',plan.nodes.every(n=>{let t=
 // corpus: every VC fire of the stored Panel Payloads, with the seats that wrote its pair
 {const out=require('./vc_seats.cjs');const kept=out.filter(l=>/-> KEPT/.test(l)),drop=out.filter(l=>/-> DROPPED/.test(l));
  T('corpus: 6 VC charges; 5 dropped (32998 x3 grok alone, read FALSE; 33014 x2 chatgpt alone, read doubtful), 1 kept (33020 single judge, written by gemini, chatgpt, grok)',out.length===6&&drop.length===5&&kept.length===1&&/^33020 charged single judge/.test(kept[0]));}
-// cure replay: pkgKC2 equals pkgRU row for row
+// cure replay: pkgKC2 equals its base (pkgACR) row for row
 {const {execSync}=require('child_process');const a=execSync('node corpus/replay_cure_node.cjs pkgACR',{encoding:'utf8'}).replace(/pkgACR/g,'P'),b=execSync('node corpus/replay_cure_node.cjs pkgKC2',{encoding:'utf8'}).replace(/pkgKC2/g,'P');
  T('cure replay: pkgKC2 equals pkgACR on every row and every LIVE uncured count (K-CON rows in the corpus are all CURED)',a===b);}
-// gate: pkgKC2 equals pkgRU on every fixture seat
+// gate: pkgKC2 equals its base (pkgACR) on every fixture seat
 {const mk=p=>{const AM=rd(p+'/Alternate_Merge.js');return new Function('$','$input',AM.slice(0,AM.indexOf("const AM=$('Alternate Merge Seat')"))+'\nreturn {gateItems2024,gateCure2024,ciRounds,gatePromptText2024,drvLinks,sbApply2024};')(()=>{throw 0},null);};
  const G=(Lb,X,seat)=>{const b=X.bodies.find(b=>b.seat===seat);const its=X.sb_items.filter(x=>x.seat===seat&&x.rule!=='E-GATE');if(!b||!its.length)return null;const PT=Lb.gatePromptText2024(X.PB.judges.find(q=>q.seat===seat).body);const ctx={R:Lb.ciRounds(PT),DL:Lb.drvLinks(PT),ask:PT.includes('CITATION CHECK')};
   const R=Lb.gateItems2024(seat,b.verdict_raw,b.fields,its,ctx);const rep=(X.gate_replies||{})[seat];const c=rep&&R.items.length?Lb.gateCure2024(seat,b.verdict_raw,b.fields,its,R.items,rep,ctx):{res:[],uncured:0};return JSON.stringify({G:R.items.map(g=>g.gid+g.kind+g.src+g.live),c:c.res.map(r=>r&&r.cured),n:c.uncured});};
