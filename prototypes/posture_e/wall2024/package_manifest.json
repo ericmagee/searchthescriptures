@@ -1,0 +1,229 @@
+{
+ "live_version": "20a559da-9d01-4ad8-aa66-f0dec4170d52",
+ "nodes": [
+  {
+   "name": "Build Independent Verdict",
+   "id": "e2c80149-750b-479d-960a-30eab74cc1ce",
+   "layers": "B",
+   "live_sha": "0bd344bfe07b1d58",
+   "final_sha": "47113ec56ec14ab7",
+   "final_file": "pkgB/patched/Build_Independent_Verdict.js"
+  },
+  {
+   "name": "Extract Independent Verdict",
+   "id": "e832ab04-7e45-44e3-a39b-4076758ea00c",
+   "layers": "A+B",
+   "live_sha": "a77e2f3c01c96f38",
+   "final_sha": "b1223260f925555f",
+   "final_file": "pkgB/patched/Extract_Independent_Verdict.js"
+  },
+  {
+   "name": "Panel Build",
+   "id": "15cbe1bd-3a00-4bed-800e-f7f5bd843020",
+   "layers": "A+B",
+   "live_sha": "c34d1bd633e5585e",
+   "final_sha": "c3256cb3fdd25b2a",
+   "final_file": "pkgB/patched/Panel_Build.js"
+  },
+  {
+   "name": "Panel Payloads",
+   "id": "2a5fabdd-28bc-4211-ab01-dc3b1d0db967",
+   "layers": "A+B",
+   "live_sha": "46db74c9d304f814",
+   "final_sha": "5fa0106fbf0e5b4b",
+   "final_file": "pkgB/patched/Panel_Payloads.js"
+  },
+  {
+   "name": "Reserve Build",
+   "id": "7ed84904-343e-49a5-b2c5-6897d636c68e",
+   "layers": "A+B",
+   "live_sha": "fceefeb9b3c275e9",
+   "final_sha": "80d53e8ae7ed9712",
+   "final_file": "pkgB/patched/Reserve_Build.js"
+  },
+  {
+   "name": "Cure Build",
+   "id": "7ad5bd77-194e-4ce9-8d0b-359413ced1a4",
+   "layers": "A+B",
+   "live_sha": "bbb6f4cfb05c3bd2",
+   "final_sha": "df13e1e81afb5feb",
+   "final_file": "pkgB/patched/Cure_Build.js"
+  },
+  {
+   "name": "Cure Normalize",
+   "id": "e16abfe7-43f7-4a59-b088-859e43f9b2e9",
+   "layers": "A+B",
+   "live_sha": "15bdf520316d509e",
+   "final_sha": "0b542fcd8822b710",
+   "final_file": "pkgB/patched/Cure_Normalize.js"
+  },
+  {
+   "name": "Cure Check",
+   "id": "16b07c74-a403-4172-9b9a-4a6acfea9d62",
+   "layers": "A+B",
+   "live_sha": "bbe93e8fcd534787",
+   "final_sha": "6c1aadadc76289fd",
+   "final_file": "pkgB/patched/Cure_Check.js"
+  },
+  {
+   "name": "Panel Cure Build 1",
+   "id": "1c7e600c-5b02-4d8e-80c1-275d0995e9b7",
+   "layers": "A+B",
+   "live_sha": "b70088cbb7fda4dd",
+   "final_sha": "2fc04f3ea4f7f9f0",
+   "final_file": "pkgB/patched/Panel_Cure_Build_1.js"
+  },
+  {
+   "name": "Panel Cure Normalize 1",
+   "id": "4aa6acfd-6c25-4668-9155-a522404f9157",
+   "layers": "A+B",
+   "live_sha": "fd66addb93231447",
+   "final_sha": "7b83185bc5561aa6",
+   "final_file": "pkgB/patched/Panel_Cure_Normalize_1.js"
+  },
+  {
+   "name": "Panel Cure Build 2",
+   "id": "93038507-1a2f-4bcb-b69b-8d85fe801184",
+   "layers": "A+B",
+   "live_sha": "bee8fa49c14f74f1",
+   "final_sha": "cd44707bc3a84e77",
+   "final_file": "pkgB/patched/Panel_Cure_Build_2.js"
+  },
+  {
+   "name": "Panel Cure Normalize 2",
+   "id": "ec037816-6aa3-420a-b51e-f2a6ab24a58d",
+   "layers": "A+B",
+   "live_sha": "b9e85209d27e0842",
+   "final_sha": "8deb5265de313e9b",
+   "final_file": "pkgB/patched/Panel_Cure_Normalize_2.js"
+  },
+  {
+   "name": "Panel Cure Build 3",
+   "id": "1bb655d0-eca5-4f8c-b201-e4fd060eaabc",
+   "layers": "A+B",
+   "live_sha": "54289b102684b8b3",
+   "final_sha": "e08898c5cc2eb4f6",
+   "final_file": "pkgB/patched/Panel_Cure_Build_3.js"
+  },
+  {
+   "name": "Panel Cure Normalize 3",
+   "id": "d41fd40f-1c92-4739-9815-bfdf93e35260",
+   "layers": "A+B",
+   "live_sha": "de25d82b58a0ae92",
+   "final_sha": "9e8d9e62cf5a6928",
+   "final_file": "pkgB/patched/Panel_Cure_Normalize_3.js"
+  },
+  {
+   "name": "Panel Cure Check",
+   "id": "007bd090-db2f-46e1-88ea-a3e2623077ca",
+   "layers": "A+B",
+   "live_sha": "cf8c2d63537f1ef8",
+   "final_sha": "5c8fca770e6713f3",
+   "final_file": "pkgB/patched/Panel_Cure_Check.js"
+  },
+  {
+   "name": "Alternate Build",
+   "id": "8c37a3db-a61d-4cda-88ba-62dd25eb5f36",
+   "layers": "A+B",
+   "live_sha": "e59e40d2e7028379",
+   "final_sha": "d206e383fec1dadc",
+   "final_file": "pkgB/patched/Alternate_Build.js"
+  },
+  {
+   "name": "Alternate Payloads",
+   "id": "58b84db2-1576-4a6c-b227-d507b2f06d97",
+   "layers": "A+B",
+   "live_sha": "3b2cd101c1eb4579",
+   "final_sha": "2498222927ce9ba8",
+   "final_file": "pkgB/patched/Alternate_Payloads.js"
+  },
+  {
+   "name": "Alternate Cure Build",
+   "id": "1133cadf-9f55-4aa9-92df-71c3c271ced3",
+   "layers": "A+B",
+   "live_sha": "d4a53e88a28b54c2",
+   "final_sha": "98643e58de4ed981",
+   "final_file": "pkgB/patched/Alternate_Cure_Build.js"
+  },
+  {
+   "name": "Alternate Cure Normalize",
+   "id": "3303c1be-fdb2-4008-9a45-79ae7adab238",
+   "layers": "A+B",
+   "live_sha": "676f39dc5ef112c8",
+   "final_sha": "18d4e4e32628d141",
+   "final_file": "pkgB/patched/Alternate_Cure_Normalize.js"
+  },
+  {
+   "name": "Alternate Merge",
+   "id": "8d8b179a-c064-4a4f-b8b5-ea6298d23ce3",
+   "layers": "A+B",
+   "live_sha": "3e5f0b2abb1ed1ac",
+   "final_sha": "b80f33448d81742c",
+   "final_file": "pkgB/patched/Alternate_Merge.js"
+  },
+  {
+   "name": "Accept Build",
+   "id": "42415a34-1d1b-5699-a18e-ae6e3b00234d",
+   "layers": "A",
+   "live_sha": "013cf064cb3e689e",
+   "final_sha": "b6065612f0a7ace6",
+   "final_file": "pkgA/patched/Accept_Build.js"
+  },
+  {
+   "name": "Accept Check",
+   "id": "aea55859-2209-5e4e-bf88-53dbc968668c",
+   "layers": "A",
+   "live_sha": "a1555035352b5bf0",
+   "final_sha": "3b76efbbbea8b2b9",
+   "final_file": "pkgA/patched/Accept_Check.js"
+  },
+  {
+   "name": "Accept Return Build",
+   "id": "b21a1867-2053-52ac-868e-2adba4a83a63",
+   "layers": "A",
+   "live_sha": "6b86575044478982",
+   "final_sha": "c28b04706c9ad6c0",
+   "final_file": "pkgA/patched/Accept_Return_Build.js"
+  },
+  {
+   "name": "Accept Final",
+   "id": "7cc79b18-fcc4-5902-9deb-f352c34922ef",
+   "layers": "A",
+   "live_sha": "f4e1a91db4964340",
+   "final_sha": "9ea7f57194035777",
+   "final_file": "pkgA/patched/Accept_Final.js"
+  },
+  {
+   "name": "Accept DS Return Build",
+   "id": "2f8d4929-d915-5df1-8f50-f5b5ee077a86",
+   "layers": "A",
+   "live_sha": "6a2dc93fea57f534",
+   "final_sha": "7b89eec5766e7d0e",
+   "final_file": "pkgA/patched/Accept_DS_Return_Build.js"
+  },
+  {
+   "name": "Enforcer Build",
+   "id": "10db12c6-e66b-4285-b8ad-5bc258027a7a",
+   "layers": "C",
+   "live_sha": "7550ee82446c3fef",
+   "final_sha": "aafd285684fa37e8",
+   "final_file": "pkgC/patched/Enforcer_Build.js"
+  },
+  {
+   "name": "Judge Enforcer Build",
+   "id": "bc95426d-12af-4410-8b9b-cccced5bc8ee",
+   "layers": "C",
+   "live_sha": "85b76348179b4067",
+   "final_sha": "265251ceb3bc817d",
+   "final_file": "pkgC/patched/Judge_Enforcer_Build.js"
+  },
+  {
+   "name": "Send Back Build",
+   "id": "ef7169eb-092b-4d71-8139-a4ce962bb2e5",
+   "layers": "B",
+   "live_sha": "a2a0c3a45ffef63a",
+   "final_sha": "4fe24c275f0b571d",
+   "final_file": "pkgB/patched/Send_Back_Build.js"
+  }
+ ]
+}

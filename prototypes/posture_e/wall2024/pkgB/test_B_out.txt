@@ -1,0 +1,43 @@
+OK   B1 Panel Build: system+head byte-identical; reminder at the end of the final user message; no-acceptance body untouched (true); gemini form (true); idempotent (true); wired after THE METHOD walker (true)
+OK   B1 Build Independent Verdict: system+head byte-identical; reminder at the end of the final user message; no-acceptance body untouched (true); gemini form (true); idempotent (true); wired after THE METHOD walker (true)
+OK   B1 Reserve Build: system+head byte-identical; reminder at the end of the final user message; no-acceptance body untouched (true); gemini form (true); idempotent (true); wired after THE METHOD walker (true)
+OK   B1 Alternate Build: system+head byte-identical; reminder at the end of the final user message; no-acceptance body untouched (true); gemini form (true); idempotent (true); wired after THE METHOD walker (true)
+OK   B1 Send Back Build: the seat's own acceptance appended after the send-back request
+OK   N4 Send Back Build: the request text and its SENDBACK reply form are byte-identical; the reminder follows them; Send Back Record untouched
+OK   N4b Send Back Build: K-CON excluded from send-backs (K-W exclusion kept)
+OK   B2 32791 gemini: K-CMT 2 contested grade line(s) with no commitment :: 2 contested grade lines name no commitment; first: "D2 vs C2 (Matthew 1:18): CHALLENGER LINK BROKEN -- Matthew 1:18 [L1] "before they came together, she was found with ch
+OK   N2 32791 gemini: every K-W, v31 and K-CON item and mark unchanged from package A
+OK   B2 32791 sol: K-CMT 35 contested grade line(s) with no commitment :: 35 contested grade lines name no commitment; first: "BROKEN. The defender exhibits [L1][L2][L3] footing for its principal [L4] inferences, but leaves proven witnesses aga
+OK   N2 32791 sol: every K-W, v31 and K-CON item and mark unchanged from package A
+OK   B2 32791 grok: K-CMT 8 contested grade line(s) with no commitment :: 8 contested grade lines name no commitment; first: "D2 vs C2 (Matthew 1:19): CHALLENGER LINK BROKEN -- the claim that Joseph knew Mary within the espousal and that the ch
+OK   N2 32791 grok: every K-W, v31 and K-CON item and mark unchanged from package A
+OK   B2 32905 gemini: K-CMT 2 contested grade line(s) with no commitment :: 2 contested grade lines name no commitment; first: "RESULT: UNDERDETERMINED -- recomputed after the cure from the cured lines (TIE (KB-0030)): HELD-1, CHALLENGE STANDING 
+OK   N2 32905 gemini: every K-W, v31 and K-CON item and mark unchanged from package A
+OK   B2 32905 sol: K-CMT 43 contested grade line(s) with no commitment :: 43 contested grade lines name no commitment; first: "BROKEN. The defender exhibits [L1], [L2] and [L3] footing for its principal [L4] inferences, but its answer to the pr
+OK   N2 32905 sol: every K-W, v31 and K-CON item and mark unchanged from package A
+OK   B2 32905 grok: K-CMT 19 contested grade line(s) with no commitment :: 19 contested grade lines name no commitment; first: "DEFENSE STANDING: PROP-DEPENDENT -- L=5 c=1 -- Premise 4 is VOID and out of L; one of the five remaining premises was
+OK   N2 32905 grok: every K-W, v31 and K-CON item and mark unchanged from package A
+OK   B2 32924 gemini: K-CMT 2 contested grade line(s) with no commitment :: 2 contested grade lines name no commitment; first: "- premise 3: VOID -- charge adds universal word "only" beyond its quote: charge: "The inference that 'of the Holy Ghos
+OK   N2 32924 gemini: every K-W, v31 and K-CON item and mark unchanged from package A
+OK   B2 32924 chatgpt: K-CMT 6 contested grade line(s) with no commitment :: 6 contested grade lines name no commitment; first: "BROKEN. [L1][L3] The defender leaves part of the challenge to the sign unanswered. [L4] Its remaining inference about 
+OK   N2 32924 chatgpt: every K-W, v31 and K-CON item and mark unchanged from package A
+OK   B2 32924 grok: K-CMT 16 contested grade line(s) with no commitment :: 16 contested grade lines name no commitment; first: "BROKEN. [L1] Genesis 4:25 "God, [said she], hath appointed me another seed instead of Abel" with [L3] Genesis 4:1 "Ad
+OK   N2 32924 grok: every K-W, v31 and K-CON item and mark unchanged from package A
+OK   N1 Extract Independent Verdict: ENF_STATUS 'K-CMT':'TRIAL'
+OK   N1 Panel Payloads: ENF_STATUS 'K-CMT':'TRIAL'
+OK   N1 Cure Build: ENF_STATUS 'K-CMT':'TRIAL'
+OK   N1 Cure Normalize: ENF_STATUS 'K-CMT':'TRIAL'
+OK   N1 Cure Check: ENF_STATUS 'K-CMT':'TRIAL'
+OK   N1 Panel Cure Build 1: ENF_STATUS 'K-CMT':'TRIAL'
+OK   N1 Panel Cure Normalize 1: ENF_STATUS 'K-CMT':'TRIAL'
+OK   N1 Panel Cure Build 2: ENF_STATUS 'K-CMT':'TRIAL'
+OK   N1 Panel Cure Normalize 2: ENF_STATUS 'K-CMT':'TRIAL'
+OK   N1 Panel Cure Build 3: ENF_STATUS 'K-CMT':'TRIAL'
+OK   N1 Panel Cure Normalize 3: ENF_STATUS 'K-CMT':'TRIAL'
+OK   N1 Panel Cure Check: ENF_STATUS 'K-CMT':'TRIAL'
+OK   N1 Alternate Build: ENF_STATUS 'K-CMT':'TRIAL'
+OK   N1 Alternate Payloads: ENF_STATUS 'K-CMT':'TRIAL'
+OK   N1 Alternate Cure Build: ENF_STATUS 'K-CMT':'TRIAL'
+OK   N1 Alternate Cure Normalize: ENF_STATUS 'K-CMT':'TRIAL'
+OK   N1 Alternate Merge: ENF_STATUS 'K-CMT':'TRIAL'
+ALL OK

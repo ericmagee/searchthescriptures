@@ -10,7 +10,7 @@ JA="const __JAGR='\\n\\nTHE JUDGES\\' AGREEMENT (what you enforce; not your post
 OLD="messages:[{role:'system',content:SYS},"; NEW="messages:[{role:'system',content:SYS+__JAGR},"
 plan={'live_version':live['versionId'],'part2_literal_sha':sha(P2LIT),'nodes':[]};bad=[]
 for n in live['nodes']:
-    if n['name'] not in ('Enforcer Build','Judge Enforcer Build','Anticheat Build'):continue
+    if n['name'] not in ('Enforcer Build','Judge Enforcer Build'):continue  # Anticheat dropped (W3 2121: it checks a debater, not a judge)
     c=n['parameters']['jsCode']
     if c.count(OLD)!=1 or '__JAGR' in c: bad.append(n['name']+' anchor x'+str(c.count(OLD)));continue
     c2=JA+c.replace(OLD,NEW)
