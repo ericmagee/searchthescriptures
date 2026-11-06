@@ -1,0 +1,21 @@
+OK   6 nodes: base (pkgFQ) and final shas match the plan
+OK   every node parses
+OK   33014 fixture: the live-then library (pkgGD) raises 0 gate items, as live did (gate skipped, all 4 seats empty)
+   33020 gemini: pkgFQ [G1 CONTRADICTION [LIVE] CURED; G2 CONTRADICTION [LIVE] CURED] counted 0  | pkgKF same
+   33020 chatgpt: pkgFQ [] counted 0  | pkgKF same
+   33020 grok: pkgFQ [G1 NOT APPLIED [LIVE] CURED; G2 CONTRADICTION [LIVE] UNCURED] counted 1  | pkgKF same
+   32998 gemini: pkgFQ [] counted 0  | pkgKF same
+   32998 chatgpt: pkgFQ [G1 NOT APPLIED [LIVE] CURED; G2 RULE K-G4 [LIVE] UNCURED] counted 1  | pkgKF same
+   32998 grok: pkgFQ [G1 CONTRADICTION [LIVE] CURED; G2 CONTRADICTION [LIVE] CURED] counted 0  | pkgKF same
+   32998 alt sol: pkgFQ [G1 RULE K-G4 [LIVE] UNCURED] counted 1  | pkgKF same
+   33014 gemini: pkgFQ [] counted 0  | pkgKF same
+   33014 chatgpt: pkgFQ [] counted 0  | pkgKF same
+   33014 grok: pkgFQ [] counted 0  | pkgKF same
+   33014 alt sol: pkgFQ [] counted 0  | pkgKF same
+   items that change: 0 seat(s): 
+OK   every change is an added K-F item, record-only, and no seat count changes
+OK   33020 chatgpt: S14's FAILS ("Matthew sets what ...") and the stored FAILS ("In 1 Corinthians 7:5 ...") are both in [DR3] only; K-F passes S14's line; no item added
+   gate path: pkgFQ [], pkgKF [RULE K-F record-only -- the FAILS quotation is not in [DR3]]
+OK   gate path: a changed FORCED line whose FAILS is not in its ANSWER round raises a new K-F gate item, record-only (TRIAL); pkgFQ raised none
+OK   unit: FAILS found in the ANSWER round passes; FAILS from elsewhere raises K-F
+7 OK, 0 FAIL
