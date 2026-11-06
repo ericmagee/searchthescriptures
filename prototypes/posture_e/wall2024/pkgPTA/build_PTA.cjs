@@ -5,7 +5,7 @@
 // Run from wall2024/: node pkgPTA/build_PTA.cjs [in workflow JSON] [out workflow JSON]
 const fs=require('fs');const crypto=require('crypto');const sha=s=>crypto.createHash('sha256').update(s).digest('hex').slice(0,16);
 const {COMPN}=require('../pkgPTK/scan.cjs');
-const IN=process.argv[2]||'pkgPTK/out/workflow_PTK.json',OUTW=process.argv[3]||'pkgPTA/out/workflow_PTA.json';
+const IN=process.argv[2]||'/mnt/project-files/wall2024/fetchback_live_1b49671d.json',OUTW=process.argv[3]||'pkgPTA/out/workflow_PTA.json';
 const w=JSON.parse(fs.readFileSync(IN,'utf8'));const N=Object.fromEntries(w.nodes.map(n=>[n.name,n]));const NS=new Set(Object.keys(N));
 // pkgSLA d58a35f (W3 PASS) goes first: its 6 nodes are laid on the input when its plan's base sha matches (Alternate Merge is one of the 26)
 {const SP=JSON.parse(fs.readFileSync('pkgSLA/plan_SLA.json','utf8'));for(const x of SP.nodes){const n=x.file.slice(0,-3).replace(/_/g,' ');const cur=N[n].parameters.jsCode;
