@@ -3,7 +3,7 @@ Base: live 98daac9e + n19 + n20 + pkgIMP + pkgBAR 3086eb8. pkgJFL goes after pkg
 
 Write order
 1. SQL: `jfl.sql` (one transaction; table, functions, trigger on debate_enforcer_log, views, grants), then `jfl_backfill.sql` (ledger from run
-   33040, then 14 strikes from W3's grade files). Both need `SET LOCAL truth.session_id=...` in the same call (ddl_audit_logger).
+   33040, then 16 strikes from W3's grade files). Both need `SET LOCAL truth.session_id=...` in the same call (ddl_audit_logger).
    The trigger takes a short lock on debate_enforcer_log: write at a gap, never during a run.
 2. n8n, 6 nodes: the url of Accept Models and Fetch Models (http_JFL.json), and the jsCode of Panel Build, Reserve Build, Alternate Build and
    Init Seats from pkgJFL/patched/ (plan_JFL.json gives each base_sha; Init Seats' base is the live node, the other three are pkgBAR finals).

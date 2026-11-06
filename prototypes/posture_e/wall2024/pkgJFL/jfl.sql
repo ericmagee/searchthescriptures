@@ -43,6 +43,10 @@ BEGIN
   DELETE FROM public.judge_fault_ledger WHERE log_id=NEW.id AND NOT struck;
  END IF;
  RETURN NULL;
+EXCEPTION WHEN OTHERS THEN
+ -- a ledger error never fails a debate_enforcer_log write (W3 2636)
+ RAISE WARNING 'jfl_from_log: log row % not put in the ledger: %', NEW.id, SQLERRM;
+ RETURN NULL;
 END $f$;
 DROP TRIGGER IF EXISTS jfl_from_log ON public.debate_enforcer_log;
 CREATE TRIGGER jfl_from_log AFTER INSERT OR UPDATE OF cure_status, cure_reason ON public.debate_enforcer_log FOR EACH ROW EXECUTE FUNCTION public.jfl_from_log();
