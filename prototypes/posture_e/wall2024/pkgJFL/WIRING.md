@@ -8,6 +8,8 @@ Write order
 2. n8n, 6 nodes: the url of Accept Models and Fetch Models (http_JFL.json), and the jsCode of Panel Build, Reserve Build, Alternate Build and
    Init Seats from pkgJFL/patched/ (plan_JFL.json gives each base_sha; Init Seats' base is the live node, the other three are pkgBAR finals).
 Revert: the 6 nodes' old parameters (n8n first), then `jfl_revert.sql`.
+Fix after run 33195 (Accept Models: "permission denied for table judge_fault_ledger"): apply `jfl_fix_anon.sql` to the live database
+(jfl_block SECURITY DEFINER; jfl.sql now has it too), then check with `test_JFL_anon.sql` before the n8n part is written again.
 
 What it does
 - Every counted UNCURED judge item (kind cure or send_back; seat role panel, reserve or alternate; not RECORD-ONLY, TRIAL, "removes no seat" or

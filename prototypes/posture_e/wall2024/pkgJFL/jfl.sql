@@ -70,8 +70,9 @@ SELECT judge_model, fault_kind, runs, cardinality(runs) n_runs,
  CASE WHEN cardinality(runs)>=6 THEN 'ALTERNATE' WHEN cardinality(runs)>=3 THEN 'EXAMPLES' ELSE 'COUNTING' END state
 FROM r;
 
--- the prompt block of one model: for each kind in EXAMPLES or ALTERNATE, up to 3 items, one from each of its latest 3 runs
-CREATE OR REPLACE FUNCTION public.jfl_block(p_model text) RETURNS text LANGUAGE sql STABLE AS $f$
+-- the prompt block of one model (SECURITY DEFINER: Accept Models and Fetch Models read model_config_jfl as anon, and anon has no
+-- SELECT on the ledger; run 33195 failed on this. The ledger itself stays closed to anon): for each kind in EXAMPLES or ALTERNATE, up to 3 items, one from each of its latest 3 runs
+CREATE OR REPLACE FUNCTION public.jfl_block(p_model text) RETURNS text LANGUAGE sql STABLE SECURITY DEFINER SET search_path=public AS $f$
 WITH k AS (SELECT fault_kind, runs FROM public.jfl_report WHERE judge_model=p_model AND n_runs>=3),
  e AS (SELECT DISTINCT ON (l.fault_kind, l.run) l.fault_kind, l.run, l.item, l.flagged_line, l.cure_reason FROM public.judge_fault_ledger l JOIN k USING(fault_kind)
        WHERE l.judge_model=p_model AND NOT l.struck ORDER BY l.fault_kind, l.run, l.id),
