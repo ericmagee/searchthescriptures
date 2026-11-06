@@ -5,7 +5,7 @@ const plan=JSON.parse(rd('pkgIMP/plan_IMP.json'));T(plan.nodes.length+' nodes; b
 // Commitment 14 in PART2: byte-identical in the 15 nodes, after Commitment 13
 {const blk=f=>{const s=rd('pkgIMP/patched/'+f);const i=s.indexOf('\\n\\n### Commitment 14.');return i<0?null:s.slice(i,s.indexOf('";',i));};const P=plan.nodes.filter(n=>!/Send_Back/.test(n.file)).map(n=>n.file);const b0=blk(P[0]);
  T('Commitment 14 stands after Commitment 13, byte-identical in the 15 PART2 nodes',P.length===15&&b0&&P.every(f=>blk(f)===b0&&rd('pkgIMP/patched/'+f).indexOf('### Commitment 13.')<rd('pkgIMP/patched/'+f).indexOf('### Commitment 14.')));
- const txt=JSON.parse('"'+b0+'"');T('Commitment 14 reads as written (unescaped): the IMPOSED line form and its example sentences',txt.includes('IMPOSED: [<round>] "<the sentence, quoted>" -- asks <verse> to <what it is asked to state> -- NO ROW SETS IT')&&txt.includes('"They do not name the parent"'));}
+ const txt=JSON.parse('"'+b0+'"');T('Commitment 14 reads as written (unescaped): the IMPOSED line form and its example sentences',txt.includes('IMPOSED: [<round>] "<the sentence, quoted>" -- asks <verse> to <what it is asked to state> -- NO ROW SETS IT')&&txt.includes('"They do not name the parent"')&&txt.includes('-- NOT A REQUIREMENT -- rebuts [<the other side\'s round>]'));}
 const IMP=require('./lib_IMP.cjs');
 const UND=new Function(rd('pkgUNL/src_UNL.js')+';return UND;')();
 const R=run=>{const p0=JSON.parse(rd('corpus/raw/gate_'+run+'.json'))['Panel Build'].slice(-1)[0][0];return UND.rounds(p0.judges[0].body.messages.map(m=>typeof m.content==='string'?m.content:(m.content||[]).map(c=>c&&c.text||'').join('\n')).join('\n'));};
@@ -13,10 +13,16 @@ const R=run=>{const p0=JSON.parse(rd('corpus/raw/gate_'+run+'.json'))['Panel Bui
 const H07=IMP.harvest(R('33107')),H49=IMP.harvest(R('33149'));
 T('harvest 33107 [CR3] "They do not name the parent."',H07.some(h=>h.round==='CR3'&&h.sentence==='They do not name the parent.'));
 T('harvest 33149 [CR4] "It does not say through whom."',H49.some(h=>h.round==='CR4'&&h.sentence==='It does not say through whom.'));
-T('harvest: a quoted verse is not read for the pattern (quotations removed first)',!IMP.harvest({CR2:'Luke 1:34 says "I know not a man" and the verse does say it.'}).length&&IMP.harvest({CR2:'Luke 1:34 does not name the father.'}).length===1);
-T('harvest: a sentence with no verse reference within 600 characters is not read',!IMP.harvest({CR2:'The argument does not name a source.'}).length);
-T('harvest: the "both retained / compatible / leaves room" forms are not requirements',!IMP.harvest({DR2:'Luke 1:35 leaves room for both. Matthew 1:16 is compatible with it. Both are retained in Luke 2:33.'}).length);
-T('harvest: the challenger side is read too',IMP.harvest({DR3:'Matthew 1:20 does not say that no man begat.'}).map(h=>h.side).join()==='CHALLENGER');
+T('harvest: a quoted verse is not read for the pattern (quotations removed first)',!IMP.harvest({CR2:'**Answers to the presses**\n'+'Luke 1:34 says "I know not a man" and the verse does say it.'}).length&&IMP.harvest({CR2:'**Answers to the presses**\n'+'Luke 1:34 does not name the father.'}).length===1);
+T('harvest: a sentence with no verse reference within 600 characters is not read',!IMP.harvest({CR2:'**Answers to the presses**\n'+'The argument does not name a source.'}).length);
+T('harvest: the "both retained / compatible / leaves room" forms are not requirements',!IMP.harvest({DR2:'**Answers to the presses**\n'+'Luke 1:35 leaves room for both. Matthew 1:16 is compatible with it. Both are retained in Luke 2:33.'}).length);
+T('harvest: the challenger side is read too',IMP.harvest({DR3:'**Answers to the presses**\n'+'Matthew 1:20 does not say that no man begat.'}).map(h=>h.side).join()==='CHALLENGER');
+T('harvest: only answer blocks are read (a declaratory D-link statement is not)',!IMP.harvest({CR4:'## D2: KEPT\nMatthew 1:16 does not name Joseph as begetter.'}).length&&IMP.harvest({CR4:'## D2: KEPT\n**ANSWER: Luke 1:34 -- D2 --**\nMatthew 1:16 does not name Joseph as begetter.\n---\n## D3: KEPT\nLuke 1:35 names no man.'}).length===1);
+T('harvest: a markdown answer heading holds to the next heading of its level',IMP.harvest({CR2:'## A. Answer to the press on D6\n**1. Point.**\nLuke 1:35 names no man.\n## B. My case\nLuke 1:34 names no man either.'}).length===1);
+for(const g of ['I grant the KJV does not state Mary\'s tribe in so many words, at Luke 1:27.','Galatians 4:4 alone does not exclude a father, and I narrow accordingly.','I do not say how David\'s seed reached the child at Romans 1:3, and the link no longer claims it.','Granted: Luke 3:23 does not name Heli as Mary\'s father.','The KJV does not state her tribe in words at Luke 1:27, so I hold that limb as inference.'])
+ T('harvest skips a grant, concession, withdrawal or narrowing: '+g.slice(0,50),!IMP.harvest({CR3:'Pressed rows:\n'+g}).length);
+for(const [run,re] of [['33129',/does not state Mary's tribe in so many words/],['33060',/I narrow accordingly/],['33040',/I do not say how David's seed reached the child/],['33083',/Betrothed as wife does not say/]])
+ T('W3 2629 example not harvested: '+run+' '+re.source.slice(0,40),!IMP.harvest(R(run)).some(h=>re.test(h.sentence)));
 // items and cure units
 const h={id:'I8',round:'CR3',side:'DEFENDER',sentence:'They do not name the parent.',phrase:'do not name'};
 T('items: an unflagged sentence is an E-IMP item',IMP.items('reasoning',[h]).length===1);
@@ -34,6 +40,14 @@ for(const [n,a,w] of [['KEEP',{ans:'KEEP'},'UNCURED'],['no answer',{ans:'NO ANSW
  ['SET BY words not in the verse',{ans:'CHANGE',to:'IMPOSED: [CR3] "They do not name the parent." -- asks Acts 2:30 to name the parent -- SET BY [L1] Acts 2:30 "the parent is always named"'},'UNCURED'],
  ['SET BY with no [L1]',{ans:'CHANGE',to:'IMPOSED: [CR3] "They do not name the parent." -- asks Acts 2:30 to name the parent -- SET BY the law'},'UNCURED']])
  {const r=IMP.cure(it,a,ctx);T('cure: '+n+': '+r.status,r.status===w,r.why);}
+{const RR={DR2:'The challenger says the betrothal rows show that the union came together within the espousal before the taking.',CR3:'x'};const itr={imp:{kind:'IMPOSED',id:'I3',round:'CR3',sentence:'Betrothed as wife does not say "came together."'}};const L='IMPOSED: [CR3] "Betrothed as wife does not say "came together."" -- NOT A REQUIREMENT -- rebuts ';
+ const c=(q,r)=>IMP.cure(itr,{ans:'CHANGE',to:L+'['+(r||'DR2')+'] "'+q+'"'},{...ctx,R:RR});
+ T('cure: NOT A REQUIREMENT with 6+ opponent words standing in that round: CURED',c('the union came together within the espousal before the taking').status==='CURED',c('the union came together within the espousal before the taking').why);
+ T('cure: NOT A REQUIREMENT quoting words not in that round: UNCURED',c('the union came together after the wedding feast was held').status==='UNCURED');
+ T('cure: NOT A REQUIREMENT with fewer than 6 words: UNCURED',c('came together within the espousal').status==='UNCURED');
+ T('cure: NOT A REQUIREMENT naming a round of the same side: UNCURED',IMP.cure(itr,{ans:'CHANGE',to:L+'[CR2] "the union came together within the espousal before the taking"'},{...ctx,R:{...RR,CR2:RR.DR2}}).status==='UNCURED');
+ const h3={id:'I3',round:'CR3',sentence:'Betrothed as wife does not say "came together."'};
+ T('items: a verified NOT A REQUIREMENT line in the judge text removes the item; an unverified one does not',!IMP.items(L+'[DR2] "the union came together within the espousal before the taking"',[h3],RR).length&&IMP.items(L+'[DR2] "the union came together after the wedding feast was held"',[h3],RR).length===1);}
 {const ic={imp:{kind:'CONTRADICTION',ref:'Acts 2:30',round:'CR3'}};
  T('cure (contradiction): ANSWER CHECK regraded MISSES cures',IMP.cure(ic,{ans:'CHANGE',to:'ANSWER CHECK: Acts 2:30 -- [CR3] -- MEANS: "m" -- ANSWER: "a" -- MISSES -- "x"'},ctx).status==='CURED');
  T('cure (contradiction): KEEP does not cure',IMP.cure(ic,{ans:'KEEP'},ctx).status==='UNCURED');}
