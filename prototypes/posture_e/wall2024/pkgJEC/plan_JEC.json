@@ -1,0 +1,32 @@
+{
+ "nodes": [
+  {
+   "base": "pkgCM/base",
+   "file": "Judge_Enforcer_Record.js",
+   "base_sha": "3199ab3c2d6ea9b2",
+   "final_sha": "0b695f61a2c8f201",
+   "edits": 2
+  },
+  {
+   "base": "pkgALT/patched",
+   "file": "Alt_Judge_Enforcer_Record.js",
+   "base_sha": "66db5da092d2b4fb",
+   "final_sha": "ebb2e5deb2166407",
+   "edits": 2
+  },
+  {
+   "base": "pkgEF/patched",
+   "file": "Judge_Enforcer_Build.js",
+   "base_sha": "6849760cf732f1c2",
+   "final_sha": "cb8dc7dff9e725c4",
+   "edits": 1
+  },
+  {
+   "base": "pkgEF/patched",
+   "file": "Alt_Judge_Enforcer_Build.js",
+   "base_sha": "daf5f073f7095529",
+   "final_sha": "b7f9d641d7e9912b",
+   "edits": 1
+  }
+ ]
+}

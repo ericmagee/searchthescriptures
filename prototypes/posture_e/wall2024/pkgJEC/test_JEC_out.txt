@@ -1,0 +1,27 @@
+OK   4 nodes; base and final shas match
+OK   33060 at 60K (pkgEF): 3 calls, prompt chars 60865, 64055, 39237
+OK   33060 at 40K (pkgJEC): 4 calls, prompt chars 42583, 42953, 42486, 43245; every call within 40000 plus one item
+OK   33060: the same 211 items at 40K, none lost or added
+OK   33060: code_rows (ruling 443) identical apart from the time stamp (3 rows)
+OK   Judge_Enforcer_Record.js: call 1 rows have no error; AGREE recorded
+     [null]
+OK   Judge_Enforcer_Record.js: call 2 rows read "call 2: no reply (Response body timed out ...)"
+     ["call 2: no reply (Response body timed out after 300000ms without data)"]
+OK   Judge_Enforcer_Record.js: call 3 rows (no choices, no message) read "call 3: no reply (no message; reply keys: none)"
+     ["call 3: no reply (no message; reply keys: none)"]
+OK   Judge_Enforcer_Record.js: call 4 rows read "call 4: empty content (finish_reason length)"
+     ["call 4: empty content (finish_reason length)"]
+OK   Judge_Enforcer_Record.js: enf428.errors lists calls 2, 3, 4 in order
+     ["call 2: no reply (Response body timed out after 300000ms without data)","call 3: no reply (no message; reply keys: none)","call 4: empty content (finish_reason length)"]
+OK   Alt_Judge_Enforcer_Record.js: call 1 rows have no error; AGREE recorded
+     [null]
+OK   Alt_Judge_Enforcer_Record.js: call 2 rows read "call 2: no reply (Response body timed out ...)"
+     ["call 2: no reply (Response body timed out after 300000ms without data)"]
+OK   Alt_Judge_Enforcer_Record.js: call 3 rows (no choices, no message) read "call 3: no reply (no message; reply keys: none)"
+     ["call 3: no reply (no message; reply keys: none)"]
+OK   Alt_Judge_Enforcer_Record.js: call 4 rows read "call 4: empty content (finish_reason length)"
+     ["call 4: empty content (finish_reason length)"]
+OK   Alt_Judge_Enforcer_Record.js: enf428.errors lists calls 2, 3, 4 in order
+     ["call 2: no reply (Response body timed out after 300000ms without data)","call 3: no reply (no message; reply keys: none)","call 4: empty content (finish_reason length)"]
+OK   base Record (pkgCM/base) on the 33060 shape: call 1 rows wrongly read "call 2: no reply (Response body timed out after 300000ms without data)" (the fault reproduces)
+16 OK, 0 FAIL
