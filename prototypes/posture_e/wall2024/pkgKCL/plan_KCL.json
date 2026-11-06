@@ -5,220 +5,343 @@
    "file": "Alt_Gate_Build.js",
    "name": "Alt Gate Build",
    "base_sha": "f384591ad311f3c8",
-   "final_sha": "440d582a973d1581",
+   "final_sha": "e9ab39a5a77d87df",
+   "cure": true,
    "edits": [
-    "K-CMT item per line",
-    "K-CMT mark per line"
+    "kcmtlSeg2024",
+    "K-CMTL items per line",
+    "ENF_STATUS K-CMTL TRIAL",
+    "cureLabel, cureAsk",
+    "krulCure K-CMTL",
+    "respOf K-CMTL segment; grouped K-CMT takes K-CMTL answers",
+    "cure call K-CMTL"
    ]
   },
   {
    "file": "Alt_Gate_Record.js",
    "name": "Alt Gate Record",
    "base_sha": "e4b1e3ec1f1250dd",
-   "final_sha": "71542a6d47d889e3",
+   "final_sha": "f417840d38acfae8",
+   "cure": true,
    "edits": [
-    "K-CMT item per line",
-    "K-CMT mark per line"
+    "kcmtlSeg2024",
+    "K-CMTL items per line",
+    "ENF_STATUS K-CMTL TRIAL",
+    "cureLabel, cureAsk",
+    "krulCure K-CMTL",
+    "respOf K-CMTL segment; grouped K-CMT takes K-CMTL answers",
+    "cure call K-CMTL"
    ]
   },
   {
    "file": "Alternate_Build.js",
    "name": "Alternate Build",
    "base_sha": "f8101058636f875e",
-   "final_sha": "131d83ba0ce14b16",
+   "final_sha": "2e2f501c8f31ee29",
+   "cure": true,
    "edits": [
-    "K-CMT item per line",
-    "K-CMT mark per line"
+    "kcmtlSeg2024",
+    "K-CMTL items per line",
+    "ENF_STATUS K-CMTL TRIAL",
+    "cureLabel, cureAsk",
+    "krulCure K-CMTL",
+    "respOf K-CMTL segment; grouped K-CMT takes K-CMTL answers",
+    "cure call K-CMTL"
    ]
   },
   {
    "file": "Alternate_Cure_Build.js",
    "name": "Alternate Cure Build",
    "base_sha": "3c4d9a59343fd981",
-   "final_sha": "2875805af22b7469",
+   "final_sha": "e0b40c6c2fe94801",
+   "cure": true,
    "edits": [
-    "K-CMT item per line",
-    "K-CMT mark per line"
+    "kcmtlSeg2024",
+    "K-CMTL items per line",
+    "ENF_STATUS K-CMTL TRIAL",
+    "cureLabel, cureAsk",
+    "krulCure K-CMTL",
+    "respOf K-CMTL segment; grouped K-CMT takes K-CMTL answers",
+    "cure call K-CMTL"
    ]
   },
   {
    "file": "Alternate_Cure_Normalize.js",
    "name": "Alternate Cure Normalize",
    "base_sha": "f23c55df66f94064",
-   "final_sha": "b24230b63ef0a2a7",
+   "final_sha": "b23a9e63cdee4d21",
+   "cure": true,
    "edits": [
-    "K-CMT item per line",
-    "K-CMT mark per line"
+    "kcmtlSeg2024",
+    "K-CMTL items per line",
+    "ENF_STATUS K-CMTL TRIAL",
+    "cureLabel, cureAsk",
+    "krulCure K-CMTL",
+    "respOf K-CMTL segment; grouped K-CMT takes K-CMTL answers",
+    "cure call K-CMTL"
    ]
   },
   {
    "file": "Alternate_Merge.js",
    "name": "Alternate Merge",
    "base_sha": "379aed5a10bc9c0f",
-   "final_sha": "fb4e930d41de91fb",
+   "final_sha": "f26a756d10c72f46",
+   "cure": true,
    "edits": [
-    "K-CMT item per line",
-    "K-CMT mark per line"
+    "kcmtlSeg2024",
+    "K-CMTL items per line",
+    "ENF_STATUS K-CMTL TRIAL",
+    "cureLabel, cureAsk",
+    "krulCure K-CMTL",
+    "respOf K-CMTL segment; grouped K-CMT takes K-CMTL answers",
+    "cure call K-CMTL"
    ]
   },
   {
    "file": "Alternate_Merge_Seat.js",
    "name": "Alternate Merge Seat",
    "base_sha": "899996f9b3cd7dec",
-   "final_sha": "a4536c9031e08a64",
+   "final_sha": "21be5924dfc4a186",
+   "cure": true,
    "edits": [
-    "K-CMT item per line",
-    "K-CMT mark per line"
+    "kcmtlSeg2024",
+    "K-CMTL items per line",
+    "ENF_STATUS K-CMTL TRIAL",
+    "cureLabel, cureAsk",
+    "krulCure K-CMTL",
+    "respOf K-CMTL segment; grouped K-CMT takes K-CMTL answers",
+    "cure call K-CMTL"
    ]
   },
   {
    "file": "Alternate_Payloads.js",
    "name": "Alternate Payloads",
    "base_sha": "19b8d1a61cddfd5d",
-   "final_sha": "a353f0fafb360ff7",
+   "final_sha": "7fa3be141bf141d7",
+   "cure": false,
    "edits": [
-    "K-CMT item per line",
-    "K-CMT mark per line"
+    "kcmtlSeg2024",
+    "K-CMTL items per line",
+    "ENF_STATUS K-CMTL TRIAL",
+    "krulCure K-CMTL"
    ]
   },
   {
    "file": "Cure_Build.js",
    "name": "Cure Build",
    "base_sha": "6d78b9fe6b1656a7",
-   "final_sha": "39aaa42f28860cb9",
+   "final_sha": "2966fa54b397294c",
+   "cure": true,
    "edits": [
-    "K-CMT item per line",
-    "K-CMT mark per line"
+    "kcmtlSeg2024",
+    "K-CMTL items per line",
+    "ENF_STATUS K-CMTL TRIAL",
+    "cureLabel, cureAsk",
+    "krulCure K-CMTL",
+    "respOf K-CMTL segment; grouped K-CMT takes K-CMTL answers",
+    "cure call K-CMTL"
    ]
   },
   {
    "file": "Cure_Check.js",
    "name": "Cure Check",
    "base_sha": "649788d076435de9",
-   "final_sha": "a139f81c36deb396",
+   "final_sha": "6348698198502301",
+   "cure": true,
    "edits": [
-    "K-CMT item per line",
-    "K-CMT mark per line"
+    "kcmtlSeg2024",
+    "K-CMTL items per line",
+    "ENF_STATUS K-CMTL TRIAL",
+    "cureLabel, cureAsk",
+    "krulCure K-CMTL",
+    "respOf K-CMTL segment; grouped K-CMT takes K-CMTL answers",
+    "cure call K-CMTL"
    ]
   },
   {
    "file": "Cure_Normalize.js",
    "name": "Cure Normalize",
    "base_sha": "f789855d06389d76",
-   "final_sha": "69328fccd9da1ec0",
+   "final_sha": "dfff5421d85ca706",
+   "cure": true,
    "edits": [
-    "K-CMT item per line",
-    "K-CMT mark per line"
+    "kcmtlSeg2024",
+    "K-CMTL items per line",
+    "ENF_STATUS K-CMTL TRIAL",
+    "cureLabel, cureAsk",
+    "krulCure K-CMTL",
+    "respOf K-CMTL segment; grouped K-CMT takes K-CMTL answers",
+    "cure call K-CMTL"
    ]
   },
   {
    "file": "Extract_Independent_Verdict.js",
    "name": "Extract Independent Verdict",
    "base_sha": "3e14ad87b14b2eeb",
-   "final_sha": "d1d1e436a212fe6b",
+   "final_sha": "56283fa41800451b",
+   "cure": false,
    "edits": [
-    "K-CMT item per line",
-    "K-CMT mark per line"
+    "kcmtlSeg2024",
+    "K-CMTL items per line",
+    "ENF_STATUS K-CMTL TRIAL",
+    "krulCure K-CMTL"
    ]
   },
   {
    "file": "Gate_Build.js",
    "name": "Gate Build",
    "base_sha": "cfec4c44e5aac917",
-   "final_sha": "aa2c08aa049f6607",
+   "final_sha": "9149026ebf285146",
+   "cure": true,
    "edits": [
-    "K-CMT item per line",
-    "K-CMT mark per line"
+    "kcmtlSeg2024",
+    "K-CMTL items per line",
+    "ENF_STATUS K-CMTL TRIAL",
+    "cureLabel, cureAsk",
+    "krulCure K-CMTL",
+    "respOf K-CMTL segment; grouped K-CMT takes K-CMTL answers",
+    "cure call K-CMTL"
    ]
   },
   {
    "file": "Gate_Record.js",
    "name": "Gate Record",
    "base_sha": "e740a2ed35dd523a",
-   "final_sha": "d3a0c62d3b8aa849",
+   "final_sha": "2ce526f4abb73efe",
+   "cure": true,
    "edits": [
-    "K-CMT item per line",
-    "K-CMT mark per line"
+    "kcmtlSeg2024",
+    "K-CMTL items per line",
+    "ENF_STATUS K-CMTL TRIAL",
+    "cureLabel, cureAsk",
+    "krulCure K-CMTL",
+    "respOf K-CMTL segment; grouped K-CMT takes K-CMTL answers",
+    "cure call K-CMTL"
    ]
   },
   {
    "file": "Panel_Cure_Build_1.js",
    "name": "Panel Cure Build 1",
    "base_sha": "bb06ac9e0a7fe169",
-   "final_sha": "f8e6cada4d5ab03c",
+   "final_sha": "00dbf8805a4d08e5",
+   "cure": true,
    "edits": [
-    "K-CMT item per line",
-    "K-CMT mark per line"
+    "kcmtlSeg2024",
+    "K-CMTL items per line",
+    "ENF_STATUS K-CMTL TRIAL",
+    "cureLabel, cureAsk",
+    "krulCure K-CMTL",
+    "respOf K-CMTL segment; grouped K-CMT takes K-CMTL answers",
+    "cure call K-CMTL"
    ]
   },
   {
    "file": "Panel_Cure_Build_2.js",
    "name": "Panel Cure Build 2",
    "base_sha": "4c55b8bd8eb295fc",
-   "final_sha": "3350f48af2b372b5",
+   "final_sha": "b1991c107fa45c04",
+   "cure": true,
    "edits": [
-    "K-CMT item per line",
-    "K-CMT mark per line"
+    "kcmtlSeg2024",
+    "K-CMTL items per line",
+    "ENF_STATUS K-CMTL TRIAL",
+    "cureLabel, cureAsk",
+    "krulCure K-CMTL",
+    "respOf K-CMTL segment; grouped K-CMT takes K-CMTL answers",
+    "cure call K-CMTL"
    ]
   },
   {
    "file": "Panel_Cure_Build_3.js",
    "name": "Panel Cure Build 3",
    "base_sha": "35b1b29c88354875",
-   "final_sha": "a9d26bdbb06066f3",
+   "final_sha": "ec049d0b83cba488",
+   "cure": true,
    "edits": [
-    "K-CMT item per line",
-    "K-CMT mark per line"
+    "kcmtlSeg2024",
+    "K-CMTL items per line",
+    "ENF_STATUS K-CMTL TRIAL",
+    "cureLabel, cureAsk",
+    "krulCure K-CMTL",
+    "respOf K-CMTL segment; grouped K-CMT takes K-CMTL answers",
+    "cure call K-CMTL"
    ]
   },
   {
    "file": "Panel_Cure_Check.js",
    "name": "Panel Cure Check",
    "base_sha": "7f9d4de483de66cc",
-   "final_sha": "e65b382b67363187",
+   "final_sha": "6a2f6806852f1170",
+   "cure": true,
    "edits": [
-    "K-CMT item per line",
-    "K-CMT mark per line"
+    "kcmtlSeg2024",
+    "K-CMTL items per line",
+    "ENF_STATUS K-CMTL TRIAL",
+    "cureLabel, cureAsk",
+    "krulCure K-CMTL",
+    "respOf K-CMTL segment; grouped K-CMT takes K-CMTL answers",
+    "cure call K-CMTL"
    ]
   },
   {
    "file": "Panel_Cure_Normalize_1.js",
    "name": "Panel Cure Normalize 1",
    "base_sha": "84144c9196439afa",
-   "final_sha": "43dc51e76ceb1a77",
+   "final_sha": "cfc4d69df9253d00",
+   "cure": true,
    "edits": [
-    "K-CMT item per line",
-    "K-CMT mark per line"
+    "kcmtlSeg2024",
+    "K-CMTL items per line",
+    "ENF_STATUS K-CMTL TRIAL",
+    "cureLabel, cureAsk",
+    "krulCure K-CMTL",
+    "respOf K-CMTL segment; grouped K-CMT takes K-CMTL answers",
+    "cure call K-CMTL"
    ]
   },
   {
    "file": "Panel_Cure_Normalize_2.js",
    "name": "Panel Cure Normalize 2",
    "base_sha": "3411721784605178",
-   "final_sha": "f88e2782b91c5b69",
+   "final_sha": "a3ff32a02a4afe1e",
+   "cure": true,
    "edits": [
-    "K-CMT item per line",
-    "K-CMT mark per line"
+    "kcmtlSeg2024",
+    "K-CMTL items per line",
+    "ENF_STATUS K-CMTL TRIAL",
+    "cureLabel, cureAsk",
+    "krulCure K-CMTL",
+    "respOf K-CMTL segment; grouped K-CMT takes K-CMTL answers",
+    "cure call K-CMTL"
    ]
   },
   {
    "file": "Panel_Cure_Normalize_3.js",
    "name": "Panel Cure Normalize 3",
    "base_sha": "e8e061cb2e5f641a",
-   "final_sha": "bc04ad5211da6efd",
+   "final_sha": "4d86dbcaad72e728",
+   "cure": true,
    "edits": [
-    "K-CMT item per line",
-    "K-CMT mark per line"
+    "kcmtlSeg2024",
+    "K-CMTL items per line",
+    "ENF_STATUS K-CMTL TRIAL",
+    "cureLabel, cureAsk",
+    "krulCure K-CMTL",
+    "respOf K-CMTL segment; grouped K-CMT takes K-CMTL answers",
+    "cure call K-CMTL"
    ]
   },
   {
    "file": "Panel_Payloads.js",
    "name": "Panel Payloads",
    "base_sha": "74f30677c70993d3",
-   "final_sha": "24f1d5888ccec9b6",
+   "final_sha": "241173cf152c9cb1",
+   "cure": false,
    "edits": [
-    "K-CMT item per line",
-    "K-CMT mark per line"
+    "kcmtlSeg2024",
+    "K-CMTL items per line",
+    "ENF_STATUS K-CMTL TRIAL",
+    "krulCure K-CMTL"
    ]
   }
  ]

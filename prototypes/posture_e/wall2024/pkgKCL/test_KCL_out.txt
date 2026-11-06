@@ -1,14 +1,18 @@
-OK   22 nodes: base (pkgKF) and final shas match the plan
-   43 verdict texts: 30 K-CMT items before, 113 after (one per contested line; 113 lines)
-   per judgment: 32998 grok verdict_final 3; 32998 chatgpt verdict_final 1; 32998 gemini verdict_final 1; 32998 gemini verdict_gate 1; 32998 chatgpt verdict_gate 1; 32998 grok verdict_gate 13; 33006 chatgpt verdict_final 4; 33006 gemini verdict_final 8; 33014 grok verdict_final 1; 33014 sol verdict_final 1; 33014 chatgpt verdict_gate 2; 33014 grok verdict_gate 7; 33014 sol alt_verdict_gate 2; 33020 grok verdict_final 6; 33020 chatgpt verdict_final 1; 33020 chatgpt verdict_gate 1; 33020 grok verdict_gate 11; 33021 chatgpt verdict_final 2; 33021 gemini verdict_final 1; 33021 gemini verdict_gate 3; 33021 chatgpt verdict_gate 2; 33025 grok verdict_final 8; 33025 chatgpt verdict_final 1; 33025 sol verdict_final 3; 33025 chatgpt verdict_gate 1; 33025 grok verdict_gate 20; 33025 sol alt_verdict_gate 3; 33040 grok verdict_final 1; 33040 chatgpt verdict_gate 1; 33040 grok verdict_gate 3
-OK   raise: the contested lines are unchanged; one item per line, "line k" in order, the line quoted whole, its own RESPONSE form named
-OK   cure prompt: three lines give three flagged items, "K-CMT line 1:" to "K-CMT line 3:", each with its own RESPONSE form
-OK   cure: each line answered with its Commitment N cures all three
-OK   cure: a line left unanswered stays UNCURED (line 2)
-OK   cure: a RESPONSE naming no commitment stays UNCURED
-OK   cure: one bare "RESPONSE: K-CMT | Commitment 3" does not answer three lines
-OK   cure: with a RESPONSE written, the line's STATEMENT may carry the Commitment N
-OK   cure: a judgment with one contested line is still answered by the bare "RESPONSE: K-CMT | Commitment 3" (pkgKCMT fallback)
-OK   cure: "K-CMT line 10" answers line 10 only, not line 1 (word-edge match)
-OK   cure replay of the logged items: identical pkgKF and pkgKCL (549 lines)
-11 OK, 0 FAIL
+OK   22 nodes: base (pkgKF) and final shas match the plan; 19 cure nodes take 7 edits, 3 raise-only nodes 4
+   43 verdict texts: grouped K-CMT items 30 (unchanged), K-CMTL items 113 (one per contested line; 113 lines)
+OK   raise: the grouped LIVE K-CMT item and its mark are byte-identical; one TRIAL K-CMTL item per contested line, in order, quoted whole, its form named
+OK   ENF_STATUS: K-CMT LIVE, K-CMTL TRIAL
+OK   prompt: the grouped item and 4 line items are listed ("K-CMTL line 1:" to "line 4:"), each naming its RESPONSE form
+OK   prompt: the shared-RESPONSE form appears once, with its example
+   example: K-CMT commitment CURED, K-CMTL 1 CURED, K-CMTL 2 CURED, K-CMTL 3 CURED, K-CMTL 4 CURED
+OK   cure: one shared RESPONSE, each line with its own answer, cures all 4 lines and the grouped item
+OK   cure: shared form with grouped numbers ("lines 1, 2: Commitment 3") answers both
+OK   cure: a line missing from the shared RESPONSE stays UNCURED (line 4); the others cure
+OK   cure: a segment naming no commitment stays UNCURED (line 2: accepted)
+OK   cure: "line 1" in the shared RESPONSE does not answer line 10 or line 4 (exact numbers)
+OK   cure: one RESPONSE per line cures each
+OK   cure: the grouped answer alone (as today) cures the LIVE grouped item; the TRIAL line items stay UNCURED
+OK   cure: the grouped LIVE item is not cured by a K-CMTL answer that names no commitment
+OK   one contested line: 1 grouped + 1 line item, no shared-form example; bare "RESPONSE: K-CMT | Commitment 3" still cures the grouped item
+OK   cure replay of the logged items: identical pkgKF and pkgKCL, LIVE uncured counts included (549 lines)
+15 OK, 0 FAIL
