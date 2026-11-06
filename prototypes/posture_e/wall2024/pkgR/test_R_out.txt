@@ -1,0 +1,33 @@
+OK   manifest: 17 nodes, live_sha = this fetch, final_sha = file
+OK   the same patched K-RUL library in all 17 nodes
+OK   every node grows by exactly the listed delta
+OK   keystone card "RULING -- D6 -- ..." matches when KEYSTONE: D6 (failed before)
+OK   a "D6 vs C2" card is not the keystone card
+OK   a card for another link (D5) is not the keystone card
+OK   a card naming "keystone" still matches
+OK   cure with no stored context: a lone D-number target matches the keystone
+OK   side-less "premise 2" card matches when only the defender has premise 2 (failed before)
+OK   side-less "premise 2" card does not match when both sides have premise 2
+OK   a card naming the other side does not match
+OK   D/C and sided premise cards match as before
+     chatgpt  "no ruling card" before: [keystone]  after: []
+OK   chatgpt: the fix adds no new "no ruling card" item
+     grok     "no ruling card" before: [DEFENDER premise 2, DEFENDER premise 4, DEFENDER premise 5, DEFENDER premise 6, D6 vs C2]  after: [D6 vs C2]
+OK   grok: the fix adds no new "no ruling card" item
+     sol      "no ruling card" before: [keystone]  after: []
+OK   sol: the fix adds no new "no ruling card" item
+OK   32949: sol and chatgpt keystone cards ("RULING -- D6 -- STANDS") are found
+OK   grok premise cards: see the replay line above
+     cure 2447 gemini   stored CURED | before: the NAMED BY quote "for that which is conceived in her is of the Holy Ghost" does not stand in the record | after: the NAMED BY quote "for that which is conceived in her is of the Holy Ghost" does not stand in the record
+OK   cure 2447 gemini: the keystone card in the reply is found
+     cure 2471 chatgpt  stored UNCURED | before: no ruling card | after: the NAMED BY quote "D6: KEPT. Therefore Christ had no biological father." does not stand in the record
+OK   cure 2471 chatgpt: the keystone card in the reply is found
+     cure 2514 single   stored UNCURED | before: no ruling card | after: the NAMED BY quote "that which is conceived in her is of the Holy Ghost" does not stand in the record
+OK   cure 2514 single: the keystone card in the reply is found
+     cure 2894 sol      stored UNCURED | before: no ruling card | after: the NAMED BY quote "that which is conceived in her is of the Holy Ghost" does not stand in the record
+OK   cure 2894 sol: the keystone card in the reply is found
+     cure 2928 sol      stored UNCURED | before: no ruling card | after: the NAMED BY quote "The Spirit is the source of the conception and the woman is the source of the flesh." does
+OK   cure 2928 sol: the keystone card in the reply is found
+OK   K-CON cure in a JSON-bodied reply: UNCURED before (line hidden in the JSON string), CURED after
+OK   K-CON cure in a plain-text reply: CURED before and after
+ALL OK

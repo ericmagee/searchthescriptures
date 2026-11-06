@@ -1,0 +1,124 @@
+{
+ "live_version": "6b077f9e-aaa7-40a6-95f4-7966b019936f",
+ "nodes": [
+  {
+   "name": "Extract Independent Verdict",
+   "id": "e832ab04-7e45-44e3-a39b-4076758ea00c",
+   "live_sha": "bed0dd6bd9537819",
+   "final_sha": "97a9204370ac956b",
+   "delta": 1097
+  },
+  {
+   "name": "Panel Payloads",
+   "id": "2a5fabdd-28bc-4211-ab01-dc3b1d0db967",
+   "live_sha": "932889d82df38f62",
+   "final_sha": "8ddfad0174ad4d0f",
+   "delta": 1097
+  },
+  {
+   "name": "Cure Build",
+   "id": "7ad5bd77-194e-4ce9-8d0b-359413ced1a4",
+   "live_sha": "b4205d743f818a7c",
+   "final_sha": "4f71e79d145594d2",
+   "delta": 1097
+  },
+  {
+   "name": "Cure Normalize",
+   "id": "e16abfe7-43f7-4a59-b088-859e43f9b2e9",
+   "live_sha": "5b6c6b801d1be4ef",
+   "final_sha": "d6d6c3aa9eb03370",
+   "delta": 1097
+  },
+  {
+   "name": "Cure Check",
+   "id": "16b07c74-a403-4172-9b9a-4a6acfea9d62",
+   "live_sha": "dc4ab40f4b483c81",
+   "final_sha": "12ae4b1fef312047",
+   "delta": 1097
+  },
+  {
+   "name": "Panel Cure Build 1",
+   "id": "1c7e600c-5b02-4d8e-80c1-275d0995e9b7",
+   "live_sha": "eec0ed792a608e93",
+   "final_sha": "4f09a01e88891a72",
+   "delta": 1097
+  },
+  {
+   "name": "Panel Cure Normalize 1",
+   "id": "4aa6acfd-6c25-4668-9155-a522404f9157",
+   "live_sha": "a9eb48b8d8d8be69",
+   "final_sha": "6fbbfe032a8f3683",
+   "delta": 1097
+  },
+  {
+   "name": "Panel Cure Build 2",
+   "id": "93038507-1a2f-4bcb-b69b-8d85fe801184",
+   "live_sha": "86f160f209964e64",
+   "final_sha": "68ac747b9f1f278c",
+   "delta": 1097
+  },
+  {
+   "name": "Panel Cure Normalize 2",
+   "id": "ec037816-6aa3-420a-b51e-f2a6ab24a58d",
+   "live_sha": "1de2577f3ef71df8",
+   "final_sha": "44501f5d41503657",
+   "delta": 1097
+  },
+  {
+   "name": "Panel Cure Build 3",
+   "id": "1bb655d0-eca5-4f8c-b201-e4fd060eaabc",
+   "live_sha": "49d3b97c998ff336",
+   "final_sha": "81d645c1d0a5680e",
+   "delta": 1097
+  },
+  {
+   "name": "Panel Cure Normalize 3",
+   "id": "d41fd40f-1c92-4739-9815-bfdf93e35260",
+   "live_sha": "b1a919d7f4e54015",
+   "final_sha": "8e0dbbd7063ab871",
+   "delta": 1097
+  },
+  {
+   "name": "Panel Cure Check",
+   "id": "007bd090-db2f-46e1-88ea-a3e2623077ca",
+   "live_sha": "cc477eb16413eaea",
+   "final_sha": "28ee4b7be0a3ffe3",
+   "delta": 1097
+  },
+  {
+   "name": "Alternate Build",
+   "id": "8c37a3db-a61d-4cda-88ba-62dd25eb5f36",
+   "live_sha": "79b7b8e7d567167c",
+   "final_sha": "eb8449b752144ff4",
+   "delta": 1097
+  },
+  {
+   "name": "Alternate Payloads",
+   "id": "58b84db2-1576-4a6c-b227-d507b2f06d97",
+   "live_sha": "c5f70e456e3f166f",
+   "final_sha": "4b87528c7ce36d55",
+   "delta": 1097
+  },
+  {
+   "name": "Alternate Cure Build",
+   "id": "1133cadf-9f55-4aa9-92df-71c3c271ced3",
+   "live_sha": "226c1b57987359c4",
+   "final_sha": "142dcc606a354da9",
+   "delta": 1097
+  },
+  {
+   "name": "Alternate Cure Normalize",
+   "id": "3303c1be-fdb2-4008-9a45-79ae7adab238",
+   "live_sha": "897eb4653dd2d92b",
+   "final_sha": "e4b56c992daccd83",
+   "delta": 1097
+  },
+  {
+   "name": "Alternate Merge",
+   "id": "8d8b179a-c064-4a4f-b8b5-ea6298d23ce3",
+   "live_sha": "fe13b1a9229bcc1e",
+   "final_sha": "fbb31d935a3ec095",
+   "delta": 1097
+  }
+ ]
+}
