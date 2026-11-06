@@ -1,0 +1,38 @@
+OK   12 nodes; base and final shas match the plan
+OK   harvest 33160 [CR3]: 6 premises, 14 presses (14 MEANS lines in the list); P2.3 is Matthew 1:19 with its MEANS
+     14 {"id":"P2.3","n":2,"ref":"Matthew 1:19","means":"a husband who knew himself the father would have no cause to put her away"}
+OK   check 33160 [DR3]: Matthew 1:19 named but its MEANS not quoted (P2.3 missing); the round is sent back
+OK   check: every MEANS quoted and answered with layers passes
+OK   check: a quoted MEANS with no layer after it is unanswered
+OK   check: a conceded LINK needs no answers
+OK   check: 8 consecutive MEANS words in a quote count; fewer do not
+OK   check: a MEANS with quotes of its own is read whole (Luke 2:49)
+OK   check: the MEANS must stand in its own LINK section
+OK   check: no press list -> does not apply
+OK   block names every press id with its MEANS and the MEANS [CR3] line form
+OK   harvest reads presses on every saved run (run:presses/premises)
+     33040:14/6 33060:14/6 33083:18/6 33107:11/6 33129:18/6 33149:23/6 33160:14/6
+OK   C3 Extract: presses and press_check on its output (P2.3 missing)
+     {"applies":true,"missing":["P1.1","P1.2","P1.3","P2.1","P2.2","P2.3","P3.1","P3.2","P4.1","P4.2","P5.1","P5.2","P6.1","P6.2"],"unanswered":[],"ok":[],"conceded":[],"sections":6,"pass":false}
+OK   C3G Build: resend, same seat and model, the conversation continued (assistant = the first round, user = the note naming P2.3 and its MEANS)
+OK   C3G Build: gemini form (model, then user parts)
+OK   C3G Extract: a corrected reply is kept (second), its check passes
+     {"resent":true,"kept":"second","why":"faults 14 -> 0","first_check":{"applies":true,"missing":["P1.1","P1.2","P1.3","P2.1","P2.2","P2.3","P3.1","P3.2","P4.1","P4.2","P5.1","P5.2","P6.1","P6.2"],"unans
+OK   C3G Extract: a reply that does not improve keeps the first round
+OK   C3G Extract: a failed re-call keeps the first round
+OK   C3G Extract: an empty re-call reply keeps the first round (no throw)
+     the re-call reply was not read: VALIDATION: C3 (CHALLENGER, openai m) returned no text: finish_reason=stop; output_tokens=1; reasoning_tokens=0; reasoning_chars=0. run_token=t
+OK   C3G Build: a passing round is not sent back
+OK   C3G Extract: the pass-through returns C3 Extract's round unchanged
+OK   Build_Synthesis.js: reads [DR3] from C3G Extract only
+OK   D4_Build.js: reads [DR3] from C3G Extract only
+OK   D4_Extract.js: reads [DR3] from C3G Extract only
+OK   C4_Build.js: reads [DR3] from C3G Extract only
+OK   C4_Extract.js: reads [DR3] from C3G Extract only
+OK   C4G_Extract.js: reads [DR3] from C3G Extract only
+OK   D4_Words_Plan.js: reads [DR3] from C3G Extract only
+OK   Failure Salvage: C3G Extract first, C3 Extract as fallback (salvage and format faults)
+OK   runner: C3G Extract names C3 Extract, C3G Build and every node C3 Extract reads, as literal $() calls
+     C3 Extract, C3G Build, Init Seats, Init with Guards, D1 Extract, C1 Extract, D2 Extract, C2 Extract, D3 Extract
+OK   runner: C3G Build names C3 Extract and C3 Build
+31 OK, 0 FAIL
