@@ -1,0 +1,25 @@
+OK   A1 no move: panel, reserve, alternates as base (gemini,chatgpt,sol | grok | )
+OK   A2 gemini moved: not on the panel (chatgpt,sol,grok)
+OK   A3 gemini moved: not the reserve (null)
+OK   A4 jfl_moved reports it
+OK   A5 chatgpt (openrouter) moved: in the alternate pool (chatgpt)
+OK   B1 Panel: sol gets its block first
+OK   B2 Panel: gemini (no block) gets the plain transcript
+OK   B3 Reserve/Alternate: sol's turn copied to gemini loses sol's block
+OK   B4 Reserve/Alternate: sol's turn copied to grok carries grok's block only
+OK   B5 Fetch Models unreadable: no block, no throw
+OK   B6 Panel Build user turn is built with the block
+OK   B7 Reserve swaps the block after it reads the slot's turn
+OK   B8 Alternate swaps the block after it reads the slot's turn
+OK   C1 the block holds no cureRounds header line
+OK   C2 the block holds no ciRounds header line
+OK   C3 no block line starts with "["CR/DR
+OK   D1 Panel_Build.js = pkgBAR/patched + the block edits only
+OK   D1 Reserve_Build.js = pkgBAR/patched + the block edits only
+OK   D1 Alternate_Build.js = pkgBAR/patched + the block edits only
+OK   D2 Init_Seats.js = base + the 3 edits only
+OK   D3 Panel_Build.js compiles
+OK   D3 Reserve_Build.js compiles
+OK   D3 Alternate_Build.js compiles
+OK   D3 Init_Seats.js compiles
+24 OK, 0 FAIL

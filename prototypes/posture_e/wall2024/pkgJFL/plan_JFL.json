@@ -1,0 +1,33 @@
+{
+ "base": "live 98daac9e + n19 + n20 + n21 (pkgIMP) + pkgBAR 3086eb8",
+ "nodes": [
+  {
+   "file": "Panel_Build.js",
+   "base": "pkgBAR/patched",
+   "base_sha": "11dc0d211828b3f6",
+   "final_sha": "3810191e97f5ca05",
+   "edits": 2
+  },
+  {
+   "file": "Reserve_Build.js",
+   "base": "pkgBAR/patched",
+   "base_sha": "953b226741f6a8bf",
+   "final_sha": "872caf592a2295f3",
+   "edits": 1
+  },
+  {
+   "file": "Alternate_Build.js",
+   "base": "pkgBAR/patched",
+   "base_sha": "79fce015c75f5667",
+   "final_sha": "dfb4e51eea892f86",
+   "edits": 2
+  },
+  {
+   "file": "Init_Seats.js",
+   "base": "pkgJFL/base",
+   "base_sha": "5251c79619e13485",
+   "final_sha": "d2f5b219d9039f89",
+   "edits": 3
+  }
+ ]
+}
