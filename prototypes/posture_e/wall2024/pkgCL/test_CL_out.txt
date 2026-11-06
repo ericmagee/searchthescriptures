@@ -1,0 +1,12 @@
+OK   6 nodes: base (pkgCP2) and final shas match the plan
+OK   every node parses
+   S1 line: ANSWER CHECK: Matthew 1:24 -- [CR3] -- MEANS: "Matthew sets the coming together by the taking into the house, after the finding of 1:18." --
+   S1 whole change: ANSWER CHECK: Matthew 1:24 -- [CR3] -- MEANS: "Matthew sets the coming together by the taking into the house, after the finding of 1:18." --
+   pkgCP2: gate item G1 NOT APPLIED lines 0 -> UNCURED -- the gate change was not applied; fresh: ["the flagged line is not in the judge text"]
+OK   pkgCP2 (staged): the bare-grade refusal reaches the gate with no line, and the whole corrected line is refused
+   pkgCL: gate item G1 NOT APPLIED lines 1 -> CURED -- the gate change was applied; fresh: []
+OK   pkgCL: the gate item carries the refused line, and the whole corrected line applies and cures
+OK   send-back apply: same applied list and same refusal reasons on pkgCP2 and pkgCL
+   changed: none
+OK   no stored gate decision in 32998, 33014, 33020 or 33021 changes
+6 OK, 0 FAIL
