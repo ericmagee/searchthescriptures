@@ -1,0 +1,9 @@
+distinct keyed lines 1077 {"RESTATED":39,"STATEMENT":477,"RESPONSE":535,"RETRACTED":15,"CORRECTED RESULT":6,"CORRECTED COUNT":2,"CORRECTED STANDING":3}; differ 2
+
+[RESTATED] 33006 chatgpt cure_reply :: RESTATED: REASONING: HELD -- The Ezra press cannot count because it is beyond the cap (Commitment 5).
+   old: restated {"link":"REASONING","grade":null,"text":"HELD -- The Ezra press cannot count because it is beyond the cap (Commitment 5).","line":"RESTATED: REASONING: HELD -- The Ezra press cannot count because it is beyond the cap (Commitment 5)."}
+   new: malformed "RESTATED: REASONING: HELD -- The Ezra press cannot count because it is beyond the cap (Commitment 5)."
+
+[STATEMENT] 33021 gemini cure_reply :: STATEMENT: K-W DEFENDER CR3 LINK 5 [premise 5] #8 | CONCEDED
+   old: malformed "STATEMENT: K-W DEFENDER CR3 LINK 5 [premise 5] #8 | CONCEDED"
+   new: statement {"label":"K-W DEFENDER CR3 LINK 5 [premise 5] #8","text":"CONCEDED","line":"STATEMENT: K-W DEFENDER CR3 LINK 5 [premise 5] #8 | CONCEDED"}

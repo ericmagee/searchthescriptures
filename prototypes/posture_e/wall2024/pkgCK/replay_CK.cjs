@@ -1,0 +1,6 @@
+// pkgCK replay: whole Panel Cure Check output (saved inputs, 6 runs) and the cure-stage log replay, base pkgRC against pkgCK. Run from wall2024/.
+const fs=require('fs');const {runNode}=require('../corpus/replay_node.cjs');const {execFileSync}=require('child_process');
+const strip=x=>JSON.stringify(x,(k,v)=>k==='at'?undefined:v);const out=[];
+for(const run of fs.readdirSync('corpus/raw').filter(f=>/^nodes_\d+\.json\.gz$/.test(f)).map(f=>f.slice(6,11)).sort()){const a=runNode('pkgRC',run,'Panel_Cure_Check'),b=runNode('pkgCK',run,'Panel_Cure_Check');{const d=strip(a)===strip(b);let note='';if(!d){const x=a[0].json.bodies.join('\n'),y=b[0].json.bodies.join('\n');let i=0;while(i<x.length&&x[i]===y[i])i++;note=' at body text: old "'+x.slice(i-40,i+40)+'" new "'+y.slice(i-40,i+40)+'"';}out.push(run+' Panel Cure Check: '+(d?'identical whole output':'DIFFERS'+note));}}
+for(const [tag,scr] of [['gate replay','corpus/replay.cjs'],['cure log replay','corpus/replay_cure.cjs'],['cure node replay','corpus/replay_cure_node.cjs']]){const r=p=>execFileSync('node',[scr,p],{encoding:'utf8',maxBuffer:1<<26}).split(p).join('PKG');out.push(tag+': '+(r('pkgRC')===r('pkgCK')?'identical':'DIFFERS'));}
+console.log(out.join('\n'));
