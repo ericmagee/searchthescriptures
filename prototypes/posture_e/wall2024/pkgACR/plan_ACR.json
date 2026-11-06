@@ -1,0 +1,137 @@
+{
+ "base": "pkgKFR/patched (live 868b0814 + pkgRU + pkgKFR)",
+ "nodes": [
+  {
+   "file": "Alt_Gate_Build.js",
+   "name": "Alt Gate Build",
+   "base_sha": "d4b7db942961982b",
+   "final_sha": "5129c7beed1bf22a"
+  },
+  {
+   "file": "Alt_Gate_Record.js",
+   "name": "Alt Gate Record",
+   "base_sha": "194364a0eee5d79a",
+   "final_sha": "3e4a4357eb23dba9"
+  },
+  {
+   "file": "Alternate_Build.js",
+   "name": "Alternate Build",
+   "base_sha": "c3a213a1ba0e253f",
+   "final_sha": "c9a671af028554cd"
+  },
+  {
+   "file": "Alternate_Cure_Build.js",
+   "name": "Alternate Cure Build",
+   "base_sha": "631d3964ef3fe18e",
+   "final_sha": "1e768cdd2f985c19"
+  },
+  {
+   "file": "Alternate_Cure_Normalize.js",
+   "name": "Alternate Cure Normalize",
+   "base_sha": "e47365f23e70163e",
+   "final_sha": "c874a1ba57c0b515"
+  },
+  {
+   "file": "Alternate_Merge.js",
+   "name": "Alternate Merge",
+   "base_sha": "e2e50ff5c1ac7d97",
+   "final_sha": "885037ac00572bb1"
+  },
+  {
+   "file": "Alternate_Merge_Seat.js",
+   "name": "Alternate Merge Seat",
+   "base_sha": "4723a9cc84c5cc32",
+   "final_sha": "9379cce800995a1a"
+  },
+  {
+   "file": "Alternate_Payloads.js",
+   "name": "Alternate Payloads",
+   "base_sha": "fc6b8724494f7e42",
+   "final_sha": "29e39941cccadff0"
+  },
+  {
+   "file": "Cure_Build.js",
+   "name": "Cure Build",
+   "base_sha": "e5671d993eb5f04f",
+   "final_sha": "a2d325156aab0896"
+  },
+  {
+   "file": "Cure_Check.js",
+   "name": "Cure Check",
+   "base_sha": "1bd51dc04a917fbd",
+   "final_sha": "5c4fcc80f13291ca"
+  },
+  {
+   "file": "Cure_Normalize.js",
+   "name": "Cure Normalize",
+   "base_sha": "030db1709ae1fc77",
+   "final_sha": "19926e77883bd0e4"
+  },
+  {
+   "file": "Extract_Independent_Verdict.js",
+   "name": "Extract Independent Verdict",
+   "base_sha": "591e399ed1bf854e",
+   "final_sha": "e6e801ceb32c7e41"
+  },
+  {
+   "file": "Gate_Build.js",
+   "name": "Gate Build",
+   "base_sha": "412563945dc90868",
+   "final_sha": "c93098147c6898bd"
+  },
+  {
+   "file": "Gate_Record.js",
+   "name": "Gate Record",
+   "base_sha": "bb6995deaa0f086a",
+   "final_sha": "77e821edc1b5c317"
+  },
+  {
+   "file": "Panel_Cure_Build_1.js",
+   "name": "Panel Cure Build 1",
+   "base_sha": "cfab1084be01a8d2",
+   "final_sha": "4f0aa0eab29289a4"
+  },
+  {
+   "file": "Panel_Cure_Build_2.js",
+   "name": "Panel Cure Build 2",
+   "base_sha": "b6334a2c8cb22c2c",
+   "final_sha": "a48277a3adc7f5c0"
+  },
+  {
+   "file": "Panel_Cure_Build_3.js",
+   "name": "Panel Cure Build 3",
+   "base_sha": "ed91f3c2c32c16a4",
+   "final_sha": "dd0e7eabeb590360"
+  },
+  {
+   "file": "Panel_Cure_Check.js",
+   "name": "Panel Cure Check",
+   "base_sha": "1c7d2611c22b9fe4",
+   "final_sha": "ec8ee76681df7f6f"
+  },
+  {
+   "file": "Panel_Cure_Normalize_1.js",
+   "name": "Panel Cure Normalize 1",
+   "base_sha": "d752019c9ec68ac7",
+   "final_sha": "aa946af370441ed0"
+  },
+  {
+   "file": "Panel_Cure_Normalize_2.js",
+   "name": "Panel Cure Normalize 2",
+   "base_sha": "eadc35017971812a",
+   "final_sha": "4b689f7e7c1ad987"
+  },
+  {
+   "file": "Panel_Cure_Normalize_3.js",
+   "name": "Panel Cure Normalize 3",
+   "base_sha": "016a220ce80fcc03",
+   "final_sha": "a3648f8fd362c1f0"
+  },
+  {
+   "file": "Panel_Payloads.js",
+   "name": "Panel Payloads",
+   "base_sha": "2e1509e74a97acc6",
+   "final_sha": "9fc5a978d6abfe32"
+  }
+ ]
+}

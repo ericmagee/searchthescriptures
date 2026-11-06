@@ -1,0 +1,80 @@
+OK   22 nodes: base (pkgKFR) and final shas match the plan
+OK   every node parses
+OK   pkgKFR and pkgRU: every non-KF_LINE byte equal (pkgKFR built on graded pkgRU)
+   distinct ANSWER CHECK lines: 2162; kagRow reads differently: 12 (verse or round text differs 8, GRADE differs 4)
+   == verse or round text differs
+     33006 sol verdict_final: ANSWER CHECK: Matthew 1:24 -- [CR3], [CR4] -- MEANS: "the taking comes after the finding, and the abstinence is set after the taking." -- AN
+        old: ["Matthew 1:24","",false,"MEETS"]
+        new: ["Matthew 1:24","CR3, CR4",false,"MEETS"]
+     33006 sol verdict_final: ANSWER CHECK: 1 John 5:1 -- [CR3], [CR4] -- MEANS: "ek with gennaō and God is said of men who have human begetters." -- ANSWER: "These are t
+        old: ["1 John 5:1","",false,"MEETS"]
+        new: ["1 John 5:1","CR3, CR4",false,"MEETS"]
+     33006 sol verdict_final: ANSWER CHECK: Romans 1:3 -- [CR3], [CR4] -- MEANS: "where the source of the flesh is meant, the text says seed and 'according to the flesh.'
+        old: ["Romans 1:3","",false,"MEETS"]
+        new: ["Romans 1:3","CR3, CR4",false,"MEETS"]
+     33006 sol verdict_final: ANSWER CHECK: Acts 2:30 -- [CR3], [CR4] -- MEANS: NONE under premise 2, unproven press -- ANSWER: "The 'loins' are the same extended loins a
+        old: ["Acts 2:30","",false,"MEETS"]
+        new: ["Acts 2:30","CR3, CR4",false,"MEETS"]
+     33006 sol verdict_final: ANSWER CHECK: 2 Samuel 7:14 -- [CR3], [CR4] -- MEANS: "the angel's 'for' grounds the taking in God's covenant claim on David's seed." -- ANS
+        old: ["2 Samuel 7:14","",false,"MEETS"]
+        new: ["2 Samuel 7:14","CR3, CR4",false,"MEETS"]
+     33006 sol verdict_final: ANSWER CHECK: Matthew 1:3 -- [CR3], [CR4] -- MEANS: "the feminine ek names a mother beside a begetting father." -- ANSWER: "Matthew 1:6 even
+        old: ["Matthew 1:3","",false,"MEETS"]
+        new: ["Matthew 1:3","CR3, CR4",false,"MEETS"]
+     33006 sol verdict_final: ANSWER CHECK: Luke 2:33 -- [CR3], [CR4] -- MEANS: "the narrator names Joseph beside the mother." -- ANSWER: "The verse names Joseph beside M
+        old: ["Luke 2:33","",false,"MEETS"]
+        new: ["Luke 2:33","CR3, CR4",false,"MEETS"]
+     33006 sol verdict_final: ANSWER CHECK: Acts 2:30 -- [CR3], [CR4] -- MEANS: "the promised flesh comes out of a father's loins." -- ANSWER: "Hebrews 7:5 and 7:10 use '
+        old: ["Acts 2:30","",false,"MEETS"]
+        new: ["Acts 2:30","CR3, CR4",false,"MEETS"]
+   == GRADE differs
+     33020 chatgpt verdict_final: ANSWER CHECK: Romans 1:3 -- [CR3] -- MEANS: "the Son's flesh is David's seed, carried by the fathers' line." -- ANSWER: "offspring," the sen
+        old: ["Romans 1:3","CR3",false,""]
+        new: ["Romans 1:3","CR3",false,"MEETS"]
+     33020 chatgpt verdict_final: ANSWER CHECK: Matthew 1:19 -- [CR3] -- MEANS: "the row gives intent with two grounds, justice and sparing her exposure." -- ANSWER: "The two
+        old: ["Matthew 1:19","CR3",false,""]
+        new: ["Matthew 1:19","CR3",false,"MEETS"]
+     33025 grok verdict_final: ANSWER CHECK: Exodus 2:10 -- [CR3] -- MEANS: "the taking and naming by Pharaoh's daughter left Moses of Levi." -- ANSWER: "he became her son
+        old: ["Exodus 2:10","CR3",false,""]
+        new: ["Exodus 2:10","CR3",false,"MEETS"]
+     33025 grok verdict_final: ANSWER CHECK: Esther 2:7 -- [CR3] -- MEANS: "the taking stands beside a named father." -- ANSWER: "took for his own daughter" with the beget
+        old: ["Esther 2:7","CR3",false,""]
+        new: ["Esther 2:7","CR3",false,"MEETS"]
+OK   kagRow: no line read before is lost; no new line read; a grade changes only from none to a grade word (false K-AG items removed)
+   gate line key (an ANSWER CHECK CHANGE finds its own line): 52 lines differ
+     32998 gemini: ANSWER CHECK: Matthew 1:20 -- [Defender R3] -- MEANS: "the row carrying \"of the Holy Ghost\" names the son of David and :: old X new ANSWER CHECK: Matthew 1:20 -- 
+     32998 gemini: ANSWER CHECK: 1 John 5:1 -- [Defender R3] -- MEANS: "gennaō with ek and God names a Spirit origin of men who have father :: old X new ANSWER CHECK: 1 John 5:1 -- [D
+     32998 gemini: ANSWER CHECK: John 3:6 -- [Defender R3] -- MEANS: "Spirit origin and flesh origin are two kinds, set side by side." -- A :: old X new ANSWER CHECK: John 3:6 -- [Def
+     32998 gemini: ANSWER CHECK: 1 John 3:9 -- [Defender R3] -- MEANS: "being \"of God\" by his seed is said of believers with human father :: old X new ANSWER CHECK: 1 John 3:9 -- [D
+     32998 gemini: ANSWER CHECK: Romans 1:3 -- [Defender R3] -- MEANS: "the flesh origin is marked by kata sarka and the seed." -- ANSWER:  :: old X new ANSWER CHECK: Romans 1:3 -- [D
+     32998 gemini: ANSWER CHECK: Matthew 1:19 -- [Defender R3] -- MEANS: "the verse states his intent and two grounds, being just and unwil :: old X new ANSWER CHECK: Matthew 1:19 -- 
+     32998 gemini: ANSWER CHECK: 2 Samuel 7:14 -- [Defender R3] -- MEANS: "the angel's \"for\" grounds the taking in the seed God claims as :: old X new ANSWER CHECK: 2 Samuel 7:14 --
+     32998 gemini: ANSWER CHECK: Luke 1:32 -- [Defender R3] -- MEANS: "the covenant son is set on David's throne." -- ANSWER: "These give G :: old X new ANSWER CHECK: Luke 1:32 -- [De
+     32998 gemini: ANSWER CHECK: 1 Chronicles 28:6 -- [Defender R3] -- MEANS: "the son David begat and the son God names stand in one verse :: old X new ANSWER CHECK: 1 Chronicles 28:
+     32998 gemini: ANSWER CHECK: Matthew 1:21 -- [Defender R3] -- MEANS: "Joseph is given the father's naming act." -- ANSWER: "Matthew 1:2 :: old X new ANSWER CHECK: Matthew 1:21 -- 
+OK   gate line key: every ANSWER CHECK line still finds itself
+   selfLines421 (B7 marks) on 122 texts: 0 differ
+   kfLines (K-F, TRIAL) with the run's rounds on 106 texts: 4 differ
+     32998 gemini verdict_final
+        old: [["D3 vs C1","the ANSWER quotation is not in [DR3]"]]
+        new: []
+     32998 gemini verdict_gate
+        old: [["D3 vs C1","the ANSWER quotation is not in [DR3]"]]
+        new: []
+     33020 grok verdict_gate
+        old: [["D1 vs C6","the ANSWER quotation is not in [DR3]"]]
+        new: []
+     33021 single cure_reply
+        old: [["D1 vs C1","the ANSWER quotation is not in [DR3]"]]
+        new: []
+   cure replay vs stored: pkgKFR 262/269, pkgACR 262/269
+   rows that change pkgKFR -> pkgACR: none
+   seats whose LIVE uncured count changes: none
+OK   no seat's LIVE uncured count changes in the cure replay
+   gate: 21 fixture seats; 0 differ
+OK   unit: kagRow reads several rounds (G6) with grade MEETS
+OK   unit: a short line with no MEANS/ANSWER stays unread by kagRow, as before
+OK   unit: kagRow ANSWER: NONE is read as none
+OK   unit: a malformed ANSWER CHECK line is still read by the old reader (grade word lower case)
+OK   unit: selfLines421 counts the second listed round
+11 OK, 0 FAIL
