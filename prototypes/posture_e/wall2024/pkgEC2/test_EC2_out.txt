@@ -1,0 +1,15 @@
+OK   panel: the base node reproduces the saved live output (rows without the time, sb_items, tally)
+OK   panel: same row count and same output keys
+OK   panel: every E-ANS/E-PREM row carries the record-only CURE suffix, and nothing else in any row changes (38 suffixed)
+OK   panel: cure_status stays null on every row
+OK   panel: each reading matches pkgEC2/test_cure_33040 (UNCURED only 7669, 7709, 7710)
+OK   panel: all other output (counts, bodies, sb_items) unchanged
+OK   alternate: the rebuilt item numbers match the logged SENDBACK lines
+OK   alternate: the base node reproduces the logged sol rows (cure_reason, response_line)
+OK   alternate: same row count and same output keys
+OK   alternate: every E-ANS/E-PREM row carries the record-only CURE suffix, and nothing else in any row changes (17 suffixed)
+OK   alternate: cure_status stays null on every row
+OK   alternate: each reading matches pkgEC2/test_cure_33040 (UNCURED only 7669, 7709, 7710)
+OK   alternate: all other output (counts, bodies, sb_items) unchanged
+OK   no rounds found: the readings say UNREAD and the node still runs
+14 OK, 0 FAIL

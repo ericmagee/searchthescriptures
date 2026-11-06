@@ -1,0 +1,12 @@
+{
+ "Send Back Record": {
+  "file": "pkgEC2/patched/Send_Back_Record.js",
+  "base_sha": "a084cfd1fff25c34",
+  "final_sha": "658265ef39e9c43c"
+ },
+ "Alt Send Back Record": {
+  "file": "pkgEC2/patched/Alt_Send_Back_Record.js",
+  "base_sha": "9605942e1e47bb14",
+  "final_sha": "7d848d3bafad01a1"
+ }
+}

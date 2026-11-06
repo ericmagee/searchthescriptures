@@ -1,0 +1,55 @@
+chatgpt E-ANS ANSWER CHECK Matthew 1:25 [CR3] -> CURE (record-only until promoted): CURED -- CHANGE TO MEETS with a fuller answer found in [CR4]
+chatgpt E-ANS ANSWER CHECK Acts 1:8 [CR3] -> CURE (record-only until promoted): CURED -- CHANGE TO MEETS with a fuller answer found in [CR4]
+chatgpt E-ANS ANSWER CHECK Luke 9:34 [CR3] -> CURE (record-only until promoted): CURED -- CHANGE TO MEETS with a fuller answer found in [CR4]
+chatgpt E-ANS ANSWER CHECK Acts 16:13 [CR3] -> CURE (record-only until promoted): CURED -- CHANGE TO MEETS with a fuller answer found in [CR3]
+chatgpt E-ANS ANSWER CHECK Luke 2:33 [CR3] -> CURE (record-only until promoted): CURED -- CHANGE TO MEETS with a fuller answer found in [CR3]
+chatgpt E-ANS ANSWER CHECK John 1:45 [CR3] -> CURE (record-only until promoted): CURED -- CHANGE TO MEETS with a fuller answer found in [CR4]
+chatgpt E-ANS ANSWER CHECK Luke 1:27 [CR3] -> CURE (record-only until promoted): UNCURED -- the CHANGE TO MEETS quotes the flagged answer again (or a shorter cut of it)
+chatgpt E-ANS ANSWER CHECK Luke 2:4 [CR3] -> CURE (record-only until promoted): CURED -- CHANGE TO MEETS with a fuller answer found in [CR4]
+chatgpt E-ANS ANSWER CHECK Luke 1:36 [CR3] -> CURE (record-only until promoted): CURED -- CHANGE TO grades MISSES
+chatgpt E-ANS ANSWER CHECK Acts 2:30 [CR3] -> CURE (record-only until promoted): CURED -- CHANGE TO MEETS with a fuller answer found in [CR4]
+chatgpt E-ANS ANSWER CHECK Galatians 4:4 [CR3] -> CURE (record-only until promoted): CURED -- CHANGE TO MEETS with a fuller answer found in [CR3]
+chatgpt E-ANS ANSWER CHECK Ezra 2:62 [CR3] -> CURE (record-only until promoted): CURED -- CHANGE TO grades MISSES
+chatgpt E-ANS ANSWER CHECK 2 Samuel 7:12 [CR3] -> CURE (record-only until promoted): CURED -- CHANGE TO MEETS with a fuller answer found in [CR4]
+chatgpt E-ANS ANSWER CHECK Matthew 1:18 [DR3] -> CURE (record-only until promoted): CURED -- CHANGE TO MEETS with a fuller answer found in [DR3]
+chatgpt E-ANS ANSWER CHECK Luke 1:31 [DR3] -> CURE (record-only until promoted): CURED -- CHANGE TO MEETS with a fuller answer found in [DR3]
+chatgpt E-ANS ANSWER CHECK Luke 1:36 [DR3] -> CURE (record-only until promoted): CURED -- CHANGE TO MEETS with a fuller answer found in [DR3]
+gemini E-ANS ANSWER CHECK Matthew 1:19 [DR3] -> CURE (record-only until promoted): CURED -- CHANGE TO grades MISSES
+gemini E-PREM premise listed against the defender 2 -> CURE (record-only until promoted): CURED -- CHANGE TO grades premise 2 COUNTED
+gemini E-PREM premise listed against the challenger 1 -> CURE (record-only until promoted): CURED -- CHANGE TO grades premise 1 VOID, its quotes found in the rounds
+gemini E-PREM premise listed against the challenger 2 -> CURE (record-only until promoted): CURED -- CHANGE TO grades premise 2 COUNTED
+gemini E-PREM premise listed against the challenger 3 -> CURE (record-only until promoted): CURED -- CHANGE TO grades premise 3 COUNTED
+grok E-ANS ANSWER CHECK Matthew 1:25 [CR3] -> CURE (record-only until promoted): CURED -- CHANGE TO grades MISSES
+grok E-ANS ANSWER CHECK Acts 1:8 [CR3] -> CURE (record-only until promoted): CURED -- CHANGE TO grades MISSES
+grok E-ANS ANSWER CHECK Luke 9:34 [CR3] -> CURE (record-only until promoted): CURED -- CHANGE TO grades MISSES
+grok E-ANS ANSWER CHECK Acts 16:13 [CR3] -> CURE (record-only until promoted): CURED -- CHANGE TO grades MISSES
+grok E-ANS ANSWER CHECK Luke 1:27 [CR3] -> CURE (record-only until promoted): CURED -- CHANGE TO grades MISSES
+grok E-ANS ANSWER CHECK Luke 2:4 [CR3] -> CURE (record-only until promoted): CURED -- CHANGE TO grades MISSES
+grok E-ANS ANSWER CHECK Galatians 4:4 [CR3] -> CURE (record-only until promoted): CURED -- CHANGE TO grades MISSES
+grok E-ANS ANSWER CHECK Ezra 2:62 [CR3] -> CURE (record-only until promoted): CURED -- CHANGE TO grades MISSES
+grok E-ANS ANSWER CHECK Luke 1:31 [DR3] -> CURE (record-only until promoted): CURED -- CHANGE TO grades MISSES
+grok E-ANS ANSWER CHECK Luke 1:36 [DR3] -> CURE (record-only until promoted): CURED -- CHANGE TO grades MISSES
+grok E-ANS ANSWER CHECK Matthew 1:24 [CR3] -> CURE (record-only until promoted): CURED -- CHANGE TO grades MISSES
+grok E-ANS ANSWER CHECK Matthew 1:19 [CR4] -> CURE (record-only until promoted): CURED -- CHANGE TO grades MISSES
+grok E-ANS ANSWER CHECK John 1:45 [CR3] -> CURE (record-only until promoted): CURED -- CHANGE TO grades MISSES
+grok E-ANS ANSWER CHECK Luke 1:36 [CR3] -> CURE (record-only until promoted): CURED -- CHANGE TO grades MISSES
+grok E-ANS ANSWER CHECK 2 Samuel 7:12 [CR4] -> CURE (record-only until promoted): CURED -- CHANGE TO grades MISSES
+grok E-PREM premise listed against the defender 2 -> CURE (record-only until promoted): UNCURED -- the CHANGE TO regrades premises 3, 4, 5, 6 beyond its items (pkgPS refuses it)
+grok E-PREM premise listed against the challenger 2 -> CURE (record-only until promoted): UNCURED -- the CHANGE TO regrades premises 4, 5 beyond its items (pkgPS refuses it)
+sol E-ANS ANSWER CHECK Acts 1:8 [CR3] -> CURE (record-only until promoted): CURED -- CHANGE TO MEETS with a fuller answer found in [CR3]
+sol E-ANS ANSWER CHECK Luke 9:34 [CR3] -> CURE (record-only until promoted): CURED -- CHANGE TO MEETS with a fuller answer found in [CR3]
+sol E-ANS ANSWER CHECK Acts 16:13 [CR3] -> CURE (record-only until promoted): CURED -- CHANGE TO MEETS with a fuller answer found in [CR3]
+sol E-ANS ANSWER CHECK John 1:45 [CR3] -> CURE (record-only until promoted): CURED -- KEEP whose reason quotes the answering side's round: "it is a disciples description in"
+sol E-ANS ANSWER CHECK Luke 1:27 [CR3] -> CURE (record-only until promoted): CURED -- CHANGE TO MEETS with a fuller answer found in [CR3]
+sol E-ANS ANSWER CHECK Luke 1:36 [CR3] -> CURE (record-only until promoted): CURED -- CHANGE TO MEETS with a fuller answer found in [CR3]
+sol E-ANS ANSWER CHECK Galatians 4:4 [CR3] -> CURE (record-only until promoted): CURED -- CHANGE TO MEETS with a fuller answer found in [CR3]
+sol E-ANS ANSWER CHECK Ezra 2:62 [CR3] -> CURE (record-only until promoted): CURED -- CHANGE TO MEETS with a fuller answer found in [CR3]
+sol E-ANS ANSWER CHECK 2 Samuel 7:12 [CR4] -> CURE (record-only until promoted): CURED -- CHANGE TO MEETS with a fuller answer found in [CR4]
+sol E-ANS ANSWER CHECK Matthew 1:18 [DR3] -> CURE (record-only until promoted): CURED -- CHANGE TO MEETS with a fuller answer found in [DR3]
+sol E-ANS ANSWER CHECK Isaiah 8:3 [DR3] -> CURE (record-only until promoted): CURED -- CHANGE TO MEETS with a fuller answer found in [DR3]
+sol E-ANS ANSWER CHECK Luke 1:31 [DR3] -> CURE (record-only until promoted): CURED -- CHANGE TO MEETS with a fuller answer found in [DR3]
+sol E-PREM premise listed against the defender 1 -> CURE (record-only until promoted): CURED -- KEEP whose reason quotes the side's round: "i drop the broader claim that"
+sol E-PREM premise listed against the defender 4 -> CURE (record-only until promoted): CURED -- KEEP whose reason quotes the side's round: "i drop the claim that every"
+sol E-PREM premise listed against the defender 5 -> CURE (record-only until promoted): CURED -- KEEP whose reason quotes the side's round: "josephs house gives the child his"
+sol E-PREM premise listed against the defender 6 -> CURE (record-only until promoted): CURED -- KEEP whose reason quotes the side's round: "my conclusion that christ had no"
+sol E-PREM premise listed against the challenger 6 -> CURE (record-only until promoted): CURED -- CHANGE TO grades premise 6 VOID, its quotes found in the rounds
