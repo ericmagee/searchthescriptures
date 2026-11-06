@@ -1,0 +1,533 @@
+[
+ {
+  "id": 4922,
+  "run": "32998",
+  "seat": "gemini",
+  "rule": "E-COL",
+  "item": "COLLISION D3 vs C1",
+  "line": "FORCED: D3 vs C1 -- MEANS [Defender R3]: \"the finding with child came before any coming together -- [L2] synerchomai (G4905, come together) | [L3] Matthew 1:25 \\\\\"And knew her not till she had brought forth her firstborn son\\\\\"\" -- ANSWER [Challenger R3]: \"The verse dates the finding. Matthew sets the coming together by what follows: 'Then Joseph being raised from sleep did as the angel of the Lord had bidden him, and took unto him his wife' (Matthew 1:24). That is the taking of Deuteronomy 20:7, 'hath betrothed a wife, and hath not taken her.' The order is Matthew's own: espoused, found with child before the taking, then taken. 'Of the Holy Ghost' uses the same ek ('of') as 1 John 5:1: 'every one that loveth him that begat loveth him also that is begotten of him.' Those born of God there have fathers in the flesh. John 3:6 keeps the two kinds apart: 'That which is born of the flesh is flesh; and that which is born of the Spirit is spirit.' It fits the link: the finding falls inside the espousal, before the taking.\" -- FAILS: \"It fits the link: the finding falls inside the espousal, before the taking.\"",
+  "enf": "ENFORCER DISAGREE (right: STANDS): The answer \"It fits the link: the finding falls inside the espousal, before the taking\" can agree. (judge wrote FORCED; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "id": 4923,
+  "run": "32998",
+  "seat": "grok",
+  "rule": "E-COL",
+  "item": "COLLISION D1 vs C1",
+  "line": "FORCED: D1 vs C1 -- MEANS [CR3]: \"the finding with child came before any coming together\" -- ANSWER [DR3]: \"The verse dates the finding.\" -- FAILS: \"It fits the link: the finding falls inside the espousal, before the taking.\"",
+  "enf": "ENFORCER DISAGREE (right: STANDS): The answer \"The verse dates the finding\" does not show it cannot agree with finding before coming together. (judge wrote FORCED; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "id": 4924,
+  "run": "32998",
+  "seat": "grok",
+  "rule": "E-COL",
+  "item": "COLLISION D1 vs C3",
+  "line": "FORCED: D1 vs C3 -- MEANS [CR3]: \"the ground given is the source of the conceiving, with the margin \\\\\"begotten\\\\\"\" -- ANSWER [DR3]: \"So the \\\\\"for\\\\\" tells David's son to take his wife because the child is the seed God claims as his own (2 Samuel 7:14; 1 Chronicles 28:6).\" -- FAILS: \"\\\\\"begotten... of the Holy Ghost\\\\\" is the covenant begetting, and the father of the house is named in the same row.\"",
+  "enf": "ENFORCER DISAGREE (right: STANDS): The answer \"the child is the seed God claims as his own\" can agree with the source. (judge wrote FORCED; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "id": 4925,
+  "run": "32998",
+  "seat": "grok",
+  "rule": "E-COL",
+  "item": "COLLISION D2 vs C6",
+  "line": "FORCED: D2 vs C6 -- MEANS [CR3]: \"the \\\\\"begat\\\\\" line stops at Joseph the husband, and the birth clause names Mary\" -- ANSWER [DR3]: \"It fits the link: the line runs to Joseph, and the birth clause names his wife.\" -- FAILS: \"The passive \\\\\"was born\\\\\" with the feminine \\\\\"of whom\\\\\" is the mother's clause.\"",
+  "enf": "ENFORCER DISAGREE (right: STANDS): The answer \"the line runs to Joseph, and the birth clause names his wife\" can agree. (judge wrote FORCED; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "id": 4926,
+  "run": "32998",
+  "seat": "grok",
+  "rule": "E-COL",
+  "item": "COLLISION D3 vs C1",
+  "line": "FORCED: D3 vs C1 -- MEANS [CR3]: \"at the announcing of the conception Mary knows no man\" -- ANSWER [DR3]: \"It fits the link: the conception follows the word, inside the espousal to Joseph of David's house.\" -- FAILS: \"Her words state her condition on the day the angel spoke.\"",
+  "enf": "ENFORCER DISAGREE (right: STANDS): The answer \"the conception follows the word, inside the espousal\" can agree. (judge wrote FORCED; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "id": 4928,
+  "run": "32998",
+  "seat": "grok",
+  "rule": "E-COL",
+  "item": "COLLISION D5 vs C6",
+  "line": "FORCED: D5 vs C6 -- MEANS [CR3]: \"the narrator marks \\\\\"son of Joseph\\\\\" as an opinion\" -- ANSWER [DR3]: \"the customary reckoning.\" -- FAILS: \"being (as was supposed) the son of Joseph.\"",
+  "enf": "ENFORCER DISAGREE (right: STANDS): The answer \"the customary reckoning\" can agree with \"as was supposed.\" (judge wrote FORCED; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "id": 4937,
+  "run": "32998",
+  "seat": "chatgpt",
+  "rule": "E-HOLD",
+  "item": "COLLISION D3 vs C1",
+  "line": "D3 vs C1 (Matthew 1:18): UNDERDETERMINED -- [CR3] answers the timing presses, while [DR3] reads the coming together as the taking -- GROUND: The parties exhibit different readings of the interval.",
+  "enf": "ENFORCER DISAGREE (right: STANDS): The line marks the challenger press \"UNPROVEN (Commitment 5)\" and \"no separate MEANS sentence,\" so both readings are not shown. (judge wrote UNDERDETERMINED; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "id": 4938,
+  "run": "32998",
+  "seat": "chatgpt",
+  "rule": "E-HOLD",
+  "item": "COLLISION D4 vs C5",
+  "line": "D4 vs C5 (Isaiah 7:16; Isaiah 8:8): UNDERDETERMINED -- [CR4] answers both witnesses by addressing the time-note and the address to Immanuel -- GROUND: The earlier broken grade treated named and addressed witnesses as unanswered.",
+  "enf": "ENFORCER DISAGREE (right: BROKEN): The answers \"does not turn 'virgin' into 'wife'\" and \"The land is his\" do not address the pressed settings. (judge wrote UNDERDETERMINED; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "id": 5142,
+  "run": "32998",
+  "seat": "sol",
+  "rule": "E-HOLD",
+  "item": "COLLISION D1 vs C3",
+  "line": "D1 vs C3 (Matthew 1:19): UNDERDETERMINED -- [L1] Matthew 1:19, \"was minded to put her away privily\"; [L3] Matthew 1:20, \"fear not to take unto thee Mary thy wife: for that which is conceived in her is of the Holy Ghost\"; [CR3] answers the covenant-sonship witnesses by distinguishing election from conception, and [DR3] answers the dismissal witness with \"The angel's \\\\\"fear not\\\\\" answers a fear\" and \"The \\\\\"for\\\\\" gives the reason to take her: the child is God's covenant son\"; neither exhibited contextual reading conclusively defeats the other (Commitments 3 and 7) -- GROUND: The holding side answered the contextual witness, and the record does not establish that its covenant explanation cannot fit that witness.",
+  "enf": "ENFORCER DISAGREE (right: BROKEN): The line's own answer check marks [DR3] Matthew 1:19 MISSES because \"repeating his qualities does not answer that contextual connection,\" so the collision is BROKEN, not UNDERDETERMINED. (judge wrote UNDERDETERMINED; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "id": 5162,
+  "run": "32998",
+  "seat": "sol",
+  "rule": "E-RES",
+  "item": "RESULT REASON",
+  "line": "RESULT: UNDERDETERMINED -- The record supports the defender's account of conception by the Holy Ghost, but does not settle whether that account excludes the challenger's proposed earlier union during the espousal.",
+  "enf": "ENFORCER DISAGREE (right: DOES NOT FOLLOW): The reason says \"does not settle whether that account excludes the challenger's proposed earlier union during the espousal,\" which rests on an absence rather than quoted debate words. (judge wrote UNDERDETERMINED; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "id": 5667,
+  "run": "33006",
+  "seat": "sol",
+  "rule": "E-HOLD",
+  "item": "COLLISION D5",
+  "line": "D5: STANDS -- GROUND: The declared wording about the woman's seed and coming of a woman is retained as cumulative agreement, not as an independent exclusion, and no premise in the controlling [DR2] list presses D5.",
+  "enf": "ENFORCER DISAGREE (right: UNDERDETERMINED): Its ground, \"no premise in the controlling [DR2] list presses D5,\" is an absence and the line quotes no answering words. (judge wrote STANDS; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "id": 5930,
+  "run": "33014",
+  "seat": "grok",
+  "rule": "E-COL",
+  "item": "COLLISION D1 vs C4",
+  "line": "FORCED: D1 vs C4 -- MEANS [CR3]: \"the margin \\\\\"Gr. begotten\\\\\" gives the begetting to the Holy Ghost\" -- ANSWER [DR3]: \"\\\\\"Of the Holy Ghost\\\\\" names the covenant origin, and in the same row the angel names \\\\\"Joseph, thou son of David\\\\\" and \\\\\"Mary thy wife.\\\\\" It fits the link.\" -- FAILS: \"The same verb with \\\\\"of God\\\\\" is said of believers: \\\\\"Whosoever believeth that Jesus is the Christ is born of God\\\\\" (1 John 5:1 [is born: Gr. has been born]).\"",
+  "enf": "ENFORCER DISAGREE (right: STANDS): The quoted answer \"names the covenant origin\" does not show it cannot agree, and the line's FAILS rests on 1 John 5:1 rather than the answer's words. (judge wrote FORCED; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "id": 5931,
+  "run": "33014",
+  "seat": "grok",
+  "rule": "E-COL",
+  "item": "COLLISION D2 vs C2",
+  "line": "FORCED: D2 vs C2 -- MEANS [CR3]: \"the finding with child comes before any coming together\" -- ANSWER [DR3]: \"So 1:18 dates the finding before the taking into his house. The finding falls inside the espousal, where she is already \\\\\"his espoused wife, being great with child\\\\\" (Luke 2:5 [taxed: or, enrolled]). It fits the link.\" -- FAILS: \"Therefore Joseph knew Mary his wife within the espousal.\"",
+  "enf": "ENFORCER DISAGREE (right: STANDS): The quoted answer says \"1:18 dates the finding before the taking into his house\" and \"It fits the link,\" which the meaning pressed can agree with. (judge wrote FORCED; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "id": 5932,
+  "run": "33014",
+  "seat": "grok",
+  "rule": "E-COL",
+  "item": "COLLISION D4 vs C1",
+  "line": "FORCED: D4 vs C1 -- MEANS [CR3]: \"the sonship by Joseph is reckoned by supposition\" -- ANSWER [DR3]: \"The sonship to Joseph stands in the word of law and usage. That is the reckoning of Numbers 1:18.\" -- FAILS: \"The sonship to Joseph stands in the word of law and usage.\"",
+  "enf": "ENFORCER DISAGREE (right: STANDS): The quoted answer \"The sonship to Joseph stands in the word of law and usage\" does not show it cannot agree with the pressed supposition. (judge wrote FORCED; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "id": 5933,
+  "run": "33014",
+  "seat": "grok",
+  "rule": "E-COL",
+  "item": "COLLISION D6 vs C3",
+  "line": "FORCED: D6 vs C3 -- MEANS [CR3]: \"the verb changes from \\\\\"begat\\\\\" to \\\\\"was born\\\\\" at the last link\" -- ANSWER [DR3]: \"The seed passes by \\\\\"begat\\\\\" down to Joseph, \\\\\"the husband\\\\\" (anēr, G435). The passive names the wife the child was born of.\" -- FAILS: \"So the seed of David according to the flesh came to the child through Joseph.\"",
+  "enf": "ENFORCER DISAGREE (right: STANDS): The quoted answer \"The passive names the wife the child was born of\" can agree with the pressed change from \"begat\" to \"was born.\" (judge wrote FORCED; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "id": 5934,
+  "run": "33014",
+  "seat": "grok",
+  "rule": "E-COL",
+  "item": "COLLISION D6 vs C4",
+  "line": "FORCED: D6 vs C4 -- MEANS [CR3]: \"the margin \\\\\"Gr. begotten\\\\\" gives the begetting to the Holy Ghost\" -- ANSWER [DR3]: \"\\\\\"Of the Holy Ghost\\\\\" names the covenant origin, and in the same row the angel names \\\\\"Joseph, thou son of David\\\\\" and \\\\\"Mary thy wife.\\\\\" It fits the link.\" -- FAILS: \"Therefore Christ had a biological father, and the text names him Joseph.\"",
+  "enf": "ENFORCER DISAGREE (right: STANDS): The quoted answer \"names the covenant origin\" does not show it cannot agree, and the line's FAILS adds \"Christ had a biological father\" not stated in the answer. (judge wrote FORCED; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "id": 5993,
+  "run": "33014",
+  "seat": "chatgpt",
+  "rule": "E-RES",
+  "item": "VERDICT LINES",
+  "line": "CLAUSE: BROKEN-1 -- n=6 w=0 k=1",
+  "enf": "ENFORCER DISAGREE: k=1 on the CLAUSE line, but 0 defender link(s) are graded DEFENDER LINK BROKEN on this judge's collision lines () (code check of the judges' own rules; ruling 443)"
+ },
+ {
+  "id": 6155,
+  "run": "33014",
+  "seat": "sol",
+  "rule": "E-HOLD",
+  "item": "COLLISION D6 vs C1",
+  "line": "D6 vs C1 (Hebrews 7:10): UNDERDETERMINED -- [CR2] exhibits remote ancestry through [L1] Hebrews 7:10 \"For he was yet in the loins of his father, when Melchisedec met him\" and [L3] Hebrews 7:1 \"who met Abraham returning from the slaughter of the kings\"; [CR3] adds [L1] Galatians 4:4 \"made of a woman\" and [L3] Genesis 3:15 \"between thy seed and her seed\"; GROUND: the defender's ancestry and woman's-part chain answers the proposed necessity of a male final begetter, while the challenger's begetting-chain interpretation remains a footed competing inference.",
+  "enf": "ENFORCER DISAGREE (right: BROKEN): The answer \"They do not name a begetter at the last link\" is an absence with no fit of its own. (judge wrote UNDERDETERMINED; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "id": 6171,
+  "run": "33014",
+  "seat": "sol",
+  "rule": "E-RES",
+  "item": "RESULT REASON",
+  "line": "RESULT: UNDERDETERMINED -- recomputed after the cure from the cured lines (RETRACTED D6 vs C1 (DEFENDER LINK BROKEN to UNDERDETERMINED)): HELD-1, CHALLENGE STANDING SELF-SUPPORTED, no collision line stands graded CHALLENGER LINK BROKEN.",
+  "enf": "ENFORCER DISAGREE (right: DOES NOT FOLLOW): The reason \"no collision line stands graded CHALLENGER LINK BROKEN\" is an absence of a broken line and names no pressed verse's meaning, so it does not rest on the debate's words. (judge wrote UNDERDETERMINED; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "id": 6388,
+  "run": "33020",
+  "seat": "chatgpt",
+  "rule": "E-COL",
+  "item": "COLLISION D1 vs C2",
+  "line": "FORCED: D1 vs C2 -- MEANS [CR3]: \"the pregnancy was found before the marital union\" -- ANSWER [DR3]: \"So 1:18 dates the finding before the taking into his house, inside the espousal. That is where my link places the knowing. It fits the link.\" -- FAILS: \"In 1 Corinthians 7:5 the word \"again\" names a couple already dwelling as one, resuming.\"",
+  "enf": "ENFORCER DISAGREE (right: STANDS): The answer \"inside the espousal. That is where my link places the knowing. It fits the link\" can agree; the FAILS line rests on 1 Corinthians 7:5, not the answer's quoted words. (judge wrote FORCED; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "id": 6389,
+  "run": "33020",
+  "seat": "grok",
+  "rule": "E-COL",
+  "item": "COLLISION D1 vs C2",
+  "line": "FORCED: D1 vs C2 -- MEANS [CR3]: \"the pregnancy was found before the marital union\" -- ANSWER [DR3]: \"So 1:18 dates the finding before the taking into his house, inside the espousal. That is where my link places the knowing. It fits the link.\" -- FAILS: \"In 1 Corinthians 7:5 the word \"again\" names a couple already dwelling as one, resuming.\"",
+  "enf": "ENFORCER DISAGREE (right: STANDS): The answer \"inside the espousal. That is where my link places the knowing. It fits the link\" can agree; the FAILS line rests on 1 Corinthians 7:5, not the answer's quoted words. (judge wrote FORCED; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "id": 6390,
+  "run": "33020",
+  "seat": "grok",
+  "rule": "E-COL",
+  "item": "COLLISION D1 vs C6",
+  "line": "FORCED: D1 vs C6 -- MEANS [CR3]: \"the \\\\\"of God\\\\\" birth of John 1:13 belongs to believers who become sons after they exist\" -- ANSWER [DR3]: \"These persons each had a father in the flesh. The row names the origin of their \\\\\"of God\\\\\" birth beside their fleshly birth, the two kinds John 3:6 keeps apart. So \\\\\"of God\\\\\" stands over persons begotten of fathers. It fits the link.\" -- FAILS: \"So \\\\\"of God\\\\\" stands over persons begotten of fathers.\"",
+  "enf": "ENFORCER DISAGREE (right: STANDS): The answer \"the two kinds John 3:6 keeps apart. So 'of God' stands over persons begotten of fathers. It fits the link\" can agree with the pressed meaning. (judge wrote FORCED; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "id": 6391,
+  "run": "33020",
+  "seat": "grok",
+  "rule": "E-COL",
+  "item": "COLLISION D5 vs C1",
+  "line": "FORCED: D5 vs C1 -- MEANS [DR2]: \"the tribe is plain before all men as an offshoot he sprang from. -- [L2] phylē G5443 (an offshoot, race or clan) | [L2] prodēlos G4271 (plain before all men)\" -- ANSWER [CR3]: \"The verse gives the tribe and says it is plain. It does not say by whose seed. What is plain before all men is the public reckoning of John 1:45, \\\\\"Jesus of Nazareth, the son of Joseph.\\\\\"\" -- FAILS: \"It does not say by whose seed.\"",
+  "enf": "ENFORCER DISAGREE (right: STANDS): \"It does not say by whose seed\" is an absence, and the answer also offers \"the public reckoning\" as a fit. (judge wrote FORCED; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "id": 6393,
+  "run": "33020",
+  "seat": "gemini",
+  "rule": "E-HOLD",
+  "item": "COLLISION D3",
+  "line": "D3: STANDS -- GROUND: Isaiah 7:14 and Matthew 1:22-23 explicitly identify the virgin conception as the sign fulfilled in Jesus, answered in CR3 and CR4.",
+  "enf": "ENFORCER DISAGREE (right: UNDERDETERMINED): No answering words are quoted; \"explicitly identify the virgin conception\" is the judge's own reading. (judge wrote STANDS; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "id": 6394,
+  "run": "33020",
+  "seat": "gemini",
+  "rule": "E-HOLD",
+  "item": "COLLISION D4",
+  "line": "D4: STANDS -- GROUND: Luke 3:23 explicitly identifies Joseph's paternity as what was supposed, and Matthew 1:16 deliberately alters the active begetting pattern, answered in CR3 and CR4.",
+  "enf": "ENFORCER DISAGREE (right: UNDERDETERMINED): No answering words are quoted; \"Luke 3:23 explicitly identifies Joseph's paternity as what was supposed\" is the judge's own reading. (judge wrote STANDS; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "id": 6395,
+  "run": "33020",
+  "seat": "gemini",
+  "rule": "E-HOLD",
+  "item": "COLLISION D5",
+  "line": "D5: STANDS -- GROUND: The narrowed link accounts for paternal titles through legal reckoning, household usage, and public supposition, answered in CR3 and CR4.",
+  "enf": "ENFORCER DISAGREE (right: UNDERDETERMINED): No answering words are quoted; \"The narrowed link accounts for paternal titles\" is the judge's own summary. (judge wrote STANDS; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "id": 6396,
+  "run": "33020",
+  "seat": "gemini",
+  "rule": "E-HOLD",
+  "item": "COLLISION D6",
+  "line": "D6: STANDS -- GROUND: The keystone holds because the foundational links establish divine conception without a biological father, answered in CR3 and CR4.",
+  "enf": "ENFORCER DISAGREE (right: UNDERDETERMINED): No answering words are quoted; \"The keystone holds because\" is the judge's own summary. (judge wrote STANDS; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "id": 6398,
+  "run": "33020",
+  "seat": "chatgpt",
+  "rule": "E-HOLD",
+  "item": "COLLISION D2 vs C3",
+  "line": "D2 vs C3 (Luke 1:35): UNDERDETERMINED -- Both accept 'The Holy Ghost shall come upon thee' and the following birth clause; [CR3] and [DR3] answer the presses. GROUND: The compared uses of coming and overshadowing do not alone settle the child's human parentage.",
+  "enf": "ENFORCER DISAGREE (right: BROKEN): \"[CR3]\"'s answer \"the coming upon and overshadowing in the same verse\" is marked MISSES and does not carry the birth-clause meaning. (judge wrote UNDERDETERMINED; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "id": 6399,
+  "run": "33020",
+  "seat": "chatgpt",
+  "rule": "E-HOLD",
+  "item": "COLLISION D2 vs C4",
+  "line": "D2 vs C4 (Luke 1:37): UNDERDETERMINED -- Both accept 'For with God nothing shall be impossible' beside Elisabeth's conception; [CR3] and [DR3] distinguish the two women's circumstances. GROUND: That comparison does not by itself settle Mary's means of conception.",
+  "enf": "ENFORCER DISAGREE (right: STANDS): Only [CR3]'s \"One word covers two different obstacles\" is quoted; no [DR3] words show the second reading. (judge wrote UNDERDETERMINED; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "id": 6400,
+  "run": "33020",
+  "seat": "chatgpt",
+  "rule": "E-HOLD",
+  "item": "COLLISION D3",
+  "line": "D3: STANDS -- GROUND: [CR2] answers the Isaiah comparison while retaining the declared sign as fulfilled in Matthew.",
+  "enf": "ENFORCER DISAGREE (right: UNDERDETERMINED): No answering words are quoted; \"[CR2] answers the Isaiah comparison\" is not a quoted fit. (judge wrote STANDS; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "id": 6403,
+  "run": "33020",
+  "seat": "chatgpt",
+  "rule": "E-HOLD",
+  "item": "COLLISION D6",
+  "line": "D6: STANDS -- GROUND: [CR3] answers the proven presses on David's seed, Mary's words, and ordinary knowing, and the remaining conception chain supports the conclusion.",
+  "enf": "ENFORCER DISAGREE (right: UNDERDETERMINED): No answering words are quoted; \"[CR3] answers the proven presses\" is the judge's own summary. (judge wrote STANDS; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "id": 6404,
+  "run": "33020",
+  "seat": "grok",
+  "rule": "E-HOLD",
+  "item": "COLLISION D2",
+  "line": "D2: STANDS -- GROUND: Luke 1:34-35 were answered in [CR3] and [CR4]; Mary's stated obstacle is \"I know not a man,\" and the angel names the Holy Ghost, while Elisabeth's obstacle in Luke 1:7 is barrenness.",
+  "enf": "ENFORCER DISAGREE (right: BROKEN): The only quoted Luke 1:34 answer is the bare grant \"I grant it is her present state,\" with no fit for the link. (judge wrote STANDS; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "id": 6405,
+  "run": "33020",
+  "seat": "grok",
+  "rule": "E-HOLD",
+  "item": "COLLISION D3",
+  "line": "D3: STANDS -- GROUND: narrowed in [CR2] to Isaiah 7:14 as fulfilled in Matthew 1:22-23, which the challenger held as written; Isaiah 8:3 names Mahershalalhashbaz, not Immanuel, and the disregarded [CR4] exclusion sentence is not used.",
+  "enf": "ENFORCER DISAGREE (right: UNDERDETERMINED): No answering words are quoted; \"challenger held as written\" is not a quoted answer. (judge wrote STANDS; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "id": 6762,
+  "run": "33021",
+  "seat": "gemini",
+  "rule": "E-COL",
+  "item": "COLLISION D1 vs C1",
+  "line": "FORCED: D1 vs C1 -- MEANS [CR3]: \"the finding precedes any coming together, so no union lies behind it -- [L3] Matthew 1:25 \"And knew her not till she had brought forth her firstborn son\" | PROVEN IN [Challenger R1]\" -- ANSWER [DR3]: \"So \"before they came together\" means before the taking of 1:24. The espousal, in which she is already his wife, precedes it.\" -- FAILS: \"So \"before they came together\" means before the taking of 1:24.\"",
+  "enf": "ENFORCER DISAGREE (right: STANDS): \"before they came together means before the taking of 1:24\" can agree with the finding preceding the taking. (judge wrote FORCED; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "id": 6763,
+  "run": "33021",
+  "seat": "grok",
+  "rule": "E-COL",
+  "item": "COLLISION D1 vs C1",
+  "line": "FORCED: D1 vs C1 -- MEANS [CR3]: \"the finding precedes any coming together, so no union lies behind it\" -- ANSWER [DR3]: \"So \\\\\"before they came together\\\\\" means before the taking of 1:24. The espousal, in which she is already his wife, precedes it.\" -- FAILS: \"Matthew shows the coming together six verses later with the verb of 1:20's command, paralambanō (G3880, \\\\\"to receive near... take unto\\\\\").\" (Commitment 3)",
+  "enf": "ENFORCER DISAGREE (right: STANDS): the answer \"So 'before they came together'...\" carries a compatible meaning, and the FAILS quote \"Matthew shows...\" is not the answer's words. (judge wrote FORCED; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "id": 6764,
+  "run": "33021",
+  "seat": "grok",
+  "rule": "E-COL",
+  "item": "COLLISION D2 vs C1",
+  "line": "FORCED: D2 vs C1 -- MEANS [CR3]: \"the \\\\\"till\\\\\" runs to the birth, so no knowing is stated before it\" -- ANSWER [DR3]: \"The span 1:25 bounds starts at the taking. The espousal stands before it, as Matthew 1:18-19 shows (\\\\\"espoused,\\\\\" \\\\\"her husband\\\\\").\" -- FAILS: \"The span 1:25 bounds starts at the taking.\" (Commitment 3)",
+  "enf": "ENFORCER DISAGREE (right: STANDS): \"The span 1:25 bounds starts at the taking\" is compatible with no knowing before the birth. (judge wrote FORCED; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "id": 6765,
+  "run": "33021",
+  "seat": "grok",
+  "rule": "E-COL",
+  "item": "COLLISION D3 vs C1",
+  "line": "FORCED: D3 vs C1 -- MEANS [CR3]: \"the angel gives the Holy Ghost as the origin\" -- ANSWER [DR3]: \"So the \\\\\"of\\\\\" with the Spirit sits in the same row as the husband of the house. This fits the link.\" -- FAILS: \"Each of them had a father in the flesh.\" (Commitment 7)",
+  "enf": "ENFORCER DISAGREE (right: STANDS): the answer says \"This fits the link,\" and the FAILS quote \"Each of them had a father in the flesh\" is not the answer. (judge wrote FORCED; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "id": 6766,
+  "run": "33021",
+  "seat": "grok",
+  "rule": "E-COL",
+  "item": "COLLISION D4 vs C2",
+  "line": "FORCED: D4 vs C2 -- MEANS [CR3]: \"the title follows the coming upon the woman, and the birth is of her\" -- ANSWER [DR3]: \"The \\\\\"therefore also\\\\\" (dio kai) connects back to verse 32, not forward to divine paternity of flesh.\" -- FAILS: \"connects back to verse 32, not forward to divine paternity of flesh.\" (Commitment 3)",
+  "enf": "ENFORCER DISAGREE (right: STANDS): \"connects back to verse 32\" does not show the answer cannot agree with the title/birth point; the line rests on non-engagement. (judge wrote FORCED; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "id": 6821,
+  "run": "33021",
+  "seat": "chatgpt",
+  "rule": "E-RES",
+  "item": "RESULT REASON",
+  "line": "RESULT: UNDERDETERMINED -- recomputed after the cure from the cured lines (RETRACTED D5 vs C5 (DEFENDER LINK BROKEN to UNDERDETERMINED)): HELD-1, CHALLENGE STANDING SELF-SUPPORTED, no collision line stands graded CHALLENGER LINK BROKEN.",
+  "enf": "ENFORCER DISAGREE (right: DOES NOT FOLLOW): The reason says \"recomputed after the cure from the cured lines\" and rests on \"no collision line stands graded CHALLENGER LINK BROKEN,\" an absence of a grade rather than the debate's words. (judge wrote UNDERDETERMINED; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "id": 7087,
+  "run": "33025",
+  "seat": "grok",
+  "rule": "E-COL",
+  "item": "COLLISION D2 vs C4",
+  "line": "FORCED: D2 vs C4 -- MEANS [CR3]: \"the finding with child precedes any coming together\" -- ANSWER [DR3]: \"\\\\\"Came together,\\\\\" taken as the taking into his house (cohabiting), dates the finding before the taking. The espousal stands before it. It fits the link.\" -- FAILS: \"The espousal stands before it. It fits the link.\"",
+  "enf": "ENFORCER DISAGREE (right: STANDS): \"dates the finding before the taking\" agrees with \"the finding with child precedes any coming together.\" (judge wrote FORCED; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "id": 7088,
+  "run": "33025",
+  "seat": "grok",
+  "rule": "E-COL",
+  "item": "COLLISION D3 vs C5",
+  "line": "FORCED: D3 vs C5 -- MEANS [CR3]: \"the chain moves from \\\\\"begat\\\\\" to \\\\\"of whom was born,\\\\\" and Joseph is \\\\\"the husband of Mary\\\\\"\" -- ANSWER [DR3]: \"The \\\\\"of whom was born\\\\\" in 1:16 names Mary's bearing in that same form.\" -- FAILS: \"names Mary's bearing in that same form\"",
+  "enf": "ENFORCER DISAGREE (right: STANDS): \"names Mary's bearing in that same form\" can agree with the chain to \"of whom was born.\" (judge wrote FORCED; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "id": 7090,
+  "run": "33025",
+  "seat": "grok",
+  "rule": "E-COL",
+  "item": "COLLISION D5 vs C5",
+  "line": "FORCED: D5 vs C5 -- MEANS [CR3]: \"the verb says he arose from the tribe and does not say he was begotten by a father\" -- ANSWER [DR3]: \"The evidence of Hebrews 7:14 therefore rests on a begetting father of Juda, and the father named of David's house is Joseph.\" -- FAILS: \"rests on a begetting father of Juda, and the father named of David's house is Joseph\"",
+  "enf": "ENFORCER DISAGREE (right: STANDS): \"rests on a begetting father\" does not contradict the verb's silence that \"does not say he was begotten by a father.\" (judge wrote FORCED; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "id": 7093,
+  "run": "33025",
+  "seat": "gemini",
+  "rule": "E-HOLD",
+  "item": "COLLISION D5",
+  "line": "D5: STANDS -- GROUND: Christ having no biological father stands as the valid inference from links D1 through D4, answered in [CR4].",
+  "enf": "ENFORCER DISAGREE (right: BROKEN): The line gives no answer words, only \"answered in [CR4]\" with no fit. (judge wrote STANDS; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "id": 7096,
+  "run": "33025",
+  "seat": "chatgpt",
+  "rule": "E-HOLD",
+  "item": "COLLISION D2 vs C4",
+  "line": "D2 vs C4 (Matthew 1:19): UNDERDETERMINED -- [DR3] names Joseph's intent and offers justice, mercy and fear as its account; the parties dispute whether that account fits the alleged knowing. GROUND: The witness was named and answered in the link round.",
+  "enf": "ENFORCER DISAGREE (right: BROKEN): \"The verse states justice, mercy and fear\" does not meet the claimed husbandly intent. (judge wrote UNDERDETERMINED; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "id": 7097,
+  "run": "33025",
+  "seat": "chatgpt",
+  "rule": "E-HOLD",
+  "item": "COLLISION D3 vs C5",
+  "line": "D3 vs C5 (Exodus 2:1): UNDERDETERMINED -- [CR4] names Exodus 2:1 and distinguishes taking a wife from begetting; the parties dispute whether the reception examples establish the claimed house. GROUND: The witness was named in the close round.",
+  "enf": "ENFORCER DISAGREE (right: BROKEN): \"The verse names the taking of a wife\" does not meet Moses' house being Levi's by his begetter. (judge wrote UNDERDETERMINED; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "id": 7099,
+  "run": "33025",
+  "seat": "chatgpt",
+  "rule": "E-HOLD",
+  "item": "COLLISION D4 vs C1",
+  "line": "D4 vs C1 (Jeremiah 18:8): UNDERDETERMINED -- [DR3] names the conditional pronouncement and invokes the later signet; the parties dispute its application to the bar. GROUND: The witness was named and addressed in the link round.",
+  "enf": "ENFORCER DISAGREE (right: BROKEN): \"The LORD's own later word answers his own pronounced sentence\" does not engage the condition that the nation turn. (judge wrote UNDERDETERMINED; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "id": 7104,
+  "run": "33025",
+  "seat": "grok",
+  "rule": "E-HOLD",
+  "item": "COLLISION D4 vs C3",
+  "line": "D4 vs C3 (Galatians 4:4): UNDERDETERMINED -- both agree the idiom names the mother and that Genesis 4:25 states a knowing beside \"another seed\"; the defender does not rest this birth on the idiom alone -- GROUND: each agrees with Galatians 4:4 \"made of a woman\" and Genesis 4:25 \"Adam knew his wife again; and she bare a son.\"",
+  "enf": "ENFORCER DISAGREE (right: STANDS): The only answer-check lines are \"UNPROVEN under a VOID premise; not counted,\" leaving no witness against the link. (judge wrote UNDERDETERMINED; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "id": 7325,
+  "run": "33025",
+  "seat": "sol",
+  "rule": "E-COL",
+  "item": "COLLISION D2 vs C4",
+  "line": "FORCED: D2 vs C4 -- MEANS [CR3]: \"Matthew applies the virgin-conceives sign to this birth\" -- ANSWER [DR3]: \"\\\\\"Virgin\\\\\" names the woman at the word. In Isaiah's own days the sign's conception comes when the man approaches. Matthew 1:25's \\\\\"till\\\\\" sets the knowing after the bearing. It fits the link.\" -- FAILS: \"In Isaiah's own days the sign's conception comes when the man approaches.\"",
+  "enf": "ENFORCER DISAGREE (right: STANDS): The answer's words \"In Isaiah's own days the sign's conception comes when the man approaches\" distinguish a historical fulfillment and do not show it cannot agree with Matthew's application. (judge wrote FORCED; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "id": 7326,
+  "run": "33025",
+  "seat": "sol",
+  "rule": "E-COL",
+  "item": "COLLISION D3 vs C5",
+  "line": "FORCED: D3 vs C5 -- MEANS [DR2]: \"Moses' house is Levi's, by his begetter.\" -- ANSWER [CR4]: \"In both verses \\\\\"took to wife\\\\\" is one act, and begetting is another. Matthew 1:24-25 separates them in Joseph's own case. Exodus 2:1 does not overturn D3.\" -- FAILS: \"In both verses \\\\\"took to wife\\\\\" is one act, and begetting is another.\"",
+  "enf": "ENFORCER DISAGREE (right: STANDS): The answer says \"took to wife\" and \"begetting\" are separate and that \"Exodus 2:1 does not overturn D3.\" (judge wrote FORCED; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "id": 7584,
+  "run": "33040",
+  "seat": "grok",
+  "rule": "E-COL",
+  "item": "COLLISION D2 vs C3",
+  "line": "FORCED: D2 vs C3 -- MEANS [CR3]: \"the pregnancy is dated before the coming together, and its stated source is the Holy Ghost\" -- ANSWER [DR3]: \"The verse dates the finding inside the espousal. It fits the link.\" -- FAILS: \"The verse dates the finding inside the espousal.\"",
+  "enf": "ENFORCER DISAGREE (right: STANDS): \"The verse dates the finding inside the espousal. It fits the link\" can agree with the pressed meaning, so it is not FORCED. (judge wrote FORCED; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "id": 7587,
+  "run": "33040",
+  "seat": "gemini",
+  "rule": "E-HOLD",
+  "item": "COLLISION D3",
+  "line": "D3: STANDS -- answered in [CR3] and [CR4] -- GROUND: Luke 1:34-35 explicitly names the Holy Ghost and the power of the Highest as the causal answer to how a virgin knowing no man shall conceive, which the challenger's empowerment parallels do not displace.",
+  "enf": "ENFORCER DISAGREE (right: UNDERDETERMINED): The line gives no answering words, only the ground \"Luke 1:34-35 explicitly names the Holy Ghost and the power.\" (judge wrote STANDS; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "id": 7593,
+  "run": "33040",
+  "seat": "chatgpt",
+  "rule": "E-HOLD",
+  "item": "COLLISION D2 vs C2",
+  "line": "D2 vs C2 (Matthew 1:24): UNDERDETERMINED -- [CR3] discusses the taking and the finding, and [CR4] again names the taking. GROUND: Their sequence and the proposed identification remain disputed.",
+  "enf": "ENFORCER DISAGREE (right: BROKEN): The answer check says \"The answer does not engage the claimed identification of the coming together with the taking.\" (judge wrote UNDERDETERMINED; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "id": 7594,
+  "run": "33040",
+  "seat": "chatgpt",
+  "rule": "E-HOLD",
+  "item": "COLLISION D2 vs C3",
+  "line": "D2 vs C3 (Matthew 1:19): UNDERDETERMINED -- [DR3] names Joseph's intention and its grounds. GROUND: Their fit with the proposed prior knowing remains disputed.",
+  "enf": "ENFORCER DISAGREE (right: BROKEN): The answer check says the answer \"does not show their fit with the proposed prior knowing.\" (judge wrote UNDERDETERMINED; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "id": 7595,
+  "run": "33040",
+  "seat": "chatgpt",
+  "rule": "E-HOLD",
+  "item": "COLLISION D2 vs C6",
+  "line": "D2 vs C6 (Matthew 1:20): UNDERDETERMINED -- [CR3] distinguishes a birth of already living people from the thing conceived in her, while [DR3] distinguishes flesh and spirit. GROUND: Both exhibited readings address the two kinds of origin.",
+  "enf": "ENFORCER DISAGREE (right: STANDS): The challenger's entries are \"UNPROVEN\" with \"no MEANS sentence is carried,\" while the defender's DR3 answer is \"MEETS.\" (judge wrote UNDERDETERMINED; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "id": 7597,
+  "run": "33040",
+  "seat": "chatgpt",
+  "rule": "E-HOLD",
+  "item": "COLLISION D3 vs C6",
+  "line": "D3 vs C6 (Luke 1:35): UNDERDETERMINED -- [CR3] ties the answer to Mary's question; [DR3] ties the title to the earlier promise. GROUND: The exhibited readings differ over the force of the angel's answer.",
+  "enf": "ENFORCER DISAGREE (right: STANDS): The answer checks are \"MEANS: NONE -- ANSWER: NONE -- UNPROVEN,\" so no proven press breaks the link. (judge wrote UNDERDETERMINED; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "id": 7598,
+  "run": "33040",
+  "seat": "chatgpt",
+  "rule": "E-HOLD",
+  "item": "COLLISION D4 vs C1",
+  "line": "D4 vs C1 (Luke 3:23): UNDERDETERMINED -- [CR3] grants the uses of custom and household naming while retaining the parenthesis. GROUND: The word and the father's titles admit the two exhibited readings.",
+  "enf": "ENFORCER DISAGREE (right: STANDS): The DR2 entry is \"UNPROVEN\" with \"no MEANS sentence,\" while the DR3 answer is \"MEETS.\" (judge wrote UNDERDETERMINED; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "id": 7606,
+  "run": "33040",
+  "seat": "chatgpt",
+  "rule": "E-HOLD",
+  "item": "COLLISION D6 vs C6",
+  "line": "D6 vs C6 (Matthew 1:20): UNDERDETERMINED -- [CR3] distinguishes the thing conceived in her from spiritual birth of already living people. GROUND: The exhibited source and flesh-origin arguments remain in dispute.",
+  "enf": "ENFORCER DISAGREE (right: STANDS): The challenger's entries are \"UNPROVEN\" with \"no MEANS sentence is carried,\" while the DR3 answer is \"MEETS.\" (judge wrote UNDERDETERMINED; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "id": 7608,
+  "run": "33040",
+  "seat": "grok",
+  "rule": "E-HOLD",
+  "item": "COLLISION D2",
+  "line": "D2: STANDS -- GROUND: the narrowed source claim agrees with Matthew 1:18 and Matthew 1:20, and the husband-title and till-bound presses were met in [CR3] and [CR4].",
+  "enf": "ENFORCER DISAGREE (right: BROKEN): The Matthew 1:18 answer is marked \"FAILS\" on \"The verse dates the finding inside the espousal.\" (judge wrote STANDS; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "id": 7816,
+  "run": "33040",
+  "seat": "sol",
+  "rule": "E-RES",
+  "item": "RESULT REASON",
+  "line": "RESULT: UNDERDETERMINED -- The record supports competing explanations of the conception and Davidic descent without decisively establishing whether Joseph supplied the child's flesh.",
+  "enf": "ENFORCER DISAGREE (right: DOES NOT FOLLOW): The reason rests on \"without decisively establishing whether Joseph supplied the child's flesh,\" an absence rather than the debate's words, so it does not follow. (judge wrote UNDERDETERMINED; RECORD-ONLY TRIAL, ruling 428)"
+ }
+]
