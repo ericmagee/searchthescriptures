@@ -1,0 +1,14 @@
+OK   22 nodes: base (pkgKF) and final shas match the plan
+   43 verdict texts: 30 K-CMT items before, 113 after (one per contested line; 113 lines)
+   per judgment: 32998 grok verdict_final 3; 32998 chatgpt verdict_final 1; 32998 gemini verdict_final 1; 32998 gemini verdict_gate 1; 32998 chatgpt verdict_gate 1; 32998 grok verdict_gate 13; 33006 chatgpt verdict_final 4; 33006 gemini verdict_final 8; 33014 grok verdict_final 1; 33014 sol verdict_final 1; 33014 chatgpt verdict_gate 2; 33014 grok verdict_gate 7; 33014 sol alt_verdict_gate 2; 33020 grok verdict_final 6; 33020 chatgpt verdict_final 1; 33020 chatgpt verdict_gate 1; 33020 grok verdict_gate 11; 33021 chatgpt verdict_final 2; 33021 gemini verdict_final 1; 33021 gemini verdict_gate 3; 33021 chatgpt verdict_gate 2; 33025 grok verdict_final 8; 33025 chatgpt verdict_final 1; 33025 sol verdict_final 3; 33025 chatgpt verdict_gate 1; 33025 grok verdict_gate 20; 33025 sol alt_verdict_gate 3; 33040 grok verdict_final 1; 33040 chatgpt verdict_gate 1; 33040 grok verdict_gate 3
+OK   raise: the contested lines are unchanged; one item per line, "line k" in order, the line quoted whole, its own RESPONSE form named
+OK   cure prompt: three lines give three flagged items, "K-CMT line 1:" to "K-CMT line 3:", each with its own RESPONSE form
+OK   cure: each line answered with its Commitment N cures all three
+OK   cure: a line left unanswered stays UNCURED (line 2)
+OK   cure: a RESPONSE naming no commitment stays UNCURED
+OK   cure: one bare "RESPONSE: K-CMT | Commitment 3" does not answer three lines
+OK   cure: with a RESPONSE written, the line's STATEMENT may carry the Commitment N
+OK   cure: a judgment with one contested line is still answered by the bare "RESPONSE: K-CMT | Commitment 3" (pkgKCMT fallback)
+OK   cure: "K-CMT line 10" answers line 10 only, not line 1 (word-edge match)
+OK   cure replay of the logged items: identical pkgKF and pkgKCL (549 lines)
+11 OK, 0 FAIL
