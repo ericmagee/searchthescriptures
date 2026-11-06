@@ -1,8 +1,8 @@
 # Commitment 11 (K-RUL, TRIAL) + Commitment 10 sentence (W3 Part 1 item 4) + cure handling for K-CON, K-CMT, K-RUL (defect in packages A and B,
-# WALL-2024 reply 2150). Built from a fresh live fetch (argv[1], must be 8dd6d614). Writes nothing live.
+# WALL-2024 reply 2150). Built from a fresh live fetch (argv[1], must be 8dd6d614 or 7599a747 (same content)). Writes nothing live.
 import json,sys,hashlib,subprocess,os,re
 D=os.path.dirname(os.path.abspath(__file__))
-live=json.load(open(sys.argv[1]))['workflow'];assert live['versionId'].startswith('8dd6d614'),live['versionId']
+live=json.load(open(sys.argv[1]))['workflow'];assert live['versionId'][:8] in ('8dd6d614','7599a747'),live['versionId']  # 7599a747 = revert after run 32949, content equal to 8dd6d614 (W1 check: 332 nodes, parameters and connections identical)
 sha=lambda s:hashlib.sha256(s.encode()).hexdigest()[:16]
 js=lambda t:t.replace('\\','\\\\').replace('"','\\"').replace('\n','\\n')
 C11=open(os.path.join(D,'c11.txt')).read().strip('\n')
