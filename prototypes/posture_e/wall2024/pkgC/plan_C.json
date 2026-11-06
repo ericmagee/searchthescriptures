@@ -1,0 +1,27 @@
+{
+ "live_version": "20a559da-9d01-4ad8-aa66-f0dec4170d52",
+ "part2_literal_sha": "ed2068fdf5fc1111",
+ "nodes": [
+  {
+   "name": "Enforcer Build",
+   "id": "10db12c6-e66b-4285-b8ad-5bc258027a7a",
+   "old_sha": "7550ee82446c3fef",
+   "new_sha": "aafd285684fa37e8",
+   "delta": 7368
+  },
+  {
+   "name": "Anticheat Build",
+   "id": "46c16d71-bb02-4830-8625-fd225aa6be9b",
+   "old_sha": "832dfd296ac47376",
+   "new_sha": "8f1978ba5bd340cf",
+   "delta": 7368
+  },
+  {
+   "name": "Judge Enforcer Build",
+   "id": "bc95426d-12af-4410-8b9b-cccced5bc8ee",
+   "old_sha": "85b76348179b4067",
+   "new_sha": "265251ceb3bc817d",
+   "delta": 7368
+  }
+ ]
+}
