@@ -1,0 +1,58 @@
+{
+ "32791 gemini": [
+  "keystone",
+  "D2 vs C2"
+ ],
+ "32791 sol": [
+  "DEFENDER premise 5",
+  "CHALLENGER premise 2",
+  "keystone",
+  "D2 vs C2",
+  "D5 vs C5"
+ ],
+ "32791 grok": [
+  "DEFENDER premise 5",
+  "CHALLENGER premise 2",
+  "CHALLENGER premise 3",
+  "keystone",
+  "D2 vs C2",
+  "D3 vs C3"
+ ],
+ "32905 gemini": [
+  "DEFENDER premise 6",
+  "CHALLENGER premise 3",
+  "keystone"
+ ],
+ "32905 sol": [
+  "DEFENDER premise 6",
+  "keystone",
+  "D6 vs C4"
+ ],
+ "32905 grok": [
+  "DEFENDER premise 6",
+  "CHALLENGER premise 2",
+  "keystone",
+  "D1 vs C1",
+  "D2 vs C3",
+  "D3 vs C6",
+  "D4 vs C6",
+  "D6 vs C1"
+ ],
+ "32924 gemini": [
+  "CHALLENGER premise 1",
+  "CHALLENGER premise 6",
+  "keystone"
+ ],
+ "32924 chatgpt": [
+  "DEFENDER premise 5",
+  "DEFENDER premise 6",
+  "keystone"
+ ],
+ "32924 grok": [
+  "DEFENDER premise 1",
+  "DEFENDER premise 5",
+  "keystone",
+  "D1 vs C1",
+  "D4 vs C5"
+ ]
+}
