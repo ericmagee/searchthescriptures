@@ -5,8 +5,8 @@ OK   every stored send-back item is read back (32973 gemini: 14 CHANGE)
      32949 chatgpt: CHANGE 14, KEEP 31; applied 11; verdict HELD -> HELD (HELD-1); RESULT UNDERDETERMINED -> UNDERDETERMINED; counts D 1->1 C 2->2
         ITEM S4 NOT APPLIED: the flagged line is not in the judge text | DEFENDER | [CR4] | The grant that the verb is neutral -- TOUCHES NO LINK
      32949 grok: CHANGE 26, KEEP 0; applied 23; verdict BROKEN -> BROKEN (BROKEN-1); RESULT CHALLENGER WINS -> CHALLENGER WINS; counts D 2->5 C 1->2
-        ITEM S2 NOT APPLIED: the flagged line is not in the judge text | NOT HELD -- DEFENDER [CR4] "I grant that Joseph is called father and parent in household speech" -- the grant is turned into D4's own claim,
-        ITEM S3 NOT APPLIED: the flagged line is not in the judge text | NOT HELD -- DEFENDER [CR4] "I grant the idiom of Job 14:1 and Matthew 11:11" -- D5's limb is kept, not surrendered.
+        ITEM S2 NOT APPLIED: a NOT HELD dispute written under CHANGE TO, not a line change | NOT HELD -- DEFENDER [CR4] "I grant that Joseph is called father and parent in household speech" -- the grant is turned into D4's own claim,
+        ITEM S3 NOT APPLIED: a NOT HELD dispute written under CHANGE TO, not a line change | NOT HELD -- DEFENDER [CR4] "I grant the idiom of Job 14:1 and Matthew 11:11" -- D5's limb is kept, not surrendered.
      32973 chatgpt: CHANGE 31, KEEP 4; applied 28; verdict HELD -> HELD (HELD-1); RESULT UNDERDETERMINED -> UNDERDETERMINED; counts D 1->1 C 1->0
         ITEM S1 NOT APPLIED: the flagged line is not in the judge text | Remove the [CR4] concession line.
         ITEM S2 NOT APPLIED: the flagged line is not in the judge text | Remove the [CR4] concession line.
@@ -30,4 +30,5 @@ OK   P3 an instruction with no line form: NOT APPLIED item
 OK   a CHANGE TO RESULT alone is never written; the derived RESULT differs, so a RESULT DIFFERS item
 OK   P5 KEEP only: nothing changes
 OK   two changes on one line: the last (S2) wins, the record says so, and the standing follows the count
+OK   32949 grok S2, S3: NOT HELD under CHANGE TO is named as a NOT HELD dispute, not a line change
 ALL OK

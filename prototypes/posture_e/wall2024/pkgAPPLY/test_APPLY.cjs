@@ -45,4 +45,5 @@ const F0={verdict_tag:'HELD',defense_standing:'SELF-SUPPORTED',conceded_links:0,
 {const R=M.sbApply2024('t',raw0,F0,[{sid:'S1',ans:'KEEP',line:'CONCEDED LINKS: 0 -- none',to:''}]);T(R===null,'P5 KEEP only: nothing changes');}
 {const R=M.sbApply2024('t',raw0,F0,[{sid:'S1',ans:'CHANGE',line:'CONCEDED LINKS: 0 -- none',to:'CONCEDED LINKS: 1 -- Premise 2: UNEXHIBITED'},{sid:'S2',ans:'CHANGE',line:'CONCEDED LINKS: 0 -- none',to:'CONCEDED LINKS: 2 -- Premise 2: UNEXHIBITED; Premise 4: UNEXHIBITED'}]);
  T(R&&R.fields.conceded_links===2&&R.applied.join()==='S2'&&/S2 replaces S1 on the same line/.test(R.audit)&&R.fields.defense_standing==='PROP-DEPENDENT','two changes on one line: the last (S2) wins, the record says so, and the standing follows the count');}
+{const g=OUT['32949 grok'].R;T(['S2','S3'].every(s=>g.items.some(z=>z.sid===s&&/NOT HELD dispute/.test(z.why))),'32949 grok S2, S3: NOT HELD under CHANGE TO is named as a NOT HELD dispute, not a line change');}
 console.log(bad?'FAILED '+bad:'ALL OK');

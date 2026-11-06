@@ -21,6 +21,7 @@ function sbApply2024(seat,raw,F,its){const one=s=>String(s==null?'':s).replace(/
   /* a K-S3 item names the concession as "DEFENDER CR4: <quote>" (an engine line, not the judge's): a CHANGE TO in the row form replaces the
      judge's own row of that side, round and quote */
   if(!o){const m=to.match(SB_ROW);if(m){const q=nrm(m[3]).replace(/^["\u201c]+|["\u201d]+$/g,'').toUpperCase();o=lines.find(l=>{const r=nrm(l).match(SB_ROW);return r&&r[1].toUpperCase()===m[1].toUpperCase()&&r[2].toUpperCase()===m[2].toUpperCase()&&nrm(r[3]).replace(/^["\u201c]+|["\u201d]+$/g,'').toUpperCase()===q;})||null;}}
+  if(/^NOT HELD\b/i.test(to)){items.push({sid:x.sid,kind:'NOT APPLIED',why:'a NOT HELD dispute written under CHANGE TO, not a line change',to});continue;} /* W1, 2239: run 32949 grok S2, S3 */
   if(!o){items.push({sid:x.sid,kind:'NOT APPLIED',why:'the flagged line is not in the judge text',to});continue;}
   if(!to||!SB_FORM.test(to)){items.push({sid:x.sid,kind:'NOT APPLIED',why:'the CHANGE TO line has no line form the engine reads',to});continue;}
   /* a judge may write one collision, KEYSTONE, count or standing line twice (or rewrite another line under that label): every
