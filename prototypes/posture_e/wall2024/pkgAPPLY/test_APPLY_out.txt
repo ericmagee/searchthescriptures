@@ -1,0 +1,33 @@
+OK   Alternate Merge: base_sha equals merged_PWQ, final_sha equals the patched file
+OK   reverse edit: removing the E-APPLY function, the apply block and the log block gives merged_PWQ exactly
+OK   send-back fixture: each stored full reply matches its md5
+OK   every stored send-back item is read back (32973 gemini: 14 CHANGE)
+     32949 chatgpt: CHANGE 14, KEEP 31; applied 11; verdict HELD -> HELD (HELD-1); RESULT UNDERDETERMINED -> UNDERDETERMINED; counts D 1->1 C 2->2
+        ITEM S4 NOT APPLIED: the flagged line is not in the judge text | DEFENDER | [CR4] | The grant that the verb is neutral -- TOUCHES NO LINK
+     32949 grok: CHANGE 26, KEEP 0; applied 23; verdict BROKEN -> BROKEN (BROKEN-1); RESULT CHALLENGER WINS -> CHALLENGER WINS; counts D 2->5 C 1->2
+        ITEM S2 NOT APPLIED: the flagged line is not in the judge text | NOT HELD -- DEFENDER [CR4] "I grant that Joseph is called father and parent in household speech" -- the grant is turned into D4's own claim,
+        ITEM S3 NOT APPLIED: the flagged line is not in the judge text | NOT HELD -- DEFENDER [CR4] "I grant the idiom of Job 14:1 and Matthew 11:11" -- D5's limb is kept, not surrendered.
+     32973 chatgpt: CHANGE 31, KEEP 4; applied 28; verdict HELD -> HELD (HELD-1); RESULT UNDERDETERMINED -> UNDERDETERMINED; counts D 1->1 C 1->0
+        ITEM S1 NOT APPLIED: the flagged line is not in the judge text | Remove the [CR4] concession line.
+        ITEM S2 NOT APPLIED: the flagged line is not in the judge text | Remove the [CR4] concession line.
+     32973 gemini: CHANGE 14, KEEP 0; applied 10; verdict HELD -> BROKEN (BROKEN-1); RESULT DEFENDER WINS -> CHALLENGER WINS; counts D 0->4 C 0->0
+     32973 grok: CHANGE 35, KEEP 0; applied 27; verdict BROKEN -> BROKEN (BROKEN-1); RESULT CHALLENGER WINS -> CHALLENGER WINS; counts D 1->4 C 1->0
+        ITEM S26 CONTRADICTION: KEYSTONE D6 BROKEN while no D6 collision line is graded DEFENDER LINK BROKEN (the change is not applied) | D6 vs C3 (Romans 1:3): STANDS -- GROUND: [CR3] "the verb of a Son already named in the verse" does not contradict [DR2] "the flesh-line is D
+        ITEM S27 CONTRADICTION: KEYSTONE D6 BROKEN while no D6 collision line is graded DEFENDER LINK BROKEN (the change is not applied) | D6 vs C1 (Matthew 1:18): UNDERDETERMINED -- the answer agrees with the timing pressed rather than contradicting it -- GROUND: [DR3] "The ver
+        ITEM S28 CONTRADICTION: KEYSTONE D6 BROKEN while no D6 collision line is graded DEFENDER LINK BROKEN (the change is not applied) | KEYSTONE: D6 -- BROKEN -- [CR1] link 6, broken at the press Romans 1:3 "made of the seed of David according to the flesh," not by a doctrine
+OK   P1 32973 gemini: all 13 line changes applied (10 lines; S13 replaces S10 to S12 on CONCEDED LINKS), no item, verdict BROKEN, derived RESULT CHALLENGER WINS equals its S14 (no RESULT DIFFERS item)
+OK   P1 32973 gemini: CONCEDED LINKS 4 (S13, the last of S10 to S13)
+OK   P1 32973 gemini: the corrected text reads Romans 1:3 and Luke 1:27 MISSES and D5 vs C5 DEFENDER LINK BROKEN
+OK   P6 32973 gemini: the stored row carries verdict_tag BROKEN, the CORRECTED RESULT line derive_debate_outcome reads, and a SUPERSEDED LINE for each replaced line
+     P7 contradiction items: 32973 grok S26, 32973 grok S27, 32973 grok S28
+OK   P7 the only contradiction items are 32973 grok S26, S27 (D6 collisions made non-broken) and S28 (KEYSTONE D6 BROKEN); none of the three is applied
+OK   P1 run 32973: counted seats gemini BROKEN and grok BROKEN, so 2-0 for the challenger (was CONTESTED 1-1)
+OK   P2 32973 chatgpt (removed seat): its changes are applied in its record (28 applied)
+OK   P5 no KEEP answer is applied
+OK   a change grading the keystone collision DEFENDER LINK BROKEN while KEYSTONE D6 STANDS: not applied, CONTRADICTION item
+OK   P3 a change whose flagged line is not in the text: NOT APPLIED item
+OK   P3 an instruction with no line form: NOT APPLIED item
+OK   a CHANGE TO RESULT alone is never written; the derived RESULT differs, so a RESULT DIFFERS item
+OK   P5 KEEP only: nothing changes
+OK   two changes on one line: the last (S2) wins, the record says so, and the standing follows the count
+ALL OK
