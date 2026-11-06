@@ -1,0 +1,25 @@
+OK   14 cure nodes; base_sha equals 6b077f9e + merged_TLR, final_sha equals the patched file
+OK   the changed block is the same text in all 14 nodes
+OK   outside respOf and stmtOf nothing changes
+OK   gemini: each newly read answer is a RESPONSE line naming that item, or headed by its rule when it is the only item of that rule (0)
+OK   gemini: no item that was CURED becomes uncured
+OK   chatgpt: each newly read answer is a RESPONSE line naming that item, or headed by its rule when it is the only item of that rule (1)
+OK   chatgpt: no item that was CURED becomes uncured
+OK   grok: each newly read answer is a RESPONSE line naming that item, or headed by its rule when it is the only item of that rule (4)
+OK   grok: no item that was CURED becomes uncured
+OK   sol: each newly read answer is a RESPONSE line naming that item, or headed by its rule when it is the only item of that rule (13)
+OK   sol: no item that was CURED becomes uncured
+OK   sol: each newly read answer is a RESPONSE line naming that item, or headed by its rule when it is the only item of that rule (19)
+OK   sol: no item that was CURED becomes uncured
+     gemini silent 0 -> 0, drv_uncured 1 -> 1
+     chatgpt silent 1 -> 0, drv_uncured 2 -> 1
+     grok silent 4 -> 0, drv_uncured 4 -> 0
+     sol silent 13 -> 0, drv_uncured 13 -> 0
+     sol silent 19 -> 0, drv_uncured 19 -> 0
+OK   32949 sol, both tries: 0 silent items (W3 2208 expectation)
+OK   the exact label, as before: read, same status (UNCURED)
+OK   a JSON-bodied reply with the colon dropped: silent before, read now
+OK   with items #1 and #10, a #10 line does not answer #1 (the old substring test took it as an answer)
+OK   the one K-CMT item: "RESPONSE: K-CMT | ..." answers it now (silent before)
+OK   two items of one rule: a RESPONSE headed only by the rule answers neither
+ALL OK
