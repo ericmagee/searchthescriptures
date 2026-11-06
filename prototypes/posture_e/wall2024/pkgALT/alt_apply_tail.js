@@ -1,0 +1,38 @@
+// Item C, Alternate Merge (W2; WALL-2024 2266, 2268, 2269, 2272). This node takes the name "Alternate Merge"; the node that seats alternates
+// is renamed "Alternate Merge Seat", so every node after it (Build Save Body, Write Judgment 1 to 3, Derive Outcome, Record Alternates, Write
+// Enforcer Log and the rest) reads this node's output by the name it already uses. For each seated alternate: E-APPLY of its own send-back and
+// gate changes (once; the panel's were applied in Alternate Merge Seat), then the gate's uncured LIVE count is in its drv_uncured. An alternate
+// with drv_uncured above 0 is unseated (2268 ruling 1): the removed panel seat's body returns, the seat is left unfilled and not counted, and
+// the line names each uncured rule and item. With no alternate seated, the output is Alternate Merge Seat's, unchanged.
+const AM=$('Alternate Merge Seat').first().json;const AS=$('Alt Seated').first().json;
+if(!Array.isArray(AS.alt_seats)||!AS.alt_seats.length)return [{json:AM}];
+const ex=n=>{try{return $(n).isExecuted?$(n).first().json:null;}catch(e){return null;}};
+const JER=ex('Alt Judge Enforcer Record'),SBR=ex('Alt Send Back Record'),GR=ex('Alt Gate Record');
+const gb=(GR&&Array.isArray(GR.bodies)&&GR.bodies.length===AS.bodies.length)?GR.bodies:AS.bodies;const SBI=(GR&&GR.sb_items)||(SBR&&SBR.sb_items)||[];
+const PRE=(()=>{const g=ex('Gate Record');if(g&&Array.isArray(g.bodies))return g;return $('Panel Cure Check').first().json;})(); /* the bodies Alternate Merge Seat started from */
+const bodies=AM.bodies.slice();const summary=(AM.summary||[]).map(x=>({...x}));let seated=(AM.alternates_seated||[]).slice();let removed=(AM.drv_removed||[]).slice();
+const tried=(AM.alternates_tried||[]).map(x=>({...x}));const log=(AM.enforcer_log||[]).slice();const alt_apply=[];const T=new Date().toISOString();
+[JER&&JER.enf428_rows,SBR&&SBR.sb_rows,GR&&GR.gate_rows].forEach(rs=>(rs||[]).forEach(x=>log.push(x)));
+const roundsOf=seat=>{const j=(AS.judges||[]).find(q=>q.seat===seat);return j&&j.body?ciRounds(gatePromptText2024(j.body)):null;};
+const altSafe=s=>cureSafe(s).replace(/\{/g,'(').replace(/\}/g,')').replace(/\s+/g,' ').trim();
+for(const s of AS.alt_seats){const k=bodies.findIndex(x=>{try{return JSON.parse(x).payload.judge_seat===s.seat;}catch(e){return false;}});const gi=AS.bodies.findIndex(x=>{try{return JSON.parse(x).payload.judge_seat===s.seat;}catch(e){return false;}});
+ if(k<0||gi<0){alt_apply.push({seat:s.seat,error:'the seated alternate\'s body was not found'});continue;}
+ const b=JSON.parse(gb[gi]);const its=SBI.filter(x=>x.seat===s.seat);let R=null;
+ if(its.length){try{const t0=b.payload.verdict_tag;const F0={verdict_tag:b.payload.verdict_tag,defense_standing:b.payload.defense_standing,conceded_links:b.payload.conceded_links,challenge_standing:b.payload.challenge_standing,challenger_conceded_links:b.payload.challenger_conceded_links};
+  R=sbApply2024(s.seat,b.payload.verdict_raw,F0,its,roundsOf(s.seat));if(R){b.payload.verdict_raw=cureRewrite(b.payload.verdict_raw,true,R,s.seat,F0);Object.assign(b.payload,R.fields);b.payload.verdict_raw=cureSupHead(b.payload.verdict_raw,t0,b.payload.verdict_tag);}
+  log.push({run_token:AS.run_token,seat:s.seat,seat_role:'alternate',judge_model:s.api_model,kind:'send_back_apply',rule:'E-APPLY',item:'APPLIED '+(R?(R.applied.join(', ')||'none'):'none'),flagged_line:null,prompt_sent:null,full_reply:null,reply_error:null,response_line:null,cure_status:null,cure_reason:R?'verdict '+t0+' to '+R.fields.verdict_tag+'; derived RESULT '+R.result+' (WALL-2024 2236, 2237; item C)':'no change applied',at:T});
+  (R?R.items:[]).forEach(z=>log.push({run_token:AS.run_token,seat:s.seat,seat_role:'alternate',judge_model:s.api_model,kind:'send_back_apply',rule:'E-APPLY',item:z.sid+' '+z.kind,flagged_line:String(z.to||'').slice(0,1500),prompt_sent:null,full_reply:null,reply_error:null,response_line:null,cure_status:'UNCURED',cure_reason:'answered at the gate (Alt Gate Record): '+z.why,at:T}));}
+  catch(e){alt_apply.push({seat:s.seat,error:String(e&&e.message||e).slice(0,300)});}}
+ const du=b.payload.drv_uncured||0;
+ if(du>0){ // 2268 ruling 1: unseated; the line names each uncured rule and item (2269 note 4, 2272)
+  const un=((GR&&GR.gate_rows)||[]).filter(x=>x.seat===s.seat&&x.cure_status==='UNCURED'&&/counted in drv_uncured/.test(String(x.cure_reason||''))).map(x=>'E-GATE '+x.item);
+  const why='unseated after its enforcer send-back and gate: '+du+' uncured item(s)'+(un.length?' ('+un.join('; ')+')':'');
+  const pre=PRE.bodies&&PRE.bodies[k]?JSON.parse(PRE.bodies[k]):null;
+  if(pre){pre.payload.verdict_raw=pre.payload.verdict_raw+'\n[AUDIT v21: ALTERNATE TRIED -- SEAT: '+s.removed_seat+'; ALTERNATE: '+s.seat+'; MODEL: '+(s.api_model||'none')+'; RESULT: NOT SEATED; WHY: '+altSafe(why.slice(0,600))+']\n[AUDIT v39: ALTERNATE UNSEATED -- SEAT: '+s.removed_seat+' is left unfilled and not counted; ALTERNATE: '+s.seat+'; '+altSafe(why.slice(0,900))+' (WALL-2024 2268 ruling 1). REVIEW THIS ROW.]';
+   bodies[k]=JSON.stringify(pre);if(PRE.summary&&PRE.summary[k])summary[k]={...PRE.summary[k]};}
+  seated=seated.filter(x=>x.alternate_seat!==s.seat);removed=removed.filter(r=>r.replaced_by!==s.seat);
+  tried.forEach(x=>{if(x.alternate===s.seat&&x.result==='SEATED'){x.result='NOT SEATED';x.why=why;x.verdict_raw=b.payload.verdict_raw;}});
+  alt_apply.push({seat:s.seat,removed_seat:s.removed_seat,applied:R?R.applied:[],unseated:true,why,uncured:un});}
+ else{bodies[k]=JSON.stringify(b);alt_apply.push({seat:s.seat,removed_seat:s.removed_seat,applied:R?R.applied:[],unseated:false});}}
+const panel_effective=summary.map(x=>x.seat).sort();
+return [{json:{...AM,bodies,summary,panel_effective,alternates_seated:seated,drv_removed:removed,alternates_tried:tried,enforcer_log:log,enforcer_log_body:{...(AM.enforcer_log_body||{}),p_rows:log},alt_apply}}];

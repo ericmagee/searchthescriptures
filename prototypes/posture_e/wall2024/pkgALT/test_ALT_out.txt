@@ -1,0 +1,75 @@
+OK   clone Alt_Judge_Enforcer_Build.js differs from its original only in substituted names and literals
+OK   clone Alt_Judge_Enforcer_Build.js: no original node name is left in a $() call outside the shared library
+OK   clone Alt_Judge_Enforcer_Record.js differs from its original only in substituted names and literals
+OK   clone Alt_Judge_Enforcer_Record.js: no original node name is left in a $() call outside the shared library
+OK   clone Alt_Send_Back_Build.js differs from its original only in substituted names and literals
+OK   clone Alt_Send_Back_Build.js: no original node name is left in a $() call outside the shared library
+OK   clone Alt_Send_Back_Record.js differs from its original only in substituted names and literals
+OK   clone Alt_Send_Back_Record.js: no original node name is left in a $() call outside the shared library
+OK   clone Alt_Gate_Build.js differs from its original only in substituted names and literals
+OK   clone Alt_Gate_Build.js: no original node name is left in a $() call outside the shared library
+OK   clone Alt_Gate_Record.js differs from its original only in substituted names and literals
+OK   clone Alt_Gate_Record.js: no original node name is left in a $() call outside the shared library
+OK   Alt Gate Build and Alt Gate Record keep the library byte for byte
+OK   Gate Build, Gate Record and Alternate Merge (Alt Apply) carry pkgTG's library (one text in every node)
+OK   Alternate Merge Seat is pkgTG's Alternate Merge byte for byte
+OK   Alt Send Back Build: the x-ai list adds the alternate calls
+OK   clone node Alt Judge Enforcer Needed? equals its original but for id, name, position and substituted names
+OK   clone node Alt Judge Enforcer Call deepseek equals its original but for id, name, position and substituted names
+OK   clone node Alt Send Back Needed? equals its original but for id, name, position and substituted names
+OK   clone node Alt Send Back Call openrouter equals its original but for id, name, position and substituted names
+OK   clone node Alt Gate Needed? equals its original but for id, name, position and substituted names
+OK   clone node Alt Gate Call openrouter equals its original but for id, name, position and substituted names
+OK   Alt Gate Call: the x-ai reasoning list names the Alt send-back and gate calls
+OK   no alternate seated: Alt Seated has no bodies, every builder skips
+OK   no alternate seated: Alternate Merge (Alt Apply) returns Alternate Merge Seat's output byte for byte
+OK   sol seated: Alt Seated carries sol's body and request only
+OK   the enforcer reads sol's lines (items built)
+OK   no E-SYN item in the alternate chain (the synthesis was read with the panel)
+OK   FINDING (not a pass of 2268's expectation): sol's Romans 1:3 ANSWER CHECK names two rounds, "[CR3; CR4]"; the live E-ANS reader (Judge Enforcer Build, AC pattern) reads one round only, so the line is not read, here or on a panel seat
+   sol items: 72 (E-ANS 44, E-VOID 3, E-COL 1, E-HOLD 10, E-KEY 1, E-PREM 12, E-RES 1); code rows: 0 ()
+   READ P1.1 E-PREM premise listed against the defender 1 | CONCEDED LINKS: 0 -- Premises 1–6 are spared: each has exhibited footing and answers to its proven witnesses. The ASSUMES formulations are tested against the exhibited steps, not voided for their wording. Premises 1–4 and 6 infer acts or me
+   READ P2.1 E-PREM premise listed against the defender 2 | CONCEDED LINKS: 0 -- Premises 1–6 are spared: each has exhibited footing and answers to its proven witnesses. The ASSUMES formulations are tested against the exhibited steps, not voided for their wording. Premises 1–4 and 6 infer acts or me
+   READ P3.1 E-PREM premise listed against the defender 3 | CONCEDED LINKS: 0 -- Premises 1–6 are spared: each has exhibited footing and answers to its proven witnesses. The ASSUMES formulations are tested against the exhibited steps, not voided for their wording. Premises 1–4 and 6 infer acts or me
+   READ P4.1 E-PREM premise listed against the defender 4 | CONCEDED LINKS: 0 -- Premises 1–6 are spared: each has exhibited footing and answers to its proven witnesses. The ASSUMES formulations are tested against the exhibited steps, not voided for their wording. Premises 1–4 and 6 infer acts or me
+   READ P5.1 E-PREM premise listed against the defender 5 | CONCEDED LINKS: 0 -- Premises 1–6 are spared: each has exhibited footing and answers to its proven witnesses. The ASSUMES formulations are tested against the exhibited steps, not voided for their wording. Premises 1–4 and 6 infer acts or me
+   READ P6.1 E-PREM premise listed against the defender 6 | CONCEDED LINKS: 0 -- Premises 1–6 are spared: each has exhibited footing and answers to its proven witnesses. The ASSUMES formulations are tested against the exhibited steps, not voided for their wording. Premises 1–4 and 6 infer acts or me
+   READ P7.1 E-PREM premise listed against the challenger 1 | CHALLENGER CONCEDED LINKS: 1 -- Counted: premise 2, UNEXHIBITED because its answer to Matthew 1:19 passes over the pressed reason why Joseph would put away a wife whose child he had begotten (Commitment 5). Spared: premises 3 and 6 are supp
+   READ P8.1 E-PREM premise listed against the challenger 2 | CHALLENGER CONCEDED LINKS: 1 -- Counted: premise 2, UNEXHIBITED because its answer to Matthew 1:19 passes over the pressed reason why Joseph would put away a wife whose child he had begotten (Commitment 5). Spared: premises 3 and 6 are supp
+   READ P9.1 E-PREM premise listed against the challenger 3 | CHALLENGER CONCEDED LINKS: 1 -- Counted: premise 2, UNEXHIBITED because its answer to Matthew 1:19 passes over the pressed reason why Joseph would put away a wife whose child he had begotten (Commitment 5). Spared: premises 3 and 6 are supp
+   READ P10.1 E-PREM premise listed against the challenger 4 | CHALLENGER CONCEDED LINKS: 1 -- Counted: premise 2, UNEXHIBITED because its answer to Matthew 1:19 passes over the pressed reason why Joseph would put away a wife whose child he had begotten (Commitment 5). Spared: premises 3 and 6 are supp
+   READ P11.1 E-PREM premise listed against the challenger 5 | CHALLENGER CONCEDED LINKS: 1 -- Counted: premise 2, UNEXHIBITED because its answer to Matthew 1:19 passes over the pressed reason why Joseph would put away a wife whose child he had begotten (Commitment 5). Spared: premises 3 and 6 are supp
+   READ P12.1 E-PREM premise listed against the challenger 6 | CHALLENGER CONCEDED LINKS: 1 -- Counted: premise 2, UNEXHIBITED because its answer to Matthew 1:19 passes over the pressed reason why Joseph would put away a wife whose child he had begotten (Commitment 5). Spared: premises 3 and 6 are supp
+OK   the alternate chain's rows are marked seat_role alternate
+OK   the synthetic enforcer reply targets sol's Galatians 4:4 [CR3] item
+   flow CHANGE (Galatians 4:4 [CR3] to MISSES): send-back items 1; tally {"KEEP":0,"CHANGE":1,"NO ANSWER":0}; gate skip (no seat has a gate item); alt_apply [{"seat":"sol","removed_seat":"chatgpt","applied":["S1"],"unseated":false}]
+OK   flow CHANGE (Galatians 4:4 [CR3] to MISSES): the send-back reaches sol in its own conversation
+OK   flow CHANGE (Galatians 4:4 [CR3] to MISSES): Send Back rows are marked alternate
+OK   flow CHANGE (Galatians 4:4 [CR3] to MISSES): sol is unseated exactly when a counted gate item is left uncured (the gate reply is silent here)
+OK   flow CHANGE (Galatians 4:4 [CR3] to MISSES): sol stays seated
+OK   flow CHANGE (Galatians 4:4 [CR3] to MISSES): E-APPLY ran once for sol and never for a panel seat
+OK   flow CHANGE (Galatians 4:4 [CR3] to MISSES): the alternate chain's rows reach the enforcer log
+   flow CHANGE with no line form (a NOT APPLIED item for the gate): send-back items 1; tally {"KEEP":0,"CHANGE":1,"NO ANSWER":0}; gate sol: G1 NOT APPLIED E-APPLY S1; alt_apply [{"seat":"sol","removed_seat":"chatgpt","applied":[],"unseated":true,"why":"unseated after its enforcer send-back and gate: 1 uncured item(s) (E-GATE G1 NOT APPLIED (E-APPLY S1))","uncured":["E-GATE G1 NOT APPLIED (E-APPLY S1)"]}]
+OK   flow CHANGE with no line form (a NOT APPLIED item for the gate): the send-back reaches sol in its own conversation
+OK   flow CHANGE with no line form (a NOT APPLIED item for the gate): Send Back rows are marked alternate
+OK   flow CHANGE with no line form (a NOT APPLIED item for the gate): sol is unseated exactly when a counted gate item is left uncured (the gate reply is silent here)
+OK   flow CHANGE with no line form (a NOT APPLIED item for the gate): the gate raises the NOT APPLIED item and sol is unseated
+OK   flow CHANGE with no line form (a NOT APPLIED item for the gate): unseated: chatgpt's body returns, no alternate seated, sol NOT SEATED, the line names the rule and item
+OK   flow CHANGE with no line form (a NOT APPLIED item for the gate): E-APPLY ran once for sol and never for a panel seat
+OK   flow CHANGE with no line form (a NOT APPLIED item for the gate): the alternate chain's rows reach the enforcer log
+   flow KEEP: send-back items 1; tally {"KEEP":1,"CHANGE":0,"NO ANSWER":0}; gate skip (no seat has a gate item); alt_apply [{"seat":"sol","removed_seat":"chatgpt","applied":[],"unseated":false}]
+OK   flow KEEP: the send-back reaches sol in its own conversation
+OK   flow KEEP: Send Back rows are marked alternate
+OK   flow KEEP: sol is unseated exactly when a counted gate item is left uncured (the gate reply is silent here)
+OK   flow KEEP: sol stays seated
+OK   flow KEEP: E-APPLY ran once for sol and never for a panel seat
+OK   flow KEEP: the alternate chain's rows reach the enforcer log
+   flow silence: send-back items 1; tally {"KEEP":0,"CHANGE":0,"NO ANSWER":1}; gate skip (no seat has a gate item); alt_apply [{"seat":"sol","removed_seat":"chatgpt","applied":[],"unseated":false}]
+OK   flow silence: the send-back reaches sol in its own conversation
+OK   flow silence: Send Back rows are marked alternate
+OK   flow silence: sol is unseated exactly when a counted gate item is left uncured (the gate reply is silent here)
+OK   flow silence: sol stays seated
+OK   flow silence: E-APPLY ran once for sol and never for a panel seat
+OK   flow silence: the alternate chain's rows reach the enforcer log
+OK   gate KEEP on the NOT APPLIED item: cured, sol stays seated
+57 OK 0 FAIL

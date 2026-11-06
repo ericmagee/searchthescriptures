@@ -1,0 +1,82 @@
+{
+ "base": "pkgTG/patched/Alternate_Merge.js (renamed Alternate Merge Seat); 68fe69cd prewrite for the 428 and send-back nodes; pkgSBP Send Back Record; pkgGATE tails",
+ "files": [
+  {
+   "file": "Alt_Judge_Enforcer_Build.js",
+   "name": "Alt Judge Enforcer Build",
+   "base": "Judge Enforcer Build",
+   "base_sha": "4ecd4e1382c62c03",
+   "final_sha": "65beb069c6a060fa"
+  },
+  {
+   "file": "Alt_Judge_Enforcer_Record.js",
+   "name": "Alt Judge Enforcer Record",
+   "base": "Judge Enforcer Record",
+   "base_sha": "3199ab3c2d6ea9b2",
+   "final_sha": "66db5da092d2b4fb"
+  },
+  {
+   "file": "Alt_Send_Back_Build.js",
+   "name": "Alt Send Back Build",
+   "base": "Send Back Build",
+   "base_sha": "4fe24c275f0b571d",
+   "final_sha": "5c2ea5e2be76afbd"
+  },
+  {
+   "file": "Alt_Send_Back_Record.js",
+   "name": "Alt Send Back Record",
+   "base": "Send Back Record",
+   "base_sha": "da4973fd666beeac",
+   "final_sha": "14142a4bb94d4310"
+  },
+  {
+   "file": "Alt_Gate_Build.js",
+   "name": "Alt Gate Build",
+   "base": "Gate Build (library unchanged, tail substituted)",
+   "base_sha": "b57d071245f444f4",
+   "final_sha": "d5803628e0d6e47c"
+  },
+  {
+   "file": "Alt_Gate_Record.js",
+   "name": "Alt Gate Record",
+   "base": "Gate Record (library unchanged, tail substituted)",
+   "base_sha": "3b4221951a7bd147",
+   "final_sha": "ed9a041b3e53b99e"
+  },
+  {
+   "file": "Alt_Seated.js",
+   "name": "Alt Seated",
+   "base": "new",
+   "base_sha": null,
+   "final_sha": "78f20c2e8bcba283"
+  },
+  {
+   "file": "Alternate_Merge.js",
+   "name": "Alternate Merge",
+   "base": "new (Alt Apply)",
+   "base_sha": null,
+   "final_sha": "0da04437a89952a8"
+  },
+  {
+   "file": "Gate_Build.js",
+   "name": "Gate Build",
+   "base": "pkgGATE/patched/Gate_Build.js on pkgTG library",
+   "base_sha": "3b3d41e5d870dc3a",
+   "final_sha": "b57d071245f444f4"
+  },
+  {
+   "file": "Gate_Record.js",
+   "name": "Gate Record",
+   "base": "pkgGATE/patched/Gate_Record.js on pkgTG library",
+   "base_sha": "72c2a46de53f2dac",
+   "final_sha": "3b4221951a7bd147"
+  },
+  {
+   "file": "Alternate_Merge_Seat.js",
+   "name": "Alternate Merge Seat",
+   "base": "pkgTG/patched/Alternate_Merge.js, renamed, code unchanged",
+   "base_sha": "074d6033c6936a7c",
+   "final_sha": "074d6033c6936a7c"
+  }
+ ]
+}

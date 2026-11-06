@@ -1,0 +1,464 @@
+{
+ "nodes": [
+  {
+   "id": "3d91d8c4-32c2-5d8f-95a4-ffdf263a7217",
+   "name": "Alt Seated",
+   "type": "n8n-nodes-base.code",
+   "typeVersion": 2,
+   "position": [
+    12600,
+    1300
+   ],
+   "parameters": {
+    "jsCode": "FILE:pkgALT/patched/Alt_Seated.js"
+   }
+  },
+  {
+   "id": "9ac081cf-84e3-5974-8343-924da6e5b359",
+   "name": "Alt Judge Enforcer Build",
+   "type": "n8n-nodes-base.code",
+   "typeVersion": 2,
+   "position": [
+    12820,
+    1300
+   ],
+   "parameters": {
+    "jsCode": "FILE:pkgALT/patched/Alt_Judge_Enforcer_Build.js"
+   }
+  },
+  {
+   "id": "53620763-b098-5a2a-8d97-42abf0d90984",
+   "name": "Alt Judge Enforcer Needed?",
+   "type": "n8n-nodes-base.if",
+   "typeVersion": 2.2,
+   "position": [
+    13040,
+    1300
+   ],
+   "parameters": {
+    "conditions": {
+     "combinator": "and",
+     "conditions": [
+      {
+       "id": "alt-judge-enforcer-needed-428",
+       "leftValue": "={{ $json.je_skip !== true }}",
+       "operator": {
+        "operation": "true",
+        "singleValue": true,
+        "type": "boolean"
+       },
+       "rightValue": ""
+      }
+     ],
+     "options": {
+      "caseSensitive": true,
+      "leftValue": "",
+      "typeValidation": "loose"
+     }
+    },
+    "options": {}
+   }
+  },
+  {
+   "id": "36e473bb-24c5-533e-af50-58c34c24c2e8",
+   "name": "Alt Judge Enforcer Call deepseek",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.3,
+   "onError": "continueRegularOutput",
+   "position": [
+    13260,
+    1260
+   ],
+   "parameters": {
+    "method": "POST",
+    "url": "https://api.deepseek.com/v1/chat/completions",
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpHeaderAuth",
+    "sendBody": true,
+    "specifyBody": "json",
+    "jsonBody": "={{ $json.body }}",
+    "options": {
+     "timeout": 900000
+    }
+   },
+   "credentials": {
+    "httpHeaderAuth": {
+     "id": "R3waesZPK7vpsV8E",
+     "name": "DeepSeek Key"
+    }
+   }
+  },
+  {
+   "id": "c45918cd-1349-5428-b9d4-cce419f8a5fb",
+   "name": "Alt Judge Enforcer Record",
+   "type": "n8n-nodes-base.code",
+   "typeVersion": 2,
+   "position": [
+    13480,
+    1300
+   ],
+   "parameters": {
+    "jsCode": "FILE:pkgALT/patched/Alt_Judge_Enforcer_Record.js"
+   }
+  },
+  {
+   "id": "05503b85-e798-5467-b78c-abd626614740",
+   "name": "Alt Send Back Build",
+   "type": "n8n-nodes-base.code",
+   "typeVersion": 2,
+   "position": [
+    13700,
+    1300
+   ],
+   "parameters": {
+    "jsCode": "FILE:pkgALT/patched/Alt_Send_Back_Build.js"
+   }
+  },
+  {
+   "id": "bd090ecb-2806-5ffa-bc88-cf90b1ce3f9b",
+   "name": "Alt Send Back Needed?",
+   "type": "n8n-nodes-base.if",
+   "typeVersion": 2.2,
+   "position": [
+    13920,
+    1300
+   ],
+   "parameters": {
+    "conditions": {
+     "combinator": "and",
+     "conditions": [
+      {
+       "id": "alt-send-back-needed-428",
+       "leftValue": "={{ $json.sb_skip !== true }}",
+       "operator": {
+        "operation": "true",
+        "singleValue": true,
+        "type": "boolean"
+       },
+       "rightValue": ""
+      }
+     ],
+     "options": {
+      "caseSensitive": true,
+      "leftValue": "",
+      "typeValidation": "loose"
+     }
+    },
+    "options": {}
+   }
+  },
+  {
+   "id": "bee43260-4943-5865-a814-9996678bf62f",
+   "name": "Alt Send Back Call openrouter",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.3,
+   "retryOnFail": false,
+   "onError": "continueRegularOutput",
+   "position": [
+    14140,
+    1260
+   ],
+   "parameters": {
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpHeaderAuth",
+    "jsonBody": "={{ (__b=>{if(!__b||typeof __b!=='object')return __b;let o=__b;const md=String(o.model||'');if(/^z-ai\\//.test(md))o=Object.assign({},o,{provider:{order:['z-ai'],allow_fallbacks:false} });if(/^(?:google|qwen|openai|anthropic)\\//.test(md)&&Array.isArray(o.messages)){let k=-1,L=0;o.messages.forEach((m,i)=>{if(m&&m.role==='user'&&typeof m.content==='string'&&m.content.length>L){L=m.content.length;k=i;} });if(k>=0)o=Object.assign({},o,{messages:o.messages.map((m,i)=>i===k?{role:m.role,content:[{type:'text',text:m.content,cache_control:{type:'ephemeral'} }]}:m)});}if(/^x-ai\\//.test(md)&&Array.isArray(o.messages)){const XR=new Map();for(const xn of [\"D1 Call openrouter\", \"C1 Call openrouter\", \"D2 Call openrouter\", \"C2 Call openrouter\", \"D3 Call openrouter\", \"C3 Call openrouter\", \"Panel Judge 2 openrouter\", \"Panel Judge 3 openrouter\", \"Synthesis Call openrouter\", \"Diagnostic Call openrouter\", \"Verdict Call openrouter\", \"Panel Judge 1 openrouter\", \"Panel Reserve openrouter\", \"Cure Call openrouter\", \"Panel Cure Call 1 openrouter\", \"Panel Cure Call 2 openrouter\", \"Panel Cure Call 3 openrouter\", \"Alternate Call openrouter\", \"Alternate Cure Call openrouter\", \"D4 Call openrouter\", \"C4 Call openrouter\", \"Accept Call openrouter\", \"Accept Return Call openrouter\", \"QR Ask\", \"QR Retry Ask\", \"QR Answer\"]){let xa=[];try{if(!$(xn).isExecuted)continue;xa=$(xn).all();}catch(xe){continue;}for(const xi of xa){const xj=(xi&&xi.json)||{};if(!/^x-ai\\//.test(String(xj.model||'')))continue;for(const xc of (xj.choices||[])){const xm=xc&&xc.message;if(xm&&typeof xm.content==='string'&&Array.isArray(xm.reasoning_details)&&xm.reasoning_details.length)XR.set(xm.content,xm.reasoning_details);} } }if(XR.size)o=Object.assign({},o,{messages:o.messages.map(m=>(m&&m.role==='assistant'&&typeof m.content==='string'&&!m.reasoning_details&&XR.has(m.content))?Object.assign({},m,{reasoning_details:XR.get(m.content)}):m)});}return o;})($json.body) }}",
+    "method": "POST",
+    "options": {
+     "timeout": 900000
+    },
+    "sendBody": true,
+    "specifyBody": "json",
+    "url": "https://openrouter.ai/api/v1/chat/completions",
+    "sendHeaders": true,
+    "specifyHeaders": "keypair",
+    "headerParameters": {
+     "parameters": [
+      {
+       "name": "x-grok-conv-id",
+       "value": "={{ \"odv1-\" + $execution.id }}"
+      }
+     ]
+    }
+   },
+   "credentials": {
+    "httpHeaderAuth": {
+     "id": "3KOXDCYCjkii6i56",
+     "name": "OpenRouter"
+    }
+   }
+  },
+  {
+   "id": "b42dfd25-da45-5264-bd85-071b8d6bb47c",
+   "name": "Alt Send Back Record",
+   "type": "n8n-nodes-base.code",
+   "typeVersion": 2,
+   "position": [
+    14360,
+    1300
+   ],
+   "parameters": {
+    "jsCode": "FILE:pkgALT/patched/Alt_Send_Back_Record.js"
+   }
+  },
+  {
+   "id": "d83a1deb-f443-52fb-90d4-f14f8131b84c",
+   "name": "Alt Gate Build",
+   "type": "n8n-nodes-base.code",
+   "typeVersion": 2,
+   "position": [
+    14580,
+    1300
+   ],
+   "parameters": {
+    "jsCode": "FILE:pkgALT/patched/Alt_Gate_Build.js"
+   }
+  },
+  {
+   "id": "43d58c56-d78f-50c5-bded-86863030b198",
+   "name": "Alt Gate Needed?",
+   "type": "n8n-nodes-base.if",
+   "typeVersion": 2.2,
+   "position": [
+    14800,
+    1300
+   ],
+   "parameters": {
+    "conditions": {
+     "combinator": "and",
+     "conditions": [
+      {
+       "id": "alt-gate-needed",
+       "leftValue": "={{ $json.gate_skip !== true }}",
+       "operator": {
+        "operation": "true",
+        "singleValue": true,
+        "type": "boolean"
+       },
+       "rightValue": ""
+      }
+     ],
+     "options": {
+      "caseSensitive": true,
+      "leftValue": "",
+      "typeValidation": "loose"
+     }
+    },
+    "options": {}
+   }
+  },
+  {
+   "id": "58c37080-e2a9-5892-afa3-6d7983909933",
+   "name": "Alt Gate Call openrouter",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.3,
+   "retryOnFail": false,
+   "onError": "continueRegularOutput",
+   "position": [
+    15020,
+    1260
+   ],
+   "parameters": {
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpHeaderAuth",
+    "jsonBody": "={{ (__b=>{if(!__b||typeof __b!=='object')return __b;let o=__b;const md=String(o.model||'');if(/^z-ai\\//.test(md))o=Object.assign({},o,{provider:{order:['z-ai'],allow_fallbacks:false} });if(/^(?:google|qwen|openai|anthropic)\\//.test(md)&&Array.isArray(o.messages)){let k=-1,L=0;o.messages.forEach((m,i)=>{if(m&&m.role==='user'&&typeof m.content==='string'&&m.content.length>L){L=m.content.length;k=i;} });if(k>=0)o=Object.assign({},o,{messages:o.messages.map((m,i)=>i===k?{role:m.role,content:[{type:'text',text:m.content,cache_control:{type:'ephemeral'} }]}:m)});}if(/^x-ai\\//.test(md)&&Array.isArray(o.messages)){const XR=new Map();for(const xn of [\"D1 Call openrouter\", \"C1 Call openrouter\", \"D2 Call openrouter\", \"C2 Call openrouter\", \"D3 Call openrouter\", \"C3 Call openrouter\", \"Panel Judge 2 openrouter\", \"Panel Judge 3 openrouter\", \"Synthesis Call openrouter\", \"Diagnostic Call openrouter\", \"Verdict Call openrouter\", \"Panel Judge 1 openrouter\", \"Panel Reserve openrouter\", \"Cure Call openrouter\", \"Panel Cure Call 1 openrouter\", \"Panel Cure Call 2 openrouter\", \"Panel Cure Call 3 openrouter\", \"Alternate Call openrouter\", \"Alternate Cure Call openrouter\", \"Alt Send Back Call openrouter\", \"Alt Gate Call openrouter\", \"D4 Call openrouter\", \"C4 Call openrouter\", \"Accept Call openrouter\", \"Accept Return Call openrouter\", \"QR Ask\", \"QR Retry Ask\", \"QR Answer\"]){let xa=[];try{if(!$(xn).isExecuted)continue;xa=$(xn).all();}catch(xe){continue;}for(const xi of xa){const xj=(xi&&xi.json)||{};if(!/^x-ai\\//.test(String(xj.model||'')))continue;for(const xc of (xj.choices||[])){const xm=xc&&xc.message;if(xm&&typeof xm.content==='string'&&Array.isArray(xm.reasoning_details)&&xm.reasoning_details.length)XR.set(xm.content,xm.reasoning_details);} } }if(XR.size)o=Object.assign({},o,{messages:o.messages.map(m=>(m&&m.role==='assistant'&&typeof m.content==='string'&&!m.reasoning_details&&XR.has(m.content))?Object.assign({},m,{reasoning_details:XR.get(m.content)}):m)});}return o;})($json.body) }}",
+    "method": "POST",
+    "options": {
+     "timeout": 900000
+    },
+    "sendBody": true,
+    "specifyBody": "json",
+    "url": "https://openrouter.ai/api/v1/chat/completions",
+    "sendHeaders": true,
+    "specifyHeaders": "keypair",
+    "headerParameters": {
+     "parameters": [
+      {
+       "name": "x-grok-conv-id",
+       "value": "={{ \"odv1-\" + $execution.id }}"
+      }
+     ]
+    }
+   },
+   "credentials": {
+    "httpHeaderAuth": {
+     "id": "3KOXDCYCjkii6i56",
+     "name": "OpenRouter"
+    }
+   }
+  },
+  {
+   "id": "080184ea-4d9d-5467-94fd-3aa69d180efc",
+   "name": "Alt Gate Record",
+   "type": "n8n-nodes-base.code",
+   "typeVersion": 2,
+   "position": [
+    15240,
+    1300
+   ],
+   "parameters": {
+    "jsCode": "FILE:pkgALT/patched/Alt_Gate_Record.js"
+   }
+  },
+  {
+   "id": "1e3f96ef-fb8a-5962-bca6-1c8a21886301",
+   "name": "Alternate Merge",
+   "type": "n8n-nodes-base.code",
+   "typeVersion": 2,
+   "position": [
+    15460,
+    1300
+   ],
+   "parameters": {
+    "jsCode": "FILE:pkgALT/patched/Alternate_Merge.js"
+   }
+  }
+ ],
+ "connections": {
+  "rename": [
+   [
+    "Alternate Merge",
+    "Alternate Merge Seat",
+    "the existing node keeps its id; its code becomes pkgALT/patched/Alternate_Merge_Seat.js; every connection INTO it keeps pointing at it under the new name"
+   ]
+  ],
+  "remove": [
+   [
+    "Alternate Merge Seat",
+    0,
+    "Dry?"
+   ]
+  ],
+  "add": [
+   [
+    "Alternate Merge Seat",
+    0,
+    "Alt Seated"
+   ],
+   [
+    "Alt Seated",
+    0,
+    "Alt Judge Enforcer Build"
+   ],
+   [
+    "Alt Judge Enforcer Build",
+    0,
+    "Alt Judge Enforcer Needed?"
+   ],
+   [
+    "Alt Judge Enforcer Needed?",
+    0,
+    "Alt Judge Enforcer Call deepseek"
+   ],
+   [
+    "Alt Judge Enforcer Needed?",
+    1,
+    "Alt Judge Enforcer Record"
+   ],
+   [
+    "Alt Judge Enforcer Call deepseek",
+    0,
+    "Alt Judge Enforcer Record"
+   ],
+   [
+    "Alt Judge Enforcer Record",
+    0,
+    "Alt Send Back Build"
+   ],
+   [
+    "Alt Send Back Build",
+    0,
+    "Alt Send Back Needed?"
+   ],
+   [
+    "Alt Send Back Needed?",
+    0,
+    "Alt Send Back Call openrouter"
+   ],
+   [
+    "Alt Send Back Needed?",
+    1,
+    "Alt Send Back Record"
+   ],
+   [
+    "Alt Send Back Call openrouter",
+    0,
+    "Alt Send Back Record"
+   ],
+   [
+    "Alt Send Back Record",
+    0,
+    "Alt Gate Build"
+   ],
+   [
+    "Alt Gate Build",
+    0,
+    "Alt Gate Needed?"
+   ],
+   [
+    "Alt Gate Needed?",
+    0,
+    "Alt Gate Call openrouter"
+   ],
+   [
+    "Alt Gate Needed?",
+    1,
+    "Alt Gate Record"
+   ],
+   [
+    "Alt Gate Call openrouter",
+    0,
+    "Alt Gate Record"
+   ],
+   [
+    "Alt Gate Record",
+    0,
+    "Alternate Merge"
+   ],
+   [
+    "Alternate Merge",
+    0,
+    "Dry?"
+   ]
+  ],
+  "code_updates": {
+   "Gate Build": "pkgALT/patched/Gate_Build.js",
+   "Gate Record": "pkgALT/patched/Gate_Record.js"
+  },
+  "note": "apply after pkgGATE rev 2 and pkgTG. Nodes after Dry? read $('Alternate Merge') by name and now read the Alt Apply node."
+ },
+ "substitutions": {
+  "names": {
+   "Panel Cure Check": "Alt Seated",
+   "Panel Build": "Alt Seated",
+   "Enforcer Record": "Alt Seated",
+   "Regrade Load": "Alt Seated",
+   "Final Output": "Alt Seated",
+   "Judge Enforcer Build": "Alt Judge Enforcer Build",
+   "Judge Enforcer Record": "Alt Judge Enforcer Record",
+   "Send Back Build": "Alt Send Back Build",
+   "Send Back Call openrouter": "Alt Send Back Call openrouter",
+   "Send Back Record": "Alt Send Back Record",
+   "Gate Build": "Alt Gate Build",
+   "Gate Call openrouter": "Alt Gate Call openrouter",
+   "Gate Record": "Alt Gate Record"
+  },
+  "literals": [
+   [
+    "seat_role:'panel'",
+    "seat_role:'alternate'"
+   ],
+   [
+    "x.seat_role==='panel'",
+    "x.seat_role==='alternate'"
+   ],
+   [
+    "x.rule==='E-SYN'?'synthesis':'panel'",
+    "x.rule==='E-SYN'?'synthesis':'alternate'"
+   ],
+   [
+    "const XN=['Panel Judge 1 openrouter',",
+    "const XN=['Alternate Call openrouter','Alternate Cure Call openrouter','Panel Judge 1 openrouter',"
+   ]
+  ]
+ }
+}
