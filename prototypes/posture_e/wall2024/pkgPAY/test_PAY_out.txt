@@ -1,12 +1,11 @@
 OK   22 nodes; base shas = pkgKV/patched, final shas = pkgPAY/patched; only the 5 Normalize nodes change
-   32998 Panel Cure Check output equal (1894 KB)
-   33014 Panel Cure Check output equal (1726 KB)
-   33020 Panel Cure Check output equal (1635 KB)
-   33021 Panel Cure Check output equal (1823 KB)
-   33025 Panel Cure Check output equal (1147 KB)
-   33040 Panel Cure Check output equal (1497 KB)
 OK   every Normalize output (22 seat items, 6 runs): every cure field but body is forwarded unchanged
 OK   enfPrompt (prompt_sent) of the slim body equals that of the full body, every seat
 OK   Panel Cure Check on the slim Normalize outputs equals its output on the stored ones, every run (prompt_sent included)
 OK   size: Normalize outputs 8664 KB -> 3562 KB over the corpus
-5 OK, 0 FAIL
+OK   Panel Cure Build 1-3 never read $input or any Normalize node (they are wired after a Normalize node only for order)
+OK   Cure Check (from Cure Normalize) reads cure.body once, as the enfRows argument
+OK   Alternate Merge Seat (from Alternate Cure Normalize) reads cure.body once, as the enfRows argument
+OK   Panel Cure Check reads cure.body once, as the enfRows argument
+OK   Enforcer Build, Judge Enforcer Build (live, pkgCM) and Alt Judge Enforcer Build (live, pkgCM) read only cure.rounds from the Normalize nodes; Format Markdown reads only reply, who and seat there (the body it shows comes from the Build nodes)
+10 OK, 0 FAIL

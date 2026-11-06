@@ -1,4 +1,5 @@
 // pkgPAY test. Run from wall2024/: node pkgPAY/test_PAY.cjs
+// pkgPAY/readers: Judge_Enforcer_Build and Alt_Judge_Enforcer_Build are the live code (pkgCM/patched, 868b0814); Enforcer_Build and Format_Markdown are W2's workflow snapshot of 2026-11-05 20:41 CST (the n8n read failed today): the live-test thread checks those two against live before the write.
 // For each saved run: (1) the new Normalize code forwards every cure field unchanged except body, and enfPrompt of the slim body equals
 // enfPrompt of the full body; (2) Panel Cure Check run on the slim Normalize outputs gives the same output as on the stored ones (the
 // enforcer_log time stamp 'at' aside), prompt_sent included; (3) the size saved.
@@ -28,4 +29,15 @@ T('every Normalize output ('+nSeats+' seat items, '+runs.length+' runs): every c
 T('enfPrompt (prompt_sent) of the slim body equals that of the full body, every seat',promptOk);
 T('Panel Cure Check on the slim Normalize outputs equals its output on the stored ones, every run (prompt_sent included)',checkOk);
 T('size: Normalize outputs '+(before>>10)+' KB -> '+(after>>10)+' KB over the corpus',after<before);
+// W3 (16:16Z): every other reader of the Normalize outputs. The whole-node replay cannot run them (their other inputs are not saved), so this
+// reads their code: each reader's only use of the body is the enfRows argument, which (above) gives the same prompt_sent.
+{const R=f=>rd('pkgPAY/patched/'+f+'.js');
+ T('Panel Cure Build 1-3 never read $input or any Normalize node (they are wired after a Normalize node only for order)',['Panel_Cure_Build_1','Panel_Cure_Build_2','Panel_Cure_Build_3'].every(f=>!/\$input/.test(R(f))&&!/Normalize/.test((R(f).match(/\$\('[^']+'\)/g)||[]).join(' '))));
+ const uses=(t,v)=>[...t.matchAll(new RegExp('\\b'+v+'\\.cure\\.body\\b','g'))].map(m=>t.slice(m.index-(v+'&&'+v+'.cure?').length,m.index+(v+'.cure.body:null)').length));
+ T('Cure Check (from Cure Normalize) reads cure.body once, as the enfRows argument',(u=>u.length===1&&u[0]==='r&&r.cure?r.cure.body:null)')(uses(R('Cure_Check'),'r'))&&/enfRows\([^;]*r&&r\.cure\?r\.cure\.body:null\)/.test(R('Cure_Check')));
+ T('Alternate Merge Seat (from Alternate Cure Normalize) reads cure.body once, as the enfRows argument',(u=>u.length===1&&u[0]==='c&&c.cure?c.cure.body:null)')(uses(R('Alternate_Merge_Seat'),'c'))&&/enfRows\([^;]*c&&c\.cure\?c\.cure\.body:null\)/.test(R('Alternate_Merge_Seat')));
+ T('Panel Cure Check reads cure.body once, as the enfRows argument',(u=>u.length===1)(uses(R('Panel_Cure_Check'),'r'))&&/enfRows\([^;]*r&&r\.cure\?r\.cure\.body:null\)/.test(R('Panel_Cure_Check')));
+ const X=f=>rd('pkgPAY/readers/'+f+'.txt');
+ T('Enforcer Build, Judge Enforcer Build (live, pkgCM) and Alt Judge Enforcer Build (live, pkgCM) read only cure.rounds from the Normalize nodes; Format Markdown reads only reply, who and seat there (the body it shows comes from the Build nodes)',
+  ['Enforcer_Build','Judge_Enforcer_Build','Alt_Judge_Enforcer_Build'].filter(f=>/Normalize/.test(X(f))).every(f=>{const t=X(f);return /c&&c\.rounds\)\{R=c\.rounds/.test(t)&&!/\bc\.body\b/.test(t);})&&/if \(c && c\.seat\) REPLY\[\(c\.who \|\| ''\) \+ '\|' \+ c\.seat\] = i\.json\.reply \|\| null;/.test(X('Format_Markdown'))&&/'Panel Cure Build 1', 'Panel Cure Build 2', 'Panel Cure Build 3', 'Alternate Cure Build'\]\.forEach[\s\S]{0,200}c\.body/.test(X('Format_Markdown')));}
 console.log(ok+' OK, '+bad+' FAIL');
