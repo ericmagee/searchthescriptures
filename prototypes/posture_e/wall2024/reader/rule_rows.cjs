@@ -7,6 +7,7 @@ function rule(r){const [tid,run,seat,src,n,form,ad,field,oldv,newv,line]=r;const
  if(field!=='*'&&oldv!==newv&&nb(oldv)===nb(newv))return 'G1 backslashes (spec 0.1 amended)';
  if(/rcLines/.test(ad)&&field==='grade'&&!oldv&&/^(STANDS|WITHDRAWN)$/.test(newv))return 'G2 spec stands (rcLines reads 3 grades)';
  if(/K-CMT/.test(ad)&&oldv==='read')return 'G3 K-CMT form lines only'+(/^MALFORMED_/.test(code)?' ('+code+' is a record item)':'');
+ if(/SB_FORM|PR\/FR/.test(ad)&&oldv==='read'&&src==='flagged_line'&&/^premise\b/i.test(R.norm(line)))return 'prose target: a flagged line, not a CHANGE TO payload (live SB_FORM reads only the CHANGE TO; W3 spec 11)';
  if(/SB_FORM|PR\/FR/.test(ad)&&oldv==='read'&&src==='flagged_line'&&LEN[tid]===600&&/^MALFORMED_/.test(code))return 'flagged_line is the engine 600-character excerpt; the full judge line reads as a form in the verdict or cure text';
  if(/SB_FORM|PR\/FR/.test(ad)&&oldv==='read'&&/^MALFORMED_FORCED$/.test(code)&&/^(?:RESTATED:\s*)?FORCED:\s*D\d+\s+vs\.?\s+C\d+\s*\(\s*Commitment/i.test(R.norm(line)))return 'spec question: (Commitment N) after the pair in FORCED (KF_LINE refuses it too)';
  if(/SB_FORM/.test(ad)&&oldv==='read'&&/^ANSWER CHECK\s*:[^\n]*\[ledger\]/i.test(R.norm(line)))return 'spec 8: [ledger] is not a round; refused';
