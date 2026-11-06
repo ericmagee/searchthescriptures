@@ -1,0 +1,16 @@
+OK   base: S19 raises one gate item, CONTRADICTION from E-APPLY S19
+OK   new: S19 raises one gate item, CONTRADICTION from E-APPLY S19
+OK   base (live be10d6ae): KEEP on G1 is UNCURED, as on 32998 (row 5040)
+OK   new: KEEP on G1 is CURED, recorded "change withdrawn"
+OK   a CHANGE answer to G1 is decided the same in base and new
+OK   new: no GATE line for G1 stays UNCURED (silence counts)
+OK   new: KEEP on an E-GATE B CONTRADICTION stays UNCURED (2243)
+OK   Gate_Build prompt tells the judge KEEP withdraws an E-APPLY contradiction
+OK   Alt_Gate_Build prompt tells the judge KEEP withdraws an E-APPLY contradiction
+OK   Gate_Build carries the KEEP-withdraw code
+OK   Alt_Gate_Build carries the KEEP-withdraw code
+OK   Gate_Record carries the KEEP-withdraw code
+OK   Alt_Gate_Record carries the KEEP-withdraw code
+OK   Alternate_Merge carries the KEEP-withdraw code
+OK   Alternate_Merge_Seat carries the KEEP-withdraw code
+15 OK, 0 FAIL
