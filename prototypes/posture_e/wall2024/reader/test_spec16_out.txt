@@ -1,0 +1,10 @@
+OK   16.1 RETRACTED with a rule id
+OK   16.1 RETRACTED without a rule id unchanged
+OK   16.2 PRESSED | form
+OK   16.2 PRESSED -- form unchanged
+OK   16.2 SHORT | form with why, text kept
+OK   16.2 SHORT why under 10 chars: no fields (as the old cure regex)
+OK   16.2 SHORT free text unchanged
+OK   16.3 reversed pair inside RESTATED read D first
+OK   16.3 reversed pair outside RESTATED still refused
+all OK
