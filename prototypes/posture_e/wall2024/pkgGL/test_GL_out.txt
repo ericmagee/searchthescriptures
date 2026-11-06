@@ -1,0 +1,15 @@
+OK   6 nodes: base (pkgKS) and final shas match the plan
+OK   every node parses as an n8n Code node body
+OK   only LIVE K re-read items are attributed (a new TRIAL item stays record-only)
+OK   Gate Record and Alt Gate Record name the change that raised a new item in the E-GATE NEW row
+      33020 gemini: counted pkgKS 0, pkgGL 0; new items after the gate on pkgGL: none
+      33020 chatgpt: counted pkgKS 1, pkgGL 1; new items after the gate on pkgGL: none
+   33020 grok G2 CONTRADICTION: pkgKS CURED, pkgGL UNCURED -- the gate change raised a new LIVE item: RULE K-G4 -- DEBATE RULE VIOLATION (K-G4) -- D1 vs C2 DEFENDER LINK BROKEN counts a witness as unanswered; the rule counts it only with the quoted pressing sentence and its round, and only for a verse a listed premise carries under PRESSED WITH (ruling  (W3 2341: a change that raises a new LIVE K item does not cure; counted once, here)
+      33020 grok: counted pkgKS 0, pkgGL 1; new items after the gate on pkgGL: RULE K-G4 (K re-read) by G2
+OK   33020: exactly one gate decision changes, grok G2 CURED -> UNCURED, naming the new K-G4
+OK   33020 grok: counted 0 -> 1 (once), and the new K-G4 row names G2
+OK   33020: the other 4 gate items are unchanged (cure and reason)
+FAIL 32998: all 5 stored gate decisions unchanged
+33006: the execution kept no gate data (crashed). Its log has no "NEW RULE" row after the gate (only NEW CONTRADICTION and NEW NOT APPLIED rows, which are not K re-read items), so pkgGL changes no 33006 decision. 33014 raised no gate item.
+
+7 OK, 1 FAIL
