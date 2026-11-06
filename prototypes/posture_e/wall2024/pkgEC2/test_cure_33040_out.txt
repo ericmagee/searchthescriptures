@@ -1,0 +1,13 @@
+   UNCURED 7669 E-ANS chatgpt: the CHANGE TO MEETS quotes the flagged answer again (or a shorter cut of it)
+   UNCURED 7709 E-PREM grok: the CHANGE TO regrades premises 3, 4, 5, 6 beyond its items (pkgPS refuses it)
+   UNCURED 7710 E-PREM grok: the CHANGE TO regrades premises 4, 5 beyond its items (pkgPS refuses it)
+OK   55 send-back rows read (44 E-ANS, 11 E-PREM)
+OK   UNCURED: exactly 7669 (chatgpt Luke 1:27, MEETS on the same bare grant), 7709 and 7710 (grok S18 and S19, refused by the scope check)
+OK   every KEEP with a quoted reason cures (sol 7821, 7830 to 7833)
+OK   gemini S5 and S6 (one line, premises 2 and 3) cure together
+OK   chatgpt 7672 (the answer moved from [CR3] to [CR4], found there) cures, per W3 2446 ruling 3
+OK   unit: a MEETS whose answer is not in the named round stays UNCURED
+OK   unit: a MEETS that moves to the other side's round stays UNCURED
+OK   unit: a MEETS with the fuller answer found in the round cures
+OK   unit: a KEEP with no 6 words of the round stays UNCURED; NO ANSWER stays UNCURED
+9 OK, 0 FAIL
