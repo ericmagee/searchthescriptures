@@ -5,7 +5,7 @@
    "file": "Alt_Gate_Build.js",
    "name": "Alt Gate Build",
    "base_sha": "1d953ee3b32cb93f",
-   "final_sha": "447371b086adda3c",
+   "final_sha": "1dac730df87aa354",
    "edits": [
     "ENF_STATUS K-S3 LIVE",
     "mark LIVE",
@@ -17,7 +17,7 @@
    "file": "Alt_Gate_Record.js",
    "name": "Alt Gate Record",
    "base_sha": "383918c4132635ff",
-   "final_sha": "d7c7d4ac933602e6",
+   "final_sha": "6c2f33ca77734172",
    "edits": [
     "ENF_STATUS K-S3 LIVE",
     "mark LIVE",
@@ -29,7 +29,7 @@
    "file": "Alternate_Build.js",
    "name": "Alternate Build",
    "base_sha": "a0e40aa8e2f6771a",
-   "final_sha": "8bfc16dcc2338b57",
+   "final_sha": "232ea3b43cb1f557",
    "edits": [
     "ENF_STATUS K-S3 LIVE",
     "mark LIVE",
@@ -41,7 +41,7 @@
    "file": "Alternate_Cure_Build.js",
    "name": "Alternate Cure Build",
    "base_sha": "97bb54f20c5b5698",
-   "final_sha": "982fa609b94523d5",
+   "final_sha": "7b267faf02bcce5e",
    "edits": [
     "ENF_STATUS K-S3 LIVE",
     "mark LIVE",
@@ -53,7 +53,7 @@
    "file": "Alternate_Cure_Normalize.js",
    "name": "Alternate Cure Normalize",
    "base_sha": "e7888184ac126ed2",
-   "final_sha": "6c6bdae90fc444ca",
+   "final_sha": "57f33daece0b5b33",
    "edits": [
     "ENF_STATUS K-S3 LIVE",
     "mark LIVE",
@@ -65,7 +65,7 @@
    "file": "Alternate_Merge.js",
    "name": "Alternate Merge",
    "base_sha": "2601691b8e56290d",
-   "final_sha": "7a227307779a2711",
+   "final_sha": "b7a368f5ddb71192",
    "edits": [
     "ENF_STATUS K-S3 LIVE",
     "mark LIVE",
@@ -77,7 +77,7 @@
    "file": "Alternate_Merge_Seat.js",
    "name": "Alternate Merge Seat",
    "base_sha": "a4b6c8e1ddbeb831",
-   "final_sha": "31cc4ea738b9ffac",
+   "final_sha": "73e66dcb1bf0933c",
    "edits": [
     "ENF_STATUS K-S3 LIVE",
     "mark LIVE",
@@ -99,7 +99,7 @@
    "file": "Cure_Build.js",
    "name": "Cure Build",
    "base_sha": "5ab7781e93f980f2",
-   "final_sha": "8bec231959c10384",
+   "final_sha": "abc2e7a2808fe01d",
    "edits": [
     "ENF_STATUS K-S3 LIVE",
     "mark LIVE",
@@ -111,7 +111,7 @@
    "file": "Cure_Check.js",
    "name": "Cure Check",
    "base_sha": "fa3e4edbe7c4e0bf",
-   "final_sha": "73d277a80632634a",
+   "final_sha": "0dea5991c9557a43",
    "edits": [
     "ENF_STATUS K-S3 LIVE",
     "mark LIVE",
@@ -123,7 +123,7 @@
    "file": "Cure_Normalize.js",
    "name": "Cure Normalize",
    "base_sha": "064b25290ed09c3a",
-   "final_sha": "8929dd91cbe511ec",
+   "final_sha": "2b7f8d6622d13ad5",
    "edits": [
     "ENF_STATUS K-S3 LIVE",
     "mark LIVE",
@@ -145,7 +145,7 @@
    "file": "Gate_Build.js",
    "name": "Gate Build",
    "base_sha": "ab5e35959050bca5",
-   "final_sha": "277f61d2c68e616d",
+   "final_sha": "49b726ddd6482ed8",
    "edits": [
     "ENF_STATUS K-S3 LIVE",
     "mark LIVE",
@@ -157,7 +157,7 @@
    "file": "Gate_Record.js",
    "name": "Gate Record",
    "base_sha": "c3568b63381e626c",
-   "final_sha": "b32ab4043b4e7cf8",
+   "final_sha": "1e39de524ba4e9c8",
    "edits": [
     "ENF_STATUS K-S3 LIVE",
     "mark LIVE",
@@ -169,7 +169,7 @@
    "file": "Panel_Cure_Build_1.js",
    "name": "Panel Cure Build 1",
    "base_sha": "17238840d0e221f6",
-   "final_sha": "7ac63d3b5f0bffc7",
+   "final_sha": "73e72b7dc2181e87",
    "edits": [
     "ENF_STATUS K-S3 LIVE",
     "mark LIVE",
@@ -181,7 +181,7 @@
    "file": "Panel_Cure_Build_2.js",
    "name": "Panel Cure Build 2",
    "base_sha": "6244d056740b2d0e",
-   "final_sha": "ed6d1fcfc710912c",
+   "final_sha": "1252969f70d6b40b",
    "edits": [
     "ENF_STATUS K-S3 LIVE",
     "mark LIVE",
@@ -193,7 +193,7 @@
    "file": "Panel_Cure_Build_3.js",
    "name": "Panel Cure Build 3",
    "base_sha": "08bece19223c55ca",
-   "final_sha": "792904c7c06cc4fd",
+   "final_sha": "3cfd41522abb0479",
    "edits": [
     "ENF_STATUS K-S3 LIVE",
     "mark LIVE",
@@ -205,7 +205,7 @@
    "file": "Panel_Cure_Check.js",
    "name": "Panel Cure Check",
    "base_sha": "7b7d7f2d6399aeb6",
-   "final_sha": "bad8fd4f8827e976",
+   "final_sha": "ae34917698da4063",
    "edits": [
     "ENF_STATUS K-S3 LIVE",
     "mark LIVE",
@@ -217,7 +217,7 @@
    "file": "Panel_Cure_Normalize_1.js",
    "name": "Panel Cure Normalize 1",
    "base_sha": "f66c2af5f4557880",
-   "final_sha": "738989d66493b4b5",
+   "final_sha": "f28c517a9f8356e8",
    "edits": [
     "ENF_STATUS K-S3 LIVE",
     "mark LIVE",
@@ -229,7 +229,7 @@
    "file": "Panel_Cure_Normalize_2.js",
    "name": "Panel Cure Normalize 2",
    "base_sha": "762f63429b2f906c",
-   "final_sha": "4d667309b9aa2713",
+   "final_sha": "83c942b79c673603",
    "edits": [
     "ENF_STATUS K-S3 LIVE",
     "mark LIVE",
@@ -241,7 +241,7 @@
    "file": "Panel_Cure_Normalize_3.js",
    "name": "Panel Cure Normalize 3",
    "base_sha": "91fddc60f0a9feb2",
-   "final_sha": "0ee56cbe46dbdbfe",
+   "final_sha": "4f4db2f6853918d4",
    "edits": [
     "ENF_STATUS K-S3 LIVE",
     "mark LIVE",

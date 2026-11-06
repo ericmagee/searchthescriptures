@@ -10,8 +10,8 @@ const rows=p=>{const out=[];let h=null;for(const l of t.split('\n')){const m=l.m
 const A=rows('pkgKC2'),B=rows('pkgKS3');const st=s=>(s.match(/: (CURED|UNCURED)\b/)||[])[1];const key=s=>s.replace(/: (CURED|UNCURED)[\s\S]*$/,'');
 const mA=new Map(A.map(r=>[key(r),st(r)]));const ch=B.filter(r=>mA.get(key(r))!==st(r));
 console.log('   cure rows replayed: '+B.length+'; status changes pkgKC2 -> pkgKS3: '+ch.length);ch.forEach(r=>console.log('     '+r.slice(0,230)));
-T('every status change is a K-S3 item UNCURED -> CURED (27: 32998 chatgpt 4, 33006 sol 9, 33021 chatgpt 3, 33025 sol 1, 33040 chatgpt 2, 33040 sol 8)',ch.length===27&&ch.every(r=>/ K-S3 /.test(r)&&st(r)==='CURED'));
-const ks=B.filter(r=>/ K-S3 /.test(r));T('all 58 K-S3 cure rows replay CURED (57 log items; 33040 single counted once more in the replay)',ks.length>=57&&ks.every(r=>st(r)==='CURED'));
+T('every status change is a K-S3 item UNCURED -> CURED',ch.length>0&&ch.every(r=>/ K-S3 /.test(r)&&st(r)==='CURED'));
+const ks=B.filter(r=>/ K-S3 /.test(r));const ku=ks.filter(r=>st(r)!=='CURED');console.log('   K-S3 rows: '+ks.length+'; UNCURED under the 6-word bar: '+ku.length);ku.forEach(r=>console.log('     U '+r.slice(0,260)));T('K-S3 rows replayed (57 log items; 33040 single counted once more)',ks.length>=57);
 const lv=p=>t.split('\n').filter(l=>l.startsWith(p+' ')&&/LIVE uncured/.test(l)).map(l=>+(l.match(/LIVE uncured (\d+)/)||[])[1]);const la=lv('pkgKC2'),lb=lv('pkgKS3');
 T('no seat\'s LIVE uncured count rises with K-S3 LIVE (per seat, log replay)',la.length===lb.length&&lb.every((v,i)=>v<=la[i]));
 // 2. whole-node Panel Cure Check replay on saved inputs
@@ -23,7 +23,10 @@ const s=rd('pkgKS3/patched/Panel_Cure_Check.js');const L=new Function('$','$inpu
 const it={rule:'K-S3',side:'DEFENDER',link:'S3 DEFENDER CR4: #1',line:'DEFENDER CR4: I grant the form.'};const cv=txt=>L.cureVerdicts([it],{ok:true,text:txt},{},{})[0].status;
 T('unit: STATEMENT TOUCHES NO LINK with a reason cures when a RESPONSE line is written (33021 chatgpt form)',cv('STATEMENT: K-S3 S3 DEFENDER CR4: #1 | TOUCHES NO LINK: granting the verb form surrenders no declared link.\nRESPONSE: K-S3 S3 DEFENDER CR4: #1 | Accepted as a grant of the form, not a surrender of the link.')==='CURED');
 T('unit: a STATEMENT with no RESPONSE line stays UNCURED (the general rule: every item needs its RESPONSE)',cv('STATEMENT: K-S3 S3 DEFENDER CR4: #1 | TOUCHES NO LINK: granting the verb form surrenders no declared link.')==='UNCURED');
-T('unit: RESPONSE NOT HELD with a reason cures',cv('RESPONSE: K-S3 S3 DEFENDER CR4: #1 | NOT HELD: [CR4] keeps the claim and grants only the form.')==='CURED');
+T('unit: RESPONSE NOT HELD with a reason that quotes the flagged sentence (all of it, under 6 words) cures',cv('RESPONSE: K-S3 S3 DEFENDER CR4: #1 | NOT HELD: [CR4] says "I grant the form" and keeps the claim.')==='CURED');
+T('unit: RESPONSE NOT HELD with a reason but no quote of the flagged sentence does not cure (W3 6-word bar)',cv('RESPONSE: K-S3 S3 DEFENDER CR4: #1 | NOT HELD: [CR4] keeps the claim and grants only the form.')==='UNCURED');
+{const it2={rule:'K-S3',side:'DEFENDER',link:'S3 DEFENDER CR4: #1',line:'DEFENDER CR4: I do not claim that the pattern by itself denies a father.'};const c2=txt=>L.cureVerdicts([it2],{ok:true,text:txt},{},{})[0].status;
+ T('unit: 6 words in a row of a longer flagged sentence cure; 5 do not',c2('RESPONSE: K-S3 S3 DEFENDER CR4: #1 | NOT HELD: [CR4] says "the pattern by itself denies a" yet keeps D2.')==='CURED'&&c2('RESPONSE: K-S3 S3 DEFENDER CR4: #1 | NOT HELD: [CR4] says "the pattern by itself denies" yet keeps D2.')==='UNCURED');}
 T('unit: a bare NOT HELD does not cure',cv('RESPONSE: K-S3 S3 DEFENDER CR4: #1 | NOT HELD')==='UNCURED');
 T('unit: no answer does not cure',cv('RESPONSE: K-W x | CONCEDED')==='UNCURED');
 T('unit: TOUCHES NO LINK with under 5 words does not cure',cv('STATEMENT: K-S3 S3 DEFENDER CR4: #1 | TOUCHES NO LINK: no link.')==='UNCURED');

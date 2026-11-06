@@ -6,17 +6,20 @@
 // 33025 sol x1, 33040 chatgpt x2, 33040 sol x8; 33021 chatgpt's RESPONSE reads "Accepted as a grant ..., not a surrender of the link").
 // (a) The K-S3 cure reads: COUNTED on the RESPONSE (as before); TOUCHES NO LINK with a reason of 5 words or more on the RESPONSE (as before)
 //     or on the item's STATEMENT line; or NOT HELD with a reason of 5 words or more on the RESPONSE (NOT HELD on a K-S3 item says the
-//     sentence is not a countable concession, which is what TOUCHES NO LINK says).
+//     sentence is not a countable concession, which is what TOUCHES NO LINK says) that quotes 6 words in a row of the flagged sentence, or all
+//     of it if shorter (W3, as K-CON requires; a bare "NOT HELD: wrong" does not cure a LIVE item).
 // (b) ENF_STATUS K-S3 LIVE; the item mark and the cure prompt say LIVE (left uncured after the cure, it removes the seat).
 const fs=require('fs');const crypto=require('crypto');const sha=s=>crypto.createHash('sha256').update(s).digest('hex').slice(0,16);
 const E=[
  ["'K-S3':'TRIAL'","'K-S3':'LIVE'",1,1,'ENF_STATUS K-S3 LIVE'],
  ["TRIAL cure item K-S3 (ruling 421): COUNTED, or TOUCHES NO LINK with its reason.","LIVE cure item K-S3 (ruling 421): COUNTED, or TOUCHES NO LINK with its reason; left uncured after the cure, it removes the seat.",1,1,'mark LIVE'],
- ["K-W and K-S3 are TRIAL rules: an item left unanswered removes no seat.","K-W is a TRIAL rule: an item left unanswered removes no seat. K-S3 is a LIVE rule: an item left unanswered after the cure removes the seat; NOT HELD: <reason> on the RESPONSE line, or TOUCHES NO LINK: <reason> on the RESPONSE or the STATEMENT line, answers it.",0,1,'cure prompt LIVE'],
+ ["K-W and K-S3 are TRIAL rules: an item left unanswered removes no seat.","K-W is a TRIAL rule: an item left unanswered removes no seat. K-S3 is a LIVE rule: an item left unanswered after the cure removes the seat; NOT HELD: <reason> on the RESPONSE line that quotes at least 6 words in a row of the flagged sentence (all of it if the sentence is shorter), or TOUCHES NO LINK: <reason> on the RESPONSE or the STATEMENT line, answers it.",0,1,'cure prompt LIVE'],
  ["if(x.rule==='K-S3'){const rp=respOf(x)||'';if(/\\bCOUNTED\\b/.test(rp))return res('CURED','answered: the close concession is counted',[rp]);const m=rp.match(/\\bTOUCHES\\s+NO\\s+LINK\\b\\s*:?\\s*(.*)$/i);if(m&&m[1].split(/\\s+/).filter(Boolean).length>=5)return res('CURED','answered: it touches no declared link or listed premise, with its reason',[rp]);",
   "if(x.rule==='K-S3'){const rp=respOf(x)||'';if(/\\bCOUNTED\\b/.test(rp))return res('CURED','answered: the close concession is counted',[rp]);const m=rp.match(/\\bTOUCHES\\s+NO\\s+LINK\\b\\s*:?\\s*(.*)$/i);if(m&&m[1].split(/\\s+/).filter(Boolean).length>=5)return res('CURED','answered: it touches no declared link or listed premise, with its reason',[rp]);\n"
   +"   {const sp=stmtOf(x)||'';const ms=sp.match(/\\bTOUCHES\\s+NO\\s+LINK\\b\\s*:?\\s*(.*)$/i);if(ms&&ms[1].split(/\\s+/).filter(Boolean).length>=5)return res('CURED','answered on the STATEMENT line: it touches no declared link or listed premise, with its reason (pkgKS3)',['STATEMENT: '+sp].concat(rp?[rp]:[]));\n"
-  +"    const mn=rp.match(/^\\s*NOT\\s+HELD\\b\\s*(?:as\\b[^:]*)?:?\\s*(.*)$/i);if(mn&&mn[1].split(/\\s+/).filter(Boolean).length>=5)return res('CURED','answered NOT HELD with its reason: the sentence is not a countable concession (pkgKS3)',[rp]);} /* pkgKS3 (a) */",0,1,'cure reader']];
+  +"    const mn=rp.match(/^\\s*NOT\\s+HELD\\b\\s*(?:as\\b[^:]*)?:?\\s*(.*)$/i);\n"
+  +"    const fl=String(x.line||'').replace(/^\\s*\\w+\\s+[CD]R\\d+\\s*:\\s*/i,''),fq=fl.match(/^\\s*\"(.*?)\"\\s*--/),fw=krulNorm(fq?fq[1]:fl).split(' ').filter(Boolean),fn=Math.min(6,fw.length),RN=' '+krulNorm(rp)+' ';let quoted=false;for(let i=0;fn&&i+fn<=fw.length&&!quoted;i++)quoted=RN.includes(' '+fw.slice(i,i+fn).join(' ')+' ');\n"
+  +"    if(mn&&mn[1].split(/\\s+/).filter(Boolean).length>=5&&quoted)return res('CURED','answered NOT HELD with its reason, quoting the flagged sentence (6 words in a row, or all of it if shorter): the sentence is not a countable concession (pkgKS3)',[rp]);} /* pkgKS3 (a); W3: a NOT HELD quotes 6 words in a row of the flagged sentence, as K-CON */",0,1,'cure reader']];
 const BASE='pkgKC2/patched';const plan={base:BASE+' (3cd9bc7)',nodes:[]};fs.mkdirSync('pkgKS3/patched',{recursive:true});
 for(const f of fs.readdirSync(BASE).filter(f=>f.endsWith('.js')).sort()){const b=fs.readFileSync(BASE+'/'+f,'utf8');let t=b;const ed=[];
  for(const [a,c,mn,mx,tag] of E){const k=t.split(a).length-1;if(k<mn||k>mx)throw new Error(f+' '+tag+': x'+k);if(k){t=t.split(a).join(c);ed.push(tag);}}
