@@ -1,0 +1,35 @@
+OK   22 nodes: base (pkgKV) and final shas match the plan
+OK   no node keeps K-CMT TRIAL; every node has K-CMT LIVE
+   cure rows replayed: 516; status changes pkgKV -> pkgKCMT: 4
+     32998 chatgpt K-CMT contested grades without a commitment: CURED (log UNCURED) -- the response names the commitment, or NOT A GRADE
+     33021 chatgpt K-CMT contested grades without a commitment: CURED (log UNCURED) -- the response names the commitment, or NOT A GRADE
+     33025 grok K-CMT contested grades without a commitment: CURED (log UNCURED) -- the response names the commitment, or NOT A GRADE
+     33040 chatgpt K-CMT contested grades without a commitment: CURED (log UNCURED) -- the response names the commitment, or NOT A GRADE
+OK   the only status changes are the 4 K-CMT engine faults, UNCURED -> CURED (32998 chatgpt, 33021 chatgpt, 33025 grok, 33040 chatgpt)
+OK   all 24 K-CMT cure rows replay CURED
+OK   no seat's LIVE uncured count rises with K-CMT LIVE (log replay, 33 seats)
+OK   whole-node Panel Cure Check on saved inputs: every seat's replayed LIVE uncured count equals pkgKV's
+   K-CMT items on 43 verdict texts: pkgKV 33, pkgKCMT 30; items that go: 33020 gemini verdict_final; 33021 grok verdict_final; 33021 grok verdict_gate
+   lines no longer raised: 14
+     32998 grok verdict_final: KEYSTONE: D6 -- STANDS -- D6, Christ had no biological father, conceived in Mary by the Holy Ghost, Joseph the husband-guardian not the begetter, is not withdrawn and is not 
+     32998 chatgpt verdict_final: SUPERSEDED BY CURE: verdict HELD to BROKEN; see the cure lines below
+     32998 chatgpt verdict_final: RESULT: CHALLENGER WINS -- derived after the send-back from the judge's own changed lines (S5, S6, S7, G5, S12, S15; CHANGED D4 vs C5 (UNDERDETERMINED to DEFENDER LINK BRO
+     32998 chatgpt verdict_gate: SUPERSEDED BY CURE: verdict BROKEN to HELD; see the cure lines below
+     32998 grok verdict_gate: KEYSTONE: D6 -- STANDS -- D6, Christ had no biological father, conceived in Mary by the Holy Ghost, Joseph the husband-guardian not the begetter, is not withdrawn and is not g
+     33006 chatgpt verdict_final: SUPERSEDED BY CURE: verdict HELD to BROKEN; see the cure lines below
+     33006 chatgpt verdict_final: RESULT: CHALLENGER WINS -- derived after the send-back from the judge's own changed lines (S4, S5, S6, S7, S8, S9, S10, S11, S12, S13, S14, S15, S16, S17, S18, S19, G1; CH
+     33014 sol alt_verdict_gate: SUPERSEDED BY CURE: verdict BROKEN to HELD; see the cure lines below
+     33020 gemini verdict_final: RESULT: UNDERDETERMINED -- derived after the send-back from the judge's own changed lines (S1, S2, S3, S4, S5, S6, S7, S8, S9, G2; CHANGED D1 vs C2 (CHALLENGER LINK BROKEN 
+     33021 grok verdict_final: KEYSTONE: D5 -- STANDS -- Christ had no biological father; Mary alone was his biological parent; Joseph was legal father only; God is his Father by power and not by seed. Not
+     33021 chatgpt verdict_gate: SUPERSEDED BY CURE: verdict BROKEN to HELD; see the cure lines below
+     33021 grok verdict_gate: KEYSTONE: D5 -- STANDS -- Christ had no biological father; Mary alone was his biological parent; Joseph was legal father only; God is his Father by power and not by seed. Not 
+     33025 chatgpt verdict_gate: SUPERSEDED BY CURE: verdict BROKEN to HELD; see the cure lines below
+     33040 chatgpt verdict_gate: SUPERSEDED BY CURE: verdict BROKEN to HELD; see the cure lines below
+OK   raise: the only lines that go are negated grades ("not graded DEFENDER LINK BROKEN") and engine lines (SUPERSEDED BY CURE, RESULT derived after the send-back)
+OK   raise: 33021 grok's one-line false item goes
+OK   raise unit: a real contested grade line is still raised; a negated one is not
+OK   unit: Commitment N on the STATEMENT with a RESPONSE written cures (32998 chatgpt form)
+OK   unit: a bare-rule STATEMENT (grok 33025 form) cures with a RESPONSE written
+OK   unit: a STATEMENT with no RESPONSE line stays UNCURED
+OK   unit: a RESPONSE and STATEMENT naming no Commitment N stay UNCURED
+13 OK, 0 FAIL
