@@ -1,0 +1,11 @@
+OK   plan: 22 nodes, base shas match pkgKW/patched, stub shas match pkgLIB/patched
+OK   every stub rebuilds its full source byte for byte from the Shared Library (22 of 22)
+OK   every stub and the Shared Library parse
+OK   the stubs read only $('Shared Library') and the node's own $/$input (no other global)
+   6 saved runs x 22 nodes = 132 node runs; identical 132 (58 produce output, 74 stop at the same missing upstream node in both)
+OK   every node run gives byte-identical output (or the identical error) full vs stub
+OK   the cure path nodes produce real output on the saved runs (not only errors)
+   timing, Panel Cure Check on 33040, median of 5 fresh processes: full source 52.7 ms, stub 53.0 ms (+0.4 ms per node run)
+   size: the 22 nodes hold 6859943 bytes of code before, 562139 after (Shared Library 420772 included)
+OK   the stub adds under 50 ms per node run
+7 OK, 0 FAIL
