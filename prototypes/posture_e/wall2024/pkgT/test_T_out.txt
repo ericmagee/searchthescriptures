@@ -1,0 +1,13 @@
+OK   2 nodes (Alternate Build, Build Save Body); live_sha equals this fetch, final_sha equals the patched file
+OK   reverse edit: removing the two insertions gives the live text
+OK   two removed seats, pool sol and glm: chatgpt gets sol, grok gets glm (the next model)
+OK   the live code gives both seats sol (the defect)
+OK   pool of one (as in 32949, alt_order ["sol"]): chatgpt gets sol; grok is a skip naming G4: no pool model passes the guards: sol G4: m/sol is already offered to an earlier removed seat
+OK   one removed seat: unchanged, it gets the first model
+OK   an unfilled seat gets one plain review line: [AUDIT v36: PANEL SEAT LEFT UNFILLED -- SEAT: grok; drv_uncured 4; no alternate was seated (no alternate: NOT SEATED, no pool model passes the guards: sol G4: m/sol is already offered to an earlier removed seat); this seat is not counted in the panel result. REVIEW THIS ROW.]
+OK   the line is one bracketed REVIEW line with no inner brackets
+OK   an alternate tried and refused also leaves the seat unfilled, stated with its reason
+OK   no line when every removed seat is filled, or when no alternate step ran
+OK   32949: gemini is offered sol; chatgpt and grok are skips (G4), where live offered sol to all three
+     32949 effect: sol has 13 and 19 silent items, so Alternate Merge does not seat it; all three seats are unfilled and each gets a v36 line; the panel is UNGRADED, as before this fix. The fix changes who is offered which model, not the count: the pool holds one model.
+ALL OK
