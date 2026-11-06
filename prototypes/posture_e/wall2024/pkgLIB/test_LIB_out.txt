@@ -1,33 +1,33 @@
-OK   plan: 22 nodes, base shas match pkgKVP+pkgECL/patched, stub shas match pkgLIB/patched
+OK   plan: 22 nodes, base shas match pkgKVP+pkgECL+pkgKVQ/patched, stub shas match pkgLIB/patched
 OK   every stub rebuilds its full source byte for byte from the Shared Library (22 of 22)
 OK   every stub and the Shared Library parse
 OK   the stubs read only $('Shared Library') and the node's own $/$input (no other global)
    runner refs: 92 literal node refs across the 22 full sources; non-literal $() in: Alternate Merge, Alternate Payloads, Panel Cure Check, Panel Payloads
 OK   every $('X') in each rebuilt source is named literally in its stub; the dynamic nodes carry a non-literal $()
 OK   runner model refs agree with the live-test thread's list (pkgLIB_stub_refs.json) on 22 of 22
-   6 saved runs x 22 nodes = 132 node runs; identical 132 (58 produce output, 74 stop at the same missing upstream node in both)
-     Alt Gate Build                 real output on 6 of 6 runs
-     Alt Gate Record                real output on 0 of 6 runs; stops in both on: node not saved: Alt Send Back Record
-     Alternate Build                real output on 0 of 6 runs; stops in both on: node not saved: Panel Build
-     Alternate Cure Build           real output on 4 of 6 runs; stops in both on: node not saved: Alternate Payloads
-     Alternate Cure Normalize       real output on 6 of 6 runs
-     Alternate Merge                real output on 0 of 6 runs; stops in both on: node not saved: Alternate Merge Seat
-     Alternate Merge Seat           real output on 6 of 6 runs
-     Alternate Payloads             real output on 0 of 6 runs; stops in both on: node not saved: Panel Build
-     Cure Build                     real output on 0 of 6 runs; stops in both on: node not saved: Build Independent Verdict
-     Cure Check                     real output on 0 of 6 runs; stops in both on: node not saved: Extract Independent Verdict
-     Cure Normalize                 real output on 6 of 6 runs
-     Extract Independent Verdict    real output on 0 of 6 runs; stops in both on: node not saved: Build Independent Verdict
-     Gate Build                     real output on 6 of 6 runs
-     Gate Record                    real output on 0 of 6 runs; stops in both on: node not saved: Send Back Record
-     Panel Cure Build 1             real output on 0 of 6 runs; stops in both on: node not saved: Panel Build
-     Panel Cure Build 2             real output on 0 of 6 runs; stops in both on: node not saved: Panel Build
-     Panel Cure Build 3             real output on 0 of 6 runs; stops in both on: node not saved: Panel Build
-     Panel Cure Check               real output on 6 of 6 runs
-     Panel Cure Normalize 1         real output on 6 of 6 runs
-     Panel Cure Normalize 2         real output on 6 of 6 runs
-     Panel Cure Normalize 3         real output on 6 of 6 runs
-     Panel Payloads                 real output on 0 of 6 runs; stops in both on: node not saved: Panel Build
+   9 saved runs x 22 nodes = 198 node runs; identical 198 (86 produce output, 112 stop at the same missing upstream node in both)
+     Alt Gate Build                 real output on 9 of 9 runs
+     Alt Gate Record                real output on 0 of 9 runs; stops in both on: node not saved: Alt Send Back Record
+     Alternate Build                real output on 0 of 9 runs; stops in both on: node not saved: Panel Build
+     Alternate Cure Build           real output on 5 of 9 runs; stops in both on: node not saved: Alternate Payloads
+     Alternate Cure Normalize       real output on 9 of 9 runs
+     Alternate Merge                real output on 0 of 9 runs; stops in both on: node not saved: Alternate Merge Seat
+     Alternate Merge Seat           real output on 9 of 9 runs
+     Alternate Payloads             real output on 0 of 9 runs; stops in both on: node not saved: Panel Build
+     Cure Build                     real output on 0 of 9 runs; stops in both on: node not saved: Build Independent Verdict
+     Cure Check                     real output on 0 of 9 runs; stops in both on: node not saved: Extract Independent Verdict
+     Cure Normalize                 real output on 9 of 9 runs
+     Extract Independent Verdict    real output on 0 of 9 runs; stops in both on: node not saved: Build Independent Verdict
+     Gate Build                     real output on 9 of 9 runs
+     Gate Record                    real output on 0 of 9 runs; stops in both on: node not saved: Send Back Record
+     Panel Cure Build 1             real output on 0 of 9 runs; stops in both on: node not saved: Panel Build
+     Panel Cure Build 2             real output on 0 of 9 runs; stops in both on: node not saved: Panel Build
+     Panel Cure Build 3             real output on 0 of 9 runs; stops in both on: node not saved: Panel Build
+     Panel Cure Check               real output on 9 of 9 runs
+     Panel Cure Normalize 1         real output on 9 of 9 runs
+     Panel Cure Normalize 2         real output on 9 of 9 runs
+     Panel Cure Normalize 3         real output on 9 of 9 runs
+     Panel Payloads                 real output on 0 of 9 runs; stops in both on: node not saved: Panel Build
 OK   every node run gives byte-identical output (or the identical error) full vs stub
 OK   the cure path nodes produce real output on the saved runs (not only errors)
    run 33040 with all saved node outputs: 22 nodes, 22 identical, 19 with real output
@@ -73,7 +73,7 @@ OK   run 33040, all saved node outputs: every node identical full vs stub
      Panel Cure Check: Node 'Panel Payloads' hasn't been executed
      Panel Payloads: Node 'Init Seats' hasn't been executed
 OK   the harness catches the 33094 fault: v1 stubs differ, and Extract Independent Verdict fails as in 33094 ("Build Independent Verdict" not executed)
-   timing, Panel Cure Check on 33040, median of 5 fresh processes: full source 79.5 ms, stub 78.6 ms (-0.9 ms per node run)
-   size: the 22 nodes hold 7084723 bytes of code before, 590414 after (Shared Library 436270 included)
+   timing, Panel Cure Check on 33040, median of 5 fresh processes: full source 69.5 ms, stub 77.1 ms (+7.7 ms per node run)
+   size: the 22 nodes hold 7085031 bytes of code before, 590428 after (Shared Library 436284 included)
 OK   the stub adds under 50 ms per node run
 11 OK, 0 FAIL
