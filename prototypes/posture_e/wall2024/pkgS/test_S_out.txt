@@ -1,8 +1,9 @@
 OK   base is live 683c995f (683c995f-22ea-4402-a74e-de1c7ee632d0)
-OK   17 nodes carry the status table; 14 of them hold cureVerdicts and get the silent flag
+OK   17 nodes carry the status table; 14 hold cureVerdicts and CURE_FORM (4 edits each); Cure Check has 3 more for the single judge
 OK   every live_sha equals this fetch, every final_sha equals the patched file
 OK   no node that defines enfUncured is left out
-OK   reverse edit: undoing exactly the three edits gives the live text in all 17 nodes
+OK   reverse edit: undoing exactly the listed edits gives the live text in all 17 nodes
+OK   every cure node (14) carries the cure-prompt sentence once (S7); no live node has it
 OK   Panel Cure Check and Alternate Merge set drv_uncured through enfUncured, unchanged call sites
 OK   gemini: every silent item is UNCURED
 OK   gemini: every status and reason is unchanged by the build
@@ -25,6 +26,12 @@ INFO replayed statuses equal the stored cure_status on 115 of 122 rows (items ar
      grok     items  24  drv_uncured before 0  after 4  (silent 4; written but malformed, not counted 0)
      sol      items  27  drv_uncured before 0  after 13  (silent 13; written but malformed, not counted 0)
      sol      items  33  drv_uncured before 0  after 19  (silent 19; written but malformed, not counted 0)
+OK   the cure request built for a judge contains the sentence
+OK   RESPONSE: <item> | NOT HELD: <reason> is a written response: not silent, a TRIAL item counts 0 (status UNCURED)
+OK   single judge: 2 silent TRIAL items give drv_uncured 2, stored, and one line names them: [AUDIT v35: SINGLE JUDGE SILENCE COUNT -- drv_uncured 2; NO WRITTEN RESPONSE on 2 items: K-W DEFENDER CR9 D9 #1, K-S3 D9; the single judge has no alternate, so no seat is removed and no verdict changes. REVIEW THIS ROW.]
+OK   that line has the form Build Save Body copies into review_notes
+OK   single judge: the verdict does not change
+OK   single judge: a failed cure call writes no silence line, drv_uncured 0
 OK   a TRIAL item the reply does not answer is silent and counts 1
 OK   its stored reason says in plain words that it counts: TRIAL rule, NO WRITTEN RESPONSE: counts in drv_uncured like a LIVE item (silence count): no written response
 OK   a failed cure call is not silence (counts 0 for a TRIAL item)
