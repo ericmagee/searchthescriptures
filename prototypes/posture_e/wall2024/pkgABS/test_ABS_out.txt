@@ -1,0 +1,117 @@
+OK   4 nodes; base (pkgUND/patched) and final shas match
+OK   unit: E-ANS MEETS on "does not deny", no [L1]: raised
+     E-ANS MEETS rests on an absence or non-denial ("does not deny") and quotes no counted [L1] positive fit
+OK   unit: the same answer with a counted [L1] positive fit: not raised
+     absence phrase "does not deny" with a counted [L1] positive fit
+OK   unit: the same answer with an [L1] whose words are not in the verse: raised
+     E-ANS MEETS rests on an absence or non-denial ("does not deny") and quotes no counted [L1] positive fit ([L1] NOT COUNTED)
+OK   unit: E-ANS MISSES: not read
+     (no absence phrase)
+OK   unit: single-quoted ANSWER CHECK: the answer is read, not the MEANS
+     (no absence phrase)
+OK   unit: a withdrawal answer ("I drop that limb"): not raised
+     the answer drops or narrows its own claim (a withdrawal, K-W), not a meeting by absence
+OK   unit: E-HOLD UNDERDETERMINED "both retained": raised
+     E-HOLD UNDERDETERMINED rests on an absence or non-denial ("are both retained") and quotes no counted [L1] positive fit
+OK   unit: E-HOLD STANDS "does not name": raised
+     E-HOLD STANDS rests on an absence or non-denial ("does not name") and quotes no counted [L1] positive fit
+OK   unit: E-HOLD STANDS with no absence: not raised
+     (no absence phrase)
+OK   unit: "rather than relying on silence": not raised
+     (no absence phrase)
+OK   33107: gemini Romans 1:3 MEETS raised
+OK   33107: sol D2 vs C2 UNDERDETERMINED raised
+OK   no raised line carries a counted [L1]
+OK   Send Back Build 33040: 13 absence items sent of 13 raised; every pkgUND item still sent
+     grok S2 E-ANS ANSWER CHECK Acts 1:8 [CR3], grok S3 E-ANS ANSWER CHECK 1 Chronicles 28:6 [CR3], grok S4 E-ANS ANSWER CHECK John 1:45 [CR3], grok S5 E-ANS ANSWER CHECK Luke 1:36 [CR3], grok S6 E-ANS ANSWER CHECK Acts 2:30 [CR4], gemini S1 E-ANS ANSWER CHECK Luke 1:36 [CR4], gemini S2 E-ANS ANSWER CHECK John 1:45 [CR4], gemini S3 E-ANS ANSWER CHECK Acts 2:30 [CR4], gemini S4 E-ANS ANSWER CHECK Hebrews 7:14 [CR4], chatgpt S1 E-ANS ANSWER CHECK Acts 2:30 [CR3], chatgpt S2 E-HOLD COLLISION D1 vs C1, chatgpt S3 E-HOLD COLLISION D3 vs C5, chatgpt S4 E-HOLD COLLISION D6 vs C2
+OK   Send Back Build 33060: 8 absence items sent, 1 NOT SENT (no panel request for this seat) of 9 raised; every pkgUND item still sent
+     gemini S1 E-ANS ANSWER CHECK Matthew 1:5 [CR3], gemini S2 E-ANS ANSWER CHECK Matthew 1:6 [CR3], gemini S3 E-ANS ANSWER CHECK Luke 1:35 [CR4], gemini S4 E-ANS ANSWER CHECK Acts 1:8 [CR4], gemini S5 E-ANS ANSWER CHECK Luke 9:34 [CR4], gemini S6 E-ANS ANSWER CHECK Luke 1:31 [CR4], gemini S7 E-ANS ANSWER CHECK Genesis 4:1 [CR4], gemini S8 E-ANS ANSWER CHECK Hebrews 2:14 [CR4]
+OK   Send Back Build 33083: 7 absence items sent of 7 raised; every pkgUND item still sent
+     gemini S6 E-ANS ANSWER CHECK Genesis 4:1 [CR4], gemini S7 E-ANS ANSWER CHECK Luke 2:4 [CR3], gemini S8 E-ANS ANSWER CHECK Hebrews 7:14 [CR3], gemini S9 E-ANS ANSWER CHECK Hebrews 2:17 [CR3], sol S1 E-HOLD COLLISION D3 vs C6, sol S2 E-HOLD COLLISION D4 vs C5, sol S3 E-HOLD COLLISION D5 vs C4
+OK   Send Back Build 33107: 13 absence items sent of 13 raised; every pkgUND item still sent
+     gemini S1 E-ANS ANSWER CHECK Matthew 1:20 [CR3], gemini S2 E-ANS ANSWER CHECK Romans 1:3 [CR3], gemini S3 E-ANS ANSWER CHECK Hebrews 7:14 [CR3], gemini S4 E-ANS ANSWER CHECK Acts 2:30 [CR3], gemini S5 E-ANS ANSWER CHECK Hebrews 2:14 [CR3], gemini S6 E-ANS ANSWER CHECK Hebrews 2:16 [CR3], chatgpt S1 E-ANS ANSWER CHECK Romans 1:3 [CR3], chatgpt S2 E-ANS ANSWER CHECK Hebrews 7:14 [CR3], chatgpt S3 E-HOLD COLLISION D1 vs C4, chatgpt S4 E-HOLD COLLISION D6 vs C6, sol S1 E-ANS ANSWER CHECK Romans 1:3 [CR3], sol S2 E-ANS ANSWER CHECK John 3:6 [CR2; CR3], sol S3 E-HOLD COLLISION D2 vs C2
+OK   33107 Alt Send Back Build loads and runs (Alt enforcer Build absent in the inputs: skips)
+OK   cure: E-ANS KEEP: UNCURED
+     a KEEP does not cure a grade resting on an absence (pkgABS, Commitment 3, ruling 421)
+OK   cure: E-ANS no answer: UNCURED
+     no answer to the send-back
+OK   cure: E-ANS CHANGE TO MISSES: CURED
+     CHANGE TO grades MISSES (pkgABS)
+OK   cure: E-ANS CHANGE TO MEETS on the same absence: UNCURED
+     CHANGE TO quotes no counted [L1] positive fit and is not regraded MISSES, BROKEN or FORCED (pkgABS)
+OK   cure: E-ANS CHANGE TO MEETS with a counted [L1] fit: CURED
+     CHANGE TO quotes a counted [L1] positive fit (pkgABS)
+OK   cure: E-HOLD KEEP: UNCURED
+     a KEEP does not cure a grade resting on an absence (pkgABS, Commitment 3, ruling 421)
+OK   cure: E-HOLD CHANGE TO RETRACTED: CURED
+     CHANGE TO RETRACTED (pkgABS)
+OK   cure: E-HOLD CHANGE TO BROKEN with counted layers: CURED
+     CHANGE TO a break with its layers (pkgABS): layers counted: [L1] COUNTED
+OK   cure: E-HOLD CHANGE TO BROKEN without [L1]: UNCURED
+     CHANGE TO a break that fails the layer check (pkgABS): no [L1]: no verse is quoted with its reference under an [L1] tag
+OK   cure: E-HOLD CHANGE TO UNDERDETERMINED with a counted [L1] fit: CURED
+     CHANGE TO quotes a counted [L1] positive fit (pkgABS)
+OK   cure: E-HOLD CHANGE TO UNDERDETERMINED still "both retained": UNCURED
+     CHANGE TO quotes no counted [L1] positive fit and is not regraded MISSES, BROKEN or FORCED (pkgABS)
+OK   Send_Back_Record.js: KEEP on S1 UNCURED and counted (drv_uncured 1, AUDIT v43); S2 RETRACTED CURED, not counted
+     [AUDIT v43: ABSENCE GRADE UNCURED (pkgABS; Commitment 3, ruling 421) -- SEAT: gemini; ITEMS: S1 (E-ANS ANSWER CHECK Romans 1:3 [CR3]: a KEEP does not cure a grade resting on an absence (pkgABS, Commit
+OK   Send_Back_Record.js: an item pkgUND also marks is counted once on KEEP (drv_uncured 1)
+     und [{"seat":"gemini","items":["S1 (E-HOLD on UNDERDETERMINED COLLISION D2 vs C2: a KEEP does not cure this item (pkgUND))"]}] abs []
+OK   Alt_Send_Back_Record.js: KEEP on S1 UNCURED and counted (drv_uncured 1, AUDIT v43); S2 RETRACTED CURED, not counted
+     [AUDIT v43: ABSENCE GRADE UNCURED (pkgABS; Commitment 3, ruling 421) -- SEAT: gemini; ITEMS: S1 (E-ANS ANSWER CHECK Romans 1:3 [CR3]: a KEEP does not cure a grade resting on an absence (pkgABS, Commit
+OK   Alt_Send_Back_Record.js: an item pkgUND also marks is counted once on KEEP (drv_uncured 1)
+     und [{"seat":"gemini","items":["S1 (E-HOLD on UNDERDETERMINED COLLISION D2 vs C2: a KEEP does not cure this item (pkgUND))"]}] abs []
+
+REPLAY (raises listed; "VERSE QUOTED w/o [L1]" = a verse is quoted beside its reference and stands in the KJV, but under no [L1] tag)
+== 33040: 155 lines read; raised 13 (12 with no verse quoted, 1 quoting a verse without [L1]); absence + counted [L1] (not raised) 0; withdrawal answers (not raised) 0
+   RAISED gemini  E-ANS  MEETS           ANSWER CHECK John 1:45 [CR4]        "does not state"
+   RAISED gemini  E-ANS  MEETS           ANSWER CHECK Acts 2:30 [CR4]        "does not say"
+   RAISED gemini  E-ANS  MEETS           ANSWER CHECK Hebrews 7:14 [CR4]     "does not name"
+   RAISED grok    E-ANS  MEETS           ANSWER CHECK Acts 1:8 [CR3]         "names no"
+   RAISED chatgpt E-ANS  MEETS           ANSWER CHECK Acts 2:30 [CR3]        "do not say"
+   RAISED grok    E-ANS  MEETS           ANSWER CHECK 1 Chronicles 28:6 [CR3]"names no"
+   RAISED grok    E-ANS  MEETS           ANSWER CHECK John 1:45 [CR3]        "does not state"
+   RAISED grok    E-ANS  MEETS           ANSWER CHECK Luke 1:36 [CR3]        "says nothing"
+   RAISED grok    E-ANS  MEETS           ANSWER CHECK Acts 2:30 [CR4]        "does not say"
+   RAISED chatgpt E-HOLD UNDERDETERMINED COLLISION D1 vs C1                  "accommodate"
+   RAISED chatgpt E-HOLD UNDERDETERMINED COLLISION D3 vs C5                  "accommodate"
+   RAISED chatgpt E-HOLD UNDERDETERMINED COLLISION D6 vs C2                  "accommodate"
+   RAISED, VERSE QUOTED w/o [L1] gemini  E-ANS  MEETS           ANSWER CHECK Luke 1:36 [CR4]        "does not name" | Luke 1:37
+== 33060: 162 lines read; raised 9 (5 with no verse quoted, 4 quoting a verse without [L1]); absence + counted [L1] (not raised) 0; withdrawal answers (not raised) 4
+   RAISED gemini  E-ANS  MEETS           ANSWER CHECK Matthew 1:5 [CR3]      "does not say"
+   RAISED gemini  E-ANS  MEETS           ANSWER CHECK Matthew 1:6 [CR3]      "does not say"
+   RAISED gemini  E-ANS  MEETS           ANSWER CHECK Luke 1:31 [CR4]        "does not say"
+   RAISED gemini  E-ANS  MEETS           ANSWER CHECK Genesis 4:1 [CR4]      "does not state"
+   RAISED gemini  E-ANS  MEETS           ANSWER CHECK Hebrews 2:14 [CR4]     "names no"
+   RAISED, VERSE QUOTED w/o [L1] gemini  E-ANS  MEETS           ANSWER CHECK Luke 1:35 [CR4]        "name no" | Luke 1:35
+   RAISED, VERSE QUOTED w/o [L1] gemini  E-ANS  MEETS           ANSWER CHECK Acts 1:8 [CR4]         "name no" | Acts 1:8
+   RAISED, VERSE QUOTED w/o [L1] gemini  E-ANS  MEETS           ANSWER CHECK Luke 9:34 [CR4]        "name no" | Luke 9:34
+   RAISED, VERSE QUOTED w/o [L1] sol     E-HOLD UNDERDETERMINED COLLISION D1 vs C1                  "accommodates" | Matthew 1:16, Matthew 1:3
+   withdrawal gemini  ANSWER CHECK Job 14:1 [CR4]         "does not exclude"
+   withdrawal gemini  ANSWER CHECK Matthew 11:11 [CR4]    "does not exclude"
+   withdrawal gemini  ANSWER CHECK Genesis 16:15 [CR3]    "does not exclude"
+   withdrawal sol     ANSWER CHECK Job 14:1 [CR3]         "does not exclude"
+== 33083: 165 lines read; raised 7 (5 with no verse quoted, 2 quoting a verse without [L1]); absence + counted [L1] (not raised) 0; withdrawal answers (not raised) 0
+   RAISED gemini  E-ANS  MEETS           ANSWER CHECK Genesis 4:1 [CR4]      "does not say"
+   RAISED gemini  E-ANS  MEETS           ANSWER CHECK Luke 2:4 [CR3]         "do not name"
+   RAISED gemini  E-ANS  MEETS           ANSWER CHECK Hebrews 7:14 [CR3]     "names no"
+   RAISED gemini  E-ANS  MEETS           ANSWER CHECK Hebrews 2:17 [CR3]     "do not state"
+   RAISED sol     E-HOLD UNDERDETERMINED COLLISION D3 vs C6                  "does not exclude"
+   RAISED, VERSE QUOTED w/o [L1] sol     E-HOLD UNDERDETERMINED COLLISION D4 vs C5                  "accommodates" | Luke 1:35
+   RAISED, VERSE QUOTED w/o [L1] sol     E-HOLD UNDERDETERMINED COLLISION D5 vs C4                  "remain compatible" | Luke 2:48, Luke 3:23
+== 33107: 191 lines read; raised 13 (12 with no verse quoted, 1 quoting a verse without [L1]); absence + counted [L1] (not raised) 0; withdrawal answers (not raised) 0
+   RAISED gemini  E-ANS  MEETS           ANSWER CHECK Matthew 1:20 [CR3]     "does not name"
+   RAISED gemini  E-ANS  MEETS           ANSWER CHECK Romans 1:3 [CR3]       "does not deny"
+   RAISED gemini  E-ANS  MEETS           ANSWER CHECK Hebrews 7:14 [CR3]     "does not name"
+   RAISED gemini  E-ANS  MEETS           ANSWER CHECK Acts 2:30 [CR3]        "do not name"
+   RAISED gemini  E-ANS  MEETS           ANSWER CHECK Hebrews 2:14 [CR3]     "name no"
+   RAISED gemini  E-ANS  MEETS           ANSWER CHECK Hebrews 2:16 [CR3]     "name no"
+   RAISED chatgpt E-ANS  MEETS           ANSWER CHECK Romans 1:3 [CR3]       "does not deny"
+   RAISED chatgpt E-ANS  MEETS           ANSWER CHECK Hebrews 7:14 [CR3]     "does not name"
+   RAISED sol     E-ANS  MEETS           ANSWER CHECK Romans 1:3 [CR3]       "does not deny"
+   RAISED sol     E-ANS  MEETS           ANSWER CHECK John 3:6 [CR2; CR3]    "are both retained"
+   RAISED chatgpt E-HOLD UNDERDETERMINED COLLISION D1 vs C4                  "are both accommodated"
+   RAISED chatgpt E-HOLD UNDERDETERMINED COLLISION D6 vs C6                  "does not dispute"
+   RAISED, VERSE QUOTED w/o [L1] sol     E-HOLD UNDERDETERMINED COLLISION D2 vs C2                  "are both retained" | Matthew 1:20, Romans 1:3
+
+34 OK, 0 FAIL
