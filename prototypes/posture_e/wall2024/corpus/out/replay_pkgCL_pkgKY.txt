@@ -1,0 +1,80 @@
+pkgCL 32998 main gemini: items 0, uncured 0 -> kept
+pkgCL 32998 main chatgpt: items 2, uncured 1 -> REMOVED
+     G1 CURED -- KEEP: the change stays unapplied
+     G2 UNCURED -- KEEP does not cure a RULE K-G4 item (2243): a line must change
+pkgCL 32998 main grok: items 2, uncured 0 -> kept | W3: kept MATCH
+     G1 CURED -- KEEP: change withdrawn (the refused send-back change S19 is dropped, and its contradiction is not in the judge text; W3 2299)
+     G2 CURED -- the gate change was applied and the item is no longer raised
+pkgCL 32998 alt sol: items 1, uncured 1 -> REMOVED
+     G1 UNCURED -- the corrected text still raises it: its GROUND names no pressed witness left unanswered, so the break rests on meaning, and only a FORCED li
+pkgCL 33014 main gemini: items 0, uncured 0 -> kept
+pkgCL 33014 main chatgpt: items 0, uncured 0 -> kept
+pkgCL 33014 main grok: items 0, uncured 0 -> kept
+pkgCL 33014 alt sol: items 0, uncured 0 -> kept
+pkgCL 33020 main gemini: items 2, uncured 0 -> kept | W3: kept MATCH
+     G1 CURED -- the gate change is already in the corrected text (another change wrote the same line), and the item is no longer raised (W3 2319)
+     G2 CURED -- the gate change was applied and the item is no longer raised
+pkgCL 33020 main chatgpt: items 0, uncured 0 -> kept | W3: kept MATCH
+pkgCL 33020 main grok: items 2, uncured 1 -> REMOVED
+     G1 CURED -- KEEP: the change stays unapplied
+     G2 UNCURED -- the gate change raised a new LIVE item: RULE K-G4 -- DEBATE RULE VIOLATION (K-G4) -- D1 vs C2 DEFENDER LINK BROKEN counts a witness as unans
+pkgCL 33021 main gemini: items 1, uncured 1 -> REMOVED | W3: removed MATCH
+     G1 UNCURED -- the gate change was not applied
+pkgCL 33021 main chatgpt: items 0, uncured 0 -> kept
+pkgCL 33021 main grok: items 0, uncured 0 -> kept
+pkgCL 33025 main gemini: items 0, uncured 0 -> kept
+pkgCL 33025 main chatgpt: items 7, uncured 3 -> REMOVED | W3: removed (3) MATCH
+     G1 CURED -- the gate change was applied
+     G2 CURED -- the gate change was applied
+     G3 UNCURED -- the gate change raised a new LIVE item: RULE K-G4 -- DEBATE RULE VIOLATION (K-G4) -- D2 vs C4 CHALLENGER LINK BROKEN counts a witness as una
+     G4 UNCURED -- the gate change raised a new LIVE item: RULE K-G4 -- DEBATE RULE VIOLATION (K-G4) -- D3 vs C5 DEFENDER LINK BROKEN counts a witness as unans
+     G5 UNCURED -- the gate change raised a new LIVE item: RULE K-G4 -- DEBATE RULE VIOLATION (K-G4) -- D4 vs C1 CHALLENGER LINK BROKEN counts a witness as una
+     G6 CURED -- the gate change is already in the corrected text (another change wrote the same line; W3 2319)
+     G7 CURED -- the gate change was applied
+pkgCL 33025 main grok: items 3, uncured 2 -> REMOVED | W3: open -
+     G1 CURED -- KEEP: the change stays unapplied
+     G2 UNCURED -- the gate change was not applied
+     G3 UNCURED -- the gate change was not applied
+pkgCL 33025 alt sol: items 0, uncured 0 -> kept
+pkgKY 32998 main gemini: items 0, uncured 0 -> kept
+pkgKY 32998 main chatgpt: items 2, uncured 1 -> REMOVED
+     G1 CURED -- KEEP: the change stays unapplied
+     G2 UNCURED -- KEEP does not cure a RULE K-G4 item (2243): a line must change
+pkgKY 32998 main grok: items 2, uncured 0 -> kept | W3: kept MATCH
+     G1 CURED -- KEEP: change withdrawn (the refused send-back change S19 is dropped, and its contradiction is not in the judge text; W3 2299)
+     G2 CURED -- the gate change was applied and the item is no longer raised
+pkgKY 32998 alt sol: items 1, uncured 1 -> REMOVED
+     G1 UNCURED -- the corrected text still raises it: its GROUND names no pressed witness left unanswered, so the break rests on meaning, and only a FORCED li
+pkgKY 33014 main gemini: items 0, uncured 0 -> kept
+pkgKY 33014 main chatgpt: items 0, uncured 0 -> kept
+pkgKY 33014 main grok: items 0, uncured 0 -> kept
+pkgKY 33014 alt sol: items 0, uncured 0 -> kept
+pkgKY 33020 main gemini: items 2, uncured 0 -> kept | W3: kept MATCH
+     G1 CURED -- the later gate change G2 of this judge rewrote the same line (the last change wins), and the item is no longer raised
+     G2 CURED -- the gate change was applied and the item is no longer raised
+pkgKY 33020 main chatgpt: items 0, uncured 0 -> kept | W3: kept MATCH
+pkgKY 33020 main grok: items 2, uncured 1 -> REMOVED
+     G1 CURED -- KEEP: the change stays unapplied
+     G2 UNCURED -- the gate change raised a new LIVE item: RULE K-G4 -- DEBATE RULE VIOLATION (K-G4) -- D1 vs C2 DEFENDER LINK BROKEN counts a witness as unans
+pkgKY 33021 main gemini: items 1, uncured 1 -> REMOVED | W3: removed MATCH
+     G1 UNCURED -- the gate change was not applied
+pkgKY 33021 main chatgpt: items 0, uncured 0 -> kept
+pkgKY 33021 main grok: items 0, uncured 0 -> kept
+pkgKY 33025 main gemini: items 0, uncured 0 -> kept
+pkgKY 33025 main chatgpt: items 7, uncured 3 -> REMOVED | W3: removed (3) MATCH
+     G1 CURED -- the gate change was applied
+     G2 CURED -- the gate change was applied
+     G3 UNCURED -- the gate change raised a new LIVE item: RULE K-G4 -- DEBATE RULE VIOLATION (K-G4) -- D2 vs C4 CHALLENGER LINK BROKEN counts a witness as una
+     G4 UNCURED -- the gate change raised a new LIVE item: RULE K-G4 -- DEBATE RULE VIOLATION (K-G4) -- D3 vs C5 DEFENDER LINK BROKEN counts a witness as unans
+     G5 UNCURED -- the gate change raised a new LIVE item: RULE K-G4 -- DEBATE RULE VIOLATION (K-G4) -- D4 vs C1 CHALLENGER LINK BROKEN counts a witness as una
+     G6 CURED -- the gate change is already in the corrected text (another change wrote the same line; W3 2319)
+     G7 CURED -- the gate change was applied
+pkgKY 33025 main grok: items 3, uncured 1 -> REMOVED | W3: open -
+     G1 CURED -- KEEP: the change stays unapplied
+     G2 CURED -- the later gate change G3 of this judge rewrote the same line (the last change wins), and the item is no longer raised
+     G3 UNCURED -- the gate change raised a new LIVE item: RULE K-G4 -- DEBATE RULE VIOLATION (K-G4) -- D5 vs C4 DEFENDER LINK BROKEN counts a witness as unans
+pkgKY 33025 alt sol: items 0, uncured 0 -> kept
+
+pkgCL: W3-labelled gate seats MATCH 5, MISMATCH 0; seats with items and no gate label 13
+pkgKY: W3-labelled gate seats MATCH 5, MISMATCH 0; seats with items and no gate label 13
+Not replayed here: 33006 (no node data), cure-stage removals (33014 chatgpt, 33025 gemini).

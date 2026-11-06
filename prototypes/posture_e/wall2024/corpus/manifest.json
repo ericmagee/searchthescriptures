@@ -1,0 +1,152 @@
+{
+ "runs": {
+  "32998": {
+   "texts": 332,
+   "by_src": {
+    "verdict_final": 3,
+    "verdict_gate": 3,
+    "alt_verdict_gate": 1,
+    "flagged_line": 312,
+    "cure_reply": 5,
+    "sendback_reply": 4,
+    "gate_reply": 3,
+    "alternate_reply": 1
+   },
+   "seats": [
+    "grok:verdict_final",
+    "chatgpt:verdict_final",
+    "gemini:verdict_final",
+    "gemini:verdict_gate",
+    "chatgpt:verdict_gate",
+    "grok:verdict_gate",
+    "sol:alt_verdict_gate"
+   ],
+   "fixture": true,
+   "gate_replies": [
+    "chatgpt",
+    "grok",
+    "sol(alt)"
+   ]
+  },
+  "33006": {
+   "texts": 366,
+   "by_src": {
+    "verdict_final": 3,
+    "cure_reply": 5,
+    "flagged_line": 350,
+    "sendback_reply": 4,
+    "alternate_reply": 1,
+    "gate_reply": 3
+   },
+   "seats": [
+    "sol:verdict_final",
+    "chatgpt:verdict_final",
+    "gemini:verdict_final"
+   ],
+   "fixture": false,
+   "gate_replies": []
+  },
+  "33014": {
+   "texts": 362,
+   "by_src": {
+    "verdict_final": 3,
+    "verdict_gate": 3,
+    "alt_verdict_gate": 1,
+    "cure_reply": 5,
+    "flagged_line": 345,
+    "sendback_reply": 4,
+    "alternate_reply": 1
+   },
+   "seats": [
+    "grok:verdict_final",
+    "sol:verdict_final",
+    "gemini:verdict_final",
+    "gemini:verdict_gate",
+    "chatgpt:verdict_gate",
+    "grok:verdict_gate",
+    "sol:alt_verdict_gate"
+   ],
+   "fixture": true,
+   "gate_replies": []
+  },
+  "33020": {
+   "texts": 238,
+   "by_src": {
+    "verdict_final": 3,
+    "verdict_gate": 3,
+    "cure_reply": 4,
+    "flagged_line": 222,
+    "sendback_reply": 3,
+    "gate_reply": 3
+   },
+   "seats": [
+    "grok:verdict_final",
+    "chatgpt:verdict_final",
+    "gemini:verdict_final",
+    "gemini:verdict_gate",
+    "chatgpt:verdict_gate",
+    "grok:verdict_gate"
+   ],
+   "fixture": true,
+   "gate_replies": [
+    "gemini",
+    "chatgpt",
+    "grok"
+   ]
+  },
+  "33021": {
+   "texts": 255,
+   "by_src": {
+    "verdict_final": 3,
+    "verdict_gate": 3,
+    "flagged_line": 241,
+    "cure_reply": 4,
+    "sendback_reply": 3,
+    "gate_reply": 1
+   },
+   "seats": [
+    "grok:verdict_final",
+    "chatgpt:verdict_final",
+    "gemini:verdict_final",
+    "gemini:verdict_gate",
+    "chatgpt:verdict_gate",
+    "grok:verdict_gate"
+   ],
+   "fixture": true,
+   "gate_replies": [
+    "gemini"
+   ]
+  },
+  "33025": {
+   "texts": 356,
+   "by_src": {
+    "verdict_final": 3,
+    "verdict_gate": 3,
+    "alt_verdict_gate": 1,
+    "flagged_line": 337,
+    "cure_reply": 5,
+    "sendback_reply": 4,
+    "gate_reply": 2,
+    "alternate_reply": 1
+   },
+   "seats": [
+    "grok:verdict_final",
+    "chatgpt:verdict_final",
+    "sol:verdict_final",
+    "gemini:verdict_gate",
+    "chatgpt:verdict_gate",
+    "grok:verdict_gate",
+    "sol:alt_verdict_gate"
+   ],
+   "fixture": true,
+   "gate_replies": [
+    "chatgpt",
+    "grok"
+   ]
+  }
+ },
+ "gaps": [
+  "33006: no n8n node data (run crashed); no replay fixture. Texts come from debate_judgments and the log only.",
+  "33006 grok: no stored verdict text (judge removed and no node data); its lines appear only as flagged lines and replies."
+ ]
+}

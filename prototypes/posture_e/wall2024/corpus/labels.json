@@ -1,0 +1,7 @@
+{"_note":"Expected gate-stage outcome per seat, from W3's grade files (/mnt/project-files/w3/grade_<run>.md). removed=true means the rules require removal. stage says where the removal is decided; only 'gate' is replayed by corpus/replay.cjs today.",
+ "32998":{"grok":{"removed":false,"stage":"gate","why":"grade_32998: FALSE removal (KEEP on own refused change, E-APPLY S19 G1)"}},
+ "33006":{"grok":{"removed":false,"stage":"gate","why":"grade_33006 s.3: false removal (duplicate gate changes G5/G6); no node data, not replayable"}},
+ "33014":{"chatgpt":{"removed":false,"stage":"cure","why":"grade_33014: FALSE, CORRECTED RESULT reader fault (pkgCR)"}},
+ "33020":{"gemini":{"removed":false,"stage":"gate","why":"grade_33020: G1, G2 genuine cures"},"chatgpt":{"removed":false,"stage":"gate","why":"grade_33020: G1 KEEP genuine"}},
+ "33021":{"gemini":{"removed":true,"stage":"gate","why":"grade_33021 s.3: gate G1 cure NOT genuine; gemini should have been removed"}},
+ "33025":{"gemini":{"removed":true,"stage":"cure","why":"grade_33025 s.1: GENUINE (K-G4 D1 vs C2), decided at the cure stage (FORCED cure refused), no gate item"},"chatgpt":{"removed":true,"stage":"gate","why":"grade_33025: removal stands for 3 genuine items (G3-G5), not 7","uncured":3},"grok":{"removed":null,"stage":"gate","why":"grade_33025: turns on the K re-read of its regrade (pkgKY gives 1); W3 to rule"}}}
