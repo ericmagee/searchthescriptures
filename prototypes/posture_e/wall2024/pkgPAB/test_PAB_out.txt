@@ -1,0 +1,65 @@
+OK   4 nodes; base (pkgABW/patched) and final shas match
+OK   every node carries src_PAB.js byte for byte, after the ABS module
+OK   parts: "X and does not name Y" splits: the positive part is X
+     {"absence":["does not name the taking"],"positive":"the row names the birth as the bound"}
+OK   parts: an all-absence MEANS has no positive part
+     {"absence":["Jeremiah 22:30 states no such condition"],"positive":""}
+OK   parts: a plain "and" does not split
+     {"absence":[],"positive":"Joseph and Mary came together"}
+OK   parts: "conditional on turning" is positive, "states no such condition" is absence
+     {"absence":["Jeremiah 22:30 states no such condition."],"positive":"that rule is conditional on turning"}
+OK   parts: a MEANS with no absence clause raises nothing
+OK   charges: a CONCEDED (Commitment 5) clause and an unanswered BREAK line are read; a STANDS clause is not
+     [["CONCESSION","premise 6 (challenger)",["Jeremiah 18:8"]],["BREAK","D2 vs C1",["Matthew 1:20"]]]
+OK   cure: KEEP with no quote: UNCURED
+     KEEP quotes no part of the positive MEANS "that rule is conditional on turning" (pkgPAB)
+OK   cure: KEEP quoting the positive part: CURED
+     the reply quotes the positive part of the MEANS: "that rule is conditional on turning" (pkgPAB)
+OK   cure: KEEP quoting only 5 words of it: UNCURED
+     KEEP quotes no part of the positive MEANS "that rule is conditional on turning" (pkgPAB)
+OK   cure: CHANGE TO: RETRACTED: CURED
+     CHANGE TO RETRACTED (pkgPAB)
+OK   cure: CHANGE TO a line still charging Jeremiah 18:8 unanswered: UNCURED
+     CHANGE TO quotes no part of the positive MEANS "that rule is conditional on turning" (pkgPAB)
+OK   cure: CHANGE TO a regrade that no longer charges it: CURED
+     CHANGE TO a line that no longer charges Jeremiah 18:8 as unanswered (pkgPAB)
+OK   cure: no answer: UNCURED
+     no answer to the send-back
+OK   cure: no positive part: KEEP quoting anything: UNCURED
+     the press has no positive part; only RETRACTED or a regrade cures (pkgPAB)
+OK   cure: no positive part: RETRACTED: CURED
+     CHANGE TO RETRACTED (pkgPAB)
+  REPLAY raises:
+   33107 gemini: CONCESSION premise 2 (challenger) on Matthew 1:25 [CR3] positive="the row names the birth as the bound"
+   33149 gemini: CONCESSION premise 6 (challenger) on Jeremiah 18:8 [CR3] positive="that rule is conditional on turning"
+OK   replay: exactly 2 raises, 33107 gemini premise 2 on Matthew 1:25 and 33149 gemini premise 6 on Jeremiah 18:8
+  == 33040: items pkgABW 71 -> pkgPAB 71; E-PAB []
+OK   33040: every pkgABW item is sent unchanged
+OK   33040: E-PAB items are []
+  == 33060: items pkgABW 33 -> pkgPAB 33; E-PAB []
+OK   33060: every pkgABW item is sent unchanged
+OK   33060: E-PAB items are []
+  == 33083: items pkgABW 73 -> pkgPAB 73; E-PAB []
+OK   33083: every pkgABW item is sent unchanged
+OK   33083: E-PAB items are []
+  == 33107: items pkgABW 58 -> pkgPAB 59; E-PAB [gemini S22 CONCESSION premise 2 (challenger) on Matthew 1:25]
+OK   33107: every pkgABW item is sent unchanged
+OK   33107: E-PAB items are ["gemini CONCESSION premise 2 (challenger) on Matthew 1:25"]
+OK   33107: the gemini send-back states the press absence rule and its cure
+  == 33129: items pkgABW 46 -> pkgPAB 46; E-PAB []
+OK   33129: every pkgABW item is sent unchanged
+OK   33129: E-PAB items are []
+  == 33149: items pkgABW 59 -> pkgPAB 60; E-PAB [gemini S23 CONCESSION premise 6 (challenger) on Jeremiah 18:8]
+OK   33149: every pkgABW item is sent unchanged
+OK   33149: E-PAB items are ["gemini CONCESSION premise 6 (challenger) on Jeremiah 18:8"]
+OK   33149: the gemini send-back states the press absence rule and its cure
+OK   Send_Back_Record.js: S1 KEEP no quote UNCURED and counted once (drv_uncured 1, AUDIT v44); S2 KEEP quoting the positive part CURED; S3 RETRACTED CURED
+     [AUDIT v44: PRESS ABSENCE UNCURED (pkgPAB; Commitment 3, Commitment 5) -- SEAT: gemini; ITEMS: S1 (E-PAB CONCESSION premise 6 (challenger) on Jeremiah 18:8: KEEP quotes no part of the positive MEANS "that rule is conditional on turning" (pk | UNCURED,CURED,CURED
+OK   Send_Back_Record.js: a silent E-PAB item is counted once, by silence (pkgSBS), not again by pkgPAB
+     drv 1 pab []
+OK   Alt_Send_Back_Record.js: S1 KEEP no quote UNCURED and counted once (drv_uncured 1, AUDIT v44); S2 KEEP quoting the positive part CURED; S3 RETRACTED CURED
+     [AUDIT v44: PRESS ABSENCE UNCURED (pkgPAB; Commitment 3, Commitment 5) -- SEAT: gemini; ITEMS: S1 (E-PAB CONCESSION premise 6 (challenger) on Jeremiah 18:8: KEEP quotes no part of the positive MEANS "that rule is conditional on turning" (pk | UNCURED,CURED,CURED
+OK   Alt_Send_Back_Record.js: a silent E-PAB item is counted once, by silence (pkgSBS), not again by pkgPAB
+     drv 1 pab []
+
+36 OK, 0 FAIL

@@ -1,0 +1,7 @@
+// scan: every pkgPAB raise per run and judge (rounds from Panel Cure Normalize, judge text from Panel Cure Check bodies)
+const fs=require('fs');const absSrc=(()=>{const s=fs.readFileSync('pkgABW/patched/Send_Back_Build.js','utf8');const i=s.indexOf('const ABS=(()=>{');return s.slice(i,s.indexOf('})();',i)+5);})();
+const PAB=new Function(absSrc+'\n'+fs.readFileSync('pkgPAB/src_PAB.js','utf8')+'\nreturn PAB;')();const I=(run,n)=>{const f='/mnt/project-files/wall2024/inputs/'+run+'_'+n+'.json';return fs.existsSync(f)?(r=>((r.main||(r.data&&r.data.main))[0]).map(x=>x.json))(JSON.parse(fs.readFileSync(f,'utf8'))[0]):null;};
+module.exports={PAB,I};if(require.main===module){for(const run of process.argv.slice(2)){let R=null;for(const k of [1,2,3]){const v=I(run,'Panel_Cure_Normalize_'+k);if(v&&v[0].cure&&v[0].cure.rounds){R=v[0].cure.rounds;break;}}
+ const P=PAB.presses(R);const ab=P.filter(p=>PAB.parts(p.means).absence.length);console.log('== '+run+': '+P.length+' press rows, '+ab.length+' with an absence clause'+(ab.length?': '+ab.map(p=>p.ref+' ['+p.round+']').join(', '):''));
+ for(const b of I(run,'Panel_Cure_Check')[0].bodies){const p=(typeof b==='string'?JSON.parse(b):b).payload;const t=String(p.verdict_raw).replace(/\\n/g,'\n');const ch=PAB.charges(t);const r=PAB.check(t,R);
+  console.log('   '+p.judge_seat.padEnd(8)+' unanswered charges '+ch.length+' ['+ch.map(c=>c.label+':'+c.refs.join('/')).join('; ')+'] raised '+r.length);for(const x of r)console.log('      RAISE '+x.why);}}}
