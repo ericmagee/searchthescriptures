@@ -1,0 +1,33 @@
+{
+ "base": "pkgOGR/patched 4d5d9ca + live ff8967bb",
+ "nodes": [
+  {
+   "file": "C4G_Build.js",
+   "base": "new",
+   "base_sha": null,
+   "final_sha": "3562bc6a8adb160d",
+   "edits": 0
+  },
+  {
+   "file": "C4G_Extract.js",
+   "base": "new",
+   "base_sha": null,
+   "final_sha": "867785c133bd97a4",
+   "edits": 0
+  },
+  {
+   "file": "Build_Synthesis.js",
+   "base": "pkgOGR/patched",
+   "base_sha": "ed06903c77ed3a82",
+   "final_sha": "b2fdfa7d93cec7c6",
+   "edits": 1
+  },
+  {
+   "file": "Failure_Salvage.js",
+   "base": "prewrite_kgw_7796fc67.json",
+   "base_sha": "f68b864d277e2a64",
+   "final_sha": "d77005357375adaa",
+   "edits": 1
+  }
+ ]
+}

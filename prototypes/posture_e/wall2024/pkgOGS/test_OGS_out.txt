@@ -1,0 +1,18 @@
+OK   4 nodes; shas match the plan
+OK   C4 Extract: no section, all 17 grants missing
+OK   C4G Build: resend, same seat and model, the conversation continued (assistant = the first round, user = the note naming the faults)
+OK   C4G Extract: a corrected reply is kept (second), its check passes, the round fields are its own
+     {"resent":true,"kept":"second","why":"faults 17 -> 0","first_check":{"section":false,"missing":["G1","G2","G3","G4","G5","G6","G7","G8","G9","G10","G11","G12","G13","G14","G15","G16","G17"],"misquoted
+OK   C4G Extract: the section's quoted verses are not NEW IN CLOSE (same new-press list as the first round)
+     ["Isaiah 28:10"] vs ["Isaiah 28:10"]
+OK   C4G Extract: a reply that does not improve keeps the first round
+OK   C4G Extract: a failed re-call keeps the first round
+OK   C4G Extract: an empty re-call reply keeps the first round (no throw)
+     the re-call reply was not read: VALIDATION: C4 (CHALLENGER, openai m) returned no text: finish_reason=stop; output_tokens=1; reasoning_tokens=0; reasoning_chars=0. run_token=t
+OK   C4G Build: a passing section is not sent back (resend false, no call)
+OK   C4G Extract: the pass-through item returns C4 Extract's round unchanged
+OK   Build Synthesis reads the close round from C4G Extract
+OK   Failure Salvage reads C4G Extract, falling back to C4 Extract
+OK   runner: C4G Extract names C4 Extract, C4G Build and every node C4 Extract reads, as literal $() calls
+     C4 Extract, C4G Build, Init Seats, Init with Guards, C1 Extract, C2 Extract, C3 Extract, D1 Extract, D2 Extract, D3 Extract, D4 Extract
+13 OK, 0 FAIL
