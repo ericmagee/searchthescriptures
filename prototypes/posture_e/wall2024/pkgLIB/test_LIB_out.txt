@@ -27,7 +27,31 @@ OK   the stubs read only $('Shared Library') and the node's own $/$input (no oth
      Panel Payloads                 real output on 0 of 6 runs; stops in both on: node not saved: Panel Build
 OK   every node run gives byte-identical output (or the identical error) full vs stub
 OK   the cure path nodes produce real output on the saved runs (not only errors)
-   timing, Panel Cure Check on 33040, median of 5 fresh processes: full source 55.6 ms, stub 59.9 ms (+4.3 ms per node run)
+   run 33040 with all saved node outputs: 22 nodes, 22 identical, 14 with real output
+     Alt Gate Build                 $input (none saved)              SAME output 96 bytes
+     Alt Gate Record                $input (none saved)              SAME stops: node not saved: Alt Send Back Record
+     Alternate Build                $input (none saved)              SAME stops: node not saved: Resolve Seats
+     Alternate Cure Build           $input Alternate Payloads        SAME output 401404 bytes
+     Alternate Cure Normalize       $input Alternate Cure Build      SAME output 153378 bytes
+     Alternate Merge                $input Alt Gate Record           SAME stops: node not saved: Alt Seated
+     Alternate Merge Seat           $input Alternate Cure Normalize  SAME output 4700352 bytes
+     Alternate Payloads             $input (none saved)              SAME stops: node not saved: Panel Check
+     Cure Build                     $input (none saved)              SAME stops: node not saved: Build Independent Verdict
+     Cure Check                     $input (none saved)              SAME stops: node not saved: Extract Independent Verdict
+     Cure Normalize                 $input (none saved)              SAME output 6 bytes
+     Extract Independent Verdict    $input (none saved)              SAME stops: node not saved: Build Independent Verdict
+     Gate Build                     $input Send Back Record          SAME output 1412 bytes
+     Gate Record                    $input Gate Build                SAME output 2135530 bytes
+     Panel Cure Build 1             $input (none saved)              SAME output 386289 bytes
+     Panel Cure Build 2             $input Panel Cure Normalize 1    SAME output 395867 bytes
+     Panel Cure Build 3             $input Panel Cure Normalize 2    SAME output 383686 bytes
+     Panel Cure Check               $input Panel Cure Normalize 3    SAME output 1534575 bytes
+     Panel Cure Normalize 1         $input Panel Cure Build 1        SAME output 152459 bytes
+     Panel Cure Normalize 2         $input Panel Cure Build 2        SAME output 158799 bytes
+     Panel Cure Normalize 3         $input Panel Cure Build 3        SAME output 153491 bytes
+     Panel Payloads                 $input Panel Build               SAME stops: node not saved: Panel Check
+OK   run 33040, all saved node outputs: every node identical full vs stub
+   timing, Panel Cure Check on 33040, median of 5 fresh processes: full source 48.1 ms, stub 58.0 ms (+10.0 ms per node run)
    size: the 22 nodes hold 6886265 bytes of code before, 563580 after (Shared Library 422213 included)
 OK   the stub adds under 50 ms per node run
-7 OK, 0 FAIL
+8 OK, 0 FAIL
