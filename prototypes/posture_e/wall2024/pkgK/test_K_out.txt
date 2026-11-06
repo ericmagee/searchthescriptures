@@ -1,0 +1,22 @@
+OK   K1 Init with Guards: TEXT AUTHORITY ahead of LAYER in both seat profiles (oracle and scholar), for both roles (one build() serves DEFENDER and CHALLENGER)
+OK   K1b the existing LXX sentence stays
+OK   K2 Accept Check: HEADS 11 -> 12, headings 1-11 identical
+OK   K2b all 12 PART2 nodes carry 12 headings
+OK   K2c both __JAGR agreement copies carry Commitment 12
+OK   Lib: the same K-KJV library in all 17 nodes (17)
+OK   K4 "a young woman shall conceive" (Isaiah 7:14): 1 item, the cure line states the KJV words
+OK   K5 the exact quote: 0 items
+OK   K6 a line naming RSV: listed in the report, 0 items
+OK   Z2 case, punctuation and the margin reading: 0 items
+OK   NC a verse this run did not read: NOT CHECKED, 0 items
+OK   R2 rule 2: text after a trailing ellipsis that is not in the verse is dropped
+OK   R3 rule 3: a quote with under half its words in the verse is not a verse quote
+OK   K7a cure quoting the KJV words: CURED
+OK   K7b a WITHDRAWN line naming the reference: CURED
+OK   K7c no KJV words, no withdrawal: UNCURED (TRIAL)
+OK   K7d all 14 cure nodes: K-KJV in cureLabel, cureAsk and cureVerdicts
+OK   Maps: RULE_C/RC K-KJV -> 12 in 13 nodes
+OK   ENF_STATUS K-KJV TRIAL in 17 nodes
+OK   Z3/Z4 reverse edit: undoing exactly the listed insertions gives the live text back in all 27 nodes
+OK   live_sha equals this fetch for all nodes
+ALL OK
