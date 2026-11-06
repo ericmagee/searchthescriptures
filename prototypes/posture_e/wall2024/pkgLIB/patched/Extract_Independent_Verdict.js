@@ -5,4 +5,4 @@ const __P=[[0,194],87,[195,201],87,[202,242],87,[243,312],62,[313,328],62,[329,4
 const __LT=$('Shared Library').params.jsCode;const __L=JSON.parse(__LT.slice(__LT.indexOf('\n/*LIB*/')+8,__LT.lastIndexOf('\n/*END*/')));
 const __S=__P.map(e=>typeof e==='number'?__L[e]:typeof e[0]==='string'?e[0]:__L.slice(e[0],e[1]+1).join('\n')).join('\n');
 if(__S.length!==__N)throw new Error('pkgLIB: rebuilt source is '+__S.length+' bytes, expected '+__N+' (Shared Library does not match this stub)');
-return await new (Object.getPrototypeOf(async function(){}).constructor)('$','$input',__S)($,$input);
+return await new Function('$','$input','return (async()=>{\n'+__S+'\n})();')($,$input); /* the n8n task runner refuses the AsyncFunction constructor (probe 11:45 CST): a plain Function returns an async IIFE */

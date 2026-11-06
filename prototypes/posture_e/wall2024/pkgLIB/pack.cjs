@@ -28,7 +28,7 @@ const STUBHEAD=(name,s)=>"// pkgLIB stub: \""+name+"\". The node's full code (sh
 const STUBRUN="const __LT=$('Shared Library').params.jsCode;const __L=JSON.parse(__LT.slice(__LT.indexOf('\\n/*LIB*/')+8,__LT.lastIndexOf('\\n/*END*/')));\n"
  +"const __S=__P.map(e=>typeof e==='number'?__L[e]:typeof e[0]==='string'?e[0]:__L.slice(e[0],e[1]+1).join('\\n')).join('\\n');\n"
  +"if(__S.length!==__N)throw new Error('pkgLIB: rebuilt source is '+__S.length+' bytes, expected '+__N+' (Shared Library does not match this stub)');\n"
- +"return await new (Object.getPrototypeOf(async function(){}).constructor)('$','$input',__S)($,$input);\n";
+ +"return await new Function('$','$input','return (async()=>{\\n'+__S+'\\n})();')($,$input); /* the n8n task runner refuses the AsyncFunction constructor (probe 11:45 CST): a plain Function returns an async IIFE */\n";
 fs.mkdirSync('pkgLIB/patched',{recursive:true});const plan={new_node:{name:'Shared Library',type:'n8n-nodes-base.code',typeVersion:2,parameters:{jsCode:'<pkgLIB/patched/Shared_Library.js>'},connections:'none: not wired to any node',note:'the name must stay exactly Shared Library; the 22 stubs read it by name'},base:BASE,library:{file:'Shared_Library.js',lines:LIB.length,json_sha:sha(LIBJSON),bytes:LIBCODE.length},nodes:[]};
 fs.writeFileSync('pkgLIB/patched/Shared_Library.js',LIBCODE);
 F.forEach((f,k)=>{const P=[];for(const l of LINES[k]){if(cnt.get(l)>=2){const i=IDX.get(l);const t=P[P.length-1];

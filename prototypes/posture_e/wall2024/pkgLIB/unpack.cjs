@@ -2,7 +2,7 @@
 // Usage (from wall2024/): node pkgLIB/unpack.cjs [stub dir, default pkgLIB/patched] [out dir, default pkgLIB/unpacked]
 // Also usable as a module: require('./pkgLIB/unpack.cjs').rebuild(stubText, libText) -> full source.
 const fs=require('fs');
-function rebuild(stub,lib){const i=stub.indexOf('\nreturn await new (');if(i<0)throw new Error('not a pkgLIB stub');
+function rebuild(stub,lib){const i=stub.indexOf('\nreturn await new Function(');if(i<0)throw new Error('not a pkgLIB stub');
  const $=n=>{if(n!=='Shared Library')throw new Error('stub read '+n+' before rebuilding');return {params:{jsCode:lib}};};
  return new Function('$',stub.slice(0,i)+'\nreturn __S;')($);}
 module.exports={rebuild};
