@@ -1,0 +1,43 @@
+// judge_fix7 J5 (run 32302: the challenger's link round had no "LINK n:" block and was headed "CLOSE ROUND (challenger)"; K-LB could not read
+// it and no check said so): the LINK-ROUND FORMAT CHECK, one text in D3 Extract, C3 Extract, Build Save Body, Panel Build, Build Independent
+// Verdict and Failure Salvage. A link round is a format fault when it holds no "LINK n:" block (n a number or "none", a bracketed note allowed
+// before the colon), or when its first heading names another round (the close, the opening, round 1, 2 or 4, the final words or defense) and
+// not the link round or round 3. The fault is recorded in review_notes and shown to the judges as one line after the round; it grades nothing.
+const LRF=(()=>{const LINK=/^[ \t>*#_-]*LINK\s+(?:\d+|none)\b[^\n:]{0,80}:/mi;
+ const head=t=>{for(const l of String(t||'').split('\n')){const s=l.replace(/[*_#>`]+/g,'').trim();if(!s||/^(?:DEFENDER|CHALLENGER)\b[^\n]*--\s*ROUND\s*\d+,/i.test(s))continue;return s.slice(0,120);}return '';}; // the system's round label, as the record stores it, is skipped
+ const OTHER=/\b(?:CLOS(?:E|ING)\s+(?:ROUND|STATEMENT|WORDS)|OPENING|FINAL\s+(?:ROUND|WORDS|DEFEN[CS]E)|ROUND\s*(?:1|2|4|ONE|TWO|FOUR)\b)/i;
+ const check=t=>{const T=String(t||'');if(!T.trim())return null;const h=head(T);const why=[];
+  if(!LINK.test(T))why.push('it holds no "LINK n:" block');
+  if(OTHER.test(h)&&!/\bLINK\s+ROUND\b|\bROUND\s*(?:3|THREE)\b/i.test(h))why.push('it is headed "'+h.replace(/["\[\]]/g,'')+'", as another round');
+  return why.length?{fault:true,why,head:h}:null;};
+ const note=(t,sd)=>{const c=check(t);return c?'\n\n[LINK-ROUND FORMAT CHECK -- computed by the system, not by a model: ['+(sd==='D'?'CR3':'DR3')+'] does not keep the link-round form: '+c.why.join('; ')+'. A format fault only: it grades nothing; grade the round on its text.]':'';};
+ const audit=(t,sd)=>{const c=check(t);return c?'[AUDIT v27: LINK-ROUND FORMAT CHECK ('+(sd==='D'?'D3':'C3')+') -- the '+(sd==='D'?'defender':'challenger')+'\'s link round does not keep the link-round form: '+c.why.join('; ').replace(/[\[\]]/g,'')+'. A format fault, recorded; no automatic grading. REVIEW THIS ROW.]':'';};
+ return {check,note,audit};})();
+// ORDER D (BB-6036): a call or check that fails after Init keeps every round produced. This node builds a contested row (saved unless the save itself failed) and a RUN INCOMPLETE Drive file; Salvage Stop then fails the run.
+const S=$('Init Seats').first().json;const TEST=($execution.mode==='test');const TOK=TEST?String(S.run_token).replace(/^ODV1-/,'ODV1-TEST-'):S.run_token;
+const e=($input.first().json||{}).error;const msg=typeof e==='string'?e:((e&&(e.message||e.description))?String(e.message||'')+' '+String(e.description||''):JSON.stringify(e||{}));
+let node='unknown';try{node=$prevNode.name;}catch(x){}
+const failed_msg=String(msg).trim().slice(0,400);$execution.customData.set('call_failed',node);
+const save_failed=(node==='Save to DB'||node==='Check Save');
+// first(0): these nodes also feed this node through their error output (index 1); read their success output.
+const P=(n,f)=>{try{return f($(n).first(0).json);}catch(x){return null;}};
+let RS={};try{RS=$('Resolve Seats').first().json;}catch(x){RS={};}
+const R={claude_r1:P('D1 Extract',j=>j.labelled),engine_r1:(P('C1B Extract',j=>j.labelled)||P('C1 Extract',j=>j.labelled)),claude_r2:(P('D2B Extract',j=>j.labelled)||P('D2 Extract',j=>j.labelled)),engine_r2:(P('C2B Extract',j=>j.labelled)||P('C2 Extract',j=>j.labelled)),engine_r3:(P('D3B Extract',j=>j.labelled)||P('D3 Extract',j=>j.labelled)),challenger_r3:P('C3B Extract',j=>j.labelled)||P('C3G Extract',j=>j.labelled)||P('C3 Extract',j=>j.labelled) /* pkgOAN */,defender_r4:(P('D4B Extract',j=>j.labelled)||P('D4 Extract',j=>j.labelled)),challenger_r4:P('C4B Extract',j=>j.labelled)||P('C4G Extract',j=>j.labelled)||P('C4 Extract',j=>j.labelled)} /* pkgOGS */; // judge_fix3 B4
+const syn=P('Extract Diagnostic',j=>j.synthesis)||P('Final Output',j=>j.synthesis);const ivr=P('Cure Check',j=>j.independent_verdict_raw)||P('Extract Independent Verdict',j=>j.independent_verdict_raw);const vt=P('Cure Check',j=>j.verdict_tag)||P('Extract Independent Verdict',j=>j.verdict_tag); // 5B (BB-6969): the cure report rides the salvage row
+let body;if(save_failed){body=Object.assign({},P('Build Save Body',j=>j.saveBody)||{});}else{body={engine:S.challenger.engine,variant:'ORACLE_DEBATE_V1',topic:S.topic,debate_date:S.sd,defender_engine:S.defender.engine,defender_profile:S.defender.profile,defender_model:(RS.defender||{}).model||null,challenger_engine:S.challenger.engine,challenger_profile:S.challenger.profile,challenger_model:(RS.challenger||{}).model||null,claude_model:(RS.defender||{}).model||null,engine_model:(RS.challenger||{}).model||null,synthesis:syn||null,independent_verdict_raw:ivr||null,framework_verdict:vt||null};Object.assign(body,R);}
+const QR='RUN INCOMPLETE: failed at node "'+node+'": '+failed_msg.slice(0,300)+'. Only what was produced before the failure is recorded; no verdict stands on this row.';
+body.run_token=TOK;body.data_class='contested';body.quarantine_reason=QR;body.review_notes=(body.review_notes?body.review_notes+' ':'')+'['+QR+' REVIEW THIS ROW.]';delete body.queue_id;body.framework_verdict=null;
+// judge_fix6 H7 (run 32300: a failed run's partial row lost the [CACHE DIAG ...] lines Build Save Body writes): each round Extract's cache_diag line
+// is copied into review_notes, in round order, unless already there (a failed save carries Build Save Body's notes).
+{const cd=[];['D1','C1','D2','C2','D3','C3','D4','C4'].forEach(r=>{const x=P(r+' Extract',j=>j.cache_diag);if(typeof x==='string'&&x&&!String(body.review_notes||'').includes(x))cd.push(x);});
+ if(cd.length)body.review_notes=(body.review_notes?body.review_notes+' ':'')+cd.join(' ');}
+// judge_fix7 J5: the link-round format faults the D3 and C3 Extracts recorded, unless already there.
+{const lf=[];[['D3','D','cr3'],['C3','C','dr3']].forEach(([r,sd])=>{const t=P(r+'B Extract',j=>j.raw)||(r==='C3'?P('C3G Extract',j=>j.raw):null)||P(r+' Extract',j=>j.raw); /* pkgBAR */ /* pkgOAN */const a=typeof t==='string'?LRF.audit(t,sd):'';if(a&&!String(body.review_notes||'').includes(a))lf.push(a);});
+ if(lf.length)body.review_notes=(body.review_notes?body.review_notes+' ':'')+lf.join(' ');}
+const NAME={claude:'Claude',chatgpt:'ChatGPT',gemini:'Gemini',grok:'Grok',mimo:'MiMo',haiku:'Claude Haiku',opus:'Claude Opus',glm:'GLM',qwen:'Qwen',deepseek:'DeepSeek'};const nm=x=>NAME[x]||x||'?';const D=nm(S.defender.engine),C=nm(S.challenger.engine);
+let t='# TRUTH App Debate (RUN INCOMPLETE)\n\n> **RUN INCOMPLETE: the run failed at node "'+node+'".** '+failed_msg+'\n>\n> '+(save_failed?'The database save itself failed, so this file is the only copy of the text below.':'Everything produced before the failure is below; the same text is saved to the database as a contested row for this run token.')+' A section marked "(not produced)" was never written. No verdict is given for this run.\n\n';
+t+='**Topic:** '+S.topic+'\n\n**Defender:** '+D+' ('+(body.defender_model||'model not recorded')+'), '+S.defender.profile+'.\n\n**Challenger:** '+C+' ('+(body.challenger_model||'model not recorded')+'), '+S.challenger.profile+'.\n\n**Run token:** '+TOK+'\n\n---\n\n';
+[['Round 1 - Defender ('+D+')',body.claude_r1],['Round 1 - Challenger ('+C+')',body.engine_r1],['Round 2 - Defender ('+D+')',body.claude_r2],['Round 2 - Challenger ('+C+')',body.engine_r2],['Round 3 - Defender ('+D+'): link round',body.engine_r3],['Round 3 - Challenger ('+C+'): link round',body.challenger_r3],['Round 4 - Defender ('+D+'): close round',body.defender_r4],['Round 4 - Challenger ('+C+'): close round',body.challenger_r4]].forEach(x=>{t+='## '+x[0]+'\n\n'+(x[1]||'(not produced)')+'\n\n---\n\n';});
+t+='## Synthesis\n\n'+(body.synthesis||'(not produced)')+'\n\n---\n\n## Single judge\n\n'+(body.independent_verdict_raw||'(not produced)')+'\n';
+const fileName=(TEST?'TEST - ':'')+'INCOMPLETE - Debate ['+D+' v '+C+'] - '+S.topic+' - '+String(S.sd||'')+'.md';
+return [{json:{salvage:true,failed_node:node,failed_msg,save_failed,run_token:TOK,saveBody:body,md:t,fileName}}];
