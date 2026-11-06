@@ -1435,6 +1435,7 @@ function cureCountHeld(reply,v,cs,seat){const o=cureLines(reply&&reply.ok?reply.
   const nc=(v||[]).filter(x=>x.side===side&&(x.rule==='K-G1'||x.rule==='K-G3'||x.rule==='K-G6'||x.rule==='K-G7'||x.rule==='K-G8'||x.rule==='K-G9'||x.rule==='K-G10'||(x.rule==='K-P'&&x.premise!=null)||x.rule==='K-LB')&&x.status!=='CURED');if(!nc.length)continue;
   lines.push('[AUDIT v21: CORRECTED COUNT NOT WRITTEN -- '+(seat?'SEAT: '+seat+'; ':'')+'SIDE: '+side+'; CORRECTED COUNT: '+ns[0]+'; NOT CURED: '+cureSafe(nc.map(x=>x.rule+' '+(x.rule==='K-G3'?x.side+' STANDING':x.link)).join(', '))+'; written only when every count or standing item of the side is CURED (BB-7417)]');}
  return lines;}
+function cureSupHead(raw,o,n){let s=String(raw||'');if(!o||!n||o===n||s.includes('SUPERSEDED BY CURE: verdict'))return s;const a=s.indexOf('{');const b=a<0?-1:rcObjEnd(s,a);if(b<0)return s;const enc=x=>JSON.stringify(String(x)).slice(1,-1);const j=s.slice(a,b).replace(/("reasoning"\s*:\s*")/,m=>m+enc('SUPERSEDED BY CURE: verdict '+o+' to '+n+'; see the cure lines below\n'));return s.slice(0,a)+j+s.slice(b);} // WALL-2134 Part 2b (W2)
 const cureCorrLine=(seat,orig,c)=>'[AUDIT v21: CORRECTED RESULT -- '+(seat?'SEAT: '+seat+'; ':'')+'ORIGINAL: '+orig+'; COUNTED: '+c.word+' ('+c.tag+'); RETRACTED: '+c.links.join(', ')+']';
 const cureSafe=s=>String(s).replace(/\[/g,'(').replace(/\]/g,')').replace(/;(\s*(?:SEAT|ITEM|RULE|RESULT|KINDS|WHY|LINE|STATEMENT|JUDGE STATEMENT):)/g,',$1');
 // judge_fix4 F1 (run 32266: DeepSeek retracted "D6 vs C4 (Matthew 1:25): CHALLENGER LINK BROKEN", the only ground of its CHALLENGE STANDING
@@ -1567,7 +1568,7 @@ AP.forEach((r,k)=>{const a=r.alt;if(!r.ok){tried.push({removed_seat:a.removed_se
  if((r.drv||[]).length){const c=CN.find(x=>x.cure&&x.cure.who==='alternate'&&x.cure.k===k)||null;
   v=cureVerdicts(r.drv,c?c.reply:{ok:false,why:'no cure call was made for this alternate'},c&&c.cure?c.cure.broken:null,c&&c.cure?c.cure.rounds:null);
   b.payload.drv_uncured=enfUncured(v); /* judge_fix6 H8 */b.payload.verdict_raw=b.payload.verdict_raw+'\n'+cureReport(a.seat,v).concat(cureProse(a.seat,c?c.reply:null)).join('\n');
-  const cc=cureCorrected(c?c.reply:null,v);if(cc){b.payload.verdict_raw=b.payload.verdict_raw+'\n'+cureCorrLine(a.seat,b.payload.verdict_tag,cc);b.payload.verdict_tag=cc.word;}
+  const cc=cureCorrected(c?c.reply:null,v);if(cc){b.payload.verdict_raw=cureSupHead(b.payload.verdict_raw,b.payload.verdict_tag,cc.word)+'\n'+cureCorrLine(a.seat,b.payload.verdict_tag,cc);b.payload.verdict_tag=cc.word;}
   const cs=cureSet(c?c.reply:null,v);if(cs)b.payload.verdict_raw=b.payload.verdict_raw+'\n'+cureSetApply(b.payload,cs,a.seat).join('\n');
   {const ch=cureCountHeld(c?c.reply:null,v,cs,a.seat);if(ch.length)b.payload.verdict_raw=b.payload.verdict_raw+'\n'+ch.join('\n');}
   // judge_fix4 F1: recomputed from the cured lines, before the seat is seated or refused.

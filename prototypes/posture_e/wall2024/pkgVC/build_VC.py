@@ -11,6 +11,12 @@ AM=[("const panel_effective=summary.map(x=>x.seat).sort();\nreturn [{json:{...PP
  "try{const __PV=$('Panel Payloads').first().json;const __T=new Date().toISOString();(__PV.vc_single||[]).forEach(x=>enforcer_log.push({run_token:S.run_token,seat:'single',seat_role:'single',judge_model:x.judge_model||null,kind:'cure',rule:'K-CON',item:x.item,flagged_line:x.flagged_line,prompt_sent:null,full_reply:null,reply_error:null,response_line:null,cure_status:'UNCURED',cure_reason:'TRIAL rule (recorded only, after the panel; no call was made; it removes no seat): '+x.mark,at:__T}));}catch(e){} // WALL-2024 Part 1 (W2): the single judge's missed verified contradiction, record-only\nconst panel_effective=summary.map(x=>x.seat).sort();\nreturn [{json:{...PP,enforcer_log")]
 CR_A="   const cr=(F0&&F0.verdict_tag&&F0.verdict_tag!==F.verdict_tag)?"
 CR_B="   if(F0&&F0.verdict_tag&&F0.verdict_tag!==F.verdict_tag&&!j.includes('SUPERSEDED BY CURE: verdict')){const __h='SUPERSEDED BY CURE: verdict '+F0.verdict_tag+' to '+F.verdict_tag+'; see the cure lines below';j=j.replace(/(\"reasoning\"\\s*:\\s*\")/,m=>m+enc(__h+'\\n'));} /* WALL-2134 (W2, Part 2): the stored reasoning opens with the change the cure made */\n"+CR_A
+# Part 2b (WALL-2024, run 32949 failure): the verdict change in 32949 chatgpt came by cureCorrected (the judge's own RESULT line in its cure
+# reply), which sets verdict_tag in Panel Cure Check and Alternate Merge without cureRewrite. The header is written on that path too.
+SH_DEF="function cureSupHead(raw,o,n){let s=String(raw||'');if(!o||!n||o===n||s.includes('SUPERSEDED BY CURE: verdict'))return s;const a=s.indexOf('{');const b=a<0?-1:rcObjEnd(s,a);if(b<0)return s;const enc=x=>JSON.stringify(String(x)).slice(1,-1);const j=s.slice(a,b).replace(/(\"reasoning\"\\s*:\\s*\")/,m=>m+enc('SUPERSEDED BY CURE: verdict '+o+' to '+n+'; see the cure lines below\\n'));return s.slice(0,a)+j+s.slice(b);} // WALL-2134 Part 2b (W2)\n"
+SH_A="const cureCorrLine=(seat,orig,c)=>"
+CC_A="if(cc){b.payload.verdict_raw=b.payload.verdict_raw+'\\n'+cureCorrLine("
+CC_B="if(cc){b.payload.verdict_raw=cureSupHead(b.payload.verdict_raw,b.payload.verdict_tag,cc.word)+'\\n'+cureCorrLine("
 plan={'live_version':live['versionId'],'nodes':[]};bad=[]
 def one(c,a,b,nm):
     if c.count(a)!=1: bad.append(nm+' anchor x'+str(c.count(a))+': '+a[:60]);return c
@@ -26,6 +32,8 @@ for n in live['nodes']:
         ed.append('P1:single row')
     if 'function cureRewrite(' in c0:
         c=one(c,CR_A,CR_B,n['name']);ed.append('P2:superseded')
+    if CC_A in c0:
+        c=one(c,SH_A,SH_DEF+SH_A,n['name']);c=one(c,CC_A,CC_B,n['name']);ed.append('P2b:superseded on cureCorrected')
     if c!=c0:
         open('/tmp/_c.js','w').write('(async function(){'+c+'\n})')
         r=subprocess.run(['node','-e',"new Function('return '+require('fs').readFileSync('/tmp/_c.js','utf8'))"],capture_output=True,text=True)
