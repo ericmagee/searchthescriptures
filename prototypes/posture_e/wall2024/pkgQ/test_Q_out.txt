@@ -1,0 +1,34 @@
+OK   14 cure nodes; hashes match base and patched
+OK   gemini 32973: K-W status unchanged on all 12 items
+OK   gemini DEFENDER CR3 LINK 1 #3 stays CURED, by STANDS WITHOUT IT on its RESPONSE line (not by its STATEMENT prose "conceded")
+OK   chatgpt 32973: K-W status unchanged on all 12 items
+     CONCEDED cure kept: chatgpt DEFENDER CR2 no link heading #1 | [
+     CONCEDED cure kept: chatgpt DEFENDER CR3 LINK 2 #4 | [
+     CONCEDED cure kept: chatgpt DEFENDER CR3 LINK 3 #8 | [
+     CONCEDED cure kept: chatgpt CHALLENGER DR3 LINK 4 #2 | [
+OK   grok 32973: K-W status unchanged on all 12 items
+OK   single 32973: K-W status unchanged on all 12 items
+     CONCEDED cure kept: single DEFENDER CR2 no link heading #1 | [
+     CONCEDED cure kept: single DEFENDER CR3 LINK 2 #4 | [
+     CONCEDED cure kept: single DEFENDER CR3 LINK 3 #8 | [
+     CONCEDED cure kept: single CHALLENGER DR3 LINK 4 #2 | [
+OK   sol 32973: K-W status unchanged on all 12 items
+     CONCEDED cure kept: sol DEFENDER CR2 no link heading #1 | [
+     CONCEDED cure kept: sol DEFENDER CR3 LINK 2 #4 | [
+     CONCEDED cure kept: sol DEFENDER CR3 LINK 3 #8 | [
+     CONCEDED cure kept: sol CHALLENGER DR3 LINK 4 #2 | [
+OK   synthetic: "| CONCEDED." -> CURED
+OK   synthetic: "| CONCEDED:" -> CURED
+OK   synthetic: "| CONCEDED" at the end -> CURED
+OK   synthetic: "| CONCEDED --" -> CURED
+OK   synthetic: "| CONCEDED:" on the STATEMENT line -> CURED
+OK   synthetic: "conceded" in NOT HELD prose -> UNCURED
+OK   synthetic: "conceded" in STATEMENT prose (the gemini #3 wording, without its STANDS line) -> UNCURED
+OK   synthetic: uppercase CONCEDED inside prose, not after the bar -> UNCURED
+OK   synthetic: lowercase "Conceded" opening prose -> UNCURED
+OK   synthetic: "NOT CONCEDED" -> UNCURED
+OK   synthetic: "CONCEDED LINKS" -> UNCURED
+OK   synthetic: bold "**CONCEDED**:" -> CURED
+OK   synthetic: STANDS WITHOUT IT unchanged -> CURED
+OK   synthetic: REASSERTED IN unchanged -> CURED
+ALL OK

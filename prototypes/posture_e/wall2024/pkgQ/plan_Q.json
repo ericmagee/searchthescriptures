@@ -1,0 +1,131 @@
+{
+ "base": "merged_PW",
+ "nodes": [
+  {
+   "file": "Alternate_Build.js",
+   "name": "Alternate Build",
+   "base_sha": "56ad6195103e3c83",
+   "final_sha": "423315baf15a0183",
+   "edits": [
+    "K-W CONCEDED anchored"
+   ]
+  },
+  {
+   "file": "Alternate_Cure_Build.js",
+   "name": "Alternate Cure Build",
+   "base_sha": "896099602901e79c",
+   "final_sha": "4021091fa1f0e67f",
+   "edits": [
+    "K-W CONCEDED anchored"
+   ]
+  },
+  {
+   "file": "Alternate_Cure_Normalize.js",
+   "name": "Alternate Cure Normalize",
+   "base_sha": "697ef2f5159af2db",
+   "final_sha": "93be0179c1bcb800",
+   "edits": [
+    "K-W CONCEDED anchored"
+   ]
+  },
+  {
+   "file": "Alternate_Merge.js",
+   "name": "Alternate Merge",
+   "base_sha": "ead8f23c4857def4",
+   "final_sha": "a3ead7fb8c066dc1",
+   "edits": [
+    "K-W CONCEDED anchored"
+   ]
+  },
+  {
+   "file": "Cure_Build.js",
+   "name": "Cure Build",
+   "base_sha": "b370ae545a80ce97",
+   "final_sha": "0f3b1b36df12ea52",
+   "edits": [
+    "K-W CONCEDED anchored"
+   ]
+  },
+  {
+   "file": "Cure_Check.js",
+   "name": "Cure Check",
+   "base_sha": "527048fe24f56035",
+   "final_sha": "eb897e73fa9f4c58",
+   "edits": [
+    "K-W CONCEDED anchored"
+   ]
+  },
+  {
+   "file": "Cure_Normalize.js",
+   "name": "Cure Normalize",
+   "base_sha": "f6174a703655e6f3",
+   "final_sha": "ae9261f16bed9814",
+   "edits": [
+    "K-W CONCEDED anchored"
+   ]
+  },
+  {
+   "file": "Panel_Cure_Build_1.js",
+   "name": "Panel Cure Build 1",
+   "base_sha": "5c7c450e3d9bdbd9",
+   "final_sha": "9725d17084758ef4",
+   "edits": [
+    "K-W CONCEDED anchored"
+   ]
+  },
+  {
+   "file": "Panel_Cure_Build_2.js",
+   "name": "Panel Cure Build 2",
+   "base_sha": "8eadb46df9c9626a",
+   "final_sha": "3ab822fab1cfcf75",
+   "edits": [
+    "K-W CONCEDED anchored"
+   ]
+  },
+  {
+   "file": "Panel_Cure_Build_3.js",
+   "name": "Panel Cure Build 3",
+   "base_sha": "42e8c33ebc24ef9e",
+   "final_sha": "b20781f161a45b08",
+   "edits": [
+    "K-W CONCEDED anchored"
+   ]
+  },
+  {
+   "file": "Panel_Cure_Check.js",
+   "name": "Panel Cure Check",
+   "base_sha": "e3fd09cc36ebc8bc",
+   "final_sha": "abfce09e71f9cdc6",
+   "edits": [
+    "K-W CONCEDED anchored"
+   ]
+  },
+  {
+   "file": "Panel_Cure_Normalize_1.js",
+   "name": "Panel Cure Normalize 1",
+   "base_sha": "3eaf4c9dfa950bb5",
+   "final_sha": "71b21ed99c7f277a",
+   "edits": [
+    "K-W CONCEDED anchored"
+   ]
+  },
+  {
+   "file": "Panel_Cure_Normalize_2.js",
+   "name": "Panel Cure Normalize 2",
+   "base_sha": "31b2aa3c4662cd8b",
+   "final_sha": "4865b64b289cad03",
+   "edits": [
+    "K-W CONCEDED anchored"
+   ]
+  },
+  {
+   "file": "Panel_Cure_Normalize_3.js",
+   "name": "Panel Cure Normalize 3",
+   "base_sha": "89ec25d63f2d232d",
+   "final_sha": "b17b17d4ea54768d",
+   "edits": [
+    "K-W CONCEDED anchored"
+   ]
+  }
+ ]
+}
