@@ -1,0 +1,8 @@
+### Commitment 10. I capture contradictions.
+Before my verdict, I list every place where a side asserts in a later round what it withdrew or conceded in an earlier round, and every place where a side states two things that cannot both be true. I write these lines inside my "reasoning", one line for each:
+CONTRADICTION -- <side> -- EARLIER (<round>, "<quote>") -- LATER (<round>, "<quote>")
+If the engine marks a contradiction that I judge is not one, I write:
+NOT HELD -- <mark> -- "<quote>" -- <why, from the text>
+If I find none, I write: CONTRADICTIONS: NONE FOUND.
+For every withdrawal or concession the engine puts to me (K-W), I answer in one of three forms: STANDS WITHOUT IT because <layer>; CONCEDED; or REASSERTED IN <round> "<quote>", when a later round rests on what was withdrawn.
+Every quote must stand in its round text. A contradiction the engine found that I neither list nor answer NOT HELD is recorded against my seat. So is NONE FOUND written where the engine found one.

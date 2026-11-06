@@ -1,0 +1,309 @@
+{
+ "live_version": "20a559da-9d01-4ad8-aa66-f0dec4170d52",
+ "nodes": [
+  {
+   "name": "Extract Independent Verdict",
+   "id": "e832ab04-7e45-44e3-a39b-4076758ea00c",
+   "old_sha": "a77e2f3c01c96f38",
+   "new_sha": "eaab04b77ef25bf9",
+   "delta": 2269,
+   "edits": [
+    "B:'C4-RENUM':'TRIAL','C4-P",
+    "B:{const P=wpLines2024(R);",
+    "B:kcon fn"
+   ]
+  },
+  {
+   "name": "Panel Build",
+   "id": "15cbe1bd-3a00-4bed-800e-f7f5bd843020",
+   "old_sha": "c34d1bd633e5585e",
+   "new_sha": "ccb79f4ea75fb060",
+   "delta": 1025,
+   "edits": [
+    "A:I quote the debate's own",
+    "A:/^### (Commitment \\d\\. [",
+    "A:'SILENCE':5,'K-V':6};"
+   ]
+  },
+  {
+   "name": "Panel Payloads",
+   "id": "2a5fabdd-28bc-4211-ab01-dc3b1d0db967",
+   "old_sha": "46db74c9d304f814",
+   "new_sha": "52825e45d65dfd2a",
+   "delta": 2269,
+   "edits": [
+    "B:'C4-RENUM':'TRIAL','C4-P",
+    "B:{const P=wpLines2024(R);",
+    "B:kcon fn"
+   ]
+  },
+  {
+   "name": "Reserve Build",
+   "id": "7ed84904-343e-49a5-b2c5-6897d636c68e",
+   "old_sha": "fceefeb9b3c275e9",
+   "new_sha": "f885485204521691",
+   "delta": 1025,
+   "edits": [
+    "A:I quote the debate's own",
+    "A:/^### (Commitment \\d\\. [",
+    "A:'SILENCE':5,'K-V':6};"
+   ]
+  },
+  {
+   "name": "Cure Build",
+   "id": "7ad5bd77-194e-4ce9-8d0b-359413ced1a4",
+   "old_sha": "bbb6f4cfb05c3bd2",
+   "new_sha": "115238a09e106f89",
+   "delta": 2280,
+   "edits": [
+    "B:'C4-RENUM':'TRIAL','C4-P",
+    "B:{const P=wpLines2024(R);",
+    "B:kcon fn",
+    "RC"
+   ]
+  },
+  {
+   "name": "Cure Normalize",
+   "id": "e16abfe7-43f7-4a59-b088-859e43f9b2e9",
+   "old_sha": "15bdf520316d509e",
+   "new_sha": "7bc958afa2c72024",
+   "delta": 2269,
+   "edits": [
+    "B:'C4-RENUM':'TRIAL','C4-P",
+    "B:{const P=wpLines2024(R);",
+    "B:kcon fn"
+   ]
+  },
+  {
+   "name": "Cure Check",
+   "id": "16b07c74-a403-4172-9b9a-4a6acfea9d62",
+   "old_sha": "bbe93e8fcd534787",
+   "new_sha": "3eba3b32f1df464c",
+   "delta": 2269,
+   "edits": [
+    "B:'C4-RENUM':'TRIAL','C4-P",
+    "B:{const P=wpLines2024(R);",
+    "B:kcon fn"
+   ]
+  },
+  {
+   "name": "Panel Cure Build 1",
+   "id": "1c7e600c-5b02-4d8e-80c1-275d0995e9b7",
+   "old_sha": "b70088cbb7fda4dd",
+   "new_sha": "2ff6d3388fede5cf",
+   "delta": 3294,
+   "edits": [
+    "A:I quote the debate's own",
+    "A:/^### (Commitment \\d\\. [",
+    "A:'SILENCE':5,'K-V':6};",
+    "B:'C4-RENUM':'TRIAL','C4-P",
+    "B:{const P=wpLines2024(R);",
+    "B:kcon fn"
+   ]
+  },
+  {
+   "name": "Panel Cure Normalize 1",
+   "id": "4aa6acfd-6c25-4668-9155-a522404f9157",
+   "old_sha": "fd66addb93231447",
+   "new_sha": "c47339d595477d57",
+   "delta": 2269,
+   "edits": [
+    "B:'C4-RENUM':'TRIAL','C4-P",
+    "B:{const P=wpLines2024(R);",
+    "B:kcon fn"
+   ]
+  },
+  {
+   "name": "Panel Cure Build 2",
+   "id": "93038507-1a2f-4bcb-b69b-8d85fe801184",
+   "old_sha": "bee8fa49c14f74f1",
+   "new_sha": "ba38dc163f110cf5",
+   "delta": 3294,
+   "edits": [
+    "A:I quote the debate's own",
+    "A:/^### (Commitment \\d\\. [",
+    "A:'SILENCE':5,'K-V':6};",
+    "B:'C4-RENUM':'TRIAL','C4-P",
+    "B:{const P=wpLines2024(R);",
+    "B:kcon fn"
+   ]
+  },
+  {
+   "name": "Panel Cure Normalize 2",
+   "id": "ec037816-6aa3-420a-b51e-f2a6ab24a58d",
+   "old_sha": "b9e85209d27e0842",
+   "new_sha": "3d58793d0ec18011",
+   "delta": 2269,
+   "edits": [
+    "B:'C4-RENUM':'TRIAL','C4-P",
+    "B:{const P=wpLines2024(R);",
+    "B:kcon fn"
+   ]
+  },
+  {
+   "name": "Panel Cure Build 3",
+   "id": "1bb655d0-eca5-4f8c-b201-e4fd060eaabc",
+   "old_sha": "54289b102684b8b3",
+   "new_sha": "c36a16e4fa64eb17",
+   "delta": 3294,
+   "edits": [
+    "A:I quote the debate's own",
+    "A:/^### (Commitment \\d\\. [",
+    "A:'SILENCE':5,'K-V':6};",
+    "B:'C4-RENUM':'TRIAL','C4-P",
+    "B:{const P=wpLines2024(R);",
+    "B:kcon fn"
+   ]
+  },
+  {
+   "name": "Panel Cure Normalize 3",
+   "id": "d41fd40f-1c92-4739-9815-bfdf93e35260",
+   "old_sha": "de25d82b58a0ae92",
+   "new_sha": "8a08e1d7e692d6d9",
+   "delta": 2269,
+   "edits": [
+    "B:'C4-RENUM':'TRIAL','C4-P",
+    "B:{const P=wpLines2024(R);",
+    "B:kcon fn"
+   ]
+  },
+  {
+   "name": "Panel Cure Check",
+   "id": "007bd090-db2f-46e1-88ea-a3e2623077ca",
+   "old_sha": "cf8c2d63537f1ef8",
+   "new_sha": "9ffb4b15c058aa42",
+   "delta": 2269,
+   "edits": [
+    "B:'C4-RENUM':'TRIAL','C4-P",
+    "B:{const P=wpLines2024(R);",
+    "B:kcon fn"
+   ]
+  },
+  {
+   "name": "Alternate Build",
+   "id": "8c37a3db-a61d-4cda-88ba-62dd25eb5f36",
+   "old_sha": "e59e40d2e7028379",
+   "new_sha": "76da7d00f1f9636f",
+   "delta": 3294,
+   "edits": [
+    "A:I quote the debate's own",
+    "A:/^### (Commitment \\d\\. [",
+    "A:'SILENCE':5,'K-V':6};",
+    "B:'C4-RENUM':'TRIAL','C4-P",
+    "B:{const P=wpLines2024(R);",
+    "B:kcon fn"
+   ]
+  },
+  {
+   "name": "Alternate Payloads",
+   "id": "58b84db2-1576-4a6c-b227-d507b2f06d97",
+   "old_sha": "3b2cd101c1eb4579",
+   "new_sha": "f73f7fe8222e4e87",
+   "delta": 2269,
+   "edits": [
+    "B:'C4-RENUM':'TRIAL','C4-P",
+    "B:{const P=wpLines2024(R);",
+    "B:kcon fn"
+   ]
+  },
+  {
+   "name": "Alternate Cure Build",
+   "id": "1133cadf-9f55-4aa9-92df-71c3c271ced3",
+   "old_sha": "d4a53e88a28b54c2",
+   "new_sha": "d6ac7e81973364d9",
+   "delta": 3294,
+   "edits": [
+    "A:I quote the debate's own",
+    "A:/^### (Commitment \\d\\. [",
+    "A:'SILENCE':5,'K-V':6};",
+    "B:'C4-RENUM':'TRIAL','C4-P",
+    "B:{const P=wpLines2024(R);",
+    "B:kcon fn"
+   ]
+  },
+  {
+   "name": "Alternate Cure Normalize",
+   "id": "3303c1be-fdb2-4008-9a45-79ae7adab238",
+   "old_sha": "676f39dc5ef112c8",
+   "new_sha": "10d319804801d8f4",
+   "delta": 2269,
+   "edits": [
+    "B:'C4-RENUM':'TRIAL','C4-P",
+    "B:{const P=wpLines2024(R);",
+    "B:kcon fn"
+   ]
+  },
+  {
+   "name": "Alternate Merge",
+   "id": "8d8b179a-c064-4a4f-b8b5-ea6298d23ce3",
+   "old_sha": "3e5f0b2abb1ed1ac",
+   "new_sha": "4bf734a93aebed60",
+   "delta": 2269,
+   "edits": [
+    "B:'C4-RENUM':'TRIAL','C4-P",
+    "B:{const P=wpLines2024(R);",
+    "B:kcon fn"
+   ]
+  },
+  {
+   "name": "Accept Build",
+   "id": "42415a34-1d1b-5699-a18e-ae6e3b00234d",
+   "old_sha": "013cf064cb3e689e",
+   "new_sha": "b6065612f0a7ace6",
+   "delta": 1025,
+   "edits": [
+    "A:I quote the debate's own",
+    "A:/^### (Commitment \\d\\. [",
+    "A:'SILENCE':5,'K-V':6};"
+   ]
+  },
+  {
+   "name": "Accept Check",
+   "id": "aea55859-2209-5e4e-bf88-53dbc968668c",
+   "old_sha": "a1555035352b5bf0",
+   "new_sha": "3b76efbbbea8b2b9",
+   "delta": 1025,
+   "edits": [
+    "A:I quote the debate's own",
+    "A:/^### (Commitment \\d\\. [",
+    "A:'SILENCE':5,'K-V':6};"
+   ]
+  },
+  {
+   "name": "Accept Return Build",
+   "id": "b21a1867-2053-52ac-868e-2adba4a83a63",
+   "old_sha": "6b86575044478982",
+   "new_sha": "c28b04706c9ad6c0",
+   "delta": 1025,
+   "edits": [
+    "A:I quote the debate's own",
+    "A:/^### (Commitment \\d\\. [",
+    "A:'SILENCE':5,'K-V':6};"
+   ]
+  },
+  {
+   "name": "Accept Final",
+   "id": "7cc79b18-fcc4-5902-9deb-f352c34922ef",
+   "old_sha": "f4e1a91db4964340",
+   "new_sha": "9ea7f57194035777",
+   "delta": 1025,
+   "edits": [
+    "A:I quote the debate's own",
+    "A:/^### (Commitment \\d\\. [",
+    "A:'SILENCE':5,'K-V':6};"
+   ]
+  },
+  {
+   "name": "Accept DS Return Build",
+   "id": "2f8d4929-d915-5df1-8f50-f5b5ee077a86",
+   "old_sha": "6a2dc93fea57f534",
+   "new_sha": "7b89eec5766e7d0e",
+   "delta": 1025,
+   "edits": [
+    "A:I quote the debate's own",
+    "A:/^### (Commitment \\d\\. [",
+    "A:'SILENCE':5,'K-V':6};"
+   ]
+  }
+ ]
+}

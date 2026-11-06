@@ -1,0 +1,60 @@
+OK   A2 Panel Build: headings 1-9 byte-identical; old 9, new 10
+OK   A2b Panel Build: RULE_C K-CON=10; new PART2 begins with the old PART2 byte for byte
+OK   A2 Reserve Build: headings 1-9 byte-identical; old 9, new 10
+OK   A2b Reserve Build: RULE_C K-CON=10; new PART2 begins with the old PART2 byte for byte
+OK   A2 Panel Cure Build 1: headings 1-9 byte-identical; old 9, new 10
+OK   A2b Panel Cure Build 1: RULE_C K-CON=10; new PART2 begins with the old PART2 byte for byte
+OK   A2 Panel Cure Build 2: headings 1-9 byte-identical; old 9, new 10
+OK   A2b Panel Cure Build 2: RULE_C K-CON=10; new PART2 begins with the old PART2 byte for byte
+OK   A2 Panel Cure Build 3: headings 1-9 byte-identical; old 9, new 10
+OK   A2b Panel Cure Build 3: RULE_C K-CON=10; new PART2 begins with the old PART2 byte for byte
+OK   A2 Alternate Build: headings 1-9 byte-identical; old 9, new 10
+OK   A2b Alternate Build: RULE_C K-CON=10; new PART2 begins with the old PART2 byte for byte
+OK   A2 Alternate Cure Build: headings 1-9 byte-identical; old 9, new 10
+OK   A2b Alternate Cure Build: RULE_C K-CON=10; new PART2 begins with the old PART2 byte for byte
+OK   A2 Accept Build: headings 1-9 byte-identical; old 9, new 10
+OK   A2b Accept Build: RULE_C K-CON=10; new PART2 begins with the old PART2 byte for byte
+OK   A1 Accept Check: HEADS 10; 9-heading reply -> FAULT (heading 10 missing); 10-heading reply -> ACCEPT
+OK   A1b old check still accepts a 9-heading reply (baseline)
+OK   A2 Accept Check: headings 1-9 byte-identical; old 9, new 10
+OK   A2b Accept Check: RULE_C K-CON=10; new PART2 begins with the old PART2 byte for byte
+OK   A2 Accept Return Build: headings 1-9 byte-identical; old 9, new 10
+OK   A2b Accept Return Build: RULE_C K-CON=10; new PART2 begins with the old PART2 byte for byte
+OK   A2 Accept Final: headings 1-9 byte-identical; old 9, new 10
+OK   A2b Accept Final: RULE_C K-CON=10; new PART2 begins with the old PART2 byte for byte
+OK   A2 Accept DS Return Build: headings 1-9 byte-identical; old 9, new 10
+OK   A2b Accept DS Return Build: RULE_C K-CON=10; new PART2 begins with the old PART2 byte for byte
+OK   A3 32905 gemini: K-CON misses 1 :: [CR4] the engine marked a withdrawn premise reasserted, and no CONTRADICTION, NOT HELD or REASSERTED IN line of this judge quotes it: "Matth
+OK   N2 32905 gemini: K-W items and marks (incl. v31) unchanged
+OK   A3 32905 sol: K-CON misses 1 :: [CR4] the engine marked a withdrawn premise reasserted, and no CONTRADICTION, NOT HELD or REASSERTED IN line of this judge quotes it: "Matth
+OK   N2 32905 sol: K-W items and marks (incl. v31) unchanged
+OK   A3 32905 grok: K-CON misses 1 :: [CR4] the engine marked a withdrawn premise reasserted, and no CONTRADICTION, NOT HELD or REASSERTED IN line of this judge quotes it: "Matth
+OK   N2 32905 grok: K-W items and marks (incl. v31) unchanged
+OK   A4 synthetic CONTRADICTION: K-CON misses 0 (want 0)
+OK   A4 synthetic NOT HELD: K-CON misses 0 (want 0)
+OK   A4 synthetic REASSERTED IN: K-CON misses 0 (want 0)
+OK   A4x synthetic NONE FOUND: K-CON misses 1 (want 1)
+OK   A4x synthetic paraphrase only: K-CON misses 1 (want 1)
+OK   N1 32643: K-CON 0, K-W items unchanged (9)
+OK   N1 32677: K-CON 0, K-W items unchanged (9)
+OK   N1 32717: K-CON 0, K-W items unchanged (11)
+OK   N1 32791: K-CON 0, K-W items unchanged (11)
+OK   N1 32924: K-CON 0, K-W items unchanged (9)
+OK   N1b Extract Independent Verdict: ENF_STATUS has 'K-CON':'TRIAL'
+OK   N1b Panel Payloads: ENF_STATUS has 'K-CON':'TRIAL'
+OK   N1b Cure Build: ENF_STATUS has 'K-CON':'TRIAL'
+OK   N1b Cure Normalize: ENF_STATUS has 'K-CON':'TRIAL'
+OK   N1b Cure Check: ENF_STATUS has 'K-CON':'TRIAL'
+OK   N1b Panel Cure Build 1: ENF_STATUS has 'K-CON':'TRIAL'
+OK   N1b Panel Cure Normalize 1: ENF_STATUS has 'K-CON':'TRIAL'
+OK   N1b Panel Cure Build 2: ENF_STATUS has 'K-CON':'TRIAL'
+OK   N1b Panel Cure Normalize 2: ENF_STATUS has 'K-CON':'TRIAL'
+OK   N1b Panel Cure Build 3: ENF_STATUS has 'K-CON':'TRIAL'
+OK   N1b Panel Cure Normalize 3: ENF_STATUS has 'K-CON':'TRIAL'
+OK   N1b Panel Cure Check: ENF_STATUS has 'K-CON':'TRIAL'
+OK   N1b Alternate Build: ENF_STATUS has 'K-CON':'TRIAL'
+OK   N1b Alternate Payloads: ENF_STATUS has 'K-CON':'TRIAL'
+OK   N1b Alternate Cure Build: ENF_STATUS has 'K-CON':'TRIAL'
+OK   N1b Alternate Cure Normalize: ENF_STATUS has 'K-CON':'TRIAL'
+OK   N1b Alternate Merge: ENF_STATUS has 'K-CON':'TRIAL'
+ALL OK
