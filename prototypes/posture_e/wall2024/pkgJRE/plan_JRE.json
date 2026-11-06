@@ -1,0 +1,15 @@
+{
+ "base": "pkgJEC/patched",
+ "nodes": [
+  {
+   "file": "Judge_Enforcer_Build.js",
+   "base_sha": "cb8dc7dff9e725c4",
+   "final_sha": "8636b04da77a5f07"
+  },
+  {
+   "file": "Alt_Judge_Enforcer_Build.js",
+   "base_sha": "b7f9d641d7e9912b",
+   "final_sha": "7182316263b4f23b"
+  }
+ ]
+}
