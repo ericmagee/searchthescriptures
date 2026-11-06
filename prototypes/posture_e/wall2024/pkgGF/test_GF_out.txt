@@ -1,0 +1,17 @@
+OK   6 nodes: base and final shas match the plan
+OK   every node parses as an n8n Code node body
+OK   gateForced2024 is in each of the 6 gate-library nodes once
+OK   Gate_Build prompt names the FORCED form for a RULE K-G4 item
+OK   Alt_Gate_Build prompt names the FORCED form for a RULE K-G4 item
+OK   a correct FORCED line after KEEP passes the K-F test
+OK   gateCure2024: a correct FORCED reply CURES the RULE K-G4 item
+OK   base (pkgGK): the same reply stays UNCURED
+OK   a correct FORCED line as the reason of a CHANGE TO also cures
+OK   a FORCED reply whose ANSWER quote is not found in its round stays UNCURED, with the K-F reason
+OK   a FORCED reply naming the wrong MEANS round stays UNCURED
+OK   a FORCED line for another link does not cure this item
+OK   a malformed FORCED line (gemini 32998 "[Defender R3]" form) stays UNCURED
+OK   silence still counts
+OK   replay of the 8 stored 32998 gate replies: the FORCED path decides none, so no 32998 gate item changes
+OK   every stored 32998 gate reply is still read by gateRead2024
+16 OK, 0 FAIL
