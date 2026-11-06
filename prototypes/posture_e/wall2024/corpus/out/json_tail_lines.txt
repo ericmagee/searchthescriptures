@@ -1,0 +1,3 @@
+# flagged lines beginning {" or ending "} (texts.jsonl src flagged_line: 2130 rows; fixture sb_items line fields: 360). 2 hits, one distinct line.
+texts.jsonl | T2414 | 33040 | grok | log 7660 | CHALLENGER CHAIN MARK: FOOTED -- C3 exhibits the seed rows, the knowing row of Genesis 4:1, and the husband rows, though that link fails at the collision."}
+fix_33040.json | .sb_items[50] | E-CHAIN | S20 | CHALLENGER CHAIN MARK: FOOTED -- C3 exhibits the seed rows, the knowing row of Genesis 4:1, and the husband rows, though that link fails at the collision."}
