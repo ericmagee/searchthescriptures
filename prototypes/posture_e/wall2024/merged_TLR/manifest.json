@@ -1,0 +1,114 @@
+{
+ "live_version": "6b077f9e",
+ "packages": "pkgT 7d0a84b + pkgL d389481 + pkgR 101aa61",
+ "nodes": [
+  {
+   "name": "Alternate Build",
+   "id": "8c37a3db-a61d-4cda-88ba-62dd25eb5f36",
+   "live_sha": "79b7b8e7d567167c",
+   "final_sha": "d699d4059eda1c1e"
+  },
+  {
+   "name": "Alternate Cure Build",
+   "id": "1133cadf-9f55-4aa9-92df-71c3c271ced3",
+   "live_sha": "226c1b57987359c4",
+   "final_sha": "addddda70a1bd9f8"
+  },
+  {
+   "name": "Alternate Cure Normalize",
+   "id": "3303c1be-fdb2-4008-9a45-79ae7adab238",
+   "live_sha": "897eb4653dd2d92b",
+   "final_sha": "c43336500952a3b2"
+  },
+  {
+   "name": "Alternate Merge",
+   "id": "8d8b179a-c064-4a4f-b8b5-ea6298d23ce3",
+   "live_sha": "fe13b1a9229bcc1e",
+   "final_sha": "74ba696912337015"
+  },
+  {
+   "name": "Alternate Payloads",
+   "id": "58b84db2-1576-4a6c-b227-d507b2f06d97",
+   "live_sha": "c5f70e456e3f166f",
+   "final_sha": "eeb22b7a25bf2b27"
+  },
+  {
+   "name": "Build Save Body",
+   "id": "1a405a1c-1064-40e3-82a4-e2b65b556035",
+   "live_sha": "29fbb1b74e500dff",
+   "final_sha": "2e0f16be5489db61"
+  },
+  {
+   "name": "Cure Build",
+   "id": "7ad5bd77-194e-4ce9-8d0b-359413ced1a4",
+   "live_sha": "b4205d743f818a7c",
+   "final_sha": "501dda2408644be8"
+  },
+  {
+   "name": "Cure Check",
+   "id": "16b07c74-a403-4172-9b9a-4a6acfea9d62",
+   "live_sha": "dc4ab40f4b483c81",
+   "final_sha": "c2a9b5a7c5ec7840"
+  },
+  {
+   "name": "Cure Normalize",
+   "id": "e16abfe7-43f7-4a59-b088-859e43f9b2e9",
+   "live_sha": "5b6c6b801d1be4ef",
+   "final_sha": "3e816db8e47ea7ee"
+  },
+  {
+   "name": "Extract Independent Verdict",
+   "id": "e832ab04-7e45-44e3-a39b-4076758ea00c",
+   "live_sha": "bed0dd6bd9537819",
+   "final_sha": "5b5e58941fa92c88"
+  },
+  {
+   "name": "Panel Cure Build 1",
+   "id": "1c7e600c-5b02-4d8e-80c1-275d0995e9b7",
+   "live_sha": "eec0ed792a608e93",
+   "final_sha": "f6878dd155417f30"
+  },
+  {
+   "name": "Panel Cure Build 2",
+   "id": "93038507-1a2f-4bcb-b69b-8d85fe801184",
+   "live_sha": "86f160f209964e64",
+   "final_sha": "c94a8538706e2aff"
+  },
+  {
+   "name": "Panel Cure Build 3",
+   "id": "1bb655d0-eca5-4f8c-b201-e4fd060eaabc",
+   "live_sha": "49d3b97c998ff336",
+   "final_sha": "11311284ced4a709"
+  },
+  {
+   "name": "Panel Cure Check",
+   "id": "007bd090-db2f-46e1-88ea-a3e2623077ca",
+   "live_sha": "cc477eb16413eaea",
+   "final_sha": "16bdbd090d027047"
+  },
+  {
+   "name": "Panel Cure Normalize 1",
+   "id": "4aa6acfd-6c25-4668-9155-a522404f9157",
+   "live_sha": "a9eb48b8d8d8be69",
+   "final_sha": "0630e614a2211f6a"
+  },
+  {
+   "name": "Panel Cure Normalize 2",
+   "id": "ec037816-6aa3-420a-b51e-f2a6ab24a58d",
+   "live_sha": "1de2577f3ef71df8",
+   "final_sha": "fa0994b827dbf63b"
+  },
+  {
+   "name": "Panel Cure Normalize 3",
+   "id": "d41fd40f-1c92-4739-9815-bfdf93e35260",
+   "live_sha": "b1a919d7f4e54015",
+   "final_sha": "0a7daef1abd18724"
+  },
+  {
+   "name": "Panel Payloads",
+   "id": "2a5fabdd-28bc-4211-ab01-dc3b1d0db967",
+   "live_sha": "932889d82df38f62",
+   "final_sha": "72ab80e677b579cc"
+  }
+ ]
+}
