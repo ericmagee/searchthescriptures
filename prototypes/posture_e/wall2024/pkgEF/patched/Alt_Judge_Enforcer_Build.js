@@ -58,8 +58,8 @@ for(const j of judges)for(const l0 of j.t.split('\n')){const l=l0.replace(/^[\s*
 let ci=0;
 /* pkgEF (5) (W3 2477 ruling 2): FAILS words found exactly (spacing and quote marks aside) in the round named on the ANSWER are that side's own words */
 const Nx=s=>String(s||'').replace(/[“”]/g,'"').replace(/[’‘]/g,"'").replace(/\s+/g,' ').trim();
-const failsNote=l0=>{const l=String(l0).replace(/\\+"/g,'"');if(!/^FORCED/.test(l)||!R)return '';const a0=l.match(/ANSWER\s*\[\s*(?:([CD])R\s*(\d)|(Defender|Challenger)\s*R(?:ound)?\s*(\d))\s*\]/);const a=a0?[null,(a0[1]||(a0[3]==='Defender'?'C':'D'))+'R'+(a0[2]||a0[4])]:null;const f=l.match(/--\s*FAILS\s*:\s*"([\s\S]+)"\s*$/);if(!a||!f||!R[a[1]])return '';const q=Nx(f[1]);if(q.length<12||!Nx(R[a[1]]).includes(q))return '';
- return '\nTHE FAILS WORDS ARE FOUND EXACTLY IN ['+a[1]+'], THE ROUND OF THE ANSWER: they are the answering side\'s own words, read as part of its answer.';};
+const failsNote=l0=>{const l=String(l0).replace(/\\+"/g,'"');if(!/^FORCED/.test(l)||!R)return '';const a0=l.match(/ANSWER\s*\[\s*(?:([CD])R\s*(\d)|(Defender|Challenger)\s*R(?:ound)?\s*(\d))\s*\]/);const a=a0?[null,(a0[1]||(a0[3]==='Defender'?'C':'D'))+'R'+(a0[2]||a0[4])]:null;const f=l.match(/--\s*FAILS\s*:\s*"([\s\S]+)"\s*$/);if(!a||!f||!R[a[1]])return '';const q=Nx(f[1]);if(q.length<12||!Nx(R[a[1]]).includes(q))return '';const an=l.match(/ANSWER\s*\[[^\]]*\]\s*:\s*"([\s\S]*?)"\s*--\s*FAILS\s*:/);if(an&&Nx(an[1]).includes(q))return '';/* W3 2484: no note when the FAILS words only repeat the ANSWER */
+ return '\nThe FAILS words are found in ['+a[1]+']; read them as part of the answer. FORCED holds only if the answer\'s words, these included, state something the MEANS cannot agree with; a rival reading is not that.';};
 for(const g of CG){ci++;const ids=g.seats.map((s,k)=>({id:'K'+ci+'.'+(k+1),rule:'E-COL',seat:s,grade:/^FORCED/.test(g.line)?'FORCED':'LINK BROKEN',item:'COLLISION '+(g.line.match(/^(?:FORCED(?:\s*\(\s*Commitment\s+\d+\s*\))?\s*:\s*)?([DC]\d+(?:\s*vs\.?\s*[DC]\d+)?)/)||[])[1],flagged_line:g.line.slice(0,1500),response_line:g.line.slice(0,700)}));
  items.push({ids,text:'ITEM K'+ci+' (E-COL, a collision line graded against a link):\nTHE LINE: '+cut(g.line,1600)+'\nTHE JUDGES WHO WROTE IT: '+ids.map(x=>x.id+' ('+x.seat+')').join(', ')+failsNote(g.line)});}
 // s433 (WALL-1963 revision 6, piece 2; rulings 428, 439). E-HOLD: each collision line a panel judge graded STANDS or UNDERDETERMINED, with
@@ -75,7 +75,7 @@ const acLab=a=>{const r=acRound(a);return (r==='C'?'(the defender\'s answer) ':r
 for(const j of judges){const ls=linesOf(j.t);const acs=ls.filter(l=>/^ANSWER CHECK:/.test(l));
  for(const l of ls){const m=l.match(HOLD);if(!m||/LINK BROKEN/.test(l))continue;
   const rs=refsOf(l);const own=acs.filter(a=>{const v=(a.match(/^ANSWER CHECK:\s*(.+?)\s*--/)||[])[1]||'';for(const r of refsOf(v))if(rs.has(r))return true;return false;}).slice(0,6);
-  const lk=m[1].replace(/\s+/g,' ');const side0=/vs/.test(lk)?null:(lk[0]==='D'?'C':'D');/* pkgEF (1): a link-state line is fed that side's proven ANSWER CHECK lines that are not MEETS */
+  const lk=m[1].replace(/\s+/g,' ');const side0=(/vs/.test(lk)||own.length)?null:(lk[0]==='D'?'C':'D');/* pkgEF (1): a link-state line that names no checked verse is fed that side's proven ANSWER CHECK lines that are not MEETS (W3 2484: a line naming checked verses gets those alone) */
   const sideAll=side0?acs.filter(a=>acRound(a)===side0&&!acUnp(a)):[];const sideAc=sideAll.filter(a=>!own.includes(a)&&!/--\s*MEETS\b/.test(a)).slice(0,6);
   HG.push({seat:j.seat,line:l,link:lk,grade:m[2],own,side0,sideAc,sideN:sideAll.length});}}
 let hi=0;

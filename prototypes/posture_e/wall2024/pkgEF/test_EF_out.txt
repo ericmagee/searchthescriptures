@@ -32,9 +32,9 @@ OK   6400 33020 chatgpt E-HOLD COLLISION D3 [FORM]: no proven not-MEETS check on
      link state; that side's proven checks: 27; not MEETS fed: 0
 OK   6403 33020 chatgpt E-HOLD COLLISION D6 [FALSE]: no proven defender-answer not-MEETS fed against this link
      link state; that side's proven checks: 27; not MEETS fed: 0
-OK   6404 33020 grok E-HOLD COLLISION D2 [FALSE]: the defender-answer MISSES fed are on Luke 2:4, Hebrews 7:14, Genesis 48:5 (Davidic-descent presses, not this link): the model must place them
-     link state; that side's proven checks: 27; not MEETS fed: 3 [Luke 2:4; Hebrews 7:14; Genesis 48:5]
-OK   6405 33020 grok E-HOLD COLLISION D3 [FALSE]: the defender-answer MISSES fed are on Luke 2:4, Hebrews 7:14, Genesis 48:5 (Davidic-descent presses, not this link): the model must place them
+OK   6404 33020 grok E-HOLD COLLISION D2 [FALSE]: the line names checked verses: those checks alone, no link-state block (W3 2484)
+     fed 2 own checks
+OK   6405 33020 grok E-HOLD COLLISION D3 [FALSE]: names no checked verse (no check on Isaiah 7:14, Matthew 1:22-23, Isaiah 8:3), so the whole-side block stays: 3 MISSES on other links, the model must place them
      link state; that side's proven checks: 27; not MEETS fed: 3 [Luke 2:4; Hebrews 7:14; Genesis 48:5]
 OK   7093 33025 gemini E-HOLD COLLISION D5 [FALSE]: no proven defender-answer not-MEETS fed against this link
      link state; that side's proven checks: 37; not MEETS fed: 0
@@ -61,11 +61,15 @@ OK   7598 33040 chatgpt E-HOLD COLLISION D4 vs C1 [FALSE]: the burden it read is
 OK   7606 33040 chatgpt E-HOLD COLLISION D6 vs C6 [FALSE]: the burden it read is labelled UNPROVEN, or the failing answer is labelled the challenger's
      fed 3 labelled checks; proven not-MEETS: defender 0, challenger 0
 OK   7608 33040 grok E-HOLD COLLISION D2 [FALSE]: no proven defender-answer not-MEETS fed against this link
-     link state; that side's proven checks: 31; not MEETS fed: 0
+     link state; that side's proven checks: ?; not MEETS fed: 0
+OK   unit (W3 2484): 6404 grok "D2: STANDS -- GROUND: Luke 1:34-35 ..." is fed its own checks on the verses it names (Luke 1:34, Luke 1:7) only, and no whole-side block
+OK   unit: a link-state line naming no checked verse still gets the whole-side block (6395 gemini D5)
+OK   unit: no E-COL note when the FAILS words only repeat the ANSWER
+OK   unit: the note is added when the FAILS words differ from the ANSWER and are in its round
 OK   5931 (grok E-COL FALSE): the FAILS-words note is added
 OK   5934 (grok E-COL FALSE): the FAILS-words note is added
 OK   every E-COL item is still sent; the note is added only where the FAILS words are found in the answer's round
-     E-COL items other than 5931/5934 that now carry the note (20 of 24): 4922 4923 4924 4925 4926 4928 5930 5932 5933 6388 6389 6390 6391 6762 7087 7088 7090 7325 7326 7584
-     E-COL items without it: 6763 6764 6765 6766
+     E-COL items other than 5931/5934 that now carry the note (8 of 24): 4923 4924 4925 4926 4928 5930 5933 6388
+     E-COL items without it: 4922 5932 6389 6390 6391 6762 6763 6764 6765 6766 7087 7088 7090 7325 7326 7584
 OK   E-HOLD, E-COL and E-RES stay RECORD-ONLY TRIAL (count of the marker unchanged)
-40 OK, 0 FAIL
+44 OK, 0 FAIL

@@ -42,7 +42,7 @@ for(const x of items.filter(i=>i.rule==='E-HOLD')){const r=res[x.id];const v=V['
  const notMeets=fed.filter(l=>!/--\s*MEETS\b/.test(l)&&!/UNPROVEN press/.test(l));
  const defBad=notMeets.filter(l=>/the defender's answer/.test(l)),chBad=notMeets.filter(l=>/the challenger's answer/.test(l));
  if(linkState){const m=blk.match(/TO PROVEN PRESSES: (\d+) in all/);d='link state; that side\'s proven checks: '+(m?m[1]:'?')+'; not MEETS fed: '+(x.item.includes('D')?defBad.length:chBad.length);
-  c=c&&!!m;}
+  c=c&&(!!m||fed.length>0);}
  else d='fed '+fed.length+' labelled checks; proven not-MEETS: defender '+defBad.length+', challenger '+chBad.length;
  // every fed check carries a side label; every UNPROVEN one is labelled
  c=c&&blk.split('\n').filter(l=>/^- .*ANSWER CHECK:/.test(l)).every(l=>/^- \(the (defender|challenger)'s answer\)/.test(l));
@@ -53,13 +53,18 @@ for(const x of items.filter(i=>i.rule==='E-HOLD')){const r=res[x.id];const v=V['
   else if(v[0]==='FORM'){expect='no proven not-MEETS check on the verses the line names, and the line quotes no answer: still DISAGREE on the letter';}
   else{expect='a proven MISSES/FAILS is still fed and labelled';c=c&&notMeets.length>0;}}
  else{ // FALSE
-  if(linkState&&['6404','6405'].includes(String(x.id))){const vs=defBad.map(l=>(l.match(/ANSWER CHECK:\s*(.+?)\s*--/)||[])[1]);expect='the defender-answer MISSES fed are on Luke 2:4, Hebrews 7:14, Genesis 48:5 (Davidic-descent presses, not this link): the model must place them';d+=' ['+vs.join('; ')+']';c=c&&vs.join('|')==='Luke 2:4|Hebrews 7:14|Genesis 48:5';}
+  if(linkState&&String(x.id)==='6405'){const vs=defBad.map(l=>(l.match(/ANSWER CHECK:\s*(.+?)\s*--/)||[])[1]);expect='names no checked verse (no check on Isaiah 7:14, Matthew 1:22-23, Isaiah 8:3), so the whole-side block stays: 3 MISSES on other links, the model must place them';d+=' ['+vs.join('; ')+']';c=c&&vs.join('|')==='Luke 2:4|Hebrews 7:14|Genesis 48:5';}
+  else if(linkState&&String(x.id)==='6404'&&/\d+:\d+/.test(x.line)&&blk.split('\n').some(l=>/^- \(/.test(l))){expect='the line names checked verses: those checks alone, no link-state block (W3 2484)';c=c&&!/THIS IS A LINK-STATE LINE/.test(blk)&&defBad.length===0;d='fed '+fed.length+' own checks';}
   else if(linkState){expect='no proven defender-answer not-MEETS fed against this link';c=c&&defBad.length===0;}
   else if(String(x.id)==='6404'){expect='the Luke 1:34 grant MEETS (labelled defender)';}
   else{expect='the burden it read is labelled UNPROVEN, or the failing answer is labelled the challenger\'s';}}
  T(x.id+' '+x.run+' '+x.seat+' E-HOLD '+x.item+' ['+v[0]+']: '+expect,c,d);}
+const note=b=>/The FAILS words are found in \[[CD]R\d\]; read them as part of the answer\. FORCED holds only if/.test(b||'');
+T('unit (W3 2484): 6404 grok "D2: STANDS -- GROUND: Luke 1:34-35 ..." is fed its own checks on the verses it names (Luke 1:34, Luke 1:7) only, and no whole-side block',(()=>{const b=res[6404].bb||'';const f=b.split('\n').filter(l=>/^- \(/.test(l));return f.length===2&&f.every(l=>/ANSWER CHECK: Luke 1:(34|7) /.test(l))&&!/THIS IS A LINK-STATE LINE/.test(b)&&!/Luke 2:4|Hebrews 7:14|Genesis 48:5/.test(b);})());
+T('unit: a link-state line naming no checked verse still gets the whole-side block (6395 gemini D5)',/THIS IS A LINK-STATE LINE/.test(res[6395].bb||''));
+T('unit: no E-COL note when the FAILS words only repeat the ANSWER',(()=>{const t='FORCED: D4 vs C1 -- MEANS [CR3]: "the sonship is reckoned by supposition here" -- ANSWER [DR3]: "The sonship to Joseph stands in the word of law and usage." -- FAILS: "The sonship to Joseph stands in the word of law and usage."';const R0={CR3:'the sonship is reckoned by supposition here',DR3:'x The sonship to Joseph stands in the word of law and usage. y'};const o=runJE('pkgEF','Judge_Enforcer_Build.js','grok',t,R0);return /THE LINE: FORCED: D4 vs C1/.test(o.body)&&!note(o.body);})());
+T('unit: the note is added when the FAILS words differ from the ANSWER and are in its round',(()=>{const t='FORCED: D4 vs C1 -- MEANS [CR3]: "the sonship is reckoned by supposition here" -- ANSWER [DR3]: "It is law and usage." -- FAILS: "Therefore Joseph begat the child in the espousal."';const R0={CR3:'the sonship is reckoned by supposition here',DR3:'It is law and usage. Therefore Joseph begat the child in the espousal.'};return note(runJE('pkgEF','Judge_Enforcer_Build.js','grok',t,R0).body);})());
 // E-COL
-const note=b=>/THE FAILS WORDS ARE FOUND EXACTLY IN \[/.test(b||'');
 for(const id of [5931,5934]){const r=res[id];T(id+' ('+r.x.seat+' E-COL FALSE): the FAILS-words note is added',note(r.bb)&&!note(r.ba));}
 const colTrue=items.filter(i=>i.rule==='E-COL'&&!['5931','5934'].includes(String(i.id)));
 const withNote=colTrue.filter(i=>note(res[i.id].bb)).map(i=>i.id+'('+V['E-COL'][i.id]?.[0]||'TRUE'+')');
