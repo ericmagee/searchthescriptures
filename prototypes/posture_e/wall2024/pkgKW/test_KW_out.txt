@@ -1,0 +1,23 @@
+OK   22 nodes; base shas = pkgKC2/patched, final shas = pkgKW/patched
+OK   every node: K-W LIVE; both K-W marks state the forms and the LIVE rule; 19 cure nodes carry the NOT HELD cure
+OK   raise: exactly 4 items go, the 4 false raises of the promotion read (33014 DR3 LINK 3 quoting the defender; 33020 CR2 heading; 33020 DR4 "concede none"; 33021 DR3 LINK 4 quoting the defender); none added
+OK   unit: "I concede none of the six." raises nothing
+OK   unit: a quoted grant of the other side raises nothing
+OK   unit: a title heading "## 0. What I concede, so the rest can stand" raises nothing
+OK   unit: a heading line with a full withdrawal sentence still raises it
+OK   unit: a plain grant still raises it
+   33014 chatgpt K-W|CHALLENGER DR3 LINK 3 #1|UNCURED -> K-W|CHALLENGER DR3 LINK 3 #1|CURED
+   33020 gemini K-W|CHALLENGER DR4 no link heading #1|UNCURED -> K-W|CHALLENGER DR4 no link heading #1|CURED
+   33020 chatgpt K-W|DEFENDER CR2 no link heading #1|UNCURED -> K-W|DEFENDER CR2 no link heading #1|CURED
+   33020 chatgpt K-W|DEFENDER CR3 LINK 1 #4|UNCURED -> K-W|DEFENDER CR3 LINK 1 #4|CURED
+   33020 chatgpt K-W|DEFENDER CR3 LINK 1 #5|UNCURED -> K-W|DEFENDER CR3 LINK 1 #5|CURED
+   33020 chatgpt K-W|DEFENDER CR3 LINK 2 #6|UNCURED -> K-W|DEFENDER CR3 LINK 2 #6|CURED
+   33020 chatgpt K-W|DEFENDER CR3 LINK 4 #7|UNCURED -> K-W|DEFENDER CR3 LINK 4 #7|CURED
+   33020 chatgpt K-W|CHALLENGER DR4 no link heading #1|UNCURED -> K-W|CHALLENGER DR4 no link heading #1|CURED
+   33020 grok K-W|DEFENDER CR2 no link heading #1|UNCURED -> K-W|DEFENDER CR2 no link heading #1|CURED
+   33020 grok K-W|CHALLENGER DR4 no link heading #1|UNCURED -> K-W|CHALLENGER DR4 no link heading #1|CURED
+   33021 chatgpt K-W|CHALLENGER DR3 LINK 4 #1|UNCURED -> K-W|CHALLENGER DR3 LINK 4 #1|CURED
+   33025 gemini K-W|DEFENDER CR2 no link heading #3|UNCURED -> K-W|DEFENDER CR2 no link heading #3|CURED
+OK   cure: the only new rows are K-W UNCURED -> CURED (NOT HELD with a quote): 12 rows; no other rule moves
+OK   gate: pkgKW equals pkgKC2 on all 18 fixture seats
+10 OK, 0 FAIL
