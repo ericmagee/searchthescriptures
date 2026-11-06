@@ -1,0 +1,36 @@
+OK   6 nodes: base (pkgKF) and final shas match the plan
+OK   every node parses
+OK   the 6 nodes carry one identical sbApply2024
+   33021 gemini send-back: pkgKF applied S1,S2,S3,S4,S5,S6,S7,S8,S9,S10; pkgCP applied S1,S2,S3,S4,S5,S6,S7,S8,S10; pkgCP S9: NOT APPLIED -- the change drops the collision D1 vs C1 (W3 2351: a change to a collision or FORCED line must be a collision line for the same pair)
+OK   33021 gemini S9 NOT APPLIED, "the change drops the collision D1 vs C1"; S1 to S8 and S10 still applied
+OK   33021 gemini after send-back on pkgCP: the FORCED D1 vs C1 line and the D1 vs C1 collision line both remain
+   33021 gemini live gate item: G1 RULE K-G4 RULE|K-G4|CHALLENGER|D1 VS C1
+     pkgKF: G1 CURED -- the gate change was applied and the item is no longer raised
+     pkgCP: G1 UNCURED -- the gate change was not applied; counted 1
+OK   33021 gemini G1 (the live K-G4 item, stored reply): pkgKF CURED, pkgCP UNCURED, counted 1
+   variant A: UNCURED -- the gate change was not applied
+   variant B: UNCURED -- the gate change was not applied
+   variant C: UNCURED -- the gate change was not applied
+   variant D: UNCURED -- the gate change was not applied
+   variant E: UNCURED -- the gate change was not applied
+   variant F: CURED -- the gate change was applied and the item is no longer raised
+   variant G: CURED -- the gate change was applied and the item is no longer raised
+OK   W2 variants A to E UNCURED; F (same pair, STANDS) and G (same pair, UNDERDETERMINED) CURED
+OK   units: FORCED->pair STANDS applies (grok 33021 S9 form); FORCED->FORCED same pair applies; collision->FORCED, collision->label without grade refused; collision->DEFENDER LINK BROKEN applies
+   32998 gemini: send-back applied pkgKF [S4] pkgCP [S4] | gate same [] counted 0
+   32998 chatgpt: send-back applied pkgKF [S2,S3,S4,S5,S6,S7,S11,S12,S15] pkgCP [S2,S3,S4,S5,S6,S7,S11,S12,S15] | gate same [G1 NOT APPLIED CURED; G2 RULE K-G4 UNCURED] counted 1
+   32998 grok: send-back applied pkgKF [S1,S2,S4,S5,S6,S7,S8,S9,S10,S11,S12,S13,S14,S15,S16,S17,S18,S23,S27] pkgCP [S1,S2,S4,S5,S6,S7,S8,S9,S10,S11,S12,S13,S14,S15,S16,S17,S18,S23,S27] | gate same [G1 CONTRADICTION CURED; G2 CONTRADICTION CURED] counted 0
+   32998 alt sol: send-back applied pkgKF [S2,S5,S6,S7,S8,S12,S13,S14] pkgCP [S2,S5,S6,S7,S8,S12,S13,S14] | gate same [G1 RULE K-G4 UNCURED] counted 1
+   33014 gemini: send-back applied pkgKF [S1,S2,S3,S4,S5,S6,S7,S8,S9,S10] pkgCP [S1,S2,S3,S4,S5,S6,S7,S8,S9,S10] | gate same [] counted 0
+   33014 chatgpt: send-back applied pkgKF [S1,S2,S3,S4,S5,S6,S7,S8,S9,S10,S11,S12,S13,S14,S15,S16,S17,S18,S19,S20,S22,S23] pkgCP [S1,S2,S3,S4,S5,S6,S7,S8,S9,S10,S11,S12,S13,S14,S15,S16,S17,S18,S19,S20,S22,S23] | gate same [] counted 0
+   33014 grok: send-back applied pkgKF [S1,S2,S3,S4,S5,S6,S7,S8,S9,S10,S11,S12,S13,S14,S15] pkgCP [S1,S2,S3,S4,S5,S6,S7,S8,S9,S10,S11,S12,S13,S14,S15] | gate same [] counted 0
+   33014 alt sol: send-back applied pkgKF [S3] pkgCP [S3] | gate same [] counted 0
+   33020 gemini: send-back applied pkgKF [S1,S2,S3,S4,S5,S6,S7,S8,S9] pkgCP [S1,S2,S3,S4,S5,S6,S7,S8,S9] | gate same [G1 CONTRADICTION CURED; G2 CONTRADICTION CURED] counted 0
+   33020 chatgpt: send-back applied pkgKF [S8,S14] pkgCP [S8,S14] | gate same [] counted 0
+   33020 grok: send-back applied pkgKF [S1,S2,S3,S4,S5,S6,S7,S8,S9,S10,S12,S13,S14,S15,S16] pkgCP [S1,S2,S3,S4,S5,S6,S7,S8,S9,S10,S12,S13,S14,S15,S16] | gate same [G1 NOT APPLIED CURED; G2 CONTRADICTION UNCURED] counted 1
+   33021 gemini: send-back applied pkgKF [S1,S2,S3,S4,S5,S6,S7,S8,S9,S10] pkgCP [S1,S2,S3,S4,S5,S6,S7,S8,S10] NEW NOT APPLIED: S9 (the change drops the collision D1 vs C1; to: D1: STANDS -- GROUND: Answered in [CR4]; Matthew 1:18 dates the finding before coming toge) | gate pkgKF [G1 RULE K-G4] counted 0 -> pkgCP [G1 NOT APPLIED] counted 0
+   33021 chatgpt: send-back applied pkgKF [S1,S2,S3,S4,S5,S6,S7,S8,S9,S10,S11,S12] pkgCP [S1,S2,S3,S4,S5,S6,S7,S8,S9,S10,S11,S12] | gate same [] counted 0
+   33021 grok: send-back applied pkgKF [S3,S5,S9] pkgCP [S3,S5,S9] | gate same [] counted 0
+   changed: 33021 gemini S9 gate
+OK   the only changes across 32998, 33014, 33020 and 33021 are 33021 gemini (S9 NOT APPLIED; its gate set changes)
+9 OK, 0 FAIL
