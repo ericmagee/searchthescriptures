@@ -1,0 +1,12 @@
+OK   Send Back Record: live_sha equals the 68fe69cd/426d60c0 text, final_sha equals the patched file
+OK   reverse edit: only the SENDBACK line pattern changes
+OK   32980 gemini on the live reader: 17 NO ANSWER (as logged, ids 3625-3641)
+OK   32980 gemini on the fixed reader: 13 CHANGE TO and 4 KEEP (S8, S9, S10, S13), as W3 expected (S8, S9, S10, S13)
+OK   32980 gemini: S1 and S17 carry their CHANGE TO lines
+OK   32980 chatgpt: every item read exactly as before
+OK   32980 grok: every item read exactly as before
+OK   32949 and 32973: every send-back item read exactly as before (tally {"KEEP":37,"CHANGE":136,"NO ANSWER":0})
+OK   variants read: plain, bold, no colon, ITEM, #, spaced id, lower-case keep, colon after the id with "Change to" (KEEP, KEEP, KEEP, KEEP, KEEP, KEEP, CHANGE)
+OK   S12 does not answer S1
+OK   with a closing "|| reason" the line and the reason are split as before
+ALL OK
