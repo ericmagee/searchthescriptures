@@ -46,7 +46,7 @@ for(const run of RUNS){
  else man.gaps.push(run+': no n8n node data (run crashed); no replay fixture. Texts come from debate_judgments and the log only.');
  const T=texts.filter(t=>t.run===run);man.runs[run]={texts:T.length,by_src:T.reduce((m,t)=>(m[t.src]=(m[t.src]||0)+1,m),{}),seats:[...new Set(T.filter(t=>/verdict/.test(t.src)).map(t=>t.seat+':'+t.src))],fixture:!!F,gate_replies:F?Object.keys(F.gate_replies).concat(F.alt?Object.keys(F.alt.gate_replies).map(s=>s+'(alt)'):[]):[]};}
 // verdicts missing from both sources
-for(const run of RUNS){const L=JSON.parse(fs.readFileSync('corpus/raw/log_'+run+'.json','utf8'));const seats=[...new Set(L.filter(x=>['chatgpt','gemini','grok','sol'].includes(x.seat)).map(x=>x.seat))];
+for(const run of RUNS){const L=JSON.parse(fs.readFileSync('corpus/raw/log_'+run+'.json','utf8'));const seats=[...new Set(L.filter(x=>['chatgpt','gemini','glm','grok','qwen','sol'].includes(x.seat)).map(x=>x.seat))];
  for(const s of seats)if(!texts.some(t=>t.run===run&&t.seat===s&&/verdict/.test(t.src)))man.gaps.push(run+' '+s+': no stored verdict text (judge removed and no node data); its lines appear only as flagged lines and replies.');}
 fs.writeFileSync('corpus/texts.jsonl',texts.map(t=>JSON.stringify(t)).join('\n')+'\n');fs.writeFileSync('corpus/manifest.json',JSON.stringify(man,null,1));
 console.log(texts.length,'texts');console.log(JSON.stringify(man,null,1));
