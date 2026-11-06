@@ -29,6 +29,14 @@ for(const name of ORDER){const s0=N[name].parameters.jsCode;const cs=COMPN(s0);i
  if(COMPN(s).length)throw new Error(name+': a computed $() is left');new Function('$','$input','$json',s);
  const f=name.replace(/ /g,'_')+'.js';fs.writeFileSync('pkgPTA/base/'+f,s0);fs.writeFileSync('pkgPTA/patched/'+f,s);N[name].parameters.jsCode=s;
  plan.nodes.push({node:name,base_sha:sha(s0),final_sha:sha(s),computed_calls:cs.length,table:names.length,names});}
+// B1 (W3 rulings 2650): run 33175 lost its enforcer log. record_enforcer_log returned 500 three times at 23:30:11-23:30:44Z, each a
+// "canceling statement due to statement timeout" (8 s), and Write Enforcer Log's error output still went to Derive Outcome, so the outcome
+// was derived and seats removed with no cure rows on record. (1) The error output goes to Panel Failure Note, the panel's own failure path:
+// no outcome is derived, so no seat is removed, without the log. (2) More room to get past a busy table: 5 tries, 5 s apart (was 3, 3 s).
+{const C=w.connections;const n=N['Write Enforcer Log'];const was=JSON.stringify({c:C['Write Enforcer Log'],t:[n.maxTries,n.waitBetweenTries,n.onError]});
+ if(JSON.stringify(C['Write Enforcer Log'].main)!==JSON.stringify([[{node:'Derive Outcome',type:'main',index:0}],[{node:'Derive Outcome',type:'main',index:0}]]))throw new Error('Write Enforcer Log wiring is not the expected base');
+ C['Write Enforcer Log'].main[1]=[{node:'Panel Failure Note',type:'main',index:0}];n.maxTries=5;n.waitBetweenTries=5000;
+ plan.structural={node:'Write Enforcer Log',was:JSON.parse(was),now:{c:C['Write Enforcer Log'],t:[n.maxTries,n.waitBetweenTries,n.onError]}};}
 const left=w.nodes.filter(n=>typeof (n.parameters||{}).jsCode==='string'&&COMPN(n.parameters.jsCode).length).map(n=>n.name);
 if(left.length)throw new Error('still computed: '+left.join(', '));
 fs.writeFileSync(OUTW,JSON.stringify(w));fs.writeFileSync('pkgPTA/plan_PTA.json',JSON.stringify(plan,null,1));

@@ -20,6 +20,10 @@ const runWith=(code,sc)=>{const asked=[];const seen={};let k=0;const $=n=>{asked
  return {out:out===undefined?'undefined':JSON.stringify(out),err,asked};};
 /* the clock is fixed, so a node that stamps the time gives the same bytes on both runs */
 const FD=class extends Date{constructor(...a){a.length?super(...a):super(Date.UTC(2026,10,6,23,0,0));}static now(){return Date.UTC(2026,10,6,23,0,0);}};
+{const C=W.connections;const n=W.nodes.find(x=>x.name==='Write Enforcer Log');
+ T('B1: Write Enforcer Log success -> Derive Outcome; error -> Panel Failure Note (no outcome derived without the log); 5 tries 5 s apart',C['Write Enforcer Log'].main[0][0].node==='Derive Outcome'&&C['Write Enforcer Log'].main[1].length===1&&C['Write Enforcer Log'].main[1][0].node==='Panel Failure Note'&&n.maxTries===5&&n.waitBetweenTries===5000&&n.onError==='continueErrorOutput');
+ const pf=W.nodes.find(x=>x.name==='Panel Failure Note').parameters.jsCode;const o=new Function('$input','$prevNode','$execution',pf)({first:()=>({json:{error:{message:'canceling statement due to statement timeout'}}})},{name:'Write Enforcer Log'},{customData:{set(){}}})[0].json;
+ T('B1: Panel Failure Note reads the log failure: panel_failed, failed_node Write Enforcer Log, the error text',o.panel_failed===true&&o.failed_node==='Write Enforcer Log'&&/statement timeout/.test(o.failed_msg));}
 const rows=[];
 for(const p of plan.nodes){const f=p.node.replace(/ /g,'_')+'.js';const b=rd('pkgPTA/base/'+f),q=rd('pkgPTA/patched/'+f);let same=true,cover=true,depth=[],why='';
  for(const sc of ['generic','none','33107','33160']){const x=runWith(b,sc),y=runWith(q,sc);

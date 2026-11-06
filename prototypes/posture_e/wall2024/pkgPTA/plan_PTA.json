@@ -615,5 +615,58 @@
     "Resolve Seats"
    ]
   }
- ]
+ ],
+ "structural": {
+  "node": "Write Enforcer Log",
+  "was": {
+   "c": {
+    "main": [
+     [
+      {
+       "node": "Derive Outcome",
+       "type": "main",
+       "index": 0
+      }
+     ],
+     [
+      {
+       "node": "Derive Outcome",
+       "type": "main",
+       "index": 0
+      }
+     ]
+    ]
+   },
+   "t": [
+    3,
+    3000,
+    "continueErrorOutput"
+   ]
+  },
+  "now": {
+   "c": {
+    "main": [
+     [
+      {
+       "node": "Derive Outcome",
+       "type": "main",
+       "index": 0
+      }
+     ],
+     [
+      {
+       "node": "Panel Failure Note",
+       "type": "main",
+       "index": 0
+      }
+     ]
+    ]
+   },
+   "t": [
+    5,
+    5000,
+    "continueErrorOutput"
+   ]
+  }
+ }
 }
