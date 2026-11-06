@@ -1,0 +1,13 @@
+OK   6 nodes: base and final shas match the plan
+OK   every node parses as an n8n Code node body
+OK   gateStands2024 is in each node once, and sbApply2024 is unchanged from pkgGD
+OK   33006 grok pattern: 3 E-GATE B items on one ANSWER CHECK line that S8 rewrote
+OK   pkgGD (live e46017fd): the first item CURED, the 2 identical changes UNCURED, 2 counted (G1:C G2:U G3:U)
+OK   pkgGDUP: all 3 CURED, 0 counted (G1:C G2:C G3:C); G2/G3 reason: the gate change is already in the corrected text (another change wrote the same line), and the item is no longer raised (W3 2319)
+OK   pkgGDUP: E-APPLY still applies G1 (the first change) and the text is the same as on pkgGD
+OK   a different CHANGE TO that was not applied stays UNCURED
+OK   a CHANGE TO equal to the line as it stands, with the item still raised, stays UNCURED
+OK   KEEP answers decide as on pkgGD
+OK   replay 32998: all 8 stored gate decisions are the same on pkgGD and pkgGDUP (cure and reason)
+
+11 OK, 0 FAIL
