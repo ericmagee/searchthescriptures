@@ -1,0 +1,30 @@
+OK   19 nodes: base and final shas match the plan
+OK   every node parses as an n8n Code node body
+OK   each node differs from its base only by the reader line and the label
+OK   reads "CORRECTED RESULT: HELD-1" as HELD-1
+OK   reads "CORRECTED RESULT: HELD-1 -- [DR3] names Matthew 1:21." as HELD-1
+OK   reads "CORRECTED RESULT: BROKEN-1 -- The retracted lines do not rem" as BROKEN-1
+OK   reads "CORRECTED RESULT: PARTIAL-2 (two links)" as PARTIAL-2
+OK   reads "CORRECTED RESULT: held-1 -- x" as HELD-1
+OK   does not read "CORRECTED RESULT: HELD-10"
+OK   does not read "CORRECTED RESULT: HELD-1x"
+OK   does not read "CORRECTED RESULT: the defender holds"
+OK   does not read "CORRECTED RESULT: HELD"
+OK   UNANSWERED-WITNESS label names RETRACTED and its one CORRECTED RESULT line
+OK   MEANING label unchanged
+   ODV1-32905-domzf7yq: CORRECTED RESULT lines read, base 0, pkgCR 1
+   ODV1-33014-jfrx4o4l: CORRECTED RESULT lines read, base 0, pkgCR 1
+   changed:
+     32905 K-G4 D3 vs C6: UNCURED -> CURED (retracted)
+     32905 K-B D6 vs C5: UNCURED -> CURED (retracted)
+     32905 K-G4 D6 vs C5: UNCURED -> UNCURED (retracted, but the BROKEN grade rests on meaning: its GROUND names no pressed witness left unanswered; a meaning break is cured only by a FORCED line, never by a retraction (ruling 421))
+     33014 K-G4 D2 vs C2: UNCURED -> CURED (retracted)
+     33014 K-G4 D4 vs C1: UNCURED -> CURED (retracted)
+     33014 K-G4 D6 vs C1: UNCURED -> CURED (retracted)
+OK   the 5 retraction items on an answered witness change UNCURED to CURED
+OK   32905 K-G4 D6 vs C5 stays UNCURED, now for ruling 421: its GROUND ("did not meet the pressed bar") names no witness left unanswered, so it is a meaning break
+OK   nothing else changes (6 rows of 36)
+OK   bare "CORRECTED RESULT: HELD-1" reads the same on base and pkgCR
+OK   bare "CORRECTED RESULT: BROKEN-1" reads the same on base and pkgCR
+OK   bare "CORRECTED RESULT: PARTIAL-2" reads the same on base and pkgCR
+20 OK, 0 FAIL
