@@ -1,0 +1,15 @@
+STORED 33040 (engine output)  (K-V items as stored)
+   gemini   HELD    drv_uncured 0  LIVE uncured 0
+   chatgpt  BROKEN  drv_uncured 0  LIVE uncured 5  [K-S3 S3 DEFENDER CR4: #1; K-S3 S3 CHALLENGER DR4: #2; K-V CHALLENGER premise 1; K-V CHALLENGER premise 6; K-CMT contested grades without a commitment; K-RUL D2 vs C2 (restated in the cure); K-RUL D2 vs C3 (restated in the cure)]
+   grok     HELD    drv_uncured 0  LIVE uncured 0
+   counted seats (drv_uncured 0): chatgpt, gemini, grok -> BROKEN, HELD, HELD  (BROKEN 1, HELD 2, PARTIAL 0)
+BASE pkgKVE/base  (Panel Payloads K-V recomputed: chatgpt K-V [CHALLENGER premise 1, CHALLENGER premise 6] -> [])
+   gemini   HELD    drv_uncured 0  LIVE uncured 0
+   chatgpt  BROKEN  drv_uncured 0  LIVE uncured 0  [K-RUL D2 vs C2 (restated in the cure); K-RUL D2 vs C3 (restated in the cure)]
+   grok     HELD    drv_uncured 0  LIVE uncured 0
+   counted seats (drv_uncured 0): chatgpt, gemini, grok -> BROKEN, HELD, HELD  (BROKEN 1, HELD 2, PARTIAL 0)
+PATCHED pkgKVE  (Panel Payloads K-V recomputed: chatgpt K-V [CHALLENGER premise 1, CHALLENGER premise 6] -> [])
+   gemini   HELD    drv_uncured 0  LIVE uncured 0
+   chatgpt  BROKEN  drv_uncured 0  LIVE uncured 0  [K-RUL D2 vs C2 (restated in the cure); K-RUL D2 vs C3 (restated in the cure)]
+   grok     HELD    drv_uncured 0  LIVE uncured 0
+   counted seats (drv_uncured 0): chatgpt, gemini, grok -> BROKEN, HELD, HELD  (BROKEN 1, HELD 2, PARTIAL 0)

@@ -1,0 +1,17 @@
+OK   19 kwCo nodes; base (pkgKVE/patched) and final shas match
+OK   kwCo("CONCEDED as to the additional maternal-list route, already c") = true (live false)
+OK   kwCo("CONCEDED as an independently sufficient limb.") = true (live false)
+OK   kwCo("The point is CONCEDED as an independently sufficient limb.") = false
+OK   kwCo("CONCEDED LINKS: 1") = false
+OK   kwCo("It is conceded as to the route.") = false
+OK   kwCo("CONCEDED: [DR3] drops it") = true
+OK   kwCo("CONCEDED in that form: [DR3] drops it") = true
+OK   kwCo("CONCEDED that the route is open and more besides here") = false
+OK   33040 replay: unchanged (33129 sol keeps its K-W: there CONCEDED stands mid-sentence)
+OK   33060 replay: unchanged (33129 sol keeps its K-W: there CONCEDED stands mid-sentence)
+OK   33083 replay: unchanged (33129 sol keeps its K-W: there CONCEDED stands mid-sentence)
+OK   33107 replay: unchanged (33129 sol keeps its K-W: there CONCEDED stands mid-sentence)
+OK   33129 replay: unchanged (33129 sol keeps its K-W: there CONCEDED stands mid-sentence)
+OK   33149 replay: unchanged (33129 sol keeps its K-W: there CONCEDED stands mid-sentence)
+OK   33160 replay: sol K-W DEFENDER CR2 D6 #8 cured (sol counted, 3 of 3); nothing else changes
+16 OK, 0 FAIL

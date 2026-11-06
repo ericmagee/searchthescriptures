@@ -1,0 +1,11 @@
+// pkgKWA test. Run from wall2024/: node pkgKWA/test_KWA.cjs
+const fs=require('fs');const crypto=require('crypto');const sha=s=>crypto.createHash('sha256').update(s).digest('hex').slice(0,16);const rd=f=>fs.readFileSync(f,'utf8');const {execFileSync}=require('child_process');
+let ok=0,bad=0;const T=(n,c,d)=>{console.log((c?'OK  ':'FAIL')+' '+n+(d?'\n     '+d:''));c?ok++:bad++;};
+const plan=JSON.parse(rd('pkgKWA/plan_KWA.json'));T('19 kwCo nodes; base (pkgKVE/patched) and final shas match',plan.nodes.length===19&&plan.nodes.every(n=>sha(rd('pkgKVE/patched/'+n.file))===n.base_sha&&sha(rd('pkgKWA/patched/'+n.file))===n.final_sha));
+const kw=f=>{const s=rd(f);const i=s.indexOf('const kwCo=');return new Function(s.slice(i,s.indexOf('.test(String(t));',i)+17)+'\nreturn kwCo;')();};const O=kw('pkgKVE/patched/Gate_Record.js'),N=kw('pkgKWA/patched/Gate_Record.js');
+for(const [t,w] of [['CONCEDED as to the additional maternal-list route, already counted under defender premise 6.',true],['CONCEDED as an independently sufficient limb.',true],['The point is CONCEDED as an independently sufficient limb.',false],['CONCEDED LINKS: 1',false],['It is conceded as to the route.',false],['CONCEDED: [DR3] drops it',true],['CONCEDED in that form: [DR3] drops it',true],['CONCEDED that the route is open and more besides here',false]])
+ T('kwCo('+JSON.stringify(t.slice(0,60))+') = '+w+(O(t)!==N(t)?' (live '+O(t)+')':''),N(t)===w);
+for(const r of ['33040','33060','33083','33107','33129','33149','33160']){const s=execFileSync('node',['corpus/regrade_run.cjs',r,'pkgKVE','pkgKWA']).toString();const b0=s.slice(s.indexOf('BASE'),s.indexOf('PATCHED')).split('\n').slice(1).join('\n').trim(),p=s.slice(s.indexOf('PATCHED')).split('\n').slice(1).join('\n').trim();
+ if(r==='33160')T('33160 replay: sol K-W DEFENDER CR2 D6 #8 cured (sol counted, 3 of 3); nothing else changes',/sol +HELD +drv_uncured 0/.test(p)&&/sol +HELD +drv_uncured 1 .*K-W DEFENDER CR2 D6 #8/.test(b0)&&b0.split('\n').filter(l=>!/sol |counted seats/.test(l)).join()===p.split('\n').filter(l=>!/sol |counted seats/.test(l)).join());
+ else T(r+' replay: unchanged (33129 sol keeps its K-W: there CONCEDED stands mid-sentence)',b0===p);}
+console.log(ok+' OK, '+bad+' FAIL');process.exitCode=bad?1:0;

@@ -1,0 +1,15 @@
+STORED 33160 (engine output)  (K-V items as stored)
+   gemini   HELD    drv_uncured 0  LIVE uncured 0
+   chatgpt  HELD    drv_uncured 1  LIVE uncured 1  [K-V DEFENDER premise 5]
+   sol      HELD    drv_uncured 1  LIVE uncured 1  [K-W DEFENDER CR2 D6 #8]
+   counted seats (drv_uncured 0): gemini -> HELD  (BROKEN 0, HELD 1, PARTIAL 0)
+BASE pkgKVE/base  (K-V items as stored)
+   gemini   HELD    drv_uncured 0  LIVE uncured 0
+   chatgpt  HELD    drv_uncured 1  LIVE uncured 1  [K-V DEFENDER premise 5]
+   sol      HELD    drv_uncured 1  LIVE uncured 1  [K-W DEFENDER CR2 D6 #8]
+   counted seats (drv_uncured 0): gemini -> HELD  (BROKEN 0, HELD 1, PARTIAL 0)
+PATCHED pkgKVE  (Panel Payloads K-V recomputed: chatgpt K-V [DEFENDER premise 5, CHALLENGER premise 3, CHALLENGER premise 4] -> [CHALLENGER premise 3, CHALLENGER premise 4])
+   gemini   HELD    drv_uncured 0  LIVE uncured 0
+   chatgpt  HELD    drv_uncured 0  LIVE uncured 0
+   sol      HELD    drv_uncured 1  LIVE uncured 1  [K-W DEFENDER CR2 D6 #8]
+   counted seats (drv_uncured 0): chatgpt, gemini -> HELD, HELD  (BROKEN 0, HELD 2, PARTIAL 0)

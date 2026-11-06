@@ -1,0 +1,15 @@
+STORED 33129 (engine output)  (K-V items as stored)
+   gemini   HELD    drv_uncured 0  LIVE uncured 0
+   chatgpt  BROKEN  drv_uncured 5  LIVE uncured 5  [K-G4 D4 vs C6; K-V CHALLENGER premise 5; K-W DEFENDER CR2 D3 (Luke 1 #1; K-W DEFENDER CR2 D4 (Isaiah 7 #2; K-W DEFENDER CR2 D6 (Romans 1 #3]
+   sol      HELD    drv_uncured 3  LIVE uncured 3  [K-W DEFENDER CR2 D4 (Isaiah 7 #2; K-W DEFENDER CR3 LINK 4 #5; K-W CHALLENGER DR3 LINK 3 #1]
+   counted seats (drv_uncured 0): gemini -> HELD  (BROKEN 0, HELD 1, PARTIAL 0)
+BASE pkgKVE/base  (Panel Payloads K-V recomputed: chatgpt K-V [CHALLENGER premise 5] -> [])
+   gemini   HELD    drv_uncured 0  LIVE uncured 0
+   chatgpt  BROKEN  drv_uncured 0  LIVE uncured 0
+   sol      HELD    drv_uncured 2  LIVE uncured 2  [K-W DEFENDER CR2 D4 (Isaiah 7 #2; K-W DEFENDER CR3 LINK 4 #5]
+   counted seats (drv_uncured 0): chatgpt, gemini -> BROKEN, HELD  (BROKEN 1, HELD 1, PARTIAL 0)
+PATCHED pkgKVE  (Panel Payloads K-V recomputed: chatgpt K-V [CHALLENGER premise 5] -> [])
+   gemini   HELD    drv_uncured 0  LIVE uncured 0
+   chatgpt  BROKEN  drv_uncured 0  LIVE uncured 0
+   sol      HELD    drv_uncured 2  LIVE uncured 2  [K-W DEFENDER CR2 D4 (Isaiah 7 #2; K-W DEFENDER CR3 LINK 4 #5]
+   counted seats (drv_uncured 0): chatgpt, gemini -> BROKEN, HELD  (BROKEN 1, HELD 1, PARTIAL 0)

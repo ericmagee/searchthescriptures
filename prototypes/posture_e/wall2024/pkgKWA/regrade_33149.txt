@@ -1,0 +1,15 @@
+STORED 33149 (engine output)  (K-V items as stored)
+   gemini   HELD    drv_uncured 0  LIVE uncured 0
+   chatgpt  HELD    drv_uncured 2  LIVE uncured 2  [K-W CHALLENGER DR3 LINK 1 #1; K-W CHALLENGER DR3 LINK 5 #2]
+   sol      HELD    drv_uncured 0  LIVE uncured 0
+   counted seats (drv_uncured 0): gemini, sol -> HELD, HELD  (BROKEN 0, HELD 2, PARTIAL 0)
+BASE pkgKVE  (K-V items as stored)
+   gemini   HELD    drv_uncured 0  LIVE uncured 0
+   chatgpt  HELD    drv_uncured 1  LIVE uncured 1  [K-W CHALLENGER DR3 LINK 1 #1]
+   sol      HELD    drv_uncured 0  LIVE uncured 0
+   counted seats (drv_uncured 0): gemini, sol -> HELD, HELD  (BROKEN 0, HELD 2, PARTIAL 0)
+PATCHED pkgKWA  (K-V items as stored)
+   gemini   HELD    drv_uncured 0  LIVE uncured 0
+   chatgpt  HELD    drv_uncured 1  LIVE uncured 1  [K-W CHALLENGER DR3 LINK 1 #1]
+   sol      HELD    drv_uncured 0  LIVE uncured 0
+   counted seats (drv_uncured 0): gemini, sol -> HELD, HELD  (BROKEN 0, HELD 2, PARTIAL 0)

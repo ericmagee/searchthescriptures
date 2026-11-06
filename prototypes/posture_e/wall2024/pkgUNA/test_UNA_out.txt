@@ -1,0 +1,19 @@
+OK   2 Build nodes; base (pkgPAB/patched) and final shas match
+OK   33040: every live item is still sent with its rule, item and line (71); new items are E-HOLD UNDERDETERMINED lines marked pkgUNA (7)
+OK   33040: no UNDERDETERMINED line is sent twice for one seat
+OK   33060: every live item is still sent with its rule, item and line (33); new items are E-HOLD UNDERDETERMINED lines marked pkgUNA (7)
+OK   33060: no UNDERDETERMINED line is sent twice for one seat
+OK   33083: every live item is still sent with its rule, item and line (73); new items are E-HOLD UNDERDETERMINED lines marked pkgUNA (9)
+OK   33083: no UNDERDETERMINED line is sent twice for one seat
+OK   33107: every live item is still sent with its rule, item and line (59); new items are E-HOLD UNDERDETERMINED lines marked pkgUNA (13)
+OK   33107: no UNDERDETERMINED line is sent twice for one seat
+OK   33129: every live item is still sent with its rule, item and line (46); new items are E-HOLD UNDERDETERMINED lines marked pkgUNA (13)
+OK   33129: no UNDERDETERMINED line is sent twice for one seat
+OK   33149: every live item is still sent with its rule, item and line (60); new items are E-HOLD UNDERDETERMINED lines marked pkgUNA (4)
+OK   33149: no UNDERDETERMINED line is sent twice for one seat
+OK   33160: every live item is still sent with its rule, item and line (44); new items are E-HOLD UNDERDETERMINED lines marked pkgUNA (2)
+OK   33160: no UNDERDETERMINED line is sent twice for one seat
+OK   cure: KEEP does not cure
+OK   cure: RETRACTED cures
+OK   the send-back text for a pkgUNA item does not say the enforcer reads the line as BROKEN
+18 OK, 0 FAIL
