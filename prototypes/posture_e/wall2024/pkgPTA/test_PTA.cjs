@@ -1,14 +1,14 @@
 // pkgPTA test: for each of the 26 nodes, base and patched run on the same stand-in data in 4 scenarios (generic data, nothing executed,
 // and the saved node data of runs 33107 and 33160 laid over the generic data); the output (or the error) must be byte-identical and the
 // nodes asked for the same, in the same order; every node the base asks for must be in the patched table.
-// Run from wall2024/ after build_PTA.cjs: node pkgPTA/test_PTA.cjs
+// Run from wall2024/ after build_PTA.cjs A and B: node pkgPTA/test_PTA.cjs A|B
 const fs=require('fs');const z=require('zlib');const crypto=require('crypto');const sha=s=>crypto.createHash('sha256').update(s).digest('hex').slice(0,16);const rd=f=>fs.readFileSync(f,'utf8');
 const {COMPN}=require('../pkgPTK/scan.cjs');
 let ok=0,bad=0;const T=(n,c,d)=>{console.log((c?'OK  ':'FAIL')+' '+n+(d?'\n     '+d:''));c?ok++:bad++;};
-const plan=JSON.parse(rd('pkgPTA/plan_PTA.json'));const W=JSON.parse(rd('pkgPTA/out/workflow_PTA.json'));
-T(plan.nodes.length+' nodes; base and final shas match the files',plan.nodes.length===26&&plan.nodes.every(p=>{const f=p.node.replace(/ /g,'_')+'.js';return sha(rd('pkgPTA/base/'+f))===p.base_sha&&sha(rd('pkgPTA/patched/'+f))===p.final_sha;}));
-T('no code node in the output workflow has a computed $() call',W.nodes.every(n=>typeof (n.parameters||{}).jsCode!=='string'||!COMPN(n.parameters.jsCode).length));
-const am=plan.nodes.find(p=>p.node==='Alternate Merge');T('Alternate Merge is based on pkgSLA\'s final (49b19797)',am&&am.base_sha==='49b19797c2a4fe82');
+const PART=(process.argv[2]||'A').toUpperCase();const plan=JSON.parse(rd('pkgPTA/plan_PTA_'+PART+'.json'));const W=JSON.parse(rd('pkgPTA/out/workflow_PTA_'+PART+'.json'));console.log('PART '+PART);
+T(plan.nodes.length+' nodes; base and final shas match the files',plan.nodes.length===(PART==='A'?12:14)&&plan.nodes.every(p=>{const f=p.node.replace(/ /g,'_')+'.js';return sha(rd('pkgPTA/base/'+f))===p.base_sha&&sha(rd('pkgPTA/patched/'+f))===p.final_sha;}));
+{const left=W.nodes.filter(n=>typeof (n.parameters||{}).jsCode==='string'&&COMPN(n.parameters.jsCode).length).map(n=>n.name);T(PART==='A'?'part A: only the 14 held nodes still have a computed $() call':'part B: no code node has a computed $() call',PART==='A'?left.length===14:left.length===0,left.join(', '));}
+if(PART==='A'){const am=plan.nodes.find(p=>p.node==='Alternate Merge');T('Alternate Merge is based on pkgSLA\'s final (49b19797)',am&&am.base_sha==='49b19797c2a4fe82');}
 const real={};for(const r of ['33107','33160']){const d=JSON.parse(z.gunzipSync(fs.readFileSync('corpus/raw/nodes_'+r+'.json.gz'))).nodes;const g=JSON.parse(rd('corpus/raw/gate_'+r+'.json'));real[r]={...d,...g};}
 const gen=(n,i)=>({run_token:'t',seat:'gemini',usage:{prompt_tokens:i,completion_tokens:i},choices:[{message:{content:'x'+i},finish_reason:'stop'}],content:[{type:'text',text:'y'+i}],id:'msg_'+i,raw:'r'+i,labelled:'l'+i,body:{messages:[{role:'user',content:'u'}]},call:{fam:'openai',fam_idx:1,model:'m',body:{messages:[{role:'user',content:'u'}]}}});
 const runWith=(code,sc)=>{const asked=[];const seen={};let k=0;const $=n=>{asked.push(n);
@@ -20,7 +20,7 @@ const runWith=(code,sc)=>{const asked=[];const seen={};let k=0;const $=n=>{asked
  return {out:out===undefined?'undefined':JSON.stringify(out),err,asked};};
 /* the clock is fixed, so a node that stamps the time gives the same bytes on both runs */
 const FD=class extends Date{constructor(...a){a.length?super(...a):super(Date.UTC(2026,10,6,23,0,0));}static now(){return Date.UTC(2026,10,6,23,0,0);}};
-{const C=W.connections;const n=W.nodes.find(x=>x.name==='Write Enforcer Log');
+if(PART==='A'){const C=W.connections;const n=W.nodes.find(x=>x.name==='Write Enforcer Log');
  T('B1: Write Enforcer Log success -> Derive Outcome; error -> Panel Failure Note (no outcome derived without the log); 5 tries 5 s apart',C['Write Enforcer Log'].main[0][0].node==='Derive Outcome'&&C['Write Enforcer Log'].main[1].length===1&&C['Write Enforcer Log'].main[1][0].node==='Panel Failure Note'&&n.maxTries===5&&n.waitBetweenTries===5000&&n.onError==='continueErrorOutput');
  const pf=W.nodes.find(x=>x.name==='Panel Failure Note').parameters.jsCode;const o=new Function('$input','$prevNode','$execution',pf)({first:()=>({json:{error:{message:'canceling statement due to statement timeout'}}})},{name:'Write Enforcer Log'},{customData:{set(){}}})[0].json;
  T('B1: Panel Failure Note reads the log failure: panel_failed, failed_node Write Enforcer Log, the error text',o.panel_failed===true&&o.failed_node==='Write Enforcer Log'&&/statement timeout/.test(o.failed_msg));}
