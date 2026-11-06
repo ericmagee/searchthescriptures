@@ -10,7 +10,7 @@ T('22 nodes; base shas = '+plan.base+', final shas = pkgPAY/patched; only the 5 
 const load=run=>JSON.parse(zlib.gunzipSync(fs.readFileSync('corpus/raw/nodes_'+run+'.json.gz')));
 const mock=N=>name=>{const runs=N.nodes[name];if(!runs)return {isExecuted:false,first:()=>{throw new Error('not saved '+name)},all:()=>{throw new Error('not saved '+name)}};const items=runs[runs.length-1]||[];return {isExecuted:true,first:()=>({json:items[0]}),last:()=>({json:items[items.length-1]}),all:()=>items.map(j=>({json:j})),item:{json:items[0]}};};
 const run=(file,N,inp)=>new Function('$','$input','$json',rd(file))(mock(N),{first:()=>({json:(inp||[])[0]||{}}),all:()=>(inp||[]).map(j=>({json:j})),item:{json:{}}},{});
-const AM=rd('pkgKV/patched/Alternate_Merge.js');const L=new Function('$','$input',AM.slice(0,AM.indexOf("const AM=$('Alternate Merge Seat')"))+'\nreturn {enfPrompt};')(()=>{throw 0},null);
+const AM=rd(plan.base+'/Alternate_Merge.js');const L=new Function('$','$input',AM.slice(0,AM.indexOf("const AM=$('Alternate Merge Seat')"))+'\nreturn {enfPrompt};')(()=>{throw 0},null);
 const strip=o=>JSON.stringify(o,(k,v)=>k==='at'?undefined:v);
 const runs=fs.readdirSync('corpus/raw').filter(f=>/^nodes_\d+\.json\.gz$/.test(f)).map(f=>f.slice(6,11)).sort();
 let fieldsOk=true,promptOk=true,checkOk=true,nSeats=0,before=0,after=0;const msg=[];
@@ -22,7 +22,7 @@ for(const r of runs){const N=load(r);const N2=JSON.parse(JSON.stringify(N));
    const ka=Object.keys(a).filter(k=>k!=='body'),kb=Object.keys(b).filter(k=>k!=='body');if(JSON.stringify(ka.map(k=>[k,a[k]]))!==JSON.stringify(kb.map(k=>[k,b[k]]))){fieldsOk=false;msg.push(r+' '+nn+' fields differ');}
    if(L.enfPrompt(a.body)!==L.enfPrompt(b.body)){promptOk=false;msg.push(r+' '+nn+' prompt differs');}
    before+=JSON.stringify(st[i]).length;const s2=Object.assign({},st[i],{cure:b});after+=JSON.stringify(s2).length;N2.nodes[nn][N2.nodes[nn].length-1][i]=s2;});}
- if(N.nodes['Panel Cure Check']){let x,y;try{x=strip(run('pkgKV/patched/Panel_Cure_Check.js',N));y=strip(run('pkgPAY/patched/Panel_Cure_Check.js',N2));}catch(e){checkOk=false;msg.push(r+' '+e.message);continue;}
+ if(N.nodes['Panel Cure Check']){let x,y;try{x=strip(run(plan.base+'/Panel_Cure_Check.js',N));y=strip(run('pkgPAY/patched/Panel_Cure_Check.js',N2));}catch(e){checkOk=false;msg.push(r+' '+e.message);continue;}
   if(x!==y){checkOk=false;msg.push(r+' Panel Cure Check output differs');}else msg.push(r+' Panel Cure Check output equal ('+(x.length>>10)+' KB)');}}
 msg.forEach(m=>console.log('   '+m));
 T('every Normalize output ('+nSeats+' seat items, '+runs.length+' runs): every cure field but body is forwarded unchanged',fieldsOk&&nSeats>0);

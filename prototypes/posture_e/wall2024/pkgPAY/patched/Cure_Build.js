@@ -499,7 +499,7 @@ const REFP=(()=>{const BOOKS="Genesis|Exodus|Leviticus|Numbers|Deuteronomy|Joshu
 // after it has proved itself on stored text. C4-RENUM and C4-PRESS (the close-round numbering and press checks) make notes, never items.
 const KW_NH=true; /* pkgKW (d): NOT HELD quoting the flagged sentence answers a K-W item */
 const ENF_STATUS={'K-B':'LIVE','K-C':'LIVE','K-G1':'LIVE','K-G3':'LIVE','K-G4':'LIVE','K-G6':'LIVE','K-G7':'LIVE','K-G8':'LIVE','K-N':'LIVE','K-S':'LIVE','K-SC':'LIVE',
- 'K-LB':'TRIAL','K-G9':'TRIAL','K-G10':'TRIAL','K-G11':'TRIAL','K-V':'LIVE','K-S2':'TRIAL','K-LXX':'TRIAL','K-P':'TRIAL','K-F':'TRIAL','K-R':'TRIAL','K-L2':'TRIAL','K-W':'LIVE','K-S3':'LIVE','C4-RENUM':'TRIAL','C4-PRESS':'TRIAL','K-CON':'LIVE','K-CMT':'TRIAL','K-RUL':'TRIAL','K-KJV':'TRIAL','K-AG':'TRIAL'};
+ 'K-LB':'TRIAL','K-G9':'TRIAL','K-G10':'TRIAL','K-G11':'TRIAL','K-V':'LIVE','K-S2':'TRIAL','K-LXX':'TRIAL','K-P':'TRIAL','K-F':'TRIAL','K-R':'TRIAL','K-L2':'TRIAL','K-W':'LIVE','K-S3':'LIVE','C4-RENUM':'TRIAL','C4-PRESS':'TRIAL','K-CON':'LIVE','K-CMT':'LIVE','K-RUL':'TRIAL','K-KJV':'TRIAL','K-AG':'TRIAL'};
 const enfStatus=r=>ENF_STATUS[String(r||'')]==='TRIAL'?'TRIAL':'LIVE';
 const enfLive=x=>enfStatus(x&&x.rule)==='LIVE';
 // WALL-2024 silence count (Eric 2026-11-05 21:18 CST, reply 2185): an item of ANY rule, TRIAL included, with NO WRITTEN RESPONSE (flagged silent by
@@ -714,19 +714,19 @@ function wpLines2024(R){const items=[],marks=[];if(!R)return {items,marks};
 // a grade word in a negation ("None is VOID", "No premise is VOID", "not VOID"); in an ANSWER CHECK line, any word but its verdict slot
 // (the grade after ANSWER, e.g. MISSES). "Commitments 3 and 7" names a commitment.
 function kcmtGrade2024(l){if(/^\[AUDIT\b/.test(l))return false;const h=l.replace(/^[-*•>\s]+/,'').replace(/^\*\*/,'');
- if(/^RESULT\s*:.*\brecomputed\b/i.test(h))return false;if(/^CLAUSE\s*:/i.test(h))return false;if(/^(?:DEFENSE|CHALLENGE)\s+STANDING\s*:/i.test(h))return false; /* a standing is graded by its standing word; a VOID in it counts rulings made on the CONCEDED LINKS line */
+ if(/^RESULT\s*:.*\brecomputed\b/i.test(h))return false;if(/^CLAUSE\s*:/i.test(h))return false;if(/^SUPERSEDED BY CURE\s*:/i.test(h)||/^RESULT\s*:.*\bderived after the send-back\b/i.test(h))return false; /* pkgKCMT (c): engine-written lines (W3 2216) */if(/^(?:DEFENSE|CHALLENGE)\s+STANDING\s*:/i.test(h))return false; /* a standing is graded by its standing word; a VOID in it counts rulings made on the CONCEDED LINKS line */
  if(/^(?:RULING\s*(?:--|—|–|:)|CLAIM\s*:|NAMED BY\s*:|RULE\s*:|APPLIED\s*:)/i.test(h))return false;
  if(/\bCommitments?\s*\d+/i.test(h))return false;
  let t=h.replace(/"[^"]*"|“[^”]*”/g,' ');
  if(/^ANSWER CHECK\s*:/i.test(h)){const a=t.lastIndexOf('ANSWER:');const sg=(a<0?'':t.slice(a)).split(/\s(?:--|—|–)\s/);t=sg.length>1?sg[1]:'';} /* an ANSWER CHECK grades by its verdict slot after ANSWER; a trailing "premise N is VOID" points to a VOID ruled elsewhere */
- t=t.replace(/\b(?:none|no\s+\w+(?:\s+\w+)?)\s+(?:(?:is|are|was|were)\s+)?(?:counted\s+as\s+)?(?:BROKEN|FORCED|MISSES|VOID|UNPROVEN)\b/gi,' ').replace(/\bnot\s+(?:BROKEN|FORCED|MISSES|VOID|UNPROVEN)\b/gi,' ');
+ t=t.replace(/\b(?:none|no\s+\w+(?:\s+\w+)?)\s+(?:(?:is|are|was|were)\s+)?(?:counted\s+as\s+)?(?:BROKEN|FORCED|MISSES|VOID|UNPROVEN)\b/gi,' ').replace(/\bnot\s+(?:(?:graded|counted|ruled|held)\s+)?(?:(?:DEFENDER|CHALLENGER)\s+)?(?:LINK\s+)?(?:BROKEN|FORCED|MISSES|VOID|UNPROVEN)\b/gi,' '); /* pkgKCMT (c): "not graded DEFENDER LINK BROKEN" negates (32998, 33021 grok KEYSTONE ... STANDS) */
  return /\b(BROKEN|FORCED|MISSES|VOID|UNPROVEN)\b/.test(t);}
 function kcmtLines2024(text){const items=[],marks=[];if(typeof text!=='string'||!text.trim())return {items,marks};
  let T=text;{const s=T.trim();if(s[0]==='{'){const i=s.lastIndexOf('}');try{const j=JSON.parse(s.slice(0,i+1));if(j&&typeof j.reasoning==='string')T=j.reasoning;}catch(e){}}}
  const L=T.split('\n').map(l=>l.trim()).filter(l=>l&&kcmtGrade2024(l));
  if(!L.length)return {items,marks};
  items.push({rule:'K-CMT',side:'JUDGE',link:'contested grades without a commitment',line:L.length+' contested grade line'+(L.length===1?'':'s')+' name no commitment (answer each with its Commitment N, or NOT A GRADE); first: '+L.slice(0,5).map(l=>'"'+l.slice(0,160)+'"').join('; ')});
- marks.push('[AUDIT v33: GRADE WITHOUT ITS COMMITMENT (K-CMT) -- '+L.length+' contested grade line'+(L.length===1?'':'s')+' name no "(Commitment N)"; first: '+L.slice(0,3).map(l=>l.replace(/[\[\]"]/g,'').slice(0,120)).join(' / ')+'; the judge answers each line with its (Commitment N), or NOT A GRADE where the line carries a grade word but grades nothing. TRIAL rule: it removes no seat. REVIEW THIS ROW.]');
+ marks.push('[AUDIT v33: GRADE WITHOUT ITS COMMITMENT (K-CMT) -- '+L.length+' contested grade line'+(L.length===1?'':'s')+' name no "(Commitment N)"; first: '+L.slice(0,3).map(l=>l.replace(/[\[\]"]/g,'').slice(0,120)).join(' / ')+'; the judge answers each line with its (Commitment N), or NOT A GRADE where the line carries a grade word but grades nothing. LIVE rule: left unanswered after the cure, it removes the seat; a Commitment N or NOT A GRADE on its RESPONSE or STATEMENT line answers it.]');
  return {items,marks};}
 // WALL-2024 Commitment 11, K-RUL (TRIAL; ruling card, /mnt/project-files/w3/ruling_card_draft.md, operator go 2026-11-05 19:37 CST).
 // Every deciding ruling needs a ruling card (RULING / CLAIM / NAMED BY / RULE / APPLIED). Deciding rulings: each number in
@@ -1715,7 +1715,7 @@ const respOf=(x)=>{const lb=U(cureLabel(x));const rk=U(x.rule||'');const ruleOk=
    return res('UNCURED',rs.length?'the restated line still grades '+x.link+' STANDS, and no statement names a round and quotes it':'no regrade, no restated count and no statement naming a round and quoting it, for '+x.link,rs.length?[rs[0].line]:null);}
   {const ag=kagCure(x,reply&&reply.ok?reply.text:'',respOf(x));if(ag)return res(ag.st,ag.why,ag.line?[ag.line]:null);} // K-AG (TRIAL; W3 2279, 2283)
   {const kk=kkjvCure(x,reply&&reply.ok?reply.text:'');if(kk)return res(kk.st,kk.why,kk.line?[kk.line]:null);} // K-KJV (TRIAL; Commitment 12)
-  {const kr=krulCure(x,reply&&reply.ok?reply.text:'',R,(x.rule==='K-CMT'?respOf(x):null));if(kr)return res(kr.st,kr.why,kr.line?[kr.line]:null);} // K-CON, K-CMT, K-RUL (TRIAL; form only; WALL-2024 reply 2150)
+  {const kr=krulCure(x,reply&&reply.ok?reply.text:'',R,(x.rule==='K-CMT'?(respOf(x)?respOf(x)+'\n'+(stmtOf(x)||(items.filter(y=>y&&y.rule==='K-CMT').length===1?(o.statement.find(s=>{const L=NZ(s.label);return L==='K-CMT'||L.startsWith('K-CMT ');})||{}).text:'')||''):null):null)) /* pkgKCMT (a): the STATEMENT line too, once a RESPONSE is written */;if(kr)return res(kr.st,kr.why,kr.line?[kr.line]:null);} // K-CON, K-CMT, K-RUL (TRIAL; form only; WALL-2024 reply 2150)
   return res('UNCURED','unknown rule',null);}).concat(krulRestated(items,reply,R)); // R7 (W3, reply 2157): RESTATED lines of the cure reply need a card
 }
 // BB-7330 (option 2, the operator's "2" at 14:51 CDT): where a RETRACTED line cured an item, the seat is counted on its one CORRECTED RESULT.

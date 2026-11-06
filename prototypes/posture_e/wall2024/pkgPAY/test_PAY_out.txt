@@ -1,4 +1,4 @@
-OK   22 nodes; base shas = pkgKV/patched, final shas = pkgPAY/patched; only the 5 Normalize nodes change
+OK   22 nodes; base shas = pkgKCMT/patched, final shas = pkgPAY/patched; only the 5 Normalize nodes change
 OK   every Normalize output (22 seat items, 6 runs): every cure field but body is forwarded unchanged
 OK   enfPrompt (prompt_sent) of the slim body equals that of the full body, every seat
 OK   Panel Cure Check on the slim Normalize outputs equals its output on the stored ones, every run (prompt_sent included)
