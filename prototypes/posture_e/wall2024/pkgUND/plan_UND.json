@@ -1,0 +1,47 @@
+{
+ "base": "live 36e9c423 (pkgECL/patched)",
+ "nodes": [
+  {
+   "file": "Send_Back_Build.js",
+   "base": "pkgECL/patched",
+   "base_sha": "c05e5645473ca198",
+   "final_sha": "cf62e937c5b07372",
+   "edits": 6
+  },
+  {
+   "file": "Alt_Send_Back_Build.js",
+   "base": "pkgECL/patched",
+   "base_sha": "6de4eaa578ae1be3",
+   "final_sha": "739df954c5fc9083",
+   "edits": 6
+  },
+  {
+   "file": "Send_Back_Record.js",
+   "base": "pkgECL/patched",
+   "base_sha": "37ee50bb1fb88386",
+   "final_sha": "6650e79f296188b2",
+   "edits": 5
+  },
+  {
+   "file": "Alt_Send_Back_Record.js",
+   "base": "pkgECL/patched",
+   "base_sha": "2099caf47f46d4aa",
+   "final_sha": "428717fbc330ce5a",
+   "edits": 5
+  },
+  {
+   "file": "Panel_Build.js",
+   "base": "pkgECL/patched",
+   "base_sha": "63f842b8230eb8fb",
+   "final_sha": "60b853645aabf085",
+   "edits": 1
+  },
+  {
+   "file": "Build_Independent_Verdict.js",
+   "base": "pkgECL/patched",
+   "base_sha": "5a9e56cf10b8dcc9",
+   "final_sha": "79b5529a71fff7b2",
+   "edits": 1
+  }
+ ]
+}

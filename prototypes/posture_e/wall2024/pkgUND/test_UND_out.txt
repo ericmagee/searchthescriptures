@@ -1,0 +1,82 @@
+OK   6 nodes; base (pkgECL/patched) and final shas match
+OK   every Send Back node carries src_UND.js byte for byte
+OK   unit: chatgpt 33107 D6 vs C6 as written gives no [L1] (and names the open point only as "does not dispute"): no [L1]: no verse is quoted with its reference under an [L1] tag | the line does not state what the record leaves open (for example: "the record leaves open whether ...", "both readings agree with ...")
+OK   unit: the same line with [L1] Luke 1:36 "thy cousin Elisabeth" and "the record leaves open whether ..." gives its grounds: [L1] COUNTED; states what the record leaves open
+OK   unit: "both readings agree" states the open point: [L1] COUNTED; states what the record leaves open
+OK   cure: E-UNG KEEP: UNCURED
+     a KEEP does not cure this item (pkgUND)
+OK   cure: E-UNG CHANGE TO "D1: STANDS": UNCURED
+     the CHANGE TO has no graded D1 vs C<j> line
+OK   cure: E-UNG CHANGE TO D1 vs C1 UNDERDETERMINED with [L1] and the open point: CURED
+     graded UNDERDETERMINED; [L1] COUNTED; states what the record leaves open
+OK   cure: E-UNG CHANGE TO D1 vs C1 DEFENDER LINK BROKEN with counted layers: CURED
+     graded DEFENDER LINK BROKEN; layers counted: [L1] COUNTED
+OK   cure: E-UNG CHANGE TO D1 vs C1 CHALLENGER LINK BROKEN with counted layers: CURED
+     graded CHALLENGER LINK BROKEN; layers counted: [L1] COUNTED
+OK   cure: E-UNG CHANGE TO D1 vs C1 CHALLENGER LINK BROKEN with no [L1]: UNCURED
+     graded CHALLENGER LINK BROKEN; the layer check fails: no [L1]: no verse is quoted with its reference under an [L1] tag
+OK   cure: E-HOLD-UND KEEP: UNCURED
+     a KEEP does not cure this item (pkgUND)
+OK   cure: E-HOLD-UND RETRACTED: CURED
+     CHANGE TO RETRACTED
+OK   cure: E-HOLD-UND kept UNDERDETERMINED with its grounds: CURED
+     kept UNDERDETERMINED; [L1] COUNTED; states what the record leaves open
+OK   cure: E-HOLD-UND kept UNDERDETERMINED without [L1]: UNCURED
+     kept UNDERDETERMINED; no [L1]: no verse is quoted with its reference under an [L1] tag | the line does not state what the record leaves open (for example: "the record leaves open whether ...", "both readings agree with ...")
+OK   cure: E-HOLD-UND regraded DEFENDER LINK BROKEN with counted layers: CURED
+     regraded BROKEN; layers counted: [L1] COUNTED
+OK   cure: E-HOLD-UND regraded STANDS: CURED
+     regraded STANDS
+OK   cure: no answer: UNCURED
+     no answer (pkgUND)
+  == 33040: base 51 items, pkgUND 62 (E-UNG 11, E-HOLD on UNDERDETERMINED marked 2)
+     E-UNG  gemini  COLLISION D1 (pressed: [DR2] premise 1) | D1: STANDS -- answered in [CR3] and [CR4] -- GROUND: Matthew 1:16 breaks the active begetting pattern of Matth
+     E-UNG  gemini  COLLISION D2 (pressed: [DR2] premise 2) | D2: STANDS -- answered in [CR3] and [CR4] -- GROUND: Matthew 1:18 and 1:20 explicitly state the conception was
+     E-UNG  gemini  COLLISION D3 (pressed: [DR2] premise 3) | D3: STANDS -- answered in [CR3] and [CR4] -- GROUND: Luke 1:34-35 explicitly names the Holy Ghost and the powe
+     E-UNG  gemini  COLLISION D4 (pressed: [DR2] premise 4) | D4: STANDS -- answered in [CR3] and [CR4] -- GROUND: Luke 3:23 marks Joseph's fatherhood as supposed, and in L
+     E-UNG  gemini  COLLISION D5 (pressed: [DR2] premise 5) | D5: STANDS -- answered in [CR3] and [CR4] -- GROUND: Davidic descent according to the flesh is stated without 
+     E-UNG  gemini  COLLISION D6 (pressed: [DR2] premise 6) | D6: STANDS -- answered in [CR3] and [CR4] -- GROUND: Christ had no human biological father because Matthew 1:1
+     E-UNG  grok    COLLISION D1 (pressed: [DR2] premise 1) | D1: STANDS -- GROUND: the kept limb is the verb change at Matthew 1:16, and the mother's-verb presses were met
+     E-UNG  grok    COLLISION D3 (pressed: [DR2] premise 3) | D3: STANDS -- GROUND: the kept answer to "How shall this be" names the Holy Ghost and the power, the begetting
+     E-UNG  grok    COLLISION D4 (pressed: [DR2] premise 4) | D4: STANDS -- GROUND: the kept limb is Luke 3:23 "as was supposed" and the crowd's speech in John 6:42, and th
+     E-UNG  grok    COLLISION D5 (pressed: [DR2] premise 5) | D5: STANDS -- GROUND: the kept limb is house by taking and naming, Mary's house was dropped, and the loins pre
+     E-UNG  grok    COLLISION D6 (pressed: [DR2] premise 6) | D6: STANDS -- GROUND: the keystone rests on the Holy Ghost as the stated source and on Matthew 1:16 not saying
+     E-HOLD chatgpt COLLISION D2 vs C2 | stored answer CHANGE TO: D2 vs C2 (Matthew 1:24): DEFENDER LINK BROKEN (Commitment 5) -- [L1] Matthew 1:2 -> under pkgUND CURED (regraded BROKEN; rests on an unanswered press (ruling 392), not on meaning)
+     E-HOLD chatgpt COLLISION D2 vs C3 | stored answer CHANGE TO: D2 vs C3 (Matthew 1:19): CHALLENGER LINK BROKEN (Commitment 5) -- [L1] Matthew 1 -> under pkgUND CURED (regraded BROKEN; rests on an unanswered press (ruling 392), not on meaning)
+OK   Send Back Build 33040: every base item is still sent unchanged; the only new items are E-UNG; marked E-HOLD items are UNDERDETERMINED lines the enforcer reads BROKEN
+  == 33060: base 21 items, pkgUND 27 (E-UNG 6, E-HOLD on UNDERDETERMINED marked 0); NOT SENT 0 E-UNG (sol: no panel request for this seat)
+     E-UNG  gemini  COLLISION D1 (pressed: [DR2] premise 1) | (no COLLISION POINTS line for D1)
+     E-UNG  gemini  COLLISION D2 (pressed: [DR2] premise 2) | (no COLLISION POINTS line for D2)
+     E-UNG  gemini  COLLISION D3 (pressed: [DR2] premise 3) | (no COLLISION POINTS line for D3)
+     E-UNG  gemini  COLLISION D4 (pressed: [DR2] premise 4) | (no COLLISION POINTS line for D4)
+     E-UNG  gemini  COLLISION D5 (pressed: [DR2] premise 5) | (no COLLISION POINTS line for D5)
+     E-UNG  gemini  COLLISION D6 (pressed: [DR2] premise 6) | (no COLLISION POINTS line for D6)
+OK   Send Back Build 33060: every base item is still sent unchanged; the only new items are E-UNG; marked E-HOLD items are UNDERDETERMINED lines the enforcer reads BROKEN
+  == 33083: base 64 items, pkgUND 66 (E-UNG 2, E-HOLD on UNDERDETERMINED marked 2)
+     E-UNG  sol     COLLISION D6 (pressed: [DR2] premise 6) | D6: STANDS -- CR2 and CR3 answer the Judah, fathers' houses, inheritance, register and flesh-and-blood witness
+     E-UNG  gemini  COLLISION D6 (pressed: [DR2] premise 6) | D6: STANDS -- GROUND: Matthew 1:18, Matthew 1:20, and Luke 1:35 together establish that Christ was conceived o
+     E-HOLD chatgpt COLLISION D4 vs C3 | stored answer KEEP -> under pkgUND UNCURED (a KEEP does not cure this item (pkgUND))
+     E-HOLD chatgpt COLLISION D5 vs C4 | stored answer KEEP -> under pkgUND UNCURED (a KEEP does not cure this item (pkgUND))
+OK   Send Back Build 33083: every base item is still sent unchanged; the only new items are E-UNG; marked E-HOLD items are UNDERDETERMINED lines the enforcer reads BROKEN
+  == 33107: base 40 items, pkgUND 47 (E-UNG 7, E-HOLD on UNDERDETERMINED marked 7)
+     E-UNG  gemini  COLLISION D1 (pressed: [DR2] premise 1) | D1: STANDS -- GROUND: Matthew 1:16 withholds the active verb gennaō from Joseph while applying it to every pri
+     E-UNG  gemini  COLLISION D2 (pressed: [DR2] premise 2) | D2: STANDS -- GROUND: Matthew 1:20 assigns the conception directly to the Holy Ghost, which Joseph's obedience
+     E-UNG  gemini  COLLISION D3 (pressed: [DR2] premise 3) | D3: STANDS -- GROUND: Luke 1:34-35 answers Mary's lack of relations with divine overshadowing rather than huma
+     E-UNG  gemini  COLLISION D4 (pressed: [DR2] premise 4) | D4: STANDS -- GROUND: Matthew 1:18 explicitly places the conception of the Holy Ghost before Joseph and Mary c
+     E-UNG  gemini  COLLISION D5 (pressed: [DR2] premise 5) | D5: STANDS -- GROUND: Hebrews 7:5 and 7:10 use loins and father of remote ancestors, and Luke 3:23 explicitly 
+     E-UNG  gemini  COLLISION D6 (pressed: [DR2] premise 6) | D6: STANDS -- GROUND: The interlocking nativity accounts in Matthew and Luke exclude biological paternity, ful
+     E-UNG  sol     COLLISION D1 (pressed: [DR2] premise 1) | D1: STANDS -- [CR3] answers the eight witnesses by granting the mother-marker usage while retaining the active
+     E-HOLD chatgpt COLLISION D6 vs C2 | stored answer KEEP -> under pkgUND UNCURED (a KEEP does not cure this item (pkgUND))
+     E-HOLD chatgpt COLLISION D6 vs C6 | stored answer KEEP -> under pkgUND UNCURED (a KEEP does not cure this item (pkgUND))
+     E-HOLD sol     COLLISION D2 vs C3 | stored answer KEEP -> under pkgUND UNCURED (a KEEP does not cure this item (pkgUND))
+     E-HOLD sol     COLLISION D3 vs C2 | stored answer KEEP -> under pkgUND UNCURED (a KEEP does not cure this item (pkgUND))
+     E-HOLD sol     COLLISION D4 vs C3 | stored answer KEEP -> under pkgUND UNCURED (a KEEP does not cure this item (pkgUND))
+     E-HOLD sol     COLLISION D5 vs C6 | stored answer KEEP -> under pkgUND UNCURED (a KEEP does not cure this item (pkgUND))
+     E-HOLD sol     COLLISION D6 vs C2 | stored answer KEEP -> under pkgUND UNCURED (a KEEP does not cure this item (pkgUND))
+OK   Send Back Build 33107: every base item is still sent unchanged; the only new items are E-UNG; marked E-HOLD items are UNDERDETERMINED lines the enforcer reads BROKEN
+OK   33107: gemini D1 to D6 raised (no graded collision line), chatgpt D6 vs C6 marked
+OK   Send_Back_Record.js: UND.cure on E-UNG and marked items; UNCURED counted in drv_uncured with an AUDIT v42 line; reported in und_counted
+OK   Alt_Send_Back_Record.js: UND.cure on E-UNG and marked items; UNCURED counted in drv_uncured with an AUDIT v42 line; reported in und_counted
+OK   Panel Build and Build Independent Verdict state the pressed-link rule and the UNDERDETERMINED ground, once each
+
+26 OK, 0 FAIL
