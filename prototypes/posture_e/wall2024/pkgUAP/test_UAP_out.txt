@@ -1,0 +1,10 @@
+OK   6 nodes; base (pkgKWC/patched) and final shas match
+OK   33160 gemini: S9, S11, S12, S13 (E-UNG, placeholder line) now applied onto D1 vs C6, D3 vs C4, D5 vs C3, D6 vs C1; S4 still refused
+  REPLAY changes:
+   33160 gemini: NOT APPLIED ["S4","S9","S11","S12","S13"] -> ["S4"]; fields {"verdict_tag":"HELD","defense_standing":"SELF-SUPPORTED","conceded_links":0,"challenge_standing":"SELF-SUPPORTED","challenger_conceded_links":0} -> {"verdict_tag":"HELD","defense_standing":"SELF-SUPPORTED","conceded_links":0,"challenge_standing":"SELF-SUPPORTED","challenger_conceded_links":0}
+OK   replay: the only change in 7 runs is 33160 gemini, and its verdict fields are unchanged (HELD)
+OK   unit: a pressed link with no line at all: the CHANGE TO is added after the last collision line
+     [["D1 vs C1 (Matthew 1:16): UNDERDETERMINED -- x -- GROUND: [L1] Matthew 1:16 \"Jacob begat Joseph\"","D1 vs C1 (Matthew 1:16): UNDERDETERMINED -- x -- GROUND: [L1] Matthew 1:16 \"Jacob begat Joseph\"\nD3 vs C4 (Luke 1:35): UNDERDETERMINED -- y -- GROUND: [L1] Luke 1:35 \"The Holy Ghost shall come upon thee\"","S1"]]
+OK   unit: a CHANGE TO for another link is refused as before
+OK   unit: base refuses the add
+6 OK, 0 FAIL

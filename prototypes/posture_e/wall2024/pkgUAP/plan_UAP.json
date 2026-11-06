@@ -1,0 +1,41 @@
+{
+ "base": "pkgKWC/patched f7116fc (= live 98daac9e for these nodes)",
+ "nodes": [
+  {
+   "file": "Alternate_Merge.js",
+   "base_sha": "2ce0f815564332d0",
+   "final_sha": "c8b7a58af64da97a",
+   "edits": 1
+  },
+  {
+   "file": "Alternate_Merge_Seat.js",
+   "base_sha": "27934a2a6adf57fc",
+   "final_sha": "1d9714192ed2d9b4",
+   "edits": 1
+  },
+  {
+   "file": "Gate_Build.js",
+   "base_sha": "8022bc7e4938345a",
+   "final_sha": "0ddd5f54f658661b",
+   "edits": 1
+  },
+  {
+   "file": "Gate_Record.js",
+   "base_sha": "19ba95234b025c3e",
+   "final_sha": "27b1d7dbad98b6ea",
+   "edits": 1
+  },
+  {
+   "file": "Alt_Gate_Build.js",
+   "base_sha": "334c1cfa0d7b3bf5",
+   "final_sha": "53272ed6f6737963",
+   "edits": 1
+  },
+  {
+   "file": "Alt_Gate_Record.js",
+   "base_sha": "66b4054d79dc2640",
+   "final_sha": "95dbdcfc74dff632",
+   "edits": 1
+  }
+ ]
+}
