@@ -1,0 +1,41 @@
+{
+ "base": "pkgCP/patched (5bf1485)",
+ "nodes": [
+  {
+   "file": "Gate_Build.js",
+   "name": "Gate Build",
+   "base_sha": "72bebcc65a643490",
+   "final_sha": "00f0c72dbd8f7dbd"
+  },
+  {
+   "file": "Alt_Gate_Build.js",
+   "name": "Alt Gate Build",
+   "base_sha": "07908bd4c75ae58a",
+   "final_sha": "d9b3762a1bc7bc6d"
+  },
+  {
+   "file": "Gate_Record.js",
+   "name": "Gate Record",
+   "base_sha": "841c52da388a4209",
+   "final_sha": "c3cf92293bd021ba"
+  },
+  {
+   "file": "Alt_Gate_Record.js",
+   "name": "Alt Gate Record",
+   "base_sha": "e03f95ff5fe78c37",
+   "final_sha": "2012ddfbfa5b75b8"
+  },
+  {
+   "file": "Alternate_Merge.js",
+   "name": "Alternate Merge",
+   "base_sha": "15654238a3b28935",
+   "final_sha": "93f1a449f38d0ce7"
+  },
+  {
+   "file": "Alternate_Merge_Seat.js",
+   "name": "Alternate Merge Seat",
+   "base_sha": "922552e20a501b6d",
+   "final_sha": "7b4121e15c9cf194"
+  }
+ ]
+}
