@@ -6,7 +6,7 @@ W1 builds this, W2 drives the parity run, and W3 rules on each row (spec: /mnt/p
 - `readLines(rawStoredText)` returns one row per non-empty line of the judge text.
   - A recognised line is `{n, form, fields, norm}`.
   - Any other line is `{n, form:null, why, code, tried, norm}`.
-- `n` is the 0-based index in `judgeText(raw).text.split('\n')`. On the 33025 fixture this split is identical to the live `cureJText(raw,true).split('\n')` (3 of 3 seats).
+- `readLines(jtext)` takes the text as the engine reads it (W2 corpus jtext) and does not unescape again. `readStored(raw)` applies judgeText first. On the 33025 fixture judgeText(raw) equals the live `cureJText(raw,true)` on 3 of 3 seats.
 - `code` is a stable refusal code, such as `COLLISION_GRADE_NOT_UPPER_CASE_CP2` or `NO_LINE_FORM`. `why` is prose only. Callers branch on `code`, never on `why` (Wall 2377, accepted by W3).
 - `readLine(line)` reads a single line and returns `{form, f, norm}` or `{form:null, why, code, norm}`.
 - `FORMS` lists the forms in the order they are tried.

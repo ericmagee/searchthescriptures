@@ -1,3 +1,37 @@
-texts 1909, adapters 1 (stub.keystone), disagreement rows 22
-DIS old-only stub.keystone: 22
-old stub.keystone: 82
+texts 1909, adapters 17 (sbApply2024: GR (pkgCP2), shared library: KF_LINE, sbApply2024: PR/FR (pkgCP), sbApply2024: SB_FORM, sbApply2024: SB_ROW, ciLedger: CI_LINE/CI_PRESSED, cureLines: CURE_KEY (+pkgCR tag), gateLineFor2024: ac(), gateRead2024, K-AG: kagRow, K-CMT: kcmtGrade2024, sbApply2024: keyChecks KEYSTONE, K-RUL: krulRulings collision, Alternate Merge: rcLines, shared library: sbLabel, selfLines421: ANSWER CHECK, Send Back Record: SENDBACK reply), disagreement rows 261
+DIS field Alternate Merge: rcLines.grade: 34
+DIS field K-AG: kagRow.grade: 8
+DIS field K-AG: kagRow.roundRaw: 16
+DIS field gateLineFor2024: ac().roundRaw: 17
+DIS field gateLineFor2024: ac().verse: 1
+DIS field gateRead2024.sentence: 4
+DIS field sbApply2024: SB_ROW.sentence: 59
+DIS field shared library: KF_LINE.fails: 11
+DIS old-only K-CMT: kcmtGrade2024: 54
+DIS old-only Send Back Record: SENDBACK reply: 6
+DIS old-only cureLines: CURE_KEY (+pkgCR tag): 7
+DIS old-only gateRead2024: 4
+DIS old-only sbApply2024: PR/FR (pkgCP): 9
+DIS old-only sbApply2024: SB_FORM: 31
+new form without an old reader CHAIN MARK: 98
+new form without an old reader CITATION CHECK: 40
+new form without an old reader HEADING: 53
+new form without an old reader LINK STATE: 105
+new form without an old reader RULING: 213
+new form without an old reader RULING PART: 852
+old Alternate Merge: rcLines: 845
+old K-AG: kagRow: 3541
+old K-CMT: kcmtGrade2024: 321
+old K-RUL: krulRulings collision: 135
+old Send Back Record: SENDBACK reply: 331
+old cureLines: CURE_KEY (+pkgCR tag): 947
+old gateLineFor2024: ac(): 3380
+old gateRead2024: 35
+old sbApply2024: GR (pkgCP2): 413
+old sbApply2024: PR/FR (pkgCP): 531
+old sbApply2024: SB_FORM: 5069
+old sbApply2024: SB_ROW: 279
+old sbApply2024: keyChecks KEYSTONE: 73
+old selfLines421: ANSWER CHECK: 3247
+old shared library: KF_LINE: 109
+old shared library: sbLabel: 774
