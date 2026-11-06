@@ -1,0 +1,3 @@
+{"note":"Quote check for the 33006 K-F cure FORCED lines (no node fixture for 33006). Source: Supabase debate_results run_token ODV1-33006-xzfdf09y; CR3 = engine_r3 (DEFENDER ROUND 3), DR3 = challenger_r3 (CHALLENGER ROUND 3), as spec 8.2 ([Defender Rn] = CRn). Each quotation lower-cased, non-alphanumerics to spaces, searched in the round normalised the same way. Run by W1 11:3x CST 2026-11-06.",
+ "found":{"chatgpt D1 vs C3":[true,true,true],"sol D1 vs C2":[true,true,true],"sol D2 vs C3":[true,true,true],"single D1 vs C2":[true,true,true],"single D2 vs C3":[true,true,true],"single D3 vs C6":[true,true,true]},
+ "order":"MEANS, ANSWER, FAILS"}

@@ -1,41 +1,244 @@
 {
- "base": "pkgFQ/patched (74ffe3e)",
+ "base": "pkgCK/patched",
  "nodes": [
-  {
-   "file": "Gate_Build.js",
-   "name": "Gate Build",
-   "base_sha": "7371efd85f91bd48",
-   "final_sha": "9669d0db88bebcb5"
-  },
   {
    "file": "Alt_Gate_Build.js",
    "name": "Alt Gate Build",
-   "base_sha": "6e9c4cc991c62229",
-   "final_sha": "bc35e6b80d2551b9"
-  },
-  {
-   "file": "Gate_Record.js",
-   "name": "Gate Record",
-   "base_sha": "46e28c7f863fe97d",
-   "final_sha": "0ee2aa7bb893fbcd"
+   "base_sha": "75fdbdd4dc678bbf",
+   "final_sha": "f384591ad311f3c8",
+   "edits": [
+    "ENF_STATUS K-F LIVE",
+    "K-F, K-R, K-LXX cures read the reply through cureUnwrap",
+    "K-F marks LIVE"
+   ]
   },
   {
    "file": "Alt_Gate_Record.js",
    "name": "Alt Gate Record",
-   "base_sha": "dfe5f93d1982ed4a",
-   "final_sha": "f6f232aacf2cc457"
+   "base_sha": "8d345af96fa2f778",
+   "final_sha": "e4b1e3ec1f1250dd",
+   "edits": [
+    "ENF_STATUS K-F LIVE",
+    "K-F, K-R, K-LXX cures read the reply through cureUnwrap",
+    "K-F marks LIVE"
+   ]
+  },
+  {
+   "file": "Alternate_Build.js",
+   "name": "Alternate Build",
+   "base_sha": "69c8cae073d0767d",
+   "final_sha": "f8101058636f875e",
+   "edits": [
+    "ENF_STATUS K-F LIVE",
+    "K-F, K-R, K-LXX cures read the reply through cureUnwrap",
+    "K-F marks LIVE"
+   ]
+  },
+  {
+   "file": "Alternate_Cure_Build.js",
+   "name": "Alternate Cure Build",
+   "base_sha": "0fcbcc1a9ce6a175",
+   "final_sha": "3c4d9a59343fd981",
+   "edits": [
+    "ENF_STATUS K-F LIVE",
+    "K-F, K-R, K-LXX cures read the reply through cureUnwrap",
+    "K-F marks LIVE"
+   ]
+  },
+  {
+   "file": "Alternate_Cure_Normalize.js",
+   "name": "Alternate Cure Normalize",
+   "base_sha": "16e48939be7c285e",
+   "final_sha": "f23c55df66f94064",
+   "edits": [
+    "ENF_STATUS K-F LIVE",
+    "K-F, K-R, K-LXX cures read the reply through cureUnwrap",
+    "K-F marks LIVE"
+   ]
   },
   {
    "file": "Alternate_Merge.js",
    "name": "Alternate Merge",
-   "base_sha": "a756f430c70a5ccb",
-   "final_sha": "b28dd7a50317249a"
+   "base_sha": "038bf0a53637c3c6",
+   "final_sha": "379aed5a10bc9c0f",
+   "edits": [
+    "ENF_STATUS K-F LIVE",
+    "K-F, K-R, K-LXX cures read the reply through cureUnwrap",
+    "K-F marks LIVE"
+   ]
   },
   {
    "file": "Alternate_Merge_Seat.js",
    "name": "Alternate Merge Seat",
-   "base_sha": "64f7415616573a88",
-   "final_sha": "f68c29a13424b184"
+   "base_sha": "ca714374f2485c61",
+   "final_sha": "899996f9b3cd7dec",
+   "edits": [
+    "ENF_STATUS K-F LIVE",
+    "K-F, K-R, K-LXX cures read the reply through cureUnwrap",
+    "K-F marks LIVE"
+   ]
+  },
+  {
+   "file": "Alternate_Payloads.js",
+   "name": "Alternate Payloads",
+   "base_sha": "857b323629c0df10",
+   "final_sha": "19b8d1a61cddfd5d",
+   "edits": [
+    "ENF_STATUS K-F LIVE",
+    "K-F marks LIVE"
+   ]
+  },
+  {
+   "file": "Cure_Build.js",
+   "name": "Cure Build",
+   "base_sha": "3bd68a3fca1f87db",
+   "final_sha": "6d78b9fe6b1656a7",
+   "edits": [
+    "ENF_STATUS K-F LIVE",
+    "K-F, K-R, K-LXX cures read the reply through cureUnwrap",
+    "K-F marks LIVE"
+   ]
+  },
+  {
+   "file": "Cure_Check.js",
+   "name": "Cure Check",
+   "base_sha": "b9ad7067aae4329f",
+   "final_sha": "649788d076435de9",
+   "edits": [
+    "ENF_STATUS K-F LIVE",
+    "K-F, K-R, K-LXX cures read the reply through cureUnwrap",
+    "K-F marks LIVE"
+   ]
+  },
+  {
+   "file": "Cure_Normalize.js",
+   "name": "Cure Normalize",
+   "base_sha": "9498e89ad9aecfd2",
+   "final_sha": "f789855d06389d76",
+   "edits": [
+    "ENF_STATUS K-F LIVE",
+    "K-F, K-R, K-LXX cures read the reply through cureUnwrap",
+    "K-F marks LIVE"
+   ]
+  },
+  {
+   "file": "Extract_Independent_Verdict.js",
+   "name": "Extract Independent Verdict",
+   "base_sha": "b8919ed08201b27d",
+   "final_sha": "3e14ad87b14b2eeb",
+   "edits": [
+    "ENF_STATUS K-F LIVE",
+    "K-F marks LIVE"
+   ]
+  },
+  {
+   "file": "Gate_Build.js",
+   "name": "Gate Build",
+   "base_sha": "3709d9bff8603c6d",
+   "final_sha": "cfec4c44e5aac917",
+   "edits": [
+    "ENF_STATUS K-F LIVE",
+    "K-F, K-R, K-LXX cures read the reply through cureUnwrap",
+    "K-F marks LIVE"
+   ]
+  },
+  {
+   "file": "Gate_Record.js",
+   "name": "Gate Record",
+   "base_sha": "08a7f5da8460e7ef",
+   "final_sha": "e740a2ed35dd523a",
+   "edits": [
+    "ENF_STATUS K-F LIVE",
+    "K-F, K-R, K-LXX cures read the reply through cureUnwrap",
+    "K-F marks LIVE"
+   ]
+  },
+  {
+   "file": "Panel_Cure_Build_1.js",
+   "name": "Panel Cure Build 1",
+   "base_sha": "3f7d6ba764eaffc6",
+   "final_sha": "bb06ac9e0a7fe169",
+   "edits": [
+    "ENF_STATUS K-F LIVE",
+    "K-F, K-R, K-LXX cures read the reply through cureUnwrap",
+    "K-F marks LIVE"
+   ]
+  },
+  {
+   "file": "Panel_Cure_Build_2.js",
+   "name": "Panel Cure Build 2",
+   "base_sha": "6c95e0aa6bb7dc18",
+   "final_sha": "4c55b8bd8eb295fc",
+   "edits": [
+    "ENF_STATUS K-F LIVE",
+    "K-F, K-R, K-LXX cures read the reply through cureUnwrap",
+    "K-F marks LIVE"
+   ]
+  },
+  {
+   "file": "Panel_Cure_Build_3.js",
+   "name": "Panel Cure Build 3",
+   "base_sha": "8f4f5a5317e36857",
+   "final_sha": "35b1b29c88354875",
+   "edits": [
+    "ENF_STATUS K-F LIVE",
+    "K-F, K-R, K-LXX cures read the reply through cureUnwrap",
+    "K-F marks LIVE"
+   ]
+  },
+  {
+   "file": "Panel_Cure_Check.js",
+   "name": "Panel Cure Check",
+   "base_sha": "d0befc5785739c8b",
+   "final_sha": "7f9d4de483de66cc",
+   "edits": [
+    "ENF_STATUS K-F LIVE",
+    "K-F, K-R, K-LXX cures read the reply through cureUnwrap",
+    "K-F marks LIVE"
+   ]
+  },
+  {
+   "file": "Panel_Cure_Normalize_1.js",
+   "name": "Panel Cure Normalize 1",
+   "base_sha": "191a54f7b621b99e",
+   "final_sha": "84144c9196439afa",
+   "edits": [
+    "ENF_STATUS K-F LIVE",
+    "K-F, K-R, K-LXX cures read the reply through cureUnwrap",
+    "K-F marks LIVE"
+   ]
+  },
+  {
+   "file": "Panel_Cure_Normalize_2.js",
+   "name": "Panel Cure Normalize 2",
+   "base_sha": "f7ea662351ac8cba",
+   "final_sha": "3411721784605178",
+   "edits": [
+    "ENF_STATUS K-F LIVE",
+    "K-F, K-R, K-LXX cures read the reply through cureUnwrap",
+    "K-F marks LIVE"
+   ]
+  },
+  {
+   "file": "Panel_Cure_Normalize_3.js",
+   "name": "Panel Cure Normalize 3",
+   "base_sha": "f197e0e2e3877c99",
+   "final_sha": "e8e061cb2e5f641a",
+   "edits": [
+    "ENF_STATUS K-F LIVE",
+    "K-F, K-R, K-LXX cures read the reply through cureUnwrap",
+    "K-F marks LIVE"
+   ]
+  },
+  {
+   "file": "Panel_Payloads.js",
+   "name": "Panel Payloads",
+   "base_sha": "470e19ebca74fee1",
+   "final_sha": "74f30677c70993d3",
+   "edits": [
+    "ENF_STATUS K-F LIVE",
+    "K-F marks LIVE"
+   ]
   }
  ]
 }

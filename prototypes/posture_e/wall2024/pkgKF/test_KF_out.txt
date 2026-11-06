@@ -1,21 +1,20 @@
-OK   6 nodes: base (pkgFQ) and final shas match the plan
-OK   every node parses
-OK   33014 fixture: the live-then library (pkgGD) raises 0 gate items, as live did (gate skipped, all 4 seats empty)
-   33020 gemini: pkgFQ [G1 CONTRADICTION [LIVE] CURED; G2 CONTRADICTION [LIVE] CURED] counted 0  | pkgKF same
-   33020 chatgpt: pkgFQ [] counted 0  | pkgKF same
-   33020 grok: pkgFQ [G1 NOT APPLIED [LIVE] CURED; G2 CONTRADICTION [LIVE] UNCURED] counted 1  | pkgKF same
-   32998 gemini: pkgFQ [] counted 0  | pkgKF same
-   32998 chatgpt: pkgFQ [G1 NOT APPLIED [LIVE] CURED; G2 RULE K-G4 [LIVE] UNCURED] counted 1  | pkgKF same
-   32998 grok: pkgFQ [G1 CONTRADICTION [LIVE] CURED; G2 CONTRADICTION [LIVE] CURED] counted 0  | pkgKF same
-   32998 alt sol: pkgFQ [G1 RULE K-G4 [LIVE] UNCURED] counted 1  | pkgKF same
-   33014 gemini: pkgFQ [] counted 0  | pkgKF same
-   33014 chatgpt: pkgFQ [] counted 0  | pkgKF same
-   33014 grok: pkgFQ [] counted 0  | pkgKF same
-   33014 alt sol: pkgFQ [] counted 0  | pkgKF same
-   items that change: 0 seat(s): 
-OK   every change is an added K-F item, record-only, and no seat count changes
-OK   33020 chatgpt: S14's FAILS ("Matthew sets what ...") and the stored FAILS ("In 1 Corinthians 7:5 ...") are both in [DR3] only; K-F passes S14's line; no item added
-   gate path: pkgFQ [], pkgKF [RULE K-F record-only -- the FAILS quotation is not in [DR3]]
-OK   gate path: a changed FORCED line whose FAILS is not in its ANSWER round raises a new K-F gate item, record-only (TRIAL); pkgFQ raised none
-OK   unit: FAILS found in the ANSWER round passes; FAILS from elsewhere raises K-F
-7 OK, 0 FAIL
+OK   22 nodes: base (pkgCK) and final shas match the plan
+OK   every node has K-F LIVE and no K-F TRIAL; kfLines has no TRIAL mark
+OK   no cure check splits the raw reply (19 cure nodes x 3 read through cureUnwrap)
+   cure rows replayed: 516; rows that change: 3
+     33006 chatgpt K-F D1 vs C3: UNCURED -- the FORCED line does not hold: the MEANS quotation is not in [CR3]; the ANSWER quotation is not in [DR3]; the FAILS quotation is n
+     33006 sol K-F D1 vs C2: UNCURED -- the FORCED line does not hold: the MEANS quotation is not in [CR3]; the ANSWER quotation is not in [DR3]; the FAILS quotation is n
+     33006 sol K-F D2 vs C3: UNCURED -- the FORCED line does not hold: the MEANS quotation is not in [CR3]; the ANSWER quotation is not in [DR3]; the FAILS quotation is n
+OK   the only rows that change are the 3 K-F items of 33006 chatgpt and sol, whose FORCED line is now found in the JSON reply
+OK   33006: all 18 quotations of the 6 K-F cure FORCED lines stand in the stored rounds (chatgpt, sol, single would be CURED live)
+OK   33021 single K-F D1 vs C1 on the debate rounds: CURED
+   K-F raised today on saved verdicts with rounds: 1
+     33025 grok D5 vs C5: the ANSWER quotation is not in [DR3]
+OK   today's raise: 1 item, 33025 grok D5 vs C5 (ANSWER adds "therefore"; not in [DR3]): true; grok retracted it
+OK   32998 gemini D3 vs C1 (log item from the old reader) is not raised today
+OK   unit: a FORCED line inside a JSON reply (chatgpt and sol form) cures with pkgKF; pkgCK read none
+OK   unit: a plain-text reply cures as before
+OK   unit: a JSON reply whose FORCED quote is not in the round stays UNCURED
+OK   unit: no FORCED line stays UNCURED
+OK   ENF_STATUS K-F is LIVE in the cure library
+13 OK, 0 FAIL
