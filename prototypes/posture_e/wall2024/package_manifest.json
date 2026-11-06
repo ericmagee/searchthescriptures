@@ -14,7 +14,7 @@
    "id": "e832ab04-7e45-44e3-a39b-4076758ea00c",
    "layers": "A+B",
    "live_sha": "a77e2f3c01c96f38",
-   "final_sha": "b1223260f925555f",
+   "final_sha": "93dfba294456b552",
    "final_file": "pkgB/patched/Extract_Independent_Verdict.js"
   },
   {
@@ -30,7 +30,7 @@
    "id": "2a5fabdd-28bc-4211-ab01-dc3b1d0db967",
    "layers": "A+B",
    "live_sha": "46db74c9d304f814",
-   "final_sha": "5fa0106fbf0e5b4b",
+   "final_sha": "62bd1f25cea5b1c9",
    "final_file": "pkgB/patched/Panel_Payloads.js"
   },
   {
@@ -46,7 +46,7 @@
    "id": "7ad5bd77-194e-4ce9-8d0b-359413ced1a4",
    "layers": "A+B",
    "live_sha": "bbb6f4cfb05c3bd2",
-   "final_sha": "df13e1e81afb5feb",
+   "final_sha": "e0b914c961694ff0",
    "final_file": "pkgB/patched/Cure_Build.js"
   },
   {
@@ -54,7 +54,7 @@
    "id": "e16abfe7-43f7-4a59-b088-859e43f9b2e9",
    "layers": "A+B",
    "live_sha": "15bdf520316d509e",
-   "final_sha": "0b542fcd8822b710",
+   "final_sha": "c9e9dd5f84862e84",
    "final_file": "pkgB/patched/Cure_Normalize.js"
   },
   {
@@ -62,7 +62,7 @@
    "id": "16b07c74-a403-4172-9b9a-4a6acfea9d62",
    "layers": "A+B",
    "live_sha": "bbe93e8fcd534787",
-   "final_sha": "6c1aadadc76289fd",
+   "final_sha": "951bef8b391dc5a9",
    "final_file": "pkgB/patched/Cure_Check.js"
   },
   {
@@ -70,7 +70,7 @@
    "id": "1c7e600c-5b02-4d8e-80c1-275d0995e9b7",
    "layers": "A+B",
    "live_sha": "b70088cbb7fda4dd",
-   "final_sha": "2fc04f3ea4f7f9f0",
+   "final_sha": "4f712611bcdbb6bc",
    "final_file": "pkgB/patched/Panel_Cure_Build_1.js"
   },
   {
@@ -78,7 +78,7 @@
    "id": "4aa6acfd-6c25-4668-9155-a522404f9157",
    "layers": "A+B",
    "live_sha": "fd66addb93231447",
-   "final_sha": "7b83185bc5561aa6",
+   "final_sha": "fb47335e1efae2c9",
    "final_file": "pkgB/patched/Panel_Cure_Normalize_1.js"
   },
   {
@@ -86,7 +86,7 @@
    "id": "93038507-1a2f-4bcb-b69b-8d85fe801184",
    "layers": "A+B",
    "live_sha": "bee8fa49c14f74f1",
-   "final_sha": "cd44707bc3a84e77",
+   "final_sha": "8812d4806c44ccce",
    "final_file": "pkgB/patched/Panel_Cure_Build_2.js"
   },
   {
@@ -94,7 +94,7 @@
    "id": "ec037816-6aa3-420a-b51e-f2a6ab24a58d",
    "layers": "A+B",
    "live_sha": "b9e85209d27e0842",
-   "final_sha": "8deb5265de313e9b",
+   "final_sha": "3e2d1d42763a5288",
    "final_file": "pkgB/patched/Panel_Cure_Normalize_2.js"
   },
   {
@@ -102,7 +102,7 @@
    "id": "1bb655d0-eca5-4f8c-b201-e4fd060eaabc",
    "layers": "A+B",
    "live_sha": "54289b102684b8b3",
-   "final_sha": "e08898c5cc2eb4f6",
+   "final_sha": "4fa749b8fadff8ac",
    "final_file": "pkgB/patched/Panel_Cure_Build_3.js"
   },
   {
@@ -110,7 +110,7 @@
    "id": "d41fd40f-1c92-4739-9815-bfdf93e35260",
    "layers": "A+B",
    "live_sha": "de25d82b58a0ae92",
-   "final_sha": "9e8d9e62cf5a6928",
+   "final_sha": "ef1999f2b965e4e5",
    "final_file": "pkgB/patched/Panel_Cure_Normalize_3.js"
   },
   {
@@ -118,7 +118,7 @@
    "id": "007bd090-db2f-46e1-88ea-a3e2623077ca",
    "layers": "A+B",
    "live_sha": "cf8c2d63537f1ef8",
-   "final_sha": "5c8fca770e6713f3",
+   "final_sha": "24e146b6a969c0c4",
    "final_file": "pkgB/patched/Panel_Cure_Check.js"
   },
   {
@@ -126,7 +126,7 @@
    "id": "8c37a3db-a61d-4cda-88ba-62dd25eb5f36",
    "layers": "A+B",
    "live_sha": "e59e40d2e7028379",
-   "final_sha": "d206e383fec1dadc",
+   "final_sha": "82b606f786df147c",
    "final_file": "pkgB/patched/Alternate_Build.js"
   },
   {
@@ -134,7 +134,7 @@
    "id": "58b84db2-1576-4a6c-b227-d507b2f06d97",
    "layers": "A+B",
    "live_sha": "3b2cd101c1eb4579",
-   "final_sha": "2498222927ce9ba8",
+   "final_sha": "7e7b635a62aa4c57",
    "final_file": "pkgB/patched/Alternate_Payloads.js"
   },
   {
@@ -142,7 +142,7 @@
    "id": "1133cadf-9f55-4aa9-92df-71c3c271ced3",
    "layers": "A+B",
    "live_sha": "d4a53e88a28b54c2",
-   "final_sha": "98643e58de4ed981",
+   "final_sha": "9d6513504dce1510",
    "final_file": "pkgB/patched/Alternate_Cure_Build.js"
   },
   {
@@ -150,7 +150,7 @@
    "id": "3303c1be-fdb2-4008-9a45-79ae7adab238",
    "layers": "A+B",
    "live_sha": "676f39dc5ef112c8",
-   "final_sha": "18d4e4e32628d141",
+   "final_sha": "6c543f663d182199",
    "final_file": "pkgB/patched/Alternate_Cure_Normalize.js"
   },
   {
@@ -158,7 +158,7 @@
    "id": "8d8b179a-c064-4a4f-b8b5-ea6298d23ce3",
    "layers": "A+B",
    "live_sha": "3e5f0b2abb1ed1ac",
-   "final_sha": "b80f33448d81742c",
+   "final_sha": "ccc3449ad4534949",
    "final_file": "pkgB/patched/Alternate_Merge.js"
   },
   {
