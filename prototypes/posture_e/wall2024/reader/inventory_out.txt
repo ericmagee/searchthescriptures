@@ -1,0 +1,195 @@
+### COLLISION (9 distinct)
+  /^\s*(?:[-•]|\d+[.)])?\s*FORCED(?:\s*\(\s*Commitment\s+\d+\s*\))?\s*:\s*(D\d+\s+vs\.?\s+C\d+)\s*(?:--|—|–)\s*MEANS\s*\[{0,2}\s*((?:CR|DR)[1-4])\s*\]{0,2}\s*:?\s*["“](.+?)["”](?:\s*\([^\n]*?\))?\s*(?:--|—|–)\s*ANSWER\s*\[{0,2}\s*((?:CR|DR)[1-4])\s*\]{0,2}\s*:?\
+     in Alt_Gate_Build:prsUnprovenOnly, Alt_Gate_Record:prsUnprovenOnly, Alternate_Build:prsUnprovenOnly, Alternate_Cure_Build:prsUnprovenOnly, Alternate_Cure_Normalize:prsUnprovenOnly, Alternate_Merge:prsUnprovenOnly (+16)
+  /D\d+\s+vs\.?\s+C\d+/i
+     in Alt_Gate_Build:kfLines, Alt_Gate_Build:kl2Lines, Alt_Gate_Record:kfLines, Alt_Gate_Record:kl2Lines, Alternate_Build:kfLines, Alternate_Build:kl2Lines (+38)
+  /^\s*(?:[-•]|\d+[.)])?\s*[*_]*\s*D\d+\s+vs\.?\s+C\d+/i
+     in Alt_Gate_Build:kl2Lines, Alt_Gate_Record:kl2Lines, Alternate_Build:kl2Lines, Alternate_Cure_Build:kl2Lines, Alternate_Cure_Normalize:kl2Lines, Alternate_Merge:kl2Lines (+16)
+  /^(?:[-•]|\d+[.)])?\s*(D\d+\s+VS\.?\s+C\d+)/
+     in Alt_Gate_Build:drvCheck, Alt_Gate_Build:cureBroken, Alt_Gate_Record:drvCheck, Alt_Gate_Record:cureBroken, Alternate_Build:drvCheck, Alternate_Build:cureBroken (+38)
+  /^(?:(?:DEFENDER|CHALLENGER)\s*\|\s*\[?\s*[CD]R\d\s*\]?\s*\||D\d+\s+vs\.?\s+C\d+\b|D\d+\s*(?::|--|\u2014)|(?:CHALLENGER\s+)?CONCEDED LINKS\s*:|(?:DEFENSE|CHALLENGE) STANDING\s*:|KEYSTONE\s*:|CLAUSE\s*:|ANSWER CHECK\s*:|FORCED(?:\s*\(\s*Commitment\s+\d+\s*\))?\
+     in Alt_Gate_Build:cureRecompute, Alt_Gate_Record:cureRecompute, Alternate_Merge:cureRecompute, Alternate_Merge_Seat:cureRecompute, Gate_Build:cureRecompute, Gate_Record:cureRecompute
+  /^\s*(?:[-\u2022*]\s*|\d+[.)]\s*)?\**D\d+\s+vs\.?\s+C\d+\b(?:\s*\([^)\n]*\))?[^:\n(]*:\s*\**(?:DEFENDER LINK BROKEN|CHALLENGER LINK BROKEN|UNDERDETERMINED|STANDS|WITHDRAWN)\b/
+     in Alt_Gate_Build:sbApply2024, Alt_Gate_Record:sbApply2024, Alternate_Merge:sbApply2024, Alternate_Merge_Seat:sbApply2024, Gate_Build:sbApply2024, Gate_Record:sbApply2024
+  /^(D\d+\s+VS\.?\s+C\d+|DEFENSE STANDING|CHALLENGE STANDING|CHALLENGER CONCEDED LINKS|CONCEDED LINKS|RESULT|CLAUSE|KEYSTONE)\b/
+     in Alt_Gate_Build:cureRewrite, Alt_Gate_Record:cureRewrite, Alternate_Build:cureRewrite, Alternate_Cure_Build:cureRewrite, Alternate_Cure_Normalize:cureRewrite, Alternate_Merge:cureRewrite (+13)
+  /^[ \t]*(?:[-•]|\d+[.)])?[ \t]*D\d+\s+VS\.?\s+C\d+\b/
+     in Extract_Independent_Verdict:kl2Lines
+  /^[ \t]*COLLISION POINTS[ \t]*:?[ \t]*(?:[-•]|\d+[.)])?[ \t]*D\d+\s+VS\.?\s+C\d+\b/
+     in Extract_Independent_Verdict:kl2Lines
+### FORCED (18 distinct)
+  /^\s*(?:[-•]|\d+[.)])?\s*FORCED(?:\s*\(\s*Commitment\s+\d+\s*\))?\s*:\s*(D\d+\s+vs\.?\s+C\d+)\s*(?:--|—|–)\s*MEANS\s*\[{0,2}\s*((?:CR|DR)[1-4])\s*\]{0,2}\s*:?\s*["“](.+?)["”](?:\s*\([^\n]*?\))?\s*(?:--|—|–)\s*ANSWER\s*\[{0,2}\s*((?:CR|DR)[1-4])\s*\]{0,2}\s*:?\
+     in Alt_Gate_Build:prsUnprovenOnly, Alt_Gate_Record:prsUnprovenOnly, Alternate_Build:prsUnprovenOnly, Alternate_Cure_Build:prsUnprovenOnly, Alternate_Cure_Normalize:prsUnprovenOnly, Alternate_Merge:prsUnprovenOnly (+16)
+  /^(?:[-•]|\d+[.)])?\s*FORCED(?:\s*\(\s*Commitment\s+\d+\s*\))?\s*:/i
+     in Alt_Gate_Build:kfLines, Alt_Gate_Record:kfLines, Alternate_Build:kfLines, Alternate_Cure_Build:kfLines, Alternate_Cure_Normalize:kfLines, Alternate_Merge:kfLines (+16)
+  /\b(?:none|no\s+\w+(?:\s+\w+)?)\s+(?:(?:is|are|was|were)\s+)?(?:counted\s+as\s+)?(?:BROKEN|FORCED|MISSES|VOID|UNPROVEN)\b/gi
+     in Alt_Gate_Build:kcmtGrade2024, Alt_Gate_Record:kcmtGrade2024, Alternate_Build:kcmtGrade2024, Alternate_Cure_Build:kcmtGrade2024, Alternate_Cure_Normalize:kcmtGrade2024, Alternate_Merge:kcmtGrade2024 (+16)
+  /\bnot\s+(?:BROKEN|FORCED|MISSES|VOID|UNPROVEN)\b/gi
+     in Alt_Gate_Build:kcmtGrade2024, Alt_Gate_Record:kcmtGrade2024, Alternate_Build:kcmtGrade2024, Alternate_Cure_Build:kcmtGrade2024, Alternate_Cure_Normalize:kcmtGrade2024, Alternate_Merge:kcmtGrade2024 (+16)
+  /\b(BROKEN|FORCED|MISSES|VOID|UNPROVEN)\b/
+     in Alt_Gate_Build:kcmtGrade2024, Alt_Gate_Record:kcmtGrade2024, Alternate_Build:kcmtGrade2024, Alternate_Cure_Build:kcmtGrade2024, Alternate_Cure_Normalize:kcmtGrade2024, Alternate_Merge:kcmtGrade2024 (+16)
+  /* pkgKS: the side the FORCED line breaks, read from its MEANS round */
+     in Alt_Gate_Build:__kfHas, Alt_Gate_Record:__kfHas, Alternate_Build:__kfHas, Alternate_Cure_Build:__kfHas, Alternate_Cure_Normalize:__kfHas, Alternate_Merge:__kfHas (+16)
+  /K-G4 NOT RAISED -- '+id+' '+g[1]+' is graded as a forced link with a FORCED line (ruling 411: a link may fail by meaning though the witness was answered); K-F reads its quotations.]');} /
+     in Alt_Gate_Build:drvCheck, Alt_Gate_Record:drvCheck, Alternate_Build:drvCheck, Alternate_Cure_Build:drvCheck, Alternate_Cure_Normalize:drvCheck, Alternate_Merge:drvCheck (+16)
+  /^(?:[-•]\s*)?FORCED(?:\s*\(\s*Commitment\s+\d+\s*\))?\s*:/i
+     in Alt_Gate_Build:cureVerdicts, Alt_Gate_Record:cureVerdicts, Alternate_Build:cureVerdicts, Alternate_Cure_Build:cureVerdicts, Alternate_Cure_Normalize:cureVerdicts, Alternate_Merge:cureVerdicts (+13)
+  /^(?:(?:DEFENDER|CHALLENGER)\s*\|\s*\[?\s*[CD]R\d\s*\]?\s*\||D\d+\s+vs\.?\s+C\d+\b|D\d+\s*(?::|--|\u2014)|(?:CHALLENGER\s+)?CONCEDED LINKS\s*:|(?:DEFENSE|CHALLENGE) STANDING\s*:|KEYSTONE\s*:|CLAUSE\s*:|ANSWER CHECK\s*:|FORCED(?:\s*\(\s*Commitment\s+\d+\s*\))?\
+     in Alt_Gate_Build:cureRecompute, Alt_Gate_Record:cureRecompute, Alternate_Merge:cureRecompute, Alternate_Merge_Seat:cureRecompute, Gate_Build:cureRecompute, Gate_Record:cureRecompute
+  /* pkgGD (W3 2315 b): the gate FORCED line goes after its collision line; the collision line stays */
+     in Alt_Gate_Build:sbApply2024, Alt_Gate_Record:sbApply2024, Alternate_Merge:sbApply2024, Alternate_Merge_Seat:sbApply2024, Gate_Build:sbApply2024, Gate_Record:sbApply2024
+  /* pkgFQ: unwrap only a fully quoted line; a FORCED line keeps its closing FAILS quote */
+     in Alt_Gate_Build:sbApply2024, Alt_Gate_Record:sbApply2024, Alternate_Merge:sbApply2024, Alternate_Merge_Seat:sbApply2024, Gate_Build:sbApply2024, Gate_Record:sbApply2024
+  /^\s*(?:[-\u2022]|\d+[.)])?\s*(?:FORCED(?:\s*\(\s*Commitment\s+\d+\s*\))?\s*:\s*)?(D\d+)\s+VS\.?\s+(C\d+)\b/i
+     in Alt_Gate_Build:sbApply2024, Alt_Gate_Record:sbApply2024, Alternate_Merge:sbApply2024, Alternate_Merge_Seat:sbApply2024, Gate_Build:sbApply2024, Gate_Record:sbApply2024
+  /^\s*(?:[-\u2022]|\d+[.)])?\s*FORCED\b/i
+     in Alt_Gate_Build:sbApply2024, Alt_Gate_Record:sbApply2024, Alternate_Merge:sbApply2024, Alternate_Merge_Seat:sbApply2024, Gate_Build:sbApply2024, Gate_Record:sbApply2024
+  /* pkgCP (W3 2351): a change to a collision or FORCED line keeps the pair */
+     in Alt_Gate_Build:sbApply2024, Alt_Gate_Record:sbApply2024, Alternate_Merge:sbApply2024, Alternate_Merge_Seat:sbApply2024, Gate_Build:sbApply2024, Gate_Record:sbApply2024
+  /* run 32973 grok S26: its FORCED line rewritten as "D6 vs C3 ...: STANDS" also replaces the D6 vs C3 collision line */
+     in Alt_Gate_Build:sbApply2024, Alt_Gate_Record:sbApply2024, Alternate_Merge:sbApply2024, Alternate_Merge_Seat:sbApply2024, Gate_Build:sbApply2024, Gate_Record:sbApply2024
+  /^FORCED(?:\s*\(\s*Commitment\s+\d+\s*\))?\s*:/i
+     in Alt_Gate_Build:gateForced2024, Alt_Gate_Record:gateForced2024, Alternate_Merge:gateForced2024, Alternate_Merge_Seat:gateForced2024, Gate_Build:gateForced2024, Gate_Record:gateForced2024
+  /^FORCED(?:\s*\(\s*Commitment\s+\d+\s*\))?\s*:\s*(D\d+)\s+vs\.?\s+(C\d+)/i
+     in Alt_Gate_Build:gateForced2024, Alt_Gate_Record:gateForced2024, Alternate_Merge:gateForced2024, Alternate_Merge_Seat:gateForced2024, Gate_Build:gateForced2024, Gate_Record:gateForced2024
+  /* s425b (ruling 425 owed item 3; Worker_C 32643 finding 6: about 50 false flags a run): a line that does not open as an entry (D1, C2 ...) is the entry's own ANSWER CHECK, FORCED or note line and is not flagged; a link with no entry is still marked by the cov
+     in Extract_Independent_Verdict:kl2Lines
+### KEYSTONE (17 distinct)
+  /^(RESULT|KEYSTONE|DEFENSE STANDING|CHALLENGE STANDING|CHALLENGER CONCEDED LINKS|CONCEDED LINKS|DEFENDER CHAIN MARK|CHALLENGER CHAIN MARK)\s*:/
+     in Alt_Gate_Build:netKeeps, Alt_Gate_Record:netKeeps, Alternate_Build:netKeeps, Alternate_Cure_Build:netKeeps, Alternate_Cure_Normalize:netKeeps, Alternate_Merge:netKeeps (+16)
+  /^\s*[-*•]?\s*\**KEYSTONE\s*:/
+     in Alt_Gate_Build:krulRulings, Alt_Gate_Record:krulRulings, Alternate_Build:krulRulings, Alternate_Cure_Build:krulRulings, Alternate_Cure_Normalize:krulRulings, Alternate_Merge:krulRulings (+16)
+  /KEYSTONE\s*:\s*\**\s*(D\d+)\b/i
+     in Alt_Gate_Build:krulRulings, Alt_Gate_Record:krulRulings, Alternate_Build:krulRulings, Alternate_Cure_Build:krulRulings, Alternate_Cure_Normalize:krulRulings, Alternate_Merge:krulRulings (+16)
+  /^KEYSTONE\s*:\s*D(\d+)\s*(?:--|—|-|:)\s*(STANDS|BROKEN|WITHDRAWN)\b\s*(?:--|—|-|:)?\s*(.*)$/i
+     in Alt_Gate_Build:kkLines, Alt_Gate_Record:kkLines, Alternate_Build:kkLines, Alternate_Cure_Build:kkLines, Alternate_Cure_Normalize:kkLines, Alternate_Merge:kkLines (+16)
+  /^(?:[-•]|\d+[.)])?\s*(?:D\d+(?:\s+vs\.?\s+C\d+(?:\s*\/\s*C\d+)*)?(?:\s*\([^)]*\))?|KEYSTONE|RESULT|CLAUSE|REASONING|DEFENSE STANDING|CHALLENGE STANDING|CHALLENGER CONCEDED LINKS|CONCEDED LINKS|DEFENDER CHAIN MARK|CHALLENGER CHAIN MARK)\s*:?\s*/i
+     in Alt_Gate_Build:kg4Conceded, Alt_Gate_Record:kg4Conceded, Alternate_Build:kg4Conceded, Alternate_Cure_Build:kg4Conceded, Alternate_Cure_Normalize:kg4Conceded, Alternate_Merge:kg4Conceded (+16)
+  /^[ \t>#-]*(?:CHALLENGE STANDING|DEFENSE STANDING|CHALLENGER CONCEDED LINKS|CONCEDED LINKS|COLLISION POINTS|CITATION CHECK|OUT-OF-ROUND|DEFENDER CHAIN MARK|CHALLENGER CHAIN MARK|KEYSTONE|CLAUSE|RESULT|CITED-IN RULINGS|NOT PRESSED|PRESSED|REASONING|VERDICT)\b/i
+     in Alt_Gate_Build:ciCountSection, Alt_Gate_Record:ciCountSection, Alternate_Build:ciCountSection, Alternate_Cure_Build:ciCountSection, Alternate_Cure_Normalize:ciCountSection, Alternate_Merge:ciCountSection (+16)
+  /^(REASONING|KEYSTONE|RESULT|DEFENSE STANDING|CHALLENGE STANDING|CHALLENGER CONCEDED LINKS|CONCEDED LINKS|DEFENDER CHAIN MARK|CHALLENGER CHAIN MARK)\s*[:\-–—]+\s*/i
+     in Alt_Gate_Build:cureLines, Alt_Gate_Record:cureLines, Alternate_Build:cureLines, Alternate_Cure_Build:cureLines, Alternate_Cure_Normalize:cureLines, Alternate_Merge:cureLines (+13)
+  /^KEYSTONE\s*:/
+     in Alt_Gate_Build:rcLines, Alt_Gate_Record:rcLines, Alternate_Build:rcLines, Alternate_Cure_Build:rcLines, Alternate_Cure_Normalize:rcLines, Alternate_Merge:rcLines (+13)
+  /^KEYSTONE\s*:\s*D\d+\s*(?:--|—|-|:)\s*WITHDRAWN\b/
+     in Alt_Gate_Build:cureRecompute, Alt_Gate_Build:sbBrokenWord2024, Alt_Gate_Record:cureRecompute, Alt_Gate_Record:sbBrokenWord2024, Alternate_Build:cureRecompute, Alternate_Cure_Build:cureRecompute (+19)
+  /^(?:(?:DEFENDER|CHALLENGER)\s*\|\s*\[?\s*[CD]R\d\s*\]?\s*\||D\d+\s+vs\.?\s+C\d+\b|D\d+\s*(?::|--|\u2014)|(?:CHALLENGER\s+)?CONCEDED LINKS\s*:|(?:DEFENSE|CHALLENGE) STANDING\s*:|KEYSTONE\s*:|CLAUSE\s*:|ANSWER CHECK\s*:|FORCED(?:\s*\(\s*Commitment\s+\d+\s*\))?\
+     in Alt_Gate_Build:cureRecompute, Alt_Gate_Record:cureRecompute, Alternate_Merge:cureRecompute, Alternate_Merge_Seat:cureRecompute, Gate_Build:cureRecompute, Gate_Record:cureRecompute
+  /^(KEYSTONE|CHALLENGER CONCEDED LINKS|CONCEDED LINKS|DEFENSE STANDING|CHALLENGE STANDING|CLAUSE)\s*:/
+     in Alt_Gate_Build:sbLabel, Alt_Gate_Record:sbLabel, Alternate_Merge:sbLabel, Alternate_Merge_Seat:sbLabel, Gate_Build:sbLabel, Gate_Record:sbLabel
+  /^KEYSTONE\s*:\s*(D\d+)\s*(?:--|—|-|:)?\s*(STANDS|BROKEN|WITHDRAWN)\b/
+     in Alt_Gate_Build:sbApply2024, Alt_Gate_Record:sbApply2024, Alternate_Merge:sbApply2024, Alternate_Merge_Seat:sbApply2024, Gate_Build:sbApply2024, Gate_Record:sbApply2024
+  /* W3 2261 (b): no reverse half; a non-keystone collision broken under KEYSTONE STANDS is normal (BROKEN-1). Rule 0 covers the keystone's own collision. */
+     in Alt_Gate_Build:sbApply2024, Alt_Gate_Record:sbApply2024, Alternate_Merge:sbApply2024, Alternate_Merge_Seat:sbApply2024, Gate_Build:sbApply2024, Gate_Record:sbApply2024
+  /^KEYSTONE\s*:\s*D\d+\s*(?:--|\u2014|-|:)\s*WITHDRAWN\b/
+     in Alt_Gate_Build:sbApply2024, Alt_Gate_Record:sbApply2024, Alternate_Merge:sbApply2024, Alternate_Merge_Seat:sbApply2024, Gate_Build:sbApply2024, Gate_Record:sbApply2024
+  /^(D\d+\s+VS\.?\s+C\d+|DEFENSE STANDING|CHALLENGE STANDING|CHALLENGER CONCEDED LINKS|CONCEDED LINKS|RESULT|CLAUSE|KEYSTONE)\b/
+     in Alt_Gate_Build:cureRewrite, Alt_Gate_Record:cureRewrite, Alternate_Build:cureRewrite, Alternate_Cure_Build:cureRewrite, Alternate_Cure_Normalize:cureRewrite, Alternate_Merge:cureRewrite (+13)
+  /^[ \t]*(?:#+[ \t]*|[-•][ \t]*)?(CITATION CHECK|OUT-OF-ROUND CONCESSIONS|CHALLENGER CHAIN MARK|KEYSTONE|CLAUSE|RESULT|DEFENSE STANDING|CHALLENGE STANDING|CONCEDED LINKS|CHALLENGER CONCEDED LINKS|LINK AUDIT)\b/
+     in Alternate_Payloads:k2Marks, Extract_Independent_Verdict:kl2Lines, Panel_Payloads:k2Marks
+  /^\s*(?:[-•#>]\s*)?(?:SILENCE|SAME TEST|RESULT|CLAUSE|VERDICT|DEFENSE STANDING|CHALLENGE STANDING|CONCEDED LINKS|CITATION CHECK|COLLISION POINTS|KEYSTONE)\b/i
+     in Alternate_Payloads:postureBlock, Panel_Payloads:postureBlock
+### CONCEDED (20 distinct)
+  /^(RESULT|KEYSTONE|DEFENSE STANDING|CHALLENGE STANDING|CHALLENGER CONCEDED LINKS|CONCEDED LINKS|DEFENDER CHAIN MARK|CHALLENGER CHAIN MARK)\s*:/
+     in Alt_Gate_Build:netKeeps, Alt_Gate_Record:netKeeps, Alternate_Build:netKeeps, Alternate_Cure_Build:netKeeps, Alternate_Cure_Normalize:netKeeps, Alternate_Merge:netKeeps (+16)
+  /^[ \t>#-]*(CHALLENGER CONCEDED LINKS|CONCEDED LINKS)\s*:/i
+     in Alt_Gate_Build:drvChains, Alt_Gate_Record:drvChains, Alternate_Build:drvChains, Alternate_Cure_Build:drvChains, Alternate_Cure_Normalize:drvChains, Alternate_Merge:drvChains (+16)
+  /* a standing is graded by its standing word; a VOID in it counts rulings made on the CONCEDED LINKS line */
+     in Alt_Gate_Build:kcmtGrade2024, Alt_Gate_Record:kcmtGrade2024, Alternate_Build:kcmtGrade2024, Alternate_Cure_Build:kcmtGrade2024, Alternate_Cure_Normalize:kcmtGrade2024, Alternate_Merge:kcmtGrade2024 (+16)
+  /^(?:[-\u2022]\s*)?(CHALLENGER CONCEDED LINKS|CONCEDED LINKS)\s*:(.*)$/i
+     in Alt_Gate_Build:selfLines421, Alt_Gate_Record:selfLines421, Alternate_Build:selfLines421, Alternate_Cure_Build:selfLines421, Alternate_Cure_Normalize:selfLines421, Alternate_Merge:selfLines421 (+16)
+  /^(?:[-•]|\d+[.)])?\s*(?:D\d+(?:\s+vs\.?\s+C\d+(?:\s*\/\s*C\d+)*)?(?:\s*\([^)]*\))?|KEYSTONE|RESULT|CLAUSE|REASONING|DEFENSE STANDING|CHALLENGE STANDING|CHALLENGER CONCEDED LINKS|CONCEDED LINKS|DEFENDER CHAIN MARK|CHALLENGER CHAIN MARK)\s*:?\s*/i
+     in Alt_Gate_Build:kg4Conceded, Alt_Gate_Record:kg4Conceded, Alternate_Build:kg4Conceded, Alternate_Cure_Build:kg4Conceded, Alternate_Cure_Normalize:kg4Conceded, Alternate_Merge:kg4Conceded (+16)
+  /^[ \t>#-]*CONCEDED LINKS[ \t]*:/i
+     in Alt_Gate_Build:ciCountSection, Alt_Gate_Record:ciCountSection, Alternate_Build:ciCountSection, Alternate_Cure_Build:ciCountSection, Alternate_Cure_Normalize:ciCountSection, Alternate_Merge:ciCountSection (+16)
+  /^[ \t>#-]*CHALLENGER CONCEDED LINKS[ \t]*:/i
+     in Alt_Gate_Build:ciCountSection, Alt_Gate_Record:ciCountSection, Alternate_Build:ciCountSection, Alternate_Cure_Build:ciCountSection, Alternate_Cure_Normalize:ciCountSection, Alternate_Merge:ciCountSection (+16)
+  /^[ \t>#-]*(?:CHALLENGE STANDING|DEFENSE STANDING|CHALLENGER CONCEDED LINKS|CONCEDED LINKS|COLLISION POINTS|CITATION CHECK|OUT-OF-ROUND|DEFENDER CHAIN MARK|CHALLENGER CHAIN MARK|KEYSTONE|CLAUSE|RESULT|CITED-IN RULINGS|NOT PRESSED|PRESSED|REASONING|VERDICT)\b/i
+     in Alt_Gate_Build:ciCountSection, Alt_Gate_Record:ciCountSection, Alternate_Build:ciCountSection, Alternate_Cure_Build:ciCountSection, Alternate_Cure_Normalize:ciCountSection, Alternate_Merge:ciCountSection (+16)
+  /^(REASONING|KEYSTONE|RESULT|DEFENSE STANDING|CHALLENGE STANDING|CHALLENGER CONCEDED LINKS|CONCEDED LINKS|DEFENDER CHAIN MARK|CHALLENGER CHAIN MARK)\s*[:\-–—]+\s*/i
+     in Alt_Gate_Build:cureLines, Alt_Gate_Record:cureLines, Alternate_Build:cureLines, Alternate_Cure_Build:cureLines, Alternate_Cure_Normalize:cureLines, Alternate_Merge:cureLines (+13)
+  /* pkgQ (WALL-2024 2224, 2226): CONCEDED is the uppercase form word at a sentence start (start of text, or after . ; ! ? :), then : ; . -- or the end; never conceded in prose, never CONCEDED LINKS */
+     in Alt_Gate_Build:cureVerdicts, Alt_Gate_Record:cureVerdicts, Alternate_Build:cureVerdicts, Alternate_Cure_Build:cureVerdicts, Alternate_Cure_Normalize:cureVerdicts, Alternate_Merge:cureVerdicts (+13)
+  /^(CHALLENGER CONCEDED LINKS|CONCEDED LINKS)\s*:/
+     in Alt_Gate_Build:rcLines, Alt_Gate_Record:rcLines, Alternate_Build:rcLines, Alternate_Cure_Build:rcLines, Alternate_Cure_Normalize:rcLines, Alternate_Merge:rcLines (+13)
+  /^(?:CHALLENGER CONCEDED LINKS|CONCEDED LINKS)\s*:\s*(\d+)/
+     in Alt_Gate_Build:cureRecompute, Alt_Gate_Build:sbApply2024, Alt_Gate_Record:cureRecompute, Alt_Gate_Record:sbApply2024, Alternate_Build:cureRecompute, Alternate_Cure_Build:cureRecompute (+19)
+  /^(?:(?:DEFENDER|CHALLENGER)\s*\|\s*\[?\s*[CD]R\d\s*\]?\s*\||D\d+\s+vs\.?\s+C\d+\b|D\d+\s*(?::|--|\u2014)|(?:CHALLENGER\s+)?CONCEDED LINKS\s*:|(?:DEFENSE|CHALLENGE) STANDING\s*:|KEYSTONE\s*:|CLAUSE\s*:|ANSWER CHECK\s*:|FORCED(?:\s*\(\s*Commitment\s+\d+\s*\))?\
+     in Alt_Gate_Build:cureRecompute, Alt_Gate_Record:cureRecompute, Alternate_Merge:cureRecompute, Alternate_Merge_Seat:cureRecompute, Gate_Build:cureRecompute, Gate_Record:cureRecompute
+  /^(KEYSTONE|CHALLENGER CONCEDED LINKS|CONCEDED LINKS|DEFENSE STANDING|CHALLENGE STANDING|CLAUSE)\s*:/
+     in Alt_Gate_Build:sbLabel, Alt_Gate_Record:sbLabel, Alternate_Merge:sbLabel, Alternate_Merge_Seat:sbLabel, Gate_Build:sbLabel, Gate_Record:sbLabel
+  /^(D\d+\s+VS\.?\s+C\d+|DEFENSE STANDING|CHALLENGE STANDING|CHALLENGER CONCEDED LINKS|CONCEDED LINKS|RESULT|CLAUSE|KEYSTONE)\b/
+     in Alt_Gate_Build:cureRewrite, Alt_Gate_Record:cureRewrite, Alternate_Build:cureRewrite, Alternate_Cure_Build:cureRewrite, Alternate_Cure_Normalize:cureRewrite, Alternate_Merge:cureRewrite (+13)
+  /^[ \t]*(?:#+[ \t]*|[-•][ \t]*)?(CITATION CHECK|OUT-OF-ROUND CONCESSIONS|CHALLENGER CHAIN MARK|KEYSTONE|CLAUSE|RESULT|DEFENSE STANDING|CHALLENGE STANDING|CONCEDED LINKS|CHALLENGER CONCEDED LINKS|LINK AUDIT)\b/
+     in Alternate_Payloads:k2Marks, Extract_Independent_Verdict:kl2Lines, Panel_Payloads:k2Marks
+  /^[ \t>#-]*CONCEDED LINKS[ \t]*:.*$/im
+     in Alternate_Payloads:drvLinkMap, Extract_Independent_Verdict:drvLinkMap, Panel_Payloads:drvLinkMap
+  /^[ \t>#-]*CHALLENGER CONCEDED LINKS[ \t]*:.*$/im
+     in Alternate_Payloads:drvLinkMap, Extract_Independent_Verdict:drvLinkMap, Panel_Payloads:drvLinkMap
+  /^\s*(?:[-•#>]\s*)?(?:SILENCE|SAME TEST|RESULT|CLAUSE|VERDICT|DEFENSE STANDING|CHALLENGE STANDING|CONCEDED LINKS|CITATION CHECK|COLLISION POINTS|KEYSTONE)\b/i
+     in Alternate_Payloads:postureBlock, Panel_Payloads:postureBlock
+  / CONCEDED COUNTS DERIVED FROM THE ITEMIZATION (WO-17 form on W1's clause scheme). Each item of the CONCEDED LINKS /
+     in Extract_Independent_Verdict:kl2Lines
+### STANDING (15 distinct)
+  /^(RESULT|KEYSTONE|DEFENSE STANDING|CHALLENGE STANDING|CHALLENGER CONCEDED LINKS|CONCEDED LINKS|DEFENDER CHAIN MARK|CHALLENGER CHAIN MARK)\s*:/
+     in Alt_Gate_Build:netKeeps, Alt_Gate_Record:netKeeps, Alternate_Build:netKeeps, Alternate_Cure_Build:netKeeps, Alternate_Cure_Normalize:netKeeps, Alternate_Merge:netKeeps (+16)
+  /^(?:DEFENSE|CHALLENGE)\s+STANDING\s*:/i
+     in Alt_Gate_Build:kcmtGrade2024, Alt_Gate_Record:kcmtGrade2024, Alternate_Build:kcmtGrade2024, Alternate_Cure_Build:kcmtGrade2024, Alternate_Cure_Normalize:kcmtGrade2024, Alternate_Merge:kcmtGrade2024 (+16)
+  /^(?:[-•]|\d+[.)])?\s*(?:D\d+(?:\s+vs\.?\s+C\d+(?:\s*\/\s*C\d+)*)?(?:\s*\([^)]*\))?|KEYSTONE|RESULT|CLAUSE|REASONING|DEFENSE STANDING|CHALLENGE STANDING|CHALLENGER CONCEDED LINKS|CONCEDED LINKS|DEFENDER CHAIN MARK|CHALLENGER CHAIN MARK)\s*:?\s*/i
+     in Alt_Gate_Build:kg4Conceded, Alt_Gate_Record:kg4Conceded, Alternate_Build:kg4Conceded, Alternate_Cure_Build:kg4Conceded, Alternate_Cure_Normalize:kg4Conceded, Alternate_Merge:kg4Conceded (+16)
+  /^[ \t>#-]*(?:CHALLENGE STANDING|DEFENSE STANDING|CHALLENGER CONCEDED LINKS|CONCEDED LINKS|COLLISION POINTS|CITATION CHECK|OUT-OF-ROUND|DEFENDER CHAIN MARK|CHALLENGER CHAIN MARK|KEYSTONE|CLAUSE|RESULT|CITED-IN RULINGS|NOT PRESSED|PRESSED|REASONING|VERDICT)\b/i
+     in Alt_Gate_Build:ciCountSection, Alt_Gate_Record:ciCountSection, Alternate_Build:ciCountSection, Alternate_Cure_Build:ciCountSection, Alternate_Cure_Normalize:ciCountSection, Alternate_Merge:ciCountSection (+16)
+  /^(RESTATED|RETRACTED|CORRECTED RESULT|CORRECTED COUNT|CORRECTED STANDING|NOT PRESSED|PRESSED|SHORT|STATEMENT|RESPONSE)[ \t]*:[ \t]*(.*)$/
+     in Alt_Gate_Build:cureFoundAll, Alt_Gate_Record:cureFoundAll, Alternate_Build:cureFoundAll, Alternate_Cure_Build:cureFoundAll, Alternate_Cure_Normalize:cureFoundAll, Alternate_Merge:cureFoundAll (+13)
+  /^(REASONING|KEYSTONE|RESULT|DEFENSE STANDING|CHALLENGE STANDING|CHALLENGER CONCEDED LINKS|CONCEDED LINKS|DEFENDER CHAIN MARK|CHALLENGER CHAIN MARK)\s*[:\-–—]+\s*/i
+     in Alt_Gate_Build:cureLines, Alt_Gate_Record:cureLines, Alternate_Build:cureLines, Alternate_Cure_Build:cureLines, Alternate_Cure_Normalize:cureLines, Alternate_Merge:cureLines (+13)
+  /^(DEFENSE|CHALLENGE) STANDING\s*:/
+     in Alt_Gate_Build:rcLines, Alt_Gate_Record:rcLines, Alternate_Build:rcLines, Alternate_Cure_Build:rcLines, Alternate_Cure_Normalize:rcLines, Alternate_Merge:rcLines (+13)
+  /STANDING\s*:\s*([A-Z-]+)/
+     in Alt_Gate_Build:cureRecompute, Alt_Gate_Record:cureRecompute, Alternate_Build:cureRecompute, Alternate_Cure_Build:cureRecompute, Alternate_Cure_Normalize:cureRecompute, Alternate_Merge:cureRecompute (+13)
+  /^(?:(?:DEFENDER|CHALLENGER)\s*\|\s*\[?\s*[CD]R\d\s*\]?\s*\||D\d+\s+vs\.?\s+C\d+\b|D\d+\s*(?::|--|\u2014)|(?:CHALLENGER\s+)?CONCEDED LINKS\s*:|(?:DEFENSE|CHALLENGE) STANDING\s*:|KEYSTONE\s*:|CLAUSE\s*:|ANSWER CHECK\s*:|FORCED(?:\s*\(\s*Commitment\s+\d+\s*\))?\
+     in Alt_Gate_Build:cureRecompute, Alt_Gate_Record:cureRecompute, Alternate_Merge:cureRecompute, Alternate_Merge_Seat:cureRecompute, Gate_Build:cureRecompute, Gate_Record:cureRecompute
+  /^(KEYSTONE|CHALLENGER CONCEDED LINKS|CONCEDED LINKS|DEFENSE STANDING|CHALLENGE STANDING|CLAUSE)\s*:/
+     in Alt_Gate_Build:sbLabel, Alt_Gate_Record:sbLabel, Alternate_Merge:sbLabel, Alternate_Merge_Seat:sbLabel, Gate_Build:sbLabel, Gate_Record:sbLabel
+  /^(D\d+\s+VS\.?\s+C\d+|DEFENSE STANDING|CHALLENGE STANDING|CHALLENGER CONCEDED LINKS|CONCEDED LINKS|RESULT|CLAUSE|KEYSTONE)\b/
+     in Alt_Gate_Build:cureRewrite, Alt_Gate_Record:cureRewrite, Alternate_Build:cureRewrite, Alternate_Cure_Build:cureRewrite, Alternate_Cure_Normalize:cureRewrite, Alternate_Merge:cureRewrite (+13)
+  /^[ \t]*(?:#+[ \t]*|[-•][ \t]*)?(CITATION CHECK|OUT-OF-ROUND CONCESSIONS|CHALLENGER CHAIN MARK|KEYSTONE|CLAUSE|RESULT|DEFENSE STANDING|CHALLENGE STANDING|CONCEDED LINKS|CHALLENGER CONCEDED LINKS|LINK AUDIT)\b/
+     in Alternate_Payloads:k2Marks, Extract_Independent_Verdict:kl2Lines, Panel_Payloads:k2Marks
+  /^[ \t>#-]*DEFENSE STANDING[ \t]*:[^\n]*?\bL\s*=\s*(\d+)/im
+     in Alternate_Payloads:drvBroken, Extract_Independent_Verdict:drvBroken, Panel_Payloads:drvBroken
+  /^[ \t>#-]*CHALLENGE STANDING[ \t]*:[^\n]*?\bL\s*=\s*(\d+)/im
+     in Alternate_Payloads:drvBroken, Extract_Independent_Verdict:drvBroken, Panel_Payloads:drvBroken
+  /^\s*(?:[-•#>]\s*)?(?:SILENCE|SAME TEST|RESULT|CLAUSE|VERDICT|DEFENSE STANDING|CHALLENGE STANDING|CONCEDED LINKS|CITATION CHECK|COLLISION POINTS|KEYSTONE)\b/i
+     in Alternate_Payloads:postureBlock, Panel_Payloads:postureBlock
+### RESULT (3 distinct)
+  /^RESULT\s*:.*\brecomputed\b/i
+     in Alt_Gate_Build:kcmtGrade2024, Alt_Gate_Record:kcmtGrade2024, Alternate_Build:kcmtGrade2024, Alternate_Cure_Build:kcmtGrade2024, Alternate_Cure_Normalize:kcmtGrade2024, Alternate_Merge:kcmtGrade2024 (+16)
+  /^RESULT\s*:\s*(DEFENDER WINS|CHALLENGER WINS|UNDERDETERMINED)/
+     in Alt_Gate_Build:cureRecompute, Alt_Gate_Build:sbApply2024, Alt_Gate_Record:cureRecompute, Alt_Gate_Record:sbApply2024, Alternate_Build:cureRecompute, Alternate_Cure_Build:cureRecompute (+19)
+  /^RESULT\s*:/i
+     in Alt_Gate_Build:sbApply2024, Alt_Gate_Record:sbApply2024, Alternate_Merge:sbApply2024, Alternate_Merge_Seat:sbApply2024, Gate_Build:sbApply2024, Gate_Record:sbApply2024
+### ANSWERCHECK (7 distinct)
+  /^ANSWER CHECK\s*:/i
+     in Alt_Gate_Build:kcmtGrade2024, Alt_Gate_Build:kagRow, Alt_Gate_Record:kcmtGrade2024, Alt_Gate_Record:kagRow, Alternate_Build:kcmtGrade2024, Alternate_Build:kagRow (+38)
+  /* an ANSWER CHECK grades by its verdict slot after ANSWER; a trailing "premise N is VOID" points to a VOID ruled elsewhere */
+     in Alt_Gate_Build:kcmtGrade2024, Alt_Gate_Record:kcmtGrade2024, Alternate_Build:kcmtGrade2024, Alternate_Cure_Build:kcmtGrade2024, Alternate_Cure_Normalize:kcmtGrade2024, Alternate_Merge:kcmtGrade2024 (+16)
+  /^ANSWER CHECK\s*:\s*(.+?)\s*--/i
+     in Alt_Gate_Build:kagRow, Alt_Gate_Record:kagRow, Alternate_Build:kagRow, Alternate_Cure_Build:kagRow, Alternate_Cure_Normalize:kagRow, Alternate_Merge:kagRow (+16)
+  /^(?:[-\u2022]\s*)?ANSWER CHECK\s*:\s*((?:[1-3]\s?)?[A-Z][a-z]+\.?\s+\d+:\d+)[^\n]*?\[\s*(CR|DR)\d\s*\][^\n]*?--\s*(MEETS|MISSES|FAILS)\b/
+     in Alt_Gate_Build:selfLines421, Alt_Gate_Record:selfLines421, Alternate_Build:selfLines421, Alternate_Cure_Build:selfLines421, Alternate_Cure_Normalize:selfLines421, Alternate_Merge:selfLines421 (+16)
+  /^(?:(?:DEFENDER|CHALLENGER)\s*\|\s*\[?\s*[CD]R\d\s*\]?\s*\||D\d+\s+vs\.?\s+C\d+\b|D\d+\s*(?::|--|\u2014)|(?:CHALLENGER\s+)?CONCEDED LINKS\s*:|(?:DEFENSE|CHALLENGE) STANDING\s*:|KEYSTONE\s*:|CLAUSE\s*:|ANSWER CHECK\s*:|FORCED(?:\s*\(\s*Commitment\s+\d+\s*\))?\
+     in Alt_Gate_Build:cureRecompute, Alt_Gate_Record:cureRecompute, Alternate_Merge:cureRecompute, Alternate_Merge_Seat:cureRecompute, Gate_Build:cureRecompute, Gate_Record:cureRecompute
+  /^(?:[-•]|\d+[.)])?\s*ANSWER CHECK\s*:\s*(.+?)\s*(?:--|—)\s*\[\s*([CD]R[1-4])\s*\]/i
+     in Alt_Gate_Build:gateAnsGround2024, Alt_Gate_Build:gateLineFor2024, Alt_Gate_Record:gateAnsGround2024, Alt_Gate_Record:gateLineFor2024, Alternate_Merge:gateAnsGround2024, Alternate_Merge:gateLineFor2024 (+6)
+  /* s425b (ruling 425 owed item 3; Worker_C 32643 finding 6: about 50 false flags a run): a line that does not open as an entry (D1, C2 ...) is the entry's own ANSWER CHECK, FORCED or note line and is not flagged; a link with no entry is still marked by the cov
+     in Extract_Independent_Verdict:kl2Lines
+### CORRECTED (1 distinct)
+  /^(RESTATED|RETRACTED|CORRECTED RESULT|CORRECTED COUNT|CORRECTED STANDING|NOT PRESSED|PRESSED|SHORT|STATEMENT|RESPONSE)[ \t]*:[ \t]*(.*)$/
+     in Alt_Gate_Build:cureFoundAll, Alt_Gate_Record:cureFoundAll, Alternate_Build:cureFoundAll, Alternate_Cure_Build:cureFoundAll, Alternate_Cure_Normalize:cureFoundAll, Alternate_Merge:cureFoundAll (+13)
+### RETRACTED (3 distinct)
+  /^(RESTATED|RETRACTED|CORRECTED RESULT|CORRECTED COUNT|CORRECTED STANDING|NOT PRESSED|PRESSED|SHORT|STATEMENT|RESPONSE)[ \t]*:[ \t]*(.*)$/
+     in Alt_Gate_Build:cureFoundAll, Alt_Gate_Record:cureFoundAll, Alternate_Build:cureFoundAll, Alternate_Cure_Build:cureFoundAll, Alternate_Cure_Normalize:cureFoundAll, Alternate_Merge:cureFoundAll (+13)
+  /* pkgCR: the tag, then any reason after a separator (as judge_fix4 F3 reads RETRACTED) */
+     in Alt_Gate_Build:cureLines, Alt_Gate_Record:cureLines, Alternate_Build:cureLines, Alternate_Cure_Build:cureLines, Alternate_Cure_Normalize:cureLines, Alternate_Merge:cureLines (+13)
+  /* judge_fix4 F3: a RETRACTED line carries its own reason */
+     in Alt_Gate_Build:cureReasoned, Alt_Gate_Record:cureReasoned, Alternate_Build:cureReasoned, Alternate_Cure_Build:cureReasoned, Alternate_Cure_Normalize:cureReasoned, Alternate_Merge:cureReasoned (+13)
