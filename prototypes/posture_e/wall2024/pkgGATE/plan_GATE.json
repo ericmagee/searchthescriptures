@@ -1,0 +1,31 @@
+{
+ "base": "pkgKCR/patched (Alternate Merge only); new nodes from pkgGATE",
+ "nodes": [
+  {
+   "file": "Alternate_Merge.js",
+   "name": "Alternate Merge",
+   "base_sha": "1326d20acb152b32",
+   "final_sha": "3b3f3c1e0af8406f",
+   "edits": [
+    "sbApply2024 v2 (keystone rules 0-2, rounds) + gate_lib",
+    "PP from Gate Record bodies",
+    "SBI from Gate Record",
+    "sbApply2024 with rounds",
+    "gate rows to enforcer log"
+   ]
+  },
+  {
+   "file": "Gate_Build.js",
+   "name": "Gate Build",
+   "new": true,
+   "final_sha": "dd380f1712dd99d6"
+  },
+  {
+   "file": "Gate_Record.js",
+   "name": "Gate Record",
+   "new": true,
+   "final_sha": "ae495ad99e9bd903"
+  }
+ ],
+ "new_nodes": "nodes_GATE.json (Gate Needed? and Gate Call openrouter are cloned from Send Back Needed? and Send Back Call openrouter)"
+}

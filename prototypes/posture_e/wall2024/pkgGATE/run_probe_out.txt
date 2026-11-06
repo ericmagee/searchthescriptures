@@ -1,0 +1,23 @@
+32949 chatgpt: sb 45, applied S41,S45,S11,S32,S33,S34,S35,S36,S37,S42,S44, verdict HELD -> HELD; rounds none
+   G1 NOT APPLIED [E-APPLY S4]: the flagged line is not in the judge text
+   G2 RULE K-G4 [K re-read]: DEBATE RULE VIOLATION (K-G4) -- D3 vs C2 CHALLENGER LINK BROKEN counts a witness as unanswered; the rule counts it only with the quoted pressing sentence and its round, and only for a verse a listed premise carries under PRESSED WITH (ruling 392).
+32949 grok: sb 26, applied S1,S4,S5,S6,S7,S8,S9,S10,S11,S12,S13,S14,S15,S16,S17,S18,S19,S20,S21,S22,S24,S25,S26, verdict BROKEN -> BROKEN; rounds none
+   G1 NOT APPLIED [E-APPLY S2]: a NOT HELD dispute written under CHANGE TO, not a line change
+   G2 NOT APPLIED [E-APPLY S3]: a NOT HELD dispute written under CHANGE TO, not a line change
+   G3 CONTRADICTION [E-GATE B]: your ANSWER CHECK on Matthew 1:25 [CR4] grades the answer MISSES, so that press stands for the challenger; yet D2 vs C3 is graded CHALLENGER LINK BROKEN with Matthew 1:25 among its footing or ground. Change one of the two lines so they agree.
+32973 chatgpt: sb 35, applied S3,S4,S5,S6,S7,S8,S9,S10,S11,S12,S13,S14,S15,S16,S17,S18,S19,S20,S21,S22,S23,S24,S25,S26,S27,S28,S29,S34, verdict HELD -> HELD; rounds none
+   G1 NOT APPLIED [E-APPLY S1]: the flagged line is not in the judge text
+   G2 NOT APPLIED [E-APPLY S2]: the flagged line is not in the judge text
+32973 gemini: sb 14, applied S1,S2,S3,S4,S5,S6,S7,S8,S9,S13, verdict HELD -> BROKEN; rounds none
+   G1 RULE K-G4 [K re-read]: DEBATE RULE VIOLATION (K-G4) -- D5 vs C5 DEFENDER LINK BROKEN counts a witness as unanswered; the rule counts it only with the quoted pressing sentence and its round, and only for a verse a listed premise carries under PRESSED WITH (ruling 392).
+32973 grok: sb 35, applied S1,S2,S3,S4,S5,S6,S7,S8,S9,S10,S11,S12,S13,S14,S15,S16,S17,S18,S19,S20,S21,S22,S23,S24,S25,S31,S35, verdict BROKEN -> BROKEN; rounds none
+   G1 CONTRADICTION [E-APPLY S26]: KEYSTONE D6 BROKEN while no D6 collision line is graded DEFENDER LINK BROKEN, and its GROUND quotes no defender grant found in the named defender round and names no premise its CONCEDED LINKS line counts (the change is not applied)
+   G2 CONTRADICTION [E-APPLY S27]: KEYSTONE D6 BROKEN while no D6 collision line is graded DEFENDER LINK BROKEN, and its GROUND quotes no defender grant found in the named defender round and names no premise its CONCEDED LINKS line counts (the change is not applied)
+   G3 CONTRADICTION [E-APPLY S28]: KEYSTONE D6 BROKEN while no D6 collision line is graded DEFENDER LINK BROKEN, and its GROUND quotes no defender grant found in the named defender round and names no premise its CONCEDED LINKS line counts (the change is not applied)
+   G4 CONTRADICTION [E-GATE B]: your ANSWER CHECK on Matthew 1:25 [CR3] grades the answer MISSES, so that press stands for the challenger; yet D6 vs C1 is graded CHALLENGER LINK BROKEN with Matthew 1:25 among its footing or ground. Change one of the two lines so they agree.
+32980 gemini: sb 17, applied S1,S2,S3,S4,S5,S6,S7,S16, verdict HELD -> HELD; rounds CR1,DR1,CR2,DR2,CR3,DR3,CR4,DR4
+   G1 CONTRADICTION [E-GATE B]: your ANSWER CHECK on Galatians 4:4 [CR4] grades the answer MISSES, so that press stands for the challenger; yet D5 vs C5 is graded CHALLENGER LINK BROKEN with Galatians 4:4 among its footing or ground. Change one of the two lines so they agree.
+32980 grok: sb 21, applied S1,S2,S3,S4,S5,S6,S7,S8,S9,S10,S11,S12,S13,S20,S21, verdict BROKEN -> BROKEN; rounds CR1,DR1,CR2,DR2,CR3,DR3,CR4,DR4
+   G1 CONTRADICTION [E-APPLY S14]: KEYSTONE D6 BROKEN while the verdict derived from the corrected collision lines is not BROKEN (the change is not applied)
+   G2 CONTRADICTION [E-APPLY S15]: KEYSTONE D6 BROKEN while the verdict derived from the corrected collision lines is not BROKEN (the change is not applied)
+32980 sol: sb 0, applied -, verdict HELD -> -; rounds none

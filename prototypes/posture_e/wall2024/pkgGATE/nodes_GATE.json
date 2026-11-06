@@ -1,0 +1,145 @@
+{
+ "nodes": [
+  {
+   "id": "fea17f9c-ca08-5ee8-b348-ef677b44c3b9",
+   "name": "Gate Build",
+   "type": "n8n-nodes-base.code",
+   "typeVersion": 2,
+   "position": [
+    16492,
+    960
+   ],
+   "parameters": {
+    "jsCode": "FILE:pkgGATE/patched/Gate_Build.js"
+   }
+  },
+  {
+   "id": "260f1cbb-5edd-5f8d-a78d-ee9181b18945",
+   "name": "Gate Needed?",
+   "type": "n8n-nodes-base.if",
+   "typeVersion": 2.2,
+   "position": [
+    16712,
+    960
+   ],
+   "parameters": {
+    "conditions": {
+     "combinator": "and",
+     "conditions": [
+      {
+       "id": "gate-needed",
+       "leftValue": "={{ $json.gate_skip !== true }}",
+       "operator": {
+        "operation": "true",
+        "singleValue": true,
+        "type": "boolean"
+       },
+       "rightValue": ""
+      }
+     ],
+     "options": {
+      "caseSensitive": true,
+      "leftValue": "",
+      "typeValidation": "loose"
+     }
+    },
+    "options": {}
+   }
+  },
+  {
+   "id": "a5922a5b-c01a-59d1-af00-6c41c4ea141a",
+   "name": "Gate Call openrouter",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.3,
+   "retryOnFail": false,
+   "onError": "continueRegularOutput",
+   "position": [
+    16932,
+    920
+   ],
+   "parameters": {
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpHeaderAuth",
+    "jsonBody": "={{ (__b=>{if(!__b||typeof __b!=='object')return __b;let o=__b;const md=String(o.model||'');if(/^z-ai\\//.test(md))o=Object.assign({},o,{provider:{order:['z-ai'],allow_fallbacks:false} });if(/^(?:google|qwen|openai|anthropic)\\//.test(md)&&Array.isArray(o.messages)){let k=-1,L=0;o.messages.forEach((m,i)=>{if(m&&m.role==='user'&&typeof m.content==='string'&&m.content.length>L){L=m.content.length;k=i;} });if(k>=0)o=Object.assign({},o,{messages:o.messages.map((m,i)=>i===k?{role:m.role,content:[{type:'text',text:m.content,cache_control:{type:'ephemeral'} }]}:m)});}if(/^x-ai\\//.test(md)&&Array.isArray(o.messages)){const XR=new Map();for(const xn of [\"D1 Call openrouter\", \"C1 Call openrouter\", \"D2 Call openrouter\", \"C2 Call openrouter\", \"D3 Call openrouter\", \"C3 Call openrouter\", \"Panel Judge 2 openrouter\", \"Panel Judge 3 openrouter\", \"Synthesis Call openrouter\", \"Diagnostic Call openrouter\", \"Verdict Call openrouter\", \"Panel Judge 1 openrouter\", \"Panel Reserve openrouter\", \"Cure Call openrouter\", \"Panel Cure Call 1 openrouter\", \"Panel Cure Call 2 openrouter\", \"Panel Cure Call 3 openrouter\", \"Alternate Call openrouter\", \"Alternate Cure Call openrouter\", \"Send Back Call openrouter\", \"Gate Call openrouter\", \"D4 Call openrouter\", \"C4 Call openrouter\", \"Accept Call openrouter\", \"Accept Return Call openrouter\", \"QR Ask\", \"QR Retry Ask\", \"QR Answer\"]){let xa=[];try{if(!$(xn).isExecuted)continue;xa=$(xn).all();}catch(xe){continue;}for(const xi of xa){const xj=(xi&&xi.json)||{};if(!/^x-ai\\//.test(String(xj.model||'')))continue;for(const xc of (xj.choices||[])){const xm=xc&&xc.message;if(xm&&typeof xm.content==='string'&&Array.isArray(xm.reasoning_details)&&xm.reasoning_details.length)XR.set(xm.content,xm.reasoning_details);} } }if(XR.size)o=Object.assign({},o,{messages:o.messages.map(m=>(m&&m.role==='assistant'&&typeof m.content==='string'&&!m.reasoning_details&&XR.has(m.content))?Object.assign({},m,{reasoning_details:XR.get(m.content)}):m)});}return o;})($json.body) }}",
+    "method": "POST",
+    "options": {
+     "timeout": 900000
+    },
+    "sendBody": true,
+    "specifyBody": "json",
+    "url": "https://openrouter.ai/api/v1/chat/completions",
+    "sendHeaders": true,
+    "specifyHeaders": "keypair",
+    "headerParameters": {
+     "parameters": [
+      {
+       "name": "x-grok-conv-id",
+       "value": "={{ \"odv1-\" + $execution.id }}"
+      }
+     ]
+    }
+   },
+   "credentials": {
+    "httpHeaderAuth": {
+     "id": "3KOXDCYCjkii6i56",
+     "name": "OpenRouter"
+    }
+   }
+  },
+  {
+   "id": "1e94b261-f190-5ccd-9d12-31a408b96819",
+   "name": "Gate Record",
+   "type": "n8n-nodes-base.code",
+   "typeVersion": 2,
+   "position": [
+    17152,
+    960
+   ],
+   "parameters": {
+    "jsCode": "FILE:pkgGATE/patched/Gate_Record.js"
+   }
+  }
+ ],
+ "connections": {
+  "remove": [
+   [
+    "Send Back Record",
+    0,
+    "Alternate Needed?"
+   ]
+  ],
+  "add": [
+   [
+    "Send Back Record",
+    0,
+    "Gate Build"
+   ],
+   [
+    "Gate Build",
+    0,
+    "Gate Needed?"
+   ],
+   [
+    "Gate Needed?",
+    0,
+    "Gate Call openrouter"
+   ],
+   [
+    "Gate Needed?",
+    1,
+    "Gate Record"
+   ],
+   [
+    "Gate Call openrouter",
+    0,
+    "Gate Record"
+   ],
+   [
+    "Gate Record",
+    0,
+    "Alternate Needed?"
+   ]
+  ],
+  "note": "the nodes right of Send Back Record (Alternate Needed? onward) are not moved; move them 1100 to the right if they overlap"
+ }
+}

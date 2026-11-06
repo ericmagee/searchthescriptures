@@ -1,0 +1,121 @@
+{
+ "Send Back Needed?": {
+  "id": "6d4e64f5-27d2-4370-8109-d19bcbbd7ce9",
+  "name": "Send Back Needed?",
+  "type": "n8n-nodes-base.if",
+  "typeVersion": 2.2,
+  "position": [
+   15832,
+   960
+  ],
+  "parameters": {
+   "conditions": {
+    "combinator": "and",
+    "conditions": [
+     {
+      "id": "send-back-needed-428",
+      "leftValue": "={{ $json.sb_skip !== true }}",
+      "operator": {
+       "operation": "true",
+       "singleValue": true,
+       "type": "boolean"
+      },
+      "rightValue": ""
+     }
+    ],
+    "options": {
+     "caseSensitive": true,
+     "leftValue": "",
+     "typeValidation": "loose"
+    }
+   },
+   "options": {}
+  }
+ },
+ "Send Back Call openrouter": {
+  "id": "666552f4-da91-4536-b84a-c11997714993",
+  "name": "Send Back Call openrouter",
+  "type": "n8n-nodes-base.httpRequest",
+  "typeVersion": 4.3,
+  "retryOnFail": false,
+  "onError": "continueRegularOutput",
+  "position": [
+   16052,
+   920
+  ],
+  "parameters": {
+   "authentication": "genericCredentialType",
+   "genericAuthType": "httpHeaderAuth",
+   "jsonBody": "={{ (__b=>{if(!__b||typeof __b!=='object')return __b;let o=__b;const md=String(o.model||'');if(/^z-ai\\//.test(md))o=Object.assign({},o,{provider:{order:['z-ai'],allow_fallbacks:false} });if(/^(?:google|qwen|openai|anthropic)\\//.test(md)&&Array.isArray(o.messages)){let k=-1,L=0;o.messages.forEach((m,i)=>{if(m&&m.role==='user'&&typeof m.content==='string'&&m.content.length>L){L=m.content.length;k=i;} });if(k>=0)o=Object.assign({},o,{messages:o.messages.map((m,i)=>i===k?{role:m.role,content:[{type:'text',text:m.content,cache_control:{type:'ephemeral'} }]}:m)});}if(/^x-ai\\//.test(md)&&Array.isArray(o.messages)){const XR=new Map();for(const xn of [\"D1 Call openrouter\", \"C1 Call openrouter\", \"D2 Call openrouter\", \"C2 Call openrouter\", \"D3 Call openrouter\", \"C3 Call openrouter\", \"Panel Judge 2 openrouter\", \"Panel Judge 3 openrouter\", \"Synthesis Call openrouter\", \"Diagnostic Call openrouter\", \"Verdict Call openrouter\", \"Panel Judge 1 openrouter\", \"Panel Reserve openrouter\", \"Cure Call openrouter\", \"Panel Cure Call 1 openrouter\", \"Panel Cure Call 2 openrouter\", \"Panel Cure Call 3 openrouter\", \"Alternate Call openrouter\", \"Alternate Cure Call openrouter\", \"D4 Call openrouter\", \"C4 Call openrouter\", \"Accept Call openrouter\", \"Accept Return Call openrouter\", \"QR Ask\", \"QR Retry Ask\", \"QR Answer\"]){let xa=[];try{if(!$(xn).isExecuted)continue;xa=$(xn).all();}catch(xe){continue;}for(const xi of xa){const xj=(xi&&xi.json)||{};if(!/^x-ai\\//.test(String(xj.model||'')))continue;for(const xc of (xj.choices||[])){const xm=xc&&xc.message;if(xm&&typeof xm.content==='string'&&Array.isArray(xm.reasoning_details)&&xm.reasoning_details.length)XR.set(xm.content,xm.reasoning_details);} } }if(XR.size)o=Object.assign({},o,{messages:o.messages.map(m=>(m&&m.role==='assistant'&&typeof m.content==='string'&&!m.reasoning_details&&XR.has(m.content))?Object.assign({},m,{reasoning_details:XR.get(m.content)}):m)});}return o;})($json.body) }}",
+   "method": "POST",
+   "options": {
+    "timeout": 900000
+   },
+   "sendBody": true,
+   "specifyBody": "json",
+   "url": "https://openrouter.ai/api/v1/chat/completions",
+   "sendHeaders": true,
+   "specifyHeaders": "keypair",
+   "headerParameters": {
+    "parameters": [
+     {
+      "name": "x-grok-conv-id",
+      "value": "={{ \"odv1-\" + $execution.id }}"
+     }
+    ]
+   }
+  },
+  "credentials": {
+   "httpHeaderAuth": {
+    "id": "3KOXDCYCjkii6i56",
+    "name": "OpenRouter"
+   }
+  }
+ },
+ "Send Back Record": {
+  "id": "6b3e4813-0ae1-4829-b786-e219433264c4",
+  "name": "Send Back Record",
+  "type": "n8n-nodes-base.code",
+  "typeVersion": 2,
+  "position": [
+   16272,
+   960
+  ],
+  "parameters": {
+   "jsCode": "// ruling 428, the send-back half: reads each judge's SENDBACK lines and records one debate_enforcer_log row (kind send_back) per item: the\n// judge's line, the enforcer's reason, and the judge's answer (KEEP or CHANGE TO, with its sentence). The judge keeps the decision. NOT BUILT\n// here: a CHANGE does not yet recompute the judge's counts or result; it is recorded and printed in the run document.\nconst PASS=$('Judge Enforcer Record').first().json;\nconst B=$('Send Back Build').all().map(x=>x.json);const first=B[0]||{};const T=new Date().toISOString();\nconst ns=(first.sb_not_sent||[]).map(x=>({run_token:null,seat:x.seat,seat_role:'panel',judge_model:null,kind:'send_back',rule:x.rule,item:x.item||null,flagged_line:null,prompt_sent:null,full_reply:null,reply_error:'NOT SENT: '+x.why,response_line:null,cure_status:null,cure_reason:'SEND-BACK NOT SENT: '+x.why+' (ruling 428)',at:T}));\nif(first.sb_skip)return [{json:{...PASS,sendback:{skipped:true,why:first.sb_why||'',not_sent:ns.length,tally:{}},sb_rows:ns,sb_items:[]}}];\nconst R=$input.all().map(x=>x.json);const rows=[...ns];const errors=[];const tally={KEEP:0,CHANGE:0,'NO ANSWER':0};const shown=[];\nB.forEach((b,ci)=>{let txt='',err=null;try{txt=String(R[ci].choices[0].message.content||'');}catch(e){err=String((R[ci]&&R[ci].error&&(R[ci].error.message||R[ci].error))||'no reply').slice(0,200);errors.push(b.seat+': '+err);}\n /* WALL-1963 reply 1965 DEFECT 1: a judge whose system message demands strict JSON may wrap its lines in a JSON string (run 32725, Panel Cure\n  Call 2), so escaped line breaks and quotes are undone first and a SENDBACK line is read wherever it starts in a line. */\n const J=/^\\s*[{\\[]/.test(txt);const A={};const T2=txt.replace(/\\\\n/g,'\\n').replace(/\\\\\"/g,'\"');for(const l0 of T2.split('\\n')){const l=l0.replace(/[*_`]+/g,'').trim();const m=l.match(/SENDBACK\\s*:\\s*(S\\d+)\\s*\\|\\|\\s*(KEEP|CHANGE TO\\s*:?([\\s\\S]*?))\\s*\\|\\|\\s*(.*)$/i);\n  if(m&&!A[m[1].toUpperCase()])A[m[1].toUpperCase()]={ans:/^KEEP$/i.test(m[2].trim())?'KEEP':'CHANGE',to:(m[3]||'').trim(),why:(J?m[4].replace(/\"\\s*,?\\s*[}\\]]*\\s*$/,''):m[4]).trim(),line:l};}\n (b.items||[]).forEach((it,k)=>{const a=A[it.sid];const ans=a?a.ans:'NO ANSWER';tally[ans]++;\n  shown.push({seat:b.seat,sid:it.sid,rule:it.rule,item:it.item,line:it.line,reason:it.reason,ans,to:a?a.to:'',why:a?a.why:(err?'no reply: '+err:'no SENDBACK line for this item')});\n  rows.push({run_token:b.run_token,seat:b.seat,seat_role:'panel',judge_model:b.api_model,kind:'send_back',rule:it.rule,item:it.item||null,flagged_line:String(it.line).slice(0,1500),\n   prompt_sent:k===0?b.msg:null,full_reply:k===0?(txt||null):null,reply_error:err,response_line:a?a.line.slice(0,1500):null,cure_status:null,\n   cure_reason:'SEND-BACK '+ans+(a&&a.to?' TO: '+a.to.slice(0,600):'')+(a&&a.why?' -- '+a.why.slice(0,600):'')+' | ENFORCER: '+String(it.reason).slice(0,600)+' (ruling 428; the judge keeps the decision)',at:T});});});\nreturn [{json:{...PASS,sendback:{skipped:false,calls:B.length,not_sent:ns.length,tally,errors},sb_rows:rows,sb_items:shown}}];\n"
+  }
+ },
+ "Alternate Needed?": {
+  "id": "5fce9ffc-c8b8-4b9f-8ca3-3f2fee81efd6",
+  "name": "Alternate Needed?",
+  "type": "n8n-nodes-base.if",
+  "typeVersion": 2.2,
+  "position": [
+   10692,
+   440
+  ],
+  "parameters": {
+   "conditions": {
+    "combinator": "and",
+    "conditions": [
+     {
+      "id": "alternate-needed",
+      "leftValue": "={{ $json.alt_needed === true }}",
+      "operator": {
+       "operation": "true",
+       "singleValue": true,
+       "type": "boolean"
+      },
+      "rightValue": ""
+     }
+    ],
+    "options": {
+     "caseSensitive": true,
+     "leftValue": "",
+     "typeValidation": "loose"
+    }
+   },
+   "options": {}
+  }
+ }
+}

@@ -1,0 +1,57 @@
+OK   Alternate Merge library found
+OK   Gate Build and Gate Record carry the Alternate Merge library
+OK   E-APPLY v2 = v1 on 32949 chatgpt (applied 11, items 1)
+OK   E-APPLY v2 = v1 on 32949 grok (applied 23, items 2)
+OK   E-APPLY v2 = v1 on 32973 chatgpt (applied 28, items 2)
+OK   E-APPLY v2 = v1 on 32973 gemini (applied 10, items 0)
+OK   E-APPLY v2 = v1 on 32973 grok (applied 27, items 3)
+OK   E-APPLY v2 = v1 on 32980 gemini (applied 8, items 0)
+OK   E-APPLY v2 = v1 on 32980 grok (applied 15, items 2)
+   gate items on the stored runs:
+     32949 chatgpt G1 NOT APPLIED E-APPLY S4
+     32949 chatgpt G2 RULE K-G4 K re-read
+     32949 grok G1 NOT APPLIED E-APPLY S2
+     32949 grok G2 NOT APPLIED E-APPLY S3
+     32949 grok G3 CONTRADICTION E-GATE B
+     32973 chatgpt G1 NOT APPLIED E-APPLY S1
+     32973 chatgpt G2 NOT APPLIED E-APPLY S2
+     32973 gemini G1 RULE K-G4 K re-read
+     32973 grok G1 CONTRADICTION E-APPLY S26
+     32973 grok G2 CONTRADICTION E-APPLY S27
+     32973 grok G3 CONTRADICTION E-APPLY S28
+     32973 grok G4 CONTRADICTION E-GATE B
+     32980 gemini G1 CONTRADICTION E-GATE B
+     32980 grok G1 CONTRADICTION E-APPLY S14
+     32980 grok G2 CONTRADICTION E-APPLY S15
+OK   item B fires 3 times
+OK   item B fires on 32980 gemini (W3 2243 expectation: D5, Galatians 4:4)
+OK   item B fires on 32949 grok and 32973 grok (Matthew 1:25)
+OK   rule 1: grok S15 names [CR3] (the defender's round 3, where the grant stands): exempt
+OK   rule 1: the same quote named [DR3] (a challenger round, where it does not stand) is not exempt
+OK   rule 1: a [DR3] quote that is not a grant is not exempt
+OK   rule 1: without the rounds nothing is exempt
+OK   rule 1: a GROUND naming a premise the CONCEDED LINKS line counts is exempt
+OK   rule 1: a premise the line does not count is not exempt
+OK   rule 2: KEYSTONE BROKEN left with no broken collision by a change is a CONTRADICTION; the change is refused
+OK   rule 2: a change that agrees with the keystone is applied
+OK   Gate Build: two calls (gemini, grok)
+OK   Gate Build: gemini G1 is the B item, grok G1 and G2 the keystone pair
+OK   Gate Build: the request continues the send-back conversation and states the forms
+OK   the gate shows grok its D6 vs C6 line as S14 rewrote it (STANDS)
+OK   Gate Record: gemini changes D5 to UNDERDETERMINED: cured, nothing counted
+OK   Gate Record: grok keeps D6 vs C6 BROKEN (G1), so its KEYSTONE BROKEN change S15 now applies and G2 KEEP is cleared by that change
+OK   Gate Record: no seat counted, alt_needed stays false
+OK   Gate Record: the gate changes join sb_items for Alternate Merge
+OK   Gate Record: gemini KEEP on a CONTRADICTION: uncured, drv_uncured 1
+OK   Gate Record: grok silent on G1 and G2: both uncured, drv_uncured 2 (silence counts)
+OK   Gate Record: alt_needed true
+OK   Gate Record: one log row per item, kind gate, the full reply on the first row only
+OK   Gate Record: the AUDIT v38 lines are in the bodies
+OK   Gate Record: a failed call is recorded and not counted
+OK   Gate Record: a CHANGE with no line form is not applied: uncured
+OK   Gate Record: the reader folds bold, ITEM and spacing
+OK   Gate Build: no send-back answers -> skip
+OK   Gate Record: skip passes Send Back Record on unchanged, with gate.skipped
+OK   Alternate Merge: reads Gate Record bodies, sb_items and gate_rows, and passes the rounds to E-APPLY
+OK   sbRoundsOf2024 reads the 8 rounds from Panel Build
+40 OK 0 FAIL
