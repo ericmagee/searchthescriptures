@@ -1,0 +1,133 @@
+1. GRADE MAPS (rcLines, base pkgPS vs pkgRC): 2617 texts, 659 collision lines
+   transitions: {"null -> STANDS":86}
+   unread collision lines under pkgRC: 2
+     33040 grok flagged_line T2370 D2 vs C3 COLLISION_NO_GRADE_WORD :: D2 vs C3 (Matthew 1:18): not FORCED -- the answer can agree with the pressed timing -- GROUND: [DR3] "The verse dates the finding inside the espousal. It fits t
+     33040 grok change_to T2459 D2 vs C3 COLLISION_NO_GRADE_WORD :: D2 vs C3 (Matthew 1:18): not FORCED -- the answer can agree with the pressed timing -- GROUND: [DR3] "The verse dates the finding inside the espousal. It fits t
+  32998 grok verdict_final T1 D1 vs C1: null -> STANDS
+  32998 grok verdict_final T1 D1 vs C1: null -> STANDS
+  32998 grok verdict_final T1 D1 vs C3: null -> STANDS
+  32998 grok verdict_final T1 D1 vs C3: null -> STANDS
+  32998 grok verdict_final T1 D2 vs C6: null -> STANDS
+  32998 grok verdict_final T1 D2 vs C6: null -> STANDS
+  32998 grok verdict_final T1 D3 vs C1: null -> STANDS
+  32998 grok verdict_final T1 D3 vs C1: null -> STANDS
+  32998 grok verdict_final T1 D3 vs C4: null -> STANDS
+  32998 grok verdict_final T1 D5 vs C6: null -> STANDS
+  32998 grok verdict_final T1 D5 vs C6: null -> STANDS
+  32998 grok change_to T240 D1 vs C1: null -> STANDS
+  32998 grok change_to T241 D1 vs C3: null -> STANDS
+  32998 grok change_to T242 D2 vs C6: null -> STANDS
+  32998 grok change_to T243 D3 vs C1: null -> STANDS
+  32998 grok change_to T244 D5 vs C6: null -> STANDS
+  32998 grok change_to T261 D3 vs C4: null -> STANDS
+  33014 grok verdict_final T797 D1 vs C4: null -> STANDS
+  33014 grok verdict_final T797 D1 vs C4: null -> STANDS
+  33014 grok verdict_final T797 D2 vs C2: null -> STANDS
+  33014 grok verdict_final T797 D2 vs C2: null -> STANDS
+  33014 grok verdict_final T797 D4 vs C1: null -> STANDS
+  33014 grok verdict_final T797 D4 vs C1: null -> STANDS
+  33014 grok verdict_final T797 D6 vs C3: null -> STANDS
+  33014 grok verdict_final T797 D6 vs C3: null -> STANDS
+  33014 grok verdict_final T797 D6 vs C4: null -> STANDS
+  33014 grok verdict_final T797 D6 vs C4: null -> STANDS
+  33014 grok change_to T1089 D1 vs C4: null -> STANDS
+  33014 grok change_to T1090 D2 vs C2: null -> STANDS
+  33014 grok change_to T1091 D4 vs C1: null -> STANDS
+  33014 grok change_to T1092 D6 vs C3: null -> STANDS
+  33014 grok change_to T1093 D6 vs C4: null -> STANDS
+  33020 grok verdict_final T1208 D1 vs C6: null -> STANDS
+  33020 grok verdict_final T1208 D1 vs C6: null -> STANDS
+  33020 grok verdict_final T1208 D5 vs C1: null -> STANDS
+  33020 grok verdict_final T1208 D5 vs C1: null -> STANDS
+  33020 grok change_to T1456 D1 vs C2: null -> STANDS
+  33020 grok change_to T1457 D1 vs C6: null -> STANDS
+  33020 grok change_to T1458 D5 vs C1: null -> STANDS
+  33020 grok flagged_line T1469 D1 vs C2: null -> STANDS
+  33021 grok verdict_final T1475 D2 vs C1: null -> STANDS
+  33021 grok verdict_final T1475 D2 vs C1: null -> STANDS
+  33021 grok change_to T1740 D2 vs C1: null -> STANDS
+  33025 grok verdict_final T1757 D2 vs C4: null -> STANDS
+  33025 grok verdict_final T1757 D2 vs C4: null -> STANDS
+  33025 grok verdict_final T1757 D3 vs C5: null -> STANDS
+  33025 grok verdict_final T1757 D3 vs C5: null -> STANDS
+  33025 grok verdict_final T1757 D4 vs C3: null -> STANDS
+  33025 grok change_to T2059 D2 vs C4: null -> STANDS
+  33025 grok change_to T2060 D3 vs C5: null -> STANDS
+  33025 grok change_to T2061 D5 vs C5: null -> STANDS
+  33025 grok change_to T2062 D4 vs C3: null -> STANDS
+  33025 grok flagged_line T2091 D5 vs C5: null -> STANDS
+  32998 main grok T1 D1 vs C1: null -> STANDS
+  32998 main grok T1 D1 vs C1: null -> STANDS
+  32998 main grok T1 D1 vs C3: null -> STANDS
+  32998 main grok T1 D1 vs C3: null -> STANDS
+  32998 main grok T1 D2 vs C6: null -> STANDS
+  32998 main grok T1 D2 vs C6: null -> STANDS
+  32998 main grok T1 D3 vs C1: null -> STANDS
+  32998 main grok T1 D3 vs C1: null -> STANDS
+  32998 main grok T1 D5 vs C6: null -> STANDS
+  32998 main grok T1 D5 vs C6: null -> STANDS
+  33014 main grok T1 D1 vs C4: null -> STANDS
+  33014 main grok T1 D1 vs C4: null -> STANDS
+  33014 main grok T1 D2 vs C2: null -> STANDS
+  33014 main grok T1 D2 vs C2: null -> STANDS
+  33014 main grok T1 D4 vs C1: null -> STANDS
+  33014 main grok T1 D4 vs C1: null -> STANDS
+  33014 main grok T1 D6 vs C3: null -> STANDS
+  33014 main grok T1 D6 vs C3: null -> STANDS
+  33014 main grok T1 D6 vs C4: null -> STANDS
+  33014 main grok T1 D6 vs C4: null -> STANDS
+  33020 main grok T1 D1 vs C6: null -> STANDS
+  33020 main grok T1 D1 vs C6: null -> STANDS
+  33020 main grok T1 D5 vs C1: null -> STANDS
+  33020 main grok T1 D5 vs C1: null -> STANDS
+  33021 main grok T1 D2 vs C1: null -> STANDS
+  33021 main grok T1 D2 vs C1: null -> STANDS
+  33025 main grok T1 D2 vs C4: null -> STANDS
+  33025 main grok T1 D2 vs C4: null -> STANDS
+  33025 main grok T1 D3 vs C5: null -> STANDS
+  33025 main grok T1 D3 vs C5: null -> STANDS
+  33025 main grok T1 D4 vs C3: null -> STANDS
+  33025 main grok T1 D5 vs C5: null -> STANDS
+  33025 main grok T1 D5 vs C5: null -> STANDS
+
+2. E-APPLY / E-GATE per seat (22 seats with send-back items): 0 differ beyond trig text
+  32998 main gemini: identical | {"verdict_tag":"HELD","defense_standing":"PROP-DEPENDENT","conceded_links":2,"challenge_standing":"PROP-DEPENDENT","challenger_conceded_links":1} DEFENDER WINS HELD-1 | uncured null
+  32998 main chatgpt: identical | {"verdict_tag":"BROKEN","defense_standing":"PROP-DEPENDENT","conceded_links":1,"challenge_standing":"SELF-SUPPORTED","challenger_conceded_links":0} CHALLENGER WINS BROKEN-1 | uncured 1
+  32998 main grok: trig text only
+     trig base:   COUNT DEFENDER 0 to 4; COUNT CHALLENGER 4 to 0
+     trig pkgRC:  COUNT DEFENDER 0 to 4; COUNT CHALLENGER 4 to 0; CHANGED D1 vs C1 (no grade to STANDS); CHANGED D1 vs C1 (CHALLENGER LINK BROKEN to STANDS); CHANGED D1 vs C3 (no grade to STANDS); CHANGED D1 vs C3 (CHALLENGER LINK BROKEN to STANDS); CHANGED D2 vs C6 (no grade to STANDS); CHANGED D2 vs C6 (CHALLENGER LINK BROKEN to STANDS); CHANGED D3 vs C1 (no grade to STANDS); CHANGED D3 vs C1 (CHALLENGER LINK BROKEN to STANDS); CHANGED D5 vs C6 (no grade to STANDS); CHANGED D5 vs C6 (CHALLENGER LINK BROKEN to STANDS) | {"verdict_tag":"HELD","defense_standing":"PROP-DEPENDENT","conceded_links":4,"challenge_standing":"COLLAPSED","challenger_conceded_links":0} DEFENDER WINS HELD-1 | uncured 0
+  32998 alt sol: identical | {"verdict_tag":"HELD","defense_standing":"PROP-DEPENDENT","conceded_links":1,"challenge_standing":"PROP-DEPENDENT","challenger_conceded_links":1} UNDERDETERMINED HELD-1 | uncured 1
+  33014 main gemini: identical | {"verdict_tag":"HELD","defense_standing":"PROP-DEPENDENT","conceded_links":1,"challenge_standing":"SELF-SUPPORTED","challenger_conceded_links":0} DEFENDER WINS HELD-1 | uncured null
+  33014 main chatgpt: identical | {"verdict_tag":"BROKEN","defense_standing":"PROP-DEPENDENT","conceded_links":1,"challenge_standing":"PROP-DEPENDENT","challenger_conceded_links":2} CHALLENGER WINS BROKEN-1 | uncured null
+  33014 main grok: trig text only
+     trig base:   
+     trig pkgRC:  CHANGED D1 vs C4 (no grade to STANDS); CHANGED D1 vs C4 (CHALLENGER LINK BROKEN to STANDS); CHANGED D2 vs C2 (no grade to STANDS); CHANGED D2 vs C2 (CHALLENGER LINK BROKEN to STANDS); CHANGED D4 vs C1 (no grade to STANDS); CHANGED D4 vs C1 (CHALLENGER LINK BROKEN to STANDS); CHANGED D6 vs C3 (no grade to STANDS); CHANGED D6 vs C3 (CHALLENGER LINK BROKEN to STANDS); CHANGED D6 vs C4 (no grade to STANDS); CHANGED D6 vs C4 (CHALLENGER LINK BROKEN to STANDS) | {"verdict_tag":"HELD","defense_standing":"SELF-SUPPORTED","conceded_links":0,"challenge_standing":"PROP-DEPENDENT","challenger_conceded_links":2} DEFENDER WINS HELD-1 | uncured null
+  33014 alt sol: identical | {"verdict_tag":"HELD","defense_standing":"PROP-DEPENDENT","conceded_links":1,"challenge_standing":"SELF-SUPPORTED","challenger_conceded_links":0} UNDERDETERMINED HELD-1 | uncured null
+  33020 main gemini: identical | {"verdict_tag":"HELD","defense_standing":"PROP-DEPENDENT","conceded_links":1,"challenge_standing":"PROP-DEPENDENT","challenger_conceded_links":1} DEFENDER WINS HELD-1 | uncured 0
+  33020 main chatgpt: identical | {"verdict_tag":"HELD","defense_standing":"PROP-DEPENDENT","conceded_links":1,"challenge_standing":"PROP-DEPENDENT","challenger_conceded_links":1} DEFENDER WINS HELD-1 | uncured null
+  33020 main grok: trig text only
+     trig base:   
+     trig pkgRC:  CHANGED D1 vs C6 (no grade to STANDS); CHANGED D1 vs C6 (CHALLENGER LINK BROKEN to STANDS); CHANGED D5 vs C1 (no grade to STANDS); CHANGED D5 vs C1 (DEFENDER LINK BROKEN to STANDS) | {"verdict_tag":"HELD","defense_standing":"PROP-DEPENDENT","conceded_links":2,"challenge_standing":"PROP-DEPENDENT","challenger_conceded_links":2} UNDERDETERMINED HELD-1 | uncured 1
+  33021 main gemini: identical | {"verdict_tag":"HELD","defense_standing":"PROP-DEPENDENT","conceded_links":1,"challenge_standing":"PROP-DEPENDENT","challenger_conceded_links":0} DEFENDER WINS HELD-1 | uncured 1
+  33021 main chatgpt: identical | {"verdict_tag":"HELD","defense_standing":"PROP-DEPENDENT","conceded_links":1,"challenge_standing":"SELF-SUPPORTED","challenger_conceded_links":0} UNDERDETERMINED HELD-1 | uncured null
+  33021 main grok: trig text only
+     trig base:   
+     trig pkgRC:  CHANGED D2 vs C1 (no grade to STANDS); CHANGED D2 vs C1 (CHALLENGER LINK BROKEN to STANDS) | {"verdict_tag":"HELD","defense_standing":"SELF-SUPPORTED","conceded_links":0,"challenge_standing":"PROP-DEPENDENT","challenger_conceded_links":2} DEFENDER WINS HELD-1 | uncured null
+  33025 main gemini: identical | {"verdict_tag":"HELD","defense_standing":"PROP-DEPENDENT","conceded_links":1,"challenge_standing":"PROP-DEPENDENT","challenger_conceded_links":3} DEFENDER WINS HELD-1 | uncured null
+  33025 main chatgpt: identical | {"verdict_tag":"HELD","defense_standing":"PROP-DEPENDENT","conceded_links":2,"challenge_standing":"PROP-DEPENDENT","challenger_conceded_links":2} UNDERDETERMINED HELD-1 | uncured 3
+  33025 main grok: trig text only
+     trig base:   
+     trig pkgRC:  CHANGED D2 vs C4 (no grade to STANDS); CHANGED D2 vs C4 (CHALLENGER LINK BROKEN to STANDS); CHANGED D3 vs C5 (no grade to STANDS); CHANGED D3 vs C5 (CHALLENGER LINK BROKEN to STANDS); CHANGED D5 vs C5 (no grade to STANDS); CHANGED D5 vs C5 (UNDERDETERMINED to STANDS); CHANGED D4 vs C3 (UNDERDETERMINED to STANDS) | {"verdict_tag":"HELD","defense_standing":"PROP-DEPENDENT","conceded_links":1,"challenge_standing":"COLLAPSED","challenger_conceded_links":3} DEFENDER WINS HELD-1 | uncured 1
+  33025 alt sol: identical | {"verdict_tag":"BROKEN","defense_standing":"PROP-DEPENDENT","conceded_links":2,"challenge_standing":"PROP-DEPENDENT","challenger_conceded_links":1} CHALLENGER WINS BROKEN-1 | uncured null
+  33040 main gemini: identical | {"verdict_tag":"HELD","defense_standing":"PROP-DEPENDENT","conceded_links":1,"challenge_standing":"PROP-DEPENDENT","challenger_conceded_links":2} UNDERDETERMINED HELD-1 | uncured null
+  33040 main chatgpt: identical | {"verdict_tag":"BROKEN","defense_standing":"PROP-DEPENDENT","conceded_links":1,"challenge_standing":"PROP-DEPENDENT","challenger_conceded_links":2} CHALLENGER WINS BROKEN-1 | uncured 2
+  33040 main grok: identical | {"verdict_tag":"HELD","defense_standing":"SELF-SUPPORTED","conceded_links":0,"challenge_standing":"PROP-DEPENDENT","challenger_conceded_links":1} DEFENDER WINS HELD-1 | uncured 3
+  33040 alt sol: identical | {"verdict_tag":"HELD","defense_standing":"SELF-SUPPORTED","conceded_links":0,"challenge_standing":"SELF-SUPPORTED","challenger_conceded_links":0} UNDERDETERMINED HELD-1 | uncured 0
+
+3. WHOLE NODE (Panel Cure Check, saved inputs):
+  32998 Panel Cure Check: identical whole output
+  33014 Panel Cure Check: identical whole output
+  33020 Panel Cure Check: identical whole output
+  33021 Panel Cure Check: identical whole output
+  33025 Panel Cure Check: identical whole output
+  33040 Panel Cure Check: identical whole output
