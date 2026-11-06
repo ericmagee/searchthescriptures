@@ -1,0 +1,7 @@
+OK   22 nodes: base (pkgPS) and final shas match the plan; 6 gate nodes edited, 16 unchanged
+   sbLabel on 5164 distinct corpus lines: 0 differ
+   gateRead2024 on 27 texts with gate answers: 0 answers differ
+   K-S3 row lookup: 18 CHANGE TO payloads in the row form (12 find a judge row with the new key); found-or-not-found flips: 0
+   corpus/replay.cjs gate replay: 53 lines, 0 differ
+OK   no label, gate answer or row lookup changes, and the gate replay is unchanged
+2 OK, 0 FAIL (behaviour changes are listed above for W3)
