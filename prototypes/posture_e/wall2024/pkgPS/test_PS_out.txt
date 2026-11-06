@@ -1,0 +1,24 @@
+OK   22 nodes; base shas = pkgPAY/patched, final shas = pkgPS/patched; only the 6 sbApply2024 nodes change
+OK   psGrades: 54 of 56 listed CONCEDED LINKS lines read with COUNTED premises equal to the line count; the rest list fewer premises than they count (the line, not the reader)
+OK   unit: "none counted; spared 1, 2, 3, 4, 5 and 6, each NARROWED with [L1] ..." reads all six SPARED
+OK   unit: "Premises 1–6 are spared: ... counted source-language footing ...; none is VOID" reads all six SPARED (first grade word)
+OK   unit: verse references, [CR3] tags, quotes and parentheses give no premise numbers
+   33025 gemini: no new item
+     base : CHALLENGER CONCEDED LINKS: 1 -- Premise 4: UNEXHIBITED (Commitment 5) -- COUNTED -- Exodus 2:1 "there went a man of the house of Levi" was left withou
+     pkgPS: CHALLENGER CONCEDED LINKS: 3 -- Premise 5: UNEXHIBITED (Commitment 3) -- COUNTED -- Luke 2:4 "lineage of David" does not establish a biological father
+   33040 gemini: no new item
+     base : CHALLENGER CONCEDED LINKS: 1 -- premise 2: UNEXHIBITED (no fit shown for Matthew 1:24 identifying coming together with the taking)
+     pkgPS: CHALLENGER CONCEDED LINKS: 2 -- premise 2: UNEXHIBITED (Matthew 1:19 unanswered); premise 3: UNEXHIBITED (Matthew 1:19 unanswered)
+   33040 grok: S18 NOT APPLIED; S19 NOT APPLIED
+     base : CONCEDED LINKS: 5 -- counted 2, 3, 4, 5 and 6 UNEXHIBITED (a proved press left with a bare grant or an absence); spared 1.
+     pkgPS: CONCEDED LINKS: 0 -- none counted; spared 1, 2, 3, 4, 5 and 6, each NARROWED with [L1] and [L2] or [L3] footing and presses met in [CR3] or [CR4].
+     base : CHALLENGER CONCEDED LINKS: 4 -- counted 2, 3, 4 and 5 UNEXHIBITED; 1 VOID (claim the quote does not make: "through Joseph's begetting"); 6 VOID (claim
+     pkgPS: CHALLENGER CONCEDED LINKS: 1 -- counted 3 UNEXHIBITED (Matthew 1:19 press answered in words that do not show a prior knowing agreeing with the putting
+OK   sbApply on 22 fixture seats: grok 33040 S18 and S19 are NOT APPLIED; the only other changes are gemini 33025 and gemini 33040, where the base wrote the defender change into the CHALLENGER line (substring fault) and pkgPS writes the seat's own CHALLENGER change
+OK   grok 33040 keeps its original lines: "CONCEDED LINKS: 0 -- none counted; spared 1, ..." and "CHALLENGER CONCEDED LINKS: 1 -- counted 3 ..."
+OK   every other E-PREM change in the corpus still applies (gemini 33040 S3 to S6 among them)
+   gate differs 33040 grok
+     base {"G":["G1NOT APPLIEDE-APPLY S16true","G2NOT APPLIEDE-APPLY S20true"],"c":[true,false],"n":1}
+     pkgPS {"G":["G1NOT APPLIEDE-APPLY S16true","G2NOT APPLIEDE-APPLY S18true","G3NOT APPLIEDE-APPLY S19true","G4NOT APPLIEDE-APPLY S20true"],"c":[true,false,false,false],"n":3}
+OK   gate: equal to base on 17 of 18 fixture seats (differs: 33040 grok)
+9 OK, 0 FAIL

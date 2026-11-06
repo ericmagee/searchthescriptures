@@ -1,0 +1,177 @@
+{
+ "base": "pkgPAY/patched",
+ "nodes": [
+  {
+   "file": "Alt_Gate_Build.js",
+   "name": "Alt Gate Build",
+   "base_sha": "b27045fb69266193",
+   "final_sha": "367552ca2679b97e",
+   "edits": [
+    "sbApply2024: premise scope check",
+    "sbApply2024: line-exact apply"
+   ]
+  },
+  {
+   "file": "Alt_Gate_Record.js",
+   "name": "Alt Gate Record",
+   "base_sha": "10314a98578246dc",
+   "final_sha": "0d36897eb85e972a",
+   "edits": [
+    "sbApply2024: premise scope check",
+    "sbApply2024: line-exact apply"
+   ]
+  },
+  {
+   "file": "Alternate_Build.js",
+   "name": "Alternate Build",
+   "base_sha": "69a8920c02b187f2",
+   "final_sha": "69a8920c02b187f2",
+   "edits": []
+  },
+  {
+   "file": "Alternate_Cure_Build.js",
+   "name": "Alternate Cure Build",
+   "base_sha": "b22868e698b754b5",
+   "final_sha": "b22868e698b754b5",
+   "edits": []
+  },
+  {
+   "file": "Alternate_Cure_Normalize.js",
+   "name": "Alternate Cure Normalize",
+   "base_sha": "e91a62669e8fd9f6",
+   "final_sha": "e91a62669e8fd9f6",
+   "edits": []
+  },
+  {
+   "file": "Alternate_Merge.js",
+   "name": "Alternate Merge",
+   "base_sha": "787ae45c2fca54f2",
+   "final_sha": "eb1b21d73a11263c",
+   "edits": [
+    "sbApply2024: premise scope check",
+    "sbApply2024: line-exact apply"
+   ]
+  },
+  {
+   "file": "Alternate_Merge_Seat.js",
+   "name": "Alternate Merge Seat",
+   "base_sha": "775d58a94d3f23f5",
+   "final_sha": "6f6eb4969c1d10f7",
+   "edits": [
+    "sbApply2024: premise scope check",
+    "sbApply2024: line-exact apply"
+   ]
+  },
+  {
+   "file": "Alternate_Payloads.js",
+   "name": "Alternate Payloads",
+   "base_sha": "dd3e7bb79b4c7ec5",
+   "final_sha": "dd3e7bb79b4c7ec5",
+   "edits": []
+  },
+  {
+   "file": "Cure_Build.js",
+   "name": "Cure Build",
+   "base_sha": "f16b41e6ce229ed3",
+   "final_sha": "f16b41e6ce229ed3",
+   "edits": []
+  },
+  {
+   "file": "Cure_Check.js",
+   "name": "Cure Check",
+   "base_sha": "0261439316fab73b",
+   "final_sha": "0261439316fab73b",
+   "edits": []
+  },
+  {
+   "file": "Cure_Normalize.js",
+   "name": "Cure Normalize",
+   "base_sha": "6bf0c9e3181b81a0",
+   "final_sha": "6bf0c9e3181b81a0",
+   "edits": []
+  },
+  {
+   "file": "Extract_Independent_Verdict.js",
+   "name": "Extract Independent Verdict",
+   "base_sha": "1ab96ff4e8f03b16",
+   "final_sha": "1ab96ff4e8f03b16",
+   "edits": []
+  },
+  {
+   "file": "Gate_Build.js",
+   "name": "Gate Build",
+   "base_sha": "fff5a2fffb15b881",
+   "final_sha": "19cf643f2a57b2d6",
+   "edits": [
+    "sbApply2024: premise scope check",
+    "sbApply2024: line-exact apply"
+   ]
+  },
+  {
+   "file": "Gate_Record.js",
+   "name": "Gate Record",
+   "base_sha": "66e6f197ea043a59",
+   "final_sha": "8fdde1a53fb6e01e",
+   "edits": [
+    "sbApply2024: premise scope check",
+    "sbApply2024: line-exact apply"
+   ]
+  },
+  {
+   "file": "Panel_Cure_Build_1.js",
+   "name": "Panel Cure Build 1",
+   "base_sha": "4b932a9cd6a7c54c",
+   "final_sha": "4b932a9cd6a7c54c",
+   "edits": []
+  },
+  {
+   "file": "Panel_Cure_Build_2.js",
+   "name": "Panel Cure Build 2",
+   "base_sha": "9db52962122248b3",
+   "final_sha": "9db52962122248b3",
+   "edits": []
+  },
+  {
+   "file": "Panel_Cure_Build_3.js",
+   "name": "Panel Cure Build 3",
+   "base_sha": "1e265e13690c3097",
+   "final_sha": "1e265e13690c3097",
+   "edits": []
+  },
+  {
+   "file": "Panel_Cure_Check.js",
+   "name": "Panel Cure Check",
+   "base_sha": "d77b72e809934aa9",
+   "final_sha": "d77b72e809934aa9",
+   "edits": []
+  },
+  {
+   "file": "Panel_Cure_Normalize_1.js",
+   "name": "Panel Cure Normalize 1",
+   "base_sha": "a2fffc207fe37a6b",
+   "final_sha": "a2fffc207fe37a6b",
+   "edits": []
+  },
+  {
+   "file": "Panel_Cure_Normalize_2.js",
+   "name": "Panel Cure Normalize 2",
+   "base_sha": "964a0d8e5053e5df",
+   "final_sha": "964a0d8e5053e5df",
+   "edits": []
+  },
+  {
+   "file": "Panel_Cure_Normalize_3.js",
+   "name": "Panel Cure Normalize 3",
+   "base_sha": "d1c417222be59cbe",
+   "final_sha": "d1c417222be59cbe",
+   "edits": []
+  },
+  {
+   "file": "Panel_Payloads.js",
+   "name": "Panel Payloads",
+   "base_sha": "b4b2b4ee8c5e7963",
+   "final_sha": "b4b2b4ee8c5e7963",
+   "edits": []
+  }
+ ]
+}
