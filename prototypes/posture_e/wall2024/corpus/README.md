@@ -15,8 +15,13 @@ Run everything from prototypes/posture_e/wall2024/.
   - readerDir/adapters/*.cjs each export {name, form, scope:'line'|'text', read}.
 - `node corpus/replay.cjs <pkgDir>...`: replays the gate stage of every fixture. It checks each seat against labels.json, which holds W3's grades.
 
+- `node corpus/replay_cure.cjs <pkgDir>...`: replays the cure stage from the log rows (items, reply). Rounds come from the fixture's Panel Build, and broken from the gate verdict.
+  - Self-check on pkgKS (live cure library): 429 of 444 cure rows equal the log's own status.
+  - 3 of the differences are the pkgCR fix (33014 chatgpt K-G4, run before CR).
+  - The other 12 are TRIAL rules that need inputs the log does not hold (K-RUL, K-P, K-V, K-KJV, K-AG), so they change no removal.
+  - W3 cure labels: 33014 chatgpt kept MATCH; 33025 gemini removed MATCH.
+
 Gaps:
 - 33006 has no node data (the run crashed), so it has texts but no replay fixture.
 - 33006 grok has no stored verdict text.
-- Cure-stage removals are not replayed yet: 33014 chatgpt and 33025 gemini.
 - 33040 is added once it finishes.
