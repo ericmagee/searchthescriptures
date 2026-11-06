@@ -22,7 +22,7 @@
    "name": "Cure Build",
    "base": "live",
    "base_sha": "bba9c9b662a4d128",
-   "final_sha": "3254f750b3c3382d",
+   "final_sha": "fc9612b831cdf1a2",
    "parts": "a a2 b0 b c"
   },
   {
@@ -30,7 +30,7 @@
    "name": "Cure Normalize",
    "base": "live",
    "base_sha": "64ee13242fc10f4e",
-   "final_sha": "78272b3691d487d6",
+   "final_sha": "e97de5ecbb5bf1e0",
    "parts": "a a2 b0 b c"
   },
   {
@@ -38,7 +38,7 @@
    "name": "Cure Check",
    "base": "live",
    "base_sha": "c27520027dd480c6",
-   "final_sha": "1adcfd836367414f",
+   "final_sha": "eedf41f19af7c77d",
    "parts": "a a2 b0 b c"
   },
   {
@@ -46,7 +46,7 @@
    "name": "Panel Cure Build 1",
    "base": "live",
    "base_sha": "9c2b9763ab57f8c0",
-   "final_sha": "0c6def7a438eb040",
+   "final_sha": "d23d1b02068171c7",
    "parts": "a a2 b0 b c"
   },
   {
@@ -54,7 +54,7 @@
    "name": "Panel Cure Normalize 1",
    "base": "live",
    "base_sha": "9eeb8bf7db1d0fa7",
-   "final_sha": "18adcd829e86e620",
+   "final_sha": "826ee7d112c12a08",
    "parts": "a a2 b0 b c"
   },
   {
@@ -62,7 +62,7 @@
    "name": "Panel Cure Build 2",
    "base": "live",
    "base_sha": "8634112ecc3eb572",
-   "final_sha": "2a48a2bacb4b5eac",
+   "final_sha": "f2a1c11f0e2f597f",
    "parts": "a a2 b0 b c"
   },
   {
@@ -70,7 +70,7 @@
    "name": "Panel Cure Normalize 2",
    "base": "live",
    "base_sha": "11339b02217f3f5d",
-   "final_sha": "8970d43fd897bb14",
+   "final_sha": "9abf834501b8f716",
    "parts": "a a2 b0 b c"
   },
   {
@@ -78,7 +78,7 @@
    "name": "Panel Cure Build 3",
    "base": "live",
    "base_sha": "f1487af676bbaf7e",
-   "final_sha": "c0bbcc43f6f538f8",
+   "final_sha": "49cef655a3acdd53",
    "parts": "a a2 b0 b c"
   },
   {
@@ -86,7 +86,7 @@
    "name": "Panel Cure Normalize 3",
    "base": "live",
    "base_sha": "b588113728ad5bdc",
-   "final_sha": "a79fb130446ba667",
+   "final_sha": "f474c05728a62fb7",
    "parts": "a a2 b0 b c"
   },
   {
@@ -94,7 +94,7 @@
    "name": "Panel Cure Check",
    "base": "live",
    "base_sha": "1e8734e26d62d724",
-   "final_sha": "f652f05e5f49efff",
+   "final_sha": "28e3b467b9ace6c1",
    "parts": "a a2 b0 b c"
   },
   {
@@ -102,7 +102,7 @@
    "name": "Alternate Build",
    "base": "live",
    "base_sha": "ff76c4505349eef4",
-   "final_sha": "3d62d133521988c8",
+   "final_sha": "d84e87b937ed2646",
    "parts": "a a2 b0 b c"
   },
   {
@@ -118,7 +118,7 @@
    "name": "Alternate Cure Build",
    "base": "live",
    "base_sha": "435c71b645eb8b76",
-   "final_sha": "e0a96be3435bf479",
+   "final_sha": "e64799f0fdf03348",
    "parts": "a a2 b0 b c"
   },
   {
@@ -126,7 +126,7 @@
    "name": "Alternate Cure Normalize",
    "base": "live",
    "base_sha": "3d3bfc6e1d81bea1",
-   "final_sha": "dd3846633fcfe276",
+   "final_sha": "28e6a9858e35fd26",
    "parts": "a a2 b0 b c"
   },
   {
@@ -134,7 +134,7 @@
    "name": "Alternate Merge Seat",
    "base": "pkgCM",
    "base_sha": "efad5cd556ca7c81",
-   "final_sha": "069344577a4ea240",
+   "final_sha": "4b249cadc6835e9c",
    "parts": "a a2 b0 b c"
   },
   {
@@ -142,7 +142,7 @@
    "name": "Gate Build",
    "base": "pkgCM",
    "base_sha": "6d27868c4090d0d5",
-   "final_sha": "212f61a5f26ac2ab",
+   "final_sha": "3d5d1d2da10d7cf6",
    "parts": "a a2 b0 b c"
   },
   {
@@ -150,7 +150,7 @@
    "name": "Gate Record",
    "base": "pkgCM",
    "base_sha": "4a7b328cb47f8e4b",
-   "final_sha": "10ae3444a0bee3e6",
+   "final_sha": "0b4fc3f4024ae1c6",
    "parts": "a a2 b0 b c"
   },
   {
@@ -158,7 +158,7 @@
    "name": "Alt Gate Build",
    "base": "pkgCM",
    "base_sha": "f49aa8697b1b2aad",
-   "final_sha": "0facb7c0048c2db2",
+   "final_sha": "df2bda2c6334cfa6",
    "parts": "a a2 b0 b c"
   },
   {
@@ -166,7 +166,7 @@
    "name": "Alt Gate Record",
    "base": "pkgCM",
    "base_sha": "d2de93c05f1c65a2",
-   "final_sha": "6b1c0549b8fd4b9c",
+   "final_sha": "a328a0fabb67f279",
    "parts": "a a2 b0 b c"
   },
   {
@@ -174,7 +174,7 @@
    "name": "Alternate Merge",
    "base": "pkgCM",
    "base_sha": "c74d7d5b349204b5",
-   "final_sha": "3459413a1de9a7cc",
+   "final_sha": "dc913ad0f3a5b7a5",
    "parts": "a a2 b0 b c"
   }
  ]

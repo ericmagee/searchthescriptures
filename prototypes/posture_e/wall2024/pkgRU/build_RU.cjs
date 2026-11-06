@@ -26,7 +26,7 @@ rep("const a=m.index+m[1].length;used.push([a,a+m[0].length-m[1].length]);if(m[2
  "const a=m.index+m[1].length;const e=a+m[0].length-m[1].length;if(dq.some(([x,y])=>a>x&&e<y))continue; /* pkgRU (b): a single-quoted word inside a double-quoted quote is part of it */used.push([a,e]);if(m[2].trim().length>=3)out.push(m[2]);}","b");
 // (c)
 rep("For a K-RUL item, write the card; a missing card is not a reason to change the grade.",
- "For a K-RUL item, write the card; a missing card is not a reason to change the grade. Every RESTATED line you write is a deciding ruling (Commitment 11): under it, in this reply, write its five-line card, one field to a line: RULING -- <the link> -- <the grade>, CLAIM:, NAMED BY:, RULE:, APPLIED:. A RESTATED line without its card is counted under K-RUL.","c",!HASP);
+ "For a K-RUL item, write the card; a missing card is not a reason to change the grade. Every RESTATED line you write is a deciding ruling (Commitment 11): under it, in this reply, write its five-line card, one field to a line: RULING -- <the subject of the RESTATED line, e.g. D2 vs C3> -- <the grade>, CLAIM:, NAMED BY:, RULE:, APPLIED:. A RESTATED line without its card raises a K-RUL item.","c",!HASP);
 
  try{new Function('$','$input','$json',t);}catch(e){throw new Error(NODE+': does not parse: '+e.message);}
  fs.writeFileSync('pkgRU/patched/'+file,t);plan.nodes.push({file,name:NODE,base:fs.existsSync(cm)?'pkgCM':'live',base_sha:sha(base),final_sha:sha(t),parts:done.join(' ')});}

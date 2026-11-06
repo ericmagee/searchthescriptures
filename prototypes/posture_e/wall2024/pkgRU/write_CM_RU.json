@@ -14,57 +14,57 @@
   {
    "name": "Cure Build",
    "src": "pkgRU/patched/Cure_Build.js",
-   "final_sha": "3254f750b3c3382d"
+   "final_sha": "fc9612b831cdf1a2"
   },
   {
    "name": "Cure Normalize",
    "src": "pkgRU/patched/Cure_Normalize.js",
-   "final_sha": "78272b3691d487d6"
+   "final_sha": "e97de5ecbb5bf1e0"
   },
   {
    "name": "Cure Check",
    "src": "pkgRU/patched/Cure_Check.js",
-   "final_sha": "1adcfd836367414f"
+   "final_sha": "eedf41f19af7c77d"
   },
   {
    "name": "Panel Cure Build 1",
    "src": "pkgRU/patched/Panel_Cure_Build_1.js",
-   "final_sha": "0c6def7a438eb040"
+   "final_sha": "d23d1b02068171c7"
   },
   {
    "name": "Panel Cure Normalize 1",
    "src": "pkgRU/patched/Panel_Cure_Normalize_1.js",
-   "final_sha": "18adcd829e86e620"
+   "final_sha": "826ee7d112c12a08"
   },
   {
    "name": "Panel Cure Build 2",
    "src": "pkgRU/patched/Panel_Cure_Build_2.js",
-   "final_sha": "2a48a2bacb4b5eac"
+   "final_sha": "f2a1c11f0e2f597f"
   },
   {
    "name": "Panel Cure Normalize 2",
    "src": "pkgRU/patched/Panel_Cure_Normalize_2.js",
-   "final_sha": "8970d43fd897bb14"
+   "final_sha": "9abf834501b8f716"
   },
   {
    "name": "Panel Cure Build 3",
    "src": "pkgRU/patched/Panel_Cure_Build_3.js",
-   "final_sha": "c0bbcc43f6f538f8"
+   "final_sha": "49cef655a3acdd53"
   },
   {
    "name": "Panel Cure Normalize 3",
    "src": "pkgRU/patched/Panel_Cure_Normalize_3.js",
-   "final_sha": "a79fb130446ba667"
+   "final_sha": "f474c05728a62fb7"
   },
   {
    "name": "Panel Cure Check",
    "src": "pkgRU/patched/Panel_Cure_Check.js",
-   "final_sha": "f652f05e5f49efff"
+   "final_sha": "28e3b467b9ace6c1"
   },
   {
    "name": "Alternate Build",
    "src": "pkgRU/patched/Alternate_Build.js",
-   "final_sha": "3d62d133521988c8"
+   "final_sha": "d84e87b937ed2646"
   },
   {
    "name": "Alternate Payloads",
@@ -74,42 +74,42 @@
   {
    "name": "Alternate Cure Build",
    "src": "pkgRU/patched/Alternate_Cure_Build.js",
-   "final_sha": "e0a96be3435bf479"
+   "final_sha": "e64799f0fdf03348"
   },
   {
    "name": "Alternate Cure Normalize",
    "src": "pkgRU/patched/Alternate_Cure_Normalize.js",
-   "final_sha": "dd3846633fcfe276"
+   "final_sha": "28e6a9858e35fd26"
   },
   {
    "name": "Alternate Merge Seat",
    "src": "pkgRU/patched/Alternate_Merge_Seat.js",
-   "final_sha": "069344577a4ea240"
+   "final_sha": "4b249cadc6835e9c"
   },
   {
    "name": "Gate Build",
    "src": "pkgRU/patched/Gate_Build.js",
-   "final_sha": "212f61a5f26ac2ab"
+   "final_sha": "3d5d1d2da10d7cf6"
   },
   {
    "name": "Gate Record",
    "src": "pkgRU/patched/Gate_Record.js",
-   "final_sha": "10ae3444a0bee3e6"
+   "final_sha": "0b4fc3f4024ae1c6"
   },
   {
    "name": "Alt Gate Build",
    "src": "pkgRU/patched/Alt_Gate_Build.js",
-   "final_sha": "0facb7c0048c2db2"
+   "final_sha": "df2bda2c6334cfa6"
   },
   {
    "name": "Alt Gate Record",
    "src": "pkgRU/patched/Alt_Gate_Record.js",
-   "final_sha": "6b1c0549b8fd4b9c"
+   "final_sha": "a328a0fabb67f279"
   },
   {
    "name": "Alternate Merge",
    "src": "pkgRU/patched/Alternate_Merge.js",
-   "final_sha": "3459413a1de9a7cc"
+   "final_sha": "dc913ad0f3a5b7a5"
   },
   {
    "name": "Judge Enforcer Build",
