@@ -1,0 +1,45 @@
+OK   14 nodes carry the cure instructions
+OK   Alternate_Build.js: shas match the plan
+OK   Alternate_Build.js: the guard appears once, and removing it gives the base byte for byte
+OK   Alternate_Build.js: parses
+OK   Alternate_Cure_Build.js: shas match the plan
+OK   Alternate_Cure_Build.js: the guard appears once, and removing it gives the base byte for byte
+OK   Alternate_Cure_Build.js: parses
+OK   Alternate_Cure_Normalize.js: shas match the plan
+OK   Alternate_Cure_Normalize.js: the guard appears once, and removing it gives the base byte for byte
+OK   Alternate_Cure_Normalize.js: parses
+OK   Alternate_Merge.js: shas match the plan
+OK   Alternate_Merge.js: the guard appears once, and removing it gives the base byte for byte
+OK   Alternate_Merge.js: parses
+OK   Cure_Build.js: shas match the plan
+OK   Cure_Build.js: the guard appears once, and removing it gives the base byte for byte
+OK   Cure_Build.js: parses
+OK   Cure_Check.js: shas match the plan
+OK   Cure_Check.js: the guard appears once, and removing it gives the base byte for byte
+OK   Cure_Check.js: parses
+OK   Cure_Normalize.js: shas match the plan
+OK   Cure_Normalize.js: the guard appears once, and removing it gives the base byte for byte
+OK   Cure_Normalize.js: parses
+OK   Panel_Cure_Build_1.js: shas match the plan
+OK   Panel_Cure_Build_1.js: the guard appears once, and removing it gives the base byte for byte
+OK   Panel_Cure_Build_1.js: parses
+OK   Panel_Cure_Build_2.js: shas match the plan
+OK   Panel_Cure_Build_2.js: the guard appears once, and removing it gives the base byte for byte
+OK   Panel_Cure_Build_2.js: parses
+OK   Panel_Cure_Build_3.js: shas match the plan
+OK   Panel_Cure_Build_3.js: the guard appears once, and removing it gives the base byte for byte
+OK   Panel_Cure_Build_3.js: parses
+OK   Panel_Cure_Check.js: shas match the plan
+OK   Panel_Cure_Check.js: the guard appears once, and removing it gives the base byte for byte
+OK   Panel_Cure_Check.js: parses
+OK   Panel_Cure_Normalize_1.js: shas match the plan
+OK   Panel_Cure_Normalize_1.js: the guard appears once, and removing it gives the base byte for byte
+OK   Panel_Cure_Normalize_1.js: parses
+OK   Panel_Cure_Normalize_2.js: shas match the plan
+OK   Panel_Cure_Normalize_2.js: the guard appears once, and removing it gives the base byte for byte
+OK   Panel_Cure_Normalize_2.js: parses
+OK   Panel_Cure_Normalize_3.js: shas match the plan
+OK   Panel_Cure_Normalize_3.js: the guard appears once, and removing it gives the base byte for byte
+OK   Panel_Cure_Normalize_3.js: parses
+OK   Panel Cure Build 1: guard closes the instruction string
+44 OK 0 FAIL

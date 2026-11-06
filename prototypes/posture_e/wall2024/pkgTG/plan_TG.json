@@ -1,0 +1,145 @@
+{
+ "base": "pkgKCR/patched; Alternate Merge from pkgGATE/patched",
+ "nodes": [
+  {
+   "file": "Alternate_Build.js",
+   "name": "Alternate Build",
+   "base": "pkgKCR/patched/Alternate_Build.js",
+   "base_sha": "6746895fee68afe7",
+   "final_sha": "daf6d6bae74edc1e",
+   "edits": [
+    "TRIAL cure guard sentences"
+   ]
+  },
+  {
+   "file": "Alternate_Cure_Build.js",
+   "name": "Alternate Cure Build",
+   "base": "pkgKCR/patched/Alternate_Cure_Build.js",
+   "base_sha": "377fb0da84dd545c",
+   "final_sha": "1f66fb0c0b25f443",
+   "edits": [
+    "TRIAL cure guard sentences"
+   ]
+  },
+  {
+   "file": "Alternate_Cure_Normalize.js",
+   "name": "Alternate Cure Normalize",
+   "base": "pkgKCR/patched/Alternate_Cure_Normalize.js",
+   "base_sha": "f62d0c0314a31d30",
+   "final_sha": "746c049fe2def988",
+   "edits": [
+    "TRIAL cure guard sentences"
+   ]
+  },
+  {
+   "file": "Alternate_Merge.js",
+   "name": "Alternate Merge",
+   "base": "pkgGATE/patched/Alternate_Merge.js",
+   "base_sha": "d7085091cb169018",
+   "final_sha": "074d6033c6936a7c",
+   "edits": [
+    "TRIAL cure guard sentences"
+   ]
+  },
+  {
+   "file": "Cure_Build.js",
+   "name": "Cure Build",
+   "base": "pkgKCR/patched/Cure_Build.js",
+   "base_sha": "ccd6e86ac156efce",
+   "final_sha": "13d09b374f505285",
+   "edits": [
+    "TRIAL cure guard sentences"
+   ]
+  },
+  {
+   "file": "Cure_Check.js",
+   "name": "Cure Check",
+   "base": "pkgKCR/patched/Cure_Check.js",
+   "base_sha": "6b201a1c11f022d5",
+   "final_sha": "3cc6248164a0c33a",
+   "edits": [
+    "TRIAL cure guard sentences"
+   ]
+  },
+  {
+   "file": "Cure_Normalize.js",
+   "name": "Cure Normalize",
+   "base": "pkgKCR/patched/Cure_Normalize.js",
+   "base_sha": "2b4ea3da29114d61",
+   "final_sha": "8d173889c91ad276",
+   "edits": [
+    "TRIAL cure guard sentences"
+   ]
+  },
+  {
+   "file": "Panel_Cure_Build_1.js",
+   "name": "Panel Cure Build 1",
+   "base": "pkgKCR/patched/Panel_Cure_Build_1.js",
+   "base_sha": "81fe5497c8d757b9",
+   "final_sha": "967c548474d56e5b",
+   "edits": [
+    "TRIAL cure guard sentences"
+   ]
+  },
+  {
+   "file": "Panel_Cure_Build_2.js",
+   "name": "Panel Cure Build 2",
+   "base": "pkgKCR/patched/Panel_Cure_Build_2.js",
+   "base_sha": "d039fc1ba9498e0f",
+   "final_sha": "c18480736ccbaffa",
+   "edits": [
+    "TRIAL cure guard sentences"
+   ]
+  },
+  {
+   "file": "Panel_Cure_Build_3.js",
+   "name": "Panel Cure Build 3",
+   "base": "pkgKCR/patched/Panel_Cure_Build_3.js",
+   "base_sha": "50eb2d40d8d1939b",
+   "final_sha": "505edc2c548e2148",
+   "edits": [
+    "TRIAL cure guard sentences"
+   ]
+  },
+  {
+   "file": "Panel_Cure_Check.js",
+   "name": "Panel Cure Check",
+   "base": "pkgKCR/patched/Panel_Cure_Check.js",
+   "base_sha": "0ab1c6e359bec5af",
+   "final_sha": "0bd13d9017379d72",
+   "edits": [
+    "TRIAL cure guard sentences"
+   ]
+  },
+  {
+   "file": "Panel_Cure_Normalize_1.js",
+   "name": "Panel Cure Normalize 1",
+   "base": "pkgKCR/patched/Panel_Cure_Normalize_1.js",
+   "base_sha": "e238974f1d6527c3",
+   "final_sha": "bce5dc18fb75c6c0",
+   "edits": [
+    "TRIAL cure guard sentences"
+   ]
+  },
+  {
+   "file": "Panel_Cure_Normalize_2.js",
+   "name": "Panel Cure Normalize 2",
+   "base": "pkgKCR/patched/Panel_Cure_Normalize_2.js",
+   "base_sha": "8338dea5d2048bba",
+   "final_sha": "6431e608491cfcf6",
+   "edits": [
+    "TRIAL cure guard sentences"
+   ]
+  },
+  {
+   "file": "Panel_Cure_Normalize_3.js",
+   "name": "Panel Cure Normalize 3",
+   "base": "pkgKCR/patched/Panel_Cure_Normalize_3.js",
+   "base_sha": "a4272a0aa9150a8e",
+   "final_sha": "88b3bcd667dd40a4",
+   "edits": [
+    "TRIAL cure guard sentences"
+   ]
+  }
+ ]
+}
