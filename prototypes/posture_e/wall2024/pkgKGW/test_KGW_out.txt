@@ -1,0 +1,68 @@
+OK   1 Alt_Gate_Build.js base and final sha
+OK   1 Alt_Gate_Record.js base and final sha
+OK   1 Alternate_Build.js base and final sha
+OK   1 Alternate_Cure_Build.js base and final sha
+OK   1 Alternate_Cure_Normalize.js base and final sha
+OK   1 Alternate_Merge.js base and final sha
+OK   1 Alternate_Merge_Seat.js base and final sha
+OK   1 Alternate_Payloads.js base and final sha
+OK   1 Cure_Build.js base and final sha
+OK   1 Cure_Check.js base and final sha
+OK   1 Cure_Normalize.js base and final sha
+OK   1 Extract_Independent_Verdict.js base and final sha
+OK   1 Gate_Build.js base and final sha
+OK   1 Gate_Record.js base and final sha
+OK   1 Panel_Cure_Build_1.js base and final sha
+OK   1 Panel_Cure_Build_2.js base and final sha
+OK   1 Panel_Cure_Build_3.js base and final sha
+OK   1 Panel_Cure_Check.js base and final sha
+OK   1 Panel_Cure_Normalize_1.js base and final sha
+OK   1 Panel_Cure_Normalize_2.js base and final sha
+OK   1 Panel_Cure_Normalize_3.js base and final sha
+OK   1 Panel_Payloads.js base and final sha
+OK   1 22 nodes: 19 with 7 edits, 3 with the label edit only
+OK   2 kwLines421 loads from both Panel Payloads
+OK   2 33040 same number of K-W items (10)
+OK   2 33040 only ids with a cut reference change, and only by dropping it
+OK   2 33060 same number of K-W items (11)
+OK   2 33060 only ids with a cut reference change, and only by dropping it
+OK   2 33083 same number of K-W items (8)
+OK   2 33083 only ids with a cut reference change, and only by dropping it
+OK   2 33107 same number of K-W items (12)
+OK   2 33107 only ids with a cut reference change, and only by dropping it
+OK   2 33129 same number of K-W items (10)
+OK   2 33129 only ids with a cut reference change, and only by dropping it
+   K-W ids unchanged 48; changed 3:
+     33129: DEFENDER CR2 D3 (Luke 1 #1 -> DEFENDER CR2 D3 #1
+     33129: DEFENDER CR2 D4 (Isaiah 7 #2 -> DEFENDER CR2 D4 #2
+     33129: DEFENDER CR2 D6 (Romans 1 #3 -> DEFENDER CR2 D6 #3
+OK   3 the cut label and the clean label give one key
+OK   3 LINK n keys
+OK   3 side, round, link and #n each separate keys
+OK   3 no key without side, round, link and #n
+   33129 chatgpt stored tag / drv_uncured: base HELD / 4, patched BROKEN / 1; recomputed base ["RETRACTED D4 vs C6 (DEFENDER LINK BROKEN to UNDERDETERMINED)"], patched undefined
+OK   4 base: the refused retraction is applied (HELD)
+OK   4 patched: neither the refused retraction nor the RESTATED regrade of D4 vs C6 is applied
+OK   4 patched: chatgpt keeps its BROKEN text, the text the enforcer accepted
+OK   4 patched: chatgpt uncured only K-G4 (K-V by pkgKVQ, K-W by this package)
+   33129 sol uncured: base DEFENDER CR2 D4 (Isaiah 7 #2; DEFENDER CR3 LINK 4 #5 | patched DEFENDER CR2 D4 (Isaiah 7 #2; DEFENDER CR3 LINK 4 #5
+OK   5 Alt_Gate_Build.js RETRACTED sentence states the 421 exception
+OK   5 Alt_Gate_Record.js RETRACTED sentence states the 421 exception
+OK   5 Alternate_Build.js RETRACTED sentence states the 421 exception
+OK   5 Alternate_Cure_Build.js RETRACTED sentence states the 421 exception
+OK   5 Alternate_Cure_Normalize.js RETRACTED sentence states the 421 exception
+OK   5 Alternate_Merge.js RETRACTED sentence states the 421 exception
+OK   5 Alternate_Merge_Seat.js RETRACTED sentence states the 421 exception
+OK   5 Cure_Build.js RETRACTED sentence states the 421 exception
+OK   5 Cure_Check.js RETRACTED sentence states the 421 exception
+OK   5 Cure_Normalize.js RETRACTED sentence states the 421 exception
+OK   5 Gate_Build.js RETRACTED sentence states the 421 exception
+OK   5 Gate_Record.js RETRACTED sentence states the 421 exception
+OK   5 Panel_Cure_Build_1.js RETRACTED sentence states the 421 exception
+OK   5 Panel_Cure_Build_2.js RETRACTED sentence states the 421 exception
+OK   5 Panel_Cure_Build_3.js RETRACTED sentence states the 421 exception
+OK   5 Panel_Cure_Check.js RETRACTED sentence states the 421 exception
+OK   5 Panel_Cure_Normalize_1.js RETRACTED sentence states the 421 exception
+OK   5 Panel_Cure_Normalize_2.js RETRACTED sentence states the 421 exception
+OK   5 Panel_Cure_Normalize_3.js RETRACTED sentence states the 421 exception
+61 OK

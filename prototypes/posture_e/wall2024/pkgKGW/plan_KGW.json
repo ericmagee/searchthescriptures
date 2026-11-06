@@ -1,0 +1,137 @@
+{
+ "base": "live 7796fc67 (pkgNHE/patched)",
+ "nodes": [
+  {
+   "file": "Alt_Gate_Build.js",
+   "base_sha": "396cfc44258e3da5",
+   "final_sha": "a2b322523d6bd7b5",
+   "edits": 7
+  },
+  {
+   "file": "Alt_Gate_Record.js",
+   "base_sha": "465079684a57ef7a",
+   "final_sha": "95733127b1b73a48",
+   "edits": 7
+  },
+  {
+   "file": "Alternate_Build.js",
+   "base_sha": "8dcaadb1c29b7b1a",
+   "final_sha": "b66f835ccf781217",
+   "edits": 7
+  },
+  {
+   "file": "Alternate_Cure_Build.js",
+   "base_sha": "4fc9b8b50d16ac21",
+   "final_sha": "24fa976acceadf87",
+   "edits": 7
+  },
+  {
+   "file": "Alternate_Cure_Normalize.js",
+   "base_sha": "a625cf28a0195a37",
+   "final_sha": "fa4f9defd6b61edd",
+   "edits": 7
+  },
+  {
+   "file": "Alternate_Merge.js",
+   "base_sha": "1edf99f32eff8375",
+   "final_sha": "bd4a64e3d764ad49",
+   "edits": 7
+  },
+  {
+   "file": "Alternate_Merge_Seat.js",
+   "base_sha": "66282d2190e9aab0",
+   "final_sha": "bb9b22ee40b7fbd8",
+   "edits": 7
+  },
+  {
+   "file": "Alternate_Payloads.js",
+   "base_sha": "d25e9546ff964502",
+   "final_sha": "f9614139d9942bb4",
+   "edits": 1
+  },
+  {
+   "file": "Cure_Build.js",
+   "base_sha": "d53c22413216b382",
+   "final_sha": "bf2c923b22894257",
+   "edits": 7
+  },
+  {
+   "file": "Cure_Check.js",
+   "base_sha": "56fd93302391381f",
+   "final_sha": "bbc9995086f8a07b",
+   "edits": 7
+  },
+  {
+   "file": "Cure_Normalize.js",
+   "base_sha": "03828ff165086e7f",
+   "final_sha": "ba4e240a075c63a0",
+   "edits": 7
+  },
+  {
+   "file": "Extract_Independent_Verdict.js",
+   "base_sha": "3a17542ce85944de",
+   "final_sha": "0fc25cf44de9b3e0",
+   "edits": 1
+  },
+  {
+   "file": "Gate_Build.js",
+   "base_sha": "639db3097b338aea",
+   "final_sha": "4676acae9c6e417a",
+   "edits": 7
+  },
+  {
+   "file": "Gate_Record.js",
+   "base_sha": "2bc69de6366f92dd",
+   "final_sha": "2623e83e3dc01ba0",
+   "edits": 7
+  },
+  {
+   "file": "Panel_Cure_Build_1.js",
+   "base_sha": "f70afe5780af19bf",
+   "final_sha": "7d2f5e091e2e9b58",
+   "edits": 7
+  },
+  {
+   "file": "Panel_Cure_Build_2.js",
+   "base_sha": "8f1c02609d2d2fdc",
+   "final_sha": "2ee85e3bbe39eb9d",
+   "edits": 7
+  },
+  {
+   "file": "Panel_Cure_Build_3.js",
+   "base_sha": "ceb5b6ac1a9c38ab",
+   "final_sha": "fa39b76fb1ab6395",
+   "edits": 7
+  },
+  {
+   "file": "Panel_Cure_Check.js",
+   "base_sha": "53c79c541bbffccc",
+   "final_sha": "02c817d91fe30a02",
+   "edits": 7
+  },
+  {
+   "file": "Panel_Cure_Normalize_1.js",
+   "base_sha": "601651eb5ddf23ac",
+   "final_sha": "ef19c37bff7ad8f6",
+   "edits": 7
+  },
+  {
+   "file": "Panel_Cure_Normalize_2.js",
+   "base_sha": "7d5deea086743c2f",
+   "final_sha": "ebae23003740b621",
+   "edits": 7
+  },
+  {
+   "file": "Panel_Cure_Normalize_3.js",
+   "base_sha": "4d9a317419be5b21",
+   "final_sha": "fe5ef7e6c766cb36",
+   "edits": 7
+  },
+  {
+   "file": "Panel_Payloads.js",
+   "base_sha": "65ede9bb8116161b",
+   "final_sha": "616519bc7c4ab1b8",
+   "edits": 1
+  }
+ ]
+}
