@@ -8,11 +8,11 @@ const fs=require('fs');const crypto=require('crypto');const sha=s=>crypto.create
 const IN=process.argv[2]||'pkgBAR/out/workflow_BAR.json',OUTW=process.argv[3]||'pkgPTK/out/workflow_PTK.json';
 const w=JSON.parse(fs.readFileSync(IN,'utf8'));const N=Object.fromEntries(w.nodes.map(n=>[n.name,n]));
 fs.mkdirSync('pkgPTK/patched',{recursive:true});fs.mkdirSync('pkgPTK/base',{recursive:true});const plan={base:IN,nodes:[]};
-const COMP=/\$\(\s*(?![\s'"])([^()]*?(?:\([^()]*\))?[^()]*?)\s*\)/g;
+const {calls,COMPN}=require('./scan.cjs');
 const table=names=>{const u=[...new Set(names)].filter(n=>N[n]);return "const __L={"+u.map(n=>JSON.stringify(n)+":()=>$("+JSON.stringify(n).replace(/^"|"$/g,"'")+")").join(',')+"}; /* pkgPTK: literal names only */\n";};
-function fix(name,names,expect){const s0=N[name].parameters.jsCode;let k=0;const s1=s0.replace(COMP,(m,x)=>{k++;return '__L['+x+']()';});
+function fix(name,names,expect){const s0=N[name].parameters.jsCode;const cs=COMPN(s0);const k=cs.length;let s1=s0;for(const c of cs.slice().reverse())s1=s1.slice(0,c.st)+'__L['+c.arg+']()'+s1.slice(c.en);
  if(k!==expect)throw new Error(name+': '+k+' computed $() calls, expected '+expect);
- const s=table(names)+s1;if(/\$\(\s*[^\s'"]/.test(s.replace(/\$\('(?:[^'\\]|\\.)*'\)/g,'')))throw new Error(name+': a computed $() is left');
+ const s=table(names)+s1;if(COMPN(s).length)throw new Error(name+': a computed $() is left');
  new Function('$','$input','$json',s);fs.writeFileSync('pkgPTK/base/'+name.replace(/ /g,'_')+'.js',s0);fs.writeFileSync('pkgPTK/patched/'+name.replace(/ /g,'_')+'.js',s);
  N[name].parameters.jsCode=s;plan.nodes.push({node:name,base_sha:sha(s0),final_sha:sha(s),computed_calls:k,table:[...new Set(names)].filter(n=>N[n]).length});}
 // Panel Tokens: its two name lists, as written in the node
@@ -20,6 +20,10 @@ function fix(name,names,expect){const s0=N[name].parameters.jsCode;let k=0;const
  const L2=[1,2,3].flatMap(k=>['deepseek','openai','gemini','grok','mimo','openrouter'].map(f=>'Panel Cure Call '+k+' '+f)).concat(['Alternate Call openrouter','Alternate Cure Call openrouter']);
  fix('Panel Tokens',L1.concat(L2),4);}
 // Build Save Body: the eight round Extracts and the three Normalizers it sums
-{const R=['D1','C1','D2','C2','D3','C3','D4','C4'].map(r=>r+' Extract');fix('Build Save Body',R.concat(['Synthesis Normalizer','Verdict Normalizer','Diagnostic Normalizer']),4);}
+{const R=['D1','C1','D2','C2','D3','C3','D4','C4'].map(r=>r+' Extract');fix('Build Save Body',R.concat(['Synthesis Normalizer','Verdict Normalizer','Diagnostic Normalizer'],['deepseek','openai','gemini','grok','mimo','openrouter'].map(f=>'Cure Call '+f)),6);}
+// survey (W3 2644 (3a)): every other node that still has a computed $() call, with its arguments
+{const L=[];for(const n of w.nodes){const s=n.parameters&&n.parameters.jsCode;if(typeof s!=='string')continue;const cs=COMPN(s);if(cs.length)L.push(n.name+' ('+cs.length+'): '+[...new Set(cs.map(c=>c.arg.replace(/\s+/g,' ').slice(0,60)))].join(' | '));}
+ fs.writeFileSync('pkgPTK/survey_computed.txt','Nodes with a computed $() call after pkgPTK, on '+IN+' (W3 2644 (3a)):\n'+L.join('\n')+'\n');console.log('survey: '+L.length+' nodes, pkgPTK/survey_computed.txt');}
 fs.mkdirSync('pkgPTK/out',{recursive:true});fs.writeFileSync(OUTW,JSON.stringify(w));fs.writeFileSync('pkgPTK/plan_PTK.json',JSON.stringify(plan,null,1));
 for(const p of plan.nodes)console.log(p.node.padEnd(18),p.base_sha,'->',p.final_sha,p.computed_calls+' computed calls, '+p.table+' literal names');
+

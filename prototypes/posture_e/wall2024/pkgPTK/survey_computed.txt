@@ -1,0 +1,27 @@
+Nodes with a computed $() call after pkgPTK, on pkgBAR/out/workflow_BAR.json (W3 2644 (3a)):
+D1 Build (1): sd+k+' Call anthropic'
+C1 Build (1): sd+k+' Call anthropic'
+D2 Build (1): sd+k+' Call anthropic'
+C2 Build (1): sd+k+' Call anthropic'
+D3 Build (3): sd+k+' Call anthropic' | side+prev+' Build' | side+prev+'B Extract'
+C3 Build (3): sd+k+' Call anthropic' | side+prev+' Build' | side+prev+'B Extract'
+Panel Payloads (3): G9R | n | isSub?r[0]:g9Node(r[0])
+Panel Done (1): n
+Format Markdown (3): name | n
+Panel Check (3): G9R | n | g9Node(r[0])
+Failure Salvage (1): n
+Panel Cure Check (2): n
+Alternate Payloads (1): n
+D4 Build (3): sd+k+' Call anthropic' | side+prev+' Build' | side+prev+'B Extract'
+C4 Build (3): sd+k+' Call anthropic' | side+prev+' Build' | side+prev+'B Extract'
+Accept Build (2): n
+Accept Check (2): n
+Accept Final (5): n | cn | bn
+Enforcer Build (2): n
+Judge Enforcer Build (4): n | __n
+Send Back Build (4): n | xn
+Send Back Record (4): n
+Alt Judge Enforcer Build (4): n | __n
+Alt Send Back Build (4): n | xn
+Alt Send Back Record (4): n
+Alternate Merge (4): n
