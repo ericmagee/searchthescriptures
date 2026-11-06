@@ -1,0 +1,7 @@
+A RESPONSE | NOT HELD, reason only => UNCURED | no CONTRADICTION, NOT HELD or REASSERTED IN line quotes the flagged sentence
+B RESPONSE | NOT HELD, with quote => UNCURED | no CONTRADICTION, NOT HELD or REASSERTED IN line quotes the flagged sentence
+C bare NOT HELD, reason only => UNCURED | no CONTRADICTION, NOT HELD or REASSERTED IN line quotes the flagged sentence
+D bare NOT HELD, with quote => CURED | captured with a quote of the flagged sentence
+E STATEMENT NOT HELD, with quote => UNCURED | no CONTRADICTION, NOT HELD or REASSERTED IN line quotes the flagged sentence
+F bare NOT HELD, 6-word part of quote => CURED | captured with a quote of the flagged sentence
+G CONTRADICTION with quote => CURED | captured with a quote of the flagged sentence

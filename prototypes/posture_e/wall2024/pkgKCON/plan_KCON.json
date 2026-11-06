@@ -1,0 +1,175 @@
+{
+ "base": "pkgR2/patched",
+ "nodes": [
+  {
+   "file": "Alternate_Build.js",
+   "name": "Alternate Build",
+   "base_sha": "cc13caae49db4920",
+   "final_sha": "9cac04e9965df507",
+   "edits": [
+    "ENF_STATUS K-CON TRIAL",
+    "K-CON item text TRIAL x1"
+   ]
+  },
+  {
+   "file": "Alternate_Cure_Build.js",
+   "name": "Alternate Cure Build",
+   "base_sha": "e7197121fa67dde9",
+   "final_sha": "579b148f0d493d82",
+   "edits": [
+    "ENF_STATUS K-CON TRIAL",
+    "K-CON item text TRIAL x1"
+   ]
+  },
+  {
+   "file": "Alternate_Cure_Normalize.js",
+   "name": "Alternate Cure Normalize",
+   "base_sha": "1961b6ec6c9f60e2",
+   "final_sha": "91ac709799e341e6",
+   "edits": [
+    "ENF_STATUS K-CON TRIAL",
+    "K-CON item text TRIAL x1"
+   ]
+  },
+  {
+   "file": "Alternate_Merge.js",
+   "name": "Alternate Merge",
+   "base_sha": "ea2713728fa9d3e1",
+   "final_sha": "a3c9ef0da3354237",
+   "edits": [
+    "ENF_STATUS K-CON TRIAL",
+    "K-CON item text TRIAL x1"
+   ]
+  },
+  {
+   "file": "Alternate_Payloads.js",
+   "name": "Alternate Payloads",
+   "base_sha": "fa3f650212545592",
+   "final_sha": "5920f6d5ce6bacc8",
+   "edits": [
+    "ENF_STATUS K-CON TRIAL",
+    "K-CON item text TRIAL x1"
+   ]
+  },
+  {
+   "file": "Cure_Build.js",
+   "name": "Cure Build",
+   "base_sha": "0c2d3ea98b0af480",
+   "final_sha": "d461b8c06678a881",
+   "edits": [
+    "ENF_STATUS K-CON TRIAL",
+    "K-CON item text TRIAL x1"
+   ]
+  },
+  {
+   "file": "Cure_Check.js",
+   "name": "Cure Check",
+   "base_sha": "a67321d4f7287f27",
+   "final_sha": "6b0975371424bd03",
+   "edits": [
+    "ENF_STATUS K-CON TRIAL",
+    "K-CON item text TRIAL x1"
+   ]
+  },
+  {
+   "file": "Cure_Normalize.js",
+   "name": "Cure Normalize",
+   "base_sha": "62ed9b2b4cdf4049",
+   "final_sha": "89c40105cf5d2237",
+   "edits": [
+    "ENF_STATUS K-CON TRIAL",
+    "K-CON item text TRIAL x1"
+   ]
+  },
+  {
+   "file": "Extract_Independent_Verdict.js",
+   "name": "Extract Independent Verdict",
+   "base_sha": "0d86a5db2e6c05a6",
+   "final_sha": "0013dd3fce4df3f2",
+   "edits": [
+    "ENF_STATUS K-CON TRIAL",
+    "K-CON item text TRIAL x1"
+   ]
+  },
+  {
+   "file": "Panel_Cure_Build_1.js",
+   "name": "Panel Cure Build 1",
+   "base_sha": "f0bab7425c84c64f",
+   "final_sha": "2e630a2b7761f4a5",
+   "edits": [
+    "ENF_STATUS K-CON TRIAL",
+    "K-CON item text TRIAL x1"
+   ]
+  },
+  {
+   "file": "Panel_Cure_Build_2.js",
+   "name": "Panel Cure Build 2",
+   "base_sha": "49d3f8bdde6d3d3f",
+   "final_sha": "310c208671b4e035",
+   "edits": [
+    "ENF_STATUS K-CON TRIAL",
+    "K-CON item text TRIAL x1"
+   ]
+  },
+  {
+   "file": "Panel_Cure_Build_3.js",
+   "name": "Panel Cure Build 3",
+   "base_sha": "45f9d04cfea60611",
+   "final_sha": "235f879bbadb2212",
+   "edits": [
+    "ENF_STATUS K-CON TRIAL",
+    "K-CON item text TRIAL x1"
+   ]
+  },
+  {
+   "file": "Panel_Cure_Check.js",
+   "name": "Panel Cure Check",
+   "base_sha": "b43cbf23057da5a9",
+   "final_sha": "10187fb3fad602da",
+   "edits": [
+    "ENF_STATUS K-CON TRIAL",
+    "K-CON item text TRIAL x1"
+   ]
+  },
+  {
+   "file": "Panel_Cure_Normalize_1.js",
+   "name": "Panel Cure Normalize 1",
+   "base_sha": "3a05827ec76d1f67",
+   "final_sha": "4a63497d5960537e",
+   "edits": [
+    "ENF_STATUS K-CON TRIAL",
+    "K-CON item text TRIAL x1"
+   ]
+  },
+  {
+   "file": "Panel_Cure_Normalize_2.js",
+   "name": "Panel Cure Normalize 2",
+   "base_sha": "b5449de38b851841",
+   "final_sha": "c665c787d6ccf5d7",
+   "edits": [
+    "ENF_STATUS K-CON TRIAL",
+    "K-CON item text TRIAL x1"
+   ]
+  },
+  {
+   "file": "Panel_Cure_Normalize_3.js",
+   "name": "Panel Cure Normalize 3",
+   "base_sha": "22ad292b750888b5",
+   "final_sha": "d6625e994ed8b101",
+   "edits": [
+    "ENF_STATUS K-CON TRIAL",
+    "K-CON item text TRIAL x1"
+   ]
+  },
+  {
+   "file": "Panel_Payloads.js",
+   "name": "Panel Payloads",
+   "base_sha": "7678fe78492c8f53",
+   "final_sha": "d37207d04c41c922",
+   "edits": [
+    "ENF_STATUS K-CON TRIAL",
+    "K-CON item text TRIAL x2"
+   ]
+  }
+ ]
+}
