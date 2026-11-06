@@ -1,0 +1,71 @@
+OK   2 nodes; base shas = pkgEP/patched, final shas = pkgEF/patched
+OK   5993 (33014 chatgpt VERDICT LINES): pkgEP writes the k=1 row; pkgEF does not (the UNCURED retraction in the AUDIT note no longer drops D6)
+OK   unit: a judge's own line "RETRACTED: D6 vs C1" still drops D6 from the k count
+OK   unit: an AUDIT note quoting a retraction does not drop the link
+OK   6171 (33014 sol E-RES, engine recompute RESULT line): sent by pkgEP, not sent by pkgEF
+OK   6821 (33021 chatgpt E-RES, engine recompute RESULT line): sent by pkgEP, not sent by pkgEF
+OK   5162 (32998 sol E-RES TRUE): still sent, unchanged
+OK   7816 (33040 sol E-RES TRUE): still sent, unchanged
+OK   4937 32998 chatgpt E-HOLD COLLISION D3 vs C1 [FALSE]: the burden it read is labelled UNPROVEN, or the failing answer is labelled the challenger's
+     fed 2 labelled checks; proven not-MEETS: defender 0, challenger 0
+OK   4938 32998 chatgpt E-HOLD COLLISION D4 vs C5 [TRUE]: a proven MISSES/FAILS is still fed and labelled
+     fed 2 labelled checks; proven not-MEETS: defender 2, challenger 0
+OK   5142 32998 sol E-HOLD COLLISION D1 vs C3 [TRUE]: a proven MISSES/FAILS is still fed and labelled
+     fed 5 labelled checks; proven not-MEETS: defender 0, challenger 1
+OK   5667 33006 sol E-HOLD COLLISION D5 [FALSE]: no proven defender-answer not-MEETS fed against this link
+     link state; that side's proven checks: 30; not MEETS fed: 0
+OK   6155 33014 sol E-HOLD COLLISION D6 vs C1 [TRUE]: a proven MISSES/FAILS is still fed and labelled
+     fed 5 labelled checks; proven not-MEETS: defender 1, challenger 0
+OK   6393 33020 gemini E-HOLD COLLISION D3 [FORM]: no proven not-MEETS check on the verses the line names, and the line quotes no answer: still DISAGREE on the letter
+     link state; that side's proven checks: 25; not MEETS fed: 0
+OK   6394 33020 gemini E-HOLD COLLISION D4 [FORM]: no proven not-MEETS check on the verses the line names, and the line quotes no answer: still DISAGREE on the letter
+     link state; that side's proven checks: 25; not MEETS fed: 0
+OK   6395 33020 gemini E-HOLD COLLISION D5 [FALSE]: no proven defender-answer not-MEETS fed against this link
+     link state; that side's proven checks: 25; not MEETS fed: 0
+OK   6396 33020 gemini E-HOLD COLLISION D6 [FALSE]: no proven defender-answer not-MEETS fed against this link
+     link state; that side's proven checks: 25; not MEETS fed: 0
+OK   6398 33020 chatgpt E-HOLD COLLISION D2 vs C3 [FALSE]: the burden it read is labelled UNPROVEN, or the failing answer is labelled the challenger's
+     fed 2 labelled checks; proven not-MEETS: defender 0, challenger 0
+OK   6399 33020 chatgpt E-HOLD COLLISION D2 vs C4 [FALSE]: the burden it read is labelled UNPROVEN, or the failing answer is labelled the challenger's
+     fed 1 labelled checks; proven not-MEETS: defender 0, challenger 0
+OK   6400 33020 chatgpt E-HOLD COLLISION D3 [FORM]: no proven not-MEETS check on the verses the line names, and the line quotes no answer: still DISAGREE on the letter
+     link state; that side's proven checks: 27; not MEETS fed: 0
+OK   6403 33020 chatgpt E-HOLD COLLISION D6 [FALSE]: no proven defender-answer not-MEETS fed against this link
+     link state; that side's proven checks: 27; not MEETS fed: 0
+OK   6404 33020 grok E-HOLD COLLISION D2 [FALSE]: the defender-answer MISSES fed are on Luke 2:4, Hebrews 7:14, Genesis 48:5 (Davidic-descent presses, not this link): the model must place them
+     link state; that side's proven checks: 27; not MEETS fed: 3 [Luke 2:4; Hebrews 7:14; Genesis 48:5]
+OK   6405 33020 grok E-HOLD COLLISION D3 [FALSE]: the defender-answer MISSES fed are on Luke 2:4, Hebrews 7:14, Genesis 48:5 (Davidic-descent presses, not this link): the model must place them
+     link state; that side's proven checks: 27; not MEETS fed: 3 [Luke 2:4; Hebrews 7:14; Genesis 48:5]
+OK   7093 33025 gemini E-HOLD COLLISION D5 [FALSE]: no proven defender-answer not-MEETS fed against this link
+     link state; that side's proven checks: 37; not MEETS fed: 0
+OK   7096 33025 chatgpt E-HOLD COLLISION D2 vs C4 [TRUE]: a proven MISSES/FAILS is still fed and labelled
+     fed 2 labelled checks; proven not-MEETS: defender 0, challenger 1
+OK   7097 33025 chatgpt E-HOLD COLLISION D3 vs C5 [TRUE]: a proven MISSES/FAILS is still fed and labelled
+     fed 1 labelled checks; proven not-MEETS: defender 1, challenger 0
+OK   7099 33025 chatgpt E-HOLD COLLISION D4 vs C1 [TRUE]: a proven MISSES/FAILS is still fed and labelled
+     fed 2 labelled checks; proven not-MEETS: defender 0, challenger 1
+OK   7104 33025 grok E-HOLD COLLISION D4 vs C3 [TRUE]: all fed checks UNPROVEN, none proven
+     fed 2 labelled checks; proven not-MEETS: defender 0, challenger 0
+OK   7587 33040 gemini E-HOLD COLLISION D3 [FORM]: no proven not-MEETS check on the verses the line names, and the line quotes no answer: still DISAGREE on the letter
+     link state; that side's proven checks: 30; not MEETS fed: 0
+OK   7593 33040 chatgpt E-HOLD COLLISION D2 vs C2 [TRUE]: a proven MISSES/FAILS is still fed and labelled
+     fed 3 labelled checks; proven not-MEETS: defender 1, challenger 0
+OK   7594 33040 chatgpt E-HOLD COLLISION D2 vs C3 [TRUE]: a proven MISSES/FAILS is still fed and labelled
+     fed 3 labelled checks; proven not-MEETS: defender 0, challenger 2
+OK   7595 33040 chatgpt E-HOLD COLLISION D2 vs C6 [FALSE]: the burden it read is labelled UNPROVEN, or the failing answer is labelled the challenger's
+     fed 3 labelled checks; proven not-MEETS: defender 0, challenger 0
+OK   7597 33040 chatgpt E-HOLD COLLISION D3 vs C6 [TRUE]: all fed checks UNPROVEN, none proven
+     fed 3 labelled checks; proven not-MEETS: defender 0, challenger 0
+OK   7598 33040 chatgpt E-HOLD COLLISION D4 vs C1 [FALSE]: the burden it read is labelled UNPROVEN, or the failing answer is labelled the challenger's
+     fed 2 labelled checks; proven not-MEETS: defender 0, challenger 0
+OK   7606 33040 chatgpt E-HOLD COLLISION D6 vs C6 [FALSE]: the burden it read is labelled UNPROVEN, or the failing answer is labelled the challenger's
+     fed 3 labelled checks; proven not-MEETS: defender 0, challenger 0
+OK   7608 33040 grok E-HOLD COLLISION D2 [FALSE]: no proven defender-answer not-MEETS fed against this link
+     link state; that side's proven checks: 31; not MEETS fed: 0
+OK   5931 (grok E-COL FALSE): the FAILS-words note is added
+OK   5934 (grok E-COL FALSE): the FAILS-words note is added
+OK   every E-COL item is still sent; the note is added only where the FAILS words are found in the answer's round
+     E-COL items other than 5931/5934 that now carry the note (20 of 24): 4922 4923 4924 4925 4926 4928 5930 5932 5933 6388 6389 6390 6391 6762 7087 7088 7090 7325 7326 7584
+     E-COL items without it: 6763 6764 6765 6766
+OK   E-HOLD, E-COL and E-RES stay RECORD-ONLY TRIAL (count of the marker unchanged)
+40 OK, 0 FAIL
