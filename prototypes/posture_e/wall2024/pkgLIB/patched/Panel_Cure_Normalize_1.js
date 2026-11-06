@@ -1,6 +1,6 @@
-// pkgLIB stub: "Panel Cure Normalize 1". The node's full code (sha 191a54f7b621b99e, 306171 bytes) is rebuilt line for line from the
+// pkgLIB stub: "Panel Cure Normalize 1". The node's full code (sha 84144c9196439afa, 306224 bytes) is rebuilt line for line from the
 // "Shared Library" node (one copy for 22 nodes) plus the lines below that only this node has, then run unchanged with the same $ and $input.
-const __N=306171;
+const __N=306224;
 const __P=[[0,194],87,[195,201],87,[202,242],87,[243,312],62,[313,328],62,[329,402],62,[403,436],425,[437,443],425,[444,658],629,[659,671],425,[672,695],425,[696,719],425,[720,740],629,[741,756],629,[757,769],425,[770,780],762,62,[781,787],629,[788,808],629,[809,868],715,[869,877],425,[878,884],629,[885,899],629,[900,905],629,[906,946],762,[947,956],425,[957,975],62,[976,983],41,984,540,[985,1024],425,62,[1025,1099],998,1100,629,[1101,1119],629,[1120,1145],629,[1146,1161],629,[1162,1188],425,[1189,1281],629,[1282,1292],629,[1293,1371],425,[1372,1387],1337,[1388,1392],629,[1393,1398],1337,[1399,1412],425,[1413,1506],1476,[1507,1581],1505,1582,1476,1583,1509,1584,1511,[1585,1651],1641,[1652,1660],1641,[1661,1699],1693,[1701,1725],629,[1726,1787],[1999,2029],62,2148,["return $input.all().map((it,i)=>{let src=null;try{src=$('Panel Cure Build 1').itemMatching(i).json.cure;}catch(e){src=null;}"],[" if(!src){try{src=$('Panel Cure Build 1').all()[i].json.cure;}catch(e){src=null;}}"],[2149,2150],62];
 const __LT=$('Shared Library').params.jsCode;const __L=JSON.parse(__LT.slice(__LT.indexOf('\n/*LIB*/')+8,__LT.lastIndexOf('\n/*END*/')));
 const __S=__P.map(e=>typeof e==='number'?__L[e]:typeof e[0]==='string'?e[0]:__L.slice(e[0],e[1]+1).join('\n')).join('\n');
