@@ -32,7 +32,7 @@ LBL="x.rule==='K-SC'||x.rule==='K-K')?x.rule+' '+x.link:'K-G3 '+x.side)"
 ASK="x.rule==='K-SC'||x.rule==='K-K')?String(x.line||'').trim()"
 NEWR="||x.rule==='K-CON'||x.rule==='K-CMT'||x.rule==='K-RUL'"
 FALL="  return res('UNCURED','unknown rule',null);});}"
-FALL_NEW="  {const kr=krulCure(x,reply&&reply.ok?reply.text:'',R,(x.rule==='K-CMT'?respOf(x):null));if(kr)return res(kr.st,kr.why,kr.line?[kr.line]:null);} // K-CON, K-CMT, K-RUL (TRIAL; form only; WALL-2024 reply 2150)\n"+FALL
+FALL_NEW="  {const kr=krulCure(x,reply&&reply.ok?reply.text:'',R,(x.rule==='K-CMT'?respOf(x):null));if(kr)return res(kr.st,kr.why,kr.line?[kr.line]:null);} // K-CON, K-CMT, K-RUL (TRIAL; form only; WALL-2024 reply 2150)\n"+FALL[:-4]+"}).concat(krulRestated(items,reply,R)); // R7 (W3, reply 2157): RESTATED lines of the cure reply need a card\n}"
 for n in live['nodes']:
     c0=n.get('parameters',{}).get('jsCode') or '';c=c0;done=[];nm=n['name']
     if 'const PART2="' in c:

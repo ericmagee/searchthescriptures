@@ -65,5 +65,20 @@ const kc={rule:'K-CON',line:'[CR4] the engine marked ... quotes it: "Genesis 24:
 ok('T2b',cr(kc,'CONTRADICTION -- DEFENDER -- EARLIER (CR2, "I withdraw it") -- LATER (CR4, "Genesis 24:16 and Genesis 24:43 fix the word on an unknown woman")').st==='CURED'&&cr(kc,'CONTRADICTIONS: NONE FOUND.').st==='UNCURED','K-CON: a CONTRADICTION line quoting the flagged sentence cures; NONE FOUND does not');
 const kr={rule:'K-RUL',link:'keystone',ruling:'keystone'};
 ok('T2c',cr(kr,card('keystone','STANDS',nbOK,1,own[0])).st==='CURED'&&cr(kr,card('keystone','STANDS','"words that stand nowhere in this record at all"',1,own[0])).st==='UNCURED'&&cr(kr,'').st==='UNCURED','K-RUL: a valid card cures; a card whose quote does not stand, or no card, does not');
-for(const n of plan.nodes.filter(x=>x.edits.includes('cureVerdicts')).map(x=>x.name)){const s=pat(n);ok('T2d',/\{const kr=krulCure\(x,reply&&reply\.ok\?reply\.text:'',R,/.test(s)&&s.indexOf('const kr=krulCure(')<s.indexOf("return res('UNCURED','unknown rule',null);});}"),`${n}: cureVerdicts consults krulCure before "unknown rule"`);}
-console.log(fail?`FAILED ${fail}`:'ALL OK');
+for(const n of plan.nodes.filter(x=>x.edits.includes('cureVerdicts')).map(x=>x.name)){const s=pat(n);ok('T2d',/\{const kr=krulCure\(x,reply&&reply\.ok\?reply\.text:'',R,/.test(s)&&s.indexOf('const kr=krulCure(')<s.indexOf("return res('UNCURED','unknown rule',null);}).concat(krulRestated(items,reply,R));"),`${n}: cureVerdicts consults krulCure before "unknown rule"`);}
+// ---- R7, R7b (W3, reply 2157): the full patched cureVerdicts (library of Panel Cure Normalize 2) replayed on the stored 32936 chatgpt cure
+{const lib=n=>{const c=pat(n);return c.slice(0,c.lastIndexOf('\nreturn $input'));};const lib0=n=>{const c=LN[n];return c.slice(0,c.lastIndexOf('\nreturn $input'));};
+ const $=()=>{throw new Error('no node data offline');};
+ const CV=new Function('$','$input',lib('Panel Cure Normalize 2')+'\nreturn cureVerdicts;')($,null),CV0=new Function('$','$input',lib0('Panel Cure Normalize 2')+'\nreturn cureVerdicts;')($,null);
+ const F=JSON.parse(fs.readFileSync('pkgD/cure_32936_chatgpt.json','utf8'));const v=CV(F.items,F.reply,null,F.rounds),v0=CV0(F.items,F.reply,null,F.rounds);
+ const kr=v.filter(x=>x.rule==='K-RUL');
+ ok('R7',kr.length===1&&kr[0].ruling==='D6 vs C1'&&kr[0].status==='UNCURED',`32936 chatgpt cure replay: ${kr.length} K-RUL row(s) [${kr.map(x=>x.link+' :: '+x.why.slice(0,110)).join(' | ')}]`);
+ const strip=a=>JSON.stringify(a.map(x=>({rule:x.rule,link:x.link,status:x.status})));
+ ok('R7c',strip(v.filter(x=>x.rule!=='K-RUL'&&x.rule!=='K-CMT'))===strip(v0.filter(x=>x.rule!=='K-CMT'))&&v.length===v0.length+1,`every other item keeps its cure status (${v0.length} items before, ${v.length} rows after)`);
+ const own1=K.__KRUL_HEADS?null:null;
+ const t=JSON.parse(F.reply.text.trim());const nb='"'+q(F.rounds.CR3.split('\n').find(l=>l.split(' ').length>12))+'" ([CR3])';
+ const withCard={...F.reply,text:JSON.stringify({...t,reasoning:t.reasoning+'\n'+card('D6 vs C1','UNDERDETERMINED',nb,1,'any accepted line')})};
+ const v2=CV(F.items,withCard,null,F.rounds);ok('R7b',v2.filter(x=>x.rule==='K-RUL').length===0,`the same reply with a valid card for D6 vs C1: ${v2.filter(x=>x.rule==='K-RUL').length} K-RUL rows`);
+ const kc={rule:'K-CON',line:'[CR4] withdrawn in [CR2]: "my bridge joined two words, and I withdraw it" -- later "Genesis 24:16 and Genesis 24:43 fix the word on an unknown woman"'};
+ ok('T2e',K.krulCure(kc,'CONTRADICTION -- DEFENDER -- EARLIER (CR2, "my bridge joined two words, and I withdraw it") -- LATER (CR4, "the word")',f05).st==='CURED',`K-CON cure quoting only the EARLIER sentence is accepted (W2, reply 2160)`);}
+console.log(fail?`FAILED ${fail}`:'ALL OK (with R7)');

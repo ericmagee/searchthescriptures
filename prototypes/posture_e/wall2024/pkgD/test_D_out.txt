@@ -100,4 +100,8 @@ OK   T2d Alternate Build: cureVerdicts consults krulCure before "unknown rule"
 OK   T2d Alternate Cure Build: cureVerdicts consults krulCure before "unknown rule"
 OK   T2d Alternate Cure Normalize: cureVerdicts consults krulCure before "unknown rule"
 OK   T2d Alternate Merge: cureVerdicts consults krulCure before "unknown rule"
-ALL OK
+OK   R7 32936 chatgpt cure replay: 1 K-RUL row(s) [D6 vs C1 (restated in the cure) :: TRIAL, recorded only: the cure reply restated D6 vs C1 without a valid ruling card (no ruling card)]
+OK   R7c every other item keeps its cure status (15 items before, 16 rows after)
+OK   R7b the same reply with a valid card for D6 vs C1: 0 K-RUL rows
+OK   T2e K-CON cure quoting only the EARLIER sentence is accepted (W2, reply 2160)
+ALL OK (with R7)
