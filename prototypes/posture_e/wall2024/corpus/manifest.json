@@ -149,6 +149,35 @@
     "chatgpt",
     "grok"
    ]
+  },
+  "33040": {
+   "texts": 406,
+   "by_src": {
+    "verdict_final": 3,
+    "verdict_gate": 3,
+    "alt_verdict_gate": 1,
+    "cure_reply": 5,
+    "flagged_line": 323,
+    "sendback_reply": 4,
+    "change_to": 63,
+    "gate_reply": 3,
+    "alternate_reply": 1
+   },
+   "seats": [
+    "grok:verdict_final",
+    "sol:verdict_final",
+    "gemini:verdict_final",
+    "gemini:verdict_gate",
+    "chatgpt:verdict_gate",
+    "grok:verdict_gate",
+    "sol:alt_verdict_gate"
+   ],
+   "fixture": true,
+   "gate_replies": [
+    "chatgpt",
+    "grok",
+    "sol(alt)"
+   ]
   }
  },
  "gaps": [

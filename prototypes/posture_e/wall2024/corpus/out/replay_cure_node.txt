@@ -1,47 +1,3 @@
-pkgGD 32998 gemini: cure items 14, LIVE uncured stored 1, replay 1
-pkgGD 32998 chatgpt: cure items 18, LIVE uncured stored 0, replay 0
-pkgGD 32998 grok: cure items 19, LIVE uncured stored 1, replay 1
-pkgGD 33014 gemini: cure items 12, LIVE uncured stored 0, replay 0
-pkgGD 33014 chatgpt: cure items 18, LIVE uncured stored 3, replay 3
-pkgGD 33014 grok: cure items 18, LIVE uncured stored 0, replay 0
-pkgGD 33020 gemini: cure items 14, LIVE uncured stored 0, replay 0
-pkgGD 33020 chatgpt: cure items 15, LIVE uncured stored 0, replay 0
-pkgGD 33020 grok: cure items 17, LIVE uncured stored 0, replay 0
-pkgGD 33021 gemini: cure items 14, LIVE uncured stored 0, replay 0
-pkgGD 33021 chatgpt: cure items 18, LIVE uncured stored 0, replay 1
-pkgGD 33021 grok: cure items 20, LIVE uncured stored 0, replay 0
-pkgGD 33025 gemini: cure items 6, LIVE uncured stored 1, replay 0
-pkgGD 33025 chatgpt: cure items 13, LIVE uncured stored 0, replay 3
-pkgGD 33025 grok: cure items 11, LIVE uncured stored 0, replay 0
-pkgGD: 219 of 227 cure rows equal the stored Panel Cure Check
-  33021 chatgpt K-G4|D5 vs C5|CURED -> K-G4|D5 vs C5|UNCURED
-  33025 gemini K-G4|D1 vs C2|UNCURED -> K-G4|D1 vs C2|CURED
-  33025 chatgpt K-G4|D2 vs C4|CURED -> K-G4|D2 vs C4|UNCURED
-  33025 chatgpt K-G4|D3 vs C5|CURED -> K-G4|D3 vs C5|UNCURED
-  33025 chatgpt K-G4|D4 vs C1|CURED -> K-G4|D4 vs C1|UNCURED
-  33025 chatgpt K-RUL|D2 vs C4|CURED -> K-RUL|D2 vs C4|UNCURED
-  33025 chatgpt K-RUL|D3 vs C5|CURED -> K-RUL|D3 vs C5|UNCURED
-  33025 chatgpt K-RUL|D4 vs C1|CURED -> K-RUL|D4 vs C1|UNCURED
-pkgCR 32998 gemini: cure items 14, LIVE uncured stored 1, replay 1
-pkgCR 32998 chatgpt: cure items 18, LIVE uncured stored 0, replay 0
-pkgCR 32998 grok: cure items 19, LIVE uncured stored 1, replay 1
-pkgCR 33014 gemini: cure items 12, LIVE uncured stored 0, replay 0
-pkgCR 33014 chatgpt: cure items 18, LIVE uncured stored 3, replay 0
-pkgCR 33014 grok: cure items 18, LIVE uncured stored 0, replay 0
-pkgCR 33020 gemini: cure items 14, LIVE uncured stored 0, replay 0
-pkgCR 33020 chatgpt: cure items 15, LIVE uncured stored 0, replay 0
-pkgCR 33020 grok: cure items 17, LIVE uncured stored 0, replay 0
-pkgCR 33021 gemini: cure items 14, LIVE uncured stored 0, replay 0
-pkgCR 33021 chatgpt: cure items 18, LIVE uncured stored 0, replay 0
-pkgCR 33021 grok: cure items 20, LIVE uncured stored 0, replay 0
-pkgCR 33025 gemini: cure items 6, LIVE uncured stored 1, replay 0
-pkgCR 33025 chatgpt: cure items 13, LIVE uncured stored 0, replay 0
-pkgCR 33025 grok: cure items 11, LIVE uncured stored 0, replay 0
-pkgCR: 223 of 227 cure rows equal the stored Panel Cure Check
-  33014 chatgpt K-G4|D2 vs C2|UNCURED -> K-G4|D2 vs C2|CURED
-  33014 chatgpt K-G4|D4 vs C1|UNCURED -> K-G4|D4 vs C1|CURED
-  33014 chatgpt K-G4|D6 vs C1|UNCURED -> K-G4|D6 vs C1|CURED
-  33025 gemini K-G4|D1 vs C2|UNCURED -> K-G4|D1 vs C2|CURED
 pkgKS 32998 gemini: cure items 14, LIVE uncured stored 1, replay 1
 pkgKS 32998 chatgpt: cure items 18, LIVE uncured stored 0, replay 0
 pkgKS 32998 grok: cure items 19, LIVE uncured stored 1, replay 1
@@ -57,7 +13,10 @@ pkgKS 33021 grok: cure items 20, LIVE uncured stored 0, replay 0
 pkgKS 33025 gemini: cure items 6, LIVE uncured stored 1, replay 1
 pkgKS 33025 chatgpt: cure items 13, LIVE uncured stored 0, replay 0
 pkgKS 33025 grok: cure items 11, LIVE uncured stored 0, replay 0
-pkgKS: 224 of 227 cure rows equal the stored Panel Cure Check
+pkgKS 33040 gemini: cure items 11, LIVE uncured stored 0, replay 0
+pkgKS 33040 chatgpt: cure items 19, LIVE uncured stored 0, replay 0
+pkgKS 33040 grok: cure items 12, LIVE uncured stored 0, replay 0
+pkgKS: 266 of 269 cure rows equal the stored Panel Cure Check
   33014 chatgpt K-G4|D2 vs C2|UNCURED -> K-G4|D2 vs C2|CURED
   33014 chatgpt K-G4|D4 vs C1|UNCURED -> K-G4|D4 vs C1|CURED
   33014 chatgpt K-G4|D6 vs C1|UNCURED -> K-G4|D6 vs C1|CURED

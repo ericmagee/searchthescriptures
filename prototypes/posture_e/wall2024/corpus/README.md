@@ -30,4 +30,4 @@ Gaps:
 - 33006 has no node data (the run crashed), so it has texts but no replay fixture.
 - 33006 grok has no stored verdict text.
 - The alternate's cure (Alternate Merge) is not whole-node replayed yet.
-- 33040 is added once it finishes.
+- 33040 is in (from the live-test thread inputs, corpus/import_inputs.cjs).

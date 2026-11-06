@@ -7,7 +7,7 @@ const fs=require('fs'),crypto=require('crypto');const md5=s=>crypto.createHash('
 // the JSON reasoning, unescaped once by JSON.parse, without the engine's AUDIT trailer (also for alternate_reply, a whole verdict). cure_reply: cureUnwrap,
 // as cureLines reads it. sendback/gate replies: as stored (their live readers unescape \\n and \\" once; parity.cjs does that). Readers must not unescape again.
 const AMS=fs.readFileSync('pkgKY/patched/Alternate_Merge.js','utf8');const {cureJText,cureUnwrap}=new Function('$','$input',AMS.slice(0,AMS.indexOf("const AM=$('Alternate Merge Seat')"))+'\nreturn {cureJText,cureUnwrap};')(()=>{throw 0},null);
-const RUNS=['32998','33006','33014','33020','33021','33025'];
+const RUNS=['32998','33006','33014','33020','33021','33025','33040'];
 const FIX={'32998':'pkgGD/fixture_32998.json','33014':'pkgKF/fixture_33014.json','33020':'pkgGD/probe_33020/fixture_33020.json','33021':'probe_33021/fixture_33021.json','33025':'probe_33025/fixture_33025.json'};
 const J=JSON.parse(fs.readFileSync('corpus/raw/judgments.json','utf8'));
 const texts=[],seen=new Map();let tid=0;
@@ -16,6 +16,12 @@ const man={runs:{},gaps:[]};
 for(const run of RUNS){
  const L=JSON.parse(fs.readFileSync('corpus/raw/log_'+run+'.json','utf8'));
  let F=FIX[run]?JSON.parse(fs.readFileSync(FIX[run],'utf8')):null;
+ // from 33040 on: the fixture is built from corpus/raw/gate_<run>.json (import_inputs.cjs), the make_fixture.cjs way
+ if(!F&&fs.existsSync('corpus/raw/gate_'+run+'.json')){const G0=JSON.parse(fs.readFileSync('corpus/raw/gate_'+run+'.json','utf8'));const last=n=>{const r=G0[n];return r&&r.length?r[r.length-1][0]:null;};
+  const bo=B=>(B||[]).map(s=>{const p=(JSON.parse(s).payload)||{};return {seat:p.judge_seat,verdict_raw:p.verdict_raw,fields:{verdict_tag:p.verdict_tag,defense_standing:p.defense_standing,conceded_links:p.conceded_links,challenge_standing:p.challenge_standing,challenger_conceded_links:p.challenger_conceded_links}};});
+  const G=last('Gate Record'),PB=last('Panel Build'),A=last('Alt Gate Record');
+  F={source:'n8n execution '+run+' (inputs saved by the live-test thread)',run_token:G.run_token,PB:{judges:PB.judges},bodies:bo(G.bodies),sb_items:G.sb_items||[],gate_report:(G.gate&&G.gate.report)||[],gate_replies:{},gate_live:G.gate_rows||[]};
+  if(A)F.alt={PB:{judges:A.judges},bodies:bo(A.bodies),sb_items:A.sb_items||[],gate_report:(A.gate&&A.gate.report)||[],gate_replies:{},gate_live:A.gate_rows||[]};}
  // verdicts: stored judgments, then fixture bodies (removed judges are only in the fixture)
  for(const j of J.filter(j=>j.run===run))add(run,j.seat,'verdict_final','debate_judgments',j.verdict_raw);
  if(F){for(const b of F.bodies||[])add(run,b.seat,'verdict_gate','n8n Gate Record',b.verdict_raw);if(F.alt)for(const b of F.alt.bodies||[])add(run,b.seat,'alt_verdict_gate','n8n Alt Gate Record',b.verdict_raw);}
