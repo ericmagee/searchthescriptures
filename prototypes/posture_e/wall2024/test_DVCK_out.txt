@@ -1,0 +1,14 @@
+== manifest: live_sha = fetch, final_sha = file, all parse
+ALL OK
+== test_K on the D+VC overlay
+ALL OK
+== pkgK/patched equals merged_DVCK
+done
+== test_VC on merged texts
+ALL OK
+== test_P2b on merged Panel Cure Check
+ALL OK
+== test_D (12 headings) on merged texts; expect only X4 to fail
+FAIL X4 26 nodes; every live_sha equals my fetch and W2's base_hashes_8dd6d614.tsv; every final_sha equals the patched file
+FAILED 1
+OK count: 105

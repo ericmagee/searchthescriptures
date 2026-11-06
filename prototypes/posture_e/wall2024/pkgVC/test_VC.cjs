@@ -24,7 +24,7 @@ const W=r=>r.judgments.map(j=>({seat:j.seat,WT:E.netUnwrap(j.verdict_raw),R:Rof(
  const ST=E.netUnwrap(r.independent_verdict_raw);const miss=V.filter(v=>!E.vcCaught2024(ST,v));
  T(E.vcNone2024(ST),'V2 32936 single: reasoning holds CONTRADICTIONS: NONE FOUND');
  T(miss.length===1,'V2 32936 single: K-CON items '+miss.length+' (want 1)'+(miss[0]?' :: '+E.vcItem2024(miss[0],true).item.line.slice(0,260):''));
- const AMc=pat('Alternate Merge');T(/seat:'single',seat_role:'single',judge_model:x\.judge_model\|\|null,kind:'cure',rule:'K-CON'/.test(AMc)&&/cure_status:'UNCURED',cure_reason:'TRIAL rule \(recorded only, after the panel; no call was made; it removes no seat\)/.test(AMc),'V5 Alternate Merge: the single row goes to enforcer_log (kind cure, seat_role single, UNCURED, record only); no call node added');
+ const AMc=pat('Alternate Merge');T(/seat:'single',seat_role:'single',judge_model:x\.judge_model\|\|null,kind:'enforcer_check',rule:'K-CON'/.test(AMc)&&/cure_status:null,cure_reason:'TRIAL rule \(recorded only, after the panel; no call was made; it removes no seat\)/.test(AMc),'V5 Alternate Merge: the single row goes to enforcer_log (kind enforcer_check, seat_role single, cure_status null, record only; W3 2179 item 4); no call node added');
  // V3, V4 synthetic
  const g=W(r).find(w=>w.seat==='grok');
  const v3=E.vcBuild2024([{...g,WT:'CONTRADICTION -- DEFENDER -- EARLIER ([CR2], "my bridge joined three words, and I withdraw it") -- LATER ([CR4], "Genesis 24:16 and Genesis 24:43 fix the word on an unknown woman")'}],KW);T(v3.length===0,'V3 synthetic EARLIER quote not in CR2: VCs '+v3.length+' (want 0)');
@@ -49,22 +49,31 @@ for(const k of ['32791','32905','32924']){const r=run(k);const V=E.vcBuild2024(W
  T(s2[gi].drv.length===1&&s2[gi].drv[0].rule==='K-CON'&&/NONE FOUND was written, but the record shows: EARLIER \[CR2\]/.test(s2[gi].drv[0].line)&&!/chatgpt|grok|judge (?:wrote|found)/i.test(s2[gi].drv[0].line),'V2b synthetic panel NONE FOUND: 1 K-CON item in record words only :: '+(s2[gi].drv[0]?s2[gi].drv[0].line.slice(0,220):''));
  T(s2.filter((s,k)=>k!==gi).every(s=>s.drv.length===0),'Y1b synthetic: the other two seats get no item');
  T(/AUDIT v32: CONTRADICTION NOT CAPTURED \(K-CON; Commitment 10; verified in the record\)/.test(JSON.parse(b2[gi]).payload.verdict_raw),'V2b synthetic: gemini verdict_raw carries the AUDIT v32 mark');}
-// ---- Part 2
-const PC=pat('Panel Cure Check');const P2src=['cureRewrite','rcObjEnd'].map(n=>pickF(PC,n)).concat(['rcOne','cureSafe'].map(n=>pickC(PC,n))).join('\n');
-const CRW=new Function(P2src+'\nreturn cureRewrite;')();
+// ---- Part 2c (one final header; W3 2177): cureSupHead from the patched Panel Cure Check, run on the stored rows
+const PC=pat('Panel Cure Check');const SH=new Function(pickF(PC,'rcObjEnd')+'\n'+PC.slice(PC.indexOf('function cureSupHead('),PC.indexOf('\n',PC.indexOf('function cureSupHead(')))+'\nreturn cureSupHead;')();
 const objOf=s=>{const a=s.indexOf('{');let d=0,q=false,e=false;for(let i=a;i<s.length;i++){const ch=s[i];if(q){if(e)e=false;else if(ch==='\\')e=true;else if(ch==='"')q=false;continue;}if(ch==='"')q=true;else if(ch==='{')d++;else if(ch==='}'){d--;if(!d)return s.slice(a,i+1);}}return null;};
 let gN=0;
 for(const r of RUNS)for(const j of r.judgments){const o=JSON.parse(objOf(j.verdict_raw));const m=j.verdict_raw.match(/AUDIT v21: CORRECTED RESULT -- (?:SEAT: [^;]*; )?ORIGINAL: ([A-Z]+); COUNTED: ([A-Z]+)/);
- const F={verdict_tag:o.verdict_tag,defense_standing:o.defense_standing,challenge_standing:o.challenge_standing,conceded_links:o.conceded_links,challenger_conceded_links:o.challenger_conceded_links};
- const F0={verdict_tag:m?m[1]:o.verdict_tag};const R={rp:[],fields:F,audit:'',retracted:[],tag:F.verdict_tag};
- const s1=CRW(j.verdict_raw,true,R,j.seat,F0);const o1=JSON.parse(objOf(s1));const id=r.run_token.slice(5,10)+' '+j.seat;
- if(m&&m[1]!==m[2]){const h='SUPERSEDED BY CURE: verdict '+m[1]+' to '+m[2]+'; see the cure lines below\n';
-  T(o1.reasoning===h+o.reasoning,(id.includes('32924')?'H1 ':'H2 ')+id+': reasoning opens "'+o1.reasoning.split('\n')[0]+'" then the judge\'s own text unchanged ("'+o.reasoning.slice(0,40)+'...")');
+ const t0=m?m[1]:o.verdict_tag;const s1=SH(j.verdict_raw,t0,o.verdict_tag);const o1=JSON.parse(objOf(s1));const id=r.run_token.slice(5,10)+' '+j.seat;
+ if(t0!==o.verdict_tag){const h='SUPERSEDED BY CURE: verdict '+t0+' to '+o.verdict_tag+'; see the cure lines below\n';
+  T(o1.reasoning===h+o.reasoning,(id.includes('32924')?'H1 ':'H2 ')+id+': reasoning opens "'+o1.reasoning.split('\n')[0]+'" then the judge\'s own text unchanged');
   T(!/keystone/i.test(o1.reasoning.split('\n')[0]),'H2 '+id+': the line names no keystone change (S21 unapplied)');
-  const s2=CRW(s1,true,R,j.seat,F0);T(JSON.parse(objOf(s2)).reasoning.split('SUPERSEDED BY CURE').length===2,'H '+id+': not doubled on a second pass');
-  T(o1.verdict_tag===o.verdict_tag,'G2 '+id+': verdict_tag unchanged ('+o1.verdict_tag+')');}
- else{gN++;T(objOf(s1)===objOf(j.verdict_raw),'G1 '+id+': JSON object byte-identical (no verdict change by cure)'+(j.seat==='grok'&&r.run_token.includes('32936')?' [G3: opens with its CONTRADICTION line]':'')+(j.seat==='gemini'&&r.run_token.includes('32905')?' [cured without a verdict change]':''));}}
+  T(SH(s1,t0,o.verdict_tag)===s1,'H '+id+': not doubled on a second pass');
+  T(o1.verdict_tag===o.verdict_tag&&s1.slice(objOf(s1).length)===j.verdict_raw.slice(objOf(j.verdict_raw).length),'G2 '+id+': verdict_tag and the text after the object unchanged');}
+ else{gN++;T(s1===j.verdict_raw,'G1 '+id+': byte-identical (no verdict change)'+(j.seat==='grok'&&r.run_token.includes('32936')?' [G3: opens with its CONTRADICTION line]':'')+(j.seat==='gemini'&&r.run_token.includes('32905')?' [cured without a verdict change]':''));}}
 T(gN===10,'G1 count of unchanged judgments: '+gN+' (want 10)');
-// N3-style: patched set
-const plan=JSON.parse(fs.readFileSync('plan_VC.json','utf8'));T(plan.nodes.length===15,'nodes changed: '+plan.nodes.length+' (Panel Payloads, Alternate Merge, and the 14 cureRewrite copies; Alternate Merge holds both)');
+// the live failure: run 32949 chatgpt (stored row, before its CORRECTED RESULT line)
+{const F=JSON.parse(fs.readFileSync('fixture_32949_chatgpt.json','utf8'));const x=SH(F.before_corr,'BROKEN','HELD');const ox=JSON.parse(objOf(x));
+ T(ox.reasoning.startsWith('SUPERSEDED BY CURE: verdict BROKEN to HELD; see the cure lines below\nBROKEN. [L1]'),'H-live 32949 chatgpt: the header the live run lacked');
+ // W3 2177 gap 2: two changes (BROKEN to HELD, then HELD to CONTESTED): one header naming the final tag
+ const y=SH(x,'BROKEN','CONTESTED');const oy=JSON.parse(objOf(y));T(oy.reasoning.startsWith('SUPERSEDED BY CURE: verdict BROKEN to CONTESTED; see the cure lines below\nBROKEN. [L1]')&&oy.reasoning.split('SUPERSEDED BY CURE').length===2,'H-twice: a later change replaces the header and names the final tag');
+ T(SH(x,'BROKEN','BROKEN')===F.before_corr,'H-back: a change undone by a later step leaves no header');}
+// W3 2177 gap 1: the single judge (plain text)
+{const st=RUNS.find(r=>r.run_token.includes('32936')).independent_verdict_raw;const z=SH(st,'BROKEN','HELD');T(z==='SUPERSEDED BY CURE: verdict BROKEN to HELD; see the cure lines below\n'+st,'H-single: plain text opens with the header');T(SH(st,'HELD','HELD')===st,'H-single: no change, byte-identical');}
+// call sites
+const CC=pat('Cure Check'),AM=pat('Alternate Merge');
+T(PC.split('cureSupHead(b.payload.verdict_raw,__t0,b.payload.verdict_tag)').length===2&&PC.includes('cureSupHead(b.payload.verdict_raw,F0.verdict_tag,b.payload.verdict_tag)'),'Sites: Panel Cure Check, once after every cure step, once on the tie path');
+T(AM.split('cureSupHead(b.payload.verdict_raw,__t0,b.payload.verdict_tag)').length===2,'Sites: Alternate Merge, once before the seat is seated or refused');
+T(CC.includes('independent_verdict_raw:cureSupHead(RAW0+'),'Sites: Cure Check, the single judge');
+const plan=JSON.parse(fs.readFileSync('plan_VC.json','utf8'));T(plan.nodes.length===4,'nodes changed: '+plan.nodes.length+' (Panel Payloads, Cure Check, Panel Cure Check, Alternate Merge); cureRewrite is no longer edited');
 console.log(out.join('\n'));console.log(ok?'ALL OK':'FAILURES');

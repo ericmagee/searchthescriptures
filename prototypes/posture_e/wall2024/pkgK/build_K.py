@@ -3,7 +3,7 @@
 # Draft /mnt/project-files/w3/kjv_only_draft.md (rulings WALL-2024 2172). Built from a live fetch (argv[1], must be b2052e19). Writes nothing live.
 import json,sys,hashlib,subprocess,os,re
 D=os.path.dirname(os.path.abspath(__file__))
-live=json.load(open(sys.argv[1]))['workflow'];assert live['versionId'].startswith('b2052e19'),live['versionId']
+live=json.load(open(sys.argv[1]))['workflow'];assert live['versionId'][:8] in ('b2052e19','7599a747'),live['versionId'] # 7599a747: base is live 7599a747 overlaid with merged_DVC (D+VC), see merge_DVCK.py
 sha=lambda s:hashlib.sha256(s.encode()).hexdigest()[:16]
 js=lambda t:t.replace('\\','\\\\').replace('"','\\"').replace('\n','\\n')
 C12=open(os.path.join(D,'c12.txt')).read().strip('\n');TA=open(os.path.join(D,'textauth.txt')).read().strip('\n')

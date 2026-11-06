@@ -7,7 +7,7 @@ OK   Y1 32936 gemini: captured, no K-CON item
 OK   Y1 32936 grok: captured, no K-CON item
 OK   V2 32936 single: reasoning holds CONTRADICTIONS: NONE FOUND
 OK   V2 32936 single: K-CON items 1 (want 1) :: [CR4] CONTRADICTIONS: NONE FOUND was written, but the record shows: EARLIER [CR2] "my bridge joined two words, and I withdraw it" -- LATER [CR4] "Genesis 24:16 and Genesis 24:43 fix the word on an unknown woman", and no CONTRADICTION, NOT HELD or REASSERTED IN
-OK   V5 Alternate Merge: the single row goes to enforcer_log (kind cure, seat_role single, UNCURED, record only); no call node added
+OK   V5 Alternate Merge: the single row goes to enforcer_log (kind enforcer_check, seat_role single, cure_status null, record only; W3 2179 item 4); no call node added
 OK   V3 synthetic EARLIER quote not in CR2: VCs 0 (want 0)
 OK   V4 synthetic LATER round before EARLIER: VCs 0 (want 0)
 OK   V6b synthetic EARLIER quote that neither contains nor lies inside the K-W sentence (gate boundary, def 2153 item 4): VCs 0 (want 0)
@@ -21,24 +21,32 @@ OK   V2/V5 32936 pass: vc_single rows 1 (want 1), error null
 OK   V2b synthetic panel NONE FOUND: 1 K-CON item in record words only :: [CR4] CONTRADICTIONS: NONE FOUND was written, but the record shows: EARLIER [CR2] "my bridge joined two words, and I withdraw it" -- LATER [CR4] "Genesis 24:16 and Genesis 24:43 fix the word on an unknown woman", and no 
 OK   Y1b synthetic: the other two seats get no item
 OK   V2b synthetic: gemini verdict_raw carries the AUDIT v32 mark
-OK   G1 32791 gemini: JSON object byte-identical (no verdict change by cure)
-OK   G1 32791 grok: JSON object byte-identical (no verdict change by cure)
-OK   G1 32791 sol: JSON object byte-identical (no verdict change by cure)
-OK   G1 32905 gemini: JSON object byte-identical (no verdict change by cure) [cured without a verdict change]
-OK   G1 32905 grok: JSON object byte-identical (no verdict change by cure)
-OK   G1 32905 sol: JSON object byte-identical (no verdict change by cure)
-OK   H1 32924 chatgpt: reasoning opens "SUPERSEDED BY CURE: verdict BROKEN to HELD; see the cure lines below" then the judge's own text unchanged ("BROKEN. [L1][L3] The defender leaves par...")
+OK   G1 32791 gemini: byte-identical (no verdict change)
+OK   G1 32791 grok: byte-identical (no verdict change)
+OK   G1 32791 sol: byte-identical (no verdict change)
+OK   G1 32905 gemini: byte-identical (no verdict change) [cured without a verdict change]
+OK   G1 32905 grok: byte-identical (no verdict change)
+OK   G1 32905 sol: byte-identical (no verdict change)
+OK   H1 32924 chatgpt: reasoning opens "SUPERSEDED BY CURE: verdict BROKEN to HELD; see the cure lines below" then the judge's own text unchanged
 OK   H2 32924 chatgpt: the line names no keystone change (S21 unapplied)
 OK   H 32924 chatgpt: not doubled on a second pass
-OK   G2 32924 chatgpt: verdict_tag unchanged (HELD)
-OK   G1 32924 gemini: JSON object byte-identical (no verdict change by cure)
-OK   G1 32924 grok: JSON object byte-identical (no verdict change by cure)
-OK   H2 32936 chatgpt: reasoning opens "SUPERSEDED BY CURE: verdict BROKEN to HELD; see the cure lines below" then the judge's own text unchanged ("BROKEN. [L1][L3] The defender left a pro...")
+OK   G2 32924 chatgpt: verdict_tag and the text after the object unchanged
+OK   G1 32924 gemini: byte-identical (no verdict change)
+OK   G1 32924 grok: byte-identical (no verdict change)
+OK   H2 32936 chatgpt: reasoning opens "SUPERSEDED BY CURE: verdict BROKEN to HELD; see the cure lines below" then the judge's own text unchanged
 OK   H2 32936 chatgpt: the line names no keystone change (S21 unapplied)
 OK   H 32936 chatgpt: not doubled on a second pass
-OK   G2 32936 chatgpt: verdict_tag unchanged (HELD)
-OK   G1 32936 gemini: JSON object byte-identical (no verdict change by cure)
-OK   G1 32936 grok: JSON object byte-identical (no verdict change by cure) [G3: opens with its CONTRADICTION line]
+OK   G2 32936 chatgpt: verdict_tag and the text after the object unchanged
+OK   G1 32936 gemini: byte-identical (no verdict change)
+OK   G1 32936 grok: byte-identical (no verdict change) [G3: opens with its CONTRADICTION line]
 OK   G1 count of unchanged judgments: 10 (want 10)
-OK   nodes changed: 15 (Panel Payloads, Alternate Merge, and the 14 cureRewrite copies; Alternate Merge holds both)
+OK   H-live 32949 chatgpt: the header the live run lacked
+OK   H-twice: a later change replaces the header and names the final tag
+OK   H-back: a change undone by a later step leaves no header
+OK   H-single: plain text opens with the header
+OK   H-single: no change, byte-identical
+OK   Sites: Panel Cure Check, once after every cure step, once on the tie path
+OK   Sites: Alternate Merge, once before the seat is seated or refused
+OK   Sites: Cure Check, the single judge
+OK   nodes changed: 4 (Panel Payloads, Cure Check, Panel Cure Check, Alternate Merge); cureRewrite is no longer edited
 ALL OK

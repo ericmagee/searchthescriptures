@@ -1500,6 +1500,7 @@ function cureCountHeld(reply,v,cs,seat){const o=cureLines(reply&&reply.ok?reply.
   const nc=(v||[]).filter(x=>x.side===side&&(x.rule==='K-G1'||x.rule==='K-G3'||x.rule==='K-G6'||x.rule==='K-G7'||x.rule==='K-G8'||x.rule==='K-G9'||x.rule==='K-G10'||(x.rule==='K-P'&&x.premise!=null)||x.rule==='K-LB')&&x.status!=='CURED');if(!nc.length)continue;
   lines.push('[AUDIT v21: CORRECTED COUNT NOT WRITTEN -- '+(seat?'SEAT: '+seat+'; ':'')+'SIDE: '+side+'; CORRECTED COUNT: '+ns[0]+'; NOT CURED: '+cureSafe(nc.map(x=>x.rule+' '+(x.rule==='K-G3'?x.side+' STANDING':x.link)).join(', '))+'; written only when every count or standing item of the side is CURED (BB-7417)]');}
  return lines;}
+function cureSupHead(raw,o,n){let s=String(raw||'');const H=/SUPERSEDED BY CURE: verdict [A-Z-]+ to [A-Z-]+; see the cure lines below(?:\\n|\n)/;const enc=x=>JSON.stringify(String(x)).slice(1,-1);const hd=(o&&n&&o!==n)?'SUPERSEDED BY CURE: verdict '+o+' to '+n+'; see the cure lines below':null;const t=s.trimStart();if(t[0]==='{'){const a=s.indexOf('{');const b=rcObjEnd(s,a);if(b<0)return s;let j=s.slice(a,b).replace(H,'');if(hd)j=j.replace(/("reasoning"\s*:\s*")/,m=>m+enc(hd+'\n'));return s.slice(0,a)+j+s.slice(b);}s=s.replace(H,'');return hd?hd+'\n'+s:s;} // WALL-2134 Part 2c (W2; W3 2177)
 const cureCorrLine=(seat,orig,c)=>'[AUDIT v21: CORRECTED RESULT -- '+(seat?'SEAT: '+seat+'; ':'')+'ORIGINAL: '+orig+'; COUNTED: '+c.word+' ('+c.tag+'); RETRACTED: '+c.links.join(', ')+']';
 const cureSafe=s=>String(s).replace(/\[/g,'(').replace(/\]/g,')').replace(/;(\s*(?:SEAT|ITEM|RULE|RESULT|KINDS|WHY|LINE|STATEMENT|JUDGE STATEMENT):)/g,',$1');
 // judge_fix4 F1 (run 32266: DeepSeek retracted "D6 vs C4 (Matthew 1:25): CHALLENGER LINK BROKEN", the only ground of its CHALLENGE STANDING
@@ -1595,7 +1596,6 @@ function cureRewrite(raw,panel,R,seat,F0){let s=String(raw||'');const enc=x=>JSO
     .replace(/("conceded_links"\s*:\s*)\d+/,'$1'+F.conceded_links).replace(/("challenger_conceded_links"\s*:\s*)\d+/,'$1'+F.challenger_conceded_links);
    if(R.cpAdd)for(const [sd,key] of [['DEFENDER','counted_premises_defender'],['CHALLENGER','counted_premises_challenger']]){const add=R.cpAdd[sd]||[];if(!add.length)continue; /* ruling 421 (B6) */
     const rx=new RegExp('("'+key+'"\\s*:\\s*)\\[([^\\]]*)\\]');const m=j.match(rx);if(!m)continue;const cur=(m[2].match(/\d+/g)||[]).map(Number);const nu=[...new Set(cur.concat(add))].sort((a,b)=>a-b);if(nu.length!==cur.length)j=j.replace(rx,(_,h)=>h+'['+nu.join(',')+']');}
-   if(F0&&F0.verdict_tag&&F0.verdict_tag!==F.verdict_tag&&!j.includes('SUPERSEDED BY CURE: verdict')){const __h='SUPERSEDED BY CURE: verdict '+F0.verdict_tag+' to '+F.verdict_tag+'; see the cure lines below';j=j.replace(/("reasoning"\s*:\s*")/,m=>m+enc(__h+'\n'));} /* WALL-2134 (W2, Part 2): the stored reasoning opens with the change the cure made */
    const cr=(F0&&F0.verdict_tag&&F0.verdict_tag!==F.verdict_tag)?'\n[AUDIT v21: CORRECTED RESULT -- '+(seat?'SEAT: '+seat+'; ':'')+'ORIGINAL: '+F0.verdict_tag+'; COUNTED: '+F.verdict_tag+' ('+R.tag+'); RETRACTED: '+R.retracted.join(', ')+']':'';
    s=s.slice(0,a)+j+cr+s.slice(b);}}
  else{const i=s.indexOf('\n\n[AUDIT');let t=i<0?s:s.slice(0,i);const rest=i<0?'':s.slice(i);for(const [o0,n0] of R.rp)t=t.replace(o0,()=>n0);s=t+rest;}
@@ -1624,18 +1624,19 @@ const PP=$('Panel Payloads').first().json;const rs=[];for(const n of ['Panel Cur
 const bodies=PP.bodies.slice();const summary=(PP.summary||[]).map(s=>({...s}));
 summary.forEach((s,i)=>{const all=s.drv||[];s.cure=[];if(!all.length){ /* ruling 421 (KB-0030): a seat with no flagged item is still held to the tie rule */
   const b=JSON.parse(bodies[i]);const F0={verdict_tag:b.payload.verdict_tag,defense_standing:b.payload.defense_standing,conceded_links:b.payload.conceded_links,challenge_standing:b.payload.challenge_standing,challenger_conceded_links:b.payload.challenger_conceded_links};const rc=cureRecompute(s.seat,cureJText(b.payload.verdict_raw,true),F0,[],[],null);
-  if(rc&&rc.trig.indexOf('TIE (KB-0030)')>=0){b.payload.verdict_raw=cureRewrite(b.payload.verdict_raw,true,rc,s.seat,F0);Object.assign(b.payload,rc.fields);s.recomputed={trigger:rc.trig,fields:rc.fields,result:rc.result};bodies[i]=JSON.stringify(b);}
+  if(rc&&rc.trig.indexOf('TIE (KB-0030)')>=0){b.payload.verdict_raw=cureRewrite(b.payload.verdict_raw,true,rc,s.seat,F0);Object.assign(b.payload,rc.fields);b.payload.verdict_raw=cureSupHead(b.payload.verdict_raw,F0.verdict_tag,b.payload.verdict_tag); /* WALL-2134 Part 2c */s.recomputed={trigger:rc.trig,fields:rc.fields,result:rc.result};bodies[i]=JSON.stringify(b);}
   return;}
  const r=rs.find(x=>x.cure&&x.cure.idx===i)||null;
  const v=cureVerdicts(all,r?r.reply:{ok:false,why:'no cure call was made for this seat'},r&&r.cure?r.cure.broken:null,r&&r.cure?r.cure.rounds:null);
  s.cure=v.map(x=>({rule:x.rule,side:x.side,link:x.link,status:x.status,kinds:x.kinds,why:x.why}));
- const b=JSON.parse(bodies[i]);b.payload.drv_uncured=enfUncured(v); /* judge_fix6 H8: an uncured TRIAL item removes no seat */b.payload.verdict_raw=b.payload.verdict_raw+'\n'+cureReport(s.seat,v).concat(cureProse(s.seat,r?r.reply:null)).join('\n');
+ const b=JSON.parse(bodies[i]);const __t0=b.payload.verdict_tag;b.payload.drv_uncured=enfUncured(v); /* judge_fix6 H8: an uncured TRIAL item removes no seat */b.payload.verdict_raw=b.payload.verdict_raw+'\n'+cureReport(s.seat,v).concat(cureProse(s.seat,r?r.reply:null)).join('\n');
  const cc=cureCorrected(r?r.reply:null,v);if(cc){b.payload.verdict_raw=b.payload.verdict_raw+'\n'+cureCorrLine(s.seat,b.payload.verdict_tag,cc);b.payload.verdict_tag=cc.word;s.corrected=cc;}
  const cs=cureSet(r?r.reply:null,v);if(cs){b.payload.verdict_raw=b.payload.verdict_raw+'\n'+cureSetApply(b.payload,cs,s.seat).join('\n');s.corrected_standing=cs;}
  {const ch=cureCountHeld(r?r.reply:null,v,cs,s.seat);if(ch.length)b.payload.verdict_raw=b.payload.verdict_raw+'\n'+ch.join('\n');}
  // judge_fix4 F1: the seat's counts, standings, verdict and RESULT recomputed from the cured lines, written to its row and its text.
  {const F0={verdict_tag:b.payload.verdict_tag,defense_standing:b.payload.defense_standing,conceded_links:b.payload.conceded_links,challenge_standing:b.payload.challenge_standing,challenger_conceded_links:b.payload.challenger_conceded_links};
   const rc=cureRecompute(s.seat,cureJText(b.payload.verdict_raw,true),F0,all,v,r?r.reply:null);if(rc){b.payload.verdict_raw=cureRewrite(b.payload.verdict_raw,true,rc,s.seat,F0);Object.assign(b.payload,rc.fields);s.recomputed={trigger:rc.trig,fields:rc.fields,result:rc.result};}}
+ b.payload.verdict_raw=cureSupHead(b.payload.verdict_raw,__t0,b.payload.verdict_tag); /* WALL-2134 Part 2c */
  bodies[i]=JSON.stringify(b);});
 // BB-6904 portion F (7069 option 1): the alternate gate's decision is made here, so Alternate Needed? holds no logic of its own
 // (an n8n expression rejects a statement body: BB-7068). True when any body's drv_uncured is above 0 (a malformed body counts as not

@@ -1,5 +1,5 @@
 {
- "live_version": "b2052e19-727d-43c2-8733-e508d4304274",
+ "live_version": "7599a747-8829-492a-9fe3-51378cc1e1cf",
  "nodes": [
   {
    "name": "Init with Guards",
@@ -65,8 +65,8 @@
   {
    "name": "Cure Build",
    "id": "7ad5bd77-194e-4ce9-8d0b-359413ced1a4",
-   "live_sha": "bd0f931ec51e9247",
-   "final_sha": "abb3437afedeed0d",
+   "live_sha": "c59859f559615dce",
+   "final_sha": "aaba6d5c3d45aa09",
    "delta": 5894,
    "edits": [
     "RULE_C/RC K-KJV:12 x1",
@@ -81,8 +81,8 @@
   {
    "name": "Cure Normalize",
    "id": "e16abfe7-43f7-4a59-b088-859e43f9b2e9",
-   "live_sha": "4a94c5176893faa5",
-   "final_sha": "e7247c8ae08b69a0",
+   "live_sha": "3439bb6750f931f5",
+   "final_sha": "64fcc61f2ab0488b",
    "delta": 5883,
    "edits": [
     "ENF_STATUS",
@@ -96,8 +96,8 @@
   {
    "name": "Cure Check",
    "id": "16b07c74-a403-4172-9b9a-4a6acfea9d62",
-   "live_sha": "396ea10c284592e4",
-   "final_sha": "247130604a27b930",
+   "live_sha": "09f516597c07e29e",
+   "final_sha": "243fa858da7759dd",
    "delta": 5883,
    "edits": [
     "ENF_STATUS",
@@ -111,8 +111,8 @@
   {
    "name": "Panel Cure Build 1",
    "id": "1c7e600c-5b02-4d8e-80c1-275d0995e9b7",
-   "live_sha": "239f05a68203772c",
-   "final_sha": "2d796f4d6f6b196c",
+   "live_sha": "78cce7efbec819a9",
+   "final_sha": "ed55576eab323a22",
    "delta": 6540,
    "edits": [
     "C12 in agreement",
@@ -128,8 +128,8 @@
   {
    "name": "Panel Cure Normalize 1",
    "id": "4aa6acfd-6c25-4668-9155-a522404f9157",
-   "live_sha": "ef8e45070c1cc651",
-   "final_sha": "35c3a6a129f5df9b",
+   "live_sha": "e4f2c457f239be8d",
+   "final_sha": "97990776554149da",
    "delta": 5883,
    "edits": [
     "ENF_STATUS",
@@ -143,8 +143,8 @@
   {
    "name": "Panel Cure Build 2",
    "id": "93038507-1a2f-4bcb-b69b-8d85fe801184",
-   "live_sha": "6794b552635cdd45",
-   "final_sha": "ced757b8f0b9a5ae",
+   "live_sha": "52e3b6baa7111029",
+   "final_sha": "0ae30de6bb0476de",
    "delta": 6540,
    "edits": [
     "C12 in agreement",
@@ -160,8 +160,8 @@
   {
    "name": "Panel Cure Normalize 2",
    "id": "ec037816-6aa3-420a-b51e-f2a6ab24a58d",
-   "live_sha": "a7ed09b9458670cc",
-   "final_sha": "fcc1cf035141ce09",
+   "live_sha": "768bc91282b74db2",
+   "final_sha": "44bc1e173ac9e93d",
    "delta": 5883,
    "edits": [
     "ENF_STATUS",
@@ -175,8 +175,8 @@
   {
    "name": "Panel Cure Build 3",
    "id": "1bb655d0-eca5-4f8c-b201-e4fd060eaabc",
-   "live_sha": "a042ffbf6e29cdc7",
-   "final_sha": "d3374998e219006c",
+   "live_sha": "091f02fadbd3b317",
+   "final_sha": "2523b63ff10c45ad",
    "delta": 6540,
    "edits": [
     "C12 in agreement",
@@ -192,8 +192,8 @@
   {
    "name": "Panel Cure Normalize 3",
    "id": "d41fd40f-1c92-4739-9815-bfdf93e35260",
-   "live_sha": "ad76d7399c88d8fb",
-   "final_sha": "767263298a65d84c",
+   "live_sha": "4dccb2c2d891c014",
+   "final_sha": "8237abde48e051a2",
    "delta": 5883,
    "edits": [
     "ENF_STATUS",
@@ -207,8 +207,8 @@
   {
    "name": "Panel Cure Check",
    "id": "007bd090-db2f-46e1-88ea-a3e2623077ca",
-   "live_sha": "5709e6994370eade",
-   "final_sha": "86ec582b62cc7ca7",
+   "live_sha": "1a043ce5b2618781",
+   "final_sha": "4af0e4a27db2ba02",
    "delta": 5883,
    "edits": [
     "ENF_STATUS",
@@ -222,8 +222,8 @@
   {
    "name": "Alternate Build",
    "id": "8c37a3db-a61d-4cda-88ba-62dd25eb5f36",
-   "live_sha": "690307989d9a0193",
-   "final_sha": "43577fe1f3d62634",
+   "live_sha": "0bd0e7ae7dc964a4",
+   "final_sha": "f7d2d9048b9372dd",
    "delta": 6540,
    "edits": [
     "C12 in agreement",
@@ -252,8 +252,8 @@
   {
    "name": "Alternate Cure Build",
    "id": "1133cadf-9f55-4aa9-92df-71c3c271ced3",
-   "live_sha": "ebf06f43a5fe5463",
-   "final_sha": "e355f9808b70feff",
+   "live_sha": "53eec9d995cff81f",
+   "final_sha": "742cb477c4a9ff62",
    "delta": 6540,
    "edits": [
     "C12 in agreement",
@@ -269,8 +269,8 @@
   {
    "name": "Alternate Cure Normalize",
    "id": "3303c1be-fdb2-4008-9a45-79ae7adab238",
-   "live_sha": "31decaacd74dde87",
-   "final_sha": "64d361a30962b597",
+   "live_sha": "3333bfe87282f9cd",
+   "final_sha": "54ddd41ab32ac587",
    "delta": 5883,
    "edits": [
     "ENF_STATUS",
@@ -284,8 +284,8 @@
   {
    "name": "Alternate Merge",
    "id": "8d8b179a-c064-4a4f-b8b5-ea6298d23ce3",
-   "live_sha": "072af5da94126fe4",
-   "final_sha": "56d7634ebbcc3900",
+   "live_sha": "4334c03ade2b9871",
+   "final_sha": "252f9afaef7f9036",
    "delta": 6382,
    "edits": [
     "ENF_STATUS",
