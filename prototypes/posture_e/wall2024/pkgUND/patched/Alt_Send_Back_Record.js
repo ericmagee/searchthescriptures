@@ -479,16 +479,16 @@ B.forEach((b,ci)=>{let txt='',err=null;try{txt=String(R[ci].choices[0].message.c
    if(__u.status==='UNCURED'&&!silent&&!err){(UNDF[b.seat]=UNDF[b.seat]||[]).push(it.sid+' ('+it.rule+(it.rule==='E-UNG'?'':' on UNDERDETERMINED')+' '+String(it.item||'').slice(0,60)+': '+String(__u.why).slice(0,160)+')');rows[rows.length-1].cure_status='UNCURED';}
    else if(__u.status==='CURED')rows[rows.length-1].cure_status='CURED';}});});
 let bodies=null,anySil=false;const silent_counted=[];const ecol_counted=[];const und_counted=[];
-/* pkgUND: each seat's uncured E-UNG and E-HOLD-UND answers are added to its drv_uncured */
-if(Object.keys(UNDF).length){bodies=(Array.isArray(PASS.bodies)?PASS.bodies:$('Panel Cure Check').first().json.bodies).slice();
- for(const [seat,its] of Object.entries(UNDF)){const i=bodies.findIndex(x=>{try{return JSON.parse(x).payload.judge_seat===seat;}catch(e){return false;}});if(i<0)continue;const bb=JSON.parse(bodies[i]);const p=bb.payload;
-  p.drv_uncured=(p.drv_uncured||0)+its.length;anySil=true;und_counted.push({seat,items:its});
-  p.verdict_raw=p.verdict_raw+'\n[AUDIT v42: COLLISION GRADE UNCURED (pkgUND) -- SEAT: '+seat+'; ITEMS: '+its.join('; ')+'; counted in drv_uncured. REVIEW THIS ROW.]';bodies[i]=JSON.stringify(bb);}}
 /* pkgECF (C): each seat's uncured E-COL answers are added to its drv_uncured, as silence is */
 if(Object.keys(ECF).length){bodies=(Array.isArray(PASS.bodies)?PASS.bodies:$('Alt Seated').first().json.bodies).slice();
  for(const [seat,its] of Object.entries(ECF)){const i=bodies.findIndex(x=>{try{return JSON.parse(x).payload.judge_seat===seat;}catch(e){return false;}});if(i<0)continue;const bb=JSON.parse(bodies[i]);const p=bb.payload;
   p.drv_uncured=(p.drv_uncured||0)+its.length;anySil=true;ecol_counted.push({seat,items:its});
   p.verdict_raw=p.verdict_raw+'\n[AUDIT v41: E-COL UNCURED (pkgECF, W3 2534) -- SEAT: '+seat+'; ITEMS: '+its.join('; ')+'; counted in drv_uncured. REVIEW THIS ROW.]';bodies[i]=JSON.stringify(bb);}} /* pkgSBS: add each seat's silent items to its drv_uncured, as Gate Record does for uncured gate items */
+/* pkgUND: each seat's uncured E-UNG and E-HOLD-UND answers are added to its drv_uncured */
+if(Object.keys(UNDF).length){bodies=(bodies||(Array.isArray(PASS.bodies)?PASS.bodies:$('Alt Seated').first().json.bodies)).slice();
+ for(const [seat,its] of Object.entries(UNDF)){const i=bodies.findIndex(x=>{try{return JSON.parse(x).payload.judge_seat===seat;}catch(e){return false;}});if(i<0)continue;const bb=JSON.parse(bodies[i]);const p=bb.payload;
+  p.drv_uncured=(p.drv_uncured||0)+its.length;anySil=true;und_counted.push({seat,items:its});
+  p.verdict_raw=p.verdict_raw+'\n[AUDIT v42: COLLISION GRADE UNCURED (pkgUND) -- SEAT: '+seat+'; ITEMS: '+its.join('; ')+'; counted in drv_uncured. REVIEW THIS ROW.]';bodies[i]=JSON.stringify(bb);}}
 if(Object.keys(SIL).length){bodies=(bodies||(Array.isArray(PASS.bodies)?PASS.bodies:$('Alt Seated').first().json.bodies)).slice();
  for(const [seat,sids] of Object.entries(SIL)){const i=bodies.findIndex(x=>{try{return JSON.parse(x).payload.judge_seat===seat;}catch(e){return false;}});if(i<0)continue;const bb=JSON.parse(bodies[i]);const p=bb.payload;
   p.drv_uncured=(p.drv_uncured||0)+sids.length;anySil=true;silent_counted.push({seat,items:sids});

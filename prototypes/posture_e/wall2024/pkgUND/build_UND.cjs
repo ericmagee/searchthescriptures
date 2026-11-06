@@ -39,14 +39,17 @@ for(const f of ['Send_Back_Record.js','Alt_Send_Back_Record.js']){const s0=fs.re
   +"   rows[rows.length-1].cure_reason+=' | CURE (pkgUND, ENFORCED): '+__u.status+' -- '+String(__u.why).slice(0,400);\n"
   +"   if(__u.status==='UNCURED'&&!silent&&!err){(UNDF[b.seat]=UNDF[b.seat]||[]).push(it.sid+' ('+it.rule+(it.rule==='E-UNG'?'':' on UNDERDETERMINED')+' '+String(it.item||'').slice(0,60)+': '+String(__u.why).slice(0,160)+')');rows[rows.length-1].cure_status='UNCURED';}\n"
   +"   else if(__u.status==='CURED')rows[rows.length-1].cure_status='CURED';}});});",f);
- s=rep(s,"let bodies=null,anySil=false;const silent_counted=[];const ecol_counted=[];","let bodies=null,anySil=false;const silent_counted=[];const ecol_counted=[];const und_counted=[];\n"
-  +"/* pkgUND: each seat's uncured E-UNG and E-HOLD-UND answers are added to its drv_uncured */\n"
-  +"if(Object.keys(UNDF).length){bodies=(Array.isArray(PASS.bodies)?PASS.bodies:$('Panel Cure Check').first().json.bodies).slice();\n"
+ s=rep(s,"let bodies=null,anySil=false;const silent_counted=[];const ecol_counted=[];","let bodies=null,anySil=false;const silent_counted=[];const ecol_counted=[];const und_counted=[];",f);
+ /* W2 2026-11-06: after the pkgECF block (which starts bodies afresh) and with bodies||, as the SIL block does; the node's own bodies source */
+ const __src=(s.match(/if\(Object\.keys\(SIL\)\.length\)\{bodies=\(bodies\|\|(\(Array\.isArray\(PASS\.bodies\)\?PASS\.bodies:\$\('[^']+'\)\.first\(\)\.json\.bodies\))\)\.slice\(\);/)||[])[1];if(!__src)throw new Error(f+': SIL bodies source not found');
+ s=rep(s,"if(Object.keys(SIL).length){bodies=(bodies||","/* pkgUND: each seat's uncured E-UNG and E-HOLD-UND answers are added to its drv_uncured */\n"
+  +"if(Object.keys(UNDF).length){bodies=(bodies||"+__src+").slice();\n"
   +" for(const [seat,its] of Object.entries(UNDF)){const i=bodies.findIndex(x=>{try{return JSON.parse(x).payload.judge_seat===seat;}catch(e){return false;}});if(i<0)continue;const bb=JSON.parse(bodies[i]);const p=bb.payload;\n"
   +"  p.drv_uncured=(p.drv_uncured||0)+its.length;anySil=true;und_counted.push({seat,items:its});\n"
-  +"  p.verdict_raw=p.verdict_raw+'\\n[AUDIT v42: COLLISION GRADE UNCURED (pkgUND) -- SEAT: '+seat+'; ITEMS: '+its.join('; ')+'; counted in drv_uncured. REVIEW THIS ROW.]';bodies[i]=JSON.stringify(bb);}}",f);
+  +"  p.verdict_raw=p.verdict_raw+'\\n[AUDIT v42: COLLISION GRADE UNCURED (pkgUND) -- SEAT: '+seat+'; ITEMS: '+its.join('; ')+'; counted in drv_uncured. REVIEW THIS ROW.]';bodies[i]=JSON.stringify(bb);}}\n"
+  +"if(Object.keys(SIL).length){bodies=(bodies||",f);
  s=rep(s,"tally,errors,silent_counted,ecol_counted}","tally,errors,silent_counted,ecol_counted,und_counted}",f);
- save(f,s0,s,5);}
+ save(f,s0,s,6);}
 
 // ---- (3) the collision instruction ----
 const COLA="Any other link: D<i>: STANDS -- GROUND: <reason>.";

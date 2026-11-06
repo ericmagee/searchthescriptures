@@ -81,6 +81,8 @@ OK   Send Back Build 33107: every base item is still sent unchanged; the only ne
 OK   33107: gemini D1 to D6 raised (no graded collision line), chatgpt D6 vs C6 marked
 OK   Send_Back_Record.js: UND.cure on E-UNG and marked items; UNCURED counted in drv_uncured with an AUDIT v42 line; reported in und_counted
 OK   Alt_Send_Back_Record.js: UND.cure on E-UNG and marked items; UNCURED counted in drv_uncured with an AUDIT v42 line; reported in und_counted
+OK   Send_Back_Record.js: E-COL on gemini and E-UNG on sol both counted (gemini 1, sol 1, AUDIT v41 and v42 kept); bodies read from Panel Cure Check
+OK   Alt_Send_Back_Record.js: E-COL on gemini and E-UNG on sol both counted (gemini 1, sol 1, AUDIT v41 and v42 kept); bodies read from Alt Seated
 OK   Panel Build and Build Independent Verdict state the pressed-link rule and the UNDERDETERMINED ground, once each
 
-28 OK, 0 FAIL
+30 OK, 0 FAIL

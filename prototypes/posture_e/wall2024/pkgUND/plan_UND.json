@@ -19,15 +19,15 @@
    "file": "Send_Back_Record.js",
    "base": "pkgECL/patched",
    "base_sha": "37ee50bb1fb88386",
-   "final_sha": "4a521bed41adab31",
-   "edits": 5
+   "final_sha": "b76b6c0f2b3f3d16",
+   "edits": 6
   },
   {
    "file": "Alt_Send_Back_Record.js",
    "base": "pkgECL/patched",
    "base_sha": "2099caf47f46d4aa",
-   "final_sha": "c1869d93333d92a7",
-   "edits": 5
+   "final_sha": "efbfd52ff8d5acb1",
+   "edits": 6
   },
   {
    "file": "Panel_Build.js",

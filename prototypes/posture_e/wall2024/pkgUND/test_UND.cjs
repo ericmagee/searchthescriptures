@@ -51,6 +51,13 @@ for(const run of ['33040','33060','33083','33107']){let A,B;try{A=sb('pkgECL/pat
 // (4) Send Back Record: the hook, the counting and the parse
 for(const f of ['Send_Back_Record.js','Alt_Send_Back_Record.js']){const s=fs.readFileSync('pkgUND/patched/'+f,'utf8');
  T(f+': UND.cure on E-UNG and marked items; UNCURED counted in drv_uncured with an AUDIT v42 line; reported in und_counted',/if\(it\.rule==='E-UNG'\|\|it\.und\)\{let __u;try\{__u=UND\.cure\(/.test(s)&&/p\.drv_uncured=\(p\.drv_uncured\|\|0\)\+its\.length;anySil=true;und_counted\.push/.test(s)&&s.includes('[AUDIT v42: COLLISION GRADE UNCURED (pkgUND)')&&s.includes('silent_counted,ecol_counted,und_counted}'));}
+// (4b) W2 2026-11-06: an uncured E-COL item on one seat and an uncured pkgUND item on another both stay counted (the tail of the node, run alone)
+for(const [f,src] of [['Send_Back_Record.js','Panel Cure Check'],['Alt_Send_Back_Record.js','Alt Seated']]){const s=fs.readFileSync('pkgUND/patched/'+f,'utf8');const a=s.indexOf('let bodies=null,anySil=false;'),b=s.indexOf('return [{json:{...PASS',a);
+ const mk=seat=>JSON.stringify({payload:{judge_seat:seat,drv_uncured:0,verdict_raw:'x'}});const PASS={bodies:null};let asked=null;
+ const $=n=>{asked=n;return {first:()=>({json:{bodies:[mk('gemini'),mk('sol')]}})};};
+ const r=new Function('PASS','ECF','UNDF','SIL','$',s.slice(a,b)+'\nreturn {bodies,und_counted,ecol_counted};')(PASS,{gemini:['S1 (E-COL)']},{sol:['S2 (E-UNG)']},{},$);
+ const P=r.bodies.map(x=>JSON.parse(x).payload);const g=P.find(p=>p.judge_seat==='gemini'),so=P.find(p=>p.judge_seat==='sol');
+ T(f+': E-COL on gemini and E-UNG on sol both counted (gemini 1, sol 1, AUDIT v41 and v42 kept); bodies read from '+src,g.drv_uncured===1&&so.drv_uncured===1&&/AUDIT v41/.test(g.verdict_raw)&&/AUDIT v42/.test(so.verdict_raw)&&asked===src);}
 // (5) the instruction
 const P=['Panel_Build.js','Build_Independent_Verdict.js'].map(f=>fs.readFileSync('pkgUND/patched/'+f,'utf8'));
 T('Panel Build and Build Independent Verdict state the pressed-link rule and the UNDERDETERMINED ground, once each',P.every(s=>s.split('is not any other link: it takes a graded D<i> vs C<j> line').length===2&&s.includes('[L1] <reference> \\"<the KJV words both readings rest on>\\" and what the record leaves open')));
