@@ -1,0 +1,49 @@
+OK   every node: base and final shas match the plan
+OK   every node parses as an n8n Code node body
+OK   K-AG library: one text, once, in each of the 22 library nodes, with 'K-AG':'TRIAL' in ENF_STATUS
+OK   nothing else changed in a library node: undoing the five edits gives the base back
+OK   Alt Judge Enforcer Build is still the clone of Judge Enforcer Build
+   32980 gemini: ANSWER CHECK lines 42; E-ANS grades read before 42, after 42 (new 0, of them FAILS read as MISSES 0); not read 0 {}
+   32980 grok: ANSWER CHECK lines 37; E-ANS grades read before 34, after 37 (new 3, of them FAILS read as MISSES 3); note: form note, record-only, not an item: FAILS read as MISSES, 3 lines (W3 2283 rule 1); not read 0 {}
+OK      32980 grok: one FAILS note, record-only, kind enforcer_check, no cure status
+   32980 sol: ANSWER CHECK lines 85; E-ANS grades read before 47, after 49 (new 2, of them FAILS read as MISSES 1); note: form note, record-only, not an item: FAILS read as MISSES, 1 line (W3 2283 rule 1); not read 36 {"MEANS: NONE (UNPROVEN)":36}
+OK      32980 sol: one FAILS note, record-only, kind enforcer_check, no cure status
+   32980 chatgpt: ANSWER CHECK lines 85; E-ANS grades read before 0, after 49 (new 49, of them FAILS read as MISSES 1); note: form note, record-only, not an item: FAILS read as MISSES, 1 line (W3 2283 rule 1); not read 36 {"MEANS: NONE (UNPROVEN)":36}
+OK   32980 chatgpt: all 49 witness lines (MEANS not NONE) are read; before, 0
+OK      32980 chatgpt: one FAILS note, record-only, kind enforcer_check, no cure status
+   32949 chatgpt: ANSWER CHECK lines 72; E-ANS grades read before 49, after 52 (new 3, of them FAILS read as MISSES 3); note: form note, record-only, not an item: FAILS read as MISSES, 3 lines (W3 2283 rule 1); not read 20 {"graded UNPROVEN":3,"MEANS: NONE (UNPROVEN)":17}
+OK      32949 chatgpt: one FAILS note, record-only, kind enforcer_check, no cure status
+   32949 grok: ANSWER CHECK lines 66; E-ANS grades read before 49, after 53 (new 4, of them FAILS read as MISSES 3); note: form note, record-only, not an item: FAILS read as MISSES, 3 lines (W3 2283 rule 1); not read 13 {"graded UNPROVEN":9,"ANSWER: NONE":4}
+OK      32949 grok: one FAILS note, record-only, kind enforcer_check, no cure status
+   32973 chatgpt: ANSWER CHECK lines 50; E-ANS grades read before 49, after 50 (new 1, of them FAILS read as MISSES 1); note: form note, record-only, not an item: FAILS read as MISSES, 1 line (W3 2283 rule 1); not read 0 {}
+OK      32973 chatgpt: one FAILS note, record-only, kind enforcer_check, no cure status
+   32973 gemini: ANSWER CHECK lines 50; E-ANS grades read before 49, after 50 (new 1, of them FAILS read as MISSES 1); note: form note, record-only, not an item: FAILS read as MISSES, 1 line (W3 2283 rule 1); not read 0 {}
+OK      32973 gemini: one FAILS note, record-only, kind enforcer_check, no cure status
+   32973 grok: ANSWER CHECK lines 117; E-ANS grades read before 48, after 50 (new 2, of them FAILS read as MISSES 2); note: form note, record-only, not an item: FAILS read as MISSES, 2 lines (W3 2283 rule 1); not read 67 {"ANSWER: NONE":67}
+OK      32973 grok: one FAILS note, record-only, kind enforcer_check, no cure status
+OK   no seat loses an E-ANS grade it had before
+OK   single quotes: an apostrophe inside a word (fathers', link's) does not close the quote; the line is read as MEETS
+OK   curly quotes are read, and FAILS is read as MISSES
+OK   the enforcer is shown the MEANS and ANSWER whole
+   32980 gemini: ANSWER CHECK rows 42; grades {"MEETS":42}; ANSWER: NONE rows {}; K-AG items 0
+   32980 grok: ANSWER CHECK rows 37; grades {"MEETS":32,"FAILS":3,"MISSES":2}; ANSWER: NONE rows {}; K-AG items 0
+   32980 sol: ANSWER CHECK rows 85; grades {"MEETS":83,"MISSES":1,"FAILS":1}; ANSWER: NONE rows {}; K-AG items 0
+   32980 chatgpt: ANSWER CHECK rows 85; grades {"MEETS":83,"MISSES":1,"FAILS":1}; ANSWER: NONE rows {}; K-AG items 0
+   32949 chatgpt: ANSWER CHECK rows 72; grades {"MEETS":49,"UNPROVEN":20,"FAILS":3}; ANSWER: NONE rows {"UNPROVEN":2}; K-AG items 0
+   32949 grok: ANSWER CHECK rows 66; grades {"MEETS":49,"UNPROVEN":12,"MISSES":2,"FAILS":3}; ANSWER: NONE rows {"MISSES":1,"UNPROVEN":3}; K-AG items 0
+   32973 chatgpt: ANSWER CHECK rows 50; grades {"MEETS":49,"FAILS":1}; ANSWER: NONE rows {}; K-AG items 0
+   32973 gemini: ANSWER CHECK rows 50; grades {"MEETS":49,"FAILS":1}; ANSWER: NONE rows {}; K-AG items 0
+   32973 grok: ANSWER CHECK rows 117; grades {"MEETS":45,"FAILS":69,"MISSES":3}; ANSWER: NONE rows {"FAILS":67}; K-AG items 0
+OK   stored runs: no K-AG item (every grade is MEETS, MISSES, FAILS or UNPROVEN, and no ANSWER: NONE row is graded MEETS)
+OK   rows read by K-AG equal the ANSWER CHECK lines on every seat
+OK   32973 grok: 67 ANSWER: NONE rows, none MEETS; 32949 grok: 4, none MEETS
+OK   K-AG: a grade the reader cannot map (PARTIAL) is an item
+OK   K-AG: no grade after the ANSWER is an item
+OK   K-AG: ANSWER: NONE graded MEETS is an item
+OK   K-AG: ANSWER: NONE graded FAILS, a bolded MEETS with an apostrophe in the quote, and a mixed-case Meets raise nothing
+OK   K-AG items are TRIAL drv items with side JUDGE, a label, and one AUDIT mark each
+   item line: [ANSWER CHECK Matthew 1:25 (DR2)] your ANSWER CHECK line grades MEETS where the ANSWER is NONE; no answer cannot meet a press. Write the line again with MISSES as its grade (UNPROVEN if the press has no MEANS sentence), or write NOT HELD with your reason. Your line: ANSWER CHECK: Matthew 1:25 -- [DR
+OK   cure: no reply lines: every K-AG item is UNCURED and silent, so each counts (silence rule)
+OK   cure: the line written again graded MISSES cures; NOT HELD cures
+OK   cure: ANSWER: NONE written again as MEETS is UNCURED, written, so recorded only (not counted)
+29 OK 0 FAIL
