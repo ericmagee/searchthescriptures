@@ -1,0 +1,155 @@
+{
+ "Alternate_Build.js": {
+  "edits": [
+   "kcmt filter",
+   "kcmtGrade2024",
+   "K-CMT cure plural"
+  ],
+  "base_sha": "5b73334311b8",
+  "new_sha": "b3e4f0bc6a7e"
+ },
+ "Alternate_Cure_Build.js": {
+  "edits": [
+   "kcmt filter",
+   "kcmtGrade2024",
+   "K-CMT cure plural"
+  ],
+  "base_sha": "5ce22ffbc445",
+  "new_sha": "6dfda4ea7299"
+ },
+ "Alternate_Cure_Normalize.js": {
+  "edits": [
+   "kcmt filter",
+   "kcmtGrade2024",
+   "K-CMT cure plural"
+  ],
+  "base_sha": "bafc789109bb",
+  "new_sha": "ff3ad3708e85"
+ },
+ "Alternate_Merge.js": {
+  "edits": [
+   "kcmt filter",
+   "kcmtGrade2024",
+   "K-CMT cure plural"
+  ],
+  "base_sha": "f85a5765ed96",
+  "new_sha": "569917c36b99"
+ },
+ "Alternate_Payloads.js": {
+  "edits": [
+   "kcmt filter",
+   "kcmtGrade2024",
+   "K-CMT cure plural"
+  ],
+  "base_sha": "eeb22b7a25bf",
+  "new_sha": "bbefe3c6f48c"
+ },
+ "Cure_Build.js": {
+  "edits": [
+   "kcmt filter",
+   "kcmtGrade2024",
+   "K-CMT cure plural"
+  ],
+  "base_sha": "e7fd03f66995",
+  "new_sha": "593deb9cb468"
+ },
+ "Cure_Check.js": {
+  "edits": [
+   "kcmt filter",
+   "kcmtGrade2024",
+   "K-CMT cure plural"
+  ],
+  "base_sha": "f6ab3202f20c",
+  "new_sha": "e678ff521382"
+ },
+ "Cure_Normalize.js": {
+  "edits": [
+   "kcmt filter",
+   "kcmtGrade2024",
+   "K-CMT cure plural"
+  ],
+  "base_sha": "9150f638a977",
+  "new_sha": "42e70a9f29c9"
+ },
+ "Extract_Independent_Verdict.js": {
+  "edits": [
+   "kcmt filter",
+   "kcmtGrade2024",
+   "K-CMT cure plural"
+  ],
+  "base_sha": "5b5e58941fa9",
+  "new_sha": "6d34bc060876"
+ },
+ "Panel_Cure_Build_1.js": {
+  "edits": [
+   "kcmt filter",
+   "kcmtGrade2024",
+   "K-CMT cure plural"
+  ],
+  "base_sha": "f77703873e4d",
+  "new_sha": "9bcde6d37b04"
+ },
+ "Panel_Cure_Build_2.js": {
+  "edits": [
+   "kcmt filter",
+   "kcmtGrade2024",
+   "K-CMT cure plural"
+  ],
+  "base_sha": "fef3f1f9d8b8",
+  "new_sha": "a7c7b5bc01da"
+ },
+ "Panel_Cure_Build_3.js": {
+  "edits": [
+   "kcmt filter",
+   "kcmtGrade2024",
+   "K-CMT cure plural"
+  ],
+  "base_sha": "175f7a7e6cd5",
+  "new_sha": "d56af9d30e62"
+ },
+ "Panel_Cure_Check.js": {
+  "edits": [
+   "kcmt filter",
+   "kcmtGrade2024",
+   "K-CMT cure plural"
+  ],
+  "base_sha": "46ae2ec26ace",
+  "new_sha": "2c426555ddec"
+ },
+ "Panel_Cure_Normalize_1.js": {
+  "edits": [
+   "kcmt filter",
+   "kcmtGrade2024",
+   "K-CMT cure plural"
+  ],
+  "base_sha": "d87fa730f9cb",
+  "new_sha": "43c3e6229a0e"
+ },
+ "Panel_Cure_Normalize_2.js": {
+  "edits": [
+   "kcmt filter",
+   "kcmtGrade2024",
+   "K-CMT cure plural"
+  ],
+  "base_sha": "f7a6bbb649c5",
+  "new_sha": "a0df980b0821"
+ },
+ "Panel_Cure_Normalize_3.js": {
+  "edits": [
+   "kcmt filter",
+   "kcmtGrade2024",
+   "K-CMT cure plural"
+  ],
+  "base_sha": "e3dcebfb8c28",
+  "new_sha": "f89436ebb314"
+ },
+ "Panel_Payloads.js": {
+  "edits": [
+   "kcmt filter",
+   "kcmtGrade2024",
+   "K-CMT cure plural"
+  ],
+  "base_sha": "72ab80e677b5",
+  "new_sha": "66aabe0bf0f4"
+ }
+}

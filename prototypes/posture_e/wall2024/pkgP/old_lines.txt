@@ -1,0 +1,104 @@
+=== 1cd2f5ce chatgpt n=4 fn=4
+ 0: BROKEN. [L1] The record presents a dispute about the timing of Joseph's knowing of Mary. [L3] The defender's later answer does not establish the beginning of the period described by Matthew 1:25 against the meaning pressed. [L4] The unanswered proven press bre
+ 1: RESULT: UNDERDETERMINED -- recomputed after the cure from the cured lines (RETRACTED D2 vs C3 (DEFENDER LINK BROKEN to UNDERDETERMINED); RETRACTED D3 vs C2 (CHALLENGER LINK BROKEN to UNDERDETERMINED)): HELD-1, CHALLENGE STANDING PROP-DEPENDENT, no collision li
+ 2: RULING -- D2 vs C3 -- DEFENDER LINK BROKEN
+ 3: RULING -- D3 vs C2 -- CHALLENGER LINK BROKEN
+=== 1cd2f5ce grok n=10 fn=10
+ 0: BROKEN. The conclusion that there was no biological father cannot agree with Acts 2:30, "of the fruit of his loins, according to the flesh, he would raise up Christ to sit on his throne" [L1], once the close drops any route of David's line through Mary and off
+ 1: CLAUSE: BROKEN-1 -- n=6 w=0 k=1
+ 2: KEYSTONE: D6 -- BROKEN -- the conclusion that Christ had no biological father, the Holy Ghost the source of the conception and Mary the only human parent
+ 3: CHALLENGER CONCEDED LINKS: 1 -- premise 3 UNEXHIBITED (Matthew 1:19 and Luke 1:34 answers fail to show a knowing that fits those verses). Spared: premises 1, 2, 4, 5 and 6, which exhibit two prior layers and meet their proven presses. No premise is VOID.
+ 4: RULING -- D2 vs C3 -- CHALLENGER LINK BROKEN
+ 5: APPLIED: the rule requires the knowing claim to agree with not-knowing until the birth; the verse states the not-knowing until the birth; so CHALLENGER LINK BROKEN.
+ 6: RULING -- D6 -- BROKEN
+ 7: APPLIED: the rule requires the no-biological-father link to agree with that meaning or show a fit; the answer offers a reckoned house and disclaims any route through Mary; so BROKEN.
+ 8: RULING -- keystone D6 -- BROKEN
+ 9: APPLIED: the rule requires the conclusion link to agree with the loins-according-to-the-flesh meaning; the close does not show that fit; so BROKEN.
+=== 1cd2f5ce sol n=2 fn=2
+ 0: CONCEDED LINKS: 0 -- Premises 1, 2, 3, 4, 5 and 6 are spared. Premise 1 retains divine causation without bodily seed supplied by the Spirit; premise 2 retains the no-union inference without requiring one exclusive meaning of coming together; premise 3 rests on
+ 1: CHALLENGER CONCEDED LINKS: 0 -- Premises 1, 2, 3, 4, 5 and 6 are spared. C1 exhibits paternal pedigree; C2 connects flesh, seed and remote ancestry; C3 exhibits its disputed espousal chronology and answers through the comparison with Elisabeth; C4 distinguishe
+=== 5e640b21 chatgpt n=5 fn=5
+ 0: BROKEN. [L1][L3] The defender left a proven witness against the conclusion link unanswered. [L1][L3][L4] The challenger also failed to fit its proposed union within the espousal to the witness about coming together. Both sides exhibited chains, but neither is 
+ 1: RESULT: UNDERDETERMINED -- recomputed after the cure from the cured lines (RETRACTED D6 vs C1 (DEFENDER LINK BROKEN to UNDERDETERMINED)): HELD-1, CHALLENGE STANDING PROP-DEPENDENT, 1 collision line(s) stand graded CHALLENGER LINK BROKEN.
+ 2: KEYSTONE: D6 -- BROKEN -- The conclusion that Jesus had no human biological father is the last declared link.
+ 3: D1 vs C2 (Matthew 1:18): CHALLENGER LINK BROKEN (Commitments 3 and 7) -- Matthew 1:18 says "before they came together, she was found with child of the Holy Ghost" [L1]; 1 Corinthians 7:5 says "and come together again, that Satan tempt you not for your incontin
+ 4: FORCED: D1 vs C2 -- MEANS [CR3]: "the pregnancy was found before any union, with its source named." -- ANSWER [DR3]: "The row dates the finding before the taking into his house. It fits a knowing within the espousal, which comes before that taking." -- FAILS: 
+=== 5e640b21 gemini n=0 fn=0
+=== 5e640b21 grok n=13 fn=13
+ 0: CHALLENGER CONCEDED LINKS: 1 -- premise 2 UNEXHIBITED (Matthew 1:18 answer FAILS: the taking verses do not carry synerchomai, come together, as the taking). Premise 1 spared SUPPORTED. Premise 4 spared SUPPORTED. Premise 3 VOID: charge word "only" (universal) 
+ 1: D1 vs C2 (Matthew 1:18): CHALLENGER LINK BROKEN -- a knowing within the espousal cannot fit a child already found before they came together -- GROUND: [L1] Matthew 1:18 "before they came together, she was found with child of the Holy Ghost" with [L3] 1 Corinth
+ 2: FORCED: D1 vs C2 -- MEANS [CR3]: "the pregnancy was found before any union, with its source named." -- ANSWER [DR3]: "The row dates the finding before the taking into his house. It fits a knowing within the espousal, which comes before that taking." -- FAILS: 
+ 3: D2 vs C2 (Matthew 1:18): CHALLENGER LINK BROKEN -- the same espousal-knowing cannot be the means of a conception the narrator places before they came together -- GROUND: [L1] Matthew 1:18 "before they came together, she was found with child of the Holy Ghost" 
+ 4: FORCED: D2 vs C2 -- MEANS [CR3]: "the pregnancy was found before any union, with its source named." -- ANSWER [DR3]: "The row dates the finding before the taking into his house. It fits a knowing within the espousal, which comes before that taking." -- FAILS: 
+ 5: D6 vs C2 (Matthew 1:20): CHALLENGER LINK BROKEN -- the keystone agrees with a conception of the Holy Ghost, and the espousal-knowing claim does not -- GROUND: [L1] Matthew 1:20 "that which is conceived in her is of the Holy Ghost" and [L3] Matthew 1:18 "before
+ 6: FORCED: D6 vs C2 -- MEANS [CR3]: "the pregnancy was found before any union, with its source named." -- ANSWER [DR3]: "The row dates the finding before the taking into his house. It fits a knowing within the espousal, which comes before that taking." -- FAILS: 
+ 7: ANSWER CHECK: Luke 1:35 -- [DR3 premise 3] -- MEANS: "the therefore supplies a ground, namely the Spirit's coming and the overshadowing, for what is born of her." -- ANSWER: "The calling of 1:35 repeats, with also, the calling of 1:32." -- MEETS -- the calling
+ 8: ANSWER CHECK: Hebrews 1:5 -- [DR3] -- MEANS: "begetting-language for this Son has God as the speaker and the one who begets." -- ANSWER: "gennaō is set by the writer beside the covenant formula of a son who had a father in the flesh." -- MEETS -- the covenant 
+ 9: ANSWER CHECK: John 3:6 -- [DR3] -- MEANS: "the second birth of believers is a different kind of birth, added to the first." -- ANSWER: "The verse keeps two kinds." -- MEETS -- two kinds are agreed; premise 5 is VOID and not counted.
+ 10: ANSWER CHECK: John 1:13 -- [DR3 premise 5] -- MEANS: "the row sets of God against of man as the origin of the birth it names." -- ANSWER: "John 1:12 identifies who it names: them that believe on his name." -- MEETS -- the believers are identified; premise 5 is
+ 11: ANSWER CHECK: Luke 1:35 -- [DR3 premise 6] -- MEANS: "the title is tied by therefore to what is born of her through the Spirit's coming." -- ANSWER: "It repeats 1:32's shall be called the Son of the Highest." -- MEETS -- the calling is engaged; premise 6 is VO
+ 12: ANSWER CHECK: 1 Chronicles 28:6 -- [DR3 premise 6] -- MEANS: "the covenant title for Solomon rests on I have chosen him, with no coming-upon of the Spirit." -- ANSWER: "In the Davidic house, the chosen king is the one on whom the Spirit comes." -- MEETS -- cho
+=== 819ccc9f chatgpt n=2 fn=2
+ 0: RESULT: UNDERDETERMINED -- recomputed after the cure from the cured lines (RETRACTED D4 vs C6 (CHALLENGER LINK BROKEN to UNDERDETERMINED); TIE (KB-0030)): HELD-1, CHALLENGE STANDING PROP-DEPENDENT, no collision line stands graded CHALLENGER LINK BROKEN.
+ 1: RULING -- challenger premise 6 and D4 vs C6 -- UNEXHIBITED; CHALLENGER LINK BROKEN
+=== 819ccc9f gemini n=4 fn=4
+ 0: CHALLENGER CONCEDED LINKS: 0 -- Premise 1 was supported; Premise 2 was VOID (adds universal word 'only'); Premise 3 was supported; Premise 4 was narrowed with valid footing; Premise 5 was VOID (adds universal word 'only'); Premise 6 was supported.
+ 1: RULING -- D1 vs C1 (Matthew 1:18) -- CHALLENGER LINK BROKEN
+ 2: APPLIED: the rule requires evaluating links against biblical meaning where scripture does not contradict itself; the record shows Matthew 1:18 explicitly dates the pregnancy of the Holy Ghost before coming together, refuting an espousal union; so CHALLENGER LI
+ 3: FORCED: D1 vs C1 -- MEANS [CR3]: "the finding is dated before the coming together. -- [L2] synerchomai (G4905, come together, lexicon: cohabit conjugally) | [L3] Luke 2:5 \"his espoused wife, being great with child\"" -- ANSWER [DR3]: "The verse dates the find
+=== 819ccc9f grok n=55 fn=55
+ 0: CLAUSE: BROKEN-1 -- n=6 w=0 k=1
+ 1: KEYSTONE: D6 -- BROKEN -- Christ had no human biological father; he was conceived of the Holy Ghost, born of Mary alone, and God is his Father.
+ 2: CONCEDED LINKS: 1 -- premise 6 UNEXHIBITED (pressed witness Romans 1:3 left unanswered: the answer names the verse and speaks only of the verb made). Premises 1, 2, 3, 4 and 5 spared: each link-round block exhibits at least two prior layers and meets its prove
+ 3: CHALLENGE STANDING: COLLAPSED -- L=1 c=1 -- Five listed premises are VOID and excluded from the count; the one weighed premise is unexhibited, so the challenge rests on an inadmissible claim.
+ 4: CHALLENGER CONCEDED LINKS: 1 -- premise 1 UNEXHIBITED (Matthew 1:18 answer FAILS; Luke 2:5 MISSES). Premise 2 VOID: the charge adds ONLY, a universal the quote "The remote father is reached by near fathers" lacks. Premise 5 VOID: the charge adds ONLY, a univer
+ 5: FORCED: D1 vs C1 -- MEANS [CR3]: "the finding is dated before the coming together." -- ANSWER [DR3]: "The verse dates the finding. A child found already exists, so the conceiving came earlier still, inside the espousal, which is where my link places the knowin
+ 6: FORCED: D6 vs C3 -- MEANS [DR2]: "the flesh-line is David's seed, which the oath sets in the loins." -- ANSWER [CR3]: "ginomai (G1096, to become) gives "made", the verb of a Son already named in the verse." -- FAILS: "the verb of a Son already named in the ver
+ 7: FORCED: D6 vs C1 -- MEANS [CR3]: "the finding is dated before the coming together." -- ANSWER [DR3]: "The verse dates the finding. A child found already exists, so the conceiving came earlier still, inside the espousal, which is where my link places the knowin
+ 8: ANSWER CHECK: Matthew 1:24 -- [DR2] -- MEANS: "no MEANS sentence" -- ANSWER: NONE -- FAILS -- "UNPROVEN, not a witness (ruling 398); not counted."
+ 9: ANSWER CHECK: John 1:12 -- [DR2] -- MEANS: "no MEANS sentence" -- ANSWER: NONE -- FAILS -- "UNPROVEN, not a witness (ruling 398); not counted."
+ 10: ANSWER CHECK: 2 Samuel 7:14 -- [DR2] -- MEANS: "no MEANS sentence" -- ANSWER: NONE -- FAILS -- "UNPROVEN, not a witness (ruling 398); not counted."
+ 11: ANSWER CHECK: Deuteronomy 20:7 -- [DR2] -- MEANS: "no MEANS sentence" -- ANSWER: NONE -- FAILS -- "UNPROVEN, not a witness (ruling 398); not counted."
+ 12: ANSWER CHECK: Luke 1:31 -- [DR2] -- MEANS: "no MEANS sentence" -- ANSWER: NONE -- FAILS -- "UNPROVEN, not a witness (ruling 398); not counted."
+ 13: ANSWER CHECK: Matthew 17:5 -- [DR2] -- MEANS: "no MEANS sentence" -- ANSWER: NONE -- FAILS -- "UNPROVEN, not a witness (ruling 398); not counted."
+ 14: ANSWER CHECK: Isaiah 8:4 -- [DR2] -- MEANS: "no MEANS sentence" -- ANSWER: NONE -- FAILS -- "UNPROVEN, not a witness (ruling 398); not counted."
+ 15: ANSWER CHECK: Psalms 132:11 -- [DR2] -- MEANS: "no MEANS sentence" -- ANSWER: NONE -- FAILS -- "UNPROVEN, not a witness (ruling 398); not counted."
+ 16: ANSWER CHECK: Hebrews 7:10 -- [DR2] -- MEANS: "no MEANS sentence under premise 5" -- ANSWER: NONE -- FAILS -- "UNPROVEN under premise 5, not a witness (ruling 398); not counted there."
+ 17: ANSWER CHECK: Numbers 1:2 -- [DR2] -- MEANS: "no MEANS sentence" -- ANSWER: NONE -- FAILS -- "UNPROVEN, not a witness (ruling 398); not counted."
+ 18: ANSWER CHECK: Ezra 2:59 -- [DR2] -- MEANS: "no MEANS sentence" -- ANSWER: NONE -- FAILS -- "UNPROVEN, not a witness (ruling 398); not counted."
+ 19: ANSWER CHECK: Romans 1:3 -- [CR3] -- MEANS: "the flesh-line is David's seed, which the oath sets in the loins." -- ANSWER: "ginomai (G1096, to become) gives made, the verb of a Son already named in the verse." -- MISSES -- "the answer does not engage the loins
+ 20: ANSWER CHECK: Acts 2:30 -- [DR2] -- MEANS: "no MEANS sentence under premise 6" -- ANSWER: NONE -- FAILS -- "UNPROVEN under premise 6, not a witness (ruling 398); not counted there."
+ 21: ANSWER CHECK: Matthew 1:2 -- [DR2] -- MEANS: "no MEANS sentence" -- ANSWER: NONE -- FAILS -- "UNPROVEN, not a witness (ruling 398); not counted."
+ 22: ANSWER CHECK: Luke 2:4 -- [DR2] -- MEANS: "no MEANS sentence under premise 6" -- ANSWER: NONE -- FAILS -- "UNPROVEN under premise 6, not a witness (ruling 398); not counted there."
+ 23: ANSWER CHECK: Luke 1:5 -- [DR2] -- MEANS: "no MEANS sentence" -- ANSWER: NONE -- FAILS -- "UNPROVEN, not a witness (ruling 398); not counted."
+ 24: ANSWER CHECK: Luke 2:5 -- [DR3] -- MEANS: "after the taking she is still called espoused." -- ANSWER: "One row joins his espoused wife and great with child." -- MISSES -- "the answer does not engage after the taking."
+ 25: ANSWER CHECK: Matthew 1:24 -- [CR3] -- MEANS: "no MEANS sentence" -- ANSWER: NONE -- FAILS -- "UNPROVEN against the challenger, not a witness (ruling 398); not counted."
+ 26: ANSWER CHECK: Luke 1:34 -- [CR3] -- MEANS: "no MEANS sentence" -- ANSWER: NONE -- FAILS -- "UNPROVEN against the challenger, not a witness (ruling 398); not counted."
+ 27: ANSWER CHECK: Deuteronomy 20:7 -- [CR3] -- MEANS: "no MEANS sentence" -- ANSWER: NONE -- FAILS -- "UNPROVEN against the challenger, not a witness (ruling 398); not counted."
+ 28: ANSWER CHECK: Matthew 1:16 -- [DR3] -- MEANS: "the active begat ends and the passive was born is of whom, the woman." -- ANSWER: "Of whom was born names the woman who bore." -- MEETS -- "premise 2 is VOID, so this check does not enter the count."
+ 29: ANSWER CHECK: Hebrews 7:10 -- [DR3] -- MEANS: "this row gives the chain for Levi, and it states no chain for the child." -- ANSWER: "This row is the pattern of the link." -- MISSES -- "premise 2 is VOID for ONLY; not counted."
+ 30: ANSWER CHECK: Luke 1:35 -- [DR3] -- MEANS: "the born thing is of thee, the woman." -- ANSWER: "Born of thee is the mother's bearing." -- MEETS -- "premise 2 is VOID; not counted."
+ 31: ANSWER CHECK: Matthew 1:2 -- [CR3] -- MEANS: "no MEANS sentence" -- ANSWER: NONE -- FAILS -- "UNPROVEN, not a witness; premise 2 VOID."
+ 32: ANSWER CHECK: Hebrews 7:9 -- [CR3] -- MEANS: "no MEANS sentence" -- ANSWER: NONE -- FAILS -- "UNPROVEN, not a witness; premise 2 VOID."
+ 33: ANSWER CHECK: Luke 1:31 -- [CR3] -- MEANS: "no MEANS sentence" -- ANSWER: NONE -- FAILS -- "UNPROVEN, not a witness; premise 2 VOID."
+ 34: ANSWER CHECK: John 1:13 -- [DR3] -- MEANS: "of God is set against of the will of man in the same verse." -- ANSWER: "The two births stand side by side." -- MEETS -- "premise 3 is VOID; not counted."
+ 35: ANSWER CHECK: 1 John 5:1 -- [DR3] -- MEANS: "the begetting is of those who believe, a regenerating." -- ANSWER: "The same verb is used with of God of believers who have fathers." -- MEETS -- "premise 3 is VOID; not counted."
+ 36: ANSWER CHECK: John 1:12 -- [CR3] -- MEANS: "no MEANS sentence" -- ANSWER: NONE -- FAILS -- "UNPROVEN, not a witness; premise 3 VOID."
+ 37: ANSWER CHECK: John 3:6 -- [CR3] -- MEANS: "no MEANS sentence" -- ANSWER: NONE -- FAILS -- "UNPROVEN, not a witness; premise 3 VOID."
+ 38: ANSWER CHECK: Luke 1:36 -- [DR3] -- MEANS: "it names a cousin and states no tribe of Mary." -- ANSWER: "The narrowed limb sets no tribe for Mary." -- MEETS -- "premise 4 is VOID; not counted."
+ 39: ANSWER CHECK: Exodus 6:23 -- [DR3] -- MEANS: "Aaron's house took a wife from Judah's princely house, so one kinsman does not fix a tribe." -- ANSWER: "The row gives a wife's house by naming her father." -- MEETS -- "premise 4 is VOID; not counted."
+ 40: ANSWER CHECK: Luke 1:5 -- [CR3] -- MEANS: "no MEANS sentence" -- ANSWER: NONE -- FAILS -- "UNPROVEN, not a witness; premise 4 VOID."
+ 41: ANSWER CHECK: Luke 2:4 -- [DR3] -- MEANS: "the house is placed on Joseph, the one who receives." -- ANSWER: "The house and lineage stand on the man Mary calls the child's father." -- MEETS -- "premise 5 is VOID for ONLY; not counted."
+ 42: ANSWER CHECK: Genesis 48:5 -- [DR3] -- MEANS: "standing is given by the one who receives." -- ANSWER: "Receiving rides on the begetting line." -- MEETS -- "premise 5 is VOID; not counted."
+ 43: ANSWER CHECK: 2 Samuel 7:12 -- [DR3] -- MEANS: "the oath also gives a kingdom and throne." -- ANSWER: "His is the seed which shall proceed out of thy bowels." -- MEETS -- "premise 5 is VOID; not counted."
+ 44: ANSWER CHECK: Matthew 1:20 -- [CR3] -- MEANS: "no MEANS sentence under challenger premise 5" -- ANSWER: NONE -- FAILS -- "UNPROVEN, not a witness; premise 5 VOID."
+ 45: ANSWER CHECK: Deuteronomy 25:6 -- [CR3] -- MEANS: "no MEANS sentence" -- ANSWER: NONE -- FAILS -- "UNPROVEN, not a witness; premise 5 VOID."
+ 46: ANSWER CHECK: Luke 1:32 -- [CR3] -- MEANS: "no MEANS sentence" -- ANSWER: NONE -- FAILS -- "UNPROVEN, not a witness; premise 5 VOID."
+ 47: ANSWER CHECK: Isaiah 7:11 -- [DR3] -- MEANS: "the offered scale of the sign in chapter 7 is depth or height." -- ANSWER: "Ask thee a sign of the LORD thy God; ask it either in the depth, or in the height above." -- FAILS -- "that quotation is NOT COUNTED; prem
+ 48: ANSWER CHECK: Isaiah 7:14 -- [DR3] -- MEANS: "the sign is named by a virgin conceiving." -- ANSWER: "Behold, a virgin shall conceive, and bear a son, and shall call his name Immanuel." -- MEETS -- "premise 6 is VOID; not counted."
+ 49: ANSWER CHECK: Isaiah 8:3 -- [DR3] -- MEANS: "the prophet's child has a name commanded by the LORD, different from Immanuel's." -- ANSWER: "Two names, one measure." -- MEETS -- "premise 6 is VOID; not counted."
+ 50: ANSWER CHECK: Matthew 1:23 -- [DR3] -- MEANS: "no MEANS sentence" -- ANSWER: NONE -- FAILS -- "UNPROVEN, and the [DR3] quotation is NOT COUNTED; premise 6 VOID."
+ 51: RULING -- D6 vs C3 (Romans 1:3) -- DEFENDER LINK BROKEN
+ 52: APPLIED: the rule requires the link to agree with the pressed meaning or show a fit; the record shows no fit beyond the verb made; so DEFENDER LINK BROKEN.
+ 53: RULING -- keystone D6 -- BROKEN
+ 54: APPLIED: the rule requires the keystone to be graded from the collision; the collision grades it broken; so BROKEN.
