@@ -82,7 +82,7 @@ let hi=0;
 for(const g of HG){hi++;const id='H'+hi+'.1';
  items.push({ids:[{id,rule:'E-HOLD',seat:g.seat,grade:g.grade,item:'COLLISION '+g.link,flagged_line:g.line.slice(0,1500),response_line:g.line.slice(0,700)}],
   text:'ITEM H'+hi+' (E-HOLD, a collision line graded '+g.grade+'):\nTHE LINE ('+id+', '+g.seat+'): '+cut(g.line,1600)+'\nTHIS JUDGE\'S OWN ANSWER CHECK LINES ON THE VERSES THE LINE NAMES:\n'+(g.own.length?g.own.map(a=>'- '+acLab(a)+cut(a,900)).join('\n'):'(none on these verses)')
-  +(g.side0?'\nTHIS IS A LINK-STATE LINE. THIS JUDGE\'S ANSWER CHECK LINES ON THE '+(g.side0==='C'?'DEFENDER':'CHALLENGER')+'\'S ANSWERS TO PROVEN PRESSES: '+g.sideN+' in all; those not MEETS:\n'+(g.sideAc.length?g.sideAc.map(a=>'- '+acLab(a)+cut(a,900)).join('\n'):'(none: every one MEETS)'):'')});}
+  +(g.side0?'\nTHIS IS A LINK-STATE LINE. THIS JUDGE\'S ANSWER CHECK LINES ON THE '+(g.side0==='C'?'DEFENDER':'CHALLENGER')+'\'S ANSWERS TO PROVEN PRESSES: '+g.sideN+' in all; those not MEETS (these checks may be on presses against other links; one counts against this line only if its press is on this link):\n'+(g.sideAc.length?g.sideAc.map(a=>'- '+acLab(a)+cut(a,900)).join('\n'):'(none: every one MEETS)'):'')});}
 const KG=[];
 for(const j of judges){const ls=linesOf(j.t);for(const l of ls){const m=l.match(/^KEYSTONE\s*:\s*([DC]\d+)\s*(?:--|—|–|-)\s*([A-Z][A-Z -]*?)\b(?:\s*(?:--|—|–|-)\s*([\s\S]*))?$/);if(!m)continue;
  const link=m[1];const own=ls.filter(x=>x!==l&&new RegExp('^(?:FORCED\\s*:\\s*)?'+link+'\\b').test(x)).slice(0,6);KG.push({seat:j.seat,line:l,link,grade:m[2].trim(),own});}}
