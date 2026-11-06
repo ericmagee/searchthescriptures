@@ -1,0 +1,12 @@
+OK   the new cureLines has no own PRESSED, SHORT or RETRACTED pattern (all three through __RL.readLine)
+OK   16.1 RETRACTED with a rule id -> withdrawn, fields as the old reader
+OK   16.1 RETRACTED without a rule id -> withdrawn, fields as the old reader
+OK   16.1 RETRACTED to a LINK BROKEN grade stays malformed -> malformed, fields as the old reader
+OK   16.2 PRESSED | form -> pressed, fields as the old reader
+OK   16.2 PRESSED | form outside the old round set ([CR4]) stays malformed -> malformed, fields as the old reader
+OK   16.2 SHORT | form -> short, fields as the old reader
+OK   16.2 SHORT | form outside the old round set ([CR1]) stays malformed -> malformed, fields as the old reader
+OK   16.2 SHORT with a why under 10 characters stays malformed -> malformed, fields as the old reader
+OK   16.3 reversed pair inside RESTATED -> restated, fields as the old reader
+OK   16.3 the reversed pair is read D first
+11 OK, 0 FAIL
