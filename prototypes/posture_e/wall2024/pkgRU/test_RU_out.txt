@@ -1,0 +1,20 @@
+OK   live reads no card from a one-line card
+OK   pkgRU reads the one-line card: target D5 vs C4, grade CHALLENGER LINK BROKEN, four fields
+OK   pkgRU: the one-line card passes the card check
+OK   pkgRU: a RULING after a bar with no CLAIM/NAMED BY labels is not split or read as a card
+OK   five-line card read the same by live and pkgRU
+OK   live reads 'virgin' as its own quote
+OK   pkgRU reads one quote, the double-quoted sentence
+OK   pkgRU keeps a single-quoted span outside double quotes
+OK   pkgRU keeps the pkgR2 rule: a double-quoted span inside a single-quoted span is part of it
+   32998 chatgpt K-RUL|D4 vs C5|UNCURED -> K-RUL|D4 vs C5|CURED
+   33025 grok K-RUL|D3 vs C5|UNCURED -> K-RUL|D3 vs C5|CURED
+   33025 grok K-RUL|D5 vs C4|UNCURED -> K-RUL|D5 vs C4|CURED
+   33025 grok K-RUL|D5 vs C5|UNCURED -> K-RUL|D5 vs C5|CURED
+OK   cure replay: the only changes beyond the known pkgCR 33014 rows are 4 K-RUL UNCURED -> CURED (32998 chatgpt D4 vs C5; 33025 grok D3 vs C5, D5 vs C4, D5 vs C5)
+OK   gate: pkgRU equals pkgCM on every fixture seat (18 seats)
+OK   33040 Panel Cure Build 1: the cure prompt carries the restated-line sentence once, and nothing else changes
+OK   33040 Panel Cure Build 2: the cure prompt carries the restated-line sentence once, and nothing else changes
+OK   33040 Panel Cure Build 3: the cure prompt carries the restated-line sentence once, and nothing else changes
+OK   33040 Alternate Cure Build: the cure prompt carries the restated-line sentence once, and nothing else changes
+15 OK, 0 FAIL
