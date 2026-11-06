@@ -1,0 +1,17 @@
+{
+ "base": "pkgFC/patched (6bffc3f)",
+ "nodes": [
+  {
+   "file": "Judge_Enforcer_Build.js",
+   "name": "Judge Enforcer Build",
+   "base_sha": "9f737624cedd9366",
+   "final_sha": "60cee3a7c6baa199"
+  },
+  {
+   "file": "Alt_Judge_Enforcer_Build.js",
+   "name": "Alt Judge Enforcer Build",
+   "base_sha": "48aadbefe5e50f65",
+   "final_sha": "f64859b344ced713"
+  }
+ ]
+}

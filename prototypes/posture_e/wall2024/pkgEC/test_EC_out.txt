@@ -1,0 +1,17 @@
+OK   2 nodes: base (pkgFC) and final shas match the plan
+OK   both nodes parse as n8n Code node bodies
+OK   the only change from pkgFC is the E-COL group key line
+OK   pkgFC: the two FORCED lines are merged into one group and grok is given chatgpt's line
+OK   pkgEC: each judge's E-COL item carries its own line (4 groups)
+OK   pkgEC: an identical line in two seats is one item per seat
+OK   Alt Judge Enforcer Build groups the same way
+OK   33020: on pkgEC every E-COL item carries its own seat's line
+OK   32998: on pkgEC every E-COL item carries its own seat's line
+OK   33020: pkgFC reproduces the live fault (grok given chatgpt's FORCED D1 vs C2)
+
+--- replay ---
+33020: pkgFC 3 E-COL groups, 1 cross-seat (chatgpt+grok FORCED: D1 vs C2 -), seats given a line not their own: grok: FORCED: D1 vs C2 -- MEANS [CR3]: "the pr; pkgEC 4 items, seats given a line not their own: none
+32998: pkgFC 8 E-COL groups, 0 cross-seat (none), seats given a line not their own: none; pkgEC 8 items, seats given a line not their own: none
+From debate_enforcer_log (every E-COL enforcer_check row, runs 32725 to 33020), the cross-seat merges are 32936 COLLISION D1 vs C2 (chatgpt+grok; grok held a different FAILS: "Matthew sets the coming-together by what follows ...") and 33020 COLLISION D1 vs C2 (chatgpt+grok). Both gave grok chatgpt's line. There is no other cross-seat merge.
+
+10 OK, 0 FAIL
