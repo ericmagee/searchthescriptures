@@ -1,0 +1,24 @@
+OK   22 nodes: base (pkgSQ) and final shas match the plan; every node edited (the R.rp ids); Alternate Merge also writes the rows
+   base mark: [AUDIT v39: K-RECHK -- SEAT: grok; RULE: K-CMT; NEW: a contested grade line that names no Commitment N; LINE: D2 vs C4 (Luke 1:35): CHALLENGER LINK BROKEN -- th
+   pkgRCL mark: [AUDIT v39: K-RECHK -- SEAT: grok; CHANGE: S7; RULE: K-CMT; NEW: a contested grade line that names no Commitment N; LINE: D2 vs C4 (Luke 1:35): CHALLENGER LINK BROKEN -- 
+OK   unit: the mark names the change (CHANGE: S7) and is otherwise the base mark
+   rows: [{"run_token":"ODV1-T","seat":"grok","seat_role":"panel","judge_model":"x-ai/grok","kind":"send_back","rule":"K-RECHK","item":"S7","flagged_line":"D2 vs C4 (Luke 1:35): CHALLENGER LINK BROKEN -- the answer misses.","prompt_sent":null,"full_reply":null,"reply_error":null,"response_line":"D2 vs C4 (Luke 1:35): CHALLENGER LINK BROKEN (Commitment 3) -- the answer misses.","cure_status":null,"cure_reason":"NEW (K-CMT): a contested grade line that names no Commitment N (TRIAL rule, record-only; W3 2496)","at":"2026-11-06T17:49:33.887Z"}]
+OK   unit: one row per distinct mark (the same mark twice gives one row), in the 2496 form
+OK   unit: a text with no mark gives no row; a broken body gives no row and no throw
+   Alternate Merge 32998: ERR node not saved: Alt Seated
+   Alternate Merge 33014: ERR node not saved: Alt Seated
+   Alternate Merge 33020: ERR node not saved: Alt Seated
+   Alternate Merge 33021: ERR node not saved: Alt Seated
+   Alternate Merge 33025: ERR node not saved: Alt Seated
+   Alternate Merge 33040: runs
+   6 runs x 22 nodes: 64 node runs with real output; 0 K-RECHK marks with CHANGE in pkgRCL output
+OK   whole nodes on the 6 saved runs: identical to the base apart from CHANGE in the K-RECHK marks and the K-RECHK rows
+   Alternate Merge 33040: 0 K-RECHK rows; p_rows 88 -> 88
+OK   Alternate Merge runs whole on 33040 (saved Alt Seated; each package's own Alternate Merge Seat output); no marks in the saved texts, so no rows and the output equals the base
+   33040 Alt Seated alt_seats: ["sol"] (so Alternate Merge takes its full return)
+   injected: 1 body, the mark twice; rows 1: {"run_token":"ODV1-33040-4attrqbw","seat":"grok","seat_role":"panel","judge_model":"x-ai/grok-4.7","kind":"send_back","rule":"K-RECHK","item":"S7","flagged_line":"D2 vs C4 (Luke 1:35): CHALLENGER LINK BROKEN -- the answer misses.","prompt_sent":null,"full_reply":null,"reply_error":null,"response_line":"D2 vs C4 (Luke 1:35): CHALLENGER LINK BROKEN (Commitment 3) -- the answer misses.","cure_status":null,"cure_reason":
+   early return (alt_seats emptied): rows 1; p_rows 68 -> 69
+OK   early return (no alternate seated): the row is added to enforcer_log and p_rows; with no mark the output is Alternate Merge Seat's, unchanged
+OK   33040 with an injected mark: one K-RECHK row (grok, item S7, the new and original lines), in enforcer_log and p_rows; every other row as the base
+OK   every row has an item (the change id), a flagged_line and a response_line, cure_status null
+9 OK, 0 FAIL
