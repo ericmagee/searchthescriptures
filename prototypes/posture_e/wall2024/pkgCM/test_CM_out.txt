@@ -1,0 +1,53 @@
+OK   10 nodes: base and final shas match the plan
+OK   the 6 gate nodes base = pkgKY/patched (live 83ef4d98 = ec44727f for these nodes)
+OK   the 6 gate nodes carry one identical sbApply2024
+   JEB 33040: base 208 items, patched 208
+   grok E-CHAIN base: "ough that link fails at the collision.\"}"
+   grok E-CHAIN new:  "though that link fails at the collision."
+OK   (b) base reproduces live: grok E-CHAIN flagged line ends in the JSON tail "}
+OK   (b) patched: the same item, the line without the tail
+   JEB items changed: base-only 1, patched-only 1
+     - grok E-CHAIN CHAIN MARK :: the husband rows, though that link fails at the collision."}
+     + grok E-CHAIN CHAIN MARK :: d the husband rows, though that link fails at the collision.
+OK   (b) the only JEB change on 33040 is the grok E-CHAIN line
+OK   (b) every 33040 panel verdict: enforcer text begins with the E-APPLY text, line for line (3/3)
+   grok S20 live (pkgKY, tail line): NOT APPLIED: the flagged line is not in the judge text
+   grok S20 (b) only:                NOT APPLIED: the CHANGE TO line has no line form the engine reads
+   grok S20 (a)+(b):                 APPLIED
+   grok live (base, tail line): counted 1
+     G1 NOT APPLIED (E-APPLY S16) -> CURED -- the gate change was applied
+     G2 NOT APPLIED (E-APPLY S20) -> UNCURED -- the gate change was not applied
+   grok base with (b) only: counted 1
+     G1 NOT APPLIED (E-APPLY S16) -> CURED -- the gate change was applied
+     G2 NOT APPLIED (E-APPLY S20) -> UNCURED -- the gate change was not applied
+   grok pkgCM: counted 0
+     G1 NOT APPLIED (E-APPLY S16) -> CURED -- the gate change was applied
+OK   (a) live reproduced: S20 not applied, flagged line not in judge text
+OK   (b) alone is not enough: S20 found but refused for form
+OK   (a)+(b): S20 applies
+OK   (a)+(b): no gate item names S20 (G2 of live is gone)
+OK   (a)+(b): grok counted 0
+   grok corrected CHAIN MARK lines: DEFENDER CHAIN MARK: FOOTED -- D6 is carried by Matthew 1:18, Matthew 1:20 and Luke 1:35 w / CHALLENGER CHAIN MARK: STRAINED -- C3 floats: the block that states "Joseph knew Mary his 
+OK   (a) corrected text: CHALLENGER CHAIN MARK STRAINED, DEFENDER CHAIN MARK untouched
+OK   unit: DEFENDER CHAIN MARK over the CHALLENGER CHAIN MARK line is refused
+OK   unit: a CHAIN MARK line over a collision line is refused
+OK   unit: a collision line over a CHAIN MARK line is refused
+OK   unit: DEFENDER CHAIN MARK FOOTED -> SLACK applies
+OK   unit: SB_FORM still refuses "CHAIN MARK: FOOTED" without a side, and "DEFENDER CHAIN MARK: BROKEN"
+   gate sbApply/items/cures that differ base -> pkgCM (fixtures as stored): none
+OK   regression: no gate result changes on the 6 stored fixtures (33040 as stored keeps the tail, so S20 is still not found there)
+   corpus CHANGE TO payloads: 321; SB_FORM flips: 1
+     33040 grok CHALLENGER CHAIN MARK: STRAINED -- C3 floats: the block that states "J
+OK   corpus: every SB_FORM flip is a CHAIN MARK line
+   chatgpt S19: THE RULE FOR A BROKEN GRADE (the gate checks it, K-G4): if the answering side answered the witness, the link can break only by meaning, and ...
+   chatgpt S20: THE RULE FOR A BROKEN GRADE (the gate checks it, K-G4): if the answering side answered the witness, the link can break only by meaning, and ...
+   chatgpt S21: (no rule line)
+   chatgpt S22: (no rule line)
+   chatgpt S23: (no rule line)
+   chatgpt S24: (no rule line)
+   gemini S2: (no rule line)
+   grok S17: THE RULE FOR A BROKEN GRADE (the gate checks it, K-G4): if the answering side answered the witness, the link can break only by meaning, and ...
+OK   (c) the rule line goes on exactly the "right: BROKEN" E-HOLD items (chatgpt S19, S20; grok S17)
+OK   (c) chatgpt S19 names its pair in the FORCED form
+OK   (c) not on other rules
+23 OK, 0 FAIL

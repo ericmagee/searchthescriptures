@@ -1,0 +1,65 @@
+{
+ "base": "live ec44727f (83ef4d98 node code; /mnt/project-files/wall2024/prewrite_glm_83ef4d98.json)",
+ "nodes": [
+  {
+   "file": "Gate_Build.js",
+   "name": "Gate Build",
+   "base_sha": "f45dd74bf8e20b49",
+   "final_sha": "6d27868c4090d0d5"
+  },
+  {
+   "file": "Alt_Gate_Build.js",
+   "name": "Alt Gate Build",
+   "base_sha": "c9725d6cd06ffd9d",
+   "final_sha": "f49aa8697b1b2aad"
+  },
+  {
+   "file": "Gate_Record.js",
+   "name": "Gate Record",
+   "base_sha": "208e4a896d528ec0",
+   "final_sha": "4a7b328cb47f8e4b"
+  },
+  {
+   "file": "Alt_Gate_Record.js",
+   "name": "Alt Gate Record",
+   "base_sha": "2780e0219c6aa841",
+   "final_sha": "d2de93c05f1c65a2"
+  },
+  {
+   "file": "Alternate_Merge.js",
+   "name": "Alternate Merge",
+   "base_sha": "962e1fa1cdae4a4b",
+   "final_sha": "c74d7d5b349204b5"
+  },
+  {
+   "file": "Alternate_Merge_Seat.js",
+   "name": "Alternate Merge Seat",
+   "base_sha": "9296a521e271ec41",
+   "final_sha": "efad5cd556ca7c81"
+  },
+  {
+   "file": "Judge_Enforcer_Build.js",
+   "name": "Judge Enforcer Build",
+   "base_sha": "60cee3a7c6baa199",
+   "final_sha": "ff64541ae67fd48b"
+  },
+  {
+   "file": "Alt_Judge_Enforcer_Build.js",
+   "name": "Alt Judge Enforcer Build",
+   "base_sha": "f64859b344ced713",
+   "final_sha": "722fadebf8fe0c9f"
+  },
+  {
+   "file": "Send_Back_Build.js",
+   "name": "Send Back Build",
+   "base_sha": "4fe24c275f0b571d",
+   "final_sha": "86e8f70fbc2e6846"
+  },
+  {
+   "file": "Alt_Send_Back_Build.js",
+   "name": "Alt Send Back Build",
+   "base_sha": "5c2ea5e2be76afbd",
+   "final_sha": "4d3da6fdd02863c8"
+  }
+ ]
+}
