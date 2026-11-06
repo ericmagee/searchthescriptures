@@ -1,0 +1,42 @@
+OK   17 nodes; base_sha = merged_PWQA, final_sha = patched
+OK   32980 chatgpt, base: the 7 live items reproduce (DEFENDER premise 4, CHALLENGER premise 2, keystone, D1 vs C2, D2 vs C2, D3 vs C2, D6 vs C2)
+OK   32980 chatgpt, pkgR2: 0 items
+OK   32980: D1 vs C2 matches the combined card "RULING -- D1, D2, D3 and D6 vs C2"
+OK   32980: D2 vs C2 matches the combined card "RULING -- D1, D2, D3 and D6 vs C2"
+OK   32980: D3 vs C2 matches the combined card "RULING -- D1, D2, D3 and D6 vs C2"
+OK   32980: D6 vs C2 matches the combined card "RULING -- D1, D2, D3 and D6 vs C2"
+OK   32980: D4 vs C2 matches no card (not listed)
+OK   32980: D1 vs C3 does not match the C2 card
+     1cd2f5ce chatgpt: K-RUL items 4 -> 4
+OK   1cd2f5ce chatgpt: no new K-RUL item
+     1cd2f5ce grok: K-RUL items 8 -> 8
+OK   1cd2f5ce grok: no new K-RUL item
+     1cd2f5ce single: K-RUL items 2 -> 2
+OK   1cd2f5ce single: no new K-RUL item
+     1cd2f5ce sol: K-RUL items 1 -> 1
+OK   1cd2f5ce sol: no new K-RUL item
+     819ccc9f chatgpt: K-RUL items 3 -> 3
+OK   819ccc9f chatgpt: no new K-RUL item
+     819ccc9f gemini: K-RUL items 2 -> 2
+OK   819ccc9f gemini: no new K-RUL item
+     819ccc9f grok: K-RUL items 6 -> 6
+OK   819ccc9f grok: no new K-RUL item
+     819ccc9f single: K-RUL items 2 -> 2
+OK   819ccc9f single: no new K-RUL item
+     77cdcca0 single: K-RUL items 2 -> 2
+OK   77cdcca0 single: no new K-RUL item
+OK   krulQs: 'I drop "only".' ([CR3]); '"son of Joseph" is only supposed. KEPT' ([C -> ["I drop \"only\".","\"son of Joseph\" is only supposed. KEPT"]
+OK   krulQs: 'a husband who knew he was the cause would have no ground to put her a -> ["a husband who knew he was the cause would have no ground to put her away."]
+OK   krulQs: "before they came together" ([CR1]) and 'Joseph's house' ([CR2]) -> ["Joseph's house","before they came together"]
+OK   krulQs: ‘thy cousin Elisabeth’ ([DR3]) -> ["thy cousin Elisabeth"]
+OK   krulQs: the defender's answer, [CR3] -> []
+OK   krulQs: "he hath humbled his neighbour's wife" ([CR3]) -> ["he hath humbled his neighbour's wife"]
+OK   "D1 and D2 vs C2" matches D2 vs C2
+OK   "D1, D2 & D3 vs C4" matches D3 vs C4
+OK   "D1, D2 vs C2" does not match D2 vs C3
+OK   "D11 and D2 vs C2" does not match D1 vs C2
+OK   a single card matches as before
+OK   a card quoted in single quotes passes, NAMED BY and RULE
+OK   the same card failed on the base (the NAMED BY line quotes nothing)
+OK   a single-quoted NAMED BY not in the record still fails
+ALL OK

@@ -1,0 +1,192 @@
+{
+ "base": "merged_PWQA",
+ "nodes": [
+  {
+   "file": "Alternate_Build.js",
+   "name": "Alternate Build",
+   "base_sha": "f00d561b6798a82d",
+   "final_sha": "cc13caae49db4920",
+   "edits": [
+    "krulMatch combined card",
+    "krulQs single quotes",
+    "RULE single quotes"
+   ]
+  },
+  {
+   "file": "Alternate_Cure_Build.js",
+   "name": "Alternate Cure Build",
+   "base_sha": "eb0804ae050c15ad",
+   "final_sha": "e7197121fa67dde9",
+   "edits": [
+    "krulMatch combined card",
+    "krulQs single quotes",
+    "RULE single quotes"
+   ]
+  },
+  {
+   "file": "Alternate_Cure_Normalize.js",
+   "name": "Alternate Cure Normalize",
+   "base_sha": "e33d3f7d949d378f",
+   "final_sha": "1961b6ec6c9f60e2",
+   "edits": [
+    "krulMatch combined card",
+    "krulQs single quotes",
+    "RULE single quotes"
+   ]
+  },
+  {
+   "file": "Alternate_Merge.js",
+   "name": "Alternate Merge",
+   "base_sha": "ae45f6914522a343",
+   "final_sha": "ea2713728fa9d3e1",
+   "edits": [
+    "krulMatch combined card",
+    "krulQs single quotes",
+    "RULE single quotes"
+   ]
+  },
+  {
+   "file": "Alternate_Payloads.js",
+   "name": "Alternate Payloads",
+   "base_sha": "bbefe3c6f48c4c33",
+   "final_sha": "fa3f650212545592",
+   "edits": [
+    "krulMatch combined card",
+    "krulQs single quotes",
+    "RULE single quotes"
+   ]
+  },
+  {
+   "file": "Cure_Build.js",
+   "name": "Cure Build",
+   "base_sha": "a0d0849174e94f81",
+   "final_sha": "0c2d3ea98b0af480",
+   "edits": [
+    "krulMatch combined card",
+    "krulQs single quotes",
+    "RULE single quotes"
+   ]
+  },
+  {
+   "file": "Cure_Check.js",
+   "name": "Cure Check",
+   "base_sha": "dded5d7a4f0bc0a7",
+   "final_sha": "a67321d4f7287f27",
+   "edits": [
+    "krulMatch combined card",
+    "krulQs single quotes",
+    "RULE single quotes"
+   ]
+  },
+  {
+   "file": "Cure_Normalize.js",
+   "name": "Cure Normalize",
+   "base_sha": "5356a8f89b952aee",
+   "final_sha": "62ed9b2b4cdf4049",
+   "edits": [
+    "krulMatch combined card",
+    "krulQs single quotes",
+    "RULE single quotes"
+   ]
+  },
+  {
+   "file": "Extract_Independent_Verdict.js",
+   "name": "Extract Independent Verdict",
+   "base_sha": "6d34bc060876df4a",
+   "final_sha": "0d86a5db2e6c05a6",
+   "edits": [
+    "krulMatch combined card",
+    "krulQs single quotes",
+    "RULE single quotes"
+   ]
+  },
+  {
+   "file": "Panel_Cure_Build_1.js",
+   "name": "Panel Cure Build 1",
+   "base_sha": "e4b71ef276fd1569",
+   "final_sha": "f0bab7425c84c64f",
+   "edits": [
+    "krulMatch combined card",
+    "krulQs single quotes",
+    "RULE single quotes"
+   ]
+  },
+  {
+   "file": "Panel_Cure_Build_2.js",
+   "name": "Panel Cure Build 2",
+   "base_sha": "f9fa0e1b677823d7",
+   "final_sha": "49d3f8bdde6d3d3f",
+   "edits": [
+    "krulMatch combined card",
+    "krulQs single quotes",
+    "RULE single quotes"
+   ]
+  },
+  {
+   "file": "Panel_Cure_Build_3.js",
+   "name": "Panel Cure Build 3",
+   "base_sha": "a5328bf85032782a",
+   "final_sha": "45f9d04cfea60611",
+   "edits": [
+    "krulMatch combined card",
+    "krulQs single quotes",
+    "RULE single quotes"
+   ]
+  },
+  {
+   "file": "Panel_Cure_Check.js",
+   "name": "Panel Cure Check",
+   "base_sha": "c2ba70dd3580eccf",
+   "final_sha": "b43cbf23057da5a9",
+   "edits": [
+    "krulMatch combined card",
+    "krulQs single quotes",
+    "RULE single quotes"
+   ]
+  },
+  {
+   "file": "Panel_Cure_Normalize_1.js",
+   "name": "Panel Cure Normalize 1",
+   "base_sha": "c6a0be958209f00b",
+   "final_sha": "3a05827ec76d1f67",
+   "edits": [
+    "krulMatch combined card",
+    "krulQs single quotes",
+    "RULE single quotes"
+   ]
+  },
+  {
+   "file": "Panel_Cure_Normalize_2.js",
+   "name": "Panel Cure Normalize 2",
+   "base_sha": "1adefcb33eecbb1e",
+   "final_sha": "b5449de38b851841",
+   "edits": [
+    "krulMatch combined card",
+    "krulQs single quotes",
+    "RULE single quotes"
+   ]
+  },
+  {
+   "file": "Panel_Cure_Normalize_3.js",
+   "name": "Panel Cure Normalize 3",
+   "base_sha": "ff26d5537a1ec163",
+   "final_sha": "22ad292b750888b5",
+   "edits": [
+    "krulMatch combined card",
+    "krulQs single quotes",
+    "RULE single quotes"
+   ]
+  },
+  {
+   "file": "Panel_Payloads.js",
+   "name": "Panel Payloads",
+   "base_sha": "66aabe0bf0f47da9",
+   "final_sha": "7678fe78492c8f53",
+   "edits": [
+    "krulMatch combined card",
+    "krulQs single quotes",
+    "RULE single quotes"
+   ]
+  }
+ ]
+}
