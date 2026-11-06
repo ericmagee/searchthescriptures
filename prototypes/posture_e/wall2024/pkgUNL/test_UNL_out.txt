@@ -1,0 +1,32 @@
+OK   4 nodes; base (pkgABS/patched) and final shas match
+OK   every node carries src_UNL.js byte for byte and no copy of src_UND.js
+   33149 [DR2] list: pkgUND links [1,2,3,4,5,6]; pkgUNL ["D2 <- premise 4","D3 <- premise 5","D4 <- premise 6","D6 <- premise 1,2,3"]
+OK   33149: premises 1-3 press D6, 4 D2, 5 D3, 6 D4 (their LINK labels), not D1-D6 by position
+OK   unit: an unlabelled premise and LINK none raise nothing; a bold LINK label is read
+     [{"n":3,"premises":[1],"head":"1. LINK 3: a"},{"n":5,"premises":[4],"head":"4. **LINK 5**: c"}]
+OK   33149 chatgpt COLLISION D1 : pkgUND UNCURED, pkgUNL CURED
+     graded UNDERDETERMINED; [L1] COUNTED; states what the record leaves open
+OK   33149 chatgpt COLLISION D5 : pkgUND UNCURED, pkgUNL CURED
+     graded UNDERDETERMINED; [L1] COUNTED; states what the record leaves open
+OK   unit kept: no open point -> UNCURED
+     graded UNDERDETERMINED; the line does not state what the record leaves open (for example: "the record leaves open whether ...", "both readings agree with ...")
+OK   unit kept: open point but no [L1] -> UNCURED
+     graded UNDERDETERMINED; no [L1]: no verse is quoted with its reference under an [L1] tag
+OK   unit kept: KEEP -> UNCURED
+     a KEEP does not cure this item (pkgUND)
+  == 33040: E-UNG pkgABS 11 [gemini COLLISION D1; gemini COLLISION D2; gemini COLLISION D3; gemini COLLISION D4; gemini COLLISION D5; gemini COLLISION D6; grok COLLISION D1; grok COLLISION D3; grok COLLISION D4; grok COLLISION D5; grok COLLISION D6] -> pkgUNL 11 [gemini COLLISION D1 (pressed: [DR2] premise 1); gemini COLLISION D2 (pressed: [DR2] premise 2); gemini COLLISION D3 (pressed: [DR2] premise 3); gemini COLLISION D4 (pressed: [DR2] premise 4); gemini COLLISION D5 (pressed: [DR2] premise 5); gemini COLLISION D6 (pressed: [DR2] premise 6); grok COLLISION D1 (pressed: [DR2] premise 1); grok COLLISION D3 (pressed: [DR2] premise 3); grok COLLISION D4 (pressed: [DR2] premise 4); grok COLLISION D5 (pressed: [DR2] premise 5); grok COLLISION D6 (pressed: [DR2] premise 6)]
+OK   33040: every other item is sent unchanged
+  == 33060: E-UNG pkgABS 6 [gemini COLLISION D1; gemini COLLISION D2; gemini COLLISION D3; gemini COLLISION D4; gemini COLLISION D5; gemini COLLISION D6] -> pkgUNL 6 [gemini COLLISION D1 (pressed: [DR2] premise 1); gemini COLLISION D2 (pressed: [DR2] premise 2); gemini COLLISION D3 (pressed: [DR2] premise 3); gemini COLLISION D4 (pressed: [DR2] premise 4); gemini COLLISION D5 (pressed: [DR2] premise 5); gemini COLLISION D6 (pressed: [DR2] premise 6)]
+OK   33060: every other item is sent unchanged
+  == 33083: E-UNG pkgABS 2 [sol COLLISION D6; gemini COLLISION D6] -> pkgUNL 2 [sol COLLISION D6 (pressed: [DR2] premise 6); gemini COLLISION D6 (pressed: [DR2] premise 6)]
+OK   33083: every other item is sent unchanged
+  == 33107: E-UNG pkgABS 7 [gemini COLLISION D1; gemini COLLISION D2; gemini COLLISION D3; gemini COLLISION D4; gemini COLLISION D5; gemini COLLISION D6; sol COLLISION D1] -> pkgUNL 7 [gemini COLLISION D1 (pressed: [DR2] premise 1); gemini COLLISION D2 (pressed: [DR2] premise 2); gemini COLLISION D3 (pressed: [DR2] premise 3); gemini COLLISION D4 (pressed: [DR2] premise 4); gemini COLLISION D5 (pressed: [DR2] premise 5); gemini COLLISION D6 (pressed: [DR2] premise 6); sol COLLISION D1 (pressed: [DR2] premise 1)]
+OK   33107: every other item is sent unchanged
+  == 33129: E-UNG pkgABS 7 [gemini COLLISION D1; gemini COLLISION D2; gemini COLLISION D3; gemini COLLISION D4; gemini COLLISION D5; gemini COLLISION D6; sol COLLISION D4] -> pkgUNL 7 [gemini COLLISION D1 (pressed: [DR2] premise 1); gemini COLLISION D2 (pressed: [DR2] premise 2); gemini COLLISION D3 (pressed: [DR2] premise 3); gemini COLLISION D4 (pressed: [DR2] premise 4); gemini COLLISION D5 (pressed: [DR2] premise 5); gemini COLLISION D6 (pressed: [DR2] premise 6); sol COLLISION D4 (pressed: [DR2] premise 4)]
+OK   33129: every other item is sent unchanged
+  == 33149: E-UNG pkgABS 4 [gemini COLLISION D5; sol COLLISION D5; chatgpt COLLISION D1; chatgpt COLLISION D5] -> pkgUNL 0 []
+OK   33149: every other item is sent unchanged
+OK   33149: sol raises no E-UNG (its D3 is graded; premise 5 presses D3); gemini and chatgpt items name the labelled links
+OK   Send_Back_Record.js: the cure hook unchanged (UND.cure on E-UNG and marked items)
+OK   Alt_Send_Back_Record.js: the cure hook unchanged (UND.cure on E-UNG and marked items)
+18 OK, 0 FAIL
