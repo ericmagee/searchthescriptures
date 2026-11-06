@@ -1,0 +1,103 @@
+OK   R1a Panel Build: HEADS 10 -> 11, 1-10 identical, RULE_C K-RUL=11
+OK   R1c Panel Build: Commitment 10 gains its one sentence; the rest of the old PART2 is unchanged
+OK   R1a Reserve Build: HEADS 10 -> 11, 1-10 identical, RULE_C K-RUL=11
+OK   R1c Reserve Build: Commitment 10 gains its one sentence; the rest of the old PART2 is unchanged
+OK   R1a Panel Cure Build 1: HEADS 10 -> 11, 1-10 identical, RULE_C K-RUL=11
+OK   R1c Panel Cure Build 1: Commitment 10 gains its one sentence; the rest of the old PART2 is unchanged
+OK   R1a Panel Cure Build 2: HEADS 10 -> 11, 1-10 identical, RULE_C K-RUL=11
+OK   R1c Panel Cure Build 2: Commitment 10 gains its one sentence; the rest of the old PART2 is unchanged
+OK   R1a Panel Cure Build 3: HEADS 10 -> 11, 1-10 identical, RULE_C K-RUL=11
+OK   R1c Panel Cure Build 3: Commitment 10 gains its one sentence; the rest of the old PART2 is unchanged
+OK   R1a Alternate Build: HEADS 10 -> 11, 1-10 identical, RULE_C K-RUL=11
+OK   R1c Alternate Build: Commitment 10 gains its one sentence; the rest of the old PART2 is unchanged
+OK   R1a Alternate Cure Build: HEADS 10 -> 11, 1-10 identical, RULE_C K-RUL=11
+OK   R1c Alternate Cure Build: Commitment 10 gains its one sentence; the rest of the old PART2 is unchanged
+OK   R1a Accept Build: HEADS 10 -> 11, 1-10 identical, RULE_C K-RUL=11
+OK   R1c Accept Build: Commitment 10 gains its one sentence; the rest of the old PART2 is unchanged
+OK   R1a Accept Check: HEADS 10 -> 11, 1-10 identical, RULE_C K-RUL=11
+OK   R1c Accept Check: Commitment 10 gains its one sentence; the rest of the old PART2 is unchanged
+OK   R1 Accept Check: 10-heading reply -> FAULT (heading 11 missing); 11-heading reply -> ACCEPT, 11 lines
+OK   R1a Accept Return Build: HEADS 10 -> 11, 1-10 identical, RULE_C K-RUL=11
+OK   R1c Accept Return Build: Commitment 10 gains its one sentence; the rest of the old PART2 is unchanged
+OK   R1a Accept Final: HEADS 10 -> 11, 1-10 identical, RULE_C K-RUL=11
+OK   R1c Accept Final: Commitment 10 gains its one sentence; the rest of the old PART2 is unchanged
+OK   R1a Accept DS Return Build: HEADS 10 -> 11, 1-10 identical, RULE_C K-RUL=11
+OK   R1c Accept DS Return Build: Commitment 10 gains its one sentence; the rest of the old PART2 is unchanged
+OK   R2 32791 gemini: 2 items [keystone; D2 vs C2]
+OK   R2 32791 sol: 5 items [DEFENDER premise 5; CHALLENGER premise 2; keystone; D2 vs C2; D5 vs C5]
+OK   R2 32791 grok: 6 items [DEFENDER premise 5; CHALLENGER premise 2; CHALLENGER premise 3; keystone; D2 vs C2; D3 vs C3]
+OK   R2 32905 gemini: 3 items [DEFENDER premise 6; CHALLENGER premise 3; keystone]
+OK   R2 32905 sol: 3 items [DEFENDER premise 6; keystone; D6 vs C4]
+OK   R2 32905 grok: 8 items [DEFENDER premise 6; CHALLENGER premise 2; keystone; D1 vs C1; D2 vs C3; D3 vs C6; D4 vs C6; D6 vs C1]
+OK   R2 32924 gemini: 3 items [CHALLENGER premise 1; CHALLENGER premise 6; keystone]
+OK   R2 32924 chatgpt: 3 items [DEFENDER premise 5; DEFENDER premise 6; keystone]
+OK   R2 32924 grok: 5 items [DEFENDER premise 1; DEFENDER premise 5; keystone; D1 vs C1; D4 vs C5]
+OK   R2t total 38 (posted 38, reply 2152)
+OK   R3a krulAcc finds the acceptance reply; krulOwn reads 11 own lines
+OK   R3 full correct cards for all 8 rulings: 0 items
+OK   R4 one NAMED BY quote not in the record: 1 item(s) :: keystone: deciding ruling keystone: the NAMED BY quote "the angel carried the child across the river
+OK   R5 one RULE quote differs: 1 item(s) :: D2 vs C3
+OK   R6a NAMED BY: NONE under CHALLENGER LINK BROKEN (D1 vs C1): 1 item(s)
+OK   R6b NAMED BY: NONE under STANDS (keystone): 0 item(s)
+OK   R6c NAMED BY: NONE under UNEXHIBITED: 1 item(s)
+OK   R5b acceptance out of reach: the RULE check is skipped (0 items)
+OK   X2 UNDERDETERMINED, SUPPORTED and STANDS lines with no count and no keystone: 0 items
+OK   X1 Extract Independent Verdict: enfStatus K-RUL TRIAL
+OK   X3 Extract Independent Verdict: K-W, check 2, K-CON, K-CMT and drvPressWith sources unchanged
+OK   X1 Panel Payloads: enfStatus K-RUL TRIAL
+OK   X3 Panel Payloads: K-W, check 2, K-CON, K-CMT and drvPressWith sources unchanged
+OK   X1 Cure Build: enfStatus K-RUL TRIAL
+OK   X3 Cure Build: K-W, check 2, K-CON, K-CMT and drvPressWith sources unchanged
+OK   X1 Cure Normalize: enfStatus K-RUL TRIAL
+OK   X3 Cure Normalize: K-W, check 2, K-CON, K-CMT and drvPressWith sources unchanged
+OK   X1 Cure Check: enfStatus K-RUL TRIAL
+OK   X3 Cure Check: K-W, check 2, K-CON, K-CMT and drvPressWith sources unchanged
+OK   X1 Panel Cure Build 1: enfStatus K-RUL TRIAL
+OK   X3 Panel Cure Build 1: K-W, check 2, K-CON, K-CMT and drvPressWith sources unchanged
+OK   X1 Panel Cure Normalize 1: enfStatus K-RUL TRIAL
+OK   X3 Panel Cure Normalize 1: K-W, check 2, K-CON, K-CMT and drvPressWith sources unchanged
+OK   X1 Panel Cure Build 2: enfStatus K-RUL TRIAL
+OK   X3 Panel Cure Build 2: K-W, check 2, K-CON, K-CMT and drvPressWith sources unchanged
+OK   X1 Panel Cure Normalize 2: enfStatus K-RUL TRIAL
+OK   X3 Panel Cure Normalize 2: K-W, check 2, K-CON, K-CMT and drvPressWith sources unchanged
+OK   X1 Panel Cure Build 3: enfStatus K-RUL TRIAL
+OK   X3 Panel Cure Build 3: K-W, check 2, K-CON, K-CMT and drvPressWith sources unchanged
+OK   X1 Panel Cure Normalize 3: enfStatus K-RUL TRIAL
+OK   X3 Panel Cure Normalize 3: K-W, check 2, K-CON, K-CMT and drvPressWith sources unchanged
+OK   X1 Panel Cure Check: enfStatus K-RUL TRIAL
+OK   X3 Panel Cure Check: K-W, check 2, K-CON, K-CMT and drvPressWith sources unchanged
+OK   X1 Alternate Build: enfStatus K-RUL TRIAL
+OK   X3 Alternate Build: K-W, check 2, K-CON, K-CMT and drvPressWith sources unchanged
+OK   X1 Alternate Payloads: enfStatus K-RUL TRIAL
+OK   X3 Alternate Payloads: K-W, check 2, K-CON, K-CMT and drvPressWith sources unchanged
+OK   X1 Alternate Cure Build: enfStatus K-RUL TRIAL
+OK   X3 Alternate Cure Build: K-W, check 2, K-CON, K-CMT and drvPressWith sources unchanged
+OK   X1 Alternate Cure Normalize: enfStatus K-RUL TRIAL
+OK   X3 Alternate Cure Normalize: K-W, check 2, K-CON, K-CMT and drvPressWith sources unchanged
+OK   X1 Alternate Merge: enfStatus K-RUL TRIAL
+OK   X3 Alternate Merge: K-W, check 2, K-CON, K-CMT and drvPressWith sources unchanged
+OK   X4 26 nodes; every live_sha equals my fetch and W2's base_hashes_8dd6d614.tsv; every final_sha equals the patched file
+OK   T1 Cure Build: new request shows each item under its rule; old request showed "K-G3 JUDGE" (reproduced)
+OK   T1b Cure Build: requests for other rules byte-identical
+OK   T1 Panel Cure Build 1: new request shows each item under its rule; old request showed "K-G3 JUDGE" (reproduced)
+OK   T1b Panel Cure Build 1: requests for other rules byte-identical
+OK   T1 Alternate Cure Build: new request shows each item under its rule; old request showed "K-G3 JUDGE" (reproduced)
+OK   T1b Alternate Cure Build: requests for other rules byte-identical
+OK   T2a K-CMT: a commitment named or NOT A GRADE cures; no response does not
+OK   T2b K-CON: a CONTRADICTION line quoting the flagged sentence cures; NONE FOUND does not
+OK   T2c K-RUL: a valid card cures; a card whose quote does not stand, or no card, does not
+OK   T2d Cure Build: cureVerdicts consults krulCure before "unknown rule"
+OK   T2d Cure Normalize: cureVerdicts consults krulCure before "unknown rule"
+OK   T2d Cure Check: cureVerdicts consults krulCure before "unknown rule"
+OK   T2d Panel Cure Build 1: cureVerdicts consults krulCure before "unknown rule"
+OK   T2d Panel Cure Normalize 1: cureVerdicts consults krulCure before "unknown rule"
+OK   T2d Panel Cure Build 2: cureVerdicts consults krulCure before "unknown rule"
+OK   T2d Panel Cure Normalize 2: cureVerdicts consults krulCure before "unknown rule"
+OK   T2d Panel Cure Build 3: cureVerdicts consults krulCure before "unknown rule"
+OK   T2d Panel Cure Normalize 3: cureVerdicts consults krulCure before "unknown rule"
+OK   T2d Panel Cure Check: cureVerdicts consults krulCure before "unknown rule"
+OK   T2d Alternate Build: cureVerdicts consults krulCure before "unknown rule"
+OK   T2d Alternate Cure Build: cureVerdicts consults krulCure before "unknown rule"
+OK   T2d Alternate Cure Normalize: cureVerdicts consults krulCure before "unknown rule"
+OK   T2d Alternate Merge: cureVerdicts consults krulCure before "unknown rule"
+ALL OK
