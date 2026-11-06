@@ -1,0 +1,35 @@
+OK   4 nodes; base and final shas match
+OK   the PRS copy in pkgMNP is the live library PRS byte for byte
+OK   33040: every pkgUNA item still sent (78); new items are E-MNP only (6)
+OK   33060: every pkgUNA item still sent (40); new items are E-MNP only (10)
+OK   33083: every pkgUNA item still sent (82); new items are E-MNP only (6)
+OK   33107: every pkgUNA item still sent (72); new items are E-MNP only (11)
+OK   33107: chatgpt Acts 2:30 [CR3] is sent, with the ledger MEANS "the raising is out of David's loins according to the flesh."
+OK   33129: every pkgUNA item still sent (59); new items are E-MNP only (5)
+OK   33149: every pkgUNA item still sent (64); new items are E-MNP only (10)
+OK   33160: every pkgUNA item still sent (46); new items are E-MNP only (2)
+  REPLAY (new E-MNP items per run):
+   33040: {"chatgpt":6}  chatgpt ANSWER CHECK Matthew 1:25 [DR2]; chatgpt ANSWER CHECK Matthew 1:20 [DR2]; chatgpt ANSWER CHECK Luke 3:23 [DR2]; chatgpt ANSWER CHECK Matthew 1:20 [CR3]; chatgpt ANSWER CHECK Matthew 1:24 [CR3]; chatgpt ANSWER CHECK Genesis 4:1 [CR3]
+   33060: {"chatgpt":10}  chatgpt ANSWER CHECK Matthew 1:20 [DR2]; chatgpt ANSWER CHECK Matthew 1:20 [CR3]; chatgpt ANSWER CHECK Isaiah 7:14 [CR3]; chatgpt ANSWER CHECK Genesis 4:1 [CR3]; chatgpt ANSWER CHECK Matthew 1:19 [CR3]; chatgpt ANSWER CHECK John 3:6 [CR3]; chatgpt ANSWER CHECK Luke 1:35 [CR3]; chatgpt ANSWER CHECK Luke 1:34 [CR3]; chatgpt ANSWER CHECK Hebrews 2:14 [CR3]; chatgpt ANSWER CHECK Luke 1:35 [CR3]
+   33083: {"chatgpt":6}  chatgpt ANSWER CHECK Matthew 1:20 [CR3]; chatgpt ANSWER CHECK Luke 1:35 [DR3]; chatgpt ANSWER CHECK Matthew 1:20 [DR3]; chatgpt ANSWER CHECK Luke 1:34 [DR3]; chatgpt ANSWER CHECK Luke 1:35 [DR3]; chatgpt ANSWER CHECK Matthew 1:25 [DR3]
+   33107: {"chatgpt":8,"sol":3}  chatgpt ANSWER CHECK Matthew 1:24 [CR3]; chatgpt ANSWER CHECK Acts 2:30 [CR3]; chatgpt ANSWER CHECK Deuteronomy 20:7 [CR3]; chatgpt ANSWER CHECK Matthew 1:19 [CR3]; chatgpt ANSWER CHECK Luke 1:27 [CR3]; chatgpt ANSWER CHECK Matthew 1:20 [DR3]; chatgpt ANSWER CHECK Matthew 1:18 [DR3]; chatgpt ANSWER CHECK Matthew 1:25 [DR3]; sol ANSWER CHECK Matthew 1:20 [DR3]; sol ANSWER CHECK Matthew 1:18 [DR3]; sol ANSWER CHECK Matthew 1:25 [DR3]
+   33129: {"chatgpt":5}  chatgpt ANSWER CHECK Matthew 1:20 [CR3]; chatgpt ANSWER CHECK Luke 1:27 [DR3]; chatgpt ANSWER CHECK Luke 1:27 [DR3]; chatgpt ANSWER CHECK Luke 1:35 [DR3]; chatgpt ANSWER CHECK Hebrews 7:9 [DR3]
+   33149: {"chatgpt":10}  chatgpt ANSWER CHECK Matthew 1:24 [CR3]; chatgpt ANSWER CHECK 1 Chronicles 28:6 [CR3]; chatgpt ANSWER CHECK Luke 1:34 [CR3]; chatgpt ANSWER CHECK 2 Samuel 7:14 [CR3]; chatgpt ANSWER CHECK Matthew 1:19 [CR3]; chatgpt ANSWER CHECK Matthew 1:20 [CR3]; chatgpt ANSWER CHECK Matthew 1:18 [DR3]; chatgpt ANSWER CHECK Luke 1:34 [DR3]; chatgpt ANSWER CHECK Luke 1:13 [DR3]; chatgpt ANSWER CHECK Luke 1:36 [DR3]
+   33160: {"chatgpt":2}  chatgpt ANSWER CHECK Luke 3:23 [DR3]; chatgpt ANSWER CHECK Matthew 1:25 [DR3]
+OK   cure: KEEP: UNCURED
+     a KEEP does not cure this item (pkgMNP)
+OK   cure: CHANGE TO still MEANS "NONE": UNCURED
+     the CHANGE TO still says the press has no MEANS (pkgMNP)
+OK   cure: CHANGE TO with the real MEANS, MISSES: CURED
+     graded MISSES on the real MEANS ("the raising is out of davids") (pkgMNP)
+OK   cure: CHANGE TO with the real MEANS, UNPROVEN on a PROVEN press: UNCURED
+     graded UNPROVEN, but the ledger marks the press PROVEN (pkgMNP)
+OK   cure: CHANGE TO with another MEANS: UNCURED
+     the CHANGE TO's MEANS quotes no 6 words in a row of the ledger's MEANS (pkgMNP)
+OK   cure: CHANGE TO on another verse: UNCURED
+     the CHANGE TO grades another verse (pkgMNP)
+OK   Send_Back_Record.js: S1 KEEP UNCURED, counted once (drv_uncured 1, AUDIT v45); S2 CHANGE TO with the real MEANS CURED
+     [AUDIT v45: MEANS AGAINST THE LEDGER UNCURED (pkgMNP) -- SEAT: chatgpt; ITEMS: S1 (E-MNP ANSWER CHECK Acts 2:30 [CR3] (MEANS NONE): a KEEP does not cure this item (pkgMNP)); counted in drv_uncured. RE
+OK   Alt_Send_Back_Record.js: S1 KEEP UNCURED, counted once (drv_uncured 1, AUDIT v45); S2 CHANGE TO with the real MEANS CURED
+     [AUDIT v45: MEANS AGAINST THE LEDGER UNCURED (pkgMNP) -- SEAT: chatgpt; ITEMS: S1 (E-MNP ANSWER CHECK Acts 2:30 [CR3] (MEANS NONE): a KEEP does not cure this item (pkgMNP)); counted in drv_uncured. RE
+18 OK, 0 FAIL
