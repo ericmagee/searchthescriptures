@@ -1,0 +1,30 @@
+OK   14 cure nodes; base_sha equals merged_TLRN + pkgP, final_sha equals the patched file
+OK   outside the K-W check and the RESPONSE pattern nothing changes (reverse edit)
+OK   the new K-W check is the same text in all 14 nodes
+OK   32973 fixture: each stored reply matches its md5 in debate_enforcer_log
+OK   gemini: the base replay gives the stored live status on every K-W item
+OK   gemini: K-W CURED 12/12 -> 12/12 (expected 12 -> 12)
+OK   gemini: no K-W item that was CURED becomes uncured
+OK   chatgpt: the base replay gives the stored live status on every K-W item
+OK   chatgpt: K-W CURED 0/12 -> 12/12 (expected 0 -> 12)
+OK   chatgpt: no K-W item that was CURED becomes uncured
+OK   grok: the base replay gives the stored live status on every K-W item
+OK   grok: K-W CURED 12/12 -> 12/12 (expected 12 -> 12)
+OK   grok: no K-W item that was CURED becomes uncured
+OK   single: the base replay gives the stored live status on every K-W item
+OK   single: K-W CURED 8/12 -> 12/12 (expected 8 -> 12)
+OK   single: no K-W item that was CURED becomes uncured
+OK   sol: the base replay gives the stored live status on every K-W item
+OK   sol: K-W CURED 0/12 -> 12/12 (expected 0 -> 12)
+OK   sol: no K-W item that was CURED becomes uncured
+OK   cureLines on all stored 32949 and 32973 replies: 6 newly read RESPONSE lines, each "| CONCEDED.", no new malformed line (expected 6: single on 32973 x4, gemini on 32949 x2)
+OK   32949, every seat and rule: no item that was CURED becomes uncured (K-W CURED: gemini 8->10/12, chatgpt 1->11/12, grok 12->12/12, sol 2->11/12, sol 2->10/12)
+OK   "NOT CONCEDED": CURED before (false cure), UNCURED now
+OK   REASSERTED IN [CR4] "<quote>": UNCURED before, CURED now
+OK   REASSERTED IN with no quote stays UNCURED
+OK   RESPONSE "| CONCEDED" (no period): refused as malformed before, CURED now
+OK   "CONCEDED LINKS" is not a concession of the withdrawn link
+OK   form on the STATEMENT line, NOT HELD on the RESPONSE line: CURED now, and the reason says it was read from the STATEMENT line
+OK   a STATEMENT line with no RESPONSE line stays a silent item (the silence count is unchanged)
+OK   neither line gives a form: UNCURED
+ALL OK
