@@ -11,7 +11,7 @@ const T=fs.readFileSync('corpus/texts.jsonl','utf8').trim().split('\n').map(JSON
 const esc=v=>v==null?'':String(typeof v==='object'?JSON.stringify(v):v).replace(/[\t\n\r]/g,' ').slice(0,300);
 const eq=(a,b)=>JSON.stringify(a===undefined?null:a)===JSON.stringify(b===undefined?null:b);
 const rows=[],cnt={},err=[];const bump=(k)=>cnt[k]=(cnt[k]||0)+1;
-const REPLY_SRC=/_reply$/; /* W1: a stored reply is read by the live reply readers (gateRead2024, Send Back Record) after their own one unescape of \\n and \\" (spec 0.1: once); every reader here gets that same text, so line numbers agree */
+const REPLY_SRC=/^(sendback_reply|gate_reply)$/; /* W2: only the gate and send-back readers unescape a reply; cure_reply gets cureUnwrap and alternate_reply cureJText in build_corpus, as live */ /* W1: a stored reply is read by the live reply readers (gateRead2024, Send Back Record) after their own one unescape of \\n and \\" (spec 0.1: once); every reader here gets that same text, so line numbers agree */
 for(const t of T){const X=REPLY_SRC.test(t.src)?String(t.jtext).replace(/\\n/g,'\n').replace(/\\"/g,'"'):t.jtext;const lines=X.split('\n');let NEW=[];try{NEW=readLines(X)||[];}catch(e){err.push(t.tid+' readLines: '+e.message);}
  const newBy=new Map();for(const r of NEW)if(r&&r.form){const k=r.form+'|'+r.n;if(!newBy.has(k))newBy.set(k,r);}
  const oldSeen=new Set();

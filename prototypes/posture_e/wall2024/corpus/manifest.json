@@ -1,7 +1,7 @@
 {
  "runs": {
   "32998": {
-   "texts": 332,
+   "texts": 376,
    "by_src": {
     "verdict_final": 3,
     "verdict_gate": 3,
@@ -9,6 +9,7 @@
     "flagged_line": 312,
     "cure_reply": 5,
     "sendback_reply": 4,
+    "change_to": 44,
     "gate_reply": 3,
     "alternate_reply": 1
    },
@@ -29,12 +30,13 @@
    ]
   },
   "33006": {
-   "texts": 366,
+   "texts": 420,
    "by_src": {
     "verdict_final": 3,
     "cure_reply": 5,
     "flagged_line": 350,
     "sendback_reply": 4,
+    "change_to": 54,
     "alternate_reply": 1,
     "gate_reply": 3
    },
@@ -47,7 +49,7 @@
    "gate_replies": []
   },
   "33014": {
-   "texts": 362,
+   "texts": 411,
    "by_src": {
     "verdict_final": 3,
     "verdict_gate": 3,
@@ -55,6 +57,7 @@
     "cure_reply": 5,
     "flagged_line": 345,
     "sendback_reply": 4,
+    "change_to": 49,
     "alternate_reply": 1
    },
    "seats": [
@@ -70,13 +73,14 @@
    "gate_replies": []
   },
   "33020": {
-   "texts": 238,
+   "texts": 267,
    "by_src": {
     "verdict_final": 3,
     "verdict_gate": 3,
     "cure_reply": 4,
     "flagged_line": 222,
     "sendback_reply": 3,
+    "change_to": 29,
     "gate_reply": 3
    },
    "seats": [
@@ -95,13 +99,14 @@
    ]
   },
   "33021": {
-   "texts": 255,
+   "texts": 282,
    "by_src": {
     "verdict_final": 3,
     "verdict_gate": 3,
     "flagged_line": 241,
     "cure_reply": 4,
     "sendback_reply": 3,
+    "change_to": 27,
     "gate_reply": 1
    },
    "seats": [
@@ -118,7 +123,7 @@
    ]
   },
   "33025": {
-   "texts": 356,
+   "texts": 411,
    "by_src": {
     "verdict_final": 3,
     "verdict_gate": 3,
@@ -126,6 +131,7 @@
     "flagged_line": 337,
     "cure_reply": 5,
     "sendback_reply": 4,
+    "change_to": 55,
     "gate_reply": 2,
     "alternate_reply": 1
    },

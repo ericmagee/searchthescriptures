@@ -1,37 +1,37 @@
-texts 1909, adapters 17 (sbApply2024: GR (pkgCP2), shared library: KF_LINE, sbApply2024: PR/FR (pkgCP), sbApply2024: SB_FORM, sbApply2024: SB_ROW, ciLedger: CI_LINE/CI_PRESSED, cureLines: CURE_KEY (+pkgCR tag), gateLineFor2024: ac(), gateRead2024, K-AG: kagRow, K-CMT: kcmtGrade2024, sbApply2024: keyChecks KEYSTONE, K-RUL: krulRulings collision, Alternate Merge: rcLines, shared library: sbLabel, selfLines421: ANSWER CHECK, Send Back Record: SENDBACK reply), disagreement rows 261
-DIS field Alternate Merge: rcLines.grade: 34
+texts 2167, adapters 17 (sbApply2024: GR (pkgCP2), shared library: KF_LINE, sbApply2024: PR/FR (pkgCP), sbApply2024: SB_FORM, sbApply2024: SB_ROW, ciLedger: CI_LINE/CI_PRESSED, cureLines: CURE_KEY (+pkgCR tag), gateLineFor2024: ac(), gateRead2024, K-AG: kagRow, K-CMT: kcmtGrade2024, sbApply2024: keyChecks KEYSTONE, K-RUL: krulRulings collision, Alternate Merge: rcLines, shared library: sbLabel, selfLines421: ANSWER CHECK, Send Back Record: SENDBACK reply), disagreement rows 310
+DIS field Alternate Merge: rcLines.grade: 53
 DIS field K-AG: kagRow.grade: 8
 DIS field K-AG: kagRow.roundRaw: 16
 DIS field gateLineFor2024: ac().roundRaw: 17
 DIS field gateLineFor2024: ac().verse: 1
 DIS field gateRead2024.sentence: 4
-DIS field sbApply2024: SB_ROW.sentence: 59
+DIS field sbApply2024: SB_ROW.sentence: 76
 DIS field shared library: KF_LINE.fails: 11
 DIS old-only K-CMT: kcmtGrade2024: 54
 DIS old-only Send Back Record: SENDBACK reply: 6
 DIS old-only cureLines: CURE_KEY (+pkgCR tag): 7
 DIS old-only gateRead2024: 4
 DIS old-only sbApply2024: PR/FR (pkgCP): 9
-DIS old-only sbApply2024: SB_FORM: 31
+DIS old-only sbApply2024: SB_FORM: 44
 new form without an old reader CHAIN MARK: 98
 new form without an old reader CITATION CHECK: 40
 new form without an old reader HEADING: 53
-new form without an old reader LINK STATE: 105
+new form without an old reader LINK STATE: 108
 new form without an old reader RULING: 213
 new form without an old reader RULING PART: 852
-old Alternate Merge: rcLines: 845
-old K-AG: kagRow: 3541
-old K-CMT: kcmtGrade2024: 321
-old K-RUL: krulRulings collision: 135
+old Alternate Merge: rcLines: 893
+old K-AG: kagRow: 3671
+old K-CMT: kcmtGrade2024: 330
+old K-RUL: krulRulings collision: 146
 old Send Back Record: SENDBACK reply: 331
-old cureLines: CURE_KEY (+pkgCR tag): 947
-old gateLineFor2024: ac(): 3380
+old cureLines: CURE_KEY (+pkgCR tag): 954
+old gateLineFor2024: ac(): 3547
 old gateRead2024: 35
-old sbApply2024: GR (pkgCP2): 413
-old sbApply2024: PR/FR (pkgCP): 531
-old sbApply2024: SB_FORM: 5069
-old sbApply2024: SB_ROW: 279
-old sbApply2024: keyChecks KEYSTONE: 73
-old selfLines421: ANSWER CHECK: 3247
-old shared library: KF_LINE: 109
-old shared library: sbLabel: 774
+old sbApply2024: GR (pkgCP2): 444
+old sbApply2024: PR/FR (pkgCP): 563
+old sbApply2024: SB_FORM: 5318
+old sbApply2024: SB_ROW: 299
+old sbApply2024: keyChecks KEYSTONE: 77
+old selfLines421: ANSWER CHECK: 3414
+old shared library: KF_LINE: 110
+old shared library: sbLabel: 819
