@@ -1,0 +1,8 @@
+OK   panel 33040 whole node: pkgSBX output equals pkgEC2 (rows without the time, sb_items, tally, counts)
+OK   alternate 33040 whole node (sol, 17 lines from the log): pkgSBX output equals pkgEC2
+OK   plan: base and final shas match
+   SENDBACK reader on 27 distinct texts with answers (418 answers): 0 differ
+OK   the SENDBACK reader gives the same answers on every corpus text and 33040 reply (or each difference is listed above)
+OK   unit: a reply line with no SENDBACK label ("S4 || KEEP || ...") is read by the reader (new read; the old pattern needed the label)
+OK   unit: where both read a line, the payload keeps the judge's own characters (backslashes included)
+6 OK, 0 FAIL
