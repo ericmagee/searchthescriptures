@@ -9,7 +9,8 @@
 const fs=require('fs');const crypto=require('crypto');const {needs}=require('./runner_model.cjs');const sha=s=>crypto.createHash('sha256').update(s).digest('hex').slice(0,16);
 // several package dirs may be given, base first: a later package's patched file replaces the earlier one (pkgPS patches 6 of the 22 on pkgPAY)
 const DIRS=(process.argv.length>2?process.argv.slice(2):['pkgKW']).map(d=>d.replace(/\/$/,''));const BASE=DIRS.join('+');const SRCOF={};
-for(const d of DIRS)for(const f of fs.readdirSync(d+'/patched/').filter(f=>f.endsWith('.js')&&f!=='Shared_Library.js'))SRCOF[f]=d+'/patched/'+f;
+// a later package replaces only files the base already has (pkgECL patches 5 of the 22 and 15 nodes outside the library)
+DIRS.forEach((d,i)=>{for(const f of fs.readdirSync(d+'/patched/').filter(f=>f.endsWith('.js')&&f!=='Shared_Library.js'))if(!i||SRCOF[f])SRCOF[f]=d+'/patched/'+f;});
 const F=Object.keys(SRCOF).sort();if(F.length!==22)throw new Error('expected 22 nodes, got '+F.length);
 const SRC=F.map(f=>fs.readFileSync(SRCOF[f],'utf8'));const LINES=SRC.map(s=>s.split('\n'));
 const cnt=new Map();for(const a of LINES)for(const l of new Set(a))cnt.set(l,(cnt.get(l)||0)+1);

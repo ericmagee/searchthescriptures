@@ -9,12 +9,12 @@
   "connections": "none: not wired to any node",
   "note": "the name must stay exactly Shared Library; the 22 stubs read it by name"
  },
- "base": "pkgKVP",
+ "base": "pkgKVP+pkgECL",
  "library": {
   "file": "Shared_Library.js",
   "lines": 2484,
-  "json_sha": "f77dbd99af74cb98",
-  "bytes": 434595
+  "json_sha": "bd8f42f54d8172e2",
+  "bytes": 436270
  },
  "nodes": [
   {
@@ -54,10 +54,10 @@
   {
    "file": "Alternate_Build.js",
    "name": "Alternate Build",
-   "src": "pkgKVP/patched/Alternate_Build.js",
-   "base_sha": "c8c6134237f27733",
-   "base_bytes": 337106,
-   "stub_sha": "a34e00e41325f8fa",
+   "src": "pkgECL/patched/Alternate_Build.js",
+   "base_sha": "f816317b2b6cad31",
+   "base_bytes": 338739,
+   "stub_sha": "e68090a25012d587",
    "stub_bytes": 11381,
    "refs": [
     "Accept Final",
@@ -72,10 +72,10 @@
   {
    "file": "Alternate_Cure_Build.js",
    "name": "Alternate Cure Build",
-   "src": "pkgKVP/patched/Alternate_Cure_Build.js",
-   "base_sha": "fb99e6a4776fd38e",
-   "base_bytes": 328086,
-   "stub_sha": "82f8c84523fed4fe",
+   "src": "pkgECL/patched/Alternate_Cure_Build.js",
+   "base_sha": "da0506ace38aef5b",
+   "base_bytes": 329719,
+   "stub_sha": "3fd1787e0bbb3a08",
    "stub_bytes": 2990,
    "refs": [
     "Alternate Payloads",
@@ -267,10 +267,10 @@
   {
    "file": "Panel_Cure_Build_1.js",
    "name": "Panel Cure Build 1",
-   "src": "pkgKVP/patched/Panel_Cure_Build_1.js",
-   "base_sha": "dc2768644112ed21",
-   "base_bytes": 328805,
-   "stub_sha": "fed2a3ac4b83d07f",
+   "src": "pkgECL/patched/Panel_Cure_Build_1.js",
+   "base_sha": "abe8f8fb0fcc3671",
+   "base_bytes": 330438,
+   "stub_sha": "e8ff3719f47783bf",
    "stub_bytes": 2272,
    "refs": [
     "Panel Build",
@@ -283,10 +283,10 @@
   {
    "file": "Panel_Cure_Build_2.js",
    "name": "Panel Cure Build 2",
-   "src": "pkgKVP/patched/Panel_Cure_Build_2.js",
-   "base_sha": "f3fe5a634b278bcf",
-   "base_bytes": 328805,
-   "stub_sha": "e9d00801acb65d6b",
+   "src": "pkgECL/patched/Panel_Cure_Build_2.js",
+   "base_sha": "5b616a74a19e4121",
+   "base_bytes": 330438,
+   "stub_sha": "f7bead4ba7990654",
    "stub_bytes": 2272,
    "refs": [
     "Panel Build",
@@ -299,10 +299,10 @@
   {
    "file": "Panel_Cure_Build_3.js",
    "name": "Panel Cure Build 3",
-   "src": "pkgKVP/patched/Panel_Cure_Build_3.js",
-   "base_sha": "fc2357cf7dc0e010",
-   "base_bytes": 328805,
-   "stub_sha": "dbae44bde93e7407",
+   "src": "pkgECL/patched/Panel_Cure_Build_3.js",
+   "base_sha": "2f984645357220ab",
+   "base_bytes": 330438,
+   "stub_sha": "6759ffd53961edc0",
    "stub_bytes": 2272,
    "refs": [
     "Panel Build",
@@ -396,6 +396,6 @@
    "own_lines": 89
   }
  ],
- "bytes_before": 7076558,
- "bytes_after": 588739
+ "bytes_before": 7084723,
+ "bytes_after": 590414
 }
