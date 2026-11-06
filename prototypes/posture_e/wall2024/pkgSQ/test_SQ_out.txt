@@ -1,0 +1,16 @@
+OK   22 nodes: base (pkgRCK) and final shas match the plan; 6 gate nodes edited, 16 unchanged
+   33060 chatgpt K-S3 items S1, S2, S3, S4; base NOT APPLIED: ["S1","S2","S4"]; pkgSQ NOT APPLIED: []
+     DEFENDER | CR4 | "I accept the challenger's reading of \"came together\" as the taking into his house."
+       -> DEFENDER | CR4 | "I accept the challenger's reading of ‘came together’ as the taking into his house." -- TOUCHES NO LINK
+     DEFENDER | CR4 | "I grant that the angel addresses Joseph by his house, \"son of David.\""
+       -> DEFENDER | CR4 | "I grant that the angel addresses Joseph by his house, ‘son of David.’" -- TOUCHES NO LINK
+     DEFENDER | CR4 | "I grant that standing."
+       -> DEFENDER | CR4 | "I grant that standing." -- TOUCHES NO LINK
+     DEFENDER | CR4 | "I grant that the betrothed is called \"wife.\""
+       -> DEFENDER | CR4 | "I grant that the betrothed is called ‘wife.’" -- TOUCHES NO LINK
+OK   33060 chatgpt: base refuses S1, S2, S4 (as live); pkgSQ applies all four, each onto the judge row with the same sentence
+   K-S3 row lookup: 18 corpus CHANGE TO payloads in the row form; flips: 0
+OK   corpus row lookup: no row found before is lost, and every new find is the same side, round and words
+   corpus/replay.cjs gate replay: 53 lines, 0 differ
+OK   gate replay: same line count; differences listed above
+4 OK, 0 FAIL (behaviour changes are listed above for W3)
