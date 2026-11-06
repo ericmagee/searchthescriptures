@@ -9,4 +9,44 @@ OK   pkgCL: the gate item carries the refused line, and the whole corrected line
 OK   send-back apply: same applied list and same refusal reasons on pkgCP2 and pkgCL
    changed: none
 OK   no stored gate decision in 32998, 33014, 33020 or 33021 changes
-6 OK, 0 FAIL
+   33025 pkgCP2 chatgpt: counted 7
+     G1 NOT APPLIED (E-APPLY S9) line none -> UNCURED -- the gate change was not applied
+     G2 NOT APPLIED (E-APPLY S14) line none -> UNCURED -- the gate change was not applied
+     G3 NOT APPLIED (E-APPLY S15) line none -> UNCURED -- the gate change was not applied
+     G4 NOT APPLIED (E-APPLY S16) line none -> UNCURED -- the gate change was not applied
+     G5 NOT APPLIED (E-APPLY S17) line none -> UNCURED -- the gate change was not applied
+     G6 NOT APPLIED (E-APPLY S20) line none -> UNCURED -- the gate change was not applied
+     G7 NOT APPLIED (E-APPLY S21) line none -> UNCURED -- the gate change was not applied
+     K re-read / new: NOT APPLIED (E-APPLY G1) -- the flagged line is not in the judge text
+     K re-read / new: NOT APPLIED (E-APPLY G2) -- the flagged line is not in the judge text
+     K re-read / new: NOT APPLIED (E-APPLY G3) -- the flagged line is not in the judge text
+     K re-read / new: NOT APPLIED (E-APPLY G4) -- the flagged line is not in the judge text
+     K re-read / new: NOT APPLIED (E-APPLY G5) -- the flagged line is not in the judge text
+     K re-read / new: NOT APPLIED (E-APPLY G6) -- the flagged line is not in the judge text
+     K re-read / new: NOT APPLIED (E-APPLY G7) -- the flagged line is not in the judge text
+   33025 pkgCP2 grok: counted 2
+     G1 NOT APPLIED (E-APPLY S19) line none -> CURED -- KEEP: the change stays unapplied
+     G2 CONTRADICTION (E-GATE B) line printed -> UNCURED -- the gate change was not applied
+     G3 CONTRADICTION (E-GATE B) line printed -> UNCURED -- the gate change was not applied
+     K re-read / new: CONTRADICTION (E-APPLY S22) -- KEYSTONE D5 STANDS while D5 vs C4 is graded DEFENDER LINK BROKEN (the change is not applied)
+     K re-read / new: CONTRADICTION (E-APPLY G3) -- KEYSTONE D5 STANDS while D5 vs C4 is graded DEFENDER LINK BROKEN (the change is not applied)
+   33025 pkgCL chatgpt: counted 3
+     G1 NOT APPLIED (E-APPLY S9) line printed -> CURED -- the gate change was applied
+     G2 NOT APPLIED (E-APPLY S14) line printed -> CURED -- the gate change was applied
+     G3 NOT APPLIED (E-APPLY S15) line printed -> UNCURED -- the gate change raised a new LIVE item: RULE K-G4 -- DEBATE RULE VIOLATION (K-G4) -- D2 vs C4 CHALLENGER LINK BROKEN counts a witness as unanswered; the rule counts it only with the quoted pressing se
+     G4 NOT APPLIED (E-APPLY S16) line printed -> UNCURED -- the gate change raised a new LIVE item: RULE K-G4 -- DEBATE RULE VIOLATION (K-G4) -- D3 vs C5 DEFENDER LINK BROKEN counts a witness as unanswered; the rule counts it only with the quoted pressing sent
+     G5 NOT APPLIED (E-APPLY S17) line printed -> UNCURED -- the gate change raised a new LIVE item: RULE K-G4 -- DEBATE RULE VIOLATION (K-G4) -- D4 vs C1 CHALLENGER LINK BROKEN counts a witness as unanswered; the rule counts it only with the quoted pressing se
+     G6 NOT APPLIED (E-APPLY S20) line printed -> CURED -- the gate change is already in the corrected text (another change wrote the same line; W3 2319)
+     G7 NOT APPLIED (E-APPLY S21) line printed -> CURED -- the gate change was applied
+     K re-read / new: RULE K-G4 (K re-read) by G3 -- DEBATE RULE VIOLATION (K-G4) -- D2 vs C4 CHALLENGER LINK BROKEN counts a witness as unanswered; the rule counts it only with the quoted pressing sentence and it
+     K re-read / new: RULE K-G4 (K re-read) by G4 -- DEBATE RULE VIOLATION (K-G4) -- D3 vs C5 DEFENDER LINK BROKEN counts a witness as unanswered; the rule counts it only with the quoted pressing sentence and its 
+     K re-read / new: RULE K-G4 (K re-read) by G5 -- DEBATE RULE VIOLATION (K-G4) -- D4 vs C1 CHALLENGER LINK BROKEN counts a witness as unanswered; the rule counts it only with the quoted pressing sentence and it
+   33025 pkgCL grok: counted 2
+     G1 NOT APPLIED (E-APPLY S19) line none -> CURED -- KEEP: the change stays unapplied
+     G2 CONTRADICTION (E-GATE B) line printed -> UNCURED -- the gate change was not applied
+     G3 CONTRADICTION (E-GATE B) line printed -> UNCURED -- the gate change was not applied
+     K re-read / new: CONTRADICTION (E-APPLY S22) -- KEYSTONE D5 STANDS while D5 vs C4 is graded DEFENDER LINK BROKEN (the change is not applied)
+     K re-read / new: CONTRADICTION (E-APPLY G3) -- KEYSTONE D5 STANDS while D5 vs C4 is graded DEFENDER LINK BROKEN (the change is not applied)
+OK   33025 chatgpt: pkgCP2 counts 7 (all refused "not in the judge text"); pkgCL applies G1 to G7: G1, G2, G7 applied and CURED, G6 the same line as G7 and CURED, G3 to G5 applied but each raises a new LIVE K-G4 and stays UNCURED; counted 3
+OK   33025 grok: unchanged by pkgCL (counted 2: G2, G3 CONTRADICTION with KEYSTONE D5 STANDS; W2 builds the keystone re-derivation)
+8 OK, 0 FAIL
