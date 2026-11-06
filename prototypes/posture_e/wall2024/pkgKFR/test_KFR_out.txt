@@ -1,0 +1,63 @@
+OK   22 nodes: base (pkgRU) and final shas match the plan; reader sha matches
+OK   every node parses
+   distinct FORCED-labelled corpus lines: 92; read differently: 59 (backslashes only (the reader strips them, spec 7 norm) 46, NEW READ 3, FIELDS differ 6, FAILS longer 4)
+   == NEW READ
+     32998 gemini verdict_final: FORCED: D3 vs C1 -- MEANS [Defender R3]: "the finding with child came before any coming together -- [L2] synerchomai (G4905, come together) | [L3] Mat
+     32998 gemini flagged_line: FORCED: D3 vs C1 -- MEANS [Defender R3]: "the finding with child came before any coming together -- [L2] synerchomai (G4905, come together) | [L3] Mat
+     33021 single cure_reply: FORCED: D1 vs C1 (Commitment 3) -- MEANS [CR3]: "the finding precedes any coming together, so no union lies behind it -- [L3] Matthew 1:25 "And knew h
+   == FIELDS differ
+     33006 chatgpt verdict_final: FORCED: D1 vs C3 -- MEANS [CR3]: "the virgin is the one with child" -- ANSWER [DR3]: "The canon shows a virgin becoming a wife who conceives by her hu
+        old: ["D1 vs C3","CR3","the virgin is the one with child","DR3","The canon shows a virgin becoming a wife who conceives by her husband: \\\"a virgin, neither had any man known her\\\" (Genesis 24:16), then
+        new: ["D1 vs C3","CR3","the virgin is the one with child","DR3","The canon shows a virgin becoming a wife who conceives by her husband: \"a virgin, neither had any man known her\" (Genesis 24:16), then \"s
+     33006 gemini cure_reply: FORCED: D3 vs C6 -- MEANS [CR3]: "the row calls Joseph \"husband of Mary\" and puts the birth on \"of whom,\" with no \"begat\" by Joseph for Jesus --
+        old: ["D3 vs C6","CR3","the row calls Joseph \\\"husband of Mary\\\" and puts the birth on \\\"of whom,\\\" with no \\\"begat\\\" by Joseph for Jesus -- [L2] gennaō G1080 (to procreate) | [L3] Matthew 1:2 
+        new: ["D3 vs C6","CR3","the row calls Joseph \"husband of Mary\" and puts the birth on \"of whom,\" with no \"begat\" by Joseph for Jesus -- [L2] gennaō G1080 (to procreate) | [L3] Matthew 1:2 \"Abraham be
+     33006 gemini cure_reply: FORCED: D4 vs C5 -- MEANS [CR3]: "the child answers \"thy father\" by moving the word to another -- [L3] Luke 2:48 \"thy father and I have sought thee
+        old: ["D4 vs C5","CR3","the child answers \\\"thy father\\\" by moving the word to another -- [L3] Luke 2:48 \\\"thy father and I have sought thee sorrowing\\\"","DR3","The Father's business and the subjec
+        new: ["D4 vs C5","CR3","the child answers \"thy father\" by moving the word to another -- [L3] Luke 2:48 \"thy father and I have sought thee sorrowing\"","DR3","The Father's business and the subjection to 
+     33006 chatgpt flagged_line: FORCED: D1 vs C3 -- MEANS [CR3]: "the virgin is the one with child" -- ANSWER [DR3]: "The canon shows a virgin becoming a wife who conceives by her hu
+        old: ["D1 vs C3","CR3","the virgin is the one with child","DR3","The canon shows a virgin becoming a wife who conceives by her husband: \\\\\"a virgin, neither had any man known her\\\\\" (Genesis 24:16), 
+        new: ["D1 vs C3","CR3","the virgin is the one with child","DR3","The canon shows a virgin becoming a wife who conceives by her husband: \"a virgin, neither had any man known her\" (Genesis 24:16), then \"s
+     33014 grok verdict_gate: FORCED: D1 vs C4 -- MEANS [CR3]: "the margin \"Gr. begotten\" gives the begetting to the Holy Ghost" -- ANSWER [DR3]: "\"Of the Holy Ghost\" names the
+        old: ["D1 vs C4","CR3","the margin \\\"Gr. begotten\\\" gives the begetting to the Holy Ghost","DR3","\\\"Of the Holy Ghost\\\" names the covenant origin, and in the same row the angel names \\\"Joseph, th
+        new: ["D1 vs C4","CR3","the margin \"Gr. begotten\" gives the begetting to the Holy Ghost","DR3","\"Of the Holy Ghost\" names the covenant origin, and in the same row the angel names \"Joseph, thou son of 
+     33014 grok flagged_line: FORCED: D1 vs C4 -- MEANS [CR3]: "the margin \\"Gr. begotten\\" gives the begetting to the Holy Ghost" -- ANSWER [DR3]: "\\"Of the Holy Ghost\\" names
+        old: ["D1 vs C4","CR3","the margin \\\\\"Gr. begotten\\\\\" gives the begetting to the Holy Ghost","DR3","\\\\\"Of the Holy Ghost\\\\\" names the covenant origin, and in the same row the angel names \\\\\"
+        new: ["D1 vs C4","CR3","the margin \"Gr. begotten\" gives the begetting to the Holy Ghost","DR3","\"Of the Holy Ghost\" names the covenant origin, and in the same row the angel names \"Joseph, thou son of 
+   == FAILS longer
+     33006 single cure_reply: FORCED: D5 vs C6 -- MEANS [CR3]: "the virgin is the one with child -- [L3] Luke 1:35 "that holy thing which shall be born of thee"" -- ANSWER [DR3]: "
+        FAILS old: "The canon shows a virgin becoming a wife who conceives by her husband: \"a virgin, neither had any man known her"
+        FAILS new: "The canon shows a virgin becoming a wife who conceives by her husband: \"a virgin, neither had any man known her\" (Genesis 24:16), then \"she became his wife\
+     33006 single cure_reply: FORCED: D3 vs C6 -- MEANS [CR3]: "the row calls Joseph "husband of Mary" and puts the birth on "of whom," with no "begat" by Joseph for Jesus -- [L2] 
+        FAILS old: "\"Of whom\" names the mother, as \"of Thamar"
+        FAILS new: "\"Of whom\" names the mother, as \"of Thamar\" (Matthew 1:3) and \"of her\" (Matthew 1:6) do in rows that name the father."
+     33006 grok flagged_line: FORCED: D2 vs C3 -- MEANS [CR3]: "the verse gives the origin of what is conceived, with the begetting-verb in the margin" -- ANSWER [DR3]: "So the row
+        FAILS old: "\\\\\"Of\\\\\" with God or the Spirit, together with gennaō, names the covenant origin of men who have fathers in the f
+        FAILS new: "\"Of\" with God or the Spirit, together with gennaō, names the covenant origin of men who have fathers in the flesh"
+     33014 grok cure_reply: FORCED: D1 vs C4 -- MEANS [CR3]: "the margin "Gr. begotten" gives the begetting to the Holy Ghost -- [L2] gennaō (G1080, to beget) | [L3] Luke 1:35 "T
+        FAILS old: "The same verb with \"of God\" is said of believers: \"Whosoever believeth that Jesus is the Christ is born of God"
+        FAILS new: "The same verb with \"of God\" is said of believers: \"Whosoever believeth that Jesus is the Christ is born of God\" (1 John 5:1 [is born: Gr. has been born])."
+OK   no FORCED line read by KF_LINE is lost by the reader
+   kfLines with the run's rounds on 106 texts (runs with a fixture): 4 differ
+     32998 gemini verdict_final
+        old: [["K-F","D3 vs C1","malformed"]]
+        new: [["K-F","D3 vs C1","the ANSWER quotation is not in [DR3]"]]
+     32998 gemini verdict_gate
+        old: [["K-F","D3 vs C1","malformed"]]
+        new: [["K-F","D3 vs C1","the ANSWER quotation is not in [DR3]"]]
+     33014 grok verdict_gate
+        old: [["K-F","D1 vs C4","the FAILS quotation is not in [DR3]"]]
+        new: []
+     33021 single cure_reply
+        old: [["K-F","D1 vs C1","malformed"]]
+        new: [["K-F","D1 vs C1","the ANSWER quotation is not in [DR3]"]]
+   cure replay vs stored: pkgRU 262/269, pkgKFR 262/269
+   rows that change pkgRU -> pkgKFR: none
+   seats whose LIVE uncured count changes: none
+   gate: 21 fixture seats; 0 differ
+OK   unit: tag after the pair (spec 11)
+OK   unit: [Defender R3] reads as CR3 (spec 8.2)
+OK   unit: a MEANS quote holding " -- " ends at the ANSWER label (spec 8 rule 1)
+OK   unit: a RESTATED FORCED line is not a FORCED line here (as before)
+OK   unit: a non-FORCED line is refused
+8 OK, 0 FAIL
