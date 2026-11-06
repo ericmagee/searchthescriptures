@@ -2,7 +2,7 @@
 const fs=require('fs');const crypto=require('crypto');const sha=s=>crypto.createHash('sha256').update(s).digest('hex').slice(0,16);const rd=f=>fs.readFileSync(f,'utf8');
 let ok=0,bad=0;const T=(n,c,d)=>{console.log((c?'OK  ':'FAIL')+' '+n+(d?'\n     '+d:''));c?ok++:bad++;};
 const plan=JSON.parse(rd('pkgMNP/plan_MNP.json'));T('4 nodes; base and final shas match',plan.nodes.length===4&&plan.nodes.every(n=>sha(rd(n.base+'/'+n.file))===n.base_sha&&sha(rd('pkgMNP/patched/'+n.file))===n.final_sha));
-const A=JSON.parse(rd('/tmp/claude-0/sc/allnodes.json'));const live=A['Gate Record'];const src=rd('pkgMNP/src_MNP.js');
+const live=rd('pkgKWC/patched/Gate_Record.js'); /* = live 98daac9e (pkgKWC write) */const src=rd('pkgMNP/src_MNP.js');
 const lp=live.slice(live.indexOf('const PRS=(()=>{'));T('the PRS copy in pkgMNP is the live library PRS byte for byte',src.includes(lp.slice(0,src.length>0?lp.indexOf('\n return {entries,parse,classify,refCheck,premise,blockAt,foot,RND,ORD,l2bad};})();')+80:0)));
 const {sb,itemsOf}=require('../pkgUNA/replay_UNA.cjs');const k=i=>i.seat+'|'+i.rule+'|'+i.item+'|'+i.line;const REP=[];
 for(const run of ['33040','33060','33083','33107','33129','33149','33160']){const a=itemsOf(sb('pkgUNA/patched/Send_Back_Build.js',run).o),b=itemsOf(sb('pkgMNP/patched/Send_Back_Build.js',run).o);const ka=new Set(a.map(k));
