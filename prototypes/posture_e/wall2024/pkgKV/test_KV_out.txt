@@ -1,0 +1,12 @@
+OK   22 nodes; base shas = pkgKW/patched, final shas = pkgKV/patched
+OK   every node: K-V LIVE, K-V item and PASS marks say LIVE, no K-V TRIAL left in the marks
+   gone: 33020 grok CHALLENGER premise 6; 33040 chatgpt CHALLENGER premise 1; 33040 chatgpt CHALLENGER premise 6 | kept: 33021 grok CHALLENGER premise 5
+OK   raise: the 3 false K-V raises go (33020 grok premise 6, 33040 chatgpt premises 1 and 6); the true one stays (33021 grok premise 5); none added
+OK   unit (a): a premise graded UNEXHIBITED in its first sentence is not read as ruled VOID
+OK   unit (a): "Premise 3 is VOID: ..." is still read as ruled VOID
+OK   unit (b): a single-quoted span with an apostrophe inside a word is read whole
+OK   unit (c, c2): the 33040 chatgpt cure STATEMENT for premise 1 passes (quote with an apostrophe; long quotation before "does not itself make")
+OK   unit (c): "goes beyond the quoted ..." names the kind
+OK   unit: a VOID ruling that quotes no charge words and names no kind still fails
+OK   gate: pkgKV equals pkgKW on all 18 fixture seats
+10 OK, 0 FAIL

@@ -1,0 +1,335 @@
+{
+ "base": "pkgKW/patched",
+ "nodes": [
+  {
+   "file": "Alt_Gate_Build.js",
+   "name": "Alt Gate Build",
+   "base_sha": "62cc398da87e0c5b",
+   "final_sha": "b8ac26bae4b2ae33",
+   "edits": [
+    "kvSegments: first sentence grades it otherwise",
+    "kvQuotes: apostrophe inside a word",
+    "KV_KIND: goes beyond the quote; does not <word> make",
+    "KV_KIND read with quotations shortened",
+    "K-V LIVE",
+    "K-V mark LIVE",
+    "K-V PASS mark LIVE"
+   ]
+  },
+  {
+   "file": "Alt_Gate_Record.js",
+   "name": "Alt Gate Record",
+   "base_sha": "4c534edb73abf42f",
+   "final_sha": "1715efd48c07edbb",
+   "edits": [
+    "kvSegments: first sentence grades it otherwise",
+    "kvQuotes: apostrophe inside a word",
+    "KV_KIND: goes beyond the quote; does not <word> make",
+    "KV_KIND read with quotations shortened",
+    "K-V LIVE",
+    "K-V mark LIVE",
+    "K-V PASS mark LIVE"
+   ]
+  },
+  {
+   "file": "Alternate_Build.js",
+   "name": "Alternate Build",
+   "base_sha": "b5b746ebee977967",
+   "final_sha": "0200f349ab206cb8",
+   "edits": [
+    "kvSegments: first sentence grades it otherwise",
+    "kvQuotes: apostrophe inside a word",
+    "KV_KIND: goes beyond the quote; does not <word> make",
+    "KV_KIND read with quotations shortened",
+    "K-V LIVE",
+    "K-V mark LIVE",
+    "K-V PASS mark LIVE"
+   ]
+  },
+  {
+   "file": "Alternate_Cure_Build.js",
+   "name": "Alternate Cure Build",
+   "base_sha": "547a23d82572484d",
+   "final_sha": "0046d8453c440fd3",
+   "edits": [
+    "kvSegments: first sentence grades it otherwise",
+    "kvQuotes: apostrophe inside a word",
+    "KV_KIND: goes beyond the quote; does not <word> make",
+    "KV_KIND read with quotations shortened",
+    "K-V LIVE",
+    "K-V mark LIVE",
+    "K-V PASS mark LIVE"
+   ]
+  },
+  {
+   "file": "Alternate_Cure_Normalize.js",
+   "name": "Alternate Cure Normalize",
+   "base_sha": "23b521580288f49c",
+   "final_sha": "625543d412eabdd6",
+   "edits": [
+    "kvSegments: first sentence grades it otherwise",
+    "kvQuotes: apostrophe inside a word",
+    "KV_KIND: goes beyond the quote; does not <word> make",
+    "KV_KIND read with quotations shortened",
+    "K-V LIVE",
+    "K-V mark LIVE",
+    "K-V PASS mark LIVE"
+   ]
+  },
+  {
+   "file": "Alternate_Merge.js",
+   "name": "Alternate Merge",
+   "base_sha": "87db4b1d31484a2f",
+   "final_sha": "a19bec92618012b3",
+   "edits": [
+    "kvSegments: first sentence grades it otherwise",
+    "kvQuotes: apostrophe inside a word",
+    "KV_KIND: goes beyond the quote; does not <word> make",
+    "KV_KIND read with quotations shortened",
+    "K-V LIVE",
+    "K-V mark LIVE",
+    "K-V PASS mark LIVE"
+   ]
+  },
+  {
+   "file": "Alternate_Merge_Seat.js",
+   "name": "Alternate Merge Seat",
+   "base_sha": "aa340aa55e7ce65e",
+   "final_sha": "1f4936778f6aed4a",
+   "edits": [
+    "kvSegments: first sentence grades it otherwise",
+    "kvQuotes: apostrophe inside a word",
+    "KV_KIND: goes beyond the quote; does not <word> make",
+    "KV_KIND read with quotations shortened",
+    "K-V LIVE",
+    "K-V mark LIVE",
+    "K-V PASS mark LIVE"
+   ]
+  },
+  {
+   "file": "Alternate_Payloads.js",
+   "name": "Alternate Payloads",
+   "base_sha": "08d6731fc818b68b",
+   "final_sha": "a7ec6b2cb1bdb68c",
+   "edits": [
+    "kvSegments: first sentence grades it otherwise",
+    "kvQuotes: apostrophe inside a word",
+    "KV_KIND: goes beyond the quote; does not <word> make",
+    "KV_KIND read with quotations shortened",
+    "K-V LIVE",
+    "K-V mark LIVE",
+    "K-V PASS mark LIVE"
+   ]
+  },
+  {
+   "file": "Cure_Build.js",
+   "name": "Cure Build",
+   "base_sha": "b3226149bf1bca95",
+   "final_sha": "244677af1070c6b6",
+   "edits": [
+    "kvSegments: first sentence grades it otherwise",
+    "kvQuotes: apostrophe inside a word",
+    "KV_KIND: goes beyond the quote; does not <word> make",
+    "KV_KIND read with quotations shortened",
+    "K-V LIVE",
+    "K-V mark LIVE",
+    "K-V PASS mark LIVE"
+   ]
+  },
+  {
+   "file": "Cure_Check.js",
+   "name": "Cure Check",
+   "base_sha": "7613f4767318781f",
+   "final_sha": "e887958e9e9fa27a",
+   "edits": [
+    "kvSegments: first sentence grades it otherwise",
+    "kvQuotes: apostrophe inside a word",
+    "KV_KIND: goes beyond the quote; does not <word> make",
+    "KV_KIND read with quotations shortened",
+    "K-V LIVE",
+    "K-V mark LIVE",
+    "K-V PASS mark LIVE"
+   ]
+  },
+  {
+   "file": "Cure_Normalize.js",
+   "name": "Cure Normalize",
+   "base_sha": "656e77055de9a742",
+   "final_sha": "56bbd4b1ad66f65d",
+   "edits": [
+    "kvSegments: first sentence grades it otherwise",
+    "kvQuotes: apostrophe inside a word",
+    "KV_KIND: goes beyond the quote; does not <word> make",
+    "KV_KIND read with quotations shortened",
+    "K-V LIVE",
+    "K-V mark LIVE",
+    "K-V PASS mark LIVE"
+   ]
+  },
+  {
+   "file": "Extract_Independent_Verdict.js",
+   "name": "Extract Independent Verdict",
+   "base_sha": "9ec957c503984c35",
+   "final_sha": "6bc3262301fda23c",
+   "edits": [
+    "kvSegments: first sentence grades it otherwise",
+    "kvQuotes: apostrophe inside a word",
+    "KV_KIND: goes beyond the quote; does not <word> make",
+    "KV_KIND read with quotations shortened",
+    "K-V LIVE",
+    "K-V mark LIVE",
+    "K-V PASS mark LIVE"
+   ]
+  },
+  {
+   "file": "Gate_Build.js",
+   "name": "Gate Build",
+   "base_sha": "c2fe057b4f8cd6a1",
+   "final_sha": "e4e8465ba2424f33",
+   "edits": [
+    "kvSegments: first sentence grades it otherwise",
+    "kvQuotes: apostrophe inside a word",
+    "KV_KIND: goes beyond the quote; does not <word> make",
+    "KV_KIND read with quotations shortened",
+    "K-V LIVE",
+    "K-V mark LIVE",
+    "K-V PASS mark LIVE"
+   ]
+  },
+  {
+   "file": "Gate_Record.js",
+   "name": "Gate Record",
+   "base_sha": "df0e3ed177272662",
+   "final_sha": "009ec6d11b5b71c0",
+   "edits": [
+    "kvSegments: first sentence grades it otherwise",
+    "kvQuotes: apostrophe inside a word",
+    "KV_KIND: goes beyond the quote; does not <word> make",
+    "KV_KIND read with quotations shortened",
+    "K-V LIVE",
+    "K-V mark LIVE",
+    "K-V PASS mark LIVE"
+   ]
+  },
+  {
+   "file": "Panel_Cure_Build_1.js",
+   "name": "Panel Cure Build 1",
+   "base_sha": "f79fcf0b640f75b8",
+   "final_sha": "4627b84a7210d960",
+   "edits": [
+    "kvSegments: first sentence grades it otherwise",
+    "kvQuotes: apostrophe inside a word",
+    "KV_KIND: goes beyond the quote; does not <word> make",
+    "KV_KIND read with quotations shortened",
+    "K-V LIVE",
+    "K-V mark LIVE",
+    "K-V PASS mark LIVE"
+   ]
+  },
+  {
+   "file": "Panel_Cure_Build_2.js",
+   "name": "Panel Cure Build 2",
+   "base_sha": "6560a5cdd416beb1",
+   "final_sha": "480ee26b27abd005",
+   "edits": [
+    "kvSegments: first sentence grades it otherwise",
+    "kvQuotes: apostrophe inside a word",
+    "KV_KIND: goes beyond the quote; does not <word> make",
+    "KV_KIND read with quotations shortened",
+    "K-V LIVE",
+    "K-V mark LIVE",
+    "K-V PASS mark LIVE"
+   ]
+  },
+  {
+   "file": "Panel_Cure_Build_3.js",
+   "name": "Panel Cure Build 3",
+   "base_sha": "21a6e10b88b7d627",
+   "final_sha": "a9e41366b02c4dee",
+   "edits": [
+    "kvSegments: first sentence grades it otherwise",
+    "kvQuotes: apostrophe inside a word",
+    "KV_KIND: goes beyond the quote; does not <word> make",
+    "KV_KIND read with quotations shortened",
+    "K-V LIVE",
+    "K-V mark LIVE",
+    "K-V PASS mark LIVE"
+   ]
+  },
+  {
+   "file": "Panel_Cure_Check.js",
+   "name": "Panel Cure Check",
+   "base_sha": "980686e125d89f8f",
+   "final_sha": "321e89f8a309c4f0",
+   "edits": [
+    "kvSegments: first sentence grades it otherwise",
+    "kvQuotes: apostrophe inside a word",
+    "KV_KIND: goes beyond the quote; does not <word> make",
+    "KV_KIND read with quotations shortened",
+    "K-V LIVE",
+    "K-V mark LIVE",
+    "K-V PASS mark LIVE"
+   ]
+  },
+  {
+   "file": "Panel_Cure_Normalize_1.js",
+   "name": "Panel Cure Normalize 1",
+   "base_sha": "1e6d771f8cfb4a2f",
+   "final_sha": "1d0b33d19fa10c4f",
+   "edits": [
+    "kvSegments: first sentence grades it otherwise",
+    "kvQuotes: apostrophe inside a word",
+    "KV_KIND: goes beyond the quote; does not <word> make",
+    "KV_KIND read with quotations shortened",
+    "K-V LIVE",
+    "K-V mark LIVE",
+    "K-V PASS mark LIVE"
+   ]
+  },
+  {
+   "file": "Panel_Cure_Normalize_2.js",
+   "name": "Panel Cure Normalize 2",
+   "base_sha": "74e19580fe62b35c",
+   "final_sha": "fd5145ff914d07f5",
+   "edits": [
+    "kvSegments: first sentence grades it otherwise",
+    "kvQuotes: apostrophe inside a word",
+    "KV_KIND: goes beyond the quote; does not <word> make",
+    "KV_KIND read with quotations shortened",
+    "K-V LIVE",
+    "K-V mark LIVE",
+    "K-V PASS mark LIVE"
+   ]
+  },
+  {
+   "file": "Panel_Cure_Normalize_3.js",
+   "name": "Panel Cure Normalize 3",
+   "base_sha": "dca7fc44d815c9bc",
+   "final_sha": "db07dce2297f49fe",
+   "edits": [
+    "kvSegments: first sentence grades it otherwise",
+    "kvQuotes: apostrophe inside a word",
+    "KV_KIND: goes beyond the quote; does not <word> make",
+    "KV_KIND read with quotations shortened",
+    "K-V LIVE",
+    "K-V mark LIVE",
+    "K-V PASS mark LIVE"
+   ]
+  },
+  {
+   "file": "Panel_Payloads.js",
+   "name": "Panel Payloads",
+   "base_sha": "1f1fa323a8f185f8",
+   "final_sha": "4a03a15309f9c858",
+   "edits": [
+    "kvSegments: first sentence grades it otherwise",
+    "kvQuotes: apostrophe inside a word",
+    "KV_KIND: goes beyond the quote; does not <word> make",
+    "KV_KIND read with quotations shortened",
+    "K-V LIVE",
+    "K-V mark LIVE",
+    "K-V PASS mark LIVE"
+   ]
+  }
+ ]
+}
