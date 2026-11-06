@@ -1,0 +1,7 @@
+{
+ "node": "Citation Scan",
+ "base": "pkgMK/base/Citation_Scan.js (live, prewrite_lib_66adcc25.json)",
+ "base_sha": "fa853a098e524841",
+ "final_sha": "67707b7e876145e2",
+ "edits": "6 ellipsis patterns: (?:…|\\.\\.\\.)(?!:)"
+}

@@ -1,0 +1,19 @@
+OK   plan: base and final shas match
+   33083: 597 items base, 597 patched
+     PENDING -> MATCHES | CHALLENGER R1 Job 14:1 | Man [that is] born of a woman [is] of few days, and full of trouble. [few...: Heb. short of days]
+     PENDING -> MATCHES | CHALLENGER R3 Isaiah 8:4 | For before the child shall have knowledge to cry, My father, and my mother, the riches of Damascus and the spoil of Samaria shall be taken away before the king of Assyria
+     PENDING -> MATCHES | CHALLENGER R3 Isaiah 8:8 | the stretching out of his wings shall fill the breadth of thy land, O Immanuel. [stretching...: Heb. fulness of the breadth of thy land shall be the stretchings out of hi
+     PENDING -> MATCHES | CHALLENGER R3 Matthew 1:23 | Behold, a virgin shall be with child, and shall bring forth a son, and they shall call his name Emmanuel, which being interpreted is, God with us. [they...: or, his name 
+     PENDING -> MATCHES | CHALLENGER R3 Deuteronomy 24:1 | because he hath found some uncleanness in her: then let him write her a bill of divorcement, and give [it] in her hand, and send her out of his house. [some...: Heb. matt
+     PENDING -> MATCHES | CHALLENGER R4 Isaiah 8:4 | For before the child shall have knowledge to cry, My father, and my mother, the riches of Damascus and the spoil of Samaria shall be taken away before the king of Assyria
+     PENDING -> MATCHES | CHALLENGER R4 Isaiah 8:8 | the stretching out of his wings shall fill the breadth of thy land, O Immanuel. [stretching...: Heb. fulness of the breadth of thy land shall be the stretchings out of hi
+     PENDING -> MATCHES | CHALLENGER R4 Hebrews 2:16 | he took on [him] the seed of Abraham. [took not...: Gr. taketh not hold of angels, but of the seed of Abraham he taketh hold]
+   33060: 541 items base, 541 patched
+     PENDING -> MATCHES | CHALLENGER R1 Acts 1:8 | But ye shall receive power, after that the Holy Ghost is come upon you: and ye shall be witnesses unto me. [power...: or, the power of the Holy Ghost coming upon you]
+     PENDING -> MATCHES | CHALLENGER R1 Hebrews 2:16 | but he took on [him] the seed of Abraham. [took not...: Gr. taketh not hold of angels, but of the seed of Abraham he taketh hold]
+     PENDING -> MATCHES | CHALLENGER R2 Hebrews 2:16 | but he took on [him] the seed of Abraham. [took not...: Gr. taketh not hold of angels, but of the seed of Abraham he taketh hold]
+     PENDING -> MATCHES | CHALLENGER R3 Hebrews 2:16 | For verily he took not on [him the nature of] angels; but he took on [him] the seed of Abraham. [took not...: Gr. taketh not hold of angels, but of the seed of Abraham he
+OK   33083: the Oracle's (CHALLENGER) Isaiah 8:8 [R3, R4] and Matthew 1:23 [R3] margin-note quotations go from PENDING (reported WORDING DIFFERS) to MATCHES
+OK   every change in both runs is a non-match becoming MATCHES (nothing that matched is lost)
+OK   same number of items in both runs
+4 OK, 0 FAIL
