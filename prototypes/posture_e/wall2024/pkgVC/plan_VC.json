@@ -1,45 +1,15 @@
 {
- "live_version": "7599a747-8829-492a-9fe3-51378cc1e1cf",
+ "base": "pkgKCON/patched",
  "nodes": [
   {
+   "file": "Panel_Payloads.js",
    "name": "Panel Payloads",
-   "id": "2a5fabdd-28bc-4211-ab01-dc3b1d0db967",
-   "live_sha": "62bd1f25cea5b1c9",
-   "new_sha": "074520bcacd22d53",
-   "delta": 4801,
+   "base_sha": "d37207d04c41c922",
+   "final_sha": "7d66c395624868dc",
    "edits": [
-    "P1:VC"
-   ]
-  },
-  {
-   "name": "Cure Check",
-   "id": "16b07c74-a403-4172-9b9a-4a6acfea9d62",
-   "live_sha": "951bef8b391dc5a9",
-   "new_sha": "5097cdd89800de67",
-   "delta": 741,
-   "edits": [
-    "P2c:one final header"
-   ]
-  },
-  {
-   "name": "Panel Cure Check",
-   "id": "007bd090-db2f-46e1-88ea-a3e2623077ca",
-   "live_sha": "24e146b6a969c0c4",
-   "new_sha": "a794fc62f3d11d24",
-   "delta": 859,
-   "edits": [
-    "P2c:one final header"
-   ]
-  },
-  {
-   "name": "Alternate Merge",
-   "id": "8d8b179a-c064-4a4f-b8b5-ea6298d23ce3",
-   "live_sha": "ccc3449ad4534949",
-   "new_sha": "137997c10ae97537",
-   "delta": 1338,
-   "edits": [
-    "P1:single row",
-    "P2c:one final header"
+    "vcRev2024",
+    "RV on __VCW",
+    "vcBuild2024 skips reversal-hint pair"
    ]
   }
  ]

@@ -1,52 +1,13 @@
-OK   V1 32936: verified contradictions 1 (want 1) :: DEFENDER CR2 to CR4, by chatgpt,gemini,grok :: EARLIER "my bridge joined two words, and I withdraw it" LATER "Genesis 24:16 and Genesis 24:43 fix the word on an unknown woman"
-OK   V1 32936: all three panel lines verify to the same VC (chatgpt,gemini,grok)
-OK   V6 32936: gate admits it on K-W item "DEFENDER CR2 no link heading #2"
-OK   V6 32936: that K-W item reads [CR2] no link heading: "I withdraw it."
-OK   Y1 32936 chatgpt: captured, no K-CON item
-OK   Y1 32936 gemini: captured, no K-CON item
-OK   Y1 32936 grok: captured, no K-CON item
-OK   V2 32936 single: reasoning holds CONTRADICTIONS: NONE FOUND
-OK   V2 32936 single: K-CON items 1 (want 1) :: [CR4] CONTRADICTIONS: NONE FOUND was written, but the record shows: EARLIER [CR2] "my bridge joined two words, and I withdraw it" -- LATER [CR4] "Genesis 24:16 and Genesis 24:43 fix the word on an unknown woman", and no CONTRADICTION, NOT HELD or REASSERTED IN
-OK   V5 Alternate Merge: the single row goes to enforcer_log (kind enforcer_check, seat_role single, cure_status null, record only; W3 2179 item 4); no call node added
-OK   V3 synthetic EARLIER quote not in CR2: VCs 0 (want 0)
-OK   V4 synthetic LATER round before EARLIER: VCs 0 (want 0)
-OK   V6b synthetic EARLIER quote that neither contains nor lies inside the K-W sentence (gate boundary, def 2153 item 4): VCs 0 (want 0)
-OK   Y3 32791: CONTRADICTION lines 0, VCs 0 (want 0), no new item
-OK   Y3 32905: CONTRADICTION lines 0, VCs 0 (want 0), no new item
-OK   Y3 32924: CONTRADICTION lines 0, VCs 0 (want 0), no new item
-OK   Y2 Panel Payloads ENF_STATUS has K-CON TRIAL
-OK   Y2 32936 pass: verdict tags and drv_uncured unchanged
-OK   Y1/Y2 32936 pass: no panel seat got a K-CON item
-OK   V2/V5 32936 pass: vc_single rows 1 (want 1), error null
-OK   V2b synthetic panel NONE FOUND: 1 K-CON item in record words only :: [CR4] CONTRADICTIONS: NONE FOUND was written, but the record shows: EARLIER [CR2] "my bridge joined two words, and I withdraw it" -- LATER [CR4] "Genesis 24:16 and Genesis 24:43 fix the word on an unknown woman", and no 
-OK   Y1b synthetic: the other two seats get no item
-OK   V2b synthetic: gemini verdict_raw carries the AUDIT v32 mark
-OK   G1 32791 gemini: byte-identical (no verdict change)
-OK   G1 32791 grok: byte-identical (no verdict change)
-OK   G1 32791 sol: byte-identical (no verdict change)
-OK   G1 32905 gemini: byte-identical (no verdict change) [cured without a verdict change]
-OK   G1 32905 grok: byte-identical (no verdict change)
-OK   G1 32905 sol: byte-identical (no verdict change)
-OK   H1 32924 chatgpt: reasoning opens "SUPERSEDED BY CURE: verdict BROKEN to HELD; see the cure lines below" then the judge's own text unchanged
-OK   H2 32924 chatgpt: the line names no keystone change (S21 unapplied)
-OK   H 32924 chatgpt: not doubled on a second pass
-OK   G2 32924 chatgpt: verdict_tag and the text after the object unchanged
-OK   G1 32924 gemini: byte-identical (no verdict change)
-OK   G1 32924 grok: byte-identical (no verdict change)
-OK   H2 32936 chatgpt: reasoning opens "SUPERSEDED BY CURE: verdict BROKEN to HELD; see the cure lines below" then the judge's own text unchanged
-OK   H2 32936 chatgpt: the line names no keystone change (S21 unapplied)
-OK   H 32936 chatgpt: not doubled on a second pass
-OK   G2 32936 chatgpt: verdict_tag and the text after the object unchanged
-OK   G1 32936 gemini: byte-identical (no verdict change)
-OK   G1 32936 grok: byte-identical (no verdict change) [G3: opens with its CONTRADICTION line]
-OK   G1 count of unchanged judgments: 10 (want 10)
-OK   H-live 32949 chatgpt: the header the live run lacked
-OK   H-twice: a later change replaces the header and names the final tag
-OK   H-back: a change undone by a later step leaves no header
-OK   H-single: plain text opens with the header
-OK   H-single: no change, byte-identical
-OK   Sites: Panel Cure Check, once after every cure step, once on the tie path
-OK   Sites: Alternate Merge, once before the seat is seated or refused
-OK   Sites: Cure Check, the single judge
-OK   nodes changed: 4 (Panel Payloads, Cure Check, Panel Cure Check, Alternate Merge); cureRewrite is no longer edited
-ALL OK
+base VC: [
+  'DEFENDER|CR3|DEFENDER CR3 LINK 2 #8|CR4 :: Matthew 1:25 denies that knowing up to the birth.'
+]
+new  VC: []
+OK   base reproduces the 32980 VC on "Matthew 1:25 denies that knowing up to the birth."
+OK   each panel prompt yields the one reversal-hint pair: gemini=1, sol=1, grok=1
+OK   new: that pair is no longer a VC, so the single judge gets no item for it
+OK   new: every other VC is unchanged (0 of 1)
+OK   vcRev2024 reads a note
+OK   vcRev2024: no note, no pair
+OK   with RV empty the new code gives the base VC set
+OK   a hint pair that differs from the judge line leaves the VC in place
+8 OK 0 FAIL
