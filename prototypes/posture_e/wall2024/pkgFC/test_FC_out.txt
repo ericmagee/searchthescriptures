@@ -1,0 +1,14 @@
+OK   24 nodes: base and final shas match the plan
+OK   every node parses as an n8n Code node body
+OK   each node differs from its base only at the FORCED sites
+OK   base: the tagged form fails KF_LINE and SB_FORM (33020 chatgpt S14)
+OK   pkgFC: the tagged form passes KF_LINE and SB_FORM
+OK   pkgFC: the untagged form reads as before
+OK   pkgFC: KF_LINE captures the same groups for tagged and untagged
+OK   kfLines: a correct tagged FORCED line raises no K-F item
+OK   kfLines base: the tagged line was not even read as FORCED (no item, but no forced link either)
+OK   __kfHas finds the tagged FORCED line for D1 vs C2
+OK   not read: FORCED (Commitment): D1 vs C2 
+OK   not read: FORCED (see below): D1 vs C2 -
+OK   gateForced2024 reads a tagged FORCED line and cures
+13 OK, 0 FAIL

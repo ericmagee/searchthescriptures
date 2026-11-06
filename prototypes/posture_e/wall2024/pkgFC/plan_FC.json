@@ -1,0 +1,197 @@
+{
+ "base": "pkgCR/patched (19) + pkgKIND/final (5)",
+ "nodes": [
+  {
+   "file": "Alt_Gate_Build.js",
+   "name": "Alt Gate Build",
+   "base": "pkgCR/patched",
+   "base_sha": "adabbd01e67a07ec",
+   "final_sha": "c464a6d3f4fad12b",
+   "sites": 6
+  },
+  {
+   "file": "Alt_Gate_Record.js",
+   "name": "Alt Gate Record",
+   "base": "pkgCR/patched",
+   "base_sha": "43667ea491afb675",
+   "final_sha": "361c10fdbe5d8d00",
+   "sites": 6
+  },
+  {
+   "file": "Alternate_Build.js",
+   "name": "Alternate Build",
+   "base": "pkgCR/patched",
+   "base_sha": "c53ee783939b9643",
+   "final_sha": "f957920c7b711083",
+   "sites": 3
+  },
+  {
+   "file": "Alternate_Cure_Build.js",
+   "name": "Alternate Cure Build",
+   "base": "pkgCR/patched",
+   "base_sha": "f1bcc034a04a3480",
+   "final_sha": "69a483cc43496e7c",
+   "sites": 3
+  },
+  {
+   "file": "Alternate_Cure_Normalize.js",
+   "name": "Alternate Cure Normalize",
+   "base": "pkgCR/patched",
+   "base_sha": "8164d8e7358edd6f",
+   "final_sha": "3ed412edbace676f",
+   "sites": 3
+  },
+  {
+   "file": "Alternate_Merge.js",
+   "name": "Alternate Merge",
+   "base": "pkgCR/patched",
+   "base_sha": "38c11050ea13b111",
+   "final_sha": "b43e27eedf170484",
+   "sites": 6
+  },
+  {
+   "file": "Alternate_Merge_Seat.js",
+   "name": "Alternate Merge Seat",
+   "base": "pkgCR/patched",
+   "base_sha": "812b277a17347144",
+   "final_sha": "9cec27237f2d07ef",
+   "sites": 6
+  },
+  {
+   "file": "Cure_Build.js",
+   "name": "Cure Build",
+   "base": "pkgCR/patched",
+   "base_sha": "2094ac2bc3ee8f7d",
+   "final_sha": "322e540f8a2cd749",
+   "sites": 3
+  },
+  {
+   "file": "Cure_Check.js",
+   "name": "Cure Check",
+   "base": "pkgCR/patched",
+   "base_sha": "92ad4f14496826d8",
+   "final_sha": "28dd898f1a8f9331",
+   "sites": 3
+  },
+  {
+   "file": "Cure_Normalize.js",
+   "name": "Cure Normalize",
+   "base": "pkgCR/patched",
+   "base_sha": "385b13ac248b2f78",
+   "final_sha": "4c9bc68d4c80dd16",
+   "sites": 3
+  },
+  {
+   "file": "Gate_Build.js",
+   "name": "Gate Build",
+   "base": "pkgCR/patched",
+   "base_sha": "a230560e1ece2a2a",
+   "final_sha": "de5db42f191cd9bb",
+   "sites": 6
+  },
+  {
+   "file": "Gate_Record.js",
+   "name": "Gate Record",
+   "base": "pkgCR/patched",
+   "base_sha": "35dd3a655be5f500",
+   "final_sha": "016895e5d1d83dd8",
+   "sites": 6
+  },
+  {
+   "file": "Panel_Cure_Build_1.js",
+   "name": "Panel Cure Build 1",
+   "base": "pkgCR/patched",
+   "base_sha": "f0b9e26c96d59055",
+   "final_sha": "01a0c1d00c90b18b",
+   "sites": 3
+  },
+  {
+   "file": "Panel_Cure_Build_2.js",
+   "name": "Panel Cure Build 2",
+   "base": "pkgCR/patched",
+   "base_sha": "9ef6d3fcdac99e3e",
+   "final_sha": "32ac2a83d6145b34",
+   "sites": 3
+  },
+  {
+   "file": "Panel_Cure_Build_3.js",
+   "name": "Panel Cure Build 3",
+   "base": "pkgCR/patched",
+   "base_sha": "d6ad0d1e95c52310",
+   "final_sha": "5714ea78d4589f43",
+   "sites": 3
+  },
+  {
+   "file": "Panel_Cure_Check.js",
+   "name": "Panel Cure Check",
+   "base": "pkgCR/patched",
+   "base_sha": "c8c36031ba749d03",
+   "final_sha": "05a37c39a0029128",
+   "sites": 3
+  },
+  {
+   "file": "Panel_Cure_Normalize_1.js",
+   "name": "Panel Cure Normalize 1",
+   "base": "pkgCR/patched",
+   "base_sha": "ddea386896123478",
+   "final_sha": "45e2031871a3a6f6",
+   "sites": 3
+  },
+  {
+   "file": "Panel_Cure_Normalize_2.js",
+   "name": "Panel Cure Normalize 2",
+   "base": "pkgCR/patched",
+   "base_sha": "86cef16a23dc2e1c",
+   "final_sha": "a5bbc2172457e7d4",
+   "sites": 3
+  },
+  {
+   "file": "Panel_Cure_Normalize_3.js",
+   "name": "Panel Cure Normalize 3",
+   "base": "pkgCR/patched",
+   "base_sha": "618f2702510b9f87",
+   "final_sha": "ef694b803a5eab0c",
+   "sites": 3
+  },
+  {
+   "file": "Panel_Payloads.js",
+   "name": "Panel Payloads",
+   "base": "pkgKIND/final",
+   "base_sha": "728f1da9dc01f145",
+   "final_sha": "fce4a9cecabb687c",
+   "sites": 2
+  },
+  {
+   "file": "Alternate_Payloads.js",
+   "name": "Alternate Payloads",
+   "base": "pkgKIND/final",
+   "base_sha": "adc132d2357d372f",
+   "final_sha": "bfe241da7279064b",
+   "sites": 2
+  },
+  {
+   "file": "Judge_Enforcer_Build.js",
+   "name": "Judge Enforcer Build",
+   "base": "pkgKIND/final",
+   "base_sha": "2772cf0892c7aee9",
+   "final_sha": "9f737624cedd9366",
+   "sites": 3
+  },
+  {
+   "file": "Alt_Judge_Enforcer_Build.js",
+   "name": "Alt Judge Enforcer Build",
+   "base": "pkgKIND/final",
+   "base_sha": "0a6a2bae6ae0612a",
+   "final_sha": "48aadbefe5e50f65",
+   "sites": 3
+  },
+  {
+   "file": "Extract_Independent_Verdict.js",
+   "name": "Extract Independent Verdict",
+   "base": "pkgKIND/final",
+   "base_sha": "fb9d094086544564",
+   "final_sha": "a395b18c7e4f8534",
+   "sites": 2
+  }
+ ]
+}
