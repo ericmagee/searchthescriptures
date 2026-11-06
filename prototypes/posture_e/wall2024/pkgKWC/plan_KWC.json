@@ -1,0 +1,138 @@
+{
+ "base": "pkgKGW/patched (live ff8967bb)",
+ "nodes": [
+  {
+   "file": "Alt_Gate_Build.js",
+   "base": "pkgKGW/patched",
+   "base_sha": "dfe316f216318a6c",
+   "final_sha": "334c1cfa0d7b3bf5",
+   "edits": 1
+  },
+  {
+   "file": "Alt_Gate_Record.js",
+   "base": "pkgKGW/patched",
+   "base_sha": "d8f1f8e899d6849f",
+   "final_sha": "66b4054d79dc2640",
+   "edits": 1
+  },
+  {
+   "file": "Alternate_Build.js",
+   "base": "pkgKGW/patched",
+   "base_sha": "b4d45ac4f27d4a58",
+   "final_sha": "a1fe8c257e11e45c",
+   "edits": 1
+  },
+  {
+   "file": "Alternate_Cure_Build.js",
+   "base": "pkgKGW/patched",
+   "base_sha": "4e4ad8f4c9fc86fb",
+   "final_sha": "712bcab0c80166f2",
+   "edits": 1
+  },
+  {
+   "file": "Alternate_Cure_Normalize.js",
+   "base": "pkgKGW/patched",
+   "base_sha": "e771ed141f4bb7c7",
+   "final_sha": "9c4ad1cef6760807",
+   "edits": 1
+  },
+  {
+   "file": "Alternate_Merge.js",
+   "base": "pkgKGW/patched",
+   "base_sha": "d186784d23df5d22",
+   "final_sha": "2ce0f815564332d0",
+   "edits": 1
+  },
+  {
+   "file": "Alternate_Merge_Seat.js",
+   "base": "pkgKGW/patched",
+   "base_sha": "903b8ff9cccc6ddd",
+   "final_sha": "27934a2a6adf57fc",
+   "edits": 1
+  },
+  {
+   "file": "Cure_Build.js",
+   "base": "pkgKGW/patched",
+   "base_sha": "45fadabe5a56e899",
+   "final_sha": "9a91c34da5bf2429",
+   "edits": 1
+  },
+  {
+   "file": "Cure_Check.js",
+   "base": "pkgKGW/patched",
+   "base_sha": "4c2c6bbd6ee8159b",
+   "final_sha": "be95eb8c124a1642",
+   "edits": 1
+  },
+  {
+   "file": "Cure_Normalize.js",
+   "base": "pkgKGW/patched",
+   "base_sha": "bd4045df6d4f0a46",
+   "final_sha": "85fc2890c4b46299",
+   "edits": 1
+  },
+  {
+   "file": "Gate_Build.js",
+   "base": "pkgKGW/patched",
+   "base_sha": "6349b9ad6111d241",
+   "final_sha": "8022bc7e4938345a",
+   "edits": 1
+  },
+  {
+   "file": "Gate_Record.js",
+   "base": "pkgKGW/patched",
+   "base_sha": "9da27680612aad5b",
+   "final_sha": "19ba95234b025c3e",
+   "edits": 1
+  },
+  {
+   "file": "Panel_Cure_Build_1.js",
+   "base": "pkgKGW/patched",
+   "base_sha": "fd7a0e311b672a22",
+   "final_sha": "27e3aee8fa02902b",
+   "edits": 1
+  },
+  {
+   "file": "Panel_Cure_Build_2.js",
+   "base": "pkgKGW/patched",
+   "base_sha": "9b4e2874b8fcfe7d",
+   "final_sha": "216dad1d1a1b4d00",
+   "edits": 1
+  },
+  {
+   "file": "Panel_Cure_Build_3.js",
+   "base": "pkgKGW/patched",
+   "base_sha": "b42f20ba0306f940",
+   "final_sha": "a96da811a65bc205",
+   "edits": 1
+  },
+  {
+   "file": "Panel_Cure_Check.js",
+   "base": "pkgKGW/patched",
+   "base_sha": "c053dffe5189b558",
+   "final_sha": "c23b105198fe997a",
+   "edits": 1
+  },
+  {
+   "file": "Panel_Cure_Normalize_1.js",
+   "base": "pkgKGW/patched",
+   "base_sha": "f2dc9c0303ca8474",
+   "final_sha": "b209e07dd61fcb6a",
+   "edits": 1
+  },
+  {
+   "file": "Panel_Cure_Normalize_2.js",
+   "base": "pkgKGW/patched",
+   "base_sha": "605074218e804ffa",
+   "final_sha": "dc67aa27678c1633",
+   "edits": 1
+  },
+  {
+   "file": "Panel_Cure_Normalize_3.js",
+   "base": "pkgKGW/patched",
+   "base_sha": "376783c6711c1e0e",
+   "final_sha": "2f0d21ff6bb19130",
+   "edits": 1
+  }
+ ]
+}

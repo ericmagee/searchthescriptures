@@ -1,0 +1,20 @@
+OK   19 nodes; base and final shas match
+OK   kwCo reads 33149 chatgpt: "Fact: the claim. CONCEDED in that form: [DR3] drops it"
+OK   kwCo reads CONCEDED: x
+OK   kwCo reads x. CONCEDED.
+OK   kwCo reads CONCEDED -- x
+OK   kwCo reads x. CONCEDED for the narrowed claim — y
+OK   kwCo does not read 33149-class sol: "x. CONCEDED as an independently sufficient limb." (no colon or dash)
+OK   kwCo does not read "That limb is CONCEDED; x" (mid-sentence)
+OK   kwCo does not read CONCEDED LINKS: 1
+OK   kwCo does not read 5 words then a colon: "x. CONCEDED in part and limited to this: y"
+OK   kwCo does not read lowercase prose: "the point is conceded: y"
+OK   one kwCo text in all 19 nodes
+OK   33040 replay: unchanged from live (pkgKGW)
+OK   33060 replay: unchanged from live (pkgKGW)
+OK   33083 replay: unchanged from live (pkgKGW)
+OK   33107 replay: unchanged from live (pkgKGW)
+OK   33129 replay: unchanged from live (pkgKGW)
+OK   33149 replay: chatgpt K-W CHALLENGER DR3 LINK 5 cured, DR3 LINK 1 stays uncured; nothing else changes
+
+18 OK, 0 FAIL
