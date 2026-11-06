@@ -1,88 +1,95 @@
 {
- "base": "pkgKC2/patched",
+ "base": "pkgKS3/patched",
  "nodes": [
   {
    "file": "Alt_Gate_Build.js",
    "name": "Alt Gate Build",
-   "base_sha": "1d953ee3b32cb93f",
-   "final_sha": "4806b4dbecd5ce8e",
+   "base_sha": "447371b086adda3c",
+   "final_sha": "62cc398da87e0c5b",
    "edits": [
     "kwLines421 skips quoted, heading, negated",
     "K-W cure: NOT HELD with a quote",
+    "cure prompt: K-W NOT HELD bar",
     "K-W LIVE"
    ]
   },
   {
    "file": "Alt_Gate_Record.js",
    "name": "Alt Gate Record",
-   "base_sha": "383918c4132635ff",
-   "final_sha": "7720d01e7ca597ef",
+   "base_sha": "d7c7d4ac933602e6",
+   "final_sha": "4c534edb73abf42f",
    "edits": [
     "kwLines421 skips quoted, heading, negated",
     "K-W cure: NOT HELD with a quote",
+    "cure prompt: K-W NOT HELD bar",
     "K-W LIVE"
    ]
   },
   {
    "file": "Alternate_Build.js",
    "name": "Alternate Build",
-   "base_sha": "a0e40aa8e2f6771a",
-   "final_sha": "a81121122da40f8d",
+   "base_sha": "8bfc16dcc2338b57",
+   "final_sha": "b5b746ebee977967",
    "edits": [
     "kwLines421 skips quoted, heading, negated",
     "K-W cure: NOT HELD with a quote",
+    "cure prompt: K-W NOT HELD bar",
     "K-W LIVE"
    ]
   },
   {
    "file": "Alternate_Cure_Build.js",
    "name": "Alternate Cure Build",
-   "base_sha": "97bb54f20c5b5698",
-   "final_sha": "975066d1041afe1d",
+   "base_sha": "982fa609b94523d5",
+   "final_sha": "547a23d82572484d",
    "edits": [
     "kwLines421 skips quoted, heading, negated",
     "K-W cure: NOT HELD with a quote",
+    "cure prompt: K-W NOT HELD bar",
     "K-W LIVE"
    ]
   },
   {
    "file": "Alternate_Cure_Normalize.js",
    "name": "Alternate Cure Normalize",
-   "base_sha": "e7888184ac126ed2",
-   "final_sha": "70303342050e37ea",
+   "base_sha": "6c6bdae90fc444ca",
+   "final_sha": "23b521580288f49c",
    "edits": [
     "kwLines421 skips quoted, heading, negated",
     "K-W cure: NOT HELD with a quote",
+    "cure prompt: K-W NOT HELD bar",
     "K-W LIVE"
    ]
   },
   {
    "file": "Alternate_Merge.js",
    "name": "Alternate Merge",
-   "base_sha": "2601691b8e56290d",
-   "final_sha": "0f79b228917702cb",
+   "base_sha": "7a227307779a2711",
+   "final_sha": "87db4b1d31484a2f",
    "edits": [
     "kwLines421 skips quoted, heading, negated",
     "K-W cure: NOT HELD with a quote",
+    "cure prompt: K-W NOT HELD bar",
     "K-W LIVE"
    ]
   },
   {
    "file": "Alternate_Merge_Seat.js",
    "name": "Alternate Merge Seat",
-   "base_sha": "a4b6c8e1ddbeb831",
-   "final_sha": "917d3eb47258294b",
+   "base_sha": "31cc4ea738b9ffac",
+   "final_sha": "aa340aa55e7ce65e",
    "edits": [
     "kwLines421 skips quoted, heading, negated",
     "K-W cure: NOT HELD with a quote",
+    "cure prompt: K-W NOT HELD bar",
     "K-W LIVE"
    ]
   },
   {
    "file": "Alternate_Payloads.js",
    "name": "Alternate Payloads",
-   "base_sha": "d761b184ed40ef99",
-   "final_sha": "6dbcee7a02934a77",
+   "base_sha": "5cd44838445b047b",
+   "final_sha": "08d6731fc818b68b",
    "edits": [
     "kwLines421 skips quoted, heading, negated",
     "K-W LIVE"
@@ -91,41 +98,44 @@
   {
    "file": "Cure_Build.js",
    "name": "Cure Build",
-   "base_sha": "5ab7781e93f980f2",
-   "final_sha": "620dc5d4fd301936",
+   "base_sha": "8bec231959c10384",
+   "final_sha": "b3226149bf1bca95",
    "edits": [
     "kwLines421 skips quoted, heading, negated",
     "K-W cure: NOT HELD with a quote",
+    "cure prompt: K-W NOT HELD bar",
     "K-W LIVE"
    ]
   },
   {
    "file": "Cure_Check.js",
    "name": "Cure Check",
-   "base_sha": "fa3e4edbe7c4e0bf",
-   "final_sha": "80463b719a11b264",
+   "base_sha": "73d277a80632634a",
+   "final_sha": "7613f4767318781f",
    "edits": [
     "kwLines421 skips quoted, heading, negated",
     "K-W cure: NOT HELD with a quote",
+    "cure prompt: K-W NOT HELD bar",
     "K-W LIVE"
    ]
   },
   {
    "file": "Cure_Normalize.js",
    "name": "Cure Normalize",
-   "base_sha": "064b25290ed09c3a",
-   "final_sha": "e299ed4b424e4553",
+   "base_sha": "8929dd91cbe511ec",
+   "final_sha": "656e77055de9a742",
    "edits": [
     "kwLines421 skips quoted, heading, negated",
     "K-W cure: NOT HELD with a quote",
+    "cure prompt: K-W NOT HELD bar",
     "K-W LIVE"
    ]
   },
   {
    "file": "Extract_Independent_Verdict.js",
    "name": "Extract Independent Verdict",
-   "base_sha": "217b910f0ffe56e6",
-   "final_sha": "72524eb3045801bf",
+   "base_sha": "42429556fdfe7a64",
+   "final_sha": "9ec957c503984c35",
    "edits": [
     "kwLines421 skips quoted, heading, negated",
     "K-W LIVE"
@@ -134,107 +144,116 @@
   {
    "file": "Gate_Build.js",
    "name": "Gate Build",
-   "base_sha": "ab5e35959050bca5",
-   "final_sha": "1c1de2dae8b25290",
+   "base_sha": "277f61d2c68e616d",
+   "final_sha": "c2fe057b4f8cd6a1",
    "edits": [
     "kwLines421 skips quoted, heading, negated",
     "K-W cure: NOT HELD with a quote",
+    "cure prompt: K-W NOT HELD bar",
     "K-W LIVE"
    ]
   },
   {
    "file": "Gate_Record.js",
    "name": "Gate Record",
-   "base_sha": "c3568b63381e626c",
-   "final_sha": "b3ce9e1552426920",
+   "base_sha": "b32ab4043b4e7cf8",
+   "final_sha": "df0e3ed177272662",
    "edits": [
     "kwLines421 skips quoted, heading, negated",
     "K-W cure: NOT HELD with a quote",
+    "cure prompt: K-W NOT HELD bar",
     "K-W LIVE"
    ]
   },
   {
    "file": "Panel_Cure_Build_1.js",
    "name": "Panel Cure Build 1",
-   "base_sha": "17238840d0e221f6",
-   "final_sha": "49e3e3964a6ae074",
+   "base_sha": "7ac63d3b5f0bffc7",
+   "final_sha": "f79fcf0b640f75b8",
    "edits": [
     "kwLines421 skips quoted, heading, negated",
     "K-W cure: NOT HELD with a quote",
+    "cure prompt: K-W NOT HELD bar",
     "K-W LIVE"
    ]
   },
   {
    "file": "Panel_Cure_Build_2.js",
    "name": "Panel Cure Build 2",
-   "base_sha": "6244d056740b2d0e",
-   "final_sha": "321a56f0a7b1cba1",
+   "base_sha": "ed6d1fcfc710912c",
+   "final_sha": "6560a5cdd416beb1",
    "edits": [
     "kwLines421 skips quoted, heading, negated",
     "K-W cure: NOT HELD with a quote",
+    "cure prompt: K-W NOT HELD bar",
     "K-W LIVE"
    ]
   },
   {
    "file": "Panel_Cure_Build_3.js",
    "name": "Panel Cure Build 3",
-   "base_sha": "08bece19223c55ca",
-   "final_sha": "abfd750c659a68ac",
+   "base_sha": "792904c7c06cc4fd",
+   "final_sha": "21a6e10b88b7d627",
    "edits": [
     "kwLines421 skips quoted, heading, negated",
     "K-W cure: NOT HELD with a quote",
+    "cure prompt: K-W NOT HELD bar",
     "K-W LIVE"
    ]
   },
   {
    "file": "Panel_Cure_Check.js",
    "name": "Panel Cure Check",
-   "base_sha": "7b7d7f2d6399aeb6",
-   "final_sha": "d660e701e6457279",
+   "base_sha": "bad8fd4f8827e976",
+   "final_sha": "980686e125d89f8f",
    "edits": [
     "kwLines421 skips quoted, heading, negated",
     "K-W cure: NOT HELD with a quote",
+    "cure prompt: K-W NOT HELD bar",
     "K-W LIVE"
    ]
   },
   {
    "file": "Panel_Cure_Normalize_1.js",
    "name": "Panel Cure Normalize 1",
-   "base_sha": "f66c2af5f4557880",
-   "final_sha": "fcecaa21ebcaee34",
+   "base_sha": "738989d66493b4b5",
+   "final_sha": "1e6d771f8cfb4a2f",
    "edits": [
     "kwLines421 skips quoted, heading, negated",
     "K-W cure: NOT HELD with a quote",
+    "cure prompt: K-W NOT HELD bar",
     "K-W LIVE"
    ]
   },
   {
    "file": "Panel_Cure_Normalize_2.js",
    "name": "Panel Cure Normalize 2",
-   "base_sha": "762f63429b2f906c",
-   "final_sha": "68f64371a6cd5c69",
+   "base_sha": "4d667309b9aa2713",
+   "final_sha": "74e19580fe62b35c",
    "edits": [
     "kwLines421 skips quoted, heading, negated",
     "K-W cure: NOT HELD with a quote",
+    "cure prompt: K-W NOT HELD bar",
     "K-W LIVE"
    ]
   },
   {
    "file": "Panel_Cure_Normalize_3.js",
    "name": "Panel Cure Normalize 3",
-   "base_sha": "91fddc60f0a9feb2",
-   "final_sha": "20d12ba88e7ed6c4",
+   "base_sha": "0ee56cbe46dbdbfe",
+   "final_sha": "dca7fc44d815c9bc",
    "edits": [
     "kwLines421 skips quoted, heading, negated",
     "K-W cure: NOT HELD with a quote",
+    "cure prompt: K-W NOT HELD bar",
     "K-W LIVE"
    ]
   },
   {
    "file": "Panel_Payloads.js",
    "name": "Panel Payloads",
-   "base_sha": "1c9b88a695545342",
-   "final_sha": "acb692d329268f91",
+   "base_sha": "80ffc26f75a2dbae",
+   "final_sha": "1f1fa323a8f185f8",
    "edits": [
     "kwLines421 skips quoted, heading, negated",
     "K-W LIVE"
