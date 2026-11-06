@@ -1,0 +1,17 @@
+OK   22 nodes; base shas = pkgRCK/patched, final shas = pkgNHQ/patched
+OK   33060 row 7881 sol K-S3 S3 CHALLENGER DR4: #11: base UNCURED, pkgNHQ CURED (want CURED)
+     answered NOT HELD with its reason, quoting the flagged sentence (6 words in a row, or all of it if shorter): the sentence is not a countable concession (pkgKS3)
+OK   33060 row 7883 sol K-W DEFENDER CR2 LINK 1 #1: base UNCURED, pkgNHQ UNCURED (want UNCURED)
+     neither the RESPONSE nor the STATEMENT line says STANDS WITHOUT IT because <layer> with an [L1], [L2] or [L3], CONCEDED, REASSERTED IN <round> "<quote>", or NOT HELD with a reason that quotes the flagged sentence
+OK   row 7881 was UNCURED on the base (the fault reproduces)
+OK   nhqFull on row 7881 returns the whole [DR4] sentence, ending "carries a father; I keep the drop I made there."
+     C2: NARROWED TO: the sign's own frame, bounded by 'before the child shall know' (Isaiah 7: ... Isaiah 8:4), carries a father; I keep the drop I made there.
+OK   nhqFull on row 7883 finds "I concede the point on ek (out of)." in [CR2] (markdown *ek* aside), and the item stays UNCURED
+     ["I concede the point on ek (out of)."]
+OK   unit: a line with no round label, or a quote not in the round, gives no full sentence (every test as before)
+OK   unit: K-CON reads the cut LATER quotation from the round
+OK   corpus cure replay: 516 rows each; 2 change, all UNCURED -> CURED (none lost)
+     33014 chatgpt K-W CHALLENGER DR3 LINK 3 #1: UNCURED  =>  CURED (log UNCURED)
+     33014 sol K-W CHALLENGER DR3 LINK 3 #1: UNCURED  =>  CURED (log UNCURED)
+OK   the changes are exactly 33014 chatgpt and sol K-W CHALLENGER DR3 LINK 3 #1 (line "I grant no row states Mary's house." spans into the next sentence; both judges quote the flagged sentence whole)
+10 OK, 0 FAIL
