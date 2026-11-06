@@ -9,12 +9,12 @@ const E1=["'K-CON':'TRIAL'","'K-CON':'LIVE'"];
 const E2=["or REASSERTED IN with the quote. TRIAL rule: answer it in the cure; it removes no seat.","or REASSERTED IN with the quote. LIVE rule: left uncured after the cure, it removes the seat."];
 const V1=" return [...V.values()];}\nfunction vcCaught2024";
 const V2=" return [...V.values()].filter(v=>new Set(v.by).size>=2); /* pkgKC2 (a): a VC needs two seats that wrote the pair */}\nfunction vcCaught2024";
-const BASE=process.env.BASE||'pkgRU/patched'; /* stack: BASE=pkgKFR/patched node pkgKC2/build_KC2.cjs */
-const plan={base:BASE,nodes:[]};
+const BASE=process.env.BASE||'pkgACR/patched'; /* W3: order pkgRU, pkgKFR, pkgACR, pkgKC2 */ /* stack: BASE=pkgKFR/patched node pkgKC2/build_KC2.cjs */
+const OUT=process.env.OUT||'pkgKC2';const plan={base:BASE,nodes:[]};fs.mkdirSync(OUT+'/patched',{recursive:true});
 for(const f of fs.readdirSync(BASE).sort()){const b=fs.readFileSync(BASE+'/'+f,'utf8');let t=b;const ed=[];
  if(t.split(E1[0]).length-1!==1)throw new Error(f+' E1');t=t.replace(E1[0],E1[1]);ed.push('ENF_STATUS K-CON LIVE');
  const k=t.split(E2[0]).length-1;if(k<1||k>2)throw new Error(f+' E2 x'+k);t=t.split(E2[0]).join(E2[1]);ed.push('K-CON item text LIVE x'+k);
  if(t.includes('function vcBuild2024')){if(t.split(V1).length-1!==1)throw new Error(f+' V1');t=t.replace(V1,V2);ed.push('VC two seats');}
  if(t.includes("'K-CON':'TRIAL'"))throw new Error(f+' left');new Function('$','$input','$json',t);
- fs.writeFileSync('pkgKC2/patched/'+f,t);plan.nodes.push({file:f,name:f.replace(/\.js$/,'').replace(/_/g,' '),base_sha:sha(b),final_sha:sha(t),edits:ed});}
-fs.writeFileSync('pkgKC2/plan_KC2.json',JSON.stringify(plan,null,1));plan.nodes.forEach(x=>console.log(x.name.padEnd(28),x.base_sha,'->',x.final_sha,x.edits.join('; ')));
+ fs.writeFileSync(OUT+'/patched/'+f,t);plan.nodes.push({file:f,name:f.replace(/\.js$/,'').replace(/_/g,' '),base_sha:sha(b),final_sha:sha(t),edits:ed});}
+fs.writeFileSync(OUT+'/plan_KC2.json',JSON.stringify(plan,null,1));plan.nodes.forEach(x=>console.log(x.name.padEnd(28),x.base_sha,'->',x.final_sha,x.edits.join('; ')));

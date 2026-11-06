@@ -1,11 +1,11 @@
 {
- "base": "pkgRU/patched",
+ "base": "pkgACR/patched",
  "nodes": [
   {
    "file": "Alt_Gate_Build.js",
    "name": "Alt Gate Build",
-   "base_sha": "df2bda2c6334cfa6",
-   "final_sha": "a428378174a13fe0",
+   "base_sha": "5129c7beed1bf22a",
+   "final_sha": "1d953ee3b32cb93f",
    "edits": [
     "ENF_STATUS K-CON LIVE",
     "K-CON item text LIVE x1"
@@ -14,8 +14,8 @@
   {
    "file": "Alt_Gate_Record.js",
    "name": "Alt Gate Record",
-   "base_sha": "a328a0fabb67f279",
-   "final_sha": "c59d5cf1fc4919d3",
+   "base_sha": "3e4a4357eb23dba9",
+   "final_sha": "383918c4132635ff",
    "edits": [
     "ENF_STATUS K-CON LIVE",
     "K-CON item text LIVE x1"
@@ -24,8 +24,8 @@
   {
    "file": "Alternate_Build.js",
    "name": "Alternate Build",
-   "base_sha": "d84e87b937ed2646",
-   "final_sha": "394b7528c2694266",
+   "base_sha": "c9a671af028554cd",
+   "final_sha": "a0e40aa8e2f6771a",
    "edits": [
     "ENF_STATUS K-CON LIVE",
     "K-CON item text LIVE x1"
@@ -34,8 +34,8 @@
   {
    "file": "Alternate_Cure_Build.js",
    "name": "Alternate Cure Build",
-   "base_sha": "e64799f0fdf03348",
-   "final_sha": "092f59708053edfd",
+   "base_sha": "1e768cdd2f985c19",
+   "final_sha": "97bb54f20c5b5698",
    "edits": [
     "ENF_STATUS K-CON LIVE",
     "K-CON item text LIVE x1"
@@ -44,8 +44,8 @@
   {
    "file": "Alternate_Cure_Normalize.js",
    "name": "Alternate Cure Normalize",
-   "base_sha": "28e6a9858e35fd26",
-   "final_sha": "e6f7b04af75a2071",
+   "base_sha": "c874a1ba57c0b515",
+   "final_sha": "e7888184ac126ed2",
    "edits": [
     "ENF_STATUS K-CON LIVE",
     "K-CON item text LIVE x1"
@@ -54,8 +54,8 @@
   {
    "file": "Alternate_Merge.js",
    "name": "Alternate Merge",
-   "base_sha": "dc913ad0f3a5b7a5",
-   "final_sha": "53235b958601af38",
+   "base_sha": "885037ac00572bb1",
+   "final_sha": "2601691b8e56290d",
    "edits": [
     "ENF_STATUS K-CON LIVE",
     "K-CON item text LIVE x1"
@@ -64,8 +64,8 @@
   {
    "file": "Alternate_Merge_Seat.js",
    "name": "Alternate Merge Seat",
-   "base_sha": "4b249cadc6835e9c",
-   "final_sha": "daf3f54bd0515925",
+   "base_sha": "9379cce800995a1a",
+   "final_sha": "a4b6c8e1ddbeb831",
    "edits": [
     "ENF_STATUS K-CON LIVE",
     "K-CON item text LIVE x1"
@@ -74,8 +74,8 @@
   {
    "file": "Alternate_Payloads.js",
    "name": "Alternate Payloads",
-   "base_sha": "a2db7503b9deac8e",
-   "final_sha": "b75f814af88b46c8",
+   "base_sha": "29e39941cccadff0",
+   "final_sha": "d761b184ed40ef99",
    "edits": [
     "ENF_STATUS K-CON LIVE",
     "K-CON item text LIVE x1"
@@ -84,8 +84,8 @@
   {
    "file": "Cure_Build.js",
    "name": "Cure Build",
-   "base_sha": "fc9612b831cdf1a2",
-   "final_sha": "b98e7c19fa53d50d",
+   "base_sha": "a2d325156aab0896",
+   "final_sha": "5ab7781e93f980f2",
    "edits": [
     "ENF_STATUS K-CON LIVE",
     "K-CON item text LIVE x1"
@@ -94,8 +94,8 @@
   {
    "file": "Cure_Check.js",
    "name": "Cure Check",
-   "base_sha": "eedf41f19af7c77d",
-   "final_sha": "bfca7408c567db43",
+   "base_sha": "5c4fcc80f13291ca",
+   "final_sha": "fa3e4edbe7c4e0bf",
    "edits": [
     "ENF_STATUS K-CON LIVE",
     "K-CON item text LIVE x1"
@@ -104,8 +104,8 @@
   {
    "file": "Cure_Normalize.js",
    "name": "Cure Normalize",
-   "base_sha": "e97de5ecbb5bf1e0",
-   "final_sha": "0efcba18554e3cd2",
+   "base_sha": "19926e77883bd0e4",
+   "final_sha": "064b25290ed09c3a",
    "edits": [
     "ENF_STATUS K-CON LIVE",
     "K-CON item text LIVE x1"
@@ -114,8 +114,8 @@
   {
    "file": "Extract_Independent_Verdict.js",
    "name": "Extract Independent Verdict",
-   "base_sha": "52dbb7a8957a007d",
-   "final_sha": "b73b9880c92086e0",
+   "base_sha": "e6e801ceb32c7e41",
+   "final_sha": "217b910f0ffe56e6",
    "edits": [
     "ENF_STATUS K-CON LIVE",
     "K-CON item text LIVE x1"
@@ -124,8 +124,8 @@
   {
    "file": "Gate_Build.js",
    "name": "Gate Build",
-   "base_sha": "3d5d1d2da10d7cf6",
-   "final_sha": "a59ae62e92f294ac",
+   "base_sha": "c93098147c6898bd",
+   "final_sha": "ab5e35959050bca5",
    "edits": [
     "ENF_STATUS K-CON LIVE",
     "K-CON item text LIVE x1"
@@ -134,8 +134,8 @@
   {
    "file": "Gate_Record.js",
    "name": "Gate Record",
-   "base_sha": "0b4fc3f4024ae1c6",
-   "final_sha": "a6d7fea27069eb33",
+   "base_sha": "77e821edc1b5c317",
+   "final_sha": "c3568b63381e626c",
    "edits": [
     "ENF_STATUS K-CON LIVE",
     "K-CON item text LIVE x1"
@@ -144,8 +144,8 @@
   {
    "file": "Panel_Cure_Build_1.js",
    "name": "Panel Cure Build 1",
-   "base_sha": "d23d1b02068171c7",
-   "final_sha": "ad9cdce9b50a4b46",
+   "base_sha": "4f0aa0eab29289a4",
+   "final_sha": "17238840d0e221f6",
    "edits": [
     "ENF_STATUS K-CON LIVE",
     "K-CON item text LIVE x1"
@@ -154,8 +154,8 @@
   {
    "file": "Panel_Cure_Build_2.js",
    "name": "Panel Cure Build 2",
-   "base_sha": "f2a1c11f0e2f597f",
-   "final_sha": "ea5badb699bd0661",
+   "base_sha": "a48277a3adc7f5c0",
+   "final_sha": "6244d056740b2d0e",
    "edits": [
     "ENF_STATUS K-CON LIVE",
     "K-CON item text LIVE x1"
@@ -164,8 +164,8 @@
   {
    "file": "Panel_Cure_Build_3.js",
    "name": "Panel Cure Build 3",
-   "base_sha": "49cef655a3acdd53",
-   "final_sha": "502b072dc7f64c8f",
+   "base_sha": "dd0e7eabeb590360",
+   "final_sha": "08bece19223c55ca",
    "edits": [
     "ENF_STATUS K-CON LIVE",
     "K-CON item text LIVE x1"
@@ -174,8 +174,8 @@
   {
    "file": "Panel_Cure_Check.js",
    "name": "Panel Cure Check",
-   "base_sha": "28e3b467b9ace6c1",
-   "final_sha": "b0e668c38896ca33",
+   "base_sha": "ec8ee76681df7f6f",
+   "final_sha": "7b7d7f2d6399aeb6",
    "edits": [
     "ENF_STATUS K-CON LIVE",
     "K-CON item text LIVE x1"
@@ -184,8 +184,8 @@
   {
    "file": "Panel_Cure_Normalize_1.js",
    "name": "Panel Cure Normalize 1",
-   "base_sha": "826ee7d112c12a08",
-   "final_sha": "0cd01e2a869be2cf",
+   "base_sha": "aa946af370441ed0",
+   "final_sha": "f66c2af5f4557880",
    "edits": [
     "ENF_STATUS K-CON LIVE",
     "K-CON item text LIVE x1"
@@ -194,8 +194,8 @@
   {
    "file": "Panel_Cure_Normalize_2.js",
    "name": "Panel Cure Normalize 2",
-   "base_sha": "9abf834501b8f716",
-   "final_sha": "e0b8c3e7f88e8c43",
+   "base_sha": "4b689f7e7c1ad987",
+   "final_sha": "762f63429b2f906c",
    "edits": [
     "ENF_STATUS K-CON LIVE",
     "K-CON item text LIVE x1"
@@ -204,8 +204,8 @@
   {
    "file": "Panel_Cure_Normalize_3.js",
    "name": "Panel Cure Normalize 3",
-   "base_sha": "f474c05728a62fb7",
-   "final_sha": "8e4a85072dfc8bc7",
+   "base_sha": "a3648f8fd362c1f0",
+   "final_sha": "91fddc60f0a9feb2",
    "edits": [
     "ENF_STATUS K-CON LIVE",
     "K-CON item text LIVE x1"
@@ -214,8 +214,8 @@
   {
    "file": "Panel_Payloads.js",
    "name": "Panel Payloads",
-   "base_sha": "dd169f2d0cc19f29",
-   "final_sha": "1a2f31cae0c313bc",
+   "base_sha": "9fc5a978d6abfe32",
+   "final_sha": "1c9b88a695545342",
    "edits": [
     "ENF_STATUS K-CON LIVE",
     "K-CON item text LIVE x2",

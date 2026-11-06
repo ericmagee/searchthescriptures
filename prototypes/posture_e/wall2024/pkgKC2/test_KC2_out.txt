@@ -1,10 +1,10 @@
-OK   22 nodes; base shas = pkgRU/patched (6c1283e), final shas = pkgKC2/patched
+OK   22 nodes; base shas = plan.base (pkgACR/patched, 5ff59ac), final shas = pkgKC2/patched
 OK   every node: K-CON LIVE, no K-CON TRIAL left, K-CON item text says LIVE
-OK   reversing the edits gives pkgRU byte for byte
+OK   reversing the edits gives the base byte for byte
 OK   unit: one seat writes the pair -> no VC
 OK   unit: two seats write the pair -> one VC, by both
 OK   unit: one seat writing the pair twice is still one seat -> no VC
 OK   corpus: 6 VC charges; 5 dropped (32998 x3 grok alone, read FALSE; 33014 x2 chatgpt alone, read doubtful), 1 kept (33020 single judge, written by gemini, chatgpt, grok)
-OK   cure replay: pkgKC2 equals pkgRU on every row and every LIVE uncured count (K-CON rows in the corpus are all CURED)
-OK   gate: pkgKC2 equals pkgRU on all 18 fixture seats
+OK   cure replay: pkgKC2 equals pkgACR on every row and every LIVE uncured count (K-CON rows in the corpus are all CURED)
+OK   gate: pkgKC2 equals pkgACR on all 18 fixture seats
 9 OK, 0 FAIL
