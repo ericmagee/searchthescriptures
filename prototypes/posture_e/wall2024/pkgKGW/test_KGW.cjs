@@ -5,7 +5,7 @@ const fs=require('fs');const crypto=require('crypto');const sha=s=>crypto.create
 const T=(c,m)=>{if(!c){console.log('FAIL',m);process.exitCode=1;}else{ok++;console.log('OK  ',m);}};const rd=f=>fs.readFileSync(f,'utf8');
 const plan=JSON.parse(rd('pkgKGW/plan_KGW.json'));
 for(const n of plan.nodes){T(sha(rd('pkgNHE/patched/'+n.file))===n.base_sha&&sha(rd('pkgKGW/patched/'+n.file))===n.final_sha,'1 '+n.file+' base and final sha');}
-T(plan.nodes.length===22&&plan.nodes.filter(n=>n.edits===7).length===19,'1 22 nodes: 19 with 7 edits, 3 with the label edit only');
+T(plan.nodes.length===22&&plan.nodes.filter(n=>n.edits===9).length===19,'1 22 nodes: 19 with 9 edits, 3 with the label edit only');
 // 2 K-W ids
 const grab=(src,names)=>{globalThis.__G=null;try{new Function('$','$input','$json','globalThis.__G={'+names+'};\n'+src)(()=>({first:()=>({json:{}}),all:()=>[],isExecuted:false,params:{}}),{first:()=>({json:{}}),all:()=>[]},{});}catch(e){}return globalThis.__G;};
 const B=grab(rd('pkgNHE/patched/Panel_Payloads.js'),'kwLines421'),P=grab(rd('pkgKGW/patched/Panel_Payloads.js'),'kwLines421');
@@ -26,18 +26,23 @@ T(KWK('DEFENDER CR2 D3 (Luke 1 #1')==='DEFENDER CR2 D3 #1'&&KWK('K-W DEFENDER CR
 T(KWK('K-W DEFENDER CR3 LINK 2 #4')==='DEFENDER CR3 LINK2 #4'&&KWK('DEFENDER CR3 LINK 2 #4')===KWK('DEFENDER CR3 LINK2 #4'),'3 LINK n keys');
 T(KWK('K-W DEFENDER CR2 D3 #1')!==KWK('K-W DEFENDER CR2 D3 #2')&&KWK('K-W DEFENDER CR2 D3 #1')!==KWK('K-W CHALLENGER CR2 D3 #1')&&KWK('K-W DEFENDER CR3 D3 #1')!==KWK('K-W DEFENDER CR2 D3 #1')&&KWK('K-W DEFENDER CR2 D4 #1')!==KWK('K-W DEFENDER CR2 D3 #1'),'3 side, round, link and #n each separate keys');
 T(KWK('K-G4 D4 vs C6')===null&&KWK('K-W DEFENDER CR2 D3')===null,'3 no key without side, round, link and #n');
-// 4 recompute guard + 5 sentence: replay 33129 whole
+// 4 recompute guard and the verified-quote retraction (Eric 15:18 CST); 5 send-back text: replay 33129 whole
 const {load}=require('../corpus/replay_node.cjs');
-const run=pkg=>{const N=load('33129');const mock=name=>{const r=N.nodes[name];if(!r)return {isExecuted:false,first:()=>{throw new Error('x');},all:()=>{throw new Error('x');}};const it=r[r.length-1]||[];return {isExecuted:true,first:()=>({json:it[0]}),last:()=>({json:it[it.length-1]}),all:()=>it.map(j=>({json:j})),item:{json:it[0]}};};
+const run=(pkg,mut)=>{const N=load('33129');if(mut){const k='Panel Cure Normalize 2';N.nodes[k]=JSON.parse(mut(JSON.stringify(N.nodes[k])));}const mock=name=>{const r=N.nodes[name];if(!r)return {isExecuted:false,first:()=>{throw new Error('x');},all:()=>{throw new Error('x');}};const it=r[r.length-1]||[];return {isExecuted:true,first:()=>({json:it[0]}),last:()=>({json:it[it.length-1]}),all:()=>it.map(j=>({json:j})),item:{json:it[0]}};};
  return new Function('$','$input','$json',rd(pkg+'/patched/Panel_Cure_Check.js'))(mock,{first:()=>({json:{}}),all:()=>[],item:{json:{}}},{})[0].json;};
 const OB=run('pkgNHE'),OP=run('pkgKGW');const sB=OB.summary.find(s=>s.seat==='chatgpt'),sP=OP.summary.find(s=>s.seat==='chatgpt');
 const tag=O=>{const b=O.bodies.map(x=>JSON.parse(x).payload).find(p=>p.judge_seat==='chatgpt');return b.verdict_tag+' / '+b.drv_uncured;};
 console.log('   33129 chatgpt stored tag / drv_uncured: base '+tag(OB)+', patched '+tag(OP)+'; recomputed base '+JSON.stringify(sB.recomputed&&sB.recomputed.trigger)+', patched '+JSON.stringify(sP.recomputed&&sP.recomputed.trigger));
-T(sB.recomputed&&/RETRACTED D4 vs C6/.test(sB.recomputed.trigger.join()),'4 base: the refused retraction is applied (HELD)');
-T(!sP.recomputed||!/D4 vs C6/.test((sP.recomputed.trigger||[]).join()),'4 patched: neither the refused retraction nor the RESTATED regrade of D4 vs C6 is applied');
-T(/^BROKEN/.test(tag(OP)),'4 patched: chatgpt keeps its BROKEN text, the text the enforcer accepted');
-T((sP.cure||[]).filter(c=>c.status==='UNCURED').map(c=>c.rule).join()==='K-G4','4 patched: chatgpt uncured only K-G4 (K-V by pkgKVQ, K-W by this package)');
+T(sB.recomputed&&/RETRACTED D4 vs C6/.test(sB.recomputed.trigger.join()),'4 base: the refused retraction is applied anyway (stored HELD)');
+const g4=s=>(s.cure||[]).find(c=>c.rule==='K-G4'&&c.link==='D4 vs C6')||{};
+console.log('   patched K-G4: '+g4(sP).status+' -- '+g4(sP).why);
+T(g4(sB).status==='UNCURED'&&g4(sP).status==='CURED'&&/quoted reason the transcript verifies/.test(g4(sP).why),'4 patched: chatgpt D4 vs C6 retraction cures on its verified quoted reason');
+T(/^HELD \/ 0$/.test(tag(OP))&&sP.recomputed&&/RETRACTED D4 vs C6/.test(sP.recomputed.trigger.join()),'4 patched: chatgpt counted, stored HELD by its accepted retraction, drv_uncured 0');
+// negative: the same reply with the reason lines stripped of quotes and verses (a label only)
+const strip=j=>j.replace(/RESPONSE: K-G4 D4 vs C6 \|[^\\]*/,'RESPONSE: K-G4 D4 vs C6 | The earlier unanswered-witness grade was wrong.').replace(/STATEMENT: K-G4 D4 vs C6 \|[^\\]*/,'STATEMENT: K-G4 D4 vs C6 | The earlier grade was wrong.');
+const ON=run('pkgKGW',strip);const sN=ON.summary.find(s=>s.seat==='chatgpt');console.log('   label-only reason: '+g4(sN).status+' -- '+String(g4(sN).why).slice(0,120)+'; stored '+tag(ON)+'; trigger '+JSON.stringify(sN.recomputed&&sN.recomputed.trigger));
+T(g4(sN).status==='UNCURED'&&/^BROKEN \/ 1$/.test(tag(ON))&&!(sN.recomputed&&/D4 vs C6/.test((sN.recomputed.trigger||[]).join())),'4 negative: a label-only reason does not cure; the guard keeps BROKEN (neither RETRACTED nor RESTATED applied)');
 const wB=OB.summary.find(s=>s.seat==='sol'),wP=OP.summary.find(s=>s.seat==='sol');
 console.log('   33129 sol uncured: base '+wB.cure.filter(c=>c.status==='UNCURED').map(c=>c.link).join('; ')+' | patched '+wP.cure.filter(c=>c.status==='UNCURED').map(c=>c.link).join('; '));
-for(const f of plan.nodes.filter(n=>n.edits===7).map(n=>n.file))T(rd('pkgKGW/patched/'+f).includes('except a K-G4 item marked MEANING BREAK'),'5 '+f+' RETRACTED sentence states the 421 exception');
+for(const f of plan.nodes.filter(n=>n.edits===9).map(n=>n.file))T(rd('pkgKGW/patched/'+f).includes('or RETRACTED beside a quoted reason the system verifies')&&!rd('pkgKGW/patched/'+f).includes('RETRACTED does not cure it'),'5 '+f+' send-back states the verified-quote cure');
 console.log(ok+' OK');
