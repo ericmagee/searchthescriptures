@@ -1,0 +1,22 @@
+// pkgRXR tests. Run from wall2024/ after both builds (see build_RXR.cjs): node pkgRXR/test_RXR.cjs
+const fs=require('fs');const crypto=require('crypto');const sha=s=>crypto.createHash('sha256').update(s).digest('hex').slice(0,16);let ok=0,bad=0;const out=[];const T=(n,c,x)=>{out.push((c?'OK   ':'FAIL ')+n+(x?' :: '+x:''));c?ok++:bad++;};
+const {harness,D}=require('../pkgGSL/harness.cjs');const W=JSON.parse(fs.readFileSync('/mnt/project-files/wall2024/fetchback_live_s32.json','utf8'));const L=(W.data||W).nodes;const live=n=>L.find(z=>z.name===n).parameters.jsCode;
+const P1=JSON.parse(fs.readFileSync('pkgRXR/plan_RXR.json','utf8')),P2=JSON.parse(fs.readFileSync('pkgRXR/plan_RXR_on_pkgPSN_patched_on_pkgUNXL_patched.json','utf8'));const PS=JSON.parse(fs.readFileSync('pkgPSN/plan_PSN_on_pkgUNXL_patched.json','utf8')).nodes;
+T('A1 19 nodes on live 44e800f1; patched shas hold',P1.nodes.length===19&&P1.nodes.every(n=>n.base_sha===n.live_sha&&sha(live(n.name))===n.live_sha&&sha(fs.readFileSync('pkgRXR/patched/'+n.file,'utf8'))===n.final_sha));
+T('A2 --on pkgPSN (on UNXL = s32): 6 nodes on the PSN finals, 13 on live',P2.nodes.length===19&&P2.nodes.filter(n=>n.base!=='live').every(n=>PS.find(z=>z.file===n.file).final_sha===n.base_sha)&&P2.nodes.filter(n=>n.base!=='live').length===6);
+const PCC=fs.readFileSync('pkgRXR/patched/Panel_Cure_Check.js','utf8');
+const run=(code,over)=>{const r=harness('33299',over)(code,'Panel Cure Needed?');const j=r[0].json;const seats={};for(const b of j.bodies){const p=JSON.parse(b).payload;seats[p.judge_seat]={tag:p.verdict_tag,unc:p.drv_uncured};}
+ const s=(j.summary||[]).find(x=>x.seat==='chatgpt')||{};return {seats,alt:j.alt_needed,g4:(s.cure||[]).filter(x=>x.rule==='K-G4').map(x=>x.link+' '+x.status),cc:s.corrected||null,j};};
+const B=run(live('Panel Cure Check')),X=run(PCC);
+T('R0 base: chatgpt BROKEN, 2 uncured (D5 vs C5, D6 vs C6 refused as RETRACTED with no reason), alternate needed',B.seats.chatgpt.tag==='BROKEN'&&B.seats.chatgpt.unc===2&&B.g4.join()==='D5 vs C5 UNCURED,D6 vs C6 UNCURED'&&B.alt===true);
+T('R1 RXR: both retractions cured; CORRECTED RESULT HELD-1 applies; chatgpt HELD with 0 uncured; no alternate needed (so 33299 reads 3-0 HELD with chatgpt seated, not 2-1)',X.g4.join()==='D5 vs C5 CURED,D6 vs C6 CURED'&&X.cc&&X.cc.tag==='HELD-1'&&X.seats.chatgpt.tag==='HELD'&&X.seats.chatgpt.unc===0&&X.alt===false,JSON.stringify(X.seats));
+T('R2 gemini and sol unchanged',JSON.stringify(B.seats.gemini)===JSON.stringify(X.seats.gemini)&&JSON.stringify(B.seats.sol)===JSON.stringify(X.seats.sol));
+// controls: rewrite chatgpt's RESPONSE text in every saved node that carries it, then replay
+const edit=(pairs)=>{const over={};for(const f of fs.readdirSync(D).filter(f=>f.startsWith('33299_')&&f.endsWith('.json'))){let s=fs.readFileSync(D+f,'utf8');if(!pairs.some(([a])=>s.includes(a)))continue;for(const [a,b] of pairs)s=s.split(a).join(b);const d=JSON.parse(s);const r=Array.isArray(d)?d[0]:d;const m=(r.data&&r.data.main)||r.main;over[f.slice(6,-5).replace(/_/g,' ')]=(m&&m[0])||[];}return over;};
+{const N1=run(PCC,edit([["says, 'These are household usage","says, 'Zzq wholly invented words, not in any round"]]));T('N1 a RESPONSE whose quote stands in no round: D5 vs C5 stays UNCURED, chatgpt stays removed',N1.g4.includes('D5 vs C5 UNCURED')&&N1.seats.chatgpt.unc>0,N1.g4.join());}
+{const N2=run(PCC,edit([["and says, 'That is the legal house, granted.'","and grants the house"]]));T('N2 a RESPONSE with no quote: D6 vs C6 stays UNCURED',N2.g4.includes('D6 vs C6 UNCURED'),N2.g4.join());}
+{const N3=run(PCC,edit([["Accepted: [CR3] names Luke 1:27 and says,","Accepted: it names Luke 1:27 and says,"]]));T('N3 a RESPONSE naming no round: D6 vs C6 stays UNCURED',N3.g4.includes('D6 vs C6 UNCURED'),N3.g4.join());}
+// replay parity on other saved runs, 3 cure-reading nodes
+for(const RUN of ['33218','33222','33249','33261','33289'])for(const [n,inp] of [['Panel Cure Check','Panel Cure Needed?'],['Alternate Merge Seat','Alternate Calls?'],['Gate Record','Gate Call openrouter']]){let a,b;
+ try{a=JSON.stringify(harness(RUN)(live(n),inp));b=JSON.stringify(harness(RUN)(fs.readFileSync('pkgRXR/patched/'+n.replace(/ /g,'_')+'.js','utf8'),inp));}catch(e){out.push('INFO '+RUN+' '+n+' not replayable: '+String(e.message).slice(0,60));continue;}T('P '+RUN+' '+n+': output identical',a===b);}
+const txt=out.join('\n')+'\n'+ok+' OK, '+bad+' FAIL\n';fs.writeFileSync('pkgRXR/test_RXR.txt',txt);console.log(txt);process.exit(bad?1:0);

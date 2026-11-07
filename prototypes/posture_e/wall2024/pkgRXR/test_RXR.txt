@@ -1,0 +1,24 @@
+OK   A1 19 nodes on live 44e800f1; patched shas hold
+OK   A2 --on pkgPSN (on UNXL = s32): 6 nodes on the PSN finals, 13 on live
+OK   R0 base: chatgpt BROKEN, 2 uncured (D5 vs C5, D6 vs C6 refused as RETRACTED with no reason), alternate needed
+OK   R1 RXR: both retractions cured; CORRECTED RESULT HELD-1 applies; chatgpt HELD with 0 uncured; no alternate needed (so 33299 reads 3-0 HELD with chatgpt seated, not 2-1) :: {"gemini":{"tag":"HELD","unc":0},"chatgpt":{"tag":"HELD","unc":0},"sol":{"tag":"HELD","unc":0}}
+OK   R2 gemini and sol unchanged
+OK   N1 a RESPONSE whose quote stands in no round: D5 vs C5 stays UNCURED, chatgpt stays removed :: D5 vs C5 UNCURED,D6 vs C6 CURED
+OK   N2 a RESPONSE with no quote: D6 vs C6 stays UNCURED :: D5 vs C5 CURED,D6 vs C6 UNCURED
+OK   N3 a RESPONSE naming no round: D6 vs C6 stays UNCURED :: D5 vs C5 CURED,D6 vs C6 UNCURED
+OK   P 33218 Panel Cure Check: output identical
+OK   P 33218 Alternate Merge Seat: output identical
+OK   P 33218 Gate Record: output identical
+OK   P 33222 Panel Cure Check: output identical
+OK   P 33222 Alternate Merge Seat: output identical
+OK   P 33222 Gate Record: output identical
+OK   P 33249 Panel Cure Check: output identical
+OK   P 33249 Alternate Merge Seat: output identical
+OK   P 33249 Gate Record: output identical
+OK   P 33261 Panel Cure Check: output identical
+OK   P 33261 Alternate Merge Seat: output identical
+OK   P 33261 Gate Record: output identical
+INFO 33289 Panel Cure Check not replayable: Cannot read properties of undefined (reading 'slice')
+INFO 33289 Alternate Merge Seat not replayable: Cannot read properties of undefined (reading 'slice')
+INFO 33289 Gate Record not replayable: Cannot read properties of undefined (reading 'slice')
+20 OK, 0 FAIL
