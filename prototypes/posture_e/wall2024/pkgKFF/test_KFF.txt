@@ -1,0 +1,25 @@
+OK   A1 replay: items only on 33197 D1 vs C1, 33197 D4 vs C5, 33249 D5 vs C1 (113 FORCED lines read)
+OK   A2 33197 D1 vs C1 names Deuteronomy 20:7
+OK   B 962 D2 vs C3 -: one K-FF item naming Matthew 1:19
+OK   B 974 D3 vs C4 -: one K-FF item naming Luke 1:35
+OK   B 974 D6 vs C6 -: one K-FF item naming Matthew 1:16
+OK   B 974 D5 vs C6 -: one K-FF item naming Luke 3:23
+OK   C1 control: FAILS of the answer's own sentence: no item
+OK   C2 control 1: own sentence embedding verse words plus own words: no item
+OK   C3 control 2: a 4+ word verse phrase the round does not quote as a verse: no item
+OK   C4 rule (c): fewer than 4 words: no item
+OK   C5 verse not read: NOT CHECKED, no item
+OK   D parity 33218 Panel Payloads: patched output equals base
+OK   D parity 33222 Panel Payloads: patched output equals base
+OK   D parity 33218 Panel Cure Check: patched output equals base
+OK   E1 33249 Panel Payloads (patched): chatgpt gets one K-FF item, D5 vs C1, Matthew 1:25
+OK   E2 cure prompt built for chatgpt carries the K-FF item with its ask
+    RULE: K-FF; RESULT: CURED; WHY: TRIAL rule (recorded and answered; it removes no seat): TRIAL rule (K-FF): the FORCED line's FAILS quotes the answer's own words; LINE: FORCED line for D5 vs C1: its FAILS quotation \\\"And knew her not till she had brought forth her firstborn son.\\\" is only the words of Matthew 1:25, a verse the answer quotes in (DR3); it shows what the verse says, not what in the answer fails (ruling 411). Wri
+OK   F1 cure: FORCED line whose FAILS quotes the answer's own words: CURED
+    RULE: K-FF; RESULT: UNCURED; WHY: TRIAL rule (recorded and answered; it removes no seat): TRIAL rule (K-FF): its FAILS quotation \\\"And knew her not till she had brought forth her firstborn son.\\\" is only the words of Matthew 1:25, a verse the answer quotes in (DR3); it shows what the verse says, not what in the answer fails (ruling 411); LINE: FORCED line for D5 vs C1: its FAILS quotation \\\"And knew her not till she had brou
+OK   F2 cure: FORCED line whose FAILS is still Matthew 1:25: UNCURED
+    RULE: K-FF; RESULT: CURED; WHY: TRIAL rule (recorded and answered; it removes no seat): retracted; LINE: FORCED line for D5 vs C1: its FAILS quotation \\\"And knew her not till she had brought forth her firstborn son.\\\" is only the words of Matthew 1:25, a verse the answer quotes in (DR3); it shows what the verse says, not what in the answer fails (ruling 411). Write the FORCED line again with FAILS: \\\"<...; STATEMENT: RETRA
+OK   F3 cure: RETRACTED: D5 vs C1: CURED
+OK   G1 24 bases equal live s28
+OK   G2 finals match plan shas
+21 OK, 0 FAIL

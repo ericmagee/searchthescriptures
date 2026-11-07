@@ -1,0 +1,65 @@
+{
+ "rows": [
+  {
+   "book": "Matthew",
+   "chapter": 1,
+   "verse": 19,
+   "text": "Then Joseph her husband, being a just [man], and not willing to make her a publick example, was minded to put her away privily."
+  },
+  {
+   "book": "Luke",
+   "chapter": 1,
+   "verse": 35,
+   "text": "And the angel answered and said unto her, The Holy Ghost shall come upon thee, and the power of the Highest shall overshadow thee: therefore also that holy thing which shall be born of thee shall be called the Son of God."
+  },
+  {
+   "book": "Luke",
+   "chapter": 1,
+   "verse": 32,
+   "text": "He shall be great, and shall be called the Son of the Highest: and the Lord God shall give unto him the throne of his father David:"
+  },
+  {
+   "book": "Matthew",
+   "chapter": 1,
+   "verse": 16,
+   "text": "And Jacob begat Joseph the husband of Mary, of whom was born Jesus, who is called Christ."
+  },
+  {
+   "book": "Luke",
+   "chapter": 3,
+   "verse": 23,
+   "text": "And Jesus himself began to be about thirty years of age, being (as was supposed) the son of Joseph, which was [the son] of Heli,"
+  }
+ ],
+ "note": "kjv_verses rows; DR3 windows are cut from debate_results.challenger_r3 (the [DR3] round) of runs 32949 (debate_judgments 962) and 32998 (974), around each FAILS text. The stored lines for 962 and 974 D5 vs C6 are read from AUDIT rows, which print rounds as (CR3); the judge form is [CR3], which KF_LINE reads, so the fixture uses brackets.",
+ "cases": [
+  {
+   "jid": 962,
+   "run": "32949",
+   "line": "FORCED: D2 vs C3 -- MEANS [CR3]: \"a man who had known his wife would have had no ground to put her away -- (L2) anēr G435 (a man, husband) | (L3) Matthew 1:18 \"she was found with child of the Holy Ghost\"\" -- ANSWER [DR3]: \"So the row is a husband's intent, corrected and replaced by the taking. It fits the link.\" -- FAILS: \"was minded to put her away privily\"",
+   "DR3": "thew 1:24-25). So Joseph knew Mary his wife within the espousal, and the child is of his loins.\n\nAnswers to the pressed witnesses:\n\n- **Matthew 1:19**, \"being a just [man], and not willing to make her a publick example, was minded to put her away privily.\"\n  - The verse gives its own two grounds: just, and not willing to shame her. Its verb is intent, \nSo the row is a husband's intent, corrected and replaced by the taking. It fits the link.",
+   "ref": "Matthew 1:19"
+  },
+  {
+   "jid": 974,
+   "run": "32998",
+   "line": "FORCED: D3 vs C4 -- MEANS [CR3]: \"the \\\"therefore also\\\" follows the Holy Ghost clauses inside the same verse, so they are its antecedent\" -- ANSWER [DR3]: \"The dio kai (\\\"therefore\\\") in v.35 connects back to v.32, not forward to biological divine paternity.\" -- FAILS: \"therefore also that holy thing which shall be born of thee shall be called the Son of God.\"",
+   "DR3": ") of Luke 1:35 points back to Luke 1:32.**\n\n- **[L1]**\n  - Luke 1:32: \"He shall be great, and shall be called the Son of the Highest: and the Lord God shall give unto him the throne of his father David.\"\n  - Luke 1:35: \"therefore also that holy thing which shall be born of thee shall be called the Son of God.\"\n- **[L2]**\n  - \"Shall be called\" is *kaleō* (G2564) in both verses.",
+   "ref": "Luke 1:35"
+  },
+  {
+   "jid": 974,
+   "run": "32998",
+   "line": "FORCED: D6 vs C6 -- MEANS [CR3]: \"the begat line stops at Joseph the husband, and the birth clause names Mary\" -- ANSWER [DR3]: \"So the loins-seed comes to Christ through Joseph.\" -- FAILS: \"of whom was born Jesus, who is called Christ.\"",
+   "DR3": "ers 1:2; Hebrews 7:14).\n  - The house is Joseph's (Luke 2:4).\n  - So the loins-seed comes to Christ through Joseph.\n\n**Answers to the pressed witnesses**\n\n- **Matthew 1:16:** \"And Jacob begat Joseph the husband of Mary, of whom was born Jesus, who is called Christ.\"\n  - The passive \"was born\" with the feminine \"of whom\" is the mother's clause.",
+   "ref": "Matthew 1:16"
+  },
+  {
+   "jid": 974,
+   "run": "32998",
+   "line": "FORCED: D5 vs C6 -- MEANS [CR3]: \"the narrator marks \"son of Joseph\" as an opinion\" -- ANSWER [DR3]: \"the customary reckoning.\" -- FAILS: \"being (as was supposed) the son of Joseph.\"",
+   "DR3": "oseph, and the birth clause names his wife.\n- **Matthew 1:2:** \"Abraham begat Isaac; and Isaac begat Jacob.\"\n  - The begat-line runs by fathers down to \"Joseph the husband of Mary,\" the house of David.\n- **Luke 3:23:** \"being (as was supposed) the son of Joseph.\"\n  - *Nomizō* (G3543) is \"properly, to do by law (usage).\" the customary reckoning.",
+   "ref": "Luke 3:23"
+  }
+ ]
+}

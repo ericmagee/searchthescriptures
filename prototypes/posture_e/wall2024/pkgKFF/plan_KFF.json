@@ -1,0 +1,287 @@
+{
+ "ruling": "W3 Wall 2769 (TRIAL)",
+ "base": "live s28 4f62e6cf",
+ "nodes": [
+  {
+   "name": "Build Independent Verdict",
+   "file": "Build_Independent_Verdict.js",
+   "base_sha": "a7c9de7d47fba79c",
+   "final_sha": "4b43139b589e848d",
+   "edits": [
+    "r396",
+    "r396b"
+   ]
+  },
+  {
+   "name": "Extract Independent Verdict",
+   "file": "Extract_Independent_Verdict.js",
+   "base_sha": "dcfe1af9d8dc37fd",
+   "final_sha": "a9b21affe26e0b76",
+   "edits": [
+    "lib",
+    "call",
+    "enf"
+   ]
+  },
+  {
+   "name": "Panel Build",
+   "file": "Panel_Build.js",
+   "base_sha": "910bb0487541e7ef",
+   "final_sha": "19a70deba2a7b95c",
+   "edits": [
+    "r396",
+    "r396b"
+   ]
+  },
+  {
+   "name": "Panel Payloads",
+   "file": "Panel_Payloads.js",
+   "base_sha": "e87059b199f1a8c6",
+   "final_sha": "28736f18639f7c73",
+   "edits": [
+    "lib",
+    "call",
+    "enf"
+   ]
+  },
+  {
+   "name": "Cure Build",
+   "file": "Cure_Build.js",
+   "base_sha": "80e3a02bebfc0cc5",
+   "final_sha": "efa0c599a20ff3e8",
+   "edits": [
+    "lib",
+    "enf",
+    "lst",
+    "cure"
+   ]
+  },
+  {
+   "name": "Cure Normalize",
+   "file": "Cure_Normalize.js",
+   "base_sha": "0b005a9701895609",
+   "final_sha": "b395dc4dd9f1dbda",
+   "edits": [
+    "lib",
+    "enf",
+    "lst",
+    "cure"
+   ]
+  },
+  {
+   "name": "Cure Check",
+   "file": "Cure_Check.js",
+   "base_sha": "76b4cdf704e12497",
+   "final_sha": "70b5fc67c2ef788f",
+   "edits": [
+    "lib",
+    "enf",
+    "lst",
+    "cure"
+   ]
+  },
+  {
+   "name": "Panel Cure Build 1",
+   "file": "Panel_Cure_Build_1.js",
+   "base_sha": "a9c9c35820d4cf1a",
+   "final_sha": "6f19cce5c849fa97",
+   "edits": [
+    "lib",
+    "enf",
+    "lst",
+    "cure"
+   ]
+  },
+  {
+   "name": "Panel Cure Normalize 1",
+   "file": "Panel_Cure_Normalize_1.js",
+   "base_sha": "5e8e48a0ef10fb5c",
+   "final_sha": "28bf109814d95fb3",
+   "edits": [
+    "lib",
+    "enf",
+    "lst",
+    "cure"
+   ]
+  },
+  {
+   "name": "Panel Cure Build 2",
+   "file": "Panel_Cure_Build_2.js",
+   "base_sha": "58843baa9736f2f9",
+   "final_sha": "b886b3b39da24671",
+   "edits": [
+    "lib",
+    "enf",
+    "lst",
+    "cure"
+   ]
+  },
+  {
+   "name": "Panel Cure Normalize 2",
+   "file": "Panel_Cure_Normalize_2.js",
+   "base_sha": "f26229aefec929bc",
+   "final_sha": "128b25cb9465e01c",
+   "edits": [
+    "lib",
+    "enf",
+    "lst",
+    "cure"
+   ]
+  },
+  {
+   "name": "Panel Cure Build 3",
+   "file": "Panel_Cure_Build_3.js",
+   "base_sha": "a8d37d19d8827bc6",
+   "final_sha": "556014f8cdb5f4e2",
+   "edits": [
+    "lib",
+    "enf",
+    "lst",
+    "cure"
+   ]
+  },
+  {
+   "name": "Panel Cure Normalize 3",
+   "file": "Panel_Cure_Normalize_3.js",
+   "base_sha": "9d88c14ed60f73e9",
+   "final_sha": "68af2706d23069b0",
+   "edits": [
+    "lib",
+    "enf",
+    "lst",
+    "cure"
+   ]
+  },
+  {
+   "name": "Panel Cure Check",
+   "file": "Panel_Cure_Check.js",
+   "base_sha": "8a28f3bc2edd0401",
+   "final_sha": "9b4fd695b92f5e24",
+   "edits": [
+    "lib",
+    "enf",
+    "lst",
+    "cure"
+   ]
+  },
+  {
+   "name": "Alternate Build",
+   "file": "Alternate_Build.js",
+   "base_sha": "f36816d170be396a",
+   "final_sha": "a77058be88f3096b",
+   "edits": [
+    "lib",
+    "enf",
+    "lst",
+    "cure"
+   ]
+  },
+  {
+   "name": "Alternate Payloads",
+   "file": "Alternate_Payloads.js",
+   "base_sha": "d85c8d6c9a264146",
+   "final_sha": "6faa99cf258e568a",
+   "edits": [
+    "lib",
+    "call",
+    "enf"
+   ]
+  },
+  {
+   "name": "Alternate Cure Build",
+   "file": "Alternate_Cure_Build.js",
+   "base_sha": "d689176897786c32",
+   "final_sha": "92e7143ecefcda02",
+   "edits": [
+    "lib",
+    "enf",
+    "lst",
+    "cure"
+   ]
+  },
+  {
+   "name": "Alternate Cure Normalize",
+   "file": "Alternate_Cure_Normalize.js",
+   "base_sha": "7e13c090f3dfc41d",
+   "final_sha": "f9a77ee903b08de6",
+   "edits": [
+    "lib",
+    "enf",
+    "lst",
+    "cure"
+   ]
+  },
+  {
+   "name": "Alternate Merge Seat",
+   "file": "Alternate_Merge_Seat.js",
+   "base_sha": "ec4fa8d36e088eb3",
+   "final_sha": "b058b23d7085c5b9",
+   "edits": [
+    "lib",
+    "enf",
+    "lst",
+    "cure"
+   ]
+  },
+  {
+   "name": "Gate Build",
+   "file": "Gate_Build.js",
+   "base_sha": "59278c22da7feb6e",
+   "final_sha": "bf470a1e9e3096e7",
+   "edits": [
+    "lib",
+    "enf",
+    "lst",
+    "cure"
+   ]
+  },
+  {
+   "name": "Gate Record",
+   "file": "Gate_Record.js",
+   "base_sha": "8aae3a4e9e71f2e7",
+   "final_sha": "0add47dc16aed683",
+   "edits": [
+    "lib",
+    "enf",
+    "lst",
+    "cure"
+   ]
+  },
+  {
+   "name": "Alt Gate Build",
+   "file": "Alt_Gate_Build.js",
+   "base_sha": "780df5a3a5220d3b",
+   "final_sha": "c2365deb8e78139f",
+   "edits": [
+    "lib",
+    "enf",
+    "lst",
+    "cure"
+   ]
+  },
+  {
+   "name": "Alt Gate Record",
+   "file": "Alt_Gate_Record.js",
+   "base_sha": "ed1f7b0384471d03",
+   "final_sha": "504fa2b695ef16b7",
+   "edits": [
+    "lib",
+    "enf",
+    "lst",
+    "cure"
+   ]
+  },
+  {
+   "name": "Alternate Merge",
+   "file": "Alternate_Merge.js",
+   "base_sha": "9e44d64f5a43bbb0",
+   "final_sha": "16502a454b2039ff",
+   "edits": [
+    "lib",
+    "enf",
+    "lst",
+    "cure"
+   ]
+  }
+ ]
+}
