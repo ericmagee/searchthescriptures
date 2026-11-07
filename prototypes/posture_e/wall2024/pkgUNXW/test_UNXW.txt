@@ -1,0 +1,16 @@
+OK   A1 19 cure nodes; each base is the pkgUNXS final; patched sha holds and compiles
+OK   A2 the pkgUNXS bases equal live 5a710187 (fetchback_live_s22.json), so UNXS then UNXW write on live
+OK   U1 33249 grok premise 5: "The block exhibits [L1] and [L2] ... [L3]" names no missing layer
+OK   U2 "lacks [L2]", "no [L2] source word", "without an [L2] gloss", "[L2] is missing" name L2
+OK   U3 "its [L4] does not follow" and "its [L4] chain does not follow from the layers" name L4 (test_UNX C1 stays CURED)
+OK   U4 a layer the block exhibits is not missing even when named so ("no [L1]" on an L1 block)
+OK   B1 33249 Panel Cure Check: chatgpt CHALLENGER count 2 -> 0 (its CORRECTED COUNT 0 on both K-UNX items, now written), verdict HELD, result DEFENDER WINS
+OK   B2 the other two panel seats are unchanged
+OK   B3 33249 Alternate Merge Seat: grok CHALLENGER count 3 -> 1 (premises 2 and 5 withdrawn by its CORRECTED COUNT 1)
+OK   B4 grok premise 5 is now cured by its CORRECTED COUNT, not by the STATEMENT that the block HAS [L2] :: CHALLENGER premise 2 CURED TRIAL rule (K-UNX): CORRECTED COUNT 1 takes the premise out of the cou | CHALLENGER premise 5 CURED TRIAL rule (K-UNX): CORRECTED COUNT 1 takes the premise out of the cou
+OK   B5 gemini and sol unchanged
+OK   C 33218 Panel_Cure_Check: output identical to pkgUNXS
+OK   C 33218 Alternate_Merge_Seat: output identical to pkgUNXS
+OK   C 33222 Panel_Cure_Check: output identical to pkgUNXS
+OK   C 33222 Alternate_Merge_Seat: output identical to pkgUNXS
+15 OK, 0 FAIL

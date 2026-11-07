@@ -1,0 +1,101 @@
+{
+ "source": "W3 2738 item 2",
+ "base": "pkgUNXS/patched",
+ "nodes": [
+  {
+   "file": "Alt_Gate_Build.js",
+   "base_sha": "ef605996fbb065e6",
+   "final_sha": "71a3ce5b5458cbb8"
+  },
+  {
+   "file": "Alt_Gate_Record.js",
+   "base_sha": "aacd0c7c3b614468",
+   "final_sha": "fbca3c0f28a821f4"
+  },
+  {
+   "file": "Alternate_Build.js",
+   "base_sha": "9c0a822fb11fea02",
+   "final_sha": "6b46085110064477"
+  },
+  {
+   "file": "Alternate_Cure_Build.js",
+   "base_sha": "594d43cffd70819f",
+   "final_sha": "d5daf1960a8df60a"
+  },
+  {
+   "file": "Alternate_Cure_Normalize.js",
+   "base_sha": "8532c8edbf8af16a",
+   "final_sha": "90eac49c4ceac344"
+  },
+  {
+   "file": "Alternate_Merge.js",
+   "base_sha": "f18789e24c20b0aa",
+   "final_sha": "dad291891ecfd7fa"
+  },
+  {
+   "file": "Alternate_Merge_Seat.js",
+   "base_sha": "473788e189509763",
+   "final_sha": "034adc9fea195608"
+  },
+  {
+   "file": "Cure_Build.js",
+   "base_sha": "a191fcfeb83d2d51",
+   "final_sha": "052891c06f9e0a2e"
+  },
+  {
+   "file": "Cure_Check.js",
+   "base_sha": "248653fbb5f5ccef",
+   "final_sha": "693f067ff5b5834e"
+  },
+  {
+   "file": "Cure_Normalize.js",
+   "base_sha": "c195002237866574",
+   "final_sha": "474934a90706d71e"
+  },
+  {
+   "file": "Gate_Build.js",
+   "base_sha": "c772af2465f9a09e",
+   "final_sha": "ea46a661c91ca777"
+  },
+  {
+   "file": "Gate_Record.js",
+   "base_sha": "1bf1d0a87b6f4505",
+   "final_sha": "939b1fabb2b3cbcf"
+  },
+  {
+   "file": "Panel_Cure_Build_1.js",
+   "base_sha": "21bd6aeeb8c03478",
+   "final_sha": "70a8aa884aaae1c2"
+  },
+  {
+   "file": "Panel_Cure_Build_2.js",
+   "base_sha": "29dbf4b27c87ac64",
+   "final_sha": "a30bb0f55d48cdca"
+  },
+  {
+   "file": "Panel_Cure_Build_3.js",
+   "base_sha": "389fd3597329c32f",
+   "final_sha": "d3fe6cf5abb788cc"
+  },
+  {
+   "file": "Panel_Cure_Check.js",
+   "base_sha": "adf14568dc0006b7",
+   "final_sha": "666df8e67b778748"
+  },
+  {
+   "file": "Panel_Cure_Normalize_1.js",
+   "base_sha": "d336a5118b5942b0",
+   "final_sha": "0693da17905ddf97"
+  },
+  {
+   "file": "Panel_Cure_Normalize_2.js",
+   "base_sha": "562d81dcbb1c6fb3",
+   "final_sha": "ad779e3377488805"
+  },
+  {
+   "file": "Panel_Cure_Normalize_3.js",
+   "base_sha": "308aed4f76e94fb5",
+   "final_sha": "cd8bc8f627339222"
+  }
+ ]
+}

@@ -1,0 +1,23 @@
+// pkgUNXW tests. Run from wall2024/: node pkgUNXW/test_UNXW.cjs
+const fs=require('fs');const crypto=require('crypto');const sha=s=>crypto.createHash('sha256').update(s).digest('hex').slice(0,16);let ok=0,bad=0;const out=[];const T=(n,c,x)=>{out.push((c?'OK   ':'FAIL ')+n+(x?' :: '+x:''));c?ok++:bad++;};
+const plan=JSON.parse(fs.readFileSync('pkgUNXW/plan_UNXW.json','utf8')),ux=JSON.parse(fs.readFileSync('pkgUNXS/plan_UNXS.json','utf8')).nodes;
+T('A1 19 cure nodes; each base is the pkgUNXS final; patched sha holds and compiles',plan.nodes.length===19&&plan.nodes.every(n=>{const u=ux.find(z=>z.file===n.file);const s=fs.readFileSync('pkgUNXW/patched/'+n.file,'utf8');try{new Function('$','$input','$json','$execution',s);}catch(e){return false;}return u&&u.final_sha===n.base_sha&&sha(s)===n.final_sha;}));
+{const W=JSON.parse(fs.readFileSync('/mnt/project-files/wall2024/fetchback_live_s22.json','utf8'));const L=(W.data||W).nodes;T('A2 the pkgUNXS bases equal live 5a710187 (fetchback_live_s22.json), so UNXS then UNXW write on live',ux.every(n=>{const x=L.find(z=>z.name===n.name);return x&&sha(x.parameters.jsCode)===n.base_sha;}));}
+const f=new Function(fs.readFileSync('pkgUNXW/unxw_lib.js','utf8')+';return unxLack;')();const m=s=>f(s,['L1','L3']).missing.join(',');
+T('U1 33249 grok premise 5: "The block exhibits [L1] and [L2] ... [L3]" names no missing layer',m('The block exhibits [L1] and [L2] patēr and [L3]. It is not unexhibited for a missing layer.')==='');
+T('U2 "lacks [L2]", "no [L2] source word", "without an [L2] gloss", "[L2] is missing" name L2',['The block lacks [L2].','no [L2] source word is given','without an [L2] gloss','[L2] is missing from the block'].every(s=>m(s)==='2'));
+T('U3 "its [L4] does not follow" and "its [L4] chain does not follow from the layers" name L4 (test_UNX C1 stays CURED)',m('its [L4] does not follow')==='4'&&m('its [L4] chain does not follow from the layers')==='4');
+T('U4 a layer the block exhibits is not missing even when named so ("no [L1]" on an L1 block)',m('there is no [L1] here')==='');
+const {harness}=require('../pkgGSL/harness.cjs');
+const pay=(v,n,inp,RUN)=>{const H=harness(RUN);const o=H(fs.readFileSync(v+'/patched/'+n+'.js','utf8'),inp);return {o,b:(o[0].json.bodies||[]).map(b=>JSON.parse(b).payload)};};
+{const a=pay('pkgUNXS','Panel_Cure_Check','Panel Cure Needed?','33249'),b=pay('pkgUNXW','Panel_Cure_Check','Panel Cure Needed?','33249');const c0=a.b.find(p=>p.judge_seat==='chatgpt'),c1=b.b.find(p=>p.judge_seat==='chatgpt');
+ T('B1 33249 Panel Cure Check: chatgpt CHALLENGER count 2 -> 0 (its CORRECTED COUNT 0 on both K-UNX items, now written), verdict HELD, result DEFENDER WINS',c0.challenger_conceded_links===2&&c1.challenger_conceded_links===0&&c1.verdict_tag==='HELD'&&/CORRECTED STANDING -- SEAT: chatgpt; SIDE: CHALLENGER; ORIGINAL: PROP-DEPENDENT, 2; COUNTED: PROP-DEPENDENT, 0/.test(c1.verdict_raw)&&/RECOMPUTED[^\]]*RESULT DEFENDER WINS/.test(c1.verdict_raw));
+ T('B2 the other two panel seats are unchanged',['gemini','sol'].every(s=>JSON.stringify(a.b.find(p=>p.judge_seat===s))===JSON.stringify(b.b.find(p=>p.judge_seat===s))));}
+{const a=pay('pkgUNXS','Alternate_Merge_Seat','Alternate Calls?','33249'),b=pay('pkgUNXW','Alternate_Merge_Seat','Alternate Calls?','33249');const g0=a.b.find(p=>p.judge_seat==='grok'),g1=b.b.find(p=>p.judge_seat==='grok');
+ const why=x=>(x.o[0].json.summary[1].cure||[]).filter(c=>c.rule==='K-UNX').map(c=>c.link+' '+c.status+' '+c.why.slice(0,70)).join(' | ');
+ T('B3 33249 Alternate Merge Seat: grok CHALLENGER count 3 -> 1 (premises 2 and 5 withdrawn by its CORRECTED COUNT 1)',g0.challenger_conceded_links===3&&g1.challenger_conceded_links===1&&g1.verdict_tag==='HELD');
+ T('B4 grok premise 5 is now cured by its CORRECTED COUNT, not by the STATEMENT that the block HAS [L2]',/premise 5 CURED TRIAL rule \(K-UNX\): CORRECTED COUNT 1/.test(why(b))&&/premise 5 CURED TRIAL rule \(K-UNX\): the STATEMENT names a layer/.test(why(a)),why(b));
+ T('B5 gemini and sol unchanged',['gemini','sol'].every(s=>JSON.stringify(a.b.find(p=>p.judge_seat===s))===JSON.stringify(b.b.find(p=>p.judge_seat===s))));}
+for(const RUN of ['33218','33222'])for(const [n,inp] of [['Panel_Cure_Check','Panel Cure Needed?'],['Alternate_Merge_Seat','Alternate Calls?']]){const H1=harness(RUN),H2=harness(RUN);
+ T('C '+RUN+' '+n+': output identical to pkgUNXS',JSON.stringify(H1(fs.readFileSync('pkgUNXS/patched/'+n+'.js','utf8'),inp))===JSON.stringify(H2(fs.readFileSync('pkgUNXW/patched/'+n+'.js','utf8'),inp)));}
+const txt=out.join('\n')+'\n'+ok+' OK, '+bad+' FAIL\n';fs.writeFileSync('pkgUNXW/test_UNXW.txt',txt);console.log(txt);process.exit(bad?1:0);
