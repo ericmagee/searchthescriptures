@@ -1,0 +1,26 @@
+{
+ "source": "W2 pkgEAM, W3 2868 item 3 (fold eawBlockMeans into E-ANS)",
+ "base": "pkgEAH/patched",
+ "nodes": [
+  {
+   "name": "Judge Enforcer Build",
+   "file": "Judge_Enforcer_Build.js",
+   "base_sha": "329655241a27",
+   "final_sha": "32ed6e5cf7e5",
+   "bytes": [
+    58272,
+    58392
+   ]
+  },
+  {
+   "name": "Alt Judge Enforcer Build",
+   "file": "Alt_Judge_Enforcer_Build.js",
+   "base_sha": "bbb7bf23ecb3",
+   "final_sha": "7f1e94f3d6b0",
+   "bytes": [
+    58193,
+    58313
+   ]
+  }
+ ]
+}
