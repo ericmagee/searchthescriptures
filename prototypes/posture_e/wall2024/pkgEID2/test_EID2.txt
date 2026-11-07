@@ -1,0 +1,30 @@
+OK 33218 Judge Enforcer Record: rows 221, NO VERDICT 1 -> 1, rows newly read 0, other rows changed 0
+OK 33222 Judge Enforcer Record: rows 258, NO VERDICT 89 -> 89, rows newly read 0, other rows changed 0
+OK 33222 Alt Judge Enforcer Record: rows 77, NO VERDICT 0 -> 0, rows newly read 0, other rows changed 0
+OK 33249 Judge Enforcer Record: rows 211, NO VERDICT 0 -> 0, rows newly read 0, other rows changed 0
+OK 33249 Alt Judge Enforcer Record: rows 90, NO VERDICT 0 -> 0, rows newly read 0, other rows changed 0
+OK 33261 Judge Enforcer Record: rows 257, NO VERDICT 0 -> 0, rows newly read 0, other rows changed 0
+OK 33261 Alt Judge Enforcer Record: rows 80, NO VERDICT 0 -> 0, rows newly read 0, other rows changed 0
+OK 33276 Judge Enforcer Record: rows 0, NO VERDICT 0 -> 0, rows newly read 0, other rows changed 0
+OK 33276 Alt Judge Enforcer Record: rows 0, NO VERDICT 0 -> 0, rows newly read 0, other rows changed 0
+OK 33289 Judge Enforcer Record: rows 0, NO VERDICT 0 -> 0, rows newly read 0, other rows changed 0
+OK 33289 Alt Judge Enforcer Record: rows 0, NO VERDICT 0 -> 0, rows newly read 0, other rows changed 0
+OK 33299 Judge Enforcer Record: rows 204, NO VERDICT 0 -> 0, rows newly read 0, other rows changed 0
+OK 33299 Alt Judge Enforcer Record: rows 76, NO VERDICT 47 -> 47, rows newly read 0, other rows changed 0
+OK 33311 Judge Enforcer Record: rows 0, NO VERDICT 0 -> 0, rows newly read 0, other rows changed 0
+OK 33311 Alt Judge Enforcer Record: rows 0, NO VERDICT 0 -> 0, rows newly read 0, other rows changed 0
+OK 33322 Judge Enforcer Record: rows 0, NO VERDICT 0 -> 0, rows newly read 0, other rows changed 0
+OK 33345 Judge Enforcer Record: rows 241, NO VERDICT 0 -> 0, rows newly read 0, other rows changed 0
+OK 33345 Alt Judge Enforcer Record: rows 96, NO VERDICT 0 -> 0, rows newly read 0, other rows changed 0
+OK 33371 Judge Enforcer Record: rows 195, NO VERDICT 0 -> 0, rows newly read 0, other rows changed 0
+OK 33371 Alt Judge Enforcer Record: rows 71, NO VERDICT 0 -> 0, rows newly read 0, other rows changed 0
+OK 33389 Judge Enforcer Record: rows 207, NO VERDICT 0 -> 0, rows newly read 0, other rows changed 0
+OK 33411 Judge Enforcer Record: rows 244, NO VERDICT 0 -> 0, rows newly read 0, other rows changed 0
+OK 33411 Alt Judge Enforcer Record: rows 82, NO VERDICT 13 -> 0, rows newly read 13, other rows changed 0, seat_first 13
+OK 33411 Alt: the 13 grok items are read
+OK unit "ENFORCER: grok (H1) -- AGREE -- " -> "ENFORCER: H1 -- AGREE -- RIGHT: "
+OK unit "ENFORCER: gemini (P1.1) -- DISAG" -> "ENFORCER: P1.1 -- DISAGREE -- x"
+OK unit "ENFORCER: P1.1 (gemini) -- AGREE" -> "ENFORCER: P1.1 (gemini) -- AGREE"
+OK unit "ENFORCER: gemini -- AGREE -- x" -> "ENFORCER: gemini -- AGREE -- x"
+OK unit "ENFORCER: judge grok (S2.1) -- A" -> "ENFORCER: S2.1 -- AGREE -- x"
+TOTAL 29 OK, 0 FAIL

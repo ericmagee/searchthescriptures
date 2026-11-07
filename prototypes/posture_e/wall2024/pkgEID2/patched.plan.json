@@ -1,0 +1,18 @@
+{
+ "source": "W2 pkgEID2 (33411 seat-first labels)",
+ "base": "pkgEB7/patched_full",
+ "nodes": [
+  {
+   "name": "Judge Enforcer Record",
+   "file": "Judge_Enforcer_Record.js",
+   "base_sha": "d44c21412695",
+   "final_sha": "41f82ff0b4c7"
+  },
+  {
+   "name": "Alt Judge Enforcer Record",
+   "file": "Alt_Judge_Enforcer_Record.js",
+   "base_sha": "297c7135383b",
+   "final_sha": "d6f9aaedd715"
+  }
+ ]
+}
