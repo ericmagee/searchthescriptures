@@ -1,0 +1,92 @@
+{
+ "source": "W2 pkgTRM (state object trim)",
+ "base": "pkgL1Q/patched",
+ "nodes": [
+  {
+   "name": "Send Back Build",
+   "file": "Send_Back_Build.js",
+   "base_sha": "b1989a4f714e",
+   "final_sha": "9abaa7c3db77",
+   "dropped": [
+    "enf428_rows",
+    "enf421_rows"
+   ],
+   "bytes": [
+    127968,
+    128224
+   ]
+  },
+  {
+   "name": "Alt Send Back Build",
+   "file": "Alt_Send_Back_Build.js",
+   "base_sha": "f8591b406f60",
+   "final_sha": "6ed18e22a8a8",
+   "dropped": [
+    "enf428_rows",
+    "enf421_rows"
+   ],
+   "bytes": [
+    128130,
+    128386
+   ]
+  },
+  {
+   "name": "Send Back Record",
+   "file": "Send_Back_Record.js",
+   "base_sha": "72a639c32be3",
+   "final_sha": "67bd9a89eb88",
+   "dropped": [
+    "enf428_rows",
+    "enf421_rows"
+   ],
+   "bytes": [
+    142489,
+    142752
+   ]
+  },
+  {
+   "name": "Alt Send Back Record",
+   "file": "Alt_Send_Back_Record.js",
+   "base_sha": "cfdab4e103f6",
+   "final_sha": "2fb1e7a20d5c",
+   "dropped": [
+    "enf428_rows",
+    "enf421_rows"
+   ],
+   "bytes": [
+    142461,
+    142724
+   ]
+  },
+  {
+   "name": "Gate Record",
+   "file": "Gate_Record.js",
+   "base_sha": "24f4c3437475",
+   "final_sha": "f735fb29bfc3",
+   "dropped": [
+    "enf428_rows",
+    "enf421_rows",
+    "sb_rows"
+   ],
+   "bytes": [
+    409887,
+    410160
+   ]
+  },
+  {
+   "name": "Alt Gate Record",
+   "file": "Alt_Gate_Record.js",
+   "base_sha": "3c24514d9537",
+   "final_sha": "53583d160066",
+   "dropped": [
+    "enf428_rows",
+    "enf421_rows",
+    "sb_rows"
+   ],
+   "bytes": [
+    409896,
+    410169
+   ]
+  }
+ ]
+}
