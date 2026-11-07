@@ -1,0 +1,8 @@
+DIFF 33345 Cure Check
+  a OUT [{"json":{"topic":"Did Christ have a biological father?","synthesis":"### 1. What held at L1-L2-L3?\n\nThe following textual and lexical points stand uncont
+  b OUT [{"json":{"topic":"Did Christ have a biological father?","synthesis":"### 1. What held at L1-L2-L3?\n\nThe following textual and lexical points stand uncont
+DIFF 33482 Panel Cure Check
+  a OUT [{"json":{"run_token":"ODV1-33482-m86iutt6","debate_id":"30d67a3f-f9a9-433f-86fb-7e456721acc9","bodies":["{\"payload\":{\"debate_id\":\"30d67a3f-f9a9-433f-8
+  b OUT [{"json":{"run_token":"ODV1-33482-m86iutt6","debate_id":"30d67a3f-f9a9-433f-86fb-7e456721acc9","bodies":["{\"payload\":{\"debate_id\":\"30d67a3f-f9a9-433f-8
+17 recent runs (33218 33222 33249 33261 33276 33289 33299 33311 33322 33345 33371 33389 33411 33430 33442 33461 33482) x 22 nodes = 374 node runs; identical 372 (341 with real output)
+FAIL
