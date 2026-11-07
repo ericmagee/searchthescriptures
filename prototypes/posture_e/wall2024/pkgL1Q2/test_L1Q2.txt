@@ -40,8 +40,12 @@ OK 33322 Alternate Merge Seat same error both (Cannot read properties of undefin
 OK 33322 Gate Record same error both (Cannot read properties of undefined (reading 'slice'))
 OK 33345 Alternate Build same error both (await is not defined)
 OK 33371 Alternate Build same error both (await is not defined)
-node runs compared: 271; changed outputs: 1
+OK 33411 Alternate Build same error both (await is not defined)
+OK 33430 Alternate Build same error both (await is not defined)
+OK 33442 Alternate Build same error both (await is not defined)
+OK 33461 Alternate Build same error both (await is not defined)
+node runs compared: 371; changed outputs: 1
 33249 Panel Payloads @123806
    base:    ION CHECK: The two [CR2] quotations marked NOT COUNTED are excluded: Esther 2:7, \"Mordecai took her for his own daughter.\", and the combined Deuteronomy 22:23–24 wording. Later exact partial quot"]}]}}]
    patched: ION CHECK: The two [CR2] quotations marked NOT COUNTED are excluded: Esther 2:7, \"Mordecai took her for his own daughter.\", and the combined Deuteronomy 22:23–24 wording. Later exact partial quot"]},{"seat":"single","role":"single","nc":0,"report":["NOT A VERSE QUOTE (fewer than half its words are in Luke 2:4): \"Is not this Jesus, the son of Joseph, whose father and mother we know?\""],"judge_model":"google/gemini-3.8-flash"}]}}]
-TOTAL 42 OK, 0 FAIL
+TOTAL 46 OK, 0 FAIL
