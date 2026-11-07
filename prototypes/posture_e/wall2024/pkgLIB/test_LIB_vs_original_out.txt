@@ -1,15 +1,10 @@
-OK   plan: 22 nodes, base shas match pkgLIB/strip_s45+pkgLIB/strip_L1Q+pkgLIB/strip_DEC/patched, stub shas match pkgLIB/patched
+OK   plan: 22 nodes, base shas match pkgLIB/strip_s45+pkgLIB/strip_L1Q+pkgLIB/strip_TRM+pkgLIB/strip_DEC+pkgLIB/strip_V18/patched, stub shas match pkgLIB/patched
 OK   every stub rebuilds its full source byte for byte from the Shared Library (22 of 22)
 OK   every stub and the Shared Library parse
 OK   the stubs read only $('Shared Library') and the node's own $/$input (no other global)
    runner refs: 153 literal node refs across the 22 full sources; non-literal $() in: 
 OK   every $('X') in each rebuilt source is named literally in its stub; the dynamic nodes carry a non-literal $()
-FAIL runner model refs agree with the live-test thread's list (pkgLIB_stub_refs.json) on 22 of 22
-     differs: Alternate_Build.js
-     differs: Alternate_Merge.js
-     differs: Alternate_Payloads.js
-     differs: Panel_Cure_Check.js
-     differs: Panel_Payloads.js
+OK   runner model refs agree with the live-test thread's list (pkgLIB_stub_refs.json) on 22 of 22
    12 saved runs x 22 nodes = 264 node runs; identical 264 (113 produce output, 151 stop at the same missing upstream node in both)
      Alt Gate Build                 real output on 12 of 12 runs
      Alt Gate Record                real output on 0 of 12 runs; stops in both on: node not saved: Alt Send Back Record
@@ -37,7 +32,7 @@ OK   every node run gives byte-identical output (or the identical error) full vs
 OK   the cure path nodes produce real output on the saved runs (not only errors)
    run 33040 with all saved node outputs: 22 nodes, 22 identical, 19 with real output
      Alt Gate Build                 $input Alt Send Back Record      SAME output 362 bytes
-     Alt Gate Record                $input (none saved)              SAME output 695241 bytes
+     Alt Gate Record                $input (none saved)              SAME output 425357 bytes
      Alternate Build                $input (none saved)              SAME stops: node not saved: Accept Final
      Alternate Cure Build           $input Alternate Payloads        SAME output 401570 bytes
      Alternate Cure Normalize       $input Alternate Cure Build      SAME output 153378 bytes
@@ -49,7 +44,7 @@ OK   the cure path nodes produce real output on the saved runs (not only errors)
      Cure Normalize                 $input (none saved)              SAME output 6 bytes
      Extract Independent Verdict    $input (none saved)              SAME output 357700 bytes
      Gate Build                     $input Send Back Record          SAME output 2413 bytes
-     Gate Record                    $input Gate Build                SAME output 2136531 bytes
+     Gate Record                    $input Gate Build                SAME output 1582635 bytes
      Panel Cure Build 1             $input (none saved)              SAME output 386455 bytes
      Panel Cure Build 2             $input Panel Cure Normalize 1    SAME output 396033 bytes
      Panel Cure Build 3             $input Panel Cure Normalize 2    SAME output 383852 bytes
@@ -78,7 +73,7 @@ OK   run 33040, all saved node outputs: every node identical full vs stub
      Panel Cure Check: Node 'Panel Payloads' hasn't been executed
      Panel Payloads: Node 'Init Seats' hasn't been executed
 OK   the harness catches the 33094 fault: v1 stubs differ, and Extract Independent Verdict fails as in 33094 ("Build Independent Verdict" not executed)
-   timing, Panel Cure Check on 33040, median of 5 fresh processes: full source 118.4 ms, stub 123.9 ms (+5.6 ms per node run)
-   size: the 22 nodes hold 6099381 bytes of code before, 527590 after (Shared Library 383755 included)
+   timing, Panel Cure Check on 33040, median of 5 fresh processes: full source 118.3 ms, stub 127.8 ms (+9.5 ms per node run)
+   size: the 22 nodes hold 6099881 bytes of code before, 527992 after (Shared Library 383887 included)
 OK   the stub adds under 50 ms per node run
-10 OK, 1 FAIL
+11 OK, 0 FAIL

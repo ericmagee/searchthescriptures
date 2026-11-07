@@ -1,3 +1,12 @@
+# pkgLIB v4 (W1, 17:35Z 11-07): ONE package for the gap = s45 + pkgL1Q + pkgTRM + pkgDEC (TRM base) + pkgV18, comment strip. Supersedes v3 and pkgLIB_v31.
+
+- pack.cjs pkgLIB/strip_s45 pkgLIB/strip_L1Q pkgLIB/strip_TRM pkgLIB/strip_DEC pkgLIB/strip_V18. Library json_sha 97e42280c4f50763, 2,080 lines, 383,887 bytes.
+  22 nodes 6,099,881 bytes (stripped) -> 527,992 (library included); live 8.0 MB -> 0.53 MB.
+- Library nodes changed vs v3: Gate Record + Alt Gate Record (pkgTRM), Extract Independent Verdict (pkgV18). AMS = pkgDEC on L1Q (unchanged vs v3).
+- orig_stack/patched = UNSTRIPPED base_s45 overlaid by pkgL1Q, pkgTRM, pkgDEC, pkgV18.
+- Tests: test_LIB_out.txt 11 OK 0 FAIL; test_LIB_vs_original_out.txt (SRCDIR=orig_stack) 11 OK 0 FAIL; test_recent_out.txt (ORIG=orig_stack) 264/264 identical, 233 real output.
+- Write order at the gap: pkgL1Q Send Back Builds; pkgTRM Send Back Build + Alt; pkgDEC Send Back Record + Alt (they contain TRM); then this LIB v4 (Shared Library node + 22 stubs).
+
 # pkgLIB v3 (W1, 11-07): repack on live s45 + pkgL1Q + pkgDEC, with comment strip (Eric approved the efficiency items 11:06 CST)
 
 - Sources: pkgLIB/base_s45 (the 22 library nodes of live d813c20d, from fetchback_live_s45) overlaid by pkgL1Q/patched (W3 PASS) and pkgDEC/patched.

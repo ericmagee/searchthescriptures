@@ -1,3 +1,5 @@
+/* pkgTRM: row arrays the next nodes never read from this output (each reader takes them from the node that made them, by name) are not copied on */
+const __trm=o=>{const c={...o};for(const k of ["enf428_rows","enf421_rows","sb_rows"])delete c[k];return c;};
 // ======== judge_fix9 (PROVEN_STRUCTURE_DRAFT_v2; rulings 396-402): shared libraries ========
 // judge_fix9 S3 (rulings 398, 399; PROVEN_STRUCTURE_DRAFT_v2 sections 3 and 4): every press under a listed premise's PRESSED WITH: is parsed,
 // not judged, in one fixed form:
@@ -2397,7 +2399,7 @@ function cureProse(seat,reply){const p=reply&&reply.ok?cureLines(reply.text).pro
 // E-APPLY applies them too. A failed gate call is the transport's failure, not the judge's silence: its items are recorded and not counted.
 const PASS=$('Send Back Record').first().json;
 const GB=$('Gate Build').all().map(x=>x.json);const first=GB[0]||{};const T=new Date().toISOString();
-if(first.gate_skip)return [{json:{...PASS,gate:{skipped:true,why:first.gate_why||'',report:first.gate_report||[]},gate_rows:[]}}];
+if(first.gate_skip)return [{json:{...__trm(PASS),gate:{skipped:true,why:first.gate_why||'',report:first.gate_report||[]},gate_rows:[]}}];
 const PB0=(()=>{try{return $('Panel Build').first().json;}catch(e){return null;}})();
 const bodies=(Array.isArray(PASS.bodies)?PASS.bodies:$('Panel Cure Check').first().json.bodies).slice();
 const R=$input.all().map(x=>x.json);const rows=[];const add=[];const seats=[];let any=false;
@@ -2416,4 +2418,4 @@ GB.forEach((g,ci)=>{let txt='',err=null;try{txt=String(R[ci].choices[0].message.
   flagged_line:String((it.lines&&it.lines.length?it.lines.join('\n'):it.to)||'').slice(0,1500)||null,prompt_sent:k===0?g.msg:null,full_reply:k===0?(txt||null):null,reply_error:err||cerr,response_line:r.line?String(r.line).slice(0,1500):null,
   cure_status:r.cured?'CURED':'UNCURED',cure_reason:'GATE '+r.ans+(r.to?' TO: '+String(r.to).slice(0,600):'')+(r.reason?' -- '+String(r.reason).slice(0,400):'')+' | ENGINE: '+String(it.why||'').slice(0,600)+' | '+r.why+(r.cured?'':(C&&r.live?' (counted in drv_uncured)':' (RECORD-ONLY)')),at:T});});
  if(C)C.fresh.forEach(f=>rows.push({run_token:g.run_token,seat:g.seat,seat_role:'panel',judge_model:g.api_model,kind:'send_back',rule:'E-GATE',item:'NEW '+f.kind+' ('+f.src+')',flagged_line:null,prompt_sent:null,full_reply:null,reply_error:null,response_line:null,cure_status:'UNCURED',cure_reason:'raised after the gate answers: '+String(f.why).slice(0,600)+(f.by?' (raised by the gate change of '+f.by+', which stays UNCURED and is counted there once; W3 2341)':' (RECORD-ONLY)'),at:T}));});
-return [{json:{...PASS,bodies,alt_needed:!!PASS.alt_needed||any,gate:{skipped:false,calls:GB.length,seats,report:first.gate_report||[]},gate_rows:rows,sb_items:(PASS.sb_items||[]).concat(add)}}];
+return [{json:{...__trm(PASS),bodies,alt_needed:!!PASS.alt_needed||any,gate:{skipped:false,calls:GB.length,seats,report:first.gate_report||[]},gate_rows:rows,sb_items:(PASS.sb_items||[]).concat(add)}}];

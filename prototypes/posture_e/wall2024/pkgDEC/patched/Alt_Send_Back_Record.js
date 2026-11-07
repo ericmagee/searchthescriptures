@@ -1,4 +1,6 @@
 const __seatC=new Map(),__seatBad={};const __seatOf=x=>{if(__seatC.has(x))return __seatC.get(x);let s;try{s=JSON.parse(x).payload.judge_seat;}catch(e){s=__seatBad;}__seatC.set(x,s);return s;}; /* pkgDEC: decode once */
+/* pkgTRM: row arrays the next nodes never read from this output (each reader takes them from the node that made them, by name) are not copied on */
+const __trm=o=>{const c={...o};for(const k of ["enf428_rows","enf421_rows"])delete c[k];return c;};
 /* pkgKSC (W3 queue B6, builder feedback 4; W3 design ruling Wall 2665, grade 2671): KEYSTONE CONSISTENCY, side-neutral. The keystone is the
    defender's last declared link, Dn. A verdict may not grade "KEYSTONE: Dn -- STANDS" while its own CONCEDED LINKS line counts that link
    UNEXHIBITED, CONCEDED or WITHDRAWN (33175 single judge: LINK 6 "Mary is of the house of David" UNEXHIBITED, keystone D6 STANDS).
@@ -779,7 +781,7 @@ function __sbxRL(l){try{return __RL.readLine(String(l==null?'':l));}catch(e){ret
 const PASS=$('Alt Judge Enforcer Record').first().json;
 const B=$('Alt Send Back Build').all().map(x=>x.json);const first=B[0]||{};const T=new Date().toISOString();
 const ns=(first.sb_not_sent||[]).map(x=>({run_token:null,seat:x.seat,seat_role:'alternate',judge_model:null,kind:'send_back',rule:x.rule,item:x.item||null,flagged_line:null,prompt_sent:null,full_reply:null,reply_error:'NOT SENT: '+x.why,response_line:null,cure_status:null,cure_reason:'SEND-BACK NOT SENT: '+x.why+' (ruling 428)',at:T}));
-if(first.sb_skip)return [{json:{...PASS,sendback:{skipped:true,why:first.sb_why||'',not_sent:ns.length,tally:{}},sb_rows:ns,sb_items:[]}}];
+if(first.sb_skip)return [{json:{...__trm(PASS),sendback:{skipped:true,why:first.sb_why||'',not_sent:ns.length,tally:{}},sb_rows:ns,sb_items:[]}}];
 const R=$input.all().map(x=>x.json);const rows=[...ns];const errors=[];const tally={KEEP:0,CHANGE:0,'NO ANSWER':0};const shown=[];const SIL={}; /* pkgSBS: seat -> silent S numbers */const ECF={};const UNDF={};const ABSM={};const PABM={};const MNPM={};const IMPM={};const KSCM={}; /* pkgKSC: seat -> uncured E-KSC items */ /* pkgIMP: seat -> uncured items */ /* pkgMNP: seat -> uncured items */ /* pkgPAB: seat -> uncured press-absence items */ /* pkgABS: seat -> uncured absence items */ /* pkgUND: seat -> uncured E-UNG and E-HOLD-UND items */ /* pkgECF: seat -> uncured E-COL items */
 function psGrades(l){const g={};let t=String(l==null?'':l).replace(/\\+"/g,'"').replace(/[*_`]+/g,'');const m=t.match(/^\s*(?:[-•]\s*|\d+[.)]\s*)?(DEFENDER\s+|CHALLENGER\s+)?CONCEDED LINKS\s*:\s*(\d+)?\s*(?:--|—|–)?/i);if(!m)return null;t=t.slice(m[0].length);
  t=t.replace(/\([^()]*\)/g,' ').replace(/"[^"\n]*"|“[^”\n]*”/g,' ').replace(/(^|[\s(\[:;,])['‘](?:[^'’\n]|['’](?=[A-Za-z]))+?['’](?=$|[\s.,;:!?)\]])/g,'$1 ')
@@ -917,4 +919,4 @@ if(Object.keys(SIL).length){bodies=(bodies||(Array.isArray(PASS.bodies)?PASS.bod
  for(const [seat,sids] of Object.entries(SIL)){const i=bodies.findIndex(x=>__seatOf(x)===seat);if(i<0)continue;const bb=JSON.parse(bodies[i]);const p=bb.payload;
   p.drv_uncured=(p.drv_uncured||0)+sids.length;anySil=true;silent_counted.push({seat,items:sids});
   p.verdict_raw=p.verdict_raw+'\n[AUDIT v40: SEND-BACK SILENCE -- SEAT: '+seat+'; ITEMS: '+sids.join(', ')+'; no written answer to '+(sids.length===1?'this send-back item':'these send-back items')+'; counted in drv_uncured (silence rule, WALL-2024 2274). REVIEW THIS ROW.]';bodies[i]=JSON.stringify(bb);}}
-return [{json:{...PASS,...(bodies?{bodies}:{}),alt_needed:!!PASS.alt_needed||anySil,sendback:{skipped:false,calls:B.length,not_sent:ns.length,tally,errors,silent_counted,ecol_counted,und_counted,abs_counted,pab_counted,mnp_counted,imp_counted,ksc_counted},sb_rows:rows,sb_items:shown}}];
+return [{json:{...__trm(PASS),...(bodies?{bodies}:{}),alt_needed:!!PASS.alt_needed||anySil,sendback:{skipped:false,calls:B.length,not_sent:ns.length,tally,errors,silent_counted,ecol_counted,und_counted,abs_counted,pab_counted,mnp_counted,imp_counted,ksc_counted},sb_rows:rows,sb_items:shown}}];
