@@ -1,0 +1,227 @@
+{
+ "base": "/mnt/project-files/wall2024/fetchback_live_s32.json + pkgRXR/patched",
+ "nodes": [
+  {
+   "name": "Cure Build",
+   "file": "Cure_Build.js",
+   "base_sha": "87c5a9e25d498bcc",
+   "final_sha": "f02ba7bb7bb3d1b6",
+   "edits": [
+    "pre",
+    "derive",
+    "mark",
+    "lib psGrades"
+   ]
+  },
+  {
+   "name": "Cure Normalize",
+   "file": "Cure_Normalize.js",
+   "base_sha": "9a6fde47c4ab7d6f",
+   "final_sha": "f3d3c3610715def6",
+   "edits": [
+    "pre",
+    "derive",
+    "mark",
+    "lib psGrades"
+   ]
+  },
+  {
+   "name": "Cure Check",
+   "file": "Cure_Check.js",
+   "base_sha": "b0a2c47813c249e8",
+   "final_sha": "86953f3b972b28e0",
+   "edits": [
+    "pre",
+    "derive",
+    "mark",
+    "lib psGrades"
+   ]
+  },
+  {
+   "name": "Panel Cure Build 1",
+   "file": "Panel_Cure_Build_1.js",
+   "base_sha": "7e271f67235aa969",
+   "final_sha": "63e636d886daf2d0",
+   "edits": [
+    "pre",
+    "derive",
+    "mark",
+    "lib psGrades"
+   ]
+  },
+  {
+   "name": "Panel Cure Normalize 1",
+   "file": "Panel_Cure_Normalize_1.js",
+   "base_sha": "b983d212cb9f4260",
+   "final_sha": "837dc86ba602deb9",
+   "edits": [
+    "pre",
+    "derive",
+    "mark",
+    "lib psGrades"
+   ]
+  },
+  {
+   "name": "Panel Cure Build 2",
+   "file": "Panel_Cure_Build_2.js",
+   "base_sha": "985947be76529d52",
+   "final_sha": "7acc7e1c82f905d0",
+   "edits": [
+    "pre",
+    "derive",
+    "mark",
+    "lib psGrades"
+   ]
+  },
+  {
+   "name": "Panel Cure Normalize 2",
+   "file": "Panel_Cure_Normalize_2.js",
+   "base_sha": "6c719903b1071172",
+   "final_sha": "38c33c412b99c542",
+   "edits": [
+    "pre",
+    "derive",
+    "mark",
+    "lib psGrades"
+   ]
+  },
+  {
+   "name": "Panel Cure Build 3",
+   "file": "Panel_Cure_Build_3.js",
+   "base_sha": "521f6226599e6cd8",
+   "final_sha": "927d1c348f38f97a",
+   "edits": [
+    "pre",
+    "derive",
+    "mark",
+    "lib psGrades"
+   ]
+  },
+  {
+   "name": "Panel Cure Normalize 3",
+   "file": "Panel_Cure_Normalize_3.js",
+   "base_sha": "fd66e00f9069bc18",
+   "final_sha": "262c73f0e65ba940",
+   "edits": [
+    "pre",
+    "derive",
+    "mark",
+    "lib psGrades"
+   ]
+  },
+  {
+   "name": "Panel Cure Check",
+   "file": "Panel_Cure_Check.js",
+   "base_sha": "cebe671ee9009a8d",
+   "final_sha": "ded1cb9e8f7d32da",
+   "edits": [
+    "pre",
+    "derive",
+    "mark",
+    "lib psGrades"
+   ]
+  },
+  {
+   "name": "Alternate Build",
+   "file": "Alternate_Build.js",
+   "base_sha": "5bdf9e1735da213a",
+   "final_sha": "185ad5c3f1acfa8b",
+   "edits": [
+    "pre",
+    "derive",
+    "mark",
+    "lib psGrades"
+   ]
+  },
+  {
+   "name": "Alternate Cure Build",
+   "file": "Alternate_Cure_Build.js",
+   "base_sha": "4f91150d7bbc962c",
+   "final_sha": "b7198479b9dc3399",
+   "edits": [
+    "pre",
+    "derive",
+    "mark",
+    "lib psGrades"
+   ]
+  },
+  {
+   "name": "Alternate Cure Normalize",
+   "file": "Alternate_Cure_Normalize.js",
+   "base_sha": "6b67a08603e9936d",
+   "final_sha": "6d1ed1aabdc91ab5",
+   "edits": [
+    "pre",
+    "derive",
+    "mark",
+    "lib psGrades"
+   ]
+  },
+  {
+   "name": "Alternate Merge Seat",
+   "file": "Alternate_Merge_Seat.js",
+   "base_sha": "39bd531052b61ac9",
+   "final_sha": "880852077b49be4d",
+   "edits": [
+    "pre",
+    "derive",
+    "mark"
+   ]
+  },
+  {
+   "name": "Gate Build",
+   "file": "Gate_Build.js",
+   "base_sha": "635c270e10f7692c",
+   "final_sha": "9f4121cc17cebd59",
+   "edits": [
+    "pre",
+    "derive",
+    "mark"
+   ]
+  },
+  {
+   "name": "Gate Record",
+   "file": "Gate_Record.js",
+   "base_sha": "9b27827a58f7c27f",
+   "final_sha": "41b67e937798bdc1",
+   "edits": [
+    "pre",
+    "derive",
+    "mark"
+   ]
+  },
+  {
+   "name": "Alt Gate Build",
+   "file": "Alt_Gate_Build.js",
+   "base_sha": "cd6c5e312ba43495",
+   "final_sha": "8cf74385c959997a",
+   "edits": [
+    "pre",
+    "derive",
+    "mark"
+   ]
+  },
+  {
+   "name": "Alt Gate Record",
+   "file": "Alt_Gate_Record.js",
+   "base_sha": "2886f28a8d3b8399",
+   "final_sha": "e6470403999270e4",
+   "edits": [
+    "pre",
+    "derive",
+    "mark"
+   ]
+  },
+  {
+   "name": "Alternate Merge",
+   "file": "Alternate_Merge.js",
+   "base_sha": "411111c400c13289",
+   "final_sha": "048fe8be7bcd4c1d",
+   "edits": [
+    "pre",
+    "derive",
+    "mark"
+   ]
+  }
+ ]
+}

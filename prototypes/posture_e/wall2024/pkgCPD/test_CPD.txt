@@ -1,0 +1,58 @@
+15 OK, 0 FAIL (Panel_Cure_Check)
+15 OK, 0 FAIL (Cure_Build)
+15 OK, 0 FAIL (Alternate_Merge_Seat)
+15 OK, 0 FAIL (Gate_Record)
+15 OK, 0 FAIL (Alt_Gate_Record)
+15 OK, 0 FAIL (Panel_Cure_Normalize_2)
+15 OK, 0 FAIL (Panel_Cure_Check, on RXR)
+15 OK, 0 FAIL (Gate_Record, on RXR)
+33197 Panel Cure Check       parity OK | array changes none
+33197 Alternate Merge Seat   parity OK | array changes none
+33197 Gate Record SKIP base: Referenced node is unexecuted: Send Back Record
+33197 Alt Gate Record SKIP base: Referenced node is unexecuted: Alt Send Back Record
+33197 Alternate Merge SKIP base: Referenced node is unexecuted: Alternate Merge Seat
+33218 Panel Cure Check       parity OK | array changes none
+33218 Alternate Merge Seat   parity OK | array changes C[\\n1\\n] -> C[] (x1)
+     [AUDIT v50: COUNTED PREMISES DERIVED (pkgCPD) -- SEAT: gemini; SIDE: CHALLENGER; COUNT: 1 to 0; WAS: [1]; NOW: []; FROM: the count 0; record-only, it removes no seat ; END]
+33218 Gate Record            parity OK | array changes none
+33218 Alt Gate Record        parity OK | array changes none
+33218 Alternate Merge        parity OK | array changes none
+33222 Panel Cure Check       parity OK | array changes none
+33222 Alternate Merge Seat   parity OK | array changes none
+33222 Gate Record            parity OK | array changes none
+33222 Alt Gate Record        parity OK | array changes none
+33222 Alternate Merge        parity OK | array changes D[] -> D[3,4,5,6] (x1)
+     [AUDIT v50: COUNTED PREMISES DERIVED (pkgCPD) -- SEAT: grok; SIDE: DEFENDER; COUNT: 0 to 4; WAS: []; NOW: [3,4,5,6]; FROM: CONCEDED LINKS: 4 -- premise 3 UNEXHIBITED (Isaiah 8:8 unanswered); premise 4 UNEXHIBITED (passive witnesses unanswered); premise 5 UNEXHIBITED (Luke 2:48 unanswered); premise 6 UNEXHIBITED (no block numbere
+33249 Panel Cure Check       parity OK | array changes C[1,5] -> C[] (x1)
+     [AUDIT v50: COUNTED PREMISES DERIVED (pkgCPD) -- SEAT: chatgpt; SIDE: CHALLENGER; COUNT: 2 to 0; WAS: [1,5]; NOW: []; FROM: the count 0; record-only, it removes no seat ; END]
+33249 Alternate Merge Seat   parity OK | array changes C[1] -> C[1,5] (x1)
+     [AUDIT v50: COUNTED PREMISES NOT DERIVED (pkgCPD) -- SEAT: grok; SIDE: CHALLENGER; COUNT: 3 to 1; ARRAY: [1,2,5] (kept); WHY: the count line names 0 counted premise(s) (none) for a count of 1; LINE: CHALLENGER CONCEDED LINKS: 1 -- recomputed after the cure from the cured lines (CORRECTED COUNT CHALLENGER 1).; record-only, it rem
+     [AUDIT v50: COUNTED PREMISES DERIVED (pkgCPD) -- SEAT: sol; SIDE: CHALLENGER; COUNT: 1 to 2; WAS: [1]; NOW: [1,5]; FROM: CHALLENGER CONCEDED LINKS: 2 -- Premises 1 and 5: UNEXHIBITED through failed answers to proven pressed witnesses (Commitments 3 and 5); premise 1 fails at Matthew 1:25, and premise 5 fails at the separately pr
+33249 Gate Record            parity OK | array changes none
+33249 Alt Gate Record        parity OK | array changes none
+33249 Alternate Merge        parity OK | array changes none
+33261 Panel Cure Check       parity OK | array changes C[1,5] -> C[] (x1)
+     [AUDIT v50: COUNTED PREMISES DERIVED (pkgCPD) -- SEAT: chatgpt; SIDE: CHALLENGER; COUNT: 2 to 0; WAS: [1,5]; NOW: []; FROM: the count 0; record-only, it removes no seat ; END]
+33261 Alternate Merge Seat   parity OK | array changes C[] -> C[1,5]; D[1] -> D[] (x2)
+     [AUDIT v50: COUNTED PREMISES DERIVED (pkgCPD) -- SEAT: gemini; SIDE: CHALLENGER; COUNT: 0 to 2; WAS: []; NOW: [1,5]; FROM: CHALLENGER CONCEDED LINKS: 2 -- Premise 1: UNEXHIBITED; Premise 5: UNEXHIBITED; Premise 2: VOID; Premise 3: VOID; Premise 4: VOID; Premise 6: VOID; record-only, it removes no seat ; END]
+     [AUDIT v50: COUNTED PREMISES DERIVED (pkgCPD) -- SEAT: chatgpt; SIDE: DEFENDER; COUNT: 1 to 0; WAS: [1]; NOW: []; FROM: the count 0; record-only, it removes no seat ; END]
+33261 Gate Record            parity OK | array changes none
+33261 Alt Gate Record        parity OK | array changes none
+33261 Alternate Merge        parity OK | array changes none
+33276 Panel Cure Check SKIP base: Cannot read properties of undefined (reading 'slice')
+33276 Alternate Merge Seat SKIP base: Cannot read properties of undefined (reading 'slice')
+33276 Gate Record SKIP base: Cannot read properties of undefined (reading 'slice')
+33276 Alt Gate Record SKIP base: Cannot read properties of undefined (reading 'slice')
+33276 Alternate Merge        parity OK | array changes none
+33289 Panel Cure Check SKIP base: Cannot read properties of undefined (reading 'slice')
+33289 Alternate Merge Seat SKIP base: Cannot read properties of undefined (reading 'slice')
+33289 Gate Record SKIP base: Cannot read properties of undefined (reading 'slice')
+33289 Alt Gate Record SKIP base: Cannot read properties of undefined (reading 'slice')
+33289 Alternate Merge        parity OK | array changes none
+33299 Panel Cure Check       parity OK | array changes C[3] -> C[] (x1)
+     [AUDIT v50: COUNTED PREMISES DERIVED (pkgCPD) -- SEAT: gemini; SIDE: CHALLENGER; COUNT: 1 to 0; WAS: [3]; NOW: []; FROM: the count 0; record-only, it removes no seat ; END]
+33299 Alternate Merge Seat   parity OK | array changes none
+33299 Gate Record            parity OK | array changes none
+33299 Alt Gate Record        parity OK | array changes none
+33299 Alternate Merge        parity OK | array changes none
+ALL PARITY OK
