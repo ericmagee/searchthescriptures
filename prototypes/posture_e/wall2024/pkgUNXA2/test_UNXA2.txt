@@ -1,0 +1,33 @@
+OK   A1 22 nodes (19 with the cure, 3 raise-only); each base sha is live 4f62e6cf; patched sha holds
+OK   G1 33276 gemini challenger premise 1 (W3 grade_33276 item 4): the fit ground "lacks any footing for the step" cured before, does not now
+OK   G2 the same STATEMENT plus "[L4] does not follow from [L1] to [L3]" cures (a layer the block does not exhibit)
+OK   G3 a block exhibiting L1 and L3 only: "[L2] is missing" cures
+OK   N1 "[L1] does not meet the press" names L1, which the block exhibits: no cure
+OK   N2 no STATEMENT: no cure
+OK   M1 cure and uncured messages name a layer the block does not exhibit; old messages gone
+OK   P 33218 Panel Cure Check: no K-UNX-A cure row, so output equal apart from the item line text
+OK   P 33218 Alternate Merge Seat: no K-UNX-A cure row, so output equal apart from the item line text
+OK   P 33218 Gate Record: no K-UNX-A cure row, so output equal apart from the item line text
+OK   P 33222 Panel Cure Check: no K-UNX-A cure row, so output equal apart from the item line text
+OK   P 33222 Alternate Merge Seat: no K-UNX-A cure row, so output equal apart from the item line text
+OK   P 33222 Gate Record: no K-UNX-A cure row, so output equal apart from the item line text
+OK   P 33249 Panel Cure Check: no K-UNX-A cure row, so output equal apart from the item line text
+OK   P 33249 Alternate Merge Seat: no K-UNX-A cure row, so output equal apart from the item line text
+OK   P 33249 Gate Record: no K-UNX-A cure row, so output equal apart from the item line text
+OK   P 33261 Panel Cure Check: no K-UNX-A cure row, so output equal apart from the item line text
+OK   P 33261 Alternate Merge Seat: no K-UNX-A cure row, so output equal apart from the item line text
+OK   P 33261 Gate Record: no K-UNX-A cure row, so output equal apart from the item line text
+INFO 33218 Panel Cure Check: K-UNX-A cure rows 0 / 0, flips 0
+INFO 33218 Alternate Merge Seat: K-UNX-A cure rows 0 / 0, flips 0
+INFO 33218 Gate Record: K-UNX-A cure rows 0 / 0, flips 0
+INFO 33222 Panel Cure Check: K-UNX-A cure rows 0 / 0, flips 0
+INFO 33222 Alternate Merge Seat: K-UNX-A cure rows 0 / 0, flips 0
+INFO 33222 Gate Record: K-UNX-A cure rows 0 / 0, flips 0
+INFO 33249 Panel Cure Check: K-UNX-A cure rows 0 / 0, flips 0
+INFO 33249 Alternate Merge Seat: K-UNX-A cure rows 0 / 0, flips 0
+INFO 33249 Gate Record: K-UNX-A cure rows 0 / 0, flips 0
+INFO 33261 Panel Cure Check: K-UNX-A cure rows 0 / 0, flips 0
+INFO 33261 Alternate Merge Seat: K-UNX-A cure rows 0 / 0, flips 0
+INFO 33261 Gate Record: K-UNX-A cure rows 0 / 0, flips 0
+INFO item line (Panel Payloads): line:id+': '+why+'. Quote the block\'s [L1]'+(L1?' ('+L1+')':'')+(ua.a==='UNANSWERED'?' answering that press':'')+' in a STATEMENT for this item and name the layer the block lacks ("[L1]", "[L2]", "[L3]" or "[L4]", one the block does not exhibit; a failure of fit is not a missing layer), or write a CORRECTED COUNT for '+lab+' without this premise and grade its fit at the collision (a FORCED line, ruling 411). A KEEP does not cure it.
+19 OK, 0 FAIL
