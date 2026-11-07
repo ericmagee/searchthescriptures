@@ -1,0 +1,311 @@
+{
+ "ruling": "W3 Wall 2769 (TRIAL)",
+ "base": "pkgKWR/patched,pkgUNXA2/patched where present, else live s28 4f62e6cf",
+ "nodes": [
+  {
+   "name": "Build Independent Verdict",
+   "file": "Build_Independent_Verdict.js",
+   "base": "live s28",
+   "base_sha": "a7c9de7d47fba79c",
+   "final_sha": "4b43139b589e848d",
+   "edits": [
+    "r396",
+    "r396b"
+   ]
+  },
+  {
+   "name": "Extract Independent Verdict",
+   "file": "Extract_Independent_Verdict.js",
+   "base": "pkgUNXA2/patched/Extract_Independent_Verdict.js",
+   "base_sha": "b27c8eab7fa328bd",
+   "final_sha": "bc4f63403bfbe83d",
+   "edits": [
+    "lib",
+    "call",
+    "enf"
+   ]
+  },
+  {
+   "name": "Panel Build",
+   "file": "Panel_Build.js",
+   "base": "live s28",
+   "base_sha": "910bb0487541e7ef",
+   "final_sha": "19a70deba2a7b95c",
+   "edits": [
+    "r396",
+    "r396b"
+   ]
+  },
+  {
+   "name": "Panel Payloads",
+   "file": "Panel_Payloads.js",
+   "base": "pkgUNXA2/patched/Panel_Payloads.js",
+   "base_sha": "8eb9a23469d3486b",
+   "final_sha": "5e00f54ca56e787a",
+   "edits": [
+    "lib",
+    "call",
+    "enf"
+   ]
+  },
+  {
+   "name": "Cure Build",
+   "file": "Cure_Build.js",
+   "base": "pkgKWR/patched/Cure_Build.js",
+   "base_sha": "95b4310b4bc1dc10",
+   "final_sha": "4545b0d07a43718f",
+   "edits": [
+    "lib",
+    "enf",
+    "lst",
+    "cure"
+   ]
+  },
+  {
+   "name": "Cure Normalize",
+   "file": "Cure_Normalize.js",
+   "base": "pkgKWR/patched/Cure_Normalize.js",
+   "base_sha": "2d79557688af1533",
+   "final_sha": "c9644d154f2cad90",
+   "edits": [
+    "lib",
+    "enf",
+    "lst",
+    "cure"
+   ]
+  },
+  {
+   "name": "Cure Check",
+   "file": "Cure_Check.js",
+   "base": "pkgKWR/patched/Cure_Check.js",
+   "base_sha": "1c3e74e422c116c7",
+   "final_sha": "46e620c04c2428a0",
+   "edits": [
+    "lib",
+    "enf",
+    "lst",
+    "cure"
+   ]
+  },
+  {
+   "name": "Panel Cure Build 1",
+   "file": "Panel_Cure_Build_1.js",
+   "base": "pkgKWR/patched/Panel_Cure_Build_1.js",
+   "base_sha": "a97f28157f8fb776",
+   "final_sha": "e590b23f1835c79a",
+   "edits": [
+    "lib",
+    "enf",
+    "lst",
+    "cure"
+   ]
+  },
+  {
+   "name": "Panel Cure Normalize 1",
+   "file": "Panel_Cure_Normalize_1.js",
+   "base": "pkgKWR/patched/Panel_Cure_Normalize_1.js",
+   "base_sha": "19840b1f71fd89ec",
+   "final_sha": "da573830d3a7c3e6",
+   "edits": [
+    "lib",
+    "enf",
+    "lst",
+    "cure"
+   ]
+  },
+  {
+   "name": "Panel Cure Build 2",
+   "file": "Panel_Cure_Build_2.js",
+   "base": "pkgKWR/patched/Panel_Cure_Build_2.js",
+   "base_sha": "f7b72a6ebe18e5f2",
+   "final_sha": "a135e6af8937363c",
+   "edits": [
+    "lib",
+    "enf",
+    "lst",
+    "cure"
+   ]
+  },
+  {
+   "name": "Panel Cure Normalize 2",
+   "file": "Panel_Cure_Normalize_2.js",
+   "base": "pkgKWR/patched/Panel_Cure_Normalize_2.js",
+   "base_sha": "7d3a996c253b359c",
+   "final_sha": "f441a94fc7c88954",
+   "edits": [
+    "lib",
+    "enf",
+    "lst",
+    "cure"
+   ]
+  },
+  {
+   "name": "Panel Cure Build 3",
+   "file": "Panel_Cure_Build_3.js",
+   "base": "pkgKWR/patched/Panel_Cure_Build_3.js",
+   "base_sha": "09e189dd63e53554",
+   "final_sha": "deb2e417bbc175c5",
+   "edits": [
+    "lib",
+    "enf",
+    "lst",
+    "cure"
+   ]
+  },
+  {
+   "name": "Panel Cure Normalize 3",
+   "file": "Panel_Cure_Normalize_3.js",
+   "base": "pkgKWR/patched/Panel_Cure_Normalize_3.js",
+   "base_sha": "89fcbaad37d71abd",
+   "final_sha": "e99bfd8c82e9e7b7",
+   "edits": [
+    "lib",
+    "enf",
+    "lst",
+    "cure"
+   ]
+  },
+  {
+   "name": "Panel Cure Check",
+   "file": "Panel_Cure_Check.js",
+   "base": "pkgKWR/patched/Panel_Cure_Check.js",
+   "base_sha": "1e09648ec28c3215",
+   "final_sha": "ecbaf98ddf9bc70a",
+   "edits": [
+    "lib",
+    "enf",
+    "lst",
+    "cure"
+   ]
+  },
+  {
+   "name": "Alternate Build",
+   "file": "Alternate_Build.js",
+   "base": "pkgKWR/patched/Alternate_Build.js",
+   "base_sha": "5bcb7cf55c97e2a7",
+   "final_sha": "ddbef888bf751bb9",
+   "edits": [
+    "lib",
+    "enf",
+    "lst",
+    "cure"
+   ]
+  },
+  {
+   "name": "Alternate Payloads",
+   "file": "Alternate_Payloads.js",
+   "base": "pkgUNXA2/patched/Alternate_Payloads.js",
+   "base_sha": "72f9512e75e43d89",
+   "final_sha": "cf2a9e951ce8a48b",
+   "edits": [
+    "lib",
+    "call",
+    "enf"
+   ]
+  },
+  {
+   "name": "Alternate Cure Build",
+   "file": "Alternate_Cure_Build.js",
+   "base": "pkgKWR/patched/Alternate_Cure_Build.js",
+   "base_sha": "42bd67de9f9f85b7",
+   "final_sha": "2e28ee13d8107fc4",
+   "edits": [
+    "lib",
+    "enf",
+    "lst",
+    "cure"
+   ]
+  },
+  {
+   "name": "Alternate Cure Normalize",
+   "file": "Alternate_Cure_Normalize.js",
+   "base": "pkgKWR/patched/Alternate_Cure_Normalize.js",
+   "base_sha": "a0493d66d55e7648",
+   "final_sha": "3594f5d2065c790a",
+   "edits": [
+    "lib",
+    "enf",
+    "lst",
+    "cure"
+   ]
+  },
+  {
+   "name": "Alternate Merge Seat",
+   "file": "Alternate_Merge_Seat.js",
+   "base": "pkgKWR/patched/Alternate_Merge_Seat.js",
+   "base_sha": "452e5dee1200a406",
+   "final_sha": "d87087536384bbff",
+   "edits": [
+    "lib",
+    "enf",
+    "lst",
+    "cure"
+   ]
+  },
+  {
+   "name": "Gate Build",
+   "file": "Gate_Build.js",
+   "base": "pkgKWR/patched/Gate_Build.js",
+   "base_sha": "e96fbcc3acf0e5e1",
+   "final_sha": "89eb8e140bd868fc",
+   "edits": [
+    "lib",
+    "enf",
+    "lst",
+    "cure"
+   ]
+  },
+  {
+   "name": "Gate Record",
+   "file": "Gate_Record.js",
+   "base": "pkgKWR/patched/Gate_Record.js",
+   "base_sha": "79f9b2a74411018f",
+   "final_sha": "adc6adcb4b25b0e6",
+   "edits": [
+    "lib",
+    "enf",
+    "lst",
+    "cure"
+   ]
+  },
+  {
+   "name": "Alt Gate Build",
+   "file": "Alt_Gate_Build.js",
+   "base": "pkgKWR/patched/Alt_Gate_Build.js",
+   "base_sha": "7b39b3c4ea0948f7",
+   "final_sha": "73a28c75c7e422b0",
+   "edits": [
+    "lib",
+    "enf",
+    "lst",
+    "cure"
+   ]
+  },
+  {
+   "name": "Alt Gate Record",
+   "file": "Alt_Gate_Record.js",
+   "base": "pkgKWR/patched/Alt_Gate_Record.js",
+   "base_sha": "eb5c1aa175a9267d",
+   "final_sha": "941567781b828ff3",
+   "edits": [
+    "lib",
+    "enf",
+    "lst",
+    "cure"
+   ]
+  },
+  {
+   "name": "Alternate Merge",
+   "file": "Alternate_Merge.js",
+   "base": "pkgKWR/patched/Alternate_Merge.js",
+   "base_sha": "03781820e775e848",
+   "final_sha": "15ca520a89380dcd",
+   "edits": [
+    "lib",
+    "enf",
+    "lst",
+    "cure"
+   ]
+  }
+ ]
+}

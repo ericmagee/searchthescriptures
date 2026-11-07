@@ -26,9 +26,11 @@ const E={
   "-- FAILS: \\\"<the answer's own words that fail to show the fit, quoted from the ANSWER round: its reading, not only the words of a verse it quotes>\\\" -- CARRIED BY:",1],
  r396b:["A MEANS its own verse does not carry is no ground for a forced link.\";",
   "A MEANS its own verse does not carry is no ground for a forced link. FAILS names what in the answer fails, its own reading; a verse does not fail. K-FF, a TRIAL check, returns for cure a FAILS that is only the words of a verse the answer quotes.\";",1]};
-const OUT='pkgKFF/patched';fs.mkdirSync(OUT,{recursive:true});fs.mkdirSync('pkgKFF/base',{recursive:true});const plan={ruling:'W3 Wall 2769 (TRIAL)',base:'live s28 4f62e6cf',nodes:[]};
-for(const n of NS){const s0=(n.parameters||{}).jsCode;if(typeof s0!=='string')continue;const ks=Object.keys(E).filter(k=>s0.includes(E[k][0]));if(!ks.length)continue;
+// --on <dir>[,<dir>]: take a node's base from the first <dir>/<node>.js that exists (pkgKWR/patched,pkgUNXA2/patched for W2's stack), else live s28.
+const ai=process.argv.indexOf('--on');const ON=ai>0?process.argv[ai+1]:null;const ONS=ON?ON.split(','):[];const SUF=ON?'_on_'+ONS[0].split('/')[0].replace(/^pkg/,''):''; /* --on a,b: the first dir holding the node wins */
+const OUT='pkgKFF/patched'+SUF,BASE='pkgKFF/base'+SUF;fs.mkdirSync(OUT,{recursive:true});fs.mkdirSync(BASE,{recursive:true});const plan={ruling:'W3 Wall 2769 (TRIAL)',base:ON?ON+' where present, else live s28 4f62e6cf':'live s28 4f62e6cf',nodes:[]};
+for(const n of NS){const live0=(n.parameters||{}).jsCode;if(typeof live0!=='string')continue;const bf=ONS.map(d=>d+'/'+n.name.replace(/ /g,'_')+'.js').find(x=>fs.existsSync(x))||null;const s0=bf&&fs.existsSync(bf)?fs.readFileSync(bf,'utf8'):live0;const bsrc=s0===live0?'live s28':bf;const ks=Object.keys(E).filter(k=>s0.includes(E[k][0]));if(!ks.length)continue;
  let s=s0;for(const k of ks){const [a,b,cnt]=E[k];s=rep(s,a,b,n.name+' '+k,cnt);}
- new Function('$','$input','$json','$execution','$workflow',s);const f=n.name.replace(/ /g,'_')+'.js';fs.writeFileSync('pkgKFF/base/'+f,s0);fs.writeFileSync(OUT+'/'+f,s);
- plan.nodes.push({name:n.name,file:f,base_sha:sha(s0),final_sha:sha(s),edits:ks});console.log(n.name.padEnd(28),sha(s0),'->',sha(s),ks.join(','));}
-fs.writeFileSync('pkgKFF/plan_KFF.json',JSON.stringify(plan,null,1));console.log(plan.nodes.length,'nodes');
+ new Function('$','$input','$json','$execution','$workflow',s);const f=n.name.replace(/ /g,'_')+'.js';fs.writeFileSync(BASE+'/'+f,s0);fs.writeFileSync(OUT+'/'+f,s);
+ plan.nodes.push({name:n.name,file:f,base:bsrc,base_sha:sha(s0),final_sha:sha(s),edits:ks});console.log(n.name.padEnd(28),sha(s0),'->',sha(s),ks.join(','));}
+fs.writeFileSync('pkgKFF/plan_KFF'+SUF+'.json',JSON.stringify(plan,null,1));console.log(plan.nodes.length,'nodes');

@@ -59,3 +59,10 @@ In 33249, chatgpt's real cure reply for K-FC already rewrote D5 vs C1 with FAILS
 ## Write and revert
 - Write: replace jsCode with patched/<node>.js. Shas are in plan_KFF.json.
 - Revert: base/<node>.js.
+
+## Stacked on W2's pkgUNXA2 and pkgKWR (Wall 2773, 2774)
+- Build: `node pkgKFF/build_KFF.cjs --on pkgKWR/patched,pkgUNXA2/patched`. This writes patched_on_KWR/, base_on_KWR/ and plan_KFF_on_KWR.json.
+- Bases: 19 nodes from pkgKWR, 3 from pkgUNXA2, and 2 from live s28.
+- Every anchor applied once on the stack, as on live.
+- Test: `node pkgKFF/test_KFF_on_KWR.cjs` gives 4 OK. On 33249, chatgpt gets the item and the rewritten FAILS cures it. Panel Payloads and Panel Cure Check on 33218 equal the stack base.
+- Write order: whichever lands first. Use patched/ if pkgKFF is written on live s28 before UNXA2 and KWR; use patched_on_KWR/ if written after them.
