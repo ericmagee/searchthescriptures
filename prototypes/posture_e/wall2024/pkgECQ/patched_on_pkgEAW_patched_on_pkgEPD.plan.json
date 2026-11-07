@@ -1,0 +1,26 @@
+{
+ "base": "pkgEAW/patched_on_pkgEPD",
+ "status": "TRIAL",
+ "nodes": [
+  {
+   "file": "Judge_Enforcer_Build.js",
+   "base_sha": "01ad430535a0",
+   "final_sha": "538bc2dd1b78"
+  },
+  {
+   "file": "Alt_Judge_Enforcer_Build.js",
+   "base_sha": "1f9e6db2d525",
+   "final_sha": "50a5d8c653bb"
+  },
+  {
+   "file": "Judge_Enforcer_Record.js",
+   "base_sha": "3ad30fb709a6",
+   "final_sha": "2725782f0091"
+  },
+  {
+   "file": "Alt_Judge_Enforcer_Record.js",
+   "base_sha": "241f59fdb02f",
+   "final_sha": "fc0ad45c45c0"
+  }
+ ]
+}

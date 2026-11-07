@@ -1,0 +1,27 @@
+OK   Judge Enforcer Record: 33371 row 14645 (defender [CR2] grant quoted as the challenger's) HELD (base sent; LIVE held; TRIAL sent with mark)
+OK   Judge Enforcer Record: 33371 row 14646 HELD (base sent; LIVE held; TRIAL sent with mark)
+OK   Judge Enforcer Record: 33371 row 14647 HELD (base sent; LIVE held; TRIAL sent with mark)
+OK   Judge Enforcer Record: 33371 14645 even with no block (the label check does not need blk) HELD (base sent; LIVE held; TRIAL sent with mark)
+OK   Judge Enforcer Record: N1 mirror: the same grant pushed against the DEFENDER, whose own words it is unchanged in LIVE and TRIAL (sent)
+OK   Judge Enforcer Record: N2 33371 true challenger give-up "I accept the span exactly as the press gives it" unchanged in LIVE and TRIAL (sent)
+OK   Judge Enforcer Record: N3 33040 sol: (CONCEDED) quoting the defender's own "I drop the claim that the flesh came through Mary's side" unchanged in LIVE and TRIAL (sent)
+OK   Judge Enforcer Record: N4 no ecq_sides (rounds not found): exempt as before unchanged in LIVE and TRIAL (sent)
+OK   Judge Enforcer Record: N5 unlabelled fit push (33261 S31 shape): EPS behaviour unchanged unchanged in LIVE and TRIAL (held)
+OK   Judge Enforcer Record: N6 SPARED push unchanged unchanged in LIVE and TRIAL (sent)
+OK   Alt Judge Enforcer Record: 33371 row 14645 (defender [CR2] grant quoted as the challenger's) HELD (base sent; LIVE held; TRIAL sent with mark)
+OK   Alt Judge Enforcer Record: 33371 row 14646 HELD (base sent; LIVE held; TRIAL sent with mark)
+OK   Alt Judge Enforcer Record: 33371 row 14647 HELD (base sent; LIVE held; TRIAL sent with mark)
+OK   Alt Judge Enforcer Record: 33371 14645 even with no block (the label check does not need blk) HELD (base sent; LIVE held; TRIAL sent with mark)
+OK   Alt Judge Enforcer Record: N1 mirror: the same grant pushed against the DEFENDER, whose own words it is unchanged in LIVE and TRIAL (sent)
+OK   Alt Judge Enforcer Record: N2 33371 true challenger give-up "I accept the span exactly as the press gives it" unchanged in LIVE and TRIAL (sent)
+OK   Alt Judge Enforcer Record: N3 33040 sol: (CONCEDED) quoting the defender's own "I drop the claim that the flesh came through Mary's side" unchanged in LIVE and TRIAL (sent)
+OK   Alt Judge Enforcer Record: N4 no ecq_sides (rounds not found): exempt as before unchanged in LIVE and TRIAL (sent)
+OK   Alt Judge Enforcer Record: N5 unlabelled fit push (33261 S31 shape): EPS behaviour unchanged unchanged in LIVE and TRIAL (held)
+OK   Alt Judge Enforcer Record: N6 SPARED push unchanged unchanged in LIVE and TRIAL (sent)
+OK   Send Back Build: why() gives the same reason with and without the TRIAL pkgECQ mark
+OK   Alt Send Back Build: why() gives the same reason with and without the TRIAL pkgECQ mark
+OK   pkgECQ/patched_live_on_pkgEAW_patched_on_pkgEPD/Judge_Enforcer_Build.js: ecq_sides once per Build item
+OK   pkgECQ/patched_live_on_pkgEAW_patched_on_pkgEPD/Alt_Judge_Enforcer_Build.js: ecq_sides once per Build item
+OK   pkgECQ/patched_on_pkgEAW_patched_on_pkgEPD/Judge_Enforcer_Build.js: ecq_sides once per Build item
+OK   pkgECQ/patched_on_pkgEAW_patched_on_pkgEPD/Alt_Judge_Enforcer_Build.js: ecq_sides once per Build item
+26 OK, 0 FAIL
