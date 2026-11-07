@@ -1,0 +1,29 @@
+{
+ "base": "pkgLIB/strip_KFN/patched/",
+ "nodes": {
+  "Alt_Gate_Build.js": {
+   "base": "c46d602e7addf6d8",
+   "patched": "da1bb06c92c5d4d8"
+  },
+  "Alt_Gate_Record.js": {
+   "base": "333f222de90a8f9c",
+   "patched": "5c0acfffd7f0aa3c"
+  },
+  "Alternate_Merge.js": {
+   "base": "ab4d340a9e07c3ea",
+   "patched": "2d2a4579a47c4eb5"
+  },
+  "Alternate_Merge_Seat.js": {
+   "base": "ff097093df9017eb",
+   "patched": "fb1493b73e0be63d"
+  },
+  "Gate_Build.js": {
+   "base": "97d664e37181147d",
+   "patched": "75d96a51c300fb13"
+  },
+  "Gate_Record.js": {
+   "base": "f6292146659c9db8",
+   "patched": "cf1e8a66765f82c1"
+  }
+ }
+}
