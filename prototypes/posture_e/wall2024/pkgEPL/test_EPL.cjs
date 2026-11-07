@@ -5,7 +5,8 @@
 //    a dotted reply line still wins over a bare one.
 // 4. Replay: every saved run 33218+ x 6 nodes, base vs patched; every changed output listed. Build changes are checked to keep the same ids per call.
 const fs=require('fs');const {harness,feeder}=require('../pkgGSL/harness.cjs');const D='/mnt/project-files/wall2024/inputs/';const BASEW='/mnt/project-files/wall2024/fetchback_live_s48.json';
-const B0=f=>fs.readFileSync(__dirname+'/base_s48/'+f,'utf8'),P1=f=>fs.readFileSync(__dirname+'/patched/'+f,'utf8');
+const B0=f=>fs.readFileSync(__dirname+'/base_s48/'+f,'utf8'),P1=f=>fs.readFileSync(__dirname+'/'+(process.env.EPL_OUT||'patched')+'/'+f,'utf8'); /* EPL_OUT=patched_on_ECP tests the restack; EPL_BASE=../pkgECP/patched compares Builds against ECP */
+const B0b=f=>/Enforcer_Build/.test(f)&&!/Retry/.test(f)&&process.env.EPL_BASE?fs.readFileSync(__dirname+'/'+process.env.EPL_BASE+'/'+f,'utf8'):B0(f);
 let ok=0,bad=0;const out=[];const log=s=>{out.push(s);console.log(s);};const T=(c,m)=>{if(c){ok++;log('OK '+m);}else{bad++;log('FAIL '+m);}};
 const rows=o=>{const j=o[0].json;return (j.enf428_rows||[]).concat(j.enf421_rows||[]);};const nv=o=>rows(o).filter(x=>/NO VERDICT/.test(x.cure_reason||''));
 const sd=n=>JSON.parse(fs.readFileSync(D+'33442_'+n.replace(/ /g,'_')+'.json','utf8'))[0].data.main[0];
@@ -45,11 +46,11 @@ const runs=fs.readdirSync(D).filter(f=>/_index\.json$/.test(f)).map(f=>f.split('
 const NODES=['Judge Enforcer Build','Alt Judge Enforcer Build','Judge Enforcer Record','Alt Judge Enforcer Record','Judge Enforcer Retry Build','Alt Judge Enforcer Retry Build'];
 for(const RUN of runs){const H=harness(RUN);for(const nm of NODES){const f=nm.replace(/ /g,'_')+'.js';if(!fs.existsSync(D+RUN+'_'+nm.replace(/ /g,'_')+'.json'))continue;
  const fe=feeder(BASEW,nm);const fin=[...fe.filter(x=>/Call/.test(x)),...fe.filter(x=>!/Call/.test(x))].find(x=>fs.existsSync(D+RUN+'_'+x.replace(/ /g,'_')+'.json'));if(!fin)continue;
- let a,b,e0=null,e1=null;try{a=H(B0(f),fin);}catch(x){e0=String(x.message).slice(0,100);}try{b=H(P1(f),fin);}catch(x){e1=String(x.message).slice(0,100);}
+ let a,b,e0=null,e1=null;try{a=H(B0b(f),fin);}catch(x){e0=String(x.message).slice(0,100);}try{b=H(P1(f),fin);}catch(x){e1=String(x.message).slice(0,100);}
  if(e0||e1){T(e0===e1,RUN+' '+nm+' same error both ('+e0+')');continue;}n++;
  if(/Enforcer Build$/.test(nm)&&!/Retry/.test(nm)){const ids=o=>JSON.stringify(o.map(x=>(x.json.ids||[]).map(y=>y.id)));const ia=ids(a),ib=ids(b);
   const strip=o=>st(o.map(x=>{const j={...x.json};if(j.body)j.body={...j.body,messages:'(prompt)'};return j;}));
   if(ia!==ib||strip(a)!==strip(b))flips.push(RUN+' '+nm+': ids per call '+(ia===ib?'same':'DIFFER')+', other fields '+(strip(a)===strip(b)?'same':'DIFFER'));
   else if(st(a)!==st(b))flips.push(RUN+' '+nm+': prompt text only (ids per call same)');continue;}
  const sa=st(a),sb=st(b);if(sa===sb)continue;let i=0;while(sa[i]===sb[i])i++;flips.push(RUN+' '+nm+' @'+i+'\n   base:    '+sa.slice(Math.max(0,i-150),i+150)+'\n   patched: '+sb.slice(Math.max(0,i-150),i+200));}}
-log('node runs compared: '+n+'; changed outputs: '+flips.length);for(const f of flips)log(f);log('TOTAL '+ok+' OK, '+bad+' FAIL');fs.writeFileSync(__dirname+'/test_EPL.txt',out.join('\n')+'\n');
+log('node runs compared: '+n+'; changed outputs: '+flips.length);for(const f of flips)log(f);log('TOTAL '+ok+' OK, '+bad+' FAIL');fs.writeFileSync(__dirname+'/test_EPL'+(process.env.EPL_OUT?'_'+process.env.EPL_OUT:'')+'.txt',out.join('\n')+'\n');

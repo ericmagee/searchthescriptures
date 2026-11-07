@@ -7,7 +7,7 @@
 - B. **Judge / Alt Judge Enforcer Record:** a bare item label that names 2+ lines is applied to each of those lines only when every seat's grade there is the same. For E-PREM, that means each judge's count line reads `CONCEDED LINKS: 0`; for other rules, the same grade on the same line. Otherwise the lines stay NO VERDICT, as before. A dotted line for the same id keeps its own verdict.
 - C. **Judge / Alt Judge Enforcer Retry Build (pkgESS count):** such a bare line counts as answering each of its lines, so the call is not resent for nothing.
 
-**Shas:** see `patched.plan.json`.
+**Shas:** see `patched.plan.json`. **Restack on W1 pkgECP (eb5b39c, same two Builds):** `node pkgEPL/build_EPL.cjs pkgECP/patched patched_on_ECP` builds `patched_on_ECP/` (JEB e83b8b7e7371, Alt JEB ab7857403ba9; the other 4 nodes are the same as in `patched/`). `EPL_OUT=patched_on_ECP EPL_BASE=../pkgECP/patched node pkgEPL/test_EPL.cjs` gives 11 OK, and the Builds change prompt text only against ECP.
 
 **Test:** `node pkgEPL/test_EPL.cjs` gives 11 OK and writes `test_EPL.txt`.
 - On 33442, NO VERDICT goes from 30 to 0, and the 30 rows read ENFORCER AGREE (right: SPARED). The other 248 rows are unchanged.

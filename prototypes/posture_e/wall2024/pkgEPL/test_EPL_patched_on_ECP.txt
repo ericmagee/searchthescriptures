@@ -1,0 +1,38 @@
+OK 33442 base Record: 30 NO VERDICT
+OK 33442 patched Record: 0 NO VERDICT
+OK 33442 the 30 rows now read ENFORCER AGREE (right: SPARED): 30 rows, e.g. "ENFORCER AGREE (right: SPARED): The defender's block says \"I drop the limb that Hebrews 7:14's 'evident' rests on a pu
+OK 33442 every other row unchanged (248)
+OK base s48 (pkgESS) resends call 5: "short reply: 12 ENFORCER line(s) for 32 item ids (finish_reason stop)"
+OK patched does not resend call 5 (retried: [])
+OK control: P3 and P4 seat grades differ (6 lines unanswered) -> patched resends call 5
+OK control: Record leaves exactly P3.1-P4.3 NO VERDICT (6)
+OK control: a dotted P3.2 line before the bare P3 keeps its own verdict: "ENFORCER HELD (pkgEPS, not sent; W3 2842: the push counts the premise but names no layer 
+OK patched 33442 prompt (call 5) names P3.1, P3.2, P3.3 and asks one line per LINE id
+OK split halves of call 5: each P item text carries its own due line (18+14 ids)
+node runs compared: 63; changed outputs: 21
+33218 Judge Enforcer Build: prompt text only (ids per call same)
+33222 Judge Enforcer Build: prompt text only (ids per call same)
+33222 Alt Judge Enforcer Build: prompt text only (ids per call same)
+33249 Judge Enforcer Build: prompt text only (ids per call same)
+33249 Alt Judge Enforcer Build: prompt text only (ids per call same)
+33261 Judge Enforcer Build: prompt text only (ids per call same)
+33261 Alt Judge Enforcer Build: prompt text only (ids per call same)
+33299 Judge Enforcer Build: prompt text only (ids per call same)
+33299 Alt Judge Enforcer Build: prompt text only (ids per call same)
+33345 Judge Enforcer Build: prompt text only (ids per call same)
+33345 Alt Judge Enforcer Build: prompt text only (ids per call same)
+33371 Judge Enforcer Build: prompt text only (ids per call same)
+33371 Alt Judge Enforcer Build: prompt text only (ids per call same)
+33389 Judge Enforcer Build: prompt text only (ids per call same)
+33411 Judge Enforcer Build: prompt text only (ids per call same)
+33411 Alt Judge Enforcer Build: prompt text only (ids per call same)
+33430 Judge Enforcer Build: prompt text only (ids per call same)
+33442 Judge Enforcer Build: prompt text only (ids per call same)
+33442 Alt Judge Enforcer Build: prompt text only (ids per call same)
+33442 Judge Enforcer Record @484613
+   base:    EE":4,"NO ANSWER":0,"NO VERDICT":0,"CONTRADICTED":0},"E-KEY":{"AGREE":3,"DISAGREE":0,"NO ANSWER":0,"NO VERDICT":0,"CONTRADICTED":0},"E-PREM":{"AGREE":6,"DISAGREE":0,"NO ANSWER":0,"NO VERDICT":30,"CONTRADICTED":0},"E-RES":{"AGREE":1,"DISAGREE":1,"NO ANSWER":0,"NO VERDICT":0,"CONTRADICTED":0},"E-B7":{
+   patched: EE":4,"NO ANSWER":0,"NO VERDICT":0,"CONTRADICTED":0},"E-KEY":{"AGREE":3,"DISAGREE":0,"NO ANSWER":0,"NO VERDICT":0,"CONTRADICTED":0},"E-PREM":{"AGREE":36,"DISAGREE":0,"NO ANSWER":0,"NO VERDICT":0,"CONTRADICTED":0},"E-RES":{"AGREE":1,"DISAGREE":1,"NO ANSWER":0,"NO VERDICT":0,"CONTRADICTED":0},"E-B7":{"AGREE":0,"DISAGREE":0,"NO ANSWER":0,"NO VERDICT":
+33442 Judge Enforcer Retry Build @22
+   base:    [{"json":{"esr_retry":true,"esr_of":4,"esr_half":1,"esr_why":"short reply: 12 ENFORCER line(s) for 32 item ids (finish_reason stop)","ids":[{"id":"P3.1","rule":"E-PREM","se
+   patched: [{"json":{"esr_retry":false}}]
+TOTAL 11 OK, 0 FAIL

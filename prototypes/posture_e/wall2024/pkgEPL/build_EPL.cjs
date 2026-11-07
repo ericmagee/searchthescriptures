@@ -24,8 +24,10 @@ const RRET=[ /* the two Retry Builds: the pkgESS short-reply count */
  [String.raw`const n=(txt.match(/^[ \t>*_` + "`" + String.raw`-]*ENFORCER\s*:/gim)||[]).length;`,
   String.raw`let n=(txt.match(/^[ \t>*_` + "`" + String.raw`-]*ENFORCER\s*:/gim)||[]).length;for(const l of txt.split('\n')){const mm=l.replace(/[*_` + "`" + String.raw`]+/g,'').trim().match(/^ENFORCER\s*:\s*(?:(?:ITEM|ANSWER|ID)\s+)?([BVKYHZPRS]\d+)\s*(?:--|—|–|-)/i);if(!mm)continue;const c=((b&&b.ids)||[]).filter(x=>String(x.id).toUpperCase().startsWith(mm[1].toUpperCase()+'.'));if(c.length>1&&__eplOK(c))n+=c.length-1;} /* pkgEPL: a bare Pk that the Record fans out answers each of its Pk.n lines */`]];
 const RULES={'Judge_Enforcer_Build.js':R,'Alt_Judge_Enforcer_Build.js':R,'Judge_Enforcer_Record.js':RREC,'Alt_Judge_Enforcer_Record.js':RREC,'Judge_Enforcer_Retry_Build.js':RRET,'Alt_Judge_Enforcer_Retry_Build.js':RRET};
-const plan={};for(const f of Object.keys(RULES)){let s=fs.readFileSync('pkgEPL/base_s48/'+f,'utf8');const s0=s;
+/* restack: node pkgEPL/build_EPL.cjs <dir holding the two Enforcer Builds> <out name>, e.g. pkgECP/patched patched_on_ECP */
+const BB=process.argv[2]||'pkgEPL/base_s48',OUT=process.argv[3]||'patched';fs.mkdirSync('pkgEPL/'+OUT,{recursive:true});
+const plan={};for(const f of Object.keys(RULES)){let s=fs.readFileSync((/Enforcer_Build/.test(f)&&!/Retry/.test(f)?BB:'pkgEPL/base_s48')+'/'+f,'utf8');const s0=s;
  for(const [a,b] of RULES[f]){const c=s.split(a).length-1;if(c!==1)throw new Error(f+': '+c+' x '+a.slice(0,60));s=s.replace(a,()=>b);}
  new Function('$','$input',s); /* syntax */
- fs.writeFileSync('pkgEPL/patched/'+f,s);plan[f]={base:h(s0),patched:h(s)};console.log(f.padEnd(34),h(s0),'->',h(s));}
-fs.writeFileSync('pkgEPL/patched.plan.json',JSON.stringify(plan,null,1));
+ fs.writeFileSync('pkgEPL/'+OUT+'/'+f,s);plan[f]={base:h(s0),patched:h(s)};console.log(f.padEnd(34),h(s0),'->',h(s));}
+fs.writeFileSync('pkgEPL/'+OUT+'.plan.json',JSON.stringify(plan,null,1));
