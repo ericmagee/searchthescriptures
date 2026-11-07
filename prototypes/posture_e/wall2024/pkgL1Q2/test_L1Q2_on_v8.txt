@@ -1,0 +1,49 @@
+OK unit " 'And knew her not till she ha" -> "And knew her not till she had brought forth"
+OK unit " [L1] ‘thy father and I have s" -> "thy father and I have sought thee sorrowing"
+OK unit " 'wist ye not that I must be a" -> "wist ye not that I must be about my Father's business?"
+OK unit " shows Mary's words and Joseph" -> null
+OK unit "'s 'took unto him his wife.' a" -> null
+OK unit "' -- ANSWER: \"x\" -- MEETS -- '" -> null
+OK double-quote parity  "that which is conceived in h
+OK double-quote parity  “being (as was supposed) the 
+OK PAIR unit "[L1] Luke 3:23's 'of Heli the son " -> "of Heli the son of Matthat" (base read "s 'of Heli the son of Matthat")
+OK PAIR unit "Matthew 1:24's sense, 'took unto h" -> "took unto him his wife" (base read "s sense, 'took unto him his wife")
+OK PAIR unit "cites 'Exodus 6:23' -- MEETS -- 'h" -> "his wife was of the daughters of Aaron" (base read " -- MEETS -- 'his wife was of the daughters of Aaron")
+OK PAIR unit "[L1] Luke 2:48: 'thy father and I " -> "thy father and I have sought thee sorrowing." (base read "thy father and I have sought thee sorrowing.")
+OK PAIR unit "[L1] Luke 2:48: \"thy father and I " -> "thy father and I have sought thee sorrowing." (base read "thy father and I have sought thee sorrowing.")
+OK 33222 Alternate Build same error both (await is not defined)
+OK 33249 Alternate Build same error both (await is not defined)
+OK 33261 Alternate Build same error both (await is not defined)
+OK 33276 Panel Payloads same error both (Cannot read properties of undefined (reading 'forEach'))
+OK 33276 Panel Cure Check same error both (Cannot read properties of undefined (reading 'slice'))
+OK 33276 Alternate Build same error both (await is not defined)
+OK 33276 Alternate Merge Seat same error both (Cannot read properties of undefined (reading 'slice'))
+OK 33276 Gate Record same error both (Cannot read properties of undefined (reading 'slice'))
+OK 33276 Alt Gate Record same error both (Cannot read properties of undefined (reading 'slice'))
+OK 33289 Panel Payloads same error both (Cannot read properties of undefined (reading 'forEach'))
+OK 33289 Panel Cure Check same error both (Cannot read properties of undefined (reading 'slice'))
+OK 33289 Alternate Build same error both (await is not defined)
+OK 33289 Alternate Merge Seat same error both (Cannot read properties of undefined (reading 'slice'))
+OK 33289 Gate Record same error both (Cannot read properties of undefined (reading 'slice'))
+OK 33289 Alt Gate Record same error both (Cannot read properties of undefined (reading 'slice'))
+OK 33299 Alternate Build same error both (await is not defined)
+OK 33311 Panel Payloads same error both (Cannot read properties of undefined (reading 'forEach'))
+OK 33311 Panel Cure Check same error both (Cannot read properties of undefined (reading 'slice'))
+OK 33311 Alternate Build same error both (await is not defined)
+OK 33311 Alternate Merge Seat same error both (Cannot read properties of undefined (reading 'slice'))
+OK 33311 Gate Record same error both (Cannot read properties of undefined (reading 'slice'))
+OK 33311 Alt Gate Record same error both (Cannot read properties of undefined (reading 'slice'))
+OK 33322 Panel Payloads same error both (Cannot read properties of undefined (reading 'forEach'))
+OK 33322 Panel Cure Check same error both (Cannot read properties of undefined (reading 'slice'))
+OK 33322 Alternate Build same error both (await is not defined)
+OK 33322 Alternate Merge Seat same error both (Cannot read properties of undefined (reading 'slice'))
+OK 33322 Gate Record same error both (Cannot read properties of undefined (reading 'slice'))
+OK 33345 Alternate Build same error both (await is not defined)
+OK 33371 Alternate Build same error both (await is not defined)
+OK 33411 Alternate Build same error both (await is not defined)
+OK 33430 Alternate Build same error both (await is not defined)
+node runs compared: 321; changed outputs: 1
+33249 Panel Payloads @123806
+   base:    ION CHECK: The two [CR2] quotations marked NOT COUNTED are excluded: Esther 2:7, \"Mordecai took her for his own daughter.\", and the combined Deuteronomy 22:23–24 wording. Later exact partial quot"]}]}}]
+   patched: ION CHECK: The two [CR2] quotations marked NOT COUNTED are excluded: Esther 2:7, \"Mordecai took her for his own daughter.\", and the combined Deuteronomy 22:23–24 wording. Later exact partial quot"]},{"seat":"single","role":"single","nc":0,"report":["NOT A VERSE QUOTE (fewer than half its words are in Luke 2:4): \"Is not this Jesus, the son of Joseph, whose father and mother we know?\""],"judge_model":"google/gemini-3.8-flash"}]}}]
+TOTAL 44 OK, 0 FAIL

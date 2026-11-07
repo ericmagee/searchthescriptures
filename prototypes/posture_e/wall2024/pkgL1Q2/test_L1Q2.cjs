@@ -2,7 +2,7 @@
 // 1. Units on KKJV_Q: single, curly single, in-word apostrophe, apostrophe-only (no quote), double-quote parity with base.
 // 2. Replay: every saved run 33218+ x 26 nodes, base vs patched on the same saved input; every changed output listed.
 const fs=require('fs');const {harness,feeder}=require('../pkgGSL/harness.cjs');const BASEW='/mnt/project-files/wall2024/fetchback_live_s45.json';const D='/mnt/project-files/wall2024/inputs/';
-const W=JSON.parse(fs.readFileSync(BASEW,'utf8'));const plan=JSON.parse(fs.readFileSync(__dirname+'/patched.plan.json','utf8'));const P=__dirname+'/patched/';
+const W=JSON.parse(fs.readFileSync(BASEW,'utf8'));const plan=JSON.parse(fs.readFileSync(__dirname+'/'+(process.env.L1Q2_OUT||'patched')+'.plan.json','utf8'));const P=__dirname+'/'+(process.env.L1Q2_OUT||'patched')+'/'; /* L1Q2_OUT=patched_on_v8 tests the restack */
 let ok=0,bad=0;const out=[];const log=s=>{out.push(s);console.log(s);};const T=(c,m)=>{if(c){ok++;out.push('OK '+m);}else{bad++;log('FAIL '+m);}};
 const baseCode=n=>{const e=plan.nodes.find(x=>x.name===n);return e.base==='live s45'?W.nodes.find(z=>z.name===n).parameters.jsCode:fs.readFileSync(e.base+'/'+e.file,'utf8');};
 const getQ=c=>{const s=c.slice(c.indexOf('const KKJV_Q='));return new Function(s.slice(0,s.indexOf('\n'))+';return KKJV_Q;')();};
