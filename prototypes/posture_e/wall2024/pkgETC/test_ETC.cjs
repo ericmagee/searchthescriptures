@@ -18,13 +18,14 @@ for(const [id,r,t,cr,exp] of U){const g=ETC(r,t,why(cr));T(g===exp,'U '+id+' '+r
 const DIS=/^ENFORCER (?:DISAGREE|NO ANSWER)\b/;T(!DIS.test('ENFORCER CONTRADICTED (right: COUNTED): x'),'S send-back filter does not match CONTRADICTED');T(DIS.test('ENFORCER DISAGREE (right: COUNTED): x'),'S send-back filter still matches DISAGREE');
 const runs=fs.readdirSync('/mnt/project-files/wall2024/inputs/').filter(f=>/_Judge_Enforcer_Record\.json$/.test(f)&&!/_Alt_/.test(f)).map(f=>f.split('_')[0]).sort();
 const flips=[];
-for(const RUN of runs)for(const [node,inp] of [['Judge Enforcer Record','Judge Enforcer Call deepseek'],['Alt Judge Enforcer Record','Alt Judge Enforcer Call deepseek']]){
- const h=harness(RUN);let b,p;try{b=h(live(F,node),inp);}catch(e){T(false,'R '+RUN+' '+node+' base threw '+e.message);continue;}
- p=h(fs.readFileSync(__dirname+'/patched/'+node.replace(/ /g,'_')+'.js','utf8'),inp);
+const STACKS=[['live s40',null,'patched'],['pkgEPS/patched','pkgEPS/patched','patched_on_pkgEPS_patched'],['pkgEPS/patched_live','pkgEPS/patched_live','patched_on_pkgEPS_patched_live']];
+for(const [lab,bdir,pdir] of STACKS)for(const RUN of runs)for(const [node,inp] of [['Judge Enforcer Record','Judge Enforcer Call deepseek'],['Alt Judge Enforcer Record','Alt Judge Enforcer Call deepseek']]){
+ const fn=node.replace(/ /g,'_')+'.js';const h=harness(RUN);let b,p;try{b=h(bdir?fs.readFileSync(__dirname+'/../'+bdir+'/'+fn,'utf8'):live(F,node),inp);}catch(e){T(false,'R ['+lab+'] '+RUN+' '+node+' base threw '+e.message);continue;}
+ p=h(fs.readFileSync(__dirname+'/'+pdir+'/'+fn,'utf8'),inp);
  const br=(b[0].json.enf428_rows||[]),pr=(p[0].json.enf428_rows||[]);let same=br.length===pr.length,diff=0;
  br.forEach((x,i)=>{const y=pr[i];const xs=JSON.stringify({...x,at:0}),ys=JSON.stringify({...y,at:0});if(xs!==ys){diff++;
   const ok2=/^ENFORCER CONTRADICTED /.test(y.cure_reason)&&/^ENFORCER (?:DISAGREE|NO ANSWER) /.test(x.cure_reason)&&JSON.stringify({...x,at:0,cure_reason:0})===JSON.stringify({...y,at:0,cure_reason:0});if(!ok2)same=false;
-  flips.push(RUN+' '+node+' '+y.seat+' '+y.rule+' '+y.item+' :: '+y.cure_reason.slice(0,90)+' ... '+(y.cure_reason.match(/\[pkgETC[^\]]*\]/)||[''])[0]);}});
+  flips.push('['+lab+'] '+RUN+' '+node+' '+y.seat+' '+y.rule+' '+y.item+' :: '+y.cure_reason.slice(0,90)+' ... '+(y.cure_reason.match(/\[pkgETC[^\]]*\]/)||[''])[0]);}});
  const bo={...b[0].json,enf428_rows:0,enf428:{...b[0].json.enf428,tally:0}},po={...p[0].json,enf428_rows:0,enf428:{...p[0].json.enf428,tally:0}};
- T(same&&JSON.stringify(bo)===JSON.stringify(po),'R '+RUN+' '+node+': '+br.length+' rows, '+diff+' changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical');}
+ T(same&&JSON.stringify(bo)===JSON.stringify(po),'R ['+lab+'] '+RUN+' '+node+': '+br.length+' rows, '+diff+' changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical');}
 console.log('\nFLIPS ('+flips.length+'):\n'+flips.join('\n'));console.log('\n'+ok+' OK, '+bad+' FAIL');process.exit(bad?1:0);

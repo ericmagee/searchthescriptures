@@ -13,9 +13,10 @@ const B3="+(v&&v.why?': '+v.why.slice(0,600):'')+(__ec?' [pkgETC: written '+v.v+
 const A4="tally[k]={AGREE:0,DISAGREE:0,'NO ANSWER':0,'NO VERDICT':0};";
 const B4="tally[k]={AGREE:0,DISAGREE:0,'NO ANSWER':0,'NO VERDICT':0,CONTRADICTED:0};";
 const E=[[A1,A1+'\n'+LIB],[A2,B2],[A3,B3],[A4,B4]];
-const OUT=__dirname+'/patched';fs.mkdirSync(OUT,{recursive:true});const plan={source:'W2 pkgETC, 33311 rows 13335 and 13350',base:'live '+L.versionId,nodes:[]};
-for(const name of ['Judge Enforcer Record','Alt Judge Enforcer Record']){const n=L.nodes.find(z=>z.name===name);const live=n.parameters.jsCode;let s=live;
+const OUT=(()=>{const i=process.argv.indexOf('--out');return i>0?process.argv[i+1]:__dirname+'/patched';})();fs.mkdirSync(OUT,{recursive:true});const plan={source:'W2 pkgETC, 33311 rows 13335 and 13350',base:'live '+L.versionId,nodes:[]};
+const BASE=(()=>{const i=process.argv.indexOf('--base');return i>0?process.argv[i+1]:null;})();if(BASE)plan.base=BASE+' (on live '+L.versionId+')';
+for(const name of ['Judge Enforcer Record','Alt Judge Enforcer Record']){const n=L.nodes.find(z=>z.name===name);const f0=name.replace(/ /g,'_')+'.js';const live=BASE?fs.readFileSync(BASE+'/'+f0,'utf8'):n.parameters.jsCode;let s=live;
  for(const [a,b] of E){const c=s.split(a).length-1;if(c!==1)throw new Error(name+' anchor x'+c+': '+a.slice(0,40));s=s.replace(a,()=>b);}
  new Function('$','$input','$json','$execution','$workflow',s);const f=name.replace(/ /g,'_')+'.js';fs.writeFileSync(OUT+'/'+f,s);
  plan.nodes.push({name,file:f,live_sha:sha(live),final_sha:sha(s),bytes:[live.length,s.length]});}
-fs.writeFileSync(__dirname+'/plan_ETC.json',JSON.stringify(plan,null,1));console.log(JSON.stringify(plan));
+fs.writeFileSync(OUT+'.plan.json',JSON.stringify(plan,null,1));console.log(JSON.stringify(plan));

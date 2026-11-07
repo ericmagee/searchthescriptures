@@ -1,0 +1,26 @@
+{
+ "source": "W2 pkgETC, 33311 rows 13335 and 13350",
+ "base": "pkgEPS/patched_live (on live f0104a40-b783-4a32-9f5a-42551081d11e)",
+ "nodes": [
+  {
+   "name": "Judge Enforcer Record",
+   "file": "Judge_Enforcer_Record.js",
+   "live_sha": "9f832c3f93af",
+   "final_sha": "03a6b6ba76ff",
+   "bytes": [
+    7426,
+    9810
+   ]
+  },
+  {
+   "name": "Alt Judge Enforcer Record",
+   "file": "Alt_Judge_Enforcer_Record.js",
+   "live_sha": "818b8a74d6ea",
+   "final_sha": "80e4ecc1447b",
+   "bytes": [
+    7429,
+    9813
+   ]
+  }
+ ]
+}

@@ -10,28 +10,68 @@ OK   U syn-ans E-ANS right MISSES -> MEETS (expected MEETS)
 OK   U syn-unx E-PREM right COUNTED -> null (expected null)
 OK   S send-back filter does not match CONTRADICTED
 OK   S send-back filter still matches DISAGREE
-OK   R 33218 Judge Enforcer Record: 221 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
-OK   R 33218 Alt Judge Enforcer Record: 0 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
-OK   R 33222 Judge Enforcer Record: 258 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
-OK   R 33222 Alt Judge Enforcer Record: 77 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
-OK   R 33249 Judge Enforcer Record: 211 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
-OK   R 33249 Alt Judge Enforcer Record: 90 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
-OK   R 33261 Judge Enforcer Record: 257 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
-OK   R 33261 Alt Judge Enforcer Record: 80 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
-OK   R 33276 Judge Enforcer Record: 0 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
-OK   R 33276 Alt Judge Enforcer Record: 0 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
-OK   R 33289 Judge Enforcer Record: 0 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
-OK   R 33289 Alt Judge Enforcer Record: 0 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
-OK   R 33299 Judge Enforcer Record: 204 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
-OK   R 33299 Alt Judge Enforcer Record: 76 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
-OK   R 33311 Judge Enforcer Record: 0 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
-OK   R 33311 Alt Judge Enforcer Record: 0 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
-OK   R 33322 Judge Enforcer Record: 0 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
-OK   R 33322 Alt Judge Enforcer Record: 0 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
-OK   R 33345 Judge Enforcer Record: 241 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
-OK   R 33345 Alt Judge Enforcer Record: 96 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
+OK   R [live s40] 33218 Judge Enforcer Record: 221 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
+OK   R [live s40] 33218 Alt Judge Enforcer Record: 0 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
+OK   R [live s40] 33222 Judge Enforcer Record: 258 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
+OK   R [live s40] 33222 Alt Judge Enforcer Record: 77 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
+OK   R [live s40] 33249 Judge Enforcer Record: 211 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
+OK   R [live s40] 33249 Alt Judge Enforcer Record: 90 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
+OK   R [live s40] 33261 Judge Enforcer Record: 257 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
+OK   R [live s40] 33261 Alt Judge Enforcer Record: 80 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
+OK   R [live s40] 33276 Judge Enforcer Record: 0 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
+OK   R [live s40] 33276 Alt Judge Enforcer Record: 0 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
+OK   R [live s40] 33289 Judge Enforcer Record: 0 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
+OK   R [live s40] 33289 Alt Judge Enforcer Record: 0 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
+OK   R [live s40] 33299 Judge Enforcer Record: 204 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
+OK   R [live s40] 33299 Alt Judge Enforcer Record: 76 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
+OK   R [live s40] 33311 Judge Enforcer Record: 0 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
+OK   R [live s40] 33311 Alt Judge Enforcer Record: 0 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
+OK   R [live s40] 33322 Judge Enforcer Record: 0 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
+OK   R [live s40] 33322 Alt Judge Enforcer Record: 0 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
+OK   R [live s40] 33345 Judge Enforcer Record: 241 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
+OK   R [live s40] 33345 Alt Judge Enforcer Record: 96 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
+OK   R [pkgEPS/patched] 33218 Judge Enforcer Record: 221 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
+OK   R [pkgEPS/patched] 33218 Alt Judge Enforcer Record: 0 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
+OK   R [pkgEPS/patched] 33222 Judge Enforcer Record: 258 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
+OK   R [pkgEPS/patched] 33222 Alt Judge Enforcer Record: 77 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
+OK   R [pkgEPS/patched] 33249 Judge Enforcer Record: 211 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
+OK   R [pkgEPS/patched] 33249 Alt Judge Enforcer Record: 90 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
+OK   R [pkgEPS/patched] 33261 Judge Enforcer Record: 257 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
+OK   R [pkgEPS/patched] 33261 Alt Judge Enforcer Record: 80 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
+OK   R [pkgEPS/patched] 33276 Judge Enforcer Record: 0 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
+OK   R [pkgEPS/patched] 33276 Alt Judge Enforcer Record: 0 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
+OK   R [pkgEPS/patched] 33289 Judge Enforcer Record: 0 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
+OK   R [pkgEPS/patched] 33289 Alt Judge Enforcer Record: 0 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
+OK   R [pkgEPS/patched] 33299 Judge Enforcer Record: 204 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
+OK   R [pkgEPS/patched] 33299 Alt Judge Enforcer Record: 76 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
+OK   R [pkgEPS/patched] 33311 Judge Enforcer Record: 0 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
+OK   R [pkgEPS/patched] 33311 Alt Judge Enforcer Record: 0 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
+OK   R [pkgEPS/patched] 33322 Judge Enforcer Record: 0 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
+OK   R [pkgEPS/patched] 33322 Alt Judge Enforcer Record: 0 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
+OK   R [pkgEPS/patched] 33345 Judge Enforcer Record: 241 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
+OK   R [pkgEPS/patched] 33345 Alt Judge Enforcer Record: 96 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
+OK   R [pkgEPS/patched_live] 33218 Judge Enforcer Record: 221 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
+OK   R [pkgEPS/patched_live] 33218 Alt Judge Enforcer Record: 0 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
+OK   R [pkgEPS/patched_live] 33222 Judge Enforcer Record: 258 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
+OK   R [pkgEPS/patched_live] 33222 Alt Judge Enforcer Record: 77 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
+OK   R [pkgEPS/patched_live] 33249 Judge Enforcer Record: 211 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
+OK   R [pkgEPS/patched_live] 33249 Alt Judge Enforcer Record: 90 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
+OK   R [pkgEPS/patched_live] 33261 Judge Enforcer Record: 257 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
+OK   R [pkgEPS/patched_live] 33261 Alt Judge Enforcer Record: 80 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
+OK   R [pkgEPS/patched_live] 33276 Judge Enforcer Record: 0 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
+OK   R [pkgEPS/patched_live] 33276 Alt Judge Enforcer Record: 0 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
+OK   R [pkgEPS/patched_live] 33289 Judge Enforcer Record: 0 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
+OK   R [pkgEPS/patched_live] 33289 Alt Judge Enforcer Record: 0 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
+OK   R [pkgEPS/patched_live] 33299 Judge Enforcer Record: 204 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
+OK   R [pkgEPS/patched_live] 33299 Alt Judge Enforcer Record: 76 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
+OK   R [pkgEPS/patched_live] 33311 Judge Enforcer Record: 0 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
+OK   R [pkgEPS/patched_live] 33311 Alt Judge Enforcer Record: 0 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
+OK   R [pkgEPS/patched_live] 33322 Judge Enforcer Record: 0 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
+OK   R [pkgEPS/patched_live] 33322 Alt Judge Enforcer Record: 0 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
+OK   R [pkgEPS/patched_live] 33345 Judge Enforcer Record: 241 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
+OK   R [pkgEPS/patched_live] 33345 Alt Judge Enforcer Record: 96 rows, 0 changed, each a DISAGREE/NO ANSWER relabelled CONTRADICTED with nothing else changed; pass-through identical
 
 FLIPS (0):
 
 
-32 OK, 0 FAIL
+72 OK, 0 FAIL
