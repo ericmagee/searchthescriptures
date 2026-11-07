@@ -9,6 +9,10 @@ function eaiBlock(R,rks,answer){if(!R)return null;const NN=s=>String(s||'').toLo
  for(const rk of rks){const t=R[rk];if(typeof t!=='string')continue;for(const p of t.split(/\n\s*\n/)){if(!NN(p).includes(aw))continue;
    const L=p.split('\n');let k=L.findIndex(l=>NN(l).includes(aw));if(k<0){k=0;}
    /* a bullet group: start at its first bullet when the opening words sit on a later bullet, so the layers above it stay with it */
+   /* a verse list (each bullet opens with its own verse, as "- **Job 14:1**, ...; - Romans 1:3, ..."): the answer is its own bullet alone, since the
+      bullets after it answer other verses */
+   const VR=l=>((String(l).replace(/^\s*[-*]\s+/,'').replace(/^[*_\s]+/,'').match(/^((?:[1-3]\s?)?[A-Z][a-z]+\.?\s+\d+:\d+)/)||[])[1]||'').toLowerCase();
+   if(/^\s*[-*]\s+/.test(L[k])&&VR(L[k])){const vs=L.filter(l=>/^\s*[-*]\s+/.test(l)).map(VR).filter(Boolean);if(new Set(vs).size>=2){hits.push({rk,t:L[k].trim()});continue;}}
    if(/^\s*[-*]\s+/.test(L[k])){while(k>0&&/^\s*[-*]\s+/.test(L[k-1]))k--;}
    hits.push({rk,t:L.slice(k).join('\n').trim()});}}
  if(!hits.length)return null;if(w.length<6&&hits.length!==1)return null;return hits[0];}

@@ -3,11 +3,11 @@ OK U2 a later bullet pulls in the bullets above it
 OK U3 a 3-word answer in two paragraphs is refused
 OK U4 under 3 words is never searched
 OK U5 no hit, no block
-GAIN 33218 Judge Enforcer Build E-ANS ANSWER CHECK Matthew 1:24 [CR3] :: - Matthew 1:3 "And Judas begat Phares and Zara of Thamar" and Matthew 1:5 "And Salmon begat Booz of Rachab; and Booz begat Obed of Ruth". I grant that "of" plus
+OK U6 a verse list gives the answer's own bullet alone
 GAIN 33218 Judge Enforcer Build E-ANS ANSWER CHECK Deuteronomy 20:7 [CR3] :: - Matthew 1:18 and 1:24, Deuteronomy 20:7 "that hath betrothed a wife, and hath not taken her", Deuteronomy 22:24 "his neighbour's wife", Matthew 1:19 "Then Jos
 GAIN 33218 Judge Enforcer Build E-ANS ANSWER CHECK Deuteronomy 22:24 [CR3] :: - Matthew 1:18 and 1:24, Deuteronomy 20:7 "that hath betrothed a wife, and hath not taken her", Deuteronomy 22:24 "his neighbour's wife", Matthew 1:19 "Then Jos
 GAIN 33218 Judge Enforcer Build E-ANS ANSWER CHECK Luke 3:23 [CR3] :: - **[L1]** Luke 3:23: "being (as was supposed) the son of Joseph." / - **[L2]** *nomizō* (G3543, to do by law or usage). / - **[L3]** Acts 16:13: "where prayer was 
-GAIN 33218 Judge Enforcer Build E-ANS ANSWER CHECK Ezra 2:62 [CR3] :: - Numbers 1:18 "declared their pedigrees after their families, by the house of their fathers". I grant that the register runs by the father's house. The registe
+GAIN 33218 Judge Enforcer Build E-ANS ANSWER CHECK Ezra 2:62 [CR3] :: - Ezra 2:59 "their father's house, and their seed" and Ezra 2:62 "therefore were they, as polluted, put from the priesthood". These are tests of the priests' re
 GAIN 33218 Judge Enforcer Build E-ANS ANSWER CHECK Matthew 1:5 [CR3] :: - Matthew 1:3 "And Judas begat Phares and Zara of Thamar" and Matthew 1:5 "And Salmon begat Booz of Rachab; and Booz begat Obed of Ruth". I grant that "of" plus
 GAIN 33218 Judge Enforcer Build E-ANS ANSWER CHECK Deuteronomy 22:24 [CR3] :: - Matthew 1:18 and 1:24, Deuteronomy 20:7 "that hath betrothed a wife, and hath not taken her", Deuteronomy 22:24 "his neighbour's wife", Matthew 1:19 "Then Jos
 GAIN 33218 Judge Enforcer Build E-ANS ANSWER CHECK John 1:45 [CR3] :: - John 6:42 "whose father and mother we know? how is it then that he saith, I came down from heaven?" John 1:45 "Jesus of Nazareth, the son of Joseph" and Luke 
@@ -20,12 +20,9 @@ GAIN 33218 Judge Enforcer Build E-HOLD COLLISION D4 vs C4 :: - **[L1]** Luke 3:2
 GAIN 33218 Judge Enforcer Build E-HOLD COLLISION D1 vs C1 :: - Matthew 1:18 and 1:24, Deuteronomy 20:7 "that hath betrothed a wife, and hath not taken her", Deuteronomy 22:24 "his neighbour's wife", Matthew 1:19 "Then Jos
 GAIN 33218 Judge Enforcer Build E-HOLD COLLISION D5 vs C6 :: - **[L1]** Galatians 4:4: "made of a woman." I grant it is the same verb, *ginomai*. / - **[L2]** The two objects differ. "Of a woman" is *gynē*, "specially, a wi
 GAIN 33218 Judge Enforcer Build E-HOLD COLLISION D6 vs C1 :: - John 6:42 "whose father and mother we know? how is it then that he saith, I came down from heaven?" John 1:45 "Jesus of Nazareth, the son of Joseph" and Luke 
-OK 33218 Judge Enforcer Build: calls 5 -> 6, not checked 0 -> 0, 17 items gain a block
-HOLD 33218 Judge Enforcer Record E-ANS gemini ANSWER CHECK Deuteronomy 20:7 [CR3]: ENFORCER DISAGREE (right: MISSES): The answer only says "I g -> ENFORCER HELD (pkgEAW, not sent; W3 2844: the push says the answer is only "I grant that s
-HOLD 33218 Judge Enforcer Record E-ANS gemini ANSWER CHECK Deuteronomy 22:24 [CR3]: ENFORCER DISAGREE (right: MISSES): The answer only says "I g -> ENFORCER HELD (pkgEAW, not sent; W3 2844: the push says the answer is only "I grant that s
-HOLD 33218 Judge Enforcer Record E-ANS sol ANSWER CHECK Deuteronomy 22:24 [CR3]: ENFORCER DISAGREE (right: MISSES): The answer only says "I g -> ENFORCER HELD (pkgEAW, not sent; W3 2844: the push says the answer is only "I grant that s
-HOLD 33218 Judge Enforcer Record E-ANS chatgpt ANSWER CHECK Deuteronomy 22:24 [CR3]: ENFORCER DISAGREE (right: MISSES): The answer only says "I g -> ENFORCER HELD (pkgEAW, not sent; W3 2844: the push says the answer is only "I grant that s
-OK 33218 Judge Enforcer Record: rows 394 -> 394, 4 changed
+OK 33218 Judge Enforcer Build: calls 5 -> 5, not checked 0 -> 0, 16 items gain a block
+HOLD 33218 Judge Enforcer Record E-ANS chatgpt ANSWER CHECK Luke 2:48 [CR4]: ENFORCER DISAGREE (right: MISSES): The answer only says "I g -> ENFORCER HELD (pkgEAW, not sent; W3 2844: the push says the answer is only "I grant that M
+OK 33218 Judge Enforcer Record: rows 394 -> 394, 1 changed
 OK 33218 Alt Judge Enforcer Build: calls 1 -> 1, not checked 0 -> 0, 0 items gain a block
 GAIN 33222 Judge Enforcer Build E-ANS ANSWER CHECK Numbers 1:18 [CR3] :: 3. Numbers 1:18, "by the house of their fathers." It is granted, with Numbers 1:2 above. / 4. Hebrews 7:14, "our Lord sprang out of Juda." It is evident because b
 GAIN 33222 Judge Enforcer Build E-ANS ANSWER CHECK Matthew 11:11 [CR3] :: 3. Matthew 11:11, "Among them that are born of women." I grant it of John, who has a father (Luke 1:13). / 4. Matthew 1:3, "Judas begat Phares and Zara of Thamar.
@@ -91,7 +88,7 @@ GAIN 33222 Alt Judge Enforcer Build E-ANS ANSWER CHECK Matthew 11:11 [CR3] :: 3.
 GAIN 33222 Alt Judge Enforcer Build E-ANS ANSWER CHECK Matthew 1:5 [CR3] :: - In both rows the father is named with the active verb "begat". The mother is added with "of." /  - At Matthew 1:16 the father's line gives "Jacob begat Joseph t
 GAIN 33222 Alt Judge Enforcer Build E-ANS ANSWER CHECK Deuteronomy 20:7 [CR3] :: 6. Deuteronomy 20:7, "hath betrothed a wife, and hath not taken her." The law separates betrothal from taking. Matthew 1:18 states the finding of the child "bef
 GAIN 33222 Alt Judge Enforcer Build E-ANS ANSWER CHECK Matthew 1:21 [CR3] :: - [L3] Luke 1:31 gives the same charge to Mary: "shalt call his name JESUS." Genesis 4:25 has the mother naming Seth. /  - Calling the name is a charge given to t
-GAIN 33222 Alt Judge Enforcer Build E-ANS ANSWER CHECK Luke 1:32 [CR3] :: - Solomon's sonship is grounded in "I have chosen him" ([L2] *bachar*, H977, choose). /  - Luke 1:35 grounds the title in the conception: "therefore also that hol
+GAIN 33222 Alt Judge Enforcer Build E-ANS ANSWER CHECK Luke 1:32 [CR3] :: - Luke 1:35 grounds the title in the conception: "therefore also that holy thing which shall be born of thee shall be called the Son of God." The two grounds di
 GAIN 33222 Alt Judge Enforcer Build E-ANS ANSWER CHECK 1 Chronicles 28:6 [CR3] :: - Solomon's sonship is grounded in "I have chosen him" ([L2] *bachar*, H977, choose). /  - Luke 1:35 grounds the title in the conception: "therefore also that hol
 GAIN 33222 Alt Judge Enforcer Build E-ANS ANSWER CHECK Luke 2:48 [CR3] :: 6. Luke 2:48, "behold, thy father and I have sought thee sorrowing." I grant Mary says "thy father". The answer in Luke 2:49 sets another father against it: "I 
 GAIN 33222 Alt Judge Enforcer Build E-ANS ANSWER CHECK Acts 1:8 [CR3] :: 2. Acts 1:8, "after that the Holy Ghost is come upon you." Acts 1:8 states its effect as "power... witnesses". Luke 1:35 states its effect as "born of thee" and
@@ -100,124 +97,96 @@ GAIN 33222 Alt Judge Enforcer Build E-HOLD COLLISION D4 vs C6 :: - [L3] Luke 1:3
 OK 33222 Alt Judge Enforcer Build: calls 3 -> 3, not checked 0 -> 0, 19 items gain a block
 OK 33222 Alt Judge Enforcer Record: rows 77 -> 77, 0 changed
 GAIN 33249 Judge Enforcer Build E-ANS ANSWER CHECK Luke 2:4 [CR3] :: - Luke 1:27: "a man whose name was Joseph, of the house of David." Luke 2:4: "because he was of the house and lineage of David." [L3] Luke 1:32 is spoken to Mar
-GAIN 33249 Judge Enforcer Build E-ANS ANSWER CHECK Luke 1:5 [CR3] :: - Luke 1:27: "a man whose name was Joseph, of the house of David." Luke 2:4: "because he was of the house and lineage of David." [L3] Luke 1:32 is spoken to Mar
-GAIN 33249 Judge Enforcer Build E-ANS ANSWER CHECK Matthew 1:24 [CR3] :: - Matthew 1:24: "took unto him his wife." I grant that the object is the wife. The child's receipt is the naming of Matthew 1:25. / - Matthew 1:25: "he called his
-GAIN 33249 Judge Enforcer Build E-ANS ANSWER CHECK Luke 1:13 [CR3] :: - Matthew 1:24: "took unto him his wife." I grant that the object is the wife. The child's receipt is the naming of Matthew 1:25. / - Matthew 1:25: "he called his
-GAIN 33249 Judge Enforcer Build E-ANS ANSWER CHECK Numbers 1:18 [CR3] :: - Matthew 1:24: "took unto him his wife." I grant that the object is the wife. The child's receipt is the naming of Matthew 1:25. / - Matthew 1:25: "he called his
+GAIN 33249 Judge Enforcer Build E-ANS ANSWER CHECK Luke 1:5 [CR3] :: - Luke 1:36: "thy cousin Elisabeth." Luke 1:5: "his wife [was] of the daughters of Aaron." [L3] Exodus 6:23: "Aaron took him Elisheba, daughter of Amminadab." N
+GAIN 33249 Judge Enforcer Build E-ANS ANSWER CHECK Luke 1:13 [CR3] :: - Matthew 1:25: "he called his name JESUS." Luke 1:13: "thou shalt call his name John." Luke 1:62: "they made signs to his father, how he would have him called.
+GAIN 33249 Judge Enforcer Build E-ANS ANSWER CHECK Numbers 1:18 [CR3] :: - Numbers 1:2: "after their families, by the house of their fathers." Numbers 1:18: "they declared their pedigrees." [L2] *yālad* (H3205, beget, declare pedigre
 GAIN 33249 Judge Enforcer Build E-ANS ANSWER CHECK Psalms 132:11 [CR3; CR4] :: - [L1] Acts 2:30, quoted above. / - [L2] *osphys* (G3751, loin, procreative power) is the word. *anistēmi* (G450, to raise up) is the verb. / - [L3] Psalms 132:11: 
-GAIN 33249 Judge Enforcer Build E-ANS ANSWER CHECK Numbers 1:18 [CR3; CR4] :: - Matthew 1:24: "took unto him his wife." I grant that the object is the wife. The child's receipt is the naming of Matthew 1:25. / - Matthew 1:25: "he called his
+GAIN 33249 Judge Enforcer Build E-ANS ANSWER CHECK Numbers 1:18 [CR3; CR4] :: - Numbers 1:2: "after their families, by the house of their fathers." Numbers 1:18: "they declared their pedigrees." [L2] *yālad* (H3205, beget, declare pedigre
 GAIN 33249 Judge Enforcer Build E-ANS ANSWER CHECK 2 Samuel 12:24 [CR3; CR4] :: - [L1] 1 Chronicles 28:6, quoted above. / - [L3] 2 Samuel 12:24: "went in unto her, and lay with her: and she bare a son". Matthew 1:25: "knew her not till she ha
 GAIN 33249 Judge Enforcer Build E-ANS ANSWER CHECK Luke 24:49 [CR3] :: - Acts 1:8: "ye shall receive power, after that the Holy Ghost is come upon you." [L2] *eperchomai* (G1904, come upon). [L3] Luke 24:49: "endued with power from
-GAIN 33249 Judge Enforcer Build E-ANS ANSWER CHECK Matthew 17:5 [CR3] :: - Acts 1:8: "ye shall receive power, after that the Holy Ghost is come upon you." [L2] *eperchomai* (G1904, come upon). [L3] Luke 24:49: "endued with power from
+GAIN 33249 Judge Enforcer Build E-ANS ANSWER CHECK Matthew 17:5 [CR3] :: - Luke 9:34: "there came a cloud, and overshadowed them." [L3] Matthew 17:5. [L2] *episkiazō* (G1982, overshadow) stands in Luke 1:35 and Luke 9:34. [L4] The ov
 GAIN 33249 Judge Enforcer Build E-ANS ANSWER CHECK Matthew 1:20 [CR3; CR4] :: - [L1] Matthew 1:18, quoted above. / - [L2] *heuriskō* (to find) stands in the verse. She was found with child, and the source is given in the same verse: "of the
-GAIN 33249 Judge Enforcer Build E-ANS ANSWER CHECK Matthew 1:24 [CR3; CR4] :: - Matthew 1:24: "took unto him his wife." I grant that the object is the wife. The child's receipt is the naming of Matthew 1:25. / - Matthew 1:25: "he called his
 GAIN 33249 Judge Enforcer Build E-ANS ANSWER CHECK Luke 1:27 [CR3; CR4] :: - [L1] Luke 1:34, quoted above. Her question is "How shall this be", and the ground she gives is her not knowing. / - [L2] *ginōskō* (to know) is the word for a m
 GAIN 33249 Judge Enforcer Build E-ANS ANSWER CHECK Galatians 4:4 [DR3] :: - [L1] Romans 1:3: "which was made of the seed of David according to the flesh." / - [L3] Galatians 4:4: "God sent forth his Son, made of a woman, made under the 
 GAIN 33249 Judge Enforcer Build E-ANS ANSWER CHECK Matthew 1:21 [DR3] :: - [L1] Exodus 2:10: "he became her son. And she called his name Moses." / - [L3] Exodus 2:1: "there went a man of the house of Levi, and took [to wife] a daughter
 GAIN 33249 Judge Enforcer Build E-ANS ANSWER CHECK Deuteronomy 22:24 [DR3] :: - [L1] Acts 2:30: "that of the fruit of his loins, according to the flesh, he would raise up Christ to sit on his throne." / - [L2] *osphys* (G3751): "the loin (e
-GAIN 33249 Judge Enforcer Build E-HOLD COLLISION D3 vs C3 :: - Matthew 1:24: "took unto him his wife." I grant that the object is the wife. The child's receipt is the naming of Matthew 1:25. / - Matthew 1:25: "he called his
-GAIN 33249 Judge Enforcer Build E-HOLD COLLISION D3 vs C6 :: - Matthew 1:24: "took unto him his wife." I grant that the object is the wife. The child's receipt is the naming of Matthew 1:25. / - Matthew 1:25: "he called his
+GAIN 33249 Judge Enforcer Build E-HOLD COLLISION D3 vs C3 :: - Numbers 1:2: "after their families, by the house of their fathers." Numbers 1:18: "they declared their pedigrees." [L2] *yālad* (H3205, beget, declare pedigre
+GAIN 33249 Judge Enforcer Build E-HOLD COLLISION D3 vs C6 :: - Numbers 1:2: "after their families, by the house of their fathers." Numbers 1:18: "they declared their pedigrees." [L2] *yālad* (H3205, beget, declare pedigre
 GAIN 33249 Judge Enforcer Build E-HOLD COLLISION D3 vs C4 :: - [L1] Acts 2:30: "that of the fruit of his loins, according to the flesh, he would raise up Christ to sit on his throne." / - [L2] *osphys* (G3751): "the loin (e
-GAIN 33249 Judge Enforcer Build E-HOLD COLLISION D3 vs C3 :: - Matthew 1:24: "took unto him his wife." I grant that the object is the wife. The child's receipt is the naming of Matthew 1:25. / - Matthew 1:25: "he called his
+GAIN 33249 Judge Enforcer Build E-HOLD COLLISION D3 vs C3 :: - Numbers 1:2: "after their families, by the house of their fathers." Numbers 1:18: "they declared their pedigrees." [L2] *yālad* (H3205, beget, declare pedigre
 GAIN 33249 Judge Enforcer Build E-HOLD COLLISION D4 vs C6 :: - [L1] Hebrews 7:14, as above. / - [L2] *phylē* (G5443): "an offshoot, i.e. race or clan." *anatellō* (G393): "to (cause to) arise." / - [L3] Numbers 1:7: "Of Judah
 GAIN 33249 Judge Enforcer Build E-HOLD COLLISION D5 vs C2 :: **ANSWER: Romans 1:3 -- D4 -- "which was made of the seed of David according to the flesh"** / - [L1] Romans 1:3, quoted above. / - [L2] *sperma* (G4690, seed) glos
-OK 33249 Judge Enforcer Build: calls 5 -> 6, not checked 0 -> 0, 22 items gain a block
-HOLD 33249 Judge Enforcer Record E-ANS chatgpt ANSWER CHECK Numbers 1:18 [CR3]: ENFORCER DISAGREE (right: MISSES): The answer is only "I gra -> ENFORCER HELD (pkgEAW, not sent; W3 2844: the push says the answer is only "I grant the re
+OK 33249 Judge Enforcer Build: calls 5 -> 6, not checked 0 -> 0, 20 items gain a block
 HOLD 33249 Judge Enforcer Record E-ANS sol ANSWER CHECK Psalms 132:11 [CR3; CR4]: ENFORCER DISAGREE (right: MISSES): The answer only says "The -> ENFORCER HELD (pkgEAW, not sent; W3 2844: the push says the answer is only "The verses sta
-OK 33249 Judge Enforcer Record: rows 307 -> 307, 2 changed
+OK 33249 Judge Enforcer Record: rows 307 -> 307, 1 changed
 OK 33249 Alt Judge Enforcer Build: calls 3 -> 3, not checked 0 -> 0, 0 items gain a block
+OK 33249 Alt Judge Enforcer Record: rows 90 -> 90, 0 changed
 GAIN 33261 Judge Enforcer Build E-ANS ANSWER CHECK Acts 1:8 [CR4] :: - [L2] *dio* (G1352, "therefore") rests what follows on the coming upon and the overshadowing. *kaleō* (G2564, "to call") is the verb of the calling. *hagios* (
 GAIN 33261 Judge Enforcer Build E-ANS ANSWER CHECK Matthew 1:3 [CR3] :: - Matthew 1:16 and Matthew 1:3, 1:5. I grant that *ek* with the feminine names the mother in "Judas begat Phares and Zara of Thamar" and in "Booz begat Obed of 
 GAIN 33261 Judge Enforcer Build E-ANS ANSWER CHECK Matthew 1:21 [CR3] :: - Matthew 1:16 and Matthew 1:3, 1:5. I grant that *ek* with the feminine names the mother in "Judas begat Phares and Zara of Thamar" and in "Booz begat Obed of 
 GAIN 33261 Judge Enforcer Build E-ANS ANSWER CHECK Luke 3:23 [CR3] :: - [L1] Luke 3:23: "being (as was supposed) the son of Joseph, which was [the son] of Heli." / - [L2] *nomizō* (G3543) is "properly, to do by law (usage)... be won
-GAIN 33261 Judge Enforcer Build E-ANS ANSWER CHECK Luke 2:50 [CR3] :: - Acts 16:13, "where prayer was wont to be made." I grant this is a usage. The usage in Acts 14:19 was a wrong supposition. The verb is common to both, so the v
+GAIN 33261 Judge Enforcer Build E-ANS ANSWER CHECK Luke 2:50 [CR3] :: - Luke 2:51 and Luke 2:50. I grant the narrator keeps naming the two after 2:49. Luke 2:50 reports that "they understood not the saying."
 GAIN 33261 Judge Enforcer Build E-ANS ANSWER CHECK Luke 1:5 [CR3] :: - Luke 1:27 and Luke 2:4. These are granted above. / - Luke 1:36, "thy cousin Elisabeth," and Luke 1:5, "his wife [was] of the daughters of Aaron." /  - [L2] *synge
-GAIN 33261 Judge Enforcer Build E-ANS ANSWER CHECK Psalm 132:11 [CR3] :: - Romans 1:3, "made of the seed of David according to the flesh." The verb is *ginomai* (G1096, "to become, be made"), not the procreative *gennaō*. Luke 1:32 s
+GAIN 33261 Judge Enforcer Build E-ANS ANSWER CHECK Psalm 132:11 [CR3] :: - 2 Samuel 7:12 and Psalms 132:11. 2 Samuel 7:12 says "I will set up thy seed after thee, which shall proceed out of thy bowels." The text sets it "after thee,"
 GAIN 33261 Judge Enforcer Build E-ANS ANSWER CHECK Matthew 1:3 [CR3] :: - Matthew 1:16 and Matthew 1:3, 1:5. I grant that *ek* with the feminine names the mother in "Judas begat Phares and Zara of Thamar" and in "Booz begat Obed of 
 GAIN 33261 Judge Enforcer Build E-ANS ANSWER CHECK Matthew 1:5 [CR3] :: - Matthew 1:16 and Matthew 1:3, 1:5. I grant that *ek* with the feminine names the mother in "Judas begat Phares and Zara of Thamar" and in "Booz begat Obed of 
-GAIN 33261 Judge Enforcer Build E-ANS ANSWER CHECK Luke 2:51 [CR3] :: - Acts 16:13, "where prayer was wont to be made." I grant this is a usage. The usage in Acts 14:19 was a wrong supposition. The verb is common to both, so the v
-GAIN 33261 Judge Enforcer Build E-ANS ANSWER CHECK Luke 2:50 [CR3] :: - Acts 16:13, "where prayer was wont to be made." I grant this is a usage. The usage in Acts 14:19 was a wrong supposition. The verb is common to both, so the v
+GAIN 33261 Judge Enforcer Build E-ANS ANSWER CHECK Luke 2:51 [CR3] :: - Luke 2:43 names "Joseph and his mother." Luke 2:51 says "was subject unto them." These name the household and the obedience.
 GAIN 33261 Judge Enforcer Build E-HOLD COLLISION D3 vs C4 :: - Matthew 1:16 and Matthew 1:3, 1:5. I grant that *ek* with the feminine names the mother in "Judas begat Phares and Zara of Thamar" and in "Booz begat Obed of 
-OK 33261 Judge Enforcer Build: calls 7 -> 7, not checked 0 -> 0, 12 items gain a block
+OK 33261 Judge Enforcer Build: calls 7 -> 7, not checked 0 -> 0, 11 items gain a block
 OK 33261 Judge Enforcer Record: rows 357 -> 357, 0 changed
-GAIN 33261 Alt Judge Enforcer Build E-ANS ANSWER CHECK Matthew 1:25 [CR3] :: - Matthew 1:18, *heuriskō* (G2147, "to find"). I grant it dates the finding. It is dated "before they came together," so it is dated before conjugal cohabiting.
 GAIN 33261 Alt Judge Enforcer Build E-ANS ANSWER CHECK Matthew 1:3 [CR3] :: - Matthew 1:16 and Matthew 1:3, 1:5. I grant that *ek* with the feminine names the mother in "Judas begat Phares and Zara of Thamar" and in "Booz begat Obed of 
 GAIN 33261 Alt Judge Enforcer Build E-ANS ANSWER CHECK Matthew 1:5 [CR3] :: - Matthew 1:16 and Matthew 1:3, 1:5. I grant that *ek* with the feminine names the mother in "Judas begat Phares and Zara of Thamar" and in "Booz begat Obed of 
 GAIN 33261 Alt Judge Enforcer Build E-ANS ANSWER CHECK Luke 1:5 [CR3] :: - Luke 1:27 and Luke 2:4. These are granted above. / - Luke 1:36, "thy cousin Elisabeth," and Luke 1:5, "his wife [was] of the daughters of Aaron." /  - [L2] *synge
 GAIN 33261 Alt Judge Enforcer Build E-ANS ANSWER CHECK Ezra 2:62 [CR3] :: - Luke 1:27 and Luke 2:4. These are granted above. / - Luke 1:36, "thy cousin Elisabeth," and Luke 1:5, "his wife [was] of the daughters of Aaron." /  - [L2] *synge
-GAIN 33261 Alt Judge Enforcer Build E-ANS ANSWER CHECK Psalm 132:11 [CR3] :: - Romans 1:3, "made of the seed of David according to the flesh." The verb is *ginomai* (G1096, "to become, be made"), not the procreative *gennaō*. Luke 1:32 s
+GAIN 33261 Alt Judge Enforcer Build E-ANS ANSWER CHECK Psalm 132:11 [CR3] :: - 2 Samuel 7:12 and Psalms 132:11. 2 Samuel 7:12 says "I will set up thy seed after thee, which shall proceed out of thy bowels." The text sets it "after thee,"
 GAIN 33261 Alt Judge Enforcer Build E-ANS ANSWER CHECK Matthew 1:19 [DR3] :: - [L1] Matthew 1:19: "being a just [man], and not willing to make her a publick example, was minded to put her away privily." [L2] *dikaios* (G1342) is "innocen
-OK 33261 Alt Judge Enforcer Build: calls 3 -> 3, not checked 0 -> 0, 7 items gain a block
+OK 33261 Alt Judge Enforcer Build: calls 3 -> 3, not checked 0 -> 0, 6 items gain a block
 OK 33261 Alt Judge Enforcer Record: rows 80 -> 80, 0 changed
 OK 33276 Judge Enforcer Build: calls 1 -> 1, not checked 0 -> 0, 0 items gain a block
+OK 33276 Judge Enforcer Record: rows 0 -> 0, 0 changed
 OK 33276 Alt Judge Enforcer Build: calls 1 -> 1, not checked 0 -> 0, 0 items gain a block
+OK 33276 Alt Judge Enforcer Record: rows 0 -> 0, 0 changed
 OK 33289 Judge Enforcer Build: calls 1 -> 1, not checked 0 -> 0, 0 items gain a block
+OK 33289 Judge Enforcer Record: rows 0 -> 0, 0 changed
 OK 33289 Alt Judge Enforcer Build: calls 1 -> 1, not checked 0 -> 0, 0 items gain a block
-GAIN 33299 Judge Enforcer Build E-ANS ANSWER CHECK Isaiah 8:4 [CR3] :: - Genesis 4:25, 16:10, 24:60. In each the husband's knowing is stated, or the verse is spoken of mothers who bore to husbands. Luke 1:34 and Matthew 1:25 state 
-GAIN 33299 Judge Enforcer Build E-ANS ANSWER CHECK Deuteronomy 22:24 [CR3] :: - Genesis 4:25, 16:10, 24:60. In each the husband's knowing is stated, or the verse is spoken of mothers who bore to husbands. Luke 1:34 and Matthew 1:25 state 
-GAIN 33299 Judge Enforcer Build E-ANS ANSWER CHECK Luke 2:4 [CR3] :: - Matthew 11:11, "born of women," and Job 14:1, "born of a woman." I grant that this is said of men with fathers. My link does not rest on it. / - Luke 1:13 and 1
-GAIN 33299 Judge Enforcer Build E-ANS ANSWER CHECK Genesis 4:1 [CR3] :: - Matthew 11:11, "born of women," and Job 14:1, "born of a woman." I grant that this is said of men with fathers. My link does not rest on it. / - Luke 1:13 and 1
-GAIN 33299 Judge Enforcer Build E-ANS ANSWER CHECK Job 14:1 [CR3] :: - Job 14:1, "of a woman," is granted at LINK 4. / - Romans 1:3, "made of the seed of David." See LINK 1. / - Acts 2:30, "fruit of his loins." Hebrews 7:10, "he was 
-GAIN 33299 Judge Enforcer Build E-ANS ANSWER CHECK Romans 1:3 [CR3] :: - Job 14:1, "of a woman," is granted at LINK 4. / - Romans 1:3, "made of the seed of David." See LINK 1. / - Acts 2:30, "fruit of his loins." Hebrews 7:10, "he was 
+OK 33289 Alt Judge Enforcer Record: rows 0 -> 0, 0 changed
 GAIN 33299 Judge Enforcer Build E-ANS ANSWER CHECK Genesis 16:10 [CR3] :: - Genesis 4:25, 16:10, 24:60. In each the husband's knowing is stated, or the verse is spoken of mothers who bore to husbands. Luke 1:34 and Matthew 1:25 state 
 GAIN 33299 Judge Enforcer Build E-ANS ANSWER CHECK Genesis 24:60 [CR3] :: - Genesis 4:25, 16:10, 24:60. In each the husband's knowing is stated, or the verse is spoken of mothers who bore to husbands. Luke 1:34 and Matthew 1:25 state 
-GAIN 33299 Judge Enforcer Build E-ANS ANSWER CHECK Acts 16:13 [CR2] :: - **[L4]** Philip reports an identification by town and house. It is a disciple's report of what was known of the household. The same Gospel names the "only beg
-GAIN 33299 Judge Enforcer Build E-ANS ANSWER CHECK Numbers 1:18 [CR3] :: - Job 14:1, "of a woman," is granted at LINK 4. / - Romans 1:3, "made of the seed of David." See LINK 1. / - Acts 2:30, "fruit of his loins." Hebrews 7:10, "he was 
-GAIN 33299 Judge Enforcer Build E-ANS ANSWER CHECK Matthew 1:20 [CR3] :: - Genesis 4:25, 16:10, 24:60. In each the husband's knowing is stated, or the verse is spoken of mothers who bore to husbands. Luke 1:34 and Matthew 1:25 state 
-GAIN 33299 Judge Enforcer Build E-HOLD COLLISION D1 vs C1 :: - Genesis 4:25, 16:10, 24:60. In each the husband's knowing is stated, or the verse is spoken of mothers who bore to husbands. Luke 1:34 and Matthew 1:25 state 
-GAIN 33299 Judge Enforcer Build E-HOLD COLLISION D4 vs C4 :: - Matthew 11:11, "born of women," and Job 14:1, "born of a woman." I grant that this is said of men with fathers. My link does not rest on it. / - Luke 1:13 and 1
-GAIN 33299 Judge Enforcer Build E-HOLD COLLISION D6 vs C6 :: - Job 14:1, "of a woman," is granted at LINK 4. / - Romans 1:3, "made of the seed of David." See LINK 1. / - Acts 2:30, "fruit of his loins." Hebrews 7:10, "he was 
-OK 33299 Judge Enforcer Build: calls 5 -> 5, not checked 0 -> 0, 14 items gain a block
-HOLD 33299 Judge Enforcer Record E-ANS gemini ANSWER CHECK Romans 1:3 [CR3]: ENFORCER DISAGREE (right: MISSES): The answer only says "See -> ENFORCER HELD (pkgEAW, not sent; W3 2844: the push says the answer is only "See LINK 1", b
+GAIN 33299 Judge Enforcer Build E-ANS ANSWER CHECK Numbers 1:18 [CR3] :: - Acts 2:30, "fruit of his loins." Hebrews 7:10, "he was yet in the loins of his father." Hebrews 7:14, "our Lord sprang out of Juda." Numbers 1:18, "by the hou
+GAIN 33299 Judge Enforcer Build E-ANS ANSWER CHECK Matthew 1:20 [CR3] :: - Deuteronomy 22:24, "his neighbour's wife." I grant that the law calls the betrothed a wife. That fits Matthew 1:20, "Mary thy wife."
+GAIN 33299 Judge Enforcer Build E-HOLD COLLISION D1 vs C1 :: - Deuteronomy 22:24, "his neighbour's wife." I grant that the law calls the betrothed a wife. That fits Matthew 1:20, "Mary thy wife."
+GAIN 33299 Judge Enforcer Build E-HOLD COLLISION D4 vs C4 :: - Deuteronomy 22:24, "his neighbour's wife." I grant that the law calls the betrothed a wife. That fits Matthew 1:20, "Mary thy wife."
+OK 33299 Judge Enforcer Build: calls 5 -> 5, not checked 0 -> 0, 6 items gain a block
 HOLD 33299 Judge Enforcer Record E-ANS chatgpt ANSWER CHECK Genesis 16:10 [CR3]: ENFORCER DISAGREE (right: MISSES): The answer only says "the -> ENFORCER HELD (pkgEAW, not sent; W3 2844: the push says the answer is only "the verse is s
 HOLD 33299 Judge Enforcer Record E-ANS chatgpt ANSWER CHECK Genesis 24:60 [CR3]: ENFORCER DISAGREE (right: MISSES): The answer only says "the -> ENFORCER HELD (pkgEAW, not sent; W3 2844: the push says the answer is only "the verse is s
-HOLD 33299 Judge Enforcer Record E-ANS chatgpt ANSWER CHECK Deuteronomy 22:24 [CR3]: ENFORCER DISAGREE (right: MISSES): The answer only says "I g -> ENFORCER HELD (pkgEAW, not sent; W3 2844: the push says the answer is only "I grant that t
-HOLD 33299 Judge Enforcer Record E-ANS sol ANSWER CHECK Deuteronomy 22:24 [CR3]: ENFORCER DISAGREE (right: MISSES): The answer only says "I g -> ENFORCER HELD (pkgEAW, not sent; W3 2844: the push says the answer is only "I grant that t
-OK 33299 Judge Enforcer Record: rows 305 -> 305, 5 changed
+HOLD 33299 Judge Enforcer Record E-ANS sol ANSWER CHECK Luke 2:48 [CR4]: ENFORCER DISAGREE (right: MISSES): The answer only says "I g -> ENFORCER HELD (pkgEAW, not sent; W3 2844: the push says the answer is only "I grant Mary s
+HOLD 33299 Judge Enforcer Record E-ANS chatgpt ANSWER CHECK Luke 2:33 [CR4]: ENFORCER DISAGREE (right: MISSES): The answer only says "I g -> ENFORCER HELD (pkgEAW, not sent; W3 2844: the push says the answer is only "I grant the na
+OK 33299 Judge Enforcer Record: rows 305 -> 305, 4 changed
 GAIN 33299 Alt Judge Enforcer Build E-ANS ANSWER CHECK Genesis 24:60 [CR3] :: - Genesis 4:25, 16:10, 24:60. In each the husband's knowing is stated, or the verse is spoken of mothers who bore to husbands. Luke 1:34 and Matthew 1:25 state 
-GAIN 33299 Alt Judge Enforcer Build E-ANS ANSWER CHECK Isaiah 8:4 [CR3] :: - Genesis 4:25, 16:10, 24:60. In each the husband's knowing is stated, or the verse is spoken of mothers who bore to husbands. Luke 1:34 and Matthew 1:25 state 
-GAIN 33299 Alt Judge Enforcer Build E-ANS ANSWER CHECK Luke 2:4 [CR3] :: - Matthew 11:11, "born of women," and Job 14:1, "born of a woman." I grant that this is said of men with fathers. My link does not rest on it. / - Luke 1:13 and 1
-GAIN 33299 Alt Judge Enforcer Build E-ANS ANSWER CHECK Job 14:1 [CR3] :: - Job 14:1, "of a woman," is granted at LINK 4. / - Romans 1:3, "made of the seed of David." See LINK 1. / - Acts 2:30, "fruit of his loins." Hebrews 7:10, "he was 
-GAIN 33299 Alt Judge Enforcer Build E-ANS ANSWER CHECK Hebrews 7:10 [CR3] :: - Job 14:1, "of a woman," is granted at LINK 4. / - Romans 1:3, "made of the seed of David." See LINK 1. / - Acts 2:30, "fruit of his loins." Hebrews 7:10, "he was 
-GAIN 33299 Alt Judge Enforcer Build E-ANS ANSWER CHECK Hebrews 7:14 [CR3] :: - Job 14:1, "of a woman," is granted at LINK 4. / - Romans 1:3, "made of the seed of David." See LINK 1. / - Acts 2:30, "fruit of his loins." Hebrews 7:10, "he was 
-GAIN 33299 Alt Judge Enforcer Build E-ANS ANSWER CHECK Numbers 1:18 [CR3] :: - Job 14:1, "of a woman," is granted at LINK 4. / - Romans 1:3, "made of the seed of David." See LINK 1. / - Acts 2:30, "fruit of his loins." Hebrews 7:10, "he was 
-GAIN 33299 Alt Judge Enforcer Build E-ANS ANSWER CHECK Ezra 2:62 [CR3] :: - Job 14:1, "of a woman," is granted at LINK 4. / - Romans 1:3, "made of the seed of David." See LINK 1. / - Acts 2:30, "fruit of his loins." Hebrews 7:10, "he was 
-GAIN 33299 Alt Judge Enforcer Build E-HOLD COLLISION D4 vs C4 :: [L4] Genesis 4:1 [L3] reads "Adam knew Eve his wife; and she conceived." Matthew 1:18 reverses that order. The chain is Matthew 1:18 (L1), *héōs* (L2) and Genes
-OK 33299 Alt Judge Enforcer Build: calls 2 -> 3, not checked 0 -> 0, 9 items gain a block
+GAIN 33299 Alt Judge Enforcer Build E-ANS ANSWER CHECK Hebrews 7:10 [CR3] :: - Acts 2:30, "fruit of his loins." Hebrews 7:10, "he was yet in the loins of his father." Hebrews 7:14, "our Lord sprang out of Juda." Numbers 1:18, "by the hou
+GAIN 33299 Alt Judge Enforcer Build E-ANS ANSWER CHECK Hebrews 7:14 [CR3] :: - Acts 2:30, "fruit of his loins." Hebrews 7:10, "he was yet in the loins of his father." Hebrews 7:14, "our Lord sprang out of Juda." Numbers 1:18, "by the hou
+GAIN 33299 Alt Judge Enforcer Build E-ANS ANSWER CHECK Numbers 1:18 [CR3] :: - Acts 2:30, "fruit of his loins." Hebrews 7:10, "he was yet in the loins of his father." Hebrews 7:14, "our Lord sprang out of Juda." Numbers 1:18, "by the hou
+GAIN 33299 Alt Judge Enforcer Build E-ANS ANSWER CHECK Ezra 2:62 [CR3] :: - Acts 2:30, "fruit of his loins." Hebrews 7:10, "he was yet in the loins of his father." Hebrews 7:14, "our Lord sprang out of Juda." Numbers 1:18, "by the hou
+OK 33299 Alt Judge Enforcer Build: calls 2 -> 3, not checked 0 -> 0, 5 items gain a block
 OK 33299 Alt Judge Enforcer Record: rows 76 -> 76, 0 changed
 OK 33311 Judge Enforcer Build: calls 1 -> 1, not checked 0 -> 0, 0 items gain a block
+OK 33311 Judge Enforcer Record: rows 0 -> 0, 0 changed
 OK 33311 Alt Judge Enforcer Build: calls 1 -> 1, not checked 0 -> 0, 0 items gain a block
+OK 33311 Alt Judge Enforcer Record: rows 0 -> 0, 0 changed
 OK 33322 Judge Enforcer Build: calls 1 -> 1, not checked 0 -> 0, 0 items gain a block
+OK 33322 Judge Enforcer Record: rows 0 -> 0, 0 changed
 OK 33322 Alt Judge Enforcer Build: calls 1 -> 1, not checked 0 -> 0, 0 items gain a block
-GAIN 33345 Judge Enforcer Build E-ANS ANSWER CHECK Acts 1:8 [CR3] :: - **Luke 1:32** ("the Lord God shall give unto him the throne of his father David"). I grant the title and throne precede 1:34, with "the Son of the Highest" gi
-GAIN 33345 Judge Enforcer Build E-ANS ANSWER CHECK Luke 1:31 [CR3] :: - **Luke 1:32** ("the Lord God shall give unto him the throne of his father David"). I grant the title and throne precede 1:34, with "the Son of the Highest" gi
-GAIN 33345 Judge Enforcer Build E-ANS ANSWER CHECK Matthew 1:19 [CR3] :: - **Matthew 1:19.** I grant "Joseph her husband" and his stated intent. Matthew 1:20 addresses him "thou son of David." / - **Genesis 4:25** ("Adam knew his wife 
-GAIN 33345 Judge Enforcer Build E-ANS ANSWER CHECK Matthew 11:11 [CR3] :: - **Matthew 1:19.** I grant "Joseph her husband" and his stated intent. Matthew 1:20 addresses him "thou son of David." / - **Genesis 4:25** ("Adam knew his wife 
-GAIN 33345 Judge Enforcer Build E-ANS ANSWER CHECK Genesis 24:16 [CR3] :: - **Genesis 24:16** (*bethulah*, H1330, "virgin"). I grant the knowledge clause. It describes the woman whom Genesis 24:43 calls "the virgin." / - **Proverbs 30:1
-GAIN 33345 Judge Enforcer Build E-ANS ANSWER CHECK Isaiah 8:8 [CR3] :: - **Genesis 24:16** (*bethulah*, H1330, "virgin"). I grant the knowledge clause. It describes the woman whom Genesis 24:43 calls "the virgin." / - **Proverbs 30:1
-GAIN 33345 Judge Enforcer Build E-ANS ANSWER CHECK Romans 1:3 [CR3] :: - **Luke 2:4** ("because he was of the house and lineage of David"). I grant it. Matthew 1:20 says "thou son of David." / - **Luke 1:36, Luke 1:5.** They concern 
 GAIN 33345 Judge Enforcer Build E-ANS ANSWER CHECK Haggai 2:23 [CR4] :: - [L3] Matthew 1:12 puts Joseph's line in Jechonias's descent: "Jechonias begat Salathiel; and Salathiel begat Zorobabel." / - [L1] Haggai 2:21 calls Zerubbabel "
 GAIN 33345 Judge Enforcer Build E-ANS ANSWER CHECK Haggai 2:21 [DR3] :: - I grant "governor of Judah" in Haggai 2:21. / - [L2] The word restored is **chotham**, the very signet plucked at Jeremiah 22:24. The plucking is answered withi
 GAIN 33345 Judge Enforcer Build E-ANS ANSWER CHECK Jeremiah 22:24 [DR3] :: - I grant "[As] I live, saith the LORD" (Jeremiah 22:24). / - [L1] Haggai 2:23 answers in the same voice three times: "saith the LORD... saith the LORD... saith t
 GAIN 33345 Judge Enforcer Build E-ANS ANSWER CHECK Matthew 1:20 [CR3] :: - [L1] Matthew 1:20: "that which is conceived in her is of the Holy Ghost." The margin reads "Gr. begotten." / - [L2] *gennaō* (G1080, "to procreate, properly of 
-GAIN 33345 Judge Enforcer Build E-ANS ANSWER CHECK Genesis 24:16 [CR3] :: - **Genesis 24:16** (*bethulah*, H1330, "virgin"). I grant the knowledge clause. It describes the woman whom Genesis 24:43 calls "the virgin." / - **Proverbs 30:1
-GAIN 33345 Judge Enforcer Build E-HOLD COLLISION D5 vs C1 :: - **Luke 2:4** ("because he was of the house and lineage of David"). I grant it. Matthew 1:20 says "thou son of David." / - **Luke 1:36, Luke 1:5.** They concern 
 GAIN 33345 Judge Enforcer Build E-HOLD COLLISION D6 vs C6 :: - [L3] Matthew 1:12 puts Joseph's line in Jechonias's descent: "Jechonias begat Salathiel; and Salathiel begat Zorobabel." / - [L1] Haggai 2:21 calls Zerubbabel "
 GAIN 33345 Judge Enforcer Build E-HOLD COLLISION D1 vs C2 :: - **1 John 5:1** ("every one that loveth him that begat loveth him also that is begotten of him") and **1 John 4:7** ("every one that loveth is born of God"). *
-GAIN 33345 Judge Enforcer Build E-HOLD COLLISION D2 vs C3 :: - **Luke 1:32** ("the Lord God shall give unto him the throne of his father David"). I grant the title and throne precede 1:34, with "the Son of the Highest" gi
-GAIN 33345 Judge Enforcer Build E-HOLD COLLISION D4 vs C4 :: - I grant that there are two names. / - [L1] Isaiah 8:4 runs the same clock as Isaiah 7:16, "before the child," and ends at the same two kings: "the riches of Dam
-OK 33345 Judge Enforcer Build: calls 5 -> 6, not checked 0 -> 0, 17 items gain a block
+OK 33345 Judge Enforcer Build: calls 5 -> 5, not checked 0 -> 0, 6 items gain a block
 OK 33345 Judge Enforcer Record: rows 373 -> 373, 0 changed
-GAIN 33345 Alt Judge Enforcer Build E-ANS ANSWER CHECK Luke 1:31 [CR3] :: - **Luke 1:32** ("the Lord God shall give unto him the throne of his father David"). I grant the title and throne precede 1:34, with "the Son of the Highest" gi
-GAIN 33345 Alt Judge Enforcer Build E-ANS ANSWER CHECK Matthew 11:11 [CR3] :: - **Matthew 1:19.** I grant "Joseph her husband" and his stated intent. Matthew 1:20 addresses him "thou son of David." / - **Genesis 4:25** ("Adam knew his wife 
-GAIN 33345 Alt Judge Enforcer Build E-ANS ANSWER CHECK Genesis 24:16 [CR3] :: - **Genesis 24:16** (*bethulah*, H1330, "virgin"). I grant the knowledge clause. It describes the woman whom Genesis 24:43 calls "the virgin." / - **Proverbs 30:1
-GAIN 33345 Alt Judge Enforcer Build E-ANS ANSWER CHECK Isaiah 8:8 [CR3] :: - **Genesis 24:16** (*bethulah*, H1330, "virgin"). I grant the knowledge clause. It describes the woman whom Genesis 24:43 calls "the virgin." / - **Proverbs 30:1
-GAIN 33345 Alt Judge Enforcer Build E-ANS ANSWER CHECK Romans 1:3 [CR3] :: - **Luke 2:4** ("because he was of the house and lineage of David"). I grant it. Matthew 1:20 says "thou son of David." / - **Luke 1:36, Luke 1:5.** They concern 
-GAIN 33345 Alt Judge Enforcer Build E-ANS ANSWER CHECK Matthew 1:12 [CR3] :: - **Haggai 2:23** ("will make thee as a signet"). The title in the neighbouring verse is "Speak to Zerubbabel, governor of Judah" (Haggai 2:21). The signet is s
 GAIN 33345 Alt Judge Enforcer Build E-ANS ANSWER CHECK Haggai 2:21 [DR3] :: - I grant "governor of Judah" in Haggai 2:21. / - [L2] The word restored is **chotham**, the very signet plucked at Jeremiah 22:24. The plucking is answered withi
 GAIN 33345 Alt Judge Enforcer Build E-ANS ANSWER CHECK Jeremiah 22:24 [DR3] :: - I grant "[As] I live, saith the LORD" (Jeremiah 22:24). / - [L1] Haggai 2:23 answers in the same voice three times: "saith the LORD... saith the LORD... saith t
-GAIN 33345 Alt Judge Enforcer Build E-HOLD COLLISION D5 vs C1 :: - **Luke 2:4** ("because he was of the house and lineage of David"). I grant it. Matthew 1:20 says "thou son of David." / - **Luke 1:36, Luke 1:5.** They concern 
-OK 33345 Alt Judge Enforcer Build: calls 3 -> 3, not checked 0 -> 0, 9 items gain a block
+OK 33345 Alt Judge Enforcer Build: calls 3 -> 3, not checked 0 -> 0, 2 items gain a block
 OK 33345 Alt Judge Enforcer Record: rows 96 -> 96, 0 changed
 GAIN 33371 Judge Enforcer Build E-ANS ANSWER CHECK Matthew 1:24 [CR3] :: I grant that she was Joseph's wife in law during the espousal, and that "came together" (1:18) is the taking home. The chain does not need more than that. / 1. Ma
 GAIN 33371 Judge Enforcer Build E-ANS ANSWER CHECK Deuteronomy 22:24 [CR3] :: I grant that she was Joseph's wife in law during the espousal, and that "came together" (1:18) is the taking home. The chain does not need more than that. / 1. Ma
@@ -274,8 +243,6 @@ GAIN 33371 Alt Judge Enforcer Build E-HOLD COLLISION D3 vs C6 :: I grant that th
 GAIN 33371 Alt Judge Enforcer Build E-HOLD COLLISION D4 vs C5 :: I grant the verse's stated grounds: justice, and unwillingness to expose her. The press says the cause is public shame whoever the begetter was. The verse's own
 OK 33371 Alt Judge Enforcer Build: calls 2 -> 3, not checked 0 -> 0, 14 items gain a block
 OK 33371 Alt Judge Enforcer Record: rows 71 -> 71, 0 changed
-GAIN 33389 Judge Enforcer Build E-ANS ANSWER CHECK Galatians 4:4 [CR3] :: - **Galatians 4:4**: granted, *ginomai* has latitude and also stands in "made under the law". My narrowed link claims only that the verb is the verb of becoming
-GAIN 33389 Judge Enforcer Build E-ANS ANSWER CHECK Deuteronomy 22:24 [CR3] :: - **Matthew 1:24**, "took unto him his wife": the taking follows the dream. Matthew 1:20 puts it ahead of the dream: "fear not to take". So the taking of 1:24 c
 GAIN 33389 Judge Enforcer Build E-ANS ANSWER CHECK Hebrews 7:10 [DR3] :: - [L1] Hebrews 7:10: "For he was yet in the loins of his father, when Melchisedec met him." / - [L2] *Patēr* (G3962) means "father... near or more remote." / - [L3]
 GAIN 33389 Judge Enforcer Build E-ANS ANSWER CHECK Ezra 2:61 [DR3] :: - [L1] Grant the priestly setting of Ezra 2:61: "of the children of the priests". / - [L2] The register's verb is *yachas* (H3187), to enroll by pedigree. That is
 GAIN 33389 Judge Enforcer Build E-ANS ANSWER CHECK 1 Chronicles 28:6 [CR4] :: - [L1] Luke 2:49. / - [L2] *patēr* (G3962) is in both 2:48 and 2:49. / - [L3] 1 Chronicles 28:6 says "I have chosen him [to be] my son, and I will be his father". / -
@@ -288,9 +255,12 @@ GAIN 33389 Judge Enforcer Build E-ANS ANSWER CHECK Matthew 1:25 [DR3] :: - [L1] 
 GAIN 33389 Judge Enforcer Build E-ANS ANSWER CHECK 1 John 5:1 [DR3] :: - [L1] The margin reads "Gr. begotten". The row reads "Joseph, thou son of David... for that which is conceived in her is of the Holy Ghost" (Matthew 1:20). / - [
 GAIN 33389 Judge Enforcer Build E-HOLD COLLISION D1 vs C4 :: - [L1] The seed comes out of a man's body: "which shall proceed out of thy bowels" (2 Samuel 7:12); "of the fruit of his loins, according to the flesh" (Acts 2:
 GAIN 33389 Judge Enforcer Build E-HOLD COLLISION D5 vs C6 :: - [L1] Luke 2:49. / - [L2] *patēr* (G3962) is in both 2:48 and 2:49. / - [L3] 1 Chronicles 28:6 says "I have chosen him [to be] my son, and I will be his father". / -
-OK 33389 Judge Enforcer Build: calls 5 -> 6, not checked 0 -> 0, 14 items gain a block
+OK 33389 Judge Enforcer Build: calls 5 -> 6, not checked 0 -> 0, 12 items gain a block
 HOLD 33389 Judge Enforcer Record E-ANS chatgpt ANSWER CHECK Ezra 2:61 [DR3]: ENFORCER DISAGREE (right: MISSES): The answer only says "Gra -> ENFORCER HELD (pkgEAW, not sent; W3 2844: the push says the answer is only "Grant the prie
-OK 33389 Judge Enforcer Record: rows 324 -> 324, 1 changed
+HOLD 33389 Judge Enforcer Record E-ANS chatgpt ANSWER CHECK Matthew 1:18 [DR3]: ENFORCER DISAGREE (right: MISSES): The answer only says "Gra -> ENFORCER HELD (pkgEAW, not sent; W3 2844: the push says the answer is only "Grant it: 'bef
+HOLD 33389 Judge Enforcer Record E-ANS chatgpt ANSWER CHECK Luke 1:31 [DR3]: ENFORCER DISAGREE (right: MISSES): The answer is only "Grant -> ENFORCER HELD (pkgEAW, not sent; W3 2844: the push says the answer is only "Grant it: 'tho
+HOLD 33389 Judge Enforcer Record E-ANS sol ANSWER CHECK Luke 2:48 [CR4]: ENFORCER DISAGREE (right: MISSES): The answer is only "I gra -> ENFORCER HELD (pkgEAW, not sent; W3 2844: the push says the answer is only "I grant Mary s
+OK 33389 Judge Enforcer Record: rows 324 -> 324, 4 changed
 OK 33389 Alt Judge Enforcer Build: calls 1 -> 1, not checked 0 -> 0, 0 items gain a block
-items gaining a block: 232
-TOTAL 42 OK, 0 FAIL
+items gaining a block: 195
+TOTAL 51 OK, 0 FAIL

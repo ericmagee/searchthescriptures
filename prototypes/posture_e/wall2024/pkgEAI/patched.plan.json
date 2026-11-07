@@ -6,20 +6,40 @@
    "name": "Judge Enforcer Build",
    "file": "Judge_Enforcer_Build.js",
    "base_sha": "571fef513c90",
-   "final_sha": "9dd6e607d23a",
+   "final_sha": "760ce193c4bc",
    "bytes": [
     61175,
-    63274
+    63800
    ]
   },
   {
    "name": "Alt Judge Enforcer Build",
    "file": "Alt_Judge_Enforcer_Build.js",
    "base_sha": "d46e8a7dff5a",
-   "final_sha": "2640866212d2",
+   "final_sha": "f3d0e18c1d2b",
    "bytes": [
     61096,
-    63195
+    63721
+   ]
+  },
+  {
+   "name": "Judge Enforcer Record",
+   "file": "Judge_Enforcer_Record.js",
+   "base_sha": "7825fedf4301",
+   "final_sha": "cbcf0f9382ed",
+   "bytes": [
+    18448,
+    18662
+   ]
+  },
+  {
+   "name": "Alt Judge Enforcer Record",
+   "file": "Alt_Judge_Enforcer_Record.js",
+   "base_sha": "376b3e737b41",
+   "final_sha": "33b73297f34b",
+   "bytes": [
+    18451,
+    18665
    ]
   }
  ]
