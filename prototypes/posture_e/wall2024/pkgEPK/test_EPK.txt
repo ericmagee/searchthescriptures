@@ -1,0 +1,15 @@
+OK   A1 33261 gemini S27 (E-PREM COUNTED, premise 1, block L1 L2 L3) is sent with its reason and the K-UNX note
+OK   A2 33261 gemini S31 is sent with the note; chatgpt's words "does not meet the pressed causal meaning" are cut from the sent reason and kept in reason_full
+OK   A3 BASE sent S31 with chatgpt's words and no note (the gap)
+OK   A4 the item set is the same (no push is stopped, ruling 428): same sids and rules for every seat
+OK   B1 33249 sol S28 (premise 5) is sent with the K-UNX note; no other judge's words in it
+OK   B2 33249 item sets unchanged
+OK   C1 NEGATIVE CONTROL 1: an E-PREM COUNTED whose reason names a missing layer ("does not exhibit [L4]"; the block has L1, L2, L3) gets no note
+OK   C2 NEGATIVE CONTROL 2: a reason quoting 12 words of the challenger's [DR3] round only ("Romans 1:3: Concerning his Son Jesus Christ our Lord, which ...") is sent as written (no cut)
+OK   D1 33218 parity: the same items and lines for every seat (nothing stopped); notes/cuts on 33218: sol S4 cut
+OK   D2 33218: every body other than the cut items is byte-equal
+OK   F 33222 Alt Send Back Build: same items sent; notes/cuts: grok S35 note, grok S36 note, grok S37 note, grok S38 note
+OK   F 33249 Alt Send Back Build: same items sent; notes/cuts: grok S4 note
+OK   F 33261 Alt Send Back Build: same items sent; notes/cuts: none
+OK   E1 built prompt text for 33261 gemini S31 written to pkgEPK/prompt_33261_gemini_S31.txt
+14 OK, 0 FAIL

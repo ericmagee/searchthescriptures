@@ -1,0 +1,29 @@
+{
+ "base": "/mnt/project-files/wall2024/fetchback_live_s25.json",
+ "base_version": "396a2d54-117e-42fc-86cb-a69ddb1a54cf",
+ "library": [
+  "unxLack",
+  "DRV_SRC",
+  "DRV_TL_STOP",
+  "LB_REF",
+  "LB_TL",
+  "lbFoot",
+  "lbBlockText",
+  "ciRounds",
+  "gatePromptText2024"
+ ],
+ "nodes": [
+  {
+   "name": "Send Back Build",
+   "file": "Send_Back_Build.js",
+   "base_sha": "f436539a193ffe3a",
+   "final_sha": "af8a38dcdef47b1f"
+  },
+  {
+   "name": "Alt Send Back Build",
+   "file": "Alt_Send_Back_Build.js",
+   "base_sha": "9b4cfffa451dd350",
+   "final_sha": "467430f231e964a6"
+  }
+ ]
+}
