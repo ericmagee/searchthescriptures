@@ -1,0 +1,88 @@
+29434 single   D5: HIT  via Premise 6 = LINK 5 ([DR2] list) CONCEDED
+    counted: Premise 3 -> LINK 3 CONCEDED; Premise 6 -> LINK 5 CONCEDED
+    [DR2] list: 1=LINK 1, 2=LINK 2, 3=LINK 3, 4=LINK 4, 5=LINK 4, 6=LINK 5
+29519 deepseek D6: none
+    counted: Premise 1 -> LINK 5 UNEXHIBITED; Premise 2 -> LINK 5 UNEXHIBITED; Premise 3 -> LINK 3 UNEXHIBITED; Premise 6 -> (no labeled entry) CONCEDED
+    [DR2] list: 1=LINK 5, 2=LINK 5, 3=LINK 3, 4=LINK 2, 5=LINK 4
+29609 grok     D6: HIT  via Premise 6 = LINK 6 ([DR2] list) UNEXHIBITED
+    counted: Premise 1 -> LINK 1 UNEXHIBITED; Premise 2 -> LINK 2 UNEXHIBITED; Premise 3 -> LINK 3 UNEXHIBITED; Premise 4 -> LINK 4 UNEXHIBITED; Premise 5 -> LINK 5 UNEXHIBITED; Premise 6 -> LINK 6 UNEXHIBITED
+    [DR2] list: 1=LINK 1, 2=LINK 2, 3=LINK 3, 4=LINK 4, 5=LINK 5, 6=LINK 6
+29955 gemini   D6: none
+    counted: Premise 6 -> LINK 5 CONCEDED
+    [DR2] list: 1=LINK 1, 2=LINK 2, 3=LINK 3, 4=LINK 4, 5=LINK 5, 6=LINK 5
+30268 glm      D6: HIT  via Premise 3 = LINK 6 ([DR2] list) CONCEDED
+    counted: Premise 3 -> LINK 6 CONCEDED
+    [DR2] list: 1=LINK 6, 2=LINK 6, 3=LINK 6, 4=LINK 2, 5=LINK 5, 6=LINK 5
+32194 glm      D6: HIT  via Premise 2 = LINK 6 ([DR2] list) CONCEDED
+    counted: Premise 2 -> LINK 6 CONCEDED; Premise 3 -> LINK 2 CONCEDED; LINK 2 CONCEDED; Premise 6 -> LINK 4 CONCEDED
+    [DR2] list: 1=LINK 6, 2=LINK 6, 3=LINK 2, 4=LINK 1, 5=LINK 3, 6=LINK 4
+32194 single   D6: HIT  via Premise 2 = LINK 6 ([DR2] list) CONCEDED
+    counted: Premise 2 -> LINK 6 CONCEDED; Premise 3 -> LINK 2 CONCEDED; Premise 6 -> LINK 4 CONCEDED
+    [DR2] list: 1=LINK 6, 2=LINK 6, 3=LINK 2, 4=LINK 1, 5=LINK 3, 6=LINK 4
+32212 single   D6: HIT  via Premise 6 = LINK 6 ([DR2] list) UNEXHIBITED
+    counted: Premise 1 -> LINK 1 CONCEDED; Premise 2 -> LINK 2 UNEXHIBITED; Premise 3 -> LINK 3 UNEXHIBITED; Premise 4 -> LINK 4 CONCEDED; Premise 5 -> LINK 5 CONCEDED; Premise 6 -> LINK 6 UNEXHIBITED
+    [DR2] list: 1=LINK 1, 2=LINK 2, 3=LINK 3, 4=LINK 4, 5=LINK 5, 6=LINK 6
+32228 chatgpt  D6: none
+    counted: Premise 3 -> LINK 2 UNEXHIBITED; Premise 4 -> LINK 3 UNEXHIBITED; Premise 6 -> LINK 4 CONCEDED
+    [DR2] list: 1=LINK 5, 2=LINK 1, 3=LINK 2, 4=LINK 3, 5=LINK 4, 6=LINK 4
+32293 single   D6: HIT  via Premise 6 = LINK 6 ([DR2] list) CONCEDED
+    counted: Premise 1 -> LINK 1 CONCEDED; Premise 3 -> LINK 3 CONCEDED; Premise 4 -> LINK 4 CONCEDED; Premise 6 -> LINK 6 CONCEDED
+    [DR2] list: 1=LINK 1, 2=LINK 2, 3=LINK 3, 4=LINK 4, 5=LINK 5, 6=LINK 6
+32302 glm      D6: HIT  via Premise 6 = LINK 6 ([DR2] list) UNEXHIBITED
+    counted: Premise 4 -> LINK 4 UNEXHIBITED; Premise 6 -> LINK 6 UNEXHIBITED
+    [DR2] list: 1=LINK 1, 2=LINK 2, 3=LINK 3, 4=LINK 4, 5=LINK 6, 6=LINK 6
+32725 chatgpt  D6: none
+    counted: Premise 5 -> LINK 1 UNEXHIBITED; Premise 6 -> LINK 4 UNEXHIBITED
+    [DR2] list: 1=LINK 6, 2=LINK 6, 3=LINK 3, 4=LINK 2, 5=LINK 1, 6=LINK 4
+32905 grok     D6: HIT  via Premise 6 = LINK 6 ([DR2] list) CONCEDED
+    counted: Premise 6 -> LINK 6 CONCEDED
+    [DR2] list: 1=LINK 1, 2=LINK 2, 3=LINK 3, 4=LINK 4, 5=LINK 5, 6=LINK 6
+32924 chatgpt  D5: HIT  via Premise 6 = LINK 5 ([DR2] list) UNEXHIBITED
+    counted: Premise 5 -> LINK 4 UNEXHIBITED; Premise 6 -> LINK 5 UNEXHIBITED
+    [DR2] list: 1=LINK 1, 2=LINK 1, 3=LINK 2, 4=LINK 3, 5=LINK 4, 6=LINK 5
+32924 grok     D5: none
+    counted: Premise 1 -> LINK 1 UNEXHIBITED; Premise 5 -> LINK 4 UNEXHIBITED
+    [DR2] list: 1=LINK 1, 2=LINK 1, 3=LINK 2, 4=LINK 3, 5=LINK 4, 6=LINK 5
+32936 single   D6: HIT  via Premise 6 = LINK 6 ([DR2] list) UNEXHIBITED
+    counted: Premise 6 -> LINK 6 UNEXHIBITED
+    [DR2] list: 1=LINK 1, 2=LINK 2, 3=LINK 3, 4=LINK 4, 5=LINK 5, 6=LINK 6
+32998 grok     D6: none
+    counted: Premise 4 -> LINK 3 UNEXHIBITED; Premise 5 -> LINK 4 UNEXHIBITED; Premise 6 -> (no labeled entry) UNEXHIBITED
+    [DR2] list: 1=LINK 1, 2=LINK 1, 3=LINK 2, 4=LINK 3, 5=LINK 4
+33014 sol      D6: HIT  via Premise 6 = LINK 6 ([DR2] list) UNEXHIBITED
+    counted: Premise 6 -> LINK 6 UNEXHIBITED
+    [DR2] list: 1=LINK 1, 2=LINK 2, 3=LINK 3, 4=LINK 4, 5=LINK 5, 6=LINK 6
+33021 gemini   D5: HIT  via Premise 5 = LINK 5 ([DR2] list) UNEXHIBITED
+    counted: Premise 5 -> LINK 5 UNEXHIBITED
+    [DR2] list: 1=LINK 1, 2=LINK 2, 3=LINK 3, 4=LINK 4, 5=LINK 5, 6=LINK 5
+33055 single   D6: HIT  via LINK 6 UNEXHIBITED
+    counted: LINK 6 UNEXHIBITED
+    [DR2] list: 1=LINK 1, 2=LINK 2, 3=LINK 3, 4=LINK 4, 5=LINK 5, 6=LINK 6
+33129 chatgpt  D6: HIT  via Premise 6 = LINK 6 ([DR2] list) CONCEDED
+    counted: Premise 6 -> LINK 6 CONCEDED
+    [DR2] list: 1=LINK 1, 2=LINK 2, 3=LINK 3, 4=LINK 4, 5=LINK 5, 6=LINK 6
+33129 gemini   D6: HIT  via Premise 6 = LINK 6 ([DR2] list) CONCEDED
+    counted: Premise 6 -> LINK 6 CONCEDED
+    [DR2] list: 1=LINK 1, 2=LINK 2, 3=LINK 3, 4=LINK 4, 5=LINK 5, 6=LINK 6
+33149 chatgpt  D6: HIT  via Premise 2 = LINK 6 ([DR2] list) CONCEDED
+    counted: Premise 2 -> LINK 6 CONCEDED
+    [DR2] list: 1=LINK 6, 2=LINK 6, 3=LINK 6, 4=LINK 2, 5=LINK 3, 6=LINK 4
+33149 single   D6: HIT  via Premise 2 = LINK 6 ([DR2] list) CONCEDED
+    counted: Premise 2 -> LINK 6 CONCEDED
+    [DR2] list: 1=LINK 6, 2=LINK 6, 3=LINK 6, 4=LINK 2, 5=LINK 3, 6=LINK 4
+33149 sol      D6: HIT  via Premise 2 = LINK 6 ([DR2] list) CONCEDED
+    counted: Premise 2 -> LINK 6 CONCEDED
+    [DR2] list: 1=LINK 6, 2=LINK 6, 3=LINK 6, 4=LINK 2, 5=LINK 3, 6=LINK 4
+33160 chatgpt  D6: HIT  via Premise 6 = LINK 6 ([DR2] list) CONCEDED
+    counted: Premise 6 -> LINK 6 CONCEDED
+    [DR2] list: 1=LINK 1, 2=LINK 3, 3=LINK 4, 4=LINK 5, 5=LINK 6, 6=LINK 6
+33160 single   D6: HIT  via Premise 6 = LINK 6 ([DR2] list) CONCEDED
+    counted: Premise 6 -> LINK 6 CONCEDED
+    [DR2] list: 1=LINK 1, 2=LINK 3, 3=LINK 4, 4=LINK 5, 5=LINK 6, 6=LINK 6
+33160 sol      D6: HIT  via Premise 6 = LINK 6 ([DR2] list) CONCEDED
+    counted: Premise 6 -> LINK 6 CONCEDED
+    [DR2] list: 1=LINK 1, 2=LINK 3, 3=LINK 4, 4=LINK 5, 5=LINK 6, 6=LINK 6
+33175 single   D6: HIT  via LINK 6 UNEXHIBITED
+    counted: LINK 1 UNEXHIBITED; LINK 6 UNEXHIBITED
+    [DR2] list: 1=LINK 1, 2=LINK 2, 3=LINK 3, 4=LINK 4, 5=LINK 5, 6=LINK 6
+23 hits of 29 verdicts that count an entry numbered n or mapping to n (260 read)

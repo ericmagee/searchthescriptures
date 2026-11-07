@@ -1,7 +1,8 @@
 // pkgKSC build (see src_KSC.js; W3 B6, design approved Wall 2665). Every edit is text-exact (it must match once or the build stops), so the
 // build runs on any base that holds these anchors, in any order with pkgPTA, pkgL2R and pkgLNX; W4 runs it on its own fresh fetch-back.
 // Default base: fetchback_live_1b49671d with pkgSLA laid on it (= live n24). Run from wall2024/: node pkgKSC/build_KSC.cjs [in] [out]
-//  Send Back Build, Alt: E-KSC items, ENFORCED (5 edits). Send Back Record, Alt: the cure, counted once in drv_uncured, AUDIT v48 (7 edits).
+//  Send Back Build, Alt: E-KSC items (5 edits). Send Back Record, Alt: the cure, AUDIT v48; TRIAL (W3 2671): recorded, not counted in drv_uncured,
+//  until KSC.LIVE is set true after one run with zero false items (7 edits).
 //  The 6 sbApply nodes: an E-KSC change goes over the judge's one line with its label (1 edit). Commitment 15 in the 15 PART2 nodes (1 edit).
 //  Extract Independent Verdict: the single judge, a review line, record-only (1 edit).
 const fs=require('fs');const crypto=require('crypto');const sha=s=>crypto.createHash('sha256').update(s).digest('hex').slice(0,16);
@@ -20,7 +21,9 @@ for(const [name,role] of [['Send Back Build','panel'],['Alt Send Back Build','al
   +"try{const __tx=r=>String(r||'').replace(/\\\\n/g,'\\n').replace(/\\\\\"/g,'\"');\n"
   +" for(const __b of ((PCC&&PCC.bodies)||[])){let __p;try{__p=(typeof __b==='string'?JSON.parse(__b):__b).payload||{};}catch(e){continue;}if(!__p.judge_seat)continue;\n"
   +"  const __t=__tx(__p.verdict_raw).split('\\n').filter(l=>!/^\\s*\\[(?:AUDIT|EXTRACTOR)\\b/.test(l)).join('\\n');\n"
-  +"  for(const __k of KSC.items(__t))dis.push({seat:__p.judge_seat,seat_role:'"+role+"',rule:'E-KSC',item:'KEYSTONE D'+__k.n+' on LINK '+__k.n+' '+__k.tag,flagged_line:__k.keystone_line,response_line:__k.conceded_line,cure_reason:'ENFORCER DISAGREE: KEYSTONE CONSISTENCY (pkgKSC, Commitment 15): KEYSTONE D'+__k.n+' STANDS while the same verdict\\'s CONCEDED LINKS counts LINK '+__k.n+' '+__k.tag+': \"'+String(__k.conceded_line).slice(0,300)+'\"',ksc:__k});}}catch(e){}\n"
+  +"  const __j=PB&&Array.isArray(PB.judges)?PB.judges.find(q=>q.seat===__p.judge_seat):null;const __pt=__j&&__j.body&&Array.isArray(__j.body.messages)?__j.body.messages.map(m=>typeof m.content==='string'?m.content:(Array.isArray(m.content)?m.content.map(c=>c&&c.text||'').join('\\n'):'')).join('\\n'):'';\n"
+  +"  const __dr2=__pt?(UND.rounds(__pt).DR2||''):''; /* W3 2671: a Premise p of CONCEDED LINKS is read through the [DR2] list's LINK labels */\n"
+  +"  for(const __k of KSC.items(__t,__dr2))dis.push({seat:__p.judge_seat,seat_role:'"+role+"',rule:'E-KSC',item:'KEYSTONE D'+__k.n+' on LINK '+__k.n+' '+__k.tag,flagged_line:__k.keystone_line,response_line:__k.conceded_line,cure_reason:'ENFORCER DISAGREE: KEYSTONE CONSISTENCY (pkgKSC, Commitment 15'+(KSC.LIVE?'':'; TRIAL')+'): KEYSTONE D'+__k.n+' STANDS while the same verdict\\'s CONCEDED LINKS counts '+__k.via+' '+__k.tag+': \"'+String(__k.conceded_line).slice(0,300)+'\"',ksc:__k});}}catch(e){}\n"
   +"/* pkgIMP (Eric 17:08 CST; W3 2627; Commitment 14)",name);
  s=rep(s,"imp:x.imp||null,src:x}));","imp:x.imp||null,ksc:x.ksc||null,src:x}));",name);
  s=rep(s,"const __impR=i=>","const __kscR=i=>!i.ksc?'':'\\n'+KSC.note(i.ksc); /* pkgKSC */\nconst __impR=i=>",name);
@@ -39,8 +42,8 @@ for(const [name,bsrc] of [['Send Back Record',"$('Panel Cure Check').first().jso
  s=rep(s,"/* pkgIMP: each seat's uncured imposed-requirement items","/* pkgKSC: each seat's uncured keystone consistency items are added to its drv_uncured */\n"
   +"if(Object.keys(KSCM).length){bodies=(bodies||(Array.isArray(PASS.bodies)?PASS.bodies:"+bsrc+")).slice();\n"
   +" for(const [seat,its] of Object.entries(KSCM)){const i=bodies.findIndex(x=>{try{return JSON.parse(x).payload.judge_seat===seat;}catch(e){return false;}});if(i<0)continue;const bb=JSON.parse(bodies[i]);const p=bb.payload;\n"
-  +"  p.drv_uncured=(p.drv_uncured||0)+its.length;anySil=true;ksc_counted.push({seat,items:its});\n"
-  +"  p.verdict_raw=p.verdict_raw+'\\n[AUDIT v48: KEYSTONE CONSISTENCY UNCURED (pkgKSC, Commitment 15) -- SEAT: '+seat+'; ITEMS: '+its.join('; ')+'; counted in drv_uncured. REVIEW THIS ROW.]';bodies[i]=JSON.stringify(bb);}}\n"
+  +"  if(KSC.LIVE){p.drv_uncured=(p.drv_uncured||0)+its.length;anySil=true;}ksc_counted.push({seat,items:its,counted:KSC.LIVE}); /* W3 2671: TRIAL for one run, recorded and not counted */\n"
+  +"  p.verdict_raw=p.verdict_raw+'\\n[AUDIT v48: KEYSTONE CONSISTENCY UNCURED (pkgKSC, Commitment 15'+(KSC.LIVE?'':'; TRIAL')+') -- SEAT: '+seat+'; ITEMS: '+its.join('; ')+(KSC.LIVE?'; counted in drv_uncured':'; TRIAL rule: recorded, not counted in drv_uncured; it removes no seat')+'. REVIEW THIS ROW.]';bodies[i]=JSON.stringify(bb);}}\n"
   +"/* pkgIMP: each seat's uncured imposed-requirement items",name);
  s=rep(s,"imp_counted},sb_rows","imp_counted,ksc_counted},sb_rows",name);return s;},7);
 // ---- sbApply: an E-KSC change goes over the judge's one line with the same label ----
@@ -51,7 +54,7 @@ for(const name of ['Gate Build','Gate Record','Alt Gate Build','Alt Gate Record'
 const C15=`
 
 ### Commitment 15. My keystone does not stand on a premise I count unexhibited or conceded.
-The keystone is the defender's last declared link, D<n>. I do not grade KEYSTONE: D<n> STANDS while my own CONCEDED LINKS line counts LINK <n> UNEXHIBITED, CONCEDED or WITHDRAWN: a link my verdict counts as not shown cannot be the one the chain stands on. When the record leaves LINK <n> unexhibited, my KEYSTONE line grades D<n> WITHDRAWN or BROKEN; when I find LINK <n> shown, my CONCEDED LINKS line does not count it. This binds both sides alike. The system reads these two lines in code and sends back each verdict that has both; a KEEP does not cure the item, and an item left uncured is recorded against my seat.`;
+The keystone is the defender's last declared link, D<n>. I do not grade KEYSTONE: D<n> STANDS while my own CONCEDED LINKS line counts LINK <n> UNEXHIBITED, CONCEDED or WITHDRAWN: a link my verdict counts as not shown cannot be the one the chain stands on. A "LINK <n>" in my CONCEDED LINKS line is D<n>; a "Premise <p>" there is the p-th entry of the challenger's [DR2] UNSUPPORTED-L4 PREMISES list and is read as the link its own LINK label names. When the record leaves LINK <n> unexhibited, my KEYSTONE line grades D<n> WITHDRAWN or BROKEN; when I find LINK <n> shown, my CONCEDED LINKS line does not count it. This binds both sides alike. The system reads these two lines in code and sends back each verdict that has both; a KEEP does not cure the item, and an item left uncured is recorded against my seat.`;
 const C15JS=C15.replace(/\\/g,'\\\\').replace(/"/g,'\\"').replace(/\n/g,'\\n');const A15="an item left uncured is recorded against my seat.\\n\\nA sentence the system marks VOID (pkgBAR)";
 for(const name of ['Panel Build','Reserve Build','Panel Cure Build 1','Panel Cure Build 2','Panel Cure Build 3','Alternate Build','Alternate Cure Build','Accept Build','Accept Check','Accept Return Build','Accept Final','Accept DS Return Build','Enforcer Build','Judge Enforcer Build','Alt Judge Enforcer Build'])
  node(name,s0=>rep(s0,A15,"an item left uncured is recorded against my seat."+C15JS+"\\n\\nA sentence the system marks VOID (pkgBAR)",name),1);
@@ -59,6 +62,6 @@ for(const name of ['Panel Build','Reserve Build','Panel Cure Build 1','Panel Cur
 node('Extract Independent Verdict',s0=>rep(SRC+s0,"  if(k===0){raw+='\\n\\n[EXTRACTOR v16: KEYSTONE SAYS BROKEN BUT THE CLAUSE LINE SAYS k=0. REVIEW THIS ROW.]';}\n }\n}\n",
  "  if(k===0){raw+='\\n\\n[EXTRACTOR v16: KEYSTONE SAYS BROKEN BUT THE CLAUSE LINE SAYS k=0. REVIEW THIS ROW.]';}\n }\n}\n"
  +"/* pkgKSC (W3 2665): the single judge has no send-back; a keystone graded STANDS on a premise its own CONCEDED LINKS line counts is recorded here, record-only */\n"
- +"try{for(const __k of KSC.items(String(raw).split('\\n').filter(l=>!/^\\s*\\[(?:AUDIT|EXTRACTOR)\\b/.test(l)).join('\\n')))raw+='\\n\\n[AUDIT v48: SINGLE JUDGE (second opinion): KEYSTONE CONSISTENCY (E-KSC, Commitment 15; record-only, the single judge has no send-back) -- KEYSTONE D'+__k.n+' STANDS while CONCEDED LINKS counts LINK '+__k.n+' '+__k.tag+'. REVIEW THIS ROW.]';}catch(e){}\n","Extract Independent Verdict"),2);
+ +"try{for(const __k of KSC.items(String(raw).split('\\n').filter(l=>!/^\\s*\\[(?:AUDIT|EXTRACTOR)\\b/.test(l)).join('\\n'),prev&&prev.gr2))raw+='\\n\\n[AUDIT v48: SINGLE JUDGE (second opinion): KEYSTONE CONSISTENCY (E-KSC, Commitment 15; record-only, the single judge has no send-back) -- KEYSTONE D'+__k.n+' STANDS while CONCEDED LINKS counts '+__k.via+' '+__k.tag+'. REVIEW THIS ROW.]';}catch(e){}\n","Extract Independent Verdict"),2);
 fs.writeFileSync(OUTW,JSON.stringify(w));fs.writeFileSync('pkgKSC/plan_KSC.json',JSON.stringify(plan,null,1));
 for(const p of plan.nodes)console.log(p.node.padEnd(28),p.base_sha,'->',p.final_sha,p.edits+' edit'+(p.edits>1?'s':''));console.log(plan.nodes.length+' nodes');

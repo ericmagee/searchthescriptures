@@ -4,25 +4,25 @@
   {
    "node": "Send Back Build",
    "base_sha": "ffd1c4e09efb66f4",
-   "final_sha": "ce142e473ed5a396",
+   "final_sha": "e2c02fb0bc73df19",
    "edits": 5
   },
   {
    "node": "Alt Send Back Build",
    "base_sha": "2795e04b41ce9013",
-   "final_sha": "e2d01f6b96cef2dd",
+   "final_sha": "524b3d175cd35635",
    "edits": 5
   },
   {
    "node": "Send Back Record",
    "base_sha": "4bd32270790b4243",
-   "final_sha": "5ba9508fec8a04ff",
+   "final_sha": "cae176bcd27e16a2",
    "edits": 7
   },
   {
    "node": "Alt Send Back Record",
    "base_sha": "a6c10d650d69cfd3",
-   "final_sha": "ca3e71e74a5baaa7",
+   "final_sha": "1007edf72c9a5390",
    "edits": 7
   },
   {
@@ -64,97 +64,97 @@
   {
    "node": "Panel Build",
    "base_sha": "11dc0d211828b3f6",
-   "final_sha": "2255d59f254d22b5",
+   "final_sha": "3cd74c4178462b07",
    "edits": 1
   },
   {
    "node": "Reserve Build",
    "base_sha": "953b226741f6a8bf",
-   "final_sha": "e344ff965062d43d",
+   "final_sha": "19272094c902564d",
    "edits": 1
   },
   {
    "node": "Panel Cure Build 1",
    "base_sha": "62aeaeca0382dc2f",
-   "final_sha": "e99c1d23de176ed3",
+   "final_sha": "ba9c0bb953c9ac9a",
    "edits": 1
   },
   {
    "node": "Panel Cure Build 2",
    "base_sha": "6bda41a65bc2fa4a",
-   "final_sha": "64e5a784c296495e",
+   "final_sha": "1eaeb92ee1cce60d",
    "edits": 1
   },
   {
    "node": "Panel Cure Build 3",
    "base_sha": "6f84d14e43add188",
-   "final_sha": "a03f6ab1bd249823",
+   "final_sha": "668889691564a676",
    "edits": 1
   },
   {
    "node": "Alternate Build",
    "base_sha": "79fce015c75f5667",
-   "final_sha": "12cecf6763047282",
+   "final_sha": "62a60230ab74f206",
    "edits": 1
   },
   {
    "node": "Alternate Cure Build",
    "base_sha": "dadea445c312d0af",
-   "final_sha": "271216ff4a2ccaa0",
+   "final_sha": "5152ac396a80434b",
    "edits": 1
   },
   {
    "node": "Accept Build",
    "base_sha": "c97fb68dcc5ad5e3",
-   "final_sha": "c3143ec16704399d",
+   "final_sha": "e985bc024127bb76",
    "edits": 1
   },
   {
    "node": "Accept Check",
    "base_sha": "16c5f53852cd6a86",
-   "final_sha": "958114104c0470ec",
+   "final_sha": "25bca4fd30bfc06e",
    "edits": 1
   },
   {
    "node": "Accept Return Build",
    "base_sha": "a962e8d3c2b9462d",
-   "final_sha": "54775b4b1bcbb4d7",
+   "final_sha": "62c8fce3a2cb927c",
    "edits": 1
   },
   {
    "node": "Accept Final",
    "base_sha": "44e11424ef186077",
-   "final_sha": "1636b68098dcf7f4",
+   "final_sha": "fb2ff1d22582b9f2",
    "edits": 1
   },
   {
    "node": "Accept DS Return Build",
    "base_sha": "f1a62ec311a84373",
-   "final_sha": "a9818ea9843843f7",
+   "final_sha": "d52b65b6b010c704",
    "edits": 1
   },
   {
    "node": "Enforcer Build",
    "base_sha": "54bd5061e754eddc",
-   "final_sha": "46cabaacafc2f49b",
+   "final_sha": "fc7a0bc4b9b8481d",
    "edits": 1
   },
   {
    "node": "Judge Enforcer Build",
    "base_sha": "717207986d662b43",
-   "final_sha": "2452c27e56d6607f",
+   "final_sha": "6a9be556af92290a",
    "edits": 1
   },
   {
    "node": "Alt Judge Enforcer Build",
    "base_sha": "2bc2886fb21fa258",
-   "final_sha": "05143c160010b8d1",
+   "final_sha": "a65089513623ea9c",
    "edits": 1
   },
   {
    "node": "Extract Independent Verdict",
    "base_sha": "15148253b862f19f",
-   "final_sha": "191bf4b14c231db2",
+   "final_sha": "cf474870d3559702",
    "edits": 2
   }
  ]
