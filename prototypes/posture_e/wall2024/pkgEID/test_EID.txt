@@ -1,0 +1,12 @@
+OK   Judge_Enforcer_Build.js: reply form says ITEM id, id alone
+OK   Alt_Judge_Enforcer_Build.js: reply form says ITEM id, id alone
+     base  NO VERDICT 51 of 207; patched 0 of 207; eid {"bare_number":0,"seat_beside_id":30,"mapped_by_order":21,"calls_mapped":[3],"unmapped":0}
+OK   33389: call 3 (21 judge-name lines) maps by order, call 4 (30 "ID (seat)" lines) is read; NO VERDICT 51 -> 0
+OK   33389: rows of calls 1, 2, 5 unchanged
+OK   mismatch control (judge order differs): stays NO VERDICT, label fault named
+OK   count control (one line missing): stays NO VERDICT
+OK   "ID (seat)" labels: base drops all 51, patched reads all 51
+OK   same verdicts whichever label form
+OK   33249 bare "Y1"/"Y2" labels read as Y1.1/Y2.1
+OK   ambiguity control (Y1.1 and Y1.2 in the call): "Y1" stays unread, label fault named
+10 OK, 0 FAIL

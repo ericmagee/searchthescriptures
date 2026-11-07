@@ -1,0 +1,55 @@
+SKIP 33040 main Referenced node is unexecuted: Enforcer Record
+SKIP 33040 Alt  Referenced node is unexecuted: Alt Judge Enforcer Build
+SKIP 33060 main Referenced node is unexecuted: Enforcer Record
+SKIP 33083 main Referenced node is unexecuted: Enforcer Record
+SKIP 33107 main Referenced node is unexecuted: Enforcer Record
+SKIP 33129 main Referenced node is unexecuted: Enforcer Record
+SKIP 33149 main Referenced node is unexecuted: Enforcer Record
+SKIP 33160 main Referenced node is unexecuted: Enforcer Record
+SKIP 33197 main Referenced node is unexecuted: Enforcer Record
+OK   33218 main: rows 221, NO VERDICT 1 -> 1; eid {"bare_number":0,"seat_beside_id":0,"mapped_by_order":0,"calls_mapped":[],"unmapped":0}
+OK   33222 main: rows 258, NO VERDICT 89 -> 89; eid {"bare_number":0,"seat_beside_id":0,"mapped_by_order":0,"calls_mapped":[],"unmapped":0}
+OK   33222 Alt: rows 77, NO VERDICT 0 -> 0; eid {"bare_number":0,"seat_beside_id":0,"mapped_by_order":0,"calls_mapped":[],"unmapped":0}
+OK   33249 main: rows 211, NO VERDICT 2 -> 0; eid {"bare_number":2,"seat_beside_id":0,"mapped_by_order":0,"calls_mapped":[],"unmapped":0}
+OK   33249 Alt: rows 90, NO VERDICT 3 -> 0; eid {"bare_number":0,"seat_beside_id":3,"mapped_by_order":0,"calls_mapped":[],"unmapped":0}
+OK   33261 main: rows 257, NO VERDICT 0 -> 0; eid {"bare_number":0,"seat_beside_id":0,"mapped_by_order":0,"calls_mapped":[],"unmapped":0}
+OK   33261 Alt: rows 80, NO VERDICT 0 -> 0; eid {"bare_number":0,"seat_beside_id":0,"mapped_by_order":0,"calls_mapped":[],"unmapped":0}
+OK   33276 main: rows 0, NO VERDICT 0 -> 0; eid {"bare_number":0,"seat_beside_id":0,"mapped_by_order":0,"calls_mapped":[],"unmapped":0}
+OK   33276 Alt: rows 0, NO VERDICT 0 -> 0; eid {"bare_number":0,"seat_beside_id":0,"mapped_by_order":0,"calls_mapped":[],"unmapped":0}
+OK   33289 main: rows 0, NO VERDICT 0 -> 0; eid {"bare_number":0,"seat_beside_id":0,"mapped_by_order":0,"calls_mapped":[],"unmapped":0}
+OK   33289 Alt: rows 0, NO VERDICT 0 -> 0; eid {"bare_number":0,"seat_beside_id":0,"mapped_by_order":0,"calls_mapped":[],"unmapped":0}
+OK   33299 main: rows 204, NO VERDICT 0 -> 0; eid {"bare_number":0,"seat_beside_id":0,"mapped_by_order":0,"calls_mapped":[],"unmapped":0}
+OK   33299 Alt: rows 76, NO VERDICT 47 -> 47; eid {"bare_number":0,"seat_beside_id":0,"mapped_by_order":0,"calls_mapped":[],"unmapped":0}
+OK   33311 main: rows 0, NO VERDICT 0 -> 0; eid {"bare_number":0,"seat_beside_id":0,"mapped_by_order":0,"calls_mapped":[],"unmapped":0}
+OK   33311 Alt: rows 0, NO VERDICT 0 -> 0; eid {"bare_number":0,"seat_beside_id":0,"mapped_by_order":0,"calls_mapped":[],"unmapped":0}
+OK   33322 main: rows 0, NO VERDICT 0 -> 0; eid {"bare_number":0,"seat_beside_id":0,"mapped_by_order":0,"calls_mapped":[],"unmapped":0}
+OK   33345 main: rows 241, NO VERDICT 0 -> 0; eid {"bare_number":0,"seat_beside_id":0,"mapped_by_order":0,"calls_mapped":[],"unmapped":0}
+OK   33345 Alt: rows 96, NO VERDICT 0 -> 0; eid {"bare_number":0,"seat_beside_id":0,"mapped_by_order":0,"calls_mapped":[],"unmapped":0}
+OK   33371 main: rows 195, NO VERDICT 0 -> 0; eid {"bare_number":0,"seat_beside_id":0,"mapped_by_order":0,"calls_mapped":[],"unmapped":0}
+OK   33371 Alt: rows 71, NO VERDICT 11 -> 0; eid {"bare_number":0,"seat_beside_id":0,"mapped_by_order":11,"calls_mapped":[2],"unmapped":0}
+OK   33389 main: rows 207, NO VERDICT 51 -> 0; eid {"bare_number":0,"seat_beside_id":30,"mapped_by_order":21,"calls_mapped":[3],"unmapped":0}
+OK   33218 main Build: only the reply-form sentence differs (5 calls)
+OK   33218 Alt Build: only the reply-form sentence differs (1 calls)
+OK   33222 main Build: only the reply-form sentence differs (6 calls)
+OK   33222 Alt Build: only the reply-form sentence differs (3 calls)
+OK   33249 main Build: only the reply-form sentence differs (5 calls)
+OK   33249 Alt Build: only the reply-form sentence differs (3 calls)
+OK   33261 main Build: only the reply-form sentence differs (7 calls)
+OK   33261 Alt Build: only the reply-form sentence differs (3 calls)
+OK   33276 main Build: only the reply-form sentence differs (1 calls)
+OK   33276 Alt Build: only the reply-form sentence differs (1 calls)
+OK   33289 main Build: only the reply-form sentence differs (1 calls)
+OK   33289 Alt Build: only the reply-form sentence differs (1 calls)
+OK   33299 main Build: only the reply-form sentence differs (5 calls)
+OK   33299 Alt Build: only the reply-form sentence differs (2 calls)
+OK   33311 main Build: only the reply-form sentence differs (1 calls)
+OK   33311 Alt Build: only the reply-form sentence differs (1 calls)
+OK   33322 main Build: only the reply-form sentence differs (1 calls)
+OK   33322 Alt Build: only the reply-form sentence differs (1 calls)
+OK   33345 main Build: only the reply-form sentence differs (5 calls)
+OK   33345 Alt Build: only the reply-form sentence differs (3 calls)
+OK   33371 main Build: only the reply-form sentence differs (4 calls)
+OK   33371 Alt Build: only the reply-form sentence differs (2 calls)
+OK   33389 main Build: only the reply-form sentence differs (5 calls)
+OK   33389 Alt Build: only the reply-form sentence differs (1 calls)
+NO VERDICT total 204 -> 137; 45 OK, 0 FAIL
