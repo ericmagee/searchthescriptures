@@ -1,0 +1,317 @@
+function	via_reader	nodes	regex
+__kfHas	no	22	\s+vs\.?\s+
+__kg1lCount	no	6	^(?:[-\u2022]|\d+[.)])?\s*CHALLENGER CONCEDED LINKS\s*:
+__kg1lCount	no	6	^(?:[-\u2022]|\d+[.)])?\s*(?:DEFENDER\s+)?CONCEDED LINKS\s*:
+__l1qSq	no	19	\b([CD]R[1-4])\b
+__rn	no	19	^(?:grant|concede|withdraw|drop)$
+__tie421	no	19	LINK BROKEN$
+__W	no	22	\bGROUND\s*:
+__W	no	22	^GROUND\s*:\s*
+__W	no	22	^ANSWER CHECK\s*:
+__W	no	22	^(MEETS|MISSES|FAILS|UNPROVEN)\b
+__W	no	22	^KEYSTONE\s*:\s*(D\d+)\s*(?:--|\u2014|\u2013|-|:)?\s*(STANDS|BROKEN|WITHDRAWN)\b
+__W	no	22	^KEYSTONE\s*:
+__W	no	22	^RESULT\s*:\s*(DEFENDER WINS|CHALLENGER WINS|UNDERDETERMINED)\b
+__W	no	22	^RESULT\s*:
+__W	no	22	^CORRECTED RESULT\s*:
+__W	no	22	^CORRECTED COUNT\s*:\s*(DEFENDER|CHALLENGER)\s+(\d+)
+__W	no	22	^CORRECTED COUNT\s*:
+__W	no	22	^CORRECTED STANDING\s*:
+__W	no	22	^RETRACTED\s*:
+__W	no	22	^NOT PRESSED\s*:\s*(.+?)(?:\s*(?:--|\u2014|\u2013)\s*(.*))?$
+__W	no	22	^PRESSED\s*:
+__W	no	22	^PRESSED\s*:\s*
+__W	no	22	^(DEFENSE|CHALLENGE) STANDING\s*:
+__W	no	22	^(CHALLENGER CONCEDED LINKS|CONCEDED LINKS)\s*:\s*(\d+)\b
+__W	no	22	^(CHALLENGER )?CONCEDED LINKS\s*:
+__W	no	22	premise\s+(\d+)\s+(?:is\s+)?(UNEXHIBITED|CONCEDED|VOID|SPARED)
+__W	no	22	^CLAUSE\s*:\s*(BROKEN-1|BROKEN-2|PARTIAL-1|PARTIAL-2|PARTIAL-3|HELD-1)?
+__W	no	22	\s*(?:--\s*)?(COUNTED|TOUCHES NO LINK)\b\s*(?:--\s*)?(.*)$
+__W	no	22	^(STATEMENT|RESPONSE)\s*:\s*(.*)$
+__W	no	22	^(DEFENDER|CHALLENGER) CHAIN MARK\s*:\s*([A-Z][A-Z-]*)\b
+__W	no	22	^SHORT\s*:\s*(.*)$
+__W	no	22	((?:defen[cs]e|defender|challenger|rounds?|block|reply|link\s+round|\[?[CD]R\d\]?|\(?[CD]R\d\)?)[^;.]{0,60}?\b(?:left|leaves|leave)\s+(?:\S+\s+){0,6}?)unstated\b
+__W	no	22	(\b(?:went|goes|go|was|were|remains?|remained|stays?|stayed)\s+)unstated(?=\s+(?:in|by|at)\s+(?:(?:the\s+)?(?:defen[cs]e|defender|challenger|link\s+round|rounds?)\b|\[?\(?[CD]R\d))
+__W	no	1	CHALLENGER\s+CONCEDED\s+LINKS
+__W	no	1	^[ \t]*(?:[-•]|\d+[.)])?[ \t]*D\d+\s+VS\.?\s+C\d+\b
+__W	no	1	^[ \t]*COLLISION POINTS[ \t]*:?[ \t]*(?:[-•]|\d+[.)])?[ \t]*D\d+\s+VS\.?\s+C\d+\b
+__W	no	1	^[ \t]*(?:#+[ \t]*|[-•][ \t]*)?(CITATION CHECK|OUT-OF-ROUND CONCESSIONS|CHALLENGER CHAIN MARK|KEYSTONE|CLAUSE|RESULT|DEFENSE STANDING|CHALLENGE STANDING|CONCEDED LINKS|CHALLENGER CONCEDED LINKS|LINK AUDIT)\b
+__W	no	1	WITHDRAWN AFTER AN UNANSWERED WITNESS
+__W	no	1	(DEFENDER LINK BROKEN|CHALLENGER LINK BROKEN|UNDERDETERMINED|DEFENDER LINK STANDS)
+__W	no	1	^(WITHDRAWN|STANDS)\b
+__W	no	1	^\s*#*\s*\**\s*UNSUPPORTED-L4 PREMISES\s*:?\s*\**\s*:?\s*$
+__W	no	1	^\s*(?:#+\s*)?\**\s*PREMISE COUNT
+__W	no	1	^[ \t#>]*CHALLENGER.{0,2}S UNSUPPORTED-L4 PREMISES[ \t:]*$
+__W	no	1	^[ \t#>•-]*LINK[ \t]+([0-9]+|NONE)[ \t]*(?:\[[ \t]*PREMISE[ \t]*([0-9]+)[ \t]*\])?[ \t]*:?[ \t]*(SUPPORTED|CONCEDED)\b
+__W	no	1	^PREMISE
+__W	no	1	^[ \t]*(?:#+[ \t]*|[-•][ \t]*)?OUT-OF-ROUND CONCESSIONS[ \t]*:?[ \t]*\n?([\s\S]*?)(?=\n[ \t]*(?:#+[ \t]*|[-•][ \t]*)?(?:DEFENDER CHAIN MARK|CHALLENGER CHAIN MARK|CITATION CHECK|COLLISION POINTS)\b|(?![\s\S]))
+__W	no	1	^[ \t]*(?:#+[ \t]*|[-•][ \t]*)?CHALLENGER CHAIN MARK[ \t]*:?[ \t]*(FOOTED|FORGED|STRAINED|SLACK)\b
+__W	no	1	^[ \t]*(?:#+[ \t]*|[-•][ \t]*)?DEFENDER CHAIN MARK[ \t]*:?[ \t]*(FOOTED|FORGED|STRAINED|SLACK)\b
+ac	no	6	^(?:[-•]|\d+[.)])?\s*ANSWER CHECK\s*:\s*(.+?)\s*(?:--|—)\s*\[\s*([CD]R[1-4])\s*\]
+block	no	2	^\s*(?:[-\u2022>]\s*)?\**\s*CHALLENGER CONCEDED LINKS\**\s*:\s*\**\s*(\d+)?
+block	no	2	^\s*(?:[-\u2022>]\s*)?\**\s*(?:DEFENDER )?CONCEDED LINKS\**\s*:\s*\**\s*(\d+)?
+blockAt	no	22	^[ \t>*#_-]*(?:LINK\s+(?:\d+|none)\b[^\n]*|\**\s*\d+[.)]\s+(?:LINK\b)?[^\n]*|#{1,4}\s[^\n]*|UNSUPPORTED-?\s*\[?L4\]?\s*PREMISES[^\n]*|CHALLENGER.{0,2}S\s+UNSUPPORTED[^\n]*)$
+cAudit	no	2	^[*_>-]*\s*(D\d+)\s+vs\s+(C\d+(?:\s*\/\s*C\d+)*)\s*(?:\(([^)]*)\))?
+CI_LINE	no	22	^\s*(?:[-*•>]|\d+[.)])?\s*(NOT PRESSED|PRESSED)\s*:\s*(.+)$
+CI_PRESSED	no	22	^(.+?)\s*(?:--|—|–)\s*\[?\s*((?:CR|DR)[1-4])\s*\]?\s*(?:--|—|–)\s*["“](.+)["”]\s*(?:--|—|–)\s*(UNANSWERED|ANSWERED\s+IN\s*\[?\s*((?:CR|DR)[1-4])\s*\]?)\s*\.?$
+ciCountSection	no	22	^[ \t>#-]*CONCEDED LINKS[ \t]*:
+ciCountSection	no	22	^[ \t>#-]*CHALLENGER CONCEDED LINKS[ \t]*:
+ciForm	no	22	^NOT PRESSED$
+ciForm	no	22	\bvs\.?\s+C\d
+ciPlist	no	3	CHALLENGER.{0,2}S\s+UNSUPPORTED-?\s*\[?L4\]?\s*PREMISES
+ciPlist	no	3	UNSUPPORTED-?\s*\[?L4\]?\s*PREMISES
+ciRulings	no	22	^UNANSWERED$
+CL	no	1	^CONCEDED LINKS\s*:(.*)$
+CM	no	6	^\s*(?:[-\u2022]|\d+[.)])?\s*(DEFENDER|CHALLENGER)\s+CHAIN MARK\s*:
+CNT_HEAD	no	22	^[ \t>#-]*(CHALLENGER CONCEDED LINKS|CONCEDED LINKS)\s*:
+cntItems	no	22	\bCONCEDED\s*\(\s*stated\s*\)
+countClaims	no	22	\[L2\]|\b[GH]\d{1,5}\b|[Ͱ-Ͽἀ-῿֐-׿]|[*_][a-zà-ɏḀ-ỿ]
+COUNTED	no	2	^(UNEXHIBITED|CONCEDED|WITHDRAWN)$
+CURE_KEY	no	19	^(RESTATED|RETRACTED|CORRECTED RESULT|CORRECTED COUNT|CORRECTED STANDING|NOT PRESSED|PRESSED|SHORT|STATEMENT|RESPONSE)[ \t]*:[ \t]*(.*)$
+cureBroken	no	19	(DEFENDER LINK BROKEN|CHALLENGER LINK BROKEN|UNDERDETERMINED)
+cureBroken	no	19	^(?:[-•]|\d+[.)])?\s*(D\d+\s+VS\.?\s+C\d+)
+cureCorrected	no	19	^(?:retracted|regraded LINK BROKEN)
+cureLines	yes	19	\bLINK\s+BROKEN\b
+cureLines	yes	19	\bnot\s+(?:a\s+)?(?:\S+\s+)?LINK\s+BROKEN\b
+cureLines	yes	19	\b(?:(?:DEFENDER|CHALLENGER)\s+)?LINK\s+BROKEN\s+(?:grade|ruling|mark|label|line|verdict)s?\b
+cureLines	yes	19	\b(UNDERDETERMINED|STANDS)\b
+cureLines	yes	19	^(?:re)?grade[sd]?\s+(?:to\s+)?(?:UNDERDETERMINED|STANDS)\s*(?:--|—|-|:)?\s*
+cureLines	yes	19	^(DEFENDER LINK BROKEN|CHALLENGER LINK BROKEN|UNDERDETERMINED|STANDS)$
+cureReasoned	no	19	\b([CD]R[1-4])\b
+cureReasoned	no	19	^D(\d+) vs C(\d+)$
+cureReasoned	no	19	[\[(]?\b[CD]R[1-4]\b
+cureRecompute	no	19	LINK BROKEN$
+cureRecompute	no	19	^D\d+ vs C\d+$
+cureRecompute	no	19	^RESULT\s*:\s*(DEFENDER WINS|CHALLENGER WINS|UNDERDETERMINED)
+cureRecompute	no	19	^KEYSTONE\s*:\s*D\d+\s*(?:--|—|-|:)\s*WITHDRAWN\b
+cureRecompute	no	19	STANDING\s*:\s*([A-Z-]+)
+cureRecompute	no	19	^(?:CHALLENGER CONCEDED LINKS|CONCEDED LINKS)\s*:\s*(\d+)
+cureRecompute	no	19	\bRESULT\s*:
+cureSafe	no	19	;(\s*(?:SEAT|ITEM|RULE|RESULT|KINDS|WHY|LINE|STATEMENT|JUDGE STATEMENT):)
+cureSet	no	19	CORRECTED COUNT \d+ takes the premise out
+cureVerdicts	no	19	\s+vs\.?\s+
+cureVerdicts	no	19	LINK BROKEN$
+cureVerdicts	no	19	\b(?:SUPPORTED|NARROWED|SPARED|STANDS)\b
+cureVerdicts	no	19	\b(?:UNEXHIBITED|CONCEDED)\b
+cureVerdicts	no	19	^(?:[-•]\s*)?FORCED(?:\s*\(\s*Commitment\s+\d+\s*\))?\s*:
+cureVerdicts	no	19	^(?:[-•]\s*)?REFERENCE\s*:
+cureVerdicts	no	19	^\s*I\s+(?:do\s+not\s+claim|no\s+longer\s+claim|withdraw|grant|concede|drop)\b
+cureVerdicts	no	19	^\s*NOT\s+HELD\b
+cureVerdicts	no	19	\bCOUNTED\b
+cureVerdicts	no	19	\bTOUCHES\s+NO\s+LINK\b\s*:?\s*(.*)$
+cureVerdicts	no	19	^\s*NOT\s+HELD\b\s*(?:as\b[^:]*)?:?\s*(.*)$
+cureVerdicts	no	19	^\s*\w+\s+[CD]R\d+\s*:\s*
+cureVerdicts	no	19	^RESTATED\s*:\s*
+cureVerdicts	no	19	^[\s*`]*RESTATED\s*:\s*CITATION CHECK\b
+cureVerdicts	no	19	^D\d+
+dptCheck	no	6	ANSWER CHECK\s*:\s*((?:[1-3]\s)?[A-Za-z][A-Za-z ]*?)\s+(\d+):(\d+)\s*(?:--|\u2014)\s*\[\s*([CD]R[1-4])\s*\]
+dptCheck	no	6	MEANS\s*:\s*([\s\S]*?)(?:\s(?:--|\u2014)\s*ANSWER\s*:|$)
+dptCheck	no	6	LINK BROKEN
+DRV_NEG	no	22	\b(?:no|without|lacks?|lacking|not)\s+(?:\[L[1-4]\]\s*(?:or|and|\/)\s*)*$
+DRV_STATE	no	22	\b(?:do|does|did)\s+not\s+state\b|\bnot\s+stated\b|\bnever\s+states?\b|\bneither\s+states?\b|\bnor\s+states?\b|\bno\s+(?:\S+\s+){0,4}?(?:verse|row|witness|quotation|passage|text)s?\b(?:\s+\S+){0,4}?\s+(?:states?|names?)\
+drvBlocks	no	3	CHALLENGER.{0,2}S\s+UNSUPPORTED-?\s*\[?L4\]?\s*PREMISES
+drvBlocks	no	3	:\s*\**\s*CONCEDED\b
+drvBlocks	no	3	^LINK\s+\d+[^:\n]*:\s*\**\s*CONCEDED\b
+drvBroken	no	3	^[ \t>#-]*DEFENSE STANDING[ \t]*:[^\n]*?\bL\s*=\s*(\d+)
+drvBroken	no	3	^[ \t>#-]*CHALLENGE STANDING[ \t]*:[^\n]*?\bL\s*=\s*(\d+)
+drvBroken	no	3	(DEFENDER LINK BROKEN|CHALLENGER LINK BROKEN|UNDERDETERMINED)
+drvBroken	no	3	^(?:[-•]|\d+[.)])?\s*(D\d+\s+VS\.?\s+C\d+)
+drvBrokenPW	no	22	^(?:[-•]|\d+[.)])?\s*D(\d+)\s+vs\.?\s+C(\d+)\b
+drvBrokenPW	no	22	(DEFENDER LINK BROKEN|CHALLENGER LINK BROKEN|UNDERDETERMINED)
+drvChains	no	22	 vs C\d+$
+drvCheck	no	22	(DEFENDER LINK BROKEN|CHALLENGER LINK BROKEN|UNDERDETERMINED)
+drvCheck	no	22	^STANDS\b
+drvCheck	no	22	^(?:[-•]|\d+[.)])?\s*(D\d+\s+VS\.?\s+C\d+)
+drvCountLine	no	3	^[ \t>#-]*CONCEDED LINKS[ \t]*:.*$
+drvCountLine	no	3	^[ \t>#-]*CHALLENGER CONCEDED LINKS[ \t]*:.*$
+drvGround	no	22	\bGROUND\s*:
+drvLayersByTag	no	22	\[L[1-4]\]|\n\s*\n
+entries	no	22	^[\s*_]*PRESSED WITH\s*:\s*
+footLocal	no	22	\[L2\]|\b(?:Greek|Hebrew|Aramaic)\b|[Ͱ-Ͽἀ-῿֐-׿]|\b[GH]\d{2,5}\b
+FR	no	6	^\s*(?:[-\u2022]|\d+[.)])?\s*FORCED\b
+g4Unans2024	no	19	\bGROUND\s*:
+gateAnsGround2024	no	6	^(?:[-•]|\d+[.)])?\s*ANSWER CHECK\s*:\s*(.+?)\s*(?:--|—)\s*\[\s*([CD]R[1-4])\s*\]
+gateAnsGround2024	no	6	(?:--|—)\s*MEANS\s*:\s*NONE\b
+gateCure2024	no	6	^(?:[-•]|\d+[.)])?\s*CHALLENGER CONCEDED LINKS\s*:\s*[1-9]
+gateCure2024	no	6	CONCEDED LINKS\s*:\s*(\d+)
+gateForced2024	no	6	^FORCED(?:\s*\(\s*Commitment\s+\d+\s*\))?\s*:
+GR	no	6	^\s*(?:[-\u2022*]\s*|\d+[.)]\s*)?\**D\d+\s+vs\.?\s+C\d+\b(?:\s*\([^)\n]*\))?[^:\n(]*:\s*\**(?:DEFENDER LINK BROKEN|CHALLENGER LINK BROKEN|UNDERDETERMINED|STANDS|WITHDRAWN)\b
+GROUND_HEAD	no	22	^(?:[-•]|\d+[.)])?\s*(?:D\d+(?:\s+vs\.?\s+C\d+(?:\s*\/\s*C\d+)*)?(?:\s*\([^)]*\))?|KEYSTONE|RESULT|CLAUSE|REASONING|DEFENSE STANDING|CHALLENGE STANDING|CHALLENGER CONCEDED LINKS|CONCEDED LINKS|DEFENDER CHAIN MARK|CHALLEN
+id	no	6	^FORCED(?:\s*\(\s*Commitment\s+\d+\s*\))?\s*:\s*(D\d+)\s+vs\.?\s+(C\d+)
+k2Marks	no	2	CHALLENGER\s+CONCEDED\s+LINKS
+k2Marks	no	2	^[ \t]*(?:#+[ \t]*|[-•][ \t]*)?(CITATION CHECK|OUT-OF-ROUND CONCESSIONS|CHALLENGER CHAIN MARK|KEYSTONE|CLAUSE|RESULT|DEFENSE STANDING|CHALLENGE STANDING|CONCEDED LINKS|CHALLENGER CONCEDED LINKS|LINK AUDIT)\b
+k2Marks	no	2	(DEFENDER LINK BROKEN|CHALLENGER LINK BROKEN|UNDERDETERMINED)
+k2Marks	no	2	^(WITHDRAWN|STANDS)\b
+k2Marks	no	2	^\s*#*\s*\**\s*UNSUPPORTED-L4 PREMISES\s*:?\s*\**\s*:?\s*$
+k2Marks	no	2	^[ \t#>]*CHALLENGER.{0,2}S UNSUPPORTED-L4 PREMISES[ \t:]*$
+k2Marks	no	2	^[ \t#>•-]*LINK[ \t]+([0-9]+|NONE)[ \t]*(?:\[[ \t]*PREMISE[ \t]*([0-9]+)[ \t]*\])?[ \t]*:?[ \t]*(SUPPORTED|CONCEDED)\b
+k2Marks	no	2	^PREMISE
+kagCure	no	22	\bNOT HELD\b
+kagRow0	no	22	^ANSWER CHECK\s*:
+kagRow0	no	22	--\s*ANSWER\s*:
+kagRow0	no	22	^ANSWER CHECK\s*:\s*(.+?)\s*--
+kagRow0	no	22	^--\s*ANSWER\s*:\s*
+kcmtGrade2024	no	22	^RESULT\s*:.*\brecomputed\b
+kcmtGrade2024	no	22	^RESULT\s*:.*\bderived after the send-back\b
+kcmtGrade2024	no	22	^(?:DEFENSE|CHALLENGE)\s+STANDING\s*:
+kcmtGrade2024	no	22	^ANSWER CHECK\s*:
+kcmtGrade2024	no	22	\b(?:none|no\s+\w+(?:\s+\w+)?)\s+(?:(?:is|are|was|were)\s+)?(?:counted\s+as\s+)?(?:BROKEN|FORCED|MISSES|VOID|UNPROVEN)\b
+kcmtGrade2024	no	22	\bnot\s+(?:(?:graded|counted|ruled|held)\s+)?(?:(?:DEFENDER|CHALLENGER)\s+)?(?:LINK\s+)?(?:BROKEN|FORCED|MISSES|VOID|UNPROVEN)\b
+kcmtGrade2024	no	22	\b(BROKEN|FORCED|MISSES|VOID|UNPROVEN)\b
+kconLines2024	no	22	^\s*(?:[-•>]|\d+[.)])?\s*(CONTRADICTION\b|NOT HELD\b|REASSERTED IN\b|CONTRADICTIONS:\s*NONE FOUND)
+kconUnlabel	no	22	^\s*(?:[-•*>]\s*)?\**\s*(?:RESPONSE\**\s*:[^|\n]*\|\s*|STATEMENT\**\s*:\s*)\**\s*
+keyChecks	no	6	^KEYSTONE\s*:\s*(D\d+)\s*(?:--|—|-|:)?\s*(STANDS|BROKEN|WITHDRAWN)\b
+KFC_CB	no	22	(?:--|—|–)\s*CARRIED\s+BY\s*:\s*["“]([^"”]{3,}?)["”]
+kfcLines	no	22	^(?:[-•]|\d+[.)])?\s*FORCED(?:\s*\(\s*Commitment\s+\d+\s*\))?\s*:
+kfcLines	no	22	\s+vs\.?\s+
+kfcVerse	no	22	MEANS\s*:
+kffLines	no	22	^(?:[-•]|\d+[.)])?\s*FORCED(?:\s*\(\s*Commitment\s+\d+\s*\))?\s*:
+kffLines	no	22	\s+vs\.?\s+
+kfLines	no	22	^(?:[-•]|\d+[.)])?\s*FORCED(?:\s*\(\s*Commitment\s+\d+\s*\))?\s*:
+kfLines	no	22	D\d+\s+vs\.?\s+C\d+
+kfLines	no	22	\s+vs\.?\s+
+kfLines	no	22	^(?:[-•]|\d+[.)])?\s*D(\d+)\s+vs\.?\s+C(\d+)\b
+kfLines	no	22	LINK\s+BROKEN
+kfLines	no	22	\bGROUND\s*:(.*)$
+kfLines	no	22	\b(DEFENDER|CHALLENGER)\s+LINK\s+BROKEN
+kg4Split	no	19	\bGROUND\s*:([\s\S]*)$
+KK_GROUND	no	22	\d+:\d+|\[?\b[CD]R[1-4]\b\]?|\bround\b|\bLINK\s+\d|\[L[1-4]\]|\b(?:answered|unanswered|refuted|refutes|withdrawn|withdrew|withdraws|conceded|concedes|pressed|witness\w*|GROUND|because|since|exhibit\w*|footing|premise|cha
+KKJV_Q	no	22	^[\s,:;(\-–—]{0,6}(?:\[L1\]\s*)?(?:["“]([^"“”]{6,400})["”]|(?<![A-Za-z0-9])['‘](?!s\b|\s)((?:[^'‘’\n]|['’](?=[a-z])){6,400}?)['’](?![a-z]))
+kkLines	no	22	^KEYSTONE\s*:\s*D(\d+)\s*(?:--|—|-|:)\s*(STANDS|BROKEN|WITHDRAWN)\b\s*(?:--|—|-|:)?\s*(.*)$
+kl2Lines	no	22	\[L2\]
+kl2Lines	no	22	^\s*(?:[-•]|\d+[.)])?\s*[*_]*\s*D\d+\s+vs\.?\s+C\d+
+kl2Lines	no	22	D\d+\s+vs\.?\s+C\d+
+kl2Lines	no	22	\s+vs\.?\s+
+KN_SURR	no	22	\b(?:I\s+concede|concede[sd]?\s+(?:the\s+|this\s+)?link|withdraw\w*|surrender\w*|CONCEDED\b|I\s+yield|I\s+grant\s+the\s+link)
+KR_LINE	no	22	^\s*(?:[-•]|\d+[.)])?\s*REFERENCE\s*:\s*(.+?)\s*(?:--|—|–)\s*\[?\s*((?:CR|DR)[1-4])\s*\]?\s*(?:--|—|–)\s*(CONFIRMED|NOT CONFIRMED)\s*(?:--|—|–)\s*["“](.+?)["”]\s*\/\s*["“](.+?)["”]\s*\.?\s*$
+krLines	no	22	^(?:[-•]|\d+[.)])?\s*REFERENCE\s*:
+KRUL_BAD	no	22	^(?:UNEXHIBITED|VOID|DEFENDER LINK BROKEN|CHALLENGER LINK BROKEN|BROKEN)\b
+krulCure	no	22	^\s*(?:[-•*]\s*)?\**(CONTRADICTION\b|NOT HELD\b|REASSERTED IN\b)
+krulMatch	no	22	^(D\d+)\s*$
+krulMatch	no	22	^(D\d+) vs (C\d+)$
+krulMatch	no	22	((?:\bD\d+\s*(?:,\s*(?:and\s+)?|\s+and\s+|\s*&\s*))+D\d+)\s*vs\.?\s*(C\d+)\b
+krulMatch	no	22	D\d+
+krulRestated	no	22	^\s*(?:[-•]\s*)?RESTATED\s*:\s*(D\d+)\s+vs\.?\s+(C\d+)
+krulRulings	no	22	^\s*[-*•]?\s*\**KEYSTONE\s*:
+krulRulings	no	22	KEYSTONE\s*:\s*\**\s*(D\d+)\b
+krulRulings	no	22	^\s*(?:[-•*]\s*|\d+[.)]\s*)?\**(D\d+)\s+vs\.?\s+(C\d+)\b(?:\s*\([^)\n]*\))?[^:\n(]*:\s*\**(DEFENDER LINK BROKEN|CHALLENGER LINK BROKEN|WITHDRAWN)\b
+krulRulings	no	22	^\s*(?:[-•*]\s*)?RESTATED\s*:\s*(D\d+)\s+vs\.?\s+(C\d+)
+KS	no	1	^KEYSTONE\s*:\s*D(\d+)\s*(?:--|—|–|-|:)\s*(STANDS|BROKEN|WITHDRAWN)\b
+ks2Grounds	no	22	\bGROUND\s*:
+ks2Lines	yes	22	^(?:[-•]|\d+[.)])?\s*(D\d+)\s+VS\.?\s+(C\d+)\b
+ks2Lines	yes	22	\b(?:UNDERDETERMINED|STANDS)\b
+ks2Lines	yes	22	GROUND\s*:
+kvCharges	no	22	PRESSED WITH\s*:
+kvSegments	no	22	\b(?:UNEXHIBITED|SPARED|STANDS|SUPPORTED|CONCEDED|NARROWED|COUNTED)\b
+kvUni	no	22	PRESSED WITH\s*:
+kwCo	no	19	(?:^|[.;!?]\s+|:\s+)\**CONCEDED\**(?!\s+LINKS?\b)(?:\s*(?::|;|\.|--|\u2014|$)|(?:\s+[A-Za-z][A-Za-z'\u2019-]*){1,4}\s*(?::|--|\u2014)|\s+as(?:\s+to)?\s+[A-Za-z])
+KWK	no	19	\b(DEFENDER|CHALLENGER)\s+([CD]R[1-4])\s+(LINK\s*\d+|[DC]\d+)\b[^#]{0,60}?#\s*(\d+)\b
+kwRe	no	19	\bREASSERTED\s+IN\s+\[?[CD]R\d+\]?\s*(?:[:,]|--|\u2014)?\s*["\u201c][^"\u201d]{6,}["\u201d]
+kwSt	no	19	\bSTANDS\s+WITHOUT\s+IT\s+because\b
+kwSt	no	19	\[L[1-3]\]
+lab	no	19	^(D\d+\s+VS\.?\s+C\d+|DEFENSE STANDING|CHALLENGE STANDING|CHALLENGER CONCEDED LINKS|CONCEDED LINKS|RESULT|CLAUSE|KEYSTONE)\b
+LAB	no	19	^(REASONING|KEYSTONE|RESULT|DEFENSE STANDING|CHALLENGE STANDING|CHALLENGER CONCEDED LINKS|CONCEDED LINKS|DEFENDER CHAIN MARK|CHALLENGER CHAIN MARK)\s*[:\-–—]+\s*
+lbBlockText	no	22	CHALLENGER.{0,2}S\s+UNSUPPORTED-?\s*\[?L4\]?\s*PREMISES
+lbFoot	no	22	\[L2\]|\b(?:Greek|Hebrew|Aramaic)\b
+LBL	no	2	^\s*(?:[-\u2022>]\s*|\d+[.)]\s+)?\**\s*(?:[A-Z][A-Z0-9 '\/()-]{2,60}:|D\d+\s+vs\.?\s+C\d+|C\d+\s+vs\.?\s+D\d+|\[|FORCED\b|RESULT\b|KEYSTONE\b|CLAUSE\b|#)
+lbVoid	no	3	\bPremises?\s+(\d+(?:\s*(?:,\s*(?:and|or|&)?|and|&|or)\s*\d+)*)
+lineOf	no	19	^CHALLENGER\s+CONCEDED LINKS\s*:
+lineOf	no	19	^(?:DEFENDER\s+)?CONCEDED LINKS\s*:
+NET_ANSWER	no	22	((?:defen[cs]e|defender|challenger|rounds?|block|reply|answer|link\s+round|\[?[CD]R\d\]?|\(?[CD]R\d\)?)[^;.]{0,60}?)((?:do|does|did)\s+not\s+(?:\S+\s+){0,4}?name[sd]?|never\s+names?|not\s+named)(?=[^;.]{0,50}?(?:\d+:\d+|
+NET_ANSWER_R	no	22	(\b(?:which|whom)\s+(?:the\s+)?(?:later\s+)?(?:defen[cs]e|defender|challenger|rounds?|block|reply|link\s+round|\[?\(?[CD]R\d\]?\)?)(?:'s\s+(?:\S+\s+){0,2}?)?\s*)((?:do|does|did)\s+not\s+(?:\S+\s+){0,2}?name[sd]?|never\s+
+NET_CONC	no	22	\bCONCEDED\s*\(\s*stated\s*\)
+NET_HEAD	no	22	^(RESULT|KEYSTONE|DEFENSE STANDING|CHALLENGE STANDING|CHALLENGER CONCEDED LINKS|CONCEDED LINKS|DEFENDER CHAIN MARK|CHALLENGER CHAIN MARK)\s*:
+NET_REPORT	no	22	\b(?:stated|granted|says|said|conceded|argued|admitted)\s+that\b|\b(?:conceding|concedes|admitting|admits|granting|grants)\b
+netFoot	no	22	\[L[1-3]\]
+netLines	no	22	^(?:[-•]|\d+[.)])?\s*(D\d+)(?:\s+VS\.?\s+(C\d+))?\b
+netLines	no	22	^(?:DEFENDER|CHALLENGER) CHAIN MARK\s*:\s*FOOTED\b
+orcLines	no	22	\bCOUNTED\W*$
+pairOf	no	22	^(?:[-\u2022]\s*)?FORCED(?:\s*\(\s*Commitment\s+\d+\s*\))?\s*:\s*(D\d+)\s+vs\.?\s+(C\d+)
+parse	no	22	(?:--|—|–)\s*MEANS\s*:
+parse	no	22	^(?:--|—|–)\s*MEANS\s*:\s*
+parse	no	22	\[L2\]\s*([^|]+?)(?=\s(?:\||--|—|–)\s|$)
+parse	no	22	\[L3\]\s*([^|]+?)(?=\s(?:\||--|—|–)\s|$)
+PCRE	no	1	(^|\n)[ \t]*PREMISE COUNT[ \t:]*([0-9]+)[ \t\r]*(?=\n|$)
+pid	no	19	^D(\d+)\s+vs\.?\s+C(\d+)$
+postureBlock	no	2	^\s*(?:[-•#>]\s*)?(?:SILENCE|SAME TEST|RESULT|CLAUSE|VERDICT|DEFENSE STANDING|CHALLENGE STANDING|CONCEDED LINKS|CITATION CHECK|COLLISION POINTS|KEYSTONE)\b
+postureCheck	no	2	\bon\s+(D\d+)\b
+postureCheck	no	2	^\s*(?:[-•]|\d+[.)])?\s*(D\d+)\s+vs\.?\s+(C\d+)\b
+PR	no	6	^\s*(?:[-\u2022]|\d+[.)])?\s*(?:FORCED(?:\s*\(\s*Commitment\s+\d+\s*\))?\s*:\s*)?(D\d+)\s+VS\.?\s+(C\d+)\b
+premiseMap	no	1	UNSUPPORTED-?\s*\[?L4\]?\s*PREMISES
+psGrades	no	19	^\s*(?:[-•]\s*|\d+[.)]\s*)?(DEFENDER\s+|CHALLENGER\s+)?CONCEDED LINKS\s*:\s*(\d+)?\s*(?:--|—|–)?
+PW_FOOT	no	22	\bexhibit|\bfooting\b|\[L[1-3]\]|\bquotations\b|prior layers?
+PW_FOOTGROUND	no	3	fewer than two|exhibits? only|only \[L[1-3]\]|no (?:layer )?footing|inadequate footing|one layer kind|single layer
+PW_SEG	no	22	(^|\n|[;.]\s+|--\s*|—\s*|:\s+)(?:[-•>]\s*)?(?:\d+[.)]\s*)?[*_]*\s*premises?\s+(\d+(?:(?:\s*,\s*(?:and\s+)?|\s+and\s+|\s*&\s*)\d+)*)\b(?:\s*\(LINK\s+(?:\d+|none)\))?[*_]*(?=\s*(?:is\b|are\b|:|--|—|\(|UNEXHIBITED|CONCEDED|
+pwHead	no	22	CHALLENGER.{0,2}S\s+UNSUPPORTED-?\s*\[?L4\]?\s*PREMISES
+pwHead	no	22	UNSUPPORTED-?\s*\[?L4\]?\s*PREMISES
+pwList	no	22	PRESSED WITH\s*:
+pwList	no	22	^PRESSED WITH\s*:\s*
+r2	no	3	\b(LINKS?|PREMISES?)\s+(\d+(?:\s*(?:,\s*AND|,|AND|–|-|TO)\s*\d+)*)
+rcLines	yes	19	^(?:[-•]|\d+[.)])?\s*(D\d+)\s+VS\.?\s+(C\d+)\b
+rcLines	yes	19	^(?:[-•]|\d+[.)])?\s*D\d+\s*:?\s*(?:--|—|-|:)?\s*WITHDRAWN\b
+rcLines	yes	19	^KEYSTONE\s*:
+rcLines	yes	19	^RESULT\s*:
+rcLines	yes	19	^(DEFENSE|CHALLENGE) STANDING\s*:
+rcLines	yes	19	^(CHALLENGER CONCEDED LINKS|CONCEDED LINKS)\s*:
+re	no	22	\[L([1-3])\](?:\s*(?:\/|and|,)?\s*\[L([1-3])\])*
+re	no	22	(?:\[([CD]R\d)\]|\b([CD]R\d)\s*:)[^"\[\]]{0,80}?"
+readLine	yes	22	^RESTATED\s*:\s*
+readLine	yes	22	^FORCED\b
+readLine	yes	22	^D\d+\s+vs\.?\s+C\d+\b
+readLine	yes	22	^ANSWER CHECK\s*:
+readLine	yes	22	^KEYSTONE\s*:
+rq	no	6	\s+(?:TOUCHES NO LINK|COUNTED)\b[\s\S]*$
+rx	no	6	\[AUDIT v21: DEBATE RULE VIOLATION REPORT -- SEAT: [^;\]]*; ITEM: (DEFENDER|CHALLENGER) premise (\d+); RULE: K-UNX; RESULT: CURED; WHY: [^\]]*?CORRECTED COUNT \d+ takes the premise out of the count
+RX	no	22	\bI\s+(?:do\s+not\s+claim|no\s+longer\s+claim|withdraw|grant|concede|drop)\b
+RX	no	1	CONTRADICTION\s*--\s*(DEFENDER|CHALLENGER)\s*--\s*EARLIER\s*\(\s*\[?\s*([CD]R[1-4])\s*\]?\s*,\s*["“]([\s\S]+?)["”]\s*\)\s*--\s*LATER\s*\(\s*\[?\s*([CD]R[1-4])\s*\]?\s*,\s*["“]([\s\S]+?)["”]\s*\)
+SB_FORM	yes	6	^(?:(?:DEFENDER|CHALLENGER)\s*\|\s*\[?\s*[CD]R\d\s*\]?\s*\||D\d+\s+vs\.?\s+C\d+\b|D\d+\s*(?::|--|\u2014)|(?:CHALLENGER\s+)?CONCEDED LINKS\s*:|(?:DEFENSE|CHALLENGE) STANDING\s*:|KEYSTONE\s*:|CLAUSE\s*:|ANSWER CHECK\s*:|FO
+SB_ROW	yes	6	^(DEFENDER|CHALLENGER)\s*\|\s*\[?\s*([CD]R\d)\s*\]?\s*\|\s*(.+?)(?:\s+(?:--|\u2014)\s+.*)?$
+sbApply2024	no	6	^RESULT\s*:
+sbApply2024	no	6	^NOT HELD\b
+sbApply2024	no	6	^D\d+ VS C\d+$
+sbApply2024	no	6	^RETRACTED\s*:\s*(D\d+)\s+VS\.?\s+(C\d+)\s*\.?$
+sbApply2024	no	6	^\s*(?:[-\u2022]|\d+[.)])?\s*FORCED(?:\s*\(\s*Commitment\s+\d+\s*\))?\s*:\s*(D\d+)\s+VS\.?\s+(C\d+)\b
+sbApply2024	no	6	^Premise\s+(\d+)\b
+sbApply2024	no	6	(?:(?<=[.;])|(?<=--))\s+(?=Premises?\s+\d)
+sbApply2024	no	6	LINK BROKEN$
+sbApply2024	no	6	^KEYSTONE\s*:\s*(D\d+)\s*(?:--|\u2014|-|:)?\s*(STANDS|BROKEN)\b
+sbApply2024	no	6	^\s*(?:[-\u2022]\s+|\d+[.)]\s+)?[*_]*KEYSTONE[*_]*\s*:\s*[*_]*
+sbApply2024	no	6	^(?:CHALLENGER CONCEDED LINKS|CONCEDED LINKS)\s*:\s*(\d+)
+sbApply2024	no	6	^KEYSTONE\s*:\s*D\d+\s*(?:--|\u2014|-|:)\s*WITHDRAWN\b
+sbApply2024	no	6	^RESULT\s*:\s*(DEFENDER WINS|CHALLENGER WINS|UNDERDETERMINED)
+sbBrokenWord2024	no	6	^KEYSTONE\s*:\s*D\d+\s*(?:--|—|-|:)\s*WITHDRAWN\b
+sbKeyExempt2024	no	6	\bGROUND\s*:([\s\S]*)$
+sbKeyExempt2024	no	6	\b(?:grant|grants|granted|concede|concedes|conceded|allow|drop|withdraw|do not claim)\b
+sbKeyExempt2024	no	6	\bPremise\s+(\d+)\b
+sbLabel0	no	6	^(D\d+)\s+VS\.?\s+(C\d+)\b
+sbLabel0	no	6	^(KEYSTONE|CHALLENGER CONCEDED LINKS|CONCEDED LINKS|DEFENSE STANDING|CHALLENGE STANDING|CLAUSE)\s*:
+scLines	no	22	^(?:[-•]|\d+[.)])?\s*D(\d+)\b\s*:?\s*(?:D\1\b\s*)?(?:--|—|-|:)?\s*STANDS\b
+selfLines421	yes	22	^(MEETS|MISSES|FAILS)$
+selfLines421	yes	22	^\s*(?:[-\u2022]\s*)?ANSWER CHECK\s*:
+selfLines421	yes	22	^(?:[-\u2022]\s*)?ANSWER CHECK\s*:\s*((?:[1-3]\s?)?[A-Z][a-z]+\.?\s+\d+:\d+)[^\n]*?\[\s*(CR|DR)\d\s*\][^\n]*?--\s*(MEETS|MISSES|FAILS)\b
+selfLines421	yes	22	^(?:[-\u2022]\s*)?(CHALLENGER CONCEDED LINKS|CONCEDED LINKS)\s*:(.*)$
+seqCount	no	1	^\s*(?:#+\s*)?\**\s*PREMISE COUNT
+seqLines	no	1	^\s*(?:#+\s*)?\**\s*PREMISE COUNT
+sheetPlan	no	22	PRESSED WITH\s*:
+sideOf	no	6	MEANS\s*\[{0,2}\s*((?:CR|DR)[1-4])
+STOP	no	22	^[ \t>#-]*(?:CHALLENGE STANDING|DEFENSE STANDING|CHALLENGER CONCEDED LINKS|CONCEDED LINKS|COLLISION POINTS|CITATION CHECK|OUT-OF-ROUND|DEFENDER CHAIN MARK|CHALLENGER CHAIN MARK|KEYSTONE|CLAUSE|RESULT|CITED-IN RULINGS|NOT
+sub	no	22	\bMEANS\b
+TAG	no	1	(?:\b(LINK|PREMISE)\s*|(?:--|;|,)\s*)(\d+)\s*(?::|--|—|–|-|\(|,)?\s*(?:(?:is|was|stays|remains)\s+)?(UNEXHIBITED|CONCEDED|WITHDRAWN)\b
+TAGC	no	3	\bCONCEDED\s*\(?\s*(?:STATED|CONDITIONAL)\b|\bUNEXHIBITED\s*\(
+tags	no	22	\[L2\]
+tags	no	22	\[L[1-4]\]|\n
+tags	no	22	\n\s*\n|\[L[1-4]\]
+tags	no	22	--\s*MEANS\s*:
+UNX_MGROUND	no	22	\b(?:meet|meets|meeting|met|answer|answers|answering|answered)\b[^.;]{0,80}?\b(?:MEANS|meaning|significance|inference|claim|claimed|press|pressed)\b
+UNX_OTHER	no	22	\bunanswered\b|\bno\s+answer\b|\bnot\s+answered\b|\bwithout\s+(?:\S+\s+){0,2}?answers?\b|\b(?:not|never)\s+named\b|\bNOT\s+COUNTED\b|\bnarrowed\b|\bleaves?\s+[^.;]{0,80}?\bunmet\b|\bstruck\b|\bbarred\b|\bVOID\b|\bROWS\s+
+UNXA_HARD	no	22	\b(?:not|never)\s+named\b|\bNOT\s+COUNTED\b|\bnarrowed\b|\bleaves?\s+[^.;]{0,80}?\bunmet\b|\bstruck\b|\bbarred\b|\bVOID\b|\bwithout\s+(?:\S+\s+){0,2}?answers?\b
+unxaCheck	no	22	\bMEANS\b
+unxPresses	no	22	UNSUPPORTED-?\s*\[?L4\]?\s*PREMISES
+unxPresses	no	22	PRESSED WITH\s*:
+unxPresses	no	22	^\s*[-*•]?\s*\**\s*([1-3]?\s*[A-Z][A-Za-z ]+?\s+\d+:\d+(?:[-–]\d+)?)\**\s*[\s\S]*?\s--\s*MEANS\s*:\s*([\s\S]+?)(?:\s+--\s+(?=\[L\d\]|PROVEN\b)|\s+\|\s+|$)
+unxSegs	no	22	\bPremises?\s+(\d+(?:\s*(?:,\s*(?:and|or|&)?|and|&|or)\s*\d+)*)
+unxSegs	no	22	(?:^|--|;|:|\.)\s*(\d)(?=\s+(?:UNEXHIBITED|CONCEDED|WITHDRAWN)\b)
+vcCaught2024	no	1	^\s*(?:[-•>]|\d+[.)])?\s*(CONTRADICTION\b|NOT HELD\b|REASSERTED IN\b)
+vcRev2024	no	1	\(\d+\)\s*\[[CD]R[1-4]\]\s*"([^"]*)"\s*--\s*earlier:\s*"([^"]*)"
+voidCounts	no	2	CHALLENGER\s+CONCEDED\s+LINKS
+W	no	19	\b(VOID|UNEXHIBITED|CONCEDED|counted|spared|SUPPORTED|NARROWED|STANDS)\b
