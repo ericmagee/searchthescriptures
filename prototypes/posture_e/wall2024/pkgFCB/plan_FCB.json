@@ -1,0 +1,329 @@
+{
+ "rulings": "W3 00:05Z 11-07 (TRIAL; whole KJV verse)",
+ "nodes": [
+  {
+   "name": "Build Independent Verdict",
+   "file": "Build_Independent_Verdict.js",
+   "base": "live 1b49671d",
+   "base_sha": "939523826959bd9e",
+   "final_sha": "882a9b11ba6f3c45",
+   "edits": [
+    "r396",
+    "r396b"
+   ]
+  },
+  {
+   "name": "Extract Independent Verdict",
+   "file": "Extract_Independent_Verdict.js",
+   "base": "pkgLNX/patched",
+   "base_sha": "9738b73ec800452c",
+   "final_sha": "f717753c7c608ba7",
+   "edits": [
+    "lib",
+    "drv",
+    "enf"
+   ]
+  },
+  {
+   "name": "Panel Build",
+   "file": "Panel_Build.js",
+   "base": "live 1b49671d",
+   "base_sha": "11dc0d211828b3f6",
+   "final_sha": "0e3cace517b47bde",
+   "edits": [
+    "r396",
+    "r396b"
+   ]
+  },
+  {
+   "name": "Panel Payloads",
+   "file": "Panel_Payloads.js",
+   "base": "live 1b49671d",
+   "base_sha": "8a8fc86b815e2240",
+   "final_sha": "e0f974e71acac317",
+   "edits": [
+    "lib",
+    "drv",
+    "enf"
+   ]
+  },
+  {
+   "name": "Cure Build",
+   "file": "Cure_Build.js",
+   "base": "live 1b49671d",
+   "base_sha": "77b82e8ea201a6a8",
+   "final_sha": "97838a0a1132ccd8",
+   "edits": [
+    "lib",
+    "enf",
+    "lst",
+    "keys",
+    "cure"
+   ]
+  },
+  {
+   "name": "Cure Normalize",
+   "file": "Cure_Normalize.js",
+   "base": "live 1b49671d",
+   "base_sha": "3e5b309ad871df33",
+   "final_sha": "35f0b3bebcbc7958",
+   "edits": [
+    "lib",
+    "enf",
+    "lst",
+    "keys",
+    "cure"
+   ]
+  },
+  {
+   "name": "Cure Check",
+   "file": "Cure_Check.js",
+   "base": "live 1b49671d",
+   "base_sha": "ea0685f7e892ad46",
+   "final_sha": "4cc6e2e4935b78f2",
+   "edits": [
+    "lib",
+    "enf",
+    "lst",
+    "keys",
+    "cure"
+   ]
+  },
+  {
+   "name": "Panel Cure Build 1",
+   "file": "Panel_Cure_Build_1.js",
+   "base": "live 1b49671d",
+   "base_sha": "62aeaeca0382dc2f",
+   "final_sha": "500a3838178cf6c8",
+   "edits": [
+    "lib",
+    "enf",
+    "lst",
+    "keys",
+    "cure"
+   ]
+  },
+  {
+   "name": "Panel Cure Normalize 1",
+   "file": "Panel_Cure_Normalize_1.js",
+   "base": "live 1b49671d",
+   "base_sha": "e276721d3354ae0a",
+   "final_sha": "7b9b39fc15c60265",
+   "edits": [
+    "lib",
+    "enf",
+    "lst",
+    "keys",
+    "cure"
+   ]
+  },
+  {
+   "name": "Panel Cure Build 2",
+   "file": "Panel_Cure_Build_2.js",
+   "base": "live 1b49671d",
+   "base_sha": "6bda41a65bc2fa4a",
+   "final_sha": "739edb54162fc160",
+   "edits": [
+    "lib",
+    "enf",
+    "lst",
+    "keys",
+    "cure"
+   ]
+  },
+  {
+   "name": "Panel Cure Normalize 2",
+   "file": "Panel_Cure_Normalize_2.js",
+   "base": "live 1b49671d",
+   "base_sha": "7c8626f6bf5ef6a8",
+   "final_sha": "79ecd45a0235968e",
+   "edits": [
+    "lib",
+    "enf",
+    "lst",
+    "keys",
+    "cure"
+   ]
+  },
+  {
+   "name": "Panel Cure Build 3",
+   "file": "Panel_Cure_Build_3.js",
+   "base": "live 1b49671d",
+   "base_sha": "6f84d14e43add188",
+   "final_sha": "1de2fda6b787c8f5",
+   "edits": [
+    "lib",
+    "enf",
+    "lst",
+    "keys",
+    "cure"
+   ]
+  },
+  {
+   "name": "Panel Cure Normalize 3",
+   "file": "Panel_Cure_Normalize_3.js",
+   "base": "live 1b49671d",
+   "base_sha": "1d9da5b22519bb82",
+   "final_sha": "129b2bdef288bafa",
+   "edits": [
+    "lib",
+    "enf",
+    "lst",
+    "keys",
+    "cure"
+   ]
+  },
+  {
+   "name": "Panel Cure Check",
+   "file": "Panel_Cure_Check.js",
+   "base": "pkgPTA/patched",
+   "base_sha": "0c9fc9ac35a09c34",
+   "final_sha": "89f473e4cdeba9ff",
+   "edits": [
+    "lib",
+    "enf",
+    "lst",
+    "keys",
+    "cure"
+   ]
+  },
+  {
+   "name": "Alternate Build",
+   "file": "Alternate_Build.js",
+   "base": "live 1b49671d",
+   "base_sha": "79fce015c75f5667",
+   "final_sha": "a0993b7537d81024",
+   "edits": [
+    "lib",
+    "enf",
+    "lst",
+    "keys",
+    "cure"
+   ]
+  },
+  {
+   "name": "Alternate Payloads",
+   "file": "Alternate_Payloads.js",
+   "base": "pkgPTA/patched",
+   "base_sha": "25dace48d856934d",
+   "final_sha": "30072fe11495643a",
+   "edits": [
+    "lib",
+    "drv",
+    "enf"
+   ]
+  },
+  {
+   "name": "Alternate Cure Build",
+   "file": "Alternate_Cure_Build.js",
+   "base": "live 1b49671d",
+   "base_sha": "dadea445c312d0af",
+   "final_sha": "389c6bd661fe8f2a",
+   "edits": [
+    "lib",
+    "enf",
+    "lst",
+    "keys",
+    "cure"
+   ]
+  },
+  {
+   "name": "Alternate Cure Normalize",
+   "file": "Alternate_Cure_Normalize.js",
+   "base": "live 1b49671d",
+   "base_sha": "f09c436ca548ea5c",
+   "final_sha": "5ba6a43e79156cd9",
+   "edits": [
+    "lib",
+    "enf",
+    "lst",
+    "keys",
+    "cure"
+   ]
+  },
+  {
+   "name": "Alternate Merge Seat",
+   "file": "Alternate_Merge_Seat.js",
+   "base": "live 1b49671d",
+   "base_sha": "b85a516d1ae1abbe",
+   "final_sha": "c2247e049af7548f",
+   "edits": [
+    "lib",
+    "enf",
+    "lst",
+    "keys",
+    "cure"
+   ]
+  },
+  {
+   "name": "Gate Build",
+   "file": "Gate_Build.js",
+   "base": "live 1b49671d",
+   "base_sha": "6357a2e56a8baf34",
+   "final_sha": "fff8c3bebf122782",
+   "edits": [
+    "lib",
+    "enf",
+    "lst",
+    "keys",
+    "cure"
+   ]
+  },
+  {
+   "name": "Gate Record",
+   "file": "Gate_Record.js",
+   "base": "live 1b49671d",
+   "base_sha": "ed114e44de5f3f02",
+   "final_sha": "8aa3fc707a17d7a5",
+   "edits": [
+    "lib",
+    "enf",
+    "lst",
+    "keys",
+    "cure"
+   ]
+  },
+  {
+   "name": "Alt Gate Build",
+   "file": "Alt_Gate_Build.js",
+   "base": "live 1b49671d",
+   "base_sha": "d7ad2792067d5eaf",
+   "final_sha": "8ac3abf56066b7bb",
+   "edits": [
+    "lib",
+    "enf",
+    "lst",
+    "keys",
+    "cure"
+   ]
+  },
+  {
+   "name": "Alt Gate Record",
+   "file": "Alt_Gate_Record.js",
+   "base": "live 1b49671d",
+   "base_sha": "8b67fd27f397c89c",
+   "final_sha": "f27225fcde9e08aa",
+   "edits": [
+    "lib",
+    "enf",
+    "lst",
+    "keys",
+    "cure"
+   ]
+  },
+  {
+   "name": "Alternate Merge",
+   "file": "Alternate_Merge.js",
+   "base": "pkgPTA/patched",
+   "base_sha": "eccbe63879abe94f",
+   "final_sha": "bf54b91e5eaf0746",
+   "edits": [
+    "lib",
+    "enf",
+    "lst",
+    "keys",
+    "cure"
+   ]
+  }
+ ]
+}
