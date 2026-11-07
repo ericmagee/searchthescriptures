@@ -1,0 +1,8 @@
+DIFF 33461 Extract Independent Verdict
+  a OUT [{"json":{"topic":"Did Christ have a biological father?","synthesis":"### 1. WHAT HELD AT L1–L2–L3\n\nThe following points stand uncontested on the textual 
+  b OUT [{"json":{"topic":"Did Christ have a biological father?","synthesis":"### 1. WHAT HELD AT L1–L2–L3\n\nThe following points stand uncontested on the textual 
+DIFF 33461 Panel Payloads
+  a OUT [{"json":{"run_token":"ODV1-33461-pcc0v5dz","debate_id":"efc9ff05-272d-44d0-842d-22d337ee72d0","bodies":["{\"payload\":{\"debate_id\":\"efc9ff05-272d-44d0-8
+  b OUT [{"json":{"run_token":"ODV1-33461-pcc0v5dz","debate_id":"efc9ff05-272d-44d0-842d-22d337ee72d0","bodies":["{\"payload\":{\"debate_id\":\"efc9ff05-272d-44d0-8
+16 recent runs (33218 33222 33249 33261 33276 33289 33299 33311 33322 33345 33371 33389 33411 33430 33442 33461) x 22 nodes = 352 node runs; identical 350 (319 with real output)
+FAIL
