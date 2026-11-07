@@ -1,0 +1,226 @@
+[
+ {
+  "run": "33222",
+  "chain": "main",
+  "seat": "gemini",
+  "item": "premise listed against the defender 3",
+  "why": "ENFORCER DISAGREE (right: COUNTED): The line \"CONCEDED LINKS: 0\" leaves premise 3 unnamed, but the record states \"the side tagged no block for this premise\", so it is CONCEDED. (judge wrote PREMISE 3; RECORD-ONLY TRIAL, ruling 428)",
+  "mark": "the push counts the premise but names no layer the block lacks; the block exhibits [L1], [L2], [L3]"
+ },
+ {
+  "run": "33222",
+  "chain": "main",
+  "seat": "chatgpt",
+  "item": "premise listed against the defender 3",
+  "why": "ENFORCER DISAGREE (right: COUNTED): The line says \"Premises 1–6 are spared\", but the record states \"the side tagged no block for this premise\", so premise 3 is CONCEDED. (judge wrote PREMISE 3; RECORD-ONLY TRIAL, ruling 428)",
+  "mark": "the push counts the premise but names no layer the block lacks; the block exhibits [L1], [L2], [L3]"
+ },
+ {
+  "run": "33222",
+  "chain": "main",
+  "seat": "sol",
+  "item": "premise listed against the defender 3",
+  "why": "ENFORCER DISAGREE (right: COUNTED): The line says \"Premises 1, 2, 3, 4, 5, and 6 are spared\", but the record states \"the side tagged no block for this premise\", so premise 3 is CONCEDED. (judge wrote PREMISE 3; RECORD-ONLY TRIAL, ruling 428)",
+  "mark": "the push counts the premise but names no layer the block lacks; the block exhibits [L1], [L2], [L3]"
+ },
+ {
+  "run": "33222",
+  "chain": "main",
+  "seat": "gemini",
+  "item": "premise listed against the defender 4",
+  "why": "ENFORCER DISAGREE (right: COUNTED): The line \"CONCEDED LINKS: 0\" leaves premise 4 unnamed, but the record states \"the side tagged no block for this premise\", so it is CONCEDED. (judge wrote PREMISE 4; RECORD-ONLY TRIAL, ruling 428)",
+  "mark": "the push counts the premise but names no layer the block lacks; the block exhibits [L1], [L2], [L3]"
+ },
+ {
+  "run": "33222",
+  "chain": "main",
+  "seat": "chatgpt",
+  "item": "premise listed against the defender 4",
+  "why": "ENFORCER DISAGREE (right: COUNTED): The line says \"Premises 1–6 are spared\", but the record states \"the side tagged no block for this premise\", so premise 4 is CONCEDED. (judge wrote PREMISE 4; RECORD-ONLY TRIAL, ruling 428)",
+  "mark": "the push counts the premise but names no layer the block lacks; the block exhibits [L1], [L2], [L3]"
+ },
+ {
+  "run": "33222",
+  "chain": "main",
+  "seat": "sol",
+  "item": "premise listed against the defender 4",
+  "why": "ENFORCER DISAGREE (right: COUNTED): The line says \"Premises 1, 2, 3, 4, 5, and 6 are spared\", but the record states \"the side tagged no block for this premise\", so premise 4 is CONCEDED. (judge wrote PREMISE 4; RECORD-ONLY TRIAL, ruling 428)",
+  "mark": "the push counts the premise but names no layer the block lacks; the block exhibits [L1], [L2], [L3]"
+ },
+ {
+  "run": "33222",
+  "chain": "main",
+  "seat": "gemini",
+  "item": "premise listed against the defender 5",
+  "why": "ENFORCER DISAGREE (right: COUNTED): The line \"CONCEDED LINKS: 0\" leaves premise 5 unnamed, but the record states \"the side tagged no block for this premise\", so it is CONCEDED. (judge wrote PREMISE 5; RECORD-ONLY TRIAL, ruling 428)",
+  "mark": "the push counts the premise but names no layer the block lacks; the block exhibits [L1], [L3]"
+ },
+ {
+  "run": "33222",
+  "chain": "main",
+  "seat": "chatgpt",
+  "item": "premise listed against the defender 5",
+  "why": "ENFORCER DISAGREE (right: COUNTED): The line says \"Premises 1–6 are spared\", but the record states \"the side tagged no block for this premise\", so premise 5 is CONCEDED. (judge wrote PREMISE 5; RECORD-ONLY TRIAL, ruling 428)",
+  "mark": "the push counts the premise but names no layer the block lacks; the block exhibits [L1], [L3]"
+ },
+ {
+  "run": "33222",
+  "chain": "main",
+  "seat": "sol",
+  "item": "premise listed against the defender 5",
+  "why": "ENFORCER DISAGREE (right: COUNTED): The line says \"Premises 1, 2, 3, 4, 5, and 6 are spared\", but the record states \"the side tagged no block for this premise\", so premise 5 is CONCEDED. (judge wrote PREMISE 5; RECORD-ONLY TRIAL, ruling 428)",
+  "mark": "the push counts the premise but names no layer the block lacks; the block exhibits [L1], [L3]"
+ },
+ {
+  "run": "33222",
+  "chain": "Alt ",
+  "seat": "grok",
+  "item": "premise listed against the defender 3",
+  "why": "ENFORCER DISAGREE (right: COUNTED): The premise assumes \"a husband's conception falls outside the sign,\" but the quoted row Isaiah 8:3 says \"I went unto the prophetess; and she conceived, and bare a son,\" and the block only says \"LINK 3: SUPPORTED.\" (judge wro",
+  "mark": "the push counts the premise but names no layer the block lacks; the block exhibits [L1], [L2], [L3]"
+ },
+ {
+  "run": "33222",
+  "chain": "Alt ",
+  "seat": "grok",
+  "item": "premise listed against the defender 4",
+  "why": "ENFORCER DISAGREE (right: COUNTED): The premise targets LINK 3's \"ASSUMES: ex hēs with egennēthē removes the husband,\" but the supplied block is \"LINK 4: SUPPORTED\" and speaks only to Matthew 1:19-20 and Joseph's intent, not to the passive of Matthew 1:16. (ju",
+  "mark": "the push counts the premise but names no layer the block lacks; the block exhibits [L1], [L2], [L3]"
+ },
+ {
+  "run": "33222",
+  "chain": "Alt ",
+  "seat": "grok",
+  "item": "premise listed against the defender 5",
+  "why": "ENFORCER DISAGREE (right: COUNTED): The premise's \"ASSUMES: Joseph's purpose rested on knowing the child another's, and 'supposed' marks an error\" is not answered by the supplied \"LINK 5: SUPPORTED\" block, which speaks of Luke 1:35 and the Holy Ghost. (judge w",
+  "mark": "the push counts the premise but names no layer the block lacks; the block exhibits [L1], [L3]"
+ },
+ {
+  "run": "33249",
+  "chain": "main",
+  "seat": "gemini",
+  "item": "premise listed against the defender 1",
+  "why": "ENFORCER DISAGREE (right: COUNTED): The charge \"ASSUMES: a Davidic seed by law and reputation\" is given by no quoted row, which give \"of the fruit of his loins, according to the flesh\" (Acts 2:30) and \"made of the seed of David according to the flesh\" (Romans ",
+  "mark": "the push counts the premise but names no layer the block lacks; the block exhibits [L1], [L3]"
+ },
+ {
+  "run": "33249",
+  "chain": "main",
+  "seat": "chatgpt",
+  "item": "premise listed against the defender 1",
+  "why": "ENFORCER DISAGREE (right: COUNTED): \"Premises 1-6 are spared\" is wrong for premise 1, for no quoted row gives \"a Davidic seed by law and reputation\": Acts 2:30 gives \"of the fruit of his loins, according to the flesh\" and Romans 1:3 \"made of the seed of David ",
+  "mark": "the push counts the premise but names no layer the block lacks; the block exhibits [L1], [L3]"
+ },
+ {
+  "run": "33249",
+  "chain": "main",
+  "seat": "sol",
+  "item": "premise listed against the defender 1",
+  "why": "ENFORCER DISAGREE (right: COUNTED): \"Premises 1–6 are spared\" is wrong for premise 1: the block given (LINK 1) exhibits only the conception (\"of the Holy Ghost,\" Matthew 1:18) and no row gives \"a Davidic seed by law and reputation.\" (judge wrote PREMISE 1; REC",
+  "mark": "the push counts the premise but names no layer the block lacks; the block exhibits [L1], [L3]"
+ },
+ {
+  "run": "33249",
+  "chain": "main",
+  "seat": "gemini",
+  "item": "premise listed against the defender 2",
+  "why": "ENFORCER DISAGREE (right: COUNTED): Silence spares premise 2, but no quoted row gives \"Mary of the house of David\": the rows give Joseph (\"he was of the house and lineage of David,\" Luke 2:4) and Elisabeth (\"of the daughters of Aaron,\" Luke 1:5), so the premis",
+  "mark": "the push counts the premise but names no layer the block lacks; the block exhibits [L1], [L2], [L3]"
+ },
+ {
+  "run": "33249",
+  "chain": "main",
+  "seat": "chatgpt",
+  "item": "premise listed against the defender 2",
+  "why": "ENFORCER DISAGREE (right: COUNTED): \"premise 2's descent through Mary is an inference from the exhibited chain\" is not shown, for the block given exhibits the conception (\"that which is conceived in her is of the Holy Ghost,\" Matthew 1:20) and no row gives Mar",
+  "mark": "the push counts the premise but names no layer the block lacks; the block exhibits [L1], [L2], [L3]"
+ },
+ {
+  "run": "33249",
+  "chain": "main",
+  "seat": "sol",
+  "item": "premise listed against the defender 2",
+  "why": "ENFORCER DISAGREE (right: COUNTED): \"Mary's Davidic descent and the explanation of Joseph's intent are offered as inferences\" is not borne out for premise 2: the rows give Joseph's house (Luke 2:4) and Aaron's line (Luke 1:5), not Mary of the house of David. (",
+  "mark": "the push counts the premise but names no layer the block lacks; the block exhibits [L1], [L2], [L3]"
+ },
+ {
+  "run": "33249",
+  "chain": "main",
+  "seat": "gemini",
+  "item": "premise listed against the challenger 1",
+  "why": "ENFORCER DISAGREE (right: COUNTED): Its \"CHALLENGER CONCEDED LINKS: 0\" leaves premise 1 spared, but Matthew 1:25 says \"And knew her not till she had brought forth her firstborn son.\" (judge wrote PREMISE 1; RECORD-ONLY TRIAL, ruling 428)",
+  "mark": "the push counts the premise but names no layer the block lacks; the block exhibits [L1], [L2], [L3]"
+ },
+ {
+  "run": "33249",
+  "chain": "main",
+  "seat": "gemini",
+  "item": "premise listed against the challenger 5",
+  "why": "ENFORCER DISAGREE (right: COUNTED): Its \"CHALLENGER CONCEDED LINKS: 0\" spares premise 5, but the press \"David's begetting is stated by an act\" is left unanswered by the block. (judge wrote PREMISE 5; RECORD-ONLY TRIAL, ruling 428)",
+  "mark": "the push counts the premise but names no layer the block lacks; the block exhibits [L1], [L3]"
+ },
+ {
+  "run": "33249",
+  "chain": "main",
+  "seat": "sol",
+  "item": "premise listed against the challenger 5",
+  "why": "ENFORCER DISAGREE (right: COUNTED): It says \"Premises 2, 3, 5 and 6 are spared\" though the answer to \"David's begetting is stated by an act\" does not address the Matthew 1:25 contrast. (judge wrote PREMISE 5; RECORD-ONLY TRIAL, ruling 428)",
+  "mark": "the push counts the premise but names no layer the block lacks; the block exhibits [L1], [L3]"
+ },
+ {
+  "run": "33261",
+  "chain": "main",
+  "seat": "gemini",
+  "item": "premise listed against the challenger 1",
+  "why": "ENFORCER DISAGREE (right: COUNTED): The press's \"before they came together, she was found with child\" with \"synerchomai G4905 (cohabit conjugally)\" is not answered by the challenger's spared \"Premise 1.\" (judge wrote PREMISE 1; RECORD-ONLY TRIAL, ruling 428)",
+  "mark": "the push counts the premise but names no layer the block lacks; the block exhibits [L1], [L2], [L3]"
+ },
+ {
+  "run": "33261",
+  "chain": "main",
+  "seat": "sol",
+  "item": "premise listed against the challenger 1",
+  "why": "ENFORCER DISAGREE (right: COUNTED): Sol's \"Premises 1 and 5 are spared\" fails against the press's \"synerchomai G4905 (cohabit conjugally)\" and \"before they came together, she was found with child.\" (judge wrote PREMISE 1; RECORD-ONLY TRIAL, ruling 428)",
+  "mark": "the push counts the premise but names no layer the block lacks; the block exhibits [L1], [L2], [L3]"
+ },
+ {
+  "run": "33261",
+  "chain": "main",
+  "seat": "gemini",
+  "item": "premise listed against the challenger 5",
+  "why": "ENFORCER DISAGREE (right: COUNTED): The answer to Luke 1:35 \"does not meet the pressed causal meaning,\" so premise 5 is COUNTED (UNEXHIBITED), not spared. (judge wrote PREMISE 5; RECORD-ONLY TRIAL, ruling 428)",
+  "mark": "the push counts the premise but names no layer the block lacks; the block exhibits [L1], [L2], [L3]"
+ },
+ {
+  "run": "33261",
+  "chain": "main",
+  "seat": "sol",
+  "item": "premise listed against the challenger 5",
+  "why": "ENFORCER DISAGREE (right: COUNTED): The answer to Luke 1:35 \"does not meet the pressed causal meaning,\" so premise 5 is COUNTED (UNEXHIBITED), not spared. (judge wrote PREMISE 5; RECORD-ONLY TRIAL, ruling 428)",
+  "mark": "the push counts the premise but names no layer the block lacks; the block exhibits [L1], [L2], [L3]"
+ },
+ {
+  "run": "33299",
+  "chain": "main",
+  "seat": "gemini",
+  "item": "premise listed against the defender 5",
+  "why": "ENFORCER DISAGREE (right: COUNTED): \"CONCEDED LINKS: 0\" spares premise 5, but the defender's words claim the callers \"knew only Joseph's household,\" no quoted row gives that fact, and the Luke 2:48 press about Mary's knowledge stands unanswered. (judge wrote P",
+  "mark": "the push counts the premise but names no layer the block lacks; the block exhibits [L1], [L2], [L3]"
+ },
+ {
+  "run": "33299",
+  "chain": "main",
+  "seat": "sol",
+  "item": "premise listed against the defender 5",
+  "why": "ENFORCER DISAGREE (right: COUNTED): Sol says premise 5 \"replaces the claim about witnesses' limited knowledge with household usage,\" but the answering block is \"LINK 5: SUPPORTED\" and no quoted row gives that the callers knew only Joseph's household. (judge wr",
+  "mark": "the push counts the premise but names no layer the block lacks; the block exhibits [L1], [L2], [L3]"
+ },
+ {
+  "run": "33299",
+  "chain": "Alt ",
+  "seat": "grok",
+  "item": "premise listed against the defender 5",
+  "why": "ENFORCER DISAGREE (right: COUNTED): The record's block is \"LINK 5: SUPPORTED\" and its answer calls the father-texts \"household usage \"after the custom of the law\" (2:27),\" so no drop is shown and no quoted row gives \"those who call Joseph father knew Joseph's ",
+  "mark": "the push counts the premise but names no layer the block lacks; the block exhibits [L1], [L2], [L3]"
+ }
+]

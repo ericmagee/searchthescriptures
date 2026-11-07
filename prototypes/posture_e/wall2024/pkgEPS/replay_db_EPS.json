@@ -1,0 +1,1028 @@
+[
+ {
+  "run": "32924",
+  "seat": "gemini",
+  "item": "premise listed against the defender 3",
+  "kinds": "L1,L2,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "\"the side tagged no block for this premise\" gives no quoted row for the assumed ek-with-gennaō begetter. (judge wrote PREMISE 3; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "32924",
+  "seat": "chatgpt",
+  "item": "premise listed against the defender 3",
+  "kinds": "L1,L2,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "\"Premises 1–4 are spared\" despite \"the side tagged no block for this premise.\" (judge wrote PREMISE 3; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "32924",
+  "seat": "grok",
+  "item": "premise listed against the defender 3",
+  "kinds": "L1,L2,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "\"premise 3 narrowed, ek-with-gennaō-alone dropped\" still lacks a quoted row giving the assumed begetter. (judge wrote PREMISE 3; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "32924",
+  "seat": "gemini",
+  "item": "premise listed against the defender 5",
+  "kinds": "L1,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "\"Matthew 1:22 states the fulfilment\" does not address the pressed early-years bound. (judge wrote PREMISE 5; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "32924",
+  "seat": "gemini",
+  "item": "premise listed against the defender 6",
+  "kinds": "L1,L2,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "\"no block answering this premise was found by its number or tag.\" (judge wrote PREMISE 6; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "32924",
+  "seat": "grok",
+  "item": "premise listed against the defender 6",
+  "kinds": "L1,L2,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "\"I drop ... that Mary's descent is proved by Luke 1:36 and Ezra 2:61\" leaves no quoted row for Mary's descent. (judge wrote PREMISE 6; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "32936",
+  "seat": "gemini",
+  "item": "premise listed against the defender 6",
+  "kinds": "L1,L2,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "(UNEXHIBITED) -- \"Tribes married across the line\" does not answer the pressed \"sons of a mother of Judah were reckoned to their father's house as Aaron's priests.\" (judge wrote PREMISE 6; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "32936",
+  "seat": "grok",
+  "item": "premise listed against the defender 6",
+  "kinds": "L1,L2,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "(UNEXHIBITED) -- \"premises 1-6 spared\" leaves the unanswered Exodus 6:23 press on premise 6 counted. (judge wrote PREMISE 6; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "32936",
+  "seat": "gemini",
+  "item": "premise listed against the challenger 2",
+  "kinds": "L1,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "(UNEXHIBITED) -- \"It fits a knowing within the espousal\" cannot agree with \"before any union,\" so the Matthew 1:18 press is unanswered. (judge wrote PREMISE 2; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "32949",
+  "seat": "gemini",
+  "item": "premise listed against the defender 2",
+  "kinds": "L1,L2,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The line leaves premise 2 unnamed, but the answer \"is consistent with either reading\" does not meet the pressed Luke 1:56 meaning, so premise 2 is unexhibited. (judge wrote PREMISE 2; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "32949",
+  "seat": "chatgpt",
+  "item": "premise listed against the defender 4",
+  "kinds": "L1,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The line spares premise 4, but its rows give \"Joseph, of the house of David\" and \"he was of the house and lineage of David,\" not Mary's descent. (judge wrote PREMISE 4; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "32949",
+  "seat": "grok",
+  "item": "premise listed against the defender 4",
+  "kinds": "L1,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The line spares premise 4, but the rows give Joseph's descent, not the assumed \"Mary is of the house of David.\" (judge wrote PREMISE 4; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "32949",
+  "seat": "gemini",
+  "item": "premise listed against the defender 5",
+  "kinds": "L1,L2,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The line leaves premise 5 unnamed, but its rows give \"where prayer was wont to be made,\" a custom sense, not the assumed opinion set against fact. (judge wrote PREMISE 5; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "32949",
+  "seat": "gemini",
+  "item": "premise listed against the challenger 2",
+  "kinds": "L1,L2,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The line leaves premise 2 unnamed, but the answer to Jeremiah 22:30 is left at \"Write ye this man chi [...]\" and does not meet the press. (judge wrote PREMISE 2; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "32949",
+  "seat": "chatgpt",
+  "item": "premise listed against the defender 5",
+  "kinds": "L1,L2,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The line spares premise 5, but \"where prayer was wont to be made\" does not give that enomizeto states an opinion against fact. (judge wrote PREMISE 5; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "32949",
+  "seat": "grok",
+  "item": "premise listed against the defender 5",
+  "kinds": "L1,L2,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The line spares premise 5, but the quoted rows do not give the assumed fact that enomizeto states an opinion set against fact. (judge wrote PREMISE 5; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "32949",
+  "seat": "gemini",
+  "item": "premise listed against the defender 6",
+  "kinds": "L1,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The line leaves premise 6 unnamed, but the rows \"of the fruit of his loins\" and \"of the house and lineage of David\" do not give \"the Holy Ghost supplied the conception's seed.\" (judge wrote PREMISE 6; RECORD-ONLY TRIAL, "
+ },
+ {
+  "run": "32949",
+  "seat": "chatgpt",
+  "item": "premise listed against the defender 6",
+  "kinds": "L1,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The line spares premise 6, but the assumed fact \"the Holy Ghost supplied the conception's seed\" is not given by the quoted rows. (judge wrote PREMISE 6; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "32949",
+  "seat": "grok",
+  "item": "premise listed against the challenger 2",
+  "kinds": "L1,L2,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The line spares premise 2, but the Jeremiah 22:30 answer is left at \"Write ye this man chi [...]\" and does not meet the press. (judge wrote PREMISE 2; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "32973",
+  "seat": "gemini",
+  "item": "premise listed against the defender 2",
+  "kinds": "L1,L2,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The block says \"I drop any claim that Matthew 1:19 states ignorance as his ground,\" so premise 2 is unexhibited. (judge wrote PREMISE 2; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "32973",
+  "seat": "chatgpt",
+  "item": "premise listed against the defender 2",
+  "kinds": "L1,L2,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The block says \"I drop any claim that Matthew 1:19 states ignorance as his ground,\" so premise 2 is unexhibited despite \"Premises 1, 2, 3, 4 and 6 are spared.\" (judge wrote PREMISE 2; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "32973",
+  "seat": "grok",
+  "item": "premise listed against the defender 2",
+  "kinds": "L1,L2,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The block says \"I drop any claim that Matthew 1:19 states ignorance as his ground,\" so premise 2 is unexhibited despite \"Premises 1, 2, 3, 4 and 5 spared.\" (judge wrote PREMISE 2; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "32973",
+  "seat": "gemini",
+  "item": "premise listed against the defender 4",
+  "kinds": "L1,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The block drops \"the sentence that no begotten child can be a sign,\" and no row gives the assumed extraordinary birth. (judge wrote PREMISE 4; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "32973",
+  "seat": "chatgpt",
+  "item": "premise listed against the defender 4",
+  "kinds": "L1,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The block drops \"the sentence that no begotten child can be a sign,\" so premise 4 is unexhibited despite \"Premises 1, 2, 3, 4 and 6 are spared.\" (judge wrote PREMISE 4; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "32973",
+  "seat": "grok",
+  "item": "premise listed against the defender 4",
+  "kinds": "L1,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The block drops \"the sentence that no begotten child can be a sign,\" so premise 4 is unexhibited despite \"Premises 1, 2, 3, 4 and 5 spared.\" (judge wrote PREMISE 4; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "32973",
+  "seat": "gemini",
+  "item": "premise listed against the defender 5",
+  "kinds": "L1,L2,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The block says \"The link does not claim the seed,\" so no row gives the assumed seed into the house of David. (judge wrote PREMISE 5; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "32973",
+  "seat": "grok",
+  "item": "premise listed against the defender 5",
+  "kinds": "L1,L2,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The block says \"The link does not claim the seed,\" so premise 5 is unexhibited despite \"Premises 1, 2, 3, 4 and 5 spared.\" (judge wrote PREMISE 5; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "32973",
+  "seat": "gemini",
+  "item": "premise listed against the defender 6",
+  "kinds": "L1,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The Romans 1:3 answer is only \"the verb of a Son already named,\" leaving \"the flesh-line is David's seed\" unanswered. (judge wrote PREMISE 6; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "32973",
+  "seat": "chatgpt",
+  "item": "premise listed against the defender 6",
+  "kinds": "L1,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The Romans 1:3 answer is only \"the verb of a Son already named,\" so premise 6 is unexhibited despite \"Premises 1, 2, 3, 4 and 6 are spared.\" (judge wrote PREMISE 6; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "32980",
+  "seat": "gemini",
+  "item": "premise listed against the defender 2",
+  "kinds": "L1,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The defender says \"I drop the claim that Matthew 1:25 by itself reaches back across the espousal,\" so the premise is conceded, not spared. (judge wrote PREMISE 2; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "32980",
+  "seat": "chatgpt",
+  "item": "premise listed against the defender 2",
+  "kinds": "L1,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The judge's \"Premises 1, 2, 3, 5 and 6 are spared\" conflicts with the defender's own \"I drop the claim that Matthew 1:25 by itself reaches back across the espousal.\" (judge wrote PREMISE 2; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "32980",
+  "seat": "grok",
+  "item": "premise listed against the defender 2",
+  "kinds": "L1,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The judge's \"Spared: 2\" conflicts with the defender's \"I drop the claim that Matthew 1:25 by itself reaches back across the espousal.\" (judge wrote PREMISE 2; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "32980",
+  "seat": "gemini",
+  "item": "premise listed against the defender 3",
+  "kinds": "L1,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The defender says \"I drop the claim that 'come upon' and 'overshadow' are seed-words by themselves,\" conceding the premise's assumption, while the judge reports none conceded. (judge wrote PREMISE 3; RECORD-ONLY TRIAL, r"
+ },
+ {
+  "run": "32980",
+  "seat": "chatgpt",
+  "item": "premise listed against the defender 3",
+  "kinds": "L1,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The judge's \"Premise 3 spared\" conflicts with the defender's \"I drop the claim that 'come upon' and 'overshadow' are seed-words by themselves.\" (judge wrote PREMISE 3; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "32980",
+  "seat": "grok",
+  "item": "premise listed against the defender 3",
+  "kinds": "L1,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The judge's \"Spared: 3\" conflicts with the defender's \"I drop the claim that 'come upon' and 'overshadow' are seed-words by themselves.\" (judge wrote PREMISE 3; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "32980",
+  "seat": "gemini",
+  "item": "premise listed against the defender 4",
+  "kinds": "L1,L2,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The defender's block says \"I drop 'only',\" so the premise is not wholly spared as the judge's \"none ... stand conceded or unexhibited\" says. (judge wrote PREMISE 4; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "32980",
+  "seat": "grok",
+  "item": "premise listed against the defender 4",
+  "kinds": "L1,L2,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The judge's \"Spared: 2, 3, 4\" conflicts with the defender's \"I drop 'only'.\" (judge wrote PREMISE 4; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "32980",
+  "seat": "gemini",
+  "item": "premise listed against the defender 6",
+  "kinds": "L1,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The defender says \"No quoted row says David's seed passes through a living father's loins at the last step,\" leaving the premise's apart-from-father assumption unexhibited, not spared. (judge wrote PREMISE 6; RECORD-ONLY"
+ },
+ {
+  "run": "32980",
+  "seat": "chatgpt",
+  "item": "premise listed against the defender 6",
+  "kinds": "L1,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The judge's \"Premise 6 spared\" conflicts with the defender's \"No quoted row says David's seed passes through a living father's loins at the last step.\" (judge wrote PREMISE 6; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "32980",
+  "seat": "gemini",
+  "item": "premise listed against the challenger 2",
+  "kinds": "L1,L2,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The challenger's answer \"Matthew 1:20 carries the same words in a sentence that names the father of the house\" does not meet the pressed \"she was found with child of the Holy Ghost,\" so the premise is counted. (judge wro"
+ },
+ {
+  "run": "32980",
+  "seat": "gemini",
+  "item": "premise listed against the challenger 3",
+  "kinds": "L1,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The challenger says \"I drop: the claim that 'also' makes Mary's means alike to Elisabeth's,\" conceding the premise, while the judge reports none conceded. (judge wrote PREMISE 3; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "32980",
+  "seat": "chatgpt",
+  "item": "premise listed against the challenger 3",
+  "kinds": "L1,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The judge's \"Premise 3 spared\" conflicts with the challenger's \"I drop: the claim that 'also' makes Mary's means alike to Elisabeth's.\" (judge wrote PREMISE 3; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "32980",
+  "seat": "grok",
+  "item": "premise listed against the challenger 3",
+  "kinds": "L1,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The judge's \"Spared: 3\" conflicts with the challenger's \"I drop: the claim that 'also' makes Mary's means alike to Elisabeth's.\" (judge wrote PREMISE 3; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "32980",
+  "seat": "gemini",
+  "item": "premise listed against the challenger 6",
+  "kinds": "L1,L2,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The pressed Matthew 1:16 says the \"begat\" pattern ends at Joseph, while the challenger's block only repeats \"reaches Christ through the fathers' line\" and leaves that grammar unanswered. (judge wrote PREMISE 6; RECORD-ON"
+ },
+ {
+  "run": "32980",
+  "seat": "chatgpt",
+  "item": "premise listed against the challenger 6",
+  "kinds": "L1,L2,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The judge's \"Premise 6 spared\" conflicts with the unanswered pressed Matthew 1:16 grammar that \"the 'begat' pattern ... ends at Joseph.\" (judge wrote PREMISE 6; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "32985",
+  "seat": "gemini",
+  "item": "premise listed against the defender 3",
+  "kinds": "L1,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The judge does not name premise 3, but the block given is \"LINK 3: SUPPORTED\" which answers Luke 2:27, not the pressed verses Matthew 1:24 and Deuteronomy 20:7. (judge wrote PREMISE 3; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "32985",
+  "seat": "grok",
+  "item": "premise listed against the defender 3",
+  "kinds": "L1,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The judge says \"Premises 1, 2, 3 and 4 spared as SUPPORTED\", but the block shown for premise 3 is \"LINK 3: SUPPORTED\" answering other verses. (judge wrote PREMISE 3; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "32985",
+  "seat": "chatgpt",
+  "item": "premise listed against the defender 5",
+  "kinds": "L1,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The judge says \"Premises 1, 2, 4 and 5 are spared\", but the defender concedes \"I drop the claim that 'of a woman' by itself excludes a father.\" (judge wrote PREMISE 5; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "32985",
+  "seat": "grok",
+  "item": "premise listed against the defender 5",
+  "kinds": "L1,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The judge rules \"Premise 5 VOID\", but the charge \"woman-only origin\" matches the quote \"Mary alone, with no man named as source.\" (judge wrote PREMISE 5; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "32985",
+  "seat": "gemini",
+  "item": "premise listed against the defender 6",
+  "kinds": "L1,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The judge does not name premise 6, but no block answers Hebrews 7:5, as the judge's own line for premise 5 leaves it out. (judge wrote PREMISE 6; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "32998",
+  "seat": "gemini",
+  "item": "premise listed against the defender 2",
+  "kinds": "L1,L2,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "Its \"CONCEDED LINKS: 0\" spares premise 2, but no row gives \"a rival begetter\"; Matthew 1:19 gives \"being a just [man], and not willing.\" (judge wrote PREMISE 2; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "32998",
+  "seat": "chatgpt",
+  "item": "premise listed against the defender 2",
+  "kinds": "L1,L2,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The line says \"Premises 1, 2, 3, 4 and 6 are spared,\" but premise 2's \"rival begetter\" is unexhibited. (judge wrote PREMISE 2; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "32998",
+  "seat": "grok",
+  "item": "premise listed against the defender 2",
+  "kinds": "L1,L2,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The line says \"Premises 1, 2, 3, 4, 5 and 6 are spared,\" but premise 2's \"rival begetter\" is unexhibited. (judge wrote PREMISE 2; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "32998",
+  "seat": "gemini",
+  "item": "premise listed against the defender 4",
+  "kinds": "L1,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The premise assumes \"the 'came together' of Matthew 1:18 is the knowing of Matthew 1:25,\" but no quoted row gives that equation; Matthew 1:24 only says \"took unto him his wife.\" (judge wrote PREMISE 4; RECORD-ONLY TRIAL,"
+ },
+ {
+  "run": "32998",
+  "seat": "chatgpt",
+  "item": "premise listed against the defender 4",
+  "kinds": "L1,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The premise assumes \"the 'came together' of Matthew 1:18 is the knowing of Matthew 1:25,\" but no quoted row gives that equation; Matthew 1:24 only says \"took unto him his wife.\" (judge wrote PREMISE 4; RECORD-ONLY TRIAL,"
+ },
+ {
+  "run": "32998",
+  "seat": "grok",
+  "item": "premise listed against the defender 4",
+  "kinds": "L1,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The premise assumes \"the 'came together' of Matthew 1:18 is the knowing of Matthew 1:25,\" but no quoted row gives that equation; Matthew 1:24 only says \"took unto him his wife.\" (judge wrote PREMISE 4; RECORD-ONLY TRIAL,"
+ },
+ {
+  "run": "32998",
+  "seat": "gemini",
+  "item": "premise listed against the defender 5",
+  "kinds": "L1,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The premise assumes \"the depth-or-height offer of Isaiah 7:11 is the sign given at 7:14,\" but the rows give only Isaiah 7:12 \"I will not ask\" and Isaiah 8:18 \"for signs and for wonders,\" not that equation. (judge wrote P"
+ },
+ {
+  "run": "32998",
+  "seat": "grok",
+  "item": "premise listed against the defender 5",
+  "kinds": "L1,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "grok spares premise 5, but no quoted row gives the assumed fact that \"the depth-or-height offer of Isaiah 7:11 is the sign given at 7:14.\" (judge wrote PREMISE 5; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "32998",
+  "seat": "gemini",
+  "item": "premise listed against the defender 6",
+  "kinds": "L1,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The premise assumes \"Mary is of the house of David,\" but the rows name only Joseph as \"of the house and lineage of David\" (Luke 2:4) and Elisabeth \"of the daughters of Aaron\" (Luke 1:5). (judge wrote PREMISE 6; RECORD-ON"
+ },
+ {
+  "run": "32998",
+  "seat": "chatgpt",
+  "item": "premise listed against the defender 6",
+  "kinds": "L1,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The premise assumes \"Mary is of the house of David,\" but the rows name only Joseph as \"of the house and lineage of David\" (Luke 2:4) and Elisabeth \"of the daughters of Aaron\" (Luke 1:5). (judge wrote PREMISE 6; RECORD-ON"
+ },
+ {
+  "run": "32998",
+  "seat": "grok",
+  "item": "premise listed against the defender 6",
+  "kinds": "L1,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The premise assumes \"Mary is of the house of David,\" but the rows name only Joseph as \"of the house and lineage of David\" (Luke 2:4) and Elisabeth \"of the daughters of Aaron\" (Luke 1:5). (judge wrote PREMISE 6; RECORD-ON"
+ },
+ {
+  "run": "32998",
+  "seat": "sol",
+  "item": "premise listed against the defender 1",
+  "kinds": "L1,L2,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The premise's ASSUMES is \"ek with the Holy Ghost names a begetter of flesh,\" but the cited rows \"1 John 5:1\" and \"Romans 1:3\" give divine begetting and Davidic flesh seed, not that fact. (judge wrote PREMISE 1; RECORD-ON"
+ },
+ {
+  "run": "32998",
+  "seat": "sol",
+  "item": "premise listed against the defender 2",
+  "kinds": "L1,L2,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The premise's ASSUMES is \"the ground of Joseph's intent was a rival begetter,\" but the cited rows \"Matthew 1:19\" and \"Matthew 1:21\" give Joseph's grounds and the naming command, not a rival begetter. (judge wrote PREMISE"
+ },
+ {
+  "run": "32998",
+  "seat": "sol",
+  "item": "premise listed against the defender 3",
+  "kinds": "L1,L2,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The judge spares it with \"Premises 1–5 are spared,\" but the premise's \"ASSUMES: the feminine hēs sets aside the husband named in the same verse\" is not given by the rows \"Jacob begat Joseph the husband of Mary\" and \"thy "
+ },
+ {
+  "run": "32998",
+  "seat": "sol",
+  "item": "premise listed against the defender 4",
+  "kinds": "L1,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The judge says \"Premises 1–5 are spared,\" but the premise's \"ASSUMES: the \"came together\" of Matthew 1:18 is the knowing of Matthew 1:25\" is not supplied by the rows \"took unto him his wife\" and \"Mary his espoused wife, "
+ },
+ {
+  "run": "32998",
+  "seat": "sol",
+  "item": "premise listed against the defender 5",
+  "kinds": "L1,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The judge says \"Premises 1–5 are spared,\" but the premise's \"ASSUMES: the depth-or-height offer of Isaiah 7:11 is the sign given at 7:14\" is not given by the rows \"I will not ask\" and \"I and the children whom the LORD ha"
+ },
+ {
+  "run": "33006",
+  "seat": "sol",
+  "item": "premise listed against the defender 4",
+  "kinds": "L1,L2,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The given block is \"LINK 4: SUPPORTED\" on Luke 3:23 and does not answer the pressed Matthew 1:3, 1:6, 1:1 on the feminine \"of whom.\" (judge wrote PREMISE 4; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "33006",
+  "seat": "sol",
+  "item": "premise listed against the defender 6",
+  "kinds": "L1,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The defender's block says \"I drop the claim that a row states Mary's descent from David,\" conceding the premise's assumption. (judge wrote PREMISE 6; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "33014",
+  "seat": "sol",
+  "item": "premise listed against the defender 2",
+  "kinds": "L1,L2,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The judge says \"premises 1–5 are supported,\" but the premise assumes \"the span of 'till she had brought forth' begins at the conception\" and the answering block says \"I drop the claim that the span of heōs in Matthew 1:2"
+ },
+ {
+  "run": "33014",
+  "seat": "sol",
+  "item": "premise listed against the defender 3",
+  "kinds": "L1,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The judge says \"premises 1–5 are supported,\" but the premise assumes \"a son conceived by a husband's approach falls outside the signs,\" while the block says \"I grant the children are signs\" and \"I drop any claim that the"
+ },
+ {
+  "run": "33025",
+  "seat": "gemini",
+  "item": "premise listed against the defender 4",
+  "kinds": "L1,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "No block answers premise 4, so its assumption is UNEXHIBITED, not spared. (judge wrote PREMISE 4; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "33025",
+  "seat": "grok",
+  "item": "premise listed against the defender 4",
+  "kinds": "L1,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "\"Spared: ... 4 ...\" is wrong because no block answers premise 4. (judge wrote PREMISE 4; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "33025",
+  "seat": "gemini",
+  "item": "premise listed against the challenger 1",
+  "kinds": "L1,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "It leaves premise 1 unnamed as a SPARED ruling, while the record's claim that the signet \"lifts the bar\" is not carried by Haggai 2:23's \"will make thee as a signet.\" (judge wrote PREMISE 1; RECORD-ONLY TRIAL, ruling 428"
+ },
+ {
+  "run": "33025",
+  "seat": "gemini",
+  "item": "premise listed against the challenger 4",
+  "kinds": "L1,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "It leaves premise 4 unnamed as SPARED, while the inference \"Joseph knew Mary his wife within the espousal\" is not carried by Matthew 1:25's \"knew her not till she had brought forth her firstborn son.\" (judge wrote PREMIS"
+ },
+ {
+  "run": "33025",
+  "seat": "gemini",
+  "item": "premise listed against the challenger 5",
+  "kinds": "L1,L2,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "It leaves premise 5 unnamed as SPARED, while \"the father named of David's house is Joseph\" is not carried by Luke 2:4's \"Joseph... was of the house and lineage of David\" against Matthew 1:16's \"Joseph the husband of Mary"
+ },
+ {
+  "run": "33025",
+  "seat": "chatgpt",
+  "item": "premise listed against the challenger 5",
+  "kinds": "L1,L2,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "It says \"Premises 5 and 6 are spared,\" but premise 5 should be COUNTED because its \"father named\" claim is not carried by the cited Luke 2:4 row against \"Joseph the husband of Mary.\" (judge wrote PREMISE 5; RECORD-ONLY T"
+ },
+ {
+  "run": "33025",
+  "seat": "sol",
+  "item": "premise listed against the defender 5",
+  "kinds": "L1,L2,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The judge says \"Premises 1, 2, 5 and 6 are spared,\" but the supplied block for premise 5 is \"LINK 5: SUPPORTED\" with \"Premise: Joseph knew Mary his wife within the espousal,\" not the defender's answer to the challenged i"
+ },
+ {
+  "run": "33025",
+  "seat": "sol",
+  "item": "premise listed against the defender 6",
+  "kinds": "L1,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The judge says \"Premises 1, 2, 5 and 6 are spared,\" but the record states \"(no block answering this premise was found by its number or tag)\" for premise 6, so no link-round block exhibits it and the premise is counted. ("
+ },
+ {
+  "run": "33040",
+  "seat": "gemini",
+  "item": "premise listed against the defender 2",
+  "kinds": "L1,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The line leaves premise 2 uncounted, but the Matthew 1:24 press is answered only by words that \"do not engage the claimed identification of the coming together with the taking.\" (judge wrote PREMISE 2; RECORD-ONLY TRIAL,"
+ },
+ {
+  "run": "33040",
+  "seat": "grok",
+  "item": "premise listed against the defender 2",
+  "kinds": "L1,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The line \"spared 2,\" but the Matthew 1:24 press is answered in words that do not engage the claimed identification. (judge wrote PREMISE 2; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "33040",
+  "seat": "gemini",
+  "item": "premise listed against the challenger 2",
+  "kinds": "L1,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The line leaves premise 2 uncounted, but the line's own reason counts premise 3 because \"Matthew 1:19 left unanswered.\" (judge wrote PREMISE 2; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "33040",
+  "seat": "grok",
+  "item": "premise listed against the challenger 2",
+  "kinds": "L1,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The line \"spared 2,\" but its own reason for counting premise 3 says the Matthew 1:19 press is answered in words that do not show a prior knowing. (judge wrote PREMISE 2; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "33040",
+  "seat": "gemini",
+  "item": "premise listed against the challenger 3",
+  "kinds": "L1,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The line says \"CONCEDED LINKS: 0,\" but premise 3 is \"UNEXHIBITED (Matthew 1:19 left unanswered).\" (judge wrote PREMISE 3; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "33040",
+  "seat": "sol",
+  "item": "premise listed against the defender 1",
+  "kinds": "L1,L2,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The narrowed link keeps \"assigns the birth, \\\"of whom\\\", to Mary alone\" after saying \"I drop the broader claim,\" so it still asserts what was given up. (judge wrote PREMISE 1; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "33040",
+  "seat": "sol",
+  "item": "premise listed against the defender 4",
+  "kinds": "L1,L2,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The defender says \"I drop the claim that every 'father' row reports opinion\" and grants only \"household naming,\" so premise 4 is not spared. (judge wrote PREMISE 4; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "33040",
+  "seat": "sol",
+  "item": "premise listed against the defender 5",
+  "kinds": "L1,L2,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The defender says \"I drop the claim that Mary is of David's house, because no quoted row states it,\" so premise 5 is unexhibited. (judge wrote PREMISE 5; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "33040",
+  "seat": "sol",
+  "item": "premise listed against the defender 6",
+  "kinds": "L1,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The defender says \"I drop the claim that the flesh came through Mary's side,\" so premise 6 is not spared. (judge wrote PREMISE 6; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "33083",
+  "seat": "gemini",
+  "item": "premise listed against the defender 5",
+  "kinds": "L1,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The press \"Jeremiah 22:24 'yet would I pluck thee thence'\" is left unanswered while the answer only says \"The row says signet and chosen,\" so premise 5 is COUNTED. (judge wrote PREMISE 5; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "33129",
+  "seat": "gemini",
+  "item": "premise listed against the defender 6",
+  "kinds": "L1,L2,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The judge says \"Premise 6 is SPARED as SUPPORTED with exhibited layers,\" but the defender's LINK 6 concedes \"The KJV does not state Mary's tribe in so many words. That limb is my inference,\" which the premise charges. (j"
+ },
+ {
+  "run": "33129",
+  "seat": "sol",
+  "item": "premise listed against the defender 6",
+  "kinds": "L1,L2,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The judge says \"Premises 1, 2, 3, 5 and 6 are spared,\" but LINK 6 concedes \"That limb is my inference,\" so premise 6 is CONCEDED, not SPARED. (judge wrote PREMISE 6; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "33149",
+  "seat": "gemini",
+  "item": "premise listed against the defender 4",
+  "kinds": "L1,L2,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The judge spares premise 4 in \"Premises 3, 4, 5, 6 are spared as fully supported with exhibited layers,\" but the record says \"the side tagged no block for this premise\" and the only block given is \"LINK 4: SUPPORTED. Luk"
+ },
+ {
+  "run": "33149",
+  "seat": "chatgpt",
+  "item": "premise listed against the defender 4",
+  "kinds": "L1,L2,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The judge spares premise 4 in \"premises 1, 3, 4, 5 and 6 are spared,\" but the record says \"the side tagged no block for this premise\" and the only block given is \"LINK 4: SUPPORTED. Luke 1:37 meets God's power working th"
+ },
+ {
+  "run": "33149",
+  "seat": "sol",
+  "item": "premise listed against the defender 4",
+  "kinds": "L1,L2,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The judge states \"Premises 1, 3, 4, 5, and 6 are spared: their narrowed claims exhibit at least L1 and L3,\" but the record says \"the side tagged no block for this premise\" and the only block given is \"LINK 4: SUPPORTED. "
+ },
+ {
+  "run": "33149",
+  "seat": "gemini",
+  "item": "premise listed against the defender 5",
+  "kinds": "L1,L2,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The judge spares premise 5 in \"Premises 3, 4, 5, 6 are spared as fully supported with exhibited layers,\" but the record states \"(no block answering this premise was found by its number or tag),\" so premise 5 is unanswere"
+ },
+ {
+  "run": "33149",
+  "seat": "chatgpt",
+  "item": "premise listed against the defender 5",
+  "kinds": "L1,L2,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The judge spares premise 5 in \"premises 1, 3, 4, 5 and 6 are spared,\" but the record states \"(no block answering this premise was found by its number or tag),\" so premise 5 is unanswered and COUNTED. (judge wrote PREMISE"
+ },
+ {
+  "run": "33149",
+  "seat": "sol",
+  "item": "premise listed against the defender 5",
+  "kinds": "L1,L2,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The judge states \"Premises 1, 3, 4, 5, and 6 are spared,\" but the record states \"(no block answering this premise was found by its number or tag),\" so premise 5 is unanswered and COUNTED. (judge wrote PREMISE 5; RECORD-O"
+ },
+ {
+  "run": "33149",
+  "seat": "gemini",
+  "item": "premise listed against the defender 6",
+  "kinds": "L1,L2,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The judge spares premise 6 in \"Premises 3, 4, 5, 6 are spared as fully supported with exhibited layers,\" but the record states \"(no block answering this premise was found by its number or tag),\" so premise 6 is unanswere"
+ },
+ {
+  "run": "33149",
+  "seat": "chatgpt",
+  "item": "premise listed against the defender 6",
+  "kinds": "L1,L2,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The judge spares premise 6 in \"premises 1, 3, 4, 5 and 6 are spared,\" but the record states \"(no block answering this premise was found by its number or tag),\" so premise 6 is unanswered and COUNTED. (judge wrote PREMISE"
+ },
+ {
+  "run": "33149",
+  "seat": "sol",
+  "item": "premise listed against the defender 6",
+  "kinds": "L1,L2,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The judge states \"Premises 1, 3, 4, 5, and 6 are spared,\" but the record states \"(no block answering this premise was found by its number or tag),\" so premise 6 is unanswered and COUNTED. (judge wrote PREMISE 6; RECORD-O"
+ },
+ {
+  "run": "33197",
+  "seat": "chatgpt",
+  "item": "premise listed against the defender 2",
+  "kinds": "L1,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The pkgBAR-struck answer leaves Matthew 1:25 unanswered, so premise 2 is not spared. (judge wrote PREMISE 2; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "33197",
+  "seat": "sol",
+  "item": "premise listed against the defender 2",
+  "kinds": "L1,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The pkgBAR-struck answer leaves Matthew 1:25 unanswered, so premise 2 is UNEXHIBITED. (judge wrote PREMISE 2; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "33197",
+  "seat": "sol",
+  "item": "premise listed against the challenger 1",
+  "kinds": "L1,L2,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The line's \"Premises 1–6 are spared\" ignores that premise 1's answer to Matthew 1:18 does not reconcile \"she is found with child before any coming together.\" (judge wrote PREMISE 1; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "33197",
+  "seat": "gemini",
+  "item": "premise listed against the challenger 5",
+  "kinds": "L1,L2,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The line names only \"Premise 1: UNEXHIBITED\" and leaves premise 5 unnamed, though \"the answer to Luke 1:35 does not carry the pressed grounding of the title.\" (judge wrote PREMISE 5; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "33197",
+  "seat": "sol",
+  "item": "premise listed against the challenger 5",
+  "kinds": "L1,L2,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The line's \"Premises 1–6 are spared\" ignores that premise 5's answer to Luke 1:35 does not carry the pressed grounding of the title. (judge wrote PREMISE 5; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "33299",
+  "seat": "gemini",
+  "item": "premise listed against the defender 5",
+  "kinds": "L1,L2,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "\"CONCEDED LINKS: 0\" spares premise 5, but the defender's words claim the callers \"knew only Joseph's household,\" no quoted row gives that fact, and the Luke 2:48 press about Mary's knowledge stands unanswered. (judge wro"
+ },
+ {
+  "run": "33299",
+  "seat": "sol",
+  "item": "premise listed against the defender 5",
+  "kinds": "L1,L2,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "Sol says premise 5 \"replaces the claim about witnesses' limited knowledge with household usage,\" but the answering block is \"LINK 5: SUPPORTED\" and no quoted row gives that the callers knew only Joseph's household. (judg"
+ },
+ {
+  "run": "33289",
+  "seat": "gemini",
+  "item": "premise listed against the challenger 5",
+  "kinds": "L1,L2,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The kept answer \"the finding came before the taking whoever the father was\" still asserts the dropped limb \"whatever he knew,\" so the narrowing retains what was surrendered. (judge wrote PREMISE 5; RECORD-ONLY TRIAL, rul"
+ },
+ {
+  "run": "33289",
+  "seat": "chatgpt",
+  "item": "premise listed against the challenger 5",
+  "kinds": "L1,L2,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The distinction fails: \"whoever the father was\" asserts the same universal as the dropped \"whatever he knew,\" which the side said it dropped. (judge wrote PREMISE 5; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "33289",
+  "seat": "grok",
+  "item": "premise listed against the defender 6",
+  "kinds": "L1,L2,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "No quoted row gives the assumed road \"apart from David's loins\"; the defender's own row gives the contrary, \"the Lord God shall give unto him the throne of his father David,\" and the block claims \"LINK 6: SUPPORTED\" with"
+ },
+ {
+  "run": "33299",
+  "seat": "grok",
+  "item": "premise listed against the defender 5",
+  "kinds": "L1,L2,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The record's block is \"LINK 5: SUPPORTED\" and its answer calls the father-texts \"household usage \"after the custom of the law\" (2:27),\" so no drop is shown and no quoted row gives \"those who call Joseph father knew Josep"
+ },
+ {
+  "run": "33311",
+  "seat": "gemini",
+  "item": "premise listed against the defender 4",
+  "kinds": "L1,L2,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The line \"CONCEDED LINKS: 0\" is a bare count that names no ruling on premise 4, but the record's own narrowing keeps the words \"was minded to put her away privily\" while dropping the claim that that ground alone proves J"
+ },
+ {
+  "run": "33311",
+  "seat": "gemini",
+  "item": "premise listed against the challenger 4",
+  "kinds": "L1,L2,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "\"CHALLENGER CONCEDED LINKS: 0 -- recomputed after the cure\" rules nothing on premise 4, yet the record's own answer keeps \"the espousal stands before the taking,\" which still asserts the knowing within the espousal; prem"
+ },
+ {
+  "run": "33311",
+  "seat": "sol",
+  "item": "premise listed against the challenger 4",
+  "kinds": "L1,L2,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "\"Premises 1, 2, 4, 5 and 6 are spared\" is wrong on premise 4, whose kept words, \"the espousal stands before the taking,\" still assert the knowing the record's [L4] needs, against Matthew 1:25 \"And knew her not till she h"
+ },
+ {
+  "run": "33311",
+  "seat": "grok",
+  "item": "premise listed against the defender 2",
+  "kinds": "L1,L2,L3",
+  "hold": true,
+  "cls": "HELD",
+  "why": "The defender's LINK 2 gives epercomai as \"to supervene... influence\" and episkiazō as \"to envelop... invest with preternatural influence,\" and its [L4] says only \"the answer names acts of the Holy Ghost and the power of "
+ }
+]
