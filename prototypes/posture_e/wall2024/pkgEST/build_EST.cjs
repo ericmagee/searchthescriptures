@@ -1,0 +1,16 @@
+// pkgEST (W1, 11-07; Lane 1 DeepSeek enforcer fix). The K-W / K-S3 DeepSeek check (Enforcer Build) gave DeepSeek only each judge's RESPONSE line.
+// A judge may answer an item in its STATEMENT line instead ("STATEMENT: K-S3 S3 DEFENDER CR4: #1 | TOUCHES NO LINK: ..."), the cure reads both.
+// 33461 sol: STATEMENT in form (TOUCHES NO LINK), RESPONSE "NOT HELD"; DeepSeek answered NO ANSWER on all 14 K-S3 items and they were sent back.
+// Screen of 11 saved runs: 949 K-W/K-S3 rows, 382 with the form in the RESPONSE, 152 with it ONLY in the same item's STATEMENT, 415 in neither.
+// Now each answer line also carries the same judge's STATEMENT for that item (read from its cure reply), and the rules say the form may stand on either.
+// Only Enforcer Build changes. Base: live s49. Run from wall2024/: node pkgEST/build_EST.cjs
+const fs=require('fs');const crypto=require('crypto');const h=s=>crypto.createHash('sha256').update(s).digest('hex').slice(0,12);
+const R=[
+ ["const ids=[];const parts=G.map((g,k)=>{const lines=g.ans.map((r,j)=>{const id='A'+(k+1)+'.'+(j+1);ids.push({id,row:r});return '- '+id+' ('+r.seat+'): '+(r.response_line?String(r.response_line).replace(/\\s+/g,' ').slice(0,700):'none written');});",
+  "/* pkgEST (W1): each judge's STATEMENT line for the item, from its cure reply; a K-W/K-S3 answer may stand there (33461 sol, 14 K-S3 items) */\nconst __estRep={};for(const n of ['Panel Cure Normalize 1','Panel Cure Normalize 2','Panel Cure Normalize 3']){try{if(__L[n]().isExecuted)for(const it of __L[n]().all()){const c=it.json&&it.json.cure,r=it.json&&it.json.reply;if(c&&c.seat&&r&&r.text)__estRep[c.seat]=String(r.text).replace(/\\\\n/g,'\\n').replace(/\\\\\"/g,'\"');}}catch(e){}}\nconst __estOf=r=>{const t=__estRep[r.seat];if(!t)return null;const lab=clean(r.item).trim();for(const l0 of t.split('\\n')){const l=clean(l0).trim().replace(/^\"(?:reasoning|reason)\"\\s*:\\s*\"/,'');const m=l.match(/^STATEMENT\\s*:\\s*(K-W|K-S3)\\s+(.+?)\\s*\\|\\s*([\\s\\S]*)$/i);if(m&&m[1].toUpperCase()===r.rule&&clean(m[2]).trim()===lab)return m[3].replace(/\"\\s*,?\\s*$/,'').trim();}return null;};\nconst ids=[];const parts=G.map((g,k)=>{const lines=g.ans.map((r,j)=>{const id='A'+(k+1)+'.'+(j+1);ids.push({id,row:r});const __st=__estOf(r);return '- '+id+' ('+r.seat+'): RESPONSE: '+(r.response_line?String(r.response_line).replace(/\\s+/g,' ').slice(0,700):'none written')+(__st?' || STATEMENT: '+__st.replace(/\\s+/g,' ').slice(0,700):'');});"],
+ ["+'An answer that is missing, or in neither form: NO ANSWER.\\n'",
+  "+'A judge may give its answer in its RESPONSE or in its STATEMENT for the item (shown after \"|| STATEMENT:\"). Read the form from either line: when one of them is in the rule\\'s form, judge that form and its reason; NO ANSWER only when neither line is in a form (pkgEST).\\n'\n +'An answer that is missing, or in neither form: NO ANSWER.\\n'"]];
+const plan={};for(const f of fs.readdirSync('pkgEST/base_s49')){let s=fs.readFileSync('pkgEST/base_s49/'+f,'utf8');const s0=s;
+ for(const [a,b] of R){const c=s.split(a).length-1;if(c!==1)throw new Error(f+': '+c+' x '+a.slice(0,60));s=s.replace(a,()=>b);}
+ new Function('$','$input',s);fs.writeFileSync('pkgEST/patched/'+f,s);plan[f]={base:h(s0),patched:h(s)};console.log(f.padEnd(24),h(s0),'->',h(s));}
+fs.writeFileSync('pkgEST/patched.plan.json',JSON.stringify(plan,null,1));
