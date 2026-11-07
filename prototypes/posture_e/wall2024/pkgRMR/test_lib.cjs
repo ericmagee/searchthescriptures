@@ -1,0 +1,14 @@
+const fs=require('fs');const {rmrOf}=new Function(fs.readFileSync(__dirname+'/rmr_lib.js','utf8')+';return {rmrOf};')();
+const live=r=>!['K-RUL','K-KJV','K-LB','K-UNX'].includes(r);let ok=0,bad=0;const t=(n,c)=>{console.log((c?'OK  ':'FAIL')+' '+n);c?ok++:bad++;};
+const a=rmrOf('[AUDIT v21: DEBATE RULE VIOLATION REPORT -- SEAT: x; ITEM: D1; RULE: K-W; RESULT: UNCURED; WHY: w]\n[AUDIT v21: DEBATE RULE VIOLATION REPORT -- SEAT: x; ITEM: D2; RULE: K-W; RESULT: CURED]\n[AUDIT v21: DEBATE RULE VIOLATION REPORT -- SEAT: x; ITEM: D3; RULE: K-RUL; RESULT: UNCURED; WHY: t]',1,live);
+t('cure: UNCURED LIVE counted, CURED and TRIAL not',a.total===1&&a.rules[0]==='K-W (cure) x1'&&a.match);
+const b=rmrOf('[AUDIT v42: COLLISION GRADE UNCURED (pkgUND) -- SEAT: c; ITEMS: S18 (E-HOLD on X: kept; no counted [L1] (q)); S22 (E-HOLD on Y); counted in drv_uncured. REVIEW THIS ROW.]',2,live);
+t('send-back tag: items counted at top level only',b.total===2&&b.rules[0]==='COLLISION GRADE UNCURED x2');
+const c=rmrOf('[AUDIT v40: SEND-BACK SILENCE -- SEAT: s; ITEMS: S1, S4, S9; no written answer to these send-back items; counted in drv_uncured (silence rule, WALL-2024 2274). REVIEW THIS ROW.]',3,live);
+t('silence: comma items',c.total===3&&c.rules[0]==='SEND-BACK SILENCE x3');
+const d=rmrOf('[AUDIT v38: E-GATE -- SEAT: s; G1 premise-count (DR2); ANSWER: KEEP; UNCURED: why; counted in drv_uncured. REVIEW THIS ROW.]\n[AUDIT v38: E-GATE -- SEAT: s; G2 premise-count (DR2); ANSWER: KEEP; UNCURED: why; RECORD-ONLY, not counted. REVIEW THIS ROW.]',1,live);
+t('E-GATE: counted line only',d.total===1&&d.rules[0]==='E-GATE premise-count x1');
+const e=rmrOf('[AUDIT v48: KEYSTONE CONSISTENCY UNCURED (pkgKSC, Commitment 15; TRIAL) -- SEAT: s; ITEMS: a; TRIAL rule: recorded, not counted in drv_uncured; it removes no seat. REVIEW THIS ROW.]',0,live);
+t('TRIAL KSC not counted',e.total===0&&e.match);
+t('mismatch flagged',rmrOf('',2,live).match===false);
+console.log(ok+' OK, '+bad+' FAIL');

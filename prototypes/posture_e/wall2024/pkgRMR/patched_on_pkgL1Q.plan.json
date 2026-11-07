@@ -1,0 +1,11 @@
+{
+ "base": "pkgL1Q/patched",
+ "nodes": [
+  {
+   "file": "Alternate_Merge_Seat.js",
+   "node": "Alternate Merge Seat",
+   "base_sha": "03ac3562370c",
+   "final_sha": "8b53cf1d0a1d"
+  }
+ ]
+}
