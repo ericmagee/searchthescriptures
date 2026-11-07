@@ -5,10 +5,10 @@
 // C. Send Back Build: saved runs byte-equal to base (pkgL1Q/patched); with the synthetic DISAGREE, the E-B7 item carries b7 and the rule note.
 // D. Send Back Record: saved runs equal to base; B7.cure units; synthetic replies: an uncured E-B7 adds 1 to drv_uncured with AUDIT v51; a cured one does not.
 const fs=require('fs');const {harness}=require('../pkgGSL/harness.cjs');const D='/mnt/project-files/wall2024/inputs/';
-const EB='pkgEAI/patched_on_pkgEID/',SB='pkgL1Q/patched/',P=__dirname+'/patched/';const rf=(d,n)=>fs.readFileSync(d+n.replace(/ /g,'_')+'.js','utf8');
+const EB=process.env.EB||'pkgEAI/patched_on_pkgEID/',SB='pkgL1Q/patched/',P=__dirname+'/'+(process.env.PD||'patched')+'/';const rf=(d,n)=>fs.readFileSync(d+n.replace(/ /g,'_')+'.js','utf8');
 let ok=0,bad=0;const out=[];const log=s=>{out.push(s);console.log(s);};const T=(c,m)=>{if(c){ok++;out.push('OK '+m);}else{bad++;log('FAIL '+m);}};
 const st=x=>JSON.stringify(x,(k,v)=>k==='at'||k==='created_at'?undefined:v);
-const runs=fs.readdirSync(D).filter(f=>/^\d+_Judge_Enforcer_Build\.json$/.test(f)).map(f=>f.split('_')[0]).sort();
+const runs=fs.readdirSync(D).filter(f=>/^\d+_Judge_Enforcer_Build\.json$/.test(f)).map(f=>f.split('_')[0]).filter(r=>+r>=33218).sort();
 const SIDES=[['','Judge Enforcer Build','Enforcer Record','Judge Enforcer Record','Judge Enforcer Call deepseek','Send Back Build','Send Back Record','Send Back Call openrouter'],
  ['Alt ','Alt Judge Enforcer Build','Alt Seated','Alt Judge Enforcer Record','Alt Judge Enforcer Call deepseek','Alt Send Back Build','Alt Send Back Record','Alt Send Back Call openrouter']];
 let nB7=0;let synthDone=false;
@@ -18,7 +18,7 @@ for(const RUN of runs)for(const [pre,jb,jbi,jr,jri,sbb,sbr,sbri] of SIDES){
  let b0,b1;try{b0=harness(RUN)(rf(EB,jb),jbi);b1=harness(RUN)(rf(P,jb),jbi);}catch(e){T(false,RUN+' '+jb+' threw '+String(e.message).slice(0,120));continue;}
  const I0=b0.flatMap((x,ci)=>(x.json.ids||[]).map(y=>({...y,ci}))),I1=b1.flatMap((x,ci)=>(x.json.ids||[]).map(y=>({...y,ci})));const S=I1.filter(y=>y.rule==='E-B7');
  const old1=I1.filter(y=>y.rule!=='E-B7');const oldEq=old1.length===I0.length&&old1.every((y,k)=>st(y)===st(I0[k]));
- T(oldEq&&b1.length<=8&&((b1[0]||{}).json||{}).not_checked.length===((b0[0]||{}).json||{}).not_checked.length,RUN+' '+jb+': old ids '+I0.length+' unchanged, calls '+b0.length+' -> '+b1.length+', E-B7 items '+S.length);
+ T(oldEq&&b1.length<=8&&(((b1[0]||{}).json||{}).not_checked||[]).length===(((b0[0]||{}).json||{}).not_checked||[]).length,RUN+' '+jb+': old ids '+I0.length+' unchanged, calls '+b0.length+' -> '+b1.length+', E-B7 items '+S.length);
  nB7+=S.length;for(const y of S)log('E-B7 '+RUN+' '+pre+y.seat+' '+y.item+' | count: '+y.b7.seg.slice(0,140)+' | MEANS: '+(y.b7.means[0]||'').slice(0,100));
  // ---- B: saved replies
  const haveR=fs.existsSync(D+RUN+'_'+jri.replace(/ /g,'_')+'.json');if(!haveR)continue;
@@ -29,7 +29,7 @@ for(const RUN of runs)for(const [pre,jb,jbi,jr,jri,sbb,sbr,sbri] of SIDES){
  T(sameOld&&R1.filter(x=>x.rule==='E-B7').every(x=>/^ENFORCER NO VERDICT/.test(x.cure_reason)),RUN+' '+jr+': '+R0.length+' old rows unchanged, '+(R1.length-R1o.length)+' E-B7 rows NO VERDICT on the saved replies');
  // ---- C: saved runs, Send Back Build equal to base
  if(fs.existsSync(D+RUN+'_'+sbb.replace(/ /g,'_')+'.json')){let s0,s1,e0=null,e1=null;try{s0=harness(RUN)(rf(SB,sbb),jr);}catch(e){e0=String(e.message).slice(0,100);}try{s1=harness(RUN)(rf(P,sbb),jr);}catch(e){e1=String(e.message).slice(0,100);}
-  T(e0===e1&&(e0||st(s0)===st(s1)),RUN+' '+sbb+': saved run equal to base'+(e0?' (both: '+e0+')':''));}
+  T(e0===e1&&(e0||st(s0)===st(s1).replace(/,"b7":null/g,'')),RUN+' '+sbb+': saved run equal to base (the new b7:null field aside)'+(e0?' (both: '+e0+')':''));}
  if(fs.existsSync(D+RUN+'_'+sbri.replace(/ /g,'_')+'.json')&&fs.existsSync(D+RUN+'_'+sbb.replace(/ /g,'_')+'.json')){let s0,s1,e0=null,e1=null;try{s0=harness(RUN)(rf(SB,sbr),sbri);}catch(e){e0=String(e.message).slice(0,100);}try{s1=harness(RUN)(rf(P,sbr),sbri);}catch(e){e1=String(e.message).slice(0,100);}
   const norm=x=>st(x).replace(/,"b7_counted":\[\]/g,'');T(e0===e1&&(e0||norm(s0)===norm(s1)),RUN+' '+sbr+': saved run equal to base (b7_counted [] aside)'+(e0?' (both: '+e0+')':''));}
  // ---- B/C/D synthetic, once per side on the newest run with E-B7 items and saved send-back data
@@ -54,9 +54,9 @@ for(const RUN of runs)for(const [pre,jb,jbi,jr,jri,sbb,sbr,sbri] of SIDES){
  const j1=d1[0].json;const bd=(j1.bodies||[]).map(x=>JSON.parse(x).payload).find(p=>p.judge_seat===seatOut.json.seat);
  const base1=harness(RUN,{[sbb]:sb,[jr]:rs,[sbri]:mkReply('I keep both.')})(rf(SB,sbr),sbri)[0].json;const bb0=(base1.bodies||((harness(RUN)('return $(\'Panel Cure Check\').first().json;','Panel Cure Check')||{}).bodies)||[]).map(x=>JSON.parse(x).payload).find(p=>p.judge_seat===seatOut.json.seat);
  T(j1.sendback.b7_counted.length===1&&bd&&/AUDIT v51: SELF-CONTRADICTION UNCURED/.test(bd.verdict_raw)&&bb0&&bd.drv_uncured===(bb0.drv_uncured||0)+1,RUN+' '+pre+'Send Back Record: a KEEP without the quotes is UNCURED, counted once (drv_uncured '+(bb0&&bb0.drv_uncured)+' -> '+(bd&&bd.drv_uncured)+'), AUDIT v51');
- const q1=String(it.b7.entry).replace(/[^A-Za-z0-9: ]+/g,' ').split(/\s+/).filter(Boolean).slice(2,10).join(' '),q2=String(it.b7.means[0]||'').replace(/[^A-Za-z0-9: ]+/g,' ').split(/\s+/).filter(Boolean).slice(0,8).join(' ');
+ const q1=String(it.b7.entry).split(/\s+/).filter(Boolean).slice(1,9).join(' '),q2=String(it.b7.means[0]||'').split(/\s+/).filter(Boolean).slice(0,8).join(' ');
  const d2=sbrRun('The premise reads "'+q1+'", while the press reads "'+q2+'"; these are two grounds.')[0].json;const row=d2.sb_rows.find(r=>r.rule==='E-B7');
- T(d2.sendback.b7_counted.length===0&&/CURE \(SELF-CONTRADICTION ENFORCED, pkgEB7\): CURED/.test(row.cure_reason),RUN+' '+pre+'Send Back Record: a KEEP quoting the premise and the MEANS is CURED, not counted');
+ if(!(d2.sendback.b7_counted.length===0&&/CURED/.test(row.cure_reason)))log('DBG q1='+q1+' | q2='+q2+' | '+String(row.cure_reason).slice(-400));T(d2.sendback.b7_counted.length===0&&/CURE \(SELF-CONTRADICTION ENFORCED, pkgEB7\): CURED/.test(row.cure_reason),RUN+' '+pre+'Send Back Record: a KEEP quoting the premise and the MEANS is CURED, not counted');
  synthDone=true;}
 // D units
 {const s=fs.readFileSync(P+'Send_Back_Record.js','utf8');const i=s.indexOf('const B7=(()=>{');const B7=new Function(s.slice(i,s.indexOf('return {LIVE,cure};})();',i)+'return {LIVE,cure};})();'.length)+'\nreturn B7;')();

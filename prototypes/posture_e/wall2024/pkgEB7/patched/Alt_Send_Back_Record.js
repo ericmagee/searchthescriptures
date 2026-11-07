@@ -40,7 +40,7 @@ const CLR=(()=>{
  return {read,block,entries};})(); /* pkgCLR */
 /* pkgEB7 (rulings item 13): the E-B7 cure. ENFORCED (B7.LIVE). */
 const B7=(()=>{const LIVE=true;const NN=s=>String(s==null?'':s).toLowerCase().replace(/\\+"/g,'"').replace(/[‘’“”"'`*_]/g,'').replace(/[—–-]/g,' ').replace(/[^a-z0-9 :]+/g,' ').replace(/\s+/g,' ').trim();
- const six=(t,src)=>{const w=NN(t).split(' ').filter(Boolean);const s=' '+NN(src)+' ';for(let i=0;i+6<=w.length;i++)if(s.includes(' '+w.slice(i,i+6).join(' ')+' '))return w.slice(i,i+6).join(' ');return null;};
+ const six=(t,src)=>{const n=Math.min(6,NN(src).split(' ').filter(Boolean).length);if(n<3)return null;const w=NN(t).split(' ').filter(Boolean);const s=' '+NN(src)+' ';for(let i=0;i+n<=w.length;i++)if(s.includes(' '+w.slice(i,i+n).join(' ')+' '))return w.slice(i,i+n).join(' ');return null;}; /* 6 words in a row, or all of a shorter text (3 words at least) */
  const refs=s=>{const o=new Set();for(const m of String(s||'').matchAll(/\b((?:[1-3]\s)?[A-Z][a-z]+)\s+(\d+):(\d+)/g))o.add(m[1].toLowerCase()+' '+m[2]+':'+m[3]);return o;};
  const R=(ok,w)=>({status:ok?'CURED':'UNCURED',why:w+' (pkgEB7'+(LIVE?'':'; TRIAL')+')'});
  function cure(it,a){const p=it.b7||{};if(!a||a.ans==='NO ANSWER')return R(false,'no answer to the send-back');

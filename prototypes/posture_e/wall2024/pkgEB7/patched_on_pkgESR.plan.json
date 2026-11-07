@@ -1,0 +1,88 @@
+{
+ "source": "W2 pkgEB7, rulings item 13 (B7 as a DeepSeek enforcer check)",
+ "live": true,
+ "ebase": "pkgESR/patched",
+ "sbase": "pkgL1Q/patched",
+ "nodes": [
+  {
+   "name": "Judge Enforcer Build",
+   "file": "Judge_Enforcer_Build.js",
+   "base_sha": "922cfa34942e",
+   "final_sha": "580a1310dc18",
+   "bytes": [
+    64351,
+    67848
+   ]
+  },
+  {
+   "name": "Alt Judge Enforcer Build",
+   "file": "Alt_Judge_Enforcer_Build.js",
+   "base_sha": "8c562cf9a75f",
+   "final_sha": "97429878e557",
+   "bytes": [
+    64272,
+    67769
+   ]
+  },
+  {
+   "name": "Judge Enforcer Record",
+   "file": "Judge_Enforcer_Record.js",
+   "base_sha": "07a6babce7c2",
+   "final_sha": "f4f8752029fe",
+   "bytes": [
+    21359,
+    21555
+   ]
+  },
+  {
+   "name": "Alt Judge Enforcer Record",
+   "file": "Alt_Judge_Enforcer_Record.js",
+   "base_sha": "80f264ba62ad",
+   "final_sha": "07ae739f2926",
+   "bytes": [
+    21382,
+    21578
+   ]
+  },
+  {
+   "name": "Send Back Build",
+   "file": "Send_Back_Build.js",
+   "base_sha": "b1989a4f714e",
+   "final_sha": "a163bae1f1f2",
+   "bytes": [
+    127968,
+    129295
+   ]
+  },
+  {
+   "name": "Alt Send Back Build",
+   "file": "Alt_Send_Back_Build.js",
+   "base_sha": "f8591b406f60",
+   "final_sha": "e43dbd471e57",
+   "bytes": [
+    128130,
+    129461
+   ]
+  },
+  {
+   "name": "Send Back Record",
+   "file": "Send_Back_Record.js",
+   "base_sha": "72a639c32be3",
+   "final_sha": "8168b64c9ffb",
+   "bytes": [
+    142489,
+    146922
+   ]
+  },
+  {
+   "name": "Alt Send Back Record",
+   "file": "Alt_Send_Back_Record.js",
+   "base_sha": "cfdab4e103f6",
+   "final_sha": "221a192e5786",
+   "bytes": [
+    142461,
+    146894
+   ]
+  }
+ ]
+}
