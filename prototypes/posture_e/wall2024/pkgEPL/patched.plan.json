@@ -1,0 +1,26 @@
+{
+ "Judge_Enforcer_Build.js": {
+  "base": "580a1310dc18",
+  "patched": "1379341af521"
+ },
+ "Alt_Judge_Enforcer_Build.js": {
+  "base": "97429878e557",
+  "patched": "1c76cb48acd4"
+ },
+ "Judge_Enforcer_Record.js": {
+  "base": "e6083b4e2086",
+  "patched": "2273601a44c3"
+ },
+ "Alt_Judge_Enforcer_Record.js": {
+  "base": "97eaec4483fa",
+  "patched": "adffc9d2d5f8"
+ },
+ "Judge_Enforcer_Retry_Build.js": {
+  "base": "a14a44ae02a8",
+  "patched": "93ae07f04edb"
+ },
+ "Alt_Judge_Enforcer_Retry_Build.js": {
+  "base": "35a4b2f6ec74",
+  "patched": "68c48b595ed0"
+ }
+}

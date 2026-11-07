@@ -1,0 +1,17 @@
+// pkgESR (rulings item 9) + pkgESS (short reply): each enforcer call that came back with no reply, an empty reply, an error, finish_reason "length", or 2+ fewer ENFORCER lines than item ids, is split into two
+// halves of whole items and sent once more. Emits one marker item ({esr_retry:false}) when no call failed.
+const B=$('Alt Judge Enforcer Build').all().map(x=>x.json);const R=$input.all().map(x=>x.json);
+const why=(r,b)=>{if(!r)return 'no reply';if(r.error)return 'error: '+String(r.error.message||JSON.stringify(r.error)).slice(0,160);const c=r.choices&&r.choices[0];if(!c)return 'no choices ('+String(r.message||Object.keys(r).slice(0,6).join(',')).slice(0,120)+')';
+ if(c.finish_reason==='length')return 'finish_reason length (the reply was cut at the token cap)';if(!String((c.message&&c.message.content)||'').trim())return 'empty content';
+ {const txt=String((c.message&&c.message.content)||'');let n=(txt.match(/^[ \t>*_`-]*ENFORCER\s*:/gim)||[]).length;for(const l of txt.split('\n')){const mm=l.replace(/[*_`]+/g,'').trim().match(/^ENFORCER\s*:\s*(?:(?:ITEM|ANSWER|ID)\s+)?([BVKYHZPRS]\d+)\s*(?:--|—|–|-)/i);if(!mm)continue;const c=((b&&b.ids)||[]).filter(x=>String(x.id).toUpperCase().startsWith(mm[1].toUpperCase()+'.'));if(c.length>1&&__eplOK(c))n+=c.length-1;} /* pkgEPL: a bare Pk that the Record fans out answers each of its Pk.n lines */const want=(b&&Array.isArray(b.ids))?b.ids.length:0;if(want>=2&&want-n>=2)return 'short reply: '+n+' ENFORCER line(s) for '+want+' item ids (finish_reason '+(c.finish_reason||'none')+')';} /* pkgESS: 33430 call 5, 1 line for 26 items */
+ return null;};
+const __eplOK=ids=>{if(!Array.isArray(ids)||ids.length<2||ids.some(x=>x.rule!==ids[0].rule))return false;const g=x=>x.rule==='E-PREM'?(/CONCEDED LINKS\s*:\s*0\b/i.test(String(x.flagged_line||''))?'SPARED':null):(String(x.grade||'')+'|'+String(x.flagged_line||''));const a=ids.map(g);return a[0]!==null&&a.every(y=>y===a[0]);}; /* pkgEPL: one reply line under a bare ITEM id stands for each of its judge lines only when every seat's grade there is the same (E-PREM: each judge counts 0 links, so each spares the premise; other rules: the same grade on the same line) */
+const out=[];
+B.forEach((b,i)=>{if(!b||b.je_skip||!Array.isArray(b.ids)||!b.body||!Array.isArray(b.body.messages))return;const w=why(R[i],b);if(!w)return;
+ const msg=String(b.body.messages[1]&&b.body.messages[1].content||'');const parts=msg.split(/\n\n(?=ITEM [A-Z]\d+ \()/);const head=parts[0];const its=parts.slice(1).map(t=>({t,p:(t.match(/^ITEM ([A-Z]\d+) \(/)||[])[1]}));
+ if(its.length<2)return; /* one item cannot be split; it stays NO VERDICT */
+ const own=p=>b.ids.filter(x=>String(x.id).split('.')[0]===p);if(its.some(x=>!x.p||!own(x.p).length)||its.reduce((a,x)=>a+own(x.p).length,0)!==b.ids.length)return; /* every id must belong to exactly one item text */
+ const tot=its.reduce((a,x)=>a+x.t.length,0);let acc=0,cut=1;for(let k=0;k<its.length-1;k++){acc+=its[k].t.length;if(acc>=tot/2){cut=k+1;break;}cut=k+1;}
+ [its.slice(0,cut),its.slice(cut)].forEach((g,h)=>{if(!g.length)return;const body={...b.body,messages:[b.body.messages[0],{...b.body.messages[1],content:head+'\n\n'+g.map(x=>x.t).join('\n\n')}]};
+  out.push({json:{esr_retry:true,esr_of:i,esr_half:h+1,esr_why:w,ids:g.flatMap(x=>own(x.p)),body,model:b.model,run_token:b.run_token}});});});
+return out.length?out:[{json:{esr_retry:false}}];
