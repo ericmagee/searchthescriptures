@@ -1,0 +1,39 @@
+OK   A1 8 nodes on live a353b9e8; base shas are live; patched shas hold
+OK   A2 --on pkgUNXL/patched: 8 nodes, 6 on UNXL (bases equal its files), 2 on live (Send Back Record, Alt Send Back Record)
+OK   A3 all 16 patched files hold one psGrades text
+OK   G1 sol G14: before, the change regrades 1, 2, 3, 4, 6 (2, 3, 6 not named, so refused); now only 1 and 4, the premises its items name :: 1,2,3,4,6 -> 1,4
+OK   G2 sol G15 (12305) the same
+OK   N1 "Premise 2: counted UNEXHIBITED" stays COUNTED
+OK   N2 "none counted; Premises 1, 2 and 3 are spared" unchanged
+OK   N3 "Premise 4: UNEXHIBITED, and it is counted" stays COUNTED
+OK   V1 "are not counted", "is not counted", "never counted", "uncounted" read SPARED
+OK   S1 stored screen: 96 lines read, 12 changed; in every changed line the new COUNTED total equals the line's own count number and the old one did not :: 2735 4->2 of 2, 2738 4->2 of 2, 2741 4->2 of 2, 2744 4->2 of 2, 2747 4->2 of 2, 2750 4->2 of 2, 2845 4->2 of 2, 2846 4->2 of 2, 12304 4->1 of 1, 12305 4->1 of 1, 12384 4->1 of 1, 12385 4->1 of 1
+OK   P 33218 Gate Record: output identical
+OK   P 33218 Alt Gate Record: output identical
+OK   P 33218 Send Back Record: output identical
+OK   P 33218 Alt Send Back Record: output identical
+OK   P 33218 Alternate Merge Seat: output identical
+OK   P 33218 Alternate Merge: output identical
+OK   P 33218 Gate Build: output identical
+OK   P 33222 Gate Record: output identical
+OK   P 33222 Alt Gate Record: output identical
+OK   P 33222 Send Back Record: output identical
+OK   P 33222 Alt Send Back Record: output identical
+OK   P 33222 Alternate Merge Seat: output identical
+OK   P 33222 Alternate Merge: output identical
+OK   P 33222 Gate Build: output identical
+OK   P 33249 Gate Record: output identical
+OK   P 33249 Alt Gate Record: output identical
+OK   P 33249 Send Back Record: output identical
+OK   P 33249 Alt Send Back Record: output identical
+OK   P 33249 Alternate Merge Seat: output identical
+OK   P 33249 Alternate Merge: output identical
+OK   P 33249 Gate Build: output identical
+OK   P 33261 Gate Record: output identical
+OK   P 33261 Alt Gate Record: output identical
+OK   P 33261 Send Back Record: output identical
+OK   P 33261 Alt Send Back Record: output identical
+OK   P 33261 Alternate Merge Seat: output identical
+OK   P 33261 Alternate Merge: output identical
+OK   P 33261 Gate Build: output identical
+38 OK, 0 FAIL
