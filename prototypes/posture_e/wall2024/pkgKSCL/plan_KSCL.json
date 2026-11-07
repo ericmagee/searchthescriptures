@@ -1,0 +1,30 @@
+{
+ "base": "/mnt/project-files/wall2024/fetchback_live_s12.json",
+ "nodes": [
+  {
+   "node": "Extract Independent Verdict",
+   "base_sha": "e2ba135043a05c93",
+   "final_sha": "530dbc8ad2fb16eb"
+  },
+  {
+   "node": "Send Back Build",
+   "base_sha": "bd0ce6fdffb8b793",
+   "final_sha": "d99f0bfe90c39174"
+  },
+  {
+   "node": "Send Back Record",
+   "base_sha": "4dbb2d1a6bf66700",
+   "final_sha": "f1a7d581500bdb7d"
+  },
+  {
+   "node": "Alt Send Back Build",
+   "base_sha": "2b15dc6930f18348",
+   "final_sha": "3652bddea3f495df"
+  },
+  {
+   "node": "Alt Send Back Record",
+   "base_sha": "c42bfacbaf1d5cb5",
+   "final_sha": "f72269fcdc7026f0"
+  }
+ ]
+}
