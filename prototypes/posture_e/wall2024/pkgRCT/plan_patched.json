@@ -1,0 +1,77 @@
+{
+ "base": "/mnt/project-files/wall2024/fetchback_live_s38.json",
+ "nodes": [
+  {
+   "name": "Alternate Merge Seat",
+   "file": "Alternate_Merge_Seat.js",
+   "base_sha": "445783f0eebb964c",
+   "final_sha": "02c537bc33b461c1",
+   "edits": [
+    "apply",
+    "gate cure",
+    "gate why",
+    "lib"
+   ]
+  },
+  {
+   "name": "Gate Build",
+   "file": "Gate_Build.js",
+   "base_sha": "d98b6cfa8e7a6288",
+   "final_sha": "56acdb93c7fea936",
+   "edits": [
+    "apply",
+    "gate cure",
+    "gate why",
+    "lib"
+   ]
+  },
+  {
+   "name": "Gate Record",
+   "file": "Gate_Record.js",
+   "base_sha": "ecde97f3c59d8125",
+   "final_sha": "2a508b477bf01482",
+   "edits": [
+    "apply",
+    "gate cure",
+    "gate why",
+    "lib"
+   ]
+  },
+  {
+   "name": "Alt Gate Build",
+   "file": "Alt_Gate_Build.js",
+   "base_sha": "653824da65257b0d",
+   "final_sha": "10f5ae1c8c4fe2a8",
+   "edits": [
+    "apply",
+    "gate cure",
+    "gate why",
+    "lib"
+   ]
+  },
+  {
+   "name": "Alt Gate Record",
+   "file": "Alt_Gate_Record.js",
+   "base_sha": "cffb0fe170ebac76",
+   "final_sha": "22b8e6855ba99b93",
+   "edits": [
+    "apply",
+    "gate cure",
+    "gate why",
+    "lib"
+   ]
+  },
+  {
+   "name": "Alternate Merge",
+   "file": "Alternate_Merge.js",
+   "base_sha": "2aaafd6791f071fc",
+   "final_sha": "5d26c6e73a69edd7",
+   "edits": [
+    "apply",
+    "gate cure",
+    "gate why",
+    "lib"
+   ]
+  }
+ ]
+}
