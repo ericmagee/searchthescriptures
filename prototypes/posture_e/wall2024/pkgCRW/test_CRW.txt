@@ -1,0 +1,8 @@
+OK   33411: first replace hits the defender line
+OK   33411: the second (duplicate) replace finds no whole line, does not touch CHALLENGER
+OK   a line at the start of reasoning
+OK   a line at the end of reasoning
+OK   line-start match with trailing words is still taken (old behaviour)
+OK   whole line preferred over an earlier line-start partial
+OK   plain: CHALLENGER line untouched
+7 OK, 0 FAIL

@@ -1,3 +1,10 @@
+# pkgLIB v5 (W1, 18:35Z 11-07) = v4 + pkgCRW (cureRewrite whole-line replace). Supersedes v4 if v4 is not yet written; on live v4 it is one LIB rewrite.
+
+- pack.cjs pkgLIB/strip_s45 pkgLIB/strip_L1Q pkgLIB/strip_TRM pkgLIB/strip_DEC pkgLIB/strip_V18 pkgLIB/strip_CRW. Library json_sha fd303ea5b877bffa, 2,081 lines, 384,377 bytes;
+  22 nodes 528,482 bytes with the library. orig_stack/patched now also holds the pkgCRW full sources.
+- Tests: test_LIB 11 OK 0 FAIL; SRCDIR=orig_stack 11 OK 0 FAIL; test_recent ORIG=orig_stack 13 runs (33218-33411) x 22 = 286/286 identical.
+  (v4 plan for reference: json_sha 97e42280c4f50763.) pkgCRW's own replay (v4 vs CRW): 246/247 identical, the one change is the 33411 fix.
+
 # pkgLIB v4 (W1, 17:35Z 11-07): ONE package for the gap = s45 + pkgL1Q + pkgTRM + pkgDEC (TRM base) + pkgV18, comment strip. Supersedes v3 and pkgLIB_v31.
 
 - pack.cjs pkgLIB/strip_s45 pkgLIB/strip_L1Q pkgLIB/strip_TRM pkgLIB/strip_DEC pkgLIB/strip_V18. Library json_sha 97e42280c4f50763, 2,080 lines, 383,887 bytes.
