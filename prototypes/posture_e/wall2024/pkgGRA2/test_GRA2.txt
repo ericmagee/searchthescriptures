@@ -1,4 +1,4 @@
-Run 2026-11-06 23:10 CST (no run live; 33249 ended 22:33 CST). Every call was in a rolled-back sub-block and the block ended in RAISE, so nothing persisted.
+Run 2026-11-06 about 22:50 CST (no run live; 33249 ended 22:33 CST). Every call was in a rolled-back sub-block and the block ended in RAISE, so nothing persisted.
 Afterward: 33249's debate_results row still has panel_expected [chatgpt,gemini,sol] and drv_removed NULL, the live function md5 is unchanged, and 0 gra2_ functions remain.
 live md5 a3f6ab00dd33d323b084ffd89fa13b0f
 T1 live function, 33249 body: REFUSED odv1_record_panel_alternates: grok is not an active openrouter reserve seat with a family
