@@ -1,0 +1,29 @@
+{
+ "id": "9d117b63-bc90-43dd-9981-93fec3d4d787",
+ "name": "Panel Judge 1 openai",
+ "type": "n8n-nodes-base.httpRequest",
+ "typeVersion": 4.3,
+ "onError": "continueRegularOutput",
+ "position": [
+  10432,
+  128
+ ],
+ "parameters": {
+  "method": "POST",
+  "url": "https://api.openai.com/v1/chat/completions",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $('Init Seats').first().json.question_trial === true ? $('QR Merge').first().json.judges[0].body : $('Panel Build').first().json.judges[0].body }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "credentials": {
+  "httpHeaderAuth": {
+   "id": "dA6k9ZaS4cl8JimR",
+   "name": "OpenAI Key"
+  }
+ }
+}

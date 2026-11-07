@@ -1,0 +1,29 @@
+{
+ "id": "eb71b4b0-af23-4cba-84e5-5393a3f05de0",
+ "name": "Panel Judge 2 gemini",
+ "type": "n8n-nodes-base.httpRequest",
+ "typeVersion": 4.3,
+ "onError": "continueRegularOutput",
+ "position": [
+  10800,
+  -208
+ ],
+ "parameters": {
+  "method": "POST",
+  "url": "={{ 'https://generativelanguage.googleapis.com/v1beta/models/' + $('Panel Build').first().json.judges[1].api_model + ':generateContent' }}",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $('Init Seats').first().json.question_trial === true ? $('QR Merge').first().json.judges[1].body : $('Panel Build').first().json.judges[1].body }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "credentials": {
+  "httpHeaderAuth": {
+   "id": "81PQ7Yd7S5c2ezLr",
+   "name": "Gemini API Key"
+  }
+ }
+}

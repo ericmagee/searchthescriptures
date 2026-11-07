@@ -1,0 +1,29 @@
+{
+ "id": "e6741b62-f836-439f-ac05-46f2753c43f7",
+ "name": "Panel Judge 2 mimo",
+ "type": "n8n-nodes-base.httpRequest",
+ "typeVersion": 4.3,
+ "onError": "continueRegularOutput",
+ "position": [
+  10800,
+  208
+ ],
+ "parameters": {
+  "method": "POST",
+  "url": "https://api.xiaomimimo.com/v1/chat/completions",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $('Init Seats').first().json.question_trial === true ? $('QR Merge').first().json.judges[1].body : $('Panel Build').first().json.judges[1].body }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "credentials": {
+  "httpHeaderAuth": {
+   "id": "ccfYSDcnTVvKUTRk",
+   "name": "MiMo-V2.6-Pro"
+  }
+ }
+}

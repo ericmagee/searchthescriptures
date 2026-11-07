@@ -1,0 +1,68 @@
+{
+ "add": [
+  {
+   "id": "3e026ed0-d857-e32d-8f63-ba18d0be5e72",
+   "name": "Panel Judges Prep",
+   "type": "n8n-nodes-base.code",
+   "typeVersion": 2,
+   "onError": "stopWorkflow",
+   "position": [
+    9848,
+    304
+   ],
+   "parameters": {
+    "jsCode": "(from patched/Panel_Judges_Prep.js)"
+   }
+  },
+  {
+   "id": "b339d9f5-3be9-4a78-de30-cfc34a67a682",
+   "name": "Panel Judges Parallel",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.3,
+   "onError": "continueRegularOutput",
+   "position": [
+    10068,
+    304
+   ],
+   "credentials": {
+    "httpHeaderAuth": {
+     "id": "<PPJ webhook header-auth credential id>",
+     "name": "<PPJ webhook header-auth credential name>"
+    }
+   },
+   "parameters": {
+    "method": "POST",
+    "url": "<production URL of the WALL-2024 Panel Judge Call webhook>",
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpHeaderAuth",
+    "sendBody": true,
+    "specifyBody": "json",
+    "jsonBody": "={{ $json }}",
+    "options": {
+     "timeout": 960000
+    }
+   }
+  }
+ ],
+ "replace_type": "each of the 16 nodes in plan_PPJ.json \"replace\" becomes type n8n-nodes-base.code typeVersion 2, parameters {jsCode: patched/<file>}; keep its name, id, position and onError continueRegularOutput; drop credentials",
+ "connections": {
+  "QR Trial?": {
+   "output": 1,
+   "from": "Panel Judge 1 Route",
+   "to": "Panel Judges Prep"
+  },
+  "QR Merge": {
+   "output": 0,
+   "from": "Panel Judge 1 Route",
+   "to": "Panel Judges Prep"
+  },
+  "Panel Judges Prep": {
+   "output": 0,
+   "to": "Panel Judges Parallel"
+  },
+  "Panel Judges Parallel": {
+   "output": 0,
+   "to": "Panel Judge 1 Route"
+  }
+ }
+}

@@ -1,0 +1,29 @@
+{
+ "id": "3c4a9e6d-795e-47f4-b0b9-a632faa2a5d0",
+ "name": "Panel Judge 1 deepseek",
+ "type": "n8n-nodes-base.httpRequest",
+ "typeVersion": 4.3,
+ "onError": "continueRegularOutput",
+ "position": [
+  10368,
+  0
+ ],
+ "parameters": {
+  "method": "POST",
+  "url": "https://api.deepseek.com/v1/chat/completions",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $('Init Seats').first().json.question_trial === true ? $('QR Merge').first().json.judges[0].body : $('Panel Build').first().json.judges[0].body }}",
+  "options": {
+   "timeout": 900000
+  }
+ },
+ "credentials": {
+  "httpHeaderAuth": {
+   "id": "R3waesZPK7vpsV8E",
+   "name": "DeepSeek Key"
+  }
+ }
+}

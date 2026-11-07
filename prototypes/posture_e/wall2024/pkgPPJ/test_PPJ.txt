@@ -1,0 +1,17 @@
+T1 n/a 33276: saved Panel Build predates jidx0
+T1 n/a 33289: saved Panel Build predates jidx0
+T1 n/a 33311: saved Panel Build predates jidx0
+T1 n/a 33322: saved Panel Build predates jidx0
+T4 transport: judge 2 -> pkgPPJ transport (Panel Judge Call webhook): socket hang up | Panel Check: [{"json":{"run_token":"ODV1-33430-7gongopz","sub":{"slot":1,"failed_seat":"chatgpt","substitute":"grok","failure_kind":"error","detail":"sta
+T4 swap: judge 2 -> pkgPPJ: slot 2 (openrouter) reply missing or mismatched: got slot 3 (openrouter) | Panel Check: "ERR FAIL-CLOSED: seat \"chatgpt\" judge call failed (error): pkgPPJ: slot 2 (openrouter) reply missing or mismatched: got slot 3 (openroute
+T4 provider: judge 2 -> pkgPPJ: slot 2 (openrouter) reply missing or mismatched: got slot 2 (grok) | Panel Check: [{"json":{"run_token":"ODV1-33430-7gongopz","sub":{"slot":1,"failed_seat":"chatgpt","substitute":"grok","failure_kind":"error","detail":"pkg
+T4 provider_error: judge 2 -> The service is receiving too many requests from you | Panel Check: [{"json":{"run_token":"ODV1-33430-7gongopz","sub":{"slot":1,"failed_seat":"chatgpt","substitute":"grok","failure_kind":"error","detail":"sta
+T4 transport: judge 2 -> pkgPPJ transport (Panel Judge Call webhook): socket hang up | Panel Check: [{"json":{"run_token":"ODV1-33442-mfuumqsi","sub":{"slot":1,"failed_seat":"chatgpt","substitute":"grok","failure_kind":"error","detail":"sta
+T4 swap: judge 2 -> pkgPPJ: slot 2 (openrouter) reply missing or mismatched: got slot 3 (openrouter) | Panel Check: "ERR FAIL-CLOSED: seat \"chatgpt\" judge call failed (error): pkgPPJ: slot 2 (openrouter) reply missing or mismatched: got slot 3 (openroute
+T4 provider: judge 2 -> pkgPPJ: slot 2 (openrouter) reply missing or mismatched: got slot 2 (grok) | Panel Check: [{"json":{"run_token":"ODV1-33442-mfuumqsi","sub":{"slot":1,"failed_seat":"chatgpt","substitute":"grok","failure_kind":"error","detail":"pkg
+T4 provider_error: judge 2 -> The service is receiving too many requests from you | Panel Check: [{"json":{"run_token":"ODV1-33442-mfuumqsi","sub":{"slot":1,"failed_seat":"chatgpt","substitute":"grok","failure_kind":"error","detail":"sta
+T1/T5 not applicable (older Panel Build): 4
+16 runs tested (33197 33218 33222 33249 33261 33276 33289 33299 33311 33322 33345 33371 33389 33411 33430 33442); checks passed 134, failed 0
+bodies that change when every saved node is visible (a judge reply feeding another judge body): 0
+bytes added to the execution by Panel Judges Parallel output: max 488451, mean 277792
+OK

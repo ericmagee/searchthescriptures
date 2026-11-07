@@ -1,0 +1,406 @@
+{
+ "name": "WALL-2024 Panel Judge Call",
+ "nodes": [
+  {
+   "id": "847cdaca-b2a0-434a-f034-2438d4e42a90",
+   "name": "Panel Judge Call",
+   "type": "n8n-nodes-base.webhook",
+   "typeVersion": 2,
+   "position": [
+    240,
+    300
+   ],
+   "webhookId": "750ffa3b-58e2-d238-2fa1-a8d36edb244e",
+   "credentials": {
+    "httpHeaderAuth": {
+     "id": "<PPJ webhook header-auth credential id>",
+     "name": "<PPJ webhook header-auth credential name>"
+    }
+   },
+   "parameters": {
+    "httpMethod": "POST",
+    "path": "wall2024-panel-judge-call",
+    "authentication": "headerAuth",
+    "responseMode": "responseNode",
+    "options": {}
+   }
+  },
+  {
+   "id": "8807ed5e-146e-42c6-9d52-18a7290d3ef6",
+   "name": "Provider Route",
+   "type": "n8n-nodes-base.switch",
+   "typeVersion": 3.2,
+   "position": [
+    480,
+    300
+   ],
+   "parameters": {
+    "mode": "expression",
+    "numberOutputs": 6,
+    "output": "={{ [\"deepseek\",\"openai\",\"gemini\",\"grok\",\"mimo\",\"openrouter\"].indexOf($json.body.ppj_provider) }}"
+   }
+  },
+  {
+   "id": "723536a6-5976-9842-ebf7-67e648387df2",
+   "name": "Call deepseek",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.3,
+   "onError": "continueRegularOutput",
+   "position": [
+    720,
+    60
+   ],
+   "credentials": {
+    "httpHeaderAuth": {
+     "id": "R3waesZPK7vpsV8E",
+     "name": "DeepSeek Key"
+    }
+   },
+   "parameters": {
+    "method": "POST",
+    "url": "https://api.deepseek.com/v1/chat/completions",
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpHeaderAuth",
+    "sendBody": true,
+    "specifyBody": "json",
+    "jsonBody": "={{ $('Panel Judge Call').first().json.body.body }}",
+    "options": {
+     "timeout": 900000
+    }
+   }
+  },
+  {
+   "id": "22786b41-4e10-04e1-b848-2fdea6999cd1",
+   "name": "Call openai",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.3,
+   "onError": "continueRegularOutput",
+   "position": [
+    720,
+    160
+   ],
+   "credentials": {
+    "httpHeaderAuth": {
+     "id": "dA6k9ZaS4cl8JimR",
+     "name": "OpenAI Key"
+    }
+   },
+   "parameters": {
+    "method": "POST",
+    "url": "https://api.openai.com/v1/chat/completions",
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpHeaderAuth",
+    "sendBody": true,
+    "specifyBody": "json",
+    "jsonBody": "={{ $('Panel Judge Call').first().json.body.body }}",
+    "options": {
+     "timeout": 900000
+    }
+   }
+  },
+  {
+   "id": "271e3432-62e5-d141-e0ec-ceab01880f2a",
+   "name": "Call gemini",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.3,
+   "onError": "continueRegularOutput",
+   "position": [
+    720,
+    260
+   ],
+   "credentials": {
+    "httpHeaderAuth": {
+     "id": "81PQ7Yd7S5c2ezLr",
+     "name": "Gemini API Key"
+    }
+   },
+   "parameters": {
+    "method": "POST",
+    "url": "={{ 'https://generativelanguage.googleapis.com/v1beta/models/' + $('Panel Judge Call').first().json.body.api_model + ':generateContent' }}",
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpHeaderAuth",
+    "sendBody": true,
+    "specifyBody": "json",
+    "jsonBody": "={{ $('Panel Judge Call').first().json.body.body }}",
+    "options": {
+     "timeout": 900000
+    }
+   }
+  },
+  {
+   "id": "b25064f8-2fde-c312-4eca-b8e1aa56a299",
+   "name": "Call grok",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.3,
+   "onError": "continueRegularOutput",
+   "position": [
+    720,
+    360
+   ],
+   "credentials": {
+    "httpHeaderAuth": {
+     "id": "2bQmRJpPY4najNac",
+     "name": "Grok API Key"
+    }
+   },
+   "parameters": {
+    "method": "POST",
+    "url": "https://api.x.ai/v1/chat/completions",
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpHeaderAuth",
+    "sendBody": true,
+    "specifyBody": "json",
+    "jsonBody": "={{ $('Panel Judge Call').first().json.body.body }}",
+    "options": {
+     "timeout": 900000
+    },
+    "sendHeaders": true,
+    "specifyHeaders": "keypair",
+    "headerParameters": {
+     "parameters": [
+      {
+       "name": "x-grok-conv-id",
+       "value": "={{ $('Panel Judge Call').first().json.body.conv_id }}"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "beedee1f-f3fa-9d1e-5920-856170a2381b",
+   "name": "Call mimo",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.3,
+   "onError": "continueRegularOutput",
+   "position": [
+    720,
+    460
+   ],
+   "credentials": {
+    "httpHeaderAuth": {
+     "id": "ccfYSDcnTVvKUTRk",
+     "name": "MiMo-V2.6-Pro"
+    }
+   },
+   "parameters": {
+    "method": "POST",
+    "url": "https://api.xiaomimimo.com/v1/chat/completions",
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpHeaderAuth",
+    "sendBody": true,
+    "specifyBody": "json",
+    "jsonBody": "={{ $('Panel Judge Call').first().json.body.body }}",
+    "options": {
+     "timeout": 900000
+    }
+   }
+  },
+  {
+   "id": "c86d7ad7-4f03-9503-afe7-4d20fb00b58f",
+   "name": "Call openrouter",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.3,
+   "onError": "continueRegularOutput",
+   "position": [
+    720,
+    560
+   ],
+   "credentials": {
+    "httpHeaderAuth": {
+     "id": "3KOXDCYCjkii6i56",
+     "name": "OpenRouter"
+    }
+   },
+   "parameters": {
+    "method": "POST",
+    "url": "https://openrouter.ai/api/v1/chat/completions",
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpHeaderAuth",
+    "sendBody": true,
+    "specifyBody": "json",
+    "jsonBody": "={{ $('Panel Judge Call').first().json.body.body }}",
+    "options": {
+     "timeout": 900000
+    },
+    "sendHeaders": true,
+    "specifyHeaders": "keypair",
+    "headerParameters": {
+     "parameters": [
+      {
+       "name": "x-grok-conv-id",
+       "value": "={{ \"odv1-\" + $execution.id }}"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "bd3f0e4a-d284-0efb-b904-7dacf5d35cbc",
+   "name": "Wrap",
+   "type": "n8n-nodes-base.code",
+   "typeVersion": 2,
+   "onError": "stopWorkflow",
+   "position": [
+    960,
+    300
+   ],
+   "parameters": {
+    "jsCode": "// pkgPPJ (W1, 11-07): answer the main workflow with the provider reply for this seat slot.\n// A provider HTTP error item ({error: <reason>}) is passed on with its message, description and status as plain fields,\n// because an Error's message does not survive JSON. Panel Check reads e.message / e.description and httpCode / status / statusCode.\nconst q=$('Panel Judge Call').first().json.body||{};const j=$json||{};\nconst pe=e=>{const o={message:String((typeof e==='string')?e:((e&&(e.message||e.description))||JSON.stringify(e)))};if(e&&typeof e==='object'){for(const f of Object.keys(e))if(e[f]!=null&&typeof e[f]!=='object'&&!(f in o))o[f]=e[f];for(const f of ['name','description','httpCode','status','statusCode','code'])if(e[f]!=null&&typeof e[f]!=='object')o[f]=e[f];}return o;};\nconst response=j.error?Object.assign({},j,{error:pe(j.error)}):j;\nreturn [{json:{ppj_slot:q.ppj_slot,ppj_provider:q.ppj_provider,response}}];"
+   }
+  },
+  {
+   "id": "86304590-717e-42c4-e774-16220b13a184",
+   "name": "Respond",
+   "type": "n8n-nodes-base.respondToWebhook",
+   "typeVersion": 1.1,
+   "position": [
+    1200,
+    300
+   ],
+   "parameters": {
+    "respondWith": "firstIncomingItem",
+    "options": {}
+   }
+  }
+ ],
+ "connections": {
+  "Panel Judge Call": {
+   "main": [
+    [
+     {
+      "node": "Provider Route",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Provider Route": {
+   "main": [
+    [
+     {
+      "node": "Call deepseek",
+      "type": "main",
+      "index": 0
+     }
+    ],
+    [
+     {
+      "node": "Call openai",
+      "type": "main",
+      "index": 0
+     }
+    ],
+    [
+     {
+      "node": "Call gemini",
+      "type": "main",
+      "index": 0
+     }
+    ],
+    [
+     {
+      "node": "Call grok",
+      "type": "main",
+      "index": 0
+     }
+    ],
+    [
+     {
+      "node": "Call mimo",
+      "type": "main",
+      "index": 0
+     }
+    ],
+    [
+     {
+      "node": "Call openrouter",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Call deepseek": {
+   "main": [
+    [
+     {
+      "node": "Wrap",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Call openai": {
+   "main": [
+    [
+     {
+      "node": "Wrap",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Call gemini": {
+   "main": [
+    [
+     {
+      "node": "Wrap",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Call grok": {
+   "main": [
+    [
+     {
+      "node": "Wrap",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Call mimo": {
+   "main": [
+    [
+     {
+      "node": "Wrap",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Call openrouter": {
+   "main": [
+    [
+     {
+      "node": "Wrap",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Wrap": {
+   "main": [
+    [
+     {
+      "node": "Respond",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  }
+ },
+ "settings": {
+  "executionOrder": "v1",
+  "callerPolicy": "workflowsFromSameOwner"
+ }
+}

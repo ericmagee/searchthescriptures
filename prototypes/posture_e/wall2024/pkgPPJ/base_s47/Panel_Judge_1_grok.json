@@ -1,0 +1,39 @@
+{
+ "id": "8719b050-0e09-4e2d-b7d1-4e5b82489a34",
+ "name": "Panel Judge 1 grok",
+ "type": "n8n-nodes-base.httpRequest",
+ "typeVersion": 4.3,
+ "onError": "continueRegularOutput",
+ "position": [
+  10432,
+  400
+ ],
+ "parameters": {
+  "method": "POST",
+  "url": "https://api.x.ai/v1/chat/completions",
+  "authentication": "genericCredentialType",
+  "genericAuthType": "httpHeaderAuth",
+  "sendBody": true,
+  "specifyBody": "json",
+  "jsonBody": "={{ $('Init Seats').first().json.question_trial === true ? $('QR Merge').first().json.judges[0].body : $('Panel Build').first().json.judges[0].body }}",
+  "options": {
+   "timeout": 900000
+  },
+  "sendHeaders": true,
+  "specifyHeaders": "keypair",
+  "headerParameters": {
+   "parameters": [
+    {
+     "name": "x-grok-conv-id",
+     "value": "={{ \"odv1-\" + $execution.id }}"
+    }
+   ]
+  }
+ },
+ "credentials": {
+  "httpHeaderAuth": {
+   "id": "2bQmRJpPY4najNac",
+   "name": "Grok API Key"
+  }
+ }
+}
