@@ -571,7 +571,7 @@ function unxaCheck(all,blk,k,P){if(all.some(z=>UNXA_HARD.test(unxaHead(z.seg))))
 
 function kunxLines(text,ptext){const items=[],marks=[];if(typeof text!=='string'||!(typeof ptext==='string'||(ptext&&typeof ptext==='object')))return {items,marks};let R;try{R=typeof ptext==='string'?ciRounds(ptext):ptext;}catch(e){return {items,marks};} /* pkgRCK: also takes the rounds object */
  for(const side of ['DEFENDER','CHALLENGER']){const rk=side==='CHALLENGER'?'DR3':'CR3';const sec=ciCountSection(text,side);if(!sec||typeof R[rk]!=='string')continue;
-  const n0=+((sec.match(/:\s*(\d+)/)||[])[1]||0);const lab=side==='DEFENDER'?'CONCEDED LINKS':'CHALLENGER CONCEDED LINKS';
+  const n0=+((sec.match(/:\s*(\d+)/)||[])[1]||0);const lab=side==='DEFENDER'?'CONCEDED LINKS':'CHALLENGER CONCEDED LINKS';if(!(n0>=1))continue; /* pkgUNX0 (W1 2805): a count of 0 counts nothing; a stray UNEXHIBITED line under it raises no K-UNX */
   const SG=unxSegs(sec);const PR=unxPresses(side==='CHALLENGER'?R.CR3:R.DR3);const segsOf=j=>SG.filter(s=>s.ns.includes(j)); /* every segment of the count section that names premise j */
   for(const s of SG){if(!/\bUNEXHIBITED\b/.test(s.seg)||/\b(?:not|never|no\s+longer)\s+UNEXHIBITED\b/i.test(s.seg))continue;
    for(const j of s.ns){const all=segsOf(j);if(all.some(z=>UNX_OTHER.test(z.seg))){const bk=lbBlockText(R[rk],j);const ua=bk?unxaCheck(all,bk,lbFoot(bk,true),PR.filter(p=>p.n===j)):null; /* pkgUNXA */
@@ -1789,7 +1789,7 @@ const respOf=(x)=>{const lb=U(cureLabel(x));const rk=U(x.rule||'');const ruleOk=
   // rules it VOID: SUPPORTED or NARROWED, or counted (UNEXHIBITED or CONCEDED) with a CORRECTED COUNT above the seat's count and the standing that
   // count makes true.
   if(x.rule==='K-V'){const CH=kvCharges(R,x.side);const UNI=kvUni(R,x.side);const st=stmtOf(x);
-   if(st&&CH){const v=kvRulingOk(st,x.premise,CH,UNI);if(v.ok)return res('CURED','statement quotes the charge words ('+(v.q||v.why)+') and names the kind',['STATEMENT: '+st]);}
+   if(st&&CH){const v=kvRulingOk(st,x.premise,CH,UNI);if(v.ok)return res('CURED','statement quotes the charge words ('+(v.q||v.why)+') and names the kind',['STATEMENT: '+st]);}{const rp=CH?respOf(x):null;if(rp){const t=st?st+'\n'+rp:rp;const v=kvRulingOk(t,x.premise,CH,UNI);if(v.ok)return res('CURED',(st?'statement and response together quote':'response quotes')+' the charge words ('+(v.q||v.why)+(st?') and name the kind':') and names the kind'),(st?['STATEMENT: '+st]:[]).concat(['RESPONSE: '+rp]));}} /* pkgKVR (33311 chatgpt premise 3): the item's RESPONSE carries the statement */
    const lab=x.side==='DEFENDER'?'CONCEDED LINKS':'CHALLENGER CONCEDED LINKS';const rc=o.restated.filter(r=>r.link===lab);
    if(rc.length===1){const sg=kvSegments(lab+': '+rc[0].text,x.side).find(z=>z.ns.includes(x.premise));
     if(!sg){const T=rc[0].text;const re=new RegExp('\\bpremises?\\s+(?:\\d+\\s*(?:,|and|&)\\s*)*'+x.premise+'\\b[^.;]{0,160}','i');const m=T.match(re);const seg=m?m[0]:'';
@@ -2273,6 +2273,8 @@ function gateIsForced2024(s){return KF_LINE.test(String(s==null?'':s).replace(/\
 // pkgGDUP (W3 2319): a CHANGE TO line stands in the corrected text when a line of that text reads the same, compared as E-APPLY writes it
 function gateStands2024(to,T){if(!to||!T)return false;const f=s=>String(s==null?'':s).replace(/\\+"/g,'"').replace(/[*_`]+/g,'').replace(/\s+/g,' ').trim().replace(/^(?:[-\u2022]|\d+[.)])\s*/,'').replace(/^["\u201c]+|["\u201d]+$/g,'').trim();
  const t=f(to);if(!t)return false;return String(T).split('\n').some(l=>f(l)===t);}
+// pkgGBC (W1; W3 2813): did the gate change flip the grade of the collision an E-GATE B key names? Ta: text with the change, Tb: without it.
+function gbcFlip(key,Ta,Tb){const L=String(key||'').split('|')[3];if(!L)return false;const g=T=>{const c=(rcLines(T).col||[]).find(q=>String(q.link||'').toUpperCase().replace(/\s+VS\.?\s+/,' VS ')===L);return c?(c.grade||null):null;};const a=g(Ta),b=g(Tb);return a!=null&&b!=null&&a!==b;}
 function gateCure2024(seat,raw,F,its,G,reply,ctx){const A=gateRead2024(reply||'');const add=[];
  for(const x of G){const a=A[x.gid];if(a&&a.ans==='CHANGE'&&a.to&&!(x.kind==='RULE K-G4'&&gateIsForced2024(a.to)))add.push({seat,sid:x.gid,rule:'E-GATE',item:x.kind,line:gateLineFor2024(x,a.to.replace(/^["“]+|["”]+$/g,'')),ans:'CHANGE',to:a.to,why:a.why,...(x.sid?{psrc:x.sid}:{})}); /* pkgPSG: the refused send-back change */}
  for(const x of G){if(x.kind!=='RULE K-G4'||!A[x.gid])continue;const g=gateForced2024(x,A[x.gid],ctx);if(g&&g.cured)add.push({seat,sid:x.gid+'F',rule:'E-GATE',item:'FORCED',line:(x.lines||[])[0]||'',ans:'CHANGE',to:g.line,why:'the FORCED line that cured '+x.gid+', written after its collision line (ruling 411)',forced_add:true});} /* pkgGD (W3 2315 b) */
@@ -2282,8 +2284,8 @@ function gateCure2024(seat,raw,F,its,G,reply,ctx){const A=gateRead2024(reply||''
  const grpOf=g=>{const me=add.find(z=>z.sid===g&&!z.forced_add);if(!me||!me.line)return [g];return add.filter(z=>!z.forced_add&&z.line&&nL(z.line)===nL(me.line)).map(z=>z.sid);};
  const supBy=new Map();for(const z of add){if(z.forced_add)continue;const g=grpOf(z.sid);const w=g.slice(g.indexOf(z.sid)+1).filter(s=>applied.has(s)).pop();if(w)supBy.set(z.sid,w);} /* pkgGSL2 (W3 2731 4): the last APPLIED later change of the line */
  const kby=new Map(); /* pkgGL (W3 2341): the new LIVE K items each applied gate CHANGE raised, found by reading the text again without it */
- {const keysG=new Set(G.map(x=>x.key));const NK=(R2.items||[]).filter(z=>!keysG.has(z.key)&&(z.src==='K re-read'||z.src==='E-GATE B')&&z.live); /* pkgGBC (W1 2805; 33311 gemini G13): a fresh LIVE E-GATE B contradiction is tied to the gate change that raised it */
-  if(NK.length)for(const x of G){const a=A[x.gid];if(!(a&&a.ans==='CHANGE'&&applied.has(x.gid)))continue;const grp=grpOf(x.gid);const R3=gateItems2024(seat,raw,F,its2.filter(z=>!(z&&z.rule==='E-GATE'&&grp.includes(z.sid))),ctx); /* pkgKY (b): without every change on its line */const k3=new Set((R3.items||[]).map(z=>z.key));const hit=NK.filter(z=>!k3.has(z.key));if(hit.length)kby.set(x.gid,hit);}}
+ {const keysG=new Set(G.map(x=>x.key));const NK=(R2.items||[]).filter(z=>!keysG.has(z.key)&&(z.src==='K re-read'||z.src==='E-GATE B')&&z.live); /* pkgGBC (W1 2805, W3 2813): a fresh LIVE E-GATE B contradiction is tied to the gate change that flipped that collision's grade */
+  if(NK.length)for(const x of G){const a=A[x.gid];if(!(a&&a.ans==='CHANGE'&&applied.has(x.gid)))continue;const grp=grpOf(x.gid);const R3=gateItems2024(seat,raw,F,its2.filter(z=>!(z&&z.rule==='E-GATE'&&grp.includes(z.sid))),ctx); /* pkgKY (b): without every change on its line */const k3=new Set((R3.items||[]).map(z=>z.key));const hit=NK.filter(z=>!k3.has(z.key)&&(z.src!=='E-GATE B'||gbcFlip(z.key,R2.T1,R3.T1)));if(hit.length)kby.set(x.gid,hit); /* pkgGBC narrow (W3 2813): a ground-only change (33311 G13) is not tied; the fresh item stays RECORD-ONLY */}}
  const res=G.map(x=>{const a=A[x.gid];let cured=false,why;
   if(!a){why='no GATE line for this item (silence counts)';}
   else if(x.kind==='NOT APPLIED'){const dup=a.ans==='CHANGE'&&!applied.has(x.gid)&&!((R2.R1&&R2.R1.items)||[]).some(z=>z&&z.sid===x.gid)&&gateStands2024(a.to,R2.T1); /* pkgCL (33025 chatgpt G6/G7): another gate change wrote the same line (W3 2319, now for NOT APPLIED items) */const sup=!dup&&a.ans==='CHANGE'&&!applied.has(x.gid)&&supBy.has(x.gid)&&applied.has(supBy.get(x.gid)); /* pkgGSL (33222 grok G1-G3): superseded on its line by a later applied gate change of this judge (pkgKY b) */
@@ -2346,29 +2348,40 @@ function cureProse(seat,reply){const p=reply&&reply.ok?cureLines(reply.text).pro
  return p?['[AUDIT v21: DEBATE RULE VIOLATION REPLY -- '+(seat?seat+' ':'')+'prose recorded, not read for a cure: '+cureSafe(p.slice(0,600))+']']:[];}
 
 
-// E-GATE, Gate Record (W2; WALL-2024 2242, 2243, 2251). Reads each judge's GATE lines, applies its gate changes with its send-back answers,
-// and decides each item (gateCure2024). Each uncured LIVE item adds 1 to the seat's drv_uncured and sets alt_needed, so Alternate Build removes
-// the seat as for any uncured item. One debate_enforcer_log row (kind gate) per item. The gate changes join sb_items, so Alternate Merge's
-// E-APPLY applies them too. A failed gate call is the transport's failure, not the judge's silence: its items are recorded and not counted.
-const PASS=$('Send Back Record').first().json;
-const GB=$('Gate Build').all().map(x=>x.json);const first=GB[0]||{};const T=new Date().toISOString();
-if(first.gate_skip)return [{json:{...PASS,gate:{skipped:true,why:first.gate_why||'',report:first.gate_report||[]},gate_rows:[]}}];
-const PB0=(()=>{try{return $('Panel Build').first().json;}catch(e){return null;}})();
-const bodies=(Array.isArray(PASS.bodies)?PASS.bodies:$('Panel Cure Check').first().json.bodies).slice();
-const R=$input.all().map(x=>x.json);const rows=[];const add=[];const seats=[];let any=false;
-const safe=s=>cureSafe(String(s==null?'':s)).replace(/\s+/g,' ').trim();
-GB.forEach((g,ci)=>{let txt='',err=null;try{txt=String(R[ci].choices[0].message.content||'');}catch(e){err=String((R[ci]&&R[ci].error&&(R[ci].error.message||R[ci].error))||'no reply').slice(0,200);}
- const b=JSON.parse(bodies[g.idx]);const p=b.payload;const its=(PASS.sb_items||[]).filter(x=>x.seat===g.seat);
- const j=PB0&&(PB0.judges||[]).find(q=>q.seat===g.seat);const PT=j?gatePromptText2024(j.body):'';const ctx={R:PT?ciRounds(PT):null,DL:PT?drvLinks(PT):[],ask:PT.includes('CITATION CHECK')};
- let C=null,cerr=null;if(!err){try{C=gateCure2024(g.seat,p.verdict_raw,g.F,its,g.items,txt,ctx);}catch(e){cerr=String(e&&e.message||e).slice(0,300);}}
- const res=C?C.res:g.items.map(x=>({gid:x.gid,kind:x.kind,src:x.src,live:x.live,ans:err?'NO REPLY':'NOT READ',to:'',reason:'',line:null,cured:false,why:err?'the gate call failed: '+err:'the gate answers could not be read: '+cerr}));
- const u=C?C.uncured:0;if(u>0){p.drv_uncured=(p.drv_uncured||0)+u;any=true;}
- p.verdict_raw=p.verdict_raw+'\n'+res.map(r=>'[AUDIT v38: E-GATE -- SEAT: '+g.seat+'; '+r.gid+' '+r.kind+' ('+r.src+'); ANSWER: '+r.ans+'; '+(r.cured?'CURED':'UNCURED')+': '+safe(r.why)+(r.cured?'':(C&&r.live?'; counted in drv_uncured':'; RECORD-ONLY, not counted'))+(r.cured?']':'. REVIEW THIS ROW.]')).join('\n')
-  +(C&&C.fresh.length?'\n'+C.fresh.map(f=>'[AUDIT v38: E-GATE NEW ITEM -- SEAT: '+g.seat+'; '+f.kind+' ('+f.src+'): '+safe(f.why).slice(0,400)+'; raised after the gate answers; '+(f.by?'raised by the gate change of '+f.by+', which stays UNCURED and is counted there once':'RECORD-ONLY, not counted')+'. REVIEW THIS ROW.]').join('\n'):'');
- bodies[g.idx]=JSON.stringify(b);if(C)C.add.forEach(x=>add.push(x));
- seats.push({seat:g.seat,items:res.length,cured:res.filter(r=>r.cured).length,uncured_counted:u,fresh:C?C.fresh.length:0,error:err||cerr||null});
- res.forEach((r,k)=>{const it=g.items.find(x=>x.gid===r.gid)||{};rows.push({run_token:g.run_token,seat:g.seat,seat_role:'panel',judge_model:g.api_model,kind:'send_back',rule:'E-GATE',item:r.gid+' '+r.kind+' ('+r.src+')',
-  flagged_line:String((it.lines&&it.lines.length?it.lines.join('\n'):it.to)||'').slice(0,1500)||null,prompt_sent:k===0?g.msg:null,full_reply:k===0?(txt||null):null,reply_error:err||cerr,response_line:r.line?String(r.line).slice(0,1500):null,
-  cure_status:r.cured?'CURED':'UNCURED',cure_reason:'GATE '+r.ans+(r.to?' TO: '+String(r.to).slice(0,600):'')+(r.reason?' -- '+String(r.reason).slice(0,400):'')+' | ENGINE: '+String(it.why||'').slice(0,600)+' | '+r.why+(r.cured?'':(C&&r.live?' (counted in drv_uncured)':' (RECORD-ONLY)')),at:T});});
- if(C)C.fresh.forEach(f=>rows.push({run_token:g.run_token,seat:g.seat,seat_role:'panel',judge_model:g.api_model,kind:'send_back',rule:'E-GATE',item:'NEW '+f.kind+' ('+f.src+')',flagged_line:null,prompt_sent:null,full_reply:null,reply_error:null,response_line:null,cure_status:'UNCURED',cure_reason:'raised after the gate answers: '+String(f.why).slice(0,600)+(f.by?' (raised by the gate change of '+f.by+', which stays UNCURED and is counted there once; W3 2341)':' (RECORD-ONLY)'),at:T}));});
-return [{json:{...PASS,bodies,alt_needed:!!PASS.alt_needed||any,gate:{skipped:false,calls:GB.length,seats,report:first.gate_report||[]},gate_rows:rows,sb_items:(PASS.sb_items||[]).concat(add)}}];
+const __AGR_TXT=c=>typeof c==='string'?c:Array.isArray(c)?c.map(p=>p&&typeof p.text==='string'?p.text:'').join(''):'';
+function __agrTail(msgs){if(!Array.isArray(msgs))return '';let acc=null;
+ for(let i=0;i+1<msgs.length;i++){const m=msgs[i],r=msgs[i+1];if(!m||!r)continue;const ut=m.role==='user'?__AGR_TXT(m.content!==undefined?m.content:m.parts):'';
+  if(/^POSTURE (FOR ACCEPTANCE|RETURNED)/.test(ut)&&(r.role==='assistant'||r.role==='model'))acc=__AGR_TXT(r.content!==undefined?r.content:r.parts);}
+ if(!acc||!acc.trim())return '';
+ return '\n\nTHE AGREEMENT YOU ACCEPTED, shown back before this decision. Your own words when you accepted the posture:\n'+acc.trim().split('\n').map(l=>'> '+l).join('\n')
+  +'\nEach contested grade you write (BROKEN, FORCED, MISSES, VOID, UNPROVEN) names the commitment it applies, as "(Commitment N)".\nThe reply form given above is unchanged; answer in it.';}
+
+// E-GATE, Gate Build (W2; WALL-2024 2242 design, rulings 2243 and 2251). Runs after Send Back Record. For each panel seat that answered a
+// send-back, its answers are applied (E-APPLY, as Alternate Merge will apply them) and the corrected judgment is read again (gate_lib above).
+// A seat with gate items is asked once more, in its own conversation after the send-back exchange. Passes nothing on: Gate Record reads
+// Send Back Record's output by name.
+const PASS=$input.first().json; // Send Back Record's output
+const skip=(why,rep)=>[{json:{gate_skip:true,gate_why:why,gate_report:rep||[]}}];
+if(!Array.isArray(PASS.sb_items)||!PASS.sb_items.length)return skip('no send-back answer was recorded');
+const PB0=(()=>{try{return $('Alt Seated').first().json;}catch(e){return null;}})();
+const BODIES=Array.isArray(PASS.bodies)?PASS.bodies:(()=>{try{return $('Alt Seated').first().json.bodies||[];}catch(e){return [];}})();
+let SBB=[],SBC=[];try{SBB=$('Alt Send Back Build').all().map(x=>x.json);}catch(e){SBB=[];}try{if($('Alt Send Back Call openrouter').isExecuted)SBC=$('Alt Send Back Call openrouter').all().map(x=>x.json);}catch(e){SBC=[];}
+const cut=(s,n)=>{s=String(s||'');return s.length>n?s.slice(0,n)+' [...]':s;};
+const out=[];const report=[];
+BODIES.forEach((s,i)=>{let b;try{b=JSON.parse(s);}catch(e){return;}const p=b.payload||{};const seat=p.judge_seat;const its=PASS.sb_items.filter(x=>x.seat===seat);if(!its.length)return;
+ const F={verdict_tag:p.verdict_tag,defense_standing:p.defense_standing,conceded_links:p.conceded_links,challenge_standing:p.challenge_standing,challenger_conceded_links:p.challenger_conceded_links};
+ const j=PB0&&(PB0.judges||[]).find(q=>q.seat===seat);const PT=j?gatePromptText2024(j.body):'';const ctx={R:PT?ciRounds(PT):null,DL:PT?drvLinks(PT):[],ask:PT.includes('CITATION CHECK')};
+ let G;try{G=gateItems2024(seat,p.verdict_raw,F,its,ctx);}catch(e){report.push({seat,error:String(e&&e.message||e).slice(0,300)});return;}
+ const rp={seat,items:G.items.map(x=>({gid:x.gid,kind:x.kind,src:x.src,live:x.live,why:x.why})),newk_error:G.newk_error,rounds_read:!!ctx.R};report.push(rp);
+ if(!G.items.length)return;
+ const k=SBB.findIndex(x=>x&&x.seat===seat);const sb=k>=0?SBB[k]:null;const rj=k>=0?SBC[k]:null;
+ const sbTxt=rj&&rj.choices&&rj.choices[0]&&rj.choices[0].message&&typeof rj.choices[0].message.content==='string'?rj.choices[0].message.content:null;
+ if(!sb||!sb.body||!Array.isArray(sb.body.messages)||sbTxt==null){rp.not_sent='the send-back conversation could not be read; the items are recorded only';return;}
+ const msg='The engine applied your send-back answers to your judgment and read the corrected judgment again. It cannot accept the items below as they stand. You keep the decision, under the same rules. For each item, CHANGE one of its lines or KEEP, and give one sentence that quotes the debate\'s own words that decide it. Bring nothing from outside the record.\n'
+  +'A KEEP answers a NOT APPLIED item: that change then stays unapplied. A KEEP also answers a CONTRADICTION item whose source is E-APPLY (a contradiction your own refused send-back change would make): that change is then withdrawn and your line stays as it was. A RULE K-G4 item on a link you keep graded LINK BROKEN because the link cannot take the witness\'s meaning (a meaning break, ruling 421) is cured by one FORCED line for that link, written as the reason of its GATE line, after KEEP or after your CHANGE TO: FORCED: D<i> vs C<j> -- MEANS [<round>]: "<the MEANS sentence>" -- ANSWER [<round>]: "<the holding side\'s answer>" -- FAILS: "<the layer of that answer that fails>", each quotation word for word in the round it names (ruling 411). Every other item is answered only by a CHANGE TO one of its lines, written in full in your judgment\'s own line form; the engine applies it with your send-back answers and reads the judgment again. An item that is not answered, is kept, or is still raised after your change counts as a debate rule violation not cured.\n\n'
+  +G.items.map(x=>'ITEM '+x.gid+' ('+x.kind+'; '+x.src+'):\nTHE ENGINE: '+cut(x.why,900)+(x.lines&&x.lines.length?x.lines.map(l=>'\nLINE: '+cut(l,1500)).join(''):'')+(x.to?'\nYOUR SEND-BACK ANSWER: CHANGE TO: '+cut(x.to,1500):'')).join('\n\n')
+  +'\n\nThis reply is not a judgment and is not JSON: write plain lines only.\nReply with exactly one line per item, and nothing else, in this form (the fields are separated by two vertical bars):\nGATE: <item id> || KEEP || <one sentence quoting the words that decide it>\nGATE: <item id> || CHANGE TO: <your corrected line> || <one sentence quoting the words that decide it>';
+ const body={...sb.body,messages:[...sb.body.messages,{role:'assistant',content:sbTxt},{role:'user',content:msg+__agrTail(sb.body.messages)}]};
+ out.push({json:{gate_skip:false,seat,idx:i,api_model:sb.api_model||null,run_token:sb.run_token||null,F,items:G.items,msg,body}});});
+if(!out.length)return skip('no seat has a gate item',report);
+out[0].json.gate_report=report;return out;

@@ -571,7 +571,7 @@ function unxaCheck(all,blk,k,P){if(all.some(z=>UNXA_HARD.test(unxaHead(z.seg))))
 
 function kunxLines(text,ptext){const items=[],marks=[];if(typeof text!=='string'||!(typeof ptext==='string'||(ptext&&typeof ptext==='object')))return {items,marks};let R;try{R=typeof ptext==='string'?ciRounds(ptext):ptext;}catch(e){return {items,marks};} /* pkgRCK: also takes the rounds object */
  for(const side of ['DEFENDER','CHALLENGER']){const rk=side==='CHALLENGER'?'DR3':'CR3';const sec=ciCountSection(text,side);if(!sec||typeof R[rk]!=='string')continue;
-  const n0=+((sec.match(/:\s*(\d+)/)||[])[1]||0);const lab=side==='DEFENDER'?'CONCEDED LINKS':'CHALLENGER CONCEDED LINKS';
+  const n0=+((sec.match(/:\s*(\d+)/)||[])[1]||0);const lab=side==='DEFENDER'?'CONCEDED LINKS':'CHALLENGER CONCEDED LINKS';if(!(n0>=1))continue; /* pkgUNX0 (W1 2805): a count of 0 counts nothing; a stray UNEXHIBITED line under it raises no K-UNX */
   const SG=unxSegs(sec);const PR=unxPresses(side==='CHALLENGER'?R.CR3:R.DR3);const segsOf=j=>SG.filter(s=>s.ns.includes(j)); /* every segment of the count section that names premise j */
   for(const s of SG){if(!/\bUNEXHIBITED\b/.test(s.seg)||/\b(?:not|never|no\s+longer)\s+UNEXHIBITED\b/i.test(s.seg))continue;
    for(const j of s.ns){const all=segsOf(j);if(all.some(z=>UNX_OTHER.test(z.seg))){const bk=lbBlockText(R[rk],j);const ua=bk?unxaCheck(all,bk,lbFoot(bk,true),PR.filter(p=>p.n===j)):null; /* pkgUNXA */
@@ -1789,7 +1789,7 @@ const respOf=(x)=>{const lb=U(cureLabel(x));const rk=U(x.rule||'');const ruleOk=
   // rules it VOID: SUPPORTED or NARROWED, or counted (UNEXHIBITED or CONCEDED) with a CORRECTED COUNT above the seat's count and the standing that
   // count makes true.
   if(x.rule==='K-V'){const CH=kvCharges(R,x.side);const UNI=kvUni(R,x.side);const st=stmtOf(x);
-   if(st&&CH){const v=kvRulingOk(st,x.premise,CH,UNI);if(v.ok)return res('CURED','statement quotes the charge words ('+(v.q||v.why)+') and names the kind',['STATEMENT: '+st]);}
+   if(st&&CH){const v=kvRulingOk(st,x.premise,CH,UNI);if(v.ok)return res('CURED','statement quotes the charge words ('+(v.q||v.why)+') and names the kind',['STATEMENT: '+st]);}{const rp=CH?respOf(x):null;if(rp){const t=st?st+'\n'+rp:rp;const v=kvRulingOk(t,x.premise,CH,UNI);if(v.ok)return res('CURED',(st?'statement and response together quote':'response quotes')+' the charge words ('+(v.q||v.why)+(st?') and name the kind':') and names the kind'),(st?['STATEMENT: '+st]:[]).concat(['RESPONSE: '+rp]));}} /* pkgKVR (33311 chatgpt premise 3): the item's RESPONSE carries the statement */
    const lab=x.side==='DEFENDER'?'CONCEDED LINKS':'CHALLENGER CONCEDED LINKS';const rc=o.restated.filter(r=>r.link===lab);
    if(rc.length===1){const sg=kvSegments(lab+': '+rc[0].text,x.side).find(z=>z.ns.includes(x.premise));
     if(!sg){const T=rc[0].text;const re=new RegExp('\\bpremises?\\s+(?:\\d+\\s*(?:,|and|&)\\s*)*'+x.premise+'\\b[^.;]{0,160}','i');const m=T.match(re);const seg=m?m[0]:'';
@@ -2345,66 +2345,30 @@ function cureReport(seat,v){return v.map(x=>'[AUDIT v21: DEBATE RULE VIOLATION R
 function cureProse(seat,reply){const p=reply&&reply.ok?cureLines(reply.text).prose.join(' ').replace(/\s+/g,' ').trim():'';
  return p?['[AUDIT v21: DEBATE RULE VIOLATION REPLY -- '+(seat?seat+' ':'')+'prose recorded, not read for a cure: '+cureSafe(p.slice(0,600))+']']:[];}
 
-let PP=$('Panel Cure Check').first().json;try{if($('Gate Record').isExecuted){const GR=$('Gate Record').first().json;if(Array.isArray(GR.bodies)&&GR.bodies.length===(PP.bodies||[]).length)PP={...PP,bodies:GR.bodies};}}catch(e){} /* E-GATE: the bodies with the gate's uncured count */const S=$('Init Seats').first().json;
-let AP=[],CN=[];
-try{if($('Alternate Payloads').isExecuted)AP=$('Alternate Payloads').all().map(x=>x.json).filter(x=>x&&x.alt);}catch(e){AP=[];}
-try{if($('Alternate Cure Normalize').isExecuted)CN=$('Alternate Cure Normalize').all().map(x=>x.json);}catch(e){CN=[];}
-const bodies=PP.bodies.slice();const summary=(PP.summary||[]).map(s=>({...s}));const removed=[];const tried=[];const seated=[];const at=new Date().toISOString();
-// E-APPLY: each panel seat's send-back CHANGE TO answers, applied to its body before any seat is replaced (a removed seat keeps them in its record).
-const sb_apply=[];try{if($('Send Back Record').isExecuted){let SBI=$('Send Back Record').first().json.sb_items||[];try{if($('Gate Record').isExecuted)SBI=$('Gate Record').first().json.sb_items||SBI;}catch(e){} /* E-GATE: the gate changes join the send-back answers */summary.forEach((sm,i)=>{const its=SBI.filter(x=>x.seat===sm.seat);if(!its.length)return;
- const b=JSON.parse(bodies[i]);const t0=b.payload.verdict_tag;const F0={verdict_tag:b.payload.verdict_tag,defense_standing:b.payload.defense_standing,conceded_links:b.payload.conceded_links,challenge_standing:b.payload.challenge_standing,challenger_conceded_links:b.payload.challenger_conceded_links};
- const R=sbApply2024(sm.seat,b.payload.verdict_raw,F0,its,sbRoundsOf2024(sm.seat));if(!R)return;b.payload.verdict_raw=cureRewrite(b.payload.verdict_raw,true,R,sm.seat,F0);Object.assign(b.payload,R.fields);b.payload.verdict_raw=cureSupHead(b.payload.verdict_raw,t0,b.payload.verdict_tag);
- bodies[i]=JSON.stringify(b);sm.sb_applied={applied:R.applied,items:R.items,fields:R.fields,result:R.result,from:F0};sb_apply.push({seat:sm.seat,applied:R.applied,items:R.items,before:t0,after:R.fields.verdict_tag,result:R.result});});}}catch(e){sb_apply.push({error:String(e&&e.message||e).slice(0,300)});}
-let SK=[];try{if($('Alternate Build').isExecuted)SK=$('Alternate Build').first().json.skips||[];}catch(e){SK=[];}
-SK.forEach(a=>tried.push({removed_seat:a.removed_seat,alternate:null,result:'NOT SEATED',why:a.skip}));
-AP.forEach((r,k)=>{const a=r.alt;if(!r.ok){tried.push({removed_seat:a.removed_seat,alternate:a.seat,api_model:a.api_model,result:'NOT SEATED',why:r.why});return;}
- const b=JSON.parse(r.body);const __t0=b.payload.verdict_tag;let v=[];
- if((r.drv||[]).length){const c=CN.find(x=>x.cure&&x.cure.who==='alternate'&&x.cure.k===k)||null;
-  v=cureVerdicts(r.drv,c?c.reply:{ok:false,why:'no cure call was made for this alternate'},c&&c.cure?c.cure.broken:null,c&&c.cure?c.cure.rounds:null);
-  b.payload.drv_uncured=enfUncured(v); /* judge_fix6 H8 */b.payload.verdict_raw=b.payload.verdict_raw+'\n'+cureReport(a.seat,v).concat(cureProse(a.seat,c?c.reply:null)).join('\n');
-  const cc=cureCorrected(c?c.reply:null,v);if(cc){b.payload.verdict_raw=b.payload.verdict_raw+'\n'+cureCorrLine(a.seat,b.payload.verdict_tag,cc);b.payload.verdict_tag=cc.word;}
-  const cs=cureSet(c?c.reply:null,v);if(cs)b.payload.verdict_raw=b.payload.verdict_raw+'\n'+cureSetApply(b.payload,cs,a.seat).join('\n');
-  {const ch=cureCountHeld(c?c.reply:null,v,cs,a.seat);if(ch.length)b.payload.verdict_raw=b.payload.verdict_raw+'\n'+ch.join('\n');}
-  // judge_fix4 F1: recomputed from the cured lines, before the seat is seated or refused.
-  {const F0={verdict_tag:b.payload.verdict_tag,defense_standing:b.payload.defense_standing,conceded_links:b.payload.conceded_links,challenge_standing:b.payload.challenge_standing,challenger_conceded_links:b.payload.challenger_conceded_links};
-   const rc=cureRecompute(a.seat,cureJText(b.payload.verdict_raw,true),F0,r.drv,v,c?c.reply:null);if(rc){b.payload.verdict_raw=cureRewrite(b.payload.verdict_raw,true,rc,a.seat,F0);Object.assign(b.payload,rc.fields);}}}
- if(!(r.drv||[]).length){ /* ruling 421 (KB-0030): an alternate with no flagged item is still held to the tie rule */const F0={verdict_tag:b.payload.verdict_tag,defense_standing:b.payload.defense_standing,conceded_links:b.payload.conceded_links,challenge_standing:b.payload.challenge_standing,challenger_conceded_links:b.payload.challenger_conceded_links};const rc=cureRecompute(a.seat,cureJText(b.payload.verdict_raw,true),F0,[],[],null);if(rc&&rc.trig.indexOf('TIE (KB-0030)')>=0){b.payload.verdict_raw=cureRewrite(b.payload.verdict_raw,true,rc,a.seat,F0);Object.assign(b.payload,rc.fields);}}
- b.payload.verdict_raw=cureSupHead(b.payload.verdict_raw,__t0,b.payload.verdict_tag); /* WALL-2134 Part 2c */
- const ok=a.qualify||b.payload.drv_uncured===0;
- if(!ok){tried.push({removed_seat:a.removed_seat,alternate:a.seat,api_model:a.api_model,result:'NOT SEATED',why:b.payload.drv_uncured+' uncured item(s)',verdict_raw:b.payload.verdict_raw});return;}
- // judge_fix2 FIX 5: G3 at merge. A model already seated for an earlier seat (panel order) is not seated twice; one tried and NOT SEATED blocks nothing.
- {const dup=a.qualify?null:seated.find(s=>s.alternate_api_model===a.api_model);
-  if(dup){tried.push({removed_seat:a.removed_seat,alternate:a.seat,api_model:a.api_model,result:'NOT SEATED',why:'G3: '+a.api_model+' already sits as the other alternate (seated for '+dup.removed_seat+')',verdict_raw:b.payload.verdict_raw});return;}}
- const old=JSON.parse(bodies[a.idx]).payload;
- removed.push({seat:old.judge_seat,api_model:old.judge_api_model,verdict_tag:old.verdict_tag,defense_standing:old.defense_standing,challenge_standing:old.challenge_standing,drv_uncured:old.drv_uncured,verdict_raw:old.verdict_raw,replaced_by:a.seat,replaced_by_model:a.api_model,at});
- bodies[a.idx]=JSON.stringify(b);summary[a.idx]={...r.summary,cure:v.map(x=>({rule:x.rule,side:x.side,link:x.link,status:x.status,kinds:x.kinds,why:x.why}))};
- seated.push({removed_seat:old.judge_seat,alternate_seat:a.seat,alternate_api_model:a.api_model});
- tried.push({removed_seat:a.removed_seat,alternate:a.seat,api_model:a.api_model,result:'SEATED'});});
-// BB-7397 rev 8 DoD 16: every alternate tried is recorded in the uncounted seat's stored judgment, one AUDIT line naming the alternate, its
-// model, SEATED or NOT SEATED and why (the error text when the call failed). A seated alternate's line goes on the removed judgment kept in
-// drv_removed; any other on the seat's own saved judgment. Braces are written as parentheses, so the verdict object stays the last {...}.
-const altSafe=s=>cureSafe(s).replace(/\{/g,'(').replace(/\}/g,')').replace(/\s+/g,' ').trim();
-tried.forEach(x=>{if(!x.removed_seat)return;
- const line='[AUDIT v21: ALTERNATE TRIED -- SEAT: '+x.removed_seat+'; ALTERNATE: '+(x.alternate||'none')+'; MODEL: '+(x.api_model||'none')+'; RESULT: '+x.result+(x.why?'; WHY: '+altSafe(String(x.why).slice(0,300)):'')+']';
- const rm=removed.find(r=>r.seat===x.removed_seat);if(x.result==='SEATED'&&rm){rm.verdict_raw=rm.verdict_raw+'\n'+line;return;}
- const k=bodies.findIndex(b=>{try{return JSON.parse(b).payload.judge_seat===x.removed_seat;}catch(e){return false;}});
- if(k>=0){const b=JSON.parse(bodies[k]);b.payload.verdict_raw=b.payload.verdict_raw+'\n'+line;bodies[k]=JSON.stringify(b);}});
-// judge_fix2 W2: the run's enforcer log, sent whole to record_enforcer_log by the node Write Enforcer Log: the single judge's (Cure Check), the
-// panel's and reserve's (Panel Cure Check), each alternate's cure rows, each alternate's first reply in full, and the full first reply of a
-// panel seat that failed closed (Panel Check failed_raw).
-const enforcer_log=[].concat(PP.enforcer_log||[]);try{if($('Cure Check').isExecuted)($('Cure Check').first().json.enforcer_log||[]).forEach(x=>enforcer_log.push(x));}catch(e){}
-try{if($('Enforcer Record').isExecuted)($('Enforcer Record').first().json.enf421_rows||[]).forEach(x=>enforcer_log.push(x));}catch(e){} // ruling 421: the DeepSeek enforcer's rows (TRIAL)
-try{if($('Judge Enforcer Record').isExecuted)($('Judge Enforcer Record').first().json.enf428_rows||[]).forEach(x=>enforcer_log.push(x));}catch(e){} // ruling 428: E-ANS and E-VOID rows (RECORD-ONLY TRIAL)
- try{if($('Send Back Record').isExecuted)($('Send Back Record').first().json.sb_rows||[]).forEach(x=>enforcer_log.push(x));}catch(e){} // s430: the send-back rows (ruling 428)
- try{if($('Gate Record').isExecuted)($('Gate Record').first().json.gate_rows||[]).forEach(x=>enforcer_log.push(x));}catch(e){} // E-GATE: the gate rows
-AP.forEach((r,k)=>{const a=r.alt;const T=new Date().toISOString();let first=null;try{first=r.ok?JSON.parse(r.body).payload.verdict_raw:(r.raw_text||null);}catch(e){first=r.raw_text||null;}
- enforcer_log.push({run_token:S.run_token,seat:a.seat,seat_role:'alternate',judge_model:a.api_model,kind:'alternate_reply',rule:null,item:'replaces '+a.removed_seat,flagged_line:null,prompt_sent:null,full_reply:first,reply_error:r.ok?null:String(r.why||''),response_line:null,cure_status:null,cure_reason:null,at:T});
- if(r.ok&&(r.drv||[]).length){const c=CN.find(x=>x.cure&&x.cure.who==='alternate'&&x.cure.k===k)||null;const v=cureVerdicts(r.drv,c?c.reply:{ok:false,why:'no cure call was made for this alternate'},c&&c.cure?c.cure.broken:null,c&&c.cure?c.cure.rounds:null);
-  enfRows({run_token:S.run_token,seat:a.seat,role:'alternate',model:a.api_model},v,c?c.reply:null,c&&c.cure?c.cure.body:null).forEach(x=>enforcer_log.push(x));}});
-try{const fr=$('Panel Check').first().json.failed_raw;if(fr)enforcer_log.push({run_token:S.run_token,seat:fr.seat,seat_role:'panel',judge_model:fr.model||null,kind:'failed_reply',rule:null,item:fr.kind||null,flagged_line:fr.detail||null,prompt_sent:null,full_reply:fr.text,reply_error:fr.detail||null,response_line:null,cure_status:null,cure_reason:null,at:fr.at});}catch(e){}
-try{const __PV=$('Panel Payloads').first().json;const __T=new Date().toISOString();(__PV.kkjv_report||[]).forEach(x=>enforcer_log.push({run_token:S.run_token,seat:x.seat,seat_role:x.role,judge_model:x.judge_model||null,kind:'enforcer_check',rule:'K-KJV',item:'NOT CHECKED '+x.nc,flagged_line:x.report.join('\n').slice(0,4000),prompt_sent:null,full_reply:null,reply_error:null,response_line:null,cure_status:null,cure_reason:'TRIAL rule (listed only; Commitment 12): judge quotes of verses this run did not read, quotes that are not verse quotes, and other versions named',at:__T}));(__PV.vc_single||[]).forEach(x=>enforcer_log.push({run_token:S.run_token,seat:'single',seat_role:'single',judge_model:x.judge_model||null,kind:'enforcer_check',rule:'K-CON',item:x.item,flagged_line:x.flagged_line,prompt_sent:null,full_reply:null,reply_error:null,response_line:null,cure_status:null,cure_reason:'TRIAL rule (recorded only, after the panel; no call was made; it removes no seat): '+x.mark,at:__T}));}catch(e){} // WALL-2024 Part 1 (W2): the single judge's missed verified contradiction, record-only
-const panel_effective=summary.map(x=>x.seat).sort();
-{const __T=new Date().toISOString();sb_apply.forEach(a=>{if(a.error){enforcer_log.push({run_token:S.run_token,seat:null,seat_role:'panel',judge_model:null,kind:'send_back',rule:'E-APPLY',item:'ERROR',flagged_line:null,prompt_sent:null,full_reply:null,reply_error:a.error,response_line:null,cure_status:null,cure_reason:'E-APPLY failed; the changes were not applied',at:__T});return;}
- enforcer_log.push({run_token:S.run_token,seat:a.seat,seat_role:'panel',judge_model:null,kind:'send_back',rule:'E-APPLY',item:'APPLIED '+(a.applied.join(', ')||'none'),flagged_line:null,prompt_sent:null,full_reply:null,reply_error:null,response_line:null,cure_status:null,cure_reason:'verdict '+a.before+' to '+a.after+'; derived RESULT '+a.result+' (WALL-2024 2236, 2237)',at:__T});
- a.items.forEach(z=>enforcer_log.push({run_token:S.run_token,seat:a.seat,seat_role:'panel',judge_model:null,kind:'send_back',rule:'E-APPLY',item:z.sid+' '+z.kind,flagged_line:String(z.to||'').slice(0,1500),prompt_sent:null,full_reply:null,reply_error:null,response_line:null,cure_status:'UNCURED',cure_reason:'RECORD-ONLY (no further call; it removes no seat): '+z.why,at:__T}));});}
-return [{json:{...PP,enforcer_log,sb_apply,enforcer_log_body:{p_debate_id:PP.debate_id||null,p_run_token:S.run_token,p_rows:enforcer_log},bodies,summary,panel_effective,alternates_seated:S.qualify_alternate?[]:seated,drv_removed:S.qualify_alternate?[]:removed,alternates_tried:tried,qualify_alternate:S.qualify_alternate||null}}];
+
+// E-GATE, Gate Record (W2; WALL-2024 2242, 2243, 2251). Reads each judge's GATE lines, applies its gate changes with its send-back answers,
+// and decides each item (gateCure2024). Each uncured LIVE item adds 1 to the seat's drv_uncured and sets alt_needed, so Alternate Build removes
+// the seat as for any uncured item. One debate_enforcer_log row (kind gate) per item. The gate changes join sb_items, so Alternate Merge's
+// E-APPLY applies them too. A failed gate call is the transport's failure, not the judge's silence: its items are recorded and not counted.
+const PASS=$('Alt Send Back Record').first().json;
+const GB=$('Alt Gate Build').all().map(x=>x.json);const first=GB[0]||{};const T=new Date().toISOString();
+if(first.gate_skip)return [{json:{...PASS,gate:{skipped:true,why:first.gate_why||'',report:first.gate_report||[]},gate_rows:[]}}];
+const PB0=(()=>{try{return $('Alt Seated').first().json;}catch(e){return null;}})();
+const bodies=(Array.isArray(PASS.bodies)?PASS.bodies:$('Alt Seated').first().json.bodies).slice();
+const R=$input.all().map(x=>x.json);const rows=[];const add=[];const seats=[];let any=false;
+const safe=s=>cureSafe(String(s==null?'':s)).replace(/\s+/g,' ').trim();
+GB.forEach((g,ci)=>{let txt='',err=null;try{txt=String(R[ci].choices[0].message.content||'');}catch(e){err=String((R[ci]&&R[ci].error&&(R[ci].error.message||R[ci].error))||'no reply').slice(0,200);}
+ const b=JSON.parse(bodies[g.idx]);const p=b.payload;const its=(PASS.sb_items||[]).filter(x=>x.seat===g.seat);
+ const j=PB0&&(PB0.judges||[]).find(q=>q.seat===g.seat);const PT=j?gatePromptText2024(j.body):'';const ctx={R:PT?ciRounds(PT):null,DL:PT?drvLinks(PT):[],ask:PT.includes('CITATION CHECK')};
+ let C=null,cerr=null;if(!err){try{C=gateCure2024(g.seat,p.verdict_raw,g.F,its,g.items,txt,ctx);}catch(e){cerr=String(e&&e.message||e).slice(0,300);}}
+ const res=C?C.res:g.items.map(x=>({gid:x.gid,kind:x.kind,src:x.src,live:x.live,ans:err?'NO REPLY':'NOT READ',to:'',reason:'',line:null,cured:false,why:err?'the gate call failed: '+err:'the gate answers could not be read: '+cerr}));
+ const u=C?C.uncured:0;if(u>0){p.drv_uncured=(p.drv_uncured||0)+u;any=true;}
+ p.verdict_raw=p.verdict_raw+'\n'+res.map(r=>'[AUDIT v38: E-GATE -- SEAT: '+g.seat+'; '+r.gid+' '+r.kind+' ('+r.src+'); ANSWER: '+r.ans+'; '+(r.cured?'CURED':'UNCURED')+': '+safe(r.why)+(r.cured?'':(C&&r.live?'; counted in drv_uncured':'; RECORD-ONLY, not counted'))+(r.cured?']':'. REVIEW THIS ROW.]')).join('\n')
+  +(C&&C.fresh.length?'\n'+C.fresh.map(f=>'[AUDIT v38: E-GATE NEW ITEM -- SEAT: '+g.seat+'; '+f.kind+' ('+f.src+'): '+safe(f.why).slice(0,400)+'; raised after the gate answers; '+(f.by?'raised by the gate change of '+f.by+', which stays UNCURED and is counted there once':'RECORD-ONLY, not counted')+'. REVIEW THIS ROW.]').join('\n'):'');
+ bodies[g.idx]=JSON.stringify(b);if(C)C.add.forEach(x=>add.push(x));
+ seats.push({seat:g.seat,items:res.length,cured:res.filter(r=>r.cured).length,uncured_counted:u,fresh:C?C.fresh.length:0,error:err||cerr||null});
+ res.forEach((r,k)=>{const it=g.items.find(x=>x.gid===r.gid)||{};rows.push({run_token:g.run_token,seat:g.seat,seat_role:'alternate',judge_model:g.api_model,kind:'send_back',rule:'E-GATE',item:r.gid+' '+r.kind+' ('+r.src+')',
+  flagged_line:String((it.lines&&it.lines.length?it.lines.join('\n'):it.to)||'').slice(0,1500)||null,prompt_sent:k===0?g.msg:null,full_reply:k===0?(txt||null):null,reply_error:err||cerr,response_line:r.line?String(r.line).slice(0,1500):null,
+  cure_status:r.cured?'CURED':'UNCURED',cure_reason:'GATE '+r.ans+(r.to?' TO: '+String(r.to).slice(0,600):'')+(r.reason?' -- '+String(r.reason).slice(0,400):'')+' | ENGINE: '+String(it.why||'').slice(0,600)+' | '+r.why+(r.cured?'':(C&&r.live?' (counted in drv_uncured)':' (RECORD-ONLY)')),at:T});});
+ if(C)C.fresh.forEach(f=>rows.push({run_token:g.run_token,seat:g.seat,seat_role:'alternate',judge_model:g.api_model,kind:'send_back',rule:'E-GATE',item:'NEW '+f.kind+' ('+f.src+')',flagged_line:null,prompt_sent:null,full_reply:null,reply_error:null,response_line:null,cure_status:'UNCURED',cure_reason:'raised after the gate answers: '+String(f.why).slice(0,600)+(f.by?' (raised by the gate change of '+f.by+', which stays UNCURED and is counted there once; W3 2341)':' (RECORD-ONLY)'),at:T}));});
+return [{json:{...PASS,bodies,alt_needed:!!PASS.alt_needed||any,gate:{skipped:false,calls:GB.length,seats,report:first.gate_report||[]},gate_rows:rows,sb_items:(PASS.sb_items||[]).concat(add)}}];

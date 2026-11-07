@@ -1,0 +1,71 @@
+{
+ "base": "/mnt/project-files/wall2024/fetchback_live_s32.json + pkgCPD/patched_on_RXR,pkgPSN/patched_on_pkgCPD_patched_on_RXR,pkgKVR/patched,pkgUNX0/patched_on_KVR",
+ "nodes": [
+  {
+   "name": "Alternate Merge Seat",
+   "file": "Alternate_Merge_Seat.js",
+   "base_sha": "4060f406fb08515c",
+   "final_sha": "445783f0eebb964c",
+   "edits": [
+    "attribution",
+    "narrow",
+    "lib gbcFlip"
+   ]
+  },
+  {
+   "name": "Gate Build",
+   "file": "Gate_Build.js",
+   "base_sha": "48b9b96f539075b3",
+   "final_sha": "d98b6cfa8e7a6288",
+   "edits": [
+    "attribution",
+    "narrow",
+    "lib gbcFlip"
+   ]
+  },
+  {
+   "name": "Gate Record",
+   "file": "Gate_Record.js",
+   "base_sha": "fa4231564e005fbe",
+   "final_sha": "ecde97f3c59d8125",
+   "edits": [
+    "attribution",
+    "narrow",
+    "lib gbcFlip"
+   ]
+  },
+  {
+   "name": "Alt Gate Build",
+   "file": "Alt_Gate_Build.js",
+   "base_sha": "0d8aff9bd2b4e7a3",
+   "final_sha": "653824da65257b0d",
+   "edits": [
+    "attribution",
+    "narrow",
+    "lib gbcFlip"
+   ]
+  },
+  {
+   "name": "Alt Gate Record",
+   "file": "Alt_Gate_Record.js",
+   "base_sha": "dd068f88ee2cbb82",
+   "final_sha": "cffb0fe170ebac76",
+   "edits": [
+    "attribution",
+    "narrow",
+    "lib gbcFlip"
+   ]
+  },
+  {
+   "name": "Alternate Merge",
+   "file": "Alternate_Merge.js",
+   "base_sha": "bd562d1216dd2ab9",
+   "final_sha": "2aaafd6791f071fc",
+   "edits": [
+    "attribution",
+    "narrow",
+    "lib gbcFlip"
+   ]
+  }
+ ]
+}
