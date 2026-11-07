@@ -1,0 +1,34 @@
+OK   A1 19 nodes; each base is the pkgUNXA2 final; patched shas hold
+OK   A2 --on-live: 19 nodes, each base is live 4f62e6cf
+OK   A3 each patched node differs from its base only by the 3 KWR edits
+OK   R1 drops reference-only parentheses
+OK   R2 keeps other parentheses: "(as was supposed)", "([DR3])", "(Commitment 6)", "(cohabit conjugally)"
+OK   C1 33276 chatgpt #10: UNCURED before (runs hold "isaiah 8 18"), CURED now :: ["isaiahs own children are signs"]
+OK   C2 a NOT HELD that quotes nothing of the sentence still fails
+OK   P 33218 Panel Cure Check: no K-W flip, output identical
+OK   P 33218 Alternate Merge Seat: no K-W flip, output identical
+OK   P 33218 Gate Record: no K-W flip, output identical
+OK   P 33222 Panel Cure Check: no K-W flip, output identical
+OK   P 33222 Alternate Merge Seat: no K-W flip, output identical
+OK   P 33222 Gate Record: no K-W flip, output identical
+OK   P 33249 Panel Cure Check: no K-W flip, output identical
+OK   P 33249 Alternate Merge Seat: no K-W flip, output identical
+OK   P 33249 Gate Record: no K-W flip, output identical
+OK   P 33261 Panel Cure Check: no K-W flip, output identical
+OK   P 33261 Alternate Merge Seat: no K-W flip, output identical
+OK   P 33261 Gate Record: no K-W flip, output identical
+OK   N1 33261 sol K-W #4 and #9 (W3 2754: removed correctly) stay UNCURED; they are the only UNCURED K-W items of Panel Cure Check :: DEFENDER CR3 LINK 1 #4 ; DEFENDER CR3 LINK 1 #9
+INFO 33218 Panel Cure Check: K-W items 19, CURED 19 -> 19, flips 0
+INFO 33218 Alternate Merge Seat: K-W items 19, CURED 19 -> 19, flips 0
+INFO 33218 Gate Record: K-W items 19, CURED 19 -> 19, flips 0
+INFO 33222 Panel Cure Check: K-W items 20, CURED 20 -> 20, flips 0
+INFO 33222 Alternate Merge Seat: K-W items 20, CURED 20 -> 20, flips 0
+INFO 33222 Gate Record: K-W items 20, CURED 20 -> 20, flips 0
+INFO 33249 Panel Cure Check: K-W items 10, CURED 10 -> 10, flips 0
+INFO 33249 Alternate Merge Seat: K-W items 10, CURED 10 -> 10, flips 0
+INFO 33249 Gate Record: K-W items 10, CURED 10 -> 10, flips 0
+INFO 33261 Panel Cure Check: K-W items 12, CURED 10 -> 10, flips 0
+INFO 33261 Alternate Merge Seat: K-W items 12, CURED 12 -> 12, flips 0
+INFO 33261 Gate Record: K-W items 12, CURED 10 -> 10, flips 0
+INFO flips: 0
+20 OK, 0 FAIL

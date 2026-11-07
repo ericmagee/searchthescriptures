@@ -1,0 +1,16 @@
+33218 Panel Cure Check: K-W items 19, CURED 19 -> 19, flips 0
+33218 Alternate Merge Seat: K-W items 19, CURED 19 -> 19, flips 0
+33218 Gate Record: K-W items 19, CURED 19 -> 19, flips 0
+33222 Panel Cure Check: K-W items 20, CURED 20 -> 20, flips 0
+33222 Alternate Merge Seat: K-W items 20, CURED 20 -> 20, flips 0
+33222 Gate Record: K-W items 20, CURED 20 -> 20, flips 0
+33249 Panel Cure Check: K-W items 10, CURED 10 -> 10, flips 0
+33249 Alternate Merge Seat: K-W items 10, CURED 10 -> 10, flips 0
+33249 Gate Record: K-W items 10, CURED 10 -> 10, flips 0
+33261 Panel Cure Check: K-W items 12, CURED 10 -> 10, flips 0
+33261 Alternate Merge Seat: K-W items 12, CURED 12 -> 12, flips 0
+33261 Gate Record: K-W items 12, CURED 10 -> 10, flips 0
+FLIPS: 0
+STORED LOG (debate_enforcer_log, all runs, rule K-W, UNCURED, flagged_line with a "(... n:n" reference), queried 11-07 ~08:45Z: 6 rows
+(32717 grok CR2 #1; 32749 chatgpt and sol CR4 D4 #10; 32791 chatgpt and sol CR3 LINK 2 #4; 33021 single CR4 D3 #10). None answers NOT HELD,
+so the NOT HELD run test (the only code KWR touches) is not reached: 0 flips. 33276's log is lost; its one case is C1.
