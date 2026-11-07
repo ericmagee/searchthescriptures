@@ -15,7 +15,7 @@ or at an end) taken out of BOTH the quote and the round. The first compare is un
 
 - orig_stack = pkgKFN/patched (v12 orig_stack with the one kfFound line changed in all 22).
 - pack: strip_s45 strip_L1Q strip_TRM strip_DEC strip_V18 strip_CRW strip_KSP strip_KWT strip_KWC strip_L1Q2 strip_KWA strip_KG1L strip_MIM strip_KFN.
-- Shared Library json sha256 67626dac3fbee20f. Every stub changes only because library line numbers move by one.
+- Shared Library file sha256 (Shared_Library.js, first 16) 67626dac3fbee20f. Every stub changes only because library line numbers move by one.
 - test_LIB 11 OK (pkgLIB_v13/test_LIB_out.txt); test_recent (v13 orig vs v13 stubs) 352/352 identical (pkgLIB_v13/test_recent_out.txt).
 
 ## Replay, v12 vs v13 on the 16 saved runs (pkgKFN/replay_22_v12_vs_v13.txt, pkgKFN/replay_diff.txt)
