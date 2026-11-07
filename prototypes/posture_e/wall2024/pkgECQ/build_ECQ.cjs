@@ -1,7 +1,7 @@
 // pkgECQ (W3 Wall 2859, DeepSeek lane D5). DeepSeek enforcer fix, side-neutral, in the 4 Judge Enforcer nodes (main and Alt).
 // 33371 rows 14645-14647 pushed "right: COUNTED (CONCEDED)" on challenger premise 1 quoting as "the challenger's own words" the DEFENDER's [CR2] grant
 // "I grant that "till" bounds the abstaining from the taking to the birth"; the (CONCEDED) label exempted them from the pkgEPS hold unchecked.
-// Build: the first E-PREM id carries ecq_sides {D: [CR1..CR4], C: [DR1..DR4]} (60000 chars each), once per Build item. Record: a (CONCEDED) push
+// Build: the first E-PREM id carries ecq_sides {D: [CR1..CR4], C: [DR1..DR4]} (100000 chars each), once per Build item. Record: a (CONCEDED) push
 // passes only when ecqCheck finds its quote is the counted side's own give-up words (ecq_lib.js); otherwise it is HELD (LIVE: "ENFORCER HELD (pkgEPS,
 // not sent; ... (CONCEDED) quote not in the side's rounds ...)", which Send Back Build does not send; TRIAL: sent, with a stripped TRIAL mark).
 // No ecq_sides (rounds not found): unchanged (exempt as before). Run from wall2024/: node pkgECQ/build_ECQ.cjs [--base dir] [--status TRIAL] [--out dir]
@@ -10,7 +10,7 @@ const arg=(k,d)=>{const i=process.argv.indexOf(k);return i>0?process.argv[i+1]:d
 const IN=arg('--base','pkgEAH/patched');const ST=arg('--status','LIVE');const OUT=arg('--out','pkgECQ/'+(ST==='LIVE'?'patched_live':'patched')+'_on_'+IN.replace(/\//g,'_'));
 const LIB=fs.readFileSync(__dirname+'/ecq_lib.js','utf8');
 const BA="...(k===0?{blk:a?String(a.t).slice(0,8000):''}:{})";
-const BB="...(k===0?{blk:a?String(a.t).slice(0,8000):''}:{}),...(k===0&&!__ecqSent?(__ecqSent=1,{ecq_sides:{D:[R&&R.CR1,R&&R.CR2,R&&R.CR3,R&&R.CR4].filter(Boolean).join('\\n').slice(0,60000),C:[R&&R.DR1,R&&R.DR2,R&&R.DR3,R&&R.DR4].filter(Boolean).join('\\n').slice(0,60000)}}):{}) /* pkgECQ */";
+const BB="...(k===0?{blk:a?String(a.t).slice(0,8000):''}:{}),...(k===0&&!__ecqSent?(__ecqSent=1,{ecq_sides:{D:[R&&R.CR1,R&&R.CR2,R&&R.CR3,R&&R.CR4].filter(Boolean).join('\\n').slice(0,100000),C:[R&&R.DR1,R&&R.DR2,R&&R.DR3,R&&R.DR4].filter(Boolean).join('\\n').slice(0,100000)}}):{}) /* pkgECQ */";
 const BL="let R=null;";const BL2="let __ecqSent=0; /* pkgECQ: the side rounds ride once */\nlet R=null;";
 const RA="if(/^\\s*\\(\\s*CONCEDED\\b/i.test(v.why))return null;";
 const RB="if(/^\\s*\\(\\s*CONCEDED\\b/i.test(v.why)){const sd=/against the defender/.test(x.item)?'D':/against the challenger/.test(x.item)?'C':'';if(!sd||!__ecqSides)return null;const q=ecqCheck(v.why,__ecqSides[sd],__ecqSides[sd==='D'?'C':'D']);if(q.ok)return null;"+
