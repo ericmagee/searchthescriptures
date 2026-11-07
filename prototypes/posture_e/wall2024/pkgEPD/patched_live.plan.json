@@ -1,0 +1,16 @@
+{
+ "base": "pkgETC/patched_on_pkgEPS_patched_live",
+ "status": "LIVE",
+ "nodes": [
+  {
+   "file": "Judge_Enforcer_Record.js",
+   "base_sha": "03a6b6ba76ff4df3",
+   "final_sha": "ceeddc4306571f10"
+  },
+  {
+   "file": "Alt_Judge_Enforcer_Record.js",
+   "base_sha": "80e4ecc1447bfa1b",
+   "final_sha": "01668a80288fbaf4"
+  }
+ ]
+}
