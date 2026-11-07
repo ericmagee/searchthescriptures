@@ -1,0 +1,25 @@
+{
+ "source": "B5 (W3 feedback rulings item 5)",
+ "live": "d5375c6e-564f-4043-bead-6a27c15adf82",
+ "nodes": [
+  {
+   "name": "Citation Scan",
+   "file": "Citation_Scan.js",
+   "base_sha": "3b45f2cf11876b12",
+   "final_sha": "b69935590e68fb27",
+   "edits": [
+    "helper",
+    "alt"
+   ]
+  },
+  {
+   "name": "Build Save Body",
+   "file": "Build_Save_Body.js",
+   "base_sha": "e1bc41bbefd9579e",
+   "final_sha": "15819950b76ad68e",
+   "edits": [
+    "quote"
+   ]
+  }
+ ]
+}
