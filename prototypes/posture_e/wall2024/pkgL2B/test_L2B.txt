@@ -1,0 +1,19 @@
+OK 33218 Quote Report: tag count 171 -> 171
+OK 33222 Quote Report: tag count 152 -> 152
+OK 33249 Quote Report: tag count 149 -> 149
+OK 33261 Quote Report: tag count 237 -> 237
+OK 33276 Quote Report: tag count 0 -> 0
+OK 33289 Quote Report: tag count 0 -> 0
+OK 33299 Quote Report: tag count 152 -> 152
+OK 33311 Quote Report: tag count 0 -> 0
+OK 33322 Quote Report: tag count 0 -> 0
+OK 33345 Quote Report: tag count 141 -> 141
+OK 33371 Quote Report: tag count 146 -> 146
+Quote Report [L2] tags changed: 0
+other nodes changed outputs: 5
+DIFF 33218 Citation Scan @5224 base: kind":"latin"}],"verses":["Matthew 1:3","Matthew 1:5"],"apoc":[]},{"side":"CHALLENGER","round":"DR1","at":2341,"seg":", and Genesis 4:25 with Matthew 1:20","words":[],"verses":["Genesis 4:25","Matthew 1:20","Matthew 1:3","Matthew 1:5","Matt || patched: kind":"latin"}],"verses":["Matthew 1:3","Matthew 1:5"],"apoc":[]},{"side":"CHALLENGER","round":"DR1","at":2341,"seg":", *ek* with the mother","words":[{"w":"ek","kind":"latin"}],"verses":["Matthew 1:3","Matthew 1:5","Genesis 4:25","Matthew 1:20","Matthew 1:16"],"apoc":[]},{"side"
+DIFF 33249 Citation Scan @6550 base: a","kind":"latin"}],"verses":["Acts 2:30","Hebrews 7:5"],"apoc":[]},{"side":"CHALLENGER","round":"DR1","at":4866,"seg":", put that fruit in a father's loins.","words":[],"verses":["Acts 2:30","Hebrews 7:5"],"apoc":[]},{"side":"CHALLENGER"," || patched: a","kind":"latin"}],"verses":["Acts 2:30","Hebrews 7:5"],"apoc":[]},{"side":"CHALLENGER","round":"DR1","at":4866,"seg":"** D5 asks the \"fruit of his loins, according to the flesh\" to reach Christ through a body that holds no man of David's line. Acts 2:30 and Hebrews 7:5 [L1, L
+DIFF 33261 Citation Scan @7871 base: uel 7:12","Psalms 132:11","Hebrews 7:14","Numbers 1:18"],"apoc":[]},{"side":"CHALLENGER","round":"DR1","at":2488,"seg":"). Hebrews 7:10","words":[],"verses":["Hebrews 7:10","Acts 2:30"],"apoc":[]},{"side":"CHALLENGER","round":"DR1","at":371 || patched: uel 7:12","Psalms 132:11","Hebrews 7:14","Numbers 1:18"],"apoc":[]},{"side":"CHALLENGER","round":"DR1","at":2488,"seg":"puts that seed in the loins (*osphys*, procreative power","words":[{"w":"osphys","kind":"latin"}],"verses":["Acts 2:30","Hebrews 7:10"],"apoc":[]},{"side":"CHAL
+DIFF 33299 Citation Scan @30263 base: ,"Matthew 1:20","1 John 5:1","Romans 1:4","Matthew 1:1"],"apoc":[]},{"side":"CHALLENGER","round":"DR3","at":1385,"seg":") beside the spirit order.","words":[],"verses":["Romans 1:3","Romans 1:4"],"apoc":[]},{"side":"CHALLENGER","round":"DR3 || patched: ,"Matthew 1:20","1 John 5:1","Romans 1:4","Matthew 1:1"],"apoc":[]},{"side":"CHALLENGER","round":"DR3","at":1385,"seg":"sets the flesh order (*sperma*, *sarx*","words":[{"w":"sperma","kind":"latin"},{"w":"sarx","kind":"latin"}],"verses":["Romans 1:3","Romans 1:4"],"apoc":[]},{"si
+DIFF 33345 Citation Scan @4006 base: 2","Acts 2:30","Romans 1:3","Galatians 4:4","Luke 1:27"],"apoc":[]},{"side":"DEFENDER","round":"CR1","at":5713,"seg":", and Matthew 1:2's use of the same verb for fathers","words":[],"verses":["Matthew 1:2","Matthew 1:18","Matthew 1:20"],"a || patched: 2","Acts 2:30","Romans 1:3","Galatians 4:4","Luke 1:27"],"apoc":[]},{"side":"DEFENDER","round":"CR1","at":5713,"seg":", with *ek* (out of, source) and *gennēthen* (begotten)","words":[{"w":"ek","kind":"latin"},{"w":"gennēthen","kind":"latin"}],"verses":["Matthew 1:18","Matthew 1:
+TOTAL 481 OK, 0 FAIL

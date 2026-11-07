@@ -1,0 +1,557 @@
+{
+ "source": "W2 pkgL2B, W3 2876 item 5 (begat back-reference [L2])",
+ "live": "24eb8692-b18c-43e6-a66f-048a29464127",
+ "base": "/mnt/project-files/wall2024/fetchback_live_s44.json",
+ "nodes": [
+  {
+   "name": "C1 Extract",
+   "file": "C1_Extract.js",
+   "base_sha": "a2c83c3f7fb4",
+   "final_sha": "c9da5678fae1",
+   "bytes": [
+    41646,
+    42121
+   ]
+  },
+  {
+   "name": "D2 Build",
+   "file": "D2_Build.js",
+   "base_sha": "52219ebf0b04",
+   "final_sha": "a6f761a63dc3",
+   "bytes": [
+    45421,
+    45896
+   ]
+  },
+  {
+   "name": "D2 Extract",
+   "file": "D2_Extract.js",
+   "base_sha": "2b6c166d8fa7",
+   "final_sha": "932e5692d152",
+   "bytes": [
+    41895,
+    42370
+   ]
+  },
+  {
+   "name": "C2 Build",
+   "file": "C2_Build.js",
+   "base_sha": "3e82bd54672f",
+   "final_sha": "28ded621395c",
+   "bytes": [
+    47327,
+    47802
+   ]
+  },
+  {
+   "name": "C2 Extract",
+   "file": "C2_Extract.js",
+   "base_sha": "644dda57065b",
+   "final_sha": "7fe336986349",
+   "bytes": [
+    41729,
+    42204
+   ]
+  },
+  {
+   "name": "D3 Build",
+   "file": "D3_Build.js",
+   "base_sha": "32a013929fdc",
+   "final_sha": "5979c5c39cce",
+   "bytes": [
+    62179,
+    62654
+   ]
+  },
+  {
+   "name": "D3 Extract",
+   "file": "D3_Extract.js",
+   "base_sha": "dc648c665094",
+   "final_sha": "b7c98ccbdd97",
+   "bytes": [
+    44279,
+    44754
+   ]
+  },
+  {
+   "name": "C3 Build",
+   "file": "C3_Build.js",
+   "base_sha": "635a68a3be30",
+   "final_sha": "3f09fb82c775",
+   "bytes": [
+    63887,
+    64362
+   ]
+  },
+  {
+   "name": "C3 Extract",
+   "file": "C3_Extract.js",
+   "base_sha": "0ab52aa925af",
+   "final_sha": "8b2256965471",
+   "bytes": [
+    48707,
+    49182
+   ]
+  },
+  {
+   "name": "Extract Independent Verdict",
+   "file": "Extract_Independent_Verdict.js",
+   "base_sha": "ac8c201f4dac",
+   "final_sha": "31056c83aae7",
+   "bytes": [
+    292070,
+    292545
+   ]
+  },
+  {
+   "name": "Panel Payloads",
+   "file": "Panel_Payloads.js",
+   "base_sha": "e1873cc4002f",
+   "final_sha": "2b9626793762",
+   "bytes": [
+    278979,
+    279454
+   ]
+  },
+  {
+   "name": "Citation Scan",
+   "file": "Citation_Scan.js",
+   "base_sha": "b69935590e68",
+   "final_sha": "4de2e2a8c54b",
+   "bytes": [
+    54979,
+    55454
+   ]
+  },
+  {
+   "name": "Quote Report",
+   "file": "Quote_Report.js",
+   "base_sha": "f44da16a1166",
+   "final_sha": "bdac87296574",
+   "bytes": [
+    34927,
+    35402
+   ]
+  },
+  {
+   "name": "Cure Build",
+   "file": "Cure_Build.js",
+   "base_sha": "cffe6edd87b9",
+   "final_sha": "199d006c912d",
+   "bytes": [
+    352832,
+    353307
+   ]
+  },
+  {
+   "name": "Cure Normalize",
+   "file": "Cure_Normalize.js",
+   "base_sha": "ebecf524d69f",
+   "final_sha": "d413455d1c96",
+   "bytes": [
+    351920,
+    352395
+   ]
+  },
+  {
+   "name": "Cure Check",
+   "file": "Cure_Check.js",
+   "base_sha": "f06cffe3f5b5",
+   "final_sha": "96368ea6228b",
+   "bytes": [
+    354706,
+    355181
+   ]
+  },
+  {
+   "name": "Panel Cure Build 1",
+   "file": "Panel_Cure_Build_1.js",
+   "base_sha": "282e7b91cd97",
+   "final_sha": "afc11bba91be",
+   "bytes": [
+    372450,
+    372925
+   ]
+  },
+  {
+   "name": "Panel Cure Normalize 1",
+   "file": "Panel_Cure_Normalize_1.js",
+   "base_sha": "5d656d5a1d00",
+   "final_sha": "fd68989d00ad",
+   "bytes": [
+    351936,
+    352411
+   ]
+  },
+  {
+   "name": "Panel Cure Build 2",
+   "file": "Panel_Cure_Build_2.js",
+   "base_sha": "65233543ffbf",
+   "final_sha": "8329fb53e0bc",
+   "bytes": [
+    372450,
+    372925
+   ]
+  },
+  {
+   "name": "Panel Cure Normalize 2",
+   "file": "Panel_Cure_Normalize_2.js",
+   "base_sha": "6c4a42a8d752",
+   "final_sha": "8fa16440950b",
+   "bytes": [
+    351936,
+    352411
+   ]
+  },
+  {
+   "name": "Panel Cure Build 3",
+   "file": "Panel_Cure_Build_3.js",
+   "base_sha": "f66788f32caf",
+   "final_sha": "d0b2eaf88a52",
+   "bytes": [
+    372450,
+    372925
+   ]
+  },
+  {
+   "name": "Panel Cure Normalize 3",
+   "file": "Panel_Cure_Normalize_3.js",
+   "base_sha": "2bfb7d8cdf4c",
+   "final_sha": "bd904017b9fb",
+   "bytes": [
+    351936,
+    352411
+   ]
+  },
+  {
+   "name": "Panel Cure Check",
+   "file": "Panel_Cure_Check.js",
+   "base_sha": "c8fa2477d3bb",
+   "final_sha": "9ed71da3e2c5",
+   "bytes": [
+    356451,
+    356926
+   ]
+  },
+  {
+   "name": "Alternate Build",
+   "file": "Alternate_Build.js",
+   "base_sha": "1f2af3aa385e",
+   "final_sha": "e8c43e0cd18d",
+   "bytes": [
+    381308,
+    381783
+   ]
+  },
+  {
+   "name": "Alternate Payloads",
+   "file": "Alternate_Payloads.js",
+   "base_sha": "57a39ec9c186",
+   "final_sha": "928e3b416484",
+   "bytes": [
+    269331,
+    269806
+   ]
+  },
+  {
+   "name": "Alternate Cure Build",
+   "file": "Alternate_Cure_Build.js",
+   "base_sha": "7d5fd831a95b",
+   "final_sha": "dc290e1d7255",
+   "bytes": [
+    371731,
+    372206
+   ]
+  },
+  {
+   "name": "Alternate Cure Normalize",
+   "file": "Alternate_Cure_Normalize.js",
+   "base_sha": "ae2ada314859",
+   "final_sha": "5311f9aaed45",
+   "bytes": [
+    351940,
+    352415
+   ]
+  },
+  {
+   "name": "Alternate Merge Seat",
+   "file": "Alternate_Merge_Seat.js",
+   "base_sha": "fc61c6e4faaf",
+   "final_sha": "38974ce39665",
+   "bytes": [
+    417173,
+    417648
+   ]
+  },
+  {
+   "name": "D4 Build",
+   "file": "D4_Build.js",
+   "base_sha": "032b618acd63",
+   "final_sha": "a048f8583f40",
+   "bytes": [
+    102951,
+    103426
+   ]
+  },
+  {
+   "name": "D4 Extract",
+   "file": "D4_Extract.js",
+   "base_sha": "745d25fb24df",
+   "final_sha": "1d5e47a5fd62",
+   "bytes": [
+    63495,
+    63970
+   ]
+  },
+  {
+   "name": "C4 Build",
+   "file": "C4_Build.js",
+   "base_sha": "207220c50d77",
+   "final_sha": "87b7aa5fb39d",
+   "bytes": [
+    88211,
+    88686
+   ]
+  },
+  {
+   "name": "D2 Lexicon Plan",
+   "file": "D2_Lexicon_Plan.js",
+   "base_sha": "0fb4fc6bd509",
+   "final_sha": "bf649f8ab0ef",
+   "bytes": [
+    26126,
+    26601
+   ]
+  },
+  {
+   "name": "C2 Lexicon Plan",
+   "file": "C2_Lexicon_Plan.js",
+   "base_sha": "9aac65e14e54",
+   "final_sha": "5ecd7b1e4bee",
+   "bytes": [
+    26126,
+    26601
+   ]
+  },
+  {
+   "name": "D3 Lexicon Plan",
+   "file": "D3_Lexicon_Plan.js",
+   "base_sha": "774a3d631ebc",
+   "final_sha": "0650b216d6c0",
+   "bytes": [
+    26126,
+    26601
+   ]
+  },
+  {
+   "name": "C3 Lexicon Plan",
+   "file": "C3_Lexicon_Plan.js",
+   "base_sha": "6ec5c6b3e8d3",
+   "final_sha": "9274bf2936d3",
+   "bytes": [
+    26126,
+    26601
+   ]
+  },
+  {
+   "name": "D4 Lexicon Plan",
+   "file": "D4_Lexicon_Plan.js",
+   "base_sha": "2ac6cc0d9780",
+   "final_sha": "69e65cb463d7",
+   "bytes": [
+    26126,
+    26601
+   ]
+  },
+  {
+   "name": "C4 Lexicon Plan",
+   "file": "C4_Lexicon_Plan.js",
+   "base_sha": "80187d566275",
+   "final_sha": "f28ecbd36629",
+   "bytes": [
+    26126,
+    26601
+   ]
+  },
+  {
+   "name": "L2 Lexicon Plan",
+   "file": "L2_Lexicon_Plan.js",
+   "base_sha": "5db627ce20d0",
+   "final_sha": "3e25b755d402",
+   "bytes": [
+    26260,
+    26735
+   ]
+  },
+  {
+   "name": "L2 Count Plan",
+   "file": "L2_Count_Plan.js",
+   "base_sha": "6822c3b02be2",
+   "final_sha": "a5e8287918a1",
+   "bytes": [
+    37408,
+    37883
+   ]
+  },
+  {
+   "name": "Send Back Build",
+   "file": "Send_Back_Build.js",
+   "base_sha": "5ad0aacff38d",
+   "final_sha": "7fe916b346d1",
+   "bytes": [
+    127754,
+    128229
+   ]
+  },
+  {
+   "name": "Send Back Record",
+   "file": "Send_Back_Record.js",
+   "base_sha": "5837536ad076",
+   "final_sha": "b26830b4810d",
+   "bytes": [
+    142275,
+    142750
+   ]
+  },
+  {
+   "name": "Gate Build",
+   "file": "Gate_Build.js",
+   "base_sha": "adf55608baa0",
+   "final_sha": "b92524438954",
+   "bytes": [
+    411621,
+    412096
+   ]
+  },
+  {
+   "name": "Gate Record",
+   "file": "Gate_Record.js",
+   "base_sha": "01f9d4c698a7",
+   "final_sha": "3cf3b8ede729",
+   "bytes": [
+    409254,
+    409729
+   ]
+  },
+  {
+   "name": "Alt Send Back Build",
+   "file": "Alt_Send_Back_Build.js",
+   "base_sha": "5dfb0693233c",
+   "final_sha": "3d098b92660a",
+   "bytes": [
+    127916,
+    128391
+   ]
+  },
+  {
+   "name": "Alt Send Back Record",
+   "file": "Alt_Send_Back_Record.js",
+   "base_sha": "58c42511214d",
+   "final_sha": "9ed2dfbec148",
+   "bytes": [
+    142247,
+    142722
+   ]
+  },
+  {
+   "name": "Alt Gate Build",
+   "file": "Alt_Gate_Build.js",
+   "base_sha": "94cb6a03bd3a",
+   "final_sha": "53073c665eb6",
+   "bytes": [
+    411626,
+    412101
+   ]
+  },
+  {
+   "name": "Alt Gate Record",
+   "file": "Alt_Gate_Record.js",
+   "base_sha": "32b576cf766a",
+   "final_sha": "dbb5125a7713",
+   "bytes": [
+    409263,
+    409738
+   ]
+  },
+  {
+   "name": "Alternate Merge",
+   "file": "Alternate_Merge.js",
+   "base_sha": "80f384d62da9",
+   "final_sha": "22ec01a8e0c4",
+   "bytes": [
+    419943,
+    420418
+   ]
+  },
+  {
+   "name": "C3G Extract",
+   "file": "C3G_Extract.js",
+   "base_sha": "47f8a9343f66",
+   "final_sha": "f8758d28df00",
+   "bytes": [
+    50194,
+    50669
+   ]
+  },
+  {
+   "name": "C1B Extract",
+   "file": "C1B_Extract.js",
+   "base_sha": "76c95f82d812",
+   "final_sha": "888f40beb64d",
+   "bytes": [
+    59006,
+    59481
+   ]
+  },
+  {
+   "name": "D2B Extract",
+   "file": "D2B_Extract.js",
+   "base_sha": "aec1ecac446d",
+   "final_sha": "477c9c19efd7",
+   "bytes": [
+    59372,
+    59847
+   ]
+  },
+  {
+   "name": "C2B Extract",
+   "file": "C2B_Extract.js",
+   "base_sha": "4ffb074f694d",
+   "final_sha": "81fe37726076",
+   "bytes": [
+    59331,
+    59806
+   ]
+  },
+  {
+   "name": "D3B Extract",
+   "file": "D3B_Extract.js",
+   "base_sha": "a6774b500b80",
+   "final_sha": "5721a731006c",
+   "bytes": [
+    61998,
+    62473
+   ]
+  },
+  {
+   "name": "C3B Extract",
+   "file": "C3B_Extract.js",
+   "base_sha": "f988c6851280",
+   "final_sha": "ddaebbd916e4",
+   "bytes": [
+    66762,
+    67237
+   ]
+  },
+  {
+   "name": "D4B Extract",
+   "file": "D4B_Extract.js",
+   "base_sha": "6d6deef12860",
+   "final_sha": "fd5e82cdef0b",
+   "bytes": [
+    81456,
+    81931
+   ]
+  }
+ ]
+}
