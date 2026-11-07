@@ -1,0 +1,50 @@
+{
+ "source": "W2 pkgEAW, W3 2844 (33311 E-ANS \"says only\" pushes)",
+ "live": "f0104a40-b783-4a32-9f5a-42551081d11e",
+ "nodes": [
+  {
+   "name": "Judge Enforcer Build",
+   "file": "Judge_Enforcer_Build.js",
+   "base": "pkgEPS/patched_live",
+   "base_sha": "0e3415197ee2",
+   "final_sha": "01ad430535a0",
+   "bytes": [
+    52547,
+    55626
+   ]
+  },
+  {
+   "name": "Alt Judge Enforcer Build",
+   "file": "Alt_Judge_Enforcer_Build.js",
+   "base": "pkgEPS/patched_live",
+   "base_sha": "22b5648ccf79",
+   "final_sha": "1f9e6db2d525",
+   "bytes": [
+    52468,
+    55547
+   ]
+  },
+  {
+   "name": "Judge Enforcer Record",
+   "file": "Judge_Enforcer_Record.js",
+   "base": "pkgETC/patched_on_pkgEPS_patched_live",
+   "base_sha": "03a6b6ba76ff",
+   "final_sha": "9254515a0683",
+   "bytes": [
+    9810,
+    11794
+   ]
+  },
+  {
+   "name": "Alt Judge Enforcer Record",
+   "file": "Alt_Judge_Enforcer_Record.js",
+   "base": "pkgETC/patched_on_pkgEPS_patched_live",
+   "base_sha": "80e4ecc1447b",
+   "final_sha": "d369ad11aeac",
+   "bytes": [
+    9813,
+    11797
+   ]
+  }
+ ]
+}

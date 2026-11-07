@@ -1,0 +1,140 @@
+OK   F 13140 block found for Luke 1:34 (4 lines)
+OK   F 13140 HELD: the push says the answer is only "I grant it", but the answer under the pressed verse goes on with [L2], [L1], [L4], 61 more words
+OK   F 13141 block found for Luke 1:34 (4 lines)
+OK   F 13141 HELD: the push says the answer is only "I grant it", but the answer under the pressed verse goes on with [L2], [L1], [L4], 61 more words
+OK   F 13142 block found for Luke 1:35 (3 lines)
+OK   F 13142 still sent
+OK   F 13143 block found for Luke 1:32 (6 lines)
+OK   F 13143 HELD: the push says the answer is only "I grant the order", but the answer under the pressed verse goes on with [L2], [L3], [L4], 140 more words
+OK   F 13144 block found for Luke 1:32 (6 lines)
+OK   F 13144 HELD: the push says the answer is only "I grant the order", but the answer under the pressed verse goes on with [L2], [L3], [L4], 140 more words
+OK   F 13145 block found for Luke 1:32 (6 lines)
+OK   F 13145 HELD: the push says the answer is only "I grant the order", but the answer under the pressed verse goes on with [L2], [L3], [L4], 140 more words
+OK   F 13146 block found for Acts 1:8 (4 lines)
+OK   F 13146 HELD: the push says the answer is only "I grant it", but the answer under the pressed verse goes on with [L2], [L4], 85 more words
+OK   F 13147 block found for Acts 1:8 (4 lines)
+OK   F 13147 HELD: the push says the answer is only "I grant it", but the answer under the pressed verse goes on with [L2], [L4], 85 more words
+OK   F 1 John 4:7 found in the paragraph that starts with 1 John 5:1
+OK   F block refused when the judge-quoted answer is not in it
+OK   F no block for a verse the round does not answer
+OK   F plain-bullet form (33218): the Matthew 1:24 block stops before the Matthew 1:25 bullet
+OK   N1 a bare "I grant it." with nothing after it is still sent
+OK   N2 "I grant it." plus 3 words and no layer is still sent
+OK   N3 a reason without "only" is still sent
+OK   F bullet form (33345): Acts 5:15 found on the Luke 9:34 bullet, one line, stops before the next bullet
+OK   F bullet form: Acts 1:8 block stops at the next "- **" bullet
+OK   B [stack (EPS live + ETC)] 33218 Judge Enforcer Build: calls 4 -> 5, not checked 0 -> 0; E-ANS items 119, full answer added for 35; ids equal apart from eaw_blk; each ITEM text equal apart from its IN FULL line; rule sentence present
+OK   R [stack (EPS live + ETC)] 33218 Judge Enforcer Record: 221 rows, 2 HELD by pkgEAW, nothing else changed
+OK   B [stack (EPS live + ETC)] 33218 Alt Judge Enforcer Build: calls 1 -> 1, not checked 0 -> 0; E-ANS items 0, full answer added for 0; ids equal apart from eaw_blk; each ITEM text equal apart from its IN FULL line; rule sentence present
+OK   R [stack (EPS live + ETC)] 33218 Alt Judge Enforcer Record: 0 rows, 0 HELD by pkgEAW, nothing else changed
+OK   B [stack (EPS live + ETC)] 33222 Judge Enforcer Build: calls 5 -> 6, not checked 0 -> 0; E-ANS items 152, full answer added for 13; ids equal apart from eaw_blk; each ITEM text equal apart from its IN FULL line; rule sentence present
+OK   R [stack (EPS live + ETC)] 33222 Judge Enforcer Record: 258 rows, 0 HELD by pkgEAW, nothing else changed
+OK   B [stack (EPS live + ETC)] 33222 Alt Judge Enforcer Build: calls 2 -> 3, not checked 0 -> 0; E-ANS items 52, full answer added for 8; ids equal apart from eaw_blk; each ITEM text equal apart from its IN FULL line; rule sentence present
+OK   R [stack (EPS live + ETC)] 33222 Alt Judge Enforcer Record: 77 rows, 0 HELD by pkgEAW, nothing else changed
+OK   B [stack (EPS live + ETC)] 33249 Judge Enforcer Build: calls 5 -> 5, not checked 0 -> 0; E-ANS items 126, full answer added for 28; ids equal apart from eaw_blk; each ITEM text equal apart from its IN FULL line; rule sentence present
+OK   R [stack (EPS live + ETC)] 33249 Judge Enforcer Record: 211 rows, 8 HELD by pkgEAW, nothing else changed
+OK   B [stack (EPS live + ETC)] 33249 Alt Judge Enforcer Build: calls 3 -> 3, not checked 0 -> 0; E-ANS items 61, full answer added for 0; ids equal apart from eaw_blk; each ITEM text equal apart from its IN FULL line; rule sentence present
+OK   R [stack (EPS live + ETC)] 33249 Alt Judge Enforcer Record: 90 rows, 0 HELD by pkgEAW, nothing else changed
+OK   B [stack (EPS live + ETC)] 33261 Judge Enforcer Build: calls 6 -> 7, not checked 0 -> 0; E-ANS items 148, full answer added for 36; ids equal apart from eaw_blk; each ITEM text equal apart from its IN FULL line; rule sentence present
+OK   R [stack (EPS live + ETC)] 33261 Judge Enforcer Record: 257 rows, 0 HELD by pkgEAW, nothing else changed
+OK   B [stack (EPS live + ETC)] 33261 Alt Judge Enforcer Build: calls 2 -> 3, not checked 0 -> 0; E-ANS items 55, full answer added for 16; ids equal apart from eaw_blk; each ITEM text equal apart from its IN FULL line; rule sentence present
+OK   R [stack (EPS live + ETC)] 33261 Alt Judge Enforcer Record: 80 rows, 0 HELD by pkgEAW, nothing else changed
+OK   B [stack (EPS live + ETC)] 33276 Judge Enforcer Build: calls 1 -> 1, not checked 0 -> 0; E-ANS items 0, full answer added for 0; ids equal apart from eaw_blk; each ITEM text equal apart from its IN FULL line; rule sentence present
+OK   R [stack (EPS live + ETC)] 33276 Judge Enforcer Record: 0 rows, 0 HELD by pkgEAW, nothing else changed
+OK   B [stack (EPS live + ETC)] 33276 Alt Judge Enforcer Build: calls 1 -> 1, not checked 0 -> 0; E-ANS items 0, full answer added for 0; ids equal apart from eaw_blk; each ITEM text equal apart from its IN FULL line; rule sentence present
+OK   R [stack (EPS live + ETC)] 33276 Alt Judge Enforcer Record: 0 rows, 0 HELD by pkgEAW, nothing else changed
+OK   B [stack (EPS live + ETC)] 33289 Judge Enforcer Build: calls 1 -> 1, not checked 0 -> 0; E-ANS items 0, full answer added for 0; ids equal apart from eaw_blk; each ITEM text equal apart from its IN FULL line; rule sentence present
+OK   R [stack (EPS live + ETC)] 33289 Judge Enforcer Record: 0 rows, 0 HELD by pkgEAW, nothing else changed
+OK   B [stack (EPS live + ETC)] 33289 Alt Judge Enforcer Build: calls 1 -> 1, not checked 0 -> 0; E-ANS items 0, full answer added for 0; ids equal apart from eaw_blk; each ITEM text equal apart from its IN FULL line; rule sentence present
+OK   R [stack (EPS live + ETC)] 33289 Alt Judge Enforcer Record: 0 rows, 0 HELD by pkgEAW, nothing else changed
+OK   B [stack (EPS live + ETC)] 33299 Judge Enforcer Build: calls 4 -> 4, not checked 0 -> 0; E-ANS items 107, full answer added for 16; ids equal apart from eaw_blk; each ITEM text equal apart from its IN FULL line; rule sentence present
+OK   R [stack (EPS live + ETC)] 33299 Judge Enforcer Record: 204 rows, 1 HELD by pkgEAW, nothing else changed
+OK   B [stack (EPS live + ETC)] 33299 Alt Judge Enforcer Build: calls 2 -> 2, not checked 0 -> 0; E-ANS items 51, full answer added for 8; ids equal apart from eaw_blk; each ITEM text equal apart from its IN FULL line; rule sentence present
+OK   R [stack (EPS live + ETC)] 33299 Alt Judge Enforcer Record: 76 rows, 0 HELD by pkgEAW, nothing else changed
+OK   B [stack (EPS live + ETC)] 33311 Judge Enforcer Build: calls 1 -> 1, not checked 0 -> 0; E-ANS items 0, full answer added for 0; ids equal apart from eaw_blk; each ITEM text equal apart from its IN FULL line; rule sentence present
+OK   R [stack (EPS live + ETC)] 33311 Judge Enforcer Record: 0 rows, 0 HELD by pkgEAW, nothing else changed
+OK   B [stack (EPS live + ETC)] 33311 Alt Judge Enforcer Build: calls 1 -> 1, not checked 0 -> 0; E-ANS items 0, full answer added for 0; ids equal apart from eaw_blk; each ITEM text equal apart from its IN FULL line; rule sentence present
+OK   R [stack (EPS live + ETC)] 33311 Alt Judge Enforcer Record: 0 rows, 0 HELD by pkgEAW, nothing else changed
+OK   B [stack (EPS live + ETC)] 33322 Judge Enforcer Build: calls 1 -> 1, not checked 0 -> 0; E-ANS items 0, full answer added for 0; ids equal apart from eaw_blk; each ITEM text equal apart from its IN FULL line; rule sentence present
+OK   R [stack (EPS live + ETC)] 33322 Judge Enforcer Record: 0 rows, 0 HELD by pkgEAW, nothing else changed
+OK   B [stack (EPS live + ETC)] 33322 Alt Judge Enforcer Build: calls 1 -> 1, not checked 0 -> 0; E-ANS items 0, full answer added for 0; ids equal apart from eaw_blk; each ITEM text equal apart from its IN FULL line; rule sentence present
+OK   R [stack (EPS live + ETC)] 33322 Alt Judge Enforcer Record: 0 rows, 0 HELD by pkgEAW, nothing else changed
+OK   B [stack (EPS live + ETC)] 33345 Judge Enforcer Build: calls 4 -> 5, not checked 0 -> 0; E-ANS items 138, full answer added for 48; ids equal apart from eaw_blk; each ITEM text equal apart from its IN FULL line; rule sentence present
+OK   R [stack (EPS live + ETC)] 33345 Judge Enforcer Record: 241 rows, 0 HELD by pkgEAW, nothing else changed
+OK   B [stack (EPS live + ETC)] 33345 Alt Judge Enforcer Build: calls 3 -> 3, not checked 0 -> 0; E-ANS items 71, full answer added for 24; ids equal apart from eaw_blk; each ITEM text equal apart from its IN FULL line; rule sentence present
+OK   R [stack (EPS live + ETC)] 33345 Alt Judge Enforcer Record: 96 rows, 0 HELD by pkgEAW, nothing else changed
+OK   B [live s40 only] 33218 Judge Enforcer Build: calls 4 -> 5, not checked 0 -> 0; E-ANS items 119, full answer added for 35; ids equal apart from eaw_blk; each ITEM text equal apart from its IN FULL line; rule sentence present
+OK   R [live s40 only] 33218 Judge Enforcer Record: 221 rows, 2 HELD by pkgEAW, nothing else changed
+OK   B [live s40 only] 33218 Alt Judge Enforcer Build: calls 1 -> 1, not checked 0 -> 0; E-ANS items 0, full answer added for 0; ids equal apart from eaw_blk; each ITEM text equal apart from its IN FULL line; rule sentence present
+OK   R [live s40 only] 33218 Alt Judge Enforcer Record: 0 rows, 0 HELD by pkgEAW, nothing else changed
+OK   B [live s40 only] 33222 Judge Enforcer Build: calls 5 -> 6, not checked 0 -> 0; E-ANS items 152, full answer added for 13; ids equal apart from eaw_blk; each ITEM text equal apart from its IN FULL line; rule sentence present
+OK   R [live s40 only] 33222 Judge Enforcer Record: 258 rows, 0 HELD by pkgEAW, nothing else changed
+OK   B [live s40 only] 33222 Alt Judge Enforcer Build: calls 2 -> 3, not checked 0 -> 0; E-ANS items 52, full answer added for 8; ids equal apart from eaw_blk; each ITEM text equal apart from its IN FULL line; rule sentence present
+OK   R [live s40 only] 33222 Alt Judge Enforcer Record: 77 rows, 0 HELD by pkgEAW, nothing else changed
+OK   B [live s40 only] 33249 Judge Enforcer Build: calls 5 -> 5, not checked 0 -> 0; E-ANS items 126, full answer added for 28; ids equal apart from eaw_blk; each ITEM text equal apart from its IN FULL line; rule sentence present
+OK   R [live s40 only] 33249 Judge Enforcer Record: 211 rows, 8 HELD by pkgEAW, nothing else changed
+OK   B [live s40 only] 33249 Alt Judge Enforcer Build: calls 3 -> 3, not checked 0 -> 0; E-ANS items 61, full answer added for 0; ids equal apart from eaw_blk; each ITEM text equal apart from its IN FULL line; rule sentence present
+OK   R [live s40 only] 33249 Alt Judge Enforcer Record: 90 rows, 0 HELD by pkgEAW, nothing else changed
+OK   B [live s40 only] 33261 Judge Enforcer Build: calls 6 -> 7, not checked 0 -> 0; E-ANS items 148, full answer added for 36; ids equal apart from eaw_blk; each ITEM text equal apart from its IN FULL line; rule sentence present
+OK   R [live s40 only] 33261 Judge Enforcer Record: 257 rows, 0 HELD by pkgEAW, nothing else changed
+OK   B [live s40 only] 33261 Alt Judge Enforcer Build: calls 2 -> 3, not checked 0 -> 0; E-ANS items 55, full answer added for 16; ids equal apart from eaw_blk; each ITEM text equal apart from its IN FULL line; rule sentence present
+OK   R [live s40 only] 33261 Alt Judge Enforcer Record: 80 rows, 0 HELD by pkgEAW, nothing else changed
+OK   B [live s40 only] 33276 Judge Enforcer Build: calls 1 -> 1, not checked 0 -> 0; E-ANS items 0, full answer added for 0; ids equal apart from eaw_blk; each ITEM text equal apart from its IN FULL line; rule sentence present
+OK   R [live s40 only] 33276 Judge Enforcer Record: 0 rows, 0 HELD by pkgEAW, nothing else changed
+OK   B [live s40 only] 33276 Alt Judge Enforcer Build: calls 1 -> 1, not checked 0 -> 0; E-ANS items 0, full answer added for 0; ids equal apart from eaw_blk; each ITEM text equal apart from its IN FULL line; rule sentence present
+OK   R [live s40 only] 33276 Alt Judge Enforcer Record: 0 rows, 0 HELD by pkgEAW, nothing else changed
+OK   B [live s40 only] 33289 Judge Enforcer Build: calls 1 -> 1, not checked 0 -> 0; E-ANS items 0, full answer added for 0; ids equal apart from eaw_blk; each ITEM text equal apart from its IN FULL line; rule sentence present
+OK   R [live s40 only] 33289 Judge Enforcer Record: 0 rows, 0 HELD by pkgEAW, nothing else changed
+OK   B [live s40 only] 33289 Alt Judge Enforcer Build: calls 1 -> 1, not checked 0 -> 0; E-ANS items 0, full answer added for 0; ids equal apart from eaw_blk; each ITEM text equal apart from its IN FULL line; rule sentence present
+OK   R [live s40 only] 33289 Alt Judge Enforcer Record: 0 rows, 0 HELD by pkgEAW, nothing else changed
+OK   B [live s40 only] 33299 Judge Enforcer Build: calls 4 -> 4, not checked 0 -> 0; E-ANS items 107, full answer added for 16; ids equal apart from eaw_blk; each ITEM text equal apart from its IN FULL line; rule sentence present
+OK   R [live s40 only] 33299 Judge Enforcer Record: 204 rows, 1 HELD by pkgEAW, nothing else changed
+OK   B [live s40 only] 33299 Alt Judge Enforcer Build: calls 2 -> 2, not checked 0 -> 0; E-ANS items 51, full answer added for 8; ids equal apart from eaw_blk; each ITEM text equal apart from its IN FULL line; rule sentence present
+OK   R [live s40 only] 33299 Alt Judge Enforcer Record: 76 rows, 0 HELD by pkgEAW, nothing else changed
+OK   B [live s40 only] 33311 Judge Enforcer Build: calls 1 -> 1, not checked 0 -> 0; E-ANS items 0, full answer added for 0; ids equal apart from eaw_blk; each ITEM text equal apart from its IN FULL line; rule sentence present
+OK   R [live s40 only] 33311 Judge Enforcer Record: 0 rows, 0 HELD by pkgEAW, nothing else changed
+OK   B [live s40 only] 33311 Alt Judge Enforcer Build: calls 1 -> 1, not checked 0 -> 0; E-ANS items 0, full answer added for 0; ids equal apart from eaw_blk; each ITEM text equal apart from its IN FULL line; rule sentence present
+OK   R [live s40 only] 33311 Alt Judge Enforcer Record: 0 rows, 0 HELD by pkgEAW, nothing else changed
+OK   B [live s40 only] 33322 Judge Enforcer Build: calls 1 -> 1, not checked 0 -> 0; E-ANS items 0, full answer added for 0; ids equal apart from eaw_blk; each ITEM text equal apart from its IN FULL line; rule sentence present
+OK   R [live s40 only] 33322 Judge Enforcer Record: 0 rows, 0 HELD by pkgEAW, nothing else changed
+OK   B [live s40 only] 33322 Alt Judge Enforcer Build: calls 1 -> 1, not checked 0 -> 0; E-ANS items 0, full answer added for 0; ids equal apart from eaw_blk; each ITEM text equal apart from its IN FULL line; rule sentence present
+OK   R [live s40 only] 33322 Alt Judge Enforcer Record: 0 rows, 0 HELD by pkgEAW, nothing else changed
+OK   B [live s40 only] 33345 Judge Enforcer Build: calls 4 -> 5, not checked 0 -> 0; E-ANS items 138, full answer added for 48; ids equal apart from eaw_blk; each ITEM text equal apart from its IN FULL line; rule sentence present
+OK   R [live s40 only] 33345 Judge Enforcer Record: 241 rows, 0 HELD by pkgEAW, nothing else changed
+OK   B [live s40 only] 33345 Alt Judge Enforcer Build: calls 3 -> 3, not checked 0 -> 0; E-ANS items 71, full answer added for 24; ids equal apart from eaw_blk; each ITEM text equal apart from its IN FULL line; rule sentence present
+OK   R [live s40 only] 33345 Alt Judge Enforcer Record: 96 rows, 0 HELD by pkgEAW, nothing else changed
+
+FULL ANSWER FOUND (stack, first ids): 232 of 1080
+EXAMPLES:
+33218 ANSWER CHECK Luke 9:34 [CR3] :: - Luke 9:34 "there came a cloud, and overshadowed them". I grant that *episkiazō* (G1982) is a covering. Luke 1:35 joins it to "the power of the Highest."
+33218 ANSWER CHECK Matthew 1:18 [CR3] :: - Matthew 1:18 and 1:24, Deuteronomy 20:7 "that hath betrothed a wife, and hath not taken her", Deuteronomy 22:24 "his neighbour's wife", Matthew 1:19 "Then Joseph her husband". I grant that she is wife within the espousal and that the taki
+33218 ANSWER CHECK Luke 1:31 [CR3] :: - Luke 1:31 "thou shalt conceive in thy womb, and bring forth a son". I grant that the conceiving is future to the visit. Luke 1:34 gives the state at the visit: "I know not a man." Luke 1:35 answers by the Holy Ghost coming upon her.
+33218 ANSWER CHECK Ezra 2:59 [CR3] :: - Ezra 2:59 "their father's house, and their seed" and Ezra 2:62 "therefore were they, as polluted, put from the priesthood". These are tests of the priests' register. Luke 3:23 sets its reckoning under "as was supposed."
+33218 ANSWER CHECK 2 Samuel 7:12 [CR3] :: - 2 Samuel 7:12 "which shall proceed out of thy bowels" and Psalms 132:11 "Of the fruit of thy body". I grant the descent. LINK 5 gives how it reaches him: "made of" (Romans 1:3).
+33218 ANSWER CHECK Matthew 1:3 [CR3] :: - Matthew 1:3 "And Judas begat Phares and Zara of Thamar" and Matthew 1:5 "And Salmon begat Booz of Rachab; and Booz begat Obed of Ruth". I grant that "of" plus a mother's name stands beside a begetting father in those verses. At Matthew 1:
+
+FLIPS (22):
+[stack (EPS live + ETC)] 33218 chatgpt ANSWER CHECK Hebrews 7:5 [CR4] :: ENFORCER HELD (pkgEAW, not sent; W3 2844: the push says the answer is only "I grant that these rows run through begetting fathers", but the answer under the pressed verse goes on 71 more words) (right: MISSES): The answer only says "I grant that these rows run through begetting fathers," with no fit shown. (judge wrote MEETS; RE
+[stack (EPS live + ETC)] 33218 sol ANSWER CHECK Hebrews 7:5 [CR4] :: ENFORCER HELD (pkgEAW, not sent; W3 2844: the push says the answer is only "Hebrews 7:5 and 7:10 describe Levi through begetters", but the answer under the pressed verse goes on 40 more words) (right: MISSES): The answer only says "Hebrews 7:5 and 7:10 describe Levi through begetters," with no fit shown. (judge wrote MEETS; RECO
+[stack (EPS live + ETC)] 33249 chatgpt ANSWER CHECK Job 14:1 [CR4] :: ENFORCER HELD (pkgEAW, not sent; W3 2844: the push says the answer is only "I grant that these name men who had fathers", but the answer under the pressed verse goes on 40 more words) (right: MISSES): The answer is only "I grant that these name men who had fathers" with no fit of its own. (judge wrote MEETS; RECORD-ONLY TRIAL, r
+[stack (EPS live + ETC)] 33249 chatgpt ANSWER CHECK Matthew 11:11 [CR4] :: ENFORCER HELD (pkgEAW, not sent; W3 2844: the push says the answer is only "I grant that these name men who had fathers", but the answer under the pressed verse goes on 40 more words) (right: MISSES): The answer is only "I grant that these name men who had fathers" with no fit of its own. (judge wrote MEETS; RECORD-ONLY TRIAL, r
+[stack (EPS live + ETC)] 33249 chatgpt ANSWER CHECK Deuteronomy 22:24 [CR3] :: ENFORCER HELD (pkgEAW, not sent; W3 2844: the push says the answer is only "I grant her status as wife", but the answer under the pressed verse goes on 14 more words) (right: MISSES): The answer is only "I grant her status as wife" with no fit of its own. (judge wrote MEETS; RECORD-ONLY TRIAL, ruling 428)
+[stack (EPS live + ETC)] 33249 chatgpt ANSWER CHECK Deuteronomy 22:23 [CR3] :: ENFORCER HELD (pkgEAW, not sent; W3 2844: the push says the answer is only "I grant the husband in law", but the answer under the pressed verse goes on 21 more words) (right: MISSES): The answer is only "I grant the husband in law" with no fit of its own. (judge wrote MEETS; RECORD-ONLY TRIAL, ruling 428)
+[stack (EPS live + ETC)] 33249 sol ANSWER CHECK Numbers 1:18 [CR3; CR4] :: ENFORCER HELD (pkgEAW, not sent; W3 2844: the push says the answer is only "The register reckons by fathers", but the answer under the pressed verse goes on 41 more words) (right: MISSES): The answer only says "The register reckons by fathers' houses" without showing a fit. (judge wrote MEETS; RECORD-ONLY TRIAL, ruling 428)
+[stack (EPS live + ETC)] 33249 sol ANSWER CHECK Job 14:1 [CR3; CR4] :: ENFORCER HELD (pkgEAW, not sent; W3 2844: the push says the answer is only "I grant that these name men who had fathers", but the answer under the pressed verse goes on 40 more words) (right: MISSES): The answer is only "I grant that these name men who had fathers" with no fit of its own. (judge wrote MEETS; RECORD-ONLY TRIAL, r
+[stack (EPS live + ETC)] 33249 sol ANSWER CHECK Matthew 11:11 [CR3; CR4] :: ENFORCER HELD (pkgEAW, not sent; W3 2844: the push says the answer is only "I grant that these name men who had fathers", but the answer under the pressed verse goes on 40 more words) (right: MISSES): The answer is only "I grant that these name men who had fathers" with no fit of its own. (judge wrote MEETS; RECORD-ONLY TRIAL, r
+[stack (EPS live + ETC)] 33249 sol ANSWER CHECK Deuteronomy 22:24 [CR3; CR4] :: ENFORCER HELD (pkgEAW, not sent; W3 2844: the push says the answer is only "I grant her status as wife", but the answer under the pressed verse goes on 14 more words) (right: MISSES): The answer is only "I grant her status as wife" with no fit of its own. (judge wrote MEETS; RECORD-ONLY TRIAL, ruling 428)
+[stack (EPS live + ETC)] 33299 chatgpt ANSWER CHECK Acts 2:30 [CR4] :: ENFORCER HELD (pkgEAW, not sent; W3 2844: the push says the answer is only "Acts 2:30 [L1] puts the flesh-line in David's loins", but the answer under the pressed verse goes on with [L3], 45 more words) (right: MISSES): The answer only says "Acts 2:30 [L1] puts the flesh-line in David's loins". (judge wrote MEETS; RECORD-ONLY TR
+[live s40 only] 33218 chatgpt ANSWER CHECK Hebrews 7:5 [CR4] :: ENFORCER HELD (pkgEAW, not sent; W3 2844: the push says the answer is only "I grant that these rows run through begetting fathers", but the answer under the pressed verse goes on 71 more words) (right: MISSES): The answer only says "I grant that these rows run through begetting fathers," with no fit shown. (judge wrote MEETS; RE
+[live s40 only] 33218 sol ANSWER CHECK Hebrews 7:5 [CR4] :: ENFORCER HELD (pkgEAW, not sent; W3 2844: the push says the answer is only "Hebrews 7:5 and 7:10 describe Levi through begetters", but the answer under the pressed verse goes on 40 more words) (right: MISSES): The answer only says "Hebrews 7:5 and 7:10 describe Levi through begetters," with no fit shown. (judge wrote MEETS; RECO
+[live s40 only] 33249 chatgpt ANSWER CHECK Job 14:1 [CR4] :: ENFORCER HELD (pkgEAW, not sent; W3 2844: the push says the answer is only "I grant that these name men who had fathers", but the answer under the pressed verse goes on 40 more words) (right: MISSES): The answer is only "I grant that these name men who had fathers" with no fit of its own. (judge wrote MEETS; RECORD-ONLY TRIAL, r
+[live s40 only] 33249 chatgpt ANSWER CHECK Matthew 11:11 [CR4] :: ENFORCER HELD (pkgEAW, not sent; W3 2844: the push says the answer is only "I grant that these name men who had fathers", but the answer under the pressed verse goes on 40 more words) (right: MISSES): The answer is only "I grant that these name men who had fathers" with no fit of its own. (judge wrote MEETS; RECORD-ONLY TRIAL, r
+[live s40 only] 33249 chatgpt ANSWER CHECK Deuteronomy 22:24 [CR3] :: ENFORCER HELD (pkgEAW, not sent; W3 2844: the push says the answer is only "I grant her status as wife", but the answer under the pressed verse goes on 14 more words) (right: MISSES): The answer is only "I grant her status as wife" with no fit of its own. (judge wrote MEETS; RECORD-ONLY TRIAL, ruling 428)
+[live s40 only] 33249 chatgpt ANSWER CHECK Deuteronomy 22:23 [CR3] :: ENFORCER HELD (pkgEAW, not sent; W3 2844: the push says the answer is only "I grant the husband in law", but the answer under the pressed verse goes on 21 more words) (right: MISSES): The answer is only "I grant the husband in law" with no fit of its own. (judge wrote MEETS; RECORD-ONLY TRIAL, ruling 428)
+[live s40 only] 33249 sol ANSWER CHECK Numbers 1:18 [CR3; CR4] :: ENFORCER HELD (pkgEAW, not sent; W3 2844: the push says the answer is only "The register reckons by fathers", but the answer under the pressed verse goes on 41 more words) (right: MISSES): The answer only says "The register reckons by fathers' houses" without showing a fit. (judge wrote MEETS; RECORD-ONLY TRIAL, ruling 428)
+[live s40 only] 33249 sol ANSWER CHECK Job 14:1 [CR3; CR4] :: ENFORCER HELD (pkgEAW, not sent; W3 2844: the push says the answer is only "I grant that these name men who had fathers", but the answer under the pressed verse goes on 40 more words) (right: MISSES): The answer is only "I grant that these name men who had fathers" with no fit of its own. (judge wrote MEETS; RECORD-ONLY TRIAL, r
+[live s40 only] 33249 sol ANSWER CHECK Matthew 11:11 [CR3; CR4] :: ENFORCER HELD (pkgEAW, not sent; W3 2844: the push says the answer is only "I grant that these name men who had fathers", but the answer under the pressed verse goes on 40 more words) (right: MISSES): The answer is only "I grant that these name men who had fathers" with no fit of its own. (judge wrote MEETS; RECORD-ONLY TRIAL, r
+[live s40 only] 33249 sol ANSWER CHECK Deuteronomy 22:24 [CR3; CR4] :: ENFORCER HELD (pkgEAW, not sent; W3 2844: the push says the answer is only "I grant her status as wife", but the answer under the pressed verse goes on 14 more words) (right: MISSES): The answer is only "I grant her status as wife" with no fit of its own. (judge wrote MEETS; RECORD-ONLY TRIAL, ruling 428)
+[live s40 only] 33299 chatgpt ANSWER CHECK Acts 2:30 [CR4] :: ENFORCER HELD (pkgEAW, not sent; W3 2844: the push says the answer is only "Acts 2:30 [L1] puts the flesh-line in David's loins", but the answer under the pressed verse goes on with [L3], 45 more words) (right: MISSES): The answer only says "Acts 2:30 [L1] puts the flesh-line in David's loins". (judge wrote MEETS; RECORD-ONLY TR
+
+105 OK, 0 FAIL
