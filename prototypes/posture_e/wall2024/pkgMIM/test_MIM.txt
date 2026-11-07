@@ -1,0 +1,49 @@
+OK 33218 panel ["gemini","chatgpt","sol"], reserve grok, single gemini unchanged
+OK 33218 alt_order ["grok"] -> ["grok","mimo"]
+OK 33218 alternates ["grok"] -> ["grok","mimo"] (mimo xiaomi/mimo-v2.6-pro, family xiaomi, max_tokens 64000)
+OK 33222 panel ["gemini","chatgpt","sol"], reserve grok, single gemini unchanged
+OK 33222 alt_order ["grok"] -> ["grok","mimo"]
+OK 33222 alternates ["grok"] -> ["grok","mimo"] (mimo xiaomi/mimo-v2.6-pro, family xiaomi, max_tokens 64000)
+OK 33222 Alternate Build seats ["grok"] -> ["grok"]
+OK 33222 pool of mimo alone (grok taken): the removed seat is offered mimo, guards G1-G4 pass: ["mimo"]
+OK 33222 mimo body carries reasoning {enabled:false}
+OK 33249 panel ["gemini","chatgpt","sol"], reserve grok, single gemini unchanged
+OK 33249 alt_order ["grok"] -> ["grok","mimo"]
+OK 33249 alternates ["grok"] -> ["grok","mimo"] (mimo xiaomi/mimo-v2.6-pro, family xiaomi, max_tokens 64000)
+OK 33249 Alternate Build seats ["grok"] -> ["grok"]
+OK 33249 pool of mimo alone (grok taken): the removed seat is offered mimo, guards G1-G4 pass: ["mimo"]
+OK 33249 mimo body carries reasoning {enabled:false}
+OK 33261 panel ["gemini","chatgpt","sol"], reserve grok, single gemini unchanged
+OK 33261 alt_order ["grok"] -> ["grok","mimo"]
+OK 33261 alternates ["grok"] -> ["grok","mimo"] (mimo xiaomi/mimo-v2.6-pro, family xiaomi, max_tokens 64000)
+OK 33261 Alternate Build seats ["grok"] -> ["grok"]
+OK 33261 pool of mimo alone (grok taken): the removed seat is offered mimo, guards G1-G4 pass: ["mimo"]
+OK 33261 mimo body carries reasoning {enabled:false}
+OK 33276 Init Seats refuses the same way on base and patched (saved input): ORACLE_DEBATE_V1 Init refused: topic missing or empty. run_token=ODV1-33276-as7v66eg
+OK 33289 Init Seats refuses the same way on base and patched (saved input): ORACLE_DEBATE_V1 Init refused: topic missing or empty. run_token=ODV1-33289-j7c03azp
+OK 33299 panel ["gemini","chatgpt","sol"], reserve grok, single gemini unchanged
+OK 33299 alt_order ["grok"] -> ["grok","mimo"]
+OK 33299 alternates ["grok"] -> ["grok","mimo"] (mimo xiaomi/mimo-v2.6-pro, family xiaomi, max_tokens 64000)
+OK 33299 Alternate Build seats ["grok"] -> ["grok"]
+OK 33299 pool of mimo alone (grok taken): the removed seat is offered mimo, guards G1-G4 pass: ["mimo"]
+OK 33299 mimo body carries reasoning {enabled:false}
+OK 33311 Init Seats refuses the same way on base and patched (saved input): ORACLE_DEBATE_V1 Init refused: topic missing or empty. run_token=ODV1-33311-84mx54kt
+OK 33322 Init Seats refuses the same way on base and patched (saved input): ORACLE_DEBATE_V1 Init refused: topic missing or empty. run_token=ODV1-33322-t3q36nzt
+OK 33345 panel ["gemini","chatgpt","sol"], reserve grok, single gemini unchanged
+OK 33345 alt_order ["grok"] -> ["grok","mimo"]
+OK 33345 alternates ["grok"] -> ["grok","mimo"] (mimo xiaomi/mimo-v2.6-pro, family xiaomi, max_tokens 64000)
+OK 33345 Alternate Build seats ["grok"] -> ["grok","mimo"]
+OK 33345 pool of mimo alone (grok taken): the removed seat is offered mimo, guards G1-G4 pass: ["mimo"]
+OK 33345 mimo body carries reasoning {enabled:false}
+OK 33371 panel ["gemini","chatgpt","sol"], reserve grok, single gemini unchanged
+OK 33371 alt_order ["grok"] -> ["grok","mimo"]
+OK 33371 alternates ["grok"] -> ["grok","mimo"] (mimo xiaomi/mimo-v2.6-pro, family xiaomi, max_tokens 64000)
+OK 33371 Alternate Build seats ["grok"] -> ["grok"]
+OK 33371 pool of mimo alone (grok taken): the removed seat is offered mimo, guards G1-G4 pass: ["mimo"]
+OK 33371 mimo body carries reasoning {enabled:false}
+OK 33389 panel ["gemini","chatgpt","sol"], reserve grok, single gemini unchanged
+OK 33389 alt_order ["grok"] -> ["grok","mimo"]
+OK 33389 alternates ["grok"] -> ["grok","mimo"] (mimo xiaomi/mimo-v2.6-pro, family xiaomi, max_tokens 64000)
+OK 33345 Accept Build seats ["gemini","chatgpt","sol","grok"] -> ["gemini","chatgpt","sol","grok","mimo"] (mimo xiaomi/mimo-v2.6-pro, max_tokens 65536)
+OK 33371 Accept Build seats ["gemini","chatgpt","sol","grok"] -> ["gemini","chatgpt","sol","grok","mimo"] (mimo xiaomi/mimo-v2.6-pro, max_tokens 65536)
+TOTAL 48 OK, 0 FAIL

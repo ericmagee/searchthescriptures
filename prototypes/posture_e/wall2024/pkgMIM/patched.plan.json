@@ -1,0 +1,37 @@
+{
+ "source": "W2 pkgMIM, Eric 10:34 CST 11-07 (add mimo to the alternate pool)",
+ "live": "24eb8692-b18c-43e6-a66f-048a29464127",
+ "base": "/mnt/project-files/wall2024/fetchback_live_s44.json",
+ "nodes": [
+  {
+   "name": "Init Seats",
+   "file": "Init_Seats.js",
+   "base_sha": "717ed6aebedc",
+   "final_sha": "ff562dab7cdd",
+   "bytes": [
+    14903,
+    15032
+   ]
+  },
+  {
+   "name": "Accept Build",
+   "file": "Accept_Build.js",
+   "base_sha": "5ceca4888e8e",
+   "final_sha": "24eb223774db",
+   "bytes": [
+    21673,
+    21746
+   ]
+  },
+  {
+   "name": "Alternate Build",
+   "file": "Alternate_Build.js",
+   "base_sha": "1f2af3aa385e",
+   "final_sha": "5516a72894cd",
+   "bytes": [
+    381308,
+    381531
+   ]
+  }
+ ]
+}
