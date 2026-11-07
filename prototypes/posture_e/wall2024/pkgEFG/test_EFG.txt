@@ -1,0 +1,23 @@
+OK   Judge_Enforcer_Build.js: efg_lib inserted once, required flag and rule sentence present
+OK   Alt_Judge_Enforcer_Build.js: efg_lib inserted once, required flag and rule sentence present
+OK   P1 33371 real FORCED D1 vs C1 (MEANS = [CR3] own sentence) passes
+INFO P2 33371 grok 14808 (MEANS "Mary's own state names no man as the means", 8 words): null
+OK   F1 MEANS is the verse re-quoted (Luke 1:34, the review's shape): flagged
+OK   F2 MEANS is the judge's own sentence, not in [CR3] (33371 single judge D4 vs C2 ground): flagged
+OK   F3 same verse MEANS against the challenger round: flagged (either side alike)
+OK   N1 a non-FORCED line is not checked
+OK   N2 no rounds: not checked
+OK   N3 unparseable MEANS: not checked
+OK   Judge Enforcer Record: R1 DeepSeek AGREE + code fail: LIVE pushed as DISAGREE (right: UNDERDETERMINED); base AGREE
+OK   Judge Enforcer Record: R2 TRIAL keeps AGREE and appends a mark without inner parentheses
+OK   Judge Enforcer Record: R3 DeepSeek DISAGREE + code fail: sent as before with the code note added
+OK   Judge Enforcer Record: R4 no efg: row unchanged (LIVE and TRIAL)
+OK   Alt Judge Enforcer Record: R1 DeepSeek AGREE + code fail: LIVE pushed as DISAGREE (right: UNDERDETERMINED); base AGREE
+OK   Alt Judge Enforcer Record: R2 TRIAL keeps AGREE and appends a mark without inner parentheses
+OK   Alt Judge Enforcer Record: R3 DeepSeek DISAGREE + code fail: sent as before with the code note added
+OK   Alt Judge Enforcer Record: R4 no efg: row unchanged (LIVE and TRIAL)
+OK   Send Back Build: why() strips the TRIAL pkgEFG mark
+OK   Send Back Build: the LIVE push matches the send-back filter
+OK   Alt Send Back Build: why() strips the TRIAL pkgEFG mark
+OK   Alt Send Back Build: the LIVE push matches the send-back filter
+21 OK, 0 FAIL
