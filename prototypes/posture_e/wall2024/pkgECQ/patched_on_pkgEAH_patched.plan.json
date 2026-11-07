@@ -3,24 +3,14 @@
  "status": "TRIAL",
  "nodes": [
   {
-   "file": "Judge_Enforcer_Build.js",
-   "base_sha": "329655241a27",
-   "final_sha": "ea589baa3830"
-  },
-  {
-   "file": "Alt_Judge_Enforcer_Build.js",
-   "base_sha": "bbb7bf23ecb3",
-   "final_sha": "1905f99f6d4a"
-  },
-  {
    "file": "Judge_Enforcer_Record.js",
    "base_sha": "863815d143dc",
-   "final_sha": "a909ca2ba0e0"
+   "final_sha": "9626dfe6d5f2"
   },
   {
    "file": "Alt_Judge_Enforcer_Record.js",
    "base_sha": "852bd313fefc",
-   "final_sha": "942b9f390c59"
+   "final_sha": "b9d19c912ca4"
   }
  ]
 }
