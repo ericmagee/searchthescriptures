@@ -1,0 +1,8 @@
+MIM2 RESULTS (test_MIM2.sql run 2026-11-07 ~13:25 CST; the block raises at the end, so nothing persists)
+live md5 f7340949dc46a5af1262625578755fde
+T1 live, 33345: sol -> mimo: REFUSED odv1_record_panel_alternates: mimo is not an active reserve seat the openrouter alternate call serves (provider openrouter, or xai with an x-ai/ model), with a family
+T2 fixed, 33345: sol -> mimo: OK {"ok": true, "written": true, "panel_expected": ["chatgpt", "gemini", "mimo"]}
+T3 fixed, 33345: chatgpt -> grok (pkgGRA2 still passes): OK {"ok": true, "written": true, "panel_expected": ["gemini", "grok", "sol"]}
+T4 fixed, mimo with a wrong model refused: REFUSED odv1_record_panel_alternates: mimo is model xiaomi/mimo-v2.6-pro, not xiaomi/mimo-v2.5
+T5 fixed, two alternates grok + mimo (33345, the pkgODD case): OK {"ok": true, "written": true, "panel_expected": ["gemini", "grok", "mimo"]}
+T6 fixed, minimax still refused: REFUSED odv1_record_panel_alternates: alt_minimax31 is not an active reserve seat the openrouter alternate call serves (provider openrouter, or xai with an x-ai/ model, or xiaomi with a xiaomi/ model), with a family
