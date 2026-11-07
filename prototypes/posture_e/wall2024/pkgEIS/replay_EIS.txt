@@ -1,0 +1,33 @@
+SKIP 33040 main Referenced node is unexecuted: Enforcer Record
+SKIP 33040 Alt  Referenced node is unexecuted: Alt Judge Enforcer Build
+SKIP 33060 main Referenced node is unexecuted: Enforcer Record
+SKIP 33083 main Referenced node is unexecuted: Enforcer Record
+SKIP 33107 main Referenced node is unexecuted: Enforcer Record
+SKIP 33129 main Referenced node is unexecuted: Enforcer Record
+SKIP 33149 main Referenced node is unexecuted: Enforcer Record
+SKIP 33160 main Referenced node is unexecuted: Enforcer Record
+SKIP 33197 main Referenced node is unexecuted: Enforcer Record
+OK   33218 main: rows 221, NO VERDICT 1 -> 1
+OK   33222 main: rows 258, NO VERDICT 89 -> 89
+OK   33222 Alt: rows 77, NO VERDICT 0 -> 0
+OK   33249 main: rows 211, NO VERDICT 0 -> 0
+OK   33249 Alt: rows 90, NO VERDICT 0 -> 0
+OK   33261 main: rows 257, NO VERDICT 0 -> 0
+OK   33261 Alt: rows 80, NO VERDICT 0 -> 0
+OK   33276 main: rows 0, NO VERDICT 0 -> 0
+OK   33276 Alt: rows 0, NO VERDICT 0 -> 0
+OK   33289 main: rows 0, NO VERDICT 0 -> 0
+OK   33289 Alt: rows 0, NO VERDICT 0 -> 0
+OK   33299 main: rows 204, NO VERDICT 0 -> 0
+OK   33299 Alt: rows 76, NO VERDICT 47 -> 47
+OK   33311 main: rows 0, NO VERDICT 0 -> 0
+OK   33311 Alt: rows 0, NO VERDICT 0 -> 0
+OK   33322 main: rows 0, NO VERDICT 0 -> 0
+OK   33345 main: rows 241, NO VERDICT 0 -> 0
+OK   33345 Alt: rows 96, NO VERDICT 0 -> 0
+OK   33371 main: rows 195, NO VERDICT 0 -> 0
+OK   33371 Alt: rows 71, NO VERDICT 0 -> 0
+OK   33389 main: rows 207, NO VERDICT 0 -> 0
+OK   33411 main: rows 244, NO VERDICT 0 -> 0
+OK   33411 Alt: rows 82, NO VERDICT 13 -> 0; seat_first 13
+NO VERDICT total 150 -> 137; 23 OK, 0 FAIL
