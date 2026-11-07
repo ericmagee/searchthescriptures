@@ -1,0 +1,210 @@
+1. corpus: 2573 texts, 4561 lines naming ANSWER CHECK
+   claims() differences: {"MEANS text only":668,"old none, new reads":94}
+   MEANS text only | 32998 grok verdict_final
+     ANSWER CHECK: Matthew 1:20 -- [CR3] -- MEANS: "the row carrying \"of the Holy Ghost\" names the son of David and his wife in the same breath." -- ANSWER: "It names Joseph as the one told and the Holy Ghost as the source." -- MEETS -- "the Holy Ghost as the sou
+     old {"verse":"Matthew 1:20","round":"CR3","means":null,"none":false,"grade":"MEETS"}
+     new {"verse":"Matthew 1:20","round":"CR3","means":"the row carrying \"of the Holy Ghost\" names the son of David and his wife in the same breath.","none":false,"grade":"MEETS"}
+   MEANS text only | 32998 grok verdict_final
+     ANSWER CHECK: 1 John 3:9 -- [CR3] -- MEANS: "being \"of God\" by his seed is said of believers with human fathers." -- ANSWER: "Both speak of persons already living who are \"born of God.\"" -- MEETS -- "already living."
+     old {"verse":"1 John 3:9","round":"CR3","means":null,"none":false,"grade":"MEETS"}
+     new {"verse":"1 John 3:9","round":"CR3","means":"being \"of God\" by his seed is said of believers with human fathers.","none":false,"grade":"MEETS"}
+   MEANS text only | 32998 grok verdict_final
+     ANSWER CHECK: 2 Samuel 7:14 -- [CR3] -- MEANS: "the angel's \"for\" grounds the taking in the seed God claims as his covenant son." -- ANSWER: "These give God as father and David as the remote father." -- MEETS -- "God as father."
+     old {"verse":"2 Samuel 7:14","round":"CR3","means":null,"none":false,"grade":"MEETS"}
+     new {"verse":"2 Samuel 7:14","round":"CR3","means":"the angel's \"for\" grounds the taking in the seed God claims as his covenant son.","none":false,"grade":"MEETS"}
+   old none, new reads | 32998 gemini verdict_final
+     ANSWER CHECK: Matthew 1:20 -- [Defender R3] -- MEANS: "the row carrying \"of the Holy Ghost\" names the son of David and his wife in the same breath." -- ANSWER: "Matthew 1:20 itself, 'Joseph, thou son of David, fear not to take unto thee Mary thy wife: for th
+     old null
+     new {"verse":"Matthew 1:20","round":"CR3","means":"the row carrying \"of the Holy Ghost\" names the son of David and his wife in the same breath.","none":false,"grade":"MEETS"}
+   old none, new reads | 32998 gemini verdict_final
+     ANSWER CHECK: 1 John 5:1 -- [Defender R3] -- MEANS: "gennaō with ek and God names a Spirit origin of men who have fathers." -- ANSWER: "1 John 5:1, 'him also that is begotten of him'... speak of persons already living who are 'born of God'. They are a second b
+     old null
+     new {"verse":"1 John 5:1","round":"CR3","means":"gennaō with ek and God names a Spirit origin of men who have fathers.","none":false,"grade":"MEETS"}
+   old none, new reads | 32998 gemini verdict_final
+     ANSWER CHECK: John 3:6 -- [Defender R3] -- MEANS: "Spirit origin and flesh origin are two kinds, set side by side." -- ANSWER: "John 3:6 sets two origins side by side, and Matthew 1:20 names the Spirit's." -- MEETS -- "That which is born of the flesh is flesh;
+     old null
+     new {"verse":"John 3:6","round":"CR3","means":"Spirit origin and flesh origin are two kinds, set side by side.","none":false,"grade":"MEETS"}
+   old none, new reads | 32998 gemini verdict_final
+     ANSWER CHECK: 1 John 3:9 -- [Defender R3] -- MEANS: "being \"of God\" by his seed is said of believers with human fathers." -- ANSWER: "Both speak of persons already living who are 'born of God'. They are a second birth set beside a first, as John 3:6 shows" -
+     old null
+     new {"verse":"1 John 3:9","round":"CR3","means":"being \"of God\" by his seed is said of believers with human fathers.","none":false,"grade":"MEETS"}
+   old none, new reads | 32998 gemini verdict_final
+     ANSWER CHECK: Romans 1:3 -- [Defender R3] -- MEANS: "the flesh origin is marked by kata sarka and the seed." -- ANSWER: "Romans 1:3: 'made of the seed of David according to the flesh'. Sperma (G4690) is 'seed... offspring'. It is not limited to the male. Genes
+     old null
+     new {"verse":"Romans 1:3","round":"CR3","means":"the flesh origin is marked by kata sarka and the seed.","none":false,"grade":"MEETS"}
+   old none, new reads | 32998 gemini verdict_final
+     ANSWER CHECK: Matthew 1:19 -- [Defender R3] -- MEANS: "the verse states his intent and two grounds, being just and unwilling to shame her." -- ANSWER: "Matthew 1:19, 'being a just [man], and not willing to make her a publick example'. I accept both grounds he 
+     old null
+     new {"verse":"Matthew 1:19","round":"CR3","means":"the verse states his intent and two grounds, being just and unwilling to shame her.","none":false,"grade":"MEETS"}
+   old none, new reads | 32998 gemini verdict_final
+     ANSWER CHECK: 2 Samuel 7:14 -- [Defender R3] -- MEANS: "the angel's \"for\" grounds the taking in the seed God claims as his covenant son." -- ANSWER: "2 Samuel 7:14, 'I will be his father, and he shall be my son'... give God as father and David as the remote 
+     old null
+     new {"verse":"2 Samuel 7:14","round":"CR3","means":"the angel's \"for\" grounds the taking in the seed God claims as his covenant son.","none":false,"grade":"MEETS"}
+   old none, new reads | 32998 gemini verdict_final
+     ANSWER CHECK: Luke 1:32 -- [Defender R3] -- MEANS: "the covenant son is set on David's throne." -- ANSWER: "These give God as father and David as the remote father. Patēr (G3962) means 'a father (literally or figuratively, near or more remote)'. They fit my li
+     old null
+     new {"verse":"Luke 1:32","round":"CR3","means":"the covenant son is set on David's throne.","none":false,"grade":"MEETS"}
+   old none, new reads | 32998 gemini verdict_final
+     ANSWER CHECK: 1 Chronicles 28:6 -- [Defender R3] -- MEANS: "the son David begat and the son God names stand in one verse." -- ANSWER: "1 Chronicles 28:6, 'for I have chosen him [to be] my son, and I will be his father'. Bachar (H977) means to choose. That is e
+     old null
+     new {"verse":"1 Chronicles 28:6","round":"CR3","means":"the son David begat and the son God names stand in one verse.","none":false,"grade":"MEETS"}
+   old none, new reads | 32998 gemini verdict_final
+     ANSWER CHECK: Matthew 1:21 -- [Defender R3] -- MEANS: "Joseph is given the father's naming act." -- ANSWER: "Matthew 1:21, 'thou shalt call his name JESUS'... The naming is not the father's act only. Luke 1:31 says to Mary 'shalt call his name JESUS'. Genesis 
+     old null
+     new {"verse":"Matthew 1:21","round":"CR3","means":"Joseph is given the father's naming act.","none":false,"grade":"MEETS"}
+   old none, new reads | 32998 gemini verdict_final
+     ANSWER CHECK: Luke 1:62 -- [Defender R3] -- MEANS: "the naming is the father's act." -- ANSWER: "Luke 1:62, 'And they made signs to his father, how he would have him called.' The naming is not the father's act only. Luke 1:31 says to Mary 'shalt call his name 
+     old null
+     new {"verse":"Luke 1:62","round":"CR3","means":"the naming is the father's act.","none":false,"grade":"MEETS"}
+   old none, new reads | 32998 gemini verdict_final
+     ANSWER CHECK: Matthew 11:11 -- [Defender R3] -- MEANS: "\"born of\" a woman is said of a man whose father is named." -- ANSWER: "Matthew 11:11, 'Among them that are born of women there hath not risen a greater than John the Baptist'... I grant these name or im
+     old null
+     new {"verse":"Matthew 11:11","round":"CR3","means":"\"born of\" a woman is said of a man whose father is named.","none":false,"grade":"MEETS"}
+   old none, new reads | 32998 gemini verdict_final
+     ANSWER CHECK: Luke 1:13 -- [Defender R3] -- MEANS: "the naming formula given to Zacharias is the formula given to Joseph." -- ANSWER: "To Zacharias the angel says 'bear thee a son' (Luke 1:13). To Joseph the angel says 'she shall bring forth a son' and 'thou s
+     old null
+     new {"verse":"Luke 1:13","round":"CR3","means":"the naming formula given to Zacharias is the formula given to Joseph.","none":false,"grade":"MEETS"}
+   old none, new reads | 32998 gemini verdict_final
+     ANSWER CHECK: Luke 2:48 -- [Defender R3] -- MEANS: "the mother herself names Joseph as father." -- ANSWER: "Luke 2:48, 'behold, thy father and I have sought thee sorrowing'. It is household speech, and Luke 2:49 answers it: 'wist ye not that I must be about my
+     old null
+     new {"verse":"Luke 2:48","round":"CR3","means":"the mother herself names Joseph as father.","none":false,"grade":"MEETS"}
+   old none, new reads | 32998 gemini verdict_final
+     ANSWER CHECK: Genesis 4:25 -- [Defender R3] -- MEANS: "the woman's seed is spoken where the father knew her." -- ANSWER: "Genesis 4:25, 'another seed'. It is the woman's word, and it fits my premise 1 answer." -- MEETS -- "appointed me another seed instead of 
+     old null
+     new {"verse":"Genesis 4:25","round":"CR3","means":"the woman's seed is spoken where the father knew her.","none":false,"grade":"MEETS"}
+   old none, new reads | 32998 gemini verdict_final
+     ANSWER CHECK: Job 14:1 -- [Defender R3] -- MEANS: "\"born of a woman\" marks a man's birth and mortality." -- ANSWER: "Job 14:1, 'Man [that is] born of a woman'... I grant these name or imply fathers. They do not make Matthew 1:16 do so, since Matthew 1:16 bre
+     old null
+     new {"verse":"Job 14:1","round":"CR3","means":"\"born of a woman\" marks a man's birth and mortality.","none":false,"grade":"MEETS"}
+   old none, new reads | 32998 gemini verdict_final
+     ANSWER CHECK: Matthew 1:24 -- [Defender R3] -- MEANS: "Matthew names the step that the finding preceded, the taking into his house." -- ANSWER: "Matthew 1:24, 'and took unto him his wife', with Deuteronomy 20:7... The challenger's step, 'Joseph knew Mary his w
+     old null
+     new {"verse":"Matthew 1:24","round":"CR3","means":"Matthew names the step that the finding preceded, the taking into his house.","none":false,"grade":"MEETS"}
+   old none, new reads | 32998 gemini verdict_final
+     ANSWER CHECK: Deuteronomy 20:7 -- [Defender R3] -- MEANS: "the law separates the betrothal from the taking." -- ANSWER: "with Deuteronomy 20:7, 'hath betrothed a wife, and hath not taken her'. I grant the three steps: finding, taking, 'knew her not till'. The 
+     old null
+     new {"verse":"Deuteronomy 20:7","round":"CR3","means":"the law separates the betrothal from the taking.","none":false,"grade":"MEETS"}
+   old none, new reads | 32998 gemini verdict_final
+     ANSWER CHECK: Luke 2:5 -- [Defender R3] -- MEANS: "she is his espoused wife while with child." -- ANSWER: "Luke 2:5, 'Mary his espoused wife, being great with child'. 'Espoused' is the word of Matthew 1:18's 'espoused to Joseph, before they came together'. It 
+     old null
+     new {"verse":"Luke 2:5","round":"CR3","means":"she is his espoused wife while with child.","none":false,"grade":"MEETS"}
+   old none, new reads | 32998 gemini verdict_final
+     ANSWER CHECK: Luke 1:31 -- [Defender R3] -- MEANS: "the conception is future when Mary states her present state at 1:34." -- ANSWER: "Luke 1:31: 'thou shalt conceive in thy womb'. At that point the conception is future. Luke 1:34 says 'seeing I know not a man'
+     old null
+     new {"verse":"Luke 1:31","round":"CR3","means":"the conception is future when Mary states her present state at 1:34.","none":false,"grade":"MEETS"}
+   old none, new reads | 32998 gemini verdict_final
+     ANSWER CHECK: Acts 1:8 -- [Defender R3] -- MEANS: "\"come upon\" is empowering, as the defender accepts." -- ANSWER: "Acts 1:8, 'after that the Holy Ghost is come upon you'... I accept that eperchomai (G1904) means 'come upon'... The power is the Holy Ghost's 
+     old null
+     new {"verse":"Acts 1:8","round":"CR3","means":"\"come upon\" is empowering, as the defender accepts.","none":false,"grade":"MEETS"}
+   old none, new reads | 32998 gemini verdict_final
+     ANSWER CHECK: Luke 9:34 -- [Defender R3] -- MEANS: "\"overshadow\" is presence, as the defender accepts." -- ANSWER: "Luke 9:34, 'there came a cloud, and overshadowed them'... I accept that episkiazō (G1982) means 'overshadow', with presence and power... Luke 
+     old null
+     new {"verse":"Luke 9:34","round":"CR3","means":"\"overshadow\" is presence, as the defender accepts.","none":false,"grade":"MEETS"}
+   old none, new reads | 32998 gemini verdict_final
+     ANSWER CHECK: Isaiah 7:12 -- [Defender R3] -- MEANS: "the offered depth-or-height sign was refused before the Lord gave his own sign." -- ANSWER: "Isaiah 7:12, 'I will not ask, neither will I tempt the LORD'. I grant the offer was refused and the Lord then gav
+     old null
+     new {"verse":"Isaiah 7:12","round":"CR3","means":"the offered depth-or-height sign was refused before the Lord gave his own sign.","none":false,"grade":"MEETS"}
+   old none, new reads | 32998 gemini verdict_final
+     ANSWER CHECK: Isaiah 7:16 -- [Defender R3] -- MEANS: "the sign is bounded by a child's age in Isaiah's day." -- ANSWER: "Isaiah 7:16, 'For before the child shall know to refuse the evil, and choose the good'... I grant that Isaiah's own children are signs in h
+     old null
+     new {"verse":"Isaiah 7:16","round":"CR3","means":"the sign is bounded by a child's age in Isaiah's day.","none":false,"grade":"MEETS"}
+   old none, new reads | 32998 gemini verdict_final
+     ANSWER CHECK: Isaiah 8:3 -- [Defender R3] -- MEANS: "the sign-children of Isaiah are conceived after the man approached." -- ANSWER: "Isaiah 8:3, 'I went unto the prophetess; and she conceived, and bare a son'... His wife is called 'the prophetess', not 'a vir
+     old null
+     new {"verse":"Isaiah 8:3","round":"CR3","means":"the sign-children of Isaiah are conceived after the man approached.","none":false,"grade":"MEETS"}
+   old none, new reads | 32998 gemini verdict_final
+     ANSWER CHECK: Isaiah 8:8 -- [Defender R3] -- MEANS: "Immanuel is addressed in Isaiah's own day." -- ANSWER: "Isaiah 8:8, 'O Immanuel'... The land is his, and the one addressed is not a child of Isaiah's house." -- MEETS -- "fill the breadth of thy land, O Imma
+     old null
+     new {"verse":"Isaiah 8:8","round":"CR3","means":"Immanuel is addressed in Isaiah's own day.","none":false,"grade":"MEETS"}
+   old none, new reads | 32998 gemini verdict_final
+     ANSWER CHECK: Isaiah 8:18 -- [Defender R3] -- MEANS: "children conceived by marriage are called signs and wonders." -- ANSWER: "Isaiah 8:18, 'I and the children whom the LORD hath given me [are] for signs and for wonders in Israel'. I grant that Isaiah's own c
+     old null
+     new {"verse":"Isaiah 8:18","round":"CR3","means":"children conceived by marriage are called signs and wonders.","none":false,"grade":"MEETS"}
+   old none, new reads | 32998 gemini verdict_final
+     ANSWER CHECK: Proverbs 30:19 -- [Defender R3] -- MEANS: "H5959 is used where a man's way with her is the subject." -- ANSWER: "Proverbs 30:19, 'the way of a man with a maid'... H5959 is used there of a maid's age and of a man's way. Genesis 24:43 with 24:16 is
+     old null
+     new {"verse":"Proverbs 30:19","round":"CR3","means":"H5959 is used where a man's way with her is the subject.","none":false,"grade":"MEETS"}
+   old none, new reads | 32998 gemini verdict_final
+     ANSWER CHECK: Hebrews 7:14 -- [Defender R3] -- MEANS: "the evident tribe is the tribe reckoned through the loins of the fathers." -- ANSWER: "Hebrews 7:14: 'For [it is] evident that our Lord sprang out of Juda'. It states the tribe and is silent on the line. H
+     old null
+     new {"verse":"Hebrews 7:14","round":"CR3","means":"the evident tribe is the tribe reckoned through the loins of the fathers.","none":false,"grade":"MEETS"}
+   old none, new reads | 32998 gemini verdict_final
+     ANSWER CHECK: Numbers 1:18 -- [Defender R3] -- MEANS: "pedigree is declared by the father's house." -- ANSWER: "Numbers 1:18, 'by the house of their fathers'. It is reckoning by the house. Deuteronomy 25:6 shows the name of the house carried by a son whom anot
+     old null
+     new {"verse":"Numbers 1:18","round":"CR3","means":"pedigree is declared by the father's house.","none":false,"grade":"MEETS"}
+   old none, new reads | 32998 gemini verdict_final
+     ANSWER CHECK: Ezra 2:62 -- [Defender R3] -- MEANS: "a register called after the wife's house was put out." -- ANSWER: "Ezra 2:62, 'therefore were they, as polluted, put from the priesthood', with Ezra 2:61, 'was called after their name'. The priests there were
+     old null
+     new {"verse":"Ezra 2:62","round":"CR3","means":"a register called after the wife's house was put out.","none":false,"grade":"MEETS"}
+   old none, new reads | 32998 gemini verdict_final
+     ANSWER CHECK: Genesis 48:5 -- [Defender R3] -- MEANS: "Jacob reckons in his own son's sons, seed of his house." -- ANSWER: "Genesis 48:5, '[are] mine'. Jacob receives and names Ephraim and Manasseh into his own number. Receiving by naming is the act in Genesis
+     old null
+     new {"verse":"Genesis 48:5","round":"CR3","means":"Jacob reckons in his own son's sons, seed of his house.","none":false,"grade":"MEETS"}
+   old none, new reads | 32998 gemini verdict_final
+     ANSWER CHECK: Luke 2:4 -- [Defender R3] -- MEANS: "the house of David is named of Joseph." -- ANSWER: "Luke 2:4, 'because he was of the house and lineage of David'. It names Joseph's house. I grant it. It does not decide the flesh line of the child." -- MEETS 
+     old null
+     new {"verse":"Luke 2:4","round":"CR3","means":"the house of David is named of Joseph.","none":false,"grade":"MEETS"}
+   old none, new reads | 32998 gemini verdict_final
+     ANSWER CHECK: Matthew 1:18 -- [Challenger R3] -- MEANS: "the finding with child came before any coming together" -- ANSWER: "The verse dates the finding. Matthew sets the coming together by what follows: 'Then Joseph being raised from sleep did as the angel of
+     old null
+     new {"verse":"Matthew 1:18","round":"DR3","means":"the finding with child came before any coming together","none":false,"grade":"FAILS"}
+   old none, new reads | 32998 gemini verdict_final
+     ANSWER CHECK: Luke 1:34 -- [Challenger R3] -- MEANS: "at the announcing of the conception Mary knows no man" -- ANSWER: "'I know' is ginōskō (G1097, to know) in the present tense... Her words state her condition on the day the angel spoke. Luke 1:31 puts the c
+     old null
+     new {"verse":"Luke 1:34","round":"DR3","means":"at the announcing of the conception Mary knows no man","none":false,"grade":"MEETS"}
+   old none, new reads | 32998 gemini verdict_final
+     ANSWER CHECK: Luke 1:35 -- [Challenger R3] -- MEANS: "the answer to \"How shall this be\" names the Holy Ghost and no man" -- ANSWER: "The angel answers 'how' with power and presence upon Mary. It fits the link: the seed rows supply the man, and Luke 1:27 name
+     old null
+     new {"verse":"Luke 1:35","round":"DR3","means":"the answer to \"How shall this be\" names the Holy Ghost and no man","none":false,"grade":"MEETS"}
+   old none, new reads | 32998 gemini verdict_final
+     ANSWER CHECK: Luke 1:31 -- [Challenger R3] -- MEANS: "the same naming command is given to the mother" -- ANSWER: "Genesis 4:25 shows a mother's naming beside a named father: 'And Adam knew his wife again; and she bare a son, and called his name Seth.' Eve name
+     old null
+     new {"verse":"Luke 1:31","round":"DR3","means":"the same naming command is given to the mother","none":false,"grade":"MEETS"}
+   enf428 AC differences: {"old refuses, new reads":453,"ANSWER text":20}
+   old refuses, new reads | 32998 gemini verdict_final
+     ANSWER CHECK: Matthew 1:20 -- [Defender R3] -- MEANS: "the row carrying \"of the Holy Ghost\" names the son of David and his wife in the same breath." -- ANSWER: "Matthew 1:20 itself, 'Joseph, thou son of David, fear not to take unto thee Mary thy wife: for th
+     old null
+     new {"verse":"Matthew 1:20","rounds":"CR3","answer":"Matthew 1:20 itself, 'Joseph, thou son of David, fear not to take unto thee Mary thy wife: for that which is conceived in her is of the Holy Ghost'. It names Joseph as the
+   old refuses, new reads | 32998 gemini verdict_final
+     ANSWER CHECK: 1 John 5:1 -- [Defender R3] -- MEANS: "gennaō with ek and God names a Spirit origin of men who have fathers." -- ANSWER: "1 John 5:1, 'him also that is begotten of him'... speak of persons already living who are 'born of God'. They are a second b
+     old null
+     new {"verse":"1 John 5:1","rounds":"CR3","answer":"1 John 5:1, 'him also that is begotten of him'... speak of persons already living who are 'born of God'. They are a second birth set beside a first, as John 3:6 shows... Mat
+   old refuses, new reads | 32998 gemini verdict_final
+     ANSWER CHECK: John 3:6 -- [Defender R3] -- MEANS: "Spirit origin and flesh origin are two kinds, set side by side." -- ANSWER: "John 3:6 sets two origins side by side, and Matthew 1:20 names the Spirit's." -- MEETS -- "That which is born of the flesh is flesh;
+     old null
+     new {"verse":"John 3:6","rounds":"CR3","answer":"John 3:6 sets two origins side by side, and Matthew 1:20 names the Spirit's.","grade":"MEETS"}
+   old refuses, new reads | 32998 gemini verdict_final
+     ANSWER CHECK: 1 John 3:9 -- [Defender R3] -- MEANS: "being \"of God\" by his seed is said of believers with human fathers." -- ANSWER: "Both speak of persons already living who are 'born of God'. They are a second birth set beside a first, as John 3:6 shows" -
+     old null
+     new {"verse":"1 John 3:9","rounds":"CR3","answer":"Both speak of persons already living who are 'born of God'. They are a second birth set beside a first, as John 3:6 shows","grade":"MEETS"}
+   ANSWER text | 33014 sol verdict_final
+     ANSWER CHECK: Matthew 1:25 -- [CR3] -- MEANS: "the abstinence runs from the taking to the birth" -- ANSWER: "I no longer rest the conception on the span of *heōs*." -- MEETS -- The disputed reach of until is removed from the retained link; the later reversal i
+     old {"verse":"Matthew 1:25","rounds":"CR3","answer":"I no longer rest the conception on the span of *heōs*.","grade":"MEETS"}
+     new {"verse":"Matthew 1:25","rounds":"CR3","answer":"I no longer rest the conception on the span of heōs.","grade":"MEETS"}
+   ANSWER text | 33014 sol verdict_final
+     ANSWER CHECK: Exodus 2:8 -- [CR3] -- MEANS: "'almah is printed 'the maid'" -- ANSWER: "They fit *'almah* as an unmarried girl." -- MEETS -- The answer accepts the KJV rendering and argues compatibility, not a contradictory rendering; the named Hebrew word mean
+     old {"verse":"Exodus 2:8","rounds":"CR3","answer":"They fit *'almah* as an unmarried girl.","grade":"MEETS"}
+     new {"verse":"Exodus 2:8","rounds":"CR3","answer":"They fit 'almah as an unmarried girl.","grade":"MEETS"}
+   ANSWER text | 33014 sol verdict_final
+     ANSWER CHECK: Luke 2:41 -- [CR3] -- MEANS: "No separate MEANS sentence in this press; supporting verse, not a witness." -- ANSWER: "The narrator writes 'parents' (*goneus*, G1118) of the household." -- MEETS -- The answer recognizes the shared parental designa
+     old {"verse":"Luke 2:41","rounds":"CR3","answer":"The narrator writes 'parents' (*goneus*, G1118) of the household.","grade":"MEETS"}
+     new {"verse":"Luke 2:41","rounds":"CR3","answer":"The narrator writes 'parents' (goneus, G1118) of the household.","grade":"MEETS"}
+   ANSWER text | 33014 sol verdict_final
+     ANSWER CHECK: Genesis 3:15 -- [DR3] -- MEANS: "the seed is named as the woman's" -- ANSWER: "This is the same *zera'* (H2233) as Genesis 4:25's 'another seed,' a son born when 'Adam knew his wife.'" -- MEETS -- The answer accepts the designation and exhibits i
+     old {"verse":"Genesis 3:15","rounds":"DR3","answer":"This is the same *zera'* (H2233) as Genesis 4:25's 'another seed,' a son born when 'Adam knew his wife.'","grade":"MEETS"}
+     new {"verse":"Genesis 3:15","rounds":"DR3","answer":"This is the same zera' (H2233) as Genesis 4:25's 'another seed,' a son born when 'Adam knew his wife.'","grade":"MEETS"}
+OK claims: inner curly quote MEANS read whole -> {"verse":"Luke 1:35","round":"CR3","means":"the “power” of the Highest","none":false,"grade":"MEETS"}
+OK claims: inner straight quote MEANS read whole (old read: null) -> {"verse":"Luke 1:35","round":"CR3","means":"the \"power\" of the Highest","none":false,"grade":"MEETS"}
+OK claims: bare MEANS NONE still a claim -> {"verse":"Luke 1:35","round":"CR3","means":"NONE","none":true,"grade":"UNPROVEN"}
+OK claims: em dash separators read (old: skipped) -> {"verse":"Luke 1:35","round":"CR3","means":"NONE","none":true,"grade":"UNPROVEN"}
+OK claims: two rounds keep the old read (first bracket) -> {"verse":"Luke 1:35","round":"CR2","means":"NONE","none":true,"grade":"UNPROVEN"}
+OK claims: a line the reader refuses (lower-case grade) keeps the old read -> {"verse":"Luke 1:35","round":"CR3","means":"NONE","none":true,"grade":null}
+OK enf428: inner quotes in MEANS and ANSWER -> {"verse":"Luke 1:35","rounds":"CR3","answer":"he said \"go\" now","grade":"MEETS"}
+OK enf428: em dashes and bare MEANS read (old: "not an ANSWER CHECK line") -> {"verse":"Luke 1:35","rounds":"CR3","answer":"he said go now","grade":"MISSES"}
+OK enf428: UNPROVEN still not read, as before -> null
+3. node runs compared: 67 (17 runs); changed outputs: 1
+33299 Send Back Record @2370961
+   base:    ords only (pkgEPK)] gennaō ek + God origin. (judge wrote MEETS; RECORD-ONLY TRIAL, ruling 428) (ruling 428; the judge keeps the decision) | CURE (record-only until promoted): UNCURED -- the CHANGE TO is not an ANSWER CHECK line"},{"run_token":"ODV1-33299-i6h923sg","seat":"sol","seat_role":"panel","judge_model":"openai/gpt-6.1-sol","kind":"send_back
+   patched: ords only (pkgEPK)] gennaō ek + God origin. (judge wrote MEETS; RECORD-ONLY TRIAL, ruling 428) (ruling 428; the judge keeps the decision) | CURE (record-only until promoted): UNCURED -- the CHANGE TO answer is not found word for word in [CR2]: \"That is the figurative sense.\" and \"Matthew 1:18 speaks of a pregnancy \"found\" before the couple \"came together,\" which \""},{"run_token":"ODV1-3329
+OK replay ran
+TOTAL 10 OK, 0 FAIL

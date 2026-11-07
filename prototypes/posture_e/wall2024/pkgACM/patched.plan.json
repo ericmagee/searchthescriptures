@@ -1,0 +1,22 @@
+{
+ "base": "live s50 0247fc93",
+ "reader_embedded_sha": "47eab9611115",
+ "nodes": {
+  "Alt Send Back Build": {
+   "base": "679e84bfb19b",
+   "patched": "dc902df8e797"
+  },
+  "Alt Send Back Record": {
+   "base": "310e9bde82a6",
+   "patched": "51d3b2d94d44"
+  },
+  "Send Back Build": {
+   "base": "e42a822d056b",
+   "patched": "fce7a381bd93"
+  },
+  "Send Back Record": {
+   "base": "0f5ee9f231f4",
+   "patched": "bbc6947a54ec"
+  }
+ }
+}
