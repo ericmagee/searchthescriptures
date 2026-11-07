@@ -1,0 +1,10 @@
+OK 33482 Retry Build resends the call: error: aborted, body the same (154005 chars)
+OK 33482 Record: NO VERDICT base 67 of 67 -> with a good retry reply 0
+OK enf421.ert = {"first":"error: aborted","retried":true,"answered":true}
+OK every other output field unchanged
+OK a failed retry: rows the same as base (67 NO VERDICT), ert {"first":"error: aborted","retried":true,"answered":false,"retry_error":"aborted"}
+OK replay: Enforcer Record identical to base on 8 of 8 saved runs (no retry ran)
+OK replay: the Retry Build resends only on ["33482 (error: aborted)"]
+OK wiring: 3 new nodes (names and ids unused in s50), every connection names a node
+OK the Retry Call has the same request settings and credentials as Enforcer Call deepseek
+TOTAL 9 OK, 0 FAIL
