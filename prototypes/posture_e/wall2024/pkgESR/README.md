@@ -17,4 +17,4 @@ Base: pkgEAI/patched_on_pkgEID. Test: node pkgESR/test_ESR.cjs -> 56 OK, 0 FAIL.
 - Every id kept once in every saved run, no item unchecked, calls 65 -> 66.
 - No-retry path: Record rows equal to base in every run.
 - Retry Build: halves only for 33222 Main call 2 and 33299 Alt call 1, text intact, every id once; marker item elsewhere.
-- Retry path with synthetic replies: 33299 Alt NO VERDICT 47 -> 0, 33222 Main 89 -> 0 (the retried ids), other rows unchanged; a half failing again stays NO VERDICT.
+- Retry path with synthetic replies: 33299 Alt NO VERDICT 47 -> 0, 33222 Main 89 -> 5 (the 5 left are rows outside the failed call), other rows unchanged; a half failing again stays NO VERDICT.
