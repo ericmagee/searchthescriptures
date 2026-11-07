@@ -1,6 +1,6 @@
-// pkgRCK tests: real nodes on saved inputs (pkgGSL harness), BASE = live s22 fetch-back, RCK = out/ from build_RCK.cjs.
+// pkgRCK tests: real nodes on saved inputs (pkgGSL harness), BASE = live 5a710187 + UNXS + UNXW (stack.cjs), RCK = out/ from build_RCK.cjs.
 const fs=require('fs');const {harness,live}=require('../pkgGSL/harness.cjs');const FB='/mnt/project-files/wall2024/fetchback_live_s22.json';
-const P=n=>fs.readFileSync(__dirname+'/out/'+n.replace(/[^A-Za-z0-9]+/g,'_')+'.js','utf8');const code=(lab,n)=>lab==='BASE'?live(FB,n):P(n);
+const P=n=>fs.readFileSync(__dirname+'/out/'+n.replace(/[^A-Za-z0-9]+/g,'_')+'.js','utf8');const {baseCode}=require('./stack.cjs');const code=(lab,n)=>lab==='BASE'?baseCode(n):P(n);
 let ok=0,bad=0;const T=(name,c)=>{if(c){ok++;console.log('OK   '+name);}else{bad++;console.log('FAIL '+name);}};
 const seats=j=>Object.fromEntries((j.bodies||[]).map(b=>{const p=JSON.parse(b).payload;return [p.judge_seat,p];}));
 const chain=(r,lab)=>{const gr=harness(r)(code(lab,'Gate Record'),'Gate Call openrouter');const ams=harness(r,{'Gate Record':gr})(code(lab,'Alternate Merge Seat'),'Alternate Cure Normalize');
@@ -13,6 +13,9 @@ const chain=(r,lab)=>{const gr=harness(r)(code(lab,'Gate Record'),'Gate Call ope
  const sol=JSON.parse(AM[0].main[0][0].json.bodies.find(b=>JSON.parse(b).payload.judge_seat==='sol')).payload.verdict_raw;
  const a=__K.kunx(sol,PT).items.map(x=>x.link),b=__K.kunx(sol,__K.ciRounds(PT)).items.map(x=>x.link);
  T('A1 kunxLines(text, rounds) = kunxLines(text, prompt) on 33249 sol: '+b.join(', '),JSON.stringify(a)===JSON.stringify(b)&&b.includes('CHALLENGER premise 5'));}
+// A2: the stack is carried: every UNXW node still has its unxLack, and every out node keeps its UNXS unxSegs
+{const o=fs.readdirSync(__dirname+'/out').filter(f=>f.endsWith('.js'));const w=fs.readdirSync(__dirname+'/../pkgUNXW/patched');
+ T('A2 '+w.length+' UNXW nodes keep unxLack, '+o.length+' out nodes keep the UNXS reader',w.length===19&&w.every(f=>fs.readFileSync(__dirname+'/out/'+f,'utf8').includes('function unxLack('))&&o.length===22&&o.every(f=>fs.readFileSync(__dirname+'/out/'+f,'utf8').includes('pkgUNXS')));}
 // B: 33249 sol, premise 5 added by gate G8 (send-back S28) is not applied; count stays 1; no seat removed; others unchanged
 {const B=chain('33249','BASE'),R=chain('33249','RCK');const b=seats(B.ams),r=seats(R.ams);
  T('B1 BASE reproduces stored sol challenger count 2',b.sol.challenger_conceded_links===2);

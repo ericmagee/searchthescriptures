@@ -1,4 +1,5 @@
 OK   A1 kunxLines(text, rounds) = kunxLines(text, prompt) on 33249 sol: CHALLENGER premise 1, CHALLENGER premise 5
+OK   A2 19 UNXW nodes keep unxLack, 22 out nodes keep the UNXS reader
 OK   B1 BASE reproduces stored sol challenger count 2
 OK   B2 RCK sol challenger count 1 (premise 1 only)
 OK   B3 sol drv_uncured 0 in both (TRIAL: no seat removed)
@@ -10,4 +11,4 @@ OK   C2 RCK grok defender count 0 (line as first written)
 OK   C3 grok verdict tag unchanged and drv_uncured 0
 OK   C4 chatgpt and sol unchanged
 OK   D1 33218 Gate Record and Alternate Merge Seat bodies identical
-12 OK, 0 FAIL
+13 OK, 0 FAIL

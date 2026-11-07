@@ -1,7 +1,7 @@
-// pkgRCK replay: live s22 code (BASE) against pkgRCK (RCK) on every saved run with Gate Record inputs.
+// pkgRCK replay: live 5a710187 + UNXS + UNXW (BASE) against pkgRCK (RCK) on every saved run with Gate Record inputs.
 // Gate Record and Alt Gate Record run on their saved inputs; Alternate Merge Seat runs on the Gate Record output of the same code.
 const fs=require('fs');const {harness,live,D}=require('../pkgGSL/harness.cjs');const FB='/mnt/project-files/wall2024/fetchback_live_s22.json';
-const P=n=>fs.readFileSync(__dirname+'/out/'+n.replace(/[^A-Za-z0-9]+/g,'_')+'.js','utf8');const code=(lab,n)=>lab==='BASE'?live(FB,n):P(n);
+const P=n=>fs.readFileSync(__dirname+'/out/'+n.replace(/[^A-Za-z0-9]+/g,'_')+'.js','utf8');const {baseCode}=require('./stack.cjs');const code=(lab,n)=>lab==='BASE'?baseCode(n):P(n);
 const has=(r,n)=>fs.existsSync(D+r+'_'+n.replace(/ /g,'_')+'.json');
 const runs=fs.readdirSync(D).filter(f=>/^\d+_Gate_Record\.json$/.test(f)).map(f=>f.split('_')[0]).sort();
 const fields=j=>(j&&j.bodies||[]).map(b=>{const p=JSON.parse(b).payload;return p.judge_seat+':'+[p.verdict_tag,p.conceded_links,p.challenger_conceded_links,p.defense_standing,p.challenge_standing,p.drv_uncured].join('/');}).join(' ');

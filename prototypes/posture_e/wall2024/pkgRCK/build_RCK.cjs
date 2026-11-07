@@ -1,11 +1,11 @@
 // pkgRCK (W1, Wall 2741): a premise that an applied change (send-back or gate) ADDS to a count is read by K-UNX / K-UNX-A / E-ASM,
 // the same test the first count gets. A count-line change that newly raises one of them is NOT APPLIED (a LIVE gate item kind), so the
 // judge answers it at the gate: KEEP (the premise stays out) or a CHANGE whose count names the layer the block lacks. Side-neutral.
-// Base: live s22 fetch-back (5a710187 line). Each anchor asserted exactly once per node.
+// Base: live 5a710187 fetch-back + pkgUNXS/patched + pkgUNXW/patched (stack.cjs; W2 write order UNXS, UNXW, RCK). Each anchor asserted exactly once per node.
 const fs=require('fs'),path=require('path'),crypto=require('crypto');
-const SRC=process.argv[2]||'/mnt/project-files/wall2024/fetchback_live_s22.json';
+const {stacked}=require('./stack.cjs');const SRC=process.argv[2];
 const OUT=path.join(__dirname,'out');fs.mkdirSync(OUT,{recursive:true});
-const W0=JSON.parse(fs.readFileSync(SRC,'utf8'));const W=W0.data||W0;
+const {W0,W,used}=stacked(SRC);console.log('base layers: '+JSON.stringify(used));
 const K0="function kunxLines(text,ptext){const items=[],marks=[];if(typeof text!=='string'||typeof ptext!=='string')return {items,marks};let R;try{R=ciRounds(ptext);}catch(e){return {items,marks};}";
 const K1="function kunxLines(text,ptext){const items=[],marks=[];if(typeof text!=='string'||!(typeof ptext==='string'||(ptext&&typeof ptext==='object')))return {items,marks};let R;try{R=typeof ptext==='string'?ciRounds(ptext):ptext;}catch(e){return {items,marks};} /* pkgRCK: also takes the rounds object */";
 const A0=" if(!map.size&&!items.length&&!resTo)return null;\n const T=build(map);const P=rcLines(T);const col=P.col;";

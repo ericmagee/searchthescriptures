@@ -1,6 +1,6 @@
 # pkgRCK (W1, Wall 2741): K-UNX re-read on a count that an applied change adds to
 
-Enforcer fix, TRIAL, side-neutral. Base: live 5a710187 (fetchback_live_s22.json). Write after any later package that edits the same anchors (rebuild on its fetch-back; the build asserts each anchor once).
+Enforcer fix, TRIAL, side-neutral. Base (stack.cjs): live 5a710187 (fetchback_live_s22.json) + pkgUNXS/patched (22) + pkgUNXW/patched (19), per W2. Write order: UNXS, UNXW, RCK. If UNXS/UNXW change, rebuild (each anchor asserted once).
 
 Gap (33249 sol): sol first counted challenger premise 1 only. The DeepSeek send-back pushed premise 5 (S28); the gate change G8 rewrote CHALLENGER CONCEDED LINKS to 2. No K-UNX check read the new count, because the gate's K re-read (gateNewK2024) runs drvCheck and kfLines only. On the same block, K-UNX fired for grok ("exhibits L1 and L3").
 
@@ -20,4 +20,4 @@ Replay (replay_RCK.txt): 11 runs with gate inputs. 33040 to 33197 cannot run, be
 - 33222 grok (alternate): defender count 4 -> 0. G1 to G4 rewrote one line; the last, G4, adds premise 6, which K-UNX reads, so the line stays as first written.
 - No verdict tag changed. No seat was removed.
 
-Test: test_RCK.cjs, 12 OK. Rebuild: node pkgRCK/build_RCK.cjs [fetch-back path].
+Test: test_RCK.cjs, 13 OK (A2 checks the stack is carried). BASE in tests and replay = the stack, so diffs are RCK alone. Rebuild: node pkgRCK/build_RCK.cjs [fetch-back path].
