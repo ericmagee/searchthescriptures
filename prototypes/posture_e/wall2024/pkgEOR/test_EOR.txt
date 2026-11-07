@@ -1,0 +1,18 @@
+OK   33218 anticheat: no marker in any close, prompt byte-identical
+OK   33222 anticheat: no marker in any close, prompt byte-identical
+OK   33249 anticheat: no marker in any close, prompt byte-identical
+OK   33261 anticheat: no marker in any close, prompt byte-identical
+OK   33276 anticheat: no marker in any close, prompt byte-identical
+OK   33289 anticheat: no marker in any close, prompt byte-identical
+OK   33299 anticheat: no marker in any close, prompt byte-identical
+OK   33311 anticheat: no marker in any close, prompt byte-identical
+OK   33322 anticheat: no marker in any close, prompt byte-identical
+OK   33345 anticheat: no marker in any close, prompt byte-identical
+OK   33371 anticheat: marker present; patched prompt holds no out-of-round words
+  33371 items base 115 patched 115; changed or removed: 
+OK   33371 anticheat: every changed item is a challenger item whose base close held the out-of-round words
+OK   E1 a verbatim out-of-round note sentence listed as a [DR4] concession is refused (pkgEOR)
+OK   E2 a second note sentence (5 words) is refused
+OK   N1 a real close-round grant ([CR4], before any marker) is not refused by pkgEOR
+OK   N2 the saved 33371 sections: E-OOR rows unchanged
+16 OK, 0 FAIL

@@ -1,0 +1,21 @@
+{
+ "bbase": "pkgEAH/patched",
+ "fb": "/mnt/project-files/wall2024/fetchback_live_s44.json",
+ "nodes": [
+  {
+   "file": "Anticheat_Build.js",
+   "base_sha": "832dfd296ac4",
+   "final_sha": "115e98863426"
+  },
+  {
+   "file": "Judge_Enforcer_Build.js",
+   "base_sha": "329655241a27",
+   "final_sha": "230a65ff4248"
+  },
+  {
+   "file": "Alt_Judge_Enforcer_Build.js",
+   "base_sha": "bbb7bf23ecb3",
+   "final_sha": "b5dc97d796a6"
+  }
+ ]
+}
