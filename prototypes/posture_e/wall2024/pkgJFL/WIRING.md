@@ -28,3 +28,10 @@ Run report (what to read)
 
 Known limit: the block holds the judge's own past lines, which quote debaters. A check that looks a judge's quote up in the whole prompt text
 (gatePromptText2024, cureRounds) also sees the block. Round readers are unaffected (test C), since no block line starts a round header.
+
+## Rebase onto pkgFCB (W3 2667, 11-07)
+- Panel Build and Alternate Build are now built on the pkgFCB finals: base 0e3cace517b47bde gives 7d90a1ea5c49996d, and base a0993b7537d81024 gives 78a690964c8b01bf.
+- Reserve Build stays on pkgBAR/patched, which equals live 1b49671d: 953b226741f6a8bf gives 872caf592a2295f3.
+- Init Seats is unchanged (5251c796 gives d2f5b219). pkgGRA's patched_on_JFL copy is built on d2f5b219.
+- Write order: pkgFCB, then the pkgJFL n8n part, then pkgGRA (patched_on_JFL). jfl_fix_anon.sql goes before the n8n part.
+- Test: test_JFL.cjs gives 24 OK, with D1 now checked against the pkgFCB finals.

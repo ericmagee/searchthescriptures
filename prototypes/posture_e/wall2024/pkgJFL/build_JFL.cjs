@@ -8,7 +8,7 @@
 //     Output jfl_moved (the moved seats) for the run report.
 //  The HTTP nodes Accept Models and Fetch Models read model_config_jfl instead of model_config (see http_JFL.json). The SQL (jfl.sql) goes first.
 const fs=require('fs');const crypto=require('crypto');const sha=s=>crypto.createHash('sha256').update(s).digest('hex').slice(0,16);
-const OUT='pkgJFL/patched';fs.mkdirSync(OUT,{recursive:true});const plan={base:'live 98daac9e + n19 + n20 + n21 (pkgIMP) + pkgBAR 3086eb8',nodes:[]};
+const OUT='pkgJFL/patched';fs.mkdirSync(OUT,{recursive:true});const plan={base:'live 1b49671d (pkgBAR in) + pkgFCB 7b8640b for Panel Build and Alternate Build',nodes:[]};
 const rep=(s,a,b,f)=>{const n=s.split(a).length-1;if(n!==1)throw new Error(f+': anchor '+n+': '+a.slice(0,70));return s.replace(a,()=>b);};
 const save=(f,base,s0,s,edits)=>{new Function('$','$input','$json','$execution',s);fs.writeFileSync(OUT+'/'+f,s);plan.nodes.push({file:f,base,base_sha:sha(s0),final_sha:sha(s),edits});console.log(f.padEnd(28),sha(s0),'->',sha(s),'edits',edits);};
 // the helper Panel, Reserve and Alternate Build share
@@ -17,7 +17,7 @@ const H="/* pkgJFL (W3 2632 part 3; Eric 17:21 CST): the judge fault ledger bloc
  +"const __JFL=k=>{try{const r=$('Fetch Models').all().map(i=>i.json).find(x=>x&&x.seat===k);return (r&&typeof r.jfl_block==='string')?r.jfl_block:'';}catch(e){return '';}};\n"
  +"const __JFLX=(u,k)=>__JFL(k)+String(u).replace(__JFL_RE,'');\n";
 // ---- 1. the block ----
-for(const n of ['Panel Build','Reserve Build','Alternate Build']){const f=n.replace(/ /g,'_')+'.js';const B='pkgBAR/patched';const s0=fs.readFileSync(B+'/'+f,'utf8');let s=s0;let e=0;
+for(const n of ['Panel Build','Reserve Build','Alternate Build']){const f=n.replace(/ /g,'_')+'.js';const B=(n==='Reserve Build')?'pkgBAR/patched':'pkgFCB/patched'; /* rebased (W3 2667): Panel Build and Alternate Build on the pkgFCB finals; Reserve Build on pkgBAR/patched (= live 1b49671d) */const s0=fs.readFileSync(B+'/'+f,'utf8');let s=s0;let e=0;
  if(n==='Panel Build'){s=rep(s,"const judges=RS.judges.map(j0=>{",H+"const judges=RS.judges.map(j0=>{",f);
   s=rep(s,"const user='DEBATE TRANSCRIPT\\n\\n'+T;","const user=__JFL(j.seat)+'DEBATE TRANSCRIPT\\n\\n'+T;",f);e+=2;}
  if(n==='Reserve Build'){s=rep(s,"const JIDX0={deepseek:0",H+"user=__JFLX(user,RS.reserve.seat);\nconst JIDX0={deepseek:0",f);e+=1;}

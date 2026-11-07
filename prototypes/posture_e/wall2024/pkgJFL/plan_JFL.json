@@ -1,11 +1,11 @@
 {
- "base": "live 98daac9e + n19 + n20 + n21 (pkgIMP) + pkgBAR 3086eb8",
+ "base": "live 1b49671d (pkgBAR in) + pkgFCB 7b8640b for Panel Build and Alternate Build",
  "nodes": [
   {
    "file": "Panel_Build.js",
-   "base": "pkgBAR/patched",
-   "base_sha": "11dc0d211828b3f6",
-   "final_sha": "3810191e97f5ca05",
+   "base": "pkgFCB/patched",
+   "base_sha": "0e3cace517b47bde",
+   "final_sha": "7d90a1ea5c49996d",
    "edits": 2
   },
   {
@@ -17,9 +17,9 @@
   },
   {
    "file": "Alternate_Build.js",
-   "base": "pkgBAR/patched",
-   "base_sha": "79fce015c75f5667",
-   "final_sha": "dfb4e51eea892f86",
+   "base": "pkgFCB/patched",
+   "base_sha": "a0993b7537d81024",
+   "final_sha": "78a690964c8b01bf",
    "edits": 2
   },
   {
