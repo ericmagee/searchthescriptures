@@ -1,0 +1,59 @@
+{
+ "base": "/mnt/project-files/wall2024/fetchback_live_s32.json + pkgRXR/patched,pkgCPD/patched_on_RXR,pkgPSN/patched_on_pkgCPD_patched_on_RXR",
+ "nodes": [
+  {
+   "name": "Alternate Merge Seat",
+   "file": "Alternate_Merge_Seat.js",
+   "base_sha": "b6e045e4e637d475",
+   "final_sha": "884dc7d308544e8d",
+   "edits": [
+    "attribution"
+   ]
+  },
+  {
+   "name": "Gate Build",
+   "file": "Gate_Build.js",
+   "base_sha": "d5c48766755e077d",
+   "final_sha": "7a9fa979bd8bbedf",
+   "edits": [
+    "attribution"
+   ]
+  },
+  {
+   "name": "Gate Record",
+   "file": "Gate_Record.js",
+   "base_sha": "e8d5ece786242d26",
+   "final_sha": "459b8faf749d9a3e",
+   "edits": [
+    "attribution"
+   ]
+  },
+  {
+   "name": "Alt Gate Build",
+   "file": "Alt_Gate_Build.js",
+   "base_sha": "da90e725e232c029",
+   "final_sha": "9ae57f11a3c6d080",
+   "edits": [
+    "attribution"
+   ]
+  },
+  {
+   "name": "Alt Gate Record",
+   "file": "Alt_Gate_Record.js",
+   "base_sha": "457c7df3465ad698",
+   "final_sha": "ad86dabd5a000e64",
+   "edits": [
+    "attribution"
+   ]
+  },
+  {
+   "name": "Alternate Merge",
+   "file": "Alternate_Merge.js",
+   "base_sha": "a82197bacbc88c16",
+   "final_sha": "3080463ecf802376",
+   "edits": [
+    "attribution"
+   ]
+  }
+ ]
+}

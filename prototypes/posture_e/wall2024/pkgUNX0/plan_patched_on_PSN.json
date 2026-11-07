@@ -1,0 +1,203 @@
+{
+ "base": "/mnt/project-files/wall2024/fetchback_live_s32.json + pkgRXR/patched,pkgCPD/patched_on_RXR,pkgPSN/patched_on_pkgCPD_patched_on_RXR",
+ "nodes": [
+  {
+   "name": "Extract Independent Verdict",
+   "file": "Extract_Independent_Verdict.js",
+   "base_sha": "4a68da249beee897",
+   "final_sha": "ac8c201f4dac386e",
+   "edits": [
+    "count test"
+   ]
+  },
+  {
+   "name": "Panel Payloads",
+   "file": "Panel_Payloads.js",
+   "base_sha": "99cd36a5c0801fda",
+   "final_sha": "e1873cc4002f30ef",
+   "edits": [
+    "count test"
+   ]
+  },
+  {
+   "name": "Cure Build",
+   "file": "Cure_Build.js",
+   "base_sha": "f02ba7bb7bb3d1b6",
+   "final_sha": "a13ca114b4665c78",
+   "edits": [
+    "count test"
+   ]
+  },
+  {
+   "name": "Cure Normalize",
+   "file": "Cure_Normalize.js",
+   "base_sha": "f3d3c3610715def6",
+   "final_sha": "66055bc08c4b95b7",
+   "edits": [
+    "count test"
+   ]
+  },
+  {
+   "name": "Cure Check",
+   "file": "Cure_Check.js",
+   "base_sha": "86953f3b972b28e0",
+   "final_sha": "0a79d64eabe894c0",
+   "edits": [
+    "count test"
+   ]
+  },
+  {
+   "name": "Panel Cure Build 1",
+   "file": "Panel_Cure_Build_1.js",
+   "base_sha": "63e636d886daf2d0",
+   "final_sha": "eb7bbc3c2d1ec992",
+   "edits": [
+    "count test"
+   ]
+  },
+  {
+   "name": "Panel Cure Normalize 1",
+   "file": "Panel_Cure_Normalize_1.js",
+   "base_sha": "837dc86ba602deb9",
+   "final_sha": "a84aebd6a8f85c61",
+   "edits": [
+    "count test"
+   ]
+  },
+  {
+   "name": "Panel Cure Build 2",
+   "file": "Panel_Cure_Build_2.js",
+   "base_sha": "7acc7e1c82f905d0",
+   "final_sha": "ca42cd6d555c7df7",
+   "edits": [
+    "count test"
+   ]
+  },
+  {
+   "name": "Panel Cure Normalize 2",
+   "file": "Panel_Cure_Normalize_2.js",
+   "base_sha": "38c33c412b99c542",
+   "final_sha": "9f5532b39714f572",
+   "edits": [
+    "count test"
+   ]
+  },
+  {
+   "name": "Panel Cure Build 3",
+   "file": "Panel_Cure_Build_3.js",
+   "base_sha": "927d1c348f38f97a",
+   "final_sha": "a91929c4bc08e812",
+   "edits": [
+    "count test"
+   ]
+  },
+  {
+   "name": "Panel Cure Normalize 3",
+   "file": "Panel_Cure_Normalize_3.js",
+   "base_sha": "262c73f0e65ba940",
+   "final_sha": "6beb9eed6c447cf5",
+   "edits": [
+    "count test"
+   ]
+  },
+  {
+   "name": "Panel Cure Check",
+   "file": "Panel_Cure_Check.js",
+   "base_sha": "ded1cb9e8f7d32da",
+   "final_sha": "3ab6c913277107aa",
+   "edits": [
+    "count test"
+   ]
+  },
+  {
+   "name": "Alternate Build",
+   "file": "Alternate_Build.js",
+   "base_sha": "185ad5c3f1acfa8b",
+   "final_sha": "4b56597e2fd2543a",
+   "edits": [
+    "count test"
+   ]
+  },
+  {
+   "name": "Alternate Payloads",
+   "file": "Alternate_Payloads.js",
+   "base_sha": "74db285e5aeb2c7d",
+   "final_sha": "57a39ec9c186dd7c",
+   "edits": [
+    "count test"
+   ]
+  },
+  {
+   "name": "Alternate Cure Build",
+   "file": "Alternate_Cure_Build.js",
+   "base_sha": "b7198479b9dc3399",
+   "final_sha": "55003fc4e5b68958",
+   "edits": [
+    "count test"
+   ]
+  },
+  {
+   "name": "Alternate Cure Normalize",
+   "file": "Alternate_Cure_Normalize.js",
+   "base_sha": "6d1ed1aabdc91ab5",
+   "final_sha": "9f2addeec63cf0ce",
+   "edits": [
+    "count test"
+   ]
+  },
+  {
+   "name": "Alternate Merge Seat",
+   "file": "Alternate_Merge_Seat.js",
+   "base_sha": "b6e045e4e637d475",
+   "final_sha": "b7dc1ec712618ad7",
+   "edits": [
+    "count test"
+   ]
+  },
+  {
+   "name": "Gate Build",
+   "file": "Gate_Build.js",
+   "base_sha": "d5c48766755e077d",
+   "final_sha": "8662e076cb7801bc",
+   "edits": [
+    "count test"
+   ]
+  },
+  {
+   "name": "Gate Record",
+   "file": "Gate_Record.js",
+   "base_sha": "e8d5ece786242d26",
+   "final_sha": "d3a95d41cb3b319d",
+   "edits": [
+    "count test"
+   ]
+  },
+  {
+   "name": "Alt Gate Build",
+   "file": "Alt_Gate_Build.js",
+   "base_sha": "da90e725e232c029",
+   "final_sha": "0de16612a36fc055",
+   "edits": [
+    "count test"
+   ]
+  },
+  {
+   "name": "Alt Gate Record",
+   "file": "Alt_Gate_Record.js",
+   "base_sha": "457c7df3465ad698",
+   "final_sha": "88114e94b7c32203",
+   "edits": [
+    "count test"
+   ]
+  },
+  {
+   "name": "Alternate Merge",
+   "file": "Alternate_Merge.js",
+   "base_sha": "a82197bacbc88c16",
+   "final_sha": "6bf18d1b35a456f6",
+   "edits": [
+    "count test"
+   ]
+  }
+ ]
+}

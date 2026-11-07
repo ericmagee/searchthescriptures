@@ -1,0 +1,59 @@
+{
+ "base": "/mnt/project-files/wall2024/fetchback_live_s32.json",
+ "nodes": [
+  {
+   "name": "Alternate Merge Seat",
+   "file": "Alternate_Merge_Seat.js",
+   "base_sha": "3157b20911c76364",
+   "final_sha": "c0eef16494c4fce6",
+   "edits": [
+    "attribution"
+   ]
+  },
+  {
+   "name": "Gate Build",
+   "file": "Gate_Build.js",
+   "base_sha": "7c6973e4b27d3d41",
+   "final_sha": "d82b278ed5958de1",
+   "edits": [
+    "attribution"
+   ]
+  },
+  {
+   "name": "Gate Record",
+   "file": "Gate_Record.js",
+   "base_sha": "92c91e87a1d2d301",
+   "final_sha": "32fb31957d68cf95",
+   "edits": [
+    "attribution"
+   ]
+  },
+  {
+   "name": "Alt Gate Build",
+   "file": "Alt_Gate_Build.js",
+   "base_sha": "9b03cb388ca29283",
+   "final_sha": "e8cbee966d5a7f05",
+   "edits": [
+    "attribution"
+   ]
+  },
+  {
+   "name": "Alt Gate Record",
+   "file": "Alt_Gate_Record.js",
+   "base_sha": "736cb7184c0c9c99",
+   "final_sha": "68ded3898909ad7d",
+   "edits": [
+    "attribution"
+   ]
+  },
+  {
+   "name": "Alternate Merge",
+   "file": "Alternate_Merge.js",
+   "base_sha": "305e96e9dd600863",
+   "final_sha": "195396690c16c6eb",
+   "edits": [
+    "attribution"
+   ]
+  }
+ ]
+}
