@@ -1,0 +1,31 @@
+{
+ "bbase": "pkgEAM/patched",
+ "rbase": "pkgECQ/patched_live_on_pkgEAH_patched",
+ "status": "LIVE",
+ "nodes": [
+  {
+   "file": "Judge_Enforcer_Build.js",
+   "base": "pkgEAM/patched",
+   "base_sha": "32ed6e5cf7e5",
+   "final_sha": "571fef513c90"
+  },
+  {
+   "file": "Alt_Judge_Enforcer_Build.js",
+   "base": "pkgEAM/patched",
+   "base_sha": "7f1e94f3d6b0",
+   "final_sha": "d46e8a7dff5a"
+  },
+  {
+   "file": "Judge_Enforcer_Record.js",
+   "base": "pkgECQ/patched_live_on_pkgEAH_patched",
+   "base_sha": "03ce8ce5b72d",
+   "final_sha": "7825fedf4301"
+  },
+  {
+   "file": "Alt_Judge_Enforcer_Record.js",
+   "base": "pkgECQ/patched_live_on_pkgEAH_patched",
+   "base_sha": "0ab2abb37f8e",
+   "final_sha": "376b3e737b41"
+  }
+ ]
+}
