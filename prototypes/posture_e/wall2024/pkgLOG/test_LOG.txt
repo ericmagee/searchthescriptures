@@ -1,10 +1,13 @@
+OK   T0 the final expression parses in n8n's engine (the v1 expression does not: "Unexpected end of input")
 OK   base expression reproduces JSON.stringify of the body
-OK   33197: 470 rows, 4348462 -> 1095924 bytes (25%), 184 pointers; other fields equal, every pointer resolves to an earlier row holding the same text, no short text replaced
-OK   33218: 508 rows, 5146453 -> 1104379 bytes (21%), 214 pointers; other fields equal, every pointer resolves to an earlier row holding the same text, no short text replaced
-OK   33222: 687 rows, 7659938 -> 1609671 bytes (21%), 288 pointers; other fields equal, every pointer resolves to an earlier row holding the same text, no short text replaced
+OK   33197: 470 rows, 4348462 -> 1095372 bytes (25%), 184 pointers; other fields equal, every pointer resolves to an earlier row holding the same text, no short text replaced
+OK   33218: 508 rows, 5146453 -> 1103737 bytes (21%), 214 pointers; other fields equal, every pointer resolves to an earlier row holding the same text, no short text replaced
+OK   33222: 687 rows, 7659938 -> 1608807 bytes (21%), 288 pointers; other fields equal, every pointer resolves to an earlier row holding the same text, no short text replaced
+OK   33249: 558 rows, 5067877 -> 1456627 bytes (29%), 186 pointers; other fields equal, every pointer resolves to an earlier row holding the same text, no short text replaced
+OK   33261: 610 rows, 5493726 -> 1551146 bytes (28%), 196 pointers; other fields equal, every pointer resolves to an earlier row holding the same text, no short text replaced
 OK   edge: empty rows: 0 rows, 50 -> 50 bytes (100%), 0 pointers; other fields equal, every pointer resolves to an earlier row holding the same text, no short text replaced
 OK   edge: no p_rows: 0 rows, 19 -> 19 bytes (100%), 0 pointers; other fields equal, every pointer resolves to an earlier row holding the same text, no short text replaced
 OK   edge: a null body is sent as the base sends it | null
-OK   edge: one long text twice, two fields, a null and a short text: 4 rows, 10263 -> 7345 bytes (72%), 1 pointers; other fields equal, every pointer resolves to an earlier row holding the same text, no short text replaced
-OK   largest deduplicated body 1609671 bytes is under the 33218 body that wrote in time (5.2 MB)
-9 OK, 0 FAIL
+OK   edge: one long text twice, two fields, a null and a short text: 4 rows, 10263 -> 7342 bytes (72%), 1 pointers; other fields equal, every pointer resolves to an earlier row holding the same text, no short text replaced
+OK   largest deduplicated body 1608807 bytes is under the 33218 body that wrote in time (5.2 MB)
+12 OK, 0 FAIL

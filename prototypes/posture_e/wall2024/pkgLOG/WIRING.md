@@ -22,3 +22,11 @@ Reading a row's prompt later: if prompt_sent starts with "[SAME prompt_sent AS r
 
 Build: `node pkgLOG/build_LOG.cjs` (in: fetchback_live_s16.json, the 7efcffc7 live flow; the base jsonBody is asserted exactly). Plan with both values: plan_LOG.json.
 Revert: set jsonBody back to plan_LOG.json base_value.
+
+## v2 (after 33261 ERROR "invalid syntax" at Write Enforcer Log; s22 reverted to 41f0ba09)
+- Cause, reproduced with n8n's expression engine (@n8n/tournament 1.15.0): the code held "}}" in `']';}});`, which ends the {{ }} expression early ("Unexpected end of input"). Removing the \' alone does not fix it (tested).
+- Fix: `} }` with a space; the pointer text now says "of the run log" (no quote to escape). The build asserts no inner {{ or }}.
+- Test: test_LOG.cjs now runs both expressions in @n8n/tournament (T0 shows the v1 text fails and v2 parses). Setup: npm ci --prefix pkgLOG. 12 OK; 33261 body 5.49 MB -> 1.55 MB.
+- Base: live s25 (396a2d54); the base jsonBody sha 99cfeb5aab940910 is unchanged. Final sha 6eb60b02f3460697.
+- Not tested: n8n's full Expression class (its extensions and sandbox) beyond tournament, and the DB write time.
+- My miss: v1's test evaluated with new Function, not n8n's engine, so it could not catch a parse error.

@@ -4,14 +4,18 @@
 const fs=require('fs');const P=JSON.parse(fs.readFileSync('pkgLOG/plan_LOG.json','utf8'));let ok=0,bad=0;const out=[];
 const T=(n,c,d)=>{const l=(c?'OK  ':'FAIL')+' '+n+(d?' | '+d:'');console.log(l);out.push(l);c?ok++:bad++;};
 const expr=v=>v.replace(/^=\{\{\s*/,'').replace(/\s*\}\}$/,'');
-const run=(v,body)=>new Function('$','return '+expr(v))(n=>{if(n!=='Alternate Merge')throw new Error('reads '+n);return {first:()=>({json:{enforcer_log_body:body}})};});
+// v2: the expression runs in n8n's own expression engine (@n8n/tournament 1.15.0, pkgLOG/package.json; npm ci --prefix pkgLOG), the way the
+// Write Enforcer Log node reads it, so a "}}" or a quote the engine refuses fails here (33261 "invalid syntax"; the v1 test used new Function).
+const {Tournament}=require(__dirname+'/node_modules/@n8n/tournament');const TOUR=new Tournament(()=>{});
+const run=(v,body)=>TOUR.execute(String(v).replace(/^=/,''),{$:n=>{if(n!=='Alternate Merge')throw new Error('reads '+n);return {first:()=>({json:{enforcer_log_body:body}})};},JSON,Object,Array});
+T('T0 the final expression parses in n8n\'s engine (the v1 expression does not: "Unexpected end of input")',(()=>{try{run(P.final_value,{p_rows:[]});return true;}catch(e){return false;}})()&&(()=>{try{run(P.final_value.replace("']';} });","']';}});"),{p_rows:[]});return false;}catch(e){return true;}})());
 T('base expression reproduces JSON.stringify of the body',run(P.base_value,{a:[1]})===JSON.stringify({a:[1]}));
 const check=(name,body)=>{const s0=run(P.base_value,body),s1=run(P.final_value,body);const a=JSON.parse(s0),b=JSON.parse(s1);
  const R0=a.p_rows||[],R1=b.p_rows||[];let fields=true,ptr=0,res=true,short=true;
  if(R0.length!==R1.length)return T(name+': row count',false);
  for(const k of Object.keys(a))if(k!=='p_rows'&&JSON.stringify(a[k])!==JSON.stringify(b[k]))fields=false;
  R0.forEach((r,i)=>{const q=R1[i];for(const k of new Set([...Object.keys(r),...Object.keys(q)])){if(k==='prompt_sent'||k==='full_reply'){
-   if(r[k]===q[k])continue;if(typeof r[k]!=='string'||r[k].length<2000){short=false;continue;}const m=String(q[k]).match(/^\[SAME (prompt_sent|full_reply) AS row (\d+) of this run's log: /);
+   if(r[k]===q[k])continue;if(typeof r[k]!=='string'||r[k].length<2000){short=false;continue;}const m=String(q[k]).match(/^\[SAME (prompt_sent|full_reply) AS row (\d+) of the run log: /);
    if(!m||m[1]!==k){res=false;continue;}ptr++;const t=R1[+m[2]-1];if(!t||t[k]!==r[k]||+m[2]-1>=i)res=false;}else if(JSON.stringify(r[k])!==JSON.stringify(q[k]))fields=false;}});
  T(name+': '+R0.length+' rows, '+s0.length+' -> '+s1.length+' bytes ('+Math.round(100*s1.length/Math.max(1,s0.length))+'%), '+ptr+' pointers; other fields equal, every pointer resolves to an earlier row holding the same text, no short text replaced',fields&&res&&short&&s1.length<=s0.length);return s1.length;};
 const D='/mnt/project-files/wall2024/inputs/';const runs=[...new Set(fs.readdirSync(D).filter(f=>/_Alternate_Merge\.json$/.test(f)).map(f=>f.split('_')[0]))].sort();
