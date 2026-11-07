@@ -1,0 +1,11 @@
+Run 2026-11-06 23:10 CST (no run live; 33249 ended 22:33 CST). Every call was in a rolled-back sub-block and the block ended in RAISE, so nothing persisted.
+Afterward: 33249's debate_results row still has panel_expected [chatgpt,gemini,sol] and drv_removed NULL, the live function md5 is unchanged, and 0 gra2_ functions remain.
+live md5 a3f6ab00dd33d323b084ffd89fa13b0f
+T1 live function, 33249 body: REFUSED odv1_record_panel_alternates: grok is not an active openrouter reserve seat with a family
+T2 fixed function, 33249 body: OK {"ok": true, "written": true, "panel_expected": ["gemini", "grok", "sol"]}
+T3 fixed, kimi (provider moonshot) refused: REFUSED ... kimi is not an active reserve seat the openrouter alternate call serves (provider openrouter, or xai with an x-ai/ model), with a family
+T4 fixed, mimo (provider xiaomi) refused: REFUSED ... mimo is not an active reserve seat the openrouter alternate call serves ...
+T5 fixed, grok with a wrong model refused: REFUSED ... grok is model x-ai/grok-4.7, not x-ai/grok-4.6
+T6 fixed, gemini already on the panel refused: REFUSED ... gemini already sits on the panel
+T7 fixed, alt_minimax31 still refused: REFUSED ... (role alternate, as before)
+T8 fixed, opus (family anthropic debates here, G1) refused: REFUSED ... G1: family anthropic debates in this debate
