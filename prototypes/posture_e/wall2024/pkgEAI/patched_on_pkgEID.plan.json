@@ -1,0 +1,26 @@
+{
+ "source": "W2 pkgEAI, W3 grade_33389 fault 2 (answer written inline in a paragraph)",
+ "base": "pkgEID/patched",
+ "nodes": [
+  {
+   "name": "Judge Enforcer Build",
+   "file": "Judge_Enforcer_Build.js",
+   "base_sha": "8c4699bc921f",
+   "final_sha": "8da5bc1a6fa4",
+   "bytes": [
+    61265,
+    63364
+   ]
+  },
+  {
+   "name": "Alt Judge Enforcer Build",
+   "file": "Alt_Judge_Enforcer_Build.js",
+   "base_sha": "e16b19d7fbcb",
+   "final_sha": "f657b0894f3a",
+   "bytes": [
+    61186,
+    63285
+   ]
+  }
+ ]
+}
