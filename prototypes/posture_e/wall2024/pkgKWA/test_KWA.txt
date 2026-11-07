@@ -1,0 +1,16 @@
+OK   33430: "Jesus is of David's flesh, which I grant." is flagged whole | ["[CR2] LINK 6: \"Jesus is of David's flesh, which I grant.\""]
+OK   standalone "I grant." takes the antecedent sentence | ["[CR2] LINK 6: \"Mary is of David. I grant.\""]
+OK   "I grant it." takes the antecedent sentence | ["[CR2] LINK 6: \"Mary is of David. I grant it.\""]
+OK   "I grant that." takes the antecedent sentence | ["[CR2] LINK 6: \"Mary is of David. I grant that.\""]
+OK   antecedent on the previous line | ["[CR2] LINK 6: \"Mary is of David. I grant it.\""]
+OK   33345: antecedent is the quoted press line | ["[CR2] no link heading: \"MEANS [CR3] P5.1: \"the angel gave the name before the conception\" I grant it.\""]
+OK   no antecedent (heading line before): no item | []
+OK   no antecedent (round start): no item | []
+OK   runs of "Mary is of the house of David. I grant it." include 6-word runs of the antecedent alone | ["mary is of the house of","is of the house of david","of the house of david i","the house of david i grant","house of david i grant it","mary is of the house of","is of the house of david"]
+OK   a reason holding only "it" no longer matches
+OK   "I grant that X" is unchanged
+OK   "I withdraw it from Hebrews 10:5." is unchanged
+OK   runs include the granted words "jesus is of davids flesh" | ["jesus is of davids flesh which","is of davids flesh which i","of davids flesh which i grant","jesus is of davids flesh"]
+OK   33430 sol JUDGE STATEMENT (quotes "Jesus is of David's flesh") now quotes it
+OK   33430 grok reason (quotes only "I grant.") still does not
+15 OK, 0 FAIL

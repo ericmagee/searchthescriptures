@@ -1,3 +1,48 @@
+/* pkgCSP (B8): the stored count split. CLR is W1's count-line reader (pkgCLR/clr.cjs), here in its own scope. */
+const __CSP=(()=>{
+/* pkgCLR: the count-line entry reader (W1 work item 1, Wall 2701). It reads a judge's last CONCEDED LINKS (DEFENDER) or CHALLENGER CONCEDED
+   LINKS line together with its unlabelled continuation lines (gemini writes the premises on the next line: 33218), and returns the count the
+   line states and each entry it names: {ref:'PREMISE'|'LINK'|'C'|'D', num, link (a "(LINK n" written beside a premise), tag}. COUNTED tags (in capitals):
+   UNEXHIBITED, CONCEDED, WITHDRAWN; a line whose count is 0 counts none. Not counted: VOID, SPARED, SUPPORTED, NOT VOID, "spared". Numbers inside parentheses and quotes are read
+   only as a premise's own "(LINK n". Side-neutral; one library for pkgKSC and the count checks. */
+const CLR=(()=>{
+ const LBL=/^\s*(?:[-\u2022>]\s*|\d+[.)]\s+)?\**\s*(?:[A-Z][A-Z0-9 '\/()-]{2,60}:|D\d+\s+vs\.?\s+C\d+|C\d+\s+vs\.?\s+D\d+|\[|FORCED\b|RESULT\b|KEYSTONE\b|CLAUSE\b|#)/;
+ const COUNTED=/^(UNEXHIBITED|CONCEDED|WITHDRAWN)$/i,TAGS='UNEXHIBITED|CONCEDED|WITHDRAWN|VOID|SPARED|SUPPORTED';
+ const un=s=>String(s==null?'':s).replace(/\\n/g,'\n').replace(/\\+"/g,'"');
+ function block(text,side){const L=un(text).split('\n');const lab=side==='CHALLENGER'?/^\s*(?:[-\u2022>]\s*)?\**\s*CHALLENGER CONCEDED LINKS\**\s*:\s*\**\s*(\d+)?/i:/^\s*(?:[-\u2022>]\s*)?\**\s*(?:DEFENDER )?CONCEDED LINKS\**\s*:\s*\**\s*(\d+)?/i;
+  let at=-1,cnt=null;L.forEach((l,i)=>{const m=l.match(lab);if(m){at=i;cnt=m[1]!=null?+m[1]:null;}});if(at<0)return null;
+  const parts=[L[at].replace(lab,'')];for(let i=at+1;i<L.length&&i<at+12;i++){const l=L[i];if(!l.trim())break;if(LBL.test(l.replace(/[*_`]/g,'')))break;parts.push(l);}
+  return {count:cnt,line:L[at].trim(),cont:parts.length-1,body:parts.join(' ').replace(/[*_`]/g,'').replace(/\s+/g,' ').trim()};}
+ // a "ref group": "Premise 2", "Premises 2, 4 and 5", "premise 6", "item 1", "LINK 5", "C1", "(1)", or a bare "2" after "--", ";" or ":"
+ const REF=new RegExp('(?:\\b(premises?|items?|links?|counted:?)\\s+((?:\\d+(?:\\s*(?:,|and|&|–|-|to|through)\\s*)*)+)|\\b([CD])(\\d)\\b|\\((\\d)\\)|(?:^|--|;|:)\\s*(\\d)(?=\\s+(?:'+TAGS+')\\b))','gi');
+ const nums=s=>{const o=[];const t=String(s).replace(/\s+/g,' ');for(const m of t.matchAll(/(\d+)\s*(?:[–-]|to|through)\s*(\d+)|(\d+)/g)){if(m[1]){for(let k=+m[1];k<=+m[2]&&k<=+m[1]+9;k++)o.push(k);}else o.push(+m[3]);}return o;};
+ function entries(body){const out=[];if(!body)return out;
+  // parentheses and quotes are masked (their numbers are verses), except a "(LINK n" right after a premise
+  let b=body.replace(/"[^"]*"|\u201c[^\u201d]*\u201d|\u2018[^\u2019]*\u2019|(?<=[\s(])'[^']{3,}?'(?=[\s,.;:)]|$)/g,m=>' '.repeat(m.length));
+  const own=[];b=b.replace(/\(([^()]*)\)/g,(m,c,off)=>{const k=c.match(/^\s*(?:\[?DR2\]?\s*)?LINK\s+(\d+|none)\b/i);if(k)own.push({at:off,link:/none/i.test(k[1])?'none':+k[1]});return /^\s*\d\s*$/.test(c)?m:' '.repeat(m.length);});
+  for(const cl of splitClauses(b)){const lead=cl.text.match(new RegExp('^\\s*(?:--\\s*)?(?:counted\\s*:?\\s*)?('+TAGS+')\\b(?:\\s*\\(stated\\))?\\s*:','i'));
+   const refs=[...cl.text.matchAll(REF)];
+   for(let r=0;r<refs.length;r++){const m=refs[r];let ref,ns;
+    if(m[1]){const w=m[1].toLowerCase();ref=/^link/.test(w)?'LINK':'PREMISE';ns=nums(m[2]);}else if(m[3]&&!new RegExp('^\\s*[:(\\-\\s]*('+TAGS+')\\b','i').test(cl.text.slice(m.index+m[0].length))){continue;}else if(m[3]){ref=m[3];ns=[+m[4]];}else if(m[5]){ref='PREMISE';ns=[+m[5]];}else{ref='PREMISE';ns=[+m[6]];}
+    const from=m.index+m[0].length;let nx=r+1;let inl=null; /* "premise 1 LINK 5 CONCEDED": the LINK names the premise's link */
+    if(ref==='PREMISE'&&ns.length===1&&refs[nx]&&/^link/i.test(refs[nx][1]||'')&&/^\s*$/.test(cl.text.slice(from,refs[nx].index))){const k=nums(refs[nx][2]);if(k.length===1){inl=k[0];r++;nx++;}}
+    const from2=inl!=null?refs[r].index+refs[r][0].length:from;const to=nx<refs.length?refs[nx].index:cl.text.length;const seg=cl.text.slice(from2,to);
+    let tg=(seg.match(new RegExp('\\b((?:NOT|not|none|no)\\s+)?(UNEXHIBITED|CONCEDED|WITHDRAWN|VOID|SPARED|SUPPORTED|[Ss]pared|[Ss]upported)\\b'))||[]);let tag=tg[2]?(tg[1]?'NOT '+tg[2]:tg[2]).toUpperCase():null; /* counted tags are read in capitals only ("was conceded but" is prose); NOT/none/no negates */
+    if(!tag&&lead)tag=lead[1].toUpperCase();if(!tag){const back=cl.text.slice(0,m.index).match(new RegExp('\\b('+TAGS+')\\b[^.;]*$','i'));if(back&&!/\b(spared|supported)\b/i.test(cl.text.slice(back.index,m.index)))tag=null;}
+    if(!tag)continue;const ow=own.find(o=>o.at>=cl.off+m.index&&o.at<=cl.off+from+2);
+    for(const n of ns)out.push({ref,num:n,link:inl!=null?inl:(ref==='PREMISE'&&ow?ow.link:null),tag,counted:COUNTED.test(tag)});}}
+  return out;}
+ function splitClauses(b){const o=[];let off=0;for(const p of b.split(/(?<=[.;])\s+(?=[A-Z(\d]|premise|item|counted)/)){o.push({text:p,off:b.indexOf(p,off)});off+=p.length;}return o;}
+ function read(text,side){const B=block(text,side);if(!B)return null;const e=entries(B.body);const counted=B.count===0?[]:[...new Map(e.filter(x=>x.counted).map(x=>[x.ref+x.num,x])).values()];
+  return {...B,entries:e,counted,named:counted.length,agrees:B.count==null?null:counted.length===B.count};}
+ return {read,block,entries};})();
+const nm=x=>(x.ref==='PREMISE'?'premise ':x.ref==='LINK'?'link ':x.ref)+x.num;
+const one=(t,side,stored)=>{const st=(typeof stored==='number'&&isFinite(stored))?stored:null;const r=CLR.read(t,side);if(!r)return {stored:st,stated:null,granted:0,unexhibited:0,unnamed:null,granted_items:[],unexhibited_items:[]};
+ const g=r.counted.filter(x=>x.tag==='CONCEDED'||x.tag==='WITHDRAWN'),u=r.counted.filter(x=>x.tag==='UNEXHIBITED');
+ return {stored:st,stated:r.count,granted:g.length,unexhibited:u.length,unnamed:r.count==null?null:Math.max(0,r.count-g.length-u.length),granted_items:g.map(nm),unexhibited_items:u.map(nm)};};
+return (t,dc,cc)=>{try{return {reader:'pkgCLR',defender:one(String(t==null?'':t),'DEFENDER',dc),challenger:one(String(t==null?'':t),'CHALLENGER',cc)};}catch(e){return {reader:'pkgCLR',error:String(e&&e.message||e).slice(0,200)};}};})();
+const __CSPOUT=(()=>{
+const __L={"Alt Gate Record":()=>$('Alt Gate Record'),"Alt Judge Enforcer Record":()=>$('Alt Judge Enforcer Record'),"Alt Seated":()=>$('Alt Seated'),"Alt Send Back Record":()=>$('Alt Send Back Record'),"Alternate Merge":()=>$('Alternate Merge'),"Alternate Merge Seat":()=>$('Alternate Merge Seat'),"Cited Verses":()=>$('Cited Verses'),"Gate Record":()=>$('Gate Record'),"Panel Build":()=>$('Panel Build'),"Panel Cure Check":()=>$('Panel Cure Check'),"Quote Report":()=>$('Quote Report')}; /* pkgPTA: literal names only */
 // ======== judge_fix9 (PROVEN_STRUCTURE_DRAFT_v2; rulings 396-402): shared libraries ========
 // judge_fix9 S3 (rulings 398, 399; PROVEN_STRUCTURE_DRAFT_v2 sections 3 and 4): every press under a listed premise's PRESSED WITH: is parsed,
 // not judged, in one fixed form:
@@ -195,11 +240,26 @@ const L2C=(()=>{
   if(!out.length)for(const m of s.matchAll(/["“]([a-zà-ɏḀ-ỿʼʻ'-]{3,24})["”]/g))latin(m[1]);
   return out;}
  // every [L2] tag of the rounds ([[side, round, text], ...]), with its words and the verses its block cites
+ // pkgL2R: a word named only as the root of another ("from *nomos*", "from the root X", "derived from G3551") is marked root:true
+ const ROOTPRE=/(?:\bfrom|\broot|\bderived\s+from|\bcognate\s+(?:of|with|to)|\brelated\s+to)(?:\s+(?:the|a|an))?(?:\s+(?:root|verb|noun|word|stem|lemma|greek|hebrew|aramaic))*[\s*_"\u201c\u201d\u2018\u2019'(,:]*$/i;
+ const LETTER=/[a-z\u00e0-\u024f\u1e00-\u1eff\u0370-\u03ff\u1f00-\u1fff\u0590-\u05ff\u02bc\u02bb]/i;
+ function markRoots(seg,wds){const s=String(seg||'');const lo=s.toLowerCase();const R=new Set();
+  const occ=w=>{const out=[];const k=String(w.w).toLowerCase();const sm=w.kind==='strongs'?k.match(/^([gh])(\d+)$/):null;
+   if(sm){for(const x of s.matchAll(new RegExp('\\b'+sm[1]+'0*'+sm[2]+'\\b','gi')))out.push(x.index);return out;}
+   let i=-1;while((i=lo.indexOf(k,i+1))>=0){const b=i>0?lo[i-1]:'',a=lo[i+k.length]||'';if((b&&LETTER.test(b))||(a&&LETTER.test(a)))continue;out.push(i);}return out;};
+  const pos=wds.map(occ);
+  // pass 0: the root phrase stands just before the word; pass 1: a word in parentheses just after a root word ("from *nomos* (G3551)")
+  const rootAt=(i,pass)=>{const pre=s.slice(Math.max(0,i-60),i);if(ROOTPRE.test(pre))return true;if(!pass)return false;
+   const m=pre.match(/([^\s(*_"\u201c\u201d]+)[*_"\u201d\u2019]*\s*\(\s*$/);if(!m)return false;const j=i-pre.length+pre.lastIndexOf(m[1]);
+   return wds.some((w,k)=>R.has(k)&&pos[k].includes(j));};
+  for(let pass=0;pass<2;pass++)wds.forEach((w,k)=>{if(R.has(k)||!pos[k].length)return;if(pos[k].every(i=>rootAt(i,pass)))R.add(k);});
+  return wds.map((w,k)=>R.has(k)?{...w,root:true}:w);}
  function tags(rounds){const out=[];for(const [side,round,text] of rounds||[]){const t=String(text||'');
   for(const m of t.matchAll(/\[L2\]/g)){const i=m.index;let e=t.length;const nx=t.slice(i+4).search(/\[L[1-4]\]|\n/);if(nx>=0)e=i+4+nx;let seg=t.slice(i+4,Math.min(e,i+4+500));
    if(!seg.replace(/[*_\s:.\-]+/g,'').length){const nl=t.indexOf('\n',e+1);seg=t.slice(e,nl<0?t.length:Math.min(nl,e+500));}
    let wds=tagWords(seg);if(!wds.length){const pe=t.slice(i+4).search(/\n\s*\n|\[L[1-4]\]/);const seg2=t.slice(i+4,pe<0?Math.min(t.length,i+904):Math.min(i+4+pe,i+904));const w2=tagWords(seg2);if(w2.length){seg=seg2;wds=w2;}}
    const blk=blockAt(t,i);const own=refsIn(seg);const __ls=t.lastIndexOf('\n',i)+1,__le=(x=>x<0?t.length:x)(t.indexOf('\n',i));const __line=t.slice(__ls,__le);const __press=/--\s*MEANS\s*:/.test(t.slice(__ls,i)); /* s429 F4: a press line's [L2] is read against that line's verses */const vs=[...new Set(own.concat(__press?refsIn(__line):refsIn(blk)))];const ap=[...new Set(apocIn(seg).concat(apocIn(blk)))];
+   wds=markRoots(seg,wds); /* pkgL2R */
    out.push({side,round,at:i,seg:seg.replace(/\s+/g,' ').trim().slice(0,300),words:wds,verses:vs,apoc:ap});}}
   return out;}
  // ---------- matching ----------
@@ -224,16 +284,18 @@ const L2C=(()=>{
   return {ok:false};}
  function check(TG,OW,LEX,READ){const IX=index(OW,LEX);const RD=new Set(READ||Object.keys(IX.V));
   return (TG||[]).map(t=>{const vs=t.verses||[];const read=vs.filter(k=>RD.has(k));const cands=[].concat(...read.map(k=>IX.V[k]||[]));
-   const ws=(t.words||[]).map(wd=>{const m=matchWord(wd,cands,IX);return {w:wd.w,kind:wd.kind,ok:m.ok,num:m.num||null,route:m.route||null};});
+   const ws=(t.words||[]).map(wd=>{const m=matchWord(wd,cands,IX);const at=m.ok?read.filter(k=>(IX.V[k]||[]).some(r=>numOf(r.strongs_number)===m.num)):[];
+    return {w:wd.w,kind:wd.kind,ok:m.ok,num:m.num||null,route:m.route||null,...(wd.root?{root:true}:{}),...(at.length?{in:at.join(', ')}:{})};});
+   const core=ws.some(w=>!w.root)?ws.filter(w=>!w.root):ws; /* pkgL2R: a root the tag names does not decide it */
    let status,why;
    if(!ws.length){status='IGNORED';why='names no Hebrew or Greek word: not an [L2] claim';}
    else if(!vs.length&&t.apoc&&t.apoc.length){status='UNVERIFIABLE';why='Apocrypha ('+t.apoc.join(', ')+'): the original-words table holds the 66 books only';}
    else if(!ws.length){status='IGNORED';why='names no Hebrew or Greek word: not an [L2] claim';}
    else if(!vs.length){status='NOT COUNTED';why='its block cites no verse';}
-   else if(ws.every(w=>w.ok)){status='COUNTED';why=ws.map(w=>w.w+' = '+w.num).join(', ');}
+   else if(core.every(w=>w.ok)){status='COUNTED';why=ws.map(w=>w.w+' = '+(w.ok?w.num:'root, not in the cited verse')).join(', ');}
    else if(read.length<vs.length){status='UNVERIFIABLE';why='the words of '+vs.filter(k=>!RD.has(k)).join(', ')+' were not read this run';}
    else if(t.apoc&&t.apoc.length&&!ws.some(w=>w.ok)){status='UNVERIFIABLE';why='Apocrypha ('+t.apoc.join(', ')+')';}
-   else{status='NOT COUNTED';why='not in the cited verse: '+ws.filter(w=>!w.ok).map(w=>w.w).join(', ')+' (cited: '+vs.join(', ')+')';}
+   else{status='NOT COUNTED';why='not in the cited verse: '+core.filter(w=>!w.ok).map(w=>w.w).join(', ')+' (cited: '+vs.join(', ')+')';}
    return {...t,words:ws,status,why};});}
  // ---------- counts ----------
   function countClaims(rounds){const out=[];for(const [side,round,text] of rounds||[]){const t=String(text||'');
@@ -430,6 +492,150 @@ function kfLines(text,R){const items=[],marks=[];const T=String(text||'').replac
   items.push({rule:'K-F',side:'BOTH',link:id,line:l.slice(0,600),why:'no FORCED line'});
   marks.push('[AUDIT v28: DEBATE RULE VIOLATION (K-F) -- '+id+' grades a link BROKEN as forced with no FORCED line quoting the MEANS sentence, the answer and the layer that fails (ruling 396). LIVE rule: left uncured after the cure, it removes the seat. REVIEW THIS ROW.]');}
  return {items,marks};}
+// pkgFCB (W3 feedback ruling B7; W3 rulings 00:05Z 11-07: TRIAL for one run, checked against the whole KJV verse): K-FC. A FORCED line carries
+// CARRIED BY: "<the words of the pressed witness's own verse that state its MEANS>", and those words stand in that verse as the run read it
+// (Cited Verses). The press's verse is the reference its MEANS line carries in the round the FORCED line names. Side-neutral: every FORCED line.
+// A verse the run did not read, or a press whose reference is not found, is NOT CHECKED (no item) when CARRIED BY is written.
+const KFC_REF=/((?:[1-3] )?[A-Z][a-z]+(?: of [A-Z][a-z]+)?)\.? (\d{1,3}):(\d{1,3})(?:\s?[-–]\s?(\d{1,3}))?/g;
+const KFC_CB=/(?:--|—|–)\s*CARRIED\s+BY\s*:\s*["“]([^"”]{3,}?)["”]/i;
+function kfcVerse(means,rt){const refs=s=>[...String(s||'').matchAll(new RegExp(KFC_REF.source,'g'))];
+ const head=refs(means).find(z=>z.index<=3);let r=head||null; /* a MEANS quotation that opens with its press's reference */
+ if(!r&&typeof rt==='string'){const fm=kkjvFold(means).split(' ').slice(0,12).join(' ');
+  const line=fm?__kfLB(rt).replace(/[*_`]+/g,'').split('\n').find(x=>kkjvFold(x).includes(fm)):null;
+  if(line){const mi=line.search(/MEANS\s*:/i);const all=refs(line);r=(mi>=0?all.filter(z=>z.index<mi).pop():null)||all[0]||null;}}
+ if(!r)return null;return {ref:r[0].replace(/\.\s/,' '),book:r[1],ch:+r[2],v1:+r[3],v2:+(r[4]||r[3])};}
+function kfcText(v,rows){if(!v)return null;const parts=[];for(let n=v.v1;n<=v.v2;n++){const x=(rows||[]).find(q=>q&&q.book===v.book&&+q.chapter===v.ch&&+q.verse===n);if(!x)return null;parts.push(x.text);}return parts.join(' ');}
+// pkgKFF (W1 Wall 2768; W3 ruling Wall 2769: TRIAL, records and answers only, side-neutral): K-FF. A FORCED line's FAILS quotation names what in
+// the answer fails (ruling 411: a failure of fit). A FAILS quotation that is only the words of a KJV verse the answer quotes says what the verse
+// says, not what in the answer fails. Raised only when (a) every word of the FAILS quotation, normalized as krulNorm does, stands inside one KJV
+// verse as the run read it (Cited Verses, kjv_verses); (b) the ANSWER round quotes that verse as a verse quotation (its reference plus quote
+// marks, either order) and the FAILS words stand inside that quotation; (c) the FAILS quotation is 4 words or more. A verse the run did not read is
+// NOT CHECKED (no item).
+const KFF_Q='["“]([^"“”]{6,600})["”]';
+function kffPairs(T){const out=[];const t=String(T||'');const R=new RegExp(KKJV_REF.source,'g');let m;
+ while((m=R.exec(t))){const ref={book:m[1],ch:+m[2],v1:+m[3],v2:+(m[4]||m[3])};
+  const after=new RegExp('^[\\s,:;(\\-–—]{0,6}(?:\\[L\\d\\]\\s*)?'+KFF_Q).exec(t.slice(R.lastIndex,R.lastIndex+700));if(after)out.push({...ref,q:after[1]});
+  const before=new RegExp(KFF_Q+'[\\s,.;:]{0,3}[(\\[]?\\s*$').exec(t.slice(Math.max(0,m.index-700),m.index));if(before)out.push({...ref,q:before[1]});}
+ return out;}
+function kffVerse(p,rows){const parts=[];for(let n=p.v1;n<=p.v2;n++){const x=(rows||[]).find(q=>q&&q.book===p.book&&+q.chapter===p.ch&&+q.verse===n);if(!x)return null;parts.push(x.text);}return parts.join(' ');}
+function kffLines(text,R,rows0){const items=[],marks=[],report=[];const T=String(text||'').replace(/\\n/g,'\n').replace(/[*_`]+/g,'');let rows=rows0||null;
+ for(const raw of T.split('\n')){const l=raw.trim();if(!/^(?:[-•]|\d+[.)])?\s*FORCED(?:\s*\(\s*Commitment\s+\d+\s*\))?\s*:/i.test(l))continue;const m=l.match(KF_LINE);if(!m)continue; /* K-F reports a FORCED line not in the form */
+  const id=m[1].replace(/\s+vs\.?\s+/i,' vs ').toUpperCase().replace('VS','vs');const rk=m[4].toUpperCase();const f=krulNorm(m[6]);
+  if(f.split(' ').filter(Boolean).length<4)continue; /* (c) */
+  const rt=R&&typeof R[rk]==='string'?__kfLB(R[rk]).replace(/[*_`]+/g,''):null;if(!rt)continue;
+  const hit=kffPairs(rt).filter(p=>(' '+krulNorm(p.q)+' ').includes(' '+f+' ')); /* (b) */
+  if(!hit.length)continue;if(!rows)rows=kkjvRows();let why=null,ref=null;
+  for(const p of hit){const r=p.book+' '+p.ch+':'+p.v1+(p.v2!==p.v1?'-'+p.v2:'');const kt=kffVerse(p,rows);
+   if(!kt){report.push('NOT CHECKED (the verse was not read this run): '+id+' FAILS "'+m[6].slice(0,120)+'" quoted in ['+rk+'] as '+r);continue;}
+   if((' '+krulNorm(kkjvNoMargin(kt))+' ').includes(' '+f+' ')){ref=r;why='its FAILS quotation "'+m[6].slice(0,200)+'" is only the words of '+r+', a verse the answer quotes in ['+rk+']; it shows what the verse says, not what in the answer fails (ruling 411)';break;}} /* (a) */
+  if(!why)continue;
+  items.push({rule:'K-FF',side:'BOTH',link:id,ref,fails:m[6],why,line:'FORCED line for '+id+': '+why+'. Write the FORCED line again with FAILS: "<the answer\'s own words in ['+rk+'] that fail to show the fit, outside its verse quotations>", or RETRACTED the link with one CORRECTED RESULT, or RESTATED it not graded LINK BROKEN. Your line: '+l.slice(0,600)});
+  marks.push('[AUDIT v49: DEBATE RULE VIOLATION (K-FF) -- '+id+': '+why+'. TRIAL rule: answer it in the cure; it removes no seat; not counted in audit_flags.]');}
+ return {items,marks,report};}
+function kfcLines(text,R,rows0){const items=[],marks=[],report=[];const T=String(text||'').replace(/\\n/g,'\n').replace(/[*_`]+/g,'');let rows=rows0||null;
+ for(const raw of T.split('\n')){const l=raw.trim();if(!/^(?:[-•]|\d+[.)])?\s*FORCED(?:\s*\(\s*Commitment\s+\d+\s*\))?\s*:/i.test(l))continue;const m=l.match(KF_LINE);if(!m)continue; /* K-F reports a FORCED line not in the form */
+  const id=m[1].replace(/\s+vs\.?\s+/i,' vs ').toUpperCase().replace('VS','vs');const rk=m[2].toUpperCase();const v=kfcVerse(m[3],R&&R[rk]);const cb=l.match(KFC_CB);let why=null;
+  if(!cb)why='the FORCED line has no CARRIED BY: "<the words of '+(v?v.ref:'the pressed verse')+' that state its MEANS>" (W3 B7)';
+  else if(kkjvFold(cb[1]).split(' ').filter(Boolean).length<3)why='its CARRIED BY quotes fewer than three words';
+  else{if(!rows)rows=kkjvRows();const kt=kfcText(v,rows);
+   if(!v){report.push('NOT CHECKED (the press of '+id+' names no reference the code found): CARRIED BY "'+cb[1].slice(0,120)+'"');continue;}
+   if(!kt){report.push('NOT CHECKED (the verse was not read this run): '+v.ref+' CARRIED BY "'+cb[1].slice(0,120)+'"');continue;}
+   if(!kkjvStands(cb[1],kt))why='its CARRIED BY words "'+cb[1].slice(0,160)+'" are not in '+v.ref+', which reads: "'+kkjvNoMargin(kt).replace(/\s+/g,' ').trim().slice(0,400)+'"';}
+  if(!why)continue;
+  items.push({rule:'K-FC',side:'BOTH',link:id,ref:v?v.ref:null,means:m[3],why,line:'FORCED line for '+id+': '+why+'. Write the FORCED line again with CARRIED BY: "<the words of '+(v?v.ref:'the pressed verse')+' that state the MEANS sentence, quoted from the KJV>" between FAILS and GROUND, or RETRACTED the link, or RESTATED it not graded LINK BROKEN. Your line: '+l.slice(0,600)});
+  marks.push('[AUDIT v48: DEBATE RULE VIOLATION (K-FC) -- '+id+': '+why+'. TRIAL rule: answer it in the cure; it removes no seat; not counted in audit_flags.]');}
+ return {items,marks,report};}
+// pkgUNX (W3 2676, 2677): K-UNX. A premise a seat counts UNEXHIBITED (in CONCEDED LINKS or CHALLENGER CONCEDED LINKS) whose answering link-round
+// block exhibits two or more layer kinds (FOOTING LAYERS, lbFoot, the reader K-LB uses) must have its count name the missing layer ([L1], [L2],
+// [L3] or [L4], one the block does not exhibit), or be restated as a fit ruling (taken out of the count and graded at its collision, ruling 411).
+// A count that rests on a ground that is not a layer (an unanswered or unnamed witness, answers not counted, a struck or barred answer, VOID, a narrowed link, an ASSUMES premise) is not read.
+// Side-neutral; TRIAL for one run. The mirror of K-LB (a block with fewer than two kinds that is not counted).
+const UNX_TAG=/\[?\bL([1-4])\b\]?/g;
+const UNX_OTHER=/\bunanswered\b|\bno\s+answer\b|\bnot\s+answered\b|\bwithout\s+(?:\S+\s+){0,2}?answers?\b|\b(?:not|never)\s+named\b|\bNOT\s+COUNTED\b|\bnarrowed\b|\bleaves?\s+[^.;]{0,80}?\bunmet\b|\bstruck\b|\bbarred\b|\bVOID\b|\bROWS\s+GIVE\b|\bASSUMES\b|\bno\s+(?:quoted\s+)?row\s+gives\b/i;
+// pkgUNXS: the K-UNX reader (unxSegs) also reads bare numbered entries ("-- 6 UNEXHIBITED", "; 2 UNEXHIBITED", "counted: 1 UNEXHIBITED"), as pkgCLR does,
+// and ends an entry at "Spared" so a spared list ("Spared: 2, 3, 4, each narrowed ...") is not read as the last counted entry's ground.
+function unxSegs(sec){const s=String(sec||'');const H=[];
+ for(const h of s.matchAll(/\bPremises?\s+(\d+(?:\s*(?:,\s*(?:and|or|&)?|and|&|or)\s*\d+)*)/gi))H.push({i:h.index,ns:h[1].match(/\d+/g).map(Number)});
+ for(const h of s.matchAll(/(?:^|--|;|:|\.)\s*(\d)(?=\s+(?:UNEXHIBITED|CONCEDED|WITHDRAWN)\b)/g)){const i=h.index+h[0].length-1;if(!H.some(x=>x.i<=i&&i<x.i+12))H.push({i,ns:[+h[1]]});}
+ for(const h of s.matchAll(/\bSpared\b/g))H.push({i:h.index,ns:[]});
+ H.sort((a,b)=>a.i-b.i);return H.map((h,k)=>({ns:h.ns,seg:s.slice(h.i,k+1<H.length?H[k+1].i:s.length)})).filter(x=>x.ns.length);}
+
+// pkgUNXW (W3 2738): the K-UNX cure reads a layer as named missing only when the STATEMENT says it is missing: a lack word (no, not, lacks, without,
+// missing, absent, never, nor, fails) within 40 characters before the tag on its clause, or after it on its clause "is missing / absent / lacking / not exhibited", "does not ..." or "fails" (its [L4] does not follow).
+// "The block exhibits [L1] and [L2]" names no missing layer (33249 grok premise 5). The raise test (unxNamed) is unchanged.
+function unxLack(s,kinds){const t=String(s||'').replace(/["“][^"”]*["”]/g,' ');const have=new Set((kinds||[]).map(k=>(String(k).match(/[1-4]/)||[''])[0]));const named=[];
+ for(const m of t.matchAll(/\[?\bL([1-4])\b\]?/g)){const pre=t.slice(Math.max(0,m.index-40),m.index).split(/[.;]/).pop();const post=t.slice(m.index+m[0].length,m.index+m[0].length+60).split(/[.;]/)[0];
+  if(/\b(?:no|not|nothing|lacks?|lacking|without|missing|absent|never|nor|neither|fails?)\b[^\[]*$/i.test(pre)||/^\s*(?:layer\s+)?(?:(?:is|are)\s+)?(?:missing|absent|lacking|not\s+(?:exhibited|shown|given|present|there))\b/i.test(post)||/^[^\[]{0,30}?\b(?:does|do|did|is|are)\s+not\b|^[^\[]{0,30}?\bfails?\b/i.test(post))named.push(m[1]);}
+ return {named,missing:named.filter(n=>n==='4'||!have.has(n))};}
+function unxNamed(s,kinds){const t=String(s||'').replace(/["“][^"”]*["”]/g,' ');const have=new Set((kinds||[]).map(k=>(String(k).match(/[1-4]/)||[''])[0]));
+ const named=[...t.matchAll(UNX_TAG)].map(m=>m[1]);return {named,missing:named.filter(n=>n==='4'||!have.has(n))};}
+// MEANS ground (W3 2683 condition 2): a count that says the answer does not meet the press's MEANS is a fit ground, not a layer ground, and is not read
+// when (a) the segment states that ground (meet/answer ... MEANS, meaning, significance, inference, claim, press), (b) it points at one press of that premise
+// from the other side's UNSUPPORTED-L4 PREMISES list: it quotes the MEANS (8 consecutive words, all of it when shorter, the pkgOAN test), shares 4 consecutive
+// words with it, or names its verse, and (c) the answering block does not quote that MEANS on any line (the pkgOAN test).
+const UNX_MW=s=>String(s||'').toLowerCase().replace(/[‘’]/g,"'").replace(/[^a-z0-9' ]+/g,' ').replace(/\s+/g,' ').trim();
+const UNX_MRUN=(a0,b0,k0)=>{const a=' '+UNX_MW(a0)+' ',b=UNX_MW(b0);if(!b)return false;if(a.includes(' '+b+' '))return true;const bw=b.split(' ');const k=Math.min(k0,bw.length);for(let i=0;i+k<=bw.length;i++)if(a.includes(' '+bw.slice(i,i+k).join(' ')+' '))return true;return false;};
+const UNX_MGROUND=/\b(?:meet|meets|meeting|met|answer|answers|answering|answered)\b[^.;]{0,80}?\b(?:MEANS|meaning|significance|inference|claim|claimed|press|pressed)\b/i;
+function unxPresses(r){const t=String(r||'');let i=-1;for(const m of t.matchAll(/UNSUPPORTED-?\s*\[?L4\]?\s*PREMISES/gi))i=m.index;if(i<0)return [];
+ const its=t.slice(i).split(/\n(?=\s*\**\s*\d+[.)]\s)/).filter(x=>/^\s*\**\s*\d+[.)]\s/.test(x));const out=[];
+ for(const x of its){const n=+x.match(/^\s*\**\s*(\d+)/)[1];const pw=x.search(/PRESSED WITH\s*:/i);if(pw<0)continue;
+  for(const l of x.slice(pw).split('\n').slice(1)){const m=l.match(/^\s*[-*•]?\s*\**\s*([1-3]?\s*[A-Z][A-Za-z ]+?\s+\d+:\d+(?:[-–]\d+)?)\**\s*[\s\S]*?\s--\s*MEANS\s*:\s*([\s\S]+?)(?:\s+--\s+(?=\[L\d\]|PROVEN\b)|\s+\|\s+|$)/);
+   if(!m)continue;const means=m[2].replace(/^["“]|["”]$/g,'').trim();if(UNX_MW(means).split(' ').length<3)continue;out.push({n,ref:m[1].replace(/\s+/g,' ').trim(),means});}}
+ return out;}
+function unxMeansGround(seg,blk,P){if(!UNX_MGROUND.test(seg))return false;const sg=String(seg).replace(/\s+/g,' ');
+ return P.some(p=>{const ref=p.ref.replace(/\s+/g,'\\s+').replace(/\./g,'\\.');const hit=UNX_MRUN(sg,p.means,8)||UNX_MRUN(sg,p.means,4)||new RegExp('\\b'+ref+'\\b(?!\\s*[-–]?\\d)').test(sg);
+  return hit&&!String(blk).split('\n').some(l=>UNX_MRUN(l,p.means,8));});}
+// pkgUNXA (W3 2721, 2727): K-UNX-A, two grounds K-UNX exempted outright, now checked. TRIAL, side-neutral, raised as rule K-UNX with a:'ASSUMES'|'UNANSWERED'.
+// A: a premise counted UNEXHIBITED on an ASSUMES ground, whose answering block exhibits 2 or more layer kinds with a counted [L1], and whose ASSUMES clause
+//    (with its ROWS GIVE part) holds no 6 words in a row of that [L1] quotation (all of it when shorter).
+// B: a premise counted UNEXHIBITED on an "unanswered" ground that names a press (its verse, or 8 words in a row of its MEANS) whose MEANS the answering
+//    block quotes on a line holding "MEANS" (the pkgOAN 8-word test), the block exhibiting 2 or more layer kinds.
+// Any other ground that is not a layer (NOT COUNTED, narrowed, VOID, struck, barred, not named, unmet, without answers) stays exempt; "no row gives" is the ASSUMES ground itself and is read with it.
+const UNXA_HARD=/\b(?:not|never)\s+named\b|\bNOT\s+COUNTED\b|\bnarrowed\b|\bleaves?\s+[^.;]{0,80}?\bunmet\b|\bstruck\b|\bbarred\b|\bVOID\b|\bwithout\s+(?:\S+\s+){0,2}?answers?\b/i;
+const UNXA_ASM=/\bASSUMES\b/;const UNXA_UNA=/\bunanswered\b|\bno\s+answer\b|\bnot\s+answered\b/i;
+// the block's [L1]: the first quotation carrying a reference, read as lbFoot reads it (ruling 400)
+function unxaL1(blk){const t=String(blk==null?'':blk).replace(/\*\*/g,'').replace(/__/g,'');const R=[...t.matchAll(LB_REF)].map(m=>({k:m[0].replace(/\.\s/,' '),a:m.index,b:m.index+m[0].length}));
+ for(const m of t.matchAll(/["“][^"”\n]{4,}?["”]|(?<=^|[\s(:])['‘][^'’\n]{4,}?['’](?=$|[\s.,;:)\]])/g)){const a=m.index,b=a+m[0].length;const aft=R.find(r=>r.a>=b&&r.a-b<=4&&/^[\s(]*$/.test(t.slice(b,r.a)));const bef=R.filter(r=>r.b<=a&&a-r.b<=80).pop();const r=aft||bef;
+  if(r)return {ref:r.k,q:m[0].slice(1,-1)};}return null;}
+// a segment runs to the next premise header, so the words before that header ("). VOID premise 2", "). Spared: premise 3") belong to the next entry:
+// the exempt grounds are read only up to the segment's last stop when what follows it is 40 characters or less
+const unxaHead=s=>{const m=String(s).match(/^([\s\S]*[.;)])\s*[^.;)]{0,40}$/);return m?m[1]:String(s);};
+// pkgASM: the act an ASSUMES clause names, when it is a knowing, begetting or conceiving (the judges' instruction: never an ASSUMES); '' when none
+function unxaAct(cl){const f=String(cl==null?'':cl).replace(/^[\s\S]*?\bASSUMES\b\s*:?/,'').split(/--\s*ROWS\s+GIVE|\bROWS\s+GIVE\b/i)[0];
+ const m=f.match(/\b(?:knew|knows?|knoweth|known|knowing|begat|begot|begets?|begotten|begetting|conceived?|conceives|conceiving)\b(?!\s*(?:of|that|as)\b)/i);return m?m[0]:'';}
+function unxaCheck(all,blk,k,P){if(all.some(z=>UNXA_HARD.test(unxaHead(z.seg))))return null;if(k.length<2)return null;
+ const A=all.filter(z=>UNXA_ASM.test(z.seg)),B=all.filter(z=>UNXA_UNA.test(z.seg));
+ if(A.length){const cl=A.map(z=>z.seg.slice(z.seg.search(UNXA_ASM))).join(' ');const asm=unxaAct(cl);const l1=k.includes('L1')?unxaL1(blk):null;const ua=!!(l1&&!UNX_MRUN(cl,l1.q,6)); /* pkgASM */
+  if(ua||asm)return {a:ua?'ASSUMES':'ASM',asm,l1:l1||unxaL1(blk),seg:A[0].seg};}
+ if(B.length){const BL=String(blk).split('\n');const L=BL.filter(l=>/\bMEANS\b/.test(l));
+  // the answer to that press: from its MEANS line to the next MEANS line; its [L1] is the first quotation with a reference there
+  const sub=p=>{const i=BL.findIndex(l=>/\bMEANS\b/.test(l)&&UNX_MRUN(l,p.means,8));if(i<0)return '';let e=BL.findIndex((l,x)=>x>i&&/\bMEANS\b/.test(l));return BL.slice(i,e<0?BL.length:e).join('\n');};
+  for(const z of B){const sg=z.seg.replace(/\s+/g,' ');for(const p of P){const ref=p.ref.replace(/\s+/g,'\\s+').replace(/\./g,'\\.');
+   if(!(new RegExp('\\b'+ref+'\\b(?!\\s*[-–]?\\d)').test(sg)||UNX_MRUN(sg,p.means,8)))continue;if(L.some(l=>UNX_MRUN(l,p.means,8)))return {a:'UNANSWERED',press:p,l1:unxaL1(sub(p))||unxaL1(blk),seg:z.seg};}}}
+ return null;}
+
+function kunxLines(text,ptext){const items=[],marks=[];if(typeof text!=='string'||!(typeof ptext==='string'||(ptext&&typeof ptext==='object')))return {items,marks};let R;try{R=typeof ptext==='string'?ciRounds(ptext):ptext;}catch(e){return {items,marks};} /* pkgRCK: also takes the rounds object */
+ for(const side of ['DEFENDER','CHALLENGER']){const rk=side==='CHALLENGER'?'DR3':'CR3';const sec=ciCountSection(text,side);if(!sec||typeof R[rk]!=='string')continue;
+  const n0=+((sec.match(/:\s*(\d+)/)||[])[1]||0);const lab=side==='DEFENDER'?'CONCEDED LINKS':'CHALLENGER CONCEDED LINKS';if(!(n0>=1))continue; /* pkgUNX0 (W1 2805): a count of 0 counts nothing; a stray UNEXHIBITED line under it raises no K-UNX */
+  const SG=unxSegs(sec);const PR=unxPresses(side==='CHALLENGER'?R.CR3:R.DR3);const segsOf=j=>SG.filter(s=>s.ns.includes(j)); /* every segment of the count section that names premise j */
+  for(const s of SG){if(!/\bUNEXHIBITED\b/.test(s.seg)||/\b(?:not|never|no\s+longer)\s+UNEXHIBITED\b/i.test(s.seg))continue;
+   for(const j of s.ns){const all=segsOf(j);if(all.some(z=>UNX_OTHER.test(z.seg))){const bk=lbBlockText(R[rk],j);const ua=bk?unxaCheck(all,bk,lbFoot(bk,true),PR.filter(p=>p.n===j)):null; /* pkgUNXA */
+    if(ua){const id=side+' premise '+j;if(!items.some(x=>x.link===id)){const k=lbFoot(bk,true);const L1=ua.l1?ua.l1.ref+' "'+ua.l1.q.slice(0,160)+'"':'';
+     const why=(ua.asm?'counted UNEXHIBITED in '+lab+' on an ASSUMES ground that names an act the link infers ("'+ua.asm+'"); an inferred act, such as a begetting or a knowing, is never an ASSUMES'+(ua.a==='ASM'?'':'; and it is '):'')+(ua.a==='ASM'?'':ua.a==='ASSUMES'?'counted UNEXHIBITED in '+lab+' on an ASSUMES ground, but its ['+rk+'] block exhibits '+k.join(' and ')+' and the ASSUMES clause does not quote the block\'s [L1] '+L1
+      :'counted UNEXHIBITED in '+lab+' as unanswered, but its ['+rk+'] block quotes the MEANS of the press '+ua.press.ref+' under a MEANS line and answers it with '+k.join(' and ')); /* pkgASM */
+     items.push({rule:'K-UNX',a:ua.a,asm:ua.asm||'',side,link:id,premise:j,kinds:k,conc:n0,l1:ua.l1?ua.l1.q:'',l1ref:ua.l1?ua.l1.ref:'',press:ua.press?ua.press.ref:'',why,line:id+': '+why+'. Quote the block\'s [L1]'+(L1?' ('+L1+')':'')+(ua.a==='UNANSWERED'?' answering that press':'')+' in a STATEMENT for this item and name the layer the block lacks ("[L1]", "[L2]", "[L3]" or "[L4]", one the block does not exhibit; a failure of fit is not a missing layer), or write a CORRECTED COUNT for '+lab+' without this premise and grade its fit at the collision (a FORCED line, ruling 411). A KEEP does not cure it. Your count: '+ua.seg.replace(/\s+/g,' ').trim().slice(0,400)});
+     if(ua.asm){const it=items[items.length-1];it.line=id+': '+why+'. In a STATEMENT for this item write ASSUMES: <the given fact the step takes for granted, not what the link infers>'+(ua.a==='ASSUMES'?' and quote the block\'s [L1]'+(L1?' ('+L1+')':'')+', naming what that verse lacks for the step':'')+'; or write a CORRECTED COUNT for '+lab+' without this premise and grade its fit at the collision (a FORCED line, ruling 411). A KEEP does not cure it. Your count: '+ua.seg.replace(/\s+/g,' ').trim().slice(0,400);} /* pkgASM */
+     marks.push('[AUDIT v49: DEBATE RULE VIOLATION (K-UNX) -- '+id+': '+why+'. TRIAL rule: answer it in the cure; it removes no seat; not counted in audit_flags.]');}}
+    if(!ua&&bk){const kk=lbFoot(bk,true);const nl=all.map(z=>unxLack(z.seg,kk));const nm=[...new Set([].concat(...nl.map(r=>r.named)))].sort(); /* pkgUNXL */
+     if(kk.length>=2&&nm.length&&nl.every(r=>!r.missing.length)){const id=side+' premise '+j;if(!items.some(x=>x.link===id)){const z0=all[0];
+      const why='counted UNEXHIBITED in '+lab+' saying the block lacks '+nm.map(n=>'[L'+n+']').join(' and ')+', but its ['+rk+'] block exhibits '+kk.join(' and ')+'; the count names no layer the block lacks';
+      items.push({rule:'K-UNX',side,link:id,premise:j,kinds:kk,conc:n0,lack:nm,why,line:id+': '+why+'. Name the missing layer in a STATEMENT for this item ("[L1]", "[L2]", "[L3]" or "[L4]", one the block does not exhibit), or write a CORRECTED COUNT for '+lab+' without this premise and grade its fit at the collision (a FORCED line, ruling 411). Your count: '+z0.seg.replace(/\s+/g,' ').trim().slice(0,400)});
+      marks.push('[AUDIT v49: DEBATE RULE VIOLATION (K-UNX) -- '+id+': '+why+'. TRIAL rule: answer it in the cure; it removes no seat; not counted in audit_flags.]');}}}
+    continue;}const blk=lbBlockText(R[rk],j);if(!blk)continue;const k=lbFoot(blk,true);if(k.length<2)continue;if(all.some(z=>unxMeansGround(z.seg,blk,PR.filter(p=>p.n===j))))continue;if(all.some(z=>unxNamed(z.seg,k).missing.length))continue;
+    const id=side+' premise '+j;if(items.some(x=>x.link===id))continue;const why='counted UNEXHIBITED in '+lab+', but its ['+rk+'] block exhibits '+k.join(' and ')+' and the count names no layer the block lacks';
+    items.push({rule:'K-UNX',side,link:id,premise:j,kinds:k,conc:n0,why,line:id+': '+why+'. Name the missing layer in a STATEMENT for this item ("[L1]", "[L2]", "[L3]" or "[L4]", one the block does not exhibit), or write a CORRECTED COUNT for '+lab+' without this premise and grade its fit at the collision (a FORCED line, ruling 411). Your count: '+s.seg.replace(/\s+/g,' ').trim().slice(0,400)});
+    marks.push('[AUDIT v49: DEBATE RULE VIOLATION (K-UNX) -- '+id+': '+why+'. TRIAL rule: answer it in the cure; it removes no seat; not counted in audit_flags.]');}}}
+ return {items,marks};}
 const KR_LINE=/^\s*(?:[-•]|\d+[.)])?\s*REFERENCE\s*:\s*(.+?)\s*(?:--|—|–)\s*\[?\s*((?:CR|DR)[1-4])\s*\]?\s*(?:--|—|–)\s*(CONFIRMED|NOT CONFIRMED)\s*(?:--|—|–)\s*["“](.+?)["”]\s*\/\s*["“](.+?)["”]\s*\.?\s*$/i;
 function krLines(text,R){const items=[],marks=[];const T=String(text||'').replace(/\\n/g,'\n').replace(/[*_`]+/g,'');const lines=T.split('\n').map(x=>x.trim()).filter(l=>/^(?:[-•]|\d+[.)])?\s*REFERENCE\s*:/i.test(l));
  for(const side of ['DEFENDER','CHALLENGER']){const PL=pwList(R,side);if(!PL)continue;
@@ -501,7 +707,7 @@ const REFP=(()=>{const BOOKS="Genesis|Exodus|Leviticus|Numbers|Deuteronomy|Joshu
 // after it has proved itself on stored text. C4-RENUM and C4-PRESS (the close-round numbering and press checks) make notes, never items.
 const KW_NH=true; /* pkgKW (d): NOT HELD quoting the flagged sentence answers a K-W item */
 const ENF_STATUS={'K-B':'LIVE','K-C':'LIVE','K-G1':'LIVE','K-G3':'LIVE','K-G4':'LIVE','K-G6':'LIVE','K-G7':'LIVE','K-G8':'LIVE','K-N':'LIVE','K-S':'LIVE','K-SC':'LIVE',
- 'K-LB':'TRIAL','K-G9':'TRIAL','K-G10':'TRIAL','K-G11':'TRIAL','K-V':'LIVE','K-S2':'TRIAL','K-LXX':'TRIAL','K-P':'TRIAL','K-F':'LIVE','K-R':'TRIAL','K-L2':'TRIAL','K-W':'LIVE','K-S3':'LIVE','C4-RENUM':'TRIAL','C4-PRESS':'TRIAL','K-CON':'LIVE','K-CMT':'LIVE','K-CMTL':'TRIAL','K-RUL':'TRIAL','K-KJV':'TRIAL','K-AG':'TRIAL'};
+ 'K-LB':'TRIAL','K-G9':'TRIAL','K-G10':'TRIAL','K-G11':'TRIAL','K-V':'LIVE','K-S2':'TRIAL','K-LXX':'TRIAL','K-P':'TRIAL','K-F':'LIVE','K-FC':'TRIAL','K-FF':'TRIAL','K-UNX':'TRIAL','K-R':'TRIAL','K-L2':'TRIAL','K-W':'LIVE','K-S3':'LIVE','C4-RENUM':'TRIAL','C4-PRESS':'TRIAL','K-CON':'LIVE','K-CMT':'LIVE','K-CMTL':'TRIAL','K-RUL':'TRIAL','K-KJV':'TRIAL','K-AG':'TRIAL'};
 const enfStatus=r=>ENF_STATUS[String(r||'')]==='TRIAL'?'TRIAL':'LIVE';
 const enfLive=x=>enfStatus(x&&x.rule)==='LIVE';
 // WALL-2024 silence count (Eric 2026-11-05 21:18 CST, reply 2185): an item of ANY rule, TRIAL included, with NO WRITTEN RESPONSE (flagged silent by
@@ -675,7 +881,7 @@ function kwLines421(text,R){const items=[],marks=[];if(!R)return {items,marks};c
  for(const [side,rks] of [['DEFENDER',['CR2','CR3','CR4']],['CHALLENGER',['DR2','DR3','DR4']]]){let n=0;
   for(const rk of rks){const t=String(R[rk]||'').replace(/[*_`]+/g,'');if(!t)continue;
    for(const m of t.matchAll(RX)){if(n>=10)break;const pre=t.slice(0,m.index);{const ls=pre.lastIndexOf('\n')+1;const le=t.indexOf('\n',m.index);const ln=t.slice(ls,le<0?t.length:le);const bf=t.slice(ls,m.index);if((/^\s*#/.test(ln)&&!/[.!?]["\u201d']?\s*$/.test(ln))||((bf.match(/["\u201c\u201d]/g)||[]).length%2===1)||/^\s*(?:none|nothing|no)\b/i.test(t.slice(m.index+m[0].length))){n++;continue;}} /* pkgKW (a) quoted, (b) heading, (c) negated: not a withdrawal; the number is kept */const hd=[...pre.matchAll(/(?:^|\n)[ \t>#-]*((?:LINK\s*\d+|[DC]\d+)\b[^\n:]{0,40}):/gi)].pop();const lab=hd?(hd[1].match(/^(?:LINK\s*\d+|[DC]\d+)\b/i)||[hd[1]])[0].replace(/\s+/g,' ').trim().slice(0,30):'no link heading'; /* pkgKGW (1): the link token only */
-    const s=t.slice(m.index).split(/(?<=[.!?])\s|\n/)[0].slice(0,220).trim();n++;const id=side+' '+rk+' '+lab+' #'+n;
+    let s=t.slice(m.index).split(/(?<=[.!?])\s|\n/)[0].slice(0,220).trim();if(/^\s*(?:it|that|this|so|them|these|those)?\s*[.!?]?["\u201d']?\s*$/i.test(s.slice(m[0].length))){const bnd=x=>Math.max(t.lastIndexOf('\n',x-1)+1,...[...t.slice(0,x).matchAll(/[.!?]["\u201d']?\s+/g)].map(z=>z.index+z[0].length));const ls2=bnd(m.index);const own=t.slice(ls2,m.index).replace(/[,;:\s]*(?:which|as|that|this)?\s*$/i,'');if(/[A-Za-z0-9]/.test(own)){if(!/[A-Za-z0-9]/.test(s.slice(m[0].length)))s=(t.slice(ls2,m.index)+s).slice(0,220).trim();}else{let q=ls2;while(q>0&&/\s/.test(t[q-1]))q--;const pv=q>0?t.slice(bnd(q-1),q).trim():'';if(!/[A-Za-z0-9]/.test(pv)||!(/[.!?]["\u201d')]?$/.test(pv)||/"[^"]{3,}"|\u201c[^\u201d]{3,}\u201d/.test(pv))){n++;continue;}s=(pv+' '+s).slice(0,300).trim();} /* pkgKWA (W3 2942): a pronoun or standalone grant takes the antecedent sentence */} /* pkgKWC (1): a grant with no object takes its whole sentence (33430 "..., which I grant.") */n++;const id=side+' '+rk+' '+lab+' #'+n;
     items.push({rule:'K-W',side,link:id,line:'['+rk+'] '+lab+': "'+s+'"'});
     marks.push('[AUDIT v30: WITHDRAWAL TO ANSWER (K-W; ruling 421) -- '+id+': "'+s.replace(/[\[\]"]/g,'')+'"; the judge answers STANDS WITHOUT IT because <layer>, CONCEDED, or NOT HELD with a reason that quotes it (six words in a row, or all of it when shorter). LIVE rule: left uncured after the cure, it removes the seat. REVIEW THIS ROW.]');}}}
  {const P=wpLines2024(R);P.items.forEach(x=>items.push(x));P.marks.forEach(x=>marks.push(x));const Q=kconLines2024(text,P.items);Q.items.forEach(x=>items.push(x));Q.marks.forEach(x=>marks.push(x));const Z=kcmtLines2024(text);Z.items.forEach(x=>items.push(x));Z.marks.forEach(x=>marks.push(x));} // WALL-2024 check 2 (TRIAL, on K-W); package A: K-CON (Commitment 10, TRIAL)
@@ -838,10 +1044,10 @@ function kkjvStands(q,cited){if(!cited)return false;const segs=kkjvSegs(q,cited)
  const cv=' '+kkjvFold(kkjvNoMargin(cited))+' ';let at=0;for(const g of segs){const k=cv.indexOf(' '+g+' ',at);if(k<0)return false;at=k+g.length+1;}return true;}
 function kkjvText(text){let T=String(text||'');const s=T.trim();if(s[0]==='{'){const i=s.lastIndexOf('}');try{const J=JSON.parse(s.slice(0,i+1));if(J&&typeof J.reasoning==='string')T=J.reasoning;}catch(e){}}return T.replace(/\n\n\[AUDIT v[\s\S]*$/,'');}
 const KKJV_REF=/\b((?:[1-3] )?[A-Z][a-z]+(?: of [A-Z][a-z]+)?) (\d{1,3}):(\d{1,3})(?:-(\d{1,3}))?\b/g;
-const KKJV_Q=/^[\s,:;(\-–—]{0,6}(?:\[L1\]\s*)?["“]([^"“”]{6,400})["”]/;
+const KKJV_Q=/^[\s,:;(\-–—]{0,6}(?:\[L1\]\s*)?(?:["“]([^"“”]{6,400})["”]|(?<![A-Za-z0-9])['‘](?!s\b|\s)((?:[^'‘’\n]|['’](?=[a-z])){6,400}?)['’](?![a-z]))/; /* pkgL1Q2 (W3 2896): a single-quoted verse quote is read too; an in-word apostrophe neither opens nor closes it, and a possessive 's right after the reference (Luke 3:23's) does not open one, nor does a mark followed by a space (the close of a quoted reference) */
 const KKJV_VER=/\b(RSV|NRSV|NIV|ESV|NASB|NKJV|NLT|Septuagint|LXX)\b/;
 function kkjvPairs(T){const out=[];const A=new RegExp(KKJV_REF.source,'g');let m;
- while((m=A.exec(T))){const q=KKJV_Q.exec(T.slice(A.lastIndex,A.lastIndex+500));if(q&&kkjvFold(q[1]).split(' ').filter(Boolean).length>=3)out.push({book:m[1],ch:+m[2],v1:+m[3],v2:+(m[4]||m[3]),q:q[1]});}
+ while((m=A.exec(T))){const q=KKJV_Q.exec(T.slice(A.lastIndex,A.lastIndex+500));const __q=q?(q[1]||q[2]):null; /* pkgL1Q2 */if(__q&&kkjvFold(__q).split(' ').filter(Boolean).length>=3)out.push({book:m[1],ch:+m[2],v1:+m[3],v2:+(m[4]||m[3]),q:__q});}
  return out;}
 // {items, marks, report}: an item for each verse quote that does not stand in its verse; the report lists NOT CHECKED quotes, non-verse quotes and other-version names.
 function kkjvLines2024(text,ROWS){const items=[],marks=[],report=[];const T=kkjvText(text);if(!T.trim())return {items,marks,report,not_checked:0};
@@ -1129,7 +1335,7 @@ const CURE_FORM="ANSWER FORM. Write each cure as one line of its own, beginning 
  +"that round's own answer; a K-G4 item whose pressed witness a later round of that side names is not cured by any statement. For a K-G6 item it must quote, word for word, the transcript's words that show the verse is not a pressed witness of that premise. For a K-G10 item it must quote the PRESSED WITH: line that carries the verse, with its book, chapter and verse. Cured if it passes; else the violation stands. "
  +"RESPONSE: <the flagged item, as labelled above> | <in your own words: whether you accept the mark and why, or why the mark is wrong, naming the round and quoting its words>. Write one RESPONSE line for every flagged item, in addition to the cure line it needs; an item with no RESPONSE line is not cured, whatever else the reply holds. "
  +"Only these lines are read. A link not on a RETRACTED line is not retracted. A line not in this form cures nothing. Any other text is recorded only. An item you leave without a RESPONSE line counts against your seat, under every rule, as an unanswered item of a live rule does, and your seat may be replaced. If you hold an item wrong, write NOT HELD with your reason. That is an answer. Write it on that item's RESPONSE line: RESPONSE: <the flagged item, as labelled above> | NOT HELD: <your reason>. A TRIAL item (its mark says TRIAL rule) asks only for its own form: write that form, or NOT HELD. A TRIAL item never asks you to retract or regrade a line, and it is not a reason to change any grade; retract or regrade a line only for a reason from the rounds. For a K-RUL item, write the card; a missing card is not a reason to change the grade. Every RESTATED line you write is a deciding ruling (Commitment 11): under it, in this reply, write its five-line card, one field to a line: RULING -- <the subject of the RESTATED line, e.g. D2 vs C3> -- <the grade>, CLAIM:, NAMED BY:, RULE:, APPLIED:. A RESTATED line without its card raises a K-RUL item. For a K-CON item, a NOT HELD line must quote the flagged sentence, at least six words in a row, or the item stays uncured. For a K-W item, a NOT HELD line must quote the flagged sentence, at least six words in a row of what follows its verb (all of it when shorter), or the item stays uncured.";
-const cureLabel=x=>x.rule==='K-B'?x.link:((x.rule==='K-W'||x.rule==='K-S3'||x.rule==='K-G1'||x.rule==='K-G4'||x.rule==='K-G6'||x.rule==='K-G7'||x.rule==='K-G8'||x.rule==='K-G9'||x.rule==='K-G10'||x.rule==='K-G11'||x.rule==='K-V'||x.rule==='K-LB'||x.rule==='K-S'||x.rule==='K-S2'||x.rule==='K-LXX'||x.rule==='K-P'||x.rule==='K-F'||x.rule==='K-R'||x.rule==='K-L2'||x.rule==='K-C'||x.rule==='K-N'||x.rule==='K-SC'||x.rule==='K-K'||x.rule==='K-CON'||x.rule==='K-CMT'||x.rule==='K-CMTL'||x.rule==='K-RUL'||x.rule==='K-KJV'||x.rule==='K-AG')?x.rule+' '+x.link:'K-G3 '+x.side);
+const cureLabel=x=>x.rule==='K-B'?x.link:((x.rule==='K-W'||x.rule==='K-S3'||x.rule==='K-G1'||x.rule==='K-G4'||x.rule==='K-G6'||x.rule==='K-G7'||x.rule==='K-G8'||x.rule==='K-G9'||x.rule==='K-G10'||x.rule==='K-G11'||x.rule==='K-V'||x.rule==='K-LB'||x.rule==='K-S'||x.rule==='K-S2'||x.rule==='K-LXX'||x.rule==='K-P'||x.rule==='K-F'||x.rule==='K-FC'||x.rule==='K-FF'||x.rule==='K-UNX'||x.rule==='K-R'||x.rule==='K-L2'||x.rule==='K-C'||x.rule==='K-N'||x.rule==='K-SC'||x.rule==='K-K'||x.rule==='K-CON'||x.rule==='K-CMT'||x.rule==='K-CMTL'||x.rule==='K-RUL'||x.rule==='K-KJV'||x.rule==='K-AG')?x.rule+' '+x.link:'K-G3 '+x.side);
 // pkgG4W (W3 2294): does a K-G4 line claim a pressed witness left unanswered? DRV_WORDS on the line as before, or a plain-words phrase in its
 // GROUND clause with the quoted record words taken out (2294 (a): never in the grade line's own quotations).
 function g4Unans2024(line){const s=String(line||'');if(DRV_WORDS.test(s))return true;const i=s.search(/\bGROUND\s*:/i);if(i<0)return false;
@@ -1141,7 +1347,7 @@ function g4Label2024(x){return g4Unans2024(x.line)
  :' [MEANING BREAK: your GROUND names no pressed witness left unanswered, so this break rests on meaning. One FORCED line cures it, or RETRACTED beside a quoted reason the system verifies: quote, word for word, 6 or more words of the holding side answer from its own round, or name the verse of this line that its later round names. Otherwise a retraction leaves the item uncured, and an uncured K-G4 item counts against your seat (LIVE rule).]';}
 function cureAsk(items,broken){const kb=items.filter(x=>x.rule==='K-B'),kg=items.filter(x=>x.rule!=='K-B');let t='';
  if(kb.length)t+=CURE_RULE+'\n\nFLAGGED LINES:\n'+kb.map(x=>x.link+': '+String(x.line||'').trim()).join('\n');
- if(kg.length)t+=(t?'\n\n':'')+CURE_RULE_G+'\n\nFLAGGED ITEMS:\n'+kg.map(x=>cureLabel(x)+': '+((x.rule==='K-W'||x.rule==='K-S3'||x.rule==='K-G1'||x.rule==='K-G4'||x.rule==='K-G6'||x.rule==='K-G7'||x.rule==='K-G8'||x.rule==='K-G9'||x.rule==='K-G10'||x.rule==='K-G11'||x.rule==='K-V'||x.rule==='K-LB'||x.rule==='K-S'||x.rule==='K-S2'||x.rule==='K-LXX'||x.rule==='K-P'||x.rule==='K-F'||x.rule==='K-R'||x.rule==='K-L2'||x.rule==='K-C'||x.rule==='K-N'||x.rule==='K-SC'||x.rule==='K-K'||x.rule==='K-CON'||x.rule==='K-CMT'||x.rule==='K-CMTL'||x.rule==='K-RUL'||x.rule==='K-KJV'||x.rule==='K-AG')?String(x.line||'').trim()+(x.rule==='K-C'&&x.chain?'\n  '+x.chain:'')+(x.rule==='K-G4'?g4Label2024(x):''):x.side+' STANDING SELF-SUPPORTED while these '+x.side+' links are graded BROKEN: '+((broken||{})[x.side]||[]).join(', '))).join('\n');
+ if(kg.length)t+=(t?'\n\n':'')+CURE_RULE_G+'\n\nFLAGGED ITEMS:\n'+kg.map(x=>cureLabel(x)+': '+((x.rule==='K-W'||x.rule==='K-S3'||x.rule==='K-G1'||x.rule==='K-G4'||x.rule==='K-G6'||x.rule==='K-G7'||x.rule==='K-G8'||x.rule==='K-G9'||x.rule==='K-G10'||x.rule==='K-G11'||x.rule==='K-V'||x.rule==='K-LB'||x.rule==='K-S'||x.rule==='K-S2'||x.rule==='K-LXX'||x.rule==='K-P'||x.rule==='K-F'||x.rule==='K-FC'||x.rule==='K-FF'||x.rule==='K-UNX'||x.rule==='K-R'||x.rule==='K-L2'||x.rule==='K-C'||x.rule==='K-N'||x.rule==='K-SC'||x.rule==='K-K'||x.rule==='K-CON'||x.rule==='K-CMT'||x.rule==='K-CMTL'||x.rule==='K-RUL'||x.rule==='K-KJV'||x.rule==='K-AG')?String(x.line||'').trim()+(x.rule==='K-C'&&x.chain?'\n  '+x.chain:'')+(x.rule==='K-G4'?g4Label2024(x):''):x.side+' STANDING SELF-SUPPORTED while these '+x.side+' links are graded BROKEN: '+((broken||{})[x.side]||[]).join(', '))).join('\n');
  return t+'\n\n'+CURE_FORM;}
 // The BROKEN links of each side on the judge's own lines, selected as drvCheck selects them (portion 3).
 function cureBroken(text){const out={DEFENDER:[],CHALLENGER:[]};if(typeof text!=='string')return out;
@@ -1327,13 +1533,18 @@ function cureNamed(line,LR,w){w=w>0?w:0;const p=String(line||'').match(/\(([^)]*
 // names only the flag, the rule or the cure carries none of these and is no reason. Returns the links (upper case) that have a reason.
 // Amendment 3 (7571, Worker_E's 7570): the flagged item's own words are the flag, not a reason. A STATEMENT is tested after its bar only, and
 // from every carrier the text of a flagged item's line (flags: the items' lines; whitespace and emphasis folded) is removed before the test.
-function cureReasoned(o,flags){const U=s=>String(s).toUpperCase();const out=new Set();
+var __RXR_R=null; /* pkgRXR: the rounds of the last cureVerdicts call (one debate per run: the same rounds for every seat) */
+/* pkgL1Q (W3 2864, run 33371 row 14362): a single-quoted span of 3+ words, in the form pkgRXR's RESPONSE filter reads, counts as the carrier's reason
+   only when it stands in a round the body names (cureFound). Bodies reach here folded (curly marks are straight). */
+function __l1qSq(b,R){if(!R)return false;b=String(b||'');const rs=[...b.matchAll(/\b([CD]R[1-4])\b/gi)].map(m=>R[m[1].toUpperCase()]).filter(t=>typeof t==='string');if(!rs.length)return false;
+ return [...b.matchAll(/(?:^|[\s(\[{:;,])'([^\n]{8,}?)'(?=$|[\s.,;:!?)\]}"])/g)].some(m=>/\S\s+\S+\s+\S/.test(m[1])&&rs.some(t=>cureFound(m[1],t)));}
+function cureReasoned(o,flags,R0){const U=s=>String(s).toUpperCase();const out=new Set();const __R=R0||__RXR_R;
  const fold=s=>String(s||'').replace(/[*_`]+/g,'').replace(/[“”]/g,'"').replace(/[‘’]/g,"'").replace(/\s+/g,' ').trim();
  const F=[...new Set((flags||[]).map(fold).filter(Boolean))].sort((a,b)=>b.length-a.length);
  const strip=s=>{let t=fold(s);for(const f of F)t=t.split(f).join(' ');return t.replace(/\s+/g,' ').trim();};
- const carriers=o.statement.map(s=>({name:fold(s.label)+' '+strip(s.text),body:strip(s.text)})).concat(o.prose.map(p=>{const t=strip(p);return {name:t,body:t};})).concat(o.withdrawn.filter(w=>w.reason).map(w=>({name:w.link+' '+strip(w.reason),body:strip(w.reason)}))); /* judge_fix4 F3: a RETRACTED line carries its own reason */
+ const carriers=o.statement.map(s=>({name:fold(s.label)+' '+strip(s.text),body:strip(s.text)})).concat(o.prose.map(p=>{const t=strip(p);return {name:t,body:t};})).concat(o.withdrawn.filter(w=>w.reason).map(w=>({name:w.link+' '+strip(w.reason),body:strip(w.reason)}))).concat((o.response||[]).filter(s=>{const b=String(s.text||'');const qs=[...b.matchAll(/["\u201c]([^"\u201d]{8,})["\u201d]|(?:^|[\s(\[{:;,])['\u2018]([^\n]{8,}?)['\u2019](?=$|[\s.,;:!?)\]}"\u201d])/g)].map(m=>m[1]||m[2]);return __R&&[...b.matchAll(/\b([CD]R[1-4])\b/gi)].some(m=>{const t=__R[m[1].toUpperCase()];return typeof t==='string'&&qs.some(q=>cureFound(q,t));});}).map(s=>({name:fold(s.label)+' '+strip(s.text),body:strip(s.text)}))); /* pkgRXR (W3 2790): the item's RESPONSE line, when it names a round and quotes words standing in it */ /* judge_fix4 F3: a RETRACTED line carries its own reason */
  for(const w of o.withdrawn){const m=String(w.link).match(/^D(\d+) vs C(\d+)$/);if(!m)continue;const re=new RegExp('\\bD'+m[1]+'\\s+vs\\.?\\s+C'+m[2]+'\\b','i');
-  if(carriers.some(c=>re.test(c.name)&&/[\[(]?\b[CD]R[1-4]\b/i.test(c.body)&&(/["“][^"”]*\S\s+\S+\s+\S[^"”]*["”]/.test(c.body)||cureRefs(c.body).length>0)))out.add(U(w.link));}
+  if(carriers.some(c=>re.test(c.name)&&/[\[(]?\b[CD]R[1-4]\b/i.test(c.body)&&(/["“][^"”]*\S\s+\S+\s+\S[^"”]*["”]/.test(c.body)||cureRefs(c.body).length>0||__l1qSq(c.body,__R))))out.add(U(w.link));}
  return out;}
 // checker_fix FIX 2 (runs 32194 B2, 32212 B2): K-G4 searches, for each PRESSED witness the BROKEN line names, every later round of the side
 // that holds the link (order CR1 DR1 CR2 DR2 CR3 DR3; CR = defender, DR = challenger). The pressed witnesses: the verses the line names that
@@ -1477,9 +1688,9 @@ function drvVoid(text,ptext,dConc,cConc,dStand,cStand,LN){const items=[],marks=[
  return {items,marks};}
 function kcmf2024(v){try{const L=(v||[]).filter(y=>y&&y.rule==='K-CMTL');if(!L.length||L.some(y=>y.status!=='CURED'))return v;
  return v.map(x=>x&&x.rule==='K-CMT'&&x.status==='UNCURED'?{...x,status:'CURED',why:'every contested line is answered on K-CMTL ('+L.length+' line'+(L.length>1?'s':'')+', each naming its commitment or NOT A GRADE); the grouped RESPONSE alone named none (pkgKCMF, W3 grade_33083)'}:x);}catch(e){return v;}} /* pkgKCMF */
-function cureVerdicts(items,reply,broken,rounds){const U=s=>String(s).toUpperCase();const o=cureLines(reply&&reply.ok?reply.text:'');const R=rounds||{};
+function cureVerdicts(items,reply,broken,rounds){const U=s=>String(s).toUpperCase();const o=cureLines(reply&&reply.ok?reply.text:'');const R=rounds||{};__RXR_R=rounds||null; /* pkgRXR */
  const nK1={DEFENDER:items.filter(x=>x.rule==='K-G1'&&x.side==='DEFENDER').length,CHALLENGER:items.filter(x=>x.rule==='K-G1'&&x.side==='CHALLENGER').length};
- const rsn=cureReasoned(o,items.map(x=>x.line)); // DoD 18; amendment 3: the items' own lines are no reason
+ const rsn=cureReasoned(o,items.map(x=>x.line),R); // DoD 18; amendment 3: the items' own lines are no reason
  const wd=new Set(o.result.length===1?o.withdrawn.filter(w=>rsn.has(U(w.link))).map(w=>U(w.link)):[]); // BB-7330: a retraction counts only beside exactly one CORRECTED RESULT line
  const rxNoWhy=new Set(o.result.length===1?o.withdrawn.filter(w=>!rsn.has(U(w.link))).map(w=>U(w.link)):[]); // DoD 18: retracted with no reason
  const rxNoRes=new Set(o.result.length!==1?o.withdrawn.map(w=>U(w.link)):[]);
@@ -1497,7 +1708,7 @@ const respOf=(x)=>{const lb=U(cureLabel(x));const rk=U(x.rule||'');const ruleOk=
  // 6904 (c): a statement is run through the item's own check. Quotations in it (straight or curly marks, 3+ words) and round names ([DR1] etc.).
  const stmtQ=(t)=>[...String(t||'').matchAll(/["“]([^"”]{8,})["”]|(?:^|[\s(\[{:;,—–-])['‘]([^\n]{8,}?)['’](?=$|[\s.,;:!?)\]}"”—–-])/g)].map(m=>m[1]||m[2]); // judge_fix6 H2 (run 32293: GLM's statements quoted in single marks, 'And he said unto me ...', and were refused): double or single marks
  const stmtPress=(x)=>{const t=stmtOf(x);if(!t)return null;for(const rk of CURE_PRESS[x.side]){if(!new RegExp('\\['+rk+'\\]').test(t)||typeof R[rk]!=='string')continue;const q=stmtQ(t).find(q=>cureFound(q,R[rk]));if(q)return {round:rk,q,line:'STATEMENT: '+t};}return null;};
- return kcmf2024(items.map(x=>{const res=(status,why,lines,kinds)=>{const keys=(x.rule==='K-W'||x.rule==='K-S3'||x.rule==='K-B'||x.rule==='K-S'||x.rule==='K-C'||x.rule==='K-S2'||x.rule==='K-LXX'||x.rule==='K-F'||x.rule==='K-L2'||x.rule==='K-N'||x.rule==='K-SC'||x.rule==='K-K')?[x.link]:(x.rule==='K-G1'||x.rule==='K-G4')?[x.link,x.side]:[x.side].concat((broken||{})[x.side]||[]);
+ return kcmf2024(items.map(x=>{const res=(status,why,lines,kinds)=>{const keys=(x.rule==='K-W'||x.rule==='K-S3'||x.rule==='K-B'||x.rule==='K-S'||x.rule==='K-C'||x.rule==='K-S2'||x.rule==='K-LXX'||x.rule==='K-F'||x.rule==='K-FC'||x.rule==='K-FF'||x.rule==='K-UNX'||x.rule==='K-L2'||x.rule==='K-N'||x.rule==='K-SC'||x.rule==='K-K')?[x.link]:(x.rule==='K-G1'||x.rule==='K-G4')?[x.link,x.side]:[x.side].concat((broken||{})[x.side]||[]);
    const bad=status==='UNCURED'?o.malformed.find(l=>cureOwn(l,x)):null; /* judge_fix4 F3: the item's own refused line, never the first one found */
    return {...x,judge_statement:stmtOf(x),response:respOf(x),status,why:(why||'')+(bad?(why?'; ':'')+'malformed line: '+bad.slice(0,160):'')||null,statement:(l=>l&&l.length?l.join(' / '):null)(status==='CURED'&&/^retracted/.test(why||'')&&o.result.length===1?(lines||[]).concat([o.result[0].line]):lines),kinds:kinds||[]};}; // BB-7330: a cure by retraction shows its CORRECTED RESULT line
   if(!reply||!reply.ok)return res('UNCURED','cure call failed: '+(reply?reply.why:'no reply'),null);
@@ -1627,7 +1838,7 @@ const respOf=(x)=>{const lb=U(cureLabel(x));const rk=U(x.rule||'');const ruleOk=
   // rules it VOID: SUPPORTED or NARROWED, or counted (UNEXHIBITED or CONCEDED) with a CORRECTED COUNT above the seat's count and the standing that
   // count makes true.
   if(x.rule==='K-V'){const CH=kvCharges(R,x.side);const UNI=kvUni(R,x.side);const st=stmtOf(x);
-   if(st&&CH){const v=kvRulingOk(st,x.premise,CH,UNI);if(v.ok)return res('CURED','statement quotes the charge words ('+(v.q||v.why)+') and names the kind',['STATEMENT: '+st]);}
+   if(st&&CH){const v=kvRulingOk(st,x.premise,CH,UNI);if(v.ok)return res('CURED','statement quotes the charge words ('+(v.q||v.why)+') and names the kind',['STATEMENT: '+st]);}{const rp=CH?respOf(x):null;if(rp){const t=st?st+'\n'+rp:rp;const v=kvRulingOk(t,x.premise,CH,UNI);if(v.ok)return res('CURED',(st?'statement and response together quote':'response quotes')+' the charge words ('+(v.q||v.why)+(st?') and name the kind':') and names the kind'),(st?['STATEMENT: '+st]:[]).concat(['RESPONSE: '+rp]));}} /* pkgKVR (33311 chatgpt premise 3): the item's RESPONSE carries the statement */
    const lab=x.side==='DEFENDER'?'CONCEDED LINKS':'CHALLENGER CONCEDED LINKS';const rc=o.restated.filter(r=>r.link===lab);
    if(rc.length===1){const sg=kvSegments(lab+': '+rc[0].text,x.side).find(z=>z.ns.includes(x.premise));
     if(!sg){const T=rc[0].text;const re=new RegExp('\\bpremises?\\s+(?:\\d+\\s*(?:,|and|&)\\s*)*'+x.premise+'\\b[^.;]{0,160}','i');const m=T.match(re);const seg=m?m[0]:'';
@@ -1666,6 +1877,22 @@ const respOf=(x)=>{const lb=U(cureLabel(x));const rk=U(x.rule||'');const ruleOk=
   // judge_fix9 S1 K-F (TRIAL; ruling 396): cured by RETRACTED for the line (with one CORRECTED RESULT), by a RESTATED line not graded LINK
   // BROKEN, or by one FORCED line for the item whose three quotations stand in the rounds it names (MEANS in its round, ANSWER and FAILS in the
   // answer's round).
+  // pkgFCB K-FC (TRIAL; W3 B7): cured by RETRACTED for the link, by a RESTATED line not graded LINK BROKEN, or by one FORCED line for the item whose
+  // CARRIED BY words stand in the pressed verse as the run read it (a verse the run did not read is NOT CHECKED and cures).
+  // pkgKFF K-FF (TRIAL; W3 2769): cured by RETRACTED for the link, by a RESTATED line not graded LINK BROKEN, or by one FORCED line for the item
+  // whose FAILS quotation is not only the words of a verse the answer quotes (kffLines raises nothing on it). No change is refused, no count written.
+  if(x.rule==='K-FF'){if(wd.has(U(x.link)))return res('CURED','retracted',o.withdrawn.filter(w=>U(w.link)===U(x.link)).map(w=>w.line));
+   const rs=cureRest(o,x).filter(r=>!r.retraction);if(rs.length&&rs[0].grade&&!/LINK BROKEN$/.test(rs[0].grade))return res('CURED','regraded '+rs[0].grade,[rs[0].line]);
+   const fl=String(cureUnwrap(reply&&reply.ok?reply.text:'')).split('\n').map(l=>l.trim().replace(/^[*`]+|[*`]+$/g,'')).filter(l=>/^(?:[-•]\s*)?FORCED(?:\s*\(\s*Commitment\s+\d+\s*\))?\s*:/i.test(l)&&U(l).replace(/\s+VS\.?\s+/g,' VS ').includes(U(x.link).replace(/\s+VS\s+/g,' VS ')));
+   if(!fl.length)return res('UNCURED','TRIAL rule (K-FF): no FORCED line for '+x.link+', no RETRACTED line and no RESTATED line regrading it',null);
+   const chk=kffLines(fl[0],R);if(chk.items.length)return res('UNCURED','TRIAL rule (K-FF): '+chk.items[0].why,[fl[0]]);
+   return res('CURED','TRIAL rule (K-FF): the FORCED line\'s FAILS quotes the answer\'s own words'+(chk.report.length?' ('+chk.report[0]+')':''),[fl[0]]);}
+  if(x.rule==='K-FC'){if(wd.has(U(x.link)))return res('CURED','retracted',o.withdrawn.filter(w=>U(w.link)===U(x.link)).map(w=>w.line));
+   const rs=cureRest(o,x).filter(r=>!r.retraction);if(rs.length&&rs[0].grade&&!/LINK BROKEN$/.test(rs[0].grade))return res('CURED','regraded '+rs[0].grade,[rs[0].line]);
+   const fl=String(cureUnwrap(reply&&reply.ok?reply.text:'')).split('\n').map(l=>l.trim().replace(/^[*`]+|[*`]+$/g,'')).filter(l=>/^(?:[-•]\s*)?FORCED(?:\s*\(\s*Commitment\s+\d+\s*\))?\s*:/i.test(l)&&U(l).replace(/\s+VS\.?\s+/g,' VS ').includes(U(x.link).replace(/\s+VS\s+/g,' VS ')));
+   if(!fl.length)return res('UNCURED','TRIAL rule (K-FC): no FORCED line for '+x.link+' with CARRIED BY, no RETRACTED line and no RESTATED line regrading it',null);
+   const chk=kfcLines(fl[0],R);if(chk.items.length)return res('UNCURED','TRIAL rule (K-FC): '+chk.items[0].why,[fl[0]]);
+   return res('CURED','TRIAL rule (K-FC): the FORCED line carries CARRIED BY words that stand in the pressed verse'+(chk.report.length?' ('+chk.report[0]+')':''),[fl[0]]);}
   if(x.rule==='K-F'){if(wd.has(U(x.link)))return res('CURED','retracted',o.withdrawn.filter(w=>U(w.link)===U(x.link)).map(w=>w.line));
    const rs=cureRest(o,x).filter(r=>!r.retraction);if(rs.length&&rs[0].grade&&!/LINK BROKEN$/.test(rs[0].grade))return res('CURED','regraded '+rs[0].grade,[rs[0].line]);
    const fl=String(cureUnwrap(reply&&reply.ok?reply.text:'')).split('\n').map(l=>l.trim().replace(/^[*`]+|[*`]+$/g,'')).filter(l=>/^(?:[-•]\s*)?FORCED(?:\s*\(\s*Commitment\s+\d+\s*\))?\s*:/i.test(l)&&U(l).replace(/\s+VS\.?\s+/g,' VS ').includes(U(x.link).replace(/\s+VS\s+/g,' VS ')));
@@ -1685,7 +1912,7 @@ const respOf=(x)=>{const lb=U(cureLabel(x));const rk=U(x.rule||'');const ruleOk=
   // judge_fix9 S4 K-L2 (TRIAL): cured by RETRACTED for the line, or by one RESTATED line for it whose [L2] words each stand in a verse the line
   // cites (or that drops the [L2]).
   // ruling 421 (#1 K-W, #4 K-S3; TRIAL): the code checks the answer's form; the substance goes to the enforcer.
-  if(x.rule==='K-W'){const rp=respOf(x)||'',sp=stmtOf(x)||''; /* pkgW (WALL-2024 2213): run 32973, chatgpt and sol wrote the form on the STATEMENT line and NOT HELD on the RESPONSE line */const kwSt=t=>/\bSTANDS\s+WITHOUT\s+IT\s+because\b/i.test(t)&&/\[L[1-3]\]/.test(t);const kwCo=t=>/(?:^|[.;!?]\s+|:\s+)\**CONCEDED\**(?!\s+LINKS?\b)(?:\s*(?::|;|\.|--|\u2014|$)|(?:\s+[A-Za-z][A-Za-z'\u2019-]*){1,4}\s*(?::|--|\u2014)|\s+as(?:\s+to)?\s+[A-Za-z])/.test(String(t)); /* pkgKWA: or an "as" / "as to" qualifier to the sentence end */ /* pkgKWC (W3 2596): or up to 4 words, then a colon or dash */ /* pkgQ (WALL-2024 2224, 2226): CONCEDED is the uppercase form word at a sentence start (start of text, or after . ; ! ? :), then : ; . -- or the end; never conceded in prose, never CONCEDED LINKS */const kwRe=t=>/\bREASSERTED\s+IN\s+\[?[CD]R\d+\]?\s*(?:[:,]|--|\u2014)?\s*["\u201c][^"\u201d]{6,}["\u201d]/i.test(t);for(const [t,w] of [[rp,''],[sp,' (on its STATEMENT line)']]){if(!t)continue;if(kwSt(t))return res('CURED','answered: the link stands without the withdrawn footing, on the layer named'+w,[t]);if(kwCo(t))return res('CURED','answered: the link is conceded'+w,[t]);if(kwRe(t))return res('CURED','answered: the withdrawn footing is reasserted in a later round, with its quote'+w,[t]);}if(KW_NH){const nw=s=>String(s||'').toLowerCase().replace(/[\u2018\u2019\u201c\u201d"'`*_]/g,'').replace(/[^a-z0-9\u0370-\u03ff\u1f00-\u1fff]+/g,' ').trim().split(' ').filter(Boolean);const q=String(x.line||'');const a=q.indexOf('"'),b=q.lastIndexOf('"');const fs0=a>=0&&b>a?q.slice(a+1,b):q;const body=nw(fs0.replace(/^\s*I\s+(?:do\s+not\s+claim|no\s+longer\s+claim|withdraw|grant|concede|drop)\b/i,''));const __rn=b0=>b0.length<=6?[b0.join(' ')]:b0.slice(0,b0.length-5).map((_,i)=>b0.slice(i,i+6).join(' '));const runs=__rn(body).concat(...nhqFull(x.line,R).map(f=>__rn(nw(f.replace(/^\s*I\s+(?:do\s+not\s+claim|no\s+longer\s+claim|withdraw|grant|concede|drop)\b/i,''))))); /* pkgNHQ: the line's own runs, plus those of the full sentences from the round */for(const [t,w] of [[rp,''],[sp,' (on its STATEMENT line)']]){if(!t||!/^\s*NOT\s+HELD\b/i.test(t))continue;const T=' '+nw(t).join(' ')+' ';if(runs.some(r=>r&&T.includes(' '+r+' ')))return res('CURED','answered: NOT HELD, with a reason that quotes the flagged sentence (pkgKW)'+w,[t]);}}return res('UNCURED','neither the RESPONSE nor the STATEMENT line says STANDS WITHOUT IT because <layer> with an [L1], [L2] or [L3], CONCEDED, REASSERTED IN <round> "<quote>", or NOT HELD with a reason that quotes the flagged sentence',rp?[rp]:(sp?[sp]:null));}
+  if(x.rule==='K-W'){const rp=respOf(x)||'',sp=stmtOf(x)||''; /* pkgW (WALL-2024 2213): run 32973, chatgpt and sol wrote the form on the STATEMENT line and NOT HELD on the RESPONSE line */const kwSt=t=>/\bSTANDS\s+WITHOUT\s+IT\s+because\b/i.test(t)&&/\[L[1-3]\]/.test(t);const kwCo=t=>/(?:^|[.;!?]\s+|:\s+)\**CONCEDED\**(?!\s+LINKS?\b)(?:\s*(?::|;|\.|--|\u2014|$)|(?:\s+[A-Za-z][A-Za-z'\u2019-]*){1,4}\s*(?::|--|\u2014)|\s+as(?:\s+to)?\s+[A-Za-z])/.test(String(t)); /* pkgKWA: or an "as" / "as to" qualifier to the sentence end */ /* pkgKWC (W3 2596): or up to 4 words, then a colon or dash */ /* pkgQ (WALL-2024 2224, 2226): CONCEDED is the uppercase form word at a sentence start (start of text, or after . ; ! ? :), then : ; . -- or the end; never conceded in prose, never CONCEDED LINKS */const kwRe=t=>/\bREASSERTED\s+IN\s+\[?[CD]R\d+\]?\s*(?:[:,]|--|\u2014)?\s*["\u201c][^"\u201d]{6,}["\u201d]/i.test(t);for(const [t,w] of [[rp,''],[sp,' (on its STATEMENT line)']]){if(!t)continue;if(kwSt(t))return res('CURED','answered: the link stands without the withdrawn footing, on the layer named'+w,[t]);if(kwCo(t))return res('CURED','answered: the link is conceded'+w,[t]);if(kwRe(t))return res('CURED','answered: the withdrawn footing is reasserted in a later round, with its quote'+w,[t]);}if(KW_NH){const KWR_REF=/\s*\((?:\s*(?:[1-3]\s*)?[A-Z][A-Za-z]*\.?(?:\s+of\s+[A-Z][a-z]+|\s+[A-Z][a-z]+)?\s+)?\d+:\d+(?:\s*[-\u2013]\s*\d+)?(?:\s*[,;]\s*(?:(?:[1-3]\s*)?[A-Z][A-Za-z]*\.?(?:\s+[A-Z][a-z]+)?\s+)?\d+(?::\d+)?(?:\s*[-\u2013]\s*\d+)?)*\s*\)/g; /* pkgKWR: a parenthesis of verse references only */const nw=s=>String(s||'').toLowerCase().replace(/[\u2018\u2019\u201c\u201d"'`*_]/g,'').replace(/[^a-z0-9\u0370-\u03ff\u1f00-\u1fff]+/g,' ').trim().split(' ').filter(Boolean);const q=String(x.line||'');const a=q.indexOf('"'),b=q.lastIndexOf('"');const fs0=(a>=0&&b>a?q.slice(a+1,b):q).replace(KWR_REF,' ');const body=nw(fs0.replace(/^\s*I\s+(?:do\s+not\s+claim|no\s+longer\s+claim|withdraw|grant|concede|drop)\b/i,''));const __rn0=b0=>b0.length<=6?[b0.join(' ')]:b0.slice(0,b0.length-5).map((_,i)=>b0.slice(i,i+6).join(' '));const __rn=b0=>{const r=__rn0(b0);if(b0.length>=4&&/^(?:that|how|whether)$/.test(b0[0]))r.push(...__rn0(b0.slice(1)));{let k=b0.length;if(k>=3&&/^(?:it|that|this|so|them|these|those)$/.test(b0[k-1])&&/^(?:grant|concede|withdraw|drop)$/.test(b0[k-2])&&b0[k-3]==='i')k--; /* pkgKWA: "X. I grant it." */if(k>=2&&/^(?:grant|concede|withdraw|drop)$/.test(b0[k-1])&&b0[k-2]==='i'){k-=2;if(k>0&&/^(?:which|as|that|this)$/.test(b0[k-1]))k--;if(k>=3)r.push(...__rn0(b0.slice(0,k)));}} /* pkgKWC (2): "X, which I grant" also takes X */return r;}; /* pkgKWT: "I grant that X" also takes X quoted whole when X has 3+ words (33411 sol; W3 2932: "I withdraw that sentence." keeps its floor) */const runs=__rn(body).concat(...nhqFull(x.line,R).map(f=>__rn(nw(f.replace(KWR_REF,' ').replace(/^\s*I\s+(?:do\s+not\s+claim|no\s+longer\s+claim|withdraw|grant|concede|drop)\b/i,''))))); /* pkgNHQ: the line's own runs, plus those of the full sentences from the round */for(const [t,w] of [[rp,''],[sp,' (on its STATEMENT line)']]){if(!t||!/^\s*NOT\s+HELD\b/i.test(t))continue;const T=' '+nw(t).join(' ')+' ';if(runs.some(r=>r&&T.includes(' '+r+' ')))return res('CURED','answered: NOT HELD, with a reason that quotes the flagged sentence (pkgKW)'+w,[t]);}}return res('UNCURED','neither the RESPONSE nor the STATEMENT line says STANDS WITHOUT IT because <layer> with an [L1], [L2] or [L3], CONCEDED, REASSERTED IN <round> "<quote>", or NOT HELD with a reason that quotes the flagged sentence',rp?[rp]:(sp?[sp]:null));}
   if(x.rule==='K-S3'){const rp=respOf(x)||'';if(/\bCOUNTED\b/.test(rp))return res('CURED','answered: the close concession is counted',[rp]);const m=rp.match(/\bTOUCHES\s+NO\s+LINK\b\s*:?\s*(.*)$/i);if(m&&m[1].split(/\s+/).filter(Boolean).length>=5)return res('CURED','answered: it touches no declared link or listed premise, with its reason',[rp]);
    {const sp=stmtOf(x)||'';const ms=sp.match(/\bTOUCHES\s+NO\s+LINK\b\s*:?\s*(.*)$/i);if(ms&&ms[1].split(/\s+/).filter(Boolean).length>=5)return res('CURED','answered on the STATEMENT line: it touches no declared link or listed premise, with its reason (pkgKS3)',['STATEMENT: '+sp].concat(rp?[rp]:[]));
     const mn=rp.match(/^\s*NOT\s+HELD\b\s*(?:as\b[^:]*)?:?\s*(.*)$/i);
@@ -1706,6 +1933,23 @@ const respOf=(x)=>{const lb=U(cureLabel(x));const rk=U(x.rule||'');const ruleOk=
   // judge_fix5 G13 K-LB: counted (the K-G6 count, K-LB premises joined), or a statement that quotes the block's round and exhibits two layer kinds.
   // judge_fix6 H2 (run 32293, enforcer row 81: the single judge's premise 4 statement was refused as "no statement quoting [DR3] with two layer
   // kinds", though it quoted the block; the layer reader had read [L3] only): a refused statement names the step that refused it.
+  // pkgUNX K-UNX (TRIAL; W3 2676): cured by a STATEMENT for the item that names a layer the block does not exhibit, or by a CORRECTED COUNT for the
+  // side below the count the item read (the premise taken out of the count; its fit is then graded at the collision, ruling 411).
+  // pkgUNXA (TRIAL; W3 2721, 2727): an ASSUMES or unanswered item is cured by a STATEMENT that quotes the block's [L1] (6 words in a row, all of it when
+  // shorter) and says what that verse lacks for the step (a negation outside the quotation), or by a CORRECTED COUNT below the count read. Naming a layer, or a KEEP, does not cure it.
+  if(x.rule==='K-UNX'&&x.a){const st=stmtOf(x);
+   // pkgASM (TRIAL): an item whose ASSUMES names an inferred act is cured by a CORRECTED COUNT below the count read, or by a STATEMENT whose ASSUMES: names a given fact
+   // (no knowing, begetting or conceiving); with K-UNX-A on the same premise that STATEMENT must also meet the K-UNX-A cure below
+   if(x.asm){const cs0=o.count.filter(c=>c.side===x.side);if(cs0.length&&cs0.every(c=>c.n<(x.conc||0)))return res('CURED','TRIAL rule (E-ASM): CORRECTED COUNT '+cs0[0].n+' takes the premise out of the count',cs0.map(c=>c.line));
+    const am=String(st||'').match(/\bASSUMES\b\s*:?([\s\S]*)/i);const act=am?unxaAct('ASSUMES: '+am[1]):'';
+    if(!am||act||!am[1].trim())return res('UNCURED','TRIAL rule (E-ASM): '+(!st?'no STATEMENT for the item':!am?'the STATEMENT names no ASSUMES: given fact':act?'the STATEMENT\'s ASSUMES still names an inferred act ("'+act+'")':'the ASSUMES: is empty')+', and no CORRECTED COUNT below '+(x.conc||0),st?['STATEMENT: '+st]:null);
+    if(x.a==='ASM')return res('CURED','TRIAL rule (E-ASM): the STATEMENT\'s ASSUMES names a given fact, not an inferred act',['STATEMENT: '+st]);}const bare=String(st||'').replace(/["“][^"”]*["”]/g,' ');const q=st&&x.l1&&UNX_MRUN(st,x.l1,6);const lack=!!st&&unxLack(st,x.kinds).missing.length>0; /* pkgUNXA2: a layer named as missing (unxLack), not any lack word */
+   if(q&&lack)return res('CURED','TRIAL rule (K-UNX-A): the STATEMENT quotes the block\'s [L1] '+(x.l1ref||'')+' and names a layer the block does not exhibit ([L'+unxLack(st,x.kinds).missing.join('], [L')+'])',['STATEMENT: '+st]);
+   const cs=o.count.filter(c=>c.side===x.side);if(cs.length&&cs.every(c=>c.n<(x.conc||0)))return res('CURED','TRIAL rule (K-UNX-A): CORRECTED COUNT '+cs[0].n+' takes the premise out of the count',cs.map(c=>c.line));
+   return res('UNCURED','TRIAL rule (K-UNX-A): '+(!st?'no STATEMENT for the item':!q?'the STATEMENT does not quote the block\'s [L1] '+(x.l1ref||''):'the STATEMENT quotes the [L1] but names no layer the block does not exhibit (a failure of fit is graded at the collision, not counted)')+', and no CORRECTED COUNT below '+(x.conc||0),st?['STATEMENT: '+st]:null);}
+  if(x.rule==='K-UNX'){const st=stmtOf(x);const nm=st?unxLack(st,x.kinds).missing:[]; /* pkgUNXW: named as missing */if(nm.length)return res('CURED','TRIAL rule (K-UNX): the STATEMENT names a layer the block does not exhibit ([L'+nm.join('], [L')+'])',['STATEMENT: '+st]);
+   const cs=o.count.filter(c=>c.side===x.side);if(cs.length&&cs.every(c=>c.n<(x.conc||0)))return res('CURED','TRIAL rule (K-UNX): CORRECTED COUNT '+cs[0].n+' takes the premise out of the count',cs.map(c=>c.line));
+   return res('UNCURED','TRIAL rule (K-UNX): '+(st?'the STATEMENT names no layer the block lacks':'no STATEMENT for the item')+', and no CORRECTED COUNT below '+(x.conc||0),st?['STATEMENT: '+st]:null);}
   if(x.rule==='K-LB'){const st=stmtOf(x);const rk=x.side==='CHALLENGER'?'DR3':'CR3';let step='step 1 (statement): no STATEMENT line for the item';
    const notC=/\bnot\s+counted\b|\bmark\s+is\s+wrong\b|\bshould\s+not\s+be\s+counted\b/i.test(String(respOf(x)||'')+' '+String(st||'')); /* judge_fix8 R4: the item's own answer, not another premise's count */
    if(st&&(notC||!o.count.some(c=>c.side===x.side&&c.n>(x.conc||0)))){const k=lbFoot(lbBlockText(R[rk],x.premise),true); /* judge_fix8 R5: the block's own words, read by FOOTING LAYERS; the judge's tags and relabelling do not count */const qs=stmtQ(st);const hit=typeof R[rk]==='string'&&qs.some(q=>cureFound(q,R[rk]));
@@ -1762,7 +2006,7 @@ function cureCorrected(reply,v){const o=cureLines(reply&&reply.ok?reply.text:'')
 function cureSet(reply,v){const o=cureLines(reply&&reply.ok?reply.text:'');const out={};
  // BB-7417 defect 3: a side is written only when every count or standing item of that side is CURED, and not when each is a K-G6
  // statement cure (no count was checked).
- for(const side of ['DEFENDER','CHALLENGER']){const ks=(v||[]).filter(x=>x.side===side&&(x.rule==='K-G1'||x.rule==='K-G3'||x.rule==='K-G6'||x.rule==='K-G7'||x.rule==='K-G8'||x.rule==='K-G9'||x.rule==='K-G10'||(x.rule==='K-P'&&x.premise!=null)||(x.rule==='K-V'&&x.status==='CURED'&&/^counted/.test(String(x.why||'')))||x.rule==='K-LB'));
+ for(const side of ['DEFENDER','CHALLENGER']){const ks=(v||[]).filter(x=>x.side===side&&(x.rule==='K-G1'||x.rule==='K-G3'||x.rule==='K-G6'||x.rule==='K-G7'||x.rule==='K-G8'||x.rule==='K-G9'||x.rule==='K-G10'||(x.rule==='K-P'&&x.premise!=null)||(x.rule==='K-V'&&x.status==='CURED'&&/^counted/.test(String(x.why||'')))||x.rule==='K-LB'||(x.rule==='K-UNX'&&x.status==='CURED'&&/CORRECTED COUNT \d+ takes the premise out/.test(String(x.why||''))))); /* pkgUNXW (W3 2738): the judge's own count withdrawal is written */
   if(!ks.length||ks.some(x=>x.status!=='CURED')||ks.every(x=>((x.rule==='K-G6'||x.rule==='K-LB')&&/^statement/.test(String(x.why||'')))||(x.rule==='K-G9'&&/^every listed verse ruled/.test(String(x.why||'')))||(x.rule==='K-G10'&&/^statement/.test(String(x.why||'')))||(x.rule==='K-V'&&!/^counted/.test(String(x.why||'')))) /* judge_fix8 K2, K6 */)continue;
   const ns=[...new Set(o.count.filter(c=>c.side===side).map(c=>c.n))];const sv=[...new Set(o.standing.filter(s=>s.side===side).map(s=>s.st))];
   if(ns.length===1||sv.length===1)out[side]={n:ns.length===1?ns[0]:null,st:sv.length===1?sv[0]:null};}
@@ -1892,9 +2136,19 @@ function psGrades(l){const g={};let t=String(l==null?'':l).replace(/\\+"/g,'"').
   .replace(/\[[^\]]*\]/g,' ').replace(/\b\d+:\d+(?:[-–]\d+)?\b/g,' ').replace(/\b(?:Commitment|Link|LINK|links?)\s+\d+\b/g,' ').replace(/\b[CDL]\d+\b/g,' ').replace(/\b[123]\s+(?:Samuel|Kings|Chronicles|Corinthians|Thessalonians|Timothy|Peter|John)\b/g,' ')
   .replace(/\b(\d)\s*[–—-]\s*(\d)\b/g,(x,a,b)=>{const o=[];for(let i=+a;i<=+b;i++)o.push(i);return o.join(', ');});
  const W=/\b(VOID|UNEXHIBITED|CONCEDED|counted|spared|SUPPORTED|NARROWED|STANDS)\b/ig; /* the clause's grade is its first grade word (a later "counted" or "VOID" in the prose does not regrade it) */
- for(const c0 of t.split(/;|\.(?=\s|$)/)){const c=c0.replace(/\bnone\s+counted\b/ig,' ');W.lastIndex=0;const w=W.exec(c);if(!w)continue;const k=w[1].toUpperCase();const G=k==='VOID'?'VOID':(k==='UNEXHIBITED'||k==='CONCEDED'||k==='COUNTED')?'COUNTED':'SPARED';
+ for(const c0 of t.split(/;|\.(?=\s|$)/)){const c=c0.replace(/\bnone\s+counted\b/ig,' ').replace(/\b(?:(?:are|is|were|was|be|been)\s+)?(?:not|never)\s+counted\b|\buncounted\b/ig,' spared '); /* pkgPSN (W3 2780): a negated count is SPARED */W.lastIndex=0;const w=W.exec(c);if(!w)continue;const k=w[1].toUpperCase();const G=k==='VOID'?'VOID':(k==='UNEXHIBITED'||k==='CONCEDED'||k==='COUNTED')?'COUNTED':'SPARED';
   for(const n of (c.match(/\b\d\b/g)||[]).map(Number))if(n>0&&!(n in g))g[n]=G;}
  return {side:m[1]&&/^CHALLENGER/i.test(m[1])?'CHALLENGER':'DEFENDER',n:m[2]!=null?+m[2]:null,g};}
+// pkgRCT (W1 2818; W3 2819): premises this judge's own cure took out by CORRECTED COUNT (a CURED K-UNX report), and the refusal of a change that counts one again.
+function rctOut(raw,side){const o=new Set();const rx=/\[AUDIT v21: DEBATE RULE VIOLATION REPORT -- SEAT: [^;\]]*; ITEM: (DEFENDER|CHALLENGER) premise (\d+); RULE: K-UNX; RESULT: CURED; WHY: [^\]]*?CORRECTED COUNT \d+ takes the premise out of the count/g;
+ for(const m of String(raw||'').replace(/\\+"/g,'"').matchAll(rx))if(m[1]===side)o.add(+m[2]);return o;}
+function rctCheck(to,x,raw,RD,cur){const lk=sbLabel(to);const side=lk==='CHALLENGER CONCEDED LINKS'?'CHALLENGER':lk==='CONCEDED LINKS'?'DEFENDER':null;if(!side)return null;
+ const out=rctOut(raw,side);if(!out.size)return null;const P=psGrades(to);if(!P)return null;const Q=psGrades(cur);const back=[...out].filter(j=>P.g[j]==='COUNTED'&&!(Q&&Q.g[j]==='COUNTED')); /* only a premise the line being replaced does not count (33249 grok: the line already counted it) */if(!back.length)return null;
+ const rk=side==='CHALLENGER'?'DR3':'CR3';const bad=[];
+ for(const j of back){const bk=RD&&typeof RD[rk]==='string'?lbBlockText(RD[rk],j):'';if(!bk)continue;const kk=lbFoot(bk,true);if(!kk.length)continue; /* no block read: not refused */
+  const txt=unxSegs(String(to)).filter(s=>s.ns.includes(j)).map(s=>s.seg).concat([String(x&&x.why||'')]);if(!txt.some(t=>unxLack(t,kk).missing.length>0))bad.push({j,kk});}
+ if(!bad.length)return null;
+ return 'RECOUNTED AFTER CURE (pkgRCT, W3 2819): '+bad.map(b=>side+' premise '+b.j).join(', ')+' was taken out by your CORRECTED COUNT; the change names no layer the block lacks (its ['+rk+'] block exhibits '+bad[0].kk.join(' and ')+'). The count stays at your cure value. To count it again, name in the reason a layer ("[L1]", "[L2]", "[L3]") that block does not exhibit.';}
 function sbApply2024(seat,raw,F,its,RD){const one=s=>String(s==null?'':s).replace(/\s+/g,' ').trim();const nrm=s=>one(String(s).replace(/\\+/g,'').replace(/[*_`]+/g,'')); /* the flagged line arrives with its quotes escaped once more than the text (run 32973: \\\\\" against \\") */const U=s=>String(s==null?'':s).toUpperCase();
  const text=cureJText(raw,true);const lines=text.split('\n');const find=l=>{const n=nrm(l);if(!n)return null;return lines.find(x=>nrm(x)===n)||null;};
  const ch=(its||[]).filter(x=>x&&x.ans==='CHANGE');const items=[];const map=new Map();let resTo=null;
@@ -1903,7 +2157,7 @@ function sbApply2024(seat,raw,F,its,RD){const one=s=>String(s==null?'':s).replac
   let o=find(x.line);if(!o){const n=nrm(x.line);for(const [o2,c2] of map){if(n&&nrm(c2.to)===n){o=o2;break;}}}if(!o&&lk)o=lines.find(l=>sbLabel(top(l))===lk)||null;
   if(!kf||!o||sbLabel(top(o))!==lk){items.push({sid:x.sid,kind:'NOT APPLIED',why:kf?'the collision line of '+kf[1]+' for the FORCED line is not in the judge text':'the FORCED line is not in the FORCED form',to:x.to,lines:o?[o]:[]});continue;} /* pkgCL (W3 grade_33025 s.2): every refusal with a found line carries it */
   const c0=cur(o);if(nrm(c0).includes(nrm(toF)))continue;const pre=(String(o).match(/^\s*(?:[-\u2022]\s+|\d+[.)]\s+)?/)||[''])[0];const p=map.get(o);map.set(o,{sid:p?p.sid:x.sid,to:c0+'\n'+pre+toF,over:p?p.over:[],forced:((p&&p.forced)||[]).concat(x.sid)});continue;}
-  const to=one(String(x.to==null?'':x.to).replace(/\\+"/g,'"')).replace(/^["\u201c]+([\s\S]*?)["\u201d]+$/,(m,c)=>c).trim(); /* pkgFQ: unwrap only a fully quoted line; a FORCED line keeps its closing FAILS quote */
+  let to=one(String(x.to==null?'':x.to).replace(/\\+"/g,'"')).replace(/^["\u201c]+([\s\S]*?)["\u201d]+$/,(m,c)=>c).trim(); /* pkgFQ: unwrap only a fully quoted line; a FORCED line keeps its closing FAILS quote */
   if(/^RESULT\s*:/i.test(to)){resTo={sid:x.sid,to};continue;}
   let o=find(x.line);if(!o){const n=nrm(x.line);for(const [o2,c2] of map){if(n&&nrm(c2.to)===n){o=o2;break;}}} /* E-GATE: a gate change may name a line as an earlier change rewrote it */
   /* a K-S3 item names the concession as "DEFENDER CR4: <quote>" (an engine line, not the judge's): a CHANGE TO in the row form replaces the
@@ -1914,10 +2168,19 @@ function sbApply2024(seat,raw,F,its,RD){const one=s=>String(s==null?'':s).replac
   if(!o&&x.rule==='E-UNG'){const __n=(String(x.item||'').match(/\bCOLLISION D(\d+)\b/)||[])[1];const __lk=sbLabel(to);if(__n&&__lk&&__lk.indexOf('D'+__n+' VS ')===0){ /* pkgUAP (33160 gemini S9, S11-S13): an E-UNG answer goes onto the judge's own line for its pair, or is added */
    o=lines.find(l=>sbLabel(l)===__lk)||null;if(!o){const __c=lines.filter(l=>/^D\d+ VS C\d+$/.test(String(sbLabel(l)||'')));const __at=__c.length?__c[__c.length-1]:(lines.find(l=>/^\s*\**\s*COLLISION POINTS\b/i.test(l))||null);
     if(__at){const p=map.get(__at);const c0=p?p.to:__at;map.set(__at,{sid:p?p.sid:x.sid,to:c0+'\n'+to,over:p?p.over:[],forced:((p&&p.forced)||[]).concat(p?[x.sid]:[])});continue;}}}}
-  if(!o){items.push({sid:x.sid,kind:'NOT APPLIED',why:'the flagged line is not in the judge text',to});continue;}
+  if(x.rule==='E-KSC'){const __lk=sbLabel(to);if(__lk==='KEYSTONE'||__lk==='CONCEDED LINKS'){const __c=lines.filter(l=>sbLabel(l)===__lk);if(__c.length===1)o=__c[0];}} /* pkgKSC: a KEYSTONE or a CONCEDED LINKS change goes over that line, whichever the judge changed */
+  if(!o){const __lk=sbLabel(to);if(__lk){const __c=lines.filter(l=>sbLabel(l)===__lk);if(__c.length===1)o=__c[0];}} /* pkgSLA (W3 2644; 33175 chatgpt G1, sol G1): the flagged line is not in the text (a K-V item flags no judge line, or its quotes are escaped once more): the change goes over the one judge line with its label */
+  if(!o&&!sbLabel(to)){const __sg=nrm(x.line);if(__sg.length>=30){const __h=lines.filter(l=>nrm(l).split(__sg).length===2); /* pkgSGA (33218 chatgpt S20, S21; sol S18, S19): an item that flags one sentence of a line (E-VOID) is applied inside that line */
+   if(__h.length===1&&nrm(text).split(__sg).length===2){const __o=__h[0];const __p=map.get(__o);const __c=nrm(__p?__p.to:__o);if(__c.split(__sg).length===2){o=__o;to=__c.split(__sg).join(to);}else if(__p){__p.over=(__p.over||[]).concat(x.sid);continue;}}}}
+  if(!o){items.push({sid:x.sid,kind:'NOT APPLIED',why:'the flagged line is not in the judge text',to});continue;}{const __rt=nrm(to).match(/^RETRACTED\s*:\s*(D\d+)\s+VS\.?\s+(C\d+)\s*\.?$/i);const __fo=nrm(map.has(o)?map.get(o).to:o).match(/^\s*(?:[-\u2022]|\d+[.)])?\s*FORCED(?:\s*\(\s*Commitment\s+\d+\s*\))?\s*:\s*(D\d+)\s+VS\.?\s+(C\d+)\b/i); /* pkgRFL (W3 2679): RETRACTED on a FORCED line of the same pair removes the FORCED line */if(__rt&&__fo&&(__rt[1]+' VS '+__rt[2]).toUpperCase()===(__fo[1]+' VS '+__fo[2]).toUpperCase()){const p=map.get(o);map.set(o,{sid:x.sid,to:'',over:p&&p.sid!==x.sid?(p.over||[]).concat(p.sid):(p?p.over:[]),rfl:(__fo[1]+' VS '+__fo[2]).toUpperCase()});continue;}}
+  {const __lo=sbLabel(o);if(__lo&&!sbLabel(to)&&SB_FORM.test(to)){const __pn=(nrm(to).match(/^Premise\s+(\d+)\b/i)||[])[1];const __p=map.get(o);const __c=nrm(__p?__p.to:o); /* pkgSGA (33218 chatgpt S25, S26): a change with no line label over a labelled line would drop the label and the line's other sentences */
+   const __ss=__c.split(/(?:(?<=[.;])|(?<=--))\s+(?=Premises?\s+\d)/);const __ix=__pn?__ss.map((z,i)=>new RegExp('^Premise\\s+'+__pn+'\\b','i').test(z)?i:-1).filter(i=>i>=0):[];
+   const __cnt=t=>{const g=psGrades(t);return g&&g.g&&(__pn in g.g)?g.g[__pn]==='COUNTED':null;};if(__ix.length===1){const __s0=__ss.join(' ');__ss[__ix[0]]=to;const __nw=__ss.join(' ');const __a=__cnt(__s0),__b=__cnt(__nw); /* pkgSGA2 (W1 2695): a sentence change that moves its premise into or out of the count leaves the line's number stale */
+    if(__a!=null&&__b!=null&&__a!==__b){items.push({sid:x.sid,kind:'NOT APPLIED',why:'the change moves premise '+__pn+(__b?' into':' out of')+' the '+__lo+' count, so the line\'s count number would be stale: write the whole line with its label and count (pkgSGA2, W1 2695)',to,lines:[o]});continue;}to=__nw;}else{items.push({sid:x.sid,kind:'NOT APPLIED',why:'the change has no line label and would replace the whole '+__lo+' line'+(__pn?' (the line has '+(__ix.length?'more than one':'no')+' sentence for premise '+__pn+')':'')+': write the whole line with its label (pkgSGA)',to,lines:[o]});continue;}}}
   if(!to||!SB_FORM.test(to)){items.push({sid:x.sid,kind:'NOT APPLIED',why:'the CHANGE TO line has no line form the engine reads',to,lines:[o]});continue;} /* pkgCL (33025 chatgpt): the gate item names the refused line */
-  if(x.rule==='E-PREM'){const cu=map.has(o)?map.get(o).to:o;const P=psGrades(to),Q=psGrades(cu); /* pkgPS (W3 2446 E-PREM 2): a premise change stays inside the premises its items name */
-   if(P&&Q){const iq=s=>{const m=String(s||'').match(/against the (defender|challenger)\s+(\d+)/i);return m?{side:m[1].toUpperCase(),n:+m[2]}:null;};const nl=nrm(x.line);
+  const __psg=x.rule==='E-GATE'&&x.psrc?ch.find(y=>y.sid===x.psrc&&y.rule==='E-PREM')||null:null; /* pkgPSG (W3 2726): a gate change for a refused E-PREM change takes the same scope test */
+  if(x.rule==='E-PREM'||__psg){const cu=map.has(o)?map.get(o).to:o;const P=psGrades(to),Q=psGrades(cu); /* pkgPS (W3 2446 E-PREM 2): a premise change stays inside the premises its items name */
+   if(P&&Q){const iq=s=>{const m=String(s||'').match(/against the (defender|challenger)\s+(\d+)/i);return m?{side:m[1].toUpperCase(),n:+m[2]}:null;};const nl=nrm(__psg?__psg.line:x.line);
     const named=new Set(ch.filter(y=>y.rule==='E-PREM'&&nrm(y.line)===nl).map(y=>iq(y.item)).filter(Boolean).map(y=>y.n));const known=k=>(k in Q.g)?Q.g[k]:(!Object.keys(Q.g).length&&Q.n===0?'SPARED':null);
     const moved=Object.keys(P.g).map(Number).filter(k=>known(k)!=null&&known(k)!==P.g[k]);const out=moved.filter(k=>!named.has(k));const jump=P.n!=null&&Q.n!=null&&Math.abs(P.n-Q.n)>named.size;
     if(P.side!==Q.side||out.length||jump){items.push({sid:x.sid,kind:'NOT APPLIED',why:P.side!==Q.side?'the change moves the '+Q.side+' CONCEDED LINKS line to the '+P.side+' side (pkgPS, W3 2446)':'the change regrades '+(out.length?'premise'+(out.length>1?'s ':' ')+out.join(', '):'the count from '+Q.n+' to '+P.n)+', which '+(out.length>1?'its items do':'its item does')+' not name (named: '+([...named].join(', ')||'none')+'; pkgPS, W3 2446: a premise change stays inside the premises its items name)',to,lines:[o]});continue;}}}
@@ -1930,6 +2193,7 @@ function sbApply2024(seat,raw,F,its,RD){const one=s=>String(s==null?'':s).replac
     if(!ok){items.push({sid:x.sid,kind:'NOT APPLIED',why:'the change drops the collision '+pk.replace(' VS ',' vs ')+' (W3 2351: a change to a collision or FORCED line must be a collision line for the same pair)',to,lines:[o]});continue;}}} /* lines: the gate item names the line, so a same-pair regrade at the gate finds it (W2 2355) */
   /* a judge may write one collision, KEYSTONE, count or standing line twice (or rewrite another line under that label): every
      line of that label takes the change, or the old grade would stand beside the new one */
+  {const __rct=rctCheck(to,x,raw,RD,map.has(o)?map.get(o).to:o);if(__rct){items.push({sid:x.sid,kind:'NOT APPLIED',why:__rct,to,lines:[o],rct:true});continue;}} /* pkgRCT (W3 2819) */
   const lk=sbLabel(to);const same=lk?lines.filter(l=>sbLabel(l)===lk):[]; /* run 32973 grok S26: its FORCED line rewritten as "D6 vs C3 ...: STANDS" also replaces the D6 vs C3 collision line */
   for(const o2 of [...new Set([o].concat(same))]){const p=map.get(o2);map.set(o2,{sid:x.sid,to,over:p&&p.sid!==x.sid?(p.over||[]).concat(p.sid):(p?p.over:[])});}}
  const build=M=>text.split('\n').map(l=>M.has(l)?M.get(l).to:l).join('\n'); /* pkgPS (b): whole lines only; a substring replace rewrote CHALLENGER CONCEDED LINKS: 0 along with CONCEDED LINKS: 0 (gemini 33040) */
@@ -1944,7 +2208,7 @@ function sbApply2024(seat,raw,F,its,RD){const one=s=>String(s==null?'':s).replac
   if(m[2]!=='WITHDRAWN'){const bw=sbBrokenWord2024(P);const g0=new Map(rcLines(text).col.map(z=>[U(z.link),z.grade]));const fl=P.col.filter(z=>g0.has(U(z.link))&&(g0.get(U(z.link))==='DEFENDER LINK BROKEN')!==(z.grade==='DEFENDER LINK BROKEN'));
    if(m[2]==='BROKEN'&&bw===false)out.push({k:m[1],rule:2,why:'KEYSTONE '+m[1]+' BROKEN while the verdict derived from the corrected collision lines is not BROKEN',lines:[P.key.raw].concat(fl.map(z=>z.raw))}); /* W3 2261 (b): no reverse half; a non-keystone collision broken under KEYSTONE STANDS is normal (BROKEN-1). Rule 0 covers the keystone's own collision. */}
   return out;};
- {const P0=rcLines(build(map));const km=P0.key?P0.key.u.match(/^KEYSTONE\s*:\s*(D\d+)\s*(?:--|\u2014|-|:)?\s*(STANDS|BROKEN)\b/):null; /* pkgKY (W3 2362): the KEYSTONE line re-derived from its collision grades */
+ {const P9=rcLines(build(map));for(const [o9,c9] of [...map]){if(!c9.rfl)continue;const g9=P9.col.filter(z=>U(z.link)===c9.rfl).map(z=>z.grade);if(g9.some(g=>/LINK BROKEN$/.test(String(g||'')))){map.delete(o9);items.push({sid:c9.sid,kind:'NOT APPLIED',why:'the collision line of '+c9.rfl.replace(' VS ',' vs ')+' is still graded '+g9.find(g=>/LINK BROKEN$/.test(String(g||'')))+', and a broken link keeps its FORCED line (ruling 411; pkgRFL)',to:'RETRACTED: '+c9.rfl.replace(' VS ',' vs '),lines:[o9]});}}} /* pkgRFL */{const P0=rcLines(build(map));const km=P0.key?P0.key.u.match(/^KEYSTONE\s*:\s*(D\d+)\s*(?:--|\u2014|-|:)?\s*(STANDS|BROKEN)\b/):null; /* pkgKY (W3 2362): the KEYSTONE line re-derived from its collision grades */
   if(km){const kraw=P0.key.raw;const keyO=lines.find(l=>l===kraw)||find(kraw);const touched=[...map].some(([o,c])=>nrm(o)===nrm(kraw)||nrm(c.to)===nrm(kraw));
    const g0=new Map(rcLines(text).col.map(z=>[U(z.link),z.grade]));const kc=P0.col.filter(z=>U(z.link).startsWith(km[1]+' VS'));const moved=kc.filter(z=>g0.has(U(z.link))&&g0.get(U(z.link))!==z.grade);
    const brl=kc.filter(z=>z.grade==='DEFENDER LINK BROKEN');let d=null;
@@ -1970,10 +2234,10 @@ function sbApply2024(seat,raw,F,its,RD){const one=s=>String(s==null?'':s).replac
  const res0=P.result?((P.result.u.match(/^RESULT\s*:\s*(DEFENDER WINS|CHALLENGER WINS|UNDERDETERMINED)/)||[])[1]||null):null;
  const tie=!unk.length&&!col.some(z=>/LINK BROKEN$/.test(String(z.grade||'')))&&dst===cst&&c.DEFENDER===c.CHALLENGER;
  let res=word==='BROKEN'?'CHALLENGER WINS':((res0&&res0!=='CHALLENGER WINS')?res0:'UNDERDETERMINED');if(tie&&(res==='DEFENDER WINS'||res==='CHALLENGER WINS'))res='UNDERDETERMINED';if(held)res=res0;
- if(resTo){const rw=(U(resTo.to).match(/^RESULT\s*:\s*(DEFENDER WINS|CHALLENGER WINS|UNDERDETERMINED)/)||[])[1]||null;if(rw!==res)items.push({sid:resTo.sid,kind:'RESULT DIFFERS',why:'the judge wrote '+(rw?'RESULT: '+rw:'a RESULT line the engine cannot read')+'; the result derived from its corrected lines is '+res,to:resTo.to});}
- const sids=[...new Set([...map.values()].flatMap(z=>[z.sid].concat(z.forced||[])))];const why='derived after the send-back from the judge\'s own changed lines ('+(sids.length?sids.join(', '):'none applied')+(trig.length?'; '+trig.join('; '):'')+')';
+ let __rsOK=false; /* pkgRSA (W3 grade_33197): a RESULT change that agrees with the derived result is applied */if(resTo){const rw=(U(resTo.to).match(/^RESULT\s*:\s*(DEFENDER WINS|CHALLENGER WINS|UNDERDETERMINED)/)||[])[1]||null;if(rw!==res)items.push({sid:resTo.sid,kind:'RESULT DIFFERS',why:'the judge wrote '+(rw?'RESULT: '+rw:'a RESULT line the engine cannot read')+'; the result derived from its corrected lines is '+res,to:resTo.to});else __rsOK=true;}
+ const sids=[...new Set([...map.values()].flatMap(z=>[z.sid].concat(z.forced||[])).concat(__rsOK?[resTo.sid]:[]))];const why='derived after the send-back from the judge\'s own changed lines ('+(sids.length?sids.join(', '):'none applied')+(trig.length?'; '+trig.join('; '):'')+')';
  const rp=[];for(const [o,z] of map){const k=Math.max(1,text.split(o).length-1);for(let i=0;i<k;i++)rp.push([o,z.to,z.sid]);} /* cureRewrite replaces one occurrence per pair */
- if(P.result&&res!==res0)rp.push([P.result.raw,'RESULT: '+res+' -- '+why+': '+tag+'.']);
+ if(P.result&&(res!==res0||__rsOK))rp.push([P.result.raw,__rsOK?resTo.to:'RESULT: '+res+' -- '+why+': '+tag+'.']);
  for(const [sd,k2,st,st0] of [['DEFENDER','DEFENSE',dst,F.defense_standing],['CHALLENGER','CHALLENGE',cst,F.challenge_standing]]){const x=P.st[k2];if(x&&(st!==st0||c[sd]!==cnt[sd]))rp.push([x.raw,k2+' STANDING: '+st+' -- L='+(Lof(k2)!=null?Lof(k2):'?')+' c='+c[sd]+' -- '+why+'.']);}
  if(!held&&P.clause&&!new RegExp('^CLAUSE\\s*:\\s*'+tag+'\\b').test(P.clause.u))rp.push([P.clause.raw,P.clause.raw.replace(/^(\s*[*_]*CLAUSE[*_]*\s*:\s*[*_]*)(?:[A-Z]+-\d)?/i,'$1'+tag+' ').replace(/\bk\s*=\s*\d+/i,'k='+k)]);
  const fields={verdict_tag:word,defense_standing:dst,conceded_links:c.DEFENDER,challenge_standing:cst,challenger_conceded_links:c.CHALLENGER};
@@ -2007,7 +2271,7 @@ function sbKeyExempt2024(keyRaw,P,RD){const l=String(keyRaw||'').replace(/[*_`]+
 // DEFENDER LINK BROKEN. The verse is matched by its reference (book chapter:verse), not by its words.
 function gateAnsGround2024(T){const out=[];const P=rcLines(T);const esc=s=>s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
  for(const raw of String(T||'').split('\n')){const l=raw.replace(/[*_`]+/g,'').trim();const m=l.match(/^(?:[-•]|\d+[.)])?\s*ANSWER CHECK\s*:\s*(.+?)\s*(?:--|—)\s*\[\s*([CD]R[1-4])\s*\]/i);if(!m)continue;
-  const gs=[...l.matchAll(/(?:--|—)\s*(MEETS|MISSES)\b/gi)];if(!gs.length||gs[gs.length-1][1].toUpperCase()!=='MISSES')continue;
+  const gs=[...l.matchAll(/(?:--|—)\s*(MEETS|MISSES)\b/gi)];if(!gs.length||gs[gs.length-1][1].toUpperCase()!=='MISSES')continue;if(/(?:--|—)\s*MEANS\s*:\s*NONE\b/i.test(l))continue; /* pkgEGB-1: MEANS NONE = an unproven press; none stands */
   const ref=m[1].replace(/\s+/g,' ').trim();if(!/^(?:[1-3]\s)?[A-Za-z][A-Za-z ]*\s\d+:\d+$/.test(ref))continue;const side=m[2].toUpperCase().startsWith('C')?'CHALLENGER':'DEFENDER';
   const rx=new RegExp('(?:^|[^A-Za-z0-9])'+esc(ref).replace(/ /g,'\\s+')+'(?![0-9]|:\\d)','i');
   for(const z of P.col){if(z.grade!==side+' LINK BROKEN')continue;const zl=z.raw.replace(/[*_`]+/g,'');const at=zl.toUpperCase().indexOf(z.grade);if(at<0)continue;
@@ -2017,7 +2281,7 @@ function gatePromptText2024(body){try{const b=body||{};const out=[];(b.messages|
 function sbRoundsOf2024(seat){try{const PB=$('Panel Build').first().json;const j=(PB.judges||[]).find(q=>q.seat===seat);return j&&j.body?ciRounds(gatePromptText2024(j.body)):null;}catch(e){return null;}}
 // LIVE K-* breaches drvCheck raises on the corrected text and not on the first text (2243 ask 2: LIVE only; a new TRIAL breach is named, record-only).
 function gateNewK2024(T0,T1,F0,F1,ctx){let MK=[];const run=(T,F)=>{PRS_CTX.R=ctx.R||null;PRS_L2BAD=null;const D=drvCheck(T,F.conceded_links,F.challenger_conceded_links,F.defense_standing,F.challenge_standing,!!ctx.ask,ctx.DL||[]);MK=D.marks||[];const its=(D.items||[]).slice();
-  if(ctx.R&&Object.keys(ctx.R).length){const F9=kfLines(T,ctx.R);(F9.items||[]).forEach(x=>its.push(x));MK=MK.concat(F9.marks||[]);} /* pkgKF (W3 2347): the K-F test on the corrected judgment */
+  if(ctx.R&&Object.keys(ctx.R).length){const F9=kfLines(T,ctx.R);(F9.items||[]).forEach(x=>its.push(x));MK=MK.concat(F9.marks||[]);} /* pkgKF (W3 2347): the K-F test on the corrected judgment */ if(ctx.R&&Object.keys(ctx.R).length){const U9=kunxLines(T,ctx.R);(U9.items||[]).forEach(x=>its.push({...x,why:x.link+': '+x.why}));MK=MK.concat(U9.marks||[]);} /* pkgRCK (W1 2741; W3 2742, 2747): K-UNX, K-UNX-A and E-ASM read the count the changes wrote */
   return its;};
  const key=x=>x.rule+'|'+(x.side||'')+'|'+(x.link?String(x.link).toUpperCase():String(x.why||'').slice(0,80));
  let a,b;try{a=run(T0,F0);b=run(T1,F1);}catch(e){return {error:String(e&&e.message||e).slice(0,200),items:[]};}
@@ -2069,20 +2333,49 @@ function gateIsForced2024(s){return KF_LINE.test(String(s==null?'':s).replace(/\
 // pkgGDUP (W3 2319): a CHANGE TO line stands in the corrected text when a line of that text reads the same, compared as E-APPLY writes it
 function gateStands2024(to,T){if(!to||!T)return false;const f=s=>String(s==null?'':s).replace(/\\+"/g,'"').replace(/[*_`]+/g,'').replace(/\s+/g,' ').trim().replace(/^(?:[-\u2022]|\d+[.)])\s*/,'').replace(/^["\u201c]+|["\u201d]+$/g,'').trim();
  const t=f(to);if(!t)return false;return String(T).split('\n').some(l=>f(l)===t);}
-function gateCure2024(seat,raw,F,its,G,reply,ctx){const A=gateRead2024(reply||'');const add=[];
- for(const x of G){const a=A[x.gid];if(a&&a.ans==='CHANGE'&&a.to&&!(x.kind==='RULE K-G4'&&gateIsForced2024(a.to)))add.push({seat,sid:x.gid,rule:'E-GATE',item:x.kind,line:gateLineFor2024(x,a.to.replace(/^["“]+|["”]+$/g,'')),ans:'CHANGE',to:a.to,why:a.why});}
+// pkgGBC (W1; W3 2813): did the gate change flip the grade of the collision an E-GATE B key names? Ta: text with the change, Tb: without it.
+function gbcFlip(key,Ta,Tb){const L=String(key||'').split('|')[3];if(!L)return false;const g=T=>{const c=(rcLines(T).col||[]).find(q=>String(q.link||'').toUpperCase().replace(/\s+VS\.?\s+/,' VS ')===L);return c?(c.grade||null):null;};const a=g(Ta),b=g(Tb);return a!=null&&b!=null&&a!==b;}
+// pkgDPT (W1 2830; W3 2832): the DIFFERENT POINT answer to an E-GATE B item.
+const DPT_STATUS='TRIAL';
+function dptRead(txt){const A={};const T2=String(txt||'').replace(/\\n/g,'\n').replace(/\\"/g,'"');
+ for(const l0 of T2.split('\n')){const l=l0.replace(/[*_`]+/g,'').trim();const m=l.match(/GATE\s*:?\s*(?:ITEM\s*)?#?\s*(G\s*\d+)\s*:?\s*\|\|\s*DIFFERENT\s+POINT\s*:?\s*([\s\S]*)$/i);if(!m)continue;
+  const id=m[1].replace(/\s+/g,'').toUpperCase();if(A[id])continue;const q=m[2].match(/press\s+holds\s*:?\s*["\u201c]([^"\u201c\u201d]+)["\u201d][\s\S]*?ground\s+uses\s*:?\s*["\u201c]([^"\u201c\u201d]+)["\u201d]/i);
+  A[id]={p:q?q[1]:null,g:q?q[2]:null,line:l};}
+ return A;}
+function dptCheck(x,d,ctx){const no=w=>({ok:false,why:'DIFFERENT POINT not accepted: '+w});if(!d||!d.p||!d.g)return no('the line does not give the press holds "<words>" and my ground uses "<words>" quotations');
+ const L0=String((x.lines||[])[0]||'').replace(/[*_`]+/g,'');const L1=String((x.lines||[])[1]||'').replace(/[*_`]+/g,'');
+ const am=L0.match(/ANSWER CHECK\s*:\s*((?:[1-3]\s)?[A-Za-z][A-Za-z ]*?)\s+(\d+):(\d+)\s*(?:--|\u2014)\s*\[\s*([CD]R[1-4])\s*\]/i);if(!am)return no('the ANSWER CHECK line was not read');
+ const ref=am[1]+' '+am[2]+':'+am[3];const vt=kfcText({book:am[1],ch:+am[2],v1:+am[3],v2:+am[3]},kkjvRows());if(!vt)return no(ref+' was not read this run (Cited Verses), so the spans cannot be checked');
+ const f=s=>krulNorm(kkjvNoMargin(s));const V=f(vt).split(' ').filter(Boolean);const P=f(d.p).split(' ').filter(Boolean),G=f(d.g).split(' ').filter(Boolean);
+ if(P.length<4||G.length<4)return no('each span must be 4 words or more of '+ref+' (press '+P.length+', ground '+G.length+')');
+ const at=S=>{const o=[];for(let i=0;i+S.length<=V.length;i++)if(S.every((w,k)=>V[i+k]===w))o.push([i,i+S.length-1]);return o;};const pa=at(P),ga=at(G);
+ if(!pa.length)return no('"'+d.p+'" is not a run of words of '+ref);if(!ga.length)return no('"'+d.g+'" is not a run of words of '+ref);
+ const has=(hay,S)=>(' '+f(hay)+' ').includes(' '+S.join(' ')+' ');
+ const mm=L0.match(/MEANS\s*:\s*([\s\S]*?)(?:\s(?:--|\u2014)\s*ANSWER\s*:|$)/i);const MEANS=mm?mm[1]:'';
+ const R=(ctx&&ctx.R)||{};const other=am[4].toUpperCase().startsWith('C')?'DR':'CR';const rk=Object.keys(R).filter(k=>k.toUpperCase().startsWith(other)&&typeof R[k]==='string');
+ if(!(has(MEANS,P)||rk.some(k=>has(R[k],P))))return no('"'+d.p+'" stands neither in the ANSWER CHECK\'s MEANS nor in a ['+other+'n] round');
+ const cw=s=>new Set(f(s).split(' ').filter(w=>w.length>=4));const mw=cw(MEANS);if(!P.some(w=>w.length>=4&&mw.has(w)))return no('"'+d.p+'" shares no word with the press MEANS, so it is not shown to be what the press holds');
+ const at2=L1.toUpperCase().search(/LINK BROKEN/);const tail=at2>=0?L1.slice(at2):L1;const qs=[...tail.matchAll(/["\u201c]([^"\u201c\u201d]{6,})["\u201d]/g)].map(m=>m[1]);
+ if(!qs.some(q=>has(q,G)))return no('"'+d.g+'" is not inside a quotation of the collision line');
+ if(pa.some(a=>ga.some(b=>a[0]<=b[1]&&b[0]<=a[1])))return no('the two spans overlap in '+ref+', so the press and the ground read the same words');
+ const gq=[];for(const q of qs)for(const part of q.split(/\.\.\.|\u2026/)){const W=f(part).split(' ').filter(Boolean);if(W.length>=3)at(W).forEach(r=>gq.push(r));} /* every run of V the collision line quotes */
+ if(pa.some(a=>gq.some(b=>a[0]<=b[1]&&b[0]<=a[1])))return no('"'+d.p+'" overlaps words of '+ref+' that the collision line itself quotes, so the press and the ground read the same words');
+ return {ok:true,why:'DIFFERENT POINT accepted (pkgDPT, W3 2832): the press holds "'+d.p+'" and the ground uses "'+d.g+'", two separate runs of '+ref};}
+function gateCure2024(seat,raw,F,its,G,reply,ctx){const A=gateRead2024(reply||'');const __dpt=dptRead(reply||''); /* pkgDPT */const add=[];
+ for(const x of G){const a=A[x.gid];if(a&&a.ans==='CHANGE'&&a.to&&!(x.kind==='RULE K-G4'&&gateIsForced2024(a.to)))add.push({seat,sid:x.gid,rule:'E-GATE',item:x.kind,line:gateLineFor2024(x,a.to.replace(/^["“]+|["”]+$/g,'')),ans:'CHANGE',to:a.to,why:a.why,...(x.sid?{psrc:x.sid}:{})}); /* pkgPSG: the refused send-back change */}
  for(const x of G){if(x.kind!=='RULE K-G4'||!A[x.gid])continue;const g=gateForced2024(x,A[x.gid],ctx);if(g&&g.cured)add.push({seat,sid:x.gid+'F',rule:'E-GATE',item:'FORCED',line:(x.lines||[])[0]||'',ans:'CHANGE',to:g.line,why:'the FORCED line that cured '+x.gid+', written after its collision line (ruling 411)',forced_add:true});} /* pkgGD (W3 2315 b) */
  const wd2299=new Set(G.filter(x=>x.kind==='CONTRADICTION'&&/^E-APPLY\b/.test(String(x.src||''))&&A[x.gid]&&A[x.gid].ans==='KEEP').map(x=>x.sid)); /* pkgGKW (W3 2299): KEEP withdraws the refused change */
  const its2=(its||[]).filter(z=>!(z&&wd2299.has(z.sid))).concat(add);const R2=gateItems2024(seat,raw,F,its2,ctx);const now=new Set((R2.items||[]).map(z=>z.key));const applied=new Set(R2.R1?R2.R1.applied:[]);
  const nL=s=>String(s==null?'':s).replace(/\\+/g,'').replace(/[*_`]+/g,'').replace(/\s+/g,' ').trim(); /* pkgKY (b): gate changes on one line; the last one wins */
  const grpOf=g=>{const me=add.find(z=>z.sid===g&&!z.forced_add);if(!me||!me.line)return [g];return add.filter(z=>!z.forced_add&&z.line&&nL(z.line)===nL(me.line)).map(z=>z.sid);};
- const supBy=new Map();for(const z of add){if(z.forced_add)continue;const g=grpOf(z.sid);const w=g[g.length-1];if(w!==z.sid)supBy.set(z.sid,w);}
+ const supBy=new Map();for(const z of add){if(z.forced_add)continue;const g=grpOf(z.sid);const w=g.slice(g.indexOf(z.sid)+1).filter(s=>applied.has(s)).pop();if(w)supBy.set(z.sid,w);} /* pkgGSL2 (W3 2731 4): the last APPLIED later change of the line */
  const kby=new Map(); /* pkgGL (W3 2341): the new LIVE K items each applied gate CHANGE raised, found by reading the text again without it */
- {const keysG=new Set(G.map(x=>x.key));const NK=(R2.items||[]).filter(z=>!keysG.has(z.key)&&z.src==='K re-read'&&z.live);
-  if(NK.length)for(const x of G){const a=A[x.gid];if(!(a&&a.ans==='CHANGE'&&applied.has(x.gid)))continue;const grp=grpOf(x.gid);const R3=gateItems2024(seat,raw,F,its2.filter(z=>!(z&&z.rule==='E-GATE'&&grp.includes(z.sid))),ctx); /* pkgKY (b): without every change on its line */const k3=new Set((R3.items||[]).map(z=>z.key));const hit=NK.filter(z=>!k3.has(z.key));if(hit.length)kby.set(x.gid,hit);}}
+ {const keysG=new Set(G.map(x=>x.key));const NK=(R2.items||[]).filter(z=>!keysG.has(z.key)&&(z.src==='K re-read'||z.src==='E-GATE B')&&z.live); /* pkgGBC (W1 2805, W3 2813): a fresh LIVE E-GATE B contradiction is tied to the gate change that flipped that collision's grade */
+  if(NK.length)for(const x of G){const a=A[x.gid];if(!(a&&a.ans==='CHANGE'&&applied.has(x.gid)))continue;const grp=grpOf(x.gid);const R3=gateItems2024(seat,raw,F,its2.filter(z=>!(z&&z.rule==='E-GATE'&&grp.includes(z.sid))),ctx); /* pkgKY (b): without every change on its line */const k3=new Set((R3.items||[]).map(z=>z.key));const hit=NK.filter(z=>!k3.has(z.key)&&(z.src!=='E-GATE B'||gbcFlip(z.key,R2.T1,R3.T1)));if(hit.length)kby.set(x.gid,hit); /* pkgGBC narrow (W3 2813): a ground-only change (33311 G13) is not tied; the fresh item stays RECORD-ONLY */}}
  const res=G.map(x=>{const a=A[x.gid];let cured=false,why;
   if(!a){why='no GATE line for this item (silence counts)';}
-  else if(x.kind==='NOT APPLIED'){const dup=a.ans==='CHANGE'&&!applied.has(x.gid)&&!((R2.R1&&R2.R1.items)||[]).some(z=>z&&z.sid===x.gid)&&gateStands2024(a.to,R2.T1); /* pkgCL (33025 chatgpt G6/G7): another gate change wrote the same line (W3 2319, now for NOT APPLIED items) */cured=a.ans==='KEEP'||applied.has(x.gid)||dup;why=a.ans==='KEEP'?'KEEP: the change stays unapplied':(applied.has(x.gid)?'the gate change was applied':dup?'the gate change is already in the corrected text (another change wrote the same line; W3 2319)':'the gate change was not applied');}
+  else if(x.kind==='NOT APPLIED'){const dup=a.ans==='CHANGE'&&!applied.has(x.gid)&&!((R2.R1&&R2.R1.items)||[]).some(z=>z&&z.sid===x.gid)&&gateStands2024(a.to,R2.T1); /* pkgCL (33025 chatgpt G6/G7): another gate change wrote the same line (W3 2319, now for NOT APPLIED items) */const sup=!dup&&a.ans==='CHANGE'&&!applied.has(x.gid)&&supBy.has(x.gid)&&applied.has(supBy.get(x.gid)); /* pkgGSL (33222 grok G1-G3): superseded on its line by a later applied gate change of this judge (pkgKY b) */
+  cured=a.ans==='KEEP'||applied.has(x.gid)||dup||sup;const __rct=!cured&&a.ans==='CHANGE'&&((R2.R1&&R2.R1.items)||[]).find(z=>z&&z.sid===x.gid&&z.rct); /* pkgRCT (W3 2819 item 3): the refusal is recorded; no seat removed */if(__rct){cured=true;}why=__rct?'pkgRCT refused the gate change and the count stays at your cure value (recorded, no seat removed; W3 2819): '+String(__rct.why).slice(0,300):a.ans==='KEEP'?'KEEP: the change stays unapplied':(applied.has(x.gid)?'the gate change was applied':dup?'the gate change is already in the corrected text (another change wrote the same line; W3 2319)':sup?'the later gate change '+supBy.get(x.gid)+' of this judge rewrote the same line (the last change wins) and was applied':'the gate change was not applied');}
   else if(x.kind==='RULE K-G4'&&gateForced2024(x,a,ctx)){const g=gateForced2024(x,a,ctx);cured=g.cured;why=g.why;} // pkgGF (W3 2311): before the KEEP branches, so KEEP + FORCED is read
   else if(a.ans==='KEEP'&&wd2299.has(x.sid)){cured=!now.has(x.key);why=cured?'KEEP: change withdrawn (the refused send-back change '+x.sid+' is dropped, and its contradiction is not in the judge text; W3 2299)':'KEEP: change withdrawn, but the item is still raised';}
   else if(a.ans==='KEEP'){const gch=[...applied].some(z=>/^G\d+$/.test(z));cured=gch&&!now.has(x.key);why=cured?'KEEP, and another gate change of this judge cleared the item':'KEEP does not cure a '+x.kind+' item (2243): a line must change';}
@@ -2090,21 +2383,36 @@ function gateCure2024(seat,raw,F,its,G,reply,ctx){const A=gateRead2024(reply||''
   else if(a.ans==='CHANGE'&&supBy.has(x.gid)&&!applied.has(x.gid)&&applied.has(supBy.get(x.gid))){cured=!now.has(x.key);why=cured?'the later gate change '+supBy.get(x.gid)+' of this judge rewrote the same line (the last change wins), and the item is no longer raised':'the later gate change '+supBy.get(x.gid)+' rewrote the same line, and the item is still raised';} /* pkgKY (b) */
   else{const st=!applied.has(x.gid)&&a.ans==='CHANGE'&&!((R2.R1&&R2.R1.items)||[]).some(z=>z&&z.sid===x.gid&&/drops the collision/.test(String(z.why||'')))&&gateStands2024(a.to,R2.T1); /* pkgCP: a change refused for dropping its collision does not cure as a line already in the text (W2 2352 E) */ /* pkgGDUP (W3 2319): the same line written by another change */
    cured=!now.has(x.key)&&(applied.has(x.gid)||st);why=cured?(applied.has(x.gid)?'the gate change was applied and the item is no longer raised':'the gate change is already in the corrected text (another change wrote the same line), and the item is no longer raised (W3 2319)'):(!applied.has(x.gid)?(st?'the gate change is already in the corrected text, but the item is still raised':'the gate change was not applied'):'the corrected text still raises it');}
+  {const __d=__dpt[x.gid];if(__d&&x.src==='E-GATE B'&&x.kind==='CONTRADICTION'){const __r=dptCheck(x,__d,ctx);if(DPT_STATUS==='LIVE'){if(!cured){cured=__r.ok;why=__r.why;}}else why=String(why||'')+' [pkgDPT TRIAL, record-only: '+(__r.ok?'would cure: ':'would not cure: ')+__r.why+']';}} /* pkgDPT (W3 2832) */
   if(cured&&kby.has(x.gid)){cured=false;why='the gate change raised a new LIVE item: '+kby.get(x.gid).map(z=>z.kind+' -- '+String(z.why||'').slice(0,240)).join('; ')+' (W3 2341: a change that raises a new LIVE K item does not cure; counted once, here)';} /* pkgGL */
   return {gid:x.gid,kind:x.kind,src:x.src,live:x.live,ans:a?a.ans:'NO ANSWER',to:a?a.to:'',reason:a?a.why:'',line:a?a.line:null,cured,why};});
  const keys0=new Set(G.map(x=>x.key));const fresh=(R2.items||[]).filter(z=>!keys0.has(z.key)).map(z=>({kind:z.kind,src:z.src,why:z.why,by:[...kby].filter(([g,l])=>l.some(y=>y.key===z.key)).map(([g])=>g).join(', ')||null}));
  return {res,its2,add,fresh,uncured:res.filter(r=>!r.cured&&r.live).length,R2};}
+// pkgCPD (W1; W3 2772 item 5): the side's final count line gives the counted_premises array after a changed count. Record-only.
+function cpdSync(j,pre,seat){let ob;try{ob=JSON.parse(j);}catch(e){return {j,mark:''};}const T=typeof ob.reasoning==='string'?ob.reasoning:'';let jj=j;const mk=[];
+ const lineOf=sd=>{for(const l of T.split('\n')){const u=String(l).replace(/[*_`]+/g,'').replace(/^\s*(?:[-\u2022]\s*|\d+[.)]\s*)?/,'');if(/^\[/.test(u))continue;
+   if(sd==='CHALLENGER'?/^CHALLENGER\s+CONCEDED LINKS\s*:/i.test(u):/^(?:DEFENDER\s+)?CONCEDED LINKS\s*:/i.test(u))return u.trim();}return null;};
+ for(const [sd,key,ck] of [['DEFENDER','counted_premises_defender','conceded_links'],['CHALLENGER','counted_premises_challenger','challenger_conceded_links']]){
+  const cur=ob[key],n=ob[ck];if(!Array.isArray(cur)||!Number.isInteger(n)||!pre||pre[ck]==null||pre[ck]===n||cur.length===n)continue;
+  const L=lineOf(sd);let set=null,why='';if(n===0)set=[];else if(!L)why='no '+sd+' count line in the text';else{const g=psGrades(L);if(!g||g.n!==n)why='the count line does not give the count '+n;else{const c=Object.keys(g.g).map(Number).filter(k=>g.g[k]==='COUNTED').sort((a,b)=>a-b);if(c.length===n)set=c;else why='the count line names '+c.length+' counted premise(s) ('+(c.join(', ')||'none')+') for a count of '+n;}}
+  const was='['+cur.join(',')+']';const from=cureSafe(String(L||'').slice(0,240)).replace(/;\s*END\]/g,', END');
+  if(set){const rx=new RegExp('("'+key+'"\\s*:\\s*)\\[[^\\]]*\\]');if(!rx.test(jj))continue;jj=jj.replace(rx,(_,h)=>h+'['+set.join(',')+']');
+   mk.push('\n[AUDIT v50: COUNTED PREMISES DERIVED (pkgCPD) -- '+(seat?'SEAT: '+seat+'; ':'')+'SIDE: '+sd+'; COUNT: '+pre[ck]+' to '+n+'; WAS: '+was+'; NOW: ['+set.join(',')+']; FROM: '+(n===0?'the count 0':from)+'; record-only, it removes no seat ; END]');}
+  else mk.push('\n[AUDIT v50: COUNTED PREMISES NOT DERIVED (pkgCPD) -- '+(seat?'SEAT: '+seat+'; ':'')+'SIDE: '+sd+'; COUNT: '+pre[ck]+' to '+n+'; ARRAY: '+was+' (kept); WHY: '+cureSafe(why)+'; LINE: '+from+'; record-only, it removes no seat. REVIEW THIS ROW. ; END]');}
+ return {j:jj,mark:mk.join('')};}
+function crwRep(h,o,n,enc){const st=k=>k===0||(enc?(h.slice(k-2,k)==='\\n'||h[k-1]==='"'):h[k-1]==='\n');const en=k=>k>=h.length||(enc?(h.slice(k,k+2)==='\\n'||h[k]==='"'):h[k]==='\n');let fb=-1;if(!o)return null;for(let k=h.indexOf(o);k>=0;k=h.indexOf(o,k+1)){if(!st(k))continue;if(en(k+o.length))return h.slice(0,k)+n+h.slice(k+o.length);if(fb<0)fb=k;}return fb<0?null:h.slice(0,fb)+n+h.slice(fb+o.length);} /* pkgCRW: a changed line replaces a whole line (33411 gemini: CONCEDED LINKS: 0 inside CHALLENGER CONCEDED LINKS: 0) */
 function cureRewrite(raw,panel,R,seat,F0){let s=String(raw||'');const enc=x=>JSON.stringify(String(x)).slice(1,-1);
- if(panel){const a=s.indexOf('{');const b=a<0?-1:rcObjEnd(s,a);if(b>0){let j=s.slice(a,b);let miss=false;
-   for(const [o0,n0] of R.rp){const e=enc(o0);if(j.includes(e))j=j.replace(e,()=>enc(n0));else miss=true;}
-   if(miss){try{const ob=JSON.parse(j);let t=typeof ob.reasoning==='string'?ob.reasoning:'';for(const [o0,n0] of R.rp)t=t.replace(o0,()=>n0);ob.reasoning=t;j=JSON.stringify(ob,null,2);}catch(e){}}
+ if(panel){const a=s.indexOf('{');const b=a<0?-1:rcObjEnd(s,a);if(b>0){let j=s.slice(a,b);let miss=false;const __cpdPre={conceded_links:(j.match(/"conceded_links"\s*:\s*(\d+)/)||[])[1],challenger_conceded_links:(j.match(/"challenger_conceded_links"\s*:\s*(\d+)/)||[])[1]};for(const k in __cpdPre)__cpdPre[k]=__cpdPre[k]==null?null:+__cpdPre[k]; /* pkgCPD */
+   for(const [o0,n0] of R.rp){const e=enc(o0);const __r=crwRep(j,e,enc(n0),true);if(__r!=null)j=__r;else miss=true;}
+   if(miss){try{const ob=JSON.parse(j);let t=typeof ob.reasoning==='string'?ob.reasoning:'';for(const [o0,n0] of R.rp){const __r=crwRep(t,o0,n0,false);if(__r!=null)t=__r;}ob.reasoning=t;j=JSON.stringify(ob,null,2);}catch(e){}}
    const F=R.fields;j=j.replace(/("verdict_tag"\s*:\s*")[A-Z]+(")/,'$1'+F.verdict_tag+'$2').replace(/("defense_standing"\s*:\s*")[A-Z-]+(")/,'$1'+F.defense_standing+'$2').replace(/("challenge_standing"\s*:\s*")[A-Z-]+(")/,'$1'+F.challenge_standing+'$2')
     .replace(/("conceded_links"\s*:\s*)\d+/,'$1'+F.conceded_links).replace(/("challenger_conceded_links"\s*:\s*)\d+/,'$1'+F.challenger_conceded_links);
    if(R.cpAdd)for(const [sd,key] of [['DEFENDER','counted_premises_defender'],['CHALLENGER','counted_premises_challenger']]){const add=R.cpAdd[sd]||[];if(!add.length)continue; /* ruling 421 (B6) */
     const rx=new RegExp('("'+key+'"\\s*:\\s*)\\[([^\\]]*)\\]');const m=j.match(rx);if(!m)continue;const cur=(m[2].match(/\d+/g)||[]).map(Number);const nu=[...new Set(cur.concat(add))].sort((a,b)=>a-b);if(nu.length!==cur.length)j=j.replace(rx,(_,h)=>h+'['+nu.join(',')+']');}
+   let __cpd='';try{const __c=cpdSync(j,__cpdPre,seat);j=__c.j;__cpd=__c.mark;}catch(e){__cpd='\n[AUDIT v50: COUNTED PREMISES -- the derive failed: '+cureSafe(String(e&&e.message||e)).slice(0,160)+' ; END]';} /* pkgCPD */
    const cr=(F0&&F0.verdict_tag&&F0.verdict_tag!==F.verdict_tag)?'\n[AUDIT v21: CORRECTED RESULT -- '+(seat?'SEAT: '+seat+'; ':'')+'ORIGINAL: '+F0.verdict_tag+'; COUNTED: '+F.verdict_tag+' ('+R.tag+'); RETRACTED: '+R.retracted.join(', ')+']':'';
-   s=s.slice(0,a)+j+cr+s.slice(b);}}
- else{const i=s.indexOf('\n\n[AUDIT');let t=i<0?s:s.slice(0,i);const rest=i<0?'':s.slice(i);for(const [o0,n0] of R.rp)t=t.replace(o0,()=>n0);s=t+rest;}
+   s=s.slice(0,a)+j+cr+__cpd+s.slice(b);}}
+ else{const i=s.indexOf('\n\n[AUDIT');let t=i<0?s:s.slice(0,i);const rest=i<0?'':s.slice(i);for(const [o0,n0] of R.rp){const __r=crwRep(t,o0,n0,false);if(__r!=null)t=__r;}s=t+rest;}
  const lab=l=>{const u=rcOne(l).replace(/[*_`]+/g,'').replace(/^(?:[-•]|\d+[.)])?\s*/,'').toUpperCase();const m=u.match(/^(D\d+\s+VS\.?\s+C\d+|DEFENSE STANDING|CHALLENGE STANDING|CHALLENGER CONCEDED LINKS|CONCEDED LINKS|RESULT|CLAUSE|KEYSTONE)\b/);return m?m[1].replace(/\s+VS\.?\s+/,' VS '):'LINE';};
  const sup=(R.rp||[]).map(([o0,n0])=>'\n[AUDIT v27: SUPERSEDED LINE -- '+(seat?'SEAT: '+seat+'; ':'')+'LABEL: '+lab(n0)+'; ORIGINAL: '+cureSafe(rcOne(o0)).replace(/;\s*END\]/g,', END')+' ; END]').join(''); /* judge_fix8 R4 */
  let rk='';try{const H=rechk2024(R.rp,rechkRounds2024(seat));rk=H.map(h=>'\n[AUDIT v39: K-RECHK -- '+(seat?'SEAT: '+seat+'; ':'')+'CHANGE: '+String(h.id||'change').replace(/;/g,',')+'; RULE: '+h.rule+'; '+(h.old===null?'NOT CHECKED':(h.old?'ALREADY IN THE ORIGINAL':'NEW'))+': '+h.why+'; LINE: '+cureSafe(h.line).slice(0,300)+'; ORIGINAL: '+cureSafe(h.orig).slice(0,300)+'; TRIAL rule, record-only ; END]').join('');}catch(e){rk='\n[AUDIT v39: K-RECHK -- the re-check failed: '+cureSafe(String(e&&e.message||e)).slice(0,160)+' ; END]';}
@@ -2117,9 +2425,10 @@ function cureCut(s){s=String(s);if(s.length<=600)return s;const k=s.lastIndexOf(
 // full reply, the RESPONSE line, the result and its reason. The audit-line excerpt (cureReport) is kept as it was.
 function enfPrompt(body){try{if(body&&Array.isArray(body.messages)){const u=body.messages.filter(m=>m&&m.role==='user');const c=u.length?u[u.length-1].content:null;return typeof c==='string'?c:JSON.stringify(c);}
  if(body&&Array.isArray(body.contents)){const u=body.contents.filter(m=>m&&m.role==='user');const c=u.length?u[u.length-1].parts:null;return Array.isArray(c)?c.map(p=>p&&p.text||'').join(''):null;}}catch(e){}return null;}
+function prdTok(f,t){if(typeof t!=='string'||t.length<2000)return t;let h=0x811c9dc5;for(let i=0;i<t.length;i++){h^=t.charCodeAt(i);h=Math.imul(h,0x01000193)>>>0;}return '[[PRD:'+f+':'+t.length+':'+h.toString(16)+']]';} /* pkgPRD: a repeat of the call's prompt or reply travels as a token; Write Enforcer Log expands it */
 function enfRows(meta,v,reply,body){const T=new Date().toISOString();const ps=enfPrompt(body);const full=reply&&reply.ok?String(reply.text==null?'':reply.text):null;
- return (v||[]).map(x=>({run_token:meta.run_token||null,seat:meta.seat||null,seat_role:meta.role||null,judge_model:meta.model||null,kind:'cure',rule:x.rule,item:x.rule==='K-G3'?x.side+' STANDING':(x.link||null),
-  flagged_line:x.line||null,prompt_sent:ps,full_reply:full,reply_error:reply&&!reply.ok?String(reply.why||'no reply'):(reply?null:'no reply'),response_line:x.response||null,cure_status:x.status,cure_reason:enfTrialWhy(x,x.why)||null,at:T}));} // judge_fix6 H8
+ return (v||[]).map((x,__k)=>({run_token:meta.run_token||null,seat:meta.seat||null,seat_role:meta.role||null,judge_model:meta.model||null,kind:'cure',rule:x.rule,item:x.rule==='K-G3'?x.side+' STANDING':(x.link||null),
+  flagged_line:x.line||null,prompt_sent:__k?prdTok('prompt_sent',ps):ps,full_reply:__k?prdTok('full_reply',full):full,reply_error:reply&&!reply.ok?String(reply.why||'no reply'):(reply?null:'no reply'),response_line:x.response||null,cure_status:x.status,cure_reason:enfTrialWhy(x,x.why)||null,at:T}));} // judge_fix6 H8
 function cureReport(seat,v){return v.map(x=>'[AUDIT v21: DEBATE RULE VIOLATION REPORT -- '+(seat?'SEAT: '+seat+'; ':'')+'ITEM: '+(x.rule==='K-G3'?x.side+' STANDING':x.link)+'; RULE: '+x.rule+'; RESULT: '+x.status+(x.rule==='K-C'&&x.status!=='CURED'?'; NOT COUNTED (K-C UNCURED)':'')
  +(x.kinds&&x.kinds.length?'; KINDS: '+x.kinds.join(', '):'')+((x.why||!enfLive(x))?'; WHY: '+cureSafe(enfTrialWhy(x,x.why)):'')+(x.line?'; LINE: '+cureSafe((l=>l.length>300?l.slice(0,297)+'...':l)(String(x.line).replace(/\s+/g,' ').trim())):'')
  +(x.statement?'; STATEMENT: '+cureSafe(cureCut(x.statement)):'')+'; JUDGE STATEMENT: '+(x.judge_statement?cureSafe(cureCut(x.judge_statement)):'none written')+']');}
@@ -2135,7 +2444,7 @@ function cureProse(seat,reply){const p=reply&&reply.ok?cureLines(reply.text).pro
 // with drv_uncured above 0 is unseated (2268 ruling 1): the removed panel seat's body returns, the seat is left unfilled and not counted, and
 // the line names each uncured rule and item. With no alternate seated, the output is Alternate Merge Seat's, unchanged.
 function rechkRows2024(AM,AS){try{ /* pkgRCL (W3 2496): one send_back row per K-RECHK mark; trial counts come from SQL */
- const ex=n=>{try{return $(n).isExecuted?$(n).first().json:null;}catch(e){return null;}};const texts=[];const model={};const alt=new Set(((AS&&AS.alt_seats)||[]).map(s=>s&&s.seat));
+ const ex=n=>{try{return __L[n]().isExecuted?__L[n]().first().json:null;}catch(e){return null;}};const texts=[];const model={};const alt=new Set(((AS&&AS.alt_seats)||[]).map(s=>s&&s.seat));
  const addB=bs=>(Array.isArray(bs)?bs:[]).forEach(x=>{try{const p=JSON.parse(x).payload;texts.push([p.judge_seat||null,p.verdict_raw]);if(p.judge_seat&&!model[p.judge_seat])model[p.judge_seat]=p.judge_api_model||null;}catch(e){}});
  for(const n of ['Panel Cure Check','Gate Record','Alt Gate Record']){const j=ex(n);if(j)addB(j.bodies);}addB(AM.bodies);
  (AM.alternates_tried||[]).forEach(x=>{if(x&&x.verdict_raw)texts.push([x.alternate||null,x.verdict_raw]);});
@@ -2146,8 +2455,8 @@ function rechkRows2024(AM,AS){try{ /* pkgRCL (W3 2496): one send_back row per K-
  return rows;}catch(e){return [];}}
 const AM=$('Alternate Merge Seat').first().json;const AS=$('Alt Seated').first().json;
 if(!Array.isArray(AS.alt_seats)||!AS.alt_seats.length){const __rk=rechkRows2024(AM,AS);if(!__rk.length)return [{json:AM}];const __b=AM.enforcer_log_body||{};
- return [{json:{...AM,enforcer_log:(AM.enforcer_log||[]).concat(__rk),enforcer_log_body:{...__b,p_rows:(Array.isArray(__b.p_rows)?__b.p_rows:(AM.enforcer_log||[])).concat(__rk)}}}];} /* pkgRCL: K-RECHK rows */
-const ex=n=>{try{return $(n).isExecuted?$(n).first().json:null;}catch(e){return null;}};
+ return [{json:{...AM,enforcer_log:(AM.enforcer_log||[]).concat(__rk)}}];} /* pkgRCL: K-RECHK rows */
+const ex=n=>{try{return __L[n]().isExecuted?__L[n]().first().json:null;}catch(e){return null;}};
 const JER=ex('Alt Judge Enforcer Record'),SBR=ex('Alt Send Back Record'),GR=ex('Alt Gate Record');
 const gb=(GR&&Array.isArray(GR.bodies)&&GR.bodies.length===AS.bodies.length)?GR.bodies:AS.bodies;const SBI=(GR&&GR.sb_items)||(SBR&&SBR.sb_items)||[];
 const PRE=(()=>{const g=ex('Gate Record');if(g&&Array.isArray(g.bodies))return g;return $('Panel Cure Check').first().json;})(); /* the bodies Alternate Merge Seat started from */
@@ -2178,4 +2487,8 @@ for(const s of AS.alt_seats){const k=bodies.findIndex(x=>{try{return JSON.parse(
  else{bodies[k]=JSON.stringify(b);alt_apply.push({seat:s.seat,removed_seat:s.removed_seat,applied:R?R.applied:[],unseated:false});}}
 const panel_effective=summary.map(x=>x.seat).sort();
 rechkRows2024({...AM,bodies,alternates_tried:tried},AS).forEach(r=>log.push(r)); /* pkgRCL: K-RECHK rows */
-return [{json:{...AM,bodies,summary,panel_effective,alternates_seated:seated,drv_removed:removed,alternates_tried:tried,enforcer_log:log,enforcer_log_body:{...(AM.enforcer_log_body||{}),p_rows:log},alt_apply}}];
+return [{json:{...AM,bodies,summary,panel_effective,alternates_seated:seated,drv_removed:removed,alternates_tried:tried,enforcer_log:log,alt_apply}}];
+
+})();
+if(Array.isArray(__CSPOUT))for(const it of __CSPOUT){const j=it&&it.json;if(!j||!Array.isArray(j.bodies))continue;it.json={...j,bodies:j.bodies.map(x=>{try{const s=typeof x==='string';const o=s?JSON.parse(x):JSON.parse(JSON.stringify(x));if(!o||!o.payload)return x;o.payload.conceded_split=__CSP(o.payload.verdict_raw,o.payload.conceded_links,o.payload.challenger_conceded_links);return s?JSON.stringify(o):o;}catch(e){return x;}})};}
+return __CSPOUT; /* pkgCSP (B8) */

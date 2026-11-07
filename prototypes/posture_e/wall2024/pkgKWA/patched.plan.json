@@ -1,0 +1,112 @@
+{
+ "Alt_Gate_Build.js": {
+  "base": "655a102ca620",
+  "patched": "12e2b44a03f4",
+  "runs_fix": true
+ },
+ "Alt_Gate_Record.js": {
+  "base": "458767915cbf",
+  "patched": "19546876ec25",
+  "runs_fix": true
+ },
+ "Alternate_Build.js": {
+  "base": "577a55461785",
+  "patched": "a19de81f7685",
+  "runs_fix": true
+ },
+ "Alternate_Cure_Build.js": {
+  "base": "0703ca22e31b",
+  "patched": "6ebb9aeda268",
+  "runs_fix": true
+ },
+ "Alternate_Cure_Normalize.js": {
+  "base": "e9d4281dc246",
+  "patched": "3f7db12a120e",
+  "runs_fix": true
+ },
+ "Alternate_Merge.js": {
+  "base": "b9304d656dbc",
+  "patched": "a1a51ee8902a",
+  "runs_fix": true
+ },
+ "Alternate_Merge_Seat.js": {
+  "base": "a627ab77da7f",
+  "patched": "81867e2a2497",
+  "runs_fix": true
+ },
+ "Alternate_Payloads.js": {
+  "base": "01313dbecbed",
+  "patched": "da65246cd88d",
+  "runs_fix": false
+ },
+ "Cure_Build.js": {
+  "base": "2e72ff7fe9d8",
+  "patched": "88045daab8f0",
+  "runs_fix": true
+ },
+ "Cure_Check.js": {
+  "base": "6703426e1cbc",
+  "patched": "00cd673ec018",
+  "runs_fix": true
+ },
+ "Cure_Normalize.js": {
+  "base": "2b3abb2150b4",
+  "patched": "42cce82c53c0",
+  "runs_fix": true
+ },
+ "Extract_Independent_Verdict.js": {
+  "base": "8d3ba39454b4",
+  "patched": "36fcdcf38adc",
+  "runs_fix": false
+ },
+ "Gate_Build.js": {
+  "base": "ccd8617615c4",
+  "patched": "041df84bce2f",
+  "runs_fix": true
+ },
+ "Gate_Record.js": {
+  "base": "7a63b07af17b",
+  "patched": "6deef3b164dc",
+  "runs_fix": true
+ },
+ "Panel_Cure_Build_1.js": {
+  "base": "b9848c8a405d",
+  "patched": "ac2044c86433",
+  "runs_fix": true
+ },
+ "Panel_Cure_Build_2.js": {
+  "base": "e27eb353e000",
+  "patched": "f122c8717172",
+  "runs_fix": true
+ },
+ "Panel_Cure_Build_3.js": {
+  "base": "dea0e25c9926",
+  "patched": "0b1e98ab2d82",
+  "runs_fix": true
+ },
+ "Panel_Cure_Check.js": {
+  "base": "ca0339bc58fd",
+  "patched": "1c4229d8a459",
+  "runs_fix": true
+ },
+ "Panel_Cure_Normalize_1.js": {
+  "base": "8347913057b0",
+  "patched": "f8959b2fcf3f",
+  "runs_fix": true
+ },
+ "Panel_Cure_Normalize_2.js": {
+  "base": "a3d1fe0c0321",
+  "patched": "d2453844e653",
+  "runs_fix": true
+ },
+ "Panel_Cure_Normalize_3.js": {
+  "base": "81016d1a4eed",
+  "patched": "440498b0b619",
+  "runs_fix": true
+ },
+ "Panel_Payloads.js": {
+  "base": "413d9b516279",
+  "patched": "533239b29a20",
+  "runs_fix": false
+ }
+}
