@@ -7,7 +7,7 @@
 // Default bases: Builds pkgEPS/patched_live, Records pkgETC/patched_on_pkgEPS_patched_live (write order EPS, ETC, EAW). --live builds on live s40 alone.
 // Run from wall2024/: node pkgEAW/build_EAW.cjs [--live] [--out dir]
 const fs=require('fs'),crypto=require('crypto');const sha=s=>crypto.createHash('sha256').update(s).digest('hex').slice(0,12);
-const arg=(k,d)=>{const i=process.argv.indexOf(k);return i>0?process.argv[i+1]:d;};const LIVE=process.argv.includes('--live');
+const arg=(k,d)=>{const i=process.argv.indexOf(k);return i>0?process.argv[i+1]:d;};const LIVE=process.argv.includes('--live');const RBASE=arg('--rbase','pkgETC/patched_on_pkgEPS_patched_live');
 const W=JSON.parse(fs.readFileSync('/mnt/project-files/wall2024/fetchback_live_s40.json','utf8'));const L=(W.data||W);
 const OUT=arg('--out',__dirname+(LIVE?'/patched_live_only':'/patched'));fs.mkdirSync(OUT,{recursive:true});
 const BL=fs.readFileSync(__dirname+'/eaw_build_lib.js','utf8').trim(),RL=fs.readFileSync(__dirname+'/eaw_record_lib.js','utf8').trim();
@@ -18,7 +18,7 @@ const EB=[["const items=[];let gi=0;",BL+"\nconst items=[];let gi=0;"],
 const ER=[["rows.push(...CODE);",RL+"\nconst __eawBlk={};B.forEach(b=>(b.ids||[]).forEach(x=>{if(x&&x.rule==='E-ANS'&&typeof x.eaw_blk==='string'&&!(x.item in __eawBlk))__eawBlk[x.item]=x.eaw_blk;}));let __eawHeld=0;\nfor(const r of rows){if(r.rule!=='E-ANS')continue;const m=String(r.cure_reason||'').match(/^ENFORCER DISAGREE \\(right: MISSES\\): ([\\s\\S]*?) \\(judge wrote /);if(!m)continue;const n=eawHoldWhy(m[1],__eawBlk[r.item]);if(!n)continue;__eawHeld++;const note=n.replace(/[()]/g,' ');\n r.cure_reason=EAW_STATUS==='LIVE'?r.cure_reason.replace(/^ENFORCER DISAGREE/,'ENFORCER HELD (pkgEAW, not sent; W3 2844: '+note+')'):r.cure_reason+' (TRIAL pkgEAW: would not be sent: '+note+')';}\nrows.push(...CODE);"]];
 const plan={source:'W2 pkgEAW, W3 2844 (33311 E-ANS "says only" pushes)',live:L.versionId,nodes:[]};
 const rep=(s,a,b,nm)=>{const c=s.split(a).length-1;if(c!==1)throw new Error(nm+' anchor x'+c+': '+a.slice(0,50));return s.replace(a,()=>b);};
-for(const [name,base,E] of [['Judge Enforcer Build','pkgEPS/patched_live',EB],['Alt Judge Enforcer Build','pkgEPS/patched_live',EB],['Judge Enforcer Record','pkgETC/patched_on_pkgEPS_patched_live',ER],['Alt Judge Enforcer Record','pkgETC/patched_on_pkgEPS_patched_live',ER]]){
+for(const [name,base,E] of [['Judge Enforcer Build','pkgEPS/patched_live',EB],['Alt Judge Enforcer Build','pkgEPS/patched_live',EB],['Judge Enforcer Record',RBASE,ER],['Alt Judge Enforcer Record',RBASE,ER]]){
  const f=name.replace(/ /g,'_')+'.js';const s0=LIVE?L.nodes.find(z=>z.name===name).parameters.jsCode:fs.readFileSync(base+'/'+f,'utf8');let s=s0;for(const [a,b] of E)s=rep(s,a,b,name);
  new Function('$','$input','$json','$execution','$workflow',s);fs.writeFileSync(OUT+'/'+f,s);plan.nodes.push({name,file:f,base:LIVE?'live s40':base,base_sha:sha(s0),final_sha:sha(s),bytes:[s0.length,s.length]});}
 fs.writeFileSync(OUT+'.plan.json',JSON.stringify(plan,null,1));console.log(JSON.stringify(plan));

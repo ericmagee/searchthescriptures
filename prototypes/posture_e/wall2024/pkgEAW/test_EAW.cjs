@@ -23,7 +23,7 @@ const NR={CR3:'Luke 1:31 "thou shalt conceive in thy womb" The press: it is futu
  const c=eawBlock(B33345,['CR3'],'Acts 1:8','I grant it is the same verb');T(!!c&&c.t.split('\n').length===1,'F bullet form: Acts 1:8 block stops at the next "- **" bullet');}
 // B and R: saved runs
 const D='/mnt/project-files/wall2024/inputs/';const runs=fs.readdirSync(D).filter(f=>/_Judge_Enforcer_Record\.json$/.test(f)&&!/_Alt_/.test(f)).map(f=>f.split('_')[0]).sort();
-const STK=[['stack (EPS live + ETC)','../pkgEPS/patched_live','../pkgETC/patched_on_pkgEPS_patched_live','patched'],['live s40 only',null,null,'patched_live_only']];
+const STK=[['stack (EPS live + ETC)','../pkgEPS/patched_live','../pkgETC/patched_on_pkgEPS_patched_live','patched'],['live s40 only',null,null,'patched_live_only'],['on pkgEPD','../pkgEPS/patched_live','../pkgEPD/patched_live','patched_on_pkgEPD']];
 const LIVE=n=>JSON.parse(fs.readFileSync('/mnt/project-files/wall2024/fetchback_live_s40.json','utf8')).nodes.find(z=>z.name===n).parameters.jsCode;
 const flips=[];let found=0,items=0;const ex=[];
 for(const [lab,bb,rb,pd] of STK)for(const RUN of runs)for(const [bn,bi,rn,ri] of [['Judge Enforcer Build','Enforcer Record','Judge Enforcer Record','Judge Enforcer Call deepseek'],['Alt Judge Enforcer Build','Alt Seated','Alt Judge Enforcer Record','Alt Judge Enforcer Call deepseek']]){
