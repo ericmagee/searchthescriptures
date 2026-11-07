@@ -12,7 +12,7 @@ so splitting into three branches would still run them in turn.
   items go out together through Promise.allSettled and come back in item order. The merge is therefore by seat slot,
   and each reply also echoes its slot and provider.
 - **WALL-2024 Panel Judge Call** (new webhook workflow, `patched/Panel_Judge_Call.workflow.json`) routes each item by
-  provider to the same 6 provider HTTP nodes: same credentials, URL, 900 s timeout and grok conv-id (the parent's
+  provider to the same 6 provider HTTP nodes: same credentials, URL, 900 s timeout and grok conv-id, also on Call openrouter, W3 2953 (the parent's
   execution id). It answers `{ppj_slot, ppj_provider, response}`. Wrap turns a provider error into plain
   message, description and status fields, because an Error's message does not survive JSON.
 - **The 16 provider judge nodes** (`Panel Judge k <provider>`) become Code nodes with the same names. Each hands out its

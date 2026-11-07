@@ -1,0 +1,14 @@
+// pkgECP (W1, 11-07; Lane 1 DeepSeek enforcer fix). E-COL fed a judge's "Dn vs Cm (ref): ... LINK BROKEN" line as its own item, apart from the
+// same judge's "FORCED: Dn vs Cm -- MEANS ... -- ANSWER ..." line on the same collision. DeepSeek judged the LINK BROKEN line without the quotes,
+// which sit on the FORCED line, and DISAGREEd for "no answer's own words are quoted" (33442 gemini D1/D2/D3/D6, grok D1 vs C3; 33371 grok 5, gemini 1).
+// Now the LINK BROKEN item carries the same judge's FORCED line(s) on that collision, and RULE E-COL reads the two as one ruling. Side-neutral.
+// Only Judge Enforcer Build + Alt Judge Enforcer Build change. Base: live s48. Run from wall2024/: node pkgECP/build_ECP.cjs
+const fs=require('fs');const crypto=require('crypto');const h=s=>crypto.createHash('sha256').update(s).digest('hex').slice(0,12);
+const R=[
+ ["RULE E-COL (a collision line: FORCED, or LINK BROKEN). ","RULE E-COL (a collision line: FORCED, or LINK BROKEN). A LINK BROKEN line given with THE SAME JUDGE\\'S FORCED LINE on that collision is read with it as one ruling: the words that FORCED line quotes (its MEANS and its ANSWER) are the quotes of the break, so do not DISAGREE because the LINK BROKEN line itself quotes no answer words; judge the break by those quoted words, under the rest of this rule (pkgECP, either side alike). "],
+ ["for(const g of CG){ci++;","/* pkgECP (W1): a LINK BROKEN item carries the same judge\\'s FORCED line(s) on the same collision, where its quotes stand (33442 gemini D1/D2/D3/D6) */\nconst __ecpK=s=>{const m=String(s||'').match(/^(?:FORCED(?:\\s*\\(\\s*Commitment\\s+\\d+\\s*\\))?\\s*:\\s*)?([DC]\\d+)\\s*vs\\.?\\s*([DC]\\d+)/);return m?(m[1]+' vs '+m[2]).toUpperCase():null;};\nconst __ecpOf=g=>{if(/^FORCED/.test(g.line))return [];const k=__ecpK(g.line),s=g.key.split('|')[0];if(!k)return [];return CG.filter(x=>x!==g&&/^FORCED/.test(x.line)&&x.key.split('|')[0]===s&&__ecpK(x.line)===k).slice(0,2);};\nfor(const g of CG){ci++;"],
+ ["+failsNote(g.line)+(__efg?'\\nCODE CHECK (pkgEFG): '+__efg+'.':''),req:/^FORCED/.test(g.line)});}","+failsNote(g.line)+(__efg?'\\nCODE CHECK (pkgEFG): '+__efg+'.':'')+(()=>{const p=__ecpOf(g);return p.length?'\\nTHE SAME JUDGE\\'S FORCED LINE ON THIS COLLISION (pkgECP: read with THE LINE as one ruling; its quotes are the quotes of the break):\\n'+p.map(x=>cut(x.line,1600)).join('\\n'):'';})(),req:/^FORCED/.test(g.line)});}"]];
+const plan={};for(const f of fs.readdirSync('pkgECP/base_s48')){let s=fs.readFileSync('pkgECP/base_s48/'+f,'utf8');const s0=s;
+ for(const [a,b] of R){const c=s.split(a).length-1;if(c!==1)throw new Error(f+': '+c+' x '+a.slice(0,60));s=s.replace(a,()=>b);}
+ new Function('$','$input',s);fs.writeFileSync('pkgECP/patched/'+f,s);plan[f]={base:h(s0),patched:h(s)};console.log(f.padEnd(30),h(s0),'->',h(s));}
+fs.writeFileSync('pkgECP/patched.plan.json',JSON.stringify(plan,null,1));

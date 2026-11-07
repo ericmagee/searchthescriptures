@@ -90,7 +90,9 @@ con['Panel Judge Call']={main:[[{node:'Provider Route',type:'main',index:0}]]};c
 P1.forEach((p,i)=>{const src=node('Panel Judge 1 '+p);const prm=JSON.parse(JSON.stringify(src.parameters));
  prm.jsonBody="={{ $('Panel Judge Call').first().json.body.body }}";
  if(p==='gemini')prm.url="={{ 'https://generativelanguage.googleapis.com/v1beta/models/' + $('Panel Judge Call').first().json.body.api_model + ':generateContent' }}";
- if(p==='grok')prm.headerParameters={parameters:[{name:'x-grok-conv-id',value:"={{ $('Panel Judge Call').first().json.body.conv_id }}"}]};
+ /* any x-grok-conv-id header (grok, and openrouter too) takes the PARENT execution id from the payload; $execution.id here would be the sub-execution's (W3 2953) */
+ if(prm.headerParameters&&Array.isArray(prm.headerParameters.parameters))prm.headerParameters={parameters:prm.headerParameters.parameters.map(hp=>hp.name==='x-grok-conv-id'?{name:hp.name,value:"={{ $('Panel Judge Call').first().json.body.conv_id }}"}:hp)};
+ if(JSON.stringify(prm).includes('$execution'))throw new Error('Call '+p+' still reads $execution');
  const nm='Call '+p;sub.push({id:uid('c'+p),name:nm,type:src.type,typeVersion:src.typeVersion,onError:'continueRegularOutput',position:[720,60+i*100],credentials:src.credentials,parameters:prm});
  con['Provider Route'].main[i]=[{node:nm,type:'main',index:0}];con[nm]={main:[[{node:'Wrap',type:'main',index:0}]]};});
 sub.push({id:uid('wrap'),name:'Wrap',type:'n8n-nodes-base.code',typeVersion:2,onError:'stopWorkflow',position:[960,300],parameters:{jsCode:WRAP}});

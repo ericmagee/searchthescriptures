@@ -228,7 +228,7 @@
      "parameters": [
       {
        "name": "x-grok-conv-id",
-       "value": "={{ \"odv1-\" + $execution.id }}"
+       "value": "={{ $('Panel Judge Call').first().json.body.conv_id }}"
       }
      ]
     }
