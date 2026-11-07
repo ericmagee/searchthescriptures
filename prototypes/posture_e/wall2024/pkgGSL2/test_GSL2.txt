@@ -1,0 +1,18 @@
+OK   A1 the 6 bases are the pkgASM finals
+OK   B1 33222 Alt Gate Record: patched output equals base; grok G1-G4 CURED
+     grok G1 NOT APPLIED (E-APPLY S35) CURED; grok G2 NOT APPLIED (E-APPLY S36) CURED; grok G3 NOT APPLIED (E-APPLY S37) CURED; grok G4 NOT APPLIED (E-APPLY S38) CURED
+OK   B2 33222 Gate Record: patched output equals base
+     chatgpt G1 NOT APPLIED (E-APPLY S21) CURED; chatgpt G2 NOT APPLIED (E-APPLY S22) CURED
+OK   B2 33218 Gate Record: patched output equals base
+     chatgpt G1 NOT APPLIED (E-APPLY S20) CURED; chatgpt G2 NOT APPLIED (E-APPLY S21) CURED; sol G1 NOT APPLIED (E-APPLY S18) CURED; sol G2 NOT APPLIED (E-APPLY S19) CURED
+OK   C1 base (PSG+UNXA+ASM): G1 and G2 UNCURED although G3 rewrote their line (the gap)
+     grok G1 NOT APPLIED (E-APPLY S35) UNCURED; grok G2 NOT APPLIED (E-APPLY S36) UNCURED; grok G3 NOT APPLIED (E-APPLY S37) CURED; grok G4 NOT APPLIED (E-APPLY S38) UNCURED; grok NEW NOT APPLIED (E-APPLY G4) UNCURED
+OK   C2 pkgGSL2: G1 and G2 CURED (superseded by the applied G3), G3 CURED, G4 still UNCURED (refused)
+     grok G1 NOT APPLIED (E-APPLY S35) CURED; grok G2 NOT APPLIED (E-APPLY S36) CURED; grok G3 NOT APPLIED (E-APPLY S37) CURED; grok G4 NOT APPLIED (E-APPLY S38) UNCURED; grok NEW NOT APPLIED (E-APPLY G4) UNCURED
+OK   C3 the reason names G3, the applied change
+     the later gate change G3 of this judge rewrote the same line (the last change wins) and was applied]\\n[AUDIT v38: E-GAT | the later gate change G3 of this judge rewrote the same line (the last change wins) and was applied]\\n[AUDIT v38: E-GAT
+OK   D1 G3 and G4 refused: G2 applied (CURED in base and patched); G1 CURED under pkgGSL2 by the applied G2, G3 and G4 UNCURED
+     grok G1 NOT APPLIED (E-APPLY S35) CURED; grok G2 NOT APPLIED (E-APPLY S36) CURED; grok G3 NOT APPLIED (E-APPLY S37) UNCURED; grok G4 NOT APPLIED (E-APPLY S38) UNCURED; grok NEW NOT APPLIED (E-APPLY G3) UNCURED; grok NEW NOT APPLIED (E-APPLY G4) UNCURED
+OK   D2 negative: G2, G3 and G4 refused: no later applied change, so no row is cured by supersession; base and patched give the same rows
+     grok G1 NOT APPLIED (E-APPLY S35) CURED; grok G2 NOT APPLIED (E-APPLY S36) UNCURED; grok G3 NOT APPLIED (E-APPLY S37) UNCURED; grok G4 NOT APPLIED (E-APPLY S38) UNCURED; grok NEW NOT APPLIED (E-APPLY G2) UNCURED; grok NEW NOT APPLIED (E-APPLY G3) UNCURED; grok NEW NOT APPLIED (E-APPLY G4) UNCURED
+9 OK, 0 FAIL
