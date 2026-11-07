@@ -1,0 +1,33 @@
+{
+ "source": "W2 pkgESK (33430 short reply retry)",
+ "nodes": [
+  {
+   "name": "Judge Enforcer Retry Build",
+   "file": "Judge_Enforcer_Retry_Build.js",
+   "base": "pkgESR/patched_on_pkgEAX",
+   "base_sha": "cfa5ec5750ad",
+   "final_sha": "aec736678e95"
+  },
+  {
+   "name": "Judge Enforcer Record",
+   "file": "Judge_Enforcer_Record.js",
+   "base": "pkgEIS/patched",
+   "base_sha": "e6083b4e2086",
+   "final_sha": "0b2423062f3d"
+  },
+  {
+   "name": "Alt Judge Enforcer Retry Build",
+   "file": "Alt_Judge_Enforcer_Retry_Build.js",
+   "base": "pkgESR/patched_on_pkgEAX",
+   "base_sha": "d7eef3d79009",
+   "final_sha": "84e4275ca963"
+  },
+  {
+   "name": "Alt Judge Enforcer Record",
+   "file": "Alt_Judge_Enforcer_Record.js",
+   "base": "pkgEIS/patched",
+   "base_sha": "97eaec4483fa",
+   "final_sha": "24eb4ad7d4a5"
+  }
+ ]
+}

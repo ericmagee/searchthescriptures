@@ -1,0 +1,58 @@
+OK 33218 Judge Enforcer Retry Build: failed-call halves unchanged (0); NEW short-reply retry: call 2 short reply: 59 of 60 ids answered (finish_reason stop) -> 2 ids
+OK 33218 call 2 half 1: head + 1 whole items, each half carries an unanswered id
+OK 33218 call 2: every unanswered id is sent again (answered 59, sent 2)
+OK 33218 Judge Enforcer Record: short-reply retry, NO VERDICT 1 -> 0, rows not retried unchanged, esr {"retried":[2],"halves":1,"why":{"2":"short reply: 59 of 60 ids answered (finish_reason stop)"},"short":1}
+OK 33218 Judge Enforcer Record: short-reply retry (last half fails again), NO VERDICT 1 -> 1, rows not retried unchanged, esr {"retried":[2],"halves":1,"why":{"2":"short reply: 59 of 60 ids answered (finish_reason stop)"},"short":1}
+OK 33218 Judge Enforcer Record: no retry ran, rows equal to base
+OK 33222 Judge Enforcer Retry Build: failed-call halves unchanged (2)
+OK 33222 Judge Enforcer Record: no retry ran, rows equal to base
+OK 33222 Alt Judge Enforcer Retry Build: failed-call halves unchanged (0)
+OK 33222 Alt Judge Enforcer Record: no retry ran, rows equal to base
+OK 33249 Judge Enforcer Retry Build: failed-call halves unchanged (0)
+OK 33249 Judge Enforcer Record: no retry ran, rows equal to base
+OK 33249 Alt Judge Enforcer Retry Build: failed-call halves unchanged (0)
+OK 33249 Alt Judge Enforcer Record: no retry ran, rows equal to base
+OK 33261 Judge Enforcer Retry Build: failed-call halves unchanged (0)
+OK 33261 Judge Enforcer Record: no retry ran, rows equal to base
+OK 33261 Alt Judge Enforcer Retry Build: failed-call halves unchanged (0)
+OK 33261 Alt Judge Enforcer Record: no retry ran, rows equal to base
+OK 33276 Judge Enforcer Retry Build: failed-call halves unchanged (0)
+OK 33276 Judge Enforcer Record: no retry ran, rows equal to base
+OK 33276 Alt Judge Enforcer Retry Build: failed-call halves unchanged (0)
+OK 33276 Alt Judge Enforcer Record: no retry ran, rows equal to base
+OK 33289 Judge Enforcer Retry Build: failed-call halves unchanged (0)
+OK 33289 Judge Enforcer Record: no retry ran, rows equal to base
+OK 33289 Alt Judge Enforcer Retry Build: failed-call halves unchanged (0)
+OK 33289 Alt Judge Enforcer Record: no retry ran, rows equal to base
+OK 33299 Judge Enforcer Retry Build: failed-call halves unchanged (0)
+OK 33299 Judge Enforcer Record: no retry ran, rows equal to base
+OK 33299 Alt Judge Enforcer Retry Build: failed-call halves unchanged (2)
+OK 33299 Alt Judge Enforcer Record: no retry ran, rows equal to base
+OK 33311 Judge Enforcer Retry Build: failed-call halves unchanged (0)
+OK 33311 Judge Enforcer Record: no retry ran, rows equal to base
+OK 33311 Alt Judge Enforcer Retry Build: failed-call halves unchanged (0)
+OK 33311 Alt Judge Enforcer Record: no retry ran, rows equal to base
+OK 33322 Judge Enforcer Retry Build: failed-call halves unchanged (0)
+OK 33322 Judge Enforcer Record: no retry ran, rows equal to base
+OK 33345 Judge Enforcer Retry Build: failed-call halves unchanged (0)
+OK 33345 Judge Enforcer Record: no retry ran, rows equal to base
+OK 33345 Alt Judge Enforcer Retry Build: failed-call halves unchanged (0)
+OK 33345 Alt Judge Enforcer Record: no retry ran, rows equal to base
+OK 33371 Judge Enforcer Retry Build: failed-call halves unchanged (0)
+OK 33371 Judge Enforcer Record: no retry ran, rows equal to base
+OK 33371 Alt Judge Enforcer Retry Build: failed-call halves unchanged (0)
+OK 33371 Alt Judge Enforcer Record: no retry ran, rows equal to base
+OK 33389 Judge Enforcer Retry Build: failed-call halves unchanged (0)
+OK 33389 Judge Enforcer Record: no retry ran, rows equal to base
+OK 33411 Judge Enforcer Retry Build: failed-call halves unchanged (0)
+OK 33411 Judge Enforcer Record: no retry ran, rows equal to base
+OK 33411 Alt Judge Enforcer Retry Build: failed-call halves unchanged (0)
+OK 33411 Alt Judge Enforcer Record: no retry ran, rows equal to base
+OK 33430 Judge Enforcer Retry Build: failed-call halves unchanged (0); NEW short-reply retry: call 5 short reply: 1 of 26 ids answered (finish_reason stop) -> 12 ids + 13 ids
+OK 33430 call 5 half 1: head + 4 whole items, each half carries an unanswered id
+OK 33430 call 5 half 2: head + 5 whole items, each half carries an unanswered id
+OK 33430 call 5: every unanswered id is sent again (answered 1, sent 25)
+OK 33430 Judge Enforcer Record: short-reply retry, NO VERDICT 25 -> 0, rows not retried unchanged, esr {"retried":[5],"halves":2,"why":{"5":"short reply: 1 of 26 ids answered (finish_reason stop)"},"short":1}
+OK 33430 Judge Enforcer Record: short-reply retry (last half fails again), NO VERDICT 25 -> 13, rows not retried unchanged, esr {"retried":[5],"halves":2,"why":{"5":"short reply: 1 of 26 ids answered (finish_reason stop)"},"short":1}
+OK 33430 Judge Enforcer Record: no retry ran, rows equal to base
+TOTAL 57 OK, 0 FAIL
