@@ -1,0 +1,20 @@
+# pkgUNXA: K-UNX-A, the ASSUMES and "unanswered" grounds K-UNX exempted (W3 2721, 2727)
+
+**Rule (TRIAL, side-neutral; raised as rule K-UNX with `a:'ASSUMES'` or `a:'UNANSWERED'`).** A premise counted UNEXHIBITED, on either side's count line, whose answering link-round block (lbBlockText) exhibits two or more layer kinds (lbFoot, full):
+- **A (ASSUMES):** the count rests on an ASSUMES ground, the block has a counted [L1], and the ASSUMES clause (from ASSUMES to the end of the premise's entries, so its ROWS GIVE part too) holds no 6 words in a row of the block's [L1] quotation (all of it when shorter). The [L1] is the first quotation carrying a reference, as lbFoot reads it (ruling 400).
+- **B (unanswered):** the count says a press is unanswered ("unanswered", "no answer", "not answered"), names that press (its verse, or 8 words in a row of its MEANS, from the other side's UNSUPPORTED-L4 PREMISES list, unxPresses), and the block quotes that press's MEANS on a line holding "MEANS" (the pkgOAN 8-word test). The item's [L1] is the first referenced quotation in that press's answer (its MEANS line to the next), else the block's.
+
+Every other ground that is not a layer stays exempt (NOT COUNTED, narrowed, VOID, struck, barred, not named, unmet, without answers). These are read only up to the entry's last stop when 40 characters or less follow it, because an entry runs to the next premise header ("). VOID premise 2" belongs to premise 2). "No row gives" is the ASSUMES ground itself and is read with it.
+
+**Cure.** A STATEMENT for the item that quotes the [L1] (6 words in a row) and says what it lacks (a negation word outside the quotation), or a CORRECTED COUNT below the count read. Naming a layer does not cure an A or B item, and a KEEP does not cure it. Plain K-UNX items take the K-UNX block unchanged.
+
+**Edits (22 nodes; plan_UNXA.json).** All 22 nodes holding kunxLines get the library before kunxLines and one edit inside its UNX_OTHER exemption. The 19 cure and gate nodes also get the cure branch before the K-UNX block. ENF_STATUS and the rule lists already hold K-UNX (TRIAL).
+
+**Bases.** The 6 gate-library nodes are built on pkgPSG/patched (s16 + GSL + PSG, the next two writes). A3 checks they are the PSG finals. The other 16 are built on live s16 (fetchback_live_s16.json). If PSG is not written first, rebuild with `BASE6=pkgGSL/patched node pkgUNXA/build_UNXA.cjs` (or `BASE6=` a dir of s16 nodes). The edits are anchor-based and hold on every base.
+
+**Replay (`node pkgUNXA/replay_UNXA.cjs`, replay_UNXA.txt).** It covers 47 runs (29199 to 33222) from debate_results and debate_judgments (data/rows.json), plus grok 33222's alternate verdict (data/grok_33222.json, from inputs/33222_Alternate_Merge.json). That is 142 verdicts.
+- A: 20 premise items rest on an ASSUMES ground, in 18 judgments. 14 are RAISED. Of the 6 not raised, 3 quote the [L1] (32749 gemini D5, 32749 grok D5, 32924 chatgpt D6) and 3 carry another exempt ground (32749 grok C6 NOT COUNTED, 32973 chatgpt D5 narrowed, 33006 sol C6).
+- B: 83 premise items rest on an "unanswered" ground. 1 is RAISED: grok 33222 C1, the answer to Luke 1:34 with [L1] Luke 1:34, which is W3's 2727 case. MEANS lines exist only in rounds from 33197 on, so earlier blocks cannot raise B.
+- My 2720 count (34 items in 23 judgments) was a raw line regex. Of its hits, 6 sit in superseded audit lines (33025 grok, 33107 gemini x4, 33149 gemini), and 5 are ASSUMES text belonging to another premise (32643 grok x2, 32905 grok x2, 32973 grok). One, 32980 grok "-- 6 UNEXHIBITED", has no "Premise" word, so unxSegs (K-UNX's reader) does not read it. That is a K-UNX reader gap, outside this package.
+
+**Test.** `node pkgUNXA/test_UNXA.cjs` gives 42 OK. It covers the build identity, the replay, parity (all 44 live K-UNX items unchanged), a true-breach control, 4 negative controls, the cure on mocks, and the real Panel Payloads and Alternate Payloads nodes on the saved 33222 inputs (live raises none; patched raises gemini C1 ASSUMES and grok's first verdict C1 UNANSWERED).

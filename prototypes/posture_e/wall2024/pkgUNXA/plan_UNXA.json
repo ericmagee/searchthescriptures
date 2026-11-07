@@ -1,0 +1,268 @@
+{
+ "rulings": "W3 2721, 2727 (TRIAL, side-neutral)",
+ "base6": "pkgPSG/patched",
+ "base16": "live s16 (fetchback_live_s16.json, 7efcffc7)",
+ "nodes": [
+  {
+   "name": "Extract Independent Verdict",
+   "file": "Extract_Independent_Verdict.js",
+   "base": "s16",
+   "base_sha": "b7a6307185fb98cd",
+   "final_sha": "22b4f5362876c5da",
+   "edits": [
+    "lib",
+    "kunxLines"
+   ]
+  },
+  {
+   "name": "Panel Payloads",
+   "file": "Panel_Payloads.js",
+   "base": "s16",
+   "base_sha": "282cb32bd3de1210",
+   "final_sha": "b6f5b8cb1e09d6f5",
+   "edits": [
+    "lib",
+    "kunxLines"
+   ]
+  },
+  {
+   "name": "Cure Build",
+   "file": "Cure_Build.js",
+   "base": "s16",
+   "base_sha": "7596ccf7dedd9fe4",
+   "final_sha": "e75a2dfa8f6192f4",
+   "edits": [
+    "lib",
+    "kunxLines",
+    "cure"
+   ]
+  },
+  {
+   "name": "Cure Normalize",
+   "file": "Cure_Normalize.js",
+   "base": "s16",
+   "base_sha": "fde5ea02dab0fe4d",
+   "final_sha": "6ab6ef03c4b71fe9",
+   "edits": [
+    "lib",
+    "kunxLines",
+    "cure"
+   ]
+  },
+  {
+   "name": "Cure Check",
+   "file": "Cure_Check.js",
+   "base": "s16",
+   "base_sha": "020be6534c83df85",
+   "final_sha": "db875608f9333197",
+   "edits": [
+    "lib",
+    "kunxLines",
+    "cure"
+   ]
+  },
+  {
+   "name": "Panel Cure Build 1",
+   "file": "Panel_Cure_Build_1.js",
+   "base": "s16",
+   "base_sha": "bc3641626dc75cae",
+   "final_sha": "bc5c56f422de4fe3",
+   "edits": [
+    "lib",
+    "kunxLines",
+    "cure"
+   ]
+  },
+  {
+   "name": "Panel Cure Normalize 1",
+   "file": "Panel_Cure_Normalize_1.js",
+   "base": "s16",
+   "base_sha": "37a1c7ebb380f7ea",
+   "final_sha": "5226ba57a8194fdc",
+   "edits": [
+    "lib",
+    "kunxLines",
+    "cure"
+   ]
+  },
+  {
+   "name": "Panel Cure Build 2",
+   "file": "Panel_Cure_Build_2.js",
+   "base": "s16",
+   "base_sha": "512308d2916eebe9",
+   "final_sha": "ff8a4bb3bdc0cb3a",
+   "edits": [
+    "lib",
+    "kunxLines",
+    "cure"
+   ]
+  },
+  {
+   "name": "Panel Cure Normalize 2",
+   "file": "Panel_Cure_Normalize_2.js",
+   "base": "s16",
+   "base_sha": "0d805d5df7becf1e",
+   "final_sha": "0c61aa4827709cfb",
+   "edits": [
+    "lib",
+    "kunxLines",
+    "cure"
+   ]
+  },
+  {
+   "name": "Panel Cure Build 3",
+   "file": "Panel_Cure_Build_3.js",
+   "base": "s16",
+   "base_sha": "d7f172bab6a6ddd9",
+   "final_sha": "2a7d6f99714da320",
+   "edits": [
+    "lib",
+    "kunxLines",
+    "cure"
+   ]
+  },
+  {
+   "name": "Panel Cure Normalize 3",
+   "file": "Panel_Cure_Normalize_3.js",
+   "base": "s16",
+   "base_sha": "c11e8b3fea0c758f",
+   "final_sha": "6717594f70ed5823",
+   "edits": [
+    "lib",
+    "kunxLines",
+    "cure"
+   ]
+  },
+  {
+   "name": "Panel Cure Check",
+   "file": "Panel_Cure_Check.js",
+   "base": "s16",
+   "base_sha": "2c171029ef4192d3",
+   "final_sha": "1b30f9040df98987",
+   "edits": [
+    "lib",
+    "kunxLines",
+    "cure"
+   ]
+  },
+  {
+   "name": "Alternate Build",
+   "file": "Alternate_Build.js",
+   "base": "s16",
+   "base_sha": "f9b37f9c4649f49c",
+   "final_sha": "359283ea5a581f82",
+   "edits": [
+    "lib",
+    "kunxLines",
+    "cure"
+   ]
+  },
+  {
+   "name": "Alternate Payloads",
+   "file": "Alternate_Payloads.js",
+   "base": "s16",
+   "base_sha": "2803955151bd8bad",
+   "final_sha": "67c634630d4428e4",
+   "edits": [
+    "lib",
+    "kunxLines"
+   ]
+  },
+  {
+   "name": "Alternate Cure Build",
+   "file": "Alternate_Cure_Build.js",
+   "base": "s16",
+   "base_sha": "69dacb5029b8b858",
+   "final_sha": "1c6664a05ad1c125",
+   "edits": [
+    "lib",
+    "kunxLines",
+    "cure"
+   ]
+  },
+  {
+   "name": "Alternate Cure Normalize",
+   "file": "Alternate_Cure_Normalize.js",
+   "base": "s16",
+   "base_sha": "dfbcc1282d542cdd",
+   "final_sha": "7765a10c5d1cec17",
+   "edits": [
+    "lib",
+    "kunxLines",
+    "cure"
+   ]
+  },
+  {
+   "name": "Alternate Merge Seat",
+   "file": "Alternate_Merge_Seat.js",
+   "base": "pkgPSG/patched",
+   "base_sha": "cd3cfe326e037fe9",
+   "final_sha": "a805ffad9a96d740",
+   "edits": [
+    "lib",
+    "kunxLines",
+    "cure"
+   ]
+  },
+  {
+   "name": "Gate Build",
+   "file": "Gate_Build.js",
+   "base": "pkgPSG/patched",
+   "base_sha": "487db2d879b40fee",
+   "final_sha": "c5c80460ac55b1a3",
+   "edits": [
+    "lib",
+    "kunxLines",
+    "cure"
+   ]
+  },
+  {
+   "name": "Gate Record",
+   "file": "Gate_Record.js",
+   "base": "pkgPSG/patched",
+   "base_sha": "82d6817e1fdbf7e6",
+   "final_sha": "51194dfaae73baa8",
+   "edits": [
+    "lib",
+    "kunxLines",
+    "cure"
+   ]
+  },
+  {
+   "name": "Alt Gate Build",
+   "file": "Alt_Gate_Build.js",
+   "base": "pkgPSG/patched",
+   "base_sha": "db22df7c96708c69",
+   "final_sha": "94abf99c33deba19",
+   "edits": [
+    "lib",
+    "kunxLines",
+    "cure"
+   ]
+  },
+  {
+   "name": "Alt Gate Record",
+   "file": "Alt_Gate_Record.js",
+   "base": "pkgPSG/patched",
+   "base_sha": "69f658b177b61523",
+   "final_sha": "f37524cd8cc10b4c",
+   "edits": [
+    "lib",
+    "kunxLines",
+    "cure"
+   ]
+  },
+  {
+   "name": "Alternate Merge",
+   "file": "Alternate_Merge.js",
+   "base": "pkgPSG/patched",
+   "base_sha": "55ecac41411e8576",
+   "final_sha": "31d7d8b024721494",
+   "edits": [
+    "lib",
+    "kunxLines",
+    "cure"
+   ]
+  }
+ ]
+}

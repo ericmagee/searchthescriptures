@@ -1,0 +1,43 @@
+OK   A1 22 nodes in the plan, every live node holding kunxLines
+OK   A2 Extract Independent Verdict: base sha, patched sha, compiles :: s16 b7a6307185fb98cd -> 22b4f5362876c5da
+OK   A2 Panel Payloads: base sha, patched sha, compiles :: s16 282cb32bd3de1210 -> b6f5b8cb1e09d6f5
+OK   A2 Cure Build: base sha, patched sha, compiles :: s16 7596ccf7dedd9fe4 -> e75a2dfa8f6192f4
+OK   A2 Cure Normalize: base sha, patched sha, compiles :: s16 fde5ea02dab0fe4d -> 6ab6ef03c4b71fe9
+OK   A2 Cure Check: base sha, patched sha, compiles :: s16 020be6534c83df85 -> db875608f9333197
+OK   A2 Panel Cure Build 1: base sha, patched sha, compiles :: s16 bc3641626dc75cae -> bc5c56f422de4fe3
+OK   A2 Panel Cure Normalize 1: base sha, patched sha, compiles :: s16 37a1c7ebb380f7ea -> 5226ba57a8194fdc
+OK   A2 Panel Cure Build 2: base sha, patched sha, compiles :: s16 512308d2916eebe9 -> ff8a4bb3bdc0cb3a
+OK   A2 Panel Cure Normalize 2: base sha, patched sha, compiles :: s16 0d805d5df7becf1e -> 0c61aa4827709cfb
+OK   A2 Panel Cure Build 3: base sha, patched sha, compiles :: s16 d7f172bab6a6ddd9 -> 2a7d6f99714da320
+OK   A2 Panel Cure Normalize 3: base sha, patched sha, compiles :: s16 c11e8b3fea0c758f -> 6717594f70ed5823
+OK   A2 Panel Cure Check: base sha, patched sha, compiles :: s16 2c171029ef4192d3 -> 1b30f9040df98987
+OK   A2 Alternate Build: base sha, patched sha, compiles :: s16 f9b37f9c4649f49c -> 359283ea5a581f82
+OK   A2 Alternate Payloads: base sha, patched sha, compiles :: s16 2803955151bd8bad -> 67c634630d4428e4
+OK   A2 Alternate Cure Build: base sha, patched sha, compiles :: s16 69dacb5029b8b858 -> 1c6664a05ad1c125
+OK   A2 Alternate Cure Normalize: base sha, patched sha, compiles :: s16 dfbcc1282d542cdd -> 7765a10c5d1cec17
+OK   A2 Alternate Merge Seat: base sha, patched sha, compiles :: pkgPSG/patched cd3cfe326e037fe9 -> a805ffad9a96d740
+OK   A2 Gate Build: base sha, patched sha, compiles :: pkgPSG/patched 487db2d879b40fee -> c5c80460ac55b1a3
+OK   A2 Gate Record: base sha, patched sha, compiles :: pkgPSG/patched 82d6817e1fdbf7e6 -> 51194dfaae73baa8
+OK   A2 Alt Gate Build: base sha, patched sha, compiles :: pkgPSG/patched db22df7c96708c69 -> 94abf99c33deba19
+OK   A2 Alt Gate Record: base sha, patched sha, compiles :: pkgPSG/patched 69f658b177b61523 -> f37524cd8cc10b4c
+OK   A2 Alternate Merge: base sha, patched sha, compiles :: pkgPSG/patched 55ecac41411e8576 -> 31d7d8b024721494
+OK   A3 the 6 gate-library bases are the PSG finals
+OK   B1 142 verdicts read; 14 ASSUMES items raised, 1 unanswered item raised :: 14 + 1
+OK   B2 gemini 33222 premise 1 raised on its [L1] Acts 2:30
+OK   B3 grok 33222 (alternate) premise 1 raised; the answer to Luke 1:34 has [L1] Luke 1:34 (W3 2727)
+OK   C1 parity: every K-UNX item the live code raises is raised unchanged (44 items)
+OK   D1 true breach written into 33222 chatgpt: raised as ASSUMES on [L1] Acts 2:30 :: CHALLENGER premise 1: counted UNEXHIBITED in CHALLENGER CONCEDED LINKS on an ASSUMES ground, but its [DR3] block exhibits L1 and L2 and L3 and the ASSUMES claus
+OK   E1 negative: the ASSUMES clause quotes 6 words in a row of the [L1]: not raised
+OK   E2 negative: another exempt ground (VOID) in the count: not raised
+OK   E3 negative: grok 33222 with the MEANS P1.3 line taken out of [DR3]: premise 1 not raised
+OK   E4 negative: a block with fewer than two kinds: not raised
+OK   F1 a STATEMENT quoting the [L1] and saying what it lacks cures
+OK   F2 a STATEMENT naming a missing layer only does not cure an ASSUMES item
+OK   F3 a STATEMENT quoting the [L1] that says nothing it lacks does not cure
+OK   F4 a CORRECTED COUNT below 1 cures
+OK   F5 a KEEP does not cure
+OK   F6 a K-UNX item without a ground mark goes to the K-UNX block unchanged (a named [L4] cures it)
+OK   F7 the cure block is in all 19 cure and gate nodes
+OK   G1 Panel Payloads on 33222: live raises no K-UNX; patched raises CHALLENGER premise 1 ASSUMES (gemini)
+OK   G2 Alternate Payloads on 33222: live raises none; patched raises CHALLENGER premise 1 UNANSWERED (grok first verdict, press Luke 1:35)
+42 OK, 0 FAIL
