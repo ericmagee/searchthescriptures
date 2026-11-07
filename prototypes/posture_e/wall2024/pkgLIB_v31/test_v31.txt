@@ -1,0 +1,5 @@
+OK   library identical to v3
+OK   only the Extract Independent Verdict stub differs from v3
+OK   the stub rebuilds the stripped pkgV18 source byte for byte
+OK   recent runs: stub = unstripped pkgV18 source on 12 of 12
+4 OK, 0 FAIL

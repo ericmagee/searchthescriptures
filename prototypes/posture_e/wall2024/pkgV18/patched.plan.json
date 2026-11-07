@@ -1,0 +1,10 @@
+{
+ "base": "pkgLIB/base_s45/patched",
+ "nodes": [
+  {
+   "file": "Extract_Independent_Verdict.js",
+   "base_sha": "ac8c201f4dac",
+   "final_sha": "8517637eafc3"
+  }
+ ]
+}
