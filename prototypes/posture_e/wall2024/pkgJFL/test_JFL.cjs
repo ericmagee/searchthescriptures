@@ -46,7 +46,7 @@ t('C3 no block line starts with "["CR/DR',!BLK.split('\n').some(l=>/^\s*(?:===\s
 // ---- D ----
 const dl=(a,b)=>{const A=a.split('\n'),Bb=b.split('\n');let i=0;while(i<A.length&&A[i]===Bb[i])i++;let j=0;while(j<A.length-i&&A[A.length-1-j]===Bb[Bb.length-1-j])j++;return {base:A.slice(i,A.length-j).join('\n'),patched:Bb.slice(i,Bb.length-j).join('\n')};};
 const strip=s=>s.split(H).join('').replace("const user=__JFL(j.seat)+'DEBATE","const user='DEBATE").replace('user=__JFLX(user,RS.reserve.seat);\n','').replace('used.push(a.api_model);user=__JFLX(user,a.seat);','used.push(a.api_model);');
-for(const f of ['Panel_Build.js','Reserve_Build.js','Alternate_Build.js']){const bb=(f==='Reserve_Build.js'?BAR:'pkgFCB/patched/');t('D1 '+f+' = '+bb+' + the block edits only',strip(fs.readFileSync(P+f,'utf8'))===fs.readFileSync(bb+f,'utf8'));}
+for(const f of ['Panel_Build.js','Reserve_Build.js','Alternate_Build.js']){const bb=(f==='Reserve_Build.js'?BAR:'pkgUNX/patched/');t('D1 '+f+' = '+bb+' + the block edits only',strip(fs.readFileSync(P+f,'utf8'))===fs.readFileSync(bb+f,'utf8'));}
 const Hi=I1.slice(I1.indexOf('/* pkgJFL'),I1.indexOf('const pfree0='));
 const si=I1.replace(Hi,'').replace('const pfree0=free.filter(s=>NOT_PANEL.indexOf(s)<0&&!(FAM_PANEL[s]&&dfam.indexOf(FAM_PANEL[s])>=0));const pfree=pfree0.filter(s=>!JFL_MOVED.has(s)).concat(pfree0.filter(s=>JFL_MOVED.has(s)));','const pfree=free.filter(s=>NOT_PANEL.indexOf(s)<0&&!(FAM_PANEL[s]&&dfam.indexOf(FAM_PANEL[s])>=0));').replace('&&!JFL_MOVED.has(pfree[3])','').replace('jfl_moved:[...JFL_MOVED],','');
 t('D2 Init_Seats.js = base + the 3 edits only',si===I0);
