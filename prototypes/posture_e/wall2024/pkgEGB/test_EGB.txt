@@ -1,0 +1,9 @@
+OK   33149 chatgpt G1 (MEANS NONE): base raises 1, patched 0
+OK   33299 chatgpt G1 (MEANS NONE): base raises 1, patched 0
+OK   33025 grok G2 (real): base 1 = patched 1 = 1
+OK   33311 gemini G13 (real): base 1 = patched 1 = 1
+OK   33083 gemini G1 (shared verse; unchanged): base 1 = patched 1 = 1
+OK   33006 chatgpt G1 (no MEANS; unchanged): base 1 = patched 1 = 1
+OK   N1 MEANS quoted "none of" is not NONE: base 1 = patched 1 = 1
+OK   N2 MEETS never fires: base 0 = patched 0 = 0
+8 OK, 0 FAIL
