@@ -1,10 +1,9 @@
-OK 33482 Retry Build resends the call: error: aborted, body the same (154005 chars)
-OK 33482 Record: NO VERDICT base 67 of 67 -> with a good retry reply 0
-OK enf421.ert = {"first":"error: aborted","retried":true,"answered":true}
-OK every other output field unchanged
-OK a failed retry: rows the same as base (67 NO VERDICT), ert {"first":"error: aborted","retried":true,"answered":false,"retry_error":"aborted"}
-OK replay: Enforcer Record identical to base on 8 of 8 saved runs (no retry ran)
-OK replay: the Retry Build resends only on ["33482 (error: aborted)"]
-OK wiring: 3 new nodes (names and ids unused in s50), every connection names a node
-OK the Retry Call has the same request settings and credentials as Enforcer Call deepseek
-TOTAL 9 OK, 0 FAIL
+OK Enforcer Call deepseek: only retryOnFail, maxTries, waitBetweenTries differ (maxTries, retryOnFail, waitBetweenTries)
+OK Enforcer Call deepseek: retry settings and onError equal Judge Enforcer Call deepseek (retryOnFail=true, maxTries=3, waitBetweenTries=10000, onError=continueRegularOutput)
+OK Enforcer Call deepseek: id, type, parameters, credentials unchanged
+OK Anticheat Call deepseek: only retryOnFail, maxTries, waitBetweenTries differ (maxTries, retryOnFail, waitBetweenTries)
+OK Anticheat Call deepseek: retry settings and onError equal Judge Enforcer Call deepseek (retryOnFail=true, maxTries=3, waitBetweenTries=10000, onError=continueRegularOutput)
+OK Anticheat Call deepseek: id, type, parameters, credentials unchanged
+OK n8n 2.15.1 workflow-execute.ts re-runs a node whose item 0 has json.error (read from the tagged source)
+OK 33482 Enforcer Call output is one item with json.error "aborted": the retry rule would fire
+TOTAL 8 OK, 0 FAIL

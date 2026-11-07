@@ -1,0 +1,86 @@
+{
+ "base": "fetchback_live_s50",
+ "settings": {
+  "retryOnFail": true,
+  "maxTries": 3,
+  "waitBetweenTries": 10000
+ },
+ "nodes": [
+  {
+   "name": "Enforcer Call deepseek",
+   "id": "4f332da5-dde8-43af-9f82-542fcb2fdc93",
+   "before_sha": "dde29686580e",
+   "after_sha": "dead16102737",
+   "node": {
+    "id": "4f332da5-dde8-43af-9f82-542fcb2fdc93",
+    "name": "Enforcer Call deepseek",
+    "type": "n8n-nodes-base.httpRequest",
+    "typeVersion": 4.3,
+    "onError": "continueRegularOutput",
+    "position": [
+     14512,
+     700
+    ],
+    "parameters": {
+     "method": "POST",
+     "url": "https://api.deepseek.com/v1/chat/completions",
+     "authentication": "genericCredentialType",
+     "genericAuthType": "httpHeaderAuth",
+     "sendBody": true,
+     "specifyBody": "json",
+     "jsonBody": "={{ $json.body }}",
+     "options": {
+      "timeout": 900000
+     }
+    },
+    "credentials": {
+     "httpHeaderAuth": {
+      "id": "R3waesZPK7vpsV8E",
+      "name": "DeepSeek Key"
+     }
+    },
+    "retryOnFail": true,
+    "maxTries": 3,
+    "waitBetweenTries": 10000
+   }
+  },
+  {
+   "name": "Anticheat Call deepseek",
+   "id": "701323ab-d215-4fb0-993a-7a53c4ab02c6",
+   "before_sha": "bcc72051d90b",
+   "after_sha": "4986f57781f3",
+   "node": {
+    "id": "701323ab-d215-4fb0-993a-7a53c4ab02c6",
+    "name": "Anticheat Call deepseek",
+    "type": "n8n-nodes-base.httpRequest",
+    "typeVersion": 4.3,
+    "onError": "continueRegularOutput",
+    "position": [
+     10040,
+     300
+    ],
+    "parameters": {
+     "method": "POST",
+     "url": "https://api.deepseek.com/v1/chat/completions",
+     "authentication": "genericCredentialType",
+     "genericAuthType": "httpHeaderAuth",
+     "sendBody": true,
+     "specifyBody": "json",
+     "jsonBody": "={{ $json.body }}",
+     "options": {
+      "timeout": 900000
+     }
+    },
+    "credentials": {
+     "httpHeaderAuth": {
+      "id": "R3waesZPK7vpsV8E",
+      "name": "DeepSeek Key"
+     }
+    },
+    "retryOnFail": true,
+    "maxTries": 3,
+    "waitBetweenTries": 10000
+   }
+  }
+ ]
+}
