@@ -1,0 +1,12 @@
+OK   6 nodes; base = pkgSGA/patched; shas match
+OK   sbApply2024 is the same in all 6 patched nodes, and nothing outside it changes
+OK   U1 out of the count (UNEXHIBITED to spared): NOT APPLIED, the line stays
+     [{"sid":"S1","kind":"NOT APPLIED","why":"the change moves premise 2 out of the CHALLENGER CONCEDED LINKS count, so the line's count number would be stale: write the whole line with its label and count
+OK   U1b pkgSGA applied it, leaving "1" beside no counted premise
+OK   U2 into the count (spared to UNEXHIBITED): NOT APPLIED, the line stays
+     [{"sid":"S1","kind":"NOT APPLIED","why":"the change moves premise 2 into the CHALLENGER CONCEDED LINKS count, so the line's count number would be stale: write the whole line with its label and count (
+OK   U3 VOID to NOT VOID (the 33218 case) moves nothing: applied
+  REPLAY: 474 stored S and G answers; seats whose output changed:
+   33149 gemini: new ["S16"] (the change moves premise 1 out of the CONCEDED LINKS count, so the line's count number would be stale: write the whole line with its label and count (pkgSGA2, W1 2695)); result DEFENDER WINS -> DEFENDER WINS
+OK   replay: only 33149 gemini S16 changes (Premise 1 UNEXHIBITED to SPARED under "CONCEDED LINKS: 2"), result unchanged; 33218 unchanged
+7 OK, 0 FAIL
