@@ -1,0 +1,70 @@
+{
+ "source": "W3 grade_33289 item 3 (Wall 2780)",
+ "base": "pkgCPD/patched_on_RXR (else live a353b9e8-3742-4403-bbce-5cc8583ae767)",
+ "nodes": [
+  {
+   "name": "Alternate Merge Seat",
+   "file": "Alternate_Merge_Seat.js",
+   "base": "pkgCPD/patched_on_RXR",
+   "live_sha": "d87087536384bbff",
+   "base_sha": "880852077b49be4d",
+   "final_sha": "b6e045e4e637d475"
+  },
+  {
+   "name": "Send Back Record",
+   "file": "Send_Back_Record.js",
+   "base": "live",
+   "live_sha": "440236152d16d7b9",
+   "base_sha": "440236152d16d7b9",
+   "final_sha": "5837536ad07658da"
+  },
+  {
+   "name": "Gate Build",
+   "file": "Gate_Build.js",
+   "base": "pkgCPD/patched_on_RXR",
+   "live_sha": "89eb8e140bd868fc",
+   "base_sha": "9f4121cc17cebd59",
+   "final_sha": "d5c48766755e077d"
+  },
+  {
+   "name": "Gate Record",
+   "file": "Gate_Record.js",
+   "base": "pkgCPD/patched_on_RXR",
+   "live_sha": "adc6adcb4b25b0e6",
+   "base_sha": "41b67e937798bdc1",
+   "final_sha": "e8d5ece786242d26"
+  },
+  {
+   "name": "Alt Send Back Record",
+   "file": "Alt_Send_Back_Record.js",
+   "base": "live",
+   "live_sha": "27fb11b3f0048513",
+   "base_sha": "27fb11b3f0048513",
+   "final_sha": "58c42511214d40c6"
+  },
+  {
+   "name": "Alt Gate Build",
+   "file": "Alt_Gate_Build.js",
+   "base": "pkgCPD/patched_on_RXR",
+   "live_sha": "73a28c75c7e422b0",
+   "base_sha": "8cf74385c959997a",
+   "final_sha": "da90e725e232c029"
+  },
+  {
+   "name": "Alt Gate Record",
+   "file": "Alt_Gate_Record.js",
+   "base": "pkgCPD/patched_on_RXR",
+   "live_sha": "941567781b828ff3",
+   "base_sha": "e6470403999270e4",
+   "final_sha": "457c7df3465ad698"
+  },
+  {
+   "name": "Alternate Merge",
+   "file": "Alternate_Merge.js",
+   "base": "pkgCPD/patched_on_RXR",
+   "live_sha": "15ca520a89380dcd",
+   "base_sha": "048fe8be7bcd4c1d",
+   "final_sha": "a82197bacbc88c16"
+  }
+ ]
+}
