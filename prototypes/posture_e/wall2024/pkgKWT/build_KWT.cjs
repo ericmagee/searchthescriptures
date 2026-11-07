@@ -6,7 +6,7 @@
 // Run from wall2024/: node pkgKWT/build_KWT.cjs
 const fs=require('fs');const crypto=require('crypto');const h=s=>crypto.createHash('sha256').update(s).digest('hex').slice(0,12);const B='pkgKWT/base_v6/';
 const OLD="const __rn=b0=>b0.length<=6?[b0.join(' ')]:b0.slice(0,b0.length-5).map((_,i)=>b0.slice(i,i+6).join(' '));";
-const NEW="const __rn0=b0=>b0.length<=6?[b0.join(' ')]:b0.slice(0,b0.length-5).map((_,i)=>b0.slice(i,i+6).join(' '));const __rn=b0=>{const r=__rn0(b0);if(b0.length>1&&/^(?:that|how|whether)$/.test(b0[0]))r.push(...__rn0(b0.slice(1)));return r;}; /* pkgKWT: \"I grant that X\" also takes X quoted whole (33411 sol) */";
+const NEW="const __rn0=b0=>b0.length<=6?[b0.join(' ')]:b0.slice(0,b0.length-5).map((_,i)=>b0.slice(i,i+6).join(' '));const __rn=b0=>{const r=__rn0(b0);if(b0.length>=4&&/^(?:that|how|whether)$/.test(b0[0]))r.push(...__rn0(b0.slice(1)));return r;}; /* pkgKWT: \"I grant that X\" also takes X quoted whole when X has 3+ words (33411 sol; W3 2932: \"I withdraw that sentence.\" keeps its floor) */";
 const plan={};for(const f of fs.readdirSync(B).filter(f=>f.endsWith('.js'))){const s0=fs.readFileSync(B+f,'utf8');const c=s0.split(OLD).length-1;if(c!==1)throw new Error(f+': anchor count '+c);
  const s=s0.replace(OLD,()=>NEW);fs.writeFileSync('pkgKWT/patched/'+f,s);plan[f]={base:h(s0),patched:h(s)};console.log(f.padEnd(34),h(s0),'->',h(s));}
 fs.writeFileSync('pkgKWT/patched.plan.json',JSON.stringify(plan,null,1));console.log(Object.keys(plan).length,'nodes');

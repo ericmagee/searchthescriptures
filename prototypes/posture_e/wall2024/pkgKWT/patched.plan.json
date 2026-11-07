@@ -1,78 +1,78 @@
 {
  "Alt_Gate_Build.js": {
   "base": "d205af11aa75",
-  "patched": "9695268176a6"
+  "patched": "e548e71687c9"
  },
  "Alt_Gate_Record.js": {
   "base": "eb4837b3cad4",
-  "patched": "21337a8d9610"
+  "patched": "5aee90d21de6"
  },
  "Alternate_Build.js": {
   "base": "f3c71c08fb80",
-  "patched": "c8f69bbe8e46"
+  "patched": "0e9aa2430e5d"
  },
  "Alternate_Cure_Build.js": {
   "base": "67933b28d840",
-  "patched": "76d1b741b512"
+  "patched": "c06807e9d78e"
  },
  "Alternate_Cure_Normalize.js": {
   "base": "109d14bfa5ed",
-  "patched": "0771b9ac51a3"
+  "patched": "2ce139bb590d"
  },
  "Alternate_Merge.js": {
   "base": "9d4e5ff5a692",
-  "patched": "7419dca97723"
+  "patched": "3bf7077fcd9f"
  },
  "Alternate_Merge_Seat.js": {
   "base": "7e8e3daa1e69",
-  "patched": "5e66ad1dfbd6"
+  "patched": "b816d8b6c196"
  },
  "Cure_Build.js": {
   "base": "84600b16e9bb",
-  "patched": "30720b0944c2"
+  "patched": "4a0145e2996e"
  },
  "Cure_Check.js": {
   "base": "3be1991a6ee0",
-  "patched": "5b2269603d4c"
+  "patched": "b3ba3ce1a7ab"
  },
  "Cure_Normalize.js": {
   "base": "ad31ebce2a61",
-  "patched": "942a0649b1a6"
+  "patched": "1526fe37d70b"
  },
  "Gate_Build.js": {
   "base": "ba742a34a8b2",
-  "patched": "7dd7ed9c0ecc"
+  "patched": "a25b47bd1518"
  },
  "Gate_Record.js": {
   "base": "6c25b5b381f9",
-  "patched": "cd044b8e5368"
+  "patched": "a4cab3b97df2"
  },
  "Panel_Cure_Build_1.js": {
   "base": "1d4a36f98ebd",
-  "patched": "7b6ff51f9bd4"
+  "patched": "e39886310c24"
  },
  "Panel_Cure_Build_2.js": {
   "base": "bbd9e8003997",
-  "patched": "00d229e2e2d3"
+  "patched": "9548b3e7ad0b"
  },
  "Panel_Cure_Build_3.js": {
   "base": "80bfe8e2bd73",
-  "patched": "f7a3304314f8"
+  "patched": "7fd1e92cf405"
  },
  "Panel_Cure_Check.js": {
   "base": "98a44b31c7be",
-  "patched": "b3d7c3c4759e"
+  "patched": "6142fd7cb98e"
  },
  "Panel_Cure_Normalize_1.js": {
   "base": "af4c8d0bcd0b",
-  "patched": "13cbad4c7c58"
+  "patched": "cdba9fefdace"
  },
  "Panel_Cure_Normalize_2.js": {
   "base": "9896f6a27417",
-  "patched": "ccf081094442"
+  "patched": "6399bebd9116"
  },
  "Panel_Cure_Normalize_3.js": {
   "base": "d3be49db1201",
-  "patched": "12ed4eba7473"
+  "patched": "093a5f691265"
  }
 }

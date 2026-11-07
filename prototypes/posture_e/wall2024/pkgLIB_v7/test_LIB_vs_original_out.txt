@@ -73,7 +73,7 @@ OK   run 33040, all saved node outputs: every node identical full vs stub
      Panel Cure Check: Node 'Panel Payloads' hasn't been executed
      Panel Payloads: Node 'Init Seats' hasn't been executed
 OK   the harness catches the 33094 fault: v1 stubs differ, and Extract Independent Verdict fails as in 33094 ("Build Independent Verdict" not executed)
-   timing, Panel Cure Check on 33040, median of 5 fresh processes: full source 121.9 ms, stub 116.7 ms (-5.2 ms per node run)
-   size: the 22 nodes hold 6111994 bytes of code before, 529160 after (Shared Library 384508 included)
+   timing, Panel Cure Check on 33040, median of 5 fresh processes: full source 140.5 ms, stub 152.7 ms (+12.2 ms per node run)
+   size: the 22 nodes hold 6112013 bytes of code before, 529161 after (Shared Library 384509 included)
 OK   the stub adds under 50 ms per node run
 11 OK, 0 FAIL
