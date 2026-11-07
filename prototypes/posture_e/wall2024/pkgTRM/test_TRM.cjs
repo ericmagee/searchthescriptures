@@ -2,7 +2,7 @@
 // Every saved run 33218+: (1) each patched node's output equals base output minus the dropped keys; (2) the next nodes, fed the trimmed outputs,
 // give byte-equal output to base: Gate Build, Gate Record, Alternate Merge Seat, Alternate Merge (when the alternate path ran); (3) bytes saved.
 const fs=require('fs');const {harness,feeder}=require('../pkgGSL/harness.cjs');const D='/mnt/project-files/wall2024/inputs/';const BASEW='/mnt/project-files/wall2024/fetchback_live_s45.json';
-const B='pkgL1Q/patched/',P=__dirname+'/patched/';const rf=(d,n)=>fs.readFileSync(d+n.replace(/ /g,'_')+'.js','utf8');const has=(R,n)=>fs.existsSync(D+R+'_'+n.replace(/ /g,'_')+'.json');
+const B=process.env.TRM_B||'pkgL1Q/patched/',P=process.env.TRM_P||__dirname+'/patched/'; /* TRM_B/TRM_P: other stack, e.g. the pkgDEC restack */const rf=(d,n)=>fs.readFileSync(d+n.replace(/ /g,'_')+'.js','utf8');const has=(R,n)=>fs.existsSync(D+R+'_'+n.replace(/ /g,'_')+'.json');
 let ok=0,bad=0;const out=[];const log=s=>{out.push(s);console.log(s);};const T=(c,m)=>{if(c){ok++;out.push('OK '+m);}else{bad++;log('FAIL '+m);}};
 const st=x=>JSON.stringify(x);const drop=(o,ks)=>o.map(it=>{const j={...it.json};for(const k of ks)delete j[k];return {...it,json:j};});
 const inOf=(R,n)=>{const f=feeder(BASEW,n);return [...f.filter(x=>/Call/.test(x)),...f.filter(x=>!/Call/.test(x))].find(x=>has(R,x));};

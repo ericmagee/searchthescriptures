@@ -1,0 +1,36 @@
+{
+ "source": "W2 pkgTRM (state object trim)",
+ "base": "pkgL1Q/patched",
+ "nodes": [
+  {
+   "name": "Send Back Record",
+   "file": "Send_Back_Record.js",
+   "base": "pkgDEC/patched",
+   "base_sha": "3ae80a6582d3",
+   "final_sha": "aa43a846a480",
+   "dropped": [
+    "enf428_rows",
+    "enf421_rows"
+   ],
+   "bytes": [
+    142236,
+    142499
+   ]
+  },
+  {
+   "name": "Alt Send Back Record",
+   "file": "Alt_Send_Back_Record.js",
+   "base": "pkgDEC/patched",
+   "base_sha": "2aaad8ccf3ff",
+   "final_sha": "fc4adb87bea7",
+   "dropped": [
+    "enf428_rows",
+    "enf421_rows"
+   ],
+   "bytes": [
+    142208,
+    142471
+   ]
+  }
+ ]
+}

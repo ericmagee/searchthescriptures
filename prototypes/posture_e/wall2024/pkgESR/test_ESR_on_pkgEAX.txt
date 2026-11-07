@@ -1,0 +1,58 @@
+OK 33218 Judge Enforcer Build: 220 ids kept, calls 5 -> 5, est. cost per call [29K 24K 31K 32K 24K] -> [29K 24K 31K 32K 24K]
+OK 33218 Judge Enforcer Record: no-retry path, 221 rows equal to base
+OK 33218 Judge Enforcer Retry Build: no failed call, one marker item
+OK 33218 Alt Judge Enforcer Build: je_skip path unchanged
+OK 33222 Judge Enforcer Build: 257 ids kept, calls 8 -> 8, est. cost per call [26K 19K 21K 45K 13K 33K 28K 9K] -> [26K 19K 21K 38K 18K 30K 31K 10K]
+OK 33222 Judge Enforcer Record: no-retry path, 258 rows equal to base
+OK 33222 Judge Enforcer Retry Build: failed call(s) 2 (error: "Response body timed out after 300000ms without data") split into 2 halves [51 ids, 26K chars | 33 ids, 25K chars], every id once, text intact
+OK 33222 Judge Enforcer Record: retry path, NO VERDICT 89 -> 5, other rows unchanged, esr {"retried":[2],"halves":2,"why":{"2":"error: \"Response body timed out after 300000ms without data\""}}
+OK 33222 Judge Enforcer Record: retry path (second half fails again), NO VERDICT 89 -> 38, other rows unchanged, esr {"retried":[2],"halves":2,"why":{"2":"error: \"Response body timed out after 300000ms without data\""}}
+OK 33222 Alt Judge Enforcer Build: 76 ids kept, calls 3 -> 3, est. cost per call [19K 32K 23K] -> [19K 32K 23K]
+OK 33222 Alt Judge Enforcer Record: no-retry path, 77 rows equal to base
+OK 33222 Alt Judge Enforcer Retry Build: no failed call, one marker item
+OK 33249 Judge Enforcer Build: 208 ids kept, calls 6 -> 6, est. cost per call [27K 25K 41K 31K 30K 8K] -> [27K 25K 40K 29K 18K 24K]
+OK 33249 Judge Enforcer Record: no-retry path, 211 rows equal to base
+OK 33249 Judge Enforcer Retry Build: no failed call, one marker item
+OK 33249 Alt Judge Enforcer Build: 89 ids kept, calls 3 -> 3, est. cost per call [47K 24K 15K] -> [40K 29K 18K]
+OK 33249 Alt Judge Enforcer Record: no-retry path, 90 rows equal to base
+OK 33249 Alt Judge Enforcer Retry Build: no failed call, one marker item
+OK 33261 Judge Enforcer Build: 252 ids kept, calls 7 -> 8, est. cost per call [29K 24K 68K 16K 31K 24K 10K] -> [29K 24K 40K 40K 30K 16K 22K 9K]
+OK 33261 Judge Enforcer Record: no-retry path, 257 rows equal to base
+OK 33261 Judge Enforcer Retry Build: no failed call, one marker item
+OK 33261 Alt Judge Enforcer Build: 79 ids kept, calls 3 -> 3, est. cost per call [24K 36K 18K] -> [24K 36K 18K]
+OK 33261 Alt Judge Enforcer Record: no-retry path, 80 rows equal to base
+OK 33261 Alt Judge Enforcer Retry Build: no failed call, one marker item
+OK 33276 Judge Enforcer Build: je_skip path unchanged
+OK 33276 Alt Judge Enforcer Build: je_skip path unchanged
+OK 33289 Judge Enforcer Build: je_skip path unchanged
+OK 33289 Alt Judge Enforcer Build: je_skip path unchanged
+OK 33299 Judge Enforcer Build: 202 ids kept, calls 5 -> 5, est. cost per call [30K 37K 31K 31K 8K] -> [30K 37K 31K 31K 8K]
+OK 33299 Judge Enforcer Record: no-retry path, 204 rows equal to base
+OK 33299 Judge Enforcer Retry Build: no failed call, one marker item
+OK 33299 Alt Judge Enforcer Build: 75 ids kept, calls 3 -> 3, est. cost per call [44K 19K 14K] -> [38K 24K 15K]
+OK 33299 Alt Judge Enforcer Record: no-retry path, 76 rows equal to base
+OK 33299 Alt Judge Enforcer Retry Build: failed call(s) 1 (finish_reason length (the reply was cut at the token cap)) split into 2 halves [48 ids, 24K chars | 15 ids, 24K chars], every id once, text intact
+OK 33299 Alt Judge Enforcer Record: retry path, NO VERDICT 47 -> 0, other rows unchanged, esr {"retried":[1],"halves":2,"why":{"1":"finish_reason length (the reply was cut at the token cap)"}}
+OK 33299 Alt Judge Enforcer Record: retry path (second half fails again), NO VERDICT 47 -> 15, other rows unchanged, esr {"retried":[1],"halves":2,"why":{"1":"finish_reason length (the reply was cut at the token cap)"}}
+OK 33311 Judge Enforcer Build: je_skip path unchanged
+OK 33311 Alt Judge Enforcer Build: je_skip path unchanged
+OK 33322 Judge Enforcer Build: je_skip path unchanged
+OK 33322 Alt Judge Enforcer Build: je_skip path unchanged
+OK 33345 Judge Enforcer Build: 239 ids kept, calls 5 -> 5, est. cost per call [28K 23K 38K 31K 26K] -> [28K 23K 38K 31K 26K]
+OK 33345 Judge Enforcer Record: no-retry path, 241 rows equal to base
+OK 33345 Judge Enforcer Retry Build: no failed call, one marker item
+OK 33345 Alt Judge Enforcer Build: 95 ids kept, calls 3 -> 3, est. cost per call [29K 35K 17K] -> [29K 35K 17K]
+OK 33345 Alt Judge Enforcer Record: no-retry path, 96 rows equal to base
+OK 33345 Alt Judge Enforcer Retry Build: no failed call, one marker item
+OK 33371 Judge Enforcer Build: 194 ids kept, calls 5 -> 5, est. cost per call [26K 34K 32K 18K 24K] -> [26K 34K 32K 18K 24K]
+OK 33371 Judge Enforcer Record: no-retry path, 195 rows equal to base
+OK 33371 Judge Enforcer Retry Build: no failed call, one marker item
+OK 33371 Alt Judge Enforcer Build: 70 ids kept, calls 3 -> 3, est. cost per call [47K 24K 15K] -> [40K 29K 16K]
+OK 33371 Alt Judge Enforcer Record: no-retry path, 71 rows equal to base
+OK 33371 Alt Judge Enforcer Retry Build: no failed call, one marker item
+OK 33389 Judge Enforcer Build: 204 ids kept, calls 6 -> 6, est. cost per call [27K 24K 29K 30K 32K 9K] -> [27K 24K 29K 30K 32K 9K]
+OK 33389 Judge Enforcer Record: no-retry path, 207 rows equal to base
+OK 33389 Judge Enforcer Retry Build: no failed call, one marker item
+OK 33389 Alt Judge Enforcer Build: je_skip path unchanged
+calls over all saved runs: 65 -> 66
+TOTAL 56 OK, 0 FAIL

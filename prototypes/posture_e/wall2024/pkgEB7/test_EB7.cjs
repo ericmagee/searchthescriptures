@@ -5,7 +5,7 @@
 // C. Send Back Build: saved runs byte-equal to base (pkgL1Q/patched); with the synthetic DISAGREE, the E-B7 item carries b7 and the rule note.
 // D. Send Back Record: saved runs equal to base; B7.cure units; synthetic replies: an uncured E-B7 adds 1 to drv_uncured with AUDIT v51; a cured one does not.
 const fs=require('fs');const {harness}=require('../pkgGSL/harness.cjs');const D='/mnt/project-files/wall2024/inputs/';
-const EB=process.env.EB||'pkgEAI/patched_on_pkgEID/',SB='pkgL1Q/patched/',P=__dirname+'/'+(process.env.PD||'patched')+'/';const rf=(d,n)=>fs.readFileSync(d+n.replace(/ /g,'_')+'.js','utf8');
+const EB=process.env.EB||'pkgEAI/patched_on_pkgEID/',SB=process.env.SB||'pkgL1Q/patched/',P=__dirname+'/'+(process.env.PD||'patched')+'/';const rf=(d,n)=>fs.readFileSync(d+n.replace(/ /g,'_')+'.js','utf8');
 let ok=0,bad=0;const out=[];const log=s=>{out.push(s);console.log(s);};const T=(c,m)=>{if(c){ok++;out.push('OK '+m);}else{bad++;log('FAIL '+m);}};
 const st=x=>JSON.stringify(x,(k,v)=>k==='at'||k==='created_at'?undefined:v);
 const runs=fs.readdirSync(D).filter(f=>/^\d+_Judge_Enforcer_Build\.json$/.test(f)).map(f=>f.split('_')[0]).filter(r=>+r>=33218).sort();

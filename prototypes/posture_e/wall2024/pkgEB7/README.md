@@ -21,3 +21,8 @@ Test: node pkgEB7/test_EB7.cjs -> 102 OK, 0 FAIL (on ESR: EB=pkgESR/patched/ PD=
   Send Back Record: KEEP without the quotes UNCURED, drv_uncured +1, AUDIT v51; KEEP quoting both CURED, not counted. 10 cure units.
 - E-B7 items in the saved Builds: 2 (33249 Alt grok, challenger premises 1 and 5).
 Restack: W1's Send Back Record seat lookup, my pkgTRM (Send Back/Gate), pkgEAX (W1, Records) touch the same nodes; anchors are single lines.
+
+## patched_full (W3 2916, live stack after 33411)
+Built on --ebase pkgESR/patched_on_pkgEAX and --sbase = pkgTRM/patched (Send Back Build, Alt) + pkgTRM/patched_on_pkgDEC (Send Back Record, Alt).
+Shas: JEB 580a1310dc18, Alt JEB 97429878e557, JER d44c21412695, Alt JER 297c7135383b, SBB b0a7604f6217, Alt SBB bd7c5109d7d1, SBR 31f9ac2c4181, Alt SBR 6b1cf152b6f4 (byte-equal to W3's /mnt/project-files/w3/restack_gap_after_33411/).
+Test: EB=pkgESR/patched_on_pkgEAX/ SB=<that sbase dir>/ PD=patched_full node pkgEB7/test_EB7.cjs -> 102 OK (test_EB7_full.txt).

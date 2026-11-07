@@ -1,0 +1,277 @@
+{
+ "add": [
+  {
+   "id": "dd36e052-eb3c-6610-5956-4315aba38664",
+   "name": "Judge Enforcer Retry Build",
+   "type": "n8n-nodes-base.code",
+   "typeVersion": 2,
+   "position": [
+    15282,
+    1140
+   ],
+   "parameters": {
+    "jsCode": "(from patched/Judge_Enforcer_Retry_Build.js)"
+   }
+  },
+  {
+   "id": "d21c1e59-01c2-8dde-6578-04e40dc5cf6b",
+   "name": "Judge Enforcer Retry Needed?",
+   "type": "n8n-nodes-base.if",
+   "typeVersion": 2.2,
+   "position": [
+    15392,
+    1140
+   ],
+   "parameters": {
+    "conditions": {
+     "combinator": "and",
+     "conditions": [
+      {
+       "id": "598c8171-ff49-aa64-75b1-9ee2ab6e530d",
+       "leftValue": "={{ $json.esr_retry === true }}",
+       "operator": {
+        "operation": "true",
+        "singleValue": true,
+        "type": "boolean"
+       },
+       "rightValue": ""
+      }
+     ],
+     "options": {
+      "caseSensitive": true,
+      "leftValue": "",
+      "typeValidation": "loose"
+     }
+    },
+    "options": {}
+   }
+  },
+  {
+   "id": "0f4b8ecb-0145-1359-ac3e-33dccd8116e9",
+   "name": "Judge Enforcer Retry Call deepseek",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.3,
+   "retryOnFail": true,
+   "maxTries": 3,
+   "waitBetweenTries": 10000,
+   "onError": "continueRegularOutput",
+   "position": [
+    15502,
+    1140
+   ],
+   "parameters": {
+    "method": "POST",
+    "url": "https://api.deepseek.com/v1/chat/completions",
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpHeaderAuth",
+    "sendBody": true,
+    "specifyBody": "json",
+    "jsonBody": "={{ $json.body }}",
+    "options": {
+     "timeout": 900000,
+     "batching": {
+      "batch": {
+       "batchSize": 1,
+       "batchInterval": 0
+      }
+     }
+    }
+   },
+   "credentials": {
+    "httpHeaderAuth": {
+     "id": "R3waesZPK7vpsV8E",
+     "name": "DeepSeek Key"
+    }
+   }
+  },
+  {
+   "id": "634f4736-7c5b-5be6-d9bf-9dd49b4c4f0a",
+   "name": "Alt Judge Enforcer Retry Build",
+   "type": "n8n-nodes-base.code",
+   "typeVersion": 2,
+   "position": [
+    13370,
+    1480
+   ],
+   "parameters": {
+    "jsCode": "(from patched/Alt_Judge_Enforcer_Retry_Build.js)"
+   }
+  },
+  {
+   "id": "6d94822a-efd1-b10c-0e43-7b89fc9acef3",
+   "name": "Alt Judge Enforcer Retry Needed?",
+   "type": "n8n-nodes-base.if",
+   "typeVersion": 2.2,
+   "position": [
+    13480,
+    1480
+   ],
+   "parameters": {
+    "conditions": {
+     "combinator": "and",
+     "conditions": [
+      {
+       "id": "e382575a-6485-5bf2-c01c-9e0066282f28",
+       "leftValue": "={{ $json.esr_retry === true }}",
+       "operator": {
+        "operation": "true",
+        "singleValue": true,
+        "type": "boolean"
+       },
+       "rightValue": ""
+      }
+     ],
+     "options": {
+      "caseSensitive": true,
+      "leftValue": "",
+      "typeValidation": "loose"
+     }
+    },
+    "options": {}
+   }
+  },
+  {
+   "id": "ad508ba4-8ae2-adce-b758-8dab946c4387",
+   "name": "Alt Judge Enforcer Retry Call deepseek",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.3,
+   "retryOnFail": true,
+   "maxTries": 3,
+   "waitBetweenTries": 10000,
+   "onError": "continueRegularOutput",
+   "position": [
+    13590,
+    1480
+   ],
+   "parameters": {
+    "method": "POST",
+    "url": "https://api.deepseek.com/v1/chat/completions",
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpHeaderAuth",
+    "sendBody": true,
+    "specifyBody": "json",
+    "jsonBody": "={{ $json.body }}",
+    "options": {
+     "timeout": 900000,
+     "batching": {
+      "batch": {
+       "batchSize": 1,
+       "batchInterval": 0
+      }
+     }
+    }
+   },
+   "credentials": {
+    "httpHeaderAuth": {
+     "id": "R3waesZPK7vpsV8E",
+     "name": "DeepSeek Key"
+    }
+   }
+  }
+ ],
+ "connections_set": {
+  "Judge Enforcer Call deepseek": {
+   "main": [
+    [
+     {
+      "node": "Judge Enforcer Retry Build",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Judge Enforcer Retry Build": {
+   "main": [
+    [
+     {
+      "node": "Judge Enforcer Retry Needed?",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Judge Enforcer Retry Needed?": {
+   "main": [
+    [
+     {
+      "node": "Judge Enforcer Retry Call deepseek",
+      "type": "main",
+      "index": 0
+     }
+    ],
+    [
+     {
+      "node": "Judge Enforcer Record",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Judge Enforcer Retry Call deepseek": {
+   "main": [
+    [
+     {
+      "node": "Judge Enforcer Record",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Alt Judge Enforcer Call deepseek": {
+   "main": [
+    [
+     {
+      "node": "Alt Judge Enforcer Retry Build",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Alt Judge Enforcer Retry Build": {
+   "main": [
+    [
+     {
+      "node": "Alt Judge Enforcer Retry Needed?",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Alt Judge Enforcer Retry Needed?": {
+   "main": [
+    [
+     {
+      "node": "Alt Judge Enforcer Retry Call deepseek",
+      "type": "main",
+      "index": 0
+     }
+    ],
+    [
+     {
+      "node": "Alt Judge Enforcer Record",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Alt Judge Enforcer Retry Call deepseek": {
+   "main": [
+    [
+     {
+      "node": "Alt Judge Enforcer Record",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  }
+ },
+ "unchanged_note": "Judge Enforcer Needed? keeps its false branch to Judge Enforcer Record (the je_skip path). Alt Judge Enforcer Needed? keeps its false branch to Alt Judge Enforcer Record (the je_skip path). "
+}

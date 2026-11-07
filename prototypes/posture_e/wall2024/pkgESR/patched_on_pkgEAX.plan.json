@@ -1,0 +1,66 @@
+{
+ "source": "W2 pkgESR, rulings item 9 (enforcer calls sized by estimated cost; split and retry a failed call)",
+ "ebase": "pkgEAX/patched_live",
+ "nodes": [
+  {
+   "name": "Judge Enforcer Build",
+   "file": "Judge_Enforcer_Build.js",
+   "base_sha": "e1f68fbb258e",
+   "final_sha": "922cfa34942e",
+   "bytes": [
+    63890,
+    64351
+   ]
+  },
+  {
+   "name": "Alt Judge Enforcer Build",
+   "file": "Alt_Judge_Enforcer_Build.js",
+   "base_sha": "0f9687f0083d",
+   "final_sha": "8c562cf9a75f",
+   "bytes": [
+    63811,
+    64272
+   ]
+  },
+  {
+   "name": "Judge Enforcer Record",
+   "file": "Judge_Enforcer_Record.js",
+   "base_sha": "4bf90e5f5607",
+   "final_sha": "9390d0346267",
+   "bytes": [
+    25926,
+    26910
+   ]
+  },
+  {
+   "name": "Alt Judge Enforcer Record",
+   "file": "Alt_Judge_Enforcer_Record.js",
+   "base_sha": "948bfb0a7be0",
+   "final_sha": "7f581703d8a6",
+   "bytes": [
+    25929,
+    26933
+   ]
+  },
+  {
+   "name": "Judge Enforcer Retry Build",
+   "file": "Judge_Enforcer_Retry_Build.js",
+   "base_sha": "(new node)",
+   "final_sha": "cfa5ec5750ad",
+   "bytes": [
+    0,
+    2007
+   ]
+  },
+  {
+   "name": "Alt Judge Enforcer Retry Build",
+   "file": "Alt_Judge_Enforcer_Retry_Build.js",
+   "base_sha": "(new node)",
+   "final_sha": "d7eef3d79009",
+   "bytes": [
+    0,
+    2011
+   ]
+  }
+ ]
+}

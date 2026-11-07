@@ -4,7 +4,7 @@
 // 3. Retry Build on the saved replies: halves only for the failed calls (33299 Alt call 1, 33222 Main call 2), whole items, every id once.
 // 4. Records, retry path: synthetic replies for the halves read every retried id; other rows unchanged; a half that fails again stays NO VERDICT.
 const fs=require('fs');const {harness}=require('../pkgGSL/harness.cjs');const D='/mnt/project-files/wall2024/inputs/';
-const EB='pkgEAI/patched_on_pkgEID/',P=__dirname+'/patched/';const rf=(d,n)=>fs.readFileSync(d+n.replace(/ /g,'_')+'.js','utf8');
+const EB=process.env.ESR_EB||'pkgEAI/patched_on_pkgEID/',P=process.env.ESR_P||__dirname+'/patched/'; /* ESR_EB/ESR_P: other stack, e.g. pkgEAX */const rf=(d,n)=>fs.readFileSync(d+n.replace(/ /g,'_')+'.js','utf8');
 let ok=0,bad=0;const out=[];const log=s=>{out.push(s);console.log(s);};const T=(c,m)=>{if(c){ok++;out.push('OK '+m);}else{bad++;log('FAIL '+m);}};
 const st=x=>JSON.stringify(x,(k,v)=>k==='at'?undefined:v);
 const W={'E-ANS':314,'E-VOID':5648,'E-COL':1684,'E-HOLD':508,'E-KEY':5244,'E-PREM':1043,'E-RES':4613,'E-SYN':328};

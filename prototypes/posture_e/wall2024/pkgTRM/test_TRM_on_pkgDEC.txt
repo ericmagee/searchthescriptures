@@ -1,0 +1,110 @@
+OK 33218 Send Back Build: output = base minus enf428_rows, enf421_rows (0K less)
+OK 33218 Send Back Record: output = base minus enf428_rows, enf421_rows (599K less)
+OK 33218 Gate Build: equal on the trimmed Send Back Record output
+OK 33218 Gate Record: output = base minus enf428_rows, enf421_rows, sb_rows (823K less)
+OK 33218 Alternate Merge Seat: byte-equal when fed the trimmed outputs
+OK 33218 Alt Send Back Build: output = base minus enf428_rows, enf421_rows (0K less)
+OK 33218 Alt Send Back Record: output = base minus enf428_rows, enf421_rows (0K less)
+OK 33218 Alt Gate Build: equal on the trimmed Send Back Record output
+OK 33218 Alt Gate Record: output = base minus enf428_rows, enf421_rows, sb_rows (0K less)
+OK 33218 Alternate Merge: byte-equal when fed the trimmed outputs
+OK 33222 Send Back Build: output = base minus enf428_rows, enf421_rows (0K less)
+OK 33222 Send Back Record: output = base minus enf428_rows, enf421_rows (686K less)
+OK 33222 Gate Build: equal on the trimmed Send Back Record output
+OK 33222 Gate Record: output = base minus enf428_rows, enf421_rows, sb_rows (887K less)
+OK 33222 Alternate Merge Seat: byte-equal when fed the trimmed outputs
+OK 33222 Alt Send Back Build: output = base minus enf428_rows, enf421_rows (0K less)
+OK 33222 Alt Send Back Record: output = base minus enf428_rows, enf421_rows (174K less)
+OK 33222 Alt Gate Build: equal on the trimmed Send Back Record output
+OK 33222 Alt Gate Record: output = base minus enf428_rows, enf421_rows, sb_rows (290K less)
+OK 33222 Alternate Merge: byte-equal when fed the trimmed outputs
+OK 33249 Send Back Build: output = base minus enf428_rows, enf421_rows (0K less)
+OK 33249 Send Back Record: output = base minus enf428_rows, enf421_rows (564K less)
+OK 33249 Gate Build: equal on the trimmed Send Back Record output
+OK 33249 Gate Record: output = base minus enf428_rows, enf421_rows, sb_rows (793K less)
+OK 33249 Alternate Merge Seat: byte-equal when fed the trimmed outputs
+OK 33249 Alt Send Back Build: output = base minus enf428_rows, enf421_rows (0K less)
+OK 33249 Alt Send Back Record: output = base minus enf428_rows, enf421_rows (223K less)
+OK 33249 Alt Gate Build: equal on the trimmed Send Back Record output
+OK 33249 Alt Gate Record: output = base minus enf428_rows, enf421_rows, sb_rows (268K less)
+OK 33249 Alternate Merge: byte-equal when fed the trimmed outputs
+OK 33261 Send Back Build: output = base minus enf428_rows, enf421_rows (0K less)
+OK 33261 Send Back Record: output = base minus enf428_rows, enf421_rows (701K less)
+OK 33261 Gate Build: equal on the trimmed Send Back Record output
+OK 33261 Gate Record: output = base minus enf428_rows, enf421_rows, sb_rows (963K less)
+OK 33261 Alternate Merge Seat: byte-equal when fed the trimmed outputs
+OK 33261 Alt Send Back Build: output = base minus enf428_rows, enf421_rows (0K less)
+OK 33261 Alt Send Back Record: output = base minus enf428_rows, enf421_rows (182K less)
+OK 33261 Alt Gate Build: equal on the trimmed Send Back Record output
+OK 33261 Alt Gate Record: output = base minus enf428_rows, enf421_rows, sb_rows (213K less)
+OK 33261 Alternate Merge: byte-equal when fed the trimmed outputs
+OK 33276 Send Back Build: output = base minus enf428_rows, enf421_rows (0K less)
+OK 33276 Send Back Record: output = base minus enf428_rows, enf421_rows (0K less)
+OK 33276 Gate Build: equal on the trimmed Send Back Record output
+OK 33276 Gate Record: base and patched throw the same on this old saved input (Cannot read properties of undefined (reading 'slice'))
+OK 33276 Alt Send Back Build: output = base minus enf428_rows, enf421_rows (0K less)
+OK 33276 Alt Send Back Record: output = base minus enf428_rows, enf421_rows (0K less)
+OK 33276 Alt Gate Build: equal on the trimmed Send Back Record output
+OK 33276 Alt Gate Record: base and patched throw the same on this old saved input (Cannot read properties of undefined (reading 'slice'))
+OK 33289 Send Back Build: output = base minus enf428_rows, enf421_rows (0K less)
+OK 33289 Send Back Record: output = base minus enf428_rows, enf421_rows (0K less)
+OK 33289 Gate Build: equal on the trimmed Send Back Record output
+OK 33289 Gate Record: base and patched throw the same on this old saved input (Cannot read properties of undefined (reading 'slice'))
+OK 33289 Alt Send Back Build: output = base minus enf428_rows, enf421_rows (0K less)
+OK 33289 Alt Send Back Record: output = base minus enf428_rows, enf421_rows (0K less)
+OK 33289 Alt Gate Build: equal on the trimmed Send Back Record output
+OK 33289 Alt Gate Record: base and patched throw the same on this old saved input (Cannot read properties of undefined (reading 'slice'))
+OK 33299 Send Back Build: output = base minus enf428_rows, enf421_rows (0K less)
+OK 33299 Send Back Record: output = base minus enf428_rows, enf421_rows (506K less)
+OK 33299 Gate Build: equal on the trimmed Send Back Record output
+OK 33299 Gate Record: output = base minus enf428_rows, enf421_rows, sb_rows (694K less)
+OK 33299 Alternate Merge Seat: byte-equal when fed the trimmed outputs
+OK 33299 Alt Send Back Build: output = base minus enf428_rows, enf421_rows (0K less)
+OK 33299 Alt Send Back Record: output = base minus enf428_rows, enf421_rows (170K less)
+OK 33299 Alt Gate Build: equal on the trimmed Send Back Record output
+OK 33299 Alt Gate Record: output = base minus enf428_rows, enf421_rows, sb_rows (181K less)
+OK 33299 Alternate Merge: byte-equal when fed the trimmed outputs
+OK 33311 Send Back Build: output = base minus enf428_rows, enf421_rows (0K less)
+OK 33311 Send Back Record: output = base minus enf428_rows, enf421_rows (0K less)
+OK 33311 Gate Build: equal on the trimmed Send Back Record output
+OK 33311 Gate Record: base and patched throw the same on this old saved input (Cannot read properties of undefined (reading 'slice'))
+OK 33311 Alt Send Back Build: output = base minus enf428_rows, enf421_rows (0K less)
+OK 33311 Alt Send Back Record: output = base minus enf428_rows, enf421_rows (0K less)
+OK 33311 Alt Gate Build: equal on the trimmed Send Back Record output
+OK 33311 Alt Gate Record: base and patched throw the same on this old saved input (Cannot read properties of undefined (reading 'slice'))
+OK 33322 Send Back Build: output = base minus enf428_rows, enf421_rows (0K less)
+OK 33322 Send Back Record: output = base minus enf428_rows, enf421_rows (0K less)
+OK 33322 Gate Build: equal on the trimmed Send Back Record output
+OK 33322 Gate Record: base and patched throw the same on this old saved input (Cannot read properties of undefined (reading 'slice'))
+OK 33345 Send Back Build: output = base minus enf428_rows, enf421_rows (0K less)
+OK 33345 Send Back Record: output = base minus enf428_rows, enf421_rows (565K less)
+OK 33345 Gate Build: equal on the trimmed Send Back Record output
+OK 33345 Gate Record: output = base minus enf428_rows, enf421_rows, sb_rows (872K less)
+OK 33345 Alternate Merge Seat: byte-equal when fed the trimmed outputs
+OK 33345 Alt Send Back Build: output = base minus enf428_rows, enf421_rows (0K less)
+OK 33345 Alt Send Back Record: output = base minus enf428_rows, enf421_rows (204K less)
+OK 33345 Alt Gate Build: equal on the trimmed Send Back Record output
+OK 33345 Alt Gate Record: output = base minus enf428_rows, enf421_rows, sb_rows (247K less)
+OK 33345 Alternate Merge: byte-equal when fed the trimmed outputs
+OK 33371 Send Back Build: output = base minus enf428_rows, enf421_rows (0K less)
+OK 33371 Send Back Record: output = base minus enf428_rows, enf421_rows (562K less)
+OK 33371 Gate Build: equal on the trimmed Send Back Record output
+OK 33371 Gate Record: output = base minus enf428_rows, enf421_rows, sb_rows (713K less)
+OK 33371 Alternate Merge Seat: byte-equal when fed the trimmed outputs
+OK 33371 Alt Send Back Build: output = base minus enf428_rows, enf421_rows (0K less)
+OK 33371 Alt Send Back Record: output = base minus enf428_rows, enf421_rows (180K less)
+OK 33371 Alt Gate Build: equal on the trimmed Send Back Record output
+OK 33371 Alt Gate Record: output = base minus enf428_rows, enf421_rows, sb_rows (226K less)
+OK 33371 Alternate Merge: byte-equal when fed the trimmed outputs
+OK 33389 Send Back Build: output = base minus enf428_rows, enf421_rows (0K less)
+OK 33389 Send Back Record: output = base minus enf428_rows, enf421_rows (543K less)
+OK 33389 Gate Build: equal on the trimmed Send Back Record output
+OK 33389 Gate Record: output = base minus enf428_rows, enf421_rows, sb_rows (694K less)
+OK 33389 Alternate Merge Seat: byte-equal when fed the trimmed outputs
+OK 33389 Alt Send Back Build: output = base minus enf428_rows, enf421_rows (0K less)
+OK 33389 Alt Send Back Record: output = base minus enf428_rows, enf421_rows (0K less)
+OK 33389 Alt Gate Build: equal on the trimmed Send Back Record output
+OK 33389 Alt Gate Record: output = base minus enf428_rows, enf421_rows, sb_rows (0K less)
+OK 33389 Alternate Merge: byte-equal when fed the trimmed outputs
+bytes not copied over all checked node outputs: 13724K
+TOTAL 108 OK, 0 FAIL

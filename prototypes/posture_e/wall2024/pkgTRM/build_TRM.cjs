@@ -7,9 +7,10 @@
 //  - Send Back Build / Alt (skip output): enf428_rows, enf421_rows
 //  - Send Back Record / Alt (both outputs): enf428_rows, enf421_rows (its own sb_rows stay)
 //  - Gate Record / Alt (both outputs): enf428_rows, enf421_rows, sb_rows (its own gate_rows stay)
-// Base: pkgL1Q/patched (W3 PASS 2896). Run from wall2024/: node pkgTRM/build_TRM.cjs [--base dir] [--out dir]
+// Base: pkgL1Q/patched (W3 PASS 2896). Run from wall2024/: node pkgTRM/build_TRM.cjs [--base dir] [--out dir] [--sbr-base dir] [--only 'Name,Name']
+// W3 2914 restack: node pkgTRM/build_TRM.cjs --sbr-base pkgDEC/patched --only 'Send Back Record,Alt Send Back Record' --out pkgTRM/patched_on_pkgDEC
 const fs=require('fs'),crypto=require('crypto');const sha=s=>crypto.createHash('sha256').update(s).digest('hex').slice(0,12);
-const arg=(k,d)=>{const i=process.argv.indexOf(k);return i>0?process.argv[i+1]:d;};const BASE=arg('--base','pkgL1Q/patched'),OUT=arg('--out',__dirname+'/patched');fs.mkdirSync(OUT,{recursive:true});
+const arg=(k,d)=>{const i=process.argv.indexOf(k);return i>0?process.argv[i+1]:d;};const BASE=arg('--base','pkgL1Q/patched'),OUT=arg('--out',__dirname+'/patched'),SBRB=arg('--sbr-base',null),ONLY=arg('--only',null);fs.mkdirSync(OUT,{recursive:true});
 const lib=keys=>`/* pkgTRM: row arrays the next nodes never read from this output (each reader takes them from the node that made them, by name) are not copied on */
 const __trm=o=>{const c={...o};for(const k of ${JSON.stringify(keys)})delete c[k];return c;};
 `;
@@ -17,7 +18,7 @@ const J=[['Send Back Build',['enf428_rows','enf421_rows'],1],['Alt Send Back Bui
  ['Send Back Record',['enf428_rows','enf421_rows'],2],['Alt Send Back Record',['enf428_rows','enf421_rows'],2],
  ['Gate Record',['enf428_rows','enf421_rows','sb_rows'],2],['Alt Gate Record',['enf428_rows','enf421_rows','sb_rows'],2]];
 const plan={source:'W2 pkgTRM (state object trim)',base:BASE,nodes:[]};
-for(const [name,keys,n] of J){const f=name.replace(/ /g,'_')+'.js';const s0=fs.readFileSync(BASE+'/'+f,'utf8');const a='json:{...PASS,';const c=s0.split(a).length-1;if(c!==n)throw new Error(name+' anchor x'+c);
+for(const [name,keys,n] of J){if(ONLY&&!ONLY.split(',').includes(name))continue;const f=name.replace(/ /g,'_')+'.js';const b=(SBRB&&/Send Back Record$/.test(name))?SBRB:BASE;const s0=fs.readFileSync(b+'/'+f,'utf8');const a='json:{...PASS,';const c=s0.split(a).length-1;if(c!==n)throw new Error(name+' anchor x'+c);
  const s=lib(keys)+s0.split(a).join('json:{...__trm(PASS),');new Function('$','$input','$json','$execution','$workflow','$node','$items',s);fs.writeFileSync(OUT+'/'+f,s);
- plan.nodes.push({name,file:f,base_sha:sha(s0),final_sha:sha(s),dropped:keys,bytes:[s0.length,s.length]});}
+ plan.nodes.push({name,file:f,base:b,base_sha:sha(s0),final_sha:sha(s),dropped:keys,bytes:[s0.length,s.length]});}
 fs.writeFileSync(OUT+'.plan.json',JSON.stringify(plan,null,1));console.log(plan.nodes.map(n=>n.name+' '+n.base_sha+'->'+n.final_sha).join('\n'));

@@ -1,0 +1,107 @@
+OK 33218 Judge Enforcer Build: old ids 220 unchanged, calls 5 -> 5, E-B7 items 0
+OK 33218 Judge Enforcer Record: 221 old rows unchanged, 0 E-B7 rows NO VERDICT on the saved replies
+OK 33218 Send Back Build: saved run equal to base (the new b7:null field aside)
+OK 33218 Send Back Record: saved run equal to base (b7_counted [] aside)
+OK 33218 Alt Judge Enforcer Build: old ids 0 unchanged, calls 1 -> 1, E-B7 items 0
+OK 33222 Judge Enforcer Build: old ids 257 unchanged, calls 8 -> 8, E-B7 items 0
+OK 33222 Judge Enforcer Record: 258 old rows unchanged, 0 E-B7 rows NO VERDICT on the saved replies
+OK 33222 Send Back Build: saved run equal to base (the new b7:null field aside)
+OK 33222 Send Back Record: saved run equal to base (b7_counted [] aside)
+OK 33222 Alt Judge Enforcer Build: old ids 76 unchanged, calls 3 -> 3, E-B7 items 0
+OK 33222 Alt Judge Enforcer Record: 77 old rows unchanged, 0 E-B7 rows NO VERDICT on the saved replies
+OK 33222 Alt Send Back Build: saved run equal to base (the new b7:null field aside)
+OK 33222 Alt Send Back Record: saved run equal to base (b7_counted [] aside)
+OK 33249 Judge Enforcer Build: old ids 208 unchanged, calls 6 -> 6, E-B7 items 0
+OK 33249 Judge Enforcer Record: 211 old rows unchanged, 0 E-B7 rows NO VERDICT on the saved replies
+OK 33249 Send Back Build: saved run equal to base (the new b7:null field aside)
+OK 33249 Send Back Record: saved run equal to base (b7_counted [] aside)
+OK 33249 Alt Judge Enforcer Build: old ids 89 unchanged, calls 3 -> 3, E-B7 items 2
+E-B7 33249 Alt grok SELF-CONTRADICTION challenger premise 1 on Matthew 1:25, Matthew 1:18 | count: Premise 1 UNEXHIBITED (pressed witnesses Matthew 1:25 and Matthew 1:18 answered in [DR3] but the answers FAILS (Commitment 7), so the witnes | MEANS: Joseph does the father's naming
+E-B7 33249 Alt grok SELF-CONTRADICTION challenger premise 5 on 1 Chronicles 28:6 | count: Premise 5 UNEXHIBITED (1 Chronicles 28:6 answer FAILS (Commitment 7)). Spared: | MEANS: God's fatherhood stands beside the begetting father in one verse
+OK 33249 Alt Judge Enforcer Record: 90 old rows unchanged, 2 E-B7 rows NO VERDICT on the saved replies
+OK 33249 Alt Send Back Build: saved run equal to base (the new b7:null field aside)
+OK 33249 Alt Send Back Record: saved run equal to base (b7_counted [] aside)
+OK 33249 Alt synthetic SAME GROUND -> DISAGREE
+OK 33249 Alt synthetic DISAGREE + DIFFERENT GROUND -> CONTRADICTED, not sent
+OK 33249 Alt tally E-B7 DISAGREE 1
+OK 33249 Alt Send Back Build: one E-B7 item (S7, seat grok) with b7 and the note; the CONTRADICTED row is not sent
+NOTE TEXT: THE SELF-CONTRADICTION RULE (E-B7, ENFORCED, pkgEB7; ruling 421): your CHALLENGER CONCEDED LINKS line counts premise 1 UNEXHIBITED on Matthew 1:25, Matthew 1:18, and your own ANSWER CHECK on Matthew 1:25, Matthew 1:18 for the challenger's answer reads MEETS. The enforcer reads them as the same ground; both cannot stand. CHANGE TO your CHALLENGER CONCEDED LINKS line without premise 1 counted UNEXHIBITED, or CHANGE TO that ANSWER CHECK line graded MISSES. To keep both, KEEP with a sentence that quotes the premise (at least 6 words in a row of: "1. Joseph's knowing before the birth, which props the claim that the child is of Joseph's loins. "Joseph knew Mary his wife within the espousal, and the child is of his loins."
+OK 33249 Alt Send Back Record: a KEEP without the quotes is UNCURED, counted once (drv_uncured 9 -> 10), AUDIT v51
+OK 33249 Alt Send Back Record: a KEEP quoting the premise and the MEANS is CURED, not counted
+OK 33261 Judge Enforcer Build: old ids 252 unchanged, calls 8 -> 8, E-B7 items 0
+OK 33261 Judge Enforcer Record: 257 old rows unchanged, 0 E-B7 rows NO VERDICT on the saved replies
+OK 33261 Send Back Build: saved run equal to base (the new b7:null field aside)
+OK 33261 Send Back Record: saved run equal to base (b7_counted [] aside)
+OK 33261 Alt Judge Enforcer Build: old ids 79 unchanged, calls 3 -> 3, E-B7 items 0
+OK 33261 Alt Judge Enforcer Record: 80 old rows unchanged, 0 E-B7 rows NO VERDICT on the saved replies
+OK 33261 Alt Send Back Build: saved run equal to base (the new b7:null field aside)
+OK 33261 Alt Send Back Record: saved run equal to base (b7_counted [] aside)
+OK 33276 Judge Enforcer Build: old ids 0 unchanged, calls 1 -> 1, E-B7 items 0
+OK 33276 Judge Enforcer Record: 0 old rows unchanged, 0 E-B7 rows NO VERDICT on the saved replies
+OK 33276 Send Back Build: saved run equal to base (the new b7:null field aside)
+OK 33276 Send Back Record: saved run equal to base (b7_counted [] aside)
+OK 33276 Alt Judge Enforcer Build: old ids 0 unchanged, calls 1 -> 1, E-B7 items 0
+OK 33276 Alt Judge Enforcer Record: 0 old rows unchanged, 0 E-B7 rows NO VERDICT on the saved replies
+OK 33276 Alt Send Back Build: saved run equal to base (the new b7:null field aside)
+OK 33289 Judge Enforcer Build: old ids 0 unchanged, calls 1 -> 1, E-B7 items 0
+OK 33289 Judge Enforcer Record: 0 old rows unchanged, 0 E-B7 rows NO VERDICT on the saved replies
+OK 33289 Send Back Build: saved run equal to base (the new b7:null field aside)
+OK 33289 Send Back Record: saved run equal to base (b7_counted [] aside)
+OK 33289 Alt Judge Enforcer Build: old ids 0 unchanged, calls 1 -> 1, E-B7 items 0
+OK 33289 Alt Judge Enforcer Record: 0 old rows unchanged, 0 E-B7 rows NO VERDICT on the saved replies
+OK 33289 Alt Send Back Build: saved run equal to base (the new b7:null field aside)
+OK 33289 Alt Send Back Record: saved run equal to base (b7_counted [] aside)
+OK 33299 Judge Enforcer Build: old ids 202 unchanged, calls 5 -> 5, E-B7 items 0
+OK 33299 Judge Enforcer Record: 204 old rows unchanged, 0 E-B7 rows NO VERDICT on the saved replies
+OK 33299 Send Back Build: saved run equal to base (the new b7:null field aside)
+OK 33299 Send Back Record: saved run equal to base (b7_counted [] aside)
+OK 33299 Alt Judge Enforcer Build: old ids 75 unchanged, calls 3 -> 3, E-B7 items 0
+OK 33299 Alt Judge Enforcer Record: 76 old rows unchanged, 0 E-B7 rows NO VERDICT on the saved replies
+OK 33299 Alt Send Back Build: saved run equal to base (the new b7:null field aside)
+OK 33299 Alt Send Back Record: saved run equal to base (b7_counted [] aside)
+OK 33311 Judge Enforcer Build: old ids 0 unchanged, calls 1 -> 1, E-B7 items 0
+OK 33311 Judge Enforcer Record: 0 old rows unchanged, 0 E-B7 rows NO VERDICT on the saved replies
+OK 33311 Send Back Build: saved run equal to base (the new b7:null field aside)
+OK 33311 Send Back Record: saved run equal to base (b7_counted [] aside)
+OK 33311 Alt Judge Enforcer Build: old ids 0 unchanged, calls 1 -> 1, E-B7 items 0
+OK 33311 Alt Judge Enforcer Record: 0 old rows unchanged, 0 E-B7 rows NO VERDICT on the saved replies
+OK 33311 Alt Send Back Build: saved run equal to base (the new b7:null field aside)
+OK 33311 Alt Send Back Record: saved run equal to base (b7_counted [] aside)
+OK 33322 Judge Enforcer Build: old ids 0 unchanged, calls 1 -> 1, E-B7 items 0
+OK 33322 Judge Enforcer Record: 0 old rows unchanged, 0 E-B7 rows NO VERDICT on the saved replies
+OK 33322 Send Back Build: saved run equal to base (the new b7:null field aside)
+OK 33322 Send Back Record: saved run equal to base (b7_counted [] aside)
+OK 33322 Alt Judge Enforcer Build: old ids 0 unchanged, calls 1 -> 1, E-B7 items 0
+OK 33345 Judge Enforcer Build: old ids 239 unchanged, calls 5 -> 5, E-B7 items 0
+OK 33345 Judge Enforcer Record: 241 old rows unchanged, 0 E-B7 rows NO VERDICT on the saved replies
+OK 33345 Send Back Build: saved run equal to base (the new b7:null field aside)
+OK 33345 Send Back Record: saved run equal to base (b7_counted [] aside)
+OK 33345 Alt Judge Enforcer Build: old ids 95 unchanged, calls 3 -> 3, E-B7 items 0
+OK 33345 Alt Judge Enforcer Record: 96 old rows unchanged, 0 E-B7 rows NO VERDICT on the saved replies
+OK 33345 Alt Send Back Build: saved run equal to base (the new b7:null field aside)
+OK 33345 Alt Send Back Record: saved run equal to base (b7_counted [] aside)
+OK 33371 Judge Enforcer Build: old ids 194 unchanged, calls 5 -> 5, E-B7 items 0
+OK 33371 Judge Enforcer Record: 195 old rows unchanged, 0 E-B7 rows NO VERDICT on the saved replies
+OK 33371 Send Back Build: saved run equal to base (the new b7:null field aside)
+OK 33371 Send Back Record: saved run equal to base (b7_counted [] aside)
+OK 33371 Alt Judge Enforcer Build: old ids 70 unchanged, calls 3 -> 3, E-B7 items 0
+OK 33371 Alt Judge Enforcer Record: 71 old rows unchanged, 0 E-B7 rows NO VERDICT on the saved replies
+OK 33371 Alt Send Back Build: saved run equal to base (the new b7:null field aside)
+OK 33371 Alt Send Back Record: saved run equal to base (b7_counted [] aside)
+OK 33389 Judge Enforcer Build: old ids 204 unchanged, calls 6 -> 6, E-B7 items 0
+OK 33389 Judge Enforcer Record: 207 old rows unchanged, 0 E-B7 rows NO VERDICT on the saved replies
+OK 33389 Send Back Build: saved run equal to base (the new b7:null field aside)
+OK 33389 Send Back Record: saved run equal to base (b7_counted [] aside)
+OK 33389 Alt Judge Enforcer Build: old ids 0 unchanged, calls 1 -> 1, E-B7 items 0
+OK U1 no answer
+OK U2 CONCEDED LINKS without premise 5 UNEXHIBITED
+OK U3 still UNEXHIBITED
+OK U4 the other side's line
+OK U5 ANSWER CHECK regraded MISSES
+OK U6 the other side's answer
+OK U7 another verse
+OK U8 still MEETS
+OK U9 KEEP quoting both
+OK U10 KEEP quoting the premise only
+E-B7 items over all saved runs: 2
+TOTAL 102 OK, 0 FAIL
