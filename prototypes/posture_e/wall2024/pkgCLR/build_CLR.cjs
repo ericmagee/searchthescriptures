@@ -7,7 +7,7 @@
 // Run from wall2024/: node pkgCLR/build_CLR.cjs [in workflow JSON] [out workflow JSON]   (default in: pkgKSCL/out/workflow_KSCL.json = s12 + pkgKSCL)
 const fs=require('fs');const crypto=require('crypto');const sha=s=>crypto.createHash('sha256').update(s).digest('hex').slice(0,16);
 const IN=process.argv[2]||'pkgKSCL/out/workflow_KSCL.json',OUTW=process.argv[3]||'pkgCLR/out/workflow_CLR.json';
-let w=JSON.parse(fs.readFileSync(IN,'utf8'));w=w.nodes?w:(w.data||w);
+let w=JSON.parse(fs.readFileSync(IN,'utf8'));w=w.nodes?w:(w.data||w);for(const d of ['patched','base','out'])fs.mkdirSync('pkgCLR/'+d,{recursive:true});
 const lib=fs.readFileSync('pkgCLR/clr.cjs','utf8');const LIB=lib.slice(lib.indexOf('const CLR=(()=>{'),lib.indexOf('})();',lib.indexOf('const CLR=(()=>{'))+5)+' /* pkgCLR */\n';
 const K0='const KSC=(()=>{';
 const C0="const conceded=t=>{let c=null;for(const raw of String(t||'').split('\\n')){if(/^\\s*\\[/.test(raw))continue;const e=entries(raw);if(e)c={e,line:raw.trim()};}return c;};";
