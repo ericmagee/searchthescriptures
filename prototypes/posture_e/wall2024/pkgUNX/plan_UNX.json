@@ -4,7 +4,7 @@
   {
    "name": "Build Independent Verdict",
    "file": "Build_Independent_Verdict.js",
-   "base": "pkgFCB/patched",
+   "base": "live e3030157",
    "base_sha": "882a9b11ba6f3c45",
    "final_sha": "a7c9de7d47fba79c",
    "edits": [
@@ -14,9 +14,9 @@
   {
    "name": "Extract Independent Verdict",
    "file": "Extract_Independent_Verdict.js",
-   "base": "pkgFCB/patched",
-   "base_sha": "f717753c7c608ba7",
-   "final_sha": "a27e903d0b8740b3",
+   "base": "live e3030157",
+   "base_sha": "8cb99065ebfd332a",
+   "final_sha": "e2ba135043a05c93",
    "edits": [
     "lib",
     "drvX",
@@ -26,9 +26,9 @@
   {
    "name": "Panel Build",
    "file": "Panel_Build.js",
-   "base": "pkgFCB/patched",
-   "base_sha": "0e3cace517b47bde",
-   "final_sha": "09f3bd792a28d06c",
+   "base": "live e3030157",
+   "base_sha": "145768b829fafe5c",
+   "final_sha": "910bb0487541e7ef",
    "edits": [
     "prm"
    ]
@@ -36,9 +36,9 @@
   {
    "name": "Panel Payloads",
    "file": "Panel_Payloads.js",
-   "base": "pkgFCB/patched",
-   "base_sha": "e0f974e71acac317",
-   "final_sha": "a146072c68504579",
+   "base": "live e3030157",
+   "base_sha": "ce00b95b15de961c",
+   "final_sha": "5f80b504b0d6beb8",
    "edits": [
     "lib",
     "drvP",
@@ -48,9 +48,9 @@
   {
    "name": "Cure Build",
    "file": "Cure_Build.js",
-   "base": "pkgFCB/patched",
-   "base_sha": "97838a0a1132ccd8",
-   "final_sha": "96d9e3458bb7a516",
+   "base": "live e3030157",
+   "base_sha": "2a787d173b04315c",
+   "final_sha": "7596ccf7dedd9fe4",
    "edits": [
     "lib",
     "enf",
@@ -61,9 +61,9 @@
   {
    "name": "Cure Normalize",
    "file": "Cure_Normalize.js",
-   "base": "pkgFCB/patched",
-   "base_sha": "35f0b3bebcbc7958",
-   "final_sha": "750e823360bfbf1c",
+   "base": "live e3030157",
+   "base_sha": "34152ba5abe46968",
+   "final_sha": "fde5ea02dab0fe4d",
    "edits": [
     "lib",
     "enf",
@@ -74,9 +74,9 @@
   {
    "name": "Cure Check",
    "file": "Cure_Check.js",
-   "base": "pkgFCB/patched",
-   "base_sha": "4cc6e2e4935b78f2",
-   "final_sha": "7997b0965cd20a2b",
+   "base": "live e3030157",
+   "base_sha": "f8aae0c55a076b2f",
+   "final_sha": "020be6534c83df85",
    "edits": [
     "lib",
     "enf",
@@ -87,9 +87,9 @@
   {
    "name": "Panel Cure Build 1",
    "file": "Panel_Cure_Build_1.js",
-   "base": "pkgFCB/patched",
-   "base_sha": "500a3838178cf6c8",
-   "final_sha": "f1ee7432766f159b",
+   "base": "live e3030157",
+   "base_sha": "79280a73d47008d8",
+   "final_sha": "bc3641626dc75cae",
    "edits": [
     "lib",
     "enf",
@@ -100,9 +100,9 @@
   {
    "name": "Panel Cure Normalize 1",
    "file": "Panel_Cure_Normalize_1.js",
-   "base": "pkgFCB/patched",
-   "base_sha": "7b9b39fc15c60265",
-   "final_sha": "e8f75bbe86a60cc0",
+   "base": "live e3030157",
+   "base_sha": "6fbb644c13b70f0b",
+   "final_sha": "37a1c7ebb380f7ea",
    "edits": [
     "lib",
     "enf",
@@ -113,9 +113,9 @@
   {
    "name": "Panel Cure Build 2",
    "file": "Panel_Cure_Build_2.js",
-   "base": "pkgFCB/patched",
-   "base_sha": "739edb54162fc160",
-   "final_sha": "d0105e71b6e7a66c",
+   "base": "live e3030157",
+   "base_sha": "2702e5384e2ebf98",
+   "final_sha": "512308d2916eebe9",
    "edits": [
     "lib",
     "enf",
@@ -126,9 +126,9 @@
   {
    "name": "Panel Cure Normalize 2",
    "file": "Panel_Cure_Normalize_2.js",
-   "base": "pkgFCB/patched",
-   "base_sha": "79ecd45a0235968e",
-   "final_sha": "c7695bcc252dbc33",
+   "base": "live e3030157",
+   "base_sha": "e90008babb0de9cc",
+   "final_sha": "0d805d5df7becf1e",
    "edits": [
     "lib",
     "enf",
@@ -139,9 +139,9 @@
   {
    "name": "Panel Cure Build 3",
    "file": "Panel_Cure_Build_3.js",
-   "base": "pkgFCB/patched",
-   "base_sha": "1de2fda6b787c8f5",
-   "final_sha": "9a7a03aa7839ff83",
+   "base": "live e3030157",
+   "base_sha": "93da5593107882ba",
+   "final_sha": "d7f172bab6a6ddd9",
    "edits": [
     "lib",
     "enf",
@@ -152,9 +152,9 @@
   {
    "name": "Panel Cure Normalize 3",
    "file": "Panel_Cure_Normalize_3.js",
-   "base": "pkgFCB/patched",
-   "base_sha": "129b2bdef288bafa",
-   "final_sha": "51a1f65ef1adedf5",
+   "base": "live e3030157",
+   "base_sha": "a8dbb48aefa9f502",
+   "final_sha": "c11e8b3fea0c758f",
    "edits": [
     "lib",
     "enf",
@@ -165,9 +165,9 @@
   {
    "name": "Panel Cure Check",
    "file": "Panel_Cure_Check.js",
-   "base": "pkgFCB/patched",
-   "base_sha": "89f473e4cdeba9ff",
-   "final_sha": "baa3da9a49dcdd83",
+   "base": "live e3030157",
+   "base_sha": "dc6b4d50faacff64",
+   "final_sha": "2c171029ef4192d3",
    "edits": [
     "lib",
     "enf",
@@ -178,9 +178,9 @@
   {
    "name": "Alternate Build",
    "file": "Alternate_Build.js",
-   "base": "pkgFCB/patched",
-   "base_sha": "a0993b7537d81024",
-   "final_sha": "1679600d972883a6",
+   "base": "live e3030157",
+   "base_sha": "0a05824d6618e929",
+   "final_sha": "f9b37f9c4649f49c",
    "edits": [
     "lib",
     "enf",
@@ -191,9 +191,9 @@
   {
    "name": "Alternate Payloads",
    "file": "Alternate_Payloads.js",
-   "base": "pkgFCB/patched",
-   "base_sha": "30072fe11495643a",
-   "final_sha": "268b0ca4e85b7996",
+   "base": "live e3030157",
+   "base_sha": "17d26825b4d32e23",
+   "final_sha": "2803955151bd8bad",
    "edits": [
     "lib",
     "drvP",
@@ -203,9 +203,9 @@
   {
    "name": "Alternate Cure Build",
    "file": "Alternate_Cure_Build.js",
-   "base": "pkgFCB/patched",
-   "base_sha": "389c6bd661fe8f2a",
-   "final_sha": "d559bd12bde233f3",
+   "base": "live e3030157",
+   "base_sha": "40138c7c41dd7028",
+   "final_sha": "69dacb5029b8b858",
    "edits": [
     "lib",
     "enf",
@@ -216,9 +216,9 @@
   {
    "name": "Alternate Cure Normalize",
    "file": "Alternate_Cure_Normalize.js",
-   "base": "pkgFCB/patched",
-   "base_sha": "5ba6a43e79156cd9",
-   "final_sha": "dcdbfaf7cf3b12eb",
+   "base": "live e3030157",
+   "base_sha": "92e7c7a914592c97",
+   "final_sha": "dfbcc1282d542cdd",
    "edits": [
     "lib",
     "enf",
@@ -229,9 +229,9 @@
   {
    "name": "Alternate Merge Seat",
    "file": "Alternate_Merge_Seat.js",
-   "base": "pkgRSA/patched",
-   "base_sha": "361c4e6c0ffe05bd",
-   "final_sha": "caec08b0e966cd90",
+   "base": "live e3030157",
+   "base_sha": "bc8e4d8b820af7e6",
+   "final_sha": "8a4f197aaead41db",
    "edits": [
     "lib",
     "enf",
@@ -242,9 +242,9 @@
   {
    "name": "Gate Build",
    "file": "Gate_Build.js",
-   "base": "pkgRSA/patched",
-   "base_sha": "e9b03627047344d7",
-   "final_sha": "9aaa01e542d63bcf",
+   "base": "live e3030157",
+   "base_sha": "64abf5df66f4753a",
+   "final_sha": "b0d70c54c2746a7a",
    "edits": [
     "lib",
     "enf",
@@ -255,9 +255,9 @@
   {
    "name": "Gate Record",
    "file": "Gate_Record.js",
-   "base": "pkgRSA/patched",
-   "base_sha": "23b94252d40d2d9f",
-   "final_sha": "45c4cba9c4ffab88",
+   "base": "live e3030157",
+   "base_sha": "92066ca401bfebbb",
+   "final_sha": "3ea77e68525481be",
    "edits": [
     "lib",
     "enf",
@@ -268,9 +268,9 @@
   {
    "name": "Alt Gate Build",
    "file": "Alt_Gate_Build.js",
-   "base": "pkgRSA/patched",
-   "base_sha": "5ab50d53055c0eed",
-   "final_sha": "241cfe5c6085b0c7",
+   "base": "live e3030157",
+   "base_sha": "d156f8a3f65e4d5b",
+   "final_sha": "cd747e4c31126efd",
    "edits": [
     "lib",
     "enf",
@@ -281,9 +281,9 @@
   {
    "name": "Alt Gate Record",
    "file": "Alt_Gate_Record.js",
-   "base": "pkgRSA/patched",
-   "base_sha": "f80ae0caaaf5c6b4",
-   "final_sha": "028906b43ec73be7",
+   "base": "live e3030157",
+   "base_sha": "02801cfb94a0a2b8",
+   "final_sha": "62dea5c398ae72fe",
    "edits": [
     "lib",
     "enf",
@@ -294,9 +294,9 @@
   {
    "name": "Alternate Merge",
    "file": "Alternate_Merge.js",
-   "base": "pkgRSA/patched",
-   "base_sha": "ddb95b3d20d3e1ca",
-   "final_sha": "ba643bea6245cbbe",
+   "base": "live e3030157",
+   "base_sha": "c66ff1dff26dba1c",
+   "final_sha": "aa05732f5ae4fe47",
    "edits": [
     "lib",
     "enf",
