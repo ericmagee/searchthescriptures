@@ -1,0 +1,23 @@
+OK   Gate Build U1 33289 grok premise 6 as stored: base raises nothing
+OK   Gate Build U1 33289 grok premise 6 as stored: patched raises one K-UNX item naming [L1] lacked while the block exhibits L1, L2 and L3 (lbFoot, full block)
+OK   Gate Build U2 control: "lacks [L4]" (L4 always reads as missing): no item
+OK   Gate Build U3 control: ASSUMES ground naming no lacking layer: no item (K-UNX-A unchanged)
+OK   Gate Build U4 control: block of L1+L2 only, count "lacks [L3]": no item
+OK   Gate Build U5 a count naming [L3] lacked on the full block: one item
+OK   Panel Payloads U1 33289 grok premise 6 as stored: base raises nothing
+OK   Panel Payloads U1 33289 grok premise 6 as stored: patched raises one K-UNX item naming [L1] lacked while the block exhibits L1, L2 and L3 (lbFoot, full block)
+OK   Panel Payloads U2 control: "lacks [L4]" (L4 always reads as missing): no item
+OK   Panel Payloads U3 control: ASSUMES ground naming no lacking layer: no item (K-UNX-A unchanged)
+OK   Panel Payloads U4 control: block of L1+L2 only, count "lacks [L3]": no item
+OK   Panel Payloads U5 a count naming [L3] lacked on the full block: one item
+OK   P parity 33197 Panel Payloads: patched output equals base
+OK   P parity 33218 Panel Payloads: patched output equals base
+OK   P parity 33222 Panel Payloads: patched output equals base
+OK   P parity 33249 Panel Payloads: patched output equals base
+OK   P parity 33261 Panel Payloads: patched output equals base
+OK   P parity 33218 Panel Cure Check: patched output equals base
+OK   P parity 33249 Panel Cure Check: patched output equals base
+OK   G1 22 bases equal live s31
+OK   G2 finals match plan shas
+OK   G3 the 3 raise-only nodes carry unxLack identical to Gate Build
+22 OK, 0 FAIL

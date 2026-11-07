@@ -1,0 +1,206 @@
+{
+ "base": "live s31 (fetchback_live_s31.json)",
+ "nodes": [
+  {
+   "name": "Extract Independent Verdict",
+   "file": "Extract_Independent_Verdict.js",
+   "base_sha": "bc4f63403bfbe83d",
+   "final_sha": "4a68da249beee897",
+   "edits": [
+    "raise",
+    "lib unxLack"
+   ]
+  },
+  {
+   "name": "Panel Payloads",
+   "file": "Panel_Payloads.js",
+   "base_sha": "5e00f54ca56e787a",
+   "final_sha": "99cd36a5c0801fda",
+   "edits": [
+    "raise",
+    "lib unxLack"
+   ]
+  },
+  {
+   "name": "Cure Build",
+   "file": "Cure_Build.js",
+   "base_sha": "4545b0d07a43718f",
+   "final_sha": "d4544dd9f11eeb75",
+   "edits": [
+    "raise"
+   ]
+  },
+  {
+   "name": "Cure Normalize",
+   "file": "Cure_Normalize.js",
+   "base_sha": "c9644d154f2cad90",
+   "final_sha": "bfe1a16e5003afd0",
+   "edits": [
+    "raise"
+   ]
+  },
+  {
+   "name": "Cure Check",
+   "file": "Cure_Check.js",
+   "base_sha": "46e620c04c2428a0",
+   "final_sha": "6bc48cba2fd15507",
+   "edits": [
+    "raise"
+   ]
+  },
+  {
+   "name": "Panel Cure Build 1",
+   "file": "Panel_Cure_Build_1.js",
+   "base_sha": "e590b23f1835c79a",
+   "final_sha": "22aacfa4d87ab1bd",
+   "edits": [
+    "raise"
+   ]
+  },
+  {
+   "name": "Panel Cure Normalize 1",
+   "file": "Panel_Cure_Normalize_1.js",
+   "base_sha": "da573830d3a7c3e6",
+   "final_sha": "354f0d22095e0afb",
+   "edits": [
+    "raise"
+   ]
+  },
+  {
+   "name": "Panel Cure Build 2",
+   "file": "Panel_Cure_Build_2.js",
+   "base_sha": "a135e6af8937363c",
+   "final_sha": "047d604097e7e00c",
+   "edits": [
+    "raise"
+   ]
+  },
+  {
+   "name": "Panel Cure Normalize 2",
+   "file": "Panel_Cure_Normalize_2.js",
+   "base_sha": "f441a94fc7c88954",
+   "final_sha": "50544ac79a98b67f",
+   "edits": [
+    "raise"
+   ]
+  },
+  {
+   "name": "Panel Cure Build 3",
+   "file": "Panel_Cure_Build_3.js",
+   "base_sha": "deb2e417bbc175c5",
+   "final_sha": "bca9dd0669857de3",
+   "edits": [
+    "raise"
+   ]
+  },
+  {
+   "name": "Panel Cure Normalize 3",
+   "file": "Panel_Cure_Normalize_3.js",
+   "base_sha": "e99bfd8c82e9e7b7",
+   "final_sha": "9351d39c3c7ae27e",
+   "edits": [
+    "raise"
+   ]
+  },
+  {
+   "name": "Panel Cure Check",
+   "file": "Panel_Cure_Check.js",
+   "base_sha": "ecbaf98ddf9bc70a",
+   "final_sha": "d51cebbee5221944",
+   "edits": [
+    "raise"
+   ]
+  },
+  {
+   "name": "Alternate Build",
+   "file": "Alternate_Build.js",
+   "base_sha": "ddbef888bf751bb9",
+   "final_sha": "a15bd6f0dc7c5a90",
+   "edits": [
+    "raise"
+   ]
+  },
+  {
+   "name": "Alternate Payloads",
+   "file": "Alternate_Payloads.js",
+   "base_sha": "cf2a9e951ce8a48b",
+   "final_sha": "74db285e5aeb2c7d",
+   "edits": [
+    "raise",
+    "lib unxLack"
+   ]
+  },
+  {
+   "name": "Alternate Cure Build",
+   "file": "Alternate_Cure_Build.js",
+   "base_sha": "2e28ee13d8107fc4",
+   "final_sha": "c720bc1ab6ed2c32",
+   "edits": [
+    "raise"
+   ]
+  },
+  {
+   "name": "Alternate Cure Normalize",
+   "file": "Alternate_Cure_Normalize.js",
+   "base_sha": "3594f5d2065c790a",
+   "final_sha": "a7d9bacf622a9bae",
+   "edits": [
+    "raise"
+   ]
+  },
+  {
+   "name": "Alternate Merge Seat",
+   "file": "Alternate_Merge_Seat.js",
+   "base_sha": "d87087536384bbff",
+   "final_sha": "3157b20911c76364",
+   "edits": [
+    "raise"
+   ]
+  },
+  {
+   "name": "Gate Build",
+   "file": "Gate_Build.js",
+   "base_sha": "89eb8e140bd868fc",
+   "final_sha": "7c6973e4b27d3d41",
+   "edits": [
+    "raise"
+   ]
+  },
+  {
+   "name": "Gate Record",
+   "file": "Gate_Record.js",
+   "base_sha": "adc6adcb4b25b0e6",
+   "final_sha": "92c91e87a1d2d301",
+   "edits": [
+    "raise"
+   ]
+  },
+  {
+   "name": "Alt Gate Build",
+   "file": "Alt_Gate_Build.js",
+   "base_sha": "73a28c75c7e422b0",
+   "final_sha": "9b03cb388ca29283",
+   "edits": [
+    "raise"
+   ]
+  },
+  {
+   "name": "Alt Gate Record",
+   "file": "Alt_Gate_Record.js",
+   "base_sha": "941567781b828ff3",
+   "final_sha": "736cb7184c0c9c99",
+   "edits": [
+    "raise"
+   ]
+  },
+  {
+   "name": "Alternate Merge",
+   "file": "Alternate_Merge.js",
+   "base_sha": "15ca520a89380dcd",
+   "final_sha": "305e96e9dd600863",
+   "edits": [
+    "raise"
+   ]
+  }
+ ]
+}
