@@ -10,7 +10,7 @@
 const KSC=(()=>{const LIVE=true;const clean=l=>String(l==null?'':l).replace(/\\+"/g,'"').replace(/[*_`]+/g,'').trim().replace(/^(?:[-•>]\s*|\d+[.)]\s+)/,'');
  const KS=/^KEYSTONE\s*:\s*D(\d+)\s*(?:--|—|–|-|:)\s*(STANDS|BROKEN|WITHDRAWN)\b/i;const CL=/^CONCEDED LINKS\s*:(.*)$/i;
  // "LINK 6: UNEXHIBITED" (a link), "Premise 6 CONCEDED" or "-- 4 UNEXHIBITED; 6 CONCEDED" (a premise of the [DR2] list, 33129 chatgpt)
- const TAG=/(?:\b(LINK|PREMISE)\s*|(?:--|;|,)\s*)(\d+)\s*(?::|--|—|–|-|\()?\s*(UNEXHIBITED|CONCEDED|WITHDRAWN)\b/gi;
+ const TAG=/(?:\b(LINK|PREMISE)\s*|(?:--|;|,)\s*)(\d+)\s*(?::|--|—|–|-|\(|,)?\s*(?:(?:is|was|stays|remains)\s+)?(UNEXHIBITED|CONCEDED|WITHDRAWN)\b/gi; /* pkgKSCL: ", TAG" and "is TAG" */
  // the [DR2] list: premise p -> the link its "LINK <n>:" label names (pkgUNL's reading: the last UNSUPPORTED-L4 PREMISES heading of [DR2])
  function premiseMap(dr2){const t=String(dr2||'');let i=-1;for(const m of t.matchAll(/UNSUPPORTED-?\s*\[?L4\]?\s*PREMISES/gi))i=m.index;if(i<0)return null;
   const its=t.slice(i).split(/\n(?=\s*\**\s*(?:\d+[.)]\s|LINK\s+(?:\d+|none)\s*:))/i).filter(x=>/^\s*\**\s*(?:\d+[.)]\s|LINK\s+(?:\d+|none)\s*:)/i.test(x));
