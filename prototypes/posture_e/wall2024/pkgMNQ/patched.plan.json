@@ -1,0 +1,18 @@
+{
+ "Alt_Send_Back_Build.js": {
+  "base": "eea34f3b0771",
+  "patched": "679e84bfb19b"
+ },
+ "Alt_Send_Back_Record.js": {
+  "base": "8eaaf848cac3",
+  "patched": "310e9bde82a6"
+ },
+ "Send_Back_Build.js": {
+  "base": "3ff18218def8",
+  "patched": "e42a822d056b"
+ },
+ "Send_Back_Record.js": {
+  "base": "da9074e9da2a",
+  "patched": "0f5ee9f231f4"
+ }
+}

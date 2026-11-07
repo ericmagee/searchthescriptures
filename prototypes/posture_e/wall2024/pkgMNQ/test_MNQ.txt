@@ -1,0 +1,15 @@
+OK 33461 base: sol E-MNP UNCURED 4 (Matthew 1:24 [CR4]; Luke 1:32 [CR4]; Ezra 2:61 [DR3]; Luke 1:35 [DR3])
+OK 33461 patched: sol E-MNP UNCURED 0 of 10
+OK the 4 now read "graded MEETS on the real MEANS (...)": ion) | CURE (MEANS AGAINST THE LEDGER ENFORCED, pkgMNP): CURED -- graded MEETS on the real MEANS (\"the coming together of 1 18\") (pkgMNP)"
+OK 33461 every other Send Back row unchanged (54)
+   other fields first differ @184269: argument on Isaiah 8:3 and Isaiah 8:18, and expressly places the Elisabeth comparison at C5 rather than abandoning it.]\\n[AUDIT v45: MEANS AGAINST THE LEDGER UNCURED (pkgMNP) -- SEAT: sol; ITEMS: S37 (E-MNP ANSWER CHECK Matthew 1:24 [CR4]  || argument on Isaiah 8:3 and Isaiah 8:18, and expressly places the Elisabeth comparison at C5 rather than abandoning it.]\",\"verdict_tag\":\"HELD\",\"defense_standing\":\"SELF-SUPPORTED\",\"challenge_standing\":\"SELF-SUPPORTED\",\"conceded_links\":0,\"challenger_conceded_links\":
+OK drv_uncured per seat, base gemini:1 chatgpt:0 sol:4 -> patched gemini:1 chatgpt:0 sol:0
+OK patched node carries the span read
+OK unit MEANS read "ANSWER CHECK: Ezra 2:61 -- [DR3] -- MEANS: \"Script" -> "Scripture has a man called by his wife's father's name, so \\"
+OK unit MEANS read "ANSWER CHECK: Luke 1:13 -- [CR4] -- MEANS: “the hu" -> "the husband is named."
+OK unit MEANS read "ANSWER CHECK: Luke 1:13 -- [CR4] -- MEANS: the hus" -> "the husband is named"
+node runs compared: 63; changed outputs: 1
+33461 Send Back Record @184278
+   base:    r keeps the marriage-and-sign argument on Isaiah 8:3 and Isaiah 8:18, and expressly places the Elisabeth comparison at C5 rather than abandoning it.]\\n[AUDIT v45: MEANS AGAINST THE LEDGER UNCURED (pkgMNP) -- SEAT: sol; ITEMS: S37 (E-MNP ANSWER CHECK Matthew 1:24 [CR4] (MEANS NONE): the CHANGE TO's 
+   patched: r keeps the marriage-and-sign argument on Isaiah 8:3 and Isaiah 8:18, and expressly places the Elisabeth comparison at C5 rather than abandoning it.]\",\"verdict_tag\":\"HELD\",\"defense_standing\":\"SELF-SUPPORTED\",\"challenge_standing\":\"SELF-SUPPORTED\",\"conceded_links\":0,\"challenger_conceded_links\":0,\"finish_reason\":\"stop\",\"drv_uncur
+TOTAL 9 OK, 0 FAIL
