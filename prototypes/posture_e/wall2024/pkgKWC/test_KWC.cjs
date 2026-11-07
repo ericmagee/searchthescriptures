@@ -1,16 +1,17 @@
-// pkgKWC test. Run from wall2024/: node pkgKWC/test_KWC.cjs
-const fs=require('fs'),path=require('path'),os=require('os');const crypto=require('crypto');const sha=s=>crypto.createHash('sha256').update(s).digest('hex').slice(0,16);const {execFileSync}=require('child_process');
-let ok=0,bad=0;const T=(n,c,d)=>{console.log((c?'OK  ':'FAIL')+' '+n+(d?'\n     '+d:''));c?ok++:bad++;};
-const plan=JSON.parse(fs.readFileSync('pkgKWC/plan_KWC.json','utf8'));
-T('19 nodes; base and final shas match',plan.nodes.length===19&&plan.nodes.every(n=>sha(fs.readFileSync(n.base+'/'+n.file,'utf8'))===n.base_sha&&sha(fs.readFileSync('pkgKWC/patched/'+n.file,'utf8'))===n.final_sha));
-const R=new Function('return '+fs.readFileSync('pkgKWC/patched/Panel_Cure_Check.js','utf8').match(/const kwCo=t=>(\/.*?\/)\.test/)[1])();
-const R0=new Function('return '+fs.readFileSync('pkgKGW/patched/Panel_Cure_Check.js','utf8').match(/const kwCo=t=>(\/.*?\/)\.test/)[1])();
-[["33149 chatgpt: \"Fact: the claim. CONCEDED in that form: [DR3] drops it\"",1],["CONCEDED: x",1],["x. CONCEDED.",1],["CONCEDED -- x",1],["x. CONCEDED for the narrowed claim — y",1],
- ["33149-class sol: \"x. CONCEDED as an independently sufficient limb.\" (no colon or dash)",0],["\"That limb is CONCEDED; x\" (mid-sentence)",0],["CONCEDED LINKS: 1",0],["5 words then a colon: \"x. CONCEDED in part and limited to this: y\"",0],["lowercase prose: \"the point is conceded: y\"",0]]
- .forEach(([t,w])=>{const s=t.replace(/^[^"]*"|"[^"]*$/g,'')||t;T('kwCo '+(w?'reads ':'does not read ')+t,R.test(s)===!!w);});
-const all=plan.nodes.map(n=>fs.readFileSync('pkgKWC/patched/'+n.file,'utf8').match(/const kwCo=t=>.*?\.test\(String\(t\)\);/)[0]);T('one kwCo text in all 19 nodes',new Set(all).size===1);
-const D=fs.mkdtempSync(path.join(os.tmpdir(),'kwc'));fs.mkdirSync(D+'/patched');for(const f of fs.readdirSync('pkgKGW/patched'))fs.copyFileSync('pkgKGW/patched/'+f,D+'/patched/'+f);for(const f of fs.readdirSync('pkgKWC/patched'))fs.copyFileSync('pkgKWC/patched/'+f,D+'/patched/'+f);
-for(const r of ['33040','33060','33083','33107','33129','33149']){const s=execFileSync('node',['corpus/regrade_run.cjs',r,'pkgKGW',D]).toString();const b=s.slice(s.indexOf('BASE'),s.indexOf('PATCHED')).split('\n').slice(1).join('\n').trim(),p=s.slice(s.indexOf('PATCHED')).split('\n').slice(1).join('\n').trim();
- if(r==='33149')T('33149 replay: chatgpt K-W CHALLENGER DR3 LINK 5 cured, DR3 LINK 1 stays uncured; nothing else changes',/chatgpt +HELD +drv_uncured 1 .*\[K-W CHALLENGER DR3 LINK 1 #1\]/.test(p)&&b.split('\n').filter(l=>!/chatgpt/.test(l)).join()===p.split('\n').filter(l=>!/chatgpt/.test(l)).join());
- else T(r+' replay: unchanged from live (pkgKGW)',b===p);}
-console.log('\n'+ok+' OK, '+bad+' FAIL');process.exit(bad?1:0);
+// pkgKWC unit test: (1) the K-W item line from kwLines421 (patched Gate Record) on 33430's [CR2] text and controls; (2) the NOT HELD runs on 33430's reasons.
+const fs=require('fs');const src=fs.readFileSync('pkgKWC/patched/Gate_Record.js','utf8');let ok=0,bad=0;const T=(n,p,d)=>{p?ok++:bad++;console.log((p?'OK   ':'FAIL ')+n+(d?' | '+d:''));};
+// (1) run only the K-W sentence loop: a copy of kwLines421 with the WALL-2024 add-ons cut off
+const i=src.indexOf('function kwLines421(');let f=src.slice(i,src.indexOf('\nfunction ',i+10));f=f.replace(/\n \{const P=wpLines2024[^\n]*/,'');const kw=new Function(f+'\n;return kwLines421;')();
+const L=(cr2)=>kw('',{CR2:cr2}).items.map(x=>x.line);
+T('33430: "Jesus is of David\'s flesh, which I grant." is flagged whole',JSON.stringify(L("LINK 6: the chain.\nJesus is of David's flesh, which I grant. He is not of Joseph's seed."))===JSON.stringify(['[CR2] LINK 6: "Jesus is of David\'s flesh, which I grant."']),JSON.stringify(L("LINK 6: the chain.\nJesus is of David's flesh, which I grant. He is not of Joseph's seed.")));
+T('a bare "I grant." after a full stop raises no item',L("LINK 6: x.\nMary is of David. I grant.").length===0,JSON.stringify(L("LINK 6: x.\nMary is of David. I grant.")));
+T('"I grant that X" is unchanged',JSON.stringify(L("LINK 6: x.\nI grant that two fatherhoods stand together there."))===JSON.stringify(['[CR2] LINK 6: "I grant that two fatherhoods stand together there."']));
+T('"I withdraw it from Hebrews 10:5." is unchanged',L("LINK 8: x.\nI withdraw it from Hebrews 10:5. More.")[0]==='[CR2] LINK 8: "I withdraw it from Hebrews 10:5."');
+// (2) runs + match as the NOT HELD test does (normalised words, a run must appear in the reason)
+const a=src.indexOf('const __rn0=');const rn=new Function(src.slice(a,src.indexOf('/* pkgKWC (2)',a))+'\nreturn r;};return __rn;')();
+const nw=s=>String(s||'').toLowerCase().replace(/[‘’“”"'`*_]/g,'').replace(/[^a-z0-9Ͱ-Ͽἀ-῿]+/g,' ').trim().split(' ').filter(Boolean);
+const body=nw("Jesus is of David's flesh, which I grant.");const runs=rn(body);const hit=r=>runs.some(x=>(' '+nw(r).join(' ')+' ').includes(' '+x+' '));
+T('runs include the granted words "jesus is of davids flesh"',runs.includes('jesus is of davids flesh'),JSON.stringify(runs));
+T('33430 sol JUDGE STATEMENT (quotes "Jesus is of David\'s flesh") now quotes it',hit('NOT HELD: "I grant." (CR2) grants the immediately preceding proposition, "Jesus is of David\'s flesh"; it withdraws no footing needed for the no-biological-father conclusion.'));
+T('33430 grok reason (quotes only "I grant.") still does not',!hit('NOT HELD: "I grant." states no descent, source, time or person withdrawn from a kept link.'));
+console.log(ok+' OK, '+bad+' FAIL');

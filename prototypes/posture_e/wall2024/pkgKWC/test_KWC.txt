@@ -1,0 +1,8 @@
+OK   33430: "Jesus is of David's flesh, which I grant." is flagged whole | ["[CR2] LINK 6: \"Jesus is of David's flesh, which I grant.\""]
+OK   a bare "I grant." after a full stop raises no item | []
+OK   "I grant that X" is unchanged
+OK   "I withdraw it from Hebrews 10:5." is unchanged
+OK   runs include the granted words "jesus is of davids flesh" | ["jesus is of davids flesh which","is of davids flesh which i","of davids flesh which i grant","jesus is of davids flesh"]
+OK   33430 sol JUDGE STATEMENT (quotes "Jesus is of David's flesh") now quotes it
+OK   33430 grok reason (quotes only "I grant.") still does not
+7 OK, 0 FAIL
