@@ -3,68 +3,55 @@
 **Problem.** The three panel judges are called one after another (366 s in 33389). n8n runs one node at a time,
 so splitting into three branches would still run them in turn.
 
-**Change.** Two new nodes go into the main workflow, and a small webhook workflow is added.
+**v2 (W4 2962).** Dry check (a) failed on v1, which held the webhook HTTP call open until the reply came. Slot 2 answered at 117 s, and
+slots 1 and 3 got HTTP 524 at about 125 s, so the host proxy cuts calls held open past about 100 s. v2 holds no call open: the webhook
+answers at once, the sub-workflow stores the reply in Supabase, and the main workflow polls for it.
 
-- **Panel Judges Prep** (Code) builds one item per seat slot. Each item's body is exactly what the live provider node's
-  jsonBody expression gave; the three openrouter transforms are copied verbatim. The provider comes from the same route
-  index the Route switches use.
-- **Panel Judges Parallel** (HTTP Request, 3 items) sends all three items at once. In n8n-nodes-base HttpRequestV3 the
-  items go out together through Promise.allSettled and come back in item order. The merge is therefore by seat slot,
-  and each reply also echoes its slot and provider.
-- **WALL-2024 Panel Judge Call** (new webhook workflow, `patched/Panel_Judge_Call.workflow.json`) routes each item by
-  provider to the same 6 provider HTTP nodes: same credentials, URL, 900 s timeout and grok conv-id, also on Call openrouter, W3 2953 (the parent's
-  execution id). It answers `{ppj_slot, ppj_provider, response}`. Wrap turns a provider error into plain
-  message, description and status fields, because an Error's message does not survive JSON.
-- **The 16 provider judge nodes** (`Panel Judge k <provider>`) become Code nodes with the same names. Each hands out its
-  slot's reply exactly as before, so Panel Check, Panel Payloads, Panel Tokens, Alternate Payloads, Shared Library and the
-  openrouter xAI maps are unchanged. A missing, mismatched or transport-failed slot becomes `{error:{message:'pkgPPJ ...',
-  ppj_transport:true}}`, which Panel Check handles as a failed judge call, the same as a provider error today.
-- **Unchanged.** Routes, Panel Judge 1 Empty?, Panel Judge 1 deepseek retry (still a direct call), and every downstream
-  node. No retry is added or removed.
-- **Wiring.** `QR Trial?` output 1 and `QR Merge` now go to Panel Judges Prep (they went to Panel Judge 1 Route).
-  Prep goes to Parallel, and Parallel goes to Panel Judge 1 Route.
+**Change (v2).**
 
-Rejected: Execute Workflow per item (its source awaits each item in turn), and a Code node calling providers (the keys
-would leave n8n credentials).
+- **Panel Judges Prep** (Code) builds one item per seat slot. The body is exactly the live jsonBody expression; the openrouter transforms
+  are copied verbatim, and the provider is taken from jidx0/jidx. It also makes a random `ppj_nonce` (`ppj-<execution id>-<32 random chars>`)
+  and a start time `ppj_t0`.
+- **Panel Judges Parallel** (HTTP, 3 items, timeout 60 s) posts the 3 items to the webhook at once. The webhook uses `responseMode:
+  onReceived`, so each POST returns in under a second.
+- **WALL-2024 Panel Judge Call** (webhook workflow) runs Provider Route, then the same 6 provider nodes (same credentials and timeouts;
+  x-grok-conv-id is the parent's execution id, W3 2953), then Wrap, then Store Reply. Store Reply posts to rpc `ppj_put` with the existing
+  Supabase Anon Key credential and retries 5 times. The reply is stored as JSON text, so its bytes and key order come back unchanged; jsonb
+  would reorder the keys.
+- **The polling loop.** Panel Judges Wait (15 s, run once) leads to Panel Judges Poll (rpc `ppj_status`, slot numbers only, so it stays
+  small), then to Panel Judges Done?. Done? is true when the stored slots plus the failed dispatches reach 3, or 980 s have passed since
+  `ppj_t0`; false loops back to Wait.
+- **Panel Judges Fetch** (rpc `ppj_get`, run once) reads the 3 rows. **Panel Judges Collect** (Code) gives one item per slot in slot order,
+  `{ppj_slot, ppj_provider, response}`. A slot with no stored reply, a failed dispatch, or unreadable text gets
+  `{error:{message, ppj_transport:true}}`.
+- **The 16 provider judge nodes** become same-name Code nodes that take their slot from Collect, by slot number. Downstream is unchanged, and
+  so are the routes and the DeepSeek Empty?/retry.
+- **Wiring.** QR Trial? output 1 and QR Merge go to Prep. Then Prep, Parallel, Wait, Poll, Done?: true goes to Fetch, then Collect, then
+  Panel Judge 1 Route; false goes back to Wait.
+- **Database** (`sql/ppj_store.sql`, revert `sql/ppj_store_revert.sql`, for W4 to run with SET LOCAL truth.session_id):
+  - Table `ppj_replies`: nonce, slot 1-3, provider, seat, response_text, unique (nonce, slot). RLS is on with no policies.
+  - Three SECURITY DEFINER functions `ppj_put`, `ppj_status` and `ppj_get(payload jsonb)`, executable by anon, the same pattern as
+    record_debate_judgment.
+  - `ppj_put` checks the nonce and slot, keeps the first reply per slot, and deletes rows older than 3 days.
+  - Not run by W1: the DDL audit trigger refuses unstamped writes, and a seat stages DB changes.
 
-## Tests: `node --max-old-space-size=12000 pkgPPJ/test_PPJ.cjs` (output in test_PPJ.txt)
+## Tests v2: test_PPJ.txt, 152 OK, 0 fail, 16 runs incl. 33430 and 33442
 
-All 16 saved runs with panel judge replies, including 33430 and 33442. 134 checks pass, 0 fail.
+- **T1.** Bodies equal the live expressions. 0 bodies change with every saved node visible.
+- **T2.** Each saved reply goes through Wrap, the stored row text, ppj_get rows given in reverse order, Collect, and the Code node, and comes
+  out byte for byte equal to the saved reply. Collect's slot order is checked.
+- **T3.** Panel Check output is identical.
+- **T4** (33430, 33442). Each failure reaches Panel Check as a judge failure with its message: a reply not stored, a dispatch that failed
+  with 524, a provider mismatch, unreadable stored text, and a provider 429 through Wrap.
+- **T5.** Prep fails closed on a bad route index.
+- **Memory.** Fetch plus Collect output hold up to 987,556 bytes (mean 561,573), which is two copies of the 3 replies, one as text and one
+  parsed. Each Poll output is a few bytes.
 
-- **T1.** Prep's provider equals the node that ran live, and its body equals the live expression, for every slot of the
-  12 runs whose Panel Build has the s47 route fields. 4 older runs (33276 33289 33311 33322) predate jidx0 and are not
-  applicable. With every saved node visible, 0 bodies change, so no judge reply ever fed another judge's body, and
-  computing all three bodies before the calls is equivalent.
-- **T2.** Each same-name Code node returns the saved live reply byte for byte.
-- **T3.** Panel Check output is identical with the Code nodes and with the live replies. On the s47-shape runs it also
-  equals the saved live Panel Check output.
-- **T4** (33430, 33442). The failure paths, transport error, slot order swapped, provider mismatch, and provider 429
-  through Wrap, all reach Panel Check as a judge failure that carries the message.
-- **T5.** Prep fails closed on a route index with no provider.
+## Dry checks for W4 at a gap, before the first live run
 
-**Memory.** The execution gains the Parallel node's output, a second copy of the 3 replies: max 488,451 bytes, mean
-277,792. Each webhook call is its own small execution holding one body and one reply.
-
-## For W4: write list (n8n)
-
-1. Create a Header Auth credential for the webhook (any header name and a long random value).
-2. Import `patched/Panel_Judge_Call.workflow.json` as a new workflow. Set the webhook credential on node "Panel Judge Call",
-   then activate it. Note its production URL.
-3. In the main workflow:
-   - Add "Panel Judges Prep" (code: `patched/Panel_Judges_Prep.js`).
-   - Add "Panel Judges Parallel" from `patched.wiring.json`, with the production URL and the same header-auth credential.
-   - Replace the 16 nodes listed in `plan_PPJ.json` "replace" (type code v2, jsCode from `patched/<file>`; keep the name,
-     id, position and onError continueRegularOutput; drop the credentials).
-   - Rewire the 4 connections.
-4. Revert: restore the 16 nodes from `base_s47/*.json`, remove the 2 new nodes, restore the 2 connections into
-   Panel Judge 1 Route, and deactivate the webhook workflow.
-
-## Dry checks at a gap, before the first live run
-
-- **(a) Held call time.** Call the webhook once with a saved 33442 judge body (deepseek or openrouter) and confirm the
-  answer arrives after more than 100 s, with no proxy 524 or 504. Live judge calls have taken up to 645 s.
-- **(b) Concurrency.** From a scratch workflow, one HTTP node sends 3 small items to the webhook. All 3 must return, and
-  the wall time must be about the slowest call, not the sum. Do this while a parent execution is running, to rule out a
-  production concurrency limit queuing the sub-calls behind the parent.
-- **(c) Provider check.** Run one small item per provider in use (openrouter, deepseek, grok, mimo) and confirm each
-  answer has `ppj_slot`, `ppj_provider` and a `response` with choices or candidates.
+- **(a2)** Send the 3 full 33442 judge bodies through Parallel. Each POST must return in under 5 s. All 3 rows must appear in ppj_replies
+  (the longest took 252 s in 33442), and Fetch then Collect must give the 3 replies.
+- **(b2)** Run the Wait to Poll to Done? loop in a scratch workflow with a nonce that has no rows. It must loop and end at the deadline;
+  for the check, set the deadline to 60 s in the scratch copy.
+- **(c)** One item per provider in use, as before.
+- **Node versions.** Confirm the Wait node parameters (typeVersion 1.1, amount 15, unit seconds) in the n8n editor, with validate_node_config.

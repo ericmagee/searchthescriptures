@@ -3,87 +3,88 @@
  "replace": {
   "Panel Judge 1 deepseek": {
    "base_json": "c33b7adf4434",
-   "patched_js": "05210b0f9f22",
+   "patched_js": "e14adfa47932",
    "file": "Panel_Judge_1_deepseek.js"
   },
   "Panel Judge 1 openai": {
    "base_json": "eae0d499ac28",
-   "patched_js": "0aa08386a94c",
+   "patched_js": "273293267a4d",
    "file": "Panel_Judge_1_openai.js"
   },
   "Panel Judge 1 gemini": {
    "base_json": "1992538ff8f8",
-   "patched_js": "7cfefeee8cc8",
+   "patched_js": "35908319c9b4",
    "file": "Panel_Judge_1_gemini.js"
   },
   "Panel Judge 1 grok": {
    "base_json": "770126ed9cd2",
-   "patched_js": "94e20032ddb5",
+   "patched_js": "96c3ae5f42fe",
    "file": "Panel_Judge_1_grok.js"
   },
   "Panel Judge 1 mimo": {
    "base_json": "eeb47a4356b9",
-   "patched_js": "ce265ed88a8e",
+   "patched_js": "d7f76fa85193",
    "file": "Panel_Judge_1_mimo.js"
   },
   "Panel Judge 1 openrouter": {
    "base_json": "140c8d8cbf48",
-   "patched_js": "990705c73aea",
+   "patched_js": "04cb436ad070",
    "file": "Panel_Judge_1_openrouter.js"
   },
   "Panel Judge 2 openai": {
    "base_json": "039499eb1dfe",
-   "patched_js": "5719e2f81706",
+   "patched_js": "0c54669769ab",
    "file": "Panel_Judge_2_openai.js"
   },
   "Panel Judge 2 gemini": {
    "base_json": "2137d81ed1dc",
-   "patched_js": "d57307ebcc7d",
+   "patched_js": "953954f8e1dd",
    "file": "Panel_Judge_2_gemini.js"
   },
   "Panel Judge 2 grok": {
    "base_json": "534e66e36fb6",
-   "patched_js": "7fd2045686cf",
+   "patched_js": "4e93abbce0a6",
    "file": "Panel_Judge_2_grok.js"
   },
   "Panel Judge 2 mimo": {
    "base_json": "36b16fc224f4",
-   "patched_js": "221756fa2712",
+   "patched_js": "513ca7d1a762",
    "file": "Panel_Judge_2_mimo.js"
   },
   "Panel Judge 2 openrouter": {
    "base_json": "f2b83684f96a",
-   "patched_js": "37c7fd37227d",
+   "patched_js": "a0db16b3b20d",
    "file": "Panel_Judge_2_openrouter.js"
   },
   "Panel Judge 3 openai": {
    "base_json": "7032e670594c",
-   "patched_js": "bbcf8818b173",
+   "patched_js": "3b7530d3e308",
    "file": "Panel_Judge_3_openai.js"
   },
   "Panel Judge 3 gemini": {
    "base_json": "818386efecd4",
-   "patched_js": "9c1d614ed8dc",
+   "patched_js": "04cf63be7a01",
    "file": "Panel_Judge_3_gemini.js"
   },
   "Panel Judge 3 grok": {
    "base_json": "97e5ff64effb",
-   "patched_js": "f0ccac299958",
+   "patched_js": "950f4b5cf477",
    "file": "Panel_Judge_3_grok.js"
   },
   "Panel Judge 3 mimo": {
    "base_json": "87a7ebf787d8",
-   "patched_js": "3f0cd6a7ca77",
+   "patched_js": "ecabab3a57da",
    "file": "Panel_Judge_3_mimo.js"
   },
   "Panel Judge 3 openrouter": {
    "base_json": "14dc5afbeaa6",
-   "patched_js": "d5fbd9631c84",
+   "patched_js": "6012547b7ea2",
    "file": "Panel_Judge_3_openrouter.js"
   }
  },
  "add": {
-  "Panel Judges Prep": "e39d7c04705f"
+  "Panel Judges Prep": "71d5902ee9b3",
+  "Panel Judges Collect": "923bf90c7af4"
  },
  "connections": {
   "QR Trial?": {
@@ -102,9 +103,29 @@
   },
   "Panel Judges Parallel": {
    "output": 0,
+   "to": "Panel Judges Wait"
+  },
+  "Panel Judges Wait": {
+   "output": 0,
+   "to": "Panel Judges Poll"
+  },
+  "Panel Judges Poll": {
+   "output": 0,
+   "to": "Panel Judges Done?"
+  },
+  "Panel Judges Done?": {
+   "output0_true": "Panel Judges Fetch",
+   "output1_false": "Panel Judges Wait (loop)"
+  },
+  "Panel Judges Fetch": {
+   "output": 0,
+   "to": "Panel Judges Collect"
+  },
+  "Panel Judges Collect": {
+   "output": 0,
    "to": "Panel Judge 1 Route"
   }
  },
- "sub_wrap": "4257d132912b",
- "sub_workflow": "79b035626839"
+ "sub_wrap": "7c1c8d577d6d",
+ "sub_workflow": "7d9e8917e15e"
 }

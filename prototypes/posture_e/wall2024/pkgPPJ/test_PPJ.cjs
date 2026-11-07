@@ -7,7 +7,7 @@
 // T5 Prep fails closed on a route index with no provider. Also: bytes added to the execution (Panel Judges Parallel output).
 const fs=require('fs');const {harness,feeder}=require('../pkgGSL/harness.cjs');const D='/mnt/project-files/wall2024/inputs/';const rd=f=>fs.readFileSync(f,'utf8');
 const F='/mnt/project-files/wall2024/fetchback_live_s47.json';const W=JSON.parse(rd(F));const node=n=>W.nodes.find(z=>z.name===n);
-const PREP=rd('pkgPPJ/patched/Panel_Judges_Prep.js');const WRAP=rd('pkgPPJ/patched/Panel_Judge_Call_Wrap.js');
+const PREP=rd('pkgPPJ/patched/Panel_Judges_Prep.js');const COLLECT=rd('pkgPPJ/patched/Panel_Judges_Collect.js');const WRAP=rd('pkgPPJ/patched/Panel_Judge_Call_Wrap.js');
 const P1=['deepseek','openai','gemini','grok','mimo','openrouter'],P23=['openai','gemini','grok','mimo','openrouter'];const provs=k=>k===1?P1:P23;
 const JN=[];for(const k of [1,2,3])for(const p of provs(k))JN.push('Panel Judge '+k+' '+p);JN.push('Panel Judge 1 deepseek retry','Panel Judge 1 Empty?');
 const PC=node('Panel Check').parameters.jsCode;const LIB=node('Shared Library').parameters.jsCode;
@@ -32,23 +32,30 @@ for(const R of runs){const live={};for(const k of [1,2,3])for(const p of provs(k
   if(S(a)!==S(b))cross++;
   if(live[k].p==='gemini'&&it.api_model!==(await run(R,undefined,"return $('Panel Build').first().json.judges["+(k-1)+"].api_model",PCIN)))fail(R+' gemini api_model');
   if(it.conv_id!=='odv1-'+R)fail(R+' conv_id '+it.conv_id);}
- // T2 + T3
- const par=[1,2,3].map(k=>({json:{ppj_slot:k,ppj_provider:live[k].p,response:live[k].it[0].json}}));const sz=Buffer.byteLength(S(par));addMax=Math.max(addMax,sz);addSum+=sz;
- const over={'Panel Judges Parallel':par};
+ // T2 + T3 (v2): each reply goes Wrap -> stored row (response_text) -> ppj_get rows -> Panel Judges Collect -> the same-name Code node
+ const prepI=hasJ0?items:[1,2,3].map(k=>({json:{ppj_slot:k,ppj_provider:live[k].p,ppj_t0:Date.now(),ppj_nonce:'ppj-test-'+R}}));
+ const wrapRow=async(k,resp)=>{globalThis.__PPJR=resp;const w=await run(R,{'Panel Judge Call':[{json:{body:{ppj_slot:k,ppj_provider:live[k].p,ppj_nonce:'ppj-test-'+R,seat:'s'+k}}}]},WRAP.replace('const j=$json||{};','const j=globalThis.__PPJR;'),PCIN);const pl=w[0].json.payload;return {slot:pl.slot,provider:pl.provider,seat:pl.seat,response_text:pl.response_text};};
+ const ACC=[1,2,3].map(()=>({json:{message:'Workflow was started'}}));
+ const collect=async(rows,disp,prep)=>run(R,{'Panel Judges Prep':prep||prepI,'Panel Judges Parallel':disp||ACC,'Panel Judges Fetch':[{json:{rows}}]},COLLECT,PCIN);
+ const rows=[];for(const k of [1,2,3])rows.push(await wrapRow(k,live[k].it[0].json));
+ const par=await collect(rows.slice().reverse());if(typeof par==='string'){fail(R+' Collect '+par);continue;}
+ if(S(par.map(i=>i.json.ppj_slot))==='[1,2,3]')pass();else fail(R+' Collect slot order '+S(par.map(i=>i.json.ppj_slot)));
+ const sz=Buffer.byteLength(S(par))+Buffer.byteLength(S({rows}));addMax=Math.max(addMax,sz);addSum+=sz;
+ const over={'Panel Judges Collect':par};
  for(const k of [1,2,3]){const o=await run(R,over,take(k,live[k].p),PCIN);if(S(o)===S([{json:live[k].it[0].json}])){pass();over['Panel Judge '+k+' '+live[k].p]=o;}else fail(R+' T2 judge '+k+' '+String(S(o)).slice(0,120));}
  const pa=await run(R,undefined,PCs,PCIN),pb=await run(R,over,PCs,PCIN);
  if(S(pa)===S(pb)&&(typeof pa!=='string'||!hasJ0))pass();else fail(R+' T3 Panel Check differs\n a '+String(S(pa)).slice(0,200)+'\n b '+String(S(pb)).slice(0,200));
  const sv=savedItems(R,'Panel Check');if(!hasJ0){}else if(sv&&S(pa)===S(sv.map(i=>({json:i.json}))))pass();else if(sv)fail(R+' T3 harness Panel Check differs from the saved live output');if(false)console.log('note '+R+' harness Panel Check output differs from the saved live output (harness, not PPJ)');
  // T4 on the first run only
  if(R===runs.filter(x=>x!=='33442'||fs.existsSync(D+'33442_Panel_Judge_3_openrouter.json')).slice(-1)[0]||R==='33430'){const k=2,p=live[k].p,nm='Panel Judge '+k+' '+p;
-  const cases={transport:[par[0],{json:{error:{message:'socket hang up',httpCode:'524'}}},par[2]],swap:[par[0],par[2],par[1]],
-   provider:[par[0],{json:Object.assign({},par[1].json,{ppj_provider:p==='grok'?'openai':'grok'})},par[2]]};
+  const cases={not_stored:await collect([rows[0],rows[2]]),dispatch_failed:await collect([rows[0],rows[2]],[ACC[0],{json:{error:{message:'socket hang up',httpCode:'524'}}},ACC[2]]),
+   provider:await collect([rows[0],Object.assign({},rows[1],{provider:p==='grok'?'openai':'grok'}),rows[2]]),bad_text:await collect([rows[0],Object.assign({},rows[1],{response_text:'{not json'}),rows[2]])};
   // provider HTTP error inside the webhook workflow, through Wrap
   const perr=Object.assign(new Error('The service is receiving too many requests from you'),{httpCode:'429',description:'rate limited'});
-  globalThis.__PPJE=perr;const wr2=harness(R,{'Panel Judge Call':[{json:{body:{ppj_slot:k,ppj_provider:p}}}]})('return (()=>{'+WRAP.replace('const j=$json||{};','const j={error:globalThis.__PPJE};')+'})()',PCIN);
-  const wj=JSON.parse(S(wr2))[0].json;if(wj.ppj_slot===k&&wj.response.error.message===perr.message&&wj.response.error.httpCode==='429'&&wj.response.error.description==='rate limited')pass();else fail('Wrap error '+S(wj));
-  cases.provider_error=[par[0],{json:wj},par[2]];
-  for(const [cn,pp] of Object.entries(cases)){const ov={'Panel Judges Parallel':pp};for(const kk of [1,2,3])ov['Panel Judge '+kk+' '+live[kk].p]=await run(R,ov,take(kk,live[kk].p),PCIN);
+  globalThis.__PPJE=perr;const wr2=harness(R,{'Panel Judge Call':[{json:{body:{ppj_slot:k,ppj_provider:p,ppj_nonce:'ppj-test-'+R}}}]})('return (()=>{'+WRAP.replace('const j=$json||{};','const j={error:globalThis.__PPJE};')+'})()',PCIN);
+  const wj=JSON.parse(S(wr2))[0].json.payload;const we=JSON.parse(wj.response_text).error;if(wj.slot===k&&we.message===perr.message&&we.httpCode==='429'&&we.description==='rate limited')pass();else fail('Wrap error '+S(wj));
+  cases.provider_error=await collect([rows[0],{slot:k,provider:p,seat:null,response_text:wj.response_text},rows[2]]);
+  for(const [cn,pp] of Object.entries(cases)){if(typeof pp==='string'){fail('T4 '+cn+' Collect '+pp);continue;}const ov={'Panel Judges Collect':pp};for(const kk of [1,2,3])ov['Panel Judge '+kk+' '+live[kk].p]=await run(R,ov,take(kk,live[kk].p),PCIN);
    const ej=ov[nm][0].json;const out=await run(R,ov,PCs,PCIN);const txt=S(out);
    const seen=ej.error&&txt.includes(String(ej.error.message).slice(0,60).replace(/"/g,'\\"'))||(typeof out==='string'&&out.includes(String(ej.error&&ej.error.message).slice(0,60)));
    if(ej.error&&ej.error.message&&seen&&txt!==S(pa)){pass();console.log('T4 '+cn+': judge '+k+' -> '+String(ej.error.message).slice(0,90)+' | Panel Check: '+txt.slice(0,140));}
@@ -58,5 +65,5 @@ for(const R of runs){const live={};for(const k of [1,2,3])for(const p of provs(k
  const t5=await run(R,Object.assign(hideJ(),{'Panel Build':badPB}),PREP,PCIN);if(typeof t5==='string'&&t5.includes('FAIL-CLOSED: pkgPPJ judge 2 route index 7'))pass();else fail(R+' T5 '+String(S(t5)).slice(0,100));}}
 console.log('T1/T5 not applicable (older Panel Build): '+na);console.log((runs.length-skipped.length)+' runs tested ('+runs.filter(r=>!skipped.includes(r)).join(' ')+'); checks passed '+ok+', failed '+bad);
 console.log('bodies that change when every saved node is visible (a judge reply feeding another judge body): '+cross);
-console.log('bytes added to the execution by Panel Judges Parallel output: max '+addMax+', mean '+Math.round(addSum/runs.length));
+console.log('bytes added to the execution (Panel Judges Fetch + Collect output): max '+addMax+', mean '+Math.round(addSum/runs.length));
 console.log(bad===0?'OK':'FAIL');})();

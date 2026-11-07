@@ -21,7 +21,7 @@
     "httpMethod": "POST",
     "path": "wall2024-panel-judge-call",
     "authentication": "headerAuth",
-    "responseMode": "responseNode",
+    "responseMode": "onReceived",
     "options": {}
    }
   },
@@ -245,21 +245,38 @@
     300
    ],
    "parameters": {
-    "jsCode": "// pkgPPJ (W1, 11-07): answer the main workflow with the provider reply for this seat slot.\n// A provider HTTP error item ({error: <reason>}) is passed on with its message, description and status as plain fields,\n// because an Error's message does not survive JSON. Panel Check reads e.message / e.description and httpCode / status / statusCode.\nconst q=$('Panel Judge Call').first().json.body||{};const j=$json||{};\nconst pe=e=>{const o={message:String((typeof e==='string')?e:((e&&(e.message||e.description))||JSON.stringify(e)))};if(e&&typeof e==='object'){for(const f of Object.keys(e))if(e[f]!=null&&typeof e[f]!=='object'&&!(f in o))o[f]=e[f];for(const f of ['name','description','httpCode','status','statusCode','code'])if(e[f]!=null&&typeof e[f]!=='object')o[f]=e[f];}return o;};\nconst response=j.error?Object.assign({},j,{error:pe(j.error)}):j;\nreturn [{json:{ppj_slot:q.ppj_slot,ppj_provider:q.ppj_provider,response}}];"
+    "jsCode": "// pkgPPJ v2 (W1, 11-07): the provider reply for this seat slot, as the payload of rpc ppj_put.\n// A provider HTTP error item ({error: <reason>}) is passed on with its message, description and status as plain fields,\n// because an Error's message does not survive JSON. Panel Check reads e.message / e.description and httpCode / status / statusCode.\nconst q=$('Panel Judge Call').first().json.body||{};const j=$json||{};\nconst pe=e=>{const o={message:String((typeof e==='string')?e:((e&&(e.message||e.description))||JSON.stringify(e)))};if(e&&typeof e==='object'){for(const f of Object.keys(e))if(e[f]!=null&&typeof e[f]!=='object'&&!(f in o))o[f]=e[f];for(const f of ['name','description','httpCode','status','statusCode','code'])if(e[f]!=null&&typeof e[f]!=='object')o[f]=e[f];}return o;};\nconst response=j.error?Object.assign({},j,{error:pe(j.error)}):j;\nreturn [{json:{payload:{nonce:q.ppj_nonce,slot:q.ppj_slot,provider:q.ppj_provider,seat:q.seat||null,response_text:JSON.stringify(response)}}}];"
    }
   },
   {
-   "id": "86304590-717e-42c4-e774-16220b13a184",
-   "name": "Respond",
-   "type": "n8n-nodes-base.respondToWebhook",
-   "typeVersion": 1.1,
+   "id": "6f8db0ff-40bd-771e-be2b-d90f3900a143",
+   "name": "Store Reply",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.3,
+   "retryOnFail": true,
+   "maxTries": 5,
+   "waitBetweenTries": 5000,
    "position": [
     1200,
     300
    ],
+   "credentials": {
+    "httpHeaderAuth": {
+     "id": "uCS43YOAcWVctNfM",
+     "name": "Supabase Anon Key"
+    }
+   },
    "parameters": {
-    "respondWith": "firstIncomingItem",
-    "options": {}
+    "method": "POST",
+    "url": "https://bhffmkginddovmdcpnty.supabase.co/rest/v1/rpc/ppj_put",
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpHeaderAuth",
+    "sendBody": true,
+    "specifyBody": "json",
+    "jsonBody": "={{ $json }}",
+    "options": {
+     "timeout": 60000
+    }
    }
   }
  ],
@@ -391,7 +408,7 @@
    "main": [
     [
      {
-      "node": "Respond",
+      "node": "Store Reply",
       "type": "main",
       "index": 0
      }

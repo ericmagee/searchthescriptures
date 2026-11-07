@@ -7,7 +7,7 @@
    "typeVersion": 2,
    "onError": "stopWorkflow",
    "position": [
-    9848,
+    8968,
     304
    ],
    "parameters": {
@@ -21,7 +21,7 @@
    "typeVersion": 4.3,
    "onError": "continueRegularOutput",
    "position": [
-    10068,
+    9188,
     304
    ],
    "credentials": {
@@ -39,8 +39,136 @@
     "specifyBody": "json",
     "jsonBody": "={{ $json }}",
     "options": {
-     "timeout": 960000
+     "timeout": 60000
     }
+   }
+  },
+  {
+   "id": "7f9cb061-7ec5-44e3-7925-b8dadc54f972",
+   "name": "Panel Judges Wait",
+   "type": "n8n-nodes-base.wait",
+   "typeVersion": 1.1,
+   "position": [
+    9408,
+    304
+   ],
+   "executeOnce": true,
+   "parameters": {
+    "amount": 15,
+    "unit": "seconds"
+   }
+  },
+  {
+   "id": "336981e3-0909-89a7-ce63-3908ac42f22b",
+   "name": "Panel Judges Poll",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.3,
+   "onError": "continueRegularOutput",
+   "executeOnce": true,
+   "retryOnFail": true,
+   "maxTries": 3,
+   "waitBetweenTries": 5000,
+   "position": [
+    9628,
+    304
+   ],
+   "credentials": {
+    "httpHeaderAuth": {
+     "id": "uCS43YOAcWVctNfM",
+     "name": "Supabase Anon Key"
+    }
+   },
+   "parameters": {
+    "method": "POST",
+    "url": "https://bhffmkginddovmdcpnty.supabase.co/rest/v1/rpc/ppj_status",
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpHeaderAuth",
+    "sendBody": true,
+    "specifyBody": "json",
+    "jsonBody": "={{ { payload: { nonce: $('Panel Judges Prep').first().json.ppj_nonce } } }}",
+    "options": {
+     "timeout": 30000
+    }
+   }
+  },
+  {
+   "id": "594e1770-46f7-8618-c465-38db1485bacd",
+   "name": "Panel Judges Done?",
+   "type": "n8n-nodes-base.if",
+   "typeVersion": 2.2,
+   "position": [
+    9848,
+    304
+   ],
+   "parameters": {
+    "conditions": {
+     "combinator": "and",
+     "conditions": [
+      {
+       "id": "47585855-702e-9235-36e7-a640fdf48f77",
+       "leftValue": "={{ (() => { const n = Array.isArray($json.slots) ? $json.slots.length : 0; const d = $('Panel Judges Parallel').all().filter(i => i.json && i.json.error).length; return n + d >= 3 || (Date.now() - $('Panel Judges Prep').first().json.ppj_t0) > 980000; })() }}",
+       "operator": {
+        "operation": "true",
+        "singleValue": true,
+        "type": "boolean"
+       },
+       "rightValue": ""
+      }
+     ],
+     "options": {
+      "caseSensitive": true,
+      "leftValue": "",
+      "typeValidation": "loose"
+     }
+    },
+    "options": {}
+   }
+  },
+  {
+   "id": "3ff1b713-410f-5160-8607-b777bab6f930",
+   "name": "Panel Judges Fetch",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.3,
+   "onError": "continueRegularOutput",
+   "executeOnce": true,
+   "retryOnFail": true,
+   "maxTries": 3,
+   "waitBetweenTries": 5000,
+   "position": [
+    10068,
+    144
+   ],
+   "credentials": {
+    "httpHeaderAuth": {
+     "id": "uCS43YOAcWVctNfM",
+     "name": "Supabase Anon Key"
+    }
+   },
+   "parameters": {
+    "method": "POST",
+    "url": "https://bhffmkginddovmdcpnty.supabase.co/rest/v1/rpc/ppj_get",
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpHeaderAuth",
+    "sendBody": true,
+    "specifyBody": "json",
+    "jsonBody": "={{ { payload: { nonce: $('Panel Judges Prep').first().json.ppj_nonce } } }}",
+    "options": {
+     "timeout": 60000
+    }
+   }
+  },
+  {
+   "id": "0f6f2ee9-f316-b256-4156-df857ca39ef9",
+   "name": "Panel Judges Collect",
+   "type": "n8n-nodes-base.code",
+   "typeVersion": 2,
+   "onError": "stopWorkflow",
+   "position": [
+    10178,
+    464
+   ],
+   "parameters": {
+    "jsCode": "(from patched/Panel_Judges_Collect.js)"
    }
   }
  ],
@@ -61,6 +189,26 @@
    "to": "Panel Judges Parallel"
   },
   "Panel Judges Parallel": {
+   "output": 0,
+   "to": "Panel Judges Wait"
+  },
+  "Panel Judges Wait": {
+   "output": 0,
+   "to": "Panel Judges Poll"
+  },
+  "Panel Judges Poll": {
+   "output": 0,
+   "to": "Panel Judges Done?"
+  },
+  "Panel Judges Done?": {
+   "output0_true": "Panel Judges Fetch",
+   "output1_false": "Panel Judges Wait (loop)"
+  },
+  "Panel Judges Fetch": {
+   "output": 0,
+   "to": "Panel Judges Collect"
+  },
+  "Panel Judges Collect": {
    "output": 0,
    "to": "Panel Judge 1 Route"
   }
