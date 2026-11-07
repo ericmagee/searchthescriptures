@@ -1,0 +1,31 @@
+OK   G5_33006 cures (SHARED VERSE)
+OK   G6_33006 cures (SHARED VERSE)
+OK   G3_33025 cures (SHARED VERSE)
+OK   G13_33311 fails (REAL, overlap)
+OK   G2_33025 fails (REAL, overlap)
+OK   G2_33025 split spans (G shrunk to dodge the overlap) fails on the collision quotation
+OK   G13_33311 split spans fails on the collision quotation
+OK   G13_33311 gamed P (not in the press round, no MEANS word) fails
+OK   N1 P under 4 words fails
+OK   N2 P not a run of the verse fails
+OK   N3 G not in a collision quotation fails
+OK   N4 P only in a round of the same letter fails
+OK   N5 verse not read this run: not cured
+OK   N6 no quotations: read, not cured
+OK   N7 KEEP is not a DIFFERENT POINT
+OK   N8 curly quotes, markdown, "G 7" read
+OK   pkgDPT/patched/Alt_Gate_Build.js status TRIAL, read + cure wired
+OK   pkgDPT/patched/Alt_Gate_Record.js status TRIAL, read + cure wired
+OK   pkgDPT/patched/Alternate_Merge.js status TRIAL, read + cure wired
+OK   pkgDPT/patched/Alternate_Merge_Seat.js status TRIAL, read + cure wired
+OK   pkgDPT/patched/Gate_Build.js status TRIAL, read + cure wired
+OK   pkgDPT/patched/Gate_Record.js status TRIAL, read + cure wired
+OK   pkgDPT/patched_live/Alt_Gate_Build.js status LIVE, read + cure wired
+OK   pkgDPT/patched_live/Alt_Gate_Record.js status LIVE, read + cure wired
+OK   pkgDPT/patched_live/Alternate_Merge.js status LIVE, read + cure wired
+OK   pkgDPT/patched_live/Alternate_Merge_Seat.js status LIVE, read + cure wired
+OK   pkgDPT/patched_live/Gate_Build.js status LIVE, read + cure wired
+OK   pkgDPT/patched_live/Gate_Record.js status LIVE, read + cure wired
+OK   Gate_Build.js prompt + form line only when an E-GATE B item is present
+OK   Alt_Gate_Build.js prompt + form line only when an E-GATE B item is present
+30 OK, 0 FAIL

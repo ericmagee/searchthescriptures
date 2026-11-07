@@ -1,0 +1,13 @@
+# Gate Build prompt render, run 33299 saved inputs, pkgDPT built on live s39 WITHOUT pkgEGB-1 (so the chatgpt E-GATE B item is present; with EGB-1 the gate is skipped). Base and patched messages compared.
+base len 2554 patched len 3381
+patched starts with base text up to the tail: true
+
+
+An E-GATE B item (ANSWER GROUND) may instead be answered DIFFERENT POINT, when the press and your ground use different words of the verse: give the words of the verse the press holds and the words of the verse your ground uses. It is cured only when each is 4 words or more of that verse in the 1611 KJV, word for word, the first stands in the press (its MEANS or its round's quotation of the verse) and shares a word with the press MEANS, the second stands in a quotation of your collision line, and the first overlaps neither the second nor any words of that verse your collision line quotes. If they overlap, the press and your ground read the same words: CHANGE one of the two lines.
+
+This reply is not a judgment and is not JSON: write plain lines only.
+Reply with exactly one line per item, and nothing else, in this form (the fields are separated by two vertical bars):
+GATE: <item id> || KEEP || <one sentence quoting the words that decide it>
+GATE: <item id> || CHANGE TO: <your corrected line> || <one sentence quoting the words that decide it>
+GATE: <item id> || DIFFERENT POINT: the press holds "<words of the verse>"; my ground uses "<other words of the verse>" || <one sentence>
+last message content ends with msg (+agr tail): true
