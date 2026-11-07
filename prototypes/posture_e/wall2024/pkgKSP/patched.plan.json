@@ -1,0 +1,22 @@
+{
+ "Alt_Send_Back_Build.js": {
+  "base": "bd7c5109d7d1",
+  "patched": "6d66aed20f69"
+ },
+ "Alt_Send_Back_Record.js": {
+  "base": "6b1cf152b6f4",
+  "patched": "5a943485d797"
+ },
+ "Extract_Independent_Verdict.js": {
+  "base": "8517637eafc3",
+  "patched": "f10d445ca36b"
+ },
+ "Send_Back_Build.js": {
+  "base": "b0a7604f6217",
+  "patched": "e1fe8c8ffa1f"
+ },
+ "Send_Back_Record.js": {
+  "base": "31f9ac2c4181",
+  "patched": "b12f058586ab"
+ }
+}
