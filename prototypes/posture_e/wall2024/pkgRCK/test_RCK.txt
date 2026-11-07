@@ -1,14 +1,15 @@
 OK   A1 kunxLines(text, rounds) = kunxLines(text, prompt) on 33249 sol: CHALLENGER premise 1, CHALLENGER premise 5
 OK   A2 19 UNXW nodes keep unxLack, 22 out nodes keep the UNXS reader
-OK   B1 BASE reproduces stored sol challenger count 2
-OK   B2 RCK sol challenger count 1 (premise 1 only)
-OK   B3 sol drv_uncured 0 in both (TRIAL: no seat removed)
-OK   B4 sol verdict and standings unchanged
-OK   B5 gemini and grok unchanged
-OK   B6 G8 row says TRIAL pkgRCK record-only and names premise 5
-OK   C1 BASE grok defender count 4
-OK   C2 RCK grok defender count 0 (line as first written)
-OK   C3 grok verdict tag unchanged and drv_uncured 0
-OK   C4 chatgpt and sol unchanged
-OK   D1 33218 Gate Record and Alternate Merge Seat bodies identical
-13 OK, 0 FAIL
+OK   B1 an added premise 5 with no named layer raises one K-UNX item naming CHALLENGER premise 5, not LIVE
+OK   B2 NEGATIVE CONTROL (W3 2742): an added premise 5 whose ASSUMES ground quotes the block's [L1] (Luke 2:48 "thy father and I have sought thee sorrowing") raises nothing
+OK   B2b twin of the control: the same ASSUMES ground without the [L1] quotation raises K-UNX-A on CHALLENGER premise 5 (so B2 is not vacuous)
+OK   B3 the unchanged count raises nothing
+OK   C1 sol fields unchanged, challenger count 2 as the judge wrote it: HELD/0/2/SELF-SUPPORTED/PROP-DEPENDENT/0
+OK   C2 gemini and grok fields unchanged
+OK   C3 after the gate, sol premise 5 is raised as a K-UNX item and recorded only (2 items)
+OK   C4 Gate Build (send-back stage) adds no G item on 33249 (the send-back changed no count)
+OK   D1 grok defender count 4 in both, all fields unchanged: HELD/4/1/PROP-DEPENDENT/PROP-DEPENDENT/0
+OK   D2 grok DEFENDER premise 6 recorded after the gate, record-only
+OK   D3 chatgpt and sol unchanged
+OK   E1 33218 Gate Build, Gate Record and Alternate Merge Seat bodies identical
+14 OK, 0 FAIL
