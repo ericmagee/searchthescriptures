@@ -1,0 +1,40 @@
+SKIP 33040 main "undefined" is not valid JSON
+OK   33040 Alt: MISSES pushes 8, held 0
+SKIP 33060 main "undefined" is not valid JSON
+SKIP 33083 main "undefined" is not valid JSON
+SKIP 33107 main "undefined" is not valid JSON
+SKIP 33129 main "undefined" is not valid JSON
+SKIP 33149 main "undefined" is not valid JSON
+SKIP 33160 main "undefined" is not valid JSON
+SKIP 33197 main "undefined" is not valid JSON
+OK   33218 main: MISSES pushes 44, held 2
+       held chatgpt ANSWER CHECK Matthew 1:18 [CR4] :: The answer only says "I grant that Matthew 1:24's ... is that coming together," with no fit shown.
+       held chatgpt ANSWER CHECK 1 Chronicles 28:6 [DR3] :: The answer only says "I grant the ground is ... 'to choose'," with no fit shown.
+OK   33222 main: MISSES pushes 29, held 0
+OK   33222 Alt: MISSES pushes 26, held 0
+OK   33249 main: MISSES pushes 24, held 2
+       held chatgpt ANSWER CHECK Luke 2:48 [CR3] :: The answer only restates "The child sets the other Father over 'thy father.'"
+       held chatgpt ANSWER CHECK Exodus 2:10 [DR3] :: The answer only restates "The taking gave Moses a name and a place as son."
+OK   33249 Alt: MISSES pushes 1, held 0
+OK   33261 main: MISSES pushes 26, held 0
+OK   33261 Alt: MISSES pushes 5, held 0
+OK   33276 main: MISSES pushes 0, held 0
+OK   33276 Alt: MISSES pushes 0, held 0
+OK   33289 main: MISSES pushes 0, held 0
+OK   33289 Alt: MISSES pushes 0, held 0
+OK   33299 main: MISSES pushes 22, held 0
+OK   33299 Alt: MISSES pushes 2, held 0
+OK   33311 main: MISSES pushes 0, held 0
+OK   33311 Alt: MISSES pushes 0, held 0
+OK   33322 main: MISSES pushes 0, held 0
+OK   33345 main: MISSES pushes 59, held 0
+OK   33345 Alt: MISSES pushes 0, held 0
+OK   33371 main: MISSES pushes 13, held 0
+OK   33371 Alt: MISSES pushes 0, held 0
+OK   33389 main: MISSES pushes 8, held 5
+       held chatgpt ANSWER CHECK 1 Chronicles 28:6 [CR4] :: The answer only grants that "1 Chronicles 28:6 holds two fathers in one sentence," giving no fit.
+       held sol ANSWER CHECK 1 Chronicles 28:6 [CR4] :: The answer only grants that "1 Chronicles 28:6 holds two fathers in one sentence," with no fit or Luke 1:35 distinction.
+       held sol ANSWER CHECK Matthew 1:21 [CR4] :: The answer "Joseph names as bidden (Matthew 1:24)" only grants the naming act and shows no fit.
+       held sol ANSWER CHECK Matthew 1:21 [DR3] :: The answer "So the naming act stands with the father of the house" is a bare grant with no fit shown.
+       held sol ANSWER CHECK Matthew 1:18 [DR3] :: The answer "The order is espousal, then the finding, then the taking" only restates the sequence and shows no fit.
+held 9, still sent 258; 22 OK, 0 FAIL

@@ -1,0 +1,20 @@
+OK   lib: a truly bare grant (one tag, no fit sentence) is sent
+OK   lib: a layered grant with a fit sentence is held
+OK   lib: a reason that is not grant-worded is never held
+OK   lib: quoted words not found and no own answer block for the verse -> not held
+OK   lib: a reason naming another defect (omits the press) is not held
+OK   lib: the item's own ANSWER block (3+ tags) decides when the quote sits elsewhere
+OK   lib: a withdrawal claim is not held
+OK   lib: wrong round named -> not held
+     HELD chatgpt ANSWER CHECK 1 Chronicles 28:6 [CR4]
+     HELD sol ANSWER CHECK 1 Chronicles 28:6 [CR4]
+     HELD sol ANSWER CHECK Matthew 1:21 [CR4]
+     HELD sol ANSWER CHECK Matthew 1:21 [DR3]
+     HELD sol ANSWER CHECK Matthew 1:18 [DR3]
+OK   33389 LIVE: the 5 false grant pushes pkgEAI leaves are held (1 Chronicles 28:6 [CR4] x2, Matthew 1:21 [CR4] and [DR3], sol Matthew 1:18 [DR3])
+OK   33389 LIVE: the 3 arguable pushes are still sent (Matthew 11:11, Galatians 4:4, Job 14:1)
+OK   33389 LIVE: no other row changes
+OK   33389 LIVE: held rows fail the send-back filter
+OK   33389 TRIAL: the same 5 rows get only the TRIAL mark and are still sent
+OK   33389 pkgEAI + pkgEAX: all 10 false pushes held; only the 3 arguable are sent
+14 OK, 0 FAIL
