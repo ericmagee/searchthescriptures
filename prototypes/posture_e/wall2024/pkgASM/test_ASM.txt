@@ -1,0 +1,19 @@
+OK   A1 22 nodes, each base is the pkgUNXA final
+OK   A2 the cure edit is in the same 19 nodes as the K-UNX-A cure
+OK   A3 every patched file equals its plan sha
+OK   B1 replay (142 verdicts): no K-UNX-A item lost or changed; E-ASM alone adds 0 | 142 verdicts. K-UNX-A items kept: 59 (4 now also name the act). E-ASM alone adds 0. Lost or changed otherwise: 0.
+OK   B2 the 4 act items are the 4 found by hand (Wall 2724): 32924 gemini C1 and C6, 33218 gemini C1, 33222 gemini C1
+OK   D1 acts: knew, knowing, begot, conceived
+OK   D2 not acts: a house fact, "begetter", "known as", "known that", and an act named only in ROWS GIVE
+OK   C1 real 33222 Panel Payloads: pkgUNXA raises gemini CHALLENGER premise 1 ASSUMES; pkgASM raises the same one item, now carrying asm "knew" | CHALLENGER premise 1: counted UNEXHIBITED in CHALLENGER CONCEDED LINKS on an ASSUMES ground that names an act the link infers ("knew"); an inferred act, such as a begetting or a knowing, is never an ASSUMES; and it is counted UNEXHIBITED in CHALLENGER CONCEDED LINKS on an ASSUMES ground, but its [DR
+OK   E0 the cure block holds the pkgASM branch
+OK   E1 both: quoting the [L1] with a lack but keeping "ASSUMES: Joseph knew Mary" does not cure
+OK   E2 both: the K-UNX-A STATEMENT alone (no ASSUMES:) does not cure
+OK   E3 both: an ASSUMES: given fact plus the [L1] quote and a lack cures
+OK   E4 both: an ASSUMES: given fact without the [L1] quote does not cure (K-UNX-A still owed)
+OK   E5 ASM alone: an ASSUMES: given fact cures
+OK   E6 ASM alone: an ASSUMES that still names a begetting does not cure
+OK   E7 a CORRECTED COUNT below the count cures (both and alone)
+OK   E8 a KEEP does not cure
+OK   E9 a K-UNX-A item with no act is cured exactly as before
+18 OK, 0 FAIL
