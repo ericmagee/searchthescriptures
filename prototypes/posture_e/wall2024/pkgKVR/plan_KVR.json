@@ -8,7 +8,7 @@
    "base": "pkgCPD/patched_on_RXR",
    "live_sha": "d4544dd9f11e",
    "base_sha": "f02ba7bb7bb3",
-   "final_sha": "6b029e22ca9c"
+   "final_sha": "2b581c923a4b"
   },
   {
    "name": "Cure Normalize",
@@ -16,7 +16,7 @@
    "base": "pkgCPD/patched_on_RXR",
    "live_sha": "bfe1a16e5003",
    "base_sha": "f3d3c3610715",
-   "final_sha": "27e672617021"
+   "final_sha": "bde275652ccb"
   },
   {
    "name": "Cure Check",
@@ -24,7 +24,7 @@
    "base": "pkgCPD/patched_on_RXR",
    "live_sha": "6bc48cba2fd1",
    "base_sha": "86953f3b972b",
-   "final_sha": "53a728ee442e"
+   "final_sha": "4d5c1f689c51"
   },
   {
    "name": "Panel Cure Build 1",
@@ -32,7 +32,7 @@
    "base": "pkgCPD/patched_on_RXR",
    "live_sha": "22aacfa4d87a",
    "base_sha": "63e636d886da",
-   "final_sha": "ff7b63ac7236"
+   "final_sha": "ddb0233cf913"
   },
   {
    "name": "Panel Cure Normalize 1",
@@ -40,7 +40,7 @@
    "base": "pkgCPD/patched_on_RXR",
    "live_sha": "354f0d22095e",
    "base_sha": "837dc86ba602",
-   "final_sha": "f35b7ee7047a"
+   "final_sha": "697a3fcb2d30"
   },
   {
    "name": "Panel Cure Build 2",
@@ -48,7 +48,7 @@
    "base": "pkgCPD/patched_on_RXR",
    "live_sha": "047d604097e7",
    "base_sha": "7acc7e1c82f9",
-   "final_sha": "e46a8dea6fab"
+   "final_sha": "a35c847a9986"
   },
   {
    "name": "Panel Cure Normalize 2",
@@ -56,7 +56,7 @@
    "base": "pkgCPD/patched_on_RXR",
    "live_sha": "50544ac79a98",
    "base_sha": "38c33c412b99",
-   "final_sha": "513e694e1f56"
+   "final_sha": "22f00395a94c"
   },
   {
    "name": "Panel Cure Build 3",
@@ -64,7 +64,7 @@
    "base": "pkgCPD/patched_on_RXR",
    "live_sha": "bca9dd066985",
    "base_sha": "927d1c348f38",
-   "final_sha": "d6103b40acc3"
+   "final_sha": "f0c7b01d8a72"
   },
   {
    "name": "Panel Cure Normalize 3",
@@ -72,7 +72,7 @@
    "base": "pkgCPD/patched_on_RXR",
    "live_sha": "9351d39c3c7a",
    "base_sha": "262c73f0e65b",
-   "final_sha": "4e96e1ba7758"
+   "final_sha": "97ba8835a482"
   },
   {
    "name": "Panel Cure Check",
@@ -80,7 +80,7 @@
    "base": "pkgCPD/patched_on_RXR",
    "live_sha": "d51cebbee522",
    "base_sha": "ded1cb9e8f7d",
-   "final_sha": "da66d056cc94"
+   "final_sha": "4106bbb51f4f"
   },
   {
    "name": "Alternate Build",
@@ -88,7 +88,7 @@
    "base": "pkgCPD/patched_on_RXR",
    "live_sha": "a15bd6f0dc7c",
    "base_sha": "185ad5c3f1ac",
-   "final_sha": "d47ce268863d"
+   "final_sha": "32469eeb4e59"
   },
   {
    "name": "Alternate Cure Build",
@@ -96,7 +96,7 @@
    "base": "pkgCPD/patched_on_RXR",
    "live_sha": "c720bc1ab6ed",
    "base_sha": "b7198479b9dc",
-   "final_sha": "9b7789ac0121"
+   "final_sha": "ad4e3896f1b9"
   },
   {
    "name": "Alternate Cure Normalize",
@@ -104,7 +104,7 @@
    "base": "pkgCPD/patched_on_RXR",
    "live_sha": "a7d9bacf622a",
    "base_sha": "6d1ed1aabdc9",
-   "final_sha": "e4bcc9114b06"
+   "final_sha": "72a82ffe443e"
   },
   {
    "name": "Alternate Merge Seat",
@@ -112,7 +112,7 @@
    "base": "pkgPSN/patched_on_pkgCPD_patched_on_RXR",
    "live_sha": "3157b20911c7",
    "base_sha": "b6e045e4e637",
-   "final_sha": "8662e99c5e43"
+   "final_sha": "f1c47770e13b"
   },
   {
    "name": "Gate Build",
@@ -120,7 +120,7 @@
    "base": "pkgPSN/patched_on_pkgCPD_patched_on_RXR",
    "live_sha": "7c6973e4b27d",
    "base_sha": "d5c48766755e",
-   "final_sha": "461ca42604ec"
+   "final_sha": "f534b609e258"
   },
   {
    "name": "Gate Record",
@@ -128,7 +128,7 @@
    "base": "pkgPSN/patched_on_pkgCPD_patched_on_RXR",
    "live_sha": "92c91e87a1d2",
    "base_sha": "e8d5ece78624",
-   "final_sha": "71b0eb909c57"
+   "final_sha": "d179810b1da2"
   },
   {
    "name": "Alt Gate Build",
@@ -136,7 +136,7 @@
    "base": "pkgPSN/patched_on_pkgCPD_patched_on_RXR",
    "live_sha": "9b03cb388ca2",
    "base_sha": "da90e725e232",
-   "final_sha": "47c5473b652e"
+   "final_sha": "62311e7ebf3e"
   },
   {
    "name": "Alt Gate Record",
@@ -144,7 +144,7 @@
    "base": "pkgPSN/patched_on_pkgCPD_patched_on_RXR",
    "live_sha": "736cb7184c0c",
    "base_sha": "457c7df3465a",
-   "final_sha": "5da6631cdb08"
+   "final_sha": "e7cb1294d05a"
   },
   {
    "name": "Alternate Merge",
@@ -152,7 +152,7 @@
    "base": "pkgPSN/patched_on_pkgCPD_patched_on_RXR",
    "live_sha": "305e96e9dd60",
    "base_sha": "a82197bacbc8",
-   "final_sha": "7b9ca7154bc7"
+   "final_sha": "3595402beb03"
   }
  ]
 }

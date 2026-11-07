@@ -2,6 +2,7 @@ OK   A1 19 nodes; base and final shas hold
 OK   A2 every node is the base plus the one KVR insert
 OK   R0 33299 as run: chatgpt K-V premise 5 CURED by its STATEMENT, base and KVR alike :: CURED/CURED
 OK   R1 STATEMENT removed, RESPONSE alone carries the kind and the charge words: base UNCURED, KVR CURED by the response (the 33311 chatgpt case) :: UNCURED/CURED response quotes the charge words (Mary's word names the begetter) and names the kind
+OK   R2 split (W3 2807 shape): the STATEMENT names the kind, the RESPONSE quotes the charge words: base UNCURED, KVR CURED by the two together :: UNCURED/CURED statement and response together quote the charge words (Mary's word names the begetter) an
 OK   N1 RESPONSE quotes the charge words but names no kind: stays UNCURED :: UNCURED
 OK   N2 RESPONSE names the kind but quotes no charge words (both quotes taken out; thy father alone also passes, as it does on a STATEMENT, since it stands in the premise outside its quote): stays UNCURED :: UNCURED
 OK   P 33218 Panel Cure Check: output identical
@@ -22,4 +23,4 @@ INFO 33289 Gate Record not replayable: Cannot read properties of undefined (read
 OK   P 33299 Panel Cure Check: output identical
 OK   P 33299 Alternate Merge Seat: output identical
 OK   P 33299 Gate Record: output identical
-21 OK, 0 FAIL
+22 OK, 0 FAIL
