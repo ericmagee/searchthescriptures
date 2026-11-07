@@ -1,4 +1,4 @@
-NOT TESTED Panel Done: its input node (["Derive Outcome"]) has no saved output in 33197 (an HTTP node); base errors before any fetch: "undefined" is not valid JSON
+OK   Panel Done: base and part B agree (output 1 item(s)); base reproduces the saved output; fetched 7 node(s), 0 unexecuted; same fetches: true
 OK   Panel Check: base and part B agree (output 1 item(s)); base reproduces the saved output; fetched 19 node(s), 13 unexecuted; same fetches: true
       unexecuted: Panel Judge 1 deepseek, Panel Judge 1 gemini, Panel Judge 1 grok, Panel Judge 1 mimo, Panel Judge 1 openai, Panel Judge 2 gemini, Panel Judge 2 grok, Panel Judge 2 mimo, Panel Judge 2 openai, Panel Judge 3 gemini, Panel Judge 3 grok, Panel Judge 3 mimo, Panel Judge 3 openai
 OK   Panel Payloads: base and part B agree (output 1 item(s)); base reproduces the saved output; fetched 24 node(s), 14 unexecuted; same fetches: true
@@ -7,7 +7,7 @@ OK   Accept Final: base and part B agree (output 1 item(s)); base reproduces the
       unexecuted: Accept Return Call deepseek, Accept Return Call openrouter
 OK   Accept Check: base and part B agree (output 1 item(s)); base reproduces the saved output; fetched 4 node(s), 1 unexecuted; same fetches: true
       unexecuted: Accept Call deepseek
-NOT TESTED Accept Build: its input node (["Accept Models"]) has no saved output in 33197 (an HTTP node); base errors before any fetch: "undefined" is not valid JSON
+OK   Accept Build: base and part B agree (output 4 item(s)); base reproduces the saved output; fetched 1 node(s), 0 unexecuted; same fetches: true
 OK   D1 Build: base and part B agree (output 1 item(s)); base reproduces the saved output; fetched 4 node(s), 0 unexecuted; same fetches: true
 OK   C1 Build: base and part B agree (output 1 item(s)); base reproduces the saved output; fetched 5 node(s), 0 unexecuted; same fetches: true
 OK   D2 Build: base and part B agree (output 1 item(s)); base reproduces the saved output; fetched 10 node(s), 0 unexecuted; same fetches: true
@@ -16,4 +16,4 @@ OK   D3 Build: base and part B agree (output 1 item(s)); base reproduces the sav
 OK   C3 Build: base and part B agree (output 1 item(s)); base reproduces the saved output; fetched 10 node(s), 0 unexecuted; same fetches: true
 OK   D4 Build: base and part B agree (output 1 item(s)); base reproduces the saved output; fetched 13 node(s), 0 unexecuted; same fetches: true
 OK   C4 Build: base and part B agree (output 1 item(s)); base reproduces the saved output; fetched 14 node(s), 0 unexecuted; same fetches: true
-12 OK, 0 FAIL, 2 NOT TESTED (Panel Done, Accept Build)
+14 OK, 0 FAIL, 0 NOT TESTED ()
