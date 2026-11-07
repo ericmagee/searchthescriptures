@@ -15,6 +15,11 @@ t('F1 MEANS is the verse re-quoted (Luke 1:34, the review\'s shape): flagged',/n
 const V2='FORCED: D4 vs C2 -- MEANS [CR3]: "The text terminates the chain of active masculine begetting at Joseph" -- ANSWER [DR3]: "These are the two parents." -- FAILS: "x" -- CARRIED BY: "Jacob begat Joseph the husband of Mary" -- GROUND: [L1] Matthew 1:16 "And Jacob begat Joseph the husband of Mary, of whom was born Jesus"';
 t('F2 MEANS is the judge\'s own sentence, not in [CR3] (33371 single judge D4 vs C2 ground): flagged',!!efgCheck(V2,R),efgCheck(V2,R));
 const V3=V1.replace('MEANS [CR3]','MEANS [DR3]');t('F3 same verse MEANS against the challenger round: flagged (either side alike)',!!efgCheck(V3,R),efgCheck(V3,R));
+const S1='FORCED: D1 vs C1 -- MEANS [CR3]: "The reply names no man." -- ANSWER [DR3]: "x y z" -- FAILS: "x" -- CARRIED BY: "seeing I know not a man" -- GROUND: [L1] Luke 1:34 "seeing I know not a man"';
+t('P3 W3 control: short genuine MEANS "The reply names no man." (5 words, [CR3] prose) passes',efgCheck(S1,R)===null,efgCheck(S1,R));
+const S2=S1.replace('The reply names no man.','Two children carry two names.');t('P4 W3 control: short genuine MEANS "Two children carry two names." passes',efgCheck(S2,R)===null,efgCheck(S2,R));
+const S3=S1.replace('The reply names no man.','The reply names Joseph.');t('F4 short MEANS not standing as one run in [CR3] is flagged',!!efgCheck(S3,R),efgCheck(S3,R));
+const S4=V1.replace('MEANS [CR3]: "How shall this be, seeing I know not a man?"','MEANS [CR3]: "seeing I know not a man"');t('F5 short MEANS that is a piece of the quoted verse (5 words) is flagged',!!efgCheck(S4,R),efgCheck(S4,R));
 const V4='LINK BROKEN line -- not FORCED';t('N1 a non-FORCED line is not checked',efgCheck(V4,R)===null);
 t('N2 no rounds: not checked',efgCheck(V1,null)===null);
 t('N3 unparseable MEANS: not checked',efgCheck('FORCED: D1 vs C1 -- MEANS: no round named -- ANSWER [DR3]: "x"',R)===null);
