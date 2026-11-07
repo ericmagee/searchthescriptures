@@ -1,0 +1,39 @@
+both-error 33222 Alternate Build: await is not defined
+both-error 33249 Alternate Build: await is not defined
+both-error 33261 Alternate Build: await is not defined
+both-error 33276 Panel Cure Check: Cannot read properties of undefined (reading 'slice')
+both-error 33276 Alternate Build: await is not defined
+both-error 33276 Alternate Merge Seat: Cannot read properties of undefined (reading 'slice')
+both-error 33276 Gate Record: Cannot read properties of undefined (reading 'slice')
+both-error 33276 Alt Gate Record: Cannot read properties of undefined (reading 'slice')
+both-error 33289 Panel Cure Check: Cannot read properties of undefined (reading 'slice')
+both-error 33289 Alternate Build: await is not defined
+both-error 33289 Alternate Merge Seat: Cannot read properties of undefined (reading 'slice')
+both-error 33289 Gate Record: Cannot read properties of undefined (reading 'slice')
+both-error 33289 Alt Gate Record: Cannot read properties of undefined (reading 'slice')
+both-error 33299 Alternate Build: await is not defined
+both-error 33311 Panel Cure Check: Cannot read properties of undefined (reading 'slice')
+both-error 33311 Alternate Build: await is not defined
+both-error 33311 Alternate Merge Seat: Cannot read properties of undefined (reading 'slice')
+both-error 33311 Gate Record: Cannot read properties of undefined (reading 'slice')
+both-error 33311 Alt Gate Record: Cannot read properties of undefined (reading 'slice')
+both-error 33322 Panel Cure Check: Cannot read properties of undefined (reading 'slice')
+both-error 33322 Alternate Build: await is not defined
+both-error 33322 Alternate Merge Seat: Cannot read properties of undefined (reading 'slice')
+both-error 33322 Gate Record: Cannot read properties of undefined (reading 'slice')
+both-error 33345 Alternate Build: await is not defined
+both-error 33371 Alternate Build: await is not defined
+replay node runs compared: 246
+changed outputs: 11
+{"RUN":"33218","node":"Send Back Build","diff_at":324278,"base":"ull,\"abs\":null,\"pab\":null,\"mnp\":null,\"imp\":null,\"ksc\":null,\"epk\":null,\"reason_full\":null,\"xcut\":null},{\"sid\":\"S22\",\"rule\":\"E-HOLD\",\"item\":\"COLLISION D6 vs C1\",\"line\":\"D6 vs C1 (Matthew 1:20; John 6:42; John 1:45): UNDERDETERMINED -- CR3 and CR4 accommodate the father-title witnesses through the repo","patched":"ull,\"abs\":null,\"pab\":null,\"mnp\":null,\"imp\":null,\"ksc\":null,\"epk\":null,\"reason_full\":null,\"xcut\":null},{\"sid\":\"S22\",\"rule\":\"E-HOLD\",\"item\":\"COLLISION D3 vs C1 (UNDERDETERMINED; pkgUNA)\",\"line\":\"D3 vs C1 (Matthew 1:18; Matthew 1:25): UNDERDETERMINED -- CR3 abandons the closed-interval argument, but CR4 answers the remaining espousal opening through the virgin-with-child fulfilment -- GROUND: [L1] Ma"}
+{"RUN":"33222","node":"Send Back Build","diff_at":670346,"base":"ECORD-ONLY TRIAL, ruling 428)\",\"ecl\":null,\"und\":null,\"abs\":null,\"pab\":null,\"mnp\":null,\"imp\":null,\"ksc\":null,\"epk\":null,\"reason_full\":null,\"xcut\":null},{\"sid\":\"S24\",\"rule\":\"E-HOLD\",\"item\":\"COLLISION D2 vs C3\",\"line\":\"D2 vs C3 (Isaiah 8:3; Isaiah 8:18): UNDERDETERMINED -- [CR3] and [CR4] grant the fir","patched":"ECORD-ONLY TRIAL, ruling 428)\",\"ecl\":null,\"und\":null,\"abs\":null,\"pab\":null,\"mnp\":null,\"imp\":null,\"ksc\":null,\"epk\":null,\"reason_full\":null,\"xcut\":null}],\"msg\":\"An enforcer has read some of your lines against the debate record and reports a violation in each. Its reasons are quoted below. You keep the decision. For each item, KEEP your line or CHANGE it, and give one sentence that quotes the debate'"}
+{"RUN":"33249","node":"Send Back Build","diff_at":658179,"base":"ull,\"mnp\":null,\"imp\":null,\"ksc\":null,\"epk\":{\"side\":\"DEFENDER\",\"premise\":6,\"kinds\":[\"L1\",\"L3\"]},\"reason_full\":null,\"xcut\":null},{\"sid\":\"S23\",\"rule\":\"E-COL\",\"item\":\"COLLISION D5 vs C1\",\"line\":\"D5 vs C1 (Matthew 1:25): CHALLENGER LINK BROKEN (Commitment 3) -- The proposed knowing before the finding con","patched":"ull,\"mnp\":null,\"imp\":null,\"ksc\":null,\"epk\":{\"side\":\"DEFENDER\",\"premise\":6,\"kinds\":[\"L1\",\"L3\"]},\"reason_full\":null,\"xcut\":null},{\"sid\":\"S23\",\"rule\":\"E-HOLD\",\"item\":\"COLLISION D4 vs C2 (UNDERDETERMINED; pkgUNA)\",\"line\":\"D4 vs C2 (Romans 1:3; Galatians 4:4): UNDERDETERMINED -- Both accept David's seed and the woman's part, but differ on the route of descent -- GROUND: [L1] Romans 1:3 'made of the see"}
+{"RUN":"33299","node":"Send Back Build","diff_at":301109,"base":"urative sense\\\" carries a fit, and \\\"leaves the application ... disputed\\\" is an absence. (judge wrote UNDERDETERMINED; RECORD-ONLY TRIAL, ruling 428) | UNDERDETERMINED WITHOUT ITS GROUNDS (E-HOLD on UNDERDETERMINED, ENFORCED, pkgUNA): no counted [L1] (the quoted words do not stand in the verse name","patched":"urative sense\\\" carries a fit, and \\\"leaves the application ... disputed\\\" is an absence. (judge wrote UNDERDETERMINED; RECORD-ONLY TRIAL, ruling 428)\",\"ecl\":null,\"und\":null,\"abs\":null,\"pab\":null,\"mnp\":null,\"imp\":null,\"ksc\":null,\"epk\":null,\"reason_full\":null,\"xcut\":null},{\"sid\":\"S16\",\"rule\":\"E-HOLD\",\"item\":\"COLLISION D2 vs C2\",\"line\":\"D2 vs C2 (Luke 1:36): UNDERDETERMINED -- [CR3] accepts the pair"}
+{"RUN":"33371","node":"Send Back Build","diff_at":302440,"base":"abs\":null,\"pab\":null,\"mnp\":null,\"imp\":null,\"ksc\":null,\"epk\":{\"side\":\"CHALLENGER\",\"premise\":1,\"kinds\":[\"L1\",\"L2\",\"L3\"]},\"reason_full\":null,\"xcut\":null},{\"sid\":\"S22\",\"rule\":\"E-HOLD\",\"item\":\"COLLISION D1 vs C1 (UNDERDETERMINED; pkgUNA)\",\"line\":\"D1 vs C1 (Matthew 1:25): UNDERDETERMINED -- [CR3] answers ","patched":"abs\":null,\"pab\":null,\"mnp\":null,\"imp\":null,\"ksc\":null,\"epk\":{\"side\":\"CHALLENGER\",\"premise\":1,\"kinds\":[\"L1\",\"L2\",\"L3\"]},\"reason_full\":null,\"xcut\":null}],\"msg\":\"An enforcer has read some of your lines against the debate record and reports a violation in each. Its reasons are quoted below. You keep the decision. For each item, KEEP your line or CHANGE it, and give one sentence that quotes the debate'"}
+{"RUN":"33371","node":"Send Back Record","seat":"chatgpt","rule":"E-HOLD","item":"COLLISION D2 vs C6","from":"UNCURED","to":"CURED","why":" (pkgUND, ENFORCED): CURED -- kept UNDERDETERMINED; [L1] COUNTED; states what the record leaves open"}
+{"RUN":"33371","node":"Send Back Record","seat":"chatgpt","rule":"E-HOLD","item":"COLLISION D1 vs C1 (UNDERDETERMINED; pkgUNA)","from":"UNCURED","to":"CURED","why":" (pkgUND, ENFORCED): CURED -- kept UNDERDETERMINED; [L1] COUNTED; states what the record leaves open"}
+{"RUN":"33371","node":"Send Back Record","seat":"chatgpt","rule":"E-HOLD","item":"COLLISION D3 vs C6 (UNDERDETERMINED; pkgUNA)","from":"UNCURED","to":"CURED","why":" (pkgUND, ENFORCED): CURED -- kept UNDERDETERMINED; [L1] COUNTED; states what the record leaves open"}
+{"RUN":"33371","node":"Send Back Record","seat":"chatgpt","rule":"E-HOLD","item":"COLLISION D4 vs C3 (UNDERDETERMINED; pkgUNA)","from":"UNCURED","to":"CURED","why":" (pkgUND, ENFORCED): CURED -- kept UNDERDETERMINED; [L1] COUNTED; states what the record leaves open"}
+{"RUN":"33371","node":"Send Back Record","seat":"chatgpt","rule":"E-HOLD","item":"COLLISION D6 vs C2 (UNDERDETERMINED; pkgUNA)","from":"UNCURED","to":"CURED","why":" (pkgUND, ENFORCED): CURED -- kept UNDERDETERMINED; [L1] COUNTED; states what the record leaves open"}
+{"RUN":"33371","node":"Panel Cure Check","seat":"chatgpt","rule":"K-G4","item":"D5 vs C4","from":"UNCURED","to":"CURED","why":"retracted"}
+TOTAL 246 OK, 0 FAIL

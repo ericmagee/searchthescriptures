@@ -1,0 +1,237 @@
+{
+ "source": "W2 pkgL1Q, W3 2861/2864 (33371 chatgpt single-quote removals)",
+ "live": "24eb8692-b18c-43e6-a66f-048a29464127",
+ "base": "/mnt/project-files/wall2024/fetchback_live_s44.json",
+ "nodes": [
+  {
+   "name": "Send Back Build",
+   "file": "Send_Back_Build.js",
+   "base_sha": "5ad0aacff38d",
+   "final_sha": "b1989a4f714e",
+   "bytes": [
+    127754,
+    127968
+   ]
+  },
+  {
+   "name": "Send Back Record",
+   "file": "Send_Back_Record.js",
+   "base_sha": "5837536ad076",
+   "final_sha": "72a639c32be3",
+   "bytes": [
+    142275,
+    142489
+   ]
+  },
+  {
+   "name": "Alt Send Back Build",
+   "file": "Alt_Send_Back_Build.js",
+   "base_sha": "5dfb0693233c",
+   "final_sha": "f8591b406f60",
+   "bytes": [
+    127916,
+    128130
+   ]
+  },
+  {
+   "name": "Alt Send Back Record",
+   "file": "Alt_Send_Back_Record.js",
+   "base_sha": "58c42511214d",
+   "final_sha": "cfdab4e103f6",
+   "bytes": [
+    142247,
+    142461
+   ]
+  },
+  {
+   "name": "Cure Build",
+   "file": "Cure_Build.js",
+   "base_sha": "cffe6edd87b9",
+   "final_sha": "29fe3f701167",
+   "bytes": [
+    352832,
+    353465
+   ]
+  },
+  {
+   "name": "Cure Normalize",
+   "file": "Cure_Normalize.js",
+   "base_sha": "ebecf524d69f",
+   "final_sha": "e780e832e555",
+   "bytes": [
+    351920,
+    352553
+   ]
+  },
+  {
+   "name": "Cure Check",
+   "file": "Cure_Check.js",
+   "base_sha": "f06cffe3f5b5",
+   "final_sha": "e274d75314c7",
+   "bytes": [
+    354706,
+    355339
+   ]
+  },
+  {
+   "name": "Panel Cure Build 1",
+   "file": "Panel_Cure_Build_1.js",
+   "base_sha": "282e7b91cd97",
+   "final_sha": "75d2530f3d56",
+   "bytes": [
+    372450,
+    373083
+   ]
+  },
+  {
+   "name": "Panel Cure Normalize 1",
+   "file": "Panel_Cure_Normalize_1.js",
+   "base_sha": "5d656d5a1d00",
+   "final_sha": "bdbf0260341a",
+   "bytes": [
+    351936,
+    352569
+   ]
+  },
+  {
+   "name": "Panel Cure Build 2",
+   "file": "Panel_Cure_Build_2.js",
+   "base_sha": "65233543ffbf",
+   "final_sha": "859d0530c1d6",
+   "bytes": [
+    372450,
+    373083
+   ]
+  },
+  {
+   "name": "Panel Cure Normalize 2",
+   "file": "Panel_Cure_Normalize_2.js",
+   "base_sha": "6c4a42a8d752",
+   "final_sha": "11dfa265dc03",
+   "bytes": [
+    351936,
+    352569
+   ]
+  },
+  {
+   "name": "Panel Cure Build 3",
+   "file": "Panel_Cure_Build_3.js",
+   "base_sha": "f66788f32caf",
+   "final_sha": "d428731e209b",
+   "bytes": [
+    372450,
+    373083
+   ]
+  },
+  {
+   "name": "Panel Cure Normalize 3",
+   "file": "Panel_Cure_Normalize_3.js",
+   "base_sha": "2bfb7d8cdf4c",
+   "final_sha": "9b69a2035f71",
+   "bytes": [
+    351936,
+    352569
+   ]
+  },
+  {
+   "name": "Panel Cure Check",
+   "file": "Panel_Cure_Check.js",
+   "base_sha": "c8fa2477d3bb",
+   "final_sha": "1c858f7e25c8",
+   "bytes": [
+    356451,
+    357084
+   ]
+  },
+  {
+   "name": "Alternate Build",
+   "file": "Alternate_Build.js",
+   "base_sha": "1f2af3aa385e",
+   "final_sha": "2342c2b3005e",
+   "bytes": [
+    381308,
+    381941
+   ]
+  },
+  {
+   "name": "Alternate Cure Build",
+   "file": "Alternate_Cure_Build.js",
+   "base_sha": "7d5fd831a95b",
+   "final_sha": "35a6092694f9",
+   "bytes": [
+    371731,
+    372364
+   ]
+  },
+  {
+   "name": "Alternate Cure Normalize",
+   "file": "Alternate_Cure_Normalize.js",
+   "base_sha": "ae2ada314859",
+   "final_sha": "1021a2be8d95",
+   "bytes": [
+    351940,
+    352573
+   ]
+  },
+  {
+   "name": "Alternate Merge Seat",
+   "file": "Alternate_Merge_Seat.js",
+   "base_sha": "fc61c6e4faaf",
+   "final_sha": "03ac3562370c",
+   "bytes": [
+    417173,
+    417806
+   ]
+  },
+  {
+   "name": "Alternate Merge",
+   "file": "Alternate_Merge.js",
+   "base_sha": "80f384d62da9",
+   "final_sha": "823c1e6d23ba",
+   "bytes": [
+    419943,
+    420576
+   ]
+  },
+  {
+   "name": "Gate Build",
+   "file": "Gate_Build.js",
+   "base_sha": "adf55608baa0",
+   "final_sha": "ea2704372371",
+   "bytes": [
+    411621,
+    412254
+   ]
+  },
+  {
+   "name": "Gate Record",
+   "file": "Gate_Record.js",
+   "base_sha": "01f9d4c698a7",
+   "final_sha": "24f4c3437475",
+   "bytes": [
+    409254,
+    409887
+   ]
+  },
+  {
+   "name": "Alt Gate Build",
+   "file": "Alt_Gate_Build.js",
+   "base_sha": "94cb6a03bd3a",
+   "final_sha": "7712982d215f",
+   "bytes": [
+    411626,
+    412259
+   ]
+  },
+  {
+   "name": "Alt Gate Record",
+   "file": "Alt_Gate_Record.js",
+   "base_sha": "32b576cf766a",
+   "final_sha": "3c24514d9537",
+   "bytes": [
+    409263,
+    409896
+   ]
+  }
+ ]
+}
