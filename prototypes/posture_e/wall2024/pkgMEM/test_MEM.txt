@@ -101,7 +101,14 @@ OK   W 33222 Write Enforcer Log body: new expression gives the same bytes as tod
 OK   W 33249 Write Enforcer Log body: new expression gives the same bytes as today (no body carried; and with 186 tokens) :: 1.46 MB sent; carried log 5.07 MB -> 1.44 MB, body 5.07 MB -> 0
 OK   W 33261 Write Enforcer Log body: new expression gives the same bytes as today (no body carried; and with 196 tokens) :: 1.55 MB sent; carried log 5.49 MB -> 1.54 MB, body 5.49 MB -> 0
 OK   W 33299 Write Enforcer Log body: new expression gives the same bytes as today (no body carried; and with 196 tokens) :: 1.21 MB sent; carried log 4.70 MB -> 1.19 MB, body 4.70 MB -> 0
+OK   T0a no inner {{ or }} in the new field (it would end the n8n expression early)
+OK   T0 33218 whole field in tournament: new field (no body; and tokenized) sends the same bytes as the live field :: 1.10 MB
+OK   T0 33222 whole field in tournament: new field (no body; and tokenized) sends the same bytes as the live field :: 1.61 MB
+OK   T0 33249 whole field in tournament: new field (no body; and tokenized) sends the same bytes as the live field :: 1.46 MB
+OK   T0 33261 whole field in tournament: new field (no body; and tokenized) sends the same bytes as the live field :: 1.55 MB
+OK   T0 33299 whole field in tournament: new field (no body; and tokenized) sends the same bytes as the live field :: 1.21 MB
+OK   T0n negative: the c18d8f3 field (inner }} at o[f]=D[t];}});) fails in tournament :: threw: Line 1: Unexpected end of input
 OK   N1 a token with no full text in its array is left unresolved (and counted)
 OK   N2 under 2000 chars is never tokenized; at 2000 it is
 TOTAL node outputs replayed: 171.1 MB -> 90.4 MB
-99 OK, 0 FAIL
+106 OK, 0 FAIL
