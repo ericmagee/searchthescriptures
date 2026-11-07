@@ -1,0 +1,29 @@
+OK   A1 2 nodes on pkgPSN/patched; bases are the PSN finals; patched shas hold
+OK   A2 --on-live: 2 nodes on live a353b9e8
+OK   A3 the block is inserted once, just before "let bodies", in both nodes; Alt marks its rows alternate
+OK   G1 FINDING: 33289 grok S1 gives no E-ASE row, because its ASSUMES words stand in round CR2 (the press), not only in the enforcer reason
+OK   G2 the run "road apart from davids loins" stands in round CR2 of 33289 (debate_results engine_r2): "ASSUMES: the throne's gift comes by a road apart from David's loins"
+OK   G1b with that press sentence taken out of CR2, the same CHANGE gives one record-only E-ASE row quoting the reason :: RECORD-ONLY (TRIAL, pkgASE; it removes no seat): ASSUMES from the enforcer, not the record: the ASSUMES clause holds "road apart from davids loins", which stands in the E-PREM reason and in no round
+OK   G3 with EPK cut text, the full reason (reason_full) is the one read
+OK   N1 an ASSUMES whose words stand in a round is not flagged (the run is put into a round)
+OK   N2 an ASSUMES sharing no 5-word run with the reason is not flagged
+OK   N3 a KEEP, or a rule other than E-PREM, is not read
+OK   N4 no rounds read (__RD null): nothing is flagged
+OK   N5 a CHANGE TO with no ASSUMES clause is not read
+INFO 33218 Send Back Record: E-ASE rows 0
+OK   P 33218 Send Back Record: output identical apart from E-ASE rows
+INFO 33218 Alt Send Back Record: E-ASE rows 0
+OK   P 33218 Alt Send Back Record: output identical apart from E-ASE rows
+INFO 33222 Send Back Record: E-ASE rows 0
+OK   P 33222 Send Back Record: output identical apart from E-ASE rows
+INFO 33222 Alt Send Back Record: E-ASE rows 0
+OK   P 33222 Alt Send Back Record: output identical apart from E-ASE rows
+INFO 33249 Send Back Record: E-ASE rows 0
+OK   P 33249 Send Back Record: output identical apart from E-ASE rows
+INFO 33249 Alt Send Back Record: E-ASE rows 0
+OK   P 33249 Alt Send Back Record: output identical apart from E-ASE rows
+INFO 33261 Send Back Record: E-ASE rows 0
+OK   P 33261 Send Back Record: output identical apart from E-ASE rows
+INFO 33261 Alt Send Back Record: E-ASE rows 0
+OK   P 33261 Alt Send Back Record: output identical apart from E-ASE rows
+20 OK, 0 FAIL
