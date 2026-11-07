@@ -1,0 +1,19 @@
+OK   continuation line, [DR2] maps premise 6 to LINK 6: fires | Premise 6 = LINK 6 ([DR2] list) UNEXHIBITED
+OK   no [DR2] list, no own label: quiet (a premise number alone is not a link) | quiet
+OK   no [DR2] list, own "(LINK 6" label: fires via its own label | Premise 2 = LINK 6 (its own LINK label) UNEXHIBITED
+OK   [DR2] list wins over the own label (premise 3 = LINK 6 by [DR2]): fires | Premise 3 = LINK 6 ([DR2] list) UNEXHIBITED
+OK   old form "LINK 6: UNEXHIBITED": fires | LINK 6 UNEXHIBITED
+OK   count 0: quiet | quiet
+OK   "none CONCEDED" + a premise on another link: quiet | quiet
+OK   lower-case "conceded" prose is not a tag: quiet | quiet
+OK   "DEFENDER CONCEDED LINKS" label, "counted: 6": fires | Premise 6 = LINK 6 ([DR2] list) UNEXHIBITED
+OK   VOID is not counted: quiet | quiet
+OK   only a CHALLENGER count line: quiet | quiet
+OK   a quoted "[CR3] CONCEDED LINKS" line is not the count line: quiet | quiet
+OK   keystone WITHDRAWN: quiet | quiet
+OK   cure: CHANGE TO "CONCEDED LINKS: 0 -- Premise 6 spared": CURED
+OK   cure: CHANGE TO "CONCEDED LINKS: 1 -- Premise 6: UNEXHIBITED": UNCURED
+OK   cure: CHANGE TO "CONCEDED LINKS: 1 -- Premise 5: UNEXHIBITED": CURED (premise 5 = LINK 5)
+OK   cure: CHANGE TO "KEYSTONE: D6 -- BROKEN": CURED
+OK   cure: KEEP: UNCURED
+18 OK, 0 FAIL

@@ -1,0 +1,31 @@
+{
+ "base": "pkgKSCL/out/workflow_KSCL.json",
+ "base_sha": "f244c20a0bd72cbe",
+ "nodes": [
+  {
+   "node": "Extract Independent Verdict",
+   "base_sha": "f7f14209bf8e20b1",
+   "final_sha": "b7a6307185fb98cd"
+  },
+  {
+   "node": "Send Back Build",
+   "base_sha": "4a7f57207b26d803",
+   "final_sha": "f436539a193ffe3a"
+  },
+  {
+   "node": "Send Back Record",
+   "base_sha": "ace6b7321e8fd7ca",
+   "final_sha": "440236152d16d7b9"
+  },
+  {
+   "node": "Alt Send Back Build",
+   "base_sha": "15a2f07e9c46703c",
+   "final_sha": "9b4cfffa451dd350"
+  },
+  {
+   "node": "Alt Send Back Record",
+   "base_sha": "b1eaaa58b9d1fe0a",
+   "final_sha": "27fb11b3f0048513"
+  }
+ ]
+}

@@ -1,0 +1,28 @@
+OK   33218 Send Back Build as run: pkgKSCL and pkgCLR code each raise 0 E-KSC items (0, 0)
+OK   33218 Send Back Build as run: pkgCLR items equal pkgKSCL items for every seat
+OK   injection landed once in gemini's first verdict (continuation line "Premise 6: UNEXHIBITED")
+OK   fired: pkgKSCL code raises 0 E-KSC items (it reads the label line only), pkgCLR code raises exactly 1, for gemini ( | gemini)
+     item: {"sid":"S22","rule":"E-KSC","item":"KEYSTONE D6 on LINK 6 UNEXHIBITED","line":"KEYSTONE: D6 -- STANDS","reason":"KEYSTONE CONSISTENCY (pkgKSC, Commitment 15): KEYSTONE D6 STANDS while the same verdict's CONCEDED LINKS counts Premise 6 = LINK 6 ([DR2] list) UNEXHIBITED: \"CONCEDED LINKS: 1 (+1 line)\"","ecl":null,"und":null,"abs":null,"pab":null,"mnp":null,"imp":null,"ksc":{"n":6,"tag":"UNEXHIBITED","via":"Premise 6 =
+OK   fired: the item names KEYSTONE D6 and Premise 6 = LINK 6 UNEXHIBITED
+OK   fired: the other seats' items are unchanged
+OK   Send Back Record as run (pkgCLR code): drv_uncured {"gemini":0,"chatgpt":0,"sol":0}, no AUDIT v48 line
+OK   KEEP: gemini drv_uncured +1, others unchanged {"gemini":1,"chatgpt":0,"sol":0}
+     [AUDIT v48: KEYSTONE CONSISTENCY UNCURED (pkgKSC, Commitment 15) -- SEAT: gemini; ITEMS: S22 (E-KSC KEYSTONE D6 on LINK 6 UNEXHIBITED: a KEEP does not cure a keystone that stands on a link the same verdict counts UNEXHIBITED (pkgKSC, Commitment 15)); counted in drv_uncured. REVIEW THIS ROW.]
+OK   CHANGE TO a count line that no longer counts Premise 6: CURED, drv_uncured unchanged {"gemini":0,"chatgpt":0,"sol":0}
+OK   CHANGE TO a count line that still counts Premise 6 (= LINK 6 by [DR2]): UNCURED, gemini +1 {"gemini":1,"chatgpt":0,"sol":0}
+     [AUDIT v48: KEYSTONE CONSISTENCY UNCURED (pkgKSC, Commitment 15) -- SEAT: gemini; ITEMS: S22 (E-KSC KEYSTONE D6 on LINK 6 UNEXHIBITED: the CONCEDED LINKS line still counts Premise 6 = LINK 6 ([DR2]
+OK   CHANGE TO KEYSTONE D6 WITHDRAWN: CURED, drv_uncured unchanged {"gemini":0,"chatgpt":0,"sol":0}
+OK   33175 gemini  : pkgKSCL D6 Premise 6 = LINK 6 ([DR2] list) UNEXHIBITED | pkgCLR D6 Premise 6 = LINK 6 ([DR2] list) UNEXHIBITED
+OK   33175 chatgpt : pkgKSCL quiet | pkgCLR quiet
+OK   33175 sol     : pkgKSCL quiet | pkgCLR quiet
+OK   33175 single  : pkgKSCL D6 LINK 6 UNEXHIBITED | pkgCLR D6 LINK 6 UNEXHIBITED
+OK   33197 gemini  : pkgKSCL quiet | pkgCLR quiet
+OK   33197 chatgpt : pkgKSCL quiet | pkgCLR quiet
+OK   33197 sol     : pkgKSCL quiet | pkgCLR quiet
+OK   33197 single  : pkgKSCL D5 Premise 6 = LINK 5 ([DR2] list) UNEXHIBITED | pkgCLR D5 Premise 6 = LINK 5 ([DR2] list) UNEXHIBITED
+OK   33218 gemini  : pkgKSCL quiet | pkgCLR quiet
+OK   33218 chatgpt : pkgKSCL quiet | pkgCLR quiet
+OK   33218 sol     : pkgKSCL quiet | pkgCLR quiet
+OK   33218 single  : pkgKSCL quiet | pkgCLR quiet
+OK   201 stored judgments: pkgKSCL 17 hits, pkgCLR 23; lost none (none); added = the 6 hand-checked true breaches (29199 grok, 30268 gemini, 31360 qwen, 32905 gemini, 33014 gemini, 33040 grok)
+24 OK, 0 FAIL
