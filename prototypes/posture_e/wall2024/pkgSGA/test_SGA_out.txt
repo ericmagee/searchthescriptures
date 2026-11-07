@@ -1,0 +1,32 @@
+OK   6 nodes; base and final shas match the files
+OK   sbApply2024 is the same in all 6 patched nodes
+OK   outside sbApply2024 every node equals its base
+OK   33218 chatgpt: base NOT APPLIED ["S20","S21"]; pkgSGA none
+OK   33218 chatgpt: items other than these are the same
+OK   33218 chatgpt: counts and result unchanged (UNDERDETERMINED)
+     chatgpt CHALLENGER CONCEDED LINKS after: CHALLENGER CONCEDED LINKS: 0 -- Premises 1, 3, 4 and 5 are spared: their quotations occur in [DR2] and their blocks exhibit [L1] and [L3] footing. Premise 2 is NOT VOID and is spared: its connective reading is exhibited and its proven presses receive answers. Premise 6 is NOT VOID and is spared in its narrowed form: its block exhibits the named household and answers the proven presses.
+OK   33218 chatgpt: the CHALLENGER CONCEDED LINKS line keeps its label and premises 1, 3, 4, 5, and takes S25 (premise 2) and S26 (premise 6) as sentences (base: S26 alone, label lost)
+     APPLIED: S1, S2, S3, S4, S5, S6, S7, S8, S9, S10, S11, S12, S13, S14, S15, S16, S17, S18, S19, S26, S22, S27; S26 replaces S20, S21, S25 on the same line (the last change wins); ORIGINAL: HELD, DEFENSE PROP-DEPENDENT 2, CHALLENGE SELF-SUPPORTED 0, RESULT UNDERDETERMINED; DERIVED: HELD (HELD-1), DEFE
+OK   33218 sol: base NOT APPLIED ["S18","S19"]; pkgSGA none
+OK   33218 sol: items other than these are the same
+OK   33218 sol: counts and result unchanged (UNDERDETERMINED)
+     sol CHALLENGER CONCEDED LINKS after: CHALLENGER CONCEDED LINKS: 0 -- Premises 1 through 6 are spared as supported; premise 6 is assessed in its narrowed household form, not voided through its props description.
+OK   33218 sol: S20/S21 (E-PREM, whole line) win over S18/S19, recorded as replaces; the line is S21's
+     APPLIED: S2, S3, S4, S5, S6, S7, S8, S9, S10, S11, S12, S13, S14, S15, S16, S17, S21, S22, S23, S24, S25, S26, S27, S28, S29, S30; S21 replaces S18, S19, S20 on the same line (the last change wins); ORIGINAL: HELD, DEFENSE SELF-SUPPORTED 0, CHALLENGE SELF-SUPPORTED 0, RESULT UNDERDETERMINED; DERIVED
+OK   U1 a sentence change is applied inside its line
+OK   U2 a flagged text under 30 characters is not applied inside a line (NOT APPLIED, as base)
+OK   U3 a change with its own line label is not put inside the sentence
+OK   U4 a sentence found in two lines: NOT APPLIED, as base
+OK   U5 two changes in one line: the second, whose text the first removed, is recorded as replaced, no item
+     [AUDIT v37: SEND-BACK APPLIED (E-APPLY; WALL-2024 2236, 2237) -- SEAT: u; APPLIED: S1; S1 replaces S2 on the same line (the last change wins); ORIGINAL: HELD, DEFENSE SELF-SUPPORTED 0, CHALLENGE SELF-SUPPORTED 0, RESULT UNDERDETERMINED; DERIVED: HELD (HELD-1), DEFENSE SELF-SUPPORTED 0, CHALLENGE SEL
+OK   U6 whole-line change first, sentence change second: the whole line stands, S2 recorded as replaced
+  REPLAY: 474 stored S and G answers; seats whose output changed:
+   33040 gemini: items no longer raised [], new ["S4"]; result UNDERDETERMINED -> UNDERDETERMINED; fields same
+   33129 gemini: items no longer raised ["S5"], new []; result UNDERDETERMINED -> UNDERDETERMINED; fields same
+   33129 chatgpt: items no longer raised ["S8","S9"], new []; result UNDERDETERMINED -> UNDERDETERMINED; fields same
+   33149 gemini: items no longer raised [], new ["S17","S18","S19","S20"]; result DEFENDER WINS -> DEFENDER WINS; fields same
+   33218 chatgpt: items no longer raised ["S20","S21"], new []; result UNDERDETERMINED -> UNDERDETERMINED; fields same
+   33218 sol: items no longer raised ["S18","S19"], new []; result UNDERDETERMINED -> UNDERDETERMINED; fields same
+OK   replay: exactly the 6 expected seats change, no result or field changes anywhere
+OK   33149 gemini: base lost both count labels (no CONCEDED LINKS and no CHALLENGER CONCEDED LINKS line left); pkgSGA keeps both and refuses S17-S20 to the gate
+19 OK, 0 FAIL
