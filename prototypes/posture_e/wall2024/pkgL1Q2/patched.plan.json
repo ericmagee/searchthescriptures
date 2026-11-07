@@ -1,0 +1,187 @@
+{
+ "source": "W2 pkgL1Q2 (W3 2896: KJV check reads single-quoted quotes)",
+ "nodes": [
+  {
+   "name": "Extract Independent Verdict",
+   "file": "Extract_Independent_Verdict.js",
+   "base": "live s45",
+   "base_sha": "ac8c201f4dac",
+   "final_sha": "9541bfb5a549"
+  },
+  {
+   "name": "Panel Payloads",
+   "file": "Panel_Payloads.js",
+   "base": "live s45",
+   "base_sha": "e1873cc4002f",
+   "final_sha": "36bac2d00ce5"
+  },
+  {
+   "name": "Cure Build",
+   "file": "Cure_Build.js",
+   "base": "pkgL1Q/patched",
+   "base_sha": "29fe3f701167",
+   "final_sha": "25e3b34f217b"
+  },
+  {
+   "name": "Cure Normalize",
+   "file": "Cure_Normalize.js",
+   "base": "pkgL1Q/patched",
+   "base_sha": "e780e832e555",
+   "final_sha": "9a0f59429bbd"
+  },
+  {
+   "name": "Cure Check",
+   "file": "Cure_Check.js",
+   "base": "pkgL1Q/patched",
+   "base_sha": "e274d75314c7",
+   "final_sha": "d5f8d4da4ce8"
+  },
+  {
+   "name": "Panel Cure Build 1",
+   "file": "Panel_Cure_Build_1.js",
+   "base": "pkgL1Q/patched",
+   "base_sha": "75d2530f3d56",
+   "final_sha": "89e84a1a6ccf"
+  },
+  {
+   "name": "Panel Cure Normalize 1",
+   "file": "Panel_Cure_Normalize_1.js",
+   "base": "pkgL1Q/patched",
+   "base_sha": "bdbf0260341a",
+   "final_sha": "aa06bafc1417"
+  },
+  {
+   "name": "Panel Cure Build 2",
+   "file": "Panel_Cure_Build_2.js",
+   "base": "pkgL1Q/patched",
+   "base_sha": "859d0530c1d6",
+   "final_sha": "f32938238510"
+  },
+  {
+   "name": "Panel Cure Normalize 2",
+   "file": "Panel_Cure_Normalize_2.js",
+   "base": "pkgL1Q/patched",
+   "base_sha": "11dfa265dc03",
+   "final_sha": "1be7edc812ec"
+  },
+  {
+   "name": "Panel Cure Build 3",
+   "file": "Panel_Cure_Build_3.js",
+   "base": "pkgL1Q/patched",
+   "base_sha": "d428731e209b",
+   "final_sha": "5946f060f6b0"
+  },
+  {
+   "name": "Panel Cure Normalize 3",
+   "file": "Panel_Cure_Normalize_3.js",
+   "base": "pkgL1Q/patched",
+   "base_sha": "9b69a2035f71",
+   "final_sha": "71c77c4d356a"
+  },
+  {
+   "name": "Panel Cure Check",
+   "file": "Panel_Cure_Check.js",
+   "base": "pkgL1Q/patched",
+   "base_sha": "1c858f7e25c8",
+   "final_sha": "c6748be71fd3"
+  },
+  {
+   "name": "Alternate Build",
+   "file": "Alternate_Build.js",
+   "base": "pkgL1Q/patched",
+   "base_sha": "2342c2b3005e",
+   "final_sha": "dee52b7d9a5c"
+  },
+  {
+   "name": "Alternate Payloads",
+   "file": "Alternate_Payloads.js",
+   "base": "live s45",
+   "base_sha": "57a39ec9c186",
+   "final_sha": "a06b2b5a1af5"
+  },
+  {
+   "name": "Alternate Cure Build",
+   "file": "Alternate_Cure_Build.js",
+   "base": "pkgL1Q/patched",
+   "base_sha": "35a6092694f9",
+   "final_sha": "b4758a99181d"
+  },
+  {
+   "name": "Alternate Cure Normalize",
+   "file": "Alternate_Cure_Normalize.js",
+   "base": "pkgL1Q/patched",
+   "base_sha": "1021a2be8d95",
+   "final_sha": "73fa90415e5a"
+  },
+  {
+   "name": "Alternate Merge Seat",
+   "file": "Alternate_Merge_Seat.js",
+   "base": "pkgDEC/patched",
+   "base_sha": "8a668a338a2a",
+   "final_sha": "018699c46e35"
+  },
+  {
+   "name": "Gate Build",
+   "file": "Gate_Build.js",
+   "base": "pkgL1Q/patched",
+   "base_sha": "ea2704372371",
+   "final_sha": "91fc565786eb"
+  },
+  {
+   "name": "Gate Record",
+   "file": "Gate_Record.js",
+   "base": "pkgL1Q/patched",
+   "base_sha": "24f4c3437475",
+   "final_sha": "2b86f8d6f85e"
+  },
+  {
+   "name": "Alt Gate Build",
+   "file": "Alt_Gate_Build.js",
+   "base": "pkgL1Q/patched",
+   "base_sha": "7712982d215f",
+   "final_sha": "9182fd3c4ffd"
+  },
+  {
+   "name": "Alt Gate Record",
+   "file": "Alt_Gate_Record.js",
+   "base": "pkgL1Q/patched",
+   "base_sha": "3c24514d9537",
+   "final_sha": "9550c47f21fb"
+  },
+  {
+   "name": "Alternate Merge",
+   "file": "Alternate_Merge.js",
+   "base": "pkgL1Q/patched",
+   "base_sha": "823c1e6d23ba",
+   "final_sha": "8f40f58a228e"
+  },
+  {
+   "name": "Send Back Build",
+   "file": "Send_Back_Build.js",
+   "base": "pkgEB7/patched_full",
+   "base_sha": "b0a7604f6217",
+   "final_sha": "1d9e72a036dc"
+  },
+  {
+   "name": "Send Back Record",
+   "file": "Send_Back_Record.js",
+   "base": "pkgEB7/patched_full",
+   "base_sha": "31f9ac2c4181",
+   "final_sha": "562e97560805"
+  },
+  {
+   "name": "Alt Send Back Build",
+   "file": "Alt_Send_Back_Build.js",
+   "base": "pkgEB7/patched_full",
+   "base_sha": "bd7c5109d7d1",
+   "final_sha": "79715b71f0af"
+  },
+  {
+   "name": "Alt Send Back Record",
+   "file": "Alt_Send_Back_Record.js",
+   "base": "pkgEB7/patched_full",
+   "base_sha": "6b1cf152b6f4",
+   "final_sha": "63b26d9c5791"
+  }
+ ]
+}
