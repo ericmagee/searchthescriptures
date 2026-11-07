@@ -1,0 +1,35 @@
+note 33040 Gate Record: base gate field differs from saved live (harness)
+note 33040 Alt Gate Record: base gate field differs from saved live (harness)
+note 33060 Gate Record: base gate field differs from saved live (harness)
+note 33060 Alt Gate Record: base gate field differs from saved live (harness)
+note 33083 Gate Record: base gate field differs from saved live (harness)
+note 33083 Alt Gate Record: base gate field differs from saved live (harness)
+note 33107 Gate Record: base gate field differs from saved live (harness)
+note 33107 Alt Gate Record: base gate field differs from saved live (harness)
+note 33129 Gate Record: base gate field differs from saved live (harness)
+note 33129 Alt Gate Record: base gate field differs from saved live (harness)
+note 33149 Gate Record: base gate field differs from saved live (harness)
+note 33149 Alt Gate Record: base gate field differs from saved live (harness)
+note 33160 Gate Record: base gate field differs from saved live (harness)
+note 33160 Alt Gate Record: base gate field differs from saved live (harness)
+note 33197 Gate Record: base gate field differs from saved live (harness)
+note 33197 Alt Gate Record: base gate field differs from saved live (harness)
+note 33218 Gate Record: base gate field differs from saved live (harness)
+note 33222 Gate Record: base gate field differs from saved live (harness)
+note 33222 Alt Gate Record: base gate field differs from saved live (harness)
+note 33249 Gate Record: base gate field differs from saved live (harness)
+note 33261 Gate Record: base gate field differs from saved live (harness)
+note 33276 Gate Record: base gate field differs from saved live (harness)
+note 33276 Alt Gate Record: base gate field differs from saved live (harness)
+note 33289 Gate Record: base gate field differs from saved live (harness)
+note 33289 Alt Gate Record: base gate field differs from saved live (harness)
+note 33299 Gate Record: base gate field differs from saved live (harness)
+note 33311 Gate Record: base gate field differs from saved live (harness)
+note 33311 Alt Gate Record: base gate field differs from saved live (harness)
+note 33322 Gate Record: base gate field differs from saved live (harness)
+CHANGED 33442 Gate Record
+  base gate {"skipped":false,"calls":2,"seats":[{"seat":"gemini","items":1,"cured":1,"uncured_counted":0,"fresh":0,"error":null},{"seat":"chatgpt","items":1,"cured":0,"uncured_counted":1,"fresh":1,"error":null}],"report":[{"seat":"gemini","items":[{"gid":"G1","kind":"RESULT DIFFERS","src":"E-APPLY S12","live":true,"why":"the judge wrote RESULT: DEFENDER WINS; the result derived from its corrected lines is UND
+  KG1L gate {"skipped":false,"calls":2,"seats":[{"seat":"gemini","items":1,"cured":1,"uncured_counted":0,"fresh":0,"error":null},{"seat":"chatgpt","items":1,"cured":1,"uncured_counted":0,"fresh":1,"error":null}],"report":[{"seat":"gemini","items":[{"gid":"G1","kind":"RESULT DIFFERS","src":"E-APPLY S12","live":true,"why":"the judge wrote RESULT: DEFENDER WINS; the result derived from its corrected lines is UND
+  KG1L K-G1 item: "kind":"RULE K-G1","src":"K re-read","key":"RULE|K-G1|CHALLENGER|D1 VS C3","why":"DEBATE RULE VIOLATION (K-G1) -- D1 vs C3 CHALLENGER LINK BROKEN rests on a witness left unanswered (a witness is a verse a listed premise carries under PRESSED WITH, ruling 392) while CHALLENGER CONCEDED LINKS is 0.","lines":["D1 vs C3 (Luke 2:5): CHALLENGER LINK BROKEN (Commitment 5) -- The proven press was left unanswered on the distinction between the title and a coming together. GROUND: [L1]
+23 runs, 45 gate pairs; unchanged 44, changed 1; base equals saved live gate field 16/45
+EXIT 0
