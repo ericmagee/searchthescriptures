@@ -1,0 +1,20 @@
+{
+ "nodes": [
+  {
+   "name": "Init Seats",
+   "base": "pkgGRA/base/Init_Seats.js",
+   "out": "pkgGRA/patched/Init_Seats.js",
+   "base_sha": "5251c79619e13485",
+   "final_sha": "deb4e359a96fda0f",
+   "edits": 1
+  },
+  {
+   "name": "Init Seats",
+   "base": "pkgJFL/patched/Init_Seats.js",
+   "out": "pkgGRA/patched_on_JFL/Init_Seats.js",
+   "base_sha": "d2f5b219d9039f89",
+   "final_sha": "717ed6aebedc7a04",
+   "edits": 1
+  }
+ ]
+}
