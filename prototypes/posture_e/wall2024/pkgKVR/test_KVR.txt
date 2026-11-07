@@ -1,0 +1,25 @@
+OK   A1 19 nodes; base and final shas hold
+OK   A2 every node is the base plus the one KVR insert
+OK   R0 33299 as run: chatgpt K-V premise 5 CURED by its STATEMENT, base and KVR alike :: CURED/CURED
+OK   R1 STATEMENT removed, RESPONSE alone carries the kind and the charge words: base UNCURED, KVR CURED by the response (the 33311 chatgpt case) :: UNCURED/CURED response quotes the charge words (Mary's word names the begetter) and names the kind
+OK   N1 RESPONSE quotes the charge words but names no kind: stays UNCURED :: UNCURED
+OK   N2 RESPONSE names the kind but quotes no charge words (both quotes taken out; thy father alone also passes, as it does on a STATEMENT, since it stands in the premise outside its quote): stays UNCURED :: UNCURED
+OK   P 33218 Panel Cure Check: output identical
+OK   P 33218 Alternate Merge Seat: output identical
+OK   P 33218 Gate Record: output identical
+OK   P 33222 Panel Cure Check: output identical
+OK   P 33222 Alternate Merge Seat: output identical
+OK   P 33222 Gate Record: output identical
+OK   P 33249 Panel Cure Check: output identical
+OK   P 33249 Alternate Merge Seat: output identical
+OK   P 33249 Gate Record: output identical
+OK   P 33261 Panel Cure Check: output identical
+OK   P 33261 Alternate Merge Seat: output identical
+OK   P 33261 Gate Record: output identical
+INFO 33289 Panel Cure Check not replayable: Cannot read properties of undefined (reading 'slice')
+INFO 33289 Alternate Merge Seat not replayable: Cannot read properties of undefined (reading 'slice')
+INFO 33289 Gate Record not replayable: Cannot read properties of undefined (reading 'slice')
+OK   P 33299 Panel Cure Check: output identical
+OK   P 33299 Alternate Merge Seat: output identical
+OK   P 33299 Gate Record: output identical
+21 OK, 0 FAIL

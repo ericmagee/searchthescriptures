@@ -1,0 +1,158 @@
+{
+ "source": "W2, run 33311 chatgpt K-V premise 3",
+ "base": "pkgPSN/patched_on_pkgCPD_patched_on_RXR > pkgCPD/patched_on_RXR > live 44e800f1-0171-48f8-b84f-d354123c84bc",
+ "nodes": [
+  {
+   "name": "Cure Build",
+   "file": "Cure_Build.js",
+   "base": "pkgCPD/patched_on_RXR",
+   "live_sha": "d4544dd9f11e",
+   "base_sha": "f02ba7bb7bb3",
+   "final_sha": "6b029e22ca9c"
+  },
+  {
+   "name": "Cure Normalize",
+   "file": "Cure_Normalize.js",
+   "base": "pkgCPD/patched_on_RXR",
+   "live_sha": "bfe1a16e5003",
+   "base_sha": "f3d3c3610715",
+   "final_sha": "27e672617021"
+  },
+  {
+   "name": "Cure Check",
+   "file": "Cure_Check.js",
+   "base": "pkgCPD/patched_on_RXR",
+   "live_sha": "6bc48cba2fd1",
+   "base_sha": "86953f3b972b",
+   "final_sha": "53a728ee442e"
+  },
+  {
+   "name": "Panel Cure Build 1",
+   "file": "Panel_Cure_Build_1.js",
+   "base": "pkgCPD/patched_on_RXR",
+   "live_sha": "22aacfa4d87a",
+   "base_sha": "63e636d886da",
+   "final_sha": "ff7b63ac7236"
+  },
+  {
+   "name": "Panel Cure Normalize 1",
+   "file": "Panel_Cure_Normalize_1.js",
+   "base": "pkgCPD/patched_on_RXR",
+   "live_sha": "354f0d22095e",
+   "base_sha": "837dc86ba602",
+   "final_sha": "f35b7ee7047a"
+  },
+  {
+   "name": "Panel Cure Build 2",
+   "file": "Panel_Cure_Build_2.js",
+   "base": "pkgCPD/patched_on_RXR",
+   "live_sha": "047d604097e7",
+   "base_sha": "7acc7e1c82f9",
+   "final_sha": "e46a8dea6fab"
+  },
+  {
+   "name": "Panel Cure Normalize 2",
+   "file": "Panel_Cure_Normalize_2.js",
+   "base": "pkgCPD/patched_on_RXR",
+   "live_sha": "50544ac79a98",
+   "base_sha": "38c33c412b99",
+   "final_sha": "513e694e1f56"
+  },
+  {
+   "name": "Panel Cure Build 3",
+   "file": "Panel_Cure_Build_3.js",
+   "base": "pkgCPD/patched_on_RXR",
+   "live_sha": "bca9dd066985",
+   "base_sha": "927d1c348f38",
+   "final_sha": "d6103b40acc3"
+  },
+  {
+   "name": "Panel Cure Normalize 3",
+   "file": "Panel_Cure_Normalize_3.js",
+   "base": "pkgCPD/patched_on_RXR",
+   "live_sha": "9351d39c3c7a",
+   "base_sha": "262c73f0e65b",
+   "final_sha": "4e96e1ba7758"
+  },
+  {
+   "name": "Panel Cure Check",
+   "file": "Panel_Cure_Check.js",
+   "base": "pkgCPD/patched_on_RXR",
+   "live_sha": "d51cebbee522",
+   "base_sha": "ded1cb9e8f7d",
+   "final_sha": "da66d056cc94"
+  },
+  {
+   "name": "Alternate Build",
+   "file": "Alternate_Build.js",
+   "base": "pkgCPD/patched_on_RXR",
+   "live_sha": "a15bd6f0dc7c",
+   "base_sha": "185ad5c3f1ac",
+   "final_sha": "d47ce268863d"
+  },
+  {
+   "name": "Alternate Cure Build",
+   "file": "Alternate_Cure_Build.js",
+   "base": "pkgCPD/patched_on_RXR",
+   "live_sha": "c720bc1ab6ed",
+   "base_sha": "b7198479b9dc",
+   "final_sha": "9b7789ac0121"
+  },
+  {
+   "name": "Alternate Cure Normalize",
+   "file": "Alternate_Cure_Normalize.js",
+   "base": "pkgCPD/patched_on_RXR",
+   "live_sha": "a7d9bacf622a",
+   "base_sha": "6d1ed1aabdc9",
+   "final_sha": "e4bcc9114b06"
+  },
+  {
+   "name": "Alternate Merge Seat",
+   "file": "Alternate_Merge_Seat.js",
+   "base": "pkgPSN/patched_on_pkgCPD_patched_on_RXR",
+   "live_sha": "3157b20911c7",
+   "base_sha": "b6e045e4e637",
+   "final_sha": "8662e99c5e43"
+  },
+  {
+   "name": "Gate Build",
+   "file": "Gate_Build.js",
+   "base": "pkgPSN/patched_on_pkgCPD_patched_on_RXR",
+   "live_sha": "7c6973e4b27d",
+   "base_sha": "d5c48766755e",
+   "final_sha": "461ca42604ec"
+  },
+  {
+   "name": "Gate Record",
+   "file": "Gate_Record.js",
+   "base": "pkgPSN/patched_on_pkgCPD_patched_on_RXR",
+   "live_sha": "92c91e87a1d2",
+   "base_sha": "e8d5ece78624",
+   "final_sha": "71b0eb909c57"
+  },
+  {
+   "name": "Alt Gate Build",
+   "file": "Alt_Gate_Build.js",
+   "base": "pkgPSN/patched_on_pkgCPD_patched_on_RXR",
+   "live_sha": "9b03cb388ca2",
+   "base_sha": "da90e725e232",
+   "final_sha": "47c5473b652e"
+  },
+  {
+   "name": "Alt Gate Record",
+   "file": "Alt_Gate_Record.js",
+   "base": "pkgPSN/patched_on_pkgCPD_patched_on_RXR",
+   "live_sha": "736cb7184c0c",
+   "base_sha": "457c7df3465a",
+   "final_sha": "5da6631cdb08"
+  },
+  {
+   "name": "Alternate Merge",
+   "file": "Alternate_Merge.js",
+   "base": "pkgPSN/patched_on_pkgCPD_patched_on_RXR",
+   "live_sha": "305e96e9dd60",
+   "base_sha": "a82197bacbc8",
+   "final_sha": "7b9ca7154bc7"
+  }
+ ]
+}
