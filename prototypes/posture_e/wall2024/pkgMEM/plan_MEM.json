@@ -1,0 +1,228 @@
+{
+ "source": "Eric approved 07:59 CST 11-07 (items 1 pkgDUP, 2 prompt dedupe)",
+ "base": "live ae5636d0-be69-450a-8b8f-153bef89ff3d",
+ "nodes": [
+  {
+   "name": "Cure Build",
+   "file": "Cure_Build.js",
+   "parts": [
+    "PRD"
+   ],
+   "base": "live",
+   "live_sha": "45c4fc38ca37",
+   "base_sha": "45c4fc38ca37",
+   "final_sha": "cffe6edd87b9"
+  },
+  {
+   "name": "Cure Normalize",
+   "file": "Cure_Normalize.js",
+   "parts": [
+    "PRD"
+   ],
+   "base": "live",
+   "live_sha": "fd163eac315e",
+   "base_sha": "fd163eac315e",
+   "final_sha": "ebecf524d69f"
+  },
+  {
+   "name": "Cure Check",
+   "file": "Cure_Check.js",
+   "parts": [
+    "PRD"
+   ],
+   "base": "live",
+   "live_sha": "629b84d09aee",
+   "base_sha": "629b84d09aee",
+   "final_sha": "f06cffe3f5b5"
+  },
+  {
+   "name": "Panel Cure Build 1",
+   "file": "Panel_Cure_Build_1.js",
+   "parts": [
+    "PRD"
+   ],
+   "base": "live",
+   "live_sha": "dedad05d7591",
+   "base_sha": "dedad05d7591",
+   "final_sha": "282e7b91cd97"
+  },
+  {
+   "name": "Panel Cure Normalize 1",
+   "file": "Panel_Cure_Normalize_1.js",
+   "parts": [
+    "PRD"
+   ],
+   "base": "live",
+   "live_sha": "40919910063a",
+   "base_sha": "40919910063a",
+   "final_sha": "5d656d5a1d00"
+  },
+  {
+   "name": "Panel Cure Build 2",
+   "file": "Panel_Cure_Build_2.js",
+   "parts": [
+    "PRD"
+   ],
+   "base": "live",
+   "live_sha": "9a3a689dd919",
+   "base_sha": "9a3a689dd919",
+   "final_sha": "65233543ffbf"
+  },
+  {
+   "name": "Panel Cure Normalize 2",
+   "file": "Panel_Cure_Normalize_2.js",
+   "parts": [
+    "PRD"
+   ],
+   "base": "live",
+   "live_sha": "fb1194625380",
+   "base_sha": "fb1194625380",
+   "final_sha": "6c4a42a8d752"
+  },
+  {
+   "name": "Panel Cure Build 3",
+   "file": "Panel_Cure_Build_3.js",
+   "parts": [
+    "PRD"
+   ],
+   "base": "live",
+   "live_sha": "7baafcb4ae82",
+   "base_sha": "7baafcb4ae82",
+   "final_sha": "f66788f32caf"
+  },
+  {
+   "name": "Panel Cure Normalize 3",
+   "file": "Panel_Cure_Normalize_3.js",
+   "parts": [
+    "PRD"
+   ],
+   "base": "live",
+   "live_sha": "0292b23c3ce1",
+   "base_sha": "0292b23c3ce1",
+   "final_sha": "2bfb7d8cdf4c"
+  },
+  {
+   "name": "Panel Cure Check",
+   "file": "Panel_Cure_Check.js",
+   "parts": [
+    "PRD"
+   ],
+   "base": "live",
+   "live_sha": "df56bf26dde9",
+   "base_sha": "df56bf26dde9",
+   "final_sha": "c8fa2477d3bb"
+  },
+  {
+   "name": "Alternate Build",
+   "file": "Alternate_Build.js",
+   "parts": [
+    "PRD"
+   ],
+   "base": "live",
+   "live_sha": "df5921466ae2",
+   "base_sha": "df5921466ae2",
+   "final_sha": "1f2af3aa385e"
+  },
+  {
+   "name": "Alternate Cure Build",
+   "file": "Alternate_Cure_Build.js",
+   "parts": [
+    "PRD"
+   ],
+   "base": "live",
+   "live_sha": "41e0adbc56ea",
+   "base_sha": "41e0adbc56ea",
+   "final_sha": "7d5fd831a95b"
+  },
+  {
+   "name": "Alternate Cure Normalize",
+   "file": "Alternate_Cure_Normalize.js",
+   "parts": [
+    "PRD"
+   ],
+   "base": "live",
+   "live_sha": "82a9d45e3769",
+   "base_sha": "82a9d45e3769",
+   "final_sha": "ae2ada314859"
+  },
+  {
+   "name": "Alternate Merge Seat",
+   "file": "Alternate_Merge_Seat.js",
+   "parts": [
+    "PRD",
+    "DUP"
+   ],
+   "base": "live",
+   "live_sha": "02c537bc33b4",
+   "base_sha": "02c537bc33b4",
+   "final_sha": "eeb63ecb9c23"
+  },
+  {
+   "name": "Gate Build",
+   "file": "Gate_Build.js",
+   "parts": [
+    "PRD"
+   ],
+   "base": "live",
+   "live_sha": "56acdb93c7fe",
+   "base_sha": "56acdb93c7fe",
+   "final_sha": "258ca9470127"
+  },
+  {
+   "name": "Gate Record",
+   "file": "Gate_Record.js",
+   "parts": [
+    "PRD"
+   ],
+   "base": "live",
+   "live_sha": "2a508b477bf0",
+   "base_sha": "2a508b477bf0",
+   "final_sha": "993cddf0428a"
+  },
+  {
+   "name": "Alt Gate Build",
+   "file": "Alt_Gate_Build.js",
+   "parts": [
+    "PRD"
+   ],
+   "base": "live",
+   "live_sha": "10f5ae1c8c4f",
+   "base_sha": "10f5ae1c8c4f",
+   "final_sha": "38b9e98c568e"
+  },
+  {
+   "name": "Alt Gate Record",
+   "file": "Alt_Gate_Record.js",
+   "parts": [
+    "PRD"
+   ],
+   "base": "live",
+   "live_sha": "22b8e6855ba9",
+   "base_sha": "22b8e6855ba9",
+   "final_sha": "14e42e93b9b1"
+  },
+  {
+   "name": "Alternate Merge",
+   "file": "Alternate_Merge.js",
+   "parts": [
+    "PRD",
+    "DUP"
+   ],
+   "base": "live",
+   "live_sha": "5d26c6e73a69",
+   "base_sha": "5d26c6e73a69",
+   "final_sha": "c1fa5b1bfd68"
+  },
+  {
+   "name": "Write Enforcer Log",
+   "file": "Write_Enforcer_Log.jsonBody.txt",
+   "parts": [
+    "DUP",
+    "PRD"
+   ],
+   "base": "live",
+   "live_sha": "6eb60b02f346",
+   "final_sha": "883e1a367690"
+  }
+ ]
+}

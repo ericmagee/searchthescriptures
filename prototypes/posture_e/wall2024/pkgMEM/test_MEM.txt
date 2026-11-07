@@ -1,0 +1,107 @@
+OK   A1 20 entries (19 enfRows nodes + Write Enforcer Log); every base is live ae5636d0; shas hold
+OK   A2 no patched node writes enforcer_log_body
+OK   R 33218 Cure Build: patched output, tokens expanded, equals base output (body dropped) :: 0.42 MB -> 0.42 MB
+OK   R 33218 Cure Normalize: patched output, tokens expanded, equals base output (body dropped) :: 0.00 MB -> 0.00 MB
+OK   R 33218 Cure Check: patched output, tokens expanded, equals base output (body dropped); 42 tokens :: 1.18 MB -> 0.49 MB
+OK   R 33218 Panel Cure Build 1: patched output, tokens expanded, equals base output (body dropped) :: 0.43 MB -> 0.43 MB
+OK   R 33218 Panel Cure Normalize 1: patched output, tokens expanded, equals base output (body dropped) :: 0.00 MB -> 0.00 MB
+OK   R 33218 Panel Cure Build 2: patched output, tokens expanded, equals base output (body dropped) :: 0.43 MB -> 0.43 MB
+OK   R 33218 Panel Cure Normalize 2: patched output, tokens expanded, equals base output (body dropped) :: 0.00 MB -> 0.00 MB
+OK   R 33218 Panel Cure Build 3: patched output, tokens expanded, equals base output (body dropped) :: 0.44 MB -> 0.44 MB
+OK   R 33218 Panel Cure Normalize 3: patched output, tokens expanded, equals base output (body dropped) :: 0.00 MB -> 0.00 MB
+OK   R 33218 Panel Cure Check: patched output, tokens expanded, equals base output (body dropped); 172 tokens :: 3.77 MB -> 0.39 MB
+INFO 33218 Alternate Build not replayable: await is not defined
+INFO 33218 Alternate Cure Build not replayable: Referenced node is unexecuted: Alternate Payloads
+OK   R 33218 Alternate Cure Normalize: patched output, tokens expanded, equals base output (body dropped) :: 0.00 MB -> 0.00 MB
+OK   R 33218 Alternate Merge Seat: patched output, tokens expanded, equals base output (body dropped) :: 10.54 MB -> 5.40 MB
+OK   R 33218 Gate Build: patched output, tokens expanded, equals base output (body dropped) :: 0.00 MB -> 0.00 MB
+OK   R 33218 Gate Record: patched output, tokens expanded, equals base output (body dropped) :: 4.71 MB -> 4.71 MB
+OK   R 33218 Alt Gate Build: patched output, tokens expanded, equals base output (body dropped) :: 0.00 MB -> 0.00 MB
+OK   R 33218 Alt Gate Record: patched output, tokens expanded, equals base output (body dropped) :: 0.14 MB -> 0.14 MB
+OK   R 33218 Alternate Merge (base fed the replayed base Seat, patched fed the patched Seat): patched output, tokens expanded, equals base output (body dropped) :: 10.54 MB -> 5.40 MB
+OK   R 33222 Cure Build: patched output, tokens expanded, equals base output (body dropped) :: 0.45 MB -> 0.45 MB
+OK   R 33222 Cure Normalize: patched output, tokens expanded, equals base output (body dropped) :: 0.00 MB -> 0.00 MB
+OK   R 33222 Cure Check: patched output, tokens expanded, equals base output (body dropped); 54 tokens :: 1.66 MB -> 0.53 MB
+OK   R 33222 Panel Cure Build 1: patched output, tokens expanded, equals base output (body dropped) :: 0.46 MB -> 0.46 MB
+OK   R 33222 Panel Cure Normalize 1: patched output, tokens expanded, equals base output (body dropped) :: 0.00 MB -> 0.00 MB
+OK   R 33222 Panel Cure Build 2: patched output, tokens expanded, equals base output (body dropped) :: 0.43 MB -> 0.43 MB
+OK   R 33222 Panel Cure Normalize 2: patched output, tokens expanded, equals base output (body dropped) :: 0.00 MB -> 0.00 MB
+OK   R 33222 Panel Cure Build 3: patched output, tokens expanded, equals base output (body dropped) :: 0.45 MB -> 0.45 MB
+OK   R 33222 Panel Cure Normalize 3: patched output, tokens expanded, equals base output (body dropped) :: 0.00 MB -> 0.00 MB
+OK   R 33222 Panel Cure Check: patched output, tokens expanded, equals base output (body dropped); 168 tokens :: 3.90 MB -> 0.40 MB
+INFO 33222 Alternate Build not replayable: await is not defined
+OK   R 33222 Alternate Cure Build: patched output, tokens expanded, equals base output (body dropped) :: 0.45 MB -> 0.45 MB
+OK   R 33222 Alternate Cure Normalize: patched output, tokens expanded, equals base output (body dropped) :: 0.20 MB -> 0.20 MB
+OK   R 33222 Alternate Merge Seat: patched output, tokens expanded, equals base output (body dropped); 66 tokens :: 15.01 MB -> 6.22 MB
+OK   R 33222 Gate Build: patched output, tokens expanded, equals base output (body dropped) :: 0.60 MB -> 0.60 MB
+OK   R 33222 Gate Record: patched output, tokens expanded, equals base output (body dropped) :: 4.89 MB -> 4.89 MB
+OK   R 33222 Alt Gate Build: patched output, tokens expanded, equals base output (body dropped) :: 0.33 MB -> 0.33 MB
+OK   R 33222 Alt Gate Record: patched output, tokens expanded, equals base output (body dropped) :: 0.78 MB -> 0.78 MB
+OK   R 33222 Alternate Merge (base fed the replayed base Seat, patched fed the patched Seat): patched output, tokens expanded, equals base output (body dropped); 66 tokens :: 15.64 MB -> 6.54 MB
+OK   R 33249 Cure Build: patched output, tokens expanded, equals base output (body dropped) :: 0.44 MB -> 0.44 MB
+OK   R 33249 Cure Normalize: patched output, tokens expanded, equals base output (body dropped) :: 0.00 MB -> 0.00 MB
+OK   R 33249 Cure Check: patched output, tokens expanded, equals base output (body dropped); 32 tokens :: 1.16 MB -> 0.52 MB
+OK   R 33249 Panel Cure Build 1: patched output, tokens expanded, equals base output (body dropped) :: 0.42 MB -> 0.42 MB
+OK   R 33249 Panel Cure Normalize 1: patched output, tokens expanded, equals base output (body dropped) :: 0.00 MB -> 0.00 MB
+OK   R 33249 Panel Cure Build 2: patched output, tokens expanded, equals base output (body dropped) :: 0.43 MB -> 0.43 MB
+OK   R 33249 Panel Cure Normalize 2: patched output, tokens expanded, equals base output (body dropped) :: 0.00 MB -> 0.00 MB
+OK   R 33249 Panel Cure Build 3: patched output, tokens expanded, equals base output (body dropped) :: 0.45 MB -> 0.45 MB
+OK   R 33249 Panel Cure Normalize 3: patched output, tokens expanded, equals base output (body dropped) :: 0.00 MB -> 0.00 MB
+OK   R 33249 Panel Cure Check: patched output, tokens expanded, equals base output (body dropped); 102 tokens :: 2.05 MB -> 0.32 MB
+INFO 33249 Alternate Build not replayable: await is not defined
+OK   R 33249 Alternate Cure Build: patched output, tokens expanded, equals base output (body dropped) :: 0.46 MB -> 0.46 MB
+OK   R 33249 Alternate Cure Normalize: patched output, tokens expanded, equals base output (body dropped) :: 0.20 MB -> 0.20 MB
+OK   R 33249 Alternate Merge Seat: patched output, tokens expanded, equals base output (body dropped); 52 tokens :: 9.90 MB -> 3.84 MB
+OK   R 33249 Gate Build: patched output, tokens expanded, equals base output (body dropped) :: 0.66 MB -> 0.66 MB
+OK   R 33249 Gate Record: patched output, tokens expanded, equals base output (body dropped) :: 2.96 MB -> 2.96 MB
+OK   R 33249 Alt Gate Build: patched output, tokens expanded, equals base output (body dropped) :: 0.00 MB -> 0.00 MB
+OK   R 33249 Alt Gate Record: patched output, tokens expanded, equals base output (body dropped) :: 0.72 MB -> 0.72 MB
+OK   R 33249 Alternate Merge (base fed the replayed base Seat, patched fed the patched Seat): patched output, tokens expanded, equals base output (body dropped); 52 tokens :: 10.44 MB -> 4.11 MB
+OK   R 33261 Cure Build: patched output, tokens expanded, equals base output (body dropped) :: 0.47 MB -> 0.47 MB
+OK   R 33261 Cure Normalize: patched output, tokens expanded, equals base output (body dropped) :: 0.00 MB -> 0.00 MB
+OK   R 33261 Cure Check: patched output, tokens expanded, equals base output (body dropped); 40 tokens :: 1.41 MB -> 0.55 MB
+OK   R 33261 Panel Cure Build 1: patched output, tokens expanded, equals base output (body dropped) :: 0.48 MB -> 0.48 MB
+OK   R 33261 Panel Cure Normalize 1: patched output, tokens expanded, equals base output (body dropped) :: 0.00 MB -> 0.00 MB
+OK   R 33261 Panel Cure Build 2: patched output, tokens expanded, equals base output (body dropped) :: 0.46 MB -> 0.46 MB
+OK   R 33261 Panel Cure Normalize 2: patched output, tokens expanded, equals base output (body dropped) :: 0.00 MB -> 0.00 MB
+OK   R 33261 Panel Cure Build 3: patched output, tokens expanded, equals base output (body dropped) :: 0.48 MB -> 0.48 MB
+OK   R 33261 Panel Cure Normalize 3: patched output, tokens expanded, equals base output (body dropped) :: 0.00 MB -> 0.00 MB
+OK   R 33261 Panel Cure Check: patched output, tokens expanded, equals base output (body dropped); 116 tokens :: 2.77 MB -> 0.38 MB
+INFO 33261 Alternate Build not replayable: await is not defined
+OK   R 33261 Alternate Cure Build: patched output, tokens expanded, equals base output (body dropped) :: 0.47 MB -> 0.47 MB
+OK   R 33261 Alternate Cure Normalize: patched output, tokens expanded, equals base output (body dropped) :: 0.20 MB -> 0.20 MB
+OK   R 33261 Alternate Merge Seat: patched output, tokens expanded, equals base output (body dropped); 40 tokens :: 10.86 MB -> 4.88 MB
+OK   R 33261 Gate Build: patched output, tokens expanded, equals base output (body dropped) :: 0.67 MB -> 0.67 MB
+OK   R 33261 Gate Record: patched output, tokens expanded, equals base output (body dropped) :: 3.84 MB -> 3.84 MB
+OK   R 33261 Alt Gate Build: patched output, tokens expanded, equals base output (body dropped) :: 0.00 MB -> 0.00 MB
+OK   R 33261 Alt Gate Record: patched output, tokens expanded, equals base output (body dropped) :: 0.68 MB -> 0.68 MB
+OK   R 33261 Alternate Merge (base fed the replayed base Seat, patched fed the patched Seat): patched output, tokens expanded, equals base output (body dropped); 40 tokens :: 11.30 MB -> 5.10 MB
+OK   R 33299 Cure Build: patched output, tokens expanded, equals base output (body dropped) :: 0.41 MB -> 0.41 MB
+OK   R 33299 Cure Normalize: patched output, tokens expanded, equals base output (body dropped) :: 0.00 MB -> 0.00 MB
+OK   R 33299 Cure Check: patched output, tokens expanded, equals base output (body dropped); 44 tokens :: 1.22 MB -> 0.48 MB
+OK   R 33299 Panel Cure Build 1: patched output, tokens expanded, equals base output (body dropped) :: 0.42 MB -> 0.42 MB
+OK   R 33299 Panel Cure Normalize 1: patched output, tokens expanded, equals base output (body dropped) :: 0.00 MB -> 0.00 MB
+OK   R 33299 Panel Cure Build 2: patched output, tokens expanded, equals base output (body dropped) :: 0.42 MB -> 0.42 MB
+OK   R 33299 Panel Cure Normalize 2: patched output, tokens expanded, equals base output (body dropped) :: 0.00 MB -> 0.00 MB
+OK   R 33299 Panel Cure Build 3: patched output, tokens expanded, equals base output (body dropped) :: 0.43 MB -> 0.43 MB
+OK   R 33299 Panel Cure Normalize 3: patched output, tokens expanded, equals base output (body dropped) :: 0.00 MB -> 0.00 MB
+OK   R 33299 Panel Cure Check: patched output, tokens expanded, equals base output (body dropped); 106 tokens :: 2.21 MB -> 0.34 MB
+INFO 33299 Alternate Build not replayable: await is not defined
+OK   R 33299 Alternate Cure Build: patched output, tokens expanded, equals base output (body dropped) :: 0.43 MB -> 0.43 MB
+OK   R 33299 Alternate Cure Normalize: patched output, tokens expanded, equals base output (body dropped) :: 0.18 MB -> 0.18 MB
+OK   R 33299 Alternate Merge Seat: patched output, tokens expanded, equals base output (body dropped); 46 tokens :: 9.28 MB -> 3.88 MB
+OK   R 33299 Gate Build: patched output, tokens expanded, equals base output (body dropped) :: 0.30 MB -> 0.30 MB
+OK   R 33299 Gate Record: patched output, tokens expanded, equals base output (body dropped) :: 2.98 MB -> 2.98 MB
+OK   R 33299 Alt Gate Build: patched output, tokens expanded, equals base output (body dropped) :: 0.28 MB -> 0.28 MB
+OK   R 33299 Alt Gate Record: patched output, tokens expanded, equals base output (body dropped) :: 0.61 MB -> 0.61 MB
+OK   R 33299 Alternate Merge (base fed the replayed base Seat, patched fed the patched Seat): patched output, tokens expanded, equals base output (body dropped); 46 tokens :: 9.67 MB -> 4.08 MB
+OK   R* every token resolves inside its own array :: 1284 tokens
+OK   W 33218 Write Enforcer Log body: new expression gives the same bytes as today (no body carried; and with 214 tokens) :: 1.10 MB sent; carried log 5.15 MB -> 1.09 MB, body 5.15 MB -> 0
+OK   W 33222 Write Enforcer Log body: new expression gives the same bytes as today (no body carried; and with 288 tokens) :: 1.61 MB sent; carried log 7.66 MB -> 1.59 MB, body 7.66 MB -> 0
+OK   W 33249 Write Enforcer Log body: new expression gives the same bytes as today (no body carried; and with 186 tokens) :: 1.46 MB sent; carried log 5.07 MB -> 1.44 MB, body 5.07 MB -> 0
+OK   W 33261 Write Enforcer Log body: new expression gives the same bytes as today (no body carried; and with 196 tokens) :: 1.55 MB sent; carried log 5.49 MB -> 1.54 MB, body 5.49 MB -> 0
+OK   W 33299 Write Enforcer Log body: new expression gives the same bytes as today (no body carried; and with 196 tokens) :: 1.21 MB sent; carried log 4.70 MB -> 1.19 MB, body 4.70 MB -> 0
+OK   N1 a token with no full text in its array is left unresolved (and counted)
+OK   N2 under 2000 chars is never tokenized; at 2000 it is
+TOTAL node outputs replayed: 171.1 MB -> 90.4 MB
+99 OK, 0 FAIL
