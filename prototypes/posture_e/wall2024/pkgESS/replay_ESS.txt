@@ -1,0 +1,36 @@
+OK   33040 main: base 0 halves, patched 0
+SKIP 33040 Alt  Referenced node is unexecuted: Alt Judge Enforcer Build
+OK   33060 main: base 4 halves, patched 4
+OK   33083 main: base 0 halves, patched 0
+OK   33107 main: base 0 halves, patched 0
+OK   33129 main: base 0 halves, patched 0
+OK   33149 main: base 0 halves, patched 0
+OK   33160 main: base 2 halves, patched 2
+OK   33197 main: base 0 halves, patched 0
+OK   33218 main: base 0 halves, patched 0
+OK   33222 main: base 2 halves, patched 2
+OK   33222 Alt: base 0 halves, patched 0
+OK   33249 main: base 0 halves, patched 0
+OK   33249 Alt: base 0 halves, patched 0
+OK   33261 main: base 0 halves, patched 0
+OK   33261 Alt: base 0 halves, patched 0
+OK   33276 main: base 0 halves, patched 0
+OK   33276 Alt: base 0 halves, patched 0
+OK   33289 main: base 0 halves, patched 0
+OK   33289 Alt: base 0 halves, patched 0
+OK   33299 main: base 0 halves, patched 0
+OK   33299 Alt: base 2 halves, patched 2
+OK   33311 main: base 0 halves, patched 0
+OK   33311 Alt: base 0 halves, patched 0
+OK   33322 main: base 0 halves, patched 0
+OK   33345 main: base 0 halves, patched 0
+OK   33345 Alt: base 0 halves, patched 0
+OK   33371 main: base 0 halves, patched 0
+OK   33371 Alt: base 0 halves, patched 0
+OK   33389 main: base 0 halves, patched 0
+OK   33411 main: base 0 halves, patched 0
+OK   33411 Alt: base 0 halves, patched 0
+OK   33430 main: base 0 halves, patched 2
+   call 5 half 1 (15 ids): short reply: 1 ENFORCER line(s) for 26 item ids (finish_reason stop)
+   call 5 half 2 (11 ids): short reply: 1 ENFORCER line(s) for 26 item ids (finish_reason stop)
+32 OK, 0 FAIL (OK = every base retry is kept)
