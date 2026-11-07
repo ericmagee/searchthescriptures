@@ -1,5 +1,7 @@
 # pkgRCK (W1, Wall 2741; scope W3 2742, 2747): K-UNX reads a count that an applied change writes
 
+Committed output: patched/ (22 nodes, from build_RCK.cjs; out/ holds the same files plus the workflow JSON). The old K-RECHK package of the same name (5e37692) is moved to old_5e37692_KRECHK/.
+
 Enforcer fix, TRIAL, side-neutral.
 - Base (stack.cjs): live 5a710187 (fetchback_live_s22.json) + pkgUNXS/patched (22 nodes) + pkgUNXW/patched (19 nodes).
 - Write order: UNXS, UNXW, RCK. Rebuild if UNXS or UNXW changes; the build asserts each anchor once.

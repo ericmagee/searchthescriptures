@@ -1,3 +1,4 @@
+const __L={"Alternate Build":()=>$('Alternate Build'),"Alternate Call openrouter":()=>$('Alternate Call openrouter'),"Build Save Body":()=>$('Build Save Body'),"Cited Verses":()=>$('Cited Verses'),"Final Output":()=>$('Final Output'),"Init Seats":()=>$('Init Seats'),"Panel Build":()=>$('Panel Build'),"Panel Check":()=>$('Panel Check'),"Panel Judge 1 deepseek":()=>$('Panel Judge 1 deepseek'),"Panel Judge 1 gemini":()=>$('Panel Judge 1 gemini'),"Panel Judge 1 grok":()=>$('Panel Judge 1 grok'),"Panel Judge 1 mimo":()=>$('Panel Judge 1 mimo'),"Panel Judge 1 openai":()=>$('Panel Judge 1 openai'),"Panel Judge 1 openrouter":()=>$('Panel Judge 1 openrouter'),"Panel Judge 2 gemini":()=>$('Panel Judge 2 gemini'),"Panel Judge 2 grok":()=>$('Panel Judge 2 grok'),"Panel Judge 2 mimo":()=>$('Panel Judge 2 mimo'),"Panel Judge 2 openai":()=>$('Panel Judge 2 openai'),"Panel Judge 2 openrouter":()=>$('Panel Judge 2 openrouter'),"Panel Judge 3 gemini":()=>$('Panel Judge 3 gemini'),"Panel Judge 3 grok":()=>$('Panel Judge 3 grok'),"Panel Judge 3 mimo":()=>$('Panel Judge 3 mimo'),"Panel Judge 3 openai":()=>$('Panel Judge 3 openai'),"Panel Judge 3 openrouter":()=>$('Panel Judge 3 openrouter'),"Panel Reserve deepseek":()=>$('Panel Reserve deepseek'),"Panel Reserve gemini":()=>$('Panel Reserve gemini'),"Panel Reserve grok":()=>$('Panel Reserve grok'),"Panel Reserve mimo":()=>$('Panel Reserve mimo'),"Panel Reserve openai":()=>$('Panel Reserve openai'),"Panel Reserve openrouter":()=>$('Panel Reserve openrouter'),"Quote Report":()=>$('Quote Report'),"Regrade Load":()=>$('Regrade Load'),"Regrade Row":()=>$('Regrade Row')}; /* pkgPTA: literal names only */
 // ======== judge_fix9 (PROVEN_STRUCTURE_DRAFT_v2; rulings 396-402): shared libraries ========
 // judge_fix9 S3 (rulings 398, 399; PROVEN_STRUCTURE_DRAFT_v2 sections 3 and 4): every press under a listed premise's PRESSED WITH: is parsed,
 // not judged, in one fixed form:
@@ -195,11 +196,26 @@ const L2C=(()=>{
   if(!out.length)for(const m of s.matchAll(/["“]([a-zà-ɏḀ-ỿʼʻ'-]{3,24})["”]/g))latin(m[1]);
   return out;}
  // every [L2] tag of the rounds ([[side, round, text], ...]), with its words and the verses its block cites
+ // pkgL2R: a word named only as the root of another ("from *nomos*", "from the root X", "derived from G3551") is marked root:true
+ const ROOTPRE=/(?:\bfrom|\broot|\bderived\s+from|\bcognate\s+(?:of|with|to)|\brelated\s+to)(?:\s+(?:the|a|an))?(?:\s+(?:root|verb|noun|word|stem|lemma|greek|hebrew|aramaic))*[\s*_"\u201c\u201d\u2018\u2019'(,:]*$/i;
+ const LETTER=/[a-z\u00e0-\u024f\u1e00-\u1eff\u0370-\u03ff\u1f00-\u1fff\u0590-\u05ff\u02bc\u02bb]/i;
+ function markRoots(seg,wds){const s=String(seg||'');const lo=s.toLowerCase();const R=new Set();
+  const occ=w=>{const out=[];const k=String(w.w).toLowerCase();const sm=w.kind==='strongs'?k.match(/^([gh])(\d+)$/):null;
+   if(sm){for(const x of s.matchAll(new RegExp('\\b'+sm[1]+'0*'+sm[2]+'\\b','gi')))out.push(x.index);return out;}
+   let i=-1;while((i=lo.indexOf(k,i+1))>=0){const b=i>0?lo[i-1]:'',a=lo[i+k.length]||'';if((b&&LETTER.test(b))||(a&&LETTER.test(a)))continue;out.push(i);}return out;};
+  const pos=wds.map(occ);
+  // pass 0: the root phrase stands just before the word; pass 1: a word in parentheses just after a root word ("from *nomos* (G3551)")
+  const rootAt=(i,pass)=>{const pre=s.slice(Math.max(0,i-60),i);if(ROOTPRE.test(pre))return true;if(!pass)return false;
+   const m=pre.match(/([^\s(*_"\u201c\u201d]+)[*_"\u201d\u2019]*\s*\(\s*$/);if(!m)return false;const j=i-pre.length+pre.lastIndexOf(m[1]);
+   return wds.some((w,k)=>R.has(k)&&pos[k].includes(j));};
+  for(let pass=0;pass<2;pass++)wds.forEach((w,k)=>{if(R.has(k)||!pos[k].length)return;if(pos[k].every(i=>rootAt(i,pass)))R.add(k);});
+  return wds.map((w,k)=>R.has(k)?{...w,root:true}:w);}
  function tags(rounds){const out=[];for(const [side,round,text] of rounds||[]){const t=String(text||'');
   for(const m of t.matchAll(/\[L2\]/g)){const i=m.index;let e=t.length;const nx=t.slice(i+4).search(/\[L[1-4]\]|\n/);if(nx>=0)e=i+4+nx;let seg=t.slice(i+4,Math.min(e,i+4+500));
    if(!seg.replace(/[*_\s:.\-]+/g,'').length){const nl=t.indexOf('\n',e+1);seg=t.slice(e,nl<0?t.length:Math.min(nl,e+500));}
    let wds=tagWords(seg);if(!wds.length){const pe=t.slice(i+4).search(/\n\s*\n|\[L[1-4]\]/);const seg2=t.slice(i+4,pe<0?Math.min(t.length,i+904):Math.min(i+4+pe,i+904));const w2=tagWords(seg2);if(w2.length){seg=seg2;wds=w2;}}
    const blk=blockAt(t,i);const own=refsIn(seg);const __ls=t.lastIndexOf('\n',i)+1,__le=(x=>x<0?t.length:x)(t.indexOf('\n',i));const __line=t.slice(__ls,__le);const __press=/--\s*MEANS\s*:/.test(t.slice(__ls,i)); /* s429 F4: a press line's [L2] is read against that line's verses */const vs=[...new Set(own.concat(__press?refsIn(__line):refsIn(blk)))];const ap=[...new Set(apocIn(seg).concat(apocIn(blk)))];
+   wds=markRoots(seg,wds); /* pkgL2R */
    out.push({side,round,at:i,seg:seg.replace(/\s+/g,' ').trim().slice(0,300),words:wds,verses:vs,apoc:ap});}}
   return out;}
  // ---------- matching ----------
@@ -224,16 +240,18 @@ const L2C=(()=>{
   return {ok:false};}
  function check(TG,OW,LEX,READ){const IX=index(OW,LEX);const RD=new Set(READ||Object.keys(IX.V));
   return (TG||[]).map(t=>{const vs=t.verses||[];const read=vs.filter(k=>RD.has(k));const cands=[].concat(...read.map(k=>IX.V[k]||[]));
-   const ws=(t.words||[]).map(wd=>{const m=matchWord(wd,cands,IX);return {w:wd.w,kind:wd.kind,ok:m.ok,num:m.num||null,route:m.route||null};});
+   const ws=(t.words||[]).map(wd=>{const m=matchWord(wd,cands,IX);const at=m.ok?read.filter(k=>(IX.V[k]||[]).some(r=>numOf(r.strongs_number)===m.num)):[];
+    return {w:wd.w,kind:wd.kind,ok:m.ok,num:m.num||null,route:m.route||null,...(wd.root?{root:true}:{}),...(at.length?{in:at.join(', ')}:{})};});
+   const core=ws.some(w=>!w.root)?ws.filter(w=>!w.root):ws; /* pkgL2R: a root the tag names does not decide it */
    let status,why;
    if(!ws.length){status='IGNORED';why='names no Hebrew or Greek word: not an [L2] claim';}
    else if(!vs.length&&t.apoc&&t.apoc.length){status='UNVERIFIABLE';why='Apocrypha ('+t.apoc.join(', ')+'): the original-words table holds the 66 books only';}
    else if(!ws.length){status='IGNORED';why='names no Hebrew or Greek word: not an [L2] claim';}
    else if(!vs.length){status='NOT COUNTED';why='its block cites no verse';}
-   else if(ws.every(w=>w.ok)){status='COUNTED';why=ws.map(w=>w.w+' = '+w.num).join(', ');}
+   else if(core.every(w=>w.ok)){status='COUNTED';why=ws.map(w=>w.w+' = '+(w.ok?w.num:'root, not in the cited verse')).join(', ');}
    else if(read.length<vs.length){status='UNVERIFIABLE';why='the words of '+vs.filter(k=>!RD.has(k)).join(', ')+' were not read this run';}
    else if(t.apoc&&t.apoc.length&&!ws.some(w=>w.ok)){status='UNVERIFIABLE';why='Apocrypha ('+t.apoc.join(', ')+')';}
-   else{status='NOT COUNTED';why='not in the cited verse: '+ws.filter(w=>!w.ok).map(w=>w.w).join(', ')+' (cited: '+vs.join(', ')+')';}
+   else{status='NOT COUNTED';why='not in the cited verse: '+core.filter(w=>!w.ok).map(w=>w.w).join(', ')+' (cited: '+vs.join(', ')+')';}
    return {...t,words:ws,status,why};});}
  // ---------- counts ----------
   function countClaims(rounds){const out=[];for(const [side,round,text] of rounds||[]){const t=String(text||'');
@@ -430,6 +448,111 @@ function kfLines(text,R){const items=[],marks=[];const T=String(text||'').replac
   items.push({rule:'K-F',side:'BOTH',link:id,line:l.slice(0,600),why:'no FORCED line'});
   marks.push('[AUDIT v28: DEBATE RULE VIOLATION (K-F) -- '+id+' grades a link BROKEN as forced with no FORCED line quoting the MEANS sentence, the answer and the layer that fails (ruling 396). LIVE rule: left uncured after the cure, it removes the seat. REVIEW THIS ROW.]');}
  return {items,marks};}
+// pkgFCB (W3 feedback ruling B7; W3 rulings 00:05Z 11-07: TRIAL for one run, checked against the whole KJV verse): K-FC. A FORCED line carries
+// CARRIED BY: "<the words of the pressed witness's own verse that state its MEANS>", and those words stand in that verse as the run read it
+// (Cited Verses). The press's verse is the reference its MEANS line carries in the round the FORCED line names. Side-neutral: every FORCED line.
+// A verse the run did not read, or a press whose reference is not found, is NOT CHECKED (no item) when CARRIED BY is written.
+const KFC_REF=/((?:[1-3] )?[A-Z][a-z]+(?: of [A-Z][a-z]+)?)\.? (\d{1,3}):(\d{1,3})(?:\s?[-–]\s?(\d{1,3}))?/g;
+const KFC_CB=/(?:--|—|–)\s*CARRIED\s+BY\s*:\s*["“]([^"”]{3,}?)["”]/i;
+function kfcVerse(means,rt){const refs=s=>[...String(s||'').matchAll(new RegExp(KFC_REF.source,'g'))];
+ const head=refs(means).find(z=>z.index<=3);let r=head||null; /* a MEANS quotation that opens with its press's reference */
+ if(!r&&typeof rt==='string'){const fm=kkjvFold(means).split(' ').slice(0,12).join(' ');
+  const line=fm?__kfLB(rt).replace(/[*_`]+/g,'').split('\n').find(x=>kkjvFold(x).includes(fm)):null;
+  if(line){const mi=line.search(/MEANS\s*:/i);const all=refs(line);r=(mi>=0?all.filter(z=>z.index<mi).pop():null)||all[0]||null;}}
+ if(!r)return null;return {ref:r[0].replace(/\.\s/,' '),book:r[1],ch:+r[2],v1:+r[3],v2:+(r[4]||r[3])};}
+function kfcText(v,rows){if(!v)return null;const parts=[];for(let n=v.v1;n<=v.v2;n++){const x=(rows||[]).find(q=>q&&q.book===v.book&&+q.chapter===v.ch&&+q.verse===n);if(!x)return null;parts.push(x.text);}return parts.join(' ');}
+function kfcLines(text,R,rows0){const items=[],marks=[],report=[];const T=String(text||'').replace(/\\n/g,'\n').replace(/[*_`]+/g,'');let rows=rows0||null;
+ for(const raw of T.split('\n')){const l=raw.trim();if(!/^(?:[-•]|\d+[.)])?\s*FORCED(?:\s*\(\s*Commitment\s+\d+\s*\))?\s*:/i.test(l))continue;const m=l.match(KF_LINE);if(!m)continue; /* K-F reports a FORCED line not in the form */
+  const id=m[1].replace(/\s+vs\.?\s+/i,' vs ').toUpperCase().replace('VS','vs');const rk=m[2].toUpperCase();const v=kfcVerse(m[3],R&&R[rk]);const cb=l.match(KFC_CB);let why=null;
+  if(!cb)why='the FORCED line has no CARRIED BY: "<the words of '+(v?v.ref:'the pressed verse')+' that state its MEANS>" (W3 B7)';
+  else if(kkjvFold(cb[1]).split(' ').filter(Boolean).length<3)why='its CARRIED BY quotes fewer than three words';
+  else{if(!rows)rows=kkjvRows();const kt=kfcText(v,rows);
+   if(!v){report.push('NOT CHECKED (the press of '+id+' names no reference the code found): CARRIED BY "'+cb[1].slice(0,120)+'"');continue;}
+   if(!kt){report.push('NOT CHECKED (the verse was not read this run): '+v.ref+' CARRIED BY "'+cb[1].slice(0,120)+'"');continue;}
+   if(!kkjvStands(cb[1],kt))why='its CARRIED BY words "'+cb[1].slice(0,160)+'" are not in '+v.ref+', which reads: "'+kkjvNoMargin(kt).replace(/\s+/g,' ').trim().slice(0,400)+'"';}
+  if(!why)continue;
+  items.push({rule:'K-FC',side:'BOTH',link:id,ref:v?v.ref:null,means:m[3],why,line:'FORCED line for '+id+': '+why+'. Write the FORCED line again with CARRIED BY: "<the words of '+(v?v.ref:'the pressed verse')+' that state the MEANS sentence, quoted from the KJV>" between FAILS and GROUND, or RETRACTED the link, or RESTATED it not graded LINK BROKEN. Your line: '+l.slice(0,600)});
+  marks.push('[AUDIT v48: DEBATE RULE VIOLATION (K-FC) -- '+id+': '+why+'. TRIAL rule: answer it in the cure; it removes no seat; not counted in audit_flags.]');}
+ return {items,marks,report};}
+// pkgUNX (W3 2676, 2677): K-UNX. A premise a seat counts UNEXHIBITED (in CONCEDED LINKS or CHALLENGER CONCEDED LINKS) whose answering link-round
+// block exhibits two or more layer kinds (FOOTING LAYERS, lbFoot, the reader K-LB uses) must have its count name the missing layer ([L1], [L2],
+// [L3] or [L4], one the block does not exhibit), or be restated as a fit ruling (taken out of the count and graded at its collision, ruling 411).
+// A count that rests on a ground that is not a layer (an unanswered or unnamed witness, answers not counted, a struck or barred answer, VOID, a narrowed link, an ASSUMES premise) is not read.
+// Side-neutral; TRIAL for one run. The mirror of K-LB (a block with fewer than two kinds that is not counted).
+const UNX_TAG=/\[?\bL([1-4])\b\]?/g;
+const UNX_OTHER=/\bunanswered\b|\bno\s+answer\b|\bnot\s+answered\b|\bwithout\s+(?:\S+\s+){0,2}?answers?\b|\b(?:not|never)\s+named\b|\bNOT\s+COUNTED\b|\bnarrowed\b|\bleaves?\s+[^.;]{0,80}?\bunmet\b|\bstruck\b|\bbarred\b|\bVOID\b|\bROWS\s+GIVE\b|\bASSUMES\b|\bno\s+(?:quoted\s+)?row\s+gives\b/i;
+// pkgUNXS: the K-UNX reader (unxSegs) also reads bare numbered entries ("-- 6 UNEXHIBITED", "; 2 UNEXHIBITED", "counted: 1 UNEXHIBITED"), as pkgCLR does,
+// and ends an entry at "Spared" so a spared list ("Spared: 2, 3, 4, each narrowed ...") is not read as the last counted entry's ground.
+function unxSegs(sec){const s=String(sec||'');const H=[];
+ for(const h of s.matchAll(/\bPremises?\s+(\d+(?:\s*(?:,\s*(?:and|or|&)?|and|&|or)\s*\d+)*)/gi))H.push({i:h.index,ns:h[1].match(/\d+/g).map(Number)});
+ for(const h of s.matchAll(/(?:^|--|;|:|\.)\s*(\d)(?=\s+(?:UNEXHIBITED|CONCEDED|WITHDRAWN)\b)/g)){const i=h.index+h[0].length-1;if(!H.some(x=>x.i<=i&&i<x.i+12))H.push({i,ns:[+h[1]]});}
+ for(const h of s.matchAll(/\bSpared\b/g))H.push({i:h.index,ns:[]});
+ H.sort((a,b)=>a.i-b.i);return H.map((h,k)=>({ns:h.ns,seg:s.slice(h.i,k+1<H.length?H[k+1].i:s.length)})).filter(x=>x.ns.length);}
+
+function unxNamed(s,kinds){const t=String(s||'').replace(/["“][^"”]*["”]/g,' ');const have=new Set((kinds||[]).map(k=>(String(k).match(/[1-4]/)||[''])[0]));
+ const named=[...t.matchAll(UNX_TAG)].map(m=>m[1]);return {named,missing:named.filter(n=>n==='4'||!have.has(n))};}
+// MEANS ground (W3 2683 condition 2): a count that says the answer does not meet the press's MEANS is a fit ground, not a layer ground, and is not read
+// when (a) the segment states that ground (meet/answer ... MEANS, meaning, significance, inference, claim, press), (b) it points at one press of that premise
+// from the other side's UNSUPPORTED-L4 PREMISES list: it quotes the MEANS (8 consecutive words, all of it when shorter, the pkgOAN test), shares 4 consecutive
+// words with it, or names its verse, and (c) the answering block does not quote that MEANS on any line (the pkgOAN test).
+const UNX_MW=s=>String(s||'').toLowerCase().replace(/[‘’]/g,"'").replace(/[^a-z0-9' ]+/g,' ').replace(/\s+/g,' ').trim();
+const UNX_MRUN=(a0,b0,k0)=>{const a=' '+UNX_MW(a0)+' ',b=UNX_MW(b0);if(!b)return false;if(a.includes(' '+b+' '))return true;const bw=b.split(' ');const k=Math.min(k0,bw.length);for(let i=0;i+k<=bw.length;i++)if(a.includes(' '+bw.slice(i,i+k).join(' ')+' '))return true;return false;};
+const UNX_MGROUND=/\b(?:meet|meets|meeting|met|answer|answers|answering|answered)\b[^.;]{0,80}?\b(?:MEANS|meaning|significance|inference|claim|claimed|press|pressed)\b/i;
+function unxPresses(r){const t=String(r||'');let i=-1;for(const m of t.matchAll(/UNSUPPORTED-?\s*\[?L4\]?\s*PREMISES/gi))i=m.index;if(i<0)return [];
+ const its=t.slice(i).split(/\n(?=\s*\**\s*\d+[.)]\s)/).filter(x=>/^\s*\**\s*\d+[.)]\s/.test(x));const out=[];
+ for(const x of its){const n=+x.match(/^\s*\**\s*(\d+)/)[1];const pw=x.search(/PRESSED WITH\s*:/i);if(pw<0)continue;
+  for(const l of x.slice(pw).split('\n').slice(1)){const m=l.match(/^\s*[-*•]?\s*\**\s*([1-3]?\s*[A-Z][A-Za-z ]+?\s+\d+:\d+(?:[-–]\d+)?)\**\s*[\s\S]*?\s--\s*MEANS\s*:\s*([\s\S]+?)(?:\s+--\s+(?=\[L\d\]|PROVEN\b)|\s+\|\s+|$)/);
+   if(!m)continue;const means=m[2].replace(/^["“]|["”]$/g,'').trim();if(UNX_MW(means).split(' ').length<3)continue;out.push({n,ref:m[1].replace(/\s+/g,' ').trim(),means});}}
+ return out;}
+function unxMeansGround(seg,blk,P){if(!UNX_MGROUND.test(seg))return false;const sg=String(seg).replace(/\s+/g,' ');
+ return P.some(p=>{const ref=p.ref.replace(/\s+/g,'\\s+').replace(/\./g,'\\.');const hit=UNX_MRUN(sg,p.means,8)||UNX_MRUN(sg,p.means,4)||new RegExp('\\b'+ref+'\\b(?!\\s*[-–]?\\d)').test(sg);
+  return hit&&!String(blk).split('\n').some(l=>UNX_MRUN(l,p.means,8));});}
+// pkgUNXA (W3 2721, 2727): K-UNX-A, two grounds K-UNX exempted outright, now checked. TRIAL, side-neutral, raised as rule K-UNX with a:'ASSUMES'|'UNANSWERED'.
+// A: a premise counted UNEXHIBITED on an ASSUMES ground, whose answering block exhibits 2 or more layer kinds with a counted [L1], and whose ASSUMES clause
+//    (with its ROWS GIVE part) holds no 6 words in a row of that [L1] quotation (all of it when shorter).
+// B: a premise counted UNEXHIBITED on an "unanswered" ground that names a press (its verse, or 8 words in a row of its MEANS) whose MEANS the answering
+//    block quotes on a line holding "MEANS" (the pkgOAN 8-word test), the block exhibiting 2 or more layer kinds.
+// Any other ground that is not a layer (NOT COUNTED, narrowed, VOID, struck, barred, not named, unmet, without answers) stays exempt; "no row gives" is the ASSUMES ground itself and is read with it.
+const UNXA_HARD=/\b(?:not|never)\s+named\b|\bNOT\s+COUNTED\b|\bnarrowed\b|\bleaves?\s+[^.;]{0,80}?\bunmet\b|\bstruck\b|\bbarred\b|\bVOID\b|\bwithout\s+(?:\S+\s+){0,2}?answers?\b/i;
+const UNXA_ASM=/\bASSUMES\b/;const UNXA_UNA=/\bunanswered\b|\bno\s+answer\b|\bnot\s+answered\b/i;
+// the block's [L1]: the first quotation carrying a reference, read as lbFoot reads it (ruling 400)
+function unxaL1(blk){const t=String(blk==null?'':blk).replace(/\*\*/g,'').replace(/__/g,'');const R=[...t.matchAll(LB_REF)].map(m=>({k:m[0].replace(/\.\s/,' '),a:m.index,b:m.index+m[0].length}));
+ for(const m of t.matchAll(/["“][^"”\n]{4,}?["”]|(?<=^|[\s(:])['‘][^'’\n]{4,}?['’](?=$|[\s.,;:)\]])/g)){const a=m.index,b=a+m[0].length;const aft=R.find(r=>r.a>=b&&r.a-b<=4&&/^[\s(]*$/.test(t.slice(b,r.a)));const bef=R.filter(r=>r.b<=a&&a-r.b<=80).pop();const r=aft||bef;
+  if(r)return {ref:r.k,q:m[0].slice(1,-1)};}return null;}
+// a segment runs to the next premise header, so the words before that header ("). VOID premise 2", "). Spared: premise 3") belong to the next entry:
+// the exempt grounds are read only up to the segment's last stop when what follows it is 40 characters or less
+const unxaHead=s=>{const m=String(s).match(/^([\s\S]*[.;)])\s*[^.;)]{0,40}$/);return m?m[1]:String(s);};
+// pkgASM: the act an ASSUMES clause names, when it is a knowing, begetting or conceiving (the judges' instruction: never an ASSUMES); '' when none
+function unxaAct(cl){const f=String(cl==null?'':cl).replace(/^[\s\S]*?\bASSUMES\b\s*:?/,'').split(/--\s*ROWS\s+GIVE|\bROWS\s+GIVE\b/i)[0];
+ const m=f.match(/\b(?:knew|knows?|knoweth|known|knowing|begat|begot|begets?|begotten|begetting|conceived?|conceives|conceiving)\b(?!\s*(?:of|that|as)\b)/i);return m?m[0]:'';}
+function unxaCheck(all,blk,k,P){if(all.some(z=>UNXA_HARD.test(unxaHead(z.seg))))return null;if(k.length<2)return null;
+ const A=all.filter(z=>UNXA_ASM.test(z.seg)),B=all.filter(z=>UNXA_UNA.test(z.seg));
+ if(A.length){const cl=A.map(z=>z.seg.slice(z.seg.search(UNXA_ASM))).join(' ');const asm=unxaAct(cl);const l1=k.includes('L1')?unxaL1(blk):null;const ua=!!(l1&&!UNX_MRUN(cl,l1.q,6)); /* pkgASM */
+  if(ua||asm)return {a:ua?'ASSUMES':'ASM',asm,l1:l1||unxaL1(blk),seg:A[0].seg};}
+ if(B.length){const BL=String(blk).split('\n');const L=BL.filter(l=>/\bMEANS\b/.test(l));
+  // the answer to that press: from its MEANS line to the next MEANS line; its [L1] is the first quotation with a reference there
+  const sub=p=>{const i=BL.findIndex(l=>/\bMEANS\b/.test(l)&&UNX_MRUN(l,p.means,8));if(i<0)return '';let e=BL.findIndex((l,x)=>x>i&&/\bMEANS\b/.test(l));return BL.slice(i,e<0?BL.length:e).join('\n');};
+  for(const z of B){const sg=z.seg.replace(/\s+/g,' ');for(const p of P){const ref=p.ref.replace(/\s+/g,'\\s+').replace(/\./g,'\\.');
+   if(!(new RegExp('\\b'+ref+'\\b(?!\\s*[-–]?\\d)').test(sg)||UNX_MRUN(sg,p.means,8)))continue;if(L.some(l=>UNX_MRUN(l,p.means,8)))return {a:'UNANSWERED',press:p,l1:unxaL1(sub(p))||unxaL1(blk),seg:z.seg};}}}
+ return null;}
+
+function kunxLines(text,ptext){const items=[],marks=[];if(typeof text!=='string'||!(typeof ptext==='string'||(ptext&&typeof ptext==='object')))return {items,marks};let R;try{R=typeof ptext==='string'?ciRounds(ptext):ptext;}catch(e){return {items,marks};} /* pkgRCK: also takes the rounds object */
+ for(const side of ['DEFENDER','CHALLENGER']){const rk=side==='CHALLENGER'?'DR3':'CR3';const sec=ciCountSection(text,side);if(!sec||typeof R[rk]!=='string')continue;
+  const n0=+((sec.match(/:\s*(\d+)/)||[])[1]||0);const lab=side==='DEFENDER'?'CONCEDED LINKS':'CHALLENGER CONCEDED LINKS';
+  const SG=unxSegs(sec);const PR=unxPresses(side==='CHALLENGER'?R.CR3:R.DR3);const segsOf=j=>SG.filter(s=>s.ns.includes(j)); /* every segment of the count section that names premise j */
+  for(const s of SG){if(!/\bUNEXHIBITED\b/.test(s.seg)||/\b(?:not|never|no\s+longer)\s+UNEXHIBITED\b/i.test(s.seg))continue;
+   for(const j of s.ns){const all=segsOf(j);if(all.some(z=>UNX_OTHER.test(z.seg))){const bk=lbBlockText(R[rk],j);const ua=bk?unxaCheck(all,bk,lbFoot(bk,true),PR.filter(p=>p.n===j)):null; /* pkgUNXA */
+    if(ua){const id=side+' premise '+j;if(!items.some(x=>x.link===id)){const k=lbFoot(bk,true);const L1=ua.l1?ua.l1.ref+' "'+ua.l1.q.slice(0,160)+'"':'';
+     const why=(ua.asm?'counted UNEXHIBITED in '+lab+' on an ASSUMES ground that names an act the link infers ("'+ua.asm+'"); an inferred act, such as a begetting or a knowing, is never an ASSUMES'+(ua.a==='ASM'?'':'; and it is '):'')+(ua.a==='ASM'?'':ua.a==='ASSUMES'?'counted UNEXHIBITED in '+lab+' on an ASSUMES ground, but its ['+rk+'] block exhibits '+k.join(' and ')+' and the ASSUMES clause does not quote the block\'s [L1] '+L1
+      :'counted UNEXHIBITED in '+lab+' as unanswered, but its ['+rk+'] block quotes the MEANS of the press '+ua.press.ref+' under a MEANS line and answers it with '+k.join(' and ')); /* pkgASM */
+     items.push({rule:'K-UNX',a:ua.a,asm:ua.asm||'',side,link:id,premise:j,kinds:k,conc:n0,l1:ua.l1?ua.l1.q:'',l1ref:ua.l1?ua.l1.ref:'',press:ua.press?ua.press.ref:'',why,line:id+': '+why+'. Quote the block\'s [L1]'+(L1?' ('+L1+')':'')+(ua.a==='UNANSWERED'?' answering that press':'')+' in a STATEMENT for this item and name what that verse lacks for the step, or write a CORRECTED COUNT for '+lab+' without this premise and grade its fit at the collision (a FORCED line, ruling 411). A KEEP does not cure it. Your count: '+ua.seg.replace(/\s+/g,' ').trim().slice(0,400)});
+     if(ua.asm){const it=items[items.length-1];it.line=id+': '+why+'. In a STATEMENT for this item write ASSUMES: <the given fact the step takes for granted, not what the link infers>'+(ua.a==='ASSUMES'?' and quote the block\'s [L1]'+(L1?' ('+L1+')':'')+', naming what that verse lacks for the step':'')+'; or write a CORRECTED COUNT for '+lab+' without this premise and grade its fit at the collision (a FORCED line, ruling 411). A KEEP does not cure it. Your count: '+ua.seg.replace(/\s+/g,' ').trim().slice(0,400);} /* pkgASM */
+     marks.push('[AUDIT v49: DEBATE RULE VIOLATION (K-UNX) -- '+id+': '+why+'. TRIAL rule: answer it in the cure; it removes no seat; not counted in audit_flags.]');}}
+    continue;}const blk=lbBlockText(R[rk],j);if(!blk)continue;const k=lbFoot(blk,true);if(k.length<2)continue;if(all.some(z=>unxMeansGround(z.seg,blk,PR.filter(p=>p.n===j))))continue;if(all.some(z=>unxNamed(z.seg,k).missing.length))continue;
+    const id=side+' premise '+j;if(items.some(x=>x.link===id))continue;const why='counted UNEXHIBITED in '+lab+', but its ['+rk+'] block exhibits '+k.join(' and ')+' and the count names no layer the block lacks';
+    items.push({rule:'K-UNX',side,link:id,premise:j,kinds:k,conc:n0,why,line:id+': '+why+'. Name the missing layer in a STATEMENT for this item ("[L1]", "[L2]", "[L3]" or "[L4]", one the block does not exhibit), or write a CORRECTED COUNT for '+lab+' without this premise and grade its fit at the collision (a FORCED line, ruling 411). Your count: '+s.seg.replace(/\s+/g,' ').trim().slice(0,400)});
+    marks.push('[AUDIT v49: DEBATE RULE VIOLATION (K-UNX) -- '+id+': '+why+'. TRIAL rule: answer it in the cure; it removes no seat; not counted in audit_flags.]');}}}
+ return {items,marks};}
 const KR_LINE=/^\s*(?:[-•]|\d+[.)])?\s*REFERENCE\s*:\s*(.+?)\s*(?:--|—|–)\s*\[?\s*((?:CR|DR)[1-4])\s*\]?\s*(?:--|—|–)\s*(CONFIRMED|NOT CONFIRMED)\s*(?:--|—|–)\s*["“](.+?)["”]\s*\/\s*["“](.+?)["”]\s*\.?\s*$/i;
 function krLines(text,R){const items=[],marks=[];const T=String(text||'').replace(/\\n/g,'\n').replace(/[*_`]+/g,'');const lines=T.split('\n').map(x=>x.trim()).filter(l=>/^(?:[-•]|\d+[.)])?\s*REFERENCE\s*:/i.test(l));
  for(const side of ['DEFENDER','CHALLENGER']){const PL=pwList(R,side);if(!PL)continue;
@@ -458,7 +581,7 @@ const P=$('Panel Build').first().json;const S=$('Init Seats').first().json;
 const SUB=$('Panel Check').first().json.sub||null;const RESERVE_NODES=['Panel Reserve deepseek','Panel Reserve openai','Panel Reserve gemini','Panel Reserve grok','Panel Reserve mimo','Panel Reserve openrouter'];
 const TAGS=['HELD','PARTIAL','BROKEN'];const STAND=['SELF-SUPPORTED','PROP-DEPENDENT','COLLAPSED'];
 const SLOT_NODES=[['Panel Judge 1 deepseek','Panel Judge 1 openai','Panel Judge 1 gemini','Panel Judge 1 grok','Panel Judge 1 mimo','Panel Judge 1 openrouter'],['Panel Judge 2 openai','Panel Judge 2 gemini','Panel Judge 2 grok','Panel Judge 2 mimo','Panel Judge 2 openrouter'],['Panel Judge 3 openai','Panel Judge 3 gemini','Panel Judge 3 grok','Panel Judge 3 mimo','Panel Judge 3 openrouter']];
-const ran=names=>names.filter(n=>{try{return $(n).isExecuted;}catch(e){return false;}});
+const ran=names=>names.filter(n=>{try{return __L[n]().isExecuted;}catch(e){return false;}});
 function envelope(seat,j){
  // 7107 item 4: a normal chat envelope whose content is null names what happened.
  if(j&&j.choices&&j.choices[0]&&j.choices[0].message&&j.choices[0].message.content===null)throw new Error('seat "'+seat+'" returned content null (finish_reason '+(j.choices[0].finish_reason||'none')+'). NO ROW IS WRITTEN.'+RT);
@@ -602,7 +725,7 @@ const REFP=(()=>{const BOOKS="Genesis|Exodus|Leviticus|Numbers|Deuteronomy|Joshu
 // the count another item's cure must reach. A rule not in the table is LIVE. A new check enters as TRIAL and becomes LIVE only by an edit here,
 // after it has proved itself on stored text. C4-RENUM and C4-PRESS (the close-round numbering and press checks) make notes, never items.
 const ENF_STATUS={'K-B':'LIVE','K-C':'LIVE','K-G1':'LIVE','K-G3':'LIVE','K-G4':'LIVE','K-G6':'LIVE','K-G7':'LIVE','K-G8':'LIVE','K-N':'LIVE','K-S':'LIVE','K-SC':'LIVE',
- 'K-LB':'TRIAL','K-G9':'TRIAL','K-G10':'TRIAL','K-G11':'TRIAL','K-V':'LIVE','K-S2':'TRIAL','K-LXX':'TRIAL','K-P':'TRIAL','K-F':'LIVE','K-R':'TRIAL','K-L2':'TRIAL','K-W':'LIVE','K-S3':'LIVE','C4-RENUM':'TRIAL','C4-PRESS':'TRIAL','K-CON':'LIVE','K-CMT':'LIVE','K-CMTL':'TRIAL','K-RUL':'TRIAL','K-KJV':'TRIAL','K-AG':'TRIAL'};
+ 'K-LB':'TRIAL','K-G9':'TRIAL','K-G10':'TRIAL','K-G11':'TRIAL','K-V':'LIVE','K-S2':'TRIAL','K-LXX':'TRIAL','K-P':'TRIAL','K-F':'LIVE','K-FC':'TRIAL','K-UNX':'TRIAL','K-R':'TRIAL','K-L2':'TRIAL','K-W':'LIVE','K-S3':'LIVE','C4-RENUM':'TRIAL','C4-PRESS':'TRIAL','K-CON':'LIVE','K-CMT':'LIVE','K-CMTL':'TRIAL','K-RUL':'TRIAL','K-KJV':'TRIAL','K-AG':'TRIAL'};
 const enfStatus=r=>ENF_STATUS[String(r||'')]==='TRIAL'?'TRIAL':'LIVE';
 const enfLive=x=>enfStatus(x&&x.rule)==='LIVE';
 // WALL-2024 silence count (Eric 2026-11-05 21:18 CST, reply 2185): an item of ANY rule, TRIAL included, with NO WRITTEN RESPONSE (flagged silent by
@@ -911,18 +1034,21 @@ function drvBrokenPW(text,R){const items=[],marks=[];const T=String(text||'').re
 // outside its PRESSED WITH: segment. A ruling that the premise has no verbatim quote (the other VOID ground) needs no charge words. A ruling
 // without them is marked. Cure: the premise regraded in a RESTATED count line (SUPPORTED, NARROWED, or counted, with CORRECTED COUNT and STANDING
 // when counted), or a STATEMENT for the item quoting the charge words and naming the kind.
-const KV_KIND=/\bnegations?\b|\bnegative\b|\buniversals?\b|\bclaim\b[^.;]{0,60}\b(?:quote|quotation)\b[^.;]{0,40}\b(?:do(?:es)?\s+not|never)\s+(?:[a-z]+\s+)?make|\bgo(?:es)?\s+beyond\s+(?:the\s+)?(?:quoted?\b|quotation\b|['‘"“])|\bclaim\b[^.;]{0,30}\bnot\s+(?:made|in)\b[^.;]{0,20}\b(?:quote|quotation)\b/i;
+const KV_KIND=/\bnegations?\b|\bnegative\b|\buniversals?\b|\bclaim\b[^.;]{0,60}\b(?:quote|quoted|quotation)\b[^.;]{0,40}\b(?:do(?:es)?\s+not|never)\s+(?:[a-z]+\s+)?make|\bgo(?:es)?\s+beyond\s+(?:the\s+)?(?:quoted?\b|quotation\b|['‘"“])|\bclaim\b[^.;]{0,30}\bnot\s+(?:made|in)\b[^.;]{0,20}\b(?:quote|quoted|quotation)\b/i;
 const KV_NOQ=/\bno\s+verbatim\s+quot|\bnot\s+(?:found\s+)?verbatim\b|\bquot(?:e|ation)\s+(?:is\s+)?not\s+found\b|\bwithout\s+a\s+verbatim\s+quot/i;
 const kvNorm=s=>String(s==null?'':s).toLowerCase().replace(/[“”"‘’'`*_]/g,'').replace(/[—–-]/g,' ').replace(/[^a-z0-9 ]+/g,' ').replace(/\s+/g,' ').trim();
 const kvQuotes=s=>{const t=String(s||'');const out=[];for(const m of t.matchAll(/["“]([^"”\n]{1,240})["”]/g))out.push(m[1]);for(const m of t.matchAll(/(?:^|[\s(\[:;,])['‘]((?:[^'’\n]|['’](?=[A-Za-z])){2,160}?)['’](?=$|[\s.,;:!?)\]])/g))out.push(m[1]);/* pkgKV (b) */return out.map(q=>q.trim()).filter(q=>kvNorm(q).length>=2);};
 // the charge text of each listed premise against a side: the item before PRESSED WITH:, its quoted passages removed
 function kvCharges(R,side){const t=String((R&&R[PW_ROUND[side]])||'');let i=-1;for(const m of t.matchAll(pwHead(side)))i=m.index;if(i<0)return null;
  const its=t.slice(i).split(/\n(?=\s*\**\s*(?:\d+[.)]\s|LINK\s+(?:\d+|none)\s*:))/i).filter(x=>/^\s*\**\s*(?:\d+[.)]\s|LINK\s+(?:\d+|none)\s*:)/i.test(x));
- return its.map((x,k)=>{const j=x.search(/PRESSED WITH\s*:/i);const pre=j<0?x:x.slice(0,j);const ch=pre.replace(/["“][^"”]*["”]/g,' | ').replace(/(^|[\s(\[:;,])['‘][^'’\n]{2,}?['’](?=$|[\s.,;:!?)\]])/g,'$1 | ');return {n:k+1,charge:' '+kvNorm(ch)+' '};});}
+ return its.map((x,k)=>{const j=x.search(/PRESSED WITH\s*:/i);const pre=j<0?x:x.slice(0,j);const ch=pre.replace(/["“][^"”]*["”]/g,' | ').replace(/(^|[\s(\[:;,])['‘][^'’\n]{2,}?['’](?=$|[\s.,;:!?)\]])/g,'$1 | ');return {n:k+1,charge:' '+kvNorm(ch)+' ',full:' '+kvNorm(pre)+' ',qs:kvQuotes(pre).map(kvNorm)};});} /* pkgKVE */
 // the VOID rulings of one side: segments of the count section and the standing line that rule premises VOID
+function kvpOwn2024(seg,ns,out){try{const S=String(seg);let t=S,m;const RX=/(^|[\s,;(])(premises?\s+(\d+(?:(?:\s*,\s*(?:and\s+)?|\s+and\s+|\s*&\s*)\d+)*)\s+(?:is|are|was|were)\s+(?:also\s+|ruled\s+|thus\s+)?VOID\b)/gi;
+ while((m=RX.exec(S))){const nn=m[3].split(/\s*(?:,|and|&)\s*/).map(Number).filter(n=>n>0);if(!nn.length||nn.some(n=>(ns||[]).includes(n)))continue;t=t.replace(m[2],' ');out.push({ns:nn,seg:S.slice(m.index+m[1].length).trim()});}
+ return t;}catch(e){return String(seg);}} /* pkgKVP (W3 grade_33083): a VOID clause naming another premise is that premise's */
 function kvSegments(text,side){const T=String(text||'').replace(/\\n/g,'\n').replace(/[*_`]+/g,'');const cs=ciCountSection(T,side)||'';const st=(T.match(new RegExp('^[ \\t>#-]*'+(side==='DEFENDER'?'DEFENSE':'CHALLENGE')+' STANDING[^\\n]*','mi'))||[''])[0];
  const out=[];for(const src of [cs,st]){if(!src)continue;const at=[];let m;PW_SEG.lastIndex=0;while((m=PW_SEG.exec(src)))at.push({i:m.index+m[1].length,ns:m[2].split(/\s*(?:,|and|&)\s*/).map(Number).filter(n=>n>0)});
-  at.forEach((x,k)=>{const seg=src.slice(x.i,k+1<at.length?at[k+1].i:src.length);if(!/\bVOID\b/.test(seg)||((s0=>!/\bVOID\b/.test(s0)&&/\b(?:UNEXHIBITED|SPARED|STANDS|SUPPORTED|CONCEDED|NARROWED|COUNTED)\b/i.test(s0))(seg.split(/(?<=[.!?])\s+/)[0]))/* pkgKV (a) */||/\b(?:not|never)\s+(?:be\s+)?VOID\b|\bno\s+(?:premise|charge|link)s?\s+(?:is|are|was|were)\s+VOID\b|\bnone\s+(?:is|are|of\s+them\s+(?:is|are))\s+VOID\b/i.test(seg))return; /* as lbVoid reads a denial */out.push({ns:x.ns,seg:seg.trim()});});}
+  at.forEach((x,k)=>{const seg=src.slice(x.i,k+1<at.length?at[k+1].i:src.length);if(!/\bVOID\b/.test(kvpOwn2024(seg,x.ns,out))||((s0=>!/\bVOID\b/.test(s0)&&/\b(?:UNEXHIBITED|SPARED|STANDS|SUPPORTED|CONCEDED|NARROWED|COUNTED)\b/i.test(s0))(seg.split(/(?<=[.!?])\s+/)[0]))/* pkgKV (a) */||/\b(?:not|never)\s+(?:be\s+)?VOID\b|\bno\s+(?:premise|charge|link)s?\s+(?:is|are|was|were)\s+VOID\b|\bnone\s+(?:is|are|of\s+them\s+(?:is|are))\s+VOID\b/i.test(seg))return; /* as lbVoid reads a denial */out.push({ns:x.ns,seg:seg.trim()});});}
  return out;}
 // judge_fix8 R7 (run 32306, Worker_E A7, Worker_G1 #1): the universal test, computed in code and served to the judges as a pre-check: a negation or
 // universal word in a premise's charge that none of its quoted passages holds (only, never, all, none, no, not, every, always, alone, nothing,
@@ -936,7 +1062,7 @@ function kvUni(R,side){const t=String((R&&R[PW_ROUND[side]])||'');let i=-1;for(c
 function kvNames(seg,words){const S=String(seg);return (words||[]).find(w=>{const st=w.replace(/(?:ed|es|s)$/,'');const loose=!/^(?:no|not|any|all|nor)$/.test(w); /* a common word counts only quoted, in capitals or after adds/the word */
  return new RegExp('["“\'‘]'+w+'["”\'’]|\\b'+w.toUpperCase()+'\\b|\\b(?:the\\s+word|adds?|added|universal|negation)\\s+["“\'‘]?'+w+'\\b','').test(S)||(loose&&new RegExp('\\b'+st+'[a-z]{0,3}\\b','i').test(S));})||null;}
 function kvRulingOk(seg,n,CH,UNI){if(KV_NOQ.test(seg))return {ok:true,why:'no verbatim quote'};const kind=KV_KIND.test(seg)||KV_KIND.test(String(seg).replace(/["“][^"”\n]*["”]/g,'"Q"').replace(/(^|[\s(\[:;,])['‘](?:[^'’\n]|['’](?=[A-Za-z]))+?['’](?=$|[\s.,;:!?)\]])/g,"$1'Q'"));/* pkgKV (c2): a long quotation does not hide the kind */const c=(CH||[]).find(p=>p.n===n);
- const q=c?kvQuotes(seg).find(q=>c.charge.includes(' '+kvNorm(q)+' ')):null;if(kind&&q)return {ok:true,kind,q};const u=(UNI||[]).find(p=>p.n===n);const w=u?kvNames(seg,u.words):null;
+ const q=c?kvQuotes(seg).find(q=>c.charge.includes(' '+kvNorm(q)+' ')||(c.full&&c.full.includes(' '+kvNorm(q)+' ')&&!(c.qs||[]).some(z=>(' '+z+' ').includes(' '+kvNorm(q)+' ')))):null; /* pkgKVE (33160 chatgpt premise 5): charge words holding an embedded quote */if(kind&&q)return {ok:true,kind,q};const u=(UNI||[]).find(p=>p.n===n);const w=u?kvNames(seg,u.words):null;
  return w?{ok:true,kind:true,q:w,why:'names the word '+w}:{ok:false,kind,q:q||null};}
 function drvVoid(text,ptext,dConc,cConc,dStand,cStand,LN){const items=[],marks=[];if(typeof text!=='string'||typeof ptext!=='string')return {items,marks};const R=ciRounds(ptext);let read=0;
  for(const side of ['DEFENDER','CHALLENGER']){const CH=kvCharges(R,side);if(!CH)continue;const UNI=kvUni(R,side);const done=new Set();
@@ -981,7 +1107,8 @@ function drvPressWith(text,ptext,dConc,cConc,dStand,cStand,LN){const items=[],ma
  {const B=drvBrokenPW(text,R);B.items.forEach(x=>items.push(x));B.marks.forEach(x=>marks.push(x));}
  {const V=drvVoid(text,ptext,dConc,cConc,dStand,cStand,LN);V.items.forEach(x=>items.push(x));V.marks.forEach(x=>marks.push(x));} // judge_fix8 K6: K-V (lib/kv.js)
  {const X=drvLxx(text,ptext);X.items.forEach(x=>items.push(x));X.marks.forEach(x=>marks.push(x));} // judge_fix8 R11: K-LXX (lib/klxx.js)
- {const F9=kfLines(text,R);F9.items.forEach(x=>items.push(x));F9.marks.forEach(x=>marks.push(x));} // judge_fix9 S1: K-F (lib/kfr.js)
+ {const F9=kfLines(text,R);F9.items.forEach(x=>items.push(x));F9.marks.forEach(x=>marks.push(x));}
+    {const FC=kfcLines(text,R);FC.items.forEach(x=>items.push(x));FC.marks.forEach(x=>marks.push(x));} // pkgFCB: K-FC (TRIAL) // judge_fix9 S1: K-F (lib/kfr.js)
  {const R9=krLines(text,R);R9.items.forEach(x=>items.push(x));R9.marks.forEach(x=>marks.push(x));} // judge_fix9 S3: K-R
  {const X9=kl2Lines(text,l2Data());X9.items.forEach(x=>items.push(x));X9.marks.forEach(x=>marks.push(x));} // judge_fix9 S4: K-L2
  {const W9=kwLines421(text,R);W9.items.forEach(x=>items.push(x));W9.marks.forEach(x=>marks.push(x));} // ruling 421 (#1): K-W
@@ -1129,7 +1256,7 @@ function cntItems(text){const out=[];const T=netUnwrap(text).replace(/[*_`]+/g,'
 function kwLines421(text,R){const items=[],marks=[];if(!R)return {items,marks};const RX=/\bI\s+(?:do\s+not\s+claim|no\s+longer\s+claim|withdraw|grant|concede|drop)\b/gi;
  for(const [side,rks] of [['DEFENDER',['CR2','CR3','CR4']],['CHALLENGER',['DR2','DR3','DR4']]]){let n=0;
   for(const rk of rks){const t=String(R[rk]||'').replace(/[*_`]+/g,'');if(!t)continue;
-   for(const m of t.matchAll(RX)){if(n>=10)break;const pre=t.slice(0,m.index);{const ls=pre.lastIndexOf('\n')+1;const le=t.indexOf('\n',m.index);const ln=t.slice(ls,le<0?t.length:le);const bf=t.slice(ls,m.index);if((/^\s*#/.test(ln)&&!/[.!?]["\u201d']?\s*$/.test(ln))||((bf.match(/["\u201c\u201d]/g)||[]).length%2===1)||/^\s*(?:none|nothing|no)\b/i.test(t.slice(m.index+m[0].length))){n++;continue;}} /* pkgKW (a) quoted, (b) heading, (c) negated: not a withdrawal; the number is kept */const hd=[...pre.matchAll(/(?:^|\n)[ \t>#-]*((?:LINK\s*\d+|[DC]\d+)\b[^\n:]{0,40}):/gi)].pop();const lab=hd?hd[1].replace(/\s+/g,' ').trim().slice(0,30):'no link heading';
+   for(const m of t.matchAll(RX)){if(n>=10)break;const pre=t.slice(0,m.index);{const ls=pre.lastIndexOf('\n')+1;const le=t.indexOf('\n',m.index);const ln=t.slice(ls,le<0?t.length:le);const bf=t.slice(ls,m.index);if((/^\s*#/.test(ln)&&!/[.!?]["\u201d']?\s*$/.test(ln))||((bf.match(/["\u201c\u201d]/g)||[]).length%2===1)||/^\s*(?:none|nothing|no)\b/i.test(t.slice(m.index+m[0].length))){n++;continue;}} /* pkgKW (a) quoted, (b) heading, (c) negated: not a withdrawal; the number is kept */const hd=[...pre.matchAll(/(?:^|\n)[ \t>#-]*((?:LINK\s*\d+|[DC]\d+)\b[^\n:]{0,40}):/gi)].pop();const lab=hd?(hd[1].match(/^(?:LINK\s*\d+|[DC]\d+)\b/i)||[hd[1]])[0].replace(/\s+/g,' ').trim().slice(0,30):'no link heading'; /* pkgKGW (1): the link token only */
     const s=t.slice(m.index).split(/(?<=[.!?])\s|\n/)[0].slice(0,220).trim();n++;const id=side+' '+rk+' '+lab+' #'+n;
     items.push({rule:'K-W',side,link:id,line:'['+rk+'] '+lab+': "'+s+'"'});
     marks.push('[AUDIT v30: WITHDRAWAL TO ANSWER (K-W; ruling 421) -- '+id+': "'+s.replace(/[\[\]"]/g,'')+'"; the judge answers STANDS WITHOUT IT because <layer>, CONCEDED, or NOT HELD with a reason that quotes it (six words in a row, or all of it when shorter). LIVE rule: left uncured after the cure, it removes the seat. REVIEW THIS ROW.]');}}}
@@ -1181,11 +1308,11 @@ function kcmtGrade2024(l){if(/^\[AUDIT\b/.test(l))return false;const h=l.replace
 function kcmtlSeg2024(text,k){for(const s of String(text||'').split(/;|\n/)){const m=s.match(/^\s*lines?\s+((?:\d+\s*(?:,|and|&)?\s*)+)\s*(?::|--|\u2014|\u2013|-)\s*([\s\S]*)$/i);if(m&&(m[1].match(/\d+/g)||[]).map(Number).includes(k))return s.trim();}return null;} /* pkgKCL (c): the segment of a shared K-CMTL RESPONSE for line k */
 function rechk2024(rp,RD){const out=[];const one=s=>String(s==null?'':s).replace(/[*_`]+/g,'').replace(/\s+/g,' ').trim();const has=RD&&['CR1','CR2','CR3','CR4','DR1','DR2','DR3','DR4'].some(k=>typeof RD[k]==='string');
  const pairOf=l=>{const m=one(l).match(/^(?:[-\u2022]\s*)?FORCED(?:\s*\(\s*Commitment\s+\d+\s*\))?\s*:\s*(D\d+)\s+vs\.?\s+(C\d+)/i);return m?(m[1]+' vs '+m[2]).toUpperCase():null;};
- for(const [o0,n0] of (rp||[])){const O=String(o0==null?'':o0).split('\n').map(one).filter(Boolean),N=String(n0==null?'':n0).split('\n').map(one).filter(Boolean);const OS=new Set(O);
+ for(const [o0,n0,id0] of (rp||[])){const O=String(o0==null?'':o0).split('\n').map(one).filter(Boolean),N=String(n0==null?'':n0).split('\n').map(one).filter(Boolean);const OS=new Set(O);
   for(const l of N){if(OS.has(l)||/^\[AUDIT\b/.test(l))continue;
-   if(kcmtGrade2024(l))out.push({rule:'K-CMT',line:l,orig:O.join(' / '),old:O.some(x=>kcmtGrade2024(x)),why:'a contested grade line that names no Commitment N'});
-   const pk=pairOf(l);if(pk){if(!has){out.push({rule:'K-F',line:l,orig:O.join(' / '),old:null,why:'not re-checked: no rounds'});continue;}const it=kfLines(l,RD).items;
-    if(it.length){const oi=O.filter(x=>pairOf(x)===pk);out.push({rule:'K-F',line:l,orig:O.join(' / '),old:oi.some(x=>kfLines(x,RD).items.length>0),why:it[0].why});}}}}
+   if(kcmtGrade2024(l))out.push({id:id0||null,rule:'K-CMT',line:l,orig:O.join(' / '),old:O.some(x=>kcmtGrade2024(x)),why:'a contested grade line that names no Commitment N'});
+   const pk=pairOf(l);if(pk){if(!has){out.push({id:id0||null,rule:'K-F',line:l,orig:O.join(' / '),old:null,why:'not re-checked: no rounds'});continue;}const it=kfLines(l,RD).items;
+    if(it.length){const oi=O.filter(x=>pairOf(x)===pk);out.push({id:id0||null,rule:'K-F',line:l,orig:O.join(' / '),old:oi.some(x=>kfLines(x,RD).items.length>0),why:it[0].why});}}}}
  return out;} /* pkgRCK (W3 2493): K-RECHK, the K-CMT and K-F re-check of the changed lines */
 function rechkRounds2024(seat){try{const PB=$('Panel Build').first().json;const J=PB.judges||[];const j=J.find(q=>q.seat===seat)||J.find(q=>q&&q.body);return j&&j.body?cureRounds(j.body):null;}catch(e){return null;}}
 function kcmtLines2024(text){const items=[],marks=[];if(typeof text!=='string'||!text.trim())return {items,marks};
@@ -1253,10 +1380,16 @@ function krulLines2024(text,R,CP,ACC,PT){const items=[],marks=[];if(typeof text!
 // or NOT A GRADE; K-RUL by a valid card for the ruling in the cure reply.
 // pkgKCR (W1, Wall 2252 B and E): a cure line may carry its K-CON answer after a label: "RESPONSE: <item> | NOT HELD -- ..." or "STATEMENT: NOT HELD -- ...".
 function kconUnlabel(l){return String(l==null?'':l).replace(/^\s*(?:[-•*>]\s*)?\**\s*(?:RESPONSE\**\s*:[^|\n]*\|\s*|STATEMENT\**\s*:\s*)\**\s*/i,'');}
+/* pkgNHQ (W3 2500): the full flagged sentence(s) from the round, for the NOT HELD quote tests of K-S3, K-W and K-CON (run 33060 row 7881: the item line is cut) */
+function nhqFull(line,rounds){const L=String(line||'');const R=rounds||{};const Nr=s=>String(s||'').replace(/\\"/g,'"').replace(/[\u201c\u201d\u2018\u2019"]/g,"'").replace(/[*_`]+/g,'').replace(/\s+/g,' ');const out=[];
+ const re=/(?:\[([CD]R\d)\]|\b([CD]R\d)\s*:)[^"\[\]]{0,80}?"/g;let m;while((m=re.exec(L))){const rk=m[1]||m[2];const a=m.index+m[0].length;const b=L.indexOf('"',a);let q=Nr(b<0?L.slice(a):L.slice(a,b)).replace(/\s*(?:\.\.\.|\u2026)\s*$/,'').trim();
+  if(b>=0)re.lastIndex=b+1;const t=Nr(R[rk]);if(!t||q.length<12)continue;const k=q.slice(0,60);const p=t.indexOf(k);if(p<0)continue;
+  const from=p+Math.max(q.length-1,0);const e=t.slice(from).search(/(?<!\.)[.!?](?!\.)(?=["')\]]*(?:\s|$))/); /* pkgNHE: an ellipsis is not a sentence end */const full=t.slice(p,e<0?Math.min(t.length,p+1500):from+e+1).slice(0,1500);if(full.length>=q.length)out.push(full);}
+ return out;}
 function krulCure(x,replyText,rounds,respText){const T=krulText(replyText).T; /* K-RUL fix: a JSON-bodied cure reply (sol, 32949) is read by its reasoning lines, for K-RUL, K-CMT and K-CON alike */
  if(x.rule==='K-RUL'){const c=krulCards(T).find(c=>krulMatch(c,x.ruling||x.link,x.krul_ctx||null));const why=krulCheckCard(c,Object.values(rounds||{}).filter(v=>typeof v==='string').join('\n'),null);return why?{st:'UNCURED',why}:{st:'CURED',why:'a valid ruling card for '+(x.ruling||x.link),line:c.head};}
  if(x.rule==='K-CMT'||x.rule==='K-CMTL'){const rp=String(respText||'');if(/\bCommitments?\s*\d+/i.test(rp)||/\bNOT A GRADE\b/.test(rp))return {st:'CURED',why:'the response names the commitment, or NOT A GRADE',line:rp};return {st:'UNCURED',why:rp?'the RESPONSE names no Commitment N and no NOT A GRADE':'no written response'};}
- if(x.rule==='K-CON'){const qs=[...String(x.line||'').matchAll(/"([^"]{12,})"/g)].map(m=>m[1]); /* any quoted sentence of the item, EARLIER or LATER (W2, reply 2160) */
+ if(x.rule==='K-CON'){const qs=[...String(x.line||'').matchAll(/"([^"]{12,})"/g)].map(m=>m[1]).concat(nhqFull(x.line,rounds)); /* pkgNHQ */ /* any quoted sentence of the item, EARLIER or LATER (W2, reply 2160) */
   const runs=[];for(const q of qs){const w=krulNorm(q).split(' ').filter(Boolean);for(let i=0;i+6<=w.length;i++)runs.push(w.slice(i,i+6).join(' '));}
   const ln=T.split('\n').find(l0=>{const l=kconUnlabel(l0);return /^\s*(?:[-•*]\s*)?\**(CONTRADICTION\b|NOT HELD\b|REASSERTED IN\b)/i.test(l)&&!/NONE FOUND/i.test(l)&&runs.some(r=>(' '+krulNorm(l)+' ').includes(' '+r+' '));});
   return ln?{st:'CURED',why:'captured with a quote of the flagged sentence',line:ln.trim()}:{st:'UNCURED',why:'no CONTRADICTION, NOT HELD or REASSERTED IN line quotes the flagged sentence'};}
@@ -1578,7 +1711,8 @@ const DRV=drvCheck(WT,p.conceded_links,p.challenger_conceded_links,p.defense_sta
   {const KR=krulLines2024(WT,PRS_CTX.R,CPV,krulAcc(a.body),PT);KR.items.forEach(x=>DRV.items.push(x));KR.marks.forEach(x=>marks.push(x));} // Commitment 11: K-RUL (TRIAL)
   {const KK=kkjvLines2024(WT,kkjvRows());KK.items.forEach(x=>DRV.items.push(x));KK.marks.forEach(x=>marks.push(x));} // Commitment 12: K-KJV (TRIAL)
   {const KA=kagLines2024(WT);KA.items.forEach(x=>DRV.items.push(x));KA.marks.forEach(x=>marks.push(x));} // K-AG (TRIAL; W3 2279, 2283)
-  const LB=drvBlocks(WT,PT,p.conceded_links,p.challenger_conceded_links,p.defense_standing,p.challenge_standing,CPV,LN);for(const x of LB.items)DRV.items.push(x);for(const x of LB.marks)marks.push(x);}
+  const LB=drvBlocks(WT,PT,p.conceded_links,p.challenger_conceded_links,p.defense_standing,p.challenge_standing,CPV,LN);for(const x of LB.items)DRV.items.push(x);for(const x of LB.marks)marks.push(x);
+  {const UX=kunxLines(WT,PT);for(const x of UX.items)DRV.items.push(x);for(const x of UX.marks)marks.push(x);}} // pkgUNX: K-UNX (TRIAL)
  for(const x of cAudit(WT,drvPromptText(a.body)))marks.push(x); // BB-7397 rev 9 DoD 26 (2), recorded only
   /* posture v5: no SILENCE / SAME TEST marks */
   p.drv_uncured=DRV.items.filter(enfLive).length; // judge_fix6 H8: LIVE items only. 5B fail-closed: the cure check below lowers it

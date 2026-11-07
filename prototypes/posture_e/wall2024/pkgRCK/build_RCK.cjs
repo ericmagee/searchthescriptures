@@ -3,7 +3,7 @@
 // Base: live 5a710187 fetch-back + pkgUNXS/patched + pkgUNXW/patched (stack.cjs; W2 write order UNXS, UNXW, RCK). Each anchor asserted exactly once per node.
 const fs=require('fs'),path=require('path'),crypto=require('crypto');
 const {stacked}=require('./stack.cjs');const SRC=process.argv[2];
-const OUT=path.join(__dirname,'out');fs.mkdirSync(OUT,{recursive:true});
+const OUT=path.join(__dirname,'out');fs.mkdirSync(OUT,{recursive:true});const PAT=path.join(__dirname,'patched');fs.mkdirSync(PAT,{recursive:true}); /* patched/ is committed; out/ is the same files plus the workflow JSON */
 const {W0,W,used}=stacked(SRC);console.log('base layers: '+JSON.stringify(used));
 const K0="function kunxLines(text,ptext){const items=[],marks=[];if(typeof text!=='string'||typeof ptext!=='string')return {items,marks};let R;try{R=ciRounds(ptext);}catch(e){return {items,marks};}";
 const K1="function kunxLines(text,ptext){const items=[],marks=[];if(typeof text!=='string'||!(typeof ptext==='string'||(ptext&&typeof ptext==='object')))return {items,marks};let R;try{R=typeof ptext==='string'?ciRounds(ptext):ptext;}catch(e){return {items,marks};} /* pkgRCK: also takes the rounds object */";
@@ -16,7 +16,7 @@ let nk=0,na=0;const rep=[];
 for(const n of W.nodes){const c=n.parameters&&n.parameters.jsCode;if(typeof c!=='string')continue;let t=c;
  if(t.includes('function kunxLines(')){if(cnt(t,K0)!==1)throw new Error('K0 anchor x'+cnt(t,K0)+' in '+n.name);t=t.replace(K0,()=>K1);nk++;}
  if(t.includes('function gateNewK2024(')){if(cnt(t,A0)!==1)throw new Error('A0 anchor x'+cnt(t,A0)+' in '+n.name);t=t.replace(A0,()=>RCK);na++;}
- if(t!==c){rep.push(n.name+' '+sha(c)+' -> '+sha(t));n.parameters.jsCode=t;fs.writeFileSync(path.join(OUT,n.name.replace(/[^A-Za-z0-9]+/g,'_')+'.js'),t);}}
+ if(t!==c){rep.push(n.name+' '+sha(c)+' -> '+sha(t));n.parameters.jsCode=t;fs.writeFileSync(path.join(OUT,n.name.replace(/[^A-Za-z0-9]+/g,'_')+'.js'),t);fs.writeFileSync(path.join(PAT,n.name.replace(/[^A-Za-z0-9]+/g,'_')+'.js'),t);}}
 if(nk!==22||na!==6)throw new Error('expected 22 kunxLines and 6 gateNewK2024 nodes, got '+nk+'/'+na);
 fs.writeFileSync(path.join(OUT,'workflow_RCK.json'),JSON.stringify(W0));
 console.log('pkgRCK: '+rep.length+' nodes changed ('+nk+' kunxLines, '+na+' gateNewK2024)');rep.forEach(r=>console.log('  '+r));
