@@ -1,0 +1,42 @@
+{
+ "source": "W3 2726 item 3",
+ "base": "pkgGSL/patched",
+ "nodes": [
+  {
+   "name": "Gate Build",
+   "file": "Gate_Build.js",
+   "base_sha": "a25cb2ea1d5dcab8",
+   "final_sha": "487db2d879b40fee"
+  },
+  {
+   "name": "Gate Record",
+   "file": "Gate_Record.js",
+   "base_sha": "c1c69125a4cfeefd",
+   "final_sha": "82d6817e1fdbf7e6"
+  },
+  {
+   "name": "Alt Gate Build",
+   "file": "Alt_Gate_Build.js",
+   "base_sha": "ed2a11419278f001",
+   "final_sha": "db22df7c96708c69"
+  },
+  {
+   "name": "Alt Gate Record",
+   "file": "Alt_Gate_Record.js",
+   "base_sha": "9f3752b2fc1b6cff",
+   "final_sha": "69f658b177b61523"
+  },
+  {
+   "name": "Alternate Merge Seat",
+   "file": "Alternate_Merge_Seat.js",
+   "base_sha": "53579cf5b03063ef",
+   "final_sha": "cd3cfe326e037fe9"
+  },
+  {
+   "name": "Alternate Merge",
+   "file": "Alternate_Merge.js",
+   "base_sha": "8044cd3f0b9e12cc",
+   "final_sha": "55ecac41411e8576"
+  }
+ ]
+}

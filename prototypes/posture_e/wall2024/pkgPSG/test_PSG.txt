@@ -1,0 +1,15 @@
+OK   33222 Alt Gate Record: patched output equals base (pkgGSL) apart from the added psrc field on gate change records; grok G1-G4 CURED
+     grok G1 NOT APPLIED (E-APPLY S35) CURED; grok G2 NOT APPLIED (E-APPLY S36) CURED; grok G3 NOT APPLIED (E-APPLY S37) CURED; grok G4 NOT APPLIED (E-APPLY S38) CURED
+OK   33222 Gate Record: patched output equals base apart from the added psrc field on gate change records
+     chatgpt G1 NOT APPLIED (E-APPLY S21) CURED; chatgpt G2 NOT APPLIED (E-APPLY S22) CURED
+OK   33218 Gate Record: patched output equals base apart from the added psrc field on gate change records
+     chatgpt G1 NOT APPLIED (E-APPLY S20) CURED; chatgpt G2 NOT APPLIED (E-APPLY S21) CURED; sol G1 NOT APPLIED (E-APPLY S18) CURED; sol G2 NOT APPLIED (E-APPLY S19) CURED
+OK   control: G4 regrades premise 1: base applies it and CURES G4 (the gap)
+     grok G1 NOT APPLIED (E-APPLY S35) CURED; grok G2 NOT APPLIED (E-APPLY S36) CURED; grok G3 NOT APPLIED (E-APPLY S37) CURED; grok G4 NOT APPLIED (E-APPLY S38) CURED
+OK   control: pkgPSG refuses it (NOT APPLIED, premise 1 not named) and G4 is UNCURED
+     grok G1 NOT APPLIED (E-APPLY S35) UNCURED; grok G2 NOT APPLIED (E-APPLY S36) UNCURED; grok G3 NOT APPLIED (E-APPLY S37) CURED; grok G4 NOT APPLIED (E-APPLY S38) UNCURED; grok NEW NOT APPLIED (E-APPLY G4) UNCURED
+OK   control: the refusal reason names premise 1 and pkgPS
+     the change regrades premise 1, which its item does not name (named: 3, 4, 5, 6; pkgPS, W3 2446: a premise change stays inside the premises its items name); raised after the gate answers; RE
+OK   negative control: G4 spares premise 4 (a named premise) with count 3: applied and CURED under pkgPSG
+     grok G1 NOT APPLIED (E-APPLY S35) CURED; grok G2 NOT APPLIED (E-APPLY S36) CURED; grok G3 NOT APPLIED (E-APPLY S37) CURED; grok G4 NOT APPLIED (E-APPLY S38) CURED
+7 OK, 0 FAIL
