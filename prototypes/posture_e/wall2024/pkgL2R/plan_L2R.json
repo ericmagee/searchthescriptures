@@ -1,0 +1,396 @@
+{
+ "base": "/mnt/project-files/wall2024/fetchback_live_1b49671d.json",
+ "nodes": [
+  {
+   "node": "C1 Extract",
+   "base_sha": "681a5dcb7c97f82a",
+   "final_sha": "a2c83c3f7fb42892",
+   "l2c_base": "c326121ed16d33f9",
+   "l2c_final": "28221a6c56008fe2"
+  },
+  {
+   "node": "D2 Build",
+   "base_sha": "71cb73900c7c6788",
+   "final_sha": "a4b71bf5f7632f6a",
+   "l2c_base": "c326121ed16d33f9",
+   "l2c_final": "28221a6c56008fe2"
+  },
+  {
+   "node": "D2 Extract",
+   "base_sha": "6d941ba94b3e680c",
+   "final_sha": "2b6c166d8fa7052f",
+   "l2c_base": "c326121ed16d33f9",
+   "l2c_final": "28221a6c56008fe2"
+  },
+  {
+   "node": "C2 Build",
+   "base_sha": "a37c7c38260ecf62",
+   "final_sha": "269195b6062d3d67",
+   "l2c_base": "c326121ed16d33f9",
+   "l2c_final": "28221a6c56008fe2"
+  },
+  {
+   "node": "C2 Extract",
+   "base_sha": "544e4c4a1f913b75",
+   "final_sha": "644dda57065b14a8",
+   "l2c_base": "c326121ed16d33f9",
+   "l2c_final": "28221a6c56008fe2"
+  },
+  {
+   "node": "D3 Build",
+   "base_sha": "8f91b4cfb77afd3d",
+   "final_sha": "8919f78cfad3bd8d",
+   "l2c_base": "c326121ed16d33f9",
+   "l2c_final": "28221a6c56008fe2"
+  },
+  {
+   "node": "D3 Extract",
+   "base_sha": "1e1eeed112100233",
+   "final_sha": "dc648c665094b0c0",
+   "l2c_base": "c326121ed16d33f9",
+   "l2c_final": "28221a6c56008fe2"
+  },
+  {
+   "node": "C3 Build",
+   "base_sha": "8bf25afedeb15c8c",
+   "final_sha": "c12dcd1a4fbe5ec8",
+   "l2c_base": "c326121ed16d33f9",
+   "l2c_final": "28221a6c56008fe2"
+  },
+  {
+   "node": "C3 Extract",
+   "base_sha": "c9306aa2383b5723",
+   "final_sha": "0ab52aa925af0325",
+   "l2c_base": "c326121ed16d33f9",
+   "l2c_final": "28221a6c56008fe2"
+  },
+  {
+   "node": "Extract Independent Verdict",
+   "base_sha": "15148253b862f19f",
+   "final_sha": "769f35261fc7dcd8",
+   "l2c_base": "c326121ed16d33f9",
+   "l2c_final": "28221a6c56008fe2"
+  },
+  {
+   "node": "Panel Payloads",
+   "base_sha": "8a8fc86b815e2240",
+   "final_sha": "f3bee3ff27b5682c",
+   "l2c_base": "c326121ed16d33f9",
+   "l2c_final": "28221a6c56008fe2"
+  },
+  {
+   "node": "Citation Scan",
+   "base_sha": "67707b7e876145e2",
+   "final_sha": "3b45f2cf11876b12",
+   "l2c_base": "c326121ed16d33f9",
+   "l2c_final": "28221a6c56008fe2"
+  },
+  {
+   "node": "Quote Report",
+   "base_sha": "51af5dd84ea8786c",
+   "final_sha": "f44da16a11669f01",
+   "l2c_base": "c326121ed16d33f9",
+   "l2c_final": "28221a6c56008fe2"
+  },
+  {
+   "node": "Cure Build",
+   "base_sha": "77b82e8ea201a6a8",
+   "final_sha": "84915f2bccfc0914",
+   "l2c_base": "c326121ed16d33f9",
+   "l2c_final": "28221a6c56008fe2"
+  },
+  {
+   "node": "Cure Normalize",
+   "base_sha": "3e5b309ad871df33",
+   "final_sha": "7f603a13652c765a",
+   "l2c_base": "c326121ed16d33f9",
+   "l2c_final": "28221a6c56008fe2"
+  },
+  {
+   "node": "Cure Check",
+   "base_sha": "ea0685f7e892ad46",
+   "final_sha": "b8652895e44f5bb9",
+   "l2c_base": "c326121ed16d33f9",
+   "l2c_final": "28221a6c56008fe2"
+  },
+  {
+   "node": "Panel Cure Build 1",
+   "base_sha": "62aeaeca0382dc2f",
+   "final_sha": "0bb7d782170c8f9d",
+   "l2c_base": "c326121ed16d33f9",
+   "l2c_final": "28221a6c56008fe2"
+  },
+  {
+   "node": "Panel Cure Normalize 1",
+   "base_sha": "e276721d3354ae0a",
+   "final_sha": "d0f067231477e61c",
+   "l2c_base": "c326121ed16d33f9",
+   "l2c_final": "28221a6c56008fe2"
+  },
+  {
+   "node": "Panel Cure Build 2",
+   "base_sha": "6bda41a65bc2fa4a",
+   "final_sha": "ea08321cf42f6abd",
+   "l2c_base": "c326121ed16d33f9",
+   "l2c_final": "28221a6c56008fe2"
+  },
+  {
+   "node": "Panel Cure Normalize 2",
+   "base_sha": "7c8626f6bf5ef6a8",
+   "final_sha": "00b47712409a5b2c",
+   "l2c_base": "c326121ed16d33f9",
+   "l2c_final": "28221a6c56008fe2"
+  },
+  {
+   "node": "Panel Cure Build 3",
+   "base_sha": "6f84d14e43add188",
+   "final_sha": "baba91a8b8151e67",
+   "l2c_base": "c326121ed16d33f9",
+   "l2c_final": "28221a6c56008fe2"
+  },
+  {
+   "node": "Panel Cure Normalize 3",
+   "base_sha": "1d9da5b22519bb82",
+   "final_sha": "6e447011784d4011",
+   "l2c_base": "c326121ed16d33f9",
+   "l2c_final": "28221a6c56008fe2"
+  },
+  {
+   "node": "Panel Cure Check",
+   "base_sha": "2261c68e665347d4",
+   "final_sha": "68c790768817fcd5",
+   "l2c_base": "c326121ed16d33f9",
+   "l2c_final": "28221a6c56008fe2"
+  },
+  {
+   "node": "Alternate Build",
+   "base_sha": "79fce015c75f5667",
+   "final_sha": "fb8bd30423d55064",
+   "l2c_base": "c326121ed16d33f9",
+   "l2c_final": "28221a6c56008fe2"
+  },
+  {
+   "node": "Alternate Payloads",
+   "base_sha": "6a2194716cf8ed90",
+   "final_sha": "c9bd66cbb521120a",
+   "l2c_base": "c326121ed16d33f9",
+   "l2c_final": "28221a6c56008fe2"
+  },
+  {
+   "node": "Alternate Cure Build",
+   "base_sha": "dadea445c312d0af",
+   "final_sha": "e86344b607ddc57c",
+   "l2c_base": "c326121ed16d33f9",
+   "l2c_final": "28221a6c56008fe2"
+  },
+  {
+   "node": "Alternate Cure Normalize",
+   "base_sha": "f09c436ca548ea5c",
+   "final_sha": "fd0416154c9dd994",
+   "l2c_base": "c326121ed16d33f9",
+   "l2c_final": "28221a6c56008fe2"
+  },
+  {
+   "node": "Alternate Merge Seat",
+   "base_sha": "b85a516d1ae1abbe",
+   "final_sha": "4e11787bc90ff0c6",
+   "l2c_base": "c326121ed16d33f9",
+   "l2c_final": "28221a6c56008fe2"
+  },
+  {
+   "node": "D4 Build",
+   "base_sha": "cd5076258af3141a",
+   "final_sha": "19c6847d5d4eda54",
+   "l2c_base": "c326121ed16d33f9",
+   "l2c_final": "28221a6c56008fe2"
+  },
+  {
+   "node": "D4 Extract",
+   "base_sha": "f0f0283dda22e8a5",
+   "final_sha": "745d25fb24dfc7a3",
+   "l2c_base": "c326121ed16d33f9",
+   "l2c_final": "28221a6c56008fe2"
+  },
+  {
+   "node": "C4 Build",
+   "base_sha": "7d2073c3c56acdde",
+   "final_sha": "f6de4b58507e5602",
+   "l2c_base": "c326121ed16d33f9",
+   "l2c_final": "28221a6c56008fe2"
+  },
+  {
+   "node": "D2 Lexicon Plan",
+   "base_sha": "eb5e6013b1d2652c",
+   "final_sha": "0fb4fc6bd509ee13",
+   "l2c_base": "c326121ed16d33f9",
+   "l2c_final": "28221a6c56008fe2"
+  },
+  {
+   "node": "C2 Lexicon Plan",
+   "base_sha": "903c313bb45df9f1",
+   "final_sha": "9aac65e14e54d42c",
+   "l2c_base": "c326121ed16d33f9",
+   "l2c_final": "28221a6c56008fe2"
+  },
+  {
+   "node": "D3 Lexicon Plan",
+   "base_sha": "7cf5ecee8610a40c",
+   "final_sha": "774a3d631ebc6f83",
+   "l2c_base": "c326121ed16d33f9",
+   "l2c_final": "28221a6c56008fe2"
+  },
+  {
+   "node": "C3 Lexicon Plan",
+   "base_sha": "d083abfdd24caa2d",
+   "final_sha": "6ec5c6b3e8d34239",
+   "l2c_base": "c326121ed16d33f9",
+   "l2c_final": "28221a6c56008fe2"
+  },
+  {
+   "node": "D4 Lexicon Plan",
+   "base_sha": "1b059356b697e738",
+   "final_sha": "2ac6cc0d97804c00",
+   "l2c_base": "c326121ed16d33f9",
+   "l2c_final": "28221a6c56008fe2"
+  },
+  {
+   "node": "C4 Lexicon Plan",
+   "base_sha": "b433f8b1a934922a",
+   "final_sha": "80187d5662755ac9",
+   "l2c_base": "c326121ed16d33f9",
+   "l2c_final": "28221a6c56008fe2"
+  },
+  {
+   "node": "L2 Lexicon Plan",
+   "base_sha": "f9b83471ce4fa3f6",
+   "final_sha": "5db627ce20d0a18e",
+   "l2c_base": "c326121ed16d33f9",
+   "l2c_final": "28221a6c56008fe2"
+  },
+  {
+   "node": "L2 Count Plan",
+   "base_sha": "f0f836ba1bd997d1",
+   "final_sha": "6822c3b02be2d2e5",
+   "l2c_base": "c326121ed16d33f9",
+   "l2c_final": "28221a6c56008fe2"
+  },
+  {
+   "node": "Send Back Build",
+   "base_sha": "ffd1c4e09efb66f4",
+   "final_sha": "5105cdb009a4dfff",
+   "l2c_base": "c326121ed16d33f9",
+   "l2c_final": "28221a6c56008fe2"
+  },
+  {
+   "node": "Send Back Record",
+   "base_sha": "4bd32270790b4243",
+   "final_sha": "828d431840877267",
+   "l2c_base": "c326121ed16d33f9",
+   "l2c_final": "28221a6c56008fe2"
+  },
+  {
+   "node": "Gate Build",
+   "base_sha": "6357a2e56a8baf34",
+   "final_sha": "c84ea99cac801e0f",
+   "l2c_base": "c326121ed16d33f9",
+   "l2c_final": "28221a6c56008fe2"
+  },
+  {
+   "node": "Gate Record",
+   "base_sha": "ed114e44de5f3f02",
+   "final_sha": "26951aaea12fd89b",
+   "l2c_base": "c326121ed16d33f9",
+   "l2c_final": "28221a6c56008fe2"
+  },
+  {
+   "node": "Alt Send Back Build",
+   "base_sha": "2795e04b41ce9013",
+   "final_sha": "66a955791ae6b262",
+   "l2c_base": "c326121ed16d33f9",
+   "l2c_final": "28221a6c56008fe2"
+  },
+  {
+   "node": "Alt Send Back Record",
+   "base_sha": "a6c10d650d69cfd3",
+   "final_sha": "745e450ac7e1383c",
+   "l2c_base": "c326121ed16d33f9",
+   "l2c_final": "28221a6c56008fe2"
+  },
+  {
+   "node": "Alt Gate Build",
+   "base_sha": "d7ad2792067d5eaf",
+   "final_sha": "f70a23c9bfc3ebec",
+   "l2c_base": "c326121ed16d33f9",
+   "l2c_final": "28221a6c56008fe2"
+  },
+  {
+   "node": "Alt Gate Record",
+   "base_sha": "8b67fd27f397c89c",
+   "final_sha": "c4b3c436157a0f6d",
+   "l2c_base": "c326121ed16d33f9",
+   "l2c_final": "28221a6c56008fe2"
+  },
+  {
+   "node": "Alternate Merge",
+   "base_sha": "49b19797c2a4fe82",
+   "final_sha": "20780fc45705bd99",
+   "l2c_base": "c326121ed16d33f9",
+   "l2c_final": "28221a6c56008fe2"
+  },
+  {
+   "node": "C3G Extract",
+   "base_sha": "efb8da5678dbac10",
+   "final_sha": "47f8a9343f66361b",
+   "l2c_base": "c326121ed16d33f9",
+   "l2c_final": "28221a6c56008fe2"
+  },
+  {
+   "node": "C1B Extract",
+   "base_sha": "1387932dfc0db5a4",
+   "final_sha": "76c95f82d81238d4",
+   "l2c_base": "c326121ed16d33f9",
+   "l2c_final": "28221a6c56008fe2"
+  },
+  {
+   "node": "D2B Extract",
+   "base_sha": "ba10df4b4f4d2890",
+   "final_sha": "aec1ecac446d0edf",
+   "l2c_base": "c326121ed16d33f9",
+   "l2c_final": "28221a6c56008fe2"
+  },
+  {
+   "node": "C2B Extract",
+   "base_sha": "f98ef6a38f5ea43e",
+   "final_sha": "4ffb074f694d95ce",
+   "l2c_base": "c326121ed16d33f9",
+   "l2c_final": "28221a6c56008fe2"
+  },
+  {
+   "node": "D3B Extract",
+   "base_sha": "5e772a9844c50256",
+   "final_sha": "a6774b500b80cb59",
+   "l2c_base": "c326121ed16d33f9",
+   "l2c_final": "28221a6c56008fe2"
+  },
+  {
+   "node": "C3B Extract",
+   "base_sha": "0da52413f0b7ad3d",
+   "final_sha": "f988c68512804e2d",
+   "l2c_base": "c326121ed16d33f9",
+   "l2c_final": "28221a6c56008fe2"
+  },
+  {
+   "node": "D4B Extract",
+   "base_sha": "3d2023c69dfd9961",
+   "final_sha": "6d6deef12860bf00",
+   "l2c_base": "c326121ed16d33f9",
+   "l2c_final": "28221a6c56008fe2"
+  },
+  {
+   "node": "Build Save Body",
+   "base_sha": "96d2b05288928001",
+   "final_sha": "e1bc41bbefd9579e"
+  }
+ ],
+ "l2c": "c326121ed16d33f9>28221a6c56008fe2"
+}
