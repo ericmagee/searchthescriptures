@@ -1,0 +1,46 @@
+{
+ "source": "W2 pkgEAH, W3 2856 (E-HOLD bare-grant pushes)",
+ "base": "pkgEAW/patched_on_pkgEPD",
+ "nodes": [
+  {
+   "name": "Judge Enforcer Build",
+   "file": "Judge_Enforcer_Build.js",
+   "base_sha": "01ad430535a0",
+   "final_sha": "329655241a27",
+   "bytes": [
+    55626,
+    58272
+   ]
+  },
+  {
+   "name": "Alt Judge Enforcer Build",
+   "file": "Alt_Judge_Enforcer_Build.js",
+   "base_sha": "1f9e6db2d525",
+   "final_sha": "bbb7bf23ecb3",
+   "bytes": [
+    55547,
+    58193
+   ]
+  },
+  {
+   "name": "Judge Enforcer Record",
+   "file": "Judge_Enforcer_Record.js",
+   "base_sha": "3ad30fb709a6",
+   "final_sha": "863815d143dc",
+   "bytes": [
+    12736,
+    14696
+   ]
+  },
+  {
+   "name": "Alt Judge Enforcer Record",
+   "file": "Alt_Judge_Enforcer_Record.js",
+   "base_sha": "241f59fdb02f",
+   "final_sha": "852bd313fefc",
+   "bytes": [
+    12739,
+    14699
+   ]
+  }
+ ]
+}
