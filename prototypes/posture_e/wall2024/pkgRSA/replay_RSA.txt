@@ -1,0 +1,3 @@
+33107 sol: applied ["S15"] -> ["S15","S9"]; result UNDERDETERMINED -> UNDERDETERMINED
+33129 sol: applied ["S1","S2","S3","S4","S5","S6"] -> ["S1","S2","S3","S4","S5","S6","S8"]; result UNDERDETERMINED -> UNDERDETERMINED
+33160 gemini: applied ["S1","S2","S3","G3","S7","G2","S10","G4","G5","S14","S15","S16","S17","S18"] -> ["S1","S2","S3","G3","S7","G2","S10","G4","G5","S14","S15","S16","S17","S18","S8"]; result UNDERDETERMINED -> UNDERDETERMINED
