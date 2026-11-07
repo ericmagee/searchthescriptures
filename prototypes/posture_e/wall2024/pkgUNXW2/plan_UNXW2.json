@@ -1,101 +1,132 @@
 {
  "source": "W3 2747 item 2",
- "base": "pkgRCK/out",
+ "base": "pkgRCK/out + pkgEPK/patched (Send Back Build, Alt Send Back Build)",
  "nodes": [
   {
    "file": "Alt_Gate_Build.js",
+   "base": "pkgRCK/out/Alt_Gate_Build.js",
    "base_sha": "8e56f1bb0dc1361b",
    "final_sha": "780df5a3a5220d3b"
   },
   {
    "file": "Alt_Gate_Record.js",
+   "base": "pkgRCK/out/Alt_Gate_Record.js",
    "base_sha": "52f6e2e1bfe5532d",
    "final_sha": "ed1f7b0384471d03"
   },
   {
+   "file": "Alt_Send_Back_Build.js",
+   "base": "pkgEPK/patched/Alt_Send_Back_Build.js",
+   "base_sha": "467430f231e964a6",
+   "final_sha": "5dfb0693233c9c3b"
+  },
+  {
    "file": "Alternate_Build.js",
+   "base": "pkgRCK/out/Alternate_Build.js",
    "base_sha": "388c993b0d9dec75",
    "final_sha": "f36816d170be396a"
   },
   {
    "file": "Alternate_Cure_Build.js",
+   "base": "pkgRCK/out/Alternate_Cure_Build.js",
    "base_sha": "4ab1ac1020086612",
    "final_sha": "d689176897786c32"
   },
   {
    "file": "Alternate_Cure_Normalize.js",
+   "base": "pkgRCK/out/Alternate_Cure_Normalize.js",
    "base_sha": "b300b5b49e95d24c",
    "final_sha": "7e13c090f3dfc41d"
   },
   {
    "file": "Alternate_Merge.js",
+   "base": "pkgRCK/out/Alternate_Merge.js",
    "base_sha": "2a204b6d2ede4717",
    "final_sha": "9e44d64f5a43bbb0"
   },
   {
    "file": "Alternate_Merge_Seat.js",
+   "base": "pkgRCK/out/Alternate_Merge_Seat.js",
    "base_sha": "12b8a9f77096b99f",
    "final_sha": "ec4fa8d36e088eb3"
   },
   {
    "file": "Cure_Build.js",
+   "base": "pkgRCK/out/Cure_Build.js",
    "base_sha": "f4627495fefefe7b",
    "final_sha": "80e3a02bebfc0cc5"
   },
   {
    "file": "Cure_Check.js",
+   "base": "pkgRCK/out/Cure_Check.js",
    "base_sha": "056c9646f4f33a2c",
    "final_sha": "76b4cdf704e12497"
   },
   {
    "file": "Cure_Normalize.js",
+   "base": "pkgRCK/out/Cure_Normalize.js",
    "base_sha": "b33d2d4a6ab4a2b9",
    "final_sha": "0b005a9701895609"
   },
   {
    "file": "Gate_Build.js",
+   "base": "pkgRCK/out/Gate_Build.js",
    "base_sha": "1e887da4582aec70",
    "final_sha": "59278c22da7feb6e"
   },
   {
    "file": "Gate_Record.js",
+   "base": "pkgRCK/out/Gate_Record.js",
    "base_sha": "0b7721c146a5b12f",
    "final_sha": "8aae3a4e9e71f2e7"
   },
   {
    "file": "Panel_Cure_Build_1.js",
+   "base": "pkgRCK/out/Panel_Cure_Build_1.js",
    "base_sha": "11a34c141c25033a",
    "final_sha": "a9c9c35820d4cf1a"
   },
   {
    "file": "Panel_Cure_Build_2.js",
+   "base": "pkgRCK/out/Panel_Cure_Build_2.js",
    "base_sha": "8873042ef06edaf0",
    "final_sha": "58843baa9736f2f9"
   },
   {
    "file": "Panel_Cure_Build_3.js",
+   "base": "pkgRCK/out/Panel_Cure_Build_3.js",
    "base_sha": "8d063b36df41298b",
    "final_sha": "a8d37d19d8827bc6"
   },
   {
    "file": "Panel_Cure_Check.js",
+   "base": "pkgRCK/out/Panel_Cure_Check.js",
    "base_sha": "f7e3fbd12d8d4dd4",
    "final_sha": "8a28f3bc2edd0401"
   },
   {
    "file": "Panel_Cure_Normalize_1.js",
+   "base": "pkgRCK/out/Panel_Cure_Normalize_1.js",
    "base_sha": "3f1f09c5ae8baf0b",
    "final_sha": "5e8e48a0ef10fb5c"
   },
   {
    "file": "Panel_Cure_Normalize_2.js",
+   "base": "pkgRCK/out/Panel_Cure_Normalize_2.js",
    "base_sha": "dc2b89f5e320b9c6",
    "final_sha": "f26229aefec929bc"
   },
   {
    "file": "Panel_Cure_Normalize_3.js",
+   "base": "pkgRCK/out/Panel_Cure_Normalize_3.js",
    "base_sha": "90a1ca485f554ad5",
    "final_sha": "9d88c14ed60f73e9"
+  },
+  {
+   "file": "Send_Back_Build.js",
+   "base": "pkgEPK/patched/Send_Back_Build.js",
+   "base_sha": "af8a38dcdef47b1f",
+   "final_sha": "5ad0aacff38d9b46"
   }
  ]
 }
