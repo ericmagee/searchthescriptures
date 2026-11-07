@@ -1,0 +1,24 @@
+{
+ "source": "W2 pkgCLS (33411 gemini concede line)",
+ "base": "pkgLIB/orig_stack/patched",
+ "nodes": [
+  {
+   "name": "Alternate Merge Seat",
+   "file": "Alternate_Merge_Seat.js",
+   "base_sha": "8a668a338a2a",
+   "final_sha": "e3245e16ff90"
+  },
+  {
+   "name": "Gate Record",
+   "file": "Gate_Record.js",
+   "base_sha": "f735fb29bfc3",
+   "final_sha": "13588c895299"
+  },
+  {
+   "name": "Alt Gate Record",
+   "file": "Alt_Gate_Record.js",
+   "base_sha": "53583d160066",
+   "final_sha": "9f68f0d5d66d"
+  }
+ ]
+}

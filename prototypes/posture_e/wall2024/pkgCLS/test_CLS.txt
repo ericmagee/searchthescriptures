@@ -1,0 +1,23 @@
+OK plain: defender line only
+OK plain: challenger line first, still the defender line
+OK plain: only inside a longer line -> null
+OK json: defender line at the string end
+OK json: challenger line
+OK json: an escaped quote is not a line start
+OK 33276 Alternate Merge Seat same error (Cannot read properties of undefined (reading 'slice'))
+OK 33276 Gate Record same error (Cannot read properties of undefined (reading 'slice'))
+OK 33276 Alt Gate Record same error (Cannot read properties of undefined (reading 'slice'))
+OK 33289 Alternate Merge Seat same error (Cannot read properties of undefined (reading 'slice'))
+OK 33289 Gate Record same error (Cannot read properties of undefined (reading 'slice'))
+OK 33289 Alt Gate Record same error (Cannot read properties of undefined (reading 'slice'))
+OK 33311 Alternate Merge Seat same error (Cannot read properties of undefined (reading 'slice'))
+OK 33311 Gate Record same error (Cannot read properties of undefined (reading 'slice'))
+OK 33311 Alt Gate Record same error (Cannot read properties of undefined (reading 'slice'))
+OK 33322 Alternate Merge Seat same error (Cannot read properties of undefined (reading 'slice'))
+OK 33322 Gate Record same error (Cannot read properties of undefined (reading 'slice'))
+OK 33411 AMS: false challenger line 1 -> 0, defender line kept the S7 change (1)
+node runs compared: 27; changed outputs: 1
+33411 Alternate Merge Seat @1913
+   base:    0 to 1; CHANGED D6 vs C1 (no grade to UNDERDETERMINED); CHANGED D6 vs C1 (CHALLENGER LINK BROKEN to UNDERDETERMINED)).\\\\nCHALLENGER CONCEDED LINKS: 1 -- Premise 2 CONCEDED (stated): \\\\\\\"[CR3] LINK 6 [premise 2]: CONCEDED\\\\\\\"\\\\nCONTRADICTIONS: NONE FOUND.\\\\
+   patched: 0 to 1; CHANGED D6 vs C1 (no grade to UNDERDETERMINED); CHANGED D6 vs C1 (CHALLENGER LINK BROKEN to UNDERDETERMINED)).\\\\nCHALLENGER CONCEDED LINKS: 0 -- Premise 5 VOID: charge adds universal/exclusive \\\\\\\"only\\\\\\\" (\\\\\\\"covenant title only\\\\\\\") which go
+TOTAL 18 OK, 0 FAIL
