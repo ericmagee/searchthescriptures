@@ -1,0 +1,13 @@
+OK   A1 kunxLines(text, rounds) = kunxLines(text, prompt) on 33249 sol: CHALLENGER premise 1, CHALLENGER premise 5
+OK   B1 BASE reproduces stored sol challenger count 2
+OK   B2 RCK sol challenger count 1 (premise 1 only)
+OK   B3 sol drv_uncured 0 in both (TRIAL: no seat removed)
+OK   B4 sol verdict and standings unchanged
+OK   B5 gemini and grok unchanged
+OK   B6 G8 row says TRIAL pkgRCK record-only and names premise 5
+OK   C1 BASE grok defender count 4
+OK   C2 RCK grok defender count 0 (line as first written)
+OK   C3 grok verdict tag unchanged and drv_uncured 0
+OK   C4 chatgpt and sol unchanged
+OK   D1 33218 Gate Record and Alternate Merge Seat bodies identical
+12 OK, 0 FAIL
