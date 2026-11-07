@@ -1,0 +1,17 @@
+OK   U "nothing for [L2] is given" -> [2] (was []) W3 2747: missed before :: 2 / 
+OK   U "the block has L2 absent" -> [2] (was []) W3 2747: missed before :: 2 / 
+OK   U "[L2] missing; [L1] is quoted" -> [2] (was []) the same no-"is" form :: 2 / 
+OK   U "exhibits [L1] and [L3], not [L2]" -> [2] (was [2]) W3 control :: 2 / 2
+OK   U "The block exhibits [L1] and [L2] patēr and [L3]." -> [] (was []) W3 control (33249 grok P5) ::  / 
+OK   U "the count says \"no [L2]\" only" -> [] (was []) W3 control (quoted) ::  / 
+OK   U "its [L4] does not follow" -> [4] (was [4]) :: 4 / 4
+OK   U "[L2] is the gloss; it exhibits [L1]" -> [] (was []) ::  / 
+OK   U "[L1] Luke 2:49 and [L3] Psalm 2:7 exhibit it" -> [] (was []) ::  / 
+OK   A1 19 nodes; each patched file differs from pkgRCK/out only inside unxLack
+OK   C 33218 Panel_Cure_Check: output identical to pkgRCK/out
+OK   C 33218 Alternate_Merge_Seat: output identical to pkgRCK/out
+OK   C 33222 Panel_Cure_Check: output identical to pkgRCK/out
+OK   C 33222 Alternate_Merge_Seat: output identical to pkgRCK/out
+OK   C 33249 Panel_Cure_Check: output identical to pkgRCK/out
+OK   C 33249 Alternate_Merge_Seat: output identical to pkgRCK/out
+16 OK, 0 FAIL
