@@ -1,0 +1,38 @@
+{
+ "source": "B8 (W3 feedback rulings item 8)",
+ "live": "d5375c6e-564f-4043-bead-6a27c15adf82",
+ "nodes": [
+  {
+   "name": "Alternate Merge",
+   "file": "Alternate_Merge.js",
+   "base_sha": "aa05732f5ae4fe47",
+   "final_sha": "6a20f5d290f67c7c",
+   "edits": [
+    "wrap"
+   ]
+  },
+  {
+   "name": "Build Save Body",
+   "file": "Build_Save_Body.js",
+   "base_sha": "e1bc41bbefd9579e",
+   "final_sha": "7549355cd73e3862",
+   "edits": [
+    "wrap"
+   ]
+  }
+ ],
+ "also_on": [
+  {
+   "name": "Alternate Merge",
+   "on": "pkgSGA2/patched/Alternate_Merge.js",
+   "base_sha": "18368591f0c30605",
+   "final_sha": "34fdeb5c7d5640ad"
+  },
+  {
+   "name": "Build Save Body",
+   "on": "pkgPMR/patched/Build_Save_Body.js",
+   "base_sha": "15819950b76ad68e",
+   "final_sha": "95b107bb2b3fe984"
+  }
+ ]
+}

@@ -1,0 +1,15 @@
+OK   33218 Alternate Merge: base reproduces the saved output (bodies)
+OK   33218 Alternate Merge: patched equals base except conceded_split
+OK   33218 Alternate Merge: every body carries conceded_split, stored values copied, no reader error
+     gemini D {"stored":1,"stated":1,"granted":0,"unexhibited":1,"unnamed":0,"granted_items":[],"unexhibited_items":["premise 5"]} C {"stored":0,"stated":0,"granted":0,"unexhibited":0,"unnamed":0,"granted_items":[],"unexhibited_items":[]}
+     chatgpt D {"stored":2,"stated":2,"granted":0,"unexhibited":2,"unnamed":0,"granted_items":[],"unexhibited_items":["premise 4","premise 5"]} C {"stored":0,"stated":null,"granted":0,"unexhibited":0,"unnamed":null,"granted_items":[],"unexhibited_items":[]}
+     sol D {"stored":0,"stated":0,"granted":0,"unexhibited":0,"unnamed":0,"granted_items":[],"unexhibited_items":[]} C {"stored":0,"stated":0,"granted":0,"unexhibited":0,"unnamed":0,"granted_items":[],"unexhibited_items":[]}
+OK   33218 Alternate Merge: granted+unexhibited equals the stored count on every body
+OK   33218 the hand-read split (Wall 2701 and the stored lines): gemini 0 granted + premise 5; chatgpt 0 granted + premises 4, 5; sol 0
+OK   33218 Build Save Body: patched equals base except saveBody.conceded_split
+OK   33218 Build Save Body: the single judge split is read, no error
+     {"reader":"pkgCLR","defender":{"stored":0,"stated":0,"granted":0,"unexhibited":0,"unnamed":0,"granted_items":[],"unexhibited_items":[]},"challenger":{"stored":0,"stated":0,"granted":0,"unexhibited":0,"unnamed":0,"granted_items":[],"unexhibited_items":[]}}
+OK   the edits also apply on pkgSGA2 (Alternate Merge) and pkgPMR (Build Save Body) outputs
+OK   201 stored judgments: 395 count lines, stated total 289 = granted 69 + unexhibited 217 + not named 3; reader errors 0
+     rows where the named items do not add to the stated count (2): 29519 gemini defender stated 1 granted 0 unexhibited 0; 32643 grok defender stated 2 granted 0 unexhibited 0
+9 OK, 0 FAIL
