@@ -1,0 +1,161 @@
+{
+ "source": "W2 (reader gap found in the pkgUNXA reconciliation, Wall 2730 item 4)",
+ "base6": "pkgGSL2/patched",
+ "base16": "pkgASM/patched",
+ "nodes": [
+  {
+   "name": "Extract Independent Verdict",
+   "file": "Extract_Independent_Verdict.js",
+   "base": "pkgASM/patched",
+   "base_sha": "b16c79064cf8c3ce",
+   "final_sha": "6f05228decb2891d"
+  },
+  {
+   "name": "Panel Payloads",
+   "file": "Panel_Payloads.js",
+   "base": "pkgASM/patched",
+   "base_sha": "c8fb4f6bacb75a38",
+   "final_sha": "d50dcafb6230c851"
+  },
+  {
+   "name": "Cure Build",
+   "file": "Cure_Build.js",
+   "base": "pkgASM/patched",
+   "base_sha": "69c940fc2ffbd77e",
+   "final_sha": "a191fcfeb83d2d51"
+  },
+  {
+   "name": "Cure Normalize",
+   "file": "Cure_Normalize.js",
+   "base": "pkgASM/patched",
+   "base_sha": "84ddb1c896f07637",
+   "final_sha": "c195002237866574"
+  },
+  {
+   "name": "Cure Check",
+   "file": "Cure_Check.js",
+   "base": "pkgASM/patched",
+   "base_sha": "9250c09e6ea7c2a3",
+   "final_sha": "248653fbb5f5ccef"
+  },
+  {
+   "name": "Panel Cure Build 1",
+   "file": "Panel_Cure_Build_1.js",
+   "base": "pkgASM/patched",
+   "base_sha": "c8807eefb8f0bf74",
+   "final_sha": "21bd6aeeb8c03478"
+  },
+  {
+   "name": "Panel Cure Normalize 1",
+   "file": "Panel_Cure_Normalize_1.js",
+   "base": "pkgASM/patched",
+   "base_sha": "71f081e941f22f1c",
+   "final_sha": "d336a5118b5942b0"
+  },
+  {
+   "name": "Panel Cure Build 2",
+   "file": "Panel_Cure_Build_2.js",
+   "base": "pkgASM/patched",
+   "base_sha": "0536e9ff6abafbed",
+   "final_sha": "29dbf4b27c87ac64"
+  },
+  {
+   "name": "Panel Cure Normalize 2",
+   "file": "Panel_Cure_Normalize_2.js",
+   "base": "pkgASM/patched",
+   "base_sha": "e4978d7dd33bd942",
+   "final_sha": "562d81dcbb1c6fb3"
+  },
+  {
+   "name": "Panel Cure Build 3",
+   "file": "Panel_Cure_Build_3.js",
+   "base": "pkgASM/patched",
+   "base_sha": "55db38152534349b",
+   "final_sha": "389fd3597329c32f"
+  },
+  {
+   "name": "Panel Cure Normalize 3",
+   "file": "Panel_Cure_Normalize_3.js",
+   "base": "pkgASM/patched",
+   "base_sha": "f2b064564eef1b2d",
+   "final_sha": "308aed4f76e94fb5"
+  },
+  {
+   "name": "Panel Cure Check",
+   "file": "Panel_Cure_Check.js",
+   "base": "pkgASM/patched",
+   "base_sha": "fd520d907aea28c8",
+   "final_sha": "adf14568dc0006b7"
+  },
+  {
+   "name": "Alternate Build",
+   "file": "Alternate_Build.js",
+   "base": "pkgASM/patched",
+   "base_sha": "2872b3009d15fc5c",
+   "final_sha": "9c0a822fb11fea02"
+  },
+  {
+   "name": "Alternate Payloads",
+   "file": "Alternate_Payloads.js",
+   "base": "pkgASM/patched",
+   "base_sha": "afab6cccd34897ef",
+   "final_sha": "b9bfddab8e273557"
+  },
+  {
+   "name": "Alternate Cure Build",
+   "file": "Alternate_Cure_Build.js",
+   "base": "pkgASM/patched",
+   "base_sha": "a8d72d13358d496b",
+   "final_sha": "594d43cffd70819f"
+  },
+  {
+   "name": "Alternate Cure Normalize",
+   "file": "Alternate_Cure_Normalize.js",
+   "base": "pkgASM/patched",
+   "base_sha": "65158fcac2cdeaba",
+   "final_sha": "8532c8edbf8af16a"
+  },
+  {
+   "name": "Alternate Merge Seat",
+   "file": "Alternate_Merge_Seat.js",
+   "base": "pkgGSL2/patched",
+   "base_sha": "13f723212e1ac897",
+   "final_sha": "473788e189509763"
+  },
+  {
+   "name": "Gate Build",
+   "file": "Gate_Build.js",
+   "base": "pkgGSL2/patched",
+   "base_sha": "4a03e4dc40b74b00",
+   "final_sha": "c772af2465f9a09e"
+  },
+  {
+   "name": "Gate Record",
+   "file": "Gate_Record.js",
+   "base": "pkgGSL2/patched",
+   "base_sha": "16855f930b8d6939",
+   "final_sha": "1bf1d0a87b6f4505"
+  },
+  {
+   "name": "Alt Gate Build",
+   "file": "Alt_Gate_Build.js",
+   "base": "pkgGSL2/patched",
+   "base_sha": "011ae7b6c40a5aa9",
+   "final_sha": "ef605996fbb065e6"
+  },
+  {
+   "name": "Alt Gate Record",
+   "file": "Alt_Gate_Record.js",
+   "base": "pkgGSL2/patched",
+   "base_sha": "2ee3c597675c6533",
+   "final_sha": "aacd0c7c3b614468"
+  },
+  {
+   "name": "Alternate Merge",
+   "file": "Alternate_Merge.js",
+   "base": "pkgGSL2/patched",
+   "base_sha": "d71fee58c7402c16",
+   "final_sha": "f18789e24c20b0aa"
+  }
+ ]
+}
