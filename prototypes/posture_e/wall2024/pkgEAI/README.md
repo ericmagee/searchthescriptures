@@ -1,9 +1,9 @@
 # pkgEAI (W3 grade_33389 fault 2): DeepSeek enforcer fix, side-neutral
 
 Four nodes: Judge Enforcer Build, Alt Judge Enforcer Build, Judge Enforcer Record, Alt Judge Enforcer Record.
-- pkgEAI/patched, base live s45 (d813c20d): Builds 571fef513c90 / d46e8a7dff5a -> e1f68fbb258e / 0f9687f0083d; Records 7825fedf4301 / 376b3e737b41 -> 9928ff5cbd47 / 3b87eb766cf1.
+- pkgEAI/patched, base live s45 (d813c20d): Builds 571fef513c90 / d46e8a7dff5a -> 760ce193c4bc / f3d0e18c1d2b; Records 7825fedf4301 / 376b3e737b41 -> cbcf0f9382ed / 33b73297f34b.
 - pkgEAI/patched_on_pkgEID, base W1's pkgEID/patched: rebuild with
-  node pkgEAI/build_EAI.cjs --base pkgEID/patched --rbase pkgEID/patched --out pkgEAI/patched_on_pkgEID (shas in patched_on_pkgEID.plan.json).
+  node pkgEAI/build_EAI.cjs --base pkgEID/patched --rbase pkgEID/patched --out pkgEAI/patched_on_pkgEID : Builds 8c4699bc921f / e16b19d7fbcb -> e1f68fbb258e / 0f9687f0083d; Records 257f39c3ca96 / 3e3b1eaf0e40 -> 9928ff5cbd47 / 3b87eb766cf1.
 
 1. eaiBlock (eai_lib.js): THE ANSWER IN FULL may also come from the paragraph of a listed round that holds the answer's first 6 words.
    A bullet group is taken from its first bullet; in a verse list (each bullet opens with its own verse) only the answer's own bullet is taken.
