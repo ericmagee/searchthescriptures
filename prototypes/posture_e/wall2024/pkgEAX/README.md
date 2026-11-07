@@ -4,9 +4,10 @@ From W3 grade_33389 fault 2 and W1's independent check (Wall 2900): 10 of the 13
 
 - W2 built pkgEAI (EAW/EAH finders) in parallel; this package is the residual rule on top of it, named pkgEAX so the two do not collide.
 - Record only: Judge Enforcer Record and Alt. Base pkgEAI/patched_on_pkgEID (JER 9928ff5cbd47, Alt 3b87eb766cf1).
-  - LIVE patched_live: JER 7c55f96b85c3, Alt 9bec1ad28a30.
-  - TRIAL patched: JER a62d18ea0fc6, Alt db170c18aa02.
+  - LIVE patched_live: JER 4bf90e5f5607, Alt 948bfb0a7be0.
+  - TRIAL patched: JER b9cea7b3dc1f, Alt c721b911364c.
   - The Builds are those of pkgEAI/patched_on_pkgEID, unchanged.
+- Efficiency item 4 (Eric 11:06): pkgEAX reuses the rounds pkgECQ already reads (__rdRounds), so the Record reads Panel Cure Normalize once per run. The replay is unchanged by this.
 - Rule (eax_lib.js), applied to an E-ANS "DISAGREE (right: MISSES)" only:
   1. **Trigger.** The reason must call the answer a grant, or say it "gives no fit" or "only restates".
   2. **Never held.** A reason that names another defect stays sent: omits, ignores, nowhere, repeats, concedes, withdraws or drops, or the press.

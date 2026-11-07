@@ -9,10 +9,11 @@ const BASE=arg('--base','pkgEAI/patched_on_pkgEID'),ST=arg('--status','LIVE'),OU
 const LIB=fs.readFileSync(__dirname+'/eax_lib.js','utf8');
 const rep=(s,a,b,f)=>{const n=s.split(a).length-1;if(n!==1)throw new Error(f+': anchor x'+n);return s.split(a).join(b);};
 const A="rows.push(...CODE);";
-const INS="/* pkgEAX (W1 Wall 2900; residual to W2's pkgEAI) */\n"+LIB+"const EAX_STATUS='"+ST+"';let __eaxHeld=0;{let RR=null;for(const f of [()=>$('Panel Cure Normalize 1'),()=>$('Panel Cure Normalize 2'),()=>$('Panel Cure Normalize 3')]){try{const nd=f();if(nd.isExecuted)for(const it of nd.all()){const c=it.json&&it.json.cure;if(c&&c.rounds){RR=c.rounds;break;}}}catch(e){}if(RR)break;}\n"+
+const INS="/* pkgEAX (W1 Wall 2904) */\n"+LIB+"const EAX_STATUS='"+ST+"';let __eaxHeld=0;{const RR=__rdRounds; /* the rounds pkgECQ already read (one read per run; efficiency item 4) */\n"+
  "if(RR)for(const r of rows){if(r.rule!=='E-ANS')continue;const m=String(r.cure_reason||'').match(/^ENFORCER DISAGREE \\(right: MISSES\\): ([\\s\\S]*?) \\(judge wrote /);if(!m)continue;let n=null;try{n=eaxHold(m[1],r.item,RR);}catch(e){n=null;}if(!n)continue;__eaxHeld++;const note=n.replace(/[()]/g,' ');\n"+
- " r.cure_reason=EAX_STATUS==='LIVE'?r.cure_reason.replace(/^ENFORCER DISAGREE/,'ENFORCER HELD (pkgEAX, not sent; W1 2900: '+note+')'):r.cure_reason+' (TRIAL pkgEAX: would not be sent: '+note+')';}}\n"+A;
+ " r.cure_reason=EAX_STATUS==='LIVE'?r.cure_reason.replace(/^ENFORCER DISAGREE/,'ENFORCER HELD (pkgEAX, not sent; W1 2904: '+note+')'):r.cure_reason+' (TRIAL pkgEAX: would not be sent: '+note+')';}}\n"+A;
+const E1a="let __ecqSides=null;{let R=null;",E1b="let __rdRounds=null;let __ecqSides=null;{let R=null;",E2a="if(R)__ecqSides={",E2b="__rdRounds=R;if(R)__ecqSides={";
 fs.mkdirSync(OUT,{recursive:true});const plan={base:BASE,status:ST,nodes:[]};
-for(const f of ['Judge_Enforcer_Record.js','Alt_Judge_Enforcer_Record.js']){const s0=fs.readFileSync(BASE+'/'+f,'utf8');const s=rep(s0,A,INS,f);new Function(s);fs.writeFileSync(OUT+'/'+f,s);plan.nodes.push({file:f,base_sha:sha(s0),final_sha:sha(s)});console.log(f.padEnd(30),sha(s0),'->',sha(s));}
+for(const f of ['Judge_Enforcer_Record.js','Alt_Judge_Enforcer_Record.js']){const s0=fs.readFileSync(BASE+'/'+f,'utf8');const s=rep(rep(rep(s0,E1a,E1b,f),E2a,E2b,f),A,INS,f);new Function(s);fs.writeFileSync(OUT+'/'+f,s);plan.nodes.push({file:f,base_sha:sha(s0),final_sha:sha(s)});console.log(f.padEnd(30),sha(s0),'->',sha(s));}
 for(const f of ['Judge_Enforcer_Build.js','Alt_Judge_Enforcer_Build.js']){fs.copyFileSync(BASE+'/'+f,OUT+'/'+f);plan.nodes.push({file:f,base_sha:sha(fs.readFileSync(BASE+'/'+f,'utf8')),final_sha:'unchanged (carried from base)'});}
 fs.writeFileSync(OUT+'.plan.json',JSON.stringify(plan,null,1));console.log('->',OUT);

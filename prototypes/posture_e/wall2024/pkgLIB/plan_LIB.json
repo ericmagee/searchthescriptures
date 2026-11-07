@@ -9,22 +9,22 @@
   "connections": "none: not wired to any node",
   "note": "the name must stay exactly Shared Library; the 22 stubs read it by name"
  },
- "base": "pkgKGW+pkgKWC",
+ "base": "pkgLIB/strip_s45+pkgLIB/strip_L1Q+pkgLIB/strip_DEC",
  "library": {
   "file": "Shared_Library.js",
-  "lines": 2490,
-  "json_sha": "11db4cd56eceaaf6",
-  "bytes": 438658
+  "lines": 2079,
+  "json_sha": "2bcad7830caf42c0",
+  "bytes": 383755
  },
  "nodes": [
   {
    "file": "Alt_Gate_Build.js",
    "name": "Alt Gate Build",
-   "src": "pkgKWC/patched/Alt_Gate_Build.js",
-   "base_sha": "334c1cfa0d7b3bf5",
-   "base_bytes": 362190,
-   "stub_sha": "981f0fd1901a066a",
-   "stub_bytes": 2582,
+   "src": "pkgLIB/strip_L1Q/patched/Alt_Gate_Build.js",
+   "base_sha": "c456e976f362cfc8",
+   "base_bytes": 314896,
+   "stub_sha": "dd1f43b0aed5e22f",
+   "stub_bytes": 2676,
    "refs": [
     "Alt Seated",
     "Alt Send Back Build",
@@ -37,11 +37,11 @@
   {
    "file": "Alt_Gate_Record.js",
    "name": "Alt Gate Record",
-   "src": "pkgKWC/patched/Alt_Gate_Record.js",
-   "base_sha": "66b4054d79dc2640",
-   "base_bytes": 360772,
-   "stub_sha": "c29fe7b08cc34e6b",
-   "stub_bytes": 3214,
+   "src": "pkgLIB/strip_L1Q/patched/Alt_Gate_Record.js",
+   "base_sha": "d6d1cd59dcf4762a",
+   "base_bytes": 312476,
+   "stub_sha": "3f796dd4c6ec9949",
+   "stub_bytes": 3311,
    "refs": [
     "Alt Gate Build",
     "Alt Seated",
@@ -54,44 +54,45 @@
   {
    "file": "Alternate_Build.js",
    "name": "Alternate Build",
-   "src": "pkgKWC/patched/Alternate_Build.js",
-   "base_sha": "a1fe8c257e11e45c",
-   "base_bytes": 341090,
-   "stub_sha": "592113d6ecec90e8",
-   "stub_bytes": 11381,
+   "src": "pkgLIB/strip_L1Q/patched/Alternate_Build.js",
+   "base_sha": "356baf9a09f6d8c1",
+   "base_bytes": 292861,
+   "stub_sha": "2b107e561b90a216",
+   "stub_bytes": 9556,
    "refs": [
     "Accept Final",
+    "Fetch Models",
     "Init Seats",
     "Panel Build",
     "Reserve Build",
     "Resolve Seats"
    ],
    "all_nodes": false,
-   "own_lines": 55
+   "own_lines": 41
   },
   {
    "file": "Alternate_Cure_Build.js",
    "name": "Alternate Cure Build",
-   "src": "pkgKWC/patched/Alternate_Cure_Build.js",
-   "base_sha": "712bcab0c80166f2",
-   "base_bytes": 332070,
-   "stub_sha": "31a8e72cc48749aa",
-   "stub_bytes": 2990,
+   "src": "pkgLIB/strip_L1Q/patched/Alternate_Cure_Build.js",
+   "base_sha": "4335b48589ec64e4",
+   "base_bytes": 285576,
+   "stub_sha": "4df9b6f6d1a027d4",
+   "stub_bytes": 2929,
    "refs": [
     "Alternate Payloads",
     "Panel Build"
    ],
    "all_nodes": false,
-   "own_lines": 9
+   "own_lines": 8
   },
   {
    "file": "Alternate_Cure_Normalize.js",
    "name": "Alternate Cure Normalize",
-   "src": "pkgKWC/patched/Alternate_Cure_Normalize.js",
-   "base_sha": "9c4ad1cef6760807",
-   "base_bytes": 314876,
-   "stub_sha": "7d8abbd1123b66d6",
-   "stub_bytes": 2258,
+   "src": "pkgLIB/strip_L1Q/patched/Alternate_Cure_Normalize.js",
+   "base_sha": "343ad2eb0c795759",
+   "base_bytes": 266929,
+   "stub_sha": "046e02ed24fcc309",
+   "stub_bytes": 2392,
    "refs": [
     "Alternate Cure Build",
     "Panel Build"
@@ -102,28 +103,35 @@
   {
    "file": "Alternate_Merge.js",
    "name": "Alternate Merge",
-   "src": "pkgKWC/patched/Alternate_Merge.js",
-   "base_sha": "2ce0f815564332d0",
-   "base_bytes": 364383,
-   "stub_sha": "6a905cfe3ea6b41c",
-   "stub_bytes": 10359,
+   "src": "pkgLIB/strip_L1Q/patched/Alternate_Merge.js",
+   "base_sha": "e7458c5936a23ad6",
+   "base_bytes": 321296,
+   "stub_sha": "bb4bfcd52841d8ee",
+   "stub_bytes": 11208,
    "refs": [
+    "Alt Gate Record",
+    "Alt Judge Enforcer Record",
     "Alt Seated",
+    "Alt Send Back Record",
+    "Alternate Merge",
     "Alternate Merge Seat",
+    "Cited Verses",
+    "Gate Record",
     "Panel Build",
-    "Panel Cure Check"
+    "Panel Cure Check",
+    "Quote Report"
    ],
-   "all_nodes": true,
-   "own_lines": 49
+   "all_nodes": false,
+   "own_lines": 53
   },
   {
    "file": "Alternate_Merge_Seat.js",
    "name": "Alternate Merge Seat",
-   "src": "pkgKWC/patched/Alternate_Merge_Seat.js",
-   "base_sha": "27934a2a6adf57fc",
-   "base_bytes": 368777,
-   "stub_sha": "5aaa4afde93eda5e",
-   "stub_bytes": 14865,
+   "src": "pkgLIB/strip_DEC/patched/Alternate_Merge_Seat.js",
+   "base_sha": "9c4928378da852d9",
+   "base_bytes": 319423,
+   "stub_sha": "c65433b27adab6b8",
+   "stub_bytes": 13343,
    "refs": [
     "Alternate Build",
     "Alternate Cure Normalize",
@@ -140,38 +148,62 @@
     "Send Back Record"
    ],
    "all_nodes": false,
-   "own_lines": 60
+   "own_lines": 52
   },
   {
    "file": "Alternate_Payloads.js",
    "name": "Alternate Payloads",
-   "src": "pkgKGW/patched/Alternate_Payloads.js",
-   "base_sha": "f9614139d9942bb4",
-   "base_bytes": 243250,
-   "stub_sha": "d3f187f299949f9c",
-   "stub_bytes": 8369,
+   "src": "pkgLIB/strip_s45/patched/Alternate_Payloads.js",
+   "base_sha": "21bcacc11a64fa88",
+   "base_bytes": 202190,
+   "stub_sha": "7ae18b488dab3afa",
+   "stub_bytes": 10048,
    "refs": [
     "Alternate Build",
+    "Alternate Call openrouter",
     "Build Save Body",
+    "Cited Verses",
     "Final Output",
     "Init Seats",
     "Panel Build",
     "Panel Check",
+    "Panel Judge 1 deepseek",
+    "Panel Judge 1 gemini",
+    "Panel Judge 1 grok",
+    "Panel Judge 1 mimo",
+    "Panel Judge 1 openai",
+    "Panel Judge 1 openrouter",
+    "Panel Judge 2 gemini",
+    "Panel Judge 2 grok",
+    "Panel Judge 2 mimo",
+    "Panel Judge 2 openai",
+    "Panel Judge 2 openrouter",
+    "Panel Judge 3 gemini",
+    "Panel Judge 3 grok",
+    "Panel Judge 3 mimo",
+    "Panel Judge 3 openai",
+    "Panel Judge 3 openrouter",
+    "Panel Reserve deepseek",
+    "Panel Reserve gemini",
+    "Panel Reserve grok",
+    "Panel Reserve mimo",
+    "Panel Reserve openai",
+    "Panel Reserve openrouter",
     "Quote Report",
     "Regrade Load",
     "Regrade Row"
    ],
-   "all_nodes": true,
-   "own_lines": 36
+   "all_nodes": false,
+   "own_lines": 34
   },
   {
    "file": "Cure_Build.js",
    "name": "Cure Build",
-   "src": "pkgKWC/patched/Cure_Build.js",
-   "base_sha": "9a91c34da5bf2429",
-   "base_bytes": 315768,
-   "stub_sha": "2fa4ed2b90ae101b",
-   "stub_bytes": 3764,
+   "src": "pkgLIB/strip_L1Q/patched/Cure_Build.js",
+   "base_sha": "78654414e796a9a0",
+   "base_bytes": 267906,
+   "stub_sha": "9750499fd66d0768",
+   "stub_bytes": 3774,
    "refs": [
     "Accept Final",
     "Build Independent Verdict",
@@ -180,16 +212,16 @@
     "Verdict Normalizer"
    ],
    "all_nodes": false,
-   "own_lines": 11
+   "own_lines": 10
   },
   {
    "file": "Cure_Check.js",
    "name": "Cure Check",
-   "src": "pkgKWC/patched/Cure_Check.js",
-   "base_sha": "be95eb8c124a1642",
-   "base_bytes": 317642,
-   "stub_sha": "136cb4243e85d457",
-   "stub_bytes": 5023,
+   "src": "pkgLIB/strip_L1Q/patched/Cure_Check.js",
+   "base_sha": "665c5e41cb0b670d",
+   "base_bytes": 269624,
+   "stub_sha": "db1569e135233916",
+   "stub_bytes": 4912,
    "refs": [
     "Cure Normalize",
     "Extract Independent Verdict",
@@ -197,16 +229,16 @@
     "Panel Build"
    ],
    "all_nodes": false,
-   "own_lines": 13
+   "own_lines": 12
   },
   {
    "file": "Cure_Normalize.js",
    "name": "Cure Normalize",
-   "src": "pkgKWC/patched/Cure_Normalize.js",
-   "base_sha": "85fc2890c4b46299",
-   "base_bytes": 314856,
-   "stub_sha": "45bd97c4c5bb4080",
-   "stub_bytes": 2218,
+   "src": "pkgLIB/strip_L1Q/patched/Cure_Normalize.js",
+   "base_sha": "85d9e1c55e795bc8",
+   "base_bytes": 266909,
+   "stub_sha": "0b33f75ae8e85a72",
+   "stub_bytes": 2352,
    "refs": [
     "Cure Build",
     "Panel Build"
@@ -217,27 +249,27 @@
   {
    "file": "Extract_Independent_Verdict.js",
    "name": "Extract Independent Verdict",
-   "src": "pkgKGW/patched/Extract_Independent_Verdict.js",
-   "base_sha": "0fc25cf44de9b3e0",
-   "base_bytes": 256409,
-   "stub_sha": "a913ca3693e1a936",
-   "stub_bytes": 43206,
+   "src": "pkgLIB/strip_s45/patched/Extract_Independent_Verdict.js",
+   "base_sha": "f8e58418a9d7b2a5",
+   "base_bytes": 213045,
+   "stub_sha": "dd8c0be657bc214a",
+   "stub_bytes": 33677,
    "refs": [
     "Build Independent Verdict",
     "Panel Build",
     "Quote Report"
    ],
    "all_nodes": false,
-   "own_lines": 296
+   "own_lines": 198
   },
   {
    "file": "Gate_Build.js",
    "name": "Gate Build",
-   "src": "pkgKWC/patched/Gate_Build.js",
-   "base_sha": "8022bc7e4938345a",
-   "base_bytes": 362185,
-   "stub_sha": "0672f7f6b9586ae5",
-   "stub_bytes": 2575,
+   "src": "pkgLIB/strip_L1Q/patched/Gate_Build.js",
+   "base_sha": "dcdd365cd9bbb6c7",
+   "base_bytes": 314891,
+   "stub_sha": "e5f68599dff3c1e7",
+   "stub_bytes": 2669,
    "refs": [
     "Panel Build",
     "Panel Cure Check",
@@ -250,11 +282,11 @@
   {
    "file": "Gate_Record.js",
    "name": "Gate Record",
-   "src": "pkgKWC/patched/Gate_Record.js",
-   "base_sha": "19ba95234b025c3e",
-   "base_bytes": 360763,
-   "stub_sha": "124be36e5b5b2382",
-   "stub_bytes": 3198,
+   "src": "pkgLIB/strip_L1Q/patched/Gate_Record.js",
+   "base_sha": "a96ad58f64069918",
+   "base_bytes": 312467,
+   "stub_sha": "812c5a164b1cd868",
+   "stub_bytes": 3295,
    "refs": [
     "Gate Build",
     "Panel Build",
@@ -267,75 +299,80 @@
   {
    "file": "Panel_Cure_Build_1.js",
    "name": "Panel Cure Build 1",
-   "src": "pkgKWC/patched/Panel_Cure_Build_1.js",
-   "base_sha": "27e3aee8fa02902b",
-   "base_bytes": 332789,
-   "stub_sha": "107bbeaf1f418034",
-   "stub_bytes": 2272,
+   "src": "pkgLIB/strip_L1Q/patched/Panel_Cure_Build_1.js",
+   "base_sha": "cf17ac2275d3a30c",
+   "base_bytes": 285929,
+   "stub_sha": "3d084c898f86632e",
+   "stub_bytes": 2261,
    "refs": [
     "Panel Build",
     "Panel Payloads",
     "Reserve Build"
    ],
    "all_nodes": false,
-   "own_lines": 2
+   "own_lines": 1
   },
   {
    "file": "Panel_Cure_Build_2.js",
    "name": "Panel Cure Build 2",
-   "src": "pkgKWC/patched/Panel_Cure_Build_2.js",
-   "base_sha": "216dad1d1a1b4d00",
-   "base_bytes": 332789,
-   "stub_sha": "b5098c3a9111c7f6",
-   "stub_bytes": 2272,
+   "src": "pkgLIB/strip_L1Q/patched/Panel_Cure_Build_2.js",
+   "base_sha": "53afb8f8076b5aa7",
+   "base_bytes": 285929,
+   "stub_sha": "6d4ce45858a6ed1b",
+   "stub_bytes": 2261,
    "refs": [
     "Panel Build",
     "Panel Payloads",
     "Reserve Build"
    ],
    "all_nodes": false,
-   "own_lines": 2
+   "own_lines": 1
   },
   {
    "file": "Panel_Cure_Build_3.js",
    "name": "Panel Cure Build 3",
-   "src": "pkgKWC/patched/Panel_Cure_Build_3.js",
-   "base_sha": "a96da811a65bc205",
-   "base_bytes": 332789,
-   "stub_sha": "9046b2bcc564c372",
-   "stub_bytes": 2272,
+   "src": "pkgLIB/strip_L1Q/patched/Panel_Cure_Build_3.js",
+   "base_sha": "7967cb3c52d672b6",
+   "base_bytes": 285929,
+   "stub_sha": "6ec6b5cc5af59e12",
+   "stub_bytes": 2261,
    "refs": [
     "Panel Build",
     "Panel Payloads",
     "Reserve Build"
    ],
    "all_nodes": false,
-   "own_lines": 2
+   "own_lines": 1
   },
   {
    "file": "Panel_Cure_Check.js",
    "name": "Panel Cure Check",
-   "src": "pkgKWC/patched/Panel_Cure_Check.js",
-   "base_sha": "c23b105198fe997a",
-   "base_bytes": 318979,
-   "stub_sha": "30251370a487a744",
-   "stub_bytes": 6299,
+   "src": "pkgLIB/strip_L1Q/patched/Panel_Cure_Check.js",
+   "base_sha": "c03c16b6781bad7e",
+   "base_bytes": 270812,
+   "stub_sha": "276d098cf48c9561",
+   "stub_bytes": 6175,
    "refs": [
+    "Cited Verses",
     "Init Seats",
     "Panel Build",
-    "Panel Payloads"
+    "Panel Cure Normalize 1",
+    "Panel Cure Normalize 2",
+    "Panel Cure Normalize 3",
+    "Panel Payloads",
+    "Quote Report"
    ],
-   "all_nodes": true,
-   "own_lines": 27
+   "all_nodes": false,
+   "own_lines": 23
   },
   {
    "file": "Panel_Cure_Normalize_1.js",
    "name": "Panel Cure Normalize 1",
-   "src": "pkgKWC/patched/Panel_Cure_Normalize_1.js",
-   "base_sha": "b209e07dd61fcb6a",
-   "base_bytes": 314872,
-   "stub_sha": "728eb8f0d1af9872",
-   "stub_bytes": 2250,
+   "src": "pkgLIB/strip_L1Q/patched/Panel_Cure_Normalize_1.js",
+   "base_sha": "e9b5af87111b2dc3",
+   "base_bytes": 266925,
+   "stub_sha": "80ead176c47ce9e3",
+   "stub_bytes": 2384,
    "refs": [
     "Panel Build",
     "Panel Cure Build 1"
@@ -346,11 +383,11 @@
   {
    "file": "Panel_Cure_Normalize_2.js",
    "name": "Panel Cure Normalize 2",
-   "src": "pkgKWC/patched/Panel_Cure_Normalize_2.js",
-   "base_sha": "dc67aa27678c1633",
-   "base_bytes": 314872,
-   "stub_sha": "cb7b4d6a0c20559b",
-   "stub_bytes": 2250,
+   "src": "pkgLIB/strip_L1Q/patched/Panel_Cure_Normalize_2.js",
+   "base_sha": "bd6cd246169efbc3",
+   "base_bytes": 266925,
+   "stub_sha": "76c407ad6ce8647e",
+   "stub_bytes": 2384,
    "refs": [
     "Panel Build",
     "Panel Cure Build 2"
@@ -361,11 +398,11 @@
   {
    "file": "Panel_Cure_Normalize_3.js",
    "name": "Panel Cure Normalize 3",
-   "src": "pkgKWC/patched/Panel_Cure_Normalize_3.js",
-   "base_sha": "2f0d21ff6bb19130",
-   "base_bytes": 314872,
-   "stub_sha": "c2f600c1b8e44522",
-   "stub_bytes": 2250,
+   "src": "pkgLIB/strip_L1Q/patched/Panel_Cure_Normalize_3.js",
+   "base_sha": "db1d5c33ba953e35",
+   "base_bytes": 266925,
+   "stub_sha": "55cf8ffd60948b57",
+   "stub_bytes": 2384,
    "refs": [
     "Panel Build",
     "Panel Cure Build 3"
@@ -376,26 +413,50 @@
   {
    "file": "Panel_Payloads.js",
    "name": "Panel Payloads",
-   "src": "pkgKGW/patched/Panel_Payloads.js",
-   "base_sha": "616519bc7c4ab1b8",
-   "base_bytes": 252888,
-   "stub_sha": "7539879d3f1913af",
-   "stub_bytes": 18277,
+   "src": "pkgLIB/strip_s45/patched/Panel_Payloads.js",
+   "base_sha": "1a62714486893385",
+   "base_bytes": 209518,
+   "stub_sha": "98ce82bf81995cb5",
+   "stub_bytes": 17583,
    "refs": [
     "Build Save Body",
+    "Cited Verses",
     "Final Output",
     "Init Seats",
     "Panel Build",
     "Panel Check",
+    "Panel Judge 1 deepseek",
+    "Panel Judge 1 deepseek retry",
+    "Panel Judge 1 gemini",
+    "Panel Judge 1 grok",
+    "Panel Judge 1 mimo",
+    "Panel Judge 1 openai",
+    "Panel Judge 1 openrouter",
+    "Panel Judge 2 gemini",
+    "Panel Judge 2 grok",
+    "Panel Judge 2 mimo",
+    "Panel Judge 2 openai",
+    "Panel Judge 2 openrouter",
+    "Panel Judge 3 gemini",
+    "Panel Judge 3 grok",
+    "Panel Judge 3 mimo",
+    "Panel Judge 3 openai",
+    "Panel Judge 3 openrouter",
+    "Panel Reserve deepseek",
+    "Panel Reserve gemini",
+    "Panel Reserve grok",
+    "Panel Reserve mimo",
+    "Panel Reserve openai",
+    "Panel Reserve openrouter",
     "Quote Report",
     "Regrade Load",
     "Regrade Row",
     "Reserve Build"
    ],
-   "all_nodes": true,
-   "own_lines": 89
+   "all_nodes": false,
+   "own_lines": 73
   }
  ],
- "bytes_before": 7129881,
- "bytes_after": 592802
+ "bytes_before": 6099381,
+ "bytes_after": 527590
 }

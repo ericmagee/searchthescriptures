@@ -3,6 +3,8 @@
 // inputs (corpus/raw/nodes_<run>.json.gz), gives the same output (or the same error) as the full-source node; 3. timing before and after.// pkgLIB v2 (run 33094): every node run below goes through the task-runner model (runner_model.cjs): a node gets only the upstream data its own code TEXT names.
 const fs=require('fs'),zlib=require('zlib'),crypto=require('crypto');const sha=s=>crypto.createHash('sha256').update(s).digest('hex').slice(0,16);const rd=f=>fs.readFileSync(f,'utf8');
 const {rebuild}=require('./unpack.cjs');const RM=require('./runner_model.cjs');const NC=new Map();const need=src=>{if(!NC.has(src))NC.set(src,RM.needs(src));return NC.get(src);};let ok=0,bad=0;const T=(n,c)=>{if(c){ok++;console.log('OK   '+n);}else{bad++;console.log('FAIL '+n);}};
+// SRCDIR=<dir>: the run comparisons (2, 2b) put that dir's full sources against the stubs (pkgLIB comment strip: the original live sources vs the stripped, packed stubs)
+const SRCA=nd=>process.env.SRCDIR?process.env.SRCDIR+'/'+nd.file:nd.src;
 const plan=JSON.parse(rd('pkgLIB/plan_LIB.json'));const B=plan.base+'/patched/';const LIB=rd('pkgLIB/patched/Shared_Library.js');
 T('plan: 22 nodes, base shas match '+plan.base+'/patched, stub shas match pkgLIB/patched',plan.nodes.length===22&&plan.nodes.every(n=>sha(rd(n.src))===n.base_sha&&sha(rd('pkgLIB/patched/'+n.file))===n.stub_sha));
 const bad1=plan.nodes.filter(n=>rebuild(rd('pkgLIB/patched/'+n.file),LIB)!==rd(n.src));
@@ -28,7 +30,7 @@ const $input={first:()=>({json:{}}),last:()=>({json:{}}),all:()=>[],item:{json:{
 const go=async(src,$)=>{try{return 'OUT '+JSON.stringify(await new AF('$','$input',src)(RM.gate(need(src),$),$input));}catch(e){return 'ERR '+String(e&&e.message||e);}};
 (async()=>{let n=0,same=0,outs=0;const diff=[];const per={};
  for(const run of runs){const N=JSON.parse(zlib.gunzipSync(fs.readFileSync('corpus/raw/nodes_'+run+'.json.gz')));
-  for(const nd of plan.nodes){const a=await go(rd(nd.src),mock(N)),b=await go(rd('pkgLIB/patched/'+nd.file),mock(N));n++;per[nd.name]=per[nd.name]||{out:0,err:0,why:new Set()};if(a.startsWith('OUT'))per[nd.name].out++;else{per[nd.name].err++;per[nd.name].why.add(a.slice(4,60));}if(a===b){same++;if(a.startsWith('OUT'))outs++;}else diff.push(run+' '+nd.name+'\n        full: '+a.slice(0,200)+'\n        stub: '+b.slice(0,200));}}
+  for(const nd of plan.nodes){const a=await go(rd(SRCA(nd)),mock(N)),b=await go(rd('pkgLIB/patched/'+nd.file),mock(N));n++;per[nd.name]=per[nd.name]||{out:0,err:0,why:new Set()};if(a.startsWith('OUT'))per[nd.name].out++;else{per[nd.name].err++;per[nd.name].why.add(a.slice(4,60));}if(a===b){same++;if(a.startsWith('OUT'))outs++;}else diff.push(run+' '+nd.name+'\n        full: '+a.slice(0,200)+'\n        stub: '+b.slice(0,200));}}
  console.log('   '+runs.length+' saved runs x 22 nodes = '+n+' node runs; identical '+same+' ('+outs+' produce output, '+(same-outs)+' stop at the same missing upstream node in both)');diff.forEach(d=>console.log('     '+d));
  Object.entries(per).forEach(([k,v])=>console.log('     '+k.padEnd(30)+' real output on '+v.out+' of '+runs.length+' runs'+(v.err?'; stops in both on: '+[...v.why].join(' | '):'')));
  T('every node run gives byte-identical output (or the identical error) full vs stub',same===n);
@@ -39,8 +41,8 @@ const go=async(src,$)=>{try{return 'OUT '+JSON.stringify(await new AF('$','$inpu
   const inp=nm=>{const r=N.nodes[UP[nm]];const it=r?r[r.length-1]:[];return {first:()=>({json:it[0]||{}}),last:()=>({json:it[it.length-1]||{}}),all:()=>it.map(j=>({json:j})),item:{json:it[0]||{}}};};
   const go2=async(src,$,$i)=>{try{return 'OUT '+JSON.stringify(await new AF('$','$input',src)(RM.gate(need(src),$),$i));}catch(e){return 'ERR '+String(e&&e.message||e);}};
   // a node whose upstream is one of the 22 and was not saved is fed the full-source output of that upstream, run here first (Gate Build -> Gate Record, Alternate Merge Seat -> Alternate Merge)
-  for(let pass=0;pass<2;pass++)for(const nd of plan.nodes){if(N.nodes[nd.name])continue;try{const o=await new AF('$','$input',rd(nd.src))(RM.gate(need(rd(nd.src)),mock(N)),inp(nd.name));if(Array.isArray(o)&&o.length)N.nodes[nd.name]=[o.map(i=>i.json)];}catch(e){}}
-  let m=0,eq=0,ro=0;const rows=[];for(const nd of plan.nodes){const a=await go2(rd(nd.src),mock(N),inp(nd.name)),b=await go2(rd('pkgLIB/patched/'+nd.file),mock(N),inp(nd.name));m++;if(a===b)eq++;if(a.startsWith('OUT'))ro++;
+  for(let pass=0;pass<2;pass++)for(const nd of plan.nodes){if(N.nodes[nd.name])continue;try{const o=await new AF('$','$input',rd(SRCA(nd)))(RM.gate(need(rd(SRCA(nd))),mock(N)),inp(nd.name));if(Array.isArray(o)&&o.length)N.nodes[nd.name]=[o.map(i=>i.json)];}catch(e){}}
+  let m=0,eq=0,ro=0;const rows=[];for(const nd of plan.nodes){const a=await go2(rd(SRCA(nd)),mock(N),inp(nd.name)),b=await go2(rd('pkgLIB/patched/'+nd.file),mock(N),inp(nd.name));m++;if(a===b)eq++;if(a.startsWith('OUT'))ro++;
    rows.push('     '+nd.name.padEnd(30)+' $input '+(UP[nd.name]&&N.nodes[UP[nd.name]]?UP[nd.name]:'(none saved)').padEnd(26)+(a===b?'SAME ':'DIFF ')+(a.startsWith('OUT')?'output '+a.length+' bytes':'stops: '+a.slice(4,90)));}
   console.log('   run 33040 with all saved node outputs: '+m+' nodes, '+eq+' identical, '+ro+' with real output');rows.forEach(r=>console.log(r));
   T('run 33040, all saved node outputs: every node identical full vs stub',eq===m);
