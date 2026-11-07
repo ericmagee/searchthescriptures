@@ -1,0 +1,15 @@
+OK   33222 Alt Gate Record base (s16 code): grok G1-G3 UNCURED, G4 CURED (as the live run on s12)
+     grok G1 NOT APPLIED (E-APPLY S35) UNCURED; grok G2 NOT APPLIED (E-APPLY S36) UNCURED; grok G3 NOT APPLIED (E-APPLY S37) UNCURED; grok G4 NOT APPLIED (E-APPLY S38) CURED
+OK   33222 Alt Gate Record pkgGSL: grok G1-G4 all CURED, G1-G3 by the later applied change G4
+     grok G1 NOT APPLIED (E-APPLY S35) CURED; grok G2 NOT APPLIED (E-APPLY S36) CURED; grok G3 NOT APPLIED (E-APPLY S37) CURED; grok G4 NOT APPLIED (E-APPLY S38) CURED
+OK   33222 Alt Gate Record: nothing else changes: only the gate cure rows, the seat drv_uncured (3 to 0) and alt_needed (true to false, since no seat is left uncured)
+     drv_uncured per body: base [["grok",3]] patched [["grok",0]]
+OK   33222 Alternate Merge base on base gate: grok not seated (the live outcome)
+     [["grok",true,"unseated after its enforcer send-back and gate: 3 uncured item(s) (E-GATE G1 NOT APPLIED (E-APPLY S35); E-GATE G2 NOT AP"]]
+OK   33222 Alternate Merge on the pkgGSL gate: grok seated in gemini's place
+     panel_effective ["chatgpt","grok","sol"] summary [["grok","HELD",null],["chatgpt","HELD",null],["sol","HELD",null]]
+OK   33222 Gate Record (panel seats): patched output equals base
+     chatgpt G1 NOT APPLIED (E-APPLY S21) CURED; chatgpt G2 NOT APPLIED (E-APPLY S22) CURED
+OK   33218 Gate Record (panel seats): patched output equals base
+     chatgpt G1 NOT APPLIED (E-APPLY S20) CURED; chatgpt G2 NOT APPLIED (E-APPLY S21) CURED; sol G1 NOT APPLIED (E-APPLY S18) CURED; sol G2 NOT APPLIED (E-APPLY S19) CURED
+7 OK, 0 FAIL
