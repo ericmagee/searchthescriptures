@@ -1,0 +1,13 @@
+{
+ "base": "pkgWLA/out/",
+ "nodes": {
+  "Panel Build": {
+   "from": "cce2da2ea6d2",
+   "to": "e9298fe15726"
+  },
+  "Build Independent Verdict": {
+   "from": "c4eba96a04b2",
+   "to": "6c4e6e4d004d"
+  }
+ }
+}

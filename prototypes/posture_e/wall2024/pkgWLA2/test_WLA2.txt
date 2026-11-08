@@ -1,0 +1,71 @@
+OK   unit joint header ids: 3.1+ 3.2+ 3.3+ 3.5- 2.1+ 2.4+ (mixed-premise header P3.1, P4.2 skipped)
+SKIP Panel Build 33040 base threw: Referenced node is unexecuted: Init with Guards
+SKIP Panel Build 33060 base threw: Referenced node is unexecuted: Resolve Seats
+SKIP Panel Build 33083 base threw: Referenced node is unexecuted: Resolve Seats
+SKIP Panel Build 33107 base threw: Referenced node is unexecuted: Resolve Seats
+SKIP Panel Build 33129 base threw: Referenced node is unexecuted: Resolve Seats
+SKIP Panel Build 33149 base threw: Referenced node is unexecuted: Resolve Seats
+SKIP Panel Build 33160 base threw: Referenced node is unexecuted: Resolve Seats
+SKIP Panel Build 33197 base threw: Referenced node is unexecuted: Check Save
+OK   Panel Build 33218: byte-equal
+OK   Panel Build 33222: byte-equal
+OK   Panel Build 33249: byte-equal
+OK   Panel Build 33261: byte-equal
+SKIP Panel Build 33276 base threw: FAIL-CLOSED: transcript assembled to only 0 chars; refusing to judge an empty or truncated record. r
+SKIP Panel Build 33289 base threw: FAIL-CLOSED: transcript assembled to only 0 chars; refusing to judge an empty or truncated record. r
+OK   Panel Build 33299: byte-equal
+SKIP Panel Build 33311 base threw: FAIL-CLOSED: transcript assembled to only 0 chars; refusing to judge an empty or truncated record. r
+SKIP Panel Build 33322 base threw: FAIL-CLOSED: transcript assembled to only 0 chars; refusing to judge an empty or truncated record. r
+OK   Panel Build 33345: byte-equal
+OK   Panel Build 33371: byte-equal
+OK   Panel Build 33389: byte-equal
+OK   Panel Build 33411: byte-equal
+OK   Panel Build 33430: byte-equal
+OK   Panel Build 33442: byte-equal
+OK   Panel Build 33461: byte-equal
+OK   Panel Build 33482: byte-equal
+OK   Panel Build 33490: byte-equal
+OK   Panel Build 33497: byte-equal
+OK   Panel Build 33506: byte-equal
+OK   Panel Build 33530: byte-equal
+OK   Panel Build 33575: byte-equal
+OK   Panel Build 33592: byte-equal
+OK   Panel Build 33605: byte-equal
+OK   Panel Build 33617: byte-equal
+OK   Panel Build 33627: byte-equal
+OK   Panel Build 33644: byte-equal
+OK   Panel Build 33682: byte-equal
+OK   Panel Build 33705: byte-equal
+OK   Panel Build 33731: byte-equal
+SKIP Build Independent Verdict 33040 base threw: Referenced node is unexecuted: Final Output
+OK   Build Independent Verdict 33218: byte-equal
+OK   Build Independent Verdict 33222: byte-equal
+OK   Build Independent Verdict 33249: byte-equal
+OK   Build Independent Verdict 33261: byte-equal
+SKIP Build Independent Verdict 33276 base threw: Cannot read properties of undefined (reading 'join')
+SKIP Build Independent Verdict 33289 base threw: Cannot read properties of undefined (reading 'join')
+OK   Build Independent Verdict 33299: byte-equal
+SKIP Build Independent Verdict 33311 base threw: Cannot read properties of undefined (reading 'join')
+SKIP Build Independent Verdict 33322 base threw: Cannot read properties of undefined (reading 'join')
+OK   Build Independent Verdict 33345: byte-equal
+OK   Build Independent Verdict 33371: byte-equal
+OK   Build Independent Verdict 33389: byte-equal
+OK   Build Independent Verdict 33411: byte-equal
+OK   Build Independent Verdict 33430: byte-equal
+OK   Build Independent Verdict 33442: byte-equal
+OK   Build Independent Verdict 33461: byte-equal
+OK   Build Independent Verdict 33482: byte-equal
+OK   Build Independent Verdict 33490: byte-equal
+OK   Build Independent Verdict 33497: byte-equal
+OK   Build Independent Verdict 33506: byte-equal
+OK   Build Independent Verdict 33530: byte-equal
+OK   Build Independent Verdict 33575: byte-equal
+OK   Build Independent Verdict 33592: byte-equal
+OK   Build Independent Verdict 33605: byte-equal
+OK   Build Independent Verdict 33617: byte-equal
+OK   Build Independent Verdict 33627: byte-equal
+OK   Build Independent Verdict 33644: byte-equal
+OK   Build Independent Verdict 33682: byte-equal
+OK   Build Independent Verdict 33705: byte-equal
+OK   Build Independent Verdict 33731: byte-equal
+TOTAL 53 OK, 0 FAIL
