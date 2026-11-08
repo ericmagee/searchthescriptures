@@ -2,7 +2,7 @@
 // Library: base strip (default pkgLIB/strip_RCD = LIB v32) -> pkgLIB/strip_RTB. Prompt nodes: bases below -> pkgRTB/patched.
 // Run from wall2024/: node pkgRTB/build_RTB.cjs [base strip] [dest strip]
 const fs=require('fs');const crypto=require('crypto');const h=s=>crypto.createHash('sha256').update(s).digest('hex').slice(0,12);
-const {KW}=require('./rule_table.cjs');
+const {KW,RX}=require('./rule_table.cjs');
 const SRC=(process.argv[2]||'pkgLIB/strip_RCD')+'/patched/',DST=(process.argv[3]||'pkgLIB/strip_RTB')+'/patched/';
 const OLD={
  agreement:'For every withdrawal or concession the engine puts to me (K-W), I answer in one of three forms: STANDS WITHOUT IT because <layer>; CONCEDED; or REASSERTED IN <round> \\"<quote>\\", when a later round rests on what was withdrawn.',
@@ -10,6 +10,8 @@ const OLD={
  cureAsk:"or the side no longer claims it and the link needed it, answer CONCEDED (ruling 428; run 32677: Galatians 4:4 'made of a woman' does not carry 'the seed of David according to the flesh').",
  stake:'K-W is a TRIAL rule: an item left unanswered removes no seat.',
  enforcer:'STANDS WITHOUT IT because <a layer>; CONCEDED; REASSERTED IN <round> "<quote>"; or NOT HELD with a reason.'};
+// family 2 (RETRACTED, cure phase): old clause -> table render (each old text is the full clause, so the substitution cannot hit a partial)
+const RXSUBS=require('./build_RTB_subs.cjs');
 const sub=(s,a,b,tag,f,tally)=>{const n=s.split(a).length-1;if(!n)return s;tally[tag]=(tally[tag]||0)+n;f.push(tag+' x'+n);return s.split(a).join(b);};
 const plan={table:'pkgRTB/rule_table.cjs',library:{base:SRC,nodes:{}},prompt:{nodes:{}},tally:{}};
 // library strip
@@ -19,15 +21,17 @@ for(const f of fs.readdirSync(SRC).filter(f=>f.endsWith('.js')).sort()){const s0
  s=sub(s,OLD.agreement,KW.render.agreement(),'agreement',hit,plan.tally);
  s=sub(s,OLD.audit,KW.render.audit(),'audit',hit,plan.tally);
  s=sub(s,OLD.cureAsk,OLD.cureAsk+KW.render.cureAskTail(),'cureAsk',hit,plan.tally);
+ for(const [tag,a,b] of RXSUBS)s=sub(s,a,b,tag,hit,plan.tally);
  if(s.includes(OLD.stake)){if(!m)throw new Error(f+': stake sentence without ENF_STATUS');s=sub(s,OLD.stake,KW.stake(m[1]),'stake',hit,plan.tally);}
  if(hit.length){new Function('$','$input','return (async()=>{\n'+s+'\n})();');plan.library.nodes[f]={base:h(s0),patched:h(s),hits:hit};}
  fs.writeFileSync(DST+f,s);}
 plan.library.kw_status=st;
 // prompt nodes (not in the library)
 const W=JSON.parse(fs.readFileSync('/mnt/project-files/wall2024/fetchback_live_s64.json','utf8'));const live=n=>({src:'fetchback_live_s64',code:W.nodes.find(x=>x.name===n).parameters.jsCode});
+const JEB=process.env.JEB_BASE||'';
 const fileB=(p,n)=>({src:p,code:fs.readFileSync(p+n.replace(/ /g,'_')+'.js','utf8')});
 const BASES={'Panel Build':live,'Reserve Build':live,'Accept Build':live,'Accept Check':live,'Accept Return Build':live,'Accept Final':live,'Accept DS Return Build':live,
- 'Enforcer Build':n=>fileB('pkgEKS/patched/',n),'Judge Enforcer Build':n=>fileB('pkgRP10/patched/',n),'Alt Judge Enforcer Build':n=>fileB('pkgEKS/patched/',n),'R2 Alt Judge Enforcer Build':n=>fileB('pkgEKS/patched/',n)};
+ 'Enforcer Build':n=>fileB('pkgEKS/patched/',n),'Judge Enforcer Build':n=>fileB(JEB||'pkgRP10/patched/',n),'Alt Judge Enforcer Build':n=>fileB(JEB||'pkgEKS/patched/',n),'R2 Alt Judge Enforcer Build':n=>fileB(JEB||'pkgEKS/patched/',n)};/* JEB_BASE=<dir>/ rebuilds the 3 Judge Enforcer Build nodes on a composed base (RP11, RP9, RP12) */;
 fs.mkdirSync('pkgRTB/patched',{recursive:true});
 for(const [n,get] of Object.entries(BASES)){const b=get(n);let s=b.code;const hit=[];
  s=sub(s,OLD.agreement,KW.render.agreement(),'agreement',hit,plan.tally);s=sub(s,OLD.enforcer,KW.render.enforcer(),'enforcer',hit,plan.tally);

@@ -436,7 +436,7 @@ function kffLines(text,R,rows0){const items=[],marks=[],report=[];const T=String
    if(!kt){report.push('NOT CHECKED (the verse was not read this run): '+id+' FAILS "'+m[6].slice(0,120)+'" quoted in ['+rk+'] as '+r);continue;}
    if((' '+krulNorm(kkjvNoMargin(kt))+' ').includes(' '+f+' ')){ref=r;why='its FAILS quotation "'+m[6].slice(0,200)+'" is only the words of '+r+', a verse the answer quotes in ['+rk+']; it shows what the verse says, not what in the answer fails (ruling 411)';break;}}
   if(!why)continue;
-  items.push({rule:'K-FF',side:'BOTH',link:id,ref,fails:m[6],why,line:'FORCED line for '+id+': '+why+'. Write the FORCED line again with FAILS: "<the answer\'s own words in ['+rk+'] that fail to show the fit, outside its verse quotations>", or RETRACTED the link with one CORRECTED RESULT, or RESTATED it not graded LINK BROKEN. Your line: '+l.slice(0,600)});
+  items.push({rule:'K-FF',side:'BOTH',link:id,ref,fails:m[6],why,line:'FORCED line for '+id+': '+why+'. Write the FORCED line again with FAILS: "<the answer\'s own words in ['+rk+'] that fail to show the fit, outside its verse quotations>", or RETRACTED for the link, with its reason (the round in brackets and its words quoted, or the verse), and the one CORRECTED RESULT of your whole reply, or RESTATED it not graded LINK BROKEN. Your line: '+l.slice(0,600)});
   marks.push('[AUDIT v49: DEBATE RULE VIOLATION (K-FF) -- '+id+': '+why+'. TRIAL rule: answer it in the cure; it removes no seat; not counted in audit_flags.]');}
  return {items,marks,report};}
 function kfcLines(text,R,rows0){const items=[],marks=[],report=[];const T=String(text||'').replace(/\\n/g,'\n').replace(/[*_`]+/g,'');let rows=rows0||null;
@@ -449,7 +449,7 @@ function kfcLines(text,R,rows0){const items=[],marks=[],report=[];const T=String
    if(!kt){report.push('NOT CHECKED (the verse was not read this run): '+v.ref+' CARRIED BY "'+cb[1].slice(0,120)+'"');continue;}
    if(!kkjvStands(cb[1],kt))why='its CARRIED BY words "'+cb[1].slice(0,160)+'" are not in '+v.ref+', which reads: "'+kkjvNoMargin(kt).replace(/\s+/g,' ').trim().slice(0,400)+'"';}
   if(!why)continue;
-  items.push({rule:'K-FC',side:'BOTH',link:id,ref:v?v.ref:null,means:m[3],why,line:'FORCED line for '+id+': '+why+'. Write the FORCED line again with CARRIED BY: "<the words of '+(v?v.ref:'the pressed verse')+' that state the MEANS sentence, quoted from the KJV>" between FAILS and GROUND, or RETRACTED the link, or RESTATED it not graded LINK BROKEN. Your line: '+l.slice(0,600)});
+  items.push({rule:'K-FC',side:'BOTH',link:id,ref:v?v.ref:null,means:m[3],why,line:'FORCED line for '+id+': '+why+'. Write the FORCED line again with CARRIED BY: "<the words of '+(v?v.ref:'the pressed verse')+' that state the MEANS sentence, quoted from the KJV>" between FAILS and GROUND, or RETRACTED for the link, with its reason (the round in brackets and its words quoted, or the verse), and the one CORRECTED RESULT of your whole reply, or RESTATED it not graded LINK BROKEN. Your line: '+l.slice(0,600)});
   marks.push('[AUDIT v48: DEBATE RULE VIOLATION (K-FC) -- '+id+': '+why+'. TRIAL rule: answer it in the cure; it removes no seat; not counted in audit_flags.]');}
  return {items,marks,report};}
 const UNX_TAG=/\[?\bL([1-4])\b\]?/g;

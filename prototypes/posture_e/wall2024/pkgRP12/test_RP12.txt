@@ -1,0 +1,19 @@
+Judge Enforcer Build (feeder Enforcer Record): 31 runs replayed, 31 byte-equal, 0 differ, 8 base-throw skipped; reader decided 324 reads
+OK   Judge Enforcer Build: replay ran on 31 runs
+OK   Judge Enforcer Build: reader path taken
+Alt Judge Enforcer Build (feeder Alt Seated): 31 runs replayed, 31 byte-equal, 0 differ, 0 base-throw skipped; reader decided 64 reads
+OK   Alt Judge Enforcer Build: replay ran on 31 runs
+OK   Alt Judge Enforcer Build: reader path taken
+Judge Enforcer Record (feeder Judge Enforcer Needed?,Judge Enforcer Retry Needed?,Judge Enforcer Retry Call deepseek): 31 runs replayed, 31 byte-equal, 0 differ, 0 base-throw skipped; reader decided 30 reads
+OK   Judge Enforcer Record: replay ran on 31 runs
+OK   Judge Enforcer Record: reader path taken
+Alt Judge Enforcer Record (feeder Alt Judge Enforcer Needed?,Alt Judge Enforcer Retry Needed?,Alt Judge Enforcer Retry Call deepseek): 31 runs replayed, 31 byte-equal, 0 differ, 0 base-throw skipped; reader decided 0 reads
+OK   Alt Judge Enforcer Record: replay ran on 31 runs
+     Alt Judge Enforcer Record: the reader path was not reached on the saved runs (no case with a fanned-out bare id); the patch text is the same as the main node, which is exercised
+Judge Enforcer Retry Build (feeder Judge Enforcer Call deepseek): 18 runs replayed, 18 byte-equal, 0 differ, 0 base-throw skipped; reader decided 30 reads
+OK   Judge Enforcer Retry Build: replay ran on 18 runs
+OK   Judge Enforcer Retry Build: reader path taken
+Alt Judge Enforcer Retry Build (feeder Alt Judge Enforcer Call deepseek): 10 runs replayed, 10 byte-equal, 0 differ, 0 base-throw skipped; reader decided 0 reads
+OK   Alt Judge Enforcer Retry Build: replay ran on 10 runs
+     Alt Judge Enforcer Retry Build: the reader path was not reached on the saved runs (no case with a fanned-out bare id); the patch text is the same as the main node, which is exercised
+TOTAL 10 OK, 0 FAIL
