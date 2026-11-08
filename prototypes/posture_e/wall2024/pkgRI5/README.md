@@ -25,3 +25,8 @@ Items 6+7 (pkgRI6/build_RI6.cjs): sbBrokenWord2024 CLAUSE N/W and KEYSTONE WITHD
 k2Marks and postureBlock name CHAIN MARK only in section-end label lists, not as line reads; left as they are.
 Tests: test_RI5C (KWQ vs RI5C) and test_RI6 (RI5C vs RI6): each 605 node runs over 42 runs, 0 changed outputs, 0 flips, 32 OK 0 FAIL.
 E4 rebase (v34 head + live s65 lines 9+): Alternate Build 436fc53275da, Early Alternate Build 699d75c6ee71; both rebuild to 309526 bytes = strip_RI6 Alternate_Build.js.
+
+## v35_RI567K: the same change restacked on live s66 (strip_RTB2K, Shared Library 986f3efb1447)
+node pkgRI5/build_RI5C.cjs pkgLIB/strip_RTB2K pkgLIB/strip_RI5CK && node pkgRI6/build_RI6.cjs pkgLIB/strip_RI5CK pkgLIB/strip_RI6K; packed from strip_RI6K as pkgLIB_v35_RI567K, Shared Library 6cb3c08a6d01.
+Replays (test_strip_RI5CK.txt, test_strip_RI6K.txt): 626 node runs over 43 runs each, 0 changed outputs, 0 flips, 32 OK 0 FAIL.
+E4 rebase on fetchback_live_s66 lines 9+: Alternate Build 6948ff2e86f9, Early Alternate Build 73892dee4f41; both rebuild to 311914 bytes = strip_RI6K.
