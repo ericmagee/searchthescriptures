@@ -23,5 +23,6 @@ The library's remaining CONCEDED LINKS and STANDING form reads now ask the share
   - 30 nodes, Shared Library f6c9f8e96979. 30/30 stubs unpack to their sources.
   - The R2 clones get the same patches.
   - The two packages commute: build_A2R on strip_RI3B gives a strip byte-equal to RI3B applied to strip_A2R.
+- Build note (W2 3234): give the plan path when stacking (node pkgRI3B/build_RI3B.cjs pkgLIB/strip_A2R pkgLIB/strip_A2R_RI3B pkgRI3B/plan_RI3B_on_A2R.json). The default plan path once overwrote plan_RI3B.json with the 30-node A2R plan, which has Alternate_Merge_1.js and no Alternate_Merge.js. test_RI3 then reads 23 OK, 1 FAIL over 546 node runs. Since then the build names the plan after the destination, unless the destination is strip_RI3B.
 - If v27 is written instead of v26, E4's Alternate Build must be built on the v27 stub: `node pkgE4/build_E4.cjs fetchback_live_s62.json pkgLIB_v27_RI3B/patched/Alternate_Build.js`.
 - Alone on v25 (22 nodes): `node pkgRI3B/build_RI3B.cjs pkgLIB/strip_RI3 pkgLIB/strip_RI3B`, then pack.

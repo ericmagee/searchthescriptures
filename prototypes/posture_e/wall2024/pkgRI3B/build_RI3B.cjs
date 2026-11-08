@@ -10,7 +10,7 @@
 // Not here (part C): charges and the block copies in the 4 Send Back nodes (outside the library).
 // Run from wall2024/: node pkgRI3B/build_RI3B.cjs [base strip] [dest strip] [plan]
 const fs=require('fs');const crypto=require('crypto');const h=s=>crypto.createHash('sha256').update(s).digest('hex').slice(0,12);
-const SRC=(process.argv[2]||'pkgLIB/strip_RI3')+'/patched/',DST=(process.argv[3]||'pkgLIB/strip_RI3B')+'/patched/',PLAN=process.argv[4]||'pkgRI3B/plan_RI3B.json';fs.mkdirSync(DST,{recursive:true});
+const SRC=(process.argv[2]||'pkgLIB/strip_RI3')+'/patched/',DST=(process.argv[3]||'pkgLIB/strip_RI3B')+'/patched/',PLAN=process.argv[4]||((process.argv[3]&&!/strip_RI3B\/?$/.test(process.argv[3]))?'pkgRI3B/plan_'+process.argv[3].replace(/\/$/,'').split('/').pop()+'.json':'pkgRI3B/plan_RI3B.json'); /* a stacked build never overwrites the part B plan (W2 3234) */fs.mkdirSync(DST,{recursive:true});
 const A0='function ciCountSection(';
 const FN=String.raw`/* pkgRI3 part B: the reader's CONCEDED head {side,n} (null: no CONCEDED form, or RESTATED); the first line giving the side's STANDING L (reader STANDING first, else the old one-line regex) */
 function ri3Head2024(l){try{const r=__RL.readLine(String(l==null?'':l));if(r&&r.form==='CONCEDED'&&r.f&&!r.f.restated&&(r.f.side==='DEFENDER'||r.f.side==='CHALLENGER'))return {side:r.f.side,n:r.f.n};}catch(e){}return null;}
