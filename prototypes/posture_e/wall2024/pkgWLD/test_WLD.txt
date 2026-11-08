@@ -1,0 +1,81 @@
+SKIP Panel Build 33040 base threw: Referenced node is unexecuted: Init with Guards
+SKIP Panel Build 33060 base threw: Referenced node is unexecuted: Resolve Seats
+SKIP Panel Build 33083 base threw: Referenced node is unexecuted: Resolve Seats
+SKIP Panel Build 33107 base threw: Referenced node is unexecuted: Resolve Seats
+SKIP Panel Build 33129 base threw: Referenced node is unexecuted: Resolve Seats
+SKIP Panel Build 33149 base threw: Referenced node is unexecuted: Resolve Seats
+SKIP Panel Build 33160 base threw: Referenced node is unexecuted: Resolve Seats
+SKIP Panel Build 33197 base threw: Referenced node is unexecuted: Check Save
+OK   Panel Build 33218: 39 line(s) change, named counts and NOT NAMED lists unchanged; answer 120, other text 33
+OK   Panel Build 33222: 39 line(s) change, named counts and NOT NAMED lists unchanged; answer 153, other text 3
+OK   Panel Build 33249: 39 line(s) change, named counts and NOT NAMED lists unchanged; answer 39, other text 105
+OK   Panel Build 33261: 39 line(s) change, named counts and NOT NAMED lists unchanged; answer 72, other text 99
+SKIP Panel Build 33276 base threw: FAIL-CLOSED: transcript assembled to only 0 chars; refusing to judge an empty or truncated record. r
+SKIP Panel Build 33289 base threw: FAIL-CLOSED: transcript assembled to only 0 chars; refusing to judge an empty or truncated record. r
+OK   Panel Build 33299: 39 line(s) change, named counts and NOT NAMED lists unchanged; answer 117, other text 30
+SKIP Panel Build 33311 base threw: FAIL-CLOSED: transcript assembled to only 0 chars; refusing to judge an empty or truncated record. r
+SKIP Panel Build 33322 base threw: FAIL-CLOSED: transcript assembled to only 0 chars; refusing to judge an empty or truncated record. r
+OK   Panel Build 33345: 39 line(s) change, named counts and NOT NAMED lists unchanged; answer 144, other text 27
+OK   Panel Build 33371: 39 line(s) change, named counts and NOT NAMED lists unchanged; answer 69, other text 57
+OK   Panel Build 33389: 39 line(s) change, named counts and NOT NAMED lists unchanged; answer 111, other text 6
+OK   Panel Build 33411: 39 line(s) change, named counts and NOT NAMED lists unchanged; answer 129, other text 24
+OK   Panel Build 33430: 39 line(s) change, named counts and NOT NAMED lists unchanged; answer 42, other text 81
+OK   Panel Build 33442: 39 line(s) change, named counts and NOT NAMED lists unchanged; answer 120, other text 36
+OK   Panel Build 33461: 39 line(s) change, named counts and NOT NAMED lists unchanged; answer 159, other text 15
+OK   Panel Build 33482: 39 line(s) change, named counts and NOT NAMED lists unchanged; answer 135, other text 3
+OK   Panel Build 33490: 39 line(s) change, named counts and NOT NAMED lists unchanged; answer 120, other text 27
+OK   Panel Build 33497: 39 line(s) change, named counts and NOT NAMED lists unchanged; answer 180, other text 9
+OK   Panel Build 33506: 39 line(s) change, named counts and NOT NAMED lists unchanged; answer 168, other text 3
+OK   Panel Build 33530: 39 line(s) change, named counts and NOT NAMED lists unchanged; answer 180, other text 9
+OK   Panel Build 33575: 39 line(s) change, named counts and NOT NAMED lists unchanged; answer 147, other text 15
+OK   Panel Build 33592: 39 line(s) change, named counts and NOT NAMED lists unchanged; answer 42, other text 99
+OK   Panel Build 33605: 39 line(s) change, named counts and NOT NAMED lists unchanged; answer 141, other text 18
+OK   Panel Build 33617: 39 line(s) change, named counts and NOT NAMED lists unchanged; answer 147, other text 30
+OK   Panel Build 33627: 39 line(s) change, named counts and NOT NAMED lists unchanged; answer 147, other text 9
+OK   Panel Build 33644: 39 line(s) change, named counts and NOT NAMED lists unchanged; answer 147, other text 15
+OK   Panel Build 33682: 39 line(s) change, named counts and NOT NAMED lists unchanged; answer 117, other text 3
+OK   Panel Build 33705: 39 line(s) change, named counts and NOT NAMED lists unchanged; answer 81, other text 69
+OK   Panel Build 33731: 39 line(s) change, named counts and NOT NAMED lists unchanged; answer 120, other text 72
+OK   Panel Build 33750: 39 line(s) change, named counts and NOT NAMED lists unchanged; answer 54, other text 108
+OK   Panel Build 33774: 39 line(s) change, named counts and NOT NAMED lists unchanged; answer 159, other text 6
+OK   Panel Build 33798: 39 line(s) change, named counts and NOT NAMED lists unchanged; answer 153, other text 0
+OK   Panel Build 33815: 39 line(s) change, named counts and NOT NAMED lists unchanged; answer 132, other text 27
+OK   Panel Build 33828: 39 line(s) change, named counts and NOT NAMED lists unchanged; answer 75, other text 99
+SKIP Build Independent Verdict 33040 base threw: Referenced node is unexecuted: Final Output
+OK   Build Independent Verdict 33218: 13 line(s) change, named counts and NOT NAMED lists unchanged; answer 40, other text 11
+OK   Build Independent Verdict 33222: 13 line(s) change, named counts and NOT NAMED lists unchanged; answer 51, other text 1
+OK   Build Independent Verdict 33249: 13 line(s) change, named counts and NOT NAMED lists unchanged; answer 13, other text 35
+OK   Build Independent Verdict 33261: 13 line(s) change, named counts and NOT NAMED lists unchanged; answer 24, other text 33
+SKIP Build Independent Verdict 33276 base threw: Cannot read properties of undefined (reading 'join')
+SKIP Build Independent Verdict 33289 base threw: Cannot read properties of undefined (reading 'join')
+OK   Build Independent Verdict 33299: 13 line(s) change, named counts and NOT NAMED lists unchanged; answer 39, other text 10
+SKIP Build Independent Verdict 33311 base threw: Cannot read properties of undefined (reading 'join')
+SKIP Build Independent Verdict 33322 base threw: Cannot read properties of undefined (reading 'join')
+OK   Build Independent Verdict 33345: 13 line(s) change, named counts and NOT NAMED lists unchanged; answer 48, other text 9
+OK   Build Independent Verdict 33371: 13 line(s) change, named counts and NOT NAMED lists unchanged; answer 23, other text 19
+OK   Build Independent Verdict 33389: 13 line(s) change, named counts and NOT NAMED lists unchanged; answer 37, other text 2
+OK   Build Independent Verdict 33411: 13 line(s) change, named counts and NOT NAMED lists unchanged; answer 43, other text 8
+OK   Build Independent Verdict 33430: 13 line(s) change, named counts and NOT NAMED lists unchanged; answer 14, other text 27
+OK   Build Independent Verdict 33442: 13 line(s) change, named counts and NOT NAMED lists unchanged; answer 40, other text 12
+OK   Build Independent Verdict 33461: 13 line(s) change, named counts and NOT NAMED lists unchanged; answer 53, other text 5
+OK   Build Independent Verdict 33482: 13 line(s) change, named counts and NOT NAMED lists unchanged; answer 45, other text 1
+OK   Build Independent Verdict 33490: 13 line(s) change, named counts and NOT NAMED lists unchanged; answer 40, other text 9
+OK   Build Independent Verdict 33497: 13 line(s) change, named counts and NOT NAMED lists unchanged; answer 60, other text 3
+OK   Build Independent Verdict 33506: 13 line(s) change, named counts and NOT NAMED lists unchanged; answer 56, other text 1
+OK   Build Independent Verdict 33530: 13 line(s) change, named counts and NOT NAMED lists unchanged; answer 60, other text 3
+OK   Build Independent Verdict 33575: 13 line(s) change, named counts and NOT NAMED lists unchanged; answer 49, other text 5
+OK   Build Independent Verdict 33592: 13 line(s) change, named counts and NOT NAMED lists unchanged; answer 14, other text 33
+OK   Build Independent Verdict 33605: 13 line(s) change, named counts and NOT NAMED lists unchanged; answer 47, other text 6
+OK   Build Independent Verdict 33617: 13 line(s) change, named counts and NOT NAMED lists unchanged; answer 49, other text 10
+OK   Build Independent Verdict 33627: 13 line(s) change, named counts and NOT NAMED lists unchanged; answer 49, other text 3
+OK   Build Independent Verdict 33644: 13 line(s) change, named counts and NOT NAMED lists unchanged; answer 49, other text 5
+OK   Build Independent Verdict 33682: 13 line(s) change, named counts and NOT NAMED lists unchanged; answer 39, other text 1
+OK   Build Independent Verdict 33705: 13 line(s) change, named counts and NOT NAMED lists unchanged; answer 27, other text 23
+OK   Build Independent Verdict 33731: 13 line(s) change, named counts and NOT NAMED lists unchanged; answer 40, other text 24
+OK   Build Independent Verdict 33750: 13 line(s) change, named counts and NOT NAMED lists unchanged; answer 18, other text 36
+OK   Build Independent Verdict 33774: 13 line(s) change, named counts and NOT NAMED lists unchanged; answer 53, other text 2
+OK   Build Independent Verdict 33798: 13 line(s) change, named counts and NOT NAMED lists unchanged; answer 51, other text 0
+OK   Build Independent Verdict 33815: 13 line(s) change, named counts and NOT NAMED lists unchanged; answer 44, other text 9
+OK   Build Independent Verdict 33828: 13 line(s) change, named counts and NOT NAMED lists unchanged; answer 25, other text 33
+node runs 62; Panel Build named witnesses (3 judge prompts each): NAMED IN AN ANSWER 3720, NAMED ONLY IN OTHER TEXT 1137
+TOTAL 62 OK, 0 FAIL
