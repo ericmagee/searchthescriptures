@@ -1,5 +1,5 @@
 {
- "base": "pkgLIB/strip_R1B (LIB v15_R1B, live s56-s58)",
+ "base": "pkgLIB/strip_R1B/patched/",
  "nodes": {
   "Alt_Gate_Build.js": {
    "base": "59bf25bb52f9",

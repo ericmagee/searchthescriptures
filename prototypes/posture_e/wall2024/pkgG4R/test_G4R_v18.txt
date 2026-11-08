@@ -1,0 +1,76 @@
+OK Alt_Gate_Build.js carries kg4RowHead2024 and the witness line
+OK Alt_Gate_Record.js carries kg4RowHead2024 and the witness line
+OK Alternate_Build.js carries kg4RowHead2024 and the witness line
+OK Alternate_Cure_Build.js carries kg4RowHead2024 and the witness line
+OK Alternate_Cure_Normalize.js carries kg4RowHead2024 and the witness line
+OK Alternate_Merge.js carries kg4RowHead2024 and the witness line
+OK Alternate_Merge_Seat.js carries kg4RowHead2024 and the witness line
+OK Alternate_Payloads.js unchanged
+OK Cure_Build.js carries kg4RowHead2024 and the witness line
+OK Cure_Check.js carries kg4RowHead2024 and the witness line
+OK Cure_Normalize.js carries kg4RowHead2024 and the witness line
+OK Extract_Independent_Verdict.js unchanged
+OK Gate_Build.js carries kg4RowHead2024 and the witness line
+OK Gate_Record.js carries kg4RowHead2024 and the witness line
+OK Panel_Cure_Build_1.js carries kg4RowHead2024 and the witness line
+OK Panel_Cure_Build_2.js carries kg4RowHead2024 and the witness line
+OK Panel_Cure_Build_3.js carries kg4RowHead2024 and the witness line
+OK Panel_Cure_Check.js carries kg4RowHead2024 and the witness line
+OK Panel_Cure_Normalize_1.js carries kg4RowHead2024 and the witness line
+OK Panel_Cure_Normalize_2.js carries kg4RowHead2024 and the witness line
+OK Panel_Cure_Normalize_3.js carries kg4RowHead2024 and the witness line
+OK Panel_Payloads.js unchanged
+OK the 6 gate nodes carry the gate note
+OK 33197 Alternate Merge same error both (Referenced node is unexecuted: Alternate Merge Seat | Referenced node is unexecuted: Alternate Merge Seat)
+OK 33222 Alternate Build same error both (await is not defined | await is not defined)
+OK 33249 Alternate Build same error both (await is not defined | await is not defined)
+OK 33261 Alternate Build same error both (await is not defined | await is not defined)
+OK 33276 Alt Gate Record same error both (Cannot read properties of undefined (reading 'slice') | Cannot read properties of undefined (reading 'slice'))
+OK 33276 Alternate Build same error both (await is not defined | await is not defined)
+OK 33276 Alternate Merge Seat same error both (Cannot read properties of undefined (reading 'slice') | Cannot read properties of undefined (reading 'slice'))
+OK 33276 Gate Record same error both (Cannot read properties of undefined (reading 'slice') | Cannot read properties of undefined (reading 'slice'))
+OK 33276 Panel Cure Check same error both (Cannot read properties of undefined (reading 'slice') | Cannot read properties of undefined (reading 'slice'))
+OK 33289 Alt Gate Record same error both (Cannot read properties of undefined (reading 'slice') | Cannot read properties of undefined (reading 'slice'))
+OK 33289 Alternate Build same error both (await is not defined | await is not defined)
+OK 33289 Alternate Merge Seat same error both (Cannot read properties of undefined (reading 'slice') | Cannot read properties of undefined (reading 'slice'))
+OK 33289 Gate Record same error both (Cannot read properties of undefined (reading 'slice') | Cannot read properties of undefined (reading 'slice'))
+OK 33289 Panel Cure Check same error both (Cannot read properties of undefined (reading 'slice') | Cannot read properties of undefined (reading 'slice'))
+OK 33299 Alternate Build same error both (await is not defined | await is not defined)
+OK 33311 Alt Gate Record same error both (Cannot read properties of undefined (reading 'slice') | Cannot read properties of undefined (reading 'slice'))
+OK 33311 Alternate Build same error both (await is not defined | await is not defined)
+OK 33311 Alternate Merge Seat same error both (Cannot read properties of undefined (reading 'slice') | Cannot read properties of undefined (reading 'slice'))
+OK 33311 Gate Record same error both (Cannot read properties of undefined (reading 'slice') | Cannot read properties of undefined (reading 'slice'))
+OK 33311 Panel Cure Check same error both (Cannot read properties of undefined (reading 'slice') | Cannot read properties of undefined (reading 'slice'))
+OK 33322 Alternate Build same error both (await is not defined | await is not defined)
+OK 33322 Alternate Merge Seat same error both (Cannot read properties of undefined (reading 'slice') | Cannot read properties of undefined (reading 'slice'))
+OK 33322 Gate Record same error both (Cannot read properties of undefined (reading 'slice') | Cannot read properties of undefined (reading 'slice'))
+OK 33322 Panel Cure Check same error both (Cannot read properties of undefined (reading 'slice') | Cannot read properties of undefined (reading 'slice'))
+OK 33345 Alternate Build same error both (await is not defined | await is not defined)
+OK 33371 Alternate Build same error both (await is not defined | await is not defined)
+OK 33411 Alternate Build same error both (await is not defined | await is not defined)
+OK 33430 Alternate Build same error both (await is not defined | await is not defined)
+OK 33442 Alternate Build same error both (await is not defined | await is not defined)
+OK 33461 Alternate Build same error both (await is not defined | await is not defined)
+OK 33482 Alternate Build same error both (await is not defined | await is not defined)
+OK 33490 Alternate Build same error both (await is not defined | await is not defined)
+OK 33497 Alternate Build same error both (await is not defined | await is not defined)
+OK 33506 Alternate Build same error both (await is not defined | await is not defined)
+OK 33617 Alternate Build same error both (await is not defined | await is not defined)
+replay: 431 node runs over 35 runs; changed outputs: 5
+   33249 Gate Record: changed
+   33506 Gate Build: changed (2 gate notes)
+   33506 Gate Record: changed
+   33617 Gate Build: changed (4 gate notes)
+   33617 Gate Record: changed
+gate notes in Gate Build / Alt Gate Build: 6
+   33506 Gate Build G2 undefined :: a later defender round names every pressed witness the line rests on: [CR3] Matthew 1:24 at 3407; [CR4] Matthew 1:24 at 10226; [CR3] Deuteronomy 20:7 at 7743; [CR4] Deute
+   33506 Gate Build G2 RULE|K-G4|DEFENDER|D2 VS C5 :: a later defender round names every pressed witness the line rests on: [CR3] Matthew 1:24 at 3407; [CR4] Matthew 1:24 at 10226; [CR3] Deuteronomy 20:7 at 7743; [CR4] Deute
+   33617 Gate Build G1 RULE|K-G4|DEFENDER|D2 VS C1 :: a later defender round names every pressed witness the line rests on: [CR3] Genesis 4:25 at 5094; [CR3] Genesis 4:1 at 1735; [CR4] Genesis 4:1 at 827. So the break rests 
+   33617 Gate Build G2 RULE|K-G4|DEFENDER|D4 VS C4 :: a later defender round names every pressed witness the line rests on: [CR3] Isaiah 8:8 at 10262; [CR3] Isaiah 7:16 at 10229; [CR4] Isaiah 7:16 at 20648. So the break rest
+   33617 Gate Build G1 undefined :: a later defender round names every pressed witness the line rests on: [CR3] Genesis 4:25 at 5094; [CR3] Genesis 4:1 at 1735; [CR4] Genesis 4:1 at 827. So the break rests 
+   33617 Gate Build G2 undefined :: a later defender round names every pressed witness the line rests on: [CR3] Isaiah 8:8 at 10262; [CR3] Isaiah 7:16 at 10229; [CR4] Isaiah 7:16 at 20648. So the break rest
+K-G4 cure differences: 0
+OK bar 33617 terra G1: the gate note names Genesis 4:25 as the answered witness
+OK bar 33617 terra G2: the gate note is shown
+OK replay ran
+TOTAL 61 OK, 0 FAIL
