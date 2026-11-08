@@ -3,29 +3,32 @@ OK   form CONCEDED: example read by kwCo (want kwCo only)
 OK   form REASSERTED: example read by kwRe (want kwRe only)
 OK   form NOT HELD: example read by KW_NH (want KW_NH only)
 OK   no hand-kept K-W copy left in 41 files
-OK   rendered copies {"agreement":18,"audit":60,"cureAsk":26,"stake":26,"enforcer":3} = build tally {"audit":60,"cureAsk":26,"stake":26,"agreement":18,"enforcer":3}
-OK   Alt Gate Build: 30 runs, 30 byte-equal, 0 differ only in K-W text
-OK   Alt Gate Record: 26 runs, 26 byte-equal, 0 differ only in K-W text
-OK   Alternate Build: 18 runs, 18 byte-equal, 0 differ only in K-W text
-OK   Alternate Cure Build: 24 runs, 5 byte-equal, 19 differ only in K-W text
-OK   Alternate Cure Normalize: 41 runs, 41 byte-equal, 0 differ only in K-W text
+OK   rendered copies {"agreement":18,"audit":60,"cureAsk":26,"stake":26,"enforcer":3} = build tally {"audit":60,"cureAsk":26,"rx.form":26,"rx.brokenLine":26,"rx.kf":26,"rx.kl2":26,"rx.answered":26,"rx.kg9":26,"rx.kg7":26,"rx.kcount":26,"rx.kff":30,"rx.kc":52,"rx.kg1count":26,"rx.kfc":30,"rx.thatLink":52,"rx.eachBroken":26,"rx.uwb":26,"stake":26,"agreement":18,"enforcer":3}
+OK   RETRACTED example: reader form RETRACTED, pair D2 vs C1, reason names a round and quotes words
+OK   RETRACTED example carries exactly one CORRECTED RESULT
+OK   RETRACTED renders: 398 clauses (tally 398), 52 form lines (tally 52)
+OK   Alt Gate Build: 31 runs, 31 byte-equal, 0 differ only in K-W text
+OK   Alt Gate Record: 27 runs, 27 byte-equal, 0 differ only in K-W text
+OK   Alternate Build: 19 runs, 19 byte-equal, 0 differ only in K-W text
+OK   Alternate Cure Build: 25 runs, 5 byte-equal, 20 differ only in K-W text
+OK   Alternate Cure Normalize: 42 runs, 42 byte-equal, 0 differ only in K-W text
 OK   Alternate Merge 1: 0 runs, 0 byte-equal, 0 differ only in K-W text
-OK   Alternate Merge Seat: 34 runs, 34 byte-equal, 0 differ only in K-W text
-OK   Alternate Payloads: 22 runs, 4 byte-equal, 18 differ only in K-W text
-OK   Cure Build: 31 runs, 4 byte-equal, 27 differ only in K-W text
-OK   Cure Check: 31 runs, 31 byte-equal, 0 differ only in K-W text
-OK   Cure Normalize: 41 runs, 41 byte-equal, 0 differ only in K-W text
-OK   Extract Independent Verdict: 31 runs, 4 byte-equal, 27 differ only in K-W text
-OK   Gate Build: 30 runs, 30 byte-equal, 0 differ only in K-W text
-OK   Gate Record: 26 runs, 26 byte-equal, 0 differ only in K-W text
-OK   Panel Cure Build 1: 38 runs, 4 byte-equal, 34 differ only in K-W text
-OK   Panel Cure Build 2: 38 runs, 4 byte-equal, 34 differ only in K-W text
-OK   Panel Cure Build 3: 38 runs, 5 byte-equal, 33 differ only in K-W text
-OK   Panel Cure Check: 34 runs, 34 byte-equal, 0 differ only in K-W text
-OK   Panel Cure Normalize 1: 41 runs, 41 byte-equal, 0 differ only in K-W text
-OK   Panel Cure Normalize 2: 41 runs, 41 byte-equal, 0 differ only in K-W text
-OK   Panel Cure Normalize 3: 41 runs, 41 byte-equal, 0 differ only in K-W text
-OK   Panel Payloads: 27 runs, 0 byte-equal, 27 differ only in K-W text
+OK   Alternate Merge Seat: 35 runs, 35 byte-equal, 0 differ only in K-W text
+OK   Alternate Payloads: 23 runs, 5 byte-equal, 18 differ only in K-W text
+OK   Cure Build: 32 runs, 4 byte-equal, 28 differ only in K-W text
+OK   Cure Check: 32 runs, 32 byte-equal, 0 differ only in K-W text
+OK   Cure Normalize: 42 runs, 42 byte-equal, 0 differ only in K-W text
+OK   Extract Independent Verdict: 32 runs, 4 byte-equal, 28 differ only in K-W text
+OK   Gate Build: 31 runs, 31 byte-equal, 0 differ only in K-W text
+OK   Gate Record: 27 runs, 27 byte-equal, 0 differ only in K-W text
+OK   Panel Cure Build 1: 39 runs, 4 byte-equal, 35 differ only in K-W text
+OK   Panel Cure Build 2: 39 runs, 4 byte-equal, 35 differ only in K-W text
+OK   Panel Cure Build 3: 39 runs, 5 byte-equal, 34 differ only in K-W text
+OK   Panel Cure Check: 35 runs, 34 byte-equal, 1 differ only in K-W text
+OK   Panel Cure Normalize 1: 42 runs, 42 byte-equal, 0 differ only in K-W text
+OK   Panel Cure Normalize 2: 42 runs, 42 byte-equal, 0 differ only in K-W text
+OK   Panel Cure Normalize 3: 42 runs, 42 byte-equal, 0 differ only in K-W text
+OK   Panel Payloads: 28 runs, 0 byte-equal, 28 differ only in K-W text
 OK   R2 Alt Gate Build: 0 runs, 0 byte-equal, 0 differ only in K-W text
 OK   R2 Alt Gate Record: 0 runs, 0 byte-equal, 0 differ only in K-W text
 OK   R2 Alternate Build: 0 runs, 0 byte-equal, 0 differ only in K-W text
@@ -34,15 +37,15 @@ OK   R2 Alternate Cure Normalize: 0 runs, 0 byte-equal, 0 differ only in K-W tex
 OK   R2 Alternate Merge: 0 runs, 0 byte-equal, 0 differ only in K-W text
 OK   R2 Alternate Merge Seat: 0 runs, 0 byte-equal, 0 differ only in K-W text
 OK   R2 Alternate Payloads: 0 runs, 0 byte-equal, 0 differ only in K-W text
-OK   Panel Build: 27 runs, 27 byte-equal, 0 differ only in K-W text
+OK   Panel Build: 28 runs, 28 byte-equal, 0 differ only in K-W text
 OK   Reserve Build: 1 runs, 1 byte-equal, 0 differ only in K-W text
-OK   Accept Build: 28 runs, 0 byte-equal, 28 differ only in K-W text
-OK   Accept Check: 28 runs, 28 byte-equal, 0 differ only in K-W text
-OK   Accept Return Build: 28 runs, 28 byte-equal, 0 differ only in K-W text
-OK   Accept Final: 28 runs, 0 byte-equal, 28 differ only in K-W text
-OK   Accept DS Return Build: 28 runs, 28 byte-equal, 0 differ only in K-W text
-OK   Enforcer Build: 38 runs, 10 byte-equal, 28 differ only in K-W text
-OK   Judge Enforcer Build: 30 runs, 4 byte-equal, 26 differ only in K-W text
-OK   Alt Judge Enforcer Build: 31 runs, 12 byte-equal, 19 differ only in K-W text
+OK   Accept Build: 29 runs, 0 byte-equal, 29 differ only in K-W text
+OK   Accept Check: 29 runs, 29 byte-equal, 0 differ only in K-W text
+OK   Accept Return Build: 29 runs, 29 byte-equal, 0 differ only in K-W text
+OK   Accept Final: 29 runs, 0 byte-equal, 29 differ only in K-W text
+OK   Accept DS Return Build: 29 runs, 29 byte-equal, 0 differ only in K-W text
+OK   Enforcer Build: 39 runs, 10 byte-equal, 29 differ only in K-W text
+OK   Judge Enforcer Build: 31 runs, 4 byte-equal, 27 differ only in K-W text
+OK   Alt Judge Enforcer Build: 32 runs, 12 byte-equal, 20 differ only in K-W text
 OK   R2 Alt Judge Enforcer Build: 0 runs, 0 byte-equal, 0 differ only in K-W text
-TOTAL 47 OK, 0 FAIL
+TOTAL 50 OK, 0 FAIL

@@ -18,3 +18,14 @@ table file plus a conformance check, not a runtime read of $('Shared Library') (
   (348 differ only in K-W text, 0 other changes).
 - Library part restacks on W1's strip_RI5C (v33) when posted (Wall 3292): node pkgRTB/build_RTB.cjs pkgLIB/strip_RI5C pkgLIB/strip_RTB.
 - Write: the 11 pkgRTB/patched nodes, plus the packed library from strip_RTB. Run test_RTB before each write as the drift check.
+
+## Family 2: RETRACTED (cure phase), step 2 (design DESIGN_RETRACTED.md, Wall 3297)
+
+- rule_table.cjs RX row: form `RETRACTED: D<n> vs C<m> -- <the reason: the round in brackets and its words quoted, or the verse>`, the
+  one CORRECTED RESULT for the whole reply, and an example read by the shared reader __RL as RETRACTED with a reason. RXSB (send-back) unchanged.
+- Why: the cure reader marks RETRACTED UNCURED without a reason that names a round and quotes words or cites a verse (rxNoWhy, ruling 105)
+  and without exactly one CORRECTED RESULT (rxNoRes). Of 11 ask copies, only 1 stated both. The log shows 11 items UNCURED "RETRACTED with
+  no reason" and 6 "without exactly one CORRECTED RESULT".
+- build_RTB_subs.cjs: 15 clause substitutions (form, K-F, K-L2, K-G9, K-G7, K-C, K-G1 count, K-FF, K-FC, the uwb ask, and others), each now
+  the table render. No reader or cure logic changes.
+- Same build, same test. Replay puts each rendered string back to its old text and requires byte-equal output.
