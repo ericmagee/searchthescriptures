@@ -20,7 +20,7 @@ OK Panel_Cure_Normalize_1.js carries kg7Ans2024, the cure branch and kNeed
 OK Panel_Cure_Normalize_2.js carries kg7Ans2024, the cure branch and kNeed
 OK Panel_Cure_Normalize_3.js carries kg7Ans2024, the cure branch and kNeed
 OK Panel_Payloads.js unchanged
-replay: 467 node runs over 37 runs; changed outputs: 122
+replay: 483 node runs over 38 runs; changed outputs: 126
    33040 Panel Cure Build 2: changed
    33040 Panel Cure Build 3: changed
    33060 Panel Cure Build 2: changed
@@ -143,6 +143,10 @@ replay: 467 node runs over 37 runs; changed outputs: 122
    33644 Panel Cure Build 1: changed
    33644 Panel Cure Build 2: changed
    33644 Panel Cure Build 3: changed
+   33682 Cure Build: changed
+   33682 Panel Cure Build 1: changed
+   33682 Panel Cure Build 2: changed
+   33682 Panel Cure Build 3: changed
 cure flips: 2
    33592 Panel Cure Check grok cure K-G7 D2 vs C4: CURED -> UNCURED :: , so the break is one of meaning (ruling 421): a count does not cure it; cure it with one FORCED line for D2 vs C4, or a RETRACTED line with one CORRECTED RESULT (pkgKG7)
    33592 Panel Cure Check grok cure K-G7 D5 vs C5: CURED -> UNCURED :: , so the break is one of meaning (ruling 421): a count does not cure it; cure it with one FORCED line for D5 vs C5, or a RETRACTED line with one CORRECTED RESULT (pkgKG7)
