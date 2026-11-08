@@ -1,0 +1,23 @@
+   Judge Enforcer Build 33040: base throws ("undefined" is not valid JSON), skipped
+   Judge Enforcer Build 33060: base throws ("undefined" is not valid JSON), skipped
+   Judge Enforcer Build 33083: base throws ("undefined" is not valid JSON), skipped
+   Judge Enforcer Build 33107: base throws ("undefined" is not valid JSON), skipped
+   Judge Enforcer Build 33129: base throws ("undefined" is not valid JSON), skipped
+   Judge Enforcer Build 33149: base throws ("undefined" is not valid JSON), skipped
+   Judge Enforcer Build 33160: base throws ("undefined" is not valid JSON), skipped
+   Judge Enforcer Build 33197: base throws ("undefined" is not valid JSON), skipped
+Judge Enforcer Build (feeder Enforcer Record): 30 runs replayed, 23 byte-equal, 7 differ, 8 base-throw skipped; reader decided 5312 ANSWER CHECK reads
+   DIFF 33299: ids 97 -> 97; added ; removed 
+   DIFF 33371: ids 76 -> 76; added ; removed 
+   DIFF 33411: ids 72 -> 72; added ; removed 
+   DIFF 33430: ids 73 -> 73; added ; removed 
+   DIFF 33617: ids 57 -> 57; added ; removed 
+   DIFF 33644: ids 70 -> 70; added ; removed 
+   DIFF 33731: ids 93 -> 93; added ; removed 
+OK   Judge Enforcer Build: replay ran on 30 runs
+OK   Judge Enforcer Build: reader path taken
+Alt Judge Enforcer Build (feeder Alt Seated): 30 runs replayed, 30 byte-equal, 0 differ, 0 base-throw skipped; reader decided 2033 ANSWER CHECK reads
+OK   Alt Judge Enforcer Build: replay ran on 30 runs
+OK   Alt Judge Enforcer Build: reader path taken
+OK   eaxHold item key "ANSWER CHECK Exodus 6:23 [CR3]" is not read as an ANSWER CHECK line (form null): no swap there
+TOTAL 5 OK, 0 FAIL
