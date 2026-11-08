@@ -15,3 +15,8 @@ Test (node pkgKWQ/test_KWQ.cjs): 523 node runs over 42 runs; 2 outputs change, b
 - terra (Panel Cure Check), on its STATEMENT line: NOT HELD: The granted order is "finding (1:18), the angel (1:20), the taking (1:24)," which (CR4) keeps within D3.
   Terra's main RESPONSE quoted nothing; its STATEMENT line did, with references, so the same fault held it. This flip changes terra's 33774 result: listed for ruling.
 0 uncured-count changes elsewhere, 0 NOT APPLIED changes. TOTAL 32 OK, 0 FAIL.
+
+## v33b for s66 (base: RTB step 1 strip, f60e4a8)
+s66 is staged on strip_RCD + RTB step 1, so the same two anchors are rebuilt on that strip: node pkgKWQ/build_KWQ.cjs <f60e4a8 strip_RTB> pkgLIB/strip_KWQ_R1.
+Packed as pkgLIB_v33b_KWQ_RTB1, Shared Library ec8c14f71abd. E4 rebase on s66c/target_s66.json lines 9+: Alternate Build e8135d6be541, Early Alternate Build 39edb58376d5 (both 307575 bytes = strip_KWQ_R1).
+test_KWQ on that base: the same 2 changes (33774 sol and terra D3 #7 UNCURED -> CURED), 0 others, 32 OK 0 FAIL (test_strip_KWQ_R1.txt).
