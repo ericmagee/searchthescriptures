@@ -1,0 +1,6 @@
+OK replay ran on 50 node runs, every saved run with these nodes (26 changed)
+OK only E-COL asks change (none)
+OK collision-line E-COL asks: 72, offering CHANGE TO: RETRACTED: 0
+OK FORCED-line E-COL asks: 77, offering CHANGE TO: RETRACTED: 77
+   33627 changed asks: {"gemini S4":"C","gemini S5":"F","gemini S6":"C","gemini S7":"F","gemini S8":"C","gemini S9":"F","gemini S10":"C","gemini S11":"F","grok S7":"C","grok S8":"F","grok S9":"C","grok S10":"F","grok S11":"C","grok S12":"F","grok S13":"C","grok S14":"C","grok S15":"F","grok S16":"C","grok S17":"F","grok S18":"F"}
+TOTAL 4 OK, 0 FAIL

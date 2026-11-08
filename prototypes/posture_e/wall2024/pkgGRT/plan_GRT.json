@@ -1,0 +1,13 @@
+{
+ "base": "pkgEHF/patched (live s59 + pkgEHF)",
+ "nodes": {
+  "Send_Back_Build": {
+   "base": "3b0b1c0487e0",
+   "patched": "91baefb37252"
+  },
+  "Alt_Send_Back_Build": {
+   "base": "499f2893ae5c",
+   "patched": "e3387f775787"
+  }
+ }
+}
