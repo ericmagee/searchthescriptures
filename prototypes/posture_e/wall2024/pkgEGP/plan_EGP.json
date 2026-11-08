@@ -1,0 +1,10 @@
+{
+ "base": "live s54 + pkgEGA",
+ "nodes": {
+  "Enforcer Record": {
+   "live_s54": "250ff3e1b2e1",
+   "base_EGA": "0e55e8d2a3db",
+   "patched": "dc7d800144a3"
+  }
+ }
+}
