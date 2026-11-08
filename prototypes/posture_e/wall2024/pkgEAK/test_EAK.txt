@@ -1,0 +1,42 @@
+OK Record and Retry Build bases are live s58
+OK Alt Judge Enforcer Build base is pkgEKD/patched (79898dee1307), which stacks on live s58
+Alt Judge Enforcer Build replay over 24 runs
+   33218: base items 1, K-W item none, alternate K-W/K-S3 cure rows 0
+   33222: base items 3, K-W item 23 ids (grok), alternate K-W/K-S3 cure rows 23
+   33249: base items 3, K-W item 12 ids (grok), alternate K-W/K-S3 cure rows 12
+   33261: base items 3, K-W item 14 ids (grok), alternate K-W/K-S3 cure rows 14
+   33276: base items 1, K-W item none, alternate K-W/K-S3 cure rows 0
+   33289: base items 1, K-W item none, alternate K-W/K-S3 cure rows 0
+   33299: base items 3, K-W item 15 ids (grok), alternate K-W/K-S3 cure rows 15
+   33311: base items 1, K-W item none, alternate K-W/K-S3 cure rows 0
+   33322: base items 1, K-W item none, alternate K-W/K-S3 cure rows 0
+   33345: base items 3, K-W item 19 ids (grok), alternate K-W/K-S3 cure rows 19
+   33371: base items 3, K-W item 16 ids (grok), alternate K-W/K-S3 cure rows 16
+   33389: base items 1, K-W item none, alternate K-W/K-S3 cure rows 0
+   33411: base items 3, K-W item 10 ids (grok), alternate K-W/K-S3 cure rows 10
+   33430: base items 1, K-W item none, alternate K-W/K-S3 cure rows 13
+   33442: base items 3, K-W item 16 ids (grok), alternate K-W/K-S3 cure rows 16
+   33461: base items 3, K-W item 14 ids (grok), alternate K-W/K-S3 cure rows 14
+   33482: base items 3, K-W item 20 ids (grok), alternate K-W/K-S3 cure rows 20
+   33490: base items 3, K-W item 15 ids (grok), alternate K-W/K-S3 cure rows 15
+   33497: base items 1, K-W item none, alternate K-W/K-S3 cure rows 24
+   33506: base items 4, K-W item 10 ids (sol), alternate K-W/K-S3 cure rows 10
+   33575: base items 1, K-W item none, alternate K-W/K-S3 cure rows 0
+   33592: base items 1, K-W item none, alternate K-W/K-S3 cure rows 0
+   33605: base items 1, K-W item none, alternate K-W/K-S3 cure rows 0
+   33617: base items 4, K-W item 26 ids (sol), alternate K-W/K-S3 cure rows 26
+OK replay ran (24)
+OK every base call item is unchanged (24 of 24)
+OK a K-W item exactly where the alternate has K-W/K-S3 cure rows, one id per row (24 of 24; 13 with the item)
+OK 33617: the alternate K-W prompt equals live Enforcer Build's prompt for the same 26 rows, apart from the W labels (127284 chars)
+OK 33617: the system text (enforcer role + judges' agreement) equals the panel K-W call
+OK 33617: STATEMENT lines read from the alternate's own cure reply as for the panel
+   33617 K-W ids: 26 (20 K-W, 6 K-S3), grades ["TOUCHES NO LINK","NOT HELD","no form; cure CURED"]
+OK Retry Build: a short reply to the K-W call (1 line for 26 ids) splits it into 2 halves holding all its ids
+OK Record: 26 K-W/K-S3 enforcer_check rows for sol (alternate)
+OK Record: each W id gets its own verdict (1 DISAGREE, 25 AGREE), NEEDS kept as the panel rows keep it
+   sample row: ENFORCER DISAGREE: NEEDS: YES -- test sentence "W1.1". (judge wrote TOUCHES NO LINK; RECORD-ONLY TRIAL, ruling 428)
+   tally: {"KW":{"AGREE":20,"DISAGREE":0,"NO ANSWER":0,"NO VERDICT":0,"CONTRADICTED":0},"KS3":{"AGREE":5,"DISAGREE":1,"NO ANSWER":0,"NO VERDICT":0,"CONTRADICTED":0}}
+OK Record on the saved 33617 calls (no K-W call): the same rows and report as live, apart from two empty tallies
+OK Alt Send Back Build already leaves K-W rows out of send-backs (ruling 445)
+TOTAL 13 OK, 0 FAIL
