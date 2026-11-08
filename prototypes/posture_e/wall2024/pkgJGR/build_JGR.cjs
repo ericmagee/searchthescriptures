@@ -22,7 +22,7 @@ fs.rmSync('pkgJGR/patched',{recursive:true,force:true});fs.mkdirSync('pkgJGR/pat
 for(const [nm,E] of Object.entries(EDITS)){const c0=W.nodes.find(n=>n.name===nm).parameters.jsCode;let c=c0;
  for(const [a,b] of E){const k=c.split(a).length-1;if(k!==1)throw new Error(nm+': anchor found '+k+' times: '+a.slice(0,60));c=c.replace(a,b);}
  new Function('$','$input','$execution','return (async()=>{\n'+c+'\n})();');fs.writeFileSync('pkgJGR/patched/'+nm.replace(/ /g,'_')+'.js',c);plan.nodes[nm]={before:h(c0),after:h(c),edits:E.length};}
-// library: Alternate Build and R2 Alternate Build (base: the s68 library strip_RTB4_8) -> pkgLIB/strip_JGR
-const LB='pkgLIB/strip_RTB4_8/patched/',LO='pkgLIB/strip_JGR/patched/';fs.rmSync('pkgLIB/strip_JGR',{recursive:true,force:true});fs.mkdirSync(LO,{recursive:true});plan.library={base:LB,nodes:{}};
+// library: Alternate Build and R2 Alternate Build (base: env JGR_LIB_BASE, default the s68 library strip_RTB4_8) -> pkgLIB/<JGR_LIB_OUT, default strip_JGR>
+const LBD=process.env.JGR_LIB_BASE||'strip_RTB4_8',LOD=process.env.JGR_LIB_OUT||'strip_JGR';const LB='pkgLIB/'+LBD+'/patched/',LO='pkgLIB/'+LOD+'/patched/';fs.rmSync('pkgLIB/'+LOD,{recursive:true,force:true});fs.mkdirSync(LO,{recursive:true});plan.library={base:LB,nodes:{}};
 for(const f of fs.readdirSync(LB)){const c0=fs.readFileSync(LB+f,'utf8');let c=c0;if(['Alternate_Build.js','R2_Alternate_Build.js'].includes(f)){const k=c.split(ORC4).length-1;if(k!==1)throw new Error(f+': ORC4 '+k);c=c.replace(ORC4,ORC4+QFR);new Function('$','$input','$execution','return (async()=>{\n'+c+'\n})();');plan.library.nodes[f]={before:h(c0),after:h(c)};}fs.writeFileSync(LO+f,c);}
 fs.writeFileSync('pkgJGR/plan_JGR.json',JSON.stringify(plan,null,1)+'\n');console.log(JSON.stringify(plan.nodes),JSON.stringify(plan.library.nodes));

@@ -1,0 +1,58 @@
+{
+ "base": "/mnt/project-files/wall2024/fetchback_live_s68.json",
+ "nodes": {
+  "Init Seats": {
+   "before": "717ed6aebedc",
+   "after": "bd876ec6df3c",
+   "edits": 2
+  },
+  "Resolve Seats": {
+   "before": "1b7062041862",
+   "after": "321fe39cbe1b",
+   "edits": 1
+  },
+  "Accept Build": {
+   "before": "8b28d616a012",
+   "after": "04bba2849249",
+   "edits": 3
+  },
+  "Panel Build": {
+   "before": "d5544003283e",
+   "after": "1365bf01ccb8",
+   "edits": 1
+  },
+  "Reserve Build": {
+   "before": "1a23a0c2a327",
+   "after": "b6f09af9dd8c",
+   "edits": 1
+  },
+  "Build Synthesis": {
+   "before": "6be782556e0e",
+   "after": "0b346cff1513",
+   "edits": 1
+  },
+  "Build Independent Verdict": {
+   "before": "6c4e6e4d004d",
+   "after": "51ebc43626e7",
+   "edits": 1
+  },
+  "Build Diagnostic Prompt": {
+   "before": "8121ab566149",
+   "after": "312cd7ee2154",
+   "edits": 1
+  }
+ },
+ "library": {
+  "base": "pkgLIB/strip_KWI/patched/",
+  "nodes": {
+   "Alternate_Build.js": {
+    "before": "36c3e8582f50",
+    "after": "6ff84d4041e2"
+   },
+   "R2_Alternate_Build.js": {
+    "before": "8b520f4c8b0c",
+    "after": "6ab18ecb4236"
+   }
+  }
+ }
+}

@@ -28,7 +28,7 @@ const AW=c=>'return (async()=>{'+c+'\n})();';
   const a=await run('33530',live('Accept Build').replace("const ORDER=['gemini','chatgpt','qwen','sol','grok'];","const ORDER=['gemini','chatgpt','qwen','sol','grok','qwen_flash'];").replace("sol:'sol'}","sol:'sol',qwen_flash:'qwen_flash'}"),'Accept Build'),b=await run('33530',src,'Accept Build');const r=onlyQF(a,b);
   T(!a.ERR&&!b.ERR&&r.ok&&r.d.length>0,'33530 Accept Build: '+r.d.length+' difference(s), each a reasoning effort low on the qwen_flash posture body: '+JSON.stringify(r.d.map(x=>x[0]))+(a.ERR?' baseERR '+a.ERR:'')+(b.ERR?' patERR '+b.ERR:''));}
  // 4 library: Alternate Build and R2 Alternate Build full sources differ only by the rule line
- for(const f of ['Alternate_Build.js','R2_Alternate_Build.js']){const a=fs.readFileSync('pkgLIB/strip_RTB4_8/patched/'+f,'utf8'),b=fs.readFileSync('pkgLIB/strip_JGR/patched/'+f,'utf8');
+ for(const f of ['Alternate_Build.js','R2_Alternate_Build.js']){const a=fs.readFileSync('pkgLIB/'+(process.env.JGR_LIB_BASE||'strip_RTB4_8')+'/patched/'+f,'utf8'),b=fs.readFileSync('pkgLIB/'+(process.env.JGR_LIB_OUT||'strip_JGR')+'/patched/'+f,'utf8');
   const QFR="if(!o.reasoning&&/^qwen\\/qwen3\\.8-flash$/.test(String(model)))o.reasoning={effort:'low'}; /* pkgJGR (pkgPNL3 rule, qwen_flash only): the flash judge leaves room for the verdict (33530) */";
   T(b.replace(QFR,'')===a&&b.split(QFR).length===2,'library '+f+': only the qwen_flash rule line is added, once');}
  // 5 the rule itself, run from the patched Panel Build's __orc text

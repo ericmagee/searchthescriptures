@@ -46,3 +46,16 @@ Display maps (Format Markdown) show the seat name qwen_flash as written.
 
 Write order: fix_JGR.sql, then the 8 n8n nodes, the library pack (Shared Library, Alternate Build and R2 Alternate Build stubs) and the E4 heads.
 Revert: the s68 nodes (prewrite copy), then revert_JGR.sql.
+
+## Restack on pkgKWI (Wall 3416 order: KWI first, then JGR)
+
+The 8 n8n nodes and fix_JGR.sql are unchanged (KWI's n8n nodes are the 3 enforcer builds; no overlap).
+Library: the same qwen_flash effort-low rule added to Alternate_Build.js and R2_Alternate_Build.js of strip_KWI.
+
+- Build: `JGR_LIB_BASE=strip_KWI JGR_LIB_OUT=strip_JGR_KWI node pkgJGR/build_JGR.cjs` (defaults unchanged; plan in plan_JGR_KWI.json)
+- Strip pkgLIB/strip_JGR_KWI: vs strip_KWI only those 2 files differ, each by the one inserted rule (checked by re-inserting).
+- Pack pkgLIB_JGR_KWI: Shared Library 15db65d8dc08. vs pkgLIB_KWI_s68 only Shared_Library.js, Alternate_Build.js, R2_Alternate_Build.js differ.
+- E4 rebase (new stub lines 1-8 + live s68 lines 9+): Alternate Build 5c3021cc9e65, Early Alternate Build 9c46fdee804b; both rebuild to strip_JGR_KWI Alternate_Build (315134 = __N, equal).
+- Test: test_JGR_bodies_KWI.txt 9 OK, 0 FAIL.
+
+Write order with KWI: pkgKWI in full first, then fix_JGR.sql, the 8 JGR n8n nodes, pkgLIB_JGR_KWI (Shared Library + Alternate Build + R2 Alternate Build stubs) and the E4 heads above. If JGR is written alone (no KWI), use pkgLIB_JGR as before.
