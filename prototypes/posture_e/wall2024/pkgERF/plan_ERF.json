@@ -1,0 +1,32 @@
+{
+ "base": "live s53 (fetchback_live_s53.json)",
+ "change": "node setting retryOnFail true -> false on the two primary DeepSeek enforcer call nodes; maxTries and waitBetweenTries removed; onError stays continueRegularOutput; parameters, body and credential unchanged",
+ "nodes": {
+  "Judge Enforcer Call deepseek": {
+   "params_sha": "48228dad44d7",
+   "base_settings": {
+    "retryOnFail": true,
+    "maxTries": 3,
+    "waitBetweenTries": 10000,
+    "onError": "continueRegularOutput"
+   },
+   "patched_settings": {
+    "retryOnFail": false,
+    "onError": "continueRegularOutput"
+   }
+  },
+  "Alt Judge Enforcer Call deepseek": {
+   "params_sha": "48228dad44d7",
+   "base_settings": {
+    "retryOnFail": true,
+    "maxTries": 3,
+    "waitBetweenTries": 10000,
+    "onError": "continueRegularOutput"
+   },
+   "patched_settings": {
+    "retryOnFail": false,
+    "onError": "continueRegularOutput"
+   }
+  }
+ }
+}
