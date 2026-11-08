@@ -1,0 +1,45 @@
+OK   PR example read by P.PRESSED as a cure line: {"kind":"cure","sep":"|","pair":"D2 vs C1","round":"DR2","quote":"the coming together is the taking into his house"}
+OK   PR example round [DR2] presses the defender (CURE_PRESS {"DEFENDER":["DR1","DR2"],"CHALLENGER":["CR1","CR2","CR3"]}) and passes the cureLines round filter
+OK   K-G1 round list equals CURE_PRESS in 26 of 26 cure nodes: (against the defender: [DR1] or [DR2]; against the challenger: [CR1], [CR2] or [CR3])
+OK   RXM says 6 or more words, the K-G4 meaning-break check threshold (6)
+OK   no old copy left in 41 files
+OK   render counts {"pr.form":26,"pr.mark":26,"rxm.kg4":26,"pr.agreement":18,"pr.enforcer":3} = tally {"pr.form":26,"pr.mark":26,"rxm.kg4":26,"pr.agreement":18,"pr.enforcer":3}
+OK   Alt Gate Build: 32 runs, 32 byte-equal, 0 differ only in rule text
+OK   Alt Gate Record: 28 runs, 28 byte-equal, 0 differ only in rule text
+OK   Alternate Build: 20 runs, 20 byte-equal, 0 differ only in rule text
+OK   Alternate Cure Build: 26 runs, 5 byte-equal, 21 differ only in rule text
+OK   Alternate Cure Normalize: 43 runs, 43 byte-equal, 0 differ only in rule text
+OK   Alternate Merge 1: 0 runs, 0 byte-equal, 0 differ only in rule text
+OK   Alternate Merge Seat: 36 runs, 36 byte-equal, 0 differ only in rule text
+OK   Cure Build: 33 runs, 4 byte-equal, 29 differ only in rule text
+OK   Cure Check: 33 runs, 33 byte-equal, 0 differ only in rule text
+OK   Cure Normalize: 43 runs, 43 byte-equal, 0 differ only in rule text
+OK   Gate Build: 32 runs, 32 byte-equal, 0 differ only in rule text
+OK   Gate Record: 28 runs, 28 byte-equal, 0 differ only in rule text
+OK   Panel Cure Build 1: 40 runs, 4 byte-equal, 36 differ only in rule text
+OK   Panel Cure Build 2: 40 runs, 4 byte-equal, 36 differ only in rule text
+OK   Panel Cure Build 3: 40 runs, 5 byte-equal, 35 differ only in rule text
+OK   Panel Cure Check: 36 runs, 36 byte-equal, 0 differ only in rule text
+OK   Panel Cure Normalize 1: 43 runs, 43 byte-equal, 0 differ only in rule text
+OK   Panel Cure Normalize 2: 43 runs, 43 byte-equal, 0 differ only in rule text
+OK   Panel Cure Normalize 3: 43 runs, 43 byte-equal, 0 differ only in rule text
+OK   R2 Alt Gate Build: 0 runs, 0 byte-equal, 0 differ only in rule text
+OK   R2 Alt Gate Record: 0 runs, 0 byte-equal, 0 differ only in rule text
+OK   R2 Alternate Build: 0 runs, 0 byte-equal, 0 differ only in rule text
+OK   R2 Alternate Cure Build: 0 runs, 0 byte-equal, 0 differ only in rule text
+OK   R2 Alternate Cure Normalize: 0 runs, 0 byte-equal, 0 differ only in rule text
+OK   R2 Alternate Merge: 0 runs, 0 byte-equal, 0 differ only in rule text
+OK   R2 Alternate Merge Seat: 0 runs, 0 byte-equal, 0 differ only in rule text
+OK   Panel Build: 29 runs, 29 byte-equal, 0 differ only in rule text
+OK   Reserve Build: 1 runs, 1 byte-equal, 0 differ only in rule text
+OK   Accept Build: 30 runs, 0 byte-equal, 30 differ only in rule text
+OK   Accept Check: 30 runs, 30 byte-equal, 0 differ only in rule text
+OK   Accept Return Build: 30 runs, 30 byte-equal, 0 differ only in rule text
+OK   Accept Final: 30 runs, 0 byte-equal, 30 differ only in rule text
+OK   Accept DS Return Build: 30 runs, 30 byte-equal, 0 differ only in rule text
+OK   Enforcer Build: 40 runs, 10 byte-equal, 30 differ only in rule text
+OK   Judge Enforcer Build: 32 runs, 4 byte-equal, 28 differ only in rule text
+OK   Alt Judge Enforcer Build: 33 runs, 12 byte-equal, 21 differ only in rule text
+OK   R2 Alt Judge Enforcer Build: 0 runs, 0 byte-equal, 0 differ only in rule text
+replay: 924 node runs, 628 byte-equal, 296 differ only in rule text
+TOTAL 43 OK, 0 FAIL

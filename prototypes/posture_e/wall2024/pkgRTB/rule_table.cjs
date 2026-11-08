@@ -39,4 +39,23 @@ const RX={
   each:t=>'RETRACTED for each '+t+', each with its reason (the round in brackets, then its words quoted or the verse it cites), and the one CORRECTED RESULT of your whole reply'}};
 // Family 2b: RETRACTED, send-back phase (Send Back Record; FORCED lines only; no RESULT, pkgGRT). Table-owned; text unchanged in step 2.
 const RXSB={rule:'RETRACTED (send-back)',form:'CHANGE TO: RETRACTED: <pair>',note:'A collision line is regraded, never retracted: RETRACTED is for a FORCED line only (pkgGRT).'};
-module.exports={KW,RX,RXSB};
+// Family 3: "unanswered", the PRESSED cure for K-G1 / K-G4 (library: P.PRESSED reads 'PRESSED: <pair> | [<round>] | "<quote>"'; CURE_PRESS gives
+// the rounds by side; cureFoundAll needs the quote word for word in that round; kg4Split makes the cure fail when a later round of the
+// holding side names every pressed witness). The rounds are read from the library's CURE_PRESS at build time (PR.bind), never typed here.
+// Renders carry no quote characters.
+const PR={
+ rule:'PRESSED (cure for K-G1 / K-G4)',
+ rounds:null,
+ bind(cp){this.rounds=cp;return this;},
+ roundsText(){const L=a=>a.map(r=>'['+r+']');const j=a=>a.length<2?a.join(''):a.slice(0,-1).join(', ')+' or '+a[a.length-1];
+  return j(L(this.rounds.DEFENDER))+' against the defender, '+j(L(this.rounds.CHALLENGER))+' against the challenger';},
+ example:'PRESSED: D2 vs C1 | [DR2] | "the coming together is the taking into his house"',
+ render:{
+  formLine:()=>'PRESSED: D<n> vs C<m> | [<the round that pressed the witness>] | \\"<its words, quoted exactly>\\"',
+  mark:()=>'Otherwise cure it with one line PRESSED: D<n> vs C<m> | [<round>] | <the pressing words in quotation marks>, the round '+PR.roundsText()+', its words standing word for word in that round; it does not cure when a later round of that side names every pressed witness the line rests on.]',
+  agreement:()=>'A break that rests on an unanswered press quotes the pressing sentence instead (Commitment 5); to cure such a break I write PRESSED: D<n> vs C<m> | [<round>] | <the pressing words in quotation marks>, the round '+PR.roundsText()+', its words standing word for word in that round.',
+  enforcer:()=>'(ruling 392); that is not a break by absence. Its cure line is PRESSED: D<n> vs C<m> | [<round>] | <the pressing words in quotation marks>, the round '+PR.roundsText()+', its words standing word for word in that round; it does not cure when a later round of the side that holds the link names every pressed witness the line rests on.'}};
+// Family 3b: RETRACTED of a K-G4 meaning break (library K-G4 branch, !g4Unans2024, ruling 421): 6+ words of a holding-side round, or a verse such a round names.
+const RXM={rule:'RETRACTED (K-G4 meaning break)',
+ render:{clause:()=>'Where your line names no pressed witness left unanswered, the break rests on meaning (ruling 421): only one FORCED line cures it, or RETRACTED with a reason that quotes 6 or more words, word for word, from a round of the side that holds the link, or names a verse of the line that such a round names. '}};
+module.exports={KW,RX,RXSB,PR,RXM};

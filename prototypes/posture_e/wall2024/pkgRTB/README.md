@@ -42,3 +42,14 @@ table file plus a conformance check, not a runtime read of $('Shared Library') (
   byte for byte. So strip_RTB2K is strip_KWQ_R1 plus exactly the step 2 text.
 - Pack pkgLIB_RTB2K (LIB_N=30): Shared Library 986f3efb1447. E4 rebase on target_s66_kwq lines 9+: Alternate Build 108873896a19,
   Early Alternate Build 2ff9dd790123, both rebuild to 309508 = __N and equal the strip's full Alternate Build.
+
+## Family 3: "unanswered", the PRESSED cure for K-G1 / K-G4 (design DESIGN_UNANSWERED.md, Wall 3355)
+- rule_table.cjs PR row: form, rounds read from the library's CURE_PRESS at build time (PR.bind), unanswered-false limit, example. RXM row:
+  K-G4 meaning-break RETRACTED (6+ words from a holding-side round, or a verse such a round names).
+- build_RTB3.cjs + build_RTB3_subs.cjs: library strip_RTB2K (live s66, 986f3efb1447) -> strip_RTB3. Prompt nodes from fetchback_live_s66 -> pkgRTB/patched3.
+  Tally: pr.form 26, pr.mark 26 (g4Label UNANSWERED-WITNESS mark), rxm.kg4 26, pr.agreement 18 (11 prompt + 7 library), pr.enforcer 3 (JEB x3).
+- test_RTB3: TOTAL 43 OK, 0 FAIL. The example is read by P.PRESSED as a cure line, and its round is in CURE_PRESS. The K-G1 hand list equals
+  CURE_PRESS in 26 of 26 nodes. The RXM threshold equals the K-G4 check's (6). No old copies are left, and the render counts equal the tally.
+  Replay: 924 node runs, 628 byte-equal, 296 differ only in rule text, 0 other.
+- Pack pkgLIB_RTB3 (LIB_N=30): Shared Library 6d5b3a5b8aed. The E4 rebase on live s66 lines 9+ gives Alternate Build b2cda8f6bbd5 and
+  Early Alternate Build 400431c444d2. Both rebuild to 310344 = __N.
