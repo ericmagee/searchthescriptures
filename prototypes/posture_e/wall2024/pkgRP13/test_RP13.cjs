@@ -16,4 +16,4 @@ for(const N of ['Enforcer Build']){
   if(st(a)===st(b)){same++;continue;}const sa=st(a),sb=st(b);let k=0;while(sa[k]===sb[k])k++;diffs.push(R+': at '+k+'\n      A: '+sa.slice(Math.max(0,k-160),k+160)+'\n      B: '+sb.slice(Math.max(0,k-160),k+160));}
  log(N+' (feeder '+fd.join(',')+'): '+n+' runs replayed, '+same+' byte-equal, '+diffs.length+' differ, '+err+' base-throw skipped; reader decided '+hits+' reads');diffs.forEach(d=>log('   DIFF '+d));
  T(n>=10,N+': replay ran on '+n+' runs');if(/^Alt /.test(N)&&hits===0)log('     '+N+': the reader path was not reached on the saved runs (no case with a fanned-out bare id); the patch text is the same as the main node, which is exercised');else T(hits>0,N+': reader path taken');}
-log('TOTAL '+ok+' OK, '+bad+' FAIL');fs.writeFileSync('pkgRP13/test_RP12.txt',out.join('\n')+'\n');
+log('TOTAL '+ok+' OK, '+bad+' FAIL');fs.writeFileSync('pkgRP13/test_RP13.txt',out.join('\n')+'\n');

@@ -1,0 +1,14 @@
+{
+ "base": "/mnt/project-files/wall2024/s66c/target_s66.json",
+ "base_versionId": "fd86de35-0651-4222-99f3-730e7445fb55",
+ "nodes": {
+  "Format Markdown": {
+   "base": "e1c296a588da",
+   "patched": "67168e3ebb27"
+  },
+  "Build Save Body": {
+   "base": "0cccca27dab7",
+   "patched": "061f597689a3"
+  }
+ }
+}

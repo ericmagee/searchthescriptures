@@ -1,0 +1,7 @@
+Format Markdown (feeder Get Guards): 28 runs replayed, 28 byte-equal, 0 differ, 1 base-throw skipped; reader read 3088 lines
+OK   Format Markdown: replay ran on 28 runs
+OK   Format Markdown: reader path taken
+Build Save Body (feeder Extract Diagnostic): 28 runs replayed, 28 byte-equal, 0 differ, 5 base-throw skipped; reader read 12360 lines
+OK   Build Save Body: replay ran on 28 runs
+OK   Build Save Body: reader path taken
+TOTAL 4 OK, 0 FAIL
