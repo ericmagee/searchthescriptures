@@ -1,0 +1,27 @@
+{
+ "source": "W2 pkgPNL2, Eric 01:58Z 11-08 (sol an alternate before grok)",
+ "live": "1a7d5a3b-b01e-4a94-a713-91051b4765a4",
+ "base": "/mnt/project-files/wall2024/fetchback_live_s53.json",
+ "nodes": [
+  {
+   "name": "Init Seats",
+   "file": "Init_Seats.js",
+   "base_sha": "04a6ee5beecd",
+   "final_sha": "814f06796baa",
+   "bytes": [
+    15221,
+    15569
+   ]
+  },
+  {
+   "name": "Accept Build",
+   "file": "Accept_Build.js",
+   "base_sha": "6cb75177dc8b",
+   "final_sha": "4dd28adff715",
+   "bytes": [
+    21819,
+    21861
+   ]
+  }
+ ]
+}
