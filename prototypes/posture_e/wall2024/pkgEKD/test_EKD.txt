@@ -1,0 +1,17 @@
+OK Judge Enforcer Build: live s58 equals the pkgEWB base (e623516c11e9)
+OK Alt Judge Enforcer Build: live s58 equals the pkgEWB base (0d1f052f879f)
+   33322 Alt Judge Enforcer Build skipped: "undefined" is not valid JSON
+OK replay ran on 79 node runs
+OK every node run builds the same items and system text, apart from the words block and the rule sentence (0)
+OK every D keystone item carries the words block: 139 of 139
+   items with no premise line found: 132 (33040 no premise line, 33197 no premise line, 33218 no premise line, 33222 no premise line, 33249 no premise line, 33261 no premise line, 33299 no premise line, 33345 no premise line, 33371 no premise line, 33389 no premise line, 33411 no premise line, 33430 no premise line, 33442 no premise line, 33461 no premise line, 33482 no premise line, 33490 no premise line, 33497 no premise line, 33506 no premise line, 33575 no premise line, 33592 no premise line, 33605 no premise line)
+OK 33617 gemini and sol keystone items carry the defender opening "no biological human father ... of the Holy Ghost"
+   sample (33617 sol):
+     ITEM (E-KEY, the keystone line):
+     THE LINE (Z1.1, sol): KEYSTONE: D6 -- STANDS -- The conclusion is that Christ had no biological human father, with Mary as mother and the Holy Ghost as the source of the conception; its original footing survives.
+     THIS JUDGE'S OWN COLLISION LINES ON D6:
+     - D6 vs C6 (Romans 1:3; Hebrews 7:14; Numbers 1:18; Ezra 2:62): UNDERDETERMINED -- CR3 answers all four proven witnesses, and CR4 explains ancestral descent, Joseph's household reckoning and the priests' missing register without surrendering the conception chain -- GROUND: [L1] Romans 1:3 "made of the seed of David according to the flesh"; Numbers 1:18 "they declared their pedigrees after their fa
+     THE DEFENDER'S OWN WORDS FOR THE KEYSTONE (from the rounds):
+     - OPENING STATEMENT [CR1]: "Opening: Christ had no biological father Definition. By "biological father" I mean a man who begets the child, so that the child is generated from him. I affirm that Jesus Christ had a biological mother, Mary, and no biological human father. His conception was of the Holy Ghost."
+     - LINK 6 PREMISE LINE [CR2]: "Christ had no biological father; Mary was his biological mother and the Holy Ghost the source of the conception."
+TOTAL 6 OK, 0 FAIL
