@@ -1,0 +1,11 @@
+OK Send Back Build x3: replay ran on 68 node runs, 61 byte-equal
+OK companion asks: 7 send-backs, each adds only companion E-COL asks for an unasked LINK BROKEN collision line of a FORCED ask, the FORCED ask names it, earlier items and messages unchanged ()
+   33222 Send Back Build gemini S19 for S10 D2 vs C3, S20 for S11 D3 vs C2, S21 for S12 D4 vs C4, S22 for S13 D5 vs C5
+   33411 Send Back Build gemini S11 for S5 D6 vs C1
+   33644 Send Back Build grok S21 for S20 D5 vs C6
+   33261 Alt Send Back Build grok S13 for S11 D5 vs C1
+   33345 Alt Send Back Build grok S15 for S12 D1 vs C1, S16 for S13 D6 vs C1
+   33411 Alt Send Back Build grok S13 for S9 D1 vs C1, S14 for S10 D6 vs C2
+   33490 Alt Send Back Build grok S8 for S7 D6 vs C3
+OK Send Back Record x3: 67 of 67 saved node runs byte-equal
+TOTAL 3 OK, 0 FAIL

@@ -1,0 +1,8 @@
+OK 33411 gemini: companion S11 for S5 D6 vs C1
+OK Record: 31 rows; every row but the companion equals the live Record row (prompt and reply text aside)
+OK Record: companion answered CHANGE TO -> CURED, record-only (CURED)
+OK Record: companion unanswered -> not silence, not UNCURED (null)
+OK Record: drv_uncured unchanged with the companion answered or not (4 values)
+OK apply: RETRACTED alone is NOT APPLIED (S5: the collision line of D6 vs C1 is still graded CHALLENGER LINK BROKEN, and a broken link k)
+OK apply: with the companion regrade, both apply; the FORCED line is gone and the collision line regraded ()
+TOTAL 7 OK, 0 FAIL

@@ -39,7 +39,11 @@ const RX={
   clause:t=>'RETRACTED for '+t+', with its reason (the round in brackets, then its words quoted or the verse it cites), and the one CORRECTED RESULT of your whole reply',
   each:t=>'RETRACTED for each '+t+', each with its reason (the round in brackets, then its words quoted or the verse it cites), and the one CORRECTED RESULT of your whole reply'}};
 // Family 2b: RETRACTED, send-back phase (Send Back Record; FORCED lines only; no RESULT, pkgGRT). Table-owned; text unchanged in step 2.
-const RXSB={rule:'RETRACTED (send-back)',form:'CHANGE TO: RETRACTED: <pair>',note:'A collision line is regraded, never retracted: RETRACTED is for a FORCED line only (pkgGRT).'};
+const RXSB={rule:'RETRACTED (send-back)',form:'CHANGE TO: RETRACTED: <pair>',note:'A collision line is regraded, never retracted: RETRACTED is for a FORCED line only (pkgGRT).',
+ // pkgGRT2 (D53; W3 3143, W2 3141): a FORCED-line ask whose pair has no collision ask in the same send-back gets a companion ask for the pair's
+ // collision line (when that line is graded LINK BROKEN), so the RETRACTED it offers is reachable (pkgRFL applies it once the collision line is regraded).
+ companion:sid=>'COMPANION ASK (pkgGRT2): no enforcer flags this line. It is asked so that ITEM '+sid+' can be answered: a FORCED line is retracted only once the collision line of its pair is no longer graded LINK BROKEN (ruling 411, pkgRFL). If you retract the FORCED line in ITEM '+sid+', CHANGE TO this line with the pair regraded (UNDERDETERMINED or STANDS, with its GROUND). If you keep the FORCED line, KEEP this line. Either answer is accepted; this item counts against no seat.',
+ forcedPointer:sid=>' (ITEM '+sid+')'};
 // Family 3: "unanswered", the PRESSED cure for K-G1 / K-G4 (library: P.PRESSED reads 'PRESSED: <pair> | [<round>] | "<quote>"'; CURE_PRESS gives
 // the rounds by side; cureFoundAll needs the quote word for word in that round; kg4Split makes the cure fail when a later round of the
 // holding side names every pressed witness). The rounds are read from the library's CURE_PRESS at build time (PR.bind), never typed here.
