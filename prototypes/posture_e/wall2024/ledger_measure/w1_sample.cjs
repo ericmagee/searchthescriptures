@@ -1,0 +1,10 @@
+const fs=require('fs');const s=require('./ledger_samp.json').filter(x=>x.side==='DEFENDER'&&x.k==='other mention only');
+const D='/mnt/project-files/wall2024/inputs/';const txt=(R,k)=>{let v=JSON.parse(fs.readFileSync(D+R+'_'+k[0]+k[2]+'_Extract.json'))[0].data.main[0][0].json;return v.labelled||v.raw;};
+const o=require('./ledger_out.json');
+const pick=[];for(let i=5;i<s.length;i+=12)pick.push(s[i]);
+pick.forEach((p,n)=>{const full=o.find(q=>q.run===p.run&&q.side==='DEFENDER'&&q.ref===p.ref);
+ const pt=txt(p.run,full.round);const pi=pt.search(new RegExp(p.ref.replace(/[.*+?^${}()|[\]\\]/g,'\\$&').replace(/ /g,'\\s*')));
+ console.log(`\n#### ${n+1} run ${p.run} ref ${p.ref} pressed in ${full.round}`);
+ const pr=pt.match(new RegExp('PRESSED WITH[^\\n]*\\n?[^\\n]*'+'','i'));
+ full.hits.forEach(h=>{const t=txt(p.run,h.round);console.log(` -- ${h.round} @${h.pos}: `+t.slice(Math.max(0,h.pos-300),h.pos+250).replace(/\s+/g,' '));});});
+console.log('\ntotal',s.length,'picked',pick.length);

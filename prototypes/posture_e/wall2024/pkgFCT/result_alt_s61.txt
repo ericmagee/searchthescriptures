@@ -1,0 +1,44 @@
+FORM CONFORMANCE (alt): 36 run x option replays; 91 offered answers; 38 refused for form
+  RETRACTED: <pair>: offered 19, refused 0
+  bare RETRACTED: offered 19, refused 19
+  pair regraded UNDERDETERMINED: offered 34, refused 0
+  FORCED form: offered 19, refused 19
+  REFUSED 33222 grok S34 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33222 grok S34 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D5 VS C5 line: write the whole li
+  REFUSED 33411 grok S12 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33411 grok S12 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D2 VS C5 line: write the whole li
+  REFUSED 33442 grok S8 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33442 grok S9 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33442 grok S8 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D4 VS C3 line: write the whole li
+  REFUSED 33442 grok S9 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D5 VS C6 line: write the whole li
+  REFUSED 33461 grok S13 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33461 grok S16 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33461 grok S13 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D1 VS C1 line: write the whole li
+  REFUSED 33461 grok S16 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D6 VS C6 line: write the whole li
+  REFUSED 33506 sol S4 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33506 sol S13 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33506 sol S14 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33506 sol S15 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33506 sol S4 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D5 VS C2 line: write the whole li
+  REFUSED 33506 sol S13 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D2 VS C4 line: write the whole li
+  REFUSED 33506 sol S14 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D4 VS C6 line: write the whole li
+  REFUSED 33506 sol S15 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D6 VS C1 line: write the whole li
+  REFUSED 33617 sol S18 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33617 sol S19 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33617 sol S20 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33617 sol S18 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D2 VS C6 line: write the whole li
+  REFUSED 33617 sol S19 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D4 VS C4 line: write the whole li
+  REFUSED 33617 sol S20 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D5 VS C5 line: write the whole li
+  REFUSED 33627 sol S4 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33627 sol S8 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33627 sol S9 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33627 sol S4 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D5 VS C1 line: write the whole li
+  REFUSED 33627 sol S8 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D3 VS C4 line: write the whole li
+  REFUSED 33627 sol S9 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D5 VS C6 line: write the whole li
+  REFUSED 33644 sol S8 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33644 sol S9 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33644 sol S10 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33644 sol S8 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D3 VS C6 line: write the whole li
+  REFUSED 33644 sol S9 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D5 VS C4 line: write the whole li
+  REFUSED 33644 sol S10 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D5 VS C6 line: write the whole li
+FAIL

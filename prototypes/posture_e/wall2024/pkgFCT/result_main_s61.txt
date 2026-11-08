@@ -1,0 +1,296 @@
+FORM CONFORMANCE (main): 83 run x option replays; 565 offered answers; 290 refused for form
+  RETRACTED: <pair>: offered 66, refused 0
+  bare RETRACTED: offered 145, refused 145
+  pair regraded UNDERDETERMINED: offered 209, refused 0
+  FORCED form: offered 145, refused 145
+  REFUSED 33218 chatgpt S22 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33218 chatgpt S27 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33218 sol S22 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33218 sol S23 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33218 sol S24 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33218 chatgpt S22 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D4 VS C4 line: write the whole li
+  REFUSED 33218 chatgpt S27 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D6 VS C1 line: write the whole li
+  REFUSED 33218 sol S22 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D3 VS C1 line: write the whole li
+  REFUSED 33218 sol S23 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D5 VS C6 line: write the whole li
+  REFUSED 33218 sol S24 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D6 VS C4 line: write the whole li
+  REFUSED 33222 sol S15 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33222 sol S16 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33222 sol S17 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33222 sol S18 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33222 sol S19 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33222 sol S20 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33222 sol S21 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33222 sol S15 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D1 VS C1 line: write the whole li
+  REFUSED 33222 sol S16 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D1 VS C4 line: write the whole li
+  REFUSED 33222 sol S17 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D2 VS C3 line: write the whole li
+  REFUSED 33222 sol S18 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D4 VS C4 line: write the whole li
+  REFUSED 33222 sol S19 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D4 VS C5 line: write the whole li
+  REFUSED 33222 sol S20 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D4 VS C6 line: write the whole li
+  REFUSED 33222 sol S21 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D5 VS C5 line: write the whole li
+  REFUSED 33249 sol S32 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33249 sol S33 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33249 sol S34 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33249 sol S35 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33249 sol S36 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33249 sol S37 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33249 gemini S2 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33249 chatgpt S19 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33249 chatgpt S23 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33249 sol S32 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D2 VS C4 line: write the whole li
+  REFUSED 33249 sol S33 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D3 VS C4 line: write the whole li
+  REFUSED 33249 sol S34 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D3 VS C5 line: write the whole li
+  REFUSED 33249 sol S35 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D3 VS C3 line: write the whole li
+  REFUSED 33249 sol S36 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D5 VS C2 line: write the whole li
+  REFUSED 33249 sol S37 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D5 VS C6 line: write the whole li
+  REFUSED 33249 gemini S2 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D5 VS C1 line: write the whole li
+  REFUSED 33249 chatgpt S19 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D3 VS C5 line: write the whole li
+  REFUSED 33249 chatgpt S23 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D4 VS C2 line: write the whole li
+  REFUSED 33261 chatgpt S27 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33261 chatgpt S28 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33261 chatgpt S29 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33261 chatgpt S33 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33261 sol S11 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33261 sol S12 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33261 sol S13 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33261 sol S14 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33261 sol S15 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33261 sol S16 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33261 chatgpt S27 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D1 VS C1 line: write the whole li
+  REFUSED 33261 chatgpt S28 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D2 VS C2 line: write the whole li
+  REFUSED 33261 chatgpt S29 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D4 VS C1 line: write the whole li
+  REFUSED 33261 chatgpt S33 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D3 VS C1 line: write the whole li
+  REFUSED 33261 sol S11 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D2 VS C2 line: write the whole li
+  REFUSED 33261 sol S12 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D3 VS C4 line: write the whole li
+  REFUSED 33261 sol S13 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D4 VS C6 line: write the whole li
+  REFUSED 33261 sol S14 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D5 VS C3 line: write the whole li
+  REFUSED 33261 sol S15 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D5 VS C4 line: write the whole li
+  REFUSED 33261 sol S16 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D5 VS C6 line: write the whole li
+  REFUSED 33299 gemini S12 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33299 sol S10 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33299 sol S11 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33299 sol S12 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33299 sol S18 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33299 gemini S12 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D6 VS C6 line: write the whole li
+  REFUSED 33299 sol S10 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D3 VS C3 line: write the whole li
+  REFUSED 33299 sol S11 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D4 VS C4 line: write the whole li
+  REFUSED 33299 sol S12 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D5 VS C5 line: write the whole li
+  REFUSED 33299 sol S18 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D1 VS C1 line: write the whole li
+  REFUSED 33345 sol S29 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33345 sol S30 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33345 sol S31 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33345 sol S32 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33345 chatgpt S32 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33345 chatgpt S33 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33345 chatgpt S34 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33345 chatgpt S35 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33345 chatgpt S36 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33345 sol S29 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D1 VS C2 line: write the whole li
+  REFUSED 33345 sol S30 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D3 VS C5 line: write the whole li
+  REFUSED 33345 sol S31 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D3 VS C2 line: write the whole li
+  REFUSED 33345 sol S32 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D6 VS C5 line: write the whole li
+  REFUSED 33345 chatgpt S32 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D2 VS C3 line: write the whole li
+  REFUSED 33345 chatgpt S33 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D3 VS C5 line: write the whole li
+  REFUSED 33345 chatgpt S34 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D4 VS C4 line: write the whole li
+  REFUSED 33345 chatgpt S35 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D5 VS C1 line: write the whole li
+  REFUSED 33345 chatgpt S36 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D6 VS C6 line: write the whole li
+  REFUSED 33371 chatgpt S18 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33371 sol S10 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33371 sol S11 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33371 sol S12 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33371 sol S13 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33371 sol S14 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33371 sol S15 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33371 chatgpt S18 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D2 VS C6 line: write the whole li
+  REFUSED 33371 sol S10 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D2 VS C3 line: write the whole li
+  REFUSED 33371 sol S11 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D3 VS C6 line: write the whole li
+  REFUSED 33371 sol S12 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D4 VS C2 line: write the whole li
+  REFUSED 33371 sol S13 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D4 VS C3 line: write the whole li
+  REFUSED 33371 sol S14 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D4 VS C5 line: write the whole li
+  REFUSED 33371 sol S15 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D6 VS C3 line: write the whole li
+  REFUSED 33389 chatgpt S21 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33389 chatgpt S22 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33389 chatgpt S23 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33389 sol S21 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33389 sol S22 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33389 chatgpt S21 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D1 VS C4 line: write the whole li
+  REFUSED 33389 chatgpt S22 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D4 VS C3 line: write the whole li
+  REFUSED 33389 chatgpt S23 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D6 VS C4 line: write the whole li
+  REFUSED 33389 sol S21 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D3 VS C1 line: write the whole li
+  REFUSED 33389 sol S22 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D4 VS C3 line: write the whole li
+  REFUSED 33411 sol S10 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33411 sol S11 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33411 chatgpt S1 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33411 chatgpt S4 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33411 sol S10 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D1 VS C4 line: write the whole li
+  REFUSED 33411 sol S11 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D6 VS C1 line: write the whole li
+  REFUSED 33411 chatgpt S1 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D6 VS C2 line: write the whole li
+  REFUSED 33411 chatgpt S4 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D4 VS C6 line: write the whole li
+  REFUSED 33430 chatgpt S5 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33430 chatgpt S6 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33430 chatgpt S7 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33430 chatgpt S8 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33430 sol S16 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33430 sol S17 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33430 sol S18 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33430 chatgpt S5 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D1 VS C6 line: write the whole li
+  REFUSED 33430 chatgpt S6 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D2 VS C4 line: write the whole li
+  REFUSED 33430 chatgpt S7 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D4 VS C1 line: write the whole li
+  REFUSED 33430 chatgpt S8 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D6 VS C1 line: write the whole li
+  REFUSED 33430 sol S16 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D1 VS C5 line: write the whole li
+  REFUSED 33430 sol S17 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D2 VS C5 line: write the whole li
+  REFUSED 33430 sol S18 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D6 VS C2 line: write the whole li
+  REFUSED 33442 chatgpt S6 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33442 chatgpt S7 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33442 chatgpt S8 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33442 chatgpt S9 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33442 sol S7 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33442 sol S8 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33442 sol S12 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33442 sol S13 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33442 sol S14 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33442 chatgpt S6 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D1 VS C3 line: write the whole li
+  REFUSED 33442 chatgpt S7 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D3 VS C2 line: write the whole li
+  REFUSED 33442 chatgpt S8 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D4 VS C3 line: write the whole li
+  REFUSED 33442 chatgpt S9 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D5 VS C6 line: write the whole li
+  REFUSED 33442 sol S7 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D5 VS C6 line: write the whole li
+  REFUSED 33442 sol S8 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D6 VS C3 line: write the whole li
+  REFUSED 33442 sol S12 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D2 VS C4 line: write the whole li
+  REFUSED 33442 sol S13 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D3 VS C6 line: write the whole li
+  REFUSED 33442 sol S14 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D6 VS C4 line: write the whole li
+  REFUSED 33461 sol S26 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33461 sol S27 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33461 sol S28 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33461 sol S29 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33461 sol S30 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33461 sol S31 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33461 sol S32 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33461 sol S33 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33461 gemini S3 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33461 sol S26 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D1 VS C1 line: write the whole li
+  REFUSED 33461 sol S27 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D2 VS C1 line: write the whole li
+  REFUSED 33461 sol S28 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D3 VS C5 line: write the whole li
+  REFUSED 33461 sol S29 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D4 VS C4 line: write the whole li
+  REFUSED 33461 sol S30 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D4 VS C2 line: write the whole li
+  REFUSED 33461 sol S31 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D5 VS C6 line: write the whole li
+  REFUSED 33461 sol S32 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D6 VS C3 line: write the whole li
+  REFUSED 33461 sol S33 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D6 VS C6 line: write the whole li
+  REFUSED 33461 gemini S3 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D4 VS C4 line: write the whole li
+  REFUSED 33482 sol S13 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33482 sol S14 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33482 sol S15 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33482 sol S16 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33482 sol S13 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D1 VS C1 line: write the whole li
+  REFUSED 33482 sol S14 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D5 VS C5 line: write the whole li
+  REFUSED 33482 sol S15 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D5 VS C6 line: write the whole li
+  REFUSED 33482 sol S16 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D6 VS C6 line: write the whole li
+  REFUSED 33490 chatgpt S2 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33490 chatgpt S3 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33490 sol S22 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33490 sol S23 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33490 sol S24 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33490 sol S25 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33490 sol S26 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33490 sol S27 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33490 chatgpt S2 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D2 VS C2 line: write the whole li
+  REFUSED 33490 chatgpt S3 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D5 VS C6 line: write the whole li
+  REFUSED 33490 sol S22 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D1 VS C6 line: write the whole li
+  REFUSED 33490 sol S23 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D2 VS C1 line: write the whole li
+  REFUSED 33490 sol S24 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D3 VS C4 line: write the whole li
+  REFUSED 33490 sol S25 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D5 VS C3 line: write the whole li
+  REFUSED 33490 sol S26 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D5 VS C6 line: write the whole li
+  REFUSED 33490 sol S27 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D6 VS C2 line: write the whole li
+  REFUSED 33497 gemini S7 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33497 gemini S8 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33497 gemini S9 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33497 gemini S10 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33497 gemini S11 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33497 chatgpt S5 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33497 chatgpt S6 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33497 chatgpt S7 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33497 gemini S7 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D2 VS C2 line: write the whole li
+  REFUSED 33497 gemini S8 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D3 VS C3 line: write the whole li
+  REFUSED 33497 gemini S9 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D4 VS C4 line: write the whole li
+  REFUSED 33497 gemini S10 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D5 VS C5 line: write the whole li
+  REFUSED 33497 gemini S11 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D6 VS C6 line: write the whole li
+  REFUSED 33497 chatgpt S5 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D1 VS C1 line: write the whole li
+  REFUSED 33497 chatgpt S6 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D2 VS C2 line: write the whole li
+  REFUSED 33497 chatgpt S7 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D5 VS C5 line: write the whole li
+  REFUSED 33506 gemini S8 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33506 gemini S9 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33506 gemini S10 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33506 gemini S11 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33506 gemini S12 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33506 chatgpt S4 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33506 grok S13 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33506 grok S14 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33506 grok S15 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33506 gemini S8 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D2 VS C4 line: write the whole li
+  REFUSED 33506 gemini S9 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D3 VS C5 line: write the whole li
+  REFUSED 33506 gemini S10 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D4 VS C6 line: write the whole li
+  REFUSED 33506 gemini S11 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D5 VS C2 line: write the whole li
+  REFUSED 33506 gemini S12 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D6 VS C1 line: write the whole li
+  REFUSED 33506 chatgpt S4 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D2 VS C5 line: write the whole li
+  REFUSED 33506 grok S13 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D4 VS C6 line: write the whole li
+  REFUSED 33506 grok S14 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D5 VS C2 line: write the whole li
+  REFUSED 33506 grok S15 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D6 VS C1 line: write the whole li
+  REFUSED 33575 chatgpt S6 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33575 chatgpt S9 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33575 chatgpt S10 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33575 grok S17 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33575 grok S18 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33575 grok S19 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33575 chatgpt S6 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D4 VS C3 line: write the whole li
+  REFUSED 33575 chatgpt S9 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D2 VS C2 line: write the whole li
+  REFUSED 33575 chatgpt S10 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D4 VS C1 line: write the whole li
+  REFUSED 33575 grok S17 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D3 VS C6 line: write the whole li
+  REFUSED 33575 grok S18 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D4 VS C1 line: write the whole li
+  REFUSED 33575 grok S19 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D5 VS C5 line: write the whole li
+  REFUSED 33592 chatgpt S7 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33592 chatgpt S8 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33592 chatgpt S9 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33592 grok S23 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33592 chatgpt S7 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D2 VS C1 line: write the whole li
+  REFUSED 33592 chatgpt S8 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D3 VS C3 line: write the whole li
+  REFUSED 33592 chatgpt S9 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D6 VS C1 line: write the whole li
+  REFUSED 33592 grok S23 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D4 VS C1 line: write the whole li
+  REFUSED 33605 chatgpt S3 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33605 chatgpt S7 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33605 chatgpt S8 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33605 chatgpt S9 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33605 chatgpt S3 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D1 VS C2 line: write the whole li
+  REFUSED 33605 chatgpt S7 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D2 VS C5 line: write the whole li
+  REFUSED 33605 chatgpt S8 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D3 VS C4 line: write the whole li
+  REFUSED 33605 chatgpt S9 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D4 VS C1 line: write the whole li
+  REFUSED 33617 chatgpt S9 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33617 chatgpt S10 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33617 chatgpt S13 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33617 chatgpt S9 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D2 VS C1 line: write the whole li
+  REFUSED 33617 chatgpt S10 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D4 VS C4 line: write the whole li
+  REFUSED 33617 chatgpt S13 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D3 VS C2 line: write the whole li
+  REFUSED 33627 chatgpt S2 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33627 chatgpt S4 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33627 chatgpt S5 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33627 chatgpt S7 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33627 chatgpt S8 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33627 chatgpt S2 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D1 VS C2 line: write the whole li
+  REFUSED 33627 chatgpt S4 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D4 VS C5 line: write the whole li
+  REFUSED 33627 chatgpt S5 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D5 VS C2 line: write the whole li
+  REFUSED 33627 chatgpt S7 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D3 VS C4 line: write the whole li
+  REFUSED 33627 chatgpt S8 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D5 VS C6 line: write the whole li
+  REFUSED 33644 gemini S6 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33644 gemini S8 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33644 gemini S9 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33644 chatgpt S3 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33644 chatgpt S4 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33644 chatgpt S5 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33644 chatgpt S6 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33644 chatgpt S8 (E-HOLD, collision line) offered "bare RETRACTED": the CHANGE TO line has no line form the engine reads
+  REFUSED 33644 gemini S6 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D6 VS C1 line: write the whole li
+  REFUSED 33644 gemini S8 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D3 VS C3 line: write the whole li
+  REFUSED 33644 gemini S9 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D5 VS C4 line: write the whole li
+  REFUSED 33644 chatgpt S3 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D3 VS C6 line: write the whole li
+  REFUSED 33644 chatgpt S4 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D5 VS C3 line: write the whole li
+  REFUSED 33644 chatgpt S5 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D5 VS C6 line: write the whole li
+  REFUSED 33644 chatgpt S6 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D6 VS C1 line: write the whole li
+  REFUSED 33644 chatgpt S8 (E-HOLD, collision line) offered "FORCED form": the change has no line label and would replace the whole D4 VS C5 line: write the whole li
+FAIL
