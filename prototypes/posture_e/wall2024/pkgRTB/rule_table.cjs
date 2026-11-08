@@ -58,4 +58,16 @@ const PR={
 // Family 3b: RETRACTED of a K-G4 meaning break (library K-G4 branch, !g4Unans2024, ruling 421): 6+ words of a holding-side round, or a verse such a round names.
 const RXM={rule:'RETRACTED (K-G4 meaning break)',
  render:{clause:()=>'Where your line names no pressed witness left unanswered, the break rests on meaning (ruling 421): only one FORCED line cures it, or RETRACTED with a reason that quotes 6 or more words, word for word, from a round of the side that holds the link, or names a verse of the line that such a round names. '}};
-module.exports={KW,RX,RXSB,PR,RXM};
+// PU (family 4, K-G11 / K-P; DESIGN_UNPROVEN.md): a BROKEN line or a count that rests only on presses that are no witness.
+// Engine: one cure branch for K-G11 and line-form K-P (RETRACTED; one RESTATED line not graded LINK BROKEN; or one RESTATED LINK BROKEN line
+// whose unanswered verse is in the side's proven pressed-witness set, pwUnans ∩ pwk); count-form K-P: CORRECTED COUNT within the cap + STANDING.
+const PU={rule:'K-G11 / K-P',
+ notBroken:'one RESTATED line for it that is not graded LINK BROKEN',
+ restated:'one RESTATED LINK BROKEN line that names, as left unanswered, a verse that the list against that side carries under PRESSED WITH: and the ledger marks PROVEN or PROVEN BY REFERENCE',
+ count:'CORRECTED COUNT for that side without that premise and the CORRECTED STANDING that count makes true',
+ render:{
+  kg11:()=>'or with '+PU.notBroken+'; or with '+PU.restated+'.',
+  kp:()=>'or '+PU.notBroken+', or '+PU.restated+'.',
+  markLine:()=>'TRIAL rule: answer it in the cure with '+RX.render.clause('that line')+', or with '+PU.notBroken+', or with '+PU.restated+'; it removes no seat. REVIEW THIS ROW.]',
+  markCount:()=>'TRIAL rule: answer it in the cure with '+PU.count+'; it removes no seat. REVIEW THIS ROW.]'}};
+module.exports={KW,RX,RXSB,PR,RXM,PU};
