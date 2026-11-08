@@ -8,3 +8,10 @@ Base: pkgLIB/strip_RI4 (v29, graded W2 3265, W3 3268). Out: pkgLIB/strip_RI5, pa
 E4 rebase: pkgLIB_v30_RI5A/e4_rebase (v30 stub head lines 1-8 + live s64 lines 9+): Alternate Build b72191e9375f, Early Alternate Build 573084d2ba2b; both rebuild to 305327 bytes = strip_RI5 Alternate_Build.js.
 Test (test_strip_RI5.txt): 584 node runs over 41 runs, 0 changed outputs, 0 flips, 0 uncured changes, 0 NOT APPLIED changes; TOTAL 32 OK, 0 FAIL.
 Part B (next): sbApply2024 field reads (RESULT, RETRACTED, FORCED pair, KEYSTONE, counts), kcmtGrade2024, cureRecompute.
+
+## Part B (sbApply2024 reads, 26 nodes): LIB v31_RI5B
+Build: node pkgRI5/build_RI5B.cjs (strip_RI5 -> strip_RI5B) && LIB_N=30 node pkgLIB/pack.cjs pkgLIB/strip_RI5B. Shared Library d1a772cee340.
+Swaps to reader-first: RESULT test, RETRACTED pair (x2), FORCED pairs __fo/__pf, CHAIN MARK ct/co, pOf, FR test (ri4IsF2024), KEYSTONE keyChecks/km, RESULT rw, res0.
+Test test_RI5B.cjs: 505 node runs over 41 runs, 0 changed outputs, 0 cure flips, 32 OK 0 FAIL.
+E4 rebase: pkgLIB_v31_RI5B/e4_rebase (v31 stub head lines 1-8 + live s64 lines 9+): Alternate Build a8511bffa17b, Early Alternate Build c3f8c072baf5; both rebuild to 306698 bytes = strip_RI5B Alternate_Build.js.
+Stacks on v30 (part A). Write order: v29 (s65), v30, v31; or v31 alone, which carries v29 and v30.
