@@ -1,0 +1,300 @@
+{
+ "base": "pkgLIB/strip_RI5/patched/",
+ "nodes": {
+  "Alt_Gate_Build.js": {
+   "base": "8f4ac8d026e5",
+   "patched": "0fd60e0d8eea",
+   "anchors": [
+    "RESULT test",
+    "RETRACTED pair",
+    "FORCED pair __fo",
+    "FORCED pair __pf",
+    "CHAIN MARK side",
+    "pair pOf",
+    "FORCED test FR",
+    "KEYSTONE keyChecks",
+    "KEYSTONE km",
+    "RESULT res0",
+    "RESULT rw"
+   ]
+  },
+  "Alt_Gate_Record.js": {
+   "base": "40aead1d8c41",
+   "patched": "543b599c1587",
+   "anchors": [
+    "RESULT test",
+    "RETRACTED pair",
+    "FORCED pair __fo",
+    "FORCED pair __pf",
+    "CHAIN MARK side",
+    "pair pOf",
+    "FORCED test FR",
+    "KEYSTONE keyChecks",
+    "KEYSTONE km",
+    "RESULT res0",
+    "RESULT rw"
+   ]
+  },
+  "Alternate_Build.js": {
+   "base": "b5f639c69d97",
+   "patched": "4aec67722484",
+   "anchors": [
+    "RESULT res0"
+   ]
+  },
+  "Alternate_Cure_Build.js": {
+   "base": "6e5f539f8b14",
+   "patched": "5819c0387629",
+   "anchors": [
+    "RESULT res0"
+   ]
+  },
+  "Alternate_Cure_Normalize.js": {
+   "base": "0dbcbef3df76",
+   "patched": "2584f4d16c56",
+   "anchors": [
+    "RESULT res0"
+   ]
+  },
+  "Alternate_Merge_1.js": {
+   "base": "bec2c174b1be",
+   "patched": "c772c7ea371e",
+   "anchors": [
+    "RESULT test",
+    "RETRACTED pair",
+    "FORCED pair __fo",
+    "FORCED pair __pf",
+    "CHAIN MARK side",
+    "pair pOf",
+    "FORCED test FR",
+    "KEYSTONE keyChecks",
+    "KEYSTONE km",
+    "RESULT res0",
+    "RESULT rw"
+   ]
+  },
+  "Alternate_Merge_Seat.js": {
+   "base": "a85315616b37",
+   "patched": "e47190b1dcbf",
+   "anchors": [
+    "RESULT test",
+    "RETRACTED pair",
+    "FORCED pair __fo",
+    "FORCED pair __pf",
+    "CHAIN MARK side",
+    "pair pOf",
+    "FORCED test FR",
+    "KEYSTONE keyChecks",
+    "KEYSTONE km",
+    "RESULT res0",
+    "RESULT rw"
+   ]
+  },
+  "Cure_Build.js": {
+   "base": "1c914b108bce",
+   "patched": "4e3c3af2fe51",
+   "anchors": [
+    "RESULT res0"
+   ]
+  },
+  "Cure_Check.js": {
+   "base": "51c2163f5bab",
+   "patched": "4ea3ffa66ef8",
+   "anchors": [
+    "RESULT res0"
+   ]
+  },
+  "Cure_Normalize.js": {
+   "base": "52a077c23b1d",
+   "patched": "6b31dad72e5b",
+   "anchors": [
+    "RESULT res0"
+   ]
+  },
+  "Gate_Build.js": {
+   "base": "19666d5a2680",
+   "patched": "fad4e27598c7",
+   "anchors": [
+    "RESULT test",
+    "RETRACTED pair",
+    "FORCED pair __fo",
+    "FORCED pair __pf",
+    "CHAIN MARK side",
+    "pair pOf",
+    "FORCED test FR",
+    "KEYSTONE keyChecks",
+    "KEYSTONE km",
+    "RESULT res0",
+    "RESULT rw"
+   ]
+  },
+  "Gate_Record.js": {
+   "base": "d07b938c64d5",
+   "patched": "191814b61c41",
+   "anchors": [
+    "RESULT test",
+    "RETRACTED pair",
+    "FORCED pair __fo",
+    "FORCED pair __pf",
+    "CHAIN MARK side",
+    "pair pOf",
+    "FORCED test FR",
+    "KEYSTONE keyChecks",
+    "KEYSTONE km",
+    "RESULT res0",
+    "RESULT rw"
+   ]
+  },
+  "Panel_Cure_Build_1.js": {
+   "base": "78d383836eb4",
+   "patched": "91402071c767",
+   "anchors": [
+    "RESULT res0"
+   ]
+  },
+  "Panel_Cure_Build_2.js": {
+   "base": "561c8138c9b4",
+   "patched": "5dbd940191ea",
+   "anchors": [
+    "RESULT res0"
+   ]
+  },
+  "Panel_Cure_Build_3.js": {
+   "base": "3ea3d652c7d5",
+   "patched": "b17f44f74e2c",
+   "anchors": [
+    "RESULT res0"
+   ]
+  },
+  "Panel_Cure_Check.js": {
+   "base": "8662a6abea8e",
+   "patched": "981f02ad37d3",
+   "anchors": [
+    "RESULT res0"
+   ]
+  },
+  "Panel_Cure_Normalize_1.js": {
+   "base": "bfa316c3d2d8",
+   "patched": "e96fcbe9f049",
+   "anchors": [
+    "RESULT res0"
+   ]
+  },
+  "Panel_Cure_Normalize_2.js": {
+   "base": "ccccb95e8b8f",
+   "patched": "acfdfcfa86c4",
+   "anchors": [
+    "RESULT res0"
+   ]
+  },
+  "Panel_Cure_Normalize_3.js": {
+   "base": "7951063cf746",
+   "patched": "55d1030a9057",
+   "anchors": [
+    "RESULT res0"
+   ]
+  },
+  "R2_Alt_Gate_Build.js": {
+   "base": "bc129de95133",
+   "patched": "a8797ff64600",
+   "anchors": [
+    "RESULT test",
+    "RETRACTED pair",
+    "FORCED pair __fo",
+    "FORCED pair __pf",
+    "CHAIN MARK side",
+    "pair pOf",
+    "FORCED test FR",
+    "KEYSTONE keyChecks",
+    "KEYSTONE km",
+    "RESULT res0",
+    "RESULT rw"
+   ]
+  },
+  "R2_Alt_Gate_Record.js": {
+   "base": "b3b90f181336",
+   "patched": "62237b122507",
+   "anchors": [
+    "RESULT test",
+    "RETRACTED pair",
+    "FORCED pair __fo",
+    "FORCED pair __pf",
+    "CHAIN MARK side",
+    "pair pOf",
+    "FORCED test FR",
+    "KEYSTONE keyChecks",
+    "KEYSTONE km",
+    "RESULT res0",
+    "RESULT rw"
+   ]
+  },
+  "R2_Alternate_Build.js": {
+   "base": "b6007b91a8ab",
+   "patched": "0458ea021c39",
+   "anchors": [
+    "RESULT res0"
+   ]
+  },
+  "R2_Alternate_Cure_Build.js": {
+   "base": "a29384433a29",
+   "patched": "899594d5c1c9",
+   "anchors": [
+    "RESULT res0"
+   ]
+  },
+  "R2_Alternate_Cure_Normalize.js": {
+   "base": "a38e05a9fbf2",
+   "patched": "084fe303900e",
+   "anchors": [
+    "RESULT res0"
+   ]
+  },
+  "R2_Alternate_Merge.js": {
+   "base": "8e03250f1493",
+   "patched": "c5155aba38f0",
+   "anchors": [
+    "RESULT test",
+    "RETRACTED pair",
+    "FORCED pair __fo",
+    "FORCED pair __pf",
+    "CHAIN MARK side",
+    "pair pOf",
+    "FORCED test FR",
+    "KEYSTONE keyChecks",
+    "KEYSTONE km",
+    "RESULT res0",
+    "RESULT rw"
+   ]
+  },
+  "R2_Alternate_Merge_Seat.js": {
+   "base": "359857dc321f",
+   "patched": "50da61ef7ade",
+   "anchors": [
+    "RESULT test",
+    "RETRACTED pair",
+    "FORCED pair __fo",
+    "FORCED pair __pf",
+    "CHAIN MARK side",
+    "pair pOf",
+    "FORCED test FR",
+    "KEYSTONE keyChecks",
+    "KEYSTONE km",
+    "RESULT res0",
+    "RESULT rw"
+   ]
+  }
+ },
+ "tally": {
+  "RESULT test": 10,
+  "RETRACTED pair": 10,
+  "FORCED pair __fo": 10,
+  "FORCED pair __pf": 10,
+  "CHAIN MARK side": 10,
+  "pair pOf": 10,
+  "FORCED test FR": 10,
+  "KEYSTONE keyChecks": 10,
+  "KEYSTONE km": 10,
+  "RESULT res0": 26,
+  "RESULT rw": 10
+ }
+}
