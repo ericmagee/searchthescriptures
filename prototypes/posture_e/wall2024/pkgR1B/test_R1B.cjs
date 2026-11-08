@@ -10,11 +10,14 @@ const CH=['Gate_Build.js','Gate_Record.js','Alt_Gate_Build.js','Alt_Gate_Record.
 // static: every changed file has the 3 edits, every other file byte-identical
 const all=fs.readdirSync('pkgLIB/strip_KCR2/patched').filter(f=>f.endsWith('.js')).sort();
 for(const f of all){const a=B0(f),b=P1(f);if(CH.includes(f))T(a!==b&&(b.match(/pkgR1B/g)||[]).length===3,f+' carries the 3 pkgR1B edits');else T(a===b,f+' unchanged');}
+// packed library: every pkgLIB_v15_R1B stub rebuilds its full source byte for byte from the Shared Library (as in n8n)
+{const {rebuild}=require('../pkgLIB/unpack.cjs');const lib=fs.readFileSync('pkgLIB_v15_R1B/patched/Shared_Library.js','utf8');let k=0;
+ for(const f of all){if(rebuild(fs.readFileSync('pkgLIB_v15_R1B/patched/'+f,'utf8'),lib)===P1(f))k++;else log('  stub mismatch '+f);}T(k===22,'pkgLIB_v15_R1B: '+k+' of 22 stubs rebuild the strip_R1B source byte for byte');}
 // (a) corpus
 const src=P1('Gate_Build.js');const s0=src.indexOf('const __RL=(function(){'),e0=src.indexOf('return module.exports;})();',s0)+'return module.exports;})();'.length;
 const __RL=new Function(src.slice(s0,e0)+'\nreturn __RL;')();
 const __acRead=l=>{try{const r=__RL.readLine(String(l==null?'':l));return r&&r.form==='ANSWER CHECK'&&r.f&&!r.f.restated?r.f:null;}catch(e){return null;}};
-const gOld=raw=>{const l=raw.replace(/[*_`]+/g,'').trim();const m=l.match(/^(?:[-•]|\d+[.)])?\s*ANSWER CHECK\s*:\s*(.+?)\s*(?:--|—)\s*\[\s*([CD]R[1-4])\s*\]/i);if(!m)return {read:false};
+const gOld=raw=>{const l=raw.replace(/[*_`]+/g,'').trim();const m=l.match(/^(?:[-•]|\d+[.)])?\s*ANSWER CHECK\s*:\s*(.+?)\s*(?:--|—)\s*\[\s*([CD]R[1-4])\s*\]/i);if(!m)return {read:false,fires:false};
  const gs=[...l.matchAll(/(?:--|—)\s*(MEETS|MISSES)\b/gi)];const mis=!!gs.length&&gs[gs.length-1][1].toUpperCase()==='MISSES';const none=/(?:--|—)\s*MEANS\s*:\s*NONE\b/i.test(l);
  const ref=m[1].replace(/\s+/g,' ').trim();return {read:true,ref,round:m[2].toUpperCase(),mis,none,fires:mis&&!none&&/^(?:[1-3]\s)?[A-Za-z][A-Za-z ]*\s\d+:\d+$/.test(ref)};};
 const gNew=raw=>{const l=raw.replace(/[*_`]+/g,'').trim();const a=__acRead(raw);const one=!!(a&&Array.isArray(a.rounds)&&a.rounds.length===1&&a.verse);if(!one)return gOld(raw);
@@ -26,7 +29,9 @@ const dNew=raw=>{const L0=String(raw).replace(/[*_`]+/g,'');const a=__acRead(raw
  if(!v)return dOld(raw);const mm=L0.match(/MEANS\s*:\s*([\s\S]*?)(?:\s(?:--|—)\s*ANSWER\s*:|$)/i);
  return {read:true,ref:v[1]+' '+v[2]+':'+v[3],round:String(a.rounds[0]).toUpperCase(),means:typeof a.means==='string'?a.means:(mm?mm[1]:'')};};
 const C=fs.readFileSync('corpus/texts.jsonl','utf8').trim().split('\n').map(JSON.parse);const seen=new Set();let n=0,shared=0;const gd=[],dd=[],cls={};
-const norm=s=>String(s||'').replace(/^["“]|["”]$/g,'').replace(/\\"/g,'"').replace(/\s+/g,' ').trim();
+// MEANS is only used through f()=krulNorm(kkjvNoMargin()) in dptCheck (has(MEANS,P) and cw(MEANS)), so compare after that same normalising.
+const g0=src.indexOf('function krulNorm('),g1=src.indexOf('function kkjvNoMargin(');const cut=i=>src.slice(i,src.indexOf('\n',i));
+const {krulNorm,kkjvNoMargin}=new Function(cut(g0)+'\n'+cut(g1)+'\nreturn {krulNorm,kkjvNoMargin};')();const norm=s=>krulNorm(kkjvNoMargin(s));
 for(const r of C)for(const raw of String(r.jtext||'').split('\n')){if(!/ANSWER CHECK\s*:/i.test(raw))continue;const k=raw.trim();if(seen.has(k))continue;seen.add(k);n++;
  const a=__acRead(raw);if(a&&a.rounds&&a.rounds.length===1)shared++;
  const go=gOld(raw),gn=gNew(raw);const gk=['read','ref','round','mis','none','fires'].filter(x=>go[x]!==gn[x]);
@@ -35,8 +40,9 @@ for(const r of C)for(const raw of String(r.jtext||'').split('\n')){if(!/ANSWER C
  if(dk.length){const c='dpt '+dk.join('+');cls[c]=(cls[c]||0)+1;dd.push(r.run+' '+r.seat+' '+r.tid+' ['+c+'] old='+JSON.stringify(xo).slice(0,300)+' new='+JSON.stringify(xn).slice(0,300)+'\n      '+k.slice(0,260));}}
 log('(a) corpus: '+n+' distinct ANSWER CHECK lines; shared reader reads one round on '+shared);log('    classes: '+JSON.stringify(cls));
 log('  gateAnsGround2024 differences: '+gd.length);for(const x of gd)log('   '+x);
-log('  dptCheck differences (MEANS compared after quote/space normalising): '+dd.length);for(const x of dd)log('   '+x);
+log('  dptCheck differences (MEANS compared after the krulNorm(kkjvNoMargin())): '+dd.length);for(const x of dd)log('   '+x);
 T(n>0&&shared>0,'corpus read');
+if(process.env.SKIPB){log("TOTAL "+ok+" OK, "+bad+" FAIL");fs.writeFileSync("pkgR1B/test_R1B_a.txt",out.join("\n")+"\n");process.exit(0);}
 // (b) replay
 const fin=(RUN,nm)=>{const fe=feeder(BASEW,nm);return [...fe.filter(x=>/Call/.test(x)),...fe.filter(x=>!/Call/.test(x))].find(x=>fs.existsSync(D+RUN+'_'+x.replace(/ /g,'_')+'.json'));};
 const runs=fs.readdirSync(D).filter(f=>/_index\.json$/.test(f)).map(f=>f.split('_')[0]).sort();const st=x=>JSON.stringify(x,(k,v)=>k==='at'||k==='created_at'||k==='t0'?undefined:v);let m=0;const ch=[];
