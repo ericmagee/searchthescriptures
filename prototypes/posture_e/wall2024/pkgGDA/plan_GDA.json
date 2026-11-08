@@ -1,0 +1,29 @@
+{
+ "base": "pkgLIB/strip_R1B/patched/",
+ "nodes": {
+  "Alt_Gate_Build.js": {
+   "base": "59bf25bb52f9",
+   "patched": "80fcf6d6602e"
+  },
+  "Alt_Gate_Record.js": {
+   "base": "fb2882398fbf",
+   "patched": "a3a1022eec02"
+  },
+  "Alternate_Merge.js": {
+   "base": "03d019c96083",
+   "patched": "80e26e663fb5"
+  },
+  "Alternate_Merge_Seat.js": {
+   "base": "e936eceeb574",
+   "patched": "0cbefc67dad9"
+  },
+  "Gate_Build.js": {
+   "base": "725f11466838",
+   "patched": "105e6205329d"
+  },
+  "Gate_Record.js": {
+   "base": "b3cc5b9f05e9",
+   "patched": "a370b07e5107"
+  }
+ }
+}

@@ -1,0 +1,29 @@
+{
+ "base": "pkgLIB/strip_G4R18/patched/",
+ "nodes": {
+  "Alt_Gate_Build.js": {
+   "base": "0d6b0b2031a4",
+   "patched": "812cddad31d2"
+  },
+  "Alt_Gate_Record.js": {
+   "base": "48825f80227e",
+   "patched": "32f8d89f9c2f"
+  },
+  "Alternate_Merge.js": {
+   "base": "027df4fc314b",
+   "patched": "6dd344647ee6"
+  },
+  "Alternate_Merge_Seat.js": {
+   "base": "07e3d73d1b0c",
+   "patched": "a27d0c82da50"
+  },
+  "Gate_Build.js": {
+   "base": "70d234fadea3",
+   "patched": "54573ce209d3"
+  },
+  "Gate_Record.js": {
+   "base": "87147ba91691",
+   "patched": "885d8659698a"
+  }
+ }
+}
