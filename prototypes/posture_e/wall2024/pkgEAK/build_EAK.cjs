@@ -25,16 +25,16 @@ const FN="/* pkgEAK (W2): the DeepSeek K-W check for the seated alternate's K-W 
  +"  body:{model:ds.api_model,max_tokens:Math.max(Number(ds.max_tokens)||0,16000),temperature:0,messages:[{role:'system',content:SYS+__JAGR},{role:'user',content:USER}]}}}];}catch(e){return [];}}\n";
 // 2. Alt Judge Enforcer Build (on pkgEKD)
 const plan={nodes:{}};
-{const f='Alt_Judge_Enforcer_Build';const s0=fs.readFileSync('pkgEKD/patched/'+f+'.js','utf8');
+{const f='Alt_Judge_Enforcer_Build';const BASED=process.argv[2]||'pkgEKD';const s0=fs.readFileSync(BASED+'/patched/'+f+'.js','utf8');
  const A1="let R=null;for(const n of ['Panel Cure Normalize 1','Panel Cure Normalize 2','Panel Cure Normalize 3'])";one(s0,A1,f);
  const A2="return calls.filter(c=>c.length).map((c,ci)=>({json:{je_skip:false,";one(s0,A2,f);
  const TAIL="void_rulings:VG.reduce((a,g)=>a+g.rulings.length,0)}}}));";if(!s0.trimEnd().endsWith(TAIL))throw new Error('tail');
  let s=s0.replace(A2,()=>FN+"const __eakR=R;\nreturn [].concat(calls.filter(c=>c.length).map((c,ci)=>({json:{je_skip:false,");
  const t=s.trimEnd();s=t.slice(0,t.length-TAIL.length)+"void_rulings:VG.reduce((a,g)=>a+g.rulings.length,0)}}})),eakItems2024()); /* pkgEAK: the alternate's K-W call goes last */"+s.slice(t.length);
- new Function('$','$input',s);fs.writeFileSync('pkgEAK/patched/'+f+'.js',s);plan.nodes['Alt Judge Enforcer Build']={base:h(s0)+' (pkgEKD)',patched:h(s)};}
+ new Function('$','$input',s);fs.writeFileSync((process.argv[3]||'pkgEAK/patched')+'/'+f+'.js',s);plan.nodes['Alt Judge Enforcer Build']={base:h(s0)+' ('+BASED+')',patched:h(s)};}
 // 3. Alt Judge Enforcer Record and Retry Build (live s58)
 for(const [nm,n] of [['Alt Judge Enforcer Record',5],['Alt Judge Enforcer Retry Build',1]]){const s0=live(nm);const k=s0.split('[BVKYHZPRS]').length-1;if(k!==n)throw new Error(nm+' letters '+k);
  let s=s0.split('[BVKYHZPRS]').join('[BVKYHZPRSW]');
  if(nm==='Alt Judge Enforcer Record'){const T0="for(const k of ['E-ANS','E-VOID','E-COL','E-SYN','E-HOLD','E-KEY','E-PREM','E-RES','E-B7'])";one(s,T0,nm);s=s.replace(T0,()=>"for(const k of ['E-ANS','E-VOID','E-COL','E-SYN','E-HOLD','E-KEY','E-PREM','E-RES','E-B7','K-W','K-S3'])"); /* pkgEAK */}
  new Function('$','$input',s);fs.writeFileSync('pkgEAK/patched/'+nm.replace(/ /g,'_')+'.js',s);plan.nodes[nm]={base:h(s0),patched:h(s)};}
-fs.writeFileSync('pkgEAK/plan_EAK.json',JSON.stringify(plan,null,1));console.log(plan.nodes);
+fs.writeFileSync(process.argv[4]||'pkgEAK/plan_EAK.json',JSON.stringify(plan,null,1));console.log(plan.nodes);

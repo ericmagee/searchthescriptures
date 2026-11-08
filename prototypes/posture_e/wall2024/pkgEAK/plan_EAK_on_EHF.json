@@ -1,0 +1,16 @@
+{
+ "nodes": {
+  "Alt Judge Enforcer Build": {
+   "base": "8234032a8929 (pkgEHF)",
+   "patched": "30cf326f86bc"
+  },
+  "Alt Judge Enforcer Record": {
+   "base": "adffc9d2d5f8",
+   "patched": "2dfe1e7fd7dd"
+  },
+  "Alt Judge Enforcer Retry Build": {
+   "base": "68c48b595ed0",
+   "patched": "fc8637baa2c0"
+  }
+ }
+}
