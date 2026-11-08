@@ -12,7 +12,7 @@ const why=()=>{if(!r)return 'no reply';if(r.error)return 'error: '+String(r.erro
  if(!c)return 'no choices ('+String(r.message||Object.keys(r).slice(0,6).join(',')).slice(0,120)+')';const txt=String((c.message&&c.message.content)||'');
  if(c.finish_reason==='length')return 'finish_reason length ('+((r.usage&&r.usage.completion_tokens)||'?')+' completion tokens, '+txt.length+' characters of content)';
  if(!txt.trim())return 'empty content';const want=(B.ids||[]).length,n=cov(txt,B.ids||[]);if(want>=2&&want-n>=2)return 'short reply: '+n+' of '+want+' answer ids have an ENFORCER line (finish_reason '+(c.finish_reason||'none')+')';return null;};
-const out=[];
+const out=[];let __unsplit=null; /* W1 3233: a failed call that cannot be cut into whole items is named on the marker */
 if(!B.enf_skip&&Array.isArray(B.ids)&&B.body&&Array.isArray(B.body.messages)){const w=why();
  if(w){const msg=String(B.body.messages[1]&&B.body.messages[1].content||'');const parts=msg.split(/\n\n(?=ITEM G?\d+(?: OF \d+)? \()/);const head=parts[0];
   const its=parts.slice(1).map(t=>({t,k:(t.match(/^ITEM G?(\d+)(?: OF \d+)? \(/)||[])[1]}));const own=k=>B.ids.filter(x=>String(x.id).split('.')[0].toUpperCase()==='A'+k);
@@ -20,5 +20,6 @@ if(!B.enf_skip&&Array.isArray(B.ids)&&B.body&&Array.isArray(B.body.messages)){co
   if(whole){const P=Math.max(2,Math.ceil(its.length/7));const tot=its.reduce((a,x)=>a+x.t.length,0);const G=[[]];let acc=0;
    its.forEach((x,i)=>{const g=G[G.length-1];if(g.length&&(g.length>=7||(G.length<P&&acc>=tot*G.length/P)))G.push([]);G[G.length-1].push(x);acc+=x.t.length;});
    G.forEach((g,h)=>out.push({json:{esr_retry:true,esr_part:h+1,esr_parts:G.length,esr_why:w,ids:g.flatMap(x=>own(x.k)),
-    body:{...B.body,messages:[B.body.messages[0],{...B.body.messages[1],content:head+'\n\n'+g.map(x=>x.t).join('\n\n')}]},model:B.model,run_token:B.run_token}}));}}}
-return out.length?out:[{json:{esr_retry:false}}];
+    body:{...B.body,messages:[B.body.messages[0],{...B.body.messages[1],content:head+'\n\n'+g.map(x=>x.t).join('\n\n')}]},model:B.model,run_token:B.run_token}}));}
+  else __unsplit=w;}}
+return out.length?out:[{json:__unsplit?{esr_retry:false,esr_unsplit:__unsplit}:{esr_retry:false}}];

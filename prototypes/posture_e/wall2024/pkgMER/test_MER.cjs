@@ -41,5 +41,11 @@ T(R.enf421_rows.every((r,i)=>/^ENFORCER NO VERDICT/.test(r.cure_reason)===p2.has
  RUN+': part 2 fails again: its '+p2.size+' ids stay NO VERDICT with the part error; the others are read; tally '+JSON.stringify(R.enf421.tally));
 const reps3=rb.map(()=>({error:{message:'timeout'}}));R=harness(RUN,ov(reps3))(REC1,'Enforcer Retry Call deepseek')[0].json;
 T(R.enf421.tally['NO VERDICT']===rb.flatMap(x=>x.ids).length&&R.enf421_rows.every(r=>/every retry part failed/.test(r.reply_error)),RUN+': every part fails: all NO VERDICT, error kept on each row');
+{const B5=harness(RUN)("return $('Enforcer Build').all();",'Enforcer Call deepseek');B5[0].json.ids=B5[0].json.ids.slice(1); /* one id has no item text owner left out: the whole-item check fails */
+ const B5b=JSON.parse(JSON.stringify(B5));B5b[0].json.ids.push({...B5[0].json.ids[0],id:'A99.1'});
+ const mk5=harness(RUN,{'Enforcer Build':B5b})(RB,'Enforcer Call deepseek');
+ const R5=harness(RUN,{'Enforcer Build':B5b,'Enforcer Retry Build':mk5,'Enforcer Retry Call deepseek':null})(REC1,'Enforcer Retry Needed?')[0].json;
+ T(mk5.length===1&&mk5[0].json.esr_retry===false&&/finish_reason length/.test(mk5[0].json.esr_unsplit||'')&&R5.enf421.mer&&R5.enf421.mer.retried===false&&R5.enf421.tally['NO VERDICT']===B5b[0].json.ids.length,
+  RUN+': a failed call whose ids cannot all be placed in whole items: marker names it, no retry, Record shows mer '+JSON.stringify(R5.enf421.mer).slice(0,140));}
 log('retry fired in: '+fired.join(', '));log('TOTAL '+ok+' OK, '+bad+' FAIL');
 fs.writeFileSync('pkgMER/test_MER.txt',out.join('\n')+'\n');

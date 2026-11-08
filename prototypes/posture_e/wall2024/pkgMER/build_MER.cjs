@@ -6,7 +6,8 @@ const OUT='pkgMER/out/';fs.mkdirSync(OUT,{recursive:true});
 const REC0=N('Enforcer Record').parameters.jsCode;
 const A="let rep=null;try{if($('Enforcer Call deepseek').isExecuted)rep=$('Enforcer Call deepseek').first().json;}catch(e){rep=null;}\n";
 const A2=A+"/* pkgMER: when the call failed, Enforcer Retry Build cut it into parts of whole ITEMs and Enforcer Retry Call deepseek sent each once; the parts' replies take the call's place.\n   A part that fails again leaves its ids NO VERDICT, with that part's failure as their reply_error. */\n"
- +"let __MP=[];try{if($('Enforcer Retry Call deepseek').isExecuted){const RB=$('Enforcer Retry Build').all().map(x=>x.json);const RC=$('Enforcer Retry Call deepseek').all().map(x=>x.json);__MP=RB.map((x,i)=>({x,rep:RC[i]})).filter(z=>z.x&&z.x.esr_retry===true);}}catch(e){__MP=[];}\n";
+ +"let __MP=[];try{if($('Enforcer Retry Call deepseek').isExecuted){const RB=$('Enforcer Retry Build').all().map(x=>x.json);const RC=$('Enforcer Retry Call deepseek').all().map(x=>x.json);__MP=RB.map((x,i)=>({x,rep:RC[i]})).filter(z=>z.x&&z.x.esr_retry===true);}}catch(e){__MP=[];}\n"
+ +"let __MU=null;try{if($('Enforcer Retry Build').isExecuted){const m=$('Enforcer Retry Build').first().json;if(m&&m.esr_retry===false&&m.esr_unsplit)__MU=m.esr_unsplit;}}catch(e){__MU=null;}\n";
 const Bx="if(!B.enf_skip){const e=env(rep);";
 const B2="const __mEnv=j=>{const v=env(j);if(v.ok&&!String(v.text).trim()){const c=j&&j.choices&&j.choices[0];return {ok:false,why:'empty content (finish_reason '+((c&&c.finish_reason)||'none')+')'};}return v;}; /* pkgMER: an empty reply is a failure */\n"+"if(!B.enf_skip){let e=env(rep);const __ME={};if(__MP.length){const ps=__MP.map(z=>({ids:(z.x.ids||[]).map(y=>String(y.id).toUpperCase()),e:__mEnv(z.rep),part:z.x.esr_part}));\n"
  +" for(const p of ps)if(!p.e.ok)for(const id of p.ids)__ME[id]='pkgMER retry part '+p.part+' of '+ps.length+': '+p.e.why;\n"
@@ -14,7 +15,7 @@ const B2="const __mEnv=j=>{const v=env(j);if(v.ok&&!String(v.text).trim()){const
 const C="full_reply:k===0&&e.ok?e.text:null,reply_error:e.ok?null:e.why,";
 const C2="full_reply:k===0&&e.ok?e.text:null,reply_error:__MP.length?(e.ok?(__ME[String(x.id).toUpperCase()]||null):e.why):(e.ok?null:e.why),";
 const Dx="tally},enf421_rows:rows}}];";
-const D2="tally,...(__MP.length?{mer:{retried:__MP[0].x.esr_why,parts:__MP.length,failed_parts:__MP.filter(z=>!__mEnv(z.rep).ok).map(z=>z.x.esr_part)}}:{})},enf421_rows:rows}}];";
+const D2="tally,...(__MP.length?{mer:{retried:__MP[0].x.esr_why,parts:__MP.length,failed_parts:__MP.filter(z=>!__mEnv(z.rep).ok).map(z=>z.x.esr_part)}}:__MU?{mer:{retried:false,why:'call failed ('+__MU+') but its items could not be cut into whole parts; not retried'}}:{})},enf421_rows:rows}}];";
 let R=REC0;for(const [a,b] of [[A,A2],[Bx,B2],[C,C2],[Dx,D2]]){if(R.split(a).length!==2)throw new Error('anchor not found once: '+a.slice(0,60));R=R.replace(a,()=>b);}
 fs.writeFileSync(OUT+'Enforcer_Record.js',R);
 const RB=fs.readFileSync('pkgMER/retry_build.js','utf8');

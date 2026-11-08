@@ -60,5 +60,6 @@ OK   33705: rows keep every other field (seat, rule, item, lines, prompt_sent) e
      mer {"retried":"finish_reason length (64000 completion tokens, 0 characters of content)","parts":3,"failed_parts":[2]}; rows with part-2 error 21
 OK   33705: part 2 fails again: its 21 ids stay NO VERDICT with the part error; the others are read; tally {"AGREE":13,"DISAGREE":27,"NO ANSWER":0,"NO VERDICT":21}
 OK   33705: every part fails: all NO VERDICT, error kept on each row
+OK   33705: a failed call whose ids cannot all be placed in whole items: marker names it, no retry, Record shows mer {"retried":false,"why":"call failed (finish_reason length (64000 completion tokens, 0 characters of content)) but its items could not be cut
 retry fired in: 33482, 33705
-TOTAL 60 OK, 0 FAIL
+TOTAL 61 OK, 0 FAIL

@@ -5,6 +5,7 @@ let rep=null;try{if($('Enforcer Call deepseek').isExecuted)rep=$('Enforcer Call 
 /* pkgMER: when the call failed, Enforcer Retry Build cut it into parts of whole ITEMs and Enforcer Retry Call deepseek sent each once; the parts' replies take the call's place.
    A part that fails again leaves its ids NO VERDICT, with that part's failure as their reply_error. */
 let __MP=[];try{if($('Enforcer Retry Call deepseek').isExecuted){const RB=$('Enforcer Retry Build').all().map(x=>x.json);const RC=$('Enforcer Retry Call deepseek').all().map(x=>x.json);__MP=RB.map((x,i)=>({x,rep:RC[i]})).filter(z=>z.x&&z.x.esr_retry===true);}}catch(e){__MP=[];}
+let __MU=null;try{if($('Enforcer Retry Build').isExecuted){const m=$('Enforcer Retry Build').first().json;if(m&&m.esr_retry===false&&m.esr_unsplit)__MU=m.esr_unsplit;}}catch(e){__MU=null;}
 const env=j=>{if(j&&Array.isArray(j.choices)&&j.choices[0]&&j.choices[0].message&&typeof j.choices[0].message.content==='string')return {ok:true,text:j.choices[0].message.content};
  if(j&&j.error){const e=j.error;return {ok:false,why:String(typeof e==='string'?e:(e.message||JSON.stringify(e))).slice(0,300)};}return {ok:false,why:j?'no reply text ('+Object.keys(j).join(',')+')':'no call made'};};
 const rows=[];let tally=null;
@@ -28,4 +29,4 @@ if(!B.enf_skip){let e=env(rep);const __ME={};if(__MP.length){const ps=__MP.map(z
   rows.push({run_token:B.run_token,seat:x.seat,seat_role:x.seat_role||'panel',judge_model:B.model,kind:'enforcer_check',rule:x.rule,item:x.item,flagged_line:x.flagged_line,
    prompt_sent:k===0?(B.body&&B.body.messages?B.body.messages[1].content:null):null,full_reply:k===0&&e.ok?e.text:null,reply_error:__MP.length?(e.ok?(__ME[String(x.id).toUpperCase()]||null):e.why):(e.ok?null:e.why),response_line:x.response_line,
    cure_status:null,cure_reason:'ENFORCER '+verdict+(v&&v.why?': '+v.why.slice(0,600):'')+' (judge cure '+(x.cure_status||'?')+'; TRIAL, ruling 421)',at:T});});}
-return [{json:{...PCC,enf421:{skipped:!!B.enf_skip,why:B.why||null,groups:B.groups||0,answers:(B.ids||[]).length,tally,...(__MP.length?{mer:{retried:__MP[0].x.esr_why,parts:__MP.length,failed_parts:__MP.filter(z=>!__mEnv(z.rep).ok).map(z=>z.x.esr_part)}}:{})},enf421_rows:rows}}];
+return [{json:{...PCC,enf421:{skipped:!!B.enf_skip,why:B.why||null,groups:B.groups||0,answers:(B.ids||[]).length,tally,...(__MP.length?{mer:{retried:__MP[0].x.esr_why,parts:__MP.length,failed_parts:__MP.filter(z=>!__mEnv(z.rep).ok).map(z=>z.x.esr_part)}}:__MU?{mer:{retried:false,why:'call failed ('+__MU+') but its items could not be cut into whole parts; not retried'}}:{})},enf421_rows:rows}}];
