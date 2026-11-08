@@ -110,3 +110,23 @@ These change no count. They go last.
 1. W2 runs a second pass for string-method label tests and settles the *verify* rows.
 2. W3 orders tier 1. W2 suggests starting with the ANSWER CHECK MEANS field, because `claims`, `cure` and `dptCheck` read one field three ways, and it is the pkgMNQ class that removed a seat live in 33461.
 3. Each swap is built on the exact live base and stacked on that gap's DeepSeek fix. Library reads ship only as a full LIB repack. There is one swap per gap, each with a corpus replay and a listed behaviour change (W4, Wall 2984).
+
+## Second pass (W2, 2026-11-08): string-method label tests, and the *verify* rows settled
+
+Base: live s59, d18a8882 (`fetchback_live_s59.json`), with the library stubs rebuilt. Scan: `inventory_scan2.cjs`, output `inventory2_raw.tsv`. It covers every `includes`, `startsWith`, `endsWith`, `indexOf`, `lastIndexOf`, `split`, `replace` and `search` call, every `===`/`!==` and every `case` whose string literal is a judge label or grade (the `__RL` reader itself is left out). The scan finds 2267 tests, which collapse to 157 distinct (function, test) rows in 55 functions.
+
+**Comparisons (`===`, `!==`, `case`): 152 rows, no new reads.** Each one compares a value that was already read, either a regex capture listed in the first pass (for example `m[2]==='WITHDRAWN'` after the KEYSTONE regex) or a reader field (`R.form==='CORRECTED COUNT'`, `z.grade==='DEFENDER LINK BROKEN'`, `psGrades(t).g[n]==='COUNTED'`). None tests a raw trimmed line against a label. Such a comparison moves with the read that feeds it.
+
+**Raw-text string methods: 5 rows. Four are judge text and one is not.**
+| function | test | text read | item |
+|---|---|---|---|
+| `kcmtGrade2024` | `.lastIndexOf('ANSWER:')` on an ANSWER CHECK line | judge line, ANSWER field cut | 5 (already listed by its regexes). The ANSWER cut is a **field** read of the item 1 class and should move onto the reader's ANSWER CHECK fields when item 5 is built. |
+| `colState` (Extract Independent Verdict, 3 nodes) | `.includes('WITHDRAWN')`, `.includes('DEFENDER LINK BROKEN')` on the colMap text | judge collision lines | **2, new row** (not named in the first pass) |
+| `respOf` (19 nodes) | `.includes('STANDING')` and `.includes(side)` on the STATEMENT/RESPONSE label | judge cure-reply labels | **8, moved.** The first pass wrongly excluded `respOf` as engine text. It reads the judge's own RESPONSE/STATEMENT labels, so it is a labels read of item 8. |
+| `(top)` Panel/Alternate payload nodes | `.includes('CITATION CHECK')` on the request body | the prompt we send | not judge text, excluded |
+
+**The *verify* rows are settled.**
+- Debater text, out of scope (the round texts or the debater's press ledger, not a judge line): `parse` (press-list entries), `tags` ([L2] tags in rounds), `unxPresses` and `harvest` (the debater's UNSUPPORTED-L4 PREMISES list with PRESSED WITH rows), `unxaCheck` and its `sub` (the debater's own block), `presses` (CR/DR round lines), `blocks` (round blocks, fed by `harvest`), and `closeLabels`/`press` in Build Synthesis (cr4/dr4 close rounds).
+- Judge text, stays in place: `kfcVerse`. It reads the verse reference at the head of a FORCED line's MEANS field, with a fallback search in the rounds. It stays in item 4.
+
+**Effect on the order.** Item 2 gains `colState`. Item 8 gains `respOf`. Item 5's `kcmtGrade2024` gains an ANSWER field cut. Nothing moves between tiers. The precondition for item 2 in W3's order (second pass done, verify rows settled) is met.
