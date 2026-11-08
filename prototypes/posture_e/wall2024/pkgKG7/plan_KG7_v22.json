@@ -1,0 +1,81 @@
+{
+ "base": "pkgLIB/strip_FCW/patched/",
+ "nodes": {
+  "Alt_Gate_Build.js": {
+   "base": "4a2570b767e0",
+   "patched": "1acb6d97037c"
+  },
+  "Alt_Gate_Record.js": {
+   "base": "5803fef38687",
+   "patched": "2e7a20cdac72"
+  },
+  "Alternate_Build.js": {
+   "base": "edb8a91d1431",
+   "patched": "f7aa5e034195"
+  },
+  "Alternate_Cure_Build.js": {
+   "base": "65ec4fbe7bc2",
+   "patched": "c9d18c1a7c1a"
+  },
+  "Alternate_Cure_Normalize.js": {
+   "base": "f589e7ba6f04",
+   "patched": "ec43cab00229"
+  },
+  "Alternate_Merge.js": {
+   "base": "2e2b19cad2ad",
+   "patched": "d58315830c47"
+  },
+  "Alternate_Merge_Seat.js": {
+   "base": "cd00c3517ebf",
+   "patched": "827d2e783e49"
+  },
+  "Cure_Build.js": {
+   "base": "281588eea376",
+   "patched": "ef5931d8ec3a"
+  },
+  "Cure_Check.js": {
+   "base": "e5e709e38856",
+   "patched": "386a223b8f38"
+  },
+  "Cure_Normalize.js": {
+   "base": "f1ee31dcb72b",
+   "patched": "b63f13bee364"
+  },
+  "Gate_Build.js": {
+   "base": "9b69482cc437",
+   "patched": "6bc83010bef0"
+  },
+  "Gate_Record.js": {
+   "base": "5f2bd91b2157",
+   "patched": "2453f82136aa"
+  },
+  "Panel_Cure_Build_1.js": {
+   "base": "734dfeb09ff9",
+   "patched": "41f272bacc29"
+  },
+  "Panel_Cure_Build_2.js": {
+   "base": "c7f3de65e3c7",
+   "patched": "67599436fd79"
+  },
+  "Panel_Cure_Build_3.js": {
+   "base": "658ef76de34c",
+   "patched": "f4aa1a8e4f34"
+  },
+  "Panel_Cure_Check.js": {
+   "base": "4ddc90de0117",
+   "patched": "d5899ac19ff9"
+  },
+  "Panel_Cure_Normalize_1.js": {
+   "base": "07a02aea79ae",
+   "patched": "12083b03e832"
+  },
+  "Panel_Cure_Normalize_2.js": {
+   "base": "970e12e2744c",
+   "patched": "210e45ecb93d"
+  },
+  "Panel_Cure_Normalize_3.js": {
+   "base": "5f1cf3b15887",
+   "patched": "0a1c5698f3ed"
+  }
+ }
+}

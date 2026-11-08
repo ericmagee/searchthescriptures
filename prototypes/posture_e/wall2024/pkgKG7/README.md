@@ -12,10 +12,10 @@ K-G7 ("DEFENDER LINK BROKEN on D<n> while CONCEDED LINKS does not count premise 
 4. The CURE_RULE_G K-G7 text tells the judge 1 and 2.
 
 ## Pack
-`node pkgLIB/pack.cjs pkgLIB/strip_KG7` -> pkgLIB_v20_KG7. Shared Library b23f6a8053ce -> 4899f53e2fb6 (library sha cc86a9c84ecbbe36, 2154 lines). All 22 stubs rebuild strip_KG7 byte for byte (unpack.cjs). Every stub is rewritten, so write the whole v20.
+Stacked on W2's chain (v19_GDA -> v20_RI2 -> v21_FCW): build on pkgLIB/strip_FCW -> pkgLIB/strip_KG7_22 (plan_KG7_v22.json), `node pkgLIB/pack.cjs pkgLIB/strip_KG7_22` -> pkgLIB_v22_KG7. Shared Library 966ddb6aef6f (v21_FCW) -> 36f717d3e601. All 22 stubs rebuild strip_KG7_22 byte for byte (unpack.cjs). Every stub is rewritten, so write the whole v22. strip_KG7 (on v19_GDA alone) is kept for the test below; it has no packed LIB.
 
 ## Tests
-- test_KG7.cjs: 26 OK. The replay covers every saved run. The only cure flips are 33592 Panel Cure Check grok K-G7 D2 vs C4 and D5 vs C5, CURED -> UNCURED with the pkgKG7 reason. There are no other flips and no uncured-count changes elsewhere.
+- test_KG7.cjs: 26 OK on both bases (strip_GDA19 -> strip_KG7, and strip_FCW -> strip_KG7_22; 467 node runs over 37 runs on v22). The replay covers every saved run. The only cure flips are 33592 Panel Cure Check grok K-G7 D2 vs C4 and D5 vs C5, CURED -> UNCURED with the pkgKG7 reason. There are no other flips and no uncured-count changes elsewhere.
 - test_KG7_text.cjs: OK. There are 142 Cure Build node runs, and the 121 that changed differ only by the K-G7 rule passage.
 
 ## Note
