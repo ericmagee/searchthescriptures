@@ -1,0 +1,106 @@
+OK   lib inserted once
+OK   33218: nothing else changes
+OK   33218: every ALTERNATE TRIED line names REMOVED FOR
+OK   33222: Format Markdown reads every ALTERNATE TRIED line it read before (1/1 patched, 1/1 base)
+OK   33222: nothing else changes
+OK   33222 removed gemini: drv 1 = read 1 [K-W (cure) x1]
+     33222 gemini SEATED
+OK   33222: every ALTERNATE TRIED line names REMOVED FOR
+OK   33249: Format Markdown reads every ALTERNATE TRIED line it read before (1/1 patched, 1/1 base)
+OK   33249: nothing else changes
+OK   33249 removed chatgpt: drv 1 = read 1 [E-GATE NOT APPLIED x1]
+     33249 chatgpt SEATED
+OK   33249: every ALTERNATE TRIED line names REMOVED FOR
+OK   33261: Format Markdown reads every ALTERNATE TRIED line it read before (1/1 patched, 1/1 base)
+OK   33261: nothing else changes
+OK   33261 removed sol: drv 2 = read 2 [K-W (cure) x2]
+     33261 sol SEATED
+OK   33261: every ALTERNATE TRIED line names REMOVED FOR
+SKIP 33276 Cannot read properties of undefined (reading 'slice')
+SKIP 33289 Cannot read properties of undefined (reading 'slice')
+OK   33299: Format Markdown reads every ALTERNATE TRIED line it read before (1/1 patched, 1/1 base)
+OK   33299: nothing else changes
+OK   33299 removed chatgpt: drv 2 = read 2 [K-G4 (cure) x2]
+     33299 chatgpt SEATED
+OK   33299: every ALTERNATE TRIED line names REMOVED FOR
+SKIP 33311 Cannot read properties of undefined (reading 'slice')
+SKIP 33322 Cannot read properties of undefined (reading 'slice')
+OK   33345: Format Markdown reads every ALTERNATE TRIED line it read before (2/2 patched, 2/2 base)
+OK   33345: nothing else changes
+OK   33345 removed chatgpt: drv 4 = read 4 [K-W (cure) x4]
+     33345 chatgpt SEATED
+     33345 sol NOT SEATED; REMOVED FOR: drv_uncured 1: E-GATE RULE K-S3 x1
+OK   33345: every ALTERNATE TRIED line names REMOVED FOR
+OK   33371: Format Markdown reads every ALTERNATE TRIED line it read before (1/1 patched, 1/1 base)
+OK   33371: nothing else changes
+OK   33371 removed chatgpt: drv 6 = read 6 [K-G4 (cure) x1; COLLISION GRADE UNCURED x5]
+     33371 chatgpt SEATED
+OK   33371: every ALTERNATE TRIED line names REMOVED FOR
+OK   33389: nothing else changes
+OK   33389: every ALTERNATE TRIED line names REMOVED FOR
+OK   33411: Format Markdown reads every ALTERNATE TRIED line it read before (1/1 patched, 1/1 base)
+OK   33411: nothing else changes
+OK   33411 removed sol: drv 2 = read 2 [K-W (cure) x1; KEYSTONE CONSISTENCY UNCURED x1]
+     33411 sol SEATED
+OK   33411: every ALTERNATE TRIED line names REMOVED FOR
+OK   33430: Format Markdown reads every ALTERNATE TRIED line it read before (1/1 patched, 1/1 base)
+OK   33430: nothing else changes
+     33430 sol NOT SEATED; REMOVED FOR: drv_uncured 1: K-W (cure) x1
+OK   33430: every ALTERNATE TRIED line names REMOVED FOR
+OK   33442: Format Markdown reads every ALTERNATE TRIED line it read before (1/1 patched, 1/1 base)
+OK   33442: nothing else changes
+OK   33442 removed chatgpt: drv 1 = read 1 [E-GATE RULE K-G1 x1]
+     33442 chatgpt SEATED
+OK   33442: every ALTERNATE TRIED line names REMOVED FOR
+OK   33461: Format Markdown reads every ALTERNATE TRIED line it read before (2/2 patched, 2/2 base)
+OK   33461: nothing else changes
+OK   33461 removed gemini: drv 1 = read 1 [K-F (cure) x1]
+     33461 gemini SEATED
+     33461 sol NOT SEATED; REMOVED FOR: drv_uncured 4: MEANS AGAINST THE LEDGER UNCURED x4
+OK   33461: every ALTERNATE TRIED line names REMOVED FOR
+OK   33482: Format Markdown reads every ALTERNATE TRIED line it read before (2/2 patched, 2/2 base)
+OK   33482: nothing else changes
+OK   33482 removed gemini: drv 1 = read 1 [K-C (cure) x1]
+     33482 gemini SEATED
+     33482 chatgpt NOT SEATED; REMOVED FOR: drv_uncured 1: MEANS AGAINST THE LEDGER UNCURED x1
+OK   33482: every ALTERNATE TRIED line names REMOVED FOR
+OK   33490: Format Markdown reads every ALTERNATE TRIED line it read before (2/2 patched, 2/2 base)
+OK   33490: nothing else changes
+OK   33490 removed gemini: drv 12 = read 12 [K-G4 (cure) x4; K-G3 (cure) x1; K-F (cure) x3; E-COL UNCURED x1; E-GATE NOT APPLIED x3]
+     33490 gemini SEATED
+     33490 sol NOT SEATED; REMOVED FOR: drv_uncured 1: K-W (cure) x1
+OK   33490: every ALTERNATE TRIED line names REMOVED FOR
+OK   33497: Format Markdown reads every ALTERNATE TRIED line it read before (1/1 patched, 1/1 base)
+OK   33497: nothing else changes
+     33497 gemini NOT SEATED; REMOVED FOR: drv_uncured 1: K-C (cure) x1
+OK   33497: every ALTERNATE TRIED line names REMOVED FOR
+OK   33506: Format Markdown reads every ALTERNATE TRIED line it read before (1/1 patched, 1/1 base)
+OK   33506: nothing else changes
+OK   33506 removed chatgpt: drv 1 = read 1 [E-GATE RULE K-G4 x1]
+     33506 chatgpt SEATED
+OK   33506: every ALTERNATE TRIED line names REMOVED FOR
+OK   33575: nothing else changes
+OK   33575: every ALTERNATE TRIED line names REMOVED FOR
+OK   33592: nothing else changes
+OK   33592: every ALTERNATE TRIED line names REMOVED FOR
+OK   33605: nothing else changes
+OK   33605: every ALTERNATE TRIED line names REMOVED FOR
+OK   33617: Format Markdown reads every ALTERNATE TRIED line it read before (1/1 patched, 1/1 base)
+OK   33617: nothing else changes
+OK   33617 removed chatgpt: drv 2 = read 2 [E-GATE RULE K-G4 x2]
+     33617 chatgpt SEATED
+OK   33617: every ALTERNATE TRIED line names REMOVED FOR
+OK   33627: Format Markdown reads every ALTERNATE TRIED line it read before (1/1 patched, 1/1 base)
+OK   33627: nothing else changes
+OK   33627 removed gemini: drv 4 = read 4 [E-GATE NOT APPLIED x4]
+     33627 gemini SEATED
+OK   33627: every ALTERNATE TRIED line names REMOVED FOR
+OK   33644: Format Markdown reads every ALTERNATE TRIED line it read before (1/1 patched, 1/1 base)
+OK   33644: nothing else changes
+OK   33644 removed chatgpt: drv 2 = read 2 [E-GATE RULE K-G1 x1; E-GATE RULE K-G4 x1]
+     33644 chatgpt SEATED
+OK   33644: every ALTERNATE TRIED line names REMOVED FOR
+OK   33682: nothing else changes
+OK   33682: every ALTERNATE TRIED line names REMOVED FOR
+ran 23; 79 OK, 0 FAIL
+done

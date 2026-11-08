@@ -12,18 +12,18 @@
  "base": "pkgLIB/strip_PSQ",
  "library": {
   "file": "Shared_Library.js",
-  "lines": 2159,
-  "json_sha": "7d83cbae3804c503",
-  "bytes": 405006
+  "lines": 2160,
+  "json_sha": "61f468c75a2e4254",
+  "bytes": 405586
  },
  "nodes": [
   {
    "file": "Alt_Gate_Build.js",
    "name": "Alt Gate Build",
    "src": "pkgLIB/strip_PSQ/patched/Alt_Gate_Build.js",
-   "base_sha": "f4a31a79822c8b09",
-   "base_bytes": 335768,
-   "stub_sha": "a13140055666831c",
+   "base_sha": "85ce454c9cccd1f3",
+   "base_bytes": 336346,
+   "stub_sha": "49e2e51bc7acaba9",
    "stub_bytes": 2725,
    "refs": [
     "Alt Seated",
@@ -38,9 +38,9 @@
    "file": "Alt_Gate_Record.js",
    "name": "Alt Gate Record",
    "src": "pkgLIB/strip_PSQ/patched/Alt_Gate_Record.js",
-   "base_sha": "b2e7ec64813659e7",
-   "base_bytes": 333472,
-   "stub_sha": "6b44d6558c55157f",
+   "base_sha": "1dbf279f6ba8c1f8",
+   "base_bytes": 334050,
+   "stub_sha": "8eedd953c2c55c36",
    "stub_bytes": 3365,
    "refs": [
     "Alt Gate Build",
@@ -57,7 +57,7 @@
    "src": "pkgLIB/strip_PSQ/patched/Alternate_Build.js",
    "base_sha": "3b4131b943866218",
    "base_bytes": 302458,
-   "stub_sha": "3c509ff8cd50d8d7",
+   "stub_sha": "6c370ee57b19a0ef",
    "stub_bytes": 9687,
    "refs": [
     "Accept Final",
@@ -76,7 +76,7 @@
    "src": "pkgLIB/strip_PSQ/patched/Alternate_Cure_Build.js",
    "base_sha": "7fd177974c6d2431",
    "base_bytes": 295059,
-   "stub_sha": "9b6d166f507522fc",
+   "stub_sha": "70656c81421c361c",
    "stub_bytes": 2945,
    "refs": [
     "Alternate Payloads",
@@ -91,7 +91,7 @@
    "src": "pkgLIB/strip_PSQ/patched/Alternate_Cure_Normalize.js",
    "base_sha": "f9a2d35ba040f9f5",
    "base_bytes": 276412,
-   "stub_sha": "3bd2ea3b9d4bf7b5",
+   "stub_sha": "c3dc8be305b56bc7",
    "stub_bytes": 2408,
    "refs": [
     "Alternate Cure Build",
@@ -104,9 +104,9 @@
    "file": "Alternate_Merge.js",
    "name": "Alternate Merge",
    "src": "pkgLIB/strip_PSQ/patched/Alternate_Merge.js",
-   "base_sha": "a8ed0598b7b0f5c8",
-   "base_bytes": 342696,
-   "stub_sha": "5cc4955331f83ae5",
+   "base_sha": "9533c573417d71b8",
+   "base_bytes": 343274,
+   "stub_sha": "b9e63d13543fa6dc",
    "stub_bytes": 11800,
    "refs": [
     "Alt Gate Record",
@@ -128,9 +128,9 @@
    "file": "Alternate_Merge_Seat.js",
    "name": "Alternate Merge Seat",
    "src": "pkgLIB/strip_PSQ/patched/Alternate_Merge_Seat.js",
-   "base_sha": "2e5575242846dc6f",
-   "base_bytes": 340401,
-   "stub_sha": "d390de875d6cbd71",
+   "base_sha": "bf95f1d6545d5379",
+   "base_bytes": 340979,
+   "stub_sha": "2dbb347ff61fdb34",
    "stub_bytes": 13498,
    "refs": [
     "Alternate Build",
@@ -156,7 +156,7 @@
    "src": "pkgLIB/strip_PSQ/patched/Alternate_Payloads.js",
    "base_sha": "89b7b51b8b8ebd25",
    "base_bytes": 203440,
-   "stub_sha": "009bec8a9fdc0f4b",
+   "stub_sha": "a25969b722669c60",
    "stub_bytes": 10048,
    "refs": [
     "Alternate Build",
@@ -202,7 +202,7 @@
    "src": "pkgLIB/strip_PSQ/patched/Cure_Build.js",
    "base_sha": "cd4c6c9b6d003bb4",
    "base_bytes": 277389,
-   "stub_sha": "e60a449dca0cade9",
+   "stub_sha": "f43af29e3c810024",
    "stub_bytes": 3790,
    "refs": [
     "Accept Final",
@@ -220,7 +220,7 @@
    "src": "pkgLIB/strip_PSQ/patched/Cure_Check.js",
    "base_sha": "609e778fdc0b1f56",
    "base_bytes": 279228,
-   "stub_sha": "0124447e1e8219bf",
+   "stub_sha": "dc28846f08811a22",
    "stub_bytes": 5053,
    "refs": [
     "Cure Normalize",
@@ -237,7 +237,7 @@
    "src": "pkgLIB/strip_PSQ/patched/Cure_Normalize.js",
    "base_sha": "6d515302072a7e9a",
    "base_bytes": 276392,
-   "stub_sha": "738a36cce3350f24",
+   "stub_sha": "2675fac61c7b2ca8",
    "stub_bytes": 2368,
    "refs": [
     "Cure Build",
@@ -252,7 +252,7 @@
    "src": "pkgLIB/strip_PSQ/patched/Extract_Independent_Verdict.js",
    "base_sha": "edfb9eed604976d6",
    "base_bytes": 217164,
-   "stub_sha": "1b12e648f98768dd",
+   "stub_sha": "4063ba44383b3161",
    "stub_bytes": 36629,
    "refs": [
     "Build Independent Verdict",
@@ -266,9 +266,9 @@
    "file": "Gate_Build.js",
    "name": "Gate Build",
    "src": "pkgLIB/strip_PSQ/patched/Gate_Build.js",
-   "base_sha": "74951db189c5f8bd",
-   "base_bytes": 335763,
-   "stub_sha": "1f08ee5e0f0adf25",
+   "base_sha": "6a751c14fea5c3d0",
+   "base_bytes": 336341,
+   "stub_sha": "9ae089f3efd54ac9",
    "stub_bytes": 2718,
    "refs": [
     "Panel Build",
@@ -283,9 +283,9 @@
    "file": "Gate_Record.js",
    "name": "Gate Record",
    "src": "pkgLIB/strip_PSQ/patched/Gate_Record.js",
-   "base_sha": "5fa5ac60a0bbcded",
-   "base_bytes": 333463,
-   "stub_sha": "90a58fb0f62c46ce",
+   "base_sha": "9cd65ceab5f0d16b",
+   "base_bytes": 334041,
+   "stub_sha": "462d165ba4668e1c",
    "stub_bytes": 3349,
    "refs": [
     "Gate Build",
@@ -302,7 +302,7 @@
    "src": "pkgLIB/strip_PSQ/patched/Panel_Cure_Build_1.js",
    "base_sha": "d3c3e5bc80b30ffd",
    "base_bytes": 295412,
-   "stub_sha": "dd8d505c6f7b9add",
+   "stub_sha": "da7e24fcc125b8c0",
    "stub_bytes": 2277,
    "refs": [
     "Panel Build",
@@ -318,7 +318,7 @@
    "src": "pkgLIB/strip_PSQ/patched/Panel_Cure_Build_2.js",
    "base_sha": "b1e9107ce2a005c9",
    "base_bytes": 295412,
-   "stub_sha": "97b22883a1ef3fd9",
+   "stub_sha": "ee3f49e068cbd7cd",
    "stub_bytes": 2277,
    "refs": [
     "Panel Build",
@@ -334,7 +334,7 @@
    "src": "pkgLIB/strip_PSQ/patched/Panel_Cure_Build_3.js",
    "base_sha": "734e74d6320381bf",
    "base_bytes": 295412,
-   "stub_sha": "2c19d8e999822ec9",
+   "stub_sha": "b1c72cdc4e114323",
    "stub_bytes": 2277,
    "refs": [
     "Panel Build",
@@ -350,7 +350,7 @@
    "src": "pkgLIB/strip_PSQ/patched/Panel_Cure_Check.js",
    "base_sha": "453246a70f1c19f7",
    "base_bytes": 280401,
-   "stub_sha": "b7b79f77e5432feb",
+   "stub_sha": "cadaf1a91944841b",
    "stub_bytes": 6297,
    "refs": [
     "Cited Verses",
@@ -371,7 +371,7 @@
    "src": "pkgLIB/strip_PSQ/patched/Panel_Cure_Normalize_1.js",
    "base_sha": "03fc1fb1c6a1e52a",
    "base_bytes": 276408,
-   "stub_sha": "55b33febfdcc4875",
+   "stub_sha": "9e25f5cbab23868d",
    "stub_bytes": 2400,
    "refs": [
     "Panel Build",
@@ -386,7 +386,7 @@
    "src": "pkgLIB/strip_PSQ/patched/Panel_Cure_Normalize_2.js",
    "base_sha": "b4e5fedf901a2398",
    "base_bytes": 276408,
-   "stub_sha": "3138a7c06fbe43be",
+   "stub_sha": "c8b14123b9e19948",
    "stub_bytes": 2400,
    "refs": [
     "Panel Build",
@@ -401,7 +401,7 @@
    "src": "pkgLIB/strip_PSQ/patched/Panel_Cure_Normalize_3.js",
    "base_sha": "f5777bedaa90c592",
    "base_bytes": 276408,
-   "stub_sha": "d0c60c7a552256f5",
+   "stub_sha": "01c0348d296f56ce",
    "stub_bytes": 2400,
    "refs": [
     "Panel Build",
@@ -416,7 +416,7 @@
    "src": "pkgLIB/strip_PSQ/patched/Panel_Payloads.js",
    "base_sha": "ed208683a6c58d6f",
    "base_bytes": 210768,
-   "stub_sha": "4f330ae6f656edee",
+   "stub_sha": "921b900ff748be2f",
    "stub_bytes": 17583,
    "refs": [
     "Build Save Body",
@@ -457,6 +457,6 @@
    "own_lines": 73
   }
  ],
- "bytes_before": 6355734,
- "bytes_after": 553300
+ "bytes_before": 6359202,
+ "bytes_after": 553880
 }

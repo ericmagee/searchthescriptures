@@ -2,12 +2,12 @@
  "base": "pkgLIB/strip_FCW/patched/",
  "nodes": {
   "Alt_Gate_Build.js": {
-   "base": "4a2570b767e0",
-   "patched": "1acb6d97037c"
+   "base": "fa7d7774261d",
+   "patched": "f9936e48d7d0"
   },
   "Alt_Gate_Record.js": {
-   "base": "5803fef38687",
-   "patched": "2e7a20cdac72"
+   "base": "274012edbcee",
+   "patched": "5916194ba50a"
   },
   "Alternate_Build.js": {
    "base": "edb8a91d1431",
@@ -22,12 +22,12 @@
    "patched": "ec43cab00229"
   },
   "Alternate_Merge.js": {
-   "base": "2e2b19cad2ad",
-   "patched": "d58315830c47"
+   "base": "1d40d7b4d300",
+   "patched": "28016860c9fa"
   },
   "Alternate_Merge_Seat.js": {
-   "base": "cd00c3517ebf",
-   "patched": "827d2e783e49"
+   "base": "5ddafab0b527",
+   "patched": "bb6a6b1d59a4"
   },
   "Cure_Build.js": {
    "base": "281588eea376",
@@ -42,12 +42,12 @@
    "patched": "b63f13bee364"
   },
   "Gate_Build.js": {
-   "base": "9b69482cc437",
-   "patched": "6bc83010bef0"
+   "base": "1e83e3dcb875",
+   "patched": "ce5ec97f3e27"
   },
   "Gate_Record.js": {
-   "base": "5f2bd91b2157",
-   "patched": "2453f82136aa"
+   "base": "0c87d379716a",
+   "patched": "aa92d0a15e25"
   },
   "Panel_Cure_Build_1.js": {
    "base": "734dfeb09ff9",
