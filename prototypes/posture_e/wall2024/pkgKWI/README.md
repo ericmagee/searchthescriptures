@@ -7,3 +7,10 @@ Class kw_nh_quote_stops_at_inner_quote (33828 grok, W3 grade_33828.md). Two part
    - Pack pkgLIB_KWI_s68 (Shared Library 40d6f920ab83); E4 rebase on fetchback_live_s68 in pkgLIB_KWI_s68/e4_rebase (both rebuild to strip_KWI Alternate_Build, 314947 bytes).
    - Test: node pkgKWI/test_KWI_lib.cjs (test_KWI_lib.txt), then node pkgKWI/classify_KWI_lib.cjs (classify_KWI_lib.txt).
 2. DeepSeek (Enforcer Build, Alt and R2 Alt Judge Enforcer Build; base fetchback_live_s68): build_KWI.cjs, text kwi_text.cjs -> patched/. QUOTE FIRST step before grading a K-W NOT HELD reason. Test: node pkgKWI/test_KWI.cjs.
+## Revision 2 (W1, 11-08 ~16:10 CST; W2 Wall 3420)
+- build_KWI_prompt.cjs: the K-W six-word sentence also in the 11 non-library copies (Panel Build, Reserve Build, Accept Build, Accept Check,
+  Accept Return Build, Accept Final, Accept DS Return Build, Judge Enforcer Build, and the three enforcer nodes on top of QUOTE FIRST). Base fetchback_live_s68.
+- pkgRTB/rule_table.cjs: the K-W NOT HELD form and the agreement, audit, cureAskTail and enforcer renders carry the sentence.
+- test_KWI.cjs 15 OK; test_KWI_table.cjs 11 OK (every K-W copy re-renders from the table to pkgKWI's text; 128 copies; 0 stray).
+- Stack: pkgJGR rev 2 (W2) also changes Panel Build and Reserve Build. Whichever lands second re-runs its build on the other's patched files.
+- build_RTB.cjs / test_RTB.cjs (family 1) render K-W from the table; rerun on their old bases they now give the pkgKWI text.

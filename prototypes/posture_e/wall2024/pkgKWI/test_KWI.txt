@@ -1,8 +1,16 @@
-OK Enforcer Build: source = base plus the QUOTE FIRST passage, once
-OK Alt Judge Enforcer Build: source = base plus the QUOTE FIRST passage, once
-OK R2 Alt Judge Enforcer Build: source = base plus the QUOTE FIRST passage, once
+OK Enforcer Build: source = base plus the QUOTE FIRST passage, once, and the K-W six-word sentence
+OK Alt Judge Enforcer Build: source = base plus the QUOTE FIRST passage, once, and the K-W six-word sentence
+OK R2 Alt Judge Enforcer Build: source = base plus the QUOTE FIRST passage, once, and the K-W six-word sentence
+OK Panel Build: source = base plus the K-W six-word sentence only
+OK Reserve Build: source = base plus the K-W six-word sentence only
+OK Accept Build: source = base plus the K-W six-word sentence only
+OK Accept Check: source = base plus the K-W six-word sentence only
+OK Accept Return Build: source = base plus the K-W six-word sentence only
+OK Accept Final: source = base plus the K-W six-word sentence only
+OK Accept DS Return Build: source = base plus the K-W six-word sentence only
+OK Judge Enforcer Build: source = base plus the K-W six-word sentence only
 OK Enforcer Build: replay ran on 34 runs
 OK Enforcer Build: 30 K-W prompts differ only by the passage, passage intact in 30; every other item byte-equal (0 other differences)
 OK Alt Judge Enforcer Build: replay ran on 34 runs
-OK Alt Judge Enforcer Build: 21 K-W prompts differ only by the passage, passage intact in 21; every other item byte-equal (0 other differences)
-TOTAL 7 OK, 0 FAIL
+OK Alt Judge Enforcer Build: 79 K-W prompts differ only by the passage, passage intact in 79; every other item byte-equal (0 other differences)
+TOTAL 15 OK, 0 FAIL

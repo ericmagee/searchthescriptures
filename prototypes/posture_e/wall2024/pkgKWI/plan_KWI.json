@@ -5,21 +5,122 @@
    "base": "fetchback_live_s68",
    "file": "Enforcer_Build.js",
    "before": "f93a664e8a7d",
-   "after": "130d2815ff69"
+   "after": "4f24871d2aa4"
   },
   {
    "node": "Alt Judge Enforcer Build",
    "base": "fetchback_live_s68",
    "file": "Alt_Judge_Enforcer_Build.js",
    "before": "a99b1adfe709",
-   "after": "862dd8fdd920"
+   "after": "8ebcf2ec8b43"
   },
   {
    "node": "R2 Alt Judge Enforcer Build",
    "base": "fetchback_live_s68",
    "file": "R2_Alt_Judge_Enforcer_Build.js",
    "before": "7de77e15b885",
-   "after": "095dfc94e686"
+   "after": "7054489eb7be"
   }
- ]
+ ],
+ "prompt": {
+  "Panel Build": {
+   "base": "fetchback_live_s68",
+   "live": "d5544003283e",
+   "before": "d5544003283e",
+   "after": "1589ccee3cc1",
+   "hits": [
+    "txt.paren x1"
+   ]
+  },
+  "Reserve Build": {
+   "base": "fetchback_live_s68",
+   "live": "1a23a0c2a327",
+   "before": "1a23a0c2a327",
+   "after": "6fe983c85cf0",
+   "hits": [
+    "txt.paren x1"
+   ]
+  },
+  "Accept Build": {
+   "base": "fetchback_live_s68",
+   "live": "8b28d616a012",
+   "before": "8b28d616a012",
+   "after": "2d5bb0d231e3",
+   "hits": [
+    "txt.paren x1"
+   ]
+  },
+  "Accept Check": {
+   "base": "fetchback_live_s68",
+   "live": "9f78bc0d9cfe",
+   "before": "9f78bc0d9cfe",
+   "after": "4a3b4cc35233",
+   "hits": [
+    "txt.paren x1"
+   ]
+  },
+  "Accept Return Build": {
+   "base": "fetchback_live_s68",
+   "live": "87769e1adb41",
+   "before": "87769e1adb41",
+   "after": "1b2071809496",
+   "hits": [
+    "txt.paren x1"
+   ]
+  },
+  "Accept Final": {
+   "base": "fetchback_live_s68",
+   "live": "dc6a259dafef",
+   "before": "dc6a259dafef",
+   "after": "10ecf4be2ad2",
+   "hits": [
+    "txt.paren x1"
+   ]
+  },
+  "Accept DS Return Build": {
+   "base": "fetchback_live_s68",
+   "live": "d4b030095d13",
+   "before": "d4b030095d13",
+   "after": "4a89f61ea99e",
+   "hits": [
+    "txt.paren x1"
+   ]
+  },
+  "Enforcer Build": {
+   "base": "pkgKWI/patched (QUOTE FIRST)",
+   "live": "f93a664e8a7d",
+   "before": "130d2815ff69",
+   "after": "4f24871d2aa4",
+   "hits": [
+    "txt.paren x2"
+   ]
+  },
+  "Judge Enforcer Build": {
+   "base": "fetchback_live_s68",
+   "live": "ff0ce5a9c9d2",
+   "before": "ff0ce5a9c9d2",
+   "after": "7cbf9922cf70",
+   "hits": [
+    "txt.paren x1"
+   ]
+  },
+  "Alt Judge Enforcer Build": {
+   "base": "pkgKWI/patched (QUOTE FIRST)",
+   "live": "a99b1adfe709",
+   "before": "862dd8fdd920",
+   "after": "8ebcf2ec8b43",
+   "hits": [
+    "txt.paren x2"
+   ]
+  },
+  "R2 Alt Judge Enforcer Build": {
+   "base": "pkgKWI/patched (QUOTE FIRST)",
+   "live": "7de77e15b885",
+   "before": "095dfc94e686",
+   "after": "7054489eb7be",
+   "hits": [
+    "txt.paren x2"
+   ]
+  }
+ }
 }

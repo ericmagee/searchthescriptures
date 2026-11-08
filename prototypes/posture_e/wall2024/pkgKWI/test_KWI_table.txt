@@ -1,0 +1,12 @@
+OK agreement: render carries the clause once (1)
+OK agreement: 18 copies in base, each re-rendered in pkgKWI ()
+OK audit: render carries the clause once (1)
+OK audit: 60 copies in base, each re-rendered in pkgKWI ()
+OK cureAskTail: render carries the clause once (1)
+OK cureAskTail: 26 copies in base, each re-rendered in pkgKWI ()
+OK enforcer: render carries the clause once (1)
+OK enforcer: 3 copies in base, each re-rendered in pkgKWI ()
+OK form: render carries the clause once (1)
+OK form: 21 copies in base, each re-rendered in pkgKWI ()
+OK every pkgKWI clause sits inside a table render or the K-W cure-rule sentence (stray 0)
+TOTAL 11 OK, 0 FAIL
