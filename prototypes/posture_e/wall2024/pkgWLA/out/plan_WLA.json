@@ -1,0 +1,14 @@
+{
+ "base": "/mnt/project-files/wall2024/fetchback_live_s63.json",
+ "base_versionId": "df871acd-81e3-4b19-9bcb-4875908b35e1",
+ "nodes": {
+  "Panel Build": {
+   "from": "19a70deba2a7",
+   "to": "cce2da2ea6d2"
+  },
+  "Build Independent Verdict": {
+   "from": "4b43139b589e",
+   "to": "c4eba96a04b2"
+  }
+ }
+}
