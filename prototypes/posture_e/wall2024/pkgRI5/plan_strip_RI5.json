@@ -3,18 +3,16 @@
  "nodes": {
   "Alt_Gate_Build.js": {
    "base": "3feaaf2a370d",
-   "patched": "8a4ac8eed4ab",
+   "patched": "8f4ac8d026e5",
    "anchors": [
-    "sbLabel0",
     "lab",
     "krulRestated"
    ]
   },
   "Alt_Gate_Record.js": {
    "base": "0ce58b70eb08",
-   "patched": "5b827acfdba0",
+   "patched": "40aead1d8c41",
    "anchors": [
-    "sbLabel0",
     "lab",
     "krulRestated"
    ]
@@ -45,18 +43,16 @@
   },
   "Alternate_Merge_1.js": {
    "base": "cd3be9742f0b",
-   "patched": "b99a1f14885c",
+   "patched": "bec2c174b1be",
    "anchors": [
-    "sbLabel0",
     "lab",
     "krulRestated"
    ]
   },
   "Alternate_Merge_Seat.js": {
    "base": "f71484b53c04",
-   "patched": "cbb857ee67f9",
+   "patched": "a85315616b37",
    "anchors": [
-    "sbLabel0",
     "lab",
     "krulRestated"
    ]
@@ -101,18 +97,16 @@
   },
   "Gate_Build.js": {
    "base": "1a6b5d3de2e5",
-   "patched": "8dbbf16a0345",
+   "patched": "19666d5a2680",
    "anchors": [
-    "sbLabel0",
     "lab",
     "krulRestated"
    ]
   },
   "Gate_Record.js": {
    "base": "9391a3daae02",
-   "patched": "cb21376bd1e6",
+   "patched": "d07b938c64d5",
    "anchors": [
-    "sbLabel0",
     "lab",
     "krulRestated"
    ]
@@ -182,18 +176,16 @@
   },
   "R2_Alt_Gate_Build.js": {
    "base": "21af37148582",
-   "patched": "9076bbea62b4",
+   "patched": "bc129de95133",
    "anchors": [
-    "sbLabel0",
     "lab",
     "krulRestated"
    ]
   },
   "R2_Alt_Gate_Record.js": {
    "base": "67a27f0bb042",
-   "patched": "ed72529838f3",
+   "patched": "b3b90f181336",
    "anchors": [
-    "sbLabel0",
     "lab",
     "krulRestated"
    ]
@@ -224,18 +216,16 @@
   },
   "R2_Alternate_Merge.js": {
    "base": "3bb31fd418a5",
-   "patched": "785d990453fb",
+   "patched": "8e03250f1493",
    "anchors": [
-    "sbLabel0",
     "lab",
     "krulRestated"
    ]
   },
   "R2_Alternate_Merge_Seat.js": {
    "base": "89dd8714cca0",
-   "patched": "e4a1bc4482c1",
+   "patched": "359857dc321f",
    "anchors": [
-    "sbLabel0",
     "lab",
     "krulRestated"
    ]
@@ -249,7 +239,6 @@
   }
  },
  "tally": {
-  "sbLabel0": 10,
   "lab": 26,
   "krulRestated": 30
  }

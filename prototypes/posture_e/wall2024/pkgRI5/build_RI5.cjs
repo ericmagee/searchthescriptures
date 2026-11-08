@@ -1,7 +1,7 @@
 // pkgRI5 part A (reader phase 2 item 5, RESTATED / RETRACTED / RESULT / COLLISION; W3 order; W1, 11-08): the line-LABEL reads ask the shared
 // reader first; where it reads no form (or a RESTATED one, for the labels), the old regex decides as before (pkgSBR/pkgSBX rule).
-//  - sbLabel0 (gate apply, 10 nodes): pair / KEYSTONE / CONCEDED LINKS / CHALLENGER CONCEDED LINKS / DEFENSE|CHALLENGE STANDING / CLAUSE.
-//  - lab (superseded-line audit, 26 nodes): the same labels plus RESULT.
+//  - lab (superseded-line audit, 26 nodes): pair / KEYSTONE / CONCEDED LINKS / CHALLENGER CONCEDED LINKS / DEFENSE|CHALLENGE STANDING / CLAUSE / RESULT.
+//  - NOT sbLabel0: it is only the fallback of sbLabel, which already asks the reader first (pkgSBR); a reader call there never hits (0 of 1,500+ calls on 5 runs).
 //  - krulRestated (22 nodes): the pair of a RESTATED collision line in the cure reply.
 // Part B (not here): sbApply2024's RESULT / RETRACTED / FORCED-pair / KEYSTONE / count field reads, kcmtGrade2024 and cureRecompute.
 // Run from wall2024/: node pkgRI5/build_RI5.cjs [base strip, default pkgLIB/strip_RI4] [dest strip, default pkgLIB/strip_RI5]
@@ -16,7 +16,6 @@ function ri5Lab2024(l,res){let r=null;try{r=__RL.readLine(String(l==null?'':l));
 function ri5Restated2024(l){let r=null;try{r=__RL.readLine(String(l==null?'':l));}catch(e){r=null;}return r&&r.form==='COLLISION'&&r.f&&r.f.restated&&/^D\d+\s+vs\.?\s+C\d+$/i.test(String(r.f.pair||''))?r.f.pair.match(/^(D\d+)\s+vs\.?\s+(C\d+)$/i):null;}
 `;
 const R=[
- ['sbLabel0',String.raw`function sbLabel0(l){const u=`,String.raw`function sbLabel0(l){{const __r=ri5Lab2024(l,false);if(__r)return __r;} /* pkgRI5 */const u=`,1],
  ['lab',String.raw`const lab=l=>{const u=rcOne(l)`,String.raw`const lab=l=>{{const __r=ri5Lab2024(rcOne(l),true);if(__r)return __r;} /* pkgRI5 */const u=rcOne(l)`,1],
  ['krulRestated',String.raw`const m=l.replace(/[*`+'`'+String.raw`]+/g,'').match(/^\s*(?:[-•]\s*)?RESTATED\s*:\s*(D\d+)\s+vs\.?\s+(C\d+)/i);if(!m)continue;`,
   String.raw`const m=ri5Restated2024(l)||l.replace(/[*`+'`'+String.raw`]+/g,'').match(/^\s*(?:[-•]\s*)?RESTATED\s*:\s*(D\d+)\s+vs\.?\s+(C\d+)/i);if(!m)continue; /* pkgRI5 */`,1]];
