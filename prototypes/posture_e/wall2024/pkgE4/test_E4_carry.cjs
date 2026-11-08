@@ -2,10 +2,10 @@
 // built with only the nodes that have run by Panel Cure Check) equals the live Alternate Call openrouter body expression evaluated on the
 // saved run at gate time, including reasoning_details on the acceptance turn.
 const fs=require('fs');const {harness,D}=require('../pkgGSL/harness.cjs');
-const W=JSON.parse(fs.readFileSync('/mnt/project-files/wall2024/fetchback_live_s61.json','utf8'));const ACB=W.nodes.find(n=>n.name==='Alternate Call openrouter').parameters.jsonBody;
+const W=JSON.parse(fs.readFileSync('/mnt/project-files/wall2024/fetchback_live_s62.json','utf8'));const ACB=W.nodes.find(n=>n.name==='Alternate Call openrouter').parameters.jsonBody;
 const EXPR=ACB.slice('={{ '.length,ACB.lastIndexOf(' }}'));
 const N=JSON.parse(fs.readFileSync('pkgE4/out/main_nodes_new.json'));const EAB=N.find(n=>n.name==='Early Alternate Build').parameters.jsCode;
-const SL=fs.readFileSync('pkgLIB_v24_RMR/patched/Shared_Library.js','utf8');global.__SLTEXT=SL;
+const SL=fs.readFileSync('pkgLIB_v25_RI3/patched/Shared_Library.js','utf8');global.__SLTEXT=SL;
 const wrap=c=>'return (async()=>{\n'+c.replace("$('Shared Library').params.jsCode","__SLTEXT")+'\n})();';
 const LATE={'Send Back Call openrouter':null,'Alternate Cure Call openrouter':null,'Alternate Call openrouter':null};
 let ok=0,bad=0,rd=0;

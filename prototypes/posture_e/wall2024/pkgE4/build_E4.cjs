@@ -2,7 +2,7 @@
 // Output: pkgE4/out/main_nodes_new.json (5 new nodes), main_nodes_patched.json (edited nodes, full), plan_E4.json (connections, shas),
 //         subworkflow_early_alternate.json (the sub-workflow), and e4.sql (DB part, separate file).
 const fs=require('fs'),cr=require('crypto');const sha=s=>cr.createHash('sha256').update(String(s)).digest('hex').slice(0,12);
-const F=process.argv[2]||'/mnt/project-files/wall2024/fetchback_live_s61.json';const STUB=process.argv[3]||'pkgLIB_v24_RMR/patched/Alternate_Build.js';
+const F=process.argv[2]||'/mnt/project-files/wall2024/fetchback_live_s62.json';const STUB=process.argv[3]||'pkgLIB_v25_RI3/patched/Alternate_Build.js';
 const W=JSON.parse(fs.readFileSync(F,'utf8'));const byName=n=>W.nodes.find(x=>x.name===n);const OUT='pkgE4/out/';fs.mkdirSync(OUT,{recursive:true});
 const once=(s,a,b,nm)=>{const k=s.split(a).length-1;if(k!==1)throw new Error(nm+': anchor x'+k);return s.replace(a,()=>b);};
 // a stable 16-hex hash in plain JS (the Code node has no crypto): two FNV-1a 32 passes with different seeds

@@ -1,13 +1,13 @@
 // test_E4 (W2): on every saved run with an alternate call, replay the E4 path offline with the real node code.
-// 1 Early Alternate Build (stub + LIB v24_RMR Shared Library) on Panel Cure Check's saved output.
+// 1 Early Alternate Build (stub + LIB v25_RI3 Shared Library) on Panel Cure Check's saved output.
 // 2 The sub-workflow's stored reply is simulated as the run's saved Alternate Call openrouter output (same request => same kind of reply).
 // 3 Patched Alternate Build with those rows: every call must match (early_all) when Early Alternate Build covered every removed seat;
 //   with no rows its output must equal the unpatched stub's output byte for byte.
-// 4 Early Alternate Reply's output fed to Alternate Payloads (v24 rebuilt) must give the same output as the saved call output.
+// 4 Early Alternate Reply's output fed to Alternate Payloads (v25 rebuilt) must give the same output as the saved call output.
 const fs=require('fs');const {harness,D}=require('../pkgGSL/harness.cjs');
-const SL=fs.readFileSync('pkgLIB_v24_RMR/patched/Shared_Library.js','utf8');const N=JSON.parse(fs.readFileSync('pkgE4/out/main_nodes_new.json'));
+const SL=fs.readFileSync('pkgLIB_v25_RI3/patched/Shared_Library.js','utf8');const N=JSON.parse(fs.readFileSync('pkgE4/out/main_nodes_new.json'));
 const P=JSON.parse(fs.readFileSync('pkgE4/out/main_nodes_patched.json'));const code=n=>(N.find(x=>x.name===n)||P.find(x=>x.name===n)).parameters.jsCode;
-const STUB0=fs.readFileSync('pkgLIB_v24_RMR/patched/Alternate_Build.js','utf8');const APAY=fs.readFileSync('pkgLIB/strip_RMR/patched/Alternate_Payloads.js','utf8');
+const STUB0=fs.readFileSync('pkgLIB_v25_RI3/patched/Alternate_Build.js','utf8');const APAY=fs.readFileSync('pkgLIB/strip_RI3/patched/Alternate_Payloads.js','utf8');
 const wrap=c=>'return (async()=>{\n'+c+'\n})();';const ld=(R,n)=>{const f=D+R+'_'+n.replace(/ /g,'_')+'.json';if(!fs.existsSync(f))return null;const d=JSON.parse(fs.readFileSync(f));const r=d[0];return ((r.data&&r.data.main)||r.main)[0];};
 const SLI=[{json:{}}];let ok=0,bad=0,used=0,notCovered=0;const log=[];const T=(c,m)=>{if(c)ok++;else{bad++;log.push('FAIL '+m);}};
 (async()=>{for(const R of fs.readdirSync(D).filter(f=>/^\d+_Alternate_Call_openrouter\.json$/.test(f)).map(f=>f.split('_')[0]).sort()){

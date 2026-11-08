@@ -1,5 +1,7 @@
 # pkgE4: earlier alternate start (Eric approved 12:03 CST 11-07; W2)
 
+TARGET: live s62 (0774fea5, LIB v25_RI3). Rebuilt 11-08 on fetchback_live_s62.json and pkgLIB_v25_RI3/patched/Alternate_Build.js. Against the s61 build only Alternate Build and Early Alternate Build change (the v25 stub); the other 37 patched nodes, the 4 other new nodes and the sub-workflow are byte-equal. test_E4 56 OK and test_E4_carry 11 OK, byte-identical to the s61 results; replay_E4 adds 33705 (no removal, no gate).
+
 ## What it does
 - After Panel Cure Check, the seats that will need an alternate (drv_uncured > 0 after the cure) are known for most removals.
 - Early Alternate Build runs Alternate Build's own code on that output. Early Alternate Start hands each alternate request to the sub-workflow "WALL-2024 Early Alternate" without waiting.

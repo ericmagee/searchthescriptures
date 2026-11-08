@@ -1,7 +1,7 @@
 // E4 replay (W2): build the alternate request from Panel Cure Check's output (early) and from the gate's output (today), with the same
-// Alternate Build code (LIB v24_RMR rebuilt), and compare the request body per removed seat by sha256.
+// Alternate Build code (LIB v25_RI3 rebuilt), and compare the request body per removed seat by sha256.
 const fs=require('fs'),cr=require('crypto');const {harness,D}=require('../pkgGSL/harness.cjs');
-const code='return (async()=>{\n'+fs.readFileSync(process.argv[2]||'pkgLIB/strip_RMR/patched/Alternate_Build.js','utf8')+'\n})();';
+const code='return (async()=>{\n'+fs.readFileSync(process.argv[2]||'pkgLIB/strip_RI3/patched/Alternate_Build.js','utf8')+'\n})();';
 const sha=o=>cr.createHash('sha256').update(JSON.stringify(o)).digest('hex').slice(0,12);
 const runs=fs.readdirSync(D).filter(f=>/^\d+_Panel_Cure_Check\.json$/.test(f)).map(f=>f.split('_')[0]).sort();
 const tot={runs:0,gateSeats:0,early:0,match:0,mismatch:0,earlyNotRemoved:0,allMatch:0,runsWithRemoval:0};
