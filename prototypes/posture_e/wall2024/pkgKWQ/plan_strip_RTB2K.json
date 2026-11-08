@@ -1,0 +1,213 @@
+{
+ "base": "pkgLIB/strip_RTB2/patched/",
+ "nodes": {
+  "Alt_Gate_Build.js": {
+   "base": "189ecbc083f8",
+   "patched": "c884c128f01a",
+   "anchors": [
+    "runs with refs",
+    "reply with and without refs"
+   ]
+  },
+  "Alt_Gate_Record.js": {
+   "base": "3c5dca6505cd",
+   "patched": "8bd1b15175dd",
+   "anchors": [
+    "runs with refs",
+    "reply with and without refs"
+   ]
+  },
+  "Alternate_Build.js": {
+   "base": "be72ce0b69e3",
+   "patched": "936e982415b1",
+   "anchors": [
+    "runs with refs",
+    "reply with and without refs"
+   ]
+  },
+  "Alternate_Cure_Build.js": {
+   "base": "27cc6beda3af",
+   "patched": "fd246e983eae",
+   "anchors": [
+    "runs with refs",
+    "reply with and without refs"
+   ]
+  },
+  "Alternate_Cure_Normalize.js": {
+   "base": "6f4cc2feb1f8",
+   "patched": "926275d4a7ee",
+   "anchors": [
+    "runs with refs",
+    "reply with and without refs"
+   ]
+  },
+  "Alternate_Merge_1.js": {
+   "base": "aac7c7bf435b",
+   "patched": "86dba3ed2d34",
+   "anchors": [
+    "runs with refs",
+    "reply with and without refs"
+   ]
+  },
+  "Alternate_Merge_Seat.js": {
+   "base": "29c21b416ed7",
+   "patched": "8c69c3cbd277",
+   "anchors": [
+    "runs with refs",
+    "reply with and without refs"
+   ]
+  },
+  "Cure_Build.js": {
+   "base": "7562579382b5",
+   "patched": "eafc17874408",
+   "anchors": [
+    "runs with refs",
+    "reply with and without refs"
+   ]
+  },
+  "Cure_Check.js": {
+   "base": "78d67a5c9fc0",
+   "patched": "6eec1b7b938f",
+   "anchors": [
+    "runs with refs",
+    "reply with and without refs"
+   ]
+  },
+  "Cure_Normalize.js": {
+   "base": "29fa06bd91fa",
+   "patched": "196c6f95db5b",
+   "anchors": [
+    "runs with refs",
+    "reply with and without refs"
+   ]
+  },
+  "Gate_Build.js": {
+   "base": "030ccf3b0652",
+   "patched": "d39aebfe90c0",
+   "anchors": [
+    "runs with refs",
+    "reply with and without refs"
+   ]
+  },
+  "Gate_Record.js": {
+   "base": "9c923f997b39",
+   "patched": "d73d3f424c5a",
+   "anchors": [
+    "runs with refs",
+    "reply with and without refs"
+   ]
+  },
+  "Panel_Cure_Build_1.js": {
+   "base": "da5d21f302e7",
+   "patched": "4614e2b76ce1",
+   "anchors": [
+    "runs with refs",
+    "reply with and without refs"
+   ]
+  },
+  "Panel_Cure_Build_2.js": {
+   "base": "a0a17fc77e8e",
+   "patched": "d089ab43770b",
+   "anchors": [
+    "runs with refs",
+    "reply with and without refs"
+   ]
+  },
+  "Panel_Cure_Build_3.js": {
+   "base": "dc0c05b8f431",
+   "patched": "bb1d514ee6ec",
+   "anchors": [
+    "runs with refs",
+    "reply with and without refs"
+   ]
+  },
+  "Panel_Cure_Check.js": {
+   "base": "223059e45170",
+   "patched": "a877267a0979",
+   "anchors": [
+    "runs with refs",
+    "reply with and without refs"
+   ]
+  },
+  "Panel_Cure_Normalize_1.js": {
+   "base": "2b18ca4dae67",
+   "patched": "1ed997e8b8db",
+   "anchors": [
+    "runs with refs",
+    "reply with and without refs"
+   ]
+  },
+  "Panel_Cure_Normalize_2.js": {
+   "base": "d1336687b6b9",
+   "patched": "4bf6d2dea73c",
+   "anchors": [
+    "runs with refs",
+    "reply with and without refs"
+   ]
+  },
+  "Panel_Cure_Normalize_3.js": {
+   "base": "ebb88d640ed7",
+   "patched": "4816503f46f7",
+   "anchors": [
+    "runs with refs",
+    "reply with and without refs"
+   ]
+  },
+  "R2_Alt_Gate_Build.js": {
+   "base": "9bd711749aa1",
+   "patched": "5f152e0e2df7",
+   "anchors": [
+    "runs with refs",
+    "reply with and without refs"
+   ]
+  },
+  "R2_Alt_Gate_Record.js": {
+   "base": "98fb91f2937c",
+   "patched": "fc6d440ec25e",
+   "anchors": [
+    "runs with refs",
+    "reply with and without refs"
+   ]
+  },
+  "R2_Alternate_Build.js": {
+   "base": "0d013280fc59",
+   "patched": "507ed1690dca",
+   "anchors": [
+    "runs with refs",
+    "reply with and without refs"
+   ]
+  },
+  "R2_Alternate_Cure_Build.js": {
+   "base": "b7c5e5c588ed",
+   "patched": "0e6faa6c57e4",
+   "anchors": [
+    "runs with refs",
+    "reply with and without refs"
+   ]
+  },
+  "R2_Alternate_Cure_Normalize.js": {
+   "base": "7e64798767a0",
+   "patched": "a6cf776e8a1a",
+   "anchors": [
+    "runs with refs",
+    "reply with and without refs"
+   ]
+  },
+  "R2_Alternate_Merge.js": {
+   "base": "e158e5a4f928",
+   "patched": "52a549e68619",
+   "anchors": [
+    "runs with refs",
+    "reply with and without refs"
+   ]
+  },
+  "R2_Alternate_Merge_Seat.js": {
+   "base": "ec9023bb5a32",
+   "patched": "98fe1c05f04f",
+   "anchors": [
+    "runs with refs",
+    "reply with and without refs"
+   ]
+  }
+ }
+}

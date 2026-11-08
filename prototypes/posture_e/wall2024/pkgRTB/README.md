@@ -35,3 +35,10 @@ table file plus a conformance check, not a runtime read of $('Shared Library') (
   verse alone would do; cureReasoned always needs the round, plus a 3+ word quote or a verse.
 - test_RTB 1d: the example reason cures under the library's own cureReasoned; a verse-only reason stays UNCURED; round + verse cures.
 - Strips: pkgLIB/strip_RTB is again the graded step 1 (f60e4a8). Steps 1+2 build into pkgLIB/strip_RTB2.
+
+### Restack for s66 + KWQ (v33b)
+- pkgLIB/strip_RTB2K = W1's build_KWQ run on strip_RTB2: `node pkgKWQ/build_KWQ.cjs pkgLIB/strip_RTB2 pkgLIB/strip_RTB2K` (26 nodes).
+- Exactness check: with the RX renders put back to their old text (and the K-FF/K-FC fold), all 30 strip_RTB2K files equal strip_KWQ_R1
+  byte for byte. So strip_RTB2K is strip_KWQ_R1 plus exactly the step 2 text.
+- Pack pkgLIB_RTB2K (LIB_N=30): Shared Library 986f3efb1447. E4 rebase on target_s66_kwq lines 9+: Alternate Build 108873896a19,
+  Early Alternate Build 2ff9dd790123, both rebuild to 309508 = __N and equal the strip's full Alternate Build.
