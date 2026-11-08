@@ -1,0 +1,37 @@
+OK base is pkgEHF/patched (5bb9b1a348f2: live s59 e80c75967029 + EHF)
+   33218: unchanged (skip: no panel judgment text); alt K-W/K-S3 rows 0
+   33222: unchanged (4 items, K-W call 23 ids); alt K-W/K-S3 rows 23
+   33249: unchanged (4 items, K-W call 12 ids); alt K-W/K-S3 rows 12
+   33261: unchanged (4 items, K-W call 14 ids); alt K-W/K-S3 rows 14
+   33276: unchanged (skip: no DeepSeek model_config row); alt K-W/K-S3 rows 0
+   33289: unchanged (skip: no DeepSeek model_config row); alt K-W/K-S3 rows 0
+   33299: unchanged (4 items, K-W call 15 ids); alt K-W/K-S3 rows 15
+   33311: unchanged (skip: no DeepSeek model_config row); alt K-W/K-S3 rows 0
+   33322: unchanged (skip: no DeepSeek model_config row); alt K-W/K-S3 rows 0
+   33345: unchanged (4 items, K-W call 19 ids); alt K-W/K-S3 rows 19
+   33371: unchanged (4 items, K-W call 16 ids); alt K-W/K-S3 rows 16
+   33389: unchanged (skip: no panel judgment text); alt K-W/K-S3 rows 0
+   33411: unchanged (4 items, K-W call 10 ids); alt K-W/K-S3 rows 10
+   33430: CHANGED base skip (no panel judgment text) -> 1 items, K-W call 13 ids, code_rows 0 (base skip code_rows 0); alt K-W/K-S3 rows 13
+OK 33430: the base skipped; now one K-W call with one id per alternate row (13) and the skip's code_rows kept
+   33442: unchanged (4 items, K-W call 16 ids); alt K-W/K-S3 rows 16
+   33461: unchanged (4 items, K-W call 14 ids); alt K-W/K-S3 rows 14
+   33482: unchanged (4 items, K-W call 20 ids); alt K-W/K-S3 rows 20
+   33490: unchanged (4 items, K-W call 15 ids); alt K-W/K-S3 rows 15
+   33497: CHANGED base skip (no panel judgment text) -> 1 items, K-W call 24 ids, code_rows 0 (base skip code_rows 0); alt K-W/K-S3 rows 24
+OK 33497: the base skipped; now one K-W call with one id per alternate row (24) and the skip's code_rows kept
+   33506: unchanged (5 items, K-W call 10 ids); alt K-W/K-S3 rows 10
+   33575: unchanged (skip: no panel judgment text); alt K-W/K-S3 rows 0
+   33592: unchanged (skip: no panel judgment text); alt K-W/K-S3 rows 0
+   33605: unchanged (skip: no panel judgment text); alt K-W/K-S3 rows 0
+   33617: unchanged (5 items, K-W call 26 ids); alt K-W/K-S3 rows 26
+   33627: unchanged (5 items, K-W call 21 ids); alt K-W/K-S3 rows 21
+replay over 25 runs: 23 unchanged, changed 33430, 33497
+OK replay ran (25)
+OK bar (W3 3121): 33430 and 33497 now get a K-W item
+OK every run with alternate K-W/K-S3 cure rows has a K-W call (16 of 16)
+   33430 Record: 13 K-W/K-S3 rows, NO VERDICT 0
+OK 33430: Record writes one K-W/K-S3 row per id (13) with no NO VERDICT
+   33497 Record: 24 K-W/K-S3 rows, NO VERDICT 0
+OK 33497: Record writes one K-W/K-S3 row per id (24) with no NO VERDICT
+TOTAL 8 OK, 0 FAIL
