@@ -18,15 +18,16 @@ disagreed before the send-back is left alone (D38 still raises it). It appears i
 
 Not covered: K-CMT/K-CMTL (a first-pass contested grade line without its Commitment N), which also recurs on Matthew 1:18.
 
-Base: LIB v29 (pkgLIB/strip_RI4, pkgRI4, PASS W2 3265). Out: pkgLIB/strip_RCD, packed as pkgLIB_v30_RCD (Shared Library 079d314bc1a0; all 30
-stubs change line indices). E4 rebase: pkgLIB_v30_RCD/e4_rebase (Alternate Build 04d43a617dbe, Early Alternate Build 25abaf6b2118): v30 stub
-head (lines 1-8) plus live s64 lines 9+; both rebuild to 304268 bytes, equal to strip_RCD Alternate Build.
+Base: LIB v31_RI5B (pkgLIB/strip_RI5B; carries v29 RI4 and v30 RI5A). Restacked 11-08 (the first build on v29 as "v30_RCD", 1a3deef,
+collided with W1's v30/v31 and is withdrawn). Out: pkgLIB/strip_RCD, packed as pkgLIB_v32_RCD (Shared Library bdff20a871cd; all 30 stubs
+change line indices). E4 rebase: pkgLIB_v32_RCD/e4_rebase (Alternate Build de29ff1dc09a, Early Alternate Build 1aba6a303a25): v32 stub head
+(lines 1-8) plus live s64 lines 9+ (equal to the v31 e4_rebase tails); both rebuild to 306698 bytes, equal to strip_RCD Alternate Build.
 
 Test (test_RCD.txt):
-1. w3_combined_replay strip_RI4 vs strip_RCD: 1140 node runs, 1117 identical, 23 differ (Gate Build 11 runs, Alt Gate Build 2, Alternate Merge Seat 10).
+1. w3_combined_replay strip_RI5B vs strip_RCD: 1140 node runs, 1117 identical, 23 differ (Gate Build 11 runs, Alt Gate Build 2, Alternate Merge Seat 10).
 2. Gate item keys: 31 D38|COL items removed in 13 runs, 0 items added, no other item removed (33750: gemini D1 vs C1; grok D1 vs C1, D2 vs C5, D5 vs C1).
 3. Alternate Merge Seat: equal in all 10 runs once the derived card text, its SUPERSEDED audit line and the applied entry are normalised (verdicts unchanged).
 
 Rebuild: node pkgRCD/build_RCD.cjs && (cd /tmp/x && LIB_N=30 node <wall2024>/pkgLIB/pack.cjs <wall2024>/pkgLIB/strip_RCD)
-Write: Shared Library -> 079d314bc1a0 plus the 30 stubs from pkgLIB_v30_RCD/patched, with the two e4_rebase files in place of the plain
-Alternate Build and Early Alternate Build stubs. v30 includes v29 (RI4); write after or with v29.
+Write: Shared Library -> bdff20a871cd plus the 30 stubs from pkgLIB_v32_RCD/patched, with the two e4_rebase files in place of the plain
+Alternate Build and Early Alternate Build stubs. v32 includes v29, v30 and v31; write after or with them.

@@ -346,6 +346,19 @@ return module.exports;})();
 /* pkgRI4 (reader item 4): the reader's FORCED fields for a line (null: no FORCED form, or RESTATED); a FORCED label test, reader first, else the old regex */
 function ri4F2024(l){try{const r=__RL.readLine(String(l==null?'':l).trim());if(r&&r.form==='FORCED'&&r.f&&r.f.pair&&!r.f.restated)return r.f;}catch(e){}return null;}
 function ri4IsF2024(l,re){return !!ri4F2024(l)||re.test(l);}
+/* pkgRI5 (reader item 5): a line's label from the reader (null: no form, a RESTATED line, or a form with no label here); the old regex decides on null */
+function ri5Lab2024(l,res){let r=null;try{r=__RL.readLine(String(l==null?'':l));}catch(e){r=null;}if(!r||!r.form||!r.f||r.f.restated)return null;const f=r.f;
+ if(r.form==='COLLISION'&&f.pair)return f.pair.replace(/\s+vs\.?\s+/i,' VS ').toUpperCase();if(r.form==='KEYSTONE')return 'KEYSTONE';if(r.form==='CLAUSE')return 'CLAUSE';
+ if(r.form==='CONCEDED'&&f.side)return f.side==='CHALLENGER'?'CHALLENGER CONCEDED LINKS':'CONCEDED LINKS';if(r.form==='STANDING'&&f.side)return f.side+' STANDING';if(res&&r.form==='RESULT')return 'RESULT';return null;}
+function ri5Restated2024(l){let r=null;try{r=__RL.readLine(String(l==null?'':l));}catch(e){r=null;}return r&&r.form==='COLLISION'&&r.f&&r.f.restated&&/^D\d+\s+vs\.?\s+C\d+$/i.test(String(r.f.pair||''))?r.f.pair.match(/^(D\d+)\s+vs\.?\s+(C\d+)$/i):null;}
+/* pkgRI5 part B (reader item 5): reader-first field reads for sbApply2024; each returns the old regex's match shape, or the old regex's own result when the reader reads no such form */
+function ri5Rd2024(l){try{const r=__RL.readLine(String(l==null?'':l));return r&&r.form&&r.f&&!r.f.restated?r:null;}catch(e){return null;}}
+function ri5Res2024(l,re){const r=ri5Rd2024(l);if(r&&r.form==='RESULT'&&r.f.result)return [l,r.f.result];return String(l==null?'':l).match(re);}
+function ri5IsRes2024(l,re){const r=ri5Rd2024(l);return (r&&r.form==='RESULT')||re.test(l);}
+function ri5Rt2024(l,re){const r=ri5Rd2024(l);if(r&&r.form==='RETRACTED'&&r.f.pair&&!r.f.reason){const p=String(r.f.pair).match(/^(D\d+)\s+vs\.?\s+(C\d+)$/i);if(p)return p;}return String(l==null?'':l).match(re);}
+function ri5Pair2024(l,re,forms){const r=ri5Rd2024(l);if(r&&forms.includes(r.form)&&r.f.pair){const p=String(r.f.pair).match(/^(D\d+)\s+vs\.?\s+(C\d+)$/i);if(p)return p;}return String(l==null?'':l).match(re);}
+function ri5Cm2024(l,re){const r=ri5Rd2024(l);if(r&&r.form==='CHAIN MARK'&&r.f.side)return [l,r.f.side];return String(l==null?'':l).match(re);}
+function ri5Key2024(raw,u,re,grades){const r=ri5Rd2024(raw);if(r&&r.form==='KEYSTONE'&&r.f.link&&grades.includes(r.f.grade))return [raw,r.f.link,r.f.grade];return String(u==null?'':u).match(re);}
 function __kfM(s){const l=String(s==null?'':s);const r=__RL.readLine(l);if(!r||r.form!=='FORCED'||!r.f||!r.f.pair||r.f.restated)return null;const f=r.f;const m=[l,f.pair,f.meansRound,f.means,f.answerRound,f.answer,f.fails];m.index=0;m.input=l;return m;}
 const KF_LINE={test:s=>!!__kfM(s),[Symbol.match]:s=>__kfM(s),toString:()=>'KF_LINE (readLines FORCED)'};
 const KF_GROUND=/\bforced\b|\bcannot\s+take\b|\bcan(?:no|')t\s+(?:take|fit|bear)\b|\bdoes\s+not\s+fit\b|\bruling\s+396\b|\b396\b/i;
@@ -750,7 +763,7 @@ function krulCure(x,replyText,rounds,respText){const T=krulText(replyText).T;
  return null;}
 function krulRestated(items,reply,rounds){const out=[];const T=krulText(reply&&reply.ok?reply.text:'').T;if(!T)return out;
  const covered=new Set((items||[]).filter(x=>x&&x.rule==='K-RUL').map(x=>x.ruling||x.link));const cards=krulCards(T);const SRC=Object.values(rounds||{}).filter(v=>typeof v==='string').join('\n');const seen=new Set();
- for(const l of T.split('\n')){const m=l.replace(/[*`]+/g,'').match(/^\s*(?:[-•]\s*)?RESTATED\s*:\s*(D\d+)\s+vs\.?\s+(C\d+)/i);if(!m)continue;const id=m[1].toUpperCase()+' vs '+m[2].toUpperCase();if(covered.has(id)||seen.has(id))continue;seen.add(id);
+ for(const l of T.split('\n')){const m=ri5Restated2024(l)||l.replace(/[*`]+/g,'').match(/^\s*(?:[-•]\s*)?RESTATED\s*:\s*(D\d+)\s+vs\.?\s+(C\d+)/i);if(!m)continue; /* pkgRI5 */const id=m[1].toUpperCase()+' vs '+m[2].toUpperCase();if(covered.has(id)||seen.has(id))continue;seen.add(id);
   const why=krulCheckCard(cards.find(c=>krulMatch(c,id)),SRC,null);if(!why)continue;
   out.push({rule:'K-RUL',side:'JUDGE',link:id+' (restated in the cure)',ruling:id,line:'restated line '+id+' in the cure reply: '+why,judge_statement:null,response:null,status:'UNCURED',why:'TRIAL, recorded only: the cure reply restated '+id+' without a valid ruling card ('+why+')',statement:l.trim().slice(0,400),kinds:[]});}
  return out;}
@@ -1551,7 +1564,7 @@ function cureRecompute(seat,text,F,items,v,reply){const o=cureLines(reply&&reply
  const kw=!!(P.key&&/^KEYSTONE\s*:\s*D\d+\s*(?:--|—|-|:)\s*WITHDRAWN\b/.test(P.key.u));const k=brk.DEFENDER;
  const held=k<1&&unk.length>0;const tag=held?'UNREAD':k>=1?'BROKEN-1':((n!=null&&2*w>n)||kw)?'BROKEN-2':w>=1?'PARTIAL-1':dst==='COLLAPSED'?'PARTIAL-2':'HELD-1';const word=held?(F.verdict_tag||null):tag.split('-')[0];
  const res=held?(P.result?((P.result.u.match(/^RESULT\s*:\s*(DEFENDER WINS|CHALLENGER WINS|UNDERDETERMINED)/)||[])[1]||null):null):(__x=>{if(__tie421(col,dst,cst,c.DEFENDER,c.CHALLENGER,__x)){if(trig.indexOf('TIE (KB-0030)')<0)trig.push('TIE (KB-0030)');return 'UNDERDETERMINED';}return __x;})(word==='BROKEN'?'CHALLENGER WINS':(()=>{const r0=P.result?((P.result.u.match(/^RESULT\s*:\s*(DEFENDER WINS|CHALLENGER WINS|UNDERDETERMINED)/)||[])[1]||null):null;return (r0&&r0!=='CHALLENGER WINS')?r0:'UNDERDETERMINED';})());
- const res0=P.result?((P.result.u.match(/^RESULT\s*:\s*(DEFENDER WINS|CHALLENGER WINS|UNDERDETERMINED)/)||[])[1]||null):null;
+ const res0=P.result?((ri5Res2024(P.result.raw,null)||P.result.u.match(/^RESULT\s*:\s*(DEFENDER WINS|CHALLENGER WINS|UNDERDETERMINED)/)||[])[1]||null):null; /* pkgRI5B */
  const why='recomputed after the cure from the cured lines ('+trig.join('; ')+')';
  if(P.result&&res!==res0)rp.push([P.result.raw,'RESULT: '+res+' -- '+why+': '+tag+', CHALLENGE STANDING '+cst+', '+(brk.CHALLENGER?brk.CHALLENGER+' collision line(s) stand graded CHALLENGER LINK BROKEN':'no collision line stands graded CHALLENGER LINK BROKEN')+'.']);
  for(const [sd,k2,st,st0] of [['DEFENDER','DEFENSE',dst,F.defense_standing],['CHALLENGER','CHALLENGE',cst,F.challenge_standing]]){const x=P.st[k2];
@@ -1600,7 +1613,7 @@ function cureRewrite(raw,panel,R,seat,F0){let s=String(raw||'');const enc=x=>JSO
    const cr=(F0&&F0.verdict_tag&&F0.verdict_tag!==F.verdict_tag)?'\n[AUDIT v21: CORRECTED RESULT -- '+(seat?'SEAT: '+seat+'; ':'')+'ORIGINAL: '+F0.verdict_tag+'; COUNTED: '+F.verdict_tag+' ('+R.tag+'); RETRACTED: '+R.retracted.join(', ')+']':'';
    s=s.slice(0,a)+j+cr+__cpd+s.slice(b);}}
  else{const i=s.indexOf('\n\n[AUDIT');let t=i<0?s:s.slice(0,i);const rest=i<0?'':s.slice(i);for(const [o0,n0] of R.rp){const __r=crwRep(t,o0,n0,false);if(__r!=null)t=__r;}s=t+rest;}
- const lab=l=>{const u=rcOne(l).replace(/[*_`]+/g,'').replace(/^(?:[-•]|\d+[.)])?\s*/,'').toUpperCase();const m=u.match(/^(D\d+\s+VS\.?\s+C\d+|DEFENSE STANDING|CHALLENGE STANDING|CHALLENGER CONCEDED LINKS|CONCEDED LINKS|RESULT|CLAUSE|KEYSTONE)\b/);return m?m[1].replace(/\s+VS\.?\s+/,' VS '):'LINE';};
+ const lab=l=>{{const __r=ri5Lab2024(rcOne(l),true);if(__r)return __r;} /* pkgRI5 */const u=rcOne(l).replace(/[*_`]+/g,'').replace(/^(?:[-•]|\d+[.)])?\s*/,'').toUpperCase();const m=u.match(/^(D\d+\s+VS\.?\s+C\d+|DEFENSE STANDING|CHALLENGE STANDING|CHALLENGER CONCEDED LINKS|CONCEDED LINKS|RESULT|CLAUSE|KEYSTONE)\b/);return m?m[1].replace(/\s+VS\.?\s+/,' VS '):'LINE';};
  const sup=(R.rp||[]).map(([o0,n0])=>'\n[AUDIT v27: SUPERSEDED LINE -- '+(seat?'SEAT: '+seat+'; ':'')+'LABEL: '+lab(n0)+'; ORIGINAL: '+cureSafe(rcOne(o0)).replace(/;\s*END\]/g,', END')+' ; END]').join('');
  let rk='';try{const H=rechk2024(R.rp,rechkRounds2024(seat));rk=H.map(h=>'\n[AUDIT v39: K-RECHK -- '+(seat?'SEAT: '+seat+'; ':'')+'CHANGE: '+String(h.id||'change').replace(/;/g,',')+'; RULE: '+h.rule+'; '+(h.old===null?'NOT CHECKED':(h.old?'ALREADY IN THE ORIGINAL':'NEW'))+': '+h.why+'; LINE: '+cureSafe(h.line).slice(0,300)+'; ORIGINAL: '+cureSafe(h.orig).slice(0,300)+'; TRIAL rule, record-only ; END]').join('');}catch(e){rk='\n[AUDIT v39: K-RECHK -- the re-check failed: '+cureSafe(String(e&&e.message||e)).slice(0,160)+' ; END]';}
  return s+'\n'+R.audit+sup+rk;}
