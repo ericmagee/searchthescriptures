@@ -1,0 +1,13 @@
+{
+ "base": "live s57",
+ "nodes": {
+  "Judge Enforcer Build": {
+   "base": "caba029517dd",
+   "patched": "e623516c11e9"
+  },
+  "Alt Judge Enforcer Build": {
+   "base": "14736afdc9ae",
+   "patched": "0d1f052f879f"
+  }
+ }
+}

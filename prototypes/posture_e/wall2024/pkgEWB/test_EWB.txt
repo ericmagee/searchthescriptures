@@ -1,0 +1,8 @@
+OK replay ran on 76 node runs
+OK no item outside E-ANS/E-HOLD changes (0)
+OK 2 items changed: 0 now hold the answer opening as whole words, 2 dropped a wrong block; 0 bad (0)
+   E-ANS full blocks without the answer opening as whole words: 603 -> 601 (of 2205)
+   33605 Judge B117: Acts 16:13 | was: - **Genesis 4:1**, "And Adam knew Eve his wife; and she conceived". I  | now: (none)
+   33605 Judge B117: Acts 16:13 | was: - **Genesis 4:1**, "And Adam knew Eve his wife; and she conceived". I  | now: (none)
+OK 33605 B117 Acts 16:13: the Genesis 4:1 block is gone; no full block is sent, since the Acts 16:13 bullet adds under 60 characters to the quoted answer (the pkgEAW gate), so DeepSeek reads the whole answer as quoted
+TOTAL 4 OK, 0 FAIL
