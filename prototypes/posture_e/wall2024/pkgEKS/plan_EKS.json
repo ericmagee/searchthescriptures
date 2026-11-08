@@ -1,0 +1,25 @@
+{
+ "nodes": [
+  {
+   "node": "Enforcer Build",
+   "base": "s64",
+   "file": "Enforcer_Build.js",
+   "before": "ed35761ec9e6",
+   "after": "e0541e391f94"
+  },
+  {
+   "node": "Alt Judge Enforcer Build",
+   "base": "pkgRP10/patched",
+   "file": "Alt_Judge_Enforcer_Build.js",
+   "before": "355115577fc6",
+   "after": "9326070b9a11"
+  },
+  {
+   "node": "R2 Alt Judge Enforcer Build",
+   "base": "pkgRP10/patched",
+   "file": "R2_Alt_Judge_Enforcer_Build.js",
+   "before": "022f281cb4a6",
+   "after": "c6f7fae63f06"
+  }
+ ]
+}
