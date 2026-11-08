@@ -1,0 +1,34 @@
+ERR 33040 Alt Gate Record Referenced node is unexecuted: Alt Gate Build
+ERR 33060 Alt Gate Record Referenced node is unexecuted: Alt Send Back Record
+ERR 33083 Alt Gate Record Referenced node is unexecuted: Alt Send Back Record
+ERR 33107 Alt Gate Record Referenced node is unexecuted: Alt Send Back Record
+ERR 33129 Alt Gate Record Referenced node is unexecuted: Alt Send Back Record
+ERR 33149 Alt Gate Record Referenced node is unexecuted: Alt Send Back Record
+ERR 33160 Alt Gate Record Referenced node is unexecuted: Alt Send Back Record
+ERR 33197 Alt Gate Record Referenced node is unexecuted: Alt Send Back Record
+ERR 33276 Alt Gate Record Cannot read properties of undefined (reading 'slice')
+ERR 33289 Alt Gate Record Cannot read properties of undefined (reading 'slice')
+ERR 33311 Alt Gate Record Cannot read properties of undefined (reading 'slice')
+ERR 33276 Alternate Merge Seat Cannot read properties of undefined (reading 'slice')
+ERR 33289 Alternate Merge Seat Cannot read properties of undefined (reading 'slice')
+ERR 33311 Alternate Merge Seat Cannot read properties of undefined (reading 'slice')
+ERR 33322 Alternate Merge Seat Cannot read properties of undefined (reading 'slice')
+  at 1404507 base: "\":null,\"cure_status\":null,\"cure_reason\":\"verdict HELD to HELD; derived RESULT UNDERDETERMINED (WALL-2024 2236, 2237)\",\"at\":\"2026-11-07T03:10:18.511Z\"},{\"run_token\":\"ODV1-33731-lq0uumwp\",\"seat\":\"grok\",\"seat_role\":\"panel\",\"judge_model\":null,\"kind\":\"send_back\",\"rule\":\"E-APPLY\",\"item\":\"S13 NOT APPLIED\","
+  pat : "\":null,\"cure_status\":null,\"cure_reason\":\"verdict HELD to HELD; derived RESULT UNDERDETERMINED (WALL-2024 2236, 2237)\",\"at\":\"2026-11-07T03:10:18.511Z\"}],\"sb_apply\":[{\"seat\":\"gemini\",\"applied\":[\"S1\",\"S2\",\"S3\",\"S4\",\"G2\",\"S8\",\"S9\",\"S10\",\"S11\",\"S12\"],\"items\":[{\"sid\":\"S5\",\"kind\":\"NOT APPLIED\",\"why\":\"the c"
+DIFF 33731 Alternate Merge Seat | base only: [] | patched only: []
+  at 306600 base: "s it UNDERDETERMINED. Change one of the two lines so they agree.\"}],\"newk_error\":null,\"rounds_read\":true},{\"seat\":\"grok\",\"items\":[{\"gid\":\"G1\",\"kind\":\"NOT APPLIED\",\"src\":\"E-APPLY S13\",\"live\":true,\"why\":\"the CHANGE TO line has no line form the engine reads\"},{\"gid\":\"G2\",\"kind\":\"CONTRADICTION\",\"src\":\"E"
+  pat : "s it UNDERDETERMINED. Change one of the two lines so they agree.\"}],\"newk_error\":null,\"rounds_read\":true},{\"seat\":\"grok\",\"items\":[{\"gid\":\"G1\",\"kind\":\"CONTRADICTION\",\"src\":\"E-GATE D38\",\"live\":true,\"why\":\"your RULING card grades D2 vs C1 CHALLENGER LINK BROKEN, but your collision line for D2 vs C1 now"
+DIFF 33731 Gate Build | base only: [] | patched only: []
+ERR 33040 Gate Record Referenced node is unexecuted: Send Back Record
+ERR 33060 Gate Record Referenced node is unexecuted: Send Back Record
+ERR 33083 Gate Record Referenced node is unexecuted: Send Back Record
+ERR 33107 Gate Record Referenced node is unexecuted: Send Back Record
+ERR 33129 Gate Record Referenced node is unexecuted: Send Back Record
+ERR 33149 Gate Record Referenced node is unexecuted: Send Back Record
+ERR 33160 Gate Record Referenced node is unexecuted: Send Back Record
+ERR 33197 Gate Record Referenced node is unexecuted: Send Back Record
+ERR 33276 Gate Record Cannot read properties of undefined (reading 'slice')
+ERR 33289 Gate Record Cannot read properties of undefined (reading 'slice')
+ERR 33311 Gate Record Cannot read properties of undefined (reading 'slice')
+ERR 33322 Gate Record Cannot read properties of undefined (reading 'slice')
+node runs 132: 130 equal, 2 differ, 27 errors, 241 without a saved run

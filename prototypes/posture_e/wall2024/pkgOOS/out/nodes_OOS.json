@@ -1,0 +1,16 @@
+{
+ "code_updates": [
+  {
+   "node": "Judge Enforcer Build",
+   "file": "pkgOOS/out/Judge_Enforcer_Build.js"
+  },
+  {
+   "node": "Alt Judge Enforcer Build",
+   "file": "pkgOOS/out/Alt_Judge_Enforcer_Build.js"
+  },
+  {
+   "node": "R2 Alt Judge Enforcer Build",
+   "file": "pkgOOS/out/R2_Alt_Judge_Enforcer_Build.js"
+  }
+ ]
+}

@@ -1,0 +1,31 @@
+ERR 33040 Alt Gate Record Referenced node is unexecuted: Alt Gate Build
+ERR 33060 Alt Gate Record Referenced node is unexecuted: Alt Send Back Record
+ERR 33083 Alt Gate Record Referenced node is unexecuted: Alt Send Back Record
+ERR 33107 Alt Gate Record Referenced node is unexecuted: Alt Send Back Record
+ERR 33129 Alt Gate Record Referenced node is unexecuted: Alt Send Back Record
+ERR 33149 Alt Gate Record Referenced node is unexecuted: Alt Send Back Record
+ERR 33160 Alt Gate Record Referenced node is unexecuted: Alt Send Back Record
+ERR 33197 Alt Gate Record Referenced node is unexecuted: Alt Send Back Record
+ERR 33276 Alt Gate Record Cannot read properties of undefined (reading 'slice')
+ERR 33289 Alt Gate Record Cannot read properties of undefined (reading 'slice')
+ERR 33311 Alt Gate Record Cannot read properties of undefined (reading 'slice')
+ERR 33276 Alternate Merge Seat Cannot read properties of undefined (reading 'slice')
+ERR 33289 Alternate Merge Seat Cannot read properties of undefined (reading 'slice')
+ERR 33311 Alternate Merge Seat Cannot read properties of undefined (reading 'slice')
+ERR 33322 Alternate Merge Seat Cannot read properties of undefined (reading 'slice')
+ERR 33040 Gate Record Referenced node is unexecuted: Send Back Record
+ERR 33060 Gate Record Referenced node is unexecuted: Send Back Record
+ERR 33083 Gate Record Referenced node is unexecuted: Send Back Record
+ERR 33107 Gate Record Referenced node is unexecuted: Send Back Record
+ERR 33129 Gate Record Referenced node is unexecuted: Send Back Record
+ERR 33149 Gate Record Referenced node is unexecuted: Send Back Record
+ERR 33160 Gate Record Referenced node is unexecuted: Send Back Record
+ERR 33197 Gate Record Referenced node is unexecuted: Send Back Record
+ERR 33276 Gate Record Cannot read properties of undefined (reading 'slice')
+ERR 33289 Gate Record Cannot read properties of undefined (reading 'slice')
+ERR 33311 Gate Record Cannot read properties of undefined (reading 'slice')
+ERR 33322 Gate Record Cannot read properties of undefined (reading 'slice')
+  at 155122 base: "-APPLY S11); ANSWER: KEEP; CURED: KEEP: the change stays unapplied]\\\\n[AUDIT v38: E-GATE -- SEAT: grok; G2 NOT APPLIED (E-APPLY S13); ANSWER: CHANGE; UNCURED: the gate change raised a new LIVE item: RULE K-S3 -- K-S3 S3 DEFENDER CR4: #6 (W3 2341: a change that raises a new LIVE K item does not cure;"
+  pat : "-APPLY S11); ANSWER: KEEP; CURED: KEEP: the change stays unapplied]\\\\n[AUDIT v38: E-GATE -- SEAT: grok; G2 NOT APPLIED (E-APPLY S13); ANSWER: CHANGE; CURED: the gate change was applied]\\\\n[AUDIT v38: E-GATE -- SEAT: grok; G3 CONTRADICTION (E-GATE D38); ANSWER: CHANGE; CURED: the gate change was appl"
+DIFF 33731 Gate Record | base only: ["grok G2 NOT APPLIED (E-APPLY S13) UNCURED","grok NEW RULE K-S3 (K re-read) UNCURED"] | patched only: ["grok G2 NOT APPLIED (E-APPLY S13) CURED"]
+node runs 132: 131 equal, 1 differ, 27 errors, 241 without a saved run

@@ -1,0 +1,46 @@
+  at 312 base: "OP-DEPENDENT\",\"conceded_links\":2,\"challenge_standing\":\"PROP-DEPENDENT\",\"challenger_conceded_links\":0},\"items\":[{\"kind\":\"NOT APPLIED\",\"src\":\"E-APPLY S10\",\"sid\":\"S10\",\"key\":\"NOT APPLIED|S10\",\"why\":\"the flagged line is not in the judge text\",\"lines\":[],\"to\":\"RETRACTED: D6 vs C2\",\"live\":true,\"gid\":\"G1\"}"
+  pat : "OP-DEPENDENT\",\"conceded_links\":2,\"challenge_standing\":\"PROP-DEPENDENT\",\"challenger_conceded_links\":0},\"items\":[{\"kind\":\"NOT APPLIED\",\"src\":\"E-APPLY S11\",\"sid\":\"S11\",\"key\":\"NOT APPLIED|S11\",\"why\":\"the change regrades premise 6, which its item does not name (named: 2; pkgPS, W3 2446: a premise change "
+DIFF 33371 Alt Gate Build | base only: [] | patched only: []
+  at 282 base: "BROKEN\",\"defense_standing\":\"PROP-DEPENDENT\",\"conceded_links\":1,\"challenge_standing\":\"PROP-DEPENDENT\",\"challenger_conceded_links\":0},\"items\":[{\"kind\":\"NOT APPLIED\",\"src\":\"E-APPLY S12\",\"sid\":\"S12\",\"key\":\"NOT APPLIED|S12\",\"why\":\"the flagged line is not in the judge text\",\"lines\":[],\"to\":\"RETRACTED: D2 "
+  pat : "BROKEN\",\"defense_standing\":\"PROP-DEPENDENT\",\"conceded_links\":1,\"challenge_standing\":\"PROP-DEPENDENT\",\"challenger_conceded_links\":0},\"items\":[{\"kind\":\"CONTRADICTION\",\"src\":\"E-GATE B\",\"key\":\"ANSWER GROUND|MATTHEW 1:18|CR3|D5 VS C6\",\"why\":\"your ANSWER CHECK on Matthew 1:18 [CR3] grades the answer MISSE"
+DIFF 33461 Alt Gate Build | base only: [] | patched only: []
+ERR 33040 Alt Gate Record Referenced node is unexecuted: Alt Gate Build
+ERR 33060 Alt Gate Record Referenced node is unexecuted: Alt Send Back Record
+ERR 33083 Alt Gate Record Referenced node is unexecuted: Alt Send Back Record
+ERR 33107 Alt Gate Record Referenced node is unexecuted: Alt Send Back Record
+ERR 33129 Alt Gate Record Referenced node is unexecuted: Alt Send Back Record
+ERR 33149 Alt Gate Record Referenced node is unexecuted: Alt Send Back Record
+ERR 33160 Alt Gate Record Referenced node is unexecuted: Alt Send Back Record
+ERR 33197 Alt Gate Record Referenced node is unexecuted: Alt Send Back Record
+ERR 33276 Alt Gate Record Cannot read properties of undefined (reading 'slice')
+ERR 33289 Alt Gate Record Cannot read properties of undefined (reading 'slice')
+ERR 33311 Alt Gate Record Cannot read properties of undefined (reading 'slice')
+ERR 33276 Alternate Merge Seat Cannot read properties of undefined (reading 'slice')
+ERR 33289 Alternate Merge Seat Cannot read properties of undefined (reading 'slice')
+ERR 33311 Alternate Merge Seat Cannot read properties of undefined (reading 'slice')
+ERR 33322 Alternate Merge Seat Cannot read properties of undefined (reading 'slice')
+  at 220176 base: "e has no line form the engine reads; LINE: RETRACTED: D5 vs C6; RECORD-ONLY: no further call is made, it removes no seat. REVIEW THIS ROW.]\\\\n[AUDIT v37: SEND-BACK ITEM -- SEAT: grok; S18; NOT APPLIED: the flagged line is not in the judge text; LINE: RETRACTED: D5 vs C6; RECORD-ONLY: no further call"
+  pat : "e has no line form the engine reads; LINE: RETRACTED: D5 vs C6; RECORD-ONLY: no further call is made, it removes no seat. REVIEW THIS ROW.]\\\\n[AUDIT v27: SUPERSEDED LINE -- SEAT: grok; LABEL: LINE; ORIGINAL: ANSWER CHECK: Matthew 1:18 -- (DR3) -- MEANS: \\\\\\\"the finding comes before the conjugal comi"
+DIFF 33627 Alternate Merge Seat | base only: [] | patched only: []
+  at 1404642 base: "03:10:18.511Z\"},{\"run_token\":\"ODV1-33731-lq0uumwp\",\"seat\":\"grok\",\"seat_role\":\"panel\",\"judge_model\":null,\"kind\":\"send_back\",\"rule\":\"E-APPLY\",\"item\":\"S11 NOT APPLIED\",\"flagged_line\":\"RETRACTED: D5 vs C1\",\"prompt_sent\":null,\"full_reply\":null,\"reply_error\":null,\"response_line\":null,\"cure_status\":\"UNCURE"
+  pat : "03:10:18.511Z\"},{\"run_token\":\"ODV1-33731-lq0uumwp\",\"seat\":\"grok\",\"seat_role\":\"panel\",\"judge_model\":null,\"kind\":\"send_back\",\"rule\":\"E-APPLY\",\"item\":\"S13 NOT APPLIED\",\"flagged_line\":\"(struck: link-round grant, not out of round)\",\"prompt_sent\":null,\"full_reply\":null,\"reply_error\":null,\"response_line\":n"
+DIFF 33731 Alternate Merge Seat | base only: [] | patched only: []
+  at 347181 base: "PLIED\",\"src\":\"E-APPLY S16\",\"live\":true,\"why\":\"the CHANGE TO line has no line form the engine reads\"},{\"gid\":\"G7\",\"kind\":\"NOT APPLIED\",\"src\":\"E-APPLY S18\",\"live\":true,\"why\":\"the flagged line is not in the judge text\"},{\"gid\":\"G8\",\"kind\":\"NOT APPLIED\",\"src\":\"E-APPLY S8\",\"live\":true,\"why\":\"the collisio"
+  pat : "PLIED\",\"src\":\"E-APPLY S16\",\"live\":true,\"why\":\"the CHANGE TO line has no line form the engine reads\"},{\"gid\":\"G7\",\"kind\":\"NOT APPLIED\",\"src\":\"E-APPLY S8\",\"live\":true,\"why\":\"the collision line of D1 vs C2 is still graded CHALLENGER LINK BROKEN, and a broken link keeps its FORCED line (ruling 411; pkgR"
+DIFF 33627 Gate Build | base only: [] | patched only: []
+  at 306630 base: "ne of the two lines so they agree.\"}],\"newk_error\":null,\"rounds_read\":true},{\"seat\":\"grok\",\"items\":[{\"gid\":\"G1\",\"kind\":\"NOT APPLIED\",\"src\":\"E-APPLY S11\",\"live\":true,\"why\":\"the flagged line is not in the judge text\"},{\"gid\":\"G2\",\"kind\":\"NOT APPLIED\",\"src\":\"E-APPLY S13\",\"live\":true,\"why\":\"the CHANGE T"
+  pat : "ne of the two lines so they agree.\"}],\"newk_error\":null,\"rounds_read\":true},{\"seat\":\"grok\",\"items\":[{\"gid\":\"G1\",\"kind\":\"NOT APPLIED\",\"src\":\"E-APPLY S13\",\"live\":true,\"why\":\"the CHANGE TO line has no line form the engine reads\"},{\"gid\":\"G2\",\"kind\":\"CONTRADICTION\",\"src\":\"E-GATE D38\",\"live\":true,\"why\":\""
+DIFF 33731 Gate Build | base only: [] | patched only: []
+ERR 33040 Gate Record Referenced node is unexecuted: Send Back Record
+ERR 33060 Gate Record Referenced node is unexecuted: Send Back Record
+ERR 33083 Gate Record Referenced node is unexecuted: Send Back Record
+ERR 33107 Gate Record Referenced node is unexecuted: Send Back Record
+ERR 33129 Gate Record Referenced node is unexecuted: Send Back Record
+ERR 33149 Gate Record Referenced node is unexecuted: Send Back Record
+ERR 33160 Gate Record Referenced node is unexecuted: Send Back Record
+ERR 33197 Gate Record Referenced node is unexecuted: Send Back Record
+ERR 33276 Gate Record Cannot read properties of undefined (reading 'slice')
+ERR 33289 Gate Record Cannot read properties of undefined (reading 'slice')
+ERR 33311 Gate Record Cannot read properties of undefined (reading 'slice')
+ERR 33322 Gate Record Cannot read properties of undefined (reading 'slice')
+node runs 132: 126 equal, 6 differ, 27 errors, 241 without a saved run
