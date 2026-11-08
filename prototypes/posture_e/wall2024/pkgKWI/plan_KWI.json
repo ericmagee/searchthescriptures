@@ -1,0 +1,25 @@
+{
+ "nodes": [
+  {
+   "node": "Enforcer Build",
+   "base": "fetchback_live_s68",
+   "file": "Enforcer_Build.js",
+   "before": "f93a664e8a7d",
+   "after": "130d2815ff69"
+  },
+  {
+   "node": "Alt Judge Enforcer Build",
+   "base": "fetchback_live_s68",
+   "file": "Alt_Judge_Enforcer_Build.js",
+   "before": "a99b1adfe709",
+   "after": "862dd8fdd920"
+  },
+  {
+   "node": "R2 Alt Judge Enforcer Build",
+   "base": "fetchback_live_s68",
+   "file": "R2_Alt_Judge_Enforcer_Build.js",
+   "before": "7de77e15b885",
+   "after": "095dfc94e686"
+  }
+ ]
+}

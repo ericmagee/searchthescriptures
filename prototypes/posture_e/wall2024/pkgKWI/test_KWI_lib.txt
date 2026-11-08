@@ -1,0 +1,121 @@
+OK Alt_Gate_Build.js carries kwiCut2024
+OK Alt_Gate_Record.js carries kwiCut2024
+OK Alternate_Build.js carries kwiCut2024
+OK Alternate_Cure_Build.js carries kwiCut2024
+OK Alternate_Cure_Normalize.js carries kwiCut2024
+OK Alternate_Merge_1.js carries kwiCut2024
+OK Alternate_Merge_Seat.js carries kwiCut2024
+OK Alternate_Payloads.js carries kwiCut2024
+OK Cure_Build.js carries kwiCut2024
+OK Cure_Check.js carries kwiCut2024
+OK Cure_Normalize.js carries kwiCut2024
+OK Extract_Independent_Verdict.js carries kwiCut2024
+OK Gate_Build.js carries kwiCut2024
+OK Gate_Record.js carries kwiCut2024
+OK Panel_Cure_Build_1.js carries kwiCut2024
+OK Panel_Cure_Build_2.js carries kwiCut2024
+OK Panel_Cure_Build_3.js carries kwiCut2024
+OK Panel_Cure_Check.js carries kwiCut2024
+OK Panel_Cure_Normalize_1.js carries kwiCut2024
+OK Panel_Cure_Normalize_2.js carries kwiCut2024
+OK Panel_Cure_Normalize_3.js carries kwiCut2024
+OK Panel_Payloads.js carries kwiCut2024
+OK R2_Alt_Gate_Build.js carries kwiCut2024
+OK R2_Alt_Gate_Record.js carries kwiCut2024
+OK R2_Alternate_Build.js carries kwiCut2024
+OK R2_Alternate_Cure_Build.js carries kwiCut2024
+OK R2_Alternate_Cure_Normalize.js carries kwiCut2024
+OK R2_Alternate_Merge.js carries kwiCut2024
+OK R2_Alternate_Merge_Seat.js carries kwiCut2024
+OK R2_Alternate_Payloads.js carries kwiCut2024
+replay: 665 node runs over 45 runs; differ only in rule text: 157; changed beyond rule text: 82
+new K-W item text: 0
+   33218 Extract Independent Verdict: changed
+   33218 Panel Payloads: changed
+   33222 Alternate Payloads: changed
+   33222 Extract Independent Verdict: changed
+   33222 Panel Payloads: changed
+   33249 Alternate Payloads: changed
+   33249 Extract Independent Verdict: changed
+   33249 Panel Payloads: changed
+   33261 Alternate Payloads: changed
+   33261 Extract Independent Verdict: changed
+   33261 Panel Payloads: changed
+   33299 Alternate Payloads: changed
+   33299 Extract Independent Verdict: changed
+   33299 Panel Payloads: changed
+   33345 Alternate Payloads: changed
+   33345 Extract Independent Verdict: changed
+   33345 Panel Payloads: changed
+   33371 Alternate Payloads: changed
+   33371 Extract Independent Verdict: changed
+   33371 Panel Payloads: changed
+   33389 Extract Independent Verdict: changed
+   33389 Panel Payloads: changed
+   33411 Alternate Payloads: changed
+   33411 Extract Independent Verdict: changed
+   33411 Panel Payloads: changed
+   33430 Alternate Payloads: changed
+   33430 Extract Independent Verdict: changed
+   33430 Panel Payloads: changed
+   33442 Alternate Payloads: changed
+   33442 Extract Independent Verdict: changed
+   33442 Panel Payloads: changed
+   33461 Alternate Payloads: changed
+   33461 Extract Independent Verdict: changed
+   33461 Panel Payloads: changed
+   33482 Alternate Payloads: changed
+   33482 Extract Independent Verdict: changed
+   33482 Panel Payloads: changed
+   33490 Alternate Payloads: changed
+   33490 Extract Independent Verdict: changed
+   33490 Panel Payloads: changed
+   33497 Alternate Payloads: changed
+   33497 Extract Independent Verdict: changed
+   33497 Panel Payloads: changed
+   33506 Alternate Payloads: changed
+   33506 Extract Independent Verdict: changed
+   33506 Panel Payloads: changed
+   33530 Extract Independent Verdict: changed
+   33575 Extract Independent Verdict: changed
+   33575 Panel Payloads: changed
+   33592 Extract Independent Verdict: changed
+   33592 Panel Payloads: changed
+   33605 Extract Independent Verdict: changed
+   33605 Panel Payloads: changed
+   33617 Alternate Payloads: changed
+   33617 Extract Independent Verdict: changed
+   33617 Panel Payloads: changed
+   33627 Alternate Payloads: changed
+   33627 Extract Independent Verdict: changed
+   33627 Panel Payloads: changed
+   33644 Alternate Payloads: changed
+   33644 Extract Independent Verdict: changed
+   33644 Panel Payloads: changed
+   33682 Extract Independent Verdict: changed
+   33682 Panel Payloads: changed
+   33705 Extract Independent Verdict: changed
+   33705 Panel Payloads: changed
+   33731 Alternate Payloads: changed
+   33731 Extract Independent Verdict: changed
+   33731 Panel Payloads: changed
+   33750 Extract Independent Verdict: changed
+   33750 Panel Payloads: changed
+   33774 Alternate Payloads: changed
+   33774 Extract Independent Verdict: changed
+   33774 Panel Payloads: changed
+   33798 Alternate Payloads: changed
+   33798 Extract Independent Verdict: changed
+   33798 Panel Payloads: changed
+   33815 Extract Independent Verdict: changed
+   33815 Panel Payloads: changed
+   33828 Alternate Payloads: changed
+   33828 Extract Independent Verdict: changed
+   33828 Panel Payloads: changed
+cure flips: 0
+uncured count changes: 0
+NOT APPLIED items gone: 0
+NOT APPLIED items new: 0
+OK flips listed above for ruling
+OK replay ran
+TOTAL 32 OK, 0 FAIL

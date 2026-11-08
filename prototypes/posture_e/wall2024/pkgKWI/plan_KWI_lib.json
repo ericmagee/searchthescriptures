@@ -1,0 +1,340 @@
+{
+ "library": {
+  "base": "pkgLIB/strip_RTB4_8/patched/",
+  "nodes": {
+   "Alt_Gate_Build.js": {
+    "base": "d21053b77700",
+    "patched": "d4d55072a6fa",
+    "hits": [
+     "eng.fn x1",
+     "eng.cut x1",
+     "eng.sq x1",
+     "txt.paren x3",
+     "txt.rule x1"
+    ]
+   },
+   "Alt_Gate_Record.js": {
+    "base": "115c5f21e05a",
+    "patched": "4b49007c3f1d",
+    "hits": [
+     "eng.fn x1",
+     "eng.cut x1",
+     "eng.sq x1",
+     "txt.paren x3",
+     "txt.rule x1"
+    ]
+   },
+   "Alternate_Build.js": {
+    "base": "1c07e98449dd",
+    "patched": "36c3e8582f50",
+    "hits": [
+     "eng.fn x1",
+     "eng.cut x1",
+     "eng.sq x1",
+     "txt.paren x4",
+     "txt.rule x1"
+    ]
+   },
+   "Alternate_Cure_Build.js": {
+    "base": "e7b2564a8550",
+    "patched": "9632f2e54e9f",
+    "hits": [
+     "eng.fn x1",
+     "eng.cut x1",
+     "eng.sq x1",
+     "txt.paren x4",
+     "txt.rule x1"
+    ]
+   },
+   "Alternate_Cure_Normalize.js": {
+    "base": "9ee53ffb4ca9",
+    "patched": "130338d34f35",
+    "hits": [
+     "eng.fn x1",
+     "eng.cut x1",
+     "eng.sq x1",
+     "txt.paren x3",
+     "txt.rule x1"
+    ]
+   },
+   "Alternate_Merge_1.js": {
+    "base": "9d367314b831",
+    "patched": "624fbdf50a56",
+    "hits": [
+     "eng.fn x1",
+     "eng.cut x1",
+     "eng.sq x1",
+     "txt.paren x3",
+     "txt.rule x1"
+    ]
+   },
+   "Alternate_Merge_Seat.js": {
+    "base": "e2ccbf51f9d5",
+    "patched": "367c78ffc9a6",
+    "hits": [
+     "eng.fn x1",
+     "eng.cut x1",
+     "eng.sq x1",
+     "txt.paren x3",
+     "txt.rule x1"
+    ]
+   },
+   "Alternate_Payloads.js": {
+    "base": "01e85ca7d3b9",
+    "patched": "e8cd766f3e87",
+    "hits": [
+     "eng.fn x1",
+     "eng.cut x1",
+     "eng.sq x1",
+     "txt.paren x2"
+    ]
+   },
+   "Cure_Build.js": {
+    "base": "3dec15cdf8f8",
+    "patched": "0d01b7b64a06",
+    "hits": [
+     "eng.fn x1",
+     "eng.cut x1",
+     "eng.sq x1",
+     "txt.paren x3",
+     "txt.rule x1"
+    ]
+   },
+   "Cure_Check.js": {
+    "base": "d532f7280d6f",
+    "patched": "3fb81dbe77a1",
+    "hits": [
+     "eng.fn x1",
+     "eng.cut x1",
+     "eng.sq x1",
+     "txt.paren x3",
+     "txt.rule x1"
+    ]
+   },
+   "Cure_Normalize.js": {
+    "base": "c91bd59fe1e1",
+    "patched": "1c5603cc8319",
+    "hits": [
+     "eng.fn x1",
+     "eng.cut x1",
+     "eng.sq x1",
+     "txt.paren x3",
+     "txt.rule x1"
+    ]
+   },
+   "Extract_Independent_Verdict.js": {
+    "base": "cdfb210b2640",
+    "patched": "6253066e3840",
+    "hits": [
+     "eng.fn x1",
+     "eng.cut x1",
+     "eng.sq x1",
+     "txt.paren x2"
+    ]
+   },
+   "Gate_Build.js": {
+    "base": "7509c461bb33",
+    "patched": "01eefde6d97e",
+    "hits": [
+     "eng.fn x1",
+     "eng.cut x1",
+     "eng.sq x1",
+     "txt.paren x3",
+     "txt.rule x1"
+    ]
+   },
+   "Gate_Record.js": {
+    "base": "129f010033fb",
+    "patched": "94666c373d66",
+    "hits": [
+     "eng.fn x1",
+     "eng.cut x1",
+     "eng.sq x1",
+     "txt.paren x3",
+     "txt.rule x1"
+    ]
+   },
+   "Panel_Cure_Build_1.js": {
+    "base": "689e84f1f8f6",
+    "patched": "4a8a1ac30da4",
+    "hits": [
+     "eng.fn x1",
+     "eng.cut x1",
+     "eng.sq x1",
+     "txt.paren x4",
+     "txt.rule x1"
+    ]
+   },
+   "Panel_Cure_Build_2.js": {
+    "base": "219d17894ff3",
+    "patched": "6d6662dd6fd6",
+    "hits": [
+     "eng.fn x1",
+     "eng.cut x1",
+     "eng.sq x1",
+     "txt.paren x4",
+     "txt.rule x1"
+    ]
+   },
+   "Panel_Cure_Build_3.js": {
+    "base": "0448f5409502",
+    "patched": "0002fb1023ca",
+    "hits": [
+     "eng.fn x1",
+     "eng.cut x1",
+     "eng.sq x1",
+     "txt.paren x4",
+     "txt.rule x1"
+    ]
+   },
+   "Panel_Cure_Check.js": {
+    "base": "994ae8da1c44",
+    "patched": "56d447e7fa93",
+    "hits": [
+     "eng.fn x1",
+     "eng.cut x1",
+     "eng.sq x1",
+     "txt.paren x3",
+     "txt.rule x1"
+    ]
+   },
+   "Panel_Cure_Normalize_1.js": {
+    "base": "ed7f8f1ef500",
+    "patched": "735754d58bd1",
+    "hits": [
+     "eng.fn x1",
+     "eng.cut x1",
+     "eng.sq x1",
+     "txt.paren x3",
+     "txt.rule x1"
+    ]
+   },
+   "Panel_Cure_Normalize_2.js": {
+    "base": "85a9e88bacd2",
+    "patched": "bf08f8cd9a19",
+    "hits": [
+     "eng.fn x1",
+     "eng.cut x1",
+     "eng.sq x1",
+     "txt.paren x3",
+     "txt.rule x1"
+    ]
+   },
+   "Panel_Cure_Normalize_3.js": {
+    "base": "d34c002b9478",
+    "patched": "4d4be8928874",
+    "hits": [
+     "eng.fn x1",
+     "eng.cut x1",
+     "eng.sq x1",
+     "txt.paren x3",
+     "txt.rule x1"
+    ]
+   },
+   "Panel_Payloads.js": {
+    "base": "9db602fc59c7",
+    "patched": "b41c216bf1c7",
+    "hits": [
+     "eng.fn x1",
+     "eng.cut x1",
+     "eng.sq x1",
+     "txt.paren x2"
+    ]
+   },
+   "R2_Alt_Gate_Build.js": {
+    "base": "cf4c1d6cf3ab",
+    "patched": "4fe7c3b7348b",
+    "hits": [
+     "eng.fn x1",
+     "eng.cut x1",
+     "eng.sq x1",
+     "txt.paren x3",
+     "txt.rule x1"
+    ]
+   },
+   "R2_Alt_Gate_Record.js": {
+    "base": "95224371e1f7",
+    "patched": "2987e829d6ae",
+    "hits": [
+     "eng.fn x1",
+     "eng.cut x1",
+     "eng.sq x1",
+     "txt.paren x3",
+     "txt.rule x1"
+    ]
+   },
+   "R2_Alternate_Build.js": {
+    "base": "303e213d5846",
+    "patched": "8b520f4c8b0c",
+    "hits": [
+     "eng.fn x1",
+     "eng.cut x1",
+     "eng.sq x1",
+     "txt.paren x4",
+     "txt.rule x1"
+    ]
+   },
+   "R2_Alternate_Cure_Build.js": {
+    "base": "c81fd5b2f091",
+    "patched": "7afbecfc759e",
+    "hits": [
+     "eng.fn x1",
+     "eng.cut x1",
+     "eng.sq x1",
+     "txt.paren x4",
+     "txt.rule x1"
+    ]
+   },
+   "R2_Alternate_Cure_Normalize.js": {
+    "base": "d2c7bbfedde3",
+    "patched": "387b5c522184",
+    "hits": [
+     "eng.fn x1",
+     "eng.cut x1",
+     "eng.sq x1",
+     "txt.paren x3",
+     "txt.rule x1"
+    ]
+   },
+   "R2_Alternate_Merge.js": {
+    "base": "4d3949f53ea3",
+    "patched": "2976d78bce8c",
+    "hits": [
+     "eng.fn x1",
+     "eng.cut x1",
+     "eng.sq x1",
+     "txt.paren x3",
+     "txt.rule x1"
+    ]
+   },
+   "R2_Alternate_Merge_Seat.js": {
+    "base": "2b4833894198",
+    "patched": "66c1c8212326",
+    "hits": [
+     "eng.fn x1",
+     "eng.cut x1",
+     "eng.sq x1",
+     "txt.paren x3",
+     "txt.rule x1"
+    ]
+   },
+   "R2_Alternate_Payloads.js": {
+    "base": "b72c536a5373",
+    "patched": "7d6258f3da34",
+    "hits": [
+     "eng.fn x1",
+     "eng.cut x1",
+     "eng.sq x1",
+     "txt.paren x2"
+    ]
+   }
+  }
+ },
+ "tally": {
+  "eng.fn": 30,
+  "eng.cut": 30,
+  "eng.sq": 30,
+  "txt.paren": 93,
+  "txt.rule": 26
+ }
+}
