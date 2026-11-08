@@ -1,0 +1,101 @@
+OK 33218 (claude v opus) panel ["gemini","chatgpt","sol"] -> ["chatgpt","sol","qwen_flash"]; single gemini -> chatgpt; reserve grok -> null; alt ["grok"] -> []
+OK 33218 Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter","qwen_flash=qwen/qwen3.8-flash/openrouter"] reserve null alternates []
+OK 33218 Accept Build asks ["chatgpt","sol","qwen_flash"]; qwen_flash body model qwen/qwen3.8-flash
+OK 33222 (claude v opus) panel ["gemini","chatgpt","sol"] -> ["chatgpt","sol","qwen_flash"]; single gemini -> chatgpt; reserve grok -> null; alt ["grok"] -> []
+OK 33222 Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter","qwen_flash=qwen/qwen3.8-flash/openrouter"] reserve null alternates []
+OK 33222 Accept Build asks ["chatgpt","sol","qwen_flash"]; qwen_flash body model qwen/qwen3.8-flash
+OK 33249 (claude v opus) panel ["gemini","chatgpt","sol"] -> ["chatgpt","sol","qwen_flash"]; single gemini -> chatgpt; reserve grok -> null; alt ["grok"] -> []
+OK 33249 Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter","qwen_flash=qwen/qwen3.8-flash/openrouter"] reserve null alternates []
+OK 33249 Accept Build asks ["chatgpt","sol","qwen_flash"]; qwen_flash body model qwen/qwen3.8-flash
+OK 33261 (claude v opus) panel ["gemini","chatgpt","sol"] -> ["chatgpt","sol","qwen_flash"]; single gemini -> chatgpt; reserve grok -> null; alt ["grok"] -> []
+OK 33261 Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter","qwen_flash=qwen/qwen3.8-flash/openrouter"] reserve null alternates []
+OK 33261 Accept Build asks ["chatgpt","sol","qwen_flash"]; qwen_flash body model qwen/qwen3.8-flash
+OK 33276 patched Init Seats refuses (ORACLE_DEBATE_V1 Init refused: topic missing or empty. run_token=ODV1-33276-t203eo5y); base refuses too: ORACLE_DEBATE_V1 Init refused: topic missing or empty. run_token=ODV1-33276-0f0vh2sc
+OK 33289 patched Init Seats refuses (ORACLE_DEBATE_V1 Init refused: topic missing or empty. run_token=ODV1-33289-32fbdvt2); base refuses too: ORACLE_DEBATE_V1 Init refused: topic missing or empty. run_token=ODV1-33289-0pno27vd
+OK 33299 (claude v opus) panel ["gemini","chatgpt","sol"] -> ["chatgpt","sol","qwen_flash"]; single gemini -> chatgpt; reserve grok -> null; alt ["grok"] -> []
+OK 33299 Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter","qwen_flash=qwen/qwen3.8-flash/openrouter"] reserve null alternates []
+OK 33299 Accept Build asks ["chatgpt","sol","qwen_flash"]; qwen_flash body model qwen/qwen3.8-flash
+OK 33311 patched Init Seats refuses (ORACLE_DEBATE_V1 Init refused: topic missing or empty. run_token=ODV1-33311-9w216g2o); base refuses too: ORACLE_DEBATE_V1 Init refused: topic missing or empty. run_token=ODV1-33311-emc8nl7u
+OK 33322 patched Init Seats refuses (ORACLE_DEBATE_V1 Init refused: topic missing or empty. run_token=ODV1-33322-cj3copuq); base refuses too: ORACLE_DEBATE_V1 Init refused: topic missing or empty. run_token=ODV1-33322-kfxkve8o
+OK 33345 (claude v opus) panel ["gemini","chatgpt","sol"] -> ["chatgpt","sol","qwen_flash"]; single gemini -> chatgpt; reserve grok -> null; alt ["grok"] -> []
+OK 33345 Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter","qwen_flash=qwen/qwen3.8-flash/openrouter"] reserve null alternates []
+OK 33345 Accept Build asks ["chatgpt","sol","qwen_flash"]; qwen_flash body model qwen/qwen3.8-flash
+OK 33371 (claude v opus) panel ["gemini","chatgpt","sol"] -> ["chatgpt","sol","qwen_flash"]; single gemini -> chatgpt; reserve grok -> null; alt ["grok"] -> []
+OK 33371 Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter","qwen_flash=qwen/qwen3.8-flash/openrouter"] reserve null alternates []
+OK 33371 Accept Build asks ["chatgpt","sol","qwen_flash"]; qwen_flash body model qwen/qwen3.8-flash
+OK 33389 (claude v opus) panel ["gemini","chatgpt","sol"] -> ["chatgpt","sol","qwen_flash"]; single gemini -> chatgpt; reserve grok -> null; alt ["grok"] -> []
+OK 33389 Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter","qwen_flash=qwen/qwen3.8-flash/openrouter"] reserve null alternates []
+OK 33389 Accept Build asks ["chatgpt","sol","qwen_flash"]; qwen_flash body model qwen/qwen3.8-flash
+OK 33411 (claude v opus) panel ["gemini","chatgpt","sol"] -> ["chatgpt","sol","qwen_flash"]; single gemini -> chatgpt; reserve grok -> null; alt ["grok"] -> []
+OK 33411 Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter","qwen_flash=qwen/qwen3.8-flash/openrouter"] reserve null alternates []
+OK 33411 Accept Build asks ["chatgpt","sol","qwen_flash"]; qwen_flash body model qwen/qwen3.8-flash
+OK 33430 (claude v opus) panel ["gemini","chatgpt","sol"] -> ["chatgpt","sol","qwen_flash"]; single gemini -> chatgpt; reserve grok -> null; alt ["grok"] -> []
+OK 33430 Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter","qwen_flash=qwen/qwen3.8-flash/openrouter"] reserve null alternates []
+OK 33430 Accept Build asks ["chatgpt","sol","qwen_flash"]; qwen_flash body model qwen/qwen3.8-flash
+OK 33442 (claude v opus) panel ["gemini","chatgpt","sol"] -> ["chatgpt","sol","qwen_flash"]; single gemini -> chatgpt; reserve grok -> null; alt ["grok"] -> []
+OK 33442 Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter","qwen_flash=qwen/qwen3.8-flash/openrouter"] reserve null alternates []
+OK 33442 Accept Build asks ["chatgpt","sol","qwen_flash"]; qwen_flash body model qwen/qwen3.8-flash
+OK 33461 (claude v opus) panel ["gemini","chatgpt","sol"] -> ["chatgpt","sol","qwen_flash"]; single gemini -> chatgpt; reserve grok -> null; alt ["grok"] -> []
+OK 33461 Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter","qwen_flash=qwen/qwen3.8-flash/openrouter"] reserve null alternates []
+OK 33461 Accept Build asks ["chatgpt","sol","qwen_flash"]; qwen_flash body model qwen/qwen3.8-flash
+OK 33482 (claude v opus) panel ["gemini","chatgpt","sol"] -> ["chatgpt","sol","qwen_flash"]; single gemini -> chatgpt; reserve grok -> null; alt ["grok"] -> []
+OK 33482 Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter","qwen_flash=qwen/qwen3.8-flash/openrouter"] reserve null alternates []
+OK 33482 Accept Build asks ["chatgpt","sol","qwen_flash"]; qwen_flash body model qwen/qwen3.8-flash
+OK 33490 (claude v opus) panel ["gemini","chatgpt","sol"] -> ["chatgpt","sol","qwen_flash"]; single gemini -> chatgpt; reserve grok -> null; alt ["grok"] -> []
+OK 33490 Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter","qwen_flash=qwen/qwen3.8-flash/openrouter"] reserve null alternates []
+OK 33490 Accept Build asks ["chatgpt","sol","qwen_flash"]; qwen_flash body model qwen/qwen3.8-flash
+OK 33497 (claude v opus) panel ["gemini","chatgpt","grok"] -> ["chatgpt","qwen_flash","sol"]; single gemini -> chatgpt; reserve null -> null; alt ["sol"] -> []
+OK 33497 Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","qwen_flash=qwen/qwen3.8-flash/openrouter","sol=openai/gpt-6.1-sol/openrouter"] reserve null alternates []
+OK 33497 Accept Build asks ["chatgpt","sol","qwen_flash"]; qwen_flash body model qwen/qwen3.8-flash
+OK 33506 (claude v opus) panel ["gemini","chatgpt","grok"] -> ["chatgpt","qwen_flash","sol"]; single gemini -> chatgpt; reserve null -> null; alt ["sol"] -> []
+OK 33506 Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","qwen_flash=qwen/qwen3.8-flash/openrouter","sol=openai/gpt-6.1-sol/openrouter"] reserve null alternates []
+OK 33506 Accept Build asks ["chatgpt","sol","qwen_flash"]; qwen_flash body model qwen/qwen3.8-flash
+OK 33530 (claude v opus) panel ["gemini","chatgpt","grok"] -> ["chatgpt","qwen_flash","sol"]; single gemini -> chatgpt; reserve null -> null; alt ["sol"] -> []
+OK 33530 Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","qwen_flash=qwen/qwen3.8-flash/openrouter","sol=openai/gpt-6.1-sol/openrouter"] reserve null alternates []
+OK 33530 Accept Build asks ["chatgpt","sol","qwen_flash"]; qwen_flash body model qwen/qwen3.8-flash
+OK 33575 (claude v opus) panel ["gemini","chatgpt","grok"] -> ["chatgpt","qwen_flash","sol"]; single gemini -> chatgpt; reserve null -> null; alt ["sol"] -> []
+OK 33575 Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","qwen_flash=qwen/qwen3.8-flash/openrouter","sol=openai/gpt-6.1-sol/openrouter"] reserve null alternates []
+OK 33575 Accept Build asks ["chatgpt","sol","qwen_flash"]; qwen_flash body model qwen/qwen3.8-flash
+OK 33592 (claude v opus) panel ["gemini","chatgpt","grok"] -> ["chatgpt","qwen_flash","sol"]; single gemini -> chatgpt; reserve null -> null; alt ["sol"] -> []
+OK 33592 Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","qwen_flash=qwen/qwen3.8-flash/openrouter","sol=openai/gpt-6.1-sol/openrouter"] reserve null alternates []
+OK 33592 Accept Build asks ["chatgpt","sol","qwen_flash"]; qwen_flash body model qwen/qwen3.8-flash
+OK 33605 (claude v opus) panel ["gemini","chatgpt","grok"] -> ["chatgpt","qwen_flash","sol"]; single gemini -> chatgpt; reserve null -> null; alt ["sol"] -> []
+OK 33605 Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","qwen_flash=qwen/qwen3.8-flash/openrouter","sol=openai/gpt-6.1-sol/openrouter"] reserve null alternates []
+OK 33605 Accept Build asks ["chatgpt","sol","qwen_flash"]; qwen_flash body model qwen/qwen3.8-flash
+OK 33617 (claude v opus) panel ["gemini","chatgpt","grok"] -> ["chatgpt","qwen_flash","sol"]; single gemini -> chatgpt; reserve null -> null; alt ["sol"] -> []
+OK 33617 Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","qwen_flash=qwen/qwen3.8-flash/openrouter","sol=openai/gpt-6.1-sol/openrouter"] reserve null alternates []
+OK 33617 Accept Build asks ["chatgpt","sol","qwen_flash"]; qwen_flash body model qwen/qwen3.8-flash
+OK 33627 (claude v opus) panel ["gemini","chatgpt","grok"] -> ["chatgpt","qwen_flash","sol"]; single gemini -> chatgpt; reserve null -> null; alt ["sol"] -> []
+OK 33627 Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","qwen_flash=qwen/qwen3.8-flash/openrouter","sol=openai/gpt-6.1-sol/openrouter"] reserve null alternates []
+OK 33627 Accept Build asks ["chatgpt","sol","qwen_flash"]; qwen_flash body model qwen/qwen3.8-flash
+OK 33644 (claude v opus) panel ["gemini","chatgpt","grok"] -> ["chatgpt","qwen_flash","sol"]; single gemini -> chatgpt; reserve null -> null; alt ["sol"] -> []
+OK 33644 Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","qwen_flash=qwen/qwen3.8-flash/openrouter","sol=openai/gpt-6.1-sol/openrouter"] reserve null alternates []
+OK 33644 Accept Build asks ["chatgpt","sol","qwen_flash"]; qwen_flash body model qwen/qwen3.8-flash
+OK 33682 (claude v opus) panel ["gemini","chatgpt","grok"] -> ["chatgpt","qwen_flash","sol"]; single gemini -> chatgpt; reserve null -> null; alt ["sol"] -> []
+OK 33682 Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","qwen_flash=qwen/qwen3.8-flash/openrouter","sol=openai/gpt-6.1-sol/openrouter"] reserve null alternates []
+OK 33682 Accept Build asks ["chatgpt","sol","qwen_flash"]; qwen_flash body model qwen/qwen3.8-flash
+OK 33705 (claude v opus) panel ["gemini","chatgpt","grok"] -> ["chatgpt","qwen_flash","sol"]; single gemini -> chatgpt; reserve null -> null; alt ["sol"] -> []
+OK 33705 Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","qwen_flash=qwen/qwen3.8-flash/openrouter","sol=openai/gpt-6.1-sol/openrouter"] reserve null alternates []
+OK 33705 Accept Build asks ["chatgpt","sol","qwen_flash"]; qwen_flash body model qwen/qwen3.8-flash
+OK 33731 (claude v opus) panel ["gemini","chatgpt","grok"] -> ["chatgpt","qwen_flash","sol"]; single gemini -> chatgpt; reserve null -> null; alt ["sol"] -> []
+OK 33731 Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","qwen_flash=qwen/qwen3.8-flash/openrouter","sol=openai/gpt-6.1-sol/openrouter"] reserve null alternates []
+OK 33731 Accept Build asks ["chatgpt","sol","qwen_flash"]; qwen_flash body model qwen/qwen3.8-flash
+OK 33750 (claude v opus) panel ["gemini","chatgpt","grok"] -> ["chatgpt","qwen_flash","sol"]; single gemini -> chatgpt; reserve null -> null; alt ["sol"] -> []
+OK 33750 Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","qwen_flash=qwen/qwen3.8-flash/openrouter","sol=openai/gpt-6.1-sol/openrouter"] reserve null alternates []
+OK 33750 Accept Build asks ["chatgpt","sol","qwen_flash"]; qwen_flash body model qwen/qwen3.8-flash
+OK 33774 (claude v opus) panel ["gemini","chatgpt","grok"] -> ["chatgpt","qwen_flash","sol"]; single gemini -> chatgpt; reserve null -> null; alt ["sol"] -> []
+OK 33774 Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","qwen_flash=qwen/qwen3.8-flash/openrouter","sol=openai/gpt-6.1-sol/openrouter"] reserve null alternates []
+OK 33774 Accept Build asks ["chatgpt","sol","qwen_flash"]; qwen_flash body model qwen/qwen3.8-flash
+OK 33798 (claude v opus) panel ["gemini","chatgpt","grok"] -> ["chatgpt","qwen_flash","sol"]; single gemini -> chatgpt; reserve null -> null; alt ["sol"] -> []
+OK 33798 Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","qwen_flash=qwen/qwen3.8-flash/openrouter","sol=openai/gpt-6.1-sol/openrouter"] reserve null alternates []
+OK 33798 Accept Build asks ["chatgpt","sol","qwen_flash"]; qwen_flash body model qwen/qwen3.8-flash
+OK 33815 (claude v opus) panel ["gemini","grok","chatgpt"] -> ["qwen_flash","chatgpt","sol"]; single gemini -> chatgpt; reserve null -> null; alt ["sol"] -> []
+OK 33815 Resolve Seats judges ["qwen_flash=qwen/qwen3.8-flash/openrouter","chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter"] reserve null alternates []
+OK 33815 Accept Build asks ["chatgpt","sol","qwen_flash"]; qwen_flash body model qwen/qwen3.8-flash
+OK 33828 (claude v opus) panel ["gemini","grok","chatgpt"] -> ["qwen_flash","chatgpt","sol"]; single gemini -> chatgpt; reserve null -> null; alt ["sol"] -> []
+OK 33828 Resolve Seats judges ["qwen_flash=qwen/qwen3.8-flash/openrouter","chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter"] reserve null alternates []
+OK 33828 Accept Build asks ["chatgpt","sol","qwen_flash"]; qwen_flash body model qwen/qwen3.8-flash
+OK Build Synthesis: family map knows qwen_flash; nothing else changed
+OK Build Independent Verdict: family map knows qwen_flash; nothing else changed
+OK Build Diagnostic Prompt: family map knows qwen_flash; nothing else changed
+TOTAL 100 OK, 0 FAIL
