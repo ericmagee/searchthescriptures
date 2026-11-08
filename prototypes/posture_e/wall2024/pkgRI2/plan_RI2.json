@@ -1,0 +1,115 @@
+{
+ "base": "pkgLIB/strip_GDA19",
+ "nodes": {
+  "Alt_Gate_Build.js": {
+   "before": "508002496c18",
+   "after": "508002496c18",
+   "changed": false
+  },
+  "Alt_Gate_Record.js": {
+   "before": "70bbcef79c49",
+   "after": "70bbcef79c49",
+   "changed": false
+  },
+  "Alternate_Build.js": {
+   "before": "ae36ada49514",
+   "after": "ae36ada49514",
+   "changed": false
+  },
+  "Alternate_Cure_Build.js": {
+   "before": "4215354d4c97",
+   "after": "4215354d4c97",
+   "changed": false
+  },
+  "Alternate_Cure_Normalize.js": {
+   "before": "c79f554ec84e",
+   "after": "c79f554ec84e",
+   "changed": false
+  },
+  "Alternate_Merge.js": {
+   "before": "e3b5e62fe7cb",
+   "after": "e3b5e62fe7cb",
+   "changed": false
+  },
+  "Alternate_Merge_Seat.js": {
+   "before": "6753afd5ea6e",
+   "after": "6753afd5ea6e",
+   "changed": false
+  },
+  "Alternate_Payloads.js": {
+   "before": "89b7b51b8b8e",
+   "after": "89b7b51b8b8e",
+   "changed": false
+  },
+  "Cure_Build.js": {
+   "before": "f9a6fe81a034",
+   "after": "f9a6fe81a034",
+   "changed": false
+  },
+  "Cure_Check.js": {
+   "before": "76c8b2c062f2",
+   "after": "76c8b2c062f2",
+   "changed": false
+  },
+  "Cure_Normalize.js": {
+   "before": "505460a6e22f",
+   "after": "505460a6e22f",
+   "changed": false
+  },
+  "Extract_Independent_Verdict.js": {
+   "before": "6ae65aa4fd96",
+   "after": "edfb9eed6049",
+   "changed": true
+  },
+  "Gate_Build.js": {
+   "before": "7bd8e1668353",
+   "after": "7bd8e1668353",
+   "changed": false
+  },
+  "Gate_Record.js": {
+   "before": "f312a00d2bea",
+   "after": "f312a00d2bea",
+   "changed": false
+  },
+  "Panel_Cure_Build_1.js": {
+   "before": "ecbe0eb56767",
+   "after": "ecbe0eb56767",
+   "changed": false
+  },
+  "Panel_Cure_Build_2.js": {
+   "before": "1a04cbf0c35f",
+   "after": "1a04cbf0c35f",
+   "changed": false
+  },
+  "Panel_Cure_Build_3.js": {
+   "before": "ba0cfb717858",
+   "after": "ba0cfb717858",
+   "changed": false
+  },
+  "Panel_Cure_Check.js": {
+   "before": "efbf45f7a186",
+   "after": "efbf45f7a186",
+   "changed": false
+  },
+  "Panel_Cure_Normalize_1.js": {
+   "before": "9feb6e77f9c7",
+   "after": "9feb6e77f9c7",
+   "changed": false
+  },
+  "Panel_Cure_Normalize_2.js": {
+   "before": "90adb7d8c2a8",
+   "after": "90adb7d8c2a8",
+   "changed": false
+  },
+  "Panel_Cure_Normalize_3.js": {
+   "before": "734cb246ceb1",
+   "after": "734cb246ceb1",
+   "changed": false
+  },
+  "Panel_Payloads.js": {
+   "before": "ed208683a6c5",
+   "after": "ed208683a6c5",
+   "changed": false
+  }
+ }
+}
