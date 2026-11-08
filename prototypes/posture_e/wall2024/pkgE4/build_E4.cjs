@@ -8,12 +8,14 @@ const once=(s,a,b,nm)=>{const k=s.split(a).length-1;if(k!==1)throw new Error(nm+
 // a stable 16-hex hash in plain JS (the Code node has no crypto): two FNV-1a 32 passes with different seeds
 const H="const __e4h=s=>{s=String(s);let a=0x811c9dc5,b=0x01000193^0x9e3779b9;for(let i=0;i<s.length;i++){const c=s.charCodeAt(i);a^=c;a=Math.imul(a,0x01000193)>>>0;b^=c;b=Math.imul(b,0x01000193)>>>0;b^=b>>>13;}return a.toString(16).padStart(8,'0')+b.toString(16).padStart(8,'0');};";
 const stub=fs.readFileSync(STUB,'utf8');
+const __ACB=byName('Alternate Call openrouter').parameters.jsonBody;const CARRY=__ACB.slice('={{ '.length,__ACB.lastIndexOf('($json.alt.body)'));if(!/^\(__b=>\{/.test(CARRY))throw new Error('carry fn');
 const RET="return await new Function('$','$input','return (async()=>{\\n'+__S+'\\n})();')($,$input);";
 if(stub.split(RET).length!==2)throw new Error('stub return anchor');
 // 1. Early Alternate Build: Alternate Build's own code, fed by Panel Cure Check (candidates = drv_uncured > 0 after the cure); keeps the calls only.
 const EAB=stub.replace(RET,()=>H+"\nlet __R0=[];try{__R0=await new Function('$','$input','return (async()=>{\\n'+__S+'\\n})();')($,$input);}catch(e){return [];} /* pkgE4: same build as Alternate Build; any fault starts nothing */\n"
  +"const __tok=$('Init Seats').first().json.run_token;const __ex=String($execution.id);\n"
- +"return (__R0||[]).filter(x=>x&&x.json&&x.json.alt&&!x.json.alt.skip&&x.json.alt.body).map(x=>({json:{alt:x.json.alt,early:{run_token:__tok,seat_for:x.json.alt.removed_seat,alt_seat:x.json.alt.seat,api_model:x.json.alt.api_model,payload_sha:__e4h(JSON.stringify(x.json.alt.body)),exec:__ex}}}));");
+ +"const __carry="+CARRY+"; /* pkgE4 v2 (W3 3216): Alternate Call openrouter's own body expression, verbatim, so grok's acceptance turn gets its reasoning_details here, where the earlier nodes can be read */\n"
+ +"return (__R0||[]).filter(x=>x&&x.json&&x.json.alt&&!x.json.alt.skip&&x.json.alt.body).map(x=>({json:{alt:{...x.json.alt,body_sent:__carry(x.json.alt.body)},early:{run_token:__tok,seat_for:x.json.alt.removed_seat,alt_seat:x.json.alt.seat,api_model:x.json.alt.api_model,payload_sha:__e4h(JSON.stringify(x.json.alt.body)),exec:__ex}}}));");
 // 2. Alternate Build: same build, then the early reply is used only when EVERY call has a stored reply for the same seat and the same body.
 const AB=stub.replace(RET,()=>H+"\nconst __R0=await new Function('$','$input','return (async()=>{\\n'+__S+'\\n})();')($,{first:()=>$('Alternate Needed?').first(),last:()=>$('Alternate Needed?').last(),all:()=>$('Alternate Needed?').all(),get item(){return $('Alternate Needed?').first();}}); /* pkgE4: Get Early Alternate sits between Alternate Needed? and this node */\n"
  +"let __E=[];try{if($('Get Early Alternate').isExecuted)__E=$('Get Early Alternate').all().map(i=>i.json).filter(e=>e&&typeof e.seat_for==='string');}catch(e){__E=[];} /* the HTTP node splits the returned array into items */\n"
@@ -54,8 +56,7 @@ plan.connections={
  note:'Early Alternate Build sits ABOVE Enforcer Build on the canvas (executionOrder v1 runs the upper branch of Panel Cure Check first; it returns in seconds and Execute Workflow does not wait).'};
 fs.writeFileSync(OUT+'main_nodes_new.json',JSON.stringify(newNodes,null,1));fs.writeFileSync(OUT+'main_nodes_patched.json',JSON.stringify(patched,null,1));
 // 5. sub-workflow
-const body=AC.parameters.jsonBody.replace(/if\(\/\^x-ai[\s\S]*?return o;\}\)\(\$json\.alt\.body\) \}\}$/,"return o;})($json.alt.body) }}");
-if(body===AC.parameters.jsonBody)throw new Error('sub body: x-ai carry block not cut');
+const body='={{ $json.alt.body_sent }}'; /* pkgE4 v2: the body is carried and shaped in the main flow (Early Alternate Build) and sent unchanged */
 const SUB={name:'WALL-2024 Early Alternate',settings:{executionOrder:'v1',callerPolicy:'workflowsFromSameOwner'},nodes:[
  {name:'Early Alternate In',type:'n8n-nodes-base.executeWorkflowTrigger',typeVersion:1.1,position:[0,0],parameters:{inputSource:'passthrough'}},
  {name:'Early Alternate Call openrouter',type:'n8n-nodes-base.httpRequest',typeVersion:4.3,position:[240,0],onError:'continueRegularOutput',

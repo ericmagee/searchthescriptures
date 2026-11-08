@@ -30,3 +30,9 @@
 
 ## Revert
 Restore the 39 nodes from the prewrite copy, delete the 5 new nodes and the sub-workflow, and run the DROP lines in e4.sql.
+
+## v2 (W3 3216 FAIL: grok's reasoning carry)
+- The alternate body is system, user, assistant, user. The assistant turn is grok's own acceptance reply, and the live Alternate Call expression attaches its reasoning_details from Accept Call openrouter.
+- v2: Early Alternate Build applies Alternate Call openrouter's own body expression, verbatim, in the main flow, where those nodes can be read, and hands off alt.body_sent. The sub-workflow sends $json.alt.body_sent unchanged. payload_sha stays the hash of alt.body, as Alternate Build compares it.
+- test_E4_carry, W3's bar: in 11 of 11 saved runs, the early request (built with Send Back, Alternate Cure and Alternate Call hidden) equals the live expression evaluated at gate time on the saved run. 10 grok runs carry reasoning_details on the acceptance turn, and 1 sol run has none.
+- test_E4: 56 OK (unchanged).
