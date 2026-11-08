@@ -1,5 +1,5 @@
-OK replay ran on 431 node runs (35 could not run, same in base: 35)
-OK outputs differ only in the grounds clause of recomputed count lines (22 node runs differ; stray: none)
+OK replay ran on 449 node runs (36 could not run, same in base: 36)
+OK outputs differ only in the grounds clause of recomputed count lines (23 node runs differ; stray: none)
    node runs with a nonzero broken_at_collision split: none
    recomputed lines with grounds: 3 in node runs, 3 distinct:
      CHALLENGER CONCEDED LINKS: 1 -- recomputed after the cure from the cured lines (CORRECTED COUNT CHALLENGER 1) -- grounds: the cure names none (the cure lowered the count from 3 and does not say which premises it keeps).

@@ -14,8 +14,9 @@ function d38Items2024(T0,T1,raw){const out=[];const U=s=>String(s==null?'':s).to
   if((m=s.match(/^(challenger|defender)(?:-directed)?\s+premise\s+(\d+)$/i))){sd=U(m[1]);n=+m[2];}
   else if((m=s.match(/^premise\s+(\d+)\s*\(?\s*against\s+(?:the\s+)?(challenger|defender)\s*\)?$/i))){sd=U(m[2]);n=+m[1];}
   else if((m=s.match(/^LINK\s+(?:D)?(\d+)$/i))){sd='DEFENDER';n=+m[1];}
-  if(!sd)continue;const k=cntOf(sd);if(!k||k.n!==0)continue;
-  out.push({type:'PREM',key:'D38|PREM|'+sd+'|'+n,why:'your RULING card grades '+sd.toLowerCase()+' premise '+n+' '+c.grade+', which counts it, but your '+(sd==='CHALLENGER'?'CHALLENGER CONCEDED LINKS':'CONCEDED LINKS')+' line counts 0. Change one of the two lines so they agree.',lines:[c.raw,k.raw]});}
+  if(!sd)continue;const k=cntOf(sd);if(!k||k.n!==0)continue;const lab=sd==='CHALLENGER'?'CHALLENGER CONCEDED LINKS':'CONCEDED LINKS';const src=d38CountSrc2024(T1,raw,sd,k.raw);
+  const why='your RULING card grades '+sd.toLowerCase()+' premise '+n+' '+c.grade+', which counts it, but your '+lab+' line counts 0.'+(src?' That count came from the cure ('+src+'). Change the RULING card, not the count: write the card again with a grade that does not count premise '+n+'. '+(sd==='CHALLENGER'?'Raising CHALLENGER CONCEDED LINKS here is an Oracle concede and is refused':'Raising CONCEDED LINKS here is refused')+' (W3 3120).':' Change one of the two lines so they agree.');
+  out.push({type:'PREM',key:'D38|PREM|'+sd+'|'+n,why,lines:[c.raw,k.raw],...(src?{d38c:{lab,src}}:{})});}
  for(const sd of ['DEFENDER','CHALLENGER']){const G=sd+' LINK BROKEN';const k=cntOf(sd);if(!k||k.n<1)continue;const lab=sd==='CHALLENGER'?'CHALLENGER CONCEDED LINKS':'CONCEDED LINKS';
   const y0=P0.cn[lab];const same=!!y0&&one(y0.raw)===one(k.raw);const am=String(raw||'').match(new RegExp('counted_premises_'+sd.toLowerCase()+'\\\\?"\\s*:\\s*\\[([^\\]]*)\\]'));
   const arr=am?(am[1].match(/\d+/g)||[]).map(Number):null;if(!same||!arr||arr.length!==k.n)continue;
@@ -26,3 +27,11 @@ function d38Items2024(T0,T1,raw){const out=[];const U=s=>String(s==null?'':s).to
    if(cards.some(c=>/^(UNEXHIBITED|CONCEDED)$/.test(c.grade)&&new RegExp('(?:PREMISE|LINK)\\s+(?:D)?'+n+'$').test(U(c.subj))&&(sd==='DEFENDER'?!/CHALLENGER/.test(U(c.subj)):/CHALLENGER/.test(U(c.subj)))))continue;
    out.push({type:'BASIS',key:'D38|BASIS|'+sd+'|'+n,why:'your '+lab+' line counts '+k.n+' with '+sd.toLowerCase()+' premise '+n+' among them (counted premises '+arr.join(', ')+'), but '+moved.map(z=>z.link).join(', ')+' is now graded '+moved.map(z=>z.grade).join(', ')+' (it was '+G+'), and no line left in your text grounds premise '+n+' as conceded or unexhibited. Recount the line, or regrade the collision.',lines:moved.map(z=>z.raw).concat([k.raw])});}}
  return out;}
+/* pkgD38 ASK 2 (W3 3120): a count that came from a cure (the engine recount, CORRECTED COUNT, K-UNX) is fixed; the PREM item may change only the card. */
+function d38CountSrc2024(T1,raw,sd,cl){const u=String(cl||'').replace(/[*_`\\]+/g,'').toUpperCase();
+ if(/RECOMPUTED AFTER THE CURE/.test(u))return 'the engine recount after the cure';if(/CORRECTED COUNT/.test(u))return 'CORRECTED COUNT';
+ if(String(T1||'').split('\n').some(l=>new RegExp('^\\s*(?:[-\u2022]|\\d+[.)])?\\s*CORRECTED COUNT\\s*:\\s*'+sd+'\\b','i').test(l.replace(/[*_`]+/g,''))))return 'CORRECTED COUNT';
+ try{if(typeof rctOut==='function'&&rctOut(raw,sd).size)return 'K-UNX';}catch(e){}return null;}
+function d38Refuse2024(to,x){try{const c=x&&x.d38c;if(!c)return null;const t=String(to==null?'':to).replace(/\\+/g,'').replace(/[*_`"\u201c\u201d]+/g,'').trim();
+ if(typeof sbLabel!=='function'||sbLabel(t)!==c.lab)return null;const m=t.match(/CONCEDED LINKS\s*:\s*(\d+)/i);if(!m||+m[1]<1)return null;
+ return 'pkgD38 (W3 3120): the count came from the cure ('+c.src+'), so this item may change only the RULING card; the change raises '+c.lab+' to '+m[1]+(c.lab==='CHALLENGER CONCEDED LINKS'?', an Oracle concede,':'')+' and is refused. The count stays at its cure value.';}catch(e){return null;}}

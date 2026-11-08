@@ -6,9 +6,13 @@ const SRC='pkgLIB/strip_R1B/patched/',DST='pkgLIB/strip_D38/patched/';fs.mkdirSy
 const FN=fs.readFileSync('pkgD38/d38.js','utf8').trim();
 const A1='function gateItems2024(seat,raw,F,its,ctx){';
 const A2=" const NK=gateNewK2024(T0,T1,F,R1.fields,ctx);for(const x of NK.items)items.push({kind:'RULE '+x.rule,src:'K re-read',key:x.key,why:x.why,lines:x.lines,live:x.live&&GATE_STATUS.RULE==='LIVE'});\n";
-const B2=A2+" for(const x of d38Items2024(T0,T1,raw))items.push({kind:'CONTRADICTION',src:'E-GATE D38',key:x.key,why:x.why,lines:x.lines,live:D38_STATUS[x.type]==='LIVE'}); /* pkgD38: last, so earlier gate ids keep their numbers */\n";
+const B2=A2+" for(const x of d38Items2024(T0,T1,raw))items.push({kind:'CONTRADICTION',src:'E-GATE D38',key:x.key,why:x.why,lines:x.lines,live:D38_STATUS[x.type]==='LIVE',...(x.d38c?{d38c:x.d38c}:{})}); /* pkgD38: last, so earlier gate ids keep their numbers */\n";
+const EXTRA=[ /* ASK 2 (W3 3120): carry the cure-count flag to the gate change and refuse a count raise on it */
+ ["why:a.why,...(x.sid?{psrc:x.sid}:{})});","why:a.why,...(x.sid?{psrc:x.sid}:{}),...(x.d38c?{d38c:x.d38c}:{})});"],
+ ["{const __rct=rctCheck(to,x,raw,RD,","{const __d38=typeof d38Refuse2024==='function'?d38Refuse2024(to,x):null;if(__d38){items.push({sid:x.sid,kind:'NOT APPLIED',why:__d38,to,lines:[o],d38r:true});continue;}}   {const __rct=rctCheck(to,x,raw,RD,"],
+ [":'the gate change was not applied'):'the corrected text still raises it');",":((((R2.R1&&R2.R1.items)||[]).find(z=>z&&z.sid===x.gid&&z.d38r)||{why:'the gate change was not applied'}).why)):'the corrected text still raises it');"]];
 const plan={base:'pkgLIB/strip_R1B (LIB v15_R1B, live s56)',nodes:{}};
 for(const f of fs.readdirSync(SRC).filter(f=>f.endsWith('.js')).sort()){const s0=fs.readFileSync(SRC+f,'utf8');let s=s0;
- if(s0.includes(A1)){if(s0.split(A1).length!==2||s0.split(A2).length!==2)throw new Error(f+' anchors');s=s0.replace(A1,()=>FN+'\n'+A1).replace(A2,()=>B2);new Function('$','$input',s);plan.nodes[f]={base:h(s0),patched:h(s)};}
+ if(s0.includes(A1)){if(s0.split(A1).length!==2||s0.split(A2).length!==2)throw new Error(f+' anchors');s=s0.replace(A1,()=>FN+'\n'+A1).replace(A2,()=>B2);for(const [a,c] of EXTRA){if(s.split(a).length!==2)throw new Error(f+' extra anchor '+a.slice(0,40));s=s.replace(a,()=>c);}new Function('$','$input',s);plan.nodes[f]={base:h(s0),patched:h(s)};}
  fs.writeFileSync(DST+f,s);}
 fs.writeFileSync('pkgD38/plan_D38.json',JSON.stringify(plan,null,1));console.log(plan.nodes);

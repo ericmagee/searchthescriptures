@@ -29,6 +29,10 @@ OK unit: a count line that grounds premise 5 as CONCEDED raises no BASIS
 OK unit: the 33592 gemini shape raises PREM challenger 1
 OK unit: a count of 1 clears PREM
 OK unit: a SUPPORTED card raises nothing
+OK unit ASK 2: an engine-recount count gives card-only wording and the d38c flag
+OK unit ASK 2: the judge's own count line keeps both cures open, no flag
+OK unit ASK 2: a CORRECTED COUNT line for the side gives card-only wording
+OK unit ASK 2: defender side wording names no Oracle concede
 OK 33197 Alternate Merge same error both (Referenced node is unexecuted: Alternate Merge Seat | Referenced node is unexecuted: Alternate Merge Seat)
 OK 33222 Alternate Build same error both (await is not defined | await is not defined)
 OK 33249 Alternate Build same error both (await is not defined | await is not defined)
@@ -68,7 +72,9 @@ OK 33490 Alternate Build same error both (await is not defined | await is not de
 OK 33497 Alternate Build same error both (await is not defined | await is not defined)
 OK 33506 Alternate Build same error both (await is not defined | await is not defined)
 OK 33530 Panel Payloads same error both (FAIL-CLOSED (reserve judge, second failure of the run): seat "glm_flash" returned an envelope this p | FAIL-CLOSED (reserve judge, second failure of the run): seat "glm_flash" returned an envelope this p)
-replay: 456 node runs over 33 runs; changed outputs: 34
+OK 33617 Alternate Build same error both (await is not defined | await is not defined)
+OK 33627 Alternate Build same error both (await is not defined | await is not defined)
+replay: 516 node runs over 36 runs; changed outputs: 41
    33218 Gate Build: changed (3 D38 items)
    33218 Gate Record: changed (no D38 item in its gate report)
    33222 Alt Gate Build: changed (3 D38 items)
@@ -103,7 +109,14 @@ replay: 456 node runs over 33 runs; changed outputs: 34
    33575 Gate Record: changed (no D38 item in its gate report)
    33592 Gate Build: changed (6 D38 items)
    33592 Gate Record: changed (no D38 item in its gate report)
-D38 items raised in Gate Build: 44 {"RULING card grades D3 vs":4,"RULING card grades challenger premise":5,"RULING card grades D4 vs":7,"RULING card grades D2 vs":6,"RULING card grades D5 vs":6,"RULING card grades D1 vs":6,"RULING card grades D6 vs":5,"RULING card grades defender premise":3,"RULING card grades KEYSTONE":1,"CONCEDED LINKS line":1}
+   33605 Gate Build: changed (5 D38 items)
+   33605 Gate Record: changed (no D38 item in its gate report)
+   33617 Alt Gate Build: changed (1 D38 items)
+   33617 Gate Build: changed (3 D38 items)
+   33617 Gate Record: changed (no D38 item in its gate report)
+   33627 Gate Build: changed (6 D38 items)
+   33627 Gate Record: changed (no D38 item in its gate report)
+D38 items raised in Gate Build: 58 {"RULING card grades D3 vs":4,"RULING card grades challenger premise":11,"RULING card grades D4 vs":9,"RULING card grades D2 vs":7,"RULING card grades D5 vs":8,"RULING card grades D1 vs":8,"RULING card grades D6 vs":5,"RULING card grades defender premise":4,"RULING card grades KEYSTONE":1,"CONCEDED LINKS line":1}
    33218 gemini G1 your RULING card grades D3 vs C1 CHALLENGER LINK BROKEN, but your collision line for D3 vs C1 now grades it UNDERDETERMINED. Change one of the two lines so they agree.
    33218 gemini G2 your RULING card grades challenger premise 1 UNEXHIBITED, which counts it, but your CHALLENGER CONCEDED LINKS line counts 0. Change one of the two lines so they agree.
    33218 chatgpt G1 your RULING card grades D4 vs C4 DEFENDER LINK BROKEN, but your collision line for D4 vs C4 now grades it UNDERDETERMINED. Change one of the two lines so they agree.
@@ -120,8 +133,8 @@ D38 items raised in Gate Build: 44 {"RULING card grades D3 vs":4,"RULING card gr
    33345 chatgpt G1 your RULING card grades D4 vs C4 DEFENDER LINK BROKEN, but your collision line for D4 vs C4 now grades it UNDERDETERMINED. Change one of the two lines so they agree.
    33371 chatgpt G3 your RULING card grades D2 vs C6 DEFENDER LINK BROKEN, but your collision line for D2 vs C6 now grades it UNDERDETERMINED. Change one of the two lines so they agree.
    33411 gemini G1 your RULING card grades D6 vs C1 CHALLENGER LINK BROKEN, but your collision line for D6 vs C1 now grades it UNDERDETERMINED. Change one of the two lines so they agree.
-   33442 chatgpt G2 your RULING card grades challenger premise 3 UNEXHIBITED, which counts it, but your CHALLENGER CONCEDED LINKS line counts 0. Change one of the two lines so they agree.
-   33442 chatgpt G3 your RULING card grades challenger premise 5 UNEXHIBITED, which counts it, but your CHALLENGER CONCEDED LINKS line counts 0. Change one of the two lines so they agree.
+   33442 chatgpt G2 your RULING card grades challenger premise 3 UNEXHIBITED, which counts it, but your CHALLENGER CONCEDED LINKS line counts 0. That count came from the cure (the engine recount after the cure). Change the RULING card, not the count: write the card again with a grade that does not count premise 3. Raising CHALLENGER CONCEDED LINKS here is an Oracle concede and is refused (W3 3120).
+   33442 chatgpt G3 your RULING card grades challenger premise 5 UNEXHIBITED, which counts it, but your CHALLENGER CONCEDED LINKS line counts 0. That count came from the cure (the engine recount after the cure). Change the RULING card, not the count: write the card again with a grade that does not count premise 5. Raising CHALLENGER CONCEDED LINKS here is an Oracle concede and is refused (W3 3120).
    33490 chatgpt G1 your RULING card grades D5 vs C6 DEFENDER LINK BROKEN, but your collision line for D5 vs C6 now grades it UNDERDETERMINED. Change one of the two lines so they agree.
    33490 chatgpt G2 your RULING card grades defender premise 5 UNEXHIBITED, which counts it, but your CONCEDED LINKS line counts 0. Change one of the two lines so they agree.
    33497 gemini G1 your RULING card grades D1 vs C1 CHALLENGER LINK BROKEN, but your collision line for D1 vs C1 now grades it UNDERDETERMINED. Change one of the two lines so they agree.
@@ -136,7 +149,7 @@ D38 items raised in Gate Build: 44 {"RULING card grades D3 vs":4,"RULING card gr
    33506 gemini G5 your RULING card grades D5 vs C2 CHALLENGER LINK BROKEN, but your collision line for D5 vs C2 now grades it UNDERDETERMINED. Change one of the two lines so they agree.
    33506 gemini G6 your RULING card grades D6 vs C1 CHALLENGER LINK BROKEN, but your collision line for D6 vs C1 now grades it UNDERDETERMINED. Change one of the two lines so they agree.
    33506 grok G4 your RULING card grades D6 vs C5 CHALLENGER LINK BROKEN, but your collision line for D6 vs C5 now grades it STANDS. Change one of the two lines so they agree.
-   33506 grok G5 your RULING card grades challenger premise 5 UNEXHIBITED, which counts it, but your CHALLENGER CONCEDED LINKS line counts 0. Change one of the two lines so they agree.
+   33506 grok G5 your RULING card grades challenger premise 5 UNEXHIBITED, which counts it, but your CHALLENGER CONCEDED LINKS line counts 0. That count came from the cure (K-UNX). Change the RULING card, not the count: write the card again with a grade that does not count premise 5. Raising CHALLENGER CONCEDED LINKS here is an Oracle concede and is refused (W3 3120).
    33575 chatgpt G2 your RULING card grades D4 vs C3 DEFENDER LINK BROKEN, but your collision line for D4 vs C3 now grades it UNDERDETERMINED. Change one of the two lines so they agree.
    33575 chatgpt G3 your RULING card grades defender premise 4 UNEXHIBITED, which counts it, but your CONCEDED LINKS line counts 0. Change one of the two lines so they agree.
    33575 grok G1 your RULING card grades D4 vs C3 CHALLENGER LINK BROKEN, but your collision line for D4 vs C3 now grades it UNDERDETERMINED. Change one of the two lines so they agree.
@@ -144,12 +157,29 @@ D38 items raised in Gate Build: 44 {"RULING card grades D3 vs":4,"RULING card gr
    33575 grok G3 your RULING card grades D6 vs C2 CHALLENGER LINK BROKEN, but your collision line for D6 vs C2 now grades it UNDERDETERMINED. Change one of the two lines so they agree.
    33592 gemini G6 your RULING card grades D1 vs C6 CHALLENGER LINK BROKEN, but your collision line for D1 vs C6 now grades it UNDERDETERMINED. Change one of the two lines so they agree.
    33592 gemini G7 your RULING card grades D2 vs C1 CHALLENGER LINK BROKEN, but your collision line for D2 vs C1 now grades it UNDERDETERMINED. Change one of the two lines so they agree.
-   33592 gemini G8 your RULING card grades challenger premise 1 UNEXHIBITED, which counts it, but your CHALLENGER CONCEDED LINKS line counts 0. Change one of the two lines so they agree.
+   33592 gemini G8 your RULING card grades challenger premise 1 UNEXHIBITED, which counts it, but your CHALLENGER CONCEDED LINKS line counts 0. That count came from the cure (the engine recount after the cure). Change the RULING card, not the count: write the card again with a grade that does not count premise 1. Raising CHALLENGER CONCEDED LINKS here is an Oracle concede and is refused (W3 3120).
    33592 grok G1 your RULING card grades D5 vs C5 DEFENDER LINK BROKEN, but your collision line for D5 vs C5 now grades it UNDERDETERMINED. Change one of the two lines so they agree.
    33592 grok G2 your RULING card grades KEYSTONE D6 BROKEN, but your KEYSTONE line now reads D6 STANDS. Change one of the two lines so they agree.
    33592 grok G3 your CONCEDED LINKS line counts 3 with defender premise 5 among them (counted premises 2, 5, 6), but D5 vs C5 is now graded UNDERDETERMINED (it was DEFENDER LINK BROKEN), and no line left in your text grounds premise 5 as conceded or unexhibited. Recount the line, or regrade the collision.
+   33605 chatgpt G2 your RULING card grades D1 vs C2 DEFENDER LINK BROKEN, but your collision line for D1 vs C2 now grades it UNDERDETERMINED. Change one of the two lines so they agree.
+   33605 chatgpt G3 your RULING card grades D5 vs C6 CHALLENGER LINK BROKEN, but your collision line for D5 vs C6 now grades it UNDERDETERMINED. Change one of the two lines so they agree.
+   33605 chatgpt G4 your RULING card grades defender premise 1 UNEXHIBITED, which counts it, but your CONCEDED LINKS line counts 0. Change one of the two lines so they agree.
+   33605 chatgpt G5 your RULING card grades challenger premise 6 UNEXHIBITED, which counts it, but your CHALLENGER CONCEDED LINKS line counts 0. That count came from the cure (the engine recount after the cure). Change the RULING card, not the count: write the card again with a grade that does not count premise 6. Raising CHALLENGER CONCEDED LINKS here is an Oracle concede and is refused (W3 3120).
+   33605 grok G1 your RULING card grades challenger premise 2 UNEXHIBITED, which counts it, but your CHALLENGER CONCEDED LINKS line counts 0. That count came from the cure (K-UNX). Change the RULING card, not the count: write the card again with a grade that does not count premise 2. Raising CHALLENGER CONCEDED LINKS here is an Oracle concede and is refused (W3 3120).
+   33617 chatgpt G3 your RULING card grades challenger premise 1 UNEXHIBITED, which counts it, but your CHALLENGER CONCEDED LINKS line counts 0. That count came from the cure (the engine recount after the cure). Change the RULING card, not the count: write the card again with a grade that does not count premise 1. Raising CHALLENGER CONCEDED LINKS here is an Oracle concede and is refused (W3 3120).
+   33617 grok G2 your RULING card grades D2 vs C1 CHALLENGER LINK BROKEN, but your collision line for D2 vs C1 now grades it STANDS. Change one of the two lines so they agree.
+   33617 grok G3 your RULING card grades D4 vs C4 CHALLENGER LINK BROKEN, but your collision line for D4 vs C4 now grades it STANDS. Change one of the two lines so they agree.
+   33627 chatgpt G1 your RULING card grades D1 vs C2 CHALLENGER LINK BROKEN, but your collision line for D1 vs C2 now grades it UNDERDETERMINED. Change one of the two lines so they agree.
+   33627 chatgpt G2 your RULING card grades D4 vs C5 CHALLENGER LINK BROKEN, but your collision line for D4 vs C5 now grades it UNDERDETERMINED. Change one of the two lines so they agree.
+   33627 chatgpt G3 your RULING card grades D5 vs C2 CHALLENGER LINK BROKEN, but your collision line for D5 vs C2 now grades it UNDERDETERMINED. Change one of the two lines so they agree.
+   33627 chatgpt G4 your RULING card grades challenger premise 2 UNEXHIBITED, which counts it, but your CHALLENGER CONCEDED LINKS line counts 0. That count came from the cure (K-UNX). Change the RULING card, not the count: write the card again with a grade that does not count premise 2. Raising CHALLENGER CONCEDED LINKS here is an Oracle concede and is refused (W3 3120).
+   33627 chatgpt G5 your RULING card grades challenger premise 5 UNEXHIBITED, which counts it, but your CHALLENGER CONCEDED LINKS line counts 0. That count came from the cure (K-UNX). Change the RULING card, not the count: write the card again with a grade that does not count premise 5. Raising CHALLENGER CONCEDED LINKS here is an Oracle concede and is refused (W3 3120).
+   33627 grok G13 your RULING card grades challenger premise 2 UNEXHIBITED, which counts it, but your CHALLENGER CONCEDED LINKS line counts 0. That count came from the cure (K-UNX). Change the RULING card, not the count: write the card again with a grade that does not count premise 2. Raising CHALLENGER CONCEDED LINKS here is an Oracle concede and is refused (W3 3120).
 OK bar 33592 grok: premise 5 counted after D5 vs C5 became UNDERDETERMINED is sent back
 OK bar 33592 grok: RULING KEYSTONE D6 BROKEN against KEYSTONE D6 STANDS is sent back
 OK bar 33592 gemini: count 0 against its premise 1 UNEXHIBITED RULING is sent back
 OK replay ran
-TOTAL 74 OK, 0 FAIL
+OK e2e 33605 terra G5: a gate change raising CHALLENGER CONCEDED LINKS to 1 is refused (NOT APPLIED), G5 stays UNCURED, stored count stays 0
+OK e2e 33605 terra G5: changing the RULING card cures G5, count 0
+OK e2e 33605 terra G5: silence leaves G5 UNCURED
+TOTAL 83 OK, 0 FAIL

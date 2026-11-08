@@ -2,12 +2,12 @@
  "base": "pkgLIB/strip_D38 (LIB v16_D38); Build Save Body on live s57 (fetchback_live_s57.json)",
  "nodes": {
   "Alt_Gate_Build.js": {
-   "base": "2aa3a4897122",
-   "patched": "85c182ddfdcb"
+   "base": "b6bdd9a06218",
+   "patched": "a325438aa304"
   },
   "Alt_Gate_Record.js": {
-   "base": "dd553f5ca724",
-   "patched": "3ad4289a9314"
+   "base": "4f36700a7bae",
+   "patched": "4e8f91e25a77"
   },
   "Alternate_Build.js": {
    "base": "eb0be8eb5876",
@@ -22,12 +22,12 @@
    "patched": "78d8c6fc6319"
   },
   "Alternate_Merge.js": {
-   "base": "e0dc3617d121",
-   "patched": "5bc518db108a"
+   "base": "b566d477900c",
+   "patched": "5e76e5084173"
   },
   "Alternate_Merge_Seat.js": {
-   "base": "52e7b305f94b",
-   "patched": "b016549ce465"
+   "base": "8a46ec5f3e0e",
+   "patched": "1053d2f72205"
   },
   "Cure_Build.js": {
    "base": "12412018a22c",
@@ -42,12 +42,12 @@
    "patched": "5537f7ab9574"
   },
   "Gate_Build.js": {
-   "base": "a6f31c703977",
-   "patched": "5c169aab9858"
+   "base": "73d8fe75644c",
+   "patched": "c8187c1308f4"
   },
   "Gate_Record.js": {
-   "base": "79c2fd58ad64",
-   "patched": "7fda13c46563"
+   "base": "c6eedbeec96e",
+   "patched": "45bd6394ae18"
   },
   "Panel_Cure_Build_1.js": {
    "base": "d7532cfcd275",

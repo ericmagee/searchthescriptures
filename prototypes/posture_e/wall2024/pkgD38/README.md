@@ -38,3 +38,11 @@ It changes 6 nodes: Gate Build, Gate Record, Alt Gate Build, Alt Gate Record, Al
 
 ## Write (W4, at a gap, on that gap's DeepSeek fix)
 Write pkgLIB_v16_D38 (Shared Library plus 22 stubs) in the same way as v15_R1B. Revert to pkgLIB_v15_R1B/patched.
+
+## ASK 2 (W3 3120), added 11-08
+- When the side's count came from a cure (the engine recount "recomputed after the cure", a CORRECTED COUNT line for that side, or a K-UNX CURED report), the PREM item says the count came from the cure and tells the judge to change the RULING card, not the count. On the challenger side it says raising CHALLENGER CONCEDED LINKS is an Oracle concede and is refused.
+- The item carries d38c to its gate change. sbApply2024 refuses (NOT APPLIED) a change on that item that raises the count line to 1 or more; the item stays UNCURED with that reason. The count stays at its cure value.
+- When the count is the judge's own uncured line, the wording and both cures are as before.
+- In the replay, 10 of 15 PREM items are cure counts (5 engine recount, 5 K-UNX).
+- End to end on 33605 terra G5 (challenger premise 6): a count raise is refused and G5 stays UNCURED with the count at 0; a card change cures G5; silence leaves it UNCURED.
+- Test 83 OK, 0 FAIL. v16_D38 json_sha 49f7f53293528430. The chain was rebuilt on it: v17_CRG c6d80ad921385858 (test_CRG 5 OK), v18_G4R 612b9b1df4c1f3cf (test_G4R_v18 62 OK), v19_GDA 69564de039cbd46c (test_GDA v19 26 OK). All 22 of 22 stubs rebuild.

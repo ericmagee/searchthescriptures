@@ -1579,7 +1579,7 @@ function sbApply2024(seat,raw,F,its,RD){const one=s=>String(s==null?'':s).replac
    const GR=/^\s*(?:[-\u2022*]\s*|\d+[.)]\s*)?\**D\d+\s+vs\.?\s+C\d+\b(?:\s*\([^)\n]*\))?[^:\n(]*:\s*\**(?:DEFENDER LINK BROKEN|CHALLENGER LINK BROKEN|UNDERDETERMINED|STANDS|WITHDRAWN)\b/;
    if(pk){const tp=pOf(to);const ok=tp===pk&&(FR.test(nrm(to))?FR.test(nrm(o)):GR.test(to));
     if(!ok){items.push({sid:x.sid,kind:'NOT APPLIED',why:'the change drops the collision '+pk.replace(' VS ',' vs ')+' (W3 2351: a change to a collision or FORCED line must be a collision line for the same pair)',to,lines:[o]});continue;}}}
-  {const __rct=rctCheck(to,x,raw,RD,map.has(o)?map.get(o).to:o);if(__rct){items.push({sid:x.sid,kind:'NOT APPLIED',why:__rct,to,lines:[o],rct:true});continue;}}
+  {const __d38=typeof d38Refuse2024==='function'?d38Refuse2024(to,x):null;if(__d38){items.push({sid:x.sid,kind:'NOT APPLIED',why:__d38,to,lines:[o],d38r:true});continue;}}   {const __rct=rctCheck(to,x,raw,RD,map.has(o)?map.get(o).to:o);if(__rct){items.push({sid:x.sid,kind:'NOT APPLIED',why:__rct,to,lines:[o],rct:true});continue;}}
   const lk=sbLabel(to);const same=lk?lines.filter(l=>sbLabel(l)===lk):[];
   for(const o2 of [...new Set([o].concat(same))]){const p=map.get(o2);map.set(o2,{sid:x.sid,to,over:p&&p.sid!==x.sid?(p.over||[]).concat(p.sid):(p?p.over:[])});}}
  const build=M=>text.split('\n').map(l=>M.has(l)?M.get(l).to:l).join('\n');
@@ -1674,8 +1674,9 @@ function d38Items2024(T0,T1,raw){const out=[];const U=s=>String(s==null?'':s).to
   if((m=s.match(/^(challenger|defender)(?:-directed)?\s+premise\s+(\d+)$/i))){sd=U(m[1]);n=+m[2];}
   else if((m=s.match(/^premise\s+(\d+)\s*\(?\s*against\s+(?:the\s+)?(challenger|defender)\s*\)?$/i))){sd=U(m[2]);n=+m[1];}
   else if((m=s.match(/^LINK\s+(?:D)?(\d+)$/i))){sd='DEFENDER';n=+m[1];}
-  if(!sd)continue;const k=cntOf(sd);if(!k||k.n!==0)continue;
-  out.push({type:'PREM',key:'D38|PREM|'+sd+'|'+n,why:'your RULING card grades '+sd.toLowerCase()+' premise '+n+' '+c.grade+', which counts it, but your '+(sd==='CHALLENGER'?'CHALLENGER CONCEDED LINKS':'CONCEDED LINKS')+' line counts 0. Change one of the two lines so they agree.',lines:[c.raw,k.raw]});}
+  if(!sd)continue;const k=cntOf(sd);if(!k||k.n!==0)continue;const lab=sd==='CHALLENGER'?'CHALLENGER CONCEDED LINKS':'CONCEDED LINKS';const src=d38CountSrc2024(T1,raw,sd,k.raw);
+  const why='your RULING card grades '+sd.toLowerCase()+' premise '+n+' '+c.grade+', which counts it, but your '+lab+' line counts 0.'+(src?' That count came from the cure ('+src+'). Change the RULING card, not the count: write the card again with a grade that does not count premise '+n+'. '+(sd==='CHALLENGER'?'Raising CHALLENGER CONCEDED LINKS here is an Oracle concede and is refused':'Raising CONCEDED LINKS here is refused')+' (W3 3120).':' Change one of the two lines so they agree.');
+  out.push({type:'PREM',key:'D38|PREM|'+sd+'|'+n,why,lines:[c.raw,k.raw],...(src?{d38c:{lab,src}}:{})});}
  for(const sd of ['DEFENDER','CHALLENGER']){const G=sd+' LINK BROKEN';const k=cntOf(sd);if(!k||k.n<1)continue;const lab=sd==='CHALLENGER'?'CHALLENGER CONCEDED LINKS':'CONCEDED LINKS';
   const y0=P0.cn[lab];const same=!!y0&&one(y0.raw)===one(k.raw);const am=String(raw||'').match(new RegExp('counted_premises_'+sd.toLowerCase()+'\\\\?"\\s*:\\s*\\[([^\\]]*)\\]'));
   const arr=am?(am[1].match(/\d+/g)||[]).map(Number):null;if(!same||!arr||arr.length!==k.n)continue;
@@ -1686,11 +1687,19 @@ function d38Items2024(T0,T1,raw){const out=[];const U=s=>String(s==null?'':s).to
    if(cards.some(c=>/^(UNEXHIBITED|CONCEDED)$/.test(c.grade)&&new RegExp('(?:PREMISE|LINK)\\s+(?:D)?'+n+'$').test(U(c.subj))&&(sd==='DEFENDER'?!/CHALLENGER/.test(U(c.subj)):/CHALLENGER/.test(U(c.subj)))))continue;
    out.push({type:'BASIS',key:'D38|BASIS|'+sd+'|'+n,why:'your '+lab+' line counts '+k.n+' with '+sd.toLowerCase()+' premise '+n+' among them (counted premises '+arr.join(', ')+'), but '+moved.map(z=>z.link).join(', ')+' is now graded '+moved.map(z=>z.grade).join(', ')+' (it was '+G+'), and no line left in your text grounds premise '+n+' as conceded or unexhibited. Recount the line, or regrade the collision.',lines:moved.map(z=>z.raw).concat([k.raw])});}}
  return out;}
+/* pkgD38 ASK 2 (W3 3120): a count that came from a cure (the engine recount, CORRECTED COUNT, K-UNX) is fixed; the PREM item may change only the card. */
+function d38CountSrc2024(T1,raw,sd,cl){const u=String(cl||'').replace(/[*_`\\]+/g,'').toUpperCase();
+ if(/RECOMPUTED AFTER THE CURE/.test(u))return 'the engine recount after the cure';if(/CORRECTED COUNT/.test(u))return 'CORRECTED COUNT';
+ if(String(T1||'').split('\n').some(l=>new RegExp('^\\s*(?:[-\u2022]|\\d+[.)])?\\s*CORRECTED COUNT\\s*:\\s*'+sd+'\\b','i').test(l.replace(/[*_`]+/g,''))))return 'CORRECTED COUNT';
+ try{if(typeof rctOut==='function'&&rctOut(raw,sd).size)return 'K-UNX';}catch(e){}return null;}
+function d38Refuse2024(to,x){try{const c=x&&x.d38c;if(!c)return null;const t=String(to==null?'':to).replace(/\\+/g,'').replace(/[*_`"\u201c\u201d]+/g,'').trim();
+ if(typeof sbLabel!=='function'||sbLabel(t)!==c.lab)return null;const m=t.match(/CONCEDED LINKS\s*:\s*(\d+)/i);if(!m||+m[1]<1)return null;
+ return 'pkgD38 (W3 3120): the count came from the cure ('+c.src+'), so this item may change only the RULING card; the change raises '+c.lab+' to '+m[1]+(c.lab==='CHALLENGER CONCEDED LINKS'?', an Oracle concede,':'')+' and is refused. The count stays at its cure value.';}catch(e){return null;}}
 function gateItems2024(seat,raw,F,its,ctx){const R1=sbApply2024(seat,raw,F,its,ctx.R);if(!R1)return {R1:null,items:[]};const T0=cureJText(raw,true);const T1=R1.text;const items=[];
  for(const x of R1.items){const kind=x.kind;items.push({kind,src:'E-APPLY '+x.sid,sid:x.sid,key:kind+'|'+x.sid,why:x.why,lines:(x.lines&&x.lines.length?x.lines:[]),to:x.to,live:GATE_STATUS[kind]==='LIVE'});}
  for(const x of gateAnsGround2024(T1))items.push({kind:'CONTRADICTION',src:'E-GATE B',key:x.key,why:x.why,lines:x.lines,live:GATE_STATUS['ANSWER GROUND']==='LIVE'});
  const NK=gateNewK2024(T0,T1,F,R1.fields,ctx);for(const x of NK.items)items.push({kind:'RULE '+x.rule,src:'K re-read',key:x.key,why:x.why,lines:x.lines,live:x.live&&GATE_STATUS.RULE==='LIVE'});
- for(const x of d38Items2024(T0,T1,raw))items.push({kind:'CONTRADICTION',src:'E-GATE D38',key:x.key,why:x.why,lines:x.lines,live:D38_STATUS[x.type]==='LIVE'}); /* pkgD38: last, so earlier gate ids keep their numbers */
+ for(const x of d38Items2024(T0,T1,raw))items.push({kind:'CONTRADICTION',src:'E-GATE D38',key:x.key,why:x.why,lines:x.lines,live:D38_STATUS[x.type]==='LIVE',...(x.d38c?{d38c:x.d38c}:{})}); /* pkgD38: last, so earlier gate ids keep their numbers */
  items.forEach((x,i)=>x.gid='G'+(i+1));return {R1,items,T1,newk_error:NK.error||null};}
 const GATE_LINE=/GATE\s*:?\s*(?:ITEM\s*)?#?\s*(G\s*\d+)\s*:?\s*\|\|\s*(KEEP|CHANGE\s+TO\s*:?([\s\S]*?))\s*(?:\|\|\s*(.*))?$/i;
 function gateRead2024(txt){const A={};const J=/^\s*[{\[]/.test(txt);const T2=String(txt||'').replace(/\\n/g,'\n').replace(/\\"/g,'"');
@@ -1749,7 +1758,7 @@ function dptCheck(x,d,ctx){const no=w=>({ok:false,why:'DIFFERENT POINT not accep
  if(pa.some(a=>gq.some(b=>a[0]<=b[1]&&b[0]<=a[1])))return no('"'+d.p+'" overlaps words of '+ref+' that the collision line itself quotes, so the press and the ground read the same words');
  return {ok:true,why:'DIFFERENT POINT accepted (pkgDPT, W3 2832): the press holds "'+d.p+'" and the ground uses "'+d.g+'", two separate runs of '+ref};}
 function gateCure2024(seat,raw,F,its,G,reply,ctx){const A=gateRead2024(reply||'');const __dpt=dptRead(reply||'');  const add=[];
- for(const x of G){const a=A[x.gid];if(a&&a.ans==='CHANGE'&&a.to&&!(x.kind==='RULE K-G4'&&gateIsForced2024(a.to)))add.push({seat,sid:x.gid,rule:'E-GATE',item:x.kind,line:gateLineFor2024(x,a.to.replace(/^["“]+|["”]+$/g,'')),ans:'CHANGE',to:a.to,why:a.why,...(x.sid?{psrc:x.sid}:{})});  }
+ for(const x of G){const a=A[x.gid];if(a&&a.ans==='CHANGE'&&a.to&&!(x.kind==='RULE K-G4'&&gateIsForced2024(a.to)))add.push({seat,sid:x.gid,rule:'E-GATE',item:x.kind,line:gateLineFor2024(x,a.to.replace(/^["“]+|["”]+$/g,'')),ans:'CHANGE',to:a.to,why:a.why,...(x.sid?{psrc:x.sid}:{}),...(x.d38c?{d38c:x.d38c}:{})});  }
  for(const x of G){if(x.kind!=='RULE K-G4'||!A[x.gid])continue;const g=gateForced2024(x,A[x.gid],ctx);if(g&&g.cured)add.push({seat,sid:x.gid+'F',rule:'E-GATE',item:'FORCED',line:(x.lines||[])[0]||'',ans:'CHANGE',to:g.line,why:'the FORCED line that cured '+x.gid+', written after its collision line (ruling 411)',forced_add:true});}
  const wd2299=new Set(G.filter(x=>x.kind==='CONTRADICTION'&&/^E-APPLY\b/.test(String(x.src||''))&&A[x.gid]&&A[x.gid].ans==='KEEP').map(x=>x.sid));
  const its2=(its||[]).filter(z=>!(z&&wd2299.has(z.sid))).concat(add);const R2=gateItems2024(seat,raw,F,its2,ctx);const now=new Set((R2.items||[]).map(z=>z.key));const applied=new Set(R2.R1?R2.R1.applied:[]);
@@ -1769,7 +1778,7 @@ function gateCure2024(seat,raw,F,its,G,reply,ctx){const A=gateRead2024(reply||''
   else if(x.kind==='RULE K-G4'&&applied.has(x.gid)&&now.has(x.key)){const g=gateG4Cure2024(x,(R2.items||[]).find(z=>z.key===x.key),a.to,ctx);cured=g.cured;why=g.why;}
   else if(a.ans==='CHANGE'&&supBy.has(x.gid)&&!applied.has(x.gid)&&applied.has(supBy.get(x.gid))){cured=!now.has(x.key);why=cured?'the later gate change '+supBy.get(x.gid)+' of this judge rewrote the same line (the last change wins), and the item is no longer raised':'the later gate change '+supBy.get(x.gid)+' rewrote the same line, and the item is still raised';}
   else{const st=!applied.has(x.gid)&&a.ans==='CHANGE'&&!((R2.R1&&R2.R1.items)||[]).some(z=>z&&z.sid===x.gid&&/drops the collision/.test(String(z.why||'')))&&gateStands2024(a.to,R2.T1);
-   cured=!now.has(x.key)&&(applied.has(x.gid)||st);why=cured?(applied.has(x.gid)?'the gate change was applied and the item is no longer raised':'the gate change is already in the corrected text (another change wrote the same line), and the item is no longer raised (W3 2319)'):(!applied.has(x.gid)?(st?'the gate change is already in the corrected text, but the item is still raised':'the gate change was not applied'):'the corrected text still raises it');{const __k1=x.kind==='RULE K-G1'&&a.ans==='CHANGE';
+   cured=!now.has(x.key)&&(applied.has(x.gid)||st);why=cured?(applied.has(x.gid)?'the gate change was applied and the item is no longer raised':'the gate change is already in the corrected text (another change wrote the same line), and the item is no longer raised (W3 2319)'):(!applied.has(x.gid)?(st?'the gate change is already in the corrected text, but the item is still raised':((((R2.R1&&R2.R1.items)||[]).find(z=>z&&z.sid===x.gid&&z.d38r)||{why:'the gate change was not applied'}).why)):'the corrected text still raises it');{const __k1=x.kind==='RULE K-G1'&&a.ans==='CHANGE';
    const __rc=__k1&&!cured&&!applied.has(x.gid)&&((R2.R1&&R2.R1.items)||[]).find(z=>z&&z.sid===x.gid&&z.rct);
    if(__rc){cured=true;why='pkgRCT refused the K-G1 gate change on the count line, and the count stays at your cure value (recorded, no seat removed; W3 2819 item 3, pkgKG1L): '+String(__rc.why).slice(0,300);}
    else if(__k1&&cured&&applied.has(x.gid)&&/^(?:[-•]|\d+[.)])?\s*CHALLENGER CONCEDED LINKS\s*:\s*[1-9]/i.test(String(a.to||'').replace(/\\+/g,'').replace(/[*_\x60"“”]+/g,'').trim()))why+=' [pkgKG1L ORACLE CONCEDE: this K-G1 change on the count line sets CHALLENGER CONCEDED LINKS to '+((String(a.to).match(/CONCEDED LINKS\s*:\s*(\d+)/i)||[])[1])+'; chain: the collision line "'+String((x.lines||[])[0]||'').slice(0,200)+'" stands BROKEN on a witness left unanswered, and K-G1 requires the count]';}}
