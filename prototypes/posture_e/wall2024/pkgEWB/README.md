@@ -12,5 +12,5 @@ handling is unchanged.
 Test (node pkgEWB/test_EWB.cjs): 4 OK. 76 node runs over every saved run: only 33605 B117 changes (the wrong block is dropped); nothing outside
 E-ANS/E-HOLD changes. B117 now sends no full block: the true Acts 16:13 bullet adds under 60 characters to the quoted answer, so the pkgEAW
 gate sends none, and DeepSeek reads the whole answer as the judge quoted it.
-Scale: on the saved runs this substring slip happened once. W3's 60 "names neither verse nor opening" blocks are not this fault; the other
-59 hold the opening at a word edge (the replay changes none of them).
+Scale: on the saved runs this substring slip happened once. The replay changes none of the other blocks in W3's rough count of 60, so
+whatever they are, they are not this fault; I have not yet classified them.
