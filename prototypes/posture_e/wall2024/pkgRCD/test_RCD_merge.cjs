@@ -1,0 +1,8 @@
+// pkgRCD test 3 of 3: Alternate Merge Seat outputs are equal once the derived card text, its SUPERSEDED audit line and the "RULING (derived)" applied entry are normalised.
+const fs=require('fs');const {harness,feeder}=require(process.cwd()+'/pkgGSL/harness.cjs');
+const F='/mnt/project-files/wall2024/fetchback_live_s61.json';const [A,B]=['pkgLIB/strip_RI4','pkgLIB/strip_RCD'];const nm='Alternate Merge Seat';
+const run=async(src,R,IN)=>{try{return await Promise.resolve(harness(R)('return (async()=>{'+src+'\n})()',IN));}catch(e){return {ERR:e.message};}};
+const N=s=>s.replace(/\\*n\[AUDIT v27: SUPERSEDED LINE -- SEAT: [a-z]+; LABEL: LINE; ORIGINAL: RULING -- D\d+ vs C\d+ -- (?:DEFENDER LINK BROKEN|CHALLENGER LINK BROKEN|UNDERDETERMINED)[^\]]*? ; END\]/g,'').replace(/ \(derived by the engine from the collision grade of D\d+ vs C\d+ after the change of [^;]*; pkgRCD, as W3 2362\)/g,'').replace(/(RULING -- D\d+ vs C\d+ -- )(DEFENDER LINK BROKEN|CHALLENGER LINK BROKEN|UNDERDETERMINED)/g,'$1CARD').replace(/\\*"RULING \(derived\)\\*",?/g,'').replace(/RULING \(derived\), /g,'').replace(/, RULING \(derived\)/g,'').replace(/,\]/g,']');
+(async()=>{const f=nm.replace(/ /g,'_')+'.js';const IN=feeder(F,nm)[0];const a0=fs.readFileSync(A+'/patched/'+f,'utf8'),b0=fs.readFileSync(B+'/patched/'+f,'utf8');
+for(const R of '33218 33222 33261 33411 33497 33575 33592 33627 33644 33682'.split(' ')){const a=N(JSON.stringify(await run(a0,R,IN))),b=N(JSON.stringify(await run(b0,R,IN)));
+ if(a===b){console.log(R,'EQUAL after card normalisation');continue;}let i=0;while(a[i]===b[i])i++;console.log(R,'DIFF at',i,'\n  a:',a.slice(i-150,i+150),'\n  b:',b.slice(i-150,i+150));}})();

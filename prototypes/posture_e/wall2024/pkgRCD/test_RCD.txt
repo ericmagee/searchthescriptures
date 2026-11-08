@@ -1,0 +1,33 @@
+== 1. node pkgLIB/w3_combined_replay.cjs pkgLIB/strip_RI4 pkgLIB/strip_RCD
+Alt Gate Build: 2 runs: 33442 33482
+Alternate Merge Seat: 10 runs: 33218 33222 33261 33411 33497 33575 33592 33627 33644 33682
+Gate Build: 11 runs: 33218 33222 33261 33411 33497 33575 33592 33644 33682 33731 33750
+node runs 1140, identical 1117, both-error 0
+
+== 2. node pkgRCD/test_RCD_gate.cjs
+Gate Build 33218 removed: gemini D38|COL|D3 VS C1 | added: -
+Gate Build 33222 removed: gemini D38|COL|D2 VS C3, gemini D38|COL|D3 VS C2, gemini D38|COL|D4 VS C4, gemini D38|COL|D5 VS C5 | added: -
+Gate Build 33261 removed: gemini D38|COL|D1 VS C1, gemini D38|COL|D2 VS C2, gemini D38|COL|D3 VS C1, gemini D38|COL|D4 VS C3, gemini D38|COL|D5 VS C6 | added: -
+Gate Build 33411 removed: gemini D38|COL|D6 VS C1 | added: -
+Gate Build 33497 removed: gemini D38|COL|D1 VS C1, grok D38|COL|D1 VS C1, grok D38|COL|D2 VS C2, grok D38|COL|D5 VS C5 | added: -
+Gate Build 33575 removed: grok D38|COL|D4 VS C3, grok D38|COL|D6 VS C3, grok D38|COL|D6 VS C2 | added: -
+Gate Build 33592 removed: gemini D38|COL|D1 VS C6, gemini D38|COL|D2 VS C1, grok D38|COL|D5 VS C5 | added: -
+Gate Build 33644 removed: gemini D38|COL|D2 VS C3 | added: -
+Gate Build 33682 removed: gemini D38|COL|D1 VS C2 | added: -
+Gate Build 33731 removed: chatgpt D38|COL|D2 VS C1 | added: -
+Gate Build 33750 removed: gemini D38|COL|D1 VS C1, grok D38|COL|D1 VS C1, grok D38|COL|D2 VS C5, grok D38|COL|D5 VS C1 | added: -
+Alt Gate Build 33442 removed: grok D38|COL|D1 VS C3, grok D38|COL|D6 VS C2 | added: -
+Alt Gate Build 33482 removed: grok D38|COL|D1 VS C1 | added: -
+TOTAL removed 31 added 0
+
+== 3. node pkgRCD/test_RCD_merge.cjs
+33218 EQUAL after card normalisation
+33222 EQUAL after card normalisation
+33261 EQUAL after card normalisation
+33411 EQUAL after card normalisation
+33497 EQUAL after card normalisation
+33575 EQUAL after card normalisation
+33592 EQUAL after card normalisation
+33627 EQUAL after card normalisation
+33644 EQUAL after card normalisation
+33682 EQUAL after card normalisation
