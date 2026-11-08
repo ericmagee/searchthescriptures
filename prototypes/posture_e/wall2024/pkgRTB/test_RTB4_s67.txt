@@ -1,0 +1,40 @@
+OK   K-G11 ask, K-P ask and line mark carry one restated-line rule: one RESTATED LINK BROKEN line that names, as left unanswered, a verse that the list against that side carries under PRESSED WITH: and the ledger marks PROVEN or PROVEN BY REFERENCE
+OK   line mark carries the family 2 RETRACTED clause
+OK   engine: one branch for K-G11 and line-form K-P; restated LINK BROKEN cures only on pwUnans ∩ pwk
+OK   engine: pwk is the proven set (p.keys); a verse only in p.all raises K-P (UNPROVEN), so the rule says PROVEN
+OK   count mark cure = count branch (CORRECTED COUNT, CORRECTED STANDING)
+OK   no old copy left in 30 files
+OK   render counts {"pu.kg11":26,"pu.kp":26,"pu.mark.kg11":30,"pu.mark.kp":4,"pu.mark.kpcount":4} = tally {"pu.kg11":26,"pu.kp":26,"pu.mark.kg11":30,"pu.mark.kp":4,"pu.mark.kpcount":4}
+OK   engine pwUnans: a line naming the verse as left unanswered gives ["Isaiah 7:14"]; a "rests on a proven press" line gives []
+OK   Alt Gate Build: 33 runs, 33 byte-equal, 0 differ only in rule text
+OK   Alt Gate Record: 29 runs, 29 byte-equal, 0 differ only in rule text
+OK   Alternate Build: 20 runs, 20 byte-equal, 0 differ only in rule text
+OK   Alternate Cure Build: 26 runs, 5 byte-equal, 21 differ only in rule text
+OK   Alternate Cure Normalize: 44 runs, 44 byte-equal, 0 differ only in rule text
+OK   Alternate Merge 1: 0 runs, 0 byte-equal, 0 differ only in rule text
+OK   Alternate Merge Seat: 37 runs, 37 byte-equal, 0 differ only in rule text
+OK   Alternate Payloads: 24 runs, 24 byte-equal, 0 differ only in rule text
+OK   Cure Build: 34 runs, 4 byte-equal, 30 differ only in rule text
+OK   Cure Check: 34 runs, 34 byte-equal, 0 differ only in rule text
+OK   Cure Normalize: 44 runs, 44 byte-equal, 0 differ only in rule text
+OK   Extract Independent Verdict: 34 runs, 34 byte-equal, 0 differ only in rule text
+OK   Gate Build: 33 runs, 33 byte-equal, 0 differ only in rule text
+OK   Gate Record: 29 runs, 29 byte-equal, 0 differ only in rule text
+OK   Panel Cure Build 1: 41 runs, 4 byte-equal, 37 differ only in rule text
+OK   Panel Cure Build 2: 41 runs, 4 byte-equal, 37 differ only in rule text
+OK   Panel Cure Build 3: 41 runs, 5 byte-equal, 36 differ only in rule text
+OK   Panel Cure Check: 37 runs, 37 byte-equal, 0 differ only in rule text
+OK   Panel Cure Normalize 1: 44 runs, 44 byte-equal, 0 differ only in rule text
+OK   Panel Cure Normalize 2: 44 runs, 44 byte-equal, 0 differ only in rule text
+OK   Panel Cure Normalize 3: 44 runs, 44 byte-equal, 0 differ only in rule text
+OK   Panel Payloads: 30 runs, 30 byte-equal, 0 differ only in rule text
+OK   R2 Alt Gate Build: 0 runs, 0 byte-equal, 0 differ only in rule text
+OK   R2 Alt Gate Record: 0 runs, 0 byte-equal, 0 differ only in rule text
+OK   R2 Alternate Build: 0 runs, 0 byte-equal, 0 differ only in rule text
+OK   R2 Alternate Cure Build: 0 runs, 0 byte-equal, 0 differ only in rule text
+OK   R2 Alternate Cure Normalize: 0 runs, 0 byte-equal, 0 differ only in rule text
+OK   R2 Alternate Merge: 0 runs, 0 byte-equal, 0 differ only in rule text
+OK   R2 Alternate Merge Seat: 0 runs, 0 byte-equal, 0 differ only in rule text
+OK   R2 Alternate Payloads: 0 runs, 0 byte-equal, 0 differ only in rule text
+replay: 743 node runs, 582 byte-equal, 161 differ only in rule text
+TOTAL 38 OK, 0 FAIL

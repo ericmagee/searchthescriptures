@@ -1,0 +1,285 @@
+{
+ "table": "pkgRTB/rule_table.cjs",
+ "library": {
+  "base": "pkgLIB/strip_GDS_SGA3_W1/patched/",
+  "nodes": {
+   "Alt_Gate_Build.js": {
+    "base": "1356035575c9",
+    "patched": "4c81508116c5",
+    "hits": [
+     "pu.kg11 x1",
+     "pu.kp x1",
+     "pu.mark.kg11 x1"
+    ]
+   },
+   "Alt_Gate_Record.js": {
+    "base": "c95c8c490734",
+    "patched": "c2013ae0af51",
+    "hits": [
+     "pu.kg11 x1",
+     "pu.kp x1",
+     "pu.mark.kg11 x1"
+    ]
+   },
+   "Alternate_Build.js": {
+    "base": "fa7172670d7b",
+    "patched": "b23beb7b087a",
+    "hits": [
+     "pu.kg11 x1",
+     "pu.kp x1",
+     "pu.mark.kg11 x1"
+    ]
+   },
+   "Alternate_Cure_Build.js": {
+    "base": "7213d81b1b24",
+    "patched": "08aec84b7d89",
+    "hits": [
+     "pu.kg11 x1",
+     "pu.kp x1",
+     "pu.mark.kg11 x1"
+    ]
+   },
+   "Alternate_Cure_Normalize.js": {
+    "base": "9e703d7a2268",
+    "patched": "63b053a57a1a",
+    "hits": [
+     "pu.kg11 x1",
+     "pu.kp x1",
+     "pu.mark.kg11 x1"
+    ]
+   },
+   "Alternate_Merge_1.js": {
+    "base": "c7d795ce40d6",
+    "patched": "ccc0c56ddef6",
+    "hits": [
+     "pu.kg11 x1",
+     "pu.kp x1",
+     "pu.mark.kg11 x1"
+    ]
+   },
+   "Alternate_Merge_Seat.js": {
+    "base": "6ac3364b4ca8",
+    "patched": "37bc9b922a46",
+    "hits": [
+     "pu.kg11 x1",
+     "pu.kp x1",
+     "pu.mark.kg11 x1"
+    ]
+   },
+   "Alternate_Payloads.js": {
+    "base": "5949df401e6d",
+    "patched": "97fdb889ebb5",
+    "hits": [
+     "pu.mark.kg11 x1",
+     "pu.mark.kp x1",
+     "pu.mark.kpcount x1"
+    ]
+   },
+   "Cure_Build.js": {
+    "base": "72aae135e40b",
+    "patched": "ac6bd11c29be",
+    "hits": [
+     "pu.kg11 x1",
+     "pu.kp x1",
+     "pu.mark.kg11 x1"
+    ]
+   },
+   "Cure_Check.js": {
+    "base": "620a054203aa",
+    "patched": "ea9638002c6f",
+    "hits": [
+     "pu.kg11 x1",
+     "pu.kp x1",
+     "pu.mark.kg11 x1"
+    ]
+   },
+   "Cure_Normalize.js": {
+    "base": "ff96c7e431e2",
+    "patched": "02dbf03242eb",
+    "hits": [
+     "pu.kg11 x1",
+     "pu.kp x1",
+     "pu.mark.kg11 x1"
+    ]
+   },
+   "Extract_Independent_Verdict.js": {
+    "base": "122bc2790a3d",
+    "patched": "a188f721a836",
+    "hits": [
+     "pu.mark.kg11 x1",
+     "pu.mark.kp x1",
+     "pu.mark.kpcount x1"
+    ]
+   },
+   "Gate_Build.js": {
+    "base": "6eb68255ed8c",
+    "patched": "990b6751e023",
+    "hits": [
+     "pu.kg11 x1",
+     "pu.kp x1",
+     "pu.mark.kg11 x1"
+    ]
+   },
+   "Gate_Record.js": {
+    "base": "7aea48c03f0b",
+    "patched": "eef0002ce099",
+    "hits": [
+     "pu.kg11 x1",
+     "pu.kp x1",
+     "pu.mark.kg11 x1"
+    ]
+   },
+   "Panel_Cure_Build_1.js": {
+    "base": "fa673ed00caf",
+    "patched": "4c8992444207",
+    "hits": [
+     "pu.kg11 x1",
+     "pu.kp x1",
+     "pu.mark.kg11 x1"
+    ]
+   },
+   "Panel_Cure_Build_2.js": {
+    "base": "dab45b280ae6",
+    "patched": "b7a3eed20eba",
+    "hits": [
+     "pu.kg11 x1",
+     "pu.kp x1",
+     "pu.mark.kg11 x1"
+    ]
+   },
+   "Panel_Cure_Build_3.js": {
+    "base": "0d1f63f625ef",
+    "patched": "6f96fc882b64",
+    "hits": [
+     "pu.kg11 x1",
+     "pu.kp x1",
+     "pu.mark.kg11 x1"
+    ]
+   },
+   "Panel_Cure_Check.js": {
+    "base": "af8dcca3db75",
+    "patched": "df94590c558d",
+    "hits": [
+     "pu.kg11 x1",
+     "pu.kp x1",
+     "pu.mark.kg11 x1"
+    ]
+   },
+   "Panel_Cure_Normalize_1.js": {
+    "base": "8dec9b30ee40",
+    "patched": "fddde66bc951",
+    "hits": [
+     "pu.kg11 x1",
+     "pu.kp x1",
+     "pu.mark.kg11 x1"
+    ]
+   },
+   "Panel_Cure_Normalize_2.js": {
+    "base": "7cf73a82e010",
+    "patched": "1dce28679c36",
+    "hits": [
+     "pu.kg11 x1",
+     "pu.kp x1",
+     "pu.mark.kg11 x1"
+    ]
+   },
+   "Panel_Cure_Normalize_3.js": {
+    "base": "90dd10d1b5a0",
+    "patched": "2374c9d70102",
+    "hits": [
+     "pu.kg11 x1",
+     "pu.kp x1",
+     "pu.mark.kg11 x1"
+    ]
+   },
+   "Panel_Payloads.js": {
+    "base": "e9e12dbe9170",
+    "patched": "bcedfd8d5779",
+    "hits": [
+     "pu.mark.kg11 x1",
+     "pu.mark.kp x1",
+     "pu.mark.kpcount x1"
+    ]
+   },
+   "R2_Alt_Gate_Build.js": {
+    "base": "d4254acaf617",
+    "patched": "06472e6c6877",
+    "hits": [
+     "pu.kg11 x1",
+     "pu.kp x1",
+     "pu.mark.kg11 x1"
+    ]
+   },
+   "R2_Alt_Gate_Record.js": {
+    "base": "f1fba735c822",
+    "patched": "683e83427e34",
+    "hits": [
+     "pu.kg11 x1",
+     "pu.kp x1",
+     "pu.mark.kg11 x1"
+    ]
+   },
+   "R2_Alternate_Build.js": {
+    "base": "d71f3f9af988",
+    "patched": "9503aa05d131",
+    "hits": [
+     "pu.kg11 x1",
+     "pu.kp x1",
+     "pu.mark.kg11 x1"
+    ]
+   },
+   "R2_Alternate_Cure_Build.js": {
+    "base": "8f6524d47a67",
+    "patched": "e428b61ead3d",
+    "hits": [
+     "pu.kg11 x1",
+     "pu.kp x1",
+     "pu.mark.kg11 x1"
+    ]
+   },
+   "R2_Alternate_Cure_Normalize.js": {
+    "base": "be1c18fa9c5a",
+    "patched": "63f15f7ee61a",
+    "hits": [
+     "pu.kg11 x1",
+     "pu.kp x1",
+     "pu.mark.kg11 x1"
+    ]
+   },
+   "R2_Alternate_Merge.js": {
+    "base": "dd816cf13019",
+    "patched": "dea5fad41031",
+    "hits": [
+     "pu.kg11 x1",
+     "pu.kp x1",
+     "pu.mark.kg11 x1"
+    ]
+   },
+   "R2_Alternate_Merge_Seat.js": {
+    "base": "0d4efe9e2a1a",
+    "patched": "86c0b96a835b",
+    "hits": [
+     "pu.kg11 x1",
+     "pu.kp x1",
+     "pu.mark.kg11 x1"
+    ]
+   },
+   "R2_Alternate_Payloads.js": {
+    "base": "caf1f817972d",
+    "patched": "06a3732d35ae",
+    "hits": [
+     "pu.mark.kg11 x1",
+     "pu.mark.kp x1",
+     "pu.mark.kpcount x1"
+    ]
+   }
+  }
+ },
+ "tally": {
+  "pu.kg11": 26,
+  "pu.kp": 26,
+  "pu.mark.kg11": 30,
+  "pu.mark.kp": 4,
+  "pu.mark.kpcount": 4
+ }
+}
