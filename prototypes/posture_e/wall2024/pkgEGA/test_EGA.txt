@@ -1,0 +1,16 @@
+   33060 skipped: Referenced node is unexecuted: Enforcer Build
+   33083 skipped: Referenced node is unexecuted: Enforcer Build
+   33107 skipped: Referenced node is unexecuted: Enforcer Build
+   33129 skipped: Referenced node is unexecuted: Enforcer Build
+   33149 skipped: Referenced node is unexecuted: Enforcer Build
+   33160 skipped: Referenced node is unexecuted: Enforcer Build
+   33197 skipped: Referenced node is unexecuted: Enforcer Build
+   33506: tally {"AGREE":0,"DISAGREE":1,"NO ANSWER":0,"NO VERDICT":35} -> {"AGREE":22,"DISAGREE":6,"NO ANSWER":8,"NO VERDICT":0} (35 rows changed)
+OK no row that had a verdict changes (0)
+OK replay ran on 20 runs
+OK 33506: 35 "G<k>/A<k>.<n>" lines, each answer now carries the verdict on its own line (35/35); NO VERDICT 35 -> 0
+OK unit: "G3/A2.1" (labels disagree) is not read
+OK unit: plain "A2.1" reads as before
+OK unit: "ITEM 2/A2.2" and "4: A4.1" read
+OK unit: "G2 / A2.3" with spaces and markdown
+TOTAL 7 OK, 0 FAIL
