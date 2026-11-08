@@ -1,0 +1,278 @@
+{
+ "base": "pkgLIB/strip_A2R/patched/",
+ "nodes": {
+  "Alt_Gate_Build.js": {
+   "base": "a8ba63992987",
+   "patched": "1bc203605968",
+   "anchors": [
+    "psGrades head",
+    "psGrades return",
+    "gateCure2024 K-G1 test",
+    "gateCure2024 count printed"
+   ]
+  },
+  "Alt_Gate_Record.js": {
+   "base": "38a587e48029",
+   "patched": "3b2f61384013",
+   "anchors": [
+    "psGrades head",
+    "psGrades return",
+    "gateCure2024 K-G1 test",
+    "gateCure2024 count printed"
+   ]
+  },
+  "Alternate_Build.js": {
+   "base": "1bda83c0947c",
+   "patched": "f984011c8b28",
+   "anchors": [
+    "psGrades head",
+    "psGrades return"
+   ]
+  },
+  "Alternate_Cure_Build.js": {
+   "base": "60bfdcc32086",
+   "patched": "cc3d88058eed",
+   "anchors": [
+    "psGrades head",
+    "psGrades return"
+   ]
+  },
+  "Alternate_Cure_Normalize.js": {
+   "base": "18257771f166",
+   "patched": "61fa0509c0bb",
+   "anchors": [
+    "psGrades head",
+    "psGrades return"
+   ]
+  },
+  "Alternate_Merge_1.js": {
+   "base": "94f7adf8dcd1",
+   "patched": "269240c4bb29",
+   "anchors": [
+    "psGrades head",
+    "psGrades return",
+    "gateCure2024 K-G1 test",
+    "gateCure2024 count printed"
+   ]
+  },
+  "Alternate_Merge_Seat.js": {
+   "base": "b60f767a9976",
+   "patched": "f1c0ff790afb",
+   "anchors": [
+    "psGrades head",
+    "psGrades return",
+    "gateCure2024 K-G1 test",
+    "gateCure2024 count printed"
+   ]
+  },
+  "Alternate_Payloads.js": {
+   "base": "4f97f6d3cb05",
+   "patched": "69556612c28e",
+   "anchors": [
+    "drvCountLine",
+    "drvBroken DEFENSE L",
+    "drvBroken CHALLENGE L"
+   ]
+  },
+  "Cure_Build.js": {
+   "base": "4aead3025563",
+   "patched": "d81b87e81863",
+   "anchors": [
+    "psGrades head",
+    "psGrades return"
+   ]
+  },
+  "Cure_Check.js": {
+   "base": "98e057399414",
+   "patched": "b0b59dd4d3e8",
+   "anchors": [
+    "psGrades head",
+    "psGrades return"
+   ]
+  },
+  "Cure_Normalize.js": {
+   "base": "e1888bf4b03c",
+   "patched": "ea2fdbeb97cc",
+   "anchors": [
+    "psGrades head",
+    "psGrades return"
+   ]
+  },
+  "Extract_Independent_Verdict.js": {
+   "base": "471f44354f2e",
+   "patched": "4a605ca2d58a",
+   "anchors": [
+    "drvCountLine",
+    "drvBroken DEFENSE L",
+    "drvBroken CHALLENGE L"
+   ]
+  },
+  "Gate_Build.js": {
+   "base": "d99fc0c3d530",
+   "patched": "f677b1343a1c",
+   "anchors": [
+    "psGrades head",
+    "psGrades return",
+    "gateCure2024 K-G1 test",
+    "gateCure2024 count printed"
+   ]
+  },
+  "Gate_Record.js": {
+   "base": "252ac04e6b5a",
+   "patched": "5c17f76a3156",
+   "anchors": [
+    "psGrades head",
+    "psGrades return",
+    "gateCure2024 K-G1 test",
+    "gateCure2024 count printed"
+   ]
+  },
+  "Panel_Cure_Build_1.js": {
+   "base": "214657d2718e",
+   "patched": "d0a088245b8e",
+   "anchors": [
+    "psGrades head",
+    "psGrades return"
+   ]
+  },
+  "Panel_Cure_Build_2.js": {
+   "base": "41fd8489d9d9",
+   "patched": "ffa0af011de9",
+   "anchors": [
+    "psGrades head",
+    "psGrades return"
+   ]
+  },
+  "Panel_Cure_Build_3.js": {
+   "base": "5653546002ce",
+   "patched": "28cbf00a6c6b",
+   "anchors": [
+    "psGrades head",
+    "psGrades return"
+   ]
+  },
+  "Panel_Cure_Check.js": {
+   "base": "3654275b8cb6",
+   "patched": "5b8f7e143b56",
+   "anchors": [
+    "psGrades head",
+    "psGrades return"
+   ]
+  },
+  "Panel_Cure_Normalize_1.js": {
+   "base": "11bf71c4b08f",
+   "patched": "61db3d6b0fae",
+   "anchors": [
+    "psGrades head",
+    "psGrades return"
+   ]
+  },
+  "Panel_Cure_Normalize_2.js": {
+   "base": "d7eaf214a690",
+   "patched": "73f0383d66ee",
+   "anchors": [
+    "psGrades head",
+    "psGrades return"
+   ]
+  },
+  "Panel_Cure_Normalize_3.js": {
+   "base": "e5f2cbaa6f02",
+   "patched": "896d7f1c9737",
+   "anchors": [
+    "psGrades head",
+    "psGrades return"
+   ]
+  },
+  "Panel_Payloads.js": {
+   "base": "1061ebe83e28",
+   "patched": "6c074d52030d",
+   "anchors": [
+    "drvCountLine",
+    "drvBroken DEFENSE L",
+    "drvBroken CHALLENGE L"
+   ]
+  },
+  "R2_Alt_Gate_Build.js": {
+   "base": "cbff5e414aed",
+   "patched": "6e9077e29dbf",
+   "anchors": [
+    "psGrades head",
+    "psGrades return",
+    "gateCure2024 K-G1 test",
+    "gateCure2024 count printed"
+   ]
+  },
+  "R2_Alt_Gate_Record.js": {
+   "base": "c09c1d2d7a97",
+   "patched": "958ed4e41329",
+   "anchors": [
+    "psGrades head",
+    "psGrades return",
+    "gateCure2024 K-G1 test",
+    "gateCure2024 count printed"
+   ]
+  },
+  "R2_Alternate_Build.js": {
+   "base": "aacc8213a720",
+   "patched": "808a73bafbf0",
+   "anchors": [
+    "psGrades head",
+    "psGrades return"
+   ]
+  },
+  "R2_Alternate_Cure_Build.js": {
+   "base": "07efff7afb53",
+   "patched": "a16e5dc646e6",
+   "anchors": [
+    "psGrades head",
+    "psGrades return"
+   ]
+  },
+  "R2_Alternate_Cure_Normalize.js": {
+   "base": "3e0389e0ef90",
+   "patched": "38e6457b9d19",
+   "anchors": [
+    "psGrades head",
+    "psGrades return"
+   ]
+  },
+  "R2_Alternate_Merge.js": {
+   "base": "9708a32a4d4a",
+   "patched": "cd93c89b1575",
+   "anchors": [
+    "psGrades head",
+    "psGrades return",
+    "gateCure2024 K-G1 test",
+    "gateCure2024 count printed"
+   ]
+  },
+  "R2_Alternate_Merge_Seat.js": {
+   "base": "706839374349",
+   "patched": "721ed162116d",
+   "anchors": [
+    "psGrades head",
+    "psGrades return",
+    "gateCure2024 K-G1 test",
+    "gateCure2024 count printed"
+   ]
+  },
+  "R2_Alternate_Payloads.js": {
+   "base": "65ff6f611a7a",
+   "patched": "b1eea38a9569",
+   "anchors": [
+    "drvCountLine",
+    "drvBroken DEFENSE L",
+    "drvBroken CHALLENGE L"
+   ]
+  }
+ },
+ "tally": {
+  "psGrades head": 26,
+  "psGrades return": 26,
+  "gateCure2024 K-G1 test": 10,
+  "gateCure2024 count printed": 10,
+  "drvCountLine": 4,
+  "drvBroken DEFENSE L": 4,
+  "drvBroken CHALLENGE L": 4
+ }
+}
