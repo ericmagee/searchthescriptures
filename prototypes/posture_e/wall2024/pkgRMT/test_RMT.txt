@@ -1,0 +1,6 @@
+OK mimo: patched = base + reasoning {enabled:false}: {"model":"xiaomi/mimo-v2.6-pro","max_tokens":65536,"reasoning":{"enabled":false}}
+OK glm_flash: body unchanged
+OK qwen_flash: body unchanged
+OK grok: body unchanged
+OK gemini: body unchanged
+TOTAL 5 OK, 0 FAIL
