@@ -1,0 +1,17 @@
+{
+ "base": "s60 219c6f95",
+ "nodes": [
+  {
+   "node": "Enforcer Build",
+   "file": "Enforcer_Build.js",
+   "before": "ee66d61f1339",
+   "after": "d0a0a62d24e9"
+  },
+  {
+   "node": "Alt Judge Enforcer Build",
+   "file": "Alt_Judge_Enforcer_Build.js",
+   "before": "8758f27fb673",
+   "after": "2c7332529206"
+  }
+ ]
+}
