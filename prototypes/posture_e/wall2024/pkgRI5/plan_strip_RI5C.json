@@ -3,7 +3,7 @@
  "nodes": {
   "Alt_Gate_Build.js": {
    "base": "564bb832adbf",
-   "patched": "9a5a1c39b5f4",
+   "patched": "3aa9f4f7aa7b",
    "anchors": [
     "ANSWER CHECK grade",
     "RESULT word",
@@ -16,7 +16,7 @@
   },
   "Alt_Gate_Record.js": {
    "base": "d378bd2c6616",
-   "patched": "8fef21a50964",
+   "patched": "b54a7acffa1b",
    "anchors": [
     "ANSWER CHECK grade",
     "RESULT word",
@@ -29,7 +29,7 @@
   },
   "Alternate_Build.js": {
    "base": "4aec67722484",
-   "patched": "5619af1729d1",
+   "patched": "c61953b398fd",
    "anchors": [
     "ANSWER CHECK grade",
     "RESULT word",
@@ -42,7 +42,7 @@
   },
   "Alternate_Cure_Build.js": {
    "base": "5819c0387629",
-   "patched": "a77e85be8fdc",
+   "patched": "26777b9de2d3",
    "anchors": [
     "ANSWER CHECK grade",
     "RESULT word",
@@ -55,7 +55,7 @@
   },
   "Alternate_Cure_Normalize.js": {
    "base": "2584f4d16c56",
-   "patched": "126343c37e56",
+   "patched": "3567a0dd240f",
    "anchors": [
     "ANSWER CHECK grade",
     "RESULT word",
@@ -68,7 +68,7 @@
   },
   "Alternate_Merge_1.js": {
    "base": "51af3cb906f0",
-   "patched": "181e65314667",
+   "patched": "2c358ad798b3",
    "anchors": [
     "ANSWER CHECK grade",
     "RESULT word",
@@ -81,7 +81,7 @@
   },
   "Alternate_Merge_Seat.js": {
    "base": "1893eda1ebd3",
-   "patched": "49fdf805f302",
+   "patched": "db99f9d3dfde",
    "anchors": [
     "ANSWER CHECK grade",
     "RESULT word",
@@ -94,14 +94,14 @@
   },
   "Alternate_Payloads.js": {
    "base": "a23df8a5e0f9",
-   "patched": "4dbc946d7038",
+   "patched": "5466622fbcdf",
    "anchors": [
     "ANSWER CHECK grade"
    ]
   },
   "Cure_Build.js": {
    "base": "4e3c3af2fe51",
-   "patched": "96514a4c1b47",
+   "patched": "b63759ac4436",
    "anchors": [
     "ANSWER CHECK grade",
     "RESULT word",
@@ -114,7 +114,7 @@
   },
   "Cure_Check.js": {
    "base": "4ea3ffa66ef8",
-   "patched": "66e6e8afd030",
+   "patched": "346eeb1439a3",
    "anchors": [
     "ANSWER CHECK grade",
     "RESULT word",
@@ -127,7 +127,7 @@
   },
   "Cure_Normalize.js": {
    "base": "6b31dad72e5b",
-   "patched": "4ca65837676e",
+   "patched": "9e286cd5075d",
    "anchors": [
     "ANSWER CHECK grade",
     "RESULT word",
@@ -140,14 +140,14 @@
   },
   "Extract_Independent_Verdict.js": {
    "base": "b9f1eb97d738",
-   "patched": "f5bdf7a68557",
+   "patched": "c1c9b00ca48c",
    "anchors": [
     "ANSWER CHECK grade"
    ]
   },
   "Gate_Build.js": {
    "base": "5415374f9916",
-   "patched": "d8e3b1268f15",
+   "patched": "30a4f69db437",
    "anchors": [
     "ANSWER CHECK grade",
     "RESULT word",
@@ -160,7 +160,7 @@
   },
   "Gate_Record.js": {
    "base": "9be18a5ea7cb",
-   "patched": "be1f5d7147cc",
+   "patched": "31d983ad6982",
    "anchors": [
     "ANSWER CHECK grade",
     "RESULT word",
@@ -173,7 +173,7 @@
   },
   "Panel_Cure_Build_1.js": {
    "base": "91402071c767",
-   "patched": "7e4c88358b70",
+   "patched": "014ffbca575d",
    "anchors": [
     "ANSWER CHECK grade",
     "RESULT word",
@@ -186,7 +186,7 @@
   },
   "Panel_Cure_Build_2.js": {
    "base": "5dbd940191ea",
-   "patched": "19a506575913",
+   "patched": "145bfee3fb5b",
    "anchors": [
     "ANSWER CHECK grade",
     "RESULT word",
@@ -199,7 +199,7 @@
   },
   "Panel_Cure_Build_3.js": {
    "base": "b17f44f74e2c",
-   "patched": "f682b81e628d",
+   "patched": "0102599814e8",
    "anchors": [
     "ANSWER CHECK grade",
     "RESULT word",
@@ -212,7 +212,7 @@
   },
   "Panel_Cure_Check.js": {
    "base": "981f02ad37d3",
-   "patched": "af82e4446da8",
+   "patched": "549ac19f7b48",
    "anchors": [
     "ANSWER CHECK grade",
     "RESULT word",
@@ -225,7 +225,7 @@
   },
   "Panel_Cure_Normalize_1.js": {
    "base": "e96fcbe9f049",
-   "patched": "19178ebb92a4",
+   "patched": "0abdb2f42f48",
    "anchors": [
     "ANSWER CHECK grade",
     "RESULT word",
@@ -238,7 +238,7 @@
   },
   "Panel_Cure_Normalize_2.js": {
    "base": "acfdfcfa86c4",
-   "patched": "24fe07f02768",
+   "patched": "552897e2384e",
    "anchors": [
     "ANSWER CHECK grade",
     "RESULT word",
@@ -251,7 +251,7 @@
   },
   "Panel_Cure_Normalize_3.js": {
    "base": "55d1030a9057",
-   "patched": "3d7361354f42",
+   "patched": "95e164c84599",
    "anchors": [
     "ANSWER CHECK grade",
     "RESULT word",
@@ -264,14 +264,14 @@
   },
   "Panel_Payloads.js": {
    "base": "66f352f97895",
-   "patched": "508c992c4a50",
+   "patched": "c04f6a72d446",
    "anchors": [
     "ANSWER CHECK grade"
    ]
   },
   "R2_Alt_Gate_Build.js": {
    "base": "fa5290876e60",
-   "patched": "3a39a14cdc13",
+   "patched": "b520b2f5d4de",
    "anchors": [
     "ANSWER CHECK grade",
     "RESULT word",
@@ -284,7 +284,7 @@
   },
   "R2_Alt_Gate_Record.js": {
    "base": "ad45c7a66830",
-   "patched": "0c7f6e3765d5",
+   "patched": "6418f32c896d",
    "anchors": [
     "ANSWER CHECK grade",
     "RESULT word",
@@ -297,7 +297,7 @@
   },
   "R2_Alternate_Build.js": {
    "base": "0458ea021c39",
-   "patched": "bc41913065ce",
+   "patched": "8f4b81c9679e",
    "anchors": [
     "ANSWER CHECK grade",
     "RESULT word",
@@ -310,7 +310,7 @@
   },
   "R2_Alternate_Cure_Build.js": {
    "base": "899594d5c1c9",
-   "patched": "fcd6eaf4733e",
+   "patched": "8a2687e0fc30",
    "anchors": [
     "ANSWER CHECK grade",
     "RESULT word",
@@ -323,7 +323,7 @@
   },
   "R2_Alternate_Cure_Normalize.js": {
    "base": "084fe303900e",
-   "patched": "8783b0a94a97",
+   "patched": "735765bc24dc",
    "anchors": [
     "ANSWER CHECK grade",
     "RESULT word",
@@ -336,7 +336,7 @@
   },
   "R2_Alternate_Merge.js": {
    "base": "94f1f9e61e74",
-   "patched": "6f7a4c94c24c",
+   "patched": "9d14d7cff16c",
    "anchors": [
     "ANSWER CHECK grade",
     "RESULT word",
@@ -349,7 +349,7 @@
   },
   "R2_Alternate_Merge_Seat.js": {
    "base": "9ccfc756128e",
-   "patched": "fa63eb6e664e",
+   "patched": "2b5868c433d8",
    "anchors": [
     "ANSWER CHECK grade",
     "RESULT word",
@@ -362,7 +362,7 @@
   },
   "R2_Alternate_Payloads.js": {
    "base": "e387c97b26ec",
-   "patched": "0e3aaeb83370",
+   "patched": "6ef750b6a204",
    "anchors": [
     "ANSWER CHECK grade"
    ]

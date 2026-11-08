@@ -1,7 +1,8 @@
 // pkgRI5 part C (reader phase 2 item 5; W1, 11-08): the rest of item 5. Each read asks the shared reader first; where it reads no such form (or a
 // RESTATED line), the old regex decides as before (pkgSBR rule).
 //  - kcmtGrade2024 (30 nodes): on an ANSWER CHECK line, the grade word after the ANSWER field comes from the reader's grade (the old cut took the
-//    segment after the last "ANSWER:", which an answer quoting "--" or "ANSWER:" moves).
+//    segment after the last "ANSWER:", which an answer quoting "--" or "ANSWER:" moves). Only where the reader finds an ANSWER field, as the old
+//    cut required: a line with no ANSWER field stays ungraded (first build read UNPROVEN there and added 17 K-CMTL rows in 33682).
 //  - cureRecompute (26 nodes, scope: that function only): the RESULT word (x3: __r0421, held, r0), STANDING L (Lof), STANDING word and c (tv, tc),
 //    KEYSTONE WITHDRAWN (kw), CLAUSE N and W, CONCEDED LINKS count (yc).
 //  - Fix in part B's helper ri5Res2024: with no fallback regex it returned String(l).match(null), which matches the text "null"; now it returns null.
@@ -18,7 +19,7 @@ const RESOLD=String.raw`function ri5Res2024(l,re){const r=ri5Rd2024(l);if(r&&r.f
 const RESNEW=String.raw`function ri5Res2024(l,re){const r=ri5Rd2024(l);if(r&&r.form==='RESULT'&&r.f.result)return [l,r.f.result];return re?String(l==null?'':l).match(re):null;} /* pkgRI5C: no regex, no match */`;
 const RRE=String.raw`/^RESULT\s*:\s*(DEFENDER WINS|CHALLENGER WINS|UNDERDETERMINED)/`;
 const K=[ // kcmtGrade2024
- ['ANSWER CHECK grade',String.raw`if(/^ANSWER CHECK\s*:/i.test(h)){const a=t.lastIndexOf('ANSWER:');`,String.raw`if(/^ANSWER CHECK\s*:/i.test(h)&&ri5Fd2024(l,'ANSWER CHECK','grade')!=null)t=ri5Fd2024(l,'ANSWER CHECK','grade'); /* pkgRI5C */ else if(/^ANSWER CHECK\s*:/i.test(h)){const a=t.lastIndexOf('ANSWER:');`,1]];
+ ['ANSWER CHECK grade',String.raw`if(/^ANSWER CHECK\s*:/i.test(h)){const a=t.lastIndexOf('ANSWER:');`,String.raw`if(/^ANSWER CHECK\s*:/i.test(h)&&ri5Fd2024(l,'ANSWER CHECK','answer')!=null&&ri5Fd2024(l,'ANSWER CHECK','grade')!=null)t=ri5Fd2024(l,'ANSWER CHECK','grade'); /* pkgRI5C */ else if(/^ANSWER CHECK\s*:/i.test(h)){const a=t.lastIndexOf('ANSWER:');`,1]];
 const C=[ // cureRecompute only
  ['RESULT word',`P.result?((P.result.u.match(${RRE})||[])[1]||null):null`,`P.result?((ri5Res2024(P.result.raw,null)||P.result.u.match(${RRE})||[])[1]||null):null`,3],
  ['STANDING L',String.raw`const Lof=k=>{const x=P.st[k];const m=x&&x.u.match(/\bL\s*=\s*(\d+)/);return m?+m[1]:null;};`,String.raw`const Lof=k=>{const x=P.st[k];const __l5=x?ri5Fd2024(x.raw,'STANDING','L'):null;if(__l5!=null)return __l5;const m=x&&x.u.match(/\bL\s*=\s*(\d+)/);return m?+m[1]:null;}; /* pkgRI5C */`,1],

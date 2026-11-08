@@ -2,8 +2,8 @@
  "base": "pkgLIB/strip_RI5C/patched/",
  "nodes": {
   "Alt_Gate_Build.js": {
-   "base": "9a5a1c39b5f4",
-   "patched": "806a5838e634",
+   "base": "3aa9f4f7aa7b",
+   "patched": "492a744fd4da",
    "anchors": [
     "sbBrokenWord2024: CLAUSE N and W",
     "sbBrokenWord2024: KEYSTONE WITHDRAWN",
@@ -15,8 +15,8 @@
    ]
   },
   "Alt_Gate_Record.js": {
-   "base": "8fef21a50964",
-   "patched": "d42fc7e8a718",
+   "base": "b54a7acffa1b",
+   "patched": "b1659adecbf2",
    "anchors": [
     "sbBrokenWord2024: CLAUSE N and W",
     "sbBrokenWord2024: KEYSTONE WITHDRAWN",
@@ -28,8 +28,8 @@
    ]
   },
   "Alternate_Build.js": {
-   "base": "5619af1729d1",
-   "patched": "187ca7da6973",
+   "base": "c61953b398fd",
+   "patched": "9d46f457a353",
    "anchors": [
     "kkLines: KEYSTONE line",
     "netLines: CHAIN MARK FOOTED",
@@ -39,8 +39,8 @@
    ]
   },
   "Alternate_Cure_Build.js": {
-   "base": "a77e85be8fdc",
-   "patched": "c8424d391316",
+   "base": "26777b9de2d3",
+   "patched": "0d4947d24e6e",
    "anchors": [
     "kkLines: KEYSTONE line",
     "netLines: CHAIN MARK FOOTED",
@@ -50,8 +50,8 @@
    ]
   },
   "Alternate_Cure_Normalize.js": {
-   "base": "126343c37e56",
-   "patched": "e54aadc196bc",
+   "base": "3567a0dd240f",
+   "patched": "ed824ccb264a",
    "anchors": [
     "kkLines: KEYSTONE line",
     "netLines: CHAIN MARK FOOTED",
@@ -61,8 +61,8 @@
    ]
   },
   "Alternate_Merge_1.js": {
-   "base": "181e65314667",
-   "patched": "ff5c6d5b7620",
+   "base": "2c358ad798b3",
+   "patched": "ffe38d7a6bd0",
    "anchors": [
     "sbBrokenWord2024: CLAUSE N and W",
     "sbBrokenWord2024: KEYSTONE WITHDRAWN",
@@ -74,8 +74,8 @@
    ]
   },
   "Alternate_Merge_Seat.js": {
-   "base": "49fdf805f302",
-   "patched": "16dd6a81b2d0",
+   "base": "db99f9d3dfde",
+   "patched": "16c8d0d75ce7",
    "anchors": [
     "sbBrokenWord2024: CLAUSE N and W",
     "sbBrokenWord2024: KEYSTONE WITHDRAWN",
@@ -87,8 +87,8 @@
    ]
   },
   "Alternate_Payloads.js": {
-   "base": "4dbc946d7038",
-   "patched": "5e3a5844fc88",
+   "base": "5466622fbcdf",
+   "patched": "d59db174291c",
    "anchors": [
     "kkLines: KEYSTONE line",
     "netLines: CHAIN MARK FOOTED",
@@ -98,8 +98,8 @@
    ]
   },
   "Cure_Build.js": {
-   "base": "96514a4c1b47",
-   "patched": "38ed921ef649",
+   "base": "b63759ac4436",
+   "patched": "a023eb983ae3",
    "anchors": [
     "kkLines: KEYSTONE line",
     "netLines: CHAIN MARK FOOTED",
@@ -109,8 +109,8 @@
    ]
   },
   "Cure_Check.js": {
-   "base": "66e6e8afd030",
-   "patched": "9923abe26d83",
+   "base": "346eeb1439a3",
+   "patched": "228fc4defb57",
    "anchors": [
     "kkLines: KEYSTONE line",
     "netLines: CHAIN MARK FOOTED",
@@ -120,8 +120,8 @@
    ]
   },
   "Cure_Normalize.js": {
-   "base": "4ca65837676e",
-   "patched": "57e7901dc0bd",
+   "base": "9e286cd5075d",
+   "patched": "c17937ac2ed2",
    "anchors": [
     "kkLines: KEYSTONE line",
     "netLines: CHAIN MARK FOOTED",
@@ -131,8 +131,8 @@
    ]
   },
   "Extract_Independent_Verdict.js": {
-   "base": "f5bdf7a68557",
-   "patched": "5efb139775fd",
+   "base": "c1c9b00ca48c",
+   "patched": "5f4e65fa4701",
    "anchors": [
     "kkLines: KEYSTONE line",
     "netLines: CHAIN MARK FOOTED",
@@ -142,8 +142,8 @@
    ]
   },
   "Gate_Build.js": {
-   "base": "d8e3b1268f15",
-   "patched": "77dbc9b75ecc",
+   "base": "30a4f69db437",
+   "patched": "33ce06037d9a",
    "anchors": [
     "sbBrokenWord2024: CLAUSE N and W",
     "sbBrokenWord2024: KEYSTONE WITHDRAWN",
@@ -155,8 +155,8 @@
    ]
   },
   "Gate_Record.js": {
-   "base": "be1f5d7147cc",
-   "patched": "12d2b1a5f0e6",
+   "base": "31d983ad6982",
+   "patched": "2147eaaf91f0",
    "anchors": [
     "sbBrokenWord2024: CLAUSE N and W",
     "sbBrokenWord2024: KEYSTONE WITHDRAWN",
@@ -168,8 +168,8 @@
    ]
   },
   "Panel_Cure_Build_1.js": {
-   "base": "7e4c88358b70",
-   "patched": "6ac07ffb6c3b",
+   "base": "014ffbca575d",
+   "patched": "d4414edc3bcb",
    "anchors": [
     "kkLines: KEYSTONE line",
     "netLines: CHAIN MARK FOOTED",
@@ -179,8 +179,8 @@
    ]
   },
   "Panel_Cure_Build_2.js": {
-   "base": "19a506575913",
-   "patched": "687c3cc79a49",
+   "base": "145bfee3fb5b",
+   "patched": "5b36e4bb9509",
    "anchors": [
     "kkLines: KEYSTONE line",
     "netLines: CHAIN MARK FOOTED",
@@ -190,8 +190,8 @@
    ]
   },
   "Panel_Cure_Build_3.js": {
-   "base": "f682b81e628d",
-   "patched": "f87a15b82bfc",
+   "base": "0102599814e8",
+   "patched": "83e1de526f99",
    "anchors": [
     "kkLines: KEYSTONE line",
     "netLines: CHAIN MARK FOOTED",
@@ -201,8 +201,8 @@
    ]
   },
   "Panel_Cure_Check.js": {
-   "base": "af82e4446da8",
-   "patched": "717d2163d726",
+   "base": "549ac19f7b48",
+   "patched": "5e81b84df75c",
    "anchors": [
     "kkLines: KEYSTONE line",
     "netLines: CHAIN MARK FOOTED",
@@ -212,8 +212,8 @@
    ]
   },
   "Panel_Cure_Normalize_1.js": {
-   "base": "19178ebb92a4",
-   "patched": "7d3eda49cb41",
+   "base": "0abdb2f42f48",
+   "patched": "e00429a27108",
    "anchors": [
     "kkLines: KEYSTONE line",
     "netLines: CHAIN MARK FOOTED",
@@ -223,8 +223,8 @@
    ]
   },
   "Panel_Cure_Normalize_2.js": {
-   "base": "24fe07f02768",
-   "patched": "b979bce53151",
+   "base": "552897e2384e",
+   "patched": "19c011ef8783",
    "anchors": [
     "kkLines: KEYSTONE line",
     "netLines: CHAIN MARK FOOTED",
@@ -234,8 +234,8 @@
    ]
   },
   "Panel_Cure_Normalize_3.js": {
-   "base": "3d7361354f42",
-   "patched": "6751bfde5170",
+   "base": "95e164c84599",
+   "patched": "1d2de639c9f7",
    "anchors": [
     "kkLines: KEYSTONE line",
     "netLines: CHAIN MARK FOOTED",
@@ -245,8 +245,8 @@
    ]
   },
   "Panel_Payloads.js": {
-   "base": "508c992c4a50",
-   "patched": "35bfa66a0807",
+   "base": "c04f6a72d446",
+   "patched": "cb00c17c57ad",
    "anchors": [
     "kkLines: KEYSTONE line",
     "netLines: CHAIN MARK FOOTED",
@@ -256,8 +256,8 @@
    ]
   },
   "R2_Alt_Gate_Build.js": {
-   "base": "3a39a14cdc13",
-   "patched": "86f2a609913b",
+   "base": "b520b2f5d4de",
+   "patched": "16e4016822cb",
    "anchors": [
     "sbBrokenWord2024: CLAUSE N and W",
     "sbBrokenWord2024: KEYSTONE WITHDRAWN",
@@ -269,8 +269,8 @@
    ]
   },
   "R2_Alt_Gate_Record.js": {
-   "base": "0c7f6e3765d5",
-   "patched": "d788a46b5d2c",
+   "base": "6418f32c896d",
+   "patched": "f1902ddfa107",
    "anchors": [
     "sbBrokenWord2024: CLAUSE N and W",
     "sbBrokenWord2024: KEYSTONE WITHDRAWN",
@@ -282,8 +282,8 @@
    ]
   },
   "R2_Alternate_Build.js": {
-   "base": "bc41913065ce",
-   "patched": "4544fbe8c28a",
+   "base": "8f4b81c9679e",
+   "patched": "37db7d4c8ee2",
    "anchors": [
     "kkLines: KEYSTONE line",
     "netLines: CHAIN MARK FOOTED",
@@ -293,8 +293,8 @@
    ]
   },
   "R2_Alternate_Cure_Build.js": {
-   "base": "fcd6eaf4733e",
-   "patched": "d1c2c9facfbb",
+   "base": "8a2687e0fc30",
+   "patched": "3f63b3972eee",
    "anchors": [
     "kkLines: KEYSTONE line",
     "netLines: CHAIN MARK FOOTED",
@@ -304,8 +304,8 @@
    ]
   },
   "R2_Alternate_Cure_Normalize.js": {
-   "base": "8783b0a94a97",
-   "patched": "fb4c53a1f4e2",
+   "base": "735765bc24dc",
+   "patched": "697fb9ed5c87",
    "anchors": [
     "kkLines: KEYSTONE line",
     "netLines: CHAIN MARK FOOTED",
@@ -315,8 +315,8 @@
    ]
   },
   "R2_Alternate_Merge.js": {
-   "base": "6f7a4c94c24c",
-   "patched": "a860fe0e9540",
+   "base": "9d14d7cff16c",
+   "patched": "bbe02b2f860f",
    "anchors": [
     "sbBrokenWord2024: CLAUSE N and W",
     "sbBrokenWord2024: KEYSTONE WITHDRAWN",
@@ -328,8 +328,8 @@
    ]
   },
   "R2_Alternate_Merge_Seat.js": {
-   "base": "fa63eb6e664e",
-   "patched": "8fa1e5687489",
+   "base": "2b5868c433d8",
+   "patched": "a714e9c2e3f6",
    "anchors": [
     "sbBrokenWord2024: CLAUSE N and W",
     "sbBrokenWord2024: KEYSTONE WITHDRAWN",
@@ -341,8 +341,8 @@
    ]
   },
   "R2_Alternate_Payloads.js": {
-   "base": "0e3aaeb83370",
-   "patched": "838dd2ce8eab",
+   "base": "6ef750b6a204",
+   "patched": "5161cd1ec660",
    "anchors": [
     "kkLines: KEYSTONE line",
     "netLines: CHAIN MARK FOOTED",

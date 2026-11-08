@@ -1141,7 +1141,7 @@ function kcmtGrade2024(l){if(/^\[AUDIT\b/.test(l))return false;const h=l.replace
  if(/^(?:RULING\s*(?:--|—|–|:)|CLAIM\s*:|NAMED BY\s*:|RULE\s*:|APPLIED\s*:)/i.test(h))return false;
  if(/\bCommitments?\s*\d+/i.test(h))return false;
  let t=h.replace(/"[^"]*"|“[^”]*”/g,' ');
- if(/^ANSWER CHECK\s*:/i.test(h)&&ri5Fd2024(l,'ANSWER CHECK','grade')!=null)t=ri5Fd2024(l,'ANSWER CHECK','grade'); /* pkgRI5C */ else if(/^ANSWER CHECK\s*:/i.test(h)){const a=t.lastIndexOf('ANSWER:');const sg=(a<0?'':t.slice(a)).split(/\s(?:--|—|–)\s/);t=sg.length>1?sg[1]:'';}
+ if(/^ANSWER CHECK\s*:/i.test(h)&&ri5Fd2024(l,'ANSWER CHECK','answer')!=null&&ri5Fd2024(l,'ANSWER CHECK','grade')!=null)t=ri5Fd2024(l,'ANSWER CHECK','grade'); /* pkgRI5C */ else if(/^ANSWER CHECK\s*:/i.test(h)){const a=t.lastIndexOf('ANSWER:');const sg=(a<0?'':t.slice(a)).split(/\s(?:--|—|–)\s/);t=sg.length>1?sg[1]:'';}
  t=t.replace(/\b(?:none|no\s+\w+(?:\s+\w+)?)\s+(?:(?:is|are|was|were)\s+)?(?:counted\s+as\s+)?(?:BROKEN|FORCED|MISSES|VOID|UNPROVEN)\b/gi,' ').replace(/\bnot\s+(?:(?:graded|counted|ruled|held)\s+)?(?:(?:DEFENDER|CHALLENGER)\s+)?(?:LINK\s+)?(?:BROKEN|FORCED|MISSES|VOID|UNPROVEN)\b/gi,' ');
  return /\b(BROKEN|FORCED|MISSES|VOID|UNPROVEN)\b/.test(t);}
 function kcmtlSeg2024(text,k){for(const s of String(text||'').split(/;|\n/)){const m=s.match(/^\s*lines?\s+((?:\d+\s*(?:,|and|&)?\s*)+)\s*(?::|--|\u2014|\u2013|-)\s*([\s\S]*)$/i);if(m&&(m[1].match(/\d+/g)||[]).map(Number).includes(k))return s.trim();}return null;}
