@@ -1,0 +1,19 @@
+{
+ "base": "/mnt/project-files/wall2024/fetchback_live_s63.json",
+ "base_versionId": "df871acd-81e3-4b19-9bcb-4875908b35e1",
+ "reader_from": "Send Back Build ad3910c482c5 (reader block sha efe79d4f82e3)",
+ "nodes": {
+  "Judge Enforcer Build": {
+   "base": "1b91af370950",
+   "patched": "dbd238022bee"
+  },
+  "Alt Judge Enforcer Build": {
+   "base": "11880d7711c1",
+   "patched": "5509af1d4d84"
+  },
+  "R2 Alt Judge Enforcer Build": {
+   "base": "b83d7d8cf7f0",
+   "patched": "4acb22d227a0"
+  }
+ }
+}
