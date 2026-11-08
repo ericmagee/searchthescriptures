@@ -19,4 +19,4 @@ What the reader read could change (expected only on unusual lines):
 - a STANDING word outside the reader's STAND set (the old [A-Z-]+ takes any word): the reader refuses it, so the old read decides as before;
 - a CONCEDED LINKS label not at the start of the line: the reader reads no form, so the old read decides as before.
 
-Base: fetchback_live_s65. Stacking: the 3 Judge Enforcer Build nodes are also patched by pkgRTB and pkgRP11. The build is anchor-based, so it rebuilds on whichever goes in first: `node pkgRP12/build_RP12.cjs <base>`.
+Base: the staged s66 (/mnt/project-files/wall2024/s66c/target_s66.json; JEB x3 = s65 -> RP11 -> RP9 -> RTB). Rebuilt 11-08 18:45 CST; test unchanged (0 diffs).

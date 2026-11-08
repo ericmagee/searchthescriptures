@@ -1,10 +1,10 @@
 {
- "base": "/mnt/project-files/wall2024/fetchback_live_s65.json",
+ "base": "/mnt/project-files/wall2024/s66c/target_s66.json",
  "base_versionId": "fd86de35-0651-4222-99f3-730e7445fb55",
  "nodes": {
   "Judge Enforcer Build": {
-   "base": "a16136bf50f9",
-   "patched": "ef1584a52267"
+   "base": "589d60d511aa",
+   "patched": "b944baba3563"
   },
   "Judge Enforcer Record": {
    "base": "2273601a44c3",
@@ -15,8 +15,8 @@
    "patched": "37ac2d0cdc82"
   },
   "Alt Judge Enforcer Build": {
-   "base": "9326070b9a11",
-   "patched": "50ef9be9974c"
+   "base": "519fbc364904",
+   "patched": "d54b18c5a2a3"
   },
   "Alt Judge Enforcer Record": {
    "base": "2dfe1e7fd7dd",
@@ -27,8 +27,8 @@
    "patched": "4bf72c6dcb73"
   },
   "R2 Alt Judge Enforcer Build": {
-   "base": "c6f7fae63f06",
-   "patched": "fdf690f5c46c"
+   "base": "d5bbcfd9ccdd",
+   "patched": "0969165910f9"
   },
   "R2 Alt Judge Enforcer Record": {
    "base": "bd7fb2cc0c00",
