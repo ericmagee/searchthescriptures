@@ -1,0 +1,10 @@
+{
+ "base": "/tmp/claude-0/-home-user/86d59483-62fd-5fa0-b8c4-6322500f4823/scratchpad/s66/target.json",
+ "base_versionId": "fd86de35-0651-4222-99f3-730e7445fb55",
+ "nodes": {
+  "Enforcer Build": {
+   "base": "d6413758c205",
+   "patched": "d9f9c94420de"
+  }
+ }
+}
