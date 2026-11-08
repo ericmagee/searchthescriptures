@@ -1,0 +1,380 @@
+{
+ "base": "pkgLIB/strip_RTB2K/patched/",
+ "nodes": {
+  "Alt_Gate_Build.js": {
+   "base": "c884c128f01a",
+   "patched": "b64728d104b3",
+   "anchors": [
+    "ANSWER CHECK grade",
+    "RESULT word",
+    "STANDING L",
+    "KEYSTONE WITHDRAWN",
+    "STANDING word and c",
+    "CLAUSE N and W",
+    "CONCEDED count"
+   ]
+  },
+  "Alt_Gate_Record.js": {
+   "base": "8bd1b15175dd",
+   "patched": "e8cb5361602a",
+   "anchors": [
+    "ANSWER CHECK grade",
+    "RESULT word",
+    "STANDING L",
+    "KEYSTONE WITHDRAWN",
+    "STANDING word and c",
+    "CLAUSE N and W",
+    "CONCEDED count"
+   ]
+  },
+  "Alternate_Build.js": {
+   "base": "936e982415b1",
+   "patched": "fd6898c785ef",
+   "anchors": [
+    "ANSWER CHECK grade",
+    "RESULT word",
+    "STANDING L",
+    "KEYSTONE WITHDRAWN",
+    "STANDING word and c",
+    "CLAUSE N and W",
+    "CONCEDED count"
+   ]
+  },
+  "Alternate_Cure_Build.js": {
+   "base": "fd246e983eae",
+   "patched": "babc8707e1e6",
+   "anchors": [
+    "ANSWER CHECK grade",
+    "RESULT word",
+    "STANDING L",
+    "KEYSTONE WITHDRAWN",
+    "STANDING word and c",
+    "CLAUSE N and W",
+    "CONCEDED count"
+   ]
+  },
+  "Alternate_Cure_Normalize.js": {
+   "base": "926275d4a7ee",
+   "patched": "545d0abb397c",
+   "anchors": [
+    "ANSWER CHECK grade",
+    "RESULT word",
+    "STANDING L",
+    "KEYSTONE WITHDRAWN",
+    "STANDING word and c",
+    "CLAUSE N and W",
+    "CONCEDED count"
+   ]
+  },
+  "Alternate_Merge_1.js": {
+   "base": "86dba3ed2d34",
+   "patched": "eebdc58a952d",
+   "anchors": [
+    "ANSWER CHECK grade",
+    "RESULT word",
+    "STANDING L",
+    "KEYSTONE WITHDRAWN",
+    "STANDING word and c",
+    "CLAUSE N and W",
+    "CONCEDED count"
+   ]
+  },
+  "Alternate_Merge_Seat.js": {
+   "base": "8c69c3cbd277",
+   "patched": "4496f4eccb27",
+   "anchors": [
+    "ANSWER CHECK grade",
+    "RESULT word",
+    "STANDING L",
+    "KEYSTONE WITHDRAWN",
+    "STANDING word and c",
+    "CLAUSE N and W",
+    "CONCEDED count"
+   ]
+  },
+  "Alternate_Payloads.js": {
+   "base": "5949df401e6d",
+   "patched": "e4874e02cd43",
+   "anchors": [
+    "ANSWER CHECK grade"
+   ]
+  },
+  "Cure_Build.js": {
+   "base": "eafc17874408",
+   "patched": "fc0ae24684d8",
+   "anchors": [
+    "ANSWER CHECK grade",
+    "RESULT word",
+    "STANDING L",
+    "KEYSTONE WITHDRAWN",
+    "STANDING word and c",
+    "CLAUSE N and W",
+    "CONCEDED count"
+   ]
+  },
+  "Cure_Check.js": {
+   "base": "6eec1b7b938f",
+   "patched": "e60db8b8122c",
+   "anchors": [
+    "ANSWER CHECK grade",
+    "RESULT word",
+    "STANDING L",
+    "KEYSTONE WITHDRAWN",
+    "STANDING word and c",
+    "CLAUSE N and W",
+    "CONCEDED count"
+   ]
+  },
+  "Cure_Normalize.js": {
+   "base": "196c6f95db5b",
+   "patched": "64065fd79349",
+   "anchors": [
+    "ANSWER CHECK grade",
+    "RESULT word",
+    "STANDING L",
+    "KEYSTONE WITHDRAWN",
+    "STANDING word and c",
+    "CLAUSE N and W",
+    "CONCEDED count"
+   ]
+  },
+  "Extract_Independent_Verdict.js": {
+   "base": "122bc2790a3d",
+   "patched": "a580be2420b7",
+   "anchors": [
+    "ANSWER CHECK grade"
+   ]
+  },
+  "Gate_Build.js": {
+   "base": "d39aebfe90c0",
+   "patched": "da544eeb4e8b",
+   "anchors": [
+    "ANSWER CHECK grade",
+    "RESULT word",
+    "STANDING L",
+    "KEYSTONE WITHDRAWN",
+    "STANDING word and c",
+    "CLAUSE N and W",
+    "CONCEDED count"
+   ]
+  },
+  "Gate_Record.js": {
+   "base": "d73d3f424c5a",
+   "patched": "7f7509f73f2c",
+   "anchors": [
+    "ANSWER CHECK grade",
+    "RESULT word",
+    "STANDING L",
+    "KEYSTONE WITHDRAWN",
+    "STANDING word and c",
+    "CLAUSE N and W",
+    "CONCEDED count"
+   ]
+  },
+  "Panel_Cure_Build_1.js": {
+   "base": "4614e2b76ce1",
+   "patched": "6fe590c90e48",
+   "anchors": [
+    "ANSWER CHECK grade",
+    "RESULT word",
+    "STANDING L",
+    "KEYSTONE WITHDRAWN",
+    "STANDING word and c",
+    "CLAUSE N and W",
+    "CONCEDED count"
+   ]
+  },
+  "Panel_Cure_Build_2.js": {
+   "base": "d089ab43770b",
+   "patched": "e0f3b1b0527c",
+   "anchors": [
+    "ANSWER CHECK grade",
+    "RESULT word",
+    "STANDING L",
+    "KEYSTONE WITHDRAWN",
+    "STANDING word and c",
+    "CLAUSE N and W",
+    "CONCEDED count"
+   ]
+  },
+  "Panel_Cure_Build_3.js": {
+   "base": "bb1d514ee6ec",
+   "patched": "95359c6c7026",
+   "anchors": [
+    "ANSWER CHECK grade",
+    "RESULT word",
+    "STANDING L",
+    "KEYSTONE WITHDRAWN",
+    "STANDING word and c",
+    "CLAUSE N and W",
+    "CONCEDED count"
+   ]
+  },
+  "Panel_Cure_Check.js": {
+   "base": "a877267a0979",
+   "patched": "469dfe7355d6",
+   "anchors": [
+    "ANSWER CHECK grade",
+    "RESULT word",
+    "STANDING L",
+    "KEYSTONE WITHDRAWN",
+    "STANDING word and c",
+    "CLAUSE N and W",
+    "CONCEDED count"
+   ]
+  },
+  "Panel_Cure_Normalize_1.js": {
+   "base": "1ed997e8b8db",
+   "patched": "866ddf2e4221",
+   "anchors": [
+    "ANSWER CHECK grade",
+    "RESULT word",
+    "STANDING L",
+    "KEYSTONE WITHDRAWN",
+    "STANDING word and c",
+    "CLAUSE N and W",
+    "CONCEDED count"
+   ]
+  },
+  "Panel_Cure_Normalize_2.js": {
+   "base": "4bf6d2dea73c",
+   "patched": "723cf9dec4ed",
+   "anchors": [
+    "ANSWER CHECK grade",
+    "RESULT word",
+    "STANDING L",
+    "KEYSTONE WITHDRAWN",
+    "STANDING word and c",
+    "CLAUSE N and W",
+    "CONCEDED count"
+   ]
+  },
+  "Panel_Cure_Normalize_3.js": {
+   "base": "4816503f46f7",
+   "patched": "79f06080f2f4",
+   "anchors": [
+    "ANSWER CHECK grade",
+    "RESULT word",
+    "STANDING L",
+    "KEYSTONE WITHDRAWN",
+    "STANDING word and c",
+    "CLAUSE N and W",
+    "CONCEDED count"
+   ]
+  },
+  "Panel_Payloads.js": {
+   "base": "e9e12dbe9170",
+   "patched": "e9f0f62738a2",
+   "anchors": [
+    "ANSWER CHECK grade"
+   ]
+  },
+  "R2_Alt_Gate_Build.js": {
+   "base": "5f152e0e2df7",
+   "patched": "96c08c4def38",
+   "anchors": [
+    "ANSWER CHECK grade",
+    "RESULT word",
+    "STANDING L",
+    "KEYSTONE WITHDRAWN",
+    "STANDING word and c",
+    "CLAUSE N and W",
+    "CONCEDED count"
+   ]
+  },
+  "R2_Alt_Gate_Record.js": {
+   "base": "fc6d440ec25e",
+   "patched": "e7b540d5bcad",
+   "anchors": [
+    "ANSWER CHECK grade",
+    "RESULT word",
+    "STANDING L",
+    "KEYSTONE WITHDRAWN",
+    "STANDING word and c",
+    "CLAUSE N and W",
+    "CONCEDED count"
+   ]
+  },
+  "R2_Alternate_Build.js": {
+   "base": "507ed1690dca",
+   "patched": "c23da51572d0",
+   "anchors": [
+    "ANSWER CHECK grade",
+    "RESULT word",
+    "STANDING L",
+    "KEYSTONE WITHDRAWN",
+    "STANDING word and c",
+    "CLAUSE N and W",
+    "CONCEDED count"
+   ]
+  },
+  "R2_Alternate_Cure_Build.js": {
+   "base": "0e6faa6c57e4",
+   "patched": "5d9f254af3cc",
+   "anchors": [
+    "ANSWER CHECK grade",
+    "RESULT word",
+    "STANDING L",
+    "KEYSTONE WITHDRAWN",
+    "STANDING word and c",
+    "CLAUSE N and W",
+    "CONCEDED count"
+   ]
+  },
+  "R2_Alternate_Cure_Normalize.js": {
+   "base": "a6cf776e8a1a",
+   "patched": "d52877177228",
+   "anchors": [
+    "ANSWER CHECK grade",
+    "RESULT word",
+    "STANDING L",
+    "KEYSTONE WITHDRAWN",
+    "STANDING word and c",
+    "CLAUSE N and W",
+    "CONCEDED count"
+   ]
+  },
+  "R2_Alternate_Merge.js": {
+   "base": "52a549e68619",
+   "patched": "0658057ce95b",
+   "anchors": [
+    "ANSWER CHECK grade",
+    "RESULT word",
+    "STANDING L",
+    "KEYSTONE WITHDRAWN",
+    "STANDING word and c",
+    "CLAUSE N and W",
+    "CONCEDED count"
+   ]
+  },
+  "R2_Alternate_Merge_Seat.js": {
+   "base": "98fe1c05f04f",
+   "patched": "5141a40f644e",
+   "anchors": [
+    "ANSWER CHECK grade",
+    "RESULT word",
+    "STANDING L",
+    "KEYSTONE WITHDRAWN",
+    "STANDING word and c",
+    "CLAUSE N and W",
+    "CONCEDED count"
+   ]
+  },
+  "R2_Alternate_Payloads.js": {
+   "base": "caf1f817972d",
+   "patched": "a718b9debc0e",
+   "anchors": [
+    "ANSWER CHECK grade"
+   ]
+  }
+ },
+ "tally": {
+  "ANSWER CHECK grade": 30,
+  "RESULT word": 26,
+  "STANDING L": 26,
+  "KEYSTONE WITHDRAWN": 26,
+  "STANDING word and c": 26,
+  "CLAUSE N and W": 26,
+  "CONCEDED count": 26
+ }
+}
