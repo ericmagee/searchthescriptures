@@ -1,6 +1,6 @@
 // pkgRP10 test: each of the 3 Judge Enforcer Build nodes, live s63 vs patched, on every saved run. Every output difference is listed.
 const fs=require('fs');const {harness,feeder}=require('../pkgGSL/harness.cjs');const D='/mnt/project-files/wall2024/inputs/';
-const F='/mnt/project-files/wall2024/fetchback_live_s63.json';const W=JSON.parse(fs.readFileSync(F,'utf8'));
+const F='/mnt/project-files/wall2024/fetchback_live_s64.json';const W=JSON.parse(fs.readFileSync(F,'utf8'));
 let ok=0,bad=0;const out=[];const log=s=>{out.push(s);console.log(s);};const T=(c,m)=>{c?ok++:bad++;log((c?'OK   ':'FAIL ')+m);};
 const st=x=>JSON.stringify(x,(k,v)=>k==='at'?undefined:v);
 for(const N of ['Judge Enforcer Build','Alt Judge Enforcer Build']){const A=W.nodes.find(n=>n.name===N).parameters.jsCode,B=fs.readFileSync('pkgRP10/patched/'+N.replace(/ /g,'_')+'.js','utf8');

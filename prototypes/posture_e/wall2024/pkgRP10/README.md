@@ -17,3 +17,6 @@ Test (`node --max-old-space-size=8000 pkgRP10/test_RP10.cjs`, test_RP10.txt): li
 - Behaviour changes on the corpus: none. Lines that would change if they occurred: a COLLISION line whose grade is not LINK BROKEN but whose reason mentions it (old: an E-COL item; new: none).
 
 Rebuild: node pkgRP10/build_RP10.cjs [fetchback]. Revert: restore the 3 nodes from the prewrite copy.
+
+## Rebuilt on s64 (W4, 11:20 CST 11-08, for W3 3254 STACK HOLD)
+Base is now fetchback_live_s64 (pkgOOS JEB nodes: ef5238330d13, 956ccd0b2d2d, 040c7ca1ad61). See plan_RP10.json for new shas. test_RP10: JEB 60 runs, Alt 30 runs, all byte-equal, TOTAL 2 OK, 0 FAIL.

@@ -1,8 +1,8 @@
 // pkgRP10 (reader phase 2, item 10, W4): the E-COL FORCED/collision reads in the three Judge Enforcer Build nodes
 // (__ecfColl, __ecpK, __ecpOf, and the FORCED label test on the item grade/req) ask the shared reader first; a line the reader
-// refuses, or a RESTATED wrapper, keeps the old read. Run from wall2024/: node pkgRP10/build_RP10.cjs [fetchback, default s63]
+// refuses, or a RESTATED wrapper, keeps the old read. Run from wall2024/: node pkgRP10/build_RP10.cjs [fetchback, default s64]
 const fs=require('fs'),cr=require('crypto');const sha=s=>cr.createHash('sha256').update(String(s)).digest('hex').slice(0,12);
-const F=process.argv[2]||'/mnt/project-files/wall2024/fetchback_live_s63.json';const W=JSON.parse(fs.readFileSync(F,'utf8'));
+const F=process.argv[2]||'/mnt/project-files/wall2024/fetchback_live_s64.json';const W=JSON.parse(fs.readFileSync(F,'utf8'));
 const node=n=>W.nodes.find(z=>z.name===n).parameters.jsCode;
 const SBB=node('Send Back Build');const i=SBB.indexOf('const __RL=');const END='return module.exports;})();';const j=SBB.indexOf(END,i)+END.length;
 if(i<0||j<END.length)throw new Error('reader block not found in Send Back Build');const RL=SBB.slice(i,j);
