@@ -24,9 +24,15 @@ const SITES={
   "{const __fa=cureForcedAdd2024(b.payload.verdict_raw,v,true);b.payload.verdict_raw=__fa.raw;} /* pkgFCW */ const rc=cureRecompute(a.seat,cureJText(b.payload.verdict_raw,true),F0,r.drv,v,c?c.reply:null);"],
  'Cure_Check.js':["const RC=cureRecompute(null,cureJText(base.independent_verdict_raw,false),F0,all,v,r?r.reply:null);",
   "{const __fa=cureForcedAdd2024(base.independent_verdict_raw,v,false);base.independent_verdict_raw=__fa.raw;} /* pkgFCW */\nconst RC=cureRecompute(null,cureJText(base.independent_verdict_raw,false),F0,all,v,r?r.reply:null);"]};
+// v2 (W3 hold, 33592 gemini D6 vs C4): pkgRFL keeps a FORCED line while its pair's collision line is still LINK BROKEN, but it runs before the
+// keystone/contradiction checks. When one of those refuses the regrade of the collision line (S6), the line is BROKEN again while the FORCED line's
+// retraction (S9) stays applied, and the gate re-read then raises a new K-G4 on that pair. The RFL check now runs again after those refusals.
+const RA=" if(!map.size&&!items.length&&!resTo)return null;";
+const RB=" {const P9b=rcLines(build(map));for(const [o9,c9] of [...map]){if(!c9.rfl)continue;const g9=P9b.col.filter(z=>U(z.link)===c9.rfl).map(z=>z.grade);if(g9.some(g=>/LINK BROKEN$/.test(String(g||'')))){map.delete(o9);items.push({sid:c9.sid,kind:'NOT APPLIED',why:'the collision line of '+c9.rfl.replace(' VS ',' vs ')+' is still graded '+g9.find(g=>/LINK BROKEN$/.test(String(g||'')))+' (its change was not applied), and a broken link keeps its FORCED line (ruling 411; pkgRFL, rechecked by pkgFCW v2)',to:'RETRACTED: '+c9.rfl.replace(' VS ',' vs '),lines:[o9]});}}} /* pkgFCW v2 */\n"+RA;
 const plan={base:'pkgLIB/strip_RI2',nodes:{}};
 for(const f of fs.readdirSync(IN).filter(f=>f.endsWith('.js'))){let s=fs.readFileSync(IN+f,'utf8');const b=s;
  if(s.includes(DEF))s=once(s,DEF,FN+DEF,f+' def');if(SITES[f])s=once(s,SITES[f][0],SITES[f][1],f+' site');
+ if(s.includes(RA))s=once(s,RA,RB,f+' rfl2');
  if(s!==b){try{new Function('$','$input','$json','$execution','$workflow',s);}catch(e){throw new Error(f+' syntax: '+e.message);}}
  fs.writeFileSync(OUT+f,s);plan.nodes[f]={before:sha(b),after:sha(s),changed:b!==s};}
 fs.writeFileSync('pkgFCW/plan_FCW.json',JSON.stringify(plan,null,1));const ch=Object.entries(plan.nodes).filter(([k,v])=>v.changed);console.log(ch.length+' changed');

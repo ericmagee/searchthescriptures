@@ -25,3 +25,9 @@ W3 3174, W2 (a); the fault is W3 3067 (grok 33506 E-APPLY S9-S11, false NOT APPL
 ## Write
 - pkgLIB_v21_FCW = v20_RI2 + strip_FCW. All 22 stubs rebuild. Shared Library b23f6a8053ce -> 966ddb6aef6f.
 - Revert: pkgLIB_v20_RI2 (or v19_GDA if RI2 is not written).
+
+## v2 (W3 hold: 33592 gemini D6 vs C4)
+- Cause: pkgRFL keeps a FORCED line while its pair's collision line is still LINK BROKEN, but it runs before the keystone and contradiction checks. In 33592 gemini, S6 regraded D6 vs C4 (Hebrews 7:14) to UNDERDETERMINED and S9 retracted its FORCED line. The keystone check then refused S6, so the line was BROKEN again, but S9 stayed applied. The gate re-read raised a new K-G4.
+- Fix: sbApply2024 runs the RFL check again after those refusals (6 gate nodes). S9 now reads NOT APPLIED, "the collision line of D6 vs C4 is still graded CHALLENGER LINK BROKEN (its change was not applied), and a broken link keeps its FORCED line".
+- W3's gate replay (gate_replay_v2.txt): there is no new K-G4 anywhere. 33592 gemini S9 is NOT APPLIED with the true reason; base gave the false "not in the judge text". test_FCW gives 4 OK.
+- LIB v21_FCW is repacked. Shared Library 966ddb6aef6f -> f7b5a48fe7f1. 22/22 stubs rebuild.
