@@ -1,0 +1,19 @@
+RUN 33490: items gone 6, added 0
+  - sol|NOT APPLIED|G1  the change has no line label and would replace the whole CHALLENGER CONCEDED LINKS line (the line has no sentence for premise 2): write the whole line with its  :: 
+  - sol|NOT APPLIED|G2  the change has no line label and would replace the whole CHALLENGER CONCEDED LINKS line (the line has no sentence for premise 5): write the whole line with its  :: 
+  - sol|NOT APPLIED|G3  the change has no line label and would replace the whole CHALLENGER CONCEDED LINKS line (the line has no sentence for premise 6): write the whole line with its  :: 
+  - sol|NOT APPLIED|S4  the change has no line label and would replace the whole CHALLENGER CONCEDED LINKS line (the line has no sentence for premise 2): write the whole line with its  :: Premise 2 against the challenger: VOID (Commitment 6) -- The charge "in place of a begetting" assert
+  - sol|NOT APPLIED|S5  the change has no line label and would replace the whole CHALLENGER CONCEDED LINKS line (the line has no sentence for premise 5): write the whole line with its  :: Premise 5 against the challenger: VOID (Commitment 6) -- The charge "reverses Jeremiah 22:30" assert
+  - sol|NOT APPLIED|S6  the change has no line label and would replace the whole CHALLENGER CONCEDED LINKS line (the line has no sentence for premise 6): write the whole line with its  :: Premise 6 against the challenger: VOID (Commitment 6) -- The charge "the house of the fathers means 
+RUN 33798: items gone 10, added 0
+  - gemini|NOT APPLIED|S5  the change has no line label and would replace the whole CHALLENGER CONCEDED LINKS line (the line has no sentence for premise 1): write the whole line with its  :: Premise 1: VOID -- charge goes beyond quote
+  - gemini|NOT APPLIED|S6  the change has no line label and would replace the whole CHALLENGER CONCEDED LINKS line (the line has no sentence for premise 2): write the whole line with its  :: Premise 2: VOID -- charge goes beyond quote
+  - gemini|NOT APPLIED|S7  the change has no line label and would replace the whole CHALLENGER CONCEDED LINKS line (the line has no sentence for premise 5): write the whole line with its  :: Premise 5: VOID -- charge goes beyond quote
+  - gemini|NOT APPLIED|S8  the change has no line label and would replace the whole CHALLENGER CONCEDED LINKS line (the line has no sentence for premise 6): write the whole line with its  :: Premise 6: VOID -- charge goes beyond quote
+  - gemini|NOT APPLIED|G1  the change has no line label and would replace the whole CHALLENGER CONCEDED LINKS line (the line has no sentence for premise 1): write the whole line with its  :: 
+  - gemini|NOT APPLIED|G2  the change has no line label and would replace the whole CHALLENGER CONCEDED LINKS line (the line has no sentence for premise 2): write the whole line with its  :: 
+  - gemini|NOT APPLIED|G3  the change has no line label and would replace the whole CHALLENGER CONCEDED LINKS line (the line has no sentence for premise 5): write the whole line with its  :: 
+  - gemini|NOT APPLIED|G4  the change has no line label and would replace the whole CHALLENGER CONCEDED LINKS line (the line has no sentence for premise 6): write the whole line with its  :: 
+  - chatgpt|NOT APPLIED|G2  the change moves premise 4 out of the CHALLENGER CONCEDED LINKS count, so the line's count number would be stale: write the whole line with its label and count  :: 
+  - chatgpt|NOT APPLIED|S13  the change has no line label and would replace the whole CHALLENGER CONCEDED LINKS line (the line has no sentence for premise 1): write the whole line with its  :: Premise 1: VOID (Commitment 6) -- The charge “runs through Joseph's line” asserts a descent beyond t
+runs with any change: 2 of 2

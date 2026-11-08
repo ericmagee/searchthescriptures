@@ -1,0 +1,45 @@
+{
+ "base": "pkgLIB/strip_GDS/patched/",
+ "nodes": {
+  "Alt_Gate_Build.js": {
+   "base": "b545fd627ddc",
+   "patched": "1356035575c9"
+  },
+  "Alt_Gate_Record.js": {
+   "base": "a6a6731e31f1",
+   "patched": "c95c8c490734"
+  },
+  "Alternate_Merge_1.js": {
+   "base": "4282ac30ed20",
+   "patched": "c7d795ce40d6"
+  },
+  "Alternate_Merge_Seat.js": {
+   "base": "224192ed65d8",
+   "patched": "6ac3364b4ca8"
+  },
+  "Gate_Build.js": {
+   "base": "7d5359693476",
+   "patched": "6eb68255ed8c"
+  },
+  "Gate_Record.js": {
+   "base": "499434ccfbcb",
+   "patched": "7aea48c03f0b"
+  },
+  "R2_Alt_Gate_Build.js": {
+   "base": "23800ecb67e7",
+   "patched": "d4254acaf617"
+  },
+  "R2_Alt_Gate_Record.js": {
+   "base": "2afaf770178d",
+   "patched": "f1fba735c822"
+  },
+  "R2_Alternate_Merge.js": {
+   "base": "eb5b78a1976a",
+   "patched": "dd816cf13019"
+  },
+  "R2_Alternate_Merge_Seat.js": {
+   "base": "508ad3d61456",
+   "patched": "0d4efe9e2a1a"
+  }
+ }
+}
