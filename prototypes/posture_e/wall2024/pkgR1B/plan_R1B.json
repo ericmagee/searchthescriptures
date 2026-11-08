@@ -1,0 +1,29 @@
+{
+ "base": "pkgLIB/strip_KCR2",
+ "nodes": {
+  "Alt_Gate_Build.js": {
+   "base": "57c4eb1fb193",
+   "patched": "59bf25bb52f9"
+  },
+  "Alt_Gate_Record.js": {
+   "base": "cf00dcf0241d",
+   "patched": "fb2882398fbf"
+  },
+  "Alternate_Merge.js": {
+   "base": "7dd4f89aefdb",
+   "patched": "03d019c96083"
+  },
+  "Alternate_Merge_Seat.js": {
+   "base": "5568bb638a08",
+   "patched": "e936eceeb574"
+  },
+  "Gate_Build.js": {
+   "base": "5a57a4ef100a",
+   "patched": "725f11466838"
+  },
+  "Gate_Record.js": {
+   "base": "bef844609dfc",
+   "patched": "b3cc5b9f05e9"
+  }
+ }
+}
