@@ -1,9 +1,9 @@
 {
- "base": "pkgLIB/strip_RCD/patched/",
+ "base": "pkgLIB/strip_KWQ/patched/",
  "nodes": {
   "Alt_Gate_Build.js": {
-   "base": "564bb832adbf",
-   "patched": "3aa9f4f7aa7b",
+   "base": "dacf0cdc4ae5",
+   "patched": "7debf1a73373",
    "anchors": [
     "ANSWER CHECK grade",
     "RESULT word",
@@ -15,8 +15,8 @@
    ]
   },
   "Alt_Gate_Record.js": {
-   "base": "d378bd2c6616",
-   "patched": "b54a7acffa1b",
+   "base": "ff81c7067963",
+   "patched": "76854f180a69",
    "anchors": [
     "ANSWER CHECK grade",
     "RESULT word",
@@ -28,8 +28,8 @@
    ]
   },
   "Alternate_Build.js": {
-   "base": "4aec67722484",
-   "patched": "c61953b398fd",
+   "base": "ded0d99b6bc2",
+   "patched": "2da83199cb5e",
    "anchors": [
     "ANSWER CHECK grade",
     "RESULT word",
@@ -41,8 +41,8 @@
    ]
   },
   "Alternate_Cure_Build.js": {
-   "base": "5819c0387629",
-   "patched": "26777b9de2d3",
+   "base": "01e1809fe808",
+   "patched": "6335ee467bf1",
    "anchors": [
     "ANSWER CHECK grade",
     "RESULT word",
@@ -54,8 +54,8 @@
    ]
   },
   "Alternate_Cure_Normalize.js": {
-   "base": "2584f4d16c56",
-   "patched": "3567a0dd240f",
+   "base": "dc8055dcff4c",
+   "patched": "698557c13d13",
    "anchors": [
     "ANSWER CHECK grade",
     "RESULT word",
@@ -67,8 +67,8 @@
    ]
   },
   "Alternate_Merge_1.js": {
-   "base": "51af3cb906f0",
-   "patched": "2c358ad798b3",
+   "base": "0d2ac79f05d8",
+   "patched": "5a6324d91b08",
    "anchors": [
     "ANSWER CHECK grade",
     "RESULT word",
@@ -80,8 +80,8 @@
    ]
   },
   "Alternate_Merge_Seat.js": {
-   "base": "1893eda1ebd3",
-   "patched": "db99f9d3dfde",
+   "base": "0f2046984334",
+   "patched": "6d8adf66d845",
    "anchors": [
     "ANSWER CHECK grade",
     "RESULT word",
@@ -100,8 +100,8 @@
    ]
   },
   "Cure_Build.js": {
-   "base": "4e3c3af2fe51",
-   "patched": "b63759ac4436",
+   "base": "8b7bad250ae8",
+   "patched": "fa4955022df7",
    "anchors": [
     "ANSWER CHECK grade",
     "RESULT word",
@@ -113,8 +113,8 @@
    ]
   },
   "Cure_Check.js": {
-   "base": "4ea3ffa66ef8",
-   "patched": "346eeb1439a3",
+   "base": "c5596e155d5d",
+   "patched": "af3fe32bfda5",
    "anchors": [
     "ANSWER CHECK grade",
     "RESULT word",
@@ -126,8 +126,8 @@
    ]
   },
   "Cure_Normalize.js": {
-   "base": "6b31dad72e5b",
-   "patched": "9e286cd5075d",
+   "base": "57fa074b05d0",
+   "patched": "bd0cbc5d9c25",
    "anchors": [
     "ANSWER CHECK grade",
     "RESULT word",
@@ -146,8 +146,8 @@
    ]
   },
   "Gate_Build.js": {
-   "base": "5415374f9916",
-   "patched": "30a4f69db437",
+   "base": "636b947fa65c",
+   "patched": "01d0ba6e1516",
    "anchors": [
     "ANSWER CHECK grade",
     "RESULT word",
@@ -159,8 +159,8 @@
    ]
   },
   "Gate_Record.js": {
-   "base": "9be18a5ea7cb",
-   "patched": "31d983ad6982",
+   "base": "23ae756f24d1",
+   "patched": "7a2bdf95e28f",
    "anchors": [
     "ANSWER CHECK grade",
     "RESULT word",
@@ -172,8 +172,8 @@
    ]
   },
   "Panel_Cure_Build_1.js": {
-   "base": "91402071c767",
-   "patched": "014ffbca575d",
+   "base": "fab20cfe982b",
+   "patched": "644c64effc65",
    "anchors": [
     "ANSWER CHECK grade",
     "RESULT word",
@@ -185,8 +185,8 @@
    ]
   },
   "Panel_Cure_Build_2.js": {
-   "base": "5dbd940191ea",
-   "patched": "145bfee3fb5b",
+   "base": "204f2d5032c9",
+   "patched": "0e3897acfca7",
    "anchors": [
     "ANSWER CHECK grade",
     "RESULT word",
@@ -198,8 +198,8 @@
    ]
   },
   "Panel_Cure_Build_3.js": {
-   "base": "b17f44f74e2c",
-   "patched": "0102599814e8",
+   "base": "e285899b197a",
+   "patched": "62483b6d634e",
    "anchors": [
     "ANSWER CHECK grade",
     "RESULT word",
@@ -211,8 +211,8 @@
    ]
   },
   "Panel_Cure_Check.js": {
-   "base": "981f02ad37d3",
-   "patched": "549ac19f7b48",
+   "base": "106449591f65",
+   "patched": "cc1173b7bf65",
    "anchors": [
     "ANSWER CHECK grade",
     "RESULT word",
@@ -224,8 +224,8 @@
    ]
   },
   "Panel_Cure_Normalize_1.js": {
-   "base": "e96fcbe9f049",
-   "patched": "0abdb2f42f48",
+   "base": "f5199b12837e",
+   "patched": "d0921ed3629a",
    "anchors": [
     "ANSWER CHECK grade",
     "RESULT word",
@@ -237,8 +237,8 @@
    ]
   },
   "Panel_Cure_Normalize_2.js": {
-   "base": "acfdfcfa86c4",
-   "patched": "552897e2384e",
+   "base": "24e3fa0d6597",
+   "patched": "e64dccaa1d9e",
    "anchors": [
     "ANSWER CHECK grade",
     "RESULT word",
@@ -250,8 +250,8 @@
    ]
   },
   "Panel_Cure_Normalize_3.js": {
-   "base": "55d1030a9057",
-   "patched": "95e164c84599",
+   "base": "4cab15a864c5",
+   "patched": "108aef8c067b",
    "anchors": [
     "ANSWER CHECK grade",
     "RESULT word",
@@ -270,8 +270,8 @@
    ]
   },
   "R2_Alt_Gate_Build.js": {
-   "base": "fa5290876e60",
-   "patched": "b520b2f5d4de",
+   "base": "f3d2757cb7ba",
+   "patched": "f131d7107233",
    "anchors": [
     "ANSWER CHECK grade",
     "RESULT word",
@@ -283,8 +283,8 @@
    ]
   },
   "R2_Alt_Gate_Record.js": {
-   "base": "ad45c7a66830",
-   "patched": "6418f32c896d",
+   "base": "7939ddbf8cfd",
+   "patched": "d135089049bc",
    "anchors": [
     "ANSWER CHECK grade",
     "RESULT word",
@@ -296,8 +296,8 @@
    ]
   },
   "R2_Alternate_Build.js": {
-   "base": "0458ea021c39",
-   "patched": "8f4b81c9679e",
+   "base": "a487bbb440b9",
+   "patched": "67e3441d3311",
    "anchors": [
     "ANSWER CHECK grade",
     "RESULT word",
@@ -309,8 +309,8 @@
    ]
   },
   "R2_Alternate_Cure_Build.js": {
-   "base": "899594d5c1c9",
-   "patched": "8a2687e0fc30",
+   "base": "5a2f88a89502",
+   "patched": "ff9ada843165",
    "anchors": [
     "ANSWER CHECK grade",
     "RESULT word",
@@ -322,8 +322,8 @@
    ]
   },
   "R2_Alternate_Cure_Normalize.js": {
-   "base": "084fe303900e",
-   "patched": "735765bc24dc",
+   "base": "9dc2395aeb5e",
+   "patched": "74548542e67a",
    "anchors": [
     "ANSWER CHECK grade",
     "RESULT word",
@@ -335,8 +335,8 @@
    ]
   },
   "R2_Alternate_Merge.js": {
-   "base": "94f1f9e61e74",
-   "patched": "9d14d7cff16c",
+   "base": "62ba17c05aa9",
+   "patched": "54242a75aec8",
    "anchors": [
     "ANSWER CHECK grade",
     "RESULT word",
@@ -348,8 +348,8 @@
    ]
   },
   "R2_Alternate_Merge_Seat.js": {
-   "base": "9ccfc756128e",
-   "patched": "2b5868c433d8",
+   "base": "05a42d52da39",
+   "patched": "ba4fb9053e7f",
    "anchors": [
     "ANSWER CHECK grade",
     "RESULT word",
