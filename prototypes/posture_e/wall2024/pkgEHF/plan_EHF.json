@@ -1,0 +1,29 @@
+{
+ "base": "Judge/Alt Judge Enforcer Build: pkgEKD/patched (s59 as staged); Send Back nodes: live s58 (fetchback_live_s58.json)",
+ "nodes": {
+  "Judge Enforcer Build": {
+   "base": "2cb78eabaca7",
+   "patched": "be497440a9c8"
+  },
+  "Alt Judge Enforcer Build": {
+   "base": "79898dee1307",
+   "patched": "8234032a8929"
+  },
+  "Send Back Build": {
+   "base": "fce7a381bd93",
+   "patched": "56ffd3ed6fbb"
+  },
+  "Send Back Record": {
+   "base": "bbc6947a54ec",
+   "patched": "bcb326a3eadd"
+  },
+  "Alt Send Back Build": {
+   "base": "dc902df8e797",
+   "patched": "5f3d43725104"
+  },
+  "Alt Send Back Record": {
+   "base": "51d3b2d94d44",
+   "patched": "76401169de4d"
+  }
+ }
+}
