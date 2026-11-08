@@ -1,0 +1,49 @@
+OK Cure Check: LAB gains REASONING
+OK narrow gate (W2 2981): R.form==null && R.tried===RESTATED; v1 wide gate absent
+OK 33197 Alternate Merge same error both (Referenced node is unexecuted: Alternate Merge Seat | Referenced node is unexecuted: Alternate Merge Seat)
+OK 33222 Alternate Build same error both (await is not defined | await is not defined)
+OK 33249 Alternate Build same error both (await is not defined | await is not defined)
+OK 33261 Alternate Build same error both (await is not defined | await is not defined)
+OK 33276 Alt Gate Record same error both (Cannot read properties of undefined (reading 'slice') | Cannot read properties of undefined (reading 'slice'))
+OK 33276 Alternate Build same error both (await is not defined | await is not defined)
+OK 33276 Alternate Merge Seat same error both (Cannot read properties of undefined (reading 'slice') | Cannot read properties of undefined (reading 'slice'))
+OK 33276 Gate Record same error both (Cannot read properties of undefined (reading 'slice') | Cannot read properties of undefined (reading 'slice'))
+OK 33276 Panel Cure Check same error both (Cannot read properties of undefined (reading 'slice') | Cannot read properties of undefined (reading 'slice'))
+OK 33276 Panel Payloads same error both (Cannot read properties of undefined (reading 'forEach') | Cannot read properties of undefined (reading 'forEach'))
+OK 33289 Alt Gate Record same error both (Cannot read properties of undefined (reading 'slice') | Cannot read properties of undefined (reading 'slice'))
+OK 33289 Alternate Build same error both (await is not defined | await is not defined)
+OK 33289 Alternate Merge Seat same error both (Cannot read properties of undefined (reading 'slice') | Cannot read properties of undefined (reading 'slice'))
+OK 33289 Gate Record same error both (Cannot read properties of undefined (reading 'slice') | Cannot read properties of undefined (reading 'slice'))
+OK 33289 Panel Cure Check same error both (Cannot read properties of undefined (reading 'slice') | Cannot read properties of undefined (reading 'slice'))
+OK 33289 Panel Payloads same error both (Cannot read properties of undefined (reading 'forEach') | Cannot read properties of undefined (reading 'forEach'))
+OK 33299 Alternate Build same error both (await is not defined | await is not defined)
+OK 33311 Alt Gate Record same error both (Cannot read properties of undefined (reading 'slice') | Cannot read properties of undefined (reading 'slice'))
+OK 33311 Alternate Build same error both (await is not defined | await is not defined)
+OK 33311 Alternate Merge Seat same error both (Cannot read properties of undefined (reading 'slice') | Cannot read properties of undefined (reading 'slice'))
+OK 33311 Gate Record same error both (Cannot read properties of undefined (reading 'slice') | Cannot read properties of undefined (reading 'slice'))
+OK 33311 Panel Cure Check same error both (Cannot read properties of undefined (reading 'slice') | Cannot read properties of undefined (reading 'slice'))
+OK 33311 Panel Payloads same error both (Cannot read properties of undefined (reading 'forEach') | Cannot read properties of undefined (reading 'forEach'))
+OK 33322 Alternate Build same error both (await is not defined | await is not defined)
+OK 33322 Alternate Merge Seat same error both (Cannot read properties of undefined (reading 'slice') | Cannot read properties of undefined (reading 'slice'))
+OK 33322 Gate Record same error both (Cannot read properties of undefined (reading 'slice') | Cannot read properties of undefined (reading 'slice'))
+OK 33322 Panel Cure Check same error both (Cannot read properties of undefined (reading 'slice') | Cannot read properties of undefined (reading 'slice'))
+OK 33322 Panel Payloads same error both (Cannot read properties of undefined (reading 'forEach') | Cannot read properties of undefined (reading 'forEach'))
+OK 33345 Alternate Build same error both (await is not defined | await is not defined)
+OK 33371 Alternate Build same error both (await is not defined | await is not defined)
+OK 33411 Alternate Build same error both (await is not defined | await is not defined)
+OK 33430 Alternate Build same error both (await is not defined | await is not defined)
+OK 33442 Alternate Build same error both (await is not defined | await is not defined)
+OK 33461 Alternate Build same error both (await is not defined | await is not defined)
+OK 33482 Alternate Build same error both (await is not defined | await is not defined)
+OK 33490 Alternate Build same error both (await is not defined | await is not defined)
+OK 33497 Alternate Build same error both (await is not defined | await is not defined)
+replay: 395 node runs over 29 runs; changed outputs: 3
+   33345 Cure Check: single|K-C|CHALLENGER CHAIN MARK: UNCURED -> CURED
+   33482 Panel Cure Check: gemini|K-C|REASONING: UNCURED -> CURED
+   33497 Panel Cure Check: gemini|K-C|CHALLENGER CHAIN MARK: UNCURED -> CURED
+OK 33482 gemini K-C REASONING UNCURED -> CURED
+OK 33345 K-C CHAIN MARK UNCURED -> CURED
+OK 33497 gemini K-C CHALLENGER CHAIN MARK UNCURED -> CURED (W3 3009 false KEEP)
+OK no item goes CURED -> UNCURED (0)
+OK replay ran
+TOTAL 44 OK, 0 FAIL
