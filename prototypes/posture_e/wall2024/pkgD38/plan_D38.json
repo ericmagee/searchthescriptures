@@ -1,0 +1,29 @@
+{
+ "base": "pkgLIB/strip_R1B (LIB v15_R1B, live s56)",
+ "nodes": {
+  "Alt_Gate_Build.js": {
+   "base": "59bf25bb52f9",
+   "patched": "2aa3a4897122"
+  },
+  "Alt_Gate_Record.js": {
+   "base": "fb2882398fbf",
+   "patched": "dd553f5ca724"
+  },
+  "Alternate_Merge.js": {
+   "base": "03d019c96083",
+   "patched": "e0dc3617d121"
+  },
+  "Alternate_Merge_Seat.js": {
+   "base": "e936eceeb574",
+   "patched": "52e7b305f94b"
+  },
+  "Gate_Build.js": {
+   "base": "725f11466838",
+   "patched": "a6f31c703977"
+  },
+  "Gate_Record.js": {
+   "base": "b3cc5b9f05e9",
+   "patched": "79c2fd58ad64"
+  }
+ }
+}

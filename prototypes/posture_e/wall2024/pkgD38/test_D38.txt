@@ -1,0 +1,155 @@
+OK Alt_Gate_Build.js carries d38Items2024 and the one gate line
+OK Alt_Gate_Record.js carries d38Items2024 and the one gate line
+OK Alternate_Build.js unchanged
+OK Alternate_Cure_Build.js unchanged
+OK Alternate_Cure_Normalize.js unchanged
+OK Alternate_Merge.js carries d38Items2024 and the one gate line
+OK Alternate_Merge_Seat.js carries d38Items2024 and the one gate line
+OK Alternate_Payloads.js unchanged
+OK Cure_Build.js unchanged
+OK Cure_Check.js unchanged
+OK Cure_Normalize.js unchanged
+OK Extract_Independent_Verdict.js unchanged
+OK Gate_Build.js carries d38Items2024 and the one gate line
+OK Gate_Record.js carries d38Items2024 and the one gate line
+OK Panel_Cure_Build_1.js unchanged
+OK Panel_Cure_Build_2.js unchanged
+OK Panel_Cure_Build_3.js unchanged
+OK Panel_Cure_Check.js unchanged
+OK Panel_Cure_Normalize_1.js unchanged
+OK Panel_Cure_Normalize_2.js unchanged
+OK Panel_Cure_Normalize_3.js unchanged
+OK Panel_Payloads.js unchanged
+OK pkgLIB_v16_D38: 22 of 22 stubs rebuild the strip_D38 source byte for byte
+OK unit: an agreeing text raises nothing
+OK unit: the 33592 grok shape raises BASIS 5, COL D5 vs C5, KEY D6 (D38|BASIS|DEFENDER|5, D38|COL|D5 VS C5, D38|KEY|D6)
+OK unit: cards changed to agree clear COL and KEY, BASIS stays
+OK unit: a recounted line (changed this pass) clears BASIS
+OK unit: a count line that grounds premise 5 as CONCEDED raises no BASIS
+OK unit: the 33592 gemini shape raises PREM challenger 1
+OK unit: a count of 1 clears PREM
+OK unit: a SUPPORTED card raises nothing
+OK 33197 Alternate Merge same error both (Referenced node is unexecuted: Alternate Merge Seat | Referenced node is unexecuted: Alternate Merge Seat)
+OK 33222 Alternate Build same error both (await is not defined | await is not defined)
+OK 33249 Alternate Build same error both (await is not defined | await is not defined)
+OK 33261 Alternate Build same error both (await is not defined | await is not defined)
+OK 33276 Alt Gate Record same error both (Cannot read properties of undefined (reading 'slice') | Cannot read properties of undefined (reading 'slice'))
+OK 33276 Alternate Build same error both (await is not defined | await is not defined)
+OK 33276 Alternate Merge Seat same error both (Cannot read properties of undefined (reading 'slice') | Cannot read properties of undefined (reading 'slice'))
+OK 33276 Gate Record same error both (Cannot read properties of undefined (reading 'slice') | Cannot read properties of undefined (reading 'slice'))
+OK 33276 Panel Cure Check same error both (Cannot read properties of undefined (reading 'slice') | Cannot read properties of undefined (reading 'slice'))
+OK 33276 Panel Payloads same error both (Cannot read properties of undefined (reading 'forEach') | Cannot read properties of undefined (reading 'forEach'))
+OK 33289 Alt Gate Record same error both (Cannot read properties of undefined (reading 'slice') | Cannot read properties of undefined (reading 'slice'))
+OK 33289 Alternate Build same error both (await is not defined | await is not defined)
+OK 33289 Alternate Merge Seat same error both (Cannot read properties of undefined (reading 'slice') | Cannot read properties of undefined (reading 'slice'))
+OK 33289 Gate Record same error both (Cannot read properties of undefined (reading 'slice') | Cannot read properties of undefined (reading 'slice'))
+OK 33289 Panel Cure Check same error both (Cannot read properties of undefined (reading 'slice') | Cannot read properties of undefined (reading 'slice'))
+OK 33289 Panel Payloads same error both (Cannot read properties of undefined (reading 'forEach') | Cannot read properties of undefined (reading 'forEach'))
+OK 33299 Alternate Build same error both (await is not defined | await is not defined)
+OK 33311 Alt Gate Record same error both (Cannot read properties of undefined (reading 'slice') | Cannot read properties of undefined (reading 'slice'))
+OK 33311 Alternate Build same error both (await is not defined | await is not defined)
+OK 33311 Alternate Merge Seat same error both (Cannot read properties of undefined (reading 'slice') | Cannot read properties of undefined (reading 'slice'))
+OK 33311 Gate Record same error both (Cannot read properties of undefined (reading 'slice') | Cannot read properties of undefined (reading 'slice'))
+OK 33311 Panel Cure Check same error both (Cannot read properties of undefined (reading 'slice') | Cannot read properties of undefined (reading 'slice'))
+OK 33311 Panel Payloads same error both (Cannot read properties of undefined (reading 'forEach') | Cannot read properties of undefined (reading 'forEach'))
+OK 33322 Alternate Build same error both (await is not defined | await is not defined)
+OK 33322 Alternate Merge Seat same error both (Cannot read properties of undefined (reading 'slice') | Cannot read properties of undefined (reading 'slice'))
+OK 33322 Gate Record same error both (Cannot read properties of undefined (reading 'slice') | Cannot read properties of undefined (reading 'slice'))
+OK 33322 Panel Cure Check same error both (Cannot read properties of undefined (reading 'slice') | Cannot read properties of undefined (reading 'slice'))
+OK 33322 Panel Payloads same error both (Cannot read properties of undefined (reading 'forEach') | Cannot read properties of undefined (reading 'forEach'))
+OK 33345 Alternate Build same error both (await is not defined | await is not defined)
+OK 33371 Alternate Build same error both (await is not defined | await is not defined)
+OK 33411 Alternate Build same error both (await is not defined | await is not defined)
+OK 33430 Alternate Build same error both (await is not defined | await is not defined)
+OK 33442 Alternate Build same error both (await is not defined | await is not defined)
+OK 33461 Alternate Build same error both (await is not defined | await is not defined)
+OK 33482 Alternate Build same error both (await is not defined | await is not defined)
+OK 33490 Alternate Build same error both (await is not defined | await is not defined)
+OK 33497 Alternate Build same error both (await is not defined | await is not defined)
+OK 33506 Alternate Build same error both (await is not defined | await is not defined)
+OK 33530 Panel Payloads same error both (FAIL-CLOSED (reserve judge, second failure of the run): seat "glm_flash" returned an envelope this p | FAIL-CLOSED (reserve judge, second failure of the run): seat "glm_flash" returned an envelope this p)
+replay: 456 node runs over 33 runs; changed outputs: 34
+   33218 Gate Build: changed (3 D38 items)
+   33218 Gate Record: changed (no D38 item in its gate report)
+   33222 Alt Gate Build: changed (3 D38 items)
+   33222 Alt Gate Record: changed (no D38 item in its gate report)
+   33222 Gate Build: changed (4 D38 items)
+   33261 Alt Gate Build: changed (1 D38 items)
+   33261 Gate Build: changed (5 D38 items)
+   33261 Gate Record: changed (no D38 item in its gate report)
+   33345 Alt Gate Build: changed (1 D38 items)
+   33345 Alt Gate Record: changed (no D38 item in its gate report)
+   33345 Gate Build: changed (2 D38 items)
+   33345 Gate Record: changed (no D38 item in its gate report)
+   33371 Alt Gate Build: changed (3 D38 items)
+   33371 Alt Gate Record: changed (no D38 item in its gate report)
+   33371 Gate Build: changed (1 D38 items)
+   33371 Gate Record: changed (no D38 item in its gate report)
+   33411 Alt Gate Build: changed (3 D38 items)
+   33411 Gate Build: changed (1 D38 items)
+   33442 Alt Gate Build: changed (2 D38 items)
+   33442 Gate Build: changed (2 D38 items)
+   33442 Gate Record: changed (no D38 item in its gate report)
+   33461 Alt Gate Build: changed (3 D38 items)
+   33461 Alt Gate Record: changed (no D38 item in its gate report)
+   33482 Alt Gate Build: changed (2 D38 items)
+   33490 Alt Gate Build: changed (1 D38 items)
+   33490 Alt Gate Record: changed (no D38 item in its gate report)
+   33490 Gate Build: changed (2 D38 items)
+   33497 Gate Build: changed (5 D38 items)
+   33506 Gate Build: changed (8 D38 items)
+   33506 Gate Record: changed (no D38 item in its gate report)
+   33575 Gate Build: changed (5 D38 items)
+   33575 Gate Record: changed (no D38 item in its gate report)
+   33592 Gate Build: changed (6 D38 items)
+   33592 Gate Record: changed (no D38 item in its gate report)
+D38 items raised in Gate Build: 44 {"RULING card grades D3 vs":4,"RULING card grades challenger premise":5,"RULING card grades D4 vs":7,"RULING card grades D2 vs":6,"RULING card grades D5 vs":6,"RULING card grades D1 vs":6,"RULING card grades D6 vs":5,"RULING card grades defender premise":3,"RULING card grades KEYSTONE":1,"CONCEDED LINKS line":1}
+   33218 gemini G1 your RULING card grades D3 vs C1 CHALLENGER LINK BROKEN, but your collision line for D3 vs C1 now grades it UNDERDETERMINED. Change one of the two lines so they agree.
+   33218 gemini G2 your RULING card grades challenger premise 1 UNEXHIBITED, which counts it, but your CHALLENGER CONCEDED LINKS line counts 0. Change one of the two lines so they agree.
+   33218 chatgpt G1 your RULING card grades D4 vs C4 DEFENDER LINK BROKEN, but your collision line for D4 vs C4 now grades it UNDERDETERMINED. Change one of the two lines so they agree.
+   33222 gemini G6 your RULING card grades D2 vs C3 CHALLENGER LINK BROKEN, but your collision line for D2 vs C3 now grades it UNDERDETERMINED. Change one of the two lines so they agree.
+   33222 gemini G7 your RULING card grades D3 vs C2 CHALLENGER LINK BROKEN, but your collision line for D3 vs C2 now grades it UNDERDETERMINED. Change one of the two lines so they agree.
+   33222 gemini G8 your RULING card grades D4 vs C4 CHALLENGER LINK BROKEN, but your collision line for D4 vs C4 now grades it UNDERDETERMINED. Change one of the two lines so they agree.
+   33222 gemini G9 your RULING card grades D5 vs C5 CHALLENGER LINK BROKEN, but your collision line for D5 vs C5 now grades it UNDERDETERMINED. Change one of the two lines so they agree.
+   33261 gemini G13 your RULING card grades D1 vs C1 CHALLENGER LINK BROKEN, but your collision line for D1 vs C1 now grades it UNDERDETERMINED. Change one of the two lines so they agree.
+   33261 gemini G14 your RULING card grades D2 vs C2 CHALLENGER LINK BROKEN, but your collision line for D2 vs C2 now grades it UNDERDETERMINED. Change one of the two lines so they agree.
+   33261 gemini G15 your RULING card grades D3 vs C1 CHALLENGER LINK BROKEN, but your collision line for D3 vs C1 now grades it UNDERDETERMINED. Change one of the two lines so they agree.
+   33261 gemini G16 your RULING card grades D4 vs C3 CHALLENGER LINK BROKEN, but your collision line for D4 vs C3 now grades it UNDERDETERMINED. Change one of the two lines so they agree.
+   33261 gemini G17 your RULING card grades D5 vs C6 CHALLENGER LINK BROKEN, but your collision line for D5 vs C6 now grades it UNDERDETERMINED. Change one of the two lines so they agree.
+   33345 gemini G2 your RULING card grades D1 vs C1 CHALLENGER LINK BROKEN, but your collision line for D1 vs C1 now grades it STANDS. Change one of the two lines so they agree.
+   33345 chatgpt G1 your RULING card grades D4 vs C4 DEFENDER LINK BROKEN, but your collision line for D4 vs C4 now grades it UNDERDETERMINED. Change one of the two lines so they agree.
+   33371 chatgpt G3 your RULING card grades D2 vs C6 DEFENDER LINK BROKEN, but your collision line for D2 vs C6 now grades it UNDERDETERMINED. Change one of the two lines so they agree.
+   33411 gemini G1 your RULING card grades D6 vs C1 CHALLENGER LINK BROKEN, but your collision line for D6 vs C1 now grades it UNDERDETERMINED. Change one of the two lines so they agree.
+   33442 chatgpt G2 your RULING card grades challenger premise 3 UNEXHIBITED, which counts it, but your CHALLENGER CONCEDED LINKS line counts 0. Change one of the two lines so they agree.
+   33442 chatgpt G3 your RULING card grades challenger premise 5 UNEXHIBITED, which counts it, but your CHALLENGER CONCEDED LINKS line counts 0. Change one of the two lines so they agree.
+   33490 chatgpt G1 your RULING card grades D5 vs C6 DEFENDER LINK BROKEN, but your collision line for D5 vs C6 now grades it UNDERDETERMINED. Change one of the two lines so they agree.
+   33490 chatgpt G2 your RULING card grades defender premise 5 UNEXHIBITED, which counts it, but your CONCEDED LINKS line counts 0. Change one of the two lines so they agree.
+   33497 gemini G1 your RULING card grades D1 vs C1 CHALLENGER LINK BROKEN, but your collision line for D1 vs C1 now grades it UNDERDETERMINED. Change one of the two lines so they agree.
+   33497 grok G1 your RULING card grades D1 vs C1 CHALLENGER LINK BROKEN, but your collision line for D1 vs C1 now grades it UNDERDETERMINED. Change one of the two lines so they agree.
+   33497 grok G2 your RULING card grades D2 vs C2 CHALLENGER LINK BROKEN, but your collision line for D2 vs C2 now grades it UNDERDETERMINED. Change one of the two lines so they agree.
+   33497 grok G3 your RULING card grades D5 vs C5 CHALLENGER LINK BROKEN, but your collision line for D5 vs C5 now grades it UNDERDETERMINED. Change one of the two lines so they agree.
+   33497 grok G4 your RULING card grades defender premise 4 UNEXHIBITED, which counts it, but your CONCEDED LINKS line counts 0. Change one of the two lines so they agree.
+   33506 gemini G1 your RULING card grades D1 vs C3 CHALLENGER LINK BROKEN, but your collision line for D1 vs C3 now grades it UNDERDETERMINED. Change one of the two lines so they agree.
+   33506 gemini G2 your RULING card grades D2 vs C4 CHALLENGER LINK BROKEN, but your collision line for D2 vs C4 now grades it UNDERDETERMINED. Change one of the two lines so they agree.
+   33506 gemini G3 your RULING card grades D3 vs C5 CHALLENGER LINK BROKEN, but your collision line for D3 vs C5 now grades it UNDERDETERMINED. Change one of the two lines so they agree.
+   33506 gemini G4 your RULING card grades D4 vs C6 CHALLENGER LINK BROKEN, but your collision line for D4 vs C6 now grades it UNDERDETERMINED. Change one of the two lines so they agree.
+   33506 gemini G5 your RULING card grades D5 vs C2 CHALLENGER LINK BROKEN, but your collision line for D5 vs C2 now grades it UNDERDETERMINED. Change one of the two lines so they agree.
+   33506 gemini G6 your RULING card grades D6 vs C1 CHALLENGER LINK BROKEN, but your collision line for D6 vs C1 now grades it UNDERDETERMINED. Change one of the two lines so they agree.
+   33506 grok G4 your RULING card grades D6 vs C5 CHALLENGER LINK BROKEN, but your collision line for D6 vs C5 now grades it STANDS. Change one of the two lines so they agree.
+   33506 grok G5 your RULING card grades challenger premise 5 UNEXHIBITED, which counts it, but your CHALLENGER CONCEDED LINKS line counts 0. Change one of the two lines so they agree.
+   33575 chatgpt G2 your RULING card grades D4 vs C3 DEFENDER LINK BROKEN, but your collision line for D4 vs C3 now grades it UNDERDETERMINED. Change one of the two lines so they agree.
+   33575 chatgpt G3 your RULING card grades defender premise 4 UNEXHIBITED, which counts it, but your CONCEDED LINKS line counts 0. Change one of the two lines so they agree.
+   33575 grok G1 your RULING card grades D4 vs C3 CHALLENGER LINK BROKEN, but your collision line for D4 vs C3 now grades it UNDERDETERMINED. Change one of the two lines so they agree.
+   33575 grok G2 your RULING card grades D6 vs C3 CHALLENGER LINK BROKEN, but your collision line for D6 vs C3 now grades it UNDERDETERMINED. Change one of the two lines so they agree.
+   33575 grok G3 your RULING card grades D6 vs C2 CHALLENGER LINK BROKEN, but your collision line for D6 vs C2 now grades it UNDERDETERMINED. Change one of the two lines so they agree.
+   33592 gemini G6 your RULING card grades D1 vs C6 CHALLENGER LINK BROKEN, but your collision line for D1 vs C6 now grades it UNDERDETERMINED. Change one of the two lines so they agree.
+   33592 gemini G7 your RULING card grades D2 vs C1 CHALLENGER LINK BROKEN, but your collision line for D2 vs C1 now grades it UNDERDETERMINED. Change one of the two lines so they agree.
+   33592 gemini G8 your RULING card grades challenger premise 1 UNEXHIBITED, which counts it, but your CHALLENGER CONCEDED LINKS line counts 0. Change one of the two lines so they agree.
+   33592 grok G1 your RULING card grades D5 vs C5 DEFENDER LINK BROKEN, but your collision line for D5 vs C5 now grades it UNDERDETERMINED. Change one of the two lines so they agree.
+   33592 grok G2 your RULING card grades KEYSTONE D6 BROKEN, but your KEYSTONE line now reads D6 STANDS. Change one of the two lines so they agree.
+   33592 grok G3 your CONCEDED LINKS line counts 3 with defender premise 5 among them (counted premises 2, 5, 6), but D5 vs C5 is now graded UNDERDETERMINED (it was DEFENDER LINK BROKEN), and no line left in your text grounds premise 5 as conceded or unexhibited. Recount the line, or regrade the collision.
+OK bar 33592 grok: premise 5 counted after D5 vs C5 became UNDERDETERMINED is sent back
+OK bar 33592 grok: RULING KEYSTONE D6 BROKEN against KEYSTONE D6 STANDS is sent back
+OK bar 33592 gemini: count 0 against its premise 1 UNEXHIBITED RULING is sent back
+OK replay ran
+TOTAL 74 OK, 0 FAIL
