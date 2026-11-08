@@ -1,0 +1,38 @@
+OK Alt_Gate_Build.js carries ri4F2024
+OK Alt_Gate_Record.js carries ri4F2024
+OK Alternate_Build.js carries ri4F2024
+OK Alternate_Cure_Build.js carries ri4F2024
+OK Alternate_Cure_Normalize.js carries ri4F2024
+OK Alternate_Merge_1.js carries ri4F2024
+OK Alternate_Merge_Seat.js carries ri4F2024
+OK Alternate_Payloads.js carries ri4F2024
+OK Cure_Build.js carries ri4F2024
+OK Cure_Check.js carries ri4F2024
+OK Cure_Normalize.js carries ri4F2024
+OK Extract_Independent_Verdict.js carries ri4F2024
+OK Gate_Build.js carries ri4F2024
+OK Gate_Record.js carries ri4F2024
+OK Panel_Cure_Build_1.js carries ri4F2024
+OK Panel_Cure_Build_2.js carries ri4F2024
+OK Panel_Cure_Build_3.js carries ri4F2024
+OK Panel_Cure_Check.js carries ri4F2024
+OK Panel_Cure_Normalize_1.js carries ri4F2024
+OK Panel_Cure_Normalize_2.js carries ri4F2024
+OK Panel_Cure_Normalize_3.js carries ri4F2024
+OK Panel_Payloads.js carries ri4F2024
+OK R2_Alt_Gate_Build.js carries ri4F2024
+OK R2_Alt_Gate_Record.js carries ri4F2024
+OK R2_Alternate_Build.js carries ri4F2024
+OK R2_Alternate_Cure_Build.js carries ri4F2024
+OK R2_Alternate_Cure_Normalize.js carries ri4F2024
+OK R2_Alternate_Merge.js carries ri4F2024
+OK R2_Alternate_Merge_Seat.js carries ri4F2024
+OK R2_Alternate_Payloads.js carries ri4F2024
+replay: 566 node runs over 40 runs; changed outputs: 0
+cure flips: 0
+uncured count changes: 0
+NOT APPLIED items gone: 0
+NOT APPLIED items new: 0
+OK flips listed above for ruling
+OK replay ran
+TOTAL 32 OK, 0 FAIL
