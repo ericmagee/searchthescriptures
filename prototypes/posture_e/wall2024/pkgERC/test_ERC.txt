@@ -1,0 +1,9 @@
+   33322 Alt Judge Enforcer Build skipped: "undefined" is not valid JSON
+OK replay ran on 73 node runs
+OK every node run builds the same items; they differ only in recounted E-PREM lines (0)
+   recounted lines shown in: 33299 Judge Enforcer Build (6 lines); 33299 Judge Enforcer Build (6 lines); 33345 Judge Enforcer Build (6 lines); 33345 Judge Enforcer Build (6 lines); 33442 Judge Enforcer Build (6 lines); 33442 Judge Enforcer Build (6 lines); 33506 Judge Enforcer Build (6 lines); 33506 Judge Enforcer Build (6 lines); 33592 Judge Enforcer Build (12 lines); 33592 Judge Enforcer Build (12 lines); 33461 Alt Judge Enforcer Build (6 lines); 33482 Alt Judge Enforcer Build (6 lines)
+OK 33592 grok P1-P6: stored counted 2, 5, 6; 2/5/6 COUNTED, 1/3/4 not counted; pre-recount line "CONCEDED LINKS: 1 -- LINK 6 UNEXHIBITED" shown
+OK 33592 grok: premise 2 shows "D2 vs C4: DEFENDER LINK BROKEN", premise 5 shows its D5 vs C5 line
+   sample (33592 grok P2): - P2.3 (grok): CONCEDED LINKS: 3 -- recomputed after the cure from the cured lines (CORRECTED COUNT DEFENDER 3). /     THE ENGINE RECOUNTED THIS LINE. STORED COUNTED PREMISES FOR THIS SIDE: 2, 5, 6 -- premise 2 is COUNTED in this judge's stored ruling /     THIS JUDGE'S OWN LINE BEFORE THE RECOUNT: CONCEDED LINKS: 1 -- LINK 6 UNEXHIBITED (ASSUMES). STEP: Jesus sprang out of Juda by the house that took him and named him -- ASSUMES: a house's taking and naming carries the seed of David according to the flesh -- ROWS GIVE: "which was made of the seed of David according to the flesh" (Romans 1:3); "of the fruit of his loins, according to the flesh" (Acts 2:30); "therefore were they, as polluted, put from the priesthood" (Ezra 2:62). Premises 1, 3 and 4 are spared. Premises 2 and 5 have layers in (CR3) and are not counted; their fit-failures are graded FORCED at collision (Commitment 7). /     THIS
+OK 33592: same calls built
+TOTAL 5 OK, 0 FAIL
