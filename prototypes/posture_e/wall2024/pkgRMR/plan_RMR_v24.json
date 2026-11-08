@@ -1,0 +1,11 @@
+{
+ "base": "pkgLIB/strip_PSQ/patched",
+ "nodes": [
+  {
+   "file": "Alternate_Merge_Seat.js",
+   "node": "Alternate Merge Seat",
+   "base_sha": "2e5575242846",
+   "final_sha": "58e631f8e91d"
+  }
+ ]
+}

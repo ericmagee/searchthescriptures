@@ -16,7 +16,7 @@ s=rep(s,A2," const __rm=rmrOf(old.verdict_raw,old.drv_uncured,__rmrLive); /* pkg
 const A3="tried.forEach(x=>{if(!x.removed_seat)return;";
 s=rep(s,A3,A3+"const __rf=(()=>{try{const rm0=removed.find(r=>r.seat===x.removed_seat);if(rm0)return __rmrTxt({...rmrOf(rm0.verdict_raw,rm0.drv_uncured,__rmrLive),drv:rm0.drv_uncured});const k0=bodies.findIndex(b=>{try{return JSON.parse(b).payload.judge_seat===x.removed_seat;}catch(e){return false;}});if(k0<0)return null;const p0=JSON.parse(bodies[k0]).payload;return __rmrTxt({...rmrOf(p0.verdict_raw,p0.drv_uncured,__rmrLive),drv:p0.drv_uncured});}catch(e){return null;}})(); /* pkgRMR */");
 const A4="(x.why?'; WHY: '+altSafe(String(x.why).slice(0,300)):'')+']';";
-s=rep(s,A4,"(x.why?'; WHY: '+altSafe(String(x.why).slice(0,300)):'')+(__rf?'; REMOVED FOR: '+altSafe(__rf.slice(0,400)):'')+']';");
+s=rep(s,A4,"(x.why?'; WHY: '+altSafe(String(x.why).slice(0,300)):'')+(__rf?(x.why?'; ':'; WHY: ')+'REMOVED FOR: '+altSafe(__rf.slice(0,400)):'')+']';"); /* v2 (W3 2897): with no WHY, REMOVED FOR is written as the WHY so Format Markdown's ALTERNATE TRIED reader still matches a SEATED line */
 fs.mkdirSync(OUT,{recursive:true});fs.writeFileSync(OUT+'/'+F,s);
 const plan={base:BASE,nodes:[{file:F,node:'Alternate Merge Seat',base_sha:sha(s0),final_sha:sha(s)}]};fs.writeFileSync(OUT+'.plan.json',JSON.stringify(plan,null,1));
 console.log(F.padEnd(30),sha(s0),'->',sha(s),'->',OUT);
