@@ -3,11 +3,11 @@
  "nodes": {
   "Enforcer_Build": {
    "base": "d0a0a62d24e9",
-   "patched": "ca05d051e158"
+   "patched": "ed35761ec9e6"
   },
   "Alt_Judge_Enforcer_Build": {
    "base": "2c7332529206",
-   "patched": "e6b66cee9373"
+   "patched": "11880d7711c1"
   }
  }
 }
