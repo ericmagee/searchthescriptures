@@ -15,3 +15,13 @@ Swaps to reader-first: RESULT test, RETRACTED pair (x2), FORCED pairs __fo/__pf,
 Test test_RI5B.cjs: 505 node runs over 41 runs, 0 changed outputs, 0 cure flips, 32 OK 0 FAIL.
 E4 rebase: pkgLIB_v31_RI5B/e4_rebase (v31 stub head lines 1-8 + live s64 lines 9+): Alternate Build a8511bffa17b, Early Alternate Build c3f8c072baf5; both rebuild to 306698 bytes = strip_RI5B Alternate_Build.js.
 Stacks on v30 (part A). Write order: v29 (s65), v30, v31; or v31 alone, which carries v29 and v30.
+
+## Part C (kcmtGrade2024 + rest of cureRecompute) and reader items 6, 7 (pkgRI6): LIB v34_RI567
+Stack: strip_RCD (v32) -> strip_KWQ (v33, pkgKWQ) -> strip_RI5C (part C) -> strip_RI6 (items 6 and 7). Packed from strip_RI6 as pkgLIB_v34_RI567, Shared Library 6d10f9716036.
+Part C (build_RI5C.cjs): kcmtGrade2024's ANSWER CHECK grade comes from the reader where the reader finds an ANSWER field (a line with no ANSWER field stays ungraded, as before;
+the first build read UNPROVEN there and added 17 K-CMTL rows in 33682, so it was narrowed). cureRecompute: RESULT word x3, STANDING L/word/c, KEYSTONE WITHDRAWN, CLAUSE N/W, CONCEDED count.
+Also fixes part B's ri5Res2024: with no fallback regex it ran String(l).match(null), which matches the text "null"; now it returns null.
+Items 6+7 (pkgRI6/build_RI6.cjs): sbBrokenWord2024 CLAUSE N/W and KEYSTONE WITHDRAWN; kkLines KEYSTONE line; krulRulings KEYSTONE link, graded collision, RESTATED pair; netLines CHAIN MARK FOOTED.
+k2Marks and postureBlock name CHAIN MARK only in section-end label lists, not as line reads; left as they are.
+Tests: test_RI5C (KWQ vs RI5C) and test_RI6 (RI5C vs RI6): each 605 node runs over 42 runs, 0 changed outputs, 0 flips, 32 OK 0 FAIL.
+E4 rebase (v34 head + live s65 lines 9+): Alternate Build 436fc53275da, Early Alternate Build 699d75c6ee71; both rebuild to 309526 bytes = strip_RI6 Alternate_Build.js.
