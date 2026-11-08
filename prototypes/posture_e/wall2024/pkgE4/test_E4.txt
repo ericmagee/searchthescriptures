@@ -1,0 +1,22 @@
+33222 early used: gemini->grok
+33249 early not used (a removed seat was not a candidate)
+33261 early used: sol->grok
+33276 today's Alternate Build also fails on the saved inputs: skipped
+33289 today's Alternate Build also fails on the saved inputs: skipped
+33299 early used: chatgpt->grok
+33311 today's Alternate Build also fails on the saved inputs: skipped
+33322 today's Alternate Build also fails on the saved inputs: skipped
+33345 early used: chatgpt->grok
+33371 early used: chatgpt->grok
+33411 early used: sol->grok
+33430 early used: sol->grok
+33442 early not used (a removed seat was not a candidate)
+33461 early used: gemini->grok
+33482 early used: gemini->grok
+33490 early used: gemini->grok
+33497 early used: gemini->sol
+33506 early not used (a removed seat was not a candidate)
+33617 early not used (a removed seat was not a candidate)
+33627 early not used (a removed seat was not a candidate)
+33644 early not used (a removed seat was not a candidate)
+used 11 not covered 6 | TOTAL 56 OK, 0 FAIL

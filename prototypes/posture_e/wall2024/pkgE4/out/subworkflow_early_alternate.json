@@ -1,0 +1,134 @@
+{
+ "name": "WALL-2024 Early Alternate",
+ "settings": {
+  "executionOrder": "v1",
+  "callerPolicy": "workflowsFromSameOwner"
+ },
+ "nodes": [
+  {
+   "name": "Early Alternate In",
+   "type": "n8n-nodes-base.executeWorkflowTrigger",
+   "typeVersion": 1.1,
+   "position": [
+    0,
+    0
+   ],
+   "parameters": {
+    "inputSource": "passthrough"
+   }
+  },
+  {
+   "name": "Early Alternate Call openrouter",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.3,
+   "position": [
+    240,
+    0
+   ],
+   "onError": "continueRegularOutput",
+   "parameters": {
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpHeaderAuth",
+    "jsonBody": "={{ (__b=>{if(!__b||typeof __b!=='object')return __b;let o=__b;const md=String(o.model||'');if(/^z-ai\\//.test(md))o=Object.assign({},o,{provider:{order:['z-ai'],allow_fallbacks:false} });if(/^(?:google|qwen|openai|anthropic)\\//.test(md)&&Array.isArray(o.messages)){let k=-1,L=0;o.messages.forEach((m,i)=>{if(m&&m.role==='user'&&typeof m.content==='string'&&m.content.length>L){L=m.content.length;k=i;} });if(k>=0)o=Object.assign({},o,{messages:o.messages.map((m,i)=>i===k?{role:m.role,content:[{type:'text',text:m.content,cache_control:{type:'ephemeral'} }]}:m)});}return o;})($json.alt.body) }}",
+    "method": "POST",
+    "options": {
+     "timeout": 900000
+    },
+    "sendBody": true,
+    "specifyBody": "json",
+    "url": "https://openrouter.ai/api/v1/chat/completions",
+    "sendHeaders": true,
+    "specifyHeaders": "keypair",
+    "headerParameters": {
+     "parameters": [
+      {
+       "name": "x-grok-conv-id",
+       "value": "={{ \"odv1-\" + $json.early.exec }}"
+      }
+     ]
+    }
+   },
+   "credentials": {
+    "httpHeaderAuth": {
+     "id": "3KOXDCYCjkii6i56",
+     "name": "OpenRouter"
+    }
+   }
+  },
+  {
+   "name": "Early Alternate Shape",
+   "type": "n8n-nodes-base.code",
+   "typeVersion": 2,
+   "position": [
+    480,
+    0
+   ],
+   "parameters": {
+    "jsCode": "// pkgE4: one record per call, in input order; the reply is stored exactly as the call returned it.\nconst IN=$('Early Alternate In').all();const T0=Date.now();\nreturn $input.all().map((x,i)=>{const e=(IN[i]||{json:{}}).json.early||{};const j=x.json||{};const err=j.error?String(typeof j.error==='string'?j.error:(j.error.message||JSON.stringify(j.error))).slice(0,500):((Array.isArray(j.choices)&&j.choices.length)?null:'no choices in the reply');\n return {json:{p_run_token:e.run_token||null,p_seat_for:e.seat_for||null,p_alt_seat:e.alt_seat||null,p_api_model:e.api_model||null,p_payload_sha:e.payload_sha||null,p_reply:err?null:j,p_error:err,p_ms:null}};});"
+   }
+  },
+  {
+   "name": "Record Early Alternate",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.3,
+   "position": [
+    720,
+    0
+   ],
+   "onError": "continueRegularOutput",
+   "parameters": {
+    "method": "POST",
+    "url": "https://bhffmkginddovmdcpnty.supabase.co/rest/v1/rpc/record_early_alternate",
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpHeaderAuth",
+    "sendBody": true,
+    "specifyBody": "json",
+    "jsonBody": "={{ $json }}",
+    "options": {
+     "timeout": 30000
+    }
+   },
+   "credentials": {
+    "httpHeaderAuth": {
+     "id": "uCS43YOAcWVctNfM",
+     "name": "Supabase Anon Key"
+    }
+   }
+  }
+ ],
+ "connections": {
+  "Early Alternate In": {
+   "main": [
+    [
+     {
+      "node": "Early Alternate Call openrouter",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Early Alternate Call openrouter": {
+   "main": [
+    [
+     {
+      "node": "Early Alternate Shape",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Early Alternate Shape": {
+   "main": [
+    [
+     {
+      "node": "Record Early Alternate",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  }
+ }
+}
