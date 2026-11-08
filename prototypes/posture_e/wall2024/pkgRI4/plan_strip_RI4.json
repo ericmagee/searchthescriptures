@@ -1,0 +1,278 @@
+{
+ "base": "pkgLIB/strip_A2R_RI3B_G33731/patched/",
+ "nodes": {
+  "Alt_Gate_Build.js": {
+   "base": "c2a88355e12b",
+   "patched": "3feaaf2a370d",
+   "anchors": [
+    "label test (kf/kff/kfc) x3",
+    "cureVerdicts filter x3",
+    "gateForced2024 segs x1",
+    "gateForced2024 id x1",
+    "gateForced2024 sideOf x1"
+   ]
+  },
+  "Alt_Gate_Record.js": {
+   "base": "66a721fae3d7",
+   "patched": "0ce58b70eb08",
+   "anchors": [
+    "label test (kf/kff/kfc) x3",
+    "cureVerdicts filter x3",
+    "gateForced2024 segs x1",
+    "gateForced2024 id x1",
+    "gateForced2024 sideOf x1"
+   ]
+  },
+  "Alternate_Build.js": {
+   "base": "f984011c8b28",
+   "patched": "6e3573c5ef69",
+   "anchors": [
+    "label test (kf/kff/kfc) x3",
+    "cureVerdicts filter x3"
+   ]
+  },
+  "Alternate_Cure_Build.js": {
+   "base": "cc3d88058eed",
+   "patched": "78ccb8bdb1a7",
+   "anchors": [
+    "label test (kf/kff/kfc) x3",
+    "cureVerdicts filter x3"
+   ]
+  },
+  "Alternate_Cure_Normalize.js": {
+   "base": "61fa0509c0bb",
+   "patched": "d858f4255fae",
+   "anchors": [
+    "label test (kf/kff/kfc) x3",
+    "cureVerdicts filter x3"
+   ]
+  },
+  "Alternate_Merge_1.js": {
+   "base": "4894d2a17d77",
+   "patched": "cd3be9742f0b",
+   "anchors": [
+    "label test (kf/kff/kfc) x3",
+    "cureVerdicts filter x3",
+    "gateForced2024 segs x1",
+    "gateForced2024 id x1",
+    "gateForced2024 sideOf x1"
+   ]
+  },
+  "Alternate_Merge_Seat.js": {
+   "base": "6139a24c44a9",
+   "patched": "f71484b53c04",
+   "anchors": [
+    "label test (kf/kff/kfc) x3",
+    "cureVerdicts filter x3",
+    "gateForced2024 segs x1",
+    "gateForced2024 id x1",
+    "gateForced2024 sideOf x1"
+   ]
+  },
+  "Alternate_Payloads.js": {
+   "base": "69556612c28e",
+   "patched": "349c7de6d7c5",
+   "anchors": [
+    "label test (kf/kff/kfc) x3"
+   ]
+  },
+  "Cure_Build.js": {
+   "base": "d81b87e81863",
+   "patched": "eda4fa3b94b9",
+   "anchors": [
+    "label test (kf/kff/kfc) x3",
+    "cureVerdicts filter x3"
+   ]
+  },
+  "Cure_Check.js": {
+   "base": "b0b59dd4d3e8",
+   "patched": "050cfb3128cd",
+   "anchors": [
+    "label test (kf/kff/kfc) x3",
+    "cureVerdicts filter x3"
+   ]
+  },
+  "Cure_Normalize.js": {
+   "base": "ea2fdbeb97cc",
+   "patched": "c66c110777fb",
+   "anchors": [
+    "label test (kf/kff/kfc) x3",
+    "cureVerdicts filter x3"
+   ]
+  },
+  "Extract_Independent_Verdict.js": {
+   "base": "4a605ca2d58a",
+   "patched": "0084439f9780",
+   "anchors": [
+    "label test (kf/kff/kfc) x3"
+   ]
+  },
+  "Gate_Build.js": {
+   "base": "cc1fe728918d",
+   "patched": "1a6b5d3de2e5",
+   "anchors": [
+    "label test (kf/kff/kfc) x3",
+    "cureVerdicts filter x3",
+    "gateForced2024 segs x1",
+    "gateForced2024 id x1",
+    "gateForced2024 sideOf x1"
+   ]
+  },
+  "Gate_Record.js": {
+   "base": "404387115ed0",
+   "patched": "9391a3daae02",
+   "anchors": [
+    "label test (kf/kff/kfc) x3",
+    "cureVerdicts filter x3",
+    "gateForced2024 segs x1",
+    "gateForced2024 id x1",
+    "gateForced2024 sideOf x1"
+   ]
+  },
+  "Panel_Cure_Build_1.js": {
+   "base": "d0a088245b8e",
+   "patched": "5e781301231d",
+   "anchors": [
+    "label test (kf/kff/kfc) x3",
+    "cureVerdicts filter x3"
+   ]
+  },
+  "Panel_Cure_Build_2.js": {
+   "base": "ffa0af011de9",
+   "patched": "be0e970d6818",
+   "anchors": [
+    "label test (kf/kff/kfc) x3",
+    "cureVerdicts filter x3"
+   ]
+  },
+  "Panel_Cure_Build_3.js": {
+   "base": "28cbf00a6c6b",
+   "patched": "aff90303dfb2",
+   "anchors": [
+    "label test (kf/kff/kfc) x3",
+    "cureVerdicts filter x3"
+   ]
+  },
+  "Panel_Cure_Check.js": {
+   "base": "5b8f7e143b56",
+   "patched": "276ba9f81040",
+   "anchors": [
+    "label test (kf/kff/kfc) x3",
+    "cureVerdicts filter x3"
+   ]
+  },
+  "Panel_Cure_Normalize_1.js": {
+   "base": "61db3d6b0fae",
+   "patched": "a3cf72d4743a",
+   "anchors": [
+    "label test (kf/kff/kfc) x3",
+    "cureVerdicts filter x3"
+   ]
+  },
+  "Panel_Cure_Normalize_2.js": {
+   "base": "73f0383d66ee",
+   "patched": "846413795987",
+   "anchors": [
+    "label test (kf/kff/kfc) x3",
+    "cureVerdicts filter x3"
+   ]
+  },
+  "Panel_Cure_Normalize_3.js": {
+   "base": "896d7f1c9737",
+   "patched": "1390150a1fce",
+   "anchors": [
+    "label test (kf/kff/kfc) x3",
+    "cureVerdicts filter x3"
+   ]
+  },
+  "Panel_Payloads.js": {
+   "base": "6c074d52030d",
+   "patched": "c3ff93aa67cd",
+   "anchors": [
+    "label test (kf/kff/kfc) x3"
+   ]
+  },
+  "R2_Alt_Gate_Build.js": {
+   "base": "375987948bb7",
+   "patched": "21af37148582",
+   "anchors": [
+    "label test (kf/kff/kfc) x3",
+    "cureVerdicts filter x3",
+    "gateForced2024 segs x1",
+    "gateForced2024 id x1",
+    "gateForced2024 sideOf x1"
+   ]
+  },
+  "R2_Alt_Gate_Record.js": {
+   "base": "8bd621ffff1c",
+   "patched": "67a27f0bb042",
+   "anchors": [
+    "label test (kf/kff/kfc) x3",
+    "cureVerdicts filter x3",
+    "gateForced2024 segs x1",
+    "gateForced2024 id x1",
+    "gateForced2024 sideOf x1"
+   ]
+  },
+  "R2_Alternate_Build.js": {
+   "base": "808a73bafbf0",
+   "patched": "4df780b7752d",
+   "anchors": [
+    "label test (kf/kff/kfc) x3",
+    "cureVerdicts filter x3"
+   ]
+  },
+  "R2_Alternate_Cure_Build.js": {
+   "base": "a16e5dc646e6",
+   "patched": "ab9dbb8ab9b3",
+   "anchors": [
+    "label test (kf/kff/kfc) x3",
+    "cureVerdicts filter x3"
+   ]
+  },
+  "R2_Alternate_Cure_Normalize.js": {
+   "base": "38e6457b9d19",
+   "patched": "762d761323bd",
+   "anchors": [
+    "label test (kf/kff/kfc) x3",
+    "cureVerdicts filter x3"
+   ]
+  },
+  "R2_Alternate_Merge.js": {
+   "base": "419a82741fab",
+   "patched": "3bb31fd418a5",
+   "anchors": [
+    "label test (kf/kff/kfc) x3",
+    "cureVerdicts filter x3",
+    "gateForced2024 segs x1",
+    "gateForced2024 id x1",
+    "gateForced2024 sideOf x1"
+   ]
+  },
+  "R2_Alternate_Merge_Seat.js": {
+   "base": "2e0c81f47546",
+   "patched": "89dd8714cca0",
+   "anchors": [
+    "label test (kf/kff/kfc) x3",
+    "cureVerdicts filter x3",
+    "gateForced2024 segs x1",
+    "gateForced2024 id x1",
+    "gateForced2024 sideOf x1"
+   ]
+  },
+  "R2_Alternate_Payloads.js": {
+   "base": "b1eea38a9569",
+   "patched": "d2bc043b75b4",
+   "anchors": [
+    "label test (kf/kff/kfc) x3"
+   ]
+  }
+ },
+ "tally": {
+  "label test (kf/kff/kfc) x3": 30,
+  "cureVerdicts filter x3": 26,
+  "gateForced2024 segs x1": 10,
+  "gateForced2024 id x1": 10,
+  "gateForced2024 sideOf x1": 10
+ }
+}
