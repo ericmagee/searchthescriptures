@@ -1,0 +1,115 @@
+{
+ "base": "pkgLIB/strip_RMR/patched/",
+ "nodes": {
+  "Alt_Gate_Build.js": {
+   "base": "85ce454c9ccc",
+   "patched": "a8ba63992987",
+   "anchors": 3
+  },
+  "Alt_Gate_Record.js": {
+   "base": "1dbf279f6ba8",
+   "patched": "38a587e48029",
+   "anchors": 3
+  },
+  "Alternate_Build.js": {
+   "base": "3b4131b94386",
+   "patched": "1bda83c0947c",
+   "anchors": 2
+  },
+  "Alternate_Cure_Build.js": {
+   "base": "7fd177974c6d",
+   "patched": "60bfdcc32086",
+   "anchors": 2
+  },
+  "Alternate_Cure_Normalize.js": {
+   "base": "f9a2d35ba040",
+   "patched": "18257771f166",
+   "anchors": 2
+  },
+  "Alternate_Merge.js": {
+   "base": "9533c573417d",
+   "patched": "94f7adf8dcd1",
+   "anchors": 3
+  },
+  "Alternate_Merge_Seat.js": {
+   "base": "6908b6e94166",
+   "patched": "b60f767a9976",
+   "anchors": 3
+  },
+  "Alternate_Payloads.js": {
+   "base": "89b7b51b8b8e",
+   "patched": "4f97f6d3cb05",
+   "anchors": 1
+  },
+  "Cure_Build.js": {
+   "base": "cd4c6c9b6d00",
+   "patched": "4aead3025563",
+   "anchors": 2
+  },
+  "Cure_Check.js": {
+   "base": "609e778fdc0b",
+   "patched": "98e057399414",
+   "anchors": 2
+  },
+  "Cure_Normalize.js": {
+   "base": "6d515302072a",
+   "patched": "e1888bf4b03c",
+   "anchors": 2
+  },
+  "Extract_Independent_Verdict.js": {
+   "base": "edfb9eed6049",
+   "patched": "471f44354f2e",
+   "anchors": 1
+  },
+  "Gate_Build.js": {
+   "base": "6a751c14fea5",
+   "patched": "d99fc0c3d530",
+   "anchors": 3
+  },
+  "Gate_Record.js": {
+   "base": "9cd65ceab5f0",
+   "patched": "252ac04e6b5a",
+   "anchors": 3
+  },
+  "Panel_Cure_Build_1.js": {
+   "base": "d3c3e5bc80b3",
+   "patched": "214657d2718e",
+   "anchors": 2
+  },
+  "Panel_Cure_Build_2.js": {
+   "base": "b1e9107ce2a0",
+   "patched": "41fd8489d9d9",
+   "anchors": 2
+  },
+  "Panel_Cure_Build_3.js": {
+   "base": "734e74d63203",
+   "patched": "5653546002ce",
+   "anchors": 2
+  },
+  "Panel_Cure_Check.js": {
+   "base": "453246a70f1c",
+   "patched": "3654275b8cb6",
+   "anchors": 2
+  },
+  "Panel_Cure_Normalize_1.js": {
+   "base": "03fc1fb1c6a1",
+   "patched": "11bf71c4b08f",
+   "anchors": 2
+  },
+  "Panel_Cure_Normalize_2.js": {
+   "base": "b4e5fedf901a",
+   "patched": "d7eaf214a690",
+   "anchors": 2
+  },
+  "Panel_Cure_Normalize_3.js": {
+   "base": "f5777bedaa90",
+   "patched": "e5f2cbaa6f02",
+   "anchors": 2
+  },
+  "Panel_Payloads.js": {
+   "base": "ed208683a6c5",
+   "patched": "1061ebe83e28",
+   "anchors": 1
+  }
+ }
+}
