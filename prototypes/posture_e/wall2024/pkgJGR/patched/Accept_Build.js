@@ -51,7 +51,7 @@ const POSTURE=(()=>{
  return {PART2,HEADS,LINE,FORM,PROMPT,RET,ANSWER,check,env,final,head,quote,isHead,PLACED,RULE_C};})();
 const __SRC=(()=>{for(const n of ['Debate Start','Dry Run Config']){try{if(__L[n]().isExecuted)return __L[n]().first().json;}catch(e){}}return {};})();
 const __B=(__SRC&&__SRC.body&&typeof __SRC.body==='object')?__SRC.body:__SRC;const RT=' execution='+$execution.id;
-const __orc=(b,model,key)=>{if(!b||!Array.isArray(b.messages))return b;return {...b,session_id:String(key).slice(0,128)};};
+const __orc=(b,model,key)=>{if(!b||!Array.isArray(b.messages))return b;const o={...b,session_id:String(key).slice(0,128)};if(!o.reasoning&&/^qwen\/qwen3\.8-flash$/.test(String(model)))o.reasoning={effort:'low'}; /* pkgJGR (pkgPNL3 rule, qwen_flash only): the flash judge leaves room for the verdict (33530) */return o;};
 const ENG_SEAT={deepseek:'deepseek',gemini:'gemini',glm:'glm',alt_minimax31:'alt_minimax31',chatgpt:'chatgpt',mimo:'mimo',qwen:'qwen',grok:'grok',sol:'sol',qwen_flash:'qwen_flash'};
 const ORDER=['chatgpt','sol','qwen_flash','qwen']; /* pkgJGR (Eric 21:10Z 11-08): gemini and grok judge no more; qwen_flash (qwen/qwen3.8-flash) is the third panel seat */ // ruling 421: DeepSeek judges nowhere, so it takes no agreement // 2026-11-03: GLM, mimo and MiniMax M3.1 Flash judge no more
 const deb=[__B.defender,__B.challenger].map(x=>String((x&&x.engine)||'').trim().toLowerCase());

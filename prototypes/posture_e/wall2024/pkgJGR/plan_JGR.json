@@ -1,5 +1,5 @@
 {
- "base": "/mnt/project-files/wall2024/fetchback_live_s67.json",
+ "base": "/mnt/project-files/wall2024/fetchback_live_s68.json",
  "nodes": {
   "Init Seats": {
    "before": "717ed6aebedc",
@@ -13,8 +13,18 @@
   },
   "Accept Build": {
    "before": "8b28d616a012",
-   "after": "cfe92a2710f3",
-   "edits": 2
+   "after": "04bba2849249",
+   "edits": 3
+  },
+  "Panel Build": {
+   "before": "d5544003283e",
+   "after": "1365bf01ccb8",
+   "edits": 1
+  },
+  "Reserve Build": {
+   "before": "1a23a0c2a327",
+   "after": "b6f09af9dd8c",
+   "edits": 1
   },
   "Build Synthesis": {
    "before": "6be782556e0e",
@@ -30,6 +40,19 @@
    "before": "8121ab566149",
    "after": "312cd7ee2154",
    "edits": 1
+  }
+ },
+ "library": {
+  "base": "pkgLIB/strip_RTB4_8/patched/",
+  "nodes": {
+   "Alternate_Build.js": {
+    "before": "1c07e98449dd",
+    "after": "6bcee542642d"
+   },
+   "R2_Alternate_Build.js": {
+    "before": "303e213d5846",
+    "after": "1882bcae0b54"
+   }
   }
  }
 }
