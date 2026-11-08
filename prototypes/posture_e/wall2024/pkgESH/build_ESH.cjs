@@ -2,7 +2,7 @@
 // 33575: the defender's round 2 heads its parts "## Answer to C1: ...", "## Answer to C3 ...", which the link-heading pattern does not read, so
 // for 4 K-W items (12 answers) DeepSeek got only the sentence ("I grant it.") and "(no block of this link found)". It wrote DISAGREE on all 12
 // ("footing the side never gives this link"), though the footing the judges named stands in that same section (Luke 2:4, Matthew 1:16).
-// Saved runs: the empty excerpt reached DeepSeek 87 times in 11 runs (33218 29, 33389 19, 33461 17, 33506 9, 33497 5, 33575 4, ...).
+// Saved runs: the empty excerpt reached DeepSeek 114 times in 15 runs (33218 29, 33389 19, 33461 17, 33299 15, 33506 9, ...).
 // Change: when no headed block of the round holds the sentence and the sentence is found in that round, the excerpt opens with that round's
 // section holding it (from the nearest heading or "---" rule before it to the next one; a longer section is cut to 2000 characters
 // around the sentence, 1400 before it; kept short for cost), labelled as under no link
