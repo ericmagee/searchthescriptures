@@ -1,0 +1,36 @@
+33040 early build error Referenced node is unexecuted: Accept Final
+33060 early build error Referenced node is unexecuted: Resolve Seats
+33083 early build error Referenced node is unexecuted: Resolve Seats
+33107 early build error Referenced node is unexecuted: Resolve Seats
+33129 early build error Referenced node is unexecuted: Resolve Seats
+33149 early build error Referenced node is unexecuted: Resolve Seats
+33160 early build error Referenced node is unexecuted: Resolve Seats
+33197 gate alternates: - | early: - 
+33218 gate build error "undefined" is not valid JSON
+33222 gate alternates: gemini->grok | early: gemini->grok MATCH | RUN USES EARLY
+33249 gate alternates: chatgpt->grok | early: - 
+33261 gate alternates: sol->grok | early: sol->grok MATCH | RUN USES EARLY
+33276 early build error Cannot read properties of undefined (reading 'map')
+33289 early build error Cannot read properties of undefined (reading 'map')
+33299 gate alternates: chatgpt->grok | early: chatgpt->grok MATCH | RUN USES EARLY
+33311 early build error Cannot read properties of undefined (reading 'map')
+33322 early build error Cannot read properties of undefined (reading 'map')
+33345 gate alternates: chatgpt->grok | early: chatgpt->grok MATCH | RUN USES EARLY
+33371 gate alternates: chatgpt->grok | early: chatgpt->grok MATCH | RUN USES EARLY
+33389 gate build error "undefined" is not valid JSON
+33411 gate alternates: sol->grok | early: sol->grok MATCH | RUN USES EARLY
+33430 gate alternates: sol->grok | early: sol->grok MATCH | RUN USES EARLY
+33442 gate alternates: chatgpt->grok | early: - 
+33461 gate alternates: gemini->grok | early: gemini->grok MATCH | RUN USES EARLY
+33482 gate alternates: gemini->grok | early: gemini->grok MATCH | RUN USES EARLY
+33490 gate alternates: gemini->grok | early: gemini->grok MATCH | RUN USES EARLY
+33497 gate alternates: gemini->sol | early: gemini->sol MATCH | RUN USES EARLY
+33506 gate alternates: chatgpt->sol | early: - 
+33575 gate build error "undefined" is not valid JSON
+33592 gate build error "undefined" is not valid JSON
+33605 gate build error "undefined" is not valid JSON
+33617 gate alternates: chatgpt->sol | early: - 
+33627 gate alternates: gemini->sol | early: - 
+33644 gate alternates: chatgpt->sol | early: - 
+33682 gate build error "undefined" is not valid JSON
+{"runs":18,"gateSeats":17,"early":11,"match":11,"mismatch":0,"earlyNotRemoved":0,"allMatch":11,"runsWithRemoval":17}
