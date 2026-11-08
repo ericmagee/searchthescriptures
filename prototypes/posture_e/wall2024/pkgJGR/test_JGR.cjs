@@ -6,7 +6,8 @@
 // Resolve Seats judges terra, sol, qwen/qwen3.8-flash, all openrouter; Accept Build asks chatgpt, sol, qwen_flash only.
 const fs=require('fs');const {harness,feeder}=require('../pkgGSL/harness.cjs');const B=process.argv[2]||'/mnt/project-files/wall2024/fetchback_live_s67.json';const W=JSON.parse(fs.readFileSync(B));
 const D='/mnt/project-files/wall2024/inputs/';const has=(R,n)=>fs.existsSync(D+R+'_'+n.replace(/ /g,'_')+'.json');const fin=(R,n)=>feeder(B,n).find(x=>has(R,x));
-const live=n=>W.nodes.find(z=>z.name===n).parameters.jsCode;const pat=n=>fs.readFileSync(__dirname+'/patched/'+n.replace(/ /g,'_')+'.js','utf8');
+const NB=process.env.JGR_NODE_DIR||'',NO=process.env.JGR_NODE_OUT||(__dirname+'/patched'); /* base node files where present (e.g. pkgKWI/patched) */
+const live=n=>{const f=NB?NB+'/'+n.replace(/ /g,'_')+'.js':'';return (f&&fs.existsSync(f))?fs.readFileSync(f,'utf8'):W.nodes.find(z=>z.name===n).parameters.jsCode;};const pat=n=>fs.readFileSync(NO+'/'+n.replace(/ /g,'_')+'.js','utf8');
 const rows=(R,n)=>{const d=JSON.parse(fs.readFileSync(D+R+'_'+n.replace(/ /g,'_')+'.json'));const r=Array.isArray(d)?d[0]:d;return ((r.data&&r.data.main)||r.main)[0];};
 const QF={json:{seat:'qwen_flash',provider:'openrouter',role:'engine',api_model:'qwen/qwen3.8-flash',max_tokens:64000,family:'qwen',active:true,jfl_move:false,jfl_block:'',jfl_counts:null}};
 let ok=0,bad=0;const out=[];const T=(c,m)=>{if(c){ok++;out.push('OK '+m);}else{bad++;out.push('FAIL '+m);}console.log((c?'OK ':'FAIL ')+m);};const S=a=>JSON.stringify(a);

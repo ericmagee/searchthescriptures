@@ -18,10 +18,11 @@ const EDITS={
  'Accept Build':[["const ORDER=['gemini','chatgpt','qwen','sol','grok'];","const ORDER=['chatgpt','sol','qwen_flash','qwen'];"+TAG],["qwen:'qwen',grok:'grok',sol:'sol'}","qwen:'qwen',grok:'grok',sol:'sol',qwen_flash:'qwen_flash'}"],[ORC3,ORC3N]],
  'Panel Build':[[ORC4,ORC4+QFR]],'Reserve Build':[[ORC4,ORC4+QFR]],
  'Build Synthesis':[[FAM,FAM2]],'Build Independent Verdict':[[FAM,FAM2]],'Build Diagnostic Prompt':[[FAM,FAM2]]};
-fs.rmSync('pkgJGR/patched',{recursive:true,force:true});fs.mkdirSync('pkgJGR/patched',{recursive:true});const plan={base:BASE,nodes:{}};
-for(const [nm,E] of Object.entries(EDITS)){const c0=W.nodes.find(n=>n.name===nm).parameters.jsCode;let c=c0;
+fs.rmSync(process.env.JGR_NODE_OUT||'pkgJGR/patched',{recursive:true,force:true});fs.mkdirSync(process.env.JGR_NODE_OUT||'pkgJGR/patched',{recursive:true});const plan={base:BASE,nodes:{}};
+const NB=process.env.JGR_NODE_DIR||'',NO=process.env.JGR_NODE_OUT||'pkgJGR/patched'; /* optional: build on node files in NB where present (e.g. pkgKWI/patched) */
+for(const [nm,E] of Object.entries(EDITS)){const nf=NB?NB+'/'+nm.replace(/ /g,'_')+'.js':'';const c0=(nf&&fs.existsSync(nf))?fs.readFileSync(nf,'utf8'):W.nodes.find(n=>n.name===nm).parameters.jsCode;let c=c0;
  for(const [a,b] of E){const k=c.split(a).length-1;if(k!==1)throw new Error(nm+': anchor found '+k+' times: '+a.slice(0,60));c=c.replace(a,b);}
- new Function('$','$input','$execution','return (async()=>{\n'+c+'\n})();');fs.writeFileSync('pkgJGR/patched/'+nm.replace(/ /g,'_')+'.js',c);plan.nodes[nm]={before:h(c0),after:h(c),edits:E.length};}
+ new Function('$','$input','$execution','return (async()=>{\n'+c+'\n})();');fs.writeFileSync(NO+'/'+nm.replace(/ /g,'_')+'.js',c);plan.nodes[nm]={before:h(c0),after:h(c),edits:E.length};}
 // library: Alternate Build and R2 Alternate Build (base: env JGR_LIB_BASE, default the s68 library strip_RTB4_8) -> pkgLIB/<JGR_LIB_OUT, default strip_JGR>
 const LBD=process.env.JGR_LIB_BASE||'strip_RTB4_8',LOD=process.env.JGR_LIB_OUT||'strip_JGR';const LB='pkgLIB/'+LBD+'/patched/',LO='pkgLIB/'+LOD+'/patched/';fs.rmSync('pkgLIB/'+LOD,{recursive:true,force:true});fs.mkdirSync(LO,{recursive:true});plan.library={base:LB,nodes:{}};
 for(const f of fs.readdirSync(LB)){const c0=fs.readFileSync(LB+f,'utf8');let c=c0;if(['Alternate_Build.js','R2_Alternate_Build.js'].includes(f)){const k=c.split(ORC4).length-1;if(k!==1)throw new Error(f+': ORC4 '+k);c=c.replace(ORC4,ORC4+QFR);new Function('$','$input','$execution','return (async()=>{\n'+c+'\n})();');plan.library.nodes[f]={before:h(c0),after:h(c)};}fs.writeFileSync(LO+f,c);}

@@ -10,13 +10,13 @@ OK 33249 Accept Build asks ["chatgpt","sol","qwen_flash"]; qwen_flash body model
 OK 33261 (claude v opus) panel ["gemini","chatgpt","sol"] -> ["chatgpt","sol","qwen_flash"]; single gemini -> chatgpt; reserve grok -> null; alt ["grok"] -> []
 OK 33261 Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter","qwen_flash=qwen/qwen3.8-flash/openrouter"] reserve null alternates []
 OK 33261 Accept Build asks ["chatgpt","sol","qwen_flash"]; qwen_flash body model qwen/qwen3.8-flash
-OK 33276 patched Init Seats refuses (ORACLE_DEBATE_V1 Init refused: topic missing or empty. run_token=ODV1-33276-6j4hatyw); base refuses too: ORACLE_DEBATE_V1 Init refused: topic missing or empty. run_token=ODV1-33276-g3jea2wl
-OK 33289 patched Init Seats refuses (ORACLE_DEBATE_V1 Init refused: topic missing or empty. run_token=ODV1-33289-baa9lrnn); base refuses too: ORACLE_DEBATE_V1 Init refused: topic missing or empty. run_token=ODV1-33289-vejugm56
+OK 33276 patched Init Seats refuses (ORACLE_DEBATE_V1 Init refused: topic missing or empty. run_token=ODV1-33276-e0oyb37l); base refuses too: ORACLE_DEBATE_V1 Init refused: topic missing or empty. run_token=ODV1-33276-z1536gzl
+OK 33289 patched Init Seats refuses (ORACLE_DEBATE_V1 Init refused: topic missing or empty. run_token=ODV1-33289-ttn1dc6y); base refuses too: ORACLE_DEBATE_V1 Init refused: topic missing or empty. run_token=ODV1-33289-pqm63gtd
 OK 33299 (claude v opus) panel ["gemini","chatgpt","sol"] -> ["chatgpt","sol","qwen_flash"]; single gemini -> chatgpt; reserve grok -> null; alt ["grok"] -> []
 OK 33299 Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter","qwen_flash=qwen/qwen3.8-flash/openrouter"] reserve null alternates []
 OK 33299 Accept Build asks ["chatgpt","sol","qwen_flash"]; qwen_flash body model qwen/qwen3.8-flash
-OK 33311 patched Init Seats refuses (ORACLE_DEBATE_V1 Init refused: topic missing or empty. run_token=ODV1-33311-cizmp35s); base refuses too: ORACLE_DEBATE_V1 Init refused: topic missing or empty. run_token=ODV1-33311-nfabdlgw
-OK 33322 patched Init Seats refuses (ORACLE_DEBATE_V1 Init refused: topic missing or empty. run_token=ODV1-33322-tmn6c8yk); base refuses too: ORACLE_DEBATE_V1 Init refused: topic missing or empty. run_token=ODV1-33322-ft8hs3xp
+OK 33311 patched Init Seats refuses (ORACLE_DEBATE_V1 Init refused: topic missing or empty. run_token=ODV1-33311-z7swjf5f); base refuses too: ORACLE_DEBATE_V1 Init refused: topic missing or empty. run_token=ODV1-33311-t5eom10s
+OK 33322 patched Init Seats refuses (ORACLE_DEBATE_V1 Init refused: topic missing or empty. run_token=ODV1-33322-3fnbd0ny); base refuses too: ORACLE_DEBATE_V1 Init refused: topic missing or empty. run_token=ODV1-33322-zst61sbk
 OK 33345 (claude v opus) panel ["gemini","chatgpt","sol"] -> ["chatgpt","sol","qwen_flash"]; single gemini -> chatgpt; reserve grok -> null; alt ["grok"] -> []
 OK 33345 Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter","qwen_flash=qwen/qwen3.8-flash/openrouter"] reserve null alternates []
 OK 33345 Accept Build asks ["chatgpt","sol","qwen_flash"]; qwen_flash body model qwen/qwen3.8-flash

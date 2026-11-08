@@ -59,3 +59,14 @@ Library: the same qwen_flash effort-low rule added to Alternate_Build.js and R2_
 - Test: test_JGR_bodies_KWI.txt 9 OK, 0 FAIL.
 
 Write order with KWI: pkgKWI in full first, then fix_JGR.sql, the 8 JGR n8n nodes, pkgLIB_JGR_KWI (Shared Library + Alternate Build + R2 Alternate Build stubs) and the E4 heads above. If JGR is written alone (no KWI), use pkgLIB_JGR as before.
+
+## Restack on pkgKWI rev 2 (ebc12ba; Wall 3424-3427): pkgJGR/on_KWI
+KWI rev 2 also changes Panel Build, Reserve Build and Accept Build, so the 8 JGR n8n nodes are rebuilt on KWI's patched nodes where KWI has them
+(s68 elsewhere): `JGR_NODE_DIR=pkgKWI/patched JGR_NODE_OUT=pkgJGR/on_KWI/patched JGR_LIB_BASE=strip_KWI JGR_LIB_OUT=strip_JGR_KWI node pkgJGR/build_JGR.cjs`.
+- Accept Build 2d5bb0d231e3 -> 0e3c897c4545; Panel Build 1589ccee3cc1 -> 77c4eb2aafd0; Reserve Build 6fe983c85cf0 -> ac0ae6051997.
+  The other 5 nodes are as before (KWI does not touch them): Init Seats bd876ec6df3c, Resolve Seats 321fe39cbe1b, Build Synthesis 0b346cff1513,
+  Build Independent Verdict 51ebc43626e7, Build Diagnostic Prompt 312cd7ee2154.
+- Check: for each of the 8 nodes, the lines JGR adds and removes on the KWI base equal those it adds and removes on s68 (so KWI's changes are kept).
+- Tests on this base (same env): on_KWI/test_JGR.txt 100 OK, 0 FAIL; on_KWI/test_JGR_bodies.txt 9 OK, 0 FAIL. Plan: on_KWI/plan_JGR_KWI.json.
+- Library: unchanged from the section above (pkgLIB_JGR_KWI, SL 15db65d8dc08, E4 5c3021cc9e65 / 9c46fdee804b).
+Write order: pkgKWI rev 2 in full, then fix_JGR.sql, the 8 nodes from on_KWI/patched, pkgLIB_JGR_KWI and its E4 heads.

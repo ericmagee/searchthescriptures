@@ -17,13 +17,13 @@ Counts, NOT NAMED lists and every other output line are unchanged. Each premise 
   as today. One rule for both sides.
 - Reserve Build and Alternate Build reuse Panel Build's prompt, so they carry the same ledger.
 
-| node | live s68 | pkgWLD (on s68) | on pkgJGR (pkgWLD/on_JGR) |
+| node | live s68 | pkgWLD (on s68) | on pkgKWI rev 2 + pkgJGR (pkgWLD/on_JGR_KWI) |
 |---|---|---|---|
-| Panel Build | d5544003283e | 0228b9e6c64d | 1365bf01ccb8 -> 36795ec71567 |
+| Panel Build | d5544003283e | 0228b9e6c64d | 77c4eb2aafd0 -> 285e37faf258 |
 | Build Independent Verdict | 6c4e6e4d004d | 91fc5d4bb579 | 51ebc43626e7 -> dcea708e1650 |
 
-on_JGR = pkgWLD with pkgJGR's own edit applied (checked: the JGR difference is the same insertion, 187 and 24 chars). Write that variant if JGR
-goes in first.
+on_JGR_KWI is built on pkgJGR/on_KWI (JGR restacked on pkgKWI rev 2). Checked: its line changes against that base equal pkgWLD's line
+changes against s68, for both nodes. Write it when KWI and JGR go in first.
 
 ## Test (test_WLD.cjs: 62 OK, 0 FAIL; test_WLD.txt, samples_WLD.txt)
 - Replays both nodes, s68 vs patched, on every saved run. Bar on each run: only ledger premise lines and the closing sentence change; with the two
@@ -39,5 +39,5 @@ goes in first.
 - DeepSeek: the ledger is not yet shown to the DeepSeek builders (W3 3166 item 2). Needs a choice of which item kinds get it.
 - D49 (pkgKGA + pkgG4R2) stays the held fallback until this is live and run-proven.
 
-Build: `node pkgWLD/build_WLD.cjs` (s68) and `WLD_NODE_DIR=pkgJGR/patched node pkgWLD/build_WLD.cjs /mnt/project-files/wall2024/fetchback_live_s68.json pkgWLD/on_JGR/patched`.
+Build: `node pkgWLD/build_WLD.cjs` (s68) and `WLD_NODE_DIR=pkgJGR/on_KWI/patched node pkgWLD/build_WLD.cjs /mnt/project-files/wall2024/fetchback_live_s68.json pkgWLD/on_JGR_KWI/patched`.
 Test: `node pkgWLD/test_WLD.cjs`. Revert: restore the two nodes from the prewrite copy.
