@@ -1,0 +1,352 @@
+{
+ "table": "pkgRTB/rule_table.cjs",
+ "cure_press": {
+  "DEFENDER": [
+   "DR1",
+   "DR2"
+  ],
+  "CHALLENGER": [
+   "CR1",
+   "CR2",
+   "CR3"
+  ]
+ },
+ "library": {
+  "base": "pkgLIB/strip_RTB2K/patched/",
+  "nodes": {
+   "Alt_Gate_Build.js": {
+    "base": "c884c128f01a",
+    "patched": "9232a0890f10",
+    "hits": [
+     "pr.form x1",
+     "pr.mark x1",
+     "rxm.kg4 x1"
+    ]
+   },
+   "Alt_Gate_Record.js": {
+    "base": "8bd1b15175dd",
+    "patched": "b2c8bfc38173",
+    "hits": [
+     "pr.form x1",
+     "pr.mark x1",
+     "rxm.kg4 x1"
+    ]
+   },
+   "Alternate_Build.js": {
+    "base": "936e982415b1",
+    "patched": "fa7172670d7b",
+    "hits": [
+     "pr.form x1",
+     "pr.mark x1",
+     "rxm.kg4 x1",
+     "pr.agreement x1"
+    ]
+   },
+   "Alternate_Cure_Build.js": {
+    "base": "fd246e983eae",
+    "patched": "7213d81b1b24",
+    "hits": [
+     "pr.form x1",
+     "pr.mark x1",
+     "rxm.kg4 x1",
+     "pr.agreement x1"
+    ]
+   },
+   "Alternate_Cure_Normalize.js": {
+    "base": "926275d4a7ee",
+    "patched": "9e703d7a2268",
+    "hits": [
+     "pr.form x1",
+     "pr.mark x1",
+     "rxm.kg4 x1"
+    ]
+   },
+   "Alternate_Merge_1.js": {
+    "base": "86dba3ed2d34",
+    "patched": "75dcf24d1d2a",
+    "hits": [
+     "pr.form x1",
+     "pr.mark x1",
+     "rxm.kg4 x1"
+    ]
+   },
+   "Alternate_Merge_Seat.js": {
+    "base": "8c69c3cbd277",
+    "patched": "f974dd290709",
+    "hits": [
+     "pr.form x1",
+     "pr.mark x1",
+     "rxm.kg4 x1"
+    ]
+   },
+   "Cure_Build.js": {
+    "base": "eafc17874408",
+    "patched": "72aae135e40b",
+    "hits": [
+     "pr.form x1",
+     "pr.mark x1",
+     "rxm.kg4 x1"
+    ]
+   },
+   "Cure_Check.js": {
+    "base": "6eec1b7b938f",
+    "patched": "620a054203aa",
+    "hits": [
+     "pr.form x1",
+     "pr.mark x1",
+     "rxm.kg4 x1"
+    ]
+   },
+   "Cure_Normalize.js": {
+    "base": "196c6f95db5b",
+    "patched": "ff96c7e431e2",
+    "hits": [
+     "pr.form x1",
+     "pr.mark x1",
+     "rxm.kg4 x1"
+    ]
+   },
+   "Gate_Build.js": {
+    "base": "d39aebfe90c0",
+    "patched": "63762feab7da",
+    "hits": [
+     "pr.form x1",
+     "pr.mark x1",
+     "rxm.kg4 x1"
+    ]
+   },
+   "Gate_Record.js": {
+    "base": "d73d3f424c5a",
+    "patched": "eadda083052b",
+    "hits": [
+     "pr.form x1",
+     "pr.mark x1",
+     "rxm.kg4 x1"
+    ]
+   },
+   "Panel_Cure_Build_1.js": {
+    "base": "4614e2b76ce1",
+    "patched": "fa673ed00caf",
+    "hits": [
+     "pr.form x1",
+     "pr.mark x1",
+     "rxm.kg4 x1",
+     "pr.agreement x1"
+    ]
+   },
+   "Panel_Cure_Build_2.js": {
+    "base": "d089ab43770b",
+    "patched": "dab45b280ae6",
+    "hits": [
+     "pr.form x1",
+     "pr.mark x1",
+     "rxm.kg4 x1",
+     "pr.agreement x1"
+    ]
+   },
+   "Panel_Cure_Build_3.js": {
+    "base": "bb1d514ee6ec",
+    "patched": "0d1f63f625ef",
+    "hits": [
+     "pr.form x1",
+     "pr.mark x1",
+     "rxm.kg4 x1",
+     "pr.agreement x1"
+    ]
+   },
+   "Panel_Cure_Check.js": {
+    "base": "a877267a0979",
+    "patched": "af8dcca3db75",
+    "hits": [
+     "pr.form x1",
+     "pr.mark x1",
+     "rxm.kg4 x1"
+    ]
+   },
+   "Panel_Cure_Normalize_1.js": {
+    "base": "1ed997e8b8db",
+    "patched": "8dec9b30ee40",
+    "hits": [
+     "pr.form x1",
+     "pr.mark x1",
+     "rxm.kg4 x1"
+    ]
+   },
+   "Panel_Cure_Normalize_2.js": {
+    "base": "4bf6d2dea73c",
+    "patched": "7cf73a82e010",
+    "hits": [
+     "pr.form x1",
+     "pr.mark x1",
+     "rxm.kg4 x1"
+    ]
+   },
+   "Panel_Cure_Normalize_3.js": {
+    "base": "4816503f46f7",
+    "patched": "90dd10d1b5a0",
+    "hits": [
+     "pr.form x1",
+     "pr.mark x1",
+     "rxm.kg4 x1"
+    ]
+   },
+   "R2_Alt_Gate_Build.js": {
+    "base": "5f152e0e2df7",
+    "patched": "79f1b331a1a6",
+    "hits": [
+     "pr.form x1",
+     "pr.mark x1",
+     "rxm.kg4 x1"
+    ]
+   },
+   "R2_Alt_Gate_Record.js": {
+    "base": "fc6d440ec25e",
+    "patched": "df209f22714f",
+    "hits": [
+     "pr.form x1",
+     "pr.mark x1",
+     "rxm.kg4 x1"
+    ]
+   },
+   "R2_Alternate_Build.js": {
+    "base": "507ed1690dca",
+    "patched": "d71f3f9af988",
+    "hits": [
+     "pr.form x1",
+     "pr.mark x1",
+     "rxm.kg4 x1",
+     "pr.agreement x1"
+    ]
+   },
+   "R2_Alternate_Cure_Build.js": {
+    "base": "0e6faa6c57e4",
+    "patched": "8f6524d47a67",
+    "hits": [
+     "pr.form x1",
+     "pr.mark x1",
+     "rxm.kg4 x1",
+     "pr.agreement x1"
+    ]
+   },
+   "R2_Alternate_Cure_Normalize.js": {
+    "base": "a6cf776e8a1a",
+    "patched": "be1c18fa9c5a",
+    "hits": [
+     "pr.form x1",
+     "pr.mark x1",
+     "rxm.kg4 x1"
+    ]
+   },
+   "R2_Alternate_Merge.js": {
+    "base": "52a549e68619",
+    "patched": "3c56f4033e53",
+    "hits": [
+     "pr.form x1",
+     "pr.mark x1",
+     "rxm.kg4 x1"
+    ]
+   },
+   "R2_Alternate_Merge_Seat.js": {
+    "base": "98fe1c05f04f",
+    "patched": "60fff17608d6",
+    "hits": [
+     "pr.form x1",
+     "pr.mark x1",
+     "rxm.kg4 x1"
+    ]
+   }
+  }
+ },
+ "prompt": {
+  "base": "/mnt/project-files/wall2024/fetchback_live_s66.json",
+  "nodes": {
+   "Panel Build": {
+    "before": "d6d26ead97da",
+    "after": "d5544003283e",
+    "hits": [
+     "pr.agreement x1"
+    ]
+   },
+   "Reserve Build": {
+    "before": "e1ed98944b04",
+    "after": "1a23a0c2a327",
+    "hits": [
+     "pr.agreement x1"
+    ]
+   },
+   "Accept Build": {
+    "before": "c15ebe420e5e",
+    "after": "8b28d616a012",
+    "hits": [
+     "pr.agreement x1"
+    ]
+   },
+   "Accept Check": {
+    "before": "98e623ba18c6",
+    "after": "9f78bc0d9cfe",
+    "hits": [
+     "pr.agreement x1"
+    ]
+   },
+   "Accept Return Build": {
+    "before": "6a981f9123b0",
+    "after": "87769e1adb41",
+    "hits": [
+     "pr.agreement x1"
+    ]
+   },
+   "Accept Final": {
+    "before": "637275a176a6",
+    "after": "dc6a259dafef",
+    "hits": [
+     "pr.agreement x1"
+    ]
+   },
+   "Accept DS Return Build": {
+    "before": "10fab7b22dea",
+    "after": "d4b030095d13",
+    "hits": [
+     "pr.agreement x1"
+    ]
+   },
+   "Enforcer Build": {
+    "before": "d9f9c94420de",
+    "after": "f93a664e8a7d",
+    "hits": [
+     "pr.agreement x1"
+    ]
+   },
+   "Judge Enforcer Build": {
+    "before": "b944baba3563",
+    "after": "ff0ce5a9c9d2",
+    "hits": [
+     "pr.agreement x1",
+     "pr.enforcer x1"
+    ]
+   },
+   "Alt Judge Enforcer Build": {
+    "before": "d54b18c5a2a3",
+    "after": "a99b1adfe709",
+    "hits": [
+     "pr.agreement x1",
+     "pr.enforcer x1"
+    ]
+   },
+   "R2 Alt Judge Enforcer Build": {
+    "before": "0969165910f9",
+    "after": "7de77e15b885",
+    "hits": [
+     "pr.agreement x1",
+     "pr.enforcer x1"
+    ]
+   }
+  }
+ },
+ "tally": {
+  "pr.form": 26,
+  "pr.mark": 26,
+  "rxm.kg4": 26,
+  "pr.agreement": 18,
+  "pr.enforcer": 3
+ }
+}
