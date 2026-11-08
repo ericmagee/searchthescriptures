@@ -6,9 +6,9 @@
 // line's OLD grade, which this send-back regrades, and which no change touches, takes the NEW grade, marked "(derived by the engine ...;
 // pkgRCD)". Same precedent as the derived KEYSTONE line (E-APPLY, W3 2362). The judge's own CHANGE TO decides the grade; the card follows it.
 // A card that already disagreed before the send-back is left alone (D38 still raises it). Only the three link grades are derived.
-// Run from wall2024/: node pkgRCD/build_RCD.cjs [base strip, default pkgLIB/strip_RI4] [dest strip, default pkgLIB/strip_RCD]
+// Run from wall2024/: node pkgRCD/build_RCD.cjs [base strip, default pkgLIB/strip_RI5B] [dest strip, default pkgLIB/strip_RCD]
 const fs=require('fs');const crypto=require('crypto');const h=s=>crypto.createHash('sha256').update(s).digest('hex').slice(0,12);
-const SRC=(process.argv[2]||'pkgLIB/strip_RI4')+'/patched/',DST=(process.argv[3]||'pkgLIB/strip_RCD')+'/patched/';
+const SRC=(process.argv[2]||'pkgLIB/strip_RI5B')+'/patched/',DST=(process.argv[3]||'pkgLIB/strip_RCD')+'/patched/';
 const PLAN='/tmp/claude-0/plan_RCD_'+(process.argv[3]||'pkgLIB/strip_RCD').replace(/\/$/,'').split('/').pop()+'.json';
 fs.rmSync(DST,{recursive:true,force:true});fs.mkdirSync(DST,{recursive:true});
 const A=' if(!map.size&&!items.length&&!resTo)return null;\n const T=build(map);';
