@@ -1,0 +1,20 @@
+{
+ "base": "pkgKWI/patched",
+ "nodes": {
+  "Judge Enforcer Build": {
+   "before": "7cbf9922cf70",
+   "after": "04b1c819dcf7",
+   "edits": 6
+  },
+  "Alt Judge Enforcer Build": {
+   "before": "8ebcf2ec8b43",
+   "after": "51cff28aa534",
+   "edits": 6
+  },
+  "R2 Alt Judge Enforcer Build": {
+   "before": "7054489eb7be",
+   "after": "498b6a218df4",
+   "edits": 6
+  }
+ }
+}

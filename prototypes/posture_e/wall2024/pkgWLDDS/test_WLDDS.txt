@@ -1,0 +1,85 @@
+SKIP Judge Enforcer Build 33040: Panel Build does not run on this run
+SKIP Judge Enforcer Build 33060: Panel Build does not run on this run
+SKIP Judge Enforcer Build 33083: Panel Build does not run on this run
+SKIP Judge Enforcer Build 33107: Panel Build does not run on this run
+SKIP Judge Enforcer Build 33129: Panel Build does not run on this run
+SKIP Judge Enforcer Build 33149: Panel Build does not run on this run
+SKIP Judge Enforcer Build 33160: Panel Build does not run on this run
+SKIP Judge Enforcer Build 33197: Panel Build does not run on this run
+OK   Judge Enforcer Build 33218 (WLD ledger): 22 item block(s), 71 ledger entries; calls 6 -> 6; items, ids and not_checked otherwise unchanged
+OK   Judge Enforcer Build 33222 (WLD ledger): 27 item block(s), 82 ledger entries; calls 8 -> 9; items, ids and not_checked otherwise unchanged
+OK   Judge Enforcer Build 33249 (WLD ledger): 25 item block(s), 83 ledger entries; calls 6 -> 6; items, ids and not_checked otherwise unchanged
+OK   Judge Enforcer Build 33261 (WLD ledger): 28 item block(s), 92 ledger entries; calls 8 -> 8; items, ids and not_checked otherwise unchanged
+SKIP Judge Enforcer Build 33276: Panel Build does not run on this run
+SKIP Judge Enforcer Build 33289: Panel Build does not run on this run
+OK   Judge Enforcer Build 33299 (WLD ledger): 17 item block(s), 52 ledger entries; calls 5 -> 5; items, ids and not_checked otherwise unchanged
+SKIP Judge Enforcer Build 33311: Panel Build does not run on this run
+SKIP Judge Enforcer Build 33322: Panel Build does not run on this run
+OK   Judge Enforcer Build 33345 (WLD ledger): 27 item block(s), 73 ledger entries; calls 6 -> 6; items, ids and not_checked otherwise unchanged
+OK   Judge Enforcer Build 33371 (WLD ledger): 23 item block(s), 57 ledger entries; calls 5 -> 5; items, ids and not_checked otherwise unchanged
+OK   Judge Enforcer Build 33389 (WLD ledger): 24 item block(s), 81 ledger entries; calls 6 -> 6; items, ids and not_checked otherwise unchanged
+OK   Judge Enforcer Build 33411 (WLD ledger): 19 item block(s), 64 ledger entries; calls 7 -> 7; items, ids and not_checked otherwise unchanged
+OK   Judge Enforcer Build 33430 (WLD ledger): 23 item block(s), 57 ledger entries; calls 5 -> 6; items, ids and not_checked otherwise unchanged
+OK   Judge Enforcer Build 33442 (WLD ledger): 25 item block(s), 75 ledger entries; calls 6 -> 7; items, ids and not_checked otherwise unchanged
+OK   Judge Enforcer Build 33461 (WLD ledger): 31 item block(s), 74 ledger entries; calls 6 -> 7; items, ids and not_checked otherwise unchanged
+OK   Judge Enforcer Build 33482 (WLD ledger): 23 item block(s), 56 ledger entries; calls 5 -> 5; items, ids and not_checked otherwise unchanged
+OK   Judge Enforcer Build 33490 (WLD ledger): 27 item block(s), 72 ledger entries; calls 7 -> 7; items, ids and not_checked otherwise unchanged
+OK   Judge Enforcer Build 33497 (WLD ledger): 22 item block(s), 64 ledger entries; calls 7 -> 7; items, ids and not_checked otherwise unchanged
+OK   Judge Enforcer Build 33506 (WLD ledger): 21 item block(s), 55 ledger entries; calls 6 -> 6; items, ids and not_checked otherwise unchanged
+OK   Judge Enforcer Build 33575 (WLD ledger): 22 item block(s), 44 ledger entries; calls 6 -> 6; items, ids and not_checked otherwise unchanged
+OK   Judge Enforcer Build 33592 (WLD ledger): 31 item block(s), 77 ledger entries; calls 6 -> 6; items, ids and not_checked otherwise unchanged
+OK   Judge Enforcer Build 33605 (WLD ledger): 22 item block(s), 50 ledger entries; calls 5 -> 6; items, ids and not_checked otherwise unchanged
+OK   Judge Enforcer Build 33617 (WLD ledger): 22 item block(s), 35 ledger entries; calls 7 -> 7; items, ids and not_checked otherwise unchanged
+OK   Judge Enforcer Build 33627 (WLD ledger): 30 item block(s), 91 ledger entries; calls 7 -> 7; items, ids and not_checked otherwise unchanged
+OK   Judge Enforcer Build 33644 (WLD ledger): 30 item block(s), 58 ledger entries; calls 7 -> 7; items, ids and not_checked otherwise unchanged
+OK   Judge Enforcer Build 33644 (old ledger): 0 item block(s), 0 ledger entries; calls 7 -> 7; items, ids and not_checked otherwise unchanged
+OK   Judge Enforcer Build 33682 (WLD ledger): 24 item block(s), 45 ledger entries; calls 6 -> 7; items, ids and not_checked otherwise unchanged
+OK   Judge Enforcer Build 33705 (WLD ledger): 27 item block(s), 75 ledger entries; calls 6 -> 7; items, ids and not_checked otherwise unchanged
+OK   Judge Enforcer Build 33731 (WLD ledger): 29 item block(s), 100 ledger entries; calls 6 -> 7; items, ids and not_checked otherwise unchanged
+OK   Judge Enforcer Build 33750 (WLD ledger): 24 item block(s), 55 ledger entries; calls 6 -> 6; items, ids and not_checked otherwise unchanged
+OK   Judge Enforcer Build 33774 (WLD ledger): 24 item block(s), 57 ledger entries; calls 7 -> 8; items, ids and not_checked otherwise unchanged
+OK   Judge Enforcer Build 33798 (WLD ledger): 22 item block(s), 65 ledger entries; calls 6 -> 6; items, ids and not_checked otherwise unchanged
+OK   Judge Enforcer Build 33815 (WLD ledger): 23 item block(s), 67 ledger entries; calls 7 -> 7; items, ids and not_checked otherwise unchanged
+OK   Judge Enforcer Build 33828 (WLD ledger): 18 item block(s), 27 ledger entries; calls 6 -> 6; items, ids and not_checked otherwise unchanged
+OK   Judge Enforcer Build 33828 (old ledger): 0 item block(s), 0 ledger entries; calls 6 -> 6; items, ids and not_checked otherwise unchanged
+OK   Judge Enforcer Build 33846 (WLD ledger): 21 item block(s), 67 ledger entries; calls 7 -> 7; items, ids and not_checked otherwise unchanged
+OK   Alt Judge Enforcer Build 33218 (WLD ledger): 0 item block(s), 0 ledger entries; calls 1 -> 1; items, ids and not_checked otherwise unchanged
+OK   Alt Judge Enforcer Build 33222 (WLD ledger): 9 item block(s), 23 ledger entries; calls 4 -> 5; items, ids and not_checked otherwise unchanged
+OK   Alt Judge Enforcer Build 33249 (WLD ledger): 13 item block(s), 30 ledger entries; calls 4 -> 4; items, ids and not_checked otherwise unchanged
+OK   Alt Judge Enforcer Build 33261 (WLD ledger): 10 item block(s), 42 ledger entries; calls 4 -> 4; items, ids and not_checked otherwise unchanged
+SKIP Alt Judge Enforcer Build 33276: Panel Build does not run on this run
+SKIP Alt Judge Enforcer Build 33289: Panel Build does not run on this run
+OK   Alt Judge Enforcer Build 33299 (WLD ledger): 10 item block(s), 33 ledger entries; calls 4 -> 4; items, ids and not_checked otherwise unchanged
+SKIP Alt Judge Enforcer Build 33311: Panel Build does not run on this run
+SKIP Alt Judge Enforcer Build 33322: Panel Build does not run on this run
+OK   Alt Judge Enforcer Build 33345 (WLD ledger): 10 item block(s), 17 ledger entries; calls 4 -> 4; items, ids and not_checked otherwise unchanged
+OK   Alt Judge Enforcer Build 33371 (WLD ledger): 14 item block(s), 27 ledger entries; calls 4 -> 4; items, ids and not_checked otherwise unchanged
+OK   Alt Judge Enforcer Build 33389 (WLD ledger): 0 item block(s), 0 ledger entries; calls 1 -> 1; items, ids and not_checked otherwise unchanged
+OK   Alt Judge Enforcer Build 33411 (WLD ledger): 6 item block(s), 17 ledger entries; calls 4 -> 4; items, ids and not_checked otherwise unchanged
+OK   Alt Judge Enforcer Build 33430 (WLD ledger): 0 item block(s), 0 ledger entries; calls 1 -> 1; items, ids and not_checked otherwise unchanged
+OK   Alt Judge Enforcer Build 33442 (WLD ledger): 7 item block(s), 14 ledger entries; calls 4 -> 4; items, ids and not_checked otherwise unchanged
+OK   Alt Judge Enforcer Build 33461 (WLD ledger): 10 item block(s), 36 ledger entries; calls 4 -> 4; items, ids and not_checked otherwise unchanged
+OK   Alt Judge Enforcer Build 33482 (WLD ledger): 7 item block(s), 16 ledger entries; calls 4 -> 4; items, ids and not_checked otherwise unchanged
+OK   Alt Judge Enforcer Build 33490 (WLD ledger): 10 item block(s), 22 ledger entries; calls 4 -> 4; items, ids and not_checked otherwise unchanged
+OK   Alt Judge Enforcer Build 33497 (WLD ledger): 0 item block(s), 0 ledger entries; calls 1 -> 1; items, ids and not_checked otherwise unchanged
+OK   Alt Judge Enforcer Build 33506 (WLD ledger): 8 item block(s), 36 ledger entries; calls 5 -> 5; items, ids and not_checked otherwise unchanged
+OK   Alt Judge Enforcer Build 33575 (WLD ledger): 0 item block(s), 0 ledger entries; calls 1 -> 1; items, ids and not_checked otherwise unchanged
+OK   Alt Judge Enforcer Build 33592 (WLD ledger): 0 item block(s), 0 ledger entries; calls 1 -> 1; items, ids and not_checked otherwise unchanged
+OK   Alt Judge Enforcer Build 33605 (WLD ledger): 0 item block(s), 0 ledger entries; calls 1 -> 1; items, ids and not_checked otherwise unchanged
+OK   Alt Judge Enforcer Build 33617 (WLD ledger): 8 item block(s), 41 ledger entries; calls 5 -> 5; items, ids and not_checked otherwise unchanged
+OK   Alt Judge Enforcer Build 33627 (WLD ledger): 7 item block(s), 28 ledger entries; calls 5 -> 5; items, ids and not_checked otherwise unchanged
+OK   Alt Judge Enforcer Build 33644 (WLD ledger): 8 item block(s), 22 ledger entries; calls 5 -> 5; items, ids and not_checked otherwise unchanged
+OK   Alt Judge Enforcer Build 33644 (old ledger): 0 item block(s), 0 ledger entries; calls 5 -> 5; items, ids and not_checked otherwise unchanged
+OK   Alt Judge Enforcer Build 33682 (WLD ledger): 0 item block(s), 0 ledger entries; calls 1 -> 1; items, ids and not_checked otherwise unchanged
+OK   Alt Judge Enforcer Build 33705 (WLD ledger): 0 item block(s), 0 ledger entries; calls 1 -> 1; items, ids and not_checked otherwise unchanged
+OK   Alt Judge Enforcer Build 33731 (WLD ledger): 8 item block(s), 46 ledger entries; calls 4 -> 5; items, ids and not_checked otherwise unchanged
+OK   Alt Judge Enforcer Build 33750 (WLD ledger): 0 item block(s), 0 ledger entries; calls 1 -> 1; items, ids and not_checked otherwise unchanged
+OK   Alt Judge Enforcer Build 33774 (WLD ledger): 0 item block(s), 0 ledger entries; calls 1 -> 1; items, ids and not_checked otherwise unchanged
+OK   Alt Judge Enforcer Build 33798 (WLD ledger): 10 item block(s), 36 ledger entries; calls 5 -> 5; items, ids and not_checked otherwise unchanged
+OK   Alt Judge Enforcer Build 33815 (WLD ledger): 0 item block(s), 0 ledger entries; calls 1 -> 1; items, ids and not_checked otherwise unchanged
+OK   Alt Judge Enforcer Build 33828 (WLD ledger): 7 item block(s), 33 ledger entries; calls 3 -> 4; items, ids and not_checked otherwise unchanged
+OK   Alt Judge Enforcer Build 33828 (old ledger): 0 item block(s), 0 ledger entries; calls 3 -> 3; items, ids and not_checked otherwise unchanged
+OK   Alt Judge Enforcer Build 33846 (WLD ledger): 10 item block(s), 36 ledger entries; calls 5 -> 5; items, ids and not_checked otherwise unchanged
+DeepSeek calls (WLD ledger runs): 287 -> 299
+WLD ledger: item blocks 925; entries NAMED IN AN ANSWER 2081, NAMED ONLY IN OTHER TEXT 495, NOT NAMED 0
+TOTAL 66 OK, 0 FAIL
