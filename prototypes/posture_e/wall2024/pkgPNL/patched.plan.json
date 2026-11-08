@@ -1,0 +1,67 @@
+{
+ "source": "W2 pkgPNL, Eric 18:45 CST 11-07 (panel qwen flash; alternates glm flash, mimo, grok)",
+ "live": "094121b7-5a2a-4b38-8705-1688f2a96a99",
+ "base": "/mnt/project-files/wall2024/fetchback_live_s52.json",
+ "nodes": [
+  {
+   "name": "Init Seats",
+   "file": "Init_Seats.js",
+   "base_sha": "717ed6aebedc",
+   "final_sha": "04a6ee5beecd",
+   "bytes": [
+    14903,
+    15221
+   ]
+  },
+  {
+   "name": "Resolve Seats",
+   "file": "Resolve_Seats.js",
+   "base_sha": "1b7062041862",
+   "final_sha": "500b11c5e8ed",
+   "bytes": [
+    6000,
+    6055
+   ]
+  },
+  {
+   "name": "Accept Build",
+   "file": "Accept_Build.js",
+   "base_sha": "5ceca4888e8e",
+   "final_sha": "6cb75177dc8b",
+   "bytes": [
+    21673,
+    21819
+   ]
+  },
+  {
+   "name": "Build Synthesis",
+   "file": "Build_Synthesis.js",
+   "base_sha": "6be782556e0e",
+   "final_sha": "f27786682ed4",
+   "bytes": [
+    34179,
+    34239
+   ]
+  },
+  {
+   "name": "Build Independent Verdict",
+   "file": "Build_Independent_Verdict.js",
+   "base_sha": "4b43139b589e",
+   "final_sha": "b72901a0dff2",
+   "bytes": [
+    135402,
+    135462
+   ]
+  },
+  {
+   "name": "Build Diagnostic Prompt",
+   "file": "Build_Diagnostic_Prompt.js",
+   "base_sha": "8121ab566149",
+   "final_sha": "2706c9181e34",
+   "bytes": [
+    5617,
+    5677
+   ]
+  }
+ ]
+}

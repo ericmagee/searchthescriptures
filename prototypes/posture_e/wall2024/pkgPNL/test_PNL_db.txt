@@ -1,0 +1,12 @@
+alternates live md5 f7340949dc46a5af1262625578755fde
+substitution live md5 06081e8a693ae1c95fea1f84d614d8ea
+T1 qwen_flash -> glm_flash (first alternate): OK {"ok": true, "written": true, "panel_expected": ["chatgpt", "gemini", "glm_flash"]}
+T2 two alternates glm_flash + mimo (with MIM2): OK {"ok": true, "written": true, "panel_expected": ["chatgpt", "glm_flash", "mimo"]}
+T3 gemini -> grok (last alternate): OK {"ok": true, "written": true, "panel_expected": ["chatgpt", "grok", "qwen_flash"]}
+T4 a seat already on the panel (qwen_flash) refused: REFUSED odv1_record_panel_alternates: qwen_flash already sits on the panel
+T5 glm_flash with the old glm-5.3 model refused: REFUSED odv1_record_panel_alternates: glm_flash is model z-ai/glm-5.3-flash, not z-ai/glm-5.3
+T6 live substitution qwen_flash -> glm_flash (reserve): REFUSED odv1_record_panel_substitution: failed_seat qwen_flash is not a panel seat
+T7 fixed substitution qwen_flash -> glm_flash (reserve): OK {"ok": true, "written": true, "panel_expected": ["chatgpt", "gemini", "glm_flash"]}
+T8 fixed substitution gemini -> glm_flash: OK {"ok": true, "written": true, "panel_expected": ["chatgpt", "glm_flash", "qwen_flash"]}
+T9 fixed substitution to a seat already on the panel refused: REFUSED odv1_record_panel_substitution: substitute qwen_flash is already in panel_expected {chatgpt,gemini,qwen_flash}
+(rolled back by the closing RAISE; model_config qwen_flash/glm_flash count afterwards: 0)

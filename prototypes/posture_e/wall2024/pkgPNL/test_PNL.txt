@@ -1,0 +1,130 @@
+OK 33218 (claude v opus) panel ["gemini","chatgpt","sol"] -> ["gemini","chatgpt","qwen_flash"]; reserve grok -> glm_flash; alt_order ["grok"] -> ["glm_flash","mimo","grok"]; single gemini -> gemini
+OK 33218 Resolve Seats judges ["gemini=google/gemini-3.8-flash/openrouter/64000","chatgpt=openai/gpt-6.1-terra/openrouter/64000","qwen_flash=qwen/qwen3.8-flash/openrouter/64000"]
+OK 33218 reserve {"seat":"glm_flash","fam":"openrouter","api_model":"z-ai/glm-5.3-flash","max_tokens":64000}
+OK 33218 alternates ["glm_flash=z-ai/glm-5.3-flash/zhipu","mimo=xiaomi/mimo-v2.6-pro/xiaomi","grok=x-ai/grok-4.7/xai"]
+OK 33218 control: live Resolve Seats cannot serve the pkgPNL seats (judge fam ["openrouter","openrouter",null])
+OK 33222 (claude v opus) panel ["gemini","chatgpt","sol"] -> ["gemini","chatgpt","qwen_flash"]; reserve grok -> glm_flash; alt_order ["grok"] -> ["glm_flash","mimo","grok"]; single gemini -> gemini
+OK 33222 Resolve Seats judges ["gemini=google/gemini-3.8-flash/openrouter/64000","chatgpt=openai/gpt-6.1-terra/openrouter/64000","qwen_flash=qwen/qwen3.8-flash/openrouter/64000"]
+OK 33222 reserve {"seat":"glm_flash","fam":"openrouter","api_model":"z-ai/glm-5.3-flash","max_tokens":64000}
+OK 33222 alternates ["glm_flash=z-ai/glm-5.3-flash/zhipu","mimo=xiaomi/mimo-v2.6-pro/xiaomi","grok=x-ai/grok-4.7/xai"]
+OK 33222 control: live Resolve Seats cannot serve the pkgPNL seats (judge fam ["openrouter","openrouter",null])
+OK 33222 Alternate Build (all three) offers glm_flash z-ai/glm-5.3-flash; rows ["glm_flash"]
+OK 33222 Alternate Build (glm_flash taken) offers mimo xiaomi/mimo-v2.6-pro reasoning {"enabled":false}; rows ["mimo"]
+OK 33222 Alternate Build (glm_flash and mimo taken) offers grok x-ai/grok-4.7; rows ["grok"]
+OK 33249 (claude v opus) panel ["gemini","chatgpt","sol"] -> ["gemini","chatgpt","qwen_flash"]; reserve grok -> glm_flash; alt_order ["grok"] -> ["glm_flash","mimo","grok"]; single gemini -> gemini
+OK 33249 Resolve Seats judges ["gemini=google/gemini-3.8-flash/openrouter/64000","chatgpt=openai/gpt-6.1-terra/openrouter/64000","qwen_flash=qwen/qwen3.8-flash/openrouter/64000"]
+OK 33249 reserve {"seat":"glm_flash","fam":"openrouter","api_model":"z-ai/glm-5.3-flash","max_tokens":64000}
+OK 33249 alternates ["glm_flash=z-ai/glm-5.3-flash/zhipu","mimo=xiaomi/mimo-v2.6-pro/xiaomi","grok=x-ai/grok-4.7/xai"]
+OK 33249 control: live Resolve Seats cannot serve the pkgPNL seats (judge fam ["openrouter","openrouter",null])
+OK 33249 Alternate Build (all three) offers glm_flash z-ai/glm-5.3-flash; rows ["glm_flash"]
+OK 33249 Alternate Build (glm_flash taken) offers mimo xiaomi/mimo-v2.6-pro reasoning {"enabled":false}; rows ["mimo"]
+OK 33249 Alternate Build (glm_flash and mimo taken) offers grok x-ai/grok-4.7; rows ["grok"]
+OK 33261 (claude v opus) panel ["gemini","chatgpt","sol"] -> ["gemini","chatgpt","qwen_flash"]; reserve grok -> glm_flash; alt_order ["grok"] -> ["glm_flash","mimo","grok"]; single gemini -> gemini
+OK 33261 Resolve Seats judges ["gemini=google/gemini-3.8-flash/openrouter/64000","chatgpt=openai/gpt-6.1-terra/openrouter/64000","qwen_flash=qwen/qwen3.8-flash/openrouter/64000"]
+OK 33261 reserve {"seat":"glm_flash","fam":"openrouter","api_model":"z-ai/glm-5.3-flash","max_tokens":64000}
+OK 33261 alternates ["glm_flash=z-ai/glm-5.3-flash/zhipu","mimo=xiaomi/mimo-v2.6-pro/xiaomi","grok=x-ai/grok-4.7/xai"]
+OK 33261 control: live Resolve Seats cannot serve the pkgPNL seats (judge fam ["openrouter","openrouter",null])
+OK 33261 Alternate Build (all three) offers glm_flash z-ai/glm-5.3-flash; rows ["glm_flash"]
+OK 33261 Alternate Build (glm_flash taken) offers mimo xiaomi/mimo-v2.6-pro reasoning {"enabled":false}; rows ["mimo"]
+OK 33261 Alternate Build (glm_flash and mimo taken) offers grok x-ai/grok-4.7; rows ["grok"]
+OK 33276 Init Seats refuses the same way on base and patched (saved input): ORACLE_DEBATE_V1 Init refused: topic missing or empty. run_token=ODV1-33276-z25qdac7
+OK 33289 Init Seats refuses the same way on base and patched (saved input): ORACLE_DEBATE_V1 Init refused: topic missing or empty. run_token=ODV1-33289-d4bxf919
+OK 33299 (claude v opus) panel ["gemini","chatgpt","sol"] -> ["gemini","chatgpt","qwen_flash"]; reserve grok -> glm_flash; alt_order ["grok"] -> ["glm_flash","mimo","grok"]; single gemini -> gemini
+OK 33299 Resolve Seats judges ["gemini=google/gemini-3.8-flash/openrouter/64000","chatgpt=openai/gpt-6.1-terra/openrouter/64000","qwen_flash=qwen/qwen3.8-flash/openrouter/64000"]
+OK 33299 reserve {"seat":"glm_flash","fam":"openrouter","api_model":"z-ai/glm-5.3-flash","max_tokens":64000}
+OK 33299 alternates ["glm_flash=z-ai/glm-5.3-flash/zhipu","mimo=xiaomi/mimo-v2.6-pro/xiaomi","grok=x-ai/grok-4.7/xai"]
+OK 33299 control: live Resolve Seats cannot serve the pkgPNL seats (judge fam ["openrouter","openrouter",null])
+OK 33299 Alternate Build (all three) offers glm_flash z-ai/glm-5.3-flash; rows ["glm_flash"]
+OK 33299 Alternate Build (glm_flash taken) offers mimo xiaomi/mimo-v2.6-pro reasoning {"enabled":false}; rows ["mimo"]
+OK 33299 Alternate Build (glm_flash and mimo taken) offers grok x-ai/grok-4.7; rows ["grok"]
+OK 33311 Init Seats refuses the same way on base and patched (saved input): ORACLE_DEBATE_V1 Init refused: topic missing or empty. run_token=ODV1-33311-x25ddnax
+OK 33322 Init Seats refuses the same way on base and patched (saved input): ORACLE_DEBATE_V1 Init refused: topic missing or empty. run_token=ODV1-33322-9wlgfu54
+OK 33345 (claude v opus) panel ["gemini","chatgpt","sol"] -> ["gemini","chatgpt","qwen_flash"]; reserve grok -> glm_flash; alt_order ["grok"] -> ["glm_flash","mimo","grok"]; single gemini -> gemini
+OK 33345 Resolve Seats judges ["gemini=google/gemini-3.8-flash/openrouter/64000","chatgpt=openai/gpt-6.1-terra/openrouter/64000","qwen_flash=qwen/qwen3.8-flash/openrouter/64000"]
+OK 33345 reserve {"seat":"glm_flash","fam":"openrouter","api_model":"z-ai/glm-5.3-flash","max_tokens":64000}
+OK 33345 alternates ["glm_flash=z-ai/glm-5.3-flash/zhipu","mimo=xiaomi/mimo-v2.6-pro/xiaomi","grok=x-ai/grok-4.7/xai"]
+OK 33345 control: live Resolve Seats cannot serve the pkgPNL seats (judge fam ["openrouter","openrouter",null])
+OK 33345 Alternate Build (all three) offers glm_flash z-ai/glm-5.3-flash; rows ["glm_flash","mimo"]
+OK 33345 Alternate Build (glm_flash taken) offers mimo xiaomi/mimo-v2.6-pro reasoning {"enabled":false}; rows ["mimo","grok"]
+OK 33345 Alternate Build (glm_flash and mimo taken) offers grok x-ai/grok-4.7; rows ["grok"]
+OK 33371 (claude v opus) panel ["gemini","chatgpt","sol"] -> ["gemini","chatgpt","qwen_flash"]; reserve grok -> glm_flash; alt_order ["grok"] -> ["glm_flash","mimo","grok"]; single gemini -> gemini
+OK 33371 Resolve Seats judges ["gemini=google/gemini-3.8-flash/openrouter/64000","chatgpt=openai/gpt-6.1-terra/openrouter/64000","qwen_flash=qwen/qwen3.8-flash/openrouter/64000"]
+OK 33371 reserve {"seat":"glm_flash","fam":"openrouter","api_model":"z-ai/glm-5.3-flash","max_tokens":64000}
+OK 33371 alternates ["glm_flash=z-ai/glm-5.3-flash/zhipu","mimo=xiaomi/mimo-v2.6-pro/xiaomi","grok=x-ai/grok-4.7/xai"]
+OK 33371 control: live Resolve Seats cannot serve the pkgPNL seats (judge fam ["openrouter","openrouter",null])
+OK 33371 Alternate Build (all three) offers glm_flash z-ai/glm-5.3-flash; rows ["glm_flash"]
+OK 33371 Alternate Build (glm_flash taken) offers mimo xiaomi/mimo-v2.6-pro reasoning {"enabled":false}; rows ["mimo"]
+OK 33371 Alternate Build (glm_flash and mimo taken) offers grok x-ai/grok-4.7; rows ["grok"]
+OK 33389 (claude v opus) panel ["gemini","chatgpt","sol"] -> ["gemini","chatgpt","qwen_flash"]; reserve grok -> glm_flash; alt_order ["grok"] -> ["glm_flash","mimo","grok"]; single gemini -> gemini
+OK 33389 Resolve Seats judges ["gemini=google/gemini-3.8-flash/openrouter/64000","chatgpt=openai/gpt-6.1-terra/openrouter/64000","qwen_flash=qwen/qwen3.8-flash/openrouter/64000"]
+OK 33389 reserve {"seat":"glm_flash","fam":"openrouter","api_model":"z-ai/glm-5.3-flash","max_tokens":64000}
+OK 33389 alternates ["glm_flash=z-ai/glm-5.3-flash/zhipu","mimo=xiaomi/mimo-v2.6-pro/xiaomi","grok=x-ai/grok-4.7/xai"]
+OK 33389 control: live Resolve Seats cannot serve the pkgPNL seats (judge fam ["openrouter","openrouter",null])
+OK 33411 (claude v opus) panel ["gemini","chatgpt","sol"] -> ["gemini","chatgpt","qwen_flash"]; reserve grok -> glm_flash; alt_order ["grok"] -> ["glm_flash","mimo","grok"]; single gemini -> gemini
+OK 33411 Resolve Seats judges ["gemini=google/gemini-3.8-flash/openrouter/64000","chatgpt=openai/gpt-6.1-terra/openrouter/64000","qwen_flash=qwen/qwen3.8-flash/openrouter/64000"]
+OK 33411 reserve {"seat":"glm_flash","fam":"openrouter","api_model":"z-ai/glm-5.3-flash","max_tokens":64000}
+OK 33411 alternates ["glm_flash=z-ai/glm-5.3-flash/zhipu","mimo=xiaomi/mimo-v2.6-pro/xiaomi","grok=x-ai/grok-4.7/xai"]
+OK 33411 control: live Resolve Seats cannot serve the pkgPNL seats (judge fam ["openrouter","openrouter",null])
+OK 33411 Alternate Build (all three) offers glm_flash z-ai/glm-5.3-flash; rows ["glm_flash"]
+OK 33411 Alternate Build (glm_flash taken) offers mimo xiaomi/mimo-v2.6-pro reasoning {"enabled":false}; rows ["mimo"]
+OK 33411 Alternate Build (glm_flash and mimo taken) offers grok x-ai/grok-4.7; rows ["grok"]
+OK 33430 (claude v opus) panel ["gemini","chatgpt","sol"] -> ["gemini","chatgpt","qwen_flash"]; reserve grok -> glm_flash; alt_order ["grok"] -> ["glm_flash","mimo","grok"]; single gemini -> gemini
+OK 33430 Resolve Seats judges ["gemini=google/gemini-3.8-flash/openrouter/64000","chatgpt=openai/gpt-6.1-terra/openrouter/64000","qwen_flash=qwen/qwen3.8-flash/openrouter/64000"]
+OK 33430 reserve {"seat":"glm_flash","fam":"openrouter","api_model":"z-ai/glm-5.3-flash","max_tokens":64000}
+OK 33430 alternates ["glm_flash=z-ai/glm-5.3-flash/zhipu","mimo=xiaomi/mimo-v2.6-pro/xiaomi","grok=x-ai/grok-4.7/xai"]
+OK 33430 control: live Resolve Seats cannot serve the pkgPNL seats (judge fam ["openrouter","openrouter",null])
+OK 33430 Alternate Build (all three) offers glm_flash z-ai/glm-5.3-flash; rows ["glm_flash"]
+OK 33430 Alternate Build (glm_flash taken) offers mimo xiaomi/mimo-v2.6-pro reasoning {"enabled":false}; rows ["mimo"]
+OK 33430 Alternate Build (glm_flash and mimo taken) offers grok x-ai/grok-4.7; rows ["grok"]
+OK 33442 (claude v opus) panel ["gemini","chatgpt","sol"] -> ["gemini","chatgpt","qwen_flash"]; reserve grok -> glm_flash; alt_order ["grok"] -> ["glm_flash","mimo","grok"]; single gemini -> gemini
+OK 33442 Resolve Seats judges ["gemini=google/gemini-3.8-flash/openrouter/64000","chatgpt=openai/gpt-6.1-terra/openrouter/64000","qwen_flash=qwen/qwen3.8-flash/openrouter/64000"]
+OK 33442 reserve {"seat":"glm_flash","fam":"openrouter","api_model":"z-ai/glm-5.3-flash","max_tokens":64000}
+OK 33442 alternates ["glm_flash=z-ai/glm-5.3-flash/zhipu","mimo=xiaomi/mimo-v2.6-pro/xiaomi","grok=x-ai/grok-4.7/xai"]
+OK 33442 control: live Resolve Seats cannot serve the pkgPNL seats (judge fam ["openrouter","openrouter",null])
+OK 33442 Alternate Build (all three) offers glm_flash z-ai/glm-5.3-flash; rows ["glm_flash"]
+OK 33442 Alternate Build (glm_flash taken) offers mimo xiaomi/mimo-v2.6-pro reasoning {"enabled":false}; rows ["mimo"]
+OK 33442 Alternate Build (glm_flash and mimo taken) offers grok x-ai/grok-4.7; rows ["grok"]
+OK 33461 (claude v opus) panel ["gemini","chatgpt","sol"] -> ["gemini","chatgpt","qwen_flash"]; reserve grok -> glm_flash; alt_order ["grok"] -> ["glm_flash","mimo","grok"]; single gemini -> gemini
+OK 33461 Resolve Seats judges ["gemini=google/gemini-3.8-flash/openrouter/64000","chatgpt=openai/gpt-6.1-terra/openrouter/64000","qwen_flash=qwen/qwen3.8-flash/openrouter/64000"]
+OK 33461 reserve {"seat":"glm_flash","fam":"openrouter","api_model":"z-ai/glm-5.3-flash","max_tokens":64000}
+OK 33461 alternates ["glm_flash=z-ai/glm-5.3-flash/zhipu","mimo=xiaomi/mimo-v2.6-pro/xiaomi","grok=x-ai/grok-4.7/xai"]
+OK 33461 control: live Resolve Seats cannot serve the pkgPNL seats (judge fam ["openrouter","openrouter",null])
+OK 33461 Alternate Build (all three) offers glm_flash z-ai/glm-5.3-flash; rows ["glm_flash","mimo"]
+OK 33461 Alternate Build (glm_flash taken) offers mimo xiaomi/mimo-v2.6-pro reasoning {"enabled":false}; rows ["mimo","grok"]
+OK 33461 Alternate Build (glm_flash and mimo taken) offers grok x-ai/grok-4.7; rows ["grok"]
+OK 33482 (claude v opus) panel ["gemini","chatgpt","sol"] -> ["gemini","chatgpt","qwen_flash"]; reserve grok -> glm_flash; alt_order ["grok"] -> ["glm_flash","mimo","grok"]; single gemini -> gemini
+OK 33482 Resolve Seats judges ["gemini=google/gemini-3.8-flash/openrouter/64000","chatgpt=openai/gpt-6.1-terra/openrouter/64000","qwen_flash=qwen/qwen3.8-flash/openrouter/64000"]
+OK 33482 reserve {"seat":"glm_flash","fam":"openrouter","api_model":"z-ai/glm-5.3-flash","max_tokens":64000}
+OK 33482 alternates ["glm_flash=z-ai/glm-5.3-flash/zhipu","mimo=xiaomi/mimo-v2.6-pro/xiaomi","grok=x-ai/grok-4.7/xai"]
+OK 33482 control: live Resolve Seats cannot serve the pkgPNL seats (judge fam ["openrouter","openrouter",null])
+OK 33482 Alternate Build (all three) offers glm_flash z-ai/glm-5.3-flash; rows ["glm_flash","mimo"]
+OK 33482 Alternate Build (glm_flash taken) offers mimo xiaomi/mimo-v2.6-pro reasoning {"enabled":false}; rows ["mimo","grok"]
+OK 33482 Alternate Build (glm_flash and mimo taken) offers grok x-ai/grok-4.7; rows ["grok"]
+OK 33490 (claude v opus) panel ["gemini","chatgpt","sol"] -> ["gemini","chatgpt","qwen_flash"]; reserve grok -> glm_flash; alt_order ["grok"] -> ["glm_flash","mimo","grok"]; single gemini -> gemini
+OK 33490 Resolve Seats judges ["gemini=google/gemini-3.8-flash/openrouter/64000","chatgpt=openai/gpt-6.1-terra/openrouter/64000","qwen_flash=qwen/qwen3.8-flash/openrouter/64000"]
+OK 33490 reserve {"seat":"glm_flash","fam":"openrouter","api_model":"z-ai/glm-5.3-flash","max_tokens":64000}
+OK 33490 alternates ["glm_flash=z-ai/glm-5.3-flash/zhipu","mimo=xiaomi/mimo-v2.6-pro/xiaomi","grok=x-ai/grok-4.7/xai"]
+OK 33490 control: live Resolve Seats cannot serve the pkgPNL seats (judge fam ["openrouter","openrouter",null])
+OK 33490 Alternate Build (all three) offers glm_flash z-ai/glm-5.3-flash; rows ["glm_flash","mimo"]
+OK 33490 Alternate Build (glm_flash taken) offers mimo xiaomi/mimo-v2.6-pro reasoning {"enabled":false}; rows ["mimo","grok"]
+OK 33490 Alternate Build (glm_flash and mimo taken) offers grok x-ai/grok-4.7; rows ["grok"]
+OK 33497 (claude v opus) panel ["gemini","chatgpt","grok"] -> ["gemini","chatgpt","qwen_flash"]; reserve null -> glm_flash; alt_order ["sol"] -> ["glm_flash","mimo","grok"]; single gemini -> gemini
+OK 33497 Resolve Seats judges ["gemini=google/gemini-3.8-flash/openrouter/64000","chatgpt=openai/gpt-6.1-terra/openrouter/64000","qwen_flash=qwen/qwen3.8-flash/openrouter/64000"]
+OK 33497 reserve {"seat":"glm_flash","fam":"openrouter","api_model":"z-ai/glm-5.3-flash","max_tokens":64000}
+OK 33497 alternates ["glm_flash=z-ai/glm-5.3-flash/zhipu","mimo=xiaomi/mimo-v2.6-pro/xiaomi","grok=x-ai/grok-4.7/xai"]
+OK 33497 control: live Resolve Seats cannot serve the pkgPNL seats (judge fam ["openrouter","openrouter",null])
+OK 33497 Alternate Build (all three) offers glm_flash z-ai/glm-5.3-flash; rows ["glm_flash"]
+OK 33497 Alternate Build (glm_flash taken) offers mimo xiaomi/mimo-v2.6-pro reasoning {"enabled":false}; rows ["mimo"]
+OK 33497 Alternate Build (glm_flash and mimo taken): grok refused by G3 because the SAVED panel of this run seated grok (an input artifact; under pkgPNL grok is not on the panel): ["no pool model passes the guards: grok G3: x-ai/grok-4.7 already sits on this panel"]
+OK 33218 Accept Build seats ["gemini","chatgpt","sol","grok"] -> ["gemini","chatgpt","qwen_flash","glm_flash","mimo","grok"]; bodies of kept seats identical: true; mimo xiaomi/mimo-v2.6-pro reasoning {"enabled":false}
+OK 33218 posture bodies qwen_flash qwen/qwen3.8-flash / glm_flash z-ai/glm-5.3-flash, max_tokens 64000/64000
+OK Build Synthesis __JFAM2 knows qwen_flash and glm_flash (the only change in the node)
+OK Build Independent Verdict __JFAM2 knows qwen_flash and glm_flash (the only change in the node)
+OK Build Diagnostic Prompt __JFAM2 knows qwen_flash and glm_flash (the only change in the node)
+-- Init Seats 717ed6aebedc -> 04a6ee5beecd bytes 14903 -> 15221
+-- Resolve Seats 1b7062041862 -> 500b11c5e8ed bytes 6000 -> 6055
+-- Accept Build 5ceca4888e8e -> 6cb75177dc8b bytes 21673 -> 21819
+-- Build Synthesis 6be782556e0e -> f27786682ed4 bytes 34179 -> 34239
+-- Build Independent Verdict 4b43139b589e -> b72901a0dff2 bytes 135402 -> 135462
+-- Build Diagnostic Prompt 8121ab566149 -> 2706c9181e34 bytes 5617 -> 5677
+TOTAL 123 OK, 0 FAIL
