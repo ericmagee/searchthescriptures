@@ -1,0 +1,12 @@
+OK live s57 Enforcer Record is pkgEGP patched (dc7d800144a3), which contains pkgEGA and pkgEGL v2
+OK live s57 Enforcer Build carries pkgESH and pkgEKG (ee66d61f1339)
+OK live s57 Judge Enforcer Call deepseek: retryOnFail false (pkgERF)
+OK live s57 Alt Judge Enforcer Call deepseek: retryOnFail false (pkgERF)
+   33497: 52 answers; EGL v2 16, EGP 36, EGA 0; NO VERDICT 0
+OK 33497 EGL v2 fired: 16 answers take the single G<k> line of their same-form item (16 match)
+OK 33497 EGP fired: 36 answers take the G<k> line in their place (36 match)
+OK 33497: NO VERDICT 0 on live s57 code
+   33506: 36 answers; EGL v2 1, EGP 0, EGA 35; NO VERDICT 0
+OK 33506 EGA fired: 35 answers read from "G<k>/A<k>.<n>" lines (35 match)
+OK 33506: NO VERDICT 0 on live s57 code
+TOTAL 9 OK, 0 FAIL

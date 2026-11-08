@@ -1,0 +1,15 @@
+OK 33506 Judge: no failure -> marker only
+OK 33506 Judge: node-level failure -> 10 halves for 5 of 5 calls, 252/252 ids, each once
+OK 33506 Judge: call 2 fails alone -> its 2 halves only (63 ids)
+OK 33506 Alt Judge: no failure -> marker only
+OK 33506 Alt Judge: node-level failure -> 8 halves for 4 of 4 calls, 87/87 ids, each once
+OK 33506 Alt Judge: call 2 fails alone -> its 2 halves only (18 ids)
+OK 33497 Judge: no failure -> marker only
+OK 33497 Judge: node-level failure -> 14 halves for 7 of 7 calls, 271/271 ids, each once
+OK 33497 Judge: call 2 fails alone -> its 2 halves only (73 ids)
+   row keys: run_token,seat,seat_role,judge_model,kind,rule,item,flagged_line,prompt_sent,full_reply,reply_error,response_line,cure_status,cure_reason,at
+   tally equal: true; calls 5 -> 10
+OK 33506 Record: 252 enf428 rows, verdicts after node-level failure + half re-send equal the no-failure Record; top-level fields that differ: enf428, enf428_rows
+   first difference in enf428: base ...{"code_violations":0,"skipped":false,"calls":5,"counts":{"ans_items":155,"ans_grades":182,"void_items":1,"void_rulings":1},"not_checked":0,"tally":{"E-ANS":{"AGREE":
+   patched ...{"code_violations":0,"skipped":false,"calls":10,"counts":{"ans_items":155,"ans_grades":182,"void_items":1,"void_rulings":1},"not_checked":0,"tally":{"E-ANS":{"AGREE"
+TOTAL 10 OK, 0 FAIL
