@@ -5,10 +5,10 @@ DeepSeek enforcer fix (Judge Enforcer Build and Alt Judge Enforcer Build), on pk
 ## Fault
 DeepSeek E-KEY rules DISAGREE while its own right grade equals the judge's grade, because it reads a keystone ground that restates the
 defender's thesis as "the judge's own doctrinal statement".
-- 33617 gemini: "KEYSTONE: D6 -- STANDS -- D6 is the conclusion link affirming Christ had no biological father and was conceived of the Holy Ghost ..." -> "ENFORCER DISAGREE (right: STANDS)".
+- 33617 gemini (NOT this cause, corrected after W2 3113): its DISAGREE quotes "which stands fully supported", a judge summary, so the DISAGREE is a fair reading of the rule and EKD leaves it.
 - 33617 sol: "KEYSTONE: D6 -- STANDS -- The conclusion is that Christ had no biological human father, with Mary as mother and the Holy Ghost as the source ..." -> "ENFORCER DISAGREE (right: STANDS)".
 - The defender's own [CR1] opening: "I affirm that Jesus Christ had a biological mother, Mary, and no biological human father. His conception was of the Holy Ghost." Its LINK 6 premise line [CR2]: "Christ had no biological father; Mary was his biological mother and the Holy Ghost the source of the conception."
-- debate_enforcer_log, last 3 days: 13 E-KEY rows where DISAGREE names the judge's own grade as right (11 STANDS, 2 BROKEN), in 9 debates.
+- debate_enforcer_log, last 3 days: 13 E-KEY rows where DISAGREE names the judge's own grade as right (11 STANDS, 2 BROKEN). W2 read them one by one (3113): 7 quote a ground restating the defender's thesis (EKD targets these); 6 quote a judge summary or an absence ground ("unbroken chain of scriptural witnesses", "which stands fully supported"), which EKD rightly leaves.
 - Cause: the E-KEY item gave DeepSeek only the keystone line and the judge's collision lines, never the defender's words, so it could not tell a restated thesis from the judge's doctrine.
 
 ## Change
@@ -26,4 +26,4 @@ defender's thesis as "the judge's own doctrinal statement".
 Judge Enforcer Build e623516c11e9 -> 2cb78eabaca7; Alt Judge Enforcer Build 0d1f052f879f -> 79898dee1307 (plan_EKD.json).
 
 ## Live bar
-E-KEY DISAGREE rows whose right grade equals the judge's grade go to 0. Record-only rule (ruling 428), so no verdict changes.
+No E-KEY DISAGREE calls a restated defender thesis or premise line "the judge's own doctrine" (restated per W2 3113; same-grade DISAGREEs on judge summaries may remain). Record-only rule (ruling 428), so no verdict changes.
