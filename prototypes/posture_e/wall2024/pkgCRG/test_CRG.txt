@@ -1,0 +1,12 @@
+OK replay ran on 431 node runs (35 could not run, same in base: 35)
+OK outputs differ only in the grounds clause of recomputed count lines (22 node runs differ; stray: none)
+   node runs with a nonzero broken_at_collision split: none
+   recomputed lines with grounds: 3 in node runs, 3 distinct:
+     CHALLENGER CONCEDED LINKS: 1 -- recomputed after the cure from the cured lines (CORRECTED COUNT CHALLENGER 1) -- grounds: the cure names none (the cure lowered the count from 3 and does not say which premises it keeps).
+     CHALLENGER CONCEDED LINKS: 1 -- recomputed after the cure from the cured lines (CORRECTED COUNT CHALLENGER 1) -- grounds: the cure names none (the cure lowered the count from 3 and does not say which premises it keeps).; record-only, it removes no seat. REVIEW THIS ROW. ; END]
+     CONCEDED LINKS: 3 -- recomputed after the cure from the cured lines (CORRECTED COUNT DEFENDER 3) -- grounds: premise 2 BROKEN AT THE COLLISION D2 vs C4 (K-G7); premise 5 BROKEN AT THE COLLISION D5 vs C5 (K-G7); before the cure, 1: LINK 6 UNEXHIBITED (ASSUMES). STEP: Jesus sprang out of Juda by the house that took him and named him -- ASSUMES: a house's taking and naming carries the seed of David a
+OK 33592 grok: "CONCEDED LINKS: 3" names premise 2 (D2 vs C4), premise 5 (D5 vs C5) and LINK 6 UNEXHIBITED; grounds equal the count
+OK Build Save Body carries the same patched split function as Alternate Merge
+   33592 grok split: {"stored":3,"stated":3,"granted":0,"unexhibited":1,"broken_at_collision":2,"unnamed":0,"granted_items":[],"unexhibited_items":["link 6"],"broken_items":["premise 2","premise 5"]}
+OK 33592 grok conceded_split: unexhibited 1, broken_at_collision 2, unnamed 0 (base read unnamed 3)
+TOTAL 5 OK, 0 FAIL
