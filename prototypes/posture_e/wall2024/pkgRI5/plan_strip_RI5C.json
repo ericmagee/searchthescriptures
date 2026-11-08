@@ -1,9 +1,9 @@
 {
- "base": "pkgLIB/strip_RI5B/patched/",
+ "base": "pkgLIB/strip_RCD/patched/",
  "nodes": {
   "Alt_Gate_Build.js": {
-   "base": "0fd60e0d8eea",
-   "patched": "46bc9d0c09b1",
+   "base": "564bb832adbf",
+   "patched": "9a5a1c39b5f4",
    "anchors": [
     "ANSWER CHECK grade",
     "RESULT word",
@@ -15,8 +15,8 @@
    ]
   },
   "Alt_Gate_Record.js": {
-   "base": "543b599c1587",
-   "patched": "4a83c105c340",
+   "base": "d378bd2c6616",
+   "patched": "8fef21a50964",
    "anchors": [
     "ANSWER CHECK grade",
     "RESULT word",
@@ -67,8 +67,8 @@
    ]
   },
   "Alternate_Merge_1.js": {
-   "base": "c772c7ea371e",
-   "patched": "c8263b655b24",
+   "base": "51af3cb906f0",
+   "patched": "181e65314667",
    "anchors": [
     "ANSWER CHECK grade",
     "RESULT word",
@@ -80,8 +80,8 @@
    ]
   },
   "Alternate_Merge_Seat.js": {
-   "base": "e47190b1dcbf",
-   "patched": "e9e509ee67ef",
+   "base": "1893eda1ebd3",
+   "patched": "49fdf805f302",
    "anchors": [
     "ANSWER CHECK grade",
     "RESULT word",
@@ -146,8 +146,8 @@
    ]
   },
   "Gate_Build.js": {
-   "base": "fad4e27598c7",
-   "patched": "be4d02832d68",
+   "base": "5415374f9916",
+   "patched": "d8e3b1268f15",
    "anchors": [
     "ANSWER CHECK grade",
     "RESULT word",
@@ -159,8 +159,8 @@
    ]
   },
   "Gate_Record.js": {
-   "base": "191814b61c41",
-   "patched": "8bca893a7e44",
+   "base": "9be18a5ea7cb",
+   "patched": "be1f5d7147cc",
    "anchors": [
     "ANSWER CHECK grade",
     "RESULT word",
@@ -270,8 +270,8 @@
    ]
   },
   "R2_Alt_Gate_Build.js": {
-   "base": "a8797ff64600",
-   "patched": "a94f019f00e3",
+   "base": "fa5290876e60",
+   "patched": "3a39a14cdc13",
    "anchors": [
     "ANSWER CHECK grade",
     "RESULT word",
@@ -283,8 +283,8 @@
    ]
   },
   "R2_Alt_Gate_Record.js": {
-   "base": "62237b122507",
-   "patched": "d8c074e97571",
+   "base": "ad45c7a66830",
+   "patched": "0c7f6e3765d5",
    "anchors": [
     "ANSWER CHECK grade",
     "RESULT word",
@@ -335,8 +335,8 @@
    ]
   },
   "R2_Alternate_Merge.js": {
-   "base": "c5155aba38f0",
-   "patched": "921650be22da",
+   "base": "94f1f9e61e74",
+   "patched": "6f7a4c94c24c",
    "anchors": [
     "ANSWER CHECK grade",
     "RESULT word",
@@ -348,8 +348,8 @@
    ]
   },
   "R2_Alternate_Merge_Seat.js": {
-   "base": "50da61ef7ade",
-   "patched": "903528cbc09e",
+   "base": "9ccfc756128e",
+   "patched": "fa63eb6e664e",
    "anchors": [
     "ANSWER CHECK grade",
     "RESULT word",

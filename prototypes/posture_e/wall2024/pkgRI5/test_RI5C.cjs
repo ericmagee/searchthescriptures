@@ -1,6 +1,6 @@
 // pkgRI5 test (reader item 5 part C) (W1, reader item 3; harness from pkgGDA/pkgKG7 tests). Run from wall2024/: node pkgRI3/test_RI3.cjs [base strip] [patched strip] [plan]
 const fs=require('fs');const {harness,feeder}=require('../pkgGSL/harness.cjs');const D='/mnt/project-files/wall2024/inputs/';const BASEW='/mnt/project-files/wall2024/fetchback_live_s63.json';
-const SB=process.argv[2]||'pkgLIB/strip_RI5B',SP=process.argv[3]||'pkgLIB/strip_RI5C',PL=process.argv[4]||'pkgRI5/plan_strip_RI5C.json';
+const SB=process.argv[2]||'pkgLIB/strip_RCD',SP=process.argv[3]||'pkgLIB/strip_RI5C',PL=process.argv[4]||'pkgRI5/plan_strip_RI5C.json';
 const B0=f=>fs.readFileSync(SB+'/patched/'+f,'utf8'),P1=f=>fs.readFileSync(SP+'/patched/'+f,'utf8');const plan=JSON.parse(fs.readFileSync(PL,'utf8')).nodes;
 let ok=0,bad=0;const out=[];const log=s=>{out.push(s);console.log(s);};const T=(c,m)=>{if(c){ok++;log('OK '+m);}else{bad++;log('FAIL '+m);}};
 const all=fs.readdirSync(SB+'/patched').filter(f=>f.endsWith('.js')).sort();

@@ -1,0 +1,364 @@
+{
+ "base": "pkgLIB/strip_RI5C/patched/",
+ "nodes": {
+  "Alt_Gate_Build.js": {
+   "base": "9a5a1c39b5f4",
+   "patched": "806a5838e634",
+   "anchors": [
+    "sbBrokenWord2024: CLAUSE N and W",
+    "sbBrokenWord2024: KEYSTONE WITHDRAWN",
+    "kkLines: KEYSTONE line",
+    "netLines: CHAIN MARK FOOTED",
+    "krulRulings: KEYSTONE link",
+    "krulRulings: graded collision",
+    "krulRulings: RESTATED pair"
+   ]
+  },
+  "Alt_Gate_Record.js": {
+   "base": "8fef21a50964",
+   "patched": "d42fc7e8a718",
+   "anchors": [
+    "sbBrokenWord2024: CLAUSE N and W",
+    "sbBrokenWord2024: KEYSTONE WITHDRAWN",
+    "kkLines: KEYSTONE line",
+    "netLines: CHAIN MARK FOOTED",
+    "krulRulings: KEYSTONE link",
+    "krulRulings: graded collision",
+    "krulRulings: RESTATED pair"
+   ]
+  },
+  "Alternate_Build.js": {
+   "base": "5619af1729d1",
+   "patched": "187ca7da6973",
+   "anchors": [
+    "kkLines: KEYSTONE line",
+    "netLines: CHAIN MARK FOOTED",
+    "krulRulings: KEYSTONE link",
+    "krulRulings: graded collision",
+    "krulRulings: RESTATED pair"
+   ]
+  },
+  "Alternate_Cure_Build.js": {
+   "base": "a77e85be8fdc",
+   "patched": "c8424d391316",
+   "anchors": [
+    "kkLines: KEYSTONE line",
+    "netLines: CHAIN MARK FOOTED",
+    "krulRulings: KEYSTONE link",
+    "krulRulings: graded collision",
+    "krulRulings: RESTATED pair"
+   ]
+  },
+  "Alternate_Cure_Normalize.js": {
+   "base": "126343c37e56",
+   "patched": "e54aadc196bc",
+   "anchors": [
+    "kkLines: KEYSTONE line",
+    "netLines: CHAIN MARK FOOTED",
+    "krulRulings: KEYSTONE link",
+    "krulRulings: graded collision",
+    "krulRulings: RESTATED pair"
+   ]
+  },
+  "Alternate_Merge_1.js": {
+   "base": "181e65314667",
+   "patched": "ff5c6d5b7620",
+   "anchors": [
+    "sbBrokenWord2024: CLAUSE N and W",
+    "sbBrokenWord2024: KEYSTONE WITHDRAWN",
+    "kkLines: KEYSTONE line",
+    "netLines: CHAIN MARK FOOTED",
+    "krulRulings: KEYSTONE link",
+    "krulRulings: graded collision",
+    "krulRulings: RESTATED pair"
+   ]
+  },
+  "Alternate_Merge_Seat.js": {
+   "base": "49fdf805f302",
+   "patched": "16dd6a81b2d0",
+   "anchors": [
+    "sbBrokenWord2024: CLAUSE N and W",
+    "sbBrokenWord2024: KEYSTONE WITHDRAWN",
+    "kkLines: KEYSTONE line",
+    "netLines: CHAIN MARK FOOTED",
+    "krulRulings: KEYSTONE link",
+    "krulRulings: graded collision",
+    "krulRulings: RESTATED pair"
+   ]
+  },
+  "Alternate_Payloads.js": {
+   "base": "4dbc946d7038",
+   "patched": "5e3a5844fc88",
+   "anchors": [
+    "kkLines: KEYSTONE line",
+    "netLines: CHAIN MARK FOOTED",
+    "krulRulings: KEYSTONE link",
+    "krulRulings: graded collision",
+    "krulRulings: RESTATED pair"
+   ]
+  },
+  "Cure_Build.js": {
+   "base": "96514a4c1b47",
+   "patched": "38ed921ef649",
+   "anchors": [
+    "kkLines: KEYSTONE line",
+    "netLines: CHAIN MARK FOOTED",
+    "krulRulings: KEYSTONE link",
+    "krulRulings: graded collision",
+    "krulRulings: RESTATED pair"
+   ]
+  },
+  "Cure_Check.js": {
+   "base": "66e6e8afd030",
+   "patched": "9923abe26d83",
+   "anchors": [
+    "kkLines: KEYSTONE line",
+    "netLines: CHAIN MARK FOOTED",
+    "krulRulings: KEYSTONE link",
+    "krulRulings: graded collision",
+    "krulRulings: RESTATED pair"
+   ]
+  },
+  "Cure_Normalize.js": {
+   "base": "4ca65837676e",
+   "patched": "57e7901dc0bd",
+   "anchors": [
+    "kkLines: KEYSTONE line",
+    "netLines: CHAIN MARK FOOTED",
+    "krulRulings: KEYSTONE link",
+    "krulRulings: graded collision",
+    "krulRulings: RESTATED pair"
+   ]
+  },
+  "Extract_Independent_Verdict.js": {
+   "base": "f5bdf7a68557",
+   "patched": "5efb139775fd",
+   "anchors": [
+    "kkLines: KEYSTONE line",
+    "netLines: CHAIN MARK FOOTED",
+    "krulRulings: KEYSTONE link",
+    "krulRulings: graded collision",
+    "krulRulings: RESTATED pair"
+   ]
+  },
+  "Gate_Build.js": {
+   "base": "d8e3b1268f15",
+   "patched": "77dbc9b75ecc",
+   "anchors": [
+    "sbBrokenWord2024: CLAUSE N and W",
+    "sbBrokenWord2024: KEYSTONE WITHDRAWN",
+    "kkLines: KEYSTONE line",
+    "netLines: CHAIN MARK FOOTED",
+    "krulRulings: KEYSTONE link",
+    "krulRulings: graded collision",
+    "krulRulings: RESTATED pair"
+   ]
+  },
+  "Gate_Record.js": {
+   "base": "be1f5d7147cc",
+   "patched": "12d2b1a5f0e6",
+   "anchors": [
+    "sbBrokenWord2024: CLAUSE N and W",
+    "sbBrokenWord2024: KEYSTONE WITHDRAWN",
+    "kkLines: KEYSTONE line",
+    "netLines: CHAIN MARK FOOTED",
+    "krulRulings: KEYSTONE link",
+    "krulRulings: graded collision",
+    "krulRulings: RESTATED pair"
+   ]
+  },
+  "Panel_Cure_Build_1.js": {
+   "base": "7e4c88358b70",
+   "patched": "6ac07ffb6c3b",
+   "anchors": [
+    "kkLines: KEYSTONE line",
+    "netLines: CHAIN MARK FOOTED",
+    "krulRulings: KEYSTONE link",
+    "krulRulings: graded collision",
+    "krulRulings: RESTATED pair"
+   ]
+  },
+  "Panel_Cure_Build_2.js": {
+   "base": "19a506575913",
+   "patched": "687c3cc79a49",
+   "anchors": [
+    "kkLines: KEYSTONE line",
+    "netLines: CHAIN MARK FOOTED",
+    "krulRulings: KEYSTONE link",
+    "krulRulings: graded collision",
+    "krulRulings: RESTATED pair"
+   ]
+  },
+  "Panel_Cure_Build_3.js": {
+   "base": "f682b81e628d",
+   "patched": "f87a15b82bfc",
+   "anchors": [
+    "kkLines: KEYSTONE line",
+    "netLines: CHAIN MARK FOOTED",
+    "krulRulings: KEYSTONE link",
+    "krulRulings: graded collision",
+    "krulRulings: RESTATED pair"
+   ]
+  },
+  "Panel_Cure_Check.js": {
+   "base": "af82e4446da8",
+   "patched": "717d2163d726",
+   "anchors": [
+    "kkLines: KEYSTONE line",
+    "netLines: CHAIN MARK FOOTED",
+    "krulRulings: KEYSTONE link",
+    "krulRulings: graded collision",
+    "krulRulings: RESTATED pair"
+   ]
+  },
+  "Panel_Cure_Normalize_1.js": {
+   "base": "19178ebb92a4",
+   "patched": "7d3eda49cb41",
+   "anchors": [
+    "kkLines: KEYSTONE line",
+    "netLines: CHAIN MARK FOOTED",
+    "krulRulings: KEYSTONE link",
+    "krulRulings: graded collision",
+    "krulRulings: RESTATED pair"
+   ]
+  },
+  "Panel_Cure_Normalize_2.js": {
+   "base": "24fe07f02768",
+   "patched": "b979bce53151",
+   "anchors": [
+    "kkLines: KEYSTONE line",
+    "netLines: CHAIN MARK FOOTED",
+    "krulRulings: KEYSTONE link",
+    "krulRulings: graded collision",
+    "krulRulings: RESTATED pair"
+   ]
+  },
+  "Panel_Cure_Normalize_3.js": {
+   "base": "3d7361354f42",
+   "patched": "6751bfde5170",
+   "anchors": [
+    "kkLines: KEYSTONE line",
+    "netLines: CHAIN MARK FOOTED",
+    "krulRulings: KEYSTONE link",
+    "krulRulings: graded collision",
+    "krulRulings: RESTATED pair"
+   ]
+  },
+  "Panel_Payloads.js": {
+   "base": "508c992c4a50",
+   "patched": "35bfa66a0807",
+   "anchors": [
+    "kkLines: KEYSTONE line",
+    "netLines: CHAIN MARK FOOTED",
+    "krulRulings: KEYSTONE link",
+    "krulRulings: graded collision",
+    "krulRulings: RESTATED pair"
+   ]
+  },
+  "R2_Alt_Gate_Build.js": {
+   "base": "3a39a14cdc13",
+   "patched": "86f2a609913b",
+   "anchors": [
+    "sbBrokenWord2024: CLAUSE N and W",
+    "sbBrokenWord2024: KEYSTONE WITHDRAWN",
+    "kkLines: KEYSTONE line",
+    "netLines: CHAIN MARK FOOTED",
+    "krulRulings: KEYSTONE link",
+    "krulRulings: graded collision",
+    "krulRulings: RESTATED pair"
+   ]
+  },
+  "R2_Alt_Gate_Record.js": {
+   "base": "0c7f6e3765d5",
+   "patched": "d788a46b5d2c",
+   "anchors": [
+    "sbBrokenWord2024: CLAUSE N and W",
+    "sbBrokenWord2024: KEYSTONE WITHDRAWN",
+    "kkLines: KEYSTONE line",
+    "netLines: CHAIN MARK FOOTED",
+    "krulRulings: KEYSTONE link",
+    "krulRulings: graded collision",
+    "krulRulings: RESTATED pair"
+   ]
+  },
+  "R2_Alternate_Build.js": {
+   "base": "bc41913065ce",
+   "patched": "4544fbe8c28a",
+   "anchors": [
+    "kkLines: KEYSTONE line",
+    "netLines: CHAIN MARK FOOTED",
+    "krulRulings: KEYSTONE link",
+    "krulRulings: graded collision",
+    "krulRulings: RESTATED pair"
+   ]
+  },
+  "R2_Alternate_Cure_Build.js": {
+   "base": "fcd6eaf4733e",
+   "patched": "d1c2c9facfbb",
+   "anchors": [
+    "kkLines: KEYSTONE line",
+    "netLines: CHAIN MARK FOOTED",
+    "krulRulings: KEYSTONE link",
+    "krulRulings: graded collision",
+    "krulRulings: RESTATED pair"
+   ]
+  },
+  "R2_Alternate_Cure_Normalize.js": {
+   "base": "8783b0a94a97",
+   "patched": "fb4c53a1f4e2",
+   "anchors": [
+    "kkLines: KEYSTONE line",
+    "netLines: CHAIN MARK FOOTED",
+    "krulRulings: KEYSTONE link",
+    "krulRulings: graded collision",
+    "krulRulings: RESTATED pair"
+   ]
+  },
+  "R2_Alternate_Merge.js": {
+   "base": "6f7a4c94c24c",
+   "patched": "a860fe0e9540",
+   "anchors": [
+    "sbBrokenWord2024: CLAUSE N and W",
+    "sbBrokenWord2024: KEYSTONE WITHDRAWN",
+    "kkLines: KEYSTONE line",
+    "netLines: CHAIN MARK FOOTED",
+    "krulRulings: KEYSTONE link",
+    "krulRulings: graded collision",
+    "krulRulings: RESTATED pair"
+   ]
+  },
+  "R2_Alternate_Merge_Seat.js": {
+   "base": "fa63eb6e664e",
+   "patched": "8fa1e5687489",
+   "anchors": [
+    "sbBrokenWord2024: CLAUSE N and W",
+    "sbBrokenWord2024: KEYSTONE WITHDRAWN",
+    "kkLines: KEYSTONE line",
+    "netLines: CHAIN MARK FOOTED",
+    "krulRulings: KEYSTONE link",
+    "krulRulings: graded collision",
+    "krulRulings: RESTATED pair"
+   ]
+  },
+  "R2_Alternate_Payloads.js": {
+   "base": "0e3aaeb83370",
+   "patched": "838dd2ce8eab",
+   "anchors": [
+    "kkLines: KEYSTONE line",
+    "netLines: CHAIN MARK FOOTED",
+    "krulRulings: KEYSTONE link",
+    "krulRulings: graded collision",
+    "krulRulings: RESTATED pair"
+   ]
+  }
+ },
+ "tally": {
+  "sbBrokenWord2024: CLAUSE N and W": 10,
+  "sbBrokenWord2024: KEYSTONE WITHDRAWN": 10,
+  "kkLines: KEYSTONE line": 30,
+  "netLines: CHAIN MARK FOOTED": 30,
+  "krulRulings: KEYSTONE link": 30,
+  "krulRulings: graded collision": 30,
+  "krulRulings: RESTATED pair": 30
+ }
+}

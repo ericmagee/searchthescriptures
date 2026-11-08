@@ -1661,6 +1661,15 @@ function sbApply2024(seat,raw,F,its,RD){const one=s=>String(s==null?'':s).replac
     map.set(keyO,{sid:'KEYSTONE (derived)',to,over:[],derived:true});}}}
  {const seen=new Set();for(const kx of keyChecks(build(map))){const kn=new Set(kx.lines.map(nrm));const hit=new Set();for(const [o,c] of [...map]){if(kn.has(nrm(c.to))||kn.has(nrm(o)))hit.add(c.sid);}for(const [o,c] of [...map]){if(hit.has(c.sid))map.delete(o);}for(const sid of hit){if(seen.has(sid))continue;seen.add(sid);const c=(ch.find(z=>z.sid===sid)||{});items.push({sid,kind:'CONTRADICTION',why:kx.why+' (the change is not applied)',to:String(c.to||''),lines:kx.lines});}}}
  {const P9b=rcLines(build(map));for(const [o9,c9] of [...map]){if(!c9.rfl)continue;const g9=P9b.col.filter(z=>U(z.link)===c9.rfl).map(z=>z.grade);if(g9.some(g=>/LINK BROKEN$/.test(String(g||'')))){map.delete(o9);items.push({sid:c9.sid,kind:'NOT APPLIED',why:'the collision line of '+c9.rfl.replace(' VS ',' vs ')+' is still graded '+g9.find(g=>/LINK BROKEN$/.test(String(g||'')))+' (its change was not applied), and a broken link keeps its FORCED line (ruling 411; pkgRFL, rechecked by pkgFCW v2)',to:'RETRACTED: '+c9.rfl.replace(' VS ',' vs '),lines:[o9]});}}} /* pkgFCW v2 */
+ {/* pkgRCD (W2; Eric yes 11-08 17:40 CST; Matthew 1:18 repeat): a RULING card that carried a collision line's old grade follows the judge's own regrade of that line in this send-back, when no change touches the card (as the derived KEYSTONE line, W3 2362), so card and line agree (D38) */
+  const __rk=s=>U(s).replace(/[*_\x60]+/g,'').replace(/\s+VS\.?\s+/,' VS ').trim();const __CG=/^(DEFENDER LINK BROKEN|CHALLENGER LINK BROKEN|UNDERDETERMINED)$/;
+  const __g0=new Map(rcLines(text).col.map(z=>[__rk(z.link),z.grade])),__g1=new Map(rcLines(build(map)).col.map(z=>[__rk(z.link),z.grade]));
+  for(const l of lines){if(map.has(l))continue;let r;try{r=__RL.readLine(String(l).trim());}catch(e){r=null;}if(!r||r.form!=='RULING'||!r.f||r.f.restated)continue;
+   const sm=String(r.f.subject||'').replace(/[*_\x60]+/g,'').trim().match(/^(D\d+)\s+vs\.?\s+(C\d+)$/i);if(!sm)continue;const lk=__rk(sm[1]+' VS '+sm[2]);
+   const cg=U(String(r.f.grade||'').replace(/[*_\x60]+/g,'').replace(/\s+/g,' ').trim()).replace(/\s*\(.*$/,'');if(!__CG.test(cg))continue;
+   const a=__g0.get(lk),b=__g1.get(lk);if(!a||!b||a===b||cg!==a||!__CG.test(b))continue;if([...map.values()].some(c=>nrm(c.to)===nrm(l)))continue;
+   const k=U(l).lastIndexOf(cg);if(k<0)continue;const sids=[...new Set([...map].filter(([o,c])=>__rk(c.to).includes(lk)).map(([o,c])=>c.sid))];
+   map.set(l,{sid:'RULING (derived)',to:l.slice(0,k)+b+' (derived by the engine from the collision grade of '+sm[1]+' vs '+sm[2]+' after the change of '+(sids.join(', ')||'the send-back')+'; pkgRCD, as W3 2362)'+l.slice(k+cg.length),over:[],derived:true});}}
  if(!map.size&&!items.length&&!resTo)return null;
  const T=build(map);const P=rcLines(T);const col=P.col;
  const lab={DEFENDER:'CONCEDED LINKS',CHALLENGER:'CHALLENGER CONCEDED LINKS'};const cnt={DEFENDER:F.conceded_links,CHALLENGER:F.challenger_conceded_links};const c={...cnt};const trig=[];

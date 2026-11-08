@@ -5,9 +5,9 @@
 //  - cureRecompute (26 nodes, scope: that function only): the RESULT word (x3: __r0421, held, r0), STANDING L (Lof), STANDING word and c (tv, tc),
 //    KEYSTONE WITHDRAWN (kw), CLAUSE N and W, CONCEDED LINKS count (yc).
 //  - Fix in part B's helper ri5Res2024: with no fallback regex it returned String(l).match(null), which matches the text "null"; now it returns null.
-// Run from wall2024/: node pkgRI5/build_RI5C.cjs [base strip, default pkgLIB/strip_RI5B] [dest strip, default pkgLIB/strip_RI5C]
+// Run from wall2024/: node pkgRI5/build_RI5C.cjs [base strip, default pkgLIB/strip_RCD] [dest strip, default pkgLIB/strip_RI5C]
 const fs=require('fs');const crypto=require('crypto');const h=s=>crypto.createHash('sha256').update(s).digest('hex').slice(0,12);
-const SRC=(process.argv[2]||'pkgLIB/strip_RI5B')+'/patched/',DST=(process.argv[3]||'pkgLIB/strip_RI5C')+'/patched/';
+const SRC=(process.argv[2]||'pkgLIB/strip_RCD')+'/patched/',DST=(process.argv[3]||'pkgLIB/strip_RI5C')+'/patched/';
 const PLAN='pkgRI5/plan_'+(process.argv[3]||'pkgLIB/strip_RI5C').replace(/\/$/,'').split('/').pop()+'.json';fs.rmSync(DST,{recursive:true,force:true});fs.mkdirSync(DST,{recursive:true});
 const A0='function __kfM(';
 const RD=String.raw`function ri5Rd2024(l){try{const r=__RL.readLine(String(l==null?'':l));return r&&r.form&&r.f&&!r.f.restated?r:null;}catch(e){return null;}}`;
