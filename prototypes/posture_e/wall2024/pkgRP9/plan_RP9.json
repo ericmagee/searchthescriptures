@@ -1,0 +1,17 @@
+{
+ "base": "pkgRP11/patched/",
+ "nodes": {
+  "Judge Enforcer Build": {
+   "base": "8a9f88d540c1",
+   "patched": "aa6dffe73fe0"
+  },
+  "Alt Judge Enforcer Build": {
+   "base": "389585d42846",
+   "patched": "9056ccf29d6c"
+  },
+  "R2 Alt Judge Enforcer Build": {
+   "base": "573a106f6b2e",
+   "patched": "79fbbe50344f"
+  }
+ }
+}
