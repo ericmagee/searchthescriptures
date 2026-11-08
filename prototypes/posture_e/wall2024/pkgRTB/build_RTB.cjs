@@ -28,9 +28,10 @@ for(const f of fs.readdirSync(SRC).filter(f=>f.endsWith('.js')).sort()){const s0
 plan.library.kw_status=st;
 // prompt nodes (not in the library)
 const W=JSON.parse(fs.readFileSync('/mnt/project-files/wall2024/fetchback_live_s64.json','utf8'));const live=n=>({src:'fetchback_live_s64',code:W.nodes.find(x=>x.name===n).parameters.jsCode});
+const JEB=process.env.JEB_BASE||'';
 const fileB=(p,n)=>({src:p,code:fs.readFileSync(p+n.replace(/ /g,'_')+'.js','utf8')});
 const BASES={'Panel Build':live,'Reserve Build':live,'Accept Build':live,'Accept Check':live,'Accept Return Build':live,'Accept Final':live,'Accept DS Return Build':live,
- 'Enforcer Build':n=>fileB('pkgEKS/patched/',n),'Judge Enforcer Build':n=>fileB('pkgRP10/patched/',n),'Alt Judge Enforcer Build':n=>fileB('pkgEKS/patched/',n),'R2 Alt Judge Enforcer Build':n=>fileB('pkgEKS/patched/',n)};
+ 'Enforcer Build':n=>fileB('pkgEKS/patched/',n),'Judge Enforcer Build':n=>fileB(JEB||'pkgRP10/patched/',n),'Alt Judge Enforcer Build':n=>fileB(JEB||'pkgEKS/patched/',n),'R2 Alt Judge Enforcer Build':n=>fileB(JEB||'pkgEKS/patched/',n)};/* JEB_BASE=<dir>/ rebuilds the 3 Judge Enforcer Build nodes on a composed base (RP11, RP9, RP12) */;
 fs.mkdirSync('pkgRTB/patched',{recursive:true});
 for(const [n,get] of Object.entries(BASES)){const b=get(n);let s=b.code;const hit=[];
  s=sub(s,OLD.agreement,KW.render.agreement(),'agreement',hit,plan.tally);s=sub(s,OLD.enforcer,KW.render.enforcer(),'enforcer',hit,plan.tally);
