@@ -51,7 +51,7 @@ const EDITS=[
 ];
 fs.rmSync(OUT,{recursive:true,force:true});fs.mkdirSync(OUT,{recursive:true});const plan={base:process.env.WLD_NODE_DIR||BASE,nodes:{}};
 const NB=process.env.WLD_NODE_DIR||''; /* optional: node files to build on (e.g. pkgJGR/patched), in place of the fetchback's */
-for(const nm of ['Panel Build','Build Independent Verdict']){const c0=NB?fs.readFileSync(NB+'/'+nm.replace(/ /g,'_')+'.js','utf8'):W.nodes.find(n=>n.name===nm).parameters.jsCode;let c=c0;
+for(const nm of ['Panel Build','Build Independent Verdict']){const nf=NB?NB+'/'+nm.replace(/ /g,'_')+'.js':'';const c0=(nf&&fs.existsSync(nf))?fs.readFileSync(nf,'utf8'):W.nodes.find(n=>n.name===nm).parameters.jsCode; /* a node NB lacks: the fetchback's */let c=c0;
  for(const [a,b] of EDITS){const k=c.split(a).length-1;if(k!==1)throw new Error(nm+': anchor found '+k+' times: '+a.slice(0,60));c=c.replace(a,()=>b);}
  new Function('$','$input','$execution','return (async()=>{\n'+c+'\n})();');fs.writeFileSync(OUT+'/'+nm.replace(/ /g,'_')+'.js',c);plan.nodes[nm]={before:h(c0),after:h(c),edits:EDITS.length};}
 fs.writeFileSync(OUT.replace(/patched$/,'')+'plan_WLD.json',JSON.stringify(plan,null,1)+'\n');console.log(JSON.stringify(plan.nodes));
