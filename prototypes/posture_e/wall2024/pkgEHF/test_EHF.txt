@@ -2,4 +2,6 @@ OK replay ran on 143 node runs
 OK outputs differ only by the added sentence or FORCED form (none)
    changed node runs: {"Judge Enforcer Build":20,"Alt Judge Enforcer Build":13,"Send Back Build":20,"Send Back Record":0,"Alt Send Back Build":6,"Alt Send Back Record":0}
 OK 33617 Send Back Build: terra S9 ask carries the FORCED form beside "the BROKEN line"
-TOTAL 3 OK, 0 FAIL
+OK send-back asks: 371 options carry the FORCED form inline; 0 asks say "cannot add the FORCED line" (0)
+OK the RETRACTED/keep options survive the cut limit as in base (371 -> 371)
+TOTAL 5 OK, 0 FAIL
