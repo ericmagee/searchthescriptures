@@ -1,0 +1,15 @@
+{
+ "base": "pkgEGL/patched (v1 fea0141)",
+ "nodes": {
+  "Enforcer_Build.js": {
+   "base_s52": "b73771765a59",
+   "v1": "1ae40bf4c7e2",
+   "v2": "ad7e363b555b"
+  },
+  "Enforcer_Record.js": {
+   "base_s52": "9d5bd5fd4d73",
+   "v1": "ca518101ff9d",
+   "v2": "250ff3e1b2e1"
+  }
+ }
+}

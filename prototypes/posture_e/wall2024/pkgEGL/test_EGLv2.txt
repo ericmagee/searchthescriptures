@@ -1,0 +1,20 @@
+OK 33497 base prompt has 24 "ITEM G<k>" headers
+OK 33497 patched prompt has no G<k> item id (the only short G numbers left are Strong's numbers inside a Strong's list, e.g. "G1537, G4151, G40": 3)
+OK 33497 patched: 24 "ITEM <k> OF 24" headers, each with its "Answer each of" list
+OK answer ids and rows unchanged (52)
+OK prompt otherwise identical
+   33497 tally base {"AGREE":0,"DISAGREE":0,"NO ANSWER":0,"NO VERDICT":52} -> patched {"AGREE":16,"DISAGREE":0,"NO ANSWER":0,"NO VERDICT":36}
+OK 33497 base: 52 NO VERDICT
+   fanned-out rows 16, mixed-group rows 36, other NO VERDICT 0
+OK 12 same-form groups fanned out (1,2,3,4,5,6,7,8,9,22,23,24)
+OK every former NO VERDICT row is either fanned out or marked "answers differ" (52)
+OK NO VERDICT left = mixed-group rows only (36)
+   e.g. gemini DEFENDER CR2 no link heading #1: ENFORCER NO VERDICT: group-labelled reply, answers differ (pkgEGL) (judge cure CURED; TRIAL, ruling 421)
+   e.g. chatgpt DEFENDER CR2 no link heading #1: ENFORCER NO VERDICT: group-labelled reply, answers differ (pkgEGL) (judge cure CURED; TRIAL, ruling 421)
+   e.g. grok DEFENDER CR2 no link heading #1: ENFORCER NO VERDICT: group-labelled reply, answers differ (pkgEGL) (judge cure CURED; TRIAL, ruling 421)
+   e.g. gemini S3 DEFENDER CR4: #1: ENFORCER AGREE: NEEDS: NO -- "I grant that "born of women" and "made of a woman" are said of men who have fathers (Matthew 11:11; Job 14:1)" concedes a row's us
+   e.g. grok S3 DEFENDER CR4: #1: ENFORCER AGREE: NEEDS: NO -- "I grant that "born of women" and "made of a woman" are said of men who have fathers (Matthew 11:11; Job 14:1)" concedes a row's us
+replay: 38 node runs over 29 runs; changes beyond the header lines: 1
+   33497 Enforcer Record: {"AGREE":0,"DISAGREE":0,"NO ANSWER":0,"NO VERDICT":52} -> {"AGREE":16,"DISAGREE":0,"NO ANSWER":0,"NO VERDICT":36}
+OK the only behaviour change is 33497 Enforcer Record
+TOTAL 10 OK, 0 FAIL
