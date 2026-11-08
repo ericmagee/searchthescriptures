@@ -1,9 +1,9 @@
 // pkgRTB build (D50, K-W family; W2, 11-08). Renders every K-W copy from pkgRTB/rule_table.cjs.
-// Library: base strip (default pkgLIB/strip_RCD = LIB v32) -> pkgLIB/strip_RTB. Prompt nodes: bases below -> pkgRTB/patched.
+// Library: base strip (default pkgLIB/strip_RCD = LIB v32) -> pkgLIB/strip_RTB2 (steps 1+2; pkgLIB/strip_RTB stays the graded step 1, f60e4a8). Prompt nodes: bases below -> pkgRTB/patched.
 // Run from wall2024/: node pkgRTB/build_RTB.cjs [base strip] [dest strip]
 const fs=require('fs');const crypto=require('crypto');const h=s=>crypto.createHash('sha256').update(s).digest('hex').slice(0,12);
 const {KW,RX}=require('./rule_table.cjs');
-const SRC=(process.argv[2]||'pkgLIB/strip_RCD')+'/patched/',DST=(process.argv[3]||'pkgLIB/strip_RTB')+'/patched/';
+const SRC=(process.argv[2]||'pkgLIB/strip_RCD')+'/patched/',DST=(process.argv[3]||'pkgLIB/strip_RTB2')+'/patched/';
 const OLD={
  agreement:'For every withdrawal or concession the engine puts to me (K-W), I answer in one of three forms: STANDS WITHOUT IT because <layer>; CONCEDED; or REASSERTED IN <round> \\"<quote>\\", when a later round rests on what was withdrawn.',
  audit:'the judge answers STANDS WITHOUT IT because <layer>, CONCEDED, or NOT HELD with a reason that quotes it (six words in a row, or all of it when shorter).',

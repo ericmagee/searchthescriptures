@@ -6,6 +6,10 @@ OK   no hand-kept K-W copy left in 41 files
 OK   rendered copies {"agreement":18,"audit":60,"cureAsk":26,"stake":26,"enforcer":3} = build tally {"audit":60,"cureAsk":26,"rx.form":26,"rx.brokenLine":26,"rx.kf":26,"rx.kl2":26,"rx.answered":26,"rx.kg9":26,"rx.kg7":26,"rx.kcount":26,"rx.kff":30,"rx.kc":52,"rx.kg1count":26,"rx.kfc":30,"rx.thatLink":52,"rx.eachBroken":26,"rx.uwb":26,"stake":26,"agreement":18,"enforcer":3}
 OK   RETRACTED example: reader form RETRACTED, pair D2 vs C1, reason names a round and quotes words
 OK   RETRACTED example carries exactly one CORRECTED RESULT
+OK   RX example reason cures under cureReasoned: [DR3] answers the press: "the coming together is the taking into his house"
+OK   a verse-only reason (no round) stays UNCURED under cureReasoned
+OK   round + verse cures under cureReasoned
+OK   table reason text requires the round first, then the quote or the verse: with its reason (the round in brackets, then its words quoted or the verse it cites)
 OK   RETRACTED renders: 398 clauses (tally 398), 52 form lines (tally 52)
 OK   Alt Gate Build: 31 runs, 31 byte-equal, 0 differ only in K-W text
 OK   Alt Gate Record: 27 runs, 27 byte-equal, 0 differ only in K-W text
@@ -48,4 +52,4 @@ OK   Enforcer Build: 39 runs, 10 byte-equal, 29 differ only in K-W text
 OK   Judge Enforcer Build: 31 runs, 4 byte-equal, 27 differ only in K-W text
 OK   Alt Judge Enforcer Build: 32 runs, 12 byte-equal, 20 differ only in K-W text
 OK   R2 Alt Judge Enforcer Build: 0 runs, 0 byte-equal, 0 differ only in K-W text
-TOTAL 50 OK, 0 FAIL
+TOTAL 54 OK, 0 FAIL

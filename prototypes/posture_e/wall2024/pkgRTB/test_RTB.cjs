@@ -1,11 +1,11 @@
 // pkgRTB test (D50 K-W). Run from wall2024/: node pkgRTB/test_RTB.cjs
 // 1 Conformance: each table example passes its own cure reader and no other; no node keeps an old hand-kept K-W copy; every node holds the
-//   table's render. 2 Replay: every library node (strip_RCD vs strip_RTB) and every prompt node (base vs pkgRTB/patched) on every saved run;
+//   table's render. 2 Replay: every library node (strip_RCD vs strip_RTB2) and every prompt node (base vs pkgRTB/patched) on every saved run;
 //   the outputs must be byte-equal once each rendered K-W string is put back to its old text (so only the K-W text moves; no cure or item changes).
 //   Compare note (step 2): a restored old text that carries quote marks sits at an unknown JSON escape depth, so the K-W-text-only check compares with quote escapes folded (canon).
 const fs=require('fs');const {harness,feeder}=require('../pkgGSL/harness.cjs');const D='/mnt/project-files/wall2024/inputs/';
 const {KW,RX}=require('./rule_table.cjs');let ok=0,bad=0;const out=[];const log=s=>{out.push(s);console.log(s);};const T=(c,m)=>{if(c){ok++;log('OK   '+m);}else{bad++;log('FAIL '+m);}};
-const plan=JSON.parse(fs.readFileSync('pkgRTB/plan_RTB.json','utf8'));const A='pkgLIB/strip_RCD/patched/',B='pkgLIB/strip_RTB/patched/';
+const plan=JSON.parse(fs.readFileSync('pkgRTB/plan_RTB.json','utf8'));const A='pkgLIB/strip_RCD/patched/',B='pkgLIB/strip_RTB2/patched/';
 // 1a readers, taken from the library source itself
 const L=fs.readFileSync(B+'Panel_Cure_Build_1.js','utf8');const grab=k=>{const m=L.match(new RegExp('const '+k+'=(t=>[\\s\\S]*?\\.test\\((?:String\\(t\\)|t)\\));'));if(!m)throw new Error('reader '+k+' not found');return eval(m[1]);};
 const R={kwSt:grab('kwSt'),kwCo:grab('kwCo'),kwRe:grab('kwRe'),KW_NH:t=>/^\s*NOT\s+HELD\b/i.test(t)&&/"[^"]{6,}"/.test(t)};
@@ -22,11 +22,22 @@ T(JSON.stringify(have)===JSON.stringify(Object.fromEntries(Object.keys(have).map
  const ex=RX.example.split('\n');const r=RL.readLine(ex[0]);const why=String(r&&r.f&&r.f.reason||'');
  T(r&&r.form==='RETRACTED'&&/^D2 vs C1$/i.test(r.f.pair)&&/\[[CD]R[1-4]\]/.test(why)&&/"[^"]*\S\s+\S+\s+\S[^"]*"/.test(why),'RETRACTED example: reader form '+(r&&r.form)+', pair '+(r&&r.f&&r.f.pair)+', reason names a round and quotes words');
  T(ex.filter(l=>/^CORRECTED RESULT\s*:/.test(l)).length===1,'RETRACTED example carries exactly one CORRECTED RESULT');}
-{let rc=0,rf=0;for(const p of files){const s=fs.readFileSync(p,'utf8');rc+=cnt(s,RX.reason);rf+=cnt(s,'-- <the reason: the round in brackets and its words quoted, or the verse>');}
+// 1d the RX reason as the table states it cures under the library's own cureReasoned (round required, plus a 3+ word quote or a verse);
+//    a verse-only reason must stay UNCURED, and the table text must name the round as required (W1 3331, W4 3338). cureRefs is stubbed
+//    with a plain verse-reference match; __l1qSq and response carriers are not exercised here.
+{const k=L.indexOf('function cureReasoned');const src=L.slice(k,L.indexOf('\n return out;}',k)+'\n return out;}'.length);
+ const cr=new Function('cureRefs','__l1qSq','cureFound','__RXR_R',src+';return cureReasoned;')(t=>[...String(t).matchAll(/\b(?:[1-3] )?[A-Z][a-z]+ \d+:\d+/g)],()=>false,()=>false,null);
+ const cured=reason=>cr({statement:[],prose:[],response:[],withdrawn:[{link:'D2 vs C1',reason}]},[]).has('D2 VS C1');
+ const exR=RX.example.split('\n')[0].replace(/^RETRACTED:\s*D2 vs C1\s*--\s*/,'');
+ T(cured(exR),'RX example reason cures under cureReasoned: '+exR);
+ T(!cured('Matthew 1:24'),'a verse-only reason (no round) stays UNCURED under cureReasoned');
+ T(cured('[DR3] Matthew 1:24'),'round + verse cures under cureReasoned');
+ T(/round in brackets, then/.test(RX.reason)&&!/, or the verse\)/.test(RX.reason),'table reason text requires the round first, then the quote or the verse: '+RX.reason);}
+{let rc=0,rf=0;for(const p of files){const s=fs.readFileSync(p,'utf8');rc+=cnt(s,RX.reason);rf+=cnt(s,'-- <the reason: the round in brackets, then its words quoted or the verse it cites>');}
  const t=plan.tally;const wantC=Object.entries(t).filter(([k])=>/^rx\./.test(k)&&k!=='rx.form'&&k!=='rx.uwb').reduce((a,[,v])=>a+v,0),wantF=(t['rx.form']||0)+(t['rx.uwb']||0);
  T(rc===wantC&&rf===wantF,'RETRACTED renders: '+rc+' clauses (tally '+wantC+'), '+rf+' form lines (tally '+wantF+')');}
 // 2 replay
-const rt=s=>s.replace(/\\"/g,'"').replace(/\\'/g,"'");const RXP=require('./build_RTB_subs.cjs');const PAIRS=[...RXP.map(([t,o,n])=>[n,o]),['RETRACTED: D<n> vs C<m> -- <the reason: the round in brackets and its words quoted, or the verse>','RETRACTED: D<n> vs C<m>'],[KW.render.agreement(),'For every withdrawal or concession the engine puts to me (K-W), I answer in one of three forms: STANDS WITHOUT IT because <layer>; CONCEDED; or REASSERTED IN <round> \\"<quote>\\", when a later round rests on what was withdrawn.'],
+const rt=s=>s.replace(/\\"/g,'"').replace(/\\'/g,"'");const RXP=require('./build_RTB_subs.cjs');const PAIRS=[...RXP.map(([t,o,n])=>[n,o]),['RETRACTED: D<n> vs C<m> -- <the reason: the round in brackets, then its words quoted or the verse it cites>','RETRACTED: D<n> vs C<m>'],[KW.render.agreement(),'For every withdrawal or concession the engine puts to me (K-W), I answer in one of three forms: STANDS WITHOUT IT because <layer>; CONCEDED; or REASSERTED IN <round> \\"<quote>\\", when a later round rests on what was withdrawn.'],
  [KW.render.audit(),'the judge answers STANDS WITHOUT IT because <layer>, CONCEDED, or NOT HELD with a reason that quotes it (six words in a row, or all of it when shorter).'],[KW.render.cureAskTail(),''],[KW.stake(plan.library.kw_status),'K-W is a TRIAL rule: an item left unanswered removes no seat.'],
  [KW.render.enforcer(),'STANDS WITHOUT IT because <a layer>; CONCEDED; REASSERTED IN <round> "<quote>"; or NOT HELD with a reason.']].map(([n,o])=>[rt(n),rt(o)]);
 const enc=s=>JSON.stringify(s).slice(1,-1);const back=s=>{for(const [n,o] of PAIRS)for(const [x,y] of [[n,o],[enc(n),enc(o)],[enc(enc(n)),enc(enc(o))]])s=s.split(x).join(y);return s;};

@@ -21,7 +21,7 @@ table file plus a conformance check, not a runtime read of $('Shared Library') (
 
 ## Family 2: RETRACTED (cure phase), step 2 (design DESIGN_RETRACTED.md, Wall 3297)
 
-- rule_table.cjs RX row: form `RETRACTED: D<n> vs C<m> -- <the reason: the round in brackets and its words quoted, or the verse>`, the
+- rule_table.cjs RX row: form `RETRACTED: D<n> vs C<m> -- <the reason: the round in brackets, then its words quoted or the verse it cites>`, the
   one CORRECTED RESULT for the whole reply, and an example read by the shared reader __RL as RETRACTED with a reason. RXSB (send-back) unchanged.
 - Why: the cure reader marks RETRACTED UNCURED without a reason that names a round and quotes words or cites a verse (rxNoWhy, ruling 105)
   and without exactly one CORRECTED RESULT (rxNoRes). Of 11 ask copies, only 1 stated both. The log shows 11 items UNCURED "RETRACTED with
@@ -29,3 +29,9 @@ table file plus a conformance check, not a runtime read of $('Shared Library') (
 - build_RTB_subs.cjs: 15 clause substitutions (form, K-F, K-L2, K-G9, K-G7, K-C, K-G1 count, K-FF, K-FC, the uwb ask, and others), each now
   the table render. No reader or cure logic changes.
 - Same build, same test. Replay puts each rendered string back to its old text and requires byte-equal output.
+
+### Step 2 revision (W1 HOLD 3331, W4 FAIL 3338)
+- Wording: the reason now reads "the round in brackets, then its words quoted or the verse it cites". The old "..., or the verse" read as if a
+  verse alone would do; cureReasoned always needs the round, plus a 3+ word quote or a verse.
+- test_RTB 1d: the example reason cures under the library's own cureReasoned; a verse-only reason stays UNCURED; round + verse cures.
+- Strips: pkgLIB/strip_RTB is again the graded step 1 (f60e4a8). Steps 1+2 build into pkgLIB/strip_RTB2.

@@ -29,14 +29,14 @@ const KW={
 // sit unchanged in both '...' and "..." literals.
 const RX={
  rule:'RETRACTED (cure)',
- form:'RETRACTED: D<n> vs C<m> -- <the reason: the round in brackets and its words quoted, or the verse>',
+ form:'RETRACTED: D<n> vs C<m> -- <the reason: the round in brackets, then its words quoted or the verse it cites>',
  rules:['exactly one CORRECTED RESULT line in the whole reply (rxNoRes)','a reason that names the round in brackets and quotes its words, or names the verse (rxNoWhy, ruling 105)'],
  example:'RETRACTED: D2 vs C1 -- [DR3] answers the press: "the coming together is the taking into his house"\nCORRECTED RESULT: HELD-1',
- reason:'with its reason (the round in brackets and its words quoted, or the verse)',
+ reason:'with its reason (the round in brackets, then its words quoted or the verse it cites)',
  render:{
-  formLine:()=>'RETRACTED: D<n> vs C<m> -- <the reason: the round in brackets and its words quoted, or the verse>',
-  clause:t=>'RETRACTED for '+t+', with its reason (the round in brackets and its words quoted, or the verse), and the one CORRECTED RESULT of your whole reply',
-  each:t=>'RETRACTED for each '+t+', each with its reason (the round in brackets and its words quoted, or the verse), and the one CORRECTED RESULT of your whole reply'}};
+  formLine:()=>'RETRACTED: D<n> vs C<m> -- <the reason: the round in brackets, then its words quoted or the verse it cites>',
+  clause:t=>'RETRACTED for '+t+', with its reason (the round in brackets, then its words quoted or the verse it cites), and the one CORRECTED RESULT of your whole reply',
+  each:t=>'RETRACTED for each '+t+', each with its reason (the round in brackets, then its words quoted or the verse it cites), and the one CORRECTED RESULT of your whole reply'}};
 // Family 2b: RETRACTED, send-back phase (Send Back Record; FORCED lines only; no RESULT, pkgGRT). Table-owned; text unchanged in step 2.
 const RXSB={rule:'RETRACTED (send-back)',form:'CHANGE TO: RETRACTED: <pair>',note:'A collision line is regraded, never retracted: RETRACTED is for a FORCED line only (pkgGRT).'};
 module.exports={KW,RX,RXSB};

@@ -25,7 +25,7 @@ Only one of eleven copies states both rules. The log shows the cost: 11 items UN
 33299-33490) and 6 UNCURED "without exactly one CORRECTED RESULT" (K-B, K-G4; 32905-33014).
 
 ## Change
-- Table row RETRACTED (cure phase): form `RETRACTED: D<n> vs C<m> -- <reason: the round in brackets and its words quoted, or the verse>`,
+- Table row RETRACTED (cure phase): form `RETRACTED: D<n> vs C<m> -- <reason: the round in brackets, then its words quoted or the verse it cites>`,
   rules {one CORRECTED RESULT per reply; reason names round + words or verse}, reader ids (rxNoRes, rxNoWhy via cureReasoned), example.
 - Render 1: the CURE_FORM line becomes the full form plus one sentence stating both rules (one copy per node, read by every cure item).
 - Render 2: each per-rule ask keeps its own rule-specific choice (FORCED, RESTATED, CORRECTED STANDING ...) but its RETRACTED clause is the
