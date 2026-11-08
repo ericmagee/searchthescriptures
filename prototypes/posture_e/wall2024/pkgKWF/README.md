@@ -1,0 +1,6 @@
+# pkgKWF (W3, 11-08): NOT FOR WRITE. Findings handed to pkgRTB family 1 (K-W).
+Goal: the judges' agreement should name the four K-W answer forms the engine accepts (STANDS WITHOUT IT, CONCEDED, REASSERTED IN, NOT HELD). Today it names three.
+Findings:
+1. The agreement's K-W sentence ("I answer in one of three forms ...") sits in 11 live s60 nodes plus the Shared Library: Panel Build, Reserve Build, Accept Build, Accept Check, Accept Return Build, Accept Final, Accept DS Return Build, Enforcer Build, Judge Enforcer Build, Alt Judge Enforcer Build, and Shared Library. That makes 12 copies of one sentence.
+2. Replaying Panel Build on 33644 (async, with Date and random fixed) gives byte-identical output with and without the patch. Panel Build's own copy never reaches its output, so the judge's agreement text is built elsewhere (most likely the Shared Library copy, through Panel Payloads). Which copies are live and which are dead was not settled here.
+3. The patch (patched/, build_KWF.cjs) changes only that sentence in each of the 12 copies; test_KWF.cjs: 33 OK. It should not be written by hand. pkgRTB family 1 must first find the live copy, then generate the sentence from one row, and drop or generate the other copies.

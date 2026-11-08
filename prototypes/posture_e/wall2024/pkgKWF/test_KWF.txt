@@ -1,0 +1,35 @@
+OK Panel Build: only the K-W sentence changes
+OK Panel Build: new sentence once, old sentence gone
+OK Panel Build: parses
+OK Reserve Build: only the K-W sentence changes
+OK Reserve Build: new sentence once, old sentence gone
+OK Reserve Build: parses
+OK Accept Build: only the K-W sentence changes
+OK Accept Build: new sentence once, old sentence gone
+OK Accept Build: parses
+OK Accept Check: only the K-W sentence changes
+OK Accept Check: new sentence once, old sentence gone
+OK Accept Check: parses
+OK Accept Return Build: only the K-W sentence changes
+OK Accept Return Build: new sentence once, old sentence gone
+OK Accept Return Build: parses
+OK Accept Final: only the K-W sentence changes
+OK Accept Final: new sentence once, old sentence gone
+OK Accept Final: parses
+OK Accept DS Return Build: only the K-W sentence changes
+OK Accept DS Return Build: new sentence once, old sentence gone
+OK Accept DS Return Build: parses
+OK Enforcer Build: only the K-W sentence changes
+OK Enforcer Build: new sentence once, old sentence gone
+OK Enforcer Build: parses
+OK Judge Enforcer Build: only the K-W sentence changes
+OK Judge Enforcer Build: new sentence once, old sentence gone
+OK Judge Enforcer Build: parses
+OK Alt Judge Enforcer Build: only the K-W sentence changes
+OK Alt Judge Enforcer Build: new sentence once, old sentence gone
+OK Alt Judge Enforcer Build: parses
+OK Shared Library: only the K-W sentence changes
+OK Shared Library: new sentence once, old sentence gone
+OK all 11 live carriers are patched
+FAIL Panel Build replay: 0 of 23 saved runs render the new sentence and differ only by it (4 runs could not run)
+TOTAL 33 OK, 1 FAIL

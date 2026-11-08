@@ -1,0 +1,59 @@
+{
+ "nodes": {
+  "Panel_Build.js": {
+   "node": "Panel Build",
+   "before": "19a70deba2a7",
+   "after": "b6ed03557433"
+  },
+  "Reserve_Build.js": {
+   "node": "Reserve Build",
+   "before": "fadf5fd8fc43",
+   "after": "a81d603e2246"
+  },
+  "Accept_Build.js": {
+   "node": "Accept Build",
+   "before": "5ceca4888e8e",
+   "after": "a22bec554005"
+  },
+  "Accept_Check.js": {
+   "node": "Accept Check",
+   "before": "230482a2d7de",
+   "after": "d2e37178ed39"
+  },
+  "Accept_Return_Build.js": {
+   "node": "Accept Return Build",
+   "before": "62c8fce3a2cb",
+   "after": "dfb76d6b4af5"
+  },
+  "Accept_Final.js": {
+   "node": "Accept Final",
+   "before": "eccff70eaae8",
+   "after": "4e63975f2c21"
+  },
+  "Accept_DS_Return_Build.js": {
+   "node": "Accept DS Return Build",
+   "before": "d52b65b6b010",
+   "after": "a69a54a4dc44"
+  },
+  "Enforcer_Build.js": {
+   "node": "Enforcer Build",
+   "before": "ca05d051e158",
+   "after": "0d61effdb72a"
+  },
+  "Judge_Enforcer_Build.js": {
+   "node": "Judge Enforcer Build",
+   "before": "1b91af370950",
+   "after": "75af623369fa"
+  },
+  "Alt_Judge_Enforcer_Build.js": {
+   "node": "Alt Judge Enforcer Build",
+   "before": "e6b66cee9373",
+   "after": "33f24ac6d479"
+  },
+  "Shared_Library.js": {
+   "node": "Shared Library",
+   "before": "b23f6a8053ce",
+   "after": "63fae9329e21"
+  }
+ }
+}
