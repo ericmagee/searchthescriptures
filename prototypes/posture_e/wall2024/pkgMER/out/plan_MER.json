@@ -1,0 +1,78 @@
+{
+ "base": "/mnt/project-files/wall2024/fetchback_live_s62.json",
+ "base_versionId": "0774fea5-b108-4442-9f08-9e6f02018bd6",
+ "update": {
+  "Enforcer Record": {
+   "from": "dc7d800144a3",
+   "to": "3461c1e3f13a"
+  }
+ },
+ "add_nodes": [
+  "Enforcer Retry Build",
+  "Enforcer Retry Needed?",
+  "Enforcer Retry Call deepseek"
+ ],
+ "connections": {
+  "remove": [
+   [
+    "Enforcer Call deepseek",
+    0,
+    "Enforcer Record",
+    0
+   ]
+  ],
+  "add": [
+   [
+    "Enforcer Call deepseek",
+    0,
+    "Enforcer Retry Build",
+    0
+   ],
+   [
+    "Enforcer Retry Build",
+    0,
+    "Enforcer Retry Needed?",
+    0
+   ],
+   [
+    "Enforcer Retry Needed?",
+    0,
+    "Enforcer Retry Call deepseek",
+    0
+   ],
+   [
+    "Enforcer Retry Needed?",
+    1,
+    "Enforcer Record",
+    0
+   ],
+   [
+    "Enforcer Retry Call deepseek",
+    0,
+    "Enforcer Record",
+    0
+   ]
+  ]
+ },
+ "keep": "Enforcer Needed? false branch -> Enforcer Record (unchanged). Enforcer Call deepseek settings unchanged.",
+ "retry_call": {
+  "copied_from": "Judge Enforcer Retry Call deepseek",
+  "retryOnFail": true,
+  "maxTries": 3,
+  "options": {
+   "timeout": 900000,
+   "batching": {
+    "batch": {
+     "batchSize": 1,
+     "batchInterval": 0
+    }
+   }
+  },
+  "credential": {
+   "httpHeaderAuth": {
+    "id": "R3waesZPK7vpsV8E",
+    "name": "DeepSeek Key"
+   }
+  }
+ }
+}
