@@ -9,7 +9,7 @@
 //    tried in round 1; "fails again" keeps round 1's body and adds round 2's lines; "passes" seats mimo with aligned lists.
 // 4. Pool-exhausted control: the same runs on the saved one-model pool: no round 2; output byte-equal; the even count stays (TIE, pkgODD).
 const fs=require('fs');const {harness}=require('../pkgGSL/harness.cjs');const {names,AB_PATCH}=require('./names.cjs');
-const SD=process.argv[2]||'pkgLIB/strip_A2R',BD=process.argv[3]||'pkgLIB/strip_RI3',FB=process.argv[4]||'/mnt/project-files/wall2024/fetchback_live_s61.json';
+const SD=process.argv[2]||'pkgLIB/strip_A2R',BD=process.argv[3]||'pkgLIB/strip_RI3',FB=process.argv[4]||'/mnt/project-files/wall2024/fetchback_live_s62.json';
 const D='/mnt/project-files/wall2024/inputs/';const rd=f=>fs.readFileSync(f,'utf8');
 const W=(()=>{const d=JSON.parse(rd(FB));return d.data||d;})();const NODES=W.nodes||W.workflow.nodes;const LV=Object.fromEntries(NODES.map(n=>[n.name,n]));
 const {CHAIN,sub,unsub,left}=names(W.connections);const A2=JSON.parse(rd('pkgA2R/out/nodes_A2R.json'));const NN=Object.fromEntries(A2.nodes.map(n=>[n.name,n]));

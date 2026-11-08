@@ -1,5 +1,23 @@
 # pkgA2R: the second alternate round (W1, 11-08)
 
+## v2 (W3 3224, W4 3225): rebuilt on s62 and the E4 target
+- Base: fetchback_live_s62.json (live 0774fea5) and strip_RI3 (the live LIB v25). The 26 R2 clones and the library clones are byte-equal to v1, and nodes_A2R.json is unchanged.
+- pkgE4 rebuilt on the A2R target: `node pkgE4/build_E4.cjs fetchback_live_s62.json pkgLIB_v26_A2R/patched/Alternate_Build.js`, with the outputs copied to pkgA2R/e4_on_v26/ (pkgE4/out is left as W2 committed it).
+  - This gives E4's Alternate Build and Early Alternate Build on the v26 stub, so their library line numbers match Shared Library d30de903b762.
+  - E4's string edits begin with a quote or bracket ("Alternate Call openrouter"), so they never touch an "R2 ..." name. The two packages commute.
+- Panel Tokens is patched on E4's version (f022b14fde88 -> 7678d4a4fdcc). It carries Early Alternate Reply and both R2 calls. Format Markdown d8cd45e60231 -> e1c296a588da (E4 does not touch it).
+- Tests on the combined target:
+  - test_A2R (s62): 146 OK, 0 FAIL, with 28 parity runs (33705 added).
+  - test_E4_on_v26: 56 OK, 0 FAIL (11 used, 6 not covered, the same as W2's test_E4.txt).
+  - test_E4_carry_on_v26: 11 OK, 0 FAIL (10 reasoning_details turns carried).
+  - Both E4 test copies are W2's tests with only their paths pointed at v26, strip_A2R, e4_on_v26 and s62.
+- ONE WRITE for W4, after s62 (live v25):
+  1. Shared Library -> d30de903b762, plus the 22 stubs from pkgLIB_v26_A2R. Alternate Build is the exception: it takes E4's version from e4_on_v26/main_nodes_patched.json, not the plain v26 stub.
+  2. pkgE4 from e4_on_v26: the 5 new nodes, the other 38 patched nodes, the sub-workflow, e4.sql and the E4 edges. This still needs Eric's "write pkgE4".
+  3. pkgA2R from out/nodes_A2R.json: rename Alternate Merge -> Alternate Merge 1, the 29 new nodes (8 of them library stubs from pkgLIB_v26_A2R), the edges, Format Markdown, and Panel Tokens from out/Panel_Tokens.js (this replaces E4's Panel Tokens).
+- If E4 is not written, write A2R alone: v26 with its plain Alternate Build stub, and Panel Tokens rebuilt on live (`node pkgA2R/build_A2R.cjs` with no 5th argument).
+
+
 Approved: Eric's even-panel reserve (10:14 CST 11-07), MiMo pool approval (WALL-2024 2889), W1 2887 option (a) and 2891. Design: Wall 3222. Not a DeepSeek fix. It changes no verdict on any saved run.
 
 ## What it does

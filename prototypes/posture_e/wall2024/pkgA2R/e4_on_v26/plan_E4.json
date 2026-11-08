@@ -1,0 +1,235 @@
+{
+ "base": "/mnt/project-files/wall2024/fetchback_live_s62.json",
+ "new_nodes": {
+  "Early Alternate Build": "0aa05e3b9883",
+  "Early Alternate Start": "d9feb549cdce",
+  "Get Early Alternate": "c7d654cf6b3b",
+  "Early Reply?": "9b8d439d809a",
+  "Early Alternate Reply": "bedcb59909cb"
+ },
+ "patched_nodes": {
+  "D1 Call openrouter": {
+   "base": "27d0faf92f9a",
+   "patched": "545c219ceb84"
+  },
+  "C1 Call openrouter": {
+   "base": "0bbbeee31993",
+   "patched": "6f78743bd90a"
+  },
+  "D2 Call openrouter": {
+   "base": "f4824109d224",
+   "patched": "94c330ea48cb"
+  },
+  "C2 Call openrouter": {
+   "base": "357b1c1c654d",
+   "patched": "67710825706c"
+  },
+  "D3 Call openrouter": {
+   "base": "d061e969a5e1",
+   "patched": "3747fe4caed5"
+  },
+  "C3 Call openrouter": {
+   "base": "d2fbe32c52ba",
+   "patched": "23ac07a76f4e"
+  },
+  "Synthesis Call openrouter": {
+   "base": "8ed401e93799",
+   "patched": "6fc166d3f368"
+  },
+  "Diagnostic Call openrouter": {
+   "base": "4d1a1820972d",
+   "patched": "6bca44df5fd7"
+  },
+  "Verdict Call openrouter": {
+   "base": "68ce7dae63fd",
+   "patched": "f1b19f817da2"
+  },
+  "Panel Reserve openrouter": {
+   "base": "c644836f61c6",
+   "patched": "d7f1cee8dfaf"
+  },
+  "Panel Tokens": {
+   "base": "3e8a8e9546e9",
+   "patched": "53dd73a542ae"
+  },
+  "Cure Call openrouter": {
+   "base": "cc1abe0499e1",
+   "patched": "c36005a70731"
+  },
+  "Panel Cure Call 1 openrouter": {
+   "base": "e554452d3a58",
+   "patched": "64e3c03f4a98"
+  },
+  "Panel Cure Call 2 openrouter": {
+   "base": "a9d6311ccc6e",
+   "patched": "ab6c4fe18dbf"
+  },
+  "Panel Cure Call 3 openrouter": {
+   "base": "a9871b6b8afb",
+   "patched": "b4d01cb071b2"
+  },
+  "Alternate Build": {
+   "base": "18586641b28a",
+   "patched": "804cc6dbd9ea"
+  },
+  "Alternate Cure Call openrouter": {
+   "base": "6e1f83db6402",
+   "patched": "964839851d93"
+  },
+  "D4 Call openrouter": {
+   "base": "cdee3100ddd3",
+   "patched": "71f68131f66f"
+  },
+  "C4 Call openrouter": {
+   "base": "75d3a5bcf2d7",
+   "patched": "a9322a48654e"
+  },
+  "Accept Call openrouter": {
+   "base": "90015cffd607",
+   "patched": "b8bd754911d9"
+  },
+  "Accept Return Call openrouter": {
+   "base": "f7d10ccb8443",
+   "patched": "3fb0789cc1ff"
+  },
+  "QR Ask": {
+   "base": "a00f4d05b2f5",
+   "patched": "cdf30a5cda43"
+  },
+  "QR Retry Ask": {
+   "base": "45ea01422702",
+   "patched": "908bb11cc536"
+  },
+  "QR Answer": {
+   "base": "29dbc727974d",
+   "patched": "2effd2881a81"
+  },
+  "Send Back Call openrouter": {
+   "base": "f9a41f5a18ee",
+   "patched": "420def9c6d60"
+  },
+  "Gate Call openrouter": {
+   "base": "03b7f8f8a616",
+   "patched": "9fede6c38045"
+  },
+  "Alt Send Back Build": {
+   "base": "f487a45b3dcf",
+   "patched": "5ba5892af1ed"
+  },
+  "Alt Send Back Call openrouter": {
+   "base": "f9a41f5a18ee",
+   "patched": "420def9c6d60"
+  },
+  "Alt Gate Call openrouter": {
+   "base": "e4dfb00a24dd",
+   "patched": "dc84dbb737b7"
+  },
+  "C4G Call openrouter": {
+   "base": "75d3a5bcf2d7",
+   "patched": "a9322a48654e"
+  },
+  "C3G Call openrouter": {
+   "base": "d2fbe32c52ba",
+   "patched": "23ac07a76f4e"
+  },
+  "C1B Call openrouter": {
+   "base": "0bbbeee31993",
+   "patched": "6f78743bd90a"
+  },
+  "D2B Call openrouter": {
+   "base": "f4824109d224",
+   "patched": "94c330ea48cb"
+  },
+  "C2B Call openrouter": {
+   "base": "357b1c1c654d",
+   "patched": "67710825706c"
+  },
+  "D3B Call openrouter": {
+   "base": "d061e969a5e1",
+   "patched": "3747fe4caed5"
+  },
+  "C3B Call openrouter": {
+   "base": "d2fbe32c52ba",
+   "patched": "23ac07a76f4e"
+  },
+  "D4B Call openrouter": {
+   "base": "cdee3100ddd3",
+   "patched": "71f68131f66f"
+  },
+  "C4B Call openrouter": {
+   "base": "75d3a5bcf2d7",
+   "patched": "a9322a48654e"
+  },
+  "Panel Judges Prep": {
+   "base": "8bc4889d876c",
+   "patched": "3002ab2065a6"
+  }
+ },
+ "connections": {
+  "add": [
+   [
+    "Panel Cure Check",
+    0,
+    "Early Alternate Build",
+    0
+   ],
+   [
+    "Early Alternate Build",
+    0,
+    "Early Alternate Start",
+    0
+   ],
+   [
+    "Alternate Needed?",
+    0,
+    "Get Early Alternate",
+    0
+   ],
+   [
+    "Get Early Alternate",
+    0,
+    "Alternate Build",
+    0
+   ],
+   [
+    "Alternate Calls?",
+    0,
+    "Early Reply?",
+    0
+   ],
+   [
+    "Early Reply?",
+    0,
+    "Early Alternate Reply",
+    0
+   ],
+   [
+    "Early Reply?",
+    1,
+    "Alternate Call openrouter",
+    0
+   ],
+   [
+    "Early Alternate Reply",
+    0,
+    "Alternate Payloads",
+    0
+   ]
+  ],
+  "remove": [
+   [
+    "Alternate Needed?",
+    0,
+    "Alternate Build",
+    0
+   ],
+   [
+    "Alternate Calls?",
+    0,
+    "Alternate Call openrouter",
+    0
+   ]
+  ],
+  "note": "Early Alternate Build sits ABOVE Enforcer Build on the canvas (executionOrder v1 runs the upper branch of Panel Cure Check first; it returns in seconds and Execute Workflow does not wait)."
+ }
+}

@@ -1,6 +1,7 @@
 {
  "base_strip": "pkgLIB/strip_RI3",
- "fetchback": "/mnt/project-files/wall2024/fetchback_live_s61.json",
+ "fetchback": "/mnt/project-files/wall2024/fetchback_live_s62.json",
+ "overlay": "pkgA2R/e4_on_v26/main_nodes_patched.json",
  "chain": [
   "Alternate Needed?",
   "Alternate Build",
@@ -503,12 +504,14 @@
  "code_updates": [
   {
    "node": "Panel Tokens",
-   "base_sha": "1a9da686fe58",
-   "final_sha": "03e224844dff",
+   "base": "pkgE4 patched",
+   "base_sha": "f022b14fde88",
+   "final_sha": "7678d4a4fdcc",
    "file": "Panel_Tokens.js"
   },
   {
    "node": "Format Markdown",
+   "base": "live",
    "base_sha": "d8cd45e60231",
    "final_sha": "e1c296a588da",
    "file": "Format_Markdown.js"

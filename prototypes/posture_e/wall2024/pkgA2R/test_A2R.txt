@@ -103,8 +103,9 @@ OK   33617: no round 2 on the saved pool (every tried alternate is seated); fina
 OK   33627: no round 2 on the saved pool (every tried alternate is seated); final Alternate Merge byte-equal to the saved one
 OK   33644: no round 2 on the saved pool (every tried alternate is seated); final Alternate Merge byte-equal to the saved one
 OK   33682: no round 2 on the saved pool (no alternate was tried in round 1); final Alternate Merge byte-equal to the saved one
-OK   Panel Tokens: output unchanged with no R2 node run (27/27 runs; 0 runs skip on base and patched alike)
-OK   Format Markdown: output unchanged with no R2 node run (23/23 runs; 4 runs skip on base and patched alike)
+OK   33705: no round 2 on the saved pool (no alternate was tried in round 1); final Alternate Merge byte-equal to the saved one
+OK   Panel Tokens: output unchanged with no R2 node run (28/28 runs; 0 runs skip on base and patched alike)
+OK   Format Markdown: output unchanged with no R2 node run (24/24 runs; 4 runs skip on base and patched alike)
 OK   33497 fails again: Second Alternate? runs round 2 for gemini (round 2 for gemini; free: mimo)
 OK   33497 fails again: Second Alternate? passes Gate Record's output on unchanged
 OK   33497 fails again: R2 Alternate Build offers mimo for gemini only, with round 1's rulebook and transcript (system message equal; transcript 98.4% common tail; roles system/user vs round 1 system/user/assistant/user: a posture acceptance turn appears only for a model that accepted)
@@ -148,4 +149,4 @@ OK   33461 passes: the removed ruling keeps round 1's lines and adds round 2's S
 OK   33461 passes: round 2's tried entry is SEATED and the log adds mimo's rows (32) tried [["gemini","mimo","SEATED"]] log seats ["mimo"]
      Record Alternates payload: {"p_alternates":[{"removed_seat":"gemini","alternate_seat":"mimo","alternate_api_model":"xiaomi/mimo-v2.6-pro"}],"p_drv_removed":[{"seat":"gemini","replaced_by":"mimo"}]}
 OK   33461 control (saved pool grok): no round 2 (no pool model is left after round 1 (pool: grok; tried: x-ai/grok-4.7)); output byte-equal; counted seats stay 1
-parity runs 27; 145 OK, 0 FAIL
+parity runs 28; 146 OK, 0 FAIL

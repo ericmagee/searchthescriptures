@@ -1,0 +1,12 @@
+OK   33222 gemini->grok (x-ai/grok-4.7): turns with reasoning_details live 1, early 1
+OK   33261 sol->grok (x-ai/grok-4.7): turns with reasoning_details live 1, early 1
+OK   33299 chatgpt->grok (x-ai/grok-4.7): turns with reasoning_details live 1, early 1
+OK   33345 chatgpt->grok (x-ai/grok-4.7): turns with reasoning_details live 1, early 1
+OK   33371 chatgpt->grok (x-ai/grok-4.7): turns with reasoning_details live 1, early 1
+OK   33411 sol->grok (x-ai/grok-4.7): turns with reasoning_details live 1, early 1
+OK   33430 sol->grok (x-ai/grok-4.7): turns with reasoning_details live 1, early 1
+OK   33461 gemini->grok (x-ai/grok-4.7): turns with reasoning_details live 1, early 1
+OK   33482 gemini->grok (x-ai/grok-4.7): turns with reasoning_details live 1, early 1
+OK   33490 gemini->grok (x-ai/grok-4.7): turns with reasoning_details live 1, early 1
+OK   33497 gemini->sol (openai/gpt-6.1-sol): turns with reasoning_details live 0, early 0
+TOTAL 11 OK, 0 FAIL; reasoning_details turns carried 10
