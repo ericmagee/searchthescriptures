@@ -1,0 +1,10 @@
+OK 33530 Panel Build: 1 difference(s), each a reasoning effort low on a qwen/qwen3.8-flash body: ["/0/json/judges/2/body/reasoning"]
+OK 33815 Panel Build: 0 difference(s), each a reasoning effort low on a qwen/qwen3.8-flash body: []
+OK 33828 Panel Build: 0 difference(s), each a reasoning effort low on a qwen/qwen3.8-flash body: []
+OK 33530 Reserve Build (glm_flash): unchanged (0 differences)
+OK 33530 Reserve Build with a qwen/qwen3.8-flash reserve: 1 difference(s), each a reasoning effort low: ["/0/json/body/reasoning"]
+OK 33530 Accept Build: 1 difference(s), each a reasoning effort low on the qwen_flash posture body: ["/4/json/acc/body/reasoning"]
+OK library Alternate_Build.js: only the qwen_flash rule line is added, once
+OK library R2_Alternate_Build.js: only the qwen_flash rule line is added, once
+OK __orc: qwen/qwen3.8-flash gets effort low; qwen max and terra get nothing; a body that sets reasoning keeps it
+TOTAL 9 OK, 0 FAIL
