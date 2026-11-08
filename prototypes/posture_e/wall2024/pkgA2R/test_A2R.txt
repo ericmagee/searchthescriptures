@@ -1,0 +1,151 @@
+OK   base source unchanged: Alt_Gate_Build.js
+OK   base source unchanged: Alt_Gate_Record.js
+OK   base source unchanged: Alternate_Build.js
+OK   base source unchanged: Alternate_Cure_Build.js
+OK   base source unchanged: Alternate_Cure_Normalize.js
+OK   base source unchanged: Alternate_Merge_1.js
+OK   base source unchanged: Alternate_Merge_Seat.js
+OK   base source unchanged: Alternate_Payloads.js
+OK   base source unchanged: Cure_Build.js
+OK   base source unchanged: Cure_Check.js
+OK   base source unchanged: Cure_Normalize.js
+OK   base source unchanged: Extract_Independent_Verdict.js
+OK   base source unchanged: Gate_Build.js
+OK   base source unchanged: Gate_Record.js
+OK   base source unchanged: Panel_Cure_Build_1.js
+OK   base source unchanged: Panel_Cure_Build_2.js
+OK   base source unchanged: Panel_Cure_Build_3.js
+OK   base source unchanged: Panel_Cure_Check.js
+OK   base source unchanged: Panel_Cure_Normalize_1.js
+OK   base source unchanged: Panel_Cure_Normalize_2.js
+OK   base source unchanged: Panel_Cure_Normalize_3.js
+OK   base source unchanged: Panel_Payloads.js
+OK   library clone differs only in names: R2_Alt_Gate_Build.js
+OK   library clone names no round-1 chain node: R2_Alt_Gate_Build.js
+OK   library clone differs only in names: R2_Alt_Gate_Record.js
+OK   library clone names no round-1 chain node: R2_Alt_Gate_Record.js
+OK   R2 Alternate Build patch present once: const pool=(RS.alternates||[]);const deb=(RS.debat
+OK   R2 Alternate Build patch present once: pay.forEach((p,i)=>{if(!QA&&!((p.drv_uncured||0)>0
+OK   R2 Alternate Build patch present once:   if(!QA&&used.indexOf(a.api_model)>=0)return 'G4:
+OK   library clone differs only in names: R2_Alternate_Build.js
+OK   library clone names no round-1 chain node: R2_Alternate_Build.js
+OK   library clone differs only in names: R2_Alternate_Cure_Build.js
+OK   library clone names no round-1 chain node: R2_Alternate_Cure_Build.js
+OK   library clone differs only in names: R2_Alternate_Cure_Normalize.js
+OK   library clone names no round-1 chain node: R2_Alternate_Cure_Normalize.js
+OK   library clone differs only in names: R2_Alternate_Merge.js
+OK   library clone names no round-1 chain node: R2_Alternate_Merge.js
+OK   library clone differs only in names: R2_Alternate_Merge_Seat.js
+OK   library clone names no round-1 chain node: R2_Alternate_Merge_Seat.js
+OK   library clone differs only in names: R2_Alternate_Payloads.js
+OK   library clone names no round-1 chain node: R2_Alternate_Payloads.js
+OK   node clone differs only in names: R2 Alternate Calls?
+OK   node clone names no round-1 chain node: R2 Alternate Calls?
+OK   node clone differs only in names: R2 Alt Seated
+OK   node clone names no round-1 chain node: R2 Alt Seated
+OK   node clone differs only in names: R2 Alternate Call openrouter
+OK   node clone names no round-1 chain node: R2 Alternate Call openrouter
+OK   node clone differs only in names: R2 Alt Judge Enforcer Build
+OK   node clone names no round-1 chain node: R2 Alt Judge Enforcer Build
+OK   node clone differs only in names: R2 Alt Judge Enforcer Needed?
+OK   node clone names no round-1 chain node: R2 Alt Judge Enforcer Needed?
+OK   node clone differs only in names: R2 Alternate Cure Needed?
+OK   node clone names no round-1 chain node: R2 Alternate Cure Needed?
+OK   node clone differs only in names: R2 Alt Judge Enforcer Call deepseek
+OK   node clone names no round-1 chain node: R2 Alt Judge Enforcer Call deepseek
+OK   node clone differs only in names: R2 Alt Judge Enforcer Record
+OK   node clone names no round-1 chain node: R2 Alt Judge Enforcer Record
+OK   node clone differs only in names: R2 Alt Judge Enforcer Retry Build
+OK   node clone names no round-1 chain node: R2 Alt Judge Enforcer Retry Build
+OK   node clone differs only in names: R2 Alt Send Back Build
+OK   node clone names no round-1 chain node: R2 Alt Send Back Build
+OK   node clone differs only in names: R2 Alternate Cure Call openrouter
+OK   node clone names no round-1 chain node: R2 Alternate Cure Call openrouter
+OK   node clone differs only in names: R2 Alt Judge Enforcer Retry Needed?
+OK   node clone names no round-1 chain node: R2 Alt Judge Enforcer Retry Needed?
+OK   node clone differs only in names: R2 Alt Send Back Needed?
+OK   node clone names no round-1 chain node: R2 Alt Send Back Needed?
+OK   node clone differs only in names: R2 Alt Judge Enforcer Retry Call deepseek
+OK   node clone names no round-1 chain node: R2 Alt Judge Enforcer Retry Call deepseek
+OK   node clone differs only in names: R2 Alt Send Back Call openrouter
+OK   node clone names no round-1 chain node: R2 Alt Send Back Call openrouter
+OK   node clone differs only in names: R2 Alt Send Back Record
+OK   node clone names no round-1 chain node: R2 Alt Send Back Record
+OK   node clone differs only in names: R2 Alt Gate Needed?
+OK   node clone names no round-1 chain node: R2 Alt Gate Needed?
+OK   node clone differs only in names: R2 Alt Gate Call openrouter
+OK   node clone names no round-1 chain node: R2 Alt Gate Call openrouter
+OK   every chain node but Alternate Needed? has an R2 clone (26)
+OK   33197: no round 2 on the saved pool (no alternate was tried in round 1); final Alternate Merge byte-equal to the saved one
+OK   33218: no round 2 on the saved pool (no alternate was tried in round 1); final Alternate Merge byte-equal to the saved one
+OK   33222: no round 2 on the saved pool (no pool model is left after round 1 (pool: grok; tried: x-ai/grok-4.7)); final Alternate Merge byte-equal to the saved one
+OK   33249: no round 2 on the saved pool (every tried alternate is seated); final Alternate Merge byte-equal to the saved one
+OK   33261: no round 2 on the saved pool (every tried alternate is seated); final Alternate Merge byte-equal to the saved one
+OK   33276: no round 2 on the saved pool (no alternate was tried in round 1); final Alternate Merge byte-equal to the saved one
+OK   33289: no round 2 on the saved pool (no alternate was tried in round 1); final Alternate Merge byte-equal to the saved one
+OK   33299: no round 2 on the saved pool (every tried alternate is seated); final Alternate Merge byte-equal to the saved one
+OK   33311: no round 2 on the saved pool (no alternate was tried in round 1); final Alternate Merge byte-equal to the saved one
+OK   33345: no round 2 on the saved pool (every tried alternate is seated); final Alternate Merge byte-equal to the saved one
+OK   33371: no round 2 on the saved pool (every tried alternate is seated); final Alternate Merge byte-equal to the saved one
+OK   33389: no round 2 on the saved pool (no alternate was tried in round 1); final Alternate Merge byte-equal to the saved one
+OK   33411: no round 2 on the saved pool (every tried alternate is seated); final Alternate Merge byte-equal to the saved one
+OK   33430: no round 2 on the saved pool (no pool model is left after round 1 (pool: grok; tried: x-ai/grok-4.7)); final Alternate Merge byte-equal to the saved one
+OK   33442: no round 2 on the saved pool (every tried alternate is seated); final Alternate Merge byte-equal to the saved one
+OK   33461: no round 2 on the saved pool (no pool model is left after round 1 (pool: grok; tried: x-ai/grok-4.7)); final Alternate Merge byte-equal to the saved one
+OK   33482: no round 2 on the saved pool (every tried alternate is seated); final Alternate Merge byte-equal to the saved one
+OK   33490: no round 2 on the saved pool (no pool model is left after round 1 (pool: grok; tried: x-ai/grok-4.7)); final Alternate Merge byte-equal to the saved one
+OK   33497: no round 2 on the saved pool (no pool model is left after round 1 (pool: sol; tried: openai/gpt-6.1-sol)); final Alternate Merge byte-equal to the saved one
+OK   33506: no round 2 on the saved pool (every tried alternate is seated); final Alternate Merge byte-equal to the saved one
+OK   33575: no round 2 on the saved pool (no alternate was tried in round 1); final Alternate Merge byte-equal to the saved one
+OK   33592: no round 2 on the saved pool (no alternate was tried in round 1); final Alternate Merge byte-equal to the saved one
+OK   33605: no round 2 on the saved pool (no alternate was tried in round 1); final Alternate Merge byte-equal to the saved one
+OK   33617: no round 2 on the saved pool (every tried alternate is seated); final Alternate Merge byte-equal to the saved one
+OK   33627: no round 2 on the saved pool (every tried alternate is seated); final Alternate Merge byte-equal to the saved one
+OK   33644: no round 2 on the saved pool (every tried alternate is seated); final Alternate Merge byte-equal to the saved one
+OK   33682: no round 2 on the saved pool (no alternate was tried in round 1); final Alternate Merge byte-equal to the saved one
+OK   Panel Tokens: output unchanged with no R2 node run (27/27 runs; 0 runs skip on base and patched alike)
+OK   Format Markdown: output unchanged with no R2 node run (23/23 runs; 4 runs skip on base and patched alike)
+OK   33497 fails again: Second Alternate? runs round 2 for gemini (round 2 for gemini; free: mimo)
+OK   33497 fails again: Second Alternate? passes Gate Record's output on unchanged
+OK   33497 fails again: R2 Alternate Build offers mimo for gemini only, with round 1's rulebook and transcript (system message equal; transcript 98.4% common tail; roles system/user vs round 1 system/user/assistant/user: a posture acceptance turn appears only for a model that accepted)
+OK   33497 fails again: G5 refuses the model tried in round 1 (no pool model passes the guards: sol G5 (pkgA2R): openai/gpt-6.1-sol was tried in the first alternate round)
+OK   33497 fails again: every other body and the round-1 lists are kept
+OK   33497 fails again: seated and removed lists aligned, two at most
+OK   33497 fails again: gemini stays unfilled; round 1's body plus round 2's lines only (1)
+     [AUDIT v21: ALTERNATE TRIED -- SEAT: gemini; ALTERNATE: mimo; MODEL: xiaomi/mimo-v2.6-pro; RESULT: NOT SEATED; WHY: 1 uncured item(s); REMOVED FOR: drv_uncured 1: K-C (cure) x1]
+OK   33497 fails again: round 2's tried entry is NOT SEATED
+OK   33497 control (saved pool sol): no round 2 (no pool model is left after round 1 (pool: sol; tried: openai/gpt-6.1-sol)); output byte-equal; counted seats stay 2
+OK   33222 fails again: Second Alternate? runs round 2 for gemini (round 2 for gemini; free: mimo)
+OK   33222 fails again: Second Alternate? passes Gate Record's output on unchanged
+OK   33222 fails again: R2 Alternate Build offers mimo for gemini only, with round 1's rulebook and transcript (system message equal; transcript 100.0% common tail; roles system/user vs round 1 system/user/assistant/user: a posture acceptance turn appears only for a model that accepted)
+OK   33222 fails again: G5 refuses the model tried in round 1 (no pool model passes the guards: grok G5 (pkgA2R): x-ai/grok-4.7 was tried in the first alternate round)
+OK   33222 fails again: every other body and the round-1 lists are kept
+OK   33222 fails again: seated and removed lists aligned, two at most
+OK   33222 fails again: gemini stays unfilled; round 1's body plus round 2's lines only (2)
+     [AUDIT v21: ALTERNATE TRIED -- SEAT: gemini; ALTERNATE: mimo; MODEL: xiaomi/mimo-v2.6-pro; RESULT: NOT SEATED; WHY: unseated after its enforcer send-back and gate: 3 uncured item(s) (E-GATE G1 NOT APPLIED (E-APPLY S35); E-GATE G2 
+     [AUDIT v39: ALTERNATE UNSEATED -- SEAT: gemini is left unfilled and not counted; ALTERNATE: mimo; unseated after its enforcer send-back and gate: 3 uncured item(s) (E-GATE G1 NOT APPLIED (E-APPLY S35); E-GATE G2 NOT APPLIED (E-APP
+OK   33222 fails again: round 2's tried entry is NOT SEATED
+OK   33222 control (saved pool grok): no round 2 (no pool model is left after round 1 (pool: grok; tried: x-ai/grok-4.7)); output byte-equal; counted seats stay 2
+OK   33222 passes: Second Alternate? runs round 2 for gemini (round 2 for gemini; free: mimo)
+OK   33222 passes: Second Alternate? passes Gate Record's output on unchanged
+OK   33222 passes: R2 Alternate Build offers mimo for gemini only, with round 1's rulebook and transcript (system message equal; transcript 100.0% common tail; roles system/user vs round 1 system/user/assistant/user: a posture acceptance turn appears only for a model that accepted)
+OK   33222 passes: G5 refuses the model tried in round 1 (no pool model passes the guards: grok G5 (pkgA2R): x-ai/grok-4.7 was tried in the first alternate round)
+OK   33222 passes: every other body and the round-1 lists are kept
+OK   33222 passes: seated and removed lists aligned, two at most
+OK   33222 passes: mimo sits in gemini's place, counted (drv_uncured 0); counted seats 2 -> 3
+OK   33222 passes: the removed ruling keeps round 1's lines and adds round 2's SEATED line (3 lines)
+OK   33222 passes: round 2's tried entry is SEATED and the log adds mimo's rows (35) tried [["gemini","mimo","SEATED"]] log seats ["mimo"]
+     Record Alternates payload: {"p_alternates":[{"removed_seat":"gemini","alternate_seat":"mimo","alternate_api_model":"xiaomi/mimo-v2.6-pro"}],"p_drv_removed":[{"seat":"gemini","replaced_by":"mimo"}]}
+OK   33222 control (saved pool grok): no round 2 (no pool model is left after round 1 (pool: grok; tried: x-ai/grok-4.7)); output byte-equal; counted seats stay 2
+OK   33461 passes: Second Alternate? runs round 2 for gemini (round 2 for gemini; free: mimo)
+OK   33461 passes: Second Alternate? passes Gate Record's output on unchanged
+OK   33461 passes: R2 Alternate Build offers mimo for gemini only, with round 1's rulebook and transcript (system message equal; transcript 100.0% common tail; roles system/user vs round 1 system/user/assistant/user: a posture acceptance turn appears only for a model that accepted)
+OK   33461 passes: G5 refuses the model tried in round 1 (no pool model passes the guards: grok G5 (pkgA2R): x-ai/grok-4.7 was tried in the first alternate round)
+OK   33461 passes: every other body and the round-1 lists are kept
+OK   33461 passes: seated and removed lists aligned, two at most
+OK   33461 passes: mimo sits in gemini's place, counted (drv_uncured 0); counted seats 1 -> 2
+OK   33461 passes: the removed ruling keeps round 1's lines and adds round 2's SEATED line (3 lines)
+OK   33461 passes: round 2's tried entry is SEATED and the log adds mimo's rows (32) tried [["gemini","mimo","SEATED"]] log seats ["mimo"]
+     Record Alternates payload: {"p_alternates":[{"removed_seat":"gemini","alternate_seat":"mimo","alternate_api_model":"xiaomi/mimo-v2.6-pro"}],"p_drv_removed":[{"seat":"gemini","replaced_by":"mimo"}]}
+OK   33461 control (saved pool grok): no round 2 (no pool model is left after round 1 (pool: grok; tried: x-ai/grok-4.7)); output byte-equal; counted seats stay 1
+parity runs 27; 145 OK, 0 FAIL

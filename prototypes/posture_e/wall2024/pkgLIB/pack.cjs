@@ -11,7 +11,7 @@ const fs=require('fs');const crypto=require('crypto');const {needs}=require('./r
 const DIRS=(process.argv.length>2?process.argv.slice(2):['pkgKW']).map(d=>d.replace(/\/$/,''));const BASE=DIRS.join('+');const SRCOF={};
 // a later package replaces only files the base already has (pkgECL patches 5 of the 22 and 15 nodes outside the library)
 DIRS.forEach((d,i)=>{for(const f of fs.readdirSync(d+'/patched/').filter(f=>f.endsWith('.js')&&f!=='Shared_Library.js'))if(!i||SRCOF[f])SRCOF[f]=d+'/patched/'+f;});
-const F=Object.keys(SRCOF).sort();if(F.length!==22)throw new Error('expected 22 nodes, got '+F.length);
+const F=Object.keys(SRCOF).sort();const __NEXP=+(process.env.LIB_N||22);if(F.length!==__NEXP)throw new Error('expected '+__NEXP+' nodes, got '+F.length); /* pkgA2R: LIB_N=30 with the 8 round-2 clones */
 const SRC=F.map(f=>fs.readFileSync(SRCOF[f],'utf8'));const LINES=SRC.map(s=>s.split('\n'));
 const cnt=new Map();for(const a of LINES)for(const l of new Set(a))cnt.set(l,(cnt.get(l)||0)+1);
 const LIB=[],IDX=new Map();const add=l=>{if(!IDX.has(l)){IDX.set(l,LIB.length);LIB.push(l);}};

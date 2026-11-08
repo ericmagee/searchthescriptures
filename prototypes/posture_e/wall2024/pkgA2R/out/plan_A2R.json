@@ -1,0 +1,517 @@
+{
+ "base_strip": "pkgLIB/strip_RI3",
+ "fetchback": "/mnt/project-files/wall2024/fetchback_live_s61.json",
+ "chain": [
+  "Alternate Needed?",
+  "Alternate Build",
+  "Alternate Merge Seat",
+  "Alternate Calls?",
+  "Alt Seated",
+  "Alternate Call openrouter",
+  "Alt Judge Enforcer Build",
+  "Alternate Payloads",
+  "Alt Judge Enforcer Needed?",
+  "Alternate Cure Needed?",
+  "Alt Judge Enforcer Call deepseek",
+  "Alt Judge Enforcer Record",
+  "Alternate Cure Build",
+  "Alt Judge Enforcer Retry Build",
+  "Alt Send Back Build",
+  "Alternate Cure Call openrouter",
+  "Alt Judge Enforcer Retry Needed?",
+  "Alt Send Back Needed?",
+  "Alternate Cure Normalize",
+  "Alt Judge Enforcer Retry Call deepseek",
+  "Alt Send Back Call openrouter",
+  "Alt Send Back Record",
+  "Alt Gate Build",
+  "Alt Gate Needed?",
+  "Alt Gate Call openrouter",
+  "Alt Gate Record",
+  "Alternate Merge"
+ ],
+ "cloned": [
+  [
+   "Alternate Build",
+   "R2 Alternate Build"
+  ],
+  [
+   "Alternate Merge Seat",
+   "R2 Alternate Merge Seat"
+  ],
+  [
+   "Alternate Calls?",
+   "R2 Alternate Calls?"
+  ],
+  [
+   "Alt Seated",
+   "R2 Alt Seated"
+  ],
+  [
+   "Alternate Call openrouter",
+   "R2 Alternate Call openrouter"
+  ],
+  [
+   "Alt Judge Enforcer Build",
+   "R2 Alt Judge Enforcer Build"
+  ],
+  [
+   "Alternate Payloads",
+   "R2 Alternate Payloads"
+  ],
+  [
+   "Alt Judge Enforcer Needed?",
+   "R2 Alt Judge Enforcer Needed?"
+  ],
+  [
+   "Alternate Cure Needed?",
+   "R2 Alternate Cure Needed?"
+  ],
+  [
+   "Alt Judge Enforcer Call deepseek",
+   "R2 Alt Judge Enforcer Call deepseek"
+  ],
+  [
+   "Alt Judge Enforcer Record",
+   "R2 Alt Judge Enforcer Record"
+  ],
+  [
+   "Alternate Cure Build",
+   "R2 Alternate Cure Build"
+  ],
+  [
+   "Alt Judge Enforcer Retry Build",
+   "R2 Alt Judge Enforcer Retry Build"
+  ],
+  [
+   "Alt Send Back Build",
+   "R2 Alt Send Back Build"
+  ],
+  [
+   "Alternate Cure Call openrouter",
+   "R2 Alternate Cure Call openrouter"
+  ],
+  [
+   "Alt Judge Enforcer Retry Needed?",
+   "R2 Alt Judge Enforcer Retry Needed?"
+  ],
+  [
+   "Alt Send Back Needed?",
+   "R2 Alt Send Back Needed?"
+  ],
+  [
+   "Alternate Cure Normalize",
+   "R2 Alternate Cure Normalize"
+  ],
+  [
+   "Alt Judge Enforcer Retry Call deepseek",
+   "R2 Alt Judge Enforcer Retry Call deepseek"
+  ],
+  [
+   "Alt Send Back Call openrouter",
+   "R2 Alt Send Back Call openrouter"
+  ],
+  [
+   "Alt Send Back Record",
+   "R2 Alt Send Back Record"
+  ],
+  [
+   "Alt Gate Build",
+   "R2 Alt Gate Build"
+  ],
+  [
+   "Alt Gate Needed?",
+   "R2 Alt Gate Needed?"
+  ],
+  [
+   "Alt Gate Call openrouter",
+   "R2 Alt Gate Call openrouter"
+  ],
+  [
+   "Alt Gate Record",
+   "R2 Alt Gate Record"
+  ],
+  [
+   "Alternate Merge",
+   "R2 Alternate Merge"
+  ]
+ ],
+ "library_files": [
+  {
+   "file": "Alt_Gate_Build.js",
+   "from": "Alt_Gate_Build.js",
+   "sha": "a8ba63992987",
+   "kind": "base"
+  },
+  {
+   "file": "Alt_Gate_Record.js",
+   "from": "Alt_Gate_Record.js",
+   "sha": "38a587e48029",
+   "kind": "base"
+  },
+  {
+   "file": "Alternate_Build.js",
+   "from": "Alternate_Build.js",
+   "sha": "1bda83c0947c",
+   "kind": "base"
+  },
+  {
+   "file": "Alternate_Cure_Build.js",
+   "from": "Alternate_Cure_Build.js",
+   "sha": "60bfdcc32086",
+   "kind": "base"
+  },
+  {
+   "file": "Alternate_Cure_Normalize.js",
+   "from": "Alternate_Cure_Normalize.js",
+   "sha": "18257771f166",
+   "kind": "base"
+  },
+  {
+   "file": "Alternate_Merge_1.js",
+   "from": "Alternate_Merge.js",
+   "sha": "94f7adf8dcd1",
+   "kind": "base"
+  },
+  {
+   "file": "Alternate_Merge_Seat.js",
+   "from": "Alternate_Merge_Seat.js",
+   "sha": "b60f767a9976",
+   "kind": "base"
+  },
+  {
+   "file": "Alternate_Payloads.js",
+   "from": "Alternate_Payloads.js",
+   "sha": "4f97f6d3cb05",
+   "kind": "base"
+  },
+  {
+   "file": "Cure_Build.js",
+   "from": "Cure_Build.js",
+   "sha": "4aead3025563",
+   "kind": "base"
+  },
+  {
+   "file": "Cure_Check.js",
+   "from": "Cure_Check.js",
+   "sha": "98e057399414",
+   "kind": "base"
+  },
+  {
+   "file": "Cure_Normalize.js",
+   "from": "Cure_Normalize.js",
+   "sha": "e1888bf4b03c",
+   "kind": "base"
+  },
+  {
+   "file": "Extract_Independent_Verdict.js",
+   "from": "Extract_Independent_Verdict.js",
+   "sha": "471f44354f2e",
+   "kind": "base"
+  },
+  {
+   "file": "Gate_Build.js",
+   "from": "Gate_Build.js",
+   "sha": "d99fc0c3d530",
+   "kind": "base"
+  },
+  {
+   "file": "Gate_Record.js",
+   "from": "Gate_Record.js",
+   "sha": "252ac04e6b5a",
+   "kind": "base"
+  },
+  {
+   "file": "Panel_Cure_Build_1.js",
+   "from": "Panel_Cure_Build_1.js",
+   "sha": "214657d2718e",
+   "kind": "base"
+  },
+  {
+   "file": "Panel_Cure_Build_2.js",
+   "from": "Panel_Cure_Build_2.js",
+   "sha": "41fd8489d9d9",
+   "kind": "base"
+  },
+  {
+   "file": "Panel_Cure_Build_3.js",
+   "from": "Panel_Cure_Build_3.js",
+   "sha": "5653546002ce",
+   "kind": "base"
+  },
+  {
+   "file": "Panel_Cure_Check.js",
+   "from": "Panel_Cure_Check.js",
+   "sha": "3654275b8cb6",
+   "kind": "base"
+  },
+  {
+   "file": "Panel_Cure_Normalize_1.js",
+   "from": "Panel_Cure_Normalize_1.js",
+   "sha": "11bf71c4b08f",
+   "kind": "base"
+  },
+  {
+   "file": "Panel_Cure_Normalize_2.js",
+   "from": "Panel_Cure_Normalize_2.js",
+   "sha": "d7eaf214a690",
+   "kind": "base"
+  },
+  {
+   "file": "Panel_Cure_Normalize_3.js",
+   "from": "Panel_Cure_Normalize_3.js",
+   "sha": "e5f2cbaa6f02",
+   "kind": "base"
+  },
+  {
+   "file": "Panel_Payloads.js",
+   "from": "Panel_Payloads.js",
+   "sha": "1061ebe83e28",
+   "kind": "base"
+  },
+  {
+   "file": "R2_Alternate_Build.js",
+   "clone_of": "Alternate_Build.js",
+   "sha": "aacc8213a720",
+   "kind": "R2 clone"
+  },
+  {
+   "file": "R2_Alternate_Merge_Seat.js",
+   "clone_of": "Alternate_Merge_Seat.js",
+   "sha": "706839374349",
+   "kind": "R2 clone"
+  },
+  {
+   "file": "R2_Alternate_Payloads.js",
+   "clone_of": "Alternate_Payloads.js",
+   "sha": "65ff6f611a7a",
+   "kind": "R2 clone"
+  },
+  {
+   "file": "R2_Alternate_Cure_Build.js",
+   "clone_of": "Alternate_Cure_Build.js",
+   "sha": "07efff7afb53",
+   "kind": "R2 clone"
+  },
+  {
+   "file": "R2_Alternate_Cure_Normalize.js",
+   "clone_of": "Alternate_Cure_Normalize.js",
+   "sha": "3e0389e0ef90",
+   "kind": "R2 clone"
+  },
+  {
+   "file": "R2_Alt_Gate_Build.js",
+   "clone_of": "Alt_Gate_Build.js",
+   "sha": "cbff5e414aed",
+   "kind": "R2 clone"
+  },
+  {
+   "file": "R2_Alt_Gate_Record.js",
+   "clone_of": "Alt_Gate_Record.js",
+   "sha": "c09c1d2d7a97",
+   "kind": "R2 clone"
+  },
+  {
+   "file": "R2_Alternate_Merge.js",
+   "clone_of": "Alternate_Merge.js",
+   "sha": "9708a32a4d4a",
+   "kind": "R2 clone"
+  }
+ ],
+ "nodes_new": [
+  {
+   "name": "R2 Alternate Build",
+   "type": "n8n-nodes-base.code",
+   "code_sha": null,
+   "library_stub": "R2_Alternate_Build.js"
+  },
+  {
+   "name": "R2 Alternate Merge Seat",
+   "type": "n8n-nodes-base.code",
+   "code_sha": null,
+   "library_stub": "R2_Alternate_Merge_Seat.js"
+  },
+  {
+   "name": "R2 Alternate Calls?",
+   "type": "n8n-nodes-base.if",
+   "code_sha": null,
+   "library_stub": null
+  },
+  {
+   "name": "R2 Alt Seated",
+   "type": "n8n-nodes-base.code",
+   "code_sha": "31564a3b1abf",
+   "library_stub": null
+  },
+  {
+   "name": "R2 Alternate Call openrouter",
+   "type": "n8n-nodes-base.httpRequest",
+   "code_sha": null,
+   "library_stub": null
+  },
+  {
+   "name": "R2 Alt Judge Enforcer Build",
+   "type": "n8n-nodes-base.code",
+   "code_sha": "b83d7d8cf7f0",
+   "library_stub": null
+  },
+  {
+   "name": "R2 Alternate Payloads",
+   "type": "n8n-nodes-base.code",
+   "code_sha": null,
+   "library_stub": "R2_Alternate_Payloads.js"
+  },
+  {
+   "name": "R2 Alt Judge Enforcer Needed?",
+   "type": "n8n-nodes-base.if",
+   "code_sha": null,
+   "library_stub": null
+  },
+  {
+   "name": "R2 Alternate Cure Needed?",
+   "type": "n8n-nodes-base.if",
+   "code_sha": null,
+   "library_stub": null
+  },
+  {
+   "name": "R2 Alt Judge Enforcer Call deepseek",
+   "type": "n8n-nodes-base.httpRequest",
+   "code_sha": null,
+   "library_stub": null
+  },
+  {
+   "name": "R2 Alt Judge Enforcer Record",
+   "type": "n8n-nodes-base.code",
+   "code_sha": "bd7fb2cc0c00",
+   "library_stub": null
+  },
+  {
+   "name": "R2 Alternate Cure Build",
+   "type": "n8n-nodes-base.code",
+   "code_sha": null,
+   "library_stub": "R2_Alternate_Cure_Build.js"
+  },
+  {
+   "name": "R2 Alt Judge Enforcer Retry Build",
+   "type": "n8n-nodes-base.code",
+   "code_sha": "6a34791351e3",
+   "library_stub": null
+  },
+  {
+   "name": "R2 Alt Send Back Build",
+   "type": "n8n-nodes-base.code",
+   "code_sha": "f74fb16d983d",
+   "library_stub": null
+  },
+  {
+   "name": "R2 Alternate Cure Call openrouter",
+   "type": "n8n-nodes-base.httpRequest",
+   "code_sha": null,
+   "library_stub": null
+  },
+  {
+   "name": "R2 Alt Judge Enforcer Retry Needed?",
+   "type": "n8n-nodes-base.if",
+   "code_sha": null,
+   "library_stub": null
+  },
+  {
+   "name": "R2 Alt Send Back Needed?",
+   "type": "n8n-nodes-base.if",
+   "code_sha": null,
+   "library_stub": null
+  },
+  {
+   "name": "R2 Alternate Cure Normalize",
+   "type": "n8n-nodes-base.code",
+   "code_sha": null,
+   "library_stub": "R2_Alternate_Cure_Normalize.js"
+  },
+  {
+   "name": "R2 Alt Judge Enforcer Retry Call deepseek",
+   "type": "n8n-nodes-base.httpRequest",
+   "code_sha": null,
+   "library_stub": null
+  },
+  {
+   "name": "R2 Alt Send Back Call openrouter",
+   "type": "n8n-nodes-base.httpRequest",
+   "code_sha": null,
+   "library_stub": null
+  },
+  {
+   "name": "R2 Alt Send Back Record",
+   "type": "n8n-nodes-base.code",
+   "code_sha": "64e75696e531",
+   "library_stub": null
+  },
+  {
+   "name": "R2 Alt Gate Build",
+   "type": "n8n-nodes-base.code",
+   "code_sha": null,
+   "library_stub": "R2_Alt_Gate_Build.js"
+  },
+  {
+   "name": "R2 Alt Gate Needed?",
+   "type": "n8n-nodes-base.if",
+   "code_sha": null,
+   "library_stub": null
+  },
+  {
+   "name": "R2 Alt Gate Call openrouter",
+   "type": "n8n-nodes-base.httpRequest",
+   "code_sha": null,
+   "library_stub": null
+  },
+  {
+   "name": "R2 Alt Gate Record",
+   "type": "n8n-nodes-base.code",
+   "code_sha": null,
+   "library_stub": "R2_Alt_Gate_Record.js"
+  },
+  {
+   "name": "R2 Alternate Merge",
+   "type": "n8n-nodes-base.code",
+   "code_sha": null,
+   "library_stub": "R2_Alternate_Merge.js"
+  },
+  {
+   "name": "Second Alternate?",
+   "type": "n8n-nodes-base.code",
+   "code_sha": "68e3f2a7f8f5",
+   "library_stub": null
+  },
+  {
+   "name": "Second Alternate Needed?",
+   "type": "n8n-nodes-base.if",
+   "code_sha": null,
+   "library_stub": null
+  },
+  {
+   "name": "Alternate Merge",
+   "type": "n8n-nodes-base.code",
+   "code_sha": "a363da7d54e7",
+   "library_stub": null
+  }
+ ],
+ "rename": [
+  [
+   "Alternate Merge",
+   "Alternate Merge 1"
+  ]
+ ],
+ "code_updates": [
+  {
+   "node": "Panel Tokens",
+   "base_sha": "1a9da686fe58",
+   "final_sha": "03e224844dff",
+   "file": "Panel_Tokens.js"
+  },
+  {
+   "node": "Format Markdown",
+   "base_sha": "d8cd45e60231",
+   "final_sha": "e1c296a588da",
+   "file": "Format_Markdown.js"
+  }
+ ]
+}
