@@ -7,7 +7,10 @@ const fs=require('fs');const crypto=require('crypto');const h=s=>crypto.createHa
 const R=[[' (on a witness the side answered: FORCED: <Dn vs Cm> -- MEANS [<round>]: "..." -- ANSWER [<round>]: "..." -- FAILS: "...")',
           ', on a witness the side answered, with the FORCED line for the pair given only when the gate asks for it (K-G4)'],
          [', or CHANGE TO: RETRACTED, or keep UNDERDETERMINED by CHANGE TO the same line',
-          ', or keep UNDERDETERMINED by CHANGE TO the same line']];
+          ', or keep UNDERDETERMINED by CHANGE TO the same line'],
+         // pkgABS absence-check cure texts (W2 3178): bare RETRACTED has no line form sbApply reads on any line
+         ['CHANGE TO: RETRACTED, or CHANGE TO the line regraded so it no longer charges','CHANGE TO the line regraded so it no longer charges'],
+         ['CHANGE TO: RETRACTED, or a CHANGE TO line that no longer charges that press','a CHANGE TO line that no longer charges that press']];
 const plan={base:'pkgGRT/patched (live s61)',nodes:{}};
 for(const f of ['Send_Back_Build','Alt_Send_Back_Build']){const s0=fs.readFileSync('pkgGRT/patched/'+f+'.js','utf8');let s=s0;
  for(const [a,b] of R){const n=s.split(a).length-1;if(n!==1)throw new Error(f+' anchor count '+n+': '+a.slice(0,40));s=s.replace(a,()=>b);}
