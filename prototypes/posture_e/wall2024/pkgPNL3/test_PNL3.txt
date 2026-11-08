@@ -1,0 +1,24 @@
+OK Panel Build base code reproduces the stored 33530 panel bodies
+OK Panel Build gemini (google/gemini-3.8-flash): body unchanged
+OK Panel Build chatgpt (openai/gpt-6.1-terra): body unchanged
+OK Panel Build qwen_flash (qwen/qwen3.8-flash): base body + reasoning effort low, nothing else
+OK Panel Judges Prep slot 1 gemini: dispatched body unchanged
+OK Panel Judges Prep slot 2 chatgpt: dispatched body unchanged
+OK Panel Judges Prep slot 3 qwen_flash: dispatched body carries reasoning effort low
+OK Reserve Build glm_flash: base body + reasoning effort low
+OK Panel Reserve openrouter wrapper: sent body keeps reasoning effort low and the z-ai provider pin
+OK Accept Build gemini (google/gemini-3.8-flash): body unchanged
+OK Accept Build chatgpt (openai/gpt-6.1-terra): body unchanged
+OK Accept Build qwen_flash (qwen/qwen3.8-flash): base body + reasoning effort low
+OK Accept Build glm_flash (z-ai/glm-5.3-flash): base body + reasoning effort low
+OK Accept Build mimo (xiaomi/mimo-v2.6-pro): body unchanged
+OK Accept Build sol (openai/gpt-6.1-sol): body unchanged
+OK Accept Build grok (x-ai/grok-4.7): body unchanged
+OK Alternate Build stub (library v15) rebuilds byte for byte to the patched full source
+OK Panel Build __orc: qwen/ and z-ai/ get effort low, xiaomi/ thinking off, google/openai/x-ai untouched, a set reasoning kept, non-openrouter untouched
+OK Reserve Build __orc: qwen/ and z-ai/ get effort low, xiaomi/ thinking off, google/openai/x-ai untouched, a set reasoning kept, non-openrouter untouched
+OK Alternate Build __orc: qwen/ and z-ai/ get effort low, xiaomi/ thinking off, google/openai/x-ai untouched, a set reasoning kept, non-openrouter untouched
+OK Accept Build __orc: same rule
+OK cure body (library cureBody) keeps reasoning effort low
+OK send-back body ({...j.body, messages}) keeps reasoning effort low
+TOTAL 23 OK, 0 FAIL

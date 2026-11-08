@@ -1,0 +1,28 @@
+{
+ "nodes": {
+  "Accept Build": {
+   "base": "4dd28adff715",
+   "patched": "7e4a0c0325af"
+  },
+  "Panel Build": {
+   "base": "19a70deba2a7",
+   "patched": "af0e0fa1f4a6"
+  },
+  "Reserve Build": {
+   "base": "fadf5fd8fc43",
+   "patched": "b0d38d102c01"
+  }
+ },
+ "library": {
+  "layer": "pkgLIB/strip_PNL3 (on v14_KCR2 layers)",
+  "pack": "pkgLIB_v15_PNL3",
+  "changed_stubs": [
+   "Alternate Build"
+  ],
+  "stub_sha": {
+   "v14": "cce335deb6aa",
+   "v15": "989b3f52e960"
+  },
+  "shared_library_unchanged": true
+ }
+}
