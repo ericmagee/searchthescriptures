@@ -1,0 +1,13 @@
+{
+ "base": "pkgGRT/patched (live s61)",
+ "nodes": {
+  "Send_Back_Build": {
+   "base": "91baefb37252",
+   "patched": "7392c5c7328c"
+  },
+  "Alt_Send_Back_Build": {
+   "base": "e3387f775787",
+   "patched": "c82c13a01e8e"
+  }
+ }
+}
