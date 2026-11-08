@@ -1,0 +1,58 @@
+{
+ "base": "live s53 (fetchback_live_s53.json)",
+ "change": "parameters.options.batching.batch.batchSize 1 -> 10 (batchInterval 0 unchanged); nothing else",
+ "nodes": {
+  "Judge Enforcer Call deepseek": {
+   "params_sha_base": "48228dad44d7",
+   "params_sha_patched": "1622c26239ac",
+   "options_patched": {
+    "timeout": 900000,
+    "batching": {
+     "batch": {
+      "batchSize": 10,
+      "batchInterval": 0
+     }
+    }
+   }
+  },
+  "Alt Judge Enforcer Call deepseek": {
+   "params_sha_base": "48228dad44d7",
+   "params_sha_patched": "1622c26239ac",
+   "options_patched": {
+    "timeout": 900000,
+    "batching": {
+     "batch": {
+      "batchSize": 10,
+      "batchInterval": 0
+     }
+    }
+   }
+  },
+  "Judge Enforcer Retry Call deepseek": {
+   "params_sha_base": "48228dad44d7",
+   "params_sha_patched": "1622c26239ac",
+   "options_patched": {
+    "timeout": 900000,
+    "batching": {
+     "batch": {
+      "batchSize": 10,
+      "batchInterval": 0
+     }
+    }
+   }
+  },
+  "Alt Judge Enforcer Retry Call deepseek": {
+   "params_sha_base": "48228dad44d7",
+   "params_sha_patched": "1622c26239ac",
+   "options_patched": {
+    "timeout": 900000,
+    "batching": {
+     "batch": {
+      "batchSize": 10,
+      "batchInterval": 0
+     }
+    }
+   }
+  }
+ }
+}
