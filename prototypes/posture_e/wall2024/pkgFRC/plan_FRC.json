@@ -1,0 +1,228 @@
+{
+ "base": "live s53 (fetchback_live_s53.json)",
+ "budget": 24000,
+ "nodes": {
+  "D1 Call openrouter": {
+   "field": "jsonBody",
+   "copies": 1,
+   "params_base": "27d0faf92f9a",
+   "params_patched": "3d9bb7f66cba"
+  },
+  "C1 Call openrouter": {
+   "field": "jsonBody",
+   "copies": 1,
+   "params_base": "0bbbeee31993",
+   "params_patched": "842ab8496281"
+  },
+  "D2 Call openrouter": {
+   "field": "jsonBody",
+   "copies": 1,
+   "params_base": "f4824109d224",
+   "params_patched": "df57508dd282"
+  },
+  "C2 Call openrouter": {
+   "field": "jsonBody",
+   "copies": 1,
+   "params_base": "357b1c1c654d",
+   "params_patched": "72d5a278e6e5"
+  },
+  "D3 Call openrouter": {
+   "field": "jsonBody",
+   "copies": 1,
+   "params_base": "d061e969a5e1",
+   "params_patched": "6718af0825ac"
+  },
+  "C3 Call openrouter": {
+   "field": "jsonBody",
+   "copies": 1,
+   "params_base": "d2fbe32c52ba",
+   "params_patched": "6e4b63e251a6"
+  },
+  "Synthesis Call openrouter": {
+   "field": "jsonBody",
+   "copies": 1,
+   "params_base": "8ed401e93799",
+   "params_patched": "2a7ca3d95d79"
+  },
+  "Diagnostic Call openrouter": {
+   "field": "jsonBody",
+   "copies": 1,
+   "params_base": "4d1a1820972d",
+   "params_patched": "f5a37496772c"
+  },
+  "Verdict Call openrouter": {
+   "field": "jsonBody",
+   "copies": 1,
+   "params_base": "68ce7dae63fd",
+   "params_patched": "07dcb1da01d5"
+  },
+  "Panel Reserve openrouter": {
+   "field": "jsonBody",
+   "copies": 1,
+   "params_base": "c644836f61c6",
+   "params_patched": "de8c0c4adaa9"
+  },
+  "Cure Call openrouter": {
+   "field": "jsonBody",
+   "copies": 1,
+   "params_base": "cc1abe0499e1",
+   "params_patched": "da5ccccabd2e"
+  },
+  "Panel Cure Call 1 openrouter": {
+   "field": "jsonBody",
+   "copies": 1,
+   "params_base": "e554452d3a58",
+   "params_patched": "13f5d394e27a"
+  },
+  "Panel Cure Call 2 openrouter": {
+   "field": "jsonBody",
+   "copies": 1,
+   "params_base": "a9d6311ccc6e",
+   "params_patched": "e127715a542a"
+  },
+  "Panel Cure Call 3 openrouter": {
+   "field": "jsonBody",
+   "copies": 1,
+   "params_base": "a9871b6b8afb",
+   "params_patched": "7a3d9cf2a486"
+  },
+  "Alternate Call openrouter": {
+   "field": "jsonBody",
+   "copies": 1,
+   "params_base": "69db6142ec0f",
+   "params_patched": "5a95e020888c"
+  },
+  "Alternate Cure Call openrouter": {
+   "field": "jsonBody",
+   "copies": 1,
+   "params_base": "6e1f83db6402",
+   "params_patched": "7c3e07295c44"
+  },
+  "D4 Call openrouter": {
+   "field": "jsonBody",
+   "copies": 1,
+   "params_base": "cdee3100ddd3",
+   "params_patched": "d27494ad9352"
+  },
+  "C4 Call openrouter": {
+   "field": "jsonBody",
+   "copies": 1,
+   "params_base": "75d3a5bcf2d7",
+   "params_patched": "452891737333"
+  },
+  "Accept Call openrouter": {
+   "field": "jsonBody",
+   "copies": 1,
+   "params_base": "90015cffd607",
+   "params_patched": "4e95fa7ced5e"
+  },
+  "Accept Return Call openrouter": {
+   "field": "jsonBody",
+   "copies": 1,
+   "params_base": "f7d10ccb8443",
+   "params_patched": "ac76b187c838"
+  },
+  "QR Ask": {
+   "field": "jsonBody",
+   "copies": 1,
+   "params_base": "a00f4d05b2f5",
+   "params_patched": "7a09e0b7ced8"
+  },
+  "QR Retry Ask": {
+   "field": "jsonBody",
+   "copies": 1,
+   "params_base": "45ea01422702",
+   "params_patched": "1b5aeebc5503"
+  },
+  "QR Answer": {
+   "field": "jsonBody",
+   "copies": 1,
+   "params_base": "29dbc727974d",
+   "params_patched": "6912b39ffb2f"
+  },
+  "Send Back Call openrouter": {
+   "field": "jsonBody",
+   "copies": 1,
+   "params_base": "f9a41f5a18ee",
+   "params_patched": "dba5364f3e72"
+  },
+  "Gate Call openrouter": {
+   "field": "jsonBody",
+   "copies": 1,
+   "params_base": "03b7f8f8a616",
+   "params_patched": "650e52e66efd"
+  },
+  "Alt Send Back Call openrouter": {
+   "field": "jsonBody",
+   "copies": 1,
+   "params_base": "f9a41f5a18ee",
+   "params_patched": "dba5364f3e72"
+  },
+  "Alt Gate Call openrouter": {
+   "field": "jsonBody",
+   "copies": 1,
+   "params_base": "e4dfb00a24dd",
+   "params_patched": "024f6fe13dc8"
+  },
+  "C4G Call openrouter": {
+   "field": "jsonBody",
+   "copies": 1,
+   "params_base": "75d3a5bcf2d7",
+   "params_patched": "452891737333"
+  },
+  "C3G Call openrouter": {
+   "field": "jsonBody",
+   "copies": 1,
+   "params_base": "d2fbe32c52ba",
+   "params_patched": "6e4b63e251a6"
+  },
+  "C1B Call openrouter": {
+   "field": "jsonBody",
+   "copies": 1,
+   "params_base": "0bbbeee31993",
+   "params_patched": "842ab8496281"
+  },
+  "D2B Call openrouter": {
+   "field": "jsonBody",
+   "copies": 1,
+   "params_base": "f4824109d224",
+   "params_patched": "df57508dd282"
+  },
+  "C2B Call openrouter": {
+   "field": "jsonBody",
+   "copies": 1,
+   "params_base": "357b1c1c654d",
+   "params_patched": "72d5a278e6e5"
+  },
+  "D3B Call openrouter": {
+   "field": "jsonBody",
+   "copies": 1,
+   "params_base": "d061e969a5e1",
+   "params_patched": "6718af0825ac"
+  },
+  "C3B Call openrouter": {
+   "field": "jsonBody",
+   "copies": 1,
+   "params_base": "d2fbe32c52ba",
+   "params_patched": "6e4b63e251a6"
+  },
+  "D4B Call openrouter": {
+   "field": "jsonBody",
+   "copies": 1,
+   "params_base": "cdee3100ddd3",
+   "params_patched": "d27494ad9352"
+  },
+  "C4B Call openrouter": {
+   "field": "jsonBody",
+   "copies": 1,
+   "params_base": "75d3a5bcf2d7",
+   "params_patched": "452891737333"
+  },
+  "Panel Judges Prep": {
+   "field": "jsCode",
+   "copies": 3,
+   "params_base": "8bc4889d876c",
+   "params_patched": "ad5b3d52d6bf"
+  }
+ }
+}

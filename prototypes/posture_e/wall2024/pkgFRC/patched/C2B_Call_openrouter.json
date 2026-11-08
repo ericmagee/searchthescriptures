@@ -1,0 +1,22 @@
+{
+ "method": "POST",
+ "url": "https://openrouter.ai/api/v1/chat/completions",
+ "authentication": "genericCredentialType",
+ "genericAuthType": "httpHeaderAuth",
+ "sendBody": true,
+ "specifyBody": "json",
+ "jsonBody": "={{ (__b=>{if(!__b||typeof __b!=='object')return __b;let o=__b;const md=String(o.model||'');if(/^z-ai\\//.test(md))o=Object.assign({},o,{provider:{order:['z-ai'],allow_fallbacks:false} });if(/^(?:qwen\\/qwen3\\.8-flash|z-ai\\/glm-5\\.3-flash)$/.test(md)&&!o.reasoning)o=Object.assign({},o,{reasoning:{max_tokens:24000} });if(/^(?:google|qwen|openai|anthropic)\\//.test(md)&&Array.isArray(o.messages)){let k=-1,L=0;o.messages.forEach((m,i)=>{if(m&&m.role==='user'&&typeof m.content==='string'&&m.content.length>L){L=m.content.length;k=i;} });if(k>=0)o=Object.assign({},o,{messages:o.messages.map((m,i)=>i===k?{role:m.role,content:[{type:'text',text:m.content,cache_control:{type:'ephemeral'} }]}:m)});}if(/^x-ai\\//.test(md)&&Array.isArray(o.messages)){const XR=new Map();for(const xn of [\"D1 Call openrouter\", \"C1 Call openrouter\", \"D2 Call openrouter\", \"D3 Call openrouter\", \"C3 Call openrouter\", \"Panel Judge 2 openrouter\", \"Panel Judge 3 openrouter\", \"Synthesis Call openrouter\", \"Diagnostic Call openrouter\", \"Verdict Call openrouter\", \"Panel Judge 1 openrouter\", \"Panel Reserve openrouter\", \"Cure Call openrouter\", \"Panel Cure Call 1 openrouter\", \"Panel Cure Call 2 openrouter\", \"Panel Cure Call 3 openrouter\", \"Alternate Call openrouter\", \"Alternate Cure Call openrouter\", \"D4 Call openrouter\", \"C4 Call openrouter\", \"Accept Call openrouter\", \"Accept Return Call openrouter\", \"QR Ask\", \"QR Retry Ask\", \"QR Answer\", \"Send Back Call openrouter\"]){let xa=[];try{if(!$(xn).isExecuted)continue;xa=$(xn).all();}catch(xe){continue;}for(const xi of xa){const xj=(xi&&xi.json)||{};if(!/^x-ai\\//.test(String(xj.model||'')))continue;for(const xc of (xj.choices||[])){const xm=xc&&xc.message;if(xm&&typeof xm.content==='string'&&Array.isArray(xm.reasoning_details)&&xm.reasoning_details.length)XR.set(xm.content,xm.reasoning_details);} } }if(XR.size)o=Object.assign({},o,{messages:o.messages.map(m=>(m&&m.role==='assistant'&&typeof m.content==='string'&&!m.reasoning_details&&XR.has(m.content))?Object.assign({},m,{reasoning_details:XR.get(m.content)}):m)});}return o;})($json.call.body) }}",
+ "options": {
+  "timeout": 900000
+ },
+ "sendHeaders": true,
+ "specifyHeaders": "keypair",
+ "headerParameters": {
+  "parameters": [
+   {
+    "name": "x-grok-conv-id",
+    "value": "={{ \"odv1-\" + $execution.id }}"
+   }
+  ]
+ }
+}
