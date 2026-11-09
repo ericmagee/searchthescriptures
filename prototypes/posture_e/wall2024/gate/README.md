@@ -62,6 +62,8 @@ The exit code is 0 only on `GATE PASS`.
 - `expect` is `{"eq":...}` or `{"re":...}`. A check must match at least one row, and every matched row must satisfy it.
 - **Every seat adds its probes here.** That is the shared trick-line set (W3 3).
 
+**Rule for packages (W3 3655).** A change on a path that no saved run reaches passes the gate, because no output changes. A package must therefore bring a near-miss case for every path it changes that the saved runs never use.
+
 **Limits.**
 - A chain that passes through a non-library node (for example Gate Build -> Gate Call -> Gate Record) is not recomputed past that node (W4, 3647). A targeted change upstream does not show its effect on a library node reached that way; an untargeted change still fails at the first library node it changes.
 - Keys named at, created_at and t0 are ignored everywhere (timestamps).
