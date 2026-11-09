@@ -1,0 +1,3 @@
+gate/replay: base pkgLIB/strip_FUM, cand pkgLIB/strip_RPN, fetch-back fetchback_live_s78.json, 30 library nodes, 46 saved runs, 0 near-miss cases, time limit 60000 ms per node run
+node runs 616, byte-equal or same error 616, target item changes 0, near-miss checks passed 0
+GATE PASS

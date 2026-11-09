@@ -1,0 +1,13 @@
+gate/replay: base pkgLIB/strip_CJR, cand pkgLIB/strip_CJR_KRC, fetch-back fetchback_live_s78.json, 30 library nodes, 1 saved runs, 0 near-miss cases, time limit 60000 ms per node run
+FAIL run 34016 Panel Cure Check unasked item changed: K-RUL luna keystone: status "UNCURED" -> "CURED"; why "no written response" -> "a valid ruling card for keystone"
+FAIL run 34016 Panel Cure Check unasked item changed: K-RUL luna keystone: cure_status "UNCURED" -> "CURED"; cure_reason "TRIAL rule, NO WRITTEN RESPONSE: counts in drv_uncured like -> "TRIAL rule (recorded and answered; it removes no seat): a v
+FAIL run 34016 Panel Cure Check: output changed outside item rows at [0].json.bodies[0]<json>.payload.verdict_raw: - [AUDIT v21: DEBATE RULE VIOLATION REPORT -- SEAT: luna; ITEM: keystone; RULE: K-RUL; RESULT: UNCURED; WHY: TRIAL rule, NO WRITTEN RESPONSE: counts in drv_uncured like a LIVE item (silence count): no
+FAIL run 34016 Panel Cure Check: output changed outside item rows at [0].json.bodies[0]<json>.payload.verdict_raw: + [AUDIT v21: DEBATE RULE VIOLATION REPORT -- SEAT: luna; ITEM: keystone; RULE: K-RUL; RESULT: CURED; WHY: TRIAL rule (recorded and answered; it removes no seat): a valid ruling card for keystone; LIN
+FAIL run 34016 Panel Cure Check: output changed outside item rows at [0].json.bodies[0]<json>.payload.drv_uncured: - 2
+FAIL run 34016 Panel Cure Check: output changed outside item rows at [0].json.bodies[0]<json>.payload.drv_uncured: + 1
+FAIL run 34016 Alternate Merge Seat unasked item changed: K-RUL luna keystone: status "UNCURED" -> "CURED"; why "no written response" -> "a valid ruling card for keystone"
+FAIL run 34016 Alternate Merge Seat unasked item changed: K-RUL luna keystone: cure_status "UNCURED" -> "CURED"; cure_reason "TRIAL rule, NO WRITTEN RESPONSE: counts in drv_uncured like -> "TRIAL rule (recorded and answered; it removes no seat): a v
+FAIL run 34016 Alternate Merge 1 unasked item changed: K-RUL luna keystone: status "UNCURED" -> "CURED"; why "no written response" -> "a valid ruling card for keystone"
+FAIL run 34016 Alternate Merge 1 unasked item changed: K-RUL luna keystone: cure_status "UNCURED" -> "CURED"; cure_reason "TRIAL rule, NO WRITTEN RESPONSE: counts in drv_uncured like -> "TRIAL rule (recorded and answered; it removes no seat): a v
+node runs 20, byte-equal or same error 17, target item changes 0, near-miss checks passed 0
+GATE FAIL (10)

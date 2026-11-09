@@ -283,9 +283,10 @@
   "say": "terra D3 #3 answered NOT HELD without quoting the flagged sentence: not cured (NO QUOTE); every other terra item reads as before",
   "edits": [
    {
-    "find": "\"I grant that the verbs elsewhere carry power and presence\" grants their use elsewhere",
+    "find": "\\\\\"I grant that the verbs elsewhere carry power and presence\\\\\" grants their use elsewhere",
     "replace": "the grant concerns other uses of the verbs",
-    "where": "I grant that the verbs elsewhere carry power and presence"
+    "where": "I grant that the verbs elsewhere carry power and presence",
+    "note": "the reply content holds JSON, so its quotation marks are backslash-escaped inside the string"
    }
   ],
   "targets": {

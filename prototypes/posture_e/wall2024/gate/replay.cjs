@@ -1,6 +1,6 @@
 // gate/replay.cjs: the one required replay gate for every library change (W1, item 2 of the list Eric approved 11-09, Wall 3627).
 // Usage (from wall2024/):
-//   node gate/replay.cjs --base pkgLIB/strip_A --cand pkgLIB/strip_B [--targets pkgX/targets.json] [--ms 60000] [--jobs 4] [--runs 34016,33846]
+//   node gate/replay.cjs --base pkgLIB/strip_A --cand pkgLIB/strip_B [--targets pkgX/targets.json] [--ms 60000] [--jobs 4] [--runs 34016,33846 | none]
 //        [--fb <fetchback>] [--cases gate/cases] [--out pkgX/gate_B.txt]
 // What it does, for every saved run in /mnt/project-files/wall2024/inputs (a run with an <run>_index.json) and every near-miss case:
 //  1. CHAIN REPLAY. The library nodes (the strip folder's 30 sources) run in dependency order on the run's saved inputs, once with the base sources
@@ -35,7 +35,7 @@ if(isMainThread){
  const FEED={};const DEP={};for(const nm of LIB){FEED[nm]=feeders(nm);const reads=new Set();for(const s of [src[nm].base,src[nm].cand])if(s)for(const m of s.matchAll(/\$\('([^']+)'\)/g))reads.add(m[1]);
   DEP[nm]=[...new Set([...FEED[nm],...reads])].filter(x=>x!==nm&&LIB.includes(x));}
  const ORDER=[];const seen=new Set(),on=new Set();const visit=n=>{if(seen.has(n))return;if(on.has(n))return;on.add(n);DEP[n].forEach(visit);on.delete(n);seen.add(n);ORDER.push(n);};LIB.forEach(visit);
- const runs=(A.runs?A.runs.split(','):fs.readdirSync(D).filter(f=>/^\d+_index\.json$/.test(f)).map(f=>f.split('_')[0])).sort();
+ const runs=(A.runs==='none'?[]:A.runs?A.runs.split(','):fs.readdirSync(D).filter(f=>/^\d+_index\.json$/.test(f)).map(f=>f.split('_')[0])).sort();
  const CD=A.cases||W+'/gate/cases';const cases=fs.existsSync(CD)?fs.readdirSync(CD).filter(f=>f.endsWith('.json')).sort().flatMap(f=>JSON.parse(fs.readFileSync(CD+'/'+f,'utf8')).map(c=>({...c,file:f}))):[];
  const jobs=[...runs.map(r=>({kind:'run',run:r,id:r})),...cases.map(c=>({kind:'case',run:c.run,id:c.file+' '+c.id,edits:c.edits,checks:c.checks,targets:c.targets||null}))];
  const out=[];const log=s=>{out.push(s);console.log(s);};let fails=0;const F=m=>{fails++;log('FAIL '+m);};

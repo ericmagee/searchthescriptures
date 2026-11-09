@@ -1,0 +1,30 @@
+gate/replay: base pkgLIB/strip_CJR, cand pkgLIB/strip_CJR_KRC, fetch-back fetchback_live_s78.json, 30 library nodes, 46 saved runs, 10 near-miss cases, time limit 60000 ms per node run
+   info case w1_cases.json KRC-A-33506: 70 changed item rows or text lines (the case sets no targets, so its checks decide)
+OK   case w1_cases.json KRC-A-33506:  [Cure Check K-RUL  status = CURED]: cand CURED; base UNCURED
+OK   case w1_cases.json KRC-A-33506:  [Cure Check K-RUL  why ~/valid ruling card/]: cand a valid ruling card for keystone; base no written response
+OK   case w1_cases.json KRC-B-33506:  [Cure Check K-RUL  status = UNCURED]: cand UNCURED | UNCURED; base UNCURED | UNCURED
+   info case w1_cases.json KRC-A-33627: 33 changed item rows or text lines (the case sets no targets, so its checks decide)
+OK   case w1_cases.json KRC-A-33627:  [Cure Check K-RUL  status = CURED]: cand CURED | CURED | CURED | CURED | CURED | CURED; base UNCURED | UNCURED | UNCURED | UNCURED | UNCURED | UNCURED
+OK   case w1_cases.json KRC-A-33627:  [Cure Check K-RUL  why ~/valid ruling card/]: cand a valid ruling card for keystone | a valid ruling card for D1 vs C2 | a valid ruling card for D2 vs C3 | a valid ruling card for D3 vs C4 | a valid ruling card for D4 vs C5 | a valid ruling card for D5 vs C1; base no written response | no written response | no written response | no written response | no written response | no written response
+OK   case w1_cases.json KRC-B-33627:  [Cure Check K-RUL  status = UNCURED]: cand UNCURED | UNCURED | UNCURED | UNCURED | UNCURED | UNCURED; base UNCURED | UNCURED | UNCURED | UNCURED | UNCURED | UNCURED
+   info case w1_cases.json KRC-A-33644: 46 changed item rows or text lines (the case sets no targets, so its checks decide)
+OK   case w1_cases.json KRC-A-33644:  [Cure Check K-RUL  status = CURED]: cand CURED | CURED | CURED | CURED | CURED; base UNCURED | UNCURED | UNCURED | UNCURED | UNCURED
+OK   case w1_cases.json KRC-A-33644:  [Cure Check K-RUL  why ~/valid ruling card/]: cand a valid ruling card for D1 vs C2 | a valid ruling card for D3 vs C3 | a valid ruling card for D4 vs C5 | a valid ruling card for D5 vs C4 | a valid ruling card for D6 vs C1; base no written response | no written response | no written response | no written response | no written response
+OK   case w1_cases.json KRC-B-33644:  [Cure Check K-RUL  status = UNCURED]: cand UNCURED | UNCURED | UNCURED | UNCURED | UNCURED | UNCURED | UNCURED; base UNCURED | UNCURED | UNCURED | UNCURED | UNCURED | UNCURED | UNCURED
+   info case w1_cases.json KRC-A-33846: 37 changed item rows or text lines (the case sets no targets, so its checks decide)
+OK   case w1_cases.json KRC-A-33846:  [Panel Cure Check K-RUL  status = CURED]: cand CURED | CURED | CURED | CURED; base UNCURED | UNCURED | UNCURED | UNCURED
+OK   case w1_cases.json KRC-A-33846:  [Panel Cure Check K-RUL  why ~/valid ruling card/]: cand a valid ruling card for CHALLENGER premise 2 | a valid ruling card for CHALLENGER premise 6 | a valid ruling card for D2 vs C2 | a valid ruling card for D6 vs C6; base no written response | no written response | no written response | no written response
+OK   case w1_cases.json KRC-B-33846:  [Panel Cure Check K-RUL  status = UNCURED]: cand UNCURED | UNCURED | UNCURED | UNCURED | UNCURED | UNCURED | UNCURED | UNCURED | UNCURED | UNCURED | UNCURED | UNCURED; base UNCURED | UNCURED | UNCURED | UNCURED | UNCURED | UNCURED | UNCURED | UNCURED | UNCURED | UNCURED | UNCURED | UNCURED
+   info case w1_cases.json KRC-34016-luna: 10 changed item rows or text lines (the case sets no targets, so its checks decide)
+OK   case w1_cases.json KRC-34016-luna:  [Panel Cure Check K-RUL ^keystone$ cure_status = CURED]: cand CURED; base UNCURED
+OK   case w1_cases.json KRC-34016-luna:  [Panel Cure Check K-W CHALLENGER DR3 LINK 3 #3 cure_status = UNCURED]: cand UNCURED; base UNCURED
+   target case w1_cases.json QUOTE-34016-terra Panel Cure Check K-RUL luna keystone: status "UNCURED" -> "CURED"; why "no written response" -> "a valid ruling card for keystone"
+   target case w1_cases.json QUOTE-34016-terra Panel Cure Check K-RUL luna keystone: cure_status "UNCURED" -> "CURED"; cure_reason "TRIAL rule, NO WRITTEN RESPONSE: counts in drv_uncured like -> "TRIAL rule (recorded and answered; it removes no seat): a v
+   target case w1_cases.json QUOTE-34016-terra Panel Cure Check: 4 changed text line(s) match allow_lines
+   target case w1_cases.json QUOTE-34016-terra Alternate Merge Seat K-RUL luna keystone: status "UNCURED" -> "CURED"; why "no written response" -> "a valid ruling card for keystone"
+   target case w1_cases.json QUOTE-34016-terra Alternate Merge Seat K-RUL luna keystone: cure_status "UNCURED" -> "CURED"; cure_reason "TRIAL rule, NO WRITTEN RESPONSE: counts in drv_uncured like -> "TRIAL rule (recorded and answered; it removes no seat): a v
+   target case w1_cases.json QUOTE-34016-terra Alternate Merge 1 K-RUL luna keystone: status "UNCURED" -> "CURED"; why "no written response" -> "a valid ruling card for keystone"
+   target case w1_cases.json QUOTE-34016-terra Alternate Merge 1 K-RUL luna keystone: cure_status "UNCURED" -> "CURED"; cure_reason "TRIAL rule, NO WRITTEN RESPONSE: counts in drv_uncured like -> "TRIAL rule (recorded and answered; it removes no seat): a v
+OK   case w1_cases.json QUOTE-34016-terra:  [Panel Cure Check  ^DEFENDER CR2 D3 #3$ cure_status ~/^UNCURED$/]: cand UNCURED; base UNCURED
+node runs 804, byte-equal or same error 787, target item changes 6, near-miss checks passed 15
+GATE PASS

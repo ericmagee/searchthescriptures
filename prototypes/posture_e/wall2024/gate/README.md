@@ -70,6 +70,8 @@ The exit code is 0 only on `GATE PASS`.
 - `gate_FUM_self.txt`: base and candidate are the same, so the gate passes.
 - `gate_KRC_*.txt`: on 34016, KRC's luna keystone change is caught in Panel Cure Check, Alternate Merge Seat and Alternate Merge 1. It fails without targets and passes with `targets_KRC.json`.
 - An endless loop is stopped at the limit and reported as `TIMEOUT ... Panel Cure Check (cand)`.
+- `gate_KRC_full.txt`: all 46 saved runs and 10 cases, with targets: PASS (804 node runs, 787 byte-equal or same error, 6 target item changes, 15 checks).
+- `gate_RPN_grade.txt`: pkgRPN (base strip_FUM): 616 node runs, all byte-equal: PASS.
 
 ## Item 6: one library source in the build tree
 
