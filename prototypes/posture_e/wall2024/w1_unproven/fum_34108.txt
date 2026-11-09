@@ -1,0 +1,15 @@
+OK   0 34108 luna as stored: no follow-up (FUM did not fire in 34108; the stored FUM Needed? nodes took the false branch)
+OK   1 CATCH: a K-W line left out: the follow-up asks for it alone (NO LINE) :: ["NO LINE K-W DEFENDER CR3 LINK 1 #6: [CR3] LINK 1: \"I grant that this i"]
+     without a follow-up answer it reads UNCURED (stored reply: CURED)
+OK   1b the follow-up answered: that item CURED, every other luna item as stored, no second ask
+OK   1c the follow-up call fails: the first reply is read as before, nothing asked again
+OK   1d the follow-up again gives no line: UNCURED, and no second follow-up (asked once) :: UNCURED
+OK   2 CATCH: a K-W NOT HELD reason with the quote taken out: asked for the quote (NO QUOTE) :: ["NO QUOTE K-W DEFENDER CR3 LINK 1 #7: [CR3] LINK 1: \"I grant the legal "]
+     3 PROBE a three-word fragment of the flagged sentence as the quote: asked ["NO QUOTE K-W DEFENDER CR3 LINK 1 #7: [CR3] LINK 1: \"I grant the legal "]; status UNCURED
+     4 PROBE the reason quotes a different sentence of the same round (item #6’s): asked ["NO QUOTE K-W DEFENDER CR3 LINK 1 #7: [CR3] LINK 1: \"I grant the legal "]; status UNCURED
+     5 PROBE a malformed line (no colon, dash for bar): asked ["NO LINE K-W DEFENDER CR3 LINK 1 #8: [CR3] LINK 1: \"I grant the present"]; status UNCURED
+     6 PROBE a K-S line left out (rule outside K-W/K-CON/K-S3): asked ["NO LINE K-S D6 vs C5: D6 vs C5 (Romans 1:3): UNDERDETERMINED -- the fl"]; status UNCURED
+     7 PROBE a K-C NOT HELD with no quote and no reason of substance: not asked (by design only K-W, K-CON, K-S3 are asked for a quote); status CURED
+     8 PROBE a K-S3 TOUCHES NO LINK answer with no quote (only NOT HELD is asked for a quote): not asked; status UNCURED
+
+fum_34108: 6 OK, 0 FAIL

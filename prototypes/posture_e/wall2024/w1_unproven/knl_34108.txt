@@ -1,0 +1,19 @@
+     baseline luna items: 24
+OK   CATCH "FORCED: none graded.": no K-F or K-CMT item :: {"added":[],"dropped":[]}
+OK   CATCH "FORCED: none.": no K-F or K-CMT item :: {"added":[],"dropped":[]}
+OK   CATCH "**FORCED:** none": no K-F or K-CMT item :: {"added":[],"dropped":[]}
+OK   CATCH "FORCED (Commitment 6): none": no K-F or K-CMT item :: {"added":[],"dropped":[]}
+OK   CATCH "FORCED: no links are forced": no K-F or K-CMT item :: {"added":[],"dropped":[]}
+OK   CATCH "FORCED: N/A": no K-F or K-CMT item :: {"added":[],"dropped":[]}
+OK   CATCH "FORCED: none, except D6 vs C5, which the challenger forced": still checked (K-F or K-CMT raised) :: ["K-F D6 vs C5","K-CMT contested grades without a commitment","K-CMTL line 1"]
+OK   CATCH "FORCED: D1 vs C1 is forced because the reading cannot fit": still checked (K-F or K-CMT raised) :: ["K-F D1 vs C1","K-CMT contested grades without a commitment","K-CMTL line 1"]
+     D1 vs C1 set to DEFENDER LINK BROKEN, no FORCED line: added ["K-G4 D1 vs C1","K-G3 ","K-G7 D1 vs C1","K-RUL D1 vs C1"]
+OK   CATCH a BROKEN line with "FORCED: none graded." raises the same items as with no FORCED line (the none line hides nothing) :: ["K-G3 ","K-G4 D1 vs C1","K-G7 D1 vs C1","K-RUL D1 vs C1"]
+     PROBE "Forced: none": no item
+     PROBE "FORCED LINES: none": raises ["K-CMT contested grades without a commitment","K-CMTL line 1"]
+     PROBE "FORCED: — none": raises ["K-F FORCED","K-CMT contested grades without a commitment","K-CMTL line 1"]
+     PROBE "FORCED: none (no link is graded broken)": raises ["K-F FORCED","K-CMT contested grades without a commitment","K-CMTL line 1"]
+     PROBE "FORCED: none of the collisions": raises ["K-F FORCED","K-CMT contested grades without a commitment","K-CMTL line 1"]
+     PROBE "FORCED: There are no forced links.": raises ["K-F FORCED","K-CMT contested grades without a commitment","K-CMTL line 1"]
+
+knl_34108: 9 OK, 0 FAIL
