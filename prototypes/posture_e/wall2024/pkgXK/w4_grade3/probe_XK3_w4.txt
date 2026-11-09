@@ -1,0 +1,9 @@
+OK   full valid reply: rev 3 equals rev 2
+OK   cut inside entry 3 (text holds { } " \ inside strings): keeps entries 1 and 2
+OK   cut inside entry 1: left as text (line reader fallback)
+OK   plain line reply: unchanged
+OK   other JSON naming cure_lines in a string: unchanged
+OK   cut entry missing text after a complete entry: keeps the complete one
+OK   complete entry with a wrong shape (no text): whole reply left as text
+OK   json fence, cut: salvaged
+TOTAL 8 OK, 0 FAIL
