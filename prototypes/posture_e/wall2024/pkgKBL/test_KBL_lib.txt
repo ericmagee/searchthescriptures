@@ -1,0 +1,22 @@
+replay: 928 node runs over 46 runs; byte-equal 919; changed 9
+   33345 Cure Check
+   33442 Extract Independent Verdict
+   33442 Panel Payloads
+   33461 Alt Gate Record
+   33497 Panel Cure Check
+   33682 Panel Cure Check
+   33705 Panel Payloads
+   33846 Panel Cure Check
+   33846 Panel Payloads
+K-B items gone or changed (base side): 3
+   33705 Panel Payloads CHALLENGER D3 vs C6 [L1]
+   33846 Panel Cure Check CHALLENGER D2 vs C2 UNCURED []
+   33846 Panel Payloads CHALLENGER D2 vs C2 [L1]
+K-B items new or changed (patched side): 1
+   33846 Panel Cure Check CHALLENGER D2 vs C2 CURED [L1,L3]
+cure flips: 2
+   33461 Alt Gate Record grok E-GATE G2 CONTRADICTION (E-GATE B): UNCURED -> CURED
+   33846 Panel Cure Check grok K-B D2 vs C2: UNCURED -> CURED
+uncured count changes: 0
+OK replay ran
+TOTAL 1 OK, 0 FAIL

@@ -1,0 +1,8 @@
+Panel Payloads (input Reserve Needed?): base K-B D2 vs C2 items 1 kinds ["L1"]; patched 0
+OK   base flags D2 vs C2 with kinds [L1] (the live misread)
+OK   patched raises no K-B item for D2 vs C2
+Panel Cure Check (input Panel Cure Needed?): base ["UNCURED: no written response []"] | patched ["CURED:  [\"L1\",\"L3\"]"]
+OK   base logs grok K-B UNCURED "no written response"
+OK   patched cures it from grok's RESTATED line
+   output outside the D2 vs C2 K-B item: differs (see replay)
+TOTAL 4 OK, 0 FAIL
