@@ -1,0 +1,8 @@
+OK [] -> ["L2"] | [L2] synerchomai (G4905, Cohabit conjugally)
+OK [] -> ["L2"] | [L2] synerchomai (Cohabit conjugally, G4905)
+OK [] -> ["L2"] | [L2] ginosko (G1097, "To know")
+OK ["L2"] -> ["L2"] | [L2] chen (H2580, grace)
+OK [] -> [] | [L2] chen (H2580)
+OK [] -> [] | with (G1097, To know)
+OK [] -> [] | Jesus (G2424, Saviour)
+TOTAL 7 OK, 0 FAIL
