@@ -535,7 +535,7 @@ const REFP=(()=>{const BOOKS="Genesis|Exodus|Leviticus|Numbers|Deuteronomy|Joshu
   return out;};
  const keys=(t,o)=>{const cap=(o&&o.cap)||30;const out=[];for(const r of parse(t,o)){const b=r.book||r.ctx;if(!b)continue;const z=r.v2-r.v1>cap?r.v1:r.v2;for(let v=r.v1;v<=z;v++)out.push({key:b+' '+r.c+':'+v,pos:r.at,ref:b+' '+r.label});}return out;};
  return {parse,keys,book,BK,BOOKS};})();
-const __orc=(b,fam,model,key)=>{if(fam!=='openrouter'||!b||!Array.isArray(b.messages))return b;const o={...b,session_id:String(key).slice(0,128)};if(/^(?:google|qwen)\//.test(String(model)))o.messages=b.messages.map(m=>m.role==='system'&&typeof m.content==='string'?{role:'system',content:[{type:'text',text:m.content,cache_control:{type:'ephemeral'}}]}:m);return o;};
+const __orc=(b,fam,model,key)=>{if(fam!=='openrouter'||!b||!Array.isArray(b.messages))return b;const o={...b,session_id:String(key).slice(0,128)};if(/^xiaomi\/mimo-v2\.6-pro$/.test(String(model))){o.max_tokens=131072;if(!o.reasoning)o.reasoning={effort:'medium'};} /* pkgJGR rev 5 (operator 07:46Z 11-09: "use max tokens for mimo and use medium effort"): mimo gets its maximum output, 131072 (Xiaomi, OpenRouter endpoints list 11-02), and medium effort; low effort still spent all 65,536 tokens (W4 3469) */if(/^(?:google|qwen)\//.test(String(model)))o.messages=b.messages.map(m=>m.role==='system'&&typeof m.content==='string'?{role:'system',content:[{type:'text',text:m.content,cache_control:{type:'ephemeral'}}]}:m);return o;};
 const KW_NH=true;
 const ENF_STATUS={'K-B':'LIVE','K-C':'LIVE','K-G1':'LIVE','K-G3':'LIVE','K-G4':'LIVE','K-G6':'LIVE','K-G7':'LIVE','K-G8':'LIVE','K-N':'LIVE','K-S':'LIVE','K-SC':'LIVE',
  'K-LB':'TRIAL','K-G9':'TRIAL','K-G10':'TRIAL','K-G11':'TRIAL','K-V':'LIVE','K-S2':'TRIAL','K-LXX':'TRIAL','K-P':'TRIAL','K-F':'LIVE','K-FC':'TRIAL','K-FF':'TRIAL','K-UNX':'TRIAL','K-R':'TRIAL','K-L2':'TRIAL','K-W':'LIVE','K-S3':'LIVE','C4-RENUM':'TRIAL','C4-PRESS':'TRIAL','K-CON':'LIVE','K-CMT':'LIVE','K-CMTL':'TRIAL','K-RUL':'TRIAL','K-KJV':'TRIAL','K-AG':'TRIAL'};
@@ -1693,7 +1693,7 @@ const used=[];const out=[];
 pay.forEach((p,i)=>{if(!QA&&!((p.drv_uncured||0)>0))return;if(__A2R&&(__A2R.seats||[]).indexOf(p.judge_seat)<0)return; /* pkgA2R */
  const sum=(PP.summary||[])[i]||{};const src=(sum.substitute&&R)?R:(P.judges||[])[i];
  const base={idx:i,removed_seat:p.judge_seat,removed_api_model:p.judge_api_model,qualify:!!QA};
- const why=a=>{if(deb.some(d=>d.model===a.api_model||d.family===a.family))return 'G1 (family, 6993): '+a.family+' debates in this debate';
+ const why=a=>{if(deb.some(d=>d.model===a.api_model||(d.family===a.family&&a.api_model!=='anthropic/claude-haiku-5.5')))return 'G1 (family, 6993; pkgJGR rev 6: haiku exempt, operator 08:34Z 11-09): '+a.family+' debates in this debate';
   if(a.api_model===p.judge_api_model)return 'G2: '+a.api_model+' is the model of the seat it replaces';
   if(!QA&&pay.some(q=>q.judge_api_model===a.api_model))return 'G3: '+a.api_model+' already sits on this panel';
   if(__A2R&&(__A2R.tried||[]).indexOf(a.api_model)>=0)return 'G5 (pkgA2R): '+a.api_model+' was tried in the first alternate round'; /* pkgA2R */
