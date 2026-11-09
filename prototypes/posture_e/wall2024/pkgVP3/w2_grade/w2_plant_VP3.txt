@@ -1,0 +1,44 @@
+
+T1 bare grant only, terra KEEP with no quote
+     live cure_status UNCURED | package cure_status UNCURED
+     TRIAL pkgVP3: TWO READERS AGREE on Luke 1:34 ([CR3] Luke 1:34: no layer of its own; only grant: "I grant the present tense states her state when the angel spoke.") -- WOULD REMOVE chatgpt: the reply (KEEP) keeps the grade and the live cure reading is UNCURED; record-only, no seat removed
+     vp3_trial {"status":"TRIAL","checked":5,"agree":3,"would_remove":{"chatgpt":["S1 (E-ANS ANSWER CHECK Luke 1:34 [CR3])"]}}
+OK   T1 bare grant only, terra KEEP with no quote: cure_status unchanged by the package
+OK   T1 bare grant only, terra KEEP with no quote: LISTED (WOULD REMOVE chatgpt)
+
+T2 grant + deferral to a LINK 4 of under 25 words, terra KEEP
+     live cure_status UNCURED | package cure_status UNCURED
+     TRIAL pkgVP3: TWO READERS AGREE on Luke 1:34 ([CR3] Luke 1:34: no layer of its own; only grant and deferral: "I grant the present tense states her state when the angel spoke. I answer it fully under LINK 4.") -- WOULD REMOVE chatgpt: the reply (KEEP) keeps the grade and the live cure reading is UNCURED; record-only, no seat remo
+     vp3_trial {"status":"TRIAL","checked":5,"agree":3,"would_remove":{"chatgpt":["S1 (E-ANS ANSWER CHECK Luke 1:34 [CR3])"],"sol":["S1 (E-ANS ANSWER CHECK Luke 1:34 [CR3])"]}}
+OK   T2 grant + deferral to a LINK 4 of under 25 words, terra KEEP: cure_status unchanged by the package
+OK   T2 grant + deferral to a LINK 4 of under 25 words, terra KEEP: LISTED (WOULD REMOVE chatgpt)
+
+T3 control: same bare rounds, terra CHANGE TO MISSES
+     live cure_status CURED | package cure_status CURED
+     TRIAL pkgVP3: TWO READERS AGREE on Luke 1:34 ([CR3] Luke 1:34: no layer of its own; only grant: "I grant the present tense states her state when the angel spoke.") -- CURED by the reply (CHANGE); record-only, no seat removed
+     vp3_trial {"status":"TRIAL","checked":5,"agree":3,"would_remove":{}}
+OK   T3 control: same bare rounds, terra CHANGE TO MISSES: cure_status unchanged by the package
+OK   T3 control: same bare rounds, terra CHANGE TO MISSES: not listed
+
+T4 control: deferral kept to the real layered LINK 4 (verse name reworded), terra KEEP
+     live cure_status UNCURED | package cure_status UNCURED
+     TRIAL pkgVP3: code check does not agree, not an item -- [CR3] the deferral to LINK 4 names an answer of 478 words with layers
+     vp3_trial {"status":"TRIAL","checked":5,"agree":0,"would_remove":{}}
+OK   T4 control: deferral kept to the real layered LINK 4 (verse name reworded), terra KEEP: cure_status unchanged by the package
+OK   T4 control: deferral kept to the real layered LINK 4 (verse name reworded), terra KEEP: not listed
+
+T6 gap check: deferral "in [CR4]", [CR4] answers with layers without naming the verse, terra KEEP
+     live cure_status UNCURED | package cure_status UNCURED
+     TRIAL pkgVP3: TWO READERS AGREE on Luke 1:34 ([CR3] Luke 1:34: no layer of its own; only grant and deferral: "I grant the present tense states her state when the angel spoke. I answer it fully in [CR4].") -- WOULD REMOVE chatgpt: the reply (KEEP) keeps the grade and the live cure reading is UNCURED; record-only, no seat removed
+     vp3_trial {"status":"TRIAL","checked":5,"agree":3,"would_remove":{"chatgpt":["S1 (E-ANS ANSWER CHECK Luke 1:34 [CR3])"]}}
+OK   T6 gap check: deferral "in [CR4]", [CR4] answers with layers without naming the verse, terra KEEP: cure_status unchanged by the package
+FAIL T6 gap check: deferral "in [CR4]", [CR4] answers with layers without naming the verse, terra KEEP: not listed
+
+T5 gap check: deferral to LINK 4, the layered LINK 4 block stands in [CR4] not [CR3], terra KEEP
+     live cure_status UNCURED | package cure_status UNCURED
+     TRIAL pkgVP3: TWO READERS AGREE on Luke 1:34 ([CR3] Luke 1:34: no layer of its own; only grant and deferral: "I grant the present tense states her state when the angel spoke. I answer it fully under LINK 4.") -- WOULD REMOVE chatgpt: the reply (KEEP) keeps the grade and the live cure reading is UNCURED; record-only, no seat remo
+     vp3_trial {"status":"TRIAL","checked":5,"agree":3,"would_remove":{"chatgpt":["S1 (E-ANS ANSWER CHECK Luke 1:34 [CR3])"],"sol":["S1 (E-ANS ANSWER CHECK Luke 1:34 [CR3])"]}}
+OK   T5 gap check: deferral to LINK 4, the layered LINK 4 block stands in [CR4] not [CR3], terra KEEP: cure_status unchanged by the package
+FAIL T5 gap check: deferral to LINK 4, the layered LINK 4 block stands in [CR4] not [CR3], terra KEEP: not listed
+
+10 OK, 2 FAIL
