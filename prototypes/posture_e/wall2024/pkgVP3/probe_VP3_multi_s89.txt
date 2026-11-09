@@ -1,0 +1,77 @@
+33218 Send Back Record: equal except VP3 notes | checked 48, agree 0, would remove {}
+33222 Send Back Record: not replayable (no data Judge Enforcer Record)
+33222 Alt Send Back Record: not replayable (no data Alt Judge Enforcer Record)
+33249 Send Back Record: not replayable (no data Judge Enforcer Record)
+33249 Alt Send Back Record: not replayable (no data Alt Judge Enforcer Record)
+33261 Send Back Record: not replayable (no data Judge Enforcer Record)
+33261 Alt Send Back Record: not replayable (no data Alt Judge Enforcer Record)
+33276 Send Back Record: not replayable (no data Judge Enforcer Record)
+33289 Send Back Record: not replayable (no data Judge Enforcer Record)
+33289 Alt Send Back Record: not replayable (no data Alt Judge Enforcer Record)
+33299 Send Back Record: not replayable (no data Judge Enforcer Record)
+33299 Alt Send Back Record: not replayable (no data Alt Judge Enforcer Record)
+33311 Send Back Record: not replayable (no data Judge Enforcer Record)
+33311 Alt Send Back Record: not replayable (no data Alt Judge Enforcer Record)
+33322 Send Back Record: not replayable (no data Judge Enforcer Record)
+33345 Send Back Record: not replayable (no data Judge Enforcer Record)
+33345 Alt Send Back Record: not replayable (no data Alt Judge Enforcer Record)
+33371 Send Back Record: equal except VP3 notes | checked 23, agree 0, would remove {}
+33371 Alt Send Back Record: equal except VP3 notes | checked 0, agree 0, would remove {}
+33389 Send Back Record: equal except VP3 notes | checked 13, agree 0, would remove {}
+33411 Send Back Record: equal except VP3 notes | checked 6, agree 0, would remove {}
+33411 Alt Send Back Record: equal except VP3 notes | checked 5, agree 0, would remove {}
+33430 Send Back Record: equal except VP3 notes | checked 6, agree 0, would remove {}
+33442 Send Back Record: equal except VP3 notes | checked 16, agree 0, would remove {}
+33442 Alt Send Back Record: equal except VP3 notes | checked 2, agree 0, would remove {}
+33461 Send Back Record: equal except VP3 notes | checked 22, agree 3, would remove {"sol":["S15 (E-ANS ANSWER CHECK Matthew 1:18 [CR3])"],"chatgpt":["S1 (E-ANS ANSWER CHECK Matthew 1:18 [CR3])"]}
+     sol E-ANS ANSWER CHECK Matthew 1:18 [CR3] |TRIAL pkgVP3: TWO READERS AGREE on Matthew 1:18 ([CR3] Matthew 1:18: no layer of its own; only grant: "I grant the finding preceded the taking.") -- WOULD REMOVE sol: the reply (CHANGE TO a line that still grades MEETS) keeps the grade; record-only, no seat removed
+     gemini E-ANS ANSWER CHECK Matthew 1:18 [CR3] |TRIAL pkgVP3: TWO READERS AGREE on Matthew 1:18 ([CR3] Matthew 1:18: no layer of its own; only grant: "I grant the finding preceded the taking.") -- CURED by the reply (CHANGE); record-only, no seat removed
+     chatgpt E-ANS ANSWER CHECK Matthew 1:18 [CR3] |TRIAL pkgVP3: TWO READERS AGREE on Matthew 1:18 ([CR3] Matthew 1:18: no layer of its own; only grant: "I grant the finding preceded the taking.") -- WOULD REMOVE chatgpt: the reply (CHANGE TO a line that still grades MEETS) keeps the grade; record-only, no seat removed
+33461 Alt Send Back Record: equal except VP3 notes | checked 5, agree 1, would remove {}
+     grok E-ANS ANSWER CHECK Matthew 1:18 [CR3] |TRIAL pkgVP3: TWO READERS AGREE on Matthew 1:18 ([CR3] Matthew 1:18: no layer of its own; only grant: "I grant the finding preceded the taking.") -- CURED by the reply (CHANGE); record-only, no seat removed
+33482 Send Back Record: equal except VP3 notes | checked 30, agree 0, would remove {}
+33482 Alt Send Back Record: equal except VP3 notes | checked 11, agree 0, would remove {}
+33490 Send Back Record: equal except VP3 notes | checked 8, agree 0, would remove {}
+33490 Alt Send Back Record: equal except VP3 notes | checked 2, agree 0, would remove {}
+33497 Send Back Record: equal except VP3 notes | checked 6, agree 0, would remove {}
+33506 Send Back Record: equal except VP3 notes | checked 11, agree 0, would remove {}
+33506 Alt Send Back Record: equal except VP3 notes | checked 4, agree 0, would remove {}
+33575 Send Back Record: equal except VP3 notes | checked 7, agree 0, would remove {}
+33592 Send Back Record: equal except VP3 notes | checked 8, agree 0, would remove {}
+33605 Send Back Record: equal except VP3 notes | checked 5, agree 0, would remove {}
+33617 Send Back Record: equal except VP3 notes | checked 28, agree 0, would remove {}
+33617 Alt Send Back Record: equal except VP3 notes | checked 7, agree 0, would remove {}
+33627 Send Back Record: equal except VP3 notes | checked 4, agree 0, would remove {}
+33627 Alt Send Back Record: equal except VP3 notes | checked 4, agree 0, would remove {}
+33644 Send Back Record: equal except VP3 notes | checked 9, agree 0, would remove {}
+33644 Alt Send Back Record: equal except VP3 notes | checked 0, agree 0, would remove {}
+33682 Send Back Record: equal except VP3 notes | checked 11, agree 0, would remove {}
+33705 Send Back Record: equal except VP3 notes | checked 30, agree 0, would remove {}
+33731 Send Back Record: equal except VP3 notes | checked 13, agree 0, would remove {}
+33731 Alt Send Back Record: equal except VP3 notes | checked 10, agree 0, would remove {}
+33750 Send Back Record: equal except VP3 notes | checked 8, agree 0, would remove {}
+33774 Send Back Record: equal except VP3 notes | checked 4, agree 0, would remove {}
+33798 Send Back Record: equal except VP3 notes | checked 21, agree 2, would remove {"chatgpt":["S3 (E-ANS ANSWER CHECK Job 14:1 [CR3])"]}
+     grok E-ANS ANSWER CHECK Job 14:1 [CR3] |TRIAL pkgVP3: TWO READERS AGREE on Job 14:1 ([CR3] Job 14:1: no layer of its own; only grant: "I grant it is said of all men.") -- CURED by the reply (CHANGE); record-only, no seat removed
+     chatgpt E-ANS ANSWER CHECK Job 14:1 [CR3] |TRIAL pkgVP3: TWO READERS AGREE on Job 14:1 ([CR3] Job 14:1: no layer of its own; only grant: "I grant it is said of all men.") -- WOULD REMOVE chatgpt: the reply (CHANGE TO a line that still grades MEETS) keeps the grade; record-only, no seat removed
+33798 Alt Send Back Record: equal except VP3 notes | checked 6, agree 1, would remove {"sol":["S4 (E-ANS ANSWER CHECK Job 14:1 [CR3])"]}
+     sol E-ANS ANSWER CHECK Job 14:1 [CR3] |TRIAL pkgVP3: TWO READERS AGREE on Job 14:1 ([CR3] Job 14:1: no layer of its own; only grant: "I grant it is said of all men.") -- WOULD REMOVE sol: the reply (CHANGE TO a line that still grades MEETS) keeps the grade; record-only, no seat removed
+33815 Send Back Record: equal except VP3 notes | checked 7, agree 0, would remove {}
+33828 Send Back Record: equal except VP3 notes | checked 7, agree 0, would remove {}
+33828 Alt Send Back Record: equal except VP3 notes | checked 1, agree 0, would remove {}
+33846 Send Back Record: equal except VP3 notes | checked 17, agree 0, would remove {}
+33846 Alt Send Back Record: equal except VP3 notes | checked 5, agree 0, would remove {}
+34016 Send Back Record: equal except VP3 notes | checked 17, agree 6, would remove {"chatgpt":["S1 (E-ANS ANSWER CHECK Matthew 1:25 [CR3])","S2 (E-ANS ANSWER CHECK Luke 2:44 [CR3])"],"sol":["S1 (E-ANS ANSWER CHECK Matthew 1:25 [CR3])","S2 (E-ANS ANSWER CHECK Luke 2:44 [CR3])"]}
+     luna E-ANS ANSWER CHECK Matthew 1:25 [CR3] |TRIAL pkgVP3: TWO READERS AGREE on Matthew 1:25 ([CR3] Matthew 1:25: no layer of its own; only grant: "I grant it covers the taking to the birth.") -- CURED by the reply (CHANGE); record-only, no seat removed
+     luna E-ANS ANSWER CHECK Luke 2:44 [CR3] |TRIAL pkgVP3: TWO READERS AGREE on Luke 2:44 ([CR3] Luke 2:44: no layer of its own; only grant: "conceded that the thing wrong there was the place.") -- CURED by the reply (CHANGE); record-only, no seat removed
+     chatgpt E-ANS ANSWER CHECK Matthew 1:25 [CR3] |TRIAL pkgVP3: TWO READERS AGREE on Matthew 1:25 ([CR3] Matthew 1:25: no layer of its own; only grant: "I grant it covers the taking to the birth.") -- WOULD REMOVE chatgpt: the reply (CHANGE TO a line that still grades MEETS) keeps the grade; record-only, no seat removed
+     chatgpt E-ANS ANSWER CHECK Luke 2:44 [CR3] |TRIAL pkgVP3: TWO READERS AGREE on Luke 2:44 ([CR3] Luke 2:44: no layer of its own; only grant: "conceded that the thing wrong there was the place.") -- WOULD REMOVE chatgpt: the reply (CHANGE TO a line that still grades MEETS) keeps the grade; record-only, no seat removed
+     sol E-ANS ANSWER CHECK Matthew 1:25 [CR3] |TRIAL pkgVP3: TWO READERS AGREE on Matthew 1:25 ([CR3] Matthew 1:25: no layer of its own; only grant: "I grant it covers the taking to the birth.") -- WOULD REMOVE sol: the reply (CHANGE TO a line that still grades MEETS) keeps the grade; record-only, no seat removed
+     sol E-ANS ANSWER CHECK Luke 2:44 [CR3] |TRIAL pkgVP3: TWO READERS AGREE on Luke 2:44 ([CR3] Luke 2:44: no layer of its own; only grant: "conceded that the thing wrong there was the place.") -- WOULD REMOVE sol: the reply (CHANGE TO a line that still grades MEETS) keeps the grade; record-only, no seat removed
+34108 Send Back Record: equal except VP3 notes | checked 5, agree 4, would remove {"chatgpt":["S1 (E-ANS ANSWER CHECK Luke 1:34 [CR3])"],"sol":["S1 (E-ANS ANSWER CHECK Luke 1:34 [CR3])","S2 (E-HOLD COLLISION D1 vs C1)"]}
+     luna E-ANS ANSWER CHECK Luke 1:34 [CR3] |TRIAL pkgVP3: TWO READERS AGREE on Luke 1:34 ([CR3] Luke 1:34: no layer of its own; only grant and deferral: "I grant the present tense states her state when the angel spoke. I answer it fully under LINK 4.") -- CURED by the reply (CHANGE); record-only, no seat removed
+     chatgpt E-ANS ANSWER CHECK Luke 1:34 [CR3] |TRIAL pkgVP3: TWO READERS AGREE on Luke 1:34 ([CR3] Luke 1:34: no layer of its own; only grant and deferral: "I grant the present tense states her state when the angel spoke. I answer it fully under LINK 4.") -- WOULD REMOVE chatgpt: the reply (KEEP) keeps the grade; record-only, no seat removed
+     sol E-ANS ANSWER CHECK Luke 1:34 [CR3] |TRIAL pkgVP3: TWO READERS AGREE on Luke 1:34 ([CR3] Luke 1:34: no layer of its own; only grant and deferral: "I grant the present tense states her state when the angel spoke. I answer it fully under LINK 4.") -- WOULD REMOVE sol: the reply (CHANGE TO a line that still grades MEETS) keeps the grade; record-only, no seat removed
+     sol E-HOLD COLLISION D1 vs C1 |TRIAL pkgVP3: TWO READERS AGREE on Luke 1:34 ([CR3] Luke 1:34: no layer of its own; only grant and deferral: "I grant the present tense states her state when the angel spoke. I answer it fully under LINK 4.") -- WOULD REMOVE sol: the reply (CHANGE TO a line that still grades the link as held) keeps the grade; record-only, no sea
+
+TOTAL {"runs":42,"err":16,"eq":42,"notes":452,"agree":17,"would":11}
