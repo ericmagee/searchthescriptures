@@ -47,4 +47,9 @@ OK   3598-2: a "---" line inside the card: all fields kept
 OK   3599: fields in another order (APPLIED before NAMED BY): all kept
 OK   a K-G4 line inside the window is dropped; a field line past the 8-line window is dropped
 OK   krulCards reads the same four fields from the kept text as from the follow-up
-TOTAL 31 OK, 0 FAIL
+OK   3605-a: asked D1 vs C2, card "D1, D2 vs C2" also names the unasked D2 vs C2: not read
+OK   3605-b: asked D3 vs C1, card "keystone D3 vs C1" also names the unasked keystone: not read
+OK   3605-c: a card naming only the asked pair is read
+OK   a grouped card is read when every K-RUL item it names was asked
+OK   fum.others built (1 unasked K-RUL item(s) for luna) and carried by FUM Merge
+TOTAL 36 OK, 0 FAIL

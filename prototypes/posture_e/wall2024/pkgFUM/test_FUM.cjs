@@ -84,4 +84,13 @@ log('     Haiku asked: '+JSON.stringify(hb[0].json.fum&&hb[0].json.fum.asked.map
  T(k(['RULING -- D2 vs C2 -- STANDS','CLAIM: x','RESPONSE: K-G4 D2 vs C2 | RETRACTED','NAMED BY: y','RULE: z','APPLIED: w','x','x','x','CLAIM: late'].join('\n'),Rq)===['RULING -- D2 vs C2 -- STANDS','CLAIM: x','NAMED BY: y','RULE: z','APPLIED: w'].join('\n'),'a K-G4 line inside the window is dropped; a field line past the 8-line window is dropped');
  const t=R(B+'Panel_Cure_Normalize_1.js');const kc=new Function(t.slice(t.indexOf('function krulCards('),t.indexOf('function krulMatch('))+';return krulCards;')();
  const src=['RULING -- D2 vs C2 -- STANDS','RULE: z','CLAIM: x and','  wrapped','---','APPLIED: w','NAMED BY: y'].join('\n');const c1=kc(src)[0],c2=kc(k(src,Rq))[0];T(c1&&c2&&JSON.stringify(c1.f)===JSON.stringify(c2.f)&&Object.keys(c1.f).length===4,'krulCards reads the same four fields from the kept text as from the follow-up');}
+// 13. W2 3605: a grouped card or a keystone card that also names an unasked K-RUL item is not read; a card naming only the asked pair is
+{const k=KEEP();const A1=[{rule:'K-RUL',side:'JUDGE',link:'D1 vs C2',ruling:'D1 vs C2'}],O1=[{rule:'K-RUL',side:'JUDGE',link:'D2 vs C2',ruling:'D2 vs C2'}];
+ const card=t=>['RULING: '+t+' -- DEFENDER LINK BROKEN','CLAIM: x','NAMED BY: y','RULE: z','APPLIED: w'].join('\n');
+ T(k(card('D1, D2 vs C2'),A1,O1)==='','3605-a: asked D1 vs C2, card "D1, D2 vs C2" also names the unasked D2 vs C2: not read');
+ T(k(card('keystone D3 vs C1'),[{rule:'K-RUL',side:'JUDGE',link:'D3 vs C1',ruling:'D3 vs C1'}],[{rule:'K-RUL',side:'JUDGE',link:'keystone',ruling:'keystone',krul_ctx:{ks:'D3',ps:{}}}])==='','3605-b: asked D3 vs C1, card "keystone D3 vs C1" also names the unasked keystone: not read');
+ T(k(card('D1 vs C2'),A1,O1)===card('D1 vs C2'),'3605-c: a card naming only the asked pair is read');
+ T(k(card('D1, D2 vs C2'),A1.concat(O1),[])===card('D1, D2 vs C2'),'a grouped card is read when every K-RUL item it names was asked');}
+// 14. end to end: the Merge carries fum_others, and Normalize run 2 uses them
+{T(Array.isArray(b1[0].json.fum.others)&&mg[0].json.fum_others!==undefined,'fum.others built ('+b1[0].json.fum.others.length+' unasked K-RUL item(s) for luna) and carried by FUM Merge');}
 log('TOTAL '+ok+' OK, '+bad+' FAIL');fs.writeFileSync('pkgFUM/test_FUM.txt',out.join('\n')+'\n');

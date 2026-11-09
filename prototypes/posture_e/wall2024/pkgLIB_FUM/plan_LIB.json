@@ -13,8 +13,8 @@
  "library": {
   "file": "Shared_Library.js",
   "lines": 2463,
-  "json_sha": "072d429e65901e1a",
-  "bytes": 471227
+  "json_sha": "ef7b417d3a474666",
+  "bytes": 471708
  },
  "nodes": [
   {
@@ -89,9 +89,9 @@
    "file": "Alternate_Cure_Normalize.js",
    "name": "Alternate Cure Normalize",
    "src": "/tmp/claude-0/-home-user/86d59483-62fd-5fa0-b8c4-6322500f4823/scratchpad/fum5/prototypes/posture_e/wall2024/pkgLIB/strip_FUM/patched/Alternate_Cure_Normalize.js",
-   "base_sha": "0acaf0cc57c4b6f1",
-   "base_bytes": 297257,
-   "stub_sha": "ff16ae56eedc2bdd",
+   "base_sha": "2c5ad0bb65dccd7d",
+   "base_bytes": 297719,
+   "stub_sha": "23dd0d193ee56369",
    "stub_bytes": 2427,
    "refs": [
     "Alternate Cure Build",
@@ -235,9 +235,9 @@
    "file": "Cure_Normalize.js",
    "name": "Cure Normalize",
    "src": "/tmp/claude-0/-home-user/86d59483-62fd-5fa0-b8c4-6322500f4823/scratchpad/fum5/prototypes/posture_e/wall2024/pkgLIB/strip_FUM/patched/Cure_Normalize.js",
-   "base_sha": "833599f619b40802",
-   "base_bytes": 297250,
-   "stub_sha": "66c0f2d5f8a50f2a",
+   "base_sha": "51fe3b145eb9b14e",
+   "base_bytes": 297712,
+   "stub_sha": "44d555d2ee29b6eb",
    "stub_bytes": 2389,
    "refs": [
     "Cure Build",
@@ -369,9 +369,9 @@
    "file": "Panel_Cure_Normalize_1.js",
    "name": "Panel Cure Normalize 1",
    "src": "/tmp/claude-0/-home-user/86d59483-62fd-5fa0-b8c4-6322500f4823/scratchpad/fum5/prototypes/posture_e/wall2024/pkgLIB/strip_FUM/patched/Panel_Cure_Normalize_1.js",
-   "base_sha": "fdc92d6e4d0fd746",
-   "base_bytes": 297266,
-   "stub_sha": "ddcb448ffadd8193",
+   "base_sha": "f6b38a731ed7c571",
+   "base_bytes": 297728,
+   "stub_sha": "762299484e47b00e",
    "stub_bytes": 2421,
    "refs": [
     "Panel Build",
@@ -384,9 +384,9 @@
    "file": "Panel_Cure_Normalize_2.js",
    "name": "Panel Cure Normalize 2",
    "src": "/tmp/claude-0/-home-user/86d59483-62fd-5fa0-b8c4-6322500f4823/scratchpad/fum5/prototypes/posture_e/wall2024/pkgLIB/strip_FUM/patched/Panel_Cure_Normalize_2.js",
-   "base_sha": "1a3037dc115ba9ae",
-   "base_bytes": 297266,
-   "stub_sha": "eaf67099ff8182d3",
+   "base_sha": "d8f6654e2bd4b817",
+   "base_bytes": 297728,
+   "stub_sha": "c328351c584d796c",
    "stub_bytes": 2421,
    "refs": [
     "Panel Build",
@@ -399,9 +399,9 @@
    "file": "Panel_Cure_Normalize_3.js",
    "name": "Panel Cure Normalize 3",
    "src": "/tmp/claude-0/-home-user/86d59483-62fd-5fa0-b8c4-6322500f4823/scratchpad/fum5/prototypes/posture_e/wall2024/pkgLIB/strip_FUM/patched/Panel_Cure_Normalize_3.js",
-   "base_sha": "c491160f14297842",
-   "base_bytes": 297266,
-   "stub_sha": "c7a6467d419bbae9",
+   "base_sha": "9d9cf072a8183e45",
+   "base_bytes": 297728,
+   "stub_sha": "df23f0a04f19c50c",
    "stub_bytes": 2421,
    "refs": [
     "Panel Build",
@@ -528,9 +528,9 @@
    "file": "R2_Alternate_Cure_Normalize.js",
    "name": "R2 Alternate Cure Normalize",
    "src": "/tmp/claude-0/-home-user/86d59483-62fd-5fa0-b8c4-6322500f4823/scratchpad/fum5/prototypes/posture_e/wall2024/pkgLIB/strip_FUM/patched/R2_Alternate_Cure_Normalize.js",
-   "base_sha": "b2e823750ea86c00",
-   "base_bytes": 297263,
-   "stub_sha": "87af22b2bc1db8a3",
+   "base_sha": "b61bbf4c335e4a11",
+   "base_bytes": 297725,
+   "stub_sha": "0aacdcd405ab6e87",
    "stub_bytes": 2439,
    "refs": [
     "Panel Build",
@@ -636,6 +636,6 @@
    "own_lines": 3
   }
  ],
- "bytes_before": 9339169,
- "bytes_after": 612289
+ "bytes_before": 9341941,
+ "bytes_after": 612770
 }

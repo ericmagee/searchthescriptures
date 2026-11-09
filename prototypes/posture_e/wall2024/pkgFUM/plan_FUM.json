@@ -19,7 +19,7 @@
   },
   "Alternate_Cure_Normalize.js": {
    "base": "f2aeefafc104",
-   "patched": "0acaf0cc57c4"
+   "patched": "2c5ad0bb65dc"
   },
   "Alternate_Merge_1.js": {
    "base": "7778b4758c62",
@@ -43,7 +43,7 @@
   },
   "Cure_Normalize.js": {
    "base": "59bc69595f96",
-   "patched": "833599f619b4"
+   "patched": "51fe3b145eb9"
   },
   "Extract_Independent_Verdict.js": {
    "base": "d8d25228805e",
@@ -75,15 +75,15 @@
   },
   "Panel_Cure_Normalize_1.js": {
    "base": "7132a3b8c2fa",
-   "patched": "fdc92d6e4d0f"
+   "patched": "f6b38a731ed7"
   },
   "Panel_Cure_Normalize_2.js": {
    "base": "c9e4c29ab4a1",
-   "patched": "1a3037dc115b"
+   "patched": "d8f6654e2bd4"
   },
   "Panel_Cure_Normalize_3.js": {
    "base": "748962d035e9",
-   "patched": "c491160f1429"
+   "patched": "9d9cf072a818"
   },
   "Panel_Payloads.js": {
    "base": "19b2791853f3",
@@ -107,7 +107,7 @@
   },
   "R2_Alternate_Cure_Normalize.js": {
    "base": "14f909f98c47",
-   "patched": "b2e823750ea8"
+   "patched": "b61bbf4c335e"
   },
   "R2_Alternate_Merge.js": {
    "base": "212d6cc9030c",
@@ -206,7 +206,7 @@
     560
    ],
    "parameters": {
-    "jsCode": "// pkgFUM: carries the follow-up reply and the first reply back to \"Panel Cure Normalize 1\", which joins them and asks nothing more (fum_done).\nreturn $input.all().map((it,i)=>{let p=null;try{p=$('FUM Needed? Panel 1').itemMatching(i).json;}catch(e){p=null;}if(!p){try{p=$('FUM Needed? Panel 1').all()[i].json;}catch(e){p=null;}}\n return {json:{fum_done:true,fum_asked:p&&p.fum?p.fum.asked:[],fum_items:p&&p.fum?p.fum.items:[],fum_first:p&&p.fum?p.fum.first:null,fum_call:it.json},pairedItem:{item:i}};});"
+    "jsCode": "// pkgFUM: carries the follow-up reply and the first reply back to \"Panel Cure Normalize 1\", which joins them and asks nothing more (fum_done).\nreturn $input.all().map((it,i)=>{let p=null;try{p=$('FUM Needed? Panel 1').itemMatching(i).json;}catch(e){p=null;}if(!p){try{p=$('FUM Needed? Panel 1').all()[i].json;}catch(e){p=null;}}\n return {json:{fum_done:true,fum_asked:p&&p.fum?p.fum.asked:[],fum_items:p&&p.fum?p.fum.items:[],fum_others:p&&p.fum?(p.fum.others||[]):[],fum_first:p&&p.fum?p.fum.first:null,fum_call:it.json},pairedItem:{item:i}};});"
    }
   },
   {
@@ -292,7 +292,7 @@
     560
    ],
    "parameters": {
-    "jsCode": "// pkgFUM: carries the follow-up reply and the first reply back to \"Panel Cure Normalize 2\", which joins them and asks nothing more (fum_done).\nreturn $input.all().map((it,i)=>{let p=null;try{p=$('FUM Needed? Panel 2').itemMatching(i).json;}catch(e){p=null;}if(!p){try{p=$('FUM Needed? Panel 2').all()[i].json;}catch(e){p=null;}}\n return {json:{fum_done:true,fum_asked:p&&p.fum?p.fum.asked:[],fum_items:p&&p.fum?p.fum.items:[],fum_first:p&&p.fum?p.fum.first:null,fum_call:it.json},pairedItem:{item:i}};});"
+    "jsCode": "// pkgFUM: carries the follow-up reply and the first reply back to \"Panel Cure Normalize 2\", which joins them and asks nothing more (fum_done).\nreturn $input.all().map((it,i)=>{let p=null;try{p=$('FUM Needed? Panel 2').itemMatching(i).json;}catch(e){p=null;}if(!p){try{p=$('FUM Needed? Panel 2').all()[i].json;}catch(e){p=null;}}\n return {json:{fum_done:true,fum_asked:p&&p.fum?p.fum.asked:[],fum_items:p&&p.fum?p.fum.items:[],fum_others:p&&p.fum?(p.fum.others||[]):[],fum_first:p&&p.fum?p.fum.first:null,fum_call:it.json},pairedItem:{item:i}};});"
    }
   },
   {
@@ -378,7 +378,7 @@
     560
    ],
    "parameters": {
-    "jsCode": "// pkgFUM: carries the follow-up reply and the first reply back to \"Panel Cure Normalize 3\", which joins them and asks nothing more (fum_done).\nreturn $input.all().map((it,i)=>{let p=null;try{p=$('FUM Needed? Panel 3').itemMatching(i).json;}catch(e){p=null;}if(!p){try{p=$('FUM Needed? Panel 3').all()[i].json;}catch(e){p=null;}}\n return {json:{fum_done:true,fum_asked:p&&p.fum?p.fum.asked:[],fum_items:p&&p.fum?p.fum.items:[],fum_first:p&&p.fum?p.fum.first:null,fum_call:it.json},pairedItem:{item:i}};});"
+    "jsCode": "// pkgFUM: carries the follow-up reply and the first reply back to \"Panel Cure Normalize 3\", which joins them and asks nothing more (fum_done).\nreturn $input.all().map((it,i)=>{let p=null;try{p=$('FUM Needed? Panel 3').itemMatching(i).json;}catch(e){p=null;}if(!p){try{p=$('FUM Needed? Panel 3').all()[i].json;}catch(e){p=null;}}\n return {json:{fum_done:true,fum_asked:p&&p.fum?p.fum.asked:[],fum_items:p&&p.fum?p.fum.items:[],fum_others:p&&p.fum?(p.fum.others||[]):[],fum_first:p&&p.fum?p.fum.first:null,fum_call:it.json},pairedItem:{item:i}};});"
    }
   },
   {
@@ -464,7 +464,7 @@
     400
    ],
    "parameters": {
-    "jsCode": "// pkgFUM: carries the follow-up reply and the first reply back to \"Alternate Cure Normalize\", which joins them and asks nothing more (fum_done).\nreturn $input.all().map((it,i)=>{let p=null;try{p=$('FUM Needed? Alternate').itemMatching(i).json;}catch(e){p=null;}if(!p){try{p=$('FUM Needed? Alternate').all()[i].json;}catch(e){p=null;}}\n return {json:{fum_done:true,fum_asked:p&&p.fum?p.fum.asked:[],fum_items:p&&p.fum?p.fum.items:[],fum_first:p&&p.fum?p.fum.first:null,fum_call:it.json},pairedItem:{item:i}};});"
+    "jsCode": "// pkgFUM: carries the follow-up reply and the first reply back to \"Alternate Cure Normalize\", which joins them and asks nothing more (fum_done).\nreturn $input.all().map((it,i)=>{let p=null;try{p=$('FUM Needed? Alternate').itemMatching(i).json;}catch(e){p=null;}if(!p){try{p=$('FUM Needed? Alternate').all()[i].json;}catch(e){p=null;}}\n return {json:{fum_done:true,fum_asked:p&&p.fum?p.fum.asked:[],fum_items:p&&p.fum?p.fum.items:[],fum_others:p&&p.fum?(p.fum.others||[]):[],fum_first:p&&p.fum?p.fum.first:null,fum_call:it.json},pairedItem:{item:i}};});"
    }
   },
   {
@@ -550,7 +550,7 @@
     2100
    ],
    "parameters": {
-    "jsCode": "// pkgFUM: carries the follow-up reply and the first reply back to \"R2 Alternate Cure Normalize\", which joins them and asks nothing more (fum_done).\nreturn $input.all().map((it,i)=>{let p=null;try{p=$('FUM Needed? R2 Alternate').itemMatching(i).json;}catch(e){p=null;}if(!p){try{p=$('FUM Needed? R2 Alternate').all()[i].json;}catch(e){p=null;}}\n return {json:{fum_done:true,fum_asked:p&&p.fum?p.fum.asked:[],fum_items:p&&p.fum?p.fum.items:[],fum_first:p&&p.fum?p.fum.first:null,fum_call:it.json},pairedItem:{item:i}};});"
+    "jsCode": "// pkgFUM: carries the follow-up reply and the first reply back to \"R2 Alternate Cure Normalize\", which joins them and asks nothing more (fum_done).\nreturn $input.all().map((it,i)=>{let p=null;try{p=$('FUM Needed? R2 Alternate').itemMatching(i).json;}catch(e){p=null;}if(!p){try{p=$('FUM Needed? R2 Alternate').all()[i].json;}catch(e){p=null;}}\n return {json:{fum_done:true,fum_asked:p&&p.fum?p.fum.asked:[],fum_items:p&&p.fum?p.fum.items:[],fum_others:p&&p.fum?(p.fum.others||[]):[],fum_first:p&&p.fum?p.fum.first:null,fum_call:it.json},pairedItem:{item:i}};});"
    }
   },
   {
@@ -636,7 +636,7 @@
     560
    ],
    "parameters": {
-    "jsCode": "// pkgFUM: carries the follow-up reply and the first reply back to \"Cure Normalize\", which joins them and asks nothing more (fum_done).\nreturn $input.all().map((it,i)=>{let p=null;try{p=$('FUM Needed? Cure').itemMatching(i).json;}catch(e){p=null;}if(!p){try{p=$('FUM Needed? Cure').all()[i].json;}catch(e){p=null;}}\n return {json:{fum_done:true,fum_asked:p&&p.fum?p.fum.asked:[],fum_items:p&&p.fum?p.fum.items:[],fum_first:p&&p.fum?p.fum.first:null,fum_call:it.json},pairedItem:{item:i}};});"
+    "jsCode": "// pkgFUM: carries the follow-up reply and the first reply back to \"Cure Normalize\", which joins them and asks nothing more (fum_done).\nreturn $input.all().map((it,i)=>{let p=null;try{p=$('FUM Needed? Cure').itemMatching(i).json;}catch(e){p=null;}if(!p){try{p=$('FUM Needed? Cure').all()[i].json;}catch(e){p=null;}}\n return {json:{fum_done:true,fum_asked:p&&p.fum?p.fum.asked:[],fum_items:p&&p.fum?p.fum.items:[],fum_others:p&&p.fum?(p.fum.others||[]):[],fum_first:p&&p.fum?p.fum.first:null,fum_call:it.json},pairedItem:{item:i}};});"
    }
   }
  ],
