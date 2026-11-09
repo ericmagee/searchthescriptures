@@ -24,12 +24,12 @@ const famOf=k=>{const x=M[k];const f=x&&x.family?String(x.family).trim().toLower
 const debFam=[famOf(D.mc_seat),famOf(C.mc_seat)];
 // MiniMax never debates (BB-6997), read here by family from model_config (7014 note 3); Init Seats' engine-name refusal stays as the first fence.
 if(debFam.indexOf('minimax')>=0)fail('MiniMax never debates (BB-6997): a debater seat is of family minimax in model_config.');
-S.panel_order.forEach(k=>{if(debFam.indexOf(famOf(k))>=0)fail('judge seat "'+k+'" is of family '+famOf(k)+', which debates in this debate (BB-6993).');});
-if(S.single_judge&&debFam.indexOf(famOf(S.single_judge))>=0)fail('single judge seat "'+S.single_judge+'" is of family '+famOf(S.single_judge)+', which debates in this debate (BB-6993).');
-const reserve=(reserve0&&debFam.indexOf(famOf(reserve0.seat))<0)?reserve0:null;
+S.panel_order.forEach(k=>{if(k!=='haiku'&&debFam.indexOf(famOf(k))>=0)fail('judge seat "'+k+'" is of family '+famOf(k)+', which debates in this debate (BB-6993).');});
+if(S.single_judge&&S.single_judge!=='haiku'&&debFam.indexOf(famOf(S.single_judge))>=0)fail('single judge seat "'+S.single_judge+'" is of family '+famOf(S.single_judge)+', which debates in this debate (BB-6993).');
+const reserve=(reserve0&&(reserve0.seat==='haiku'||debFam.indexOf(famOf(reserve0.seat))<0))?reserve0:null; /* pkgJGR rev 6 (operator 08:31Z and 08:34Z 11-09: Haiku as the alternate for now, "given it's Claude vs Claude there's no risk of bias"): seat haiku is exempt from the family rule (6993) */
 // ALTERNATES (7126, 7127): Init Seats' alt_order, each read from its ACTIVE model_config row as a judge is (max_tokens at least 4000),
 // family by famOf, dropped if its family debates in this debate (6993). No MiniMax.
-const alternates=(S.alt_order||[]).filter(k=>JFAM[k]==='openrouter'&&M[k]&&M[k].api_model&&Number(M[k].max_tokens)>0).map(k=>({seat:k,fam:'openrouter',api_model:M[k].api_model,max_tokens:Math.max(Number(M[k].max_tokens)||0,4000),family:famOf(k)})).filter(a=>debFam.indexOf(a.family)<0);
+const alternates=(S.alt_order||[]).filter(k=>JFAM[k]==='openrouter'&&M[k]&&M[k].api_model&&Number(M[k].max_tokens)>0).map(k=>({seat:k,fam:'openrouter',api_model:M[k].api_model,max_tokens:Math.max(Number(M[k].max_tokens)||0,4000),family:famOf(k)})).filter(a=>a.seat==='haiku'||debFam.indexOf(a.family)<0);
 const debaters=[D,C].map((x,i)=>({engine:x.engine,model:x.model,family:debFam[i]}));
 // GUARDS and TENSIONS exactly as W1 Init (dedupe by rule_num; the ruled filter).
 const gRaw=$('Fetch Drift Guards').all().map(i=>i.json);const gSeen=new Set();const g=[];for(const x of gRaw){if(x&&x.rule_num!==undefined&&!gSeen.has(x.rule_num)){gSeen.add(x.rule_num);g.push(x);}}

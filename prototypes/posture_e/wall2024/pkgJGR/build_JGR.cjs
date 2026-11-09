@@ -18,10 +18,16 @@ const ORC3N="const __orc=(b,model,key)=>{if(!b||!Array.isArray(b.messages))retur
 const FILL=MIMO&&process.env.JGR_FILL==='luna'; /* pkgJGR rev 4 (operator 07:27Z 11-09 "add luna 6.1 as a judge"): panel terra, sol, luna; mimo the alternate */
 const ALT=process.env.JGR_ALT||'mimo'; /* pkgJGR rev 6 (operator 08:31Z 11-09, suggestion: "for an alternative we can use Haiku... temporary"): JGR_ALT=haiku seats haiku as the alternate in mimo's place */
 const TAGL=" /* pkgJGR (operator 21:10Z 11-08): gemini and grok judge no more; rev 4 (operator 07:14Z and 07:27Z 11-09): luna is a judge on the panel with terra and sol; "+(ALT==='haiku'?"rev 6 (operator 08:31Z 11-09): haiku is the alternate for now":"mimo is the alternate")+" */";
+const HKT=" /* pkgJGR rev 6 (operator 08:31Z and 08:34Z 11-09: Haiku as the alternate for now, \"given it's Claude vs Claude there's no risk of bias\"): seat haiku is exempt from the family rule (6993) */";
+const HKX_RS=[["S.panel_order.forEach(k=>{if(debFam.indexOf(famOf(k))>=0)","S.panel_order.forEach(k=>{if(k!=='haiku'&&debFam.indexOf(famOf(k))>=0)"],
+ ["if(S.single_judge&&debFam.indexOf(famOf(S.single_judge))>=0)","if(S.single_judge&&S.single_judge!=='haiku'&&debFam.indexOf(famOf(S.single_judge))>=0)"],
+ ["const reserve=(reserve0&&debFam.indexOf(famOf(reserve0.seat))<0)?reserve0:null;","const reserve=(reserve0&&(reserve0.seat==='haiku'||debFam.indexOf(famOf(reserve0.seat))<0))?reserve0:null;"+HKT],
+ [".filter(a=>debFam.indexOf(a.family)<0);",".filter(a=>a.seat==='haiku'||debFam.indexOf(a.family)<0);"]];
+const HKX_G1=["if(deb.some(d=>d.model===a.api_model||d.family===a.family))return 'G1 (family, 6993): '","if(deb.some(d=>d.model===a.api_model||(d.family===a.family&&a.api_model!=='anthropic/claude-haiku-5.5')))return 'G1 (family, 6993; pkgJGR rev 6: haiku exempt, operator 08:34Z 11-09): '"];
 const FAML=ALT==='haiku'?"qwen:'openrouter',sol:'openrouter',luna:'openrouter',haiku:'openrouter'}":"qwen:'openrouter',sol:'openrouter',luna:'openrouter'}";
 const EDITS=FILL?{
  'Init Seats':[["const ORDER0=['gemini','chatgpt','qwen','sol','grok'];","const ORDER0=['chatgpt','sol','luna','"+ALT+"','qwen'];"+TAGL],[FAM,FAML],["FAM_PANEL={chatgpt:'openai',sol:'openai'}","FAM_PANEL={chatgpt:'openai',sol:'openai',luna:'openai'}"]],
- 'Resolve Seats':[[FAM,FAML]],
+ 'Resolve Seats':[[FAM,FAML]].concat(ALT==='haiku'?HKX_RS:[]),
  'Accept Build':[["const ORDER=['gemini','chatgpt','qwen','sol','grok'];","const ORDER=['chatgpt','sol','luna','"+ALT+"','qwen'];"+TAGL],["qwen:'qwen',grok:'grok',sol:'sol'}","qwen:'qwen',grok:'grok',sol:'sol',luna:'luna'"+(ALT==='haiku'?",haiku:'haiku'":"")+"}"],[ORC3,ORC3N.replace(QFR,QFR_M)]],
  'Panel Build':[[ORC4,ORC4+QFR_M]],'Reserve Build':[[ORC4,ORC4+QFR_M]],
  'Build Synthesis':[[FAM,FAML]],'Build Independent Verdict':[[FAM,FAML]],'Build Diagnostic Prompt':[[FAM,FAML]]}:MIMO?{
@@ -40,5 +46,5 @@ for(const [nm,E] of Object.entries(EDITS)){const nf=NB?NB+'/'+nm.replace(/ /g,'_
  new Function('$','$input','$execution','return (async()=>{\n'+c+'\n})();');fs.writeFileSync(NO+'/'+nm.replace(/ /g,'_')+'.js',c);plan.nodes[nm]={before:h(c0),after:h(c),edits:E.length};}
 // library: Alternate Build and R2 Alternate Build (base: env JGR_LIB_BASE, default the s68 library strip_RTB4_8) -> pkgLIB/<JGR_LIB_OUT, default strip_JGR>
 const LBD=process.env.JGR_LIB_BASE||'strip_RTB4_8',LOD=process.env.JGR_LIB_OUT||'strip_JGR';const LB='pkgLIB/'+LBD+'/patched/',LO='pkgLIB/'+LOD+'/patched/';fs.rmSync('pkgLIB/'+LOD,{recursive:true,force:true});fs.mkdirSync(LO,{recursive:true});plan.library={base:LB,nodes:{}};
-for(const f of fs.readdirSync(LB)){const c0=fs.readFileSync(LB+f,'utf8');let c=c0;if(['Alternate_Build.js','R2_Alternate_Build.js'].includes(f)){const k=c.split(ORC4).length-1;if(k!==1)throw new Error(f+': ORC4 '+k);c=c.replace(ORC4,ORC4+(MIMO?QFR_M:QFR));new Function('$','$input','$execution','return (async()=>{\n'+c+'\n})();');plan.library.nodes[f]={before:h(c0),after:h(c)};}fs.writeFileSync(LO+f,c);}
+for(const f of fs.readdirSync(LB)){const c0=fs.readFileSync(LB+f,'utf8');let c=c0;if(['Alternate_Build.js','R2_Alternate_Build.js'].includes(f)){const k=c.split(ORC4).length-1;if(k!==1)throw new Error(f+': ORC4 '+k);c=c.replace(ORC4,ORC4+(MIMO?QFR_M:QFR));if(ALT==='haiku'){const k2=c.split(HKX_G1[0]).length-1;if(k2!==1)throw new Error(f+': G1 '+k2);c=c.replace(HKX_G1[0],HKX_G1[1]);}new Function('$','$input','$execution','return (async()=>{\n'+c+'\n})();');plan.library.nodes[f]={before:h(c0),after:h(c)};}fs.writeFileSync(LO+f,c);}
 fs.writeFileSync(process.env.JGR_PLAN_OUT||'pkgJGR/plan_JGR.json',JSON.stringify(plan,null,1)+'\n');console.log(JSON.stringify(plan.nodes),JSON.stringify(plan.library.nodes));
