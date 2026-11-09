@@ -24,7 +24,7 @@ const DRV_TL_STOP=/^(?:the|a|an|and|or|of|in|on|at|to|for|with|by|from|this|that
 const LB_REF=/(?:[1-3]\s)?[A-Z][a-z]+\.?\s\d{1,3}:\d{1,3}/g;
 const LB_GLOSS=/(?:^|[\s(,;:"“'‘])[*_]*([^\s()"“”,;:]{2,24}(?:\s+[^\s()"“”,;:]{2,24}){0,2})[*_]*\s*\(\s*([a-z][^()\n]{1,80}?)\s*\)/g;
 const LB_TL=/(?:^|[\s(,;:"“'‘])([*_]*)([a-zà-ɏḀ-ỿ][a-zà-ɏḀ-ỿʼ'’-]{1,24}(?:\s+[a-zà-ɏḀ-ỿ][a-zà-ɏḀ-ỿʼ'’-]{1,24}){0,2})\1\s*\(\s*["“'‘]?([a-z][^()\n\d]{1,80}?)["”'’]?\s*\)/g;
-function lbFoot(block,full){let t=String(block==null?'':block).replace(/\*\*/g,'').replace(/__/g,'');
+function lbFoot(block,full){let t=String(block==null?'':block).replace(/\*\*/g,'').replace(/__/g,'');t=t.replace(/(?<![A-Za-z])["“]([A-Za-z]{1,3})["”](?![A-Za-z])/g,'‘$1’'); /* pkgKBL */
  if(!full){const c=t.search(/^[ \t>*_#-]*(?:the\s+)?pressed(?:\s+(?:verses|witnesses))?\s*[.:]/im);if(c>0)t=t.slice(0,c);}
  const met=new Set();const src=/\[L2\]|\b(?:Greek|Hebrew|Aramaic)\b/i.test(t);let first=null;
  for(const s of t.split(/\n+|(?<=[.!?]["”’']?)\s+(?=[A-Z\[(])/)){const refs=[...s.matchAll(LB_REF)].map(m=>m[0].replace(/\.\s/,' '));
@@ -32,12 +32,13 @@ function lbFoot(block,full){let t=String(block==null?'':block).replace(/\*\*/g,'
 
   for(const m of s.matchAll(LB_TL)){const w=m[2];const last=w.split(/\s+/).pop();if(DRV_TL_STOP.test(last)||DRV_TL_STOP.test(w.split(/\s+/)[0]))continue;
    if(DRV_SRC.test(w)||m[1]||src){met.add('L2');break;}}
+  for(const m of s.matchAll(/(?:^|[\s(,;:"“'‘\]])([a-zà-ɏḀ-ỿ][a-zà-ɏḀ-ỿʼ'’-]{1,24})\s*\(\s*(?:[GH]\d{1,5}\s*[,:;]\s*["“'‘]?[a-z][^()\n]{1,80}?|["“'‘]?[a-z][^()\n\d]{1,80}?["”'’]?\s*[,;]\s*[GH]\d{1,5})\s*\)/g)){if(!DRV_TL_STOP.test(m[1])){met.add('L2');break;}} /* pkgKBL */
   for(const m of s.matchAll(/([*_])([^*_\n]{2,40})\1\s*\(\s*["“'‘]?[a-z][^()\n\d]{1,80}?["”'’]?\s*\)/g)){if(m[2].split(/\s+/).some(w=>!DRV_TL_STOP.test(w)&&!/^[A-Z]/.test(w))){met.add('L2');break;}} // an italic source word with its meaning
   if(DRV_SRC.test(s.replace(LB_REF,' ').replace(/["“][^"”]*["”]/g,' '))&&/\(\s*["“'‘]?[a-z][^()\n]{1,80}\)/.test(s))met.add('L2');}
  // each quotation with the reference it carries (written just after it in brackets, or the nearest reference before it): the first verse quoted
  // is [L1]; any other verse quoted after it is [L3] (ruling 400). Quotations in one sentence are read one by one.
  {const R=[...t.matchAll(LB_REF)].map(m=>({k:m[0].replace(/\.\s/,' '),a:m.index,b:m.index+m[0].length}));
-  const Q=[...t.matchAll(/["“][^"”\n]{4,}?["”]|(?<=^|[\s(:])['‘][^'’\n]{4,}?['’](?=$|[\s.,;:)\]])/g)].map(m=>({a:m.index,b:m.index+m[0].length}));
+  const Q=[...t.matchAll(/["“][^"”\n|]{4,}?["”]|(?<=^|[\s(:])['‘][^'’\n]{4,}?['’](?=$|[\s.,;:)\]])/g)].map(m=>({a:m.index,b:m.index+m[0].length}));
   for(const q of Q){const aft=R.find(r=>r.a>=q.b&&r.a-q.b<=4&&/^[\s(]*$/.test(t.slice(q.b,r.a)));const bef=R.filter(r=>r.b<=q.a&&q.a-r.b<=80).pop();const r=aft||bef;if(!r)continue;
    if(first===null){first=r.k;met.add('L1');}else if(r.k!==first)met.add('L3');}}
  return [...met].sort();}
@@ -461,7 +462,7 @@ const PWL=(()=>{
   if(/^\s*(?:[-*]\s*)?\*\*\s*(?:\([a-z0-9]\)\s*)?(?:Press\s+)?$/i.test(before))return true;
   if(!/^\s*(?:[-*]|\d+[.)])\s+[*_]*\s*(?:[*_]*(?:[1-3] )?[A-Z][a-z]+(?: of [A-Z][a-z]+)?\.?\s+\d+:\d+(?:\s?[-\u2013\u2014]\s?\d+)?[*_]*\s*(?:"[^"\n]{0,200}"|“[^”\n]{0,200}”)?\s*(?:,|;|and|&)?\s*)*[*_]*$/.test(before))return false; /* pkgWLD rev 2: verses with their quoted words may precede */
   const U=t.slice(0,Math.max(0,ls-1)).split('\n');for(let j=U.length-1;j>=0;j--){const x=U[j];
-   if(/^\s*[*_#]*\s*(?:[A-Z]\.\s+)?(?:Answers?\s+(?:to|for)\s+(?:the\s+)?(?:presses|witnesses(?:\s+pressed)?|pressed\s+witnesses)\b(?:\s+on\s+LINK\s+\d+)?[\s*_:.]*$|(?:the\s+)?(?:presses|pressed\s+witnesses|witnesses\s+pressed)\s*,?\s*(?:each\s+)?answered[\s*_:.]*$)/i.test(x))return true; /* pkgWLD rev 2: also "Presses answered", "Pressed witnesses, answered", a lettered heading; rev 2e: a whitelist of heading forms (W1 3485, W3 3486): "Answers to/for the presses / witnesses (pressed) / pressed witnesses" (optional "on LINK n"), and "(The) presses / pressed witnesses / witnesses pressed, (each) answered"; nothing else on the line */
+   if(/^\s*[*_#]*\s*(?:[A-Z]\.\s+)?(?:Answers?\s+to\s+(?:each\s+pressed\s+witness|the\s+(?:presses|pressed\s+(?:witnesses|verses)|witnesses\s+pressed))(?:\s+(?:under\s+premise|on\s+LINK)\s+\d+)?(?:\s*,\s*each\s+meeting\s+its\s+MEANS)?|(?:the\s+)?(?:presses|pressed\s+witnesses|witnesses\s+pressed)\s*,?\s*(?:each\s+)?answered)[\s*_:.]*$/i.test(x))return true; /* pkgWLD rev 2: also "Presses answered", "Pressed witnesses, answered", a lettered heading; rev 2e: a whitelist of the 27 heading forms the saved runs carry (W1 3485, W3 3486): "Answers to the presses / pressed witnesses / pressed verses / witnesses pressed" or "to each pressed witness", optionally "under premise n" or "on LINK n" and ", each meeting its MEANS"; "(The) presses / pressed witnesses / witnesses pressed, (each) answered"; nothing else on the line */
    if(/^\s*-{3,}\s*$/.test(x)||/^\s*[*#]*\s*LINK\s+(?:\d+|none)\b/i.test(x)||/^\s*#{1,6}\s/.test(x)||/^\s*\*[^*\n]+\*\s*$/.test(x)||/^\s*[*_-]*\s*MEANS\s*\[/i.test(x)||/UNSUPPORTED-L4 PREMISES/i.test(x))return false;}
   return false;};
  const wldWords2024=(t,pos)=>{const ls=t.lastIndexOf('\n',pos-1)+1;const le=t.indexOf('\n',pos);const line=t.slice(ls,le<0?t.length:le);const p=pos-ls;

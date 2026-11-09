@@ -10,7 +10,7 @@ const FN=String.raw`const kgaInAns2024=(t,pos)=>{t=String(t||'');const ls=t.last
  if(/^\s*(?:[-*]\s*)?\*\*\s*(?:\([a-z0-9]\)\s*)?(?:Press\s+)?$/i.test(before))return true;
  if(!/^\s*(?:[-*]|\d+[.)])\s+[*_]*\s*(?:[*_]*(?:[1-3] )?[A-Z][a-z]+(?: of [A-Z][a-z]+)?\.?\s+\d+:\d+(?:\s?[-–—]\s?\d+)?[*_]*\s*(?:"[^"\n]{0,200}"|“[^”\n]{0,200}”)?\s*(?:,|;|and|&)?\s*)*[*_]*$/.test(before))return false;
  const U=t.slice(0,Math.max(0,ls-1)).split('\n');for(let j=U.length-1;j>=0;j--){const x=U[j];
-  if(/^\s*[*_#]*\s*(?:[A-Z]\.\s+)?(?:Answers?\s+(?:to|for)\s+(?:the\s+)?(?:presses|witnesses(?:\s+pressed)?|pressed\s+witnesses)\b(?:\s+on\s+LINK\s+\d+)?[\s*_:.]*$|(?:the\s+)?(?:presses|pressed\s+witnesses|witnesses\s+pressed)\s*,?\s*(?:each\s+)?answered[\s*_:.]*$)/i.test(x))return true;
+  if(/^\s*[*_#]*\s*(?:[A-Z]\.\s+)?(?:Answers?\s+to\s+(?:each\s+pressed\s+witness|the\s+(?:presses|pressed\s+(?:witnesses|verses)|witnesses\s+pressed))(?:\s+(?:under\s+premise|on\s+LINK)\s+\d+)?(?:\s*,\s*each\s+meeting\s+its\s+MEANS)?|(?:the\s+)?(?:presses|pressed\s+witnesses|witnesses\s+pressed)\s*,?\s*(?:each\s+)?answered)[\s*_:.]*$/i.test(x))return true;
   if(/^\s*-{3,}\s*$/.test(x)||/^\s*[*#]*\s*LINK\s+(?:\d+|none)\b/i.test(x)||/^\s*#{1,6}\s/.test(x)||/^\s*\*[^*\n]+\*\s*$/.test(x)||/^\s*[*_-]*\s*MEANS\s*\[/i.test(x)||/UNSUPPORTED-L4 PREMISES/i.test(x))return false;}
  return false;};`;
 const E=[

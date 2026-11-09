@@ -1,5 +1,4 @@
-     33218: 0 moved to IN AN ANSWER, 51 moved back, 0 other changes
-     33222: 0 moved to IN AN ANSWER, 90 moved back, 0 other changes
+     33218: 9 moved to IN AN ANSWER, 0 moved back, 0 other changes
      33249: 84 moved to IN AN ANSWER, 0 moved back, 0 other changes
      33261: 93 moved to IN AN ANSWER, 0 moved back, 0 other changes
 SKIP 33276 FAIL-CLOSED: transcript assembled to only 0 chars; refusing to judge an empty or
@@ -11,12 +10,11 @@ SKIP 33322 FAIL-CLOSED: transcript assembled to only 0 chars; refusing to judge 
      33389: 3 moved to IN AN ANSWER, 0 moved back, 0 other changes
      33461: 9 moved to IN AN ANSWER, 0 moved back, 0 other changes
      33490: 15 moved to IN AN ANSWER, 0 moved back, 0 other changes
-     33506: 0 moved to IN AN ANSWER, 33 moved back, 0 other changes
-     33575: 0 moved to IN AN ANSWER, 84 moved back, 0 other changes
      33605: 12 moved to IN AN ANSWER, 0 moved back, 0 other changes
      33617: 27 moved to IN AN ANSWER, 0 moved back, 0 other changes
-     33682: 3 moved to IN AN ANSWER, 12 moved back, 0 other changes
+     33627: 9 moved to IN AN ANSWER, 0 moved back, 0 other changes
+     33682: 3 moved to IN AN ANSWER, 0 moved back, 0 other changes
      33815: 9 moved to IN AN ANSWER, 0 moved back, 0 other changes
-FAIL Panel Build over 32 saved runs: 282 ledger entries move from ONLY IN OTHER TEXT to IN AN ANSWER; 270 move back; 0 other changes
+OK Panel Build over 32 saved runs: 300 ledger entries move from ONLY IN OTHER TEXT to IN AN ANSWER; 0 move back; 0 other changes
 OK Build Independent Verdict carries the same one-line change as Panel Build
-TOTAL 1 OK, 1 FAIL
+TOTAL 2 OK, 0 FAIL

@@ -1,7 +1,7 @@
 // pkgWLD rev 2 test. Run from wall2024/: node pkgWLD/rev2/test_WLD2.cjs
 // Every saved run with Panel Build input: live s71 Panel Build vs rev 2. The judge bodies may differ only in ledger lines, and only by verses moving
 // from NAMED ONLY IN OTHER TEXT to NAMED IN AN ANSWER (never the other way). Build Independent Verdict: same source change, checked by diff.
-const fs=require('fs');const {harness,feeder}=require('../../pkgGSL/harness.cjs');const B='/mnt/project-files/wall2024/fetchback_live_s71.json';const W=JSON.parse(fs.readFileSync(B));
+const fs=require('fs');const {harness,feeder}=require('../../pkgGSL/harness.cjs');const B='/mnt/project-files/wall2024/fetchback_live_s72.json';const W=JSON.parse(fs.readFileSync(B));
 const D='/mnt/project-files/wall2024/inputs/';const live=n=>W.nodes.find(z=>z.name===n).parameters.jsCode;const pat=n=>fs.readFileSync('pkgWLD/rev2/patched/'+n.replace(/ /g,'_')+'.js','utf8');
 let ok=0,bad=0;const out=[];const T=(c,m)=>{if(c){ok++;out.push('OK '+m);}else{bad++;out.push('FAIL '+m);}console.log((c?'OK ':'FAIL ')+m);};
 const IN=feeder(B,'Panel Build')[0];const runs=fs.readdirSync(D).filter(f=>f.endsWith('_'+IN.replace(/ /g,'_')+'.json')).map(f=>f.split('_')[0]).sort();
