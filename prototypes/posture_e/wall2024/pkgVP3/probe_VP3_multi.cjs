@@ -1,7 +1,7 @@
 // pkgVP3 multi-run replay (W4): every saved run with a stored Send Back call; live s89 code vs package code; lists each VP3 note.
 const fs=require('fs');const H=require('./harness.cjs');const IN=H.IN;
-const P=JSON.parse(fs.readFileSync(__dirname+'/parent_s89_VP3.json','utf8'));const by={};P.nodes.forEach(n=>by[n.name]=n);
-let LV=JSON.parse(fs.readFileSync('/mnt/project-files/wall2024/fetchback_live_s89.json','utf8'));LV=LV.data||LV;LV=LV.workflow||LV;const lv={};LV.nodes.forEach(n=>lv[n.name]=n);
+const P=JSON.parse(fs.readFileSync(__dirname+'/parent_s90_VP3.json','utf8'));const by={};P.nodes.forEach(n=>by[n.name]=n);
+let LV=JSON.parse(fs.readFileSync('/mnt/project-files/wall2024/fetchback_live_s90.json','utf8'));LV=LV.data||LV;LV=LV.workflow||LV;const lv={};LV.nodes.forEach(n=>lv[n.name]=n);
 const strip=o=>JSON.parse(JSON.stringify(o,(k,v)=>k==='at'?undefined:v));
 const runs=[...new Set(fs.readdirSync(IN).filter(f=>/_Send_Back_Call_openrouter\.json$/.test(f)&&!/Alt/.test(f)).map(f=>f.split('_')[0]))].sort();
 (async()=>{let tot={runs:0,err:0,eq:0,notes:0,agree:0,would:0};

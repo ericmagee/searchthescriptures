@@ -5,7 +5,7 @@
    (KEEP, no answer, CHANGE TO still MEETS, or still UNDERDETERMINED/STANDS) is listed as "TRIAL pkgVP3: WOULD REMOVE <seat>"; nothing is counted. */
 function vp3Answers2024(T,verse){const L=String(T||'').split('\n');const out=[];if(!verse)return out;
  const vr=verse.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');const head=new RegExp('^\\s*(?:[-*•]|\\d+[.)])?\\s*(?:\\*\\*)?\\s*(?:ANSWER\\s*:?\\s*)?'+vr+'(?![0-9])','i');const ansHead=new RegExp('\\bANSWER\\s*:?\\s*["“]?'+vr+'(?![0-9])','i');const bolded=new RegExp('^\\s*(?:[-*\u2022]|\\d+[.)])\\s.*\\*\\*'+vr+'(?![0-9])[^*]{0,3}\\*\\*');
- const top=l=>/^(?:[-*•]|\d+[.)])\s/.test(l)||/^#|^\*\*[^*]+\*\*\s*$/.test(l.trim());const isLay=l=>/^\s*[-*•]\s*\[L[1-4]\]/.test(l);
+ const top=l=>/^(?:[-*•]|\d+[.)])\s/.test(l)||/^#|^\*\*/.test(l.trim())||/^\s*LINK\s+\d/i.test(l);const isLay=l=>/^\s*[-*•]\s*\[L[1-4]\]/.test(l);
  for(let k=0;k<L.length;k++){const l=L[k];const hd=head.test(l.replace(/\*\*/g,''))||ansHead.test(l);
   const bold=!hd&&bolded.test(l)&&!/^\s*(?:[-*•]|\d+[.)])\s*(?:\*\*)?\s*\[L[1-4]/.test(l); /* a bullet labelled by several verses in bold: the whole line is the answer */if(!hd&&!bold)continue;if(/--\s*MEANS\s*:/i.test(l))continue; /* a PRESSED WITH line is the side's own press, not an answer */
   let b=k;while(b+1<L.length){const n=L[b+1];if(!n.trim())break;if(isLay(n)||/^\s{2,}\S/.test(n)||!top(n)){b++;continue;}break;}
@@ -24,15 +24,27 @@ function vp3Bare2024(ans){const t=String(ans||'').trim();if(!t)return {bare:fals
   if(GR.test(s)&&!FITW.test(s.replace(/^I\s+\w+\s+/i,'')))kinds.push('grant');else if(DF.test(s)&&w<=15)kinds.push('deferral');else return {bare:false,why:'a sentence is neither a grant nor a deferral: "'+s.slice(0,120)+'"'};}
  return {bare:true,why:'no layer of its own; only '+[...new Set(kinds)].join(' and ')+': "'+t.slice(0,200).replace(/\n/g,' ')+'"'};}
 /* the code half on one witness: every answer the side gives to the verse in the round(s) read is bare */
+/* rev 2 (W1 3798, W2 3795): the side's whole answer is read. Rounds: the item's round and the side's later rounds. Every line of those rounds that
+   names the verse (its own press lines excepted) must be a bare answer line; a layer line, a NARROWED TO head or any other line naming the verse
+   is substance. A deferral is followed: the LINK block it names, in the same round, must hold no [Ln] tag and fewer than 25 words. */
+function vp3Link2024(T,n){const L=String(T||'').split('\n');const hd=k=>/^\s*(?:#+\s*)?(?:\*\*)?\s*LINK\s+\d+\b/i.test(L[k]);let a=-1;
+ for(let k=0;k<L.length;k++)if(hd(k)&&new RegExp('^\\s*(?:#+\\s*)?(?:\\*\\*)?\\s*LINK\\s+'+n+'\\b','i').test(L[k])){a=k;break;}if(a<0)return null;
+ let b=a+1;while(b<L.length&&!hd(b))b++;return L.slice(a,b).join('\n');}
 function vp3Code2024(R,rounds,verse){if(!R)return {ok:false,why:'no rounds found'};const found=[];
- for(const rd of rounds){for(const a of vp3Answers2024(R[rd],verse))found.push({rd,...a,t:vp3Bare2024(a.text)});}
+ const vr=verse.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');const VR=new RegExp(vr+'(?![0-9])','i');
+ for(const rd of rounds){const T=String(R[rd]||'');if(!T)continue;const L=T.split('\n');const ans=vp3Answers2024(T,verse);const at=new Set(ans.map(x=>x.at));
+  for(const x of ans){const t=vp3Bare2024(x.text);if(!t.bare)return {ok:false,why:'['+rd+'] answer to '+verse+': '+t.why};
+   for(const m of x.text.matchAll(/\b(?:LINK|Link)\s*(\d+)/g)){const blk=vp3Link2024(T,m[1]);if(blk==null)continue;const w=blk.replace(/[^A-Za-z0-9]+/g,' ').trim().split(' ').length;
+    if(/\[L[1-4]\]/.test(blk)||w>=25)return {ok:false,why:'['+rd+'] the deferral to LINK '+m[1]+' names an answer of '+w+' words'+(/\[L[1-4]\]/.test(blk)?' with layers':'')};}
+   found.push({rd,why:t.why});}
+  for(let k=0;k<L.length;k++){if(at.has(k)||!VR.test(L[k])||/--\s*MEANS\s*:/i.test(L[k]))continue;if(ans.some(x=>k>x.at&&k<=x.at+((x.text.match(/\n/g)||[]).length)))continue;
+   return {ok:false,why:'['+rd+'] names '+verse+' again (line '+k+': "'+L[k].trim().slice(0,90)+'")'};}}
  if(!found.length)return {ok:false,why:'no answer to '+verse+' found in ['+rounds.join('], [')+']'};
- const nb=found.find(f=>!f.t.bare);if(nb)return {ok:false,why:'['+nb.rd+'] answer to '+verse+': '+nb.t.why};
- return {ok:true,why:found.map(f=>'['+f.rd+'] '+verse+': '+f.t.why).join('; ')};}
-function vp3Trial2024(it,a,R){const rule=it&&it.rule;const rs=String(it&&it.reason||'');
+ return {ok:true,why:found.map(f=>'['+f.rd+'] '+verse+': '+f.why).join('; ')};}
+function vp3Trial2024(it,a,R,live){const rule=it&&it.rule;const rs=String(it&&it.reason||'');
  const ds=rule==='E-ANS'?rs.match(/\(right:\s*MISSES\)\s*:?\s*([\s\S]*?)(?:\s*\(judge wrote|$)/i):rule==='E-HOLD'?rs.match(/\(right:\s*BROKEN\)\s*:?\s*([\s\S]*?)(?:\s*\(judge wrote|$)/i):null;
  if(!ds)return null;const why=ds[1];let code;
- if(rule==='E-ANS'){const m=String(it.item||'').match(/ANSWER CHECK\s+(.+?)\s*\[((?:CR|DR)[1-4])\]/);if(!m)return {agree:false,note:'TRIAL pkgVP3: NOT CHECKED -- the item names no verse and round'};code=vp3Code2024(R,[m[2]],m[1].trim());code.verse=m[1].trim();}
+ if(rule==='E-ANS'){const m=String(it.item||'').match(/ANSWER CHECK\s+(.+?)\s*\[((?:CR|DR)[1-4])\]/);if(!m)return {agree:false,note:'TRIAL pkgVP3: NOT CHECKED -- the item names no verse and round'};const sd0=m[2].slice(0,2),r0=+m[2][2];code=vp3Code2024(R,[1,2,3,4].filter(n=>n>=r0).map(n=>sd0+n),m[1].trim());code.verse=m[1].trim();}
  else{const ln=String(it.line||'').replace(/\\+"/g,'"');const pm=ln.match(/^\s*(?:FORCED\s*:\s*)?D\d+\s+vs\s+C\d+\s*\(([^)]*)\)/i);if(!pm)return {agree:false,note:'TRIAL pkgVP3: NOT CHECKED -- the line names no collision witnesses'};
   const ws=pm[1].split(/\s*;\s*/).map(x=>x.trim()).filter(Boolean);const named=ws.filter(v=>new RegExp(v.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+'(?![0-9])','i').test(why));
   if(!named.length)return {agree:false,note:'TRIAL pkgVP3: NOT CHECKED -- the DeepSeek reason names none of the collision witnesses'};
@@ -45,4 +57,5 @@ function vp3Trial2024(it,a,R){const rule=it&&it.rule;const rs=String(it&&it.reas
  if(ans==='CHANGE'){if(/^\s*(?:RETRACTED|WITHDRAWN)\b/i.test(to))cured=true;
   else if(rule==='E-ANS')cured=/--\s*(?:MISSES|FAILS)\b/i.test(to);
   else{const g=to.match(/\)\s*:\s*(DEFENDER LINK BROKEN|CHALLENGER LINK BROKEN|UNDERDETERMINED|STANDS|WITHDRAWN)\b/i);const want=code.side==='CR'?'DEFENDER LINK BROKEN':'CHALLENGER LINK BROKEN';cured=/^\s*FORCED\b/i.test(to)||!!(g&&(g[1].toUpperCase()===want||g[1].toUpperCase()==='WITHDRAWN'));}}
- return {agree:true,cured,note:'TRIAL pkgVP3: TWO READERS AGREE on '+code.verse+' ('+code.why.slice(0,300)+') -- '+(cured?'CURED by the reply ('+ans+')':'WOULD REMOVE '+'%SEAT%'+': the reply ('+ans+(ans==='CHANGE'?' TO a line that still grades '+(rule==='E-ANS'?'MEETS':'the link as held'):'')+') keeps the grade')+'; record-only, no seat removed'};}
+ const lv=live==null?'none':String(live);const would=!cured&&lv==='UNCURED'; /* rev 2 (W1 3798 a): listed only when the live cure reading of the row is UNCURED */
+ return {agree:true,cured:!would,would,note:'TRIAL pkgVP3: TWO READERS AGREE on '+code.verse+' ('+code.why.slice(0,300)+') -- '+(would?'WOULD REMOVE %SEAT%: the reply ('+ans+') keeps the grade and the live cure reading is UNCURED':cured?'CURED by the reply ('+ans+')':'not listed: the live cure reading is '+(lv==='none'?'empty':lv))+'; record-only, no seat removed'};}
