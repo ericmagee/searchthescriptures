@@ -1,0 +1,17 @@
+OK   K-F 1->0 K-CMT 1->0  FORCED: none graded.
+OK   K-F 1->0 K-CMT 1->0  FORCED: none.
+OK   K-F 1->0 K-CMT 1->0  FORCED: none
+OK   K-F 1->0 K-CMT 1->0  **FORCED:** none graded.
+OK   K-F 1->0 K-CMT 1->0  - FORCED: none graded
+OK   K-F 1->0 K-CMT 0->0  FORCED (Commitment 6): none
+OK   K-F 1->0 K-CMT 1->0  FORCED: no link is graded forced.
+OK   K-F 1->0 K-CMT 1->0  FORCED: nothing forced.
+OK   K-F 1->0 K-CMT 1->0  FORCED: N/A
+OK   K-F 1->0 K-CMT 1->0  FORCED: 0
+OK   K-F 1->1 K-CMT 1->1  FORCED: none -- but D2 vs C3 is forced
+OK   K-F 1->1 K-CMT 1->1  FORCED: none; "a quote" FORCED
+OK   K-F 1->1 K-CMT 1->1  FORCED: D2 vs C3 -- MEANS [DR1]: "took unto him" -- ANSWER [CR1]: "nothing here" -- FAILS: "nope"
+OK   K-F 1->1 K-CMT 1->1  FORCED: D2 vs C3 is forced because the reading cannot fit
+OK   K-F 1->1 K-CMT 1->1  FORCED: the D1 link
+OK   Haiku 34016 block: K-F 1->0, K-CMT/K-CMTL 2->0
+TOTAL 16 OK, 0 FAIL
