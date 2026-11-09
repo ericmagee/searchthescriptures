@@ -1,0 +1,28 @@
+[
+ {
+  "id": "XK-A-34016-terra",
+  "by": "W2",
+  "wall": "pkgXK probe_XK case 1 (FUM rev 6 grade defect)",
+  "run": "34016",
+  "say": "a two-item RESPONSE line written just before D2 #2's own line: the exact-key reader keeps D2 #2 on its own line (live s79 moves it to UNCURED)",
+  "edits": [
+   {
+    "find": "\\\\nRESPONSE: K-W DEFENDER CR2 D2 #2 \\|",
+    "replace": "\\nRESPONSE: K-W DEFENDER CR2 D3 #3, K-W DEFENDER CR2 D2 #2 | ACCEPTED: both withdrawals stand.$&",
+    "where": "RESPONSE: K-W DEFENDER CR2 D2 #2 | NOT HELD"
+   }
+  ],
+  "checks": [
+   {
+    "node": "Panel Cure Check",
+    "judge": "terra",
+    "item": "^DEFENDER CR2 D2 #2$",
+    "has": "cure_status",
+    "field": "cure_status",
+    "expect": {
+     "eq": "CURED"
+    }
+   }
+  ]
+ }
+]

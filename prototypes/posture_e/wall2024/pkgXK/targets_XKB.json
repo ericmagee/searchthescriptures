@@ -1,0 +1,6 @@
+{"why":"pkgXK stage B: cure calls for listed models carry response_format json_schema cure_lines and the ANSWER FORMAT note (cure ask and FUM follow-up). The note reaches each row's prompt_sent; no status, reason or count may change.",
+ "items":[{"field":"prompt_sent"}],
+ "allow_lines":[
+  {"node":"Cure (Build|Normalize)","path":"\\.body\\.response_format(\\.|$)","re":"^\\+ "},
+  {"node":"Cure (Build|Normalize)","path":"\\.body\\.messages\\[\\d+\\]\\.content$","re":"^\\+ (ANSWER FORMAT: return one JSON object with one key, cure_lines: .*)?$"}
+ ]}

@@ -28,3 +28,9 @@ Proof: probe_XKB.txt (11 OK); test_XKB_lib.txt (replay stage A vs stage B).
 - build_XK.cjs, plan_XK.json, probe_XK.cjs/.txt, test_XK_lib.cjs/.txt (stage A)
 - build_XKB.cjs, plan_XKB.json, probe_XKB.cjs/.txt, test_XKB_lib.cjs/.txt, make_check_calls.cjs, check_calls/ (stage B)
 - Write source for W4: pkgLIB/strip_XKB/patched (A and B together).
+
+## Shared gate (s79, required)
+- Stage A: `node gate/replay.cjs --base pkgLIB/strip_RPN --cand pkgLIB/strip_XK --out pkgXK/gate_XK.txt`: GATE PASS, 0 target item changes, 16 near-miss checks.
+- Stage A+B: `node gate/replay.cjs --base pkgLIB/strip_RPN --cand pkgLIB/strip_XKB --targets pkgXK/targets_XKB.json --out pkgXK/gate_XKB.txt`: GATE PASS. Targets allow only the response_format lines, the ANSWER FORMAT note lines, and prompt_sent on item rows.
+- New near-miss case gate/cases/w2_cases.json XK-A-34016-terra: a two-item line just before terra's D2 #2 line. Live s79 gives UNCURED (check fails on live); pkgXK gives CURED.
+- Pack for W4: `node gate/pack.cjs pkgLIB/strip_XKB pkgLIB_XK` (after the check calls; rebuild strip_XKB with XK_JSON_MODELS first if a model fails).
