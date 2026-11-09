@@ -1,0 +1,6 @@
+live Alternate Build         expects 323461, rebuilt 323461 OK
+live Early Alternate Build   expects 318804, rebuilt 323437 MISMATCH (throws)
+fixed Early Alternate Build  expects 323461, rebuilt 323461 OK
+fixed Early Alternate Build rebuilds the same source as Alternate Build: true
+lines changed: 1, 4, 5 of 14 (the 8-line head only)
+equals pkgLIB_SJR/e4_rebase/Early_Alternate_Build.js: true
