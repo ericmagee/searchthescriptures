@@ -8952,7 +8952,7 @@
     3000
    ],
    "parameters": {
-    "jsCode": "// pkgA2R final \"Alternate Merge\" (W1, 11-08). The round-1 node is renamed \"Alternate Merge 1\" (code unchanged). Every node after Dry? reads\n// $('Alternate Merge') by name and now reads this node.\n// No round 2 (R2 Alternate Merge not executed): round 1's output, unchanged.\n// Round 2: R2 Alternate Merge holds the panel base plus the round-2 alternates only. For each seat Second Alternate? named:\n//  - seated in round 2: its body and summary come from round 2; its drv_removed entry keeps round 1's lines for that seat plus round 2's\n//    ALTERNATE TRIED line;\n//  - not seated in round 2: round 1's body stays, and round 2's ALTERNATE TRIED / ALTERNATE UNSEATED lines for it are appended.\n// alternates_seated, drv_removed and alternates_tried are round 1's followed by round 2's (the seated and removed lists stay aligned, as\n// odv1_record_panel_alternates requires); the enforcer log adds round 2's rows for its own alternates.\nconst R1=$('Alternate Merge 1').first().json;\nlet R2=null;try{if($('R2 Alternate Merge').isExecuted)R2=$('R2 Alternate Merge').first().json;}catch(e){R2=null;}\nconst __cecL=[['Close Enforcer Record','cec_log'],['Judge Contradiction Record','jcc_log']].flatMap(([n,k])=>{try{return $(n).isExecuted?($(n).first().json[k]||[]):[];}catch(e){return [];}}); /* pkgCEC: the closing enforcer's E-CLOSECON rows join the run's enforcer_log */\nif(!R2)return [{json:__cecL.length?{...R1,enforcer_log:__cecL.concat(R1.enforcer_log||[])}:R1}];\nlet SA=null;try{SA=$('Second Alternate?').first().json.a2r;}catch(e){SA=null;}\nconst seatOf=b=>{try{return JSON.parse(b).payload.judge_seat;}catch(e){return null;}};\nconst rawOf=b=>{try{return String(JSON.parse(b).payload.verdict_raw==null?'':JSON.parse(b).payload.verdict_raw);}catch(e){return '';}};\nconst ALT=/^\\[AUDIT v(?:21|39): ALTERNATE (?:TRIED|UNSEATED) -- /;\nconst newLines=(r2raw,r1raw)=>{const have=new Set(r1raw.split('\\n'));return String(r2raw).split('\\n').filter(l=>ALT.test(l.trim())&&!have.has(l));};\nconst bodies=(R1.bodies||[]).slice();const summary=(R1.summary||[]).map(x=>({...x}));\nconst s2=(R2.alternates_seated||[]).slice();const rm2=(R2.drv_removed||[]).map(x=>({...x}));\nconst r2alt=new Set((R2.alternates_tried||[]).filter(x=>x&&x.alternate).map(x=>x.alternate));const result=[];\nfor(const rs of ((SA&&SA.seats)||[])){const k1=bodies.findIndex(b=>seatOf(b)===rs);\n if(k1<0){result.push({seat:rs,error:'the removed seat was not found in round 1'});continue;}\n const r1raw=rawOf(bodies[k1]);const st=s2.find(x=>x.removed_seat===rs);\n if(st){const k2=(R2.bodies||[]).findIndex(b=>seatOf(b)===st.alternate_seat);\n  if(k2<0){result.push({seat:rs,error:'the round-2 alternate body was not found'});continue;}\n  bodies[k1]=R2.bodies[k2];if(R2.summary&&R2.summary[k2])summary[k1]={...R2.summary[k2]};\n  const e=rm2.find(x=>x.seat===rs);if(e){const nl=newLines(e.verdict_raw==null?'':e.verdict_raw,r1raw);e.verdict_raw=r1raw+(nl.length?'\\n'+nl.join('\\n'):'');}\n  result.push({seat:rs,seated:st.alternate_seat,api_model:st.alternate_api_model});}\n else{const k2=(R2.bodies||[]).findIndex(b=>seatOf(b)===rs);const nl=k2>=0?newLines(rawOf(R2.bodies[k2]),r1raw):[];\n  if(nl.length){const b=JSON.parse(bodies[k1]);b.payload.verdict_raw=r1raw+'\\n'+nl.join('\\n');bodies[k1]=JSON.stringify(b);}\n  result.push({seat:rs,seated:null,lines:nl.length});}}\nconst enforcer_log=__cecL.concat(R1.enforcer_log||[]).concat( /* pkgCEC */(R2.enforcer_log||[]).filter(x=>x&&x.seat_role==='alternate'&&r2alt.has(x.seat)));\nconst out={...R1,bodies,summary,panel_effective:summary.map(x=>x.seat).sort(),alternates_seated:(R1.alternates_seated||[]).concat(s2),\n drv_removed:(R1.drv_removed||[]).concat(rm2),alternates_tried:(R1.alternates_tried||[]).concat(R2.alternates_tried||[]),enforcer_log,\n alternate_round2:{seats:(SA&&SA.seats)||[],tried:(SA&&SA.tried)||[],free:(SA&&SA.free)||[],result}};\nif(R1.alt_apply||R2.alt_apply)out.alt_apply=(R1.alt_apply||[]).concat(R2.alt_apply||[]);\nreturn [{json:out}];\n"
+    "jsCode": "// pkgA2R final \"Alternate Merge\" (W1, 11-08). The round-1 node is renamed \"Alternate Merge 1\" (code unchanged). Every node after Dry? reads\n// $('Alternate Merge') by name and now reads this node.\n// No round 2 (R2 Alternate Merge not executed): round 1's output, unchanged.\n// Round 2: R2 Alternate Merge holds the panel base plus the round-2 alternates only. For each seat Second Alternate? named:\n//  - seated in round 2: its body and summary come from round 2; its drv_removed entry keeps round 1's lines for that seat plus round 2's\n//    ALTERNATE TRIED line;\n//  - not seated in round 2: round 1's body stays, and round 2's ALTERNATE TRIED / ALTERNATE UNSEATED lines for it are appended.\n// alternates_seated, drv_removed and alternates_tried are round 1's followed by round 2's (the seated and removed lists stay aligned, as\n// odv1_record_panel_alternates requires); the enforcer log adds round 2's rows for its own alternates.\nconst R1=$('Alternate Merge 1').first().json;\nlet R2=null;try{if($('R2 Alternate Merge').isExecuted)R2=$('R2 Alternate Merge').first().json;}catch(e){R2=null;}\nconst __cecL=[['Close Enforcer Record','cec_log'],['Judge Contradiction Record','jcc_log'],['Assume Check Record','acx_log']] /* pkgVP4: E-ASSUME rows (TRIAL) */.flatMap(([n,k])=>{try{return $(n).isExecuted?($(n).first().json[k]||[]):[];}catch(e){return [];}}); /* pkgCEC: the closing enforcer's E-CLOSECON rows join the run's enforcer_log */\nif(!R2)return [{json:__cecL.length?{...R1,enforcer_log:__cecL.concat(R1.enforcer_log||[])}:R1}];\nlet SA=null;try{SA=$('Second Alternate?').first().json.a2r;}catch(e){SA=null;}\nconst seatOf=b=>{try{return JSON.parse(b).payload.judge_seat;}catch(e){return null;}};\nconst rawOf=b=>{try{return String(JSON.parse(b).payload.verdict_raw==null?'':JSON.parse(b).payload.verdict_raw);}catch(e){return '';}};\nconst ALT=/^\\[AUDIT v(?:21|39): ALTERNATE (?:TRIED|UNSEATED) -- /;\nconst newLines=(r2raw,r1raw)=>{const have=new Set(r1raw.split('\\n'));return String(r2raw).split('\\n').filter(l=>ALT.test(l.trim())&&!have.has(l));};\nconst bodies=(R1.bodies||[]).slice();const summary=(R1.summary||[]).map(x=>({...x}));\nconst s2=(R2.alternates_seated||[]).slice();const rm2=(R2.drv_removed||[]).map(x=>({...x}));\nconst r2alt=new Set((R2.alternates_tried||[]).filter(x=>x&&x.alternate).map(x=>x.alternate));const result=[];\nfor(const rs of ((SA&&SA.seats)||[])){const k1=bodies.findIndex(b=>seatOf(b)===rs);\n if(k1<0){result.push({seat:rs,error:'the removed seat was not found in round 1'});continue;}\n const r1raw=rawOf(bodies[k1]);const st=s2.find(x=>x.removed_seat===rs);\n if(st){const k2=(R2.bodies||[]).findIndex(b=>seatOf(b)===st.alternate_seat);\n  if(k2<0){result.push({seat:rs,error:'the round-2 alternate body was not found'});continue;}\n  bodies[k1]=R2.bodies[k2];if(R2.summary&&R2.summary[k2])summary[k1]={...R2.summary[k2]};\n  const e=rm2.find(x=>x.seat===rs);if(e){const nl=newLines(e.verdict_raw==null?'':e.verdict_raw,r1raw);e.verdict_raw=r1raw+(nl.length?'\\n'+nl.join('\\n'):'');}\n  result.push({seat:rs,seated:st.alternate_seat,api_model:st.alternate_api_model});}\n else{const k2=(R2.bodies||[]).findIndex(b=>seatOf(b)===rs);const nl=k2>=0?newLines(rawOf(R2.bodies[k2]),r1raw):[];\n  if(nl.length){const b=JSON.parse(bodies[k1]);b.payload.verdict_raw=r1raw+'\\n'+nl.join('\\n');bodies[k1]=JSON.stringify(b);}\n  result.push({seat:rs,seated:null,lines:nl.length});}}\nconst enforcer_log=__cecL.concat(R1.enforcer_log||[]).concat( /* pkgCEC */(R2.enforcer_log||[]).filter(x=>x&&x.seat_role==='alternate'&&r2alt.has(x.seat)));\nconst out={...R1,bodies,summary,panel_effective:summary.map(x=>x.seat).sort(),alternates_seated:(R1.alternates_seated||[]).concat(s2),\n drv_removed:(R1.drv_removed||[]).concat(rm2),alternates_tried:(R1.alternates_tried||[]).concat(R2.alternates_tried||[]),enforcer_log,\n alternate_round2:{seats:(SA&&SA.seats)||[],tried:(SA&&SA.tried)||[],free:(SA&&SA.free)||[],result}};\nif(R1.alt_apply||R2.alt_apply)out.alt_apply=(R1.alt_apply||[]).concat(R2.alt_apply||[]);\nreturn [{json:out}];\n"
    }
   },
   {
@@ -10338,6 +10338,97 @@
    ],
    "parameters": {
     "jsCode": "// pkgVP1 part 1 (W3; md_notes_rulings 459): records the second reading of each replaced line. One log row per line asked (kind send_back, rule E-REREAD):\n// cure_status CURED when DeepSeek now AGREES with the replaced line, UNCURED when it DISAGREES, empty when it gave no readable answer.\n// RECORD-ONLY: nothing is sent back, no drv_uncured changes, no seat is removed. The rows reach debate_enforcer_log through the merge nodes.\nconst B=$('R2 Alt Reread Build').all().map(x=>x.json);const first=B[0]||{};const T=new Date().toISOString();\nif(first.rr_skip)return [{json:{reread:{skipped:true,why:first.rr_why||'',not_checked:first.not_checked||[]},rr_rows:[]}}];\nconst R=$input.all().map(x=>x.json);const rows=[];const tally={AGREE:0,DISAGREE:0,'NO ANSWER':0,'NO VERDICT':0};const errors=[];\nconst models={};try{for(const j of (($('R2 Alt Send Back Build').all()||[]).map(x=>x.json)))if(j&&j.seat)models[j.seat]=j.api_model||null;}catch(e){}\nconst RX=/^ENFORCER\\s*:\\s*(?:(?:ITEM|ANSWER|ID)\\s+)?([A-Z]+\\d+\\.\\d+)(?:\\s*(?:\\(\\s*[A-Za-z][\\w.-]*\\s*\\)|,\\s*[A-Za-z][\\w.-]*))?\\s*(?:--|—|–|-)\\s*(AGREE|DISAGREE|NO ANSWER)\\s*(?:--|—|–|-)?\\s*(?:RIGHT\\s*:\\s*(MEETS|MISSES|NOT VOID|VOID|BROKEN|STANDS|UNDERDETERMINED|COUNTED|SPARED|DOES NOT FOLLOW|FOLLOWS|TRUE|OVERSTATED|SAME GROUND|DIFFERENT GROUND)\\s*(?:--|—|–|-)?)?\\s*(.*)$/i;\nB.forEach((b,i)=>{let txt='',err=null;try{txt=String(R[i].choices[0].message.content||'');}catch(e){err=String((R[i]&&R[i].error&&(R[i].error.message||R[i].error))||'no reply').slice(0,200);}\n if(err)errors.push('call '+(i+1)+': '+err);const V={};\n for(const l0 of txt.replace(/\\\\n/g,'\\n').split('\\n')){const l=l0.replace(/[*_`]+/g,'').replace(/^\\s*(?:[-•>]\\s*)?/,'').trim();const m=l.match(RX);if(!m)continue;const id=m[1].toUpperCase();if(V[id])continue;V[id]={v:m[2].toUpperCase(),right:(m[3]||'').toUpperCase(),why:(m[4]||'').trim(),line:l};}\n (b.ids||[]).forEach((x,k)=>{const v=V[String(x.id).toUpperCase()]||null;const st=v?v.v:'NO VERDICT';tally[st]=(tally[st]||0)+1;\n  rows.push({run_token:b.run_token||null,seat:x.seat,seat_role:'alternate',judge_model:models[x.seat]||null,kind:'send_back',rule:'E-REREAD',item:x.sid+' '+x.rule+(x.item?' '+String(x.item).slice(0,120):''),\n   flagged_line:String(x.to).slice(0,1500),prompt_sent:k===0?String(b.body&&b.body.messages&&b.body.messages[1]&&b.body.messages[1].content||''):null,full_reply:k===0?(txt||null):null,reply_error:err,response_line:v?v.line.slice(0,1500):null,\n   cure_status:st==='AGREE'?'CURED':st==='DISAGREE'?'UNCURED':null,\n   cure_reason:'SECOND READING of the replaced line (pkgVP1; RECORD-ONLY: nothing is sent back, nothing is counted, no seat is removed): ENFORCER '+st+(v&&v.right?' (right: '+v.right+')':'')+(v&&v.why?': '+v.why.slice(0,600):(err?': the call failed: '+err:(v?'':': no ENFORCER line for '+x.id+' in the reply')))+' | FIRST READING ('+x.id+'): '+String(x.reason).slice(0,400),at:T});});});\n(first.not_checked||[]).forEach(w=>{const m=String(w).match(/^(\\S+)\\s+(\\S+)\\s+\\(([^)]+)\\):\\s*(.*)$/);rows.push({run_token:first.run_token||null,seat:m?m[1]:null,seat_role:'alternate',judge_model:m?(models[m[1]]||null):null,kind:'send_back',rule:'E-REREAD',item:m?m[2]+' '+m[3]:String(w).slice(0,120),flagged_line:null,prompt_sent:null,full_reply:null,reply_error:null,response_line:null,cure_status:null,cure_reason:'SECOND READING NOT MADE (pkgVP1; RECORD-ONLY): '+(m?m[4]:String(w)),at:T});});\nreturn [{json:{reread:{skipped:false,calls:B.length,asked:B.reduce((a,b)=>a+(b.ids||[]).length,0),tally,errors,not_checked:first.not_checked||[]},rr_rows:rows}}];\n"
+   }
+  },
+  {
+   "id": "19338db8-d870-43f6-3097-6d8a88ce9371",
+   "name": "Assume Check Build",
+   "type": "n8n-nodes-base.code",
+   "typeVersion": 2,
+   "position": [
+    12368,
+    600
+   ],
+   "parameters": {
+    "jsCode": "// pkgVP4 (W2, P4 of Wall 3708, test 3738/3747): ASSUME CHECK BUILD. TRIAL, record-only. One DeepSeek call per run, after the panel.\n// For each UNSUPPORTED-L4 premise with ASSUMES (the list against the defender in [DR2], against the challenger in [CR3]), it gives DeepSeek the\n// assumed fact and the answering block (the other side's round 3 LINK block). It passes the incoming item on (Assume Check Record returns it).\ntry{\nconst VP4N=s=>String(s==null?'':s).toLowerCase().replace(/[“”\"’‘'*_`\\[\\]()]/g,'').replace(/[^a-z0-9:\\s]/g,' ').replace(/\\s+/g,' ').trim();\nconst VP4_STOP=new Set(['The','A','An','And','But','Or','Of','In','On','To','For','By','At','As','With','From','That','This','These','Those','He','His','Him','She','Her','It','Its','They','Their','I','We','Our','You','Your','Then','So','No','Not','Is','Was','Be','When','Where','Which','Who','Whom','Matthew','Mark','Luke','John','Acts','Romans','Genesis','Exodus','Isaiah','Numbers','Ruth','Samuel','Kings','Chronicles','Ezra','Corinthians','Galatians','Hebrews','Psalms','Psalm','Deuteronomy','Leviticus','Jeremiah']);\n/* proper names of a fact: capitalized words, possessive 's dropped, book names and function words left out; \"Holy Ghost\" gives Holy and Ghost */\nconst vp4Names=f=>{const out=[];for(const m of String(f||'').replace(/[\"“”]/g,' ').matchAll(/\\b([A-Z][a-z]+)(?:['’]s)?\\b/g)){const w=m[1];if(!VP4_STOP.has(w)&&!out.includes(w))out.push(w);}return out;};\n/* the UNSUPPORTED-L4 PREMISES list of one round: number, link, ASSUMES, ROWS GIVE */\nconst vp4List=(t,side)=>{t=String(t||\"\");const i=t.search(/UNSUPPORTED-L4 PREMISES/i);if(i<0)return [];let body=t.slice(t.indexOf(\"\\n\",i)+1);const e=body.search(/\\n[ \\t]*(?:#{1,3}\\s|---[ \\t]*\\n|\\*\\*[A-Z][A-Z\\x27 -]{4,}\\*\\*)/);if(e>=0)body=body.slice(0,e);const out=[];\n for(const p of body.split(/\\n(?=[ \\t]*\\**[ \\t]*\\d+[.)]\\s)/)){const m=p.match(/^\\s*\\**\\s*(\\d+)[.)]\\s+([\\s\\S]*)$/);if(!m)continue;const txt=m[2];\n  const a=txt.match(/ASSUMES\\s*:\\s*([\\s\\S]*?)\\s*(?:ROWS GIVE\\s*:|\\nPRESSED WITH|$)/i);if(!a)continue;const r=txt.match(/ROWS GIVE\\s*:\\s*([\\s\\S]*?)\\s*(?:\\nPRESSED WITH|$)/i);const lk=txt.match(/^\\s*\\**\\s*LINK\\s+(\\d+)/i);\n  out.push({side,n:+m[1],link:lk?+lk[1]:+m[1],assumes:a[1].replace(/\\s+/g,\" \").trim(),rows_give:r?r[1].replace(/\\s+/g,\" \").trim():\"\"});}\n return out;};\n/* the answering block: the other side's round 3 LINK k block, up to the next LINK block or the premise list */\nconst vp4Block=(t,k)=>{t=String(t||'');const H=[...t.matchAll(/^[ \\t>*#_-]*LINK\\s+(\\d+)\\b[^\\n]*/gmi)];const h=H.find(x=>+x[1]===k);if(!h)return '';const nx=H.find(x=>x.index>h.index);\n let e=nx?nx.index:t.length;const u=t.slice(h.index).search(/UNSUPPORTED-L4 PREMISES/i);if(u>=0&&h.index+u<e)e=t.lastIndexOf('\\n',h.index+u);return t.slice(h.index,e).trim();};\n/* the verse words a block quotes: every quotation in it */\nconst vp4Quotes=b=>[...String(b||'').matchAll(/\"([^\"\\n]{2,})\"|“([^”\\n]{2,})”/g)].map(m=>m[1]||m[2]);\n/* reader 2, code: every proper name of the fact found among the quoted verse words of the block, read together */\nconst vp4Code=(fact,qs)=>{const nm=vp4Names(fact);const all=' '+VP4N(qs.join(' | '))+' ';if(!nm.length)return {answer:'NO NAMES',names:[],missing:[]};\n const missing=nm.filter(w=>!all.includes(' '+w.toLowerCase()+' '));return {answer:missing.length?'NOT STATED':'POSSIBLY STATED',names:nm,missing};};\nconst S=$('Init Seats').first().json;let RS=null;try{RS=$('Resolve Seats').first().json;}catch(e){RS=null;}\nlet RGL=null;try{if($('Regrade Load').isExecuted)RGL=$('Regrade Load').first().json;}catch(e){RGL=null;}\nlet F=null;try{F=RGL?RGL.f:$('Final Output').first().json;}catch(e){F=null;}\nconst ds=RS&&RS.deepseek&&RS.deepseek.api_model?RS.deepseek:null;\nconst P=F?vp4List(F.gr2,'DEFENDER').concat(vp4List(F.cr3,'CHALLENGER')):[];\nconst prem=P.map(p=>{const blk=vp4Block(p.side==='DEFENDER'?F.cr3:F.dr3,p.link);return {...p,answer_round:(p.side==='DEFENDER'?'CR3':'DR3'),block:blk,quotes:vp4Quotes(blk)};});\nif(!F||!ds||!prem.length)return [{json:{acx_skip:true,why:!F?'no rounds found':!ds?'no DeepSeek model_config row':'no UNSUPPORTED-L4 premise carries ASSUMES',prem,run_token:S.run_token}}];\nconst PROMPT=\"You are the assumption enforcer. A premise below was listed against a side as UNSUPPORTED-L4, with the words ASSUMES: <fact>. Your one task: does the answering block's own quoted scripture state each assumed fact?\\nThe rule the judges were given: \\\"UNEXHIBITED also fires, whatever label the side gave the link (SUPPORTED, NARROWED TO or KEPT), when the link ASSUMES as given a fact about a person, house, time or act (for example, that a named person is of a named house) and no quoted row gives that fact.\\\" And: \\\"What a link INFERS from its rows is its [L4]: it is graded by the two-layer rule and by the meaning of the verses pressed against it, and never as a missing row (DG-61); an inferred act, such as a begetting or a knowing, is never an ASSUMES.\\\"\\nCommitment 3: scripture is read \\\"one verse or many read together, precept upon precept; no count of verses decides it.\\\"\\nFor each premise: split ASSUMES into its separate facts (a fact joined to another by \\\"and\\\" is its own fact). For each fact answer one of:\\nSTATED: the verse words quoted in the answering block, one verse or several read together, give the fact. Quote the words, word for word as the block quotes them, with their reference.\\nNOT STATED: no verse words quoted in the block give the fact; the block reaches it only by its own reasoning ([L4]) or not at all.\\nINFERRED ACT: the fact is an inferred act (such as a begetting or a knowing), which the rule says is never an ASSUMES.\\nRead only the words given to you. Bring no doctrine, no training knowledge and no verse the block does not quote. The side's own sentences are not scripture; only quoted verse words count.\\nReply with one line per fact and nothing else:\\nASSUME-CHECK: <DEFENDER|CHALLENGER> PREMISE <n> -- FACT <k> \\\"<the fact>\\\" -- STATED -- <reference> \\\"<verse words>\\\" -- <one sentence>\\nASSUME-CHECK: <DEFENDER|CHALLENGER> PREMISE <n> -- FACT <k> \\\"<the fact>\\\" -- NOT STATED -- <one sentence>\\nASSUME-CHECK: <DEFENDER|CHALLENGER> PREMISE <n> -- FACT <k> \\\"<the fact>\\\" -- INFERRED ACT -- <one sentence>\";\nconst user=PROMPT+'\\n\\n'+prem.map(p=>'######## '+p.side+' PREMISE '+p.n+' (listed against the '+p.side.toLowerCase()+', LINK '+p.link+') ########\\nASSUMES: '+p.assumes+'\\nROWS GIVE (as the lister wrote them): '+(p.rows_give||'(none)')+'\\n\\nTHE ANSWERING BLOCK, ['+p.answer_round+'] LINK '+p.link+':\\n'+(p.block||'(no LINK '+p.link+' block found in ['+p.answer_round+'])')).join('\\n\\n');\nconst body={model:ds.api_model,max_tokens:Math.max(Number(ds.max_tokens)||0,8000),temperature:0,messages:[{role:'system',content:'You check whether quoted scripture states a fact. You bring nothing from outside the words given to you: no doctrine, no training knowledge, no reading of your own. You do not judge who is right.'},{role:'user',content:user}]};\nreturn [{json:{acx_skip:false,body,prem,model:ds.api_model,run_token:S.run_token}}];\n}catch(__e){let __rt=null;try{__rt=$('Init Seats').first().json.run_token;}catch(e){}return [{json:{acx_skip:true,why:'Assume Check Build failed: '+String(__e&&__e.message||__e).slice(0,300),prem:[],run_token:__rt}}];} /* W3 3772 fix 2: a TRIAL check never stops the debate */"
+   }
+  },
+  {
+   "id": "776c0255-44c3-64d5-4f55-e42f5e20a513",
+   "name": "Assume Check Needed?",
+   "type": "n8n-nodes-base.if",
+   "typeVersion": 2.2,
+   "position": [
+    12592,
+    600
+   ],
+   "parameters": {
+    "conditions": {
+     "combinator": "and",
+     "conditions": [
+      {
+       "id": "assume-check-needed",
+       "leftValue": "={{ $json.acx_skip !== true }}",
+       "operator": {
+        "operation": "true",
+        "singleValue": true,
+        "type": "boolean"
+       },
+       "rightValue": ""
+      }
+     ],
+     "options": {
+      "caseSensitive": true,
+      "leftValue": "",
+      "typeValidation": "loose"
+     }
+    },
+    "options": {}
+   }
+  },
+  {
+   "id": "d9ed190d-8f87-6d69-b1cc-e3d040a94512",
+   "name": "Assume Check Call deepseek",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.3,
+   "retryOnFail": true,
+   "maxTries": 3,
+   "waitBetweenTries": 10000,
+   "onError": "continueRegularOutput",
+   "position": [
+    12816,
+    504
+   ],
+   "parameters": {
+    "method": "POST",
+    "url": "https://api.deepseek.com/v1/chat/completions",
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpHeaderAuth",
+    "sendBody": true,
+    "specifyBody": "json",
+    "jsonBody": "={{ $json.body }}",
+    "options": {
+     "timeout": 900000
+    }
+   },
+   "credentials": {
+    "httpHeaderAuth": {
+     "id": "R3waesZPK7vpsV8E",
+     "name": "DeepSeek Key"
+    }
+   }
+  },
+  {
+   "id": "25ca3df4-92ed-2ec3-3fdc-5d32c3cf9539",
+   "name": "Assume Check Record",
+   "type": "n8n-nodes-base.code",
+   "typeVersion": 2,
+   "position": [
+    13040,
+    600
+   ],
+   "parameters": {
+    "jsCode": "// pkgVP4 (W2, P4 of Wall 3708, test 3738/3747): ASSUME CHECK RECORD. TRIAL, record-only (E-ASSUME).\n// Two readers per assumed fact: DeepSeek (STATED needs its verse words found in the block's quotations) and code (every proper name of the fact\n// among the block's quoted verse words, read together). A judge that SPARED the premise gets an item only when both read NOT STATED.\n// One log row per fact with both answers, and one row per judge item. It passes Judge Contradiction Record's item on unchanged, with acx and acx_log.\nlet __IN=null;try{__IN=$('Judge Contradiction Record').first().json;}catch(e){__IN=null;}\ntry{\nconst VP4N=s=>String(s==null?'':s).toLowerCase().replace(/[“”\"’‘'*_`\\[\\]()]/g,'').replace(/[^a-z0-9:\\s]/g,' ').replace(/\\s+/g,' ').trim();\nconst VP4_STOP=new Set(['The','A','An','And','But','Or','Of','In','On','To','For','By','At','As','With','From','That','This','These','Those','He','His','Him','She','Her','It','Its','They','Their','I','We','Our','You','Your','Then','So','No','Not','Is','Was','Be','When','Where','Which','Who','Whom','Matthew','Mark','Luke','John','Acts','Romans','Genesis','Exodus','Isaiah','Numbers','Ruth','Samuel','Kings','Chronicles','Ezra','Corinthians','Galatians','Hebrews','Psalms','Psalm','Deuteronomy','Leviticus','Jeremiah']);\n/* proper names of a fact: capitalized words, possessive 's dropped, book names and function words left out; \"Holy Ghost\" gives Holy and Ghost */\nconst vp4Names=f=>{const out=[];for(const m of String(f||'').replace(/[\"“”]/g,' ').matchAll(/\\b([A-Z][a-z]+)(?:['’]s)?\\b/g)){const w=m[1];if(!VP4_STOP.has(w)&&!out.includes(w))out.push(w);}return out;};\n/* the UNSUPPORTED-L4 PREMISES list of one round: number, link, ASSUMES, ROWS GIVE */\nconst vp4List=(t,side)=>{t=String(t||\"\");const i=t.search(/UNSUPPORTED-L4 PREMISES/i);if(i<0)return [];let body=t.slice(t.indexOf(\"\\n\",i)+1);const e=body.search(/\\n[ \\t]*(?:#{1,3}\\s|---[ \\t]*\\n|\\*\\*[A-Z][A-Z\\x27 -]{4,}\\*\\*)/);if(e>=0)body=body.slice(0,e);const out=[];\n for(const p of body.split(/\\n(?=[ \\t]*\\**[ \\t]*\\d+[.)]\\s)/)){const m=p.match(/^\\s*\\**\\s*(\\d+)[.)]\\s+([\\s\\S]*)$/);if(!m)continue;const txt=m[2];\n  const a=txt.match(/ASSUMES\\s*:\\s*([\\s\\S]*?)\\s*(?:ROWS GIVE\\s*:|\\nPRESSED WITH|$)/i);if(!a)continue;const r=txt.match(/ROWS GIVE\\s*:\\s*([\\s\\S]*?)\\s*(?:\\nPRESSED WITH|$)/i);const lk=txt.match(/^\\s*\\**\\s*LINK\\s+(\\d+)/i);\n  out.push({side,n:+m[1],link:lk?+lk[1]:+m[1],assumes:a[1].replace(/\\s+/g,\" \").trim(),rows_give:r?r[1].replace(/\\s+/g,\" \").trim():\"\"});}\n return out;};\n/* the answering block: the other side's round 3 LINK k block, up to the next LINK block or the premise list */\nconst vp4Block=(t,k)=>{t=String(t||'');const H=[...t.matchAll(/^[ \\t>*#_-]*LINK\\s+(\\d+)\\b[^\\n]*/gmi)];const h=H.find(x=>+x[1]===k);if(!h)return '';const nx=H.find(x=>x.index>h.index);\n let e=nx?nx.index:t.length;const u=t.slice(h.index).search(/UNSUPPORTED-L4 PREMISES/i);if(u>=0&&h.index+u<e)e=t.lastIndexOf('\\n',h.index+u);return t.slice(h.index,e).trim();};\n/* the verse words a block quotes: every quotation in it */\nconst vp4Quotes=b=>[...String(b||'').matchAll(/\"([^\"\\n]{2,})\"|“([^”\\n]{2,})”/g)].map(m=>m[1]||m[2]);\n/* reader 2, code: every proper name of the fact found among the quoted verse words of the block, read together */\nconst vp4Code=(fact,qs)=>{const nm=vp4Names(fact);const all=' '+VP4N(qs.join(' | '))+' ';if(!nm.length)return {answer:'NO NAMES',names:[],missing:[]};\n const missing=nm.filter(w=>!all.includes(' '+w.toLowerCase()+' '));return {answer:missing.length?'NOT STATED':'POSSIBLY STATED',names:nm,missing};};\nconst IN=__IN;if(!IN)throw new Error('Judge Contradiction Record has no item');const B=$('Assume Check Build').first().json;const RT=B.run_token||null;\nconst OUT=(acx,acx_log)=>[{json:{...IN,acx,acx_log}}];\nconst log=o=>{const r={run_token:RT,seat:'assumption check',seat_role:'panel',judge_model:B.model||null,kind:'enforcer_check',rule:'E-ASSUME',reply_error:null,cure_status:null,flagged_line:null,prompt_sent:null,full_reply:null,response_line:null,...o};const st=r.cure_status;if(st!=null){r.cure_reason=st+(r.cure_reason?' -- '+r.cure_reason:'');r.cure_status=null;}r.seat_role=r.seat==='single judge'?'single':'panel';return r;}; /* W3 3772 fix 1: the table allows seat_role panel/reserve/alternate/single/synthesis and cure_status null/CURED/UNCURED; the reading leads cure_reason */\nif(B.acx_skip)return OUT({skipped:true,why:B.why,facts:[],items:[]},[log({item:'NOT CHECKED',cure_status:'NOT CHECKED',cure_reason:'the assumption check did not run: '+B.why+' (RECORD-ONLY TRIAL, VP4)'})]);\n/* the judges' CONCEDED LINKS lines (panel seats, then the single judge) */\nfunction psG(l){const g={};let t=String(l==null?'':l).replace(/\\\\+\"/g,'\"').replace(/[*_`]+/g,'');const m=t.match(/^\\s*(?:[-•]\\s*|\\d+[.)]\\s*)?(DEFENDER\\s+|CHALLENGER\\s+)?CONCEDED LINKS\\s*:\\s*(\\d+)?\\s*(?:--|—|–)?/i);if(!m)return null;t=t.slice(m[0].length);\n t=t.replace(/\\([^()]*\\)/g,' ').replace(/\"[^\"\\n]*\"|“[^”\\n]*”/g,q=>/[.!?]\\s*[\"”]$/.test(q)?' . ':' ').replace(/(^|[\\s(\\[:;,])(['‘](?:[^'’\\n]|['’](?=[A-Za-z]))+?['’])(?=$|[\\s.,;:!?)\\]])/g,(x,a,q)=>a+(/[.!?]\\s*['’]$/.test(q)?' . ':' '))\n  .replace(/\\[[^\\]]*\\]/g,' ').replace(/\\b\\d+:\\d+(?:[-–]\\d+)?\\b/g,' ').replace(/\\b(?:Commitment|Link|LINK|links?)\\s+\\d+\\b/g,' ').replace(/\\b[CDL]\\d+\\b/g,' ').replace(/\\b[123]\\s+(?:Samuel|Kings|Chronicles|Corinthians|Thessalonians|Timothy|Peter|John)\\b/g,' ')\n  .replace(/\\b(\\d)\\s*[–—-]\\s*(\\d)\\b/g,(x,a,b)=>{const o=[];for(let i=+a;i<=+b;i++)o.push(i);return o.join(', ');});\n const W=/\\b(VOID|UNEXHIBITED|CONCEDED|counted|spared|SUPPORTED|NARROWED|STANDS)\\b/ig;\n for(const c0 of t.split(/;|\\.(?=\\s|$)/)){const c=c0.replace(/\\bnone\\s+counted\\b/ig,' ').replace(/\\b(?:(?:are|is|were|was|be|been)\\s+)?(?:not|never)\\s+counted\\b|\\buncounted\\b/ig,' spared ');W.lastIndex=0;const w=W.exec(c);if(!w)continue;const k=w[1].toUpperCase();const G=k==='VOID'?'VOID':(k==='UNEXHIBITED'||k==='CONCEDED'||k==='COUNTED')?'COUNTED':'SPARED';\n  for(const n of (c.match(/\\b\\d\\b/g)||[]).map(Number))if(n>0&&!(n in g))g[n]=G;}\n return {side:m[1]&&/^CHALLENGER/i.test(m[1])?'CHALLENGER':'DEFENDER',n:m[2]!=null?+m[2]:null,g};} /* = library psGrades (pkgRI3B/pkgPSQ) without the ri3Head2024 header form */\nconst jt=r=>String(r==null?'':r).replace(/\\\\n/g,'\\n');\nconst judges=[];let PP=null;try{PP=$('Panel Payloads').first().json;}catch(e){PP=null;}\n((PP&&PP.bodies)||[]).forEach((b,i)=>{let p=null;try{p=JSON.parse(b).payload;}catch(e){return;}judges.push({seat:p.judge_seat||((PP.summary||[])[i]||{}).seat||('panel '+(i+1)),raw:jt(p.verdict_raw)});});\ntry{if($('Extract Independent Verdict').isExecuted){const e=$('Extract Independent Verdict').first().json;judges.push({seat:'single judge',raw:jt(e.independent_verdict_raw)});}}catch(e){}\nconst gradeOf=(raw,side,n)=>{for(const l of raw.split('\\n')){const r=psG(l);if(!r||r.side!==side)continue;return (n in r.g)?r.g[n]:(!Object.keys(r.g).length&&r.n===0?'SPARED':null);}return null;};\n/* reader 1, DeepSeek */\nconst r=$input.first().json||{};let txt=null,err=null;try{txt=String(r.choices[0].message.content||'');}catch(e){err='no reply ('+String((r.error&&(r.error.message||r.error))||r.message||'unknown').slice(0,200)+')';}\nconst LN=/^[\\s>*_-]*ASSUME-CHECK\\s*:\\s*\\**\\s*(DEFENDER|CHALLENGER)\\s+PREMISE\\s+(\\d+)\\s*\\**\\s*--\\s*FACT\\s+(\\d+)\\s*[\"“](.*?)[\"”]\\s*--\\s*(STATED|NOT STATED|INFERRED ACT)\\s*(?:--\\s*(.*?))?[\\s*_]*$/i;\nconst ds=[];for(const line of String(txt||'').split('\\n')){const s=line.trim();if(!s)continue;const m=s.match(LN);if(!m)continue;\n const x={side:m[1].toUpperCase(),n:+m[2],k:+m[3],fact:m[4],answer:m[5].toUpperCase(),rest:(m[6]||'').trim(),line:s.slice(0,1200)};\n if(x.answer==='STATED'){const p=B.prem.find(y=>y.side===x.side&&y.n===x.n);const q=[...x.rest.matchAll(/[\"“](.+?)[\"”]/g)].map(z=>z[1]);const qs=p?VP4N(p.quotes.join(' | ')):'';\n  x.verse_words=q;x.found=q.length>0&&q.every(z=>{const v=VP4N(z);return v.split(' ').length>=2&&qs.includes(v);});if(!x.found)x.answer='STATED (verse words not found in the block)';}\n ds.push(x);}\nconst facts=[],items=[];\nfor(const p of B.prem){let mine=ds.filter(x=>x.side===p.side&&x.n===p.n);if(!mine.length)mine=[{side:p.side,n:p.n,k:0,fact:p.assumes,answer:err?'NO REPLY':'NO ANSWER',rest:'',line:null}];\n for(const x of mine){const code=vp4Code(x.fact,p.quotes);const both=x.answer==='NOT STATED'&&code.answer==='NOT STATED';const spared=judges.map(j=>({seat:j.seat,grade:gradeOf(j.raw,p.side,p.n)}));\n  const fx={side:p.side,n:p.n,link:p.link,k:x.k,fact:x.fact,deepseek:x.answer,deepseek_line:x.line,code:code.answer,names:code.names,missing:code.missing,both_not_stated:both,grades:spared};facts.push(fx);\n  if(both)for(const j of spared)if(j.grade==='SPARED')items.push({seat:j.seat,side:p.side,n:p.n,k:x.k,fact:x.fact});}}\nconst gtxt=g=>g.map(j=>j.seat+' '+(j.grade||'not read')).join(', ');\nconst prompt=((B.body||{}).messages||[])[1]?B.body.messages[1].content:null;\nconst acx_log=facts.map((f,i)=>log({item:f.side+' PREMISE '+f.n+' FACT '+(f.k||'?'),flagged_line:'ASSUMES: '+f.fact,prompt_sent:i===0?prompt:'[SAME prompt_sent AS the first E-ASSUME row]',full_reply:i===0?txt:'[SAME full_reply AS the first E-ASSUME row]',response_line:f.deepseek_line,reply_error:err,\n  cure_status:f.both_not_stated?'BOTH NOT STATED':/^NO (ANSWER|REPLY)$/.test(f.deepseek)?'DEEPSEEK '+f.deepseek:(f.deepseek==='STATED'&&f.code!=='NOT STATED')?'NO ITEM (STATED)':f.deepseek==='INFERRED ACT'?'NO ITEM (INFERRED ACT)':'READERS DIFFER',\n  cure_reason:'DEEPSEEK: '+f.deepseek+' -- CODE: '+f.code+(f.names.length?' (names '+f.names.join(', ')+(f.missing.length?'; not in the block\\'s quoted verse words: '+f.missing.join(', '):'')+')':'')+' -- JUDGES: '+gtxt(f.grades)+' -- RECORD-ONLY TRIAL (VP4)'}))\n .concat(items.map(it=>log({seat:it.seat,item:'premise listed against the '+it.side.toLowerCase()+' '+it.n+' FACT '+(it.k||'?'),flagged_line:'ASSUMES: '+it.fact,cure_status:'ITEM (TRIAL)',\n  cure_reason:'E-ASSUME: the judge SPARED premise '+it.n+'; both readers find no verse quoted in the answering block that states \"'+it.fact+'\", and the ruling names none. RECORD-ONLY TRIAL (VP4): nothing is sent back and no seat is removed.'})));\nreturn OUT({skipped:false,model:B.model||'',facts,items,errors:err?[err]:[]},acx_log);\n}catch(__e){const m='Assume Check Record failed: '+String(__e&&__e.message||__e).slice(0,300);let rt=null;try{rt=$('Assume Check Build').first().json.run_token;}catch(e){}\n if(!__IN)throw __e;return [{json:{...__IN,acx:{skipped:true,why:m,facts:[],items:[]},acx_log:[{run_token:rt,seat:'assumption check',seat_role:'panel',judge_model:null,kind:'enforcer_check',rule:'E-ASSUME',item:'NOT CHECKED',flagged_line:null,prompt_sent:null,full_reply:null,response_line:null,reply_error:m,cure_status:null,cure_reason:'NOT CHECKED -- '+m+' (RECORD-ONLY TRIAL, VP4)'}]}}];} /* W3 3772 fix 2 */"
    }
   }
  ],
@@ -16594,7 +16685,7 @@
    "main": [
     [
      {
-      "node": "Panel Cure Needed?",
+      "node": "Assume Check Build",
       "type": "main",
       "index": 0
      }
@@ -16799,6 +16890,57 @@
     [
      {
       "node": "R2 Alt Gate Build",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Assume Check Build": {
+   "main": [
+    [
+     {
+      "node": "Assume Check Needed?",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Assume Check Needed?": {
+   "main": [
+    [
+     {
+      "node": "Assume Check Call deepseek",
+      "type": "main",
+      "index": 0
+     }
+    ],
+    [
+     {
+      "node": "Assume Check Record",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Assume Check Call deepseek": {
+   "main": [
+    [
+     {
+      "node": "Assume Check Record",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Assume Check Record": {
+   "main": [
+    [
+     {
+      "node": "Panel Cure Needed?",
       "type": "main",
       "index": 0
      }
