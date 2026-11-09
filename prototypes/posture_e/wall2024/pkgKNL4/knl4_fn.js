@@ -1,0 +1,7 @@
+function knlNone2024(l){const s=String(l==null?'':l).replace(/[*_`]+/g,'').trim().replace(/^(?:[-•>]|\d+[.)])\s*/,'');const m=s.match(/^FORCED(?:\s+(?:LINES?|LINKS?))?(?:\s*\(\s*Commitment\s+\d+\s*\))?\s*:\s*(.*)$/i);if(!m)return false;let r=m[1].trim(); /* pkgKNL; rev 4 (W1 3790): the FORCED LINES / FORCED LINKS head */
+ r=r.replace(/^[-–—:\s]+/,''); /* rev 4: a leading dash */
+ for(let k=0;k<3;k++){const p=r.match(/^(.*?)\s*\(([^()]*)\)\s*\.?\s*$/);if(!p||!p[1].trim())break;const t=p[2];if(!/^\s*Commitment\s+\d+\s*$/i.test(t)&&(/\b[DC]\s*\d|\bLINK\s*\d|\bPREMISE\s*\d|\[[CD]R\d\]|\b[CD]R\d\b|["“”]|\bexcept\b|\bbut\b|\bsave\b|\bother than\b/i.test(t)||!/\b(?:no|none|not|nothing)\b/i.test(t)))return false;r=p[1].trim();} /* rev 4: a closing parenthesis that names no link, round or quote and only says nothing is graded */
+ r=r.replace(/\s*\.\s*$/,'');
+ return /^(?:none|nil|n\/a|no|nothing|zero|0)(?:\s+(?:graded|forced|links?\s+(?:is\s+|are\s+)?(?:graded\s+)?(?:graded|forced)))?$/i.test(r)
+  ||/^none\s+of\s+(?:the\s+)?(?:collisions?|collision\s+(?:points?|lines?)|links?|lines?)(?:\s+(?:is|are)\s+(?:graded\s+)?forced)?$/i.test(r)
+  ||/^(?:there\s+(?:are|is)\s+)?no\s+(?:forced\s+)?(?:links?|lines?|collisions?|collision\s+(?:points?|lines?))(?:\s+(?:is|are)\s+(?:graded\s+)?forced)?$/i.test(r);} /* rev 3 (W3 3576): an allow-list; rev 4 (W1 3790) adds: none of the collisions/links/lines, there are no forced links, a leading dash, a nothing-graded parenthesis, the FORCED LINES head */

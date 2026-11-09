@@ -1,0 +1,9 @@
+// pkgKNL rev 4: knlNone2024 old (live strip_VP1_s84) against new (strip_KNL4) on 17 lines that grade nothing and 14 that must still be checked.
+const fs=require('fs');const get=d=>{const s=fs.readFileSync(d+'/patched/Panel_Payloads.js','utf8');const i=s.indexOf('function knlNone2024(');return new Function(s.slice(i,s.indexOf('function kfLines',i))+';return knlNone2024;')();};
+const old=get(__dirname+'/../pkgLIB/strip_VP1_s84'),knl=get(__dirname+'/../pkgLIB/strip_KNL4');
+const yes=["FORCED: none graded.","FORCED: none.","**FORCED:** none","FORCED (Commitment 6): none","FORCED: no links are forced","FORCED: N/A","Forced: none","FORCED LINES: none","FORCED: — none","FORCED: none (no link is graded broken)","FORCED: none of the collisions","FORCED: There are no forced links.","FORCED: - none.","FORCED LINKS: none.","FORCED: none (Commitment 6).","FORCED: none (nothing is graded broken).","FORCED: none of the links are forced."];
+const no=["FORCED: none, except D6 vs C5, which the challenger forced","FORCED: D1 vs C1 is forced because the reading cannot fit","FORCED: none (except D6 vs C5)","FORCED: none (D6 vs C5 is forced)","FORCED: none (see [CR4])","FORCED: none (the defender wrote \"no father\")","FORCED: none of the collisions except D2 vs C2","FORCED: There are no forced links but D1","FORCED: none (but the keystone is)","FORCED: none (the reading cannot fit)","FORCED: D6 vs C5 (none of the others)","FORCED: none (no link but LINK 4)","FORCED: no forced links save D3","D1 vs C1: none"];
+let ok=0,bad=0;const T=(c,m)=>{console.log((c?'OK   ':'FAIL ')+m);c?ok++:bad++;};
+for(const l of yes)T(knl(l)===true,'grades nothing '+(old(l)?'(rev 3 too)   ':'(NEW in rev 4)')+' | '+l);
+for(const l of no)T(knl(l)===false&&old(l)===false,'still checked (rev 3 too)    | '+l);
+console.log('\n'+ok+' OK, '+bad+' FAIL');

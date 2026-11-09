@@ -1,0 +1,31 @@
+OK   K-F 0->0 K-CMT 0->0  FORCED: none graded.
+OK   K-F 0->0 K-CMT 0->0  FORCED: none.
+OK   K-F 0->0 K-CMT 0->0  FORCED: none
+OK   K-F 0->0 K-CMT 0->0  **FORCED:** none graded.
+OK   K-F 0->0 K-CMT 0->0  - FORCED: none graded
+OK   K-F 0->0 K-CMT 0->0  FORCED (Commitment 6): none
+OK   K-F 0->0 K-CMT 0->0  FORCED: no link is graded forced.
+OK   K-F 0->0 K-CMT 0->0  FORCED: nothing forced.
+OK   K-F 0->0 K-CMT 0->0  FORCED: N/A
+OK   K-F 0->0 K-CMT 0->0  FORCED: 0
+OK   K-F 1->1 K-CMT 1->1  FORCED: none -- but D2 vs C3 is forced
+OK   K-F 1->1 K-CMT 1->1  FORCED: none; "a quote" FORCED
+OK   K-F 1->1 K-CMT 1->1  FORCED: D2 vs C3 -- MEANS [DR1]: "took unto him" -- ANSWER [CR1]: "nothing here" -- FAILS: "nope"
+OK   K-F 1->1 K-CMT 1->1  FORCED: D2 vs C3 is forced because the reading cannot fit
+OK   K-F 1->1 K-CMT 1->1  FORCED: the D1 link
+OK   K-F 1->1 K-CMT 1->1  FORCED: none, except LINK 3, which the challenger forced
+OK   K-F 1->1 K-CMT 1->1  FORCED: none except D3 (the challenger forced it at [CR2])
+OK   K-F 1->1 K-CMT 1->1  FORCED: no; the D2 link is forced by [CR3] ‘took unto him’
+OK   K-F 1->1 K-CMT 1->1  FORCED: none of D1, D2 is forced
+OK   K-F 1->1 K-CMT 1->1  FORCED: no forced link; D4 is CHALLENGER LINK BROKEN
+OK   K-F 1->1 K-CMT 1->1  FORCED: none, but the challenger forced one link
+OK   K-F 1->1 K-CMT 1->1  FORCED: none graded; Joseph’s link is answered
+OK   K-F 1->1 K-CMT 1->1  FORCED: none graded; Joseph's link is answered
+OK   K-F 1->1 K-CMT 1->1  FORCED: no (the challenger's reading is forced at CR2)
+OK   K-F 1->1 K-CMT 1->1  FORCED: none, apart from link three
+OK   K-F 1->1 K-CMT 1->1  FORCED: zero links; premise 4 is forced
+OK   K-F 0->0 K-CMT 0->0  FORCED: none graded (Commitment 6).
+OK   K-F 0->0 K-CMT 0->0  FORCED: None.
+OK   K-F 0->0 K-CMT 0->0  FORCED: no links are forced
+OK   Haiku 34016 block: K-F 0->0, K-CMT/K-CMTL 0->0
+TOTAL 30 OK, 0 FAIL
