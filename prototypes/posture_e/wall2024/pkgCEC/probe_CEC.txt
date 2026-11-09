@@ -46,5 +46,14 @@ OK   6b the single judge takes the same break when its text has D6 collision lin
 OK   6c a single judge with no rule item (luna's text put in its place): D6 lines BROKEN, verdict BROKEN, AUDIT v25 recompute line; without the record: unchanged: with: BROKEN; without: HELD
    7a lengths 451 449 E-CLOSECON
 OK   7a Alternate Merge adds the E-CLOSECON rows to the run's enforcer_log, ahead of the rest, which is unchanged
+OK   8a 34108 with no pre-panel record: terra's CONTRADICTION line ([CR3] grant against [CR4] Genesis 4:1) becomes candidate J1, named by chatgpt (terra): ["J1 DEFENDER CR3>CR4 by the judges' CONTRADICTION lines (chatgpt)"]
+OK   8b the post-panel prompt answers candidates only, with the same rules
+OK   8c a pair the pre-panel enforcer already answered is not sent again (34108: no call): every judge-found pair was already answered before the panel
+OK   8d Judge Contradiction Record: J1 CONFIRMED on D1; Panel Payloads' item passes on unchanged (Panel Cure Needed? and Panel Cure Build read it): J1 DEFENDER LINK 1: CONFIRMED
+OK   8e a NEW line in the post-panel call is recorded NOT A CANDIDATE and breaks nothing
+OK   8f skipped (nothing new): Panel Payloads passes on, no log row
+OK   8g the recompute takes a post-panel break: every D1 line DEFENDER LINK BROKEN, verdict BROKEN: luna: 1 line(s), BROKEN
+OK   8h both records: D6 and D1 both break; one break per link
+OK   8i Alternate Merge logs both records' rows (2 pre-panel + 1 post-panel)
 
-47 OK, 0 FAIL
+56 OK, 0 FAIL

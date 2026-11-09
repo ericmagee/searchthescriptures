@@ -1,8 +1,8 @@
 # pkgCEC: the closing contradiction enforcer and the default break (item A of Wall 3714)
 
-Builder W1. Graders W2 and W3. Base: pkgSJR rev 2 (live s82 + SJR; it becomes s83 when W4 writes it), library strip_SJR.
+Builder W1. Graders W2 and W3. Base: live s83 (pkgSJR, written 14:51 CST), library strip_SJR.
 Wording for the operator: Wall 3718 and `wording_rev1.md` (copy of /mnt/project-files/w1/itemA_closing_contradiction_wording.md, rev 1).
-NOT FOR WRITE until the operator approves the wording (ASK 1) and answers ASK 2.
+The operator approved the wording (ASK 1: "APPROVED") and answered ASK 2 "YES" at 15:15 CST 11-09. Rev 2 adds ASK 2. It is ready for W4's write after two PASS grades.
 
 ## The rule (the operator, 14:31 and 14:42 CST 11-09)
 A debater confirmed to contradict itself in its closing round has the chain link broken by default; a withdrawal after the contradiction does not undo it; the withdrawal rules that already stand still stand.
@@ -31,8 +31,20 @@ A debater confirmed to contradict itself in its closing round has the chain link
 4. **Log.** Alternate Merge puts the E-CLOSECON rows at the head of `enforcer_log` (both the no-round-2 return and round 2), so Write Enforcer Log records them in debate_enforcer_log.
 5. **Stub heads.** Alternate Build and Early Alternate Build take pkgLIB_CEC/e4_rebase. Live Early Alternate Build has been stale since s80 (W1 Wall finding 3726).
 
+## Rev 2: ASK 2, judge-found contradictions confirmed after the panel
+6. Four more nodes sit between Panel Payloads (output 0) and Panel Cure Needed?:
+   - **Judge Contradiction Build.** Its candidates:
+     - each panel judge's and the single judge's `CONTRADICTION -- <SIDE> -- EARLIER ([..], "..") -- LATER ([..], "..")` line whose LATER round is that side's round 4;
+     - each contradiction question of the dry question round (QR Merge qa with earlier_quote).
+
+     Pairs are de-duplicated across judges. A pair the pre-panel enforcer already answered is not sent again. No candidate means no call. The prompt is the same, but it answers candidates only.
+   - **Judge Contradiction Needed?** and **Judge Contradiction Call deepseek**: copies, as for the pre-panel nodes.
+   - **Judge Contradiction Record.** The same checks as Close Enforcer Record. A NEW line is recorded NOT A CANDIDATE and has no effect. It passes Panel Payloads' item on unchanged, with jcc and jcc_log added (Panel Cure Needed? and Panel Cure Build read $json).
+   - `cecBroken2024` now reads both records, with one break per side and link. Alternate Merge logs both records' rows.
+   - **Limit:** the single judge's recompute runs before the panel, so a break confirmed only after the panel does not reach the single judge's result. It does reach every panel, reserve and alternate seat.
+
 ## Proof
-- **probe_CEC.txt: 47 OK, 0 FAIL**, on run 34108. The enforcer's reply is written by hand; no DeepSeek call is made offline.
+- **probe_CEC.txt: 56 OK, 0 FAIL** (rev 2 adds 8a to 8i), on run 34108. The enforcer's reply is written by hand; no DeepSeek call is made offline.
   - **Build.** 151,166 characters, all 8 rounds in full, D1-D6 and C1-C6 read, the Oracle's X lines become candidates, and a missing model row means skip.
   - **Record, the two 34108 lines.**
     - The [CR3] drop of "no biological father" against the [CR4] close "Christ had no biological father." is CONFIRMED on D6.
@@ -52,6 +64,12 @@ A debater confirmed to contradict itself in its closing round has the chain link
   - **Send-back (Alternate Merge Seat, which applies 34108's real send-backs).** All three seats stay BROKEN, whether the input is the uncured or the cured texts.
   - **Single judge (Cure Check).** It is unchanged with no record. 34108's single judge was unreadable, so luna's text was put in its place: BROKEN with the record, HELD without it.
   - **Log.** 2 E-CLOSECON rows at the head of enforcer_log; the rest is unchanged.
+  - **Rev 2 (8a to 8i).**
+    - On 34108, terra's CONTRADICTION line becomes candidate J1. With the pre-panel record it is not sent again, because it was already answered.
+    - A confirmed J1 breaks D1 in the recompute, and Panel Payloads' item passes on unchanged.
+    - A NEW line breaks nothing.
+    - Both records break their own links.
+    - Alternate Merge logs both.
 - **gate_CEC.txt: GATE PASS.** Base strip_SJR, candidate strip_CEC, fetch-back s82: 862 node runs, all byte-equal or the same error, 17 near-miss checks. No saved run has a Close Enforcer Record, so nothing changes. That path is tested by the probe above.
 
 ## Not tested offline
@@ -62,10 +80,10 @@ A debater confirmed to contradict itself in its closing round has the chain link
 - cec_nodes.cjs: all code text.
 - build_CEC.cjs:
   - `strip` writes pkgLIB/strip_CEC and plan_CEC.json.
-  - `parent` writes parent_s83_CEC.json: 398 nodes (+4), connections in the file.
+  - `parent` writes parent_s83_CEC.json from fetchback_live_s83.json: 402 nodes (+8), connections in the file.
 - probe_CEC.cjs/.txt, gate_CEC.txt/.log, wording_rev1.md, manual_part_CEC.md.
 
 ## Write (W4, after the operator's approval)
-- Write parent_s83_CEC.json on top of s83 (pkgSJR).
+- Write parent_s83_CEC.json on top of s83 (pkgSJR). It also carries the Early Alternate Build head (pkgEAB), so pkgEAB need not be written separately if this goes first.
 - Or write the four new nodes, the four edited non-library nodes, pkgLIB_CEC/patched, e4_rebase, and the connections in build_CEC.cjs.
 - Run n8n validation first.

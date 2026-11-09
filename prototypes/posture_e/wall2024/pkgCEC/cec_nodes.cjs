@@ -68,7 +68,7 @@ let RGL=null;try{if($('Regrade Load').isExecuted)RGL=$('Regrade Load').first().j
 let F={};try{F=RGL?RGL.f:$('Final Output').first().json;}catch(e){F={};}
 const links=B.links||cecLinks(F);const cands=B.cands||[];const prompt=(((B.body||{}).messages||[])[1]||{}).content||null;
 const r=$input.first().json||{};let txt=null,err=null;try{txt=String(r.choices[0].message.content||'');}catch(e){err='no reply ('+String((r.error&&(r.error.message||r.error))||r.message||'unknown').slice(0,200)+')';}
-const LN=/^[\s>*_-]*CLOSE-CONTRADICTION\s*:\s*\**\s*(X\d+|NEW\s*\d*)\s*\**\s*--\s*(DEFENDER|CHALLENGER)\s*--\s*LINK\s*(\d+)\s*--\s*(CONFIRMED|NOT A CONTRADICTION)\s*--\s*EARLIER\s*\[?\s*([CD]R\d)\s*\]?\s*["“](.*?)["”]\s*--\s*CLOSING\s*\[?\s*([CD]R\d)\s*\]?\s*["“](.*?)["”]\s*(?:--\s*(.*?))?[\s*_]*$/i;
+const LN=/^[\s>*_-]*CLOSE-CONTRADICTION\s*:\s*\**\s*(X\d+|J\d+|NEW\s*\d*)\s*\**\s*--\s*(DEFENDER|CHALLENGER)\s*--\s*LINK\s*(\d+)\s*--\s*(CONFIRMED|NOT A CONTRADICTION)\s*--\s*EARLIER\s*\[?\s*([CD]R\d)\s*\]?\s*["“](.*?)["”]\s*--\s*CLOSING\s*\[?\s*([CD]R\d)\s*\]?\s*["“](.*?)["”]\s*(?:--\s*(.*?))?[\s*_]*$/i;
 const rows=[],errors=[];if(err)errors.push(err);let none=false;
 for(const line of String(txt||'').split('\n')){const s=line.trim();if(!s)continue;if(/^[\s>*_-]*CLOSE-CONTRADICTION\s*:\s*\**\s*NONE\b/i.test(s)){none=true;continue;}
  const m=s.match(LN);if(!m){if(/CLOSE-CONTRADICTION/i.test(s))rows.push({id:'?',line:s.slice(0,600),answer:'UNREADABLE',status:'NOT CONFIRMED (form)',note:'the line is not in the CLOSE-CONTRADICTION form'});continue;}
@@ -79,7 +79,8 @@ for(const line of String(txt||'').split('\n')){const s=line.trim();if(!s)continu
   if(CEC_RK[row.earlier_round]&&!cecStands(row.earlier_q,cecN(F[CEC_RK[row.earlier_round]])))f.push('the earlier quotation is not found word for word in '+row.earlier_round);
   if(CEC_RK[row.closing_round]&&!cecStands(row.closing_q,cecN(F[CEC_RK[row.closing_round]])))f.push('the closing quotation is not found word for word in '+row.closing_round);
   if(!(links[side]||[]).includes(row.link))f.push('LINK '+row.link+' is not one of the '+side.toLowerCase()+'\'s declared links ('+((links[side]||[]).join(', ')||'none read')+')');
-  row.status=f.length?'NOT CONFIRMED (form)':'CONFIRMED';if(f.length)row.note=f.join('; ');}
+  row.status=f.length?'NOT CONFIRMED (form)':'CONFIRMED';if(f.length)row.note=f.join('; ');
+  if(!f.length&&B.cands_only&&!(cands||[]).some(c=>c.id===row.id)){row.status='NOT A CANDIDATE';row.note='the post-panel call answers the judges\' candidates only; a NEW line is recorded, not applied';}}
  else row.status='NOT A CONTRADICTION';
  rows.push(row);}
 /* one break per side and link: the first confirmed line keeps it; a repeat is recorded */
@@ -98,8 +99,8 @@ const SHOW_FN = String.raw`const __CEC=sd=>{try{if(!$('Close Enforcer Record').i
 `;
 
 // ---- library: read the confirmed contradictions (no Close Enforcer Record, or none confirmed: []) ----
-const LIB_FN = String.raw`function cecBroken2024(){try{const n=$('Close Enforcer Record');if(!n||!n.isExecuted)return [];const j=n.first().json;const L=(j&&j.cec&&j.cec.confirmed)||[];
- return L.filter(x=>x&&(x.side==='DEFENDER'||x.side==='CHALLENGER')&&Number.isInteger(+x.link)&&+x.link>=1).map(x=>({...x,link:+x.link})).sort((a,b)=>(a.side===b.side?a.link-b.link:a.side==='DEFENDER'?-1:1));}catch(e){return [];}} /* pkgCEC */
+const LIB_FN = String.raw`function cecBroken2024(){const L=[];for(const [n,k] of [['Close Enforcer Record','cec'],['Judge Contradiction Record','jcc']]){try{const x=$(n);if(!x||!x.isExecuted)continue;const j=x.first().json;((j&&j[k]&&j[k].confirmed)||[]).forEach(y=>L.push(y));}catch(e){}}
+ const seen=new Set();return L.filter(x=>x&&(x.side==='DEFENDER'||x.side==='CHALLENGER')&&Number.isInteger(+x.link)&&+x.link>=1).map(x=>({...x,link:+x.link})).filter(x=>{const k=x.side+' '+x.link;if(seen.has(k))return false;seen.add(k);return true;}).sort((a,b)=>(a.side===b.side?a.link-b.link:a.side==='DEFENDER'?-1:1));} /* pkgCEC rev 2: the pre-panel enforcer and the post-panel confirmation of judge-found contradictions (ASK 2) */
 function cecLine2024(c,x){const q=t=>{t=String(t||'').replace(/\s+/g,' ').trim().replace(/"/g,"'");return t.length>300?t.slice(0,297)+'...':t;};const par=(String(c.raw||'').match(/\([^)]*\d+:\d+[^)]*\)/)||[''])[0];
  return c.link+(par?' '+par:'')+': '+x.side+' LINK BROKEN -- [AUDIT: LINK '+x.link+' BROKEN BY A CONFIRMED CLOSING CONTRADICTION -- '+x.side+' -- EARLIER ['+x.earlier_round+'] "'+q(x.earlier_q)+'" -- CLOSING ['+x.closing_round+'] "'+q(x.closing_q)+'"]';} /* pkgCEC */
 `;
@@ -123,4 +124,39 @@ const LIB_SB = String.raw`const __cecX={DEFENDER:0,CHALLENGER:0};for(const x of 
   if(!hit){__cecX[x.side]++;trig.push('CLOSE-CONTRADICTION '+lb+' (no collision line names it; counted as one '+G+')');}} /* pkgCEC */
  `;
 
-module.exports = { COMMON, PROMPT, SYS, BUILD, RECORD, SHOW_FN, LIB_FN, LIB_STEP, LIB_SB };
+// ---- rev 2 (operator ASK 2 = YES, 15:15 CST 11-09): a contradiction a judge finds is sent to the enforcer after the panel and, once confirmed,
+// breaks the link in the recompute too. Judge Contradiction Build sits between Panel Payloads and Panel Cure Needed?. Its candidates are:
+// - each panel judge's (and the single judge's) CONTRADICTION -- <SIDE> -- EARLIER ([..], "..") -- LATER ([..], "..") line whose LATER round is that
+//   side's closing round;
+// - each contradiction question of the dry question round (QR Merge qa with earlier_quote).
+// A pair the pre-panel enforcer already answered is not sent again. No candidate means no call. The Record passes Panel Payloads' item on, with jcc.
+const JC_CANDS = String.raw`const PP=$('Panel Payloads').first().json;
+const JRX=/CONTRADICTION\s*(?:--|—)\s*(DEFENDER|CHALLENGER)\s*(?:--|—)\s*EARLIER\s*\(\s*\[?\s*([CD]R\d)\s*\]?\s*,\s*["“'](.+?)["”']\s*\)\s*(?:--|—)\s*LATER\s*\(\s*\[?\s*([CD]R\d)\s*\]?\s*,\s*["“'](.+?)["”']\s*\)/gi;
+const jtxt=r=>String(r==null?'':r).replace(/\\n/g,'\n').replace(/\\"/g,'"').replace(/\\+/g,'');
+const found=[];const add=(seat,side,er,eq,lr,lq,by)=>{side=String(side).toUpperCase();er=String(er).toUpperCase();lr=String(lr).toUpperCase();if(lr!==CEC_PRE[side]+'4')return;
+ const k=side+'|'+er+'|'+cecN(eq)+'|'+cecN(lq);const f=found.find(x=>x.k===k);if(f){if(!f.seats.includes(seat))f.seats.push(seat);return;}found.push({k,side,earlier_round:er,earlier_q:eq,closing_round:lr,closing_q:lq,seats:[seat],by});};
+(PP.bodies||[]).forEach((b,i)=>{let p=null;try{p=JSON.parse(b).payload;}catch(e){return;}const seat=p.judge_seat||((PP.summary||[])[i]||{}).seat||('panel '+(i+1));for(const m of jtxt(p.verdict_raw).matchAll(JRX))add(seat,m[1],m[2],m[3],m[4],m[5],'judge');});
+try{if($('Extract Independent Verdict').isExecuted){const e=$('Extract Independent Verdict').first().json;for(const m of jtxt(e.independent_verdict_raw).matchAll(JRX))add('single judge',m[1],m[2],m[3],m[4],m[5],'judge');}}catch(e){}
+try{if($('QR Merge').isExecuted)(($('QR Merge').first().json.qa)||[]).forEach(x=>{if(x&&x.earlier_quote&&x.earlier_round)add(x.judge,x.side,x.earlier_round,x.earlier_quote,x.round,x.quote,'question');});}catch(e){}
+let pre=[];try{if($('Close Enforcer Record').isExecuted)pre=(($('Close Enforcer Record').first().json.cec||{}).rows)||[];}catch(e){pre=[];}
+const over=(a,b)=>{a=cecN(a);b=cecN(b);return !!a&&!!b&&(a.includes(b)||b.includes(a));};
+const cands=found.filter(c=>!pre.some(r=>r.side===c.side&&r.earlier_round===c.earlier_round&&over(r.closing_q,c.closing_q)&&over(r.earlier_q,c.earlier_q))).map((c,i)=>({id:'J'+(i+1),side:c.side,kind:'LINK',n:'?',earlier_round:c.earlier_round,earlier_q:c.earlier_q,closing_round:c.closing_round,closing_q:c.closing_q,by:(c.by==='question'?'a judge\'s contradiction question ('+c.seats.join(', ')+')':'the judges\' CONTRADICTION lines ('+c.seats.join(', ')+')'),why:''}));
+const answered_before=found.length-cands.length;
+`;
+
+const JC_BUILD = BUILD
+ .replace("// pkgCEC (W1, item A of Wall 3714): CLOSE ENFORCER BUILD.", "// pkgCEC rev 2 (W1, ASK 2): JUDGE CONTRADICTION BUILD, after the panel. Same prompt and checks as Close Enforcer Build; the candidates are the judges'.\n// pkgCEC (W1, item A of Wall 3714): CLOSE ENFORCER BUILD.")
+ .replace("const links=cecLinks(F);const cands=cecOracle(F);", JC_CANDS + "const links=cecLinks(F);if(!cands.length)return [{json:{cec_skip:true,no_log:true,why:found.length?'every judge-found pair was already answered before the panel':'no judge CONTRADICTION line on a closing round',answered_before,run_token:S.run_token}}];")
+ .replace("const PROMPT=", "const PROMPT0=")
+ .replace("const R=(lab,k)=>", "const PROMPT=PROMPT0.replace('List every sentence of the closing round that cannot be true together with a sentence the same side stated earlier, and answer every candidate listed below.','The closing rounds were already read once before the judges sat. Answer every candidate listed below; each was named by a judge after it read the debate. Give each candidate its link.');\nconst R=(lab,k)=>")
+ .replace("return [{json:{cec_skip:false,body,links,cands,", "return [{json:{cec_skip:false,cands_only:true,answered_before,body,links,cands,");
+
+const JC_RECORD = RECORD
+ .replace("// pkgCEC (W1, item A of Wall 3714): CLOSE ENFORCER RECORD.", "// pkgCEC rev 2 (W1, ASK 2): JUDGE CONTRADICTION RECORD, after the panel. It passes Panel Payloads' item on unchanged, with jcc (confirmed, rows) and jcc_log added.\n// pkgCEC (W1, item A of Wall 3714): CLOSE ENFORCER RECORD.")
+ .replace("const B=$('Close Enforcer Build').first().json;", "const B=$('Judge Contradiction Build').first().json;const PP=$('Panel Payloads').first().json;const OUT=o=>[{json:{...PP,jcc:o.cec,jcc_log:o.cec_log}}];")
+ .replace("seat:'close enforcer'", "seat:'judge contradiction enforcer'")
+ .replace("if(B.cec_skip)return [{json:{cec:{skipped:true,why:B.why||'',confirmed:[],rows:[],no_answer:[],errors:[]},cec_log:[", "if(B.cec_skip)return OUT({cec:{skipped:true,why:B.why||'',confirmed:[],rows:[],no_answer:[],errors:[]},cec_log:B.no_log?[]:[")
+ .replace("reply_error:B.why||null})]}}];", "reply_error:B.why||null})]});")
+ .replace("return [{json:{cec:{skipped:false,model:B.model||'',confirmed,rows,no_answer,none,errors,links},cec_log}}];", "return OUT({cec:{skipped:false,model:B.model||'',confirmed,rows,no_answer,none,errors,links},cec_log});");
+
+module.exports = { COMMON, PROMPT, SYS, BUILD, RECORD, SHOW_FN, LIB_FN, LIB_STEP, LIB_SB, JC_BUILD, JC_RECORD };

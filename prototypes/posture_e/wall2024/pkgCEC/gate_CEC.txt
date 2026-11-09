@@ -1,4 +1,4 @@
-gate/replay: base pkgLIB/strip_SJR, cand pkgLIB/strip_CEC, fetch-back fetchback_live_s82.json, 30 library nodes, 47 saved runs, 12 near-miss cases, time limit 60000 ms per node run
+gate/replay: base pkgLIB/strip_SJR, cand pkgLIB/strip_CEC, fetch-back fetchback_live_s83.json, 30 library nodes, 47 saved runs, 12 near-miss cases, time limit 60000 ms per node run
 OK   case w1_cases.json KRC-A-33506:  [Cure Check K-RUL  status = CURED]: cand CURED; base CURED
 OK   case w1_cases.json KRC-A-33506:  [Cure Check K-RUL  why ~/valid ruling card/]: cand a valid ruling card for keystone; base a valid ruling card for keystone
 OK   case w1_cases.json KRC-B-33506:  [Cure Check K-RUL  status = UNCURED]: cand UNCURED | UNCURED; base UNCURED | UNCURED

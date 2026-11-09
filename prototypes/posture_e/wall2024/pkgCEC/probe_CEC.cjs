@@ -93,4 +93,23 @@ T('6c a single judge with no rule item (luna\'s text put in its place): D6 lines
 // ---------- 7. the log ----------
 const AM=(await run(code(PAR,'Alternate Merge'),{'Close Enforcer Record':CER},'Alternate Merge Seat'))[0].json;const AM0=(await run(code(SJR,'Alternate Merge'),{},'Alternate Merge Seat'))[0].json;
 console.log('   7a lengths',AM.enforcer_log.length,AM0.enforcer_log.length,AM.enforcer_log[0]&&AM.enforcer_log[0].rule);T('7a Alternate Merge adds the E-CLOSECON rows to the run\'s enforcer_log, ahead of the rest, which is unchanged',AM.enforcer_log.length===AM0.enforcer_log.length+2&&AM.enforcer_log[0].rule==='E-CLOSECON'&&JSON.stringify(AM.enforcer_log.slice(2))===JSON.stringify(AM0.enforcer_log));
+// ---------- 8. rev 2 (ASK 2): judge-found contradictions confirmed after the panel ----------
+const PPo=JSON.parse(fs.readFileSync('/mnt/project-files/wall2024/inputs/34108_Panel_Payloads.json','utf8'))[0].data.main[0][0].json;
+const JB0=(await run(code(PAR,'Judge Contradiction Build'),{}))[0].json;
+T('8a 34108 with no pre-panel record: terra\'s CONTRADICTION line ([CR3] grant against [CR4] Genesis 4:1) becomes candidate J1, named by chatgpt (terra)',!JB0.cec_skip&&JB0.cands.length>=1&&JB0.cands.some(c=>c.side==='DEFENDER'&&c.earlier_round==='CR3'&&/ordinary means/.test(c.earlier_q)&&/chatgpt/.test(c.by)),JSON.stringify(JB0.cands&&JB0.cands.map(c=>c.id+' '+c.side+' '+c.earlier_round+'>'+c.closing_round+' by '+c.by)));
+T('8b the post-panel prompt answers candidates only, with the same rules',JB0.body&&JB0.body.messages[1].content.includes('Answer every candidate listed below; each was named by a judge')&&!JB0.body.messages[1].content.includes('List every sentence of the closing round')&&JB0.body.messages[1].content.includes('IS a contradiction'));
+const JB1=(await run(code(PAR,'Judge Contradiction Build'),{'Close Enforcer Record':CER}))[0].json;
+T('8c a pair the pre-panel enforcer already answered is not sent again (34108: no call)',JB1.cec_skip===true&&JB1.no_log===true&&/already answered/.test(JB1.why),JB1.why);
+const jrec=async(txt,b)=>(await run(code(PAR,'Judge Contradiction Record'),{'Judge Contradiction Build':[J(b)],'Judge Contradiction Call deepseek':reply(txt)},'Judge Contradiction Call deepseek'))[0].json;
+const JL=`CLOSE-CONTRADICTION: J1 -- DEFENDER -- LINK 1 -- CONFIRMED -- EARLIER [CR3] "${G41E}" -- CLOSING [CR4] "${G41C}" -- (written for the test only: the probe checks the path, not the reading).`;
+const JR1=await jrec(JL,JB0);const{jcc,jcc_log,...rest}=JR1;
+T('8d Judge Contradiction Record: J1 CONFIRMED on D1; Panel Payloads\' item passes on unchanged (Panel Cure Needed? and Panel Cure Build read it)',jcc.confirmed.length===1&&jcc.confirmed[0].link===1&&JSON.stringify(rest)===JSON.stringify(PPo)&&jcc_log.length===1&&jcc_log[0].seat==='judge contradiction enforcer',jcc_log.map(r=>r.item+': '+r.cure_status).join(' | '));
+const JR2=await jrec(JL+'\n'+L1,JB0);T('8e a NEW line in the post-panel call is recorded NOT A CANDIDATE and breaks nothing',JR2.jcc.confirmed.length===1&&JR2.jcc.rows[1].status==='NOT A CANDIDATE');
+const JR3=(await run(code(PAR,'Judge Contradiction Record'),{'Judge Contradiction Build':[J(JB1)]},'Judge Contradiction Build'))[0].json;
+T('8f skipped (nothing new): Panel Payloads passes on, no log row',JR3.jcc.skipped&&JR3.jcc_log.length===0&&JSON.stringify((({jcc,jcc_log,...r})=>r)(JR3))===JSON.stringify(PPo));
+const P6=await PCC('CEC',{'Judge Contradiction Record':[J(JR1)]});{const b=JSON.parse(P6.bodies[0]).payload;const raw=b.verdict_raw.replace(/\\n/g,'\n');const d1=raw.split('\n').filter(l=>/^\W*D1 vs C\d/.test(l));
+ T('8g the recompute takes a post-panel break: every D1 line DEFENDER LINK BROKEN, verdict BROKEN',d1.length>=1&&d1.every(l=>/DEFENDER LINK BROKEN -- \[AUDIT: LINK 1 BROKEN/.test(l))&&b.verdict_tag==='BROKEN','luna: '+d1.length+' line(s), '+b.verdict_tag);}
+const P7=await PCC('CEC',{'Close Enforcer Record':CER,'Judge Contradiction Record':[J(JR1)]});{const s0=P7.summary[0];T('8h both records: D6 and D1 both break; one break per link',s0.recomputed.trigger.filter(t=>/^CLOSE-CONTRADICTION D6 vs/.test(t)).length===2&&s0.recomputed.trigger.some(t=>/^CLOSE-CONTRADICTION D1 vs/.test(t)));}
+const AM2=(await run(code(PAR,'Alternate Merge'),{'Close Enforcer Record':CER,'Judge Contradiction Record':[J(JR1)]},'Alternate Merge Seat'))[0].json;
+T('8i Alternate Merge logs both records\' rows (2 pre-panel + 1 post-panel)',AM2.enforcer_log.length===AM0.enforcer_log.length+3&&AM2.enforcer_log.slice(0,3).every(r=>r.rule==='E-CLOSECON'));
 console.log('\n'+ok+' OK, '+bad+' FAIL');process.exit(bad?1:0);})().catch(e=>{console.log('PROBE ERROR',e.stack);process.exit(2);});

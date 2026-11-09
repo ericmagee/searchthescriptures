@@ -1,6 +1,6 @@
 // pkgCEC build (W1, item A of Wall 3714; wording 3718). Base: pkgSJR rev 2 (live s82 + SJR, to be s83), library strip_SJR.
 //   node pkgCEC/build_CEC.cjs strip     -> pkgLIB/strip_CEC (strip_SJR + the close-contradiction break in cureRecompute and its callers)
-//   FB=/mnt/project-files/wall2024/fetchback_live_s82.json node gate/pack.cjs pkgLIB/strip_CEC pkgLIB_CEC
+//   FB=/mnt/project-files/wall2024/fetchback_live_s83.json node gate/pack.cjs pkgLIB/strip_CEC pkgLIB_CEC
 //   node pkgCEC/build_CEC.cjs parent    -> pkgCEC/parent_s83_CEC.json (pkgSJR/parent_s82_SJR.json + 4 nodes + 4 edited nodes + library)
 const fs=require('fs'),path=require('path'),cr=require('crypto');const W=path.resolve(__dirname,'..');const C=require('./cec_nodes.cjs');
 const die=m=>{console.error('BUILD REFUSED: '+m);process.exit(1);};const h=s=>cr.createHash('sha256').update(s).digest('hex').slice(0,12);
@@ -38,7 +38,7 @@ if(mode==='strip'){
  if(!plan.library['Panel_Cure_Check.js'].changes.includes('no-item branch')||!plan.library['Cure_Check.js'].changes.includes('single judge no-item branch'))die('a caller was not patched');
  fs.writeFileSync(__dirname+'/plan_CEC.json',JSON.stringify(plan,null,1)+'\n');console.log('strip_CEC: '+Object.keys(plan.library).length+' files, '+n+' changed');
 }else if(mode==='parent'){
- const d=JSON.parse(fs.readFileSync(W+'/pkgSJR/parent_s82_SJR.json','utf8'));const P=W+'/pkgLIB_CEC/patched';if(!fs.existsSync(P))die('pack first');
+ const d=JSON.parse(fs.readFileSync(process.env.BASE||'/mnt/project-files/wall2024/fetchback_live_s83.json','utf8')); /* rev 2: live s83 (pkgSJR written 14:51 CST) */const P=W+'/pkgLIB_CEC/patched';if(!fs.existsSync(P))die('pack first');
  const by={};d.nodes.forEach(n=>by[n.name]=n);let lib=0;
  for(const f of fs.readdirSync(P).filter(f=>f.endsWith('.js'))){const nm=f.replace(/\.js$/,'').replace(/_/g,' ');const n=by[nm];if(!n)die('no node '+nm);const c=fs.readFileSync(P+'/'+f,'utf8');if(n.parameters.jsCode!==c){n.parameters.jsCode=c;lib++;}}
  /* the rebased stub heads (gate/pack.cjs e4_rebase): Alternate Build and Early Alternate Build. Early Alternate Build is stale in live s80 to s82 (W1 Wall finding) */
@@ -49,7 +49,7 @@ if(mode==='strip'){
   s=sub(s,"+__ACX('D')","+__ACX('D')+__CEC('D')",nm+' D');s=sub(s,"+__ACX('C')","+__ACX('C')+__CEC('C')",nm+' C');by[nm].parameters.jsCode=s;}
  // the log: Alternate Merge adds the E-CLOSECON rows to the run's enforcer_log
  {const nm='Alternate Merge';let s=by[nm].parameters.jsCode;
-  s=sub(s,"if(!R2)return [{json:R1}];","const __cecL=(()=>{try{return $('Close Enforcer Record').isExecuted?($('Close Enforcer Record').first().json.cec_log||[]):[];}catch(e){return [];}})(); /* pkgCEC: the closing enforcer's E-CLOSECON rows join the run's enforcer_log */\nif(!R2)return [{json:__cecL.length?{...R1,enforcer_log:__cecL.concat(R1.enforcer_log||[])}:R1}];",nm+' no round 2');
+  s=sub(s,"if(!R2)return [{json:R1}];","const __cecL=[['Close Enforcer Record','cec_log'],['Judge Contradiction Record','jcc_log']].flatMap(([n,k])=>{try{return $(n).isExecuted?($(n).first().json[k]||[]):[];}catch(e){return [];}}); /* pkgCEC: the closing enforcer's E-CLOSECON rows join the run's enforcer_log */\nif(!R2)return [{json:__cecL.length?{...R1,enforcer_log:__cecL.concat(R1.enforcer_log||[])}:R1}];",nm+' no round 2');
   s=sub(s,"const enforcer_log=(R1.enforcer_log||[]).concat(","const enforcer_log=__cecL.concat(R1.enforcer_log||[]).concat( /* pkgCEC */",nm+' round 2');by[nm].parameters.jsCode=s;}
  const Q=by['Quote Report'],AC=by['Anticheat Call deepseek'],AN=by['Anticheat Needed?'];
  const uid=s=>cr.createHash('sha1').update('pkgCEC '+s).digest('hex').replace(/^(.{8})(.{4})(.{4})(.{4})(.{12}).*$/,'$1-$2-$3-$4-$5');
@@ -59,11 +59,21 @@ if(mode==='strip'){
  const CA=JSON.parse(JSON.stringify(AC));CA.id=uid('call');CA.name=NEW[2];CA.position=[x0+448,y0-96];if(CA.parameters.jsonBody!=='={{ $json.body }}')die('Anticheat Call body changed');
  const RE={id:uid('record'),name:NEW[3],type:'n8n-nodes-base.code',typeVersion:2,position:[x0+672,y0],parameters:{jsCode:C.RECORD}};
  d.nodes.push(BU,IF,CA,RE);
+ /* rev 2 (ASK 2): the post-panel confirmation of judge-found contradictions, between Panel Payloads and Panel Cure Needed? */
+ const NJ=['Judge Contradiction Build','Judge Contradiction Needed?','Judge Contradiction Call deepseek','Judge Contradiction Record'];for(const nm of NJ)if(by[nm])die(nm+' exists');
+ const PPn=by['Panel Payloads'];const x1=PPn.position[0],y1=PPn.position[1]+300;
+ const JB={id:uid('jc build'),name:NJ[0],type:'n8n-nodes-base.code',typeVersion:2,position:[x1,y1],parameters:{jsCode:C.JC_BUILD}};
+ const JI=JSON.parse(JSON.stringify(AN));JI.id=uid('jc if');JI.name=NJ[1];JI.position=[x1+224,y1];JI.parameters.conditions.conditions[0].id='judge-contradiction-needed';JI.parameters.conditions.conditions[0].leftValue='={{ $json.cec_skip !== true }}';
+ const JK=JSON.parse(JSON.stringify(AC));JK.id=uid('jc call');JK.name=NJ[2];JK.position=[x1+448,y1-96];
+ const JR={id:uid('jc record'),name:NJ[3],type:'n8n-nodes-base.code',typeVersion:2,position:[x1+672,y1],parameters:{jsCode:C.JC_RECORD}};
+ d.nodes.push(JB,JI,JK,JR);
  const K=d.connections;const L=n=>[{node:n,type:'main',index:0}];
  if(JSON.stringify(K['Quote Report'])!==JSON.stringify({main:[L('Regrade After Quotes?')]}))die('Quote Report outputs changed: '+JSON.stringify(K['Quote Report']));
+ if(JSON.stringify(K['Panel Payloads'])!==JSON.stringify({main:[L('Panel Cure Needed?'),L('Panel Failure Note')]}))die('Panel Payloads outputs changed: '+JSON.stringify(K['Panel Payloads']));
+ K['Panel Payloads']={main:[L(NJ[0]),L('Panel Failure Note')]};K[NJ[0]]={main:[L(NJ[1])]};K[NJ[1]]={main:[L(NJ[2]),L(NJ[3])]};K[NJ[2]]={main:[L(NJ[3])]};K[NJ[3]]={main:[L('Panel Cure Needed?')]};
  K['Quote Report']={main:[L(NEW[0])]};K[NEW[0]]={main:[L(NEW[1])]};K[NEW[1]]={main:[L(NEW[2]),L(NEW[3])]};K[NEW[2]]={main:[L(NEW[3])]};K[NEW[3]]={main:[L('Regrade After Quotes?')]};
  for(const nm of ['Panel Build','Build Independent Verdict','Alternate Merge'])new Function('$','$input','$execution','return (async()=>{\n'+by[nm].parameters.jsCode+'\n})();');
- for(const n of [BU,RE])new Function('$','$input','return (async()=>{\n'+n.parameters.jsCode+'\n})();');
+ for(const n of [BU,RE,JB,JR])new Function('$','$input','return (async()=>{\n'+n.parameters.jsCode+'\n})();');
  fs.writeFileSync(__dirname+'/parent_s83_CEC.json',JSON.stringify({nodes:d.nodes,connections:K,settings:d.settings},null,1));
- console.log('parent_s83_CEC.json: '+d.nodes.length+' nodes (+4), library nodes changed '+lib+'; Quote Report -> Close Enforcer Build -> Needed? -> (true) Call deepseek -> Record / (false) Record -> Regrade After Quotes?');
+ console.log('parent_s83_CEC.json: '+d.nodes.length+' nodes (+8), library nodes changed '+lib+'; Quote Report -> Close Enforcer Build -> Needed? -> (true) Call deepseek -> Record / (false) Record -> Regrade After Quotes?');
 }else die('mode strip | parent');

@@ -37,3 +37,13 @@ Panel Build and Build Independent Verdict add a CONFIRMED CLOSING CONTRADICTIONS
 - **A broken link that no line names:** it counts as one broken line.
 - **Seats with no rule item:** they still recompute when a contradiction is confirmed. This covers the panel, the alternates (rounds 1 and 2) and the single judge.
 - **No item or removal:** the break raises no judge item and removes no seat.
+
+## Rev 2: contradictions a judge finds (operator ASK 2 = YES, 15:15 CST 11-09)
+**Judge Contradiction Build -> Needed? -> Call deepseek -> Record** sits between Panel Payloads and Panel Cure Needed?.
+- **Candidates:**
+  - each judge's CONTRADICTION line whose later sentence stands in that side's closing round (panel and single judge);
+  - each contradiction question of the dry question round.
+- **Not sent again:** a pair the pre-panel enforcer already answered. No candidate means no call.
+- **Checks:** the same prompt rules and the same code checks as before; the call answers candidates only.
+- **A confirmed line** breaks its link in every panel, reserve and alternate seat's recompute. The single judge's recompute runs before the panel and is not reached.
+- **Log:** seat "judge contradiction enforcer", rule E-CLOSECON.
