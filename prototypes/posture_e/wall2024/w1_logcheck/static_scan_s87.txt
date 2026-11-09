@@ -1,0 +1,61 @@
+=== kind
+"wd.kind"  <-  36 nodes: C1 Extract; D2 Build; D2 Extract; C2 Build
+"do not say which side won"  <-  1 nodes: Build Synthesis
+"'L1'"  <-  10 nodes: Build Independent Verdict; Panel Build; D4 Build; Send Back Build
+"'L2'"  <-  10 nodes: Build Independent Verdict; Panel Build; D4 Build; Send Back Build
+"'L3'"  <-  10 nodes: Build Independent Verdict; Panel Build; D4 Build; Send Back Build
+"a negation"  <-  13 nodes: Build Independent Verdict; Panel Build; Reserve Build; Accept Build
+"/^LINK$/i.test(x[1]||'')?'LINK':'PREMISE'"  <-  7 nodes: Extract Independent Verdict; Send Back Build; Send Back Record; Alt Send Back Build
+"x.ref==='LINK'||x.ref==='D'?'LINK':'PREMISE'"  <-  7 nodes: Extract Independent Verdict; Send Back Build; Send Back Record; Alt Send Back Build
+"'cure'"  <-  19 nodes: Build Save Body; Format Markdown; Enforcer Build; Judge Enforcer Build
+"'ledger'"  <-  19 nodes: Build Save Body; Format Markdown; Enforcer Build; Judge Enforcer Build
+"'other'"  <-  19 nodes: Build Save Body; Format Markdown; Enforcer Build; Judge Enforcer Build
+"(m[1]||(m[2].toUpperCase()==='G'?'GATE':'SENDBACK')).toUpperCase()"  <-  19 nodes: Build Save Body; Format Markdown; Enforcer Build; Judge Enforcer Build
+"SUB.failure_kind"  <-  1 nodes: Panel Payloads
+"'no_usable_judgment'"  <-  1 nodes: Panel Check
+"'test'"  <-  1 nodes: Panel Check
+"c.kind"  <-  7 nodes: Panel Check; Send Back Build; Send Back Record; Alt Send Back Build
+"f.kind"  <-  1 nodes: Panel Check
+"'enforcer_check'"  <-  10 nodes: Enforcer Record; Judge Enforcer Build; Judge Enforcer Record; Alt Judge Enforcer Build
+"'IMPOSED'"  <-  20 nodes: Send Back Build; Send Back Record; Alt Send Back Build; Alt Send Back Record
+"'CONTRADICTION'"  <-  21 nodes: Send Back Build; Send Back Record; Alt Send Back Build; Alt Send Back Record
+"'CONCESSION'"  <-  6 nodes: Send Back Build; Send Back Record; Alt Send Back Build; Alt Send Back Record
+"'BREAK'"  <-  6 nodes: Send Back Build; Send Back Record; Alt Send Back Build; Alt Send Back Record
+"'E-HOLD-UND'"  <-  3 nodes: Send Back Build; Alt Send Back Build; R2 Alt Send Back Build
+"'E-UNG'"  <-  3 nodes: Send Back Build; Alt Send Back Build; R2 Alt Send Back Build
+"'E-HOLD-UNA'"  <-  3 nodes: Send Back Build; Alt Send Back Build; R2 Alt Send Back Build
+"__c.kind"  <-  3 nodes: Send Back Build; Alt Send Back Build; R2 Alt Send Back Build
+"'send_back'"  <-  8 nodes: Send Back Record; Gate Record; Alt Send Back Record; Shared Library
+"{type:'string'"  <-  1 nodes: Shared Library
+"true"  <-  1 nodes: Shared Library
+"'NOT APPLIED'"  <-  1 nodes: Shared Library
+"'RESULT DIFFERS'"  <-  1 nodes: Shared Library
+"'RULE '+x.rule"  <-  1 nodes: Shared Library
+"x.kind"  <-  1 nodes: Shared Library
+"z.kind"  <-  1 nodes: Shared Library
+"'alternate_reply'"  <-  1 nodes: Shared Library
+"'failed_reply'"  <-  1 nodes: Shared Library
+"m[2].toUpperCase()"  <-  4 nodes: Close Enforcer Build; Close Enforcer Record; Judge Contradiction Build; Judge Contradiction Record
+"'LINK'"  <-  1 nodes: Judge Contradiction Build
+=== seat_role
+"x.row.seat_role"  <-  1 nodes: Enforcer Build
+"x.seat_role||'panel'"  <-  1 nodes: Enforcer Record
+"'panel'"  <-  6 nodes: Judge Enforcer Build; Send Back Build; Send Back Record; Gate Record
+"x.rule==='E-SYN'?'synthesis':'panel'"  <-  1 nodes: Judge Enforcer Record
+"'alternate'"  <-  9 nodes: Alt Judge Enforcer Build; Alt Send Back Build; Alt Send Back Record; Shared Library
+"x.rule==='E-SYN'?'synthesis':'alternate'"  <-  2 nodes: Alt Judge Enforcer Record; R2 Alt Judge Enforcer Record
+"meta.role||null"  <-  1 nodes: Shared Library
+"x.role"  <-  1 nodes: Shared Library
+"'single'"  <-  1 nodes: Shared Library
+"seat&&alt.has(seat)?'alternate':'panel'"  <-  1 nodes: Shared Library
+"'enforcer'"  <-  2 nodes: Close Enforcer Record; Judge Contradiction Record
+=== cure_status
+"x.row.cure_status"  <-  1 nodes: Enforcer Build
+"null"  <-  16 nodes: Enforcer Record; Judge Enforcer Build; Judge Enforcer Record; Send Back Record
+"'UNCURED'"  <-  2 nodes: Gate Record; Shared Library
+"x.status"  <-  3 nodes: Shared Library; Close Enforcer Record; Judge Contradiction Record
+"r.cured?'CURED':'UNCURED'"  <-  1 nodes: Shared Library
+"'NOT CHECKED'"  <-  2 nodes: Close Enforcer Record; Judge Contradiction Record
+"'NO ANSWER'"  <-  2 nodes: Close Enforcer Record; Judge Contradiction Record
+"none?'NONE FOUND':'NOT CHECKED'"  <-  2 nodes: Close Enforcer Record; Judge Contradiction Record
+"st==='AGREE'?'CURED':st==='DISAGREE'?'UNCURED':null"  <-  3 nodes: Reread Record; Alt Reread Record; R2 Alt Reread Record
