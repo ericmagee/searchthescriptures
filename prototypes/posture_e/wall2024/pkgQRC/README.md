@@ -34,3 +34,8 @@ build_QRC.py (writes parent_s82_QRC.json and nodes/*.js), probe_QRC.cjs/.txt, fi
 - E1 fix: qrCheck opens the contradiction checks only when an earlier field holds text. Empty, blank, "none", "n/a", "na", "null", "-" and null all count as no earlier field.
 - QR Final reads those values as empty in the debater's text and in the item, so QR Merge labels the question an ordinary one.
 - Probe: 19 OK. New checks 2h (8 empty forms give the same faults and retry as live) and 2i ("none" fields read as an ordinary question in Final). W1's edge_QRC_w1.cjs on rev 2: E1, E2 and E3 give no fault and retry false.
+
+## Rev 2 rebuilt on live s90 (operator approval of C1 to C5 and the dry regrade, 17:58 CST 11-09, W2 thread)
+- `OUT=pkgQRC/parent_s90_QRC.json python3 pkgQRC/build_QRC.py <s90 fetch-back, workflow object>`: 418 nodes; only QR Ask Build, QR Check, QR Final and QR Merge change; connections equal to live s90.
+- The 8 QR nodes are identical in s83 and s90, and nodes/*.js are byte-equal to the graded rev 2. probe_QRC: 19 OK.
+- The dry-trial guard is unchanged: the question round runs only in a dry regrade (question_trial true, dry true).

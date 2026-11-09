@@ -37,5 +37,5 @@ for k in ['QR Ask Build', 'QR Check', 'QR Final', 'QR Merge']:
 os.makedirs('pkgQRC/nodes', exist_ok=True)
 for k in ['QR Ask Build', 'QR Check', 'QR Final', 'QR Merge']:
     open('pkgQRC/nodes/' + k.replace(' ', '_') + '.js', 'w').write(ns[k]['parameters']['jsCode'])
-json.dump({'nodes': d['nodes'], 'connections': d['connections'], 'settings': d['settings']}, open('pkgQRC/parent_s83_QRC.json', 'w'), indent=1)
-print('parent_s83_QRC.json: %d nodes; changed: QR Ask Build, QR Check, QR Final, QR Merge' % len(d['nodes']))
+json.dump({'nodes': d['nodes'], 'connections': d['connections'], 'settings': d['settings']}, open(os.environ.get('OUT','pkgQRC/parent_s83_QRC.json'), 'w'), indent=1)
+print(os.environ.get('OUT','parent_s83_QRC.json')+': %d nodes; changed: QR Ask Build, QR Check, QR Final, QR Merge' % len(d['nodes']))
