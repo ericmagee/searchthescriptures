@@ -1165,11 +1165,11 @@ function kg4Answered(side,line,presses,R){const ORD=['CR1','DR1','CR2','DR2','CR
   for(const w of kg4Witnesses(line,p.q,R[p.round]))for(const k of later){if(typeof R[k]!=='string'||seen.has(w+'|'+k))continue;const h=cureRefs(R[k],true).find(r=>r.key===w);  if(h){seen.add(w+'|'+k);out.push({ref:w,round:k,pos:h.pos});}}}
  return out;}
 const kg4Txt=a=>a.map(z=>'['+z.round+'] '+z.ref+' at '+z.pos).join('; ');
-const kgaInAns2024=(t,pos)=>{t=String(t||'');const ls=t.lastIndexOf('\n',pos-1)+1;const le=t.indexOf('\n',pos);const line=t.slice(ls,le<0?t.length:le);const before=t.slice(ls,pos); /* pkgWLG: a hit is in an answer by pkgWLD's rule: a MEANS [<round>] header line; a bold label that opens with the verse; or a list item that opens with the verse under an "Answer ... press/witness" heading. Never a line that restates a press. */
+const kgaInAns2024=(t,pos)=>{t=String(t||'');const ls=t.lastIndexOf('\n',pos-1)+1;const le=t.indexOf('\n',pos);const line=t.slice(ls,le<0?t.length:le);const before=t.slice(ls,pos); /* pkgWLG: a hit is in an answer by pkgWLD's rule (rev 2: a list item may name several verses, each with its quoted words, before the hit): a MEANS [<round>] header line; a bold label that opens with the verse; or a list item that opens with the verse under an "Answer ... press/witness" heading. Never a line that restates a press. */
  if(/press(?:ed)?\s+with\s*:|The press means|^\s*\*?Premise:/i.test(before)||/^\s*[*_-]*\s*PRESSED WITH/i.test(line))return false;
  if(/^\s*[*_-]*\s*MEANS\s*\[/i.test(line))return true;
  if(/^\s*(?:[-*]\s*)?\*\*\s*(?:\([a-z0-9]\)\s*)?(?:Press\s+)?$/i.test(before))return true;
- if(!/^\s*(?:[-*]|\d+[.)])\s+[*_]*\s*(?:[*_]*(?:[1-3] )?[A-Z][a-z]+(?: of [A-Z][a-z]+)?\.?\s+\d+:\d+(?:\s?[-–—]\s?\d+)?[*_]*\s*(?:,|;|and|&)?\s*)*$/.test(before))return false;
+ if(!/^\s*(?:[-*]|\d+[.)])\s+[*_]*\s*(?:[*_]*(?:[1-3] )?[A-Z][a-z]+(?: of [A-Z][a-z]+)?\.?\s+\d+:\d+(?:\s?[-–—]\s?\d+)?[*_]*\s*(?:"[^"\n]{0,200}"|“[^”\n]{0,200}”)?\s*(?:,|;|and|&)?\s*)*[*_]*$/.test(before))return false;
  const U=t.slice(0,Math.max(0,ls-1)).split('\n');for(let j=U.length-1;j>=0;j--){const x=U[j];
   if(/^\s*[*_#]*\s*Answers?\b[^\n]{0,60}\b(?:press|witness)/i.test(x))return true;
   if(/^\s*-{3,}\s*$/.test(x)||/^\s*[*#]*\s*LINK\s+(?:\d+|none)\b/i.test(x)||/^\s*#{1,6}\s/.test(x)||/^\s*\*[^*\n]+\*\s*$/.test(x)||/^\s*[*_-]*\s*MEANS\s*\[/i.test(x)||/UNSUPPORTED-L4 PREMISES/i.test(x))return false;}

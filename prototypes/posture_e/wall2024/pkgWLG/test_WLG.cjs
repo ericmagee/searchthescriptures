@@ -7,7 +7,7 @@ const fs=require('fs');const {harness,feeder}=require('../pkgGSL/harness.cjs');c
 const A=(process.argv[2]||'pkgLIB/strip_KWI').replace(/\/$/,'')+'/patched/',B=(process.argv[3]||'pkgLIB/strip_WLG').replace(/\/$/,'')+'/patched/';
 let ok=0,bad=0;const out=[];const log=s=>{out.push(s);console.log(s);};const T=(c,m)=>{if(c){ok++;log('OK   '+m);}else{bad++;log('FAIL '+m);}};
 // 1
-const PB=fs.readFileSync('pkgWLD/patched/Panel_Build.js','utf8');
+const PB=fs.readFileSync('pkgWLD/rev2/patched/Panel_Build.js','utf8');
 const grab=(s,name)=>{const i=s.indexOf('const '+name+'=');if(i<0)throw new Error('no '+name);let j=s.indexOf('return false;};',i);return s.slice(i,j+'return false;};'.length);};
 const wld=new Function(grab(PB,'wldInAns2024')+'\nreturn wldInAns2024;')();const kga=new Function(grab(fs.readFileSync(B+'Gate_Record.js','utf8'),'kgaInAns2024')+'\nreturn kgaInAns2024;')();
 const runs=[...new Set(fs.readdirSync(D).filter(f=>/^\d{5}_/.test(f)).map(f=>f.split('_')[0]))].sort();
