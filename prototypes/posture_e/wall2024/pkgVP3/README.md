@@ -1,4 +1,14 @@
-# pkgVP3 (W4): P3, E-ANS and E-HOLD where two readers agree. TRIAL, record-only
+# pkgVP3 rev 2 (W4): answers W1 FAIL 3798 and W2 3795
+
+Base now live s90 (33f5fd30, 418 nodes). Write file parent_s90_VP3.json (node build_VP3.cjs <live fetch-back> <out>). Same 3 nodes.
+Changes from rev 1:
+(a) WOULD REMOVE only when the row's live cure reading (cure_status written by the live readers: enf428Cure / pkgUND / VP1 part 1) is UNCURED. A CURED or empty live reading is noted "not listed: the live cure reading is ...".
+(b) The side's whole answer is read: the item's round and the side's later rounds. Every line naming the verse must be a bare answer line; a layer line, a NARROWED TO head, another verse's answer that cites it, or any other line naming it is substance (code does not agree). A deferral is followed: the LINK block it names, in the same round, must hold no [Ln] tag and fewer than 25 words. An answer block now ends at a bold or LINK heading.
+(c) Rerun of the 11 rev 1 listings: 0 remain. Each now reads (probe_VP3_multi_s90.txt): 34108 Luke 1:34 E-ANS x3, the deferral to LINK 4 names an answer of 480 words with layers; 34108 D1 vs C1 E-HOLD, Luke 1:34 named again in [CR1]; 33461 Matthew 1:18, named again in the LINK 1 NARROWED TO head; 33798 Job 14:1, named again in the Galatians 4:4 answer; 34016 Matthew 1:25, named again in the Luke 2:5 answer; 34016 Luke 2:44, its own [L3] row. All 42 replayable node runs: 0 two-reader agreements, 0 listings; rows otherwise byte-equal to live.
+Proof: probe_VP3.cjs 36 OK, 0 FAIL (rev 2 unit cases: deferral to a layered LINK, NARROWED TO head, later-round layer line, live CURED / UNCURED / empty). Rolled-back insert of two rev 2 rows (panel and alternate): accepted.
+What this means for the trial: on the saved runs the code half now never agrees with a DeepSeek DISAGREE, so a trial run is expected to list no seat. A listing, if one appears, is a bare grant or a short deferral with nothing else said of that verse by that side from that round on, and a live reader that already reads the reply UNCURED.
+
+# Rev 1 (W4, failed: W1 3798): P3, E-ANS and E-HOLD where two readers agree. TRIAL, record-only
 
 Ruling: operator 15:11 CST 11-09 (md_notes_rulings 459), P3 of Wall 3708 as changed by Wall 3711; split Wall 3729 (builder W4, graders W1 and W2).
 Base: live s89 (6ac6a994, 414 nodes). Changes 3 nodes: Send Back Record, Alt Send Back Record, R2 Alt Send Back Record. No node added, no connection changed.
