@@ -1,0 +1,9 @@
+OK   1 only C4, C4G, C4B Extract change; connections equal: C4 Extract, C4B Extract, C4G Extract
+OK   2 C4 Extract: X quote and G quote both blanked
+OK   2 C4G Extract: X quote and G quote both blanked
+OK   2 C4B Extract: X quote and G quote both blanked
+OK   3 real 34108 C4 Extract: byte-equal to live
+OK   4 planted X line: live lists Obadiah 1:4 (a verse the challenger never named) in new_press, rev 2 does not: live ["Obadiah 1:4"] | rev2 []
+OK   5 every other field equal
+OK   6 saved runs (39): C4 Extract byte-equal (35 equal, 4 skipped)
+8 OK, 0 FAIL
