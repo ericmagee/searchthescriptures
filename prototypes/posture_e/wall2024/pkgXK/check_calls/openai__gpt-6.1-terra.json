@@ -1,0 +1,67 @@
+{
+ "model": "openai/gpt-6.1-terra",
+ "messages": [
+  {
+   "role": "system",
+   "content": "You are a judge of a written debate. Answer the cure request about your own verdict."
+  },
+  {
+   "role": "user",
+   "content": "The debate: (check call, no debate text)."
+  },
+  {
+   "role": "assistant",
+   "content": "{\"verdict_tag\":\"HELD\",\"reasoning\":\"D2 #2 is withdrawn in CR2. D1 vs C2 stands: the defender quotes Luke 1:35 in DR1.\"}"
+  },
+  {
+   "role": "user",
+   "content": "CURE REQUEST (check call). Two items were flagged in your verdict above. Answer each.\n1. K-W DEFENDER CR2 D2 #2 -- the withdrawal you counted.\n2. K-RUL D1 vs C2 -- your ruling on the link.\nFor each item write: RESPONSE: <the item, as labelled above> | <your answer>. For item 1 also write: STATEMENT: <the item, as labelled above> | <why the line stands as you graded it>.\nFor the K-RUL item write its RESPONSE line and under it the five-line card, one field to a line: RULING, CLAIM, NAMED BY, RULE, APPLIED.\n\nANSWER FORMAT: return one JSON object with one key, cure_lines: an array holding, in order, every line the request above asks for. Each entry is {\"kind\": \"RESPONSE\" or \"STATEMENT\" or \"OTHER\", \"item\": the item exactly as labelled above (\"\" for OTHER), \"text\": for RESPONSE and STATEMENT what you would write after the | sign, for OTHER the whole line}. A K-RUL card is five OTHER entries (RULING, CLAIM, NAMED BY, RULE, APPLIED, each a whole line) placed right after that item's RESPONSE entry. Write nothing outside the JSON."
+  }
+ ],
+ "temperature": 0,
+ "max_tokens": 1500,
+ "response_format": {
+  "type": "json_schema",
+  "json_schema": {
+   "name": "cure_lines",
+   "strict": true,
+   "schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "cure_lines"
+    ],
+    "properties": {
+     "cure_lines": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "additionalProperties": false,
+       "required": [
+        "kind",
+        "item",
+        "text"
+       ],
+       "properties": {
+        "kind": {
+         "type": "string",
+         "enum": [
+          "RESPONSE",
+          "STATEMENT",
+          "OTHER"
+         ]
+        },
+        "item": {
+         "type": "string"
+        },
+        "text": {
+         "type": "string"
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}

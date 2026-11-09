@@ -1,0 +1,11 @@
+OK   stored terra reply: every item reads the same on live and on pkgXK (14 rows)
+  D2 #2 stored: CURED | live with the line first: UNCURED | pkgXK: CURED
+OK   two-item line first: D2 #2 is read from its own line on pkgXK
+OK   control: on live the same reply moves D2 #2 (the defect pkgXK closes)
+OK   a two-item line that is the only line for both items: both read it, same as live (UNCURED, UNCURED)
+OK   D2 vs C2 takes its own card, not the grouped "D1, D2 vs C2" card above it
+OK   D1 vs C2 still takes the grouped card (its only card)
+OK   keystone takes its own card, not "keystone D3 vs C1"
+OK   D3 vs C1 takes the only card that names it
+OK   with no item list (a node outside cureVerdicts) the first matching card is taken, as live
+TOTAL 9 OK, 0 FAIL
