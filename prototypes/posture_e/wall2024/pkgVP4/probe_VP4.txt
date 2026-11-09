@@ -17,9 +17,12 @@ OK   2k a failed call: every premise NO REPLY, the error recorded, no item
 OK   2l bold label and curly quotes are read
 OK   2m Build skipped: one NOT CHECKED row, item passes on
 OK   2n a seat that COUNTED premise 6 gets no item; the other two do: chatgpt, sol
+OK   2o every E-ASSUME row the probe makes passes debate_enforcer_log's seat_role, cure_status and kind checks (W3 3772 fix 1): 53 rows, 0 fail
+OK   2p a throw inside Assume Check Build: it returns a skip that says why, the debate goes on: Assume Check Build failed: Cannot read properties of null (reading 'run_token')
+OK   2q a throw inside Assume Check Record: Judge Contradiction Record's item passes on, one NOT CHECKED row in the allowed values: Assume Check Record failed: B.prem is not iterable
 OK   3a the inlined psG equals the library psGrades on every saved CONCEDED LINKS line (header form aside): 162 lines, 0 differ
 OK   4a no Assume Check Record: Alternate Merge byte-equal to base
 OK   4b with the record: the E-ASSUME rows lead enforcer_log; the rest unchanged: 459 rows
 OK   5a parent: +4 nodes, only Alternate Merge changed: Assume Check Build, Assume Check Needed?, Assume Check Call deepseek, Assume Check Record | Alternate Merge
 
-23 OK, 0 FAIL
+26 OK, 0 FAIL

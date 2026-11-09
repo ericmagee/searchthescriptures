@@ -38,6 +38,7 @@ const SYS = 'You check whether quoted scripture states a fact. You bring nothing
 const BUILD = String.raw`// pkgVP4 (W2, P4 of Wall 3708, test 3738/3747): ASSUME CHECK BUILD. TRIAL, record-only. One DeepSeek call per run, after the panel.
 // For each UNSUPPORTED-L4 premise with ASSUMES (the list against the defender in [DR2], against the challenger in [CR3]), it gives DeepSeek the
 // assumed fact and the answering block (the other side's round 3 LINK block). It passes the incoming item on (Assume Check Record returns it).
+try{
 ` + COMMON + String.raw`const S=$('Init Seats').first().json;let RS=null;try{RS=$('Resolve Seats').first().json;}catch(e){RS=null;}
 let RGL=null;try{if($('Regrade Load').isExecuted)RGL=$('Regrade Load').first().json;}catch(e){RGL=null;}
 let F=null;try{F=RGL?RGL.f:$('Final Output').first().json;}catch(e){F=null;}
@@ -48,15 +49,18 @@ if(!F||!ds||!prem.length)return [{json:{acx_skip:true,why:!F?'no rounds found':!
 const PROMPT=` + JSON.stringify(PROMPT) + String.raw`;
 const user=PROMPT+'\n\n'+prem.map(p=>'######## '+p.side+' PREMISE '+p.n+' (listed against the '+p.side.toLowerCase()+', LINK '+p.link+') ########\nASSUMES: '+p.assumes+'\nROWS GIVE (as the lister wrote them): '+(p.rows_give||'(none)')+'\n\nTHE ANSWERING BLOCK, ['+p.answer_round+'] LINK '+p.link+':\n'+(p.block||'(no LINK '+p.link+' block found in ['+p.answer_round+'])')).join('\n\n');
 const body={model:ds.api_model,max_tokens:Math.max(Number(ds.max_tokens)||0,8000),temperature:0,messages:[{role:'system',content:'` + SYS.replace(/'/g, "\\'") + String.raw`'},{role:'user',content:user}]};
-return [{json:{acx_skip:false,body,prem,model:ds.api_model,run_token:S.run_token}}];`;
+return [{json:{acx_skip:false,body,prem,model:ds.api_model,run_token:S.run_token}}];
+}catch(__e){let __rt=null;try{__rt=$('Init Seats').first().json.run_token;}catch(e){}return [{json:{acx_skip:true,why:'Assume Check Build failed: '+String(__e&&__e.message||__e).slice(0,300),prem:[],run_token:__rt}}];} /* W3 3772 fix 2: a TRIAL check never stops the debate */`;
 
 const RECORD = String.raw`// pkgVP4 (W2, P4 of Wall 3708, test 3738/3747): ASSUME CHECK RECORD. TRIAL, record-only (E-ASSUME).
 // Two readers per assumed fact: DeepSeek (STATED needs its verse words found in the block's quotations) and code (every proper name of the fact
 // among the block's quoted verse words, read together). A judge that SPARED the premise gets an item only when both read NOT STATED.
 // One log row per fact with both answers, and one row per judge item. It passes Judge Contradiction Record's item on unchanged, with acx and acx_log.
-` + COMMON + String.raw`const IN=$('Judge Contradiction Record').first().json;const B=$('Assume Check Build').first().json;const RT=B.run_token||null;
+let __IN=null;try{__IN=$('Judge Contradiction Record').first().json;}catch(e){__IN=null;}
+try{
+` + COMMON + String.raw`const IN=__IN;if(!IN)throw new Error('Judge Contradiction Record has no item');const B=$('Assume Check Build').first().json;const RT=B.run_token||null;
 const OUT=(acx,acx_log)=>[{json:{...IN,acx,acx_log}}];
-const log=o=>({run_token:RT,seat:'assumption check',seat_role:'enforcer',judge_model:B.model||null,kind:'enforcer_check',rule:'E-ASSUME',reply_error:null,cure_status:null,flagged_line:null,prompt_sent:null,full_reply:null,response_line:null,...o});
+const log=o=>{const r={run_token:RT,seat:'assumption check',seat_role:'panel',judge_model:B.model||null,kind:'enforcer_check',rule:'E-ASSUME',reply_error:null,cure_status:null,flagged_line:null,prompt_sent:null,full_reply:null,response_line:null,...o};const st=r.cure_status;if(st!=null){r.cure_reason=st+(r.cure_reason?' -- '+r.cure_reason:'');r.cure_status=null;}r.seat_role=r.seat==='single judge'?'single':'panel';return r;}; /* W3 3772 fix 1: the table allows seat_role panel/reserve/alternate/single/synthesis and cure_status null/CURED/UNCURED; the reading leads cure_reason */
 if(B.acx_skip)return OUT({skipped:true,why:B.why,facts:[],items:[]},[log({item:'NOT CHECKED',cure_status:'NOT CHECKED',cure_reason:'the assumption check did not run: '+B.why+' (RECORD-ONLY TRIAL, VP4)'})]);
 /* the judges' CONCEDED LINKS lines (panel seats, then the single judge) */
 function psG(l){const g={};let t=String(l==null?'':l).replace(/\\+"/g,'"').replace(/[*_${'`'}]+/g,'');const m=t.match(/^\s*(?:[-•]\s*|\d+[.)]\s*)?(DEFENDER\s+|CHALLENGER\s+)?CONCEDED LINKS\s*:\s*(\d+)?\s*(?:--|—|–)?/i);if(!m)return null;t=t.slice(m[0].length);
@@ -90,8 +94,10 @@ const prompt=((B.body||{}).messages||[])[1]?B.body.messages[1].content:null;
 const acx_log=facts.map((f,i)=>log({item:f.side+' PREMISE '+f.n+' FACT '+(f.k||'?'),flagged_line:'ASSUMES: '+f.fact,prompt_sent:i===0?prompt:'[SAME prompt_sent AS the first E-ASSUME row]',full_reply:i===0?txt:'[SAME full_reply AS the first E-ASSUME row]',response_line:f.deepseek_line,reply_error:err,
   cure_status:f.both_not_stated?'BOTH NOT STATED':/^NO (ANSWER|REPLY)$/.test(f.deepseek)?'DEEPSEEK '+f.deepseek:(f.deepseek==='STATED'&&f.code!=='NOT STATED')?'NO ITEM (STATED)':f.deepseek==='INFERRED ACT'?'NO ITEM (INFERRED ACT)':'READERS DIFFER',
   cure_reason:'DEEPSEEK: '+f.deepseek+' -- CODE: '+f.code+(f.names.length?' (names '+f.names.join(', ')+(f.missing.length?'; not in the block\'s quoted verse words: '+f.missing.join(', '):'')+')':'')+' -- JUDGES: '+gtxt(f.grades)+' -- RECORD-ONLY TRIAL (VP4)'}))
- .concat(items.map(it=>log({seat:it.seat,seat_role:'judge',item:'premise listed against the '+it.side.toLowerCase()+' '+it.n+' FACT '+(it.k||'?'),flagged_line:'ASSUMES: '+it.fact,cure_status:'ITEM (TRIAL)',
+ .concat(items.map(it=>log({seat:it.seat,item:'premise listed against the '+it.side.toLowerCase()+' '+it.n+' FACT '+(it.k||'?'),flagged_line:'ASSUMES: '+it.fact,cure_status:'ITEM (TRIAL)',
   cure_reason:'E-ASSUME: the judge SPARED premise '+it.n+'; both readers find no verse quoted in the answering block that states "'+it.fact+'", and the ruling names none. RECORD-ONLY TRIAL (VP4): nothing is sent back and no seat is removed.'})));
-return OUT({skipped:false,model:B.model||'',facts,items,errors:err?[err]:[]},acx_log);`;
+return OUT({skipped:false,model:B.model||'',facts,items,errors:err?[err]:[]},acx_log);
+}catch(__e){const m='Assume Check Record failed: '+String(__e&&__e.message||__e).slice(0,300);let rt=null;try{rt=$('Assume Check Build').first().json.run_token;}catch(e){}
+ if(!__IN)throw __e;return [{json:{...__IN,acx:{skipped:true,why:m,facts:[],items:[]},acx_log:[{run_token:rt,seat:'assumption check',seat_role:'panel',judge_model:null,kind:'enforcer_check',rule:'E-ASSUME',item:'NOT CHECKED',flagged_line:null,prompt_sent:null,full_reply:null,response_line:null,reply_error:m,cure_status:null,cure_reason:'NOT CHECKED -- '+m+' (RECORD-ONLY TRIAL, VP4)'}]}}];} /* W3 3772 fix 2 */`;
 
 module.exports = { COMMON, PROMPT, SYS, BUILD, RECORD };
