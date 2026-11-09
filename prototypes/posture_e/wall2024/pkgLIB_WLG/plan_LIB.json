@@ -13,8 +13,8 @@
  "library": {
   "file": "Shared_Library.js",
   "lines": 2430,
-  "json_sha": "6d43542f7c91fe87",
-  "bytes": 463736
+  "json_sha": "b65b32887ed79885",
+  "bytes": 464198
  },
  "nodes": [
   {
@@ -55,9 +55,9 @@
    "file": "Alternate_Build.js",
    "name": "Alternate Build",
    "src": "/home/claude/searchthescriptures/prototypes/posture_e/wall2024/pkgLIB/strip_WLG/patched/Alternate_Build.js",
-   "base_sha": "cc1817ad5e3e54d6",
-   "base_bytes": 317230,
-   "stub_sha": "eff2343a3860937a",
+   "base_sha": "59bddc41bc578ff5",
+   "base_bytes": 317688,
+   "stub_sha": "7c6e7c45b1f7bc6f",
    "stub_bytes": 2458,
    "refs": [
     "Accept Final",
@@ -494,9 +494,9 @@
    "file": "R2_Alternate_Build.js",
    "name": "R2 Alternate Build",
    "src": "/home/claude/searchthescriptures/prototypes/posture_e/wall2024/pkgLIB/strip_WLG/patched/R2_Alternate_Build.js",
-   "base_sha": "386bdb544b33146a",
-   "base_bytes": 317607,
-   "stub_sha": "9e3abf2a6683d35d",
+   "base_sha": "f3ef8db0bb4f3cbc",
+   "base_bytes": 318065,
+   "stub_sha": "92e63a41a5813f7e",
    "stub_bytes": 2854,
    "refs": [
     "Accept Final",
@@ -636,6 +636,6 @@
    "own_lines": 3
   }
  ],
- "bytes_before": 9274071,
- "bytes_after": 604730
+ "bytes_before": 9274987,
+ "bytes_after": 605192
 }
