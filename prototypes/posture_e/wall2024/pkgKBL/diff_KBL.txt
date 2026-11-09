@@ -1,0 +1,70 @@
+=== 33345 Cure Check
+ [0].json.independent_verdict_raw
+   BASE: "" drops an auxiliary inference and leaves D1 fully supported on Matthew 1:18 and 1:20.]\n[AUDIT v21: DEBATE RULE VIOLATION REPORT -- ITEM: CHALLENGER CHAIN MARK; RULE: K-C; RESULT: CURED; KINDS: L1, L3; LINE: CHALLENGER CHAIN MARK: STRAINED -- C1 constructs an unstated knowing within the espousal that directly contradicts Matthew 1:18 and Matthew 1:25.; STATEMENT: RESTATED: CHALLENGER CHAIN MARK: STRAINED -- C1 in (DR3) fails against the cumulati
+   NEW : "" drops an auxiliary inference and leaves D1 fully supported on Matthew 1:18 and 1:20.]\n[AUDIT v21: DEBATE RULE VIOLATION REPORT -- ITEM: CHALLENGER CHAIN MARK; RULE: K-C; RESULT: CURED; KINDS: L1, L2, L3; LINE: CHALLENGER CHAIN MARK: STRAINED -- C1 constructs an unstated knowing within the espousal that directly contradicts Matthew 1:18 and Matthew 1:25.; STATEMENT: RESTATED: CHALLENGER CHAIN MARK: STRAINED -- C1 in (DR3) fails against the cumu
+ [0].json.debate_rule_report[1].kinds[1]
+   BASE: L3
+   NEW : L2
+ [0].json.debate_rule_report[1].kinds[2]
+   BASE: undefined
+   NEW : L3
+=== 33442 Extract Independent Verdict
+ [0].json.independent_verdict_raw
+   BASE: a listed premise's PRESSED WITH; TRIAL rule]\n\n[AUDIT v49: DEBATE RULE VIOLATION (K-UNX) -- CHALLENGER premise 3: counted UNEXHIBITED in CHALLENGER CONCEDED LINKS, but its [DR3] block exhibits L1 and L3 and the count names no layer the block lacks. TRIAL rule: answer it in the cure; it removes no seat; not counted in audit_flags.]\n\n[AUDIT v21: COUNTED PREMISES DEFENDER FIELD ABSENT -- the checks by number fall back to the stated count (A).]\n\n[AUDI
+   NEW : a listed premise's PRESSED WITH; TRIAL rule]\n\n[AUDIT v49: DEBATE RULE VIOLATION (K-UNX) -- CHALLENGER premise 3: counted UNEXHIBITED in CHALLENGER CONCEDED LINKS, but its [DR3] block exhibits L1 and L2 and L3 and the count names no layer the block lacks. TRIAL rule: answer it in the cure; it removes no seat; not counted in audit_flags.]\n\n[AUDIT v21: COUNTED PREMISES DEFENDER FIELD ABSENT -- the checks by number fall back to the stated count (A).]
+ [0].json.debate_rule_violations[16].kinds[1]
+   BASE: L3
+   NEW : L2
+ [0].json.debate_rule_violations[16].kinds[2]
+   BASE: undefined
+   NEW : L3
+=== 33442 Panel Payloads
+ [0].json.bodies[1]
+   BASE: a listed premise's PRESSED WITH; TRIAL rule]\n[AUDIT v49: DEBATE RULE VIOLATION (K-UNX) -- CHALLENGER premise 3: counted UNEXHIBITED in CHALLENGER CONCEDED LINKS, but its [DR3] block exhibits L1 and L3 and the count names no layer the block lacks. TRIAL rule: answer it in the cure; it removes no seat; not counted in audit_flags.]\n[AUDIT v49: DEBATE RULE VIOLATION (K-UNX) -- CHALLENGER premise 5: counted UNEXHIBITED in CHALLENGER CONCEDED LINKS, 
+   NEW : a listed premise's PRESSED WITH; TRIAL rule]\n[AUDIT v49: DEBATE RULE VIOLATION (K-UNX) -- CHALLENGER premise 3: counted UNEXHIBITED in CHALLENGER CONCEDED LINKS, but its [DR3] block exhibits L1 and L2 and L3 and the count names no layer the block lacks. TRIAL rule: answer it in the cure; it removes no seat; not counted in audit_flags.]\n[AUDIT v49: DEBATE RULE VIOLATION (K-UNX) -- CHALLENGER premise 5: counted UNEXHIBITED in CHALLENGER CONCEDED 
+ [0].json.summary[1].drv[16].kinds[1]
+   BASE: L3
+   NEW : L2
+ [0].json.summary[1].drv[16].kinds[2]
+   BASE: undefined
+   NEW : L3
+=== 33461 Alt Gate Record
+ [0].json.bodies[0]
+   BASE: n[AUDIT v38: E-GATE -- SEAT: grok; G1 NOT APPLIED (E-APPLY S12); ANSWER: KEEP; CURED: KEEP: the change stays unapplied]\n[AUDIT v38: E-GATE -- SEAT: grok; G2 CONTRADICTION (E-GATE B); ANSWER: CHANGE; UNCURED: the gate change raised a new LIVE item: RULE K-B -- K-B D5 vs C6 (W3 2341: a change that raises a new LIVE K item does not cure; counted once, here); counted in drv_uncured. REVIEW THIS ROW.]\n[AUDIT v38: E-GATE NEW ITEM -- SEAT: grok; RULE 
+   NEW : n[AUDIT v38: E-GATE -- SEAT: grok; G1 NOT APPLIED (E-APPLY S12); ANSWER: KEEP; CURED: KEEP: the change stays unapplied]\n[AUDIT v38: E-GATE -- SEAT: grok; G2 CONTRADICTION (E-GATE B); ANSWER: CHANGE; CURED: the gate change was applied and the item is no longer raised]\n[AUDIT v38: E-GATE NEW ITEM -- SEAT: grok; CONTRADICTION (E-GATE D38): your RULING card grades D2 vs C2 DEFENDER LINK BROKEN, but your collision line for D2 vs C2 now grades it STA
+ [0].json.gate_rows[1].cure_status
+   BASE: UNCURED
+   NEW : CURED
+ [0].json.gate_rows[1].cure_reason
+   BASE: SES, so that press stands for the challenger; yet D5 vs C6 is graded CHALLENGER LINK BROKEN with Matthew 1:18 among its footing or ground. Change one of the two lines so they agree. | the gate change raised a new LIVE item: RULE K-B -- K-B D5 vs C6 (W3 2341: a change that raises a new LIVE K item does not cure; counted once, here) (counted in drv_uncured)
+   NEW : SES, so that press stands for the challenger; yet D5 vs C6 is graded CHALLENGER LINK BROKEN with Matthew 1:18 among its footing or ground. Change one of the two lines so they agree. | the gate change was applied and the item is no longer raised
+=== 33497 Panel Cure Check
+ [0].json.bodies[0]
+   BASE: GE STATEMENT: Acknowledging John's mortal parentage does not concede D6.]\n[AUDIT v21: DEBATE RULE VIOLATION REPORT -- SEAT: gemini; ITEM: CHALLENGER CHAIN MARK; RULE: K-C; RESULT: CURED; KINDS: L1, L3; LINE: CHALLENGER CHAIN MARK: STRAINED -- C1 asserts an unstated marital knowing within the espousal contradicted by Matthew 1:18 and Matthew 1:25.; STATEMENT: RESTATED: CHALLENGER CHAIN MARK: STRAINED -- C1 asserts an unstated marital knowing with
+   NEW : GE STATEMENT: Acknowledging John's mortal parentage does not concede D6.]\n[AUDIT v21: DEBATE RULE VIOLATION REPORT -- SEAT: gemini; ITEM: CHALLENGER CHAIN MARK; RULE: K-C; RESULT: CURED; KINDS: L1, L2, L3; LINE: CHALLENGER CHAIN MARK: STRAINED -- C1 asserts an unstated marital knowing within the espousal contradicted by Matthew 1:18 and Matthew 1:25.; STATEMENT: RESTATED: CHALLENGER CHAIN MARK: STRAINED -- C1 asserts an unstated marital knowing 
+ [0].json.summary[0].cure[9].kinds[1]
+   BASE: L3
+   NEW : L2
+ [0].json.summary[0].cure[9].kinds[2]
+   BASE: undefined
+   NEW : L3
+=== 33682 Panel Cure Check
+ [0].json.bodies[2]
+   BASE: wn claim that Joseph names the child, and does not surrender D4 or any listed premise.]\n[AUDIT v21: DEBATE RULE VIOLATION REPORT -- SEAT: grok; ITEM: REASONING; RULE: K-C; RESULT: CURED; KINDS: L1, L3; LINE: HELD. The conception rows state the child is of the Holy Ghost before Mary and Joseph came together (L1), and the angel answers \"How shall this be, seeing I know not a man?\" with the Holy Ghost and the power of the Highest (L1), ek (G1537,
+   NEW : wn claim that Joseph names the child, and does not surrender D4 or any listed premise.]\n[AUDIT v21: DEBATE RULE VIOLATION REPORT -- SEAT: grok; ITEM: REASONING; RULE: K-C; RESULT: CURED; KINDS: L1, L2, L3; LINE: HELD. The conception rows state the child is of the Holy Ghost before Mary and Joseph came together (L1), and the angel answers \"How shall this be, seeing I know not a man?\" with the Holy Ghost and the power of the Highest (L1), ek (G1
+ [0].json.summary[2].cure[2].kinds[1]
+   BASE: L3
+   NEW : L2
+ [0].json.summary[2].cure[2].kinds[2]
+   BASE: undefined
+   NEW : L3
+=== 33705 Panel Payloads
+ [0].json.bodies[2]
+   BASE:  RAISED -- D2 vs C2 CHALLENGER LINK BROKEN is graded as a forced link with a FORCED line (ruling 411: a link may fail by meaning though the witness was answered); K-F reads its quotations.]\n[AUDIT v21: DEBATE RULE VIOLATION -- D3 vs C6 CHALLENGER LINK BROKEN exhibits 1 layer kind (L1) of the two rule B requires on the line or the line under it. REVIEW THIS ROW.]\n[AUDIT v29: K-G1/K-G4 NOT RAISED -- D3 vs C6 CHALLENGER LINK BROKEN is graded as a 
+   NEW :  RAISED -- D2 vs C2 CHALLENGER LINK BROKEN is graded as a forced link with a FORCED line (ruling 411: a link may fail by meaning though the witness was answered); K-F reads its quotations.]\n[AUDIT v29: K-G1/K-G4 NOT RAISED -- D3 vs C6 CHALLENGER LINK BROKEN is graded as a forced link with a FORCED line (ruling 411: a link may fail by meaning though the witness was answered); K-F reads its quotations.]\n[AUDIT v29: K-G1/K-G4 NOT RAISED -- D6 vs C
+ [0].json.summary[2].drv[0].rule
+   BASE: K-B
+   NEW : K-F
+ [0].json.summary[2].drv[0].side
+   BASE: CHALLENGER
+   NEW : BOTH
