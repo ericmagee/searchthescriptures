@@ -1,0 +1,245 @@
+{
+ "base": "pkgLIB/strip_FUK",
+ "library": {
+  "Alt_Gate_Build.js": {
+   "base": "749da02c2b83",
+   "patched": "e0a4c1f7bf83",
+   "changes": [
+    "A",
+    "C2"
+   ]
+  },
+  "Alt_Gate_Record.js": {
+   "base": "7de03293756f",
+   "patched": "e652b1ff7629",
+   "changes": [
+    "A",
+    "C2"
+   ]
+  },
+  "Alternate_Build.js": {
+   "base": "e142dcbfca19",
+   "patched": "05d2fa848128",
+   "changes": [
+    "A",
+    "C2"
+   ]
+  },
+  "Alternate_Cure_Build.js": {
+   "base": "16fb07ce1e09",
+   "patched": "d66c8efca6d2",
+   "changes": [
+    "A",
+    "C2"
+   ]
+  },
+  "Alternate_Cure_Normalize.js": {
+   "base": "a8b562377c03",
+   "patched": "5b6feed8cd79",
+   "changes": [
+    "A",
+    "C2",
+    "B",
+    "C1"
+   ]
+  },
+  "Alternate_Merge_1.js": {
+   "base": "2b48e80dd164",
+   "patched": "d1c9ced1d9ea",
+   "changes": [
+    "A",
+    "C2"
+   ]
+  },
+  "Alternate_Merge_Seat.js": {
+   "base": "d35e79925151",
+   "patched": "4918b3b7d346",
+   "changes": [
+    "A",
+    "C2"
+   ]
+  },
+  "Alternate_Payloads.js": {
+   "base": "62012ea0b123",
+   "patched": "62012ea0b123",
+   "changes": []
+  },
+  "Cure_Build.js": {
+   "base": "2c7422eabc5e",
+   "patched": "487d4ff74d4c",
+   "changes": [
+    "A",
+    "C2"
+   ]
+  },
+  "Cure_Check.js": {
+   "base": "1d6ffb92f09a",
+   "patched": "868939f67d72",
+   "changes": [
+    "A",
+    "C2"
+   ]
+  },
+  "Cure_Normalize.js": {
+   "base": "01e352a58359",
+   "patched": "05968c653912",
+   "changes": [
+    "A",
+    "C2",
+    "B",
+    "C1"
+   ]
+  },
+  "Extract_Independent_Verdict.js": {
+   "base": "2958ec9f484a",
+   "patched": "2958ec9f484a",
+   "changes": []
+  },
+  "Gate_Build.js": {
+   "base": "c513971a3115",
+   "patched": "3445e0cdb393",
+   "changes": [
+    "A",
+    "C2"
+   ]
+  },
+  "Gate_Record.js": {
+   "base": "ead0b623fbad",
+   "patched": "f2f700e0dc73",
+   "changes": [
+    "A",
+    "C2"
+   ]
+  },
+  "Panel_Cure_Build_1.js": {
+   "base": "0d0d9233b81f",
+   "patched": "a3772aaa60ba",
+   "changes": [
+    "A",
+    "C2"
+   ]
+  },
+  "Panel_Cure_Build_2.js": {
+   "base": "dc3a71efff3b",
+   "patched": "a07eaa1b075c",
+   "changes": [
+    "A",
+    "C2"
+   ]
+  },
+  "Panel_Cure_Build_3.js": {
+   "base": "e43decff8707",
+   "patched": "27c0c69691b3",
+   "changes": [
+    "A",
+    "C2"
+   ]
+  },
+  "Panel_Cure_Check.js": {
+   "base": "1d360a7bb269",
+   "patched": "3059d3a0f354",
+   "changes": [
+    "A",
+    "C2"
+   ]
+  },
+  "Panel_Cure_Normalize_1.js": {
+   "base": "f0451fc16a4a",
+   "patched": "f936470ec9ac",
+   "changes": [
+    "A",
+    "C2",
+    "B",
+    "C1"
+   ]
+  },
+  "Panel_Cure_Normalize_2.js": {
+   "base": "e9f0c518093f",
+   "patched": "70bff460c196",
+   "changes": [
+    "A",
+    "C2",
+    "B",
+    "C1"
+   ]
+  },
+  "Panel_Cure_Normalize_3.js": {
+   "base": "cff02483525c",
+   "patched": "0e15373ffa8d",
+   "changes": [
+    "A",
+    "C2",
+    "B",
+    "C1"
+   ]
+  },
+  "Panel_Payloads.js": {
+   "base": "f5c8b21809be",
+   "patched": "f5c8b21809be",
+   "changes": []
+  },
+  "R2_Alt_Gate_Build.js": {
+   "base": "bc16a6560c90",
+   "patched": "59f07d8a251b",
+   "changes": [
+    "A",
+    "C2"
+   ]
+  },
+  "R2_Alt_Gate_Record.js": {
+   "base": "66c3206ee6f5",
+   "patched": "8087f4efce8c",
+   "changes": [
+    "A",
+    "C2"
+   ]
+  },
+  "R2_Alternate_Build.js": {
+   "base": "b22753c5fd13",
+   "patched": "789aff61dc0d",
+   "changes": [
+    "A",
+    "C2"
+   ]
+  },
+  "R2_Alternate_Cure_Build.js": {
+   "base": "58e7dc898726",
+   "patched": "87ccbbb6ecaf",
+   "changes": [
+    "A",
+    "C2"
+   ]
+  },
+  "R2_Alternate_Cure_Normalize.js": {
+   "base": "338f245c1d7e",
+   "patched": "1241d38958f1",
+   "changes": [
+    "A",
+    "C2",
+    "B",
+    "C1"
+   ]
+  },
+  "R2_Alternate_Merge.js": {
+   "base": "70eb2e27a256",
+   "patched": "63468aeca53e",
+   "changes": [
+    "A",
+    "C2"
+   ]
+  },
+  "R2_Alternate_Merge_Seat.js": {
+   "base": "8c008180defd",
+   "patched": "5c4ed67591f0",
+   "changes": [
+    "A",
+    "C2"
+   ]
+  },
+  "R2_Alternate_Payloads.js": {
+   "base": "f49ebac3cf29",
+   "patched": "f49ebac3cf29",
+   "changes": []
+  }
+ }
+}

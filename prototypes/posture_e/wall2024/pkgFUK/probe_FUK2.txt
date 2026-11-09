@@ -1,0 +1,32 @@
+OK   A "NOT COUNTED, it is not a concession.": rev 1 CURED, rev 2 UNCURED
+OK   A "It is not to be COUNTED.": rev 1 CURED, rev 2 UNCURED
+OK   A "COUNTED isn't right; it grants titles.": rev 1 CURED, rev 2 CURED
+OK   A "COUNTED": rev 1 CURED, rev 2 CURED
+OK   A "COUNTED. I do not dispute it.": rev 1 CURED, rev 2 CURED
+OK   A rev 2: NOT COUNTED is asked once, as NO REASON
+OK   B rev 1: nothing after the bar, no follow-up (the gap)
+OK   B rev 2: asked alone, as NO ANSWER (NO ANSWER K-S3 S3 DEFENDER CR4: #1: DEFENDER CR4: “I grant ‘husband’ and ‘wife’.”)
+OK   B rev 2: prompt section present
+---- B prompt ----
+FOLLOW-UP, asked once. The items below have no line in your reply above that can be counted. Every other item stands as your reply above left it. Answer only the items below, each on its own line beginning RESPONSE:, in the form the request above gives, and write nothing else.
+
+Items whose RESPONSE line has nothing after the bar (1):
+- K-S3 S3 DEFENDER CR4: #1: DEFENDER CR4: “I grant ‘husband’ and ‘wife’.”
+For each, write: RESPONSE: <the item, as labelled above> | <your answer>, in the form the request above gives for its rule.
+------------------
+OK   B rev 2: trailing spaces after the bar are asked too
+OK   B rev 2: a full follow-up answer cures it, no second ask
+OK   B rev 2: an empty follow-up stays UNCURED, no second ask
+OK   B rev 2: a line with text after the bar is not NO ANSWER
+OK   C setup: short reason asked
+OK   C1 rev 1: only the RESPONSE line kept (the gap)
+OK   C1 rev 2: the asked side's CORRECTED COUNT kept, the other side's not
+OK   C1 rev 2: the item reads CURED (COUNTED)
+     luna idx 0 0 rev1 cs undefined rev2 cs {"DEFENDER":{"n":4,"st":null}}
+OK   C2 rev 2: the corrected count DEFENDER 4 is written for luna (rev 1 writes none)
+OK   C2 rev 2: the CORRECTED STANDING audit line is in luna's verdict_raw
+OK   C2 first reply: COUNTED with CORRECTED COUNT: DEFENDER 4 is written in rev 2, not in rev 1
+OK   C1: the follow-up count replaces the first reply's count of the side
+OK   stored 34108 reply: Normalize output byte-equal
+OK   stored 34108: Panel Cure Check output byte-equal
+23 OK, 0 FAIL
