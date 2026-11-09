@@ -19,6 +19,13 @@ T('2a Build: mode full, three things missing',BO.sjr.mode==='full'&&BO.sjr.miss.
 T('2b Build: same model and token budget, the judge\'s own conversation kept, + its reply + one ask',BO.verdictBody.model===B1.verdictBody.model&&JSON.stringify(m1.slice(0,m0.length))===JSON.stringify(m0)&&m1.length===m0.length+2&&m1[m0.length].role==='assistant'&&m1[m0.length].content===VN1.choices[0].message.content&&m1[m0.length+1].role==='user',BO.verdictBody.model+', '+m0.length+' -> '+m1.length+' messages');
 T('2c Build: routing fields kept (jidx, audit_prompt)',BO.jidx===B1.jidx&&BO.audit_prompt===B1.audit_prompt);
 console.log('     ask: '+m1[m1.length-1].content);
+// 2d-2e (rev 2, W1 3702 and W4 3701): evaluate SJ Re-ask Call openrouter's jsonBody from the parent on SJ Re-ask Build's output.
+const PAR=JSON.parse(fs.readFileSync(__dirname+'/parent_s82_SJR.json','utf8'));const CALL=PAR.nodes.find(n=>n.name==='SJ Re-ask Call openrouter');
+const bodyOf=(bo,b1)=>new Function('$','$json','return '+CALL.parameters.jsonBody.replace(/^=\{\{\s*/,'').replace(/\s*\}\}$/,'')+';')(n=>({first:()=>({json:n==='SJ Re-ask Build'?bo:n==='Build Independent Verdict'?b1:null})}),bo);
+const CB=bodyOf(BO,B1);const cm=CB.messages,lt=x=>typeof x.content==='string'?x.content:x.content.map(p=>p.text).join('');
+T('2d Call body (full mode, 34108): '+cm.length+' messages, the last two are the judge\'s reply and the ask, model '+CB.model,cm.length===m0.length+2&&cm[cm.length-2].role==='assistant'&&lt(cm[cm.length-2])===VN1.choices[0].message.content&&cm[cm.length-1].role==='user'&&lt(cm[cm.length-1])===BO.sjr.ask&&CB.model===B1.verdictBody.model);
+{const B0=items('33482','Build Independent Verdict')[0].json;const BOm=harness('33482',{'Build Independent Verdict':J({...B0,jidx:5})})(S.BUILD,'Extract Independent Verdict')[0].json;const MB=bodyOf(BOm,B0).messages;
+ T('2e Call body (marks mode, 33482): ends with the ask for the missing CHAIN MARK lines only',/^Your judgment above has no DEFENDER CHAIN MARK line; no CHALLENGER CHAIN MARK line\. Write only the missing lines/.test(lt(MB[MB.length-1]))&&MB.length===B0.verdictBody.messages.length+2,lt(MB[MB.length-1]).slice(0,120));}
 // 3. Pick.
 const R34016=items('34016','Verdict Normalizer')[0].json;const reask={...R34016,usage:{prompt_tokens:100,completion_tokens:50,total_tokens:150}};
 const pk=(run,mode,inp)=>harness(run,{'SJ Re-ask Build':J({sjr:{mode}}),'SJ Re-ask Call openrouter':J(inp)})(S.PICK,'SJ Re-ask Call openrouter')[0].json;

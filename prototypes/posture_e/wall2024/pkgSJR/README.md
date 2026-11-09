@@ -41,3 +41,6 @@ Only once per run. The run row's judge_model already names the model; the SJR li
 
 ## Write (W4)
 Write parent_s82_SJR.json, or the four nodes plus the Cure Check stub from pkgLIB_SJR and the connections listed in build_SJR.cjs. Run n8n validation first: the IF condition is a single expression with an arrow function.
+
+## Rev 2 (W1 3702, W4 3701: FAIL, one defect, my mistake)
+SJ Re-ask Call openrouter was a straight copy of Verdict Call openrouter, whose body reads $('Build Independent Verdict').first().json.verdictBody, so it would have sent the original conversation and never the re-ask. build_SJR.cjs now replaces that one argument with $('SJ Re-ask Build').first().json.verdictBody (refused unless it occurs once, at the end). The probe now evaluates the call's body expression from the parent: 2d (34108, full mode: 6 messages ending with the reply and the ask) and 2e (33482, marks mode: ends with the ask for the CHAIN MARK lines only). probe_SJR.txt 27 OK; W1's check_SJR_body.cjs: OK. The library (strip_SJR, pkgLIB_SJR) is unchanged, so gate_SJR.txt stands.

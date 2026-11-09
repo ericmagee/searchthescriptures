@@ -6,6 +6,8 @@ OK   2a Build: mode full, three things missing: no verdict (HELD, PARTIAL or BRO
 OK   2b Build: same model and token budget, the judge's own conversation kept, + its reply + one ask: openai/gpt-6.1-terra, 4 -> 6 messages
 OK   2c Build: routing fields kept (jidx, audit_prompt)
      ask: Your reply above cannot be read as a judgment: it has no verdict (HELD, PARTIAL or BROKEN); no DEFENDER CHAIN MARK line; no CHALLENGER CHAIN MARK line. A verdict is required; "cannot determine" is not an answer the record can hold. Grade from the rounds and the reports you were given, and write your complete judgment again from the start, in exactly the form the first message asks for, with every required line, ending with the DEFENDER CHAIN MARK and CHALLENGER CHAIN MARK lines. Where the record leaves a point open, grade it under the rules and say so on that line.
+OK   2d Call body (full mode, 34108): 6 messages, the last two are the judge's reply and the ask, model openai/gpt-6.1-terra
+OK   2e Call body (marks mode, 33482): ends with the ask for the missing CHAIN MARK lines only: Your judgment above has no DEFENDER CHAIN MARK line; no CHALLENGER CHAIN MARK line. Write only the missing lines, each o
 OK   3a Pick full: the re-ask reply is used; usage is the sum of both calls: prompt 73365, completion 1277
 OK   3b Pick on a failed call: the first reply is used and the reason kept: Bad gateway
 OK   3c Pick on an empty reply: the first reply is used: the re-ask reply held no text
@@ -25,4 +27,4 @@ OK   6c 34108 re-ask failed: STILL UNREADABLE, the failure reason kept: [AUDIT v
 OK   6d Cure Check: apart from the SJR line, the output equals live s82 Cure Check (strip_XKB) on the same input
 OK   6e a readable single judge (34016): no SJR line
 
-25 OK, 0 FAIL
+27 OK, 0 FAIL

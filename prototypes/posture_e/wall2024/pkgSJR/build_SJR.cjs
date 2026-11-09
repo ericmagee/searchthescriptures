@@ -23,6 +23,8 @@ if(mode==='strip'){
    options:{caseSensitive:true,leftValue:'',typeValidation:'loose'}},options:{}}};
  const BU={id:uid('build'),name:'SJ Re-ask Build',type:'n8n-nodes-base.code',typeVersion:2,position:[X.position[0]+448,X.position[1]+64],parameters:{jsCode:S.BUILD}};
  const CA=JSON.parse(JSON.stringify(V));CA.id=uid('call');CA.name='SJ Re-ask Call openrouter';CA.position=[X.position[0]+672,X.position[1]+64];
+ const ARG="$('Build Independent Verdict').first().json.verdictBody";const jb=CA.parameters.jsonBody;if(jb.split(ARG).length!==2||!jb.endsWith('})('+ARG+') }}'))die('Verdict Call openrouter body argument not found once at the end');
+ CA.parameters.jsonBody=jb.slice(0,jb.length-(ARG+') }}').length)+"$('SJ Re-ask Build').first().json.verdictBody) }}"; /* rev 2 (W1 3702, W4 3701): send the re-ask conversation, not the original */
  const PK={id:uid('pick'),name:'SJ Re-ask Pick',type:'n8n-nodes-base.code',typeVersion:2,position:[X.position[0]+896,X.position[1]+64],parameters:{jsCode:S.PICK}};
  d.nodes.push(IF,BU,CA,PK);
  const C=d.connections;const L=n=>[{node:n,type:'main',index:0}];
