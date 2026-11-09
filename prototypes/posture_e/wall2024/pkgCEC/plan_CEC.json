@@ -1,0 +1,221 @@
+{
+ "base": "pkgLIB/strip_SJR",
+ "library": {
+  "Alt_Gate_Build.js": {
+   "base": "17749ddf5444",
+   "patched": "60fffcbe3c70",
+   "changes": [
+    "cureRecompute",
+    "sbApply2024"
+   ]
+  },
+  "Alt_Gate_Record.js": {
+   "base": "41b35eec9ff1",
+   "patched": "fff1c8d7df61",
+   "changes": [
+    "cureRecompute",
+    "sbApply2024"
+   ]
+  },
+  "Alternate_Build.js": {
+   "base": "cdafdf322b3c",
+   "patched": "11c2455378a0",
+   "changes": [
+    "cureRecompute"
+   ]
+  },
+  "Alternate_Cure_Build.js": {
+   "base": "c63e0bdb9e14",
+   "patched": "3b7e4a07d4d4",
+   "changes": [
+    "cureRecompute"
+   ]
+  },
+  "Alternate_Cure_Normalize.js": {
+   "base": "9d4969916fcc",
+   "patched": "ed83348f3142",
+   "changes": [
+    "cureRecompute"
+   ]
+  },
+  "Alternate_Merge_1.js": {
+   "base": "0dfdc51f3635",
+   "patched": "c8c77af9912c",
+   "changes": [
+    "cureRecompute",
+    "sbApply2024"
+   ]
+  },
+  "Alternate_Merge_Seat.js": {
+   "base": "fab4256eecb2",
+   "patched": "ef21e50c3303",
+   "changes": [
+    "cureRecompute",
+    "sbApply2024",
+    "no-item branch"
+   ]
+  },
+  "Alternate_Payloads.js": {
+   "base": "62012ea0b123",
+   "patched": "62012ea0b123",
+   "changes": []
+  },
+  "Cure_Build.js": {
+   "base": "a018e6c78c21",
+   "patched": "b2137d264392",
+   "changes": [
+    "cureRecompute"
+   ]
+  },
+  "Cure_Check.js": {
+   "base": "c4be03ff8641",
+   "patched": "e24a58427aab",
+   "changes": [
+    "cureRecompute",
+    "single judge no-item branch"
+   ]
+  },
+  "Cure_Normalize.js": {
+   "base": "50fca0c71dba",
+   "patched": "28101e1559e2",
+   "changes": [
+    "cureRecompute"
+   ]
+  },
+  "Extract_Independent_Verdict.js": {
+   "base": "2958ec9f484a",
+   "patched": "2958ec9f484a",
+   "changes": []
+  },
+  "Gate_Build.js": {
+   "base": "049fe8efe896",
+   "patched": "d3477b81d19d",
+   "changes": [
+    "cureRecompute",
+    "sbApply2024"
+   ]
+  },
+  "Gate_Record.js": {
+   "base": "c2e45cba1e6d",
+   "patched": "2cde122043f5",
+   "changes": [
+    "cureRecompute",
+    "sbApply2024"
+   ]
+  },
+  "Panel_Cure_Build_1.js": {
+   "base": "9a71fed482f7",
+   "patched": "da7503999dc2",
+   "changes": [
+    "cureRecompute"
+   ]
+  },
+  "Panel_Cure_Build_2.js": {
+   "base": "15192d3cdbc6",
+   "patched": "38cca7f35488",
+   "changes": [
+    "cureRecompute"
+   ]
+  },
+  "Panel_Cure_Build_3.js": {
+   "base": "b9e380264755",
+   "patched": "aab57435195a",
+   "changes": [
+    "cureRecompute"
+   ]
+  },
+  "Panel_Cure_Check.js": {
+   "base": "6e14c18bc30e",
+   "patched": "1d7724516bc4",
+   "changes": [
+    "cureRecompute",
+    "no-item branch"
+   ]
+  },
+  "Panel_Cure_Normalize_1.js": {
+   "base": "6f7072751214",
+   "patched": "70796c5603ee",
+   "changes": [
+    "cureRecompute"
+   ]
+  },
+  "Panel_Cure_Normalize_2.js": {
+   "base": "a54cdfb1a427",
+   "patched": "e70af5244f7a",
+   "changes": [
+    "cureRecompute"
+   ]
+  },
+  "Panel_Cure_Normalize_3.js": {
+   "base": "8a3bcabf2c1d",
+   "patched": "43716a3d63b5",
+   "changes": [
+    "cureRecompute"
+   ]
+  },
+  "Panel_Payloads.js": {
+   "base": "f5c8b21809be",
+   "patched": "f5c8b21809be",
+   "changes": []
+  },
+  "R2_Alt_Gate_Build.js": {
+   "base": "295e1c798b92",
+   "patched": "97d1c3f46ca1",
+   "changes": [
+    "cureRecompute",
+    "sbApply2024"
+   ]
+  },
+  "R2_Alt_Gate_Record.js": {
+   "base": "64104146d7d2",
+   "patched": "8d64c7e4563f",
+   "changes": [
+    "cureRecompute",
+    "sbApply2024"
+   ]
+  },
+  "R2_Alternate_Build.js": {
+   "base": "3b92f9136c2b",
+   "patched": "823af72281f4",
+   "changes": [
+    "cureRecompute"
+   ]
+  },
+  "R2_Alternate_Cure_Build.js": {
+   "base": "fc980b950d9c",
+   "patched": "5e798e558822",
+   "changes": [
+    "cureRecompute"
+   ]
+  },
+  "R2_Alternate_Cure_Normalize.js": {
+   "base": "3ec314d60b45",
+   "patched": "de568c7acd83",
+   "changes": [
+    "cureRecompute"
+   ]
+  },
+  "R2_Alternate_Merge.js": {
+   "base": "6b656ffcb8a4",
+   "patched": "f62959e22571",
+   "changes": [
+    "cureRecompute",
+    "sbApply2024"
+   ]
+  },
+  "R2_Alternate_Merge_Seat.js": {
+   "base": "93cdd07b43a1",
+   "patched": "e149bee78756",
+   "changes": [
+    "cureRecompute",
+    "sbApply2024",
+    "no-item branch"
+   ]
+  },
+  "R2_Alternate_Payloads.js": {
+   "base": "f49ebac3cf29",
+   "patched": "f49ebac3cf29",
+   "changes": []
+  }
+ }
+}
