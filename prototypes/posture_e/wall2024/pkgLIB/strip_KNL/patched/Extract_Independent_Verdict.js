@@ -402,7 +402,7 @@ const __kfLB=s=>String(s==null?'':s).replace(/\\n/g,'\n').replace(/(^|\n)[ \t]*(
 const __kfIN=s=>__kfLB(s).replace(/(^|\s)\d{1,2}[.)](?=\s|$)/g,'$1');
 const kfFound=(q,t)=>ciFound(__kfLB(q),__kfLB(t))||ciFound(__kfIN(q),__kfIN(t));
 function knlNone2024(l){const s=String(l==null?'':l).replace(/[*_`]+/g,'').trim().replace(/^(?:[-•>]|\d+[.)])\s*/,'');const m=s.match(/^FORCED(?:\s*\(\s*Commitment\s+\d+\s*\))?\s*:\s*(.*)$/i);if(!m)return false;const r=m[1].trim(); /* pkgKNL */
- return /^(?:none|nil|n\/a|no|nothing|zero|0)\b/i.test(r)&&!/\bD\d+\s+vs\.?\s+C\d+\b/i.test(r)&&!/["“”]/.test(r);}
+ return /^(?:none|nil|n\/a|no|nothing|zero|0)\b/i.test(r)&&!/\b[DC]\d+\b|\bLINK\s*\d+|\[[CD]R\d\]|\b(?:except|but)\b/i.test(r)&&!/["“”‘]/.test(r);} /* rev 2 (W1 3561-3563): a none line that names a link or round, quotes, or says except or but is checked as before */
 function kfLines(text,R){const items=[],marks=[];const T=String(text||'').replace(/\\n/g,'\n').replace(/[*_`]+/g,'');const forced=new Set();
  for(const raw of T.split('\n')){const l=raw.trim();if(!ri4IsF2024(l,/^(?:[-•]|\d+[.)])?\s*FORCED(?:\s*\(\s*Commitment\s+\d+\s*\))?\s*:/i))continue;if(knlNone2024(l))continue; /* pkgKNL */const m=l.match(KF_LINE);
   if(!m){const id=(l.match(/D\d+\s+vs\.?\s+C\d+/i)||['FORCED'])[0].replace(/\s+vs\.?\s+/i,' vs ');items.push({rule:'K-F',side:'BOTH',link:id,line:l.slice(0,600),why:'malformed'});

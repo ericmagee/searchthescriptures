@@ -8,7 +8,11 @@ const T=[ // [line, expected K-F count after, expected K-CMT after]
  ['FORCED: no link is graded forced.',0,0],['FORCED: nothing forced.',0,0],['FORCED: N/A',0,0],['FORCED: 0',0,0],
  ['FORCED: none -- but D2 vs C3 is forced',1,1],['FORCED: none; "a quote" FORCED',1,1],
  ['FORCED: D2 vs C3 -- MEANS [DR1]: "took unto him" -- ANSWER [CR1]: "nothing here" -- FAILS: "nope"',1,1],
- ['FORCED: D2 vs C3 is forced because the reading cannot fit',1,1],['FORCED: the D1 link',1,1]];
+ ['FORCED: D2 vs C3 is forced because the reading cannot fit',1,1],['FORCED: the D1 link',1,1],
+ // rev 2 (W1 3561): a none line that names a link or round, quotes, or says except/but is checked as before
+ ['FORCED: none, except LINK 3, which the challenger forced',1,1],['FORCED: none except D3 (the challenger forced it at [CR2])',1,1],['FORCED: no; the D2 link is forced by [CR3] ‘took unto him’',1,1],
+ ['FORCED: none of D1, D2 is forced',1,1],['FORCED: no forced link; D4 is CHALLENGER LINK BROKEN',1,1],['FORCED: none, but the challenger forced one link',1,1],
+ ['FORCED: none graded; Joseph’s link is answered',0,0],["FORCED: none graded; Joseph's link is answered",0,0]];
 let ok=0,bad=0;
 for(const [l,ef,ec] of T){const a=O.kfLines(l,R).items.length,b=N.kfLines(l,R).items.length,c0=O.kcmtLines2024(l).items.filter(x=>x.rule==='K-CMT').length,c1=N.kcmtLines2024(l).items.filter(x=>x.rule==='K-CMT').length;
  const pass=b===ef&&c1===ec;pass?ok++:bad++;console.log((pass?'OK  ':'FAIL')+' K-F '+a+'->'+b+' K-CMT '+c0+'->'+c1+'  '+l);}
