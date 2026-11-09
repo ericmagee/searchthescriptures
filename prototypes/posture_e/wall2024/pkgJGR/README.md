@@ -70,3 +70,20 @@ KWI rev 2 also changes Panel Build, Reserve Build and Accept Build, so the 8 JGR
 - Tests on this base (same env): on_KWI/test_JGR.txt 100 OK, 0 FAIL; on_KWI/test_JGR_bodies.txt 9 OK, 0 FAIL. Plan: on_KWI/plan_JGR_KWI.json.
 - Library: unchanged from the section above (pkgLIB_JGR_KWI, SL 15db65d8dc08, E4 5c3021cc9e65 / 9c46fdee804b).
 Write order: pkgKWI rev 2 in full, then fix_JGR.sql, the 8 nodes from on_KWI/patched, pkgLIB_JGR_KWI and its E4 heads.
+
+## Revision 3: mimo in qwen_flash's place (Eric 07:14Z 11-09, "we mimo as an alternate", after the qwen flash check failed, W4 3446): pkgJGR/mimo
+Build: `JGR_THIRD=mimo JGR_NODE_DIR=pkgKWI/patched JGR_NODE_OUT=pkgJGR/mimo/patched JGR_LIB_BASE=strip_KWI JGR_LIB_OUT=strip_JGR_MIMO JGR_PLAN_OUT=pkgJGR/mimo/plan_JGR_mimo.json node pkgJGR/build_JGR.cjs /mnt/project-files/wall2024/fetchback_live_s70.json`
+(without JGR_THIRD the build reproduces on_KWI and strip_JGR_KWI byte for byte; checked).
+- Model: OpenRouter xiaomi/mimo-v2.6-pro (model_config seat mimo api_model; /api/v1/models/xiaomi/mimo-v2.6-pro/endpoints read 11-09: 5 endpoints incl. Xiaomi, all support reasoning).
+  The engine already routes seat mimo through openrouter (JFAM mimo:'openrouter'; Panel/Reserve Build xiaomi/ branch: max_tokens max(64000,65536)=65536, no temperature).
+- n8n (bases = live s70; 4 nodes, fewer than qwen_flash because mimo is already in every family map and ENG_SEAT):
+  Init Seats 717ed6aebedc -> 21acedf61a53 (ORDER0 chatgpt, sol, mimo, qwen); Accept Build 2d5bb0d231e3 -> 956c8f2682fd (ORDER; __orc rule);
+  Panel Build 1589ccee3cc1 -> 97b002b854e7; Reserve Build 6fe983c85cf0 -> 3a1b147c0ba7 (__orc rule).
+- Rule (pkgPNL3's, narrowed to mimo): a body whose model is exactly xiaomi/mimo-v2.6-pro and that sets no reasoning gets reasoning {effort:'low'}.
+  Why: mimo was dropped as a judge 11-03 because its reserve calls spent the whole 65,536-token limit (32471, 32482); BB-5700 8a: thinking on did not answer in 900 s.
+- Library: Alternate Build, R2 Alternate Build get the same rule (strip_KWI -> strip_JGR_MIMO). Pack pkgLIB_JGR_MIMO: Shared Library f26dc10af647; E4 on s70: Alternate Build 70eccb840c00, Early Alternate Build 3770f7852805.
+- DB: fix_JGR.sql unchanged (still removes gemini and grok; mimo is already in the substitution list, and the alternates function accepts provider xiaomi with an xiaomi/ model, pkgMIM2).
+- test_JGR_mimo.cjs (mimo/test_JGR_mimo.txt): 108 OK, 0 FAIL. Every saved run: panel chatgpt, sol, mimo; single chatgpt; no reserve, no alternates;
+  Resolve Seats judges terra, sol, xiaomi/mimo-v2.6-pro (openrouter); Panel Build 33815/33828/33846 mimo body 65536 + effort low, terra/sol no reasoning; Accept Build asks chatgpt, sol, mimo.
+- Risks: mimo also debates; a debate where mimo is a debater gets a 2-judge panel (terra, sol), and with an OpenAI debater only mimo is left (as with qwen_flash). No saved run has mimo debating.
+  mimo's speed as a judge with effort low is unmeasured: W4's one off-run check call decides.

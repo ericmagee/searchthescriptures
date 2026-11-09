@@ -1,0 +1,110 @@
+OK 33218 (claude v opus) panel ["gemini","chatgpt","sol"] -> ["chatgpt","sol","mimo"]; single gemini -> chatgpt; reserve grok -> null; alt ["grok"] -> []
+OK 33218 Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter","mimo=xiaomi/mimo-v2.6-pro/openrouter"] reserve null alternates []
+OK 33218 Accept Build asks ["chatgpt","sol","mimo"]; mimo body model xiaomi/mimo-v2.6-pro reasoning {"effort":"low"}
+OK 33222 (claude v opus) panel ["gemini","chatgpt","sol"] -> ["chatgpt","sol","mimo"]; single gemini -> chatgpt; reserve grok -> null; alt ["grok"] -> []
+OK 33222 Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter","mimo=xiaomi/mimo-v2.6-pro/openrouter"] reserve null alternates []
+OK 33222 Accept Build asks ["chatgpt","sol","mimo"]; mimo body model xiaomi/mimo-v2.6-pro reasoning {"effort":"low"}
+OK 33249 (claude v opus) panel ["gemini","chatgpt","sol"] -> ["chatgpt","sol","mimo"]; single gemini -> chatgpt; reserve grok -> null; alt ["grok"] -> []
+OK 33249 Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter","mimo=xiaomi/mimo-v2.6-pro/openrouter"] reserve null alternates []
+OK 33249 Accept Build asks ["chatgpt","sol","mimo"]; mimo body model xiaomi/mimo-v2.6-pro reasoning {"effort":"low"}
+OK 33261 (claude v opus) panel ["gemini","chatgpt","sol"] -> ["chatgpt","sol","mimo"]; single gemini -> chatgpt; reserve grok -> null; alt ["grok"] -> []
+OK 33261 Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter","mimo=xiaomi/mimo-v2.6-pro/openrouter"] reserve null alternates []
+OK 33261 Accept Build asks ["chatgpt","sol","mimo"]; mimo body model xiaomi/mimo-v2.6-pro reasoning {"effort":"low"}
+OK 33276 patched Init Seats refuses (ORACLE_DEBATE_V1 Init refused: topic missing or empty. run_token=ODV1-33276-tv8k1x8l); base refuses too: ORACLE_DEBATE_V1 Init refused: topic missing or empty. run_token=ODV1-33276-091soq0u
+OK 33289 patched Init Seats refuses (ORACLE_DEBATE_V1 Init refused: topic missing or empty. run_token=ODV1-33289-221gacj1); base refuses too: ORACLE_DEBATE_V1 Init refused: topic missing or empty. run_token=ODV1-33289-l9rle7ub
+OK 33299 (claude v opus) panel ["gemini","chatgpt","sol"] -> ["chatgpt","sol","mimo"]; single gemini -> chatgpt; reserve grok -> null; alt ["grok"] -> []
+OK 33299 Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter","mimo=xiaomi/mimo-v2.6-pro/openrouter"] reserve null alternates []
+OK 33299 Accept Build asks ["chatgpt","sol","mimo"]; mimo body model xiaomi/mimo-v2.6-pro reasoning {"effort":"low"}
+OK 33311 patched Init Seats refuses (ORACLE_DEBATE_V1 Init refused: topic missing or empty. run_token=ODV1-33311-rqpjahhm); base refuses too: ORACLE_DEBATE_V1 Init refused: topic missing or empty. run_token=ODV1-33311-dhx6x0s2
+OK 33322 patched Init Seats refuses (ORACLE_DEBATE_V1 Init refused: topic missing or empty. run_token=ODV1-33322-gixlteps); base refuses too: ORACLE_DEBATE_V1 Init refused: topic missing or empty. run_token=ODV1-33322-d58r3x90
+OK 33345 (claude v opus) panel ["gemini","chatgpt","sol"] -> ["chatgpt","sol","mimo"]; single gemini -> chatgpt; reserve grok -> null; alt ["grok"] -> []
+OK 33345 Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter","mimo=xiaomi/mimo-v2.6-pro/openrouter"] reserve null alternates []
+OK 33345 Accept Build asks ["chatgpt","sol","mimo"]; mimo body model xiaomi/mimo-v2.6-pro reasoning {"effort":"low"}
+OK 33371 (claude v opus) panel ["gemini","chatgpt","sol"] -> ["chatgpt","sol","mimo"]; single gemini -> chatgpt; reserve grok -> null; alt ["grok"] -> []
+OK 33371 Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter","mimo=xiaomi/mimo-v2.6-pro/openrouter"] reserve null alternates []
+OK 33371 Accept Build asks ["chatgpt","sol","mimo"]; mimo body model xiaomi/mimo-v2.6-pro reasoning {"effort":"low"}
+OK 33389 (claude v opus) panel ["gemini","chatgpt","sol"] -> ["chatgpt","sol","mimo"]; single gemini -> chatgpt; reserve grok -> null; alt ["grok"] -> []
+OK 33389 Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter","mimo=xiaomi/mimo-v2.6-pro/openrouter"] reserve null alternates []
+OK 33389 Accept Build asks ["chatgpt","sol","mimo"]; mimo body model xiaomi/mimo-v2.6-pro reasoning {"effort":"low"}
+OK 33411 (claude v opus) panel ["gemini","chatgpt","sol"] -> ["chatgpt","sol","mimo"]; single gemini -> chatgpt; reserve grok -> null; alt ["grok"] -> []
+OK 33411 Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter","mimo=xiaomi/mimo-v2.6-pro/openrouter"] reserve null alternates []
+OK 33411 Accept Build asks ["chatgpt","sol","mimo"]; mimo body model xiaomi/mimo-v2.6-pro reasoning {"effort":"low"}
+OK 33430 (claude v opus) panel ["gemini","chatgpt","sol"] -> ["chatgpt","sol","mimo"]; single gemini -> chatgpt; reserve grok -> null; alt ["grok"] -> []
+OK 33430 Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter","mimo=xiaomi/mimo-v2.6-pro/openrouter"] reserve null alternates []
+OK 33430 Accept Build asks ["chatgpt","sol","mimo"]; mimo body model xiaomi/mimo-v2.6-pro reasoning {"effort":"low"}
+OK 33442 (claude v opus) panel ["gemini","chatgpt","sol"] -> ["chatgpt","sol","mimo"]; single gemini -> chatgpt; reserve grok -> null; alt ["grok"] -> []
+OK 33442 Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter","mimo=xiaomi/mimo-v2.6-pro/openrouter"] reserve null alternates []
+OK 33442 Accept Build asks ["chatgpt","sol","mimo"]; mimo body model xiaomi/mimo-v2.6-pro reasoning {"effort":"low"}
+OK 33461 (claude v opus) panel ["gemini","chatgpt","sol"] -> ["chatgpt","sol","mimo"]; single gemini -> chatgpt; reserve grok -> null; alt ["grok"] -> []
+OK 33461 Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter","mimo=xiaomi/mimo-v2.6-pro/openrouter"] reserve null alternates []
+OK 33461 Accept Build asks ["chatgpt","sol","mimo"]; mimo body model xiaomi/mimo-v2.6-pro reasoning {"effort":"low"}
+OK 33482 (claude v opus) panel ["gemini","chatgpt","sol"] -> ["chatgpt","sol","mimo"]; single gemini -> chatgpt; reserve grok -> null; alt ["grok"] -> []
+OK 33482 Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter","mimo=xiaomi/mimo-v2.6-pro/openrouter"] reserve null alternates []
+OK 33482 Accept Build asks ["chatgpt","sol","mimo"]; mimo body model xiaomi/mimo-v2.6-pro reasoning {"effort":"low"}
+OK 33490 (claude v opus) panel ["gemini","chatgpt","sol"] -> ["chatgpt","sol","mimo"]; single gemini -> chatgpt; reserve grok -> null; alt ["grok"] -> []
+OK 33490 Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter","mimo=xiaomi/mimo-v2.6-pro/openrouter"] reserve null alternates []
+OK 33490 Accept Build asks ["chatgpt","sol","mimo"]; mimo body model xiaomi/mimo-v2.6-pro reasoning {"effort":"low"}
+OK 33497 (claude v opus) panel ["gemini","chatgpt","grok"] -> ["chatgpt","mimo","sol"]; single gemini -> chatgpt; reserve null -> null; alt ["sol"] -> []
+OK 33497 Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","mimo=xiaomi/mimo-v2.6-pro/openrouter","sol=openai/gpt-6.1-sol/openrouter"] reserve null alternates []
+OK 33497 Accept Build asks ["chatgpt","sol","mimo"]; mimo body model xiaomi/mimo-v2.6-pro reasoning {"effort":"low"}
+OK 33506 (claude v opus) panel ["gemini","chatgpt","grok"] -> ["chatgpt","mimo","sol"]; single gemini -> chatgpt; reserve null -> null; alt ["sol"] -> []
+OK 33506 Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","mimo=xiaomi/mimo-v2.6-pro/openrouter","sol=openai/gpt-6.1-sol/openrouter"] reserve null alternates []
+OK 33506 Accept Build asks ["chatgpt","sol","mimo"]; mimo body model xiaomi/mimo-v2.6-pro reasoning {"effort":"low"}
+OK 33530 (claude v opus) panel ["gemini","chatgpt","grok"] -> ["chatgpt","mimo","sol"]; single gemini -> chatgpt; reserve null -> null; alt ["sol"] -> []
+OK 33530 Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","mimo=xiaomi/mimo-v2.6-pro/openrouter","sol=openai/gpt-6.1-sol/openrouter"] reserve null alternates []
+OK 33530 Accept Build asks ["chatgpt","sol","mimo"]; mimo body model xiaomi/mimo-v2.6-pro reasoning {"effort":"low"}
+OK 33575 (claude v opus) panel ["gemini","chatgpt","grok"] -> ["chatgpt","mimo","sol"]; single gemini -> chatgpt; reserve null -> null; alt ["sol"] -> []
+OK 33575 Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","mimo=xiaomi/mimo-v2.6-pro/openrouter","sol=openai/gpt-6.1-sol/openrouter"] reserve null alternates []
+OK 33575 Accept Build asks ["chatgpt","sol","mimo"]; mimo body model xiaomi/mimo-v2.6-pro reasoning {"effort":"low"}
+OK 33592 (claude v opus) panel ["gemini","chatgpt","grok"] -> ["chatgpt","mimo","sol"]; single gemini -> chatgpt; reserve null -> null; alt ["sol"] -> []
+OK 33592 Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","mimo=xiaomi/mimo-v2.6-pro/openrouter","sol=openai/gpt-6.1-sol/openrouter"] reserve null alternates []
+OK 33592 Accept Build asks ["chatgpt","sol","mimo"]; mimo body model xiaomi/mimo-v2.6-pro reasoning {"effort":"low"}
+OK 33605 (claude v opus) panel ["gemini","chatgpt","grok"] -> ["chatgpt","mimo","sol"]; single gemini -> chatgpt; reserve null -> null; alt ["sol"] -> []
+OK 33605 Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","mimo=xiaomi/mimo-v2.6-pro/openrouter","sol=openai/gpt-6.1-sol/openrouter"] reserve null alternates []
+OK 33605 Accept Build asks ["chatgpt","sol","mimo"]; mimo body model xiaomi/mimo-v2.6-pro reasoning {"effort":"low"}
+OK 33617 (claude v opus) panel ["gemini","chatgpt","grok"] -> ["chatgpt","mimo","sol"]; single gemini -> chatgpt; reserve null -> null; alt ["sol"] -> []
+OK 33617 Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","mimo=xiaomi/mimo-v2.6-pro/openrouter","sol=openai/gpt-6.1-sol/openrouter"] reserve null alternates []
+OK 33617 Accept Build asks ["chatgpt","sol","mimo"]; mimo body model xiaomi/mimo-v2.6-pro reasoning {"effort":"low"}
+OK 33627 (claude v opus) panel ["gemini","chatgpt","grok"] -> ["chatgpt","mimo","sol"]; single gemini -> chatgpt; reserve null -> null; alt ["sol"] -> []
+OK 33627 Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","mimo=xiaomi/mimo-v2.6-pro/openrouter","sol=openai/gpt-6.1-sol/openrouter"] reserve null alternates []
+OK 33627 Accept Build asks ["chatgpt","sol","mimo"]; mimo body model xiaomi/mimo-v2.6-pro reasoning {"effort":"low"}
+OK 33644 (claude v opus) panel ["gemini","chatgpt","grok"] -> ["chatgpt","mimo","sol"]; single gemini -> chatgpt; reserve null -> null; alt ["sol"] -> []
+OK 33644 Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","mimo=xiaomi/mimo-v2.6-pro/openrouter","sol=openai/gpt-6.1-sol/openrouter"] reserve null alternates []
+OK 33644 Accept Build asks ["chatgpt","sol","mimo"]; mimo body model xiaomi/mimo-v2.6-pro reasoning {"effort":"low"}
+OK 33682 (claude v opus) panel ["gemini","chatgpt","grok"] -> ["chatgpt","mimo","sol"]; single gemini -> chatgpt; reserve null -> null; alt ["sol"] -> []
+OK 33682 Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","mimo=xiaomi/mimo-v2.6-pro/openrouter","sol=openai/gpt-6.1-sol/openrouter"] reserve null alternates []
+OK 33682 Accept Build asks ["chatgpt","sol","mimo"]; mimo body model xiaomi/mimo-v2.6-pro reasoning {"effort":"low"}
+OK 33705 (claude v opus) panel ["gemini","chatgpt","grok"] -> ["chatgpt","mimo","sol"]; single gemini -> chatgpt; reserve null -> null; alt ["sol"] -> []
+OK 33705 Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","mimo=xiaomi/mimo-v2.6-pro/openrouter","sol=openai/gpt-6.1-sol/openrouter"] reserve null alternates []
+OK 33705 Accept Build asks ["chatgpt","sol","mimo"]; mimo body model xiaomi/mimo-v2.6-pro reasoning {"effort":"low"}
+OK 33731 (claude v opus) panel ["gemini","chatgpt","grok"] -> ["chatgpt","mimo","sol"]; single gemini -> chatgpt; reserve null -> null; alt ["sol"] -> []
+OK 33731 Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","mimo=xiaomi/mimo-v2.6-pro/openrouter","sol=openai/gpt-6.1-sol/openrouter"] reserve null alternates []
+OK 33731 Accept Build asks ["chatgpt","sol","mimo"]; mimo body model xiaomi/mimo-v2.6-pro reasoning {"effort":"low"}
+OK 33750 (claude v opus) panel ["gemini","chatgpt","grok"] -> ["chatgpt","mimo","sol"]; single gemini -> chatgpt; reserve null -> null; alt ["sol"] -> []
+OK 33750 Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","mimo=xiaomi/mimo-v2.6-pro/openrouter","sol=openai/gpt-6.1-sol/openrouter"] reserve null alternates []
+OK 33750 Accept Build asks ["chatgpt","sol","mimo"]; mimo body model xiaomi/mimo-v2.6-pro reasoning {"effort":"low"}
+OK 33774 (claude v opus) panel ["gemini","chatgpt","grok"] -> ["chatgpt","mimo","sol"]; single gemini -> chatgpt; reserve null -> null; alt ["sol"] -> []
+OK 33774 Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","mimo=xiaomi/mimo-v2.6-pro/openrouter","sol=openai/gpt-6.1-sol/openrouter"] reserve null alternates []
+OK 33774 Accept Build asks ["chatgpt","sol","mimo"]; mimo body model xiaomi/mimo-v2.6-pro reasoning {"effort":"low"}
+OK 33798 (claude v opus) panel ["gemini","chatgpt","grok"] -> ["chatgpt","mimo","sol"]; single gemini -> chatgpt; reserve null -> null; alt ["sol"] -> []
+OK 33798 Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","mimo=xiaomi/mimo-v2.6-pro/openrouter","sol=openai/gpt-6.1-sol/openrouter"] reserve null alternates []
+OK 33798 Accept Build asks ["chatgpt","sol","mimo"]; mimo body model xiaomi/mimo-v2.6-pro reasoning {"effort":"low"}
+OK 33815 (claude v opus) panel ["gemini","grok","chatgpt"] -> ["mimo","chatgpt","sol"]; single gemini -> chatgpt; reserve null -> null; alt ["sol"] -> []
+OK 33815 Resolve Seats judges ["mimo=xiaomi/mimo-v2.6-pro/openrouter","chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter"] reserve null alternates []
+OK 33815 Accept Build asks ["chatgpt","sol","mimo"]; mimo body model xiaomi/mimo-v2.6-pro reasoning {"effort":"low"}
+OK 33828 (claude v opus) panel ["gemini","grok","chatgpt"] -> ["mimo","chatgpt","sol"]; single gemini -> chatgpt; reserve null -> null; alt ["sol"] -> []
+OK 33828 Resolve Seats judges ["mimo=xiaomi/mimo-v2.6-pro/openrouter","chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter"] reserve null alternates []
+OK 33828 Accept Build asks ["chatgpt","sol","mimo"]; mimo body model xiaomi/mimo-v2.6-pro reasoning {"effort":"low"}
+OK 33846 (claude v opus) panel ["gemini","grok","chatgpt"] -> ["mimo","chatgpt","sol"]; single gemini -> chatgpt; reserve null -> null; alt ["sol"] -> []
+OK 33846 Resolve Seats judges ["mimo=xiaomi/mimo-v2.6-pro/openrouter","chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter"] reserve null alternates []
+OK 33846 Accept Build asks ["chatgpt","sol","mimo"]; mimo body model xiaomi/mimo-v2.6-pro reasoning {"effort":"low"}
+OK 33815 Panel Build: 1 mimo body(ies) [{"max_tokens":65536,"reasoning":{"effort":"low"}}]; other bodies ["openai/gpt-6.1-terra","openai/gpt-6.1-sol"]
+OK 33828 Panel Build: 1 mimo body(ies) [{"max_tokens":65536,"reasoning":{"effort":"low"}}]; other bodies ["openai/gpt-6.1-terra","openai/gpt-6.1-sol"]
+OK 33846 Panel Build: 1 mimo body(ies) [{"max_tokens":65536,"reasoning":{"effort":"low"}}]; other bodies ["openai/gpt-6.1-terra","openai/gpt-6.1-sol"]
+OK __orc: xiaomi/mimo-v2.6-pro gets effort low; qwen flash and terra get nothing; a set reasoning is kept
+OK Panel Build: only the mimo rule is added, once
+OK Reserve Build: only the mimo rule is added, once
+OK library Alternate_Build.js: only the mimo rule line is added, once
+OK library R2_Alternate_Build.js: only the mimo rule line is added, once
+runs where mimo debates (panel of 2): 0
+TOTAL 108 OK, 0 FAIL

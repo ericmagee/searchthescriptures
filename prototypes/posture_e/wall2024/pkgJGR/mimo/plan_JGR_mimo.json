@@ -1,0 +1,38 @@
+{
+ "base": "/mnt/project-files/wall2024/fetchback_live_s70.json",
+ "nodes": {
+  "Init Seats": {
+   "before": "717ed6aebedc",
+   "after": "21acedf61a53",
+   "edits": 1
+  },
+  "Accept Build": {
+   "before": "2d5bb0d231e3",
+   "after": "956c8f2682fd",
+   "edits": 2
+  },
+  "Panel Build": {
+   "before": "1589ccee3cc1",
+   "after": "97b002b854e7",
+   "edits": 1
+  },
+  "Reserve Build": {
+   "before": "6fe983c85cf0",
+   "after": "3a1b147c0ba7",
+   "edits": 1
+  }
+ },
+ "library": {
+  "base": "pkgLIB/strip_KWI/patched/",
+  "nodes": {
+   "Alternate_Build.js": {
+    "before": "36c3e8582f50",
+    "after": "198046fb1052"
+   },
+   "R2_Alternate_Build.js": {
+    "before": "8b520f4c8b0c",
+    "after": "1aa395cc3eab"
+   }
+  }
+ }
+}
