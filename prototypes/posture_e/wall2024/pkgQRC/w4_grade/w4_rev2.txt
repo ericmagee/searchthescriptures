@@ -1,0 +1,17 @@
+round lengths {
+  topic: 5,
+  cr1: 7772,
+  cr2: 13138,
+  cr3: 22404,
+  cr4: 17631,
+  gr1: 19337,
+  gr2: 25957,
+  dr3: 24600,
+  dr4: 17544
+}
+OK   R1 8 empty forms on an ordinary question: faults and retry equal to live
+OK   R2 the 34108 contradiction question still passes
+OK   R3 a real earlier quote with a blank earlier round is still checked and refused: earlier round "" is not one of that debater's earlier rounds
+OK   R4 CR4 question with earlier round CR3 but quote "none": still checked and refused: earlier quotation missing or under 8 characters
+OK   R5 invented earlier quote still refused
+5 OK, 0 FAIL
