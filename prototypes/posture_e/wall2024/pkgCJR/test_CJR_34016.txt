@@ -1,0 +1,60 @@
+live s75: 17 Haiku items, cured 0
+   K-F | FORCED | UNCURED | no written response
+   K-W | DEFENDER CR2 no link heading #1 | UNCURED | no written response
+   K-W | DEFENDER CR2 D2 #2 | UNCURED | no written response
+   K-W | DEFENDER CR2 D3 #3 | UNCURED | no written response
+   K-W | DEFENDER CR2 D5 #4 | UNCURED | no written response
+   K-W | DEFENDER CR2 D7 #5 | UNCURED | no written response
+   K-W | DEFENDER CR3 LINK 6 #6 | UNCURED | no written response
+   K-W | DEFENDER CR3 LINK 1 #7 | UNCURED | no written response
+   K-W | DEFENDER CR3 LINK 1 #8 | UNCURED | no written response
+   K-W | DEFENDER CR3 LINK 5 #9 | UNCURED | no written response
+   K-W | DEFENDER CR4 D6 #10 | UNCURED | no written response
+   K-W | CHALLENGER DR3 LINK 1 #2 | UNCURED | no written response
+   K-W | CHALLENGER DR3 LINK 3 #3 | UNCURED | no written response
+   K-CMT | contested grades without a commitment | UNCURED | no written response
+   K-CMTL | line 1 | UNCURED | TRIAL rule, NO WRITTEN RESPONSE: counts in drv_uncured like a LIVE item (silence count): n
+   K-RUL | DEFENDER premise 4 | UNCURED | TRIAL rule, NO WRITTEN RESPONSE: counts in drv_uncured like a LIVE item (silence count): n
+   K-RUL | keystone | UNCURED | TRIAL rule, NO WRITTEN RESPONSE: counts in drv_uncured like a LIVE item (silence count): n
+pkgCJR: 17 Haiku items, cured 7
+   K-F | FORCED | UNCURED | no written response
+   K-W | DEFENDER CR2 no link heading #1 | UNCURED | neither the RESPONSE nor the STATEMENT line says STANDS WITHOUT IT because <layer> with an
+   K-W | DEFENDER CR2 D2 #2 | CURED | answered: the link is conceded
+   K-W | DEFENDER CR2 D3 #3 | UNCURED | neither the RESPONSE nor the STATEMENT line says STANDS WITHOUT IT because <layer> with an
+   K-W | DEFENDER CR2 D5 #4 | UNCURED | neither the RESPONSE nor the STATEMENT line says STANDS WITHOUT IT because <layer> with an
+   K-W | DEFENDER CR2 D7 #5 | CURED | answered: the link is conceded
+   K-W | DEFENDER CR3 LINK 6 #6 | UNCURED | neither the RESPONSE nor the STATEMENT line says STANDS WITHOUT IT because <layer> with an
+   K-W | DEFENDER CR3 LINK 1 #7 | CURED | answered: the link is conceded
+   K-W | DEFENDER CR3 LINK 1 #8 | UNCURED | neither the RESPONSE nor the STATEMENT line says STANDS WITHOUT IT because <layer> with an
+   K-W | DEFENDER CR3 LINK 5 #9 | CURED | answered: NOT HELD, with a reason that quotes the flagged sentence (pkgKW)
+   K-W | DEFENDER CR4 D6 #10 | CURED | answered: NOT HELD, with a reason that quotes the flagged sentence (pkgKW)
+   K-W | CHALLENGER DR3 LINK 1 #2 | UNCURED | neither the RESPONSE nor the STATEMENT line says STANDS WITHOUT IT because <layer> with an
+   K-W | CHALLENGER DR3 LINK 3 #3 | UNCURED | neither the RESPONSE nor the STATEMENT line says STANDS WITHOUT IT because <layer> with an
+   K-CMT | contested grades without a commitment | CURED | the response names the commitment, or NOT A GRADE
+   K-CMTL | line 1 | CURED | TRIAL rule (recorded and answered
+   K-RUL | DEFENDER premise 4 | UNCURED | TRIAL rule (recorded and answered
+   K-RUL | keystone | UNCURED | TRIAL rule (recorded and answered
+OK   live s75 reproduces the run: 17 Haiku items, none cured
+OK   pkgCJR: every Haiku RESPONSE is read; only K-F FORCED (raised on "FORCED: none graded.", removed upstream by pkgKNL) has none
+OK   pkgCJR: 7 items cure (K-W #2, #5, #7 conceded; K-W #9, #10 NOT HELD quoting the sentence; K-CMT; K-CMTL line 1)
+OK   pkgCJR: 7 K-W items read and still uncured on content: NOT HELD with a reason that does not quote the flagged sentence (a judge form failure, W3 to rule)
+pkgKNL + pkgCJR: 17 Haiku items, cured 7
+   K-F | FORCED | UNCURED | no written response
+   K-W | DEFENDER CR2 no link heading #1 | UNCURED | neither the RESPONSE nor the STATEMENT line says STANDS WITHOUT IT because <layer> with an
+   K-W | DEFENDER CR2 D2 #2 | CURED | answered: the link is conceded
+   K-W | DEFENDER CR2 D3 #3 | UNCURED | neither the RESPONSE nor the STATEMENT line says STANDS WITHOUT IT because <layer> with an
+   K-W | DEFENDER CR2 D5 #4 | UNCURED | neither the RESPONSE nor the STATEMENT line says STANDS WITHOUT IT because <layer> with an
+   K-W | DEFENDER CR2 D7 #5 | CURED | answered: the link is conceded
+   K-W | DEFENDER CR3 LINK 6 #6 | UNCURED | neither the RESPONSE nor the STATEMENT line says STANDS WITHOUT IT because <layer> with an
+   K-W | DEFENDER CR3 LINK 1 #7 | CURED | answered: the link is conceded
+   K-W | DEFENDER CR3 LINK 1 #8 | UNCURED | neither the RESPONSE nor the STATEMENT line says STANDS WITHOUT IT because <layer> with an
+   K-W | DEFENDER CR3 LINK 5 #9 | CURED | answered: NOT HELD, with a reason that quotes the flagged sentence (pkgKW)
+   K-W | DEFENDER CR4 D6 #10 | CURED | answered: NOT HELD, with a reason that quotes the flagged sentence (pkgKW)
+   K-W | CHALLENGER DR3 LINK 1 #2 | UNCURED | neither the RESPONSE nor the STATEMENT line says STANDS WITHOUT IT because <layer> with an
+   K-W | CHALLENGER DR3 LINK 3 #3 | UNCURED | neither the RESPONSE nor the STATEMENT line says STANDS WITHOUT IT because <layer> with an
+   K-CMT | contested grades without a commitment | CURED | the response names the commitment, or NOT A GRADE
+   K-CMTL | line 1 | CURED | TRIAL rule (recorded and answered
+   K-RUL | DEFENDER premise 4 | UNCURED | TRIAL rule (recorded and answered
+   K-RUL | keystone | UNCURED | TRIAL rule (recorded and answered
+OK   pkgKNL + pkgCJR: the same at this node (the K-F and K-CMT items are raised upstream; probe_KNL covers them)
+TOTAL 5 OK, 0 FAIL

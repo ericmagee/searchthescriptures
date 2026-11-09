@@ -1,0 +1,8 @@
+OK   the Haiku-shaped reply is not valid JSON (unescaped quotation marks), as row 27957
+OK   invalid JSON reply: RESPONSE lines read 0 -> 5 (K-W DEFENDER CR2 no link heading #1 ; K-W DEFENDER CR2 D2 #2 ; K-W CHALLENGER DR3 LINK 3 #3 ; K-CMTL line 1 ; K-RUL keystone)
+OK   the escaped quotation marks inside a line read as plain quotation marks
+OK   valid JSON reply: read the same before and after (5 RESPONSE lines)
+OK   plain text reply: unchanged
+OK   invalid JSON with no \n escapes: unchanged
+OK   saved cure call replies: 122 read, 122 read the same
+TOTAL 7 OK, 0 FAIL
