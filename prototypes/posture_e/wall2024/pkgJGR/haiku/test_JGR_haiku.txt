@@ -1,0 +1,162 @@
+OK 33218 [saved] (claude v opus) panel ["chatgpt","sol","luna"] single chatgpt reserve haiku alt ["haiku"]
+FAIL 33218 [saved] Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter","luna=openai/gpt-6-luna/openrouter"] reserve null
+OK 33218 [saved] Accept Build asks ["chatgpt","sol","luna","haiku"]
+OK 33218 [haiku debates] (haiku v opus) panel ["chatgpt","sol","luna"] single chatgpt reserve null alt []
+OK 33218 [haiku debates] Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter","luna=openai/gpt-6-luna/openrouter"] reserve null
+OK 33222 [saved] (claude v opus) panel ["chatgpt","sol","luna"] single chatgpt reserve haiku alt ["haiku"]
+FAIL 33222 [saved] Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter","luna=openai/gpt-6-luna/openrouter"] reserve null
+OK 33222 [saved] Accept Build asks ["chatgpt","sol","luna","haiku"]
+OK 33222 [haiku debates] (haiku v opus) panel ["chatgpt","sol","luna"] single chatgpt reserve null alt []
+OK 33222 [haiku debates] Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter","luna=openai/gpt-6-luna/openrouter"] reserve null
+OK 33249 [saved] (claude v opus) panel ["chatgpt","sol","luna"] single chatgpt reserve haiku alt ["haiku"]
+FAIL 33249 [saved] Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter","luna=openai/gpt-6-luna/openrouter"] reserve null
+OK 33249 [saved] Accept Build asks ["chatgpt","sol","luna","haiku"]
+OK 33249 [haiku debates] (haiku v opus) panel ["chatgpt","sol","luna"] single chatgpt reserve null alt []
+OK 33249 [haiku debates] Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter","luna=openai/gpt-6-luna/openrouter"] reserve null
+OK 33261 [saved] (claude v opus) panel ["chatgpt","sol","luna"] single chatgpt reserve haiku alt ["haiku"]
+FAIL 33261 [saved] Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter","luna=openai/gpt-6-luna/openrouter"] reserve null
+OK 33261 [saved] Accept Build asks ["chatgpt","sol","luna","haiku"]
+OK 33261 [haiku debates] (haiku v opus) panel ["chatgpt","sol","luna"] single chatgpt reserve null alt []
+OK 33261 [haiku debates] Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter","luna=openai/gpt-6-luna/openrouter"] reserve null
+OK 33276 [saved] Init Seats refuses, as live does: ORACLE_DEBATE_V1 Init refused: topic missing or empty. run_token=ODV1-33276-sdx7xvg9
+OK 33276 [haiku debates]: input has no seats (live refuses it too), skipped
+OK 33289 [saved] Init Seats refuses, as live does: ORACLE_DEBATE_V1 Init refused: topic missing or empty. run_token=ODV1-33289-6ox7l8er
+OK 33289 [haiku debates]: input has no seats (live refuses it too), skipped
+OK 33299 [saved] (claude v opus) panel ["chatgpt","sol","luna"] single chatgpt reserve haiku alt ["haiku"]
+FAIL 33299 [saved] Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter","luna=openai/gpt-6-luna/openrouter"] reserve null
+OK 33299 [saved] Accept Build asks ["chatgpt","sol","luna","haiku"]
+OK 33299 [haiku debates] (haiku v opus) panel ["chatgpt","sol","luna"] single chatgpt reserve null alt []
+OK 33299 [haiku debates] Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter","luna=openai/gpt-6-luna/openrouter"] reserve null
+OK 33311 [saved] Init Seats refuses, as live does: ORACLE_DEBATE_V1 Init refused: topic missing or empty. run_token=ODV1-33311-tpolvlka
+OK 33311 [haiku debates]: input has no seats (live refuses it too), skipped
+OK 33322 [saved] Init Seats refuses, as live does: ORACLE_DEBATE_V1 Init refused: topic missing or empty. run_token=ODV1-33322-7y7c6p8k
+OK 33322 [haiku debates]: input has no seats (live refuses it too), skipped
+OK 33345 [saved] (claude v opus) panel ["chatgpt","sol","luna"] single chatgpt reserve haiku alt ["haiku"]
+FAIL 33345 [saved] Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter","luna=openai/gpt-6-luna/openrouter"] reserve null
+OK 33345 [saved] Accept Build asks ["chatgpt","sol","luna","haiku"]
+OK 33345 [haiku debates] (haiku v opus) panel ["chatgpt","sol","luna"] single chatgpt reserve null alt []
+OK 33345 [haiku debates] Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter","luna=openai/gpt-6-luna/openrouter"] reserve null
+OK 33371 [saved] (claude v opus) panel ["chatgpt","sol","luna"] single chatgpt reserve haiku alt ["haiku"]
+FAIL 33371 [saved] Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter","luna=openai/gpt-6-luna/openrouter"] reserve null
+OK 33371 [saved] Accept Build asks ["chatgpt","sol","luna","haiku"]
+OK 33371 [haiku debates] (haiku v opus) panel ["chatgpt","sol","luna"] single chatgpt reserve null alt []
+OK 33371 [haiku debates] Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter","luna=openai/gpt-6-luna/openrouter"] reserve null
+OK 33389 [saved] (claude v opus) panel ["chatgpt","sol","luna"] single chatgpt reserve haiku alt ["haiku"]
+FAIL 33389 [saved] Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter","luna=openai/gpt-6-luna/openrouter"] reserve null
+OK 33389 [saved] Accept Build asks ["chatgpt","sol","luna","haiku"]
+OK 33389 [haiku debates] (haiku v opus) panel ["chatgpt","sol","luna"] single chatgpt reserve null alt []
+OK 33389 [haiku debates] Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter","luna=openai/gpt-6-luna/openrouter"] reserve null
+OK 33411 [saved] (claude v opus) panel ["chatgpt","sol","luna"] single chatgpt reserve haiku alt ["haiku"]
+FAIL 33411 [saved] Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter","luna=openai/gpt-6-luna/openrouter"] reserve null
+OK 33411 [saved] Accept Build asks ["chatgpt","sol","luna","haiku"]
+OK 33411 [haiku debates] (haiku v opus) panel ["chatgpt","sol","luna"] single chatgpt reserve null alt []
+OK 33411 [haiku debates] Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter","luna=openai/gpt-6-luna/openrouter"] reserve null
+OK 33430 [saved] (claude v opus) panel ["chatgpt","sol","luna"] single chatgpt reserve haiku alt ["haiku"]
+FAIL 33430 [saved] Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter","luna=openai/gpt-6-luna/openrouter"] reserve null
+OK 33430 [saved] Accept Build asks ["chatgpt","sol","luna","haiku"]
+OK 33430 [haiku debates] (haiku v opus) panel ["chatgpt","sol","luna"] single chatgpt reserve null alt []
+OK 33430 [haiku debates] Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter","luna=openai/gpt-6-luna/openrouter"] reserve null
+OK 33442 [saved] (claude v opus) panel ["chatgpt","sol","luna"] single chatgpt reserve haiku alt ["haiku"]
+FAIL 33442 [saved] Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter","luna=openai/gpt-6-luna/openrouter"] reserve null
+OK 33442 [saved] Accept Build asks ["chatgpt","sol","luna","haiku"]
+OK 33442 [haiku debates] (haiku v opus) panel ["chatgpt","sol","luna"] single chatgpt reserve null alt []
+OK 33442 [haiku debates] Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter","luna=openai/gpt-6-luna/openrouter"] reserve null
+OK 33461 [saved] (claude v opus) panel ["chatgpt","sol","luna"] single chatgpt reserve haiku alt ["haiku"]
+FAIL 33461 [saved] Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter","luna=openai/gpt-6-luna/openrouter"] reserve null
+OK 33461 [saved] Accept Build asks ["chatgpt","sol","luna","haiku"]
+OK 33461 [haiku debates] (haiku v opus) panel ["chatgpt","sol","luna"] single chatgpt reserve null alt []
+OK 33461 [haiku debates] Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter","luna=openai/gpt-6-luna/openrouter"] reserve null
+OK 33482 [saved] (claude v opus) panel ["chatgpt","sol","luna"] single chatgpt reserve haiku alt ["haiku"]
+FAIL 33482 [saved] Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter","luna=openai/gpt-6-luna/openrouter"] reserve null
+OK 33482 [saved] Accept Build asks ["chatgpt","sol","luna","haiku"]
+OK 33482 [haiku debates] (haiku v opus) panel ["chatgpt","sol","luna"] single chatgpt reserve null alt []
+OK 33482 [haiku debates] Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter","luna=openai/gpt-6-luna/openrouter"] reserve null
+OK 33490 [saved] (claude v opus) panel ["chatgpt","sol","luna"] single chatgpt reserve haiku alt ["haiku"]
+FAIL 33490 [saved] Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter","luna=openai/gpt-6-luna/openrouter"] reserve null
+OK 33490 [saved] Accept Build asks ["chatgpt","sol","luna","haiku"]
+OK 33490 [haiku debates] (haiku v opus) panel ["chatgpt","sol","luna"] single chatgpt reserve null alt []
+OK 33490 [haiku debates] Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter","luna=openai/gpt-6-luna/openrouter"] reserve null
+OK 33497 [saved] (claude v opus) panel ["chatgpt","luna","haiku"] single chatgpt reserve null alt ["sol"]
+FAIL 33497 [saved] Resolve Seats threw ORACLE_DEBATE_V1 Resolve refused: judge seat "haiku" is of family anthropic, which debates in this debate (BB-6993). run_token=ODV1-33497-sx
+OK 33497 [haiku debates] (haiku v opus) panel ["chatgpt","luna","sol"] single chatgpt reserve null alt []
+OK 33497 [haiku debates] Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","luna=openai/gpt-6-luna/openrouter","sol=openai/gpt-6.1-sol/openrouter"] reserve null
+OK 33506 [saved] (claude v opus) panel ["chatgpt","luna","haiku"] single chatgpt reserve null alt ["sol"]
+FAIL 33506 [saved] Resolve Seats threw ORACLE_DEBATE_V1 Resolve refused: judge seat "haiku" is of family anthropic, which debates in this debate (BB-6993). run_token=ODV1-33506-0e
+OK 33506 [haiku debates] (haiku v opus) panel ["chatgpt","luna","sol"] single chatgpt reserve null alt []
+OK 33506 [haiku debates] Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","luna=openai/gpt-6-luna/openrouter","sol=openai/gpt-6.1-sol/openrouter"] reserve null
+OK 33530 [saved] (claude v opus) panel ["chatgpt","luna","haiku"] single chatgpt reserve null alt ["sol"]
+FAIL 33530 [saved] Resolve Seats threw ORACLE_DEBATE_V1 Resolve refused: judge seat "haiku" is of family anthropic, which debates in this debate (BB-6993). run_token=ODV1-33530-sk
+OK 33530 [haiku debates] (haiku v opus) panel ["chatgpt","luna","sol"] single chatgpt reserve null alt []
+OK 33530 [haiku debates] Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","luna=openai/gpt-6-luna/openrouter","sol=openai/gpt-6.1-sol/openrouter"] reserve null
+OK 33530 [haiku debates] Panel Build bodies ["openai/gpt-6.1-terra","openai/gpt-6-luna","openai/gpt-6.1-sol"]
+OK 33575 [saved] (claude v opus) panel ["chatgpt","luna","haiku"] single chatgpt reserve null alt ["sol"]
+FAIL 33575 [saved] Resolve Seats threw ORACLE_DEBATE_V1 Resolve refused: judge seat "haiku" is of family anthropic, which debates in this debate (BB-6993). run_token=ODV1-33575-rh
+OK 33575 [haiku debates] (haiku v opus) panel ["chatgpt","luna","sol"] single chatgpt reserve null alt []
+OK 33575 [haiku debates] Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","luna=openai/gpt-6-luna/openrouter","sol=openai/gpt-6.1-sol/openrouter"] reserve null
+OK 33592 [saved] (claude v opus) panel ["chatgpt","luna","haiku"] single chatgpt reserve null alt ["sol"]
+FAIL 33592 [saved] Resolve Seats threw ORACLE_DEBATE_V1 Resolve refused: judge seat "haiku" is of family anthropic, which debates in this debate (BB-6993). run_token=ODV1-33592-o7
+OK 33592 [haiku debates] (haiku v opus) panel ["chatgpt","luna","sol"] single chatgpt reserve null alt []
+OK 33592 [haiku debates] Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","luna=openai/gpt-6-luna/openrouter","sol=openai/gpt-6.1-sol/openrouter"] reserve null
+OK 33605 [saved] (claude v opus) panel ["chatgpt","luna","haiku"] single chatgpt reserve null alt ["sol"]
+FAIL 33605 [saved] Resolve Seats threw ORACLE_DEBATE_V1 Resolve refused: judge seat "haiku" is of family anthropic, which debates in this debate (BB-6993). run_token=ODV1-33605-nb
+OK 33605 [haiku debates] (haiku v opus) panel ["chatgpt","luna","sol"] single chatgpt reserve null alt []
+OK 33605 [haiku debates] Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","luna=openai/gpt-6-luna/openrouter","sol=openai/gpt-6.1-sol/openrouter"] reserve null
+OK 33617 [saved] (claude v opus) panel ["chatgpt","luna","haiku"] single chatgpt reserve null alt ["sol"]
+FAIL 33617 [saved] Resolve Seats threw ORACLE_DEBATE_V1 Resolve refused: judge seat "haiku" is of family anthropic, which debates in this debate (BB-6993). run_token=ODV1-33617-l0
+OK 33617 [haiku debates] (haiku v opus) panel ["chatgpt","luna","sol"] single chatgpt reserve null alt []
+OK 33617 [haiku debates] Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","luna=openai/gpt-6-luna/openrouter","sol=openai/gpt-6.1-sol/openrouter"] reserve null
+OK 33627 [saved] (claude v opus) panel ["chatgpt","luna","haiku"] single chatgpt reserve null alt ["sol"]
+FAIL 33627 [saved] Resolve Seats threw ORACLE_DEBATE_V1 Resolve refused: judge seat "haiku" is of family anthropic, which debates in this debate (BB-6993). run_token=ODV1-33627-r4
+OK 33627 [haiku debates] (haiku v opus) panel ["chatgpt","luna","sol"] single chatgpt reserve null alt []
+OK 33627 [haiku debates] Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","luna=openai/gpt-6-luna/openrouter","sol=openai/gpt-6.1-sol/openrouter"] reserve null
+OK 33644 [saved] (claude v opus) panel ["chatgpt","luna","haiku"] single chatgpt reserve null alt ["sol"]
+FAIL 33644 [saved] Resolve Seats threw ORACLE_DEBATE_V1 Resolve refused: judge seat "haiku" is of family anthropic, which debates in this debate (BB-6993). run_token=ODV1-33644-jc
+OK 33644 [haiku debates] (haiku v opus) panel ["chatgpt","luna","sol"] single chatgpt reserve null alt []
+OK 33644 [haiku debates] Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","luna=openai/gpt-6-luna/openrouter","sol=openai/gpt-6.1-sol/openrouter"] reserve null
+OK 33682 [saved] (claude v opus) panel ["chatgpt","luna","haiku"] single chatgpt reserve null alt ["sol"]
+FAIL 33682 [saved] Resolve Seats threw ORACLE_DEBATE_V1 Resolve refused: judge seat "haiku" is of family anthropic, which debates in this debate (BB-6993). run_token=ODV1-33682-ue
+OK 33682 [haiku debates] (haiku v opus) panel ["chatgpt","luna","sol"] single chatgpt reserve null alt []
+OK 33682 [haiku debates] Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","luna=openai/gpt-6-luna/openrouter","sol=openai/gpt-6.1-sol/openrouter"] reserve null
+OK 33705 [saved] (claude v opus) panel ["chatgpt","luna","haiku"] single chatgpt reserve null alt ["sol"]
+FAIL 33705 [saved] Resolve Seats threw ORACLE_DEBATE_V1 Resolve refused: judge seat "haiku" is of family anthropic, which debates in this debate (BB-6993). run_token=ODV1-33705-vn
+OK 33705 [haiku debates] (haiku v opus) panel ["chatgpt","luna","sol"] single chatgpt reserve null alt []
+OK 33705 [haiku debates] Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","luna=openai/gpt-6-luna/openrouter","sol=openai/gpt-6.1-sol/openrouter"] reserve null
+OK 33731 [saved] (claude v opus) panel ["chatgpt","luna","haiku"] single chatgpt reserve null alt ["sol"]
+FAIL 33731 [saved] Resolve Seats threw ORACLE_DEBATE_V1 Resolve refused: judge seat "haiku" is of family anthropic, which debates in this debate (BB-6993). run_token=ODV1-33731-23
+OK 33731 [haiku debates] (haiku v opus) panel ["chatgpt","luna","sol"] single chatgpt reserve null alt []
+OK 33731 [haiku debates] Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","luna=openai/gpt-6-luna/openrouter","sol=openai/gpt-6.1-sol/openrouter"] reserve null
+OK 33750 [saved] (claude v opus) panel ["chatgpt","luna","haiku"] single chatgpt reserve null alt ["sol"]
+FAIL 33750 [saved] Resolve Seats threw ORACLE_DEBATE_V1 Resolve refused: judge seat "haiku" is of family anthropic, which debates in this debate (BB-6993). run_token=ODV1-33750-mc
+OK 33750 [haiku debates] (haiku v opus) panel ["chatgpt","luna","sol"] single chatgpt reserve null alt []
+OK 33750 [haiku debates] Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","luna=openai/gpt-6-luna/openrouter","sol=openai/gpt-6.1-sol/openrouter"] reserve null
+OK 33774 [saved] (claude v opus) panel ["chatgpt","luna","haiku"] single chatgpt reserve null alt ["sol"]
+FAIL 33774 [saved] Resolve Seats threw ORACLE_DEBATE_V1 Resolve refused: judge seat "haiku" is of family anthropic, which debates in this debate (BB-6993). run_token=ODV1-33774-nr
+OK 33774 [haiku debates] (haiku v opus) panel ["chatgpt","luna","sol"] single chatgpt reserve null alt []
+OK 33774 [haiku debates] Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","luna=openai/gpt-6-luna/openrouter","sol=openai/gpt-6.1-sol/openrouter"] reserve null
+OK 33798 [saved] (claude v opus) panel ["chatgpt","luna","haiku"] single chatgpt reserve null alt ["sol"]
+FAIL 33798 [saved] Resolve Seats threw ORACLE_DEBATE_V1 Resolve refused: judge seat "haiku" is of family anthropic, which debates in this debate (BB-6993). run_token=ODV1-33798-zy
+OK 33798 [haiku debates] (haiku v opus) panel ["chatgpt","luna","sol"] single chatgpt reserve null alt []
+OK 33798 [haiku debates] Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","luna=openai/gpt-6-luna/openrouter","sol=openai/gpt-6.1-sol/openrouter"] reserve null
+OK 33815 [saved] (claude v opus) panel ["luna","haiku","chatgpt"] single chatgpt reserve null alt ["sol"]
+FAIL 33815 [saved] Resolve Seats threw ORACLE_DEBATE_V1 Resolve refused: judge seat "haiku" is of family anthropic, which debates in this debate (BB-6993). run_token=ODV1-33815-ar
+OK 33815 [haiku debates] (haiku v opus) panel ["luna","chatgpt","sol"] single chatgpt reserve null alt []
+OK 33815 [haiku debates] Resolve Seats judges ["luna=openai/gpt-6-luna/openrouter","chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter"] reserve null
+OK 33815 [haiku debates] Panel Build bodies ["openai/gpt-6-luna","openai/gpt-6.1-terra","openai/gpt-6.1-sol"]
+OK 33828 [saved] (claude v opus) panel ["luna","haiku","chatgpt"] single chatgpt reserve null alt ["sol"]
+FAIL 33828 [saved] Resolve Seats threw ORACLE_DEBATE_V1 Resolve refused: judge seat "haiku" is of family anthropic, which debates in this debate (BB-6993). run_token=ODV1-33828-2a
+OK 33828 [haiku debates] (haiku v opus) panel ["luna","chatgpt","sol"] single chatgpt reserve null alt []
+OK 33828 [haiku debates] Resolve Seats judges ["luna=openai/gpt-6-luna/openrouter","chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter"] reserve null
+OK 33828 [haiku debates] Panel Build bodies ["openai/gpt-6-luna","openai/gpt-6.1-terra","openai/gpt-6.1-sol"]
+OK 33846 [saved] (claude v opus) panel ["luna","haiku","chatgpt"] single chatgpt reserve null alt ["sol"]
+FAIL 33846 [saved] Resolve Seats threw ORACLE_DEBATE_V1 Resolve refused: judge seat "haiku" is of family anthropic, which debates in this debate (BB-6993). run_token=ODV1-33846-y9
+OK 33846 [haiku debates] (haiku v opus) panel ["luna","chatgpt","sol"] single chatgpt reserve null alt []
+OK 33846 [haiku debates] Resolve Seats judges ["luna=openai/gpt-6-luna/openrouter","chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter"] reserve null
+OK 33846 [haiku debates] Panel Build bodies ["openai/gpt-6-luna","openai/gpt-6.1-terra","openai/gpt-6.1-sol"]
+OK Build Synthesis: family map knows luna; nothing else changed
+OK Build Independent Verdict: family map knows luna; nothing else changed
+OK Build Diagnostic Prompt: family map knows luna; nothing else changed
+OK library Alternate_Build.js: mimo max tokens and medium effort
+OK library R2_Alternate_Build.js: mimo max tokens and medium effort
+OK Accept Build: mimo max tokens and medium effort
+variants where luna sits on the panel: 64
+TOTAL 128 OK, 32 FAIL

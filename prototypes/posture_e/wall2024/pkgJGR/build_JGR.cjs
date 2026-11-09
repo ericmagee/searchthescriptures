@@ -16,12 +16,13 @@ const QFR_M="if(/^xiaomi\\/mimo-v2\\.6-pro$/.test(String(model))){o.max_tokens=1
 const ORC3="const __orc=(b,model,key)=>{if(!b||!Array.isArray(b.messages))return b;return {...b,session_id:String(key).slice(0,128)};};";
 const ORC3N="const __orc=(b,model,key)=>{if(!b||!Array.isArray(b.messages))return b;const o={...b,session_id:String(key).slice(0,128)};"+QFR+"return o;};";
 const FILL=MIMO&&process.env.JGR_FILL==='luna'; /* pkgJGR rev 4 (operator 07:27Z 11-09 "add luna 6.1 as a judge"): panel terra, sol, luna; mimo the alternate */
-const TAGL=" /* pkgJGR (operator 21:10Z 11-08): gemini and grok judge no more; rev 4 (operator 07:14Z and 07:27Z 11-09): luna is a judge on the panel with terra and sol; mimo is the alternate */";
-const FAML="qwen:'openrouter',sol:'openrouter',luna:'openrouter'}";
+const ALT=process.env.JGR_ALT||'mimo'; /* pkgJGR rev 6 (operator 08:31Z 11-09, suggestion: "for an alternative we can use Haiku... temporary"): JGR_ALT=haiku seats haiku as the alternate in mimo's place */
+const TAGL=" /* pkgJGR (operator 21:10Z 11-08): gemini and grok judge no more; rev 4 (operator 07:14Z and 07:27Z 11-09): luna is a judge on the panel with terra and sol; "+(ALT==='haiku'?"rev 6 (operator 08:31Z 11-09): haiku is the alternate for now":"mimo is the alternate")+" */";
+const FAML=ALT==='haiku'?"qwen:'openrouter',sol:'openrouter',luna:'openrouter',haiku:'openrouter'}":"qwen:'openrouter',sol:'openrouter',luna:'openrouter'}";
 const EDITS=FILL?{
- 'Init Seats':[["const ORDER0=['gemini','chatgpt','qwen','sol','grok'];","const ORDER0=['chatgpt','sol','luna','mimo','qwen'];"+TAGL],[FAM,FAML],["FAM_PANEL={chatgpt:'openai',sol:'openai'}","FAM_PANEL={chatgpt:'openai',sol:'openai',luna:'openai'}"]],
+ 'Init Seats':[["const ORDER0=['gemini','chatgpt','qwen','sol','grok'];","const ORDER0=['chatgpt','sol','luna','"+ALT+"','qwen'];"+TAGL],[FAM,FAML],["FAM_PANEL={chatgpt:'openai',sol:'openai'}","FAM_PANEL={chatgpt:'openai',sol:'openai',luna:'openai'}"]],
  'Resolve Seats':[[FAM,FAML]],
- 'Accept Build':[["const ORDER=['gemini','chatgpt','qwen','sol','grok'];","const ORDER=['chatgpt','sol','luna','mimo','qwen'];"+TAGL],["qwen:'qwen',grok:'grok',sol:'sol'}","qwen:'qwen',grok:'grok',sol:'sol',luna:'luna'}"],[ORC3,ORC3N.replace(QFR,QFR_M)]],
+ 'Accept Build':[["const ORDER=['gemini','chatgpt','qwen','sol','grok'];","const ORDER=['chatgpt','sol','luna','"+ALT+"','qwen'];"+TAGL],["qwen:'qwen',grok:'grok',sol:'sol'}","qwen:'qwen',grok:'grok',sol:'sol',luna:'luna'"+(ALT==='haiku'?",haiku:'haiku'":"")+"}"],[ORC3,ORC3N.replace(QFR,QFR_M)]],
  'Panel Build':[[ORC4,ORC4+QFR_M]],'Reserve Build':[[ORC4,ORC4+QFR_M]],
  'Build Synthesis':[[FAM,FAML]],'Build Independent Verdict':[[FAM,FAML]],'Build Diagnostic Prompt':[[FAM,FAML]]}:MIMO?{
  'Init Seats':[["const ORDER0=['gemini','chatgpt','qwen','sol','grok'];","const ORDER0=['chatgpt','sol','mimo','qwen'];"+TAG]],
