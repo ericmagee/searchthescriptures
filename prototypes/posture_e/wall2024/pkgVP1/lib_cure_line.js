@@ -1,0 +1,1 @@
+ for(const x of G){if(x.src!=='E-GATE M'||!A[x.gid])continue;const g=gateForcedM2024(x,A[x.gid],ctx);if(g)add.push({seat,sid:x.gid+'F',rule:'E-GATE',item:'FORCED',line:g.col,ans:'CHANGE',to:g.line,why:'the FORCED line written with the gate change of '+x.gid+', added after its collision line (ruling 411; pkgVP1)',forced_add:true});} /* pkgVP1 */

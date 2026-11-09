@@ -1,0 +1,15 @@
+     items: G1 E-GATE M ANSWER OPEN|2 SAMUEL 7:12|CR3|D6 ; G2 E-GATE M ANSWER OPEN|ROMANS 1:3|CR3|D6 ; G3 E-GATE M ANSWER OPEN|ROMANS 1:3|CR3|D1 ; G4 E-GATE M ANSWER OPEN|HEBREWS 7:14|CR3|D6 ; G5 E-GATE M ANSWER OPEN|NUMBERS 1:18|CR3|D6 ; G6 E-GATE M ANSWER OPEN|1 CHRONICLES 28:6|CR3|D1 ; G7 E-GATE M ANSWER OPEN|MATTHEW 1:25|CR3|D1 ; G8 E-GATE M ANSWER OPEN|LUKE 2:44|CR3|D5 ; G9 E-GATE M ANSWER OPEN|MATTHEW 1:16|DR3|C1 ; G10 E-GATE M ANSWER OPEN|MATTHEW 1:20|DR3|C4 ; G11 E-GATE M ANSWER OPEN|ROMANS 1:3|DR3|C4
+OK   1a run 34016, luna: 11 ANSWER OPEN items (10 answer checks graded MISSES, every collision UNDERDETERMINED), no other gate item
+OK   1b silence on all: all UNCURED
+     2 one change (D6 vs C1 to DEFENDER LINK BROKEN, true FORCED line) under G5: G1 CURED, G2 CURED, G3 UNCURED, G4 CURED, G5 CURED, G6 UNCURED, G7 UNCURED, G8 UNCURED, G9 CURED, G10 UNCURED, G11 UNCURED
+     why G5: the gate change was applied and the item is no longer raised
+OK   2a the answered item is CURED and its FORCED line is added
+OK   2b every other ANSWER OPEN item of LINK 6 (G1, G2, G4) is CURED without a gate line of its own: no GATE line of its own; the item is no longer raised after your cured gate change on another ANSWER OPEN item: its link is no longer left open (pkgVP1)
+OK   2c the challenger premise 1 item (G9), whose only collision line is no longer UNDERDETERMINED, is CURED the same way
+OK   2d the items of other links (G3, G6, G7, G8, G10, G11) stay UNCURED by silence
+OK   2e counted: 6 (the 6 unanswered items of other links)
+OK   3a the same change with no FORCED line: nothing of LINK 6 is CURED (G1 UNCURED, G2 UNCURED, G3 UNCURED, G4 UNCURED, G5 UNCURED, G6 UNCURED, G7 UNCURED, G8 UNCURED, G9 UNCURED, G10 UNCURED, G11 UNCURED)
+OK   3b KEEP on one item cures no silent item
+OK   3c one answer check changed back to MEETS cures that item only; the other LINK 6 items stay UNCURED (G1 UNCURED, G2 UNCURED, G3 UNCURED, G4 UNCURED, G5 CURED, G6 UNCURED, G7 UNCURED, G8 UNCURED, G9 UNCURED, G10 UNCURED, G11 UNCURED)
+
+probe_VP1_multi: 10 OK, 0 FAIL

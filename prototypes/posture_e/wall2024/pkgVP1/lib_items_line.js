@@ -1,0 +1,1 @@
+ for(const x of gateAnsOpen2024(T1,ctx&&ctx.R))items.push({kind:'CONTRADICTION',src:'E-GATE M',key:x.key,why:x.why,lines:x.lines,live:GATE_STATUS['ANSWER OPEN']==='LIVE'}); /* pkgVP1: after pkgD38, so earlier gate ids keep their numbers */
