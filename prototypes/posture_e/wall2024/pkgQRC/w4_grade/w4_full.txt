@@ -1,0 +1,22 @@
+round lengths {
+  topic: 5,
+  cr1: 7772,
+  cr2: 13138,
+  cr3: 22404,
+  cr4: 17631,
+  gr1: 19337,
+  gr2: 25957,
+  dr3: 24600,
+  dr4: 17544
+}
+OK   1 34108 contradiction question passes on full rounds: {"defender":[],"challenger":[]}
+OK   2 earlier_round written "[cr3]" is read as CR3: []
+OK   3 earlier quote with no earlier round: refused: earlier round "null" is not one of that debater's earlier rounds
+OK   4 earlier round with an empty earlier quote: refused: earlier quotation missing or under 8 characters
+OK   5 true words but wrong earlier round: refused: the earlier quotation is not found word for word in CR1
+OK   6 contradiction question not quoting the closing round: refused: a contradiction question quotes the closing round CR4, not "CR3"
+OK   7 markdown in the earlier quote is tolerated as live tolerates it in "quote": []
+OK   8 a real-words challenger DR2 vs DR4 question passes: []
+OK   9 closing quoted against itself: refused: earlier round "CR4" is not one of that debater's earlier rounds
+OK   10 ordinary questions on full rounds: output equal to live
+10 OK, 0 FAIL
