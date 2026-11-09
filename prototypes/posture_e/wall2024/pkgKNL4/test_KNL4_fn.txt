@@ -1,0 +1,33 @@
+OK   grades nothing (rev 3 too)    | FORCED: none graded.
+OK   grades nothing (rev 3 too)    | FORCED: none.
+OK   grades nothing (rev 3 too)    | **FORCED:** none
+OK   grades nothing (rev 3 too)    | FORCED (Commitment 6): none
+OK   grades nothing (rev 3 too)    | FORCED: no links are forced
+OK   grades nothing (rev 3 too)    | FORCED: N/A
+OK   grades nothing (rev 3 too)    | Forced: none
+OK   grades nothing (NEW in rev 4) | FORCED LINES: none
+OK   grades nothing (NEW in rev 4) | FORCED: — none
+OK   grades nothing (NEW in rev 4) | FORCED: none (no link is graded broken)
+OK   grades nothing (NEW in rev 4) | FORCED: none of the collisions
+OK   grades nothing (NEW in rev 4) | FORCED: There are no forced links.
+OK   grades nothing (NEW in rev 4) | FORCED: - none.
+OK   grades nothing (NEW in rev 4) | FORCED LINKS: none.
+OK   grades nothing (rev 3 too)    | FORCED: none (Commitment 6).
+OK   grades nothing (NEW in rev 4) | FORCED: none (nothing is graded broken).
+OK   grades nothing (NEW in rev 4) | FORCED: none of the links are forced.
+OK   still checked (rev 3 too)    | FORCED: none, except D6 vs C5, which the challenger forced
+OK   still checked (rev 3 too)    | FORCED: D1 vs C1 is forced because the reading cannot fit
+OK   still checked (rev 3 too)    | FORCED: none (except D6 vs C5)
+OK   still checked (rev 3 too)    | FORCED: none (D6 vs C5 is forced)
+OK   still checked (rev 3 too)    | FORCED: none (see [CR4])
+OK   still checked (rev 3 too)    | FORCED: none (the defender wrote "no father")
+OK   still checked (rev 3 too)    | FORCED: none of the collisions except D2 vs C2
+OK   still checked (rev 3 too)    | FORCED: There are no forced links but D1
+OK   still checked (rev 3 too)    | FORCED: none (but the keystone is)
+OK   still checked (rev 3 too)    | FORCED: none (the reading cannot fit)
+OK   still checked (rev 3 too)    | FORCED: D6 vs C5 (none of the others)
+OK   still checked (rev 3 too)    | FORCED: none (no link but LINK 4)
+OK   still checked (rev 3 too)    | FORCED: no forced links save D3
+OK   still checked (rev 3 too)    | D1 vs C1: none
+
+31 OK, 0 FAIL
