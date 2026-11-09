@@ -1,0 +1,8 @@
+  kept: "RULING: D1, D2 vs C2 -- DEFENDER LINK BROKEN"
+  unasked D2 vs C2 card: before "RULING: D2 vs C2 -- STANDS" after "RULING: D1, D2 vs C2 -- DEFENDER LINK BROKEN"
+FAIL case 1: a grouped card "D1, D2 vs C2" for the asked D1 vs C2 does not replace the unasked D2 vs C2 card
+  kept: "RULING: keystone D3 vs C1 -- CHALLENGER LINK BROKEN"
+  unasked keystone card: before "RULING: keystone -- STANDS" after "RULING: keystone D3 vs C1 -- CHALLENGER LINK BROKEN"
+FAIL case 2: a card "keystone D3 vs C1" for the asked D3 vs C1 does not replace the unasked keystone card
+OK   case 3 (control): a card naming only the asked pair leaves D2 vs C2 alone
+TOTAL 1 OK, 2 FAIL
