@@ -1,0 +1,49 @@
+33506 Cure Check A
+   base:    keystone UNCURED (no written response)
+   patched: keystone CURED (a valid ruling card for keystone)
+OK 33506 A: card without RESPONSE line -> base no written response, patched CURED
+33506 Cure Check B
+   base:    keystone UNCURED (no written response)
+   patched: keystone UNCURED (no written response)
+OK 33506 B: no card, no RESPONSE line -> still UNCURED
+33506 Cure Check C
+   base:    keystone CURED (a valid ruling card for keystone)
+   patched: keystone CURED (a valid ruling card for keystone)
+OK 33506 C: unchanged reply -> same result
+33627 Cure Check A
+   base:    D1 vs C2 UNCURED (no written response) | D2 vs C3 UNCURED (no written response) | D3 vs C4 UNCURED (no written response) | D4 vs C5 UNCURED (no written response) | D5 vs C1 UNCURED (no written response) | keystone UNCURED (no written response)
+   patched: D1 vs C2 CURED (a valid ruling card for D1 vs C2) | D2 vs C3 CURED (a valid ruling card for D2 vs C3) | D3 vs C4 CURED (a valid ruling card for D3 vs C4) | D4 vs C5 CURED (a valid ruling card for D4 vs C5) | D5 vs C1 CURED (a valid ruling card for D5 vs C1) | keystone CURED (a valid ruling card for keystone)
+OK 33627 A: card without RESPONSE line -> base no written response, patched CURED
+33627 Cure Check B
+   base:    D1 vs C2 UNCURED (no written response) | D2 vs C3 UNCURED (no written response) | D3 vs C4 UNCURED (no written response) | D4 vs C5 UNCURED (no written response) | D5 vs C1 UNCURED (no written response) | keystone UNCURED (no written response)
+   patched: D1 vs C2 UNCURED (no written response) | D2 vs C3 UNCURED (no written response) | D3 vs C4 UNCURED (no written response) | D4 vs C5 UNCURED (no written response) | D5 vs C1 UNCURED (no written response) | keystone UNCURED (no written response)
+OK 33627 B: no card, no RESPONSE line -> still UNCURED
+33627 Cure Check C
+   base:    D1 vs C2 CURED (a valid ruling card for D1 vs C2) | D2 vs C3 CURED (a valid ruling card for D2 vs C3) | D3 vs C4 CURED (a valid ruling card for D3 vs C4) | D4 vs C5 CURED (a valid ruling card for D4 vs C5) | D5 vs C1 CURED (a valid ruling card for D5 vs C1) | keystone CURED (a valid ruling card for keystone)
+   patched: D1 vs C2 CURED (a valid ruling card for D1 vs C2) | D2 vs C3 CURED (a valid ruling card for D2 vs C3) | D3 vs C4 CURED (a valid ruling card for D3 vs C4) | D4 vs C5 CURED (a valid ruling card for D4 vs C5) | D5 vs C1 CURED (a valid ruling card for D5 vs C1) | keystone CURED (a valid ruling card for keystone)
+OK 33627 C: unchanged reply -> same result
+33644 Cure Check A
+   base:    D1 vs C2 UNCURED (no written response) | D3 vs C3 UNCURED (no written response) | D4 vs C5 UNCURED (no written response) | D5 vs C4 UNCURED (no written response) | D6 vs C1 UNCURED (no written response)
+   patched: D1 vs C2 CURED (a valid ruling card for D1 vs C2) | D3 vs C3 CURED (a valid ruling card for D3 vs C3) | D4 vs C5 CURED (a valid ruling card for D4 vs C5) | D5 vs C4 CURED (a valid ruling card for D5 vs C4) | D6 vs C1 CURED (a valid ruling card for D6 vs C1)
+OK 33644 A: card without RESPONSE line -> base no written response, patched CURED
+33644 Cure Check B
+   base:    D1 vs C2 UNCURED (no written response) | D3 vs C3 UNCURED (no written response) | D4 vs C5 UNCURED (no written response) | D5 vs C4 UNCURED (no written response) | D6 vs C1 UNCURED (no written response)
+   patched: D1 vs C2 UNCURED (no written response) | D3 vs C3 UNCURED (no written response) | D4 vs C5 UNCURED (no written response) | D5 vs C4 UNCURED (no written response) | D6 vs C1 UNCURED (no written response)
+OK 33644 B: no card, no RESPONSE line -> still UNCURED
+33644 Cure Check C
+   base:    D1 vs C2 CURED (a valid ruling card for D1 vs C2) | D3 vs C3 CURED (a valid ruling card for D3 vs C3) | D4 vs C5 CURED (a valid ruling card for D4 vs C5) | D5 vs C4 CURED (a valid ruling card for D5 vs C4) | D6 vs C1 CURED (a valid ruling card for D6 vs C1)
+   patched: D1 vs C2 CURED (a valid ruling card for D1 vs C2) | D3 vs C3 CURED (a valid ruling card for D3 vs C3) | D4 vs C5 CURED (a valid ruling card for D4 vs C5) | D5 vs C4 CURED (a valid ruling card for D5 vs C4) | D6 vs C1 CURED (a valid ruling card for D6 vs C1)
+OK 33644 C: unchanged reply -> same result
+33846 Panel Cure Check A
+   base:    CHALLENGER premise 2 UNCURED (no written response) | CHALLENGER premise 6 UNCURED (no written response) | D2 vs C2 UNCURED (no written response) | D6 vs C6 UNCURED (no written response)
+   patched: CHALLENGER premise 2 CURED (a valid ruling card for CHALLENGER premise 2) | CHALLENGER premise 6 CURED (a valid ruling card for CHALLENGER premise 6) | D2 vs C2 CURED (a valid ruling card for D2 vs C2) | D6 vs C6 CURED (a valid ruling card for D6 vs C6)
+OK 33846 A: card without RESPONSE line -> base no written response, patched CURED
+33846 Panel Cure Check B
+   base:    CHALLENGER premise 2 UNCURED (no written response) | CHALLENGER premise 6 UNCURED (no written response) | D2 vs C2 UNCURED (no written response) | D6 vs C6 UNCURED (no written response)
+   patched: CHALLENGER premise 2 UNCURED (no written response) | CHALLENGER premise 6 UNCURED (no written response) | D2 vs C2 UNCURED (no written response) | D6 vs C6 UNCURED (no written response)
+OK 33846 B: no card, no RESPONSE line -> still UNCURED
+33846 Panel Cure Check C
+   base:    CHALLENGER premise 2 CURED (a valid ruling card for CHALLENGER premise 2) | CHALLENGER premise 6 CURED (a valid ruling card for CHALLENGER premise 6) | D2 vs C2 CURED (a valid ruling card for D2 vs C2) | D6 vs C6 CURED (a valid ruling card for D6 vs C6)
+   patched: CHALLENGER premise 2 CURED (a valid ruling card for CHALLENGER premise 2) | CHALLENGER premise 6 CURED (a valid ruling card for CHALLENGER premise 6) | D2 vs C2 CURED (a valid ruling card for D2 vs C2) | D6 vs C6 CURED (a valid ruling card for D6 vs C6)
+OK 33846 C: unchanged reply -> same result
+TOTAL 12 OK, 0 FAIL
