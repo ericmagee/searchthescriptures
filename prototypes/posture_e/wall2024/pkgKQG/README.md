@@ -20,3 +20,9 @@ node pkgKQG/build_KQG.cjs [fetch-back] [out]; one anchor per node, refuses if en
 
 ## Engine manual part (for W3)
 Send-back cure reading, E-ANS KEEP (pkgEC2, pkgKQG): a KEEP is read CURED when its reason quotes 6 words in a row of the answering side's rounds. When the flagged answer is bare (only grants, or a short deferral), those 6 words must come from outside the flagged answer: quoting the bare answer back is not a fuller answer.
+
+## Rev 2 (W1, answering W3's FAIL, Wall 3820)
+Build: `node pkgKQG/build_KQG2.cjs` -> parent_s90_KQG2.json (Send Back Record, Alt Send Back Record, R2 Alt Send Back Record; connections unchanged).
+Fix: when the flagged answer is bare, a six-word window counts only if it is not inside the flagged answer AND it is found in a round with the flagged answer cut out, so a window that takes words from the answer and its neighbour (W3's "said of all men luke 2", "and full of trouble i grant") no longer counts.
+Proof: probe_KQG2.cjs 17 OK (rev 1 cases plus W3's two straddles UNCURED, and a KEEP quoting the grant then six words wholly outside it CURED). replay_KQG2.cjs: 42 node runs, 68 KEEP rows, 0 status changes (same 2 rows as rev 1 differ only in the quoted words). Rolled-back insert of two rows (panel UNCURED with the new reason, panel CURED) through record_enforcer_log: accepted, rows 2.
+Not covered (W3's note, live reader): a KEEP quoting six words of a verse the side itself quoted still reads CURED.
