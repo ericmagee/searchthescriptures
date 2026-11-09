@@ -1,0 +1,37 @@
+OK   P1 same row count (27)
+OK   P2 rows change only by an appended "TRIAL pkgVP3" note on E-ANS / E-HOLD rows (5 rows); cure_status unchanged
+     luna E-ANS ANSWER CHECK Luke 1:34 [CR3] | | TRIAL pkgVP3: TWO READERS AGREE on Luke 1:34 ([CR3] Luke 1:34: no layer of its own; only grant and deferral: "I grant the present tense states her state when the angel spoke. I answer it fully under LINK 4.") -- CURED by the reply (CHANGE); record-only, no seat removed
+     chatgpt E-ANS ANSWER CHECK Luke 1:34 [CR3] | | TRIAL pkgVP3: TWO READERS AGREE on Luke 1:34 ([CR3] Luke 1:34: no layer of its own; only grant and deferral: "I grant the present tense states her state when the angel spoke. I answer it fully under LINK 4.") -- WOULD REMOVE chatgpt: the reply (KEEP) keeps the grade; record-only, no seat removed
+     chatgpt E-ANS ANSWER CHECK Isaiah 7:16 [CR4] | | TRIAL pkgVP3: code check does not agree, not an item -- [CR4] answer to Isaiah 7:16: the answer carries its own layer [L1]
+     sol E-ANS ANSWER CHECK Luke 1:34 [CR3] | | TRIAL pkgVP3: TWO READERS AGREE on Luke 1:34 ([CR3] Luke 1:34: no layer of its own; only grant and deferral: "I grant the present tense states her state when the angel spoke. I answer it fully under LINK 4.") -- WOULD REMOVE sol: the reply (CHANGE TO a line that still grades MEETS) keeps the grade; record-only, no seat removed
+     sol E-HOLD COLLISION D1 vs C1 | | TRIAL pkgVP3: TWO READERS AGREE on Luke 1:34 ([CR3] Luke 1:34: no layer of its own; only grant and deferral: "I grant the present tense states her state when the angel spoke. I answer it fully under LINK 4.") -- WOULD REMOVE sol: the reply (CHANGE TO a line that still grades the link as held) keeps the grade; record-only, no seat removed
+OK   P3 everything else byte-equal (bodies, drv_uncured, alt_needed, sb_items, tallies)
+     vp3_trial: {"status":"TRIAL","checked":5,"agree":4,"would_remove":{"chatgpt":["S1 (E-ANS ANSWER CHECK Luke 1:34 [CR3])"],"sol":["S1 (E-ANS ANSWER CHECK Luke 1:34 [CR3])","S2 (E-HOLD COLLISION D1 vs C1)"]}}
+OK   P4 34108: would remove terra (chatgpt) and sol, not luna (luna changed to MISSES)
+OK   P5 sol: E-ANS Luke 1:34 (CHANGE TO MEETS) and E-HOLD D1 vs C1 (kept UNDERDETERMINED); terra: E-ANS Luke 1:34 (KEEP)
+OK   P6 terra Isaiah 7:16 [CR4]: code check does not agree (answer is not a grant or deferral), not an item
+OK   P7 code-origin E-HOLD items (pkgUNA, no DeepSeek DISAGREE) get no VP3 note
+OK   U grant + deferral is bare -> no layer of its own; only grant and deferral: "I grant the present tense states her state when the angel spoke
+OK   U grant alone is bare -> no layer of its own; only grant: "I grant that the law calls the betrothed woman "wife.""
+OK   U a layer of its own is not bare -> the answer carries its own layer [L2]
+OK   U grant with a fit ("so") is not bare -> a sentence is neither a grant nor a deferral: "I grant that this is the taking, so 1:18 dates the finding befo
+OK   U an argument is not bare -> a sentence is neither a grant nor a deferral: "The shared timing-measure is a measure of time."
+OK   U a long deferral sentence is not bare -> a sentence is neither a grant nor a deferral: "See LINK 4, where I set out the means of the conception in full
+OK   U empty answer is not bare -> empty answer
+OK   U code: bare answer in CR3 agrees
+OK   U code: a layered ANSWER block in CR4 for the same verse means no agreement (conservative)
+OK   U code: Luke 1:3 does not match Luke 1:34 (no answer found)
+OK   U code: Genesis 4:1 answer has [L2], no agreement
+OK   U cure: CHANGE TO MISSES cures
+OK   U cure: KEEP does not cure
+OK   U cure: no answer does not cure
+OK   U a reason without (right: MISSES) is not a VP3 item
+OK   U run 33490 shape: a bullet labelled by several bold verses holds an argued answer, so the bare deferral line alone does not make the code agree
+OK   U the verse quote and its trailing period are cut from the answer; a [L3] footing line is not an answer
+OK   U a PRESSED WITH line (-- MEANS:) is not read as an answer
+OK   U E-HOLD: CHANGE TO DEFENDER LINK BROKEN cures
+OK   U E-HOLD: breaking the other side's link does not cure
+OK   U E-HOLD: kept UNDERDETERMINED with [L1] does not cure under P3
+OK   U E-HOLD: reason naming no side is NOT CHECKED, not an item
+
+29 OK, 0 FAIL
