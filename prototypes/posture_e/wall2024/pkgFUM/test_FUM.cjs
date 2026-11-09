@@ -4,7 +4,7 @@
 const fs=require('fs');const {harness}=require('../pkgGSL/harness.cjs');const A='pkgLIB/strip_CJR_KRC/patched/',B='pkgLIB/strip_FUM/patched/';const R=f=>fs.readFileSync(f,'utf8');
 let ok=0,bad=0;const out=[];const log=s=>{out.push(s);console.log(s);};const T=(c,m)=>{if(c){ok++;log('OK   '+m);}else{bad++;log('FAIL '+m);}};
 const st=x=>JSON.stringify(x,(k,v)=>k==='at'?undefined:v);
-const H=harness('34016');const MG=JSON.parse(R('pkgFUM/plan_FUM.json')).nodes_added.find(n=>n.name==='FUM Merge Panel 1').parameters.jsCode;
+const KEEP=()=>{const t=R(B+'Panel_Cure_Normalize_1.js');const km=t.slice(t.indexOf('function krulMatch('),t.indexOf('\n',t.indexOf('function krulMatch(')+1));const km2=t.slice(t.indexOf('function krulMatch('),t.indexOf('const KRUL_BAD'));return new Function(km2+t.match(/function fumKey2024[\s\S]*?\n(?=\/\* pkgFUM: the kept)/)[0]+';return fumKeep2024;')();};const H=harness('34016');const MG=JSON.parse(R('pkgFUM/plan_FUM.json')).nodes_added.find(n=>n.name==='FUM Merge Panel 1').parameters.jsCode;
 // 1. complete replies: no follow-up, output byte-equal to live
 for(const n of [2,3]){const a=H(R(A+'Panel_Cure_Normalize_'+n+'.js'),'Panel Cure Call '+n+' openrouter'),b=H(R(B+'Panel_Cure_Normalize_'+n+'.js'),'Panel Cure Call '+n+' openrouter');
  T(st(a)===st(b)&&!b[0].json.fum,'Panel Cure Normalize '+n+' ('+b[0].json.cure.model+'): every item answered, no follow-up, output byte-equal');}
@@ -59,15 +59,21 @@ log('     Haiku asked: '+JSON.stringify(hb[0].json.fum&&hb[0].json.fum.asked.map
  const cB=chk(nB);const pB=harness('34016',{'Panel Cure Normalize 1':nB})(R(B+'Panel_Cure_Check.js'),'Panel Cure Normalize 3')[0].json,p2=harness('34016',{'Panel Cure Normalize 1':n2})(R(B+'Panel_Cure_Check.js'),'Panel Cure Normalize 3')[0].json;
  T(g(cB,'DEFENDER CR2 D2 #2').cure_status==='CURED'&&g(cB,'CHALLENGER DR3 LINK 3 #3').cure_status==='CURED'&&st(pB.summary)===st(p2.summary)&&st(pB.bodies)===st(p2.bodies),'case B: D2 #2 keeps CURED, 27621 CURED, summary and bodies equal to the clean follow-up');}
 // 9. the kept lines for an asked K-RUL item: its RESPONSE line and the card under it; a card for another subject is dropped
-{const k=new Function(R(B+'Panel_Cure_Normalize_1.js').match(/function fumKey2024[\s\S]*?\n(?=\/\* pkgFUM: the kept)/)[0]+';return fumKeep2024;')();
+{const k=KEEP();
  const t='RESPONSE: K-RUL keystone | card below\nRULING -- keystone -- HELD\nCLAIM: x\nNAMED BY: "y"\nRULE: z\nAPPLIED: w\nRESPONSE: K-RUL DEFENDER premise 4 | other\nRULING -- DEFENDER premise 4 -- HELD\nRESPONSE: K-W CHALLENGER DR3 LINK 3 #33 | NOT HELD: other item';
  const o=k(t,[{rule:'K-RUL',side:'JUDGE',link:'keystone'}]);T(o===t.split('\n').slice(0,6).join('\n'),'K-RUL keystone: its RESPONSE line and five-line card kept; another K-RUL item and its card dropped; "#33" is not "#3"');
  T(k(t,[{rule:'K-W',side:'CHALLENGER',link:'CHALLENGER DR3 LINK 3 #3'}])==='','"LINK 3 #3" does not match "LINK 3 #33"');}
-{const k=new Function(R(B+'Panel_Cure_Normalize_1.js').match(/function fumKey2024[\s\S]*?\n(?=\/\* pkgFUM: the kept)/)[0]+';return fumKeep2024;')();
+{const k=KEEP();
  T(k('RESPONSE: K-S3 S3 DEFENDER CR4 #1 | NOT HELD: x\nRESPONSE: K-S3 S3 DEFENDER CR4 #2 | NOT HELD: y',[{rule:'K-S3',side:'DEFENDER',link:'S3 DEFENDER CR4: #1'}])==='RESPONSE: K-S3 S3 DEFENDER CR4 #1 | NOT HELD: x','K-S3 "S3 DEFENDER CR4: #1" matches a label written without the colon, and not #2');}
 // 10. W3 3585: with only K-RUL D2 vs C2 asked, lines of other rules on the same pair, and RETRACTED/RESTATED lines, are dropped
-{const k=new Function(R(B+'Panel_Cure_Normalize_1.js').match(/function fumKey2024[\s\S]*?\n(?=\/\* pkgFUM: the kept)/)[0]+';return fumKeep2024;')();
+{const k=KEEP();
  const t='RESPONSE: K-G4 D2 vs C2 | RETRACTED: the grade is withdrawn\nRESPONSE: K-G1 D2 vs C2 | CORRECTED COUNT 0\nRESPONSE: K-V D2 vs C2 | NOT HELD\nRETRACTED: D2 vs C2 because x\nRESTATED: D2 vs C2 -- HELD\nRESPONSE: K-RUL D2 vs C2 | card below\nRULING -- D2 vs C2 -- HELD\nCLAIM: a\nNAMED BY: "b"\nRULE: c\nAPPLIED: d\nSTATEMENT: K-RUL D2 vs C2 | as above';
  const o=k(t,[{rule:'K-RUL',side:'JUDGE',link:'D2 vs C2'}]);T(o===t.split('\n').slice(5).join('\n'),'K-RUL D2 vs C2 asked: K-G4, K-G1, K-V lines on the same pair and RETRACTED/RESTATED dropped; its RESPONSE, card and STATEMENT kept');
  T(k('RESPONSE: CHALLENGER DR3 LINK 3 #3 | NOT HELD: x',[{rule:'K-W',side:'CHALLENGER',link:'CHALLENGER DR3 LINK 3 #3'}])==='','a label without the item\'s rule is not read');}
+// 11. W3 3588: a blank line before the card; a card with no RESPONSE line; a second card for an unasked pair after the asked card
+{const k=KEEP();const Rq=[{rule:'K-RUL',side:'JUDGE',link:'D2 vs C2',ruling:'D2 vs C2'}];const card=['RULING -- D2 vs C2 -- STANDS','CLAIM: x','NAMED BY: y','RULE: z','APPLIED: w'];
+ T(k(['RESPONSE: K-RUL D2 vs C2 | card below','',...card].join('\n'),Rq)===['RESPONSE: K-RUL D2 vs C2 | card below',...card].join('\n'),'3588-1: a blank line between the RESPONSE line and the card: the card is kept');
+ T(k(card.join('\n'),Rq)===card.join('\n'),'3588-2: a card alone, no RESPONSE line (luna 27609 form): kept');
+ T(k(['RESPONSE: K-RUL D2 vs C2 | card',...card,'RULING -- D4 vs C1 -- FALLS','CLAIM: p','NAMED BY: q','RULE: r','APPLIED: s'].join('\n'),Rq)===['RESPONSE: K-RUL D2 vs C2 | card',...card].join('\n'),'3588-3: a second card for the unasked pair D4 vs C1: dropped');
+ T(k(['RULING -- D2 vs C2 -- STANDS','CLAIM: x','','NAMED BY: y','RULE: z','APPLIED: w','RESPONSE: K-G4 D2 vs C2 | x'].join('\n'),Rq)===card.join('\n'),'a blank line inside the card is skipped; the card ends at APPLIED; a K-G4 line after it is dropped');}
 log('TOTAL '+ok+' OK, '+bad+' FAIL');fs.writeFileSync('pkgFUM/test_FUM.txt',out.join('\n')+'\n');

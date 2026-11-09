@@ -1645,19 +1645,21 @@ function fumAsk2024(src,reply,or){try{if(!or||!src||!src.body||!Array.isArray(sr
  const P=['FOLLOW-UP, asked once. The items below have no line in your reply above that can be counted. Every other item stands as your reply above left it. Answer only the items below, each on its own line beginning RESPONSE:, in the form the request above gives, and write nothing else.'];
  if(miss.length)P.push('','Items your reply left with no RESPONSE line ('+miss.length+'):',...miss.map(x=>'- '+lab(x)),'For each, write: RESPONSE: <the item, as labelled above> | <your answer>. If you hold the item wrong, write: RESPONSE: <the item, as labelled above> | NOT HELD: <your reason>.'+(miss.some(x=>x.rule==='K-RUL')?' For a K-RUL item, write its RESPONSE line and under it the five-line card, one field to a line: RULING, CLAIM, NAMED BY, RULE, APPLIED.':''));
  if(noq.length)P.push('','Items whose NOT HELD reason does not quote the flagged sentence ('+noq.length+'):',...noq.map(x=>'- '+lab(x)),'For each, write its RESPONSE line again: RESPONSE: <the item, as labelled above> | NOT HELD: <your reason>, quoting at least six words in a row of the flagged sentence (all of it when shorter).');
- return {asked:miss.map(x=>'NO LINE '+lab(x)).concat(noq.map(x=>'NO QUOTE '+lab(x))),items:miss.concat(noq).map(x=>({rule:x.rule,side:x.side||null,link:x.link==null?null:x.link})),first:reply,body:Object.assign({},src.body,{messages:src.body.messages.concat([{role:'assistant',content:String(reply.text==null?'':reply.text)},{role:'user',content:P.join('\n')}])})};
+ return {asked:miss.map(x=>'NO LINE '+lab(x)).concat(noq.map(x=>'NO QUOTE '+lab(x))),items:miss.concat(noq).map(x=>({rule:x.rule,side:x.side||null,link:x.link==null?null:x.link,ruling:x.ruling||null,krul_ctx:x.krul_ctx||null})),first:reply,body:Object.assign({},src.body,{messages:src.body.messages.concat([{role:'assistant',content:String(reply.text==null?'':reply.text)},{role:'user',content:P.join('\n')}])})};
 }catch(e){return null;}}
 /* pkgFUM rev 3 (W1 3581, W3 3585): from the follow-up, only the lines of an asked item are read: its RESPONSE and STATEMENT lines whose label begins with the item's own rule
-   and then names its key, and the five-line card under an asked K-RUL item's RESPONSE line. No RETRACTED, RESTATED, PRESSED or SHORT line is read (it would act on every item of its pair).
+   and then names its key, and a five-line card whose RULING line names an asked K-RUL item (krulMatch, as pkgKRC), with or without a RESPONSE line, blank lines inside it skipped, ending at APPLIED or any other line (rev 4, W3 3588). No RETRACTED, RESTATED, PRESSED or SHORT line is read (it would act on every item of its pair).
    Everything else in the follow-up (other items, CORRECTED RESULT/COUNT/STANDING, prose) is dropped, so a follow-up cannot change an item it was not asked about. */
 function fumKey2024(x){const N=t=>String(t==null?'':t).toUpperCase().replace(/:/g,' ').replace(/\s+/g,' ').trim();const r=N(x&&x.rule),k=N(x&&x.rule==='K-G3'?(x.side||'')+' STANDING':(x&&x.link));
  return r&&k?new RegExp('^'+r.replace(/[.*+?^$(){}|[\]\\]/g,'\\$&')+' '+k.replace(/[.*+?^$(){}|[\]\\]/g,'\\$&')+'(?![A-Z0-9])'):null;}
-function fumKeep2024(text,items){const T=String(text==null?'':text).split('\n');const K=(items||[]).map(x=>({x,re:fumKey2024(x)})).filter(z=>z.re);const out=[];let card=false;
+function fumKeep2024(text,items){const T=String(text==null?'':text).split('\n');const K=(items||[]).map(x=>({x,re:fumKey2024(x)})).filter(z=>z.re);const KR=(items||[]).filter(x=>x&&x.rule==='K-RUL');const out=[];let card=false;
  const N=l=>String(l).replace(/\*\*/g,'').replace(/\u0060/g,'').replace(/^\s*(?:[-*•>]|\d+[.)])?\s*/,'');
- for(const raw of T){const l=N(raw);const U=l.toUpperCase().replace(/\s+/g,' ');
-  if(card&&/^(?:RULING|CLAIM|NAMED BY|RULE|APPLIED)\b/.test(U)){out.push(raw);continue;}card=false;
-  const m=U.match(/^(RESPONSE|STATEMENT)\s*:\s*([^|]*)\|/);if(!m)continue;const lab=m[2].replace(/:/g,' ').replace(/\s+/g,' ').trim();const z=K.find(z=>z.re.test(lab));if(!z)continue;
-  out.push(raw);if(m[1]==='RESPONSE'&&z.x.rule==='K-RUL')card=true;}
+ const RUL=/^RULING\s*(?:--|—|–|:)\s*(.*)$/i,FLD=/^(CLAIM|NAMED BY|RULE|APPLIED)\s*:/i;
+ const asked=t=>KR.some(x=>{try{return krulMatch({target:t},x.ruling||x.link,x.krul_ctx||null);}catch(e){return false;}});
+ for(const raw of T){const l=N(raw).trim();
+  const r=l.match(RUL);if(r){card=KR.length>0&&asked(String(r[1]).split(/\s+(?:--|—|–)\s+/)[0]||'');if(card)out.push(raw);continue;} /* pkgFUM rev 4: a card is read only when its RULING line names an asked K-RUL item */
+  if(card){if(!l)continue;const f=l.match(FLD);if(f){out.push(raw);if(/^APPLIED$/i.test(f[1]))card=false;continue;}card=false;}
+  const U=l.toUpperCase().replace(/\s+/g,' ');const m=U.match(/^(RESPONSE|STATEMENT)\s*:\s*([^|]*)\|/);if(!m)continue;const lab=m[2].replace(/:/g,' ').replace(/\s+/g,' ').trim();if(K.some(z=>z.re.test(lab)))out.push(raw);}
  return out.join('\n');}
 /* pkgFUM: the kept follow-up lines are read first, then the first reply; a failed follow-up leaves the first reply as it was. */
 function fumJoin2024(r1,r2,items){if(!r1||!r1.ok)return r1||r2||{ok:false,text:null,why:'no reply'};if(!r2||!r2.ok)return Object.assign({},r1,{fum:{ok:false,why:r2?String(r2.why||'no reply'):'no reply'}});
