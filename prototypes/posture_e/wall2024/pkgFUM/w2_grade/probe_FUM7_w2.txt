@@ -1,0 +1,18 @@
+OK   control: the clean follow-up cures D3 #3
+OK   STATEMENT naming D2 #2 in its label: every other terra item reads as with the clean follow-up (fum kept; D3 #3 CURED)
+OK   STATEMENT naming D2 #2 in its label: summary equal; every audit block except the asked D3 #3 equal to the clean follow-up (D3 #3 block differs: its own answer text, by design)
+OK   RESPONSE for K-S3 #1 and #2 (not asked): every other terra item reads as with the clean follow-up (fum kept; D3 #3 CURED)
+OK   RESPONSE for K-S3 #1 and #2 (not asked): summary equal; every audit block except the asked D3 #3 equal to the clean follow-up
+OK   CORRECTED lines and RETRACTED: every other terra item reads as with the clean follow-up (fum kept; D3 #3 CURED)
+OK   CORRECTED lines and RETRACTED: summary equal; every audit block except the asked D3 #3 equal to the clean follow-up
+OK   inline CORRECTED after the pipe: every other terra item reads as with the clean follow-up (fum kept; D3 #3 CURED)
+OK   inline CORRECTED after the pipe: summary equal; every audit block except the asked D3 #3 equal to the clean follow-up (D3 #3 block differs: its own answer text, by design)
+OK   a K-RUL card for an unasked keystone and a pair: every other terra item reads as with the clean follow-up (fum kept; D3 #3 CURED)
+OK   a K-RUL card for an unasked keystone and a pair: summary equal; every audit block except the asked D3 #3 equal to the clean follow-up
+OK   two answers for D3 #3, the second naming D2 #2: every other terra item reads as with the clean follow-up (fum kept; D3 #3 CURED)
+OK   two answers for D3 #3, the second naming D2 #2: summary equal; every audit block except the asked D3 #3 equal to the clean follow-up
+OK   label naming D3 #3 with D2 #2 first: every other terra item reads as with the clean follow-up (fum kept; D3 #3 CURED)
+OK   label naming D3 #3 with D2 #2 first: summary equal; every audit block except the asked D3 #3 equal to the clean follow-up
+OK   fenced json reasoning wrapper: every other terra item reads as with the clean follow-up (fum kept; D3 #3 CURED)
+OK   fenced json reasoning wrapper: summary equal; every audit block except the asked D3 #3 equal to the clean follow-up
+TOTAL 17 OK, 0 FAIL
