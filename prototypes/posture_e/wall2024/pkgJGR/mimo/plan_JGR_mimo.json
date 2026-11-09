@@ -1,5 +1,5 @@
 {
- "base": "/mnt/project-files/wall2024/fetchback_live_s70.json",
+ "base": "/mnt/project-files/wall2024/fetchback_live_s71.json",
  "nodes": {
   "Init Seats": {
    "before": "717ed6aebedc",
@@ -12,8 +12,8 @@
    "edits": 2
   },
   "Panel Build": {
-   "before": "1589ccee3cc1",
-   "after": "97b002b854e7",
+   "before": "40a89f70b6d7",
+   "after": "fdc42c4b0ee4",
    "edits": 1
   },
   "Reserve Build": {
