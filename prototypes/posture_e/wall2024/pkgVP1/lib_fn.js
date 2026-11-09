@@ -6,6 +6,8 @@
    CHALLENGER'S UNSUPPORTED-L4 PREMISES list that closes [CR3] presses the challenger, entry j against Cj (as pkgD38 reads it). Only a verse the ledger counts as a
    proven press is used (pwList keys). ENFORCED (GATE_STATUS 'ANSWER OPEN'): raised at the gate after the send-back, cured by a change after which it is no longer raised. */
 function gateAnsOpen2024(T,R){const out=[];if(!R||typeof R!=='object'||typeof pwList!=='function')return out;const P=rcLines(T);const U=s=>String(s==null?'':s).toUpperCase();const C={};
+ /* stacked on pkgCEC (W1 3755): a link broken by a confirmed closing contradiction is BROKEN for every judge whatever the judge's text says, so its collision lines are read here as the engine will set them */
+ const CB=(()=>{try{return typeof cecBroken2024==='function'?cecBroken2024():[];}catch(e){return [];}})();const eg=z=>{const q=U(z.link).match(/^D(\d+)\s+VS\.?\s+C(\d+)$/);if(q)for(const b of CB){if(b.side==='DEFENDER'&&+q[1]===b.link)return 'DEFENDER LINK BROKEN';if(b.side==='CHALLENGER'&&+q[2]===b.link)return 'CHALLENGER LINK BROKEN';}return z.grade;};
  const PL=sd=>{if(sd in C)return C[sd];let v=null;try{const a=pwList(R,sd);if(a){const t=String(R[PW_ROUND[sd]]||'');let i=-1;for(const m of t.matchAll(pwHead(sd)))i=m.index;
    const its=i<0?[]:t.slice(i).split(/\n(?=\s*\**\s*(?:\d+[.)]\s|LINK\s+(?:\d+|none)\s*:))/i).filter(x=>/^\s*\**\s*(?:\d+[.)]\s|LINK\s+(?:\d+|none)\s*:)/i.test(x));
    if(its.length===a.length)v=a.map((p,k)=>{const h=String(its[k]).match(/^\s*\**\s*(?:\d+[.)]\s*)?\**\s*LINK\s+(\d+)\s*:/i);return {keys:p.keys,link:h?+h[1]:(sd==='CHALLENGER'?p.n:null)};});}}catch(e){v=null;}return C[sd]=v;};
@@ -20,7 +22,7 @@ function gateAnsOpen2024(T,R){const out=[];if(!R||typeof R!=='object'||typeof pw
   const links=[...new Set(L.filter(p=>p.link!=null&&[...K].some(k=>p.keys.has(k))).map(p=>p.link))];
   for(const n of links){const id=(side==='DEFENDER'?'D':'C')+n;const key='ANSWER OPEN|'+U(ref)+'|'+rd+'|'+id;if(seen.has(key))continue;
    const mine=P.col.filter(z=>{const q=U(z.link).match(/^D(\d+)\s+VS\.?\s+C(\d+)$/);return !!q&&+(side==='DEFENDER'?q[1]:q[2])===n;});
-   if(!mine.length||mine.some(z=>z.grade===side+' LINK BROKEN'))continue;const open=mine.filter(z=>z.grade==='UNDERDETERMINED');if(!open.length)continue;seen.add(key);
+   if(!mine.length||mine.some(z=>eg(z)===side+' LINK BROKEN'))continue;const open=mine.filter(z=>eg(z)==='UNDERDETERMINED');if(!open.length)continue;seen.add(key);
    out.push({key,why:'your ANSWER CHECK on '+ref+' ['+rd+'] grades the answer '+g+', and an answer that MISSES or FAILS leaves the witness unanswered (md_notes_rulings 372). The list that closes ['+PW_ROUND[side]+'] carries '+ref+' as a proven press against '+(side==='DEFENDER'?'LINK '+n+' ('+id+')':'the challenger\'s premise '+n+' ('+id+')')+', and a proven press left unanswered is a BROKEN ground (ruling 392); yet no '+id+' collision line is graded '+side+' LINK BROKEN: '+open.map(z=>z.link).join(', ')+' '+(open.length>1?'are':'is')+' graded UNDERDETERMINED. Change one of these lines so they agree.',lines:[raw.trim()].concat(open.map(z=>z.raw))});}}
  return out;}
 /* pkgVP1: the BROKEN way out of an E-GATE M item. The answer was given and graded MISSES or FAILS, so the judge "may still find that answer MISSES and grade the link

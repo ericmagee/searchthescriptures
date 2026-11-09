@@ -1,5 +1,5 @@
 // pkgVP1 probe (W3). node pkgVP1/probe_VP1.cjs [strip folder]   Replays the gate on the stored outputs of run 34108 and hand-written gate replies.
-const fs=require('fs'),path=require('path');const W=path.resolve(__dirname,'..');const H=require('./harness.cjs');const S=process.argv[2]||'pkgLIB/strip_VP1';const RUN='34108';
+const fs=require('fs'),path=require('path');const W=path.resolve(__dirname,'..');const H=require('./harness.cjs');const S=process.argv[2]||'pkgLIB/strip_VP1_s84';const RUN='34108';
 let ok=0,bad=0;const T=(c,m)=>{if(c)ok++;else bad++;console.log((c?'OK   ':'FAIL ')+m);};
 const src=n=>fs.readFileSync(path.join(W,S,'patched',n),'utf8');
 (async()=>{

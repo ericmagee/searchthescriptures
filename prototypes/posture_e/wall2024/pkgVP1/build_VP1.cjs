@@ -5,7 +5,7 @@
 const fs=require('fs'),path=require('path'),cr=require('crypto');const W=path.resolve(__dirname,'..');const V=require('./vp1_lib.cjs');
 const die=m=>{console.error('BUILD REFUSED: '+m);process.exit(1);};const h=s=>cr.createHash('sha256').update(s).digest('hex').slice(0,12);
 const sub=(s,a,b,what)=>{const n=s.split(a).length-1;if(n!==1)die(what+': '+n+' hits for '+JSON.stringify(a.slice(0,90)));return s.split(a).join(b);};
-const BASE=process.env.BASE||'strip_SJR';const mode=process.argv[2];
+const BASE=process.env.BASE||'strip_SJR';const STRIP=process.env.STRIP||'strip_VP1',LIBP=process.env.LIBP||'pkgLIB_VP1',TAG=process.env.TAG||'s83',NODES=+(process.env.NODES||394); /* restack: BASE=strip_CEC STRIP=strip_VP1_s84 LIBP=pkgLIB_VP1_s84 TAG=s84 NODES=402 FB=<live fetch-back> */const mode=process.argv[2];
 const A1="function gatePromptText2024(body){";
 const A2="const GATE_STATUS={'CONTRADICTION':'LIVE','NOT APPLIED':'LIVE','RESULT DIFFERS':'LIVE','ANSWER GROUND':'LIVE','RULE':'LIVE'};";
 const B2="const GATE_STATUS={'CONTRADICTION':'LIVE','NOT APPLIED':'LIVE','RESULT DIFFERS':'LIVE','ANSWER GROUND':'LIVE','RULE':'LIVE','ANSWER OPEN':'LIVE'}; /* pkgVP1 */";
@@ -16,7 +16,7 @@ const A5=" const wd2299=new Set(G.filter(x=>x.kind==='CONTRADICTION'&&/^E-APPLY\
 const A6="+(G.items.some(x=>x.src==='E-GATE B')?'\\n\\nAn E-GATE B item (ANSWER GROUND) may instead be answered DIFFERENT POINT";
 const PATH_OF={'Gate_Build.js':'Send Back Record','Alt_Gate_Build.js':'Alt Send Back Record','R2_Alt_Gate_Build.js':'R2 Alt Send Back Record'};
 if(mode==='strip'){
- const A=W+'/pkgLIB/'+BASE,B=W+'/pkgLIB/strip_VP1';if(fs.existsSync(B))die(B+' exists');fs.mkdirSync(B+'/patched',{recursive:true});const plan={base:'pkgLIB/'+BASE,library:{}};
+ const A=W+'/pkgLIB/'+BASE,B=W+'/pkgLIB/'+STRIP;if(fs.existsSync(B))die(B+' exists');fs.mkdirSync(B+'/patched',{recursive:true});const plan={base:'pkgLIB/'+BASE,library:{}};
  for(const f of fs.readdirSync(A+'/patched').filter(f=>f.endsWith('.js')).sort()){const s0=fs.readFileSync(A+'/patched/'+f,'utf8');let s=s0;const did=[];
   if(s.includes('function gateItems2024(')){
    for(const need of ['function pwList(','const PW_ROUND=','const pwHead=','function __acRead(','function rcLines(','function ciKeys('])if(!s.includes(need)&&!s.includes(need.replace('function ','const ').replace('(','=')))die(f+': lacks '+need);
@@ -35,12 +35,12 @@ if(mode==='strip'){
   new Function('$','$input','return (async()=>{\n'+s+'\n})();');
   fs.writeFileSync(B+'/patched/'+f,s);plan.library[f]={base:h(s0),patched:h(s),changes:did};}
  const n=Object.values(plan.library).filter(x=>x.changes.length).length;
- fs.writeFileSync(__dirname+'/plan_VP1.json',JSON.stringify(plan,null,1)+'\n');console.log('strip_VP1: '+Object.keys(plan.library).length+' files, '+n+' changed: '+Object.entries(plan.library).filter(e=>e[1].changes.length).map(e=>e[0]+' ['+e[1].changes.join(', ')+']').join('; '));
+ fs.writeFileSync(__dirname+'/plan_VP1'+(TAG==='s83'?'':'_'+TAG)+'.json',JSON.stringify(plan,null,1)+'\n');console.log('strip_VP1: '+Object.keys(plan.library).length+' files, '+n+' changed: '+Object.entries(plan.library).filter(e=>e[1].changes.length).map(e=>e[0]+' ['+e[1].changes.join(', ')+']').join('; '));
 }else if(mode==='parent'){
- const FB=process.env.FB||'/mnt/project-files/wall2024/fetchback_live_s83.json';let d=JSON.parse(fs.readFileSync(FB,'utf8'));d=d.data||d;d=d.workflow||d;const P=W+'/pkgLIB_VP1/patched';if(!fs.existsSync(P))die('pack first');
- const by={};d.nodes.forEach(n=>by[n.name]=n);if(d.nodes.length!==394)die('base has '+d.nodes.length+' nodes, expected 394 (live s83)');let lib=0;
+ const FB=process.env.FB||'/mnt/project-files/wall2024/fetchback_live_s83.json';let d=JSON.parse(fs.readFileSync(FB,'utf8'));d=d.data||d;d=d.workflow||d;const P=W+'/'+LIBP+'/patched';if(!fs.existsSync(P))die('pack first');
+ const by={};d.nodes.forEach(n=>by[n.name]=n);if(d.nodes.length!==NODES)die('base has '+d.nodes.length+' nodes, expected '+NODES+' (live '+TAG+')');let lib=0;
  for(const f of fs.readdirSync(P).filter(f=>f.endsWith('.js'))){const nm=f.replace(/\.js$/,'').replace(/_/g,' ');const n=by[nm];if(!n)die('no node '+nm);const c=fs.readFileSync(P+'/'+f,'utf8');if(n.parameters.jsCode!==c){n.parameters.jsCode=c;lib++;}}
- for(const [nm,f] of [['Alternate Build','Alternate_Build.js'],['Early Alternate Build','Early_Alternate_Build.js']]){const c=fs.readFileSync(W+'/pkgLIB_VP1/e4_rebase/'+f,'utf8');if(by[nm].parameters.jsCode!==c){by[nm].parameters.jsCode=c;lib++;}}
+ for(const [nm,f] of [['Alternate Build','Alternate_Build.js'],['Early Alternate Build','Early_Alternate_Build.js']]){const c=fs.readFileSync(W+'/'+LIBP+'/e4_rebase/'+f,'utf8');if(by[nm].parameters.jsCode!==c){by[nm].parameters.jsCode=c;lib++;}}
  // the three send-back record nodes: the cure reading written to cure_status (E-ANS, E-PREM, E-OOR), record-only
  const SBE=fs.readFileSync(__dirname+'/sbr_edit.js','utf8'),SBF=fs.readFileSync(__dirname+'/sbr_fn.js','utf8');
  const E1="else if(it.b7&&__ec&&__ec.status==='CURED'&&rows[rows.length-1].cure_status!=='UNCURED')rows[rows.length-1].cure_status='CURED';});});";
@@ -63,6 +63,6 @@ if(mode==='strip'){
   d.nodes.push(BU,IF,CA,RE);added.push(...NEW);
   K[SBR]={main:[L(NEW[0])]};K[NEW[0]]={main:[L(NEW[1])]};K[NEW[1]]={main:[L(NEW[2]),L(NEW[3])]};K[NEW[2]]={main:[L(NEW[3])]};K[NEW[3]]={main:[L(GB)]};}
  if(by['Judge Enforcer Build'].typeVersion!==2&&by['Send Back Record'].typeVersion!==2)console.log('NOTE: code node typeVersion on live is '+by['Send Back Record'].typeVersion);
- fs.writeFileSync(__dirname+'/parent_s83_VP1.json',JSON.stringify({nodes:d.nodes,connections:K,settings:d.settings},null,1));
- console.log('parent_s83_VP1.json: '+d.nodes.length+' nodes (+12: '+added.join(', ')+'); library and stub nodes changed '+lib+'; 3 send-back record nodes edited; each path: Send Back Record -> Reread Build -> Reread Needed? -> (true) Reread Call deepseek -> Reread Record / (false) Reread Record -> Gate Build');
+ fs.writeFileSync(__dirname+'/parent_'+TAG+'_VP1.json',JSON.stringify({nodes:d.nodes,connections:K,settings:d.settings},null,1));
+ console.log('parent_'+TAG+'_VP1.json: '+d.nodes.length+' nodes (+12: '+added.join(', ')+'); library and stub nodes changed '+lib+'; 3 send-back record nodes edited; each path: Send Back Record -> Reread Build -> Reread Needed? -> (true) Reread Call deepseek -> Reread Record / (false) Reread Record -> Gate Build');
 }else die('mode strip | parent');

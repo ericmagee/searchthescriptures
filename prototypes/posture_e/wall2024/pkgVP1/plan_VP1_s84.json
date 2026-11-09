@@ -1,0 +1,195 @@
+{
+ "base": "pkgLIB/strip_CEC",
+ "library": {
+  "Alt_Gate_Build.js": {
+   "base": "cce1e7e96da9",
+   "patched": "749da02c2b83",
+   "changes": [
+    "gateItems2024",
+    "gateCure2024",
+    "gate message",
+    "PASS by name"
+   ]
+  },
+  "Alt_Gate_Record.js": {
+   "base": "5f1e424310cf",
+   "patched": "7de03293756f",
+   "changes": [
+    "gateItems2024",
+    "gateCure2024"
+   ]
+  },
+  "Alternate_Build.js": {
+   "base": "e142dcbfca19",
+   "patched": "e142dcbfca19",
+   "changes": []
+  },
+  "Alternate_Cure_Build.js": {
+   "base": "16fb07ce1e09",
+   "patched": "16fb07ce1e09",
+   "changes": []
+  },
+  "Alternate_Cure_Normalize.js": {
+   "base": "3017127a57cd",
+   "patched": "3017127a57cd",
+   "changes": []
+  },
+  "Alternate_Merge_1.js": {
+   "base": "b5260bb7b357",
+   "patched": "2b48e80dd164",
+   "changes": [
+    "gateItems2024",
+    "gateCure2024",
+    "log"
+   ]
+  },
+  "Alternate_Merge_Seat.js": {
+   "base": "eefb579ab7e1",
+   "patched": "d35e79925151",
+   "changes": [
+    "gateItems2024",
+    "gateCure2024",
+    "log"
+   ]
+  },
+  "Alternate_Payloads.js": {
+   "base": "62012ea0b123",
+   "patched": "62012ea0b123",
+   "changes": []
+  },
+  "Cure_Build.js": {
+   "base": "2c7422eabc5e",
+   "patched": "2c7422eabc5e",
+   "changes": []
+  },
+  "Cure_Check.js": {
+   "base": "1d6ffb92f09a",
+   "patched": "1d6ffb92f09a",
+   "changes": []
+  },
+  "Cure_Normalize.js": {
+   "base": "6c04859d6ba8",
+   "patched": "6c04859d6ba8",
+   "changes": []
+  },
+  "Extract_Independent_Verdict.js": {
+   "base": "2958ec9f484a",
+   "patched": "2958ec9f484a",
+   "changes": []
+  },
+  "Gate_Build.js": {
+   "base": "5524aa2ba85e",
+   "patched": "c513971a3115",
+   "changes": [
+    "gateItems2024",
+    "gateCure2024",
+    "gate message",
+    "PASS by name"
+   ]
+  },
+  "Gate_Record.js": {
+   "base": "33a3d5c374c4",
+   "patched": "ead0b623fbad",
+   "changes": [
+    "gateItems2024",
+    "gateCure2024"
+   ]
+  },
+  "Panel_Cure_Build_1.js": {
+   "base": "0d0d9233b81f",
+   "patched": "0d0d9233b81f",
+   "changes": []
+  },
+  "Panel_Cure_Build_2.js": {
+   "base": "dc3a71efff3b",
+   "patched": "dc3a71efff3b",
+   "changes": []
+  },
+  "Panel_Cure_Build_3.js": {
+   "base": "e43decff8707",
+   "patched": "e43decff8707",
+   "changes": []
+  },
+  "Panel_Cure_Check.js": {
+   "base": "1d360a7bb269",
+   "patched": "1d360a7bb269",
+   "changes": []
+  },
+  "Panel_Cure_Normalize_1.js": {
+   "base": "71d34171c74f",
+   "patched": "71d34171c74f",
+   "changes": []
+  },
+  "Panel_Cure_Normalize_2.js": {
+   "base": "5a3204e445d7",
+   "patched": "5a3204e445d7",
+   "changes": []
+  },
+  "Panel_Cure_Normalize_3.js": {
+   "base": "57cc5848c083",
+   "patched": "57cc5848c083",
+   "changes": []
+  },
+  "Panel_Payloads.js": {
+   "base": "f5c8b21809be",
+   "patched": "f5c8b21809be",
+   "changes": []
+  },
+  "R2_Alt_Gate_Build.js": {
+   "base": "9c4161451b23",
+   "patched": "bc16a6560c90",
+   "changes": [
+    "gateItems2024",
+    "gateCure2024",
+    "gate message",
+    "PASS by name"
+   ]
+  },
+  "R2_Alt_Gate_Record.js": {
+   "base": "9afd2fb19fe9",
+   "patched": "66c3206ee6f5",
+   "changes": [
+    "gateItems2024",
+    "gateCure2024"
+   ]
+  },
+  "R2_Alternate_Build.js": {
+   "base": "b22753c5fd13",
+   "patched": "b22753c5fd13",
+   "changes": []
+  },
+  "R2_Alternate_Cure_Build.js": {
+   "base": "58e7dc898726",
+   "patched": "58e7dc898726",
+   "changes": []
+  },
+  "R2_Alternate_Cure_Normalize.js": {
+   "base": "89eec2109ccd",
+   "patched": "89eec2109ccd",
+   "changes": []
+  },
+  "R2_Alternate_Merge.js": {
+   "base": "cffb6e6b35fd",
+   "patched": "70eb2e27a256",
+   "changes": [
+    "gateItems2024",
+    "gateCure2024",
+    "log"
+   ]
+  },
+  "R2_Alternate_Merge_Seat.js": {
+   "base": "1f39678adebb",
+   "patched": "8c008180defd",
+   "changes": [
+    "gateItems2024",
+    "gateCure2024",
+    "log"
+   ]
+  },
+  "R2_Alternate_Payloads.js": {
+   "base": "f49ebac3cf29",
+   "patched": "f49ebac3cf29",
+   "changes": []
+  }
+ }
+}

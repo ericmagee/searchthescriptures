@@ -1,0 +1,1143 @@
+gate/replay: base pkgLIB/strip_CEC, cand pkgLIB/strip_VP1_s84, fetch-back fetchback_live_s84.json, 30 library nodes, 47 saved runs, 12 near-miss cases, time limit 60000 ms per node run
+   target run 33218 Gate Build: 342 changed text line(s) match allow_lines
+   target run 33218 Gate Record E-GATE chatgpt CONTRADICTION: sid "G1" -> "G2"; line "RULING -- D4 vs C4 -- DEFENDER LINK BROKEN" -> "ANSWER CHECK: Ezra 2:62 -- [CR3] -- MEANS: \"a reckoning ca; to "CHALLENGE STANDING: SELF-SUPPORTED -- L=6 c=0 -- All six re -> "CHALLENGER CONCEDED LINKS: 0 -- Premises 1, 2, 3, 4, 5, and; why "DR3 explicitly explains its retained reading with \"The cau -> "DR3 expressly narrows premise 6 to \"The house of David the
+   target run 33218 Gate Record E-GATE gemini G1 CONTRADICTION (E-GATE D38): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment 
+   target run 33218 Gate Record NEW E-GATE gemini G2 CONTRADICTION (E-GATE M) UNCURED
+   target run 33218 Gate Record NEW E-GATE gemini G3 CONTRADICTION (E-GATE M) UNCURED
+   target run 33218 Gate Record NEW E-GATE gemini G4 CONTRADICTION (E-GATE M) UNCURED
+   target run 33218 Gate Record NEW E-GATE gemini G5 CONTRADICTION (E-GATE M) UNCURED
+   target run 33218 Gate Record NEW E-GATE gemini G6 CONTRADICTION (E-GATE M) UNCURED
+   target run 33218 Gate Record NEW E-GATE gemini G7 CONTRADICTION (E-GATE M) UNCURED
+   target run 33218 Gate Record NEW E-GATE gemini G8 CONTRADICTION (E-GATE M) UNCURED
+   target run 33218 Gate Record NEW E-GATE gemini G9 CONTRADICTION (E-GATE M) UNCURED
+   target run 33218 Gate Record NEW E-GATE gemini G10 CONTRADICTION (E-GATE M) UNCURED
+   target run 33218 Gate Record NEW E-GATE gemini G11 CONTRADICTION (E-GATE M) UNCURED
+   target run 33218 Gate Record NEW E-GATE gemini G12 CONTRADICTION (E-GATE M) UNCURED
+   target run 33218 Gate Record NEW E-GATE gemini G13 CONTRADICTION (E-GATE M) UNCURED
+   target run 33218 Gate Record NEW E-GATE gemini G14 CONTRADICTION (E-GATE M) UNCURED
+   target run 33218 Gate Record NEW E-GATE gemini G15 CONTRADICTION (E-GATE M) UNCURED
+   target run 33218 Gate Record NEW E-GATE gemini G16 CONTRADICTION (E-GATE M) UNCURED
+   target run 33218 Gate Record NEW E-GATE gemini G17 CONTRADICTION (E-GATE M) UNCURED
+   target run 33218 Gate Record E-GATE chatgpt G1 CONTRADICTION (E-GATE D38): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment 
+   target run 33218 Gate Record NEW E-GATE chatgpt G2 CONTRADICTION (E-GATE M) CURED
+   target run 33218 Gate Record: 112 changed text line(s) match allow_lines
+   target run 33218 Alternate Merge Seat E-GATE gemini G1 CONTRADICTION (E-GATE D38): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment 
+   target run 33218 Alternate Merge Seat NEW E-GATE gemini G2 CONTRADICTION (E-GATE M) UNCURED
+   target run 33218 Alternate Merge Seat NEW E-GATE gemini G3 CONTRADICTION (E-GATE M) UNCURED
+   target run 33218 Alternate Merge Seat NEW E-GATE gemini G4 CONTRADICTION (E-GATE M) UNCURED
+   target run 33218 Alternate Merge Seat NEW E-GATE gemini G5 CONTRADICTION (E-GATE M) UNCURED
+   target run 33218 Alternate Merge Seat NEW E-GATE gemini G6 CONTRADICTION (E-GATE M) UNCURED
+   target run 33218 Alternate Merge Seat NEW E-GATE gemini G7 CONTRADICTION (E-GATE M) UNCURED
+   target run 33218 Alternate Merge Seat NEW E-GATE gemini G8 CONTRADICTION (E-GATE M) UNCURED
+   target run 33218 Alternate Merge Seat NEW E-GATE gemini G9 CONTRADICTION (E-GATE M) UNCURED
+   target run 33218 Alternate Merge Seat NEW E-GATE gemini G10 CONTRADICTION (E-GATE M) UNCURED
+   target run 33218 Alternate Merge Seat NEW E-GATE gemini G11 CONTRADICTION (E-GATE M) UNCURED
+   target run 33218 Alternate Merge Seat NEW E-GATE gemini G12 CONTRADICTION (E-GATE M) UNCURED
+   target run 33218 Alternate Merge Seat NEW E-GATE gemini G13 CONTRADICTION (E-GATE M) UNCURED
+   target run 33218 Alternate Merge Seat NEW E-GATE gemini G14 CONTRADICTION (E-GATE M) UNCURED
+   target run 33218 Alternate Merge Seat NEW E-GATE gemini G15 CONTRADICTION (E-GATE M) UNCURED
+   target run 33218 Alternate Merge Seat NEW E-GATE gemini G16 CONTRADICTION (E-GATE M) UNCURED
+   target run 33218 Alternate Merge Seat NEW E-GATE gemini G17 CONTRADICTION (E-GATE M) UNCURED
+   target run 33218 Alternate Merge Seat E-GATE chatgpt G1 CONTRADICTION (E-GATE D38): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment 
+   target run 33218 Alternate Merge Seat NEW E-GATE chatgpt G2 CONTRADICTION (E-GATE M) CURED
+   target run 33218 Alternate Merge Seat NEW E-APPLY chatgpt APPLIED S1, S2, S3, S4, S5, S6, S7, S8, S9, S10, S11, S12, S13, S14, S15, S16, S17, S18, S19, G2, S22, S27, G1 
+   target run 33218 Alternate Merge Seat GONE E-APPLY chatgpt APPLIED S1, S2, S3, S4, S5, S6, S7, S8, S9, S10, S11, S12, S13, S14, S15, S16, S17, S18, S19, S26, S22, S27, G1 
+   target run 33218 Alternate Merge Seat: 28 changed text line(s) match allow_lines
+   target run 33222 Alt Gate Build: 200 changed text line(s) match allow_lines
+   target run 33222 Alt Gate Record E-GATE grok G1 NOT APPLIED (E-APPLY S35): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment 
+   target run 33222 Alt Gate Record NEW E-GATE grok G8 CONTRADICTION (E-GATE M) UNCURED
+   target run 33222 Alt Gate Record NEW E-GATE grok G9 CONTRADICTION (E-GATE M) UNCURED
+   target run 33222 Alt Gate Record NEW E-GATE grok G10 CONTRADICTION (E-GATE M) UNCURED
+   target run 33222 Alt Gate Record NEW E-GATE grok G11 CONTRADICTION (E-GATE M) UNCURED
+   target run 33222 Alt Gate Record NEW E-GATE grok G12 CONTRADICTION (E-GATE M) UNCURED
+   target run 33222 Alt Gate Record NEW E-GATE grok G13 CONTRADICTION (E-GATE M) UNCURED
+   target run 33222 Alt Gate Record NEW E-GATE grok G14 CONTRADICTION (E-GATE M) UNCURED
+   target run 33222 Alt Gate Record NEW E-GATE grok G15 CONTRADICTION (E-GATE M) UNCURED
+   target run 33222 Alt Gate Record NEW E-GATE grok G16 CONTRADICTION (E-GATE M) UNCURED
+   target run 33222 Alt Gate Record NEW E-GATE grok G17 CONTRADICTION (E-GATE M) UNCURED
+   target run 33222 Alt Gate Record: 66 changed text line(s) match allow_lines
+   target run 33222 Gate Build: 103 changed text line(s) match allow_lines
+   target run 33222 Gate Record E-GATE gemini G1 NOT APPLIED (E-APPLY S14): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment 
+   target run 33222 Gate Record NEW E-GATE gemini G6 CONTRADICTION (E-GATE M) UNCURED
+   target run 33222 Gate Record NEW E-GATE gemini G7 CONTRADICTION (E-GATE M) UNCURED
+   target run 33222 Gate Record NEW E-GATE gemini G8 CONTRADICTION (E-GATE M) UNCURED
+   target run 33222 Gate Record NEW E-GATE gemini G9 CONTRADICTION (E-GATE M) UNCURED
+   target run 33222 Gate Record NEW E-GATE gemini G10 CONTRADICTION (E-GATE M) UNCURED
+   target run 33222 Gate Record: 36 changed text line(s) match allow_lines
+   target run 33222 Alternate Merge Seat E-GATE gemini G1 NOT APPLIED (E-APPLY S14): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment 
+   target run 33222 Alternate Merge Seat NEW E-GATE gemini G6 CONTRADICTION (E-GATE M) UNCURED
+   target run 33222 Alternate Merge Seat NEW E-GATE gemini G7 CONTRADICTION (E-GATE M) UNCURED
+   target run 33222 Alternate Merge Seat NEW E-GATE gemini G8 CONTRADICTION (E-GATE M) UNCURED
+   target run 33222 Alternate Merge Seat NEW E-GATE gemini G9 CONTRADICTION (E-GATE M) UNCURED
+   target run 33222 Alternate Merge Seat NEW E-GATE gemini G10 CONTRADICTION (E-GATE M) UNCURED
+   target run 33222 Alternate Merge Seat: 9 changed text line(s) match allow_lines
+   target run 33249 Alt Gate Build: 77 changed text line(s) match allow_lines
+   target run 33249 Alt Gate Record NEW E-GATE grok G1 CONTRADICTION (E-GATE M) UNCURED
+   target run 33249 Alt Gate Record NEW E-GATE grok G2 CONTRADICTION (E-GATE M) UNCURED
+   target run 33249 Alt Gate Record NEW E-GATE grok G3 CONTRADICTION (E-GATE M) UNCURED
+   target run 33249 Alt Gate Record: 28 changed text line(s) match allow_lines
+   target run 33249 Gate Build: 50 changed text line(s) match allow_lines
+   target run 33249 Gate Record E-GATE chatgpt G1 NOT APPLIED (E-APPLY S19): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment 
+   target run 33249 Gate Record NEW E-GATE chatgpt G2 CONTRADICTION (E-GATE M) UNCURED
+   target run 33249 Gate Record E-GATE sol G1 NOT APPLIED (E-APPLY S1): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment 
+   target run 33249 Gate Record NEW E-GATE sol G9 CONTRADICTION (E-GATE M) UNCURED
+   target run 33249 Gate Record: 24 changed text line(s) match allow_lines
+   target run 33249 Alternate Merge Seat E-GATE chatgpt G1 NOT APPLIED (E-APPLY S19): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment 
+   target run 33249 Alternate Merge Seat NEW E-GATE chatgpt G2 CONTRADICTION (E-GATE M) UNCURED
+   target run 33249 Alternate Merge Seat E-GATE sol G1 NOT APPLIED (E-APPLY S1): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment 
+   target run 33249 Alternate Merge Seat NEW E-GATE sol G9 CONTRADICTION (E-GATE M) UNCURED
+   target run 33249 Alternate Merge Seat: 8 changed text line(s) match allow_lines
+   target run 33261 Gate Build: 139 changed text line(s) match allow_lines
+   target run 33261 Gate Record E-GATE gemini G1 NOT APPLIED (E-APPLY S21): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment 
+   target run 33261 Gate Record NEW E-GATE gemini G13 CONTRADICTION (E-GATE M) UNCURED
+   target run 33261 Gate Record NEW E-GATE gemini G14 CONTRADICTION (E-GATE M) UNCURED
+   target run 33261 Gate Record NEW E-GATE gemini G15 CONTRADICTION (E-GATE M) UNCURED
+   target run 33261 Gate Record NEW E-GATE gemini G16 CONTRADICTION (E-GATE M) UNCURED
+   target run 33261 Gate Record NEW E-GATE gemini G17 CONTRADICTION (E-GATE M) UNCURED
+   target run 33261 Gate Record E-GATE chatgpt G1 NOT APPLIED (E-APPLY S30): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment 
+   target run 33261 Gate Record NEW E-GATE chatgpt G2 CONTRADICTION (E-GATE M) UNCURED
+   target run 33261 Gate Record: 48 changed text line(s) match allow_lines
+   target run 33261 Alternate Merge Seat E-GATE gemini G1 NOT APPLIED (E-APPLY S21): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment 
+   target run 33261 Alternate Merge Seat NEW E-GATE gemini G13 CONTRADICTION (E-GATE M) UNCURED
+   target run 33261 Alternate Merge Seat NEW E-GATE gemini G14 CONTRADICTION (E-GATE M) UNCURED
+   target run 33261 Alternate Merge Seat NEW E-GATE gemini G15 CONTRADICTION (E-GATE M) UNCURED
+   target run 33261 Alternate Merge Seat NEW E-GATE gemini G16 CONTRADICTION (E-GATE M) UNCURED
+   target run 33261 Alternate Merge Seat NEW E-GATE gemini G17 CONTRADICTION (E-GATE M) UNCURED
+   target run 33261 Alternate Merge Seat E-GATE chatgpt G1 NOT APPLIED (E-APPLY S30): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment 
+   target run 33261 Alternate Merge Seat NEW E-GATE chatgpt G2 CONTRADICTION (E-GATE M) UNCURED
+   target run 33261 Alternate Merge Seat: 10 changed text line(s) match allow_lines
+   target run 33299 Alt Gate Build: 44 changed text line(s) match allow_lines
+   target run 33299 Alt Gate Record E-GATE grok G1 RULE K-UNX (K re-read): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment 
+   target run 33299 Alt Gate Record NEW E-GATE grok G2 CONTRADICTION (E-GATE M) UNCURED
+   target run 33299 Alt Gate Record NEW E-GATE grok G3 CONTRADICTION (E-GATE M) UNCURED
+   target run 33299 Alt Gate Record: 20 changed text line(s) match allow_lines
+   target run 33299 Gate Build: 126 changed text line(s) match allow_lines
+   target run 33299 Gate Record NEW E-GATE gemini CONTRADICTION 
+   target run 33299 Gate Record NEW E-GATE gemini G1 CONTRADICTION (E-GATE M) UNCURED
+   target run 33299 Gate Record NEW E-GATE gemini G2 CONTRADICTION (E-GATE M) UNCURED
+   target run 33299 Gate Record NEW E-GATE gemini G3 CONTRADICTION (E-GATE M) UNCURED
+   target run 33299 Gate Record NEW E-GATE gemini G4 CONTRADICTION (E-GATE M) UNCURED
+   target run 33299 Gate Record NEW E-GATE gemini G5 CONTRADICTION (E-GATE M) UNCURED
+   target run 33299 Gate Record NEW E-GATE gemini G6 CONTRADICTION (E-GATE M) UNCURED
+   target run 33299 Gate Record NEW E-GATE gemini G7 CONTRADICTION (E-GATE M) UNCURED
+   target run 33299 Gate Record NEW E-GATE gemini NEW CONTRADICTION (E-GATE M) UNCURED
+   target run 33299 Gate Record: 55 changed text line(s) match allow_lines
+   target run 33299 Alternate Merge Seat NEW E-GATE gemini G1 CONTRADICTION (E-GATE M) UNCURED
+   target run 33299 Alternate Merge Seat NEW E-GATE gemini G2 CONTRADICTION (E-GATE M) UNCURED
+   target run 33299 Alternate Merge Seat NEW E-GATE gemini G3 CONTRADICTION (E-GATE M) UNCURED
+   target run 33299 Alternate Merge Seat NEW E-GATE gemini G4 CONTRADICTION (E-GATE M) UNCURED
+   target run 33299 Alternate Merge Seat NEW E-GATE gemini G5 CONTRADICTION (E-GATE M) UNCURED
+   target run 33299 Alternate Merge Seat NEW E-GATE gemini G6 CONTRADICTION (E-GATE M) UNCURED
+   target run 33299 Alternate Merge Seat NEW E-GATE gemini G7 CONTRADICTION (E-GATE M) UNCURED
+   target run 33299 Alternate Merge Seat NEW E-GATE gemini NEW CONTRADICTION (E-GATE M) UNCURED
+   target run 33299 Alternate Merge Seat NEW E-APPLY gemini APPLIED S1, S2, S3, S4, S5, S6, S7, S8, S9, S10, S11, S12, G1 
+   target run 33299 Alternate Merge Seat GONE E-APPLY gemini APPLIED S1, S2, S3, S4, S5, S6, S7, S8, S9, S10, S11, S12, S15 
+   target run 33299 Alternate Merge Seat: 18 changed text line(s) match allow_lines
+   target run 33345 Gate Build: 107 changed text line(s) match allow_lines
+   target run 33345 Gate Record E-GATE gemini G1 RESULT DIFFERS (E-APPLY S22): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment 
+   target run 33345 Gate Record NEW E-GATE gemini G3 CONTRADICTION (E-GATE M) UNCURED
+   target run 33345 Gate Record NEW E-GATE gemini G4 CONTRADICTION (E-GATE M) UNCURED
+   target run 33345 Gate Record NEW E-GATE gemini G5 CONTRADICTION (E-GATE M) UNCURED
+   target run 33345 Gate Record NEW E-GATE gemini G6 CONTRADICTION (E-GATE M) UNCURED
+   target run 33345 Gate Record E-GATE chatgpt G1 CONTRADICTION (E-GATE D38): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment 
+   target run 33345 Gate Record NEW E-GATE chatgpt G2 CONTRADICTION (E-GATE M) UNCURED
+   target run 33345 Gate Record: 42 changed text line(s) match allow_lines
+   target run 33345 Alternate Merge Seat E-GATE gemini G1 RESULT DIFFERS (E-APPLY S22): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment 
+   target run 33345 Alternate Merge Seat NEW E-GATE gemini G3 CONTRADICTION (E-GATE M) UNCURED
+   target run 33345 Alternate Merge Seat NEW E-GATE gemini G4 CONTRADICTION (E-GATE M) UNCURED
+   target run 33345 Alternate Merge Seat NEW E-GATE gemini G5 CONTRADICTION (E-GATE M) UNCURED
+   target run 33345 Alternate Merge Seat NEW E-GATE gemini G6 CONTRADICTION (E-GATE M) UNCURED
+   target run 33345 Alternate Merge Seat E-GATE chatgpt G1 CONTRADICTION (E-GATE D38): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment 
+   target run 33345 Alternate Merge Seat NEW E-GATE chatgpt G2 CONTRADICTION (E-GATE M) UNCURED
+   target run 33345 Alternate Merge Seat: 14 changed text line(s) match allow_lines
+   target run 33371 Alt Gate Record E-GATE grok G4 CONTRADICTION (E-GATE D38): cure_status "CURED" -> "UNCURED"; cure_reason "GATE CHANGE TO: D6 vs C2 (Ezra 2:59): UNDERDETERMINED -- re -> "GATE CHANGE TO: D6 vs C2 (Ezra 2:59): UNDERDETERMINED -- re
+   target run 33371 Alt Gate Record NEW E-GATE grok NEW CONTRADICTION (E-GATE M) UNCURED
+   target run 33371 Alt Gate Record: 11 changed text line(s) match allow_lines
+   target run 33371 Gate Build: 1188 changed text line(s) match allow_lines
+   target run 33371 Gate Record NEW E-GATE gemini CONTRADICTION 
+   target run 33371 Gate Record NEW E-GATE gemini G1 CONTRADICTION (E-GATE M) UNCURED
+   target run 33371 Gate Record NEW E-GATE gemini G2 CONTRADICTION (E-GATE M) CURED
+   target run 33371 Gate Record NEW E-GATE gemini G3 CONTRADICTION (E-GATE M) UNCURED
+   target run 33371 Gate Record E-GATE chatgpt G1 NOT APPLIED (E-APPLY S9): full_reply "{\n  \"verdict_tag\": \"BROKEN\",\n  \"defense_standing\":  -> "{\"verdict_tag\":\"HELD\",\"defense_standing\":\"SELF-SUPPO; response_line "\"reasoning\": \"GATE: G1 || KEEP || The challenger writes, -> "{\"verdicttag\":\"HELD\",\"defensestanding\":\"SELF-SUPPORT; cure_reason "GATE KEEP -- The challenger writes, 'The text's stated mean -> "GATE KEEP -- The original NARROWING CHECK already rules STA
+   target run 33371 Gate Record E-GATE chatgpt G2 NOT APPLIED (E-APPLY S19): response_line "GATE: G2 || CHANGE TO: CONCEDED LINKS: 1 -- Premise 5, LINK -> null; cure_status "CURED" -> "UNCURED"; cure_reason "GATE CHANGE TO: CONCEDED LINKS: 1 -- Premise 5, LINK 5: UNE -> "GATE NO ANSWER | ENGINE: the change moves premise 2 out of 
+   target run 33371 Gate Record E-GATE sol G1 NOT APPLIED (E-APPLY S1): full_reply "{\"verdict_tag\":\"HELD\",\"defense_standing\":\"SELF-SUPPO -> null; reply_error null -> "no reply"; response_line "{\"verdicttag\":\"HELD\",\"defensestanding\":\"SELF-SUPPORT -> null; cure_status "CURED" -> "UNCURED"; cure_reason "GATE KEEP -- The original NARROWING CHECK already rules STA -> "GATE NO REPLY | ENGINE: the flagged line is not in the judg
+   target run 33371 Gate Record GONE E-GATE chatgpt NOT APPLIED 
+   target run 33371 Gate Record: 46 changed text line(s) match allow_lines
+   target run 33371 Alternate Merge Seat NEW E-GATE gemini G1 CONTRADICTION (E-GATE M) UNCURED
+   target run 33371 Alternate Merge Seat NEW E-GATE gemini G2 CONTRADICTION (E-GATE M) CURED
+   target run 33371 Alternate Merge Seat NEW E-GATE gemini G3 CONTRADICTION (E-GATE M) UNCURED
+   target run 33371 Alternate Merge Seat E-GATE chatgpt G1 NOT APPLIED (E-APPLY S9): full_reply "{\n  \"verdict_tag\": \"BROKEN\",\n  \"defense_standing\":  -> "{\"verdict_tag\":\"HELD\",\"defense_standing\":\"SELF-SUPPO; response_line "\"reasoning\": \"GATE: G1 || KEEP || The challenger writes, -> "{\"verdicttag\":\"HELD\",\"defensestanding\":\"SELF-SUPPORT; cure_reason "GATE KEEP -- The challenger writes, 'The text's stated mean -> "GATE KEEP -- The original NARROWING CHECK already rules STA
+   target run 33371 Alternate Merge Seat E-GATE chatgpt G2 NOT APPLIED (E-APPLY S19): response_line "GATE: G2 || CHANGE TO: CONCEDED LINKS: 1 -- Premise 5, LINK -> null; cure_status "CURED" -> "UNCURED"; cure_reason "GATE CHANGE TO: CONCEDED LINKS: 1 -- Premise 5, LINK 5: UNE -> "GATE NO ANSWER | ENGINE: the change moves premise 2 out of 
+   target run 33371 Alternate Merge Seat E-GATE sol G1 NOT APPLIED (E-APPLY S1): full_reply "{\"verdict_tag\":\"HELD\",\"defense_standing\":\"SELF-SUPPO -> null; reply_error null -> "no reply"; response_line "{\"verdicttag\":\"HELD\",\"defensestanding\":\"SELF-SUPPORT -> null; cure_status "CURED" -> "UNCURED"; cure_reason "GATE KEEP -- The original NARROWING CHECK already rules STA -> "GATE NO REPLY | ENGINE: the flagged line is not in the judg
+   target run 33371 Alternate Merge Seat NEW E-APPLY gemini APPLIED S1, S2, S3, S4, S5, S6, G2, S10 
+   target run 33371 Alternate Merge Seat NEW E-APPLY chatgpt APPLIED S1, S2, S17, S18, S22, S23, S24, S25 
+   target run 33371 Alternate Merge Seat GONE E-APPLY gemini APPLIED S1, S2, S3, S4, S5, S6, S9, S10 
+   target run 33371 Alternate Merge Seat GONE E-APPLY chatgpt APPLIED S1, S2, S17, S18, S22, S23, S24, S25, G2 
+   target run 33371 Alternate Merge Seat: 59 changed text line(s) match allow_lines
+   target run 33411 Alt Gate Build: 46 changed text line(s) match allow_lines
+   target run 33411 Alt Gate Record E-GATE grok G1 CONTRADICTION (E-GATE D38): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment 
+   target run 33411 Alt Gate Record NEW E-GATE grok G4 CONTRADICTION (E-GATE M) UNCURED
+   target run 33411 Alt Gate Record NEW E-GATE grok G5 CONTRADICTION (E-GATE M) UNCURED
+   target run 33411 Alt Gate Record: 14 changed text line(s) match allow_lines
+   target run 33411 Gate Build: 258 changed text line(s) match allow_lines
+   target run 33411 Gate Record NEW E-GATE gemini G1 CONTRADICTION (E-GATE M) UNCURED
+   target run 33411 Gate Record NEW E-GATE gemini G2 CONTRADICTION (E-GATE M) UNCURED
+   target run 33411 Gate Record NEW E-GATE chatgpt G1 CONTRADICTION (E-GATE M) UNCURED
+   target run 33411 Gate Record NEW E-GATE chatgpt G2 CONTRADICTION (E-GATE M) UNCURED
+   target run 33411 Gate Record NEW E-GATE chatgpt G3 CONTRADICTION (E-GATE M) UNCURED
+   target run 33411 Gate Record NEW E-GATE chatgpt G4 CONTRADICTION (E-GATE M) UNCURED
+   target run 33411 Gate Record NEW E-GATE chatgpt G5 CONTRADICTION (E-GATE M) UNCURED
+   target run 33411 Gate Record NEW E-GATE chatgpt G6 CONTRADICTION (E-GATE M) UNCURED
+   target run 33411 Gate Record NEW E-GATE sol G1 CONTRADICTION (E-GATE M) UNCURED
+   target run 33411 Gate Record NEW E-GATE sol G2 CONTRADICTION (E-GATE M) UNCURED
+   target run 33411 Gate Record NEW E-GATE sol G3 CONTRADICTION (E-GATE M) UNCURED
+   target run 33411 Gate Record: 88 changed text line(s) match allow_lines
+   target run 33411 Alternate Merge Seat NEW E-GATE gemini G1 CONTRADICTION (E-GATE M) UNCURED
+   target run 33411 Alternate Merge Seat NEW E-GATE gemini G2 CONTRADICTION (E-GATE M) UNCURED
+   target run 33411 Alternate Merge Seat NEW E-GATE chatgpt G1 CONTRADICTION (E-GATE M) UNCURED
+   target run 33411 Alternate Merge Seat NEW E-GATE chatgpt G2 CONTRADICTION (E-GATE M) UNCURED
+   target run 33411 Alternate Merge Seat NEW E-GATE chatgpt G3 CONTRADICTION (E-GATE M) UNCURED
+   target run 33411 Alternate Merge Seat NEW E-GATE chatgpt G4 CONTRADICTION (E-GATE M) UNCURED
+   target run 33411 Alternate Merge Seat NEW E-GATE chatgpt G5 CONTRADICTION (E-GATE M) UNCURED
+   target run 33411 Alternate Merge Seat NEW E-GATE chatgpt G6 CONTRADICTION (E-GATE M) UNCURED
+   target run 33411 Alternate Merge Seat NEW E-GATE sol G1 CONTRADICTION (E-GATE M) UNCURED
+   target run 33411 Alternate Merge Seat NEW E-GATE sol G2 CONTRADICTION (E-GATE M) UNCURED
+   target run 33411 Alternate Merge Seat NEW E-GATE sol G3 CONTRADICTION (E-GATE M) UNCURED
+   target run 33411 Alternate Merge Seat: 11 changed text line(s) match allow_lines
+   target run 33430 Gate Build: 566 changed text line(s) match allow_lines
+   target run 33430 Gate Record NEW E-GATE gemini G1 CONTRADICTION (E-GATE M) UNCURED
+   target run 33430 Gate Record NEW E-GATE gemini G2 CONTRADICTION (E-GATE M) UNCURED
+   target run 33430 Gate Record NEW E-GATE gemini G3 CONTRADICTION (E-GATE M) UNCURED
+   target run 33430 Gate Record NEW E-GATE gemini G4 CONTRADICTION (E-GATE M) UNCURED
+   target run 33430 Gate Record NEW E-GATE gemini G5 CONTRADICTION (E-GATE M) UNCURED
+   target run 33430 Gate Record NEW E-GATE gemini G6 CONTRADICTION (E-GATE M) UNCURED
+   target run 33430 Gate Record E-GATE chatgpt G1 NOT APPLIED (E-APPLY S1): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment ; full_reply "{\n  \"verdict_tag\": \"BROKEN\",\n  \"defense_standing\":  -> null; reply_error null -> "no reply"; response_line "GATE: G1 || KEEP || The defender says, “I grant Joseph is o -> null; cure_status "CURED" -> "UNCURED"; cure_reason "GATE KEEP -- The defender says, “I grant Joseph is of David -> "GATE NO REPLY | ENGINE: the flagged line is not in the judg
+   target run 33430 Gate Record E-GATE chatgpt G2 NOT APPLIED (E-APPLY S2): reply_error null -> "no reply"; response_line "GATE: G2 || KEEP || The defender says, “I grant the title a -> null; cure_status "CURED" -> "UNCURED"; cure_reason "GATE KEEP -- The defender says, “I grant the title also app -> "GATE NO REPLY | ENGINE: the flagged line is not in the judg
+   target run 33430 Gate Record E-GATE chatgpt G3 NOT APPLIED (E-APPLY S3): reply_error null -> "no reply"; response_line "GATE: G3 || KEEP || The defender says, “I grant these verbs -> null; cure_status "CURED" -> "UNCURED"; cure_reason "GATE KEEP -- The defender says, “I grant these verbs are us -> "GATE NO REPLY | ENGINE: the flagged line is not in the judg
+   target run 33430 Gate Record NEW E-GATE chatgpt G4 CONTRADICTION (E-GATE M) UNCURED
+   target run 33430 Gate Record: 66 changed text line(s) match allow_lines
+   target run 33430 Alternate Merge Seat NEW E-GATE gemini G1 CONTRADICTION (E-GATE M) UNCURED
+   target run 33430 Alternate Merge Seat NEW E-GATE gemini G2 CONTRADICTION (E-GATE M) UNCURED
+   target run 33430 Alternate Merge Seat NEW E-GATE gemini G3 CONTRADICTION (E-GATE M) UNCURED
+   target run 33430 Alternate Merge Seat NEW E-GATE gemini G4 CONTRADICTION (E-GATE M) UNCURED
+   target run 33430 Alternate Merge Seat NEW E-GATE gemini G5 CONTRADICTION (E-GATE M) UNCURED
+   target run 33430 Alternate Merge Seat NEW E-GATE gemini G6 CONTRADICTION (E-GATE M) UNCURED
+   target run 33430 Alternate Merge Seat E-GATE chatgpt G1 NOT APPLIED (E-APPLY S1): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment ; full_reply "{\n  \"verdict_tag\": \"BROKEN\",\n  \"defense_standing\":  -> null; reply_error null -> "no reply"; response_line "GATE: G1 || KEEP || The defender says, “I grant Joseph is o -> null; cure_status "CURED" -> "UNCURED"; cure_reason "GATE KEEP -- The defender says, “I grant Joseph is of David -> "GATE NO REPLY | ENGINE: the flagged line is not in the judg
+   target run 33430 Alternate Merge Seat E-GATE chatgpt G2 NOT APPLIED (E-APPLY S2): reply_error null -> "no reply"; response_line "GATE: G2 || KEEP || The defender says, “I grant the title a -> null; cure_status "CURED" -> "UNCURED"; cure_reason "GATE KEEP -- The defender says, “I grant the title also app -> "GATE NO REPLY | ENGINE: the flagged line is not in the judg
+   target run 33430 Alternate Merge Seat E-GATE chatgpt G3 NOT APPLIED (E-APPLY S3): reply_error null -> "no reply"; response_line "GATE: G3 || KEEP || The defender says, “I grant these verbs -> null; cure_status "CURED" -> "UNCURED"; cure_reason "GATE KEEP -- The defender says, “I grant these verbs are us -> "GATE NO REPLY | ENGINE: the flagged line is not in the judg
+   target run 33430 Alternate Merge Seat NEW E-GATE chatgpt G4 CONTRADICTION (E-GATE M) UNCURED
+   target run 33430 Alternate Merge Seat: 15 changed text line(s) match allow_lines
+   target run 33442 Alt Gate Build: 58 changed text line(s) match allow_lines
+   target run 33442 Alt Gate Record NEW E-GATE grok G1 CONTRADICTION (E-GATE M) UNCURED
+   target run 33442 Alt Gate Record NEW E-GATE grok G2 CONTRADICTION (E-GATE M) UNCURED
+   target run 33442 Alt Gate Record: 22 changed text line(s) match allow_lines
+   target run 33442 Gate Build: 69 changed text line(s) match allow_lines
+   target run 33442 Gate Record E-GATE gemini G1 RESULT DIFFERS (E-APPLY S12): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment 
+   target run 33442 Gate Record NEW E-GATE gemini G2 CONTRADICTION (E-GATE M) UNCURED
+   target run 33442 Gate Record NEW E-GATE gemini G3 CONTRADICTION (E-GATE M) UNCURED
+   target run 33442 Gate Record E-GATE chatgpt G1 RULE K-G1 (K re-read): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment 
+   target run 33442 Gate Record NEW E-GATE chatgpt G4 CONTRADICTION (E-GATE M) UNCURED
+   target run 33442 Gate Record: 30 changed text line(s) match allow_lines
+   target run 33442 Alternate Merge Seat E-GATE gemini G1 RESULT DIFFERS (E-APPLY S12): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment 
+   target run 33442 Alternate Merge Seat NEW E-GATE gemini G2 CONTRADICTION (E-GATE M) UNCURED
+   target run 33442 Alternate Merge Seat NEW E-GATE gemini G3 CONTRADICTION (E-GATE M) UNCURED
+   target run 33442 Alternate Merge Seat E-GATE chatgpt G1 RULE K-G1 (K re-read): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment 
+   target run 33442 Alternate Merge Seat NEW E-GATE chatgpt G4 CONTRADICTION (E-GATE M) UNCURED
+   target run 33442 Alternate Merge Seat: 13 changed text line(s) match allow_lines
+   target run 33461 Alt Gate Build: 84 changed text line(s) match allow_lines
+   target run 33461 Alt Gate Record E-GATE grok G1 CONTRADICTION (E-GATE B): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment 
+   target run 33461 Alt Gate Record NEW E-GATE grok G5 CONTRADICTION (E-GATE M) UNCURED
+   target run 33461 Alt Gate Record NEW E-GATE grok G6 CONTRADICTION (E-GATE M) UNCURED
+   target run 33461 Alt Gate Record NEW E-GATE grok G7 CONTRADICTION (E-GATE M) UNCURED
+   target run 33461 Alt Gate Record NEW E-GATE grok G8 CONTRADICTION (E-GATE M) UNCURED
+   target run 33461 Alt Gate Record: 30 changed text line(s) match allow_lines
+   target run 33461 Gate Build: 25 changed text line(s) match allow_lines
+   target run 33461 Gate Record E-GATE gemini G1 CONTRADICTION (E-GATE B): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment 
+   target run 33461 Gate Record NEW E-GATE gemini G2 CONTRADICTION (E-GATE M) UNCURED
+   target run 33461 Gate Record: 12 changed text line(s) match allow_lines
+   target run 33461 Alternate Merge Seat E-GATE gemini G1 CONTRADICTION (E-GATE B): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment 
+   target run 33461 Alternate Merge Seat NEW E-GATE gemini G2 CONTRADICTION (E-GATE M) UNCURED
+   target run 33461 Alternate Merge Seat: 8 changed text line(s) match allow_lines
+   target run 33482 Alt Gate Build: 162 changed text line(s) match allow_lines
+   target run 33482 Alt Gate Record E-GATE grok G1 CONTRADICTION (E-GATE D38): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment 
+   target run 33482 Alt Gate Record NEW E-GATE grok G2 CONTRADICTION (E-GATE M) UNCURED
+   target run 33482 Alt Gate Record NEW E-GATE grok G3 CONTRADICTION (E-GATE M) UNCURED
+   target run 33482 Alt Gate Record NEW E-GATE grok G4 CONTRADICTION (E-GATE M) UNCURED
+   target run 33482 Alt Gate Record NEW E-GATE grok G5 CONTRADICTION (E-GATE M) UNCURED
+   target run 33482 Alt Gate Record NEW E-GATE grok G6 CONTRADICTION (E-GATE M) UNCURED
+   target run 33482 Alt Gate Record NEW E-GATE grok G7 CONTRADICTION (E-GATE M) UNCURED
+   target run 33482 Alt Gate Record NEW E-GATE grok G8 CONTRADICTION (E-GATE M) UNCURED
+   target run 33482 Alt Gate Record NEW E-GATE grok G9 CONTRADICTION (E-GATE M) UNCURED
+   target run 33482 Alt Gate Record: 50 changed text line(s) match allow_lines
+   target run 33482 Gate Build: 113 changed text line(s) match allow_lines
+   target run 33482 Gate Record NEW E-GATE gemini G1 CONTRADICTION (E-GATE M) UNCURED
+   target run 33482 Gate Record NEW E-GATE gemini G2 CONTRADICTION (E-GATE M) UNCURED
+   target run 33482 Gate Record NEW E-GATE gemini G3 CONTRADICTION (E-GATE M) UNCURED
+   target run 33482 Gate Record NEW E-GATE gemini G4 CONTRADICTION (E-GATE M) UNCURED
+   target run 33482 Gate Record NEW E-GATE gemini G5 CONTRADICTION (E-GATE M) UNCURED
+   target run 33482 Gate Record NEW E-GATE gemini G6 CONTRADICTION (E-GATE M) UNCURED
+   target run 33482 Gate Record: 46 changed text line(s) match allow_lines
+   target run 33482 Alternate Merge Seat NEW E-GATE gemini G1 CONTRADICTION (E-GATE M) UNCURED
+   target run 33482 Alternate Merge Seat NEW E-GATE gemini G2 CONTRADICTION (E-GATE M) UNCURED
+   target run 33482 Alternate Merge Seat NEW E-GATE gemini G3 CONTRADICTION (E-GATE M) UNCURED
+   target run 33482 Alternate Merge Seat NEW E-GATE gemini G4 CONTRADICTION (E-GATE M) UNCURED
+   target run 33482 Alternate Merge Seat NEW E-GATE gemini G5 CONTRADICTION (E-GATE M) UNCURED
+   target run 33482 Alternate Merge Seat NEW E-GATE gemini G6 CONTRADICTION (E-GATE M) UNCURED
+   target run 33482 Alternate Merge Seat: 6 changed text line(s) match allow_lines
+   target run 33490 Gate Build: 53 changed text line(s) match allow_lines
+   target run 33490 Gate Record E-GATE chatgpt CONTRADICTION: sid "G2" -> "G3"; line "RULING -- defender premise 5 -- UNEXHIBITED" -> "ANSWER CHECK: Ezra 2:62 -- [CR4] -- MEANS: 'the register pu; why "The quotation \"The signet plucked from Coniah is set again -> "The quotation \"The house of the fathers named in this acco
+   target run 33490 Gate Record E-GATE gemini G1 NOT APPLIED (E-APPLY S3): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment 
+   target run 33490 Gate Record NEW E-GATE gemini G10 CONTRADICTION (E-GATE M) UNCURED
+   target run 33490 Gate Record NEW E-GATE gemini NEW CONTRADICTION (E-GATE M) UNCURED
+   target run 33490 Gate Record E-GATE chatgpt G1 CONTRADICTION (E-GATE D38): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment 
+   target run 33490 Gate Record NEW E-GATE chatgpt G3 CONTRADICTION (E-GATE M) CURED
+   target run 33490 Gate Record: 25 changed text line(s) match allow_lines
+   target run 33490 Alternate Merge Seat E-GATE gemini G1 NOT APPLIED (E-APPLY S3): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment 
+   target run 33490 Alternate Merge Seat NEW E-GATE gemini G10 CONTRADICTION (E-GATE M) UNCURED
+   target run 33490 Alternate Merge Seat NEW E-GATE gemini NEW CONTRADICTION (E-GATE M) UNCURED
+   target run 33490 Alternate Merge Seat E-GATE chatgpt G1 CONTRADICTION (E-GATE D38): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment 
+   target run 33490 Alternate Merge Seat NEW E-GATE chatgpt G3 CONTRADICTION (E-GATE M) CURED
+   target run 33490 Alternate Merge Seat NEW E-APPLY chatgpt APPLIED S2, S3, S4, G1, G3, G2 
+   target run 33490 Alternate Merge Seat GONE E-APPLY chatgpt APPLIED S2, S3, S4, G1, G2 
+   target run 33490 Alternate Merge Seat: 21 changed text line(s) match allow_lines
+   target run 33497 Gate Build: 663 changed text line(s) match allow_lines
+   target run 33497 Gate Record NEW E-GATE gemini G1 CONTRADICTION (E-GATE M) UNCURED
+   target run 33497 Gate Record NEW E-GATE gemini G2 CONTRADICTION (E-GATE M) UNCURED
+   target run 33497 Gate Record NEW E-GATE gemini G3 CONTRADICTION (E-GATE M) UNCURED
+   target run 33497 Gate Record NEW E-GATE gemini G4 CONTRADICTION (E-GATE M) UNCURED
+   target run 33497 Gate Record NEW E-GATE gemini G5 CONTRADICTION (E-GATE M) UNCURED
+   target run 33497 Gate Record E-GATE grok G1 CONTRADICTION (E-GATE D38): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment 
+   target run 33497 Gate Record NEW E-GATE grok G2 CONTRADICTION (E-GATE M) UNCURED
+   target run 33497 Gate Record NEW E-GATE grok G3 CONTRADICTION (E-GATE M) UNCURED
+   target run 33497 Gate Record: 54 changed text line(s) match allow_lines
+   target run 33497 Alternate Merge Seat NEW E-GATE gemini G1 CONTRADICTION (E-GATE M) UNCURED
+   target run 33497 Alternate Merge Seat NEW E-GATE gemini G2 CONTRADICTION (E-GATE M) UNCURED
+   target run 33497 Alternate Merge Seat NEW E-GATE gemini G3 CONTRADICTION (E-GATE M) UNCURED
+   target run 33497 Alternate Merge Seat NEW E-GATE gemini G4 CONTRADICTION (E-GATE M) UNCURED
+   target run 33497 Alternate Merge Seat NEW E-GATE gemini G5 CONTRADICTION (E-GATE M) UNCURED
+   target run 33497 Alternate Merge Seat E-GATE grok G1 CONTRADICTION (E-GATE D38): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment 
+   target run 33497 Alternate Merge Seat NEW E-GATE grok G2 CONTRADICTION (E-GATE M) UNCURED
+   target run 33497 Alternate Merge Seat NEW E-GATE grok G3 CONTRADICTION (E-GATE M) UNCURED
+   target run 33497 Alternate Merge Seat: 7 changed text line(s) match allow_lines
+   target run 33506 Gate Build: 199 changed text line(s) match allow_lines
+   target run 33506 Gate Record E-GATE gemini G1 CONTRADICTION (E-GATE D38): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment 
+   target run 33506 Gate Record NEW E-GATE gemini G7 CONTRADICTION (E-GATE M) UNCURED
+   target run 33506 Gate Record NEW E-GATE gemini G8 CONTRADICTION (E-GATE M) UNCURED
+   target run 33506 Gate Record NEW E-GATE gemini G9 CONTRADICTION (E-GATE M) UNCURED
+   target run 33506 Gate Record NEW E-GATE gemini G10 CONTRADICTION (E-GATE M) UNCURED
+   target run 33506 Gate Record NEW E-GATE gemini G11 CONTRADICTION (E-GATE M) UNCURED
+   target run 33506 Gate Record NEW E-GATE gemini G12 CONTRADICTION (E-GATE M) UNCURED
+   target run 33506 Gate Record E-GATE chatgpt G1 NOT APPLIED (E-APPLY S5): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment 
+   target run 33506 Gate Record NEW E-GATE chatgpt G3 CONTRADICTION (E-GATE M) UNCURED
+   target run 33506 Gate Record E-GATE grok G1 NOT APPLIED (E-APPLY S9): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment 
+   target run 33506 Gate Record NEW E-GATE grok G6 CONTRADICTION (E-GATE M) UNCURED
+   target run 33506 Gate Record NEW E-GATE grok G7 CONTRADICTION (E-GATE M) UNCURED
+   target run 33506 Gate Record: 68 changed text line(s) match allow_lines
+   target run 33506 Alternate Merge Seat E-GATE gemini G1 CONTRADICTION (E-GATE D38): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment 
+   target run 33506 Alternate Merge Seat NEW E-GATE gemini G7 CONTRADICTION (E-GATE M) UNCURED
+   target run 33506 Alternate Merge Seat NEW E-GATE gemini G8 CONTRADICTION (E-GATE M) UNCURED
+   target run 33506 Alternate Merge Seat NEW E-GATE gemini G9 CONTRADICTION (E-GATE M) UNCURED
+   target run 33506 Alternate Merge Seat NEW E-GATE gemini G10 CONTRADICTION (E-GATE M) UNCURED
+   target run 33506 Alternate Merge Seat NEW E-GATE gemini G11 CONTRADICTION (E-GATE M) UNCURED
+   target run 33506 Alternate Merge Seat NEW E-GATE gemini G12 CONTRADICTION (E-GATE M) UNCURED
+   target run 33506 Alternate Merge Seat E-GATE chatgpt G1 NOT APPLIED (E-APPLY S5): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment 
+   target run 33506 Alternate Merge Seat NEW E-GATE chatgpt G3 CONTRADICTION (E-GATE M) UNCURED
+   target run 33506 Alternate Merge Seat E-GATE grok G1 NOT APPLIED (E-APPLY S9): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment 
+   target run 33506 Alternate Merge Seat NEW E-GATE grok G6 CONTRADICTION (E-GATE M) UNCURED
+   target run 33506 Alternate Merge Seat NEW E-GATE grok G7 CONTRADICTION (E-GATE M) UNCURED
+   target run 33506 Alternate Merge Seat: 18 changed text line(s) match allow_lines
+   target run 33575 Gate Build: 71 changed text line(s) match allow_lines
+   target run 33575 Gate Record NEW E-GATE grok G1 CONTRADICTION (E-GATE M) UNCURED
+   target run 33575 Gate Record NEW E-GATE grok G2 CONTRADICTION (E-GATE M) UNCURED
+   target run 33575 Gate Record NEW E-GATE grok G3 CONTRADICTION (E-GATE M) UNCURED
+   target run 33575 Gate Record: 26 changed text line(s) match allow_lines
+   target run 33575 Alternate Merge Seat NEW E-GATE grok G1 CONTRADICTION (E-GATE M) UNCURED
+   target run 33575 Alternate Merge Seat NEW E-GATE grok G2 CONTRADICTION (E-GATE M) UNCURED
+   target run 33575 Alternate Merge Seat NEW E-GATE grok G3 CONTRADICTION (E-GATE M) UNCURED
+   target run 33575 Alternate Merge Seat: 3 changed text line(s) match allow_lines
+   target run 33592 Gate Build: 135 changed text line(s) match allow_lines
+   target run 33592 Gate Record E-GATE gemini G1 NOT APPLIED (E-APPLY S7): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment 
+   target run 33592 Gate Record NEW E-GATE gemini G7 CONTRADICTION (E-GATE M) UNCURED
+   target run 33592 Gate Record NEW E-GATE gemini G8 CONTRADICTION (E-GATE M) UNCURED
+   target run 33592 Gate Record E-GATE grok G1 CONTRADICTION (E-GATE D38): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment 
+   target run 33592 Gate Record NEW E-GATE grok G3 CONTRADICTION (E-GATE M) UNCURED
+   target run 33592 Gate Record NEW E-GATE grok G4 CONTRADICTION (E-GATE M) UNCURED
+   target run 33592 Gate Record NEW E-GATE grok G5 CONTRADICTION (E-GATE M) UNCURED
+   target run 33592 Gate Record NEW E-GATE grok G6 CONTRADICTION (E-GATE M) UNCURED
+   target run 33592 Gate Record: 44 changed text line(s) match allow_lines
+   target run 33592 Alternate Merge Seat E-GATE gemini G1 NOT APPLIED (E-APPLY S7): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment 
+   target run 33592 Alternate Merge Seat NEW E-GATE gemini G7 CONTRADICTION (E-GATE M) UNCURED
+   target run 33592 Alternate Merge Seat NEW E-GATE gemini G8 CONTRADICTION (E-GATE M) UNCURED
+   target run 33592 Alternate Merge Seat E-GATE grok G1 CONTRADICTION (E-GATE D38): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment 
+   target run 33592 Alternate Merge Seat NEW E-GATE grok G3 CONTRADICTION (E-GATE M) UNCURED
+   target run 33592 Alternate Merge Seat NEW E-GATE grok G4 CONTRADICTION (E-GATE M) UNCURED
+   target run 33592 Alternate Merge Seat NEW E-GATE grok G5 CONTRADICTION (E-GATE M) UNCURED
+   target run 33592 Alternate Merge Seat NEW E-GATE grok G6 CONTRADICTION (E-GATE M) UNCURED
+   target run 33592 Alternate Merge Seat: 8 changed text line(s) match allow_lines
+   target run 33605 Gate Build: 1254 changed text line(s) match allow_lines
+   target run 33605 Gate Record NEW E-GATE gemini CONTRADICTION 
+   target run 33605 Gate Record NEW E-GATE gemini G1 CONTRADICTION (E-GATE M) CURED
+   target run 33605 Gate Record E-GATE chatgpt G1 NOT APPLIED (E-APPLY S5): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment ; full_reply "{\n  \"verdict_tag\": \"HELD\",\n  \"defense_standing\": \" -> null; reply_error null -> "no reply"; response_line "GATE: G1 || CHANGE TO: CHALLENGER CONCEDED LINKS: 0 -- Prem -> null; cure_status "CURED" -> "UNCURED"; cure_reason "GATE CHANGE TO: CHALLENGER CONCEDED LINKS: 0 -- Premise 3 i -> "GATE NO REPLY | ENGINE: the change regrades premise 6, whic
+   target run 33605 Gate Record E-GATE chatgpt G2 CONTRADICTION (E-GATE D38): reply_error null -> "no reply"; cure_reason "GATE NO ANSWER | ENGINE: your RULING card grades D1 vs C2 D -> "GATE NO REPLY | ENGINE: your RULING card grades D1 vs C2 DE
+   target run 33605 Gate Record E-GATE chatgpt G3 CONTRADICTION (E-GATE D38): reply_error null -> "no reply"; cure_reason "GATE NO ANSWER | ENGINE: your RULING card grades D5 vs C6 C -> "GATE NO REPLY | ENGINE: your RULING card grades D5 vs C6 CH
+   target run 33605 Gate Record E-GATE chatgpt G4 CONTRADICTION (E-GATE D38): reply_error null -> "no reply"; cure_reason "GATE NO ANSWER | ENGINE: your RULING card grades defender p -> "GATE NO REPLY | ENGINE: your RULING card grades defender pr
+   target run 33605 Gate Record E-GATE chatgpt G5 CONTRADICTION (E-GATE D38): reply_error null -> "no reply"; cure_reason "GATE NO ANSWER | ENGINE: your RULING card grades challenger -> "GATE NO REPLY | ENGINE: your RULING card grades challenger 
+   target run 33605 Gate Record NEW E-GATE chatgpt G6 CONTRADICTION (E-GATE M) UNCURED
+   target run 33605 Gate Record GONE E-GATE chatgpt NOT APPLIED 
+   target run 33605 Gate Record: 44 changed text line(s) match allow_lines
+   target run 33605 Alternate Merge Seat NEW E-GATE gemini G1 CONTRADICTION (E-GATE M) CURED
+   target run 33605 Alternate Merge Seat E-GATE chatgpt G1 NOT APPLIED (E-APPLY S5): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment ; full_reply "{\n  \"verdict_tag\": \"HELD\",\n  \"defense_standing\": \" -> null; reply_error null -> "no reply"; response_line "GATE: G1 || CHANGE TO: CHALLENGER CONCEDED LINKS: 0 -- Prem -> null; cure_status "CURED" -> "UNCURED"; cure_reason "GATE CHANGE TO: CHALLENGER CONCEDED LINKS: 0 -- Premise 3 i -> "GATE NO REPLY | ENGINE: the change regrades premise 6, whic
+   target run 33605 Alternate Merge Seat E-GATE chatgpt G2 CONTRADICTION (E-GATE D38): reply_error null -> "no reply"; cure_reason "GATE NO ANSWER | ENGINE: your RULING card grades D1 vs C2 D -> "GATE NO REPLY | ENGINE: your RULING card grades D1 vs C2 DE
+   target run 33605 Alternate Merge Seat E-GATE chatgpt G3 CONTRADICTION (E-GATE D38): reply_error null -> "no reply"; cure_reason "GATE NO ANSWER | ENGINE: your RULING card grades D5 vs C6 C -> "GATE NO REPLY | ENGINE: your RULING card grades D5 vs C6 CH
+   target run 33605 Alternate Merge Seat E-GATE chatgpt G4 CONTRADICTION (E-GATE D38): reply_error null -> "no reply"; cure_reason "GATE NO ANSWER | ENGINE: your RULING card grades defender p -> "GATE NO REPLY | ENGINE: your RULING card grades defender pr
+   target run 33605 Alternate Merge Seat E-GATE chatgpt G5 CONTRADICTION (E-GATE D38): reply_error null -> "no reply"; cure_reason "GATE NO ANSWER | ENGINE: your RULING card grades challenger -> "GATE NO REPLY | ENGINE: your RULING card grades challenger 
+   target run 33605 Alternate Merge Seat NEW E-GATE chatgpt G6 CONTRADICTION (E-GATE M) UNCURED
+   target run 33605 Alternate Merge Seat NEW E-APPLY gemini APPLIED G1 
+   target run 33605 Alternate Merge Seat NEW E-APPLY chatgpt APPLIED S1, S3, S4, S6, S7, S8, S9, S10, S11, S12, S13, S14, S15, S16, S17, S18 
+   target run 33605 Alternate Merge Seat GONE E-APPLY gemini APPLIED S1 
+   target run 33605 Alternate Merge Seat GONE E-APPLY chatgpt APPLIED S1, S3, S4, S6, S7, S8, S9, S10, S11, S12, S13, S14, S15, S16, S17, S18, G1 
+   target run 33605 Alternate Merge Seat: 32 changed text line(s) match allow_lines
+   target run 33617 Gate Build: 1364 changed text line(s) match allow_lines
+   target run 33617 Gate Record NEW E-GATE gemini CONTRADICTION 
+   target run 33617 Gate Record E-GATE chatgpt RULE K-G4: sid "G2" -> "G1"; line "D4 vs C4 (Isaiah 8:8): DEFENDER LINK BROKEN (Commitment 5)  -> "D2 vs C1 (Genesis 4:25): DEFENDER LINK BROKEN (Commitment 5; to "D4 vs C4 (Isaiah 8:8): DEFENDER LINK BROKEN (Commitment 5)  -> "ANSWER CHECK: Matthew 1:25 -- [CR3] -- MEANS: \"no MEANS se; why "[CR3] says “Isaiah 7:16 and 8:4 give a time measure for the -> "[CR3] says \"The knowing is stated as not happening up to t
+   target run 33617 Gate Record NEW E-GATE gemini G1 CONTRADICTION (E-GATE M) UNCURED
+   target run 33617 Gate Record NEW E-GATE gemini NEW RULE K-G1 (K re-read) UNCURED
+   target run 33617 Gate Record E-GATE chatgpt G1 RULE K-G4 (K re-read): full_reply "{\n  \"verdict_tag\": \"BROKEN\",\n  \"defense_standing\":  -> "GATE: G1 || CHANGE TO: ANSWER CHECK: Matthew 1:25 -- [CR3] ; response_line "\"reasoning\": \"GATE: G1 || CHANGE TO: D2 vs C1 (Genesis 4 -> "GATE: G1 || CHANGE TO: ANSWER CHECK: Matthew 1:25 -- [CR3] ; cure_reason "GATE CHANGE TO: D2 vs C1 (Genesis 4:25): DEFENDER LINK BROK -> "GATE CHANGE TO: ANSWER CHECK: Matthew 1:25 -- [CR3] -- MEAN
+   target run 33617 Gate Record E-GATE chatgpt G2 RULE K-G4 (K re-read): response_line "GATE: G2 || CHANGE TO: D4 vs C4 (Isaiah 8:8): DEFENDER LINK -> null; cure_reason "GATE CHANGE TO: D4 vs C4 (Isaiah 8:8): DEFENDER LINK BROKEN -> "GATE NO ANSWER | ENGINE: DEBATE RULE VIOLATION (K-G4) -- D4
+   target run 33617 Gate Record NEW E-GATE chatgpt NEW NOT APPLIED (E-APPLY G1) UNCURED
+   target run 33617 Gate Record E-GATE grok G1 CONTRADICTION (E-GATE B): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment ; full_reply "GATE: G1 || CHANGE TO: ANSWER CHECK: Matthew 1:25 -- [CR3]  -> null; reply_error null -> "no reply"; response_line "GATE: G1 || CHANGE TO: ANSWER CHECK: Matthew 1:25 -- [CR3]  -> null; cure_status "CURED" -> "UNCURED"; cure_reason "GATE CHANGE TO: ANSWER CHECK: Matthew 1:25 -- [CR3] -- MEAN -> "GATE NO REPLY | ENGINE: your ANSWER CHECK on Matthew 1:25 [
+   target run 33617 Gate Record E-GATE grok G2 CONTRADICTION (E-GATE D38): reply_error null -> "no reply"; cure_reason "GATE NO ANSWER | ENGINE: your RULING card grades D2 vs C1 C -> "GATE NO REPLY | ENGINE: your RULING card grades D2 vs C1 CH
+   target run 33617 Gate Record E-GATE grok G3 CONTRADICTION (E-GATE D38): reply_error null -> "no reply"; cure_reason "GATE NO ANSWER | ENGINE: your RULING card grades D4 vs C4 C -> "GATE NO REPLY | ENGINE: your RULING card grades D4 vs C4 CH
+   target run 33617 Gate Record NEW E-GATE grok G4 CONTRADICTION (E-GATE M) UNCURED
+   target run 33617 Gate Record GONE E-GATE grok CONTRADICTION 
+   target run 33617 Gate Record: 52 changed text line(s) match allow_lines
+   target run 33617 Alternate Merge Seat NEW E-GATE gemini G1 CONTRADICTION (E-GATE M) UNCURED
+   target run 33617 Alternate Merge Seat NEW E-GATE gemini NEW RULE K-G1 (K re-read) UNCURED
+   target run 33617 Alternate Merge Seat E-GATE chatgpt G1 RULE K-G4 (K re-read): full_reply "{\n  \"verdict_tag\": \"BROKEN\",\n  \"defense_standing\":  -> "GATE: G1 || CHANGE TO: ANSWER CHECK: Matthew 1:25 -- [CR3] ; response_line "\"reasoning\": \"GATE: G1 || CHANGE TO: D2 vs C1 (Genesis 4 -> "GATE: G1 || CHANGE TO: ANSWER CHECK: Matthew 1:25 -- [CR3] ; cure_reason "GATE CHANGE TO: D2 vs C1 (Genesis 4:25): DEFENDER LINK BROK -> "GATE CHANGE TO: ANSWER CHECK: Matthew 1:25 -- [CR3] -- MEAN
+   target run 33617 Alternate Merge Seat E-GATE chatgpt G2 RULE K-G4 (K re-read): response_line "GATE: G2 || CHANGE TO: D4 vs C4 (Isaiah 8:8): DEFENDER LINK -> null; cure_reason "GATE CHANGE TO: D4 vs C4 (Isaiah 8:8): DEFENDER LINK BROKEN -> "GATE NO ANSWER | ENGINE: DEBATE RULE VIOLATION (K-G4) -- D4
+   target run 33617 Alternate Merge Seat NEW E-GATE chatgpt NEW NOT APPLIED (E-APPLY G1) UNCURED
+   target run 33617 Alternate Merge Seat E-GATE grok G1 CONTRADICTION (E-GATE B): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment ; full_reply "GATE: G1 || CHANGE TO: ANSWER CHECK: Matthew 1:25 -- [CR3]  -> null; reply_error null -> "no reply"; response_line "GATE: G1 || CHANGE TO: ANSWER CHECK: Matthew 1:25 -- [CR3]  -> null; cure_status "CURED" -> "UNCURED"; cure_reason "GATE CHANGE TO: ANSWER CHECK: Matthew 1:25 -- [CR3] -- MEAN -> "GATE NO REPLY | ENGINE: your ANSWER CHECK on Matthew 1:25 [
+   target run 33617 Alternate Merge Seat E-GATE grok G2 CONTRADICTION (E-GATE D38): reply_error null -> "no reply"; cure_reason "GATE NO ANSWER | ENGINE: your RULING card grades D2 vs C1 C -> "GATE NO REPLY | ENGINE: your RULING card grades D2 vs C1 CH
+   target run 33617 Alternate Merge Seat E-GATE grok G3 CONTRADICTION (E-GATE D38): reply_error null -> "no reply"; cure_reason "GATE NO ANSWER | ENGINE: your RULING card grades D4 vs C4 C -> "GATE NO REPLY | ENGINE: your RULING card grades D4 vs C4 CH
+   target run 33617 Alternate Merge Seat NEW E-GATE grok G4 CONTRADICTION (E-GATE M) UNCURED
+   target run 33617 Alternate Merge Seat NEW E-APPLY gemini APPLIED S1, G1, S3, S4 
+   target run 33617 Alternate Merge Seat NEW E-APPLY chatgpt APPLIED S6, S7, S9, S10, S13, S14, S15, S16, S17, S18 
+   target run 33617 Alternate Merge Seat NEW E-APPLY chatgpt G1 NOT APPLIED UNCURED
+   target run 33617 Alternate Merge Seat NEW E-APPLY grok APPLIED S1, S2, S3, S4, S31, S6, S7, S8, S9, S10, S11, S12, S13, S14, S15, S16, S17, S32, S19, S20, S21, S22, S23, S30, S25, S26, S27, S28, S33, S34, S35 
+   target run 33617 Alternate Merge Seat GONE E-APPLY gemini APPLIED S1, S2, S3, S4 
+   target run 33617 Alternate Merge Seat GONE E-APPLY chatgpt APPLIED S6, S7, G1, G2, S13, S14, S15, S16, S17, S18 
+   target run 33617 Alternate Merge Seat GONE E-APPLY grok APPLIED S1, G1, S3, S4, S31, S6, S7, S8, S9, S10, S11, S12, S13, S14, S15, S16, S17, S32, S19, S20, S21, S22, S23, S30, S25, S26, S27, S28, S33, S34, S35 
+   target run 33617 Alternate Merge Seat: 75 changed text line(s) match allow_lines
+   target run 33627 Gate Build: 47 changed text line(s) match allow_lines
+   target run 33627 Gate Record E-GATE chatgpt CONTRADICTION: sid "G5" -> "G7"; line "RULING -- challenger premise 5 -- UNEXHIBITED" -> "ANSWER CHECK: Matthew 1:18 -- [DR3] -- MEANS: \"the finding; to "D5 vs C1 (Matthew 1:16): UNDERDETERMINED -- the taking read -> "D5 vs C6 (Genesis 3:15): UNDERDETERMINED -- the answer gran; why "The answer says \"A taking leaves the tribe where the fathe -> "The answer says \"I grant that the seed is assigned to the ; d38c {"lab":"CHALLENGER CONCEDED LINKS","src":"K-UNX"} -> undefined
+   target run 33627 Gate Record E-GATE gemini G2 NOT APPLIED (E-APPLY S6): cure_status "CURED" -> "UNCURED"; cure_reason "GATE CHANGE TO: D4 vs C5 (Isaiah 7:14): UNDERDETERMINED --  -> "GATE CHANGE TO: D4 vs C5 (Isaiah 7:14): UNDERDETERMINED -- 
+   target run 33627 Gate Record NEW E-GATE gemini NEW CONTRADICTION (E-GATE M) UNCURED
+   target run 33627 Gate Record E-GATE chatgpt G1 CONTRADICTION (E-GATE D38): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment 
+   target run 33627 Gate Record NEW E-GATE chatgpt G6 CONTRADICTION (E-GATE M) CURED
+   target run 33627 Gate Record NEW E-GATE chatgpt G7 CONTRADICTION (E-GATE M) CURED
+   target run 33627 Gate Record: 27 changed text line(s) match allow_lines
+   target run 33627 Alternate Merge Seat E-GATE gemini G2 NOT APPLIED (E-APPLY S6): cure_status "CURED" -> "UNCURED"; cure_reason "GATE CHANGE TO: D4 vs C5 (Isaiah 7:14): UNDERDETERMINED --  -> "GATE CHANGE TO: D4 vs C5 (Isaiah 7:14): UNDERDETERMINED -- 
+   target run 33627 Alternate Merge Seat NEW E-GATE gemini NEW CONTRADICTION (E-GATE M) UNCURED
+   target run 33627 Alternate Merge Seat E-GATE chatgpt G1 CONTRADICTION (E-GATE D38): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment 
+   target run 33627 Alternate Merge Seat NEW E-GATE chatgpt G6 CONTRADICTION (E-GATE M) CURED
+   target run 33627 Alternate Merge Seat NEW E-GATE chatgpt G7 CONTRADICTION (E-GATE M) CURED
+   target run 33627 Alternate Merge Seat NEW E-APPLY chatgpt APPLIED S1, G1, G4, S5, S6, G3, G7, S9, S10, S11, S12, S13, S14, S15, S16, S17, S18, S19, S20, S21, S22, G2, G5 
+   target run 33627 Alternate Merge Seat GONE E-APPLY chatgpt APPLIED S1, G1, G4, S5, S6, G3, S8, S9, S10, S11, S12, S13, S14, S15, S16, S17, S18, S19, S20, S21, S22, G2, G5 
+   target run 33627 Alternate Merge Seat: 21 changed text line(s) match allow_lines
+   target run 33644 Gate Build: 1675 changed text line(s) match allow_lines
+   target run 33644 Gate Record NEW E-GATE gemini CONTRADICTION 
+   target run 33644 Gate Record NEW E-GATE chatgpt NOT APPLIED 
+   target run 33644 Gate Record NEW E-GATE gemini G1 CONTRADICTION (E-GATE M) UNCURED
+   target run 33644 Gate Record NEW E-GATE gemini G2 CONTRADICTION (E-GATE M) CURED
+   target run 33644 Gate Record NEW E-GATE gemini G3 CONTRADICTION (E-GATE M) CURED
+   target run 33644 Gate Record E-GATE chatgpt G1 NOT APPLIED (E-APPLY S7): full_reply "{\n  \"verdict_tag\": \"BROKEN\",\n  \"defense_standing\":  -> "GATE: G1 || CHANGE TO: D5 vs C6 (Luke 1:35): STANDS -- GROU; response_line "GATE: G1 || KEEP || The defender answers premise 6: \"The g -> "GATE: G1 || CHANGE TO: D5 vs C6 (Luke 1:35): STANDS -- GROU; cure_reason "GATE KEEP -- The defender answers premise 6: \"The ground t -> "GATE CHANGE TO: D5 vs C6 (Luke 1:35): STANDS -- GROUND: the
+   target run 33644 Gate Record E-GATE chatgpt G2 RULE K-G1 (K re-read): response_line "GATE: G2 || CHANGE TO: CHALLENGER CONCEDED LINKS: 2 -- Prem -> null; cure_status "CURED" -> "UNCURED"; cure_reason "GATE CHANGE TO: CHALLENGER CONCEDED LINKS: 2 -- Premises 1  -> "GATE NO ANSWER | ENGINE: DEBATE RULE VIOLATION (K-G1) -- D3
+   target run 33644 Gate Record E-GATE chatgpt G3 RULE K-G1 (K re-read): response_line "GATE: G3 || CHANGE TO: CONCEDED LINKS: 1 -- Premise 5, LINK -> null; cure_reason "GATE CHANGE TO: CONCEDED LINKS: 1 -- Premise 5, LINK 4, UNE -> "GATE NO ANSWER | ENGINE: DEBATE RULE VIOLATION (K-G1) -- D4
+   target run 33644 Gate Record E-GATE chatgpt G4 RULE K-G1 (K re-read): response_line "GATE: G4 || CHANGE TO: CHALLENGER CONCEDED LINKS: 2 -- Prem -> null; cure_status "CURED" -> "UNCURED"; cure_reason "GATE CHANGE TO: CHALLENGER CONCEDED LINKS: 2 -- Premises 1  -> "GATE NO ANSWER | ENGINE: DEBATE RULE VIOLATION (K-G1) -- D5
+   target run 33644 Gate Record E-GATE chatgpt G5 RULE K-G4 (K re-read): response_line "GATE: G5 || CHANGE TO: D6 vs C1 (Hebrews 7:14): CHALLENGER  -> null; cure_reason "GATE CHANGE TO: D6 vs C1 (Hebrews 7:14): CHALLENGER LINK BR -> "GATE NO ANSWER | ENGINE: DEBATE RULE VIOLATION (K-G4) -- D6
+   target run 33644 Gate Record NEW E-GATE chatgpt NEW CONTRADICTION (E-GATE D38) UNCURED
+   target run 33644 Gate Record E-GATE grok G1 NOT APPLIED (E-APPLY S20): full_reply "GATE: G1 || CHANGE TO: D5 vs C6 (Luke 1:35): STANDS -- GROU -> null; reply_error null -> "no reply"; response_line "GATE: G1 || CHANGE TO: D5 vs C6 (Luke 1:35): STANDS -- GROU -> null; cure_status "CURED" -> "UNCURED"; cure_reason "GATE CHANGE TO: D5 vs C6 (Luke 1:35): STANDS -- GROUND: the -> "GATE NO REPLY | ENGINE: the collision line of D5 vs C6 is s
+   target run 33644 Gate Record E-GATE grok G2 CONTRADICTION (E-GATE D38): reply_error null -> "no reply"; cure_reason "GATE NO ANSWER | ENGINE: your RULING card grades D5 vs C4 D -> "GATE NO REPLY | ENGINE: your RULING card grades D5 vs C4 DE
+   target run 33644 Gate Record E-GATE grok G3 CONTRADICTION (E-GATE D38): reply_error null -> "no reply"; cure_reason "GATE NO ANSWER | ENGINE: your RULING card grades D2 vs C3 C -> "GATE NO REPLY | ENGINE: your RULING card grades D2 vs C3 CH
+   target run 33644 Gate Record E-GATE grok G4 CONTRADICTION (E-GATE D38): reply_error null -> "no reply"; cure_reason "GATE NO ANSWER | ENGINE: your RULING card grades D3 vs C3 C -> "GATE NO REPLY | ENGINE: your RULING card grades D3 vs C3 CH
+   target run 33644 Gate Record E-GATE grok G5 CONTRADICTION (E-GATE D38): reply_error null -> "no reply"; cure_reason "GATE NO ANSWER | ENGINE: your RULING card grades D4 vs C5 C -> "GATE NO REPLY | ENGINE: your RULING card grades D4 vs C5 CH
+   target run 33644 Gate Record E-GATE grok G6 CONTRADICTION (E-GATE D38): reply_error null -> "no reply"; cure_reason "GATE NO ANSWER | ENGINE: your RULING card grades D6 vs C1 C -> "GATE NO REPLY | ENGINE: your RULING card grades D6 vs C1 CH
+   target run 33644 Gate Record E-GATE grok G7 CONTRADICTION (E-GATE D38): reply_error null -> "no reply"; cure_reason "GATE NO ANSWER | ENGINE: your RULING card grades D6 vs C2 C -> "GATE NO REPLY | ENGINE: your RULING card grades D6 vs C2 CH
+   target run 33644 Gate Record GONE E-GATE chatgpt RULE K-G1 
+   target run 33644 Gate Record GONE E-GATE chatgpt RULE K-G4 
+   target run 33644 Gate Record GONE E-GATE grok NOT APPLIED 
+   target run 33644 Gate Record GONE E-GATE chatgpt NEW NOT APPLIED (E-APPLY G2) UNCURED
+   target run 33644 Gate Record GONE E-GATE chatgpt NEW NOT APPLIED (E-APPLY G4) UNCURED
+   target run 33644 Gate Record GONE E-GATE chatgpt NEW RULE K-G4 (K re-read) UNCURED
+   target run 33644 Gate Record GONE E-GATE chatgpt NEW RULE K-G1 (K re-read) UNCURED
+   target run 33644 Gate Record: 79 changed text line(s) match allow_lines
+   target run 33644 Alternate Merge Seat NEW E-GATE gemini G1 CONTRADICTION (E-GATE M) UNCURED
+   target run 33644 Alternate Merge Seat NEW E-GATE gemini G2 CONTRADICTION (E-GATE M) CURED
+   target run 33644 Alternate Merge Seat NEW E-GATE gemini G3 CONTRADICTION (E-GATE M) CURED
+   target run 33644 Alternate Merge Seat E-GATE chatgpt G1 NOT APPLIED (E-APPLY S7): full_reply "{\n  \"verdict_tag\": \"BROKEN\",\n  \"defense_standing\":  -> "GATE: G1 || CHANGE TO: D5 vs C6 (Luke 1:35): STANDS -- GROU; response_line "GATE: G1 || KEEP || The defender answers premise 6: \"The g -> "GATE: G1 || CHANGE TO: D5 vs C6 (Luke 1:35): STANDS -- GROU; cure_reason "GATE KEEP -- The defender answers premise 6: \"The ground t -> "GATE CHANGE TO: D5 vs C6 (Luke 1:35): STANDS -- GROUND: the
+   target run 33644 Alternate Merge Seat E-GATE chatgpt G2 RULE K-G1 (K re-read): response_line "GATE: G2 || CHANGE TO: CHALLENGER CONCEDED LINKS: 2 -- Prem -> null; cure_status "CURED" -> "UNCURED"; cure_reason "GATE CHANGE TO: CHALLENGER CONCEDED LINKS: 2 -- Premises 1  -> "GATE NO ANSWER | ENGINE: DEBATE RULE VIOLATION (K-G1) -- D3
+   target run 33644 Alternate Merge Seat E-GATE chatgpt G3 RULE K-G1 (K re-read): response_line "GATE: G3 || CHANGE TO: CONCEDED LINKS: 1 -- Premise 5, LINK -> null; cure_reason "GATE CHANGE TO: CONCEDED LINKS: 1 -- Premise 5, LINK 4, UNE -> "GATE NO ANSWER | ENGINE: DEBATE RULE VIOLATION (K-G1) -- D4
+   target run 33644 Alternate Merge Seat E-GATE chatgpt G4 RULE K-G1 (K re-read): response_line "GATE: G4 || CHANGE TO: CHALLENGER CONCEDED LINKS: 2 -- Prem -> null; cure_status "CURED" -> "UNCURED"; cure_reason "GATE CHANGE TO: CHALLENGER CONCEDED LINKS: 2 -- Premises 1  -> "GATE NO ANSWER | ENGINE: DEBATE RULE VIOLATION (K-G1) -- D5
+   target run 33644 Alternate Merge Seat E-GATE chatgpt G5 RULE K-G4 (K re-read): response_line "GATE: G5 || CHANGE TO: D6 vs C1 (Hebrews 7:14): CHALLENGER  -> null; cure_reason "GATE CHANGE TO: D6 vs C1 (Hebrews 7:14): CHALLENGER LINK BR -> "GATE NO ANSWER | ENGINE: DEBATE RULE VIOLATION (K-G4) -- D6
+   target run 33644 Alternate Merge Seat NEW E-GATE chatgpt NEW CONTRADICTION (E-GATE D38) UNCURED
+   target run 33644 Alternate Merge Seat E-GATE grok G1 NOT APPLIED (E-APPLY S20): full_reply "GATE: G1 || CHANGE TO: D5 vs C6 (Luke 1:35): STANDS -- GROU -> null; reply_error null -> "no reply"; response_line "GATE: G1 || CHANGE TO: D5 vs C6 (Luke 1:35): STANDS -- GROU -> null; cure_status "CURED" -> "UNCURED"; cure_reason "GATE CHANGE TO: D5 vs C6 (Luke 1:35): STANDS -- GROUND: the -> "GATE NO REPLY | ENGINE: the collision line of D5 vs C6 is s
+   target run 33644 Alternate Merge Seat E-GATE grok G2 CONTRADICTION (E-GATE D38): reply_error null -> "no reply"; cure_reason "GATE NO ANSWER | ENGINE: your RULING card grades D5 vs C4 D -> "GATE NO REPLY | ENGINE: your RULING card grades D5 vs C4 DE
+   target run 33644 Alternate Merge Seat E-GATE grok G3 CONTRADICTION (E-GATE D38): reply_error null -> "no reply"; cure_reason "GATE NO ANSWER | ENGINE: your RULING card grades D2 vs C3 C -> "GATE NO REPLY | ENGINE: your RULING card grades D2 vs C3 CH
+   target run 33644 Alternate Merge Seat E-GATE grok G4 CONTRADICTION (E-GATE D38): reply_error null -> "no reply"; cure_reason "GATE NO ANSWER | ENGINE: your RULING card grades D3 vs C3 C -> "GATE NO REPLY | ENGINE: your RULING card grades D3 vs C3 CH
+   target run 33644 Alternate Merge Seat E-GATE grok G5 CONTRADICTION (E-GATE D38): reply_error null -> "no reply"; cure_reason "GATE NO ANSWER | ENGINE: your RULING card grades D4 vs C5 C -> "GATE NO REPLY | ENGINE: your RULING card grades D4 vs C5 CH
+   target run 33644 Alternate Merge Seat E-GATE grok G6 CONTRADICTION (E-GATE D38): reply_error null -> "no reply"; cure_reason "GATE NO ANSWER | ENGINE: your RULING card grades D6 vs C1 C -> "GATE NO REPLY | ENGINE: your RULING card grades D6 vs C1 CH
+   target run 33644 Alternate Merge Seat E-GATE grok G7 CONTRADICTION (E-GATE D38): reply_error null -> "no reply"; cure_reason "GATE NO ANSWER | ENGINE: your RULING card grades D6 vs C2 C -> "GATE NO REPLY | ENGINE: your RULING card grades D6 vs C2 CH
+   target run 33644 Alternate Merge Seat NEW E-APPLY gemini APPLIED S1, G2, S3, S4, S5, S6, S8, S9, G3, RULING (derived) 
+   target run 33644 Alternate Merge Seat NEW E-APPLY chatgpt APPLIED S1, S2, S3, S4, G1, S6, S8 
+   target run 33644 Alternate Merge Seat NEW E-APPLY grok APPLIED S1, S2, S19, S5, S6, S7, S8, S9, S10, S11, S12, S13, S14, S15, S16 
+   target run 33644 Alternate Merge Seat NEW E-APPLY grok S20 NOT APPLIED UNCURED
+   target run 33644 Alternate Merge Seat GONE E-GATE chatgpt NEW NOT APPLIED (E-APPLY G2) UNCURED
+   target run 33644 Alternate Merge Seat GONE E-GATE chatgpt NEW NOT APPLIED (E-APPLY G4) UNCURED
+   target run 33644 Alternate Merge Seat GONE E-GATE chatgpt NEW RULE K-G4 (K re-read) UNCURED
+   target run 33644 Alternate Merge Seat GONE E-GATE chatgpt NEW RULE K-G1 (K re-read) UNCURED
+   target run 33644 Alternate Merge Seat GONE E-APPLY gemini APPLIED S1, S2, S3, S4, S5, S6, S8, S9, RULING (derived) 
+   target run 33644 Alternate Merge Seat GONE E-APPLY chatgpt APPLIED S1, S2, S3, S4, S5, G5, S8, G3 
+   target run 33644 Alternate Merge Seat GONE E-APPLY chatgpt G2 NOT APPLIED UNCURED
+   target run 33644 Alternate Merge Seat GONE E-APPLY chatgpt G4 NOT APPLIED UNCURED
+   target run 33644 Alternate Merge Seat GONE E-APPLY grok APPLIED S1, S2, S19, S5, S6, S7, S8, S9, S10, S11, S12, S13, S14, S15, S16, G1 
+   target run 33644 Alternate Merge Seat: 156 changed text line(s) match allow_lines
+   target run 33682 Gate Build: 243 changed text line(s) match allow_lines
+   target run 33682 Gate Record E-GATE gemini G1 CONTRADICTION (E-GATE D38): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment 
+   target run 33682 Gate Record NEW E-GATE gemini G2 CONTRADICTION (E-GATE M) UNCURED
+   target run 33682 Gate Record NEW E-GATE gemini G3 CONTRADICTION (E-GATE M) UNCURED
+   target run 33682 Gate Record NEW E-GATE gemini G4 CONTRADICTION (E-GATE M) UNCURED
+   target run 33682 Gate Record NEW E-GATE gemini G5 CONTRADICTION (E-GATE M) UNCURED
+   target run 33682 Gate Record NEW E-GATE gemini G6 CONTRADICTION (E-GATE M) UNCURED
+   target run 33682 Gate Record NEW E-GATE gemini G7 CONTRADICTION (E-GATE M) UNCURED
+   target run 33682 Gate Record E-GATE chatgpt G1 NOT APPLIED (E-APPLY S3): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment 
+   target run 33682 Gate Record NEW E-GATE chatgpt G7 CONTRADICTION (E-GATE M) UNCURED
+   target run 33682 Gate Record NEW E-GATE chatgpt G8 CONTRADICTION (E-GATE M) UNCURED
+   target run 33682 Gate Record E-GATE grok G1 CONTRADICTION (E-GATE D38): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment 
+   target run 33682 Gate Record NEW E-GATE grok G3 CONTRADICTION (E-GATE M) UNCURED
+   target run 33682 Gate Record NEW E-GATE grok G4 CONTRADICTION (E-GATE M) UNCURED
+   target run 33682 Gate Record NEW E-GATE grok G5 CONTRADICTION (E-GATE M) UNCURED
+   target run 33682 Gate Record: 76 changed text line(s) match allow_lines
+   target run 33682 Alternate Merge Seat E-GATE gemini G1 CONTRADICTION (E-GATE D38): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment 
+   target run 33682 Alternate Merge Seat NEW E-GATE gemini G2 CONTRADICTION (E-GATE M) UNCURED
+   target run 33682 Alternate Merge Seat NEW E-GATE gemini G3 CONTRADICTION (E-GATE M) UNCURED
+   target run 33682 Alternate Merge Seat NEW E-GATE gemini G4 CONTRADICTION (E-GATE M) UNCURED
+   target run 33682 Alternate Merge Seat NEW E-GATE gemini G5 CONTRADICTION (E-GATE M) UNCURED
+   target run 33682 Alternate Merge Seat NEW E-GATE gemini G6 CONTRADICTION (E-GATE M) UNCURED
+   target run 33682 Alternate Merge Seat NEW E-GATE gemini G7 CONTRADICTION (E-GATE M) UNCURED
+   target run 33682 Alternate Merge Seat E-GATE chatgpt G1 NOT APPLIED (E-APPLY S3): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment 
+   target run 33682 Alternate Merge Seat NEW E-GATE chatgpt G7 CONTRADICTION (E-GATE M) UNCURED
+   target run 33682 Alternate Merge Seat NEW E-GATE chatgpt G8 CONTRADICTION (E-GATE M) UNCURED
+   target run 33682 Alternate Merge Seat E-GATE grok G1 CONTRADICTION (E-GATE D38): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment 
+   target run 33682 Alternate Merge Seat NEW E-GATE grok G3 CONTRADICTION (E-GATE M) UNCURED
+   target run 33682 Alternate Merge Seat NEW E-GATE grok G4 CONTRADICTION (E-GATE M) UNCURED
+   target run 33682 Alternate Merge Seat NEW E-GATE grok G5 CONTRADICTION (E-GATE M) UNCURED
+   target run 33682 Alternate Merge Seat: 13 changed text line(s) match allow_lines
+   target run 33705 Gate Build: 873 changed text line(s) match allow_lines
+   target run 33705 Gate Record NEW E-GATE gemini CONTRADICTION 
+   target run 33705 Gate Record NEW E-GATE gemini G1 CONTRADICTION (E-GATE M) CURED
+   target run 33705 Gate Record NEW E-GATE gemini G2 CONTRADICTION (E-GATE M) CURED
+   target run 33705 Gate Record NEW E-GATE gemini G3 CONTRADICTION (E-GATE M) CURED
+   target run 33705 Gate Record NEW E-GATE chatgpt G1 CONTRADICTION (E-GATE M) UNCURED
+   target run 33705 Gate Record NEW E-GATE chatgpt G2 CONTRADICTION (E-GATE M) UNCURED
+   target run 33705 Gate Record NEW E-GATE chatgpt G3 CONTRADICTION (E-GATE M) UNCURED
+   target run 33705 Gate Record NEW E-GATE chatgpt G4 CONTRADICTION (E-GATE M) UNCURED
+   target run 33705 Gate Record NEW E-GATE chatgpt G5 CONTRADICTION (E-GATE M) UNCURED
+   target run 33705 Gate Record E-GATE grok G1 NOT APPLIED (E-APPLY S26): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment ; full_reply "GATE: G1 || KEEP || The [DR3] answer \"I grant that the ans -> null; reply_error null -> "no reply"; response_line "GATE: G1 || KEEP || The [DR3] answer \"I grant that the ans -> null; cure_status "CURED" -> "UNCURED"; cure_reason "GATE KEEP -- The [DR3] answer \"I grant that the answer nam -> "GATE NO REPLY | ENGINE: the flagged line is not in the judg
+   target run 33705 Gate Record E-GATE grok G2 CONTRADICTION (E-GATE D38): reply_error null -> "no reply"; response_line "GATE: G2 || CHANGE TO: RULING -- D3 vs C6 -- UNDERDETERMINE -> null; cure_status "CURED" -> "UNCURED"; cure_reason "GATE CHANGE TO: RULING -- D3 vs C6 -- UNDERDETERMINED -- Th -> "GATE NO REPLY | ENGINE: your RULING card grades D3 vs C6 CH
+   target run 33705 Gate Record E-GATE grok G3 CONTRADICTION (E-GATE D38): reply_error null -> "no reply"; response_line "GATE: G3 || CHANGE TO: RULING -- D6 vs C2 -- STANDS || The  -> null; cure_status "CURED" -> "UNCURED"; cure_reason "GATE CHANGE TO: RULING -- D6 vs C2 -- STANDS -- The challen -> "GATE NO REPLY | ENGINE: your RULING card grades D6 vs C2 CH
+   target run 33705 Gate Record NEW E-GATE grok G4 CONTRADICTION (E-GATE M) UNCURED
+   target run 33705 Gate Record NEW E-GATE grok G5 CONTRADICTION (E-GATE M) UNCURED
+   target run 33705 Gate Record NEW E-GATE grok G6 CONTRADICTION (E-GATE M) UNCURED
+   target run 33705 Gate Record NEW E-GATE grok G7 CONTRADICTION (E-GATE M) UNCURED
+   target run 33705 Gate Record NEW E-GATE grok G8 CONTRADICTION (E-GATE M) UNCURED
+   target run 33705 Gate Record NEW E-GATE grok G9 CONTRADICTION (E-GATE M) UNCURED
+   target run 33705 Gate Record NEW E-GATE grok G10 CONTRADICTION (E-GATE M) UNCURED
+   target run 33705 Gate Record NEW E-GATE grok G11 CONTRADICTION (E-GATE M) UNCURED
+   target run 33705 Gate Record NEW E-GATE grok G12 CONTRADICTION (E-GATE M) UNCURED
+   target run 33705 Gate Record NEW E-GATE grok G13 CONTRADICTION (E-GATE M) UNCURED
+   target run 33705 Gate Record NEW E-GATE grok G14 CONTRADICTION (E-GATE M) UNCURED
+   target run 33705 Gate Record GONE E-GATE grok CONTRADICTION 
+   target run 33705 Gate Record: 136 changed text line(s) match allow_lines
+   target run 33705 Alternate Merge Seat NEW E-GATE gemini G1 CONTRADICTION (E-GATE M) CURED
+   target run 33705 Alternate Merge Seat NEW E-GATE gemini G2 CONTRADICTION (E-GATE M) CURED
+   target run 33705 Alternate Merge Seat NEW E-GATE gemini G3 CONTRADICTION (E-GATE M) CURED
+   target run 33705 Alternate Merge Seat NEW E-GATE chatgpt G1 CONTRADICTION (E-GATE M) UNCURED
+   target run 33705 Alternate Merge Seat NEW E-GATE chatgpt G2 CONTRADICTION (E-GATE M) UNCURED
+   target run 33705 Alternate Merge Seat NEW E-GATE chatgpt G3 CONTRADICTION (E-GATE M) UNCURED
+   target run 33705 Alternate Merge Seat NEW E-GATE chatgpt G4 CONTRADICTION (E-GATE M) UNCURED
+   target run 33705 Alternate Merge Seat NEW E-GATE chatgpt G5 CONTRADICTION (E-GATE M) UNCURED
+   target run 33705 Alternate Merge Seat E-GATE grok G1 NOT APPLIED (E-APPLY S26): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment ; full_reply "GATE: G1 || KEEP || The [DR3] answer \"I grant that the ans -> null; reply_error null -> "no reply"; response_line "GATE: G1 || KEEP || The [DR3] answer \"I grant that the ans -> null; cure_status "CURED" -> "UNCURED"; cure_reason "GATE KEEP -- The [DR3] answer \"I grant that the answer nam -> "GATE NO REPLY | ENGINE: the flagged line is not in the judg
+   target run 33705 Alternate Merge Seat E-GATE grok G2 CONTRADICTION (E-GATE D38): reply_error null -> "no reply"; response_line "GATE: G2 || CHANGE TO: RULING -- D3 vs C6 -- UNDERDETERMINE -> null; cure_status "CURED" -> "UNCURED"; cure_reason "GATE CHANGE TO: RULING -- D3 vs C6 -- UNDERDETERMINED -- Th -> "GATE NO REPLY | ENGINE: your RULING card grades D3 vs C6 CH
+   target run 33705 Alternate Merge Seat E-GATE grok G3 CONTRADICTION (E-GATE D38): reply_error null -> "no reply"; response_line "GATE: G3 || CHANGE TO: RULING -- D6 vs C2 -- STANDS || The  -> null; cure_status "CURED" -> "UNCURED"; cure_reason "GATE CHANGE TO: RULING -- D6 vs C2 -- STANDS -- The challen -> "GATE NO REPLY | ENGINE: your RULING card grades D6 vs C2 CH
+   target run 33705 Alternate Merge Seat NEW E-GATE grok G4 CONTRADICTION (E-GATE M) UNCURED
+   target run 33705 Alternate Merge Seat NEW E-GATE grok G5 CONTRADICTION (E-GATE M) UNCURED
+   target run 33705 Alternate Merge Seat NEW E-GATE grok G6 CONTRADICTION (E-GATE M) UNCURED
+   target run 33705 Alternate Merge Seat NEW E-GATE grok G7 CONTRADICTION (E-GATE M) UNCURED
+   target run 33705 Alternate Merge Seat NEW E-GATE grok G8 CONTRADICTION (E-GATE M) UNCURED
+   target run 33705 Alternate Merge Seat NEW E-GATE grok G9 CONTRADICTION (E-GATE M) UNCURED
+   target run 33705 Alternate Merge Seat NEW E-GATE grok G10 CONTRADICTION (E-GATE M) UNCURED
+   target run 33705 Alternate Merge Seat NEW E-GATE grok G11 CONTRADICTION (E-GATE M) UNCURED
+   target run 33705 Alternate Merge Seat NEW E-GATE grok G12 CONTRADICTION (E-GATE M) UNCURED
+   target run 33705 Alternate Merge Seat NEW E-GATE grok G13 CONTRADICTION (E-GATE M) UNCURED
+   target run 33705 Alternate Merge Seat NEW E-GATE grok G14 CONTRADICTION (E-GATE M) UNCURED
+   target run 33705 Alternate Merge Seat NEW E-APPLY gemini APPLIED G2, G3, S3, S4, S5, S6 
+   target run 33705 Alternate Merge Seat NEW E-APPLY grok APPLIED S1, S2, S3, S4, S5, S6, S7, S8, S9, S10, S11, S12, S13, S14, S15, S16, S17, S18, S19, S20, S21, S22, S23, S24, S25 
+   target run 33705 Alternate Merge Seat GONE E-APPLY gemini APPLIED S1, S2, S3, S4, S5, S6 
+   target run 33705 Alternate Merge Seat GONE E-APPLY grok APPLIED S1, S2, S3, S4, S5, S6, S7, S8, S9, S10, S11, S12, S13, S14, S15, S16, S17, S18, S19, S20, S21, S22, S23, S24, G2, G3, S25 
+   target run 33705 Alternate Merge Seat: 51 changed text line(s) match allow_lines
+   target run 33731 Alt Gate Build: 66 changed text line(s) match allow_lines
+   target run 33731 Alt Gate Record NEW E-GATE sol G1 CONTRADICTION (E-GATE M) UNCURED
+   target run 33731 Alt Gate Record NEW E-GATE sol G2 CONTRADICTION (E-GATE M) UNCURED
+   target run 33731 Alt Gate Record: 22 changed text line(s) match allow_lines
+   target run 33731 Gate Build: 700 changed text line(s) match allow_lines
+   target run 33731 Gate Record NEW E-GATE chatgpt CONTRADICTION 
+   target run 33731 Gate Record E-GATE grok CONTRADICTION: sid "G1" -> "G4"; line "RULING -- D2 vs C1 -- CHALLENGER LINK BROKEN" -> "ANSWER CHECK: Luke 2:4 -- [CR3] -- MEANS: \"Luke gives Davi; to "RULING -- D2 vs C1 -- UNDERDETERMINED" -> "RULING -- D5 vs C1 -- STANDS"; why "[DR3] says, \"'virgin' names her estate across conception a -> "[DR3] says \"Of the Holy Ghost is origin in God,\" which ag
+   target run 33731 Gate Record E-GATE gemini G1 NOT APPLIED (E-APPLY S5): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment 
+   target run 33731 Gate Record NEW E-GATE gemini G3 CONTRADICTION (E-GATE M) UNCURED
+   target run 33731 Gate Record NEW E-GATE gemini G4 CONTRADICTION (E-GATE M) UNCURED
+   target run 33731 Gate Record NEW E-GATE gemini G5 CONTRADICTION (E-GATE M) UNCURED
+   target run 33731 Gate Record NEW E-GATE gemini G6 CONTRADICTION (E-GATE M) UNCURED
+   target run 33731 Gate Record NEW E-GATE gemini G7 CONTRADICTION (E-GATE M) UNCURED
+   target run 33731 Gate Record NEW E-GATE chatgpt G1 CONTRADICTION (E-GATE M) UNCURED
+   target run 33731 Gate Record NEW E-GATE chatgpt G2 CONTRADICTION (E-GATE M) UNCURED
+   target run 33731 Gate Record E-GATE grok G1 CONTRADICTION (E-GATE D38): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment ; full_reply "{\n  \"verdict_tag\": \"HELD\",\n  \"defense_standing\": \" -> "GATE: G1 || KEEP || [DR3] says \"The espousal is the span i; response_line "\"reasoning\": \"GATE: G1 || CHANGE TO: RULING -- D2 vs C1  -> "GATE: G1 || KEEP || [DR3] says \"The espousal is the span i; cure_reason "GATE CHANGE TO: RULING -- D2 vs C1 -- UNDERDETERMINED -- [D -> "GATE KEEP -- [DR3] says \"The espousal is the span in which
+   target run 33731 Gate Record E-GATE grok G2 CONTRADICTION (E-GATE D38): response_line null -> "GATE: G2 || CHANGE TO: DEFENDER | [CR4] | \"I grant the cou; cure_status "UNCURED" -> "CURED"; cure_reason "GATE NO ANSWER | ENGINE: your RULING card grades D5 vs C1 C -> "GATE CHANGE TO: DEFENDER | [CR4] | \"I grant the counting b
+   target run 33731 Gate Record NEW E-GATE grok G3 CONTRADICTION (E-GATE M) CURED
+   target run 33731 Gate Record NEW E-GATE grok G4 CONTRADICTION (E-GATE M) CURED
+   target run 33731 Gate Record NEW E-GATE grok G5 CONTRADICTION (E-GATE M) UNCURED
+   target run 33731 Gate Record: 82 changed text line(s) match allow_lines
+   target run 33731 Alternate Merge Seat E-GATE gemini G1 NOT APPLIED (E-APPLY S5): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment 
+   target run 33731 Alternate Merge Seat NEW E-GATE gemini G3 CONTRADICTION (E-GATE M) UNCURED
+   target run 33731 Alternate Merge Seat NEW E-GATE gemini G4 CONTRADICTION (E-GATE M) UNCURED
+   target run 33731 Alternate Merge Seat NEW E-GATE gemini G5 CONTRADICTION (E-GATE M) UNCURED
+   target run 33731 Alternate Merge Seat NEW E-GATE gemini G6 CONTRADICTION (E-GATE M) UNCURED
+   target run 33731 Alternate Merge Seat NEW E-GATE gemini G7 CONTRADICTION (E-GATE M) UNCURED
+   target run 33731 Alternate Merge Seat NEW E-GATE chatgpt G1 CONTRADICTION (E-GATE M) UNCURED
+   target run 33731 Alternate Merge Seat NEW E-GATE chatgpt G2 CONTRADICTION (E-GATE M) UNCURED
+   target run 33731 Alternate Merge Seat E-GATE grok G1 CONTRADICTION (E-GATE D38): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment ; full_reply "{\n  \"verdict_tag\": \"HELD\",\n  \"defense_standing\": \" -> "GATE: G1 || KEEP || [DR3] says \"The espousal is the span i; response_line "\"reasoning\": \"GATE: G1 || CHANGE TO: RULING -- D2 vs C1  -> "GATE: G1 || KEEP || [DR3] says \"The espousal is the span i; cure_reason "GATE CHANGE TO: RULING -- D2 vs C1 -- UNDERDETERMINED -- [D -> "GATE KEEP -- [DR3] says \"The espousal is the span in which
+   target run 33731 Alternate Merge Seat E-GATE grok G2 CONTRADICTION (E-GATE D38): response_line null -> "GATE: G2 || CHANGE TO: DEFENDER | [CR4] | \"I grant the cou; cure_status "UNCURED" -> "CURED"; cure_reason "GATE NO ANSWER | ENGINE: your RULING card grades D5 vs C1 C -> "GATE CHANGE TO: DEFENDER | [CR4] | \"I grant the counting b
+   target run 33731 Alternate Merge Seat NEW E-GATE grok G3 CONTRADICTION (E-GATE M) CURED
+   target run 33731 Alternate Merge Seat NEW E-GATE grok G4 CONTRADICTION (E-GATE M) CURED
+   target run 33731 Alternate Merge Seat NEW E-GATE grok G5 CONTRADICTION (E-GATE M) UNCURED
+   target run 33731 Alternate Merge Seat NEW E-APPLY chatgpt APPLIED S6, S7, S8, G1, RULING (derived) 
+   target run 33731 Alternate Merge Seat NEW E-APPLY grok APPLIED G3, G4, S3, S4, S5, S6, S7, S8, S9, S10, S12, S13, G2 
+   target run 33731 Alternate Merge Seat GONE E-APPLY chatgpt APPLIED S6, S7, S8, RULING (derived) 
+   target run 33731 Alternate Merge Seat GONE E-APPLY grok APPLIED S1, S2, S3, S4, S5, S6, S7, S8, S9, S10, S12, S13, G1 
+   target run 33731 Alternate Merge Seat: 41 changed text line(s) match allow_lines
+   target run 33750 Gate Build: 177 changed text line(s) match allow_lines
+   target run 33750 Gate Record NEW E-GATE gemini CONTRADICTION 
+   target run 33750 Gate Record NEW E-GATE grok CONTRADICTION 
+   target run 33750 Gate Record NEW E-GATE gemini G1 CONTRADICTION (E-GATE M) CURED
+   target run 33750 Gate Record NEW E-GATE grok G1 CONTRADICTION (E-GATE M) CURED
+   target run 33750 Gate Record NEW E-GATE grok G2 CONTRADICTION (E-GATE M) CURED
+   target run 33750 Gate Record NEW E-GATE grok G3 CONTRADICTION (E-GATE M) CURED
+   target run 33750 Gate Record NEW E-GATE grok G4 CONTRADICTION (E-GATE M) UNCURED
+   target run 33750 Gate Record NEW E-GATE grok G5 CONTRADICTION (E-GATE M) UNCURED
+   target run 33750 Gate Record NEW E-GATE grok G6 CONTRADICTION (E-GATE M) UNCURED
+   target run 33750 Gate Record NEW E-GATE grok G7 CONTRADICTION (E-GATE M) UNCURED
+   target run 33750 Gate Record: 68 changed text line(s) match allow_lines
+   target run 33750 Alternate Merge Seat NEW E-GATE gemini G1 CONTRADICTION (E-GATE M) CURED
+   target run 33750 Alternate Merge Seat NEW E-GATE grok G1 CONTRADICTION (E-GATE M) CURED
+   target run 33750 Alternate Merge Seat NEW E-GATE grok G2 CONTRADICTION (E-GATE M) CURED
+   target run 33750 Alternate Merge Seat NEW E-GATE grok G3 CONTRADICTION (E-GATE M) CURED
+   target run 33750 Alternate Merge Seat NEW E-GATE grok G4 CONTRADICTION (E-GATE M) UNCURED
+   target run 33750 Alternate Merge Seat NEW E-GATE grok G5 CONTRADICTION (E-GATE M) UNCURED
+   target run 33750 Alternate Merge Seat NEW E-GATE grok G6 CONTRADICTION (E-GATE M) UNCURED
+   target run 33750 Alternate Merge Seat NEW E-GATE grok G7 CONTRADICTION (E-GATE M) UNCURED
+   target run 33750 Alternate Merge Seat NEW E-APPLY gemini APPLIED G1, S2, S3, S4, RULING (derived) 
+   target run 33750 Alternate Merge Seat NEW E-APPLY grok APPLIED G2, G1, G3, S4, S5, S6, S7, S8, S9, S10, S11, S12, S13, S14, S15, RULING (derived) 
+   target run 33750 Alternate Merge Seat GONE E-APPLY gemini APPLIED S1, S2, S3, S4, RULING (derived) 
+   target run 33750 Alternate Merge Seat GONE E-APPLY grok APPLIED S1, S2, S3, S4, S5, S6, S7, S8, S9, S10, S11, S12, S13, S14, S15, RULING (derived) 
+   target run 33750 Alternate Merge Seat: 34 changed text line(s) match allow_lines
+   target run 33750 Alternate Merge 1 NEW E-GATE gemini G1 CONTRADICTION (E-GATE M) CURED
+   target run 33750 Alternate Merge 1 NEW E-GATE grok G1 CONTRADICTION (E-GATE M) CURED
+   target run 33750 Alternate Merge 1 NEW E-GATE grok G2 CONTRADICTION (E-GATE M) CURED
+   target run 33750 Alternate Merge 1 NEW E-GATE grok G3 CONTRADICTION (E-GATE M) CURED
+   target run 33750 Alternate Merge 1 NEW E-GATE grok G4 CONTRADICTION (E-GATE M) UNCURED
+   target run 33750 Alternate Merge 1 NEW E-GATE grok G5 CONTRADICTION (E-GATE M) UNCURED
+   target run 33750 Alternate Merge 1 NEW E-GATE grok G6 CONTRADICTION (E-GATE M) UNCURED
+   target run 33750 Alternate Merge 1 NEW E-GATE grok G7 CONTRADICTION (E-GATE M) UNCURED
+   target run 33750 Alternate Merge 1 NEW E-APPLY gemini APPLIED G1, S2, S3, S4, RULING (derived) 
+   target run 33750 Alternate Merge 1 NEW E-APPLY grok APPLIED G2, G1, G3, S4, S5, S6, S7, S8, S9, S10, S11, S12, S13, S14, S15, RULING (derived) 
+   target run 33750 Alternate Merge 1 GONE E-APPLY gemini APPLIED S1, S2, S3, S4, RULING (derived) 
+   target run 33750 Alternate Merge 1 GONE E-APPLY grok APPLIED S1, S2, S3, S4, S5, S6, S7, S8, S9, S10, S11, S12, S13, S14, S15, RULING (derived) 
+   target run 33750 Alternate Merge 1: 34 changed text line(s) match allow_lines
+   target run 33774 Gate Build: 28 changed text line(s) match allow_lines
+   target run 33774 Gate Record E-GATE chatgpt G1 CONTRADICTION (E-GATE D38): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment 
+   target run 33774 Gate Record NEW E-GATE chatgpt G3 CONTRADICTION (E-GATE M) UNCURED
+   target run 33774 Gate Record: 12 changed text line(s) match allow_lines
+   target run 33774 Alternate Merge Seat E-GATE chatgpt G1 CONTRADICTION (E-GATE D38): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment 
+   target run 33774 Alternate Merge Seat NEW E-GATE chatgpt G3 CONTRADICTION (E-GATE M) UNCURED
+   target run 33774 Alternate Merge Seat: 8 changed text line(s) match allow_lines
+   target run 33774 Alternate Merge 1 E-GATE chatgpt G1 CONTRADICTION (E-GATE D38): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment 
+   target run 33774 Alternate Merge 1 NEW E-GATE chatgpt G3 CONTRADICTION (E-GATE M) UNCURED
+   target run 33774 Alternate Merge 1: 8 changed text line(s) match allow_lines
+   target run 33798 Gate Build: 834 changed text line(s) match allow_lines
+   target run 33798 Gate Record NEW E-GATE gemini CONTRADICTION 
+   target run 33798 Gate Record E-GATE chatgpt NOT APPLIED: to "CHALLENGER CONCEDED LINKS: 0 -- Premise 1 is VOID because t -> "CHALLENGER CONCEDED LINKS: 0 -- Premises 1, 2, 5 and 6 are ; why "Premise 1 is VOID (Commitment 6) because the charge \"The D -> "[CR3] charges that the Davidic flesh “runs through Joseph's
+   target run 33798 Gate Record NEW E-GATE grok CONTRADICTION 
+   target run 33798 Gate Record NEW E-GATE gemini G1 CONTRADICTION (E-GATE M) CURED
+   target run 33798 Gate Record E-GATE chatgpt G1 NOT APPLIED (E-APPLY S14): full_reply "GATE: G1 || CHANGE TO: CHALLENGER CONCEDED LINKS: 0 -- Prem -> "{\n  \"verdict_tag\": \"HELD\",\n  \"defense_standing\": \"; response_line "GATE: G1 || CHANGE TO: CHALLENGER CONCEDED LINKS: 0 -- Prem -> "GATE: G1 || CHANGE TO: CHALLENGER CONCEDED LINKS: 0 -- Prem; cure_reason "GATE CHANGE TO: CHALLENGER CONCEDED LINKS: 0 -- Premise 1 i -> "GATE CHANGE TO: CHALLENGER CONCEDED LINKS: 0 -- Premises 1,
+   target run 33798 Gate Record NEW E-GATE grok G1 CONTRADICTION (E-GATE M) CURED
+   target run 33798 Gate Record NEW E-GATE grok G2 CONTRADICTION (E-GATE M) CURED
+   target run 33798 Gate Record NEW E-GATE grok G3 CONTRADICTION (E-GATE M) UNCURED
+   target run 33798 Gate Record NEW E-GATE grok G4 CONTRADICTION (E-GATE M) UNCURED
+   target run 33798 Gate Record NEW E-GATE grok G5 CONTRADICTION (E-GATE M) UNCURED
+   target run 33798 Gate Record NEW E-GATE grok G6 CONTRADICTION (E-GATE M) UNCURED
+   target run 33798 Gate Record NEW E-GATE grok G7 CONTRADICTION (E-GATE M) UNCURED
+   target run 33798 Gate Record NEW E-GATE grok G8 CONTRADICTION (E-GATE M) UNCURED
+   target run 33798 Gate Record NEW E-GATE grok G9 CONTRADICTION (E-GATE M) UNCURED
+   target run 33798 Gate Record NEW E-GATE grok G10 CONTRADICTION (E-GATE M) UNCURED
+   target run 33798 Gate Record NEW E-GATE grok G11 CONTRADICTION (E-GATE M) UNCURED
+   target run 33798 Gate Record NEW E-GATE grok G12 CONTRADICTION (E-GATE M) UNCURED
+   target run 33798 Gate Record NEW E-GATE grok G13 CONTRADICTION (E-GATE M) UNCURED
+   target run 33798 Gate Record NEW E-GATE grok G14 CONTRADICTION (E-GATE M) UNCURED
+   target run 33798 Gate Record NEW E-GATE grok G15 CONTRADICTION (E-GATE M) UNCURED
+   target run 33798 Gate Record: 116 changed text line(s) match allow_lines
+   target run 33798 Alternate Merge Seat NEW E-GATE gemini G1 CONTRADICTION (E-GATE M) CURED
+   target run 33798 Alternate Merge Seat E-GATE chatgpt G1 NOT APPLIED (E-APPLY S14): full_reply "GATE: G1 || CHANGE TO: CHALLENGER CONCEDED LINKS: 0 -- Prem -> "{\n  \"verdict_tag\": \"HELD\",\n  \"defense_standing\": \"; response_line "GATE: G1 || CHANGE TO: CHALLENGER CONCEDED LINKS: 0 -- Prem -> "GATE: G1 || CHANGE TO: CHALLENGER CONCEDED LINKS: 0 -- Prem; cure_reason "GATE CHANGE TO: CHALLENGER CONCEDED LINKS: 0 -- Premise 1 i -> "GATE CHANGE TO: CHALLENGER CONCEDED LINKS: 0 -- Premises 1,
+   target run 33798 Alternate Merge Seat NEW E-GATE grok G1 CONTRADICTION (E-GATE M) CURED
+   target run 33798 Alternate Merge Seat NEW E-GATE grok G2 CONTRADICTION (E-GATE M) CURED
+   target run 33798 Alternate Merge Seat NEW E-GATE grok G3 CONTRADICTION (E-GATE M) UNCURED
+   target run 33798 Alternate Merge Seat NEW E-GATE grok G4 CONTRADICTION (E-GATE M) UNCURED
+   target run 33798 Alternate Merge Seat NEW E-GATE grok G5 CONTRADICTION (E-GATE M) UNCURED
+   target run 33798 Alternate Merge Seat NEW E-GATE grok G6 CONTRADICTION (E-GATE M) UNCURED
+   target run 33798 Alternate Merge Seat NEW E-GATE grok G7 CONTRADICTION (E-GATE M) UNCURED
+   target run 33798 Alternate Merge Seat NEW E-GATE grok G8 CONTRADICTION (E-GATE M) UNCURED
+   target run 33798 Alternate Merge Seat NEW E-GATE grok G9 CONTRADICTION (E-GATE M) UNCURED
+   target run 33798 Alternate Merge Seat NEW E-GATE grok G10 CONTRADICTION (E-GATE M) UNCURED
+   target run 33798 Alternate Merge Seat NEW E-GATE grok G11 CONTRADICTION (E-GATE M) UNCURED
+   target run 33798 Alternate Merge Seat NEW E-GATE grok G12 CONTRADICTION (E-GATE M) UNCURED
+   target run 33798 Alternate Merge Seat NEW E-GATE grok G13 CONTRADICTION (E-GATE M) UNCURED
+   target run 33798 Alternate Merge Seat NEW E-GATE grok G14 CONTRADICTION (E-GATE M) UNCURED
+   target run 33798 Alternate Merge Seat NEW E-GATE grok G15 CONTRADICTION (E-GATE M) UNCURED
+   target run 33798 Alternate Merge Seat NEW E-APPLY gemini APPLIED S1, S2, S3, S4, G1, RULING (derived) 
+   target run 33798 Alternate Merge Seat NEW E-APPLY grok APPLIED S1, S2, S3, G1, G2, S6, S7, S8, S9, S10, S11, S12, S13, S14, S15, S16, S17, S18, S19, S20, RULING (derived) 
+   target run 33798 Alternate Merge Seat GONE E-APPLY gemini APPLIED S1, S2, S3, S4, S8, S9, RULING (derived) 
+   target run 33798 Alternate Merge Seat GONE E-APPLY grok APPLIED S1, S2, S3, S4, S5, S6, S7, S8, S9, S10, S11, S12, S13, S14, S15, S16, S17, S18, S19, S20, RULING (derived) 
+   target run 33798 Alternate Merge Seat: 53 changed text line(s) match allow_lines
+   target run 33798 Alternate Merge 1 NEW E-GATE gemini G1 CONTRADICTION (E-GATE M) CURED
+   target run 33798 Alternate Merge 1 E-GATE chatgpt G1 NOT APPLIED (E-APPLY S14): full_reply "GATE: G1 || CHANGE TO: CHALLENGER CONCEDED LINKS: 0 -- Prem -> "{\n  \"verdict_tag\": \"HELD\",\n  \"defense_standing\": \"; response_line "GATE: G1 || CHANGE TO: CHALLENGER CONCEDED LINKS: 0 -- Prem -> "GATE: G1 || CHANGE TO: CHALLENGER CONCEDED LINKS: 0 -- Prem; cure_reason "GATE CHANGE TO: CHALLENGER CONCEDED LINKS: 0 -- Premise 1 i -> "GATE CHANGE TO: CHALLENGER CONCEDED LINKS: 0 -- Premises 1,
+   target run 33798 Alternate Merge 1 NEW E-GATE grok G1 CONTRADICTION (E-GATE M) CURED
+   target run 33798 Alternate Merge 1 NEW E-GATE grok G2 CONTRADICTION (E-GATE M) CURED
+   target run 33798 Alternate Merge 1 NEW E-GATE grok G3 CONTRADICTION (E-GATE M) UNCURED
+   target run 33798 Alternate Merge 1 NEW E-GATE grok G4 CONTRADICTION (E-GATE M) UNCURED
+   target run 33798 Alternate Merge 1 NEW E-GATE grok G5 CONTRADICTION (E-GATE M) UNCURED
+   target run 33798 Alternate Merge 1 NEW E-GATE grok G6 CONTRADICTION (E-GATE M) UNCURED
+   target run 33798 Alternate Merge 1 NEW E-GATE grok G7 CONTRADICTION (E-GATE M) UNCURED
+   target run 33798 Alternate Merge 1 NEW E-GATE grok G8 CONTRADICTION (E-GATE M) UNCURED
+   target run 33798 Alternate Merge 1 NEW E-GATE grok G9 CONTRADICTION (E-GATE M) UNCURED
+   target run 33798 Alternate Merge 1 NEW E-GATE grok G10 CONTRADICTION (E-GATE M) UNCURED
+   target run 33798 Alternate Merge 1 NEW E-GATE grok G11 CONTRADICTION (E-GATE M) UNCURED
+   target run 33798 Alternate Merge 1 NEW E-GATE grok G12 CONTRADICTION (E-GATE M) UNCURED
+   target run 33798 Alternate Merge 1 NEW E-GATE grok G13 CONTRADICTION (E-GATE M) UNCURED
+   target run 33798 Alternate Merge 1 NEW E-GATE grok G14 CONTRADICTION (E-GATE M) UNCURED
+   target run 33798 Alternate Merge 1 NEW E-GATE grok G15 CONTRADICTION (E-GATE M) UNCURED
+   target run 33798 Alternate Merge 1 NEW E-APPLY gemini APPLIED S1, S2, S3, S4, G1, RULING (derived) 
+   target run 33798 Alternate Merge 1 NEW E-APPLY grok APPLIED S1, S2, S3, G1, G2, S6, S7, S8, S9, S10, S11, S12, S13, S14, S15, S16, S17, S18, S19, S20, RULING (derived) 
+   target run 33798 Alternate Merge 1 NEW K-RECHK gemini G1 
+   target run 33798 Alternate Merge 1 GONE E-APPLY gemini APPLIED S1, S2, S3, S4, S8, S9, RULING (derived) 
+   target run 33798 Alternate Merge 1 GONE E-APPLY grok APPLIED S1, S2, S3, S4, S5, S6, S7, S8, S9, S10, S11, S12, S13, S14, S15, S16, S17, S18, S19, S20, RULING (derived) 
+   target run 33798 Alternate Merge 1 GONE K-RECHK gemini S8 
+   target run 33798 Alternate Merge 1 GONE K-RECHK gemini S9 
+   target run 33798 Alternate Merge 1: 53 changed text line(s) match allow_lines
+   target run 33815 Gate Build: 682 changed text line(s) match allow_lines
+   target run 33815 Gate Record NEW E-GATE gemini CONTRADICTION 
+   target run 33815 Gate Record NEW E-GATE gemini G1 CONTRADICTION (E-GATE M) CURED
+   target run 33815 Gate Record NEW E-GATE gemini G2 CONTRADICTION (E-GATE M) CURED
+   target run 33815 Gate Record NEW E-GATE gemini G3 CONTRADICTION (E-GATE M) CURED
+   target run 33815 Gate Record E-GATE grok G1 CONTRADICTION (E-GATE D38): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment ; full_reply "GATE: G1 || CHANGE TO: RULING -- D4 vs C1 -- UNDERDETERMINE -> null; reply_error null -> "no reply"; response_line "GATE: G1 || CHANGE TO: RULING -- D4 vs C1 -- UNDERDETERMINE -> null; cure_status "CURED" -> "UNCURED"; cure_reason "GATE CHANGE TO: RULING -- D4 vs C1 -- UNDERDETERMINED -- [C -> "GATE NO REPLY | ENGINE: your RULING card grades D4 vs C1 CH
+   target run 33815 Gate Record E-GATE grok G2 CONTRADICTION (E-GATE D38): reply_error null -> "no reply"; response_line "GATE: G2 || CHANGE TO: RULING -- challenger premise 1 -- SU -> null; cure_status "CURED" -> "UNCURED"; cure_reason "GATE CHANGE TO: RULING -- challenger premise 1 -- SUPPORTED -> "GATE NO REPLY | ENGINE: your RULING card grades challenger 
+   target run 33815 Gate Record E-GATE grok G3 CONTRADICTION (E-GATE D38): reply_error null -> "no reply"; response_line "GATE: G3 || CHANGE TO: RULING -- challenger premise 6 -- SU -> null; cure_status "CURED" -> "UNCURED"; cure_reason "GATE CHANGE TO: RULING -- challenger premise 6 -- SUPPORTED -> "GATE NO REPLY | ENGINE: your RULING card grades challenger 
+   target run 33815 Gate Record NEW E-GATE grok G4 CONTRADICTION (E-GATE M) UNCURED
+   target run 33815 Gate Record NEW E-GATE grok G5 CONTRADICTION (E-GATE M) UNCURED
+   target run 33815 Gate Record GONE E-GATE grok CONTRADICTION 
+   target run 33815 Gate Record: 46 changed text line(s) match allow_lines
+   target run 33815 Alternate Merge Seat NEW E-GATE gemini G1 CONTRADICTION (E-GATE M) CURED
+   target run 33815 Alternate Merge Seat NEW E-GATE gemini G2 CONTRADICTION (E-GATE M) CURED
+   target run 33815 Alternate Merge Seat NEW E-GATE gemini G3 CONTRADICTION (E-GATE M) CURED
+   target run 33815 Alternate Merge Seat E-GATE grok G1 CONTRADICTION (E-GATE D38): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment ; full_reply "GATE: G1 || CHANGE TO: RULING -- D4 vs C1 -- UNDERDETERMINE -> null; reply_error null -> "no reply"; response_line "GATE: G1 || CHANGE TO: RULING -- D4 vs C1 -- UNDERDETERMINE -> null; cure_status "CURED" -> "UNCURED"; cure_reason "GATE CHANGE TO: RULING -- D4 vs C1 -- UNDERDETERMINED -- [C -> "GATE NO REPLY | ENGINE: your RULING card grades D4 vs C1 CH
+   target run 33815 Alternate Merge Seat E-GATE grok G2 CONTRADICTION (E-GATE D38): reply_error null -> "no reply"; response_line "GATE: G2 || CHANGE TO: RULING -- challenger premise 1 -- SU -> null; cure_status "CURED" -> "UNCURED"; cure_reason "GATE CHANGE TO: RULING -- challenger premise 1 -- SUPPORTED -> "GATE NO REPLY | ENGINE: your RULING card grades challenger 
+   target run 33815 Alternate Merge Seat E-GATE grok G3 CONTRADICTION (E-GATE D38): reply_error null -> "no reply"; response_line "GATE: G3 || CHANGE TO: RULING -- challenger premise 6 -- SU -> null; cure_status "CURED" -> "UNCURED"; cure_reason "GATE CHANGE TO: RULING -- challenger premise 6 -- SUPPORTED -> "GATE NO REPLY | ENGINE: your RULING card grades challenger 
+   target run 33815 Alternate Merge Seat NEW E-GATE grok G4 CONTRADICTION (E-GATE M) UNCURED
+   target run 33815 Alternate Merge Seat NEW E-GATE grok G5 CONTRADICTION (E-GATE M) UNCURED
+   target run 33815 Alternate Merge Seat NEW E-APPLY gemini APPLIED S1, S2, S3, S4, G3, RULING (derived) 
+   target run 33815 Alternate Merge Seat NEW E-APPLY grok APPLIED S1, S2, S3, S4, S5, S6, S7, S8, S9, S10, S11, S12, S13, S14, S15, S17, RULING (derived) 
+   target run 33815 Alternate Merge Seat GONE E-APPLY gemini APPLIED S1, S2, S3, S4, RULING (derived) 
+   target run 33815 Alternate Merge Seat GONE E-APPLY grok APPLIED S1, S2, S3, S4, S5, S6, S7, S8, S9, S10, S11, S12, S13, S14, S15, S17, G1, G2, G3, RULING (derived) 
+   target run 33815 Alternate Merge Seat: 39 changed text line(s) match allow_lines
+   target run 33815 Alternate Merge 1 NEW E-GATE gemini G1 CONTRADICTION (E-GATE M) CURED
+   target run 33815 Alternate Merge 1 NEW E-GATE gemini G2 CONTRADICTION (E-GATE M) CURED
+   target run 33815 Alternate Merge 1 NEW E-GATE gemini G3 CONTRADICTION (E-GATE M) CURED
+   target run 33815 Alternate Merge 1 E-GATE grok G1 CONTRADICTION (E-GATE D38): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment ; full_reply "GATE: G1 || CHANGE TO: RULING -- D4 vs C1 -- UNDERDETERMINE -> null; reply_error null -> "no reply"; response_line "GATE: G1 || CHANGE TO: RULING -- D4 vs C1 -- UNDERDETERMINE -> null; cure_status "CURED" -> "UNCURED"; cure_reason "GATE CHANGE TO: RULING -- D4 vs C1 -- UNDERDETERMINED -- [C -> "GATE NO REPLY | ENGINE: your RULING card grades D4 vs C1 CH
+   target run 33815 Alternate Merge 1 E-GATE grok G2 CONTRADICTION (E-GATE D38): reply_error null -> "no reply"; response_line "GATE: G2 || CHANGE TO: RULING -- challenger premise 1 -- SU -> null; cure_status "CURED" -> "UNCURED"; cure_reason "GATE CHANGE TO: RULING -- challenger premise 1 -- SUPPORTED -> "GATE NO REPLY | ENGINE: your RULING card grades challenger 
+   target run 33815 Alternate Merge 1 E-GATE grok G3 CONTRADICTION (E-GATE D38): reply_error null -> "no reply"; response_line "GATE: G3 || CHANGE TO: RULING -- challenger premise 6 -- SU -> null; cure_status "CURED" -> "UNCURED"; cure_reason "GATE CHANGE TO: RULING -- challenger premise 6 -- SUPPORTED -> "GATE NO REPLY | ENGINE: your RULING card grades challenger 
+   target run 33815 Alternate Merge 1 NEW E-GATE grok G4 CONTRADICTION (E-GATE M) UNCURED
+   target run 33815 Alternate Merge 1 NEW E-GATE grok G5 CONTRADICTION (E-GATE M) UNCURED
+   target run 33815 Alternate Merge 1 NEW E-APPLY gemini APPLIED S1, S2, S3, S4, G3, RULING (derived) 
+   target run 33815 Alternate Merge 1 NEW E-APPLY grok APPLIED S1, S2, S3, S4, S5, S6, S7, S8, S9, S10, S11, S12, S13, S14, S15, S17, RULING (derived) 
+   target run 33815 Alternate Merge 1 GONE E-APPLY gemini APPLIED S1, S2, S3, S4, RULING (derived) 
+   target run 33815 Alternate Merge 1 GONE E-APPLY grok APPLIED S1, S2, S3, S4, S5, S6, S7, S8, S9, S10, S11, S12, S13, S14, S15, S17, G1, G2, G3, RULING (derived) 
+   target run 33815 Alternate Merge 1: 39 changed text line(s) match allow_lines
+   target run 33828 Alt Gate Build: 63 changed text line(s) match allow_lines
+   target run 33828 Alt Gate Record E-GATE sol G1 CONTRADICTION (E-GATE D38): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment 
+   target run 33828 Alt Gate Record NEW E-GATE sol G5 CONTRADICTION (E-GATE M) UNCURED
+   target run 33828 Alt Gate Record NEW E-GATE sol G6 CONTRADICTION (E-GATE M) UNCURED
+   target run 33828 Alt Gate Record NEW E-GATE sol G7 CONTRADICTION (E-GATE M) UNCURED
+   target run 33828 Alt Gate Record: 26 changed text line(s) match allow_lines
+   target run 33828 Gate Build: 346 changed text line(s) match allow_lines
+   target run 33828 Gate Record NEW E-GATE grok CONTRADICTION 
+   target run 33828 Gate Record NEW E-GATE grok G1 CONTRADICTION (E-GATE M) CURED
+   target run 33828 Gate Record NEW E-GATE grok G2 CONTRADICTION (E-GATE M) UNCURED
+   target run 33828 Gate Record NEW E-GATE grok G3 CONTRADICTION (E-GATE M) UNCURED
+   target run 33828 Gate Record NEW E-GATE grok G4 CONTRADICTION (E-GATE M) UNCURED
+   target run 33828 Gate Record E-GATE chatgpt G1 CONTRADICTION (E-GATE D38): full_reply "{\n  \"verdict_tag\": \"HELD\",\n  \"defense_standing\": \" -> null; reply_error null -> "no reply"; response_line "\"reasoning\": \"GATE: G1 || CHANGE TO: RULING -- Defender  -> null; cure_status "CURED" -> "UNCURED"; cure_reason "GATE CHANGE TO: RULING -- Defender premise 5 -- SUPPORTED - -> "GATE NO REPLY | ENGINE: your RULING card grades defender pr
+   target run 33828 Gate Record GONE E-GATE chatgpt CONTRADICTION 
+   target run 33828 Gate Record: 42 changed text line(s) match allow_lines
+   target run 33828 Alternate Merge Seat NEW E-GATE grok G1 CONTRADICTION (E-GATE M) CURED
+   target run 33828 Alternate Merge Seat NEW E-GATE grok G2 CONTRADICTION (E-GATE M) UNCURED
+   target run 33828 Alternate Merge Seat NEW E-GATE grok G3 CONTRADICTION (E-GATE M) UNCURED
+   target run 33828 Alternate Merge Seat NEW E-GATE grok G4 CONTRADICTION (E-GATE M) UNCURED
+   target run 33828 Alternate Merge Seat E-GATE chatgpt G1 CONTRADICTION (E-GATE D38): full_reply "{\n  \"verdict_tag\": \"HELD\",\n  \"defense_standing\": \" -> null; reply_error null -> "no reply"; response_line "\"reasoning\": \"GATE: G1 || CHANGE TO: RULING -- Defender  -> null; cure_status "CURED" -> "UNCURED"; cure_reason "GATE CHANGE TO: RULING -- Defender premise 5 -- SUPPORTED - -> "GATE NO REPLY | ENGINE: your RULING card grades defender pr
+   target run 33828 Alternate Merge Seat NEW E-APPLY grok APPLIED G1, S2, S3, S4, S5, S6, S7, S8 
+   target run 33828 Alternate Merge Seat NEW E-APPLY chatgpt APPLIED S2, S3 
+   target run 33828 Alternate Merge Seat GONE E-APPLY grok APPLIED S1, S2, S3, S4, S5, S6, S7, S8 
+   target run 33828 Alternate Merge Seat GONE E-APPLY chatgpt APPLIED S2, G1, S3 
+   target run 33828 Alternate Merge Seat: 30 changed text line(s) match allow_lines
+   target run 33828 Alternate Merge 1 NEW K-S3 grok S3 DEFENDER CR4: #1 
+   target run 33828 Alternate Merge 1 NEW K-S3 grok S3 DEFENDER CR4: #2 
+   target run 33828 Alternate Merge 1 NEW K-S3 grok S3 DEFENDER CR4: #3 
+   target run 33828 Alternate Merge 1 NEW K-S3 grok S3 DEFENDER CR4: #4 
+   target run 33828 Alternate Merge 1 NEW K-S3 grok S3 DEFENDER CR4: #5 
+   target run 33828 Alternate Merge 1 NEW K-S3 grok S3 DEFENDER CR4: #6 
+   target run 33828 Alternate Merge 1 NEW K-S3 grok S3 DEFENDER CR4: #7 
+   target run 33828 Alternate Merge 1 NEW K-S3 grok S3 DEFENDER CR4: #8 
+   target run 33828 Alternate Merge 1 NEW K-S3 grok S3 DEFENDER CR4: #9 
+   target run 33828 Alternate Merge 1 NEW K-V grok DEFENDER premise 6 
+   target run 33828 Alternate Merge 1 NEW K-V grok CHALLENGER premise 4 
+   target run 33828 Alternate Merge 1 NEW K-W grok DEFENDER CR3 LINK 1 #1 
+   target run 33828 Alternate Merge 1 NEW K-W grok DEFENDER CR3 LINK 2 #2 
+   target run 33828 Alternate Merge 1 NEW K-W grok DEFENDER CR3 LINK 5 #3 
+   target run 33828 Alternate Merge 1 NEW K-W grok DEFENDER CR4 D3 #4 
+   target run 33828 Alternate Merge 1 NEW K-W grok DEFENDER CR4 D5 #5 
+   target run 33828 Alternate Merge 1 NEW K-W grok DEFENDER CR4 D5 #6 
+   target run 33828 Alternate Merge 1 NEW K-W grok DEFENDER CR4 D5 #7 
+   target run 33828 Alternate Merge 1 NEW K-W grok DEFENDER CR4 D5 #8 
+   target run 33828 Alternate Merge 1 NEW K-W grok DEFENDER CR4 D5 #9 
+   target run 33828 Alternate Merge 1 NEW K-W grok DEFENDER CR4 D5 #10 
+   target run 33828 Alternate Merge 1 NEW K-W grok CHALLENGER DR3 LINK 2 #1 
+   target run 33828 Alternate Merge 1 NEW K-W grok CHALLENGER DR3 LINK 2 #2 
+   target run 33828 Alternate Merge 1 NEW K-W grok CHALLENGER DR3 LINK 3 #3 
+   target run 33828 Alternate Merge 1 NEW K-W grok CHALLENGER DR3 LINK 3 #4 
+   target run 33828 Alternate Merge 1 NEW K-W grok CHALLENGER DR3 LINK 4 #5 
+   target run 33828 Alternate Merge 1 NEW K-W grok CHALLENGER DR3 LINK 4 #6 
+   target run 33828 Alternate Merge 1 NEW K-W grok CHALLENGER DR3 LINK 4 #7 
+   target run 33828 Alternate Merge 1 NEW K-W grok CHALLENGER DR3 LINK 4 #8 
+   target run 33828 Alternate Merge 1 NEW K-W grok CHALLENGER DR3 LINK 5 #9 
+   target run 33828 Alternate Merge 1 NEW K-W grok CHALLENGER DR3 LINK 5 #10 
+   target run 33828 Alternate Merge 1 NEW K-S3 grok S3 DEFENDER CR4: #1 CURED
+   target run 33828 Alternate Merge 1 NEW K-S3 grok S3 DEFENDER CR4: #2 CURED
+   target run 33828 Alternate Merge 1 NEW K-S3 grok S3 DEFENDER CR4: #3 CURED
+   target run 33828 Alternate Merge 1 NEW K-S3 grok S3 DEFENDER CR4: #4 CURED
+   target run 33828 Alternate Merge 1 NEW K-S3 grok S3 DEFENDER CR4: #5 CURED
+   target run 33828 Alternate Merge 1 NEW K-S3 grok S3 DEFENDER CR4: #6 CURED
+   target run 33828 Alternate Merge 1 NEW K-S3 grok S3 DEFENDER CR4: #7 CURED
+   target run 33828 Alternate Merge 1 NEW K-S3 grok S3 DEFENDER CR4: #8 CURED
+   target run 33828 Alternate Merge 1 NEW K-S3 grok S3 DEFENDER CR4: #9 CURED
+   target run 33828 Alternate Merge 1 NEW K-V grok DEFENDER premise 6 CURED
+   target run 33828 Alternate Merge 1 NEW K-V grok CHALLENGER premise 4 CURED
+   target run 33828 Alternate Merge 1 NEW K-W grok DEFENDER CR3 LINK 1 #1 CURED
+   target run 33828 Alternate Merge 1 NEW K-W grok DEFENDER CR3 LINK 2 #2 CURED
+   target run 33828 Alternate Merge 1 NEW K-W grok DEFENDER CR3 LINK 5 #3 CURED
+   target run 33828 Alternate Merge 1 NEW K-W grok DEFENDER CR4 D3 #4 CURED
+   target run 33828 Alternate Merge 1 NEW K-W grok DEFENDER CR4 D5 #5 CURED
+   target run 33828 Alternate Merge 1 NEW K-W grok DEFENDER CR4 D5 #6 UNCURED
+   target run 33828 Alternate Merge 1 NEW K-W grok DEFENDER CR4 D5 #7 CURED
+   target run 33828 Alternate Merge 1 NEW K-W grok DEFENDER CR4 D5 #8 CURED
+   target run 33828 Alternate Merge 1 NEW K-W grok DEFENDER CR4 D5 #9 CURED
+   target run 33828 Alternate Merge 1 NEW K-W grok DEFENDER CR4 D5 #10 CURED
+   target run 33828 Alternate Merge 1 NEW K-W grok CHALLENGER DR3 LINK 2 #1 CURED
+   target run 33828 Alternate Merge 1 NEW K-W grok CHALLENGER DR3 LINK 2 #2 CURED
+   target run 33828 Alternate Merge 1 NEW K-W grok CHALLENGER DR3 LINK 3 #3 CURED
+   target run 33828 Alternate Merge 1 NEW K-W grok CHALLENGER DR3 LINK 3 #4 CURED
+   target run 33828 Alternate Merge 1 NEW K-W grok CHALLENGER DR3 LINK 4 #5 CURED
+   target run 33828 Alternate Merge 1 NEW K-W grok CHALLENGER DR3 LINK 4 #6 CURED
+   target run 33828 Alternate Merge 1 NEW K-W grok CHALLENGER DR3 LINK 4 #7 CURED
+   target run 33828 Alternate Merge 1 NEW K-W grok CHALLENGER DR3 LINK 4 #8 CURED
+   target run 33828 Alternate Merge 1 NEW K-W grok CHALLENGER DR3 LINK 5 #9 CURED
+   target run 33828 Alternate Merge 1 NEW K-W grok CHALLENGER DR3 LINK 5 #10 CURED
+   target run 33828 Alternate Merge 1 NEW E-GATE grok G1 CONTRADICTION (E-GATE M) CURED
+   target run 33828 Alternate Merge 1 NEW E-GATE grok G2 CONTRADICTION (E-GATE M) UNCURED
+   target run 33828 Alternate Merge 1 NEW E-GATE grok G3 CONTRADICTION (E-GATE M) UNCURED
+   target run 33828 Alternate Merge 1 NEW E-GATE grok G4 CONTRADICTION (E-GATE M) UNCURED
+   target run 33828 Alternate Merge 1 E-GATE chatgpt G1 CONTRADICTION (E-GATE D38): full_reply "{\n  \"verdict_tag\": \"HELD\",\n  \"defense_standing\": \" -> null; reply_error null -> "no reply"; response_line "\"reasoning\": \"GATE: G1 || CHANGE TO: RULING -- Defender  -> null; cure_status "CURED" -> "UNCURED"; cure_reason "GATE CHANGE TO: RULING -- Defender premise 5 -- SUPPORTED - -> "GATE NO REPLY | ENGINE: your RULING card grades defender pr
+   target run 33828 Alternate Merge 1 NEW E-APPLY grok APPLIED G1, S2, S3, S4, S5, S6, S7, S8 
+   target run 33828 Alternate Merge 1 NEW E-APPLY chatgpt APPLIED S2, S3 
+   target run 33828 Alternate Merge 1 E-GATE sol G1 CONTRADICTION (E-GATE D38): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment 
+   target run 33828 Alternate Merge 1 NEW E-GATE sol G5 CONTRADICTION (E-GATE M) UNCURED
+   target run 33828 Alternate Merge 1 NEW E-GATE sol G6 CONTRADICTION (E-GATE M) UNCURED
+   target run 33828 Alternate Merge 1 NEW E-GATE sol G7 CONTRADICTION (E-GATE M) UNCURED
+   target run 33828 Alternate Merge 1 GONE K-G4 sol D5 vs C1 
+   target run 33828 Alternate Merge 1 GONE K-S3 sol S3 DEFENDER CR4: #1 
+   target run 33828 Alternate Merge 1 GONE K-S3 sol S3 DEFENDER CR4: #2 
+   target run 33828 Alternate Merge 1 GONE K-S3 sol S3 DEFENDER CR4: #3 
+   target run 33828 Alternate Merge 1 GONE K-S3 sol S3 DEFENDER CR4: #4 
+   target run 33828 Alternate Merge 1 GONE K-S3 sol S3 DEFENDER CR4: #5 
+   target run 33828 Alternate Merge 1 GONE K-S3 sol S3 DEFENDER CR4: #6 
+   target run 33828 Alternate Merge 1 GONE K-S3 sol S3 DEFENDER CR4: #7 
+   target run 33828 Alternate Merge 1 GONE K-S3 sol S3 DEFENDER CR4: #8 
+   target run 33828 Alternate Merge 1 GONE K-S3 sol S3 DEFENDER CR4: #9 
+   target run 33828 Alternate Merge 1 GONE K-S3 sol S3 DEFENDER CR4: #10 
+   target run 33828 Alternate Merge 1 GONE K-S3 sol S3 DEFENDER CR4: #11 
+   target run 33828 Alternate Merge 1 GONE K-S3 sol S3 DEFENDER CR4: #12 
+   target run 33828 Alternate Merge 1 GONE K-S3 sol S3 DEFENDER CR4: #13 
+   target run 33828 Alternate Merge 1 GONE K-S3 sol S3 DEFENDER CR4: #14 
+   target run 33828 Alternate Merge 1 GONE K-S3 sol S3 DEFENDER CR4: #15 
+   target run 33828 Alternate Merge 1 GONE K-S3 sol S3 DEFENDER CR4: #16 
+   target run 33828 Alternate Merge 1 GONE K-S3 sol S3 DEFENDER CR4: #17 
+   target run 33828 Alternate Merge 1 GONE K-S3 sol S3 DEFENDER CR4: #18 
+   target run 33828 Alternate Merge 1 GONE K-R sol DEFENDER premise 4 
+   target run 33828 Alternate Merge 1 GONE K-W sol DEFENDER CR3 LINK 1 #1 
+   target run 33828 Alternate Merge 1 GONE K-W sol DEFENDER CR3 LINK 2 #2 
+   target run 33828 Alternate Merge 1 GONE K-W sol DEFENDER CR3 LINK 5 #3 
+   target run 33828 Alternate Merge 1 GONE K-W sol DEFENDER CR4 D3 #4 
+   target run 33828 Alternate Merge 1 GONE K-W sol DEFENDER CR4 D5 #5 
+   target run 33828 Alternate Merge 1 GONE K-W sol DEFENDER CR4 D5 #6 
+   target run 33828 Alternate Merge 1 GONE K-W sol DEFENDER CR4 D5 #7 
+   target run 33828 Alternate Merge 1 GONE K-W sol DEFENDER CR4 D5 #8 
+   target run 33828 Alternate Merge 1 GONE K-W sol DEFENDER CR4 D5 #9 
+   target run 33828 Alternate Merge 1 GONE K-W sol DEFENDER CR4 D5 #10 
+   target run 33828 Alternate Merge 1 GONE K-W sol CHALLENGER DR3 LINK 2 #1 
+   target run 33828 Alternate Merge 1 GONE K-W sol CHALLENGER DR3 LINK 2 #2 
+   target run 33828 Alternate Merge 1 GONE K-W sol CHALLENGER DR3 LINK 3 #3 
+   target run 33828 Alternate Merge 1 GONE K-W sol CHALLENGER DR3 LINK 3 #4 
+   target run 33828 Alternate Merge 1 GONE K-W sol CHALLENGER DR3 LINK 4 #5 
+   target run 33828 Alternate Merge 1 GONE K-W sol CHALLENGER DR3 LINK 4 #6 
+   target run 33828 Alternate Merge 1 GONE K-W sol CHALLENGER DR3 LINK 4 #7 
+   target run 33828 Alternate Merge 1 GONE K-W sol CHALLENGER DR3 LINK 4 #8 
+   target run 33828 Alternate Merge 1 GONE K-W sol CHALLENGER DR3 LINK 5 #9 
+   target run 33828 Alternate Merge 1 GONE K-W sol CHALLENGER DR3 LINK 5 #10 
+   target run 33828 Alternate Merge 1 GONE K-CMT sol contested grades without a commitment 
+   target run 33828 Alternate Merge 1 GONE K-CMTL sol line 1 
+   target run 33828 Alternate Merge 1 GONE K-CMTL sol line 2 
+   target run 33828 Alternate Merge 1 GONE K-UNX sol DEFENDER premise 5 
+   target run 33828 Alternate Merge 1 GONE K-G4 sol D5 vs C1 CURED
+   target run 33828 Alternate Merge 1 GONE K-S3 sol S3 DEFENDER CR4: #1 CURED
+   target run 33828 Alternate Merge 1 GONE K-S3 sol S3 DEFENDER CR4: #2 CURED
+   target run 33828 Alternate Merge 1 GONE K-S3 sol S3 DEFENDER CR4: #3 CURED
+   target run 33828 Alternate Merge 1 GONE K-S3 sol S3 DEFENDER CR4: #4 CURED
+   target run 33828 Alternate Merge 1 GONE K-S3 sol S3 DEFENDER CR4: #5 CURED
+   target run 33828 Alternate Merge 1 GONE K-S3 sol S3 DEFENDER CR4: #6 CURED
+   target run 33828 Alternate Merge 1 GONE K-S3 sol S3 DEFENDER CR4: #7 CURED
+   target run 33828 Alternate Merge 1 GONE K-S3 sol S3 DEFENDER CR4: #8 CURED
+   target run 33828 Alternate Merge 1 GONE K-S3 sol S3 DEFENDER CR4: #9 CURED
+   target run 33828 Alternate Merge 1 GONE K-S3 sol S3 DEFENDER CR4: #10 CURED
+   target run 33828 Alternate Merge 1 GONE K-S3 sol S3 DEFENDER CR4: #11 CURED
+   target run 33828 Alternate Merge 1 GONE K-S3 sol S3 DEFENDER CR4: #12 CURED
+   target run 33828 Alternate Merge 1 GONE K-S3 sol S3 DEFENDER CR4: #13 CURED
+   target run 33828 Alternate Merge 1 GONE K-S3 sol S3 DEFENDER CR4: #14 CURED
+   target run 33828 Alternate Merge 1 GONE K-S3 sol S3 DEFENDER CR4: #15 CURED
+   target run 33828 Alternate Merge 1 GONE K-S3 sol S3 DEFENDER CR4: #16 CURED
+   target run 33828 Alternate Merge 1 GONE K-S3 sol S3 DEFENDER CR4: #17 CURED
+   target run 33828 Alternate Merge 1 GONE K-S3 sol S3 DEFENDER CR4: #18 CURED
+   target run 33828 Alternate Merge 1 GONE K-R sol DEFENDER premise 4 UNCURED
+   target run 33828 Alternate Merge 1 GONE K-W sol DEFENDER CR3 LINK 1 #1 CURED
+   target run 33828 Alternate Merge 1 GONE K-W sol DEFENDER CR3 LINK 2 #2 CURED
+   target run 33828 Alternate Merge 1 GONE K-W sol DEFENDER CR3 LINK 5 #3 CURED
+   target run 33828 Alternate Merge 1 GONE K-W sol DEFENDER CR4 D3 #4 CURED
+   target run 33828 Alternate Merge 1 GONE K-W sol DEFENDER CR4 D5 #5 CURED
+   target run 33828 Alternate Merge 1 GONE K-W sol DEFENDER CR4 D5 #6 CURED
+   target run 33828 Alternate Merge 1 GONE K-W sol DEFENDER CR4 D5 #7 CURED
+   target run 33828 Alternate Merge 1 GONE K-W sol DEFENDER CR4 D5 #8 CURED
+   target run 33828 Alternate Merge 1 GONE K-W sol DEFENDER CR4 D5 #9 CURED
+   target run 33828 Alternate Merge 1 GONE K-W sol DEFENDER CR4 D5 #10 CURED
+   target run 33828 Alternate Merge 1 GONE K-W sol CHALLENGER DR3 LINK 2 #1 CURED
+   target run 33828 Alternate Merge 1 GONE K-W sol CHALLENGER DR3 LINK 2 #2 CURED
+   target run 33828 Alternate Merge 1 GONE K-W sol CHALLENGER DR3 LINK 3 #3 CURED
+   target run 33828 Alternate Merge 1 GONE K-W sol CHALLENGER DR3 LINK 3 #4 CURED
+   target run 33828 Alternate Merge 1 GONE K-W sol CHALLENGER DR3 LINK 4 #5 CURED
+   target run 33828 Alternate Merge 1 GONE K-W sol CHALLENGER DR3 LINK 4 #6 CURED
+   target run 33828 Alternate Merge 1 GONE K-W sol CHALLENGER DR3 LINK 4 #7 CURED
+   target run 33828 Alternate Merge 1 GONE K-W sol CHALLENGER DR3 LINK 4 #8 CURED
+   target run 33828 Alternate Merge 1 GONE K-W sol CHALLENGER DR3 LINK 5 #9 CURED
+   target run 33828 Alternate Merge 1 GONE K-W sol CHALLENGER DR3 LINK 5 #10 CURED
+   target run 33828 Alternate Merge 1 GONE K-CMT sol contested grades without a commitment CURED
+   target run 33828 Alternate Merge 1 GONE K-CMTL sol line 1 CURED
+   target run 33828 Alternate Merge 1 GONE K-CMTL sol line 2 CURED
+   target run 33828 Alternate Merge 1 GONE K-UNX sol DEFENDER premise 5 CURED
+   target run 33828 Alternate Merge 1 GONE E-APPLY grok APPLIED S1, S2, S3, S4, S5, S6, S7, S8 
+   target run 33828 Alternate Merge 1 GONE E-APPLY chatgpt APPLIED S2, G1, S3 
+   target run 33828 Alternate Merge 1: 222 changed text line(s) match allow_lines
+   target run 33846 Gate Build: 1396 changed text line(s) match allow_lines
+   target run 33846 Gate Record NEW E-GATE grok RULE K-G4 
+   target run 33846 Gate Record NEW E-GATE gemini G1 CONTRADICTION (E-GATE M) UNCURED
+   target run 33846 Gate Record NEW E-GATE gemini G2 CONTRADICTION (E-GATE M) UNCURED
+   target run 33846 Gate Record NEW E-GATE gemini G3 CONTRADICTION (E-GATE M) UNCURED
+   target run 33846 Gate Record NEW E-GATE gemini G4 CONTRADICTION (E-GATE M) UNCURED
+   target run 33846 Gate Record E-GATE grok G1 RULE K-G4 (K re-read): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment ; full_reply null -> "{\n  \"verdict_tag\": \"HELD\",\n  \"defense_standing\": \"; reply_error "The model is currently at capacity due to high demand. Plea -> null; response_line null -> "\"reasoning\": \"GATE: G1 || CHANGE TO: RULING -- D6 keysto; cure_reason "GATE NO REPLY | ENGINE: DEBATE RULE VIOLATION (K-G4) -- D3  -> "GATE CHANGE TO: RULING -- D6 keystone -- STANDS -- The defe
+   target run 33846 Gate Record E-GATE grok G2 CONTRADICTION (E-GATE D38): reply_error "The model is currently at capacity due to high demand. Plea -> null; cure_reason "GATE NO REPLY | ENGINE: your RULING card grades D2 vs C2 CH -> "GATE NO ANSWER | ENGINE: your RULING card grades D2 vs C2 C
+   target run 33846 Gate Record E-GATE grok G3 CONTRADICTION (E-GATE D38): reply_error "The model is currently at capacity due to high demand. Plea -> null; cure_reason "GATE NO REPLY | ENGINE: your RULING card grades D6 vs C6 CH -> "GATE NO ANSWER | ENGINE: your RULING card grades D6 vs C6 C
+   target run 33846 Gate Record E-GATE grok G4 CONTRADICTION (E-GATE D38): reply_error "The model is currently at capacity due to high demand. Plea -> null; cure_reason "GATE NO REPLY | ENGINE: your RULING card grades challenger  -> "GATE NO ANSWER | ENGINE: your RULING card grades challenger
+   target run 33846 Gate Record E-GATE grok G5 CONTRADICTION (E-GATE D38): reply_error "The model is currently at capacity due to high demand. Plea -> null; cure_reason "GATE NO REPLY | ENGINE: your RULING card grades challenger  -> "GATE NO ANSWER | ENGINE: your RULING card grades challenger
+   target run 33846 Gate Record NEW E-GATE grok G6 CONTRADICTION (E-GATE M) UNCURED
+   target run 33846 Gate Record NEW E-GATE grok G7 CONTRADICTION (E-GATE M) UNCURED
+   target run 33846 Gate Record NEW E-GATE grok G8 CONTRADICTION (E-GATE M) UNCURED
+   target run 33846 Gate Record NEW E-GATE grok NEW NOT APPLIED (E-APPLY G1) UNCURED
+   target run 33846 Gate Record E-GATE chatgpt G1 CONTRADICTION (E-GATE D38): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment ; full_reply "{\n  \"verdict_tag\": \"HELD\",\n  \"defense_standing\": \" -> null; reply_error null -> "no reply"; response_line "\"reasoning\": \"GATE: G1 || CHANGE TO: RULING -- D6 keysto -> null; cure_status "CURED" -> "UNCURED"; cure_reason "GATE CHANGE TO: RULING -- D6 keystone -- STANDS -- The defe -> "GATE NO REPLY | ENGINE: your RULING card grades KEYSTONE D6
+   target run 33846 Gate Record NEW E-GATE chatgpt G2 CONTRADICTION (E-GATE M) UNCURED
+   target run 33846 Gate Record NEW E-GATE chatgpt G3 CONTRADICTION (E-GATE M) UNCURED
+   target run 33846 Gate Record NEW E-GATE chatgpt G4 CONTRADICTION (E-GATE M) UNCURED
+   target run 33846 Gate Record GONE E-GATE chatgpt CONTRADICTION 
+   target run 33846 Gate Record: 97 changed text line(s) match allow_lines
+   target run 33846 Alternate Merge Seat NEW E-GATE gemini G1 CONTRADICTION (E-GATE M) UNCURED
+   target run 33846 Alternate Merge Seat NEW E-GATE gemini G2 CONTRADICTION (E-GATE M) UNCURED
+   target run 33846 Alternate Merge Seat NEW E-GATE gemini G3 CONTRADICTION (E-GATE M) UNCURED
+   target run 33846 Alternate Merge Seat NEW E-GATE gemini G4 CONTRADICTION (E-GATE M) UNCURED
+   target run 33846 Alternate Merge Seat E-GATE grok G1 RULE K-G4 (K re-read): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment ; full_reply null -> "{\n  \"verdict_tag\": \"HELD\",\n  \"defense_standing\": \"; reply_error "The model is currently at capacity due to high demand. Plea -> null; response_line null -> "\"reasoning\": \"GATE: G1 || CHANGE TO: RULING -- D6 keysto; cure_reason "GATE NO REPLY | ENGINE: DEBATE RULE VIOLATION (K-G4) -- D3  -> "GATE CHANGE TO: RULING -- D6 keystone -- STANDS -- The defe
+   target run 33846 Alternate Merge Seat E-GATE grok G2 CONTRADICTION (E-GATE D38): reply_error "The model is currently at capacity due to high demand. Plea -> null; cure_reason "GATE NO REPLY | ENGINE: your RULING card grades D2 vs C2 CH -> "GATE NO ANSWER | ENGINE: your RULING card grades D2 vs C2 C
+   target run 33846 Alternate Merge Seat E-GATE grok G3 CONTRADICTION (E-GATE D38): reply_error "The model is currently at capacity due to high demand. Plea -> null; cure_reason "GATE NO REPLY | ENGINE: your RULING card grades D6 vs C6 CH -> "GATE NO ANSWER | ENGINE: your RULING card grades D6 vs C6 C
+   target run 33846 Alternate Merge Seat E-GATE grok G4 CONTRADICTION (E-GATE D38): reply_error "The model is currently at capacity due to high demand. Plea -> null; cure_reason "GATE NO REPLY | ENGINE: your RULING card grades challenger  -> "GATE NO ANSWER | ENGINE: your RULING card grades challenger
+   target run 33846 Alternate Merge Seat E-GATE grok G5 CONTRADICTION (E-GATE D38): reply_error "The model is currently at capacity due to high demand. Plea -> null; cure_reason "GATE NO REPLY | ENGINE: your RULING card grades challenger  -> "GATE NO ANSWER | ENGINE: your RULING card grades challenger
+   target run 33846 Alternate Merge Seat NEW E-GATE grok G6 CONTRADICTION (E-GATE M) UNCURED
+   target run 33846 Alternate Merge Seat NEW E-GATE grok G7 CONTRADICTION (E-GATE M) UNCURED
+   target run 33846 Alternate Merge Seat NEW E-GATE grok G8 CONTRADICTION (E-GATE M) UNCURED
+   target run 33846 Alternate Merge Seat NEW E-GATE grok NEW NOT APPLIED (E-APPLY G1) UNCURED
+   target run 33846 Alternate Merge Seat E-GATE chatgpt G1 CONTRADICTION (E-GATE D38): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment ; full_reply "{\n  \"verdict_tag\": \"HELD\",\n  \"defense_standing\": \" -> null; reply_error null -> "no reply"; response_line "\"reasoning\": \"GATE: G1 || CHANGE TO: RULING -- D6 keysto -> null; cure_status "CURED" -> "UNCURED"; cure_reason "GATE CHANGE TO: RULING -- D6 keystone -- STANDS -- The defe -> "GATE NO REPLY | ENGINE: your RULING card grades KEYSTONE D6
+   target run 33846 Alternate Merge Seat NEW E-GATE chatgpt G2 CONTRADICTION (E-GATE M) UNCURED
+   target run 33846 Alternate Merge Seat NEW E-GATE chatgpt G3 CONTRADICTION (E-GATE M) UNCURED
+   target run 33846 Alternate Merge Seat NEW E-GATE chatgpt G4 CONTRADICTION (E-GATE M) UNCURED
+   target run 33846 Alternate Merge Seat NEW E-APPLY grok G1 NOT APPLIED UNCURED
+   target run 33846 Alternate Merge Seat NEW E-APPLY chatgpt APPLIED S1, S2, S3, S4, S5, S6, S7, S8, S9 
+   target run 33846 Alternate Merge Seat GONE E-APPLY chatgpt APPLIED S1, S2, S3, S4, S5, S6, S7, S8, S9, G1 
+   target run 33846 Alternate Merge Seat: 44 changed text line(s) match allow_lines
+   target run 33846 Alternate Merge 1 NEW E-GATE gemini G1 CONTRADICTION (E-GATE M) UNCURED
+   target run 33846 Alternate Merge 1 NEW E-GATE gemini G2 CONTRADICTION (E-GATE M) UNCURED
+   target run 33846 Alternate Merge 1 NEW E-GATE gemini G3 CONTRADICTION (E-GATE M) UNCURED
+   target run 33846 Alternate Merge 1 NEW E-GATE gemini G4 CONTRADICTION (E-GATE M) UNCURED
+   target run 33846 Alternate Merge 1 E-GATE grok G1 RULE K-G4 (K re-read): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment ; full_reply null -> "{\n  \"verdict_tag\": \"HELD\",\n  \"defense_standing\": \"; reply_error "The model is currently at capacity due to high demand. Plea -> null; response_line null -> "\"reasoning\": \"GATE: G1 || CHANGE TO: RULING -- D6 keysto; cure_reason "GATE NO REPLY | ENGINE: DEBATE RULE VIOLATION (K-G4) -- D3  -> "GATE CHANGE TO: RULING -- D6 keystone -- STANDS -- The defe
+   target run 33846 Alternate Merge 1 E-GATE grok G2 CONTRADICTION (E-GATE D38): reply_error "The model is currently at capacity due to high demand. Plea -> null; cure_reason "GATE NO REPLY | ENGINE: your RULING card grades D2 vs C2 CH -> "GATE NO ANSWER | ENGINE: your RULING card grades D2 vs C2 C
+   target run 33846 Alternate Merge 1 E-GATE grok G3 CONTRADICTION (E-GATE D38): reply_error "The model is currently at capacity due to high demand. Plea -> null; cure_reason "GATE NO REPLY | ENGINE: your RULING card grades D6 vs C6 CH -> "GATE NO ANSWER | ENGINE: your RULING card grades D6 vs C6 C
+   target run 33846 Alternate Merge 1 E-GATE grok G4 CONTRADICTION (E-GATE D38): reply_error "The model is currently at capacity due to high demand. Plea -> null; cure_reason "GATE NO REPLY | ENGINE: your RULING card grades challenger  -> "GATE NO ANSWER | ENGINE: your RULING card grades challenger
+   target run 33846 Alternate Merge 1 E-GATE grok G5 CONTRADICTION (E-GATE D38): reply_error "The model is currently at capacity due to high demand. Plea -> null; cure_reason "GATE NO REPLY | ENGINE: your RULING card grades challenger  -> "GATE NO ANSWER | ENGINE: your RULING card grades challenger
+   target run 33846 Alternate Merge 1 NEW E-GATE grok G6 CONTRADICTION (E-GATE M) UNCURED
+   target run 33846 Alternate Merge 1 NEW E-GATE grok G7 CONTRADICTION (E-GATE M) UNCURED
+   target run 33846 Alternate Merge 1 NEW E-GATE grok G8 CONTRADICTION (E-GATE M) UNCURED
+   target run 33846 Alternate Merge 1 NEW E-GATE grok NEW NOT APPLIED (E-APPLY G1) UNCURED
+   target run 33846 Alternate Merge 1 E-GATE chatgpt G1 CONTRADICTION (E-GATE D38): prompt_sent "The engine applied your send-back answers to your judgment  -> "The engine applied your send-back answers to your judgment ; full_reply "{\n  \"verdict_tag\": \"HELD\",\n  \"defense_standing\": \" -> null; reply_error null -> "no reply"; response_line "\"reasoning\": \"GATE: G1 || CHANGE TO: RULING -- D6 keysto -> null; cure_status "CURED" -> "UNCURED"; cure_reason "GATE CHANGE TO: RULING -- D6 keystone -- STANDS -- The defe -> "GATE NO REPLY | ENGINE: your RULING card grades KEYSTONE D6
+   target run 33846 Alternate Merge 1 NEW E-GATE chatgpt G2 CONTRADICTION (E-GATE M) UNCURED
+   target run 33846 Alternate Merge 1 NEW E-GATE chatgpt G3 CONTRADICTION (E-GATE M) UNCURED
+   target run 33846 Alternate Merge 1 NEW E-GATE chatgpt G4 CONTRADICTION (E-GATE M) UNCURED
+   target run 33846 Alternate Merge 1 NEW E-APPLY grok G1 NOT APPLIED UNCURED
+   target run 33846 Alternate Merge 1 NEW E-APPLY chatgpt APPLIED S1, S2, S3, S4, S5, S6, S7, S8, S9 
+   target run 33846 Alternate Merge 1 GONE E-APPLY chatgpt APPLIED S1, S2, S3, S4, S5, S6, S7, S8, S9, G1 
+   target run 33846 Alternate Merge 1: 44 changed text line(s) match allow_lines
+   target run 34108 Gate Build: 45 changed text line(s) match allow_lines
+   target run 34108 Gate Record NEW E-GATE luna G1 CONTRADICTION (E-GATE M) UNCURED
+   target run 34108 Gate Record: 16 changed text line(s) match allow_lines
+   target run 34108 Alternate Merge Seat NEW E-GATE luna G1 CONTRADICTION (E-GATE M) UNCURED
+   target run 34108 Alternate Merge Seat: 1 changed text line(s) match allow_lines
+   target run 34108 Alternate Merge 1 NEW E-GATE luna G1 CONTRADICTION (E-GATE M) UNCURED
+   target run 34108 Alternate Merge 1: 1 changed text line(s) match allow_lines
+   info case w1_cases.json KRC-A-33506: 309 changed item rows or text lines (the case sets no targets, so its checks decide)
+OK   case w1_cases.json KRC-A-33506:  [Cure Check K-RUL  status = CURED]: cand CURED; base CURED
+OK   case w1_cases.json KRC-A-33506:  [Cure Check K-RUL  why ~/valid ruling card/]: cand a valid ruling card for keystone; base a valid ruling card for keystone
+   info case w1_cases.json KRC-B-33506: 1605 changed item rows or text lines (the case sets no targets, so its checks decide)
+OK   case w1_cases.json KRC-B-33506:  [Cure Check K-RUL  status = UNCURED]: cand UNCURED | UNCURED; base UNCURED | UNCURED
+   info case w1_cases.json KRC-A-33627: 108 changed item rows or text lines (the case sets no targets, so its checks decide)
+OK   case w1_cases.json KRC-A-33627:  [Cure Check K-RUL  status = CURED]: cand CURED | CURED | CURED | CURED | CURED | CURED; base CURED | CURED | CURED | CURED | CURED | CURED
+OK   case w1_cases.json KRC-A-33627:  [Cure Check K-RUL  why ~/valid ruling card/]: cand a valid ruling card for keystone | a valid ruling card for D1 vs C2 | a valid ruling card for D2 vs C3 | a valid ruling card for D3 vs C4 | a valid ruling card for D4 vs C5 | a valid ruling card for D5 vs C1; base a valid ruling card for keystone | a valid ruling card for D1 vs C2 | a valid ruling card for D2 vs C3 | a valid ruling card for D3 vs C4 | a valid ruling card for D4 vs C5 | a valid ruling card for D5 vs C1
+   info case w1_cases.json KRC-B-33627: 1217 changed item rows or text lines (the case sets no targets, so its checks decide)
+OK   case w1_cases.json KRC-B-33627:  [Cure Check K-RUL  status = UNCURED]: cand UNCURED | UNCURED | UNCURED | UNCURED | UNCURED | UNCURED; base UNCURED | UNCURED | UNCURED | UNCURED | UNCURED | UNCURED
+   info case w1_cases.json KRC-A-33644: 1964 changed item rows or text lines (the case sets no targets, so its checks decide)
+OK   case w1_cases.json KRC-A-33644:  [Cure Check K-RUL  status = CURED]: cand CURED | CURED | CURED | CURED | CURED; base CURED | CURED | CURED | CURED | CURED
+OK   case w1_cases.json KRC-A-33644:  [Cure Check K-RUL  why ~/valid ruling card/]: cand a valid ruling card for D1 vs C2 | a valid ruling card for D3 vs C3 | a valid ruling card for D4 vs C5 | a valid ruling card for D5 vs C4 | a valid ruling card for D6 vs C1; base a valid ruling card for D1 vs C2 | a valid ruling card for D3 vs C3 | a valid ruling card for D4 vs C5 | a valid ruling card for D5 vs C4 | a valid ruling card for D6 vs C1
+   info case w1_cases.json KRC-B-33644: 1699 changed item rows or text lines (the case sets no targets, so its checks decide)
+OK   case w1_cases.json KRC-B-33644:  [Cure Check K-RUL  status = UNCURED]: cand UNCURED | UNCURED | UNCURED | UNCURED | UNCURED | UNCURED | UNCURED; base UNCURED | UNCURED | UNCURED | UNCURED | UNCURED | UNCURED | UNCURED
+   info case w1_cases.json KRC-A-33846: 1640 changed item rows or text lines (the case sets no targets, so its checks decide)
+OK   case w1_cases.json KRC-A-33846:  [Panel Cure Check K-RUL  status = CURED]: cand CURED | CURED | CURED | CURED; base CURED | CURED | CURED | CURED
+OK   case w1_cases.json KRC-A-33846:  [Panel Cure Check K-RUL  why ~/valid ruling card/]: cand a valid ruling card for CHALLENGER premise 2 | a valid ruling card for CHALLENGER premise 6 | a valid ruling card for D2 vs C2 | a valid ruling card for D6 vs C6; base a valid ruling card for CHALLENGER premise 2 | a valid ruling card for CHALLENGER premise 6 | a valid ruling card for D2 vs C2 | a valid ruling card for D6 vs C6
+   info case w1_cases.json KRC-B-33846: 934 changed item rows or text lines (the case sets no targets, so its checks decide)
+OK   case w1_cases.json KRC-B-33846:  [Panel Cure Check K-RUL  status = UNCURED]: cand UNCURED | UNCURED | UNCURED | UNCURED | UNCURED | UNCURED | UNCURED | UNCURED | UNCURED | UNCURED | UNCURED | UNCURED; base UNCURED | UNCURED | UNCURED | UNCURED | UNCURED | UNCURED | UNCURED | UNCURED | UNCURED | UNCURED | UNCURED | UNCURED
+   info case w1_cases.json KRC-34016-luna: 312 changed item rows or text lines (the case sets no targets, so its checks decide)
+OK   case w1_cases.json KRC-34016-luna:  [Panel Cure Check K-RUL ^keystone$ cure_status = CURED]: cand CURED; base CURED
+OK   case w1_cases.json KRC-34016-luna:  [Panel Cure Check K-W CHALLENGER DR3 LINK 3 #3 cure_status = UNCURED]: cand UNCURED; base UNCURED
+   target case w1_cases.json QUOTE-34016-terra Gate Build: 181 changed text line(s) match allow_lines
+   target case w1_cases.json QUOTE-34016-terra Gate Record NEW E-GATE luna G1 CONTRADICTION (E-GATE M) UNCURED
+   target case w1_cases.json QUOTE-34016-terra Gate Record NEW E-GATE luna G2 CONTRADICTION (E-GATE M) UNCURED
+   target case w1_cases.json QUOTE-34016-terra Gate Record NEW E-GATE luna G3 CONTRADICTION (E-GATE M) UNCURED
+   target case w1_cases.json QUOTE-34016-terra Gate Record NEW E-GATE luna G4 CONTRADICTION (E-GATE M) UNCURED
+   target case w1_cases.json QUOTE-34016-terra Gate Record NEW E-GATE luna G5 CONTRADICTION (E-GATE M) UNCURED
+   target case w1_cases.json QUOTE-34016-terra Gate Record NEW E-GATE luna G6 CONTRADICTION (E-GATE M) UNCURED
+   target case w1_cases.json QUOTE-34016-terra Gate Record NEW E-GATE luna G7 CONTRADICTION (E-GATE M) UNCURED
+   target case w1_cases.json QUOTE-34016-terra Gate Record NEW E-GATE luna G8 CONTRADICTION (E-GATE M) UNCURED
+   target case w1_cases.json QUOTE-34016-terra Gate Record NEW E-GATE luna G9 CONTRADICTION (E-GATE M) UNCURED
+   target case w1_cases.json QUOTE-34016-terra Gate Record NEW E-GATE luna G10 CONTRADICTION (E-GATE M) UNCURED
+   target case w1_cases.json QUOTE-34016-terra Gate Record NEW E-GATE luna G11 CONTRADICTION (E-GATE M) UNCURED
+   target case w1_cases.json QUOTE-34016-terra Gate Record: 76 changed text line(s) match allow_lines
+   target case w1_cases.json QUOTE-34016-terra Alternate Merge Seat NEW E-GATE luna G1 CONTRADICTION (E-GATE M) UNCURED
+   target case w1_cases.json QUOTE-34016-terra Alternate Merge Seat NEW E-GATE luna G2 CONTRADICTION (E-GATE M) UNCURED
+   target case w1_cases.json QUOTE-34016-terra Alternate Merge Seat NEW E-GATE luna G3 CONTRADICTION (E-GATE M) UNCURED
+   target case w1_cases.json QUOTE-34016-terra Alternate Merge Seat NEW E-GATE luna G4 CONTRADICTION (E-GATE M) UNCURED
+   target case w1_cases.json QUOTE-34016-terra Alternate Merge Seat NEW E-GATE luna G5 CONTRADICTION (E-GATE M) UNCURED
+   target case w1_cases.json QUOTE-34016-terra Alternate Merge Seat NEW E-GATE luna G6 CONTRADICTION (E-GATE M) UNCURED
+   target case w1_cases.json QUOTE-34016-terra Alternate Merge Seat NEW E-GATE luna G7 CONTRADICTION (E-GATE M) UNCURED
+   target case w1_cases.json QUOTE-34016-terra Alternate Merge Seat NEW E-GATE luna G8 CONTRADICTION (E-GATE M) UNCURED
+   target case w1_cases.json QUOTE-34016-terra Alternate Merge Seat NEW E-GATE luna G9 CONTRADICTION (E-GATE M) UNCURED
+   target case w1_cases.json QUOTE-34016-terra Alternate Merge Seat NEW E-GATE luna G10 CONTRADICTION (E-GATE M) UNCURED
+   target case w1_cases.json QUOTE-34016-terra Alternate Merge Seat NEW E-GATE luna G11 CONTRADICTION (E-GATE M) UNCURED
+   target case w1_cases.json QUOTE-34016-terra Alternate Merge Seat: 11 changed text line(s) match allow_lines
+   target case w1_cases.json QUOTE-34016-terra Alternate Merge 1 NEW E-GATE luna G1 CONTRADICTION (E-GATE M) UNCURED
+   target case w1_cases.json QUOTE-34016-terra Alternate Merge 1 NEW E-GATE luna G2 CONTRADICTION (E-GATE M) UNCURED
+   target case w1_cases.json QUOTE-34016-terra Alternate Merge 1 NEW E-GATE luna G3 CONTRADICTION (E-GATE M) UNCURED
+   target case w1_cases.json QUOTE-34016-terra Alternate Merge 1 NEW E-GATE luna G4 CONTRADICTION (E-GATE M) UNCURED
+   target case w1_cases.json QUOTE-34016-terra Alternate Merge 1 NEW E-GATE luna G5 CONTRADICTION (E-GATE M) UNCURED
+   target case w1_cases.json QUOTE-34016-terra Alternate Merge 1 NEW E-GATE luna G6 CONTRADICTION (E-GATE M) UNCURED
+   target case w1_cases.json QUOTE-34016-terra Alternate Merge 1 NEW E-GATE luna G7 CONTRADICTION (E-GATE M) UNCURED
+   target case w1_cases.json QUOTE-34016-terra Alternate Merge 1 NEW E-GATE luna G8 CONTRADICTION (E-GATE M) UNCURED
+   target case w1_cases.json QUOTE-34016-terra Alternate Merge 1 NEW E-GATE luna G9 CONTRADICTION (E-GATE M) UNCURED
+   target case w1_cases.json QUOTE-34016-terra Alternate Merge 1 NEW E-GATE luna G10 CONTRADICTION (E-GATE M) UNCURED
+   target case w1_cases.json QUOTE-34016-terra Alternate Merge 1 NEW E-GATE luna G11 CONTRADICTION (E-GATE M) UNCURED
+   target case w1_cases.json QUOTE-34016-terra Alternate Merge 1: 11 changed text line(s) match allow_lines
+OK   case w1_cases.json QUOTE-34016-terra:  [Panel Cure Check  ^DEFENDER CR2 D3 #3$ cure_status ~/^UNCURED$/]: cand UNCURED; base UNCURED
+   info case w2_cases.json XK-A-34016-terra: 312 changed item rows or text lines (the case sets no targets, so its checks decide)
+OK   case w2_cases.json XK-A-34016-terra:  [Panel Cure Check  ^DEFENDER CR2 D2 #2$ cure_status = CURED]: cand CURED; base CURED
+   target case w2_cases.json XK-B-34016-terra-W1 Gate Build: 181 changed text line(s) match allow_lines
+   target case w2_cases.json XK-B-34016-terra-W1 Gate Record NEW E-GATE luna G1 CONTRADICTION (E-GATE M) UNCURED
+   target case w2_cases.json XK-B-34016-terra-W1 Gate Record NEW E-GATE luna G2 CONTRADICTION (E-GATE M) UNCURED
+   target case w2_cases.json XK-B-34016-terra-W1 Gate Record NEW E-GATE luna G3 CONTRADICTION (E-GATE M) UNCURED
+   target case w2_cases.json XK-B-34016-terra-W1 Gate Record NEW E-GATE luna G4 CONTRADICTION (E-GATE M) UNCURED
+   target case w2_cases.json XK-B-34016-terra-W1 Gate Record NEW E-GATE luna G5 CONTRADICTION (E-GATE M) UNCURED
+   target case w2_cases.json XK-B-34016-terra-W1 Gate Record NEW E-GATE luna G6 CONTRADICTION (E-GATE M) UNCURED
+   target case w2_cases.json XK-B-34016-terra-W1 Gate Record NEW E-GATE luna G7 CONTRADICTION (E-GATE M) UNCURED
+   target case w2_cases.json XK-B-34016-terra-W1 Gate Record NEW E-GATE luna G8 CONTRADICTION (E-GATE M) UNCURED
+   target case w2_cases.json XK-B-34016-terra-W1 Gate Record NEW E-GATE luna G9 CONTRADICTION (E-GATE M) UNCURED
+   target case w2_cases.json XK-B-34016-terra-W1 Gate Record NEW E-GATE luna G10 CONTRADICTION (E-GATE M) UNCURED
+   target case w2_cases.json XK-B-34016-terra-W1 Gate Record NEW E-GATE luna G11 CONTRADICTION (E-GATE M) UNCURED
+   target case w2_cases.json XK-B-34016-terra-W1 Gate Record: 76 changed text line(s) match allow_lines
+   target case w2_cases.json XK-B-34016-terra-W1 Alternate Merge Seat NEW E-GATE luna G1 CONTRADICTION (E-GATE M) UNCURED
+   target case w2_cases.json XK-B-34016-terra-W1 Alternate Merge Seat NEW E-GATE luna G2 CONTRADICTION (E-GATE M) UNCURED
+   target case w2_cases.json XK-B-34016-terra-W1 Alternate Merge Seat NEW E-GATE luna G3 CONTRADICTION (E-GATE M) UNCURED
+   target case w2_cases.json XK-B-34016-terra-W1 Alternate Merge Seat NEW E-GATE luna G4 CONTRADICTION (E-GATE M) UNCURED
+   target case w2_cases.json XK-B-34016-terra-W1 Alternate Merge Seat NEW E-GATE luna G5 CONTRADICTION (E-GATE M) UNCURED
+   target case w2_cases.json XK-B-34016-terra-W1 Alternate Merge Seat NEW E-GATE luna G6 CONTRADICTION (E-GATE M) UNCURED
+   target case w2_cases.json XK-B-34016-terra-W1 Alternate Merge Seat NEW E-GATE luna G7 CONTRADICTION (E-GATE M) UNCURED
+   target case w2_cases.json XK-B-34016-terra-W1 Alternate Merge Seat NEW E-GATE luna G8 CONTRADICTION (E-GATE M) UNCURED
+   target case w2_cases.json XK-B-34016-terra-W1 Alternate Merge Seat NEW E-GATE luna G9 CONTRADICTION (E-GATE M) UNCURED
+   target case w2_cases.json XK-B-34016-terra-W1 Alternate Merge Seat NEW E-GATE luna G10 CONTRADICTION (E-GATE M) UNCURED
+   target case w2_cases.json XK-B-34016-terra-W1 Alternate Merge Seat NEW E-GATE luna G11 CONTRADICTION (E-GATE M) UNCURED
+   target case w2_cases.json XK-B-34016-terra-W1 Alternate Merge Seat: 11 changed text line(s) match allow_lines
+   target case w2_cases.json XK-B-34016-terra-W1 Alternate Merge 1 NEW E-GATE luna G1 CONTRADICTION (E-GATE M) UNCURED
+   target case w2_cases.json XK-B-34016-terra-W1 Alternate Merge 1 NEW E-GATE luna G2 CONTRADICTION (E-GATE M) UNCURED
+   target case w2_cases.json XK-B-34016-terra-W1 Alternate Merge 1 NEW E-GATE luna G3 CONTRADICTION (E-GATE M) UNCURED
+   target case w2_cases.json XK-B-34016-terra-W1 Alternate Merge 1 NEW E-GATE luna G4 CONTRADICTION (E-GATE M) UNCURED
+   target case w2_cases.json XK-B-34016-terra-W1 Alternate Merge 1 NEW E-GATE luna G5 CONTRADICTION (E-GATE M) UNCURED
+   target case w2_cases.json XK-B-34016-terra-W1 Alternate Merge 1 NEW E-GATE luna G6 CONTRADICTION (E-GATE M) UNCURED
+   target case w2_cases.json XK-B-34016-terra-W1 Alternate Merge 1 NEW E-GATE luna G7 CONTRADICTION (E-GATE M) UNCURED
+   target case w2_cases.json XK-B-34016-terra-W1 Alternate Merge 1 NEW E-GATE luna G8 CONTRADICTION (E-GATE M) UNCURED
+   target case w2_cases.json XK-B-34016-terra-W1 Alternate Merge 1 NEW E-GATE luna G9 CONTRADICTION (E-GATE M) UNCURED
+   target case w2_cases.json XK-B-34016-terra-W1 Alternate Merge 1 NEW E-GATE luna G10 CONTRADICTION (E-GATE M) UNCURED
+   target case w2_cases.json XK-B-34016-terra-W1 Alternate Merge 1 NEW E-GATE luna G11 CONTRADICTION (E-GATE M) UNCURED
+   target case w2_cases.json XK-B-34016-terra-W1 Alternate Merge 1: 11 changed text line(s) match allow_lines
+OK   case w2_cases.json XK-B-34016-terra-W1:  [Panel Cure Check  ^DEFENDER CR2 D3 #3$ cure_status = CURED]: cand CURED; base CURED
+node runs 862, byte-equal or same error 701, target item changes 986, near-miss checks passed 17
+GATE PASS

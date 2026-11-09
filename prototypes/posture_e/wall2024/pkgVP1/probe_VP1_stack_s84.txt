@@ -1,0 +1,8 @@
+OK   1 no closing contradiction record: luna has the one ANSWER OPEN item on D1 (as on s83)
+OK   2 a confirmed closing contradiction on DEFENDER LINK 1 (pre-panel record): no ANSWER OPEN item for D1 (["E-APPLY S3 RESULT DIFFERS|S3"])
+OK   3 the same break confirmed after the panel (judge contradiction record): no ANSWER OPEN item for D1
+OK   4 a confirmed break on another link (D6) leaves the D1 item raised
+     5 a confirmed break on CHALLENGER LINK 1 (D1 vs C1 becomes CHALLENGER LINK BROKEN): items []
+OK   5 with D1 vs C1 broken for the challenger, D1 has no UNDERDETERMINED line left: no ANSWER OPEN item
+
+probe_VP1_stack: 5 OK, 0 FAIL

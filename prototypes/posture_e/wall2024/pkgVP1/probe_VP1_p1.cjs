@@ -2,7 +2,7 @@
 // No DeepSeek call is made offline: the enforcer's reply is written by hand.
 const fs=require('fs'),path=require('path');const H=require('./harness.cjs');const RUN='34108';
 let ok=0,bad=0;const T=(c,m)=>{if(c)ok++;else bad++;console.log((c?'OK   ':'FAIL ')+m);};
-const P=JSON.parse(fs.readFileSync(__dirname+'/parent_s83_VP1.json','utf8'));const by={};P.nodes.forEach(n=>by[n.name]=n);
+const P=JSON.parse(fs.readFileSync(__dirname+'/parent_'+(process.env.TAG||'s85')+'_VP1.json','utf8'));const by={};P.nodes.forEach(n=>by[n.name]=n);
 let LV=JSON.parse(fs.readFileSync('/mnt/project-files/wall2024/fetchback_live_s83.json','utf8'));LV=LV.data||LV;LV=LV.workflow||LV;const lv={};LV.nodes.forEach(n=>lv[n.name]=n);
 const strip=o=>JSON.parse(JSON.stringify(o,(k,v)=>k==='at'?undefined:v));
 (async()=>{
@@ -44,7 +44,7 @@ const strip=o=>JSON.parse(JSON.stringify(o,(k,v)=>k==='at'?undefined:v));
  const K=P.connections;const nx=n=>(K[n].main||[]).map(o=>(o||[]).map(x=>x.node).join(','));
  for(const pre of ['','Alt ','R2 Alt '])T(nx(pre+'Send Back Record').join('|')===pre+'Reread Build'&&nx(pre+'Reread Build').join('|')===pre+'Reread Needed?'&&nx(pre+'Reread Needed?').join('|')===pre+'Reread Call deepseek|'+pre+'Reread Record'&&nx(pre+'Reread Call deepseek').join('|')===pre+'Reread Record'&&nx(pre+'Reread Record').join('|')===pre+'Gate Build','E '+(pre||'panel ')+'wiring: Send Back Record -> Reread Build -> Needed? -> Call / Record -> Gate Build');
  const c=by['Reread Call deepseek'];T(c.credentials.httpHeaderAuth.name==='DeepSeek Key'&&c.onError==='continueRegularOutput'&&c.retryOnFail===true&&c.parameters.jsonBody==='={{ $json.body }}','E the call node is a copy of Anticheat Call deepseek (DeepSeek Key, 3 tries, continues on error)');
- T(P.nodes.length===406&&new Set(P.nodes.map(n=>n.name)).size===406&&new Set(P.nodes.map(n=>n.id)).size===406,'E 406 nodes, names and ids unique');
+ {const NN=({s83:406,s84:414,s85:414})[process.env.TAG||'s85'];T(P.nodes.length===NN&&new Set(P.nodes.map(n=>n.name)).size===NN&&new Set(P.nodes.map(n=>n.id)).size===NN,'E '+NN+' nodes, names and ids unique');}
  // F. stub heads name the nodes their code reads
  for(const [n,need] of [['Gate Build','Send Back Record'],['Alt Gate Build','Alt Send Back Record'],['R2 Alt Gate Build','R2 Alt Send Back Record'],['Alternate Merge Seat','Reread Record'],['R2 Alternate Merge Seat','Reread Record'],['Alternate Merge 1','Alt Reread Record'],['R2 Alternate Merge','R2 Alt Reread Record']]){const s=by[n].parameters.jsCode;T(s.includes('$("'+need+'")')||s.includes("$('"+need+"')"),'F '+n+' names '+need+' in a literal read (task runner)');}
  console.log('\nprobe_VP1_p1: '+ok+' OK, '+bad+' FAIL');process.exit(bad?1:0);

@@ -1,6 +1,6 @@
 // pkgVP1 probe 3 (W3): several ANSWER OPEN items on one judge (run 34016, luna: 11 items). One change may answer every item of a link.
 const H=require('./harness.cjs');const fs=require('fs'),path=require('path');const W=path.resolve(__dirname,'..');const RUN='34016';
-const src=f=>fs.readFileSync(W+'/pkgLIB/strip_VP1/patched/'+f,'utf8');let ok=0,bad=0;const T=(c,m)=>{console.log((c?'OK   ':'FAIL ')+m);c?ok++:bad++;};
+const src=f=>fs.readFileSync(W+'/'+(process.argv[2]||'pkgLIB/strip_VP1_s84')+'/patched/'+f,'utf8');let ok=0,bad=0;const T=(c,m)=>{console.log((c?'OK   ':'FAIL ')+m);c?ok++:bad++;};
 (async()=>{
  await H.run(src('Gate_Record.js'),RUN,'Send Back Record',{},ev=>{const g=n=>ev(n);const PASS=H.out(RUN,'Send Back Record')[0][0].json;const PB=H.out(RUN,'Panel Build')[0][0].json;
   const seat='luna';const p=JSON.parse((PASS.bodies).find(b=>JSON.parse(b).payload.judge_seat===seat)).payload;const its=PASS.sb_items.filter(x=>x.seat===seat);const j=PB.judges.find(q=>q.seat===seat);const PT=g('gatePromptText2024')(j.body);
