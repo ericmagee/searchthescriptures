@@ -1,0 +1,2 @@
+SJ Re-ask Call openrouter body argument: $('Build Independent Verdict').first().json.verdictBody) }}
+DEFECT: it sends Build Independent Verdict's ORIGINAL conversation; SJ Re-ask Build's added reply and ask are never sent.
