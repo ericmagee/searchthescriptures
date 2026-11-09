@@ -17,7 +17,7 @@ grok's RESTATED cure was then logged "no written response": the K-B ask asks for
 Nodes: the 30 library full sources (base pkgLIB/strip_KWI = live s70 Shared Library 40d6f920ab83) and 12 nodes with their own lbFoot (base fetchback_live_s70; lb.* only).
 - Pack: pkgLIB_KBL_s70 (Shared Library c277aee01799; every stub rebuilds its strip_KBL source byte for byte). E4: pkgLIB_KBL_s70/e4_rebase, Alternate Build dde2d8ed8bcd, Early Alternate Build 16658c6e8630 (new stub head + live s70 lines 9+; both rebuild to strip_KBL Alternate_Build).
 - Non-library: pkgKBL/patched (shas in plan_KBL.json; Send Back Build/Record x3 are on GRT2 = live s70).
-- Stack with pkgWLD: WLD also changes Panel Build and Build Independent Verdict. If WLD is written first, use pkgKBL/on_WLD (the same subs on pkgWLD/on_KWI: Panel Build 179b18436edb, BIV 2047b6cc87c0) instead of pkgKBL/patched for those two.
+- Live s71 carries pkgWLD (Panel Build 40a89f70b6d7, BIV 91fc5d4bb579, checked against fetchback_live_s71). Write pkgKBL/on_WLD for those two (the same subs on pkgWLD/on_KWI = live s71: Panel Build 179b18436edb, BIV 2047b6cc87c0), not pkgKBL/patched. The other 10 non-library nodes, the library and both E4 nodes equal s71 as well. If a later Panel Build change (pkgWLD rev 2, pkgJGR) goes first, rerun kbl_subs.cjs on it.
 
 ## Tests
 - test_KBL.cjs (33846): 4 OK. Panel Payloads base raises K-B D2 vs C2 kinds [L1], patched raises none; Panel Cure Check base logs grok UNCURED "no written response", patched CURED from grok's RESTATED line (L1, L3).
