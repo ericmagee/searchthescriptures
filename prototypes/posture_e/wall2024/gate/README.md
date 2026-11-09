@@ -16,7 +16,7 @@ It replaces four manual steps:
 3. deleting Alternate_Merge.js;
 4. running `git checkout` and `git clean` on pkgLIB/patched.
 
-Packing, the stub rebuild check and e4_rebase all run in a new temporary folder. Only `pkgLIB_X` is created, and the tool refuses to run if that folder already exists. FB defaults to the live fetch-back named in `gate/LIVE`.
+Packing, the stub rebuild check and e4_rebase all run in a new temporary folder. Only `pkgLIB_X` is created, and the tool refuses to run if that folder already exists. FB defaults to the live fetch-back named in `gate/LIVE` (s79 since pkgRPN went live; update it at each write).
 
 Checks:
 - every stub rebuilds byte for byte to its strip source;
@@ -63,6 +63,9 @@ The exit code is 0 only on `GATE PASS`.
 - **Every seat adds its probes here.** That is the shared trick-line set (W3 3).
 
 **Limits.**
+- A chain that passes through a non-library node (for example Gate Build -> Gate Call -> Gate Record) is not recomputed past that node (W4, 3647). A targeted change upstream does not show its effect on a library node reached that way; an untargeted change still fails at the first library node it changes.
+- Keys named at, created_at and t0 are ignored everywhere (timestamps).
+- The gate reads the saved inputs while it runs. A run whose inputs are being saved at the same moment can show a one-time difference (W3 3644, run 33345 during the 34108 save; three reruns were byte-equal). Rerun before reporting such a difference.
 - Only the library nodes are recomputed. Non-library nodes keep their saved output. A package that adds wiring, as FUM did, still needs its own path test until those nodes are added.
 - A run takes about 10 to 20 seconds; an edited case takes longer, because it reads every file of its run from the shared folder.
 
