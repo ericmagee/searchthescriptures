@@ -1,0 +1,3 @@
+{"why":"pkgSJR (W2, Wall 3696): Cure Check adds one line to independent_verdict_raw when the single judge's reply has no verdict or a chain-mark line is absent, naming the seat and what was done. The line is added after a blank line. Nothing else may change.",
+ "items":[],
+ "allow_lines":[{"node":"^Cure Check$","path":"independent_verdict_raw","re":"^\\+ (\\[AUDIT v36: SINGLE JUDGE (UNREADABLE|RE-ASKED) \\(SJR\\) -- [^\\]\\n]*REVIEW THIS ROW\\.\\])?$"}]}
