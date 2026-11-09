@@ -1,0 +1,30 @@
+OK   1a IF fires on 34108 (verdict UNKNOWN, marks null/null, jidx 5)
+OK   1b IF does not fire a second time (SJ Re-ask Build executed)
+OK   1c IF does not fire for a non-OpenRouter single judge (jidx 0)
+OK   1d IF does not fire on a readable reply (34016): 34016 verdict HELD
+OK   2a Build: mode full, three things missing: no verdict (HELD, PARTIAL or BROKEN); no DEFENDER CHAIN MARK line; no CHALLENGER CHAIN MARK line
+OK   2b Build: same model and token budget, the judge's own conversation kept, + its reply + one ask: openai/gpt-6.1-terra, 4 -> 6 messages
+OK   2c Build: routing fields kept (jidx, audit_prompt)
+     ask: Your reply above cannot be read as a judgment: it has no verdict (HELD, PARTIAL or BROKEN); no DEFENDER CHAIN MARK line; no CHALLENGER CHAIN MARK line. A verdict is required; "cannot determine" is not an answer the record can hold. Grade from the rounds and the reports you were given, and write your complete judgment again from the start, in exactly the form the first message asks for, with every required line, ending with the DEFENDER CHAIN MARK and CHALLENGER CHAIN MARK lines. Where the record leaves a point open, grade it under the rules and say so on that line.
+OK   2d Call body (full mode, 34108): 6 messages, the last two are the judge's reply and the ask, model openai/gpt-6.1-terra
+OK   2e Call body (marks mode, 33482): ends with the ask for the missing CHAIN MARK lines only: Your judgment above has no DEFENDER CHAIN MARK line; no CHALLENGER CHAIN MARK line. Write only the missing lines, each o
+OK   3a Pick full: the re-ask reply is used; usage is the sum of both calls: prompt 73365, completion 1277
+OK   3b Pick on a failed call: the first reply is used and the reason kept: Bad gateway
+OK   3c Pick on an empty reply: the first reply is used: the re-ask reply held no text
+OK   4a Extract on the re-ask reply: verdict and both chain marks read: verdict HELD, marks FOOTED/FOOTED
+OK   4b IF after run 2: does not fire again
+OK   5a 33482 Build: mode marks (verdict BROKEN read, marks absent): no DEFENDER CHAIN MARK line; no CHALLENGER CHAIN MARK line
+OK   5b 33482 Pick marks: the two lines are added to the first reply, nothing else changes
+OK   5c 33482 Extract: chain marks now read, verdict and standings unchanged: verdict BROKEN, marks STRAINED/SLACK
+OK   5d 33482 Pick marks with no chain-mark line: the first reply is used: the re-ask reply held no CHAIN MARK line
+OK   5a 33530 Build: mode marks (verdict BROKEN read, marks absent): no DEFENDER CHAIN MARK line; no CHALLENGER CHAIN MARK line
+OK   5b 33530 Pick marks: the two lines are added to the first reply, nothing else changes
+OK   5c 33530 Extract: chain marks now read, verdict and standings unchanged: verdict BROKEN, marks STRAINED/SLACK
+OK   5d 33530 Pick marks with no chain-mark line: the first reply is used: the re-ask reply held no CHAIN MARK line
+OK   6a 34108 as it ran (no re-ask nodes): one SJR line, seat and model named: [AUDIT v36: SINGLE JUDGE UNREADABLE (SJR) -- seat chatgpt (openai/gpt-6.1-terra): no verdict, no DEFENDER CHAIN MARK line, no CHALLENGER CHAIN MARK line; not re-asked (no re-ask was made in this run). REVIEW THIS ROW.]
+OK   6b 34108 re-asked and answered: the line says so and reads the new state: [AUDIT v36: SINGLE JUDGE RE-ASKED (SJR) -- seat chatgpt (openai/gpt-6.1-terra); the first reply was unreadable: no verdict (HELD, PARTIAL or BROKEN), no DEFENDER CHAIN MARK line, no CHALLENGER CHAIN MARK line; it began: { "verdict": "I cannot reliably determine the verdict under all the requested rules.", "reasoning": "The defender’s (L4) reading joins Luke 1:34, “How shall this be, seeing I know not a man?”, to Luke; re-ask (the complete judgment): answered, and the re-ask reply is the one read; now: readable, verdict HELD, defender chain mark FOOTED, challenger chain mark FOOTED. REVIEW THIS ROW.]
+OK   6c 34108 re-ask failed: STILL UNREADABLE, the failure reason kept: [AUDIT v36: SINGLE JUDGE RE-ASKED (SJR) -- seat chatgpt (openai/gpt-6.1-terra); the first reply was unreadable: no verdict (HELD, PARTIAL or BROKEN), no DEFENDER CHAIN MARK line, no CHALLENGER CHAIN MARK line; it began: { "verdict": "I cannot reliably determine the verdict under all the requested rules.", "reasoning": "The defender’s (L4) reading joins Luke 1:34, “How shall this be, seeing I know not a man?”, to Luke; re-ask (the complete judgment): not usable (Bad gateway), so the first reply is read; now: STILL UNREADABLE, no verdict, no DEFENDER CHAIN MARK line, no CHALLENGER CHAIN MARK line. REVIEW THIS ROW.]
+OK   6d Cure Check: apart from the SJR line, the output equals live s82 Cure Check (strip_XKB) on the same input
+OK   6e a readable single judge (34016): no SJR line
+
+27 OK, 0 FAIL
