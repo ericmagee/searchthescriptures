@@ -1,0 +1,176 @@
+33197 Panel Check SAME
+33218 Panel Payloads SAME
+33218 Panel Check SAME
+33218 Panel Tokens SAME
+33218 Build Save Body SAME
+33222 Panel Payloads SAME
+33222 Alternate Payloads SAME
+33222 Panel Check SAME
+33222 Panel Tokens SAME
+33222 Build Save Body SAME
+33249 Panel Payloads SAME
+33249 Alternate Payloads SAME
+33249 Panel Check SAME
+33249 Panel Tokens SAME
+33249 Build Save Body SAME
+33261 Panel Payloads SAME
+33261 Alternate Payloads SAME
+33261 Panel Check SAME
+33261 Panel Tokens SAME
+33261 Build Save Body SAME
+33276 Panel Payloads SAME (both threw: Cannot read properties of undefined (reading 'forEach'))
+33276 Alternate Payloads SAME
+33276 Panel Check SAME (both threw: Cannot read properties of undefined (reading 'forEach'))
+33276 Panel Tokens SAME
+33276 Build Save Body SAME (both threw: ORACLE_DEBATE_V1: panel_expected absent or empty on the Init Seats payload; derive_debate_outcome FENCE 2 refuses to grade a row without it. run_token=undefined)
+33289 Panel Payloads SAME (both threw: Cannot read properties of undefined (reading 'forEach'))
+33289 Alternate Payloads SAME
+33289 Panel Check SAME (both threw: Cannot read properties of undefined (reading 'forEach'))
+33289 Panel Tokens SAME
+33289 Build Save Body SAME (both threw: ORACLE_DEBATE_V1: panel_expected absent or empty on the Init Seats payload; derive_debate_outcome FENCE 2 refuses to grade a row without it. run_token=undefined)
+33299 Panel Payloads SAME
+33299 Alternate Payloads SAME
+33299 Panel Check SAME
+33299 Panel Tokens SAME
+33299 Build Save Body SAME
+33311 Panel Payloads SAME (both threw: Cannot read properties of undefined (reading 'forEach'))
+33311 Alternate Payloads SAME
+33311 Panel Check SAME (both threw: Cannot read properties of undefined (reading 'forEach'))
+33311 Panel Tokens SAME
+33311 Build Save Body SAME (both threw: ORACLE_DEBATE_V1: panel_expected absent or empty on the Init Seats payload; derive_debate_outcome FENCE 2 refuses to grade a row without it. run_token=undefined)
+33322 Panel Payloads SAME (both threw: Cannot read properties of undefined (reading 'forEach'))
+33322 Alternate Payloads SAME
+33322 Panel Check SAME (both threw: Cannot read properties of undefined (reading 'forEach'))
+33322 Build Save Body SAME (both threw: ORACLE_DEBATE_V1: panel_expected absent or empty on the Init Seats payload; derive_debate_outcome FENCE 2 refuses to grade a row without it. run_token=undefined)
+33345 Panel Payloads SAME
+33345 Alternate Payloads SAME
+33345 Panel Check SAME
+33345 Panel Tokens SAME
+33345 Build Save Body SAME
+33371 Panel Payloads SAME
+33371 Alternate Payloads SAME
+33371 Panel Check SAME
+33371 Panel Tokens SAME
+33371 Build Save Body SAME
+33389 Panel Payloads SAME
+33389 Panel Check SAME
+33389 Panel Tokens SAME
+33389 Build Save Body SAME
+33411 Panel Payloads SAME
+33411 Alternate Payloads SAME
+33411 Panel Check SAME
+33411 Panel Tokens SAME
+33411 Build Save Body SAME
+33430 Panel Payloads SAME
+33430 Alternate Payloads SAME
+33430 Panel Check SAME
+33430 Panel Tokens SAME
+33430 Build Save Body SAME
+33442 Panel Payloads SAME
+33442 Alternate Payloads SAME
+33442 Panel Check SAME
+33442 Panel Tokens SAME
+33442 Build Save Body SAME
+33461 Panel Payloads SAME
+33461 Alternate Payloads SAME
+33461 Panel Check SAME
+33461 Panel Tokens SAME
+33461 Build Save Body SAME
+33482 Panel Payloads SAME
+33482 Alternate Payloads SAME
+33482 Panel Check SAME
+33482 Panel Tokens SAME
+33482 Build Save Body SAME
+33490 Panel Payloads SAME
+33490 Alternate Payloads SAME
+33490 Panel Check SAME
+33490 Panel Tokens SAME
+33490 Build Save Body SAME
+33497 Panel Payloads SAME
+33497 Alternate Payloads SAME
+33497 Panel Check SAME
+33497 Panel Tokens SAME
+33497 Build Save Body SAME
+33506 Panel Payloads SAME
+33506 Alternate Payloads SAME
+33506 Panel Check SAME
+33506 Panel Tokens SAME
+33506 Build Save Body SAME
+33530 Panel Payloads SAME (both threw: FAIL-CLOSED (reserve judge, second failure of the run): seat "glm_flash" returned an envelope this parser does not recognise. Top-level keys: [id,object,created,model,provider,system_fingerprint,servi)
+33530 Panel Check SAME
+33530 Panel Tokens SAME
+33530 Build Save Body SAME
+33575 Panel Payloads SAME
+33575 Panel Check SAME
+33575 Panel Tokens SAME
+33575 Build Save Body SAME
+33592 Panel Payloads SAME
+33592 Panel Check SAME
+33592 Panel Tokens SAME
+33592 Build Save Body SAME
+33605 Panel Payloads SAME
+33605 Panel Check SAME
+33605 Panel Tokens SAME
+33605 Build Save Body SAME
+33617 Panel Payloads SAME
+33617 Alternate Payloads SAME
+33617 Panel Check SAME
+33617 Panel Tokens SAME
+33617 Build Save Body SAME
+33627 Panel Payloads SAME
+33627 Alternate Payloads SAME
+33627 Panel Check SAME
+33627 Panel Tokens SAME
+33627 Build Save Body SAME
+33644 Panel Payloads SAME
+33644 Alternate Payloads SAME
+33644 Panel Check SAME
+33644 Panel Tokens SAME
+33644 Build Save Body SAME
+33682 Panel Payloads SAME
+33682 Panel Check SAME
+33682 Panel Tokens SAME
+33682 Build Save Body SAME
+33705 Panel Payloads SAME
+33705 Panel Check SAME
+33705 Panel Tokens SAME
+33705 Build Save Body SAME
+33731 Panel Payloads SAME
+33731 Alternate Payloads SAME
+33731 Panel Check SAME
+33731 Panel Tokens SAME
+33731 Build Save Body SAME
+33750 Panel Payloads SAME
+33750 Panel Check SAME
+33750 Panel Tokens SAME
+33750 Build Save Body SAME
+33774 Panel Payloads SAME
+33774 Alternate Payloads SAME
+33774 Panel Check SAME
+33774 Panel Tokens SAME
+33774 Build Save Body SAME
+33798 Panel Payloads SAME
+33798 Alternate Payloads SAME
+33798 Panel Check SAME
+33798 Panel Tokens SAME
+33798 Build Save Body SAME
+33815 Panel Payloads SAME
+33815 Panel Check SAME
+33815 Panel Tokens SAME
+33815 Build Save Body SAME
+33828 Panel Payloads SAME
+33828 Alternate Payloads SAME
+33828 Panel Check SAME
+33828 Panel Tokens SAME
+33828 Build Save Body SAME
+33846 Panel Payloads SAME
+33846 Alternate Payloads SAME
+33846 Panel Check SAME
+33846 Panel Tokens SAME
+33846 Build Save Body SAME
+34016 Panel Payloads SAME
+34016 Alternate Payloads SAME
+34016 Panel Check SAME
+34016 Panel Tokens SAME
+34016 Build Save Body SAME
+TOTAL same 175 diff 0 skipped 107 savedEq 68 savedNe 92
