@@ -23,7 +23,7 @@ CONTRADICTION IN THE CLOSING ROUND (the perjury rule).
   - the earlier round is that side's round 1 to 3;
   - the closing round is its round 4;
   - the link is declared.
-- **Log:** debate_enforcer_log, kind enforcer_check, rule E-CLOSECON, seat "close enforcer". Alternate Merge adds the rows to enforcer_log.
+- **Log:** debate_enforcer_log, kind enforcer_check, rule E-CLOSECON, seat "close enforcer", seat_role panel, cure_status empty. The enforcer's answer (CONFIRMED, NOT A CONTRADICTION, NOT CONFIRMED, NONE FOUND, NO ANSWER, NOT CHECKED) leads cure_reason. Alternate Merge adds the rows to enforcer_log.
 
 ## Shown to the judges
 Panel Build and Build Independent Verdict add a CONFIRMED CLOSING CONTRADICTIONS block under the side's close round. It holds both quotes and the link, and says:

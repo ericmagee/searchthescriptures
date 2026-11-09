@@ -66,7 +66,7 @@ const RECORD = String.raw`// pkgCEC (W1, item A of Wall 3714): CLOSE ENFORCER RE
 // the link one of that side's declared links. Any other CONFIRMED line is recorded NOT CONFIRMED (form) and has no effect. A confirmed contradiction
 // is shown to every judge (Panel Build, Build Independent Verdict) and breaks its link in every seat's recompute (library: cureRecompute).
 ` + COMMON + String.raw`const B=$('Close Enforcer Build').first().json;const RT=B.run_token||null;
-const log=(o)=>({run_token:RT,seat:'close enforcer',seat_role:'enforcer',judge_model:B.model||null,kind:'enforcer_check',rule:'E-CLOSECON',reply_error:null,cure_status:null,...o});
+const log=(o)=>{const r={run_token:RT,seat:'close enforcer',seat_role:'panel',judge_model:B.model||null,kind:'enforcer_check',rule:'E-CLOSECON',reply_error:null,cure_status:null,...o};const st=r.cure_status;if(st!=null&&st!=='CURED'&&st!=='UNCURED'){r.cure_reason=st+(r.cure_reason?' -- '+r.cure_reason:'');r.cure_status=null;}r.seat_role='panel';return r;}; /* pkgCEC rev 4 (W3 3770): the table allows seat_role panel/reserve/alternate/single/synthesis and cure_status null/CURED/UNCURED only; the enforcer's own status leads cure_reason */
 if(B.cec_skip)return [{json:{cec:{skipped:true,why:B.why||'',confirmed:[],rows:[],no_answer:[],errors:[]},cec_log:[log({item:'SKIPPED',flagged_line:null,prompt_sent:null,full_reply:null,response_line:null,cure_status:'NOT CHECKED',cure_reason:'the closing enforcer did not run: '+(B.why||'unknown'),reply_error:B.why||null})]}}];
 let RGL=null;try{if($('Regrade Load').isExecuted)RGL=$('Regrade Load').first().json;}catch(e){RGL=null;}
 let F={};try{F=RGL?RGL.f:$('Final Output').first().json;}catch(e){F={};}

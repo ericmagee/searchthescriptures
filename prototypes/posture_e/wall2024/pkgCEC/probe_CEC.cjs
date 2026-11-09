@@ -5,7 +5,7 @@ const fs=require('fs');const {harness}=require('../pkgGSL/harness.cjs');const W=
 const PAR=JSON.parse(fs.readFileSync(__dirname+'/parent_s83_CEC.json','utf8'));const SJR=JSON.parse(fs.readFileSync(W+'/pkgSJR/parent_s82_SJR.json','utf8'));
 const code=(d,n)=>d.nodes.find(x=>x.name===n).parameters.jsCode;const strip=(s,f)=>fs.readFileSync(W+'/pkgLIB/strip_'+s+'/patched/'+f,'utf8');
 const RUN='34108';const J=x=>({json:x});const cl=x=>JSON.parse(JSON.stringify(x));
-const run=async(c,over,inp)=>{const r=harness(RUN,over||{})('return (async()=>{\n'+c+'\n})();',inp||'Quote Report');return await r;};
+const LOGROWS=[];const run=async(c,over,inp)=>{const r=harness(RUN,over||{})('return (async()=>{\n'+c+'\n})();',inp||'Quote Report');const o=await r;try{for(const it of o||[]){const j=it&&it.json||{};for(const k of ['cec_log','jcc_log'])for(const x of (j[k]||[]))LOGROWS.push(x);for(const x of (j.enforcer_log||[]))if(x&&x.rule==='E-CLOSECON')LOGROWS.push(x);}}catch(e){}return o;}; /* rev 4: every log row the probe makes is kept for section 9 */
 let ok=0,bad=0;const T=(n,c,i)=>{if(c){ok++;console.log('OK   '+n+(i?': '+i:''));}else{bad++;console.log('FAIL '+n+(i?': '+i:''));}};
 const F=JSON.parse(fs.readFileSync('/mnt/project-files/wall2024/inputs/34108_Final_Output.json','utf8'))[0].data.main[0][0].json;
 const reply=t=>[J({choices:[{message:{role:'assistant',content:t},finish_reason:'stop'}]})];
@@ -38,14 +38,14 @@ await bad1(L1.replace('CLOSING [CR4]','CLOSING [CR3]'),/closing round CR3 is not
 await bad1(L1.replace('LINK 6','LINK 9'),/LINK 9 is not one of the defender's declared links/,'2g an undeclared link: NOT CONFIRMED (form)');
 await bad1(L1.replace('-- DEFENDER --','-- CHALLENGER --'),/earlier round CR3 is not one of the challenger's rounds/,'2h the defender\'s words charged to the challenger: NOT CONFIRMED (form)');
 await bad1(L1.replace(D6E,'Christ had no biological father.'),/earlier quotation is not found word for word in CR3/,'2i an earlier quote that stands in [CR1] but is named [CR3] is checked in [CR3] only: NOT CONFIRMED (form)');
-const R3=await rec('CLOSE-CONTRADICTION: NONE');T('2j CLOSE-CONTRADICTION: NONE: nothing confirmed, one NONE FOUND log row',R3.cec.confirmed.length===0&&R3.cec.none&&R3.cec_log.length===1&&R3.cec_log[0].cure_status==='NONE FOUND');
-const R4=await rec('I find the following contradictions: none of note.');T('2k a reply with no line in the form: nothing confirmed, error recorded, NOT CHECKED row',R4.cec.confirmed.length===0&&R4.cec.errors.length===1&&R4.cec_log[0].cure_status==='NOT CHECKED');
+const R3=await rec('CLOSE-CONTRADICTION: NONE');T('2j CLOSE-CONTRADICTION: NONE: nothing confirmed, one NONE FOUND log row',R3.cec.confirmed.length===0&&R3.cec.none&&R3.cec_log.length===1&&R3.cec_log[0].cure_status===null&&/^NONE FOUND/.test(R3.cec_log[0].cure_reason));
+const R4=await rec('I find the following contradictions: none of note.');T('2k a reply with no line in the form: nothing confirmed, error recorded, NOT CHECKED row',R4.cec.confirmed.length===0&&R4.cec.errors.length===1&&R4.cec_log[0].cure_status===null&&/^NOT CHECKED/.test(R4.cec_log[0].cure_reason));
 const R5=(await run(code(PAR,'Close Enforcer Record'),{'Close Enforcer Build':[J(B)],'Close Enforcer Call deepseek':[J({error:{message:'timeout'}})]},'Close Enforcer Call deepseek'))[0].json;
 T('2l a failed call: nothing confirmed, the error is recorded, the run goes on',R5.cec.confirmed.length===0&&/timeout/.test(R5.cec.errors[0]||''));
 const R6=await rec(L1+'\n'+L1.replace('NEW','NEW2'));T('2m the same link confirmed twice: one break',R6.cec.confirmed.length===1&&/already broken/.test(R6.cec.rows[1].note||''));
 const R7=await rec('**'+L1+'**');T('2n bold marks around the line are read',R7.cec.confirmed.length===1);
-const R8=await rec(L1.replace('NEW','X1'),BO);T('2o candidate X1 answered and confirmed; X2 unanswered: NO ANSWER row',R8.cec.confirmed.length===1&&R8.cec.confirmed[0].id==='X1'&&JSON.stringify(R8.cec.no_answer)==='["X2"]'&&R8.cec_log.some(r=>r.item==='X2'&&r.cure_status==='NO ANSWER'));
-const R9=(await run(code(PAR,'Close Enforcer Record'),{'Close Enforcer Build':[J(BS)]},'Close Enforcer Build'))[0].json;T('2p skipped build: Record says NOT CHECKED with the reason',R9.cec.skipped&&R9.cec_log[0].cure_status==='NOT CHECKED');
+const R8=await rec(L1.replace('NEW','X1'),BO);T('2o candidate X1 answered and confirmed; X2 unanswered: NO ANSWER row',R8.cec.confirmed.length===1&&R8.cec.confirmed[0].id==='X1'&&JSON.stringify(R8.cec.no_answer)==='["X2"]'&&R8.cec_log.some(r=>r.item==='X2'&&r.cure_status===null&&/^NO ANSWER/.test(r.cure_reason)));
+const R9=(await run(code(PAR,'Close Enforcer Record'),{'Close Enforcer Build':[J(BS)]},'Close Enforcer Build'))[0].json;T('2p skipped build: Record says NOT CHECKED with the reason',R9.cec.skipped&&R9.cec_log[0].cure_status===null&&/^NOT CHECKED/.test(R9.cec_log[0].cure_reason));
 // rev 3 (W2 3736): no spliced quote; no conflicting answers
 {const sp=L1.replace(D6C,'D6 is kept in its stated limb ... Christ had no biological father.');const r=await rec(sp);T('2q rev 3: a quote spliced with "..." from two [CR4] sentences: NOT CONFIRMED (form)',r.cec.confirmed.length===0&&/closing quotation is not found/.test(r.cec.rows[0].note||''),r.cec.rows[0].note);}
 {const one=L2.replace('-- LINK 1 -- NOT A CONTRADICTION --','-- LINK 1 -- CONFIRMED --').replace(G41C,'Genesis 4:1 therefore cannot supply the sequence ... sets the virgin as the one with child.');const r=await rec(one);T('2r rev 3: an ellipsis whose parts stand in one [CR4] sentence, in order, still stands',r.cec.confirmed.length===1,r.cec.rows[0].status);}
@@ -117,4 +117,12 @@ const P6=await PCC('CEC',{'Judge Contradiction Record':[J(JR1)]});{const b=JSON.
 const P7=await PCC('CEC',{'Close Enforcer Record':CER,'Judge Contradiction Record':[J(JR1)]});{const s0=P7.summary[0];T('8h both records: D6 and D1 both break; one break per link',s0.recomputed.trigger.filter(t=>/^CLOSE-CONTRADICTION D6 vs/.test(t)).length===2&&s0.recomputed.trigger.some(t=>/^CLOSE-CONTRADICTION D1 vs/.test(t)));}
 const AM2=(await run(code(PAR,'Alternate Merge'),{'Close Enforcer Record':CER,'Judge Contradiction Record':[J(JR1)]},'Alternate Merge Seat'))[0].json;
 T('8i Alternate Merge logs both records\' rows (2 pre-panel + 1 post-panel)',AM2.enforcer_log.length===AM0.enforcer_log.length+3&&AM2.enforcer_log.slice(0,3).every(r=>r.rule==='E-CLOSECON'));
+// 9 (rev 4, W3 3770): every log row passes the three checks of debate_enforcer_log; the rows are written out for a rolled-back insert through record_enforcer_log.
+{const SR=['panel','reserve','alternate','single','synthesis'],KD=['cure','alternate_reply','failed_reply','enforcer_check','send_back'];
+ const badr=LOGROWS.filter(r=>!SR.includes(r.seat_role)||!(r.cure_status==null||r.cure_status==='CURED'||r.cure_status==='UNCURED')||!KD.includes(r.kind||'cure'));
+ T('9a every E-CLOSECON log row the probe made ('+LOGROWS.length+') passes the seat_role, cure_status and kind checks',LOGROWS.length>=20&&!badr.length,JSON.stringify(badr.slice(0,2)));
+ const st=[...new Set(LOGROWS.map(r=>String(r.cure_reason||'').split(' -- ')[0]))].filter(x=>/^[A-Z][A-Z ()]+$/.test(x)).sort();
+ T('9b the enforcer\'s own answer leads cure_reason ('+st.join(', ')+')',['CONFIRMED','NOT A CONTRADICTION','NONE FOUND','NO ANSWER','NOT CHECKED'].every(x=>st.includes(x)));
+ T('9c both seats are logged: close enforcer and judge contradiction enforcer',['close enforcer','judge contradiction enforcer'].every(x=>LOGROWS.some(r=>r.seat===x)));
+ const seen=new Set();fs.writeFileSync(__dirname+'/rev4_logrows.json',JSON.stringify(LOGROWS.filter(r=>{const k=JSON.stringify([r.seat,r.item,r.cure_reason]);if(seen.has(k))return false;seen.add(k);return true;}).map(r=>({...r,prompt_sent:r.prompt_sent==null?null:String(r.prompt_sent).slice(0,200),full_reply:r.full_reply==null?null:String(r.full_reply).slice(0,200)})),null,1));}
 console.log('\n'+ok+' OK, '+bad+' FAIL');process.exit(bad?1:0);})().catch(e=>{console.log('PROBE ERROR',e.stack);process.exit(2);});

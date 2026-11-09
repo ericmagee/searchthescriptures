@@ -5,7 +5,7 @@ OK   1d the prompt is the A2 prompt with the re-assertion sentence; no candidate
 OK   1e item B: the Oracle's OPPONENT'S CONTRADICTIONS lines in [DR4] become candidates X1, X2 (defender): ["X1 DEFENDER LINK 6","X2 DEFENDER LINK 1"]
 OK   1f no DeepSeek model row: skipped, says why
 OK   2a 34108: the dropped "no biological father" wording said again in [CR4] is CONFIRMED on D6 (both quotes found, rounds right, link declared): ["NEW DEFENDER 6 CONFIRMED","NEW DEFENDER 1 NOT A CONTRADICTION"]
-OK   2b 34108: terra's Genesis 4:1 flag answered NOT A CONTRADICTION breaks nothing and is logged: NEW DEFENDER LINK 6: CONFIRMED | NEW DEFENDER LINK 1: NOT A CONTRADICTION
+OK   2b 34108: terra's Genesis 4:1 flag answered NOT A CONTRADICTION breaks nothing and is logged: NEW DEFENDER LINK 6: null | NEW DEFENDER LINK 1: null
 OK   2c a CONFIRMED line whose earlier quote is not word for word: NOT CONFIRMED (form): the earlier quotation is not found word for word in CR3
 OK   2d a closing quote not in [CR4]: NOT CONFIRMED (form): the closing quotation is not found word for word in CR4
 OK   2e the earlier quote placed in the closing round: NOT CONFIRMED (form): the earlier round CR4 is not one of the defender's rounds 1 to 3; the earlier quotation is not found word for word in CR4
@@ -53,11 +53,14 @@ OK   7a Alternate Merge adds the E-CLOSECON rows to the run's enforcer_log, ahea
 OK   8a 34108 with no pre-panel record: terra's CONTRADICTION line ([CR3] grant against [CR4] Genesis 4:1) becomes candidate J1, named by chatgpt (terra): ["J1 DEFENDER CR3>CR4 by the judges' CONTRADICTION lines (chatgpt)"]
 OK   8b the post-panel prompt answers candidates only, with the same rules
 OK   8c a pair the pre-panel enforcer already answered is not sent again (34108: no call): every judge-found pair was already answered before the panel
-OK   8d Judge Contradiction Record: J1 CONFIRMED on D1; Panel Payloads' item passes on unchanged (Panel Cure Needed? and Panel Cure Build read it): J1 DEFENDER LINK 1: CONFIRMED
+OK   8d Judge Contradiction Record: J1 CONFIRMED on D1; Panel Payloads' item passes on unchanged (Panel Cure Needed? and Panel Cure Build read it): J1 DEFENDER LINK 1: null
 OK   8e a NEW line in the post-panel call is recorded NOT A CANDIDATE and breaks nothing
 OK   8f skipped (nothing new): Panel Payloads passes on, no log row
 OK   8g the recompute takes a post-panel break: every D1 line DEFENDER LINK BROKEN, verdict BROKEN: luna: 1 line(s), BROKEN
 OK   8h both records: D6 and D1 both break; one break per link
 OK   8i Alternate Merge logs both records' rows (2 pre-panel + 1 post-panel)
+OK   9a every E-CLOSECON log row the probe made (33) passes the seat_role, cure_status and kind checks: []
+OK   9b the enforcer's own answer leads cure_reason (CONFIRMED, NO ANSWER, NONE FOUND, NOT A CANDIDATE, NOT A CONTRADICTION, NOT CHECKED)
+OK   9c both seats are logged: close enforcer and judge contradiction enforcer
 
-60 OK, 0 FAIL
+63 OK, 0 FAIL

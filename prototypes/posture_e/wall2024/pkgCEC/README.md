@@ -18,7 +18,7 @@ A debater confirmed to contradict itself in its closing round has the chain link
      - the closing round is that side's round 4;
      - the link is one of its declared links.
 
-     One break per side and link. It also writes log rows (`cec_log`: kind enforcer_check, rule E-CLOSECON, seat "close enforcer", seat_role "enforcer"), with one row per answer, NO ANSWER for an unanswered candidate, and NONE FOUND or NOT CHECKED otherwise.
+     One break per side and link. It also writes log rows (`cec_log`: kind enforcer_check, rule E-CLOSECON, seat "close enforcer", seat_role "panel" since rev 4), with one row per answer, NO ANSWER for an unanswered candidate, and NONE FOUND or NOT CHECKED otherwise.
 2. **Shown to the judges.** Panel Build and Build Independent Verdict append `__CEC(sd)` after the anti-cheat mark (`__ACX`) under each side's close round. The text is CONFIRMED CLOSING CONTRADICTIONS, with both quotes, the link and the A3.2 rev 1 statement. With no confirmed contradiction the output is byte-equal to the base.
 3. **The default break** (library, all 26 files that hold the recompute):
    - `cecBroken2024()` reads `$('Close Enforcer Record')`. It returns [] when that node did not run, so every saved run is unchanged.
@@ -30,6 +30,12 @@ A debater confirmed to contradict itself in its closing round has the chain link
    - No judge item is raised and no seat is removed by the break.
 4. **Log.** Alternate Merge puts the E-CLOSECON rows at the head of `enforcer_log` (both the no-round-2 return and round 2), so Write Enforcer Log records them in debate_enforcer_log.
 5. **Stub heads.** Alternate Build and Early Alternate Build take pkgLIB_CEC/e4_rebase. Live Early Alternate Build has been stale since s80 (W1 Wall finding 3726).
+
+## Rev 4 (W3 3770: LIVE FAULT in s84/s85, the log rows the table refuses)
+- The fault, mine: the two Record nodes wrote seat_role 'enforcer' and cure_status values such as CONFIRMED, NONE FOUND, NOT CHECKED. debate_enforcer_log allows seat_role panel, reserve, alternate, single or synthesis, and cure_status empty, CURED or UNCURED. record_enforcer_log inserts the whole run's log in one statement, so one such row loses every row of the run. I did not check the rows against the table.
+- The fix, in code only (no table change): `log()` in the shared Record code writes seat_role 'panel' and leaves cure_status empty; the enforcer's own answer (CONFIRMED, NOT A CONTRADICTION, NOT CONFIRMED (form), NOT CONFIRMED (conflicting answers), NONE FOUND, NO ANSWER, NOT CHECKED, NOT A CANDIDATE) now leads cure_reason, as `<ANSWER> -- <reason>`. The seat name (close enforcer, judge contradiction enforcer) and rule E-CLOSECON still mark the rows. What breaks a link is unchanged: it reads cec.confirmed, not the log.
+- Write file: parent_s85_CEC4.json (`node pkgCEC/build_CEC4.cjs`): live s85 with only Close Enforcer Record and Judge Contradiction Record changed (402 nodes; connections equal). parent_s83_CEC.json is rebuilt so the probe runs the same Record code.
+- Proof: probe_CEC.txt 63 OK, 0 FAIL. 2j, 2k, 2o, 2p now read the answer from cure_reason. New 9a: all 33 log rows the probe makes pass the seat_role, cure_status and kind checks; 9b: every answer form leads cure_reason; 9c: both seats logged. rev4_logrows.json holds the distinct rows. A rolled-back call of record_enforcer_log with 10 of them (one of each answer form, both seats) and one ordinary panel row inserted 11 rows (`{"rows": 11, "recorded": true}`, then rolled back on purpose; 0 rows remain).
 
 ## Rev 3 (W2 3736, W3 3744: FAIL, two fixes)
 - Fix 1: `cecStands` takes the round text. A quote stands whole; a quote with "..." stands only when all its parts (5+ words each) fall inside ONE sentence of the named round, in order. A splice of two sentences is refused (probe 2q; 2r keeps a one-sentence ellipsis).
