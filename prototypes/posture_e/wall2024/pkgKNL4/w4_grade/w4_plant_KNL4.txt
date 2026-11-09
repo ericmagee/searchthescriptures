@@ -1,0 +1,6 @@
+10 OK, 5 FAIL
+WRONG-ACCEPT "FORCED: none (the third link is not forced, the fourth is)"
+WRONG-ACCEPT "FORCED: none (no forced link; the keystone link fails)"
+WRONG-ACCEPT "FORCED: none (not the virgin-birth link, which is forced)"
+WRONG-ACCEPT "FORCED: none (nothing forced, although LINK four is broken)"
+WRONG-ACCEPT "FORCED: none (no link, only the keystone premise)"
