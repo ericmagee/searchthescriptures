@@ -59,8 +59,15 @@ OK   8f skipped (nothing new): Panel Payloads passes on, no log row
 OK   8g the recompute takes a post-panel break: every D1 line DEFENDER LINK BROKEN, verdict BROKEN: luna: 1 line(s), BROKEN
 OK   8h both records: D6 and D1 both break; one break per link
 OK   8i Alternate Merge logs both records' rows (2 pre-panel + 1 post-panel)
+OK   10a a throw inside Close Enforcer Build: it returns a skip that says why, with the run token: Close Enforcer Build failed: probe: forced throw on the first read
+OK   10b ... and Close Enforcer Record then writes one NOT CHECKED row in allowed values, nothing confirmed: {"run_token":"T5","seat":"close enforcer","seat_role":"panel","judge_model":null,"kind":"enforcer_check","rule":"E-CLOSECON","reply_error":"Close Enforcer Build failed: probe: forced throw on the firs
+OK   10c a throw inside Close Enforcer Record: no break, one NOT CHECKED row in allowed values: Close Enforcer Record failed: probe: forced throw
+OK   10d a throw inside Judge Contradiction Build: a skip that says why (logged, not no_log): Judge Contradiction Build failed: probe: forced throw on the first read
+OK   10e ... Judge Contradiction Record passes Panel Payloads' item on with one NOT CHECKED row
+OK   10f a throw inside Judge Contradiction Record: Panel Payloads' item passes on unchanged, no break, one NOT CHECKED row: Judge Contradiction Record failed: probe: forced throw
+OK   10g with no Panel Payloads item to pass on, Judge Contradiction Record throws as before (nothing to carry)
 OK   9a every E-CLOSECON log row the probe made (33) passes the seat_role, cure_status and kind checks: []
 OK   9b the enforcer's own answer leads cure_reason (CONFIRMED, NO ANSWER, NONE FOUND, NOT A CANDIDATE, NOT A CONTRADICTION, NOT CHECKED)
 OK   9c both seats are logged: close enforcer and judge contradiction enforcer
 
-63 OK, 0 FAIL
+70 OK, 0 FAIL

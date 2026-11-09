@@ -117,6 +117,25 @@ const P6=await PCC('CEC',{'Judge Contradiction Record':[J(JR1)]});{const b=JSON.
 const P7=await PCC('CEC',{'Close Enforcer Record':CER,'Judge Contradiction Record':[J(JR1)]});{const s0=P7.summary[0];T('8h both records: D6 and D1 both break; one break per link',s0.recomputed.trigger.filter(t=>/^CLOSE-CONTRADICTION D6 vs/.test(t)).length===2&&s0.recomputed.trigger.some(t=>/^CLOSE-CONTRADICTION D1 vs/.test(t)));}
 const AM2=(await run(code(PAR,'Alternate Merge'),{'Close Enforcer Record':CER,'Judge Contradiction Record':[J(JR1)]},'Alternate Merge Seat'))[0].json;
 T('8i Alternate Merge logs both records\' rows (2 pre-panel + 1 post-panel)',AM2.enforcer_log.length===AM0.enforcer_log.length+3&&AM2.enforcer_log.slice(0,3).every(r=>r.rule==='E-CLOSECON'));
+// 10 (rev 5, W3 3772 note): a throw inside any of the four code nodes never stops the debate and breaks nothing.
+{const X=n=>{throw new Error('probe: '+n+' not available');};const mk=m=>{const seen={};return n=>{if(n in m){const v=m[n];return {isExecuted:true,first:()=>{if(typeof v==='function'){seen[n]=(seen[n]||0)+1;return {json:v(seen[n])};}return {json:v&&v.__live?v:cl(v)};},all:()=>[{json:v}]};}X(n);};};
+ const once=j=>k=>{if(k===1)throw new Error('probe: forced throw on the first read');return j;};const bomb=j=>{const o={...j,__live:true};Object.defineProperty(o,'cec_skip',{get(){throw new Error('probe: forced throw');}});return o;};
+ const go=(c,m)=>new Function('$','$input',c)(mk(m),{first:()=>({json:{}}),all:()=>[]});const SR=['panel','reserve','alternate','single','synthesis'];
+ const okRow=r=>SR.includes(r.seat_role)&&r.cure_status==null&&r.kind==='enforcer_check'&&r.rule==='E-CLOSECON'&&/^NOT CHECKED -- /.test(r.cure_reason);
+ const b1=go(code(PAR,'Close Enforcer Build'),{'Init Seats':once({run_token:'T5'})})[0].json;
+ T('10a a throw inside Close Enforcer Build: it returns a skip that says why, with the run token',b1.cec_skip===true&&/^Close Enforcer Build failed: /.test(b1.why)&&b1.run_token==='T5',b1.why);
+ const r1=go(code(PAR,'Close Enforcer Record'),{'Close Enforcer Build':b1})[0].json;
+ T('10b ... and Close Enforcer Record then writes one NOT CHECKED row in allowed values, nothing confirmed',r1.cec.skipped&&r1.cec.confirmed.length===0&&r1.cec_log.length===1&&okRow(r1.cec_log[0]),JSON.stringify(r1.cec_log[0]).slice(0,200));
+ const r2=go(code(PAR,'Close Enforcer Record'),{'Close Enforcer Build':bomb({run_token:'T5'})})[0].json;
+ T('10c a throw inside Close Enforcer Record: no break, one NOT CHECKED row in allowed values',r2.cec.skipped&&r2.cec.confirmed.length===0&&/^Close Enforcer Record failed: /.test(r2.cec.why)&&r2.cec_log.length===1&&okRow(r2.cec_log[0])&&r2.cec_log[0].run_token==='T5',r2.cec.why);
+ const PPx={verdict_raw:'x',bodies:['b'],probe:true};const b2=go(code(PAR,'Judge Contradiction Build'),{'Init Seats':once({run_token:'T5'}),'Panel Payloads':once({})})[0].json;
+ T('10d a throw inside Judge Contradiction Build: a skip that says why (logged, not no_log)',b2.cec_skip===true&&/^Judge Contradiction Build failed: /.test(b2.why)&&!b2.no_log,b2.why);
+ const j1=go(code(PAR,'Judge Contradiction Record'),{'Judge Contradiction Build':b2,'Panel Payloads':PPx})[0].json;const{jcc:jc1,jcc_log:jl1,...rest1}=j1;
+ T('10e ... Judge Contradiction Record passes Panel Payloads\' item on with one NOT CHECKED row',JSON.stringify(rest1)===JSON.stringify(PPx)&&jc1.confirmed.length===0&&jl1.length===1&&okRow(jl1[0])&&jl1[0].seat==='judge contradiction enforcer');
+ const j2=go(code(PAR,'Judge Contradiction Record'),{'Judge Contradiction Build':bomb({run_token:'T5'}),'Panel Payloads':PPx})[0].json;const{jcc:jc2,jcc_log:jl2,...rest2}=j2;
+ T('10f a throw inside Judge Contradiction Record: Panel Payloads\' item passes on unchanged, no break, one NOT CHECKED row',JSON.stringify(rest2)===JSON.stringify(PPx)&&jc2.skipped&&jc2.confirmed.length===0&&/^Judge Contradiction Record failed: /.test(jc2.why)&&jl2.length===1&&okRow(jl2[0]),jc2.why);
+ let th=false;try{go(code(PAR,'Judge Contradiction Record'),{'Judge Contradiction Build':bomb({})});}catch(e){th=true;}
+ T('10g with no Panel Payloads item to pass on, Judge Contradiction Record throws as before (nothing to carry)',th);}
 // 9 (rev 4, W3 3770): every log row passes the three checks of debate_enforcer_log; the rows are written out for a rolled-back insert through record_enforcer_log.
 {const SR=['panel','reserve','alternate','single','synthesis'],KD=['cure','alternate_reply','failed_reply','enforcer_check','send_back'];
  const badr=LOGROWS.filter(r=>!SR.includes(r.seat_role)||!(r.cure_status==null||r.cure_status==='CURED'||r.cure_status==='UNCURED')||!KD.includes(r.kind||'cure'));

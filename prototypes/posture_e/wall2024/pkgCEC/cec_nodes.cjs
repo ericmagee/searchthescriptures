@@ -167,4 +167,14 @@ const JC_RECORD = RECORD
  .replace("reply_error:B.why||null})]}}];", "reply_error:B.why||null})]});")
  .replace("return [{json:{cec:{skipped:false,model:B.model||'',confirmed,rows,no_answer,none,errors,links},cec_log}}];", "return OUT({cec:{skipped:false,model:B.model||'',confirmed,rows,no_answer,none,errors,links},cec_log});");
 
-module.exports = { COMMON, PROMPT, SYS, BUILD, RECORD, SHOW_FN, LIB_FN, LIB_STEP, LIB_SB, JC_BUILD, JC_RECORD };
+// pkgCEC rev 5 (W3 3772 note): the four code nodes sit in the main path with no error setting, so a throw would stop the debate. Each is wrapped:
+// a throw in a Build returns a skip that says why (the Record then writes one NOT CHECKED row); a throw in a Record passes its item on with no break
+// and one NOT CHECKED row in the values debate_enforcer_log allows. A failed check breaks nothing.
+const WRAPB = (code, nm) => 'try{\n' + code + '\n}catch(__e){let __rt=null;try{__rt=$(\'Init Seats\').first().json.run_token||null;}catch(e){}return [{json:{cec_skip:true,why:\'' + nm + ' failed: \'+String(__e&&__e.message||__e).slice(0,300),run_token:__rt}}];} /* pkgCEC rev 5: a failed check never stops the debate */';
+const ROWF = (seat) => "{run_token:__rt,seat:'" + seat + "',seat_role:'panel',judge_model:null,kind:'enforcer_check',rule:'E-CLOSECON',item:'NOT CHECKED',flagged_line:null,prompt_sent:null,full_reply:null,response_line:null,reply_error:__m,cure_status:null,cure_reason:'NOT CHECKED -- '+__m}";
+const WRAPR = (code, nm, build, seat, pass) => 'try{\n' + code + '\n}catch(__e){const __m=\'' + nm + ' failed: \'+String(__e&&__e.message||__e).slice(0,300);let __rt=null;try{__rt=$(\'' + build + '\').first().json.run_token||null;}catch(e){}const __o={skipped:true,why:__m,confirmed:[],rows:[],no_answer:[],errors:[__m]};'
+ + (pass ? 'let __PP=null;try{__PP=$(\'Panel Payloads\').first().json;}catch(e){}if(!__PP)throw __e;return [{json:{...__PP,jcc:__o,jcc_log:[' + ROWF(seat) + ']}}];}' : 'return [{json:{cec:__o,cec_log:[' + ROWF(seat) + ']}}];}') + ' /* pkgCEC rev 5: a failed check breaks nothing and never stops the debate */';
+module.exports = { COMMON, PROMPT, SYS, SHOW_FN, LIB_FN, LIB_STEP, LIB_SB,
+ BUILD: WRAPB(BUILD, 'Close Enforcer Build'), RECORD: WRAPR(RECORD, 'Close Enforcer Record', 'Close Enforcer Build', 'close enforcer', false),
+ JC_BUILD: WRAPB(JC_BUILD, 'Judge Contradiction Build'), JC_RECORD: WRAPR(JC_RECORD, 'Judge Contradiction Record', 'Judge Contradiction Build', 'judge contradiction enforcer', true),
+ RAW: { BUILD, RECORD, JC_BUILD, JC_RECORD } };

@@ -31,6 +31,15 @@ A debater confirmed to contradict itself in its closing round has the chain link
 4. **Log.** Alternate Merge puts the E-CLOSECON rows at the head of `enforcer_log` (both the no-round-2 return and round 2), so Write Enforcer Log records them in debate_enforcer_log.
 5. **Stub heads.** Alternate Build and Early Alternate Build take pkgLIB_CEC/e4_rebase. Live Early Alternate Build has been stale since s80 (W1 Wall finding 3726).
 
+## Rev 5 (W3 3772 note: a throw in a CEC code node would stop the debate)
+- The four code nodes (Close Enforcer Build and Record, Judge Contradiction Build and Record) sit in the main path with no error setting. Each is now wrapped (cec_nodes.cjs WRAPB, WRAPR; the unwrapped text stays in RAW):
+  - a throw in a Build returns `cec_skip` with the reason ("<node> failed: ...") and the run token, so the Record writes one NOT CHECKED row;
+  - a throw in Close Enforcer Record returns `cec` skipped with nothing confirmed and one NOT CHECKED row;
+  - a throw in Judge Contradiction Record passes Panel Payloads' item on unchanged, with `jcc` skipped and one NOT CHECKED row. If Panel Payloads cannot be read either, it throws as before (nothing to carry).
+  - Every fallback row uses the rev 4 values (seat_role panel, cure_status empty, "NOT CHECKED -- <reason>" in cure_reason). A failed check breaks no link.
+- Rev 5 contains rev 4. Write file: parent_CEC5.json (`node pkgCEC/build_CEC5.cjs <live fetch-back>`; built on fetchback_live_s87.json, 414 nodes): only the four code nodes change. The build accepts either the rev 3 or the rev 4 code in the live nodes.
+- Proof: probe_CEC.txt 70 OK, 0 FAIL. New 10a to 10g: forced throws in each node, the Build fallback read by the Record, Panel Payloads' item passed on unchanged, each fallback row checked against the table's three checks.
+
 ## Rev 4 (W3 3770: LIVE FAULT in s84/s85, the log rows the table refuses)
 - The fault, mine: the two Record nodes wrote seat_role 'enforcer' and cure_status values such as CONFIRMED, NONE FOUND, NOT CHECKED. debate_enforcer_log allows seat_role panel, reserve, alternate, single or synthesis, and cure_status empty, CURED or UNCURED. record_enforcer_log inserts the whole run's log in one statement, so one such row loses every row of the run. I did not check the rows against the table.
 - The fix, in code only (no table change): `log()` in the shared Record code writes seat_role 'panel' and leaves cure_status empty; the enforcer's own answer (CONFIRMED, NOT A CONTRADICTION, NOT CONFIRMED (form), NOT CONFIRMED (conflicting answers), NONE FOUND, NO ANSWER, NOT CHECKED, NOT A CANDIDATE) now leads cure_reason, as `<ANSWER> -- <reason>`. The seat name (close enforcer, judge contradiction enforcer) and rule E-CLOSECON still mark the rows. What breaks a link is unchanged: it reads cec.confirmed, not the log.
