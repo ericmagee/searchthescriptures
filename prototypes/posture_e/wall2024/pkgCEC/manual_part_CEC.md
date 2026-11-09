@@ -18,7 +18,7 @@ CONTRADICTION IN THE CLOSING ROUND (the perjury rule).
   - its declared links: the [CR1] DECLARED CHAIN, and the [DR3] LINK blocks;
   - the candidates: the Oracle's OPPONENT'S CONTRADICTIONS lines in [DR4].
 - **Reply line:** `CLOSE-CONTRADICTION: <id|NEW> -- <DEFENDER|CHALLENGER> -- LINK <n> -- CONFIRMED | NOT A CONTRADICTION -- EARLIER [<round>] "<words>" -- CLOSING [<round 4>] "<words>" -- <why>`
-- **Code confirms a CONFIRMED line** only when all of these hold; otherwise the line is NOT CONFIRMED (form):
+- **Code confirms a CONFIRMED line** only when all of these hold; otherwise the line is NOT CONFIRMED (form). A quote with "..." stands only when all its parts fall inside one sentence of the named round, in order. A candidate answered both CONFIRMED and NOT A CONTRADICTION is NOT CONFIRMED (conflicting answers) and breaks nothing.
   - both quotes are found word for word in the rounds named;
   - the earlier round is that side's round 1 to 3;
   - the closing round is its round 4;
@@ -45,5 +45,6 @@ Panel Build and Build Independent Verdict add a CONFIRMED CLOSING CONTRADICTIONS
   - each contradiction question of the dry question round.
 - **Not sent again:** a pair the pre-panel enforcer already answered. No candidate means no call.
 - **Checks:** the same prompt rules and the same code checks as before; the call answers candidates only.
-- **A confirmed line** breaks its link in every panel, reserve and alternate seat's recompute. The single judge's recompute runs before the panel and is not reached.
+- **A confirmed line** breaks its link in every panel, reserve and alternate seat's recompute.
+- **Limit, in plain words:** a contradiction confirmed only after the panel does NOT change the single judge's result, because the single judge is graded before the panel sits. A contradiction confirmed before the judges sit breaks the link for the single judge too.
 - **Log:** seat "judge contradiction enforcer", rule E-CLOSECON.

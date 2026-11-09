@@ -31,6 +31,12 @@ A debater confirmed to contradict itself in its closing round has the chain link
 4. **Log.** Alternate Merge puts the E-CLOSECON rows at the head of `enforcer_log` (both the no-round-2 return and round 2), so Write Enforcer Log records them in debate_enforcer_log.
 5. **Stub heads.** Alternate Build and Early Alternate Build take pkgLIB_CEC/e4_rebase. Live Early Alternate Build has been stale since s80 (W1 Wall finding 3726).
 
+## Rev 3 (W2 3736, W3 3744: FAIL, two fixes)
+- Fix 1: `cecStands` takes the round text. A quote stands whole; a quote with "..." stands only when all its parts (5+ words each) fall inside ONE sentence of the named round, in order. A splice of two sentences is refused (probe 2q; 2r keeps a one-sentence ellipsis).
+- Fix 2: a candidate, or a NEW pair (side, link, both quotes), answered both CONFIRMED and NOT A CONTRADICTION is recorded NOT CONFIRMED (conflicting answers) and breaks nothing (2s, 2t).
+- Both fixes are in the shared Record code, so they hold for the post-panel call too. W2's w2_edge_CEC E4 and E5, which asserted the faults, now show them gone.
+- Library unchanged from rev 2 (strip_CEC, pkgLIB_CEC), so gate_CEC.txt stands. Only the two Record nodes change.
+
 ## Rev 2: ASK 2, judge-found contradictions confirmed after the panel
 6. Four more nodes sit between Panel Payloads (output 0) and Panel Cure Needed?:
    - **Judge Contradiction Build.** Its candidates:
@@ -44,7 +50,7 @@ A debater confirmed to contradict itself in its closing round has the chain link
    - **Limit:** the single judge's recompute runs before the panel, so a break confirmed only after the panel does not reach the single judge's result. It does reach every panel, reserve and alternate seat.
 
 ## Proof
-- **probe_CEC.txt: 56 OK, 0 FAIL** (rev 2 adds 8a to 8i), on run 34108. The enforcer's reply is written by hand; no DeepSeek call is made offline.
+- **probe_CEC.txt: 60 OK, 0 FAIL** (rev 2 adds 8a to 8i, rev 3 adds 2q to 2t), on run 34108. The enforcer's reply is written by hand; no DeepSeek call is made offline.
   - **Build.** 151,166 characters, all 8 rounds in full, D1-D6 and C1-C6 read, the Oracle's X lines become candidates, and a missing model row means skip.
   - **Record, the two 34108 lines.**
     - The [CR3] drop of "no biological father" against the [CR4] close "Christ had no biological father." is CONFIRMED on D6.

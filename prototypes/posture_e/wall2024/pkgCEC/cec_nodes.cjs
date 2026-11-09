@@ -7,8 +7,12 @@
 const COMMON = String.raw`const CEC_RK={CR1:'cr1',CR2:'cr2',CR3:'cr3',CR4:'cr4',DR1:'gr1',DR2:'gr2',DR3:'dr3',DR4:'dr4'};
 const CEC_PRE={DEFENDER:'CR',CHALLENGER:'DR'};
 const cecN=s=>String(s||'').toLowerCase().replace(/[“”"’‘'*_${'`'}\[\]]/g,'').replace(/[^a-z0-9:\s]/g,' ').replace(/\s+/g,' ').trim();
-/* a quotation stands when its words are found in the round named (case, quote marks, markdown and punctuation ignored); an ellipsis inside it: every part of five words or more must stand */
-const cecStands=(q,T)=>{const x=cecN(q);if(x.split(' ').length<3)return false;if(T.includes(x))return true;const parts=String(q).split(/\.\.\.|…/).map(cecN).filter(p=>p.split(' ').length>=5);return parts.length>1&&parts.every(p=>T.includes(p));};
+/* a quotation stands when its words are found together in the round named (case, quote marks, markdown and punctuation ignored).
+   rev 3 (W2 3736 fix 1): a quotation with an ellipsis stands only when all its parts fall inside ONE sentence of that round, in order, so two
+   sentences cannot be spliced into one; each part of five words or more */
+const cecSents=raw=>String(raw||'').split(/\n+|(?<=[.!?]["”’')\]]*)\s+/).map(cecN).filter(Boolean);
+const cecStands=(q,raw)=>{const x=cecN(q);if(x.split(' ').length<3)return false;const T=cecN(raw);if(T.includes(x))return true;const parts=String(q).split(/\.\.\.|…/).map(cecN).filter(Boolean);if(parts.length<2||parts.some(p=>p.split(' ').length<5))return false;
+ return cecSents(raw).some(z=>{let at=0;for(const p of parts){const k=z.indexOf(p,at);if(k<0)return false;at=k+p.length;}return true;});};
 /* declared links: the defender's DECLARED CHAIN in [CR1] (as Panel Build reads it), the challenger's LINK blocks in [DR3] */
 const cecDeclared=F=>{const t=String(F&&F.cr1||'');const i=t.search(/DECLARED CHAIN\b/);if(i<0)return null;const a=t.lastIndexOf('\n',i)+1;const L=t.slice(a).split('\n');const out=[L[0]];let on=false,pre=0;
  for(const l of L.slice(1)){const num=/^\s*\**\s*\d+[.)]\s+\S/.test(l);if(num){on=true;out.push(l);continue;}if(!on){if(l.trim()){if(/^\s*#/.test(l)||++pre>3)break;}out.push(l);continue;}
@@ -76,13 +80,17 @@ for(const line of String(txt||'').split('\n')){const s=line.trim();if(!s)continu
  if(row.answer==='CONFIRMED'){const f=[];
   if(!(row.earlier_round.startsWith(P)&&/[123]$/.test(row.earlier_round)))f.push('the earlier round '+row.earlier_round+' is not one of the '+side.toLowerCase()+'\'s rounds 1 to 3');
   if(row.closing_round!==P+'4')f.push('the closing round '+row.closing_round+' is not the '+side.toLowerCase()+'\'s round 4 ('+P+'4)');
-  if(CEC_RK[row.earlier_round]&&!cecStands(row.earlier_q,cecN(F[CEC_RK[row.earlier_round]])))f.push('the earlier quotation is not found word for word in '+row.earlier_round);
-  if(CEC_RK[row.closing_round]&&!cecStands(row.closing_q,cecN(F[CEC_RK[row.closing_round]])))f.push('the closing quotation is not found word for word in '+row.closing_round);
+  if(CEC_RK[row.earlier_round]&&!cecStands(row.earlier_q,F[CEC_RK[row.earlier_round]]))f.push('the earlier quotation is not found word for word in '+row.earlier_round);
+  if(CEC_RK[row.closing_round]&&!cecStands(row.closing_q,F[CEC_RK[row.closing_round]]))f.push('the closing quotation is not found word for word in '+row.closing_round);
   if(!(links[side]||[]).includes(row.link))f.push('LINK '+row.link+' is not one of the '+side.toLowerCase()+'\'s declared links ('+((links[side]||[]).join(', ')||'none read')+')');
   row.status=f.length?'NOT CONFIRMED (form)':'CONFIRMED';if(f.length)row.note=f.join('; ');
   if(!f.length&&B.cands_only&&!(cands||[]).some(c=>c.id===row.id)){row.status='NOT A CANDIDATE';row.note='the post-panel call answers the judges\' candidates only; a NEW line is recorded, not applied';}}
  else row.status='NOT A CONTRADICTION';
  rows.push(row);}
+/* rev 3 (W2 3736 fix 2): one candidate, or one side and link with the same two quotations, answered both CONFIRMED and NOT A CONTRADICTION is
+   recorded NOT CONFIRMED (conflicting answers) and breaks nothing */
+{const gk=x=>/^NEW/.test(x.id)?'P|'+x.side+'|'+x.link+'|'+cecN(x.earlier_q)+'|'+cecN(x.closing_q):'I|'+x.id;const G={};rows.forEach(x=>{if(x.side==null)return;(G[gk(x)]=G[gk(x)]||[]).push(x);});
+ for(const k in G){const g=G[k];const yes=g.filter(x=>x.status==='CONFIRMED'),no=g.filter(x=>x.answer==='NOT A CONTRADICTION');if(yes.length&&no.length)yes.forEach(x=>{x.status='NOT CONFIRMED (conflicting answers)';x.note='the same '+(k[0]==='I'?'candidate '+x.id:'pair')+' is also answered NOT A CONTRADICTION';});}}
 /* one break per side and link: the first confirmed line keeps it; a repeat is recorded */
 const seen=new Set();const confirmed=[];for(const x of rows){if(x.status!=='CONFIRMED')continue;const k=x.side+' '+x.link;if(seen.has(k)){x.note='the same link is already broken by an earlier confirmed line';continue;}seen.add(k);
  confirmed.push({id:x.id,side:x.side,link:x.link,earlier_round:x.earlier_round,earlier_q:x.earlier_q,closing_round:x.closing_round,closing_q:x.closing_q,why:x.why});}

@@ -46,6 +46,11 @@ const R6=await rec(L1+'\n'+L1.replace('NEW','NEW2'));T('2m the same link confirm
 const R7=await rec('**'+L1+'**');T('2n bold marks around the line are read',R7.cec.confirmed.length===1);
 const R8=await rec(L1.replace('NEW','X1'),BO);T('2o candidate X1 answered and confirmed; X2 unanswered: NO ANSWER row',R8.cec.confirmed.length===1&&R8.cec.confirmed[0].id==='X1'&&JSON.stringify(R8.cec.no_answer)==='["X2"]'&&R8.cec_log.some(r=>r.item==='X2'&&r.cure_status==='NO ANSWER'));
 const R9=(await run(code(PAR,'Close Enforcer Record'),{'Close Enforcer Build':[J(BS)]},'Close Enforcer Build'))[0].json;T('2p skipped build: Record says NOT CHECKED with the reason',R9.cec.skipped&&R9.cec_log[0].cure_status==='NOT CHECKED');
+// rev 3 (W2 3736): no spliced quote; no conflicting answers
+{const sp=L1.replace(D6C,'D6 is kept in its stated limb ... Christ had no biological father.');const r=await rec(sp);T('2q rev 3: a quote spliced with "..." from two [CR4] sentences: NOT CONFIRMED (form)',r.cec.confirmed.length===0&&/closing quotation is not found/.test(r.cec.rows[0].note||''),r.cec.rows[0].note);}
+{const one=L2.replace('-- LINK 1 -- NOT A CONTRADICTION --','-- LINK 1 -- CONFIRMED --').replace(G41C,'Genesis 4:1 therefore cannot supply the sequence ... sets the virgin as the one with child.');const r=await rec(one);T('2r rev 3: an ellipsis whose parts stand in one [CR4] sentence, in order, still stands',r.cec.confirmed.length===1,r.cec.rows[0].status);}
+{const r=await rec(L1.replace('NEW','X1')+'\n'+L1.replace('NEW','X1').replace('-- CONFIRMED --','-- NOT A CONTRADICTION --'),BO);T('2s rev 3: one candidate answered CONFIRMED and NOT A CONTRADICTION: NOT CONFIRMED (conflicting answers), nothing breaks',r.cec.confirmed.length===0&&r.cec.rows[0].status==='NOT CONFIRMED (conflicting answers)',r.cec.rows.map(x=>x.status).join(' | '));}
+{const r=await rec(L1+'\n'+L1.replace('-- CONFIRMED --','-- NOT A CONTRADICTION --'));T('2t rev 3: the same NEW pair (side, link, both quotes) answered both ways: nothing breaks',r.cec.confirmed.length===0);}
 const CER=[J(R1)];
 // ---------- 3. shown to the judges (Panel Build, Build Independent Verdict) ----------
 for(const nm of ['Panel Build','Build Independent Verdict']){

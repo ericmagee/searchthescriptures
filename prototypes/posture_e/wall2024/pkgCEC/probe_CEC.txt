@@ -20,6 +20,10 @@ OK   2m the same link confirmed twice: one break
 OK   2n bold marks around the line are read
 OK   2o candidate X1 answered and confirmed; X2 unanswered: NO ANSWER row
 OK   2p skipped build: Record says NOT CHECKED with the reason
+OK   2q rev 3: a quote spliced with "..." from two [CR4] sentences: NOT CONFIRMED (form): the closing quotation is not found word for word in CR4
+OK   2r rev 3: an ellipsis whose parts stand in one [CR4] sentence, in order, still stands: CONFIRMED
+OK   2s rev 3: one candidate answered CONFIRMED and NOT A CONTRADICTION: NOT CONFIRMED (conflicting answers), nothing breaks: NOT CONFIRMED (conflicting answers) | NOT A CONTRADICTION
+OK   2t rev 3: the same NEW pair (side, link, both quotes) answered both ways: nothing breaks
 OK   3a Panel Build: with no Close Enforcer Record the output equals the base node byte for byte
 OK   3b Panel Build: the judges read CONFIRMED CLOSING CONTRADICTIONS after the defender's [CR4], with both quotes and LINK 6 BROKEN: block at 237004
 OK   3c Panel Build: the challenger gets no block (no challenger contradiction confirmed): 3 block(s), one per judge body
@@ -56,4 +60,4 @@ OK   8g the recompute takes a post-panel break: every D1 line DEFENDER LINK BROK
 OK   8h both records: D6 and D1 both break; one break per link
 OK   8i Alternate Merge logs both records' rows (2 pre-panel + 1 post-panel)
 
-56 OK, 0 FAIL
+60 OK, 0 FAIL
