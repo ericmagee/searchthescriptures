@@ -3,7 +3,7 @@
 Drafted by W1 (W1_2026_11_04, seat 34, session_01H1X3ANxr57MZvsu7fHB9kh), 11-09, as W3 asked at Wall 3677. For W3, the single writer of v93.
 The header, the PACKAGES lines and the NOTE lines are for W3 only. The body text is the text under ADD or REPLACE WITH; it carries no provenance.
 
-Base checked: live s81, version f8b9d3af (fetchback_live_s81.json, 390 nodes), library strip_XKB (the s80 library; s81 changed no library node).
+Base checked: live s81, version f8b9d3af (fetchback_live_s81.json, 390 nodes), library strip_XKB2 (the s80 library, rev 2 of pkgXK; s81 changed no library node; strip_XKB now holds rev 3).
 Anchors: every ANCHOR below occurs exactly once in v92 (checked by SQL on engine_manual version 92, 11-09). W1-15 and W1-16 share one anchor; apply W1-16 after W1-15.
 Method: every package below was checked live in s81 by its marker in the node code (a pkg comment tag, a function name or the added text),
 or by node settings for settings-only packages. A package that is not live is listed under NOT LIVE and gets no text.

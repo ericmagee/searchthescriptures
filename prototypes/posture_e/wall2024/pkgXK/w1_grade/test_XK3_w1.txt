@@ -1,0 +1,13 @@
+full                       => "RESPONSE: K-W #1 | NOT HELD -- \"I grant {x}\" ok\nSTATEMENT: K-S3 #2 | has } brace and \\\" quote\nRESTATED: D1 vs C1 -- LINK BROKEN"
+cut_in_3rd                 => "RESPONSE: K-W #1 | NOT HELD -- \"I grant {x}\" ok\nSTATEMENT: K-S3 #2 | has } brace and \\\" quote"
+cut_in_string_with_brace   => "RESPONSE: K-W #1 | NOT HELD -- \"I grant {x}\" ok"
+cut_after_2nd_entry        => "RESPONSE: K-W #1 | NOT HELD -- \"I grant {x}\" ok\nSTATEMENT: K-S3 #2 | has } brace and \\\" quote"
+cut_before_any             => [unchanged text]
+no_array                   => [unchanged text]
+trailing_prose             => "RESPONSE: K-W #1 | NOT HELD -- \"I grant {x}\" ok\nSTATEMENT: K-S3 #2 | has } brace and \\\" quote\nRESTATED: D1 vs C1 -- LINK BROKEN"
+fenced_cut                 => "RESPONSE: K-W #1 | NOT HELD -- \"I grant {x}\" ok\nSTATEMENT: K-S3 #2 | has } brace and \\\" quote"
+bad_entry_type_then_cut    => [unchanged text]
+good_then_bad_type_cut     => [unchanged text]
+plain_lines                => [unchanged text]
+ends_brace_but_cut         => "RESPONSE: K-W #1 | NOT HELD -- \"I grant {x}\" ok\nSTATEMENT: K-S3 #2 | has } brace and \\\" quote"
+other_key_first_cut        => "RESPONSE: a | b"
