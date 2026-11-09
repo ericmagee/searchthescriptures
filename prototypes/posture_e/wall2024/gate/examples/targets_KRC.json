@@ -1,0 +1,3 @@
+{"why":"pkgKRC: a K-RUL item answered by a valid ruling card without a RESPONSE line is CURED (luna 34016 keystone)",
+ "items":[{"rule":"K-RUL","item":"^keystone$","seat":"luna","run":"34016"}],
+ "allow_lines":[{"re":"ITEM: keystone; RULE: K-RUL; RESULT: (UN)?CURED"},{"path":"\\.drv_uncured$","re":"^[-+] [12]$"}]}

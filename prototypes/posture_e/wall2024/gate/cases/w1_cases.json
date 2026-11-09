@@ -1,0 +1,307 @@
+[
+ {
+  "id": "KRC-A-33506",
+  "by": "W1",
+  "wall": "pkgKRC probe_KRC case A",
+  "run": "33506",
+  "say": "RESPONSE K-RUL lines removed, ruling cards kept (luna 34016 shape): the card cures",
+  "edits": [
+   {
+    "find": "(^|\\\\n|\\n)[*_ ]*RESPONSE:\\s*K-RUL[^\\n\\\\]*",
+    "replace": "$1"
+   }
+  ],
+  "checks": [
+   {
+    "node": "Cure Check",
+    "rule": "K-RUL",
+    "has": "status",
+    "field": "status",
+    "expect": {
+     "eq": "CURED"
+    }
+   },
+   {
+    "node": "Cure Check",
+    "rule": "K-RUL",
+    "has": "status",
+    "field": "why",
+    "expect": {
+     "re": "valid ruling card"
+    }
+   }
+  ]
+ },
+ {
+  "id": "KRC-B-33506",
+  "by": "W1",
+  "wall": "pkgKRC probe_KRC case B",
+  "run": "33506",
+  "say": "RESPONSE K-RUL lines removed and RULING heads broken: no card, no cure",
+  "edits": [
+   {
+    "find": "(^|\\\\n|\\n)[*_ ]*RESPONSE:\\s*K-RUL[^\\n\\\\]*",
+    "replace": "$1"
+   },
+   {
+    "find": "RULING\\s*(--|—|–|:)",
+    "replace": "RULED $1"
+   }
+  ],
+  "checks": [
+   {
+    "node": "Cure Check",
+    "rule": "K-RUL",
+    "has": "status",
+    "field": "status",
+    "expect": {
+     "eq": "UNCURED"
+    }
+   }
+  ]
+ },
+ {
+  "id": "KRC-A-33627",
+  "by": "W1",
+  "wall": "pkgKRC probe_KRC case A",
+  "run": "33627",
+  "say": "RESPONSE K-RUL lines removed, ruling cards kept (luna 34016 shape): the card cures",
+  "edits": [
+   {
+    "find": "(^|\\\\n|\\n)[*_ ]*RESPONSE:\\s*K-RUL[^\\n\\\\]*",
+    "replace": "$1"
+   }
+  ],
+  "checks": [
+   {
+    "node": "Cure Check",
+    "rule": "K-RUL",
+    "has": "status",
+    "field": "status",
+    "expect": {
+     "eq": "CURED"
+    }
+   },
+   {
+    "node": "Cure Check",
+    "rule": "K-RUL",
+    "has": "status",
+    "field": "why",
+    "expect": {
+     "re": "valid ruling card"
+    }
+   }
+  ]
+ },
+ {
+  "id": "KRC-B-33627",
+  "by": "W1",
+  "wall": "pkgKRC probe_KRC case B",
+  "run": "33627",
+  "say": "RESPONSE K-RUL lines removed and RULING heads broken: no card, no cure",
+  "edits": [
+   {
+    "find": "(^|\\\\n|\\n)[*_ ]*RESPONSE:\\s*K-RUL[^\\n\\\\]*",
+    "replace": "$1"
+   },
+   {
+    "find": "RULING\\s*(--|—|–|:)",
+    "replace": "RULED $1"
+   }
+  ],
+  "checks": [
+   {
+    "node": "Cure Check",
+    "rule": "K-RUL",
+    "has": "status",
+    "field": "status",
+    "expect": {
+     "eq": "UNCURED"
+    }
+   }
+  ]
+ },
+ {
+  "id": "KRC-A-33644",
+  "by": "W1",
+  "wall": "pkgKRC probe_KRC case A",
+  "run": "33644",
+  "say": "RESPONSE K-RUL lines removed, ruling cards kept (luna 34016 shape): the card cures",
+  "edits": [
+   {
+    "find": "(^|\\\\n|\\n)[*_ ]*RESPONSE:\\s*K-RUL[^\\n\\\\]*",
+    "replace": "$1"
+   }
+  ],
+  "checks": [
+   {
+    "node": "Cure Check",
+    "rule": "K-RUL",
+    "has": "status",
+    "field": "status",
+    "expect": {
+     "eq": "CURED"
+    }
+   },
+   {
+    "node": "Cure Check",
+    "rule": "K-RUL",
+    "has": "status",
+    "field": "why",
+    "expect": {
+     "re": "valid ruling card"
+    }
+   }
+  ]
+ },
+ {
+  "id": "KRC-B-33644",
+  "by": "W1",
+  "wall": "pkgKRC probe_KRC case B",
+  "run": "33644",
+  "say": "RESPONSE K-RUL lines removed and RULING heads broken: no card, no cure",
+  "edits": [
+   {
+    "find": "(^|\\\\n|\\n)[*_ ]*RESPONSE:\\s*K-RUL[^\\n\\\\]*",
+    "replace": "$1"
+   },
+   {
+    "find": "RULING\\s*(--|—|–|:)",
+    "replace": "RULED $1"
+   }
+  ],
+  "checks": [
+   {
+    "node": "Cure Check",
+    "rule": "K-RUL",
+    "has": "status",
+    "field": "status",
+    "expect": {
+     "eq": "UNCURED"
+    }
+   }
+  ]
+ },
+ {
+  "id": "KRC-A-33846",
+  "by": "W1",
+  "wall": "pkgKRC probe_KRC case A",
+  "run": "33846",
+  "say": "RESPONSE K-RUL lines removed, ruling cards kept (luna 34016 shape): the card cures",
+  "edits": [
+   {
+    "find": "(^|\\\\n|\\n)[*_ ]*RESPONSE:\\s*K-RUL[^\\n\\\\]*",
+    "replace": "$1"
+   }
+  ],
+  "checks": [
+   {
+    "node": "Panel Cure Check",
+    "rule": "K-RUL",
+    "has": "status",
+    "field": "status",
+    "expect": {
+     "eq": "CURED"
+    }
+   },
+   {
+    "node": "Panel Cure Check",
+    "rule": "K-RUL",
+    "has": "status",
+    "field": "why",
+    "expect": {
+     "re": "valid ruling card"
+    }
+   }
+  ]
+ },
+ {
+  "id": "KRC-B-33846",
+  "by": "W1",
+  "wall": "pkgKRC probe_KRC case B",
+  "run": "33846",
+  "say": "RESPONSE K-RUL lines removed and RULING heads broken: no card, no cure",
+  "edits": [
+   {
+    "find": "(^|\\\\n|\\n)[*_ ]*RESPONSE:\\s*K-RUL[^\\n\\\\]*",
+    "replace": "$1"
+   },
+   {
+    "find": "RULING\\s*(--|—|–|:)",
+    "replace": "RULED $1"
+   }
+  ],
+  "checks": [
+   {
+    "node": "Panel Cure Check",
+    "rule": "K-RUL",
+    "has": "status",
+    "field": "status",
+    "expect": {
+     "eq": "UNCURED"
+    }
+   }
+  ]
+ },
+ {
+  "id": "KRC-34016-luna",
+  "by": "W1",
+  "wall": "pkgKRC probe_KRC_34016; W3 ruled ENGINE",
+  "run": "34016",
+  "say": "luna keystone card without RESPONSE line cures; luna #3 (skipped) stays UNCURED",
+  "edits": [],
+  "checks": [
+   {
+    "node": "Panel Cure Check",
+    "rule": "K-RUL",
+    "seat": "luna",
+    "item": "^keystone$",
+    "has": "cure_status",
+    "field": "cure_status",
+    "expect": {
+     "eq": "CURED"
+    }
+   },
+   {
+    "node": "Panel Cure Check",
+    "rule": "K-W",
+    "seat": "luna",
+    "item": "CHALLENGER DR3 LINK 3 #3",
+    "has": "cure_status",
+    "field": "cure_status",
+    "expect": {
+     "eq": "UNCURED"
+    }
+   }
+  ]
+ },
+ {
+  "id": "QUOTE-34016-terra",
+  "by": "W2 (probe_FUM7_w2 base edit), ported by W1",
+  "wall": "Wall 3609",
+  "run": "34016",
+  "say": "terra D3 #3 answered NOT HELD without quoting the flagged sentence: not cured (NO QUOTE); every other terra item reads as before",
+  "edits": [
+   {
+    "find": "\"I grant that the verbs elsewhere carry power and presence\" grants their use elsewhere",
+    "replace": "the grant concerns other uses of the verbs",
+    "where": "I grant that the verbs elsewhere carry power and presence"
+   }
+  ],
+  "targets": {
+   "items": []
+  },
+  "checks": [
+   {
+    "node": "Panel Cure Check",
+    "judge": "terra",
+    "item": "^DEFENDER CR2 D3 #3$",
+    "has": "cure_status",
+    "field": "cure_status",
+    "expect": {
+     "re": "^UNCURED$"
+    }
+   }
+  ]
+ }
+]
