@@ -24,5 +24,34 @@
     }
    }
   ]
+ },
+ {
+  "id": "XK-B-34016-terra-W1",
+  "by": "W2",
+  "wall": "W1 grade 3661 (pkgXK/w1_grade/probe_XK_w1b.cjs)",
+  "run": "34016",
+  "say": "a STATEMENT naming D3 #3 under another rule (K-S3), written after D3 #3's own K-W STATEMENT: the reader keeps the item's own statement, as live; nothing may change against live (targets empty)",
+  "edits": [
+   {
+    "find": "(\\\\nSTATEMENT: K-W DEFENDER CR2 D3 #3 \\|.*?)(?=\\\\n)",
+    "replace": "$1\\nSTATEMENT: K-S3 DEFENDER CR2 D3 #3 | TOUCHES NO LINK: WRONGLINE marker text.",
+    "where": "STATEMENT: K-W DEFENDER CR2 D3 #3 | NOT HELD"
+   }
+  ],
+  "targets": {
+   "items": []
+  },
+  "checks": [
+   {
+    "node": "Panel Cure Check",
+    "judge": "terra",
+    "item": "^DEFENDER CR2 D3 #3$",
+    "has": "cure_status",
+    "field": "cure_status",
+    "expect": {
+     "eq": "CURED"
+    }
+   }
+  ]
  }
 ]

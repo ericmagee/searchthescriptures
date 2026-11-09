@@ -1,4 +1,4 @@
-gate/replay: base pkgLIB/strip_RPN, cand pkgLIB/strip_XK, fetch-back fetchback_live_s79.json, 30 library nodes, 47 saved runs, 11 near-miss cases, time limit 60000 ms per node run
+gate/replay: base pkgLIB/strip_RPN, cand pkgLIB/strip_XK, fetch-back fetchback_live_s79.json, 30 library nodes, 47 saved runs, 12 near-miss cases, time limit 60000 ms per node run
 OK   case w1_cases.json KRC-A-33506:  [Cure Check K-RUL  status = CURED]: cand CURED; base CURED
 OK   case w1_cases.json KRC-A-33506:  [Cure Check K-RUL  why ~/valid ruling card/]: cand a valid ruling card for keystone; base a valid ruling card for keystone
 OK   case w1_cases.json KRC-B-33506:  [Cure Check K-RUL  status = UNCURED]: cand UNCURED | UNCURED; base UNCURED | UNCURED
@@ -16,5 +16,6 @@ OK   case w1_cases.json KRC-34016-luna:  [Panel Cure Check K-W CHALLENGER DR3 LI
 OK   case w1_cases.json QUOTE-34016-terra:  [Panel Cure Check  ^DEFENDER CR2 D3 #3$ cure_status ~/^UNCURED$/]: cand UNCURED; base UNCURED
    info case w2_cases.json XK-A-34016-terra: 36 changed item rows or text lines (the case sets no targets, so its checks decide)
 OK   case w2_cases.json XK-A-34016-terra:  [Panel Cure Check  ^DEFENDER CR2 D2 #2$ cure_status = CURED]: cand CURED; base UNCURED
-node runs 842, byte-equal or same error 839, target item changes 0, near-miss checks passed 16
+OK   case w2_cases.json XK-B-34016-terra-W1:  [Panel Cure Check  ^DEFENDER CR2 D3 #3$ cure_status = CURED]: cand CURED; base CURED
+node runs 862, byte-equal or same error 859, target item changes 0, near-miss checks passed 17
 GATE PASS

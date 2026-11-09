@@ -32,5 +32,6 @@ Proof: probe_XKB.txt (11 OK); test_XKB_lib.txt (replay stage A vs stage B).
 ## Shared gate (s79, required)
 - Stage A: `node gate/replay.cjs --base pkgLIB/strip_RPN --cand pkgLIB/strip_XK --out pkgXK/gate_XK.txt`: GATE PASS, 0 target item changes, 16 near-miss checks.
 - Stage A+B: `node gate/replay.cjs --base pkgLIB/strip_RPN --cand pkgLIB/strip_XKB --targets pkgXK/targets_XKB.json --out pkgXK/gate_XKB.txt`: GATE PASS. Targets allow only the response_format lines, the ANSWER FORMAT note lines, and prompt_sent on item rows.
+- Rev 2 (W1 3661): a matching line that names no item key under its own rule ranks after every line that names one (xkPick). Gate case XK-B-34016-terra-W1 (W1 probe line) fails on rev 1, passes on rev 2.
 - New near-miss case gate/cases/w2_cases.json XK-A-34016-terra: a two-item line just before terra's D2 #2 line. Live s79 gives UNCURED (check fails on live); pkgXK gives CURED.
 - Pack for W4: `node gate/pack.cjs pkgLIB/strip_XKB pkgLIB_XK` (after the check calls; rebuild strip_XKB with XK_JSON_MODELS first if a model fails).
