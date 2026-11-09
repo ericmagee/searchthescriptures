@@ -24,6 +24,14 @@ Build rebuilt, stubs ok.
   B. RESPONSE K-RUL lines removed and card heads broken: UNCURED both.
   C. Reply unchanged: same result both.
 
-## Not yet tested
+## Earlier note (superseded below)
 Luna's own 34016 reply: its run inputs are not saved yet (W2 asked W4 at Wall 3548). The card passes
 only if its NAMED BY quotes stand in the rounds; luna quoted [CR3] Matthew 1:20 and 1:18.
+
+## Luna's own run 34016 (inputs saved by W4 since)
+node pkgKRC/probe_KRC_34016.cjs (output probe_KRC_34016.txt). Panel Cure Check, base vs patched:
+- luna K-RUL keystone: UNCURED "no written response" -> CURED "a valid ruling card for keystone". Its NAMED BY quotes stand in the rounds.
+- luna K-W CHALLENGER DR3 LINK 3 #3: UNCURED "no written response" both. That is the true skipped item; KRC does not touch it.
+- every other K-W and K-RUL row, for every seat: the same.
+Alternate Merge Seat and Alternate Merge 1 replay from the saved Panel Cure Check output, so they show no change here; live, they take the patched rows.
+Effect on 34016: luna would have had 1 uncured item, not 2, and would still have been removed for the skipped item.
