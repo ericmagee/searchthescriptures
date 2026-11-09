@@ -8,14 +8,14 @@ Change: the pkgKBL lb.strong line in every lbFoot. The meaning's first letter is
 A capital is accepted only as a title-case word ([A-Z][a-z]), never a layer tag or marker (L1, LINK 3, NONE, None, Link, Layer) or a language/source label (Greek, Hebrew, Aramaic, Strong's): rev 2, after W2 3521 and W4 3523 found those read as L2 in rev 1.
 Nothing else changes.
 
-Base: live s74 (restacked 11-09, Wall 3519). Library strip_JGR_HAIKU equals the s74 Shared Library ee9abc8f0ef1. Non-library nodes come from fetchback_live_s74.
+Base: live s75 (restacked 11-09). Library strip_WLG equals the s75 Shared Library ed1ec6fb07c0. Non-library nodes come from fetchback_live_s75 (equal to s74 for these 12).
 - Build: `node pkgKBL/fold/build_KBF.cjs`. It writes pkgLIB/strip_KBF (30 files), pkgKBL/fold/patched (12 nodes) and plan_KBF.json (45 substitutions, all in the lb.strong line).
-- Pack: `LIB_N=30 node pkgLIB/pack.cjs pkgLIB/strip_KBF` -> pkgLIB_KBF (Shared Library ee9abc8f0ef1 -> db86ddf149c5).
-- E4 rebase: `FB=.../fetchback_live_s74.json node pkgLIB/e4_rebase.cjs pkgLIB_KBF`. Alternate Build db5f46588890 -> 7002fd44bba8, Early Alternate Build 1b52f7008e96 -> e2be05a512e0; every stub rebuilds.
-- Non-library nodes (live s74 -> fold): see plan_KBF.json. Panel Build 7075b0381165 -> bdd5fd237b6b, BIV 5d8223502977 -> 9a943420005f.
+- Pack: `LIB_N=30 node pkgLIB/pack.cjs pkgLIB/strip_KBF` -> pkgLIB_KBF (Shared Library ed1ec6fb07c0 -> 92922bdac544).
+- E4 rebase: `FB=.../fetchback_live_s75.json node pkgLIB/e4_rebase.cjs pkgLIB_KBF`. Alternate Build a4058f4d0524 -> 981c7e2f085b, Early Alternate Build 9d20eaf9deb4 -> adbeb24ddbbb; every stub rebuilds.
+- Non-library nodes (live s75 -> fold): see plan_KBF.json. Panel Build 7075b0381165 -> bdd5fd237b6b, BIV 5d8223502977 -> 9a943420005f.
 
 Tests:
 - `node pkgKBL/fold/probe_KBF.cjs`: 18 OK, including the five rev 1 false L2 lines (probe_KBF.txt).
 - `node pkgKBL/fold/test_KBF_lib.cjs`: 928 node runs over 46 saved runs, 928 byte-equal, 0 K-B changes, 0 cure flips (test_KBF_lib.log). No saved judge line uses the capitalized form, so this closes a coverage gap only.
 
-JGR rev 7 (s74) and WLD rev 2e (s73) are already under this base.
+JGR rev 7 (s74), WLD rev 2e (s73) and WLG (s75) are already under this base.

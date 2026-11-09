@@ -1,8 +1,8 @@
-// pkgKBL fold replay (base live s74: strip_JGR_HAIKU + fetchback_live_s74; patched strip_KBF + pkgKBL/fold/patched). From pkgKBL replay (W1, 11-09; harness from pkgKWI/test_KWI_lib.cjs). Every saved run, every patched node (30 library + 12 with their own lbFoot):
+// pkgKBL fold replay (base live s75: strip_WLG + fetchback_live_s75; patched strip_KBF + pkgKBL/fold/patched). From pkgKBL replay (W1, 11-09; harness from pkgKWI/test_KWI_lib.cjs). Every saved run, every patched node (30 library + 12 with their own lbFoot):
 // base vs patched output; lists every changed K-B item, cure-status flip and uncured-count change for ruling. Run from wall2024/: node pkgKBL/test_KBL_lib.cjs
 const fs=require('fs');const {harness,feeder}=require('../../pkgGSL/harness.cjs');const D='/mnt/project-files/wall2024/inputs/';const BASEW='/mnt/project-files/wall2024/fetchback_live_s63.json';
-const plan=JSON.parse(fs.readFileSync('pkgKBL/fold/plan_KBF.json','utf8'));const W=JSON.parse(fs.readFileSync('/mnt/project-files/wall2024/fetchback_live_s74.json','utf8'));
-const JOBS=[...Object.keys(plan.library).map(f=>({nm:f.replace(/\.js$/,'').replace(/_/g,' '),a:fs.readFileSync('pkgLIB/strip_JGR_HAIKU/patched/'+f,'utf8'),b:fs.readFileSync('pkgLIB/strip_KBF/patched/'+f,'utf8')})),
+const plan=JSON.parse(fs.readFileSync('pkgKBL/fold/plan_KBF.json','utf8'));const W=JSON.parse(fs.readFileSync('/mnt/project-files/wall2024/fetchback_live_s75.json','utf8'));
+const JOBS=[...Object.keys(plan.library).map(f=>({nm:f.replace(/\.js$/,'').replace(/_/g,' '),a:fs.readFileSync('pkgLIB/strip_WLG/patched/'+f,'utf8'),b:fs.readFileSync('pkgLIB/strip_KBF/patched/'+f,'utf8')})),
  ...Object.entries(plan.nodes).map(([nm,p])=>({nm,a:W.nodes.find(n=>n.name===nm).parameters.jsCode,b:fs.readFileSync('pkgKBL/fold/patched/'+nm.replace(/ /g,'_')+'.js','utf8')}))];
 let ok=0,bad=0;const out=[];const log=s=>{out.push(s);console.log(s);};const T=(c,m)=>{if(c){ok++;log('OK '+m);}else{bad++;log('FAIL '+m);}};
 const fin=(RUN,nm)=>{let fe;try{fe=feeder(BASEW,nm);}catch(x){return null;}return [...fe.filter(x=>/Call/.test(x)),...fe.filter(x=>!/Call/.test(x))].find(x=>fs.existsSync(D+RUN+'_'+x.replace(/ /g,'_')+'.json'));};
