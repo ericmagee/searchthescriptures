@@ -1,0 +1,28 @@
+OK   1a 34108: six premises against the defender carry ASSUMES ([DR2]); none against the challenger ([CR3] list has no ASSUMES): DEFENDER 1, DEFENDER 2, DEFENDER 3, DEFENDER 4, DEFENDER 5, DEFENDER 6
+OK   1b premise 6: ASSUMES read whole, the answering block is [CR3] LINK 6 up to LINK... end (Footing and Answers inside): 2614 chars
+OK   1c one DeepSeek body: temperature 0, the prompt quotes the UNEXHIBITED rule, DG-61 and Commitment 3, and every premise block is given: 19732 chars
+OK   1d no DeepSeek row: skipped, says why
+OK   1e a planted ASSUMES in the [CR3] list against the challenger: premise 6, answered by [DR3] LINK 6: 3771 chars, 34 quotes
+OK   2a premise 6 fact 2: DeepSeek NOT STATED and code NOT STATED (Mary is in no quoted verse word of the block): both: {"ds":"NOT STATED","code":"NOT STATED","missing":["Mary"]}
+OK   2b the judges' grades of premise 6 read from their CONCEDED LINKS lines: luna, chatgpt (terra), sol SPARED; the single judge not read (its reply was unreadable): [{"seat":"luna","grade":"SPARED"},{"seat":"chatgpt","grade":"SPARED"},{"seat":"sol","grade":"SPARED"},{"seat":"single judge","grade":null}]
+OK   2c three E-ASSUME items (TRIAL), one per seat that spared premise 6, all on fact 2: luna, chatgpt, sol
+OK   2d fact 1 STATED with verse words found in the block: no item
+OK   2e premises 1 to 5 not answered by DeepSeek: one NO ANSWER row each, no item
+OK   2f log: one E-ASSUME row per fact with both readers' answers, then one row per judge item; record-only wording: DEFENDER PREMISE 1 FACT ?=DEEPSEEK NO ANSWER | DEFENDER PREMISE 2 FACT ?=DEEPSEEK NO ANSWER | DEFENDER PREMISE 3 FACT ?=DEEPSEEK NO ANSWER | DEFENDER PREMISE 4 FACT ?=DEEPSEEK NO ANSWER | DEFENDER PREMISE 5 FACT ?=DEEPSEEK NO ANSWER | DEFENDER PREMISE 6 FACT 1=NO ITEM (STATED) | DEFENDER PREMISE 6 FACT 2=BOTH NOT STATED | premise listed against the defender 6 FACT 2=ITEM (TRIAL) | premise listed against the defender 6 FACT 2=ITEM (TRIAL) | premise listed against the defender 6 FACT 2=ITEM (TRIAL)
+OK   2g the item from Judge Contradiction Record passes on unchanged, with acx and acx_log added
+OK   2h STATED whose verse words are not quoted in the block: STATED (verse words not found), no item
+OK   2i INFERRED ACT: no item
+OK   2j readers differ (DeepSeek NOT STATED, code POSSIBLY STATED: Joseph is quoted): no item, row READERS DIFFER
+OK   2k a failed call: every premise NO REPLY, the error recorded, no item
+OK   2l bold label and curly quotes are read
+OK   2m Build skipped: one NOT CHECKED row, item passes on
+OK   2n a seat that COUNTED premise 6 gets no item; the other two do: chatgpt, sol
+OK   2o every E-ASSUME row the probe makes passes debate_enforcer_log's seat_role, cure_status and kind checks (W3 3772 fix 1): 53 rows, 0 fail
+OK   2p a throw inside Assume Check Build: it returns a skip that says why, the debate goes on: Assume Check Build failed: Cannot read properties of null (reading 'run_token')
+OK   2q a throw inside Assume Check Record: Judge Contradiction Record's item passes on, one NOT CHECKED row in the allowed values: Assume Check Record failed: B.prem is not iterable
+OK   3a the inlined psG equals the library psGrades on every saved CONCEDED LINKS line (header form aside): 162 lines, 0 differ
+OK   4a no Assume Check Record: Alternate Merge byte-equal to base
+OK   4b with the record: the E-ASSUME rows lead enforcer_log; the rest unchanged: 459 rows
+OK   5a parent: +4 nodes, only Alternate Merge changed: Assume Check Build, Assume Check Needed?, Assume Check Call deepseek, Assume Check Record | Alternate Merge
+
+26 OK, 0 FAIL
