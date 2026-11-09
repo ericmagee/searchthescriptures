@@ -3,7 +3,8 @@
 // Base: live s74 (library strip_JGR_HAIKU = Shared Library ee9abc8f0ef1; non-library nodes from fetchback_live_s74). Run from wall2024/: node pkgKBL/fold/build_KBF.cjs
 const fs=require('fs'),cr=require('crypto');const h=s=>cr.createHash('sha256').update(s).digest('hex').slice(0,12);
 const OLD=String.raw`(?:[GH]\d{1,5}\s*[,:;]\s*["“'‘]?[a-z][^()\n]{1,80}?|["“'‘]?[a-z][^()\n\d]{1,80}?["”'’]?\s*[,;]\s*[GH]\d{1,5})`;
-const NEW=String.raw`(?:[GH]\d{1,5}\s*[,:;]\s*["“'‘]?[A-Za-z][^()\n]{1,80}?|["“'‘]?[A-Za-z][^()\n\d]{1,80}?["”'’]?\s*[,;]\s*[GH]\d{1,5})`;
+const CAP=String.raw`(?:[a-z]|(?!(?:Greek|Hebrew|Aramaic|Strong|None|Link|Layer)\b)[A-Z][a-z])`; /* rev 2 (W2 3521, W4 3523): a capital only as a title-case word, never a layer tag or marker (L1, LINK 3, NONE) or a language/source label (Greek, Hebrew, Strong's) */
+const NEW=String.raw`(?:[GH]\d{1,5}\s*[,:;]\s*["“'‘]?`+CAP+String.raw`[^()\n]{1,80}?|["“'‘]?`+CAP+String.raw`[^()\n\d]{1,80}?["”'’]?\s*[,;]\s*[GH]\d{1,5})`;
 const SRC='pkgLIB/'+(process.env.KBF_LIB_BASE||'strip_JGR_HAIKU')+'/patched/',DST='pkgLIB/strip_KBF/patched/',ND='pkgKBL/fold/patched/'; /* base library: live s74 = strip_JGR_HAIKU (Shared Library ee9abc8f0ef1) */
 const W=JSON.parse(fs.readFileSync(process.argv[2]||'/mnt/project-files/wall2024/fetchback_live_s74.json','utf8'));
 const plan={base:{library:SRC,nodes:process.argv[2]||'fetchback_live_s74.json'},library:{},nodes:{},tally:0};
