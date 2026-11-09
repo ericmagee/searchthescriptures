@@ -64,7 +64,7 @@ log('     Haiku asked: '+JSON.stringify(hb[0].json.fum&&hb[0].json.fum.asked.map
  const o=k(t,[{rule:'K-RUL',side:'JUDGE',link:'keystone'}]);T(o===t.split('\n').slice(0,6).join('\n'),'K-RUL keystone: its RESPONSE line and five-line card kept; another K-RUL item and its card dropped; "#33" is not "#3"');
  T(k(t,[{rule:'K-W',side:'CHALLENGER',link:'CHALLENGER DR3 LINK 3 #3'}])==='','"LINK 3 #3" does not match "LINK 3 #33"');}
 {const k=KEEP();
- T(k('RESPONSE: K-S3 S3 DEFENDER CR4 #1 | NOT HELD: x\nRESPONSE: K-S3 S3 DEFENDER CR4 #2 | NOT HELD: y',[{rule:'K-S3',side:'DEFENDER',link:'S3 DEFENDER CR4: #1'}])==='RESPONSE: K-S3 S3 DEFENDER CR4 #1 | NOT HELD: x','K-S3 "S3 DEFENDER CR4: #1" matches a label written without the colon, and not #2');}
+ T(k('RESPONSE: K-S3 S3 DEFENDER CR4 #1 | NOT HELD: x\nRESPONSE: K-S3 S3 DEFENDER CR4 #2 | NOT HELD: y',[{rule:'K-S3',side:'DEFENDER',link:'S3 DEFENDER CR4: #1'}])==='RESPONSE: K-S3 S3 DEFENDER CR4: #1 | NOT HELD: x','K-S3 "S3 DEFENDER CR4: #1" matches a label written without the colon (rewritten to the item\'s own label), and not #2');}
 // 10. W3 3585: with only K-RUL D2 vs C2 asked, lines of other rules on the same pair, and RETRACTED/RESTATED lines, are dropped
 {const k=KEEP();
  const t='RESPONSE: K-G4 D2 vs C2 | RETRACTED: the grade is withdrawn\nRESPONSE: K-G1 D2 vs C2 | CORRECTED COUNT 0\nRESPONSE: K-V D2 vs C2 | NOT HELD\nRETRACTED: D2 vs C2 because x\nRESTATED: D2 vs C2 -- HELD\nRESPONSE: K-RUL D2 vs C2 | card below\nRULING -- D2 vs C2 -- HELD\nCLAIM: a\nNAMED BY: "b"\nRULE: c\nAPPLIED: d\nSTATEMENT: K-RUL D2 vs C2 | as above';
@@ -93,4 +93,28 @@ log('     Haiku asked: '+JSON.stringify(hb[0].json.fum&&hb[0].json.fum.asked.map
  T(k(card('D1, D2 vs C2'),A1.concat(O1),[])===card('D1, D2 vs C2'),'a grouped card is read when every K-RUL item it names was asked');}
 // 14. end to end: the Merge carries fum_others, and Normalize run 2 uses them
 {T(Array.isArray(b1[0].json.fum.others)&&mg[0].json.fum_others!==undefined,'fum.others built ('+b1[0].json.fum.others.length+' unasked K-RUL item(s) for luna) and carried by FUM Merge');}
+// 15. W1 3608 / W2 3609: inline card for an unasked pair cut; two-item labels rewritten to the asked item only; end to end through Panel Cure Check; the guard
+{const k=KEEP();const A1=[{rule:'K-RUL',side:'JUDGE',link:'D1 vs C2',ruling:'D1 vs C2'}],O1=[{rule:'K-RUL',side:'JUDGE',link:'D2 vs C2',ruling:'D2 vs C2'}];
+ T(k('RESPONSE: K-RUL D1 vs C2 | RULING -- D1, D2 vs C2 -- BROKEN CLAIM: x NAMED BY: NONE RULE: r APPLIED: w',A1,O1)==='RESPONSE: K-RUL D1 vs C2 |','3608: inline grouped card naming the unasked D2 vs C2 is cut; the RESPONSE line keeps no card');
+ T(k('STATEMENT: K-RUL D1 vs C2 | RULING -- D1, D2 vs C2 -- BROKEN CLAIM: x NAMED BY: NONE RULE: r APPLIED: w',A1,O1)==='STATEMENT: K-RUL D1 vs C2 |','3608: the same on a STATEMENT line');
+ T(k('RESPONSE: K-RUL D1 vs C2 | RULING -- D1 vs C2 -- STANDS CLAIM: x NAMED BY: "q" RULE: r APPLIED: w',A1,O1)==='RESPONSE: K-RUL D1 vs C2 | RULING -- D1 vs C2 -- STANDS CLAIM: x NAMED BY: "q" RULE: r APPLIED: w','an inline card for the asked pair only is kept');
+ const W=[{rule:'K-W',side:'DEFENDER',link:'DEFENDER CR2 D3 #3'}];
+ T(k('RESPONSE: K-W DEFENDER CR2 D3 #3 / K-W DEFENDER CR2 D2 #2 | NOT HELD: q',W)==='RESPONSE: K-W DEFENDER CR2 D3 #3 | NOT HELD: q','3609-b: a two-item label is rewritten to the asked item only');
+ T(k('RESPONSE: K-W DEFENDER CR2 D3 #3, K-W DEFENDER CR2 D2 #2 | ACCEPTED: q',W)==='RESPONSE: K-W DEFENDER CR2 D3 #3 | ACCEPTED: q','3609-c: the same with a comma');
+ // end to end on terra 34016 with the quote taken out of D3 #3 (asked): 3b and 3c leave every other item as it was
+ const c0=JSON.parse(R('/mnt/project-files/wall2024/inputs/34016_Panel_Cure_Call_2_openrouter.json'))[0].data.main[0][0].json;const c=JSON.parse(JSON.stringify(c0));
+ c.choices[0].message.content=c.choices[0].message.content.replace('\\"I grant that the verbs elsewhere carry power and presence\\" grants their use elsewhere','the grant concerns other uses of the verbs');
+ const q1=harness('34016',{'Panel Cure Call 2 openrouter':[{json:c}]})(R(B+'Panel_Cure_Normalize_2.js'),'Panel Cure Call 2 openrouter');const MG2=JSON.parse(R('pkgFUM/plan_FUM.json')).nodes_added.find(n=>n.name==='FUM Merge Panel 2').parameters.jsCode;
+ const run=ans=>{const mg2=harness('34016',{'FUM Needed? Panel 2':q1,'FUM Call Panel 2 openrouter':[{json:{choices:[{finish_reason:'stop',message:{role:'assistant',content:ans}}]}}]})(MG2,'FUM Call Panel 2 openrouter');
+  const n=harness('34016',{'FUM Merge Panel 2':mg2,'Panel Cure Call 2 openrouter':[{json:c}]})(R(B+'Panel_Cure_Normalize_2.js'),'FUM Merge Panel 2');
+  return {n,L:harness('34016',{'Panel Cure Normalize 2':n})(R(B+'Panel_Cure_Check.js'),'Panel Cure Normalize 3')[0].json.enforcer_log.filter(r=>r.judge_model==='openai/gpt-6.1-terra')};};
+ const base=harness('34016',{'Panel Cure Normalize 2':q1})(R(B+'Panel_Cure_Check.js'),'Panel Cure Normalize 3')[0].json.enforcer_log.filter(r=>r.judge_model==='openai/gpt-6.1-terra');
+ const Q='"I grant that the verbs elsewhere carry power and presence" grants their use elsewhere.';
+ for(const [nm,ans] of [['3609-a control','RESPONSE: K-W DEFENDER CR2 D3 #3 | NOT HELD: '+Q],['3609-b','RESPONSE: K-W DEFENDER CR2 D3 #3 / K-W DEFENDER CR2 D2 #2 | NOT HELD: '+Q],['3609-c','RESPONSE: K-W DEFENDER CR2 D3 #3, K-W DEFENDER CR2 D2 #2 | ACCEPTED: the mark is right.']]){
+  const {L}=run(ans);const other=L.filter(r=>r.item!=='DEFENDER CR2 D3 #3');T(other.length===base.filter(r=>r.item!=='DEFENDER CR2 D3 #3').length&&other.every(r=>{const b=base.find(x=>x.rule===r.rule&&x.item===r.item);return b&&b.cure_status===r.cure_status&&b.cure_reason===r.cure_reason;}),nm+': every other terra item reads exactly as without the follow-up (Panel Cure Check, '+other.length+' rows); D3 #3 '+(L.find(r=>r.item==='DEFENDER CR2 D3 #3')||{}).cure_status);}
+ // guard: a follow-up that would change an unasked item is dropped whole (fumKeep bypassed by calling fumJoin with a hand-made keep)
+ const t=R(B+'Panel_Cure_Normalize_2.js');const n0=q1[0].json;const src=JSON.parse(R('/mnt/project-files/wall2024/inputs/34016_Panel_Cure_Build_2.json'))[0].data.main[0][0].json.cure;
+ const hk=harness('34016',{'Panel Cure Call 2 openrouter':[{json:c}]});const G=hk(t.replace(/\nreturn \$input\.all\(\)\.map\(\(it,i\)=>\{let src=null;[\s\S]*$/,"\nfumKeep2024=(t)=>t;return [{json:{f:fumJoin2024}}];"),'Panel Cure Call 2 openrouter')[0].json.f;
+ const bad=G(n0.reply,{ok:true,text:'RESPONSE: K-W DEFENDER CR2 D3 #3 | NOT HELD: '+Q+'\nRESPONSE: K-W DEFENDER CR2 D2 #2 | ACCEPTED: x'},[{rule:'K-W',side:'DEFENDER',link:'DEFENDER CR2 D3 #3'}],[],src);
+ T(bad.text===n0.reply.text&&bad.fum&&bad.fum.ok===false&&/unasked/.test(bad.fum.why),'guard: with the line filter switched off, a follow-up that would change the unasked D2 #2 is dropped whole ('+(bad.fum&&bad.fum.why||'kept '+(bad.fum&&bad.fum.kept))+')');}
 log('TOTAL '+ok+' OK, '+bad+' FAIL');fs.writeFileSync('pkgFUM/test_FUM.txt',out.join('\n')+'\n');

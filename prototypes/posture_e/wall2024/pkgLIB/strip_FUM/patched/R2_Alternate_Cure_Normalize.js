@@ -1661,12 +1661,20 @@ function fumKeep2024(text,items,others){const T=String(text==null?'':text).split
  for(const raw of T){const l=N(raw).trim();
   const r=l.match(RUL);if(r){card=(KR.length>0&&asked(String(r[1]).split(/\s+(?:--|—|–)\s+/)[0]||''))?8:0;if(card)out.push(raw);continue;} /* pkgFUM rev 4: a card is read only when its RULING line names an asked K-RUL item */
   if(card){card--;const f=l.match(FLD);if(f){out.push(raw);continue;}} /* pkgFUM rev 5 (W3 3598, W1 3599): the field lines within the 8 lines after an asked RULING line, the window krulCards reads; other lines there are not card lines */
-  const U=l.toUpperCase().replace(/\s+/g,' ');const m=U.match(/^(RESPONSE|STATEMENT)\s*:\s*([^|]*)\|/);if(!m)continue;const lab=m[2].replace(/:/g,' ').replace(/\s+/g,' ').trim();if(K.some(z=>z.re.test(lab)))out.push(raw);}
+  const U=l.toUpperCase().replace(/\s+/g,' ');const m=U.match(/^(RESPONSE|STATEMENT)\s*:\s*([^|]*)\|/);if(!m)continue;const lab=m[2].replace(/:/g,' ').replace(/\s+/g,' ').trim();const z=K.find(z=>z.re.test(lab));if(!z)continue;
+  /* pkgFUM rev 7 (W1 3608, W2 3609): the kept line is rewritten to the asked item's own label, so its label names nothing else; an inline card after the pipe is cut unless its target passes asked() */
+  let tx=l.slice(l.indexOf('|')+1).trim();const ir=tx.match(/\bRULING\s*(?:--|\u2014|\u2013|:)\s*(.*)$/i);if(ir&&!(KR.length>0&&asked(String(ir[1]).split(/\s+(?:--|\u2014|\u2013)\s+/)[0]||'')))tx=tx.slice(0,ir.index).trim();
+  out.push((m[1]+': '+z.x.rule+' '+(z.x.rule==='K-G3'?(z.x.side||'')+' STANDING':String(z.x.link))+' | '+tx).trim());}
  return out.join('\n');}
 /* pkgFUM: the kept follow-up lines are read first, then the first reply; a failed follow-up leaves the first reply as it was. */
-function fumJoin2024(r1,r2,items,others){if(!r1||!r1.ok)return r1||r2||{ok:false,text:null,why:'no reply'};if(!r2||!r2.ok)return Object.assign({},r1,{fum:{ok:false,why:r2?String(r2.why||'no reply'):'no reply'}});
- const k=fumKeep2024(String(cureUnwrap(r2.text)),items,others);return Object.assign({},r1,{text:(k?k+'\n\n':'')+String(cureUnwrap(r1.text)),fum:{ok:true,finish:r2.finish||null,kept:k?k.split('\n').length:0}});}
+function fumJoin2024(r1,r2,items,others,src){if(!r1||!r1.ok)return r1||r2||{ok:false,text:null,why:'no reply'};if(!r2||!r2.ok)return Object.assign({},r1,{fum:{ok:false,why:r2?String(r2.why||'no reply'):'no reply'}});
+ const k=fumKeep2024(String(cureUnwrap(r2.text)),items,others);const J=Object.assign({},r1,{text:(k?k+'\n\n':'')+String(cureUnwrap(r1.text)),fum:{ok:true,finish:r2.finish||null,kept:k?k.split('\n').length:0}});
+ /* pkgFUM rev 7 guard: the whole build is read with and without the follow-up; if any item that was NOT asked reads differently, the follow-up is dropped and the first reply stands */
+ try{if(src&&Array.isArray(src.items)&&src.items.length){const A=new Set((items||[]).map(x=>x.rule+'|'+x.side+'|'+x.link));const v0=cureVerdicts(src.items,r1,src.broken,src.rounds),v1=cureVerdicts(src.items,J,src.broken,src.rounds);
+  const ch=src.items.map((x,i)=>(!A.has(x.rule+'|'+(x.side||null)+'|'+(x.link==null?null:x.link))&&(v0[i].status!==v1[i].status||String(v0[i].why)!==String(v1[i].why)))?x.rule+' '+x.link:null).filter(Boolean);
+  if(ch.length)return Object.assign({},r1,{fum:{ok:false,why:'follow-up dropped: it changed unasked item(s): '+ch.join('; ').slice(0,300)}});}}catch(e){return Object.assign({},r1,{fum:{ok:false,why:'follow-up dropped: guard error '+String(e&&e.message||e).slice(0,120)}});}
+ return J;}
 return $input.all().map((it,i)=>{let src=null;try{src=$('R2 Alternate Cure Build').itemMatching(i).json.cure;}catch(e){src=null;}
  if(!src){try{src=$('R2 Alternate Cure Build').all()[i].json.cure;}catch(e){src=null;}}
- const __fd=!!(it.json&&it.json.fum_done);const reply=__fd?fumJoin2024(it.json.fum_first,cureText(it.json.fum_call||{}),it.json.fum_items,it.json.fum_others):(it.json&&it.json.cure&&it.json.cure.skip)?{ok:false,text:null,why:it.json.cure.skip}:cureText(it.json);const __fum=__fd?null:fumAsk2024(src,reply,true); /* pkgFUM */
+ const __fd=!!(it.json&&it.json.fum_done);const reply=__fd?fumJoin2024(it.json.fum_first,cureText(it.json.fum_call||{}),it.json.fum_items,it.json.fum_others,src):(it.json&&it.json.cure&&it.json.cure.skip)?{ok:false,text:null,why:it.json.cure.skip}:cureText(it.json);const __fum=__fd?null:fumAsk2024(src,reply,true); /* pkgFUM */
  return {json:{...(__fum?{fum:__fum}:{}),cure:(c=>{if(!c||!c.body)return c;const p=enfPrompt(c.body);return p==null?c:Object.assign({},c,{body:{messages:[{role:'user',content:p}]}});})(src||(it.json&&it.json.cure)||null),reply}};  });

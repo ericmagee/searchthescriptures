@@ -1,3 +1,4 @@
+// pkgFUM rev 7 (W1 3608, W2 3609: kept lines rewritten to the asked item's own label, inline cards cut unless asked; and a guard: if reading the follow-up changes any unasked item, the follow-up is dropped).
 // pkgFUM rev 6 (W2 3605: a follow-up card is read only when its RULING target names an asked K-RUL item and no unasked K-RUL item of the build).
 // pkgFUM rev 5 (W3 3598, W1 3599: a card's field lines are read from the 8 lines after its RULING line, as krulCards reads them, in any order, across wrapped or rule lines).
 // pkgFUM rev 4 (W3 FAIL 3588: a card is kept only when its RULING line names an asked K-RUL item; blank lines inside a card skipped; a card ends at APPLIED or a RULING for another item).
@@ -45,14 +46,22 @@ function fumKeep2024(text,items,others){const T=String(text==null?'':text).split
  for(const raw of T){const l=N(raw).trim();
   const r=l.match(RUL);if(r){card=(KR.length>0&&asked(String(r[1]).split(/\s+(?:--|—|–)\s+/)[0]||''))?8:0;if(card)out.push(raw);continue;} /* pkgFUM rev 4: a card is read only when its RULING line names an asked K-RUL item */
   if(card){card--;const f=l.match(FLD);if(f){out.push(raw);continue;}} /* pkgFUM rev 5 (W3 3598, W1 3599): the field lines within the 8 lines after an asked RULING line, the window krulCards reads; other lines there are not card lines */
-  const U=l.toUpperCase().replace(/\s+/g,' ');const m=U.match(/^(RESPONSE|STATEMENT)\s*:\s*([^|]*)\|/);if(!m)continue;const lab=m[2].replace(/:/g,' ').replace(/\s+/g,' ').trim();if(K.some(z=>z.re.test(lab)))out.push(raw);}
+  const U=l.toUpperCase().replace(/\s+/g,' ');const m=U.match(/^(RESPONSE|STATEMENT)\s*:\s*([^|]*)\|/);if(!m)continue;const lab=m[2].replace(/:/g,' ').replace(/\s+/g,' ').trim();const z=K.find(z=>z.re.test(lab));if(!z)continue;
+  /* pkgFUM rev 7 (W1 3608, W2 3609): the kept line is rewritten to the asked item's own label, so its label names nothing else; an inline card after the pipe is cut unless its target passes asked() */
+  let tx=l.slice(l.indexOf('|')+1).trim();const ir=tx.match(/\bRULING\s*(?:--|\u2014|\u2013|:)\s*(.*)$/i);if(ir&&!(KR.length>0&&asked(String(ir[1]).split(/\s+(?:--|\u2014|\u2013)\s+/)[0]||'')))tx=tx.slice(0,ir.index).trim();
+  out.push((m[1]+': '+z.x.rule+' '+(z.x.rule==='K-G3'?(z.x.side||'')+' STANDING':String(z.x.link))+' | '+tx).trim());}
  return out.join('\n');}
 /* pkgFUM: the kept follow-up lines are read first, then the first reply; a failed follow-up leaves the first reply as it was. */
-function fumJoin2024(r1,r2,items,others){if(!r1||!r1.ok)return r1||r2||{ok:false,text:null,why:'no reply'};if(!r2||!r2.ok)return Object.assign({},r1,{fum:{ok:false,why:r2?String(r2.why||'no reply'):'no reply'}});
- const k=fumKeep2024(String(cureUnwrap(r2.text)),items,others);return Object.assign({},r1,{text:(k?k+'\n\n':'')+String(cureUnwrap(r1.text)),fum:{ok:true,finish:r2.finish||null,kept:k?k.split('\n').length:0}});}
+function fumJoin2024(r1,r2,items,others,src){if(!r1||!r1.ok)return r1||r2||{ok:false,text:null,why:'no reply'};if(!r2||!r2.ok)return Object.assign({},r1,{fum:{ok:false,why:r2?String(r2.why||'no reply'):'no reply'}});
+ const k=fumKeep2024(String(cureUnwrap(r2.text)),items,others);const J=Object.assign({},r1,{text:(k?k+'\n\n':'')+String(cureUnwrap(r1.text)),fum:{ok:true,finish:r2.finish||null,kept:k?k.split('\n').length:0}});
+ /* pkgFUM rev 7 guard: the whole build is read with and without the follow-up; if any item that was NOT asked reads differently, the follow-up is dropped and the first reply stands */
+ try{if(src&&Array.isArray(src.items)&&src.items.length){const A=new Set((items||[]).map(x=>x.rule+'|'+x.side+'|'+x.link));const v0=cureVerdicts(src.items,r1,src.broken,src.rounds),v1=cureVerdicts(src.items,J,src.broken,src.rounds);
+  const ch=src.items.map((x,i)=>(!A.has(x.rule+'|'+(x.side||null)+'|'+(x.link==null?null:x.link))&&(v0[i].status!==v1[i].status||String(v0[i].why)!==String(v1[i].why)))?x.rule+' '+x.link:null).filter(Boolean);
+  if(ch.length)return Object.assign({},r1,{fum:{ok:false,why:'follow-up dropped: it changed unasked item(s): '+ch.join('; ').slice(0,300)}});}}catch(e){return Object.assign({},r1,{fum:{ok:false,why:'follow-up dropped: guard error '+String(e&&e.message||e).slice(0,120)}});}
+ return J;}
 `;
 const T0=' const reply=(it.json&&it.json.cure&&it.json.cure.skip)?{ok:false,text:null,why:it.json.cure.skip}:cureText(it.json);\n return {json:{cure:';
-const T1=(or)=>' const __fd=!!(it.json&&it.json.fum_done);const reply=__fd?fumJoin2024(it.json.fum_first,cureText(it.json.fum_call||{}),it.json.fum_items,it.json.fum_others):(it.json&&it.json.cure&&it.json.cure.skip)?{ok:false,text:null,why:it.json.cure.skip}:cureText(it.json);const __fum=__fd?null:fumAsk2024(src,reply,'+or+'); /* pkgFUM */\n return {json:{...(__fum?{fum:__fum}:{}),cure:';
+const T1=(or)=>' const __fd=!!(it.json&&it.json.fum_done);const reply=__fd?fumJoin2024(it.json.fum_first,cureText(it.json.fum_call||{}),it.json.fum_items,it.json.fum_others,src):(it.json&&it.json.cure&&it.json.cure.skip)?{ok:false,text:null,why:it.json.cure.skip}:cureText(it.json);const __fum=__fd?null:fumAsk2024(src,reply,'+or+'); /* pkgFUM */\n return {json:{...(__fum?{fum:__fum}:{}),cure:';
 const sub=(s,a,b,f)=>{const n=s.split(a).length-1;if(n!==1)throw new Error(f+': '+n+' hits for '+a.slice(0,60));return s.split(a).join(b);};
 fs.rmSync(OUT,{recursive:true,force:true});fs.mkdirSync(OUT+'/patched',{recursive:true});const plan={base:BASE,library:{},nodes_added:[],connections:{}};
 for(const f of fs.readdirSync(BASE+'/patched').filter(f=>f.endsWith('.js')).sort()){const s0=fs.readFileSync(BASE+'/patched/'+f,'utf8');let s=s0;

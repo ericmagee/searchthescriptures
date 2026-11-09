@@ -35,7 +35,7 @@ OK   case B: only the 27621 line is kept from the follow-up
 OK   case B: D2 #2 keeps CURED, 27621 CURED, summary and bodies equal to the clean follow-up
 OK   K-RUL keystone: its RESPONSE line and five-line card kept; another K-RUL item and its card dropped; "#33" is not "#3"
 OK   "LINK 3 #3" does not match "LINK 3 #33"
-OK   K-S3 "S3 DEFENDER CR4: #1" matches a label written without the colon, and not #2
+OK   K-S3 "S3 DEFENDER CR4: #1" matches a label written without the colon (rewritten to the item's own label), and not #2
 OK   K-RUL D2 vs C2 asked: K-G4, K-G1, K-V lines on the same pair and RETRACTED/RESTATED dropped; its RESPONSE, card and STATEMENT kept
 OK   a label without the item's rule is not read
 OK   3588-1: a blank line between the RESPONSE line and the card: the card is kept
@@ -52,4 +52,13 @@ OK   3605-b: asked D3 vs C1, card "keystone D3 vs C1" also names the unasked key
 OK   3605-c: a card naming only the asked pair is read
 OK   a grouped card is read when every K-RUL item it names was asked
 OK   fum.others built (1 unasked K-RUL item(s) for luna) and carried by FUM Merge
-TOTAL 36 OK, 0 FAIL
+OK   3608: inline grouped card naming the unasked D2 vs C2 is cut; the RESPONSE line keeps no card
+OK   3608: the same on a STATEMENT line
+OK   an inline card for the asked pair only is kept
+OK   3609-b: a two-item label is rewritten to the asked item only
+OK   3609-c: the same with a comma
+OK   3609-a control: every other terra item reads exactly as without the follow-up (Panel Cure Check, 13 rows); D3 #3 CURED
+OK   3609-b: every other terra item reads exactly as without the follow-up (Panel Cure Check, 13 rows); D3 #3 CURED
+OK   3609-c: every other terra item reads exactly as without the follow-up (Panel Cure Check, 13 rows); D3 #3 UNCURED
+OK   guard: with the line filter switched off, a follow-up that would change the unasked D2 #2 is dropped whole (follow-up dropped: it changed unasked item(s): K-W DEFENDER CR2 D2 #2)
+TOTAL 45 OK, 0 FAIL
