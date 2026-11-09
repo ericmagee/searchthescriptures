@@ -13,8 +13,8 @@
  "library": {
   "file": "Shared_Library.js",
   "lines": 2420,
-  "json_sha": "4abad408bf437275",
-  "bytes": 461558
+  "json_sha": "9832266148907d58",
+  "bytes": 461670
  },
  "nodes": [
   {
@@ -55,9 +55,9 @@
    "file": "Alternate_Build.js",
    "name": "Alternate Build",
    "src": "/home/claude/searchthescriptures/prototypes/posture_e/wall2024/pkgLIB/strip_JGR_MIMO/patched/Alternate_Build.js",
-   "base_sha": "198046fb10528fad",
-   "base_bytes": 315198,
-   "stub_sha": "6b21475cd97674e6",
+   "base_sha": "a0d9ca64368586ff",
+   "base_bytes": 315308,
+   "stub_sha": "dc4babd1740cbd0a",
    "stub_bytes": 2458,
    "refs": [
     "Accept Final",
@@ -494,9 +494,9 @@
    "file": "R2_Alternate_Build.js",
    "name": "R2 Alternate Build",
    "src": "/home/claude/searchthescriptures/prototypes/posture_e/wall2024/pkgLIB/strip_JGR_MIMO/patched/R2_Alternate_Build.js",
-   "base_sha": "1aa395cc3eaba320",
-   "base_bytes": 315575,
-   "stub_sha": "3178ba8c9f4d403e",
+   "base_sha": "b6a3d496bb31d294",
+   "base_bytes": 315685,
+   "stub_sha": "1fed6b6b118557c0",
    "stub_bytes": 2854,
    "refs": [
     "Accept Final",
@@ -636,6 +636,6 @@
    "own_lines": 3
   }
  ],
- "bytes_before": 9213645,
- "bytes_after": 602552
+ "bytes_before": 9213865,
+ "bytes_after": 602664
 }

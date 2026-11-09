@@ -18,18 +18,18 @@ OK 33261 [saved] Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter"
 OK 33261 [saved] Accept Build asks ["chatgpt","sol","luna","mimo"]
 OK 33261 [mimo debates] (mimo v opus) panel ["chatgpt","sol","luna"] single chatgpt reserve null alt []
 OK 33261 [mimo debates] Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter","luna=openai/gpt-6-luna/openrouter"] reserve null
-OK 33276 [saved] Init Seats refuses, as live does: ORACLE_DEBATE_V1 Init refused: topic missing or empty. run_token=ODV1-33276-yy0mv6bm
+OK 33276 [saved] Init Seats refuses, as live does: ORACLE_DEBATE_V1 Init refused: topic missing or empty. run_token=ODV1-33276-xpi2c4mv
 OK 33276 [mimo debates]: input has no seats (live refuses it too), skipped
-OK 33289 [saved] Init Seats refuses, as live does: ORACLE_DEBATE_V1 Init refused: topic missing or empty. run_token=ODV1-33289-etxmx0ny
+OK 33289 [saved] Init Seats refuses, as live does: ORACLE_DEBATE_V1 Init refused: topic missing or empty. run_token=ODV1-33289-be9770cb
 OK 33289 [mimo debates]: input has no seats (live refuses it too), skipped
 OK 33299 [saved] (claude v opus) panel ["chatgpt","sol","luna"] single chatgpt reserve mimo alt []
 OK 33299 [saved] Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter","luna=openai/gpt-6-luna/openrouter"] reserve "mimo"
 OK 33299 [saved] Accept Build asks ["chatgpt","sol","luna","mimo"]
 OK 33299 [mimo debates] (mimo v opus) panel ["chatgpt","sol","luna"] single chatgpt reserve null alt []
 OK 33299 [mimo debates] Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter","luna=openai/gpt-6-luna/openrouter"] reserve null
-OK 33311 [saved] Init Seats refuses, as live does: ORACLE_DEBATE_V1 Init refused: topic missing or empty. run_token=ODV1-33311-j9p4514w
+OK 33311 [saved] Init Seats refuses, as live does: ORACLE_DEBATE_V1 Init refused: topic missing or empty. run_token=ODV1-33311-6e20xcc7
 OK 33311 [mimo debates]: input has no seats (live refuses it too), skipped
-OK 33322 [saved] Init Seats refuses, as live does: ORACLE_DEBATE_V1 Init refused: topic missing or empty. run_token=ODV1-33322-wgpknf0l
+OK 33322 [saved] Init Seats refuses, as live does: ORACLE_DEBATE_V1 Init refused: topic missing or empty. run_token=ODV1-33322-3w7w2djm
 OK 33322 [mimo debates]: input has no seats (live refuses it too), skipped
 OK 33345 [saved] (claude v opus) panel ["chatgpt","sol","luna"] single chatgpt reserve mimo alt []
 OK 33345 [saved] Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter","luna=openai/gpt-6-luna/openrouter"] reserve "mimo"
@@ -88,7 +88,7 @@ OK 33506 [mimo debates] (mimo v opus) panel ["chatgpt","luna","sol"] single chat
 OK 33506 [mimo debates] Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","luna=openai/gpt-6-luna/openrouter","sol=openai/gpt-6.1-sol/openrouter"] reserve null
 OK 33530 [saved] (claude v opus) panel ["chatgpt","luna","mimo"] single chatgpt reserve null alt ["sol"]
 OK 33530 [saved] Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","luna=openai/gpt-6-luna/openrouter","mimo=xiaomi/mimo-v2.6-pro/openrouter"] reserve null
-OK 33530 [saved] Panel Build bodies ["openai/gpt-6.1-terra","openai/gpt-6-luna","xiaomi/mimo-v2.6-pro {\"effort\":\"low\"}"]
+OK 33530 [saved] Panel Build bodies ["openai/gpt-6.1-terra","openai/gpt-6-luna","xiaomi/mimo-v2.6-pro {\"effort\":\"medium\"}"]
 OK 33530 [saved] Accept Build asks ["chatgpt","sol","luna","mimo"]
 OK 33530 [mimo debates] (mimo v opus) panel ["chatgpt","luna","sol"] single chatgpt reserve null alt []
 OK 33530 [mimo debates] Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","luna=openai/gpt-6-luna/openrouter","sol=openai/gpt-6.1-sol/openrouter"] reserve null
@@ -155,21 +155,21 @@ OK 33798 [mimo debates] (mimo v opus) panel ["chatgpt","luna","sol"] single chat
 OK 33798 [mimo debates] Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","luna=openai/gpt-6-luna/openrouter","sol=openai/gpt-6.1-sol/openrouter"] reserve null
 OK 33815 [saved] (claude v opus) panel ["luna","mimo","chatgpt"] single chatgpt reserve null alt ["sol"]
 OK 33815 [saved] Resolve Seats judges ["luna=openai/gpt-6-luna/openrouter","mimo=xiaomi/mimo-v2.6-pro/openrouter","chatgpt=openai/gpt-6.1-terra/openrouter"] reserve null
-OK 33815 [saved] Panel Build bodies ["openai/gpt-6-luna","xiaomi/mimo-v2.6-pro {\"effort\":\"low\"}","openai/gpt-6.1-terra"]
+OK 33815 [saved] Panel Build bodies ["openai/gpt-6-luna","xiaomi/mimo-v2.6-pro {\"effort\":\"medium\"}","openai/gpt-6.1-terra"]
 OK 33815 [saved] Accept Build asks ["chatgpt","sol","luna","mimo"]
 OK 33815 [mimo debates] (mimo v opus) panel ["luna","chatgpt","sol"] single chatgpt reserve null alt []
 OK 33815 [mimo debates] Resolve Seats judges ["luna=openai/gpt-6-luna/openrouter","chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter"] reserve null
 OK 33815 [mimo debates] Panel Build bodies ["openai/gpt-6-luna","openai/gpt-6.1-terra","openai/gpt-6.1-sol"]
 OK 33828 [saved] (claude v opus) panel ["luna","mimo","chatgpt"] single chatgpt reserve null alt ["sol"]
 OK 33828 [saved] Resolve Seats judges ["luna=openai/gpt-6-luna/openrouter","mimo=xiaomi/mimo-v2.6-pro/openrouter","chatgpt=openai/gpt-6.1-terra/openrouter"] reserve null
-OK 33828 [saved] Panel Build bodies ["openai/gpt-6-luna","xiaomi/mimo-v2.6-pro {\"effort\":\"low\"}","openai/gpt-6.1-terra"]
+OK 33828 [saved] Panel Build bodies ["openai/gpt-6-luna","xiaomi/mimo-v2.6-pro {\"effort\":\"medium\"}","openai/gpt-6.1-terra"]
 OK 33828 [saved] Accept Build asks ["chatgpt","sol","luna","mimo"]
 OK 33828 [mimo debates] (mimo v opus) panel ["luna","chatgpt","sol"] single chatgpt reserve null alt []
 OK 33828 [mimo debates] Resolve Seats judges ["luna=openai/gpt-6-luna/openrouter","chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter"] reserve null
 OK 33828 [mimo debates] Panel Build bodies ["openai/gpt-6-luna","openai/gpt-6.1-terra","openai/gpt-6.1-sol"]
 OK 33846 [saved] (claude v opus) panel ["luna","mimo","chatgpt"] single chatgpt reserve null alt ["sol"]
 OK 33846 [saved] Resolve Seats judges ["luna=openai/gpt-6-luna/openrouter","mimo=xiaomi/mimo-v2.6-pro/openrouter","chatgpt=openai/gpt-6.1-terra/openrouter"] reserve null
-OK 33846 [saved] Panel Build bodies ["openai/gpt-6-luna","xiaomi/mimo-v2.6-pro {\"effort\":\"low\"}","openai/gpt-6.1-terra"]
+OK 33846 [saved] Panel Build bodies ["openai/gpt-6-luna","xiaomi/mimo-v2.6-pro {\"effort\":\"medium\"}","openai/gpt-6.1-terra"]
 OK 33846 [saved] Accept Build asks ["chatgpt","sol","luna","mimo"]
 OK 33846 [mimo debates] (mimo v opus) panel ["luna","chatgpt","sol"] single chatgpt reserve null alt []
 OK 33846 [mimo debates] Resolve Seats judges ["luna=openai/gpt-6-luna/openrouter","chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter"] reserve null
@@ -177,5 +177,8 @@ OK 33846 [mimo debates] Panel Build bodies ["openai/gpt-6-luna","openai/gpt-6.1-
 OK Build Synthesis: family map knows luna; nothing else changed
 OK Build Independent Verdict: family map knows luna; nothing else changed
 OK Build Diagnostic Prompt: family map knows luna; nothing else changed
+OK library Alternate_Build.js: mimo max tokens and medium effort
+OK library R2_Alternate_Build.js: mimo max tokens and medium effort
+OK Accept Build: mimo max tokens and medium effort
 variants where luna sits on the panel: 64
-TOTAL 179 OK, 0 FAIL
+TOTAL 182 OK, 0 FAIL

@@ -12,7 +12,7 @@ const FAM="qwen:'openrouter',sol:'openrouter'}";const FAM2="qwen:'openrouter',so
 // every judge body builder on the panel/reserve/posture/alternate path sends qwen/qwen3.8-flash reasoning {effort:'low'} unless the body sets one.
 const ORC4="const __orc=(b,fam,model,key)=>{if(fam!=='openrouter'||!b||!Array.isArray(b.messages))return b;const o={...b,session_id:String(key).slice(0,128)};";
 const QFR="if(!o.reasoning&&/^qwen\\/qwen3\\.8-flash$/.test(String(model)))o.reasoning={effort:'low'}; /* pkgJGR (pkgPNL3 rule, qwen_flash only): the flash judge leaves room for the verdict (33530) */";
-const QFR_M="if(!o.reasoning&&/^xiaomi\\/mimo-v2\\.6-pro$/.test(String(model)))o.reasoning={effort:'low'}; /* pkgJGR rev 3 (pkgPNL3 rule, mimo only): mimo spent its whole 65,536-token limit as a reserve judge (32471, 32482); low effort leaves room for the verdict */";
+const QFR_M="if(/^xiaomi\\/mimo-v2\\.6-pro$/.test(String(model))){o.max_tokens=131072;if(!o.reasoning)o.reasoning={effort:'medium'};} /* pkgJGR rev 5 (operator 07:46Z 11-09: \"use max tokens for mimo and use medium effort\"): mimo gets its maximum output, 131072 (Xiaomi, OpenRouter endpoints list 11-02), and medium effort; low effort still spent all 65,536 tokens (W4 3469) */";
 const ORC3="const __orc=(b,model,key)=>{if(!b||!Array.isArray(b.messages))return b;return {...b,session_id:String(key).slice(0,128)};};";
 const ORC3N="const __orc=(b,model,key)=>{if(!b||!Array.isArray(b.messages))return b;const o={...b,session_id:String(key).slice(0,128)};"+QFR+"return o;};";
 const FILL=MIMO&&process.env.JGR_FILL==='luna'; /* pkgJGR rev 4 (operator 07:27Z 11-09 "add luna 6.1 as a judge"): panel terra, sol, luna; mimo the alternate */

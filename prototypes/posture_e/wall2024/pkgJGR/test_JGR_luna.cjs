@@ -1,7 +1,7 @@
 // pkgJGR rev 4 test (operator 07:14Z "we mimo as an alternate", 07:27Z "add luna 6.1 as a judge"). Run from wall2024/: node pkgJGR/test_JGR_luna.cjs
 // Base live s71 vs pkgJGR/luna/patched. Every saved run with Init Seats input, twice: as saved, and with the defender engine set to mimo.
 //  As saved: panel chatgpt, sol, luna; mimo the reserve (the alternate). mimo debating: panel chatgpt, sol, luna, no reserve.
-//  Resolve Seats: judges as the panel, luna = openai/gpt-6-luna on openrouter. Panel Build (runs 33530 and >= 33800): mimo body effort low;
+//  Resolve Seats: judges as the panel, luna = openai/gpt-6-luna on openrouter. Panel Build (runs 33530 and >= 33800): mimo body max_tokens 131072 and effort medium (operator 07:46Z);
 //  luna, terra, sol bodies carry no reasoning. Accept Build asks chatgpt, sol, mimo, luna (minus debaters).
 const fs=require('fs');const {harness,feeder}=require('../pkgGSL/harness.cjs');const B='/mnt/project-files/wall2024/fetchback_live_s71.json';const W=JSON.parse(fs.readFileSync(B));
 const D='/mnt/project-files/wall2024/inputs/';const has=(R,n)=>fs.existsSync(D+R+'_'+n.replace(/ /g,'_')+'.json');const fin=(R,n)=>feeder(B,n).find(x=>has(R,x));
@@ -30,10 +30,12 @@ for(const R of runs)for(const variant of ['saved','mimo debates']){
   T(S(r.judges.map(x=>x.seat+'='+x.api_model+'/'+x.fam).sort())===S(want.map(s=>M[s]).sort())&&((r.reserve&&r.reserve.seat)||null)===res,tag+' Resolve Seats judges '+S(r.judges.map(x=>x.seat+'='+x.api_model+'/'+x.fam))+' reserve '+S(r.reserve&&r.reserve.seat));}
  if(r&&(R>='33800'||R==='33530')&&has(R,fin(R,'Panel Build'))){let p;try{p=await Promise.resolve(harness(R,{...ov,'Init Seats':[{json:b}],'Resolve Seats':[{json:r}]})('return (async()=>{'+pat('Panel Build')+'\n})();',fin(R,'Panel Build')));}catch(e){T(false,tag+' Panel Build threw '+e.message.slice(0,140));continue;}
   const bs=bodies(p);const mm=bs.filter(z=>/^xiaomi\//.test(z.model)),ot=bs.filter(z=>!/^xiaomi\//.test(z.model));
-  T((want.includes('mimo')===mm.length>0)&&mm.every(z=>S(z.reasoning)==='{"effort":"low"}')&&ot.every(z=>!z.reasoning)&&(want.includes('luna')===ot.some(z=>z.model==='openai/gpt-6-luna')),tag+' Panel Build bodies '+S(bs.map(z=>z.model+(z.reasoning?' '+S(z.reasoning):''))));
+  T((want.includes('mimo')===mm.length>0)&&mm.every(z=>S(z.reasoning)==='{"effort":"medium"}'&&z.max_tokens===131072)&&ot.every(z=>z.max_tokens!==131072)&&ot.every(z=>!z.reasoning)&&(want.includes('luna')===ot.some(z=>z.model==='openai/gpt-6-luna')),tag+' Panel Build bodies '+S(bs.map(z=>z.model+(z.reasoning?' '+S(z.reasoning):''))));
   if(variant!=='saved'&&R==='33530'){const lb=ot.find(z=>z.model==='openai/gpt-6-luna');if(lb)fs.writeFileSync('pkgJGR/luna/check_body_luna_33530.json',JSON.stringify(lb));}}
  if(variant==='saved'&&has(R,'Accept Build')){let q;try{q=harness(R,{...ov})(pat('Accept Build'),fin(R,'Accept Build'));}catch(e){T(false,tag+' Accept Build threw '+e.message.slice(0,140));continue;}
   const asked=q.map(x=>x.json.acc&&x.json.acc.seat).filter(Boolean);
   T(S(asked)===S(['chatgpt','sol','luna','mimo'].filter(s=>deb.indexOf(s)<0)),tag+' Accept Build asks '+S(asked));}}
  for(const n of ['Build Synthesis','Build Independent Verdict','Build Diagnostic Prompt'])T(pat(n).includes("sol:'openrouter',luna:'openrouter'}")&&pat(n).length-live(n).length===18,n+': family map knows luna; nothing else changed');
+ for(const f of ['Alternate_Build.js','R2_Alternate_Build.js']){const c=fs.readFileSync('pkgLIB/strip_JGR_MIMO/patched/'+f,'utf8');T(c.includes("o.max_tokens=131072;if(!o.reasoning)o.reasoning={effort:'medium'};")&&!c.includes("effort:'low'}; /* pkgJGR rev 3"),'library '+f+': mimo max tokens and medium effort');}
+ {const c=pat('Accept Build');T(c.includes("o.max_tokens=131072;if(!o.reasoning)o.reasoning={effort:'medium'};"),'Accept Build: mimo max tokens and medium effort');}
  out.push('variants where luna sits on the panel: '+fills);out.push('TOTAL '+ok+' OK, '+bad+' FAIL');console.log(out.slice(-2).join('\n'));fs.writeFileSync('pkgJGR/luna/test_JGR_luna.txt',out.join('\n')+'\n');})();
