@@ -1,10 +1,6 @@
-# pkgFUM rev 2: one follow-up for the items a cure reply left without a countable line (W4, 11-09)
+# pkgFUM: one follow-up for the items a cure reply left without a countable line (W4, 11-09)
 
 Source: W3 grade of run 34016 (Wall 3547, countermeasure 4). Operator approval 05:15 CST "approved" (Wall 3552); extended to a missing quote, operator "yes" 05:31 CST (relayed by the coordinator).
-
-REV 2 (W1 FAIL, Wall 3581): from the follow-up only the lines of an asked item are read (fumKeep2024): its RESPONSE and STATEMENT lines labelled with the item, the five-line card under an asked K-RUL item's RESPONSE line, and a RETRACTED, RESTATED, PRESSED or SHORT line naming an asked item's own D<n> vs C<m> link. Every other line (other items, CORRECTED RESULT/COUNT/STANDING, prose) is dropped, so a follow-up cannot change an item it was not asked about. Base is now live s76 (library strip_CJR_KRC, fetchback_live_s76): Shared Library 3f7270edaa30 -> 14d8a04681a0; E4 nodes unchanged; 30/30 stubs rebuild; target 509 nodes, 11 code changes. test_FUM 20 OK (adds W1's case B: D2 #2 keeps CURED, summary and bodies equal the clean follow-up; card and label matching probes). With KRC live, luna is asked only 27621. Replay 192 Normalize runs, 185 byte-equal, 7 asks, 0 other differences.
-
-Rev 1 text follows (base s75 numbers).
 
 Before a cure reply is counted, the engine sends ONE follow-up to the same judge, in the same conversation (the cure request, the judge's own reply, then one short user turn), listing only:
 1. NO LINE: items the reply left with no line at all (the reader's "no written response", with no malformed line of its own), e.g. luna 34016 K-W CHALLENGER DR3 LINK 3 #3 (row 27621);

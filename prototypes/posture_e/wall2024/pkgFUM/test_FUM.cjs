@@ -65,4 +65,9 @@ log('     Haiku asked: '+JSON.stringify(hb[0].json.fum&&hb[0].json.fum.asked.map
  T(k(t,[{rule:'K-W',side:'CHALLENGER',link:'CHALLENGER DR3 LINK 3 #3'}])==='','"LINK 3 #3" does not match "LINK 3 #33"');}
 {const k=new Function(R(B+'Panel_Cure_Normalize_1.js').match(/function fumKey2024[\s\S]*?\n(?=\/\* pkgFUM: the kept)/)[0]+';return fumKeep2024;')();
  T(k('RESPONSE: K-S3 S3 DEFENDER CR4 #1 | NOT HELD: x\nRESPONSE: K-S3 S3 DEFENDER CR4 #2 | NOT HELD: y',[{rule:'K-S3',side:'DEFENDER',link:'S3 DEFENDER CR4: #1'}])==='RESPONSE: K-S3 S3 DEFENDER CR4 #1 | NOT HELD: x','K-S3 "S3 DEFENDER CR4: #1" matches a label written without the colon, and not #2');}
+// 10. W3 3585: with only K-RUL D2 vs C2 asked, lines of other rules on the same pair, and RETRACTED/RESTATED lines, are dropped
+{const k=new Function(R(B+'Panel_Cure_Normalize_1.js').match(/function fumKey2024[\s\S]*?\n(?=\/\* pkgFUM: the kept)/)[0]+';return fumKeep2024;')();
+ const t='RESPONSE: K-G4 D2 vs C2 | RETRACTED: the grade is withdrawn\nRESPONSE: K-G1 D2 vs C2 | CORRECTED COUNT 0\nRESPONSE: K-V D2 vs C2 | NOT HELD\nRETRACTED: D2 vs C2 because x\nRESTATED: D2 vs C2 -- HELD\nRESPONSE: K-RUL D2 vs C2 | card below\nRULING -- D2 vs C2 -- HELD\nCLAIM: a\nNAMED BY: "b"\nRULE: c\nAPPLIED: d\nSTATEMENT: K-RUL D2 vs C2 | as above';
+ const o=k(t,[{rule:'K-RUL',side:'JUDGE',link:'D2 vs C2'}]);T(o===t.split('\n').slice(5).join('\n'),'K-RUL D2 vs C2 asked: K-G4, K-G1, K-V lines on the same pair and RETRACTED/RESTATED dropped; its RESPONSE, card and STATEMENT kept');
+ T(k('RESPONSE: CHALLENGER DR3 LINK 3 #3 | NOT HELD: x',[{rule:'K-W',side:'CHALLENGER',link:'CHALLENGER DR3 LINK 3 #3'}])==='','a label without the item\'s rule is not read');}
 log('TOTAL '+ok+' OK, '+bad+' FAIL');fs.writeFileSync('pkgFUM/test_FUM.txt',out.join('\n')+'\n');

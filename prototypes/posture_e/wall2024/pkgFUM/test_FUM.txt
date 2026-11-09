@@ -36,4 +36,6 @@ OK   case B: D2 #2 keeps CURED, 27621 CURED, summary and bodies equal to the cle
 OK   K-RUL keystone: its RESPONSE line and five-line card kept; another K-RUL item and its card dropped; "#33" is not "#3"
 OK   "LINK 3 #3" does not match "LINK 3 #33"
 OK   K-S3 "S3 DEFENDER CR4: #1" matches a label written without the colon, and not #2
-TOTAL 20 OK, 0 FAIL
+OK   K-RUL D2 vs C2 asked: K-G4, K-G1, K-V lines on the same pair and RETRACTED/RESTATED dropped; its RESPONSE, card and STATEMENT kept
+OK   a label without the item's rule is not read
+TOTAL 22 OK, 0 FAIL

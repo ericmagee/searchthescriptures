@@ -1,0 +1,953 @@
+{
+ "base": "pkgLIB/strip_CJR_KRC",
+ "library": {
+  "Alt_Gate_Build.js": {
+   "base": "94465e1696e0",
+   "patched": "94465e1696e0"
+  },
+  "Alt_Gate_Record.js": {
+   "base": "923f962fd23b",
+   "patched": "923f962fd23b"
+  },
+  "Alternate_Build.js": {
+   "base": "73a58c6b15af",
+   "patched": "73a58c6b15af"
+  },
+  "Alternate_Cure_Build.js": {
+   "base": "d435adec6e4c",
+   "patched": "d435adec6e4c"
+  },
+  "Alternate_Cure_Normalize.js": {
+   "base": "699a74c919c5",
+   "patched": "f807fdd81425"
+  },
+  "Alternate_Merge_1.js": {
+   "base": "89561916c906",
+   "patched": "89561916c906"
+  },
+  "Alternate_Merge_Seat.js": {
+   "base": "8e1bf9ca3951",
+   "patched": "8e1bf9ca3951"
+  },
+  "Alternate_Payloads.js": {
+   "base": "cb2eee3c13d7",
+   "patched": "cb2eee3c13d7"
+  },
+  "Cure_Build.js": {
+   "base": "1dbc1784f3cb",
+   "patched": "1dbc1784f3cb"
+  },
+  "Cure_Check.js": {
+   "base": "9672326f3a4e",
+   "patched": "9672326f3a4e"
+  },
+  "Cure_Normalize.js": {
+   "base": "09c9b4ede227",
+   "patched": "33f7d5ebb6ac"
+  },
+  "Extract_Independent_Verdict.js": {
+   "base": "effed5dca41d",
+   "patched": "effed5dca41d"
+  },
+  "Gate_Build.js": {
+   "base": "19371efb1f09",
+   "patched": "19371efb1f09"
+  },
+  "Gate_Record.js": {
+   "base": "038e9ba52d7c",
+   "patched": "038e9ba52d7c"
+  },
+  "Panel_Cure_Build_1.js": {
+   "base": "fdfad65bbd91",
+   "patched": "fdfad65bbd91"
+  },
+  "Panel_Cure_Build_2.js": {
+   "base": "d79f87682be8",
+   "patched": "d79f87682be8"
+  },
+  "Panel_Cure_Build_3.js": {
+   "base": "b91556b7f8fe",
+   "patched": "b91556b7f8fe"
+  },
+  "Panel_Cure_Check.js": {
+   "base": "e31774a80a43",
+   "patched": "e31774a80a43"
+  },
+  "Panel_Cure_Normalize_1.js": {
+   "base": "92dfa691539b",
+   "patched": "3173fb951de1"
+  },
+  "Panel_Cure_Normalize_2.js": {
+   "base": "987155c51bcc",
+   "patched": "7f55b3e56277"
+  },
+  "Panel_Cure_Normalize_3.js": {
+   "base": "d22c1999401c",
+   "patched": "a2d519abe8e4"
+  },
+  "Panel_Payloads.js": {
+   "base": "b0edd3e1be30",
+   "patched": "b0edd3e1be30"
+  },
+  "R2_Alt_Gate_Build.js": {
+   "base": "14a220052a57",
+   "patched": "14a220052a57"
+  },
+  "R2_Alt_Gate_Record.js": {
+   "base": "0d0d06dc226e",
+   "patched": "0d0d06dc226e"
+  },
+  "R2_Alternate_Build.js": {
+   "base": "d921085b7445",
+   "patched": "d921085b7445"
+  },
+  "R2_Alternate_Cure_Build.js": {
+   "base": "666f5a67d590",
+   "patched": "666f5a67d590"
+  },
+  "R2_Alternate_Cure_Normalize.js": {
+   "base": "a84e36edebcb",
+   "patched": "70c594fe1e3e"
+  },
+  "R2_Alternate_Merge.js": {
+   "base": "2a219e201d1b",
+   "patched": "2a219e201d1b"
+  },
+  "R2_Alternate_Merge_Seat.js": {
+   "base": "1430ee48c92a",
+   "patched": "1430ee48c92a"
+  },
+  "R2_Alternate_Payloads.js": {
+   "base": "89210cb6fc9b",
+   "patched": "89210cb6fc9b"
+  }
+ },
+ "nodes_added": [
+  {
+   "id": "1dc101f5-9fc5-4b82-a245-7c93be2b2553",
+   "name": "FUM Needed? Panel 1",
+   "type": "n8n-nodes-base.if",
+   "typeVersion": 2.2,
+   "position": [
+    12372,
+    560
+   ],
+   "parameters": {
+    "conditions": {
+     "combinator": "and",
+     "conditions": [
+      {
+       "id": "fum-needed-panel-1",
+       "leftValue": "={{ !!$json.fum }}",
+       "operator": {
+        "operation": "true",
+        "singleValue": true,
+        "type": "boolean"
+       },
+       "rightValue": ""
+      }
+     ],
+     "options": {
+      "caseSensitive": true,
+      "leftValue": "",
+      "typeValidation": "loose"
+     }
+    },
+    "options": {}
+   }
+  },
+  {
+   "id": "f3e6af2c-d815-4c0f-a70e-a610754a8bcf",
+   "name": "FUM Call Panel 1 openrouter",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.3,
+   "retryOnFail": false,
+   "onError": "continueRegularOutput",
+   "position": [
+    12572,
+    560
+   ],
+   "parameters": {
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpHeaderAuth",
+    "jsonBody": "={{ (__b=>{if(!__b||typeof __b!=='object')return __b;let o=__b;const md=String(o.model||'');if(/^z-ai\\//.test(md))o=Object.assign({},o,{provider:{order:['z-ai'],allow_fallbacks:false} });if(/^(?:google|qwen|openai|anthropic)\\//.test(md)&&Array.isArray(o.messages)){let k=-1,L=0;o.messages.forEach((m,i)=>{if(m&&m.role==='user'&&typeof m.content==='string'&&m.content.length>L){L=m.content.length;k=i;} });if(k>=0)o=Object.assign({},o,{messages:o.messages.map((m,i)=>i===k?{role:m.role,content:[{type:'text',text:m.content,cache_control:{type:'ephemeral'} }]}:m)});}if(/^x-ai\\//.test(md)&&Array.isArray(o.messages)){const XR=new Map();for(const xn of [\"D1 Call openrouter\", \"C1 Call openrouter\", \"D2 Call openrouter\", \"C2 Call openrouter\", \"D3 Call openrouter\", \"C3 Call openrouter\", \"Panel Judge 2 openrouter\", \"Panel Judge 3 openrouter\", \"Synthesis Call openrouter\", \"Diagnostic Call openrouter\", \"Verdict Call openrouter\", \"Panel Judge 1 openrouter\", \"Panel Reserve openrouter\", \"Cure Call openrouter\", \"Panel Cure Call 2 openrouter\", \"Panel Cure Call 3 openrouter\", \"Alternate Call openrouter\", \"Early Alternate Reply\", \"Alternate Cure Call openrouter\", \"D4 Call openrouter\", \"C4 Call openrouter\", \"Accept Call openrouter\", \"Accept Return Call openrouter\", \"QR Ask\", \"QR Retry Ask\", \"QR Answer\", \"Send Back Call openrouter\"]){let xa=[];try{if(!$(xn).isExecuted)continue;xa=$(xn).all();}catch(xe){continue;}for(const xi of xa){const xj=(xi&&xi.json)||{};if(!/^x-ai\\//.test(String(xj.model||'')))continue;for(const xc of (xj.choices||[])){const xm=xc&&xc.message;if(xm&&typeof xm.content==='string'&&Array.isArray(xm.reasoning_details)&&xm.reasoning_details.length)XR.set(xm.content,xm.reasoning_details);} } }if(XR.size)o=Object.assign({},o,{messages:o.messages.map(m=>(m&&m.role==='assistant'&&typeof m.content==='string'&&!m.reasoning_details&&XR.has(m.content))?Object.assign({},m,{reasoning_details:XR.get(m.content)}):m)});}return o;})($json.fum.body) }}",
+    "method": "POST",
+    "options": {
+     "timeout": 900000
+    },
+    "sendBody": true,
+    "specifyBody": "json",
+    "url": "https://openrouter.ai/api/v1/chat/completions",
+    "sendHeaders": true,
+    "specifyHeaders": "keypair",
+    "headerParameters": {
+     "parameters": [
+      {
+       "name": "x-grok-conv-id",
+       "value": "={{ \"odv1-\" + $execution.id }}"
+      }
+     ]
+    }
+   },
+   "credentials": {
+    "httpHeaderAuth": {
+     "id": "3KOXDCYCjkii6i56",
+     "name": "OpenRouter"
+    }
+   }
+  },
+  {
+   "id": "87fa36d2-3c1c-447d-a105-676b2fa987d5",
+   "name": "FUM Merge Panel 1",
+   "type": "n8n-nodes-base.code",
+   "typeVersion": 2,
+   "position": [
+    12772,
+    560
+   ],
+   "parameters": {
+    "jsCode": "// pkgFUM: carries the follow-up reply and the first reply back to \"Panel Cure Normalize 1\", which joins them and asks nothing more (fum_done).\nreturn $input.all().map((it,i)=>{let p=null;try{p=$('FUM Needed? Panel 1').itemMatching(i).json;}catch(e){p=null;}if(!p){try{p=$('FUM Needed? Panel 1').all()[i].json;}catch(e){p=null;}}\n return {json:{fum_done:true,fum_asked:p&&p.fum?p.fum.asked:[],fum_first:p&&p.fum?p.fum.first:null,fum_call:it.json},pairedItem:{item:i}};});"
+   }
+  },
+  {
+   "id": "e100a855-688f-4080-a765-5fc5d4cd9a67",
+   "name": "FUM Needed? Panel 2",
+   "type": "n8n-nodes-base.if",
+   "typeVersion": 2.2,
+   "position": [
+    13172,
+    560
+   ],
+   "parameters": {
+    "conditions": {
+     "combinator": "and",
+     "conditions": [
+      {
+       "id": "fum-needed-panel-2",
+       "leftValue": "={{ !!$json.fum }}",
+       "operator": {
+        "operation": "true",
+        "singleValue": true,
+        "type": "boolean"
+       },
+       "rightValue": ""
+      }
+     ],
+     "options": {
+      "caseSensitive": true,
+      "leftValue": "",
+      "typeValidation": "loose"
+     }
+    },
+    "options": {}
+   }
+  },
+  {
+   "id": "3007b519-eddb-440f-a2e7-e976c0137a80",
+   "name": "FUM Call Panel 2 openrouter",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.3,
+   "retryOnFail": false,
+   "onError": "continueRegularOutput",
+   "position": [
+    13372,
+    560
+   ],
+   "parameters": {
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpHeaderAuth",
+    "jsonBody": "={{ (__b=>{if(!__b||typeof __b!=='object')return __b;let o=__b;const md=String(o.model||'');if(/^z-ai\\//.test(md))o=Object.assign({},o,{provider:{order:['z-ai'],allow_fallbacks:false} });if(/^(?:google|qwen|openai|anthropic)\\//.test(md)&&Array.isArray(o.messages)){let k=-1,L=0;o.messages.forEach((m,i)=>{if(m&&m.role==='user'&&typeof m.content==='string'&&m.content.length>L){L=m.content.length;k=i;} });if(k>=0)o=Object.assign({},o,{messages:o.messages.map((m,i)=>i===k?{role:m.role,content:[{type:'text',text:m.content,cache_control:{type:'ephemeral'} }]}:m)});}if(/^x-ai\\//.test(md)&&Array.isArray(o.messages)){const XR=new Map();for(const xn of [\"D1 Call openrouter\", \"C1 Call openrouter\", \"D2 Call openrouter\", \"C2 Call openrouter\", \"D3 Call openrouter\", \"C3 Call openrouter\", \"Panel Judge 2 openrouter\", \"Panel Judge 3 openrouter\", \"Synthesis Call openrouter\", \"Diagnostic Call openrouter\", \"Verdict Call openrouter\", \"Panel Judge 1 openrouter\", \"Panel Reserve openrouter\", \"Cure Call openrouter\", \"Panel Cure Call 1 openrouter\", \"Panel Cure Call 3 openrouter\", \"Alternate Call openrouter\", \"Early Alternate Reply\", \"Alternate Cure Call openrouter\", \"D4 Call openrouter\", \"C4 Call openrouter\", \"Accept Call openrouter\", \"Accept Return Call openrouter\", \"QR Ask\", \"QR Retry Ask\", \"QR Answer\", \"Send Back Call openrouter\"]){let xa=[];try{if(!$(xn).isExecuted)continue;xa=$(xn).all();}catch(xe){continue;}for(const xi of xa){const xj=(xi&&xi.json)||{};if(!/^x-ai\\//.test(String(xj.model||'')))continue;for(const xc of (xj.choices||[])){const xm=xc&&xc.message;if(xm&&typeof xm.content==='string'&&Array.isArray(xm.reasoning_details)&&xm.reasoning_details.length)XR.set(xm.content,xm.reasoning_details);} } }if(XR.size)o=Object.assign({},o,{messages:o.messages.map(m=>(m&&m.role==='assistant'&&typeof m.content==='string'&&!m.reasoning_details&&XR.has(m.content))?Object.assign({},m,{reasoning_details:XR.get(m.content)}):m)});}return o;})($json.fum.body) }}",
+    "method": "POST",
+    "options": {
+     "timeout": 900000
+    },
+    "sendBody": true,
+    "specifyBody": "json",
+    "url": "https://openrouter.ai/api/v1/chat/completions",
+    "sendHeaders": true,
+    "specifyHeaders": "keypair",
+    "headerParameters": {
+     "parameters": [
+      {
+       "name": "x-grok-conv-id",
+       "value": "={{ \"odv1-\" + $execution.id }}"
+      }
+     ]
+    }
+   },
+   "credentials": {
+    "httpHeaderAuth": {
+     "id": "3KOXDCYCjkii6i56",
+     "name": "OpenRouter"
+    }
+   }
+  },
+  {
+   "id": "fda3e5cb-2cb1-4abc-a149-7408398da070",
+   "name": "FUM Merge Panel 2",
+   "type": "n8n-nodes-base.code",
+   "typeVersion": 2,
+   "position": [
+    13572,
+    560
+   ],
+   "parameters": {
+    "jsCode": "// pkgFUM: carries the follow-up reply and the first reply back to \"Panel Cure Normalize 2\", which joins them and asks nothing more (fum_done).\nreturn $input.all().map((it,i)=>{let p=null;try{p=$('FUM Needed? Panel 2').itemMatching(i).json;}catch(e){p=null;}if(!p){try{p=$('FUM Needed? Panel 2').all()[i].json;}catch(e){p=null;}}\n return {json:{fum_done:true,fum_asked:p&&p.fum?p.fum.asked:[],fum_first:p&&p.fum?p.fum.first:null,fum_call:it.json},pairedItem:{item:i}};});"
+   }
+  },
+  {
+   "id": "cc01b6e4-7263-4dcc-a7be-fa6b500f4053",
+   "name": "FUM Needed? Panel 3",
+   "type": "n8n-nodes-base.if",
+   "typeVersion": 2.2,
+   "position": [
+    13972,
+    560
+   ],
+   "parameters": {
+    "conditions": {
+     "combinator": "and",
+     "conditions": [
+      {
+       "id": "fum-needed-panel-3",
+       "leftValue": "={{ !!$json.fum }}",
+       "operator": {
+        "operation": "true",
+        "singleValue": true,
+        "type": "boolean"
+       },
+       "rightValue": ""
+      }
+     ],
+     "options": {
+      "caseSensitive": true,
+      "leftValue": "",
+      "typeValidation": "loose"
+     }
+    },
+    "options": {}
+   }
+  },
+  {
+   "id": "88dea168-4689-4c20-a129-ac2066d78787",
+   "name": "FUM Call Panel 3 openrouter",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.3,
+   "retryOnFail": false,
+   "onError": "continueRegularOutput",
+   "position": [
+    14172,
+    560
+   ],
+   "parameters": {
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpHeaderAuth",
+    "jsonBody": "={{ (__b=>{if(!__b||typeof __b!=='object')return __b;let o=__b;const md=String(o.model||'');if(/^z-ai\\//.test(md))o=Object.assign({},o,{provider:{order:['z-ai'],allow_fallbacks:false} });if(/^(?:google|qwen|openai|anthropic)\\//.test(md)&&Array.isArray(o.messages)){let k=-1,L=0;o.messages.forEach((m,i)=>{if(m&&m.role==='user'&&typeof m.content==='string'&&m.content.length>L){L=m.content.length;k=i;} });if(k>=0)o=Object.assign({},o,{messages:o.messages.map((m,i)=>i===k?{role:m.role,content:[{type:'text',text:m.content,cache_control:{type:'ephemeral'} }]}:m)});}if(/^x-ai\\//.test(md)&&Array.isArray(o.messages)){const XR=new Map();for(const xn of [\"D1 Call openrouter\", \"C1 Call openrouter\", \"D2 Call openrouter\", \"C2 Call openrouter\", \"D3 Call openrouter\", \"C3 Call openrouter\", \"Panel Judge 2 openrouter\", \"Panel Judge 3 openrouter\", \"Synthesis Call openrouter\", \"Diagnostic Call openrouter\", \"Verdict Call openrouter\", \"Panel Judge 1 openrouter\", \"Panel Reserve openrouter\", \"Cure Call openrouter\", \"Panel Cure Call 1 openrouter\", \"Panel Cure Call 2 openrouter\", \"Alternate Call openrouter\", \"Early Alternate Reply\", \"Alternate Cure Call openrouter\", \"D4 Call openrouter\", \"C4 Call openrouter\", \"Accept Call openrouter\", \"Accept Return Call openrouter\", \"QR Ask\", \"QR Retry Ask\", \"QR Answer\", \"Send Back Call openrouter\"]){let xa=[];try{if(!$(xn).isExecuted)continue;xa=$(xn).all();}catch(xe){continue;}for(const xi of xa){const xj=(xi&&xi.json)||{};if(!/^x-ai\\//.test(String(xj.model||'')))continue;for(const xc of (xj.choices||[])){const xm=xc&&xc.message;if(xm&&typeof xm.content==='string'&&Array.isArray(xm.reasoning_details)&&xm.reasoning_details.length)XR.set(xm.content,xm.reasoning_details);} } }if(XR.size)o=Object.assign({},o,{messages:o.messages.map(m=>(m&&m.role==='assistant'&&typeof m.content==='string'&&!m.reasoning_details&&XR.has(m.content))?Object.assign({},m,{reasoning_details:XR.get(m.content)}):m)});}return o;})($json.fum.body) }}",
+    "method": "POST",
+    "options": {
+     "timeout": 900000
+    },
+    "sendBody": true,
+    "specifyBody": "json",
+    "url": "https://openrouter.ai/api/v1/chat/completions",
+    "sendHeaders": true,
+    "specifyHeaders": "keypair",
+    "headerParameters": {
+     "parameters": [
+      {
+       "name": "x-grok-conv-id",
+       "value": "={{ \"odv1-\" + $execution.id }}"
+      }
+     ]
+    }
+   },
+   "credentials": {
+    "httpHeaderAuth": {
+     "id": "3KOXDCYCjkii6i56",
+     "name": "OpenRouter"
+    }
+   }
+  },
+  {
+   "id": "7c5a35dd-e1a7-4abc-aa4b-2611f95c333f",
+   "name": "FUM Merge Panel 3",
+   "type": "n8n-nodes-base.code",
+   "typeVersion": 2,
+   "position": [
+    14372,
+    560
+   ],
+   "parameters": {
+    "jsCode": "// pkgFUM: carries the follow-up reply and the first reply back to \"Panel Cure Normalize 3\", which joins them and asks nothing more (fum_done).\nreturn $input.all().map((it,i)=>{let p=null;try{p=$('FUM Needed? Panel 3').itemMatching(i).json;}catch(e){p=null;}if(!p){try{p=$('FUM Needed? Panel 3').all()[i].json;}catch(e){p=null;}}\n return {json:{fum_done:true,fum_asked:p&&p.fum?p.fum.asked:[],fum_first:p&&p.fum?p.fum.first:null,fum_call:it.json},pairedItem:{item:i}};});"
+   }
+  },
+  {
+   "id": "31f20dd7-5af1-4c76-a4d0-69a91e4ef318",
+   "name": "FUM Needed? Alternate",
+   "type": "n8n-nodes-base.if",
+   "typeVersion": 2.2,
+   "position": [
+    12392,
+    400
+   ],
+   "parameters": {
+    "conditions": {
+     "combinator": "and",
+     "conditions": [
+      {
+       "id": "fum-needed-alternate",
+       "leftValue": "={{ !!$json.fum }}",
+       "operator": {
+        "operation": "true",
+        "singleValue": true,
+        "type": "boolean"
+       },
+       "rightValue": ""
+      }
+     ],
+     "options": {
+      "caseSensitive": true,
+      "leftValue": "",
+      "typeValidation": "loose"
+     }
+    },
+    "options": {}
+   }
+  },
+  {
+   "id": "92995174-1f9c-4f8b-a3dc-170df45632f6",
+   "name": "FUM Call Alternate openrouter",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.3,
+   "retryOnFail": false,
+   "onError": "continueRegularOutput",
+   "position": [
+    12592,
+    400
+   ],
+   "parameters": {
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpHeaderAuth",
+    "jsonBody": "={{ (__b=>{if(!__b||typeof __b!=='object')return __b;let o=__b;const md=String(o.model||'');if(/^z-ai\\//.test(md))o=Object.assign({},o,{provider:{order:['z-ai'],allow_fallbacks:false} });if(/^(?:google|qwen|openai|anthropic)\\//.test(md)&&Array.isArray(o.messages)){let k=-1,L=0;o.messages.forEach((m,i)=>{if(m&&m.role==='user'&&typeof m.content==='string'&&m.content.length>L){L=m.content.length;k=i;} });if(k>=0)o=Object.assign({},o,{messages:o.messages.map((m,i)=>i===k?{role:m.role,content:[{type:'text',text:m.content,cache_control:{type:'ephemeral'} }]}:m)});}if(/^x-ai\\//.test(md)&&Array.isArray(o.messages)){const XR=new Map();for(const xn of [\"D1 Call openrouter\", \"C1 Call openrouter\", \"D2 Call openrouter\", \"C2 Call openrouter\", \"D3 Call openrouter\", \"C3 Call openrouter\", \"Panel Judge 2 openrouter\", \"Panel Judge 3 openrouter\", \"Synthesis Call openrouter\", \"Diagnostic Call openrouter\", \"Verdict Call openrouter\", \"Panel Judge 1 openrouter\", \"Panel Reserve openrouter\", \"Cure Call openrouter\", \"Panel Cure Call 1 openrouter\", \"Panel Cure Call 2 openrouter\", \"Panel Cure Call 3 openrouter\", \"Alternate Call openrouter\", \"Early Alternate Reply\", \"D4 Call openrouter\", \"C4 Call openrouter\", \"Accept Call openrouter\", \"Accept Return Call openrouter\", \"QR Ask\", \"QR Retry Ask\", \"QR Answer\", \"Send Back Call openrouter\"]){let xa=[];try{if(!$(xn).isExecuted)continue;xa=$(xn).all();}catch(xe){continue;}for(const xi of xa){const xj=(xi&&xi.json)||{};if(!/^x-ai\\//.test(String(xj.model||'')))continue;for(const xc of (xj.choices||[])){const xm=xc&&xc.message;if(xm&&typeof xm.content==='string'&&Array.isArray(xm.reasoning_details)&&xm.reasoning_details.length)XR.set(xm.content,xm.reasoning_details);} } }if(XR.size)o=Object.assign({},o,{messages:o.messages.map(m=>(m&&m.role==='assistant'&&typeof m.content==='string'&&!m.reasoning_details&&XR.has(m.content))?Object.assign({},m,{reasoning_details:XR.get(m.content)}):m)});}return o;})($json.fum.body) }}",
+    "method": "POST",
+    "options": {
+     "timeout": 900000
+    },
+    "sendBody": true,
+    "specifyBody": "json",
+    "url": "https://openrouter.ai/api/v1/chat/completions",
+    "sendHeaders": true,
+    "specifyHeaders": "keypair",
+    "headerParameters": {
+     "parameters": [
+      {
+       "name": "x-grok-conv-id",
+       "value": "={{ \"odv1-\" + $execution.id }}"
+      }
+     ]
+    }
+   },
+   "credentials": {
+    "httpHeaderAuth": {
+     "id": "3KOXDCYCjkii6i56",
+     "name": "OpenRouter"
+    }
+   }
+  },
+  {
+   "id": "b967bce5-1d1d-4d93-a210-0d9415dab7db",
+   "name": "FUM Merge Alternate",
+   "type": "n8n-nodes-base.code",
+   "typeVersion": 2,
+   "position": [
+    12792,
+    400
+   ],
+   "parameters": {
+    "jsCode": "// pkgFUM: carries the follow-up reply and the first reply back to \"Alternate Cure Normalize\", which joins them and asks nothing more (fum_done).\nreturn $input.all().map((it,i)=>{let p=null;try{p=$('FUM Needed? Alternate').itemMatching(i).json;}catch(e){p=null;}if(!p){try{p=$('FUM Needed? Alternate').all()[i].json;}catch(e){p=null;}}\n return {json:{fum_done:true,fum_asked:p&&p.fum?p.fum.asked:[],fum_first:p&&p.fum?p.fum.first:null,fum_call:it.json},pairedItem:{item:i}};});"
+   }
+  },
+  {
+   "id": "3391ce3f-eec4-4ed1-a057-5d7d39e60962",
+   "name": "FUM Needed? R2 Alternate",
+   "type": "n8n-nodes-base.if",
+   "typeVersion": 2.2,
+   "position": [
+    12392,
+    2100
+   ],
+   "parameters": {
+    "conditions": {
+     "combinator": "and",
+     "conditions": [
+      {
+       "id": "fum-needed-r2-alternate",
+       "leftValue": "={{ !!$json.fum }}",
+       "operator": {
+        "operation": "true",
+        "singleValue": true,
+        "type": "boolean"
+       },
+       "rightValue": ""
+      }
+     ],
+     "options": {
+      "caseSensitive": true,
+      "leftValue": "",
+      "typeValidation": "loose"
+     }
+    },
+    "options": {}
+   }
+  },
+  {
+   "id": "aa50c4c2-33bb-4064-a7d9-29c115144a7d",
+   "name": "FUM Call R2 Alternate openrouter",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.3,
+   "retryOnFail": false,
+   "onError": "continueRegularOutput",
+   "position": [
+    12592,
+    2100
+   ],
+   "parameters": {
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpHeaderAuth",
+    "jsonBody": "={{ (__b=>{if(!__b||typeof __b!=='object')return __b;let o=__b;const md=String(o.model||'');if(/^z-ai\\//.test(md))o=Object.assign({},o,{provider:{order:['z-ai'],allow_fallbacks:false} });if(/^(?:google|qwen|openai|anthropic)\\//.test(md)&&Array.isArray(o.messages)){let k=-1,L=0;o.messages.forEach((m,i)=>{if(m&&m.role==='user'&&typeof m.content==='string'&&m.content.length>L){L=m.content.length;k=i;} });if(k>=0)o=Object.assign({},o,{messages:o.messages.map((m,i)=>i===k?{role:m.role,content:[{type:'text',text:m.content,cache_control:{type:'ephemeral'} }]}:m)});}if(/^x-ai\\//.test(md)&&Array.isArray(o.messages)){const XR=new Map();for(const xn of [\"D1 Call openrouter\", \"C1 Call openrouter\", \"D2 Call openrouter\", \"C2 Call openrouter\", \"D3 Call openrouter\", \"C3 Call openrouter\", \"Panel Judge 2 openrouter\", \"Panel Judge 3 openrouter\", \"Synthesis Call openrouter\", \"Diagnostic Call openrouter\", \"Verdict Call openrouter\", \"Panel Judge 1 openrouter\", \"Panel Reserve openrouter\", \"Cure Call openrouter\", \"Panel Cure Call 1 openrouter\", \"Panel Cure Call 2 openrouter\", \"Panel Cure Call 3 openrouter\", \"R2 Alternate Call openrouter\", \"D4 Call openrouter\", \"C4 Call openrouter\", \"Accept Call openrouter\", \"Accept Return Call openrouter\", \"QR Ask\", \"QR Retry Ask\", \"QR Answer\", \"Send Back Call openrouter\"]){let xa=[];try{if(!$(xn).isExecuted)continue;xa=$(xn).all();}catch(xe){continue;}for(const xi of xa){const xj=(xi&&xi.json)||{};if(!/^x-ai\\//.test(String(xj.model||'')))continue;for(const xc of (xj.choices||[])){const xm=xc&&xc.message;if(xm&&typeof xm.content==='string'&&Array.isArray(xm.reasoning_details)&&xm.reasoning_details.length)XR.set(xm.content,xm.reasoning_details);} } }if(XR.size)o=Object.assign({},o,{messages:o.messages.map(m=>(m&&m.role==='assistant'&&typeof m.content==='string'&&!m.reasoning_details&&XR.has(m.content))?Object.assign({},m,{reasoning_details:XR.get(m.content)}):m)});}return o;})($json.fum.body) }}",
+    "method": "POST",
+    "options": {
+     "timeout": 900000
+    },
+    "sendBody": true,
+    "specifyBody": "json",
+    "url": "https://openrouter.ai/api/v1/chat/completions",
+    "sendHeaders": true,
+    "specifyHeaders": "keypair",
+    "headerParameters": {
+     "parameters": [
+      {
+       "name": "x-grok-conv-id",
+       "value": "={{ \"odv1-\" + $execution.id }}"
+      }
+     ]
+    }
+   },
+   "credentials": {
+    "httpHeaderAuth": {
+     "id": "3KOXDCYCjkii6i56",
+     "name": "OpenRouter"
+    }
+   }
+  },
+  {
+   "id": "2e0f7a1a-dd47-450e-a478-fa5e89c0bee3",
+   "name": "FUM Merge R2 Alternate",
+   "type": "n8n-nodes-base.code",
+   "typeVersion": 2,
+   "position": [
+    12792,
+    2100
+   ],
+   "parameters": {
+    "jsCode": "// pkgFUM: carries the follow-up reply and the first reply back to \"R2 Alternate Cure Normalize\", which joins them and asks nothing more (fum_done).\nreturn $input.all().map((it,i)=>{let p=null;try{p=$('FUM Needed? R2 Alternate').itemMatching(i).json;}catch(e){p=null;}if(!p){try{p=$('FUM Needed? R2 Alternate').all()[i].json;}catch(e){p=null;}}\n return {json:{fum_done:true,fum_asked:p&&p.fum?p.fum.asked:[],fum_first:p&&p.fum?p.fum.first:null,fum_call:it.json},pairedItem:{item:i}};});"
+   }
+  },
+  {
+   "id": "ecd5a65e-466c-4526-a1c9-8699c019270d",
+   "name": "FUM Needed? Cure",
+   "type": "n8n-nodes-base.if",
+   "typeVersion": 2.2,
+   "position": [
+    9508,
+    560
+   ],
+   "parameters": {
+    "conditions": {
+     "combinator": "and",
+     "conditions": [
+      {
+       "id": "fum-needed-cure",
+       "leftValue": "={{ !!$json.fum }}",
+       "operator": {
+        "operation": "true",
+        "singleValue": true,
+        "type": "boolean"
+       },
+       "rightValue": ""
+      }
+     ],
+     "options": {
+      "caseSensitive": true,
+      "leftValue": "",
+      "typeValidation": "loose"
+     }
+    },
+    "options": {}
+   }
+  },
+  {
+   "id": "57ccf272-f6a5-4c5c-acdf-8bd3da2ef54c",
+   "name": "FUM Call Cure openrouter",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.3,
+   "retryOnFail": false,
+   "onError": "continueRegularOutput",
+   "position": [
+    9708,
+    560
+   ],
+   "parameters": {
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpHeaderAuth",
+    "jsonBody": "={{ (__b=>{if(!__b||typeof __b!=='object')return __b;let o=__b;const md=String(o.model||'');if(/^z-ai\\//.test(md))o=Object.assign({},o,{provider:{order:['z-ai'],allow_fallbacks:false} });if(/^(?:google|qwen|openai|anthropic)\\//.test(md)&&Array.isArray(o.messages)){let k=-1,L=0;o.messages.forEach((m,i)=>{if(m&&m.role==='user'&&typeof m.content==='string'&&m.content.length>L){L=m.content.length;k=i;} });if(k>=0)o=Object.assign({},o,{messages:o.messages.map((m,i)=>i===k?{role:m.role,content:[{type:'text',text:m.content,cache_control:{type:'ephemeral'} }]}:m)});}if(/^x-ai\\//.test(md)&&Array.isArray(o.messages)){const XR=new Map();for(const xn of [\"D1 Call openrouter\", \"C1 Call openrouter\", \"D2 Call openrouter\", \"C2 Call openrouter\", \"D3 Call openrouter\", \"C3 Call openrouter\", \"Panel Judge 2 openrouter\", \"Panel Judge 3 openrouter\", \"Synthesis Call openrouter\", \"Diagnostic Call openrouter\", \"Verdict Call openrouter\", \"Panel Judge 1 openrouter\", \"Panel Reserve openrouter\", \"Panel Cure Call 1 openrouter\", \"Panel Cure Call 2 openrouter\", \"Panel Cure Call 3 openrouter\", \"Alternate Call openrouter\", \"Early Alternate Reply\", \"Alternate Cure Call openrouter\", \"D4 Call openrouter\", \"C4 Call openrouter\", \"Accept Call openrouter\", \"Accept Return Call openrouter\", \"QR Ask\", \"QR Retry Ask\", \"QR Answer\", \"Send Back Call openrouter\"]){let xa=[];try{if(!$(xn).isExecuted)continue;xa=$(xn).all();}catch(xe){continue;}for(const xi of xa){const xj=(xi&&xi.json)||{};if(!/^x-ai\\//.test(String(xj.model||'')))continue;for(const xc of (xj.choices||[])){const xm=xc&&xc.message;if(xm&&typeof xm.content==='string'&&Array.isArray(xm.reasoning_details)&&xm.reasoning_details.length)XR.set(xm.content,xm.reasoning_details);} } }if(XR.size)o=Object.assign({},o,{messages:o.messages.map(m=>(m&&m.role==='assistant'&&typeof m.content==='string'&&!m.reasoning_details&&XR.has(m.content))?Object.assign({},m,{reasoning_details:XR.get(m.content)}):m)});}return o;})($json.fum.body) }}",
+    "method": "POST",
+    "options": {
+     "timeout": 900000
+    },
+    "sendBody": true,
+    "specifyBody": "json",
+    "url": "https://openrouter.ai/api/v1/chat/completions",
+    "sendHeaders": true,
+    "specifyHeaders": "keypair",
+    "headerParameters": {
+     "parameters": [
+      {
+       "name": "x-grok-conv-id",
+       "value": "={{ \"odv1-\" + $execution.id }}"
+      }
+     ]
+    }
+   },
+   "credentials": {
+    "httpHeaderAuth": {
+     "id": "3KOXDCYCjkii6i56",
+     "name": "OpenRouter"
+    }
+   }
+  },
+  {
+   "id": "8d6c140a-ca64-4ba9-ad7d-ac5dbb0b71a2",
+   "name": "FUM Merge Cure",
+   "type": "n8n-nodes-base.code",
+   "typeVersion": 2,
+   "position": [
+    9908,
+    560
+   ],
+   "parameters": {
+    "jsCode": "// pkgFUM: carries the follow-up reply and the first reply back to \"Cure Normalize\", which joins them and asks nothing more (fum_done).\nreturn $input.all().map((it,i)=>{let p=null;try{p=$('FUM Needed? Cure').itemMatching(i).json;}catch(e){p=null;}if(!p){try{p=$('FUM Needed? Cure').all()[i].json;}catch(e){p=null;}}\n return {json:{fum_done:true,fum_asked:p&&p.fum?p.fum.asked:[],fum_first:p&&p.fum?p.fum.first:null,fum_call:it.json},pairedItem:{item:i}};});"
+   }
+  }
+ ],
+ "connections": {
+  "Panel Cure Normalize 1": {
+   "main": [
+    [
+     {
+      "node": "FUM Needed? Panel 1",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "FUM Needed? Panel 1": {
+   "main": [
+    [
+     {
+      "node": "FUM Call Panel 1 openrouter",
+      "type": "main",
+      "index": 0
+     }
+    ],
+    [
+     {
+      "node": "Panel Cure Build 2",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "FUM Call Panel 1 openrouter": {
+   "main": [
+    [
+     {
+      "node": "FUM Merge Panel 1",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "FUM Merge Panel 1": {
+   "main": [
+    [
+     {
+      "node": "Panel Cure Normalize 1",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Panel Cure Normalize 2": {
+   "main": [
+    [
+     {
+      "node": "FUM Needed? Panel 2",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "FUM Needed? Panel 2": {
+   "main": [
+    [
+     {
+      "node": "FUM Call Panel 2 openrouter",
+      "type": "main",
+      "index": 0
+     }
+    ],
+    [
+     {
+      "node": "Panel Cure Build 3",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "FUM Call Panel 2 openrouter": {
+   "main": [
+    [
+     {
+      "node": "FUM Merge Panel 2",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "FUM Merge Panel 2": {
+   "main": [
+    [
+     {
+      "node": "Panel Cure Normalize 2",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Panel Cure Normalize 3": {
+   "main": [
+    [
+     {
+      "node": "FUM Needed? Panel 3",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "FUM Needed? Panel 3": {
+   "main": [
+    [
+     {
+      "node": "FUM Call Panel 3 openrouter",
+      "type": "main",
+      "index": 0
+     }
+    ],
+    [
+     {
+      "node": "Panel Cure Check",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "FUM Call Panel 3 openrouter": {
+   "main": [
+    [
+     {
+      "node": "FUM Merge Panel 3",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "FUM Merge Panel 3": {
+   "main": [
+    [
+     {
+      "node": "Panel Cure Normalize 3",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Alternate Cure Normalize": {
+   "main": [
+    [
+     {
+      "node": "FUM Needed? Alternate",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "FUM Needed? Alternate": {
+   "main": [
+    [
+     {
+      "node": "FUM Call Alternate openrouter",
+      "type": "main",
+      "index": 0
+     }
+    ],
+    [
+     {
+      "node": "Alternate Merge Seat",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "FUM Call Alternate openrouter": {
+   "main": [
+    [
+     {
+      "node": "FUM Merge Alternate",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "FUM Merge Alternate": {
+   "main": [
+    [
+     {
+      "node": "Alternate Cure Normalize",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "R2 Alternate Cure Normalize": {
+   "main": [
+    [
+     {
+      "node": "FUM Needed? R2 Alternate",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "FUM Needed? R2 Alternate": {
+   "main": [
+    [
+     {
+      "node": "FUM Call R2 Alternate openrouter",
+      "type": "main",
+      "index": 0
+     }
+    ],
+    [
+     {
+      "node": "R2 Alternate Merge Seat",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "FUM Call R2 Alternate openrouter": {
+   "main": [
+    [
+     {
+      "node": "FUM Merge R2 Alternate",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "FUM Merge R2 Alternate": {
+   "main": [
+    [
+     {
+      "node": "R2 Alternate Cure Normalize",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Cure Normalize": {
+   "main": [
+    [
+     {
+      "node": "FUM Needed? Cure",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "FUM Needed? Cure": {
+   "main": [
+    [
+     {
+      "node": "FUM Call Cure openrouter",
+      "type": "main",
+      "index": 0
+     }
+    ],
+    [
+     {
+      "node": "Cure Check",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "FUM Call Cure openrouter": {
+   "main": [
+    [
+     {
+      "node": "FUM Merge Cure",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "FUM Merge Cure": {
+   "main": [
+    [
+     {
+      "node": "Cure Normalize",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  }
+ },
+ "fetchback": "/mnt/project-files/wall2024/fetchback_live_s76.json",
+ "fetchback_version": "5d1c92fa-0569-4aa0-9b3b-abecdae5f2cc"
+}
