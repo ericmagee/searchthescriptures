@@ -1,0 +1,12 @@
+FAIL W1 3608: an inline card after the pipe naming the unasked D2 vs C2 is not read for D2 vs C2 (kept: "RESPONSE: K-RUL D1 vs C2 | RULING -- D1, D2 vs C2 ")
+  before follow-up: D2 #2 CURED | D3 #3 UNCURED
+  [control, D3 #3 only] kept: "RESPONSE: K-W DEFENDER CR2 D3 #3 | NOT HELD: \"I grant that the verbs elsewhere carry power"
+     D2 #2: CURED (answered: NOT HELD, with a reason that quotes the flagged sentence (pkgKW))
+OK   control, D3 #3 only: the unasked D2 #2 keeps its status and reason
+  [label "D3 #3 / K-W D2 #2"] kept: "RESPONSE: K-W DEFENDER CR2 D3 #3 / K-W DEFENDER CR2 D2 #2 | NOT HELD: \"I grant that the ve"
+     D2 #2: UNCURED (neither the RESPONSE nor the STATEMENT line says STANDS WITHOUT IT because <layer> with an)
+FAIL label "D3 #3 / K-W D2 #2": the unasked D2 #2 keeps its status and reason
+  [label "D3 #3, K-W D2 #2" with ACCEPTED] kept: "RESPONSE: K-W DEFENDER CR2 D3 #3, K-W DEFENDER CR2 D2 #2 | ACCEPTED: both withdrawals stan"
+     D2 #2: UNCURED (neither the RESPONSE nor the STATEMENT line says STANDS WITHOUT IT because <layer> with an)
+FAIL label "D3 #3, K-W D2 #2" with ACCEPTED: the unasked D2 #2 keeps its status and reason
+TOTAL 1 OK, 3 FAIL
