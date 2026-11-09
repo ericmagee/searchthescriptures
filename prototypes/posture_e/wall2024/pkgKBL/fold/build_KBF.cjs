@@ -3,8 +3,11 @@
 // Base: live s75 (library strip_WLG = Shared Library ed1ec6fb07c0; non-library nodes from fetchback_live_s75). Run from wall2024/: node pkgKBL/fold/build_KBF.cjs
 const fs=require('fs'),cr=require('crypto');const h=s=>cr.createHash('sha256').update(s).digest('hex').slice(0,12);
 const OLD=String.raw`(?:[GH]\d{1,5}\s*[,:;]\s*["“'‘]?[a-z][^()\n]{1,80}?|["“'‘]?[a-z][^()\n\d]{1,80}?["”'’]?\s*[,;]\s*[GH]\d{1,5})`;
-const CAP=String.raw`(?:[a-z]|(?!(?:Greek|Hebrew|Aramaic|Strong|None|Link|Layer)\b)[A-Z][a-z])`; /* rev 2 (W2 3521, W4 3523): a capital only as a title-case word, never a layer tag or marker (L1, LINK 3, NONE) or a language/source label (Greek, Hebrew, Strong's) */
-const NEW=String.raw`(?:[GH]\d{1,5}\s*[,:;]\s*["“'‘]?`+CAP+String.raw`[^()\n]{1,80}?|["“'‘]?`+CAP+String.raw`[^()\n\d]{1,80}?["”'’]?\s*[,;]\s*[GH]\d{1,5})`;
+/* rev 3 (W3 3535): a capital starts a meaning only as a title-case word that is not a layer tag or marker, a language, lexicon or source label, or a
+   Bible book name or abbreviation; after a Strong's number the capitalized meaning also carries no digit (no verse reference). */
+const CAPX=String.raw`(?!(?:Greek|Hebrew|Heb|Gr|Grk|Aramaic|Strong|Strongs|Thayer|Mounce|Vine|Vines|Gesenius|Brown|Lexicon|None|Link|Layer|Genesis|Exodus|Leviticus|Numbers|Deuteronomy|Joshua|Judges|Ruth|Samuel|Kings|Chronicles|Ezra|Nehemiah|Esther|Job|Psalms?|Proverbs|Ecclesiastes|Song|Isaiah|Jeremiah|Lamentations|Ezekiel|Daniel|Hosea|Joel|Amos|Obadiah|Jonah|Micah|Nahum|Habakkuk|Zephaniah|Haggai|Zechariah|Malachi|Matthew|Mark|Luke|John|Acts|Romans|Corinthians|Galatians|Ephesians|Philippians|Colossians|Thessalonians|Timothy|Titus|Philemon|Hebrews|James|Peter|Jude|Revelation|Esdras|Tobit|Judith|Wisdom|Sirach|Ecclesiasticus|Baruch|Maccabees|Susanna|Manasses|Bel|Gen|Exod?|Lev|Num|Deut|Josh|Judg|Sam|Kgs|Chr|Neh|Esth|Psa?|Prov|Eccl?|Eccles|Isa|Jer|Lam|Ezek|Dan|Hos|Obad|Mic|Nah|Hab|Zeph|Hag|Zech|Mal|Matt?|Mt|Mk|Lk|Jn|Rom|Cor|Gal|Eph|Phil|Col|Thess|Tim|Tit|Philem|Heb|Jas|Pet|Rev|Esd|Tob|Jdt|Wis|Sir|Bar|Macc)\b)[A-Z][a-z]`;
+const CAP1=String.raw`(?:[a-z]|(?![^()\n]*\d)`+CAPX+`)`, CAP2=String.raw`(?:[a-z]|`+CAPX+`)`;
+const NEW=String.raw`(?:[GH]\d{1,5}\s*[,:;]\s*["“'‘]?`+CAP1+String.raw`[^()\n]{1,80}?|["“'‘]?`+CAP2+String.raw`[^()\n\d]{1,80}?["”'’]?\s*[,;]\s*[GH]\d{1,5})`;
 const SRC='pkgLIB/'+(process.env.KBF_LIB_BASE||'strip_WLG')+'/patched/',DST='pkgLIB/strip_KBF/patched/',ND='pkgKBL/fold/patched/'; /* base library: live s75 = strip_WLG (Shared Library ed1ec6fb07c0) */
 const W=JSON.parse(fs.readFileSync(process.argv[2]||'/mnt/project-files/wall2024/fetchback_live_s75.json','utf8'));
 const plan={base:{library:SRC,nodes:process.argv[2]||'fetchback_live_s75.json'},library:{},nodes:{},tally:0};
