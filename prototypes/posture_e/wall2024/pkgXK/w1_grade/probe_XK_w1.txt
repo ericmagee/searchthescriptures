@@ -1,0 +1,11 @@
+  a K-S3-labelled STATEMENT for D3 #3 written AFTER its own K-W STATEMENT
+    live:  CURED | answered: NOT HELD, with a reason that quotes the flagged sentence (pkgKW)
+    pkgXK: CURED | answered: NOT HELD, with a reason that quotes the flagged sentence (pkgKW)
+    pkgXK, reply as stored: CURED
+OK   a K-S3-labelled STATEMENT for D3 #3 written AFTER its own K-W STATEMENT: every terra row (all fields) on pkgXK equals live
+  the same line with a K-W label (control: 1 key, the first line wins as live)
+    live:  CURED | answered: NOT HELD, with a reason that quotes the flagged sentence (pkgKW)
+    pkgXK: CURED | answered: NOT HELD, with a reason that quotes the flagged sentence (pkgKW)
+    pkgXK, reply as stored: CURED
+OK   the same line with a K-W label (control: 1 key, the first line wins as live): every terra row (all fields) on pkgXK equals live
+TOTAL 2 OK, 0 FAIL
