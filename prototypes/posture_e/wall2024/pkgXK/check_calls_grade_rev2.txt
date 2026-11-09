@@ -1,0 +1,36 @@
+PASS anthropic/claude-haiku-5.5
+   | RESPONSE: K-W DEFENDER CR2 D2 #2 -- the withdrawal you counted. | I counted this as withdrawn based on my earlier verdict, but no debate text was provided, so I cannot confirm the withdrawal from the record. My answer rests on my prior grading alone.
+   | STATEMENT: K-W DEFENDER CR2 D2 #2 -- the withdrawal you counted. | The line stands as I graded it only because I recorded it as withdrawn in my verdict. I did not check its wording against the source, so treat it as unverified.
+   | RESPONSE: K-RUL D1 vs C2 -- your ruling on the link. | The link stands as I graded it, with the same caveat: I had no debate text, so this ruling is unverified. The defender's quotation of Luke 1:35 in DR1 is what I relied on.
+   | RULING: HELD (as graded, unverified against source text)
+   | CLAIM: D1 vs C2 link as recorded in my verdict
+   | NAMED BY: not identified in the materials provided
+   | RULE: no rule text was provided to me
+   | APPLIED: defender's quotation of Luke 1:35 in DR1, as recorded in my verdict
+PASS openai/gpt-6-luna
+   | RESPONSE: K-W DEFENDER CR2 D2 #2 -- the withdrawal you counted. | I cannot substantiate the withdrawal from the material provided, so I retract that finding.
+   | STATEMENT: K-W DEFENDER CR2 D2 #2 -- the withdrawal you counted. | No debate text was provided to verify that D2 #2 was withdrawn in CR2; therefore, the line does not stand as graded.
+   | RESPONSE: K-RUL D1 vs C2 -- your ruling on the link. | I cannot substantiate the link ruling from the material provided, so I retract it.
+   | RULING: Not determinable from the material provided; prior ruling retracted.
+   | CLAIM: The prior verdict asserted that D1 quoted Luke 1:35 in DR1.
+   | NAMED BY: Not verifiable without the debate text.
+   | RULE: A link ruling requires the debate text and a supported assessment of the relevant arguments.
+   | APPLIED: The debate text was not provided, so the asserted quote and link cannot be checked.
+PASS openai/gpt-6.1-sol
+   | RESPONSE: K-W DEFENDER CR2 D2 #2 | I retract my assertion that D2 #2 was withdrawn in CR2. No debate text was provided, so I cannot verify any withdrawal.
+   | STATEMENT: K-W DEFENDER CR2 D2 #2 | The line does not stand as graded: I counted a withdrawal without supporting text. That grading was unsupported.
+   | RESPONSE: K-RUL D1 vs C2 | I vacate my ruling on the link. Without the debate text, I cannot verify the claimed quotation in DR1 or determine whether it supports D1 against C2.
+   | RULING: Prior link ruling vacated; unresolved on the supplied record.
+   | CLAIM: My verdict asserted that the defender quotes Luke 1:35 in DR1 and that D1 vs C2 therefore stands.
+   | NAMED BY: My prior verdict; no supplied debate text verifies the attribution.
+   | RULE: A ruling must rest on the supplied record; an unverified quotation cannot establish a disputed link.
+   | APPLIED: No debate text was supplied, so neither the quotation nor its relevance to D1 vs C2 can be assessed.
+PASS openai/gpt-6.1-terra
+   | RESPONSE: K-W DEFENDER CR2 D2 #2 | I cannot verify the withdrawal; the debate text is not available.
+   | STATEMENT: K-W DEFENDER CR2 D2 #2 | The line cannot stand as graded without evidence of the withdrawal.
+   | RESPONSE: K-RUL D1 vs C2 | I withdraw the ruling that the link stands; it cannot be verified from the available record.
+   | RULING: Unverified.
+   | CLAIM: D1 is linked to C2.
+   | NAMED BY: The prior verdict identified the link as D1 vs C2.
+   | RULE: A link ruling requires support in the debate record.
+   | APPLIED: No debate text is available to verify either the Luke 1:35 quotation or its connection to C2.
