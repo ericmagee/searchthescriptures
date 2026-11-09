@@ -1,0 +1,77 @@
+FAIL 33218 [saved] Init Seats threw Cannot read properties of undefined (reading 'regrade_run_token')
+FAIL 33218 [mimo debates]: no defender engine field to set
+FAIL 33222 [saved] Init Seats threw Cannot read properties of undefined (reading 'regrade_run_token')
+FAIL 33222 [mimo debates]: no defender engine field to set
+FAIL 33249 [saved] Init Seats threw Cannot read properties of undefined (reading 'regrade_run_token')
+FAIL 33249 [mimo debates]: no defender engine field to set
+FAIL 33261 [saved] Init Seats threw Cannot read properties of undefined (reading 'regrade_run_token')
+FAIL 33261 [mimo debates]: no defender engine field to set
+FAIL 33276 [saved] Init Seats threw Cannot read properties of undefined (reading 'regrade_run_token')
+FAIL 33276 [mimo debates]: no defender engine field to set
+FAIL 33289 [saved] Init Seats threw Cannot read properties of undefined (reading 'regrade_run_token')
+FAIL 33289 [mimo debates]: no defender engine field to set
+FAIL 33299 [saved] Init Seats threw Cannot read properties of undefined (reading 'regrade_run_token')
+FAIL 33299 [mimo debates]: no defender engine field to set
+FAIL 33311 [saved] Init Seats threw Cannot read properties of undefined (reading 'regrade_run_token')
+FAIL 33311 [mimo debates]: no defender engine field to set
+FAIL 33322 [saved] Init Seats threw Cannot read properties of undefined (reading 'regrade_run_token')
+FAIL 33322 [mimo debates]: no defender engine field to set
+FAIL 33345 [saved] Init Seats threw Cannot read properties of undefined (reading 'regrade_run_token')
+FAIL 33345 [mimo debates]: no defender engine field to set
+FAIL 33371 [saved] Init Seats threw Cannot read properties of undefined (reading 'regrade_run_token')
+FAIL 33371 [mimo debates]: no defender engine field to set
+FAIL 33389 [saved] Init Seats threw Cannot read properties of undefined (reading 'regrade_run_token')
+FAIL 33389 [mimo debates]: no defender engine field to set
+FAIL 33411 [saved] Init Seats threw Cannot read properties of undefined (reading 'regrade_run_token')
+FAIL 33411 [mimo debates]: no defender engine field to set
+FAIL 33430 [saved] Init Seats threw Cannot read properties of undefined (reading 'regrade_run_token')
+FAIL 33430 [mimo debates]: no defender engine field to set
+FAIL 33442 [saved] Init Seats threw Cannot read properties of undefined (reading 'regrade_run_token')
+FAIL 33442 [mimo debates]: no defender engine field to set
+FAIL 33461 [saved] Init Seats threw Cannot read properties of undefined (reading 'regrade_run_token')
+FAIL 33461 [mimo debates]: no defender engine field to set
+FAIL 33482 [saved] Init Seats threw Cannot read properties of undefined (reading 'regrade_run_token')
+FAIL 33482 [mimo debates]: no defender engine field to set
+FAIL 33490 [saved] Init Seats threw Cannot read properties of undefined (reading 'regrade_run_token')
+FAIL 33490 [mimo debates]: no defender engine field to set
+FAIL 33497 [saved] Init Seats threw Cannot read properties of undefined (reading 'regrade_run_token')
+FAIL 33497 [mimo debates]: no defender engine field to set
+FAIL 33506 [saved] Init Seats threw Cannot read properties of undefined (reading 'regrade_run_token')
+FAIL 33506 [mimo debates]: no defender engine field to set
+FAIL 33530 [saved] Init Seats threw Cannot read properties of undefined (reading 'regrade_run_token')
+FAIL 33530 [mimo debates]: no defender engine field to set
+FAIL 33575 [saved] Init Seats threw Cannot read properties of undefined (reading 'regrade_run_token')
+FAIL 33575 [mimo debates]: no defender engine field to set
+FAIL 33592 [saved] Init Seats threw Cannot read properties of undefined (reading 'regrade_run_token')
+FAIL 33592 [mimo debates]: no defender engine field to set
+FAIL 33605 [saved] Init Seats threw Cannot read properties of undefined (reading 'regrade_run_token')
+FAIL 33605 [mimo debates]: no defender engine field to set
+FAIL 33617 [saved] Init Seats threw Cannot read properties of undefined (reading 'regrade_run_token')
+FAIL 33617 [mimo debates]: no defender engine field to set
+FAIL 33627 [saved] Init Seats threw Cannot read properties of undefined (reading 'regrade_run_token')
+FAIL 33627 [mimo debates]: no defender engine field to set
+FAIL 33644 [saved] Init Seats threw Cannot read properties of undefined (reading 'regrade_run_token')
+FAIL 33644 [mimo debates]: no defender engine field to set
+FAIL 33682 [saved] Init Seats threw Cannot read properties of undefined (reading 'regrade_run_token')
+FAIL 33682 [mimo debates]: no defender engine field to set
+FAIL 33705 [saved] Init Seats threw Cannot read properties of undefined (reading 'regrade_run_token')
+FAIL 33705 [mimo debates]: no defender engine field to set
+FAIL 33731 [saved] Init Seats threw Cannot read properties of undefined (reading 'regrade_run_token')
+FAIL 33731 [mimo debates]: no defender engine field to set
+FAIL 33750 [saved] Init Seats threw Cannot read properties of undefined (reading 'regrade_run_token')
+FAIL 33750 [mimo debates]: no defender engine field to set
+FAIL 33774 [saved] Init Seats threw Cannot read properties of undefined (reading 'regrade_run_token')
+FAIL 33774 [mimo debates]: no defender engine field to set
+FAIL 33798 [saved] Init Seats threw Cannot read properties of undefined (reading 'regrade_run_token')
+FAIL 33798 [mimo debates]: no defender engine field to set
+FAIL 33815 [saved] Init Seats threw Cannot read properties of undefined (reading 'regrade_run_token')
+FAIL 33815 [mimo debates]: no defender engine field to set
+FAIL 33828 [saved] Init Seats threw Cannot read properties of undefined (reading 'regrade_run_token')
+FAIL 33828 [mimo debates]: no defender engine field to set
+FAIL 33846 [saved] Init Seats threw Cannot read properties of undefined (reading 'regrade_run_token')
+FAIL 33846 [mimo debates]: no defender engine field to set
+FAIL Build Synthesis: family map knows luna; nothing else changed
+FAIL Build Independent Verdict: family map knows luna; nothing else changed
+FAIL Build Diagnostic Prompt: family map knows luna; nothing else changed
+variants where luna fills in: 0
+TOTAL 0 OK, 75 FAIL

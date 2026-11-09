@@ -1,0 +1,30 @@
+OK   kgaInAns2024 = wldInAns2024 at 312537 verse positions in 1460 saved texts (4344 in an answer)
+     Alt Gate Build: 35 runs, 35 byte-equal, 0 differ only in the reason text
+     Alt Gate Record: 31 runs, 31 byte-equal, 0 differ only in the reason text
+     Alternate Build: 0 runs, 0 byte-equal, 0 differ only in the reason text
+     Alternate Cure Build: 28 runs, 28 byte-equal, 0 differ only in the reason text
+     Alternate Cure Normalize: 46 runs, 46 byte-equal, 0 differ only in the reason text
+     Alternate Merge 1: 35 runs, 35 byte-equal, 0 differ only in the reason text
+     Alternate Merge Seat: 39 runs, 39 byte-equal, 0 differ only in the reason text
+     Cure Build: 36 runs, 36 byte-equal, 0 differ only in the reason text
+     Cure Check: 36 runs, 36 byte-equal, 0 differ only in the reason text
+     Cure Normalize: 46 runs, 46 byte-equal, 0 differ only in the reason text
+     Gate Build: 35 runs, 33 byte-equal, 0 differ only in the reason text, GATE CHANGE in 33506 33617
+     Gate Record: 31 runs, 31 byte-equal, 0 differ only in the reason text
+     Panel Cure Build 1: 43 runs, 43 byte-equal, 0 differ only in the reason text
+     Panel Cure Build 2: 43 runs, 43 byte-equal, 0 differ only in the reason text
+     Panel Cure Build 3: 43 runs, 43 byte-equal, 0 differ only in the reason text
+     Panel Cure Check: 39 runs, 38 byte-equal, 0 differ only in the reason text, GATE CHANGE in 33083
+     Panel Cure Normalize 1: 46 runs, 46 byte-equal, 0 differ only in the reason text
+     Panel Cure Normalize 2: 46 runs, 46 byte-equal, 0 differ only in the reason text
+     Panel Cure Normalize 3: 46 runs, 46 byte-equal, 0 differ only in the reason text
+     R2 Alt Gate Build: 0 runs, 0 byte-equal, 0 differ only in the reason text
+     R2 Alt Gate Record: 0 runs, 0 byte-equal, 0 differ only in the reason text
+     R2 Alternate Build: 0 runs, 0 byte-equal, 0 differ only in the reason text
+     R2 Alternate Cure Build: 0 runs, 0 byte-equal, 0 differ only in the reason text
+     R2 Alternate Cure Normalize: 46 runs, 46 byte-equal, 0 differ only in the reason text
+     R2 Alternate Merge: 0 runs, 0 byte-equal, 0 differ only in the reason text
+     R2 Alternate Merge Seat: 39 runs, 39 byte-equal, 0 differ only in the reason text
+replay: 789 node runs, 786 byte-equal, 0 differ only in the reason text, 3 with a gate change
+changed values: 16 (pkgWLG/replay_changes.json)
+TOTAL 1 OK, 0 FAIL
