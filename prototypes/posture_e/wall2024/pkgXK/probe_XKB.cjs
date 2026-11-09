@@ -21,7 +21,12 @@ const sr=x=>JSON.stringify(x,(k,v)=>(k==='at'||k==='full_reply')?undefined:v);
  T(sr(a)===sr(b),'the same answers sent as cure_lines JSON read item for item as the line reply ('+b.length+' rows; full_reply aside)');}
 {const J=JSON.parse(toJ(r0));const one=J.cure_lines.find(e=>e.kind==='RESPONSE');const nl=JSON.stringify({cure_lines:J.cure_lines.map(e=>e===one?Object.assign({},e,{text:e.text.replace(/ /,'\n')}):e)});
  const a=run(A,r0),b=run(B,'```json\n'+nl+'\n```');T(sr(a)===sr(b),'cure_lines in a json code fence, with a line break inside one answer: same reading');}
-{const bad1=toJ(r0).slice(0,-5);const a=run(A,bad1),b=run(B,bad1);T(sr(a)===sr(b),'cut-off cure_lines JSON: left as text, read as stage A reads it (falls back, nothing lost)');}
+{/* rev 3: a reply cut off inside entry n keeps entries 0..n-1; it must read exactly as the line reply holding those same lines */
+ const J=JSON.parse(toJ(r0)).cure_lines;const full=toJ(r0);const ix=[Math.floor(J.length/2),J.length-1,1];
+ for(const n of ix){const pre=JSON.stringify({cure_lines:J.slice(0,n)}).slice(0,-2);const ent=JSON.stringify(J[n]);const cut=pre+(n?',':'')+ent.slice(0,Math.max(5,Math.floor(ent.length/2)));
+  const lines=J.slice(0,n).map(e=>e.kind==='OTHER'?e.text:e.kind+': '+e.item+' | '+e.text).join('\n');const a=run(A,lines),b=run(B,cut);
+  T(sr(a)===sr(b)&&b.length>0,'cut-off cure_lines JSON inside entry '+n+' of '+J.length+': keeps the '+n+' complete entries and reads as the line reply holding them');}
+ const head='{"cure_lines":[{"kind":"RESP';const a=run(A,head),b=run(B,head);T(sr(a)===sr(b),'cut-off before any complete entry: left as text, read as stage A reads it');}
 // 8. fumAsk follow-up repeats the note only when the first call carried the schema
 {const s=R(B+'Panel_Cure_Normalize_2.js');const f=new Function('const cureVerdicts=()=>[{rule:"K-W",side:"DEFENDER",link:"D2 #2",status:"UNCURED",why:"no written response",silent:true}];'+['fumAsk2024','xkJsonNote','xkRF'].map(n=>grab(s,n)).join('\n')+';return {fumAsk2024,xkJsonNote,xkRF};')();
  const src=rf=>({body:Object.assign({model:'openai/gpt-6.1-terra',messages:[{role:'user',content:'ASK'}]},rf?{response_format:rf}:{}),items:[{rule:'K-W'}]});const rep={ok:true,text:'x'};

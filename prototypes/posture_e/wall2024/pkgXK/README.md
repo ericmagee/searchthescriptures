@@ -35,3 +35,9 @@ Proof: probe_XKB.txt (11 OK); test_XKB_lib.txt (replay stage A vs stage B).
 - Rev 2 (W1 3661): a matching line that names no item key under its own rule ranks after every line that names one (xkPick). Gate case XK-B-34016-terra-W1 (W1 probe line) fails on rev 1, passes on rev 2.
 - New near-miss case gate/cases/w2_cases.json XK-A-34016-terra: a two-item line just before terra's D2 #2 line. Live s79 gives UNCURED (check fails on live); pkgXK gives CURED.
 - Pack for W4: `node gate/pack.cjs pkgLIB/strip_XKB pkgLIB_XK` (after the check calls; rebuild strip_XKB with XK_JSON_MODELS first if a model fails).
+
+## Rev 3 (W1 ASK 1, operator approved 18:16Z 11-09): cut-off JSON keeps complete answers
+- xkJson2024: a reply that begins with { and names cure_lines but does not parse (cut off) goes to xkSalvage2024, which keeps every COMPLETE entry of the cure_lines array (string- and escape-aware brace scan, each entry parsed on its own) and drops the cut entry and anything after it. With no complete entry the reply is left as text, as before.
+- Probe probe_XKB.txt 14 OK: cuts inside entries 1, 14 and 27 of 28 (terra 34016) read exactly as the line reply holding those complete lines; a cut before any entry falls back as stage A.
+- W1's cut-off probe rerun (probe_XK_w1_trunc_rev3.txt): at 60% the four check replies keep 3, 3, 3 and 2 lines (rev 2: 0).
+- Shared gate A+B on rev 3: gate_XKB.txt.

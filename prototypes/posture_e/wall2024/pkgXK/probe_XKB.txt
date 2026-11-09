@@ -8,6 +8,9 @@ OK   stored reply (no cure_lines): every row byte-equal to stage A (14 rows)
   S3 DEFENDER CR4: #1=CURED, S3 DEFENDER CR4: #2=CURED, DEFENDER CR2 no link heading #1=CURED, DEFENDER CR2 D2 #2=CURED, DEFENDER CR2 D3 #3=CURED, DEFENDER CR2 D5 #4=CURED, DEFENDER CR2 D7 #5=CURED, DEFENDER CR3 LINK 6 #6=CURED, DEFENDER CR3 LINK 1 #7=CURED, DEFENDER CR3 LINK 1 #8=CURED, DEFENDER CR3 LINK 5 #9=CURED, DEFENDER CR4 D6 #10=CURED, CHALLENGER DR3 LINK 1 #2=CURED, CHALLENGER DR3 LINK 3 #3=CURED
 OK   the same answers sent as cure_lines JSON read item for item as the line reply (14 rows; full_reply aside)
 OK   cure_lines in a json code fence, with a line break inside one answer: same reading
-OK   cut-off cure_lines JSON: left as text, read as stage A reads it (falls back, nothing lost)
+OK   cut-off cure_lines JSON inside entry 14 of 28: keeps the 14 complete entries and reads as the line reply holding them
+OK   cut-off cure_lines JSON inside entry 27 of 28: keeps the 27 complete entries and reads as the line reply holding them
+OK   cut-off cure_lines JSON inside entry 1 of 28: keeps the 1 complete entries and reads as the line reply holding them
+OK   cut-off before any complete entry: left as text, read as stage A reads it
 OK   FUM follow-up: format note added when the first call carried the schema, not otherwise
-TOTAL 11 OK, 0 FAIL
+TOTAL 14 OK, 0 FAIL

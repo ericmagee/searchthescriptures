@@ -16,7 +16,12 @@ const FNS="/* pkgXK stage B: JSON cure answers. Functions, so they are hoisted w
  "function xkJsonModels(){return "+JSON.stringify(MODELS)+";}\n"+
  "function xkJsonNote(){return "+JSON.stringify(NOTE)+";}\n"+
  "function xkRF(){return {type:'json_schema',json_schema:{name:'cure_lines',strict:true,schema:{type:'object',additionalProperties:false,required:['cure_lines'],properties:{cure_lines:{type:'array',items:{type:'object',additionalProperties:false,required:['kind','item','text'],properties:{kind:{type:'string',enum:['RESPONSE','STATEMENT','OTHER']},item:{type:'string'},text:{type:'string'}}}}}}}};}\n"+
- "function xkJson2024(t){if(typeof t!=='string')return t;const s=t.trim().replace(/^```(?:json)?\\s*/i,'').replace(/\\s*```$/,'');if(!/^\\{[\\s\\S]*\\}$/.test(s)||s.indexOf('cure_lines')<0)return t;let o;try{o=JSON.parse(s);}catch(e){return t;}\n"+
+ "/* rev 3 (W1 ask, operator approved 18:16Z 11-09): a cut-off cure_lines reply keeps every COMPLETE entry; the cut entry and anything after it are dropped. */\n"+
+ "function xkSalvage2024(s){const i=s.indexOf('\"cure_lines\"');if(i<0)return null;let k=s.indexOf('[',i);if(k<0)return null;k++;const out=[];\n"+
+ " for(;;){while(k<s.length&&/[\\s,]/.test(s[k]))k++;if(s[k]!=='{')break;let d=0,q=false,e=false,j=k;for(;j<s.length;j++){const c=s[j];if(q){if(e)e=false;else if(c==='\\\\')e=true;else if(c==='\"')q=false;continue;}if(c==='\"')q=true;else if(c==='{')d++;else if(c==='}'){d--;if(d===0)break;}}\n"+
+ "  if(j>=s.length)break;let x;try{x=JSON.parse(s.slice(k,j+1));}catch(err){break;}out.push(x);k=j+1;}\n"+
+ " return out.length?{cure_lines:out}:null;}\n"+
+ "function xkJson2024(t){if(typeof t!=='string')return t;const s=t.trim().replace(/^```(?:json)?\\s*/i,'').replace(/\\s*```$/,'');if(!/^\\{/.test(s)||s.indexOf('cure_lines')<0)return t;let o=null;if(/\\}$/.test(s)){try{o=JSON.parse(s);}catch(e){o=null;}}if(!o)o=xkSalvage2024(s);if(!o)return t;\n"+
  " if(!o||!Array.isArray(o.cure_lines)||!o.cure_lines.length||!o.cure_lines.every(e=>e&&typeof e==='object'&&typeof e.kind==='string'&&typeof e.text==='string'))return t;\n"+
  " const one=v=>String(v==null?'':v).replace(/\\s*\\n\\s*/g,' ').trim();\n"+
  " return o.cure_lines.map(e=>{const k=e.kind.toUpperCase();return (k==='RESPONSE'||k==='STATEMENT')?k+': '+one(e.item)+' | '+one(e.text):one(e.text);}).join('\\n');}\n";
