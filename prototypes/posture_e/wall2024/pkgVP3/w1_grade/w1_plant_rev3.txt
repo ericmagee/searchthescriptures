@@ -1,0 +1,37 @@
+
+W1-A TRUE: grant + deferral to LINK 4; LINK 4 is short (under 25 words, no layers) and stands only in [CR4]
+     live cure_status UNCURED | package cure_status UNCURED
+     TRIAL pkgVP3: TWO READERS AGREE on Luke 1:34 ([CR3] Luke 1:34: no layer of its own; only grant and deferral: "I grant the present tense states her state when the angel spoke. I answer it fully under LINK 4.") -- WOULD REMOVE chatgpt: the reply (KEEP) keeps the grade and the live cure reading is UNCURED; record-only, no seat remo
+     vp3_trial {"status":"TRIAL","checked":5,"agree":3,"would_remove":{"chatgpt":["S1 (E-ANS ANSWER CHECK Luke 1:34 [CR3])"],"sol":["S1 (E-ANS ANSWER CHECK Luke 1:34 [CR3])"]}}
+OK   W1-A TRUE: grant + deferral to LINK 4; LINK 4 is short (under 25 words, no layers) and stands only in [CR4]: cure_status unchanged by the package
+OK   W1-A TRUE: grant + deferral to LINK 4; LINK 4 is short (under 25 words, no layers) and stands only in [CR4]: LISTED (WOULD REMOVE chatgpt)
+
+W1-B control: same, with LINK 4 short and in [CR3] (W2 T2 shape)
+     live cure_status UNCURED | package cure_status UNCURED
+     TRIAL pkgVP3: TWO READERS AGREE on Luke 1:34 ([CR3] Luke 1:34: no layer of its own; only grant and deferral: "I grant the present tense states her state when the angel spoke. I answer it fully under LINK 4.") -- WOULD REMOVE chatgpt: the reply (KEEP) keeps the grade and the live cure reading is UNCURED; record-only, no seat remo
+     vp3_trial {"status":"TRIAL","checked":5,"agree":3,"would_remove":{"chatgpt":["S1 (E-ANS ANSWER CHECK Luke 1:34 [CR3])"],"sol":["S1 (E-ANS ANSWER CHECK Luke 1:34 [CR3])"]}}
+OK   W1-B control: same, with LINK 4 short and in [CR3] (W2 T2 shape): cure_status unchanged by the package
+OK   W1-B control: same, with LINK 4 short and in [CR3] (W2 T2 shape): LISTED (WOULD REMOVE chatgpt)
+
+W1-C deferral to LINK 9, which no round holds (rev 3: not bare)
+     live cure_status UNCURED | package cure_status UNCURED
+     TRIAL pkgVP3: code check does not agree, not an item -- [CR3] the deferral to LINK 9 names a block no round of the side holds, so it is not read as bare
+     vp3_trial {"status":"TRIAL","checked":5,"agree":0,"would_remove":{}}
+OK   W1-C deferral to LINK 9, which no round holds (rev 3: not bare): cure_status unchanged by the package
+OK   W1-C deferral to LINK 9, which no round holds (rev 3: not bare): not listed
+
+W1-D deferral to its own round "[CR3]" (rev 3: a round with text, not bare)
+     live cure_status UNCURED | package cure_status UNCURED
+     TRIAL pkgVP3: code check does not agree, not an item -- [CR3] the answer defers to [CR3], a round that holds text
+     vp3_trial {"status":"TRIAL","checked":5,"agree":0,"would_remove":{}}
+OK   W1-D deferral to its own round "[CR3]" (rev 3: a round with text, not bare): cure_status unchanged by the package
+OK   W1-D deferral to its own round "[CR3]" (rev 3: a round with text, not bare): not listed
+
+W1-E deferral "in [CR4]", [CR4] holds text but nothing on her question (rev 3: not bare)
+     live cure_status UNCURED | package cure_status UNCURED
+     TRIAL pkgVP3: code check does not agree, not an item -- [CR3] the answer defers to [CR4], a round that holds text
+     vp3_trial {"status":"TRIAL","checked":5,"agree":0,"would_remove":{}}
+OK   W1-E deferral "in [CR4]", [CR4] holds text but nothing on her question (rev 3: not bare): cure_status unchanged by the package
+OK   W1-E deferral "in [CR4]", [CR4] holds text but nothing on her question (rev 3: not bare): not listed
+
+10 OK, 0 FAIL
