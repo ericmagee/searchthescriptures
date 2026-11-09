@@ -1,0 +1,11 @@
+OK   0 baseline: one item, ANSWER OPEN|LUKE 1:34|CR3|D1
+OK   1 no send-back change on that answer check (judge kept MEETS): no item
+OK   2 the change keeps MEETS: no item
+OK   3 the change writes FAILS: one item
+OK   4 the judge answered KEEP on that send-back: no item
+OK   5 D1 vs C1 already DEFENDER LINK BROKEN: no item
+OK   6 D1 vs C1 CHALLENGER LINK BROKEN (no D1 line open): no item
+OK   7 a verse not on the proven-press list: no item for it
+OK   8 (record) MEANS: NONE written after the grade: 1 item(s)
+OK   9 live library (strip_SJR): no E-GATE M item
+10 OK, 0 FAIL
