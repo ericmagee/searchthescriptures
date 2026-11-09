@@ -1,0 +1,13 @@
+Init with Guards | feeder Retrieval Check | old [{"json":{"run_token":"ODV1-34108-3to8dgrt","topic":"Did Chr | eq false | lens 308973 309582
+C4 Build | feeder C4 Lexicon Sheet | old [{"json":{"run_token":"ODV1-34108-3to8dgrt","round":"C4","gr | eq true | lens 251995 251995
+C4 Extract | feeder C4 Call anthropic | old [{"json":{"run_token":"ODV1-34108-3to8dgrt","round":"C4","ra | eq false | lens 42584 42667
+C4G Extract | feeder C4G Route | old ERR "undefined" is not valid JSON | eq true | lens 33 33
+C4B Extract | feeder C4B Route | old ERR "undefined" is not valid JSON | eq true | lens 33 33
+Build Synthesis | feeder C4B Extract | old [{"json":{"topic":"Did Christ have a biological father?","cr | eq true | lens 416115 416115
+Build Independent Verdict | feeder Regrade After Quotes? | old ERR await is not defined | eq true | lens 24 24
+Build Save Body | feeder Extract Diagnostic | old [{"json":{"topic":"Did Christ have a biological father?","sy | eq true | lens 890689 890689
+Panel Build | feeder Anticheat Only? | old ERR await is not defined | eq true | lens 24 24
+Format Markdown | feeder Get Guards | old [{"json":{"fileName":"Debate [Claude v Claude Opus] - Did Ch | eq true | lens 1365559 1365559
+D4 Build | feeder D4 Lexicon Sheet | old [{"json":{"run_token":"ODV1-34108-3to8dgrt","round":"D4","op | eq true | lens 84108 84108
+D4 Extract | feeder D4 Call anthropic | old [{"json":{"run_token":"ODV1-34108-3to8dgrt","round":"D4","ra | eq true | lens 44439 44439
+D4B Extract | feeder D4B Route | old [{"json":{"run_token":"ODV1-34108-3to8dgrt","round":"D4","ra | eq true | lens 45201 45201

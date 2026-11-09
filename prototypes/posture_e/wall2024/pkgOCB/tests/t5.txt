@@ -1,0 +1,9 @@
+new __ogrS identical in 12 nodes: true
+OK   1 saved raws (33): new equals old where no CONTRADICTIONS section
+OK   2 GRANTS only: new equals old
+OK   3 X quotes blanked: "g argues \"Matthew 1:23\" stands.\n\nOPPONENT'S GRANTS:\nG1 LINK 2 | [CR3] \"\" | why\n\nOPPONENT'S CONTRADICTIONS:\nX1 LINK 4 | EARLIER [CR3] \"\" | CLOSING [CR4] \"\" | why"
+OK   4 G quotes still blanked with X present
+OK   5 body quotes untouched
+OK   6 X section alone blanked
+old on X alone keeps quotes (the gap B3 closes): true
+6 OK, 0 FAIL
