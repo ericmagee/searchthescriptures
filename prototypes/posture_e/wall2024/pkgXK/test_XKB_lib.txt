@@ -1,0 +1,82 @@
+replay: 704 node runs over 47 runs; byte-equal 631; changed 73
+   33040 Panel Cure Build 2
+   33060 Panel Cure Build 2
+   33083 Panel Cure Build 2
+   33083 Panel Cure Build 3
+   33107 Panel Cure Build 2
+   33107 Panel Cure Build 3
+   33129 Panel Cure Build 2
+   33129 Panel Cure Build 3
+   33149 Panel Cure Build 2
+   33149 Panel Cure Build 3
+   33160 Panel Cure Build 2
+   33160 Panel Cure Build 3
+   33197 Panel Cure Build 2
+   33197 Panel Cure Build 3
+   33218 Panel Cure Build 2
+   33218 Panel Cure Build 3
+   33222 Panel Cure Build 2
+   33222 Panel Cure Build 3
+   33249 Panel Cure Build 2
+   33249 Panel Cure Build 3
+   33261 Panel Cure Build 2
+   33261 Panel Cure Build 3
+   33299 Panel Cure Build 2
+   33299 Panel Cure Build 3
+   33345 Panel Cure Build 2
+   33345 Panel Cure Build 3
+   33371 Panel Cure Build 2
+   33371 Panel Cure Build 3
+   33389 Panel Cure Build 2
+   33389 Panel Cure Build 3
+   33411 Panel Cure Build 2
+   33411 Panel Cure Build 3
+   33430 Panel Cure Build 2
+   33430 Panel Cure Build 3
+   33442 Panel Cure Build 2
+   33442 Panel Cure Build 3
+   33461 Panel Cure Build 2
+   33461 Panel Cure Build 3
+   33482 Panel Cure Build 2
+   33482 Panel Cure Build 3
+   33490 Panel Cure Build 2
+   33490 Panel Cure Build 3
+   33497 Alternate Cure Build
+   33497 Panel Cure Build 2
+   33506 Alternate Cure Build
+   33506 Panel Cure Build 2
+   33575 Panel Cure Build 2
+   33592 Panel Cure Build 2
+   33605 Panel Cure Build 2
+   33617 Alternate Cure Build
+   33617 Panel Cure Build 2
+   33627 Alternate Cure Build
+   33627 Panel Cure Build 2
+   33644 Alternate Cure Build
+   33644 Panel Cure Build 2
+   33682 Panel Cure Build 2
+   33705 Panel Cure Build 2
+   33731 Alternate Cure Build
+   33731 Panel Cure Build 2
+   33750 Panel Cure Build 2
+   33774 Alternate Cure Build
+   33774 Panel Cure Build 2
+   33798 Alternate Cure Build
+   33798 Panel Cure Build 2
+   33815 Panel Cure Build 3
+   33828 Alternate Cure Build
+   33828 Panel Cure Build 3
+   33846 Alternate Cure Build
+   33846 Panel Cure Build 3
+   34108 Cure Build
+   34108 Panel Cure Build 1
+   34108 Panel Cure Build 2
+   34108 Panel Cure Build 3
+K-F/K-CMT/K-CMTL items gone or changed (base side): 0
+K-F/K-CMT/K-CMTL items new or changed (patched side): 0
+cure flips: 0
+uncured count changes: 0
+stage B: cure bodies given the schema and note: 73 {"openai/gpt-6.1-terra":41,"openai/gpt-6.1-sol":31,"openai/gpt-6-luna":1}
+OK every changed output equals stage A once the schema and note are taken off
+OK replay ran
+TOTAL 2 OK, 0 FAIL

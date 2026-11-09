@@ -10,10 +10,17 @@ const runs=fs.readdirSync(D).filter(f=>/_index\.json$/.test(f)).map(f=>f.split('
 const rowsOf=o=>{const r=[];const w=x=>{if(Array.isArray(x))x.forEach(w);else if(x&&typeof x==='object'){if(x.seat&&x.rule&&x.item&&x.cure_status&&x.kind)r.push(x);for(const k in x)w(x[k]);}};w(o);return r;};
 const kbOf=o=>{const r=[];const w=x=>{if(Array.isArray(x))x.forEach(w);else if(x&&typeof x==='object'){if(/^K-(F|CMT|CMTL)$/.test(x.rule||'')&&x.link)r.push(x.rule+' '+(x.side||'')+' '+x.link+(x.status?' '+x.status:'')+(x.kinds?' ['+x.kinds+']':''));for(const k in x)w(x[k]);}};w(o);return [...new Set(r)];};
 const drvOf=o=>{const r={};const w=x=>{if(Array.isArray(x))x.forEach(w);else if(x&&typeof x==='object'){if(x.seat&&typeof x.uncured==='number')r[x.seat]=x.uncured;for(const k in x)w(x[k]);}};w(o);return r;};
-let n=0,same=0;const ch=[],kbGone=[],kbNew=[],flips=[],unc=[];
+let n=0,same=0,xkN=0;const xkM={},xkBad=[];const ch=[],kbGone=[],kbNew=[],flips=[],unc=[];
 for(const RUN of runs){let H;try{H=harness(RUN);}catch(x){continue;}for(const j of JOBS){if(!fs.existsSync(D+RUN+'_'+j.nm.replace(/ /g,'_')+'.json'))continue;const i=fin(RUN,j.nm);if(!i)continue;
  let a,b,e0=null,e1=null;try{a=H(j.a,i);}catch(x){e0=String(x.message).slice(0,100);}try{b=H(j.b,i);}catch(x){e1=String(x.message).slice(0,100);}
  if(e0||e1){if(e0!==e1)T(false,RUN+' '+j.nm+' same error both ('+e0+' | '+e1+')');continue;}n++;if(st(a)===st(b)){same++;continue;}ch.push(RUN+' '+j.nm);
+ {/* stage B: a changed output must equal stage A once each cure_lines schema and its format note are taken off; count the bodies that carry them, by model */
+  const NOTE=new Function(fs.readFileSync('pkgLIB/strip_XKB/patched/Cure_Build.js','utf8').match(/function xkJsonNote\(\)\{[^\n]*\}/)[0]+';return xkJsonNote();')();let k=0;
+  const un=x=>{if(typeof x==='string'&&x.includes('cure_lines')&&x.trim().startsWith('{')){try{return JSON.stringify(un(JSON.parse(x)));}catch(e){}}
+   if(Array.isArray(x))return x.map(un);if(x&&typeof x==='object'){const o={};for(const q in x)o[q]=un(x[q]);
+    if(o.response_format&&o.response_format.type==='json_schema'&&o.response_format.json_schema&&o.response_format.json_schema.name==='cure_lines'&&Array.isArray(o.messages)){k++;xkM[o.model]=(xkM[o.model]||0)+1;delete o.response_format;const L=o.messages[o.messages.length-1];
+     if(typeof L.content==='string'&&L.content.endsWith(NOTE))o.messages[o.messages.length-1]=Object.assign({},L,{content:L.content.slice(0,-NOTE.length)});else xkBad.push(RUN+' '+j.nm+' note missing');}return o;}return x;};
+  const ub=un(b);if(st(ub)!==st(a))xkBad.push(RUN+' '+j.nm+' differs beyond schema and note');xkN+=k;}
  {const ka=kbOf(a),kb=kbOf(b);for(const z of ka)if(!kb.includes(z))kbGone.push(RUN+' '+j.nm+' '+z);for(const z of kb)if(!ka.includes(z))kbNew.push(RUN+' '+j.nm+' '+z);}
  const ra=rowsOf(a),rb=rowsOf(b);const key=r=>r.seat+'|'+r.kind+'|'+r.rule+'|'+r.item;const ma=new Map(ra.map(r=>[key(r),r]));
  for(const r of rb){const o=ma.get(key(r));if(o&&o.cure_status!==r.cure_status)flips.push(RUN+' '+j.nm+' '+r.seat+' '+r.rule+' '+r.item+': '+o.cure_status+' -> '+r.cure_status);}
@@ -21,4 +28,4 @@ for(const RUN of runs){let H;try{H=harness(RUN);}catch(x){continue;}for(const j 
 log('replay: '+n+' node runs over '+runs.length+' runs; byte-equal '+same+'; changed '+ch.length);ch.forEach(x=>log('   '+x));
 log('K-F/K-CMT/K-CMTL items gone or changed (base side): '+kbGone.length);kbGone.forEach(x=>log('   '+x));log('K-F/K-CMT/K-CMTL items new or changed (patched side): '+kbNew.length);kbNew.forEach(x=>log('   '+x));
 log('cure flips: '+flips.length);[...new Set(flips)].forEach(x=>log('   '+x));log('uncured count changes: '+unc.length);[...new Set(unc)].forEach(x=>log('   '+x));
-T(n>0,'replay ran');log('TOTAL '+ok+' OK, '+bad+' FAIL');fs.writeFileSync('pkgXK/test_XKB_lib.txt',out.join('\n')+'\n');
+log('stage B: cure bodies given the schema and note: '+xkN+' '+JSON.stringify(xkM));T(xkBad.length===0,'every changed output equals stage A once the schema and note are taken off'+(xkBad.length?': '+xkBad.join('; '):''));T(n>0,'replay ran');log('TOTAL '+ok+' OK, '+bad+' FAIL');fs.writeFileSync('pkgXK/test_XKB_lib.txt',out.join('\n')+'\n');
