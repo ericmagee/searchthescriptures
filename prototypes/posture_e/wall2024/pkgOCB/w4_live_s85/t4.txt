@@ -1,0 +1,11 @@
+OK   0 real 34108 C4: no section recorded: {"section":false,"none":false,"lines":[],"found":0,"not_found":0}
+OK   0b real 34108 C4: every other field byte-equal to live
+OK   1 recorded 34108 contradiction found: {"x":1,"on":"LINK 4","earlier_round":"CR3","earlier":"I grant that this is the ordinary means","closing_round":"CR4","closing":"Genesis 4:1 therefore cannot supply the sequence for Matthew","earlier_found":true,"closing_found":true,"found":true,"why":"granted 
+OK   2 invented earlier quote not found
+OK   3 earlier tagged CR4 refused
+OK   4 earlier quote in wrong round refused
+OK   5 two-word quote refused
+OK   6 NONE read
+OK   7 two lines read: [[1,"LINK 4",true],[2,"PREMISE 2",true]]
+OK   8 other fields byte-equal with section present
+10 OK, 0 FAIL

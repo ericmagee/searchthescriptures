@@ -1,0 +1,20 @@
+const fs=require('fs');const L=f=>Object.fromEntries(JSON.parse(fs.readFileSync(f,'utf8')).nodes.map(n=>[n.name,n.parameters.jsCode||'']));
+const O=L('/mnt/project-files/wall2024/fetchback_live_s84.json'),N=L('/mnt/project-files/wall2024/fetchback_live_s85.json');
+const grab=(c)=>{const i=c.indexOf('const __ogrS=');if(i<0)return null;let d=0,j=c.indexOf('=',i)+1;for(let k=j;k<c.length;k++){const ch=c[k];if('([{'.includes(ch))d++;else if(')]}'.includes(ch))d--;else if(ch===';'&&d===0)return c.slice(i,k+1);}};
+const nodes=['Build Synthesis','Build Independent Verdict','Build Save Body','Panel Build','Format Markdown','D4 Build','D4 Extract','C4 Build','C4 Extract','C4G Extract','D4B Extract','C4B Extract'];
+const defs=new Set(nodes.map(n=>grab(N[n])));console.log('new __ogrS identical in 12 nodes:',defs.size===1&&!defs.has(null));
+const fo=new Function(grab(O['Build Synthesis'])+'return __ogrS;')(),fn=new Function([...defs][0]+'return __ogrS;')();
+let ok=0,bad=0;const T=(n,c,i)=>{c?ok++:bad++;console.log((c?'OK   ':'FAIL ')+n+(i?': '+i:''));};
+const G="OPPONENT'S GRANTS:\nG1 LINK 2 | [CR3] \"I grant that this is the ordinary means\" | why";
+const X="OPPONENT'S CONTRADICTIONS:\nX1 LINK 4 | EARLIER [CR3] \"I grant that this is the ordinary means\" | CLOSING [CR4] \"Genesis 4:1 therefore cannot supply the sequence\" | why";
+const body="My closing argues \"Matthew 1:23\" stands.\n\n";
+// real C4 raws from 34108 and other saved runs
+const raws=fs.readdirSync('/mnt/project-files/wall2024/inputs/').filter(f=>/_C4_Extract\.json$|_D4B_Extract\.json$|_C4B_Extract\.json$/.test(f)).slice(0,60).map(f=>{const d=JSON.parse(fs.readFileSync('/mnt/project-files/wall2024/inputs/'+f,'utf8'));const r=Array.isArray(d)?d[0]:d;try{return String(r.data.main[0][0].json.raw||'')}catch(e){return ''}}).filter(Boolean);
+T('1 saved raws ('+raws.length+'): new equals old where no CONTRADICTIONS section',raws.every(r=>/CONTRADICTIONS\s*:/.test(r)||fo(r)===fn(r)));
+T('2 GRANTS only: new equals old',fo(body+G)===fn(body+G));
+const o3=fn(body+G+'\n\n'+X);T('3 X quotes blanked',!o3.includes('cannot supply the sequence')&&o3.includes('X1 LINK 4'),JSON.stringify(o3.slice(-160)));
+T('4 G quotes still blanked with X present',!o3.slice(0,o3.indexOf('CONTRADICTIONS')).includes('ordinary means'));
+T('5 body quotes untouched',o3.includes('"Matthew 1:23"'));
+const o6=fn(body+X);T('6 X section alone blanked',!o6.includes('ordinary means')&&!o6.includes('cannot supply'));
+console.log('old on X alone keeps quotes (the gap B3 closes):',fo(body+X).includes('cannot supply'));
+console.log(ok+' OK, '+bad+' FAIL');
