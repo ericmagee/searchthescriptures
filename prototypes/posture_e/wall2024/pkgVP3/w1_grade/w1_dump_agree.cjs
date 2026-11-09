@@ -1,0 +1,5 @@
+process.chdir('/home/claude/searchthescriptures/prototypes/posture_e/wall2024/pkgVP3');
+const fs=require('fs');const H=require('/home/claude/searchthescriptures/prototypes/posture_e/wall2024/pkgVP3/harness.cjs');const P=JSON.parse(fs.readFileSync('parent_s89_VP3.json','utf8'));const by={};P.nodes.forEach(n=>by[n.name]=n);
+(async()=>{for(const [run,node,inp] of [['33461','Send Back Record','Send Back Call openrouter'],['33798','Send Back Record','Send Back Call openrouter'],['33798','Alt Send Back Record','Alt Send Back Call openrouter'],['34016','Send Back Record','Send Back Call openrouter'],['34108','Send Back Record','Send Back Call openrouter']]){
+ const b=await H.run(by[node].parameters.jsCode,run,inp);for(const r of b[0].json.sb_rows||[])if(/TWO READERS AGREE/.test(r.cure_reason||'')){
+  console.log('\n######## '+run+' '+node+' | '+r.seat+' | '+r.rule+' | '+r.item);console.log('FLAGGED: '+String(r.flagged_line).slice(0,700));console.log('RESPONSE: '+String(r.response_line).slice(0,900));console.log('REASON: '+String(r.cure_reason).slice(0,1600));}}})();
