@@ -28,3 +28,9 @@ probe_QRC.txt: 17 OK, on run 34108's recorded closing contradiction (terra: [CR3
 
 ## Files
 build_QRC.py (writes parent_s82_QRC.json and nodes/*.js), probe_QRC.cjs/.txt, fixture_34108.json.
+
+## Rev 2 (W1 3722 FAIL E1; W4 3725 PASS on rev 1)
+- Base moved to live s83 (0762c262). The four QR nodes are identical in s82 and s83. The output is parent_s83_QRC.json, 394 nodes.
+- E1 fix: qrCheck opens the contradiction checks only when an earlier field holds text. Empty, blank, "none", "n/a", "na", "null", "-" and null all count as no earlier field.
+- QR Final reads those values as empty in the debater's text and in the item, so QR Merge labels the question an ordinary one.
+- Probe: 19 OK. New checks 2h (8 empty forms give the same faults and retry as live) and 2i ("none" fields read as an ordinary question in Final). W1's edge_QRC_w1.cjs on rev 2: E1, E2 and E3 give no fault and retry false.

@@ -3,7 +3,7 @@
 // Rounds: excerpts of debate_results c357d23f (engine_r3 from 1900, defender_r4 from 2250, 600 characters each; SQL position() puts both
 // sentences there), with each side's cited verses (read by SQL) on its first round so the new-verse check sees the side's citations.
 const fs=require('fs');const fx=JSON.parse(fs.readFileSync(__dirname+'/../fixture_34108.json','utf8'));
-const LIVE=JSON.parse(fs.readFileSync('/mnt/project-files/wall2024/fetchback_live_s82.json','utf8'));const live=n=>LIVE.nodes.find(z=>z.name===n).parameters.jsCode;
+const LIVE=JSON.parse(fs.readFileSync('/mnt/project-files/wall2024/fetchback_live_s83.json','utf8'));const live=n=>LIVE.nodes.find(z=>z.name===n).parameters.jsCode;
 const neu=n=>fs.readFileSync(__dirname+'/../nodes/'+n.replace(/ /g,'_')+'.js','utf8');
 const F=fx.f;const cl=x=>JSON.parse(JSON.stringify(x));
 const run=(code,nodes,input)=>{const $=n=>{if(!(n in nodes))throw new Error('unexecuted '+n);const it=nodes[n];return {isExecuted:true,first:()=>cl(it[0]),all:()=>cl(it),last:()=>cl(it[it.length-1])};};
@@ -32,6 +32,12 @@ const F5=chk(neu('QR Check'),CQ,{...OQ,round:'DR4',earlier_round:'DR3',earlier_q
 const cases=[[OQ,{round:'CR3',quote:'I grant that this is the ordinary means.',question:'Explain "ordinary".'}],[{...OQ,question:'Defend this.'},{round:'CR9',quote:'x',question:'?'}],[{round:'DR3',quote:'words not there anywhere',question:'Explain Galatians 4:4 here.'},{round:'CR3',quote:'I grant that this is the ordinary means.',question:'Explain the verb.'}]];
 let same=true;for(const [c,d] of cases){const a=chk(neu('QR Check'),d,c),b=chk(live('QR Check'),d,c);if(JSON.stringify(a)!==JSON.stringify(b))same=false;}
 T('2g questions without the earlier fields: output equal to live QR Check ('+cases.length+' cases, passing and failing)',same);
+// 2h (rev 2, W1 3722 E1): an ordinary question whose optional fields are empty, "none", "n/a" or null passes as live passes it.
+{let eq=true;const info=[];for(const v of ['','  ','none','None','n/a','N/A','null',null]){const c={...OQ,earlier_round:v,earlier_quote:v};const a=chk(neu('QR Check'),{round:'CR3',quote:'I grant that this is the ordinary means.',question:'Explain the verb.'},c),b=chk(live('QR Check'),{round:'CR3',quote:'I grant that this is the ordinary means.',question:'Explain the verb.'},OQ);
+ if(JSON.stringify(a.faults)!==JSON.stringify(b.faults)||a.retry!==b.retry){eq=false;info.push(JSON.stringify(v)+': '+JSON.stringify(a.faults));}}
+ T('2h empty, blank, "none", "n/a", "null" and null earlier fields: same faults and retry as live (8 forms)',eq,info.join(' | '));}
+{const ck2=chk(neu('QR Check'),CQ,{...OQ,earlier_round:'none',earlier_quote:'none'});const FN2=run(neu('QR Final'),{...base,'QR Check':[J(ck2)]},[J({})]);const c2q=FN2.find(x=>x.json.side==='challenger').json;
+ T('2i "none" earlier fields: the debater sees an ordinary question and the item has no earlier fields',/The judge quotes your round DR3: "/.test(c2q.body.messages[1].content)&&c2q.earlier_quote===null&&c2q.earlier_round===null);}
 // 3. QR Final: the debater sees both quotes; C4; the record carries the earlier fields.
 const ck=chk(neu('QR Check'),CQ,OQ);const FN=run(neu('QR Final'),{...base,'QR Check':[J(ck)]},[J({})]);
 const dq=FN.find(x=>x.json.side==='defender').json;const um=dq.body.messages[1].content;
