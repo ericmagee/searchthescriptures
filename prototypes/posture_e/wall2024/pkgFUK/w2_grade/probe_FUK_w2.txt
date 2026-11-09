@@ -1,0 +1,31 @@
+OK   live s89: short TOUCHES NO LINK reason asks nothing (the gap)
+OK   live s89: it reads UNCURED
+OK   FUK: short reason is asked, labelled NO REASON
+OK   FUK: it is the only item asked (NO REASON K-S3 S3 DEFENDER CR4: #1: DEFENDER CR4: “I grant ‘husband’ and ‘wife’.”)
+OK   FUK: prompt section names COUNTED, TOUCHES NO LINK with five words, NOT HELD with the quote
+OK   FUK: item carried for the follow-up reader: {"rule":"K-S3","side":"DEFENDER","link":"S3 DEFENDER CR4: #1","ruling":null,"krul_ctx":null}
+---- follow-up prompt ----
+FOLLOW-UP, asked once. The items below have no line in your reply above that can be counted. Every other item stands as your reply above left it. Answer only the items below, each on its own line beginning RESPONSE:, in the form the request above gives, and write nothing else.
+
+K-S3 items whose RESPONSE cannot be counted (1):
+- K-S3 S3 DEFENDER CR4: #1: DEFENDER CR4: “I grant ‘husband’ and ‘wife’.”
+For each, write its RESPONSE line again in one of these forms: RESPONSE: <the item, as labelled above> | COUNTED, and correct your count; or RESPONSE: <the item, as labelled above> | TOUCHES NO LINK: <at least five words naming why it touches no declared link or listed premise>; or RESPONSE: <the item, as labelled above> | NOT HELD: <your reason>, quoting at least six words in a row of the flagged sentence (all of it when shorter).
+--------------------------
+OK   FUK second pass asks nothing more
+OK   FUK second pass keeps 1 line
+OK   FUK full follow-up answer: CURED (answered: it touches no declared link or listed premise, with its reason)
+OK   FUK follow-up COUNTED: CURED
+OK   FUK short follow-up: no second follow-up
+OK   FUK short follow-up: stays UNCURED
+OK   FUK follow-up with an unasked item line: only the asked line kept
+OK   FUK: answer neither COUNTED nor TOUCHES NO LINK nor NOT HELD is asked
+OK   FUK: NOT HELD without the quote stays NO QUOTE only (NO QUOTE K-S3 S3 DEFENDER CR4: #1: DEFENDER CR4: “I grant ‘husband’ and ‘wife’.”)
+OK   FUK: "COUNTED" asks nothing
+OK   FUK: "TOUCHES NO LINK: it grants the" asks nothing
+OK   34108 Panel Cure Normalize 1 stored reply: output byte-equal live vs FUK
+OK   34108 Panel Cure Normalize 2 stored reply: output byte-equal live vs FUK
+OK   34108 Panel Cure Normalize 3 stored reply: output byte-equal live vs FUK
+n/a  34108 Alternate Cure Normalize: no stored Alternate Cure Call openrouter
+n/a  34108 R2 Alternate Cure Normalize: no stored R2 Alternate Cure Call openrouter
+OK   34108 Cure Normalize stored reply: output byte-equal live vs FUK
+21 OK, 0 FAIL
