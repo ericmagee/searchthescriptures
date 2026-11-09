@@ -1,0 +1,12 @@
+DIFF 33490 Alt Send Back Record grok E-ANS ANSWER CHECK Luke 2:48 [CR3]
+   live CURED | KQG CURED
+   reply: SENDBACK: S1 || KEEP || [CR3] does not stop at the grant: "I grant Mary says "thy father". The answer turns on "my Father's business"."
+   flagged: ANSWER CHECK: Luke 2:48 -- [CR3] -- MEANS: "the mother calls Joseph his father." -- ANSWER: "I grant Mary says \"thy father\"." -- MEETS -- "I grant"
+   KQG: CURE (record-only until promoted): CURED -- KEEP whose reason quotes the answering side's round: "grant mary says thy father the"
+DIFF 33617 Send Back Record chatgpt E-ANS ANSWER CHECK Matthew 11:11 [CR3]
+   live CURED | KQG CURED
+   reply: SENDBACK: S1 || KEEP || [CR3] grants “I grant that ‘born of women’ is said of John, whose father is Zacharias” and distinguishes its own footing as “the broken pattern of Matthew 1:2 and 1:16.”
+   flagged: ANSWER CHECK: Matthew 11:11 -- [CR3] -- MEANS: "\"born of women\" is said of John, whose father is named." -- ANSWER: "I grant that \"born of women\" is said of John, whose father is Zacharias" -- MEETS -- The comparison is granted.
+   KQG: CURE (record-only until promoted): CURED -- KEEP whose reason quotes the answering side's round: "the broken pattern of matthew 1"
+
+{"runs":42,"err":16,"eq":40,"diff":2,"keep":68} (keep = E-ANS KEEP rows on live)

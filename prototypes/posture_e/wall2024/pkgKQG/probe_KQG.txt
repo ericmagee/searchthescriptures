@@ -1,0 +1,17 @@
+     live CURED | KQG UNCURED | CURE (record-only until promoted): UNCURED -- KEEP whose reason quotes only the bare flagged answer itself ("i grant it is said of"), not a fuller answer from the answering side's rounds (pkgKQG)
+OK   1 planted bare rounds, KEEP quoting only the bare grant: live CURED, KQG UNCURED
+OK   1 planted bare rounds, KEEP quoting only the bare grant: every other field equal
+     live UNCURED | KQG UNCURED | CURE (record-only until promoted): UNCURED -- KEEP whose reason quotes no 6 words in a row of the answering side's rounds
+OK   2 planted bare rounds, KEEP with no quote: live UNCURED, KQG UNCURED
+OK   2 planted bare rounds, KEEP with no quote: every other field equal
+     live CURED | KQG CURED | CURE (record-only until promoted): CURED -- KEEP whose reason quotes the answering side's round: "i accept it as a phrase"
+OK   3 stored rounds, KEEP quoting the CR2 fuller answer: live CURED, KQG CURED
+OK   3 stored rounds, KEEP quoting the CR2 fuller answer: every other field equal
+     live CURED | KQG CURED | CURE (record-only until promoted): CURED -- KEEP whose reason quotes the answering side's round: "i rest on the verb that"
+OK   4 stored rounds, KEEP quoting the bare grant and then the CR3 Galatians 4:4 answer: live CURED, KQG CURED
+OK   4 stored rounds, KEEP quoting the bare grant and then the CR3 Galatians 4:4 answer: every other field equal
+     live CURED | KQG UNCURED | CURE (record-only until promoted): UNCURED -- KEEP whose reason quotes only the bare flagged answer itself ("i grant it is said of"), not a fuller answer from the answering side's rounds (pkgKQG)
+OK   5 stored rounds, KEEP quoting only the bare grant (the fuller answer exists but is not quoted): live CURED, KQG UNCURED
+OK   5 stored rounds, KEEP quoting only the bare grant (the fuller answer exists but is not quoted): every other field equal
+OK   6 34108 terra KEEP quoting CR3 LINK 4 ("i grant the conception is future"): CURED, row byte-equal
+11 OK, 0 FAIL
