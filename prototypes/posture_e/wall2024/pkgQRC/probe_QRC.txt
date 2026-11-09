@@ -1,0 +1,19 @@
+OK   1a ask: Commitment 9 carries the new sentence (C1)
+OK   1b ask: the watch-and-question paragraph (C2) and the optional fields in the form line
+OK   1c ask: apart from C1 and C2 the ask is the live ask
+OK   2a the 34108 contradiction question passes every check: {"defender":[],"challenger":[]}
+OK   2b reversed (closing quoted as earlier): refused: a contradiction question quotes the closing round CR4, not "CR3" | earlier round "CR4" is not one of that debater's earlier rounds
+OK   2c earlier quote not word for word: refused: the earlier quotation is not found word for word in CR3
+OK   2d a verse the debater never cited, in the earlier quote: refused: the earlier quotation is not found word for word in CR3 | verse(s) that debater has not cited: Galatians 4:4
+OK   2e earlier round from the other side: refused: earlier round "DR3" is not one of that debater's earlier rounds
+OK   2f a challenger contradiction question with a made-up earlier quote: refused: the earlier quotation is not found word for word in DR3 | the quotation is not found word for word in DR4
+OK   2g questions without the earlier fields: output equal to live QR Check (3 cases, passing and failing)
+OK   3a defender sees: earlier round CR3 quoted, then closing round CR4, then the question
+OK   3b debater prompt carries C4
+OK   3c record and item carry earlier_round and earlier_quote
+OK   3d an ordinary question reads as before ("The judge quotes your round DR3")
+OK   4a judges read C5
+OK   4b the block names a CONTRADICTION QUESTION with both quotes: Q1 -- judge chatgpt to the defender, CONTRADICTION QUESTION, quoting [CR3]: "I grant that this is the ordinary means." and [CR4]: "Genesis 4:1 therefore cannot 
+OK   4c an ordinary question line reads as before
+
+17 OK, 0 FAIL
