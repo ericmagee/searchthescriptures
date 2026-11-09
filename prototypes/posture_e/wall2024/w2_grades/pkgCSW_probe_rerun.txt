@@ -1,0 +1,6 @@
+items 128 differ 0 x-ai items 24 {"Cure_Build":29,"Panel_Cure_Build_1":27,"Panel_Cure_Build_2":27,"Panel_Cure_Build_3":27,"Alternate_Cure_Build":18}
+NM OK   skip | SKIP:{"cure":{"jidx":5,"model":"openai/gpt-6-luna","body":{"model":"openai/gpt-6-luna","messages":[{"role":"user","content":"x"}]},"skip":"no items"}}
+NM OK   deepseek | {"type":"n8n-nodes-base.httpRequest","url":"https://api.deepseek.com/v1/chat/completions","cred":{"httpHeaderAuth":{"id":"R3waesZPK7vpsV8E","name":"DeepSeek Key
+NM OK   removed provider | STOP
+NM OK   alternate jidx 0 | {"type":"n8n-nodes-base.httpRequest","url":"https://openrouter.ai/api/v1/chat/completions","cred":{"httpHeaderAuth":{"id":"3KOXDCYCjkii6i56","name":"OpenRouter"
+NM OK   fum | {"type":"n8n-nodes-base.httpRequest","url":"https://openrouter.ai/api/v1/chat/completions","cred":{"httpHeaderAuth":{"id":"3KOXDCYCjkii6i56","name":"OpenRouter"
