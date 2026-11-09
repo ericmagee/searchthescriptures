@@ -16,5 +16,6 @@
   1. changing the answer check to MEETS; or
   2. changing the collision line to LINK BROKEN for the pressed side, with one FORCED line for that pair as the reason of the GATE line: `FORCED: D<i> vs C<j> -- MEANS [<round>]: "..." -- ANSWER [<round>]: "..." -- FAILS: "..."`, each quotation word for word in the round named (ruling 411). The engine writes the FORCED line under the collision line and derives the counts, the standing and the RESULT.
 - **Several items on one link:** one cured change to LINK BROKEN, with its FORCED line, answers every ANSWER OPEN item that no longer stands after it; those need no GATE line. A change back to MEETS cures only its own item.
+- **With the closing contradiction rule:** a link broken by a confirmed closing contradiction is read as BROKEN for that side; no ANSWER OPEN item is raised on it.
 - **UNCURED:** KEEP, silence, a change that stays UNDERDETERMINED, or LINK BROKEN without a FORCED line that passes.
 - **Limits:** the gate runs only for a seat that had send-back items; an answered-with-a-fit collision does not count toward a defender win (the operator's ruling, row 459; not built).
