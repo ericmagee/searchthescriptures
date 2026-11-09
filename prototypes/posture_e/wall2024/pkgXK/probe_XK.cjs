@@ -1,6 +1,6 @@
 // pkgXK probe: the exact-key pick on real data (run 34016, terra Panel 2) and on K-RUL cards.
 // Run from wall2024/: node pkgXK/probe_XK.cjs
-const fs=require('fs');const {harness}=require('../pkgGSL/harness.cjs');const A='pkgLIB/strip_FUM/patched/',B='pkgLIB/strip_XK/patched/';const R=f=>fs.readFileSync(f,'utf8');
+const fs=require('fs');const {harness}=require('../pkgGSL/harness.cjs');const A='pkgLIB/strip_RPN/patched/',B='pkgLIB/strip_XK/patched/';const R=f=>fs.readFileSync(f,'utf8');
 let ok=0,bad=0;const T=(c,m)=>{console.log((c?'OK   ':'FAIL ')+m);c?ok++:bad++;};
 const c0=JSON.parse(R('/mnt/project-files/wall2024/inputs/34016_Panel_Cure_Call_2_openrouter.json'))[0].data.main[0][0].json;const t0=c0.choices[0].message.content;
 /* terra wrote its reply as JSON {"reasoning": "..."}: the probe edits the reasoning text and writes the JSON back, so the reply stays valid */

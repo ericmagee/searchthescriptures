@@ -1,5 +1,5 @@
 {
- "base": "pkgLIB/strip_FUM",
+ "base": "pkgLIB/strip_RPN",
  "library": {
   "Alt_Gate_Build.js": {
    "base": "de9cece366ec",
@@ -30,8 +30,8 @@
    "patched": "319aaf6c6bc5"
   },
   "Alternate_Payloads.js": {
-   "base": "b3ce8e108502",
-   "patched": "bf22ae4cf20e"
+   "base": "6caf42e0b2eb",
+   "patched": "62012ea0b123"
   },
   "Cure_Build.js": {
    "base": "5372587edda9",
@@ -86,8 +86,8 @@
    "patched": "8dfa6bff60ce"
   },
   "Panel_Payloads.js": {
-   "base": "19b2791853f3",
-   "patched": "dae1ab2619fd"
+   "base": "4fc9fcae4434",
+   "patched": "f5c8b21809be"
   },
   "R2_Alt_Gate_Build.js": {
    "base": "ec0c518ec9ec",
@@ -118,8 +118,8 @@
    "patched": "34151a48a749"
   },
   "R2_Alternate_Payloads.js": {
-   "base": "0d9e77c617d9",
-   "patched": "48f2261c3cac"
+   "base": "b6a39171e510",
+   "patched": "f49ebac3cf29"
   }
  }
 }

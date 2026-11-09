@@ -1,6 +1,6 @@
 # pkgXK: one reader for judge cure replies, on one exact item key (WALL-3627 item 1)
 
-Approved by the operator 16:27Z 11-09 ("all approve. i want all in the next run"). Builder W2. Base: live s78 library (pkgLIB/strip_FUM).
+Approved by the operator 16:27Z 11-09 ("all approve. i want all in the next run"). Builder W2. Base: live s79 library (pkgLIB/strip_RPN; rebased from s78 strip_FUM after pkgRPN went live 11:05 CST).
 
 ## Stage A: exact item key (pkgLIB/strip_XK, build_XK.cjs)
 
