@@ -3,8 +3,8 @@
  "nodes": {
   "Init Seats": {
    "before": "717ed6aebedc",
-   "after": "7ade60372a18",
-   "edits": 4
+   "after": "9fd1a37f3233",
+   "edits": 3
   },
   "Resolve Seats": {
    "before": "1b7062041862",
@@ -13,7 +13,7 @@
   },
   "Accept Build": {
    "before": "2d5bb0d231e3",
-   "after": "b1e960a177a2",
+   "after": "b895e716b100",
    "edits": 3
   },
   "Panel Build": {

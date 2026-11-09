@@ -15,13 +15,13 @@ const QFR="if(!o.reasoning&&/^qwen\\/qwen3\\.8-flash$/.test(String(model)))o.rea
 const QFR_M="if(!o.reasoning&&/^xiaomi\\/mimo-v2\\.6-pro$/.test(String(model)))o.reasoning={effort:'low'}; /* pkgJGR rev 3 (pkgPNL3 rule, mimo only): mimo spent its whole 65,536-token limit as a reserve judge (32471, 32482); low effort leaves room for the verdict */";
 const ORC3="const __orc=(b,model,key)=>{if(!b||!Array.isArray(b.messages))return b;return {...b,session_id:String(key).slice(0,128)};};";
 const ORC3N="const __orc=(b,model,key)=>{if(!b||!Array.isArray(b.messages))return b;const o={...b,session_id:String(key).slice(0,128)};"+QFR+"return o;};";
-const FILL=MIMO&&process.env.JGR_FILL==='luna'; /* pkgJGR rev 4 (Eric 07:27Z 11-09 "add luna 6.1 as a judge"): seat luna fills the panel when a panel seat debates (mimo); never the reserve */
-const TAGL=" /* pkgJGR rev 4 (Eric 07:27Z 11-09): luna judges only when a panel seat debates; never the reserve */";
+const FILL=MIMO&&process.env.JGR_FILL==='luna'; /* pkgJGR rev 4 (operator 07:27Z 11-09 "add luna 6.1 as a judge"): panel terra, sol, luna; mimo the alternate */
+const TAGL=" /* pkgJGR (operator 21:10Z 11-08): gemini and grok judge no more; rev 4 (operator 07:14Z and 07:27Z 11-09): luna is a judge on the panel with terra and sol; mimo is the alternate */";
 const FAML="qwen:'openrouter',sol:'openrouter',luna:'openrouter'}";
 const EDITS=FILL?{
- 'Init Seats':[["const ORDER0=['gemini','chatgpt','qwen','sol','grok'];","const ORDER0=['chatgpt','sol','mimo','luna','qwen'];"+TAG+TAGL],[FAM,FAML],["FAM_PANEL={chatgpt:'openai',sol:'openai'}","FAM_PANEL={chatgpt:'openai',sol:'openai',luna:'openai'}"],["JUDGE_TIME_REMOVED.indexOf(pfree[3])<0&&","JUDGE_TIME_REMOVED.indexOf(pfree[3])<0&&pfree[3]!=='luna'&&"]],
+ 'Init Seats':[["const ORDER0=['gemini','chatgpt','qwen','sol','grok'];","const ORDER0=['chatgpt','sol','luna','mimo','qwen'];"+TAGL],[FAM,FAML],["FAM_PANEL={chatgpt:'openai',sol:'openai'}","FAM_PANEL={chatgpt:'openai',sol:'openai',luna:'openai'}"]],
  'Resolve Seats':[[FAM,FAML]],
- 'Accept Build':[["const ORDER=['gemini','chatgpt','qwen','sol','grok'];","const ORDER=['chatgpt','sol','mimo','luna','qwen'];"+TAG+TAGL],["qwen:'qwen',grok:'grok',sol:'sol'}","qwen:'qwen',grok:'grok',sol:'sol',luna:'luna'}"],[ORC3,ORC3N.replace(QFR,QFR_M)]],
+ 'Accept Build':[["const ORDER=['gemini','chatgpt','qwen','sol','grok'];","const ORDER=['chatgpt','sol','luna','mimo','qwen'];"+TAGL],["qwen:'qwen',grok:'grok',sol:'sol'}","qwen:'qwen',grok:'grok',sol:'sol',luna:'luna'}"],[ORC3,ORC3N.replace(QFR,QFR_M)]],
  'Panel Build':[[ORC4,ORC4+QFR_M]],'Reserve Build':[[ORC4,ORC4+QFR_M]],
  'Build Synthesis':[[FAM,FAML]],'Build Independent Verdict':[[FAM,FAML]],'Build Diagnostic Prompt':[[FAM,FAML]]}:MIMO?{
  'Init Seats':[["const ORDER0=['gemini','chatgpt','qwen','sol','grok'];","const ORDER0=['chatgpt','sol','mimo','qwen'];"+TAG]],
