@@ -16,17 +16,19 @@ const QFR_M="if(/^xiaomi\\/mimo-v2\\.6-pro$/.test(String(model))){o.max_tokens=1
 const ORC3="const __orc=(b,model,key)=>{if(!b||!Array.isArray(b.messages))return b;return {...b,session_id:String(key).slice(0,128)};};";
 const ORC3N="const __orc=(b,model,key)=>{if(!b||!Array.isArray(b.messages))return b;const o={...b,session_id:String(key).slice(0,128)};"+QFR+"return o;};";
 const FILL=MIMO&&process.env.JGR_FILL==='luna'; /* pkgJGR rev 4 (operator 07:27Z 11-09 "add luna 6.1 as a judge"): panel terra, sol, luna; mimo the alternate */
-const ALT=process.env.JGR_ALT||'mimo'; /* pkgJGR rev 6 (operator 08:31Z 11-09, suggestion: "for an alternative we can use Haiku... temporary"): JGR_ALT=haiku seats haiku as the alternate in mimo's place */
+const ALT=process.env.JGR_ALT||'mimo'; /* pkgJGR rev 6 and rev 7 (haiku the alternate only, operator 08:41Z) (operator 08:31Z 11-09, suggestion: "for an alternative we can use Haiku... temporary"): JGR_ALT=haiku seats haiku as the alternate in mimo's place */
 const TAGL=" /* pkgJGR (operator 21:10Z 11-08): gemini and grok judge no more; rev 4 (operator 07:14Z and 07:27Z 11-09): luna is a judge on the panel with terra and sol; "+(ALT==='haiku'?"rev 6 (operator 08:31Z 11-09): haiku is the alternate for now":"mimo is the alternate")+" */";
 const HKT=" /* pkgJGR rev 6 (operator 08:31Z and 08:34Z 11-09: Haiku as the alternate for now, \"given it's Claude vs Claude there's no risk of bias\"): seat haiku is exempt from the family rule (6993) */";
 const HKX_RS=[["S.panel_order.forEach(k=>{if(debFam.indexOf(famOf(k))>=0)","S.panel_order.forEach(k=>{if(k!=='haiku'&&debFam.indexOf(famOf(k))>=0)"],
  ["if(S.single_judge&&debFam.indexOf(famOf(S.single_judge))>=0)","if(S.single_judge&&S.single_judge!=='haiku'&&debFam.indexOf(famOf(S.single_judge))>=0)"],
  ["const reserve=(reserve0&&debFam.indexOf(famOf(reserve0.seat))<0)?reserve0:null;","const reserve=(reserve0&&(reserve0.seat==='haiku'||debFam.indexOf(famOf(reserve0.seat))<0))?reserve0:null;"+HKT],
  [".filter(a=>debFam.indexOf(a.family)<0);",".filter(a=>a.seat==='haiku'||debFam.indexOf(a.family)<0);"]];
+const HKX_IS=[["const pfree=pfree0.filter(s=>!JFL_MOVED.has(s)).concat(pfree0.filter(s=>JFL_MOVED.has(s)));","const pfree=pfree0.filter(s=>!JFL_MOVED.has(s)&&s!=='haiku').concat(pfree0.filter(s=>JFL_MOVED.has(s)&&s!=='haiku')).concat(pfree0.length-pfree0.filter(s=>s==='haiku').length>=3?pfree0.filter(s=>s==='haiku'):[]); /* pkgJGR rev 7 (operator 08:41Z 11-09, \"Alternate only\"): haiku never takes a panel place; it stands after every other seat, moved ones included, and only when three other seats fill the panel */"],
+ ["single_judge:(free.filter(s=>JUDGE_TIME_REMOVED.indexOf(s)<0&&","single_judge:(free.filter(s=>s!=='haiku'&&JUDGE_TIME_REMOVED.indexOf(s)<0&&"]];
 const HKX_G1=["if(deb.some(d=>d.model===a.api_model||d.family===a.family))return 'G1 (family, 6993): '","if(deb.some(d=>d.model===a.api_model||(d.family===a.family&&a.api_model!=='anthropic/claude-haiku-5.5')))return 'G1 (family, 6993; pkgJGR rev 6: haiku exempt, operator 08:34Z 11-09): '"];
 const FAML=ALT==='haiku'?"qwen:'openrouter',sol:'openrouter',luna:'openrouter',haiku:'openrouter'}":"qwen:'openrouter',sol:'openrouter',luna:'openrouter'}";
 const EDITS=FILL?{
- 'Init Seats':[["const ORDER0=['gemini','chatgpt','qwen','sol','grok'];","const ORDER0=['chatgpt','sol','luna','"+ALT+"','qwen'];"+TAGL],[FAM,FAML],["FAM_PANEL={chatgpt:'openai',sol:'openai'}","FAM_PANEL={chatgpt:'openai',sol:'openai',luna:'openai'}"]],
+ 'Init Seats':[["const ORDER0=['gemini','chatgpt','qwen','sol','grok'];","const ORDER0=['chatgpt','sol','luna','"+ALT+"','qwen'];"+TAGL],[FAM,FAML],["FAM_PANEL={chatgpt:'openai',sol:'openai'}","FAM_PANEL={chatgpt:'openai',sol:'openai',luna:'openai'}"]].concat(ALT==='haiku'?HKX_IS:[]),
  'Resolve Seats':[[FAM,FAML]].concat(ALT==='haiku'?HKX_RS:[]),
  'Accept Build':[["const ORDER=['gemini','chatgpt','qwen','sol','grok'];","const ORDER=['chatgpt','sol','luna','"+ALT+"','qwen'];"+TAGL],["qwen:'qwen',grok:'grok',sol:'sol'}","qwen:'qwen',grok:'grok',sol:'sol',luna:'luna'"+(ALT==='haiku'?",haiku:'haiku'":"")+"}"],[ORC3,ORC3N.replace(QFR,QFR_M)]],
  'Panel Build':[[ORC4,ORC4+QFR_M]],'Reserve Build':[[ORC4,ORC4+QFR_M]],
