@@ -1,0 +1,10 @@
+OK   E1 a challenger line with real [DR3] and [DR4] sentences on declared LINK 2 is CONFIRMED for the challenger: CONFIRMED 
+OK   E2 a 2-word earlier quote is refused: the earlier quotation is not found word for word in CR3
+OK   E3 (record) a 3-word earlier fragment that stands in [CR3] passes the form check: CONFIRMED
+OK   E4 (record) a closing quote spliced with "..." from two separate [CR4] sentences passes the word-for-word check: "D6 is kept in its stated ... could not hold the two together."
+OK   E5 one candidate answered both CONFIRMED and NOT A CONTRADICTION: the CONFIRMED line still breaks (no conflict check): CONFIRMED | NOT A CONTRADICTION
+OK   E6 prose around a bulleted line: the line is read, prose ignored
+OK   E7 (record) NONE and a CONFIRMED line in one reply: the CONFIRMED line stands
+OK   E8 a closing quote that stands only in [CR3] but is labelled [CR4] is refused: the closing quotation is not found word for word in CR4
+
+8 OK, 0 FAIL

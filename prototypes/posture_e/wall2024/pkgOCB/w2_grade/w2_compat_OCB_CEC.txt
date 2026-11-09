@@ -1,0 +1,7 @@
+OK   1 B2 form, two X lines: CEC reads both as defender candidates with both quotes: ["X1 LINK 6","X2 LINK 1"]
+OK   2 bullets, bold id, curly quotes and a curly apostrophe in the header are read: ["X1"]
+OK   3 a PREMISE line is read as kind PREMISE
+OK   4 NONE gives no candidate
+OK   5 a section followed by another section: only the X line is a candidate
+
+5 OK, 0 FAIL
