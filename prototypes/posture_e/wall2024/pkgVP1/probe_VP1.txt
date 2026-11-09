@@ -1,0 +1,41 @@
+OK   1a Gate Build on 34108 sends one gate call, to luna (got ["luna"])
+OK   1b luna: one item, E-GATE M, LIVE, key ANSWER OPEN|LUKE 1:34|CR3|D1
+OK   1c its lines are the Luke 1:34 answer check and D1 vs C1
+     WHY: your ANSWER CHECK on Luke 1:34 [CR3] grades the answer MISSES, and an answer that MISSES or FAILS leaves the witness unanswered (md_notes_rulings 372). The list that closes [DR2] carries Luke 1:34 as a proven press against LINK 1 (D1), and a proven press left unanswered is a BROKEN ground (ruling 392); yet no D1 collision line is graded DEFENDER LINK BROKEN: D1 vs C1 is graded UNDERDETERMINED. Change one of these lines so they agree.
+     MSG has the item: true
+OK   1d chatgpt: no gate item (kept or wrote MEETS)
+OK   1d sol: no gate item (kept or wrote MEETS)
+OK   2a KEEP: UNCURED, counted (KEEP does not cure a CONTRADICTION item (2243): a line must change)
+OK   2b silence: UNCURED, counted (no GATE line for this item (silence counts))
+OK   2c the collision line rewritten but still UNDERDETERMINED: UNCURED (the corrected text still raises it)
+     2d answer check changed back to MEETS: CURED (the gate change was applied and the item is no longer raised) uncured counted 0 fresh []
+OK   2d the answer check changed back to MEETS clears the contradiction (the judge keeps the decision, ruling 428; part 3 gives the enforcer its say)
+     2e D1 vs C1 changed to DEFENDER LINK BROKEN with a true FORCED line: CURED (the gate change was applied and the item is no longer raised) uncured counted 0; fresh ["RESULT DIFFERS E-APPLY S3"]
+OK   2e the BROKEN way out: collision line changed to DEFENDER LINK BROKEN with a FORCED line whose three quotations stand in the rounds: CURED, nothing counted
+OK   2f the corrected text holds the BROKEN line with the FORCED line under it
+OK   2g the engine derives the verdict from the corrected lines: BROKEN, RESULT CHALLENGER WINS (was HELD)
+     derived fields: {"verdict_tag":"BROKEN","defense_standing":"PROP-DEPENDENT","conceded_links":0,"challenge_standing":"SELF-SUPPORTED","challenger_conceded_links":0} trig ["CHANGED D1 vs C1 (UNDERDETERMINED to DEFENDER LINK BROKEN)"]
+     2h BROKEN with no FORCED line: UNCURED (the gate change raised a new LIVE item: RULE K-G4 -- DEBATE RULE VIOLATION (K-G4) -- D1 vs C1 DEFENDER LINK BROKEN counts a witness as unanswered; the rule counts it only with the quoted pressing sentence and its round, and only for a verse a listed premise carries under PRESSED WITH (ruling  (W3 2341: a change that raises a new LIVE K item does not cure; counted once, here)) uncured counted 1; fresh ["RESULT DIFFERS E-APPLY S3","RULE K-G4 K re-read by G1"]
+OK   2h BROKEN with no FORCED line: UNCURED, counted once (the K rules read the new BROKEN line)
+     2i BROKEN with a FORCED line whose FAILS quotation is not in [CR3]: UNCURED (the gate change raised a new LIVE item: RULE K-G4 -- DEBATE RULE VIOLATION (K-G4) -- D1 vs C1 DEFENDER LINK BROKEN counts a witness as unanswered; the rule counts it only with the quoted pressing sentence and its round, and only for a verse a listed premise carries under PRESSED WITH (ruling  (W3 2341: a change that raises a new LIVE K item does not cure; counted once, here)) uncured counted 1; fresh ["RESULT DIFFERS E-APPLY S3","RULE K-G4 K re-read by G1"]
+OK   2i a FORCED line that fails the K-F test is not added: UNCURED
+OK   2j a FORCED line for another pair is not added: UNCURED
+     2k collision line changed to CHALLENGER LINK BROKEN: UNCURED (the gate change raised a new LIVE item: CONTRADICTION -- your ANSWER CHECK on Luke 1:34 [CR3] grades the answer MISSES, so that press stands for the challenger; yet D1 vs C1 is graded CHALLENGER LINK BROKEN with Luke 1:34 among its footing or ground. Change one of the two lines so they agree.; RULE K-G4 -- DEBATE RULE VIOLATION (K-G4) -- D1 vs C1 CHALLENGER LINK BROKEN counts a witness as unanswered; the rule counts ) uncured counted 1; fresh ["CONTRADICTION E-GATE B by G1","RULE K-G4 K re-read by G1"]
+OK   2k the FORCED line is not added to a line graded for the other side
+OK   2l MEETS change with a FORCED line in the reason: the FORCED line is not added
+OK   3a luna corrected text: 1 raised
+OK   3b no rounds read: nothing raised
+OK   3c D1 vs C1 graded DEFENDER LINK BROKEN: not raised
+OK   3d D1 vs C1 graded CHALLENGER LINK BROKEN: not raised (no open line)
+OK   3e the answer check graded MEETS: not raised
+OK   3f the answer check graded FAILS: raised
+OK   3g a verse no premise list carries (Luke 1:38): not raised
+OK   3h the [DR2] entry without its LINK label ties to no link: not raised
+OK   3i the entry labelled LINK 3 ties the verse to D3 (ANSWER OPEN|LUKE 1:34|CR3|D3)
+OK   3j luna has a [DR3] answer check on Luke 1:35
+     mirror keys: ANSWER OPEN|LUKE 1:35|DR3|C1 [D1 vs C1 ; D2 vs C1 ; D3 vs C1 ] | ANSWER OPEN|LUKE 1:35|DR3|C2 [D4 vs C2 ] | ANSWER OPEN|LUKE 1:35|DR3|C3 [D4 vs C3 ] | ANSWER OPEN|LUKE 1:35|DR3|C5 [D6 vs C5 ]
+OK   3k challenger mirror: raised against the C links whose entries carry Luke 1:35, each with its own open lines
+OK   3l the same answer check written twice: raised once
+OK   3m MEANS: NONE (no meaning pressed): not raised
+
+probe_VP1: 30 OK, 0 FAIL

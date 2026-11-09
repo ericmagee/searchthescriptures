@@ -1,0 +1,22 @@
+{
+ "why": "pkgVP1 adds the LIVE gate item E-GATE M (ANSWER OPEN). In a saved run where a judge gets such an item, the set of gate calls changes, and the saved gate replies are paired to calls by position, so the Gate Build, Gate Record and Merge outputs of that run cannot be compared with the base. The gate without targets (gate_VP1_notargets.txt) shows every difference lies in those nodes and only in runs with an E-GATE M item. In Alternate Merge 1 the rows of other rules (K-S3, K-W and others) also move in those runs, because the seat's gate outcome there rests on the mispaired replies; they are allowed for that node only.",
+ "items": [
+  {
+   "rule": "E-GATE",
+   "node": "Gate Record|Alternate Merge"
+  },
+  {
+   "rule": "E-APPLY",
+   "node": "Gate Record|Alternate Merge"
+  },
+  {
+   "node": "^Alternate Merge 1$"
+  }
+ ],
+ "allow_lines": [
+  {
+   "node": "Gate Build|Gate Record|Alternate Merge",
+   "re": "."
+  }
+ ]
+}
