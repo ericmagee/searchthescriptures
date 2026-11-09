@@ -1,0 +1,5 @@
+saved openrouter cure replies 156, finish_reason length 0
+openai__gpt-6.1-terra: whole reply -> 3 lines read; cut at 60% -> 0 lines read (returned unchanged: true)
+openai__gpt-6.1-sol: whole reply -> 3 lines read; cut at 60% -> 0 lines read (returned unchanged: true)
+openai__gpt-6-luna: whole reply -> 3 lines read; cut at 60% -> 0 lines read (returned unchanged: true)
+anthropic__claude-haiku-5.5: whole reply -> 3 lines read; cut at 60% -> 0 lines read (returned unchanged: true)
