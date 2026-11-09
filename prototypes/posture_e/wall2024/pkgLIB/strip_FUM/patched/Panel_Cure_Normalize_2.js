@@ -1090,7 +1090,9 @@ const cureId=(d,c)=>'D'+d+' vs C'+c;
 function cureRest(o,x){const V=s=>String(s==null?'':s).toUpperCase().replace(/\s+/g,' ').trim();const L=V(x.link);const ex=o.restated.filter(r=>V(r.link)===L);if(ex.length)return ex;
  {const wr=o.withdrawn.filter(w=>w.reason&&V(w.link)===L).map(w=>({link:w.link,grade:w.regrade||'UNDERDETERMINED',text:w.link+' '+w.reason,line:w.line,retraction:true}));if(wr.length)return wr.slice(0,1);}
  const m=L.match(/^([DC])(\d+)$/);if(!m)return ex;return o.restated.filter(r=>{const k=V(r.link).match(/^D(\d+) VS C(\d+)$/);return !!k&&(m[1]==='D'?k[1]===m[2]:k[2]===m[2]);});}
-const cureUnwrap=t=>{try{const j=JSON.parse(String(t).trim().replace(/^```(?:json)?\s*|\s*```$/g,''));if(j&&typeof j==='object'){for(const k of ['reasoning','reason','answer'])if(typeof j[k]==='string')return j[k];}}catch(e){}return t;};
+const cureUnwrap=t=>{try{const j=JSON.parse(String(t).trim().replace(/^```(?:json)?\s*|\s*```$/g,''));if(j&&typeof j==='object'){for(const k of ['reasoning','reason','answer'])if(typeof j[k]==='string')return j[k];}}catch(e){}return cjrLoose2024(t);}; /* pkgCJR */
+function cjrLoose2024(t){const z=String(t==null?'':t).trim().replace(/^```(?:json)?\s*|\s*```$/g,'');if(z[0]!=='{'||!/\\n/.test(z))return t;const m=z.match(/"(?:reasoning|reason|answer)"\s*:\s*"/);if(!m)return t; /* pkgCJR: invalid JSON reply, read its reasoning string as gateRead2024 does */
+ return z.slice(m.index+m[0].length).replace(/"\s*\}\s*$/,'').replace(/\\n/g,'\n').replace(/\\"/g,'"');}
 function cureLines(text){text=cureUnwrap(text);const o={restated:[],withdrawn:[],result:[],count:[],standing:[],pressed:[],short:[],statement:[],response:[],malformed:[],prose:[],cited:[]};
  const LAB=/^(REASONING|KEYSTONE|RESULT|DEFENSE STANDING|CHALLENGE STANDING|CHALLENGER CONCEDED LINKS|CONCEDED LINKS|DEFENDER CHAIN MARK|CHALLENGER CHAIN MARK)\s*[:\-–—]+\s*/i;
  const pid=p=>{const m=String(p||'').match(/^D(\d+)\s+vs\.?\s+C(\d+)$/i);return m?cureId(m[1],m[2]):null;};
@@ -1272,7 +1274,7 @@ const respOf=(x)=>{const lb=U(cureLabel(x));const rk=U(x.rule||'');const ruleOk=
    const bad=status==='UNCURED'?o.malformed.find(l=>cureOwn(l,x)):null;
    return {...x,judge_statement:stmtOf(x),response:respOf(x),status,why:(why||'')+(bad?(why?'; ':'')+'malformed line: '+bad.slice(0,160):'')||null,statement:(l=>l&&l.length?l.join(' / '):null)(status==='CURED'&&/^retracted/.test(why||'')&&o.result.length===1?(lines||[]).concat([o.result[0].line]):lines),kinds:kinds||[]};};
   if(!reply||!reply.ok)return res('UNCURED','cure call failed: '+(reply?reply.why:'no reply'),null);
-  if(!respOf(x)&&!(x.rule==='K-B'&&(wd.has(U(x.link))||cureRest(o,x).length))){const z=res('UNCURED','no written response',null);z.silent=!o.malformed.find(l=>cureOwn(l,x));return z;}
+  if(!respOf(x)&&!(x.rule==='K-B'&&(wd.has(U(x.link))||cureRest(o,x).length))&&!(x.rule==='K-RUL'&&krulCure(x,reply.text,R,'').st==='CURED')){ /* pkgKRC */const z=res('UNCURED','no written response',null);z.silent=!o.malformed.find(l=>cureOwn(l,x));return z;}
   if(x.link&&rxNoRes.has(U(x.link)))return res('UNCURED','RETRACTED without exactly one CORRECTED RESULT line',o.withdrawn.filter(w=>U(w.link)===U(x.link)).map(w=>w.line));
   if(x.link&&rxNoWhy.has(U(x.link)))return res('UNCURED','RETRACTED with no reason naming the round and its words or verse (rulings 105)',o.withdrawn.filter(w=>U(w.link)===U(x.link)).map(w=>w.line));
   const ORD=['CR1','DR1','CR2','DR2','CR3','DR3','CR4','DR4'];const ansK=pr=>(x.side==='DEFENDER'?['CR2','CR3','CR4']:['DR1','DR2','DR3']).filter(  k=>!pr||ORD.indexOf(k)>ORD.indexOf(pr));
@@ -1643,12 +1645,23 @@ function fumAsk2024(src,reply,or){try{if(!or||!src||!src.body||!Array.isArray(sr
  const P=['FOLLOW-UP, asked once. The items below have no line in your reply above that can be counted. Every other item stands as your reply above left it. Answer only the items below, each on its own line beginning RESPONSE:, in the form the request above gives, and write nothing else.'];
  if(miss.length)P.push('','Items your reply left with no RESPONSE line ('+miss.length+'):',...miss.map(x=>'- '+lab(x)),'For each, write: RESPONSE: <the item, as labelled above> | <your answer>. If you hold the item wrong, write: RESPONSE: <the item, as labelled above> | NOT HELD: <your reason>.'+(miss.some(x=>x.rule==='K-RUL')?' For a K-RUL item, write its RESPONSE line and under it the five-line card, one field to a line: RULING, CLAIM, NAMED BY, RULE, APPLIED.':''));
  if(noq.length)P.push('','Items whose NOT HELD reason does not quote the flagged sentence ('+noq.length+'):',...noq.map(x=>'- '+lab(x)),'For each, write its RESPONSE line again: RESPONSE: <the item, as labelled above> | NOT HELD: <your reason>, quoting at least six words in a row of the flagged sentence (all of it when shorter).');
- return {asked:miss.map(x=>'NO LINE '+lab(x)).concat(noq.map(x=>'NO QUOTE '+lab(x))),first:reply,body:Object.assign({},src.body,{messages:src.body.messages.concat([{role:'assistant',content:String(reply.text==null?'':reply.text)},{role:'user',content:P.join('\n')}])})};
+ return {asked:miss.map(x=>'NO LINE '+lab(x)).concat(noq.map(x=>'NO QUOTE '+lab(x))),items:miss.concat(noq).map(x=>({rule:x.rule,side:x.side||null,link:x.link==null?null:x.link})),first:reply,body:Object.assign({},src.body,{messages:src.body.messages.concat([{role:'assistant',content:String(reply.text==null?'':reply.text)},{role:'user',content:P.join('\n')}])})};
 }catch(e){return null;}}
-/* pkgFUM: the follow-up reply is read first, then the first reply; a failed follow-up leaves the first reply as it was. */
-function fumJoin2024(r1,r2){if(!r1||!r1.ok)return r1||r2||{ok:false,text:null,why:'no reply'};if(!r2||!r2.ok)return Object.assign({},r1,{fum:{ok:false,why:r2?String(r2.why||'no reply'):'no reply'}});
- return Object.assign({},r1,{text:String(cureUnwrap(r2.text))+'\n\n'+String(cureUnwrap(r1.text)),fum:{ok:true,finish:r2.finish||null}});}
+/* pkgFUM rev 2 (W1 3581): from the follow-up, only the lines of an asked item are read: its RESPONSE and STATEMENT lines (labelled with the item),
+   the five-line card under an asked K-RUL item's RESPONSE line, and a RETRACTED, RESTATED, PRESSED or SHORT line naming an asked item's own D<n> vs C<m> link.
+   Everything else in the follow-up (other items, CORRECTED RESULT/COUNT/STANDING, prose) is dropped, so a follow-up cannot change an item it was not asked about. */
+function fumKey2024(x){const k=String(x&&x.rule==='K-G3'?(x.side||'')+' STANDING':(x&&x.link!=null?x.link:'')).toUpperCase().replace(/:/g,' ').replace(/\s+/g,' ').trim();return k?new RegExp('(?:^|[^A-Z0-9])'+k.replace(/[.*+?^$(){}|[\]\\]/g,'\\$&')+'(?![A-Z0-9])'):null;}
+function fumKeep2024(text,items){const T=String(text==null?'':text).split('\n');const K=(items||[]).map(x=>({x,re:fumKey2024(x)})).filter(z=>z.re);const out=[];let card=false;
+ const N=l=>String(l).replace(/\*\*/g,'').replace(/\u0060/g,'').replace(/^\s*(?:[-*•>]|\d+[.)])?\s*/,'');
+ for(const raw of T){const l=N(raw);const U=l.toUpperCase().replace(/\s+/g,' ');
+  if(card&&/^(?:RULING|CLAIM|NAMED BY|RULE|APPLIED)\b/.test(U)){out.push(raw);continue;}card=false;
+  const m=U.match(/^(RESPONSE|STATEMENT)\s*:\s*([^|]*)\|/);if(m){const z=K.find(z=>z.re.test(' '+m[2].replace(/:/g,' ').replace(/\s+/g,' ').trim()+' '));if(z){out.push(raw);if(m[1]==='RESPONSE'&&z.x.rule==='K-RUL')card=true;}continue;}
+  const r=U.match(/^(RETRACTED|RESTATED|PRESSED|SHORT)\s*:\s*(.*)$/);if(r){const d=r[2].match(/\bD\d+\s+VS\.?\s+C\d+\b/);if(d&&K.some(z=>/^D\d+ VS C\d+$/.test(String(z.x.link||'').toUpperCase().replace(/\s+/g,' '))&&String(z.x.link).toUpperCase().replace(/\s+/g,' ')===d[0].replace(/VS\./,'VS').replace(/\s+/g,' ')))out.push(raw);}}
+ return out.join('\n');}
+/* pkgFUM: the kept follow-up lines are read first, then the first reply; a failed follow-up leaves the first reply as it was. */
+function fumJoin2024(r1,r2,items){if(!r1||!r1.ok)return r1||r2||{ok:false,text:null,why:'no reply'};if(!r2||!r2.ok)return Object.assign({},r1,{fum:{ok:false,why:r2?String(r2.why||'no reply'):'no reply'}});
+ const k=fumKeep2024(String(cureUnwrap(r2.text)),items);return Object.assign({},r1,{text:(k?k+'\n\n':'')+String(cureUnwrap(r1.text)),fum:{ok:true,finish:r2.finish||null,kept:k?k.split('\n').length:0}});}
 return $input.all().map((it,i)=>{let src=null;try{src=$('Panel Cure Build 2').itemMatching(i).json.cure;}catch(e){src=null;}
  if(!src){try{src=$('Panel Cure Build 2').all()[i].json.cure;}catch(e){src=null;}}
- const __fd=!!(it.json&&it.json.fum_done);const reply=__fd?fumJoin2024(it.json.fum_first,cureText(it.json.fum_call||{})):(it.json&&it.json.cure&&it.json.cure.skip)?{ok:false,text:null,why:it.json.cure.skip}:cureText(it.json);const __fum=__fd?null:fumAsk2024(src,reply,src&&src.jidx===5); /* pkgFUM */
+ const __fd=!!(it.json&&it.json.fum_done);const reply=__fd?fumJoin2024(it.json.fum_first,cureText(it.json.fum_call||{}),it.json.fum_items):(it.json&&it.json.cure&&it.json.cure.skip)?{ok:false,text:null,why:it.json.cure.skip}:cureText(it.json);const __fum=__fd?null:fumAsk2024(src,reply,src&&src.jidx===5); /* pkgFUM */
  return {json:{...(__fum?{fum:__fum}:{}),cure:(c=>{if(!c||!c.body)return c;const p=enfPrompt(c.body);return p==null?c:Object.assign({},c,{body:{messages:[{role:'user',content:p}]}});})(src||(it.json&&it.json.cure)||null),reply}};  });

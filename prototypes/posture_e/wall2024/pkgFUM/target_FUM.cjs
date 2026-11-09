@@ -1,4 +1,4 @@
-// pkgFUM write target: fetchback_live_s75 + pkgLIB_FUM stubs (E4 nodes from pkgLIB_FUM/e4_rebase) + the 18 FUM nodes and their wiring (plan_FUM.json).
+// pkgFUM write target: fetchback_live_s76 + pkgLIB_FUM stubs (E4 nodes from pkgLIB_FUM/e4_rebase) + the 18 FUM nodes and their wiring (plan_FUM.json).
 // Run from wall2024/: node pkgFUM/target_FUM.cjs <out.json>. Prints every jsCode hash change and checks the wiring.
 const fs=require('fs'),cr=require('crypto');const h=s=>cr.createHash('sha256').update(s).digest('hex').slice(0,12);
 const plan=JSON.parse(fs.readFileSync('pkgFUM/plan_FUM.json','utf8'));const W=JSON.parse(fs.readFileSync(plan.fetchback,'utf8'));if(W.versionId!==plan.fetchback_version)throw new Error('fetchback version');

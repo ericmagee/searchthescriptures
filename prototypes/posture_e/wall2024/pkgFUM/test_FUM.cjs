@@ -1,7 +1,7 @@
 // pkgFUM test (W3 Wall 3552): replay run 34016 row 27609 (luna, Panel Cure 1) with the follow-up answered: 27621 (K-W CHALLENGER DR3 LINK 3 #3) cures;
 // a reply that answers everything (terra, sol) sends no follow-up; the Haiku alternate reply (row 27957) is asked once; a failed follow-up leaves the first reply.
 // Run from wall2024/: node pkgFUM/test_FUM.cjs
-const fs=require('fs');const {harness}=require('../pkgGSL/harness.cjs');const A='pkgLIB/strip_WLG/patched/',B='pkgLIB/strip_FUM/patched/';const R=f=>fs.readFileSync(f,'utf8');
+const fs=require('fs');const {harness}=require('../pkgGSL/harness.cjs');const A='pkgLIB/strip_CJR_KRC/patched/',B='pkgLIB/strip_FUM/patched/';const R=f=>fs.readFileSync(f,'utf8');
 let ok=0,bad=0;const out=[];const log=s=>{out.push(s);console.log(s);};const T=(c,m)=>{if(c){ok++;log('OK   '+m);}else{bad++;log('FAIL '+m);}};
 const st=x=>JSON.stringify(x,(k,v)=>k==='at'?undefined:v);
 const H=harness('34016');const MG=JSON.parse(R('pkgFUM/plan_FUM.json')).nodes_added.find(n=>n.name==='FUM Merge Panel 1').parameters.jsCode;
@@ -12,7 +12,7 @@ for(const n of [2,3]){const a=H(R(A+'Panel_Cure_Normalize_'+n+'.js'),'Panel Cure
 const a1=H(R(A+'Panel_Cure_Normalize_1.js'),'Panel Cure Call 1 openrouter'),b1=H(R(B+'Panel_Cure_Normalize_1.js'),'Panel Cure Call 1 openrouter');const F=b1[0].json.fum;
 T(!!F&&st(a1[0].json.reply)===st(b1[0].json.reply)&&st(a1[0].json.cure)===st(b1[0].json.cure),'Panel Cure Normalize 1 (luna): reply and cure unchanged, follow-up built');
 log('     asked: '+JSON.stringify(F&&F.asked));
-T(F&&F.asked.length===2&&/^NO LINE K-W CHALLENGER DR3 LINK 3 #3: /.test(F.asked[0])&&/^NO LINE K-RUL keystone: /.test(F.asked[1]),'luna follow-up asks exactly 27621 (K-W CHALLENGER DR3 LINK 3 #3) and 27622 (K-RUL keystone), nothing else');
+T(F&&F.asked.length===1&&/^NO LINE K-W CHALLENGER DR3 LINK 3 #3: /.test(F.asked[0])&&F.items.length===1,'luna follow-up asks exactly 27621 (K-W CHALLENGER DR3 LINK 3 #3), nothing else (27622 K-RUL keystone is cured by its card since KRC, live s76)');
 const src=H(R(A+'Panel_Cure_Normalize_1.js'),'Panel Cure Call 1 openrouter')[0];const M0=JSON.parse(R('/mnt/project-files/wall2024/inputs/34016_Panel_Cure_Build_1.json'))[0].data.main[0][0].json.cure.body.messages;
 const M=F.body.messages;T(M.length===M0.length+2&&st(M.slice(0,M0.length))===st(M0)&&M[M0.length].role==='assistant'&&M[M0.length].content===a1[0].json.reply.text&&M[M0.length+1].role==='user','follow-up body = the same conversation + the judge\'s own reply + one user turn (model '+F.body.model+')');
 log('     follow-up prompt:\n'+M[M.length-1].content.split('\n').map(l=>'       | '+l).join('\n'));
@@ -22,7 +22,7 @@ const call2={id:'gen-test',choices:[{index:0,finish_reason:'stop',message:{role:
 const H2=harness('34016',{'FUM Needed? Panel 1':b1,'FUM Call Panel 1 openrouter':[{json:call2}]});const mg=H2(MG,'FUM Call Panel 1 openrouter');
 T(mg[0].json.fum_done===true&&mg[0].json.fum_first&&mg[0].json.fum_first.text===a1[0].json.reply.text,'FUM Merge Panel 1 carries the first reply and the follow-up call');
 const H3=harness('34016',{'FUM Merge Panel 1':mg});const n2=H3(R(B+'Panel_Cure_Normalize_1.js'),'FUM Merge Panel 1');
-T(!n2[0].json.fum&&n2[0].json.reply.ok&&n2[0].json.reply.fum&&n2[0].json.reply.fum.ok&&n2[0].json.reply.text.startsWith(ans)&&n2[0].json.reply.text.endsWith(a1[0].json.reply.text)&&st(n2[0].json.cure)===st(a1[0].json.cure),'Normalize run 2: no second follow-up; reply = follow-up then first reply; cure unchanged');
+T(!n2[0].json.fum&&n2[0].json.reply.ok&&n2[0].json.reply.fum&&n2[0].json.reply.fum.ok&&n2[0].json.reply.fum.kept===1&&n2[0].json.reply.text===ans.split('\n')[0]+'\n\n'+a1[0].json.reply.text&&st(n2[0].json.cure)===st(a1[0].json.cure),'Normalize run 2: no second follow-up; reply = the asked item\'s line only (the unasked K-RUL line dropped), then the first reply; cure unchanged');
 const chk=(n1)=>{const Hc=harness('34016',{'Panel Cure Normalize 1':n1});const o=Hc(R(B+'Panel_Cure_Check.js'),'Panel Cure Normalize 3');return o[0].json.enforcer_log.filter(r=>r.judge_model==='openai/gpt-6-luna');};
 const live=chk(a1),fu=chk(n2);const g=(L,it)=>(L.find(r=>r.item===it)||{});
 log('     luna live:      '+live.map(r=>r.rule+' '+r.item+' '+r.cure_status).filter(s=>!/ CURED$/.test(s)).join('; '));
@@ -52,4 +52,17 @@ log('     Haiku asked: '+JSON.stringify(hb[0].json.fum&&hb[0].json.fum.asked.map
  const q2=harness('34016',{'FUM Merge Panel 2':mg2,'Panel Cure Call 2 openrouter':[{json:c}]})(R(B+'Panel_Cure_Normalize_2.js'),'FUM Merge Panel 2');
  const ck=n2=>harness('34016',{'Panel Cure Normalize 2':n2})(R(B+'Panel_Cure_Check.js'),'Panel Cure Normalize 3')[0].json.enforcer_log.filter(r=>r.judge_model==='openai/gpt-6.1-terra'&&r.item==='DEFENDER CR2 D3 #3');
  const before=ck(q1),after=ck(q2);T(before.length===1&&before[0].cure_status==='UNCURED'&&after.length===1&&after[0].cure_status==='CURED','DEFENDER CR2 D3 #3: UNCURED without the quote -> CURED with the follow-up ('+(after[0]||{}).cure_reason+')');}
+// 8. W1 3581 case B: the follow-up answers 27621 and ALSO writes lines for an item it was not asked about (D2 #2), a RETRACTED line and a CORRECTED RESULT: all dropped
+{const ansB=ans.split('\n')[0]+'\nRESPONSE: K-W DEFENDER CR2 D2 #2 | ACCEPTED: the mark is right.\nSTATEMENT: K-W DEFENDER CR2 D2 #2 | accepted.\nRETRACTED: D2 vs C1 because the round answered it.\nCORRECTED RESULT: NOT HELD\nCORRECTED COUNT: DEFENDER 3\nSome prose.';
+ const HB=harness('34016',{'FUM Needed? Panel 1':b1,'FUM Call Panel 1 openrouter':[{json:{choices:[{finish_reason:'stop',message:{role:'assistant',content:ansB}}]}}]});const mB=HB(MG,'FUM Call Panel 1 openrouter');
+ const nB=harness('34016',{'FUM Merge Panel 1':mB})(R(B+'Panel_Cure_Normalize_1.js'),'FUM Merge Panel 1');T(nB[0].json.reply.text===ans.split('\n')[0]+'\n\n'+a1[0].json.reply.text,'case B: only the 27621 line is kept from the follow-up');
+ const cB=chk(nB);const pB=harness('34016',{'Panel Cure Normalize 1':nB})(R(B+'Panel_Cure_Check.js'),'Panel Cure Normalize 3')[0].json,p2=harness('34016',{'Panel Cure Normalize 1':n2})(R(B+'Panel_Cure_Check.js'),'Panel Cure Normalize 3')[0].json;
+ T(g(cB,'DEFENDER CR2 D2 #2').cure_status==='CURED'&&g(cB,'CHALLENGER DR3 LINK 3 #3').cure_status==='CURED'&&st(pB.summary)===st(p2.summary)&&st(pB.bodies)===st(p2.bodies),'case B: D2 #2 keeps CURED, 27621 CURED, summary and bodies equal to the clean follow-up');}
+// 9. the kept lines for an asked K-RUL item: its RESPONSE line and the card under it; a card for another subject is dropped
+{const k=new Function(R(B+'Panel_Cure_Normalize_1.js').match(/function fumKey2024[\s\S]*?\n(?=\/\* pkgFUM: the kept)/)[0]+';return fumKeep2024;')();
+ const t='RESPONSE: K-RUL keystone | card below\nRULING -- keystone -- HELD\nCLAIM: x\nNAMED BY: "y"\nRULE: z\nAPPLIED: w\nRESPONSE: K-RUL DEFENDER premise 4 | other\nRULING -- DEFENDER premise 4 -- HELD\nRESPONSE: K-W CHALLENGER DR3 LINK 3 #33 | NOT HELD: other item';
+ const o=k(t,[{rule:'K-RUL',side:'JUDGE',link:'keystone'}]);T(o===t.split('\n').slice(0,6).join('\n'),'K-RUL keystone: its RESPONSE line and five-line card kept; another K-RUL item and its card dropped; "#33" is not "#3"');
+ T(k(t,[{rule:'K-W',side:'CHALLENGER',link:'CHALLENGER DR3 LINK 3 #3'}])==='','"LINK 3 #3" does not match "LINK 3 #33"');}
+{const k=new Function(R(B+'Panel_Cure_Normalize_1.js').match(/function fumKey2024[\s\S]*?\n(?=\/\* pkgFUM: the kept)/)[0]+';return fumKeep2024;')();
+ T(k('RESPONSE: K-S3 S3 DEFENDER CR4 #1 | NOT HELD: x\nRESPONSE: K-S3 S3 DEFENDER CR4 #2 | NOT HELD: y',[{rule:'K-S3',side:'DEFENDER',link:'S3 DEFENDER CR4: #1'}])==='RESPONSE: K-S3 S3 DEFENDER CR4 #1 | NOT HELD: x','K-S3 "S3 DEFENDER CR4: #1" matches a label written without the colon, and not #2');}
 log('TOTAL '+ok+' OK, '+bad+' FAIL');fs.writeFileSync('pkgFUM/test_FUM.txt',out.join('\n')+'\n');

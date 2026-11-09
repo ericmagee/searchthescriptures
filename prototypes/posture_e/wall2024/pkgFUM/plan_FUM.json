@@ -1,121 +1,121 @@
 {
- "base": "pkgLIB/strip_WLG",
+ "base": "pkgLIB/strip_CJR_KRC",
  "library": {
   "Alt_Gate_Build.js": {
-   "base": "78d8564e22d3",
-   "patched": "78d8564e22d3"
+   "base": "94465e1696e0",
+   "patched": "94465e1696e0"
   },
   "Alt_Gate_Record.js": {
-   "base": "5083a0e947dd",
-   "patched": "5083a0e947dd"
+   "base": "923f962fd23b",
+   "patched": "923f962fd23b"
   },
   "Alternate_Build.js": {
-   "base": "59bddc41bc57",
-   "patched": "59bddc41bc57"
+   "base": "73a58c6b15af",
+   "patched": "73a58c6b15af"
   },
   "Alternate_Cure_Build.js": {
-   "base": "9190411cd55e",
-   "patched": "9190411cd55e"
+   "base": "d435adec6e4c",
+   "patched": "d435adec6e4c"
   },
   "Alternate_Cure_Normalize.js": {
-   "base": "32f231f89d49",
-   "patched": "0d12be1c4fe4"
+   "base": "699a74c919c5",
+   "patched": "a265255e5a96"
   },
   "Alternate_Merge_1.js": {
-   "base": "28752816f152",
-   "patched": "28752816f152"
+   "base": "89561916c906",
+   "patched": "89561916c906"
   },
   "Alternate_Merge_Seat.js": {
-   "base": "ab2c40bc9dc8",
-   "patched": "ab2c40bc9dc8"
+   "base": "8e1bf9ca3951",
+   "patched": "8e1bf9ca3951"
   },
   "Alternate_Payloads.js": {
    "base": "cb2eee3c13d7",
    "patched": "cb2eee3c13d7"
   },
   "Cure_Build.js": {
-   "base": "de803e1d0a74",
-   "patched": "de803e1d0a74"
+   "base": "1dbc1784f3cb",
+   "patched": "1dbc1784f3cb"
   },
   "Cure_Check.js": {
-   "base": "6559e260f502",
-   "patched": "6559e260f502"
+   "base": "9672326f3a4e",
+   "patched": "9672326f3a4e"
   },
   "Cure_Normalize.js": {
-   "base": "21686c4237ef",
-   "patched": "b5d2ec9722ce"
+   "base": "09c9b4ede227",
+   "patched": "2d2744f7fa43"
   },
   "Extract_Independent_Verdict.js": {
    "base": "effed5dca41d",
    "patched": "effed5dca41d"
   },
   "Gate_Build.js": {
-   "base": "1dc229efa944",
-   "patched": "1dc229efa944"
+   "base": "19371efb1f09",
+   "patched": "19371efb1f09"
   },
   "Gate_Record.js": {
-   "base": "a8295bad9352",
-   "patched": "a8295bad9352"
+   "base": "038e9ba52d7c",
+   "patched": "038e9ba52d7c"
   },
   "Panel_Cure_Build_1.js": {
-   "base": "618346af6b77",
-   "patched": "618346af6b77"
+   "base": "fdfad65bbd91",
+   "patched": "fdfad65bbd91"
   },
   "Panel_Cure_Build_2.js": {
-   "base": "769a9243f4b6",
-   "patched": "769a9243f4b6"
+   "base": "d79f87682be8",
+   "patched": "d79f87682be8"
   },
   "Panel_Cure_Build_3.js": {
-   "base": "4f36f10f9738",
-   "patched": "4f36f10f9738"
+   "base": "b91556b7f8fe",
+   "patched": "b91556b7f8fe"
   },
   "Panel_Cure_Check.js": {
-   "base": "6efc7fc8370b",
-   "patched": "6efc7fc8370b"
+   "base": "e31774a80a43",
+   "patched": "e31774a80a43"
   },
   "Panel_Cure_Normalize_1.js": {
-   "base": "547c260c3225",
-   "patched": "b02ff81a9336"
+   "base": "92dfa691539b",
+   "patched": "a685bb89a471"
   },
   "Panel_Cure_Normalize_2.js": {
-   "base": "11e71899be89",
-   "patched": "fb1e7c8fdff5"
+   "base": "987155c51bcc",
+   "patched": "99ff534b09fb"
   },
   "Panel_Cure_Normalize_3.js": {
-   "base": "e568f0d3cff1",
-   "patched": "355d9455a574"
+   "base": "d22c1999401c",
+   "patched": "ca350672db99"
   },
   "Panel_Payloads.js": {
    "base": "b0edd3e1be30",
    "patched": "b0edd3e1be30"
   },
   "R2_Alt_Gate_Build.js": {
-   "base": "1e534fbfc781",
-   "patched": "1e534fbfc781"
+   "base": "14a220052a57",
+   "patched": "14a220052a57"
   },
   "R2_Alt_Gate_Record.js": {
-   "base": "1280351ca840",
-   "patched": "1280351ca840"
+   "base": "0d0d06dc226e",
+   "patched": "0d0d06dc226e"
   },
   "R2_Alternate_Build.js": {
-   "base": "f3ef8db0bb4f",
-   "patched": "f3ef8db0bb4f"
+   "base": "d921085b7445",
+   "patched": "d921085b7445"
   },
   "R2_Alternate_Cure_Build.js": {
-   "base": "587ab80404ba",
-   "patched": "587ab80404ba"
+   "base": "666f5a67d590",
+   "patched": "666f5a67d590"
   },
   "R2_Alternate_Cure_Normalize.js": {
-   "base": "ce52f126b7c2",
-   "patched": "f93e3e3cbc42"
+   "base": "a84e36edebcb",
+   "patched": "0e61c65ee284"
   },
   "R2_Alternate_Merge.js": {
-   "base": "5ac8afd2a8eb",
-   "patched": "5ac8afd2a8eb"
+   "base": "2a219e201d1b",
+   "patched": "2a219e201d1b"
   },
   "R2_Alternate_Merge_Seat.js": {
-   "base": "fb1e0f2bd03c",
-   "patched": "fb1e0f2bd03c"
+   "base": "1430ee48c92a",
+   "patched": "1430ee48c92a"
   },
   "R2_Alternate_Payloads.js": {
    "base": "89210cb6fc9b",
@@ -206,7 +206,7 @@
     560
    ],
    "parameters": {
-    "jsCode": "// pkgFUM: carries the follow-up reply and the first reply back to \"Panel Cure Normalize 1\", which joins them and asks nothing more (fum_done).\nreturn $input.all().map((it,i)=>{let p=null;try{p=$('FUM Needed? Panel 1').itemMatching(i).json;}catch(e){p=null;}if(!p){try{p=$('FUM Needed? Panel 1').all()[i].json;}catch(e){p=null;}}\n return {json:{fum_done:true,fum_asked:p&&p.fum?p.fum.asked:[],fum_first:p&&p.fum?p.fum.first:null,fum_call:it.json},pairedItem:{item:i}};});"
+    "jsCode": "// pkgFUM: carries the follow-up reply and the first reply back to \"Panel Cure Normalize 1\", which joins them and asks nothing more (fum_done).\nreturn $input.all().map((it,i)=>{let p=null;try{p=$('FUM Needed? Panel 1').itemMatching(i).json;}catch(e){p=null;}if(!p){try{p=$('FUM Needed? Panel 1').all()[i].json;}catch(e){p=null;}}\n return {json:{fum_done:true,fum_asked:p&&p.fum?p.fum.asked:[],fum_items:p&&p.fum?p.fum.items:[],fum_first:p&&p.fum?p.fum.first:null,fum_call:it.json},pairedItem:{item:i}};});"
    }
   },
   {
@@ -292,7 +292,7 @@
     560
    ],
    "parameters": {
-    "jsCode": "// pkgFUM: carries the follow-up reply and the first reply back to \"Panel Cure Normalize 2\", which joins them and asks nothing more (fum_done).\nreturn $input.all().map((it,i)=>{let p=null;try{p=$('FUM Needed? Panel 2').itemMatching(i).json;}catch(e){p=null;}if(!p){try{p=$('FUM Needed? Panel 2').all()[i].json;}catch(e){p=null;}}\n return {json:{fum_done:true,fum_asked:p&&p.fum?p.fum.asked:[],fum_first:p&&p.fum?p.fum.first:null,fum_call:it.json},pairedItem:{item:i}};});"
+    "jsCode": "// pkgFUM: carries the follow-up reply and the first reply back to \"Panel Cure Normalize 2\", which joins them and asks nothing more (fum_done).\nreturn $input.all().map((it,i)=>{let p=null;try{p=$('FUM Needed? Panel 2').itemMatching(i).json;}catch(e){p=null;}if(!p){try{p=$('FUM Needed? Panel 2').all()[i].json;}catch(e){p=null;}}\n return {json:{fum_done:true,fum_asked:p&&p.fum?p.fum.asked:[],fum_items:p&&p.fum?p.fum.items:[],fum_first:p&&p.fum?p.fum.first:null,fum_call:it.json},pairedItem:{item:i}};});"
    }
   },
   {
@@ -378,7 +378,7 @@
     560
    ],
    "parameters": {
-    "jsCode": "// pkgFUM: carries the follow-up reply and the first reply back to \"Panel Cure Normalize 3\", which joins them and asks nothing more (fum_done).\nreturn $input.all().map((it,i)=>{let p=null;try{p=$('FUM Needed? Panel 3').itemMatching(i).json;}catch(e){p=null;}if(!p){try{p=$('FUM Needed? Panel 3').all()[i].json;}catch(e){p=null;}}\n return {json:{fum_done:true,fum_asked:p&&p.fum?p.fum.asked:[],fum_first:p&&p.fum?p.fum.first:null,fum_call:it.json},pairedItem:{item:i}};});"
+    "jsCode": "// pkgFUM: carries the follow-up reply and the first reply back to \"Panel Cure Normalize 3\", which joins them and asks nothing more (fum_done).\nreturn $input.all().map((it,i)=>{let p=null;try{p=$('FUM Needed? Panel 3').itemMatching(i).json;}catch(e){p=null;}if(!p){try{p=$('FUM Needed? Panel 3').all()[i].json;}catch(e){p=null;}}\n return {json:{fum_done:true,fum_asked:p&&p.fum?p.fum.asked:[],fum_items:p&&p.fum?p.fum.items:[],fum_first:p&&p.fum?p.fum.first:null,fum_call:it.json},pairedItem:{item:i}};});"
    }
   },
   {
@@ -464,7 +464,7 @@
     400
    ],
    "parameters": {
-    "jsCode": "// pkgFUM: carries the follow-up reply and the first reply back to \"Alternate Cure Normalize\", which joins them and asks nothing more (fum_done).\nreturn $input.all().map((it,i)=>{let p=null;try{p=$('FUM Needed? Alternate').itemMatching(i).json;}catch(e){p=null;}if(!p){try{p=$('FUM Needed? Alternate').all()[i].json;}catch(e){p=null;}}\n return {json:{fum_done:true,fum_asked:p&&p.fum?p.fum.asked:[],fum_first:p&&p.fum?p.fum.first:null,fum_call:it.json},pairedItem:{item:i}};});"
+    "jsCode": "// pkgFUM: carries the follow-up reply and the first reply back to \"Alternate Cure Normalize\", which joins them and asks nothing more (fum_done).\nreturn $input.all().map((it,i)=>{let p=null;try{p=$('FUM Needed? Alternate').itemMatching(i).json;}catch(e){p=null;}if(!p){try{p=$('FUM Needed? Alternate').all()[i].json;}catch(e){p=null;}}\n return {json:{fum_done:true,fum_asked:p&&p.fum?p.fum.asked:[],fum_items:p&&p.fum?p.fum.items:[],fum_first:p&&p.fum?p.fum.first:null,fum_call:it.json},pairedItem:{item:i}};});"
    }
   },
   {
@@ -550,7 +550,7 @@
     2100
    ],
    "parameters": {
-    "jsCode": "// pkgFUM: carries the follow-up reply and the first reply back to \"R2 Alternate Cure Normalize\", which joins them and asks nothing more (fum_done).\nreturn $input.all().map((it,i)=>{let p=null;try{p=$('FUM Needed? R2 Alternate').itemMatching(i).json;}catch(e){p=null;}if(!p){try{p=$('FUM Needed? R2 Alternate').all()[i].json;}catch(e){p=null;}}\n return {json:{fum_done:true,fum_asked:p&&p.fum?p.fum.asked:[],fum_first:p&&p.fum?p.fum.first:null,fum_call:it.json},pairedItem:{item:i}};});"
+    "jsCode": "// pkgFUM: carries the follow-up reply and the first reply back to \"R2 Alternate Cure Normalize\", which joins them and asks nothing more (fum_done).\nreturn $input.all().map((it,i)=>{let p=null;try{p=$('FUM Needed? R2 Alternate').itemMatching(i).json;}catch(e){p=null;}if(!p){try{p=$('FUM Needed? R2 Alternate').all()[i].json;}catch(e){p=null;}}\n return {json:{fum_done:true,fum_asked:p&&p.fum?p.fum.asked:[],fum_items:p&&p.fum?p.fum.items:[],fum_first:p&&p.fum?p.fum.first:null,fum_call:it.json},pairedItem:{item:i}};});"
    }
   },
   {
@@ -636,7 +636,7 @@
     560
    ],
    "parameters": {
-    "jsCode": "// pkgFUM: carries the follow-up reply and the first reply back to \"Cure Normalize\", which joins them and asks nothing more (fum_done).\nreturn $input.all().map((it,i)=>{let p=null;try{p=$('FUM Needed? Cure').itemMatching(i).json;}catch(e){p=null;}if(!p){try{p=$('FUM Needed? Cure').all()[i].json;}catch(e){p=null;}}\n return {json:{fum_done:true,fum_asked:p&&p.fum?p.fum.asked:[],fum_first:p&&p.fum?p.fum.first:null,fum_call:it.json},pairedItem:{item:i}};});"
+    "jsCode": "// pkgFUM: carries the follow-up reply and the first reply back to \"Cure Normalize\", which joins them and asks nothing more (fum_done).\nreturn $input.all().map((it,i)=>{let p=null;try{p=$('FUM Needed? Cure').itemMatching(i).json;}catch(e){p=null;}if(!p){try{p=$('FUM Needed? Cure').all()[i].json;}catch(e){p=null;}}\n return {json:{fum_done:true,fum_asked:p&&p.fum?p.fum.asked:[],fum_items:p&&p.fum?p.fum.items:[],fum_first:p&&p.fum?p.fum.first:null,fum_call:it.json},pairedItem:{item:i}};});"
    }
   }
  ],
@@ -948,6 +948,6 @@
    ]
   }
  },
- "fetchback": "/mnt/project-files/wall2024/fetchback_live_s75.json",
- "fetchback_version": "5c19133b-1c2d-45ae-a47c-c6527c5d90a4"
+ "fetchback": "/mnt/project-files/wall2024/fetchback_live_s76.json",
+ "fetchback_version": "5d1c92fa-0569-4aa0-9b3b-abecdae5f2cc"
 }

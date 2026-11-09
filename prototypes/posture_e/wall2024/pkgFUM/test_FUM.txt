@@ -1,26 +1,25 @@
 OK   Panel Cure Normalize 2 (openai/gpt-6.1-terra): every item answered, no follow-up, output byte-equal
 OK   Panel Cure Normalize 3 (openai/gpt-6.1-sol): every item answered, no follow-up, output byte-equal
 OK   Panel Cure Normalize 1 (luna): reply and cure unchanged, follow-up built
-     asked: ["NO LINE K-W CHALLENGER DR3 LINK 3 #3: [DR3] LINK 3: \"I drop the limb that names what Joseph knew of the cause.\"","NO LINE K-RUL keystone: deciding ruling keystone: no ruling card; answer with the five-line card (RULING, CLAIM, NAMED BY, RULE, APPLIED)"]
-OK   luna follow-up asks exactly 27621 (K-W CHALLENGER DR3 LINK 3 #3) and 27622 (K-RUL keystone), nothing else
+     asked: ["NO LINE K-W CHALLENGER DR3 LINK 3 #3: [DR3] LINK 3: \"I drop the limb that names what Joseph knew of the cause.\""]
+OK   luna follow-up asks exactly 27621 (K-W CHALLENGER DR3 LINK 3 #3), nothing else (27622 K-RUL keystone is cured by its card since KRC, live s76)
 OK   follow-up body = the same conversation + the judge's own reply + one user turn (model openai/gpt-6-luna)
      follow-up prompt:
        | FOLLOW-UP, asked once. The items below have no line in your reply above that can be counted. Every other item stands as your reply above left it. Answer only the items below, each on its own line beginning RESPONSE:, in the form the request above gives, and write nothing else.
        | 
-       | Items your reply left with no RESPONSE line (2):
+       | Items your reply left with no RESPONSE line (1):
        | - K-W CHALLENGER DR3 LINK 3 #3: [DR3] LINK 3: "I drop the limb that names what Joseph knew of the cause."
-       | - K-RUL keystone: deciding ruling keystone: no ruling card; answer with the five-line card (RULING, CLAIM, NAMED BY, RULE, APPLIED)
-       | For each, write: RESPONSE: <the item, as labelled above> | <your answer>. If you hold the item wrong, write: RESPONSE: <the item, as labelled above> | NOT HELD: <your reason>. For a K-RUL item, write its RESPONSE line and under it the five-line card, one field to a line: RULING, CLAIM, NAMED BY, RULE, APPLIED.
+       | For each, write: RESPONSE: <the item, as labelled above> | <your answer>. If you hold the item wrong, write: RESPONSE: <the item, as labelled above> | NOT HELD: <your reason>.
 OK   FUM Merge Panel 1 carries the first reply and the follow-up call
-OK   Normalize run 2: no second follow-up; reply = follow-up then first reply; cure unchanged
-     luna live:      K-W CHALLENGER DR3 LINK 3 #3 UNCURED; K-RUL keystone UNCURED
+OK   Normalize run 2: no second follow-up; reply = the asked item's line only (the unasked K-RUL line dropped), then the first reply; cure unchanged
+     luna live:      K-W CHALLENGER DR3 LINK 3 #3 UNCURED
      luna follow-up: 
 OK   27621 K-W CHALLENGER DR3 LINK 3 #3: live UNCURED (no written response) -> CURED with the follow-up (answered: NOT HELD, with a reason that quotes the flagged sentence (pkgKW))
 OK   every other luna item keeps its status (14 rows)
-     27622 K-RUL keystone: UNCURED -> CURED (TRIAL rule (recorded and answered; it removes no seat): a valid ruling card for keystone)
+     27622 K-RUL keystone: CURED -> CURED (TRIAL rule (recorded and answered; it removes no seat): a valid ruling card for keystone)
 OK   failed follow-up: first reply read as before, nothing asked again
-OK   Alternate Cure Normalize (Haiku): reply unchanged, follow-up built for 17 item(s)
-     Haiku asked: ["NO LINE K-F FORCED: FORCED: none graded.","NO LINE K-W DEFENDER CR2 no link heading #1: [CR2] no link h","NO LINE K-W DEFENDER CR2 D2 #2: [CR2] D2: \"I grant that ‘bor","NO LINE K-W DEFENDER CR2 D3 #3: [CR2] D3: \"I grant that the ","NO LINE K-W DEFENDER CR2 D5 #4: [CR2] D5: \"I grant these wor","NO LINE K-W DEFENDER CR2 D7 #5: [CR2] D7: \"I withdraw Genesi","NO LINE K-W DEFENDER CR3 LINK 6 #6: [CR3] LINK 6: \"I drop th","NO LINE K-W DEFENDER CR3 LINK 1 #7: [CR3] LINK 1: \"I drop th","NO LINE K-W DEFENDER CR3 LINK 1 #8: [CR3] LINK 1: \"I grant i","NO LINE K-W DEFENDER CR3 LINK 5 #9: [CR3] LINK 5: \"I drop th","NO LINE K-W DEFENDER CR4 D6 #10: [CR4] D6: \"I grant that Jud","NO LINE K-W CHALLENGER DR3 LINK 1 #2: [DR3] LINK 1: \"I grant","NO LINE K-W CHALLENGER DR3 LINK 3 #3: [DR3] LINK 3: \"I drop ","NO LINE K-CMT contested grades without a commitment: 1 conte","NO LINE K-CMTL line 1: \"FORCED: none graded.\" -- this contes","NO LINE K-RUL DEFENDER premise 4: deciding ruling DEFENDER p","NO LINE K-RUL keystone: deciding ruling keystone: no ruling "]
+OK   Alternate Cure Normalize (Haiku): reply unchanged, follow-up built for 8 item(s)
+     Haiku asked: ["NO LINE K-F FORCED: FORCED: none graded.","NO QUOTE K-W DEFENDER CR2 no link heading #1: [CR2] no link ","NO QUOTE K-W DEFENDER CR2 D3 #3: [CR2] D3: \"I grant that the","NO QUOTE K-W DEFENDER CR2 D5 #4: [CR2] D5: \"I grant these wo","NO QUOTE K-W DEFENDER CR3 LINK 6 #6: [CR3] LINK 6: \"I drop t","NO QUOTE K-W DEFENDER CR3 LINK 1 #8: [CR3] LINK 1: \"I grant ","NO QUOTE K-W CHALLENGER DR3 LINK 1 #2: [DR3] LINK 1: \"I gran","NO QUOTE K-W CHALLENGER DR3 LINK 3 #3: [DR3] LINK 3: \"I drop"]
 OK   Cure Normalize 34016: no follow-up, byte-equal
 OK   terra reply holds the quoted reason for DEFENDER CR2 D3 #3
      asked: ["NO QUOTE K-W DEFENDER CR2 D3 #3: [CR2] D3: \"I grant that the verbs elsewhere carry power and presence.\""]
@@ -32,4 +31,9 @@ OK   quote taken out: the follow-up asks only for DEFENDER CR2 D3 #3 (NO QUOTE)
        | - K-W DEFENDER CR2 D3 #3: [CR2] D3: "I grant that the verbs elsewhere carry power and presence."
        | For each, write its RESPONSE line again: RESPONSE: <the item, as labelled above> | NOT HELD: <your reason>, quoting at least six words in a row of the flagged sentence (all of it when shorter).
 OK   DEFENDER CR2 D3 #3: UNCURED without the quote -> CURED with the follow-up (answered: NOT HELD, with a reason that quotes the flagged sentence (pkgKW))
-TOTAL 15 OK, 0 FAIL
+OK   case B: only the 27621 line is kept from the follow-up
+OK   case B: D2 #2 keeps CURED, 27621 CURED, summary and bodies equal to the clean follow-up
+OK   K-RUL keystone: its RESPONSE line and five-line card kept; another K-RUL item and its card dropped; "#33" is not "#3"
+OK   "LINK 3 #3" does not match "LINK 3 #33"
+OK   K-S3 "S3 DEFENDER CR4: #1" matches a label written without the colon, and not #2
+TOTAL 20 OK, 0 FAIL
