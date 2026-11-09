@@ -1,3 +1,8 @@
+# pkgVP3 rev 3 (W4): answers W2 FAIL 3807
+
+A deferral is now followed across rounds: "under LINK n" is looked for in the answer's own round, then in every round of the same side; a LINK no round holds makes the answer not bare. A deferral to a round ("in [CR4]", "under CR4") whose round holds text makes the answer not bare. Everything else is rev 2.
+Proof: probe_VP3 40 OK, 0 FAIL (new: T5 layered LINK 4 in [CR4] not bare; LINK no round holds not bare; T6 deferral to [CR4] not bare; a bare grant with no deferral still agrees). W2's w2_plant_VP3.cjs on the rev 3 parent: 12 OK (T1, T2 listed; T3 to T6 not listed). W1's w1_plant_rev2.cjs: 10 OK. 42 node runs: equal except notes, 0 agreements, 0 listings. Write file parent_s90_VP3.json (base live s90). Stacking with pkgKQG (same 3 nodes): whichever is written second is rebuilt on the first.
+
 # pkgVP3 rev 2 (W4): answers W1 FAIL 3798 and W2 3795
 
 Base now live s90 (33f5fd30, 418 nodes). Write file parent_s90_VP3.json (node build_VP3.cjs <live fetch-back> <out>). Same 3 nodes.

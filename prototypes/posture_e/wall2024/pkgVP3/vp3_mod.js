@@ -34,8 +34,11 @@ function vp3Code2024(R,rounds,verse){if(!R)return {ok:false,why:'no rounds found
  const vr=verse.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');const VR=new RegExp(vr+'(?![0-9])','i');
  for(const rd of rounds){const T=String(R[rd]||'');if(!T)continue;const L=T.split('\n');const ans=vp3Answers2024(T,verse);const at=new Set(ans.map(x=>x.at));
   for(const x of ans){const t=vp3Bare2024(x.text);if(!t.bare)return {ok:false,why:'['+rd+'] answer to '+verse+': '+t.why};
-   for(const m of x.text.matchAll(/\b(?:LINK|Link)\s*(\d+)/g)){const blk=vp3Link2024(T,m[1]);if(blk==null)continue;const w=blk.replace(/[^A-Za-z0-9]+/g,' ').trim().split(' ').length;
-    if(/\[L[1-4]\]/.test(blk)||w>=25)return {ok:false,why:'['+rd+'] the deferral to LINK '+m[1]+' names an answer of '+w+' words'+(/\[L[1-4]\]/.test(blk)?' with layers':'')};}
+   for(const m of x.text.matchAll(/\b(?:LINK|Link)\s*(\d+)/g)){let blk=vp3Link2024(T,m[1]),inRd=rd; /* rev 3 (W2 3807): the LINK block is looked for in this round, then in every round of the side */
+    if(blk==null)for(const k of Object.keys(R).filter(k=>k.slice(0,2)===rd.slice(0,2)&&k!==rd).sort()){const b2=vp3Link2024(R[k],m[1]);if(b2!=null){blk=b2;inRd=k;break;}}
+    if(blk==null)return {ok:false,why:'['+rd+'] the deferral to LINK '+m[1]+' names a block no round of the side holds, so it is not read as bare'};const w=blk.replace(/[^A-Za-z0-9]+/g,' ').trim().split(' ').length;
+    if(/\[L[1-4]\]/.test(blk)||w>=25)return {ok:false,why:'['+rd+'] the deferral to LINK '+m[1]+(inRd!==rd?' (found in ['+inRd+'])':'')+' names an answer of '+w+' words'+(/\[L[1-4]\]/.test(blk)?' with layers':'')};}
+   for(const m of x.text.matchAll(/\[?\b([CD]R[1-4])\b\]?/g)){if(String(R[m[1]]||'').trim())return {ok:false,why:'['+rd+'] the answer defers to ['+m[1]+'], a round that holds text'};} /* rev 3 (W2 3807): a deferral to a round is not bare */
    found.push({rd,why:t.why});}
   for(let k=0;k<L.length;k++){if(at.has(k)||!VR.test(L[k])||/--\s*MEANS\s*:/i.test(L[k]))continue;if(ans.some(x=>k>x.at&&k<=x.at+((x.text.match(/\n/g)||[]).length)))continue;
    return {ok:false,why:'['+rd+'] names '+verse+' again (line '+k+': "'+L[k].trim().slice(0,90)+'")'};}}
