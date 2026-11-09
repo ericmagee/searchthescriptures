@@ -18,18 +18,18 @@ OK 33261 [saved] Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter"
 OK 33261 [saved] Accept Build asks ["chatgpt","sol","luna","haiku"]
 OK 33261 [haiku debates] (haiku v opus) panel ["chatgpt","sol","luna"] single chatgpt reserve null alt []
 OK 33261 [haiku debates] Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter","luna=openai/gpt-6-luna/openrouter"] reserve null
-OK 33276 [saved] Init Seats refuses, as live does: ORACLE_DEBATE_V1 Init refused: topic missing or empty. run_token=ODV1-33276-ir2ogcor
+OK 33276 [saved] Init Seats refuses, as live does: ORACLE_DEBATE_V1 Init refused: topic missing or empty. run_token=ODV1-33276-6kgnsjjm
 OK 33276 [haiku debates]: input has no seats (live refuses it too), skipped
-OK 33289 [saved] Init Seats refuses, as live does: ORACLE_DEBATE_V1 Init refused: topic missing or empty. run_token=ODV1-33289-ea6v7b8u
+OK 33289 [saved] Init Seats refuses, as live does: ORACLE_DEBATE_V1 Init refused: topic missing or empty. run_token=ODV1-33289-wybg1w5d
 OK 33289 [haiku debates]: input has no seats (live refuses it too), skipped
 OK 33299 [saved] (claude v opus) panel ["chatgpt","sol","luna"] single chatgpt reserve haiku alt ["haiku"]
 OK 33299 [saved] Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter","luna=openai/gpt-6-luna/openrouter"] reserve "haiku"
 OK 33299 [saved] Accept Build asks ["chatgpt","sol","luna","haiku"]
 OK 33299 [haiku debates] (haiku v opus) panel ["chatgpt","sol","luna"] single chatgpt reserve null alt []
 OK 33299 [haiku debates] Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter","luna=openai/gpt-6-luna/openrouter"] reserve null
-OK 33311 [saved] Init Seats refuses, as live does: ORACLE_DEBATE_V1 Init refused: topic missing or empty. run_token=ODV1-33311-l6jp1btg
+OK 33311 [saved] Init Seats refuses, as live does: ORACLE_DEBATE_V1 Init refused: topic missing or empty. run_token=ODV1-33311-7q7btfgl
 OK 33311 [haiku debates]: input has no seats (live refuses it too), skipped
-OK 33322 [saved] Init Seats refuses, as live does: ORACLE_DEBATE_V1 Init refused: topic missing or empty. run_token=ODV1-33322-izkij4os
+OK 33322 [saved] Init Seats refuses, as live does: ORACLE_DEBATE_V1 Init refused: topic missing or empty. run_token=ODV1-33322-ss5syvt2
 OK 33322 [haiku debates]: input has no seats (live refuses it too), skipped
 OK 33345 [saved] (claude v opus) panel ["chatgpt","sol","luna"] single chatgpt reserve haiku alt ["haiku"]
 OK 33345 [saved] Resolve Seats judges ["chatgpt=openai/gpt-6.1-terra/openrouter","sol=openai/gpt-6.1-sol/openrouter","luna=openai/gpt-6-luna/openrouter"] reserve "haiku"

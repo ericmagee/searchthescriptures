@@ -1,5 +1,5 @@
 {
- "base": "/mnt/project-files/wall2024/fetchback_live_s71.json",
+ "base": "/mnt/project-files/wall2024/fetchback_live_s72.json",
  "nodes": {
   "Init Seats": {
    "before": "717ed6aebedc",
@@ -17,8 +17,8 @@
    "edits": 3
   },
   "Panel Build": {
-   "before": "40a89f70b6d7",
-   "after": "6e1b9c2c3ad9",
+   "before": "179b18436edb",
+   "after": "fa7e83e29e54",
    "edits": 1
   },
   "Reserve Build": {
@@ -32,8 +32,8 @@
    "edits": 1
   },
   "Build Independent Verdict": {
-   "before": "91fc5d4bb579",
-   "after": "e0875a43b367",
+   "before": "2047b6cc87c0",
+   "after": "740cfe072456",
    "edits": 1
   },
   "Build Diagnostic Prompt": {
@@ -43,15 +43,15 @@
   }
  },
  "library": {
-  "base": "pkgLIB/strip_KWI/patched/",
+  "base": "pkgLIB/strip_KBL/patched/",
   "nodes": {
    "Alternate_Build.js": {
-    "before": "36c3e8582f50",
-    "after": "5a61c11eb3e9"
+    "before": "b85b99a321c5",
+    "after": "b8ebe85b1bba"
    },
    "R2_Alternate_Build.js": {
-    "before": "8b520f4c8b0c",
-    "after": "c453ef9a2990"
+    "before": "f6f7832d1a5f",
+    "after": "8434a0d62836"
    }
   }
  }

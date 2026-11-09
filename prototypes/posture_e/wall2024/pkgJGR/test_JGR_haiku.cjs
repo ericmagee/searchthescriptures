@@ -1,9 +1,9 @@
 // pkgJGR rev 6 test (haiku the alternate, operator 08:31Z 11-09); from the rev 4 test (operator 07:14Z "we mimo as an alternate", 07:27Z "add luna 6.1 as a judge"). Run from wall2024/: node pkgJGR/test_JGR_luna.cjs
-// Base live s71 vs pkgJGR/luna/patched. Every saved run with Init Seats input, twice: as saved, and with the defender engine set to mimo.
+// Base live s72 vs pkgJGR/haiku/patched. Every saved run with Init Seats input, twice: as saved, and with the defender engine set to mimo.
 //  As saved: panel chatgpt, sol, luna; mimo the reserve (the alternate). mimo debating: panel chatgpt, sol, luna, no reserve.
 //  Resolve Seats: judges as the panel, luna = openai/gpt-6-luna on openrouter. Panel Build (runs 33530 and >= 33800): mimo body max_tokens 131072 and effort medium (operator 07:46Z);
 //  luna, terra, sol bodies carry no reasoning. Accept Build asks chatgpt, sol, mimo, luna (minus debaters).
-const fs=require('fs');const {harness,feeder}=require('../pkgGSL/harness.cjs');const B='/mnt/project-files/wall2024/fetchback_live_s71.json';const W=JSON.parse(fs.readFileSync(B));
+const fs=require('fs');const {harness,feeder}=require('../pkgGSL/harness.cjs');const B=process.env.JGR_BASE||'/mnt/project-files/wall2024/fetchback_live_s72.json';const W=JSON.parse(fs.readFileSync(B));
 const D='/mnt/project-files/wall2024/inputs/';const has=(R,n)=>fs.existsSync(D+R+'_'+n.replace(/ /g,'_')+'.json');const fin=(R,n)=>feeder(B,n).find(x=>has(R,x));
 const NO='pkgJGR/haiku/patched';const live=n=>W.nodes.find(z=>z.name===n).parameters.jsCode;const pat=n=>{const f=NO+'/'+n.replace(/ /g,'_')+'.js';return fs.existsSync(f)?fs.readFileSync(f,'utf8'):live(n);};
 const rows=(R,n)=>{const d=JSON.parse(fs.readFileSync(D+R+'_'+n.replace(/ /g,'_')+'.json'));const r=Array.isArray(d)?d[0]:d;return ((r.data&&r.data.main)||r.main)[0];};
