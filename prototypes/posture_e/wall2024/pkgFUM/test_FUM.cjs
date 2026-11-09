@@ -1,7 +1,7 @@
 // pkgFUM test (W3 Wall 3552): replay run 34016 row 27609 (luna, Panel Cure 1) with the follow-up answered: 27621 (K-W CHALLENGER DR3 LINK 3 #3) cures;
 // a reply that answers everything (terra, sol) sends no follow-up; the Haiku alternate reply (row 27957) is asked once; a failed follow-up leaves the first reply.
 // Run from wall2024/: node pkgFUM/test_FUM.cjs
-const fs=require('fs');const {harness}=require('../pkgGSL/harness.cjs');const A='pkgLIB/strip_CJR_KRC/patched/',B='pkgLIB/strip_FUM/patched/';const R=f=>fs.readFileSync(f,'utf8');
+const fs=require('fs');const {harness}=require('../pkgGSL/harness.cjs');const A='pkgLIB/strip_KNL/patched/',B='pkgLIB/strip_FUM/patched/';const R=f=>fs.readFileSync(f,'utf8');
 let ok=0,bad=0;const out=[];const log=s=>{out.push(s);console.log(s);};const T=(c,m)=>{if(c){ok++;log('OK   '+m);}else{bad++;log('FAIL '+m);}};
 const st=x=>JSON.stringify(x,(k,v)=>k==='at'?undefined:v);
 const KEEP=()=>{const t=R(B+'Panel_Cure_Normalize_1.js');const km=t.slice(t.indexOf('function krulMatch('),t.indexOf('\n',t.indexOf('function krulMatch(')+1));const km2=t.slice(t.indexOf('function krulMatch('),t.indexOf('const KRUL_BAD'));return new Function(km2+t.match(/function fumKey2024[\s\S]*?\n(?=\/\* pkgFUM: the kept)/)[0]+';return fumKeep2024;')();};const H=harness('34016');const MG=JSON.parse(R('pkgFUM/plan_FUM.json')).nodes_added.find(n=>n.name==='FUM Merge Panel 1').parameters.jsCode;
@@ -76,4 +76,12 @@ log('     Haiku asked: '+JSON.stringify(hb[0].json.fum&&hb[0].json.fum.asked.map
  T(k(card.join('\n'),Rq)===card.join('\n'),'3588-2: a card alone, no RESPONSE line (luna 27609 form): kept');
  T(k(['RESPONSE: K-RUL D2 vs C2 | card',...card,'RULING -- D4 vs C1 -- FALLS','CLAIM: p','NAMED BY: q','RULE: r','APPLIED: s'].join('\n'),Rq)===['RESPONSE: K-RUL D2 vs C2 | card',...card].join('\n'),'3588-3: a second card for the unasked pair D4 vs C1: dropped');
  T(k(['RULING -- D2 vs C2 -- STANDS','CLAIM: x','','NAMED BY: y','RULE: z','APPLIED: w','RESPONSE: K-G4 D2 vs C2 | x'].join('\n'),Rq)===card.join('\n'),'a blank line inside the card is skipped; the card ends at APPLIED; a K-G4 line after it is dropped');}
+// 12. W3 3598 / W1 3599: the card reader's 8-line window: wrapped CLAIM, a "---" line, fields in another order; a K-G4 line inside the window is not kept
+{const k=KEEP();const Rq=[{rule:'K-RUL',side:'JUDGE',link:'D2 vs C2',ruling:'D2 vs C2'}];
+ T(k(['RULING -- D2 vs C2 -- STANDS','CLAIM: x and','  more of the claim','NAMED BY: y','RULE: z','APPLIED: w'].join('\n'),Rq)===['RULING -- D2 vs C2 -- STANDS','CLAIM: x and','NAMED BY: y','RULE: z','APPLIED: w'].join('\n'),'3598-1: CLAIM wrapped onto a second line: all four fields kept');
+ T(k(['RULING -- D2 vs C2 -- STANDS','---','CLAIM: x','NAMED BY: y','RULE: z','APPLIED: w'].join('\n'),Rq)===['RULING -- D2 vs C2 -- STANDS','CLAIM: x','NAMED BY: y','RULE: z','APPLIED: w'].join('\n'),'3598-2: a "---" line inside the card: all fields kept');
+ T(k(['RULING -- D2 vs C2 -- STANDS','RULE: z','CLAIM: x','APPLIED: w','NAMED BY: y'].join('\n'),Rq)===['RULING -- D2 vs C2 -- STANDS','RULE: z','CLAIM: x','APPLIED: w','NAMED BY: y'].join('\n'),'3599: fields in another order (APPLIED before NAMED BY): all kept');
+ T(k(['RULING -- D2 vs C2 -- STANDS','CLAIM: x','RESPONSE: K-G4 D2 vs C2 | RETRACTED','NAMED BY: y','RULE: z','APPLIED: w','x','x','x','CLAIM: late'].join('\n'),Rq)===['RULING -- D2 vs C2 -- STANDS','CLAIM: x','NAMED BY: y','RULE: z','APPLIED: w'].join('\n'),'a K-G4 line inside the window is dropped; a field line past the 8-line window is dropped');
+ const t=R(B+'Panel_Cure_Normalize_1.js');const kc=new Function(t.slice(t.indexOf('function krulCards('),t.indexOf('function krulMatch('))+';return krulCards;')();
+ const src=['RULING -- D2 vs C2 -- STANDS','RULE: z','CLAIM: x and','  wrapped','---','APPLIED: w','NAMED BY: y'].join('\n');const c1=kc(src)[0],c2=kc(k(src,Rq))[0];T(c1&&c2&&JSON.stringify(c1.f)===JSON.stringify(c2.f)&&Object.keys(c1.f).length===4,'krulCards reads the same four fields from the kept text as from the follow-up');}
 log('TOTAL '+ok+' OK, '+bad+' FAIL');fs.writeFileSync('pkgFUM/test_FUM.txt',out.join('\n')+'\n');

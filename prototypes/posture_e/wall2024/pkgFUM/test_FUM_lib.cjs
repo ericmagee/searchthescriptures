@@ -4,13 +4,13 @@
 const fs=require('fs');const {harness}=require('../pkgGSL/harness.cjs');const D='/mnt/project-files/wall2024/inputs/';const R=f=>fs.readFileSync(f,'utf8');
 const plan=JSON.parse(R('pkgFUM/plan_FUM.json'));const out=[];const log=s=>{out.push(s);console.log(s);};let ok=0,bad=0;const T=(c,m)=>{if(c){ok++;log('OK   '+m);}else{bad++;log('FAIL '+m);}};
 const ch=Object.entries(plan.library).filter(([f,x])=>x.base!==x.patched).map(([f])=>f);T(ch.length===6&&ch.every(f=>/Normalize/.test(f)),'library sources changed: '+ch.join(', '));
-for(const [f,x] of Object.entries(plan.library))if(x.base===x.patched&&R('pkgLIB/strip_CJR_KRC/patched/'+f)!==R('pkgLIB/strip_FUM/patched/'+f))T(false,f+' differs');
+for(const [f,x] of Object.entries(plan.library))if(x.base===x.patched&&R('pkgLIB/strip_KNL/patched/'+f)!==R('pkgLIB/strip_FUM/patched/'+f))T(false,f+' differs');
 const P={'Panel_Cure_Normalize_1.js':'Panel Cure Call 1 openrouter','Panel_Cure_Normalize_2.js':'Panel Cure Call 2 openrouter','Panel_Cure_Normalize_3.js':'Panel Cure Call 3 openrouter','Alternate_Cure_Normalize.js':'Alternate Cure Call openrouter','R2_Alternate_Cure_Normalize.js':'R2 Alternate Cure Call openrouter','Cure_Normalize.js':'Cure Call openrouter'};
 const st=x=>JSON.stringify(x);const runs=fs.readdirSync(D).filter(f=>/_index\.json$/.test(f)).map(f=>f.split('_')[0]).sort();let n=0,same=0,asked=0,diff=0;
 for(const RUN of runs){let H;try{H=harness(RUN);}catch(e){continue;}
  for(const [f,call] of Object.entries(P)){const nm=f.replace(/\.js$/,'').replace(/_/g,' ');if(!fs.existsSync(D+RUN+'_'+f.replace(/\.js$/,'.json')))continue;
   const inp=fs.existsSync(D+RUN+'_'+call.replace(/ /g,'_')+'.json')?call:nm.replace('Normalize','Route');let a,b,e0=null,e1=null;
-  try{a=H(R('pkgLIB/strip_CJR_KRC/patched/'+f),inp);}catch(e){e0=String(e.message).slice(0,90);}try{b=H(R('pkgLIB/strip_FUM/patched/'+f),inp);}catch(e){e1=String(e.message).slice(0,90);}
+  try{a=H(R('pkgLIB/strip_KNL/patched/'+f),inp);}catch(e){e0=String(e.message).slice(0,90);}try{b=H(R('pkgLIB/strip_FUM/patched/'+f),inp);}catch(e){e1=String(e.message).slice(0,90);}
   if(e0||e1){if(e0!==e1)T(false,RUN+' '+nm+' error differs ('+e0+' | '+e1+')');continue;}n++;
   const bf=b.map(it=>it.json.fum||null);const b0=b.map(it=>{const j={...it.json};delete j.fum;return {...it,json:j};});
   if(st(a)!==st(b0)){diff++;T(false,RUN+' '+nm+' output differs beyond the fum key');continue;}
