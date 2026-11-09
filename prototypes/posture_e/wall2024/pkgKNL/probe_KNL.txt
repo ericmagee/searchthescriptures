@@ -19,7 +19,13 @@ OK   K-F 1->1 K-CMT 1->1  FORCED: no; the D2 link is forced by [CR3] ‘took unt
 OK   K-F 1->1 K-CMT 1->1  FORCED: none of D1, D2 is forced
 OK   K-F 1->1 K-CMT 1->1  FORCED: no forced link; D4 is CHALLENGER LINK BROKEN
 OK   K-F 1->1 K-CMT 1->1  FORCED: none, but the challenger forced one link
-OK   K-F 1->0 K-CMT 1->0  FORCED: none graded; Joseph’s link is answered
-OK   K-F 1->0 K-CMT 1->0  FORCED: none graded; Joseph's link is answered
+OK   K-F 1->1 K-CMT 1->1  FORCED: none graded; Joseph’s link is answered
+OK   K-F 1->1 K-CMT 1->1  FORCED: none graded; Joseph's link is answered
+OK   K-F 1->1 K-CMT 1->1  FORCED: no (the challenger's reading is forced at CR2)
+OK   K-F 1->1 K-CMT 1->1  FORCED: none, apart from link three
+OK   K-F 1->1 K-CMT 1->1  FORCED: zero links; premise 4 is forced
+OK   K-F 1->0 K-CMT 0->0  FORCED: none graded (Commitment 6).
+OK   K-F 1->0 K-CMT 1->0  FORCED: None.
+OK   K-F 1->0 K-CMT 1->0  FORCED: no links are forced
 OK   Haiku 34016 block: K-F 1->0, K-CMT/K-CMTL 2->0
-TOTAL 24 OK, 0 FAIL
+TOTAL 30 OK, 0 FAIL

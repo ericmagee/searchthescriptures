@@ -1,8 +1,8 @@
-// pkgKNL replay (base live s75: strip_WLG; patched strip_KNL). Harness from pkgKBL/fold/test_KBF_lib.cjs. Every saved run, every library node: base vs patched output, changed K-B items, cure flips, uncured-count changes.
+// pkgKNL replay (base live s76: strip_CJR_KRC; patched strip_KNL). Harness from pkgKBL/fold/test_KBF_lib.cjs. Every saved run, every library node: base vs patched output, changed K-B items, cure flips, uncured-count changes.
 // base vs patched output; lists every changed K-B item, cure-status flip and uncured-count change for ruling. Run from wall2024/: node pkgKNL/test_KNL_lib.cjs
 const fs=require('fs');const {harness,feeder}=require('../pkgGSL/harness.cjs');const D='/mnt/project-files/wall2024/inputs/';const BASEW='/mnt/project-files/wall2024/fetchback_live_s63.json';
-const plan=JSON.parse(fs.readFileSync('pkgKNL/plan_KNL.json','utf8'));const W=JSON.parse(fs.readFileSync('/mnt/project-files/wall2024/fetchback_live_s75.json','utf8'));
-const JOBS=[...Object.keys(plan.library).map(f=>({nm:f.replace(/\.js$/,'').replace(/_/g,' '),a:fs.readFileSync('pkgLIB/strip_WLG/patched/'+f,'utf8'),b:fs.readFileSync('pkgLIB/strip_KNL/patched/'+f,'utf8')})),
+const plan=JSON.parse(fs.readFileSync('pkgKNL/plan_KNL.json','utf8'));const W=JSON.parse(fs.readFileSync('/mnt/project-files/wall2024/fetchback_live_s76.json','utf8'));
+const JOBS=[...Object.keys(plan.library).map(f=>({nm:f.replace(/\.js$/,'').replace(/_/g,' '),a:fs.readFileSync('pkgLIB/strip_CJR_KRC/patched/'+f,'utf8'),b:fs.readFileSync('pkgLIB/strip_KNL/patched/'+f,'utf8')})),
  ...Object.entries(plan.nodes||{}).map(([nm,p])=>({nm,a:W.nodes.find(n=>n.name===nm).parameters.jsCode,b:fs.readFileSync('pkgKBL/fold/patched/'+nm.replace(/ /g,'_')+'.js','utf8')}))];
 let ok=0,bad=0;const out=[];const log=s=>{out.push(s);console.log(s);};const T=(c,m)=>{if(c){ok++;log('OK '+m);}else{bad++;log('FAIL '+m);}};
 const fin=(RUN,nm)=>{let fe;try{fe=feeder(BASEW,nm);}catch(x){return null;}return [...fe.filter(x=>/Call/.test(x)),...fe.filter(x=>!/Call/.test(x))].find(x=>fs.existsSync(D+RUN+'_'+x.replace(/ /g,'_')+'.json'));};

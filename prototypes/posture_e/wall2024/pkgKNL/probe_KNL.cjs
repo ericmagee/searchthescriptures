@@ -1,7 +1,7 @@
 // pkgKNL probe: kfLines (K-F) and kcmtLines2024 (K-CMT) on FORCED lines, base library vs pkgKNL. Run from wall2024/: node pkgKNL/probe_KNL.cjs [base strip] [new strip]
 const fs=require('fs');const rd=f=>fs.readFileSync(f,'utf8');
 const mk=p=>{const S=rd(p+'/patched/Alternate_Merge_Seat.js');return new Function('$','$input',S.slice(0,S.indexOf("let PP=$('Panel Cure Check')"))+'\nreturn {kfLines,kcmtLines2024};')(()=>{throw 0},null);};
-const O=mk(process.argv[2]||'pkgLIB/strip_WLG'),N=mk(process.argv[3]||'pkgLIB/strip_KNL');
+const O=mk(process.argv[2]||'pkgLIB/strip_CJR_KRC'),N=mk(process.argv[3]||'pkgLIB/strip_KNL');
 const R={DR1:'he took unto him his wife',CR1:'x',DR2:'x',CR2:'x',DR3:'x',CR3:'x',DR4:'x',CR4:'x'};
 const T=[ // [line, expected K-F count after, expected K-CMT after]
  ['FORCED: none graded.',0,0],['FORCED: none.',0,0],['FORCED: none',0,0],['**FORCED:** none graded.',0,0],['- FORCED: none graded',0,0],['FORCED (Commitment 6): none',0,0],
@@ -12,7 +12,10 @@ const T=[ // [line, expected K-F count after, expected K-CMT after]
  // rev 2 (W1 3561): a none line that names a link or round, quotes, or says except/but is checked as before
  ['FORCED: none, except LINK 3, which the challenger forced',1,1],['FORCED: none except D3 (the challenger forced it at [CR2])',1,1],['FORCED: no; the D2 link is forced by [CR3] ‘took unto him’',1,1],
  ['FORCED: none of D1, D2 is forced',1,1],['FORCED: no forced link; D4 is CHALLENGER LINK BROKEN',1,1],['FORCED: none, but the challenger forced one link',1,1],
- ['FORCED: none graded; Joseph’s link is answered',0,0],["FORCED: none graded; Joseph's link is answered",0,0]];
+ ['FORCED: none graded; Joseph’s link is answered',1,1],["FORCED: none graded; Joseph's link is answered",1,1],
+ // rev 3 (W3 3576): allow-list; each of these says something is forced, so it is checked as before
+ ["FORCED: no (the challenger's reading is forced at CR2)",1,1],['FORCED: none, apart from link three',1,1],['FORCED: zero links; premise 4 is forced',1,1],
+ ['FORCED: none graded (Commitment 6).',0,0],['FORCED: None.',0,0],['FORCED: no links are forced',0,0]];
 let ok=0,bad=0;
 for(const [l,ef,ec] of T){const a=O.kfLines(l,R).items.length,b=N.kfLines(l,R).items.length,c0=O.kcmtLines2024(l).items.filter(x=>x.rule==='K-CMT').length,c1=N.kcmtLines2024(l).items.filter(x=>x.rule==='K-CMT').length;
  const pass=b===ef&&c1===ec;pass?ok++:bad++;console.log((pass?'OK  ':'FAIL')+' K-F '+a+'->'+b+' K-CMT '+c0+'->'+c1+'  '+l);}
