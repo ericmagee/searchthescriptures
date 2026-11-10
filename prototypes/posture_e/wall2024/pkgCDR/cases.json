@@ -113,7 +113,7 @@
   }
  },
  "rev2": {
-  "about": "Added for rev 2 (W2's FAIL: a refused drop read as a drop) before rev 2 is written or run. adds = sentences appended to the rounds named.",
+  "about": "Added for rev 2 (W2's FAIL: a refused drop read as a drop) before rev 2 is written or run. adds = sentences appended to the rounds named. Rev 3 (W3 FAIL of rev 2): W3's seven false-listing cases and one labeled drop added before rev 3 is written or run. Under the rev 3 anchor, R2 (a real drop after \", but\") is expected to be missed in the safe direction; its label stays LISTED.",
   "cases": [
    {
     "id": "R1",
@@ -163,6 +163,142 @@
     "side": "CHALLENGER",
     "closing": "The register runs through the fathers of Joseph.",
     "want": "NOT LISTED"
+   },
+   {
+    "id": "R3-G3",
+    "adds": [
+     [
+      "cr3",
+      "Nor do I drop the wording \"the register stops at Joseph\"."
+     ],
+     [
+      "cr4",
+      "The register stops at Joseph."
+     ]
+    ],
+    "side": "DEFENDER",
+    "closing": "The register stops at Joseph.",
+    "want": "NOT LISTED",
+    "note": "negated by inversion: nor do I drop (W3 rev 2 grade case, copied before rev 3 is written)"
+   },
+   {
+    "id": "R3-G4",
+    "adds": [
+     [
+      "cr3",
+      "If I drop the wording \"the register stops at Joseph\", the chain fails, so I keep it."
+     ],
+     [
+      "cr4",
+      "The register stops at Joseph."
+     ]
+    ],
+    "side": "DEFENDER",
+    "closing": "The register stops at Joseph.",
+    "want": "NOT LISTED",
+    "note": "conditional, kept (W3 rev 2 grade case, copied before rev 3 is written)"
+   },
+   {
+    "id": "R3-G5",
+    "adds": [
+     [
+      "cr3",
+      "Should I withdraw the wording \"the register stops at Joseph\"? The rows give no cause."
+     ],
+     [
+      "cr4",
+      "The register stops at Joseph."
+     ]
+    ],
+    "side": "DEFENDER",
+    "closing": "The register stops at Joseph.",
+    "want": "NOT LISTED",
+    "note": "question, kept (W3 rev 2 grade case, copied before rev 3 is written)"
+   },
+   {
+    "id": "R3-G6",
+    "adds": [
+     [
+      "cr3",
+      "I drop the limb on Matthew 1:25 alone, but the wording \"the register stops at Joseph\" stands."
+     ],
+     [
+      "cr4",
+      "The register stops at Joseph."
+     ]
+    ],
+    "side": "DEFENDER",
+    "closing": "The register stops at Joseph.",
+    "want": "NOT LISTED",
+    "note": "drops one thing, keeps the quoted wording in the same sentence (W3 rev 2 grade case, copied before rev 3 is written)"
+   },
+   {
+    "id": "R3-G7",
+    "adds": [
+     [
+      "cr3",
+      "I withdraw my objection to the reading that the register of Luke 3 stops at the name of Joseph."
+     ],
+     [
+      "cr4",
+      "The register of Luke 3 stops at the name of Joseph."
+     ]
+    ],
+    "side": "DEFENDER",
+    "closing": "The register of Luke 3 stops at the name of Joseph.",
+    "want": "NOT LISTED",
+    "note": "drops an objection to the wording, which is acceptance (W3 rev 2 grade case, copied before rev 3 is written)"
+   },
+   {
+    "id": "R3-G11",
+    "adds": [
+     [
+      "cr3",
+      "The challenger demands that I withdraw the wording \"the register stops at Joseph\"; I refuse."
+     ],
+     [
+      "cr4",
+      "The register stops at Joseph."
+     ]
+    ],
+    "side": "DEFENDER",
+    "closing": "The register stops at Joseph.",
+    "want": "NOT LISTED",
+    "note": "reported demand, refused (W3 rev 2 grade case, copied before rev 3 is written)"
+   },
+   {
+    "id": "R3-G12",
+    "adds": [
+     [
+      "cr3",
+      "I retract only the word \"alone\"; the wording \"the register stops at Joseph\" I keep."
+     ],
+     [
+      "cr4",
+      "The register stops at Joseph."
+     ]
+    ],
+    "side": "DEFENDER",
+    "closing": "The register stops at Joseph.",
+    "want": "NOT LISTED",
+    "note": "retracts one word, keeps the wording (W3 rev 2 grade case, copied before rev 3 is written)"
+   },
+   {
+    "id": "R3-T1",
+    "adds": [
+     [
+      "cr3",
+      "- **LINK 6: NARROWED TO:** I drop the wording \"the register stops at Joseph\" as a bare statement."
+     ],
+     [
+      "cr4",
+      "The register stops at Joseph."
+     ]
+    ],
+    "side": "DEFENDER",
+    "closing": "The register stops at Joseph.",
+    "want": "LISTED",
+    "note": "label ending in a colon before the drop verb"
    }
   ]
  }
