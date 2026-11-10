@@ -1,0 +1,33 @@
+GOOD s103 strict CURED | s103+KSL2 CURED | LIVE s104 CURED | s104+KSL2 CURED     | "COUNTED:\nthe grant is not withdrawn" 
+     KRO2+KSL reason: answered: the close concession is counted
+GOOD s103 strict CURED | s103+KSL2 CURED | LIVE s104 CURED | s104+KSL2 CURED     | "COUNTED:**\nthe grant is not withdrawn" 
+     KRO2+KSL reason: answered: the close concession is counted
+GOOD s103 strict CURED | s103+KSL2 CURED | LIVE s104 CURED | s104+KSL2 CURED     | "**COUNTED:**\nThe defender did not reclaim it in CR4." 
+     KRO2+KSL reason: answered: the close concession is counted
+GOOD s103 strict CURED | s103+KSL2 CURED | LIVE s104 CURED | s104+KSL2 CURED     | "COUNTED,\nand CR4 does not undo it." 
+     KRO2+KSL reason: answered: the close concession is counted
+GOOD s103 strict UNCURED | s103+KSL2 UNCURED | LIVE s104 CURED | s104+KSL2 CURED     | "COUNTED -\nnot withdrawn, not narrowed." 
+     KRO2+KSL reason: answered: the close concession is counted (NOTED, record-only: the strict reader would refuse it: COUNTED is not the first word, or the first sentence holds a negation)
+GOOD s103 strict CURED | s103+KSL2 CURED | LIVE s104 CURED | s104+KSL2 CURED     | "COUNTED;\nthe closing round cannot take it back." 
+     KRO2+KSL reason: answered: the close concession is counted
+GOOD s103 strict UNCURED | s103+KSL2 UNCURED | LIVE s104 CURED | s104+KSL2 CURED     | "COUNTED (see below)\nThe grant was never withdrawn." 
+     KRO2+KSL reason: answered: the close concession is counted (NOTED, record-only: the strict reader would refuse it: COUNTED is not the first word, or the first sentence holds a negation)
+GOOD s103 strict CURED | s103+KSL2 CURED | LIVE s104 CURED | s104+KSL2 CURED     | "COUNTED\nI do not withdraw the count." 
+     KRO2+KSL reason: answered: the close concession is counted
+GOOD s103 strict CURED | s103+KSL2 CURED | LIVE s104 CURED | s104+KSL2 CURED     | "COUNTED.\nAs for #2: it should not be counted." 
+     KRO2+KSL reason: answered: the close concession is counted
+GOOD s103 strict CURED | s103+KSL2 CURED | LIVE s104 CURED | s104+KSL2 CURED     | "COUNTED.\nOn K-G1 #2: that is not right." 
+     KRO2+KSL reason: answered: the close concession is counted
+GOOD s103 strict CURED | s103+KSL2 CURED | LIVE s104 CURED | s104+KSL2 CURED     | "COUNTED.\nItem 2 is a different matter and is not counted." 
+     KRO2+KSL reason: answered: the close concession is counted
+GOOD s103 strict CURED | s103+KSL2 CURED | LIVE s104 CURED | s104+KSL2 CURED     | "COUNTED.\nUnlike #2, this one is not in doubt." 
+     KRO2+KSL reason: answered: the close concession is counted
+GOOD s103 strict CURED | s103+KSL2 CURED | LIVE s104 CURED | s104+KSL2 CURED     | "COUNTED.\nThe grant stands in DEFENDER CR3; nothing in it is not plain." 
+     KRO2+KSL reason: answered: the close concession is counted
+GOOD s103 strict UNCURED | s103+KSL2 UNCURED | LIVE s104 UNCURED | s104+KSL2 UNCURED     | "The close concession stands.\nCOUNTED." 
+     KRO2+KSL reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+GOOD s103 strict UNCURED | s103+KSL2 UNCURED | LIVE s104 UNCURED | s104+KSL2 UNCURED     | "Yes.\nCOUNTED: the grant is in CR3." 
+     KRO2+KSL reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+GOOD s103 strict CURED | s103+KSL2 CURED | LIVE s104 CURED | s104+KSL2 CURED     | "COUNTED.\n#1 is not something the defender can take back." 
+     KRO2+KSL reason: answered: the close concession is counted
+pkgKSL/w3_grade/w3_good_ksl2.json: 16 texts; correct answers cured on live and refused with pkgKSL: 0; texts where another log row differs: 0; texts where pkgKSL changes the pkgKRO rev 2 ruling: 0

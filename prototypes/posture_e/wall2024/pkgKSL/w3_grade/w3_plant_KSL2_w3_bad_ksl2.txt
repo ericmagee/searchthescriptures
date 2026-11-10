@@ -1,0 +1,21 @@
+BAD s103 strict UNCURED | s103+KSL2 UNCURED | LIVE s104 UNCURED | s104+KSL2 UNCURED     | "NOT COUNTED:\nthe grant was withdrawn" 
+     KRO2+KSL reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+BAD s103 strict UNCURED | s103+KSL2 UNCURED | LIVE s104 UNCURED | s104+KSL2 UNCURED     | "I refuse.\nIt is not to be counted." 
+     KRO2+KSL reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+BAD s103 strict UNCURED | s103+KSL2 UNCURED | LIVE s104 UNCURED | s104+KSL2 UNCURED     | "I decline to answer this item.\nThe defender's sentence should not be counted as a concession." 
+     KRO2+KSL reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+BAD s103 strict UNCURED | s103+KSL2 UNCURED | LIVE s104 UNCURED | s104+KSL2 UNCURED     | "No.\nNot counted." 
+     KRO2+KSL reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+BAD s103 strict UNCURED | s103+KSL2 UNCURED | LIVE s104 UNCURED | s104+KSL2 UNCURED     | "The defender did not concede.\nIt cannot be counted." 
+     KRO2+KSL reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+BAD s103 strict CURED | s103+KSL2 CURED | LIVE s104 CURED | s104+KSL2 CURED     | "COUNTED.\n#1 is not counted after all." 
+     KRO2+KSL reason: answered: the close concession is counted
+BAD s103 strict CURED | s103+KSL2 CURED | LIVE s104 CURED | s104+KSL2 CURED     | "COUNTED.\nIt is not counted, because DEFENDER CR3 did not grant it." 
+     KRO2+KSL reason: answered: the close concession is counted
+BAD s103 strict CURED | s103+KSL2 CURED | LIVE s104 CURED | s104+KSL2 CURED     | "COUNTED.\nNo. 1 is not counted; see also #2." 
+     KRO2+KSL reason: answered: the close concession is counted
+BAD s103 strict UNCURED | s103+KSL2 UNCURED | LIVE s104 UNCURED | s104+KSL2 UNCURED     | "TOUCHES NO LINK:\nit concerns no link of the chain" 
+     KRO2+KSL reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+BAD s103 strict UNCURED | s103+KSL2 UNCURED | LIVE s104 UNCURED | s104+KSL2 UNCURED     | "This item\nTOUCHES NO LINK" 
+     KRO2+KSL reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+pkgKSL/w3_grade/w3_bad_ksl2.json: 10 texts; correct answers cured on live and refused with pkgKSL: 0; texts where another log row differs: 0; texts where pkgKSL changes the pkgKRO rev 2 ruling: 0

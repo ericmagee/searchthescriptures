@@ -1,0 +1,15 @@
+BAD s103 strict CURED | s103+KSL2 CURED | LIVE s104 CURED | s104+KSL2 CURED     | "COUNTED. #1 is not counted after all." 
+     KRO2+KSL reason: answered: the close concession is counted
+BAD s103 strict CURED | s103+KSL2 CURED | LIVE s104 CURED | s104+KSL2 CURED     | "COUNTED. It is not counted, because DEFENDER CR3 did not grant it." 
+     KRO2+KSL reason: answered: the close concession is counted
+BAD s103 strict CURED | s103+KSL2 CURED | LIVE s104 CURED | s104+KSL2 CURED     | "COUNTED.\nIt is not counted, because the defender did not grant it." 
+     KRO2+KSL reason: answered: the close concession is counted
+BAD s103 strict CURED | s103+KSL2 CURED | LIVE s104 CURED | s104+KSL2 CURED     | "COUNTED. It is not counted, because the defender did not grant it." 
+     KRO2+KSL reason: answered: the close concession is counted
+BAD s103 strict CURED | s103+KSL2 CURED | LIVE s104 CURED | s104+KSL2 CURED     | "COUNTED.\nIt should not be counted. See DEFENDER CR3." 
+     KRO2+KSL reason: answered: the close concession is counted
+BAD s103 strict CURED | s103+KSL2 CURED | LIVE s104 CURED | s104+KSL2 CURED     | "COUNTED.\nIt should not be counted.\nSee DEFENDER CR3." 
+     KRO2+KSL reason: answered: the close concession is counted (NOTED, record-only: the rev 7 reader reads the whole answer as a refusal)
+BAD s103 strict CURED | s103+KSL2 CURED | LIVE s104 CURED | s104+KSL2 CURED     | "COUNTED.\nSee DEFENDER CR3.\nIt should not be counted." 
+     KRO2+KSL reason: answered: the close concession is counted
+pkgKSL/w3_grade/w3_bad_ksl2b.json: 7 texts; correct answers cured on live and refused with pkgKSL: 0; texts where another log row differs: 0; texts where pkgKSL changes the pkgKRO rev 2 ruling: 0

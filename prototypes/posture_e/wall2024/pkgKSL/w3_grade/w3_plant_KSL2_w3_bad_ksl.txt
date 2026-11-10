@@ -1,0 +1,11 @@
+BAD s103 strict CURED | s103+KSL2 CURED | LIVE s104 CURED | s104+KSL2 CURED     | "COUNTED.\nIt should not be counted." 
+     KRO2+KSL reason: answered: the close concession is counted (NOTED, record-only: the rev 7 reader reads the whole answer as a refusal)
+BAD s103 strict CURED | s103+KSL2 CURED | LIVE s104 CURED | s104+KSL2 CURED     | "COUNTED\nOn reflection, NOT COUNTED." 
+     KRO2+KSL reason: answered: the close concession is counted
+BAD s103 strict UNCURED | s103+KSL2 UNCURED | LIVE s104 UNCURED | s104+KSL2 UNCURED     | "NOT COUNTED\nCOUNTED was my first thought." 
+     KRO2+KSL reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+BAD s103 strict CURED | s103+KSL2 CURED | LIVE s104 CURED | s104+KSL2 CURED     | "COUNTED\nTOUCHES NO LINK" 
+     KRO2+KSL reason: answered: the close concession is counted
+BAD s103 strict UNCURED | s103+KSL2 UNCURED | LIVE s104 UNCURED | s104+KSL2 UNCURED     | "I decline.\nCOUNTED is not my finding." 
+     KRO2+KSL reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+pkgKSL/w3_grade/w3_bad_ksl.json: 5 texts; correct answers cured on live and refused with pkgKSL: 0; texts where another log row differs: 0; texts where pkgKSL changes the pkgKRO rev 2 ruling: 0
