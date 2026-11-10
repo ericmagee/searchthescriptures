@@ -1,0 +1,20 @@
+gate/replay: base pkgLIB/strip_KCB_base, cand pkgLIB/strip_FUN5, fetch-back fetchback_live_s102.json, 30 library nodes, 47 saved runs, 12 near-miss cases, time limit 60000 ms per node run
+OK   case w1_cases.json KRC-A-33506:  [Cure Check K-RUL  status = CURED]: cand CURED; base CURED
+OK   case w1_cases.json KRC-A-33506:  [Cure Check K-RUL  why ~/valid ruling card/]: cand a valid ruling card for keystone; base a valid ruling card for keystone
+OK   case w1_cases.json KRC-B-33506:  [Cure Check K-RUL  status = UNCURED]: cand UNCURED | UNCURED; base UNCURED | UNCURED
+OK   case w1_cases.json KRC-A-33627:  [Cure Check K-RUL  status = CURED]: cand CURED | CURED | CURED | CURED | CURED | CURED; base CURED | CURED | CURED | CURED | CURED | CURED
+OK   case w1_cases.json KRC-A-33627:  [Cure Check K-RUL  why ~/valid ruling card/]: cand a valid ruling card for keystone | a valid ruling card for D1 vs C2 | a valid ruling card for D2 vs C3 | a valid ruling card for D3 vs C4 | a valid ruling card for D4 vs C5 | a valid ruling card for D5 vs C1; base a valid ruling card for keystone | a valid ruling card for D1 vs C2 | a valid ruling card for D2 vs C3 | a valid ruling card for D3 vs C4 | a valid ruling card for D4 vs C5 | a valid ruling card for D5 vs C1
+OK   case w1_cases.json KRC-B-33627:  [Cure Check K-RUL  status = UNCURED]: cand UNCURED | UNCURED | UNCURED | UNCURED | UNCURED | UNCURED; base UNCURED | UNCURED | UNCURED | UNCURED | UNCURED | UNCURED
+OK   case w1_cases.json KRC-A-33644:  [Cure Check K-RUL  status = CURED]: cand CURED | CURED | CURED | CURED | CURED; base CURED | CURED | CURED | CURED | CURED
+OK   case w1_cases.json KRC-A-33644:  [Cure Check K-RUL  why ~/valid ruling card/]: cand a valid ruling card for D1 vs C2 | a valid ruling card for D3 vs C3 | a valid ruling card for D4 vs C5 | a valid ruling card for D5 vs C4 | a valid ruling card for D6 vs C1; base a valid ruling card for D1 vs C2 | a valid ruling card for D3 vs C3 | a valid ruling card for D4 vs C5 | a valid ruling card for D5 vs C4 | a valid ruling card for D6 vs C1
+OK   case w1_cases.json KRC-B-33644:  [Cure Check K-RUL  status = UNCURED]: cand UNCURED | UNCURED | UNCURED | UNCURED | UNCURED | UNCURED | UNCURED; base UNCURED | UNCURED | UNCURED | UNCURED | UNCURED | UNCURED | UNCURED
+OK   case w1_cases.json KRC-A-33846:  [Panel Cure Check K-RUL  status = CURED]: cand CURED | CURED | CURED | CURED; base CURED | CURED | CURED | CURED
+OK   case w1_cases.json KRC-A-33846:  [Panel Cure Check K-RUL  why ~/valid ruling card/]: cand a valid ruling card for CHALLENGER premise 2 | a valid ruling card for CHALLENGER premise 6 | a valid ruling card for D2 vs C2 | a valid ruling card for D6 vs C6; base a valid ruling card for CHALLENGER premise 2 | a valid ruling card for CHALLENGER premise 6 | a valid ruling card for D2 vs C2 | a valid ruling card for D6 vs C6
+OK   case w1_cases.json KRC-B-33846:  [Panel Cure Check K-RUL  status = UNCURED]: cand UNCURED | UNCURED | UNCURED | UNCURED | UNCURED | UNCURED | UNCURED | UNCURED | UNCURED | UNCURED | UNCURED | UNCURED; base UNCURED | UNCURED | UNCURED | UNCURED | UNCURED | UNCURED | UNCURED | UNCURED | UNCURED | UNCURED | UNCURED | UNCURED
+OK   case w1_cases.json KRC-34016-luna:  [Panel Cure Check K-RUL ^keystone$ cure_status = CURED]: cand CURED; base CURED
+OK   case w1_cases.json KRC-34016-luna:  [Panel Cure Check K-W CHALLENGER DR3 LINK 3 #3 cure_status = UNCURED]: cand UNCURED; base UNCURED
+OK   case w1_cases.json QUOTE-34016-terra:  [Panel Cure Check  ^DEFENDER CR2 D3 #3$ cure_status ~/^UNCURED$/]: cand UNCURED; base UNCURED
+OK   case w2_cases.json XK-A-34016-terra:  [Panel Cure Check  ^DEFENDER CR2 D2 #2$ cure_status = CURED]: cand CURED; base CURED
+OK   case w2_cases.json XK-B-34016-terra-W1:  [Panel Cure Check  ^DEFENDER CR2 D3 #3$ cure_status = CURED]: cand CURED; base CURED
+node runs 767, byte-equal or same error 767, target item changes 0, near-miss checks passed 17
+GATE PASS

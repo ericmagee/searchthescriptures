@@ -97,3 +97,25 @@ Checks:
 - Gate on the s100 fetch-back: 767 node runs equal, 0 target item changes, 17 near-miss checks passed, GATE PASS.
 - Rolled-back insert (CURED "COUNTED. The defender calls it courtesy. It is not.", UNCURED "COUNTED. I retract my count of it."): accepted, rows 2.
 - Write file parent_s100_FUN4.json: against live s100 only the Shared Library differs (form 3 pack, pkgLIB_FUN4S).
+
+## Rev 5 (W1, 2026-11-10)
+
+W3 failed rev 4 (grade_FUN4_w3.md): splitting the whole answer at colons and dashes let reported speech ("Earlier I wrote: my count stands.") and
+pleas the judge rejects ("... I refuse.") read as refusals, 12 of W3's 20 new correct answers. Rev 5 takes W3's rule (w3_first_sentence_idea.cjs):
+- ENFORCED: only the first sentence after COUNTED, cut at . or ! only, when the whole of it (after a leading but/though/yet/however/and/still/so/then)
+  is a sentence of list P or B; this also covers "COUNTED, but I disagree." A first sentence that ends in "?" is never a refusal.
+- RECORD-ONLY NOTE: when the first sentence is not a refusal but the rev 4 reader finds a listed sentence later, the reading stays CURED and the
+  cure reason reads "answered: the close concession is counted (NOTED, record-only: a later sentence reads like a refusal: "...")". The reason
+  keeps its prefix, so the library's tests of it are unchanged.
+- Reader pkgFUN/fun5_ref.cjs; build build_FUN5.cjs -> pkgLIB/strip_FUN5 from strip_KCB_base (Shared Library equal in s98, s100 and s102).
+Checks:
+- fun5_ref against W3's sketch on all of W3's tables (120 texts, good and bad, 4n included): 0 differ in enforced or noted.
+- W2's 180 (w2_testset_FUN5.txt): 164 match, 0 correct refused; 16 refusals CURED (12 later sentences, 1 first sentence "I reverse that: it is not counted.", 3 on a second line; 11 of them NOTED), the same 16 W3's sketch names; live s100 reads all 16 CURED.
+- W3's node plants (w3_plant_FUN4_nodes_on_FUN5.txt): 0 of 6 correct read UNCURED; "COUNTED. I refuse." UNCURED.
+- All planted answers (allplants_FUN5.txt): 107 correct all CURED, 0 lost against live; 63 refusals, 56 UNCURED (live 25).
+- probe_FUN5: 80 OK, 4 FAIL (W3's four reservations, CURED as on live). replay_FUN5: 176 stored replies byte-equal.
+- Node-level reason (note_rows_FUN5.txt): a later "I retract my count of it." reads CURED with the NOTED text.
+- Gate on the s102 fetch-back: 767 node runs equal, 0 target item changes, GATE PASS.
+- Rolled-back insert (rollback_FUN5.sql, the NOTED CURED row and an UNCURED row): {"rows": 2, "recorded": true}.
+- Write file parent_s102_FUN5.json: against live s102 only the Shared Library differs; connections equal.
+The trade (later refusals noted, not enforced) is the operator's to approve before the write.
