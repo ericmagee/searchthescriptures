@@ -1,0 +1,20 @@
+distinct reply lines 100
+  90 EARLIER [CRN]                ./check34108_s108/34108_Y_rac_DEFENDER_s1_reply.json, ./check34108_s108/34108_Y_rac_DEFENDER_s2_reply.json, ./ctl_replay_s108/33218_ctl_DEFENDER_reply.json
+  77 CLOSING [CRN]                ./check34108_s108/34108_Y_rac_DEFENDER_s1_reply.json, ./ctl_replay_s108/33218_ctl_DEFENDER_reply.json, ./ctl_replay_s108/33299_ctl_DEFENDER_reply.json
+  17 CLOSING [round N]            ./check34108_s108/34108_Y_rac_DEFENDER_s2_reply.json, ./ctl_replay_s108/33345_ctl_DEFENDER_reply.json, ./ctl_replay_s108/33371_ctl_DEFENDER_reply.json
+   4 EARLIER [DRN]                ./ctl_replay_s108/33530_ctl_CHALLENGER_reply.json, ./rac_replay_s107/33222_rac_CHALLENGER_send1.json, ./rac_replay_s107/33222_rac_CHALLENGER_send2.json
+   3 CLOSING [DRN]                ./ctl_replay_s108/33530_ctl_CHALLENGER_reply.json, ./rac_replay_s107/33222_rac_CHALLENGER_send1.json
+   3 EARLIER [round N]            ./setC_replies_s106/33705_css_DEFENDER_send2.json
+   2 EARLIER [N]                  ./check34108_s108/34108_X_live_DEFENDER_s1_reply.json, ./check34108_s108/34108_X_live_DEFENDER_s2_reply.json
+   2 CLOSING [N]                  ./check34108_s108/34108_X_live_DEFENDER_s1_reply.json, ./check34108_s108/34108_X_live_DEFENDER_s2_reply.json
+   1 NONE                         ./setC_replies_s106/33222_css_CHALLENGER_send1.json
+lines without EARLIER/CLOSING label: 0
+
+exact labels: {"[3]":2,"[4]":2,"[CR3]":65,"[CR4]":77,"[round 4]":17,"[CR2]":25,"[DR1]":1,"[DR4]":3,"[DR3]":1,"[DR2]":2,"[round 2]":3}
+side + EARLIER / CLOSING forms per line:
+   2 DEFENDER [N] / [N]                               check34108_s108/34108_X_live_DEFENDER_s1_reply.json, check34108_s108/34108_X_live_DEFENDER_s2_reply.json
+  77 DEFENDER [CRN] / [CRN]                           check34108_s108/34108_Y_rac_DEFENDER_s1_reply.json, ctl_replay_s108/33218_ctl_DEFENDER_reply.json, ctl_replay_s108/33299_ctl_DEFENDER_reply.json, ctl_replay_s108/33644_ctl_DEFENDER_EXTRA_exec34576.json
+  13 DEFENDER [CRN] / [round N]                       check34108_s108/34108_Y_rac_DEFENDER_s2_reply.json, ctl_replay_s108/33345_ctl_DEFENDER_reply.json, ctl_replay_s108/33371_ctl_DEFENDER_reply.json, ctl_replay_s108/33644_ctl_DEFENDER_reply.json
+   3 CHALLENGER [DRN] / [DRN]                         ctl_replay_s108/33530_ctl_CHALLENGER_reply.json, rac_replay_s107/33222_rac_CHALLENGER_send1.json
+   1 CHALLENGER [DRN] / [round N]                     rac_replay_s107/33222_rac_CHALLENGER_send2.json
+   3 DEFENDER [round N] / [round N]                   setC_replies_s106/33705_css_DEFENDER_send2.json
