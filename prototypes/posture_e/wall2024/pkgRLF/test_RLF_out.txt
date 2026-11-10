@@ -1,0 +1,154 @@
+
+== A 34108 both sides: same as live
+  live s106: broken [DEFENDER LINK 3, DEFENDER LINK 6] rows 2
+  pkgRLF   : broken [DEFENDER LINK 3, DEFENDER LINK 6] rows 2
+    DEFENDER L3 CR3/CR4 CONFIRMED
+    DEFENDER L6 CR3/CR4 CONFIRMED
+
+== C 33222 CHALLENGER send 1: same as live
+  live s106: broken [] rows 0
+  pkgRLF   : broken [] rows 0
+
+== C 33222 CHALLENGER send 2: same as live
+  live s106: broken [] rows 0
+  pkgRLF   : broken [] rows 0
+
+== C 33442 DEFENDER send 1: same as live
+  live s106: broken [DEFENDER LINK 2, DEFENDER LINK 3, DEFENDER LINK 5, DEFENDER LINK 6] rows 8
+  pkgRLF   : broken [DEFENDER LINK 2, DEFENDER LINK 3, DEFENDER LINK 5, DEFENDER LINK 6] rows 8
+    DEFENDER L2 CR3/CR4 CONFIRMED
+    DEFENDER L2 CR3/CR4 CONFIRMED
+    DEFENDER L2 CR3/CR4 CONFIRMED
+    DEFENDER L3 CR3/CR4 CONFIRMED
+    DEFENDER L3 CR3/CR4 CONFIRMED
+    DEFENDER L5 CR3/CR4 CONFIRMED
+    DEFENDER L6 CR3/CR4 CONFIRMED
+    DEFENDER L6 CR3/CR4 CONFIRMED
+
+== C 33442 DEFENDER send 2: CHANGED
+  live s106: broken [] rows 4
+  pkgRLF   : broken [DEFENDER LINK 2, DEFENDER LINK 6] rows 4
+    DEFENDER L2 CR3/CR4 CONFIRMED
+    DEFENDER L2 CR3/CR4 CONFIRMED
+    DEFENDER L2 CR3/CR4 CONFIRMED
+    DEFENDER L6 CR3/CR4 CONFIRMED
+
+== C 33461 DEFENDER send 1: same as live
+  live s106: broken [] rows 0
+  pkgRLF   : broken [] rows 0
+
+== C 33461 DEFENDER send 2: same as live
+  live s106: broken [DEFENDER LINK 4] rows 1
+  pkgRLF   : broken [DEFENDER LINK 4] rows 1
+    DEFENDER L4 CR2/CR4 CONFIRMED
+
+== C 33482 DEFENDER send 1: same as live
+  live s106: broken [DEFENDER LINK 1, DEFENDER LINK 6] rows 3
+  pkgRLF   : broken [DEFENDER LINK 1, DEFENDER LINK 6] rows 3
+    DEFENDER L1 CR3/CR4 CONFIRMED
+    DEFENDER L6 CR3/CR4 CONFIRMED
+    DEFENDER L6 CR3/CR4 CONFIRMED
+
+== C 33705 DEFENDER send 1: same as live
+  live s106: broken [DEFENDER LINK 4, DEFENDER LINK 6] rows 3
+  pkgRLF   : broken [DEFENDER LINK 4, DEFENDER LINK 6] rows 3
+    DEFENDER L4 CR2/CR4 CONFIRMED
+    DEFENDER L4 CR2/CR4 CONFIRMED
+    DEFENDER L6 CR2/CR4 CONFIRMED
+
+== C 33705 DEFENDER send 2: CHANGED
+  live s106: broken [] rows 3
+  pkgRLF   : broken [DEFENDER LINK 4] rows 3
+    DEFENDER L4 CR2/CR4 CONFIRMED
+    DEFENDER L4 CR2/CR4 CONFIRMED
+    DEFENDER L4 CR2/CR4 CONFIRMED
+
+== P [round N]: OK (reads as the [CRn] original)
+  live s106: broken [] rows 2
+  pkgRLF   : broken [DEFENDER LINK 3, DEFENDER LINK 6] rows 2
+    DEFENDER L3 CR3/CR4 CONFIRMED
+    DEFENDER L6 CR3/CR4 CONFIRMED
+
+== P round N no brackets: OK (reads as the [CRn] original)
+  live s106: broken [] rows 2
+  pkgRLF   : broken [DEFENDER LINK 3, DEFENDER LINK 6] rows 2
+    DEFENDER L3 CR3/CR4 CONFIRMED
+    DEFENDER L6 CR3/CR4 CONFIRMED
+
+== P [Round N]: OK (reads as the [CRn] original)
+  live s106: broken [] rows 2
+  pkgRLF   : broken [DEFENDER LINK 3, DEFENDER LINK 6] rows 2
+    DEFENDER L3 CR3/CR4 CONFIRMED
+    DEFENDER L6 CR3/CR4 CONFIRMED
+
+== P [ROUND N]: OK (reads as the [CRn] original)
+  live s106: broken [] rows 2
+  pkgRLF   : broken [DEFENDER LINK 3, DEFENDER LINK 6] rows 2
+    DEFENDER L3 CR3/CR4 CONFIRMED
+    DEFENDER L6 CR3/CR4 CONFIRMED
+
+== P [CR N] spaced: OK (reads as the [CRn] original)
+  live s106: broken [] rows 2
+  pkgRLF   : broken [DEFENDER LINK 3, DEFENDER LINK 6] rows 2
+    DEFENDER L3 CR3/CR4 CONFIRMED
+    DEFENDER L6 CR3/CR4 CONFIRMED
+
+== P [cr N] lower: OK (reads as the [CRn] original)
+  live s106: broken [DEFENDER LINK 3, DEFENDER LINK 6] rows 2
+  pkgRLF   : broken [DEFENDER LINK 3, DEFENDER LINK 6] rows 2
+    DEFENDER L3 CR3/CR4 CONFIRMED
+    DEFENDER L6 CR3/CR4 CONFIRMED
+
+== P mixed: earlier [CR3], closing [round 4]: OK (reads as the [CRn] original)
+  live s106: broken [] rows 2
+  pkgRLF   : broken [DEFENDER LINK 3, DEFENDER LINK 6] rows 2
+    DEFENDER L3 CR3/CR4 CONFIRMED
+    DEFENDER L6 CR3/CR4 CONFIRMED
+
+== P NEG [round 5] closing: OK (no defender link broken)
+  live s106: broken [] rows 2
+  pkgRLF   : broken [] rows 2
+    DEFENDER L3 CR3/CR5 NOT CONFIRMED (form) (the closing round CR5 is not the defender's round 4 (CR4))
+    DEFENDER L6 CR3/CR5 NOT CONFIRMED (form) (the closing round CR5 is not the defender's round 4 (CR4))
+
+== P NEG earlier given as [round 4]: OK (no defender link broken)
+  live s106: broken [] rows 2
+  pkgRLF   : broken [] rows 2
+    DEFENDER L3 CR4/CR4 NOT CONFIRMED (form) (the earlier round CR4 is not one of the defender's rounds 1 to 3; the earlier quotation is)
+    DEFENDER L6 CR4/CR4 NOT CONFIRMED (form) (the earlier round CR4 is not one of the defender's rounds 1 to 3; the earlier quotation is)
+
+== P NEG [DR 4] on defender line: OK (no defender link broken)
+  live s106: broken [] rows 2
+  pkgRLF   : broken [] rows 2
+    DEFENDER L3 CR3/DR4 NOT CONFIRMED (form) (the closing round DR4 is not the defender's round 4 (CR4); the closing quotation is not fo)
+    DEFENDER L6 CR3/DR4 NOT CONFIRMED (form) (the closing round DR4 is not the defender's round 4 (CR4); the closing quotation is not fo)
+
+== P [round4] no space: OK (reads as the [CRn] original)
+  live s106: broken [] rows 2
+  pkgRLF   : broken [DEFENDER LINK 3, DEFENDER LINK 6] rows 2
+    DEFENDER L3 CR3/CR4 CONFIRMED
+    DEFENDER L6 CR3/CR4 CONFIRMED
+
+== P challenger [DRn] built pair: reference (the challenger pair in [DRn] form)
+  live s106: broken [CHALLENGER LINK 1] rows 1
+  pkgRLF   : broken [CHALLENGER LINK 1] rows 1
+    CHALLENGER L1 DR3/DR4 CONFIRMED
+
+== P challenger [round n] built pair: OK (reads as the [DRn] line)
+  live s106: broken [] rows 1
+  pkgRLF   : broken [CHALLENGER LINK 1] rows 1
+    CHALLENGER L1 DR3/DR4 CONFIRMED
+
+== P challenger [round N]: OK (reads as the [CRn] original)
+  live s106: broken [DEFENDER LINK 3, DEFENDER LINK 6] rows 2
+  pkgRLF   : broken [DEFENDER LINK 3, DEFENDER LINK 6] rows 2
+    DEFENDER L3 CR3/CR4 CONFIRMED
+    DEFENDER L6 CR3/CR4 CONFIRMED
+
+== P NEG defender quotes moved to a CHALLENGER line as [round N]: OK (no challenger link broken)
+  live s106: broken [] rows 2
+  pkgRLF   : broken [] rows 2
+    CHALLENGER L3 DR3/DR4 NOT CONFIRMED (form) (the earlier quotation is not found word for word in DR3; the closing quotation is not foun)
+    CHALLENGER L6 DR3/DR4 NOT CONFIRMED (form) (the earlier quotation is not found word for word in DR3; the closing quotation is not foun)
+
+ALL PLANTS OK
