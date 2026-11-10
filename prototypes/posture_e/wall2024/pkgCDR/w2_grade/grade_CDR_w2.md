@@ -175,3 +175,16 @@ PASS on all five checks.
 - Prompt size: size_CDR.cjs reproduces size_CDR.txt exactly (35 debates, +1,319 to +9,502 characters, median 4,712, mean 4,573, +3.2%). With no
   cap, a side can pad: 300 drop sentences in [CR3] made 34108's prompt 259,907 characters against 166,829 live for the same rounds (+56%). The
   padding itself is in the rounds, so the growth is about double the padding; noted as a cost, not a fault.
+
+## rev 11 (commit acff76f2): PASS on the three changes
+
+Rebuild on s103 byte-equal. New checks record11_w2.cjs (Y0-Y13, labels committed before the run, record11_w2.txt): 14 OK, 0 FAIL.
+- LINK ? in Record: a numbered hint answered NOT A CONTRADICTION with LINK ? is read (Y1); CONFIRMED with LINK ? on a numbered hint, a ? hint
+  or a NEW line is NOT CONFIRMED and breaks nothing (Y2, Y5, W1's R6); "LINK?" and "LINK  ?  " are read (Y3, Y4); D6 CONFIRMED with LINK 6
+  still breaks D6 beside a LINK ? row (Y6); log rows keep the shape (Y7). The regex change is in Close Enforcer Record only. W1's record_CDR 7 OK.
+- Cap: with 300 padding drop sentences in [CR3], 30 defender hints (Y8); the padding and a true drop past the cap stand word for word in the
+  prompt (Y9); growth over live 10,911 characters (Y10, against +93,078 on rev 10); only the candidate block differs from live (Y11).
+- Prompt: the three new sentences are present word for word (Y12), and the "differs only in wording" rule they refer to stands above (Y13).
+- Hints on my 151 (run_rev11.txt): as rev 10, plus W150 now past the cap (in the rounds in full).
+Risk for the operator (not a fault of this revision): a CONFIRMED answer needs a declared link, and 124 of 366 stored hints print LINK ?. A true
+contradiction the enforcer cannot tie to a link is thrown away on form; nothing records it for review.

@@ -1,0 +1,15 @@
+OK   Y0 34108 has a LINK ? hint and a numbered hint: P1 P2 L1
+OK   Y1 a numbered hint answered NOT A CONTRADICTION with LINK ? is read, not NO ANSWER: ["P2 NOT A CONTRADICTION L?"]
+OK   Y2 a numbered hint answered CONFIRMED with LINK ? is NOT CONFIRMED, nothing broken: ["P2 NOT CONFIRMED (form) L?"]
+OK   Y3 "LINK?" with no space is read: ["P1 NOT A CONTRADICTION L?"]
+OK   Y4 "LINK  ?  " with extra spaces is read: ["P1 NOT A CONTRADICTION L?"]
+OK   Y5 a NEW CONFIRMED line with LINK ? breaks nothing: ["NEW NOT CONFIRMED (form) L?"]
+OK   Y6 D6 CONFIRMED with LINK 6 still breaks D6 when a LINK ? row stands beside it: ["P7 CONFIRMED L6","P1 NOT A CONTRADICTION L?"]
+OK   Y7 log rows for the LINK ? answer keep the row shape (rule E-CLOSECON, panel, cure_status empty): 9 rows
+OK   Y8 cap: at most 30 defender hints with 300 padding drops: 30 defender hints
+OK   Y9 cap: the padded round and the true drop past the cap are in the prompt word for word
+OK   Y10 cap: prompt growth over live with 300 padding drops is bounded (under 15,000 characters): 10911 characters added; live 162538
+OK   Y11 cap: no live text removed (only the candidate block differs): 162051 of 162538 unchanged
+OK   Y12 prompt holds the three new sentences word for word
+OK   Y13 the "differs only in wording" rule it refers to stands above it
+14 OK, 0 FAIL

@@ -1,0 +1,152 @@
+OK   W1 DEFENDER want LISTED | P 10 | P2 [CR2] I withdraw the wording "the register stops at Joseph" entirely. | drop in round 2, restated in a longer closing sentence
+MISS W2 CHALLENGER want LISTED | P 10 | - | challenger, unquoted claim clause
+OK   W3 DEFENDER want NOT LISTED | P 10 | P8 [CR3] I drop nothing: the wording "the register stops at Joseph" stands. | 'I drop nothing' is not a drop
+OK   W4 DEFENDER want NOT LISTED | P 10 | P8 [CR3] I will not withdraw the wording "the register stops at Joseph". | negated drop
+OK   W5 DEFENDER want NOT LISTED | P 10 | P8 [CR3] The challenger asks me to drop the wording "the register stops at Joseph". | reported request, not the side's own drop
+OK   W6 CHALLENGER want NOT LISTED | P 10 | - | the other side says it in its close
+OK   W7 DEFENDER want NOT LISTED | P 10 | P8 [CR3] I drop the wording "the register stops at Joseph". | closing sentence grants (rule in README)
+OK   W8 DEFENDER want NOT LISTED | P 10 | P2 [CR2] I drop the wording "the register stops at Joseph". | restated in round 3, not the close
+OK   W9 DEFENDER want NOT LISTED | P 10 | - | 2-word span, below the 3-word floor
+OK   W10 DEFENDER want NOT LISTED | P 10 | P8 [CR3] I drop the wording "the register stops at Joseph". | quoted in the close, and the close repeats the drop
+OK   W11 DEFENDER want LISTED | P 10 | P8 [CR3] I drop the wording "the register stops at Joseph". | case changed
+MISS W12 DEFENDER want LISTED | P 10 | - | 'abandon the reading that' clause
+OK   W13 DEFENDER want NOT LISTED | P 10 | P8 [CR3] I do not drop the wording "the register stops at Joseph". | 'I do not drop'
+OK   W14 DEFENDER want NOT LISTED | P 10 | P8 [CR3] I withdraw none of the wording "the register stops at Joseph". | added after the first run (W3 class): 'withdraw none of'
+OK   W15 DEFENDER want NOT LISTED | P 10 | P8 [CR3] I give up no part of the claim that the register stops at Joseph. | added after the first run (W3 class): 'give up no part of'
+OK   W16 DEFENDER want NOT LISTED | P 10 | P8 [CR3] I retract nothing; "the register stops at Joseph" stands as written. | added after the first run (W3 class): 'retract nothing'
+OK   W17 DEFENDER want LISTED | P 10 | P8 [CR3] I drop not only the bare statement but the wording "the register stops at Joseph". | rev 2 regrade, labeled before the run: a real drop after 'drop not only' (a miss here is the safe direction)
+OK   W18 DEFENDER want LISTED | P 10 | P8 [CR3] I withdraw nothing further; I drop the wording "the register stops at Joseph". | rev 2 regrade: second drop verb in the same sentence
+OK   W19 DEFENDER want LISTED | P 10 | P8 [CR3] I withdraw now the wording "the register stops at Joseph". | rev 2 regrade: adverb after the verb
+OK   W20 DEFENDER want LISTED | P 10 | P8 [CR3] I retract the wording "the register stops at Joseph", nothing else. | rev 2 regrade: 'nothing' later in the sentence, not after the verb
+OK   W21 DEFENDER want NOT LISTED | P 10 | P8 [CR3] Nor do I drop the wording "the register stops at Joseph". | rev 3 regrade, labeled before any rev 3 run: W3 class: 'Nor do I drop'
+OK   W22 DEFENDER want NOT LISTED | P 10 | P8 [CR3] If I drop the wording "the register stops at Joseph", the chain fails, so I keep it. | rev 3 regrade, labeled before any rev 3 run: conditional drop, kept
+OK   W23 DEFENDER want NOT LISTED | P 10 | P8 [CR3] Should I withdraw the wording "the register stops at Joseph"? | rev 3 regrade, labeled before any rev 3 run: question
+OK   W24 DEFENDER want NOT LISTED | P 10 | P8 [CR3] I drop the limb on Matthew 1:25 alone, but the wording "the register stops at Joseph" stan | rev 3 regrade, labeled before any rev 3 run: kept wording later in the same sentence
+OK   W25 DEFENDER want NOT LISTED | P 10 | P8 [CR3] I withdraw my objection to the reading that the register stops at Joseph. | rev 3 regrade, labeled before any rev 3 run: withdraws an objection, so keeps the reading
+OK   W26 DEFENDER want NOT LISTED | P 10 | P8 [CR3] The challenger demands that I withdraw the wording "the register stops at Joseph"; I refus | rev 3 regrade, labeled before any rev 3 run: reported demand, refused
+OK   W27 DEFENDER want NOT LISTED | P 10 | P8 [CR3] I retract only the word "alone"; the wording "the register stops at Joseph" I keep. | rev 3 regrade, labeled before any rev 3 run: narrow retraction, wording kept
+OK   W28 DEFENDER want NOT LISTED | P 10 | P8 [CR3] Were I to drop the wording "the register stops at Joseph", nothing would remain of LINK 6. | rev 3 regrade, labeled before any rev 3 run: W2 own: subjunctive
+OK   W29 DEFENDER want NOT LISTED | P 10 | P8 [CR3] I would drop the wording "the register stops at Joseph" only if the rows failed, and they  | rev 3 regrade, labeled before any rev 3 run: W2 own: conditional 'would drop'
+OK   W30 DEFENDER want NOT LISTED | P 10 | P8 [CR3] I can drop the claim that the register stops at Joseph without loss, but I do not. | rev 3 regrade, labeled before any rev 3 run: W2 own: 'can drop ... but I do not'
+OK   W31 DEFENDER want LISTED | P 10 | P8 [CR3] **LINK 6: NARROWED TO:** I drop the wording "the register stops at Joseph". | rev 3 regrade, labeled before any rev 3 run: W2 own: label then a true drop
+OK   W32 DEFENDER want LISTED | P 10 | P8 [CR3] I withdraw the claim that the register stops at Joseph. | rev 3 regrade, labeled before any rev 3 run: W2 own: list mark then a true drop
+OK   W33 DEFENDER want NOT LISTED | P 10 | P8 [CR3] I drop the wording "no line through Mary" and keep "the register stops at Joseph". | rev 3 regrade, labeled before any rev 3 run: W2 own: a later quoted span is kept, not dropped
+OK   W34 DEFENDER want NOT LISTED | P 10 | P8 [CR3] I withdraw the wording "the register stops at Joseph" if the challenger shows a row agains | rev 3 grade, labeled before the run: conditional tail after the wording (W3 rev 3 class)
+OK   W35 DEFENDER want NOT LISTED | P 10 | P8 [CR3] I drop the wording "the register stops at Joseph"? | rev 3 grade, labeled before the run: question tail (W3 rev 3 class)
+OK   W36 DEFENDER want NOT LISTED | P 10 | P8 [CR3] I drop the wording "the register stops at Joseph" unless the rows bear it, and they do. | rev 3 grade, labeled before the run: W2 own: 'unless' tail
+OK   W37 DEFENDER want NOT LISTED | P 10 | P8 [CR3] I drop the wording "the register stops at Joseph", provided the challenger proves the gap; | rev 3 grade, labeled before the run: W2 own: 'provided' tail
+OK   W38 DEFENDER want LISTED | P 10 | P8 [CR3] I drop the wording "the register stops at Joseph" for now. | rev 3 grade, labeled before the run: W2 own: a true drop with a time tail
+OK   W39 DEFENDER want LISTED | P 10 | P8 [CR3] I drop the wording "the register stops at Joseph", as the challenger asked. | rev 3 grade, labeled before the run: W2 own: a true drop with an 'as' tail
+OK   W40 DEFENDER want LISTED | P 10 | P8 [CR3] I drop the wording "the register stops at Joseph" because the rows do not state it. | rev 3 grade, labeled before the run: W2 own: a true drop with a reason tail
+OK   W41 DEFENDER want NOT LISTED | P 10 | P8 [CR3] I drop the wording "the register stops at Joseph" in case the rows fail; they do not. | rev 4 regrade, labeled before the run: 'in case' tail
+OK   W42 DEFENDER want NOT LISTED | P 10 | P8 [CR3] I drop the wording "the register stops at Joseph" on condition that the challenger shows t | rev 4 regrade, labeled before the run: 'on condition that' tail
+OK   W43 DEFENDER want NOT LISTED | P 10 | P8 [CR3] Do I drop the wording "the register stops at Joseph"? | rev 4 regrade, labeled before the run: question with 'Do I'
+OK   W44 DEFENDER want NOT LISTED | P 10 | P8 [CR3] I drop the wording "the register stops at Joseph"? | rev 4 regrade, labeled before the run: question tail, 'Never'
+OK   W45 DEFENDER want NOT LISTED | P 10 | P8 [CR3] I drop the wording "the register stops at Joseph" should the rows fail, and they stand. | rev 4 regrade, labeled before the run: 'should' conditional tail
+OK   W46 DEFENDER want LISTED | P 10 | P8 [CR3] I drop the wording "the register stops at Joseph"; if the challenger objects, so be it. | rev 4 regrade, labeled before the run: true drop; 'if' in a later clause (a miss is safe direction)
+OK   W47 DEFENDER want LISTED | P 10 | P8 [CR3] I drop the wording "the register stops at Joseph", even if it costs LINK 6. | rev 4 regrade, labeled before the run: true drop with 'even if' (a miss is safe direction)
+OK   W48 DEFENDER want LISTED | P 10 | P8 [CR3] I drop the wording "the register stops at Joseph" since the rows do not state it. | rev 4 regrade, labeled before the run: true drop, 'since' reason
+OK   W49 DEFENDER want NOT LISTED | P 10 | P8 [CR3] I drop the wording "the register stops at Joseph" supposing the rows fail; they do not. | rev 5 grade, labeled before the run: 'supposing'
+OK   W50 DEFENDER want NOT LISTED | P 10 | P8 [CR3] I drop the wording "the register stops at Joseph" assuming the challenger shows the gap, w | rev 5 grade, labeled before the run: 'assuming'
+OK   W51 DEFENDER want NOT LISTED | P 10 | P8 [CR3] I drop the wording "the register stops at Joseph" in the event that the rows fail; they st | rev 5 grade, labeled before the run: 'in the event that'
+OK   W52 DEFENDER want NOT LISTED | P 10 | P8 [CR3] I drop the wording "the register stops at Joseph" so long as the challenger proves the gap | rev 5 grade, labeled before the run: 'so long as'
+OK   W53 DEFENDER want NOT LISTED | P 10 | P8 [CR3] I drop the wording "the register stops at Joseph" only when the rows fail, and they have n | rev 5 grade, labeled before the run: 'only when'
+OK   W54 DEFENDER want NOT LISTED | P 10 | P8 [CR3] I drop the wording "the register stops at Joseph" but only if the challenger shows a row;  | rev 5 grade, labeled before the run: 'but only if'
+OK   W55 DEFENDER want NOT LISTED | P 10 | P8 [CR3] I drop the wording "the register stops at Joseph" were the rows to fail; they do not. | rev 5 grade, labeled before the run: inverted 'were'
+OK   W56 DEFENDER want LISTED | P 10 | P8 [CR3] I drop the wording "the register stops at Joseph", if only to narrow LINK 6. | rev 5 grade, labeled before the run: true drop: 'if only' idiom (a miss is safe direction)
+OK   W57 DEFENDER want LISTED | P 10 | P8 [CR3] I drop the wording "the register stops at Joseph" whether or not the challenger objects. | rev 5 grade, labeled before the run: true drop: 'whether or not'
+OK   W58 DEFENDER want LISTED | P 10 | P8 [CR3] I drop the wording "the register stops at Joseph" even though the rows bear it. | rev 5 grade, labeled before the run: true drop: 'even though'
+OK   W59 DEFENDER want LISTED | P 10 | P8 [CR3] I drop the wording "the register stops at Joseph" as though it were never written. | rev 5 grade, labeled before the run: true drop: 'as though'
+OK   W60 DEFENDER want LISTED | P 10 | P8 [CR3] I drop the wording "the register stops at Joseph"; I would keep it only if the rows stated | rev 5 grade, labeled before the run: true drop; condition in the next clause
+OK   W61 DEFENDER want LISTED | P 10 | P8 [CR3] I drop the wording "the register stops at Joseph" now that the challenger has shown the ga | rev 6 grade, labeled before the run: true drop, 'now that'
+OK   W62 DEFENDER want LISTED | P 10 | P8 [CR3] I drop the wording "the register stops at Joseph", and if the challenger objects, I answer | rev 6 grade, labeled before the run: true drop; ', and if' starts a new clause
+OK   W63 DEFENDER want LISTED | P 10 | P8 [CR3] I drop the wording "the register stops at Joseph", but only the wording, not the verse. | rev 6 grade, labeled before the run: true drop; ', but only' not a condition
+OK   W64 DEFENDER want LISTED | P 10 | P8 [CR3] I drop the wording "the register stops at Joseph" when I narrow LINK 6 in this round. | rev 6 grade, labeled before the run: true drop; temporal 'when' (it is done now)
+OK   W65 DEFENDER want LISTED | P 10 | P8 [CR3] I drop the wording "the register stops at Joseph" once and for all. | rev 6 grade, labeled before the run: true drop; 'once and for all'
+OK   W66 DEFENDER want LISTED | P 10 | P8 [CR3] I drop the wording "the register stops at Joseph"; should the challenger press it, I have  | rev 6 grade, labeled before the run: true drop; condition after ';'
+OK   W67 DEFENDER want NOT LISTED | P 10 | P8 [CR3] Should the rows fail, I drop the wording "the register stops at Joseph"; they do not. | rev 6 grade, labeled before the run: condition before the drop
+OK   W68 DEFENDER want NOT LISTED | P 10 | P8 [CR3] I drop, for the sake of argument, the wording "the register stops at Joseph". | rev 6 grade, labeled before the run: arguendo between verb and wording
+OK   W69 DEFENDER want NOT LISTED | P 10 | P8 [CR3] For argument's sake I drop the wording "the register stops at Joseph"; in truth it stands. | rev 6 grade, labeled before the run: arguendo before the drop
+OK   W70 DEFENDER want LISTED | P 10 | P8 [CR3] I drop the wording "the register stops at Joseph" provisionally, pending the challenger's  | rev 6 grade, labeled before the run: a provisional drop is a drop
+OK   W71 DEFENDER want LISTED | P 10 | P8 [CR3] I drop the wording "the register stops at Joseph" - if the challenger asks, I give my reas | rev 6 grade, labeled before the run: true drop; dash then 'if'
+OK   W72 DEFENDER want LISTED | P 10 | P8 [CR3] I drop the wording "the register stops at Joseph", the day it was challenged. | rev 6 grade, labeled before the run: true drop; 'the day' in the past
+OK   W73 DEFENDER want NOT LISTED | P 10 | P8 [CR3] I drop the wording "the register stops at Joseph" if need be. | rev 6 grade, labeled before the run: 'if need be' leaves the drop conditional
+OK   W74 DEFENDER want LISTED | P 10 | P8 [CR3] Accordingly I withdraw the wording "the register stops at Joseph". | rev 7 grade, labeled before the run: lead-in 'Accordingly'
+OK   W75 DEFENDER want LISTED | P 10 | P8 [CR3] On Luke 3:23, I drop the wording "the register stops at Joseph". | rev 7 grade, labeled before the run: lead-in verse label
+OK   W76 DEFENDER want LISTED | P 10 | P8 [CR3] Therefore, I drop the wording "the register stops at Joseph". | rev 7 grade, labeled before the run: lead-in 'Therefore,'
+OK   W77 DEFENDER want LISTED | P 10 | P8 [CR3] In this round I drop the wording "the register stops at Joseph". | rev 7 grade, labeled before the run: lead-in phrase
+OK   W78 DEFENDER want LISTED | P 10 | P8 [CR3] So I retract the claim that the register stops at Joseph. | rev 7 grade, labeled before the run: lead-in 'So'
+OK   W79 DEFENDER want LISTED | P 10 | P8 [CR3] I hereby withdraw the wording "the register stops at Joseph". | rev 7 grade, labeled before the run: 'hereby'
+OK   W80 DEFENDER want LISTED | P 10 | P8 [CR3] I now abandon the wording "the register stops at Joseph". | rev 7 grade, labeled before the run: 'now abandon'
+OK   W81 DEFENDER want LISTED | P 10 | P8 [CR3] The wording "the register stops at Joseph" is withdrawn. | rev 7 grade, labeled before the run: passive drop
+OK   W82 DEFENDER want LISTED | P 10 | P8 [CR3] I no longer hold that the register stops at Joseph. | rev 7 grade, labeled before the run: 'no longer hold'
+OK   W83 DEFENDER want LISTED | P 10 | P8 [CR3] I set aside the wording "the register stops at Joseph". | rev 7 grade, labeled before the run: 'set aside'
+OK   W84 DEFENDER want LISTED | P 10 | P8 [CR3] I give the wording "the register stops at Joseph" up. | rev 7 grade, labeled before the run: split 'give ... up'
+OK   W85 DEFENDER want LISTED | P 10 | P8 [CR3] We drop the wording "the register stops at Joseph". | rev 7 grade, labeled before the run: 'We'
+OK   W86 DEFENDER want LISTED | P 10 | P8 [CR3] To narrow LINK 6, I drop the wording "the register stops at Joseph". | rev 7 grade, labeled before the run: purpose lead-in
+OK   W87 DEFENDER want ANY | P 10 | P8 [CR3] I drop the wording "the register stops at Joseph"? | rev 7 grade, labeled before the run: question form (rev 7 not a drop)
+OK   W88 DEFENDER want LISTED | P 10 | P8 [CR3] Since the challenger asks for it, I drop the wording "the register stops at Joseph". | rev 8 grade, labeled before the run: opponent named before the side's own drop (cdrOpp window)
+OK   W89 DEFENDER want LISTED | P 10 | P8 [CR3] As the challenger argued, I withdraw the wording "the register stops at Joseph". | rev 8 grade, labeled before the run: opponent report clause before own drop
+OK   W90 DEFENDER want LISTED | P 10 | P8 [CR3] I accept the challenger's row and withdraw the wording "the register stops at Joseph". | rev 8 grade, labeled before the run: opponent possessive after I, before verb (nearest-subject rule)
+OK   W91 DEFENDER want LISTED | P 10 | P8 [CR3] The challenger pressed row 4, so I withdraw the wording "the register stops at Joseph". | rev 8 grade, labeled before the run: opponent clause then own drop, comma
+OK   W92 DEFENDER want LISTED | P 10 | P8 [CR3] Because he showed the gap, I abandon the wording "the register stops at Joseph". | rev 8 grade, labeled before the run: pronoun he before own drop
+OK   W93 DEFENDER want LISTED | P 10 | P8 [CR3] The defender drops the wording "the register stops at Joseph". | rev 8 grade, labeled before the run: defender speaking of itself in the third person
+OK   W94 DEFENDER want LISTED | P 10 | P8 [CR3] The wording "the register stops at Joseph" is struck from my case. | rev 8 grade, labeled before the run: passive struck, own case
+OK   W95 DEFENDER want LISTED | P 10 | P8 [CR3] Strike the wording "the register stops at Joseph" from my case. | rev 8 grade, labeled before the run: imperative strike, own case
+OK   W96 DEFENDER want LISTED | P 10 | P8 [CR3] I drop not the bare statement only but the wording "the register stops at Joseph". | rev 8 grade, labeled before the run: "not the" after verb, true drop
+OK   W97 DEFENDER want LISTED | P 10 | P8 [CR3] I waive the wording "the register stops at Joseph". | rev 8 grade, labeled before the run: verb waive
+OK   W98 DEFENDER want LISTED | P 10 | P8 [CR3] I rescind the wording "the register stops at Joseph". | rev 8 grade, labeled before the run: verb rescind
+OK   W99 DEFENDER want LISTED | P 10 | P8 [CR3] I discard the wording "the register stops at Joseph". | rev 8 grade, labeled before the run: verb discard
+OK   W100 DEFENDER want LISTED | P 10 | P8 [CR3] I concede away the wording "the register stops at Joseph". | rev 8 grade, labeled before the run: verb concede away
+OK   W101 DEFENDER want LISTED | P 10 | P8 [CR3] I back away from the wording "the register stops at Joseph". | rev 8 grade, labeled before the run: verb back away from
+OK   W102 DEFENDER want LISTED | P 10 | P8 [CR3] I withdraw the wording 'the register stops at Joseph'. | rev 8 grade, labeled before the run: straight single quotes
+OK   W103 DEFENDER want LISTED | P 10 | P8 [CR3] I withdraw the wording ‘the register stops at Joseph’. | rev 8 grade, labeled before the run: curly single quotes
+OK   W104 DEFENDER want LISTED | P 10 | P8 [CR3] I withdraw my claim the register stops at Joseph. | rev 8 grade, labeled before the run: claim with no "that", no quotes
+OK   W105 DEFENDER want LISTED | P 10 | P8 [CR3] I withdraw the following wording: the register stops at Joseph. | rev 8 grade, labeled before the run: wording after a colon, no quotes
+OK   W106 DEFENDER want LISTED | P 10 | P8 [CR3] I drop it: the register stops at Joseph. | rev 8 grade, labeled before the run: "it" then colon wording
+OK   W107 DEFENDER want LISTED | P 10 | P8 [CR3] That the register stops at Joseph, I withdraw. | rev 8 grade, labeled before the run: fronted that-clause
+OK   W108 DEFENDER want NOT | P 10 | P8 [CR3] The challenger withdraws the wording "the register stops at Joseph"; I keep it. | rev 8 grade, labeled before the run: opponent drop reported, side keeps (false-listing control)
+OK   W109 DEFENDER want NOT | P 10 | P8 [CR3] He would have me drop the wording "the register stops at Joseph", and I will not. | rev 8 grade, labeled before the run: opponent demand, side refuses
+OK   W110 DEFENDER want NOT | P 10 | P8 [CR3] The wording "the register stops at Joseph" was struck by the challenger, not by me. | rev 8 grade, labeled before the run: opponent strike, control
+OK   W111 CHALLENGER want LISTED | P 10 | P10 [DR3] Since the defender asks for it, I drop the wording "the register stops at Joseph". | rev 8 grade, labeled before the run: challenger side, opponent named before own drop
+OK   W112 CHALLENGER want LISTED | P 10 | P10 [DR3] The challenger drops the wording "the register stops at Joseph". | rev 8 grade, labeled before the run: challenger speaking of itself in third person
+OK   W113 CHALLENGER want NOT | P 10 | P10 [DR3] The defender withdraws the wording "the register stops at Joseph"; I keep it. | rev 8 grade, labeled before the run: challenger side control
+OK   W114 DEFENDER want LISTED | P 10 | P8 [CR3] I drop the wording "the register stops at Joseph". | rev 8 grade, labeled before the run: closing restatement holds "grant"
+OK   W115 DEFENDER want REACH | P 10 | P8 [CR3] I yield the wording "the register stops at Joseph". | rev 9 grade, labeled before the run: yield
+OK   W116 DEFENDER want REACH | P 10 | P8 [CR3] I cede the wording "the register stops at Joseph". | rev 9 grade, labeled before the run: cede
+OK   W117 DEFENDER want REACH | P 10 | P8 [CR3] I jettison the wording "the register stops at Joseph". | rev 9 grade, labeled before the run: jettison
+OK   W118 DEFENDER want REACH | P 10 | P8 [CR3] I scrap the wording "the register stops at Joseph". | rev 9 grade, labeled before the run: scrap
+OK   W119 DEFENDER want REACH | P 10 | P8 [CR3] I repudiate the wording "the register stops at Joseph". | rev 9 grade, labeled before the run: repudiate
+OK   W120 DEFENDER want REACH | P 10 | P8 [CR3] I disclaim the wording "the register stops at Joseph". | rev 9 grade, labeled before the run: disclaim
+OK   W121 DEFENDER want REACH | P 10 | P8 [CR3] I remove the wording "the register stops at Joseph" from my case. | rev 9 grade, labeled before the run: remove
+OK   W122 DEFENDER want REACH | P 10 | P8 [CR3] I delete the wording "the register stops at Joseph". | rev 9 grade, labeled before the run: delete
+OK   W123 DEFENDER want REACH | P 10 | P8 [CR3] I cut the wording "the register stops at Joseph" from my chain. | rev 9 grade, labeled before the run: cut
+OK   W124 DEFENDER want REACH | P 10 | P8 [CR3] I leave the wording "the register stops at Joseph" behind. | rev 9 grade, labeled before the run: leave behind
+OK   W125 DEFENDER want REACH | P 10 | P8 [CR3] I let the wording "the register stops at Joseph" fall. | rev 9 grade, labeled before the run: let fall
+OK   W126 DEFENDER want REACH | P 10 | P8 [CR3] I part with the wording "the register stops at Joseph". | rev 9 grade, labeled before the run: part with
+OK   W127 DEFENDER want REACH | P 10 | P8 [CR3] I stop claiming "the register stops at Joseph". | rev 9 grade, labeled before the run: stop claiming
+OK   W128 DEFENDER want REACH | P 10 | P8 [CR3] I cease to maintain "the register stops at Joseph". | rev 9 grade, labeled before the run: cease to maintain
+OK   W129 DEFENDER want REACH | P 10 | P8 [CR3] I am done with the wording "the register stops at Joseph". | rev 9 grade, labeled before the run: done with
+OK   W130 DEFENDER want REACH | P 10 | P8 [CR3] The wording "the register stops at Joseph" is gone from my case. | rev 9 grade, labeled before the run: is gone
+MISS W131 DEFENDER want REACH | P 9 | - | rev 9 grade, labeled before the run: concede (to opponent)
+OK   W132 DEFENDER want REACH | P 10 | P8 [CR3] I shelve the wording "the register stops at Joseph". | rev 9 grade, labeled before the run: shelve
+OK   W133 DEFENDER want REACH | P 10 | P8 [CR3] I omit the wording "the register stops at Joseph" from here on. | rev 9 grade, labeled before the run: omit
+OK   W134 DEFENDER want REACH | P 10 | P8 [CR3] I set the wording "the register stops at Joseph" to one side. | rev 9 grade, labeled before the run: set to one side
+OK   W135 DEFENDER want REACH | P 10 | P8 [CR3] I do not stand by "the register stops at Joseph" any more. | rev 9 grade, labeled before the run: not stand by any more
+OK   W136 DEFENDER want REACH | P 10 | P8 [CR3] I release the wording "the register stops at Joseph". | rev 9 grade, labeled before the run: release
+OK   W137 DEFENDER want REACH | P 10 | P8 [CR3] I lay down the wording "the register stops at Joseph". | rev 9 grade, labeled before the run: lay down
+OK   W138 DEFENDER want REACH | P 10 | P8 [CR3] I back off the wording "the register stops at Joseph". | rev 9 grade, labeled before the run: back off
+OK   W139 DEFENDER want REACH | P 10 | P8 [CR3] I excise the wording "the register stops at Joseph". | rev 9 grade, labeled before the run: excise
+OK   W140 DEFENDER want REACH | P 10 | P8 [CR3] I retire the wording "the register stops at Joseph". | rev 9 grade, labeled before the run: retire
+OK   W141 DEFENDER want REACH | P 10 | P8 [CR3] I unsay "the register stops at Joseph". | rev 9 grade, labeled before the run: unsay
+OK   W142 DEFENDER want REACH | P 10 | P8 [CR3] I recede from "the register stops at Joseph". | rev 9 grade, labeled before the run: recede from
+OK   W143 DEFENDER want REACH | P 10 | P8 [CR3] I step back from "the register stops at Joseph". | rev 9 grade, labeled before the run: step back from
+OK   W144 DEFENDER want REACH | P 10 | P8 [CR3] I take "the register stops at Joseph" off the table. | rev 9 grade, labeled before the run: take off the table
+MISS W145 DEFENDER want REACH | P 10 | - | rev 9 grade, labeled before the run: split: drop verb and wording in two sentences
+MISS W146 DEFENDER want REACH | P 10 | - | rev 9 grade, labeled before the run: split: wording on a bullet line after colon
+OK   W147 DEFENDER want REACH | P 10 | P8 [CR3] I give up this wording: the register stops at Joseph. | rev 9 grade, labeled before the run: one sentence with colon (control)
+OK   W148 CHALLENGER want REACH | P 10 | P10 [DR3] I yield the wording "the register stops at Joseph". | rev 9 grade, labeled before the run: challenger side, yield
+OK   W149 CHALLENGER want REACH | P 10 | P10 [DR3] I withdraw the wording "the register stops at Joseph". | rev 9 grade, labeled before the run: challenger side, listed verb (attribution check)
+MISS W150 DEFENDER want REACH | P 32 | - | rev 9 grade, labeled before the run: true drop after 30 other drop-family sentences (cap)
+OK   W151 DEFENDER want NOREACH_DEF | P 10 | def 0 chal 1 | rev 9 grade, labeled before the run: challenger drop must not appear as a DEFENDER candidate
+145 OK, 6 MISS of 151
