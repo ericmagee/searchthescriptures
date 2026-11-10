@@ -113,7 +113,7 @@
   }
  },
  "rev2": {
-  "about": "Added for rev 2 (W2's FAIL: a refused drop read as a drop) before rev 2 is written or run. adds = sentences appended to the rounds named. Rev 3 (W3 FAIL of rev 2): W3's seven false-listing cases and one labeled drop added before rev 3 is written or run. Under the rev 3 anchor, R2 (a real drop after \", but\") is expected to be missed in the safe direction; its label stays LISTED. Rev 4 (W3 FAIL of rev 3): W3 H7 and H8 and W1 cases R4-U1..U4 (conditional or question drops, NOT LISTED) and R4-K1..K4 (true drops kept LISTED) added before rev 4 is written or run. Rev 5 (W2 FAIL of rev 4, W3 agreeing): R5-N1..N35 (the conditional family, NOT LISTED) and R5-K1..K11 (true drops kept LISTED) added before rev 5 is written or run.",
+  "about": "Added for rev 2 (W2's FAIL: a refused drop read as a drop) before rev 2 is written or run. adds = sentences appended to the rounds named. Rev 3 (W3 FAIL of rev 2): W3's seven false-listing cases and one labeled drop added before rev 3 is written or run. Under the rev 3 anchor, R2 (a real drop after \", but\") is expected to be missed in the safe direction; its label stays LISTED. Rev 4 (W3 FAIL of rev 3): W3 H7 and H8 and W1 cases R4-U1..U4 (conditional or question drops, NOT LISTED) and R4-K1..K4 (true drops kept LISTED) added before rev 4 is written or run. Rev 5 (W2 FAIL of rev 4, W3 agreeing): R5-N1..N35 (the conditional family, NOT LISTED) and R5-K1..K11 (true drops kept LISTED) added before rev 5 is written or run. Rev 8 (W2 FAIL of rev 7: twelve true drops not listed): R8-L1..L26 (lead-ins, we, passive, the wider verb family, LISTED) and R8-N1..N18 (forms that must stay unlisted) added before rev 8 is written or run.",
   "cases": [
    {
     "id": "R1",
@@ -1251,6 +1251,754 @@
     "closing": "The register stops at Joseph.",
     "want": "LISTED",
     "note": "true drop: as + clause, not conditional"
+   },
+   {
+    "id": "R8-L1",
+    "adds": [
+     [
+      "cr3",
+      "Accordingly I withdraw the wording \"the register stops at Joseph\"."
+     ],
+     [
+      "cr4",
+      "The register stops at Joseph."
+     ]
+    ],
+    "side": "DEFENDER",
+    "closing": "The register stops at Joseph.",
+    "want": "LISTED",
+    "note": "true drop: lead-in word"
+   },
+   {
+    "id": "R8-L2",
+    "adds": [
+     [
+      "cr3",
+      "Thus I drop the wording \"the register stops at Joseph\"."
+     ],
+     [
+      "cr4",
+      "The register stops at Joseph."
+     ]
+    ],
+    "side": "DEFENDER",
+    "closing": "The register stops at Joseph.",
+    "want": "LISTED",
+    "note": "true drop: lead-in word"
+   },
+   {
+    "id": "R8-L3",
+    "adds": [
+     [
+      "cr3",
+      "Hence, I retract the wording \"the register stops at Joseph\"."
+     ],
+     [
+      "cr4",
+      "The register stops at Joseph."
+     ]
+    ],
+    "side": "DEFENDER",
+    "closing": "The register stops at Joseph.",
+    "want": "LISTED",
+    "note": "true drop: lead-in word, comma"
+   },
+   {
+    "id": "R8-L4",
+    "adds": [
+     [
+      "cr3",
+      "For LINK 6, I drop the wording \"the register stops at Joseph\"."
+     ],
+     [
+      "cr4",
+      "The register stops at Joseph."
+     ]
+    ],
+    "side": "DEFENDER",
+    "closing": "The register stops at Joseph.",
+    "want": "LISTED",
+    "note": "true drop: lead-in phrase"
+   },
+   {
+    "id": "R8-L5",
+    "adds": [
+     [
+      "cr3",
+      "Since the rows do not carry it, I drop the wording \"the register stops at Joseph\"."
+     ],
+     [
+      "cr4",
+      "The register stops at Joseph."
+     ]
+    ],
+    "side": "DEFENDER",
+    "closing": "The register stops at Joseph.",
+    "want": "LISTED",
+    "note": "true drop: causal lead-in clause"
+   },
+   {
+    "id": "R8-L6",
+    "adds": [
+     [
+      "cr3",
+      "Finally, I abandon the wording \"the register stops at Joseph\"."
+     ],
+     [
+      "cr4",
+      "The register stops at Joseph."
+     ]
+    ],
+    "side": "DEFENDER",
+    "closing": "The register stops at Joseph.",
+    "want": "LISTED",
+    "note": "true drop: lead-in word"
+   },
+   {
+    "id": "R8-L7",
+    "adds": [
+     [
+      "cr3",
+      "In round 3 I drop the wording \"the register stops at Joseph\"."
+     ],
+     [
+      "cr4",
+      "The register stops at Joseph."
+     ]
+    ],
+    "side": "DEFENDER",
+    "closing": "The register stops at Joseph.",
+    "want": "LISTED",
+    "note": "true drop: lead-in phrase, no comma"
+   },
+   {
+    "id": "R8-L8",
+    "adds": [
+     [
+      "cr3",
+      "As the challenger showed, I drop the wording \"the register stops at Joseph\"."
+     ],
+     [
+      "cr4",
+      "The register stops at Joseph."
+     ]
+    ],
+    "side": "DEFENDER",
+    "closing": "The register stops at Joseph.",
+    "want": "LISTED",
+    "note": "true drop: as-clause lead-in"
+   },
+   {
+    "id": "R8-L9",
+    "adds": [
+     [
+      "cr3",
+      "Although the rows are close, I drop the wording \"the register stops at Joseph\"."
+     ],
+     [
+      "cr4",
+      "The register stops at Joseph."
+     ]
+    ],
+    "side": "DEFENDER",
+    "closing": "The register stops at Joseph.",
+    "want": "LISTED",
+    "note": "true drop: concessive lead-in"
+   },
+   {
+    "id": "R8-L10",
+    "adds": [
+     [
+      "cr3",
+      "We drop the wording \"the register stops at Joseph\"."
+     ],
+     [
+      "cr4",
+      "The register stops at Joseph."
+     ]
+    ],
+    "side": "DEFENDER",
+    "closing": "The register stops at Joseph.",
+    "want": "LISTED",
+    "note": "true drop: subject we"
+   },
+   {
+    "id": "R8-L11",
+    "adds": [
+     [
+      "cr3",
+      "We now withdraw the wording \"the register stops at Joseph\"."
+     ],
+     [
+      "cr4",
+      "The register stops at Joseph."
+     ]
+    ],
+    "side": "DEFENDER",
+    "closing": "The register stops at Joseph.",
+    "want": "LISTED",
+    "note": "true drop: subject we + adverb"
+   },
+   {
+    "id": "R8-L12",
+    "adds": [
+     [
+      "cr3",
+      "The claim that the register stops at Joseph is withdrawn."
+     ],
+     [
+      "cr4",
+      "The register stops at Joseph."
+     ]
+    ],
+    "side": "DEFENDER",
+    "closing": "The register stops at Joseph.",
+    "want": "LISTED",
+    "note": "true drop: passive, that-clause"
+   },
+   {
+    "id": "R8-L13",
+    "adds": [
+     [
+      "cr3",
+      "The wording \"the register stops at Joseph\" is now dropped."
+     ],
+     [
+      "cr4",
+      "The register stops at Joseph."
+     ]
+    ],
+    "side": "DEFENDER",
+    "closing": "The register stops at Joseph.",
+    "want": "LISTED",
+    "note": "true drop: passive + now"
+   },
+   {
+    "id": "R8-L14",
+    "adds": [
+     [
+      "cr3",
+      "My wording \"the register stops at Joseph\" has been withdrawn."
+     ],
+     [
+      "cr4",
+      "The register stops at Joseph."
+     ]
+    ],
+    "side": "DEFENDER",
+    "closing": "The register stops at Joseph.",
+    "want": "LISTED",
+    "note": "true drop: passive, has been"
+   },
+   {
+    "id": "R8-L15",
+    "adds": [
+     [
+      "cr3",
+      "I set aside the wording \"the register stops at Joseph\"."
+     ],
+     [
+      "cr4",
+      "The register stops at Joseph."
+     ]
+    ],
+    "side": "DEFENDER",
+    "closing": "The register stops at Joseph.",
+    "want": "LISTED",
+    "note": "true drop: set aside"
+   },
+   {
+    "id": "R8-L16",
+    "adds": [
+     [
+      "cr3",
+      "I put aside the wording \"the register stops at Joseph\"."
+     ],
+     [
+      "cr4",
+      "The register stops at Joseph."
+     ]
+    ],
+    "side": "DEFENDER",
+    "closing": "The register stops at Joseph.",
+    "want": "LISTED",
+    "note": "true drop: put aside"
+   },
+   {
+    "id": "R8-L17",
+    "adds": [
+     [
+      "cr3",
+      "I relinquish the wording \"the register stops at Joseph\"."
+     ],
+     [
+      "cr4",
+      "The register stops at Joseph."
+     ]
+    ],
+    "side": "DEFENDER",
+    "closing": "The register stops at Joseph.",
+    "want": "LISTED",
+    "note": "true drop: relinquish"
+   },
+   {
+    "id": "R8-L18",
+    "adds": [
+     [
+      "cr3",
+      "I renounce the wording \"the register stops at Joseph\"."
+     ],
+     [
+      "cr4",
+      "The register stops at Joseph."
+     ]
+    ],
+    "side": "DEFENDER",
+    "closing": "The register stops at Joseph.",
+    "want": "LISTED",
+    "note": "true drop: renounce"
+   },
+   {
+    "id": "R8-L19",
+    "adds": [
+     [
+      "cr3",
+      "I let go of the wording \"the register stops at Joseph\"."
+     ],
+     [
+      "cr4",
+      "The register stops at Joseph."
+     ]
+    ],
+    "side": "DEFENDER",
+    "closing": "The register stops at Joseph.",
+    "want": "LISTED",
+    "note": "true drop: let go of"
+   },
+   {
+    "id": "R8-L20",
+    "adds": [
+     [
+      "cr3",
+      "I forgo the wording \"the register stops at Joseph\"."
+     ],
+     [
+      "cr4",
+      "The register stops at Joseph."
+     ]
+    ],
+    "side": "DEFENDER",
+    "closing": "The register stops at Joseph.",
+    "want": "LISTED",
+    "note": "true drop: forgo"
+   },
+   {
+    "id": "R8-L21",
+    "adds": [
+     [
+      "cr3",
+      "I strike the wording \"the register stops at Joseph\"."
+     ],
+     [
+      "cr4",
+      "The register stops at Joseph."
+     ]
+    ],
+    "side": "DEFENDER",
+    "closing": "The register stops at Joseph.",
+    "want": "LISTED",
+    "note": "true drop: strike"
+   },
+   {
+    "id": "R8-L22",
+    "adds": [
+     [
+      "cr3",
+      "I give the wording \"the register stops at Joseph\" up."
+     ],
+     [
+      "cr4",
+      "The register stops at Joseph."
+     ]
+    ],
+    "side": "DEFENDER",
+    "closing": "The register stops at Joseph.",
+    "want": "LISTED",
+    "note": "true drop: give ... up"
+   },
+   {
+    "id": "R8-L23",
+    "adds": [
+     [
+      "cr3",
+      "I no longer hold that the register stops at Joseph."
+     ],
+     [
+      "cr4",
+      "The register stops at Joseph."
+     ]
+    ],
+    "side": "DEFENDER",
+    "closing": "The register stops at Joseph.",
+    "want": "LISTED",
+    "note": "true drop: no longer hold that"
+   },
+   {
+    "id": "R8-L24",
+    "adds": [
+     [
+      "cr3",
+      "I no longer claim the wording \"the register stops at Joseph\"."
+     ],
+     [
+      "cr4",
+      "The register stops at Joseph."
+     ]
+    ],
+    "side": "DEFENDER",
+    "closing": "The register stops at Joseph.",
+    "want": "LISTED",
+    "note": "true drop: no longer claim"
+   },
+   {
+    "id": "R8-L25",
+    "adds": [
+     [
+      "cr3",
+      "I drop not only the bare statement but also the wording \"the register stops at Joseph\"."
+     ],
+     [
+      "cr4",
+      "The register stops at Joseph."
+     ]
+    ],
+    "side": "DEFENDER",
+    "closing": "The register stops at Joseph.",
+    "want": "LISTED",
+    "note": "true drop: not only ... but also"
+   },
+   {
+    "id": "R8-L26",
+    "adds": [
+     [
+      "cr3",
+      "Accordingly, we set aside the claim that the register stops at Joseph."
+     ],
+     [
+      "cr4",
+      "The register stops at Joseph."
+     ]
+    ],
+    "side": "DEFENDER",
+    "closing": "The register stops at Joseph.",
+    "want": "LISTED",
+    "note": "true drop: lead-in + we + set aside + that-clause"
+   },
+   {
+    "id": "R8-N1",
+    "adds": [
+     [
+      "cr3",
+      "If the rows fail, I drop the wording \"the register stops at Joseph\"."
+     ],
+     [
+      "cr4",
+      "The register stops at Joseph."
+     ]
+    ],
+    "side": "DEFENDER",
+    "closing": "The register stops at Joseph.",
+    "want": "NOT LISTED",
+    "note": "not a drop: condition before (lead-in holds if)"
+   },
+   {
+    "id": "R8-N2",
+    "adds": [
+     [
+      "cr3",
+      "Unless the rows bear it, I withdraw the wording \"the register stops at Joseph\"."
+     ],
+     [
+      "cr4",
+      "The register stops at Joseph."
+     ]
+    ],
+    "side": "DEFENDER",
+    "closing": "The register stops at Joseph.",
+    "want": "NOT LISTED",
+    "note": "not a drop: unless before"
+   },
+   {
+    "id": "R8-N3",
+    "adds": [
+     [
+      "cr3",
+      "Should the rows fail, we drop the wording \"the register stops at Joseph\"."
+     ],
+     [
+      "cr4",
+      "The register stops at Joseph."
+     ]
+    ],
+    "side": "DEFENDER",
+    "closing": "The register stops at Joseph.",
+    "want": "NOT LISTED",
+    "note": "not a drop: should before"
+   },
+   {
+    "id": "R8-N4",
+    "adds": [
+     [
+      "cr3",
+      "Nor do I drop the wording \"the register stops at Joseph\"."
+     ],
+     [
+      "cr4",
+      "The register stops at Joseph."
+     ]
+    ],
+    "side": "DEFENDER",
+    "closing": "The register stops at Joseph.",
+    "want": "NOT LISTED",
+    "note": "not a drop: nor"
+   },
+   {
+    "id": "R8-N5",
+    "adds": [
+     [
+      "cr3",
+      "The challenger demands that I withdraw the wording \"the register stops at Joseph\"."
+     ],
+     [
+      "cr4",
+      "The register stops at Joseph."
+     ]
+    ],
+    "side": "DEFENDER",
+    "closing": "The register stops at Joseph.",
+    "want": "NOT LISTED",
+    "note": "not a drop: reported demand"
+   },
+   {
+    "id": "R8-N6",
+    "adds": [
+     [
+      "cr3",
+      "Were I to drop the wording \"the register stops at Joseph\", the chain would still hold."
+     ],
+     [
+      "cr4",
+      "The register stops at Joseph."
+     ]
+    ],
+    "side": "DEFENDER",
+    "closing": "The register stops at Joseph.",
+    "want": "NOT LISTED",
+    "note": "not a drop: were I to"
+   },
+   {
+    "id": "R8-N7",
+    "adds": [
+     [
+      "cr3",
+      "Suppose I drop the wording \"the register stops at Joseph\"; the chain still holds."
+     ],
+     [
+      "cr4",
+      "The register stops at Joseph."
+     ]
+    ],
+    "side": "DEFENDER",
+    "closing": "The register stops at Joseph.",
+    "want": "NOT LISTED",
+    "note": "not a drop: suppose"
+   },
+   {
+    "id": "R8-N8",
+    "adds": [
+     [
+      "cr3",
+      "For the sake of argument I drop the wording \"the register stops at Joseph\"."
+     ],
+     [
+      "cr4",
+      "The register stops at Joseph."
+     ]
+    ],
+    "side": "DEFENDER",
+    "closing": "The register stops at Joseph.",
+    "want": "NOT LISTED",
+    "note": "not a drop: argument's sake before"
+   },
+   {
+    "id": "R8-N9",
+    "adds": [
+     [
+      "cr3",
+      "Hypothetically, I drop the wording \"the register stops at Joseph\"."
+     ],
+     [
+      "cr4",
+      "The register stops at Joseph."
+     ]
+    ],
+    "side": "DEFENDER",
+    "closing": "The register stops at Joseph.",
+    "want": "NOT LISTED",
+    "note": "not a drop: hypothetically before"
+   },
+   {
+    "id": "R8-N10",
+    "adds": [
+     [
+      "cr3",
+      "The challenger says I drop the wording \"the register stops at Joseph\"; I do not."
+     ],
+     [
+      "cr4",
+      "The register stops at Joseph."
+     ]
+    ],
+    "side": "DEFENDER",
+    "closing": "The register stops at Joseph.",
+    "want": "NOT LISTED",
+    "note": "not a drop: reported"
+   },
+   {
+    "id": "R8-N11",
+    "adds": [
+     [
+      "cr3",
+      "The wording \"the register stops at Joseph\" is not withdrawn."
+     ],
+     [
+      "cr4",
+      "The register stops at Joseph."
+     ]
+    ],
+    "side": "DEFENDER",
+    "closing": "The register stops at Joseph.",
+    "want": "NOT LISTED",
+    "note": "not a drop: negated passive"
+   },
+   {
+    "id": "R8-N12",
+    "adds": [
+     [
+      "cr3",
+      "The wording \"the register stops at Joseph\" was dropped by the challenger, not by me."
+     ],
+     [
+      "cr4",
+      "The register stops at Joseph."
+     ]
+    ],
+    "side": "DEFENDER",
+    "closing": "The register stops at Joseph.",
+    "want": "NOT LISTED",
+    "note": "not a drop: passive with by-agent"
+   },
+   {
+    "id": "R8-N13",
+    "adds": [
+     [
+      "cr3",
+      "I drop not the wording \"the register stops at Joseph\" but the word \"alone\"."
+     ],
+     [
+      "cr4",
+      "The register stops at Joseph."
+     ]
+    ],
+    "side": "DEFENDER",
+    "closing": "The register stops at Joseph.",
+    "want": "NOT LISTED",
+    "note": "not a drop: not X but Y"
+   },
+   {
+    "id": "R8-N14",
+    "adds": [
+     [
+      "cr3",
+      "I no longer doubt that the register stops at Joseph."
+     ],
+     [
+      "cr4",
+      "The register stops at Joseph."
+     ]
+    ],
+    "side": "DEFENDER",
+    "closing": "The register stops at Joseph.",
+    "want": "NOT LISTED",
+    "note": "not a drop: no longer + verb outside the family"
+   },
+   {
+    "id": "R8-N15",
+    "adds": [
+     [
+      "cr3",
+      "I would drop the wording \"the register stops at Joseph\" if the rows failed."
+     ],
+     [
+      "cr4",
+      "The register stops at Joseph."
+     ]
+    ],
+    "side": "DEFENDER",
+    "closing": "The register stops at Joseph.",
+    "want": "NOT LISTED",
+    "note": "not a drop: modal would"
+   },
+   {
+    "id": "R8-N16",
+    "adds": [
+     [
+      "cr3",
+      "I do not drop the wording \"the register stops at Joseph\"."
+     ],
+     [
+      "cr4",
+      "The register stops at Joseph."
+     ]
+    ],
+    "side": "DEFENDER",
+    "closing": "The register stops at Joseph.",
+    "want": "NOT LISTED",
+    "note": "not a drop: negated verb"
+   },
+   {
+    "id": "R8-N17",
+    "adds": [
+     [
+      "cr3",
+      "When the rows fail I drop the wording \"the register stops at Joseph\"; they have not."
+     ],
+     [
+      "cr4",
+      "The register stops at Joseph."
+     ]
+    ],
+    "side": "DEFENDER",
+    "closing": "The register stops at Joseph.",
+    "want": "NOT LISTED",
+    "note": "not a drop: when-clause before"
+   },
+   {
+    "id": "R8-N18",
+    "adds": [
+     [
+      "cr3",
+      "I drop, for the sake of argument, the wording \"the register stops at Joseph\"."
+     ],
+     [
+      "cr4",
+      "The register stops at Joseph."
+     ]
+    ],
+    "side": "DEFENDER",
+    "closing": "The register stops at Joseph.",
+    "want": "NOT LISTED",
+    "note": "not a drop: object not directly after the verb (W2 W68 form)"
    }
   ]
  }
