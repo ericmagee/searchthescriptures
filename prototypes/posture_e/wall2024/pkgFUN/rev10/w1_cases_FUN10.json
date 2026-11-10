@@ -126,5 +126,29 @@
   "t": "COUNTED. My count is wrong.\nCORRECTED COUNT: DEFENDER 3",
   "rule": "CURED",
   "why": "rev 9 F1 kept"
+ },
+ {
+  "id": "H1",
+  "t": "TOUCHES NO LINK:\nI will not answer this.",
+  "rule": "UNCURED",
+  "why": "W2 rev 9 finding; E4 dropped, as s105"
+ },
+ {
+  "id": "H2",
+  "t": "TOUCHES NO LINK:\nI decline to give a reason.",
+  "rule": "UNCURED",
+  "why": "W2 rev 9 finding; as s105"
+ },
+ {
+  "id": "H3",
+  "t": "TOUCHES NO LINK:\nthe grant concerns legal titles, not any declared link.",
+  "rule": "UNCURED",
+  "why": "E4 dropped: next-line reason reads as s105 (W3 4076 request withdrawn from this package)"
+ },
+ {
+  "id": "H4",
+  "t": "TOUCHES NO LINK: the grant concerns legal titles, not any declared link.",
+  "rule": "CURED",
+  "why": "one-line, as s105"
  }
 ]
