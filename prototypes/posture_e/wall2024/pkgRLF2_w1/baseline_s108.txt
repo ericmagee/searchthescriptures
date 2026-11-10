@@ -1,0 +1,32 @@
+FAIL R1 ./check34108_s108/34108_X_live_DEFENDER_s1_reply.json (bare [3]/[4]) confirms link 6: confirmed [] rows ? NOT CONFIRMED (form) (the line is not in the CLOSE-CONTRADICTION form)
+FAIL R1 ./check34108_s108/34108_X_live_DEFENDER_s2_reply.json (bare [3]/[4]) confirms link 6: confirmed [] rows ? NOT CONFIRMED (form) (the line is not in the CLOSE-CONTRADICTION form)
+R5 stored replies read: 40; same as live 40; differ 0; skipped 178
+   skip ./stage_CSS/replay/34108_css_CHALLENGER.json (no content)
+   skip ./stage_CSS/replay/34108_css_DEFENDER.json (no content)
+   (other skipped files are bodies or combined-call replies with no side: 176)
+OK   R1/R2 defender EARLIER [CR3] CLOSING [CR4] confirms link 6: confirmed ["NEW DEFENDER L6"] rows NEW CONFIRMED
+OK   R1/R2 defender EARLIER [round 3] CLOSING [round 4] confirms link 6: confirmed ["NEW DEFENDER L6"] rows NEW CONFIRMED
+FAIL R1/R2 defender EARLIER [3] CLOSING [4] confirms link 6: confirmed [] rows ? NOT CONFIRMED (form) (the line is not in the CLOSE-CONTRADICTION form)
+FAIL R1/R2 defender EARLIER [CR3] CLOSING [4] confirms link 6: confirmed [] rows ? NOT CONFIRMED (form) (the line is not in the CLOSE-CONTRADICTION form)
+FAIL R1/R2 defender EARLIER [3] CLOSING [round 4] confirms link 6: confirmed [] rows ? NOT CONFIRMED (form) (the line is not in the CLOSE-CONTRADICTION form)
+FAIL R1/R2 defender EARLIER [3] CLOSING [CR4] confirms link 6: confirmed [] rows ? NOT CONFIRMED (form) (the line is not in the CLOSE-CONTRADICTION form)
+FAIL R1/R2 defender EARLIER [round 3] CLOSING [4] confirms link 6: confirmed [] rows ? NOT CONFIRMED (form) (the line is not in the CLOSE-CONTRADICTION form)
+OK   R3/R4 defender EARLIER [0] CLOSING [4] does not confirm: confirmed [] rows ? NOT CONFIRMED (form) (the line is not in the CLOSE-CONTRADICTION form)
+OK   R3/R4 defender EARLIER [3] CLOSING [5] does not confirm: confirmed [] rows ? NOT CONFIRMED (form) (the line is not in the CLOSE-CONTRADICTION form)
+OK   R3/R4 defender EARLIER [9] CLOSING [4] does not confirm: confirmed [] rows ? NOT CONFIRMED (form) (the line is not in the CLOSE-CONTRADICTION form)
+OK   R3/R4 defender EARLIER [4] CLOSING [3] does not confirm: confirmed [] rows ? NOT CONFIRMED (form) (the line is not in the CLOSE-CONTRADICTION form)
+OK   R3/R4 defender EARLIER [4] CLOSING [4] does not confirm: confirmed [] rows ? NOT CONFIRMED (form) (the line is not in the CLOSE-CONTRADICTION form)
+OK   R3/R4 defender EARLIER [CR3a] CLOSING [4] does not confirm: confirmed [] rows ? NOT CONFIRMED (form) (the line is not in the CLOSE-CONTRADICTION form)
+OK   R3/R4 defender EARLIER [3.5] CLOSING [4] does not confirm: confirmed [] rows ? NOT CONFIRMED (form) (the line is not in the CLOSE-CONTRADICTION form)
+OK   R3/R4 defender EARLIER [three] CLOSING [4] does not confirm: confirmed [] rows ? NOT CONFIRMED (form) (the line is not in the CLOSE-CONTRADICTION form)
+OK   R3/R4 defender EARLIER [L3] CLOSING [4] does not confirm: confirmed [] rows ? NOT CONFIRMED (form) (the line is not in the CLOSE-CONTRADICTION form)
+OK   R3/R4 defender EARLIER [link 3] CLOSING [4] does not confirm: confirmed [] rows ? NOT CONFIRMED (form) (the line is not in the CLOSE-CONTRADICTION form)
+OK   R3/R4 defender EARLIER [] CLOSING [4] does not confirm: confirmed [] rows ? NOT CONFIRMED (form) (the line is not in the CLOSE-CONTRADICTION form)
+OK   R3/R4 defender EARLIER [3] CLOSING [] does not confirm: confirmed [] rows ? NOT CONFIRMED (form) (the line is not in the CLOSE-CONTRADICTION form)
+OK   R3/R4 defender EARLIER [DR3] CLOSING [DR4] does not confirm: confirmed [] rows NEW NOT CONFIRMED (form) (the earlier round DR3 is not one of the defender's)
+   challenger base line: confirmed ["NEW CHALLENGER L2"] rows NEW CONFIRMED
+FAIL R1 challenger EARLIER [3] CLOSING [4] reads as the [DR] line (link 2 true): confirmed [] rows ? NOT CONFIRMED (form) (the line is not in the CLOSE-CONTRADICTION form)
+OK   R1 challenger EARLIER [round 3] CLOSING [round 4] reads as the [DR] line (link 2 true): confirmed ["NEW CHALLENGER L2"] rows NEW CONFIRMED
+FAIL R1 challenger EARLIER [DR3] CLOSING [4] reads as the [DR] line (link 2 true): confirmed [] rows ? NOT CONFIRMED (form) (the line is not in the CLOSE-CONTRADICTION form)
+OK   R4 challenger with the other side prefix [CR3] does not confirm: confirmed [] rows NEW NOT CONFIRMED (form) (the earlier round CR3 is not one of the challenger)
+17 OK, 9 FAIL
