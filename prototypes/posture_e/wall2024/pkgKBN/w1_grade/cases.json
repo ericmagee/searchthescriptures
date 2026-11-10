@@ -1,0 +1,18 @@
+{"about":"W1 labeled cases for pkgKBN rev 1, labels fixed before any run. Run 33798, terra, E-ANS Job 14:1 [CR3] (flagged answer a bare grant). Each sentence is added as its own line to [CR4] and the judge's KEEP quotes it. want = the cure reading by meaning: UNCURED when the quoted sentence is only a grant, affirmation or deferral; CURED when it carries an answer of its own. reason = a word the UNCURED reason must hold, if any.",
+"cases":[
+ {"id":"K1","s":"On Job 14:1, I grant it is said of all men.","want":"UNCURED"},
+ {"id":"K2","s":"- **On Job 14:1**, I grant the phrase covers kings named by their fathers.","want":"UNCURED"},
+ {"id":"K3","s":"Regarding Job 14:1-2, I grant the words as they stand.","want":"UNCURED"},
+ {"id":"K4","s":"As to Job 14:1, granted, it is said of all men born.","want":"UNCURED"},
+ {"id":"K5","s":"Under Job 14:1 I grant the phrase is general.","want":"UNCURED"},
+ {"id":"K6","s":"On Job 14:1, I grant it, and the verse names no father of Jesus.","want":"CURED"},
+ {"id":"K7","s":"On Job 14:1, the phrase is said of men who had fathers, so it names no virgin birth.","want":"CURED"},
+ {"id":"K8","s":"On Job 14:1, I affirm D6 stands as declared.","want":"UNCURED","reason":"affirmation"},
+ {"id":"K9","s":"I affirm that the phrase covers kings named by their fathers.","want":"UNCURED","reason":"affirmation"},
+ {"id":"K10","s":"Online records aside, I grant the phrase covers kings.","want":"UNCURED","note":"not a lead-in; the sentence still opens with words before I grant, so live and KBN may both read CURED (limit)"},
+ {"id":"K11","s":"For Job 14:1 names men with fathers, the phrase is general and proves no begetter.","want":"CURED"},
+ {"id":"K12","s":"At Job 14:1 I grant it is said of all men; D6 asks about begetting, not birth.","want":"CURED"},
+ {"id":"K13","s":"In Job 14:1, I answer it fully under LINK 4.","want":"UNCURED"},
+ {"id":"K14","s":"On the reckoning in Job 14:1, I grant it.","want":"UNCURED","note":"W3's stated limit; by meaning a bare grant"},
+ {"id":"K15","s":"I grant the phrase covers kings named by their fathers.","want":"UNCURED","note":"control: plain bare grant, as live"},
+ {"id":"K16","s":"I accept it as a phrase said of all men, and I make no claim from Galatians 4:4 alone.","want":"CURED","note":"control: stored fuller answer form"}]}
