@@ -1,0 +1,114 @@
+# expected|category|answer text after "RESPONSE: <item> | "|reason from the rulebook
+CURED|plain|COUNTED|COUNTED as the answer counts the concession.
+CURED|plain|COUNTED.|Counts the concession.
+CURED|plain|COUNTED. The defender concedes D6 in [DR3].|Counts it and names the grant.
+CURED|plain|COUNTED: the round 3 grant is now in my count.|Corrects the count.
+CURED|plain|COUNTED; the grant stands as written.|Counts it.
+CURED|plain|COUNTED - the grant of Genesis 4:1 as the ordinary means is counted against D6.|Counts it.
+CURED|plain|COUNTED, correcting my count: the defender conceded D6 in round 3.|Uses the rule's own words.
+CURED|negation-elsewhere|COUNTED: by this grant D6 does not stand.|Negation describes the link, not the count.
+CURED|negation-elsewhere|COUNTED: the defender no longer holds D6 as declared.|Negation describes the defender.
+CURED|negation-elsewhere|COUNTED. The defender cannot hold D6 without conceding this.|Negation describes the defender.
+CURED|negation-elsewhere|COUNTED. D6 is not held once the ordinary means is granted.|Negation describes the link.
+CURED|negation-elsewhere|COUNTED. Genesis 4:1 does not supply the sequence the defender later claimed.|Negation describes the verse.
+CURED|negation-elsewhere|COUNTED. The defender never answered the challenger's point on Luke 3:23.|Negation describes the debate.
+CURED|negation-elsewhere|COUNTED. No later round restores D6.|Negation describes later rounds.
+CURED|negation-elsewhere|COUNTED. Nothing in round 4 undoes the grant.|Negation describes round 4.
+CURED|negation-elsewhere|COUNTED. There is no doubt.|Negation removes doubt about the count.
+CURED|negation-elsewhere|COUNTED. I do not doubt it.|Affirms the count.
+CURED|negation-elsewhere|COUNTED. I do not dispute it.|Affirms the count.
+CURED|negation-elsewhere|COUNTED. The defender does not deny it.|Describes the defender.
+CURED|negation-elsewhere|COUNTED: the grant is not in dispute.|Affirms the count.
+CURED|negation-elsewhere|COUNTED. Nothing is wrong with it.|Affirms the count.
+CURED|negation-elsewhere|COUNTED. There is no error.|Affirms the count.
+CURED|negation-elsewhere|COUNTED: no link survives the grant.|Describes the links.
+CURED|negation-elsewhere|COUNTED. My count did not include this grant before; it does now.|Corrects the count, which the rule asks for.
+CURED|negation-elsewhere|COUNTED. I was wrong not to count it.|Corrects the count.
+CURED|negation-elsewhere|COUNTED. It is not wrong to count it.|Double negation affirms the count.
+CURED|negation-elsewhere|COUNTED. Counting it is not a mistake.|Affirms the count.
+CURED|negation-elsewhere|COUNTED. The grant is not a mere title; it gives up D6.|Describes the grant.
+CURED|negation-elsewhere|COUNTED. The defender's round 4 claim that Christ had no biological father keeps words already given up.|Describes the defender's words.
+CURED|negation-elsewhere|COUNTED. It isn't a minor point: it breaks D6.|Describes the weight of the grant.
+CURED|negation-elsewhere|COUNTED. The defender can't have both.|Describes the defender.
+CURED|negation-elsewhere|COUNTED. Neither D5 nor D6 survives it.|Describes the links.
+CURED|negation-elsewhere|COUNTED. I could not count it before the close because I missed it.|Explains the earlier miss.
+CURED|negation-elsewhere|COUNTED. It is not the challenger's grant but the defender's own.|Identifies whose grant it is.
+CURED|withdrew-retracted|COUNTED. The defender withdrew the bare statement of D6 in round 3.|Describes the defender's withdrawal.
+CURED|withdrew-retracted|COUNTED. The defender retracted D6's wording and this is the concession.|Describes the defender's retraction.
+CURED|withdrew-retracted|COUNTED: what the defender withdrew is counted as conceded.|Counts it.
+CURED|withdrew-retracted|COUNTED. Having retracted "no biological father", the defender cannot reassert it.|Describes the defender.
+CURED|withdrew-retracted|COUNTED. The withdrawal in round 3 is the concession I missed.|Counts it.
+CURED|withdrew-retracted|COUNTED. The defender's later attempt to withdraw the grant is too late under the closing rule.|Counts it.
+CURED|though|COUNTED, though it came late in the round.|Concessive clause about timing.
+CURED|though|COUNTED, though the defender later restated D6.|Concessive clause about the defender.
+CURED|though|COUNTED. Though the defender disputed it in round 4, the round 3 grant stands.|Counts it.
+CURED|though|COUNTED, although I missed it in my first count.|Corrects the count.
+CURED|though|COUNTED. Even though it is phrased as a question, it grants the ordinary means.|Counts it.
+CURED|connector|COUNTED, because the defender granted the ordinary means in round 3.|Reason for counting.
+CURED|connector|COUNTED, since round 3 gives up D6.|Reason for counting.
+CURED|connector|COUNTED, and D6 falls with it.|Adds the effect.
+CURED|connector|COUNTED, so D6 is no longer exhibited.|Adds the effect.
+CURED|connector|COUNTED, but the defender then restated D6 in round 4, which is a contradiction.|"but" turns to the defender, not the count.
+CURED|connector|COUNTED, but late: I missed it in my first count.|"but" qualifies timing only.
+CURED|connector|COUNTED; however, the defender objected earlier, which does not undo the grant.|Counts it.
+CURED|connector|COUNTED, as the defender conceded in [DR3].|Counts it.
+CURED|connector|COUNTED, whereas I had wrongly listed it as not conceded.|Corrects the count.
+CURED|multi-sentence|COUNTED. The defender granted Genesis 4:1 as the ordinary means in round 3. In round 4 the defender said it cannot supply the sequence. The round 3 grant stands and D6 falls.|Counts it; later sentences describe the debate.
+CURED|multi-sentence|COUNTED. I missed this. The grant is in round 3. It is now in my count.|Corrects the count.
+CURED|multi-sentence|COUNTED. The challenger quoted it. The defender did not answer it. D6 is not held.|Negations describe the debate.
+CURED|multi-sentence|COUNTED.\nThe defender conceded D6 in round 3.|Line break between sentences.
+CURED|formatted|**COUNTED** The defender concedes D6 in [DR3].|Bold keyword.
+CURED|formatted|**COUNTED.** The defender concedes D6 in [DR3].|Bold keyword with period.
+CURED|formatted|- COUNTED. The defender concedes D6 in [DR3].|Bullet.
+CURED|formatted|* COUNTED: the grant is counted.|Star bullet.
+CURED|formatted|COUNTED — the defender conceded D6.|Em dash after keyword (judges write it).
+CURED|formatted|"COUNTED". The defender concedes D6.|Quoted keyword.
+CURED|formatted|`COUNTED` the defender concedes D6.|Code keyword.
+CURED|formatted|ANSWER: COUNTED. The defender concedes D6.|Label before keyword.
+CURED|formatted|COUNTED (correcting my count): the defender concedes D6.|Parenthesis after keyword.
+CURED|formatted|COUNTED, correcting my count.|Rule words only.
+UNCURED|refusal|COUNTED. That is not right.|Denies the count.
+UNCURED|refusal|COUNTED. It should not be counted.|Denies the count.
+UNCURED|refusal|COUNTED, but it does not apply here.|Denies the count applies.
+UNCURED|refusal|COUNTED. I do not agree.|Disagrees with the count.
+UNCURED|refusal|COUNTED. This is not correct.|Denies the count.
+UNCURED|refusal|COUNTED, not a concession.|Denies it is a concession.
+UNCURED|refusal|COUNTED. It is not a concession.|Denies it is a concession.
+UNCURED|refusal|COUNTED, but that is wrong.|Calls the count wrong.
+UNCURED|refusal|COUNTED. That count is mistaken.|Calls the count wrong.
+UNCURED|refusal|COUNTED. I withdraw that.|Withdraws the count.
+UNCURED|refusal|COUNTED. I retract the count.|Retracts the count.
+UNCURED|refusal|COUNTED. Withdrawn.|Withdraws the count.
+UNCURED|refusal|COUNTED. Strike that.|Withdraws the count.
+UNCURED|refusal|COUNTED. On reflection, no.|Reverses the count.
+UNCURED|refusal|COUNTED. No, it should not be.|Reverses the count.
+UNCURED|refusal|COUNTED. The defender never granted this.|Denies the grant exists, so nothing is counted.
+UNCURED|refusal|COUNTED. The defender did not concede it.|Denies the concession.
+UNCURED|refusal|COUNTED. Nothing in the round grants it.|Denies the grant exists.
+UNCURED|refusal|COUNTED. Not accepted.|Refuses the count.
+UNCURED|refusal|COUNTED. It isn't valid.|Denies the count.
+UNCURED|refusal|COUNTED. The defender doesn't hold it as a concession.|Denies the concession.
+UNCURED|refusal|COUNTED, though it is not a real concession.|"though" turns against the count.
+UNCURED|refusal|COUNTED, although I do not accept it.|Refuses the count.
+UNCURED|refusal|COUNTED. However, I do not count it against D6.|Refuses the count.
+UNCURED|refusal|COUNTED. I do not count this grant.|Refuses the count.
+UNCURED|refusal|COUNTED. This was never a concession.|Denies the concession.
+UNCURED|refusal|COUNTED. I reverse that: it is not counted.|Reverses the count.
+UNCURED|refusal|COUNTED, but only in part.|Partial count does not correct the count (flag: borderline).
+UNCURED|refusal|COUNTED. The grant does not touch D6, so my count stands unchanged.|Keeps the old count: no correction.
+UNCURED|refusal-later|COUNTED. The defender granted the ordinary means in round 3. But that grant is not a concession of D6.|Later sentence denies the concession.
+UNCURED|refusal-later|COUNTED. I missed it. On reflection, I withdraw the count.|Later sentence withdraws the count.
+UNCURED|refusal-later|COUNTED.\nThat is not right.|Refusal after a line break.
+UNCURED|refusal-formatted|**COUNTED** That is not right.|Bold keyword then refusal.
+UNCURED|refusal-formatted|- COUNTED, but that is wrong.|Bullet then refusal.
+UNCURED|not-counted|Counted.|Rule asks for COUNTED in capitals (flag: borderline; prior ruling reads it UNCURED).
+UNCURED|not-counted|NOT COUNTED.|Refuses the count.
+UNCURED|not-counted|I do not count it.|Refuses the count.
+UNCURED|not-counted|The defender did not concede this.|No COUNTED, no TOUCHES NO LINK.
+UNCURED|not-counted|HELD.|Not an allowed answer.
+UNCURED|not-counted||Empty answer.
+UNCURED|not-counted|UNCOUNTED.|Not COUNTED.
+UNCURED|not-counted|COUNTEDLY so.|Not the keyword.
+UNCURED|not-counted|My count stands.|Refuses to correct.
+CURED|touches-no-link|TOUCHES NO LINK: the grant is about Luke 3:23, which no declared link or listed premise uses.|Allowed answer with a one-line reason.
+UNCURED|touches-no-link|TOUCHES NO LINK|Allowed form needs the one-line reason.
