@@ -213,3 +213,51 @@ UNCURED|w3-refusal|COUNTED. I do not count it.|W3 rev 4 grade: refusal.|ENFORCED
 UNCURED|w3-refusal|COUNTED: no.|W3 rev 4 grade: refusal.|ENFORCED
 UNCURED|w3-refusal|COUNTED. The defender granted it. My count stands.|W3 rev 4 grade: refusal.|NOTED
 UNCURED|w3-refusal|COUNTED. That is wrong.|W3 rev 4 grade: refusal.|ENFORCED
+# --- W3 grade of rev 5 (grade_FUN5_w3.md): 36 correct answers (w3_good5.json) and 13 refusals (w3_bad5.json); old-column labels by W3, narrow labels by W2 under the rev 6 rule (coordinator 02:53Z 11-10: a pointer sentence of list P is enforced only when it is the whole answer after COUNTED, otherwise noted; a first sentence ending in "?" is never a refusal; "!" after COUNTED is a stop). Duplicates of cases already in the set are skipped. ---
+CURED|w3-new-form5|COUNTED. I withdraw my earlier answer.|W3 rev 5 grade: correct answer (pointer at the judge's own earlier answer, or a P word with an answer of its own).|CURED
+CURED|w3-new-form5|COUNTED. I withdraw that. The grant is a close concession of D6 and I add it to my count.|W3 rev 5 grade: correct answer (pointer at the judge's own earlier answer, or a P word with an answer of its own).|CURED
+CURED|w3-new-form5|COUNTED. I retract it. My first reply called the grant a courtesy; it is a concession of D6.|W3 rev 5 grade: correct answer (pointer at the judge's own earlier answer, or a P word with an answer of its own).|CURED
+CURED|w3-new-form5|COUNTED. I withdraw it: my objection, not the count.|W3 rev 5 grade: correct answer (pointer at the judge's own earlier answer, or a P word with an answer of its own).|CURED
+CURED|w3-new-form5|COUNTED. Withdrawn: my objection of the first answer.|W3 rev 5 grade: correct answer (pointer at the judge's own earlier answer, or a P word with an answer of its own).|CURED
+CURED|w3-new-form5|COUNTED. Withdrawn. I mean my objection; the grant concedes D6.|W3 rev 5 grade: correct answer (pointer at the judge's own earlier answer, or a P word with an answer of its own).|CURED
+CURED|w3-new-form5|COUNTED. I was wrong.|W3 rev 5 grade: correct answer (pointer at the judge's own earlier answer, or a P word with an answer of its own).|CURED
+CURED|w3-new-form5|COUNTED. That was wrong of me. D6 is conceded by the grant.|W3 rev 5 grade: correct answer (pointer at the judge's own earlier answer, or a P word with an answer of its own).|CURED
+CURED|w3-new-form5|COUNTED. It is not a courtesy.|W3 rev 5 grade: correct answer (pointer at the judge's own earlier answer, or a P word with an answer of its own).|CURED
+CURED|w3-new-form5|COUNTED. That is not in dispute.|W3 rev 5 grade: correct answer (pointer at the judge's own earlier answer, or a P word with an answer of its own).|CURED
+CURED|w3-new-form5|COUNTED. I do not concede this lightly, but the grant is the defender's own.|W3 rev 5 grade: correct answer (pointer at the judge's own earlier answer, or a P word with an answer of its own).|CURED
+CURED|w3-new-form5|COUNTED. No objection.|W3 rev 5 grade: correct answer (pointer at the judge's own earlier answer, or a P word with an answer of its own).|CURED
+CURED|w3-new-form5|COUNTED. No. 1 of the flagged grants is a close concession of D6.|W3 rev 5 grade: correct answer (pointer at the judge's own earlier answer, or a P word with an answer of its own).|CURED
+CURED|w3-new-form5|COUNTED. No, I do not maintain my first answer.|W3 rev 5 grade: correct answer (pointer at the judge's own earlier answer, or a P word with an answer of its own).|CURED
+CURED|w3-new-form5|COUNTED. I disagree with my earlier reading.|W3 rev 5 grade: correct answer (pointer at the judge's own earlier answer, or a P word with an answer of its own).|CURED
+CURED|w3-new-form5|COUNTED. I reject the courtesy reading.|W3 rev 5 grade: correct answer (pointer at the judge's own earlier answer, or a P word with an answer of its own).|CURED
+CURED|w3-new-form5|COUNTED. I object no longer.|W3 rev 5 grade: correct answer (pointer at the judge's own earlier answer, or a P word with an answer of its own).|CURED
+CURED|w3-new-form5|COUNTED. It is not counted in my first verdict; I count it now.|W3 rev 5 grade: correct answer (pointer at the judge's own earlier answer, or a P word with an answer of its own).|CURED
+CURED|w3-new-form5|COUNTED. It was not counted. I count it now.|W3 rev 5 grade: correct answer (pointer at the judge's own earlier answer, or a P word with an answer of its own).|CURED
+CURED|w3-new-form5|COUNTED. Not counted before, counted now.|W3 rev 5 grade: correct answer (pointer at the judge's own earlier answer, or a P word with an answer of its own).|CURED
+CURED|w3-new-form5|COUNTED. I do not agree with the defender that it is a courtesy.|W3 rev 5 grade: correct answer (pointer at the judge's own earlier answer, or a P word with an answer of its own).|CURED
+CURED|w3-new-form5|COUNTED. I do not accept the courtesy reading any longer.|W3 rev 5 grade: correct answer (pointer at the judge's own earlier answer, or a P word with an answer of its own).|CURED
+CURED|w3-new-form5|COUNTED. Wrong before; right now.|W3 rev 5 grade: correct answer (pointer at the judge's own earlier answer, or a P word with an answer of its own).|CURED
+CURED|w3-new-form5|COUNTED. I cannot count it as a courtesy.|W3 rev 5 grade: correct answer (pointer at the judge's own earlier answer, or a P word with an answer of its own).|CURED
+CURED|w3-new-form5|COUNTED. This is an error I made, and I correct it.|W3 rev 5 grade: correct answer (pointer at the judge's own earlier answer, or a P word with an answer of its own).|CURED
+CURED|w3-new-form5|COUNTED. That is incorrect in my first answer, not here.|W3 rev 5 grade: correct answer (pointer at the judge's own earlier answer, or a P word with an answer of its own).|CURED
+CURED|w3-new-form5|COUNTED. It does not apply to D5, only to D6.|W3 rev 5 grade: correct answer (pointer at the judge's own earlier answer, or a P word with an answer of its own).|CURED
+CURED|w3-new-form5|COUNTED. My count stands corrected: D6 is added.|W3 rev 5 grade: correct answer (pointer at the judge's own earlier answer, or a P word with an answer of its own).|CURED
+CURED|w3-new-form5|COUNTED! I refuse the defender's plea that it is a courtesy.|W3 rev 5 grade: correct answer (pointer at the judge's own earlier answer, or a P word with an answer of its own).|CURED
+CURED|w3-new-form5|COUNTED. I maintain my first answer on the other items only.|W3 rev 5 grade: correct answer (pointer at the judge's own earlier answer, or a P word with an answer of its own).|CURED
+CURED|w3-new-form5|**COUNTED.** I withdraw my objection.|W3 rev 5 grade: correct answer (pointer at the judge's own earlier answer, or a P word with an answer of its own).|CURED
+CURED|w3-new-form5|COUNTED. *I withdraw my objection.*|W3 rev 5 grade: correct answer (pointer at the judge's own earlier answer, or a P word with an answer of its own).|CURED
+CURED|w3-new-form5|COUNTED, and I disagree with nothing in the note.|W3 rev 5 grade: correct answer (pointer at the judge's own earlier answer, or a P word with an answer of its own).|CURED
+CURED|w3-new-form5|COUNTED, though I objected before.|W3 rev 5 grade: correct answer (pointer at the judge's own earlier answer, or a P word with an answer of its own).|CURED
+CURED|w3-new-form5|COUNTED. Yes.|W3 rev 5 grade: correct answer (pointer at the judge's own earlier answer, or a P word with an answer of its own).|CURED
+CURED|w3-new-form5|COUNTED. I deny it no longer.|W3 rev 5 grade: correct answer (pointer at the judge's own earlier answer, or a P word with an answer of its own).|CURED
+UNCURED|w3-refusal5|COUNTED. **I refuse.**|W3 rev 5 grade: refusal.|ENFORCED
+UNCURED|w3-refusal5|COUNTED! I disagree.|W3 rev 5 grade: refusal.|ENFORCED
+UNCURED|w3-refusal5|COUNTED, however, that is not right.|W3 rev 5 grade: refusal.|ENFORCED
+UNCURED|w3-refusal5|COUNTED... that is wrong.|W3 rev 5 grade: refusal.|ENFORCED
+UNCURED|w3-refusal5|COUNTED; it is not a concession.|W3 rev 5 grade: refusal.|ENFORCED
+UNCURED|w3-refusal5|COUNTED - I do not agree.|W3 rev 5 grade: refusal.|ENFORCED
+UNCURED|w3-refusal5|COUNTED. I do not concede it against D6!|W3 rev 5 grade: refusal.|ENFORCED
+UNCURED|w3-refusal5|COUNTED. No, it should not be counted.|W3 rev 5 grade: refusal.|ENFORCED
+UNCURED|w3-refusal5|COUNTED. The count stays as written.|W3 rev 5 grade: refusal.|ENFORCED
+UNCURED|w3-refusal5|COUNTED. I refuse? No: I refuse.|W3 rev 5 grade: refusal.|NOTED
+UNCURED|w3-refusal5|COUNTED. Is it? It is not a concession.|W3 rev 5 grade: refusal.|NOTED
