@@ -26,3 +26,7 @@ Alt and R2 Alt Gate Record did not run in 34626 (NOT REACHED there; same text as
   - B3 broken new line: gate raises K-B/K-G4, stays 4 (as GCCN2).
 - regress_GUB_out.txt: 34626 as stored equals s110; C2 to C7 as GCCN2. 8 OK, 0 FAIL.
 - t_1062_GUB_out.txt: stored 1062 still 12 to 11 (S8 counted by pkgECF, so pkgUND is not called); other plants as GCCN2 rev 2.
+
+## Rebased on GCCN rev 3 (GUBBASE=GCCN3, the default now)
+`node pkgGUB/build_GUB.cjs <s110> pkgGUB/parent_s110_GUB_on_GCCN3.json`. SIZE (measured) +1,719 against s110 (+984 over GCCN3's +735). Same four nodes.
+on_GCCN3_out.txt: 34626 equals s110; C2-C7 and C8v51 (v51 count off) as GCCN3; B1 3, B2 2, B4 3, B5 2, B3 4. t_1062_GUB_on_GCCN3_out.txt: 12 -> 11.

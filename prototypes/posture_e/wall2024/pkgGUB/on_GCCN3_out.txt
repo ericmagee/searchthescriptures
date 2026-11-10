@@ -1,0 +1,13 @@
+-- C2  s110 luna:3 chatgpt:0 sol:0 | C luna:2 chatgpt:0 sol:0 | G1 CURED lision line for the same pair) | the gate change was applied | count-off note
+-- C3  s110 luna:3 chatgpt:0 sol:0 | C luna:3 chatgpt:0 sol:0 | G1 CURED n line for the same pair) | KEEP: the change stays unapplied
+-- C4  s110 luna:4 chatgpt:0 sol:0 | C luna:4 chatgpt:0 sol:0 | G1 UNCURED ) | the gate change was not applied (counted in drv_uncured)
+-- C5  s110 luna:3 chatgpt:0 sol:0 | C luna:3 chatgpt:0 sol:0 | G1 CURED lision line for the same pair) | the gate change was applied
+-- C6  s110 luna:3 chatgpt:0 sol:0 | C luna:3 chatgpt:0 sol:0 | G1 CURED lision line for the same pair) | the gate change was applied
+-- C7  s110 luna:3 chatgpt:0 sol:0 | C luna:3 chatgpt:0 sol:0 | G1 CURED lision line for the same pair) | the gate change was applied
+-- C8v51  s110 luna:3 chatgpt:0 sol:0 | C luna:2 chatgpt:0 sol:0 | G1 CURED lision line for the same pair) | the gate change was applied | count-off note
+8 OK, 0 FAIL
+-- B1  s110 luna:3 chatgpt:0 sol:0 | C luna:3 chatgpt:0 sol:0 | G1 CURED lision line for the same pair) | the gate change was applied
+-- B2  s110 luna:3 chatgpt:0 sol:0 | C luna:2 chatgpt:0 sol:0 | G1 CURED lision line for the same pair) | the gate change was applied | count-off note
+-- B4  s110 luna:3 chatgpt:0 sol:0 | C luna:3 chatgpt:0 sol:0 | G1 CURED lision line for the same pair) | the gate change was applied
+-- B5  s110 luna:3 chatgpt:0 sol:0 | C luna:2 chatgpt:0 sol:0 | G1 CURED lision line for the same pair) | the gate change was applied | count-off note
+-- B3  s110 luna:4 chatgpt:0 sol:0 | C luna:4 chatgpt:0 sol:0 | G1 UNCURED  does not cure; counted once, here) (counted in drv_uncured)

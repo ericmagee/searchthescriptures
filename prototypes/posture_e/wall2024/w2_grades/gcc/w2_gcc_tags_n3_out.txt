@@ -1,0 +1,19 @@
+patch pkgGCC/patches/G1n3.to
+OK   counted v40:: 3 -> 2
+OK   counted v41:: 3 -> 2
+OK   counted v42:: 3 -> 2
+OK   counted v43:: 3 -> 2
+OK   counted v44:: 3 -> 2
+OK   counted v45:: 3 -> 2
+OK   counted v46:: 3 -> 2
+OK   counted v48:: 3 -> 2
+OK   counted v51:: 3 -> 2
+OK   not a send-back count tag v38: : stays 3
+OK   not a send-back count tag v21: : stays 3
+OK   not a send-back count tag v50: : stays 3
+OK   not a send-back count tag v52: : stays 3
+OK   not a send-back count tag v5: X: stays 3
+OK   not a send-back count tag v510:: stays 3
+OK   not a send-back count tag v4: X: stays 3
+OK   v51 TRIAL not counted: stays 3
+17 OK, 0 FAIL

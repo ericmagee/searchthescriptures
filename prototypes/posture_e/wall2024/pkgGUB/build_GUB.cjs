@@ -4,7 +4,7 @@
 const fs=require('fs'),path=require('path'),cp=require('child_process');const {rebuild}=require('../pkgLIB/unpack.cjs');
 const [BASE,OUT]=process.argv.slice(2);let d=JSON.parse(fs.readFileSync(BASE,'utf8'));d=d.data||d;d=d.workflow||d;const base=JSON.parse(JSON.stringify(d));
 let ok=true;const say=(c,m)=>{console.log((c?'OK   ':'FAIL ')+m);if(!c)ok=false;};
-const SRC='pkgLIB/strip_GCCN2/patched/',SD='pkgLIB/strip_GUB/patched/',PK='pkgLIB_GUB';
+const V=process.env.GUBBASE||'GCCN3';const SRC='pkgLIB/strip_'+V+'/patched/',SD='pkgLIB/strip_GUB'+(V==='GCCN2'?'':'_'+V)+'/patched/',PK='pkgLIB_GUB'+(V==='GCCN2'?'':'_'+V);
 for(const p of [SD.replace('/patched/',''),PK])if(fs.existsSync(p))fs.rmSync(p,{recursive:true});fs.mkdirSync(SD,{recursive:true});
 const SBR=fs.readFileSync('pkgLIB/strip_R1/patched/Send_Back_Record.js','utf8').split('\n');
 const a=SBR.findIndex(l=>l.startsWith('const ECL=(()=>{')),z=SBR.findIndex(l=>l.startsWith(' return {rounds,pressed,graded,missing,undOk'));say(a>0&&z>a,'U0 ECL and UND block found in Send Back Record lines '+(a+1)+'-'+(z+1));

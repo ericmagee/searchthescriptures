@@ -43,3 +43,11 @@ C12 already written stays; C13 W4's TRIAL "not counted" line alone: stays; C14 T
 from one S: 3 -> 2; C16 one line counting S10 and S11, S10 cured twice and S11 once: 4 -> 2. All OK.
 Forgiven by design (recorded, not a fail): C11 cure by a later gate change that was applied (count off); case (b) B1: a new UNDERDETERMINED line the
 pkgUND rule would refuse is cured by the gate and its count comes off (3 -> 2), as in rev 1. Stored cases of (b): 0 of 1.
+
+## GCCN rev 3 (W1, Wall 4291, commit f4c0d79d): PASS
+- Change read: one regex, v4\d -> v(?:4\d|51), in the GCCN filter of Gate Record, Alt Gate Record, R2 Alt Gate Record (Shared Library only); comment renumbered. Nothing else differs from rev 2 (diff of strip_GCCN2 vs strip_GCCN3).
+- Size (measured): all Code text +735 against s110 (rev 2 +728; +7). Only the Shared Library node changes. Prompt +0.
+- Counted tags the engine writes with "counted in drv_uncured" (scan of all strip_GCCN3 sources): send-back v40 silence, v41 E-COL (pkgECF), v42 collision grade (pkgUND), v43 absence (pkgABS), v44 press absence (pkgPAB), v45 MEANS (pkgMNP), v46 imposed requirement (pkgIMP), v48 keystone consistency (pkgKSC), v51 self-contradiction (pkgEB7); gate v38 E-GATE (the gate's own count, not a send-back count); Merge Seat v21/v38 regexes (readers, not lines).
+- w2_gcc_tags.cjs on G1n3: each of v40-v46, v48, v51 comes off (3 -> 2); v38, v21, v50, v52, v5, v510, v4 stay; v51 TRIAL "not counted" stays. 17 OK, 0 FAIL. v40 silence items raise no gate item, so that tag is never reached (as in rev 2).
+- Chain on 34626: as stored equals s110; C2-C7 as rev 2; C8v51 (v51 line on S10, gate change applied) 3 -> 2 (rev 2: stays 3, the gap W3 and W4 found). 8 OK.
+- Unit C8-C16 as rev 2; 1062 12 -> 11; case (b) B1-B5 as rev 2 (B1/B4 forgiven by design; pkgGUB closes it).
