@@ -1,0 +1,82 @@
+PROGRESS defender pc 2 cases 729 2026-11-10T17:20:48.173Z
+PROGRESS defender pc 6 cases 1458 2026-11-10T17:21:10.314Z
+PROGRESS defender pc 10 cases 2187 2026-11-10T17:21:32.559Z
+PROGRESS defender pc 14 cases 2916 2026-11-10T17:21:54.018Z
+PROGRESS defender pc 18 cases 3645 2026-11-10T17:22:15.949Z
+PROGRESS defender pc 22 cases 4374 2026-11-10T17:22:38.306Z
+PROGRESS defender pc 26 cases 5103 2026-11-10T17:23:00.829Z
+PROGRESS defender pc 30 cases 5832 2026-11-10T17:23:22.369Z
+PROGRESS defender pc 34 cases 6561 2026-11-10T17:23:44.407Z
+PROGRESS defender pc 38 cases 7290 2026-11-10T17:24:06.257Z
+PROGRESS defender pc 42 cases 8019 2026-11-10T17:24:28.514Z
+PROGRESS defender pc 46 cases 8748 2026-11-10T17:24:49.247Z
+PROGRESS defender pc 50 cases 9477 2026-11-10T17:25:10.455Z
+PROGRESS defender pc 54 cases 10206 2026-11-10T17:25:31.439Z
+PROGRESS defender pc 58 cases 10935 2026-11-10T17:25:52.407Z
+PROGRESS defender pc 62 cases 11664 2026-11-10T17:26:13.599Z
+PROGRESS challenger pc 2 cases 12393 2026-11-10T17:26:35.013Z
+PROGRESS challenger pc 6 cases 13122 2026-11-10T17:26:56.630Z
+PROGRESS challenger pc 10 cases 13851 2026-11-10T17:27:18.752Z
+PROGRESS challenger pc 14 cases 14580 2026-11-10T17:27:40.620Z
+PROGRESS challenger pc 18 cases 15309 2026-11-10T17:28:02.441Z
+PROGRESS challenger pc 22 cases 16038 2026-11-10T17:28:24.559Z
+PROGRESS challenger pc 26 cases 16767 2026-11-10T17:28:46.513Z
+PROGRESS challenger pc 30 cases 17496 2026-11-10T17:29:07.982Z
+PROGRESS challenger pc 34 cases 18225 2026-11-10T17:29:29.557Z
+PROGRESS challenger pc 38 cases 18954 2026-11-10T17:29:50.959Z
+PROGRESS challenger pc 42 cases 19683 2026-11-10T17:30:12.986Z
+PROGRESS challenger pc 46 cases 20412 2026-11-10T17:30:34.049Z
+PROGRESS challenger pc 50 cases 21141 2026-11-10T17:30:55.275Z
+PROGRESS challenger pc 54 cases 21870 2026-11-10T17:31:16.277Z
+PROGRESS challenger pc 58 cases 22599 2026-11-10T17:31:37.735Z
+PROGRESS challenger pc 62 cases 23328 2026-11-10T17:31:59.098Z
+LOSS defender AB/A/AB f:other/none/none r:fail/fail/change AB: live 1, candidate 0; QR Check luna:fault, chatgpt:-, sol:defender
+LOSS defender AB/A/AB f:other/none/none r:change/fail/change AB: live 1, candidate 0; QR Check luna:fault, chatgpt:-, sol:defender
+LOSS defender AB/A/AB f:other/none/none r:fail/change/change AB: live 1, candidate 0; QR Check luna:fault, chatgpt:-, sol:defender
+LOSS defender AB/A/AB f:other/none/none r:change/change/change AB: live 1, candidate 0; QR Check luna:fault, chatgpt:-, sol:defender
+LOSS defender AB/A/AB f:other/none/none r:fail/keep/change AB: live 1, candidate 0; QR Check luna:fault, chatgpt:-, sol:defender
+LOSS defender AB/A/AB f:other/none/none r:change/keep/change AB: live 1, candidate 0; QR Check luna:fault, chatgpt:-, sol:defender
+LOSS defender AB/A/AB f:same/none/none r:fail/fail/change AB: live 1, candidate 0; QR Check luna:fault, chatgpt:-, sol:defender
+LOSS defender AB/A/AB f:same/none/none r:change/fail/change AB: live 1, candidate 0; QR Check luna:fault, chatgpt:-, sol:defender
+LOSS defender AB/A/AB f:same/none/none r:fail/change/change AB: live 1, candidate 0; QR Check luna:fault, chatgpt:-, sol:defender
+LOSS defender AB/A/AB f:same/none/none r:change/change/change AB: live 1, candidate 0; QR Check luna:fault, chatgpt:-, sol:defender
+LOSS defender AB/A/AB f:same/none/none r:fail/keep/change AB: live 1, candidate 0; QR Check luna:fault, chatgpt:-, sol:defender
+LOSS defender AB/A/AB f:same/none/none r:change/keep/change AB: live 1, candidate 0; QR Check luna:fault, chatgpt:-, sol:defender
+LOSS defender AB/B/AB f:other/none/none r:fail/fail/change AB: live 1, candidate 0; QR Check luna:fault, chatgpt:-, sol:defender
+LOSS defender AB/B/AB f:other/none/none r:change/fail/change AB: live 1, candidate 0; QR Check luna:fault, chatgpt:-, sol:defender
+LOSS defender AB/B/AB f:other/none/none r:fail/change/change AB: live 1, candidate 0; QR Check luna:fault, chatgpt:-, sol:defender
+LOSS defender AB/B/AB f:other/none/none r:change/change/change AB: live 1, candidate 0; QR Check luna:fault, chatgpt:-, sol:defender
+LOSS defender AB/B/AB f:other/none/none r:fail/keep/change AB: live 1, candidate 0; QR Check luna:fault, chatgpt:-, sol:defender
+LOSS defender AB/B/AB f:other/none/none r:change/keep/change AB: live 1, candidate 0; QR Check luna:fault, chatgpt:-, sol:defender
+LOSS defender AB/B/AB f:same/none/none r:fail/fail/change AB: live 1, candidate 0; QR Check luna:fault, chatgpt:-, sol:defender
+LOSS defender AB/B/AB f:same/none/none r:change/fail/change AB: live 1, candidate 0; QR Check luna:fault, chatgpt:-, sol:defender
+LOSS defender AB/B/AB f:same/none/none r:fail/change/change AB: live 1, candidate 0; QR Check luna:fault, chatgpt:-, sol:defender
+LOSS defender AB/B/AB f:same/none/none r:change/change/change AB: live 1, candidate 0; QR Check luna:fault, chatgpt:-, sol:defender
+LOSS defender AB/B/AB f:same/none/none r:fail/keep/change AB: live 1, candidate 0; QR Check luna:fault, chatgpt:-, sol:defender
+LOSS defender AB/B/AB f:same/none/none r:change/keep/change AB: live 1, candidate 0; QR Check luna:fault, chatgpt:-, sol:defender
+LOSS challenger AB/A/AB f:other/none/none r:fail/fail/change AB: live 1, candidate 0; QR Check luna:fault, chatgpt:-, sol:challenger
+LOSS challenger AB/A/AB f:other/none/none r:change/fail/change AB: live 1, candidate 0; QR Check luna:fault, chatgpt:-, sol:challenger
+LOSS challenger AB/A/AB f:other/none/none r:fail/change/change AB: live 1, candidate 0; QR Check luna:fault, chatgpt:-, sol:challenger
+LOSS challenger AB/A/AB f:other/none/none r:change/change/change AB: live 1, candidate 0; QR Check luna:fault, chatgpt:-, sol:challenger
+LOSS challenger AB/A/AB f:other/none/none r:fail/keep/change AB: live 1, candidate 0; QR Check luna:fault, chatgpt:-, sol:challenger
+LOSS challenger AB/A/AB f:other/none/none r:change/keep/change AB: live 1, candidate 0; QR Check luna:fault, chatgpt:-, sol:challenger
+LOSS challenger AB/A/AB f:same/none/none r:fail/fail/change AB: live 1, candidate 0; QR Check luna:fault, chatgpt:-, sol:challenger
+LOSS challenger AB/A/AB f:same/none/none r:change/fail/change AB: live 1, candidate 0; QR Check luna:fault, chatgpt:-, sol:challenger
+LOSS challenger AB/A/AB f:same/none/none r:fail/change/change AB: live 1, candidate 0; QR Check luna:fault, chatgpt:-, sol:challenger
+LOSS challenger AB/A/AB f:same/none/none r:change/change/change AB: live 1, candidate 0; QR Check luna:fault, chatgpt:-, sol:challenger
+LOSS challenger AB/A/AB f:same/none/none r:fail/keep/change AB: live 1, candidate 0; QR Check luna:fault, chatgpt:-, sol:challenger
+LOSS challenger AB/A/AB f:same/none/none r:change/keep/change AB: live 1, candidate 0; QR Check luna:fault, chatgpt:-, sol:challenger
+LOSS challenger AB/B/AB f:other/none/none r:fail/fail/change AB: live 1, candidate 0; QR Check luna:fault, chatgpt:-, sol:challenger
+LOSS challenger AB/B/AB f:other/none/none r:change/fail/change AB: live 1, candidate 0; QR Check luna:fault, chatgpt:-, sol:challenger
+LOSS challenger AB/B/AB f:other/none/none r:fail/change/change AB: live 1, candidate 0; QR Check luna:fault, chatgpt:-, sol:challenger
+LOSS challenger AB/B/AB f:other/none/none r:change/change/change AB: live 1, candidate 0; QR Check luna:fault, chatgpt:-, sol:challenger
+LOSS challenger AB/B/AB f:other/none/none r:fail/keep/change AB: live 1, candidate 0; QR Check luna:fault, chatgpt:-, sol:challenger
+LOSS challenger AB/B/AB f:other/none/none r:change/keep/change AB: live 1, candidate 0; QR Check luna:fault, chatgpt:-, sol:challenger
+LOSS challenger AB/B/AB f:same/none/none r:fail/fail/change AB: live 1, candidate 0; QR Check luna:fault, chatgpt:-, sol:challenger
+LOSS challenger AB/B/AB f:same/none/none r:change/fail/change AB: live 1, candidate 0; QR Check luna:fault, chatgpt:-, sol:challenger
+LOSS challenger AB/B/AB f:same/none/none r:fail/change/change AB: live 1, candidate 0; QR Check luna:fault, chatgpt:-, sol:challenger
+LOSS challenger AB/B/AB f:same/none/none r:change/change/change AB: live 1, candidate 0; QR Check luna:fault, chatgpt:-, sol:challenger
+LOSS challenger AB/B/AB f:same/none/none r:fail/keep/change AB: live 1, candidate 0; QR Check luna:fault, chatgpt:-, sol:challenger
+LOSS challenger AB/B/AB f:same/none/none r:change/keep/change AB: live 1, candidate 0; QR Check luna:fault, chatgpt:-, sol:challenger
+cases 23328; LOSS 48; intended drops (cand>=1, a related judge redirected) 1716; unexplained drops 0
+MATRIX FAIL

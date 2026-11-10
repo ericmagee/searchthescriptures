@@ -46,7 +46,7 @@ const seats=['luna','chatgpt','sol'];const MODE=process.env.MODE||'both';
      used.forEach((p,i)=>{if(lc[i]>=1&&nc[i]===0){loss++;if(lines.length<60)lines.push('LOSS '+key+' '+p+': live '+lc[i]+', candidate 0; QR Check '+ret(cn));}
       else if(nc[i]<lc[i]){drop++;const rel=[0,1,2].some(k=>redir[k]&&(P[pas[k]].includes(P[p])||P[p].includes(P[pas[k]])));if(!rel){unexpl++;if(lines.length<60)lines.push('UNEXPLAINED DROP '+key+' '+p+': live '+lc[i]+', candidate '+nc[i]);}}});
      lo.forEach((c,k)=>{if(no[k]<c){unexpl++;if(lines.length<60)lines.push('OTHER SIDE DROP '+key+' O'+k+': live '+c+', candidate '+no[k]);}});
-    }}}}
+    }}console.log('PROGRESS '+side+' pc '+pc+' cases '+total+' '+new Date().toISOString());}}
  const SHN=(process.env.SHARD||'0/1').replace('/','of');fs.writeFileSync('pkgQRD/w1_grade/matrix_live_counts_'+SHN+'.txt',Object.entries(liveTab).map(([k,v])=>k+' => '+v).join('\n')+'\n');
  if(MODE==='live'){fs.writeFileSync('/dev/null',Object.entries(liveTab).map(([k,v])=>k+' => '+v).join('\n')+'\n');console.log('live cases '+total);return;}
  lines.forEach(l=>console.log(l));console.log('cases '+total+'; LOSS '+loss+'; intended drops (cand>=1, a related judge redirected) '+(drop-unexpl+0)+'; unexplained drops '+unexpl);
