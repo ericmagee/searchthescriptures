@@ -1,0 +1,11 @@
+const fs=require('fs');const W='/mnt/project-files/wall2024/';const ld=f=>{let d=JSON.parse(fs.readFileSync(W+f,'utf8'));d=d.data||d;d=d.workflow||d;return d;};
+const lib=d=>{const x=d.nodes.find(n=>n.name==='Shared Library').parameters.jsCode;return {x,l:JSON.parse(x.slice(x.indexOf('\n/*LIB*/')+8,x.indexOf('\n/*MAP*/'))),m:JSON.parse(x.slice(x.indexOf('\n/*MAP*/')+8,x.indexOf('\n/*END*/')))};};
+const L=ld('fetchback_live_s113.json');const files={OON:'parent_s113_OON.json',GK1:'parent_s113_GK1.json',KCQ:'parent_s113_KCQ.json',KWQ:'parent_s113_KWQ.json',EAD:'parent_s113_EAD.json',A:'joint_s113_OON_GK1_KCQ_KWQ.json',B:'joint_s113_OON_GK1_KCQ_KWQ_EAD.json'};
+const D={};for(const k in files)D[k]=ld(files[k]);const ll=lib(L);
+const other=(d)=>{const by={};L.nodes.forEach(n=>by[n.name]=n);let ch=[];d.nodes.forEach(n=>{if(n.name!=='Shared Library'&&JSON.stringify(n)!==JSON.stringify(by[n.name]))ch.push(n.name);});return ch;};
+const dl={};for(const k in D){const q=lib(D[k]);const df=[];const n=Math.max(q.l.length,ll.l.length);for(let i=0;i<n;i++)if(q.l[i]!==ll.l[i])df.push(i);dl[k]={q,df};
+ console.log(k,'nodes',D[k].nodes.length,'conn eq',JSON.stringify(D[k].connections)===JSON.stringify(L.connections),'non-lib nodes changed',other(D[k]).join('|')||'none','size',q.x.length-ll.x.length,'lib lines',q.l.length,'(live '+ll.l.length+')','diff idx',df.length>12?df.length+' lines '+df.slice(0,6)+'...':df.join(','));}
+// composition: lengths equal case for A
+for(const [J,parts] of [['A',['OON','GK1','KCQ','KWQ']]]){const j=dl[J];let ok=true,cov=0;for(const i of j.df){const src=parts.filter(p=>dl[p].df.includes(i));if(src.length!==1||dl[src[0]].q.l[i]!==j.q.l[i]){ok=false;console.log('  line',i,'sources',src.join(','));}else cov++;}
+ const all=new Set(parts.flatMap(p=>dl[p].df));console.log(J,'composition: every joint diff line equals exactly one single package line:',ok,'| lines',j.df.length,'| union of singles',all.size);}
+for(const k of ['KCQ','KWQ']){for(const i of dl[k].df){const p=ll.l[i],q=dl[k].q.l[i];let a=0;while(p[a]===q[a])a++;let e=0;while(p[p.length-1-e]===q[q.length-1-e]&&e<p.length-a)e++;console.log(k,'L',i,'\n  LIVE:',p.slice(Math.max(0,a-150),p.length-e+40).slice(0,420),'\n  CAND:',q.slice(Math.max(0,a-150),q.length-e+40).slice(0,480));}}

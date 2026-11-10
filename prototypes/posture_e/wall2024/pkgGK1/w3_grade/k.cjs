@@ -1,6 +1,6 @@
 const fs=require('fs');process.chdir(__dirname+'/../..');const {rebuild}=require(process.cwd()+'/pkgLIB/unpack.cjs');const H=require(process.cwd()+'/pkgEAD/harness_clone.cjs');
 const load=f=>{let d=JSON.parse(fs.readFileSync(f,'utf8'));d=d.data||d;d=d.workflow||d;const by={};d.nodes.forEach(n=>by[n.name]=n);const c={};return n=>c[n]||(c[n]=rebuild(by[n].parameters.jsCode,by['Shared Library'].parameters.jsCode));};
-const W='/mnt/project-files/wall2024/';const SRC={LIVE:load(W+'fetchback_live_s113.json'),GK1:load(W+'parent_s113_GK1.json'),OON:load(W+'parent_s113_OON.json'),JOINT:load(W+'parent_s113_OON_GK1.json')};
+const W='/mnt/project-files/wall2024/';const SRC={LIVE:load(W+'fetchback_live_s113.json'),GK1:load(W+'parent_s113_GK1.json'),OON:load(W+'parent_s113_OON.json'),JOINT:load(W+'parent_s113_OON_GK1.json'),A:load(W+'joint_s113_OON_GK1_KCQ_KWQ.json'),B:load(W+'joint_s113_OON_GK1_KCQ_KWQ_EAD.json'),KCQ:load(W+'parent_s113_KCQ.json'),KWQ:load(W+'parent_s113_KWQ.json')};
 const ex=JSON.parse(fs.readFileSync(W+'ex34726_full.json','utf8'));const r=(ex.data||ex).resultData.runData;const base={};for(const [n,runs] of Object.entries(r)){const last=runs[runs.length-1];base[n]=(last&&last.data&&last.data.main)||null;}
 const J=o=>JSON.parse(JSON.stringify(o));const mk=o=>new Proxy(o,{has:()=>true,get:(t,k)=>k in t?t[k]:null});
 async function run(which,node,inp,store){return (await H.run(SRC[which](node),'x34726',inp,mk(store))).map(x=>x.json);}
