@@ -1,0 +1,494 @@
+{
+ "about": "W3 labeled cases for pkgCDR rev 7 (standard: no true drop hidden), labels fixed before the run. R = forms taken from stored debates; S = new planted forms; Q = structural non-drops.",
+ "cases": [
+  {
+   "id": "R1",
+   "adds": [
+    [
+     "cr3",
+     "I drop two limbs: that every house-row points to Mary alone, and that Joseph's name and house stand outside the register."
+    ],
+    [
+     "cr4",
+     "Every house-row points to Mary alone."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "Every house-row points to Mary alone.",
+   "want": "LISTED",
+   "note": "33261 cr3 form: two limbs, colon, that-clauses"
+  },
+  {
+   "id": "R2",
+   "adds": [
+    [
+     "cr3",
+     "I drop two things: that Luke 3's line is expressly given as Mary's, and that Joseph is \"counted 'of Heli' by marriage\"."
+    ],
+    [
+     "cr4",
+     "Luke 3's line is expressly given as Mary's."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "Luke 3's line is expressly given as Mary's.",
+   "want": "LISTED",
+   "note": "33482 cr3 form"
+  },
+  {
+   "id": "R3",
+   "adds": [
+    [
+     "cr3",
+     "I drop my earlier wording that all the father rows come from the crowd."
+    ],
+    [
+     "cr4",
+     "All the father rows come from the crowd."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "All the father rows come from the crowd.",
+   "want": "LISTED",
+   "note": "33506 cr3 form: adjective before the noun"
+  },
+  {
+   "id": "R4",
+   "adds": [
+    [
+     "cr4",
+     "Justice could never move a husband who knew the child to be his."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "Justice could never move a husband who knew the child to be his.",
+   "want": "LISTED",
+   "note": "34108 cr3 as stored: \"I drop the broader claim that ...\""
+  },
+  {
+   "id": "R5",
+   "adds": [
+    [
+     "cr2",
+     "- **Link 3.** I drop the claim that Matthew 1:25 by itself covers the time before the taking."
+    ],
+    [
+     "cr4",
+     "Matthew 1:25 by itself covers the time before the taking."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "Matthew 1:25 by itself covers the time before the taking.",
+   "want": "LISTED",
+   "note": "33815 cr2 form: bold label ending in a period"
+  },
+  {
+   "id": "R6",
+   "adds": [
+    [
+     "cr2",
+     "**Narrowed.** I withdraw \"at the one place where the pattern would require it\" as a proof of absence."
+    ],
+    [
+     "cr4",
+     "The verb is absent at the one place where the pattern would require it."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The verb is absent at the one place where the pattern would require it.",
+   "want": "LISTED",
+   "note": "33411 cr2 form"
+  },
+  {
+   "id": "R7",
+   "adds": [
+    [
+     "cr2",
+     "**Narrowed.** I withdraw \"marks a false report\" for *enomizeto*."
+    ],
+    [
+     "cr4",
+     "The verb marks a false report."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The verb marks a false report.",
+   "want": "LISTED",
+   "note": "33497 cr2 form"
+  },
+  {
+   "id": "R8",
+   "adds": [
+    [
+     "cr2",
+     "- **Luke 1:27.** I withdraw \"on the plain statement of Luke 1:27\" for Mary's Davidic descent."
+    ],
+    [
+     "cr4",
+     "Mary is of David on the plain statement of Luke 1:27."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "Mary is of David on the plain statement of Luke 1:27.",
+   "want": "LISTED",
+   "note": "33705 cr2 form"
+  },
+  {
+   "id": "R9",
+   "adds": [
+    [
+     "cr3",
+     "The limb I drop is any claim that the text names Mary's father outright."
+    ],
+    [
+     "cr4",
+     "The text names Mary's father outright."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The text names Mary's father outright.",
+   "want": "LISTED",
+   "note": "33617 cr3 form"
+  },
+  {
+   "id": "R10",
+   "adds": [
+    [
+     "cr2",
+     "I take back \"points to Mary alone\" as a claim about the pronoun by itself."
+    ],
+    [
+     "cr4",
+     "The pronoun points to Mary alone."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The pronoun points to Mary alone.",
+   "want": "LISTED",
+   "note": "33261 cr2 form: take back"
+  },
+  {
+   "id": "R11",
+   "adds": [
+    [
+     "cr3",
+     "The limb dropped is that this act set the tribe of the child."
+    ],
+    [
+     "cr4",
+     "This act set the tribe of the child."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "This act set the tribe of the child.",
+   "want": "LISTED",
+   "note": "33249 cr3 form"
+  },
+  {
+   "id": "R12",
+   "adds": [
+    [
+     "cr3",
+     "I drop \"the flesh comes through Mary\" and the assumption that Mary is of David's house by her father."
+    ],
+    [
+     "cr4",
+     "Mary is of David's house by her father."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "Mary is of David's house by her father.",
+   "want": "LISTED",
+   "note": "33345 cr3 form: second object"
+  },
+  {
+   "id": "S1",
+   "adds": [
+    [
+     "cr3",
+     "Here I drop the wording \"the register stops at Joseph\"."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "LISTED",
+   "note": "lead-in adverb"
+  },
+  {
+   "id": "S2",
+   "adds": [
+    [
+     "cr3",
+     "On Luke 3:23, I drop the wording \"the register stops at Joseph\"."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "LISTED",
+   "note": "lead-in phrase"
+  },
+  {
+   "id": "S3",
+   "adds": [
+    [
+     "cr3",
+     "I formally withdraw the wording \"the register stops at Joseph\"."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "LISTED",
+   "note": "adverb not on the list"
+  },
+  {
+   "id": "S4",
+   "adds": [
+    [
+     "cr3",
+     "I have dropped the wording \"the register stops at Joseph\"."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "LISTED",
+   "note": "perfect tense"
+  },
+  {
+   "id": "S5",
+   "adds": [
+    [
+     "cr3",
+     "The wording \"the register stops at Joseph\" is withdrawn."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "LISTED",
+   "note": "passive"
+  },
+  {
+   "id": "S6",
+   "adds": [
+    [
+     "cr3",
+     "I drop the statement \"the register stops at Joseph\"."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "LISTED",
+   "note": "noun not on the list"
+  },
+  {
+   "id": "S7",
+   "adds": [
+    [
+     "cr3",
+     "I grant the press and drop the wording \"the register stops at Joseph\"."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "LISTED",
+   "note": "second verb of the clause"
+  },
+  {
+   "id": "S8",
+   "adds": [
+    [
+     "cr3",
+     "I drop from LINK 2 the wording \"the register stops at Joseph\"."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "LISTED",
+   "note": "phrase between verb and wording"
+  },
+  {
+   "id": "S9",
+   "adds": [
+    [
+     "cr3",
+     "I no longer hold that the register stops at Joseph in every row."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph in every row."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph in every row.",
+   "want": "LISTED",
+   "note": "no longer hold"
+  },
+  {
+   "id": "S10",
+   "adds": [
+    [
+     "cr3",
+     "I drop the wording \"the register stops at Joseph\" and keep the rest of LINK 2."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "LISTED",
+   "note": "control: plain drop"
+  },
+  {
+   "id": "S11",
+   "adds": [
+    [
+     "cr3",
+     "I hereby withdraw the phrase \"the register stops at Joseph\"."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "LISTED",
+   "note": "control: hereby, phrase"
+  },
+  {
+   "id": "Q1",
+   "adds": [
+    [
+     "cr3",
+     "I do not drop the wording \"the register stops at Joseph\"."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "NOT LISTED",
+   "note": "negated at the verb"
+  },
+  {
+   "id": "Q2",
+   "adds": [
+    [
+     "cr3",
+     "Do I drop the wording \"the register stops at Joseph\"?"
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "NOT LISTED",
+   "note": "question"
+  },
+  {
+   "id": "Q3",
+   "adds": [
+    [
+     "cr3",
+     "I never drop the wording \"the register stops at Joseph\"."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "NOT LISTED",
+   "note": "never"
+  },
+  {
+   "id": "Q4",
+   "adds": [
+    [
+     "cr3",
+     "The challenger demands that I withdraw the wording \"the register stops at Joseph\"."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "NOT LISTED",
+   "note": "reported demand"
+  },
+  {
+   "id": "Q5",
+   "adds": [
+    [
+     "cr3",
+     "I will not withdraw the wording \"the register stops at Joseph\"."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "NOT LISTED",
+   "note": "will not"
+  },
+  {
+   "id": "Q6",
+   "adds": [
+    [
+     "cr3",
+     "I refuse to drop the wording \"the register stops at Joseph\"."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "NOT LISTED",
+   "note": "refuse"
+  }
+ ]
+}
