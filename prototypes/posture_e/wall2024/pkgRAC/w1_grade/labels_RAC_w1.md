@@ -20,4 +20,5 @@ Each case runs Close Enforcer Record (candidate build) on a planted reply, then 
      candidates on all stored debates as with the unstripped Panel Build.
 - G9 Anticheat Build run on a Final Output whose rounds are not strings (cr4 an object): no throw; one skip item with a reason; Close Enforcer
      Build still runs after it.
+- G9c (added after G9 did not reach the catch: odd rounds are read through String()) Init Seats unexecuted: Anticheat Build and Anticheat Record each return one skip item with the reason, no throw.
 - G10 no candidate line in any stored debate carries "reverses" or "asserts more" (neutral reasons).

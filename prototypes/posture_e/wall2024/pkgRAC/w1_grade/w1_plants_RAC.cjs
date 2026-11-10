@@ -46,5 +46,25 @@ const out=[];const T=(c,m)=>{out.push((c?'OK   ':'FAIL ')+m);console.log((c?'OK 
  // G7 empty earlier quotation
  {const r='33222';const AR=cl(saved(r,'Anticheat Record'));const row=AR[0].json.acx.reversed.C[0];row.earlier_q='';const {B}=build(r,{'Anticheat Record':AR});
   T(B.not_sent.some(x=>/^A\d+ CHALLENGER/.test(x)),'G7 empty earlier quotation listed: '+JSON.stringify(B.not_sent));}
+
+ // G8 Panel Build stripped of every comment (R2 tool): same candidates on every stored debate
+ {const {strip}=require('../../pkgLIB/strip.cjs');const W2=JSON.parse(JSON.stringify(CAND));const pbn=W2.nodes.find(z=>z.name==='Panel Build');pbn.parameters.jsCode=strip(pbn.parameters.jsCode);
+  let n=0,same=0,diff=[];for(const r of runs){const F=getF(r);if(!F)continue;let a,b;try{a=mrg(run(CAND,r,'Close Enforcer Build',BO(r,F)));b=mrg(run(W2,r,'Close Enforcer Build',BO(r,F)));}catch(e){continue;}if(a.cec_skip)continue;n++;
+   const k=x=>JSON.stringify([x.cands,x.not_sent]);if(k(a)===k(b))same++;else diff.push(r);}
+  const nR=runs.reduce((t,r)=>{const F=getF(r);if(!F)return t;try{const x=mrg(run(W2,r,'Close Enforcer Build',BO(r,F)));return t+(x.cands||[]).filter(c=>/^R/.test(c.id)).length;}catch(e){return t;}},0);
+  T(!diff.length&&nR>=2,'G8 Panel Build with every comment stripped: '+same+' of '+n+' debates give the same candidates and not-sent list; R pairs found '+nR+(diff.length?'; differ '+diff.join(','):''));}
+ // G9 Anticheat Build on rounds that are not strings
+ {const r='33222';const F={...getF(r),cr4:{x:1},dr4:[1,2]};let out,err=null;try{out=run(CAND,r,'Anticheat Build',BO(r,F));}catch(e){err=e.message;}
+  const j=out&&out.map(x=>x.json);T(!err&&j&&j.length===1&&j[0].acx_skip===true&&String(j[0].why||'').length>0,'G9 Anticheat Build on odd rounds: '+(err?'THROWS '+err:JSON.stringify(j&&j.map(x=>({skip:x.acx_skip,why:String(x.why||'').slice(0,80)})))));
+  let out2,err2=null;try{out2=run(CAND,r,'Anticheat Record',{...BO(r,F),'Anticheat Build':out,'Debate Start':[J({})]},'Anticheat Build');}catch(e){err2=e.message;}T(!err2&&out2&&out2.length===1,'G9b Anticheat Record after it: '+(err2?'THROWS '+err2:JSON.stringify(out2[0].json).slice(0,160)));}
+
+ // G9c a real throw inside each anti-cheat node (Init Seats not executed): wrapped, one skip item with the reason
+ {const r='33222';const F=getF(r);let o1,e1=null,o2,e2=null;try{o1=run(CAND,r,'Anticheat Build',{...BO(r,F),'Init Seats':null});}catch(e){e1=e.message;}
+  T(!e1&&o1&&o1.length===1&&o1[0].json.acx_skip===true,'G9c Anticheat Build with Init Seats unexecuted: '+(e1?'THROWS '+e1:JSON.stringify(o1.map(x=>({skip:x.json.acx_skip,why:String(x.json.why||'').slice(0,90)})))));
+  try{o2=run(CAND,r,'Anticheat Record',{...BO(r,F),'Anticheat Build':null,'Debate Start':null},'Anticheat Build');}catch(e){e2=e.message;}
+  T(!e2&&o2&&o2.length===1,'G9d Anticheat Record with Anticheat Build unexecuted: '+(e2?'THROWS '+e2:JSON.stringify(o2[0].json).slice(0,200)));}
+ // G10 neutral reasons
+ {let bad=[],n=0;for(const r of runs){const F=getF(r);if(!F)continue;let b;try{b=mrg(run(CAND,r,'Close Enforcer Build',BO(r,F)));}catch(e){continue;}if(b.cec_skip)continue;for(const c of b.cands.filter(c=>/^[AR]/.test(c.id))){n++;if(/revers|asserts more/i.test(c.why||''))bad.push(r+' '+c.id+': '+c.why);}}
+  T(!bad.length,'G10 '+n+' code-found candidates; reasons naming a conclusion: '+(bad.join(' | ')||'none'));}
  console.log(out.filter(x=>x.startsWith('OK')).length+' OK, '+out.filter(x=>x.startsWith('FAIL')).length+' FAIL');
 })().catch(e=>console.log('ERROR '+e.stack));
