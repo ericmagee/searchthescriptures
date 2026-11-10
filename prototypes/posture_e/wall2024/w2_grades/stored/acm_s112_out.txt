@@ -1,0 +1,4 @@
+code sizes: s108 4157 s112 4160
+33389 | no_answer s108 ["X34","X36","X73"] s112 ["X73"] | X34 NO ANSWER -> CONSISTENT; X36 NO ANSWER -> CONSISTENT
+33617 | no_answer s108 ["X75"] s112 [] | X75 NO ANSWER -> CONSISTENT
+runs replayed 37 errors 0

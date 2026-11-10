@@ -1,0 +1,428 @@
+runs replayed 64 | KEEP answers 170 | read the same 28 | read differently 142
+  33218 Send Back Record chatgpt E-PREM premise listed against the defender 4
+      stored: null | SEND-BACK KEEP -- The [CR3] answer says, "These are tests of the pries
+      s112:   CURED | SEND-BACK KEEP -- The [CR3] answer says, "These are tests of the pries
+  33218 Send Back Record chatgpt E-PREM premise listed against the defender 5
+      stored: null | SEND-BACK KEEP -- After conceding "The Davidic descent is carried by t
+      s112:   CURED | SEND-BACK KEEP -- After conceding "The Davidic descent is carried by t
+  33222 Send Back Record sol E-ANS ANSWER CHECK Numbers 1:18 [CR3]
+      stored: null | SEND-BACK KEEP -- [CR3] joins "It is granted, with Numbers 1:2 above" 
+      s112:   CURED | SEND-BACK KEEP -- [CR3] joins "It is granted, with Numbers 1:2 above" 
+  33222 Send Back Record sol E-ANS ANSWER CHECK Job 14:1 [CR3]
+      stored: null | SEND-BACK KEEP -- [CR3] combines "I grant it is the mortality phrase, 
+      s112:   CURED | SEND-BACK KEEP -- [CR3] combines "I grant it is the mortality phrase, 
+  33222 Send Back Record sol E-ANS ANSWER CHECK Matthew 11:11 [CR3]
+      stored: null | SEND-BACK KEEP -- [CR3] says "I grant it of John, who has a father (Lu
+      s112:   CURED | SEND-BACK KEEP -- [CR3] says "I grant it of John, who has a father (Lu
+  33222 Send Back Record sol E-PREM premise listed against the defender 3
+      stored: null | SEND-BACK KEEP -- [CR3] explicitly contains "LINK 2: SUPPORTED" follow
+      s112:   CURED | SEND-BACK KEEP -- [CR3] explicitly contains "LINK 2: SUPPORTED" follow
+  33222 Send Back Record sol E-PREM premise listed against the defender 4
+      stored: null | SEND-BACK KEEP -- [CR3] explicitly contains "LINK 3: SUPPORTED" follow
+      s112:   CURED | SEND-BACK KEEP -- [CR3] explicitly contains "LINK 3: SUPPORTED" follow
+  33222 Send Back Record sol E-PREM premise listed against the defender 5
+      stored: null | SEND-BACK KEEP -- [CR3] explicitly contains "LINK 4: SUPPORTED" follow
+      s112:   CURED | SEND-BACK KEEP -- [CR3] explicitly contains "LINK 4: SUPPORTED" follow
+  33222 Send Back Record sol E-PREM premise listed against the defender 6
+      stored: null | SEND-BACK KEEP -- [CR3] explicitly contains "LINK 5: SUPPORTED" follow
+      s112:   CURED | SEND-BACK KEEP -- [CR3] explicitly contains "LINK 5: SUPPORTED" follow
+  33222 Send Back Record chatgpt E-PREM premise listed against the defender 3
+      stored: null | SEND-BACK KEEP -- [CR3] explicitly introduces "Answers to the witnesse
+      s112:   CURED | SEND-BACK KEEP -- [CR3] explicitly introduces "Answers to the witnesse
+  33222 Send Back Record chatgpt E-PREM premise listed against the defender 4
+      stored: null | SEND-BACK KEEP -- [CR3] explicitly introduces "Answers to the witnesse
+      s112:   CURED | SEND-BACK KEEP -- [CR3] explicitly introduces "Answers to the witnesse
+  33222 Send Back Record chatgpt E-PREM premise listed against the defender 5
+      stored: null | SEND-BACK KEEP -- [CR3] explicitly introduces "Answers to the witnesse
+      s112:   CURED | SEND-BACK KEEP -- [CR3] explicitly introduces "Answers to the witnesse
+  33222 Send Back Record chatgpt E-PREM premise listed against the defender 6
+      stored: null | SEND-BACK KEEP -- [CR3] explicitly introduces "Answers to the witnesse
+      s112:   CURED | SEND-BACK KEEP -- [CR3] explicitly introduces "Answers to the witnesse
+  33249 Send Back Record sol E-PREM premise listed against the defender 1
+      stored: null | SEND-BACK KEEP -- Premise 1 is answered under "LINK 5: SUPPORTED", not
+      s112:   CURED | SEND-BACK KEEP -- Premise 1 is answered under "LINK 5: SUPPORTED", not
+  33249 Send Back Record sol E-PREM premise listed against the defender 2
+      stored: null | SEND-BACK KEEP -- The defender explicitly infers the route in "If the 
+      s112:   CURED | SEND-BACK KEEP -- The defender explicitly infers the route in "If the 
+  33249 Send Back Record sol E-PREM premise listed against the defender 6
+      stored: null | SEND-BACK KEEP -- The answer to challenger-listed premise 6 is the exp
+      s112:   CURED | SEND-BACK KEEP -- The answer to challenger-listed premise 6 is the exp
+  33249 Send Back Record gemini E-PREM premise listed against the defender 1
+      stored: null | SEND-BACK KEEP -- In [CR3], the defender exhibits multi-layered footin
+      s112:   CURED | SEND-BACK KEEP -- In [CR3], the defender exhibits multi-layered footin
+  33249 Send Back Record gemini E-PREM premise listed against the defender 2
+      stored: null | SEND-BACK KEEP -- In [CR3], the defender provides two prior layers for
+      s112:   CURED | SEND-BACK KEEP -- In [CR3], the defender provides two prior layers for
+  33249 Send Back Record gemini E-PREM premise listed against the defender 6
+      stored: null | SEND-BACK KEEP -- In [CR3], the defender explicitly answered this prem
+      s112:   UNCURED | SEND-BACK KEEP -- In [CR3], the defender explicitly answered this prem
+  33249 Send Back Record gemini E-PREM premise listed against the challenger 1
+      stored: null | SEND-BACK KEEP -- In [DR3], the challenger exhibited two prior layers 
+      s112:   CURED | SEND-BACK KEEP -- In [DR3], the challenger exhibited two prior layers 
+  33249 Send Back Record gemini E-PREM premise listed against the challenger 2
+      stored: null | SEND-BACK KEEP -- In [DR3], the challenger maintains footing for Link 
+      s112:   CURED | SEND-BACK KEEP -- In [DR3], the challenger maintains footing for Link 
+  33249 Send Back Record gemini E-PREM premise listed against the challenger 4
+      stored: null | SEND-BACK KEEP -- In [DR3], the challenger exhibited footing for Link 
+      s112:   CURED | SEND-BACK KEEP -- In [DR3], the challenger exhibited footing for Link 
+  33249 Send Back Record gemini E-PREM premise listed against the challenger 5
+      stored: null | SEND-BACK KEEP -- In [DR3], the challenger answered the press on David
+      s112:   CURED | SEND-BACK KEEP -- In [DR3], the challenger answered the press on David
+  33249 Send Back Record chatgpt E-PREM premise listed against the defender 1
+      stored: null | SEND-BACK KEEP -- The defender says “‘Fruit of loins’ names descent fr
+      s112:   CURED | SEND-BACK KEEP -- The defender says “‘Fruit of loins’ names descent fr
+  33249 Send Back Record chatgpt E-PREM premise listed against the defender 2
+      stored: null | SEND-BACK KEEP -- The defender expressly infers, “If the flesh is ‘of 
+      s112:   CURED | SEND-BACK KEEP -- The defender expressly infers, “If the flesh is ‘of 
+  33249 Send Back Record chatgpt E-PREM premise listed against the defender 6
+      stored: null | SEND-BACK KEEP -- The defender's link round contains “LINK 1: SUPPORTE
+      s112:   CURED | SEND-BACK KEEP -- The defender's link round contains “LINK 1: SUPPORTE
+  33261 Send Back Record chatgpt E-ANS ANSWER CHECK Matthew 1:18 [DR3]
+      stored: null | SEND-BACK KEEP -- The challenger bases the identification on the share
+      s112:   UNCURED | SEND-BACK KEEP -- The challenger bases the identification on the share
+  33261 Send Back Record sol E-PREM premise listed against the challenger 1
+      stored: null | SEND-BACK KEEP -- DR3 answers the timing meaning with "Matthew's comin
+      s112:   CURED | SEND-BACK KEEP -- DR3 answers the timing meaning with "Matthew's comin
+  33261 Send Back Record sol E-PREM premise listed against the challenger 5
+      stored: null | SEND-BACK KEEP -- DR3 positively addresses the causal meaning with "Th
+      s112:   CURED | SEND-BACK KEEP -- DR3 positively addresses the causal meaning with "Th
+  33299 Send Back Record gemini E-PREM premise listed against the defender 5
+      stored: null | SEND-BACK KEEP -- The defender in [CR3] exhibited [L1] Luke 3:23, [L2]
+      s112:   UNCURED | SEND-BACK KEEP -- The defender in [CR3] exhibited [L1] Luke 3:23, [L2]
+  33299 Send Back Record gemini E-PREM premise listed against the challenger 5
+      stored: null | SEND-BACK KEEP -- Premise 5 against the challenger charges that Mary's
+      s112:   CURED | SEND-BACK KEEP -- Premise 5 against the challenger charges that Mary's
+  33299 Send Back Record chatgpt E-ANS ANSWER CHECK Luke 2:4 [CR3]
+      stored: null | SEND-BACK KEEP -- [CR2] supplies the fit: "The child is brought into D
+      s112:   CURED | SEND-BACK KEEP -- [CR2] supplies the fit: "The child is brought into D
+  33299 Send Back Record chatgpt E-ANS ANSWER CHECK Job 14:1 [CR3]
+      stored: null | SEND-BACK KEEP -- [CR2] grants that "the words 'of a woman' are said o
+      s112:   CURED | SEND-BACK KEEP -- [CR2] grants that "the words 'of a woman' are said o
+  33299 Send Back Record chatgpt E-ANS ANSWER CHECK Romans 1:4 [CR3]
+      stored: null | SEND-BACK KEEP -- [CR3] states that "Paul's 'declared' is set 'by the 
+      s112:   CURED | SEND-BACK KEEP -- [CR3] states that "Paul's 'declared' is set 'by the 
+  33299 Send Back Record chatgpt E-ANS ANSWER CHECK Genesis 4:25 [CR3]
+      stored: null | SEND-BACK KEEP -- [CR3] accepts that "the husband's knowing is stated"
+      s112:   CURED | SEND-BACK KEEP -- [CR3] accepts that "the husband's knowing is stated"
+  33299 Send Back Record chatgpt E-ANS ANSWER CHECK Genesis 16:10 [CR3]
+      stored: null | SEND-BACK KEEP -- [CR2] grants that the cited examples concern "women 
+      s112:   CURED | SEND-BACK KEEP -- [CR2] grants that the cited examples concern "women 
+  33299 Send Back Record chatgpt E-ANS ANSWER CHECK Genesis 24:60 [CR3]
+      stored: null | SEND-BACK KEEP -- [CR2] grants that the cited examples concern "women 
+      s112:   CURED | SEND-BACK KEEP -- [CR2] grants that the cited examples concern "women 
+  33299 Send Back Record chatgpt E-ANS ANSWER CHECK Deuteronomy 22:24 [CR3]
+      stored: null | SEND-BACK KEEP -- [CR3] says, "I grant that the law calls the betrothe
+      s112:   UNCURED | SEND-BACK KEEP -- [CR3] says, "I grant that the law calls the betrothe
+  33299 Send Back Record chatgpt E-ANS ANSWER CHECK Matthew 11:11 [CR3]
+      stored: null | SEND-BACK KEEP -- [CR3] says, "I grant that this is said of men with f
+      s112:   UNCURED | SEND-BACK KEEP -- [CR3] says, "I grant that this is said of men with f
+  33299 Send Back Record chatgpt E-ANS ANSWER CHECK Luke 2:33 [CR4]
+      stored: null | SEND-BACK KEEP -- [CR4] identifies "the same pair under their househol
+      s112:   CURED | SEND-BACK KEEP -- [CR4] identifies "the same pair under their househol
+  33299 Send Back Record chatgpt E-ANS ANSWER CHECK Acts 2:30 [CR4]
+      stored: null | SEND-BACK KEEP -- [CR4] says, "The flesh-descent from David therefore 
+      s112:   CURED | SEND-BACK KEEP -- [CR4] says, "The flesh-descent from David therefore 
+  33299 Send Back Record chatgpt E-ANS ANSWER CHECK Luke 1:34 [DR3]
+      stored: null | SEND-BACK KEEP -- [DR3] addresses the comparison: "The angel answers b
+      s112:   CURED | SEND-BACK KEEP -- [DR3] addresses the comparison: "The angel answers b
+  33299 Send Back Record chatgpt E-ANS ANSWER CHECK 2 Samuel 7:12 [DR3]
+      stored: null | SEND-BACK KEEP -- [DR3] accepts that "The seed proceeds out of David's
+      s112:   CURED | SEND-BACK KEEP -- [DR3] accepts that "The seed proceeds out of David's
+  33299 Send Back Record chatgpt E-PREM premise listed against the defender 6
+      stored: null | SEND-BACK KEEP -- Premise 6 carries Luke 1:27 under PRESSED WITH, with
+      s112:   UNCURED | SEND-BACK KEEP -- Premise 6 carries Luke 1:27 under PRESSED WITH, with
+  33299 Send Back Record sol E-PREM premise listed against the defender 5
+      stored: null | SEND-BACK KEEP -- CR3 replaces the earlier explanation about limited k
+      s112:   CURED | SEND-BACK KEEP -- CR3 replaces the earlier explanation about limited k
+  33371 Send Back Record gemini E-PREM premise listed against the challenger 1
+      stored: null | SEND-BACK KEEP -- In [DR3] LINK 1 the challenger asserted "Joseph knew
+      s112:   CURED | SEND-BACK KEEP -- In [DR3] LINK 1 the challenger asserted "Joseph knew
+  33371 Send Back Record gemini E-PREM premise listed against the challenger 5
+      stored: null | SEND-BACK KEEP -- In [CR3] the listed premise charged that "the cause 
+      s112:   CURED | SEND-BACK KEEP -- In [CR3] the listed premise charged that "the cause 
+  33371 Send Back Record chatgpt E-ANS ANSWER CHECK Matthew 1:24 [CR3]
+      stored: null | SEND-BACK KEEP -- Beyond the grant, the defender argues, 'The child is
+      s112:   CURED | SEND-BACK KEEP -- Beyond the grant, the defender argues, 'The child is
+  33371 Send Back Record chatgpt E-ANS ANSWER CHECK Deuteronomy 22:24 [CR3]
+      stored: null | SEND-BACK KEEP -- The defender states, 'The press on Matthew 1:24, Deu
+      s112:   CURED | SEND-BACK KEEP -- The defender states, 'The press on Matthew 1:24, Deu
+  33371 Send Back Record chatgpt E-ANS ANSWER CHECK Genesis 4:1 [CR3]
+      stored: null | SEND-BACK KEEP -- The defender explains, 'In Matthew the order is reve
+      s112:   CURED | SEND-BACK KEEP -- The defender explains, 'In Matthew the order is reve
+  33371 Send Back Record chatgpt E-ANS ANSWER CHECK Matthew 1:25 [CR3]
+      stored: null | SEND-BACK KEEP -- The defender argues, 'The child is already "conceive
+      s112:   CURED | SEND-BACK KEEP -- The defender argues, 'The child is already "conceive
+  33371 Send Back Record chatgpt E-ANS ANSWER CHECK Matthew 1:19 [CR3]
+      stored: null | SEND-BACK KEEP -- The defender gives a competing account: 'A "publick 
+      s112:   CURED | SEND-BACK KEEP -- The defender gives a competing account: 'A "publick 
+  33371 Send Back Record chatgpt E-ANS ANSWER CHECK Matthew 1:25 [DR3]
+      stored: null | SEND-BACK KEEP -- The challenger adds, 'My link puts the knowing earli
+      s112:   CURED | SEND-BACK KEEP -- The challenger adds, 'My link puts the knowing earli
+  33371 Send Back Record chatgpt E-ANS ANSWER CHECK Matthew 1:16 [DR3]
+      stored: null | SEND-BACK KEEP -- The challenger explains, 'The line of begetting arri
+      s112:   CURED | SEND-BACK KEEP -- The challenger explains, 'The line of begetting arri
+  33371 Send Back Record chatgpt E-ANS ANSWER CHECK Galatians 4:4 [DR3]
+      stored: null | SEND-BACK KEEP -- The challenger adds, 'The phrase "born of women" is 
+      s112:   CURED | SEND-BACK KEEP -- The challenger adds, 'The phrase "born of women" is 
+  33371 Send Back Record chatgpt E-ANS ANSWER CHECK 1 Chronicles 28:6 [DR3]
+      stored: null | SEND-BACK KEEP -- The challenger explains, 'In both oracles, the one b
+      s112:   CURED | SEND-BACK KEEP -- The challenger explains, 'In both oracles, the one b
+  33371 Send Back Record chatgpt E-ANS ANSWER CHECK Luke 3:23 [DR3]
+      stored: null | SEND-BACK KEEP -- The challenger adds, 'The lawful, customary reckonin
+      s112:   CURED | SEND-BACK KEEP -- The challenger adds, 'The lawful, customary reckonin
+  33371 Send Back Record chatgpt E-ANS ANSWER CHECK Deuteronomy 22:24 [DR3]
+      stored: null | SEND-BACK KEEP -- The challenger explains, 'A just husband who refuses
+      s112:   CURED | SEND-BACK KEEP -- The challenger explains, 'A just husband who refuses
+  33371 Send Back Record chatgpt E-ANS ANSWER CHECK Matthew 1:20 [DR3]
+      stored: null | SEND-BACK KEEP -- The challenger adds, 'The source it gives is the cov
+      s112:   CURED | SEND-BACK KEEP -- The challenger adds, 'The source it gives is the cov
+  33371 Send Back Record chatgpt E-ANS ANSWER CHECK Luke 1:35 [DR3]
+      stored: null | SEND-BACK KEEP -- The challenger explains, 'Their verbs carry power an
+      s112:   CURED | SEND-BACK KEEP -- The challenger explains, 'Their verbs carry power an
+  33371 Send Back Record chatgpt E-PREM premise listed against the defender 5
+      stored: null | SEND-BACK KEEP -- The press says, 'Immanuel is addressed in Isaiah's o
+      s112:   CURED | SEND-BACK KEEP -- The press says, 'Immanuel is addressed in Isaiah's o
+  33371 Send Back Record chatgpt E-PREM premise listed against the challenger 1
+      stored: null | SEND-BACK KEEP -- The challenger maintains, 'My link puts the knowing 
+      s112:   CURED | SEND-BACK KEEP -- The challenger maintains, 'My link puts the knowing 
+  33371 Send Back Record sol E-PREM premise listed against the challenger 1
+      stored: null | SEND-BACK KEEP -- The alleged challenger surrender is contradicted by 
+      s112:   CURED | SEND-BACK KEEP -- The alleged challenger surrender is contradicted by 
+  33389 Send Back Record sol E-OOR OUT-OF-ROUND CONCESSION
+      stored: null | SEND-BACK KEEP -- The sentence appears verbatim at the end of CR4's an
+      s112:   null | SEND-BACK KEEP -- The sentence appears verbatim in CR4's opening statu
+  33411 Send Back Record sol E-OOR OUT-OF-ROUND CONCESSION
+      stored: null | SEND-BACK KEEP -- [CR4] under ANSWER: Romans 1:3 contains verbatim "D6
+      s112:   null | SEND-BACK KEEP -- [CR4] under D3 contains verbatim "I do not rest the 
+  33411 Send Back Record sol E-OOR OUT-OF-ROUND CONCESSION
+      stored: null | SEND-BACK KEEP -- [CR4] under ANSWER: Luke 2:51 contains verbatim "The
+      s112:   null | SEND-BACK KEEP -- [CR4] under D3 contains verbatim "I do not rest the 
+  33411 Send Back Record sol E-OOR OUT-OF-ROUND CONCESSION
+      stored: null | SEND-BACK KEEP -- [DR4] under its title discussion contains verbatim "
+      s112:   null | SEND-BACK KEEP -- [CR4] under D3 contains verbatim "I do not rest the 
+  33430 Send Back Record sol E-ANS ANSWER CHECK Luke 3:27 [DR3]
+      stored: null | SEND-BACK KEEP -- Read as a complete answer rather than its isolated c
+      s112:   CURED | SEND-BACK KEEP -- Read as a complete answer rather than its isolated c
+  33482 Send Back Record chatgpt E-ANS ANSWER CHECK Luke 2:41 [CR3]
+      stored: null | SEND-BACK KEEP -- [CR2] shows the proposed fit: "In Luke 2:41 \"his pa
+      s112:   CURED | SEND-BACK KEEP -- [CR2] shows the proposed fit: "In Luke 2:41 \"his pa
+  33482 Send Back Record chatgpt E-ANS ANSWER CHECK Luke 1:27 [CR3]
+      stored: null | SEND-BACK KEEP -- [CR3] grants Joseph's house and answers the related 
+      s112:   UNCURED | SEND-BACK KEEP -- [CR3] grants Joseph's house and answers the related 
+  33482 Send Back Record chatgpt E-ANS ANSWER CHECK Matthew 1:20 [CR3]
+      stored: null | SEND-BACK KEEP -- The same [CR3] answer gives its proposed fit: "The g
+      s112:   CURED | SEND-BACK KEEP -- The same [CR3] answer gives its proposed fit: "The g
+  33482 Send Back Record chatgpt E-ANS ANSWER CHECK Matthew 1:18 [CR3]
+      stored: null | SEND-BACK KEEP -- The same [CR3] answer continues: "Then the finding \
+      s112:   CURED | SEND-BACK KEEP -- The same [CR3] answer continues: "Then the finding \
+  33482 Send Back Record chatgpt E-ANS ANSWER CHECK Genesis 3:15 [CR3]
+      stored: null | SEND-BACK KEEP -- The [CR3] answer distinguishes the child: "Matthew 1
+      s112:   CURED | SEND-BACK KEEP -- The [CR3] answer distinguishes the child: "Matthew 1
+  33482 Send Back Record chatgpt E-ANS ANSWER CHECK Isaiah 8:3 [CR3]
+      stored: null | SEND-BACK KEEP -- The [CR3] answer continues: "Matthew 1:18 and 1:25 s
+      s112:   CURED | SEND-BACK KEEP -- The [CR3] answer continues: "Matthew 1:18 and 1:25 s
+  33482 Send Back Record chatgpt E-ANS ANSWER CHECK Matthew 1:16 [CR3]
+      stored: null | SEND-BACK KEEP -- [CR2] explains the comparison: "The two rows differ 
+      s112:   CURED | SEND-BACK KEEP -- [CR2] explains the comparison: "The two rows differ 
+  33482 Send Back Record chatgpt E-ANS ANSWER CHECK Luke 2:7 [CR3]
+      stored: null | SEND-BACK KEEP -- [CR2] distinguishes the comparison: "Luke 1:13 reads
+      s112:   CURED | SEND-BACK KEEP -- [CR2] distinguishes the comparison: "Luke 1:13 reads
+  33482 Send Back Record chatgpt E-ANS ANSWER CHECK Luke 2:33 [CR3]
+      stored: null | SEND-BACK KEEP -- [CR2] explains the household reading: "In Luke 2:41 
+      s112:   CURED | SEND-BACK KEEP -- [CR2] explains the household reading: "In Luke 2:41 
+  33482 Send Back Record chatgpt E-ANS ANSWER CHECK Luke 2:48 [CR3]
+      stored: null | SEND-BACK KEEP -- The full [CR3] answer states its fit: "The one he na
+      s112:   CURED | SEND-BACK KEEP -- The full [CR3] answer states its fit: "The one he na
+  33482 Send Back Record chatgpt E-ANS ANSWER CHECK Galatians 4:4 [CR3]
+      stored: null | SEND-BACK KEEP -- The [CR3] answer continues: "I do not use the phrase
+      s112:   CURED | SEND-BACK KEEP -- The [CR3] answer continues: "I do not use the phrase
+  33482 Send Back Record chatgpt E-ANS ANSWER CHECK Matthew 11:11 [CR3]
+      stored: null | SEND-BACK KEEP -- The [CR3] answer continues: "It names the woman, and
+      s112:   CURED | SEND-BACK KEEP -- The [CR3] answer continues: "It names the woman, and
+  33482 Send Back Record chatgpt E-ANS ANSWER CHECK Acts 2:30 [CR3]
+      stored: null | SEND-BACK KEEP -- The [CR3] answer continues: "Hebrews 7:9-10 puts Lev
+      s112:   CURED | SEND-BACK KEEP -- The [CR3] answer continues: "Hebrews 7:9-10 puts Lev
+  33482 Send Back Record chatgpt E-ANS ANSWER CHECK Ezra 2:59 [CR3]
+      stored: null | SEND-BACK KEEP -- [CR3] narrows the position before explaining Ezra: "
+      s112:   CURED | SEND-BACK KEEP -- [CR3] narrows the position before explaining Ezra: "
+  33482 Send Back Record chatgpt E-ANS ANSWER CHECK Luke 1:73 [DR3]
+      stored: null | SEND-BACK KEEP -- [DR3] supplies the proposed fit: "David is an ancest
+      s112:   CURED | SEND-BACK KEEP -- [DR3] supplies the proposed fit: "David is an ancest
+  33482 Send Back Record chatgpt E-ANS ANSWER CHECK Matthew 1:22 [DR3]
+      stored: null | SEND-BACK KEEP -- [DR3] applies the grant: "So \"all this\" holds the 
+      s112:   CURED | SEND-BACK KEEP -- [DR3] applies the grant: "So \"all this\" holds the 
+  33482 Send Back Record chatgpt E-PREM premise listed against the challenger 5
+      stored: null | SEND-BACK KEEP -- The charged universal exceeds the earlier quotation:
+      s112:   CURED | SEND-BACK KEEP -- The charged universal exceeds the earlier quotation:
+  33490 Send Back Record chatgpt E-ANS ANSWER CHECK Matthew 1:19 [CR3]
+      stored: null | SEND-BACK KEEP -- [CR3] says, 'The stated reason for his purpose is "n
+      s112:   CURED | SEND-BACK KEEP -- [CR3] says, 'The stated reason for his purpose is "n
+  33490 Send Back Record sol E-OOR OUT-OF-ROUND CONCESSION
+      stored: null | SEND-BACK KEEP -- [CR2] expressly says, "Link D5 is cumulative and car
+      s112:   null | SEND-BACK KEEP -- [DR1] expressly says, "I accept the defender's defin
+  33490 Send Back Record sol E-OOR OUT-OF-ROUND CONCESSION
+      stored: null | SEND-BACK KEEP -- [CR2] expressly says, "I accept both senses of the w
+      s112:   null | SEND-BACK KEEP -- [DR1] expressly says, "I accept the defender's defin
+  33490 Send Back Record sol E-OOR OUT-OF-ROUND CONCESSION
+      stored: null | SEND-BACK KEEP -- [CR2] expressly says, "The mother names the child in
+      s112:   null | SEND-BACK KEEP -- [DR1] expressly says, "I accept the defender's defin
+  33490 Send Back Record sol E-OOR OUT-OF-ROUND CONCESSION
+      stored: null | SEND-BACK KEEP -- [CR2] expressly says, "It is a spiritual regeneratio
+      s112:   null | SEND-BACK KEEP -- [DR1] expressly says, "I accept the defender's defin
+  33490 Send Back Record sol E-OOR OUT-OF-ROUND CONCESSION
+      stored: null | SEND-BACK KEEP -- [CR2] expressly says, "The likeness is in flesh and 
+      s112:   null | SEND-BACK KEEP -- [DR1] expressly says, "I accept the defender's defin
+  33490 Send Back Record sol E-OOR OUT-OF-ROUND CONCESSION
+      stored: null | SEND-BACK KEEP -- [CR4] expressly contains "D4: NARROWED TO: \\"Father
+      s112:   null | SEND-BACK KEEP -- [DR1] expressly says, "I accept the defender's defin
+  33490 Send Back Record sol E-OOR OUT-OF-ROUND CONCESSION
+      stored: null | SEND-BACK KEEP -- [CR4] expressly contains "D5: NARROWED TO: God prepa
+      s112:   null | SEND-BACK KEEP -- [DR1] expressly says, "I accept the defender's defin
+  33490 Send Back Record sol E-OOR OUT-OF-ROUND CONCESSION
+      stored: null | SEND-BACK KEEP -- [CR4] expressly says, "\\"Born of woman\\" alone pro
+      s112:   null | SEND-BACK KEEP -- [DR1] expressly says, "I accept the defender's defin
+  33490 Send Back Record sol E-OOR OUT-OF-ROUND CONCESSION
+      stored: null | SEND-BACK KEEP -- [CR4] expressly says, "In Luke 1:62 the father names
+      s112:   null | SEND-BACK KEEP -- [DR1] expressly says, "I accept the defender's defin
+  33490 Send Back Record sol E-OOR OUT-OF-ROUND CONCESSION
+      stored: null | SEND-BACK KEEP -- [CR4] expressly says, "Matthew 1:21 and 1:25 have Jo
+      s112:   null | SEND-BACK KEEP -- [DR1] expressly says, "I accept the defender's defin
+  33490 Send Back Record sol E-OOR OUT-OF-ROUND CONCESSION
+      stored: null | SEND-BACK KEEP -- [CR4] expressly says, "Acts 2:30 and 2 Samuel 7:12 s
+      s112:   null | SEND-BACK KEEP -- [DR1] expressly says, "I accept the defender's defin
+  33490 Send Back Record sol E-OOR OUT-OF-ROUND CONCESSION
+      stored: null | SEND-BACK KEEP -- [DR4] expressly contains "C1: NARROWED TO (kept): Jo
+      s112:   null | SEND-BACK KEEP -- [DR1] expressly says, "I accept the defender's defin
+  33490 Send Back Record sol E-OOR OUT-OF-ROUND CONCESSION
+      stored: null | SEND-BACK KEEP -- [DR4] expressly contains "C4: NARROWED TO (kept): Is
+      s112:   null | SEND-BACK KEEP -- [DR1] expressly says, "I accept the defender's defin
+  33575 Send Back Record grok E-ANS ANSWER CHECK Matthew 1:16 [DR3]
+      stored: null | SEND-BACK KEEP -- [DR3] continues "So the second tie at Joseph's link 
+      s112:   CURED | SEND-BACK KEEP -- [DR3] continues "So the second tie at Joseph's link 
+  33592 Send Back Record chatgpt E-ANS ANSWER CHECK Acts 1:8 [CR3]
+      stored: null | SEND-BACK KEEP -- [CR3] distinguishes the contexts: “In Acts 1:8 its s
+      s112:   CURED | SEND-BACK KEEP -- [CR3] distinguishes the contexts: “In Acts 1:8 its s
+  33592 Send Back Record chatgpt E-ANS ANSWER CHECK Luke 9:34 [CR3]
+      stored: null | SEND-BACK KEEP -- [CR3] addresses the comparison: “Each verse states i
+      s112:   CURED | SEND-BACK KEEP -- [CR3] addresses the comparison: “Each verse states i
+  33592 Send Back Record chatgpt E-ANS ANSWER CHECK Genesis 4:25 [CR3]
+      stored: null | SEND-BACK KEEP -- [CR2] accepts the pressed comparison and narrows the
+      s112:   CURED | SEND-BACK KEEP -- [CR2] accepts the pressed comparison and narrows the
+  33592 Send Back Record chatgpt E-ANS ANSWER CHECK Hebrews 7:10 [CR4]
+      stored: null | SEND-BACK KEEP -- [CR4] offers its fit: “Descent ‘out of the loins’ of
+      s112:   CURED | SEND-BACK KEEP -- [CR4] offers its fit: “Descent ‘out of the loins’ of
+  33592 Send Back Record chatgpt E-ANS ANSWER CHECK Matthew 1:25 [DR3]
+      stored: null | SEND-BACK KEEP -- [DR3] places the granted span in its reading: “The t
+      s112:   CURED | SEND-BACK KEEP -- [DR3] places the granted span in its reading: “The t
+  33605 Send Back Record chatgpt E-ANS ANSWER CHECK Matthew 1:16 [DR3]
+      stored: null | SEND-BACK KEEP -- [DR3] adds that “the husband is called ‘thy father’ 
+      s112:   CURED | SEND-BACK KEEP -- [DR3] adds that “the husband is called ‘thy father’ 
+  33605 Send Back Record grok E-ANS ANSWER CHECK Acts 16:13 [CR3]
+      stored: null | SEND-BACK KEEP -- The [CR3] answer to Acts 16:13 is "I grant that this
+      s112:   CURED | SEND-BACK KEEP -- The [CR3] answer to Acts 16:13 is "I grant that this
+  33605 Send Back Record grok E-ANS ANSWER CHECK Isaiah 8:3 [DR3]
+      stored: null | SEND-BACK KEEP -- The [DR3] answer goes on, "The LORD gives the naming
+      s112:   CURED | SEND-BACK KEEP -- The [DR3] answer goes on, "The LORD gives the naming
+  33617 Send Back Record chatgpt E-ANS ANSWER CHECK Matthew 11:11 [CR3]
+      stored: null | SEND-BACK KEEP -- [CR3] grants “I grant that ‘born of women’ is said o
+      s112:   CURED | SEND-BACK KEEP -- [CR3] grants “I grant that ‘born of women’ is said o
+  33617 Send Back Record chatgpt E-ANS ANSWER CHECK Luke 1:13 [CR3]
+      stored: null | SEND-BACK KEEP -- [CR3] addresses the naming by saying “Luke 1:31 puts
+      s112:   CURED | SEND-BACK KEEP -- [CR3] addresses the naming by saying “Luke 1:31 puts
+  33617 Send Back Record chatgpt E-ANS ANSWER CHECK Luke 9:34 [CR3]
+      stored: null | SEND-BACK KEEP -- [CR3] explains the fit: “The word covers a presence,
+      s112:   CURED | SEND-BACK KEEP -- [CR3] explains the fit: “The word covers a presence,
+  33617 Send Back Record chatgpt E-ANS ANSWER CHECK Isaiah 8:3 [CR3]
+      stored: null | SEND-BACK KEEP -- [CR3] distinguishes the passages: “In 8:3 the sign a
+      s112:   CURED | SEND-BACK KEEP -- [CR3] distinguishes the passages: “In 8:3 the sign a
+  33617 Send Back Record chatgpt E-ANS ANSWER CHECK Psalm 68:25 [CR3]
+      stored: null | SEND-BACK KEEP -- [CR3] grants the rendering and contrasts it with the
+      s112:   CURED | SEND-BACK KEEP -- [CR3] grants the rendering and contrasts it with the
+  33617 Send Back Record chatgpt E-ANS ANSWER CHECK Isaiah 7:14 [DR3]
+      stored: null | SEND-BACK KEEP -- [DR3] offers a timing fit: “‘Virgin’ names her when 
+      s112:   CURED | SEND-BACK KEEP -- [DR3] offers a timing fit: “‘Virgin’ names her when 
+  33617 Send Back Record chatgpt E-PREM premise listed against the defender 2
+      stored: null | SEND-BACK KEEP -- [DR2] presses “the mother calls the child her seed i
+      s112:   UNCURED | SEND-BACK KEEP -- [DR2] presses “the mother calls the child her seed i
+  33617 Send Back Record chatgpt E-PREM premise listed against the defender 4
+      stored: null | SEND-BACK KEEP -- [DR2] presses “Immanuel is addressed within the Assy
+      s112:   UNCURED | SEND-BACK KEEP -- [DR2] presses “Immanuel is addressed within the Assy
+  33627 Send Back Record grok E-ANS ANSWER CHECK Ezra 2:62 [CR3]
+      stored: null | SEND-BACK KEEP -- The same answer says "The verse is about those who "
+      s112:   CURED | SEND-BACK KEEP -- The same answer says "The verse is about those who "
+  33644 Send Back Record gemini E-PREM premise listed against the defender 6
+      stored: null | SEND-BACK KEEP -- In [CR3] the defender answered premise 6 under "LINK
+      s112:   CURED | SEND-BACK KEEP -- In [CR3] the defender answered premise 6 under "LINK
+  33682 Send Back Record chatgpt E-ANS ANSWER CHECK Matthew 1:24 [CR4]
+      stored: null | SEND-BACK KEEP -- [CR4] states, "The challenger's knowing is a coming 
+      s112:   CURED | SEND-BACK KEEP -- [CR4] states, "The challenger's knowing is a coming 
+  33682 Send Back Record chatgpt E-ANS ANSWER CHECK Acts 16:13 [CR3]
+      stored: null | SEND-BACK KEEP -- [CR3] accepts the comparison and adds, "It names the
+      s112:   CURED | SEND-BACK KEEP -- [CR3] accepts the comparison and adds, "It names the
+  33731 Send Back Record chatgpt E-ANS ANSWER CHECK Matthew 1:16 [CR3]
+      stored: null | SEND-BACK KEEP -- [CR3] answers the named-father reading: "A husband a
+      s112:   CURED | SEND-BACK KEEP -- [CR3] answers the named-father reading: "A husband a
+  33731 Send Back Record chatgpt E-ANS ANSWER CHECK Genesis 4:25 [CR3]
+      stored: null | SEND-BACK KEEP -- [CR3] addresses the father's knowing: "Where the fat
+      s112:   CURED | SEND-BACK KEEP -- [CR3] addresses the father's knowing: "Where the fat
+  33731 Send Back Record chatgpt E-ANS ANSWER CHECK 1 Chronicles 28:6 [CR3]
+      stored: null | SEND-BACK KEEP -- [CR3] grants both relationships and distinguishes th
+      s112:   CURED | SEND-BACK KEEP -- [CR3] grants both relationships and distinguishes th
+  33731 Send Back Record chatgpt E-ANS ANSWER CHECK Luke 2:4 [CR3]
+      stored: null | SEND-BACK KEEP -- The preceding answer in [CR3], to which "the same" r
+      s112:   CURED | SEND-BACK KEEP -- The preceding answer in [CR3], to which "the same" r
+  33731 Send Back Record chatgpt E-ANS ANSWER CHECK Luke 1:36 [CR3]
+      stored: null | SEND-BACK KEEP -- [CR3] names "thy cousin Elisabeth", states "It state
+      s112:   CURED | SEND-BACK KEEP -- [CR3] names "thy cousin Elisabeth", states "It state
+  33828 Send Back Record chatgpt E-ANS ANSWER CHECK Luke 1:37 [DR3]
+      stored: null | SEND-BACK KEEP -- In [DR3] the challenger answers, "In Luke 1:13 that 
+      s112:   CURED | SEND-BACK KEEP -- In [DR3] the challenger answers, "In Luke 1:13 that 
+  34108 Send Back Record chatgpt E-ANS ANSWER CHECK Luke 1:34 [CR3]
+      stored: null | SEND-BACK KEEP -- Under LINK 4, [CR3] also says, “I grant the concepti
+      s112:   CURED | SEND-BACK KEEP -- Under LINK 4, [CR3] also says, “I grant the concepti
+  34108 Send Back Record chatgpt E-ANS ANSWER CHECK Isaiah 7:16 [CR4]
+      stored: null | SEND-BACK KEEP -- [CR4] explains the fit: “The shared timing-measure (
+      s112:   CURED | SEND-BACK KEEP -- [CR4] explains the fit: “The shared timing-measure (
+  33249 Alt Send Back Record grok E-PREM premise listed against the defender 6
+      stored: null | SEND-BACK KEEP -- [CR3] answers the premise tagged LINK 1 under "LINK 
+      s112:   CURED | SEND-BACK KEEP -- [CR3] answers the premise tagged LINK 1 under "LINK 
+  33482 Alt Send Back Record grok E-ANS ANSWER CHECK Romans 1:3 [CR3]
+      stored: null | SEND-BACK KEEP -- [CR3] says "I affirm the premise. The flesh of Chris
+      s112:   CURED | SEND-BACK KEEP -- [CR3] says "I affirm the premise. The flesh of Chris
+  33490 Alt Send Back Record grok E-ANS ANSWER CHECK Luke 2:48 [CR3]
+      stored: null | SEND-BACK KEEP -- [CR3] does not stop at the grant: "I grant Mary says
+      s112:   CURED | SEND-BACK KEEP -- [CR3] does not stop at the grant: "I grant Mary says
+  33617 Alt Send Back Record sol E-ANS ANSWER CHECK Matthew 1:25 [DR3]
+      stored: null | SEND-BACK KEEP -- DR3's "The span of 1:25 opens at the taking (1:24) a
+      s112:   CURED | SEND-BACK KEEP -- DR3's "The span of 1:25 opens at the taking (1:24) a
+  33617 Alt Send Back Record sol E-ANS ANSWER CHECK Genesis 4:1 [DR3]
+      stored: null | SEND-BACK KEEP -- DR3's "So Genesis 4:1's order puts the knowing withi
+      s112:   CURED | SEND-BACK KEEP -- DR3's "So Genesis 4:1's order puts the knowing withi
+  33644 Alt Send Back Record sol E-PREM premise listed against the defender 6
+      stored: null | SEND-BACK KEEP -- Contrary to the reported missing-block ground, [CR3]
+      s112:   CURED | SEND-BACK KEEP -- Contrary to the reported missing-block ground, [CR3]
+  33731 Alt Send Back Record sol E-ANS ANSWER CHECK Job 14:1 [CR3]
+      stored: null | SEND-BACK KEEP -- The general opening of [CR3] LINK 1 accepts the idio
+      s112:   CURED | SEND-BACK KEEP -- The general opening of [CR3] LINK 1 accepts the idio
+  33731 Alt Send Back Record sol E-ANS ANSWER CHECK Luke 2:4 [CR3]
+      stored: null | SEND-BACK KEEP -- The answer "the same" expressly refers to the immedi
+      s112:   CURED | SEND-BACK KEEP -- The answer "the same" expressly refers to the immedi
+  33731 Alt Send Back Record sol E-PREM premise listed against the defender 2
+      stored: null | SEND-BACK KEEP -- The charge expressly takes the protected form "ASSUM
+      s112:   CURED | SEND-BACK KEEP -- The charge expressly takes the protected form "ASSUM
+  33828 Alt Send Back Record sol E-PREM premise listed against the defender 6
+      stored: null | SEND-BACK KEEP -- [CR3] contains “LINK 5: NARROWED TO” followed by [L1
+      s112:   CURED | SEND-BACK KEEP -- [CR3] contains “LINK 5: NARROWED TO” followed by [L1
+  33846 Alt Send Back Record sol E-ANS ANSWER CHECK Luke 1:36 [CR3]
+      stored: null | SEND-BACK KEEP -- CR3 positively connects its admitted kinship to its 
+      s112:   CURED | SEND-BACK KEEP -- CR3 positively connects its admitted kinship to its 
+  33846 Alt Send Back Record sol E-ANS ANSWER CHECK Luke 1:13 [DR3]
+      stored: null | SEND-BACK KEEP -- DR3 addresses the contrasting birth expressions as w
+      s112:   CURED | SEND-BACK KEEP -- DR3 addresses the contrasting birth expressions as w
+  33846 Alt Send Back Record sol E-ANS ANSWER CHECK Luke 1:34 [DR3]
+      stored: null | SEND-BACK KEEP -- The answer continues beyond its acknowledgment of Ma
+      s112:   CURED | SEND-BACK KEEP -- The answer continues beyond its acknowledgment of Ma
+  33846 Alt Send Back Record sol E-ANS ANSWER CHECK Acts 14:19 [DR3]
+      stored: null | SEND-BACK KEEP -- DR3 expressly distinguishes the contexts through "Th
+      s112:   CURED | SEND-BACK KEEP -- DR3 expressly distinguishes the contexts through "Th
+  ERR 33040 Alt Send Back Record: unexecuted Alt Judge Enforcer Record
