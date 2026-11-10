@@ -35,3 +35,8 @@ Write file: pkgEHL/parent_s108_EHL.json. pkgRLF rev 2 changes only Close Enforce
 
 ## Engine manual part (enters on write)
 Judge enforcer answer lines (pkgEHL): Judge Enforcer Record and its alternates read an answer line that lacks the "ENFORCER:" head or carries a list mark before it, when the line starts with an item id and a separator. The verdict pattern is unchanged. The retry step still counts only headed lines.
+
+
+## SHELVED
+
+SHELVED by the operator: his "1" to ASK 23 in the W3 thread (option 1, shelve), 2026-11-10, message cmsg_017ZQamDMHrS6fqMHnQDVo58PA9VnsVuHHWCExjHtmGaBc. Not written to live. Two passes stand (W1 Wall 4181, W2 Wall 4182). If taken up later: rebuild on the then-live version with build_EHL.cjs write and rerun test_EHL.cjs.
