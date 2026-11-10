@@ -12,3 +12,17 @@
     true CONFIRMED is lost without a review mark. The README says any other form reads as ?. Fix: raise the {1,24} limit (for example to 80).
 - Pre-existing, not pkgCDL (L24, info): two CONFIRMED lines on one hint with different links (D6 and D5) break both links. Record does not
   limit a hint to one link.
+
+## rev 2 (commit 82b5269b): FAIL on change 2 (two CONFIRMED lines on one candidate); change 1 PASS
+
+- Rebuild byte-equal; only Close Enforcer Record changes from pkgCDF rev 2. W1's record_CDL 11 OK reproduces.
+- Change 1 (no length limit): my 27 link forms all as specified (w2_cdl_rev2.txt), L25 (long LINK text) now read as ? and marked for review.
+- Change 2 (w2_cdl2.cjs, expectations committed before the run; w2_cdl2.txt):
+  - M1: one drop answered CONFIRMED on LINK 6 and on LINK 5, both quotations standing: rev 11 breaks 6 and 5; rev 2 breaks 6 only, LINK 5 is
+    refused and marked for review. A true contradiction that touches two declared links loses a rightful break.
+  - M2: the same two lines in the other order (LINK 5 first): rev 2 breaks 5 only and refuses the keystone LINK 6. Line order decides
+    which link breaks, so the weaker link can take the break and the keystone goes free.
+  - M3 (same link twice) and M4 (forged first line, valid second line) behave rightly.
+  - M5 (info, not pkgCDL): NOT A CONTRADICTION then CONFIRMED on the same hint is refused as conflicting answers on rev 11 and rev 2 alike.
+- Fix: keep rev 11's behaviour for distinct declared links (each CONFIRMED line with standing quotations breaks its link); if review is
+  wanted, mark the second break for review without refusing it.
