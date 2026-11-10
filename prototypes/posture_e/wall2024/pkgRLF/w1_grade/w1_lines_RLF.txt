@@ -1,0 +1,7 @@
+OK   H1 DEFENDER [ CR3 ] / [ round 4 ] -> CR3/CR4 (expect CR3/CR4)
+OK   H2 DEFENDER [CR3] / (round 4) -> UNREADABLE (expect UNREADABLE)
+OK   H3 DEFENDER [CR3] / ROUND 4 -> CR3/CR4 (expect CR3/CR4)
+OK   H4 DEFENDER [CR3] / [round 04] -> UNREADABLE (expect UNREADABLE)
+OK   H5 CHALLENGER [Round 2] / [round 4] -> DR2/DR4 (expect DR2/DR4)
+OK   H6 DEFENDER [DR2] / [CR4] -> DR2/CR4 (expect DR2/CR4)
+6 of 6 as labeled
