@@ -1,0 +1,61 @@
+OK   L1 stored, no plant | luna s110 11 GCCN2 11 GUB 11 | all GUB luna:11 chatgpt:0 sol:1 | gate rows GUB=GCCN2 true
+       GUB  G1 NOT APPLIED (E-APPLY S6); ANSWER: CHANGE; CURED: the gate change was applied]
+       GUB  G2 NOT APPLIED (E-APPLY S10); ANSWER: CHANGE; CURED: the gate change was applied]
+FAIL a good UND line | luna s110 11 GCCN2 11 GUB 11 (label 2) | all GUB luna:11 chatgpt:0 sol:1 | gate rows GUB=GCCN2 true
+       GUB  G1 NOT APPLIED (E-APPLY S6); ANSWER: CHANGE; CURED: the gate change was applied; its send-back count comes off]
+       GUB  G2 NOT APPLIED (E-APPLY S10); ANSWER: CHANGE; CURED: the gate change was applied]
+FAIL b [L1] words not in the verse | luna s110 11 GCCN2 11 GUB 12 (label 3) | all GUB luna:12 chatgpt:0 sol:1 | gate rows GUB=GCCN2 true
+       GUB  G1 NOT APPLIED (E-APPLY S6); ANSWER: CHANGE; CURED: the gate change was applied]
+       GUB  G2 NOT APPLIED (E-APPLY S10); ANSWER: CHANGE; CURED: the gate change was applied]
+FAIL c no statement of what is left open | luna s110 11 GCCN2 11 GUB 12 (label 3) | all GUB luna:12 chatgpt:0 sol:1 | gate rows GUB=GCCN2 true
+       GUB  G1 NOT APPLIED (E-APPLY S6); ANSWER: CHANGE; CURED: the gate change was applied]
+       GUB  G2 NOT APPLIED (E-APPLY S10); ANSWER: CHANGE; CURED: the gate change was applied]
+FAIL d only [L3] | luna s110 11 GCCN2 11 GUB 12 (label 3) | all GUB luna:12 chatgpt:0 sol:1 | gate rows GUB=GCCN2 true
+       GUB  G1 NOT APPLIED (E-APPLY S6); ANSWER: CHANGE; CURED: the gate change was applied]
+       GUB  G2 NOT APPLIED (E-APPLY S10); ANSWER: CHANGE; CURED: the gate change was applied]
+FAIL e STANDS with [L1] and answer quote | luna s110 11 GCCN2 11 GUB 11 (label 2) | all GUB luna:11 chatgpt:0 sol:1 | gate rows GUB=GCCN2 true
+       GUB  G1 NOT APPLIED (E-APPLY S6); ANSWER: CHANGE; CURED: the gate change was applied; its send-back count comes off]
+       GUB  G2 NOT APPLIED (E-APPLY S10); ANSWER: CHANGE; CURED: the gate change was applied]
+FAIL f STANDS without answer quote | luna s110 11 GCCN2 11 GUB 12 (label 3) | all GUB luna:12 chatgpt:0 sol:1 | gate rows GUB=GCCN2 true
+       GUB  G1 NOT APPLIED (E-APPLY S6); ANSWER: CHANGE; CURED: the gate change was applied]
+       GUB  G2 NOT APPLIED (E-APPLY S10); ANSWER: CHANGE; CURED: the gate change was applied]
+FAIL g straight quotes, as a | luna s110 11 GCCN2 11 GUB 11 (label 2) | all GUB luna:11 chatgpt:0 sol:1 | gate rows GUB=GCCN2 true
+       GUB  G1 NOT APPLIED (E-APPLY S6); ANSWER: CHANGE; CURED: the gate change was applied; its send-back count comes off]
+       GUB  G2 NOT APPLIED (E-APPLY S10); ANSWER: CHANGE; CURED: the gate change was applied]
+FAIL h pkgECF counted line, failing new line | luna s110 11 GCCN2 11 GUB 11 (label 2) | all GUB luna:11 chatgpt:0 sol:1 | gate rows GUB=GCCN2 true
+       GUB  G1 NOT APPLIED (E-APPLY S6); ANSWER: CHANGE; CURED: the gate change was applied; its send-back count comes off]
+       GUB  G2 NOT APPLIED (E-APPLY S10); ANSWER: CHANGE; CURED: the gate change was applied]
+FAIL i1 pkgUND line for seat sol naming S10 | luna s110 12 GCCN2 12 GUB 12 (label 3) | all GUB luna:12 chatgpt:0 sol:1 | gate rows GUB=GCCN2 true
+       GUB  G1 NOT APPLIED (E-APPLY S6); ANSWER: CHANGE; CURED: the gate change was applied]
+       GUB  G2 NOT APPLIED (E-APPLY S10); ANSWER: CHANGE; CURED: the gate change was applied]
+FAIL i2 pkgUND line naming S1, gate item S10 | luna s110 12 GCCN2 12 GUB 12 (label 3) | all GUB luna:12 chatgpt:0 sol:1 | gate rows GUB=GCCN2 true
+       GUB  G1 NOT APPLIED (E-APPLY S6); ANSWER: CHANGE; CURED: the gate change was applied]
+       GUB  G2 NOT APPLIED (E-APPLY S10); ANSWER: CHANGE; CURED: the gate change was applied]
+REC  j [L1] verse not read this run | luna s110 11 GCCN2 11 GUB 11 | all GUB luna:11 chatgpt:0 sol:1 | gate rows GUB=GCCN2 true
+       GUB  G1 NOT APPLIED (E-APPLY S6); ANSWER: CHANGE; CURED: the gate change was applied; its send-back count comes off]
+       GUB  G2 NOT APPLIED (E-APPLY S10); ANSWER: CHANGE; CURED: the gate change was applied]
+FAIL k1 G1 fails, later applied G2 passes (same line) | luna s110 11 GCCN2 11 GUB 11 (label 2) | all GUB luna:11 chatgpt:0 sol:1 | gate rows GUB=GCCN2 true
+       GUB  G1 NOT APPLIED (E-APPLY S6); ANSWER: CHANGE; CURED: the later gate change G2 of this judge rewrote the same line (the last change wins) and was applied (apply record; pkgGSU); its send-back count comes off]
+       GUB  G2 NOT APPLIED (E-APPLY S10); ANSWER: CHANGE; CURED: the gate change was applied]
+       line in the written row: D2 vs C1 (Matthew 1:19): UNDERDETERMINED -- the record leaves open what Joseph believed about paternity. -- GROUND: [L1] Matthew 1:19 “being a just [man], and not willing
+       GCCN G1 NOT APPLIED (E-APPLY S6); ANSWER: CHANGE; CURED: the later gate change G2 of this judge rewrote the same line (the last change wins) and was applied (apply record; pkgGSU); its send-back count comes off]
+       GCCN G2 NOT APPLIED (E-APPLY S10); ANSWER: CHANGE; CURED: the gate change was applied]
+FAIL k2 G1 passes, later applied G2 fails (same line) | luna s110 11 GCCN2 11 GUB 12 (label 3) | all GUB luna:12 chatgpt:0 sol:1 | gate rows GUB=GCCN2 true
+       GUB  G1 NOT APPLIED (E-APPLY S6); ANSWER: CHANGE; CURED: the later gate change G2 of this judge rewrote the same line (the last change wins) and was applied (apply record; pkgGSU)]
+       GUB  G2 NOT APPLIED (E-APPLY S10); ANSWER: CHANGE; CURED: the gate change was applied]
+       line in the written row: D2 vs C1 (Matthew 1:19): UNDERDETERMINED -- Joseph acted as a just man. -- GROUND: [L1] Matthew 1:19 “being a just [man], and not willing to make her a publick example, w
+       GCCN G1 NOT APPLIED (E-APPLY S6); ANSWER: CHANGE; CURED: the later gate change G2 of this judge rewrote the same line (the last change wins) and was applied (apply record; pkgGSU); its send-back count comes off]
+       GCCN G2 NOT APPLIED (E-APPLY S10); ANSWER: CHANGE; CURED: the gate change was applied]
+REC  l verse rows not available, good line | luna s110 11 GCCN2 11 GUB 11 | all GUB luna:11 chatgpt:0 sol:1 | gate rows GUB=GCCN2 true
+       GUB  G1 NOT APPLIED (E-APPLY S6); ANSWER: CHANGE; CURED: the gate change was applied; its send-back count comes off]
+       GUB  G2 NOT APPLIED (E-APPLY S10); ANSWER: CHANGE; CURED: the gate change was applied]
+FAIL l2 verse rows not available, failing line c | luna s110 11 GCCN2 11 GUB 12 (label 3) | all GUB luna:12 chatgpt:0 sol:1 | gate rows GUB=GCCN2 true
+       GUB  G1 NOT APPLIED (E-APPLY S6); ANSWER: CHANGE; CURED: the gate change was applied]
+       GUB  G2 NOT APPLIED (E-APPLY S10); ANSWER: CHANGE; CURED: the gate change was applied]
+FAIL m1 E-UNG item, graded line passes | luna s110 11 GCCN2 11 GUB 11 (label 2) | all GUB luna:11 chatgpt:0 sol:1 | gate rows GUB=GCCN2 true
+       GUB  G1 NOT APPLIED (E-APPLY S6); ANSWER: CHANGE; CURED: the gate change was applied; its send-back count comes off]
+       GUB  G2 NOT APPLIED (E-APPLY S10); ANSWER: CHANGE; CURED: the gate change was applied]
+FAIL m2 E-UNG item, no counted [L1] | luna s110 11 GCCN2 11 GUB 12 (label 3) | all GUB luna:12 chatgpt:0 sol:1 | gate rows GUB=GCCN2 true
+       GUB  G1 NOT APPLIED (E-APPLY S6); ANSWER: CHANGE; CURED: the gate change was applied]
+       GUB  G2 NOT APPLIED (E-APPLY S10); ANSWER: CHANGE; CURED: the gate change was applied]
+FAILS 15
