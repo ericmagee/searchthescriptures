@@ -13,3 +13,10 @@ Fault (W1 Wall 4422 item C; W3 Wall 4431 confirms): [DR4] "Deuteronomy 20:7 sets
 
 ## Which copies feed what (s114)
 - 34 REFP copies: the Shared Library (line 512; its scoped calls include the ledger) and 33 nodes. The close-round press note (C4P) is computed in the 12 nodes above. Scoped parsing is used only by those 12 nodes and the Shared Library.
+
+## Rebased on s115 (live 17:15 CST = s114 + joint of four; W4 Wall 4437)
+- parent_s115_BRF3.json: +780 code measured over s115, prompt 0; same 12 nodes; sha256 b7e03f70ce7dbafb. Scan identical (0 parse changes; 34726 note only).
+
+## Ledger effect (ledger_diff.cjs, ledger_diff_34726.txt)
+- Rev 3 leaves the Shared Library byte-identical, so the ledger is unchanged by construction.
+- The fault's own reach in 34726, shown offline: chain of the whole stored run from Init with Guards, s114 against the parser fixed in all 34 copies (rev 1). 43 nodes differ; every difference is the press note ("Deuteronomy 1:18" gone; new_press lists, transcript_chars -18) carried downstream, plus two replay artifacts that also differ in an s114-against-s114 self-check (Panel Judges Prep nonce; Second Alternate? retry field). No ledger line differs. 34108: NOT REACHED (no full export).
