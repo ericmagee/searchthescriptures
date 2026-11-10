@@ -9,6 +9,10 @@
 //  F5 the reason's deferral words removed ("I answer it fully under LINK 4" cut)           SENT
 //  F6 the same reason on an E-ANS item that carries pkgUND (und:true)                      SENT
 //  F7 reason "(right: FAILS)" in place of "(right: MISSES)"                                SENT
+//  F9 the grant defers to [CR2] ("I answered it in [CR2].") and [CR2] names Luke 1:34 only in one footing quotation line  SENT (one hop: "names again" is not an answer)
+//  F10 the grant defers to [CR2] and [CR2] holds a layered answer line on Luke 1:34      WITHHELD
+//  F11 the grant defers to [CR2] and [CR2] does not name Luke 1:34                        SENT
+//  (F9 to F11 added after reading rev 2's code, before running rev 2. First run: the stored [CR2] still answers the press in substance, which pkgVPD reads, so F9/F11 were redone with [CR2] replaced by a short text: F9b, F11b)
 //  F8 pointer to LINK 4 whose block answers another verse only (Luke 1:34 renamed Luke 1:99 inside LINK 4) SENT, else a limit (bareness test)
 const H=require('./node_EAD_w2.cjs');const cl=H.cl;const RUN='34108',N='Send Back Build',P='Judge Enforcer Record',IT='ANSWER CHECK Luke 1:34 [CR3]';
 const base=n=>cl(H.raw(RUN,n));
@@ -24,6 +28,11 @@ const P_={
  F5:withRow(r=>{r.cure_reason=r.cure_reason.replace(/ and defers, "I answer it fully under LINK 4,"/,'');}),
  F6:null,
  F7:withRow(r=>{r.cure_reason=r.cure_reason.replace('(right: MISSES)','(right: FAILS)');}),
+ F9:withRounds(R=>{R.CR3=R.CR3.replace('I answer it fully under LINK 4.','I answered it in [CR2].');R.CR2=R.CR2.split('\n').filter(l=>!/Luke 1:34/.test(l)).join('\n')+'\n\n- [L1] Luke 1:34: "How shall this be, seeing I know not a man?"\n';}),
+ F10:withRounds(R=>{R.CR3=R.CR3.replace('I answer it fully under LINK 4.','I answered it in [CR2].');R.CR2=R.CR2.split('\n').filter(l=>!/Luke 1:34/.test(l)).join('\n')+'\n\n- Luke 1:34, "How shall this be, seeing I know not a man?": the present tense states her state at the angel\'s word; [L2] *epei* (G1893, since) makes that state the ground of "How", and [L3] Luke 1:35 answers the means with the Holy Ghost and the power of the Highest, not a man.\n';}),
+ F11:withRounds(R=>{R.CR3=R.CR3.replace('I answer it fully under LINK 4.','I answered it in [CR2].');R.CR2=R.CR2.split('\n').filter(l=>!/Luke 1:34/.test(l)).join('\n');}),
+ F9b:withRounds(R=>{R.CR3=R.CR3.replace('I answer it fully under LINK 4.','I answered it in [CR2].');R.CR2='DEFENDER (standard reading) -- ROUND 2, RESPONSE\n\n**LINK 1: SUPPORTED**\n\nMatthew 1:18 [L1]: "before they came together, she was found with child of the Holy Ghost."\n\n- [L1] Luke 1:34: "How shall this be, seeing I know not a man?"\n';}),
+ F11b:withRounds(R=>{R.CR3=R.CR3.replace('I answer it fully under LINK 4.','I answered it in [CR2].');R.CR2='DEFENDER (standard reading) -- ROUND 2, RESPONSE\n\n**LINK 1: SUPPORTED**\n\nMatthew 1:18 [L1]: "before they came together, she was found with child of the Holy Ghost."\n';}),
  F8:withRounds(R=>{const [a,b]=link4(R.CR3);R.CR3=R.CR3.slice(0,a)+R.CR3.slice(a,b).replace(/Luke 1:34/g,'Luke 1:99').replace(/1:34/g,'1:99')+R.CR3.slice(b);}),
 };
 (async()=>{const cb=H.code(H.B,N);

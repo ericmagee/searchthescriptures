@@ -6,4 +6,9 @@ F4 WITHHELD | the DeepSeek reason reads a deferral as the whole answer, and the 
 F5 SENT 
 F6 SENT 
 F7 SENT 
+F9 WITHHELD | the DeepSeek reason reads a deferral as the whole answer, and the code finds an answer behind it: [CR3] the answer defers to [CR2], which answers Luke 1:34 without its exact reference (line 42: "[L4] The press says the verbs carry
+F10 WITHHELD | the DeepSeek reason reads a deferral as the whole answer, and the code finds an answer behind it: [CR3] the answer defers to [CR2], which answers Luke 1:34 without its exact reference (line 42: "[L4] The press says the verbs carry
+F11 WITHHELD | the DeepSeek reason reads a deferral as the whole answer, and the code finds an answer behind it: [CR3] the answer defers to [CR2], which answers Luke 1:34 without its exact reference (line 42: "[L4] The press says the verbs carry
+F9b WITHHELD | the DeepSeek reason reads a deferral as the whole answer, and the code finds an answer behind it: [CR3] the answer defers to [CR2], which answers Luke 1:34 ([CR2] names Luke 1:34 again (line 6: "- [L1] Luke 1:34: "How shall this b
+F11b WITHHELD | the DeepSeek reason reads a deferral as the whole answer, and the code finds an answer behind it: [CR3] names Luke 1:34 again (line 57: "**LINK 4: NARROWED TO:** Luke 1:34's "seeing I know not a man" is the stated ground of her") 
 F8 WITHHELD | the DeepSeek reason reads a deferral as the whole answer, and the code finds an answer behind it: [CR3] the deferral to LINK 4 names an answer of 480 words with layers (pkgEAD)
