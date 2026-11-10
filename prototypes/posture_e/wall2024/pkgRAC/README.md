@@ -1,5 +1,7 @@
 # pkgRAC rev 2 (W3): pairs found by the two code-side closing checks go to the closing enforcer
 
+**SHELVED 2026-11-10 by the operator's answer "1" to ASK 19. Do not write any pkgRAC file. Reason: pkgRAC/check34108/reading_check_w3.md (a handed pair costs the closing enforcer its own search).**
+
 WRITE FILE: pkgRAC/parent_s108_RAC.json, rebuilt on live s108 (s107 + pkgRLF). Five nodes are byte-equal to the graded build; Close Enforcer Record now carries pkgRLF's round-label reading and pkgRAC's changes together (11,835 to 12,406, +571, the same change). 77 checks ALL OK on s108. The s106 and s107 files must not be written. BUILDER'S RECOMMENDATION: no write until the four-call check on debate 34108 is read (pkgRAC/check34108/).
 
 Authority: the operator's "option 1" (08:27 CST 2026-11-10) to W3's ask of 20:30 CST 2026-11-09. Built on live s106. NOT WRITTEN. A write needs two non-builder grades, a DeepSeek replay of the new prompt, and the operator's "write pkgRAC" in W4's thread.
