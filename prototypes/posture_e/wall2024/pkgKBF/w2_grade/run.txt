@@ -1,0 +1,29 @@
+OK   W1 want UNCURED | base CURED | cand UNCURED | **On Job 14:1**, I grant it.
+       d): UNCURED -- KEEP whose reason quotes only another bare grant, affirmation or deferral of the answering side ("on job 14 1 i grant"), not a fuller answer (pkgKBG) | TR
+OK   W2 want UNCURED | base CURED | cand UNCURED | **On Job 14:1**, I grant it.
+       d): UNCURED -- KEEP whose reason quotes only another bare grant, affirmation or deferral of the answering side ("on job 14 1 i grant"), not a fuller answer (pkgKBG) | TR
+OK   W3 want UNCURED | base CURED | cand UNCURED | _On Job 14:1_, I grant the phrase is general.
+       d): UNCURED -- KEEP whose reason quotes only another bare grant, affirmation or deferral of the answering side ("on job 14 1 i grant"), not a fuller answer (pkgKBG) | TR
+OK   W4 want UNCURED | base UNCURED | cand UNCURED | __Job 14:1__, I grant it is said of all men.
+       d): UNCURED -- KEEP whose reason quotes only the bare flagged answer itself, or words running into it ("job 14 1 i grant it"), not a fuller answer from the answering sid
+OK   W5 want UNCURED | base UNCURED | cand UNCURED | *Job 14:1*: granted.
+       d): UNCURED -- KEEP whose reason quotes no 6 words in a row of the answering side's rounds | TRIAL pkgVP3: code check does not agree, not an item -- [CR3] names Job 14:1
+OK   W6 want UNCURED | base CURED | cand UNCURED | **Job 14:1-2**, I grant both verses.
+       d): UNCURED -- KEEP whose reason quotes only another bare grant, affirmation or deferral of the answering side ("job 14 1 2 i grant"), not a fuller answer (pkgKBG) | TRI
+OK   W7 want UNCURED | base UNCURED | cand UNCURED | **On Job 14:1**, see LINK 2.
+       d): UNCURED -- KEEP whose reason quotes only another bare grant, affirmation or deferral of the answering side ("on job 14 1 see link"), not a fuller answer (pkgKBG) | T
+OK   W8 want UNCURED | base UNCURED | cand UNCURED | **Job 14:1**: I affirm D6 stands as declared.
+       d): UNCURED -- KEEP whose reason quotes only another bare grant, affirmation or deferral of the answering side ("job 14 1 i affirm d6"), not a fuller answer (pkgKBG) | T
+OK   W9 want UNCURED | base CURED | cand UNCURED | - **As to Job 14:1**, I grant it.
+       d): UNCURED -- KEEP whose reason quotes only another bare grant, affirmation or deferral of the answering side ("as to job 14 1 i"), not a fuller answer (pkgKBG) | TRIAL
+OK   W10 want CURED | base CURED | cand CURED | **On Job 14:1**, the phrase names fathers by law, so the begetting is not there.
+       d): CURED -- KEEP whose reason quotes the answering side's round: "on job 14 1 the phrase" | TRIAL pkgVP3: code check does not agree, not an item -- [CR3] names Job 14:1
+OK   W11 want CURED | base CURED | cand CURED | **Job 14:1** speaks of all men born of a woman; Christ is not begotten by a man.
+       d): CURED -- KEEP whose reason quotes the answering side's round: "job 14 1 speaks of all" | TRIAL pkgVP3: code check does not agree, not an item -- [CR3] names Job 14:1
+OK   W12 want CURED | base CURED | cand CURED | **On Job 14:1**, I grant it, because the register names Joseph as father by law only.
+       d): CURED -- KEEP whose reason quotes the answering side's round: "on job 14 1 i grant" | TRIAL pkgVP3: code check does not agree, not an item -- [CR3] names Job 14:1 ag
+OK   W13 want CURED | base CURED | cand CURED | **On Job 14:1**, the begetting is not in the register, so the line stops at Joseph.
+       d): CURED -- KEEP whose reason quotes the answering side's round: "on job 14 1 the begetting" | TRIAL pkgVP3: code check does not agree, not an item -- [CR3] names Job 1
+MISS W14 want UNCURED | base CURED | cand CURED | **Job** 14:1, I grant it.
+       d): CURED -- KEEP whose reason quotes the answering side's round: "job 14 1 i grant it" | TRIAL pkgVP3: code check does not agree, not an item -- [CR3] names Job 14:1 ag
+13 of 14 as labeled; misses: W14
