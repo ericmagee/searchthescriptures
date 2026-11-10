@@ -27,3 +27,15 @@ Expected (any other result is a FAIL):
 (a judge returned for a fault may change or lose its question). Added before rev 2 was run:
 - Q7 luna faulted on the challenger side: luna not counted; chatgpt stands; sol redirected by chatgpt. luna and chatgpt both faulted: no redirect.
 - Q1 to Q6 as before.
+
+## Rev 3 (W3 FAIL of rev 2, commit 8a6d1c31): the earlier judge must be fault-free AND not itself redirected on that side. Written before rev 3 is built or run.
+- Q8 chain plant: judge 1 repeats judge 0, judge 2 repeats judge 1 but not judge 0 (judge 2's quote is inside judge 1's, not judge 0's):
+  judge 1 is redirected against judge 0; judge 2 is NOT redirected (judge 1 is redirected); judge 2's question stands.
+- Q9 exhaustive walk, 3 judges, defender side: each judge's first question is one of 9 (closing quote X, Y (first part of X), Z (second part of X),
+  W (other sentence), each with earlier quote E or E2, or a non-contradiction question), and each judge is fault-free or faulted on the challenger
+  side; every redirected judge's second reply is one of (fails, a new passing contradiction, the same question). Required in every case:
+  (i) every contradiction question that passed first is still asked by some judge after QR Final (its own, or a judge whose final question
+      names the same rounds with one quote inside the other);
+  (ii) no defender question that passed first is DROPPED;
+  (iii) every judge that is counted as already asking keeps its first defender question;
+  (iv) live s110 returns no judge for a repeat (only for faults).
