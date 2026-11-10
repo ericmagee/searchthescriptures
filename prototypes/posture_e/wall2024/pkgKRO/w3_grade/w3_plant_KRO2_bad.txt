@@ -1,0 +1,21 @@
+BAD live UNCURED  rev1 UNCURED  rev2 UNCURED  notes 0    | "NOT COUNTED. The sentence touches no link." 
+     reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+BAD live UNCURED  rev1 UNCURED  rev2 UNCURED  notes 0    | "TOUCHES NO LINK." 
+     reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+BAD live UNCURED  rev1 UNCURED  rev2 UNCURED  notes 0    | "I decline to count it." 
+     reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+BAD live UNCURED  rev1 CURED    rev2 CURED    notes 1 REV2 OUTPUT DIFFERS FROM REV1 BEYOND THE REASON   | "It should not be counted." 
+     reason: answered: the close concession is counted (NOTED, record-only: the strict reader would refuse it: COUNTED is not the first word, or the first sentence holds a negation; the rev 7 reader reads the whole answer as a refusal)
+BAD live UNCURED  rev1 UNCURED  rev2 UNCURED  notes 0    | "Uncounted; the close adds nothing." 
+     reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+BAD live UNCURED  rev1 UNCURED  rev2 UNCURED  notes 0    | "The concession was already accounted for." 
+     reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+BAD live UNCURED  rev1 UNCURED  rev2 UNCURED  notes 0    | "No change." 
+     reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+BAD live UNCURED  rev1 UNCURED  rev2 UNCURED  notes 0    | "NOT COUNTED - the defender withdrew it." 
+     reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+BAD live UNCURED  rev1 UNCURED  rev2 UNCURED  notes 0    | "I do not find a concession in CR4." 
+     reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+BAD live UNCURED  rev1 UNCURED  rev2 UNCURED  notes 0    | "Not counted." 
+     reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+pkgKRO/w3_grade/w3_bad_kro2.json: 10 texts; rev 2 CURED 1; 1 texts where rev 2 differs from rev 1 beyond the reason text

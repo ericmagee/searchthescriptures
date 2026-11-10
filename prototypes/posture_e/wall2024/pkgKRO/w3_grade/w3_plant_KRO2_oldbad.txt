@@ -1,0 +1,27 @@
+BAD live UNCURED  rev1 UNCURED  rev2 UNCURED  notes 0    | "NOT COUNTED." 
+     reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+BAD live UNCURED  rev1 UNCURED  rev2 UNCURED  notes 0    | "Not counted. It is a courtesy." 
+     reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+BAD live UNCURED  rev1 CURED    rev2 CURED    notes 1 REV2 OUTPUT DIFFERS FROM REV1 BEYOND THE REASON   | "It is not counted." 
+     reason: answered: the close concession is counted (NOTED, record-only: the strict reader would refuse it: COUNTED is not the first word, or the first sentence holds a negation; the rev 7 reader reads the whole answer as a refusal)
+BAD live UNCURED  rev1 CURED    rev2 CURED    notes 1 REV2 OUTPUT DIFFERS FROM REV1 BEYOND THE REASON   | "This should not be counted." 
+     reason: answered: the close concession is counted (NOTED, record-only: the strict reader would refuse it: COUNTED is not the first word, or the first sentence holds a negation; the rev 7 reader reads the whole answer as a refusal)
+BAD live UNCURED  rev1 CURED    rev2 CURED    notes 1    | "I have not counted it and I will not." 
+     reason: answered: the close concession is counted (NOTED, record-only: the strict reader would refuse it: COUNTED is not the first word, or the first sentence holds a negation)
+BAD live UNCURED  rev1 CURED    rev2 CURED    notes 1    | "Never counted." 
+     reason: answered: the close concession is counted (NOTED, record-only: the strict reader would refuse it: COUNTED is not the first word, or the first sentence holds a negation)
+BAD live UNCURED  rev1 CURED    rev2 CURED    notes 1 REV2 OUTPUT DIFFERS FROM REV1 BEYOND THE REASON   | "It cannot be counted here." 
+     reason: answered: the close concession is counted (NOTED, record-only: the strict reader would refuse it: COUNTED is not the first word, or the first sentence holds a negation; the rev 7 reader reads the whole answer as a refusal)
+BAD live UNCURED  rev1 UNCURED  rev2 UNCURED  notes 0    | "TOUCHES NO LINK." 
+     reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+BAD live CURED    rev1 CURED    rev2 CURED    notes 0   PREFIX LOST | "TOUCHES NO LINK: the grant is a courtesy between the two debaters only." 
+     reason: answered: it touches no declared link or listed premise, with its reason
+BAD live UNCURED  rev1 UNCURED  rev2 UNCURED  notes 0    | "Uncounted." 
+     reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+BAD live UNCURED  rev1 UNCURED  rev2 UNCURED  notes 0    | "I refuse." 
+     reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+BAD live UNCURED  rev1 UNCURED  rev2 UNCURED  notes 0    | "No." 
+     reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+BAD live UNCURED  rev1 CURED    rev2 CURED    notes 1    | "The defender asks that it be counted; I decline." 
+     reason: answered: the close concession is counted (NOTED, record-only: the strict reader would refuse it: COUNTED is not the first word, or the first sentence holds a negation)
+pkgKRO/w3_grade/w3_bad_kro.json: 13 texts; rev 2 CURED 7; 3 texts where rev 2 differs from rev 1 beyond the reason text
