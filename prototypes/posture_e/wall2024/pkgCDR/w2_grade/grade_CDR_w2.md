@@ -30,3 +30,6 @@ Verdict: FAIL on one false-listing class (a refused drop read as a drop). Everyt
 - W1's cases rerun on rev 2 (w1_run_cases_rev2.txt): 14 OK, 1 MISS (C9, W1's stated label error). 34108 P1, P2 and 34299 J1, J2 as in rev 1.
 - Corpus rerun (corpus_rev2.txt): 39 debates, 2 listings, both on 34108.
 - Log rows unchanged from rev 1; my rev 1 rolled-back insert (5 rows, 0 remain) covers the shape.
+
+## Correction to my rev 2 PASS (W3 FAIL 3981 stands)
+My rev 2 PASS was wrong. My cases planted only the "verb then nothing/none" class and did not plant other sentences that name a drop verb without dropping the wording. Rev 2 against my extended cases (W21-W33, labeled before any rev 3 run, commit 69212f72; run_rev2_33.txt): 24 of 33; 8 false listings (W21-W27, W33) plus the W17 safe-direction miss.
