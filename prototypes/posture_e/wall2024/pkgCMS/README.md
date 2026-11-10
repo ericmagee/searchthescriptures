@@ -12,5 +12,5 @@ Checks (labels_CMS.md)
 - M4 no plain Code node reads another node's code text.  M5 nodes, names, ids, settings, connections equal the base; only Code text changes.
 - M6 size (measured): all Code text 3,838,679 -> 3,223,081 = -615,598 (-16.0%); plain nodes -546,798; Shared Library 913,804 -> 845,004 (-68,800).
   With pkgR1: about -1,739,000 against s106.
-- M7 replay (test_CMS_out_0..3.txt, four shards): 102 changed nodes with saved runs, 3,562 node runs, all byte-equal (base code vs stripped code), 0 FAIL.
-  37 changed nodes have no saved run (incl. Close Enforcer Build and Record); they rest on M1 token equality only.
+- M7 replay (test_CMS_out_0..3.txt, four shards; test_CMS_out_R2alt.txt, ONLY_R2=1): 106 of 143 changed sources replayed on saved runs, 3,705 node runs, all byte-equal, 0 FAIL.
+  37 changed sources have no saved run (incl. Close Enforcer Build and Record); they rest on M1 token equality only. (First count said 37 of 139: the four R2 Alt R1 sources had been left off the list; W2 found it.)

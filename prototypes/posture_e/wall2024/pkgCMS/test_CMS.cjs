@@ -8,7 +8,7 @@ let w=Ld(BASEF);
 const W=Ld(BUILDF);const LIB0=w.nodes.find(n=>n.name==='Shared Library').parameters.jsCode;const by={},nb={};w.nodes.forEach(n=>by[n.name]=n);W.nodes.forEach(n=>nb[n.name]=n);
 const LIB=nb['Shared Library'].parameters.jsCode;let ok=0,bad=0;const T=(c,m)=>{if(c){ok++;console.log('OK   '+m);}else{bad++;console.log('FAIL '+m);}};
 const R1old='Send Back Record|Alt Send Back Record|R2 Alt Send Back Record|Send Back Build|Alt Send Back Build|R2 Alt Send Back Build|Judge Enforcer Build|Alt Judge Enforcer Build|R2 Alt Judge Enforcer Build|Judge Enforcer Record|Alt Judge Enforcer Record|R2 Alt Judge Enforcer Record'.split('|');
-const R1=W.nodes.filter(n=>n.parameters&&n.parameters.jsCode&&n.name!=='Shared Library'&&n.parameters.jsCode!==by[n.name].parameters.jsCode).map(n=>n.name).concat(R1old.filter(x=>!x.startsWith('R2 '))).filter((x,i)=>i%SN===SI);
+const R1=W.nodes.filter(n=>n.parameters&&n.parameters.jsCode&&n.name!=='Shared Library'&&n.parameters.jsCode!==by[n.name].parameters.jsCode).map(n=>n.name).concat(R1old.filter(x=>!x.startsWith('R2 '))).filter((x,i)=>i%SN===SI);if(process.env.ONLY_R2)R1.splice(0,R1.length,...R1old.filter(x=>x.startsWith('R2 ')));
 if(0){const miss=[];for(const n of R1){const f=RM.needs(by[n].parameters.jsCode),s=RM.needs(nb[n].parameters.jsCode);if(!f.parsed||!s.parsed)miss.push(n+': parse');
   for(const r of f.nodes)if(!s.nodes.has(r))miss.push(n+': '+r);if(f.all&&!s.all)miss.push(n+': non-literal $()');for(const k of ['env','execution','prevNode'])if(f[k])miss.push(n+': reads $'+k);if(f.input&&!s.input)miss.push(n+': $input');}
  T(!miss.length,'L3 each new stub names every node its source names; none reads $execution, $env or $prevNode'+(miss.length?': '+miss.join('; '):''));}
@@ -26,7 +26,7 @@ const go=async(code,run,inputNode,map,lib)=>{const inp=inputNode?(saved(run,map(
  try{const $=RM.gate(RM.needs(code),mk(run,map,lib));return 'OUT '+JSON.stringify(await new AF('$','$input','$json','$execution',code)($,$input,inp[0]&&inp[0].json,{id:run}));}catch(e){return 'ERR '+String(e&&e.message||e);}finally{Math.random=MR;}};
 const runs=fs.readdirSync(D).filter(f=>/_index\.json$/.test(f)).map(f=>f.split('_')[0]).sort();
 (async()=>{const tm={full:0,stub:0,n:0};
- for(const n of R1){const r2=false;const src=r2?n.replace(/^R2 /,''):n;const map=r2?(x=>x.replace(/^R2 Alt/,'Alt').replace(/^R2 Alternate/,'Alternate')):(x=>x);
+ for(const n of R1){const r2=n.startsWith('R2 ');const src=r2?n.replace(/^R2 /,''):n;const map=r2?(x=>x.replace(/^R2 Alt/,'Alt').replace(/^R2 Alternate/,'Alternate')):(x=>x);
   const fd=feeder(n);const inputNode=fd[0];let eq=0,diff=[],errs=0,cnt=0;
   for(const run of runs){if(saved(run,src)===null)continue;cnt++;let t0=process.hrtime.bigint();const a=await go(by[n].parameters.jsCode,run,inputNode,map,LIB0);let t1=process.hrtime.bigint();
    const b=await go(nb[n].parameters.jsCode,run,inputNode,map,LIB);let t2=process.hrtime.bigint();tm.full+=Number(t1-t0)/1e6;tm.stub+=Number(t2-t1)/1e6;tm.n++;
