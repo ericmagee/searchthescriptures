@@ -1,0 +1,225 @@
+== 33371 fetchback_live_s111 Gate Record
+{
+ "node": "Gate Record",
+ "gate": [
+  {
+   "seat": "chatgpt",
+   "items": 2,
+   "cured": 2,
+   "uncured_counted": 0,
+   "fresh": 1,
+   "error": null
+  },
+  {
+   "seat": "sol",
+   "items": 1,
+   "cured": 1,
+   "uncured_counted": 0,
+   "fresh": 0,
+   "error": null
+  }
+ ],
+ "now": [
+  {
+   "seat": "gemini",
+   "u": 0,
+   "v52": [],
+   "cure": []
+  },
+  {
+   "seat": "chatgpt",
+   "u": 6,
+   "v52": [],
+   "cure": [
+    "SEAT: chatgpt; ITEM: D5 vs C4; RULE: K-G4; RESULT: UNCURED; WHY: RETRACTED with no reason naming the round and"
+   ]
+  },
+  {
+   "seat": "sol",
+   "u": 0,
+   "v52": [],
+   "cure": []
+  }
+ ],
+ "stored_run": "gemini:0 chatgpt:6 sol:0",
+ "alt_needed": true,
+ "gate_rows": 10520
+}
+== 33371 parent_s111_GCP Gate Record
+{
+ "node": "Gate Record",
+ "gate": [
+  {
+   "seat": "chatgpt",
+   "items": 2,
+   "cured": 2,
+   "uncured_counted": 0,
+   "fresh": 1,
+   "error": null
+  },
+  {
+   "seat": "sol",
+   "items": 1,
+   "cured": 1,
+   "uncured_counted": 0,
+   "fresh": 0,
+   "error": null
+  }
+ ],
+ "now": [
+  {
+   "seat": "gemini",
+   "u": 0,
+   "v52": [],
+   "cure": []
+  },
+  {
+   "seat": "chatgpt",
+   "u": 6,
+   "v52": [],
+   "cure": [
+    "SEAT: chatgpt; ITEM: D5 vs C4; RULE: K-G4; RESULT: UNCURED; WHY: RETRACTED with no reason naming the round and"
+   ]
+  },
+  {
+   "seat": "sol",
+   "u": 0,
+   "v52": [],
+   "cure": []
+  }
+ ],
+ "stored_run": "gemini:0 chatgpt:6 sol:0",
+ "alt_needed": true,
+ "gate_rows": 10520
+}
+== 33490 fetchback_live_s111 Gate Record
+{
+ "node": "Gate Record",
+ "gate": [
+  {
+   "seat": "gemini",
+   "items": 9,
+   "cured": 9,
+   "uncured_counted": 0,
+   "fresh": 2,
+   "error": null
+  },
+  {
+   "seat": "sol",
+   "items": 3,
+   "cured": 3,
+   "uncured_counted": 0,
+   "fresh": 0,
+   "error": null
+  }
+ ],
+ "now": [
+  {
+   "seat": "gemini",
+   "u": 8,
+   "v52": [],
+   "cure": [
+    "SEAT: gemini; ITEM: D1 vs C1; RULE: K-G4; RESULT: UNCURED; WHY: RETRACTED with no reason naming the round and ",
+    "SEAT: gemini; ITEM: D2 vs C2; RULE: K-G4; RESULT: UNCURED; WHY: RETRACTED with no reason naming the round and ",
+    "SEAT: gemini; ITEM: D3 vs C3; RULE: K-G4; RESULT: UNCURED; WHY: RETRACTED with no reason naming the round and ",
+    "SEAT: gemini; ITEM: D4 vs C6; RULE: K-G4; RESULT: UNCURED; WHY: RETRACTED with no reason naming the round and ",
+    "SEAT: gemini; ITEM: CHALLENGER STANDING; RULE: K-G3; RESULT: UNCURED; WHY: RETRACTED with no reason naming the",
+    "SEAT: gemini; ITEM: D1 vs C1; RULE: K-F; RESULT: UNCURED; WHY: RETRACTED with no reason naming the round and i",
+    "SEAT: gemini; ITEM: D2 vs C2; RULE: K-F; RESULT: UNCURED; WHY: RETRACTED with no reason naming the round and i",
+    "SEAT: gemini; ITEM: D4 vs C6; RULE: K-F; RESULT: UNCURED; WHY: RETRACTED with no reason naming the round and i",
+    "SEAT: gemini; ITEM: D1 vs C1; RULE: K-FC; RESULT: UNCURED; WHY: TRIAL rule (recorded and answered; it removes ",
+    "SEAT: gemini; ITEM: D3 vs C3; RULE: K-FC; RESULT: UNCURED; WHY: TRIAL rule (recorded and answered; it removes ",
+    "SEAT: gemini; ITEM: D1 vs C1; RULE: K-RUL; RESULT: UNCURED; WHY: TRIAL rule (recorded and answered; it removes",
+    "SEAT: gemini; ITEM: D2 vs C2; RULE: K-RUL; RESULT: UNCURED; WHY: TRIAL rule (recorded and answered; it removes",
+    "SEAT: gemini; ITEM: D3 vs C3; RULE: K-RUL; RESULT: UNCURED; WHY: TRIAL rule (recorded and answered; it removes",
+    "SEAT: gemini; ITEM: D4 vs C6; RULE: K-RUL; RESULT: UNCURED; WHY: TRIAL rule (recorded and answered; it removes"
+   ]
+  },
+  {
+   "seat": "chatgpt",
+   "u": 0,
+   "v52": [],
+   "cure": []
+  },
+  {
+   "seat": "sol",
+   "u": 1,
+   "v52": [],
+   "cure": [
+    "SEAT: sol; ITEM: DEFENDER CR3 LINK 2 #1; RULE: K-W; RESULT: UNCURED; WHY: neither the RESPONSE nor the STATEME"
+   ]
+  }
+ ],
+ "stored_run": "gemini:12 chatgpt:0 sol:1",
+ "alt_needed": true,
+ "gate_rows": 45053
+}
+== 33490 parent_s111_GCP Gate Record
+{
+ "node": "Gate Record",
+ "gate": [
+  {
+   "seat": "gemini",
+   "items": 9,
+   "cured": 9,
+   "uncured_counted": 0,
+   "fresh": 2,
+   "error": null
+  },
+  {
+   "seat": "sol",
+   "items": 3,
+   "cured": 3,
+   "uncured_counted": 0,
+   "fresh": 0,
+   "error": null
+  }
+ ],
+ "now": [
+  {
+   "seat": "gemini",
+   "u": 2,
+   "v52": [
+    "[AUDIT v52: CURE COUNT OFF (pkgGCP) -- SEAT: gemini; ITEM: D1 vs C1; RULE: K-G4; an applied change replaced the line and cleared it; its count comes off]",
+    "[AUDIT v52: CURE COUNT OFF (pkgGCP) -- SEAT: gemini; ITEM: D2 vs C2; RULE: K-G4; an applied change replaced the line and cleared it; its count comes off]",
+    "[AUDIT v52: CURE COUNT OFF (pkgGCP) -- SEAT: gemini; ITEM: D4 vs C6; RULE: K-G4; an applied change replaced the line and cleared it; its count comes off]",
+    "[AUDIT v52: CURE COUNT OFF (pkgGCP) -- SEAT: gemini; ITEM: D1 vs C1; RULE: K-F; an applied change replaced the line and cleared it; its count comes off]",
+    "[AUDIT v52: CURE COUNT OFF (pkgGCP) -- SEAT: gemini; ITEM: D2 vs C2; RULE: K-F; an applied change replaced the line and cleared it; its count comes off]",
+    "[AUDIT v52: CURE COUNT OFF (pkgGCP) -- SEAT: gemini; ITEM: D4 vs C6; RULE: K-F; an applied change replaced the line and cleared it; its count comes off]"
+   ],
+   "cure": [
+    "SEAT: gemini; ITEM: D1 vs C1; RULE: K-G4; RESULT: UNCURED; WHY: RETRACTED with no reason naming the round and ",
+    "SEAT: gemini; ITEM: D2 vs C2; RULE: K-G4; RESULT: UNCURED; WHY: RETRACTED with no reason naming the round and ",
+    "SEAT: gemini; ITEM: D3 vs C3; RULE: K-G4; RESULT: UNCURED; WHY: RETRACTED with no reason naming the round and ",
+    "SEAT: gemini; ITEM: D4 vs C6; RULE: K-G4; RESULT: UNCURED; WHY: RETRACTED with no reason naming the round and ",
+    "SEAT: gemini; ITEM: CHALLENGER STANDING; RULE: K-G3; RESULT: UNCURED; WHY: RETRACTED with no reason naming the",
+    "SEAT: gemini; ITEM: D1 vs C1; RULE: K-F; RESULT: UNCURED; WHY: RETRACTED with no reason naming the round and i",
+    "SEAT: gemini; ITEM: D2 vs C2; RULE: K-F; RESULT: UNCURED; WHY: RETRACTED with no reason naming the round and i",
+    "SEAT: gemini; ITEM: D4 vs C6; RULE: K-F; RESULT: UNCURED; WHY: RETRACTED with no reason naming the round and i",
+    "SEAT: gemini; ITEM: D1 vs C1; RULE: K-FC; RESULT: UNCURED; WHY: TRIAL rule (recorded and answered; it removes ",
+    "SEAT: gemini; ITEM: D3 vs C3; RULE: K-FC; RESULT: UNCURED; WHY: TRIAL rule (recorded and answered; it removes ",
+    "SEAT: gemini; ITEM: D1 vs C1; RULE: K-RUL; RESULT: UNCURED; WHY: TRIAL rule (recorded and answered; it removes",
+    "SEAT: gemini; ITEM: D2 vs C2; RULE: K-RUL; RESULT: UNCURED; WHY: TRIAL rule (recorded and answered; it removes",
+    "SEAT: gemini; ITEM: D3 vs C3; RULE: K-RUL; RESULT: UNCURED; WHY: TRIAL rule (recorded and answered; it removes",
+    "SEAT: gemini; ITEM: D4 vs C6; RULE: K-RUL; RESULT: UNCURED; WHY: TRIAL rule (recorded and answered; it removes"
+   ]
+  },
+  {
+   "seat": "chatgpt",
+   "u": 0,
+   "v52": [],
+   "cure": []
+  },
+  {
+   "seat": "sol",
+   "u": 1,
+   "v52": [],
+   "cure": [
+    "SEAT: sol; ITEM: DEFENDER CR3 LINK 2 #1; RULE: K-W; RESULT: UNCURED; WHY: neither the RESPONSE nor the STATEME"
+   ]
+  }
+ ],
+ "stored_run": "gemini:12 chatgpt:0 sol:1",
+ "alt_needed": true,
+ "gate_rows": 45053
+}
