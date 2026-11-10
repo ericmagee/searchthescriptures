@@ -1,0 +1,22 @@
+hint with LINK ?: P1 [CR2] That reason removes the cause for putting away by naming a source other than him
+OK   Y1 NOT A CONTRADICTION with LINK ? to a LINK ? hint is read as answered
+       NOT A CONTRADICTION confirmed []
+OK   Y2 CONFIRMED with LINK ? breaks nothing
+       NOT CONFIRMED (form) confirmed []
+OK   Y3 NOT A CONTRADICTION with LINK ? to a hint whose link is known is read as answered
+       NOT A CONTRADICTION
+OK   Y4 a NEW line CONFIRMED with LINK ? breaks nothing
+       ["NEW NOT CONFIRMED (form)"] confirmed []
+OK   Y5 a LINK ? hint CONFIRMED under a declared link, both quotations word for word, is CONFIRMED on that link
+       CONFIRMED confirmed ["DEFENDER LINK 3"]
+OK   Y6 CONFIRMED under a link that is not declared breaks nothing
+       NOT CONFIRMED (form) confirmed []
+OK   Y7 the D6 hint CONFIRMED on LINK 6 breaks LINK 6
+       ["DEFENDER LINK 6"]
+NOTE Y8 "LINK ? (cannot be told)" on a NOT A CONTRADICTION answer reads: NO ANSWER
+NOTE Y9 "LINK unknown" on a NOT A CONTRADICTION answer reads: NO ANSWER
+OK   Z1 with 40 padding drops in CR1 the defender has 30 hints and every round is still in the prompt in full
+       defender hints 30; rounds of the hints: CR1; D6 drop among the hints: false; prompt says the list is cut: true
+OK   Z2 past the cap, the D6 drop reported as NEW is CONFIRMED on LINK 6
+       ["DEFENDER LINK 6"] no answer count 32
+9 OK, 0 FAIL
