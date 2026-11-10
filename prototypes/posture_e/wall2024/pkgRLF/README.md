@@ -25,3 +25,8 @@ Test: node pkgRLF/test_RLF.cjs (output test_RLF_out.txt). Close Enforcer Build (
 - Negative plants, must break nothing: closing [round 5]; earlier given as [round 4]; [DR 4] on a defender line; defender quotations moved to a
   CHALLENGER line with [round n] labels: all OK.
 Limit: labels such as "[R4]", "[defender round 4]" or "[closing]" still read as not in form (none occurs in the stored replies).
+
+## Repack on live s107 (s106 + pkgR1)
+Write file: pkgRLF/parent_s107_RLF.json, built by build_RLF.cjs on fetchback_live_s107.json. pkgR1 did not touch Close Enforcer Record (the 13 nodes
+it changed are the Shared Library and the 12 moved nodes). The new Close Enforcer Record is byte-equal to the graded s106 build; only that node differs
+from live s107; connections equal. Size unchanged: +186 code characters.
