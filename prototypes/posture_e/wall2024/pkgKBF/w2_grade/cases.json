@@ -1,0 +1,17 @@
+{"about":"W2 labeled cases for grading pkgKBF rev 1, labels fixed before any run. Frame: W1's run_cases (run 33798, terra, E-ANS Job 14:1 [CR3]); each sentence added to [CR4]; the judge's KEEP quotes it. raw=true keeps the bold/italic marks in the KEEP quote (W1's runner strips **). want: UNCURED when the quoted sentence is only a grant, affirmation or deferral; CURED when it carries an answer of its own.",
+"cases":[
+ {"id":"W1","s":"**On Job 14:1**, I grant it.","want":"UNCURED"},
+ {"id":"W2","s":"**On Job 14:1**, I grant it.","want":"UNCURED","raw":true},
+ {"id":"W3","s":"_On Job 14:1_, I grant the phrase is general.","want":"UNCURED"},
+ {"id":"W4","s":"__Job 14:1__, I grant it is said of all men.","want":"UNCURED"},
+ {"id":"W5","s":"*Job 14:1*: granted.","want":"UNCURED"},
+ {"id":"W6","s":"**Job 14:1-2**, I grant both verses.","want":"UNCURED"},
+ {"id":"W7","s":"**On Job 14:1**, see LINK 2.","want":"UNCURED"},
+ {"id":"W8","s":"**Job 14:1**: I affirm D6 stands as declared.","want":"UNCURED"},
+ {"id":"W9","s":"- **As to Job 14:1**, I grant it.","want":"UNCURED","raw":true},
+ {"id":"W10","s":"**On Job 14:1**, the phrase names fathers by law, so the begetting is not there.","want":"CURED"},
+ {"id":"W11","s":"**Job 14:1** speaks of all men born of a woman; Christ is not begotten by a man.","want":"CURED"},
+ {"id":"W12","s":"**On Job 14:1**, I grant it, because the register names Joseph as father by law only.","want":"CURED"},
+ {"id":"W13","s":"**On Job 14:1**, the begetting is not in the register, so the line stops at Joseph.","want":"CURED","raw":true},
+ {"id":"W14","s":"**Job** 14:1, I grant it.","want":"UNCURED","note":"bold on the book name only; outside what KBF claims to fix, so a miss here is a limit in the safe direction, not a fault of KBF."}
+]}
