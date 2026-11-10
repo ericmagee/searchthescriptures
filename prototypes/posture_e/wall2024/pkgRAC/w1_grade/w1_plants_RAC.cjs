@@ -1,6 +1,6 @@
 process.chdir(__dirname+'/../..');const fs=require('fs');const IN='/mnt/project-files/wall2024/inputs/';
 const g=f=>{let d=JSON.parse(fs.readFileSync(f,'utf8'));d=d.data||d;return d.workflow||d;};
-const LIVE=g('/mnt/project-files/wall2024/fetchback_live_s106.json'),CAND=g('pkgRAC/parent_s106_RAC.json');
+const LIVE=g(process.env.LIVEF||'/mnt/project-files/wall2024/fetchback_live_s106.json'),CAND=g(process.env.CANDF||'pkgRAC/parent_s106_RAC.json');
 const code=(W,n)=>W.nodes.find(z=>z.name===n).parameters.jsCode;const J=x=>({json:x});const cl=x=>JSON.parse(JSON.stringify(x));
 const cache={};const saved=(run,n)=>{const k=run+'|'+n;if(k in cache)return cache[k];const f=IN+run+'_'+n.replace(/ /g,'_')+'.json';if(!fs.existsSync(f))return cache[k]=null;const d=JSON.parse(fs.readFileSync(f,'utf8'));const r=Array.isArray(d)?d[d.length-1]:d;const m=(r&&r.data&&r.data.main)||(r&&r.main);return cache[k]=(m&&m[0])||[];};
 // run one node's code on a stored debate; over = node name -> items (or null for "not executed"); W gives params.jsCode of any node
@@ -66,5 +66,9 @@ const out=[];const T=(c,m)=>{out.push((c?'OK   ':'FAIL ')+m);console.log((c?'OK 
  // G10 neutral reasons
  {let bad=[],n=0;for(const r of runs){const F=getF(r);if(!F)continue;let b;try{b=mrg(run(CAND,r,'Close Enforcer Build',BO(r,F)));}catch(e){continue;}if(b.cec_skip)continue;for(const c of b.cands.filter(c=>/^[AR]/.test(c.id))){n++;if(/revers|asserts more/i.test(c.why||''))bad.push(r+' '+c.id+': '+c.why);}}
   T(!bad.length,'G10 '+n+' code-found candidates; reasons naming a conclusion: '+(bad.join(' | ')||'none'));}
+ // G11 (s108 combined node): the stored 33705 replay replies write "[round 4]" under handed id A49; it must count
+ {const r='33705';const {F,B}=build(r);const P='/mnt/project-files/wall2024/staged_w4/rac_replay_s107/';
+  for(const f of ['33705_rac_DEFENDER_send1.json','33705_rac_DEFENDER_send2.json']){const t=JSON.parse(fs.readFileSync(P+f,'utf8')).content;const R=rec(r,F,B,t);
+   T(/\[round 4\]/.test(t)&&R.cec.confirmed.some(x=>x.id==='A49'),'G11 '+f+' ("[round 4]" under A49): confirmed '+JSON.stringify(R.cec.confirmed.map(x=>x.id+' '+x.side+' '+x.link))+'; rows '+R.cec.rows.map(x=>x.id+' '+x.status+(x.note?' ('+x.note+')':'')).join('; '));}}
  console.log(out.filter(x=>x.startsWith('OK')).length+' OK, '+out.filter(x=>x.startsWith('FAIL')).length+' FAIL');
 })().catch(e=>console.log('ERROR '+e.stack));

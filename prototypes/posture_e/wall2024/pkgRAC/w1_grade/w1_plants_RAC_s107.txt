@@ -1,0 +1,20 @@
+G1 pair A94 CHALLENGER links [1,2,3,4,5,6]
+OK   G1 challenger A pair confirmed: link broken ["A94 CHALLENGER 1"]; anti-cheat blocks 0; confirmed block true
+OK   G2 confirmed by NEW only: break ["NEW"], no_answer ["A94"], A block kept 3
+OK   G5 lower-case id read: ["A94"]
+33846 pairs A13,A19,A21,A57,A73,A75 links [1,2,3,4,5,6]
+   G3 rows: A13 CONFIRMED; A57 CONFIRMED (the same link is already broken by an earlier confirmed line)
+OK   G3 two A pairs (A13, A57: different quotations; A13 and A19 carry the same two sentences) confirmed on one link: pair 1 visible true, pair 2 visible true; breaks 1
+   G4 rows: NEW CONFIRMED; A73 CONFIRMED (the same link is already broken by an earlier confirmed line)
+OK   G4 NEW confirmed first on the link, then an A pair on the same link: A pair (A73) visible true
+OK   G6 one not a contradiction, one confirmed: examined endings 3, confirmed ["A75"]
+OK   G7 empty earlier quotation listed: ["A94 CHALLENGER (the anti-cheat check): the earlier quotation stands in no single round"]
+OK   G8 Panel Build with every comment stripped: 35 of 35 debates give the same candidates and not-sent list; R pairs found 2
+OK   G9 Anticheat Build on odd rounds: [{"skip":true,"why":"no close-round verse that the same side read earlier"}]
+OK   G9b Anticheat Record after it: {"acx_only":false,"acx":{"skipped":true,"why":"no close-round verse that the same side read earlier","rows":[],"reversed":{"D":[],"C":[]},"not_checked":[]}}
+OK   G9c Anticheat Build with Init Seats unexecuted: [{"skip":true,"why":"Anticheat Build failed: Referenced node is unexecuted: Init Seats"}]
+OK   G9d Anticheat Record with Anticheat Build unexecuted: {"acx_only":false,"acx":{"skipped":true,"why":"Anticheat Record failed: Referenced node is unexecuted: Anticheat Build","rows":[],"reversed":{"D":[],"C":[]},"not_checked":[]}}
+OK   G10 36 code-found candidates; reasons naming a conclusion: none
+FAIL G11 33705_rac_DEFENDER_send1.json ("[round 4]" under A49): confirmed []; rows ? NOT CONFIRMED (form) (the line is not in the CLOSE-CONTRADICTION form)
+FAIL G11 33705_rac_DEFENDER_send2.json ("[round 4]" under A49): confirmed []; rows ? NOT CONFIRMED (form) (the line is not in the CLOSE-CONTRADICTION form)
+13 OK, 2 FAIL
