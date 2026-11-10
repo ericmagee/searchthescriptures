@@ -27,3 +27,11 @@ Operator 14:42 CST 11-09: "you can't withdraw after you made the contradiction .
 - Missing: the Commitment 9 clause that anything beyond the passage, and any verse not already cited, is disregarded. Without it the enforcer is told to read the answer "before you answer its candidate: it may show how the two passages can both be true", and an answer can bring a new verse or new argument to make them agree after the closing round (W7). That is the post-close repair the operator's rule closes.
 - Proposed sentence, after "it may show how the two passages can both be true.": "Read it only as an explanation of the two passages: anything beyond them, and any verse not already cited in the rounds, is disregarded."
 - Minor: "and each debater answered" is not true when only one side was asked (34299: defender only). Suggest "and the debater asked answered".
+
+# Regrade: pkgQRA rev 2 (W3, commit a8a0f8d): PASS, not for write until the operator answers
+- Rebuild on fetchback_live_s103.json byte-equal to parent_s103_QRA.json; only Judge Contradiction Build differs from s103; connections equal.
+- probe_QRA on s103: 23 OK, 0 FAIL.
+- Stored runs (stored_eq_rev2.txt): 47 equal, 0 differ, 30 candidates.
+- Plants (plant_w2_rev2.txt): W7 now OK (the paragraph carries the Commitment 9 clause). W6 and W8 read as in rev 1: my expectations, not faults (see above).
+- Paragraph now reads, word for word, my proposed sentence after "can both be true." and "and the debater asked answered". It agrees with Commitment 9 and the operator's 14:42 rule.
+- Still untested: DeepSeek's reply with the answers in view (W4 3964: no replay path without a system change).
