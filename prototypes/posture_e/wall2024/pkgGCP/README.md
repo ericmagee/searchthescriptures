@@ -10,9 +10,9 @@ for each seat with send-back items and drv_uncured > 0, each cure report line "[
  (b) the gate's own rule re-read (drvCheck + K-F + K-UNX, as gateNewK2024 runs it) raises R on X in the text before the changes;
  (c) the same re-read on the corrected text does not raise R on X.
 Mark: "[AUDIT v52: CURE COUNT OFF (pkgGCP) -- SEAT; ITEM; RULE; ...]". A rule the re-read does not produce (K-W, K-RUL, K-CMT and others) never meets (b), so it stays counted.
-Code: gateNewK2024's inner reader moved, unchanged, to gnkRun2024 (shared by the gate and pkgGCP); gcp2024 added; the gate-skip return moved below PB0 and given the call.
+Code (rev 1b): gateNewK2024 also returns its two full lists (a: before, b: after); gcp2024 added, reusing two existing library lines (F, ctx) verbatim; the gate-skip return moved below PB0 and given the call.
 
-Size (measured): +2,470 Code text on s111, Shared Library only; no prompt text.
+Size (measured): +1,965 (rev 1b; rev 1 was +2,470) Code text on s111, Shared Library only; no prompt text.
 Tests (34626 chain, stored replies):
 - rows_equal_34626_s111_out.txt: written rows of live s111 and candidate equal; no node output differs.
 - plant_s111_gate_out.txt / plant_s111_skip_out.txt: plants A-J through the gate and with the gate skipped. A (K-B D6 vs C6, replaced by S8/S9): off, both branches. B (D6 vs C5; on s111 not replaced and still raised): stays. C (line never replaced), D (raised before and after), E (silent), F (K-C NOT COUNTED), G (TRIAL), H (raised only after): stay. I: one of two off. J: same item twice, one off.

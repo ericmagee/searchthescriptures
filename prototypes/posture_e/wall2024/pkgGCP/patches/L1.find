@@ -1,3 +1,2 @@
-function gateNewK2024(T0,T1,F0,F1,ctx){let MK=[];const run=(T,F)=>{PRS_CTX.R=ctx.R||null;PRS_L2BAD=null;const D=drvCheck(T,F.conceded_links,F.challenger_conceded_links,F.defense_standing,F.challenge_standing,!!ctx.ask,ctx.DL||[]);MK=D.marks||[];const its=(D.items||[]).slice();
-  if(ctx.R&&Object.keys(ctx.R).length){const F9=kfLines(T,ctx.R);(F9.items||[]).forEach(x=>its.push(x));MK=MK.concat(F9.marks||[]);}   if(ctx.R&&Object.keys(ctx.R).length){const U9=kunxLines(T,ctx.R);(U9.items||[]).forEach(x=>its.push({...x,why:x.link+': '+x.why}));MK=MK.concat(U9.marks||[]);}
-  return its;};
+
+ return {items};}

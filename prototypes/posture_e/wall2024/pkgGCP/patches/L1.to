@@ -1,16 +1,15 @@
-function gnkRun2024(T,F,ctx){PRS_CTX.R=ctx.R||null;PRS_L2BAD=null;const D=drvCheck(T,F.conceded_links,F.challenger_conceded_links,F.defense_standing,F.challenge_standing,!!ctx.ask,ctx.DL||[]);let MK=D.marks||[];const its=(D.items||[]).slice();
-  if(ctx.R&&Object.keys(ctx.R).length){const F9=kfLines(T,ctx.R);(F9.items||[]).forEach(x=>its.push(x));MK=MK.concat(F9.marks||[]);}   if(ctx.R&&Object.keys(ctx.R).length){const U9=kunxLines(T,ctx.R);(U9.items||[]).forEach(x=>its.push({...x,why:x.link+': '+x.why}));MK=MK.concat(U9.marks||[]);}
-  return {its,MK};}
-/* pkgGCP (W1; W3 sweep path 2): a counted cure item comes off once when an applied change replaced its line, the text before the changes raises it and the corrected text does not */
+
+ return {items,a,b};}
+/* pkgGCP (W3 path 2): a counted cure item off once when an applied change replaced its line and cleared it */
 function gcp2024(B,sbi,PB0){if(!Array.isArray(B))return null;let ch=0;const N=s=>String(s==null?'':s).replace(/\\+/g,'').replace(/[*_`"“”]+/g,'').replace(/\s+/g,' ').trim().toUpperCase();
  const o=B.map(s=>{const b=JSON.parse(s),p=b.payload||{},seat=p.judge_seat,raw=String(p.verdict_raw||''),its=(sbi||[]).filter(x=>x&&x.seat===seat),cu=new Map();
   if(its.length&&p.drv_uncured>0)for(const l of raw.split('\n')){const m=l.match(/^\[AUDIT v21: DEBATE RULE VIOLATION REPORT -- SEAT: [^;]*; ITEM: (.*?); RULE: ([^;]+); RESULT: ([A-Z ]+?)[;\]](.*)/);
    if(m&&m[3]!=='CURED'&&enfStatus(m[2])==='LIVE'&&!/^ NOT COUNTED|WHY: no written response/.test(m[4]))cu.set(m[2]+'|'+m[1],{i:m[1],r:m[2],l:N((m[4].match(/(?:^ |; )LINE: (.*?); (?:JUDGE )?STATEMENT: /)||[])[1]).replace(/\.\.\.$/,'').slice(0,80)});}
-  if(!cu.size)return s;const j=PB0&&(PB0.judges||[]).find(q=>q.seat===seat),PT=j?gatePromptText2024(j.body):'',ctx={R:PT?ciRounds(PT):null,DL:PT?drvLinks(PT):[],ask:PT.includes('CITATION CHECK')};
-  const F={verdict_tag:p.verdict_tag,defense_standing:p.defense_standing,conceded_links:p.conceded_links,challenge_standing:p.challenge_standing,challenger_conceded_links:p.challenger_conceded_links};
-  let R,a,z;try{R=sbApply2024(seat,raw,F,its,ctx.R);if(!R||!(R.rp||[]).length)return s;a=gnkRun2024(cureJText(raw,true),F,ctx).its;z=gnkRun2024(R.text,R.fields,ctx).its;}catch(e){return s;}
+  if(!cu.size)return s;
+ const F={verdict_tag:p.verdict_tag,defense_standing:p.defense_standing,conceded_links:p.conceded_links,challenge_standing:p.challenge_standing,challenger_conceded_links:p.challenger_conceded_links};
+ const j=PB0&&(PB0.judges||[]).find(q=>q.seat===seat);const PT=j?gatePromptText2024(j.body):'';const ctx={R:PT?ciRounds(PT):null,DL:PT?drvLinks(PT):[],ask:PT.includes('CITATION CHECK')};
+  let R,a,z;try{R=sbApply2024(seat,raw,F,its,ctx.R);if(!R||!(R.rp||[]).length)return s;const K=gateNewK2024(cureJText(raw,true),R.text,F,R.fields,ctx);a=K.a||[];z=K.b||[];}catch(e){return s;}
   const hit=(L,c)=>L.some(x=>x.rule===c.r&&[x.link,(x.side||'')+' STANDING'].some(k=>N(k)===N(c.i)));
   const off=[...cu.values()].filter(c=>c.l&&R.rp.some(([o0])=>N(cureSafe(o0)).includes(c.l))&&hit(a,c)&&!hit(z,c));if(!off.length)return s;
-  p.drv_uncured=Math.max(0,p.drv_uncured-off.length);p.verdict_raw=raw+off.map(c=>'\n[AUDIT v52: CURE COUNT OFF (pkgGCP) -- SEAT: '+seat+'; ITEM: '+c.i+'; RULE: '+c.r+'; an applied change replaced the line, and the corrected judgment no longer raises the item; its cure count comes off]').join('');ch++;return JSON.stringify(b);});
+  p.drv_uncured=Math.max(0,p.drv_uncured-off.length);p.verdict_raw=raw+off.map(c=>'\n[AUDIT v52: CURE COUNT OFF (pkgGCP) -- SEAT: '+seat+'; ITEM: '+c.i+'; RULE: '+c.r+'; an applied change replaced the line and cleared it; its count comes off]').join('');ch++;return JSON.stringify(b);});
  return ch?o:null;}
-function gateNewK2024(T0,T1,F0,F1,ctx){let MK=[];const run=(T,F)=>{const o=gnkRun2024(T,F,ctx);MK=o.MK;return o.its;};
