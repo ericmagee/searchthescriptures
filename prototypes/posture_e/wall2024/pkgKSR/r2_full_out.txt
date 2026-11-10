@@ -1,0 +1,48 @@
+##### joint_GFS_QRD_F3A2s
+ran Second Alternate? (1 items)
+ran R2 Alternate Build (1 items)
+ran R2 Alternate Payloads (1 items)
+  payload cure: [null]
+ran R2 Alternate Cure Build (1 items)
+ran R2 Alternate Cure Normalize (1 items)
+ran R2 Alternate Merge Seat (1 items)
+  Merge Seat: haiku NOT SEATED (1 uncured item(s)); seated []
+  haiku KEYSTONE: KEYSTONE: D6 -- STANDS -- The conclusion that Christ had no biological father remains
+  tried keys: removed_seat,alternate,api_model,result,why,verdict_raw
+  uncured detail: {}
+  UNCURED lines: [AUDIT v21: DEBATE RULE VIOLATION REPORT -- SEAT: haiku; ITEM: keystone; RULE: K-RUL; RESULT: UNCURED; WHY: TRIAL rule, NO WRITTEN RESPONSE: counts in drv_uncured like a LIVE item (silence count): no written response; LINE: deciding ruling keystone: 
+ran R2 Alt Seated (1 items)
+ran R2 Alt Judge Enforcer Build (1 items)
+  enforcer: je_skip [[false,null,0]]
+  stored judge enforcer items for sol: 0,1,2,3,4,5
+ran R2 Alt Judge Enforcer Retry Build (1 items)
+ran R2 Alt Judge Enforcer Record (1 items)
+ran R2 Alt Send Back Build (1 items)
+  R2 Alt Send Back Build items (0):
+    
+  not_sent by pkgECB: 0 []
+  items on D6 or KEYSTONE lines sent: 0
+##### joint_plus_KSR_ECB_rev3
+ran Second Alternate? (1 items)
+ran R2 Alternate Build (1 items)
+ran R2 Alternate Payloads (1 items)
+  payload cure: [null]
+ran R2 Alternate Cure Build (1 items)
+ran R2 Alternate Cure Normalize (1 items)
+ran R2 Alternate Merge Seat (1 items)
+  Merge Seat: haiku NOT SEATED (1 uncured item(s)); seated []
+  haiku KEYSTONE: KEYSTONE: D6 -- BROKEN -- LINK 6 BROKEN BY A CONFIRMED CLOSING CONTRADICTION
+  tried keys: removed_seat,alternate,api_model,result,why,verdict_raw
+  uncured detail: {}
+  UNCURED lines: [AUDIT v21: DEBATE RULE VIOLATION REPORT -- SEAT: haiku; ITEM: keystone; RULE: K-RUL; RESULT: UNCURED; WHY: TRIAL rule, NO WRITTEN RESPONSE: counts in drv_uncured like a LIVE item (silence count): no written response; LINE: deciding ruling keystone: 
+ran R2 Alt Seated (1 items)
+ran R2 Alt Judge Enforcer Build (1 items)
+  enforcer: je_skip [[false,null,0]]
+  stored judge enforcer items for sol: 0,1,2,3,4,5
+ran R2 Alt Judge Enforcer Retry Build (1 items)
+ran R2 Alt Judge Enforcer Record (1 items)
+ran R2 Alt Send Back Build (1 items)
+  R2 Alt Send Back Build items (0):
+    
+  not_sent by pkgECB: 0 []
+  items on D6 or KEYSTONE lines sent: 0
