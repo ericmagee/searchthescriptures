@@ -1,0 +1,13 @@
+OK   C1 34626 as stored (haiku did not parse; pool haiku only) | s110: round 2 does not run (expected -)
+OK   C1 34626 as stored (haiku did not parse; pool haiku only) | G1: round 2 does not run (expected -)
+OK   C1 34626 as stored (haiku did not parse; pool haiku only) | RETRY: round 2 does not run, retry anthropic/claude-haiku-5.5 (expected -)
+OK   C1 34626 as stored (haiku did not parse; pool haiku only) | ALL: round 2 runs, free haiku, retry anthropic/claude-haiku-5.5 (expected haiku)
+OK   C2 round 1 glm, content null; pool glm, haiku | s110: round 2 does not run (expected -)
+OK   C2 round 1 glm, content null; pool glm, haiku | G1: round 2 runs, free haiku (expected haiku)
+OK   C2 round 1 glm, content null; pool glm, haiku | RETRY: round 2 runs, free glm, retry z-ai/glm-5.3 (expected glm)
+OK   C2 round 1 glm, content null; pool glm, haiku | ALL: round 2 runs, free glm,haiku, retry z-ai/glm-5.3 (expected glm,haiku)
+OK   C3 round 1 glm, refused for uncured items; pool glm, haiku | s110: round 2 does not run (expected -)
+OK   C3 round 1 glm, refused for uncured items; pool glm, haiku | G1: round 2 runs, free haiku (expected haiku)
+OK   C3 round 1 glm, refused for uncured items; pool glm, haiku | RETRY: round 2 does not run (expected -)
+OK   C3 round 1 glm, refused for uncured items; pool glm, haiku | ALL: round 2 runs, free haiku (expected haiku)
+12 OK, 0 FAIL

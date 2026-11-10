@@ -13,3 +13,7 @@ stays unfilled (debate_removals kind not_counted), so the panel counts two judge
   model planted in the pool (glm), live s110 code runs round 2 for luna with glm. In 34626 the pool held only haiku, so round 2 found no model.
   Change needed: a second model in the alternate pool (a seat data change, the operator's choice of model). Size 0 code, 0 prompt.
   Cost: one full call of that model when it fires (about 108,000 prompt tokens at 34626's size).
+## Split (12:1x CST): SET=G1|RETRY|ALL node pkgF3A/build_F3A.cjs <fetch-back> <out>. test_F3A_split.cjs: 12 OK.
+- G1 alone (parent_s110_F3A_G1.json): the haiku exemption in Second Alternate?'s family rule. +46 code (measured), no prompt.
+- RETRY alone (parent_s110_F3A_RETRY.json): same model once after an unusable reply. +403 code (measured), no prompt.
+- Both (parent_s110_F3A.json): +449. In 34626 only both together run round 2 (haiku is Anthropic and so are both debaters).
