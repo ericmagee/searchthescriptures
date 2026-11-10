@@ -1,5 +1,5 @@
 const fs=require('fs');const D=process.argv[2];const ld=f=>{let d=JSON.parse(fs.readFileSync(f,'utf8'));d=d.data||d;return d.workflow||d;};
-const PB=ld(D+'/parent_s102_QRA.json').nodes.find(n=>n.name==='Judge Contradiction Build').parameters.jsCode;
+const PB=ld(D+'/parent_s103_QRA.json').nodes.find(n=>n.name==='Judge Contradiction Build').parameters.jsCode;
 const FX=JSON.parse(fs.readFileSync(D+'/fixture_34299.json','utf8'));const clone=o=>JSON.parse(JSON.stringify(o));
 const run=async(src,fx)=>{const $=nm=>{const has=Object.prototype.hasOwnProperty.call(fx,nm);return {isExecuted:has,first:()=>{if(!has)throw new Error('no '+nm);return {json:fx[nm]};},all:()=>has?[{json:fx[nm]}]:[]};};return (await new Function('$','$input','return (async()=>{\n'+src+'\n})();')($,{first:()=>({json:{}}),all:()=>[{json:{}}]}))[0].json;};
 const U=o=>(((o.body||{}).messages||[])[1]||{}).content||'';
