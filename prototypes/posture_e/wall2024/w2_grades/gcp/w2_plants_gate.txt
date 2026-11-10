@@ -1,0 +1,48 @@
+CANDIDATE pkgGCP/parent_s111_GCP.json MODE gate 
+CONTROL: Panel Cure Check [luna:0 chatgpt:0 sol:0] | Send Back Record [luna:4 chatgpt:0 sol:1] | Gate Record [luna:11 chatgpt:0 sol:1] 
+  rows: luna:11 chatgpt:0 sol:1
+
+W1 luna A, engine LINE form (297 + "...")
+  Panel Cure Check [luna:1 chatgpt:0 sol:0] | Send Back Record [luna:5 chatgpt:0 sol:1] | Gate Record [luna:11 chatgpt:0 sol:1]
+  rows: luna:11 chatgpt:0 sol:1
+  marks: [AUDIT v52: CURE COUNT OFF (pkgGCP) -- SEAT: luna; ITEM: D6 vs C6; RULE: K-B; an applied change replaced the line and cleared it; its count comes off]
+
+W2 luna A, WHY text and a STATEMENT field before JUDGE STATEMENT (stored form, 362 rows)
+  Panel Cure Check [luna:1 chatgpt:0 sol:0] | Send Back Record [luna:5 chatgpt:0 sol:1] | Gate Record [luna:11 chatgpt:0 sol:1]
+  rows: luna:11 chatgpt:0 sol:1
+  marks: [AUDIT v52: CURE COUNT OFF (pkgGCP) -- SEAT: luna; ITEM: D6 vs C6; RULE: K-B; an applied change replaced the line and cleared it; its count comes off]
+
+W3 luna A, LINE shorter than 80 after N (first 40 chars of the line)
+  Panel Cure Check [luna:1 chatgpt:0 sol:0] | Send Back Record [luna:5 chatgpt:0 sol:1] | Gate Record [luna:11 chatgpt:0 sol:1]
+  rows: luna:11 chatgpt:0 sol:1
+  marks: [AUDIT v52: CURE COUNT OFF (pkgGCP) -- SEAT: luna; ITEM: D6 vs C6; RULE: K-B; an applied change replaced the line and cleared it; its count comes off]
+
+W4 luna A, but luna has no send-back items (no applied change; expect stays)
+  Panel Cure Check [luna:1 chatgpt:0 sol:0] | Send Back Record [luna:5 chatgpt:0 sol:1] | Gate Record [luna:5 chatgpt:1 sol:1]
+  rows: luna:5 chatgpt:1 sol:1
+  marks: none
+
+W5 sol, item D6 vs C6 with sol's own D6 vs C6 line
+  Panel Cure Check [luna:0 chatgpt:0 sol:1] | Send Back Record [luna:4 chatgpt:0 sol:2] | Gate Record [luna:11 chatgpt:0 sol:1]
+  rows: luna:11 chatgpt:0 sol:1
+  marks: [AUDIT v52: CURE COUNT OFF (pkgGCP) -- SEAT: sol; ITEM: D6 vs C6; RULE: K-B; an applied change replaced the line and cleared it; its count comes off]
+
+W6 chatgpt (no send-back items), A form (expect stays)
+  Panel Cure Check [luna:0 chatgpt:1 sol:0] | Send Back Record [luna:4 chatgpt:1 sol:1] | Gate Record [luna:11 chatgpt:1 sol:1]
+  rows: luna:11 chatgpt:1 sol:1
+  marks: none
+
+W7 luna A, RESULT: CURED (expect stays, nothing counted)
+  Panel Cure Check [luna:0 chatgpt:0 sol:0] | Send Back Record [luna:4 chatgpt:0 sol:1] | Gate Record [luna:11 chatgpt:0 sol:1]
+  rows: luna:11 chatgpt:0 sol:1
+  marks: none
+
+W8 luna A, seat name in the line differs (SEAT: sol written in luna's body; expect off by body seat)
+  Panel Cure Check [luna:1 chatgpt:0 sol:0] | Send Back Record [luna:5 chatgpt:0 sol:1] | Gate Record [luna:11 chatgpt:0 sol:1]
+  rows: luna:11 chatgpt:0 sol:1
+  marks: [AUDIT v52: CURE COUNT OFF (pkgGCP) -- SEAT: luna; ITEM: D6 vs C6; RULE: K-B; an applied change replaced the line and cleared it; its count comes off]
+
+W9 luna A with drv not raised (count 0 room; floor check)
+  Panel Cure Check [luna:0 chatgpt:0 sol:0] | Send Back Record [luna:4 chatgpt:0 sol:1] | Gate Record [luna:10 chatgpt:0 sol:1]
+  rows: luna:10 chatgpt:0 sol:1
+  marks: [AUDIT v52: CURE COUNT OFF (pkgGCP) -- SEAT: luna; ITEM: D6 vs C6; RULE: K-B; an applied change replaced the line and cleared it; its count comes off]

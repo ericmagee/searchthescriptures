@@ -1,0 +1,63 @@
+CANDIDATE pkgGCP/parent_s111_GCP.json MODE gate 
+CONTROL: Panel Cure Check [luna:0 chatgpt:0 sol:0] | Send Back Record [luna:4 chatgpt:0 sol:1] | Gate Record [luna:11 chatgpt:0 sol:1] 
+  rows: luna:11 chatgpt:0 sol:1
+
+A  K-B D6 vs C6, its line replaced by S8/S9, raised before, not after (expect off)
+  Panel Cure Check [luna:1 chatgpt:0 sol:0] | Send Back Record [luna:5 chatgpt:0 sol:1] | Gate Record [luna:11 chatgpt:0 sol:1]
+  rows: luna:11 chatgpt:0 sol:1
+  gate skipped: false
+  marks: [AUDIT v52: CURE COUNT OFF (pkgGCP) -- SEAT: luna; ITEM: D6 vs C6; RULE: K-B; an applied change replaced the line and cleared it; its count comes off]
+
+B  K-B D6 vs C5 (on s111 its line is not replaced and still raised after: expect stays; on s110 replaced: expect off)
+  Panel Cure Check [luna:1 chatgpt:0 sol:0] | Send Back Record [luna:5 chatgpt:0 sol:1] | Gate Record [luna:12 chatgpt:0 sol:1]
+  rows: luna:12 chatgpt:0 sol:1
+  gate skipped: false
+  marks: none
+
+C  K-B D6 vs C6 but LINE of D1 vs C1, never replaced (expect stays)
+  Panel Cure Check [luna:1 chatgpt:0 sol:0] | Send Back Record [luna:5 chatgpt:0 sol:1] | Gate Record [luna:12 chatgpt:0 sol:1]
+  rows: luna:12 chatgpt:0 sol:1
+  gate skipped: false
+  marks: none
+
+D  K-S3 #1, raised before and after (expect stays)
+  Panel Cure Check [luna:1 chatgpt:0 sol:0] | Send Back Record [luna:5 chatgpt:0 sol:1] | Gate Record [luna:12 chatgpt:0 sol:1]
+  rows: luna:12 chatgpt:0 sol:1
+  gate skipped: false
+  marks: none
+
+E  K-B D6 vs C6 silent: WHY no written response (expect stays)
+  Panel Cure Check [luna:1 chatgpt:0 sol:0] | Send Back Record [luna:5 chatgpt:0 sol:1] | Gate Record [luna:12 chatgpt:0 sol:1]
+  rows: luna:12 chatgpt:0 sol:1
+  gate skipped: false
+  marks: none
+
+F  K-C on D6 vs C6, NOT COUNTED (expect stays; drv not raised by the cure)
+  Panel Cure Check [luna:0 chatgpt:0 sol:0] | Send Back Record [luna:4 chatgpt:0 sol:1] | Gate Record [luna:11 chatgpt:0 sol:1]
+  rows: luna:11 chatgpt:0 sol:1
+  gate skipped: false
+  marks: none
+
+G  K-RUL TRIAL on D6 vs C6 (expect stays)
+  Panel Cure Check [luna:0 chatgpt:0 sol:0] | Send Back Record [luna:4 chatgpt:0 sol:1] | Gate Record [luna:11 chatgpt:0 sol:1]
+  rows: luna:11 chatgpt:0 sol:1
+  gate skipped: false
+  marks: none
+
+H  K-G4 D4 vs C2: line replaced, not raised before, raised after (expect stays)
+  Panel Cure Check [luna:1 chatgpt:0 sol:0] | Send Back Record [luna:5 chatgpt:0 sol:1] | Gate Record [luna:12 chatgpt:0 sol:1]
+  rows: luna:12 chatgpt:0 sol:1
+  gate skipped: false
+  marks: none
+
+I  two lines for A and B (expect off 1 on s111, 2 on s110)
+  Panel Cure Check [luna:2 chatgpt:0 sol:0] | Send Back Record [luna:6 chatgpt:0 sol:1] | Gate Record [luna:12 chatgpt:0 sol:1]
+  rows: luna:12 chatgpt:0 sol:1
+  gate skipped: false
+  marks: [AUDIT v52: CURE COUNT OFF (pkgGCP) -- SEAT: luna; ITEM: D6 vs C6; RULE: K-B; an applied change replaced the line and cleared it; its count comes off]
+
+J  the same item twice (A twice; expect off 1: one item, drv +2 planted)
+  Panel Cure Check [luna:2 chatgpt:0 sol:0] | Send Back Record [luna:6 chatgpt:0 sol:1] | Gate Record [luna:12 chatgpt:0 sol:1]
+  rows: luna:12 chatgpt:0 sol:1
+  gate skipped: false
+  marks: [AUDIT v52: CURE COUNT OFF (pkgGCP) -- SEAT: luna; ITEM: D6 vs C6; RULE: K-B; an applied change replaced the line and cleared it; its count comes off]
