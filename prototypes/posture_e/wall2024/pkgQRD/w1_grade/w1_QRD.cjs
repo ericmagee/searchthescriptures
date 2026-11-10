@@ -55,4 +55,22 @@ const recOf=(items,seat,side)=>items[0].record.find(r=>r.judge===seat&&r.side===
  {const A=plant(os=>{os[1].defender={...os[1].defender,quote:s4[3]||s4[1],earlier_quote:s3[3]||s3[1]};os[2].defender={...os[2].defender,quote:s4[4]||s4[2],earlier_quote:s3[4]||s3[2]};os[1].challenger={...os[1].challenger,quote:'a quotation that does not stand anywhere'};});
   const bl=await go(L,'QR Check',{},A),bn=await go(N,'QR Check',{},A);const sec=obj(A,1);const fl=await finalRun(L,bl,1,sec),fn=await finalRun(N,bn,1,sec);
   const sr=x=>JSON.stringify(x.map(j=>({...j,record:j.record&&j.record.map(r=>({...r,redirect:undefined,redirect_note:undefined}))})));T(ret(bn)===ret(bl)&&sr(fl)===sr(fn),'D7 fault-only return ('+ret(bn)+'): QR Final equal to live');}
+
+ // D8 / D9 faulted asker (rev 2)
+ const BAD='a quotation that does not stand anywhere';
+ const fin=async(w,co,sec)=>{const R=co.map((j,i)=>{const x=sec[i];return x===undefined?rep('OK'):(x&&x.__err?{error:{message:'timeout'}}:rep(x));});return go(w,'QR Final',{'QR Check':co.map(j=>({json:j}))},R.map(r=>({json:r})));};
+ const inPair=r=>r&&r.status!=='DROPPED'&&r.round==='CR4'&&r.earlier_round==='CR3'&&(D.quote.includes(r.quote)||r.quote.includes(D.quote));
+ const pairCount=f=>['luna','chatgpt','sol'].filter(s=>inPair(recOf(f,s,'defender'))).length;
+ const P={a:os=>{os[0].challenger={...os[0].challenger,quote:BAD};},b:os=>{os[0].defender={...os[0].defender,question:''};},
+  c:os=>{os[0].challenger={...os[0].challenger,quote:BAD};os[1].challenger={...os[1].challenger,quote:BAD};},
+  d:os=>{os.forEach(o=>{o.challenger={...o.challenger,quote:BAD};});},e:os=>{}};
+ const want={a:'luna:fault, chatgpt:-, sol:defender',b:'luna:fault, chatgpt:-, sol:defender',c:'luna:fault, chatgpt:fault, sol:-',d:'luna:fault, chatgpt:fault, sol:fault',e:'luna:-, chatgpt:defender, sol:defender'};
+ for(const k of 'abcde'){const A=plant(os=>{os[1].defender={...D};os[2].defender={...D};P[k](os);});const b=await go(N,'QR Check',{},A),l=await go(L,'QR Check',{},A);
+  T(ret(b)===want[k],'D8'+k+': '+ret(b)+' (live '+ret(l)+')');
+  if(k==='a'||k==='c'){const o=[0,1,2].map(i=>obj(A,i));const so=obj(ask,0);
+   const lunaSec={failed:{__err:1},notjson:'I keep my question.',changed:{challenger:so.challenger,defender:{...D,quote:s4[1],earlier_quote:s3[1],question:'How do these agree?'}}};
+   for(const [lab,ls] of Object.entries(lunaSec)){
+    const mk=co=>co.map((j,i)=>!j.retry?undefined:(i===0?ls:{challenger:obj(ask,i).challenger,defender:{...D,quote:s4[2],earlier_quote:s3[2],question:'How do these agree?'}}));
+    const fl=await fin(L,l,mk(l)),fn=await fin(N,b,mk(b));const cl_=pairCount(fl),cn=pairCount(fn);
+    T(!(cl_>=1&&cn===0),'D9 D8'+k+' luna second reply '+lab+': judges still asking the defender about CR3/CR4: live '+cl_+', candidate '+cn);}}}
  console.log(out.filter(x=>x.startsWith('OK')).length+' OK, '+out.filter(x=>x.startsWith('FAIL')).length+' FAIL');})().catch(e=>{console.log('ERROR '+e.stack);});
