@@ -1,0 +1,64 @@
+LIVE stored: [{"seat":"luna","items":5,"cured":4,"uncured_counted":1,"fresh":2,"error":null}] luna drv_uncured 2 | G5 CONTRADICTION (E-GATE M) | UNCURED ; NEW RULE K-G4 (K re-read) | UNCURED ; NEW RULE K-F (K re-read) | UNCURED
+GFC  stored: [{"seat":"luna","items":5,"cured":5,"uncured_counted":0,"fresh":0,"error":null}] luna drv_uncured 1 | G5 CONTRADICTION (E-GATE M) | CURED
+LIVE reason-field: [{"seat":"luna","items":5,"cured":5,"uncured_counted":0,"fresh":0,"error":null}] luna drv_uncured 1 | G5 CONTRADICTION (E-GATE M) | CURED
+OK   T1 G5 CURED, no new item, gate 5 of 5, luna drv_uncured 1
+OK   T1 luna written row vs live reason-field form: differing keys []
+OK   T2 reason-field form: candidate equals live (all rows)
+OK   T7 terra and sol rows unchanged (stored)
+OK   T1 all written rows equal live with the FORCED line in the reason field
+OK   T7 luna gate rows G1 to G4 unchanged (stored)
+LIVE bad FORCED in the reason field: [{"seat":"luna","items":5,"cured":4,"uncured_counted":1,"fresh":1,"error":null}] drv 2 | G5 CONTRADICTION (E-GATE M) | UNCURED ; NEW RULE K-G4 (K re-read) | UNCURED
+T3 other pair (FORCED names D4 vs C3)
+     LIVE [{"seat":"luna","items":5,"cured":4,"uncured_counted":1,"fresh":2,"error":null}] drv 2 | G5 CONTRADICTION (E-GATE M) | UNCURED ; NEW RULE K-G4 (K re-read) | UNCURED ; NEW RULE K-F (K re-read) | UNCURED
+     GFC  [{"seat":"luna","items":5,"cured":4,"uncured_counted":1,"fresh":2,"error":null}] drv 2 | G5 CONTRADICTION (E-GATE M) | UNCURED ; NEW RULE K-G4 (K re-read) | UNCURED ; NEW RULE K-F (K re-read) | UNCURED
+     rows equal live: true; terra, sol equal: true; G1 to G4 equal to live for the same reply: true; all rows equal live with the FORCED line in the reason field: false
+T4 bad FORCED (quotation not in its round)
+     LIVE [{"seat":"luna","items":5,"cured":4,"uncured_counted":1,"fresh":2,"error":null}] drv 2 | G5 CONTRADICTION (E-GATE M) | UNCURED ; NEW RULE K-G4 (K re-read) | UNCURED ; NEW RULE K-F (K re-read) | UNCURED
+     GFC  [{"seat":"luna","items":5,"cured":4,"uncured_counted":1,"fresh":1,"error":null}] drv 2 | G5 CONTRADICTION (E-GATE M) | UNCURED ; NEW RULE K-G4 (K re-read) | UNCURED
+     rows equal live: false; terra, sol equal: true; G1 to G4 equal to live for the same reply: true; all rows equal live with the FORCED line in the reason field: false; equals live with that bad line in the reason field (seats, drv): true
+T5a separator " / "
+     LIVE [{"seat":"luna","items":5,"cured":4,"uncured_counted":1,"fresh":2,"error":null}] drv 2 | G5 CONTRADICTION (E-GATE M) | UNCURED ; NEW RULE K-G4 (K re-read) | UNCURED ; NEW RULE K-F (K re-read) | UNCURED
+     GFC  [{"seat":"luna","items":5,"cured":5,"uncured_counted":0,"fresh":0,"error":null}] drv 1 | G5 CONTRADICTION (E-GATE M) | CURED
+     rows equal live: false; terra, sol equal: true; G1 to G4 equal to live for the same reply: true; all rows equal live with the FORCED line in the reason field: true
+T5b separator " -- "
+     LIVE [{"seat":"luna","items":5,"cured":4,"uncured_counted":1,"fresh":2,"error":null}] drv 2 | G5 CONTRADICTION (E-GATE M) | UNCURED ; NEW RULE K-G4 (K re-read) | UNCURED ; NEW RULE K-F (K re-read) | UNCURED
+     GFC  [{"seat":"luna","items":5,"cured":5,"uncured_counted":0,"fresh":0,"error":null}] drv 1 | G5 CONTRADICTION (E-GATE M) | CURED
+     rows equal live: false; terra, sol equal: true; G1 to G4 equal to live for the same reply: true; all rows equal live with the FORCED line in the reason field: true
+T5c separator ". " (collision line ends with its own period)
+     LIVE [{"seat":"luna","items":5,"cured":4,"uncured_counted":1,"fresh":2,"error":null}] drv 2 | G5 CONTRADICTION (E-GATE M) | UNCURED ; NEW RULE K-G4 (K re-read) | UNCURED ; NEW RULE K-F (K re-read) | UNCURED
+     GFC  [{"seat":"luna","items":5,"cured":5,"uncured_counted":0,"fresh":0,"error":null}] drv 1 | G5 CONTRADICTION (E-GATE M) | CURED
+     rows equal live: false; terra, sol equal: true; G1 to G4 equal to live for the same reply: true; all rows equal live with the FORCED line in the reason field: true
+T5d separator " | "
+     LIVE [{"seat":"luna","items":5,"cured":4,"uncured_counted":1,"fresh":2,"error":null}] drv 2 | G5 CONTRADICTION (E-GATE M) | UNCURED ; NEW RULE K-G4 (K re-read) | UNCURED ; NEW RULE K-F (K re-read) | UNCURED
+     GFC  [{"seat":"luna","items":5,"cured":5,"uncured_counted":0,"fresh":0,"error":null}] drv 1 | G5 CONTRADICTION (E-GATE M) | CURED
+     rows equal live: false; terra, sol equal: true; G1 to G4 equal to live for the same reply: true; all rows equal live with the FORCED line in the reason field: true
+T5e FORCED (Commitment 4):
+     LIVE [{"seat":"luna","items":5,"cured":4,"uncured_counted":1,"fresh":2,"error":null}] drv 2 | G5 CONTRADICTION (E-GATE M) | UNCURED ; NEW RULE K-G4 (K re-read) | UNCURED ; NEW RULE K-F (K re-read) | UNCURED
+     GFC  [{"seat":"luna","items":5,"cured":5,"uncured_counted":0,"fresh":0,"error":null}] drv 1 | G5 CONTRADICTION (E-GATE M) | CURED
+     rows equal live: false; terra, sol equal: true; G1 to G4 equal to live for the same reply: true; all rows equal live with the FORCED line in the reason field: false
+T6a CHANGE TO is the FORCED line alone
+     LIVE [{"seat":"luna","items":5,"cured":5,"uncured_counted":0,"fresh":0,"error":null}] drv 1 | G5 CONTRADICTION (E-GATE M) | CURED
+     GFC  [{"seat":"luna","items":5,"cured":5,"uncured_counted":0,"fresh":0,"error":null}] drv 1 | G5 CONTRADICTION (E-GATE M) | CURED
+     rows equal live: true; terra, sol equal: true; G1 to G4 equal to live for the same reply: true; all rows equal live with the FORCED line in the reason field: false
+T6b CHANGE TO is the collision line alone
+     LIVE [{"seat":"luna","items":5,"cured":4,"uncured_counted":1,"fresh":1,"error":null}] drv 2 | G5 CONTRADICTION (E-GATE M) | UNCURED ; NEW RULE K-G4 (K re-read) | UNCURED
+     GFC  [{"seat":"luna","items":5,"cured":4,"uncured_counted":1,"fresh":1,"error":null}] drv 2 | G5 CONTRADICTION (E-GATE M) | UNCURED ; NEW RULE K-G4 (K re-read) | UNCURED
+     rows equal live: true; terra, sol equal: true; G1 to G4 equal to live for the same reply: true; all rows equal live with the FORCED line in the reason field: false
+T6c collision line, then the word FORCED in prose, no FORCED line
+     LIVE [{"seat":"luna","items":5,"cured":4,"uncured_counted":1,"fresh":2,"error":null}] drv 2 | G5 CONTRADICTION (E-GATE M) | UNCURED ; NEW RULE K-G4 (K re-read) | UNCURED ; NEW RULE K-F (K re-read) | UNCURED
+     GFC  [{"seat":"luna","items":5,"cured":4,"uncured_counted":1,"fresh":2,"error":null}] drv 2 | G5 CONTRADICTION (E-GATE M) | UNCURED ; NEW RULE K-G4 (K re-read) | UNCURED ; NEW RULE K-F (K re-read) | UNCURED
+     rows equal live: true; terra, sol equal: true; G1 to G4 equal to live for the same reply: true; all rows equal live with the FORCED line in the reason field: false
+T6e collision line graded UNDERDETERMINED with a FORCED line for the pair
+     LIVE [{"seat":"luna","items":5,"cured":4,"uncured_counted":1,"fresh":0,"error":null}] drv 2 | G5 CONTRADICTION (E-GATE M) | UNCURED
+     GFC  [{"seat":"luna","items":5,"cured":4,"uncured_counted":1,"fresh":0,"error":null}] drv 2 | G5 CONTRADICTION (E-GATE M) | UNCURED
+     rows equal live: false; terra, sol equal: true; G1 to G4 equal to live for the same reply: true; all rows equal live with the FORCED line in the reason field: false
+T6f lower case "forced:"
+     LIVE [{"seat":"luna","items":5,"cured":4,"uncured_counted":1,"fresh":2,"error":null}] drv 2 | G5 CONTRADICTION (E-GATE M) | UNCURED ; NEW RULE K-G4 (K re-read) | UNCURED ; NEW RULE K-F (K re-read) | UNCURED
+     GFC  [{"seat":"luna","items":5,"cured":4,"uncured_counted":1,"fresh":2,"error":null}] drv 2 | G5 CONTRADICTION (E-GATE M) | UNCURED ; NEW RULE K-G4 (K re-read) | UNCURED ; NEW RULE K-F (K re-read) | UNCURED
+     rows equal live: true; terra, sol equal: true; G1 to G4 equal to live for the same reply: true; all rows equal live with the FORCED line in the reason field: false
+T6d two FORCED lines for the pair
+     LIVE [{"seat":"luna","items":5,"cured":4,"uncured_counted":1,"fresh":2,"error":null}] drv 2 | G5 CONTRADICTION (E-GATE M) | UNCURED ; NEW RULE K-G4 (K re-read) | UNCURED ; NEW RULE K-F (K re-read) | UNCURED
+     GFC  [{"seat":"luna","items":5,"cured":5,"uncured_counted":0,"fresh":0,"error":null}] drv 1 | G5 CONTRADICTION (E-GATE M) | CURED
+     rows equal live: false; terra, sol equal: true; G1 to G4 equal to live for the same reply: true; all rows equal live with the FORCED line in the reason field: false
+
+6 OK, 0 FAIL (plants T3 to T6 are read by hand below)

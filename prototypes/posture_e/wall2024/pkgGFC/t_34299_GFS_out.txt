@@ -1,0 +1,19 @@
+LIVE stored: [{"seat":"luna","items":3,"cured":0,"uncured_counted":3,"fresh":6,"error":null}]
+    G1 CONTRADICTION (E-GATE M) | UNCURED | GATE CHANGE TO: D1 vs C1 (Matthew 1:19): DEFENDER LINK BROKEN -- the proven press against D1 is left unanswered -- GROUND: [L1] Matthew 1:19 "Then Joseph her husband, bei
+    G2 CONTRADICTION (E-GATE M) | UNCURED | GATE CHANGE TO: D2 vs C1 (Matthew 1:19): DEFENDER LINK BROKEN -- the proven press against D2 is left unanswered -- GROUND: [L1] Matthew 1:19 "Then Joseph her husband, bei
+    G3 CONTRADICTION (E-GATE M) | UNCURED | GATE CHANGE TO: D5 vs C4 (Proverbs 30:19): DEFENDER LINK BROKEN -- the proven press is unanswered by an answer that does not meet its meaning -- GROUND: [L1] Proverbs 30:
+    NEW RULE K-G1 (K re-read) | UNCURED | raised after the gate answers: DEBATE RULE VIOLATION (K-G1) -- D1 vs C1 DEFENDER LINK BROKEN rests on a witness left unanswered (a witness is a verse a listed premise car
+    NEW RULE K-G1 (K re-read) | UNCURED | raised after the gate answers: DEBATE RULE VIOLATION (K-G1) -- D2 vs C1 DEFENDER LINK BROKEN rests on a witness left unanswered (a witness is a verse a listed premise car
+    NEW RULE K-G1 (K re-read) | UNCURED | raised after the gate answers: DEBATE RULE VIOLATION (K-G1) -- D5 vs C4 DEFENDER LINK BROKEN rests on a witness left unanswered (a witness is a verse a listed premise car
+    NEW RULE K-F (K re-read) | UNCURED | raised after the gate answers: no FORCED line (raised by the gate change of G1, which stays UNCURED and is counted there once; W3 2341)
+    NEW RULE K-F (K re-read) | UNCURED | raised after the gate answers: no FORCED line (raised by the gate change of G2, which stays UNCURED and is counted there once; W3 2341)
+    NEW RULE K-F (K re-read) | UNCURED | raised after the gate answers: no FORCED line (raised by the gate change of G3, which stays UNCURED and is counted there once; W3 2341)
+GFC stored: [{"seat":"luna","items":3,"cured":3,"uncured_counted":0,"fresh":0,"error":null}]
+    G1 CONTRADICTION (E-GATE M) | CURED | GATE CHANGE TO: D1 vs C1 (Matthew 1:19): DEFENDER LINK BROKEN -- the proven press against D1 is left unanswered -- GROUND: [L1] Matthew 1:19 "Then Joseph her husband, bei
+    G2 CONTRADICTION (E-GATE M) | CURED | GATE CHANGE TO: D2 vs C1 (Matthew 1:19): DEFENDER LINK BROKEN -- the proven press against D2 is left unanswered -- GROUND: [L1] Matthew 1:19 "Then Joseph her husband, bei
+    G3 CONTRADICTION (E-GATE M) | CURED | GATE CHANGE TO: D5 vs C4 (Proverbs 30:19): DEFENDER LINK BROKEN -- the proven press is unanswered by an answer that does not meet its meaning -- GROUND: [L1] Proverbs 30:
+LIVE, FORCED part moved to the reason field: [{"seat":"luna","items":3,"cured":3,"uncured_counted":0,"fresh":0,"error":null}]
+    G1 CONTRADICTION (E-GATE M) | CURED | GATE CHANGE TO: D1 vs C1 (Matthew 1:19): DEFENDER LINK BROKEN -- the proven press against D1 is left unanswered -- GROUND: [L1] Matthew 1:19 "Then Joseph her husband, bei
+    G2 CONTRADICTION (E-GATE M) | CURED | GATE CHANGE TO: D2 vs C1 (Matthew 1:19): DEFENDER LINK BROKEN -- the proven press against D2 is left unanswered -- GROUND: [L1] Matthew 1:19 "Then Joseph her husband, bei
+    G3 CONTRADICTION (E-GATE M) | CURED | GATE CHANGE TO: D5 vs C4 (Proverbs 30:19): DEFENDER LINK BROKEN -- the proven press is unanswered by an answer that does not meet its meaning -- GROUND: [L1] Proverbs 30:
+GFC stored equals live reason-field form (items and status): true
