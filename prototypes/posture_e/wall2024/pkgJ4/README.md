@@ -19,3 +19,8 @@
 - Base parent_s113_OON2_GK1.json: +118. Joint (a) joint_s113_OON2_GK1_KCQ2_KWQ2.json: +267 (118 + 149). Joint (b) joint_s113_OON2_GK1_KCQ2_KWQ2_EAD.json: +2,142 (267 + 1,875). Measured against s113; Shared Library only; prompt 0.
 - Union check on (b): 42 of 42 library nodes equal the union of the single packages' added lines; no line touched twice.
 - Chain 34726 from Panel Payloads on (a) (chain_34726_J4A2.txt): luna 0 (gate 4 of 4 cured), chatgpt 0, sol 0; alt_needed false; panel_effective chatgpt, luna, sol; all BROKEN. Haiku path forced as live (alt_kw_J4A2.txt): both K-W CURED; luna->haiku SEATED. quorum_met NOT SHOWN (database side).
+
+## Rebased on s114 (live 17:00 CST 11-10 = s113 + pkgEAD rev 3b; W4 Wall 4423)
+- s114 equals parent_s113_EAD.json node for node (0 differing nodes, measured). So joint (b) on s113 is joint (a) on s114: joint_s114_OON2_GK1_KCQ2_KWQ2.json, same bytes as joint (b) (sha256 ed0985508c10c586). +267 code over s114, Shared Library only, prompt 0. Joint (b) retired.
+- pkgKCQ/build.cjs on s114: KCQ +121, KWQ +28, BOTH +149 (parent_s114_*.json). Same node set as the s113 builds.
+- Union check on s114, 42 unpacked library nodes: joint (a) added and removed lines equal the union of BOTH_s114 and W2's parent_s114_OON2_GK1.json (sha256 54b066618b461343); 42 of 42. Same against W2's s113 base: 42 of 42.
