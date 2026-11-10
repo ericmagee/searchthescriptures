@@ -261,3 +261,34 @@ UNCURED|w3-refusal5|COUNTED. No, it should not be counted.|W3 rev 5 grade: refus
 UNCURED|w3-refusal5|COUNTED. The count stays as written.|W3 rev 5 grade: refusal.|ENFORCED
 UNCURED|w3-refusal5|COUNTED. I refuse? No: I refuse.|W3 rev 5 grade: refusal.|NOTED
 UNCURED|w3-refusal5|COUNTED. Is it? It is not a concession.|W3 rev 5 grade: refusal.|NOTED
+# --- rev 7 rule (coordinator 03:20Z 11-10): a listed sentence (P or B) is ENFORCED only when it is the whole answer after COUNTED; with any text after it, NOTED. Existing narrow labels checked: no ENFORCED case has text after its refusal sentence, so none changes. Added: W3 grade of rev 6 (grade_FUN6_w3.md), 24 correct answers (w3_good6.json) and 7 refusals (w3_bad6.json); old-column labels by W3; duplicates skipped. "COUNTED. My count is wrong." alone would read CURED (admission), per W3s reading, which I share. ---
+CURED|w3-new-form6|COUNTED. My count is wrong. I add this grant against D6.|W3 rev 6 grade: correct answer (a listed sentence corrected by the next one).|CURED
+CURED|w3-new-form6|COUNTED. The count is incorrect. It should include this grant.|W3 rev 6 grade: correct answer (a listed sentence corrected by the next one).|CURED
+CURED|w3-new-form6|COUNTED. My count is mistaken. The grant concedes D6.|W3 rev 6 grade: correct answer (a listed sentence corrected by the next one).|CURED
+CURED|w3-new-form6|COUNTED. My count is in error. D6 is conceded by the grant.|W3 rev 6 grade: correct answer (a listed sentence corrected by the next one).|CURED
+CURED|w3-new-form6|COUNTED. The grant is not a concession of D5. It is a concession of D6.|W3 rev 6 grade: correct answer (a listed sentence corrected by the next one).|CURED
+CURED|w3-new-form6|COUNTED. It is not a concession of D5. It concedes D6.|W3 rev 6 grade: correct answer (a listed sentence corrected by the next one).|CURED
+CURED|w3-new-form6|COUNTED. It does not apply to D5. It applies to D6.|W3 rev 6 grade: correct answer (a listed sentence corrected by the next one).|CURED
+CURED|w3-new-form6|COUNTED. I do not count it against D5. I count it against D6.|W3 rev 6 grade: correct answer (a listed sentence corrected by the next one).|CURED
+CURED|w3-new-form6|COUNTED. The defender never granted this. So I wrote at first; round 4 shows the grant.|W3 rev 6 grade: correct answer (a listed sentence corrected by the next one).|CURED
+CURED|w3-new-form6|COUNTED. On reflection, no. My first answer cannot stand; the grant concedes D6.|W3 rev 6 grade: correct answer (a listed sentence corrected by the next one).|CURED
+CURED|w3-new-form6|COUNTED. The count is not right without this grant.|W3 rev 6 grade: correct answer (a listed sentence corrected by the next one).|CURED
+CURED|w3-new-form6|COUNTED. My count is wrong without it.|W3 rev 6 grade: correct answer (a listed sentence corrected by the next one).|CURED
+CURED|w3-new-form6|COUNTED. My count stands at one more link: D6 is added.|W3 rev 6 grade: correct answer (a listed sentence corrected by the next one).|CURED
+CURED|w3-new-form6|COUNTED. I refuse to call it a courtesy.|W3 rev 6 grade: correct answer (a listed sentence corrected by the next one).|CURED
+CURED|w3-new-form6|COUNTED. The enforcer is right.|W3 rev 6 grade: correct answer (a listed sentence corrected by the next one).|CURED
+CURED|w3-new-form6|COUNTED. The enforcer's note is not wrong.|W3 rev 6 grade: correct answer (a listed sentence corrected by the next one).|CURED
+CURED|w3-new-form6|COUNTED. I keep my first answer on the other items.|W3 rev 6 grade: correct answer (a listed sentence corrected by the next one).|CURED
+CURED|w3-new-form6|COUNTED. It should not be counted as a courtesy.|W3 rev 6 grade: correct answer (a listed sentence corrected by the next one).|CURED
+CURED|w3-new-form6|COUNTED. This grant is a concession. It is not a courtesy.|W3 rev 6 grade: correct answer (a listed sentence corrected by the next one).|CURED
+CURED|w3-new-form6|COUNTED. The grant concedes D6. My count is wrong and I correct it.|W3 rev 6 grade: correct answer (a listed sentence corrected by the next one).|CURED
+CURED|w3-new-form6|COUNTED. D6. My count is corrected.|W3 rev 6 grade: correct answer (a listed sentence corrected by the next one).|CURED
+CURED|w3-new-form6|COUNTED. The grant was no concession in my first reading; it is one.|W3 rev 6 grade: correct answer (a listed sentence corrected by the next one).|CURED
+CURED|w3-new-form6|COUNTED. I do not concede the point to the defender. The grant is his own concession.|W3 rev 6 grade: correct answer (a listed sentence corrected by the next one).|CURED
+CURED|w3-new-form6|COUNTED. I will not count it as anything but a concession.|W3 rev 6 grade: correct answer (a listed sentence corrected by the next one).|CURED
+UNCURED|w3-refusal6|COUNTED. My count stands.|W3 rev 6 grade: refusal.|ENFORCED
+UNCURED|w3-refusal6|COUNTED. The count is wrong.|W3 rev 6 grade: refusal.|ENFORCED
+UNCURED|w3-refusal6|COUNTED. The grant is not a concession.|W3 rev 6 grade: refusal.|ENFORCED
+UNCURED|w3-refusal6|COUNTED. I do not count it. It is a courtesy.|W3 rev 6 grade: refusal.|NOTED
+UNCURED|w3-refusal6|COUNTED. That is not right. The grant is a courtesy.|W3 rev 6 grade: refusal.|NOTED
+UNCURED|w3-refusal6|COUNTED. I refuse. The defender granted nothing.|W3 rev 6 grade: refusal.|NOTED

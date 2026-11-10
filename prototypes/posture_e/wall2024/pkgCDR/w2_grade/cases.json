@@ -340,6 +340,227 @@
    "closing": "The register stops at Joseph.",
    "want": "LISTED",
    "note": "rev 2 regrade: 'nothing' later in the sentence, not after the verb"
+  },
+  {
+   "id": "W21",
+   "adds": [
+    [
+     "cr3",
+     "Nor do I drop the wording \"the register stops at Joseph\"."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "NOT LISTED",
+   "note": "rev 3 regrade, labeled before any rev 3 run: W3 class: 'Nor do I drop'"
+  },
+  {
+   "id": "W22",
+   "adds": [
+    [
+     "cr3",
+     "If I drop the wording \"the register stops at Joseph\", the chain fails, so I keep it."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "NOT LISTED",
+   "note": "rev 3 regrade, labeled before any rev 3 run: conditional drop, kept"
+  },
+  {
+   "id": "W23",
+   "adds": [
+    [
+     "cr3",
+     "Should I withdraw the wording \"the register stops at Joseph\"? The rows give no cause."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "NOT LISTED",
+   "note": "rev 3 regrade, labeled before any rev 3 run: question"
+  },
+  {
+   "id": "W24",
+   "adds": [
+    [
+     "cr3",
+     "I drop the limb on Matthew 1:25 alone, but the wording \"the register stops at Joseph\" stands."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "NOT LISTED",
+   "note": "rev 3 regrade, labeled before any rev 3 run: kept wording later in the same sentence"
+  },
+  {
+   "id": "W25",
+   "adds": [
+    [
+     "cr3",
+     "I withdraw my objection to the reading that the register stops at Joseph."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "NOT LISTED",
+   "note": "rev 3 regrade, labeled before any rev 3 run: withdraws an objection, so keeps the reading"
+  },
+  {
+   "id": "W26",
+   "adds": [
+    [
+     "cr3",
+     "The challenger demands that I withdraw the wording \"the register stops at Joseph\"; I refuse."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "NOT LISTED",
+   "note": "rev 3 regrade, labeled before any rev 3 run: reported demand, refused"
+  },
+  {
+   "id": "W27",
+   "adds": [
+    [
+     "cr3",
+     "I retract only the word \"alone\"; the wording \"the register stops at Joseph\" I keep."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "NOT LISTED",
+   "note": "rev 3 regrade, labeled before any rev 3 run: narrow retraction, wording kept"
+  },
+  {
+   "id": "W28",
+   "adds": [
+    [
+     "cr3",
+     "Were I to drop the wording \"the register stops at Joseph\", nothing would remain of LINK 6."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "NOT LISTED",
+   "note": "rev 3 regrade, labeled before any rev 3 run: W2 own: subjunctive"
+  },
+  {
+   "id": "W29",
+   "adds": [
+    [
+     "cr3",
+     "I would drop the wording \"the register stops at Joseph\" only if the rows failed, and they do not."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "NOT LISTED",
+   "note": "rev 3 regrade, labeled before any rev 3 run: W2 own: conditional 'would drop'"
+  },
+  {
+   "id": "W30",
+   "adds": [
+    [
+     "cr3",
+     "I can drop the claim that the register stops at Joseph without loss, but I do not."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "NOT LISTED",
+   "note": "rev 3 regrade, labeled before any rev 3 run: W2 own: 'can drop ... but I do not'"
+  },
+  {
+   "id": "W31",
+   "adds": [
+    [
+     "cr3",
+     "**LINK 6: NARROWED TO:** I drop the wording \"the register stops at Joseph\"."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "LISTED",
+   "note": "rev 3 regrade, labeled before any rev 3 run: W2 own: label then a true drop"
+  },
+  {
+   "id": "W32",
+   "adds": [
+    [
+     "cr3",
+     "- I withdraw the claim that the register stops at Joseph."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "LISTED",
+   "note": "rev 3 regrade, labeled before any rev 3 run: W2 own: list mark then a true drop"
+  },
+  {
+   "id": "W33",
+   "adds": [
+    [
+     "cr3",
+     "I drop the wording \"no line through Mary\" and keep \"the register stops at Joseph\"."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "NOT LISTED",
+   "note": "rev 3 regrade, labeled before any rev 3 run: W2 own: a later quoted span is kept, not dropped"
   }
  ]
 }
