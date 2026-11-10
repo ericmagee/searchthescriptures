@@ -31,3 +31,20 @@ File /mnt/project-files/wall2024/parent_s113_OON.json against live s113 (fetchba
 5. luna stays removed on the one K-G1 count; pkgOON does not restore the seat.
 
 No enforcer log row form changes, so no rolled-back insert was run.
+
+# REGRADE: pkgOON rev 2 (W2, Wall 4405/4406): PASS with limits
+
+File /mnt/project-files/wall2024/parent_s113_OON2.json against live s113. Offline; nothing written. Claim Wall 4408. Labels committed before any run (commit 08bad817). Harness pkgOON/w3_grade/r2.cjs, r3.cjs. MEASURED.
+
+- Diff: only the Shared Library; library lines 1633 and 3610; +21 code. Line 1633 is rev 1's line unchanged. Line 3610: the reason "the sentence is not found verbatim in [CRn] ("the verbatim sentence in which the ground was granted")" becomes "the sentence is not found verbatim in [CRn]; quote it verbatim, or CHANGE TO: STRUCK".
+- Readers of the old words: none in the library (the words stand once, in line 3610). They also stand in the judge prompts of Panel Build and Build Independent Verdict, as the rule itself; those are untouched.
+- Judge Enforcer Build on stored 34726: live replay equals the stored node output. Rev 2: 15 rows carry the new reason, 0 the old; with the replacement reversed the output is byte-equal to live. Output 285 characters shorter (W2's corrected figure).
+- Downstream with the new reason carried in every stored node that held the old one (43 nodes): Send Back Build under rev 2 equals live after reversal; luna's send-back prompt reads "THE ENFORCER: the sentence is not found verbatim in [CR2]; quote it verbatim, or CHANGE TO: STRUCK (code check of the judges' own rules; ruling 443)" and is 255 characters shorter (14,157 to 13,902; 15 items at 17). Gate Build under rev 2 equals rev 1 after reversal (luna 4 gate items).
+- PROMPT CHANGE: yes. Text a judge reads changes, 17 characters shorter per such item, none added. This must be stated to the operator with the write request.
+
+Limits
+1. NOT SHOWN: that a judge told the form writes it. No offline test can show it; only a live reply can.
+2. The other three E-OOR reasons still do not tell the strike form (W2's stated limit).
+3. A "not found verbatim" row that ends COUNTED is told STRUCK, and STRUCK is refused there by pkgOOS with its own reason (rev 1 plant p12, by the same code path; not rerun on rev 2).
+4. The quoted rule words leave the reason line; the rule stays in the judge's first prompt.
+5. Rev 1's limits 1, 2, 4 and 5 stand.
