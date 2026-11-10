@@ -1,0 +1,18 @@
+# W1 11-10: regenerable build outputs (rebuild with pkgKSR/build_KSR.cjs, pkgGCP/strip_from_fb.cjs, pkgCMS/build_CMS.cjs, size_R1b_s112)
+pkgLIB/strip_ALL*/
+pkgLIB/strip_ECB/
+pkgLIB/strip_GCC*/
+pkgLIB/strip_GCP*/
+pkgLIB/strip_GFS/
+pkgLIB/strip_KSR/
+pkgLIB/strip_GUB2/
+pkgLIB/strip_S112/
+pkgLIB/strip_R1R2_S11*/
+pkgLIB/strip_R1bM_S112/
+pkgLIB_ALL*/
+pkgLIB_ECB/
+pkgLIB_GCC*/
+pkgLIB_GCP*/
+pkgLIB_KSR/
+pkgLIB_R1R2_S11*/
+pkgLIB_R1bM_S112/
