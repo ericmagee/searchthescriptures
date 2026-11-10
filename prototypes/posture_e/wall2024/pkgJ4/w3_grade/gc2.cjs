@@ -1,0 +1,8 @@
+const {run,store,base}=require('../../pkgGK1/w3_grade/k.cjs');const S=JSON.stringify;const C=process.env.W3_W||'A2';const Q='names the espoused man';
+(async()=>{const gb=await run(C,'Gate Build','Reread Record',store());const lu=gb.find(x=>x.seat==='luna');const old=base['Gate Build'].flat().filter(Boolean).map(x=>x.json).find(x=>x.seat==='luna').items;
+ const c0=base['Gate Call openrouter'][0][0].json.choices[0].message.content;const lines=c0.split('\n');const rep=lu.items.map(n=>{const o=old.find(z=>z.key===n.key).gid;return lines.find(l=>new RegExp('^\\s*GATE: '+o+' \\|\\|').test(l)).replace('GATE: '+o+' ||','GATE: '+n.gid+' ||');}).join('\n');
+ const st=store({'Gate Call openrouter':o=>{o[0][0].json.choices[0].message.content=rep;},'Gate Build':o=>{o.length=0;o.push(gb.map(j=>({json:j})));}});
+ const a=(await run('LIVE','Gate Record','Gate Call openrouter',store()))[0],b=(await run(C,'Gate Record','Gate Call openrouter',st))[0];
+ const where=(g,tag)=>{let bd=g.bodies.find(x=>S(x).includes('gpt-6-luna'))||g.bodies[0];if(typeof bd==='string')bd=JSON.parse(bd);console.log(tag,'keys',Object.keys(bd).join(',').slice(0,400));const hits=[];for(const k of Object.keys(bd)){const s=typeof bd[k]==='string'?bd[k]:S(bd[k]);if(s&&s.includes(Q)){const ls=s.split(/\\n|\n/).filter(l=>l.includes(Q));hits.push(k+' x'+ls.length+': '+ls.map(l=>l.trim().slice(0,70)).join(' || '));}}console.log(tag,'\n  '+hits.join('\n  ').slice(0,1500));
+  const oc=bd.out_of_round_concessions;console.log('  out_of_round_concessions field:',oc,'| drv_uncured',bd.drv_uncured);};
+ where(a,'LIVE');where(b,C);})();

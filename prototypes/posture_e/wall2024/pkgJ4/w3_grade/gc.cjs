@@ -1,0 +1,13 @@
+const {run,store,base,J}=require('../../pkgGK1/w3_grade/k.cjs');const S=JSON.stringify;const C=process.env.W3_W||'A2';
+(async()=>{const gb=await run(C,'Gate Build','Reread Record',store());const lu=gb.find(x=>x.seat==='luna');console.log('Gate Build',C,gb.map(x=>x.seat+' '+(x.items||[]).length).join(' | '));
+ console.log(' luna items:',lu.items.map(x=>x.gid+' '+x.kind+' '+(x.src||'')+' '+String(x.key).slice(0,40)).join(' ; '));
+ const old=base['Gate Build'].flat().filter(Boolean).map(x=>x.json).find(x=>x.seat==='luna').items;const map={};lu.items.forEach(n=>{const o=old.find(z=>z.key===n.key);map[n.gid]=o&&o.gid;});console.log(' new to old gid:',S(map));
+ const c0=base['Gate Call openrouter'][0][0].json.choices[0].message.content;const lines=c0.split('\n');const pick=g=>lines.find(l=>new RegExp('^\\s*GATE: '+g+' \\|\\|').test(l));
+ const rep=Object.entries(map).map(([n,o])=>{const l=pick(o);if(!l)throw new Error('no reply line '+o);return l.replace('GATE: '+o+' ||','GATE: '+n+' ||');}).join('\n');
+ const st=store({'Gate Call openrouter':o=>{o[0][0].json.choices[0].message.content=rep;},'Gate Build':o=>{o.length=0;o.push(gb.map(j=>({json:j})));}});
+ const a=(await run('LIVE','Gate Record','Gate Call openrouter',store()))[0],b=(await run(C,'Gate Record','Gate Call openrouter',st))[0];
+ console.log('Gate Record LIVE',S(a.gate.seats.map(s=>[s.seat,s.items,s.cured,s.uncured_counted])));console.log('Gate Record',C,S(b.gate.seats.map(s=>[s.seat,s.items,s.cured,s.uncured_counted])),'alt_needed',b.alt_needed);
+ const rows=b.gate_rows.filter(x=>x.seat==='luna').map(x=>String(x.item).slice(0,34)+':'+x.cure_status+(/RECORD-ONLY/.test(x.cure_reason)?'(RECORD-ONLY)':''));console.log(' luna rows:',rows.join(' ; '));
+ console.log(' terra and sol rows equal to live:',S(a.gate_rows.filter(x=>x.seat!=='luna').map(x=>({...x,at:0})))===S(b.gate_rows.filter(x=>x.seat!=='luna').map(x=>({...x,at:0}))));
+ const txt=S(b.bodies);console.log(' struck rows still in bodies (her husband’ names the espoused man):',txt.includes('names the espoused man'));})();
+module.exports=1;
