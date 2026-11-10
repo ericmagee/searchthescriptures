@@ -9,7 +9,7 @@ const out=(L,text)=>{L+='/patched/';const n=harness('34108',{'Panel Cure Call 1 
 const isRow=r=>r.judge_model==='openai/gpt-6-luna'&&r.rule==='K-S3'&&/#1\b/.test(r.item);
 const others=o=>JSON.stringify((o.enforcer_log||[]).filter(r=>!isRow(r)).map(r=>[r.item,r.rule,r.cure_status]));
 let ok=0,bad=0;
-for(const p of JSON.parse(R(__dirname+'/w1_plants_KSL.json'))){const res={};for(const [k,L] of Object.entries(LIBS)){const o=out(L,T0.replace(LINE,()=>'RESPONSE: '+K+' | '+p.t));const r=(o.enforcer_log||[]).find(isRow)||{cure_status:'NO ROW'};res[k]={st:r.cure_status,why:String(r.cure_reason||''),oth:others(o)};}
+for(const p of JSON.parse(R(__dirname+'/'+(process.argv[2]||'w1_plants_KSL.json')))){const res={};for(const [k,L] of Object.entries(LIBS)){const o=out(L,T0.replace(LINE,()=>'RESPONSE: '+K+' | '+p.t));const r=(o.enforcer_log||[]).find(isRow)||{cure_status:'NO ROW'};res[k]={st:r.cure_status,why:String(r.cure_reason||''),oth:others(o)};}
  const s=res.KRO2_KSL,noted=/NOTED/.test(s.why);const f=[];
  if(s.st!==p.rule)f.push('ruling '+s.st+' expected '+p.rule);if(p.note==='yes'&&!noted)f.push('no note');if(p.note==='no'&&noted)f.push('unexpected note');
  if(res.KSL.st!==res.live.st)f.push('KSL alone changes the live ruling');if(res.KRO2_KSL.st!==res.KRO2.st)f.push('KSL changes the KRO2 ruling');
