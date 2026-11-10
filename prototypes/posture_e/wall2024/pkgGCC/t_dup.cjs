@@ -1,5 +1,5 @@
 // pkgGCCN rev 2 (W1): the exact G1 and G2 patch code run on stored judgment 1062's count line, plus W2's double-cure plant (two cured gate items from one counted S).
-const fs=require('fs');const P=process.argv[2]||'n2';const g1=fs.readFileSync(__dirname+'/patches/G1'+(P==='n2'?'n2':P==='n'?'n':'')+'.to','utf8'),g2=fs.readFileSync(__dirname+'/patches/G2'+(P==='n2'?'n2':'')+'.to','utf8');console.log('patch G1'+(P==='n2'?'n2':P==='n'?'n':'')+' + G2'+(P==='n2'?'n2':''));
+const fs=require('fs');const P=process.argv[2]||'n3';const g1=fs.readFileSync(__dirname+'/patches/G1'+P+'.to','utf8'),g2=fs.readFileSync(__dirname+'/patches/G2'+(P==='n'?'':'n2')+'.to','utf8');console.log('patch G1'+P+' + G2'+(P==='n'?'':'n2'));
 const counted="[AUDIT v41: E-COL UNCURED (pkgECF, W3 2534) -- SEAT: gemini; ITEMS: S8 (COLLISION D4 vs C6: CHANGE TO keeps the break and quotes no 6 words in a row of the answering side's own words); counted in drv_uncured. REVIEW THIS ROW.]";
 const two="[AUDIT v41: E-COL UNCURED (pkgECF, W3 2534) -- SEAT: gemini; ITEMS: S8 (x); S9 (y); counted in drv_uncured. REVIEW THIS ROW.]";
 const A='the gate change was applied',N='the gate change was not applied',Y='the gate change is already in the corrected text (another change wrote the same line; W3 2319)';
@@ -18,5 +18,10 @@ show('plant: other seat',run(12,'r\n'+counted,'sol',mk(base)));
 show('plant: record-only',run(12,'r\n'+counted.replace('counted in drv_uncured','RECORD-ONLY, not counted'),'gemini',mk(base)));
 show('plant T1: TRIAL v48 line names S8 (not counted), drv 12 from other items',run(12,'r\n[AUDIT v48: E-COL RECORD-ONLY TRIAL -- SEAT: gemini; ITEMS: S8 (x); not counted in drv_uncured]','gemini',mk(base)));
 show('plant T2: TRIAL v51 line names S8 and the counted line names S8',run(12,'r\n[AUDIT v51: E-ANS RECORD-ONLY TRIAL -- SEAT: gemini; ITEMS: S8 (x); not counted in drv_uncured]\n'+counted,'gemini',mk(base)));
+const v51="[AUDIT v51: SELF-CONTRADICTION UNCURED (pkgEB7, ruling 421) -- SEAT: gemini; ITEMS: S8 (E-B7 x: y); counted in drv_uncured. REVIEW THIS ROW.]";
+show('plant V1: v51 counted line names S8 (LIVE form)',run(12,'r\n'+v51,'gemini',mk(base)));
+show('plant V2: v51 TRIAL form names S8 (not counted)',run(12,'r\n'+v51.replace(', ruling 421)',', ruling 421; TRIAL)').replace('; counted in drv_uncured','; TRIAL rule: recorded, not counted in drv_uncured; it removes no seat'),'gemini',mk(base)));
+show('plant V3: v51 and v41 both name S8',run(12,'r\n'+v51+'\n'+counted,'gemini',mk(base)));
+show('plant V4: v50 line names S8 (not a count form)',run(12,'r\n[AUDIT v50: COUNTED PREMISES DERIVED (pkgCPD) -- SEAT: gemini; ITEMS: S8 (x); counted in drv_uncured]','gemini',mk(base)));
 show('plant: S8 by KEEP only',run(12,'r\n'+counted,'gemini',mk(base.map(x=>x[1]==='S8'?['G6','S8',1,'KEEP: the change stays unapplied','KEEP']:x))));
 show('plant: S8 already written by another change',run(12,'r\n'+counted,'gemini',mk(base.map(x=>x[1]==='S8'?['G6','S8',1,Y]:x))));

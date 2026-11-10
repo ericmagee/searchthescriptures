@@ -1,0 +1,36 @@
+patch G1n3 + G2n2
+stored 1062 (drv 12) -> 11; marked: G6
+plant D1: two applied gate items from S8 (G6, G10) -> 11; marked: G6
+plant D2: three applied gate items from S8 -> 11; marked: G6
+plant D3: S8 twice and S9 once, both counted on one line -> 10; marked: G6,G11
+plant D4: S8 applied once, S8 again by KEEP -> 11; marked: G6
+plant D5: S8 KEEP first, S8 applied second -> 11; marked: G10
+plant D6: drv 1, S8 twice -> 0; marked: G6
+plant: other seat -> 12; marked: none
+plant: record-only -> 12; marked: none
+plant T1: TRIAL v48 line names S8 (not counted), drv 12 from other items -> 12; marked: none
+plant T2: TRIAL v51 line names S8 and the counted line names S8 -> 11; marked: G6
+plant V1: v51 counted line names S8 (LIVE form) -> 11; marked: G6
+plant V2: v51 TRIAL form names S8 (not counted) -> 12; marked: none
+plant V3: v51 and v41 both name S8 -> 11; marked: G6
+plant V4: v50 line names S8 (not a count form) -> 12; marked: none
+plant: S8 by KEEP only -> 12; marked: none
+plant: S8 already written by another change -> 12; marked: none
+patch G1n2 + G2n2
+stored 1062 (drv 12) -> 11; marked: G6
+plant D1: two applied gate items from S8 (G6, G10) -> 11; marked: G6
+plant D2: three applied gate items from S8 -> 11; marked: G6
+plant D3: S8 twice and S9 once, both counted on one line -> 10; marked: G6,G11
+plant D4: S8 applied once, S8 again by KEEP -> 11; marked: G6
+plant D5: S8 KEEP first, S8 applied second -> 11; marked: G10
+plant D6: drv 1, S8 twice -> 0; marked: G6
+plant: other seat -> 12; marked: none
+plant: record-only -> 12; marked: none
+plant T1: TRIAL v48 line names S8 (not counted), drv 12 from other items -> 12; marked: none
+plant T2: TRIAL v51 line names S8 and the counted line names S8 -> 11; marked: G6
+plant V1: v51 counted line names S8 (LIVE form) -> 12; marked: none
+plant V2: v51 TRIAL form names S8 (not counted) -> 12; marked: none
+plant V3: v51 and v41 both name S8 -> 11; marked: G6
+plant V4: v50 line names S8 (not a count form) -> 12; marked: none
+plant: S8 by KEEP only -> 12; marked: none
+plant: S8 already written by another change -> 12; marked: none
