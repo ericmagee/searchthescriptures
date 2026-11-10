@@ -816,6 +816,210 @@
    "closing": "The register stops at Joseph.",
    "want": "LISTED",
    "note": "rev 4 regrade, labeled before the run: true drop, 'since' reason"
+  },
+  {
+   "id": "W49",
+   "adds": [
+    [
+     "cr3",
+     "I drop the wording \"the register stops at Joseph\" supposing the rows fail; they do not."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "NOT LISTED",
+   "note": "rev 5 grade, labeled before the run: 'supposing'"
+  },
+  {
+   "id": "W50",
+   "adds": [
+    [
+     "cr3",
+     "I drop the wording \"the register stops at Joseph\" assuming the challenger shows the gap, which he has not."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "NOT LISTED",
+   "note": "rev 5 grade, labeled before the run: 'assuming'"
+  },
+  {
+   "id": "W51",
+   "adds": [
+    [
+     "cr3",
+     "I drop the wording \"the register stops at Joseph\" in the event that the rows fail; they stand."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "NOT LISTED",
+   "note": "rev 5 grade, labeled before the run: 'in the event that'"
+  },
+  {
+   "id": "W52",
+   "adds": [
+    [
+     "cr3",
+     "I drop the wording \"the register stops at Joseph\" so long as the challenger proves the gap; he has not."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "NOT LISTED",
+   "note": "rev 5 grade, labeled before the run: 'so long as'"
+  },
+  {
+   "id": "W53",
+   "adds": [
+    [
+     "cr3",
+     "I drop the wording \"the register stops at Joseph\" only when the rows fail, and they have not."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "NOT LISTED",
+   "note": "rev 5 grade, labeled before the run: 'only when'"
+  },
+  {
+   "id": "W54",
+   "adds": [
+    [
+     "cr3",
+     "I drop the wording \"the register stops at Joseph\" but only if the challenger shows a row; he has none."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "NOT LISTED",
+   "note": "rev 5 grade, labeled before the run: 'but only if'"
+  },
+  {
+   "id": "W55",
+   "adds": [
+    [
+     "cr3",
+     "I drop the wording \"the register stops at Joseph\" were the rows to fail; they do not."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "NOT LISTED",
+   "note": "rev 5 grade, labeled before the run: inverted 'were'"
+  },
+  {
+   "id": "W56",
+   "adds": [
+    [
+     "cr3",
+     "I drop the wording \"the register stops at Joseph\", if only to narrow LINK 6."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "LISTED",
+   "note": "rev 5 grade, labeled before the run: true drop: 'if only' idiom (a miss is safe direction)"
+  },
+  {
+   "id": "W57",
+   "adds": [
+    [
+     "cr3",
+     "I drop the wording \"the register stops at Joseph\" whether or not the challenger objects."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "LISTED",
+   "note": "rev 5 grade, labeled before the run: true drop: 'whether or not'"
+  },
+  {
+   "id": "W58",
+   "adds": [
+    [
+     "cr3",
+     "I drop the wording \"the register stops at Joseph\" even though the rows bear it."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "LISTED",
+   "note": "rev 5 grade, labeled before the run: true drop: 'even though'"
+  },
+  {
+   "id": "W59",
+   "adds": [
+    [
+     "cr3",
+     "I drop the wording \"the register stops at Joseph\" as though it were never written."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "LISTED",
+   "note": "rev 5 grade, labeled before the run: true drop: 'as though'"
+  },
+  {
+   "id": "W60",
+   "adds": [
+    [
+     "cr3",
+     "I drop the wording \"the register stops at Joseph\"; I would keep it only if the rows stated it, and they do not."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "LISTED",
+   "note": "rev 5 grade, labeled before the run: true drop; condition in the next clause"
   }
  ]
 }
