@@ -66,7 +66,7 @@ const rep=o=>({json:{choices:[{message:{content:typeof o==='string'?o:S(o)}}]}})
   chk('R12 sol\'s distinct question is not lost where live keeps it',!(asksB(l).length>0&&asksB(c).length===0));}
 
  {// R13 random walk, seeded
-  let seed=20261110;const rnd=n=>{seed=(seed*1103515245+12345)&0x7fffffff;return (seed>>>12)%n;};
+  let seed=+(process.env.SEED||20261110);const rnd=n=>{seed=(seed*1103515245+12345)&0x7fffffff;return (seed>>>12)%n;};
   const A='and I accepted that order.',B="The finding is dated before the pair's coming together.",AB=A+' '+B;const q=(eq,cq)=>({round:'CR4',quote:cq,earlier_round:'CR3',earlier_quote:eq,question:'How do these two passages agree?'});
   const firstKinds=[i=>q(A,s4[i]),i=>q(B,s4[i]),i=>q(AB,s4[i]),i=>q(A,s4[0]),i=>other(5+i),i=>plain(i),i=>q('words that are not in the earlier round at all, none',s4[i])];
   const secKinds=[i=>other(8+i),i=>plain(3+i),null,i=>q(B,'words that are not in the closing round at all, none'),'NOTJSON'];

@@ -52,3 +52,17 @@ My reading of the rule: a contradiction is the pair, an earlier passage and a cl
 What closes it, tested on a scratch copy before I state it this time (rev 3 with the one "||" between the two quote tests made "&&"; scratch only, not a build): R1 to R12 and R14 OK; the walk breaks the rule in 0 of 400 cases with 47 redirect returns; the stored round still returns chatgpt and sol; code 2 characters smaller than rev 3 (+1,581).
 
 Mistakes of mine in this regrade: (1) my first walk was void, a faulty random routine put a fault in every case and no judge was redirected; corrected and rerun. (2) My walk's rule first used the builder's own "either quote" test, which could not have seen this fault; W1 found it first. (3) My guard on the walk asked for more than 100 redirect returns; under the strict rule a correct build gives 47, so the guard is now more than 30.
+
+# REGRADE pkgQRD rev 4 (W2 commit 4c7216b5, parent_s110_QRD.json on live s110) by W3: PASS
+
+Labels for rev 4 committed before any run (eddc3c96). Output w3_QRD_rev4_out.txt.
+
+- R1 OK. 418 nodes, connections equal, only QR Check (6,026 to 7,333) and QR Final (7,842 to 8,116) differ from live s110: +1,581 code, measured (3,838,702 to 3,840,283). Prompt text: the one 213-character sentence per redirected side, in a return only. Both nodes sit behind the question_trial switch.
+- Rev 4 against rev 3: only QR Check differs, and only in the match test: "(earlier overlap || closing overlap)" is now "earlier overlap && closing overlap".
+- R2 OK: the stored question round of debate 34108 still returns chatgpt and sol on the defender side; luna stands. R3 OK.
+- R4a, R4b OK (faulted asker: the pair keeps an asker). R4c, R4d, R5, R6, R7, R9, R10, R11 OK. R12 OK (chain: no question lost). R14 OK both mirrors (a question sharing one quote only is not redirected).
+- R13 OK: walk of 400 seeded random cases, 47 redirect returns, the strict rule broken in 0. Second seed: 400 cases, 29 redirect returns, 0 broken (my guard of more than 30 returns missed by one on this seed; the guard is mine and concerns the walk's coverage, not the package). Third seed: see the output file; 0 broken.
+
+Limits, not findings (unchanged): a redirected judge may replace its contradiction question with a plain one while the standing judge keeps the pair; two redirected judges may move to the same second contradiction (one return only); cost of a redirect return is a full judge call (267,508 characters of body in the stored round against 169 for the no-op call).
+
+Not shown by any stored data beyond the one stored question round: the second replies are planted, since a real return needs a relay send.
