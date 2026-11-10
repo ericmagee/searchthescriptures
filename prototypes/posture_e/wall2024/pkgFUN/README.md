@@ -144,5 +144,8 @@ Checks:
   - "COUNTED. I withdraw that." alone reads UNCURED.
 - Gate on the s103 fetch-back: 767 node runs equal, GATE PASS. Rolled-back insert (rollback_FUN6.sql): {"rows": 2, "recorded": true}.
 - Write file parent_s103_FUN6.json: against live s103 only the Shared Library differs; connections equal.
-- W4's new forms: not yet posted when this was built; to run on arrival.
+- W4's 32 new forms (w4_grade5/w4_new_forms.txt, narrow; w4_new_forms_FUN6.txt): live 22, rev 6 25 (the same as rev 5), worse than live on 0.
+  - Correct refused, by live and rev 6 alike: "Counted. The grant stands." (lower-case keyword; W4 asks W2 for the label).
+  - Refusals read CURED (not in the lists): "I decline.", "Scratch that.", "I take it back.", "Nope.", "Disregard this line.", "My answer stays as
+    before.". Live reads them CURED too. Candidate list additions, not built: rev 6 is W3's measured rule as given.
 The trade (pointers followed by text and later refusals are noted, not enforced) is the operator's to approve before the write.
