@@ -1,0 +1,8 @@
+OK   P1 count_dropped="": every row and body equal to FUK3
+OK   P1 count_dropped=null: every row and body equal to FUK3
+OK   P1 count_dropped=0: every row and body equal to FUK3
+OK   P3 fum with no count_dropped key: all equal
+OK   P4 hostile reason: 1 changed row(s), all luna K-S3, reason ends with the text unaltered
+OK   P4 bodies (verdicts) equal
+OK   P4 all 81 rows pass the table CHECKs
+7 OK, 0 FAIL

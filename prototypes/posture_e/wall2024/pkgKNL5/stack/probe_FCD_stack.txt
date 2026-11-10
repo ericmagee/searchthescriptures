@@ -1,0 +1,29 @@
+OK   COUNTED, no count_dropped: all 81 log rows equal
+OK   COUNTED, no count_dropped: bodies equal
+     COUNTED: K-S3 rows 1; CURED | answered: the close concession is counted | COUNT NOT WRITTEN: the follow-up CORRECTED COUNT was not kept: it changed unasked item(s): K-UNX D2
+OK   COUNTED, count_dropped: every luna K-S3 row ends "COUNT NOT WRITTEN: ..."
+OK   COUNTED, count_dropped: K-S3 rows otherwise equal, reason only extended
+OK   COUNTED, count_dropped: 2 K-S3 rows not read COUNTED carry no note
+OK   COUNTED, count_dropped: 22 other luna rows equal
+OK   COUNTED, count_dropped: other seats' rows equal
+OK   COUNTED, count_dropped: bodies (verdicts) equal
+OK   stored reply, no count_dropped: all 81 log rows equal
+OK   stored reply, no count_dropped: bodies equal
+     stored reply: K-S3 rows 3; CURED | declared link or listed premise, with its reason | COUNT NOT WRITTEN: the follow-up CORRECTED COUNT was not kept: it changed unasked item(s): K-UNX D2 || CURED | declared link or listed premise, with its reason | COUNT NOT WRITTEN: the follow-up CORRECTED COUNT was not kept: it changed unasked item(s): K-UNX D2 || CURED | declared link or listed premise, with its reason | COUNT NOT WRITTEN: the follow-up CORRECTED COUNT was not kept: it changed unasked item(s): K-UNX D2
+OK   stored reply, count_dropped: every luna K-S3 row ends "COUNT NOT WRITTEN: ..."
+OK   stored reply, count_dropped: K-S3 rows otherwise equal, reason only extended
+OK   stored reply, count_dropped: 0 K-S3 rows not read COUNTED carry no note (none read COUNTED, so all K-S3 rows carry it)
+OK   stored reply, count_dropped: 22 other luna rows equal
+OK   stored reply, count_dropped: other seats' rows equal
+OK   stored reply, count_dropped: bodies (verdicts) equal
+OK   TOUCHES NO LINK, no count_dropped: all 81 log rows equal
+OK   TOUCHES NO LINK, no count_dropped: bodies equal
+     TOUCHES NO LINK: K-S3 rows 3; CURED | declared link or listed premise, with its reason | COUNT NOT WRITTEN: the follow-up CORRECTED COUNT was not kept: it changed unasked item(s): K-UNX D2 || CURED | declared link or listed premise, with its reason | COUNT NOT WRITTEN: the follow-up CORRECTED COUNT was not kept: it changed unasked item(s): K-UNX D2 || CURED | declared link or listed premise, with its reason | COUNT NOT WRITTEN: the follow-up CORRECTED COUNT was not kept: it changed unasked item(s): K-UNX D2
+OK   TOUCHES NO LINK, count_dropped: every luna K-S3 row ends "COUNT NOT WRITTEN: ..."
+OK   TOUCHES NO LINK, count_dropped: K-S3 rows otherwise equal, reason only extended
+OK   TOUCHES NO LINK, count_dropped: 0 K-S3 rows not read COUNTED carry no note (none read COUNTED, so all K-S3 rows carry it)
+OK   TOUCHES NO LINK, count_dropped: 22 other luna rows equal
+OK   TOUCHES NO LINK, count_dropped: other seats' rows equal
+OK   TOUCHES NO LINK, count_dropped: bodies (verdicts) equal
+OK   all 81 rows pass the table CHECKs
+25 OK, 0 FAIL
