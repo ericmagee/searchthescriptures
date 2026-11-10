@@ -1,0 +1,36 @@
+OK   L4  Init Seats (input Accept Final): 46 of 46 runs byte-equal (46 same error)
+OK   L4  D1 Build (input D1 Verse Sheet): 38 of 38 runs byte-equal (4 same error)
+OK   L4  D2 Build (input D2 Lexicon Sheet): 38 of 38 runs byte-equal (4 same error)
+OK   L4  D3 Build (input D3 Lexicon Sheet): 38 of 38 runs byte-equal (4 same error)
+OK   L4  Build Synthesis (input C4B Extract): 37 of 37 runs byte-equal (4 same error)
+OK   L4  Check Save (input Save to DB): 37 of 37 runs byte-equal (37 same error)
+OK   L4  Panel Judge 3 openrouter (input Panel Judge 3 Route): 38 of 38 runs byte-equal (21 same error)
+OK   L4  Plain Rule Lines (input Format Markdown): 33 of 33 runs byte-equal
+OK   L4  Synthesis Normalizer (input DeepSeek Synthesis Call +1): 37 of 37 runs byte-equal (37 same error)
+OK   L4  Panel Failure Note (input Panel Payloads +12): 5 of 5 runs byte-equal (5 same error)
+     Replay Done: no saved run
+OK   L4  Reserve Build (input Reserve Needed?): 1 of 1 runs byte-equal
+OK   L4  D4 Build (input D4 Lexicon Sheet): 38 of 38 runs byte-equal (4 same error)
+OK   L4  Accept Build (input Accept Models): 38 of 38 runs byte-equal (37 same error)
+OK   L4  Accept DS Build (input Accept Call openrouter): 38 of 38 runs byte-equal
+OK   L4  C2 Words Plan (input C2 Verse Sheet): 37 of 37 runs byte-equal
+OK   L4  C3 Words Plan (input C3 Verse Sheet): 37 of 37 runs byte-equal
+OK   L4  C4 Words Plan (input C4 Verse Sheet): 37 of 37 runs byte-equal
+OK   L4  L2 Count Plan (input L2 Lexicon): 37 of 37 runs byte-equal
+     QR Merge: no saved run
+OK   L4  Anticheat Record (input Anticheat Needed? +1): 37 of 37 runs byte-equal
+OK   L4  C3G Build (input C3 Extract): 37 of 37 runs byte-equal
+OK   L4  D2B Build (input D2 Extract): 37 of 37 runs byte-equal
+OK   L4  D3B Build (input D3 Extract): 37 of 37 runs byte-equal
+OK   L4  D4B Build (input D4 Extract): 37 of 37 runs byte-equal
+OK   L4  Judge Enforcer Retry Build (input Judge Enforcer Call deepseek): 23 of 23 runs byte-equal
+OK   L4  Early Alternate Reply (input Early Reply?): 3 of 3 runs byte-equal
+OK   L4  Alternate Merge (input Second Alternate Needed? +1): 36 of 36 runs byte-equal (29 same error)
+     FUM Merge Panel 3: no saved run
+     Provider Removed Stop: no saved run
+     Close Enforcer Record: no saved run
+     Reread Record: no saved run
+     R2 Alt Reread Record: no saved run
+OK   L4  Alt Send Back Record (input Alt Send Back Needed? +1): 36 of 36 runs byte-equal (1 same error)
+OK   L4  Alt Judge Enforcer Build (input Alt Seated): 36 of 36 runs byte-equal
+28 OK, 0 FAIL
