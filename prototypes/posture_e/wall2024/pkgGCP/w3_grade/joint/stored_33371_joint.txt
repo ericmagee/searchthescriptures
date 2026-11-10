@@ -1,0 +1,46 @@
+{
+ "node": "Gate Record",
+ "gate": [
+  {
+   "seat": "chatgpt",
+   "items": 2,
+   "cured": 2,
+   "uncured_counted": 0,
+   "fresh": 1,
+   "error": null
+  },
+  {
+   "seat": "sol",
+   "items": 1,
+   "cured": 1,
+   "uncured_counted": 0,
+   "fresh": 0,
+   "error": null
+  }
+ ],
+ "now": [
+  {
+   "seat": "gemini",
+   "u": 0,
+   "v52": [],
+   "cure": []
+  },
+  {
+   "seat": "chatgpt",
+   "u": 6,
+   "v52": [],
+   "cure": [
+    "SEAT: chatgpt; ITEM: D5 vs C4; RULE: K-G4; RESULT: UNCURED; WHY: RETRACTED with no reason naming the round and"
+   ]
+  },
+  {
+   "seat": "sol",
+   "u": 0,
+   "v52": [],
+   "cure": []
+  }
+ ],
+ "stored_run": "gemini:0 chatgpt:6 sol:0",
+ "alt_needed": true,
+ "gate_rows": 10520
+}

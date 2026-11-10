@@ -1,0 +1,29 @@
+L0 GCP alone luna:1 chatgpt:0 sol:0 marks 0 | joint luna:1 chatgpt:0 sol:0 marks 0 | rows, gate rows, alternate equal: true
+P1 GCP alone luna:1 chatgpt:0 sol:0 marks 1 | joint luna:1 chatgpt:0 sol:0 marks 1 | rows, gate rows, alternate equal: true
+P2 GCP alone luna:2 chatgpt:0 sol:0 marks 0 | joint luna:2 chatgpt:0 sol:0 marks 0 | rows, gate rows, alternate equal: true
+P3 GCP alone luna:2 chatgpt:0 sol:0 marks 0 | joint luna:2 chatgpt:0 sol:0 marks 0 | rows, gate rows, alternate equal: true
+P4 GCP alone luna:2 chatgpt:0 sol:0 marks 0 | joint luna:2 chatgpt:0 sol:0 marks 0 | rows, gate rows, alternate equal: true
+P5 GCP alone luna:1 chatgpt:0 sol:0 marks 0 | joint luna:1 chatgpt:0 sol:0 marks 0 | rows, gate rows, alternate equal: true
+P6 GCP alone luna:1 chatgpt:0 sol:0 marks 1 | joint luna:1 chatgpt:0 sol:0 marks 1 | rows, gate rows, alternate equal: true
+P7 GCP alone luna:1 chatgpt:0 sol:0 marks 1 | joint luna:1 chatgpt:0 sol:0 marks 1 | rows, gate rows, alternate equal: true
+P8 GCP alone luna:1 chatgpt:0 sol:0 marks 1 | joint luna:1 chatgpt:0 sol:0 marks 1 | rows, gate rows, alternate equal: true
+P9 GCP alone luna:1 chatgpt:0 sol:0 marks 0 | joint luna:1 chatgpt:0 sol:0 marks 0 | rows, gate rows, alternate equal: true
+P10 GCP alone luna:2 chatgpt:0 sol:0 marks 1 | joint luna:2 chatgpt:0 sol:0 marks 1 | rows, gate rows, alternate equal: true
+P10b GCP alone luna:2 chatgpt:0 sol:0 marks 1 | joint luna:2 chatgpt:0 sol:0 marks 1 | rows, gate rows, alternate equal: true
+P11 GCP alone luna:1 chatgpt:0 sol:0 marks 2 | joint luna:1 chatgpt:0 sol:0 marks 2 | rows, gate rows, alternate equal: true
+P12 GCP alone luna:3 chatgpt:0 sol:0 marks 1 | joint luna:3 chatgpt:0 sol:0 marks 1 | rows, gate rows, alternate equal: true
+P13 GCP alone luna:1 chatgpt:0 sol:0 marks 1 | joint luna:1 chatgpt:0 sol:0 marks 1 | rows, gate rows, alternate equal: true
+P15 GCP alone luna:1 chatgpt:0 sol:0 marks 1 | joint luna:1 chatgpt:0 sol:0 marks 1 | rows, gate rows, alternate equal: true
+P16 GCP alone luna:2 chatgpt:0 sol:0 marks 0 | joint luna:2 chatgpt:0 sol:0 marks 0 | rows, gate rows, alternate equal: true
+P18 GCP alone luna:2 chatgpt:0 sol:0 marks 1 | joint luna:2 chatgpt:0 sol:0 marks 1 | rows, gate rows, alternate equal: true
+P6r GCP alone luna:2 chatgpt:0 sol:0 marks 0 | joint luna:2 chatgpt:0 sol:0 marks 0 | rows, gate rows, alternate equal: true
+P7r GCP alone luna:2 chatgpt:0 sol:0 marks 0 | joint luna:2 chatgpt:0 sol:0 marks 0 | rows, gate rows, alternate equal: true
+P10c GCP alone luna:3 chatgpt:0 sol:0 marks 0 | joint luna:3 chatgpt:0 sol:0 marks 0 | rows, gate rows, alternate equal: true
+P14a GCP alone luna:0 chatgpt:0 sol:0 marks 1 | joint luna:0 chatgpt:0 sol:0 marks 1 | rows, gate rows, alternate equal: true
+P16b GCP alone luna:2 chatgpt:0 sol:0 marks 0 | joint luna:2 chatgpt:0 sol:0 marks 0 | rows, gate rows, alternate equal: true
+P20 GCP alone luna:2 chatgpt:0 sol:0 marks 0 | joint luna:2 chatgpt:0 sol:0 marks 0 | rows, gate rows, alternate equal: true
+P19 GCP alone luna:2 chatgpt:0 sol:0 marks 0 | joint luna:2 chatgpt:0 sol:0 marks 0 | rows, gate rows, alternate equal: true
+P17 live luna:2 chatgpt:0 sol:0 | joint luna:1 chatgpt:0 sol:0 marks 1 | gate rows equal true | applied S1,G3,G4,S4,S5,S7,S8,S11,G5,G5F,S13,G1,G2 | before K-B|D2 vs C1;K-G4|D2 vs C1;K-S3|S3 DEFENDER CR4: #1;K-S3|S3 DEFENDER CR4: #2;K-S3|S3 DEFENDER CR4: #3;K-S3|S3 DEFENDER CR4: #4;K-S3|S3 DEFENDER CR4: #5;K-S3|S3 DEFENDER CR4: #6;K-F|D6 vs C5;K-F|D6 vs C6 | after K-S3|S3 DEFENDER CR4: #1;K-S3|S3 DEFENDER CR4: #2;K-S3|S3 DEFENDER CR4: #3;K-S3|S3 DEFENDER CR4: #4;K-S3|S3 DEFENDER CR4: #5;K-S3|S3 DEFENDER CR4: #6;K-F|
+J2 live luna:2 chatgpt:0 sol:0 | joint luna:2 chatgpt:0 sol:0 marks 1 | gate rows equal true | applied S1,G3,G4,S4,S5,S7,S8,S11,G5,G5F,S13,G1,G2 | before K-B|D2 vs C1;K-G4|D2 vs C1;K-S3|S3 DEFENDER CR4: #1;K-S3|S3 DEFENDER CR4: #2;K-S3|S3 DEFENDER CR4: #3;K-S3|S3 DEFENDER CR4: #4;K-S3|S3 DEFENDER CR4: #5;K-S3|S3 DEFENDER CR4: #6;K-F|D6 vs C5;K-F|D6 vs C6 | after K-S3|S3 DEFENDER CR4: #1;K-S3|S3 DEFENDER CR4: #2;K-S3|S3 DEFENDER CR4: #3;K-S3|S3 DEFENDER CR4: #4;K-S3|S3 DEFENDER CR4: #5;K-S3|S3 DEFENDER CR4: #6;K-F|D
+J3 live luna:1 chatgpt:0 sol:0 | joint luna:2 chatgpt:0 sol:0 marks 0 | gate rows equal true | applied S1,G3,G4,S4,S5,S7,S8,S11,G5,G5F,S13,G1,G2 | before K-B|D2 vs C1;K-G4|D2 vs C1;K-S3|S3 DEFENDER CR4: #1;K-S3|S3 DEFENDER CR4: #2;K-S3|S3 DEFENDER CR4: #3;K-S3|S3 DEFENDER CR4: #4;K-S3|S3 DEFENDER CR4: #5;K-S3|S3 DEFENDER CR4: #6;K-F|D6 vs C5;K-F|D6 vs C6 | after K-S3|S3 DEFENDER CR4: #1;K-S3|S3 DEFENDER CR4: #2;K-S3|S3 DEFENDER CR4: #3;K-S3|S3 DEFENDER CR4: #4;K-S3|S3 DEFENDER CR4: #5;K-S3|S3 DEFENDER CR4: #6;K-F|D
+differences from the GCP file alone: 0
