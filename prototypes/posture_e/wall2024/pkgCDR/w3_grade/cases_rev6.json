@@ -1,0 +1,345 @@
+{
+ "about": "W3 new labeled cases for pkgCDR rev 6, labels fixed before the run.",
+ "cases": [
+  {
+   "id": "N1",
+   "adds": [
+    [
+     "cr3",
+     "I drop the wording \"the register stops at Joseph\", once and for all."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "LISTED",
+   "note": "true drop; once and for all"
+  },
+  {
+   "id": "N2",
+   "adds": [
+    [
+     "cr3",
+     "I drop the wording \"the register stops at Joseph\" once stated in LINK 2."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "LISTED",
+   "note": "true drop; once = formerly"
+  },
+  {
+   "id": "N3",
+   "adds": [
+    [
+     "cr3",
+     "I drop the wording \"the register stops at Joseph\" provided in my first round."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "LISTED",
+   "note": "true drop; provided = given"
+  },
+  {
+   "id": "N4",
+   "adds": [
+    [
+     "cr3",
+     "I drop the wording \"the register stops at Joseph\" when pressed, as now, and I do so here."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "LISTED",
+   "note": "true drop; when pressed"
+  },
+  {
+   "id": "N5",
+   "adds": [
+    [
+     "cr3",
+     "I drop the wording \"the register stops at Joseph\" now that the rows are read."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "LISTED",
+   "note": "true drop; now that"
+  },
+  {
+   "id": "N6",
+   "adds": [
+    [
+     "cr3",
+     "I drop the wording \"the register stops at Joseph\" in this round."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "LISTED",
+   "note": "true drop; plain tail"
+  },
+  {
+   "id": "N7",
+   "adds": [
+    [
+     "cr3",
+     "I drop the wording \"the register stops at Joseph\", and should the challenger ask, the limb with it."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "LISTED",
+   "note": "true drop; and should, about another thing"
+  },
+  {
+   "id": "N8",
+   "adds": [
+    [
+     "cr3",
+     "I drop the wording \"the register stops at Joseph\" had in LINK 2 from the start."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "LISTED",
+   "note": "true drop; had as a participle"
+  },
+  {
+   "id": "N9",
+   "adds": [
+    [
+     "cr3",
+     "I drop the wording \"the register stops at Joseph\" as a bare statement if the challenger shows a row against it; he has shown none."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "NOT LISTED",
+   "note": "condition after a scope phrase, not directly after the wording"
+  },
+  {
+   "id": "N10",
+   "adds": [
+    [
+     "cr3",
+     "I drop the wording \"the register stops at Joseph\" entirely, unless the rows bear it, and they do."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "NOT LISTED",
+   "note": "condition after one adverb"
+  },
+  {
+   "id": "N11",
+   "adds": [
+    [
+     "cr3",
+     "I drop the wording \"the register stops at Joseph\" (if the challenger shows a row); he has shown none."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "NOT LISTED",
+   "note": "condition in a parenthesis"
+  },
+  {
+   "id": "N12",
+   "adds": [
+    [
+     "cr3",
+     "I drop the wording \"the register stops at Joseph\" — for the sake of argument — and show the chain holds without it."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "NOT LISTED",
+   "note": "arguendo between dashes"
+  },
+  {
+   "id": "N13",
+   "adds": [
+    [
+     "cr3",
+     "I drop the wording \"the register stops at Joseph\" purely for the sake of argument."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "NOT LISTED",
+   "note": "arguendo after an adverb"
+  },
+  {
+   "id": "N14",
+   "adds": [
+    [
+     "cr3",
+     "Suppose I drop the wording \"the register stops at Joseph\": the chain still holds, so nothing turns on it and I keep it."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "NOT LISTED",
+   "note": "suppose before the drop"
+  },
+  {
+   "id": "N15",
+   "adds": [
+    [
+     "cr3",
+     "Say I drop the wording \"the register stops at Joseph\"; nothing changes, and I do not."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "NOT LISTED",
+   "note": "say before the drop"
+  },
+  {
+   "id": "N16",
+   "adds": [
+    [
+     "cr3",
+     "I drop the wording \"the register stops at Joseph\" the moment the challenger shows a row; he has shown none."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "NOT LISTED",
+   "note": "the moment"
+  },
+  {
+   "id": "N17",
+   "adds": [
+    [
+     "cr3",
+     "I drop the wording \"the register stops at Joseph\" as soon as a row is shown against it, and none has been."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "NOT LISTED",
+   "note": "as soon as"
+  },
+  {
+   "id": "N18",
+   "adds": [
+    [
+     "cr3",
+     "I drop the wording \"the register stops at Joseph\" after the challenger shows a row, not before."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "NOT LISTED",
+   "note": "after"
+  },
+  {
+   "id": "N19",
+   "adds": [
+    [
+     "cr3",
+     "I drop the wording \"the register stops at Joseph\" for present purposes only; I hold it still."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "NOT LISTED",
+   "note": "for present purposes"
+  },
+  {
+   "id": "N20",
+   "adds": [
+    [
+     "cr3",
+     "I drop the wording \"the register stops at Joseph\" in the alternative: my first case keeps it."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "NOT LISTED",
+   "note": "in the alternative"
+  }
+ ]
+}
