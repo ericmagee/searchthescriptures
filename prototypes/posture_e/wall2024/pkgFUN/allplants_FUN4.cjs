@@ -9,7 +9,7 @@ add('W3 rev 1 table (w3_plant_FUN GOOD)',arr(D+'/w3_grade/w3_plant_FUN.cjs','GOO
 add('W3 closed list (GOOD)',arr(D+'/w3_grade/w3_closed_list_idea.cjs','GOOD'),true);add('W3 closed list (BAD)',arr(D+'/w3_grade/w3_closed_list_idea.cjs','BAD'),false);
 add('W3 rev 2 (w3_good2)',JSON.parse(fs.readFileSync(D+'/w3_grade/w3_good2.json','utf8')),true);add('W3 rev 2 (w3_bad2)',JSON.parse(fs.readFileSync(D+'/w3_grade/w3_bad2.json','utf8')),false);
 for(const [f,nm] of [[D+'/w4_grade/w4_plant_FUN.cjs','W4 rev 1'],[D+'/w4_grade2/w4_plant_FUN2.cjs','W4 rev 2']])arr(f,'T').forEach(([t,e])=>S.push({src:nm,t,good:!!e}));
-add('W1 rev 2 plants (w1_plant_FUN2 A)',arr(D+'/w1/w1_plant_FUN2.cjs','A'),true);
+add('W3 rev 3 (w3_plant_FUN3 GOOD)',arr(D+'/w3_grade/w3_plant_FUN3.cjs','GOOD'),true);add('W3 rev 3 (w3_plant_FUN3 BAD)',arr(D+'/w3_grade/w3_plant_FUN3.cjs','BAD'),false);add('W1 rev 2 plants (w1_plant_FUN2 A)',arr(D+'/w1/w1_plant_FUN2.cjs','A'),true);
 arr(D+'/probe_FUN.cjs','of').forEach(x=>S.push({src:'W1 rev 1 probe (probe_FUN)',t:x[0],good:x[2]==='CURED'}));
 const seen=new Map();for(const s of S){const k=s.t;if(!seen.has(k))seen.set(k,s);else{const o=seen.get(k);if(o.good!==s.good)o.conflict=(o.conflict||[o.src+': '+(o.good?'correct':'refusal')]).concat(s.src+': '+(s.good?'correct':'refusal'));o.src+=' + '+s.src;}}
 let lost=0,goodN=0,goodCur=0,badN=0,badRef=0,badRefLive=0,gain=0;const L=[];
