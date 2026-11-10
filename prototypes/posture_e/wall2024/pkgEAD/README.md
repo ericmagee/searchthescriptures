@@ -36,3 +36,10 @@ The item is listed in sb_not_sent, as pkgECB does. An item that also carries an 
 - The code is a bareness test. It shows that an answer stands behind the pointer, not that the answer meets the press. A deferral to a full block that still misses would be withheld, and the judge's MEETS would stand. E-ANS and E-HOLD DeepSeek items are TRIAL, record-only (ruling 428), so no count is lost.
 - "Redirect" readings ("I do not rest the link on the phrase alone"; 33311, 33682) are not covered, on purpose.
 - W3's points 1 and 2 (the K-G4 item sentence names only one cure; the engine calls the same line "unanswered press" at send-back and "meaning" at the gate) are not addressed here.
+
+## Joint with pkgK7C rev 2 (W2, commit af13e5d7)
+- File: pkgEAD/joint_s112_EAD_K7C2.json, also at /mnt/project-files/wall2024/. It is W2's build_K7C2.cjs run on parent_s112_EAD.json.
+- Size: +2,202 code measured against s112 (pkgEAD +1,574 plus pkgK7C rev 2 +628, no overlap). Only the Shared Library changes; 418 nodes; connections equal; prompt: none.
+- Independent check: pkgEAD built on the pkgK7C rev 2 parent (BASESRC=K7C2) gives the same 42 node sources as the joint, all 42 equal. Packed that way it is 1 character larger.
+- pkgEAD tests on the joint: node replay test_EAD_joint_out.txt gives 58 node runs, 52 equal, 11 withheld, 0 other. Plants 5 OK.
+- pkgK7C tests on the joint: W2's t_rev2_real.cjs on 34703 and 34626 gives the same per-seat results as pkgK7C rev 2 alone (34703: haiku 2 to 1, terra 2 diffs; 34626: luna 2 diffs).

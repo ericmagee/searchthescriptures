@@ -10,7 +10,7 @@ function bareRounds(keepDeferral,shortLink4,moveLink4){const R=J(R0);let L=R.CR3
  L=L.filter((l,k)=>l===L[a]||!/Luke 1:34(?![0-9])/.test(l));R.CR3=L.join('\n');R.CR4=R.CR4.split('\n').filter(l=>!/Luke 1:34(?![0-9])/.test(l)).join('\n');return R;}
 function over(R,noDeferWords){const o={};if(R)for(const n of NORM){const v=J(H.out(RUN,n));v.flat()[0].json.cure.rounds=R;o[n]=v;}
  if(noDeferWords){let s=JSON.stringify(H.out(RUN,'Judge Enforcer Record'));s=s.split('and defers, \\\\\\"I answer it fully under LINK 4,\\\\\\" ').join('').split('and defers, \\"I answer it fully under LINK 4,\\" ').join('');o['Judge Enforcer Record']=JSON.parse(s);}return o;}
-const NEW=fs.readFileSync('pkgLIB/strip_EAD_on_S112L/patched/Send_Back_Build.js','utf8');
+const NEW=fs.readFileSync((process.env.NEWSRC||'pkgLIB/strip_EAD_on_S112L/patched/')+'Send_Back_Build.js','utf8');
 const withheld=async o=>{const b=await H.run(NEW,RUN,'Judge Enforcer Record',o);return b.flatMap(x=>(x.json.sb_not_sent||[])).filter(x=>/pkgEAD/.test(x.why)&&/Luke 1:34/.test(x.item)).map(x=>x.seat).sort();};
 const sent=async o=>{const b=await H.run(NEW,RUN,'Judge Enforcer Record',o);return b.flatMap(x=>(x.json.items||[]).filter(i=>i.rule==='E-ANS'&&/Luke 1:34/.test(i.item)).map(()=>x.json.seat)).sort();};
 (async()=>{
