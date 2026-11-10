@@ -22,3 +22,12 @@
   cannot be replayed (old run). By the code, on live either all three P12 items take gemini's DISAGREE (if each judge counts 0 links)
   or the line goes to the label-fault error. A line that names its seat should go to that seat's item. E-PREM rows are record-only (ruling 428
   TRIAL), so no judge effect today. Fix size not built; a seat match inside the fan-out is the likely form.
+
+## Seat-first fix: sketch and measured size (not built for write)
+Insert, in Judge, Alt and R2 Alt Judge Enforcer Record, just before the item-id pattern (const m=__t.match(/^ENFORCER...):
+{const __q=__t.match(/^ENFORCER\s*:\s*(?:(?:ITEM|ANSWER|ID)\s+)?([A-Z]+\d+)\s*(?:\(\s*([A-Za-z][\w.-]*)\s*\)|,\s*([A-Za-z][\w.-]*))/i);if(__q){const __o=((B[i]||{}).ids||[]).filter(x=>String(x.id).toUpperCase().startsWith(__q[1].toUpperCase()+'.')&&String(x.seat||'').toLowerCase()===(__q[2]||__q[3]).toLowerCase());if(__o.length===1)__t=__t.replace(__q[1],__o[0].id);}}
+A bare item number with a seat beside it ("P3 (chatgpt)", "P3, chatgpt", or seat-first after the pkgEIS rewrite) becomes that seat's own item id.
+- Measured on s108 (pack of strip_R1 with the three sources patched, scratch only): Shared Library only, +912 code. No prompt text, no call.
+- Plant on 33442 call 5: AGREE/DISAGREE/AGREE -> E-PREM DISAGREE 1 (live 0); DISAGREE/AGREE/AGREE -> DISAGREE 1 (live 3); all AGREE -> 0.
+- All 61 replayable stored runs (Judge and Alt): tally and errors identical to live (je_tally.cjs).
+- Same three records and the same line loop as W3's no-head fix, Shared Library only: one write can carry both if built together.
