@@ -1,0 +1,20 @@
+     KQG2 CURED | KVQ UNCURED | CURE (record-only until promoted): UNCURED -- KEEP whose reason quotes only scripture the answering side quoted ("of few days and full of"), not the side's own answer (pkgKVQ)
+OK   V1 W3 case: KEEP quoting only the Job 14:1 text the side quoted: KQG2 CURED, KVQ UNCURED
+OK   V1 W3 case: KEEP quoting only the Job 14:1 text the side quoted: every other field equal
+     KQG2 CURED | KVQ CURED | CURE (record-only until promoted): CURED -- KEEP whose reason quotes the answering side's round: "i accept it as a phrase"
+OK   V2 KEEP quoting the verse and then the side's own CR2 answer: KQG2 CURED, KVQ CURED
+OK   V2 KEEP quoting the verse and then the side's own CR2 answer: every other field equal
+     KQG2 CURED | KVQ CURED | CURE (record-only until promoted): CURED -- KEEP whose reason quotes the answering side's round: "i accept it as a phrase"
+OK   V3 KEEP quoting the CR2 fuller answer: KQG2 CURED, KVQ CURED
+OK   V3 KEEP quoting the CR2 fuller answer: every other field equal
+     KQG2 UNCURED | KVQ UNCURED | CURE (record-only until promoted): UNCURED -- KEEP whose reason quotes only the bare flagged answer itself, or words running into it ("said of all men luke 2"), not a fuller answer from the answering side's rounds (pkgKQG)
+OK   V4 KQG straddle stays UNCURED: KQG2 UNCURED, KVQ UNCURED
+OK   V4 KQG straddle stays UNCURED: every other field equal
+     KQG2 UNCURED | KVQ UNCURED | CURE (record-only until promoted): UNCURED -- KEEP whose reason quotes only the bare flagged answer itself, or words running into it ("i grant it is said of"), not a fuller answer from the answering side's rounds (pkgKQG)
+OK   V5 KQG bare-grant quote stays UNCURED: KQG2 UNCURED, KVQ UNCURED
+OK   V5 KQG bare-grant quote stays UNCURED: every other field equal
+     KQG2 UNCURED | KVQ UNCURED | CURE (record-only until promoted): UNCURED -- KEEP whose reason quotes no 6 words in a row of the answering side's rounds
+OK   V6 KEEP with no quote: KQG2 UNCURED, KVQ UNCURED
+OK   V6 KEEP with no quote: every other field equal
+OK   6 34108 terra KEEP quoting CR3 LINK 4 ("i grant the conception is future"): CURED, row byte-equal
+13 OK, 0 FAIL

@@ -1,0 +1,602 @@
+{
+ "new_node": {
+  "name": "Shared Library",
+  "type": "n8n-nodes-base.code",
+  "typeVersion": 2,
+  "parameters": {
+   "jsCode": "<pkgLIB/patched/Shared_Library.js>"
+  },
+  "connections": "none: not wired to any node",
+  "note": "the name must stay exactly Shared Library; the 22 stubs read it by name"
+ },
+ "base": "/home/claude/searchthescriptures/prototypes/posture_e/wall2024/pkgLIB/strip_FCD",
+ "library": {
+  "file": "Shared_Library.js",
+  "lines": 2557,
+  "json_sha": "710c3f99dd7fc016",
+  "bytes": 493509
+ },
+ "nodes": [
+  {
+   "file": "Alt_Gate_Build.js",
+   "name": "Alt Gate Build",
+   "src": "/home/claude/searchthescriptures/prototypes/posture_e/wall2024/pkgLIB/strip_FCD/patched/Alt_Gate_Build.js",
+   "base_sha": "1497fb469ced8c6b",
+   "base_bytes": 376570,
+   "stub_sha": "981b3f6fc8c5a1ff",
+   "stub_bytes": 2980,
+   "refs": [
+    "Alt Seated",
+    "Alt Send Back Build",
+    "Alt Send Back Call openrouter",
+    "Alt Send Back Record",
+    "Panel Build"
+   ],
+   "all_nodes": true,
+   "own_lines": 3
+  },
+  {
+   "file": "Alt_Gate_Record.js",
+   "name": "Alt Gate Record",
+   "src": "/home/claude/searchthescriptures/prototypes/posture_e/wall2024/pkgLIB/strip_FCD/patched/Alt_Gate_Record.js",
+   "base_sha": "1801e20d0cc66f95",
+   "base_bytes": 373252,
+   "stub_sha": "ccb6328b45e78bfb",
+   "stub_bytes": 2677,
+   "refs": [
+    "Alt Gate Build",
+    "Alt Seated",
+    "Alt Send Back Record",
+    "Panel Build"
+   ],
+   "all_nodes": true,
+   "own_lines": 3
+  },
+  {
+   "file": "Alternate_Build.js",
+   "name": "Alternate Build",
+   "src": "/home/claude/searchthescriptures/prototypes/posture_e/wall2024/pkgLIB/strip_FCD/patched/Alternate_Build.js",
+   "base_sha": "d13234a9ea3434cf",
+   "base_bytes": 326525,
+   "stub_sha": "ff6b7419f3f448d4",
+   "stub_bytes": 2453,
+   "refs": [
+    "Accept Final",
+    "Fetch Models",
+    "Init Seats",
+    "Panel Build",
+    "Reserve Build",
+    "Resolve Seats"
+   ],
+   "all_nodes": true,
+   "own_lines": 2
+  },
+  {
+   "file": "Alternate_Cure_Build.js",
+   "name": "Alternate Cure Build",
+   "src": "/home/claude/searchthescriptures/prototypes/posture_e/wall2024/pkgLIB/strip_FCD/patched/Alternate_Cure_Build.js",
+   "base_sha": "47f15ba417e7f337",
+   "base_bytes": 318668,
+   "stub_sha": "fe26a39d502d64c4",
+   "stub_bytes": 2320,
+   "refs": [
+    "Alternate Payloads",
+    "Panel Build"
+   ],
+   "all_nodes": true,
+   "own_lines": 1
+  },
+  {
+   "file": "Alternate_Cure_Normalize.js",
+   "name": "Alternate Cure Normalize",
+   "src": "/home/claude/searchthescriptures/prototypes/posture_e/wall2024/pkgLIB/strip_FCD/patched/Alternate_Cure_Normalize.js",
+   "base_sha": "d9ac77badc78ef69",
+   "base_bytes": 309923,
+   "stub_sha": "862de72e9ea7d0c4",
+   "stub_bytes": 2422,
+   "refs": [
+    "Alternate Cure Build",
+    "Panel Build"
+   ],
+   "all_nodes": true,
+   "own_lines": 2
+  },
+  {
+   "file": "Alternate_Merge_1.js",
+   "name": "Alternate Merge 1",
+   "src": "/home/claude/searchthescriptures/prototypes/posture_e/wall2024/pkgLIB/strip_FCD/patched/Alternate_Merge_1.js",
+   "base_sha": "c7cb5f82445524b0",
+   "base_bytes": 382689,
+   "stub_sha": "4578068318544b7e",
+   "stub_bytes": 3727,
+   "refs": [
+    "Alt Gate Record",
+    "Alt Judge Enforcer Record",
+    "Alt Reread Record",
+    "Alt Seated",
+    "Alt Send Back Record",
+    "Alternate Merge",
+    "Alternate Merge Seat",
+    "Cited Verses",
+    "Gate Record",
+    "Panel Build",
+    "Panel Cure Check",
+    "Quote Report"
+   ],
+   "all_nodes": true,
+   "own_lines": 5
+  },
+  {
+   "file": "Alternate_Merge_Seat.js",
+   "name": "Alternate Merge Seat",
+   "src": "/home/claude/searchthescriptures/prototypes/posture_e/wall2024/pkgLIB/strip_FCD/patched/Alternate_Merge_Seat.js",
+   "base_sha": "6322f5ff345bcda7",
+   "base_bytes": 382747,
+   "stub_sha": "e0187b5f5e887144",
+   "stub_bytes": 2995,
+   "refs": [
+    "Alternate Build",
+    "Alternate Cure Normalize",
+    "Alternate Payloads",
+    "Cure Check",
+    "Enforcer Record",
+    "Gate Record",
+    "Init Seats",
+    "Judge Enforcer Record",
+    "Panel Build",
+    "Panel Check",
+    "Panel Cure Check",
+    "Panel Payloads",
+    "Reread Record",
+    "Send Back Record"
+   ],
+   "all_nodes": true,
+   "own_lines": 3
+  },
+  {
+   "file": "Alternate_Payloads.js",
+   "name": "Alternate Payloads",
+   "src": "/home/claude/searchthescriptures/prototypes/posture_e/wall2024/pkgLIB/strip_FCD/patched/Alternate_Payloads.js",
+   "base_sha": "62012ea0b123b9cb",
+   "base_bytes": 210907,
+   "stub_sha": "db18589aa457abc3",
+   "stub_bytes": 4035,
+   "refs": [
+    "Alternate Build",
+    "Alternate Call openrouter",
+    "Build Save Body",
+    "Cited Verses",
+    "Final Output",
+    "Init Seats",
+    "Panel Build",
+    "Panel Check",
+    "Panel Judge 1 deepseek",
+    "Panel Judge 1 openrouter",
+    "Panel Judge 2 openrouter",
+    "Panel Judge 3 openrouter",
+    "Panel Reserve deepseek",
+    "Panel Reserve openrouter",
+    "Quote Report",
+    "Regrade Load",
+    "Regrade Row"
+   ],
+   "all_nodes": false,
+   "own_lines": 3
+  },
+  {
+   "file": "Cure_Build.js",
+   "name": "Cure Build",
+   "src": "/home/claude/searchthescriptures/prototypes/posture_e/wall2024/pkgLIB/strip_FCD/patched/Cure_Build.js",
+   "base_sha": "8344e5207ab4dda4",
+   "base_bytes": 300512,
+   "stub_sha": "a098a179a409dadf",
+   "stub_bytes": 3794,
+   "refs": [
+    "Accept Final",
+    "Build Independent Verdict",
+    "Init Seats",
+    "Panel Build",
+    "Verdict Normalizer"
+   ],
+   "all_nodes": true,
+   "own_lines": 10
+  },
+  {
+   "file": "Cure_Check.js",
+   "name": "Cure Check",
+   "src": "/home/claude/searchthescriptures/prototypes/posture_e/wall2024/pkgLIB/strip_FCD/patched/Cure_Check.js",
+   "base_sha": "7ba2d9390dde33ba",
+   "base_bytes": 305016,
+   "stub_sha": "19e1adbeb54effa1",
+   "stub_bytes": 7772,
+   "refs": [
+    "Cure Normalize",
+    "Extract Independent Verdict",
+    "Init Seats",
+    "Panel Build",
+    "SJ Re-ask Build",
+    "SJ Re-ask Pick"
+   ],
+   "all_nodes": true,
+   "own_lines": 14
+  },
+  {
+   "file": "Cure_Normalize.js",
+   "name": "Cure Normalize",
+   "src": "/home/claude/searchthescriptures/prototypes/posture_e/wall2024/pkgLIB/strip_FCD/patched/Cure_Normalize.js",
+   "base_sha": "8430d5776fac4005",
+   "base_bytes": 309916,
+   "stub_sha": "d3327a1a58120452",
+   "stub_bytes": 2384,
+   "refs": [
+    "Cure Build",
+    "Panel Build"
+   ],
+   "all_nodes": true,
+   "own_lines": 2
+  },
+  {
+   "file": "Extract_Independent_Verdict.js",
+   "name": "Extract Independent Verdict",
+   "src": "/home/claude/searchthescriptures/prototypes/posture_e/wall2024/pkgLIB/strip_FCD/patched/Extract_Independent_Verdict.js",
+   "base_sha": "2958ec9f484a4e2d",
+   "base_bytes": 225799,
+   "stub_sha": "f591c1fb1bfcdc9e",
+   "stub_bytes": 36654,
+   "refs": [
+    "Build Independent Verdict",
+    "Panel Build",
+    "Quote Report"
+   ],
+   "all_nodes": false,
+   "own_lines": 205
+  },
+  {
+   "file": "Gate_Build.js",
+   "name": "Gate Build",
+   "src": "/home/claude/searchthescriptures/prototypes/posture_e/wall2024/pkgLIB/strip_FCD/patched/Gate_Build.js",
+   "base_sha": "ac705281fdfe480c",
+   "base_bytes": 376557,
+   "stub_sha": "3d203e52dc6015c3",
+   "stub_bytes": 2956,
+   "refs": [
+    "Panel Build",
+    "Panel Cure Check",
+    "Send Back Build",
+    "Send Back Call openrouter",
+    "Send Back Record"
+   ],
+   "all_nodes": true,
+   "own_lines": 3
+  },
+  {
+   "file": "Gate_Record.js",
+   "name": "Gate Record",
+   "src": "/home/claude/searchthescriptures/prototypes/posture_e/wall2024/pkgLIB/strip_FCD/patched/Gate_Record.js",
+   "base_sha": "d726c7147d65b186",
+   "base_bytes": 373243,
+   "stub_sha": "c2e62d1b29bf5b3c",
+   "stub_bytes": 3409,
+   "refs": [
+    "Gate Build",
+    "Panel Build",
+    "Panel Cure Check",
+    "Send Back Record"
+   ],
+   "all_nodes": true,
+   "own_lines": 5
+  },
+  {
+   "file": "Panel_Cure_Build_1.js",
+   "name": "Panel Cure Build 1",
+   "src": "/home/claude/searchthescriptures/prototypes/posture_e/wall2024/pkgLIB/strip_FCD/patched/Panel_Cure_Build_1.js",
+   "base_sha": "64d42d0a08664ece",
+   "base_bytes": 319021,
+   "stub_sha": "04d70d398cd27d51",
+   "stub_bytes": 2286,
+   "refs": [
+    "Panel Build",
+    "Panel Payloads",
+    "Reserve Build"
+   ],
+   "all_nodes": true,
+   "own_lines": 1
+  },
+  {
+   "file": "Panel_Cure_Build_2.js",
+   "name": "Panel Cure Build 2",
+   "src": "/home/claude/searchthescriptures/prototypes/posture_e/wall2024/pkgLIB/strip_FCD/patched/Panel_Cure_Build_2.js",
+   "base_sha": "dcf8eeaea58b1d41",
+   "base_bytes": 319021,
+   "stub_sha": "7fa3778d70a0efc0",
+   "stub_bytes": 2286,
+   "refs": [
+    "Panel Build",
+    "Panel Payloads",
+    "Reserve Build"
+   ],
+   "all_nodes": true,
+   "own_lines": 1
+  },
+  {
+   "file": "Panel_Cure_Build_3.js",
+   "name": "Panel Cure Build 3",
+   "src": "/home/claude/searchthescriptures/prototypes/posture_e/wall2024/pkgLIB/strip_FCD/patched/Panel_Cure_Build_3.js",
+   "base_sha": "723f29063dcdd4a4",
+   "base_bytes": 319021,
+   "stub_sha": "575a625fb4cd17bd",
+   "stub_bytes": 2286,
+   "refs": [
+    "Panel Build",
+    "Panel Payloads",
+    "Reserve Build"
+   ],
+   "all_nodes": true,
+   "own_lines": 1
+  },
+  {
+   "file": "Panel_Cure_Check.js",
+   "name": "Panel Cure Check",
+   "src": "/home/claude/searchthescriptures/prototypes/posture_e/wall2024/pkgLIB/strip_FCD/patched/Panel_Cure_Check.js",
+   "base_sha": "1a0bbdd983c2bbf2",
+   "base_bytes": 303576,
+   "stub_sha": "300b3f294e189035",
+   "stub_bytes": 6353,
+   "refs": [
+    "Cited Verses",
+    "Init Seats",
+    "Panel Build",
+    "Panel Cure Normalize 1",
+    "Panel Cure Normalize 2",
+    "Panel Cure Normalize 3",
+    "Panel Payloads",
+    "Quote Report"
+   ],
+   "all_nodes": true,
+   "own_lines": 23
+  },
+  {
+   "file": "Panel_Cure_Normalize_1.js",
+   "name": "Panel Cure Normalize 1",
+   "src": "/home/claude/searchthescriptures/prototypes/posture_e/wall2024/pkgLIB/strip_FCD/patched/Panel_Cure_Normalize_1.js",
+   "base_sha": "651046d77017fd5d",
+   "base_bytes": 309932,
+   "stub_sha": "44e37195f695de35",
+   "stub_bytes": 2416,
+   "refs": [
+    "Panel Build",
+    "Panel Cure Build 1"
+   ],
+   "all_nodes": true,
+   "own_lines": 2
+  },
+  {
+   "file": "Panel_Cure_Normalize_2.js",
+   "name": "Panel Cure Normalize 2",
+   "src": "/home/claude/searchthescriptures/prototypes/posture_e/wall2024/pkgLIB/strip_FCD/patched/Panel_Cure_Normalize_2.js",
+   "base_sha": "846957ba956fe504",
+   "base_bytes": 309932,
+   "stub_sha": "33c24b8bb3512695",
+   "stub_bytes": 2416,
+   "refs": [
+    "Panel Build",
+    "Panel Cure Build 2"
+   ],
+   "all_nodes": true,
+   "own_lines": 2
+  },
+  {
+   "file": "Panel_Cure_Normalize_3.js",
+   "name": "Panel Cure Normalize 3",
+   "src": "/home/claude/searchthescriptures/prototypes/posture_e/wall2024/pkgLIB/strip_FCD/patched/Panel_Cure_Normalize_3.js",
+   "base_sha": "1ef0af35533b2e81",
+   "base_bytes": 309932,
+   "stub_sha": "0dedb37b4843a4a1",
+   "stub_bytes": 2416,
+   "refs": [
+    "Panel Build",
+    "Panel Cure Build 3"
+   ],
+   "all_nodes": true,
+   "own_lines": 2
+  },
+  {
+   "file": "Panel_Payloads.js",
+   "name": "Panel Payloads",
+   "src": "/home/claude/searchthescriptures/prototypes/posture_e/wall2024/pkgLIB/strip_FCD/patched/Panel_Payloads.js",
+   "base_sha": "f5c8b21809be7496",
+   "base_bytes": 218235,
+   "stub_sha": "4dd78874699886f6",
+   "stub_bytes": 16340,
+   "refs": [
+    "Build Save Body",
+    "Cited Verses",
+    "Final Output",
+    "Init Seats",
+    "Panel Build",
+    "Panel Check",
+    "Panel Judge 1 deepseek",
+    "Panel Judge 1 deepseek retry",
+    "Panel Judge 1 openrouter",
+    "Panel Judge 2 openrouter",
+    "Panel Judge 3 openrouter",
+    "Panel Reserve deepseek",
+    "Panel Reserve openrouter",
+    "Quote Report",
+    "Regrade Load",
+    "Regrade Row",
+    "Reserve Build"
+   ],
+   "all_nodes": false,
+   "own_lines": 73
+  },
+  {
+   "file": "R2_Alt_Gate_Build.js",
+   "name": "R2 Alt Gate Build",
+   "src": "/home/claude/searchthescriptures/prototypes/posture_e/wall2024/pkgLIB/strip_FCD/patched/R2_Alt_Gate_Build.js",
+   "base_sha": "da4d956525730984",
+   "base_bytes": 376591,
+   "stub_sha": "8ed5bbf744ef84d4",
+   "stub_bytes": 3008,
+   "refs": [
+    "Panel Build",
+    "R2 Alt Seated",
+    "R2 Alt Send Back Build",
+    "R2 Alt Send Back Call openrouter",
+    "R2 Alt Send Back Record"
+   ],
+   "all_nodes": true,
+   "own_lines": 3
+  },
+  {
+   "file": "R2_Alt_Gate_Record.js",
+   "name": "R2 Alt Gate Record",
+   "src": "/home/claude/searchthescriptures/prototypes/posture_e/wall2024/pkgLIB/strip_FCD/patched/R2_Alt_Gate_Record.js",
+   "base_sha": "657347188aec15fa",
+   "base_bytes": 373264,
+   "stub_sha": "f44131c275653afb",
+   "stub_bytes": 2698,
+   "refs": [
+    "Panel Build",
+    "R2 Alt Gate Build",
+    "R2 Alt Seated",
+    "R2 Alt Send Back Record"
+   ],
+   "all_nodes": true,
+   "own_lines": 3
+  },
+  {
+   "file": "R2_Alternate_Build.js",
+   "name": "R2 Alternate Build",
+   "src": "/home/claude/searchthescriptures/prototypes/posture_e/wall2024/pkgLIB/strip_FCD/patched/R2_Alternate_Build.js",
+   "base_sha": "afdd6ca9ed0ecab8",
+   "base_bytes": 326902,
+   "stub_sha": "8b29ee55c8c0411a",
+   "stub_bytes": 2849,
+   "refs": [
+    "Accept Final",
+    "Fetch Models",
+    "Init Seats",
+    "Panel Build",
+    "Reserve Build",
+    "Resolve Seats"
+   ],
+   "all_nodes": true,
+   "own_lines": 3
+  },
+  {
+   "file": "R2_Alternate_Cure_Build.js",
+   "name": "R2 Alternate Cure Build",
+   "src": "/home/claude/searchthescriptures/prototypes/posture_e/wall2024/pkgLIB/strip_FCD/patched/R2_Alternate_Cure_Build.js",
+   "base_sha": "b67145d79b167bb9",
+   "base_bytes": 318671,
+   "stub_sha": "1d85dccac30a8f4d",
+   "stub_bytes": 2329,
+   "refs": [
+    "Panel Build",
+    "R2 Alternate Payloads"
+   ],
+   "all_nodes": true,
+   "own_lines": 1
+  },
+  {
+   "file": "R2_Alternate_Cure_Normalize.js",
+   "name": "R2 Alternate Cure Normalize",
+   "src": "/home/claude/searchthescriptures/prototypes/posture_e/wall2024/pkgLIB/strip_FCD/patched/R2_Alternate_Cure_Normalize.js",
+   "base_sha": "02a13161a34f6dc8",
+   "base_bytes": 309929,
+   "stub_sha": "7611b411ce0a8be6",
+   "stub_bytes": 2434,
+   "refs": [
+    "Panel Build",
+    "R2 Alternate Cure Build"
+   ],
+   "all_nodes": true,
+   "own_lines": 2
+  },
+  {
+   "file": "R2_Alternate_Merge.js",
+   "name": "R2 Alternate Merge",
+   "src": "/home/claude/searchthescriptures/prototypes/posture_e/wall2024/pkgLIB/strip_FCD/patched/R2_Alternate_Merge.js",
+   "base_sha": "04188e9a02d6d67b",
+   "base_bytes": 382749,
+   "stub_sha": "127f2d256c90867a",
+   "stub_bytes": 3809,
+   "refs": [
+    "Cited Verses",
+    "Gate Record",
+    "Panel Build",
+    "Panel Cure Check",
+    "Quote Report",
+    "R2 Alt Gate Record",
+    "R2 Alt Judge Enforcer Record",
+    "R2 Alt Reread Record",
+    "R2 Alt Seated",
+    "R2 Alt Send Back Record",
+    "R2 Alternate Merge",
+    "R2 Alternate Merge Seat"
+   ],
+   "all_nodes": true,
+   "own_lines": 5
+  },
+  {
+   "file": "R2_Alternate_Merge_Seat.js",
+   "name": "R2 Alternate Merge Seat",
+   "src": "/home/claude/searchthescriptures/prototypes/posture_e/wall2024/pkgLIB/strip_FCD/patched/R2_Alternate_Merge_Seat.js",
+   "base_sha": "75ae3062d6f7764f",
+   "base_bytes": 382765,
+   "stub_sha": "b13dd9ed1b5dbaa0",
+   "stub_bytes": 3025,
+   "refs": [
+    "Cure Check",
+    "Enforcer Record",
+    "Gate Record",
+    "Init Seats",
+    "Judge Enforcer Record",
+    "Panel Build",
+    "Panel Check",
+    "Panel Cure Check",
+    "Panel Payloads",
+    "R2 Alternate Build",
+    "R2 Alternate Cure Normalize",
+    "R2 Alternate Payloads",
+    "Reread Record",
+    "Send Back Record"
+   ],
+   "all_nodes": true,
+   "own_lines": 3
+  },
+  {
+   "file": "R2_Alternate_Payloads.js",
+   "name": "R2 Alternate Payloads",
+   "src": "/home/claude/searchthescriptures/prototypes/posture_e/wall2024/pkgLIB/strip_FCD/patched/R2_Alternate_Payloads.js",
+   "base_sha": "f49ebac3cf29135e",
+   "base_bytes": 210925,
+   "stub_sha": "c397b80c2ceb9615",
+   "stub_bytes": 4062,
+   "refs": [
+    "Build Save Body",
+    "Cited Verses",
+    "Final Output",
+    "Init Seats",
+    "Panel Build",
+    "Panel Check",
+    "Panel Judge 1 deepseek",
+    "Panel Judge 1 openrouter",
+    "Panel Judge 2 openrouter",
+    "Panel Judge 3 openrouter",
+    "Panel Reserve deepseek",
+    "Panel Reserve openrouter",
+    "Quote Report",
+    "R2 Alternate Build",
+    "R2 Alternate Call openrouter",
+    "Regrade Load",
+    "Regrade Row"
+   ],
+   "all_nodes": false,
+   "own_lines": 3
+  }
+ ],
+ "bytes_before": 9662790,
+ "bytes_after": 635100
+}
