@@ -1,0 +1,112 @@
+[
+ {
+  "run": "33461",
+  "node": "Alt Send Back Build",
+  "seat": "grok",
+  "rule": "E-ANS",
+  "item": "ANSWER CHECK Luke 1:36 [CR3]",
+  "why": "the DeepSeek reason reads a deferral as the whole answer, and the code finds an answer behind it: [CR3] answer to Luke 1:36: the answer carries its own layer [L2] (pkgEAD)",
+  "line": "ANSWER CHECK: Luke 1:36 -- [CR3] -- MEANS: \"the sign given Mary is a conception in marriage.\" -- ANSWER: \"Luke 1:36 is answered at LINK 3.\" -- MEETS -- the LINK 3 answer grants Elisabeth's husband and distinguishes the impediment.",
+  "reason": "(right: MISSES): The answer only says \"Luke 1:36 is answered at LINK 3,\" a pointer with no fit in its own words. (judge wrote MEETS; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "33461",
+  "node": "Alt Send Back Build",
+  "seat": "grok",
+  "rule": "E-ANS",
+  "item": "ANSWER CHECK Matthew 1:20 [CR3]",
+  "why": "the DeepSeek reason reads a deferral as the whole answer, and the code finds an answer behind it: [CR3] answer to Matthew 1:20: the answer carries its own layer [L2] (pkgEAD)",
+  "line": "ANSWER CHECK: Matthew 1:20 -- [CR3] -- MEANS: \"the angel answers the fear of taking with a command, grounded in the child's covenant origin.\" -- ANSWER: \"Matthew 1:20 is answered at LINK 1.\" -- MEETS -- LINK 1 says the ground stated is the Holy Ghost.",
+  "reason": "(right: MISSES): The answer only says \"Matthew 1:20 is answered at LINK 1,\" a pointer with no fit in its own words. (judge wrote MEETS; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "33461",
+  "node": "Alt Send Back Build",
+  "seat": "grok",
+  "rule": "E-ANS",
+  "item": "ANSWER CHECK Romans 1:3 [CR3]",
+  "why": "the DeepSeek reason reads a deferral as the whole answer, and the code finds an answer behind it: [CR3] answer to Romans 1:3: the answer carries its own layer [L2] (pkgEAD)",
+  "line": "ANSWER CHECK: Romans 1:3 -- [CR3] -- MEANS: \"the Son's flesh is David's seed.\" -- ANSWER: \"Romans 1:3 is answered at LINK 1.\" -- MEETS -- LINK 1 grants the seed as offspring and \"made.\"",
+  "reason": "(right: MISSES): The answer only says \"Romans 1:3 is answered at LINK 1,\" a pointer with no fit in its own words. (judge wrote MEETS; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "33490",
+  "node": "Send Back Build",
+  "seat": "gemini",
+  "rule": "E-ANS",
+  "item": "ANSWER CHECK Hebrews 2:16 [CR3]",
+  "why": "the DeepSeek reason reads a deferral as the whole answer, and the code finds an answer behind it: [CR3] answer to Hebrews 2:16: the answer runs 72 words (pkgEAD)",
+  "line": "ANSWER CHECK: Hebrews 2:16 -- [CR3] -- MEANS: \"he took hold of the seed of the fathers.\" -- ANSWER: \"I hold it with Romans 1:3 under Link 5.\" -- MEETS -- \"he took on him the seed of Abraham\"",
+  "reason": "(right: MISSES): \"The answer is only 'I hold it with Romans 1:3 under Link 5', a holding with a pointer that shows no fit for 'he took on him the seed of Abraham'.\" (judge wrote MEETS; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "33627",
+  "node": "Alt Send Back Build",
+  "seat": "sol",
+  "rule": "E-ANS",
+  "item": "ANSWER CHECK Luke 1:27 [CR3]",
+  "why": "the DeepSeek reason reads a deferral as the whole answer, and the code finds an answer behind it: [CR3] answer to Luke 1:27: a sentence is neither a grant nor a deferral: \"MEANS (challenger): the conception falls within the espousal.\" (pkgEAD)",
+  "line": "ANSWER CHECK: Luke 1:27 -- [CR3] -- MEANS: \"the virgin of the fulfilment is a betrothed wife of the Davidic man\" -- ANSWER: \"I grant it. This is answered under LINK 1.\" -- MEETS -- LINK 1 positively combines her espousal with the finding before coming together and the withholding of knowing.",
+  "reason": "(right: MISSES): The answer is only 'I grant it. This is answered under LINK 1,' a bare grant and pointer that does not show in its own words how the verse fits. (judge wrote MEETS; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "34016",
+  "node": "Send Back Build",
+  "seat": "luna",
+  "rule": "E-ANS",
+  "item": "ANSWER CHECK Romans 1:3 [CR3]",
+  "why": "the DeepSeek reason reads a deferral as the whole answer, and the code finds an answer behind it: [CR3] answer to Romans 1:3: the answer runs 71 words (pkgEAD)",
+  "line": "ANSWER CHECK: Romans 1:3 -- [CR3] -- MEANS: \"the flesh of the Son is David's seed passed down a line of loins\" -- ANSWER: \"Romans 1:3 says 'made of the seed of David according to the flesh'. It does not say 'begotten of'.\" -- MEETS -- The answer acknowledges David’s seed and argues that the verse does not settle the immediate means of descent.",
+  "reason": "(right: MISSES): The answer rests on an absence, \"It does not say 'begotten of',\" and shows no fit of its own. (judge wrote MEETS; RECORD-ONLY TRIAL, ruling 428) | ABSENCE CHECK (pkgABS): E-ANS MEETS rests on an absence or non-denial (\"does not say\") and quotes no counted [L1] positive fit"
+ },
+ {
+  "run": "34108",
+  "node": "Send Back Build",
+  "seat": "luna",
+  "rule": "E-ANS",
+  "item": "ANSWER CHECK Luke 1:34 [CR3]",
+  "why": "the DeepSeek reason reads a deferral as the whole answer, and the code finds an answer behind it: [CR3] the deferral to LINK 4 names an answer of 480 words with layers (pkgEAD)",
+  "line": "ANSWER CHECK: Luke 1:34 -- [CR3] -- MEANS: “the present tense states her state when the angel spoke, before the future conception.” -- ANSWER: “I grant the present tense states her state when the angel spoke.” -- MEETS -- the answer accepts the stated timing.",
+  "reason": "(right: MISSES): The answer only grants, \"I grant the present tense states her state when the angel spoke,\" and defers, \"I answer it fully under LINK 4,\" with no layer showing the fit. (judge wrote MEETS; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "34108",
+  "node": "Send Back Build",
+  "seat": "chatgpt",
+  "rule": "E-ANS",
+  "item": "ANSWER CHECK Luke 1:34 [CR3]",
+  "why": "the DeepSeek reason reads a deferral as the whole answer, and the code finds an answer behind it: [CR3] the deferral to LINK 4 names an answer of 480 words with layers (pkgEAD)",
+  "line": "ANSWER CHECK: Luke 1:34 -- [CR3] -- MEANS: \"the present tense states her state when the angel spoke, before the future conception.\" -- ANSWER: \"I grant the present tense states her state when the angel spoke.\" -- MEETS -- \"when the angel spoke\".",
+  "reason": "(right: MISSES): The answer only grants, \"I grant the present tense states her state when the angel spoke,\" and defers, \"I answer it fully under LINK 4,\" with no layer showing the fit. (judge wrote MEETS; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "34108",
+  "node": "Send Back Build",
+  "seat": "sol",
+  "rule": "E-ANS",
+  "item": "ANSWER CHECK Luke 1:34 [CR3]",
+  "why": "the DeepSeek reason reads a deferral as the whole answer, and the code finds an answer behind it: [CR3] the deferral to LINK 4 names an answer of 480 words with layers (pkgEAD)",
+  "line": "ANSWER CHECK: Luke 1:34 -- [CR3] -- MEANS: \"the present tense states her state when the angel spoke, before the future conception.\" -- ANSWER: \"I grant the present tense states her state when the angel spoke.\" -- MEETS -- LINK 4 positively places the angel's answer against that future conception.",
+  "reason": "(right: MISSES): The answer only grants, \"I grant the present tense states her state when the angel spoke,\" and defers, \"I answer it fully under LINK 4,\" with no layer showing the fit. (judge wrote MEETS; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "ex34703",
+  "node": "Send Back Build",
+  "seat": "luna",
+  "rule": "E-ANS",
+  "item": "ANSWER CHECK Luke 1:34 [CR3]",
+  "why": "the DeepSeek reason reads a deferral as the whole answer, and the code finds an answer behind it: [CR3] the deferral to LINK 4 names an answer of 480 words with layers (pkgEAD)",
+  "line": "ANSWER CHECK: Luke 1:34 -- [CR3] -- MEANS: “the present tense states her state when the angel spoke” -- ANSWER: “I grant the present tense states her state when the angel spoke” -- MEETS -- The answer grants the pressed meaning.",
+  "reason": "(right: MISSES): the answer is the bare grant \"I grant the present tense states her state when the angel spoke\" plus \"I answer it fully under LINK 4,\" with no layer showing the fit under the pressed verse. (judge wrote MEETS; RECORD-ONLY TRIAL, ruling 428)"
+ },
+ {
+  "run": "ex34703",
+  "node": "Send Back Build",
+  "seat": "chatgpt",
+  "rule": "E-ANS",
+  "item": "ANSWER CHECK Luke 1:34 [CR3]",
+  "why": "the DeepSeek reason reads a deferral as the whole answer, and the code finds an answer behind it: [CR3] the deferral to LINK 4 names an answer of 480 words with layers (pkgEAD)",
+  "line": "ANSWER CHECK: Luke 1:34 -- [CR3] -- MEANS: 'the present tense states her state when the angel spoke, before the future conception.' -- ANSWER: 'I grant the present tense states her state when the angel spoke.' -- MEETS -- 'when the angel spoke'.",
+  "reason": "(right: MISSES): the answer is the bare grant \"I grant the present tense states her state when the angel spoke\" plus \"I answer it fully under LINK 4,\" with no layer showing the fit under the pressed verse. (judge wrote MEETS; RECORD-ONLY TRIAL, ruling 428)"
+ }
+]

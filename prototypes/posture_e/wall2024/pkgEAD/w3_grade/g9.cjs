@@ -1,0 +1,14 @@
+// W3 rev 2 plants: the test now reads the whole pkgVP3 note, which quotes the debate's own words. Labels in labels_EAD2_w3.md (n1 to n3); n4 added after reading the code, no label.
+const G=require('./g.cjs');const {H,J}=G;const RUN='34108';const NORM=['Panel Cure Normalize 1','Panel Cure Normalize 2','Panel Cure Normalize 3'];const R0=H.out(RUN,NORM[0]).flat()[0].json.cure.rounds;
+const blk=(L,n)=>{const s=L.findIndex(l=>new RegExp('^\\*\\*LINK '+n+':').test(l));let e=s+1;while(e<L.length&&!/^\*\*LINK\s+\d/.test(L[e])&&!/^#+\s|^---/.test(L[e]))e++;return [s,e];};
+const over=f=>{const R=J(R0);const L=R.CR3.split('\n');f(L,R);R.CR3=L.join('\n');const o={};for(const n of NORM){const v=J(H.out(RUN,n));if(v){v.flat()[0].json.cure.rounds=R;o[n]=v;}}return o;};
+const res=async o=>{const b=(await H.run(G.CAND('Send Back Build'),RUN,'Judge Enforcer Record',o)).map(x=>x.json);const t=i=>i.rule==='E-ANS'&&/Luke 1:34 \[CR3\]/.test(i.item);const w=(b[0].sb_not_sent||[]).filter(x=>/pkgEAD/.test(x.why)&&t(x));const s=b.flatMap(j=>(j.items||[]).filter(t).map(()=>j.seat));return {w,s};};
+const T=(name,r)=>{};const T2=(name,r)=>console.log((r.w.length?'NOT AS LABELLED (WITHHELD for '+r.w.map(x=>x.seat).join(',')+')':'AS LABELLED (SENT to '+r.s.join(',')+')')+' | '+name+(r.w[0]?'\n     written reason: '+r.w[0].why.slice(96,420):''));
+const noLink4=L=>{const [s,e]=blk(L,4);L.splice(s,e-s);};const onlyAnswer=(L,R)=>{for(let k=L.length-1;k>=0;k--)if(/Luke 1:34(?![0-9])/.test(L[k])&&!/^- Luke 1:34, "How shall/.test(L[k]))L.splice(k,1);R.CR4=R.CR4.split('\n').filter(l=>!/Luke 1:34(?![0-9])/.test(l)).join('\n');};
+const first=L=>L.findIndex(l=>/^\*\*LINK 1:/.test(l));
+(async()=>{const T=T2;
+ T('n1. truly bare answer, the code agrees with DeepSeek (pointer to nothing, no other line names the verse)',await res(over((L,R)=>{noLink4(L);onlyAnswer(L,R);})));
+ T('n2. pointer to nothing; the only other line naming the verse is a numbered objection line (not an answer line) holding "the answer runs 30 words"',await res(over((L,R)=>{noLink4(L);onlyAnswer(L,R);L.splice(first(L)+1,0,'2. The objection on timing: the answer runs 30 words there, and Luke 1:34 is quoted for it.');})));
+ T('n3. pointer to nothing; the only other line naming the verse is a numbered objection line (not an answer line) holding "its own layer"',await res(over((L,R)=>{noLink4(L);onlyAnswer(L,R);L.splice(first(L)+1,0,'2. The objection on timing has its own layer, and Luke 1:34 is quoted for it.');})));
+ T('n4 (no label). truly bare answer whose own words are "I grant it. I answer it under LINK 4 with its own layer." (LINK 4 absent, no other line names the verse)',await res(over((L,R)=>{noLink4(L);onlyAnswer(L,R);const a=L.findIndex(l=>/^- Luke 1:34, "How shall/.test(l));L[a]='- Luke 1:34, "How shall this be, seeing I know not a man?": I grant it. I answer it under LINK 4 with its own layer.';})));
+})();
