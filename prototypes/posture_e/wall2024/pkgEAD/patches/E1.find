@@ -1,0 +1,1 @@
+const MAX=60;const bySeat=new Map();const out=[];const not_sent=[];for(const x of dis){if(__ecb(x.seat,x.flagged_line)){not_sent.push({seat:x.seat,rule:x.rule,item:x.item,why:'the engine\'s closing-contradiction break; a send-back does not undo it (pkgECB)'});continue;}

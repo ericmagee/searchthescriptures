@@ -16,3 +16,9 @@ pkgLIB_GCP*/
 pkgLIB_KSR/
 pkgLIB_R1R2_S11*/
 pkgLIB_R1bM_S112/
+pkgLIB/strip_EAD*/
+pkgLIB_EAD*/
+pkgLIB/strip_NONE*/
+pkgLIB_NONE*/
+pkgLIB/strip_S112L/
+pkgEAD/noop_s112.json

@@ -1,0 +1,40 @@
+33299 no rounds
+33311 no rounds
+33461 grok S4 E-ANS ANSWER CHECK Luke 1:36 [CR3] => REAL ANSWER 
+   DS: The answer only says "Luke 1:36 is answered at LINK 3," a pointer with no fit in its own words.  
+   VP3: code check does not agree, not an item -- [CR3] answer to Luke 1:36: the answer carries its own layer [L2]
+33461 grok S6 E-ANS ANSWER CHECK Matthew 1:20 [CR3] => REAL ANSWER 
+   DS: The answer only says "Matthew 1:20 is answered at LINK 1," a pointer with no fit in its own words.  
+   VP3: code check does not agree, not an item -- [CR3] answer to Matthew 1:20: the answer carries its own layer [L2]
+33461 grok S7 E-ANS ANSWER CHECK Romans 1:3 [CR3] => REAL ANSWER 
+   DS: The answer only says "Romans 1:3 is answered at LINK 1," a pointer with no fit in its own words.  
+   VP3: code check does not agree, not an item -- [CR3] answer to Romans 1:3: the answer carries its own layer [L2]
+33490 gemini S2 E-ANS ANSWER CHECK Hebrews 2:16 [CR3] => REAL ANSWER 
+   DS: "The answer is only 'I hold it with Romans 1:3 under Link 5', a holding with a pointer that shows no fit for 'he took on him the seed of Abraham'."  
+   VP3: code check does not agree, not an item -- [CR3] answer to Hebrews 2:16: the answer runs 72 words
+33627 sol S2 E-ANS ANSWER CHECK Luke 1:27 [CR3] => REAL ANSWER 
+   DS: The answer is only 'I grant it. This is answered under LINK 1,' a bare grant and pointer that does not show in its own words how the verse fits.  
+   VP3: code check does not agree, not an item -- [CR3] answer to Luke 1:27: a sentence is neither a grant nor a deferral: "MEANS (challenger): the conception falls within the espousal."
+33627 sol S4 E-HOLD COLLISION D5 vs C1 => REAL ANSWER 
+   DS: The defender's Luke 1:27 answer is only "I grant it. This is answered under LINK 1." with no layer showing the fit, so the collision is BROKEN, not UNDERDETERMINED.  
+   VP3: code check does not agree, not an item -- [CR2] names Luke 1:27 again (line 88: "- **[L4]** Mary asks the manner of a conception, and the answer gives the Holy Ghost and t")
+33682 grok S2 E-ANS ANSWER CHECK Matthew 11:11 [CR3] => REAL ANSWER 
+   DS: the answer only grants ("I grant that 'born of a woman' is said of men who had fathers") and redirects ("my link does not rest on those phrases") with no fit for this ver 
+   VP3: code check does not agree, not an item -- [CR3] answer to Matthew 11:11: the answer carries its own layer [L3]
+34016 luna S4 E-ANS ANSWER CHECK Romans 1:3 [CR3] => REAL ANSWER 
+   DS: The answer does not address the stated meaning, saying only "that is answered under premise 1."  
+   VP3: code check does not agree, not an item -- [CR3] answer to Romans 1:3: the answer runs 71 words
+34108 luna S1 E-ANS ANSWER CHECK Luke 1:34 [CR3] => REAL ANSWER 
+   DS: The answer only grants, "I grant the present tense states her state when the angel spoke," and defers, "I answer it fully under LINK 4," with no layer showing the fit.  
+   VP3: code check does not agree, not an item -- [CR3] the deferral to LINK 4 names an answer of 480 words with layers
+34108 chatgpt S1 E-ANS ANSWER CHECK Luke 1:34 [CR3] => REAL ANSWER 
+   DS: The answer only grants, "I grant the present tense states her state when the angel spoke," and defers, "I answer it fully under LINK 4," with no layer showing the fit.  
+   VP3: code check does not agree, not an item -- [CR3] the deferral to LINK 4 names an answer of 480 words with layers
+34108 sol S1 E-ANS ANSWER CHECK Luke 1:34 [CR3] => REAL ANSWER 
+   DS: The answer only grants, "I grant the present tense states her state when the angel spoke," and defers, "I answer it fully under LINK 4," with no layer showing the fit.  
+   VP3: code check does not agree, not an item -- [CR3] the deferral to LINK 4 names an answer of 480 words with layers
+34108 sol S2 E-HOLD COLLISION D1 vs C1 => REAL ANSWER 
+   DS: the defender’s full answer to Luke 1:34 is only “I grant the present tense states her state when the angel spoke. I answer it fully under LINK 4,” a bare grant whose fit  
+   VP3: code check does not agree, not an item -- [CR1] names Luke 1:34 again (line 32: "[L1] Luke 1:34: "How shall this be, seeing I know not a man?"")
+
+TOTAL {"items":12,"real":12,"bare":0,"notChecked":0}
