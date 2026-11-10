@@ -1,7 +1,7 @@
 # Debater cache sketch (W2, 11-10, offline, findings only; not posted for grading)
 
 Base: live s114 strip (pkgLIB/strip_W2S114). Data: /mnt/project-files/wall2024/inputs/, 36 runs with Claude usage rows.
-Pricing assumed: 1-hour cache write 2x base input, cache read 0.1x, plain input 1x (ESTIMATE from published rates; not checked against the bill).
+Pricing: list rates. Challenger claude-opus-5-5 ($4 per million input), defender claude-sonnet-5-5 ($2) in all 36 runs (MEASURED from the usage rows). 1-hour write 2x, 5-minute write 1.25x, read 0.05x on both models. The unit figures in sections 4 and 5 used a 0.1x read; section 7 gives dollars at 0.05x. No invoice was read.
 
 ## 1. Can rounds 3 and 4 hit the cache? No more than they do now.
 
@@ -48,3 +48,10 @@ Pricing assumed: 1-hour cache write 2x base input, cache read 0.1x, plain input 
 ## 6. Left out
 
 - Not tested on a live call; C2's kept read is shown by byte equality, not by a usage row.
+
+## 7. Revision 2 (11-10, after W1 Wall 4435)
+
+- Models (W1's correction, confirmed in my usage rows): C calls claude-opus-5-5, D calls claude-sonnet-5-5, all 36 runs.
+- Dollars at list price (ESTIMATE; w2_grades/cache/cost_cache.cjs): C2 $4.64, C3 and C4 $9.28 less $1.09 lost on the G reads, D2 to D4 $4.84; in total about $17.67 in 36 runs, $0.49 per run. The C side alone is $0.36 per run, the D side $0.13.
+- D side timing risk (MEASURED): a 5-minute entry is timed from the START of the request that writes it. D call durations: D2 68 to 220 s, D3 119 to 300 s, D4 58 to 224 s (30 timed calls each). One D3 call took 300 s, so its B call would have found the entry expired and paid full input. The C side has no such risk.
+- W1's count (Wall 4435: 7,131,352 missed tokens on C3, C4, D3, D4 in 80 runs, 89,142 per run, from the CACHE DIAG lines) and mine (cache write tokens on the same four calls: 4,559,261 in 36 runs, 126,646 per run, from usage rows) come from different fields and do not match. The bill charges the write field, so the dollar figure uses it.
