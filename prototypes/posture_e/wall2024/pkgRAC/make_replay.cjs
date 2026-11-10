@@ -13,7 +13,7 @@ const run=(W,RUN,node,over,inputNode)=>{const get=n=>over&&n in over?over[n]:sav
 // pkgRAC replay bodies (W3). OFFLINE, NOT SENT. node pkgRAC/make_replay.cjs
 const getF=r=>{const it=saved(r,'Final Output');return it&&it[it.length-1]&&it[it.length-1].json;};
 const BO=(r,F)=>({'Final Output':[J(F)],'Resolve Seats':[J({deepseek:{api_model:'deepseek-flash'}})],'Init Seats':[J({run_token:r})],'Regrade Load':null});
-const want=[['34108','DEFENDER'],['33461','DEFENDER'],['33482','DEFENDER'],['33442','DEFENDER'],['33705','DEFENDER'],['33222','CHALLENGER']];
+const want=[['34108','DEFENDER'],['33575','DEFENDER'],['33461','DEFENDER'],['33482','DEFENDER'],['33442','DEFENDER'],['33705','DEFENDER'],['33222','CHALLENGER']];
 let md='';
 for(const [r,sd] of want){const F=getF(r);const out=run(CAND,r,'Close Enforcer Build',BO(r,F)).map(x=>x.json);const it=out.find(x=>x.side===sd);if(!it){console.log(r+' '+sd+' NO ITEM');continue;}
  const f='pkgRAC/replay/'+r+'_rac_'+sd+'.json';fs.writeFileSync(f,JSON.stringify({body:it.body}));const u=it.body.messages[1].content;

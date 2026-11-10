@@ -4,31 +4,31 @@ OK   T1 Panel Build is fed by Check Save and the regrade branch: ["Check Save#0"
 OK   T1 Build Independent Verdict feed unchanged
 OK   T1 exactly four connection sources differ from live: Check Save, Quote Report, Regrade After Quotes?, Anticheat Only?
 OK   T1 live path: Quote Report > Anticheat Build > Anticheat Needed? > Anticheat Call deepseek > Anticheat Record > Anticheat Only? > Close Enforcer Build > Close Enforcer Needed? > Close Enforcer Call deepseek > Close Enforcer Record > Regrade After Quotes? > Build Independent Verdict
-OK   T1 nodes that differ from live: Build Independent Verdict, Close Enforcer Build, Close Enforcer Record, Panel Build
+OK   T1 nodes that differ from live: Anticheat Build, Anticheat Record, Build Independent Verdict, Close Enforcer Build, Close Enforcer Record, Panel Build
 OK   T2 33276 skip equal
 OK   T2 33289 skip equal
 OK   T2 33311 skip equal
 OK   T2 33322 skip equal
 T2 stored debates built: 35; prompt equal to live where no pair: 17; debates with anti-cheat candidates 16 (34 pairs), with reversal candidates 2 (2 pairs); pairs not sent 0
-T2 prompt growth over the 35 stored closing enforcer calls: +12112 characters on 5044040 (+0.240%); mean +346 per debate
-   33218: A 3, R 0, not sent 0, prompt +1050
-   33222: A 1, R 0, not sent 0, prompt +243
-   33261: A 3, R 0, not sent 0, prompt +1056
-   33299: A 6, R 0, not sent 0, prompt +1967
-   33345: A 1, R 0, not sent 0, prompt +335
-   33371: A 2, R 0, not sent 0, prompt +822
-   33430: A 1, R 0, not sent 0, prompt +289
-   33442: A 1, R 0, not sent 0, prompt +280
-   33461: A 1, R 0, not sent 0, prompt +287
-   33482: A 1, R 0, not sent 0, prompt +272
-   33530: A 1, R 0, not sent 0, prompt +544
-   33575: A 0, R 1, not sent 0, prompt +382
-   33592: A 2, R 0, not sent 0, prompt +589
-   33644: A 1, R 0, not sent 0, prompt +507
-   33705: A 1, R 0, not sent 0, prompt +275
-   33798: A 3, R 0, not sent 0, prompt +850
-   33846: A 6, R 0, not sent 0, prompt +1952
-   34108: A 0, R 1, not sent 0, prompt +412
+T2 prompt growth over the 35 stored closing enforcer calls: +10156 characters on 5044040 (+0.201%); mean +290 per debate
+   33218: A 3, R 0, not sent 0, prompt +888
+   33222: A 1, R 0, not sent 0, prompt +189
+   33261: A 3, R 0, not sent 0, prompt +894
+   33299: A 6, R 0, not sent 0, prompt +1643
+   33345: A 1, R 0, not sent 0, prompt +281
+   33371: A 2, R 0, not sent 0, prompt +714
+   33430: A 1, R 0, not sent 0, prompt +235
+   33442: A 1, R 0, not sent 0, prompt +226
+   33461: A 1, R 0, not sent 0, prompt +233
+   33482: A 1, R 0, not sent 0, prompt +218
+   33530: A 1, R 0, not sent 0, prompt +490
+   33575: A 0, R 1, not sent 0, prompt +322
+   33592: A 2, R 0, not sent 0, prompt +481
+   33644: A 1, R 0, not sent 0, prompt +453
+   33705: A 1, R 0, not sent 0, prompt +221
+   33798: A 3, R 0, not sent 0, prompt +688
+   33846: A 6, R 0, not sent 0, prompt +1628
+   34108: A 0, R 1, not sent 0, prompt +352
 OK   T2 every debate either equals live or carries a pair
 OK   T3 34108 carries a reversal candidate: R11 EARLIER [CR3] "- Genesis 4:1, "Adam knew Eve his wife; and she conceived, and bare Ca" CLOSING "Genesis 4:1 therefore cannot supply the sequence for Matthew, because "
 T3 anti-cheat debate used: 33218, candidate A57 DEFENDER
@@ -83,8 +83,9 @@ P8 call fails (expect: NOT CHECKED, candidates NO ANSWER)
    LOG "NOT CHECKED CHALLENGER" | NOT CHECKED -- CHALLENGER: no reply (timeout)
 OK   P8
 P9 CONFIRMED but the enforcer changes one word of the closing quotation (expect: NOT CONFIRMED (form))
-   confirmed: [] | no_answer: ["A131","A135"]
-   LOG "A57 DEFENDER LINK 1" | NOT CONFIRMED (form) -- the closing quotation is not found word for word in CR4 -- planted.
+   confirmed: [] | no_answer: ["A57","A131","A135"]
+   LOG "NEW DEFENDER LINK 1" | NOT CONFIRMED (form) -- the closing quotation is not found word for word in CR4 -- (given id A57, which is not this pair) planted.
+   LOG "A57" | NO ANSWER -- the enforcer did not answer this candidate
    LOG "A131" | NO ANSWER -- the enforcer did not answer this candidate
    LOG "A135" | NO ANSWER -- the enforcer did not answer this candidate
    LOG "NONE CHALLENGER" | NONE FOUND
@@ -129,4 +130,58 @@ OK   P20 an anti-cheat pair whose earlier quotation crosses two rounds is listed
 OK   P21 an ellipsis quotation is sent as its longest standing part: "- [L3] Matthew 1:20: "for that which"
 OK   P22 anti-cheat check skipped: no candidate, nothing listed
 OK   P23 anti-cheat check not executed: no candidate, build runs
+OK   T6 33261 carries A53, A89 (one side) and A62 (the other side)
+P24 the other side's id A62 on A53's quotations, CONFIRMED (expect: read as NEW, link broken, A62 and A53 NO ANSWER, no block removed)
+   confirmed: ["NEW DEFENDER LINK 1"] | no_answer: ["A53","A89","A62"]
+   LOG "NEW DEFENDER LINK 1" | CONFIRMED -- (given id A62, which is not this pair) planted.
+   LOG "A53" | NO ANSWER -- the enforcer did not answer this candidate
+   LOG "A89" | NO ANSWER -- the enforcer did not answer this candidate
+   LOG "A62" | NO ANSWER -- the enforcer did not answer this candidate
+   LOG "NONE CHALLENGER" | NONE FOUND
+OK   P24 (blocks live 9, candidate 9)
+P25 a wrong id of the same side (A89 on A53's quotations), CONFIRMED (expect: NEW, A89 NO ANSWER, no block removed)
+   confirmed: ["NEW DEFENDER LINK 1"] | no_answer: ["A53","A89","A62"]
+   LOG "NEW DEFENDER LINK 1" | CONFIRMED -- (given id A89, which is not this pair) planted.
+   LOG "A53" | NO ANSWER -- the enforcer did not answer this candidate
+   LOG "A89" | NO ANSWER -- the enforcer did not answer this candidate
+   LOG "A62" | NO ANSWER -- the enforcer did not answer this candidate
+   LOG "NONE CHALLENGER" | NONE FOUND
+OK   P25 (blocks 9)
+P26 the right id with a shorter part of the closing quotation "the two lines give different" (expect: counts for A53, its block leaves)
+   confirmed: ["A53 DEFENDER LINK 1"] | no_answer: ["A89","A62"]
+   LOG "A53 DEFENDER LINK 1" | CONFIRMED -- planted.
+   LOG "A89" | NO ANSWER -- the enforcer did not answer this candidate
+   LOG "A62" | NO ANSWER -- the enforcer did not answer this candidate
+   LOG "NONE CHALLENGER" | NONE FOUND
+OK   P26 (blocks 9 -> 6)
+P27 id A53 answered NOT A CONTRADICTION on another closing sentence (expect: NEW, A53 NO ANSWER, no "examined" sentence)
+   confirmed: [] | no_answer: ["A53","A89","A62"]
+   LOG "NEW DEFENDER LINK 1" | NOT A CONTRADICTION -- (given id A53, which is not this pair) planted.
+   LOG "A53" | NO ANSWER -- the enforcer did not answer this candidate
+   LOG "A89" | NO ANSWER -- the enforcer did not answer this candidate
+   LOG "A62" | NO ANSWER -- the enforcer did not answer this candidate
+   LOG "NONE CHALLENGER" | NONE FOUND
+OK   P27
+OK   P28 A53 answered both ways: nothing broken, block kept, ending says examined and not confirmed (W4 minor note; count 3)
+OK   P29 an A id that is no candidate: read as NEW, A53 NO ANSWER
+OK   P30 34108: the other side's reversal id R21 on R11's quotations: read as NEW, R11 NO ANSWER
+OK   P31 all three answered under their own ids: as rev 1 (A53 breaks, the other two end with the approved sentence)
+OK   T7 33846 carries A13 and A57 on one side
+P32 A13 and A57 both CONFIRMED on the same link (expect: A13 breaks it; A57 recorded as a repeat and still shown to the judges)
+   confirmed: ["A13 DEFENDER LINK 1"] | no_answer: ["A19","A21","A73","A75"]
+   LOG "A13 DEFENDER LINK 1" | CONFIRMED -- planted.
+   LOG "A57 DEFENDER LINK 1" | CONFIRMED -- the same link is already broken by an earlier confirmed line -- planted.
+   LOG "A19" | NO ANSWER -- the enforcer did not answer this candidate
+   LOG "A21" | NO ANSWER -- the enforcer did not answer this candidate
+   LOG "A73" | NO ANSWER -- the enforcer did not answer this candidate
+   LOG "A75" | NO ANSWER -- the enforcer did not answer this candidate
+   LOG "NONE CHALLENGER" | NONE FOUND
+OK   P32 (anti-cheat blocks holding A57's closing words: 3; A13's: 0)
+OK   P32b the repeat's block does not say "did not confirm"
+OK   T8 Anticheat Build equals live on 38 of 38 stored debates
+OK   T8 Anticheat Record equals live on 38 of 38 stored debates
+OK   P33 Anticheat Build fails (live throws: true): candidate skips the check: Anticheat Build failed: Referenced node is unexecuted: Init Seats
+OK   P34 the Record carries the reason: Anticheat Build failed: Referenced node is unexecuted: Init Seats
+OK   P35 Anticheat Record fails (live throws: true): candidate skips: Anticheat Record failed: Referenced node is unexecuted: Anticheat Build
+OK   P36 after a failed anti-cheat check the closing enforcer still builds, with no A pair
 ALL OK

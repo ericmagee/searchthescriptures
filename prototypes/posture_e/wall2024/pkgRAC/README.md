@@ -1,4 +1,4 @@
-# pkgRAC rev 1 (W3): pairs found by the two code-side closing checks go to the closing enforcer
+# pkgRAC rev 2 (W3): pairs found by the two code-side closing checks go to the closing enforcer
 
 Authority: the operator's "option 1" (08:27 CST 2026-11-10) to W3's ask of 20:30 CST 2026-11-09. Built on live s106. NOT WRITTEN. A write needs two non-builder grades, a DeepSeek replay of the new prompt, and the operator's "write pkgRAC" in W4's thread.
 
@@ -12,17 +12,26 @@ Every pair found by the close-round reversal check and by the anti-cheat check i
 ## Build
 `node pkgRAC/build_RAC.cjs /mnt/project-files/wall2024/fetchback_live_s106.json pkgRAC/parent_s106_RAC.json`
 
-## Size (measured)
+## Size (measured, rev 2)
 | Part | Before | After | Change |
 |---|---|---|---|
-| Close Enforcer Build | 7,940 | 9,608 | +1,668 |
-| Close Enforcer Record | 11,649 | 11,885 | +236 |
-| Panel Build | 174,249 | 174,808 | +559 |
-| Build Independent Verdict | 143,664 | 143,653 | -11 |
-| Code total | | | +2,452 |
+| Close Enforcer Build | 7,940 | 9,491 | +1,551 |
+| Close Enforcer Record | 11,649 | 12,220 | +571 |
+| Anticheat Build | 8,322 | 8,479 | +157 |
+| Anticheat Record | 4,157 | 4,373 | +216 |
+| Panel Build | 174,249 | 174,778 | +529 |
+| Build Independent Verdict | 143,664 | 143,623 | -41 |
+| Code total | | | +2,983 (rev 1 was +2,452) |
 - Connections changed: 4. Nodes: 418 (none added). Model calls: none added.
-- Closing enforcer prompt over the 35 stored debates: +12,112 characters on 5,044,040 (+0.240%), mean +346 per debate; 17 of 35 prompts equal live (no pair).
-- Judges' prompt: no growth. Where a block is shown and the pair was not examined, the transcript is slightly shorter than live (4 and 7 characters in the two debates read, 33218 and 33261). Where the enforcer answered no, the block is 78 characters longer less that saving. A confirmed pair removes its block.
+- Closing enforcer prompt over the 35 stored debates: +10,156 characters on 5,044,040 (+0.201%), mean +290 per debate (rev 1: +12,112); 17 of 35 prompts equal live (no pair).
+- Judges' prompt: no growth unless the enforcer answers no on a pair (+78 characters per block, less 4 to 7 saved by the shorter sentence).
+
+## Rev 2 (both graders failed rev 1)
+1. W4, Wall 4117: an A or R id was trusted without its side or quotations, so a line carrying another pair's id could remove that pair's block unexamined. Now an A or R id counts only when the line's side is the candidate's side and the two closing quotations overlap; any other line is read as NEW (it still breaks its own link if its quotations stand) and the candidate is logged NO ANSWER and keeps its block. Plants P24 to P31.
+2. W1, Wall 4118 (G3): a second pair confirmed on a link already broken left every judge's prompt. Now a block is removed only when the pair is in the list the CONFIRMED CLOSING CONTRADICTIONS block prints; a repeat keeps its block with the second sentence only. Plant P32.
+3. W4's minor note: a pair answered both ways now ends "examined ... did not confirm". Plant P28.
+4. W1 note 1: the reason on a handed pair no longer states a conclusion. An anti-cheat pair carries its verse only; a reversal pair carries nothing.
+5. W1 note 3: Anticheat Build and Anticheat Record are wrapped so that a failure skips the check with a stated reason (shown in the AUDIT ANTI-CHEAT line) and never stops the debate. Same output as live on 38 of 38 stored debates. Plants P33 to P36.
 
 ## Parts
 1. Connections, so the anti-cheat call runs before the closing enforcer: Quote Report to Anticheat Build; Anticheat Only? (false) to Close Enforcer Build; Regrade After Quotes? (true) to Panel Build; Check Save to Panel Build.
@@ -46,15 +55,19 @@ Every pair found by the close-round reversal check and by the anti-cheat check i
 ## Difference from pkgCFP rev 2 (W1, shelf)
 pkgCFP sends the anti-cheat pairs to the post-panel judge contradiction enforcer, after the judges have graded, and leaves the reversal pairs out. pkgRAC sends both kinds to the closing enforcer before any judge, so a confirmed pair breaks the link before grading, and it changes the block wording the operator approved. If pkgRAC is written, pkgCFP is not needed.
 
-## Tests (pkgRAC/test_RAC.cjs, output test_RAC.txt): ALL OK, 57 checks
+## Tests (pkgRAC/test_RAC.cjs, output test_RAC.txt): ALL OK, 75 checks
 - T1 the four connections. T2 Build on the 35 stored debates: 34 anti-cheat pairs in 16 debates and 2 reversal pairs in 2 debates all sent, 0 not sent.
 - T3 Record plants P1 to P9 (confirmed A and R ids, not a contradiction, wrong link, quotation not standing, NOT SENT row).
 - T4 Panel Build on 34 stored debates: 16 equal live, 18 differ only in the last sentence of a block (and the character count field). Build Independent Verdict: 32 equal, 2 differ in the reversal ending only; never shows the anti-cheat block. P10 to P17 the three endings and the removal of a confirmed pair.
 - T5 failure paths P18 to P23 (Panel Build source without the reversal code, anti-cheat check skipped or not executed, a quotation crossing rounds).
+- T6 to T8: the rev 2 plants P24 to P36 above.
 - Rolled-back insert of 3 rows (rows_RAC.json) through record_enforcer_log: accepted ("rows": 3, "recorded": true).
 
 ## Owed before a write
-A DeepSeek replay of the new closing enforcer prompt: debate 34108 defender (R11) and the five set C debates (their anti-cheat pairs as A candidates), two sends each. Pass: each handed pair gets an answer line in both sends, and each CONFIRMED is true by a hand reading.
+A DeepSeek replay of the new closing enforcer prompt (pkgRAC/replay, 7 bodies, two sends each, 14 calls): both stored reversal pairs (34108 and 33575, each R11) and the five set C debates with their anti-cheat pairs. Labels in pkgRAC/replay/README.md. Both graders read the two reversal pairs as NOT contradictions, as I do; a CONFIRMED on either fails the replay.
+
+## Open risk, stated
+A confirmed handed pair breaks a link. The anti-cheat pairs are DeepSeek's own earlier rulings and only two of the 34 stored ones have a hand reading. The replay reads every pair it sends by hand; the other 29 are not read.
 
 ## Engine manual part (enters on write)
 Close-round checks to the closing enforcer (pkgRAC): the anti-cheat call runs after Quote Report and before the closing enforcer. Close Enforcer Build adds the anti-cheat pairs (ids A<n>) and the close-round reversal pairs (ids R<side><n>) as candidates. A confirmed pair breaks its link and is shown only in CONFIRMED CLOSING CONTRADICTIONS. A pair answered NOT A CONTRADICTION keeps its block with the two-sentence ending; a pair not examined keeps it with the second sentence. A pair that could not be sent is logged under E-CLOSECON as NOT SENT, NOT CHECKED.
