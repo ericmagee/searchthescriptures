@@ -1,0 +1,9 @@
+A1 PASS C2 Build -9;C3 Build -159;C4 Build -159 nodes 418 rest-equal true
+A2 PASS 1:0 3:0 5:0
+A3 PASS 1:0 3:0 5:0
+A4 PASS 
+A5 PASS 60 cases
+A6 PASS one-message equal true; array message 0 unmarked true 
+A7 PASS max breakpoints 3
+A8 PASS {"runs":40,"c2ok":36,"c2bad":[],"c2none":4,"s3":36,"s3bad":[],"s4":36,"s4bad":[],"s3n":0,"s4n":0,"fams":{}}
+A9 consumers: C2 Extract[code]:$('C2 Build') | C3 Build[code]:$('C2 Build') | C3 Extract[code]:$('C3 Build') | C4 Build[code]:$('C3 Build') | C4 Extract[code]:$('C4 Build') | C4G Build[code]:$('C4 Build') | C3G Build[code]:$('C3 Build') | C2B Build[code]:$('C2 Build') | C3B Build[code]:$('C3 Build') | C4B Build[code]:$('C4 Build')

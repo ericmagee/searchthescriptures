@@ -1,0 +1,4 @@
+runs 36 C3 starts with all of C2 messages 0 C4 starts with all of C3 0 C3 msg0 = C1 msg0 0
+C2 read: 36 calls, mean 86839, min 86249, max 87815 | write: 36 calls, mean 32216, min 28689, max 35612
+C3 read: 36 calls, mean 70080, min 69484, max 70097 | write: 36 calls, mean 31073, min 27269, max 35355
+C4 read: 36 calls, mean 70080, min 69484, max 70097 | write: 36 calls, mean 33369, min 28382, max 40442
