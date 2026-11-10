@@ -72,3 +72,34 @@ I called a missed true drop "safe direction". It is not: this package exists to 
   - TRUE DROPS NOT LISTED (5): W17 "drop not only ... but"; W62 ", and if the challenger objects, I answer in round 4." (", and" starts a new clause); W64 "... when I narrow LINK 6 in this round." (present act); W65 "... once and for all."; W72 ", the day it was challenged." (past).
 - Fix proposed: (1) drop "and" from the optional connectors before a condition word (", and if" opens a new clause; keep "but" / "only" / "except"); (2) "once and for all" is not "once"; (3) "when" / "once" / "the day" count only when what follows is not the speaker's own act ("when I ...") and not past ("was", "were", "had").
 - Still owed before any write: the DeepSeek replay (which direction costs more depends on how the enforcer answers a listed conditional drop).
+
+## rev 7 (commit 8f8ed0b3), graded on the rev 7 standard: no true drop hidden
+
+Rebuild on fetchback_live_s103.json is byte-equal to pkgCDR/parent_s103_CDR.json.
+Cases W74-W87 and the want7 column were committed at c1640c92 before the run.
+`STD7=1 ... node pkgCDR/w2_grade/run.cjs` -> run_rev7.txt: 75 of 87 as labeled.
+
+FAIL. Twelve true drops are not listed (every one is restated verbatim in the closing round):
+
+| case | round 3 sentence |
+|---|---|
+| W17 | I drop not only the bare statement but the wording "the register stops at Joseph". |
+| W74 | Accordingly I withdraw the wording "...". |
+| W75 | On Luke 3:23, I drop the wording "...". |
+| W76 | Therefore, I drop the wording "...". |
+| W77 | In this round I drop the wording "...". |
+| W78 | So I retract the claim that the register stops at Joseph. |
+| W81 | The wording "..." is withdrawn. (passive) |
+| W82 | I no longer hold that the register stops at Joseph. |
+| W83 | I set aside the wording "...". |
+| W84 | I give the wording "..." up. |
+| W85 | We drop the wording "...". |
+| W86 | To narrow LINK 6, I drop the wording "...". |
+
+Listed as wanted: hereby (W79), now (W80), conditionals and argument's-sake drops (ANY), the question form W87 (not listed).
+No false listing outside the ANY cases. Corpus (39 debates, 2 listings) and W1's run_cases.txt (41 OK, 38 MISS
+on the rev 6 labels) reproduce W1's committed outputs exactly.
+
+Classes for rev 8: (1) any lead-in before the subject (adverb, "On <ref>,", "In this round", "To <verb> ...,"),
+(2) "We" as subject, (3) passive "is withdrawn/dropped", (4) verbs outside the list: set aside, give ... up,
+no longer hold, (5) "not only ... but" before the object (W17).
