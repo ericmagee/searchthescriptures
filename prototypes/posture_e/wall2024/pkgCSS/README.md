@@ -1,4 +1,4 @@
-# pkgCSS rev 1 (W1): the closing enforcer called once per side (item A gap). Operator approved 23:45 CST 11-09 (thread msg cmsg_017ZQamDMHrS6fqMHnQDVo58MBjAta9iDdbo7hSU2rhpZ2).
+# pkgCSS rev 2 (W1): the closing enforcer called once per side (item A gap). Operator approved 23:45 CST 11-09 (thread msg cmsg_017ZQamDMHrS6fqMHnQDVo58MBjAta9iDdbo7hSU2rhpZ2).
 
 Cause on record (W3 dry regrade of 34299, finding 1): one prompt held both sides (about 151,000 characters); DeepSeek's reasoning examined only
 the challenger and replied NONE, so the defender's D6 drop in [CR3] reclaimed in [CR4] was missed although both sentences were in the prompt.
@@ -14,7 +14,7 @@ Against s104 only Close Enforcer Build and Close Enforcer Record differ; connect
 Measured size (size_CSS.txt, 35 stored debates; characters of system + user text per DeepSeek call):
 - largest single call: mean 143,384 (live) to 77,010: 46.3% smaller (the body n8n holds per call);
 - total sent per debate: +1,242 characters on average (about 311 tokens, +0.87%), the instruction sent twice;
-- node code: Close Enforcer Build 8,168 to 7,940 (-228); Close Enforcer Record 10,775 to 11,096 (+321); net +93.
+- node code (rev 2): Close Enforcer Build 8,168 to 7,940 (-228); Close Enforcer Record 10,775 to 11,649 (+874); net +646 (rev 1 was +93).
 - not measured: DeepSeek reasoning length over two calls (replay through the test relay shows it).
 
 Checks
@@ -22,3 +22,9 @@ Checks
   cure_reason where the log, as live, writes NONE FOUND; T9/T10 read Final Output through the wrong harness).
 - Rolled-back insert of the pkgCSS NONE row: rows 1, recorded true.
 - The library replay gate does not apply (no library node changed).
+
+Rev 2 (W3 FAIL of rev 1, Wall 4065: one side failing or giving no line while the other answered logged NONE FOUND or left no trace; live logs
+NOT CHECKED). Record now judges each side's reply by itself: a failed call or a reply with no CLOSE-CONTRADICTION line logs a NOT CHECKED row
+naming that side (and an error naming it); a NONE logs a NONE FOUND row for that side; none is true only when every side answered NONE.
+Checks on rev 2: record_CSS 13 OK (T7 relabeled and T11-T13 added before the build, c688b908); rolled-back insert of a NOT CHECKED row and a
+NONE FOUND row: rows 2, recorded true. Prompt sizes unchanged from rev 1.

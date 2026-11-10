@@ -4,8 +4,11 @@ OK   T3 the D6 drop and the D6 reclaim both stand in the defender call
 OK   T4 system text unchanged; the instruction is the one in pkgCSS/prompt_side.txt
 OK   T5 defender reply CONFIRMED D6, challenger NONE: link 6 broken, one output item: ["NEW CONFIRMED"]
 OK   T6 defender call fails, challenger NONE: nothing broken, the error names the defender call: ["DEFENDER: no reply (timeout)"]
-OK   T7 both NONE: none true, one NONE FOUND row whose prompt_sent holds both prompts: [["NONE","NONE FOUND"]]
+OK   T7 rev 2: both NONE: none true; one NONE FOUND row per side, each holding its own side's prompt: [["NONE DEFENDER","NONE FOUND"],["NONE CHALLENGER","NONE FOUND"]]
+OK   T11 rev 2: defender call fails, challenger NONE: a NOT CHECKED row for the defender naming no reply, a NONE FOUND row for the challenger; none false: [["NOT CHECKED DEFENDER","NOT CHECKED -- DEFENDER: no reply (timeout)"],["NONE CHALLENGER","NONE FOUND"]]
+OK   T12 rev 2: defender CONFIRMED D6, challenger reply with no line: D6 broken, a NOT CHECKED row for the challenger, error names the challenger: [["NEW DEFENDER LINK 6","CONFIRMED -- reclaimed."],["NO LINE CHALLENGER","NOT CHECKED -- CHALLENGER: the reply holds no CLOSE-CONTRADI"]]
+OK   T13 rev 2: both calls fail: two NOT CHECKED rows, nothing broken: [["NOT CHECKED DEFENDER","NOT CHECKED -- DEFENDER: no reply (timeout)"],["NOT CHECKED CHALLENGER","NOT CHECKED -- CHALLENGER: no reply (timeout)"]]
 OK   T8 log rows: seat_role panel, cure_status empty, rule E-CLOSECON
 OK   T9 only the defender's closing round has text: one item, DEFENDER: DEFENDER
 OK   T10 no closing round: one skip item as before: {"cec_skip":true,"why":"no closing round","run_token":"ODV1-34108-3to8dgrt"}
-10 OK, 0 FAIL
+13 OK, 0 FAIL
