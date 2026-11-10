@@ -1,0 +1,22 @@
+[
+ {"id":"N1","t":"COUNTED.\nIt should not be counted.","rule":"UNCURED","why":"refusal on the next line is the whole answer after COUNTED (needs KSL)"},
+ {"id":"N2","t":"COUNTED.\nThe grant in #1 is not the one in #3; it should not be counted.","rule":"CURED","note":"yes","why":"W1 KSL grade H4: the line names this item, stays in the run; not the whole answer, so noted only"},
+ {"id":"N3","t":"Yes.\nCOUNTED: the defender gives up D6 in [CR4].","rule":"CURED","why":"W3 4076: Yes. then COUNTED on the next line"},
+ {"id":"N4","t":"TOUCHES NO LINK:\nthe grant concerns legal titles, not any declared link.","rule":"CURED","why":"W3 4076: TOUCHES NO LINK with the reason on the next line"},
+ {"id":"N5","t":"COUNTED. My count is wrong.\nI add this grant against D6.","rule":"CURED","why":"W3 rev 7 case 1"},
+ {"id":"N6","t":"COUNTED. It is not a concession of D5.\nIt is a concession of D6.","rule":"CURED","why":"W3 rev 7 case 2"},
+ {"id":"N7","t":"COUNTED. My count is wrong. \"I grant 'husband' and 'wife'.\"","rule":"CURED","why":"W3 rev 7 case 3: a quotation after the sentence is text that follows"},
+ {"id":"N8","t":"COUNTED. It should not be counted.","rule":"UNCURED","why":"whole-answer refusal on one line"},
+ {"id":"N9","t":"It is not counted.","rule":"UNCURED","why":"whole-answer refusal without COUNTED first"},
+ {"id":"N10","t":"NOT COUNTED.","rule":"UNCURED","why":"control"},
+ {"id":"N11","t":"COUNTED: by this grant D6 does not stand.","rule":"CURED","why":"negation describing the concession"},
+ {"id":"N12","t":"Yes.","rule":"UNCURED","why":"no COUNTED anywhere"},
+ {"id":"N13","t":"Yes.\nIt should not be counted.","rule":"UNCURED","why":"Yes then a refusal: no COUNTED"},
+ {"id":"N14","t":"TOUCHES NO LINK:\nNo.","rule":"UNCURED","why":"reason under five words"},
+ {"id":"N15","t":"COUNTED.\nAs for #2: it should not be counted.","rule":"CURED","why":"a line about another item ends the run (KSL rev 2)"},
+ {"id":"N16","t":"COUNTED: \"It should not be counted\" is what the challenger says; the grant stands.","rule":"CURED","why":"refusal words only inside a quotation"},
+ {"id":"N17","t":"COUNTED. My count is wrong.","rule":"UNCURED","why":"OPEN LABEL (rev 8 note c): rev 7 enforces it as a refusal; W3 reads it as an admission"},
+ {"id":"N18","t":"Counted. The grant stands.","rule":"CURED","why":"OPEN LABEL (rev 8 note c): lower-case keyword"},
+ {"id":"N19","t":"COUNTED. It is not \"counted\".","rule":"UNCURED","why":"a quotation inside the refusal sentence does not make text follow"},
+ {"id":"N20","t":"Agreed.\nCOUNTED.\nIt should not be counted.","rule":"UNCURED","why":"Agreed, then COUNTED, then the refusal as the whole answer"}
+]
