@@ -68,9 +68,9 @@ const rep=o=>({json:{choices:[{message:{content:typeof o==='string'?o:S(o)}}]}})
  {// R13 random walk, seeded
   let seed=+(process.env.SEED||20261110);const rnd=n=>{seed=(seed*1103515245+12345)&0x7fffffff;return (seed>>>12)%n;};
   const A='and I accepted that order.',B="The finding is dated before the pair's coming together.",AB=A+' '+B;const q=(eq,cq)=>({round:'CR4',quote:cq,earlier_round:'CR3',earlier_quote:eq,question:'How do these two passages agree?'});
-  const firstKinds=[i=>q(A,s4[i]),i=>q(B,s4[i]),i=>q(AB,s4[i]),i=>q(A,s4[0]),i=>other(5+i),i=>plain(i),i=>q('words that are not in the earlier round at all, none',s4[i])];
+  const firstKinds=[];for(const e of [A,B,AB])for(const c of [0,1])firstKinds.push(i=>q(e,s4[c]));firstKinds.push(i=>other(5+i),i=>plain(i),i=>q('words that are not in the earlier round at all, none',s4[i]));
   const secKinds=[i=>other(8+i),i=>plain(3+i),null,i=>q(B,'words that are not in the closing round at all, none'),'NOTJSON'];
-  const nq=x=>String(x).toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();const inn=(x,y)=>{x=nq(x);y=nq(y);return x.includes(y)||y.includes(x);};
+  const nq=x=>String(x).toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();const inn=(x,y)=>{x=nq(x);y=nq(y);return y.includes(x);}; /* y contains x */
   let broke=[],cases=0,redirs=0;
   for(let t=0;t<400;t++){const f0={},sec={};const desc=[];for(let i=0;i<3;i++){const k=rnd(firstKinds.length),cf=rnd(4)===0;f0[i]={defender:firstKinds[k](i),challenger:cf?badCh:firstOf(i).challenger};const sk=rnd(secKinds.length);const SK=secKinds[sk];sec[i]=SK==='NOTJSON'?'not json at all':{defender:SK?SK(i):f0[i].defender,challenger:firstOf(i).challenger};desc.push(k+(cf?'f':'')+'/'+sk);}
    let l,c;try{l=await full(L,f0,sec);}catch(e){if(/no question passed/.test(e.message))continue;throw e;}
@@ -86,5 +86,13 @@ cases++;redirs+=c.c.filter(j=>Object.keys(j.redirect||{}).length).length;
    const sec={1:{...firstOf(1),defender:other(3)}};const l=await full(L,f0,sec),c=await full(N,f0,sec);const who=x=>x.f.filter(y=>y.side==='defender'&&y[key]===val).map(y=>y.judge);
    console.log('     R14 '+nm+': first faults '+S(c.c.map(j=>j.faults.defender.length))+'; candidate returns '+sum(c.c)+'; judges asking about chatgpt\'s own passage at the end: live ['+who(l).join(', ')+'], candidate ['+who(c).join(', ')+']');
    chk('R14 '+nm+': chatgpt\'s distinct question is not lost',!(who(l).length>0&&who(c).length===0));}}
+
+ {// R15
+  const A='and I accepted that order.',B="The finding is dated before the pair's coming together.",AB=A+' '+B;const q=(eq,cq)=>({round:'CR4',quote:cq,earlier_round:'CR3',earlier_quote:eq,question:'How do these two passages agree?'});
+  const c4=String(F.cr4);const i4=c4.indexOf(s4[0]);const wide4=c4.slice(i4,c4.indexOf(s4[1])+s4[1].length);const adj=i4>=0&&c4.indexOf(s4[1])>i4&&wide4.length<600;
+  const run15=async(nm,f0,key,part,expectLossFree)=>{const sec={1:{...firstOf(1),defender:other(3)}};const l=await full(L,f0,sec),c=await full(N,f0,sec);const who=x=>x.f.filter(y=>y.side==='defender'&&y[key]&&String(y[key]).includes(part)).map(y=>y.judge);console.log('     R15 '+nm+': first faults '+S(c.c.map(j=>j.faults.defender.length))+'; candidate returns '+sum(c.c)+'; judges whose final question contains the part: live ['+who(l).join(', ')+'], candidate ['+who(c).join(', ')+']');chk('R15 '+nm,!(who(l).length>0&&who(c).length===0));return c;};
+  await run15('wider earlier passage: the extra part keeps an asker',{0:{...firstOf(0),defender:q(A,s4[0])},1:{...firstOf(1),defender:q(AB,s4[0])},2:{...firstOf(2),defender:plain(2)}},'earlier_quote',B);
+  if(adj)await run15('wider closing passage: the extra part keeps an asker',{0:{...firstOf(0),defender:q(A,s4[0])},1:{...firstOf(1),defender:q(A,wide4)},2:{...firstOf(2),defender:plain(2)}},'quote',s4[1]);else console.log('     R15 wider closing passage: no adjacent closing sentences found for the plant (not run)');
+  const c=await run15('c. narrower passage inside the standing one: nothing lost',{0:{...firstOf(0),defender:q(AB,s4[0])},1:{...firstOf(1),defender:q(A,s4[0])},2:{...firstOf(2),defender:plain(2)}},'earlier_quote',A);chk('R15c the narrower question is redirected',!!(c.c[1].redirect||{}).defender);}
  console.log(ok?'ALL CHECKS OK':'SOME CHECK FAILED');
 })().catch(e=>{console.log('RUNNER ERROR '+e.stack);});

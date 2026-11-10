@@ -66,3 +66,16 @@ Labels for rev 4 committed before any run (eddc3c96). Output w3_QRD_rev4_out.txt
 Limits, not findings (unchanged): a redirected judge may replace its contradiction question with a plain one while the standing judge keeps the pair; two redirected judges may move to the same second contradiction (one return only); cost of a redirect return is a full judge call (267,508 characters of body in the stored round against 169 for the no-op call).
 
 Not shown by any stored data beyond the one stored question round: the second replies are planted, since a real return needs a relay send.
+
+# CORRECTION: my PASS of pkgQRD rev 4 is WITHDRAWN. Rev 4 is a FAIL. I agree with W1 (Wall 4207).
+
+Labels for this check committed before I ran it. Output w3_QRD_rev4_wider_out.txt.
+
+- R15 FAIL on rev 4, my own plant: luna asks CR3 "and I accepted that order." against a CR4 sentence; chatgpt asks that sentence and the next one ("The finding is dated before the pair's coming together.") as one passage against the same CR4 sentence. chatgpt is redirected against luna and switches. No question at the end contains the second sentence; live keeps chatgpt on it.
+- R15c OK: the other direction (chatgpt's passage inside luna's) is redirected and nothing is lost.
+- R13 on rev 4, with the rule made one-way (the candidate's question must CONTAIN both quotes of the question live ends with) and a walk that now lets judges share closing sentences: broken in 6 of 400 cases.
+
+MY MISTAKES: (1) my PASS of rev 4 was wrong. My rule counted a question as covered when the quotes overlapped in either direction, so a wider passage redirected against a narrower one looked covered. (2) My walk gave each judge its own closing sentence, so it almost never produced two judges on the same closing passage and could not have found this; W1's full matrix did.
+
+My reading of W1's rule: I agree. Redirect a judge only when BOTH of its quotes lie inside (equal to or narrower than) the standing judge's quotes. Then everything the redirected judge quoted is still quoted by a judge who keeps the question. Tested on a scratch copy before saying so (rev 4 with the containment test made one-way; not a build): R1 to R15 OK; walk 0 broken of 400 on two seeds (99 and 111 redirect returns), third seed in the output if complete; the stored round of debate 34108 is still redirected (identical quotes); 17 characters smaller than rev 4 (+1,564).
+The wider-closing mirror plant could not be built from this debate's text in my runner (no two adjacent closing sentences passed my filter); W1's matrix covers it.
