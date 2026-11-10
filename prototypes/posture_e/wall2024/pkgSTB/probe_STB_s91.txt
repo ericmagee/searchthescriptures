@@ -1,0 +1,13 @@
+OK   A 31 library nodes (30 stubs and Early Alternate Build): 31 rebuild to the same source in live and candidate (9947807 bytes of running code)
+OK   A no other node differs; connections equal; 418 nodes
+OK   A the lines after the length check (the run line; the Early Alternate Build tail) are equal in live and candidate for all 31
+OK   B run 34108: 31 of 31 nodes give the same result in live and candidate (22 with output, 9 with the same error for a missing saved input)
+OK   B run 34016: 31 of 31 nodes give the same result in live and candidate (24 with output, 7 with the same error for a missing saved input)
+OK   C entry missing: the stub stops (pkgLIB: the Shared Library holds no entry for Gate Record)
+OK   C entry not fitting the library: the stub stops before running any code (pkgLIB: rebuilt source is 372241 bytes, expected 372351 (Shared Librar)
+OK   C a form 3 stub on the form 2 library stops (Unexpected non-whitespace character after JSON at position 4)
+OK   C a form 2 stub on the form 3 library stops (Unexpected non-whitespace character after JSON at position 4): the write must carry all 32 nodes together
+OK   D pkgFUK rev 2 packed in form 3: files that change = 1 (Shared_Library.js)
+OK   D the same fix packed in form 2 (today): files that change = 31
+OK   D the unchanged form 3 stubs, on the new Shared Library, rebuild every pkgFUK rev 2 source byte for byte
+12 OK, 0 FAIL

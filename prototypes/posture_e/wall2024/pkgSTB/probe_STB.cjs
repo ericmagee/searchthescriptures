@@ -4,7 +4,7 @@
 // C. a stub whose entry is missing, or whose entry does not fit the library, stops with a named error and runs nothing.
 // D. the gain: a library fix (pkgFUK rev 2, strip_FUK2) packed in form 3 changes the Shared Library only; in form 2 it changes 32 nodes.
 process.chdir(require('path').resolve(__dirname,'..'));const fs=require('fs'),cp=require('child_process'),os=require('os'),path=require('path');
-const g=f=>{let d=JSON.parse(fs.readFileSync(f,'utf8'));d=d.data||d;return d.workflow||d;};const LV=g('/mnt/project-files/wall2024/fetchback_live_s90.json'),PK=g(__dirname+'/parent_s90_STB.json');
+const g=f=>{let d=JSON.parse(fs.readFileSync(f,'utf8'));d=d.data||d;return d.workflow||d;};const LV=g(process.env.FB||'/mnt/project-files/wall2024/fetchback_live_s90.json'),PK=g(process.env.PARENT||__dirname+'/parent_s90_STB.json');
 const code=(W,n)=>W.nodes.find(z=>z.name===n).parameters.jsCode;let ok=0,bad=0;const chk=(c,m)=>{if(c){ok++;console.log('OK   '+m);}else{bad++;console.log('FAIL '+m);}};
 const LIBN=PK.nodes.filter(n=>typeof n.parameters.jsCode==='string'&&n.name!=='Shared Library'&&n.parameters.jsCode.includes("$('Shared Library')")).map(n=>n.name).sort();
 const src=(W,n,lib)=>{const c=code(W,n);const i=c.indexOf('\nif(__S.length!==__N)');if(i<0)throw new Error('no length check in '+n);const j=c.indexOf('\n',i+1);
