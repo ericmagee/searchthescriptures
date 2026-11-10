@@ -1,0 +1,24 @@
+OK   T1 only the Shared Library differs from live s108; connections equal; 418 nodes; Shared Library 913804 -> 914006 (+202)
+OK   T1 of 43 library-read nodes, the rebuilt source changes in exactly three: Judge Enforcer Record +94, Alt Judge Enforcer Record +94, R2 Alt Judge Enforcer Record +94
+T2 Judge Enforcer Record: stored debates 37, output equal to live 37, differ 0; headless answer lines in the stored first replies: 3
+T2 Alt Judge Enforcer Record: stored debates 24, output equal to live 24, differ 0; headless answer lines in the stored first replies: 0
+OK   T3 34108 as stored: fix output equal to live
+OK   T3 P1 as stored -> DISAGREE (want DISAGREE)
+OK   T3 P2 without the ENFORCER head, live code -> NO VERDICT (want NO VERDICT)
+OK   T3 P2 without the ENFORCER head -> DISAGREE (want DISAGREE)
+OK   T3 P3 list dash before the head -> DISAGREE (want DISAGREE)
+OK   T3 P4 list dash, no head -> DISAGREE (want DISAGREE)
+OK   T3 P5 bullet, no head -> DISAGREE (want DISAGREE)
+OK   T3 P6 bold id, no head -> DISAGREE (want DISAGREE)
+OK   T3 P7 no head, seat beside the id -> DISAGREE (want DISAGREE)
+OK   T3 P8 no head, en dash separators -> DISAGREE (want DISAGREE)
+OK   T3 P9 no head and no verdict word (a quoted judge line "B3.1 -- MEETS -- text") -> NO VERDICT (want NO VERDICT)
+OK   T3 P10 no head, an id letter outside the rule letters (A3.1) -> NO VERDICT (want NO VERDICT)
+OK   T3 P11 a sentence that only starts like an id ("B3.1 is right -- DISAGREE ...") -> NO VERDICT (want NO VERDICT)
+OK   T3 P12 the headed line, then the same id headless with AGREE on the next line: the later line stands, as two headed lines do today -> AGREE (want AGREE)
+OK   T3 P13 no head, an id the call does not hold (B999.1): the real line is gone, NO VERDICT, no throw -> NO VERDICT (want NO VERDICT)
+OK   T3 P2 through the fix: every row equal to the stored run in every field but full_reply, which holds the planted text (the headless line reads as the headed one)
+   33815 rows of Y6.1, Y7.1, Y8.1: live as stored [AGREE, AGREE, AGREE]; fix as stored [AGREE, AGREE, AGREE]; live with the retry taken away [NO VERDICT, NO VERDICT, NO VERDICT]; fix with the retry taken away [DISAGREE, AGREE, AGREE]
+OK   T4 33815 as stored (the retry's reply present): the fix changes no row; the retry's lines stand, as in live
+OK   T4 33815 with the retry taken away: live reads none of the three real headless lines, the fix reads all three as written
+ALL OK
