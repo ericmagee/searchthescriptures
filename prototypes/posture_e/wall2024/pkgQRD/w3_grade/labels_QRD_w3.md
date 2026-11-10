@@ -29,3 +29,10 @@ I read W2's Wall post only; no rev 2 code was run or read before this.
 - R10 luna and chatgpt both have a fault on the challenger side: sol is not redirected; all three defender questions follow today's rule.
 - R11 luna's first reply is not JSON: not counted; chatgpt stands; sol redirected against chatgpt.
 - R12 MY OWN CONDITION TESTED. Three judges, same rounds: chatgpt's earlier quote is a long passage that contains luna's earlier quote and sol's earlier quote; luna's and sol's quotes do not contain one another; the closing quotes are three different sentences. chatgpt is redirected against luna; sol is redirected against chatgpt, though sol's question is not a repeat of luna's. If chatgpt and sol both switch, sol's distinct question is asked by no one, where live keeps it. If the plant shows that, it is a loss and a FAIL, and the condition I gave on the Wall (4196) was incomplete: the earlier judge must also not be redirected itself on that side.
+
+## Rev 3 (W2 commit 91f8366a): labels added before any run of rev 3
+
+Between rev 2 and these labels I ran my runner once on a scratch copy of rev 2 with my own full condition patched in (not W2's rev 3), to test the condition before relying on it again: R1 to R12 OK there. No rev 3 code was run or read before this.
+
+- R1 to R12 all OK on rev 3; sizes as W2 states (+1,583 code); prompt text unchanged. In R12 sol is not redirected and keeps its question.
+- R13 A walk of my own, defender side, 400 random cases: each judge's first question is drawn from passage A, passage B, both as one passage, an unrelated pair, a plain question, or a failing question, with a challenger fault at random; each returned judge's second reply is drawn from switch to another contradiction, switch to a plain question, same again, a failing question, not JSON. Rule checked in every case: every contradiction question the defender is asked at the end under live is matched at the end under the candidate by a question on the same rounds with one quote inside the other. 0 cases may break the rule.
