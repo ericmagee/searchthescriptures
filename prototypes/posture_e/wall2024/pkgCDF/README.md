@@ -19,4 +19,4 @@ Checks
 - corpus_CDF.txt: 366 hints, 123 LINK ? (rev 11: 124; the cap order moves one hint). size_CDF.txt: prompt size as rev 11 (mean +4,914 characters, 3.4%).
 - pkgCEC probe 62 OK, 8 FAIL (the same 8).
 
-Rev 2 (coordinator 05:16Z): change 2 dropped; changes 1, 3, 4 kept; all checks above rerun on rev 2 (record 10 OK, reach unchanged).
+Rev 2 (coordinator 05:16Z): change 2 dropped; changes 1, 3, 4 kept; record, reach and corpus rerun on rev 2 (record 10 OK, reach unchanged); size and the pkgCEC probe are from rev 1 (the removed change did not touch them).
