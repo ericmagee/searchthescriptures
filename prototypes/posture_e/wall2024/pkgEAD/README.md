@@ -63,3 +63,8 @@ The item is listed in sb_not_sent, as pkgECB does. An item that also carries an 
 - W2 node replay: 74 node runs, 68 byte-equal, 13 withheld, 1 run with other change (34016, two items sharing one name, W2 hand-checked). It covers 33299 (4 withholds: gemini Genesis 4:1; Job 14:1 for gemini, terra, sol), which my harness cannot replay.
 - My plants 8 OK; my node replay 58 runs, 52 equal, 11 withheld, 0 other.
 - Joint with pkgK7C rev 2: +2,790 (2,162 + 628). Independent build (BASESRC=K7C2): 42 of 42 sources equal. pkgEAD tests on the joint: same results. W2's t_rev2_real.cjs on the joint: output identical to pkgK7C rev 2 alone (k7c_on_joint_rev3.txt).
+
+## Rev 3b (smaller form, same behaviour)
+- Same rule as rev 3; E1.add rewritten shorter (1,586 -> 1,306 characters): shorter comment, one loop over Panel Cure Normalize 1 to 3, one regex for the pkgVPD form and the one-hop parenthesis. Rev 3's text kept as patches/E1.add.rev3 and parent_s112_EAD_rev3a.json.
+- Size: +1,874 code measured against s112 (rev 3 +2,162). Joint +2,502 (1,874 + 628).
+- Every test output is identical to rev 3: W3 g5, g8, g9; W2 plants and node replay; my plants (8 OK) and node replay; on the joint, 42 of 42 sources equal to the independent build and pkgK7C's real-run output identical to rev 2 alone.
