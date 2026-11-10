@@ -1,0 +1,11 @@
+OK   G1 stored debates: 39 built; sections, system, instruction, candidates
+OK   G2 D NONE, C CONFIRMED C1: cand CHALLENGER 1 NEW | live joined CHALLENGER 1 NEW | none false | rows ["NEW CHALLENGER LINK 1 CONFIRMED -- planted.","NONE DEFENDER NONE FOUND"] | errors []
+OK   G3 both CONFIRMED: cand CHALLENGER 1 NEW|DEFENDER 6 NEW | live joined CHALLENGER 1 NEW|DEFENDER 6 NEW | none false | rows ["NEW DEFENDER LINK 6 CONFIRMED -- reclaimed.","NEW CHALLENGER LINK 1 CONFIRMED -- planted."] | errors []
+OK   G4 D timeout, C CONFIRMED C1: ["NEW CHALLENGER LINK 1 CONFIRMED -- planted.","NOT CHECKED DEFENDER NOT CHECKED -- DEFENDER: no reply (timeout)"] ["DEFENDER: no reply (timeout)"]
+OK   G5 D CONFIRMED D6 plus a NONE line, C NONE: cand DEFENDER 6 NEW | live joined DEFENDER 6 NEW | none true | rows ["NEW DEFENDER LINK 6 CONFIRMED -- reclaimed.","NONE CHALLENGER NONE FOUND"] | errors []
+OK   G6 same pair CONFIRMED in D call, NOT A CONTRADICTION in C call: cand  | live joined  | none false | rows ["NEW DEFENDER LINK 6 NOT CONFIRMED (conflicting answers) -- the same pair is also","NEW DEFENDER LINK 6 NOT A CONTRADICTION -- reclaimed."] | errors []
+OK   G7 D call returns a CHALLENGER line with defender quotes: cand  | live joined  | none false | rows ["NEW CHALLENGER LINK 6 NOT CONFIRMED (form) -- the earlier round CR3 is not one of ","NONE CHALLENGER NONE FOUND"] | errors []
+OK   G8 2 Oracle candidates on the defender item only; first answered, rest NO ANSWER: cand no_answer X2 | live X2
+OK   G9 D repeats the D6 line: cand DEFENDER 6 NEW | live joined DEFENDER 6 NEW | none false | rows ["NEW DEFENDER LINK 6 CONFIRMED -- reclaimed.","NEW DEFENDER LINK 6 CONFIRMED -- the same link is already broken by an earlier c","NONE CHALLENGER NONE FOUND"] | errors []
+OK   G10 D empty reply, C NONE: ["NO LINE DEFENDER NOT CHECKED -- DEFENDER: the reply holds no CLOSE-CONTRADICT","NONE CHALLENGER NONE FOUND"]
+10 OK, 0 FAIL

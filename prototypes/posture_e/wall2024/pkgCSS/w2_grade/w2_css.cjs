@@ -12,7 +12,10 @@
 // G8  Oracle candidates (34108 [DR4]): on the defender item only; D reply answers the first, omits the rest -> NO ANSWER rows for the rest only; equal to live joined
 // G9  D repeats the D6 line                                  -> one break; equal to live joined
 // G10 D reply empty text "", C NONE                           -> NOT CHECKED row for DEFENDER (no line), none false, nothing broken
-process.chdir(__dirname+'/../..');const fs=require('fs');const {harness}=require('./pkgGSL/harness.cjs');const H=require('./pkgVP3/harness.cjs');
+// TEST FAULTS fixed after the first run (labels unchanged): (1) require paths; (2) log rows carry the status at the head of cure_reason
+// (cure_status is null by table rule), so rows are printed from item + cure_reason; (3) G8: 34108's [DR4] yields no Oracle candidate, so G8
+// plants two OPPONENT'S CONTRADICTIONS lines into a copy of 34108's [DR4].
+process.chdir(__dirname+'/../..');const fs=require('fs');const {harness}=require('../../pkgGSL/harness.cjs');const H=require('../../pkgVP3/harness.cjs');
 const g=f=>{let d=JSON.parse(fs.readFileSync(f,'utf8'));d=d.data||d;return d.workflow||d;};const CAND=g('pkgCSS/parent_s104_CSS.json'),LIVE=g('/mnt/project-files/wall2024/fetchback_live_s104.json');
 const code=(W,n)=>W.nodes.find(z=>z.name===n).parameters.jsCode;const J=x=>({json:x});let ok=0,bad=0;const T=(n,c,i)=>{if(c)ok++;else bad++;console.log((c?'OK   ':'FAIL ')+n+(i?': '+i:''));};
 const DS={'Resolve Seats':[J({deepseek:{api_model:'deepseek-flash'}})]};
@@ -37,17 +40,18 @@ const ck=c=>c.map(x=>x.side+' '+x.link+' '+x.id).sort().join('|');
  const D6='CLOSE-CONTRADICTION: NEW -- DEFENDER -- LINK 6 -- CONFIRMED -- EARLIER [CR3] "I drop the wording "no biological father" as a bare statement." -- CLOSING [CR4] "Christ had no biological father." -- reclaimed.';
  const C1='CLOSE-CONTRADICTION: NEW -- CHALLENGER -- LINK 1 -- CONFIRMED -- EARLIER [DR3] "So, footed on these rows, Joseph knew Mary his wife within the espousal." -- CLOSING [DR4] "I grant all of this, and it makes Joseph the legal father." -- planted.';
  const NONE='CLOSE-CONTRADICTION: NONE';
- const both=async(n,a,b,extra)=>{const R=await rec(CAND,BC,[a,b]);const L=await rec(LIVE,[BL],[[a,b].filter(x=>x!=null).join('\n')]);const rows=(typeof R.cec_log==='string'?JSON.parse(R.cec_log):R.cec_log).map(x=>x.item+' '+x.cure_status+(x.cure_reason&&/NOT CHECKED/.test(x.cure_reason)?' ['+String(x.cure_reason).slice(0,50)+']':''));
+ const both=async(n,a,b,extra)=>{const R=await rec(CAND,BC,[a,b]);const L=await rec(LIVE,[BL],[[a,b].filter(x=>x!=null).join('\n')]);const rows=(typeof R.cec_log==='string'?JSON.parse(R.cec_log):R.cec_log).map(x=>x.item+' '+String(x.cure_reason||'').slice(0,60));
   const eq=ck(R.cec.confirmed)===ck(L.cec.confirmed);T(n,eq&&extra(R,rows),'cand '+ck(R.cec.confirmed)+' | live joined '+ck(L.cec.confirmed)+' | none '+R.cec.none+' | rows '+JSON.stringify(rows)+' | errors '+JSON.stringify(R.cec.errors));};
  const has=(rows,re)=>rows.some(x=>re.test(x));
  await both('G2 D NONE, C CONFIRMED C1',NONE,C1,(R,rows)=>R.cec.confirmed.length===1&&R.cec.confirmed[0].side==='CHALLENGER'&&has(rows,/^NONE DEFENDER NONE FOUND/)&&R.cec.none===false);
  await both('G3 both CONFIRMED',D6,C1,(R)=>R.cec.confirmed.length===2);
- {const R=await rec(CAND,BC,[null,C1]);const rows=R.cec_log.map(x=>x.item+' '+x.cure_status+' '+String(x.cure_reason).slice(0,40));T('G4 D timeout, C CONFIRMED C1',R.cec.confirmed.length===1&&R.cec.confirmed[0].side==='CHALLENGER'&&has(rows,/^NOT CHECKED DEFENDER/)&&R.cec.errors.some(e=>/^DEFENDER/.test(e))&&R.cec.none===false,JSON.stringify(rows)+' '+JSON.stringify(R.cec.errors));}
+ {const R=await rec(CAND,BC,[null,C1]);const rows=R.cec_log.map(x=>x.item+' '+String(x.cure_reason||'').slice(0,60));T('G4 D timeout, C CONFIRMED C1',R.cec.confirmed.length===1&&R.cec.confirmed[0].side==='CHALLENGER'&&has(rows,/^NOT CHECKED DEFENDER/)&&R.cec.errors.some(e=>/^DEFENDER/.test(e))&&R.cec.none===false,JSON.stringify(rows)+' '+JSON.stringify(R.cec.errors));}
  await both('G5 D CONFIRMED D6 plus a NONE line, C NONE',D6+'\n'+NONE,NONE,(R)=>R.cec.confirmed.length===1&&R.cec.confirmed[0].link===6);
  await both('G6 same pair CONFIRMED in D call, NOT A CONTRADICTION in C call',D6,D6.replace('-- CONFIRMED --','-- NOT A CONTRADICTION --'),(R)=>R.cec.confirmed.length===0&&R.cec.rows.some(x=>/conflicting/.test(x.status)));
  await both('G7 D call returns a CHALLENGER line with defender quotes',D6.replace('-- DEFENDER --','-- CHALLENGER --'),NONE,(R,rows)=>R.cec.confirmed.length===0&&R.cec.rows.some(x=>/form/.test(x.status)));
- {const cs=BC[0].cands||[];if(!cs.length)T('G8 Oracle candidates',false,'34108 defender item has no candidate');else{const c=cs[0];const a='CLOSE-CONTRADICTION: '+c.id+' -- DEFENDER -- LINK '+c.n+' -- NOT A CONTRADICTION -- EARLIER ['+c.earlier_round+'] "'+c.earlier_q+'" -- CLOSING ['+c.closing_round+'] "'+c.closing_q+'" -- planted.';
+ {const F0=H.out('34108','Final Output').flat().filter(Boolean)[0].json;const OPP="\n\nOPPONENT'S CONTRADICTIONS:\nX1 LINK 6 | EARLIER [CR3] \"I drop the wording \"no biological father\" as a bare statement.\" | CLOSING [CR4] \"Christ had no biological father.\" | reclaimed\nX2 LINK 2 | EARLIER [CR3] \"I drop the wording \"no biological father\" as a bare statement.\" | CLOSING [CR4] \"Christ had no biological father.\" | planted second\n";
+ const FP={...F0,dr4:String(F0.dr4).replace(/OPPONENT['’]S CONTRADICTIONS[^\n]*\n?/i,'OLD SECTION\n')+OPP};const BC=await runB(CAND,'34108',FP),BL=(await runB(LIVE,'34108',FP))[0];const cs=BC[0].cands||[];if(!cs.length)T('G8 Oracle candidates',false,'34108 defender item has no candidate');else{const c=cs[0];const a='CLOSE-CONTRADICTION: '+c.id+' -- DEFENDER -- LINK '+c.n+' -- NOT A CONTRADICTION -- EARLIER ['+c.earlier_round+'] "'+c.earlier_q+'" -- CLOSING ['+c.closing_round+'] "'+c.closing_q+'" -- planted.';
   const R=await rec(CAND,BC,[a,NONE]),L=await rec(LIVE,[BL],[a+'\n'+NONE]);T('G8 '+cs.length+' Oracle candidates on the defender item only; first answered, rest NO ANSWER',(BC[1].cands||[]).length===0&&R.cec.no_answer.join()===cs.slice(1).map(x=>x.id).join()&&R.cec.no_answer.join()===L.cec.no_answer.join(),'cand no_answer '+R.cec.no_answer+' | live '+L.cec.no_answer);}}
  await both('G9 D repeats the D6 line',D6+'\n'+D6,NONE,(R)=>R.cec.confirmed.length===1);
- {const R=await rec(CAND,BC,['',NONE]);const rows=R.cec_log.map(x=>x.item+' '+x.cure_status);T('G10 D empty reply, C NONE',R.cec.confirmed.length===0&&R.cec.none===false&&has(rows,/DEFENDER NOT CHECKED/),JSON.stringify(rows));}
+ {const R=await rec(CAND,BC,['',NONE]);const rows=R.cec_log.map(x=>x.item+' '+String(x.cure_reason||'').slice(0,60));T('G10 D empty reply, C NONE',R.cec.confirmed.length===0&&R.cec.none===false&&has(rows,/^NO LINE DEFENDER NOT CHECKED/),JSON.stringify(rows));}
  console.log(ok+' OK, '+bad+' FAIL');})();
