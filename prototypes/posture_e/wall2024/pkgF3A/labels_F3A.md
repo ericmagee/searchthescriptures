@@ -20,3 +20,11 @@ exemption to Second Alternate?. F1 to F6 unchanged.
   R2 Alternate Build offers it to that seat and refuses it for the other with a G5 (pkgF3A) reason.
 - R4 F0 to F6 and the split cases C1 to C3 as before; no retry of a usable reply; at most one retry.
 - R5 size measured separately: G1 alone, RETRY alone, both; prompt none.
+
+## Rev 2s (smaller form, bloat rule), written before it is built or run. Meets W3's closing condition only (A, and the record names the retry).
+- S1 = R1: a retry's round 2 ALTERNATE TRIED line is kept (2 lines for luna in the plant); non-retry round 2 lines as s110 (control plant:
+  round 2 tries a different model; the line set equals s110's).
+- S2: the final record alternate_round2.retry names the retried model.
+- S3: C1 to C3 split cases as before (with the family exemption).
+- Not closed by 2s, stated: C (retried model may go to the first failed seat in panel order when two seats are unfilled), D (a2r.tried omits the
+  retried model; a2r.retry names it).
