@@ -1,0 +1,40 @@
+== /mnt/project-files/wall2024/fetchback_live_s108.json
+FORM ./check34108_s108/34108_X_live_DEFENDER_s1_reply.json :: ? NOT CONFIRMED (form) (the line is not in the CLOSE-CONTRADICTION form)
+FORM ./check34108_s108/34108_X_live_DEFENDER_s2_reply.json :: ? NOT CONFIRMED (form) (the line is not in the CLOSE-CONTRADICTION form)
+ERR ./check34108_s108/34108_Y_rac_DEFENDER_s1_reply.json :: DEFENDER: the reply holds no CLOSE-CONTRADICTION line
+ERR ./check34108_s108/34108_Y_rac_DEFENDER_s2_reply.json :: DEFENDER: the reply holds no CLOSE-CONTRADICTION line
+ERR ./ctl_replay_s108/33218_ctl_DEFENDER_reply.json :: DEFENDER: the reply holds no CLOSE-CONTRADICTION line
+ERR ./ctl_replay_s108/33345_ctl_DEFENDER_reply.json :: DEFENDER: the reply holds no CLOSE-CONTRADICTION line
+ERR ./ctl_replay_s108/33371_ctl_DEFENDER_reply.json :: DEFENDER: the reply holds no CLOSE-CONTRADICTION line
+ERR ./ctl_replay_s108/33530_ctl_CHALLENGER_reply.json :: CHALLENGER: the reply holds no CLOSE-CONTRADICTION line
+ERR ./ctl_replay_s108/33644_ctl_DEFENDER_EXTRA_exec34576.json :: DEFENDER: the reply holds no CLOSE-CONTRADICTION line
+ERR ./ctl_replay_s108/33644_ctl_DEFENDER_reply.json :: DEFENDER: the reply holds no CLOSE-CONTRADICTION line
+ERR ./ctl_replay_s108/33798_ctl_DEFENDER_reply.json :: DEFENDER: the reply holds no CLOSE-CONTRADICTION line
+ERR ./rac_replay_s107/33222_rac_CHALLENGER_send2.json :: CHALLENGER: the reply holds no CLOSE-CONTRADICTION line
+ERR ./rac_replay_s107/33461_rac_DEFENDER_send1.json :: DEFENDER: the reply holds no CLOSE-CONTRADICTION line
+ERR ./rac_replay_s107/33461_rac_DEFENDER_send2.json :: DEFENDER: the reply holds no CLOSE-CONTRADICTION line
+ERR ./rac_replay_s107/33575_rac_DEFENDER_exec34563.json :: DEFENDER: the reply holds no CLOSE-CONTRADICTION line
+ERR ./rac_replay_s107/33575_rac_DEFENDER_exec34564.json :: DEFENDER: the reply holds no CLOSE-CONTRADICTION line
+ERR ./rac_replay_s107/33705_rac_DEFENDER_send1.json :: DEFENDER: the reply holds no CLOSE-CONTRADICTION line
+ERR ./rac_replay_s107/33705_rac_DEFENDER_send2.json :: DEFENDER: the reply holds no CLOSE-CONTRADICTION line
+ERR ./rac_replay_s107/34108_rac_DEFENDER_send1.json :: DEFENDER: the reply holds no CLOSE-CONTRADICTION line
+ERR ./rac_replay_s107/34108_rac_DEFENDER_send2.json :: DEFENDER: the reply holds no CLOSE-CONTRADICTION line
+== pkgRLF/rev2/parent_s108_RLF2.json
+ERR ./check34108_s108/34108_Y_rac_DEFENDER_s1_reply.json :: DEFENDER: the reply holds no CLOSE-CONTRADICTION line
+ERR ./check34108_s108/34108_Y_rac_DEFENDER_s2_reply.json :: DEFENDER: the reply holds no CLOSE-CONTRADICTION line
+ERR ./ctl_replay_s108/33218_ctl_DEFENDER_reply.json :: DEFENDER: the reply holds no CLOSE-CONTRADICTION line
+ERR ./ctl_replay_s108/33345_ctl_DEFENDER_reply.json :: DEFENDER: the reply holds no CLOSE-CONTRADICTION line
+ERR ./ctl_replay_s108/33371_ctl_DEFENDER_reply.json :: DEFENDER: the reply holds no CLOSE-CONTRADICTION line
+ERR ./ctl_replay_s108/33530_ctl_CHALLENGER_reply.json :: CHALLENGER: the reply holds no CLOSE-CONTRADICTION line
+ERR ./ctl_replay_s108/33644_ctl_DEFENDER_EXTRA_exec34576.json :: DEFENDER: the reply holds no CLOSE-CONTRADICTION line
+ERR ./ctl_replay_s108/33644_ctl_DEFENDER_reply.json :: DEFENDER: the reply holds no CLOSE-CONTRADICTION line
+ERR ./ctl_replay_s108/33798_ctl_DEFENDER_reply.json :: DEFENDER: the reply holds no CLOSE-CONTRADICTION line
+ERR ./rac_replay_s107/33222_rac_CHALLENGER_send2.json :: CHALLENGER: the reply holds no CLOSE-CONTRADICTION line
+ERR ./rac_replay_s107/33461_rac_DEFENDER_send1.json :: DEFENDER: the reply holds no CLOSE-CONTRADICTION line
+ERR ./rac_replay_s107/33461_rac_DEFENDER_send2.json :: DEFENDER: the reply holds no CLOSE-CONTRADICTION line
+ERR ./rac_replay_s107/33575_rac_DEFENDER_exec34563.json :: DEFENDER: the reply holds no CLOSE-CONTRADICTION line
+ERR ./rac_replay_s107/33575_rac_DEFENDER_exec34564.json :: DEFENDER: the reply holds no CLOSE-CONTRADICTION line
+ERR ./rac_replay_s107/33705_rac_DEFENDER_send1.json :: DEFENDER: the reply holds no CLOSE-CONTRADICTION line
+ERR ./rac_replay_s107/33705_rac_DEFENDER_send2.json :: DEFENDER: the reply holds no CLOSE-CONTRADICTION line
+ERR ./rac_replay_s107/34108_rac_DEFENDER_send1.json :: DEFENDER: the reply holds no CLOSE-CONTRADICTION line
+ERR ./rac_replay_s107/34108_rac_DEFENDER_send2.json :: DEFENDER: the reply holds no CLOSE-CONTRADICTION line

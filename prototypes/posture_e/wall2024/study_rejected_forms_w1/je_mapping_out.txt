@@ -1,0 +1,36 @@
+bare ok 169 name ok 52
+notread 8
+   33222_Judge_Enforcer_Call_deepseek c5: ENFORCER: Y1.1 -- TRUE -- The challenger's own sentences do give ground, granting "I grant the order of the wo
+   33222_Judge_Enforcer_Call_deepseek c5: ENFORCER: Y2.1 -- TRUE -- The challenger's logged entries quote the defender's grants as given, e.g. "G1 [CR2]
+   33222_Judge_Enforcer_Call_deepseek c5: ENFORCER: Y3.1 -- TRUE -- The defender's own words are "I drop the claim that a row names Mary's house as Davi
+   33222_Judge_Enforcer_Call_deepseek c5: ENFORCER: Y4.1 -- TRUE -- The defender's own sentences concede, e.g. "I grant it is said of men with fathers (
+   33222_Judge_Enforcer_Call_deepseek c5: ENFORCER: Y6.1 -- TRUE -- The defender's own words are "Galatians 4:4, 'made of a woman, made under the law.' 
+   33815_Judge_Enforcer_Call_deepseek c7: Y6.1 -- DISAGREE -- RIGHT: OVERSTATED -- The own sentences grant that "Joseph is father by law, naming and hou
+   33815_Judge_Enforcer_Call_deepseek c7: Y7.1 -- AGREE -- RIGHT: TRUE -- The defender's own words state "I withdraw the lexical gloss I gave for the He
+   33815_Judge_Enforcer_Call_deepseek c7: Y8.1 -- AGREE -- RIGHT: TRUE -- The defender's own words state "LINK 4: NARROWED TO: Isaiah 7:14 as the sign i
+bare_fail 0
+bare_multi 16
+   33149_Judge_Enforcer_Call_deepseek.json c5 P11 -> 3 items
+   33149_Judge_Enforcer_Call_deepseek.json c5 P11 -> 3 items
+   33149_Judge_Enforcer_Call_deepseek.json c5 P11 -> 3 items
+   33149_Judge_Enforcer_Call_deepseek.json c5 P12 -> 3 items
+   33149_Judge_Enforcer_Call_deepseek.json c5 P12 -> 3 items
+   33149_Judge_Enforcer_Call_deepseek.json c5 P12 -> 3 items
+   33442_Judge_Enforcer_Call_deepseek.json c5 P3 -> 3 items
+   33442_Judge_Enforcer_Call_deepseek.json c5 P4 -> 3 items
+   33442_Judge_Enforcer_Call_deepseek.json c5 P5 -> 3 items
+   33442_Judge_Enforcer_Call_deepseek.json c5 P6 -> 3 items
+   33442_Judge_Enforcer_Call_deepseek.json c5 P7 -> 3 items
+   33442_Judge_Enforcer_Call_deepseek.json c5 P8 -> 3 items
+   33442_Judge_Enforcer_Call_deepseek.json c5 P9 -> 3 items
+   33442_Judge_Enforcer_Call_deepseek.json c5 P10 -> 3 items
+   33442_Judge_Enforcer_Call_deepseek.json c5 P11 -> 3 items
+   33442_Judge_Enforcer_Call_deepseek.json c5 P12 -> 3 items
+name_fail 7
+   33644_Alt_Judge_Enforcer_Call_deepseek.json c5: 23 name lines vs 23 items
+   33731_Alt_Judge_Enforcer_Call_deepseek.json c4: 17 name lines vs 17 items
+   33774_Alt_Judge_Enforcer_Call_deepseek.json c1: 23 name lines vs 23 items
+   33798_Alt_Judge_Enforcer_Call_deepseek.json c5: 28 name lines vs 28 items
+   33828_Alt_Judge_Enforcer_Call_deepseek.json c3: 38 name lines vs 38 items
+   33846_Alt_Judge_Enforcer_Call_deepseek.json c5: 34 name lines vs 34 items
+   34016_Alt_Judge_Enforcer_Call_deepseek.json c1: 12 name lines vs 12 items
