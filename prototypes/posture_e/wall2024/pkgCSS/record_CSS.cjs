@@ -1,4 +1,5 @@
-// pkgCSS rev 1 (W1): checks on the write file, labeled before the first run. Build on 34108 stored rounds; Record with written replies.
+// pkgCSS rev 1 (W1): checks on the write file, labeled before the first run (16227eff). After that run two TEST faults were fixed, not labels of
+// behaviour: T7 wrongly required cure_reason empty (the log puts NONE FOUND there, as live), and T9/T10 read Final Output through the wrong harness. Build on 34108 stored rounds; Record with written replies.
 process.chdir(__dirname+'/..');const fs=require('fs');const {harness}=require('../pkgGSL/harness.cjs');
 const g=f=>{let d=JSON.parse(fs.readFileSync(f,'utf8'));d=d.data||d;return d.workflow||d;};const CAND=g(process.env.CAND||'pkgCSS/parent_s104_CSS.json'),LIVE=g('/mnt/project-files/wall2024/fetchback_live_s104.json');
 const code=(W,n)=>W.nodes.find(z=>z.name===n).parameters.jsCode;const J=x=>({json:x});let ok=0,bad=0;const T=(n,c,i)=>{if(c)ok++;else bad++;console.log((c?'OK   ':'FAIL ')+n+(i?': '+i:''));};
@@ -15,9 +16,10 @@ const rep=t=>t==null?J({error:{message:'timeout'}}):J({choices:[{message:{role:'
  const R5=await rec(BC,[L6,'CLOSE-CONTRADICTION: NONE']);T('T5 defender reply CONFIRMED D6, challenger NONE: link 6 broken, one output item',R5.cec.confirmed.length===1&&R5.cec.confirmed[0].link===6&&R5.cec.confirmed[0].side==='DEFENDER',JSON.stringify(R5.cec.rows.map(r=>r.id+' '+r.status)));
  const R6=await rec(BC,[null,'CLOSE-CONTRADICTION: NONE']);T('T6 defender call fails, challenger NONE: nothing broken, the error names the defender call',R6.cec.confirmed.length===0&&R6.cec.errors.some(e=>/^DEFENDER: no reply/.test(e)),JSON.stringify(R6.cec.errors));
  const R7=await rec(BC,['CLOSE-CONTRADICTION: NONE','CLOSE-CONTRADICTION: NONE']);const L7=typeof R7.cec_log==='string'?JSON.parse(R7.cec_log):R7.cec_log;
- T('T7 both NONE: none true, one NONE FOUND row whose prompt_sent holds both prompts',R7.cec.none===true&&L7.length===1&&L7[0].cure_reason==null&&/NONE FOUND/.test(JSON.stringify(L7[0]))&&String(L7[0].prompt_sent).includes('######## THE DEFENDER')&&String(L7[0].prompt_sent).includes('######## THE CHALLENGER'),JSON.stringify(L7.map(r=>[r.item,String(r.cure_reason).slice(0,40)])));
+ T('T7 both NONE: none true, one NONE FOUND row whose prompt_sent holds both prompts',R7.cec.none===true&&L7.length===1&&/NONE FOUND/.test(JSON.stringify(L7[0]))&&String(L7[0].prompt_sent).includes('######## THE DEFENDER')&&String(L7[0].prompt_sent).includes('######## THE CHALLENGER'),JSON.stringify(L7.map(r=>[r.item,String(r.cure_reason).slice(0,40)])));
  T('T8 log rows: seat_role panel, cure_status empty, rule E-CLOSECON',[...L7,...(typeof R5.cec_log==='string'?JSON.parse(R5.cec_log):R5.cec_log)].every(r=>r.seat_role==='panel'&&r.cure_status==null&&r.rule==='E-CLOSECON'),'');
- const F0=(await harness('34108',{})('return $(\'Final Output\').first().json;','Quote Report'))[0].json;
+ const F0=require('../pkgVP3/harness.cjs').out('34108','Final Output').flat().filter(Boolean)[0].json;
  const B9=await runB(CAND,{'Final Output':[J({...F0,dr4:''})]});T('T9 only the defender\'s closing round has text: one item, DEFENDER',B9.length===1&&B9[0].side==='DEFENDER',B9.map(b=>b.side).join(','));
  const B10=await runB(CAND,{'Final Output':[J({...F0,cr4:'',dr4:''})]});T('T10 no closing round: one skip item as before',B10.length===1&&B10[0].cec_skip===true,JSON.stringify(B10[0]).slice(0,100));
+ fs.writeFileSync('pkgCSS/rows_CSS.json',JSON.stringify(L7.map(r=>({...r,run_token:'W1-ROLLBACK-TEST-CSS',prompt_sent:String(r.prompt_sent).slice(0,100),full_reply:String(r.full_reply).slice(0,100)}))));
  console.log(ok+' OK, '+bad+' FAIL');})();

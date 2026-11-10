@@ -1,0 +1,11 @@
+OK   T1 Build returns two items, DEFENDER then CHALLENGER; the defender call holds [CR1]-[CR4] and no [DR] round, the challenger call the reverse: DEFENDER,CHALLENGER
+OK   T2 each side section is byte-equal to the live prompt's section for that side (rounds unchanged)
+OK   T3 the D6 drop and the D6 reclaim both stand in the defender call
+OK   T4 system text unchanged; the instruction is the one in pkgCSS/prompt_side.txt
+OK   T5 defender reply CONFIRMED D6, challenger NONE: link 6 broken, one output item: ["NEW CONFIRMED"]
+OK   T6 defender call fails, challenger NONE: nothing broken, the error names the defender call: ["DEFENDER: no reply (timeout)"]
+OK   T7 both NONE: none true, one NONE FOUND row whose prompt_sent holds both prompts: [["NONE","NONE FOUND"]]
+OK   T8 log rows: seat_role panel, cure_status empty, rule E-CLOSECON
+OK   T9 only the defender's closing round has text: one item, DEFENDER: DEFENDER
+OK   T10 no closing round: one skip item as before: {"cec_skip":true,"why":"no closing round","run_token":"ODV1-34108-3to8dgrt"}
+10 OK, 0 FAIL

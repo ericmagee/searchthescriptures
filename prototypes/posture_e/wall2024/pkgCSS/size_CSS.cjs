@@ -1,0 +1,11 @@
+// pkgCSS rev 1 (W1): measured size, the write file against live s104, on every stored debate. Characters (system + user) per DeepSeek call.
+process.chdir(__dirname+'/..');const fs=require('fs');const H=require('../pkgVP3/harness.cjs');const {harness}=require('../pkgGSL/harness.cjs');
+const g=f=>{let d=JSON.parse(fs.readFileSync(f,'utf8'));d=d.data||d;return d.workflow||d;};const W={live:g('/mnt/project-files/wall2024/fetchback_live_s104.json'),css:g('pkgCSS/parent_s104_CSS.json')};
+const C={};for(const k in W)C[k]=W[k].nodes.find(z=>z.name==='Close Enforcer Build').parameters.jsCode;
+for(const n of ['Close Enforcer Build','Close Enforcer Record']){const a=W.live.nodes.find(z=>z.name===n).parameters.jsCode.length,b=W.css.nodes.find(z=>z.name===n).parameters.jsCode.length;console.log('node code '+n+': '+a+' -> '+b+' ('+(b-a>=0?'+':'')+(b-a)+')');}
+const runs=fs.readdirSync(H.IN).filter(f=>f.endsWith('_Final_Output.json')).map(f=>f.split('_')[0]).sort();const A=[];
+(async()=>{for(const r of runs){let F;try{F=H.out(r,'Final Output').flat().filter(Boolean)[0].json;}catch(e){try{const x=JSON.parse(fs.readFileSync(H.IN+'/'+r+'_Final_Output.json','utf8'));F=x[x.length-1].main[0][0].json;}catch(e2){continue;}}
+ const L={};for(const k in C){try{const B=(await harness(r,{'Final Output':[{json:F}],'Resolve Seats':[{json:{deepseek:{api_model:'deepseek-flash'}}}],'Init Seats':[{json:{run_token:r}}]})('return (async()=>{\n'+C[k]+'\n})();','Quote Report')).map(x=>x.json);
+  L[k]=B[0].cec_skip?null:B.map(b=>b.body.messages[0].content.length+b.body.messages[1].content.length);}catch(e){L[k]=null;}}
+ if(!L.live||!L.css)continue;const one=L.live[0],mx=Math.max(...L.css),tot=L.css.reduce((a,b)=>a+b,0);A.push({one,mx,tot});console.log(r+': live '+one+' | per side '+L.css.join(' + ')+' | largest '+(100*(mx-one)/one).toFixed(1)+'% | total +'+(tot-one)+' (+'+(100*(tot-one)/one).toFixed(2)+'%)');}
+ const m=f=>A.reduce((t,x)=>t+f(x),0)/A.length;console.log(A.length+' debates: mean live call '+Math.round(m(x=>x.one))+'; mean largest call '+Math.round(m(x=>x.mx))+' ('+(100*(m(x=>x.mx)-m(x=>x.one))/m(x=>x.one)).toFixed(1)+'%); mean total +'+Math.round(m(x=>x.tot-x.one))+' characters (about '+Math.round(m(x=>x.tot-x.one)/4)+' tokens, +'+(100*m(x=>x.tot-x.one)/m(x=>x.one)).toFixed(2)+'%).');})();
