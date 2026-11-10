@@ -13,3 +13,14 @@ D4 QR Final, a side returned only to redirect: second reply with no question for
 D5 QR Final, second reply passes with a different contradiction -> used; the same question again -> used; fails -> first kept (as W2 states).
 D6 A side not returned keeps its first question whatever the second reply holds for it.
 D7 The live behaviour for faults alone (no repeat) is unchanged: a stored-style fault-only return gives the same QR Final output as live.
+
+## Rev 2 additions (W3 finding, Wall 4196), committed before any run on rev 2 (commit 4d105506)
+D8 Faulted asker. All plants: chatgpt and sol hold luna's defender question on CR3/CR4.
+ a. luna faulted on its challenger side only -> luna does not count; chatgpt stands (not returned on the defender side); sol returned naming the pair.
+ b. luna faulted on its defender side (its defender question fails) -> luna does not count; chatgpt stands; sol returned.
+ c. luna and chatgpt both faulted on their challenger sides -> no defender redirect; sol keeps its question.
+ d. all three faulted on their challenger sides -> no defender redirect at all.
+ e. luna unfaulted (as stored) -> rev 1 behaviour unchanged: chatgpt and sol returned.
+D9 End to end (QR Check then QR Final), for D8a and D8c with luna's second reply: failed call, not JSON, and passing with a different defender question.
+ At the end, the number of judges whose defender record still asks about the CR3/CR4 pair is at least 1, wherever live has at least 1. A drop to 0 is a FAIL.
+D10 D1 to D7 rerun on rev 2 unchanged.
