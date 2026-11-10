@@ -1,0 +1,41 @@
+     live CURED | KBG3 UNCURED | CURE (record-only until promoted): UNCURED -- KEEP whose reason quotes only another bare grant or deferral of the answering side ("the name stands written in the"), not a fuller answer (pkgKBG) | TRIA
+OK   F1 bullet: live CURED, KBG3 UNCURED (pkgKBG reason)
+OK   F1 bullet: every other field equal
+     live CURED | KBG3 UNCURED | CURE (record-only until promoted): UNCURED -- KEEP whose reason quotes only another bare grant or deferral of the answering side ("the name stands written in the"), not a fuller answer (pkgKBG) | TRIA
+OK   F3 bold label: live CURED, KBG3 UNCURED (pkgKBG reason)
+OK   F3 bold label: every other field equal
+     live CURED | KBG3 UNCURED | CURE (record-only until promoted): UNCURED -- KEEP whose reason quotes only another bare grant or deferral of the answering side ("the name stands written in the"), not a fuller answer (pkgKBG) | TRIA
+OK   F4 layer tag: live CURED, KBG3 UNCURED (pkgKBG reason)
+OK   F4 layer tag: every other field equal
+     live CURED | KBG3 UNCURED | CURE (record-only until promoted): UNCURED -- KEEP whose reason quotes only another bare grant or deferral of the answering side ("the name stands written in the"), not a fuller answer (pkgKBG) | TRIA
+OK   F6 verse label: live CURED, KBG3 UNCURED (pkgKBG reason)
+OK   F6 verse label: every other field equal
+     live CURED | KBG3 UNCURED | CURE (record-only until promoted): UNCURED -- KEEP whose reason quotes only another bare grant or deferral of the answering side ("the name stands written in the"), not a fuller answer (pkgKBG) | TRIA
+OK   F8 bullet, bold tag and verse label: live CURED, KBG3 UNCURED (pkgKBG reason)
+OK   F8 bullet, bold tag and verse label: every other field equal
+     live CURED | KBG3 UNCURED | CURE (record-only until promoted): UNCURED -- KEEP whose reason quotes only another bare grant or deferral of the answering side ("the name stands written in the"), not a fuller answer (pkgKBG) | TRIA
+OK   C1 bold label + continuation ", and that ...": live CURED, KBG3 UNCURED (pkgKBG reason)
+OK   C1 bold label + continuation ", and that ...": every other field equal
+     live CURED | KBG3 UNCURED | CURE (record-only until promoted): UNCURED -- KEEP whose reason quotes only another bare grant or deferral of the answering side ("the name stands written in the"), not a fuller answer (pkgKBG) | TRIA
+OK   C2 layer tag + second grant "and I grant ...": live CURED, KBG3 UNCURED (pkgKBG reason)
+OK   C2 layer tag + second grant "and I grant ...": every other field equal
+     live CURED | KBG3 UNCURED | CURE (record-only until promoted): UNCURED -- KEEP whose reason quotes only another bare grant or deferral of the answering side ("the name stands written in the"), not a fuller answer (pkgKBG) | TRIA
+OK   C3 verse label + ";" inside parentheses: live CURED, KBG3 UNCURED (pkgKBG reason)
+OK   C3 verse label + ";" inside parentheses: every other field equal
+     live CURED | KBG3 CURED | CURE (record-only until promoted): CURED -- KEEP whose reason quotes the answering side's round: "the name stands written in the" | TRIAL pkgVP3: code check does not agree, not an item -- [CR3] names 
+OK   O1 bold label + own clause with a reason: live CURED, KBG3 CURED
+OK   O1 bold label + own clause with a reason: every other field equal
+     live CURED | KBG3 CURED | CURE (record-only until promoted): CURED -- KEEP whose reason quotes the answering side's round: "the begetting is not in the" | TRIAL pkgVP3: code check does not agree, not an item -- [CR3] names Job
+OK   O2 KEEP quoting only the own clause of a formatted grant: live CURED, KBG3 CURED
+OK   O2 KEEP quoting only the own clause of a formatted grant: every other field equal
+     live CURED | KBG3 CURED | CURE (record-only until promoted): CURED -- KEEP whose reason quotes the answering side's round: "the name stands written in the" | TRIAL pkgVP3: code check does not agree, not an item -- [CR3] names 
+FAIL J1 bullet + ", and I keep my link." (no reason): live CURED, KBG3 UNCURED (other reason)
+OK   J1 bullet + ", and I keep my link." (no reason): every other field equal
+     live CURED | KBG3 CURED | CURE (record-only until promoted): CURED -- KEEP whose reason quotes the answering side's round: "the name stands written in the" | TRIAL pkgVP3: code check does not agree, not an item -- [CR3] names 
+FAIL J3 bold label + ", and I hold it as written." (stored form, no reason): live CURED, KBG3 UNCURED (other reason)
+OK   J3 bold label + ", and I hold it as written." (stored form, no reason): every other field equal
+     live CURED | KBG3 CURED | CURE (record-only until promoted): CURED -- KEEP whose reason quotes the answering side's round: "the name stands written in the" | TRIAL pkgVP3: code check does not agree, not an item -- [CR3] names 
+FAIL J4 ", and both support my link." (stored form, no reason): live CURED, KBG3 UNCURED (other reason)
+OK   J4 ", and both support my link." (stored form, no reason): every other field equal
+OK   34108 stored send-back rows: all equal to the base (27 rows)
+24 OK, 3 FAIL
