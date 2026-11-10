@@ -1,4 +1,4 @@
-# pkgEAD (W1, offline candidate; nothing written): DeepSeek reads a deferral as the whole answer
+# pkgEAD rev 2 (W1, offline candidate; nothing written): DeepSeek reads a deferral as the whole answer
 Finding: W3 Wall 4332 and 4336. In 34703 the DeepSeek E-ANS item on Luke 1:34 [CR3] ("right: MISSES") called "I grant ... I answer it fully under LINK 4." the whole answer. The defender's [CR3] LINK 4 answers the press (W1 3798, W3 3799). luna and terra both regraded MISSES. luna then wrote a FORCED line that repeats the misreading, and terra's D1 vs C1 went to BROKEN and on to the gate K-G4 count that removed it.
 
 ## Fix
@@ -43,3 +43,14 @@ The item is listed in sb_not_sent, as pkgECB does. An item that also carries an 
 - Independent check: pkgEAD built on the pkgK7C rev 2 parent (BASESRC=K7C2) gives the same 42 node sources as the joint, all 42 equal. Packed that way it is 1 character larger.
 - pkgEAD tests on the joint: node replay test_EAD_joint_out.txt gives 58 node runs, 52 equal, 11 withheld, 0 other. Plants 5 OK.
 - pkgK7C tests on the joint: W2's t_rev2_real.cjs on 34703 and 34626 gives the same per-seat results as pkgK7C rev 2 alone (34703: haiku 2 to 1, terra 2 diffs; 34626: luna 2 diffs).
+
+## Rev 2 (answers W3's first grade, Wall 4357)
+- Change: an item is withheld only on a positive finding of the code. The findings are "names an answer of", "the answer defers to [round], which answers", "its own layer", "the answer runs n words", and "neither a grant nor a deferral". On "names the verse again", "no answer found" or any other result, the item is sent.
+- Size: +1,683 code measured against s112 (rev 1 +1,574). Shared Library only; prompt none. Rev 1's write file is kept as parent_s112_EAD_rev1.json.
+- W3's plants rerun on rev 2 (w3_grade_rerun_g5_rev2.txt, g8): 15 of 16 as labelled, and k is SENT.
+  - a/b, c, f and f2 are now SENT.
+  - h (E-HOLD) is now SENT, against W3's label of WITHHELD. The code's first finding there is "[CR1] names Luke 1:34 again", a footing quotation, so rev 2 sends it. That is the safe direction, and it is now a limit.
+- My plants: 8 OK. P5, P6 and P7 are W3's a/b, c and k.
+- Node replay: 58 node runs, 52 equal, the same 11 withheld, 0 other.
+- Joint with pkgK7C rev 2 is rebuilt: +2,311 (1,683 + 628). The independent build gives the same 42 sources, and both packages' tests give the same results on the joint.
+- Chain-replay note (W3 limit 5): in chain_EAD_34703_out.txt, the counts after the gate are replay artifacts. The stored gate replies were written for the old item numbers: luna 1, terra 4, and the extra alternate. They are not a result.
