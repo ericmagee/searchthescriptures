@@ -1,0 +1,16 @@
+CURED|h1-correction|COUNTED. The count is wrong.\nCORRECTED COUNT: DEFENDER 3|Old count wrong, corrected count given (W3 4090 family).|CURED
+CURED|h1-correction|COUNTED. I withdraw my count.\nCORRECTED COUNT: DEFENDER 2|Withdraws the old count and corrects it.|CURED
+CURED|h1-correction|COUNTED. On reflection, I withdraw the count.\nCORRECTED COUNT: DEFENDER 4|Withdraws the old count and corrects it.|CURED
+CURED|h1-correction|COUNTED. I was wrong.\nCORRECTED COUNT: DEFENDER 3|Own error, corrected.|CURED
+CURED|h1-correction|COUNTED. My earlier answer was wrong.\nCORRECTED COUNT: DEFENDER 3|Own earlier answer wrong, corrected.|CURED
+CURED|h1-correction|COUNTED. My mistake.\nCORRECTED COUNT: DEFENDER 3|Own mistake, corrected.|CURED
+CURED|h1-correction|COUNTED. That was wrong of me.\nCORRECTED COUNT: DEFENDER 3|Past tense about own answer, corrected.|CURED
+CURED|h1-correction|COUNTED. I erred in the first answer.\nCORRECTED COUNT: DEFENDER 3|Own error, corrected.|CURED
+CURED|h1-correction|COUNTED.\nThe count I gave is wrong.\nCORRECTED COUNT: DEFENDER 3|Own count on its own line, corrected.|CURED
+UNCURED|h2-refusal|COUNTED. It should not be counted.|Refusal.|ENFORCED
+UNCURED|h2-refusal|COUNTED. No.|Bare refusal.|ENFORCED
+UNCURED|h2-refusal|COUNTED. I do not count it.|Refusal.|ENFORCED
+UNCURED|h2-refusal|COUNTED. It should not be counted.\nCORRECTED COUNT: unchanged|Refusal with an unchanged count line.|ENFORCED
+UNCURED|h2-refusal|COUNTED. My count stands.\nCORRECTED COUNT: unchanged|Keeps the old count.|ENFORCED
+UNCURED|h2-refusal|COUNTED.\nNo.|Refusal on the next line.|ENFORCED
+UNCURED|h2-refusal|Yes.\nCOUNTED. It should not be counted.|Yes then refusal.|ENFORCED

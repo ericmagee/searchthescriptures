@@ -1,0 +1,69 @@
+CURED|f1-own-count-wrong|COUNTED. My count is wrong.\nCORRECTED COUNT: DEFENDER 3|W3 finding 1: the judge agrees and corrects its own count.|CURED
+CURED|f1-own-count-wrong|COUNTED. My count is not right.\nCORRECTED COUNT: DEFENDER 2|W2 family of finding 1.|CURED
+CURED|f1-own-count-wrong|COUNTED. My earlier count is wrong; the grant counts.|W2 family: own earlier count wrong, count stands.|CURED
+CURED|f1-own-count-wrong|COUNTED.\nMy count is incorrect.\nCORRECTED COUNT: DEFENDER 4|W2 family, sentence on its own line.|CURED
+UNCURED|f1-own-count-wrong|COUNTED. The count is wrong.|Refusal control: the enforcer's count is wrong.|ENFORCED
+UNCURED|f2-yes-counted-subject|Yes.\nCOUNTED is wrong.|W3 finding 2.|ENFORCED
+UNCURED|f2-yes-counted-subject|Agreed.\nCOUNTED cannot be right here.|W2 family of finding 2.|ENFORCED
+UNCURED|f2-yes-counted-subject|Correct.\nCOUNTED is not the right answer.|W2 family of finding 2.|ENFORCED
+UNCURED|f2-yes-counted-subject|COUNTED is wrong.|One-line control.|ENFORCED
+CURED|f2-yes-counted-subject|Agreed.\nCOUNTED: the grant in [CR4] concedes the premise.|Correct answer control.|CURED
+UNCURED|f3-touches-next-refusal|TOUCHES NO LINK:\nI refuse to answer.|W3 finding 3.|ENFORCED
+UNCURED|f3-touches-next-refusal|TOUCHES NO LINK:\nI will not answer this.|W2 family of finding 3.|ENFORCED
+UNCURED|f3-touches-next-refusal|TOUCHES NO LINK:\nNo reason is needed.|W2 family: no reason given.|ENFORCED
+UNCURED|f3-touches-next-refusal|TOUCHES NO LINK: I refuse to answer.|One-line control.|ENFORCED
+CURED|f3-touches-next-refusal|TOUCHES NO LINK:\nthe grant concerns Luke 3:23, which no declared link uses.|Correct answer control.|CURED
+CURED|g1-my-count|COUNTED. My count is wrong.\nCORRECTED COUNT: DEFENDER 3|Own count wrong, corrected.|CURED
+CURED|g1-my-count|COUNTED. My count was wrong and is now corrected.|Own earlier count wrong.|CURED
+CURED|g1-my-count|COUNTED. My count is in error; the grant counts against D5.|Own count wrong, the grant counts.|CURED
+UNCURED|g1-my-count|COUNTED. My count is right; the grant does not count.|Keeps the old count and denies the grant.|ENFORCED
+UNCURED|g1-my-count|COUNTED. My count is correct as issued.|Keeps the old count.|ENFORCED
+UNCURED|g1-my-count|COUNTED. Your count is wrong.|The enforcer's count is wrong: refusal.|ENFORCED
+UNCURED|g1-my-count|COUNTED. The count is wrong.|Refusal control.|ENFORCED
+UNCURED|g1-my-count|COUNTED. My count stands.|Keeps the old count (separate list entry).|ENFORCED
+CURED|g2-yes-counted|Yes.\nCOUNTED.|Bare COUNTED after Yes.|CURED
+CURED|g2-yes-counted|Yes.\nCOUNTED, the grant concedes D5.|Comma after COUNTED; correct answer.|CURED
+CURED|g2-yes-counted|Agreed.\n**COUNTED**: the grant stands as written.|Markup around COUNTED; correct answer.|CURED
+CURED|g2-yes-counted|Confirmed.\nCOUNTED - the defender granted it in [CR4].|Dash after COUNTED; correct answer.|CURED
+UNCURED|g2-yes-counted|Yes.\nCOUNTED. It should not be counted.|Refusal after COUNTED.|ENFORCED
+UNCURED|g2-yes-counted|Yes.\nCOUNTED: no.|Refusal after a colon.|ENFORCED
+UNCURED|g2-yes-counted|Yes.\nCOUNTED? No.|Question form refusal.|ENFORCED
+UNCURED|g2-yes-counted|Agreed.\nCOUNTED is wrong.|COUNTED as the subject of a refusal.|ENFORCED
+UNCURED|g2-yes-counted|Correct.\nCOUNTED does not apply here.|COUNTED as the subject of a refusal.|ENFORCED
+UNCURED|g2-yes-counted|Yes.\nCOUNTED; I withdraw it.|Withdraws after a semicolon.|ENFORCED
+UNCURED|g2-yes-counted|Yes.\nCOUNTED would be wrong.|COUNTED as the subject of a refusal.|ENFORCED
+CURED|g3-touches-next|TOUCHES NO LINK:\nthe grant concerns Luke 3:23.|Reason on the next line.|CURED
+CURED|g3-touches-next|TOUCHES NO LINK:\nIt does not touch any declared link; it concerns Luke 3:23.|Reason with a negation describing the links.|CURED
+CURED|g3-touches-next|TOUCHES NO LINK:\n- it concerns Joseph's house, which no link rests on.|Bullet reason.|CURED
+UNCURED|g3-touches-next|TOUCHES NO LINK:\nI refuse to answer.|Refusal on the next line.|ENFORCED
+UNCURED|g3-touches-next|TOUCHES NO LINK:\nI decline to give a reason.|Refusal on the next line.|ENFORCED
+UNCURED|g3-touches-next|TOUCHES NO LINK:\nNo.|Refusal on the next line.|ENFORCED
+UNCURED|g3-touches-next|TOUCHES NO LINK: I decline to give a reason.|One-line control.|ENFORCED
+CURED|g4-pair-one|TOUCHES NO LINK: None.|consistency pair; compared to the next-line form, label not used|CURED
+CURED|g4-pair-next|TOUCHES NO LINK:\nNone.|consistency pair; compared to the one-line form, label not used|CURED
+CURED|g4-pair-one|TOUCHES NO LINK: see above.|consistency pair; compared to the next-line form, label not used|CURED
+CURED|g4-pair-next|TOUCHES NO LINK:\nsee above.|consistency pair; compared to the one-line form, label not used|CURED
+CURED|g4-pair-one|TOUCHES NO LINK: it is a limb.|consistency pair; compared to the next-line form, label not used|CURED
+CURED|g4-pair-next|TOUCHES NO LINK:\nit is a limb.|consistency pair; compared to the one-line form, label not used|CURED
+CURED|g4-pair-one|TOUCHES NO LINK: Not applicable.|consistency pair; compared to the next-line form, label not used|CURED
+CURED|g4-pair-next|TOUCHES NO LINK:\nNot applicable.|consistency pair; compared to the one-line form, label not used|CURED
+CURED|g4-pair-one|TOUCHES NO LINK: I will not say.|consistency pair; compared to the next-line form, label not used|CURED
+CURED|g4-pair-next|TOUCHES NO LINK:\nI will not say.|consistency pair; compared to the one-line form, label not used|CURED
+CURED|g4-pair-one|TOUCHES NO LINK: the grant is about Luke 3:23, not D1 to D6.|consistency pair; compared to the next-line form, label not used|CURED
+CURED|g4-pair-next|TOUCHES NO LINK:\nthe grant is about Luke 3:23, not D1 to D6.|consistency pair; compared to the one-line form, label not used|CURED
+CURED|h1-correction|COUNTED. The count is wrong.\nCORRECTED COUNT: DEFENDER 3|Old count wrong, corrected count given (W3 4090 family).|CURED
+CURED|h1-correction|COUNTED. I withdraw my count.\nCORRECTED COUNT: DEFENDER 2|Withdraws the old count and corrects it.|CURED
+CURED|h1-correction|COUNTED. On reflection, I withdraw the count.\nCORRECTED COUNT: DEFENDER 4|Withdraws the old count and corrects it.|CURED
+CURED|h1-correction|COUNTED. I was wrong.\nCORRECTED COUNT: DEFENDER 3|Own error, corrected.|CURED
+CURED|h1-correction|COUNTED. My earlier answer was wrong.\nCORRECTED COUNT: DEFENDER 3|Own earlier answer wrong, corrected.|CURED
+CURED|h1-correction|COUNTED. My mistake.\nCORRECTED COUNT: DEFENDER 3|Own mistake, corrected.|CURED
+CURED|h1-correction|COUNTED. That was wrong of me.\nCORRECTED COUNT: DEFENDER 3|Past tense about own answer, corrected.|CURED
+CURED|h1-correction|COUNTED. I erred in the first answer.\nCORRECTED COUNT: DEFENDER 3|Own error, corrected.|CURED
+CURED|h1-correction|COUNTED.\nThe count I gave is wrong.\nCORRECTED COUNT: DEFENDER 3|Own count on its own line, corrected.|CURED
+UNCURED|h2-refusal|COUNTED. It should not be counted.|Refusal.|ENFORCED
+UNCURED|h2-refusal|COUNTED. No.|Bare refusal.|ENFORCED
+UNCURED|h2-refusal|COUNTED. I do not count it.|Refusal.|ENFORCED
+UNCURED|h2-refusal|COUNTED. It should not be counted.\nCORRECTED COUNT: unchanged|Refusal with an unchanged count line.|ENFORCED
+UNCURED|h2-refusal|COUNTED. My count stands.\nCORRECTED COUNT: unchanged|Keeps the old count.|ENFORCED
+UNCURED|h2-refusal|COUNTED.\nNo.|Refusal on the next line.|ENFORCED
+UNCURED|h2-refusal|Yes.\nCOUNTED. It should not be counted.|Yes then refusal.|ENFORCED
