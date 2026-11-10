@@ -1,0 +1,10 @@
+OK   K1 sol 34726 stored form | expected NO RAISE | live RAISE cand NO RAISE
+MISS K2 "its quote ... does not assert that" (stored 5a92e92d) | expected NO RAISE | live RAISE cand RAISE
+MISS K3 plural "those quotations ... do not assert the added" | expected NO RAISE | live RAISE cand RAISE
+OK   T1 true K-C plain | expected RAISE | live RAISE cand RAISE
+OK   T2 true K-C, "quotation" before "does not state" | expected RAISE | live RAISE cand RAISE
+OK   T2b W3 4403 form 1 | expected RAISE | live RAISE cand RAISE
+OK   T2c W3 4403 form 2 | expected RAISE | live RAISE cand RAISE
+OK   T6 true K-C, "the quotation of <verse> does not assert the begetting" | expected RAISE | live RAISE cand RAISE
+OK   L1 rev 2 limit: verse quotation, "does not assert the added begetting", one clause | expected EITHER | live RAISE cand NO RAISE
+OK   L2 rev 2 limit with a second clause that sets the rows aside | expected RAISE | live RAISE cand RAISE
