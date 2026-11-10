@@ -58,3 +58,14 @@ No rev 4 code was run or read before this. (My scratch copy of rev 3 with "&&" w
 - R15 Wider passage (my own plant, on rev 4): luna asks CR3 passage A against a CR4 sentence; chatgpt asks passage A and B as one passage against the same CR4 sentence; sol asks a plain question. chatgpt is redirected against luna and switches. If no judge's question at the end contains passage B, where live keeps chatgpt on it, that is a loss and rev 4 is a FAIL, and my PASS of rev 4 was wrong. Mirror: the closing passage wider.
 - R15c The other direction must still redirect: luna asks A and B together, chatgpt asks A only (inside luna's): chatgpt may be redirected; luna's question contains all chatgpt quoted, so nothing is lost.
 - R13 rule made strict in direction: a contradiction question live ends with is matched only by a candidate question on the same rounds whose earlier quote CONTAINS its earlier quote and whose closing quote CONTAINS its closing quote. On rev 4 I expect the walk to break; on a scratch copy with the one-way test I expect 0 broken and the stored round of debate 34108 still redirected.
+
+## Rev 5 (W2 commit 6fd6a01b): labels added before any run of rev 5
+
+No rev 5 code was run or read before this. (My scratch copy of rev 4 with a one-way test was run before, as stated in the rev 4 correction.)
+
+- R1 to R15 all OK on rev 5; only QR Check and QR Final differ from live s110; size as W2 states; prompt text unchanged.
+- R13 walk (one-way rule, shared closing sentences): 0 broken of 400 on each of three seeds.
+- R15: the wider passage is not redirected; the narrower one is.
+- R2: the stored question round of debate 34108 (execution 34299, the "closes the espousal" pair) still returns chatgpt and sol.
+- R16 New real data: the first questions of the dry regrade of today (execution 34626), where all three judges asked the defender the link 6 pair. Fed to QR Check of rev 5: luna stands, chatgpt and sol are redirected on the defender side if their quotes lie inside luna's; state the quotes and the result. No fault list may differ from live. The challenger questions (plain, the same DR3 passage three times) are not redirected, since they are not contradiction questions.
+- Rev 5 against rev 4: state the code difference.
