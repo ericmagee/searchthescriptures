@@ -1,0 +1,17 @@
+{"_":"W3 labels for pkgBRF rev 3, committed before any run of the candidate. fresh(earlier[],c4) = the NEW PRESS labels. expect = what a right press check returns; where live is known wrong the label says so.",
+"cases":[
+ {"id":"A1","earlier":["Matthew 1:18 dates the finding. Matthew 1:24 names the taking."],"c4":"Matthew 1:24 names the taking, and Deuteronomy 20:7 sets the taking apart (G43). So 1:18 dates the finding.","expect":["Deuteronomy 20:7"],"note":"the stored fault; live adds Deuteronomy 1:18"},
+ {"id":"A2","earlier":["Matthew 1:18 dates the finding."],"c4":"Deuteronomy 20:7 sets the taking apart. So 5:9 forbids it.","expect_count":2,"note":"bare never named: still new (2 labels, whatever book it prints)"},
+ {"id":"A3","earlier":["Matthew 1:18 dates the finding."],"c4":"Numbers 1:18 gives the pedigree.","expect":["Numbers 1:18"],"note":"full book, same c:v as an earlier other book: NEW"},
+ {"id":"A4","earlier":["Matthew 1:18 dates the finding."],"c4":"Numbers 1:2 opens the count. Then 1:18 gives the pedigree by the house of their fathers.","expect":["Numbers 1:2","Numbers 1:18"],"note":"MINE. A true new press written bare (Numbers 1:18), c:v named earlier under Matthew. Live marks both. Limit (1) of the builder: candidate expected to drop Numbers 1:18 silently; record"},
+ {"id":"A5","earlier":["Matthew 1:18 dates the finding."],"c4":"Numbers 1:2, 1:18 give the pedigree.","expect":["Numbers 1:2","Numbers 1:18"],"note":"MINE. list continuation with comma (book = list head): must stay NEW in the candidate"},
+ {"id":"A6","earlier":["Matthew 1:18 dates the finding."],"c4":"Numbers 1:2 and 1:18 give the pedigree.","expect":["Numbers 1:2","Numbers 1:18"],"note":"MINE. 'and' list; if 'and 1:18' is bare in the parser the candidate drops a plainly written new press: a silent drop wider than limit (1) as worded"},
+ {"id":"A7","earlier":["Matthew 1:18 dates the finding."],"c4":"Luke 1:27 and 1:34 name her a virgin; see also Numbers (1:18).","expect":["Luke 1:27","Luke 1:34"],"note":"MINE. record what each returns for (1:18)"},
+ {"id":"A8","earlier":["Matthew 1:18-25 gives the account."],"c4":"Deuteronomy 22:23 names the damsel. So 1:20 names the dream.","expect":["Deuteronomy 22:23"],"note":"MINE. earlier range covers 1:20; bare 1:20 not new"},
+ {"id":"A9","earlier":["Matthew 1:18 dates the finding."],"c4":"Deuteronomy 22:23 names the damsel. So 1:18-25 gives the account.","note":"MINE. bare range partly named earlier: record (some() means any one verse named suppresses the whole range)"},
+ {"id":"A10","earlier":["So 1:18 dates the finding."],"c4":"Luke 1:18 has Zacharias ask.","expect":["Luke 1:18"],"note":"MINE. earlier text bare with no book at all (no ctx): full-book new press must stay NEW"},
+ {"id":"A11","earlier":["1 John 5:1 names the begotten."],"c4":"Song of Solomon 5:1 speaks of the garden. 2 Samuel 7:12 names the seed.","expect":["Song of Solomon 5:1","2 Samuel 7:12"],"note":"MINE. multi-word and numbered books: x.replace(/.* /,'') must not mis-strip; both NEW"},
+ {"id":"A12","earlier":[""],"c4":"","expect":[],"note":"MINE. empty"},
+ {"id":"A13","earlier":["Matthew 1:18 dates the finding."],"c4":"Matthew 1:18 dates the finding. So 1:18 stands.","expect":[],"note":"nothing new"},
+ {"id":"A14","earlier":["Ezra 2:61 names the priests."],"c4":"Luke 3:23 names the supposition. In 2:61 the name was taken.","note":"MINE. bare c:v named earlier under another book than the borrowed one; live marks 'Luke 2:61' new (false); candidate expected not new"}
+]}
