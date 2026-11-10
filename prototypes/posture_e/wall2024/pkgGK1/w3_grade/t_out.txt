@@ -1,0 +1,20 @@
+P0 
+  LIVE: uncured 12 cured 3 | newK: RULE K-G1 (K re-read) [counted by its gate item] | G14 CONTRADICTION (E-GATE M):UNCURED ; G15 CONTRADICTION (E-GATE M):CURED 
+  CAND: uncured 11 cured 4 | newK: RULE K-G1 (K re-read) [RECORD-ONLY] | G14 CONTRADICTION (E-GATE M):CURED ; G15 CONTRADICTION (E-GATE M):CURED 
+  other seats equal: true
+a 
+  LIVE: uncured 12 cured 3 | newK: RULE K-G1 (K re-read) [counted by its gate item] | G14 CONTRADICTION (E-GATE M):UNCURED ; G15 CONTRADICTION (E-GATE M):CURED 
+  CAND: uncured 12 cured 3 | newK: RULE K-G1 (K re-read) [RECORD-ONLY] | G14 CONTRADICTION (E-GATE M):UNCURED ; G15 CONTRADICTION (E-GATE M):CURED 
+  other seats equal: true
+b 
+  LIVE: uncured 12 cured 3 | newK: RULE K-B (K re-read) [counted by its gate item]; RULE K-G1 (K re-read) [counted by its gate item] | G14 CONTRADICTION (E-GATE M):UNCURED ; G15 CONTRADICTION (E-GATE M):CURED 
+  CAND: uncured 12 cured 3 | newK: RULE K-B (K re-read) [counted by its gate item]; RULE K-G1 (K re-read) [RECORD-ONLY] | G14 CONTRADICTION (E-GATE M):UNCURED ; G15 CONTRADICTION (E-GATE M):CURED 
+  other seats equal: true
+c 
+  LIVE: uncured 12 cured 3 | newK: none | G14 CONTRADICTION (E-GATE M):UNCURED ; G15 CONTRADICTION (E-GATE M):CURED 
+  CAND: uncured 12 cured 3 | newK: none | G14 CONTRADICTION (E-GATE M):UNCURED ; G15 CONTRADICTION (E-GATE M):CURED 
+  other seats equal: true
+e 
+  LIVE: uncured 13 cured 2 | newK: RULE K-G1 (K re-read) [counted by its gate item]; RULE K-G1 (K re-read) [counted by its gate item] | G14 CONTRADICTION (E-GATE M):UNCURED ; G15 CONTRADICTION (E-GATE M):UNCURED 
+  CAND: uncured 11 cured 4 | newK: RULE K-G1 (K re-read) [RECORD-ONLY]; RULE K-G1 (K re-read) [RECORD-ONLY] | G14 CONTRADICTION (E-GATE M):CURED ; G15 CONTRADICTION (E-GATE M):CURED 
+  other seats equal: true
