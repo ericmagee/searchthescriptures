@@ -66,7 +66,7 @@ const rep=o=>({json:{choices:[{message:{content:typeof o==='string'?o:S(o)}}]}})
   chk('R12 sol\'s distinct question is not lost where live keeps it',!(asksB(l).length>0&&asksB(c).length===0));}
 
  {// R13 random walk, seeded
-  let seed=20261110;const rnd=n=>{seed=(seed*1103515245+12345)&0x7fffffff;return seed%n;};
+  let seed=20261110;const rnd=n=>{seed=(seed*1103515245+12345)&0x7fffffff;return (seed>>>12)%n;};
   const A='and I accepted that order.',B="The finding is dated before the pair's coming together.",AB=A+' '+B;const q=(eq,cq)=>({round:'CR4',quote:cq,earlier_round:'CR3',earlier_quote:eq,question:'How do these two passages agree?'});
   const firstKinds=[i=>q(A,s4[i]),i=>q(B,s4[i]),i=>q(AB,s4[i]),i=>q(A,s4[0]),i=>other(5+i),i=>plain(i),i=>q('words that are not in the earlier round at all, none',s4[i])];
   const secKinds=[i=>other(8+i),i=>plain(3+i),null,i=>q(B,'words that are not in the closing round at all, none'),'NOTJSON'];
@@ -75,9 +75,16 @@ const rep=o=>({json:{choices:[{message:{content:typeof o==='string'?o:S(o)}}]}})
   for(let t=0;t<400;t++){const f0={},sec={};const desc=[];for(let i=0;i<3;i++){const k=rnd(firstKinds.length),cf=rnd(4)===0;f0[i]={defender:firstKinds[k](i),challenger:cf?badCh:firstOf(i).challenger};const sk=rnd(secKinds.length);const SK=secKinds[sk];sec[i]=SK==='NOTJSON'?'not json at all':{defender:SK?SK(i):f0[i].defender,challenger:firstOf(i).challenger};desc.push(k+(cf?'f':'')+'/'+sk);}
    let l,c;try{l=await full(L,f0,sec);}catch(e){if(/no question passed/.test(e.message))continue;throw e;}
    try{c=await full(N,f0,sec);}catch(e){broke.push(desc.join(' ')+' candidate threw: '+e.message.slice(0,80));continue;}
-   if(t<3)console.log('       dbg '+desc.join(' ')+' '+S(c.c.map(j=>[j.faults,j.retry,j.redirect])).slice(0,600));cases++;redirs+=c.c.filter(j=>Object.keys(j.redirect||{}).length).length;
+cases++;redirs+=c.c.filter(j=>Object.keys(j.redirect||{}).length).length;
    const lq=l.f.filter(x=>x.side==='defender'&&x.earlier_quote),cq=c.f.filter(x=>x.side==='defender'&&x.earlier_quote);
-   for(const x of lq)if(!cq.some(y=>y.round===x.round&&y.earlier_round===x.earlier_round&&(inn(x.earlier_quote,y.earlier_quote)||inn(x.quote,y.quote))))broke.push(desc.join(' ')+': live '+x.judge+' asks ['+String(x.earlier_quote).slice(0,40)+'], no candidate match');}
-  console.log('     R13 cases run '+cases+'; redirect returns in them '+redirs+'; rule broken in '+broke.length);broke.slice(0,6).forEach(z=>console.log('       '+z));chk('R13 walk: no contradiction question that live ends with is left without a match',broke.length===0&&cases>300&&redirs>100);}
+   for(const x of lq)if(!cq.some(y=>y.round===x.round&&y.earlier_round===x.earlier_round&&(inn(x.earlier_quote,y.earlier_quote)&&inn(x.quote,y.quote))))broke.push(desc.join(' ')+': live '+x.judge+' asks ['+String(x.earlier_quote).slice(0,40)+'], no candidate match');}
+  console.log('     R13 cases run '+cases+'; redirect returns in them '+redirs+'; rule broken in '+broke.length);broke.slice(0,6).forEach(z=>console.log('       '+z));chk('R13 walk: no contradiction question that live ends with is left without a match',broke.length===0&&cases>300&&redirs>30);}
+
+ {// R14
+  const A='and I accepted that order.',B="The finding is dated before the pair's coming together.";const q=(eq,cq)=>({round:'CR4',quote:cq,earlier_round:'CR3',earlier_quote:eq,question:'How do these two passages agree?'});
+  for(const [nm,f0,key,val] of [['same earlier passage, different closing sentences',{0:{...firstOf(0),defender:q(A,s4[0])},1:{...firstOf(1),defender:q(A,s4[1])},2:{...firstOf(2),defender:plain(2)}},'quote',s4[1]],['same closing sentence, different earlier passages',{0:{...firstOf(0),defender:q(A,s4[0])},1:{...firstOf(1),defender:q(B,s4[0])},2:{...firstOf(2),defender:plain(2)}},'earlier_quote',B]]){
+   const sec={1:{...firstOf(1),defender:other(3)}};const l=await full(L,f0,sec),c=await full(N,f0,sec);const who=x=>x.f.filter(y=>y.side==='defender'&&y[key]===val).map(y=>y.judge);
+   console.log('     R14 '+nm+': first faults '+S(c.c.map(j=>j.faults.defender.length))+'; candidate returns '+sum(c.c)+'; judges asking about chatgpt\'s own passage at the end: live ['+who(l).join(', ')+'], candidate ['+who(c).join(', ')+']');
+   chk('R14 '+nm+': chatgpt\'s distinct question is not lost',!(who(l).length>0&&who(c).length===0));}}
  console.log(ok?'ALL CHECKS OK':'SOME CHECK FAILED');
 })().catch(e=>{console.log('RUNNER ERROR '+e.stack);});

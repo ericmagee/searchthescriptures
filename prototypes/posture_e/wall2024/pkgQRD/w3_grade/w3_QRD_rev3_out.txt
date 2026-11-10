@@ -42,6 +42,16 @@ OK   R11 luna not JSON at first: not counted; chatgpt stands; sol redirected aga
      R12 live returns luna:-, chatgpt:-, sol:- | candidate returns luna:-, chatgpt:redirect-defender, sol:-; sol redirected of: -
      R12 judges whose final defender question quotes sol's passage: live [chatgpt, sol], candidate [sol]
 OK   R12 sol's distinct question is not lost where live keeps it
-     R13 cases run 399; redirect returns in them 0; rule broken in 0
+     R13 cases run 400; redirect returns in them 207; rule broken in 24
+       2f/1 1/0 1/1: live sol asks [The finding is dated before the pair's c], no candidate match
+       1/2 6f/4 2/1: live sol asks [and I accepted that order. The finding i], no candidate match
+       3/4 2/1 5f/1: live chatgpt asks [and I accepted that order. The finding i], no candidate match
+       4f/0 3/2 2/1: live sol asks [and I accepted that order. The finding i], no candidate match
+       1/1 2/4 1/1: live sol asks [The finding is dated before the pair's c], no candidate match
+       2/0 5/3 1/1: live sol asks [The finding is dated before the pair's c], no candidate match
 FAIL R13 walk: no contradiction question that live ends with is left without a match
+     R14 same earlier passage, different closing sentences: first faults [0,0,0]; candidate returns luna:-, chatgpt:redirect-defender, sol:-; judges asking about chatgpt's own passage at the end: live [chatgpt], candidate []
+FAIL R14 same earlier passage, different closing sentences: chatgpt's distinct question is not lost
+     R14 same closing sentence, different earlier passages: first faults [0,0,0]; candidate returns luna:-, chatgpt:redirect-defender, sol:-; judges asking about chatgpt's own passage at the end: live [chatgpt], candidate []
+FAIL R14 same closing sentence, different earlier passages: chatgpt's distinct question is not lost
 SOME CHECK FAILED

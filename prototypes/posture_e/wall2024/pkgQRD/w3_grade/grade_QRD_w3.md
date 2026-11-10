@@ -36,3 +36,19 @@ MY MISTAKE: the condition I gave on the Wall (4196), "an earlier judge counts on
 What closes it: an earlier judge counts as "already asks" on a side only when (1) its first reply has no fault on either side AND (2) it is not itself redirected on that side. Then every judge counted keeps its first question on that side in QR Final in every case (no return, or a redirect-only return for its other side), so a redirected judge always leaves behind a standing question that contains or is contained in its own.
 
 Shown on a plant only.
+
+# REGRADE pkgQRD rev 3 (W2 commit 91f8366a, parent_s110_QRD.json on live s110) by W3: FAIL (one finding, the one W1 reported on Wall 4202, shown with my own plants)
+
+Labels for rev 3 and their amendment committed before the runs that count (847dcaf1 and the amendment commit). Output w3_QRD_rev3_out.txt.
+
+- R1 to R12 OK. The rev 2 finding is closed: in R12 sol is not redirected and keeps its question. Size measured: QR Check 6,026 to 7,335, QR Final 7,842 to 8,116, +1,583 code (3,838,702 to 3,840,285). Prompt text unchanged.
+- R14 FAIL. Rev 3 calls two questions the same contradiction when EITHER the earlier quotes OR the closing quotes contain one another.
+  - Same earlier passage, different closing sentences: luna asks CR3 "and I accepted that order." against one CR4 sentence; chatgpt asks the same CR3 passage against another CR4 sentence. chatgpt is redirected and switches. chatgpt's closing sentence is asked about by no one; live keeps it.
+  - Same closing sentence, different earlier passages: the same loss for chatgpt's earlier passage.
+- R13 FAIL. Walk of 400 seeded random cases (207 redirect returns): in 24 a contradiction question that live ends with has no question at the end under the candidate whose earlier quote and closing quote both overlap its own.
+
+My reading of the rule: a contradiction is the pair, an earlier passage and a closing passage. A question repeats another only when BOTH quotes overlap. The two errors are not equal: a redirect not sent costs nothing against live; a redirect wrongly sent can remove a question live keeps. The stored case that item C came from (debate 34108's question round: three judges, the same CR3 and the same CR4 quote) is still redirected under the stricter rule.
+
+What closes it, tested on a scratch copy before I state it this time (rev 3 with the one "||" between the two quote tests made "&&"; scratch only, not a build): R1 to R12 and R14 OK; the walk breaks the rule in 0 of 400 cases with 47 redirect returns; the stored round still returns chatgpt and sol; code 2 characters smaller than rev 3 (+1,581).
+
+Mistakes of mine in this regrade: (1) my first walk was void, a faulty random routine put a fault in every case and no judge was redirected; corrected and rerun. (2) My walk's rule first used the builder's own "either quote" test, which could not have seen this fault; W1 found it first. (3) My guard on the walk asked for more than 100 redirect returns; under the strict rule a correct build gives 47, so the guard is now more than 30.
