@@ -1,0 +1,12 @@
+== /mnt/project-files/wall2024/fetchback_live_s112.json
+ rows: luna:0:BROKEN chatgpt:1:BROKEN sol:0:BROKEN
+ alt: ALTERNATE TRIED -- SEAT: chatgpt; ALTERNATE: haiku; MODEL: anthropic/claude-haiku-5.5; RESULT: NOT SEATED; WHY: 2 uncured item(s)
+ K-G7 reports:
+  REPORT -- SEAT: chatgpt; ITEM: D6 vs C5; RULE: K-G7; RESULT: CURED; WHY: retracted
+  REPORT -- SEAT: haiku; ITEM: D6; RULE: K-G7; RESULT: UNCURED; WHY: the line records an answer and does not say the witness went unanswered, so the break is one of meaning (ruling 421): a count does not cure 
+== pkgK7C/parent_s112_K7C.json
+ rows: luna:0:BROKEN chatgpt:1:BROKEN sol:0:BROKEN
+ alt: ALTERNATE TRIED -- SEAT: chatgpt; ALTERNATE: haiku; MODEL: anthropic/claude-haiku-5.5; RESULT: NOT SEATED; WHY: 1 uncured item(s)
+ K-G7 reports:
+  REPORT -- SEAT: chatgpt; ITEM: D6 vs C5; RULE: K-G7; RESULT: CURED; WHY: the link is broken by the engine's confirmed closing contradiction, which no count carries (pkgK7C)
+  REPORT -- SEAT: haiku; ITEM: D6; RULE: K-G7; RESULT: CURED; WHY: the link is broken by the engine's confirmed closing contradiction, which no count carries (pkgK7C)

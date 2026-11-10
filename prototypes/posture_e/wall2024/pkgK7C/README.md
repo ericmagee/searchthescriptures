@@ -1,0 +1,7 @@
+# pkgK7C (W2, offline study; NOT for write unless W3 rules the count wrongful and the operator approves)
+Question (Wall 4331): K-G7 raised on a link the engine's confirmed closing contradiction already broke.
+Rule today: K-G7 (DEFENDER) fires on a DEFENDER LINK BROKEN line for Dn when counted_premises_defender does not list premise n. The engine's own recompute after a confirmed closing contradiction marks Dn BROKEN and leaves c unchanged (34703 rows: luna L=5 c=0, terra L=6 c=0, sol L=6 c=0, each with D6 BROKEN by contradiction). So K-G7 asks a judge to count a link the engine does not count.
+Change: k7cc2024(x) true when a K-G7 item's link (DEFENDER: Dn; CHALLENGER: Cm) is in cecBroken2024(); the cure check then reads it CURED ("broken by the engine's confirmed closing contradiction, which no count carries (pkgK7C)") and the K-G8 count expectation leaves its premise out. The cure prompt is unchanged (the item is still asked).
+Build: node pkgK7C/build_K7C.cjs /mnt/project-files/wall2024/fetchback_live_s112.json pkgK7C/parent_s112_K7C.json (surgical, three library lines used by the same 26 nodes; every stub rebuilds and compiles).
+Size (measured): +590 code, Shared Library only; prompt 0.
+Test (t_34703.cjs, replay of 34703 with stored replies): terra's K-G7 on D6 vs C5 reads CURED by pkgK7C (was CURED by retraction); haiku's K-G7 on D6 reads CURED (was UNCURED). Rows unchanged. haiku drv_uncured 2 -> 1, still NOT SEATED: the other item is K-C, which enfUncured counts (the "NOT COUNTED (K-C UNCURED)" label is about the verdict line, not drv).
