@@ -20,3 +20,11 @@ Fault (W1 Wall 4422 item C; W3 Wall 4431 confirms): [DR4] "Deuteronomy 20:7 sets
 ## Ledger effect (ledger_diff.cjs, ledger_diff_34726.txt)
 - Rev 3 leaves the Shared Library byte-identical, so the ledger is unchanged by construction.
 - The fault's own reach in 34726, shown offline: chain of the whole stored run from Init with Guards, s114 against the parser fixed in all 34 copies (rev 1). 43 nodes differ; every difference is the press note ("Deuteronomy 1:18" gone; new_press lists, transcript_chars -18) carried downstream, plus two replay artifacts that also differ in an s114-against-s114 self-check (Panel Judges Prep nonce; Second Alternate? retry field). No ledger line differs. 34108: NOT REACHED (no full export).
+
+## Rev 3b (answers W3 Wall 4439, A6)
+- A reference is treated as bare only when it heads its own match with a capitalised word that is not a book ("So 1:18", "In 2:61", "Then 1:18"): r.head && !r.book && r.pos>r.at. The second member of an "and" list ("Numbers 1:2 and 1:18") keeps the s115 reading and is marked NEW. A bare range is not new only when every verse of it was named before (A9).
+- Size: +1,296 code over s115 (rev 3 +780), prompt 0, the same 12 nodes. parent_s115_BRF3b.json, sha256 78b22cf6eddcb996.
+- W3's labels (run_w3labels_3b.cjs; W3's run.cjs pointed at s115 and rev 3b): 12 AS LABELLED including A6; A9 and A14 RECORD (A9 now marks "Deuteronomy 1:18-25" as live does; A14 drops the false "Luke 2:61" as rev 3 did). 12 copies agree; REFP text unchanged in every node.
+- W3's exposure.cjs on 34726: 913 close-round references, 1 treated as bare, 1 suppressed (the fault).
+- My scan: 0 parse changes; press notes 6 of 7 equal, 34726 drops "Deuteronomy 1:18".
+- LIMITS: (1) a new verse written after a capitalised non-book word ("Then 1:18"), whose chapter:verse was named before under another book, is not marked (A4; the same text shape as the fault); (2) a bare new press is still printed with the borrowed book; (3) the parser fault stays in other scoped uses; no ledger difference on 34726 (shown), 34108 NOT REACHED.
