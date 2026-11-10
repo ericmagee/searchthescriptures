@@ -1,0 +1,1 @@
+if(cl.length!==1)continue;if(__ecb(seat,cl[0])){not_sent.push({seat,rule:'E-COL',item:p+' (companion for '+i.sid+')',why:'the engine\'s closing-contradiction break; a send-back does not undo it (pkgECB)'});continue;}if(items.length>=MAX){not_sent.push({seat,rule:'E-COL',item:p+' (companion for '+i.sid+')'

@@ -6,10 +6,8 @@ const KX="cecBroken2024().some(x=>x.side==='DEFENDER'&&'D'+x.link===";
 const PATCH={KSR:[
  {id:'K1 cureRecompute',n:26,find:"if(!hit){__cecX[x.side]++;trig.push('CLOSE-CONTRADICTION '+lb+' (no collision line names it; counted as one '+G+')');}} /* pkgCEC */\n /* pkgCRG",
   pre:"if(!hit){__cecX[x.side]++;trig.push('CLOSE-CONTRADICTION '+lb+' (no collision line names it; counted as one '+G+')');}} /* pkgCEC */\n",post:" /* pkgCRG",add:" if(P.key){const __k=ri5Key2024(P.key.raw,P.key.u,/^KEYSTONE\\s*:\\s*(D\\d+)\\s*(?:--|\\u2014|-|:)?\\s*(STANDS)\\b/,['STANDS']);if(__k&&"+KX+"__k[1])){trig.push('KEYSTONE '+__k[1]+' (STANDS to BROKEN)');rp.push([P.key.raw,'KEYSTONE: '+__k[1]+' -- BROKEN -- LINK '+__k[1].slice(1)+' BROKEN BY A CONFIRMED CLOSING CONTRADICTION','KEYSTONE '+__k[1]]);}} /* pkgKSR */\n"}],
-ECB:[
- {id:'E1 Send Back Build',n:3,find:"const MAX=60;const bySeat=new Map();for(const x of dis){",to:"const MAX=60;const bySeat=new Map();const out=[];const not_sent=[];for(const x of dis){if(/BROKEN BY A CONFIRMED CLOSING CONTRADICTION/.test(String(x.flagged_line||''))){not_sent.push({seat:x.seat,rule:x.rule,item:x.item,why:'the engine\\'s closing-contradiction break; a send-back does not undo it (pkgECB)'});continue;}"},
- {id:'E3 Send Back Build companion',n:3,find:"if(cl.length!==1)continue;if(items.length>=MAX){not_sent.push({seat,rule:'E-COL',item:p+' (companion for '+i.sid+')'",to:"if(cl.length!==1)continue;if(/BROKEN BY A CONFIRMED CLOSING CONTRADICTION/.test(cl[0])){not_sent.push({seat,rule:'E-COL',item:p+' (companion for '+i.sid+')',why:'the engine\\'s closing-contradiction break; a send-back does not undo it (pkgECB)'});continue;}if(items.length>=MAX){not_sent.push({seat,rule:'E-COL',item:p+' (companion for '+i.sid+')'"},
- {id:'E2 Send Back Build',n:3,find:"const out=[];const not_sent=[];\nfor(const [seat,list] of bySeat)",to:"for(const [seat,list] of bySeat)"}]};
+ECB:[]};
+const FP=id=>({id,n:10,find:fs.readFileSync('pkgKSR/patches/'+id+'.find','utf8'),to:fs.readFileSync('pkgKSR/patches/'+id+'.to','utf8')});PATCH.KSR.push(FP('K2'),FP('K3'),FP('K4'),FP('K5'),FP('K6'));PATCH.ECB.push({...FP('E1'),n:3},{...FP('E3'),n:3},{...FP('E2'),n:3});
 const use=SET==='ALL'?PATCH.KSR.concat(PATCH.ECB):PATCH[SET];let ok=true;const say=(c,m)=>{console.log((c?'OK   ':'FAIL ')+m);if(!c)ok=false;};
 const SRC='pkgLIB/strip_R1/patched/',SD='pkgLIB/strip_'+SET+'/patched/',PK='pkgLIB_'+SET;
 for(const p of [SD.replace('/patched/',''),PK])if(fs.existsSync(p))fs.rmSync(p,{recursive:true});fs.mkdirSync(SD,{recursive:true});

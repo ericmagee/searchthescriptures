@@ -1,0 +1,3 @@
+counted as one '+G+')');}} /* pkgCEC */
+ if(P.key){const __k=ri5Key2024(P.key.raw,P.key.u,/^KEYSTONE\s*:\s*(D\d+)\s*(?:--|—|-|:)?\s*(STANDS)\b/,['STANDS']);if(__k&&cecBroken2024().some(x=>x.side==='DEFENDER'&&'D'+x.link===__k[1])){trig.push('KEYSTONE '+__k[1]+' (STANDS to BROKEN)');const nl='KEYSTONE: '+__k[1]+' -- BROKEN -- LINK '+__k[1].slice(1)+' BROKEN BY A CONFIRMED CLOSING CONTRADICTION';const ent=[...map].find(([o,z])=>String(z.to).split('\n').includes(P.key.raw));if(ent)ent[1].to=String(ent[1].to).split('\n').map(l=>l===P.key.raw?nl:l).join('\n');else map.set(P.key.raw,{sid:'CLOSE-CONTRADICTION (pkgKSR)',to:nl,over:[],derived:true});}} /* pkgKSR */
+ const brk={DEFENDER:col.filt

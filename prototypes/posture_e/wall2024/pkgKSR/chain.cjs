@@ -1,0 +1,14 @@
+// Offline chain replay of execution 34626 from a start node to Replay Rows with a chosen library source set (W1).
+// Code nodes run (library nodes from pkgLIB/strip_<SET>/patched, others from the s110 fetch-back); IF nodes pass their input to the branch the stored run took;
+// HTTP (model) nodes keep their stored output. Usage: module chain(SET, start) -> {out: map node -> main}
+const fs=require('fs');const run=require('./run_node.cjs');
+const X=JSON.parse(fs.readFileSync('/mnt/project-files/wall2024/ex34626_full.json','utf8'));const rd=(X.data||X).resultData.runData;
+let W=JSON.parse(fs.readFileSync('/mnt/project-files/wall2024/fetchback_live_s110.json','utf8'));W=W.data||W;W=W.workflow||W;const BY={};W.nodes.forEach(n=>BY[n.name]=n);
+module.exports=async function chain(SET,start,stop){const order=Object.entries(rd).map(([n,r])=>[n,r[0].startTime]).sort((a,b)=>a[1]-b[1]).map(x=>x[0]);
+ const over={};const fb=[];const lib=n=>{const f='pkgLIB/strip_'+SET+'/patched/'+n.replace(/ /g,'_')+'.js';return fs.existsSync(f)?fs.readFileSync(f,'utf8'):null;};
+ const inOf=n=>{const s=(rd[n][rd[n].length-1].source||[])[0];if(!s)return [];const m=over[s.previousNode]||(rd[s.previousNode]?(rd[s.previousNode][rd[s.previousNode].length-1].data||{}).main:null);return m?(m[s.previousNodeOutput||0]||[]):[];};
+ for(const n of order.slice(order.indexOf(start))){if(stop&&n===stop)break;const t=BY[n]&&BY[n].type;const st=(rd[n][rd[n].length-1].data||{}).main||[];
+  if(/\.code$/.test(t)){const code=lib(n)||BY[n].parameters.jsCode;const r=await run(code,n,rd,over,n==='Alternate Build'?(over['Alternate Needed?']||[])[0]:null);if(r&&r.err){if(lib(n))return {err:n+': '+r.err,over};fb.push(n+' ('+r.err.slice(0,60)+')');over[n]=st;}else over[n]=[r.map(j=>({json:j}))];}
+  else if(/\.if$/.test(t)){const inp=inOf(n);over[n]=st.map(o=>o&&o.length?inp:[]);}
+  else over[n]=st;}
+ return {over,fb};};

@@ -1,0 +1,1 @@
+if(m[2]==='BROKEN'&&bw===false&&!cecBroken2024().some(x=>x.side==='DEFENDER'&&'D'+x.link===m[1]))out.push

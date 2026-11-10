@@ -1,0 +1,1 @@
+else if(km[2]==='BROKEN'&&!cecBroken2024().some(x=>x.side==='DEFENDER'&&'D'+x.link===km[1])&&!brl.length

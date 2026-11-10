@@ -1,0 +1,2 @@
+const out=[];const not_sent=[];
+for(const [seat,list] of bySeat)
