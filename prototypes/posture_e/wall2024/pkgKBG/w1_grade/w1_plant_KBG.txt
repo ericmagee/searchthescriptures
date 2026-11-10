@@ -1,0 +1,14 @@
+M1 CR2 heading sentence as stored ("**On Job 14:1.** I accept ...")
+   base CURED | KBG CURED | CURE (record-only until promoted): CURED -- KEEP whose reason quotes the answering side's round: "i accept it as a phrase" | TRIAL pkgVP3: code check does not agree, not an item -- [CR3] nam
+M2 same CR2 sentence with the bold heading removed
+   base CURED | KBG UNCURED | CURE (record-only until promoted): UNCURED -- KEEP whose reason quotes only another bare grant or deferral of the answering side ("i accept it as a phrase"), not a fuller answer (pkgKBG) | T
+M3 planted bare grant, plain line
+   base CURED | KBG UNCURED | CURE (record-only until promoted): UNCURED -- KEEP whose reason quotes only another bare grant or deferral of the answering side ("i grant the phrase covers hezekiah"), not a fuller answer (
+M4 the same grant as a bullet ("- I grant ...")
+   base CURED | KBG CURED | CURE (record-only until promoted): CURED -- KEEP whose reason quotes the answering side's round: "i grant the phrase covers hezekiah" | TRIAL pkgVP3: code check does not agree, not an item -
+M5 the same grant after a bold heading ("**On Job 14:1.** I grant ...")
+   base CURED | KBG CURED | CURE (record-only until promoted): CURED -- KEEP whose reason quotes the answering side's round: "i grant the phrase covers hezekiah" | TRIAL pkgVP3: code check does not agree, not an item -
+M6 the same grant after a layer tag ("[L1] I grant ...")
+   base CURED | KBG CURED | CURE (record-only until promoted): CURED -- KEEP whose reason quotes the answering side's round: "i grant the phrase covers hezekiah" | TRIAL pkgVP3: code check does not agree, not an item -
+M7 the same grant after a verse label ("- **Job 14:1** I grant ...")
+   base CURED | KBG CURED | CURE (record-only until promoted): CURED -- KEEP whose reason quotes the answering side's round: "i grant the phrase covers hezekiah" | TRIAL pkgVP3: code check does not agree, not an item -
