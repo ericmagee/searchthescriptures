@@ -24,3 +24,7 @@ D8 Faulted asker. All plants: chatgpt and sol hold luna's defender question on C
 D9 End to end (QR Check then QR Final), for D8a and D8c with luna's second reply: failed call, not JSON, and passing with a different defender question.
  At the end, the number of judges whose defender record still asks about the CR3/CR4 pair is at least 1, wherever live has at least 1. A drop to 0 is a FAIL.
 D10 D1 to D7 rerun on rev 2 unchanged.
+
+## D11 (after W3's R12, Wall/commit 8a6d1c31), committed before my run of it
+D11 Chain: luna quotes passage A, sol quotes passage B, chatgpt quotes A and B as one passage, all on CR3/CR4, all fault-free.
+ After QR Final with each redirected judge switching to another pair, at least one judge still asks about B wherever live has one. 0 is a FAIL.
