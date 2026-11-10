@@ -16,6 +16,7 @@ const nrm=l=>l.replace(/\\+/g,'').replace(/[*_`]+/g,'').replace(/^\s*(?:[-•>*]
 const KS=r=>{const t=String(r.verdict_raw||'').replace(/\\+n/g,'\n');for(const l of t.split('\n')){const m=nrm(l).match(/^KEYSTONE\s*:\s*D6\s*(?:--|—|–|-|:)?\s*(STANDS|BROKEN|WITHDRAWN)\b/i);if(m)return m[1].toUpperCase();}return '-';};
 const R=rs=>rs.flatMap(x=>x.body?JSON.parse(x.body).p_rows:[x.payload||x]);
 const only=process.env.FORMS?process.env.FORMS.split(','):Object.keys(F);
-(async()=>{for(const PF of process.argv.slice(2)){console.log('## '+PF.split('/').pop());
+const fields=rows=>JSON.stringify(rows.map(r=>{const o={...r};delete o.verdict_raw;delete o.created_at;return o;}));const gate=c=>JSON.stringify(((c.over['Gate Record']||[[]])[0]||[]).map(x=>(x.json.gate_rows||[]).map(r=>r.seat+' '+r.item+':'+r.cure_status)));
+(async()=>{for(const PF of process.argv.slice(2)){console.log('## '+PF.split('/').pop());let B=null;
  for(const k of only){const to=F[k];let n=0;const mut=rd=>{const s=JSON.stringify(rd);const parts=s.split(/(\\+n)KEYSTONE: D6 -- STANDS/);n=(parts.length-1)/2;let o=parts[0];for(let i=1;i<parts.length;i+=2)o+=parts[i]+to+parts[i+1];return JSON.parse(o);};
-  const c=await chain(PF,mut);console.log((k.padEnd(12))+' planted '+String(n).padStart(3)+'  '+(c.err?'ERR '+c.err:R(c.rows).map(r=>(r.judge_seat||r.seat)+':'+KS(r)).join(' ')));}}})();
+  const c=await chain(PF,mut);if(c.err){console.log(k+' ERR '+c.err);continue;}const rr=R(c.rows);if(!B)B={f:fields(rr),g:gate(c)};const allB=rr.every(r=>KS(r)==='BROKEN');console.log((allB?'OK   ':'FAIL ')+(k.padEnd(12))+' planted '+String(n).padStart(3)+'  '+rr.map(r=>(r.judge_seat||r.seat)+':'+KS(r)+'/drv'+r.drv_uncured).join(' ')+'  fields '+(fields(rr)===B.f?'=':'DIFF')+'  gate '+(gate(c)===B.g?'=':'DIFF '+gate(c).slice(0,300)));}}})();

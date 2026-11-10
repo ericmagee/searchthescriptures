@@ -12,7 +12,7 @@ module.exports=async function chain(PF,mut){const w=L(PF);const BY={};w.nodes.fo
   if(/\.code$/.test(t)){const c=srcOf(n);if(c===null){over[n]=st;continue;} /* E4 head (Alternate Build): unchanged in these packages, stored output */
    const r=await run(c,n,RD,over);if(r&&r.err)return {err:n+': '+r.err,over};over[n]=[r.map(j=>({json:j}))];}
   else if(/\.if$/.test(t)){const s=(RD[n][RD[n].length-1].source||[])[0];const m=s&&(over[s.previousNode]||(RD[s.previousNode]&&RD[s.previousNode][0].data.main));const inp=m?(m[s.previousNodeOutput||0]||[]):[];over[n]=st.map(o=>o&&o.length?inp:[]);}
-  else if(n==='Send Back Call openrouter'&&over['Send Back Build']){const key=i=>i.rule+'|'+i.item+'|'+i.line;
+  else if(n==='Send Back Call openrouter'&&over['Send Back Build']){const key=i=>process.env.W2KEY==='ri'?i.rule+'|'+i.item:i.rule+'|'+i.item+'|'+i.line; /* W2KEY=ri: map stored replies by rule and item only (plants that change a sent line) */
    const B0=RD['Send Back Build'][0].data.main[0].map(x=>x.json),B1=over['Send Back Build'][0].map(x=>x.json);
    over[n]=[st[0].map((c,k)=>{const b0=B0[k],b1=B1.find(j=>j.seat===b0.seat);if(!b1)return c;const map={};(b0.items||[]).forEach(i=>{const z=(b1.items||[]).find(x=>key(x)===key(i));map[i.sid]=z?z.sid:null;});
     const j=JSON.parse(JSON.stringify(c.json));const t=j.choices[0].message.content;let out;
