@@ -14,7 +14,7 @@ Build: `node pkgKCB/build_KCB.cjs strip`; `FB=<s94 fetch-back> node gate/pack.cj
 
 Proof:
 - probe_KCB.cjs 48 OK (34108 luna, Panel Cure Normalize 1 and Panel Cure Check, whole nodes): 17 refusal forms go CURED to UNCURED; 12 answers stay CURED with the row equal to the base (pkgFUK rev 3's accepted table and plain reasons, "COUNTED. My count did not include this grant; corrected to 5." among them); 9 answers pkgFUK rev 3 already refuses stay UNCURED, row equal; the stored reply, TOUCHES NO LINK and NOT HELD answers give equal log rows and bodies; the refused answer is asked once as NO REASON (the base asks nothing); a bare COUNTED with its count in the follow-up cures it; the same refusal in the follow-up stays UNCURED with no second ask; only the one K-S3 row differs; 26 files change by the one line.
-- Gate (gate/replay.cjs, base strip_KCB_base, candidate strip_KCB): 767 node runs byte-equal or the same error, 0 target changes, 17 near-miss checks, GATE PASS (gate_KCB.txt). No stored K-S3 answer is COUNTED (0 of 691), so no stored row can change.
+- Gate (gate/replay.cjs, base strip_KCB_base, candidate strip_KCB): 862 node runs byte-equal or the same error, 0 target changes, 17 near-miss checks, GATE PASS (gate_KCB.txt). No stored K-S3 answer is COUNTED (0 of 691), so no stored row can change.
 - Rolled-back insert through record_enforcer_log of the changed row (panel, cure, K-S3, UNCURED): accepted.
 
 Limits:
