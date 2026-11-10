@@ -1,0 +1,26 @@
+     KVQ CURED | KBG CURED | CURE (record-only until promoted): CURED -- KEEP whose reason quotes the answering side's round: "is a different word from synerchomai" | TRIAL pkgVP3: code check does not agree, not an item -- [CR3] 
+OK   P1 reasoned sentence right after a two-word grant "I grant it.": KVQ base CURED, KBG CURED
+OK   P1 reasoned sentence right after a two-word grant "I grant it.": every other field equal
+     KVQ CURED | KBG CURED | CURE (record-only until promoted): CURED -- KEEP whose reason quotes the answering side's round: "luke 1 34s how is asked" | TRIAL pkgVP3: code check does not agree, not an item -- [CR3] names Job 14:
+OK   P2 reasoned sentence after the Genesis 4:1 grant in the same bullet: KVQ base CURED, KBG CURED
+OK   P2 reasoned sentence after the Genesis 4:1 grant in the same bullet: every other field equal
+     KVQ CURED | KBG CURED | CURE (record-only until promoted): CURED -- KEEP whose reason quotes the answering side's round: "the means after the word is" | TRIAL pkgVP3: code check does not agree, not an item -- [CR3] names Job
+OK   P3 reasoned sentence after a grant, next sentence starting with a bracket tag: KVQ base CURED, KBG CURED
+OK   P3 reasoned sentence after a grant, next sentence starting with a bracket tag: every other field equal
+     KVQ CURED | KBG CURED | CURE (record-only until promoted): CURED -- KEEP whose reason quotes the answering side's round: "is a different word from synerchomai" | TRIAL pkgVP3: code check does not agree, not an item -- [CR3] 
+OK   P4 grant joined to its reason by "for" in one sentence (planted): KVQ base CURED, KBG CURED
+OK   P4 grant joined to its reason by "for" in one sentence (planted): every other field equal
+     KVQ CURED | KBG CURED | CURE (record-only until promoted): CURED -- KEEP whose reason quotes the answering side's round: "matthew 17 5 is answered under" | TRIAL pkgVP3: code check does not agree, not an item -- [CR3] names 
+OK   P5 deferral to another verse ("Matthew 17:5 is answered under Luke 9:34"): FINDING, not in pkgKQG deferral test (LINK n, CRn, answered above/below/there), so CURED as live: KVQ base CURED, KBG CURED
+OK   P5 deferral to another verse ("Matthew 17:5 is answered under Luke 9:34"): FINDING, not in pkgKQG deferral test (LINK n, CRn, answered above/below/there), so CURED as live: every other field equal
+     KVQ CURED | KBG UNCURED | CURE (record-only until promoted): UNCURED -- KEEP whose reason quotes only another bare grant or deferral of the answering side ("i grant it states what the"), not a fuller answer (pkgKBG) | TRIAL pk
+OK   P6 another bare grant of the side (John 3:6 item): KVQ base CURED, KBG UNCURED (pkgKBG reason)
+OK   P6 another bare grant of the side (John 3:6 item): every other field equal
+     KVQ CURED | KBG UNCURED | CURE (record-only until promoted): UNCURED -- KEEP whose reason quotes only another bare grant or deferral of the answering side ("i grant the espousal and the"), not a fuller answer (pkgKBG) | TRIAL 
+OK   P7 two bare grants together, no own reasoning: KVQ base CURED, KBG UNCURED (pkgKBG reason)
+OK   P7 two bare grants together, no own reasoning: every other field equal
+     KVQ CURED | KBG CURED | CURE (record-only until promoted): CURED -- KEEP whose reason quotes the answering side's round: "the verses for gives the holy" | TRIAL pkgVP3: code check does not agree, not an item -- [CR3] names J
+OK   P8 bare grant then a reasoned sentence in the same KEEP: KVQ base CURED, KBG CURED
+OK   P8 bare grant then a reasoned sentence in the same KEEP: every other field equal
+OK   34108 stored send-back rows: all equal to the base (27 rows)
+17 OK, 0 FAIL
