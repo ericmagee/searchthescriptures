@@ -1,0 +1,23 @@
+// pkgCSS rev 1 (W1): checks on the write file, labeled before the first run. Build on 34108 stored rounds; Record with written replies.
+process.chdir(__dirname+'/..');const fs=require('fs');const {harness}=require('../pkgGSL/harness.cjs');
+const g=f=>{let d=JSON.parse(fs.readFileSync(f,'utf8'));d=d.data||d;return d.workflow||d;};const CAND=g(process.env.CAND||'pkgCSS/parent_s104_CSS.json'),LIVE=g('/mnt/project-files/wall2024/fetchback_live_s104.json');
+const code=(W,n)=>W.nodes.find(z=>z.name===n).parameters.jsCode;const J=x=>({json:x});let ok=0,bad=0;const T=(n,c,i)=>{if(c)ok++;else bad++;console.log((c?'OK   ':'FAIL ')+n+(i?': '+i:''));};
+const runB=async(W,over)=>(await harness('34108',over||{})('return (async()=>{\n'+code(W,'Close Enforcer Build')+'\n})();','Quote Report')).map(x=>x.json);
+const rep=t=>t==null?J({error:{message:'timeout'}}):J({choices:[{message:{role:'assistant',content:t},finish_reason:'stop'}]});
+(async()=>{const BC=await runB(CAND),BL=(await runB(LIVE))[0];const UL=BL.body.messages[1].content;const iD=UL.indexOf('######## THE DEFENDER ########'),iC=UL.indexOf('######## THE CHALLENGER ########');
+ const ud=(BC[0]||{}).body?BC[0].body.messages[1].content:'',uc=(BC[1]||{}).body?BC[1].body.messages[1].content:'';
+ T('T1 Build returns two items, DEFENDER then CHALLENGER; the defender call holds [CR1]-[CR4] and no [DR] round, the challenger call the reverse',BC.length===2&&BC[0].side==='DEFENDER'&&BC[1].side==='CHALLENGER'&&/=== \[CR3\] ===/.test(ud)&&!/=== \[DR1\] ===/.test(ud)&&/=== \[DR3\] ===/.test(uc)&&!/=== \[CR1\] ===/.test(uc),BC.map(b=>b.side).join(','));
+ T('T2 each side section is byte-equal to the live prompt\'s section for that side (rounds unchanged)',ud.includes(UL.slice(iD,iC).replace(/\s+$/,''))&&uc.endsWith(UL.slice(iC)),'');
+ T('T3 the D6 drop and the D6 reclaim both stand in the defender call',ud.includes('I drop the wording "no biological father" as a bare statement.')&&ud.includes('Christ had no biological father.'),'');
+ T('T4 system text unchanged; the instruction is the one in pkgCSS/prompt_side.txt',BC.every(b=>b.body.messages[0].content===BL.body.messages[0].content)&&ud.startsWith(fs.readFileSync('pkgCSS/prompt_side.txt','utf8').replace(/\n$/,'')),'');
+ const rec=async(items,reps)=>(await harness('34108',{'Close Enforcer Build':items.map(J),'Close Enforcer Call deepseek':reps.map(rep)})('return (async()=>{\n'+code(CAND,'Close Enforcer Record')+'\n})();','Close Enforcer Call deepseek'))[0].json;
+ const L6='CLOSE-CONTRADICTION: NEW -- DEFENDER -- LINK 6 -- CONFIRMED -- EARLIER [CR3] "I drop the wording "no biological father" as a bare statement." -- CLOSING [CR4] "Christ had no biological father." -- reclaimed.';
+ const R5=await rec(BC,[L6,'CLOSE-CONTRADICTION: NONE']);T('T5 defender reply CONFIRMED D6, challenger NONE: link 6 broken, one output item',R5.cec.confirmed.length===1&&R5.cec.confirmed[0].link===6&&R5.cec.confirmed[0].side==='DEFENDER',JSON.stringify(R5.cec.rows.map(r=>r.id+' '+r.status)));
+ const R6=await rec(BC,[null,'CLOSE-CONTRADICTION: NONE']);T('T6 defender call fails, challenger NONE: nothing broken, the error names the defender call',R6.cec.confirmed.length===0&&R6.cec.errors.some(e=>/^DEFENDER: no reply/.test(e)),JSON.stringify(R6.cec.errors));
+ const R7=await rec(BC,['CLOSE-CONTRADICTION: NONE','CLOSE-CONTRADICTION: NONE']);const L7=typeof R7.cec_log==='string'?JSON.parse(R7.cec_log):R7.cec_log;
+ T('T7 both NONE: none true, one NONE FOUND row whose prompt_sent holds both prompts',R7.cec.none===true&&L7.length===1&&L7[0].cure_reason==null&&/NONE FOUND/.test(JSON.stringify(L7[0]))&&String(L7[0].prompt_sent).includes('######## THE DEFENDER')&&String(L7[0].prompt_sent).includes('######## THE CHALLENGER'),JSON.stringify(L7.map(r=>[r.item,String(r.cure_reason).slice(0,40)])));
+ T('T8 log rows: seat_role panel, cure_status empty, rule E-CLOSECON',[...L7,...(typeof R5.cec_log==='string'?JSON.parse(R5.cec_log):R5.cec_log)].every(r=>r.seat_role==='panel'&&r.cure_status==null&&r.rule==='E-CLOSECON'),'');
+ const F0=(await harness('34108',{})('return $(\'Final Output\').first().json;','Quote Report'))[0].json;
+ const B9=await runB(CAND,{'Final Output':[J({...F0,dr4:''})]});T('T9 only the defender\'s closing round has text: one item, DEFENDER',B9.length===1&&B9[0].side==='DEFENDER',B9.map(b=>b.side).join(','));
+ const B10=await runB(CAND,{'Final Output':[J({...F0,cr4:'',dr4:''})]});T('T10 no closing round: one skip item as before',B10.length===1&&B10[0].cec_skip===true,JSON.stringify(B10[0]).slice(0,100));
+ console.log(ok+' OK, '+bad+' FAIL');})();
