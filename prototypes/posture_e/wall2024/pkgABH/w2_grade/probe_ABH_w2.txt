@@ -1,0 +1,10 @@
+OK   live s97 stub on 34299 inputs: fails as the execution did (Cannot read properties of undefined (reading 'map'))
+OK   ABH stub on 34299 inputs: no error, 1 items
+OK   ABH output equals the source run with Alternate Needed? as input (stored early row does not match: all or nothing gives today's output)
+     items: {"seat":"haiku","removed":"luna"}
+     stored early rows: {"seat_for":"chatgpt","sha":"5a12a11e251de50f","err":null}
+OK   planted matching early rows for all 1 calls: every call carries early_all and the early reply
+OK   one planted row with a wrong hash: all or nothing, output equals today's
+OK   empty RPC reply (no early row): output equals today's
+OK   Get Early Alternate not executed: output equals today's
+7 OK, 0 FAIL

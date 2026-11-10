@@ -1,0 +1,31 @@
+-- A. refusals in other words (stated limit; reported, not graded) --
+     COUNTED. The defender never granted this. -> base CURED, KCB CURED
+     COUNTED. The defender did not concede it. -> base CURED, KCB CURED
+     COUNTED. It should not have been. -> base CURED, KCB CURED
+     COUNTED. Nothing in the round grants it. -> base CURED, KCB CURED
+     COUNTED. I reverse that: it is not counted. -> base CURED, KCB UNCURED
+     COUNTED. Strike that. -> base CURED, KCB CURED
+     COUNTED. On reflection, no. -> base CURED, KCB CURED
+OK   refusal "COUNTED, but only in part.": base CURED, KCB UNCURED
+OK   refusal "COUNTED. That count is mistaken.": base CURED, KCB UNCURED
+OK   refusal "COUNTED; however, see D2.": base CURED, KCB UNCURED
+OK   refusal "COUNTED. I deny that it grants D6.": base CURED, KCB UNCURED
+OK   refusal "COUNTED. Not accepted.": base CURED, KCB UNCURED
+OK   refusal "COUNTED. The defender doesn't hold it.": base CURED, KCB UNCURED
+OK   refusal "COUNTED — wrongly; strike it.": base CURED, KCB UNCURED
+OK   refusal "COUNTED. It isn't valid.": base CURED, KCB UNCURED
+OK   stays CURED "COUNTED. The defender concedes D6 in [DR3]."
+OK   stays CURED "COUNTED. There is no doubt."
+OK   stays CURED "COUNTED. I do not doubt it."
+OK   stays CURED "COUNTED; the grant stands as written."
+OK   stays CURED "COUNTED. Granted in full."
+-- D. plain answers with a listed word (asked once; reported) --
+     COUNTED: no link survives the grant. -> base UNCURED, KCB UNCURED
+     COUNTED. Nothing is wrong with it. -> base CURED, KCB UNCURED
+     COUNTED, though late in the round. -> base CURED, KCB UNCURED
+     COUNTED. The defender does not deny it. -> base CURED, KCB CURED
+     COUNTED: the grant is not in dispute. -> base UNCURED, KCB UNCURED
+     COUNTED. There is no error. -> base CURED, KCB UNCURED
+-- E. bodies equal for a refusal answer before the follow-up: false
+stated-limit misses: 6
+13 OK, 0 FAIL
