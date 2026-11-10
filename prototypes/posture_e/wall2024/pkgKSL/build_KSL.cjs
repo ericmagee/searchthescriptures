@@ -7,15 +7,21 @@
 //      Joined after a space, or after ". " when the RESPONSE text ends without a stop.
 //   2. the K-S3 COUNTED reading: the text it reads is the RESPONSE text followed by those lines (joined by a space), so the refusal reader
 //      (pkgFUN's, whatever revision is in the base) reads them as later sentences of the same answer. COUNTED must still open the RESPONSE line.
+// rev 2 (W3 FAIL of rev 1 on s103, Wall 4057): a RESPONSE text ending in a colon is joined to the next line with ". ", not a space; the live
+//   strict reader ends its first sentence at . ; ! ? but not at a colon, so "COUNTED:" + a line holding a negation was refused where live cures it.
 //   node pkgKSL/build_KSL.cjs <base strip dir> <out strip dir>     (built to stack on pkgFUN rev 4; anchors are outside pkgFUN's change)
 const fs=require('fs'),path=require('path'),cr=require('crypto');const die=m=>{console.error('BUILD REFUSED: '+m);process.exit(1);};
 const h=s=>cr.createHash('sha256').update(s).digest('hex').slice(0,12);
 const rep=(s,a,b,what)=>{const n=s.split(a).length-1;if(n!==1)die(what+': '+n+' hits for '+JSON.stringify(a.slice(0,90)));const i=s.indexOf(a);return s.slice(0,i)+b+s.slice(i+a.length);};
 const [,,A,B]=process.argv;if(!A||!B)die('usage: build_KSL.cjs <base strip> <out strip>');if(fs.existsSync(B))die(B+' exists');fs.mkdirSync(B+'/patched',{recursive:true});
 const C0="function cureLines(text){text=cureUnwrap(text);";
-const C1=String.raw`function __ks3Cont(o,rp){const s=((o&&o.response)||[]).find(z=>z&&z.text===rp);return s&&s.cont&&s.cont.length?(/[.!?:;]["”’)\]*_]*\s*$/.test(String(rp))?' ':'. ')+s.cont.join(' '):'';} /* pkgKSL: the prose lines a judge writes right under its K-S3 RESPONSE line are read with it */`+"\n"+String.raw`function cureLines(text){text=cureUnwrap(text);let __kcLast=null;`;
+const C1=String.raw`function __ks3Cont(o,rp){const s=((o&&o.response)||[]).find(z=>z&&z.text===rp);return s&&s.cont&&s.cont.length?(/[.!?;]["”’)\]*_]*\s*$/.test(String(rp))?' ':'. ')+s.cont.join(' '):'';} /* pkgKSL: the prose lines a judge writes right under its K-S3 RESPONSE line are read with it */`+"\n"+String.raw`function cureLines(text){text=cureUnwrap(text);let __kcLast=null;`;
 const P0="const k=l.match(CURE_KEY);if(!k){o.prose.push(l);continue;}";
-const P1=String.raw`const k=l.match(CURE_KEY);if(!k){o.prose.push(l);if(__kcLast&&__kcLast.cont.length<3)__kcLast.cont.push(l.replace(/^(?:[-•>]|\d{1,2}[.)])\s+/,''));continue;}__kcLast=null;`;
+const P1=String.raw`const k=l.match(CURE_KEY);if(!k){o.prose.push(l);if(__kcLast&&__kcLast.cont.length<3){if(__kcOther(l,__kcLast.label))__kcLast=null;else __kcLast.cont.push(l.replace(/^(?:[-•>]|\d{1,2}[.)])\s+/,''));}continue;}__kcLast=null;`;
+/* rev 2 (W1 grade of rev 1, Wall 4058): a line that names another item ends the run, so "As for #2: it should not be counted." is not read as
+   part of #1's answer. Another item: "#n" or "item / point / no. / number n" with n not this item's number, a rule tag (K-S3, K-RUL ...) other
+   than this item's, or a side and round (DEFENDER CR4, CHALLENGER DR2 ...) other than this item's. */
+const O1=String.raw`function __kcOther(l,label){const t=String(l),L=String(label||'');const own=(L.match(/#\s*(\d+)/)||[])[1];for(const m of t.matchAll(/(?:#|\b(?:item|point|no\.|number)\s*#?)\s*(\d+)\b/gi))if(m[1]!==own)return true;for(const m of t.matchAll(/\bK-[A-Z]+\d*\b/g))if(!L.includes(m[0]))return true;for(const m of t.matchAll(/\b(DEFENDER|CHALLENGER)\s+([CD]R\d)\b/gi))if(!new RegExp('\\b'+m[1]+'\\s+'+m[2]+'\\b','i').test(L))return true;return false;} /* pkgKSL rev 2 */`+"\n";
 const R0="(k[1]==='STATEMENT'?o.statement:o.response).push({label:String(f.item).trim(),text:r.slice(at+1).trim(),line:l});continue;}";
 const R1="if(k[1]==='STATEMENT')o.statement.push({label:String(f.item).trim(),text:r.slice(at+1).trim(),line:l});else{__kcLast={label:String(f.item).trim(),text:r.slice(at+1).trim(),line:l,cont:[]};o.response.push(__kcLast);}continue;}";
 const K0="if(x.rule==='K-S3'){const rp=respOf(x)||'';{const c0=String(rp)";
@@ -23,6 +29,6 @@ const K1="if(x.rule==='K-S3'){const rp=respOf(x)||'';{const c0=String(rp+__ks3Co
 const plan={base:A,library:{}};
 for(const f of fs.readdirSync(A+'/patched').filter(f=>f.endsWith('.js')).sort()){const s0=fs.readFileSync(A+'/patched/'+f,'utf8');let s=s0;const did=[];
  const hasC=s.includes(C0),hasK=s.includes(K0);if(hasC!==hasK)die(f+': cureLines '+hasC+' but K-S3 line '+hasK);
- if(hasK){if(s.includes('pkgKSL'))die(f+' already has pkgKSL');s=rep(s,C0,C1,f+' C');s=rep(s,P0,P1,f+' P');s=rep(s,R0,R1,f+' R');s=rep(s,K0,K1,f+' K');did.push('KSL');}
+ if(hasK){if(s.includes('pkgKSL'))die(f+' already has pkgKSL');s=rep(s,C0,O1+C1,f+' C');s=rep(s,P0,P1,f+' P');s=rep(s,R0,R1,f+' R');s=rep(s,K0,K1,f+' K');did.push('KSL');}
  new Function('$','$input','return (async()=>{\n'+s+'\n})();');fs.writeFileSync(B+'/patched/'+f,s);plan.library[f]={base:h(s0),patched:h(s),changes:did};}
 const ch=Object.entries(plan.library).filter(e=>e[1].changes.length);fs.writeFileSync(B+'/plan_KSL.json',JSON.stringify(plan,null,1)+'\n');console.log(B+': '+Object.keys(plan.library).length+' files, '+ch.length+' changed');
