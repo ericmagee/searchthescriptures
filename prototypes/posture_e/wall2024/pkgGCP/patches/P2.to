@@ -1,0 +1,2 @@
+if(first.gate_skip){const __g=gcp2024(PASS.bodies,PASS.sb_items,PB0);return [{json:{...__trm(PASS),...(__g?{bodies:__g}:{}),gate:{skipped:true,why:first.gate_why||'',report:first.gate_report||[]},gate_rows:[]}}];}
+const bodies=(Array.isArray(PASS.bodies)?PASS.bodies:$(

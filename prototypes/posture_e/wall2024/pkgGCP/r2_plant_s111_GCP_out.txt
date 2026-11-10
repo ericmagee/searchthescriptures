@@ -1,0 +1,39 @@
+ran Second Alternate? (1 items)
+ran R2 Alternate Build (1 items)
+ran R2 Alternate Payloads (1 items)
+  payload cure: [null]
+ran R2 Alternate Cure Build (1 items)
+ran R2 Alternate Cure Normalize (1 items)
+ran R2 Alternate Merge Seat (1 items)
+  Merge Seat: haiku NOT SEATED (1 uncured item(s)); seated []
+  haiku KEYSTONE: KEYSTONE: D6 -- BROKEN -- LINK 6 BROKEN BY A CONFIRMED CLOSING CONTRADICTION
+  tried keys: removed_seat,alternate,api_model,result,why,verdict_raw
+  uncured detail: {}
+  UNCURED lines: [AUDIT v21: DEBATE RULE VIOLATION REPORT -- SEAT: haiku; ITEM: keystone; RULE: K-RUL; RESULT: UNCURED; WHY: TRIAL rule, NO WRITTEN RESPONSE: counts in drv_uncured like a LIVE item (silence count): no written response; LINE: deciding ruling keystone: 
+ran R2 Alt Seated (1 items)
+ran R2 Alt Judge Enforcer Build (1 items)
+  enforcer: je_skip [[false,null,0]]
+  stored judge enforcer items for sol: 0,1,2,3,4,5
+ran R2 Alt Judge Enforcer Retry Build (1 items)
+ran R2 Alt Judge Enforcer Record (1 items)
+ran R2 Alt Send Back Build (1 items)
+  R2 Alt Send Back Build items (0):
+    
+  not_sent by pkgECB: 0 []
+  items on D6 or KEYSTONE lines sent: 0
+ran R2 Alt Send Back Record (1 items)
+ran R2 Alt Reread Build (1 items)
+  reread: rr_skip [true]
+ran R2 Alt Reread Record (1 items)
+ran R2 Alt Gate Build (1 items)
+  gate: [{"skip":true,"items":[]}]
+ran R2 Alt Gate Record (1 items)
+ran R2 Alternate Merge (1 items)
+  gate record: {"gate":{"skipped":true,"why":"no send-back answer was recorded","report":[]},"gate_rows":[]}
+  R2 merge tried: [{"alt":"haiku","result":"NOT SEATED","why":"1 uncured item(s)"}]
+  send-back tally {}; uncured rows: []
+ran Alternate Merge (1 items)
+  FINAL seated []
+  WRITTEN luna (openai/gpt-6-luna): KEYSTONE: D6 -- STANDS -- derived by the engine from the collision grades of D6 (none | tag BROKEN | drv_uncured 2 | counted undefined
+  WRITTEN chatgpt (openai/gpt-6.1-terra): KEYSTONE: D6 -- STANDS -- The declared conclusion that Christ had no biological father | tag BROKEN | drv_uncured 0 | counted undefined
+  WRITTEN sol (openai/gpt-6.1-sol): KEYSTONE: D6 -- STANDS -- The conclusion that Christ had no biological father remains | tag BROKEN | drv_uncured 0 | counted undefined

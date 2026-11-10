@@ -1,0 +1,1 @@
+if(first.gate_skip)return [{json:{...__trm(PASS),gate:{skipped:true,why:first.gate_why||'',report:first.gate_report||[]},gate_rows:[]}}];
