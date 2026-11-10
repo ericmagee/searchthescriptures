@@ -1,0 +1,3 @@
+process.chdir('/home/claude/searchthescriptures/prototypes/posture_e/wall2024/pkgOON3');const T=require('/home/claude/searchthescriptures/prototypes/posture_e/wall2024/pkgOON3/test_OON3.cjs');const {LIVE,run,store}=T;
+const plant=(to)=>({'Send Back Record':o=>{const x=o[0][0].json.sb_items.find(z=>z.seat==='luna'&&z.sid==='S12');x.ans='CHANGE';x.to=to;}});
+(async()=>{for(const to of ['None of these rows is out of round; the row stands.','NONE\nDEFENDER | [CR4] | "I grant the order."']){const a=await run(LIVE,'Gate Build','Reread Record',store(plant(to)));const it=a[0].items.find(x=>x.sid==='S12');console.log('LIVE control',JSON.stringify(to).slice(0,50),'|',it?it.kind:'APPLIED');}})();
