@@ -1,0 +1,3 @@
+const {out}=require('./x.cjs');const pj=out('Panel Judges Prep');
+pj.forEach(x=>{const m=x.json.body.messages;const t=m.map(z=>typeof z.content==='string'?z.content:JSON.stringify(z.content)).join('\n');const i=t.indexOf('ANTI-CHEAT CHECK');const k=t.search(/CONFIRMED CLOSING CONTRADICTIONS/);console.log('== '+x.json.seat+' anti-cheat at '+i+', closing at '+k+'; "no biological father needed" present '+t.includes('with no biological father needed to complete it')+' count '+(t.split('with no biological father needed to complete it').length-1));
+ if(x.json.seat==='luna'){console.log(t.slice(i-200,i+2200));console.log('-----');console.log(t.slice(k-100,k+1500));}});

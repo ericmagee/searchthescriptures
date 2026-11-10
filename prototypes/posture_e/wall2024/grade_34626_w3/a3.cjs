@@ -1,0 +1,3 @@
+const {out,RD,fs}=require('./x.cjs');const S=JSON.stringify;
+const rows=JSON.parse(out('Replay Rows')[0].json.body).p_rows;console.log('rows',rows.length);
+rows.forEach((r,i)=>{fs.writeFileSync('row_'+r.judge_seat+'.json',S(r,null,1));console.log('== row',i,r.judge_seat);for(const k of Object.keys(r)){const v=r[k];const s=typeof v==='string'?v:S(v);if(k==='verdict_raw'){let o;try{o=JSON.parse(v);}catch(e){console.log('  verdict_raw not JSON');continue;}fs.writeFileSync('vr_'+r.judge_seat+'.json',S(o,null,1));for(const kk of Object.keys(o)){const ss=typeof o[kk]==='string'?o[kk]:S(o[kk]);console.log('    vr.'+kk+' ('+ss.length+'): '+ss.slice(0,200).replace(/\n/g,' / '));}}else console.log('  '+k+' ('+(s||'').length+'): '+String(s).slice(0,200).replace(/\n/g,' / '));}});
