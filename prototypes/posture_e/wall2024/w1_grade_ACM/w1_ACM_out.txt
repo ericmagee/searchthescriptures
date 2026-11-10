@@ -1,0 +1,22 @@
+   33389 non-row fields: live {"skipped":false,"record_only":false,"model":"deepseek-flash","counts":{"items":96,"consistent":90,"reversed":0,"shown":0,"quote_not_found":0,"quotes_ok":0,"no_earlier":3,"no_answer":3,"not_checked":0,"calls":4},"reversed":{"D":[],"C":[]},"no_answer":["X34","X36","X73"],"not_checked":[],"errors":[]}
+      cand {"skipped":false,"record_only":false,"model":"deepseek-flash","counts":{"items":96,"consistent":92,"reversed":0,"shown":0,"quote_not_found":0,"quotes_ok":0,"no_earlier":3,"no_answer":1,"not_checked":0,"calls":4},"reversed":{"D":[],"C":[]},"no_answer":["X73"],"not_checked":[],"errors":[]}
+   33617 non-row fields: live {"skipped":false,"record_only":false,"model":"deepseek-flash","counts":{"items":125,"consistent":115,"reversed":0,"shown":0,"quote_not_found":0,"quotes_ok":0,"no_earlier":9,"no_answer":1,"not_checked":0,"calls":5},"reversed":{"D":[],"C":[]},"no_answer":["X75"],"not_checked":[],"errors":[]}
+      cand {"skipped":false,"record_only":false,"model":"deepseek-flash","counts":{"items":125,"consistent":116,"reversed":0,"shown":0,"quote_not_found":0,"quotes_ok":0,"no_earlier":9,"no_answer":0,"not_checked":0,"calls":5},"reversed":{"D":[],"C":[]},"no_answer":[],"not_checked":[],"errors":[]}
+stored runs replayed 38; row differences: 3
+   33389 X34: absent -> CONSISTENT
+   33389 X36: absent -> CONSISTENT
+   33617 X75: absent -> CONSISTENT
+OK   A1/A6 only 33389 X34, X36, 33617 X75 differ from live
+   base line: live REVERSED shown true | cand REVERSED shown true
+OK   A2 EARLIER ends '".': live no row shown false | cand REVERSED shown true
+OK   A2 EARLIER ends '”.': live no row shown false | cand REVERSED shown true
+   A3 CLOSE ends '".', no EARLIER: live no row shown false | cand REVERSED (QUOTE NOT FOUND) shown false
+   A3 EARLIER ends '"..': live no row shown false | cand no row shown false
+   A3 EARLIER ends '"...': live no row shown false | cand no row shown false
+   A3 period then spaces: live no row shown false | cand REVERSED shown true
+OK   A4 text after the mark: live no row shown false | cand no row shown false
+OK   A4 no ANTICHEAT head: live no row shown false | cand no row shown false
+OK   A4 X id not sent: live no row shown false | cand no row shown false
+OK   A5 period inside the quotation (stored form): live REVERSED shown true | cand REVERSED shown true
+7 OK, 0 FAIL
+A7 418 differ [ 'Anticheat Record' ] conn true 4157 -> 4160
