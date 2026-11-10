@@ -1,0 +1,14 @@
+real stored TOUCHES NO LINK reasons: 306; candidate refuses: 0
+OK   refusal live CURED   cand UNCURED | I will not answer this.
+OK   refusal live CURED   cand UNCURED | I decline to give a reason.
+OK   refusal live UNCURED cand UNCURED | I refuse to answer.
+OK   refusal live CURED   cand UNCURED | I refuse to say why it touches no link.
+OK   refusal live CURED   cand UNCURED | I do not need to give a reason here.
+OK   refusal live CURED   cand UNCURED | No reason is needed for this one.
+OK   reason  live CURED   cand CURED   | I cannot say more than that it touches nothing.
+OK   refusal live CURED   cand UNCURED | I will not explain myself to the enforcer here.
+OK   reason  live CURED   cand CURED   | I do not see that it touches D6, because the grant concerns legal titles.
+OK   reason  live CURED   cand CURED   | I decline: the grant concerns legal titles, not D6.
+OK   reason  live CURED   cand CURED   | the grant concerns legal titles, not any declared link.
+OK   reason  live CURED   cand CURED   | it concerns no link of the chain
+candidate test length: 171 characters of pattern; with the call in both branches about 211 characters per library copy
