@@ -22,7 +22,7 @@ The parent step above refuses on a form 3 base, as it should. Then: pack strip_K
 - W4's w4_plant_KNL4.cjs run on knl5_fn.js: 15 OK, 0 FAIL.
 - knl5_34108 (W1's test on run 34108, library strip_KNL5): 9 OK, 0 FAIL.
 - probe_KNL on strip_KNL5: 30 OK. probe_KNL_w4 on strip_KNL5: 33 OK.
-- gate/replay on the s90 fetch-back: gate_KNL5.txt.
+- gate/replay on the s90 fetch-back (base strip_VP1_s84, cand strip_KNL5): node runs 767, byte-equal or same error 767, target item changes 0, near-miss checks passed 17, GATE PASS (gate_KNL5.txt).
 - No log row is added or changed.
 
 ## Engine manual part
