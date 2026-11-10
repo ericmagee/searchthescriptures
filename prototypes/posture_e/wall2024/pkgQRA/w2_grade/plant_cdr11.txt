@@ -1,0 +1,6 @@
+OK   N1  candidates equal pkgCDR rev 11 (QRA changes none), J2 ordinary-means pair among them  [J1,J2]
+OK   N2  an answer on the J2 pair (added by pkgCDR) is printed and matched to J2  [{"DEFENDER":4,"CHALLENGER":0,"matched":4}]
+OK   N3  candidates equal pkgCDR rev 11 on the same record (corrected after the run: the first form compared with the record without the answer)  [J1,J2 vs J1,J2]
+   N4 detail: cands J1:The rows state a not-knowing a | J2:A sentence no judge named in C | J3:Genesis 4:1 therefore cannot s ; label line: 
+OK   N4  an answer sharing only the earlier quote of J2 is not matched to J2  [{"DEFENDER":4,"CHALLENGER":0,"matched":4}]
+4 OK, 0 FAIL

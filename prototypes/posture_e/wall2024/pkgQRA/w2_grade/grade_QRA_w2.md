@@ -43,3 +43,11 @@ Operator 14:42 CST 11-09: "you can't withdraw after you made the contradiction .
 - My plants (plant_w2_on_CDR11.txt): output identical to my rev 2 run (7 OK, 2 FAIL; W5 and W8 are my own wrong expectations, noted in the
   rev 1 grade).
 - Stored runs, pkgCDR rev 11 against the stacked file (stored_eq_on_CDR11.txt, stored_eq_abs.cjs takes an absolute base path): 47 of 47 equal.
+- Second grade (coordinator 05:17Z): the five QRA edits are text-identical. The pieces added and removed in Judge Contradiction Build, from
+  s103 to parent_s103_QRA.json and from pkgCDR rev 11 to the stacked file, are identical (48 added, 4 removed, same text).
+- New plants on 34299's stored outputs with pkgCDR's pairs (plant_cdr11.cjs, expectations committed before the run; plant_cdr11.txt): 4 OK.
+  N1 candidates equal pkgCDR rev 11 (J1, J2 ordinary-means pair); N2 an answer on the J2 pair is printed and matched; N3 candidates equal
+  rev 11 on the same record; N4 an answer sharing only J2's earlier quote is not matched to J2 (its pair becomes its own candidate, as on live).
+  Mistakes: my first N3 compared with the record without the answer (wrong expectation; corrected after the run, noted in the case text);
+  my first runner used the fixture alone, which holds no reversal-check data, so pkgCDR's J2 could not appear (fixed before any grade).
+  Result: PASS.
