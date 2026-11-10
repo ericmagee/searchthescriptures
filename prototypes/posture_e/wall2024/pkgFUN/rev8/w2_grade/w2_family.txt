@@ -1,0 +1,15 @@
+CURED|f1-own-count-wrong|COUNTED. My count is wrong.\nCORRECTED COUNT: DEFENDER 3|W3 finding 1: the judge agrees and corrects its own count.|CURED
+CURED|f1-own-count-wrong|COUNTED. My count is not right.\nCORRECTED COUNT: DEFENDER 2|W2 family of finding 1.|CURED
+CURED|f1-own-count-wrong|COUNTED. My earlier count is wrong; the grant counts.|W2 family: own earlier count wrong, count stands.|CURED
+CURED|f1-own-count-wrong|COUNTED.\nMy count is incorrect.\nCORRECTED COUNT: DEFENDER 4|W2 family, sentence on its own line.|CURED
+UNCURED|f1-own-count-wrong|COUNTED. The count is wrong.|Refusal control: the enforcer's count is wrong.|ENFORCED
+UNCURED|f2-yes-counted-subject|Yes.\nCOUNTED is wrong.|W3 finding 2.|ENFORCED
+UNCURED|f2-yes-counted-subject|Agreed.\nCOUNTED cannot be right here.|W2 family of finding 2.|ENFORCED
+UNCURED|f2-yes-counted-subject|Correct.\nCOUNTED is not the right answer.|W2 family of finding 2.|ENFORCED
+UNCURED|f2-yes-counted-subject|COUNTED is wrong.|One-line control.|ENFORCED
+CURED|f2-yes-counted-subject|Agreed.\nCOUNTED: the grant in [CR4] concedes the premise.|Correct answer control.|CURED
+UNCURED|f3-touches-next-refusal|TOUCHES NO LINK:\nI refuse to answer.|W3 finding 3.|ENFORCED
+UNCURED|f3-touches-next-refusal|TOUCHES NO LINK:\nI will not answer this.|W2 family of finding 3.|ENFORCED
+UNCURED|f3-touches-next-refusal|TOUCHES NO LINK:\nNo reason is needed.|W2 family: no reason given.|ENFORCED
+UNCURED|f3-touches-next-refusal|TOUCHES NO LINK: I refuse to answer.|One-line control.|ENFORCED
+CURED|f3-touches-next-refusal|TOUCHES NO LINK:\nthe grant concerns Luke 3:23, which no declared link uses.|Correct answer control.|CURED
