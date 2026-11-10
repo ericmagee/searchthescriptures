@@ -1,4 +1,22 @@
-# pkgCDR rev 2 (W1): feed the closing contradiction enforcer (item A countermeasure)
+# pkgCDR rev 3 (W1): feed the closing contradiction enforcer (item A countermeasure)
+
+## Rev 3 (W3 FAIL of rev 2, w3_grade/grade_CDR2_w3.md: 7 false listings from sentences that do not drop the wording)
+- cdrObj (cdr_fn.js), W3's proposal:
+  - A drop is read only when the drop verb opens the sentence or clause, after list marks, markup and labels ending in a colon such as
+    "LINK 6: NARROWED TO:".
+  - The dropped thing must follow the verb directly: a quoted span, or the/my/this/that/any + wording/word/words/phrase/claim/limb/sentence/
+    reading/premise/step + a quoted span or a "that ..." clause. Only that first object is taken.
+  - A sentence is read clause by clause at ";" and at ", but I" / ", and I"; an adverb may stand before or after the verb.
+- Built on live s103: parent_s103_CDR.json.
+- My cases (W3's seven and a labeled-colon drop added before the run, commit 2faf3de2): 22 of 23. The miss is C9, my rev 1 label error.
+  R2 (", but I drop ...") is read through the clause split.
+- W2's 20 cases: 19 of 20. W17 "I drop not only the bare statement but the wording ..." is missed, in the safe direction, as W2 labeled it.
+- W3's 15 cases: 11 of 15. All 7 FAIL cases are now right. The 4 misses are G8, G9, G10 and G13, which W3 left to the enforcer: the close holds
+  the wording without asserting it.
+- Corpus: 39 debates, 2 listings, both on 34108. Record: 4 OK. The log rows are byte-equal to rev 1's (rev 1 rolled-back insert; W3's insert of
+  3 rows on rev 2).
+
+# Rev 2
 
 ## Rev 2 (W2 FAIL of rev 1, w2_grade/grade_CDR_w2.md)
 - Fault: a refused drop ("I drop nothing: the wording ... stands.", "I withdraw none of ...", "I give up no part of ...", "I retract nothing; ...") was read
@@ -10,7 +28,7 @@
 
 # Rev 1
 
-NOT FOR WRITE until the operator answers (coordinator 02:22Z 11-10). Base: live s102 (rev 2: s103). Write file parent_s103_CDR.json (rev 2), built by
+NOT FOR WRITE until the operator answers (coordinator 02:22Z 11-10). Base: live s102 (rev 2: s103). Write file parent_s103_CDR.json (rev 3), built by
 `node pkgCDR/build_CDR.cjs /mnt/project-files/wall2024/fetchback_live_s102.json pkgCDR/parent_s102_CDR.json`. Three code nodes change. No library node,
 no connection, no prompt wording, and no log row shape change.
 

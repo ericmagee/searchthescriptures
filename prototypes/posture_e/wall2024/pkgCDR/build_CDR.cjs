@@ -1,3 +1,5 @@
+// pkgCDR rev 3 (W1; W3 FAIL of rev 2, grade_CDR2_w3.md: sentences that do not drop the wording were listed; cdrObj anchors the drop verb at the sentence start
+//   with the dropped wording directly after it, and takes only that first object).
 // pkgCDR rev 2 (W1; W2 FAIL of rev 1, grade_CDR_w2.md: a refused drop was read as a drop; cdrDrop now refuses "I drop nothing / none / no / neither / not").
 // pkgCDR rev 1 (W1; item A countermeasure, coordinator 02:22Z and 02:29Z 11-10; W1 Wall 3950, W3 3958). NOT TO BE WRITTEN until the operator answers.
 // (1) Close Enforcer Build (before the panel): wording a side dropped or withdrew in rounds 1-3 and states again as its own in its closing round is listed
