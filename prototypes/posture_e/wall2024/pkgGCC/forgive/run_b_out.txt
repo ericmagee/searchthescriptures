@@ -1,0 +1,71 @@
+7714 | grok | G1 NOT APPLIED (E-APPLY S16) | S16 | E-COL (ENFORCED) | GATE LINE: CURED -- CHANGE TO a line that does not grade the pair BROKEN or FORCED | SEND-BACK ANSWER: UNCURED (stored null) | the gate change was applied
+7837 | sol | G1 NOT APPLIED (E-APPLY S17) | S17 | E-PREM (record-only reader) | GATE LINE: CURED -- CHANGE TO grades premise 6 VOID, its quotes found in the rounds | SEND-BACK ANSWER: CURED (stored null) | the gate change was applied
+10253 | sol | G1 NOT APPLIED (E-APPLY S2) | S2 | E-HOLD (ENFORCED) | GATE LINE: CURED -- kept UNDERDETERMINED; [L1] COUNTED; states what the record leaves open | SEND-BACK ANSWER: CURED (stored CURED) | the gate change was applied
+11241 | sol | G1 NOT APPLIED (E-APPLY S18) | S18 | E-VOID (no code reader) | GATE LINE: NOT READ | SEND-BACK ANSWER: - (stored null) | the gate change was applied
+11242 | sol | G2 NOT APPLIED (E-APPLY S19) | S19 | E-VOID (no code reader) | GATE LINE: NOT READ | SEND-BACK ANSWER: - (stored null) | the gate change was applied
+13500 | gemini | G1 NOT APPLIED (E-APPLY S36) | S36 | E-HOLD (ENFORCED) | GATE LINE: CURED -- regraded STANDS; [L1] COUNTED, quotes the answer's fit | SEND-BACK ANSWER: CURED (stored CURED) | the gate change was applied
+13501 | gemini | G2 NOT APPLIED (E-APPLY S37) | S37 | E-HOLD (ENFORCED) | GATE LINE: CURED -- regraded STANDS; [L1] COUNTED, quotes the answer's fit | SEND-BACK ANSWER: CURED (stored CURED) | the gate change was applied
+13502 | gemini | G3 NOT APPLIED (E-APPLY S38) | S38 | E-HOLD (ENFORCED) | GATE LINE: CURED -- regraded STANDS; [L1] COUNTED, quotes the answer's fit | SEND-BACK ANSWER: CURED (stored CURED) | the gate change was applied
+13503 | gemini | G4 NOT APPLIED (E-APPLY S39) | S39 | E-PREM (record-only reader) | GATE LINE: UNCURED -- the CHANGE TO grades premise 4 SPARED, not the enforcer's COUNTED | SEND-BACK ANSWER: UNCURED (stored null) | the later gate change G6 of this judge rewrote the same line
+13504 | gemini | G5 NOT APPLIED (E-APPLY S40) | S40 | E-PREM (record-only reader) | GATE LINE: CURED -- CHANGE TO grades premise 5 SPARED | SEND-BACK ANSWER: CURED (stored null) | the later gate change G6 of this judge rewrote the same line
+13505 | gemini | G6 NOT APPLIED (E-APPLY S41) | S41 | E-PREM (record-only reader) | GATE LINE: CURED -- CHANGE TO grades premise 6 SPARED | SEND-BACK ANSWER: CURED (stored null) | the gate change was applied
+13506 | gemini | G7 NOT APPLIED (E-APPLY S42) | S42 | E-PREM (record-only reader) | GATE LINE: UNCURED -- the CHANGE TO regrades premise 4 beyond its items (pkgPS refuses it) | SEND-BACK ANSWER: CURED (stored null) | the later gate change G12 of this judge rewrote the same lin
+13507 | gemini | G8 NOT APPLIED (E-APPLY S43) | S43 | E-PREM (record-only reader) | GATE LINE: UNCURED -- the CHANGE TO regrades premise 4 beyond its items (pkgPS refuses it) | SEND-BACK ANSWER: CURED (stored null) | the later gate change G12 of this judge rewrote the same lin
+13508 | gemini | G9 NOT APPLIED (E-APPLY S44) | S44 | E-PREM (record-only reader) | GATE LINE: UNCURED -- the CHANGE TO regrades premise 4 beyond its items (pkgPS refuses it) | SEND-BACK ANSWER: UNCURED (stored null) | the later gate change G12 of this judge rewrote the same lin
+13509 | gemini | G10 NOT APPLIED (E-APPLY S45) | S45 | E-PREM (record-only reader) | GATE LINE: CURED -- CHANGE TO grades premise 4 COUNTED | SEND-BACK ANSWER: CURED (stored null) | the later gate change G12 of this judge rewrote the same lin
+13510 | gemini | G11 NOT APPLIED (E-APPLY S46) | S46 | E-PREM (record-only reader) | GATE LINE: UNCURED -- the CHANGE TO regrades premise 4 beyond its items (pkgPS refuses it) | SEND-BACK ANSWER: CURED (stored null) | the later gate change G12 of this judge rewrote the same lin
+13511 | gemini | G12 NOT APPLIED (E-APPLY S47) | S47 | E-PREM (record-only reader) | GATE LINE: UNCURED -- the CHANGE TO regrades premise 4 beyond its items (pkgPS refuses it) | SEND-BACK ANSWER: CURED (stored null) | the gate change was applied
+13514 | chatgpt | G1 NOT APPLIED (E-APPLY S54) | S54 | E-PREM (record-only reader) | GATE LINE: CURED -- CHANGE TO grades premise 3 SPARED | SEND-BACK ANSWER: UNCURED (stored null) | the gate change was applied
+14180 | gemini | G1 RESULT DIFFERS (E-APPLY S22) | S22 | E-RES (no code reader) | GATE LINE: NOT READ | SEND-BACK ANSWER: - (stored null) | the gate change was applied and the item is no longer raised
+14719 | chatgpt | G2 NOT APPLIED (E-APPLY S19) | S19 | E-PREM (record-only reader) | GATE LINE: CURED -- CHANGE TO grades premise 2 SPARED | SEND-BACK ANSWER: CURED (stored null) | the gate change was applied
+16551 | gemini | G1 RESULT DIFFERS (E-APPLY S12) | S12 | E-RES (no code reader) | GATE LINE: NOT READ | SEND-BACK ANSWER: - (stored null) | the gate change was applied and the item is no longer raised
+18272 | gemini | G2 NOT APPLIED (E-APPLY S4) | S4 | E-COL (ENFORCED) | GATE LINE: CURED -- CHANGE TO a line that does not grade the pair BROKEN or FORCED | SEND-BACK ANSWER: CURED (stored CURED) | the gate change was applied
+18274 | gemini | G4 NOT APPLIED (E-APPLY S6) | S6 | E-COL (ENFORCED) | GATE LINE: CURED -- CHANGE TO a line that does not grade the pair BROKEN or FORCED | SEND-BACK ANSWER: CURED (stored CURED) | the gate change was applied
+18276 | gemini | G6 NOT APPLIED (E-APPLY S8) | S8 | E-COL (ENFORCED) | GATE LINE: CURED -- CHANGE TO a line that does not grade the pair BROKEN or FORCED | SEND-BACK ANSWER: UNCURED (stored UNCURED) | the gate change was applied
+18277 | gemini | G7 NOT APPLIED (E-APPLY S10) | S10 | E-PREM (record-only reader) | GATE LINE: UNCURED -- the CHANGE TO regrades premises 5, 6 beyond its items (pkgPS refuses it) | SEND-BACK ANSWER: CURED (stored null) | the gate change is already in the corrected text (another ch
+18278 | gemini | G8 NOT APPLIED (E-APPLY S11) | S11 | E-PREM (record-only reader) | GATE LINE: UNCURED -- the CHANGE TO regrades premises 2, 6 beyond its items (pkgPS refuses it) | SEND-BACK ANSWER: UNCURED (stored null) | the gate change is already in the corrected text (another ch
+18279 | gemini | G9 NOT APPLIED (E-APPLY S12) | S12 | E-PREM (record-only reader) | GATE LINE: UNCURED -- the CHANGE TO regrades premises 2, 5 beyond its items (pkgPS refuses it) | SEND-BACK ANSWER: CURED (stored null) | the gate change was applied
+18280 | sol | G1 NOT APPLIED (E-APPLY S4) | S4 | E-PREM (record-only reader) | GATE LINE: UNCURED -- the CHANGE TO regrades premises 5, 6 beyond its items (pkgPS refuses it) | SEND-BACK ANSWER: CURED (stored null) | the gate change is already in the corrected text (another ch
+18281 | sol | G2 NOT APPLIED (E-APPLY S5) | S5 | E-PREM (record-only reader) | GATE LINE: UNCURED -- the CHANGE TO regrades premises 2, 6 beyond its items (pkgPS refuses it) | SEND-BACK ANSWER: CURED (stored null) | the gate change is already in the corrected text (another ch
+18282 | sol | G3 NOT APPLIED (E-APPLY S6) | S6 | E-PREM (record-only reader) | GATE LINE: UNCURED -- the CHANGE TO regrades premises 2, 5 beyond its items (pkgPS refuses it) | SEND-BACK ANSWER: CURED (stored null) | the gate change was applied
+20367 | gemini | G4 CONTRADICTION (E-APPLY S6) | S6 | E-COL (ENFORCED) | GATE LINE: UNCURED -- CHANGE TO keeps the break and quotes no 6 words in a row of the answering side's own words | SEND-BACK ANSWER: CURED (stored CURED) | the later gate change G5 of this judge rewrote the same line
+20368 | gemini | G5 CONTRADICTION (E-APPLY S10) | S10 | E-KEY (no code reader) | GATE LINE: NOT READ | SEND-BACK ANSWER: - (stored null) | the gate change was applied and the item is no longer raised
+20803 | chatgpt | G1 NOT APPLIED (E-APPLY S5) | S5 | E-PREM (record-only reader) | GATE LINE: CURED -- CHANGE TO grades premise 3 VOID, its quotes found in the rounds | SEND-BACK ANSWER: UNCURED (stored null) | the gate change was applied
+22012 | gemini | G1 NOT APPLIED (E-APPLY S4) | S4 | E-COL (ENFORCED) | GATE LINE: CURED -- CHANGE TO a line that does not grade the pair BROKEN or FORCED | SEND-BACK ANSWER: CURED (stored CURED) | the gate change was applied
+22013 | gemini | G2 NOT APPLIED (E-APPLY S6) | S6 | E-COL (ENFORCED) | GATE LINE: CURED -- CHANGE TO a line that does not grade the pair BROKEN or FORCED | SEND-BACK ANSWER: CURED (stored CURED) | the gate change was applied
+22014 | gemini | G3 NOT APPLIED (E-APPLY S8) | S8 | E-COL (ENFORCED) | GATE LINE: CURED -- CHANGE TO a line that does not grade the pair BROKEN or FORCED | SEND-BACK ANSWER: CURED (stored CURED) | the gate change was applied
+22015 | gemini | G4 NOT APPLIED (E-APPLY S10) | S10 | E-COL (ENFORCED) | GATE LINE: CURED -- CHANGE TO a line that does not grade the pair BROKEN or FORCED | SEND-BACK ANSWER: CURED (stored CURED) | the gate change was applied
+22016 | gemini | G5 NOT APPLIED (E-APPLY S12) | S12 | E-PREM (record-only reader) | GATE LINE: CURED -- CHANGE TO grades premise 3 VOID, its quotes found in the rounds | SEND-BACK ANSWER: UNCURED (stored null) | the gate change was applied
+22025 | grok | G1 NOT APPLIED (E-APPLY S7) | S7 | E-COL (ENFORCED) | GATE LINE: CURED -- CHANGE TO a line that does not grade the pair BROKEN or FORCED | SEND-BACK ANSWER: CURED (stored CURED) | the gate change is already in the corrected text (another ch
+22026 | grok | G2 NOT APPLIED (E-APPLY S9) | S9 | E-COL (ENFORCED) | GATE LINE: CURED -- CHANGE TO a line that does not grade the pair BROKEN or FORCED | SEND-BACK ANSWER: CURED (stored CURED) | the gate change is already in the corrected text (another ch
+22027 | grok | G3 NOT APPLIED (E-APPLY S11) | S11 | E-COL (ENFORCED) | GATE LINE: CURED -- CHANGE TO a line that does not grade the pair BROKEN or FORCED | SEND-BACK ANSWER: CURED (stored CURED) | the gate change is already in the corrected text (another ch
+22028 | grok | G4 NOT APPLIED (E-APPLY S13) | S13 | E-COL (ENFORCED) | GATE LINE: CURED -- CHANGE TO a line that does not grade the pair BROKEN or FORCED | SEND-BACK ANSWER: CURED (stored CURED) | the gate change was applied
+22029 | grok | G5 NOT APPLIED (E-APPLY S14) | S14 | E-COL (ENFORCED) | GATE LINE: CURED -- CHANGE TO a line that does not grade the pair BROKEN or FORCED | SEND-BACK ANSWER: CURED (stored CURED) | the later gate change G11 of this judge rewrote the same lin
+22030 | grok | G6 NOT APPLIED (E-APPLY S16) | S16 | E-COL (ENFORCED) | GATE LINE: CURED -- CHANGE TO a line that does not grade the pair BROKEN or FORCED | SEND-BACK ANSWER: CURED (stored CURED) | the later gate change G12 of this judge rewrote the same lin
+22031 | grok | G7 NOT APPLIED (E-APPLY S18) | S18 | E-COL (ENFORCED) | GATE LINE: CURED -- CHANGE TO a line that does not grade the pair BROKEN or FORCED | SEND-BACK ANSWER: CURED (stored CURED) | the later gate change G12 of this judge rewrote the same lin
+22032 | grok | G8 NOT APPLIED (E-APPLY S8) | S8 | E-COL (ENFORCED) | GATE LINE: CURED -- CHANGE TO a line that does not grade the pair BROKEN or FORCED | SEND-BACK ANSWER: CURED (stored CURED) | the gate change was applied
+22033 | grok | G9 NOT APPLIED (E-APPLY S10) | S10 | E-COL (ENFORCED) | GATE LINE: CURED -- CHANGE TO a line that does not grade the pair BROKEN or FORCED | SEND-BACK ANSWER: CURED (stored CURED) | the gate change was applied
+22034 | grok | G10 NOT APPLIED (E-APPLY S12) | S12 | E-COL (ENFORCED) | GATE LINE: CURED -- CHANGE TO a line that does not grade the pair BROKEN or FORCED | SEND-BACK ANSWER: CURED (stored CURED) | the gate change was applied
+22035 | grok | G11 NOT APPLIED (E-APPLY S15) | S15 | E-COL (ENFORCED) | GATE LINE: CURED -- CHANGE TO a line that does not grade the pair BROKEN or FORCED | SEND-BACK ANSWER: CURED (stored CURED) | the gate change was applied
+22036 | grok | G12 NOT APPLIED (E-APPLY S17) | S17 | E-COL (ENFORCED) | GATE LINE: CURED -- CHANGE TO a line that does not grade the pair BROKEN or FORCED | SEND-BACK ANSWER: CURED (stored CURED) | the gate change was applied
+22623 | grok | G1 NOT APPLIED (E-APPLY S20) | S20 | E-COL (ENFORCED) | GATE LINE: CURED -- CHANGE TO a line that does not grade the pair BROKEN or FORCED | SEND-BACK ANSWER: CURED (stored CURED) | the gate change was applied
+24071 | gemini | G1 NOT APPLIED (E-APPLY S5) | S5 | E-PREM (record-only reader) | GATE LINE: UNCURED -- the CHANGE TO regrades premises 4, 5 beyond its items (pkgPS refuses it) | SEND-BACK ANSWER: CURED (stored null) | the gate change is already in the corrected text (another ch
+24072 | gemini | G2 NOT APPLIED (E-APPLY S6) | S6 | E-PREM (record-only reader) | GATE LINE: UNCURED -- the CHANGE TO regrades premises 3, 5 beyond its items (pkgPS refuses it) | SEND-BACK ANSWER: CURED (stored null) | the gate change was applied
+25574 | gemini | G1 NOT APPLIED (E-APPLY S5) | S5 | E-PREM (record-only reader) | GATE LINE: UNCURED -- the CHANGE TO regrades premises 2, 5, 6 beyond its items (pkgPS refuses it) | SEND-BACK ANSWER: CURED (stored null) | the gate change is already in the corrected text (another ch
+25575 | gemini | G2 NOT APPLIED (E-APPLY S6) | S6 | E-PREM (record-only reader) | GATE LINE: UNCURED -- the CHANGE TO regrades premises 1, 5, 6 beyond its items (pkgPS refuses it) | SEND-BACK ANSWER: CURED (stored null) | the gate change is already in the corrected text (another ch
+25576 | gemini | G3 NOT APPLIED (E-APPLY S7) | S7 | E-PREM (record-only reader) | GATE LINE: UNCURED -- the CHANGE TO regrades premises 1, 2, 6 beyond its items (pkgPS refuses it) | SEND-BACK ANSWER: CURED (stored null) | the gate change is already in the corrected text (another ch
+25577 | gemini | G4 NOT APPLIED (E-APPLY S8) | S8 | E-PREM (record-only reader) | GATE LINE: UNCURED -- the CHANGE TO regrades premises 1, 2, 5 beyond its items (pkgPS refuses it) | SEND-BACK ANSWER: CURED (stored null) | the gate change was applied
+
+TALLY
+20  CONTROL E-COL send-back answer :: reader CURED vs stored CURED
+1  CONTROL E-COL send-back answer :: reader UNCURED vs stored UNCURED
+1  CONTROL E-COL send-back answer :: reader UNCURED vs stored null
+4  CONTROL E-HOLD send-back answer :: reader CURED vs stored CURED
+21  E-COL (ENFORCED) :: CURED
+1  E-COL (ENFORCED) :: UNCURED
+4  E-HOLD (ENFORCED) :: CURED
+1  E-KEY (no code reader) :: NOT READ
+8  E-PREM (record-only reader) :: CURED
+18  E-PREM (record-only reader) :: UNCURED
+2  E-RES (no code reader) :: NOT READ
+2  E-VOID (no code reader) :: NOT READ
