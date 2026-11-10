@@ -2,7 +2,7 @@
 // Runs without a DeepSeek row in Resolve Seats get one planted (same for both columns) so the build reaches its candidate step.
 process.chdir(__dirname+'/..');const fs=require('fs');const {harness,D}=require(process.cwd()+'/pkgGSL/harness.cjs');
 const code=f=>{let d=JSON.parse(fs.readFileSync(f,'utf8'));d=d.data||d;d=d.workflow||d;return d.nodes.find(x=>x.name==='Judge Contradiction Build').parameters.jsCode;};
-const LIVE=code('/mnt/project-files/wall2024/fetchback_live_s105.json'),CAND=code('pkgCFP/parent_s105_CFP.json');
+const LIVE=code('/mnt/project-files/wall2024/fetchback_live_s105.json'),CAND=code((process.env.PARENT||'pkgCFP/parent_s105_CFP.json'));
 const runs=[...new Set(fs.readdirSync(D).filter(f=>/_Panel_Payloads\.json$/.test(f)).map(f=>f.split('_')[0]))].sort();
 const EXP={33218:[3,0],33222:[0,1],33261:[2,1],33299:[6,0],33345:[1,0],33371:[1,1],33430:[1,0],33442:[1,0],33461:[1,0],33482:[1,0],33530:[0,1],33592:[2,0],33644:[1,0],33705:[1,0],33798:[3,0],33846:[6,0]};
 let ok=0,bad=0;const lines=[];

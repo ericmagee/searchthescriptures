@@ -1,0 +1,47 @@
+OK   33040 | live cands 0 (skip) | CFP cands 0 (skip: no rounds found)
+OK   33060 | live cands 0 (skip) | CFP cands 0 (skip: no rounds found)
+OK   33083 | live cands 0 (skip) | CFP cands 0 (skip: no rounds found)
+OK   33107 | live cands 0 (skip) | CFP cands 0 (skip: no rounds found)
+OK   33129 | live cands 0 (skip) | CFP cands 0 (skip: no rounds found)
+OK   33149 | live cands 0 (skip) | CFP cands 0 (skip: no rounds found)
+OK   33160 | live cands 0 (skip) | CFP cands 0 (skip: no rounds found)
+OK   33197 | live cands 2 | CFP cands 2
+OK   33218 anti-cheat D3 C0 | live cands 4 | CFP cands 4
+OK   33222 anti-cheat D0 C1 | live cands 1 | CFP cands 2
+OK   33249 | live cands 0 (skip) | CFP cands 0 (skip: no judge CONTRADICTION line on a closing round)
+OK   33261 anti-cheat D2 C1 | live cands 3 | CFP cands 3
+OK   33276 | live cands 0 (skip) | CFP cands 0 (skip: no closing round)
+OK   33289 | live cands 0 (skip) | CFP cands 0 (skip: no closing round)
+OK   33299 anti-cheat D6 C0 | live cands 4 | CFP cands 7
+OK   33311 | live cands 0 (skip) | CFP cands 0 (skip: no closing round)
+OK   33322 | live cands 0 (skip) | CFP cands 0 (skip: no closing round)
+OK   33345 anti-cheat D1 C0 | live cands 1 | CFP cands 2
+OK   33371 anti-cheat D1 C1 | live cands 2 | CFP cands 3
+OK   33389 | live cands 0 (skip) | CFP cands 0 (skip: no judge CONTRADICTION line on a closing round)
+OK   33411 | live cands 2 | CFP cands 2
+OK   33430 anti-cheat D1 C0 | live cands 2 | CFP cands 2
+OK   33442 anti-cheat D1 C0 | live cands 2 | CFP cands 2
+OK   33461 anti-cheat D1 C0 | live cands 1 | CFP cands 1
+OK   33482 anti-cheat D1 C0 | live cands 2 | CFP cands 2
+OK   33490 | live cands 0 (skip) | CFP cands 0 (skip: no judge CONTRADICTION line on a closing round)
+OK   33497 | live cands 0 (skip) | CFP cands 0 (skip: no judge CONTRADICTION line on a closing round)
+OK   33506 | live cands 0 (skip) | CFP cands 0 (skip: no judge CONTRADICTION line on a closing round)
+FAIL 33530 anti-cheat D0 C0 | live cands 0 (skip) | CFP cands 0 (skip: Judge Contradiction Build failed: "undefined" is not valid J)  <- L1 expected D0 C1, got D0 C0 (skip: Judge Contradiction Build failed: "undefined" is not valid JSON)
+OK   33575 | live cands 0 (skip) | CFP cands 0 (skip: no judge CONTRADICTION line on a closing round)
+OK   33592 anti-cheat D2 C0 | live cands 3 | CFP cands 3
+OK   33605 | live cands 0 (skip) | CFP cands 0 (skip: no judge CONTRADICTION line on a closing round)
+OK   33617 | live cands 1 | CFP cands 1
+OK   33627 | live cands 0 (skip) | CFP cands 0 (skip: no judge CONTRADICTION line on a closing round)
+OK   33644 anti-cheat D1 C0 | live cands 0 (skip) | CFP cands 1
+OK   33682 | live cands 0 (skip) | CFP cands 0 (skip: no judge CONTRADICTION line on a closing round)
+OK   33705 anti-cheat D1 C0 | live cands 1 | CFP cands 2
+OK   33731 | live cands 0 (skip) | CFP cands 0 (skip: no judge CONTRADICTION line on a closing round)
+OK   33750 | live cands 2 | CFP cands 2
+OK   33774 | live cands 0 (skip) | CFP cands 0 (skip: no judge CONTRADICTION line on a closing round)
+OK   33798 anti-cheat D3 C0 | live cands 3 | CFP cands 3
+OK   33815 | live cands 2 | CFP cands 2
+OK   33828 | live cands 3 | CFP cands 3
+FAIL 33846 anti-cheat D3 C0 | live cands 3 | CFP cands 3  <- L1 expected D6 C0, got D3 C0
+OK   34016 | live cands 1 | CFP cands 1
+OK   34108 | live cands 1 | CFP cands 1
+46 runs: 44 OK, 2 FAIL

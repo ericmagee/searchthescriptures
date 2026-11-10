@@ -28,3 +28,16 @@ Checks (labels labels_CFP.md, 073a49a5 and amendment, before each run)
   33530: the saved Panel Payloads holds no bodies; live s105's build fails on it the same way; untestable from stored data.
 - test_CFP_record.txt (L5): Judge Contradiction Record, unchanged, confirms a planted CONFIRMED answer to each of 18 anti-cheat candidates in 8 runs by code.
 Not tested: what DeepSeek answers to these candidates (needs relay calls; set C or a replay would show it).
+
+## rev 2 (W1): W2 FAIL d060adf6 (Q13, Q7) and W3 notes 1, 2, 4 (d4c464be). SHELF ONLY, no write request. Write file parent_s105_CFP2.json.
+- No silent drop: a shown pair always becomes a candidate. A quote that fails the enforcer's one-sentence test (an ellipsis joining sentences, W2 Q13 and Q7)
+  is passed on as the longest of its parts that stands in one sentence of that side's round (earlier: rounds 1 to 3, the round of that part; closing: round 4),
+  so the enforcer can copy a quote the unchanged Record accepts.
+- A merged candidate reads "the judges' CONTRADICTION lines (<seats>) and the anti-cheat check (found by the system; both quotes checked)" (W3 note 4).
+- W3 note 3 kept: a system pair already answered before the panel is left out as judge pairs are; its pre-panel answer is in the Close Enforcer log.
+- Limit: a pair none of whose parts stands in one sentence of the round is still dropped; the anti-cheat test requires parts of five words or more in rounds 1 to 3,
+  so this needs a part that crosses a round boundary; 0 stored cases.
+Size (size_CFP2.txt): Judge Contradiction Build 11,164 -> 11,961 (+797; rev 1 +502). Prompt: -27 per existing call plus candidate lines; 46 stored runs +144,200
+in all, of which about 141,000 is the one new call (33644), as rev 1.
+Checks (labels labels_CFP2.md, dceab771, before the build): plants P1-P4 on 34108 all as labeled (test_CFP2_plants.txt; rev 1 fails all four,
+test_CFP2_plants_on_rev1.txt). P5: test_CFP2.txt 44 of 46 (the same two explained), test_CFP2_record.txt 18 of 18.
