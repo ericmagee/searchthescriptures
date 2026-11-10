@@ -1,5 +1,5 @@
 const fs=require('fs');const ld=f=>{let d=JSON.parse(fs.readFileSync(f,'utf8'));d=d.data||d;d=d.workflow||d;return d;};
-const L=ld('/mnt/project-files/wall2024/fetchback_live_s113.json'),C=ld('/mnt/project-files/wall2024/parent_s113_OON.json');
+const L=ld(process.env.W3_L||'/mnt/project-files/wall2024/fetchback_live_s113.json'),C=ld(process.env.W3_C||'/mnt/project-files/wall2024/parent_s113_OON.json');
 const by=d=>{const o={};d.nodes.forEach(n=>o[n.name]=n);return o;};const a=by(L),b=by(C);
 console.log('nodes',L.nodes.length,C.nodes.length,'conn equal',JSON.stringify(L.connections)===JSON.stringify(C.connections));
 let ch=[];for(const n in a){if(!b[n]){ch.push('MISSING '+n);continue;}if(JSON.stringify(a[n])!==JSON.stringify(b[n]))ch.push(n);}for(const n in b)if(!a[n])ch.push('NEW '+n);console.log('changed',ch.join('|'));
