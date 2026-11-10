@@ -1,0 +1,18 @@
+OK   D1 only QR Check, QR Final; QR Check 6026 -> 7238, QR Final 7842 -> 8116
+OK   D2 34299: luna:-, chatgpt:defender, sol:defender (live luna:-, chatgpt:-, sol:-); other fields equal
+   stored defender questions: CR3/CR4 "The rows state a not-knowing at each sta" | CR3/CR4 "The rows state a not-knowing at each sta" | CR3/CR4 "The rows state a not-knowing at each sta"
+OK   D3a shorter closing quote inside luna's: chatgpt returned; sol (other quotes) not: luna:-, chatgpt:defender, sol:-
+OK   D3a shorter earlier quote inside luna's: chatgpt returned: luna:-, chatgpt:defender, sol:-
+OK   D3b same rounds, other quotes: no redirect: luna:-, chatgpt:-, sol:-
+OK   D3c same quotes, earlier round CR2: no redirect (fault only: defender: the earlier quotation is not found word for word in CR2)
+   D3e chatgpt defender repeat with empty question: luna:-, chatgpt:fault, sol:defender; why ["defender: question missing"]; sentence count 0
+OK   D3e fault and repeat on one side: one return, the sentence at most once
+OK   D3f challenger repeat: luna:-, chatgpt:defender+challenger, sol:defender+challenger; sentence names the challenger
+   D3g end period differs: luna:-, chatgpt:defender, sol:- (recorded)
+OK   D4 no defender question: defender PASSED (redirect reply failed, first kept), first kept
+OK   D4 empty reply: defender PASSED (redirect reply failed, first kept), first kept
+OK   D4 failed call: defender PASSED (redirect reply failed, first kept), first kept
+OK   D4 not JSON: defender PASSED (redirect reply failed, first kept), first kept
+OK   D6 challenger not returned keeps its first question: PASSED
+OK   D7 fault-only return (luna:-, chatgpt:fault, sol:-): QR Final equal to live
+14 OK, 0 FAIL
