@@ -1,4 +1,19 @@
-# pkgCDR rev 5 (W1): feed the closing contradiction enforcer (item A countermeasure)
+# pkgCDR rev 6 (W1): feed the closing contradiction enforcer (item A countermeasure)
+
+## Rev 6 (W3 FAIL of rev 5: six false listings and five true drops hidden by condition words elsewhere in the clause)
+- W3's position rule (cdr_fn.js, cdrAfter in cdrObj): a condition counts only where it governs the drop. Before the drop verb it already does
+  (the verb must open the sentence or clause). After it, only a condition starting directly after the dropped wording (quoted span or "that"
+  clause), after an optional comma and an optional but / and / only / except.
+- Family at that position: if (not even if, as if, if only), unless, provided/providing, in case / in the case / in the event, on (a / one / the /
+  this) condition, on the understanding, supposing, assuming, (only) when, once, the day, so long as / as long as, contingent or conditional
+  on/upon, barring, should / were / had + subject; for the sake of argument, for argument's sake, arguendo, hypothetically.
+- Out of the family (W3): until, pending, subject to, granted that, on ... terms, the bare nouns condition / proviso. A sentence ending in "?"
+  stays a question.
+- My cases: 74 of 79. The misses are C9 (my rev 1 label error) and R5-N20 (until), N21 (pending), N22 (subject to), N30 (granted that): my
+  rev 5 labels, now LISTED under W3's trimmed family. Listed means the enforcer sees them; I leave the labels as written.
+- W2's 60: 59 (W17). W56 "..., if only to narrow LINK 6." needed the "if only" idiom out of the family.
+- W3's sets: cases_rev5 18 of 18, cases_rev4 9 of 9, cases_rev3 7 of 12, cases 11 of 15 (the closes left to the enforcer and H4, H5).
+- Corpus 39 debates, 2 listings, both on 34108. Record 4 OK. pkgCEC probe 62 OK, 8 FAIL (the same 8). Log rows unchanged.
 
 ## Rev 5 (W2 FAIL of rev 4, W3 agreeing: conditional drops worded "in case", "on condition that", "should the rows fail" were listed)
 - cdrCond (cdr_fn.js), W2's fix taken as a family: the conditional is looked for only in the drop clause (from the drop verb up to ";",
