@@ -1,0 +1,32 @@
+OK   L1 only Close Enforcer Record differs; connections equal; size measured 11835 -> 11855 (+20)
+OK   L1 strings and template texts: 141, differing 1: the code string 'ROUND' of startsWith() became the empty replacement of replace(/^ROUND/,''); no prompt or log text changes (the two label patterns are regular expressions, compared in the code text by hand)
+   live: ROUND
+   fix:  
+OK   L2 real reply X send 1: live confirmed [] rows UNREADABLE/NOT CONFIRMED (form) E[undefined] C[undefined] none=false | fix confirmed ["NEW L6"] rows CONFIRMED/CONFIRMED E[CR3] C[CR4] none=false
+   output keys: cec,cec_log
+OK   L2 real reply X send 2: live confirmed [] rows UNREADABLE/NOT CONFIRMED (form) E[undefined] C[undefined] none=false | fix confirmed ["NEW L6"] rows CONFIRMED/CONFIRMED E[CR3] C[CR4] none=false
+OK   L3 38 other stored replies: Record output through the fix equal to live field for field
+OK   L5a EARLIER [4] (not rounds 1 to 3) -> NOT CONFIRMED | confirmed [] rows CONFIRMED/NOT CONFIRMED (form) E[CR4] C[CR4] none=false
+OK   L5b CLOSING [3] -> NOT CONFIRMED | confirmed [] rows CONFIRMED/NOT CONFIRMED (form) E[CR3] C[CR3] none=false
+OK   L5c CLOSING [0] -> NOT CONFIRMED | confirmed [] rows CONFIRMED/NOT CONFIRMED (form) E[CR3] C[CR0] none=false
+OK   L5c CLOSING [5] -> NOT CONFIRMED | confirmed [] rows CONFIRMED/NOT CONFIRMED (form) E[CR3] C[CR5] none=false
+OK   L5c CLOSING [34] -> NOT CONFIRMED (equal to live) | confirmed [] rows UNREADABLE/NOT CONFIRMED (form) E[undefined] C[undefined] none=false
+OK   L5c CLOSING [] -> NOT CONFIRMED (equal to live) | confirmed [] rows UNREADABLE/NOT CONFIRMED (form) E[undefined] C[undefined] none=false
+OK   L5d EARLIER [0] -> NOT CONFIRMED | confirmed [] rows CONFIRMED/NOT CONFIRMED (form) E[CR0] C[CR4] none=false
+OK   L6a good labels, "[3]" planted inside the earlier quotation -> NOT CONFIRMED (equal to live) | confirmed [] rows CONFIRMED/NOT CONFIRMED (form) E[CR3] C[CR4] none=false
+OK   L6b good labels, why-sentence holds "[4]" -> CONFIRMED (equal to live) | confirmed ["NEW L6"] rows CONFIRMED/CONFIRMED E[CR3] C[CR4] none=false
+OK   L6c bare labels, why-sentence holds "CLOSING [5]" -> CONFIRMED | confirmed ["NEW L6"] rows CONFIRMED/CONFIRMED E[CR3] C[CR4] none=false
+OK   L7a [3] with [CR4] -> CONFIRMED | confirmed ["NEW L6"] rows CONFIRMED/CONFIRMED E[CR3] C[CR4] none=false
+OK   L7b [round 3] with [4] -> CONFIRMED | confirmed ["NEW L6"] rows CONFIRMED/CONFIRMED E[CR3] C[CR4] none=false
+OK   L7c unbracketed 3 and 4 -> CONFIRMED | confirmed ["NEW L6"] rows CONFIRMED/CONFIRMED E[CR3] C[CR4] none=false
+OK   L8a EARLIER [Luke 1:35] -> NOT CONFIRMED (equal to live) | confirmed [] rows UNREADABLE/NOT CONFIRMED (form) E[undefined] C[undefined] none=false
+OK   L8b EARLIER [1:35] -> NOT CONFIRMED (equal to live) | confirmed [] rows UNREADABLE/NOT CONFIRMED (form) E[undefined] C[undefined] none=false
+OK   L8c EARLIER [3:16] -> NOT CONFIRMED (equal to live) | confirmed [] rows UNREADABLE/NOT CONFIRMED (form) E[undefined] C[undefined] none=false
+OK   L8d EARLIER [D3] -> NOT CONFIRMED (equal to live) | confirmed [] rows UNREADABLE/NOT CONFIRMED (form) E[undefined] C[undefined] none=false
+OK   L4a DEFENDER line with [DR3] and [4] -> NOT CONFIRMED | confirmed [] rows CONFIRMED/NOT CONFIRMED (form) E[DR3] C[CR4] none=false
+OK   L4b DEFENDER line, bare labels, quotations taken from the challenger's rounds 3 and 4 -> NOT CONFIRMED | confirmed [] rows CONFIRMED/NOT CONFIRMED (form) E[CR3] C[CR4] none=false
+OK   L4c the same quotations on a CHALLENGER line with bare labels: read in the challenger's own rounds (quotation check passes; link check decides) -> CONFIRMED | confirmed ["NEW L6"] rows CONFIRMED/CONFIRMED E[DR3] C[DR4] none=false
+   real challenger line: CLOSE-CONTRADICTION: NEW -- CHALLENGER -- LINK 2 -- CONFIRMED -- EARLIER [DR3] "I drop the limb that rests this on Jeremiah 18:8." -- CLOSING [DR4] "Jeremiah 18:8 gives the LORD's rule on a pronounced sentence: 'If that nation, against whom I have pronounced, 
+OK   L4d real challenger line, bare labels through the fix: confirmed ["L2"] as with its own labels through live ["L2"] | D -- EARLIER [3] "I drop the limb that rests this on Jeremiah 18:8." -- CLOSING 
+OK   L10 two bare-label lines failing the quotation check: rows NOT CONFIRMED (form); NOT CONFIRMED (form) none=false
+ALL AS LABELED
