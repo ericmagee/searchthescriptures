@@ -1,0 +1,12 @@
+J4A: stored output kept for code nodes the runner cannot run: Early Alternate Build (Cannot read properties of undefined (reading 'slice')); Panel Done (Cannot read properties of undefined (reading 'set'))
+  after cure: luna drv_uncured 0
+  after cure: chatgpt drv_uncured 0
+  after cure: sol drv_uncured 0
+  gate: ["luna items 4 cured 4 counted 0","chatgpt items 1 cured 1 counted 0","sol items 1 cured 1 counted 0"]
+  alt_needed: false
+  final: luna drv_uncured 0 tag BROKEN
+  final: chatgpt drv_uncured 0 tag BROKEN
+  final: sol drv_uncured 0 tag BROKEN
+  drv_removed [] | tried [] | seated []
+  summary: [{"seat":"luna","node":"Panel Judge 1 openrouter","api_model":"openai/gpt-6-luna","verdict_tag":"BROKEN","raw_chars":24855,"finish_reason":"stop","flags":26,"drv":[{"rule":"K-G4","side":"DEFENDER","link":"D1 vs C3","line":"D1 vs C3 (Matthew 1:18): DEFENDER LINK BROKEN -- the defender's own readings make its timing claim inconsistent -- GROUND: [L1] Matthew 1:18 “before they came together, she was found with child” | [L3] Matthew 1:24 “and took unto him his wife”; [CR2] grants that “coming together” is the taking in Matthew 1:24, while [CR4] calls them distinct."},{"rule":"K-S3","side":"CHALLENGER","link":"S3 CHALLENGER DR4: #1","line":"CHALLENGER DR4: “I grant the defender's reading that thi
+  panel_effective ["chatgpt","luna","sol"]
