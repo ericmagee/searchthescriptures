@@ -17,3 +17,8 @@ Proof (on pkgKBG rev 1):
 - Rolled-back insert through record_enforcer_log of 2 rows (panel send_back UNCURED with the pkgKBG reason; CURED): accepted, rows 2; 0 remain.
 Limit: a deferral phrased any other way ("for Matthew 17:5 see Luke 9:34") is not caught.
 Manual part: "A sentence that only sends the reader to another verse's answer ('X is answered under Y 1:2') is a deferral."
+
+## Rebuilt on pkgKBG rev 4 (W2 PASS 3898), live s98 — FOR GRADE
+Write file: pkgKDV/parent_s98_KDV.json (`node pkgKDV/build_KDV.cjs pkgKBG/parent_s98_KBG4.json pkgKDV/parent_s98_KDV.json`). It carries pkgKBG rev 4: writing it writes KBG rev 4 too. Against KBG rev 4 only the 3 Send Back nodes change (__df and a tag); connections equal.
+Proof on rev 4 (base parent_s98_KBG4.json): test_KDV_fn_s98 20 OK; plant_KDV_s98 13 OK; replay_KDV_s98 42 node runs, 68 KEEP rows, 0 differ; rolled-back insert of 2 rows (UNCURED with the pkgKBG reason; CURED) accepted, 0 remain.
+Three-way stack with pkgKVL (same 3 nodes): build_KVL.cjs on parent_s98_KDV.json applies (pkgKVL plants 17 OK on it; pkgKDV plants 13 OK on the KVL-on-KDV file). Whichever is written last is built on the others.
