@@ -1,0 +1,3 @@
+## S0 terra as stored | items 42 | uncured base 0 cand 0 | cec ["D6"] | diffs 2
+## S1 terra keeps the line: RETRACTED D6 vs C5 removed | items 42 | uncured base 2 cand 0 | cec ["D6"] | diffs 2
+## S2 terra keeps the line and says why: RETRACTED removed, responses say NOT HELD on the confirmed contradiction | items 42 | uncured base 2 cand 0 | cec ["D6"] | diffs 2

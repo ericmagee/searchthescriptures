@@ -1,0 +1,22 @@
+## A1 K-G4 DEFENDER on D6 vs C5, terra keeps its line | items 42 | uncured base 2 cand 0 | cec ["D6"] | diffs 2
+   K-G4 D6 vs C5: UNCURED [no PRESSED line, no RETRACTED line, and no statement that names a pressing round and quote] -> CURED [the link is broken by the engine's confirmed closing contradiction, which no count carries (pkgK7C)]
+   K-G7 D6 vs C5: UNCURED [the line records an answer and does not say the witness went unanswered, so the break is o] -> CURED [the link is broken by the engine's confirmed closing contradiction, which no count carries (pkgK7C)]
+## A2 K-G4 CHALLENGER on D6 vs C5 (the judge breaks C5), DEFENDER 6 confirmed, line kept | items 42 | uncured base 1 cand 1 | cec ["D6"] | diffs 0
+## A3 K-G4 DEFENDER on D16 vs C5, links 6 and 1 confirmed, line kept | items 42 | uncured base 2 cand 2 | cec ["D1","D6"] | diffs 0
+## A4a side BOTH on a K-G4 item: the LIVE code itself throws (CURE_PRESS[x.side] is not iterable); the form cannot occur on a K-G4 item
+## A4b no side on a K-G4 item: the LIVE code itself throws (CURE_PRESS[x.side] is not iterable); the form cannot occur on a K-G4 item
+## A5a K-G4 CHALLENGER on D2 vs C6, CHALLENGER 6 confirmed | items 42 | uncured base 2 cand 1 | cec ["C6"] | diffs 1
+   K-G4 D2 vs C6: UNCURED [no PRESSED line, no RETRACTED line, and no statement that names a pressing round and quote] -> CURED [the link is broken by the engine's confirmed closing contradiction, which no count carries (pkgK7C)]
+## A5b same item, only DEFENDER 6 confirmed | items 42 | uncured base 2 cand 1 | cec ["D6"] | diffs 1
+   K-G7 D6 vs C5: UNCURED [the line records an answer and does not say the witness went unanswered, so the break is o] -> CURED [the link is broken by the engine's confirmed closing contradiction, which no count carries (pkgK7C)]
+## A6 rule K-F in place of K-G4 on D6 vs C5, line kept | items 42 | uncured base 2 cand 1 | cec ["D6"] | diffs 1
+   K-G7 D6 vs C5: UNCURED [the line records an answer and does not say the witness went unanswered, so the break is o] -> CURED [the link is broken by the engine's confirmed closing contradiction, which no count carries (pkgK7C)]
+## A6 rule K-G1 in place of K-G4 on D6 vs C5, line kept | items 42 | uncured base 2 cand 1 | cec ["D6"] | diffs 1
+   K-G7 D6 vs C5: UNCURED [the line records an answer and does not say the witness went unanswered, so the break is o] -> CURED [the link is broken by the engine's confirmed closing contradiction, which no count carries (pkgK7C)]
+## A6 rule K-C in place of K-G4 on D6 vs C5, line kept | items 42 | uncured base 2 cand 1 | cec ["D6"] | diffs 1
+   K-G7 D6 vs C5: UNCURED [the line records an answer and does not say the witness went unanswered, so the break is o] -> CURED [the link is broken by the engine's confirmed closing contradiction, which no count carries (pkgK7C)]
+## A6 rule K-B in place of K-G4 on D6 vs C5, line kept | items 42 | uncured base 2 cand 1 | cec ["D6"] | diffs 1
+   K-G7 D6 vs C5: UNCURED [the line records an answer and does not say the witness went unanswered, so the break is o] -> CURED [the link is broken by the engine's confirmed closing contradiction, which no count carries (pkgK7C)]
+## A7 K-G4 on D6 vs C5 with no written response to the item, line kept | items 42 | uncured base 2 cand 1 | cec ["D6"] | diffs 1
+   K-G7 D6 vs C5: UNCURED [the line records an answer and does not say the witness went unanswered, so the break is o] -> CURED [the link is broken by the engine's confirmed closing contradiction, which no count carries (pkgK7C)]
+## A8 no confirmed line, line kept | items 42 | uncured base 2 cand 2 | cec [] | diffs 0

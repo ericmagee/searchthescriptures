@@ -1,0 +1,19 @@
+luna | base replay == stored row: true | base == candidate row: true
+chatgpt | base replay == stored row: true | base == candidate row: false
+  lines 130 130
+   - [AUDIT v21: DEBATE RULE VIOLATION REPORT -- SEAT: chatgpt; ITEM: D6 vs C5; RULE: K-G4; RESULT: CURED; WHY: retracted with a quoted reason the transcript verifies: (CR3) "I grant that the child's flesh is flesh." (Eric 15:18 CST 2026-11-06); LINE: D6 vs C5 (Joh 
+   + [AUDIT v21: DEBATE RULE VIOLATION REPORT -- SEAT: chatgpt; ITEM: D6 vs C5; RULE: K-G4; RESULT: CURED; WHY: the link is broken by the engine's confirmed closing contradiction, which no count carries (pkgK7C); LINE: D6 vs C5 (John 3:6): DEFENDER LINK BROKEN (Com
+   - [AUDIT v21: DEBATE RULE VIOLATION REPORT -- SEAT: chatgpt; ITEM: D6 vs C5; RULE: K-G7; RESULT: CURED; WHY: retracted; LINE: D6 vs C5 (John 3:6): DEFENDER LINK BROKEN (Commitment 10) -- On the verses the readings remain disputed; the confirmed closing-contradic 
+   + [AUDIT v21: DEBATE RULE VIOLATION REPORT -- SEAT: chatgpt; ITEM: D6 vs C5; RULE: K-G7; RESULT: CURED; WHY: the link is broken by the engine's confirmed closing contradiction, which no count carries (pkgK7C); LINE: D6 vs C5 (John 3:6): DEFENDER LINK BROKEN (Com
+   - [AUDIT v21: ALTERNATE TRIED -- SEAT: chatgpt; ALTERNATE: haiku; MODEL: anthropic/claude-haiku-5.5; RESULT: NOT SEATED; WHY: 2 uncured item(s); REMOVED FOR: drv_uncured 1: E-GATE RULE K-G4 x1] 
+   + [AUDIT v21: ALTERNATE TRIED -- SEAT: chatgpt; ALTERNATE: haiku; MODEL: anthropic/claude-haiku-5.5; RESULT: NOT SEATED; WHY: 1 uncured item(s); REMOVED FOR: drv_uncured 1: E-GATE RULE K-G4 x1]
+sol | base replay == stored row: true | base == candidate row: true
+Alternate Merge field differs: bodies
+Alternate Merge field differs: summary
+Alternate Merge field differs: enforcer_log
+Alternate Merge field differs: alternates_tried
+log rows 551 551
+ log diff: chatgpt cure K-G4 D6 vs C5 | CURED -> CURED | the link is broken by the engine's confirmed closing contradiction, which no count carries (pkgK7C)
+ log diff: chatgpt cure K-G7 D6 vs C5 | CURED -> CURED | the link is broken by the engine's confirmed closing contradiction, which no count carries (pkgK7C)
+ log diff: haiku cure K-G7 D6 | UNCURED -> CURED | the link is broken by the engine's confirmed closing contradiction, which no count carries (pkgK7C)
+tried NOT SEATED 1 uncured item(s)

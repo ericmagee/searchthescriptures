@@ -1,0 +1,28 @@
+## stored ex34703_full.json haiku | items 30 | uncured base 2 cand 1 | cec ["D6"] | diffs 1
+   K-G7 D6: UNCURED [the line records an answer and does not say the witness went unanswered, so the break is o] -> CURED [the link is broken by the engine's confirmed closing contradiction, which no count carries (pkgK7C)]
+## stored ex34703_full.json luna | items 20 | uncured base 0 cand 0 | cec ["D6"] | diffs 0
+## stored ex34703_full.json chatgpt | items 42 | uncured base 0 cand 0 | cec ["D6"] | diffs 2
+   K-G4 D6 vs C5: CURED [retracted with a quoted reason the transcript verifies: [CR3] "I grant that the child's fl] -> CURED [the link is broken by the engine's confirmed closing contradiction, which no count carries (pkgK7C)]
+   K-G7 D6 vs C5: CURED [retracted] -> CURED [the link is broken by the engine's confirmed closing contradiction, which no count carries (pkgK7C)]
+## stored ex34703_full.json sol | items 33 | uncured base 0 cand 0 | cec ["D6"] | diffs 0
+TOTAL items 125 changed by rule {"K-G7":2,"K-G4":1}
+## stored ex34626_full.json luna | items 40 | uncured base 0 cand 0 | cec ["D6"] | diffs 2
+   K-G7 D6 vs C5: CURED [retracted] -> CURED [the link is broken by the engine's confirmed closing contradiction, which no count carries (pkgK7C)]
+   K-G7 D6 vs C6: CURED [retracted] -> CURED [the link is broken by the engine's confirmed closing contradiction, which no count carries (pkgK7C)]
+## stored ex34626_full.json chatgpt | items 30 | uncured base 0 cand 0 | cec ["D6"] | diffs 0
+## stored ex34626_full.json sol | items 34 | uncured base 0 cand 0 | cec ["D6"] | diffs 0
+TOTAL items 104 changed by rule {"K-G7":2}
+## stored ex34299_full.json luna | items 20 | uncured base 0 cand 0 | cec [] | diffs 0
+## stored ex34299_full.json chatgpt | items 25 | uncured base 1 cand 1 | cec [] | diffs 0
+## stored ex34299_full.json sol | items 36 | uncured base 0 cand 0 | cec [] | diffs 0
+TOTAL items 81 changed by rule {}
+## stored ex33371_full.json grok | items 35 | uncured base 0 cand 0 | cec [] | diffs 0
+## stored ex33371_full.json gemini | items 19 | uncured base 0 cand 0 | cec [] | diffs 0
+## stored ex33371_full.json chatgpt | items 18 | uncured base 0 cand 0 | cec [] | diffs 0
+## stored ex33371_full.json sol | items 19 | uncured base 0 cand 0 | cec [] | diffs 0
+TOTAL items 91 changed by rule {}
+## stored ex33490_full.json grok | items 20 | uncured base 0 cand 0 | cec [] | diffs 0
+## stored ex33490_full.json gemini | items 36 | uncured base 8 cand 8 | cec [] | diffs 0
+## stored ex33490_full.json chatgpt | items 19 | uncured base 0 cand 0 | cec [] | diffs 0
+## stored ex33490_full.json sol | items 21 | uncured base 1 cand 1 | cec [] | diffs 0
+TOTAL items 96 changed by rule {}
