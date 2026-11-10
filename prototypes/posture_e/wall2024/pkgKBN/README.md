@@ -44,3 +44,13 @@ there as well.
 - I first named this package pkgKBL and the build overwrote the tracked file
   pkgKBL/build_KBL.cjs. I restored it with `git checkout` before any commit
   and renamed this package pkgKBN. Nothing of pkgKBL was committed changed.
+
+## Stacked on pkgVPD rev 2 (write order: VPD2 first, then KBN)
+
+`node pkgKBN/build_KBN.cjs pkgVPD/parent_s100_VPD2.json pkgKBN/parent_s100_VPD2_KBN.json`.
+Only the three Send Back Record nodes differ from the VPD2 file, each by the same
+191-character KBN delta as on s100; VPD2's vp3Other2024 is present; connections
+equal. Plants on this stack (`BASE=pkgVPD/parent_s100_VPD2.json
+CAND=pkgKBN/parent_s100_VPD2_KBN.json node pkgKBN/plant_KBN.cjs`): 25 OK, 0 FAIL
+(plant_KBN_on_VPD2.txt). When W4 posts the post-VPD2 fetch-back I rebuild on it
+and confirm it is byte-equal in these nodes.
