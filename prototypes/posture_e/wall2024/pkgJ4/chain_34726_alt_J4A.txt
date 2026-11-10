@@ -1,0 +1,8 @@
+J4A: stored output kept for code nodes the runner cannot run: Panel Done (FAIL-CLOSED: alternates were seated but Record Alternates di)
+  alt_needed: true
+  final: haiku drv_uncured 0 tag BROKEN
+  final: chatgpt drv_uncured 0 tag BROKEN
+  final: sol drv_uncured 1 tag BROKEN
+  drv_removed [{"removed_rules":["E-GATE NOT APPLIED x11","E-GATE CONTRADICTION x1"],"removed_rules_total":12,"removed_rules_match":true,"seat":"luna","api_model":"openai/gpt-6-luna","verdict_tag":"BROKEN","defense_standing":"PROP-DEPENDENT","challenge_standing":"SELF-SUPPORTED","drv_uncured":12,"verdict_raw":"{\"verdict_tag\":\"BROKEN\",\"defense_standing\":\"PROP-DEPENDENT\",\"challenge_standing\":\"SELF-SUPPORTED\",\"conceded_links\":0,\"challenger_conceded_links\":0,\"counted_premises_defender\":[],\"counted_premises_challenger\":[],\"reasoning\":\"BROKEN [L1][L3][L4] The defender's timing link D1 is broken at its collision with C3: the defender first equates “coming together” with t
+  summary: [{"seat":"haiku","node":"Alternate Call openrouter","api_model":"anthropic/claude-haiku-5.5","verdict_tag":"BROKEN","raw_chars":4424,"finish_reason":"stop","flags":26,"drv":[{"rule":"K-G8","side":"DEFENDER","link":"DEFENDER COUNTED PREMISES","line":"[]","premise":null,"conc":0,"st":"PROP-DEPENDENT","L":6},{"rule":"K-W","side":"DEFENDER","link":"DEFENDER CR2 no link heading #1","line":"[CR2] no link heading: \"I withdraw the term ‘legal guardian’ as an office word.\""},{"rule":"K-W","side":"DEFENDER","link":"DEFENDER CR2 no link heading #2","line":"[CR2] no link heading: \"I grant that it states what was customary.\""},{"rule":"K-W","side":"DEFENDER","link":"DEFENDER CR2 no lin
+  panel_effective ["chatgpt","haiku","sol"]

@@ -8,3 +8,9 @@
   - live s113 (self-check): luna 12 counted, sol 1, haiku tried for luna NOT SEATED (2 uncured), sol none (G4). Same as the live run.
   - joint (a): luna gate 4 items, 4 cured, 0 counted; chatgpt 0; sol 0 (K-C not raised). alt_needed false; no seat removed; panel_effective chatgpt, luna, sol; all three BROKEN.
   - NOT SHOWN: the outcome row (quorum_met) itself; the haiku path (no alternate is needed on joint (a)), so pkgKWQ is shown only by its function-level cure replay.
+
+## Haiku path on joint (a), forced as live (luna removed by the stored run)
+- Chain from Alternate Needed? with the stored removal (chain_34726_alt_*.txt, alt_kw.cjs, alt_kw_out.txt).
+- live s113: haiku K-W #4 and #6 UNCURED; luna->haiku NOT SEATED (self-check matches the run).
+- joint (a): both CURED ("reasserted in a later round, with its quote"); luna->haiku SEATED, haiku drv_uncured 0; panel_effective chatgpt, haiku, sol. sol stays 1 here only because this replay starts after Panel Payloads (stored).
+- Panel Done fails closed in the replay ("alternates were seated but Record Alternates ...") because Record Alternates is a database node whose stored output is the live run's (none seated). A replay artifact.

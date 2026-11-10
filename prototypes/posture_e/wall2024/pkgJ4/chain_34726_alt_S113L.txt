@@ -1,0 +1,8 @@
+S113L: stored output kept for code nodes the runner cannot run: Panel Done (Cannot read properties of undefined (reading 'set'))
+  alt_needed: true
+  final: luna drv_uncured 12 tag BROKEN
+  final: chatgpt drv_uncured 0 tag BROKEN
+  final: sol drv_uncured 1 tag BROKEN
+  drv_removed [] | tried ["sol->null NOT SEATED (no pool model passes the guards: haiku G4: anthropic/claude-haiku-5.5 is already)","luna->haiku NOT SEATED (2 uncured item(s))"] | seated []
+  summary: [{"seat":"luna","node":"Panel Judge 1 openrouter","api_model":"openai/gpt-6-luna","verdict_tag":"BROKEN","raw_chars":24855,"finish_reason":"stop","flags":26,"drv":[{"rule":"K-G4","side":"DEFENDER","link":"D1 vs C3","line":"D1 vs C3 (Matthew 1:18): DEFENDER LINK BROKEN -- the defender's own readings make its timing claim inconsistent -- GROUND: [L1] Matthew 1:18 “before they came together, she was found with child” | [L3] Matthew 1:24 “and took unto him his wife”; [CR2] grants that “coming together” is the taking in Matthew 1:24, while [CR4] calls them distinct."},{"rule":"K-S3","side":"CHALLENGER","link":"S3 CHALLENGER DR4: #1","line":"CHALLENGER DR4: “I grant the de
+  panel_effective ["chatgpt","luna","sol"]
