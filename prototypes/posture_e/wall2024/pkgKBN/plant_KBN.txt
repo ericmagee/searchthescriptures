@@ -1,0 +1,38 @@
+     live CURED | KBN UNCURED | CURE (record-only until promoted): UNCURED -- KEEP whose reason quotes only another bare grant, affirmation or deferral of the answering side ("the name stands written in the"), not a fuller answer (p
+OK   L1 "On Luke 3:23, I grant ...": live CURED, KBN UNCURED
+OK   L1 "On Luke 3:23, I grant ...": every other field equal
+     live CURED | KBN UNCURED | CURE (record-only until promoted): UNCURED -- KEEP whose reason quotes only another bare grant, affirmation or deferral of the answering side ("the name stands written in the"), not a fuller answer (p
+OK   L2 bold layer tag then "On Luke 3:23, I grant ...": live CURED, KBN UNCURED
+OK   L2 bold layer tag then "On Luke 3:23, I grant ...": every other field equal
+     live CURED | KBN UNCURED | CURE (record-only until promoted): UNCURED -- KEEP whose reason quotes only another bare grant, affirmation or deferral of the answering side ("the name stands written in the"), not a fuller answer (p
+OK   L3 "In Luke 3:23, I grant ...": live CURED, KBN UNCURED
+OK   L3 "In Luke 3:23, I grant ...": every other field equal
+     live CURED | KBN UNCURED | CURE (record-only until promoted): UNCURED -- KEEP whose reason quotes only another bare grant, affirmation or deferral of the answering side ("the name stands written in the"), not a fuller answer (p
+OK   L4 "As to Luke 3:23, I grant ...": live CURED, KBN UNCURED
+OK   L4 "As to Luke 3:23, I grant ...": every other field equal
+     live CURED | KBN UNCURED | CURE (record-only until promoted): UNCURED -- KEEP whose reason quotes only another bare grant, affirmation or deferral of the answering side ("the name stands written in the"), not a fuller answer (p
+OK   L5 "Regarding Luke 3:23, I grant ...": live CURED, KBN UNCURED
+OK   L5 "Regarding Luke 3:23, I grant ...": every other field equal
+     live CURED | KBN UNCURED | CURE (record-only until promoted): UNCURED -- KEEP whose reason quotes only another bare grant, affirmation or deferral of the answering side ("the name stands written in the"), not a fuller answer (p
+OK   L6 "On Luke 3:23-24, I grant ..." (range): live CURED, KBN UNCURED
+OK   L6 "On Luke 3:23-24, I grant ..." (range): every other field equal
+     live UNCURED | KBN UNCURED | CURE (record-only until promoted): UNCURED -- KEEP whose reason quotes only another bare grant, affirmation or deferral of the answering side ("the name stands written in the"), not a fuller answer (p
+OK   L7 "On Luke 3:23 I grant ..." (no comma, already stripped): live UNCURED, KBN UNCURED
+OK   L7 "On Luke 3:23 I grant ..." (no comma, already stripped): every other field equal
+     live CURED | KBN CURED | CURE (record-only until promoted): CURED -- KEEP whose reason quotes the answering side's round: "the name stands written in the" | TRIAL pkgVP3: code check does not agree, not an item -- [CR3] names 
+OK   L8 lead-in with content of its own stays CURED: live CURED, KBN CURED
+OK   L8 lead-in with content of its own stays CURED: every other field equal
+     live CURED | KBN CURED | CURE (record-only until promoted): CURED -- KEEP whose reason quotes the answering side's round: "the name stands written in the" | TRIAL pkgVP3: code check does not agree, not an item -- [CR3] names 
+OK   L9 lead-in grant with a reason stays CURED: live CURED, KBN CURED
+OK   L9 lead-in grant with a reason stays CURED: every other field equal
+     live UNCURED | KBN UNCURED | CURE (record-only until promoted): UNCURED -- KEEP whose reason quotes only another bare grant, affirmation or deferral of the answering side ("for luke 3 23 see link"), not a fuller answer (pkgKBG) |
+OK   L10 "For Luke 3:23, see LINK 2." a bare deferral after a lead-in (label corrected after the run: my first label CURED was wrong; the sentence is a bare deferral and live already cuts it): live UNCURED, KBN UNCURED
+OK   L10 "For Luke 3:23, see LINK 2." a bare deferral after a lead-in (label corrected after the run: my first label CURED was wrong; the sentence is a bare deferral and live already cuts it): every other field equal
+     live UNCURED | KBN UNCURED | CURE (record-only until promoted): UNCURED -- KEEP whose reason quotes only another bare grant, affirmation or deferral of the answering side ("the name stands written in the"), not a fuller answer (p
+OK   A1 "I affirm ..." thesis: reading unchanged (UNCURED), reason now names affirmations: live UNCURED, KBN UNCURED
+OK   A1 "I affirm ..." thesis: reading unchanged (UNCURED), reason now names affirmations: every other field equal
+     live UNCURED | KBN UNCURED | CURE (record-only until promoted): UNCURED -- KEEP whose reason quotes only another bare grant, affirmation or deferral of the answering side ("the name stands written in the"), not a fuller answer (p
+OK   A2 plain grant: reason text also reads "grant, affirmation or deferral": live UNCURED, KBN UNCURED
+OK   A2 plain grant: reason text also reads "grant, affirmation or deferral": every other field equal
+OK   34108 stored send-back rows: all equal to the base (27 rows)
+25 OK, 0 FAIL

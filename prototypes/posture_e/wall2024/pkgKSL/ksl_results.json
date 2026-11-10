@@ -1,0 +1,182 @@
+[
+ {
+  "exp": "UNCURED",
+  "cat": "next-line-refusal",
+  "ans": "COUNTED.\nThat is not right.",
+  "why": "W3 ruling 1 label; the refusal is on the next line.",
+  "read": {
+   "pkgLIB/strip_FUN3/patched/": "CURED",
+   "pkgLIB/strip_FUN3_KSL/patched/": "UNCURED"
+  }
+ },
+ {
+  "exp": "UNCURED",
+  "cat": "next-line-refusal",
+  "ans": "COUNTED.\nI withdraw the count.",
+  "why": "Withdraws the count on the next line.",
+  "read": {
+   "pkgLIB/strip_FUN3/patched/": "CURED",
+   "pkgLIB/strip_FUN3_KSL/patched/": "UNCURED"
+  }
+ },
+ {
+  "exp": "UNCURED",
+  "cat": "next-line-refusal",
+  "ans": "**COUNTED**\nI do not accept this count.",
+  "why": "Bold keyword, refusal next line.",
+  "read": {
+   "pkgLIB/strip_FUN3/patched/": "CURED",
+   "pkgLIB/strip_FUN3_KSL/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "UNCURED",
+  "cat": "next-line-refusal",
+  "ans": "COUNTED. The defender granted it.\n\nCorrection: not counted.",
+  "why": "Blank line, then refusal.",
+  "read": {
+   "pkgLIB/strip_FUN3/patched/": "CURED",
+   "pkgLIB/strip_FUN3_KSL/patched/": "UNCURED"
+  }
+ },
+ {
+  "exp": "UNCURED",
+  "cat": "next-line-refusal",
+  "ans": "COUNTED.\n- I retract my count of it.",
+  "why": "Bulleted refusal line.",
+  "read": {
+   "pkgLIB/strip_FUN3/patched/": "CURED",
+   "pkgLIB/strip_FUN3_KSL/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "UNCURED",
+  "cat": "next-line-refusal",
+  "ans": "COUNTED. The defender granted it.\nIt should not be counted.",
+  "why": "Second line names the count.",
+  "read": {
+   "pkgLIB/strip_FUN3/patched/": "CURED",
+   "pkgLIB/strip_FUN3_KSL/patched/": "UNCURED"
+  }
+ },
+ {
+  "exp": "UNCURED",
+  "cat": "next-line-refusal",
+  "ans": "COUNTED.\nThe grant is in round 3.\nI do not count it after all.",
+  "why": "Refusal on the third line.",
+  "read": {
+   "pkgLIB/strip_FUN3/patched/": "CURED",
+   "pkgLIB/strip_FUN3_KSL/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "next-line-correct",
+  "ans": "COUNTED.\nThe defender conceded D6 in round 3.",
+  "why": "Reason on the next line.",
+  "read": {
+   "pkgLIB/strip_FUN3/patched/": "CURED",
+   "pkgLIB/strip_FUN3_KSL/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "next-line-correct",
+  "ans": "COUNTED.\nThe defender calls it courtesy. It is not.",
+  "why": "Point-back on the next line (W3 class).",
+  "read": {
+   "pkgLIB/strip_FUN3/patched/": "CURED",
+   "pkgLIB/strip_FUN3_KSL/patched/": "UNCURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "next-line-correct",
+  "ans": "COUNTED.\n\nThe round 3 grant concedes D6.\n\nNo later round takes it back.",
+  "why": "Paragraphs of reason.",
+  "read": {
+   "pkgLIB/strip_FUN3/patched/": "CURED",
+   "pkgLIB/strip_FUN3_KSL/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "next-line-correct",
+  "ans": "COUNTED.\nThe defender says D6 stands whole. It cannot stand.",
+  "why": "Point-back on the next line.",
+  "read": {
+   "pkgLIB/strip_FUN3/patched/": "CURED",
+   "pkgLIB/strip_FUN3_KSL/patched/": "UNCURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "next-line-correct",
+  "ans": "COUNTED. The defender conceded D6.\nMy first count missed it; it is counted now.",
+  "why": "Correction on the next line.",
+  "read": {
+   "pkgLIB/strip_FUN3/patched/": "CURED",
+   "pkgLIB/strip_FUN3_KSL/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "other-item",
+  "ans": "COUNTED.\nRESPONSE: K-S9 S3 CHALLENGER CR9: #7 ",
+  "why": " NOT HELD: the item is not mine.\\nThat is not right.",
+  "read": {
+   "pkgLIB/strip_FUN3/patched/": "CURED",
+   "pkgLIB/strip_FUN3_KSL/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "other-item",
+  "ans": "COUNTED.\nREASONING: That is not right about the other link.",
+  "why": "A labeled line is not read as prose.",
+  "read": {
+   "pkgLIB/strip_FUN3/patched/": "CURED",
+   "pkgLIB/strip_FUN3_KSL/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "control",
+  "ans": "COUNTED. The defender concedes D6 in [DR3].",
+  "why": "One-line control.",
+  "read": {
+   "pkgLIB/strip_FUN3/patched/": "CURED",
+   "pkgLIB/strip_FUN3_KSL/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "UNCURED",
+  "cat": "control",
+  "ans": "COUNTED. That is not right.",
+  "why": "One-line refusal control.",
+  "read": {
+   "pkgLIB/strip_FUN3/patched/": "UNCURED",
+   "pkgLIB/strip_FUN3_KSL/patched/": "UNCURED"
+  }
+ },
+ {
+  "exp": "UNCURED",
+  "cat": "control",
+  "ans": "NOT COUNTED.\nThe defender conceded D6.",
+  "why": "No COUNTED keyword: unchanged.",
+  "read": {
+   "pkgLIB/strip_FUN3/patched/": "UNCURED",
+   "pkgLIB/strip_FUN3_KSL/patched/": "UNCURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "limit",
+  "ans": "COUNTED.\nOne.\nTwo.\nThree.\nThat is not right.",
+  "why": "Stated limit: only 3 lines are read; a refusal on the 4th is not read (CURED by design).",
+  "read": {
+   "pkgLIB/strip_FUN3/patched/": "CURED",
+   "pkgLIB/strip_FUN3_KSL/patched/": "CURED"
+  }
+ }
+]

@@ -1,0 +1,19 @@
+# pkgKSL cases, labeled before any run (W2, 2026-11-10). expected|category|answer (\n = a new line of the judge's reply)|reason
+UNCURED|next-line-refusal|COUNTED.\nThat is not right.|W3 ruling 1 label; the refusal is on the next line.
+UNCURED|next-line-refusal|COUNTED.\nI withdraw the count.|Withdraws the count on the next line.
+UNCURED|next-line-refusal|**COUNTED**\nI do not accept this count.|Bold keyword, refusal next line.
+UNCURED|next-line-refusal|COUNTED. The defender granted it.\n\nCorrection: not counted.|Blank line, then refusal.
+UNCURED|next-line-refusal|COUNTED.\n- I retract my count of it.|Bulleted refusal line.
+UNCURED|next-line-refusal|COUNTED. The defender granted it.\nIt should not be counted.|Second line names the count.
+UNCURED|next-line-refusal|COUNTED.\nThe grant is in round 3.\nI do not count it after all.|Refusal on the third line.
+CURED|next-line-correct|COUNTED.\nThe defender conceded D6 in round 3.|Reason on the next line.
+CURED|next-line-correct|COUNTED.\nThe defender calls it courtesy. It is not.|Point-back on the next line (W3 class).
+CURED|next-line-correct|COUNTED.\n\nThe round 3 grant concedes D6.\n\nNo later round takes it back.|Paragraphs of reason.
+CURED|next-line-correct|COUNTED.\nThe defender says D6 stands whole. It cannot stand.|Point-back on the next line.
+CURED|next-line-correct|COUNTED. The defender conceded D6.\nMy first count missed it; it is counted now.|Correction on the next line.
+CURED|other-item|COUNTED.\nRESPONSE: K-S9 S3 CHALLENGER CR9: #7 | NOT HELD: the item is not mine.\nThat is not right.|A labeled line ends the run; the later prose belongs to the other item.
+CURED|other-item|COUNTED.\nREASONING: That is not right about the other link.|A labeled line is not read as prose.
+CURED|control|COUNTED. The defender concedes D6 in [DR3].|One-line control.
+UNCURED|control|COUNTED. That is not right.|One-line refusal control.
+UNCURED|control|NOT COUNTED.\nThe defender conceded D6.|No COUNTED keyword: unchanged.
+CURED|limit|COUNTED.\nOne.\nTwo.\nThree.\nThat is not right.|Stated limit: only 3 lines are read; a refusal on the 4th is not read (CURED by design).
