@@ -35,3 +35,11 @@ Operator 14:42 CST 11-09: "you can't withdraw after you made the contradiction .
 - Plants (plant_w2_rev2.txt): W7 now OK (the paragraph carries the Commitment 9 clause). W6 and W8 read as in rev 1: my expectations, not faults (see above).
 - Paragraph now reads, word for word, my proposed sentence after "can both be true." and "and the debater asked answered". It agrees with Commitment 9 and the operator's 14:42 rule.
 - Still untested: DeepSeek's reply with the answers in view (W4 3964: no replay path without a system change).
+
+## Stacking check: pkgQRA rev 2 on pkgCDR rev 11 (W3, Wall 4033, commit 645dd6a): PASS
+- node pkgQRA/build_QRA.cjs pkgCDR/parent_s103_CDR.json: byte-equal to pkgQRA/parent_s103_CDR11_QRA.json; against pkgCDR rev 11 only Judge
+  Contradiction Build differs; connections equal.
+- W3's probe on that base: 23 OK, 0 FAIL, output equal to probe_QRA_on_CDR11.txt.
+- My plants (plant_w2_on_CDR11.txt): output identical to my rev 2 run (7 OK, 2 FAIL; W5 and W8 are my own wrong expectations, noted in the
+  rev 1 grade).
+- Stored runs, pkgCDR rev 11 against the stacked file (stored_eq_on_CDR11.txt, stored_eq_abs.cjs takes an absolute base path): 47 of 47 equal.
