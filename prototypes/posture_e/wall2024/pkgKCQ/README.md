@@ -21,3 +21,11 @@
 
 ## Files
 - parent_s113_KCQ.json, parent_s113_KWQ.json, parent_s113_BOTH.json (the two together, +32).
+
+## Rev 2 (answers W3 4403, W2 4401/4407)
+- pkgKCQ rev 2: rev 1's NET_REPORT change is dropped. NET_STATE's first form ("does not ... assert") is not matched only when its subject is "(that|this|its|the) [round] quotation" within the clause AND the object is "the added ..." (the Commitment 6 VOID comparison: the quotation does not assert what the charge added). Every stating verb (state, name, deny) is unchanged, and "assert" with any other object is unchanged. +121 code measured on s113. Prompt 0.
+  - Plants (plants_rev2.cjs, plants_rev2_out.txt): 9 of 9 as expected. W3's four true K-C lines stay raised; a quotation subject with "does not state" and with "does not assert the begetting" stay raised; sol's stored line and a reworded VOID form are not raised; W2's K2 ("its quote ...") stays raised (W2's limit).
+  - Scan: 2,594 stored texts, K-C 12 / K-S2 51 raises; only 34726 sol differs. Keeps: 9,750 lines, 0 differ.
+  - Limit: a true K-C written "that quotation ... does not assert the added ..." is not raised. The words "the added" name the charge's addition, which is the VOID comparison, not a chain set aside.
+- pkgKWQ rev 2: W2's lookahead: a closing mark followed by a letter is not a close ((?![A-Za-z])). +28 code measured. Replay of 30 cure node runs: same as rev 1 (34726 haiku 2 -> 0; 34299 chatgpt 1 -> 0, ruled right by W2). Limit (W3): an unclosed opening single mark is accepted when a later apostrophe is followed by a non-letter.
+- Both: +149 code.

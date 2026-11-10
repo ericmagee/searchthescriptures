@@ -1,0 +1,9 @@
+AS EXPECTED sol stored (false raise) | live K-C | rev 2 none
+AS EXPECTED W3 a (true) | live K-C | rev 2 K-C
+AS EXPECTED W3 b (true) | live K-C | rev 2 K-C
+AS EXPECTED W3 c (true) | live K-C | rev 2 K-C
+AS EXPECTED W3 d (true) | live K-C | rev 2 K-C
+AS EXPECTED T2-like (true, quotation subject, stating verb) | live K-C | rev 2 K-C
+AS EXPECTED quotation subject, assert verb, not "the added" (true) | live K-C | rev 2 K-C
+AS EXPECTED VOID form written with "that quotation ... does not assert the added" in another wording (skipped) | live K-C | rev 2 none
+AS EXPECTED K2 form "quote" (W2 limit: stays raised) | live K-C | rev 2 K-C

@@ -14,3 +14,8 @@
 - live s113: haiku K-W #4 and #6 UNCURED; luna->haiku NOT SEATED (self-check matches the run).
 - joint (a): both CURED ("reasserted in a later round, with its quote"); luna->haiku SEATED, haiku drv_uncured 0; panel_effective chatgpt, haiku, sol. sol stays 1 here only because this replay starts after Panel Payloads (stored).
 - Panel Done fails closed in the replay ("alternates were seated but Record Alternates ...") because Record Alternates is a database node whose stored output is the live run's (none seated). A replay artifact.
+
+## Rebuilt on pkgOON rev 2 (W2 4405/4406) with pkgKCQ rev 2 and pkgKWQ rev 2
+- Base parent_s113_OON2_GK1.json: +118. Joint (a) joint_s113_OON2_GK1_KCQ2_KWQ2.json: +267 (118 + 149). Joint (b) joint_s113_OON2_GK1_KCQ2_KWQ2_EAD.json: +2,142 (267 + 1,875). Measured against s113; Shared Library only; prompt 0.
+- Union check on (b): 42 of 42 library nodes equal the union of the single packages' added lines; no line touched twice.
+- Chain 34726 from Panel Payloads on (a) (chain_34726_J4A2.txt): luna 0 (gate 4 of 4 cured), chatgpt 0, sol 0; alt_needed false; panel_effective chatgpt, luna, sol; all BROKEN. Haiku path forced as live (alt_kw_J4A2.txt): both K-W CURED; luna->haiku SEATED. quorum_met NOT SHOWN (database side).

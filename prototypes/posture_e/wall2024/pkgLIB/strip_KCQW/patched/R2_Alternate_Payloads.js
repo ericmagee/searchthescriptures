@@ -895,7 +895,7 @@ function drvBlocks(text,ptext,dConc,cConc,dStand,cStand,CPV,LN){const items=[],m
    marks.push('[AUDIT v26: DEBATE RULE VIOLATION (K-LB) -- '+id+': the link-round block ('+(side==='CHALLENGER'?'DR3':'CR3')+' LINK '+b.n+') exhibits '+(k.length?k.join(' and '):'no layer kind')+', fewer than two prior layers (the burden rule), and '+(side==='DEFENDER'?'CONCEDED LINKS':'CHALLENGER CONCEDED LINKS')+' does not count it as UNEXHIBITED or rule it VOID. TRIAL rule: answer it in the cure; it removes no seat. REVIEW THIS ROW.]');}}
  return {items,marks};}
 const NET_STATE=[
- /\b(?:do|does|did)\s+not\s+(?:\S+\s+){0,4}?(?:state|name|deny|assert)s?\b/i,
+ /\b(?:do|does|did)\s+not\s+(?:\S+\s+){0,4}?(?:state|name|deny|assert(?:(?<!\b(?:that|this|its|the)\s+(?:\[[CD]R\d\]\s+)?quotation\b[^;.]{0,100}assert)|(?!s?\s+(?:the\s+)?added\b)))s?\b/i,
  /\bin\s+(?:its|their)\s+own\s+words\s+(?:state|name|assert|deny)s?\s+no\b/i,
  /\bnot\s+stated\b/i,
  /\bunstated\b/i,
@@ -919,7 +919,7 @@ const NET_QUOTE1=/(?<=^|[\s(\[:])'[^'\n]{3,200}?'(?=[\s,.;:)\]]|$)/g;
 function netMask(cl){let t=String(cl).replace(NET_QUOTE,'"[quote]"').replace(NET_QUOTE1,"'[quote]'").replace(NET_ANSWER,'$1[answer-check]').replace(NET_ANSWER_R,'$1[answer-check]');for(const rx of NET_ANSWER_U)t=t.replace(rx,'$1[answer-check]');return t;}
 function netKeeps(text){{const __s=String(text||'').replace(/[*_`]+/g,''),__m=__s.match(/\b(?:contradicted\s+by|cannot\s+agree\s+with)\b/i);if(__m){const __a=__s.slice(__m.index);if(/\[L1\]/.test(__a)&&drvKinds(__a).length>=2)return false;}} /* pkgKCR v2 (W3 3009): a contradiction ground with layers is the line's ground, not the stating phrase */for(const c0 of drvGround(String(text||''),null).split(  /;|(?<=[.!?])\s+(?=[A-Z\[])|\s--\s|\s—\s/)){const cl=netMask(c0);
  const hit=NET_STATE.find(rx=>rx.test(cl));if(!hit)continue;const pre=cl.slice(0,cl.search(hit));if(NET_REPORT.test(pre)||NET_CONC.test(pre))continue;if(netPrecept(c0,drvGround(String(text||''),null)))continue;  return true;}return false;}
-const NET_REPORT=/\b(?:stated|granted|says|said|conceded|argued|admitted)\s+that\b|\bquotation\b|\b(?:conceding|concedes|admitting|admits|granting|grants)\b/i;
+const NET_REPORT=/\b(?:stated|granted|says|said|conceded|argued|admitted)\s+that\b|\b(?:conceding|concedes|admitting|admits|granting|grants)\b/i;
 const NET_CLAIM=/\b(?:challenger|defender)\s+(?:reads|read|claims|claimed|says|said|argues|argued|takes|took|holds|asserts|asserted|presses|pressed)\b[^;]{0,160}?\b(?:as\s+(?:saying|stating|meaning)|to\s+(?:say|state|mean))\b/i;
 const NET_PLURAL=/\b(?:rows|verses|witnesses|speeches|they|these|those|them|none|neither|read\s+together|idiom)\b|\bno\s+(?:verse|witness|row)\b|\b(?:\d?\s?[A-Z][a-z]+\s+\d+:\d+)[^;.]{0,40}?\band\s+(?:\d?\s?[A-Z][a-z]+\s+)?\d+:\d+|\bscripture\b|\bnowhere\b|\bno\s+(?:exhibit|passage|text)s?\b|\ba\s+single\s+(?:\S+\s+)?(?:text|verse|witness|row|passage)\b/i;
 const NET_PRECEPT=/\b(?:scriptures?|precept\s+upon\s+precept)\b/i;const netRefs=s=>(String(s||'').match(/\b(?:[1-3]\s?)?[A-Z][a-z]+\.?\s+\d+:\d+/g)||[]).length;

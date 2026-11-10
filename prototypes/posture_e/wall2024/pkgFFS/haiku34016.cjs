@@ -1,0 +1,9 @@
+// 34016 haiku alternate cure: the reply is a whole verdict JSON whose "reasoning" string holds the RESPONSE lines. Does the current reader read them?
+const fs=require('fs');const mk=f=>{const s=fs.readFileSync(f,'utf8');return new Function('$','$input',s.slice(0,s.indexOf("const PP=$('Panel Payloads')"))+'\nreturn {cureVerdicts};')(()=>{throw 0},null);};const O=mk('pkgLIB/strip_S113L/patched/Panel_Cure_Check.js');
+const R=[['DEFENDER CR2 no link heading #1','[CR2] no link heading: "I do not claim a verse that states Mary\'s tribe in words."','NOT HELD: the sentence withdraws a claim about a verse\'s content, not a link\'s footing; the chain\'s keystone does not rest on Mary\'s tribe in words.'],
+['DEFENDER CR2 D2 #2','[CR2] D2: "I grant that ‘born of a woman’ is said of men with fathers (Matthew 11:11; Job 14:1)."','CONCEDED: the grant that \'born of a woman\' is said of men with fathers stands; D2 rests on Matthew 1:16 with the passive, which is kept.'],
+['DEFENDER CR2 D7 #5','[CR2] D7: "I withdraw Genesis 3:15 as proof of anything alone."','CONCEDED: Genesis 3:15 is withdrawn as proof alone; D7 is not a declared link of the chain, so no link count changes.'],
+['DEFENDER CR3 LINK 1 #7','[CR3] LINK 1: "I drop the claim that 1:25 alone covers the span from the finding."','CONCEDED: the broad span claim is dropped and LINK 1 premise 4 is narrowed; counted in CONCEDED LINKS.']];
+const items=R.map(r=>({rule:'K-W',link:r[0],side:r[0].split(' ')[0],line:r[1]}));const lines=R.map(r=>'RESPONSE: K-W '+r[0]+' | '+r[2]);
+const asJson=JSON.stringify({verdict_tag:'PARTIAL',reasoning:'Line 1 (verdict): PARTIAL\n'+lines.join('\n')});const plain=lines.join('\n');
+for(const [k,t] of [['reply as the stored JSON verdict',asJson],['same lines as plain text',plain]]){const v=O.cureVerdicts(JSON.parse(JSON.stringify(items)),{ok:true,text:t},{},{});console.log(k+': '+v.map(x=>x.status).join(', '));}
