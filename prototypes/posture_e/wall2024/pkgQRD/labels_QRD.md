@@ -45,3 +45,13 @@ inside closing). Written before rev 4 is built or run.
 - Q10 W1's plant: two judges quote the same round 3 sentence against different closing sentences: neither is a repeat; nobody is returned.
 - Q9 walk again, with the check (i) made strict: a first contradiction question counts as still asked only by a final question whose earlier
   quote AND closing quote overlap it (rev 3's walk used the same OR as the code, so it could not see this loss).
+
+## Rev 5 (W1 FAIL of rev 4, Wall 4207): a judge is redirected only when its earlier quote lies inside the standing judge's earlier quote AND its
+closing quote lies inside the standing judge's closing quote (equal or narrower). A wider question is never redirected. Written before rev 5 is
+built or run.
+- Q11 W1's plant: luna asks Y (part of X); chatgpt asks X (Y plus more); sol asks Z, faulted, second reply fails. chatgpt is NOT redirected and
+  keeps X. Reverse order (chatgpt X first, luna Y second): luna IS redirected against chatgpt.
+- Q9 walk again, check (i) made directional: a first contradiction question counts as still asked only by a final question whose earlier quote
+  contains it AND whose closing quote contains it (rev 4's walk accepted overlap in either direction, so a narrower final question counted as
+  covering a wider one; that is why it could not see W1's loss).
+- Q8 chain and Q10 as before.
