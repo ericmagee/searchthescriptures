@@ -1,0 +1,27 @@
+OK   B1 want UNCURED | base CURED | cand UNCURED | - **On Job 14:1**, I grant the phrase covers kings named by their fathers.
+       d): UNCURED -- KEEP whose reason quotes only another bare grant, affirmation or deferral of the answering side ("on job 14 1 i grant"), not a fuller answer (pkgKBG) | TR
+OK   B2 want UNCURED | base UNCURED | cand UNCURED | **On Job 14:1**: I grant it is said of all men.
+       d): UNCURED -- KEEP whose reason quotes only the bare flagged answer itself, or words running into it ("on job 14 1 i grant"), not a fuller answer from the answering sid
+OK   B3 want UNCURED | base CURED | cand UNCURED | **Job 14:1**, I grant the phrase is general.
+       d): UNCURED -- KEEP whose reason quotes only another bare grant, affirmation or deferral of the answering side ("job 14 1 i grant the"), not a fuller answer (pkgKBG) | T
+OK   B4 want UNCURED | base CURED | cand UNCURED | 1. **Regarding Job 14:1-2**, I grant the words as they stand.
+       d): UNCURED -- KEEP whose reason quotes only another bare grant, affirmation or deferral of the answering side ("1 regarding job 14 1 2"), not a fuller answer (pkgKBG) |
+OK   B5 want UNCURED | base CURED | cand UNCURED | *As to Job 14:1*, granted, it is said of all men born.
+       d): UNCURED -- KEEP whose reason quotes only the bare flagged answer itself, or words running into it ("it is said of all men"), not a fuller answer from the answering s
+OK   B6 want UNCURED | base UNCURED | cand UNCURED | __On Job 14:1__, I grant it is said of all men.
+       d): UNCURED -- KEEP whose reason quotes only the bare flagged answer itself, or words running into it ("on job 14 1 i grant"), not a fuller answer from the answering sid
+OK   B7 want UNCURED | base UNCURED | cand UNCURED | **On Job 14:1** — I grant it is said of all men.
+       d): UNCURED -- KEEP whose reason quotes only the bare flagged answer itself, or words running into it ("on job 14 1 i grant"), not a fuller answer from the answering sid
+OK   B8 want UNCURED | base UNCURED | cand UNCURED | **On Job 14:1,** I grant it is said of all men.
+       d): UNCURED -- KEEP whose reason quotes only the bare flagged answer itself, or words running into it ("on job 14 1 i grant"), not a fuller answer from the answering sid
+OK   B9 want UNCURED | base CURED | cand UNCURED | **On Job 14:1**, I affirm D6 stands as declared.
+       d): UNCURED -- KEEP whose reason quotes only another bare grant, affirmation or deferral of the answering side ("on job 14 1 i affirm"), not a fuller answer (pkgKBG) | T
+OK   B10 want CURED | base CURED | cand CURED | - **On Job 14:1**, I grant it, and the verse names no father of Jesus.
+       d): CURED -- KEEP whose reason quotes the answering side's round: "on job 14 1 i grant" | TRIAL pkgVP3: code check does not agree, not an item -- [CR3] names Job 14:1 ag
+OK   B11 want CURED | base CURED | cand CURED | **On Job 14:1**, the phrase is said of men who had fathers, so it names no virgin birth.
+       d): CURED -- KEEP whose reason quotes the answering side's round: "on job 14 1 the phrase" | TRIAL pkgVP3: code check does not agree, not an item -- [CR3] names Job 14:1
+OK   B12 want CURED | base CURED | cand CURED | **Job 14:1**, the verse speaks of every man born, so it cannot name the virgin birth.
+       d): CURED -- KEEP whose reason quotes the answering side's round: "job 14 1 the verse speaks" | TRIAL pkgVP3: code check does not agree, not an item -- [CR3] names Job 1
+OK   B13 want CURED | base CURED | cand CURED | **I grant the phrase**, it is said of men who had fathers, so it names no virgin birth.
+       d): CURED -- KEEP whose reason quotes the answering side's round: "i grant the phrase it is" | TRIAL pkgVP3: code check does not agree, not an item -- [CR3] names Job 14
+13 of 13 as labeled; misses: none
