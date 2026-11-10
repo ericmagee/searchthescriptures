@@ -4,3 +4,4 @@ Method as size_R1b_s108/measure_R1b.sh: strip folder pkgLIB/strip_R1bM_J3 = pkgL
 MEASURED: Code text 3,243,982 -> 1,810,467 = -1,433,515. Shared Library 857,737 -> 1,248,822. Prompt 0.
 Against live s115: 3,849,937 -> 1,810,467 = -2,039,470 for the joint of three plus R1b.
 (s112 + pkgCMS figure was -1,427,392.) Not done: replay of saved runs for the 45 nodes; graders. R1b waits on pkgR1's two clean runs (ASK 9).
+- s116 check: live s116 Code equals the joint file in 418 of 418 nodes, so the figure stands on s116.
