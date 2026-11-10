@@ -31,3 +31,13 @@ A bare item number with a seat beside it ("P3 (chatgpt)", "P3, chatgpt", or seat
 - Plant on 33442 call 5: AGREE/DISAGREE/AGREE -> E-PREM DISAGREE 1 (live 0); DISAGREE/AGREE/AGREE -> DISAGREE 1 (live 3); all AGREE -> 0.
 - All 61 replayable stored runs (Judge and Alt): tally and errors identical to live (je_tally.cjs).
 - Same three records and the same line loop as W3's no-head fix, Shared Library only: one write can carry both if built together.
+
+## Seat-first fix, smaller form: one statement replaced in place (supersedes the inserted block above; not built for write)
+In Judge, Alt and R2 Alt Judge Enforcer Record, the statement
+const __c=((B[i]||{}).ids||[]).filter(x=>String(x.id).toUpperCase().startsWith(m[1].toUpperCase()+'.'));
+is replaced by
+const __s=(__t.match(/^[^-—–]*?[(,]\s*([A-Za-z][\w.-]*)/)||[])[1],__c=((B[i]||{}).ids||[]).filter(x=>String(x.id).toUpperCase().startsWith(m[1].toUpperCase()+'.')&&(!__s||__s.toLowerCase()==String(x.seat).toLowerCase()));
+When the line names a seat before its first dash, only that seat's item is kept, so the existing one-item path maps it.
+- Measured on s108: Shared Library only, +119 code (was +912 for the inserted block). No prompt text, no call.
+- Plant, 33442 call 5: AGREE/DISAGREE/AGREE -> E-PREM DISAGREE 1 (live 0); DISAGREE/AGREE/AGREE -> 1 (live 3); all AGREE -> 0.
+- 61 replayable stored runs: tallies and errors identical to live (bare lines with no seat still fan out as today).
