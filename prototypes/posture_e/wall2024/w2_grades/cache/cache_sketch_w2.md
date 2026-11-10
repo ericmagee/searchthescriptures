@@ -36,7 +36,15 @@ Pricing assumed: 1-hour cache write 2x base input, cache read 0.1x, plain input 
 - Total about 3.22 million base-input units in 36 runs, about 89,500 per run.
 - Risk: C3G or C4G firing more often than 4 to 5 runs in 36 lowers the saving; it stays positive even if a G call fires in every run.
 
-## 5. Left out
+## 5. D side (added 11-10 after the coordinator's ask; MEASURED unless marked)
 
-- The D side (D2, D3, D4) also writes tokens that are partly unread, but its B calls (D2B 19, D3B 9, D4B 34 of 40 runs) read them. A 5-minute TTL there might keep those reads at 1.25x, but the time from each D call to its B call is NOT MEASURED. Not sketched.
-- Not tested on a live call; the read kept by C2 is shown by byte equality, not by a usage row.
+- D2, D3 and D4 read only the small system block (median 3,721, 2,936, 2,936 tokens). Their message writes are read only by their B calls: D2B 15 calls, D3B 7, D4B 31 with usage rows.
+- Timing (inputs/ node start and run times; gap = B call start minus the D call's end): every timed pair is 0 to 2 seconds. D2B 13 pairs, D3B 7, D4B 25, C3G 2, C4G 2, all at most 2 seconds; 17 B calls and 5 G calls carry no time in the stored file (NOT REACHED for those).
+- So a 5-minute TTL on the D message marker keeps every timed read. Sketch w2_grades/cache/sketch_cache_D.cjs: in D2, D3, D4 the message marker becomes `cache_control:{type:'ephemeral'}` (5 minutes; the system marker keeps 1 hour, which the longer-first order allows). Code +14 per node, +42 total (MEASURED); prompt 0; nothing the debaters see changes. Syntax check passes.
+- Saving (ESTIMATE): 3,226,277 written tokens move from 2x to 1.25x: about 2,419,708 base-input units in 36 runs, about 67,200 per run. Reads unchanged.
+- Whole sketch, C and D together: code -285 characters, prompt 0, about 5.64 million units in 36 runs (about 156,700 per run, ESTIMATE).
+- For C3 and C4 the 5-minute form would save less (0.75x on all writes, about 1.74 million units) than dropping the marker (about 2.06 million), so the C side keeps the removal.
+
+## 6. Left out
+
+- Not tested on a live call; C2's kept read is shown by byte equality, not by a usage row.
