@@ -1,0 +1,15 @@
+live strict        correct 375 not cured 36 (cured by live: 0) | refusals 124 read CURED 88
+pkgKRO rev 1       correct 375 not cured 3 (cured by live: 0) | refusals 124 read CURED 108
+capitals variant   correct 375 not cured 7 (cured by live: 0) | refusals 124 read CURED 101
+  capitals variant does not cure this correct answer (live does not either): "Counted. The grant stands."
+  capitals variant does not cure this correct answer (live does not either): "Yes, counted."
+  capitals variant does not cure this correct answer (live does not either): "It is counted against D6."
+  capitals variant does not cure this correct answer (live does not either): "The grant is counted: D6 conceded."
+  capitals variant does not cure this correct answer (live does not either): "Counted. The grant stands."
+  capitals variant keeps refusing: "Counted."
+  capitals variant keeps refusing: "It is not counted."
+  capitals variant keeps refusing: "This should not be counted."
+  capitals variant keeps refusing: "I have not counted it and I will not."
+  capitals variant keeps refusing: "Never counted."
+  capitals variant keeps refusing: "It cannot be counted here."
+  capitals variant keeps refusing: "The defender asks that it be counted; I decline."
