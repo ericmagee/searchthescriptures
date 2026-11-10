@@ -1,0 +1,202 @@
+33218 Gate Record (input Gate Call openrouter)
+  live s112: gemini:0 chatgpt:0 sol:0 | v52 0
+  no K-C skip: gemini:0 chatgpt:0 sol:0 | v52 0
+33218 Alt Gate Record (input Alt Gate Needed?)
+  live s112:  | v52 0
+  no K-C skip:  | v52 0
+33222 Gate Record Gate Call openrouter not replayable: no data Send Back Record
+33222 Gate Record Gate Needed? not replayable: no data Send Back Record
+33222 Alt Gate Record Alt Gate Call openrouter not replayable: no data Alt Send Back Record
+33222 Alt Gate Record Alt Gate Needed? not replayable: no data Alt Send Back Record
+33249 Gate Record Gate Call openrouter not replayable: no data Send Back Record
+33249 Gate Record Gate Needed? not replayable: no data Send Back Record
+33249 Alt Gate Record Alt Gate Needed? not replayable: no data Alt Send Back Record
+33261 Gate Record Gate Call openrouter not replayable: no data Send Back Record
+33261 Gate Record Gate Needed? not replayable: no data Send Back Record
+33261 Alt Gate Record Alt Gate Needed? not replayable: no data Alt Send Back Record
+33276 Gate Record Gate Needed? not replayable: no data Send Back Record
+33276 Alt Gate Record Alt Gate Needed? not replayable: no data Alt Send Back Record
+33289 Gate Record Gate Call openrouter not replayable: no data Send Back Record
+33289 Gate Record Gate Needed? not replayable: no data Send Back Record
+33289 Alt Gate Record Alt Gate Needed? not replayable: no data Alt Send Back Record
+33299 Gate Record Gate Call openrouter not replayable: no data Send Back Record
+33299 Gate Record Gate Needed? not replayable: no data Send Back Record
+33299 Alt Gate Record Alt Gate Call openrouter not replayable: no data Alt Send Back Record
+33299 Alt Gate Record Alt Gate Needed? not replayable: no data Alt Send Back Record
+33311 Gate Record Gate Call openrouter not replayable: no data Send Back Record
+33311 Gate Record Gate Needed? not replayable: no data Send Back Record
+33311 Alt Gate Record Alt Gate Needed? not replayable: no data Alt Send Back Record
+33322 Gate Record Gate Call openrouter not replayable: no data Send Back Record
+33322 Gate Record Gate Needed? not replayable: no data Send Back Record
+33345 Gate Record Gate Call openrouter not replayable: no data Send Back Record
+33345 Gate Record Gate Needed? not replayable: no data Send Back Record
+33345 Alt Gate Record Alt Gate Call openrouter not replayable: no data Alt Send Back Record
+33345 Alt Gate Record Alt Gate Needed? not replayable: no data Alt Send Back Record
+33371 Gate Record (input Gate Call openrouter)
+  live s112: gemini:0 chatgpt:6 sol:0 | v52 0
+  no K-C skip: gemini:0 chatgpt:6 sol:0 | v52 0
+33371 Alt Gate Record (input Alt Gate Call openrouter)
+  live s112: grok:2 | v52 0
+  no K-C skip: grok:2 | v52 0
+33389 Gate Record (input Gate Call openrouter)
+  live s112: gemini:0 chatgpt:0 sol:0 | v52 0
+  no K-C skip: gemini:0 chatgpt:0 sol:0 | v52 0
+33389 Alt Gate Record (input Alt Gate Needed?)
+  live s112:  | v52 0
+  no K-C skip:  | v52 0
+33411 Gate Record (input Gate Needed?)
+  live s112: gemini:0 chatgpt:0 sol:2 | v52 0
+  no K-C skip: gemini:0 chatgpt:0 sol:2 | v52 0
+33411 Alt Gate Record (input Alt Gate Needed?)
+  live s112: grok:0 | v52 0
+  no K-C skip: grok:0 | v52 0
+33430 Gate Record (input Gate Call openrouter)
+  live s112: gemini:0 chatgpt:0 sol:1 | v52 0
+  no K-C skip: gemini:0 chatgpt:0 sol:1 | v52 0
+33430 Alt Gate Record (input Alt Gate Needed?)
+  live s112:  | v52 0
+  no K-C skip:  | v52 0
+33442 Gate Record (input Gate Call openrouter)
+  live s112: gemini:0 chatgpt:1 sol:0 | v52 0
+  no K-C skip: gemini:0 chatgpt:1 sol:0 | v52 0
+33442 Alt Gate Record (input Alt Gate Needed?)
+  live s112: grok:0 | v52 0
+  no K-C skip: grok:0 | v52 0
+33461 Gate Record (input Gate Call openrouter)
+  live s112: gemini:1 chatgpt:0 sol:4 | v52 0
+  no K-C skip: gemini:1 chatgpt:0 sol:4 | v52 0
+33461 Alt Gate Record (input Alt Gate Call openrouter)
+  live s112: grok:0 | v52 0
+  no K-C skip: grok:0 | v52 0
+33482 Gate Record (input Gate Needed?)
+  live s112: gemini:1 chatgpt:1 sol:0 | v52 0
+  no K-C skip: gemini:1 chatgpt:1 sol:0 | v52 0
+33482 Alt Gate Record (input Alt Gate Needed?)
+  live s112: grok:0 | v52 0
+  no K-C skip: grok:0 | v52 0
+33490 Gate Record (input Gate Call openrouter)
+  live s112: gemini:2 chatgpt:0 sol:1 | v52 6
+  no K-C skip: gemini:2 chatgpt:0 sol:1 | v52 6
+    [AUDIT v52: CURE COUNT OFF (pkgGCP) -- SEAT: gemini; ITEM: D1 vs C1; RULE: K-G4; an applied change replaced the line and cleared it; its count comes off]
+    [AUDIT v52: CURE COUNT OFF (pkgGCP) -- SEAT: gemini; ITEM: D2 vs C2; RULE: K-G4; an applied change replaced the line and cleared it; its count comes off]
+    [AUDIT v52: CURE COUNT OFF (pkgGCP) -- SEAT: gemini; ITEM: D4 vs C6; RULE: K-G4; an applied change replaced the line and cleared it; its count comes off]
+    [AUDIT v52: CURE COUNT OFF (pkgGCP) -- SEAT: gemini; ITEM: D1 vs C1; RULE: K-F; an applied change replaced the line and cleared it; its count comes off]
+    [AUDIT v52: CURE COUNT OFF (pkgGCP) -- SEAT: gemini; ITEM: D2 vs C2; RULE: K-F; an applied change replaced the line and cleared it; its count comes off]
+    [AUDIT v52: CURE COUNT OFF (pkgGCP) -- SEAT: gemini; ITEM: D4 vs C6; RULE: K-F; an applied change replaced the line and cleared it; its count comes off]
+33490 Alt Gate Record (input Alt Gate Call openrouter)
+  live s112: grok:2 | v52 0
+  no K-C skip: grok:2 | v52 0
+33497 Gate Record (input Gate Needed?)
+  live s112: gemini:1 chatgpt:0 grok:0 | v52 0
+  no K-C skip: gemini:1 chatgpt:0 grok:0 | v52 0
+33497 Alt Gate Record (input Alt Gate Needed?)
+  live s112:  | v52 0
+  no K-C skip:  | v52 0
+33506 Gate Record (input Gate Call openrouter)
+  live s112: gemini:0 chatgpt:1 grok:0 | v52 0
+  no K-C skip: gemini:0 chatgpt:1 grok:0 | v52 0
+33506 Alt Gate Record (input Alt Gate Needed?)
+  live s112: sol:0 | v52 0
+  no K-C skip: sol:0 | v52 0
+33575 Gate Record (input Gate Call openrouter)
+  live s112: gemini:0 chatgpt:0 grok:0 | v52 0
+  no K-C skip: gemini:0 chatgpt:0 grok:0 | v52 0
+33575 Alt Gate Record (input Alt Gate Needed?)
+  live s112:  | v52 0
+  no K-C skip:  | v52 0
+33592 Gate Record (input Gate Call openrouter)
+  live s112: gemini:0 chatgpt:0 grok:0 | v52 0
+  no K-C skip: gemini:0 chatgpt:0 grok:0 | v52 0
+33592 Alt Gate Record (input Alt Gate Needed?)
+  live s112:  | v52 0
+  no K-C skip:  | v52 0
+33605 Gate Record (input Gate Call openrouter)
+  live s112: gemini:0 chatgpt:0 grok:0 | v52 0
+  no K-C skip: gemini:0 chatgpt:0 grok:0 | v52 0
+33605 Alt Gate Record (input Alt Gate Needed?)
+  live s112:  | v52 0
+  no K-C skip:  | v52 0
+33617 Gate Record (input Gate Call openrouter)
+  live s112: gemini:0 chatgpt:2 grok:0 | v52 0
+  no K-C skip: gemini:0 chatgpt:2 grok:0 | v52 0
+33617 Alt Gate Record (input Alt Gate Needed?)
+  live s112: sol:0 | v52 0
+  no K-C skip: sol:0 | v52 0
+33627 Gate Record (input Gate Call openrouter)
+  live s112: gemini:1 chatgpt:0 grok:0 | v52 0
+  no K-C skip: gemini:1 chatgpt:0 grok:0 | v52 0
+33627 Alt Gate Record (input Alt Gate Needed?)
+  live s112: sol:0 | v52 0
+  no K-C skip: sol:0 | v52 0
+33644 Gate Record (input Gate Call openrouter)
+  live s112: gemini:0 chatgpt:2 grok:0 | v52 0
+  no K-C skip: gemini:0 chatgpt:2 grok:0 | v52 0
+33644 Alt Gate Record (input Alt Gate Needed?)
+  live s112: sol:0 | v52 0
+  no K-C skip: sol:0 | v52 0
+33682 Gate Record (input Gate Call openrouter)
+  live s112: gemini:0 chatgpt:0 grok:0 | v52 0
+  no K-C skip: gemini:0 chatgpt:0 grok:0 | v52 0
+33682 Alt Gate Record (input Alt Gate Needed?)
+  live s112:  | v52 0
+  no K-C skip:  | v52 0
+33705 Gate Record (input Gate Call openrouter)
+  live s112: gemini:0 chatgpt:0 grok:0 | v52 0
+  no K-C skip: gemini:0 chatgpt:0 grok:0 | v52 0
+33705 Alt Gate Record (input Alt Gate Needed?)
+  live s112:  | v52 0
+  no K-C skip:  | v52 0
+33731 Gate Record (input Gate Call openrouter)
+  live s112: gemini:0 chatgpt:0 grok:0 | v52 0
+  no K-C skip: gemini:0 chatgpt:0 grok:0 | v52 0
+33731 Alt Gate Record (input Alt Gate Needed?)
+  live s112: sol:0 | v52 0
+  no K-C skip: sol:0 | v52 0
+33750 Gate Record (input Gate Call openrouter)
+  live s112: gemini:0 chatgpt:0 grok:0 | v52 0
+  no K-C skip: gemini:0 chatgpt:0 grok:0 | v52 0
+33750 Alt Gate Record (input Alt Gate Needed?)
+  live s112:  | v52 0
+  no K-C skip:  | v52 0
+33774 Gate Record (input Gate Call openrouter)
+  live s112: gemini:0 chatgpt:1 grok:0 | v52 0
+  no K-C skip: gemini:0 chatgpt:1 grok:0 | v52 0
+33774 Alt Gate Record (input Alt Gate Needed?)
+  live s112:  | v52 0
+  no K-C skip:  | v52 0
+33798 Gate Record (input Gate Call openrouter)
+  live s112: gemini:0 chatgpt:0 grok:0 | v52 0
+  no K-C skip: gemini:0 chatgpt:0 grok:0 | v52 0
+33798 Alt Gate Record (input Alt Gate Needed?)
+  live s112: sol:0 | v52 0
+  no K-C skip: sol:0 | v52 0
+33815 Gate Record (input Gate Call openrouter)
+  live s112: gemini:0 grok:0 chatgpt:0 | v52 0
+  no K-C skip: gemini:0 grok:0 chatgpt:0 | v52 0
+33815 Alt Gate Record (input Alt Gate Needed?)
+  live s112:  | v52 0
+  no K-C skip:  | v52 0
+33828 Gate Record (input Gate Call openrouter)
+  live s112: gemini:0 grok:1 chatgpt:0 | v52 0
+  no K-C skip: gemini:0 grok:1 chatgpt:0 | v52 0
+33828 Alt Gate Record (input Alt Gate Call openrouter)
+  live s112: sol:0 | v52 0
+  no K-C skip: sol:0 | v52 0
+33846 Gate Record (input Gate Call openrouter)
+  live s112: gemini:0 grok:1 chatgpt:0 | v52 0
+  no K-C skip: gemini:0 grok:1 chatgpt:0 | v52 0
+33846 Alt Gate Record (input Alt Gate Needed?)
+  live s112: sol:0 | v52 0
+  no K-C skip: sol:0 | v52 0
+34016 Gate Record (input Gate Needed?)
+  live s112: luna:2 chatgpt:0 sol:0 | v52 0
+  no K-C skip: luna:2 chatgpt:0 sol:0 | v52 0
+34016 Alt Gate Record (input Alt Gate Needed?)
+  live s112:  | v52 0
+  no K-C skip:  | v52 0
+34108 Gate Record (input Gate Needed?)
+  live s112: luna:0 chatgpt:0 sol:0 | v52 0
+  no K-C skip: luna:0 chatgpt:0 sol:0 | v52 0
+34108 Alt Gate Record (input Alt Gate Needed?)
+  live s112:  | v52 0
+  no K-C skip:  | v52 0
