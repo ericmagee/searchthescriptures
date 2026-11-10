@@ -1,0 +1,207 @@
+{
+ "base": "pkgLIB/strip_KCB_base (live s97 library)",
+ "library": {
+  "Alt_Gate_Build.js": {
+   "base": "aea19f785124",
+   "patched": "fe3e172f1541",
+   "changes": [
+    "FUN"
+   ]
+  },
+  "Alt_Gate_Record.js": {
+   "base": "ebc06829ef0d",
+   "patched": "716bedb0a898",
+   "changes": [
+    "FUN"
+   ]
+  },
+  "Alternate_Build.js": {
+   "base": "52b09ec2ad5f",
+   "patched": "52ee45d5a469",
+   "changes": [
+    "FUN"
+   ]
+  },
+  "Alternate_Cure_Build.js": {
+   "base": "ce808bb5fabc",
+   "patched": "8484d75a5359",
+   "changes": [
+    "FUN"
+   ]
+  },
+  "Alternate_Cure_Normalize.js": {
+   "base": "b54d3259b473",
+   "patched": "e34dfd6953c5",
+   "changes": [
+    "FUN"
+   ]
+  },
+  "Alternate_Merge_1.js": {
+   "base": "8fcab44e2807",
+   "patched": "2610f323307d",
+   "changes": [
+    "FUN"
+   ]
+  },
+  "Alternate_Merge_Seat.js": {
+   "base": "bac8e41806ec",
+   "patched": "483d6a590dc1",
+   "changes": [
+    "FUN"
+   ]
+  },
+  "Alternate_Payloads.js": {
+   "base": "a45e1af6e0db",
+   "patched": "a45e1af6e0db",
+   "changes": []
+  },
+  "Cure_Build.js": {
+   "base": "b0dd3d0d0bb6",
+   "patched": "d4d5822eeb5d",
+   "changes": [
+    "FUN"
+   ]
+  },
+  "Cure_Check.js": {
+   "base": "8357544ba3f0",
+   "patched": "5f1e807ec41f",
+   "changes": [
+    "FUN"
+   ]
+  },
+  "Cure_Normalize.js": {
+   "base": "b687b3b783df",
+   "patched": "89280dc829c8",
+   "changes": [
+    "FUN"
+   ]
+  },
+  "Extract_Independent_Verdict.js": {
+   "base": "23cd471e0203",
+   "patched": "23cd471e0203",
+   "changes": []
+  },
+  "Gate_Build.js": {
+   "base": "d19d88f71e93",
+   "patched": "5c6b0ed70dc4",
+   "changes": [
+    "FUN"
+   ]
+  },
+  "Gate_Record.js": {
+   "base": "e932de0954ab",
+   "patched": "9b5c37a451f3",
+   "changes": [
+    "FUN"
+   ]
+  },
+  "Panel_Cure_Build_1.js": {
+   "base": "ed81612189fe",
+   "patched": "701adaa39657",
+   "changes": [
+    "FUN"
+   ]
+  },
+  "Panel_Cure_Build_2.js": {
+   "base": "4ab86227949a",
+   "patched": "67ec47fff53e",
+   "changes": [
+    "FUN"
+   ]
+  },
+  "Panel_Cure_Build_3.js": {
+   "base": "80f51b2a913b",
+   "patched": "dd7c3f91f2ec",
+   "changes": [
+    "FUN"
+   ]
+  },
+  "Panel_Cure_Check.js": {
+   "base": "f5e3a2ada2ec",
+   "patched": "d90b447097f3",
+   "changes": [
+    "FUN"
+   ]
+  },
+  "Panel_Cure_Normalize_1.js": {
+   "base": "0498b03ed071",
+   "patched": "6e944bf57e81",
+   "changes": [
+    "FUN"
+   ]
+  },
+  "Panel_Cure_Normalize_2.js": {
+   "base": "c7e85a631577",
+   "patched": "6c7930231715",
+   "changes": [
+    "FUN"
+   ]
+  },
+  "Panel_Cure_Normalize_3.js": {
+   "base": "a9f56e586370",
+   "patched": "96e22c07fe00",
+   "changes": [
+    "FUN"
+   ]
+  },
+  "Panel_Payloads.js": {
+   "base": "354cda398866",
+   "patched": "354cda398866",
+   "changes": []
+  },
+  "R2_Alt_Gate_Build.js": {
+   "base": "1d028006dc84",
+   "patched": "4126e2d143e5",
+   "changes": [
+    "FUN"
+   ]
+  },
+  "R2_Alt_Gate_Record.js": {
+   "base": "36a54d6b4ec7",
+   "patched": "abdfe975b011",
+   "changes": [
+    "FUN"
+   ]
+  },
+  "R2_Alternate_Build.js": {
+   "base": "06a0f57d280d",
+   "patched": "c3ae31ce0ce0",
+   "changes": [
+    "FUN"
+   ]
+  },
+  "R2_Alternate_Cure_Build.js": {
+   "base": "2d786efd09f2",
+   "patched": "657f71360b72",
+   "changes": [
+    "FUN"
+   ]
+  },
+  "R2_Alternate_Cure_Normalize.js": {
+   "base": "ec6f6ae7a484",
+   "patched": "bd9f9ffa89ca",
+   "changes": [
+    "FUN"
+   ]
+  },
+  "R2_Alternate_Merge.js": {
+   "base": "770a42c963d5",
+   "patched": "d80610a2d401",
+   "changes": [
+    "FUN"
+   ]
+  },
+  "R2_Alternate_Merge_Seat.js": {
+   "base": "adcd9fe352bb",
+   "patched": "f3154eec46ba",
+   "changes": [
+    "FUN"
+   ]
+  },
+  "R2_Alternate_Payloads.js": {
+   "base": "08cbb46d0b53",
+   "patched": "08cbb46d0b53",
+   "changes": []
+  }
+ }
+}

@@ -149,3 +149,28 @@ Checks:
   - Refusals read CURED (not in the lists): "I decline.", "Scratch that.", "I take it back.", "Nope.", "Disregard this line.", "My answer stays as
     before.". Live reads them CURED too. Candidate list additions, not built: rev 6 is W3's measured rule as given.
 The trade (pointers followed by text and later refusals are noted, not enforced) is the operator's to approve before the write.
+
+## Rev 7 (W1, 2026-11-10)
+
+W3 failed rev 6: 10 of 24 new correct answers were refused because a list B sentence that opens a longer answer was still enforced. Rev 7 takes
+W3's rule (w3_whole_answer_idea.cjs): a listed sentence, list P or list B, is ENFORCED only when it is the whole answer after COUNTED. When any
+text follows it, it is NOTED in cure_reason (record-only) and the status stays CURED. The "!" and "?" handling of rev 6 is kept.
+- Reader pkgFUN/fun7_ref.cjs; build build_FUN7.cjs -> pkgLIB/strip_FUN7 from strip_KCB_base; node line fun7_line.txt.
+- fun7_ref against W3's sketch: 525 texts, 0 differ in enforced or note.
+Checks:
+- W2's set, now 287 cases:
+  - narrow column (w2_testset_FUN7_287_narrow.txt): 281 match, 0 correct refused. The 6 misses are the same as rev 5 and rev 6: "I reverse
+    that: it is not counted." and 5 first-sentence refusals not in the lists. 3 NOTED cases have no note; 29 notes fall on cases not labeled
+    NOTED, all on correct answers whose status stays CURED.
+  - old column (w2_testset_FUN7_287_old.txt): 260 match, 0 correct refused.
+- W3's new correct answers through the nodes: rev 5 set 0 of 36 refused (w3_plant_FUN5_nodes_on_FUN7.txt); rev 6 set 0 of 24 refused
+  (w3_plant_FUN6_nodes_on_FUN7.txt).
+- W4's 32 new forms (w4_new_forms_FUN7.txt): live 22, rev 7 25. One correct answer refused by live and rev 7 alike: "Counted. The grant
+  stands." (lower-case keyword, label open with W2). 6 plain refusals read CURED, as live (pkgFRL adds them to the lists).
+- All planted answers (allplants_FUN7.txt): 107 correct all CURED, 0 lost against live; 56 of 63 refusals UNCURED (live 25).
+- probe_FUN7: 80 OK, 4 FAIL (W3's four reservations, as live). replay_FUN7: 176 stored replies byte-equal.
+- Node-level reason (note_rows_FUN7.txt): "COUNTED. My count is wrong. I add this grant against D6." reads CURED with the NOTED text;
+  "COUNTED. That is wrong." alone reads UNCURED.
+- Gate on the s103 fetch-back: 767 node runs equal, GATE PASS. Rolled-back insert (rollback_FUN7.sql): {"rows": 2, "recorded": true}.
+- Write file parent_s103_FUN7.json: against live s103 only the Shared Library differs.
+The trade (a listed refusal followed by any text is noted, not enforced) is the operator's to approve before the write.
