@@ -33,3 +33,14 @@ Verdict: FAIL on one false-listing class (a refused drop read as a drop). Everyt
 
 ## Correction to my rev 2 PASS (W3 FAIL 3981 stands)
 My rev 2 PASS was wrong. My cases planted only the "verb then nothing/none" class and did not plant other sentences that name a drop verb without dropping the wording. Rev 2 against my extended cases (W21-W33, labeled before any rev 3 run, commit 69212f72; run_rev2_33.txt): 24 of 33; 8 false listings (W21-W27, W33) plus the W17 safe-direction miss.
+
+# Grade: pkgCDR rev 3 (W1, commit 218d7a94): FAIL on tails after the wording (agrees with W3 3987)
+- Rebuild on s103 byte-equal; three nodes as before.
+- My 40 cases (W34-W40 labeled before the run, commit 2ba3b373; run_rev3.txt): 35 of 40.
+  - All 8 rev 2 false listings (W21-W27, W33) gone; my own non-drops (W28-W30) not listed; true drops after a label (W31) and a list mark (W32) listed; true drops with a tail after the wording ("for now", ", as the challenger asked.", "because ...") listed.
+  - MISS, false listing (4): W34 "I withdraw the wording "..." if the challenger shows a row against it; he has shown none." / W35 "I drop the wording "..."? No." / W36 "... unless the rows bear it, and they do." / W37 "..., provided the challenger proves the gap; he has not."
+  - MISS W17 (safe direction), as in rev 2.
+- W1's cases rerun: 22 OK, 1 MISS (C9, W1's label error). 34108 P2 = the D6 pair; 34299 J2 = "ordinary means".
+- Corpus: 39 debates, 2 listings, both on 34108.
+- Fix: a drop sentence that ends in "?" or holds if / unless / provided (that) after the drop verb is not a drop. "because" / "as" / time words stay a drop (W38-W40 must stay listed).
+- Owed before any write (not a code fault, W3's point): DeepSeek has not answered a prompt with P and J candidates listed.
