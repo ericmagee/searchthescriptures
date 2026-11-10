@@ -1,0 +1,15 @@
+K1 true link 2 (range D1 to D6 before, section header D2)
+   R11: hint LINK ? (?); answer copying it -> NOT CONFIRMED (form) breaks nothing
+   CDF: hint LINK 6 (WRONG); answer copying it -> CONFIRMED BREAKS LINK 6
+K2 true link 2 (another link's mark inside the sentence)
+   R11: hint LINK ? (?); answer copying it -> NOT CONFIRMED (form) breaks nothing
+   CDF: hint LINK 5 (WRONG); answer copying it -> CONFIRMED BREAKS LINK 5
+K3 true link 3 (control: header mark only)
+   R11: hint LINK ? (?); answer copying it -> NOT CONFIRMED (form) breaks nothing
+   CDF: hint LINK 3 (right); answer copying it -> CONFIRMED BREAKS LINK 3
+K4 true link 2 (challenger: section 2, references C1 and C4 before)
+   R11: hint LINK 6 (WRONG); answer copying it -> CONFIRMED BREAKS LINK 6
+   CDF: hint LINK 6 (WRONG); answer copying it -> CONFIRMED BREAKS LINK 6
+K5 true link 2 (stored form (33490): 'rests on D1 to D3')
+   R11: hint LINK ? (?); answer copying it -> NOT CONFIRMED (form) breaks nothing
+   CDF: hint LINK 3 (WRONG); answer copying it -> CONFIRMED BREAKS LINK 3
