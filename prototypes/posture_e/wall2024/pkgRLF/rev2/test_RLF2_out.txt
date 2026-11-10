@@ -1,0 +1,212 @@
+
+== R1 34108_X_live_DEFENDER_s1_reply.json: OK (link 6 breaks; live breaks none)
+  live s108: broken [] rows 1
+  rev 2    : broken [DEFENDER LINK 6] rows 1
+    DEFENDER L6 CR3/CR4 CONFIRMED
+
+== R1 34108_X_live_DEFENDER_s2_reply.json: OK (link 6 breaks; live breaks none)
+  live s108: broken [] rows 1
+  rev 2    : broken [DEFENDER LINK 6] rows 1
+    DEFENDER L6 CR3/CR4 CONFIRMED
+
+== R2 34108_css_CHALLENGER_reply.json: OK same as live
+  live s108: broken [] rows 0
+  rev 2    : broken [] rows 0
+
+== R2 34108_css_DEFENDER_reply.json: OK same as live
+  live s108: broken [DEFENDER LINK 3, DEFENDER LINK 6] rows 2
+  rev 2    : broken [DEFENDER LINK 3, DEFENDER LINK 6] rows 2
+    DEFENDER L3 CR3/CR4 CONFIRMED
+    DEFENDER L6 CR3/CR4 CONFIRMED
+
+== R2 33222_css_CHALLENGER_send1.json: OK same as live
+  live s108: broken [] rows 0
+  rev 2    : broken [] rows 0
+
+== R2 33222_css_CHALLENGER_send2.json: OK same as live
+  live s108: broken [] rows 0
+  rev 2    : broken [] rows 0
+
+== R2 33442_css_DEFENDER_send1.json: OK same as live
+  live s108: broken [DEFENDER LINK 2, DEFENDER LINK 3, DEFENDER LINK 5, DEFENDER LINK 6] rows 8
+  rev 2    : broken [DEFENDER LINK 2, DEFENDER LINK 3, DEFENDER LINK 5, DEFENDER LINK 6] rows 8
+    DEFENDER L2 CR3/CR4 CONFIRMED
+    DEFENDER L2 CR3/CR4 CONFIRMED
+    DEFENDER L2 CR3/CR4 CONFIRMED
+    DEFENDER L3 CR3/CR4 CONFIRMED
+    DEFENDER L3 CR3/CR4 CONFIRMED
+    DEFENDER L5 CR3/CR4 CONFIRMED
+    DEFENDER L6 CR3/CR4 CONFIRMED
+    DEFENDER L6 CR3/CR4 CONFIRMED
+
+== R2 33442_css_DEFENDER_send2.json: OK same as live
+  live s108: broken [DEFENDER LINK 2, DEFENDER LINK 6] rows 4
+  rev 2    : broken [DEFENDER LINK 2, DEFENDER LINK 6] rows 4
+    DEFENDER L2 CR3/CR4 CONFIRMED
+    DEFENDER L2 CR3/CR4 CONFIRMED
+    DEFENDER L2 CR3/CR4 CONFIRMED
+    DEFENDER L6 CR3/CR4 CONFIRMED
+
+== R2 33461_css_DEFENDER_send1.json: OK same as live
+  live s108: broken [] rows 0
+  rev 2    : broken [] rows 0
+
+== R2 33461_css_DEFENDER_send2.json: OK same as live
+  live s108: broken [DEFENDER LINK 4] rows 1
+  rev 2    : broken [DEFENDER LINK 4] rows 1
+    DEFENDER L4 CR2/CR4 CONFIRMED
+
+== R2 33482_css_DEFENDER_send1.json: OK same as live
+  live s108: broken [DEFENDER LINK 1, DEFENDER LINK 6] rows 3
+  rev 2    : broken [DEFENDER LINK 1, DEFENDER LINK 6] rows 3
+    DEFENDER L1 CR3/CR4 CONFIRMED
+    DEFENDER L6 CR3/CR4 CONFIRMED
+    DEFENDER L6 CR3/CR4 CONFIRMED
+
+== R2 33705_css_DEFENDER_send1.json: OK same as live
+  live s108: broken [DEFENDER LINK 4, DEFENDER LINK 6] rows 3
+  rev 2    : broken [DEFENDER LINK 4, DEFENDER LINK 6] rows 3
+    DEFENDER L4 CR2/CR4 CONFIRMED
+    DEFENDER L4 CR2/CR4 CONFIRMED
+    DEFENDER L6 CR2/CR4 CONFIRMED
+
+== R2 33705_css_DEFENDER_send2.json: OK same as live
+  live s108: broken [DEFENDER LINK 4] rows 3
+  rev 2    : broken [DEFENDER LINK 4] rows 3
+    DEFENDER L4 CR2/CR4 CONFIRMED
+    DEFENDER L4 CR2/CR4 CONFIRMED
+    DEFENDER L4 CR2/CR4 CONFIRMED
+
+== R2 34108_Y_rac_DEFENDER_s1_reply.json: OK same as live
+  live s108: broken [] rows 1
+  rev 2    : broken [] rows 1
+    undefined Lundefined undefined/undefined NOT CONFIRMED (form) (the line is not in the CLOSE-CONTRADICTION form)
+
+== R2 34108_Y_rac_DEFENDER_s2_reply.json: OK same as live
+  live s108: broken [] rows 1
+  rev 2    : broken [] rows 1
+    undefined Lundefined undefined/undefined NOT CONFIRMED (form) (the line is not in the CLOSE-CONTRADICTION form)
+
+== R2 33218_ctl_DEFENDER_reply.json: OK same as live
+  live s108: broken [] rows 3
+  rev 2    : broken [] rows 3
+    undefined Lundefined undefined/undefined NOT CONFIRMED (form) (the line is not in the CLOSE-CONTRADICTION form)
+    undefined Lundefined undefined/undefined NOT CONFIRMED (form) (the line is not in the CLOSE-CONTRADICTION form)
+    undefined Lundefined undefined/undefined NOT CONFIRMED (form) (the line is not in the CLOSE-CONTRADICTION form)
+
+== R2 33299_ctl_DEFENDER_reply.json: OK same as live
+  live s108: broken [DEFENDER LINK 3, DEFENDER LINK 6] rows 8
+  rev 2    : broken [DEFENDER LINK 3, DEFENDER LINK 6] rows 8
+    undefined Lundefined undefined/undefined NOT CONFIRMED (form) (the line is not in the CLOSE-CONTRADICTION form)
+    undefined Lundefined undefined/undefined NOT CONFIRMED (form) (the line is not in the CLOSE-CONTRADICTION form)
+    undefined Lundefined undefined/undefined NOT CONFIRMED (form) (the line is not in the CLOSE-CONTRADICTION form)
+    undefined Lundefined undefined/undefined NOT CONFIRMED (form) (the line is not in the CLOSE-CONTRADICTION form)
+    undefined Lundefined undefined/undefined NOT CONFIRMED (form) (the line is not in the CLOSE-CONTRADICTION form)
+    undefined Lundefined undefined/undefined NOT CONFIRMED (form) (the line is not in the CLOSE-CONTRADICTION form)
+    DEFENDER L3 CR2/CR4 CONFIRMED
+    DEFENDER L6 CR2/CR4 CONFIRMED
+
+== R2 33345_ctl_DEFENDER_reply.json: OK same as live
+  live s108: broken [] rows 1
+  rev 2    : broken [] rows 1
+    undefined Lundefined undefined/undefined NOT CONFIRMED (form) (the line is not in the CLOSE-CONTRADICTION form)
+
+== R2 33371_ctl_DEFENDER_reply.json: OK same as live
+  live s108: broken [] rows 1
+  rev 2    : broken [] rows 1
+    undefined Lundefined undefined/undefined NOT CONFIRMED (form) (the line is not in the CLOSE-CONTRADICTION form)
+
+== R2 33530_ctl_CHALLENGER_reply.json: OK same as live
+  live s108: broken [] rows 1
+  rev 2    : broken [] rows 1
+    undefined Lundefined undefined/undefined NOT CONFIRMED (form) (the line is not in the CLOSE-CONTRADICTION form)
+
+== R2 33644_ctl_DEFENDER_EXTRA_exec34576.json: OK same as live
+  live s108: broken [] rows 1
+  rev 2    : broken [] rows 1
+    undefined Lundefined undefined/undefined NOT CONFIRMED (form) (the line is not in the CLOSE-CONTRADICTION form)
+
+== R2 33644_ctl_DEFENDER_reply.json: OK same as live
+  live s108: broken [] rows 1
+  rev 2    : broken [] rows 1
+    undefined Lundefined undefined/undefined NOT CONFIRMED (form) (the line is not in the CLOSE-CONTRADICTION form)
+
+== R2 33798_ctl_DEFENDER_reply.json: OK same as live
+  live s108: broken [] rows 3
+  rev 2    : broken [] rows 3
+    undefined Lundefined undefined/undefined NOT CONFIRMED (form) (the line is not in the CLOSE-CONTRADICTION form)
+    undefined Lundefined undefined/undefined NOT CONFIRMED (form) (the line is not in the CLOSE-CONTRADICTION form)
+    undefined Lundefined undefined/undefined NOT CONFIRMED (form) (the line is not in the CLOSE-CONTRADICTION form)
+
+== R2 33846_ctl_DEFENDER_reply.json: OK same as live
+  live s108: broken [DEFENDER LINK 4] rows 7
+  rev 2    : broken [DEFENDER LINK 4] rows 7
+    undefined Lundefined undefined/undefined NOT CONFIRMED (form) (the line is not in the CLOSE-CONTRADICTION form)
+    undefined Lundefined undefined/undefined NOT CONFIRMED (form) (the line is not in the CLOSE-CONTRADICTION form)
+    undefined Lundefined undefined/undefined NOT CONFIRMED (form) (the line is not in the CLOSE-CONTRADICTION form)
+    undefined Lundefined undefined/undefined NOT CONFIRMED (form) (the line is not in the CLOSE-CONTRADICTION form)
+    undefined Lundefined undefined/undefined NOT CONFIRMED (form) (the line is not in the CLOSE-CONTRADICTION form)
+    undefined Lundefined undefined/undefined NOT CONFIRMED (form) (the line is not in the CLOSE-CONTRADICTION form)
+    DEFENDER L4 CR3/CR4 CONFIRMED
+
+== R3 [CRn]/[CRn] reference: reference
+  live s108: broken [DEFENDER LINK 6] rows 1
+  rev 2    : broken [DEFENDER LINK 6] rows 1
+    DEFENDER L6 CR3/CR4 CONFIRMED
+
+== R3 mixed [CR3]/[4]: OK reads as [CRn]
+  live s108: broken [] rows 1
+  rev 2    : broken [DEFENDER LINK 6] rows 1
+    DEFENDER L6 CR3/CR4 CONFIRMED
+
+== R3 mixed [3]/[CR4]: OK reads as [CRn]
+  live s108: broken [] rows 1
+  rev 2    : broken [DEFENDER LINK 6] rows 1
+    DEFENDER L6 CR3/CR4 CONFIRMED
+
+== R3 mixed [3]/[round 4]: OK reads as [CRn]
+  live s108: broken [] rows 1
+  rev 2    : broken [DEFENDER LINK 6] rows 1
+    DEFENDER L6 CR3/CR4 CONFIRMED
+
+== R3 unbracketed 3/4: OK reads as [CRn]
+  live s108: broken [] rows 1
+  rev 2    : broken [DEFENDER LINK 6] rows 1
+    DEFENDER L6 CR3/CR4 CONFIRMED
+
+== R3 spaced [ 3 ]/[ 4 ]: OK reads as [CRn]
+  live s108: broken [] rows 1
+  rev 2    : broken [DEFENDER LINK 6] rows 1
+    DEFENDER L6 CR3/CR4 CONFIRMED
+
+== R4 NEG closing [5]: OK no link broken
+  live s108: broken [] rows 1
+  rev 2    : broken [] rows 1
+    DEFENDER L6 CR3/CR5 NOT CONFIRMED (form) (the closing round CR5 is not the defender's round 4 (CR4))
+
+== R4 NEG closing [0]: OK no link broken
+  live s108: broken [] rows 1
+  rev 2    : broken [] rows 1
+    DEFENDER L6 CR3/CR0 NOT CONFIRMED (form) (the closing round CR0 is not the defender's round 4 (CR4))
+
+== R4 NEG earlier [4]: OK no link broken
+  live s108: broken [] rows 1
+  rev 2    : broken [] rows 1
+    DEFENDER L6 CR4/CR4 NOT CONFIRMED (form) (the earlier round CR4 is not one of the defender's rounds 1 to 3; the earlier quotation is)
+
+== R4 NEG two digits [34]: OK no link broken
+  live s108: broken [] rows 1
+  rev 2    : broken [] rows 1
+    undefined Lundefined undefined/undefined NOT CONFIRMED (form) (the line is not in the CLOSE-CONTRADICTION form)
+
+== R4 NEG closing [DR4] on defender line: OK no link broken
+  live s108: broken [] rows 1
+  rev 2    : broken [] rows 1
+    DEFENDER L6 CR3/DR4 NOT CONFIRMED (form) (the closing round DR4 is not the defender's round 4 (CR4); the closing quotation is not fo)
+
+== R4 NEG defender quotes on a CHALLENGER line, bare labels: OK no link broken
+  live s108: broken [] rows 1
+  rev 2    : broken [] rows 1
+    CHALLENGER L6 DR3/DR4 NOT CONFIRMED (form) (the earlier quotation is not found word for word in DR3; the closing quotation is not foun)
+
+36 cases; ALL OK
