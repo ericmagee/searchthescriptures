@@ -1,0 +1,20 @@
+OK   CONFIRMED with link text 25 characters -> NOT CONFIRMED (form), broken [], marked for review, 12 ms, note length 323
+OK   NOT A CONTRADICTION with link text 25 characters -> NOT A CONTRADICTION, broken [], 9 ms, note length 93
+OK   CONFIRMED with link text a sentence -> NOT CONFIRMED (form), broken [], marked for review, 8 ms, note length 397
+OK   NOT A CONTRADICTION with link text a sentence -> NOT A CONTRADICTION, broken [], 7 ms, note length 167
+OK   CONFIRMED with link text with quotation marks -> NOT CONFIRMED (form), broken [], marked for review, 11 ms, note length 341
+OK   NOT A CONTRADICTION with link text with quotation marks -> NOT A CONTRADICTION, broken [], 7 ms, note length 111
+OK   CONFIRMED with link text with a dash pair inside -> NOT CONFIRMED (form), broken [], marked for review, 7 ms, note length 339
+OK   NOT A CONTRADICTION with link text with a dash pair inside -> NOT A CONTRADICTION, broken [], 6 ms, note length 109
+OK   CONFIRMED with link text with brackets and a round label -> NOT CONFIRMED (form), broken [], marked for review, 10 ms, note length 310
+OK   NOT A CONTRADICTION with link text with brackets and a round label -> NOT A CONTRADICTION, broken [], 6 ms, note length 80
+OK   CONFIRMED with link text 600 characters -> NOT CONFIRMED (form), broken [], marked for review, 6 ms, note length 891
+OK   NOT A CONTRADICTION with link text 600 characters -> NOT A CONTRADICTION, broken [], 6 ms, note length 661
+OK   CONFIRMED with link text 6000 characters -> NOT CONFIRMED (form), broken [], marked for review, 6 ms, note length 6291
+OK   NOT A CONTRADICTION with link text 6000 characters -> NOT A CONTRADICTION, broken [], 6 ms, note length 6061
+OK   CONFIRMED with link text D6 at the end of a phrase -> NOT CONFIRMED (form), broken [], marked for review, 8 ms, note length 314
+OK   NOT A CONTRADICTION with link text D6 at the end of a phrase -> NOT A CONTRADICTION, broken [], 7 ms, note length 84
+OK   CONFIRMED with link text number at the end of a phrase -> NOT CONFIRMED (form), broken [], marked for review, 8 ms, note length 318
+OK   NOT A CONTRADICTION with link text number at the end of a phrase -> NOT A CONTRADICTION, broken [], 7 ms, note length 88
+OK   a 140,000-character line with no verdict, then a good D6 line on LINK 6: broken [6], 19 ms
+19 OK, 0 FAIL
