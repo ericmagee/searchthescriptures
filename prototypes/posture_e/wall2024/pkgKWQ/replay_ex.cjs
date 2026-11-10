@@ -1,0 +1,9 @@
+// cureVerdicts live s113 against candidate on every cure node of every saved execution
+const fs=require('fs');const {OLD,NEW}=(()=>{const OLD='const kwRe=t=>/\\bREASSERTED\\s+IN\\s+\\[?[CD]R\\d+\\]?\\s*(?:[:,]|--|\\u2014)?\\s*["\\u201c][^"\\u201d]{6,}["\\u201d]/i.test(t);';return {OLD,NEW:OLD.replace('["\\u201c][^"\\u201d]{6,}["\\u201d]',"[\"\\u201c'\\u2018][^\"\\u201d]{6,}[\"\\u201d'\\u2019]")};})();
+const src=fs.readFileSync('pkgLIB/strip_S113L/patched/Panel_Cure_Check.js','utf8');if(!src.includes(OLD))throw new Error('anchor');
+const mk=s=>new Function('$','$input',s.slice(0,s.indexOf("const PP=$('Panel Payloads')"))+'\nreturn {cureVerdicts};')(()=>{throw 0},null);const O=mk(src),N=mk(fs.readFileSync(process.env.NEWF||'pkgLIB/strip_KCQW/patched/Panel_Cure_Check.js','utf8'));
+let runs=0,eq=0;for(const e of (process.env.EXS||'33149 33371 33490 34299 34626 34703 34726').split(' ')){const X=JSON.parse(fs.readFileSync('/mnt/project-files/wall2024/ex'+e+'_full.json','utf8'));const RD=(X.data||X).resultData.runData;
+ for(const n of Object.keys(RD).filter(n=>/Cure Normalize/.test(n)))for(const r of RD[n])for(const b of ((r.data||{}).main||[]))for(const i of b||[]){const c=i.json.cure;if(!c||!c.items)continue;runs++;
+  const run=M=>{try{return M.cureVerdicts(JSON.parse(JSON.stringify(c.items)),i.json.reply,c.broken,c.rounds);}catch(err){return 'ERR '+err.message;}};const a=run(O),b2=run(N);
+  if(typeof a==='string'){console.log(e,n,c.seat,a);continue;}let same=true;a.forEach((x,k)=>{if(x.status!==b2[k].status){same=false;console.log(e,n,c.seat,c.items[k].rule,c.items[k].link,x.status,'->',b2[k].status,'| uncured live',a.filter(z=>z.status==='UNCURED').length,'cand',b2.filter(z=>z.status==='UNCURED').length);}});if(same)eq++;}}
+console.log('cure node runs',runs,'all statuses equal',eq);
