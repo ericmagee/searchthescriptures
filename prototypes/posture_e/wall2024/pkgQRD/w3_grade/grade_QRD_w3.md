@@ -79,3 +79,18 @@ MY MISTAKES: (1) my PASS of rev 4 was wrong. My rule counted a question as cover
 
 My reading of W1's rule: I agree. Redirect a judge only when BOTH of its quotes lie inside (equal to or narrower than) the standing judge's quotes. Then everything the redirected judge quoted is still quoted by a judge who keeps the question. Tested on a scratch copy before saying so (rev 4 with the containment test made one-way; not a build): R1 to R15 OK; walk 0 broken of 400 on two seeds (99 and 111 redirect returns), third seed in the output if complete; the stored round of debate 34108 is still redirected (identical quotes); 17 characters smaller than rev 4 (+1,564).
 The wider-closing mirror plant could not be built from this debate's text in my runner (no two adjacent closing sentences passed my filter); W1's matrix covers it.
+
+# REGRADE pkgQRD rev 5 (W2 commit 6fd6a01b, parent_s110_QRD.json on live s110) by W3: PASS
+
+Labels for rev 5 committed before any run (7adb95b0). Output w3_QRD_rev5_out.txt (three seeds, then R16).
+
+- R1 OK. 418 nodes, connections equal, only QR Check (6,026 to 7,303) and QR Final (7,842 to 8,116) differ from live s110: +1,551 code, measured (3,838,702 to 3,840,253). Prompt text unchanged: one 213-character sentence per redirected side, in a return only. Behind the question_trial switch.
+- Rev 5 against rev 4: only QR Check differs, and only in the containment helper: it now asks whether the judge's quote lies inside the standing judge's quote (one way). My scratch copy measured +1,564 because I changed only the comparison and kept both length tests; W2 rewrote the helper with one length test, 13 characters shorter. The dropped test is not needed: a quote of 8 or more characters inside the other makes the other at least as long.
+- R2 to R12, R14 OK on each of three seeds (63 OK lines, 0 FAIL).
+- R13 OK: walk with the one-way rule and shared closing sentences, 400 cases per seed, 99, 111 and 96 redirect returns, the rule broken in 0.
+- R15 OK: a wider passage is not redirected against a narrower one; a narrower one inside the standing judge's is redirected and nothing is lost.
+- R16 OK, real data of today's dry regrade (execution 34626): all three judges asked the defender the same pair, [CR3] "I drop the wording "no biological father" as a bare statement. I rest it on these rows." against [CR4] "Christ had no biological father." Rev 5: luna stands; chatgpt and sol are redirected against luna on the defender side. Live returns none. Questions and faults equal to live, and my live rerun equals the execution's stored QR Check output. The three challenger questions are plain questions and are not redirected.
+
+Limits, not findings (unchanged): a redirected judge may replace its contradiction question with a plain one while the standing judge keeps the pair; two redirected judges may move to the same second contradiction (one return only); a redirect return is a full judge call. Second replies are planted in every test; a real return needs a relay send.
+
+What my tests cannot rule out: a case outside my plants and my walk's vocabulary. W1's full matrix is the wider test; my PASS stands beside it, not in place of it.

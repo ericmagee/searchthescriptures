@@ -1,0 +1,89 @@
+--- seed 20261110
+OK   R1 nodes 418/418; differing ["QR Check","QR Final"]; connections equal: QR Check 6026 to 7303, QR Final 7842 to 8116; code text total 3838702 to 3840253 (1551)
+     live luna:-, chatgpt:-, sol:-; candidate luna:-, chatgpt:redirect-defender, sol:redirect-defender
+OK   R2 stored 34299: live returns none; candidate returns chatgpt and sol on the defender side; qs and faults equal
+OK   R3 QR Final on the stored 34299 retry input: equal to live apart from the redirect field: 6 items
+OK   R4a the pair is still asked by a judge under the candidate where live keeps it: live 2, candidate 1
+OK   R4b the pair is still asked by a judge under the candidate where live keeps it: live 2, candidate 1
+OK   R4c luna still asks about the pair; the plain questions are used
+OK   R4d both keep the first question on both sides; nothing dropped
+OK   R5 a redirected judge that also changes its challenger question: the challenger side keeps the first
+OK   R6a same rounds, quotes not contained: chatgpt not returned: luna:-, chatgpt:-, sol:redirect-defender
+OK   R6b chatgpt is not redirected against a failing question; sol is redirected against chatgpt
+OK   R7 chain and both sides: chatgpt redirected on both sides with two sentences naming the right rounds; sol on the challenger side only
+OK   R9 a failing redirect reply: first kept, status PASSED with the note, not PASSED ON RETURN
+OK   R10 luna and chatgpt both faulted: sol is not redirected
+OK   R11 luna not JSON at first: not counted; chatgpt stands; sol redirected against chatgpt
+OK   R12 sol's distinct question is not lost where live keeps it
+     R13 cases run 400; redirect returns in them 99; rule broken in 0
+OK   R13 walk: no contradiction question that live ends with is left without a match
+OK   R14 same earlier passage, different closing sentences: chatgpt's distinct question is not lost
+OK   R14 same closing sentence, different earlier passages: chatgpt's distinct question is not lost
+     R15 wider earlier passage: the extra part keeps an asker: first faults [0,0,0]; candidate returns luna:-, chatgpt:-, sol:-; judges whose final question contains the part: live [chatgpt], candidate [chatgpt]
+OK   R15 wider earlier passage: the extra part keeps an asker
+     R15 wider closing passage: no adjacent closing sentences found for the plant (not run)
+     R15 c. narrower passage inside the standing one: nothing lost: first faults [0,0,0]; candidate returns luna:-, chatgpt:redirect-defender, sol:-; judges whose final question contains the part: live [luna, chatgpt], candidate [luna]
+OK   R15 c. narrower passage inside the standing one: nothing lost
+OK   R15c the narrower question is redirected
+ALL CHECKS OK
+--- seed 777123
+OK   R1 nodes 418/418; differing ["QR Check","QR Final"]; connections equal: QR Check 6026 to 7303, QR Final 7842 to 8116; code text total 3838702 to 3840253 (1551)
+     live luna:-, chatgpt:-, sol:-; candidate luna:-, chatgpt:redirect-defender, sol:redirect-defender
+OK   R2 stored 34299: live returns none; candidate returns chatgpt and sol on the defender side; qs and faults equal
+OK   R3 QR Final on the stored 34299 retry input: equal to live apart from the redirect field: 6 items
+OK   R4a the pair is still asked by a judge under the candidate where live keeps it: live 2, candidate 1
+OK   R4b the pair is still asked by a judge under the candidate where live keeps it: live 2, candidate 1
+OK   R4c luna still asks about the pair; the plain questions are used
+OK   R4d both keep the first question on both sides; nothing dropped
+OK   R5 a redirected judge that also changes its challenger question: the challenger side keeps the first
+OK   R6a same rounds, quotes not contained: chatgpt not returned: luna:-, chatgpt:-, sol:redirect-defender
+OK   R6b chatgpt is not redirected against a failing question; sol is redirected against chatgpt
+OK   R7 chain and both sides: chatgpt redirected on both sides with two sentences naming the right rounds; sol on the challenger side only
+OK   R9 a failing redirect reply: first kept, status PASSED with the note, not PASSED ON RETURN
+OK   R10 luna and chatgpt both faulted: sol is not redirected
+OK   R11 luna not JSON at first: not counted; chatgpt stands; sol redirected against chatgpt
+OK   R12 sol's distinct question is not lost where live keeps it
+     R13 cases run 400; redirect returns in them 111; rule broken in 0
+OK   R13 walk: no contradiction question that live ends with is left without a match
+OK   R14 same earlier passage, different closing sentences: chatgpt's distinct question is not lost
+OK   R14 same closing sentence, different earlier passages: chatgpt's distinct question is not lost
+     R15 wider earlier passage: the extra part keeps an asker: first faults [0,0,0]; candidate returns luna:-, chatgpt:-, sol:-; judges whose final question contains the part: live [chatgpt], candidate [chatgpt]
+OK   R15 wider earlier passage: the extra part keeps an asker
+     R15 wider closing passage: no adjacent closing sentences found for the plant (not run)
+     R15 c. narrower passage inside the standing one: nothing lost: first faults [0,0,0]; candidate returns luna:-, chatgpt:redirect-defender, sol:-; judges whose final question contains the part: live [luna, chatgpt], candidate [luna]
+OK   R15 c. narrower passage inside the standing one: nothing lost
+OK   R15c the narrower question is redirected
+ALL CHECKS OK
+--- seed 4242
+OK   R1 nodes 418/418; differing ["QR Check","QR Final"]; connections equal: QR Check 6026 to 7303, QR Final 7842 to 8116; code text total 3838702 to 3840253 (1551)
+     live luna:-, chatgpt:-, sol:-; candidate luna:-, chatgpt:redirect-defender, sol:redirect-defender
+OK   R2 stored 34299: live returns none; candidate returns chatgpt and sol on the defender side; qs and faults equal
+OK   R3 QR Final on the stored 34299 retry input: equal to live apart from the redirect field: 6 items
+OK   R4a the pair is still asked by a judge under the candidate where live keeps it: live 2, candidate 1
+OK   R4b the pair is still asked by a judge under the candidate where live keeps it: live 2, candidate 1
+OK   R4c luna still asks about the pair; the plain questions are used
+OK   R4d both keep the first question on both sides; nothing dropped
+OK   R5 a redirected judge that also changes its challenger question: the challenger side keeps the first
+OK   R6a same rounds, quotes not contained: chatgpt not returned: luna:-, chatgpt:-, sol:redirect-defender
+OK   R6b chatgpt is not redirected against a failing question; sol is redirected against chatgpt
+OK   R7 chain and both sides: chatgpt redirected on both sides with two sentences naming the right rounds; sol on the challenger side only
+OK   R9 a failing redirect reply: first kept, status PASSED with the note, not PASSED ON RETURN
+OK   R10 luna and chatgpt both faulted: sol is not redirected
+OK   R11 luna not JSON at first: not counted; chatgpt stands; sol redirected against chatgpt
+OK   R12 sol's distinct question is not lost where live keeps it
+     R13 cases run 400; redirect returns in them 96; rule broken in 0
+OK   R13 walk: no contradiction question that live ends with is left without a match
+OK   R14 same earlier passage, different closing sentences: chatgpt's distinct question is not lost
+OK   R14 same closing sentence, different earlier passages: chatgpt's distinct question is not lost
+     R15 wider earlier passage: the extra part keeps an asker: first faults [0,0,0]; candidate returns luna:-, chatgpt:-, sol:-; judges whose final question contains the part: live [chatgpt], candidate [chatgpt]
+OK   R15 wider earlier passage: the extra part keeps an asker
+     R15 wider closing passage: no adjacent closing sentences found for the plant (not run)
+     R15 c. narrower passage inside the standing one: nothing lost: first faults [0,0,0]; candidate returns luna:-, chatgpt:redirect-defender, sol:-; judges whose final question contains the part: live [luna, chatgpt], candidate [luna]
+OK   R15 c. narrower passage inside the standing one: nothing lost
+OK   R15c the narrower question is redirected
+ALL CHECKS OK
+luna: defender [CR3] "I drop the wording "no biological father" as a bare statement. I rest it on these rows." / [CR4] "Christ had no biological father." | challenger earlier_quote null | retry false redirect {}
+chatgpt: defender [CR3] "I drop the wording "no biological father" as a bare statement. I rest it on these rows." / [CR4] "Christ had no biological father." | challenger earlier_quote null | retry true redirect {"defender":{"of":"luna","earlier":"CR3","closing":"CR4"}}
+sol: defender [CR3] "I drop the wording "no biological father" as a bare statement. I rest it on these rows." / [CR4] "Christ had no biological father." | challenger earlier_quote null | retry true redirect {"defender":{"of":"luna","earlier":"CR3","closing":"CR4"}}
+live returns: luna:false, chatgpt:false, sol:false; questions and faults equal to live: true
+live QR Check rerun equals the stored output of the execution (qs, faults): true
