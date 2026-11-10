@@ -1,0 +1,14 @@
+// W3: on every stored F with [DR4] (7 executions), list each reference of DR4 written without its own book (bare), and say: new in live? new in candidate? is its chapter:verse named earlier under the borrowed book, or only under another book?
+const fs=require('fs');const g=f=>{let d=JSON.parse(fs.readFileSync(f,'utf8'));d=d.data||d;return d.workflow||d;};
+const mk=(W)=>{const c=W.nodes.find(x=>x.name==='Build Synthesis').parameters.jsCode;const k=c.indexOf('const REFP=');const ke=c.indexOf('})();',k)+5;const i=c.indexOf('const C4P=');const e=c.indexOf('})();',i)+5;return new Function(c.slice(k,ke)+'\n'+c.slice(i,e)+'\nreturn {REFP,C4P};')();};
+const a=mk(g('/mnt/project-files/wall2024/fetchback_live_s114.json')),b=mk(g(process.env.CAND||'/mnt/project-files/wall2024/parent_s114_BRF3.json'));
+const Fs=[];const walk=(id,v,d)=>{if(d>12||v==null||typeof v!=='object')return;if(Array.isArray(v)){v.forEach(x=>walk(id,x,d+1));return;}if(typeof v.dr4==='string'&&typeof v.gr1==='string')Fs.push({id,F:v});for(const k in v)walk(id,v[k],d+1);};
+const seen=new Set();let tot=0,bare=0,sup=0,full=0,fullnew=0;
+for(const e of '33149 33371 33490 34299 34626 34703 34726'.split(' ')){const X=JSON.parse(fs.readFileSync('/mnt/project-files/wall2024/ex'+e+'_full.json','utf8'));const rd=(X.data||X).resultData.runData;Fs.length=0;for(const n in rd)walk(e,rd[n],0);
+ for(const {id,F} of Fs){const k=F.dr4.length+'|'+id;if(seen.has(k))continue;seen.add(k);const E=[F.gr1,F.gr2,F.dr3];const S=new Set();E.forEach(t=>b.C4P.refs(t).forEach(r=>r.vs.forEach(x=>S.add(x))));
+  const la=new Set(a.C4P.of(F)),lb=new Set(b.C4P.of(F));
+  for(const r of b.C4P.refs(F.dr4)){tot++;if(!r.bare){full++;if(la.has(r.label))fullnew++;continue;}bare++;const own=r.vs.some(x=>S.has(x));if(la.has(r.label)&&!lb.has(r.label)){sup++;console.log(e,'SUPPRESSED',r.label,'named under borrowed book earlier:',own);}}
+  console.log(e,'dr4 refs so far',tot,'full',full,'full new in live',fullnew,'bare',bare,'suppressed',sup,'| live new',[...la].join('; ')||'none');}}
+// size of the earlier chapter:verse set in 34726, and how the 12 stored bare references are written
+{const X=JSON.parse(fs.readFileSync('/mnt/project-files/wall2024/ex34726_full.json','utf8'));const rd=(X.data||X).resultData.runData;Fs.length=0;for(const n in rd)walk('34726',rd[n],0);const F=Fs[0].F;const S=new Set(),C=new Set();[F.gr1,F.gr2,F.dr3].forEach(t=>b.C4P.refs(t).forEach(r=>r.vs.forEach(x=>{S.add(x);C.add(x.replace(/.* /,''));})));console.log('34726 earlier: book+verse keys',S.size,'distinct chapter:verse',C.size,'of which chapters 1 to 3:',[...C].filter(x=>/^[123]:/.test(x)).length);
+ for(const r of a.REFP.parse(F.dr4,{scoped:true}))if(!r.book)console.log('  bare in DR4:',JSON.stringify(F.dr4.slice(Math.max(0,r.pos-45),r.pos+8).replace(/\s+/g,' ')),'ctx',r.ctx);}
