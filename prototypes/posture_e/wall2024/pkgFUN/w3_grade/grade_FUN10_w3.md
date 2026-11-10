@@ -10,7 +10,7 @@ Columns: live s105 (version 4b5d599a), rev 9, rev 10. 141 texts. Labels committe
 - No other log row changes on any text.
 
 ## My rev 9 finding: fixed
-All ten forms of "COUNTED. The/This/That count is wrong (in error, not right, mistaken)." with the corrected count on its own line cure, as on live.
+The six forms of "COUNTED. The/This/That count is wrong (in error, not right, mistaken)." with the corrected count on its own line that rev 9 refused all cure, as on live.
 
 ## New correct answers (w3_good10.json, 30): 30 cured, none refused
 They sit next to the entries still enforced: "My count stands corrected.", "My count no longer stands.", "I do not refuse.", "I do not object.",
