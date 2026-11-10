@@ -19,4 +19,5 @@ const first=L=>L.findIndex(l=>/^\*\*LINK 1:/.test(l));
  T('n6. one hop to a [CR2] replaced by two lines, which names the verse only in a footing quotation',await res(over((L,R)=>{hop(L,R);R.CR2=R.CR2+'\n\nFooting:\n1. The question the angel hears (Luke 1:34) is quoted in the row above.';})));
  T('n7. the same, and that [CR2] line holds "[CR2] answer to Luke 1:34: the answer runs 99 words"',await res(over((L,R)=>{hop(L,R);R.CR2=R.CR2+'\n\nFooting:\n1. [CR2] answer to Luke 1:34: the answer runs 99 words) in the row above.';})));
  T('n8 (expected WITHHELD). one hop to a [CR2] with a full answer line on the verse carrying a layer',await res(over((L,R)=>{hop(L,R);R.CR2=R.CR2+'\n\n- Luke 1:34, "How shall this be, seeing I know not a man?": [L2] *ginōskō* is present tense, and the angel answers a future conception, so the present state does not reach the conception the angel announces.';})));
+ T('n9. one hop to a two-line [CR2] whose footing line holds "without its exact reference (line"',await res(over((L,R)=>{hop(L,R);R.CR2=R.CR2+'\n\nFooting:\n1. Quoted without its exact reference (line 2 of the row): Luke 1:34 stands in the row above.';})));
 })();
