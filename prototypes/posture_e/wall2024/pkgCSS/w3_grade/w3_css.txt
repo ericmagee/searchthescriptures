@@ -1,0 +1,40 @@
+BUILD on stored debates: 35 equal, 0 differ; candidates live 0, per-side calls 0; debates with candidates: 
+P1 defender NONE, challenger CONFIRMED on its own link (expect: challenger link broken)
+   confirmed: ["CHALLENGER LINK 1"] | none: true | no_answer: [] | errors: []
+   LOG ROW item "NEW CHALLENGER LINK 1" | reason "CONFIRMED -- planted." | reply_error null
+P2 both sides CONFIRMED with id NEW (expect: two links broken)
+   confirmed: ["DEFENDER LINK 6","CHALLENGER LINK 1"] | none: false | no_answer: [] | errors: []
+   LOG ROW item "NEW DEFENDER LINK 6" | reason "CONFIRMED -- reclaimed." | reply_error null
+   LOG ROW item "NEW CHALLENGER LINK 1" | reason "CONFIRMED -- planted." | reply_error null
+P3 defender call FAILS, challenger NONE (the defender, where the 34108 drop stands, was not checked)
+   confirmed: [] | none: true | no_answer: [] | errors: ["DEFENDER: no reply (timeout)"]
+   LOG ROW item "NONE" | reason "NONE FOUND -- DEFENDER: no reply (timeout)" | reply_error "DEFENDER: no reply (timeout)"
+P4 defender call FAILS, challenger CONFIRMED
+   confirmed: ["CHALLENGER LINK 1"] | none: false | no_answer: [] | errors: ["DEFENDER: no reply (timeout)"]
+   LOG ROW item "NEW CHALLENGER LINK 1" | reason "CONFIRMED -- planted." | reply_error null
+P5 challenger call FAILS, defender CONFIRMED
+   confirmed: ["DEFENDER LINK 6"] | none: false | no_answer: [] | errors: ["CHALLENGER: no reply (timeout)"]
+   LOG ROW item "NEW DEFENDER LINK 6" | reason "CONFIRMED -- reclaimed." | reply_error null
+P6 both calls FAIL (expect NOT CHECKED)
+   confirmed: [] | none: false | no_answer: [] | errors: ["DEFENDER: no reply (timeout); CHALLENGER: no reply (timeout)"]
+   LOG ROW item "NO LINE" | reason "NOT CHECKED -- DEFENDER: no reply (timeout); CHALLENGER: no reply (timeout)" | reply_error "DEFENDER: no reply (timeout); CHALLENGER: no reply (timeout)"
+P7 defender reply is prose with no line, challenger NONE
+   confirmed: [] | none: true | no_answer: [] | errors: []
+   LOG ROW item "NONE" | reason "NONE FOUND" | reply_error null
+P8 defender reply empty string, challenger NONE
+   confirmed: [] | none: true | no_answer: [] | errors: []
+   LOG ROW item "NONE" | reason "NONE FOUND" | reply_error null
+P9 the defender call answers with a line labeled CHALLENGER quoting the defender rounds (wrong side label)
+   confirmed: [] | none: true | no_answer: [] | errors: []
+   LOG ROW item "NEW CHALLENGER LINK 6" | reason "NOT CONFIRMED (form) -- the earlier round CR3 is not one of the challenger's rounds 1 to 3; the closing round " | reply_error null
+P10 Oracle candidate X1 planted: defender call cands ["X1"], challenger call cands []; candidate text in challenger prompt: false
+P11 X1 answered CONFIRMED by the defender call, challenger NONE
+   confirmed: ["DEFENDER LINK 6"] | none: true | no_answer: [] | errors: []
+   LOG ROW item "X1 DEFENDER LINK 6" | reason "CONFIRMED -- reclaimed." | reply_error null
+P12 X1 planted, defender call FAILS, challenger NONE
+   confirmed: [] | none: true | no_answer: ["X1"] | errors: ["DEFENDER: no reply (timeout)"]
+   LOG ROW item "X1" | reason "NO ANSWER -- the enforcer did not answer this candidate" | reply_error null
+   LOG ROW item "NONE" | reason "NONE FOUND -- DEFENDER: no reply (timeout)" | reply_error "DEFENDER: no reply (timeout)"
+LIVE s104 for comparison: the one call FAILS
+   confirmed: [] | none: false | no_answer: [] | errors: ["no reply (timeout)"]
+   LOG ROW item "NO LINE" | reason "NOT CHECKED -- no reply (timeout)" | reply_error "no reply (timeout)"
