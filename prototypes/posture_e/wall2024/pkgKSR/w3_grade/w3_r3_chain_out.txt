@@ -1,0 +1,26 @@
+=== ALL flip 0
+ Send Back Build: luna 13; chatgpt 3; sol 4 | not_sent ["luna E-COL COLLISION D6 vs C5","luna E-COL COLLISION D6 vs C5","luna E-COL COLLISION D6 vs C6","luna E-COL COLLISION D6 vs C6","chatgpt E-COL COLLISION D6 vs C5","chatgpt E-COL COLLISION D6 vs C6","sol E-COL COLLISION D6 vs C5","sol E-COL COLLISION D6 vs C6","chatgpt E-KEY KEYSTONE D6","sol E-KEY KEYSTONE D6"]
+ luna gate: 5 items now, stored 5; ; new items with no stored answer: 
+ gate seats [{"seat":"luna","items":5,"cured":4,"uncured_counted":1,"fresh":2,"error":null}]
+ gate items: luna NOT APPLIED E-APPLY S6; luna NOT APPLIED E-APPLY S10; luna CONTRADICTION E-GATE M; luna CONTRADICTION E-GATE M; luna CONTRADICTION E-GATE M
+ ROWS:
+   luna | tag BROKEN | drv_uncured 2 | result CHALLENGER WINS
+      KEYSTONE: D6 -- BROKEN -- D6, the conclusion that Christ had no biological father, is broken by the confirmed closing contradicti
+   chatgpt | tag BROKEN | drv_uncured 0 | result CHALLENGER WINS
+      KEYSTONE: D6 -- BROKEN -- LINK 6 BROKEN BY A CONFIRMED CLOSING CONTRADICTION
+   sol | tag BROKEN | drv_uncured 0 | result CHALLENGER WINS
+      KEYSTONE: D6 -- BROKEN -- LINK 6 BROKEN BY A CONFIRMED CLOSING CONTRADICTION
+ row fields differing from live: verdict_raw
+=== ALL flip 1
+ Send Back Build: luna 13; chatgpt 3; sol 4 | not_sent ["luna E-COL COLLISION D6 vs C5","luna E-COL COLLISION D6 vs C5","luna E-COL COLLISION D6 vs C6","luna E-COL COLLISION D6 vs C6","chatgpt E-COL COLLISION D6 vs C5","chatgpt E-COL COLLISION D6 vs C6","sol E-COL COLLISION D6 vs C5","sol E-COL COLLISION D6 vs C6"]
+ luna gate: 5 items now, stored 5; ; new items with no stored answer: 
+ gate seats [{"seat":"luna","items":5,"cured":4,"uncured_counted":1,"fresh":2,"error":null}]
+ gate items: luna NOT APPLIED E-APPLY S6; luna NOT APPLIED E-APPLY S10; luna CONTRADICTION E-GATE M; luna CONTRADICTION E-GATE M; luna CONTRADICTION E-GATE M
+ ROWS:
+   luna | tag BROKEN | drv_uncured 2 | result CHALLENGER WINS
+      KEYSTONE: D6 -- BROKEN -- D6, the conclusion that Christ had no biological father, is broken by the confirmed closing contradicti
+   chatgpt | tag BROKEN | drv_uncured 0 | result CHALLENGER WINS
+      KEYSTONE: D6 -- BROKEN -- LINK 6 BROKEN BY A CONFIRMED CLOSING CONTRADICTION
+   sol | tag BROKEN | drv_uncured 0 | result CHALLENGER WINS
+      KEYSTONE: D6 -- BROKEN -- LINK 6 BROKEN BY A CONFIRMED CLOSING CONTRADICTION
+ row fields differing from live: verdict_raw

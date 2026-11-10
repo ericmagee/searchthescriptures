@@ -1,0 +1,60 @@
+######## LIVE
+strings planted upstream: 18
+LIVE Panel Cure Check output, sol:
+   KEYSTONE: KEYSTONE: D6 -- STANDS -- The conclusion that Christ had no biological father remains 
+   send-back items sol: S1 E-ANS ANSWER CHECK Luke 1:34 [CR3]; S2 E-COL COLLISION D6 vs C5; S3 E-COL COLLISION D6 vs C6; S4 E-KEY KEYSTONE D6; S5 E-RES VERDICT LINES; S6 E-RES VERDICT LINES; S7 E-ANS ANSWER CHECK Matthew 1:24 [CR3]; S8 E-ANS ANSWER CHECK Luke 1:37 [DR3]; S9 E-HOLD COLLISION D2 vs C1 (UNDERDETERMINED; pkgUNA) | not sent: 
+   written row sol: KEYSTONE: D6 -- STANDS -- The conclusion that Christ had no biological father r | tag BROKEN | drv_uncured 4
+   all rows: luna BROKEN u2 KEYSTONE: D6 -- STANDS | chatgpt BROKEN u0 KEYSTONE: D6 -- STANDS | sol BROKEN u4 KEYSTONE: D6 -- STANDS
+   gate items: luna NOT APPLIED E-APPLY S10: the change drops the collision D2 vs C1 (W3 2351: a change to a collision or FORCED line must be a collision line for the same pai
+      luna NOT APPLIED E-APPLY S14: the change drops the collision D3 vs C1 (W3 2351: a change to a collision or FORCED line must be a collision line for the same pai
+      luna CONTRADICTION E-GATE M: your ANSWER CHECK on Luke 1:34 [CR3] grades the answer MISSES, and an answer that MISSES or FAILS leaves the witness unanswered (m
+      luna CONTRADICTION E-GATE M: your ANSWER CHECK on Matthew 1:25 [CR3] grades the answer MISSES, and an answer that MISSES or FAILS leaves the witness unanswered
+      luna CONTRADICTION E-GATE M: your ANSWER CHECK on Luke 1:36 [CR3] grades the answer MISSES, and an answer that MISSES or FAILS leaves the witness unanswered (m
+######## ALL
+strings planted upstream: 18
+ALL Panel Cure Check output, sol:
+   KEYSTONE: KEYSTONE: D6 -- BROKEN -- LINK 6 BROKEN BY A CONFIRMED CLOSING CONTRADICTION\\ || KEYSTONE: D6 -- STANDS -- The conclusion that Christ had no biological father remains  || KEYSTONE: D6 -- STANDS -- The conclusion that Christ had no biological father remains 
+   send-back items sol: S1 E-ANS ANSWER CHECK Luke 1:34 [CR3]; S2 E-COL COLLISION D6 vs C5; S3 E-COL COLLISION D6 vs C6; S4 E-ANS ANSWER CHECK Matthew 1:24 [CR3]; S5 E-ANS ANSWER CHECK Luke 1:37 [DR3]; S6 E-HOLD COLLISION D2 vs C1 (UNDERDETERMINED; pkgUNA) | not sent: 
+   written row sol: KEYSTONE: D6 -- BROKEN -- LINK 6 BROKEN BY A CONFIRMED CLOSING CONTRADICTION | tag BROKEN | drv_uncured 2
+   all rows: luna BROKEN u2 KEYSTONE: D6 -- BROKEN | chatgpt BROKEN u0 KEYSTONE: D6 -- BROKEN | sol BROKEN u2 KEYSTONE: D6 -- BROKEN
+   gate items: luna NOT APPLIED E-APPLY S6: the change drops the collision D2 vs C1 (W3 2351: a change to a collision or FORCED line must be a collision line for the same pai
+      luna NOT APPLIED E-APPLY S10: the change drops the collision D3 vs C1 (W3 2351: a change to a collision or FORCED line must be a collision line for the same pai
+      luna CONTRADICTION E-GATE M: your ANSWER CHECK on Luke 1:34 [CR3] grades the answer MISSES, and an answer that MISSES or FAILS leaves the witness unanswered (m
+      luna CONTRADICTION E-GATE M: your ANSWER CHECK on Matthew 1:25 [CR3] grades the answer MISSES, and an answer that MISSES or FAILS leaves the witness unanswered
+      luna CONTRADICTION E-GATE M: your ANSWER CHECK on Luke 1:36 [CR3] grades the answer MISSES, and an answer that MISSES or FAILS leaves the witness unanswered (m
+######## r3_ALLxK2.json
+strings planted upstream: 18
+/tmp/claude-0/-home-claude/ce829ea6-86e3-51b0-af44-4033b35f6682/scratchpad/r3_ALLxK2.json Panel Cure Check output, sol:
+   KEYSTONE: KEYSTONE: D6 -- BROKEN -- LINK 6 BROKEN BY A CONFIRMED CLOSING CONTRADICTION\\ || KEYSTONE: D6 -- STANDS -- The conclusion that Christ had no biological father remains  || KEYSTONE: D6 -- STANDS -- The conclusion that Christ had no biological father remains 
+   send-back items sol: S1 E-ANS ANSWER CHECK Luke 1:34 [CR3]; S2 E-COL COLLISION D6 vs C5; S3 E-COL COLLISION D6 vs C6; S4 E-ANS ANSWER CHECK Matthew 1:24 [CR3]; S5 E-ANS ANSWER CHECK Luke 1:37 [DR3]; S6 E-HOLD COLLISION D2 vs C1 (UNDERDETERMINED; pkgUNA) | not sent: 
+   written row sol: KEYSTONE: D6 -- BROKEN -- LINK 6 BROKEN BY A CONFIRMED CLOSING CONTRADICTION | tag BROKEN | drv_uncured 2
+   all rows: luna BROKEN u2 KEYSTONE: D6 -- BROKEN | chatgpt BROKEN u0 KEYSTONE: D6 -- BROKEN | sol BROKEN u2 KEYSTONE: D6 -- BROKEN
+   gate items: luna NOT APPLIED E-APPLY S6: the change drops the collision D2 vs C1 (W3 2351: a change to a collision or FORCED line must be a collision line for the same pai
+      luna NOT APPLIED E-APPLY S10: the change drops the collision D3 vs C1 (W3 2351: a change to a collision or FORCED line must be a collision line for the same pai
+      luna CONTRADICTION E-GATE M: your ANSWER CHECK on Luke 1:34 [CR3] grades the answer MISSES, and an answer that MISSES or FAILS leaves the witness unanswered (m
+      luna CONTRADICTION E-GATE M: your ANSWER CHECK on Matthew 1:25 [CR3] grades the answer MISSES, and an answer that MISSES or FAILS leaves the witness unanswered
+      luna CONTRADICTION E-GATE M: your ANSWER CHECK on Luke 1:36 [CR3] grades the answer MISSES, and an answer that MISSES or FAILS leaves the witness unanswered (m
+######## r3_ALLxK3.json
+strings planted upstream: 18
+/tmp/claude-0/-home-claude/ce829ea6-86e3-51b0-af44-4033b35f6682/scratchpad/r3_ALLxK3.json Panel Cure Check output, sol:
+   KEYSTONE: KEYSTONE: D6 -- BROKEN -- LINK 6 BROKEN BY A CONFIRMED CLOSING CONTRADICTION\\ || KEYSTONE: D6 -- STANDS -- The conclusion that Christ had no biological father remains  || KEYSTONE: D6 -- STANDS -- The conclusion that Christ had no biological father remains 
+   send-back items sol: S1 E-ANS ANSWER CHECK Luke 1:34 [CR3]; S2 E-COL COLLISION D6 vs C5; S3 E-COL COLLISION D6 vs C6; S4 E-ANS ANSWER CHECK Matthew 1:24 [CR3]; S5 E-ANS ANSWER CHECK Luke 1:37 [DR3]; S6 E-HOLD COLLISION D2 vs C1 (UNDERDETERMINED; pkgUNA) | not sent: 
+   written row sol: KEYSTONE: D6 -- BROKEN -- LINK 6 BROKEN BY A CONFIRMED CLOSING CONTRADICTION | tag BROKEN | drv_uncured 2
+   all rows: luna BROKEN u2 KEYSTONE: D6 -- BROKEN | chatgpt BROKEN u0 KEYSTONE: D6 -- BROKEN | sol BROKEN u2 KEYSTONE: D6 -- BROKEN
+   gate items: luna NOT APPLIED E-APPLY S6: the change drops the collision D2 vs C1 (W3 2351: a change to a collision or FORCED line must be a collision line for the same pai
+      luna NOT APPLIED E-APPLY S10: the change drops the collision D3 vs C1 (W3 2351: a change to a collision or FORCED line must be a collision line for the same pai
+      luna CONTRADICTION E-GATE M: your ANSWER CHECK on Luke 1:34 [CR3] grades the answer MISSES, and an answer that MISSES or FAILS leaves the witness unanswered (m
+      luna CONTRADICTION E-GATE M: your ANSWER CHECK on Matthew 1:25 [CR3] grades the answer MISSES, and an answer that MISSES or FAILS leaves the witness unanswered
+      luna CONTRADICTION E-GATE M: your ANSWER CHECK on Luke 1:36 [CR3] grades the answer MISSES, and an answer that MISSES or FAILS leaves the witness unanswered (m
+######## r3_ALLxK5.json
+strings planted upstream: 18
+/tmp/claude-0/-home-claude/ce829ea6-86e3-51b0-af44-4033b35f6682/scratchpad/r3_ALLxK5.json Panel Cure Check output, sol:
+   KEYSTONE: KEYSTONE: D6 -- BROKEN -- LINK 6 BROKEN BY A CONFIRMED CLOSING CONTRADICTION\\ || KEYSTONE: D6 -- STANDS -- The conclusion that Christ had no biological father remains  || KEYSTONE: D6 -- STANDS -- The conclusion that Christ had no biological father remains 
+   send-back items sol: S1 E-ANS ANSWER CHECK Luke 1:34 [CR3]; S2 E-COL COLLISION D6 vs C5; S3 E-COL COLLISION D6 vs C6; S4 E-ANS ANSWER CHECK Matthew 1:24 [CR3]; S5 E-ANS ANSWER CHECK Luke 1:37 [DR3]; S6 E-HOLD COLLISION D2 vs C1 (UNDERDETERMINED; pkgUNA) | not sent: 
+   written row sol: KEYSTONE: D6 -- BROKEN -- LINK 6 BROKEN BY A CONFIRMED CLOSING CONTRADICTION | tag BROKEN | drv_uncured 2
+   all rows: luna BROKEN u2 KEYSTONE: D6 -- BROKEN | chatgpt BROKEN u0 KEYSTONE: D6 -- BROKEN | sol BROKEN u2 KEYSTONE: D6 -- BROKEN
+   gate items: luna NOT APPLIED E-APPLY S6: the change drops the collision D2 vs C1 (W3 2351: a change to a collision or FORCED line must be a collision line for the same pai
+      luna NOT APPLIED E-APPLY S10: the change drops the collision D3 vs C1 (W3 2351: a change to a collision or FORCED line must be a collision line for the same pai
+      luna CONTRADICTION E-GATE M: your ANSWER CHECK on Luke 1:34 [CR3] grades the answer MISSES, and an answer that MISSES or FAILS leaves the witness unanswered (m
+      luna CONTRADICTION E-GATE M: your ANSWER CHECK on Matthew 1:25 [CR3] grades the answer MISSES, and an answer that MISSES or FAILS leaves the witness unanswered
+      luna CONTRADICTION E-GATE M: your ANSWER CHECK on Luke 1:36 [CR3] grades the answer MISSES, and an answer that MISSES or FAILS leaves the witness unanswered (m
