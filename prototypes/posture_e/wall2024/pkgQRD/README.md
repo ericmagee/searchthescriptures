@@ -8,7 +8,7 @@ What changes (QR Check, QR Final):
   debater's closing round, ask about it instead; if you see none, keep your question." A judge returned for a fault gets the sentence too.
 - QR Final: a side returned only to redirect uses the second question if it passes and keeps the first if it fails (never dropped); a side not
   at fault keeps its first question when the return was only a redirect. Faulted sides follow today's rule. The record carries "redirect".
-Size measured: code QR Check 6,026 -> 7,238 (+1,212), QR Final 7,842 -> 8,116 (+274): +1,486 code. Prompt text: +219 characters (the sentence),
+Size measured: code QR Check 6,026 -> 7,238 (+1,212), QR Final 7,842 -> 8,116 (+274): +1,486 code. Prompt text: the sentence is 213 characters (a redirect-only return is 321 characters with its head and last line),
 sent only to a returned judge, only when questions repeat; nothing added to any first ask, debater prompt or judge prompt.
 Cost: each redirected judge's return is a full judge call (the conversation resent) instead of today's no-op call; in 34299 the first asks were
 75,177 to 76,590 prompt tokens (measured), so 34108 would add two such calls.
