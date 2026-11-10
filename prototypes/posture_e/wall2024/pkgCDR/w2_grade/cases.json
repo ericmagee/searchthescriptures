@@ -561,6 +561,125 @@
    "closing": "The register stops at Joseph.",
    "want": "NOT LISTED",
    "note": "rev 3 regrade, labeled before any rev 3 run: W2 own: a later quoted span is kept, not dropped"
+  },
+  {
+   "id": "W34",
+   "adds": [
+    [
+     "cr3",
+     "I withdraw the wording \"the register stops at Joseph\" if the challenger shows a row against it; he has shown none."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "NOT LISTED",
+   "note": "rev 3 grade, labeled before the run: conditional tail after the wording (W3 rev 3 class)"
+  },
+  {
+   "id": "W35",
+   "adds": [
+    [
+     "cr3",
+     "I drop the wording \"the register stops at Joseph\"? No."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "NOT LISTED",
+   "note": "rev 3 grade, labeled before the run: question tail (W3 rev 3 class)"
+  },
+  {
+   "id": "W36",
+   "adds": [
+    [
+     "cr3",
+     "I drop the wording \"the register stops at Joseph\" unless the rows bear it, and they do."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "NOT LISTED",
+   "note": "rev 3 grade, labeled before the run: W2 own: 'unless' tail"
+  },
+  {
+   "id": "W37",
+   "adds": [
+    [
+     "cr3",
+     "I drop the wording \"the register stops at Joseph\", provided the challenger proves the gap; he has not."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "NOT LISTED",
+   "note": "rev 3 grade, labeled before the run: W2 own: 'provided' tail"
+  },
+  {
+   "id": "W38",
+   "adds": [
+    [
+     "cr3",
+     "I drop the wording \"the register stops at Joseph\" for now."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "LISTED",
+   "note": "rev 3 grade, labeled before the run: W2 own: a true drop with a time tail"
+  },
+  {
+   "id": "W39",
+   "adds": [
+    [
+     "cr3",
+     "I drop the wording \"the register stops at Joseph\", as the challenger asked."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "LISTED",
+   "note": "rev 3 grade, labeled before the run: W2 own: a true drop with an 'as' tail"
+  },
+  {
+   "id": "W40",
+   "adds": [
+    [
+     "cr3",
+     "I drop the wording \"the register stops at Joseph\" because the rows do not state it."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "LISTED",
+   "note": "rev 3 grade, labeled before the run: W2 own: a true drop with a reason tail"
   }
  ]
 }
