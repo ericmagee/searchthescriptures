@@ -13,8 +13,8 @@
  "library": {
   "file": "Shared_Library.js",
   "lines": 3816,
-  "json_sha": "9eb8926e1f9d1d23",
-  "bytes": 914564
+  "json_sha": "41599495caca1afd",
+  "bytes": 914539
  },
  "nodes": [
   {
@@ -39,8 +39,8 @@
    "file": "Alt_Gate_Record.js",
    "name": "Alt Gate Record",
    "src": "/home/claude/searchthescriptures/prototypes/posture_e/wall2024/pkgLIB/strip_GCCN3/patched/Alt_Gate_Record.js",
-   "base_sha": "4a1fb50365b31650",
-   "base_bytes": 382274,
+   "base_sha": "c5e858a818d9b33d",
+   "base_bytes": 382249,
    "stub_sha": "54a652d12de74d9f",
    "stub_bytes": 1552,
    "refs": [
@@ -367,8 +367,8 @@
    "file": "Gate_Record.js",
    "name": "Gate Record",
    "src": "/home/claude/searchthescriptures/prototypes/posture_e/wall2024/pkgLIB/strip_GCCN3/patched/Gate_Record.js",
-   "base_sha": "a0c9e74160aa60db",
-   "base_bytes": 382265,
+   "base_sha": "719dd1ad655c23ba",
+   "base_bytes": 382240,
    "stub_sha": "a2d5b2c0cff2b00f",
    "stub_bytes": 1538,
    "refs": [
@@ -589,8 +589,8 @@
    "file": "R2_Alt_Gate_Record.js",
    "name": "R2 Alt Gate Record",
    "src": "/home/claude/searchthescriptures/prototypes/posture_e/wall2024/pkgLIB/strip_GCCN3/patched/R2_Alt_Gate_Record.js",
-   "base_sha": "4d2986891eae4236",
-   "base_bytes": 382286,
+   "base_sha": "c4d44e539b404c77",
+   "base_bytes": 382261,
    "stub_sha": "e88a053655d3a1b5",
    "stub_bytes": 1570,
    "refs": [
@@ -877,6 +877,6 @@
   }
  ],
  "stub_form": 3,
- "bytes_before": 11338439,
- "bytes_after": 984021
+ "bytes_before": 11338364,
+ "bytes_after": 983996
 }
