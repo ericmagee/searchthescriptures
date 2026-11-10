@@ -1,0 +1,21 @@
+34108 hints: P1 D CR3 LINK 1, P2 D CR3 LINK 2, P3 D CR3 LINK 3, P4 D CR3 LINK 4, P5 D CR3 LINK 5, P6 D CR3 LINK 6, P7 D CR2 LINK ?, P8 C DR3 LINK 4, P9 C DR1 LINK 2
+OK   A1 "LINK unknown" on NOT A CONTRADICTION is read as answered
+       NOT A CONTRADICTION
+OK   A2 "LINK not known to me" on NOT A CONTRADICTION is read as answered
+       NOT A CONTRADICTION
+OK   A3 "LINK unknown" CONFIRMED breaks nothing and carries the RECORD-ONLY note
+       NOT CONFIRMED (form) | LINK ? is not one of the defender's declared links (1, 2, 3, 4, 5, 6); RECORD-ONLY FOR REVIEW: both quotations stand word for word; the enforcer confirmed a contradiction it could not tie to a link, s
+OK   A4 CONFIRMED with LINK ? and a closing quotation that is not in the round: no RECORD-ONLY note
+       NOT CONFIRMED (form) | the closing quotation is not found word for word in CR4; LINK ? is not one of the defender's declared links (1, 2, 3, 4, 5, 6)
+OK   A5 CONFIRMED under an undeclared link 99: no RECORD-ONLY note, breaks nothing
+       NOT CONFIRMED (form) | LINK 99 is not one of the defender's declared links (1, 2, 3, 4, 5, 6)
+OK   A6 CONFIRMED with "LINK six" breaks nothing (a word is never a link)
+       NOT CONFIRMED (form) confirmed []
+OK   A7 the D6 hint CONFIRMED on LINK 6 breaks LINK 6
+       ["DEFENDER LINK 6"]
+OK   C1 with 40 padding drops in CR1 the round 3 hints are kept (D6 drop among the 30)
+       defender hints 30; by round {"CR3":6,"CR2":1,"CR1":23}
+PLANT: a drop in [CR2] after the lines "The challenger sets this against D5." and "On the genealogy, which is my D2 ground, ...": hint link on rev 11 = ?, on pkgCDF = 2
+   the enforcer copies the link shown in the hint and answers CONFIRMED: rev 11 -> NOT CONFIRMED (form) confirmed [] | pkgCDF -> NOT CONFIRMED (form) confirmed []
+PLANT 2: the same drop after "The challenger presses D5 hardest; my answer on D5 is above." (the drop is about the genealogy, not D5): pkgCDF hint link = 5; copied CONFIRMED -> NOT CONFIRMED (form) confirmed []
+8 OK, 0 FAIL
