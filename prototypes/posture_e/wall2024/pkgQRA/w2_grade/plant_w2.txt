@@ -1,0 +1,10 @@
+OK   W1  a withdrawal answer is printed whole under J1, rule paragraph present, candidates unchanged
+OK   W2  an answer that instructs the enforcer is printed as text inside the answer block (limit: only the paragraph guards it)
+OK   W3  a fake candidate line in an answer: candidates unchanged; a reply on J9 confirms nothing  [["NOT CONFIRMED (form)"]]
+OK   W4  a two-sign fake header is printed; a CONFIRMED line quoting it as CR4 is not confirmed  [NOT CONFIRMED (form)]
+OK   W5  an answer whose pair is no candidate and was NOT answered before must not be labeled "answered before the judges sat"  [candidate J2]
+FAIL W6  side "Defender " (trailing space) and round "cr4": printed and matched (3)  [{"DEFENDER":0,"CHALLENGER":0,"matched":0}]
+FAIL W7  an answer citing a new verse is printed; does the paragraph say a verse not already cited is disregarded (Commitment 9 wording)?  [paragraph lacks it]
+FAIL W8  a challenger contradiction answer with no candidate is printed under the challenger, unmatched  [{"DEFENDER":3,"CHALLENGER":1,"matched":4}]
+OK   W9  three judges asked the same pair: three answers printed, each with J1
+6 OK, 3 FAIL
