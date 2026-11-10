@@ -17,4 +17,4 @@ Measured on 35 stored debates (size_split.txt; characters, tokens estimated at 4
   estimated under 150 characters). The Call node already runs once per item. Not measured, because not built.
 Unmeasured cost: DeepSeek reasoning output. Two calls may reason about twice as long as one; only a replay through the approved relay shows it.
 Wording note: prompt_side.txt drops the "differs only in wording" exception and says a reclaimed drop is a contradiction "however worded". That is
-a rule change for the operator to rule on; without it the instruction is 1,345 characters and total growth +0.9%.
+a rule change for the operator to rule on; keeping the live wording rule the instruction is 1,309 characters and total growth +1,200 characters (+0.8%).
