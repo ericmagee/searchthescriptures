@@ -1,0 +1,21 @@
+# W2 new forms for pkgKRO rev 2, labeled before the run (rulebook K-S3: the close concession is counted = CURED; refused or not answered = UNCURED)
+CURED|new|COUNTED — the concession stands.|em dash after keyword|
+CURED|new|Answer: COUNTED.|label before keyword|
+CURED|new|**COUNTED**|bold|
+CURED|new|COUNTED; I do not dispute it.|negation after semicolon, agrees|
+CURED|new|I do not deny it: COUNTED.|negation before keyword, agrees|
+CURED|new|The concession is COUNTED, not withdrawn.|not after keyword|
+CURED|new|Not contested: COUNTED.|opens with Not but not NOT COUNTED|
+CURED|new|Not withdrawn, COUNTED.|opens with Not|
+CURED|new|No objection. COUNTED.|opens with No|
+CURED|new|COUNTED, though the defender never says so in round 3.|never after keyword|
+CURED|new|Yes. Counted against D6, as conceded in [DR3].|lowercase counted after Yes|
+CURED|new|COUNTED.\nThe defender cannot take it back now.|second line holds cannot|
+CURED|new|COUNTED.\nNo link is untouched by it.|second line opens No|
+CURED|new|I cannot say it is NOT COUNTED: it is COUNTED.|contains NOT COUNTED mid-answer, agrees|
+CURED|new|COUNTED (it is not NOT COUNTED).|double negative in parentheses|
+UNCURED|new|NOT COUNTED.|plain refusal|
+UNCURED|new|Not counted: the grant was withdrawn.|lowercase opening refusal|
+UNCURED|new|**NOT COUNTED**|bold refusal|
+UNCURED|new|The concession TOUCHES NO LINK, so it is not COUNTED.|touches no link|
+UNCURED|new|NOT COUNTED. The defender withdrew it in [CR4].|refusal with reason|
