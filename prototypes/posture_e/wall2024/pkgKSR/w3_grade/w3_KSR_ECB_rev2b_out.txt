@@ -1,0 +1,108 @@
+
+=== LIVE === nodes differing from the stored run: Send Back Call openrouter, Gate Call openrouter
+ Panel Cure Check bodies KEYSTONE: KEYSTONE: D6 -- BROKEN -- D6, the conclusion that Christ had || KEYSTONE: D6 -- BROKEN -- D6,...; STATEMENT: Commitment 7: t || KEYSTONE: D6 -- BROKEN -- D6, the conclusion that Christ had || KEYSTONE: D6 -- STANDS -- The declared conclusion that Chris || KEYSTONE: D6 -- STANDS -- The conclusion that Christ had no 
+ Send Back Build: luna 17 items, not_sent 0; chatgpt 6 items, not_sent 0; sol 7 items, not_sent 0
+ remap: luna: same | chatgpt: same | sol: same
+ luna gate: 5 items now, stored 5; ; new items with no stored answer: 
+ Gate Record seats: [{"seat":"luna","items":5,"cured":4,"uncured_counted":1,"fresh":2,"error":null}]
+ Send Back Record bodies KEYSTONE: KEYSTONE: D6 -- BROKEN -- D6, the conclusion that Christ had || KEYSTONE: D6 -- BROKEN -- D6, the conclusion that Christ had || KEYSTONE: D6 -- STANDS -- The declared conclusion that Chris || KEYSTONE: D6 -- STANDS -- The conclusion that Christ had no 
+ Gate Record bodies KEYSTONE: KEYSTONE: D6 -- BROKEN -- D6, the conclusion that Christ had || KEYSTONE: D6 -- BROKEN -- D6, the conclusion that Christ had || KEYSTONE: D6 -- STANDS -- The declared conclusion that Chris || KEYSTONE: D6 -- STANDS -- The conclusion that Christ had no 
+ Alternate Merge Seat bodies KEYSTONE: KEYSTONE: D6 -- STANDS -- derived by the engine from the col || KEYSTONE: D6 -- BROKEN -- D6, the conclusion that Christ had || KEYSTONE: D6 -- STANDS -- The declared conclusion that Chris || KEYSTONE: D6 -- STANDS -- The conclusion that Christ had no 
+ Send Back Record keys: run_token,debate_id,bodies,summary,substitution,panel_effective,vc_single,vc_error,kkjv_report,alt_needed,enforcer_log,enf421,enf428,sendback,sb_rows,sb_items
+ FINAL ROWS:
+   luna | tag BROKEN | drv_uncured 2 | result CHALLENGER WINS
+      KEYSTONE: D6 -- STANDS -- derived by the engine from the collision grades of D6 (none DEFENDER LINK BROKEN) after the change of S
+   chatgpt | tag BROKEN | drv_uncured 0 | result CHALLENGER WINS
+      KEYSTONE: D6 -- STANDS -- The declared conclusion that Christ had no biological father was retained on stated rows and has not be
+   sol | tag BROKEN | drv_uncured 0 | result CHALLENGER WINS
+      KEYSTONE: D6 -- STANDS -- The conclusion that Christ had no biological father remains an exhibited inference from the conception
+
+=== KSR === nodes differing from the stored run: Panel Cure Check, Enforcer Record, Judge Enforcer Build, Judge Enforcer Needed?, Judge Enforcer Retry Build, Judge Enforcer Retry Needed?, Judge Enforcer Record, Send Back Build, Send Back Needed?, Send Back Call openrouter, Send Back Record, Gate Call openrouter, Gate Record, Alternate Needed?, Alternate Build, Alternate Calls?, Early Reply?, Alternate Merge Seat, Alternate Merge 1, Second Alternate?, Second Alternate Needed?, Alternate Merge, Dry?, Replay Rows
+ Panel Cure Check bodies KEYSTONE: KEYSTONE: D6 -- BROKEN -- D6, the conclusion that Christ had || KEYSTONE: D6 -- BROKEN -- D6,...; STATEMENT: Commitment 7: t || KEYSTONE: D6 -- BROKEN -- D6, the conclusion that Christ had || KEYSTONE: D6 -- BROKEN -- LINK 6 BROKEN BY A CONFIRMED CLOSI || KEYSTONE: D6 -- BROKEN -- LINK 6 BROKEN BY A CONFIRMED CLOSI
+ Send Back Build: luna 17 items, not_sent 0; chatgpt 6 items, not_sent 0; sol 7 items, not_sent 0
+ remap: luna: same | chatgpt: S4>dropped | sol: S4>dropped
+ luna gate: 5 items now, stored 5; ; new items with no stored answer: 
+ Gate Record seats: [{"seat":"luna","items":5,"cured":4,"uncured_counted":1,"fresh":2,"error":null}]
+ Send Back Record bodies KEYSTONE: KEYSTONE: D6 -- BROKEN -- D6, the conclusion that Christ had || KEYSTONE: D6 -- BROKEN -- D6, the conclusion that Christ had || KEYSTONE: D6 -- BROKEN -- LINK 6 BROKEN BY A CONFIRMED CLOSI || KEYSTONE: D6 -- BROKEN -- LINK 6 BROKEN BY A CONFIRMED CLOSI
+ Gate Record bodies KEYSTONE: KEYSTONE: D6 -- BROKEN -- D6, the conclusion that Christ had || KEYSTONE: D6 -- BROKEN -- D6, the conclusion that Christ had || KEYSTONE: D6 -- BROKEN -- LINK 6 BROKEN BY A CONFIRMED CLOSI || KEYSTONE: D6 -- BROKEN -- LINK 6 BROKEN BY A CONFIRMED CLOSI
+ Alternate Merge Seat bodies KEYSTONE: KEYSTONE: D6 -- BROKEN -- D6, the conclusion that Christ had || KEYSTONE: D6 -- BROKEN -- D6, the conclusion that Christ had || KEYSTONE: D6 -- BROKEN -- LINK 6 BROKEN BY A CONFIRMED CLOSI || KEYSTONE: D6 -- BROKEN -- LINK 6 BROKEN BY A CONFIRMED CLOSI
+ Send Back Record keys: run_token,debate_id,bodies,summary,substitution,panel_effective,vc_single,vc_error,kkjv_report,alt_needed,enforcer_log,enf421,enf428,sendback,sb_rows,sb_items
+ FINAL ROWS:
+   luna | tag BROKEN | drv_uncured 2 | result CHALLENGER WINS
+      KEYSTONE: D6 -- BROKEN -- D6, the conclusion that Christ had no biological father, is broken by the confirmed closing contradicti
+   chatgpt | tag BROKEN | drv_uncured 1 | result CHALLENGER WINS
+      KEYSTONE: D6 -- BROKEN -- LINK 6 BROKEN BY A CONFIRMED CLOSING CONTRADICTION
+   sol | tag BROKEN | drv_uncured 1 | result CHALLENGER WINS
+      KEYSTONE: D6 -- BROKEN -- LINK 6 BROKEN BY A CONFIRMED CLOSING CONTRADICTION
+
+=== KSR (stored enforcer replies on the two KEYSTONE lines set to AGREE) === nodes differing from the stored run: Panel Cure Check, Enforcer Record, Judge Enforcer Build, Judge Enforcer Needed?, Judge Enforcer Call deepseek, Judge Enforcer Retry Build, Judge Enforcer Retry Needed?, Judge Enforcer Record, Send Back Build, Send Back Needed?, Send Back Call openrouter, Send Back Record, Gate Call openrouter, Gate Record, Alternate Needed?, Alternate Merge Seat, Alternate Merge 1, Second Alternate?, Second Alternate Needed?, Alternate Merge, Dry?, Replay Rows
+ Panel Cure Check bodies KEYSTONE: KEYSTONE: D6 -- BROKEN -- D6, the conclusion that Christ had || KEYSTONE: D6 -- BROKEN -- D6,...; STATEMENT: Commitment 7: t || KEYSTONE: D6 -- BROKEN -- D6, the conclusion that Christ had || KEYSTONE: D6 -- BROKEN -- LINK 6 BROKEN BY A CONFIRMED CLOSI || KEYSTONE: D6 -- BROKEN -- LINK 6 BROKEN BY A CONFIRMED CLOSI
+ Send Back Build: luna 17 items, not_sent 0; chatgpt 5 items, not_sent 0; sol 6 items, not_sent 0
+ remap: luna: same | chatgpt: S4>dropped S5>S4 S6>S5 | sol: S4>dropped S5>S4 S6>S5 S7>S6
+ luna gate: 5 items now, stored 5; ; new items with no stored answer: 
+ Gate Record seats: [{"seat":"luna","items":5,"cured":4,"uncured_counted":1,"fresh":2,"error":null}]
+ Send Back Record bodies KEYSTONE: KEYSTONE: D6 -- BROKEN -- D6, the conclusion that Christ had || KEYSTONE: D6 -- BROKEN -- D6, the conclusion that Christ had || KEYSTONE: D6 -- BROKEN -- LINK 6 BROKEN BY A CONFIRMED CLOSI || KEYSTONE: D6 -- BROKEN -- LINK 6 BROKEN BY A CONFIRMED CLOSI
+ Gate Record bodies KEYSTONE: KEYSTONE: D6 -- BROKEN -- D6, the conclusion that Christ had || KEYSTONE: D6 -- BROKEN -- D6, the conclusion that Christ had || KEYSTONE: D6 -- BROKEN -- LINK 6 BROKEN BY A CONFIRMED CLOSI || KEYSTONE: D6 -- BROKEN -- LINK 6 BROKEN BY A CONFIRMED CLOSI
+ Alternate Merge Seat bodies KEYSTONE: KEYSTONE: D6 -- BROKEN -- D6, the conclusion that Christ had || KEYSTONE: D6 -- BROKEN -- D6, the conclusion that Christ had || KEYSTONE: D6 -- BROKEN -- LINK 6 BROKEN BY A CONFIRMED CLOSI || KEYSTONE: D6 -- BROKEN -- LINK 6 BROKEN BY A CONFIRMED CLOSI
+ Send Back Record keys: run_token,debate_id,bodies,summary,substitution,panel_effective,vc_single,vc_error,kkjv_report,alt_needed,enforcer_log,enf421,enf428,sendback,sb_rows,sb_items
+ FINAL ROWS:
+   luna | tag BROKEN | drv_uncured 2 | result CHALLENGER WINS
+      KEYSTONE: D6 -- BROKEN -- D6, the conclusion that Christ had no biological father, is broken by the confirmed closing contradicti
+   chatgpt | tag BROKEN | drv_uncured 0 | result CHALLENGER WINS
+      KEYSTONE: D6 -- BROKEN -- LINK 6 BROKEN BY A CONFIRMED CLOSING CONTRADICTION
+   sol | tag BROKEN | drv_uncured 0 | result CHALLENGER WINS
+      KEYSTONE: D6 -- BROKEN -- LINK 6 BROKEN BY A CONFIRMED CLOSING CONTRADICTION
+
+=== ECB === nodes differing from the stored run: Send Back Build, Send Back Needed?, Send Back Call openrouter, Send Back Record, Reread Build, Reread Needed?, Reread Record, Gate Build, Gate Needed?, Gate Call openrouter, Gate Record, Alternate Needed?, Alternate Merge Seat, Alternate Merge 1, Second Alternate?, Second Alternate Needed?, Alternate Merge, Dry?, Replay Rows
+ Panel Cure Check bodies KEYSTONE: KEYSTONE: D6 -- BROKEN -- D6, the conclusion that Christ had || KEYSTONE: D6 -- BROKEN -- D6,...; STATEMENT: Commitment 7: t || KEYSTONE: D6 -- BROKEN -- D6, the conclusion that Christ had || KEYSTONE: D6 -- STANDS -- The declared conclusion that Chris || KEYSTONE: D6 -- STANDS -- The conclusion that Christ had no 
+ Send Back Build: luna 13 items, not_sent 8; chatgpt 4 items, not_sent 0; sol 5 items, not_sent 0
+ remap: luna: S6>dropped S7>dropped S8>dropped S9>dropped S10>S6 S11>S7 S12>S8 S13>S9 S14>S10 S15>S11 S16>S12 S17>S13 | chatgpt: S2>dropped S3>dropped S4>S2 S5>S3 S6>S4 | sol: S2>dropped S3>dropped S4>S2 S5>S3 S6>S4 S7>S5
+ luna gate: 5 items now, stored 5; ; new items with no stored answer: 
+ Gate Record seats: [{"seat":"luna","items":5,"cured":4,"uncured_counted":1,"fresh":2,"error":null}]
+ Send Back Record bodies KEYSTONE: KEYSTONE: D6 -- BROKEN -- D6, the conclusion that Christ had || KEYSTONE: D6 -- BROKEN -- D6, the conclusion that Christ had || KEYSTONE: D6 -- STANDS -- The declared conclusion that Chris || KEYSTONE: D6 -- STANDS -- The conclusion that Christ had no 
+ Gate Record bodies KEYSTONE: KEYSTONE: D6 -- BROKEN -- D6, the conclusion that Christ had || KEYSTONE: D6 -- BROKEN -- D6, the conclusion that Christ had || KEYSTONE: D6 -- STANDS -- The declared conclusion that Chris || KEYSTONE: D6 -- STANDS -- The conclusion that Christ had no 
+ Alternate Merge Seat bodies KEYSTONE: KEYSTONE: D6 -- BROKEN -- D6, the conclusion that Christ had || KEYSTONE: D6 -- BROKEN -- D6, the conclusion that Christ had || KEYSTONE: D6 -- STANDS -- The declared conclusion that Chris || KEYSTONE: D6 -- STANDS -- The conclusion that Christ had no 
+ Send Back Record keys: run_token,debate_id,bodies,summary,substitution,panel_effective,vc_single,vc_error,kkjv_report,alt_needed,enforcer_log,enf421,enf428,sendback,sb_rows,sb_items
+ FINAL ROWS:
+   luna | tag BROKEN | drv_uncured 2 | result CHALLENGER WINS
+      KEYSTONE: D6 -- BROKEN -- D6, the conclusion that Christ had no biological father, is broken by the confirmed closing contradicti
+   chatgpt | tag BROKEN | drv_uncured 0 | result CHALLENGER WINS
+      KEYSTONE: D6 -- STANDS -- The declared conclusion that Christ had no biological father was retained on stated rows and has not be
+   sol | tag BROKEN | drv_uncured 0 | result CHALLENGER WINS
+      KEYSTONE: D6 -- STANDS -- The conclusion that Christ had no biological father remains an exhibited inference from the conception
+
+=== ALL === nodes differing from the stored run: Panel Cure Check, Enforcer Record, Judge Enforcer Build, Judge Enforcer Needed?, Judge Enforcer Retry Build, Judge Enforcer Retry Needed?, Judge Enforcer Record, Send Back Build, Send Back Needed?, Send Back Call openrouter, Send Back Record, Reread Build, Reread Needed?, Reread Record, Gate Build, Gate Needed?, Gate Call openrouter, Gate Record, Alternate Needed?, Alternate Merge Seat, Alternate Merge 1, Second Alternate?, Second Alternate Needed?, Alternate Merge, Dry?, Replay Rows
+ Panel Cure Check bodies KEYSTONE: KEYSTONE: D6 -- BROKEN -- D6, the conclusion that Christ had || KEYSTONE: D6 -- BROKEN -- D6,...; STATEMENT: Commitment 7: t || KEYSTONE: D6 -- BROKEN -- D6, the conclusion that Christ had || KEYSTONE: D6 -- BROKEN -- LINK 6 BROKEN BY A CONFIRMED CLOSI || KEYSTONE: D6 -- BROKEN -- LINK 6 BROKEN BY A CONFIRMED CLOSI
+ Send Back Build: luna 13 items, not_sent 10; chatgpt 3 items, not_sent 0; sol 4 items, not_sent 0
+ remap: luna: S6>dropped S7>dropped S8>dropped S9>dropped S10>S6 S11>S7 S12>S8 S13>S9 S14>S10 S15>S11 S16>S12 S17>S13 | chatgpt: S2>dropped S3>dropped S4>dropped S5>S2 S6>S3 | sol: S2>dropped S3>dropped S4>dropped S5>S2 S6>S3 S7>S4
+ luna gate: 5 items now, stored 5; ; new items with no stored answer: 
+ Gate Record seats: [{"seat":"luna","items":5,"cured":4,"uncured_counted":1,"fresh":2,"error":null}]
+ Send Back Record bodies KEYSTONE: KEYSTONE: D6 -- BROKEN -- D6, the conclusion that Christ had || KEYSTONE: D6 -- BROKEN -- D6, the conclusion that Christ had || KEYSTONE: D6 -- BROKEN -- LINK 6 BROKEN BY A CONFIRMED CLOSI || KEYSTONE: D6 -- BROKEN -- LINK 6 BROKEN BY A CONFIRMED CLOSI
+ Gate Record bodies KEYSTONE: KEYSTONE: D6 -- BROKEN -- D6, the conclusion that Christ had || KEYSTONE: D6 -- BROKEN -- D6, the conclusion that Christ had || KEYSTONE: D6 -- BROKEN -- LINK 6 BROKEN BY A CONFIRMED CLOSI || KEYSTONE: D6 -- BROKEN -- LINK 6 BROKEN BY A CONFIRMED CLOSI
+ Alternate Merge Seat bodies KEYSTONE: KEYSTONE: D6 -- BROKEN -- D6, the conclusion that Christ had || KEYSTONE: D6 -- BROKEN -- D6, the conclusion that Christ had || KEYSTONE: D6 -- BROKEN -- LINK 6 BROKEN BY A CONFIRMED CLOSI || KEYSTONE: D6 -- BROKEN -- LINK 6 BROKEN BY A CONFIRMED CLOSI
+ Send Back Record keys: run_token,debate_id,bodies,summary,substitution,panel_effective,vc_single,vc_error,kkjv_report,alt_needed,enforcer_log,enf421,enf428,sendback,sb_rows,sb_items
+ FINAL ROWS:
+   luna | tag BROKEN | drv_uncured 2 | result CHALLENGER WINS
+      KEYSTONE: D6 -- BROKEN -- D6, the conclusion that Christ had no biological father, is broken by the confirmed closing contradicti
+   chatgpt | tag BROKEN | drv_uncured 0 | result CHALLENGER WINS
+      KEYSTONE: D6 -- BROKEN -- LINK 6 BROKEN BY A CONFIRMED CLOSING CONTRADICTION
+   sol | tag BROKEN | drv_uncured 0 | result CHALLENGER WINS
+      KEYSTONE: D6 -- BROKEN -- LINK 6 BROKEN BY A CONFIRMED CLOSING CONTRADICTION
+
+=== ALL (stored enforcer replies on the two KEYSTONE lines set to AGREE) === nodes differing from the stored run: Panel Cure Check, Enforcer Record, Judge Enforcer Build, Judge Enforcer Needed?, Judge Enforcer Call deepseek, Judge Enforcer Retry Build, Judge Enforcer Retry Needed?, Judge Enforcer Record, Send Back Build, Send Back Needed?, Send Back Call openrouter, Send Back Record, Reread Build, Reread Needed?, Reread Record, Gate Build, Gate Needed?, Gate Call openrouter, Gate Record, Alternate Needed?, Alternate Merge Seat, Alternate Merge 1, Second Alternate?, Second Alternate Needed?, Alternate Merge, Dry?, Replay Rows
+ Panel Cure Check bodies KEYSTONE: KEYSTONE: D6 -- BROKEN -- D6, the conclusion that Christ had || KEYSTONE: D6 -- BROKEN -- D6,...; STATEMENT: Commitment 7: t || KEYSTONE: D6 -- BROKEN -- D6, the conclusion that Christ had || KEYSTONE: D6 -- BROKEN -- LINK 6 BROKEN BY A CONFIRMED CLOSI || KEYSTONE: D6 -- BROKEN -- LINK 6 BROKEN BY A CONFIRMED CLOSI
+ Send Back Build: luna 13 items, not_sent 8; chatgpt 3 items, not_sent 0; sol 4 items, not_sent 0
+ remap: luna: S6>dropped S7>dropped S8>dropped S9>dropped S10>S6 S11>S7 S12>S8 S13>S9 S14>S10 S15>S11 S16>S12 S17>S13 | chatgpt: S2>dropped S3>dropped S4>dropped S5>S2 S6>S3 | sol: S2>dropped S3>dropped S4>dropped S5>S2 S6>S3 S7>S4
+ luna gate: 5 items now, stored 5; ; new items with no stored answer: 
+ Gate Record seats: [{"seat":"luna","items":5,"cured":4,"uncured_counted":1,"fresh":2,"error":null}]
+ Send Back Record bodies KEYSTONE: KEYSTONE: D6 -- BROKEN -- D6, the conclusion that Christ had || KEYSTONE: D6 -- BROKEN -- D6, the conclusion that Christ had || KEYSTONE: D6 -- BROKEN -- LINK 6 BROKEN BY A CONFIRMED CLOSI || KEYSTONE: D6 -- BROKEN -- LINK 6 BROKEN BY A CONFIRMED CLOSI
+ Gate Record bodies KEYSTONE: KEYSTONE: D6 -- BROKEN -- D6, the conclusion that Christ had || KEYSTONE: D6 -- BROKEN -- D6, the conclusion that Christ had || KEYSTONE: D6 -- BROKEN -- LINK 6 BROKEN BY A CONFIRMED CLOSI || KEYSTONE: D6 -- BROKEN -- LINK 6 BROKEN BY A CONFIRMED CLOSI
+ Alternate Merge Seat bodies KEYSTONE: KEYSTONE: D6 -- BROKEN -- D6, the conclusion that Christ had || KEYSTONE: D6 -- BROKEN -- D6, the conclusion that Christ had || KEYSTONE: D6 -- BROKEN -- LINK 6 BROKEN BY A CONFIRMED CLOSI || KEYSTONE: D6 -- BROKEN -- LINK 6 BROKEN BY A CONFIRMED CLOSI
+ Send Back Record keys: run_token,debate_id,bodies,summary,substitution,panel_effective,vc_single,vc_error,kkjv_report,alt_needed,enforcer_log,enf421,enf428,sendback,sb_rows,sb_items
+ FINAL ROWS:
+   luna | tag BROKEN | drv_uncured 2 | result CHALLENGER WINS
+      KEYSTONE: D6 -- BROKEN -- D6, the conclusion that Christ had no biological father, is broken by the confirmed closing contradicti
+   chatgpt | tag BROKEN | drv_uncured 0 | result CHALLENGER WINS
+      KEYSTONE: D6 -- BROKEN -- LINK 6 BROKEN BY A CONFIRMED CLOSING CONTRADICTION
+   sol | tag BROKEN | drv_uncured 0 | result CHALLENGER WINS
+      KEYSTONE: D6 -- BROKEN -- LINK 6 BROKEN BY A CONFIRMED CLOSING CONTRADICTION

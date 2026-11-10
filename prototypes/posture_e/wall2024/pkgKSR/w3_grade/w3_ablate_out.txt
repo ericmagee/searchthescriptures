@@ -1,0 +1,13 @@
+ALL        : luna KEYSTONE: D6 -- BROKEN -- D6 u2 | chatgpt KEYSTONE: D6 -- BROKEN -- LI u0 | sol KEYSTONE: D6 -- BROKEN -- LI u0 || gate: ["luna 5/4"] || derived STANDS lines: 0
+ALL - K2   : luna KEYSTONE: D6 -- BROKEN -- D6 u2 | chatgpt KEYSTONE: D6 -- BROKEN -- LI u0 | sol KEYSTONE: D6 -- BROKEN -- LI u0 || gate: ["luna 5/4"] || derived STANDS lines: 0
+ALL - K3   : luna KEYSTONE: D6 -- BROKEN -- D6 u2 | chatgpt KEYSTONE: D6 -- BROKEN -- LI u0 | sol KEYSTONE: D6 -- BROKEN -- LI u0 || gate: ["luna 5/4"] || derived STANDS lines: 0
+ALL - K4   : luna KEYSTONE: D6 -- BROKEN -- D6 u2 | chatgpt KEYSTONE: D6 -- BROKEN -- LI u0 | sol KEYSTONE: D6 -- BROKEN -- LI u0 || gate: ["luna 5/4"] || derived STANDS lines: 0
+ALL - K5   : luna KEYSTONE: D6 -- BROKEN -- D6 u2 | chatgpt KEYSTONE: D6 -- BROKEN -- LI u0 | sol KEYSTONE: D6 -- BROKEN -- LI u0 || gate: ["luna 5/4"] || derived STANDS lines: 0
+ALL - K6   : luna KEYSTONE: D6 -- BROKEN -- D6 u2 | chatgpt KEYSTONE: D6 -- BROKEN -- LI u0 | sol KEYSTONE: D6 -- BROKEN -- LI u0 || gate: ["luna 5/4","chatgpt 1/0 no reply"] || derived STANDS lines: 0
+-- without the AGREE assumption on the two stored enforcer replies:
+ALL        : luna KEYSTONE: D6 -- BROKEN -- D6 u2 | chatgpt KEYSTONE: D6 -- BROKEN -- LI u0 | sol KEYSTONE: D6 -- BROKEN -- LI u0 || gate: ["luna 5/4"] || derived STANDS lines: 0
+ALL - K2   : luna KEYSTONE: D6 -- BROKEN -- D6 u2 | chatgpt KEYSTONE: D6 -- BROKEN -- LI u0 | sol KEYSTONE: D6 -- BROKEN -- LI u0 || gate: ["luna 5/4"] || derived STANDS lines: 0
+ALL - K3   : luna KEYSTONE: D6 -- BROKEN -- D6 u2 | chatgpt KEYSTONE: D6 -- BROKEN -- LI u0 | sol KEYSTONE: D6 -- BROKEN -- LI u0 || gate: ["luna 5/4"] || derived STANDS lines: 0
+ALL - K4   : luna KEYSTONE: D6 -- BROKEN -- D6 u2 | chatgpt KEYSTONE: D6 -- BROKEN -- LI u0 | sol KEYSTONE: D6 -- BROKEN -- LI u0 || gate: ["luna 5/4"] || derived STANDS lines: 0
+ALL - K5   : luna KEYSTONE: D6 -- BROKEN -- D6 u2 | chatgpt KEYSTONE: D6 -- BROKEN -- LI u0 | sol KEYSTONE: D6 -- BROKEN -- LI u0 || gate: ["luna 5/4"] || derived STANDS lines: 0
+ALL - K6   : luna KEYSTONE: D6 -- BROKEN -- D6 u2 | chatgpt KEYSTONE: D6 -- BROKEN -- LI u0 | sol KEYSTONE: D6 -- BROKEN -- LI u0 || gate: ["luna 5/4","chatgpt 1/0 no reply"] || derived STANDS lines: 0

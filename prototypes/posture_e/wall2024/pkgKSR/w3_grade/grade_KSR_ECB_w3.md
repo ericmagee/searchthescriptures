@@ -48,3 +48,42 @@ answers are renumbered by item identity and answers to items no longer sent are 
 
 ## Result lines
 RESULT, tag (BROKEN), CHALLENGER WINS unchanged in every chain. luna stays out of the count in every chain (drv_uncured above 0).
+
+
+# REV 2b REGRADE (W1 commit b3b1305b; labels ae8eacb7 before any run). Outputs w3_KSR_ECB_rev2b_out.txt, w3_plants_rev2_out.txt, w3_plants_rev2b_out.txt, w3_ablate_out.txt, w3_ablate2_out.txt.
+
+## Verdict (the two packages together, as W1 proposes): FAIL, narrow. One KEYSTONE line form is missed (R6). Everything else I tested passes.
+
+## R1 Sizes (measured): pkgKSR +1,384, pkgECB +1,500, both +2,884. Shared Library, plus the three Send Back Build stubs for pkgECB (they now name the closing enforcer nodes). Connections equal. The repo file equals /mnt/project-files/wall2024/parent_s110_KSR_ECB_ALL_rev2.json.
+
+## R2 Both, whole chain to the written rows: OK
+KEYSTONE D6 BROKEN for luna (her own line), terra and sol (the engine's line). Tags, RESULT, drv_uncured (luna 2, terra 0, sol 0) as live. The gate holds luna's 5 items only: the item against terra's RULING card is gone, and luna's two FORCED lines of link 6 are not sent and raise nothing. 10 items withheld, each listed in sb_not_sent.
+
+## R3 Alone
+- pkgECB alone: luna BROKEN; terra and sol STANDS. Rows otherwise as live.
+- pkgKSR alone: rows read BROKEN for all three, but the engine's KEYSTONE line is sent back to terra and sol as an E-KEY item (drv_uncured 1 each in the replay with stored replies). Not to be written alone.
+
+## R4, R5 Withhold rules: OK (7 of 7)
+My two rev 1 plants (a judge's own line carrying the eight words) are SENT now. A hand-typed mark for a link that is not confirmed, a mark for link 6 on a link 2 line, a KEYSTONE line in the engine's form for a link that is not confirmed, and the engine's KEYSTONE line with more words after it: all SENT. Every item withheld by both packages is a link 6 collision line, its FORCED line or the KEYSTONE D6 item; every other item equals live.
+
+## R6 KEYSTONE line forms (sol's stored line rewritten before Panel Cure Check): FAIL on one form
+- Rewritten to BROKEN in the written row: bold, em dash, colon, no separator, lower-case grade. OK.
+- NOT rewritten: a line that opens with a bullet ("• KEYSTONE: D6 -- STANDS ..." and "- KEYSTONE: D6 -- STANDS ..."). Live reads that line as the KEYSTONE line (the enforcer step builds an E-KEY item on it), so the written row would read STANDS on a broken link: fault 2 again for that form.
+  Stored judgments (measured): 495 of 519 carry a KEYSTONE line; none opens with a bullet or bold. So 0 real cases; found by plant only.
+  Closing condition (for W1 to write): the KEYSTONE rewrite reads every line form the live KEYSTONE reader reads, a leading bullet included.
+- "KEYSTONE: LINK 6 -- STANDS": left as written by live and by the candidate; live does not read it as a KEYSTONE line either (no E-KEY item). Not counted against the package.
+
+## R7 Confirmed list planted: OK
+Confirmed line moved to defender link 3, or to CHALLENGER link 6: pkgKSR alone gives rows equal to live; with both, every KEYSTONE line is as live has it and only that link's engine break lines are withheld. No confirmed line: rows equal live.
+
+## R8 enforcer_log: OK
+Both packages add 10 "SEND-BACK NOT SENT ... (pkgECB)" rows and 2 record-only K-RECHK rows on the engine's KEYSTONE line; the same fields as live rows. Rolled-back insert of three of them through record_enforcer_log: {"rows": 3, "recorded": true}; 0 rows left after the rollback.
+
+## R9 Bloat (measured by building both packages without one patch at a time)
+- Needed on 34626: K1 (the rewrite), K6 (+82: without it the gate item against terra's RULING card returns), E1 to E3.
+- NO EFFECT in my two tests: K2 (+67), K3 (+65), K4 (+686), K5 (+66), together +884 of the +2,884. Test 1: 34626 whole chain. Test 2: a plant where sol has no collision line of the keystone link (the "no collision line names it" branch). In both, the written rows, the send-back items and the gate items are the same with and without each patch.
+  K4 guards the KEYSTONE line through send-back; with pkgECB in the same write the engine's KEYSTONE line and the break lines are never sent, so nothing can change it there in my replays.
+  A package without K2 to K5 would be +2,000 (measured sum) and would not change this grade. W1 may know a case that needs them; none is shown.
+
+## Limits
+Stored replies only; new items have no answer. The enforcer's stored DISAGREE on terra's and sol's KEYSTONE lines was written against STANDS; I ran the chain with those two replies as stored and as AGREE, with the same rows. Alt and R2 Alt Send Back Build: NOT REACHED with items.
