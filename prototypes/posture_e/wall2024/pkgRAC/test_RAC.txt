@@ -1,0 +1,132 @@
+OK   T1 Anticheat Build is fed by Quote Report only: ["Quote Report#0"]
+OK   T1 Close Enforcer Build is fed by the anti-cheat check (false branch of Anticheat Only?) only: ["Anticheat Only?#1"]
+OK   T1 Panel Build is fed by Check Save and the regrade branch: ["Check Save#0","Regrade After Quotes?#0"]
+OK   T1 Build Independent Verdict feed unchanged
+OK   T1 exactly four connection sources differ from live: Check Save, Quote Report, Regrade After Quotes?, Anticheat Only?
+OK   T1 live path: Quote Report > Anticheat Build > Anticheat Needed? > Anticheat Call deepseek > Anticheat Record > Anticheat Only? > Close Enforcer Build > Close Enforcer Needed? > Close Enforcer Call deepseek > Close Enforcer Record > Regrade After Quotes? > Build Independent Verdict
+OK   T1 nodes that differ from live: Build Independent Verdict, Close Enforcer Build, Close Enforcer Record, Panel Build
+OK   T2 33276 skip equal
+OK   T2 33289 skip equal
+OK   T2 33311 skip equal
+OK   T2 33322 skip equal
+T2 stored debates built: 35; prompt equal to live where no pair: 17; debates with anti-cheat candidates 16 (34 pairs), with reversal candidates 2 (2 pairs); pairs not sent 0
+T2 prompt growth over the 35 stored closing enforcer calls: +12112 characters on 5044040 (+0.240%); mean +346 per debate
+   33218: A 3, R 0, not sent 0, prompt +1050
+   33222: A 1, R 0, not sent 0, prompt +243
+   33261: A 3, R 0, not sent 0, prompt +1056
+   33299: A 6, R 0, not sent 0, prompt +1967
+   33345: A 1, R 0, not sent 0, prompt +335
+   33371: A 2, R 0, not sent 0, prompt +822
+   33430: A 1, R 0, not sent 0, prompt +289
+   33442: A 1, R 0, not sent 0, prompt +280
+   33461: A 1, R 0, not sent 0, prompt +287
+   33482: A 1, R 0, not sent 0, prompt +272
+   33530: A 1, R 0, not sent 0, prompt +544
+   33575: A 0, R 1, not sent 0, prompt +382
+   33592: A 2, R 0, not sent 0, prompt +589
+   33644: A 1, R 0, not sent 0, prompt +507
+   33705: A 1, R 0, not sent 0, prompt +275
+   33798: A 3, R 0, not sent 0, prompt +850
+   33846: A 6, R 0, not sent 0, prompt +1952
+   34108: A 0, R 1, not sent 0, prompt +412
+OK   T2 every debate either equals live or carries a pair
+OK   T3 34108 carries a reversal candidate: R11 EARLIER [CR3] "- Genesis 4:1, "Adam knew Eve his wife; and she conceived, and bare Ca" CLOSING "Genesis 4:1 therefore cannot supply the sequence for Matthew, because "
+T3 anti-cheat debate used: 33218, candidate A57 DEFENDER
+P1 reversal pair CONFIRMED with a declared link (expect: link broken)
+   confirmed: ["R11 DEFENDER LINK 1"] | no_answer: []
+   LOG "R11 DEFENDER LINK 1" | CONFIRMED -- planted.
+   LOG "NONE CHALLENGER" | NONE FOUND
+OK   P1
+P2 reversal pair NOT A CONTRADICTION (expect: nothing broken, answered)
+   confirmed: [] | no_answer: []
+   LOG "R11 DEFENDER LINK 1" | NOT A CONTRADICTION -- planted.
+   LOG "NONE CHALLENGER" | NONE FOUND
+OK   P2
+P3 enforcer answers NONE and skips the candidate (expect: NO ANSWER row for it)
+   confirmed: [] | no_answer: ["R11"]
+   LOG "R11" | NO ANSWER -- the enforcer did not answer this candidate
+   LOG "NONE DEFENDER" | NONE FOUND
+   LOG "NONE CHALLENGER" | NONE FOUND
+OK   P3
+P4 enforcer echoes "LINK (you name it)" (expect: unreadable line recorded, candidate NO ANSWER, nothing broken)
+   confirmed: [] | no_answer: ["R11"]
+   LOG "?" | NOT CONFIRMED (form) -- the line is not in the CLOSE-CONTRADICTION form -- 
+   LOG "R11" | NO ANSWER -- the enforcer did not answer this candidate
+   LOG "NONE CHALLENGER" | NONE FOUND
+OK   P4
+P5 CONFIRMED with a link the side never declared (expect: NOT CONFIRMED (form), nothing broken)
+   confirmed: [] | no_answer: []
+   LOG "R11 DEFENDER LINK 97" | NOT CONFIRMED (form) -- LINK 97 is not one of the defender's declared links (1, 2, 3, 4, 5, 6) -- planted.
+   LOG "NONE CHALLENGER" | NONE FOUND
+OK   P5
+P6 anti-cheat pair CONFIRMED (expect: link broken)
+   confirmed: ["A57 DEFENDER LINK 1"] | no_answer: ["A131","A135"]
+   LOG "A57 DEFENDER LINK 1" | CONFIRMED -- planted.
+   LOG "A131" | NO ANSWER -- the enforcer did not answer this candidate
+   LOG "A135" | NO ANSWER -- the enforcer did not answer this candidate
+   LOG "NONE CHALLENGER" | NONE FOUND
+OK   P6
+P7 anti-cheat pair answered both ways (expect: conflicting answers, nothing broken)
+   confirmed: [] | no_answer: ["A131","A135"]
+   LOG "A57 DEFENDER LINK 1" | NOT CONFIRMED (conflicting answers) -- the same candidate A57 is also answered NOT A CONTRADICTION -- planted.
+   LOG "A57 DEFENDER LINK 1" | NOT A CONTRADICTION -- planted.
+   LOG "A131" | NO ANSWER -- the enforcer did not answer this candidate
+   LOG "A135" | NO ANSWER -- the enforcer did not answer this candidate
+   LOG "NONE CHALLENGER" | NONE FOUND
+OK   P7
+P8 call fails (expect: NOT CHECKED, candidates NO ANSWER)
+   confirmed: [] | no_answer: ["A57","A131","A135"]
+   LOG "A57" | NO ANSWER -- the enforcer did not answer this candidate
+   LOG "A131" | NO ANSWER -- the enforcer did not answer this candidate
+   LOG "A135" | NO ANSWER -- the enforcer did not answer this candidate
+   LOG "NOT CHECKED DEFENDER" | NOT CHECKED -- DEFENDER: no reply (timeout)
+   LOG "NOT CHECKED CHALLENGER" | NOT CHECKED -- CHALLENGER: no reply (timeout)
+OK   P8
+P9 CONFIRMED but the enforcer changes one word of the closing quotation (expect: NOT CONFIRMED (form))
+   confirmed: [] | no_answer: ["A131","A135"]
+   LOG "A57 DEFENDER LINK 1" | NOT CONFIRMED (form) -- the closing quotation is not found word for word in CR4 -- planted.
+   LOG "A131" | NO ANSWER -- the enforcer did not answer this candidate
+   LOG "A135" | NO ANSWER -- the enforcer did not answer this candidate
+   LOG "NONE CHALLENGER" | NONE FOUND
+OK   P9
+OK   T4 33218 differs from live only in the last sentence of a check block
+OK   T4 33222 differs from live only in the last sentence of a check block
+OK   T4 33261 differs from live only in the last sentence of a check block
+OK   T4 33299 differs from live only in the last sentence of a check block
+OK   T4 33345 differs from live only in the last sentence of a check block
+OK   T4 33371 differs from live only in the last sentence of a check block
+OK   T4 33430 differs from live only in the last sentence of a check block
+OK   T4 33442 differs from live only in the last sentence of a check block
+OK   T4 33461 differs from live only in the last sentence of a check block
+OK   T4 33482 differs from live only in the last sentence of a check block
+OK   T4 33530 differs from live only in the last sentence of a check block
+OK   T4 33575 differs from live only in the last sentence of a check block
+OK   T4 33592 differs from live only in the last sentence of a check block
+OK   T4 33644 differs from live only in the last sentence of a check block
+OK   T4 33705 differs from live only in the last sentence of a check block
+OK   T4 33798 differs from live only in the last sentence of a check block
+OK   T4 33846 differs from live only in the last sentence of a check block
+OK   T4 34108 differs from live only in the last sentence of a check block
+T4 Panel Build with stored inputs (stored closing enforcer rows hold no A or R id, so every pair reads "not examined"): 34 debates run, 16 equal to live, 18 differ (a block is present: 33218 33222 33261 33299 33345 33371 33430 33442 33461 33482 33530 33575 33592 33644 33705 33798 33846 34108), 5 not runnable on live either
+OK   T4 33575 single judge prompt differs only in the reversal block ending
+OK   T4 34108 single judge prompt differs only in the reversal block ending
+T4 Build Independent Verdict: 34 debates run, 32 equal to live, 2 differ, 4 not runnable; prompts holding an anti-cheat block with the check executed: 0
+OK   T4 the single judge is never shown the anti-cheat block
+T4 34108 reversal candidates: R11
+OK   P10 every reversal pair examined and not confirmed: the approved sentence ends the block (count 3 over the judge prompts)
+OK   P11 confirmed: the CONFIRMED CLOSING CONTRADICTIONS block is printed
+   confirmed rows: R11 CONFIRMED
+OK   P11 a confirmed pair leaves the reversal block (pairs still listed: 0, blocks printed: 0)
+OK   P12 not answered: the block ends with the second sentence only
+OK   P13 the enforcer call failed: second sentence only
+T4 33218 anti-cheat candidates: A57, A131, A135
+OK   P15 anti-cheat pairs examined and not confirmed: each block ends with the approved sentence (blocks live 9, candidate 9)
+OK   P16 one anti-cheat pair confirmed: its block leaves, the confirmed block is printed (blocks 9 -> 6)
+OK   P17 anti-cheat pairs not answered: second sentence only
+OK   P18 Panel Build source without the reversal check: the enforcer still runs, the loss is listed: ["the reversal pairs: Panel Build source holds no reversal check"]
+OK   P19 Record logs it NOT CHECKED: ["NOT CHECKED -- pkgRAC: a pair found by a code check did not reach the enforcer: the reversal pairs: Panel Build source holds no reversal check"]
+OK   P20 an anti-cheat pair whose earlier quotation crosses two rounds is listed, not dropped: ["A57 DEFENDER (the anti-cheat check): the earlier quotation stands in no single round"]
+OK   P21 an ellipsis quotation is sent as its longest standing part: "- [L3] Matthew 1:20: "for that which"
+OK   P22 anti-cheat check skipped: no candidate, nothing listed
+OK   P23 anti-cheat check not executed: no candidate, build runs
+ALL OK
