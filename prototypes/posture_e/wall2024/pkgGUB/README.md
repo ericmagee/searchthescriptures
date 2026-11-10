@@ -30,3 +30,9 @@ Alt and R2 Alt Gate Record did not run in 34626 (NOT REACHED there; same text as
 ## Rebased on GCCN rev 3 (GUBBASE=GCCN3, the default now)
 `node pkgGUB/build_GUB.cjs <s110> pkgGUB/parent_s110_GUB_on_GCCN3.json`. SIZE (measured) +1,719 against s110 (+984 over GCCN3's +735). Same four nodes.
 on_GCCN3_out.txt: 34626 equals s110; C2-C7 and C8v51 (v51 count off) as GCCN3; B1 3, B2 2, B4 3, B5 2, B3 4. t_1062_GUB_on_GCCN3_out.txt: 12 -> 11.
+
+## Rev 2 (W2, 11-10): the line in effect, rebased on s111
+- W3's FAIL narrow (Wall 4296): when a later gate change Gn of the same judge rewrote the line, rev 1 rechecked the first change's line. Rev 2 follows the "later gate change Gn" chain (at most 9 steps) to the line in effect and runs UND.cure on that line.
+- Built surgically on live s111 (fe9e1ed0): `node pkgGUB/build_GUB_s.cjs /mnt/project-files/wall2024/fetchback_live_s111.json pkgGUB/parent_s111_GUB2.json`. Four nodes change: Gate Record, Alt Gate Record, R2 Alt Gate Record (+48 each, three $() names) and Shared Library (+1,189). SIZE +1,333 code against s111 (measured), prompt 0. Every other stub rebuilds to its live source.
+- Gate/pack.cjs re-pack of unchanged s111 is not byte-equal to live (Shared Library +1,868, Alternate Build stub differs), so this build does not use it.
+- W3 harness on s111: run with W3_SID=S6 (on s111 the D2 vs C1 item is G1 = S6; on s110 it was S10). Luna's base count on this replay is 11 on s111 against 2 on s110, so label 2 reads 11 and label 3 reads 12. All 15 labelled cases match; output w2_grades/gub/w3h_GUB2_s111_S6.txt.

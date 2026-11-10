@@ -1,0 +1,20 @@
+OK   U0 ECL and UND block in live Send Back Record, lines 613-697
+OK   U1 Gate Record: PASS line 2032
+OK   U2 Gate Record: GCCN filter found 1 time(s)
+OK   U1 Alt Gate Record: PASS line 2032
+OK   U2 Alt Gate Record: GCCN filter found 1 time(s)
+OK   U1 R2 Alt Gate Record: PASS line 2032
+OK   U2 R2 Alt Gate Record: GCCN filter found 1 time(s)
+free library slots (used only by the old gate text): 1
+OK   U3 live header sha formula reproduced on live library
+  (not rebuildable by unpack, checked by equality: Alternate Build)
+  (not rebuildable by unpack, checked by equality: Early Alternate Build)
+OK   B2 every stub rebuilds: the three gate nodes to their new source, all others to their live source
+OK   B3 only Code text changes; nodes changed: Gate Record, Alt Gate Record, Shared Library, R2 Alt Gate Record
+LIB lines 3820 -> 3821 (appended 1; unused free slots left: 0)
+  Gate Record: 48
+  Alt Gate Record: 48
+  Shared Library: 1189
+  R2 Alt Gate Record: 48
+SIZE (measured): all Code text 3843990 -> 3845323 = +1333 against the base fetch-back; prompt text: none added
+BUILD OK: pkgGUB/parent_s111_GUB2.json
