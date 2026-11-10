@@ -1,0 +1,30 @@
+# W1 labeled cases for pkgFRL rev 1 (six plain refusals W4 found, Wall 3975), labels fixed before the package is written or run. W2 cases.txt format:
+# expected|category|answer text after "RESPONSE: <item> | "|reason|narrow (rev 6 rule: ENFORCED / NOTED / CURED)
+UNCURED|frl-refusal|COUNTED. Nope.|the whole answer after COUNTED is a refusal|ENFORCED
+UNCURED|frl-refusal|COUNTED. I decline.|the whole answer after COUNTED is a refusal|ENFORCED
+UNCURED|frl-refusal|COUNTED. Scratch that.|the whole answer after COUNTED is a refusal|ENFORCED
+UNCURED|frl-refusal|COUNTED. I take it back.|the whole answer after COUNTED is a refusal|ENFORCED
+UNCURED|frl-refusal|COUNTED. Disregard this line.|the whole answer after COUNTED is a refusal|ENFORCED
+UNCURED|frl-refusal|COUNTED. My answer stays as before.|names the judge's own answer: a refusal as the first sentence|ENFORCED
+UNCURED|frl-refusal|COUNTED. My answer stays as before. The grant is a courtesy.|B sentence first, then its reason|ENFORCED
+UNCURED|frl-refusal|COUNTED, but nope.|whole remainder after "COUNTED, but"|ENFORCED
+UNCURED|frl-refusal|**COUNTED.** I take it back.|markup around the keyword|ENFORCED
+UNCURED|frl-refusal|COUNTED. I take that back.|variant|ENFORCED
+UNCURED|frl-refusal|COUNTED. Scratch this.|variant|ENFORCED
+UNCURED|frl-refusal|COUNTED. Disregard this.|variant|ENFORCED
+UNCURED|frl-refusal|COUNTED. My answer stands as before.|variant|ENFORCED
+UNCURED|frl-refusal|COUNTED. I take it back. The grant is a courtesy.|pointer then text: noted under the rev 6 rule|NOTED
+CURED|frl-correct|COUNTED. I take it back: my earlier objection is withdrawn and the grant is counted.|pointer explained in the same sentence|CURED
+CURED|frl-correct|COUNTED. I take it back. The grant is a close concession of D6.|pointer at the judge's own objection, then the count|CURED
+CURED|frl-correct|COUNTED. Scratch that objection. The grant is counted.|names what is scratched|CURED
+CURED|frl-correct|COUNTED. Scratch that. My first reply was wrong; the grant concedes D6.|pointer then its explanation|CURED
+CURED|frl-correct|COUNTED. Nope, no objection remains.|longer sentence|CURED
+CURED|frl-correct|COUNTED. Nope. I was wrong before; it is a concession of D6.|pointer then its explanation|CURED
+CURED|frl-correct|COUNTED. I decline to object further.|longer sentence|CURED
+CURED|frl-correct|COUNTED. I decline my earlier objection. The grant is counted.|longer sentence|CURED
+CURED|frl-correct|COUNTED. Disregard this line of my first reply; the grant concedes D6.|longer sentence|CURED
+CURED|frl-correct|COUNTED. Disregard this line in my earlier answer. The grant is a close concession.|longer sentence|CURED
+CURED|frl-correct|COUNTED. My answer stays as before: counted.|cut at . or ! only; the sentence is longer than the listed one|CURED
+CURED|frl-correct|COUNTED. My earlier answer does not stay as before.|not the listed sentence|CURED
+CURED|frl-correct|COUNTED. The defender asks me to take it back. I do not.|reported request; the refusal is aimed at the defender|CURED
+CURED|frl-correct|COUNTED. The defender says "nope" to the grant; it stands.|quoted word|CURED
