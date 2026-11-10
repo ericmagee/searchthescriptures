@@ -1,0 +1,98 @@
+ran Second Alternate? (1 items)
+ran R2 Alternate Build (1 items)
+ran R2 Alternate Payloads (1 items)
+  payload cure: [null]
+ran R2 Alternate Cure Build (1 items)
+  PLANTED: K-RUL keystone card added to the stored cure reply
+ran R2 Alternate Cure Normalize (1 items)
+ran R2 Alternate Merge Seat (1 items)
+  Merge Seat: haiku SEATED (undefined); seated [{"removed_seat":"luna","alternate_seat":"haiku","alternate_api_model":"anthropic/claude-haiku-5.5"}]
+  haiku KEYSTONE: none
+  tried keys: removed_seat,alternate,api_model,result
+  uncured detail: {}
+  UNCURED lines: 
+ran R2 Alt Seated (1 items)
+ran R2 Alt Judge Enforcer Build (5 items)
+  enforcer: je_skip [[false,null,null],[false,null,null],[false,null,null],[false,null,null],[false,null,0]]
+  stored judge enforcer items for sol: 0,1,2,3,4,5
+ran R2 Alt Judge Enforcer Retry Build (2 items)
+ran R2 Alt Judge Enforcer Record (1 items)
+ran R2 Alt Send Back Build (1 items)
+  R2 Alt Send Back Build items (7):
+    S1 E-ANS ANSWER CHECK: Luke 1:34 -- [CR3] -- MEANS: "the present tense states her state when the an
+    S2 E-ANS ANSWER CHECK: Matthew 1:19 -- [CR4] -- MEANS: "the stated grounds are equity and sparing h
+    S3 E-ANS ANSWER CHECK: Isaiah 8:3 -- [DR3] -- MEANS: "the woman is called a prophetess and the chil
+    S4 E-ANS ANSWER CHECK: 1 John 5:1 -- [DR3] -- MEANS: "it is said of a believer already living, a re
+    S5 E-HOLD D2 vs C1 (Matthew 1:19-21; Deuteronomy 24:1; 2 Samuel 7:14): UNDERDETERMINED -- [CR3] and 
+    S6 E-ANS ANSWER CHECK: Matthew 1:24 -- [CR3] -- MEANS: "the coming together of 1:18 is this taking,
+    S7 E-ANS ANSWER CHECK: Luke 1:37 -- [DR3] -- MEANS: "the angel closes on God's power as the ground 
+  not_sent by pkgECB: 2 ["E-COL COLLISION D6 vs C5","E-COL COLLISION D6 vs C6"]
+  items on D6 or KEYSTONE lines sent: 0
+  send-back map sol->alternate: {"S1":"S1","S2":null,"S3":null,"S4":null,"S5":"S6","S6":"S7","S7":"S5"}; alternate items with no stored answer: S2,S3,S4
+  PLANTED: KEEP answers for S2,S3,S4
+ran R2 Alt Send Back Record (1 items)
+ran R2 Alt Reread Build (1 items)
+  reread: rr_skip [false]
+  PLANTED: reread call with no reply
+ran R2 Alt Reread Record (1 items)
+ran R2 Alt Gate Build (1 items)
+  gate: [{"skip":true,"items":[]}]
+ran R2 Alt Gate Record (1 items)
+ran R2 Alternate Merge (1 items)
+  R2 merge tried: [{"alt":"haiku","result":"SEATED","why":""}]
+  send-back tally {"KEEP":3,"CHANGE":4,"NO ANSWER":0}; uncured rows: ["ANSWER CHECK Matthew 1:19 [CR4] UNCURED SEND-BACK KEEP -- The line stands as written; the record rows it quotes are unchanged. | ENFORCER: (right: MISSES): The ","ANSWER CHECK Isaiah 8:3 [DR3] UNCURED SEND-BACK KEEP -- The line stands as written; the record rows it quotes are unchanged. | ENFORCER: (right: MISSES): The ","ANSWER CHECK 1 John 5:1 [DR3] UNCURED SEND-BACK KEEP -- The line stands as written; the record rows it quotes are unchanged. | ENFORCER: (right: MISSES): The "]
+ran Alternate Merge (1 items)
+  FINAL seated [{"removed_seat":"luna","alternate_seat":"haiku","alternate_api_model":"anthropic/claude-haiku-5.5"}]
+  WRITTEN haiku (anthropic/claude-haiku-5.5): KEYSTONE: D6 -- BROKEN -- LINK 6 BROKEN BY A CONFIRMED CLOSING CONTRADICTION | tag BROKEN | drv_uncured 0 | counted undefined
+     RESULT: CHALLENGER WINS -- recomputed after the cure from the cured lines (CLOSE-CONTRADICTION D6 vs C5 (UNDERDETERMINED to DEFENDER LINK BROKEN); CLOSE-CONTRADICTION D6 vs C6 (UNDERDETERMINED to DEFENDER LINK BROKEN); KEYSTONE D6 (STANDS to BROKEN)): BROKEN-1
+     KEYSTONE: D6 -- BROKEN -- LINK 6 BROKEN BY A CONFIRMED CLOSING CONTRADICTION
+     DEFENSE STANDING: PROP-DEPENDENT -- L=6 c=0 -- recomputed after the cure from the cured lines (CLOSE-CONTRADICTION D6 vs C5 (UNDERDETERMINED to DEFENDER LINK BROKEN); CLOSE-CONTRADICTION D6 vs C6 (UNDERDETERMINED to DEFENDER LINK BROKEN); KEYSTONE D6 (STANDS t
+     D6 vs C5 (John 3:6; 1 John 5:1; Romans 1:3): DEFENDER LINK BROKEN -- [AUDIT: LINK 6 BROKEN BY A CONFIRMED CLOSING CONTRADICTION -- DEFENDER -- EARLIER [CR3] \"I drop the wording 'no biological father' as a bare statement. I rest it on these rows.\" -- CLOSING 
+     D6 vs C6 (Luke 2:4; Numbers 1:18): DEFENDER LINK BROKEN -- [AUDIT: LINK 6 BROKEN BY A CONFIRMED CLOSING CONTRADICTION -- DEFENDER -- EARLIER [CR3] \"I drop the wording 'no biological father' as a bare statement. I rest it on these rows.\" -- CLOSING [CR4] \"Ch
+     [AUDIT v21: DEBATE RULE VIOLATION REPORT -- SEAT: haiku; ITEM: S3 DEFENDER CR4: #1; RULE: K-S3; RESULT: CURED; WHY: answered: it touches no declared link or listed premise, with its reason; LINE: DEFENDER CR4: "I grant 'husband' and 'wife'."; STATEMENT: TOUCHE
+     [AUDIT v21: DEBATE RULE VIOLATION REPORT -- SEAT: haiku; ITEM: S3 DEFENDER CR4: #2; RULE: K-S3; RESULT: CURED; WHY: answered: it touches no declared link or listed premise, with its reason; LINE: DEFENDER CR4: "I grant this is regeneration."; STATEMENT: TOUCHE
+     [AUDIT v21: DEBATE RULE VIOLATION REPORT -- SEAT: haiku; ITEM: S3 DEFENDER CR4: #3; RULE: K-S3; RESULT: CURED; WHY: answered: it touches no declared link or listed premise, with its reason; LINE: DEFENDER CR4: "I keep my grant that 1:18's 'came together' is th
+     [AUDIT v21: DEBATE RULE VIOLATION REPORT -- SEAT: haiku; ITEM: S3 DEFENDER CR4: #4; RULE: K-S3; RESULT: CURED; WHY: answered: it touches no declared link or listed premise, with its reason; LINE: DEFENDER CR4: "The law uses 'wife' of a betrothed woman, and I g
+     [AUDIT v21: DEBATE RULE VIOLATION REPORT -- SEAT: haiku; ITEM: S3 DEFENDER CR4: #5; RULE: K-S3; RESULT: CURED; WHY: answered: it touches no declared link or listed premise, with its reason; LINE: DEFENDER CR4: "These rows state that Christ is of the seed and l
+     [AUDIT v21: DEBATE RULE VIOLATION REPORT -- SEAT: haiku; ITEM: S3 DEFENDER CR4: #6; RULE: K-S3; RESULT: CURED; WHY: answered: it touches no declared link or listed premise, with its reason; LINE: DEFENDER CR4: "I grant the husband's son is meant there."; STATE
+     [AUDIT v21: DEBATE RULE VIOLATION REPORT -- SEAT: haiku; ITEM: S3 DEFENDER CR4: #7; RULE: K-S3; RESULT: CURED; WHY: answered: it touches no declared link or listed premise, with its reason; LINE: DEFENDER CR4: "I grant that God's power grounds both."; STATEMEN
+     [AUDIT v21: DEBATE RULE VIOLATION REPORT -- SEAT: haiku; ITEM: S3 DEFENDER CR4: #8; RULE: K-S3; RESULT: CURED; WHY: answered: it touches no declared link or listed premise, with its reason; LINE: DEFENDER CR4: "I grant that 'also' ties the calling of 1:35 to t
+     [AUDIT v21: DEBATE RULE VIOLATION REPORT -- SEAT: haiku; ITEM: S3 DEFENDER CR4: #9; RULE: K-S3; RESULT: CURED; WHY: answered: it touches no declared link or listed premise, with its reason; LINE: DEFENDER CR4: "In 1 Chronicles 28:6 the stated ground of 'my son
+     [AUDIT v21: DEBATE RULE VIOLATION REPORT -- SEAT: haiku; ITEM: S3 DEFENDER CR4: #10; RULE: K-S3; RESULT: CURED; WHY: answered: it touches no declared link or listed premise, with its reason; LINE: DEFENDER CR4: "I grant that 'all this' includes 1:18 to 1:21.";
+     [AUDIT v21: DEBATE RULE VIOLATION REPORT -- SEAT: haiku; ITEM: S3 DEFENDER CR4: #11; RULE: K-S3; RESULT: CURED; WHY: answered: it touches no declared link or listed premise, with its reason; LINE: DEFENDER CR4: "I grant the child's flesh is flesh (John 3:6).";
+     [AUDIT v21: DEBATE RULE VIOLATION REPORT -- SEAT: haiku; ITEM: S3 DEFENDER CR4: #12; RULE: K-S3; RESULT: CURED; WHY: answered: it touches no declared link or listed premise, with its reason; LINE: DEFENDER CR4: "I grant that 'from the LORD' and Adam's knowing 
+     [AUDIT v21: DEBATE RULE VIOLATION REPORT -- SEAT: haiku; ITEM: S3 DEFENDER CR4: #13; RULE: K-S3; RESULT: CURED; WHY: answered: it touches no declared link or listed premise, with its reason; LINE: DEFENDER CR4: "I grant the verb is used there of a usage."; STA
+     [AUDIT v21: DEBATE RULE VIOLATION REPORT -- SEAT: haiku; ITEM: S3 DEFENDER CR4: #14; RULE: K-S3; RESULT: CURED; WHY: answered: it touches no declared link or listed premise, with its reason; LINE: DEFENDER CR4: "I grant that the usage-sense reckons by the hous
+     [AUDIT v21: DEBATE RULE VIOLATION REPORT -- SEAT: haiku; ITEM: S3 DEFENDER CR4: #15; RULE: K-S3; RESULT: CURED; WHY: answered: it touches no declared link or listed premise, with its reason; LINE: DEFENDER CR4: "I grant that 'thy father' is Mary's word."; STAT
+     [AUDIT v21: DEBATE RULE VIOLATION REPORT -- SEAT: haiku; ITEM: S3 DEFENDER CR4: #16; RULE: K-S3; RESULT: CURED; WHY: answered: it touches no declared link or listed premise, with its reason; LINE: DEFENDER CR4: "1 Chronicles 28:6 sets David's 'thy son' beside 
+     [AUDIT v21: DEBATE RULE VIOLATION REPORT -- SEAT: haiku; ITEM: S3 DEFENDER CR4: #17; RULE: K-S3; RESULT: CURED; WHY: answered: it touches no declared link or listed premise, with its reason; LINE: DEFENDER CR4: "I grant that 'parents' is the narrator's word.";
+     [AUDIT v21: DEBATE RULE VIOLATION REPORT -- SEAT: haiku; ITEM: DEFENDER CR2 no link heading #1; RULE: K-W; RESULT: CURED; WHY: answered: NOT HELD, with a reason that quotes the flagged sentence (pkgKW); LINE: (CR2) no link heading: "I grant all of this, and it
+     [AUDIT v21: DEBATE RULE VIOLATION REPORT -- SEAT: haiku; ITEM: DEFENDER CR2 no link heading #2; RULE: K-W; RESULT: CURED; WHY: answered: NOT HELD, with a reason that quotes the flagged sentence (pkgKW); LINE: (CR2) no link heading: "Joseph's naming (Matthew 1:
+     [AUDIT v21: DEBATE RULE VIOLATION REPORT -- SEAT: haiku; ITEM: DEFENDER CR2 no link heading #3; RULE: K-W; RESULT: CURED; WHY: answered: NOT HELD, with a reason that quotes the flagged sentence (pkgKW); LINE: (CR2) no link heading: "I grant Matthew 11:11 and G
+     [AUDIT v21: DEBATE RULE VIOLATION REPORT -- SEAT: haiku; ITEM: DEFENDER CR2 no link heading #4; RULE: K-W; RESULT: CURED; WHY: answered: NOT HELD, with a reason that quotes the flagged sentence (pkgKW); LINE: (CR2) no link heading: "I grant Luke 1:27 and 2:4 f
+     [AUDIT v21: DEBATE RULE VIOLATION REPORT -- SEAT: haiku; ITEM: DEFENDER CR3 LINK 1 #5; RULE: K-W; RESULT: CURED; WHY: answered: NOT HELD, with a reason that quotes the flagged sentence (pkgKW); LINE: (CR3) LINK 1: "I drop the limb that Matthew 1:25 alone spans
+     [AUDIT v21: DEBATE RULE VIOLATION REPORT -- SEAT: haiku; ITEM: DEFENDER CR3 LINK 1 #6; RULE: K-W; RESULT: CURED; WHY: answered: NOT HELD, with a reason that quotes the flagged sentence (pkgKW); LINE: (CR3) LINK 1: "I grant that this is the taking, so 1:18 date
+     [AUDIT v21: DEBATE RULE VIOLATION REPORT -- SEAT: haiku; ITEM: DEFENDER CR3 LINK 1 #7; RULE: K-W; RESULT: CURED; WHY: answered: NOT HELD, with a reason that quotes the flagged sentence (pkgKW); LINE: (CR3) LINK 1: "I grant the legal title in the espousal."; ST
+     [AUDIT v21: DEBATE RULE VIOLATION REPORT -- SEAT: haiku; ITEM: DEFENDER CR3 LINK 1 #8; RULE: K-W; RESULT: CURED; WHY: answered: NOT HELD, with a reason that quotes the flagged sentence (pkgKW); LINE: (CR3) LINK 1: "I grant the present tense states her state wh
+     [AUDIT v21: DEBATE RULE VIOLATION REPORT -- SEAT: haiku; ITEM: DEFENDER CR3 LINK 1 #9; RULE: K-W; RESULT: CURED; WHY: answered: NOT HELD, with a reason that quotes the flagged sentence (pkgKW); LINE: (CR3) LINK 1: "I grant that this is the ordinary means."; ST
+     [AUDIT v21: DEBATE RULE VIOLATION REPORT -- SEAT: haiku; ITEM: DEFENDER CR3 LINK 1 #10; RULE: K-W; RESULT: CURED; WHY: answered: NOT HELD, with a reason that quotes the flagged sentence (pkgKW); LINE: (CR3) LINK 1: "I grant that the law calls the betrothed wom
+     [AUDIT v21: DEBATE RULE VIOLATION REPORT -- SEAT: haiku; ITEM: CHALLENGER DR3 LINK 3 #3; RULE: K-W; RESULT: CURED; WHY: answered: NOT HELD, with a reason that quotes the flagged sentence (pkgKW); LINE: (DR3) LINK 3: "I grant the two clauses stand before the ‘t
+     [AUDIT v21: DEBATE RULE VIOLATION REPORT -- SEAT: haiku; ITEM: CHALLENGER DR3 LINK 4 #4; RULE: K-W; RESULT: CURED; WHY: answered: NOT HELD, with a reason that quotes the flagged sentence (pkgKW); LINE: (DR3) LINK 4: "I drop any wording that makes the two child
+     [AUDIT v21: DEBATE RULE VIOLATION REPORT -- SEAT: haiku; ITEM: CHALLENGER DR3 LINK 4 #5; RULE: K-W; RESULT: CURED; WHY: answered: NOT HELD, with a reason that quotes the flagged sentence (pkgKW); LINE: (DR3) LINK 4: "I grant the two names and the two titles.";
+     [AUDIT v21: DEBATE RULE VIOLATION REPORT -- SEAT: haiku; ITEM: CHALLENGER DR3 LINK 4 #6; RULE: K-W; RESULT: CURED; WHY: answered: NOT HELD, with a reason that quotes the flagged sentence (pkgKW); LINE: (DR3) LINK 4: "I grant that the address is to Immanuel and
+     [AUDIT v21: DEBATE RULE VIOLATION REPORT -- SEAT: haiku; ITEM: CHALLENGER DR3 LINK 4 #7; RULE: K-W; RESULT: CURED; WHY: answered: NOT HELD, with a reason that quotes the flagged sentence (pkgKW); LINE: (DR3) LINK 4: "I grant ‘all this’ includes 1:18."; STATEME
+     [AUDIT v21: DEBATE RULE VIOLATION REPORT -- SEAT: haiku; ITEM: CHALLENGER DR3 LINK 4 #8; RULE: K-W; RESULT: CURED; WHY: answered: NOT HELD, with a reason that quotes the flagged sentence (pkgKW); LINE: (DR3) LINK 4: "I grant the word ‘virgin.’ The virgin of th
+     [AUDIT v21: DEBATE RULE VIOLATION REPORT -- SEAT: haiku; ITEM: CHALLENGER DR3 LINK 5 #9; RULE: K-W; RESULT: CURED; WHY: answered: NOT HELD, with a reason that quotes the flagged sentence (pkgKW); LINE: (DR3) LINK 5: "I grant that God prepared the body."; STATE
+     [AUDIT v21: DEBATE RULE VIOLATION REPORT -- SEAT: haiku; ITEM: keystone; RULE: K-RUL; RESULT: UNCURED; WHY: TRIAL rule (recorded and answered; it removes no seat): the NAMED BY line quotes nothing; LINE: deciding ruling keystone: the RULE quote differs from yo
+     [AUDIT v21: DEBATE RULE VIOLATION REPLY -- haiku prose recorded, not read for a cure: RULING: KEYSTONE D6 is graded on the collision lines of D6. CLAIM: (L1) Matthew 1:20 says, "that which is conceived in her is of the Holy Ghost". NAMED BY: (DR2) RULE: "I sup
+     [AUDIT v25: RECOMPUTED AFTER CURE -- SEAT: haiku; TRIGGER: CLOSE-CONTRADICTION D6 vs C5 (UNDERDETERMINED to DEFENDER LINK BROKEN), CLOSE-CONTRADICTION D6 vs C6 (UNDERDETERMINED to DEFENDER LINK BROKEN), KEYSTONE D6 (STANDS to BROKEN); ORIGINAL: HELD, DEFENSE S
+     [AUDIT v27: SUPERSEDED LINE -- SEAT: haiku; LABEL: D6 VS C5; ORIGINAL: D6 vs C5 (John 3:6; 1 John 5:1; Romans 1:3): UNDERDETERMINED -- (CR3) answers the kinds, regeneration, and flesh-descent witnesses with the birth of Mary and the distinct conception setting
+     [AUDIT v27: SUPERSEDED LINE -- SEAT: haiku; LABEL: D6 VS C6; ORIGINAL: D6 vs C6 (Luke 2:4; Numbers 1:18): UNDERDETERMINED -- (CR3) answers both proven witnesses by granting Joseph's house and distinguishing genealogical reckoning from the conception-source arg
+     [AUDIT v27: SUPERSEDED LINE -- SEAT: haiku; LABEL: KEYSTONE; ORIGINAL: KEYSTONE: D6 -- STANDS -- The conclusion that Christ had no biological father remains an exhibited inference from the conception accounts and the birth of Mary; it was neither withdrawn nor
+     [AUDIT v27: SUPERSEDED LINE -- SEAT: haiku; LABEL: RESULT; ORIGINAL: RESULT: UNDERDETERMINED -- The record supports a conception attributed to the Holy Ghost and descent from David, but the competing explanations of how those statements fit together remain unr
+     [AUDIT v39: K-RECHK -- SEAT: haiku; CHANGE: CLOSE-CONTRADICTION D6 vs C5; RULE: K-CMT; NEW: a contested grade line that names no Commitment N; LINE: D6 vs C5 (John 3:6; 1 John 5:1; Romans 1:3): DEFENDER LINK BROKEN -- (AUDIT: LINK 6 BROKEN BY A CONFIRMED CLOSI
+     [AUDIT v39: K-RECHK -- SEAT: haiku; CHANGE: CLOSE-CONTRADICTION D6 vs C6; RULE: K-CMT; NEW: a contested grade line that names no Commitment N; LINE: D6 vs C6 (Luke 2:4; Numbers 1:18): DEFENDER LINK BROKEN -- (AUDIT: LINK 6 BROKEN BY A CONFIRMED CLOSING CONTRAD
+     [AUDIT v39: K-RECHK -- SEAT: haiku; CHANGE: KEYSTONE D6; RULE: K-CMT; NEW: a contested grade line that names no Commitment N; LINE: KEYSTONE: D6 -- BROKEN -- LINK 6 BROKEN BY A CONFIRMED CLOSING CONTRADICTION; ORIGINAL: KEYSTONE: D6 -- STANDS -- The conclusion
+     [AUDIT v37: SEND-BACK APPLIED (E-APPLY; WALL-2024 2236, 2237) -- SEAT: haiku; APPLIED: S1, S5, S6, S7; ORIGINAL: BROKEN, DEFENSE PROP-DEPENDENT 0, CHALLENGE SELF-SUPPORTED 0, RESULT CHALLENGER WINS; DERIVED: BROKEN (BROKEN-1), DEFENSE PROP-DEPENDENT 0, CHALLEN
+  WRITTEN chatgpt (openai/gpt-6.1-terra): KEYSTONE: D6 -- STANDS -- The declared conclusion that Christ had no biological father | tag BROKEN | drv_uncured 0 | counted undefined
+  WRITTEN sol (openai/gpt-6.1-sol): KEYSTONE: D6 -- STANDS -- The conclusion that Christ had no biological father remains | tag BROKEN | drv_uncured 0 | counted undefined
