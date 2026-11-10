@@ -1,0 +1,11 @@
+DIFF nodes 12 each 529 total 6348 non-code differences 0 nodes 418 418 rest equal true
+R1 NOT AS LABELLED dr line,cr line | live [] | rev4 new [] line []  | note len 0 0
+R2 NOT AS LABELLED dr line,cr line | live [] | rev4 new [] line []  | note len 0 0
+R3 NOT AS LABELLED dr line,cr line | live [] | rev4 new [] line []  | note len 0 0
+R4 AS LABELLED | live ["Romans 1:18"] | rev4 new ["Romans 1:18"] line []  | note len 269 420
+R5 AS LABELLED | live ["Romans 1:18"] | rev4 new ["Romans 1:18"] line []  | note len 269 420
+R6 NOT AS LABELLED dr line,cr line | live [] | rev4 new [] line []  | note len 0 0
+R7 NOT AS LABELLED dr line,cr line | live [] | rev4 new [] line []  | note len 0 0
+R8 AS LABELLED | live [] | rev4 new [] line []  | note len 0 0
+R9 AS LABELLED | live [] | rev4 new [] line []  | note len 0 0
+copies 12 disagreeing 0
