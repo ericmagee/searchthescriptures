@@ -1,0 +1,27 @@
+CONTROL (no plant): Panel Cure Check [luna:0 chatgpt:0 sol:0] | Send Back Record [luna:1 chatgpt:0 sol:0] | Gate Record [luna:2 chatgpt:0 sol:0]
+  written rows: luna:2 chatgpt:0 sol:0
+
+PLANT K-G4 on D2 vs C1 | planted line found: false 
+  Panel Cure Check [luna:1 chatgpt:0 sol:0] | Send Back Record [luna:2 chatgpt:0 sol:0] | Gate Record [luna:3 chatgpt:0 sol:0] 
+  written rows: luna:3 chatgpt:0 sol:0 
+  cure report: [AUDIT v21: DEBATE RULE VIOLATION REPORT -- SEAT: luna; ITEM: D2 vs C1; RULE: K-G4; RESULT: UNCURED; WHY: no written response; JUDGE STATEMENT: none written 
+  send-back items on the pair: S10 CHANGE  
+  last line of the pair in the written row:  
+  gate lines: a; G1 NOT APPLIED (E-APPLY S10); ANSWER: CHANGE; CURED: the gate change was app || a; G2 NOT APPLIED (E-APPLY S14); ANSWER: CHANGE; CURED: the gate change was app || a; G3 CONTRADICTION (E-GATE M); ANSWER: CHANGE; CURED: the gate change was appl || a; G4 CONTRADICTION (E-GATE M); ANSWER: CHANGE; CURED: the gate change was appl || a; G5 CONTRADICTION (E-GATE M); ANSWER: CHANGE; UNCURED: the gate ch
+  sb_item keys: seat,sid,rule,item,line,reason,ans,to,why
+
+PLANT K-G4 on D6 vs C6 | planted line found: false 
+  Panel Cure Check [luna:1 chatgpt:0 sol:0] | Send Back Record [luna:2 chatgpt:0 sol:0] | Gate Record [luna:3 chatgpt:0 sol:0] 
+  written rows: luna:3 chatgpt:0 sol:0 
+  cure report: [AUDIT v21: DEBATE RULE VIOLATION REPORT -- SEAT: luna; ITEM: D6 vs C6; RULE: K-G4; RESULT: UNCURED; WHY: no written response; JUDGE STATEMENT: none written 
+  send-back items on the pair: S8 CHANGE , S9 CHANGE  
+  last line of the pair in the written row:  
+  gate lines: a; G1 NOT APPLIED (E-APPLY S10); ANSWER: CHANGE; CURED: the gate change was app || a; G2 NOT APPLIED (E-APPLY S14); ANSWER: CHANGE; CURED: the gate change was app || a; G3 CONTRADICTION (E-GATE M); ANSWER: CHANGE; CURED: the gate change was appl || a; G4 CONTRADICTION (E-GATE M); ANSWER: CHANGE; CURED: the gate change was appl || a; G5 CONTRADICTION (E-GATE M); ANSWER: CHANGE; UNCURED: the gate ch
+
+PLANT K-G4 on D1 vs C1 | planted line found: false 
+  Panel Cure Check [luna:1 chatgpt:0 sol:0] | Send Back Record [luna:2 chatgpt:0 sol:0] | Gate Record [luna:3 chatgpt:0 sol:0] 
+  written rows: luna:3 chatgpt:0 sol:0 
+  cure report: [AUDIT v21: DEBATE RULE VIOLATION REPORT -- SEAT: luna; ITEM: D1 vs C1; RULE: K-G4; RESULT: UNCURED; WHY: no written response; JUDGE STATEMENT: none written 
+  send-back items on the pair: none 
+  last line of the pair in the written row:  
+  gate lines: a; G1 NOT APPLIED (E-APPLY S10); ANSWER: CHANGE; CURED: the gate change was app || a; G2 NOT APPLIED (E-APPLY S14); ANSWER: CHANGE; CURED: the gate change was app || a; G3 CONTRADICTION (E-GATE M); ANSWER: CHANGE; CURED: the gate change was appl || a; G4 CONTRADICTION (E-GATE M); ANSWER: CHANGE; CURED: the gate change was appl || a; G5 CONTRADICTION (E-GATE M); ANSWER: CHANGE; UNCURED: the gate ch
