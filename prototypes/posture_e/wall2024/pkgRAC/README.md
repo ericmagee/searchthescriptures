@@ -1,5 +1,7 @@
 # pkgRAC rev 2 (W3): pairs found by the two code-side closing checks go to the closing enforcer
 
+Repacked on live s107 (s106 + pkgR1): pkgRAC/parent_s107_RAC.json; the six nodes are byte-equal to the s106 build; pkgR1 moved none of them.
+
 Authority: the operator's "option 1" (08:27 CST 2026-11-10) to W3's ask of 20:30 CST 2026-11-09. Built on live s106. NOT WRITTEN. A write needs two non-builder grades, a DeepSeek replay of the new prompt, and the operator's "write pkgRAC" in W4's thread.
 
 ## What it does
