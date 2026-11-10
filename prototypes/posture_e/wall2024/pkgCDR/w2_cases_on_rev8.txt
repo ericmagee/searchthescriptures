@@ -18,7 +18,8 @@ OK   W13 want NOT LISTED | live cands 0 | CDR cands 2 | The register stops at Jo
 OK   W14 want NOT LISTED | live cands 0 | CDR cands 2 | The register stops at Joseph.
 OK   W15 want NOT LISTED | live cands 0 | CDR cands 2 | The register stops at Joseph.
 OK   W16 want NOT LISTED | live cands 0 | CDR cands 2 | The register stops at Joseph.
-MISS W17 want LISTED | live cands 0 | CDR cands 2 | The register stops at Joseph.
+OK   W17 want LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
+       hit: P3 [CR3] I drop not only the bare statement but the wording "the register stops at Joseph".
 OK   W18 want LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
        hit: P3 [CR3] I withdraw nothing further; I drop the wording "the register stops at Joseph".
 OK   W19 want LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
@@ -26,20 +27,26 @@ OK   W19 want LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph
 OK   W20 want LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
        hit: P3 [CR3] I retract the wording "the register stops at Joseph", nothing else.
 OK   W21 want NOT LISTED | live cands 0 | CDR cands 2 | The register stops at Joseph.
-OK   W22 want NOT LISTED | live cands 0 | CDR cands 2 | The register stops at Joseph.
+MISS W22 want NOT LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
+       hit: P3 [CR3] If I drop the wording "the register stops at Joseph", the chain fails, so I keep it.
 OK   W23 want NOT LISTED | live cands 0 | CDR cands 2 | The register stops at Joseph.
-OK   W24 want NOT LISTED | live cands 0 | CDR cands 2 | The register stops at Joseph.
-OK   W25 want NOT LISTED | live cands 0 | CDR cands 2 | The register stops at Joseph.
+MISS W24 want NOT LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
+       hit: P3 [CR3] I drop the limb on Matthew 1:25 alone, but the wording "the register stops at Joseph" stands.
+MISS W25 want NOT LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
+       hit: P3 [CR3] I withdraw my objection to the reading that the register stops at Joseph.
 OK   W26 want NOT LISTED | live cands 0 | CDR cands 2 | The register stops at Joseph.
 OK   W27 want NOT LISTED | live cands 0 | CDR cands 2 | The register stops at Joseph.
-OK   W28 want NOT LISTED | live cands 0 | CDR cands 2 | The register stops at Joseph.
-OK   W29 want NOT LISTED | live cands 0 | CDR cands 2 | The register stops at Joseph.
+MISS W28 want NOT LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
+       hit: P3 [CR3] Were I to drop the wording "the register stops at Joseph", nothing would remain of LINK 6.
+MISS W29 want NOT LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
+       hit: P3 [CR3] I would drop the wording "the register stops at Joseph" only if the rows failed, and they do not.
 OK   W30 want NOT LISTED | live cands 0 | CDR cands 2 | The register stops at Joseph.
 OK   W31 want LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
        hit: P3 [CR3] **LINK 6: NARROWED TO:** I drop the wording "the register stops at Joseph".
 OK   W32 want LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
        hit: P3 [CR3] I withdraw the claim that the register stops at Joseph.
-OK   W33 want NOT LISTED | live cands 0 | CDR cands 2 | The register stops at Joseph.
+MISS W33 want NOT LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
+       hit: P3 [CR3] I drop the wording "no line through Mary" and keep "the register stops at Joseph".
 MISS W34 want NOT LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
        hit: P3 [CR3] I withdraw the wording "the register stops at Joseph" if the challenger shows a row against it; he h
 OK   W35 want NOT LISTED | live cands 0 | CDR cands 2 | The register stops at Joseph.
@@ -103,9 +110,12 @@ OK   W65 want LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph
        hit: P3 [CR3] I drop the wording "the register stops at Joseph" once and for all.
 OK   W66 want LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
        hit: P3 [CR3] I drop the wording "the register stops at Joseph"; should the challenger press it, I have no answer.
-OK   W67 want NOT LISTED | live cands 0 | CDR cands 2 | The register stops at Joseph.
-OK   W68 want NOT LISTED | live cands 0 | CDR cands 2 | The register stops at Joseph.
-OK   W69 want NOT LISTED | live cands 0 | CDR cands 2 | The register stops at Joseph.
+MISS W67 want NOT LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
+       hit: P3 [CR3] Should the rows fail, I drop the wording "the register stops at Joseph"; they do not.
+MISS W68 want NOT LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
+       hit: P3 [CR3] I drop, for the sake of argument, the wording "the register stops at Joseph".
+MISS W69 want NOT LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
+       hit: P3 [CR3] For argument's sake I drop the wording "the register stops at Joseph"; in truth it stands.
 OK   W70 want LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
        hit: P3 [CR3] I drop the wording "the register stops at Joseph" provisionally, pending the challenger's row.
 OK   W71 want LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
@@ -114,4 +124,31 @@ OK   W72 want LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph
        hit: P3 [CR3] I drop the wording "the register stops at Joseph", the day it was challenged.
 MISS W73 want NOT LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
        hit: P3 [CR3] I drop the wording "the register stops at Joseph" if need be.
-58 of 73 as labeled
+OK   W74 want LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
+       hit: P3 [CR3] Accordingly I withdraw the wording "the register stops at Joseph".
+OK   W75 want LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
+       hit: P3 [CR3] On Luke 3:23, I drop the wording "the register stops at Joseph".
+OK   W76 want LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
+       hit: P3 [CR3] Therefore, I drop the wording "the register stops at Joseph".
+OK   W77 want LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
+       hit: P3 [CR3] In this round I drop the wording "the register stops at Joseph".
+OK   W78 want LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
+       hit: P3 [CR3] So I retract the claim that the register stops at Joseph.
+OK   W79 want LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
+       hit: P3 [CR3] I hereby withdraw the wording "the register stops at Joseph".
+OK   W80 want LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
+       hit: P3 [CR3] I now abandon the wording "the register stops at Joseph".
+OK   W81 want LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
+       hit: P3 [CR3] The wording "the register stops at Joseph" is withdrawn.
+OK   W82 want LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
+       hit: P3 [CR3] I no longer hold that the register stops at Joseph.
+OK   W83 want LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
+       hit: P3 [CR3] I set aside the wording "the register stops at Joseph".
+OK   W84 want LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
+       hit: P3 [CR3] I give the wording "the register stops at Joseph" up.
+OK   W85 want LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
+       hit: P3 [CR3] We drop the wording "the register stops at Joseph".
+OK   W86 want LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
+       hit: P3 [CR3] To narrow LINK 6, I drop the wording "the register stops at Joseph".
+OK   W87 want ANY | live cands 0 | CDR cands 2 | The register stops at Joseph.
+64 of 87 as labeled

@@ -1,4 +1,22 @@
-# pkgCDR rev 7 (W1): feed the closing contradiction enforcer (item A countermeasure)
+# pkgCDR rev 8 (W1): feed the closing contradiction enforcer (item A countermeasure)
+
+## Rev 8 (W2 FAIL of rev 7: 12 true drops not listed; W3 FAIL: 21 planted and 12 real stored drop forms not read)
+- W3's rule, with W2's classes: the structural rules of revs 3 to 7 are removed. A clause (split at ";") of the side's rounds 1 to 3 is a drop
+  clause when it holds a drop verb in any form (drop, withdraw, retract, abandon, relinquish, renounce, surrender, disavow, recant, forgo,
+  strike, give up / give ... up, take back / take ... back, set / put / lay aside, let go of, no longer hold / claim / ...; any tense, active or
+  passive), unless at every such verb: the verb is negated ("not", "never", "nor do I", "refuse to" before it; "nothing", "none", "no", "not"
+  but not "not only" after it), the passive names the opponent ("by the challenger"), the nearest subject before an active verb is the
+  opponent ("the defender granted ... and withdrew"), or strike / struck is not in the side's voice. Questions stay out.
+- Wordings taken from a drop clause: every quoted span (3+ words), every "that" clause (5+ words; a trailing "is withdrawn" cut off), the
+  subject of a passive drop, and the determiner-led object after a first-person drop verb (3+ words; cut at as / because / which / for /
+  punctuation). Conditional, hypothetical and argument's-sake drops are listed; the enforcer sees the whole earlier sentence.
+- True drops not listed: 0 on every set (mine 79 + 44 rev 8; W2's 87; W3's cases, rev3, rev4, rev5, rev6, rev7). W3 rev 7 set 29 of 29.
+- The rest of each set's misses are labels NOT LISTED that are now listed for the enforcer: conditional, hypothetical, "were I to", "I would
+  drop", a second wording the same sentence keeps ("I drop "A" and keep "B""), "withdraw my objection to the reading that".
+- Stored debates: W3's scan (corpus_drops_rev8.txt): of 174 drop-word sentences in rounds 1 to 3, 88 now give a wording (rev 7: 54). Listings
+  (corpus_CDR.txt): 39 debates, 2 listings, both 34108 (the D6 pair). Three third-person reports listed in a first build (33218, 33506 "the
+  defender ... withdrew"; 33750 Ezra "was struck from the register") were removed by the opponent-subject and strike rules before posting.
+- Record 4 OK. pkgCEC probe 62 OK, 8 FAIL (the same 8). Log rows unchanged.
 
 ## Rev 7 (W3 FAIL of rev 6: the position rule hid 5 true drops and listed 10 false ones; W3 states the fault is its rule)
 - W3's request: no condition test after the drop. cdr_fn.js is rev 3 plus the question test of rev 4 (diff against 218d7a94: the cdrCond

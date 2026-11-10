@@ -18,23 +18,32 @@ const cdrWords=s=>{const W=[];for(const m of String(s).matchAll(/"([^"\n]+)"|“
 /* rev 8 (W2 and W3 grades of rev 7: true drops not listed, 12 of them real forms from the stored debates). The structural rules of revs 3 to 7
    (verb opens the clause, wording directly after the verb, first object only) are removed. W3's rule:
    - a clause (a sentence, split at ";") of the side's rounds 1 to 3 is a drop clause when it holds a drop verb in any form: drop, withdraw,
-     retract, abandon, relinquish, renounce, surrender, forgo, strike, give up (and give ... up), take back (and take ... back), set / put / lay
+     retract, abandon, relinquish, renounce, surrender, disavow, recant, forgo, strike, give up (and give ... up), take back (and take ... back), set / put / lay
      aside, let go of, no longer hold / claim / assert / maintain / affirm / press / stand by / rely on / argue; any tense, active or passive;
    - unless at every such verb the verb is negated (not, never, nor, cannot, do not, will not, refuse to, decline to, "nor do I" ... just before
-     it, or nothing / none / no / neither / not (but not "not only") just after it), the passive names the opponent as agent ("by the challenger"), or the opponent is its subject or reports it (the challenger / defender / opponent / he /
+     it, or nothing / none / no / neither / not (but not "not only") just after it), the passive names the opponent as agent ("by the challenger"), an active verb whose nearest subject before it is the opponent
+     ("the defender granted ... and withdrew"), or strike / struck not in the side's own voice ("I strike"), or the opponent is its subject or reports it (the challenger / defender / opponent / he /
      she / they + says, demands, asks, wants, argues, would have, drops, withdrew ...);
    - and the sentence is not a question.
-   From a drop clause every quoted span (3+ words, 2+ content words) and every "that ..." clause (5+ words, 2+ content words; a passive "is withdrawn" after it is cut off) is taken.
+   From a drop clause every quoted span (3+ words, 2+ content words), every "that ..." clause, the subject of a passive drop ("The route of
+   Davidic flesh through Mary is dropped.") and the object after a first-person drop verb that opens with a determiner ("I drop the register
+   through the wife.", cut at as / because / which / for / punctuation; 3+ words, 2+ content words) are taken.
    Conditional, hypothetical and argument's-sake drops are listed: the enforcer is shown the whole earlier sentence and rules on it. */
-const CDR_VF=String.raw`\b(?:drop(?:s|ped|ping)?|withdr(?:aw|aws|awn|awing|ew)|retract(?:s|ed|ing)?|abandon(?:s|ed|ing)?|relinquish(?:es|ed|ing)?|renounc(?:e|es|ed|ing)|surrender(?:s|ed|ing)?|forg(?:o|oes|one|oing)|foreg(?:o|oes|one|oing)|strik(?:e|es|ing)|struck|(?:give|gives|gave|given|giving)\s+(?:[^.;:!?\n]{0,80}?\s+)?up|(?:take|takes|took|taken|taking)\s+(?:[^.;:!?\n]{0,80}?\s+)?back|(?:set|sets|setting|put|puts|putting|lay|lays|laid|laying)\s+aside|(?:let|lets|letting)\s+go\s+of|no\s+longer\s+(?:hold|claim|assert|maintain|affirm|press|stand\s+by|rely\s+on|argue))\b`;
+const CDR_VF=String.raw`\b(?:drop(?:s|ped|ping)?|withdr(?:aw|aws|awn|awing|ew)|retract(?:s|ed|ing)?|abandon(?:s|ed|ing)?|relinquish(?:es|ed|ing)?|renounc(?:e|es|ed|ing)|surrender(?:s|ed|ing)?|disavow(?:s|ed|ing)?|recant(?:s|ed|ing)?|forg(?:o|oes|one|oing)|foreg(?:o|oes|one|oing)|strik(?:e|es|ing)|struck|(?:give|gives|gave|given|giving)\s+(?:[^.;:!?\n]{0,80}?\s+)?up|(?:take|takes|took|taken|taking)\s+(?:[^.;:!?\n]{0,80}?\s+)?back|(?:set|sets|setting|put|puts|putting|lay|lays|laid|laying)\s+aside|(?:let|lets|letting)\s+go\s+of|no\s+longer\s+(?:hold|claim|assert|maintain|affirm|press|stand\s+by|rely\s+on|argue))\b`;
 const cdrVerbRe=new RegExp(CDR_VF,'gi');
 const cdrNegBefore=/\b(?:not|never|nor|cannot|can['’]t|won['’]t|don['’]t|didn['’]t|doesn['’]t|refuse\s+to|refused\s+to|decline\s+to|declined\s+to)\s+(?:(?:now|also|ever|yet|simply|therefore|hereby)\s+)?$|\b(?:nor|not|never)\s+(?:(?:do|did|does|will|would|shall|can|could|should)\s+)?(?:I|we)\s+(?:(?:now|also|ever|yet)\s+)?$/i;
 const cdrNegAfter=/^\s+(?:nothing|none|no\b|neither|not\b(?!\s+only\b))|^\s+by\s+(?:the\s+)?(?:challenger|defender|opponent|other\s+side|him|her|them)\b/i;
 const cdrOpp=/\b(?:the\s+)?(?:challenger|defender|opponent|other\s+side|he|she|they)\s+(?:\w+\s+){0,2}?(?:says?|said|demands?|demanded|asks?|asked|wants?|wanted|argues?|argued|claims?|claimed|insists?|insisted|urges?|urged|thinks?|thought|would\s+have|presses?|pressed|writes?|wrote|calls?\s+on|requires?|required|expects?|drops?|dropped|withdr\w*|retract\w*|abandon\w*|gave|gives?|took|takes?|struck|strikes?|sets?)\b/i;
-const cdrObj=s=>{const t=String(s).replace(/[*_`]+/g,'');let any=false;
+const cdrObj=s=>{const t=String(s).replace(/[*_`]+/g,'');let any=false;const NP=[];
  for(const m of t.matchAll(cdrVerbRe)){const pre=t.slice(Math.max(0,m.index-40),m.index),post=t.slice(m.index+m[0].length);
-  if(cdrNegBefore.test(pre)||cdrNegAfter.test(post))continue;if(cdrOpp.test(t.slice(0,m.index+m[0].length).slice(-160)))continue;any=true;break;}
+  if(cdrNegBefore.test(pre)||cdrNegAfter.test(post))continue;if(cdrOpp.test(t.slice(0,m.index+m[0].length).slice(-160)))continue;
+  const bef=t.slice(0,m.index);if(/^(?:strik|struck)/i.test(m[0])&&!/\b(?:I|we)\s+(?:\S+\s+){0,2}$/i.test(bef))continue;
+  if(!/\b(?:is|was|are|were|been|be|being)\s+(?:\S+\s+)?$/i.test(bef)){let o=-1,f=-1;for(const h of bef.matchAll(/\b(?:challenger|defender|opponent|other\s+side|he|she|they)\b/gi))o=h.index;for(const h of bef.matchAll(/\b(?:I|we)\b/gi))f=h.index;if(o>f)continue;}
+  any=true;const pas=/\b(?:is|was|are|were|been|be|being)\s+(?:\S+\s+)?$/i.test(bef);
+  if(pas){const sm=cdrUnq(bef).replace(/^\s*(?:(?:[-•>]|\d{1,2}[.)])\s*)*(?:[A-Z][A-Za-z0-9 ,'’:-]{0,40}[.:]\s+)?/,'').match(/^(.+?)\s+(?:is|was|are|were|has\s+been|have\s+been|had\s+been|stands)\s+(?:\S+\s+)?$/i);if(sm)NP.push(sm[1]);}
+  else if(/\b(?:I|we)\s+(?:\S+\s+){0,2}$/i.test(bef)){const om=cdrUnq(post).match(/^\s+(?:(?:now|also|hereby|only)\s+)?((?:the|my|our|this|that|any|all|every)\s+[^,;:.!?\n]+?)(?=\s+(?:as|because|since|which|who|whose|from\s+this|together\s+with|for|so|and\s+I|but|in\s+favou?r)\b|[,;:.!?]|$)/i);if(om)NP.push(om[1]);}}
  if(!any)return [];const W=[];
+ for(const x of NP){const q=cecN(x);if(q.split(' ').length>=3&&cdrCore(q)>=2)W.push(q);}
  for(const m of t.matchAll(/"([^"\n]+)"|“([^”\n]+)”/g)){const q=cecN(m[1]||m[2]);if(q.split(' ').length>=3&&cdrCore(q)>=2)W.push(q);}
  for(const m of cdrUnq(t).matchAll(/\bthat\s+((?:[^,;:\n.!?]|:(?=\d)|\.(?=\d))+)/gi)){const q=cecN(m[1].replace(/\s+(?:is|was|are|were|has\s+been|have\s+been|stands)\s+(?:now\s+|hereby\s+|therefore\s+|also\s+)?(?:withdrawn|dropped|retracted|abandoned|struck|set\s+aside|given\s+up|taken\s+back|relinquished|renounced|surrendered)\b.*$/i,''));if(q.split(' ').length>=5&&cdrCore(q)>=2)W.push(q);}
  return [...new Set(W)];};
