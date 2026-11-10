@@ -1,0 +1,5 @@
+// L7: time of the stub's own work (read the Shared Library text, parse it, rebuild the source), live s106 library vs R1 library. Mean of 20 fresh processes.
+const cp=require('child_process'),fs=require('fs');const one=`const fs=require('fs');const w=JSON.parse(fs.readFileSync(process.argv[1]));const lib=w.nodes.find(n=>n.name==='Shared Library').parameters.jsCode;
+const stub=w.nodes.find(n=>n.name==='Panel Payloads').parameters.jsCode;const {rebuild}=require(process.cwd()+'/pkgLIB/unpack.cjs');const t=process.hrtime.bigint();rebuild(stub,lib);console.log(Number(process.hrtime.bigint()-t)/1e6);`;
+for(const [k,f] of [['live s106','/mnt/project-files/wall2024/fetchback_live_s106.json'],['R1','pkgR1/parent_s106_R1.json']]){let F=f;if(k!=='R1'){let d=JSON.parse(fs.readFileSync(f));d=d.data||d;d=d.workflow||d;F='/tmp/claude-0/-home-claude/25c53118-408e-5b9f-a314-6593b8f02ba2/scratchpad/s106_wf.json';fs.writeFileSync(F,JSON.stringify(d));}
+ const v=[];for(let i=0;i<20;i++)v.push(+cp.execFileSync(process.execPath,['-e',one,F]).toString());console.log(k+': '+(v.reduce((a,b)=>a+b)/v.length).toFixed(2)+' ms per stub rebuild (Panel Payloads, mean of 20)');}

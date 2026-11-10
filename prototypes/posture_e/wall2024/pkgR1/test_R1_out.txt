@@ -1,0 +1,15 @@
+OK   L3 each new stub names every node its source names; none reads $execution, $env or $prevNode
+OK   L4  Send Back Record (input Send Back Needed? +1): 36 of 36 runs byte-equal
+OK   L4  Alt Send Back Record (input Alt Send Back Needed? +1): 36 of 36 runs byte-equal (1 same error)
+OK   L4b R2 Alt Send Back Record (input R2 Alt Send Back Needed? +1): 36 of 36 runs byte-equal (1 same error)
+OK   L4  Send Back Build (input Judge Enforcer Record): 36 of 36 runs byte-equal
+OK   L4  Alt Send Back Build (input Alt Judge Enforcer Record): 35 of 35 runs byte-equal
+OK   L4b R2 Alt Send Back Build (input R2 Alt Judge Enforcer Record): 35 of 35 runs byte-equal
+OK   L4  Judge Enforcer Build (input Enforcer Record): 44 of 44 runs byte-equal (8 same error)
+OK   L4  Alt Judge Enforcer Build (input Alt Seated): 36 of 36 runs byte-equal
+OK   L4b R2 Alt Judge Enforcer Build (input R2 Alt Seated): 36 of 36 runs byte-equal
+OK   L4  Judge Enforcer Record (input Judge Enforcer Needed? +2): 36 of 36 runs byte-equal
+OK   L4  Alt Judge Enforcer Record (input Alt Judge Enforcer Needed? +2): 36 of 36 runs byte-equal
+OK   L4b R2 Alt Judge Enforcer Record (input R2 Alt Judge Enforcer Needed? +2): 36 of 36 runs byte-equal
+OK   L7 stub run time: full source 605.7 ms, stub 104.3 ms per node run (mean of 438); stub adds -501.4 ms
+14 OK, 0 FAIL
