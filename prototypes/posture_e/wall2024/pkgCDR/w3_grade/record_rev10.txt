@@ -1,0 +1,33 @@
+record node equal to live: false | system prompt equal to live: true | request fields other than messages equal: true
+ADDED PASSAGE:
+Read every sentence of each side's rounds 1 to 3 for anything that side gave up (dropped, withdrew, retracted, set aside, conceded away, or gave up in any other words, with or without such a verb, and wherever the wording stands: in the same sentence, the next sentence, or a list below it). Each thing given up that the same side's closing round asserts again as its own is a contradiction: report it as NEW when it is not among the candidates. The P candidates are HINTS from a code check (earlier sentences with a verb of giving up); they are NOT COMPLETE, and a drop that is not among them counts the same. For a P candidate, whose CLOSING is (not named), name what it gives up and read that side's closing round: answer CONFIRMED with the closing sentence quoted, or NOT A CONTRADICTION with CLOSING [<round 4>] "" when the closing round does not assert it again or the sentence gives nothing up. Use the link the earlier sentence belongs to.
+
+ANSWER FORMAT PART OF THE PROMPT (live text around the first CLOSE-CONTRADICTION):
+lier sentence leaves room for; or differs only in wording.
+For each contradiction, quote both sentences word for word, each from the round it stands in, and name the link it belongs to: the link whose block in the closing round holds the closing sentence, or, where the block names no link, the link the earlier sentence supports. The defender's links are the numbers of its DECLARED CHAIN in [CR1]; the challenger's links are the numbers of its LINK blocks in [DR3].
+Read every sentence of each side's rounds 1 to 3 for anything that side gave up (dropped, withdrew, retracted, set aside, conceded away, or gave up in any other words, with or without such a verb, and wherever the wording stands: in the same sentence, the next sentence, or a list below it). Each thing given up that the same side's closing round asserts again as its own is a contradiction: report it as NEW when it is not among the candidates. The P candidates are HINTS from a code check (earlier sentences with a verb of giving up); they are NOT COMPLETE, and a drop that is not among them counts the same. For a P candidate, whose CLOSING is (not named), name what it gives up and read that side's closing round: answer CONFIRMED with the closing sentence quoted, or NOT A CONTRADICTION with CLOSING [<round 4>] "" when the closing round does not assert it again or the sentence gives nothing up. Use the link the earlier sentence belongs to.
+Reply with one line per contradiction and one line per candidate, and nothing else:
+CLOSE-CONTRADICTION: <candidate id or NEW> -- <DEFENDER|CHALLENGER> -- LINK <n> -- CONFIRMED | NOT A CONTRADICTION -- EARLIER [<round>] "<words>" -- CLOSING [<round 4>] "<words>" -- <one sentence: why both cannot be true, or why they can>
+If you find no contradiction and there is no candidate, reply with the one line: CLOSE-CONTRADICTION: NONE
+
+CANDIDATES ALREADY NAMED (answer each one by its id):
+P1 -- DEFENDER -- LINK ? -- EARLIER [CR2] "That reason removes the cause for putting away by naming a source other than him." -- CLOSING [CR4] (not named) -- named by the code check (a sentence of this side's earlier rounds with a drop, withdraw or give-up verb): find whether the closing round asserts again what this sentence gives up
+P2 -- DEFENDER -- LINK 1 -- EARLIER [CR3] "I drop the limb that Matthew 1:25 alone spans the espousal, and I rest nothing on "till" by itself." -- CLOSING [CR4] (not named) -- named by the code check (a sentence of this side's earlier rounds with a drop, withdraw or give-up verb): find whether the closing round asserts again what this sentence gives up
+P3 -- DEFENDER -- LINK 2 -- EARLIER [CR3] "I drop the broader claim that justice could never move a husband who knew the child to be his." -- CLOSING [CR4] (not named) -- named by the code check (a sentence of this side's earlier rounds with a drop, withdraw or give-up verb): find whether the closing round asserts again what this sentence gives up
+P4 -- DEFENDER -- LINK 3 -- EARLIER [CR3] "I drop the word "alone."" -- CLOSING [CR4] (not named) -- named by the code check (a sentence of this side's earlier rounds with a drop, withdraw or give-up verb): find whether the closing round asserts again what this sentence gives up
+P5 -- DEFENDER -- LINK 4 -- EARLIER [CR3] "I drop the wording "closes the esp
+
+fixture: CR3 holds the grant true | CR4 holds the closing sentence true
+OK   W1 a NEW line (not a hint) with both quotations word for word is read as CONFIRMED
+       ["P1 NOT A CONTRADICTION","P2 NOT A CONTRADICTION","P3 NOT A CONTRADICTION","P4 NOT A CONTRADICTION","P5 NOT A CONTRADICTION","P6 NOT A CONTRADICTION","P7 NOT A CONTRADICTION","P8 NOT A CONTRADICTION","P9 NOT A CONTRADICTION","NEW CONFIRMED"] confirmed ["DEFENDER LINK 6"]
+OK   W2 a NEW line whose earlier quotation is not in the round breaks nothing
+       ["P1 NOT A CONTRADICTION","P2 NOT A CONTRADICTION","P3 NOT A CONTRADICTION","P4 NOT A CONTRADICTION","P5 NOT A CONTRADICTION","P6 NOT A CONTRADICTION","P7 NOT A CONTRADICTION","P8 NOT A CONTRADICTION","P9 NOT A CONTRADICTION","NEW NOT CONFIRMED (form)"] confirmed []
+OK   W3 a NEW line whose EARLIER is the closing round breaks nothing
+       ["P1 NOT A CONTRADICTION","P2 NOT A CONTRADICTION","P3 NOT A CONTRADICTION","P4 NOT A CONTRADICTION","P5 NOT A CONTRADICTION","P6 NOT A CONTRADICTION","P7 NOT A CONTRADICTION","P8 NOT A CONTRADICTION","P9 NOT A CONTRADICTION","NEW NOT CONFIRMED (form)"] confirmed []
+OK   W4 a hint CONFIRMED with a closing quotation from the other side's closing round breaks nothing
+       TRADICTION","P3 NOT A CONTRADICTION","P4 NOT A CONTRADICTION","P5 NOT A CONTRADICTION","P6 NOT A CONTRADICTION","P8 NOT A CONTRADICTION","P9 NOT A CONTRADICTION","? NOT CONFIRMED (form)"] confirmed []
+OK   W5 a challenger hint answered as the defender's contradiction breaks nothing
+       RADICTION","P3 NOT A CONTRADICTION","P4 NOT A CONTRADICTION","P5 NOT A CONTRADICTION","P6 NOT A CONTRADICTION","P7 NOT A CONTRADICTION","P9 NOT A CONTRADICTION","P8 NOT CONFIRMED (form)"] confirmed []
+OK   W6 hints left unanswered are NO ANSWER
+       ["P4","P5","P6","P7","P8","P9"]
+log rows 9 | 6 OK, 0 FAIL
