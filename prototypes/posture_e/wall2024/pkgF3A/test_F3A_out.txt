@@ -1,0 +1,14 @@
+OK   F0 s110 Second Alternate? rerun equals stored
+   s110 a2r {"run":false,"seats":["luna"],"tried":["anthropic/claude-haiku-5.5"],"free":[],"why":"no pool model is left after round 1 (pool: haiku; tried: anthropic/claude-haiku-5.5)"}
+   F3A  a2r {"run":true,"seats":["luna"],"tried":[],"free":["haiku"],"retry":["anthropic/claude-haiku-5.5"],"why":"round 2 for luna; free: haiku; retry of an unusable reply: anthropic/claude-haiku-5.5"}
+OK   F1 34626 haiku "did not parse": round 2 runs for luna with haiku again, recorded as retry
+OK   F1 everything but a2r unchanged
+   R2 Alternate Build [{"removed":"luna","seat":"haiku","why":"","max_tokens":64000}]
+OK   F2 R2 Alternate Build builds the haiku body for luna (same 64,000 limit)
+OK   F3 content null: s110 run false, F3A run true (expected true)
+OK   F3 no JSON object: s110 run false, F3A run true (expected true)
+OK   F4 uncured items (a usable reply the rules refused): s110 run false, F3A run false (expected false)
+OK   F4 guards: s110 run false, F3A run false (expected false)
+OK   F5 Second Alternate? is fed only by Alternate Merge 1, so a retried reply that fails again is not retried a third time (Alternate Merge 1)
+OK   F6 only Second Alternate? changes; connections equal
+10 OK, 0 FAIL
