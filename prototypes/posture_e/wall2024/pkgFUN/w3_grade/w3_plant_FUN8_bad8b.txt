@@ -1,0 +1,29 @@
+BAD LIVE s104 CURED | s104+KSL2 CURED | FUN8 CURED | REFUSAL CURED   | "COUNTED is wrong." 
+     FUN8 reason: answered: the close concession is counted (NOTED, record-only: the strict reader would refuse it: COUNTED is not the first word, or the first sentence holds a negation)
+BAD LIVE s104 CURED | s104+KSL2 CURED | FUN8 CURED | REFUSAL CURED   | "COUNTED is not what the rule requires here." 
+     FUN8 reason: answered: the close concession is counted (NOTED, record-only: the strict reader would refuse it: COUNTED is not the first word, or the first sentence holds a negation)
+BAD LIVE s104 CURED | s104+KSL2 CURED | FUN8 CURED | REFUSAL CURED   | "COUNTED? No." 
+     FUN8 reason: answered: the close concession is counted (NOTED, record-only: the strict reader would refuse it: COUNTED is not the first word, or the first sentence holds a negation; a sentence reads like a refusal: "No")
+BAD LIVE s104 CURED | s104+KSL2 CURED | FUN8 CURED | REFUSAL CURED   | "COUNTED would be incorrect." 
+     FUN8 reason: answered: the close concession is counted (NOTED, record-only: the strict reader would refuse it: COUNTED is not the first word, or the first sentence holds a negation)
+BAD LIVE s104 CURED | s104+KSL2 CURED | FUN8 CURED | REFUSAL CURED   | "COUNTED does not apply." 
+     FUN8 reason: answered: the close concession is counted (NOTED, record-only: the strict reader would refuse it: COUNTED is not the first word, or the first sentence holds a negation)
+BAD LIVE s104 UNCURED | s104+KSL2 UNCURED | FUN8 UNCURED    | "TOUCHES NO LINK: I refuse to answer." 
+     FUN8 reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+BAD LIVE s104 UNCURED | s104+KSL2 UNCURED | FUN8 UNCURED    | "TOUCHES NO LINK: No." 
+     FUN8 reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+BAD LIVE s104 UNCURED | s104+KSL2 UNCURED | FUN8 CURED | REFUSAL CURED | DIFFERS FROM LIVE  | "Yes.\nCOUNTED is wrong here." 
+     FUN8 reason: answered: the close concession is counted (NOTED, record-only: the strict reader would refuse it: COUNTED is not the first word, or the first sentence holds a negation)
+BAD LIVE s104 UNCURED | s104+KSL2 UNCURED | FUN8 UNCURED    | "Yes.\nCOUNTED. It should not be counted." 
+     FUN8 reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+BAD LIVE s104 UNCURED | s104+KSL2 UNCURED | FUN8 UNCURED    | "Agreed.\nCOUNTED. My count stands." 
+     FUN8 reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+BAD LIVE s104 UNCURED | s104+KSL2 UNCURED | FUN8 UNCURED    | "Correct.\nCOUNTED: no." 
+     FUN8 reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+BAD LIVE s104 CURED | s104+KSL2 CURED | FUN8 CURED | REFUSAL CURED   | "COUNTED. My count is right." 
+     FUN8 reason: answered: the close concession is counted
+BAD LIVE s104 CURED | s104+KSL2 CURED | FUN8 CURED | REFUSAL CURED   | "COUNTED. My count is correct as issued." 
+     FUN8 reason: answered: the close concession is counted
+BAD LIVE s104 CURED | s104+KSL2 CURED | FUN8 CURED | REFUSAL CURED   | "COUNTED. My count is not wrong." 
+     FUN8 reason: answered: the close concession is counted
+pkgFUN/w3_grade/w3_bad8b.json: 14 texts; refusals cured by rev 8: 9; rev 8 ruling differs from live s104: 1; texts where another log row differs from the base: 0

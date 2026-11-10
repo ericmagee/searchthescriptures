@@ -1,0 +1,51 @@
+BAD LIVE s104 CURED | s104+KSL2 CURED | FUN8 UNCURED  | DIFFERS FROM LIVE  | "COUNTED. My count stands." 
+     FUN8 reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+BAD LIVE s104 CURED | s104+KSL2 CURED | FUN8 UNCURED  | DIFFERS FROM LIVE  | "COUNTED. I refuse." 
+     FUN8 reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+BAD LIVE s104 CURED | s104+KSL2 CURED | FUN8 UNCURED  | DIFFERS FROM LIVE  | "COUNTED. The count is wrong." 
+     FUN8 reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+BAD LIVE s104 CURED | s104+KSL2 CURED | FUN8 UNCURED  | DIFFERS FROM LIVE  | "COUNTED. Not counted." 
+     FUN8 reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+BAD LIVE s104 CURED | s104+KSL2 CURED | FUN8 UNCURED  | DIFFERS FROM LIVE  | "COUNTED. I do not count it!" 
+     FUN8 reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+BAD LIVE s104 CURED | s104+KSL2 CURED | FUN8 UNCURED  | DIFFERS FROM LIVE  | "COUNTED. Under protest." 
+     FUN8 reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+BAD LIVE s104 CURED | s104+KSL2 CURED | FUN8 UNCURED  | DIFFERS FROM LIVE  | "COUNTED. My count is wrong." 
+     FUN8 reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+pkgFUN/w3_grade/w3_bad7.json: 7 texts; refusals cured by rev 8: 0; rev 8 ruling differs from live s104: 7; texts where another log row differs from the base: 0
+BAD LIVE s104 UNCURED | s104+KSL2 UNCURED | FUN8 UNCURED    | "NOT COUNTED:\nthe grant was withdrawn" 
+     FUN8 reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+BAD LIVE s104 UNCURED | s104+KSL2 UNCURED | FUN8 UNCURED    | "I refuse.\nIt is not to be counted." 
+     FUN8 reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+BAD LIVE s104 UNCURED | s104+KSL2 UNCURED | FUN8 UNCURED    | "I decline to answer this item.\nThe defender's sentence should not be counted as a concession." 
+     FUN8 reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+BAD LIVE s104 UNCURED | s104+KSL2 UNCURED | FUN8 UNCURED    | "No.\nNot counted." 
+     FUN8 reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+BAD LIVE s104 UNCURED | s104+KSL2 UNCURED | FUN8 UNCURED    | "The defender did not concede.\nIt cannot be counted." 
+     FUN8 reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+BAD LIVE s104 CURED | s104+KSL2 CURED | FUN8 CURED | REFUSAL CURED   | "COUNTED.\n#1 is not counted after all." 
+     FUN8 reason: answered: the close concession is counted
+BAD LIVE s104 CURED | s104+KSL2 CURED | FUN8 CURED | REFUSAL CURED   | "COUNTED.\nIt is not counted, because DEFENDER CR3 did not grant it." 
+     FUN8 reason: answered: the close concession is counted
+BAD LIVE s104 CURED | s104+KSL2 CURED | FUN8 CURED | REFUSAL CURED   | "COUNTED.\nNo. 1 is not counted; see also #2." 
+     FUN8 reason: answered: the close concession is counted (NOTED, record-only: a sentence reads like a refusal: "No")
+BAD LIVE s104 UNCURED | s104+KSL2 UNCURED | FUN8 CURED | REFUSAL CURED | DIFFERS FROM LIVE  | "TOUCHES NO LINK:\nit concerns no link of the chain" 
+     FUN8 reason: answered: it touches no declared link or listed premise, with its reason
+BAD LIVE s104 UNCURED | s104+KSL2 UNCURED | FUN8 UNCURED    | "This item\nTOUCHES NO LINK" 
+     FUN8 reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+pkgKSL/w3_grade/w3_bad_ksl2.json: 10 texts; refusals cured by rev 8: 4; rev 8 ruling differs from live s104: 1; texts where another log row differs from the base: 0
+BAD LIVE s104 CURED | s104+KSL2 CURED | FUN8 CURED | REFUSAL CURED   | "COUNTED. #1 is not counted after all." 
+     FUN8 reason: answered: the close concession is counted
+BAD LIVE s104 CURED | s104+KSL2 CURED | FUN8 CURED | REFUSAL CURED   | "COUNTED. It is not counted, because DEFENDER CR3 did not grant it." 
+     FUN8 reason: answered: the close concession is counted
+BAD LIVE s104 CURED | s104+KSL2 CURED | FUN8 CURED | REFUSAL CURED   | "COUNTED.\nIt is not counted, because the defender did not grant it." 
+     FUN8 reason: answered: the close concession is counted
+BAD LIVE s104 CURED | s104+KSL2 CURED | FUN8 CURED | REFUSAL CURED   | "COUNTED. It is not counted, because the defender did not grant it." 
+     FUN8 reason: answered: the close concession is counted
+BAD LIVE s104 CURED | s104+KSL2 CURED | FUN8 CURED | REFUSAL CURED   | "COUNTED.\nIt should not be counted. See DEFENDER CR3." 
+     FUN8 reason: answered: the close concession is counted
+BAD LIVE s104 CURED | s104+KSL2 CURED | FUN8 UNCURED  | DIFFERS FROM LIVE  | "COUNTED.\nIt should not be counted.\nSee DEFENDER CR3." 
+     FUN8 reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+BAD LIVE s104 CURED | s104+KSL2 CURED | FUN8 CURED | REFUSAL CURED   | "COUNTED.\nSee DEFENDER CR3.\nIt should not be counted." 
+     FUN8 reason: answered: the close concession is counted
+pkgKSL/w3_grade/w3_bad_ksl2b.json: 7 texts; refusals cured by rev 8: 6; rev 8 ruling differs from live s104: 1; texts where another log row differs from the base: 0
