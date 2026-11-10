@@ -1,3 +1,5 @@
+// pkgCDR rev 9 (W1; W2 Wall 4014 and W3 grade_CDR8_w3.md FAIL rev 8; option (b), coordinator 04:50Z): every drop-family sentence of the side's rounds 1-3 is a
+//   candidate whole, with no closing sentence named; the enforcer prompt gains one sentence telling it how to answer such a candidate.
 // pkgCDR rev 3 (W1; W3 FAIL of rev 2, grade_CDR2_w3.md: sentences that do not drop the wording were listed; cdrObj anchors the drop verb at the sentence start
 //   with the dropped wording directly after it, and takes only that first object).
 // pkgCDR rev 2 (W1; W2 FAIL of rev 1, grade_CDR_w2.md: a refused drop was read as a drop; cdrDrop now refuses "I drop nothing / none / no / neither / not").
@@ -9,14 +11,16 @@
 //     and the ANTI-CHEAT CHECK (ruling 427), are listed as candidates beside the judges' own (jc_feed.js). On 34108 this lists the "ordinary means" pair,
 //     which reached no enforcer in 34299. The reversal check runs in Panel Build, after the closing enforcer, so it can feed only the later call.
 // (3) Close Enforcer Record reads a P<n> candidate id as it reads X<n> and J<n>; every check on an answer is unchanged.
-// Only these three code nodes change. No library node, no connection, no prompt wording, no log row shape.
+// Only these three code nodes change. No library node, no connection. Rev 9 adds one prompt sentence (candidates with no closing named).
 //   node pkgCDR/build_CDR.cjs <live fetch-back> <out>
 const fs=require('fs');const die=m=>{console.error('BUILD REFUSED: '+m);process.exit(1);};const [,,FB,OUT]=process.argv;if(!FB||!OUT)die('usage: build_CDR.cjs <base> <out>');
 let d=JSON.parse(fs.readFileSync(FB,'utf8'));d=d.data||d;d=d.workflow||d;if(d.nodes.length!==418)die('base has '+d.nodes.length+' nodes');
 const FN=fs.readFileSync(__dirname+'/cdr_fn.js','utf8'),JF=fs.readFileSync(__dirname+'/jc_feed.js','utf8');
 const E={'Close Enforcer Build':[
   ["const S=$('Init Seats').first().json;",FN+"const S=$('Init Seats').first().json;"],
-  ["const links=cecLinks(F);const cands=cecOracle(F);","const links=cecLinks(F);const cands=(()=>{const o=cecOracle(F);const p=cecDropped(F).filter(c=>!o.some(x=>x.side===c.side&&cecN(x.closing_q)===cecN(c.closing_q)));return o.concat(p);})(); /* pkgCDR: the Oracle's candidates, then the code check's */"]],
+  ["const links=cecLinks(F);const cands=cecOracle(F);","const links=cecLinks(F);const cands=cecOracle(F).concat(cecDropped(F)); /* pkgCDR: the Oracle's candidates, then the code check's */"],
+  [" -- CLOSING ['+c.closing_round+'] \"'+c.closing_q+'\" -- named by "," -- CLOSING ['+c.closing_round+'] '+(c.closing_q==null?'(not named)':'\"'+c.closing_q+'\"')+' -- named by "],
+  ["Reply with one line per contradiction and one line per candidate, and nothing else:","A candidate whose CLOSING is (not named) is a sentence of that side's earlier rounds that drops, withdraws or gives up something. Name what it gives up, then read that side's closing round: if a closing sentence asserts it again as the side's own, answer CONFIRMED and quote that closing sentence; if none does, or the earlier sentence gives nothing up, answer NOT A CONTRADICTION with CLOSING [<round 4>] \\\"\\\". Use the link the earlier sentence belongs to.\\nReply with one line per contradiction and one line per candidate, and nothing else:"]],
  'Close Enforcer Record':[
   [String.raw`(X\d+|J\d+|NEW\s*\d*)`,String.raw`(X\d+|J\d+|P\d+|NEW\s*\d*)`],
   ["CLOSE ENFORCER RECORD","CLOSE ENFORCER RECORD (pkgCDR: also reads the code check's P candidates)"]],

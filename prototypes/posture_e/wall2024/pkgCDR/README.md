@@ -1,4 +1,20 @@
-# pkgCDR rev 8 (W1): feed the closing contradiction enforcer (item A countermeasure)
+# pkgCDR rev 9 (W1): feed the closing contradiction enforcer (item A countermeasure)
+
+## Rev 9 (W2 FAIL of rev 8, Wall 4014: 21 true drops hidden; W3 FAIL, grade_CDR8_w3.md: 14 hidden by the opponent, negation and strike rules, 9 short
+## wordings no wording match can cover). Option (b), weighed on the Wall (4015): the code stops extracting the wording.
+- Every sentence of a side's rounds 1 to 3 that holds a verb of the drop family (drop, withdraw/withdrawal, retract, abandon, relinquish,
+  renounce, surrender, disavow, recant, forgo, strike/struck, waive, rescind, discard, give ... up, take ... back, walk back, back away, concede
+  ... away, set/put/lay aside, let go, no longer) is a candidate, whole, with CLOSING (not named). Filter by speaker only (the side's own
+  rounds); system marks "[VOID ..." are skipped; duplicates once; at most 30 per side.
+- The enforcer prompt gains one sentence: for such a candidate, name what it gives up, read the side's closing round, answer CONFIRMED with the
+  closing sentence quoted, or NOT A CONTRADICTION with CLOSING [<round 4>] "". Close Enforcer Record is unchanged: a CONFIRMED line stands only
+  with both quotations found word for word (an empty closing quote is NOT CONFIRMED, record_CDR R4).
+- Reach (run9.txt): true drops that reach the enforcer 178 of 178 over my sets, W2's 114 and W3's seven files. Other labeled sentences that
+  reach it: 172 of 173 (the enforcer rules on them).
+- Stored debates (corpus_CDR.txt): 194 candidates over 39 debates (35 with a closing round): 115 defender, 79 challenger; per debate 0 to 15,
+  median 5. On 34108: P1 to P6 (defender [CR3]), P6 the D6 drop; P7 challenger.
+- Record (record_CDR.txt) 5 OK: P6 CONFIRMED breaks D6; six NOT A CONTRADICTION with empty CLOSING read; NONE leaves all 7 NO ANSWER; empty closing
+  quote on CONFIRMED refused. Rolled-back insert of the four row shapes: rows 4, recorded true. pkgCEC probe 62 OK, 8 FAIL (the same 8).
 
 ## Rev 8 (W2 FAIL of rev 7: 12 true drops not listed; W3 FAIL: 21 planted and 12 real stored drop forms not read)
 - W3's rule, with W2's classes: the structural rules of revs 3 to 7 are removed. A clause (split at ";") of the side's rounds 1 to 3 is a drop
