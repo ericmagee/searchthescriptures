@@ -1,0 +1,37 @@
+OK   G0 live Second Alternate? rerun equals stored
+   live a2r {"run":false,"seats":["luna"],"tried":["anthropic/claude-haiku-5.5"],"free":[],"why":"no pool model is left after round 1 (pool: haiku; tried: anthropic/claude-haiku-5.5)"}
+   cand a2r {"run":true,"seats":["luna"],"tried":[],"free":["haiku"],"retry":["anthropic/claude-haiku-5.5"],"why":"round 2 for luna; free: haiku; retry of an unusable reply: anthropic/claude-haiku-5.5"}
+OK   G1 34626: candidate runs round 2 for luna with haiku again
+   [G3 unusable twice] R2 Alternate Build: [{"removed":"luna","seat":"haiku","why":"","body":true}]
+   reached: R2 Alternate Build > R2 Alternate Payloads > R2 Alternate Merge Seat > R2 Alt Seated > R2 Alt Judge Enforcer Build > R2 Alt Judge Enforcer Record > R2 Alt Send Back Build > R2 Alt Send Back Record > R2 Alt Reread Build > R2 Alt Reread Record > R2 Alt Gate Build > R2 Alt Gate Record > R2 Alternate Merge > Alternate Merge
+   alternates_tried [{"seat":"luna","alt":"haiku","result":"NOT SEATED","why":"seat \"haiku\" JSON did not parse: Expected ',' or '}' after p"},{"seat":"luna","alt":"haiku","result":"NOT SEATED","why":"seat \"haiku\" JSON did not parse: Expected ',' or '}' after p"}]
+   alternates_seated []
+   alternate_round2 {"seats":["luna"],"tried":[],"free":["haiku"],"result":[{"seat":"luna","seated":null,"lines":0}]}
+   luna row ALTERNATE lines: 1
+     [AUDIT v21: ALTERNATE TRIED -- SEAT: luna; ALTERNATE: haiku; MODEL: anthropic/claude-haiku-5.5; RESULT: NOT SEATED; WHY: seat "haiku" JSON did not parse: Expected ',' or ')' after property value in JSON at position 5435 (line 1 co
+OK   G3 unusable twice: seat stays unfilled, both tries are in alternates_tried, the run does not stop
+FAIL G3 the second failed try is written in the removed judge's row (ALTERNATE TRIED line count 1)
+   [G2 good retry] R2 Alternate Build: [{"removed":"luna","seat":"haiku","why":"","body":true}]
+   reached: R2 Alternate Build > R2 Alternate Payloads > R2 Alternate Merge Seat > R2 Alt Seated > R2 Alt Judge Enforcer Build > R2 Alt Judge Enforcer Record > R2 Alt Send Back Build > R2 Alt Send Back Record > R2 Alt Reread Build > R2 Alt Reread Record > R2 Alt Gate Build > R2 Alt Gate Record > R2 Alternate Merge > Alternate Merge
+   alternates_tried [{"seat":"luna","alt":"haiku","result":"NOT SEATED","why":"seat \"haiku\" JSON did not parse: Expected ',' or '}' after property value in JSON at posit"},{"seat":"luna","alt":"haiku","result":"NOT SEATED","why":"34 uncured item(s)"}]
+   alternates_seated []
+   alternate_round2 {"seats":["luna"],"tried":[],"free":["haiku"],"result":[{"seat":"luna","seated":null,"lines":1}]}
+   panel_effective ["chatgpt","luna","sol"]
+FAIL G2 good retry: haiku is seated for luna (limit: no enforcer, send-back or gate replies for the alternate; those calls are not replayed)
+OK   G4 round 1 seated: candidate equals live apart from the empty a2r.retry key (run false)
+FAIL G4 no alternate tried: candidate equals live apart from the empty a2r.retry key (run false)
+OK   G4 NOT SEATED for uncured items: candidate equals live apart from the empty a2r.retry key (run false)
+OK   G4 NOT SEATED, guards: candidate equals live apart from the empty a2r.retry key (run false)
+OK   G4 timeout text: candidate equals live apart from the empty a2r.retry key (run false)
+   G5 luna<-haiku unusable, sol<-glm refused by rules: a2r {"run":true,"seats":["luna","sol"],"tried":["z-ai/glm-5"],"free":["haiku"],"retry":["anthropic/claude-haiku-5.5"],"why":"round 2 for luna, sol; free: haiku; retry of an unusable reply: anthropic/claude-haiku-5.5"}
+      R2 Alternate Build: [{"removed":"luna","seat":"haiku","why":""}]
+OK   G5 the model whose usable reply the rules refused (glm) is not called again
+OK   G5 the retried model (haiku) goes to the seat whose reply was unusable (luna); it went to: luna
+   G5 luna<-glm refused by rules, sol<-haiku unusable: a2r {"run":true,"seats":["sol","luna"],"tried":["z-ai/glm-5"],"free":["haiku"],"retry":["anthropic/claude-haiku-5.5"],"why":"round 2 for sol, luna; free: haiku; retry of an unusable reply: anthropic/claude-haiku-5.5"}
+      R2 Alternate Build: [{"removed":"luna","seat":"haiku","why":""}]
+OK   G5 the model whose usable reply the rules refused (glm) is not called again
+FAIL G5 the retried model (haiku) goes to the seat whose reply was unusable (sol); it went to: luna
+   G9 live a2r with glm in the pool: {"run":true,"seats":["luna"],"tried":["anthropic/claude-haiku-5.5"],"free":["glm"],"why":"round 2 for luna; free: glm"}
+OK   G9 live s110 Second Alternate? runs round 2 with the untried pool model
+OK   G9 live R2 Alternate Build builds the call of that model for luna
+12 OK, 4 FAIL
