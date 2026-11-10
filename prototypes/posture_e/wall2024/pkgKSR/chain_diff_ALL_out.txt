@@ -1,0 +1,53 @@
+== luna: other fields differing: none; verdict_raw lines base-only 13, candidate-only 9
+  - KEYSTONE: D6 -- STANDS -- derived by the engine from the collision grades of D6 (none DEFENDER LINK BROKEN) after the change of S6, S8 (E-APPLY, W3 2362)
+  - 
+  - [AUDIT v42: COLLISION GRADE UNCURED (pkgUND) -- SEAT: luna; ITEMS: S12 (E-UNG COLLISION D3 (pressed: [DR2] premise 3): the CHANGE TO has no graded D3 vs C<j> line); counted in drv_uncured. REVIEW THIS ROW.]
+  - [AUDIT v38: E-GATE -- SEAT: luna; G1 NOT APPLIED (E-APPLY S10); ANSWER: CHANGE; CURED: the gate change was applied]
+  - [AUDIT v38: E-GATE -- SEAT: luna; G2 NOT APPLIED (E-APPLY S14); ANSWER: CHANGE; CURED: the gate change was applied]
+  - [AUDIT v37: SEND-BACK APPLIED (E-APPLY; WALL-2024 2236, 2237) -- SEAT: luna; APPLIED: S1, G3, G4, S4, S5, S6, S7, S8, S11, S12, S9, S15, G5, S17, G1, G2, KEYSTONE (derived); G3 replaces S2 on the same line (the last change wins); 
+  - [AUDIT v37: SEND-BACK ITEM -- SEAT: luna; S10; NOT APPLIED: the change drops the collision D2 vs C1 (W3 2351: a change to a collision or FORCED line must be a collision line for the same pair); LINE: D2 vs C2 (Matthew 1:19): UNDER
+  - [AUDIT v37: SEND-BACK ITEM -- SEAT: luna; S14; NOT APPLIED: the change drops the collision D3 vs C1 (W3 2351: a change to a collision or FORCED line must be a collision line for the same pair); LINE: D3 vs C3 (Matthew 1:16): STAND
+  - [AUDIT v27: SUPERSEDED LINE -- SEAT: luna; LABEL: D6 VS C5; ORIGINAL: D6 vs C5 (Romans 1:3): DEFENDER LINK BROKEN -- (AUDIT: LINK 6 BROKEN BY A CONFIRMED CLOSING CONTRADICTION -- DEFENDER -- EARLIER (CR3) "I drop the wording 'no b
+  - [AUDIT v27: SUPERSEDED LINE -- SEAT: luna; LABEL: LINE; ORIGINAL: FORCED: D6 vs C5 -- MEANS (DR2): “The flesh is therefore of the flesh line.” -- ANSWER (CR4): “A descent from David's loins that comes by Mary is the descent the ro
+  - [AUDIT v27: SUPERSEDED LINE -- SEAT: luna; LABEL: LINE; ORIGINAL: FORCED: D6 vs C6 -- MEANS (DR2): “The reckoning by usage is a house-of-the-fathers reckoning.” -- ANSWER (CR4): “The household acts by the custom of the law.” -- FA
+  - [AUDIT v27: SUPERSEDED LINE -- SEAT: luna; LABEL: KEYSTONE; ORIGINAL: KEYSTONE: D6 -- BROKEN -- D6, the conclusion that Christ had no biological father, is broken by the confirmed closing contradiction. ; END]
+  - [AUDIT v39: K-RECHK -- SEAT: luna; CHANGE: KEYSTONE (derived); RULE: K-CMT; ALREADY IN THE ORIGINAL: a contested grade line that names no Commitment N; LINE: KEYSTONE: D6 -- STANDS -- derived by the engine from the collision grade
+  + KEYSTONE: D6 -- BROKEN -- D6, the conclusion that Christ had no biological father, is broken by the confirmed closing contradiction.
+  + FORCED: D6 vs C5 -- MEANS [DR2]: “The flesh is therefore of the flesh line.” -- ANSWER [CR4]: “A descent from David's loins that comes by Mary is the descent the rows state, with no biological father needed to complete it.” -- FAI
+  + FORCED: D6 vs C6 -- MEANS [DR2]: “The reckoning by usage is a house-of-the-fathers reckoning.” -- ANSWER [CR4]: “The household acts by the custom of the law.” -- FAILS: “These rows name the pair who acted in the household” -- CARR
+  + [AUDIT v42: COLLISION GRADE UNCURED (pkgUND) -- SEAT: luna; ITEMS: S8 (E-UNG COLLISION D3 (pressed: [DR2] premise 3): the CHANGE TO has no graded D3 vs C<j> line); counted in drv_uncured. REVIEW THIS ROW.]
+  + [AUDIT v38: E-GATE -- SEAT: luna; G1 NOT APPLIED (E-APPLY S6); ANSWER: CHANGE; CURED: the gate change was applied]
+  + [AUDIT v38: E-GATE -- SEAT: luna; G2 NOT APPLIED (E-APPLY S10); ANSWER: CHANGE; CURED: the gate change was applied]
+  + [AUDIT v37: SEND-BACK APPLIED (E-APPLY; WALL-2024 2236, 2237) -- SEAT: luna; APPLIED: S1, G3, G4, S4, S5, S7, S8, S11, G5, S13, G1, G2; G3 replaces S2 on the same line (the last change wins); G4 replaces S3 on the same line (the l
+  + [AUDIT v37: SEND-BACK ITEM -- SEAT: luna; S6; NOT APPLIED: the change drops the collision D2 vs C1 (W3 2351: a change to a collision or FORCED line must be a collision line for the same pair); LINE: D2 vs C2 (Matthew 1:19): UNDERD
+  + [AUDIT v37: SEND-BACK ITEM -- SEAT: luna; S10; NOT APPLIED: the change drops the collision D3 vs C1 (W3 2351: a change to a collision or FORCED line must be a collision line for the same pair); LINE: D3 vs C3 (Matthew 1:16): STAND
+== chatgpt: other fields differing: none; verdict_raw lines base-only 7, candidate-only 7
+  - RESULT: CHALLENGER WINS -- recomputed after the cure from the cured lines (CLOSE-CONTRADICTION D6 vs C5 (UNDERDETERMINED to DEFENDER LINK BROKEN); CLOSE-CONTRADICTION D6 vs C6 (UNDERDETERMINED to DEFENDER LINK BROKEN)): BROKEN-1, 
+  - KEYSTONE: D6 -- STANDS -- The declared conclusion that Christ had no biological father was retained on stated rows and has not been shown broken at a textual collision.
+  - DEFENSE STANDING: PROP-DEPENDENT -- L=6 c=0 -- recomputed after the cure from the cured lines (CLOSE-CONTRADICTION D6 vs C5 (UNDERDETERMINED to DEFENDER LINK BROKEN); CLOSE-CONTRADICTION D6 vs C6 (UNDERDETERMINED to DEFENDER LINK 
+  - [AUDIT v25: RECOMPUTED AFTER CURE -- SEAT: chatgpt; TRIGGER: CLOSE-CONTRADICTION D6 vs C5 (UNDERDETERMINED to DEFENDER LINK BROKEN), CLOSE-CONTRADICTION D6 vs C6 (UNDERDETERMINED to DEFENDER LINK BROKEN); ORIGINAL: HELD, DEFENSE S
+  - [AUDIT v37: SEND-BACK APPLIED (E-APPLY; WALL-2024 2236, 2237) -- SEAT: chatgpt; APPLIED: S1, S2, S3, S5, S6; ORIGINAL: BROKEN, DEFENSE PROP-DEPENDENT 0, CHALLENGE SELF-SUPPORTED 0, RESULT CHALLENGER WINS; DERIVED: BROKEN (BROKEN-1
+  - [AUDIT v27: SUPERSEDED LINE -- SEAT: chatgpt; LABEL: D6 VS C5; ORIGINAL: D6 vs C5 (Romans 1:3): DEFENDER LINK BROKEN -- (AUDIT: LINK 6 BROKEN BY A CONFIRMED CLOSING CONTRADICTION -- DEFENDER -- EARLIER (CR3) "I drop the wording 'n
+  - [AUDIT v27: SUPERSEDED LINE -- SEAT: chatgpt; LABEL: D6 VS C6; ORIGINAL: D6 vs C6 (Luke 3:23): DEFENDER LINK BROKEN -- (AUDIT: LINK 6 BROKEN BY A CONFIRMED CLOSING CONTRADICTION -- DEFENDER -- EARLIER (CR3) "I drop the wording 'no
+  + RESULT: CHALLENGER WINS -- recomputed after the cure from the cured lines (CLOSE-CONTRADICTION D6 vs C5 (UNDERDETERMINED to DEFENDER LINK BROKEN); CLOSE-CONTRADICTION D6 vs C6 (UNDERDETERMINED to DEFENDER LINK BROKEN); KEYSTONE D6
+  + KEYSTONE: D6 -- BROKEN -- LINK 6 BROKEN BY A CONFIRMED CLOSING CONTRADICTION
+  + DEFENSE STANDING: PROP-DEPENDENT -- L=6 c=0 -- recomputed after the cure from the cured lines (CLOSE-CONTRADICTION D6 vs C5 (UNDERDETERMINED to DEFENDER LINK BROKEN); CLOSE-CONTRADICTION D6 vs C6 (UNDERDETERMINED to DEFENDER LINK 
+  + [AUDIT v25: RECOMPUTED AFTER CURE -- SEAT: chatgpt; TRIGGER: CLOSE-CONTRADICTION D6 vs C5 (UNDERDETERMINED to DEFENDER LINK BROKEN), CLOSE-CONTRADICTION D6 vs C6 (UNDERDETERMINED to DEFENDER LINK BROKEN), KEYSTONE D6 (STANDS to BR
+  + [AUDIT v27: SUPERSEDED LINE -- SEAT: chatgpt; LABEL: KEYSTONE; ORIGINAL: KEYSTONE: D6 -- STANDS -- The declared conclusion that Christ had no biological father was retained on stated rows and has not been shown broken at a textual
+  + [AUDIT v39: K-RECHK -- SEAT: chatgpt; CHANGE: KEYSTONE D6; RULE: K-CMT; NEW: a contested grade line that names no Commitment N; LINE: KEYSTONE: D6 -- BROKEN -- LINK 6 BROKEN BY A CONFIRMED CLOSING CONTRADICTION; ORIGINAL: KEYSTONE
+  + [AUDIT v37: SEND-BACK APPLIED (E-APPLY; WALL-2024 2236, 2237) -- SEAT: chatgpt; APPLIED: S1, S2, S3; ORIGINAL: BROKEN, DEFENSE PROP-DEPENDENT 0, CHALLENGE SELF-SUPPORTED 0, RESULT CHALLENGER WINS; DERIVED: BROKEN (BROKEN-1), DEFEN
+== sol: other fields differing: none; verdict_raw lines base-only 7, candidate-only 7
+  - RESULT: CHALLENGER WINS -- recomputed after the cure from the cured lines (CLOSE-CONTRADICTION D6 vs C5 (UNDERDETERMINED to DEFENDER LINK BROKEN); CLOSE-CONTRADICTION D6 vs C6 (UNDERDETERMINED to DEFENDER LINK BROKEN)): BROKEN-1, 
+  - KEYSTONE: D6 -- STANDS -- The conclusion that Christ had no biological father remains an exhibited inference from the conception accounts and the birth of Mary; it was neither withdrawn nor textually refuted under the prescribed c
+  - DEFENSE STANDING: PROP-DEPENDENT -- L=6 c=0 -- recomputed after the cure from the cured lines (CLOSE-CONTRADICTION D6 vs C5 (UNDERDETERMINED to DEFENDER LINK BROKEN); CLOSE-CONTRADICTION D6 vs C6 (UNDERDETERMINED to DEFENDER LINK 
+  - [AUDIT v25: RECOMPUTED AFTER CURE -- SEAT: sol; TRIGGER: CLOSE-CONTRADICTION D6 vs C5 (UNDERDETERMINED to DEFENDER LINK BROKEN), CLOSE-CONTRADICTION D6 vs C6 (UNDERDETERMINED to DEFENDER LINK BROKEN); ORIGINAL: HELD, DEFENSE SELF-
+  - [AUDIT v37: SEND-BACK APPLIED (E-APPLY; WALL-2024 2236, 2237) -- SEAT: sol; APPLIED: S1, S2, S3, S5, S6, S7; ORIGINAL: BROKEN, DEFENSE PROP-DEPENDENT 0, CHALLENGE SELF-SUPPORTED 0, RESULT CHALLENGER WINS; DERIVED: BROKEN (BROKEN-1
+  - [AUDIT v27: SUPERSEDED LINE -- SEAT: sol; LABEL: D6 VS C5; ORIGINAL: D6 vs C5 (John 3:6; 1 John 5:1; Romans 1:3): DEFENDER LINK BROKEN -- (AUDIT: LINK 6 BROKEN BY A CONFIRMED CLOSING CONTRADICTION -- DEFENDER -- EARLIER (CR3) "I d
+  - [AUDIT v27: SUPERSEDED LINE -- SEAT: sol; LABEL: D6 VS C6; ORIGINAL: D6 vs C6 (Luke 2:4; Numbers 1:18): DEFENDER LINK BROKEN -- (AUDIT: LINK 6 BROKEN BY A CONFIRMED CLOSING CONTRADICTION -- DEFENDER -- EARLIER (CR3) "I drop the wo
+  + RESULT: CHALLENGER WINS -- recomputed after the cure from the cured lines (CLOSE-CONTRADICTION D6 vs C5 (UNDERDETERMINED to DEFENDER LINK BROKEN); CLOSE-CONTRADICTION D6 vs C6 (UNDERDETERMINED to DEFENDER LINK BROKEN); KEYSTONE D6
+  + KEYSTONE: D6 -- BROKEN -- LINK 6 BROKEN BY A CONFIRMED CLOSING CONTRADICTION
+  + DEFENSE STANDING: PROP-DEPENDENT -- L=6 c=0 -- recomputed after the cure from the cured lines (CLOSE-CONTRADICTION D6 vs C5 (UNDERDETERMINED to DEFENDER LINK BROKEN); CLOSE-CONTRADICTION D6 vs C6 (UNDERDETERMINED to DEFENDER LINK 
+  + [AUDIT v25: RECOMPUTED AFTER CURE -- SEAT: sol; TRIGGER: CLOSE-CONTRADICTION D6 vs C5 (UNDERDETERMINED to DEFENDER LINK BROKEN), CLOSE-CONTRADICTION D6 vs C6 (UNDERDETERMINED to DEFENDER LINK BROKEN), KEYSTONE D6 (STANDS to BROKEN
+  + [AUDIT v27: SUPERSEDED LINE -- SEAT: sol; LABEL: KEYSTONE; ORIGINAL: KEYSTONE: D6 -- STANDS -- The conclusion that Christ had no biological father remains an exhibited inference from the conception accounts and the birth of Mary; 
+  + [AUDIT v39: K-RECHK -- SEAT: sol; CHANGE: KEYSTONE D6; RULE: K-CMT; NEW: a contested grade line that names no Commitment N; LINE: KEYSTONE: D6 -- BROKEN -- LINK 6 BROKEN BY A CONFIRMED CLOSING CONTRADICTION; ORIGINAL: KEYSTONE: D6
+  + [AUDIT v37: SEND-BACK APPLIED (E-APPLY; WALL-2024 2236, 2237) -- SEAT: sol; APPLIED: S1, S2, S3, S4; ORIGINAL: BROKEN, DEFENSE PROP-DEPENDENT 0, CHALLENGE SELF-SUPPORTED 0, RESULT CHALLENGER WINS; DERIVED: BROKEN (BROKEN-1), DEFEN

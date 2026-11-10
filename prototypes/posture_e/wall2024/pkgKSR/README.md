@@ -15,3 +15,28 @@ Both change only library sources (repacked; only the Shared Library node changes
 - luna: with no item on the D6 break lines, luna is not asked to change them, so the send-back derivation has no change to derive "D6 -- STANDS" from. Shown by E1/E2 only; a full replay of luna's send-back is not possible offline (her stored replies answer items pkgECB does not send).
 
 ## Both: SET=ALL, +880 code measured (pkgKSR/parent_s110_ALL.json).
+
+## Rev 2 (W1, 11-10 evening, Central time). Built on s110 (ed644923). Tested at the written rows by chain replay of execution 34626.
+
+Sizes (measured, all Code text; no prompt text added):
+- pkgKSR alone: +1,384
+- pkgECB alone (rev 2b): +1,500
+- both (ALL): +2,884
+
+What changed from rev 1:
+- K4 sbApply forces the KEYSTONE line after the closing-break loop; K5 keyChecks rule 2 skips a confirmed link; K6 the D38 KEY card skips a confirmed link.
+- E1 to E3: pkgECB withholds (a) a collision line carrying the closing-break mark for a confirmed side and link, (b) the FORCED line of a pair so withheld, and (c, rev 2b) the engine's own line "KEYSTONE: Dn -- BROKEN -- LINK n BROKEN BY A CONFIRMED CLOSING CONTRADICTION" for a confirmed DEFENDER link. Item (c) was added after the first rev 2 chain run (see Mistakes).
+
+Results (chain replay, Panel Cure Check to Replay Rows; files chain_test_<SET>_out.txt, chain_diff_<SET>_out.txt):
+- ALL: luna, terra (chatgpt), sol KEYSTONE "D6 -- BROKEN"; RESULT CHALLENGER WINS; every field of the written rows but verdict_raw equal to the base (drv_uncured included); no D38 KEY item; no SEND-BACK SILENCE; no ALTERNATE TRIED row. K4, K5, K6, E5 PASS.
+- ECB alone: luna BROKEN; terra and sol KEYSTONE "D6 -- STANDS" (F2 untouched, as expected); drv_uncured equal to the base. E5 PASS.
+- KSR alone: all three BROKEN, but terra and sol each get an E-KEY send-back on the engine's own KEYSTONE line; the stored replies cannot answer it, so the replay counts silence and drv_uncured rises. In a live run that item would send the engine's break line to the judge (F1 again). pkgKSR must not be written without pkgECB.
+- test_KSR.cjs ALL: 8 OK, 0 FAIL (K3 Alternate Merge Seat now OK: derived STANDS base 2, candidate 0).
+- plants_ECB.cjs (E4): 14 OK, 0 FAIL.
+- check_ECB.cjs (rev 1 label E2): FAIL by design; the two extra items left out are luna's FORCED D6 vs C5 and D6 vs C6 lines, which rev 2 withholds under E4 (b).
+- Record-only: the engine's KEYSTONE line draws a K-RECHK K-CMT row ("NEW: a contested grade line that names no Commitment N"); not counted.
+
+Mistakes:
+- chain.cjs renumbered send-back replies line by line, but terra's and sol's replies are JSON with the SENDBACK lines inside an escaped string. They were not renumbered, so my first ECB and ALL replay showed KEYSTONE "none" and a drv_uncured rise that were the tool's fault. Fixed (split on real and escaped line breaks; JSON still parses).
+- ECB rev 2 as first built missed (c): under ALL the engine's KEYSTONE line was still sent back as an E-KEY item. The E4 label committed before the run did not list (c); it was added after.
+Limit: stored replies only; a new item has no answer.

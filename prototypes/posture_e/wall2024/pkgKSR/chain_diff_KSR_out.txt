@@ -1,0 +1,33 @@
+== luna: other fields differing: none; verdict_raw lines base-only 4, candidate-only 2
+  - KEYSTONE: D6 -- STANDS -- derived by the engine from the collision grades of D6 (none DEFENDER LINK BROKEN) after the change of S6, S8 (E-APPLY, W3 2362)
+  - [AUDIT v37: SEND-BACK APPLIED (E-APPLY; WALL-2024 2236, 2237) -- SEAT: luna; APPLIED: S1, G3, G4, S4, S5, S6, S7, S8, S11, S12, S9, S15, G5, S17, G1, G2, KEYSTONE (derived); G3 replaces S2 on the same line (the last change wins); 
+  - [AUDIT v27: SUPERSEDED LINE -- SEAT: luna; LABEL: KEYSTONE; ORIGINAL: KEYSTONE: D6 -- BROKEN -- D6, the conclusion that Christ had no biological father, is broken by the confirmed closing contradiction. ; END]
+  - [AUDIT v39: K-RECHK -- SEAT: luna; CHANGE: KEYSTONE (derived); RULE: K-CMT; ALREADY IN THE ORIGINAL: a contested grade line that names no Commitment N; LINE: KEYSTONE: D6 -- STANDS -- derived by the engine from the collision grade
+  + KEYSTONE: D6 -- BROKEN -- D6, the conclusion that Christ had no biological father, is broken by the confirmed closing contradiction.
+  + [AUDIT v37: SEND-BACK APPLIED (E-APPLY; WALL-2024 2236, 2237) -- SEAT: luna; APPLIED: S1, G3, G4, S4, S5, S6, S7, S8, S11, S12, S9, S15, G5, S17, G1, G2; G3 replaces S2 on the same line (the last change wins); G4 replaces S3 on th
+== chatgpt: other fields differing: drv_uncured; verdict_raw lines base-only 4, candidate-only 8
+  - RESULT: CHALLENGER WINS -- recomputed after the cure from the cured lines (CLOSE-CONTRADICTION D6 vs C5 (UNDERDETERMINED to DEFENDER LINK BROKEN); CLOSE-CONTRADICTION D6 vs C6 (UNDERDETERMINED to DEFENDER LINK BROKEN)): BROKEN-1, 
+  - KEYSTONE: D6 -- STANDS -- The declared conclusion that Christ had no biological father was retained on stated rows and has not been shown broken at a textual collision.
+  - DEFENSE STANDING: PROP-DEPENDENT -- L=6 c=0 -- recomputed after the cure from the cured lines (CLOSE-CONTRADICTION D6 vs C5 (UNDERDETERMINED to DEFENDER LINK BROKEN); CLOSE-CONTRADICTION D6 vs C6 (UNDERDETERMINED to DEFENDER LINK 
+  - [AUDIT v25: RECOMPUTED AFTER CURE -- SEAT: chatgpt; TRIGGER: CLOSE-CONTRADICTION D6 vs C5 (UNDERDETERMINED to DEFENDER LINK BROKEN), CLOSE-CONTRADICTION D6 vs C6 (UNDERDETERMINED to DEFENDER LINK BROKEN); ORIGINAL: HELD, DEFENSE S
+  + RESULT: CHALLENGER WINS -- recomputed after the cure from the cured lines (CLOSE-CONTRADICTION D6 vs C5 (UNDERDETERMINED to DEFENDER LINK BROKEN); CLOSE-CONTRADICTION D6 vs C6 (UNDERDETERMINED to DEFENDER LINK BROKEN); KEYSTONE D6
+  + KEYSTONE: D6 -- BROKEN -- LINK 6 BROKEN BY A CONFIRMED CLOSING CONTRADICTION
+  + DEFENSE STANDING: PROP-DEPENDENT -- L=6 c=0 -- recomputed after the cure from the cured lines (CLOSE-CONTRADICTION D6 vs C5 (UNDERDETERMINED to DEFENDER LINK BROKEN); CLOSE-CONTRADICTION D6 vs C6 (UNDERDETERMINED to DEFENDER LINK 
+  + [AUDIT v25: RECOMPUTED AFTER CURE -- SEAT: chatgpt; TRIGGER: CLOSE-CONTRADICTION D6 vs C5 (UNDERDETERMINED to DEFENDER LINK BROKEN), CLOSE-CONTRADICTION D6 vs C6 (UNDERDETERMINED to DEFENDER LINK BROKEN), KEYSTONE D6 (STANDS to BR
+  + [AUDIT v27: SUPERSEDED LINE -- SEAT: chatgpt; LABEL: KEYSTONE; ORIGINAL: KEYSTONE: D6 -- STANDS -- The declared conclusion that Christ had no biological father was retained on stated rows and has not been shown broken at a textual
+  + [AUDIT v39: K-RECHK -- SEAT: chatgpt; CHANGE: KEYSTONE D6; RULE: K-CMT; NEW: a contested grade line that names no Commitment N; LINE: KEYSTONE: D6 -- BROKEN -- LINK 6 BROKEN BY A CONFIRMED CLOSING CONTRADICTION; ORIGINAL: KEYSTONE
+  + [AUDIT v40: SEND-BACK SILENCE -- SEAT: chatgpt; ITEMS: S4; no written answer to this send-back item; counted in drv_uncured (silence rule, WALL-2024 2274). REVIEW THIS ROW.]
+  + [AUDIT v21: ALTERNATE TRIED -- SEAT: chatgpt; ALTERNATE: none; MODEL: none; RESULT: NOT SEATED; WHY: no pool model passes the guards: haiku G4: anthropic/claude-haiku-5.5 is already offered to an earlier removed seat; REMOVED FOR:
+== sol: other fields differing: drv_uncured; verdict_raw lines base-only 4, candidate-only 8
+  - RESULT: CHALLENGER WINS -- recomputed after the cure from the cured lines (CLOSE-CONTRADICTION D6 vs C5 (UNDERDETERMINED to DEFENDER LINK BROKEN); CLOSE-CONTRADICTION D6 vs C6 (UNDERDETERMINED to DEFENDER LINK BROKEN)): BROKEN-1, 
+  - KEYSTONE: D6 -- STANDS -- The conclusion that Christ had no biological father remains an exhibited inference from the conception accounts and the birth of Mary; it was neither withdrawn nor textually refuted under the prescribed c
+  - DEFENSE STANDING: PROP-DEPENDENT -- L=6 c=0 -- recomputed after the cure from the cured lines (CLOSE-CONTRADICTION D6 vs C5 (UNDERDETERMINED to DEFENDER LINK BROKEN); CLOSE-CONTRADICTION D6 vs C6 (UNDERDETERMINED to DEFENDER LINK 
+  - [AUDIT v25: RECOMPUTED AFTER CURE -- SEAT: sol; TRIGGER: CLOSE-CONTRADICTION D6 vs C5 (UNDERDETERMINED to DEFENDER LINK BROKEN), CLOSE-CONTRADICTION D6 vs C6 (UNDERDETERMINED to DEFENDER LINK BROKEN); ORIGINAL: HELD, DEFENSE SELF-
+  + RESULT: CHALLENGER WINS -- recomputed after the cure from the cured lines (CLOSE-CONTRADICTION D6 vs C5 (UNDERDETERMINED to DEFENDER LINK BROKEN); CLOSE-CONTRADICTION D6 vs C6 (UNDERDETERMINED to DEFENDER LINK BROKEN); KEYSTONE D6
+  + KEYSTONE: D6 -- BROKEN -- LINK 6 BROKEN BY A CONFIRMED CLOSING CONTRADICTION
+  + DEFENSE STANDING: PROP-DEPENDENT -- L=6 c=0 -- recomputed after the cure from the cured lines (CLOSE-CONTRADICTION D6 vs C5 (UNDERDETERMINED to DEFENDER LINK BROKEN); CLOSE-CONTRADICTION D6 vs C6 (UNDERDETERMINED to DEFENDER LINK 
+  + [AUDIT v25: RECOMPUTED AFTER CURE -- SEAT: sol; TRIGGER: CLOSE-CONTRADICTION D6 vs C5 (UNDERDETERMINED to DEFENDER LINK BROKEN), CLOSE-CONTRADICTION D6 vs C6 (UNDERDETERMINED to DEFENDER LINK BROKEN), KEYSTONE D6 (STANDS to BROKEN
+  + [AUDIT v27: SUPERSEDED LINE -- SEAT: sol; LABEL: KEYSTONE; ORIGINAL: KEYSTONE: D6 -- STANDS -- The conclusion that Christ had no biological father remains an exhibited inference from the conception accounts and the birth of Mary; 
+  + [AUDIT v39: K-RECHK -- SEAT: sol; CHANGE: KEYSTONE D6; RULE: K-CMT; NEW: a contested grade line that names no Commitment N; LINE: KEYSTONE: D6 -- BROKEN -- LINK 6 BROKEN BY A CONFIRMED CLOSING CONTRADICTION; ORIGINAL: KEYSTONE: D6
+  + [AUDIT v40: SEND-BACK SILENCE -- SEAT: sol; ITEMS: S4; no written answer to this send-back item; counted in drv_uncured (silence rule, WALL-2024 2274). REVIEW THIS ROW.]
+  + [AUDIT v21: ALTERNATE TRIED -- SEAT: sol; ALTERNATE: none; MODEL: none; RESULT: NOT SEATED; WHY: no pool model passes the guards: haiku G4: anthropic/claude-haiku-5.5 is already offered to an earlier removed seat; REMOVED FOR: drv

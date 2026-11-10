@@ -10,5 +10,10 @@ module.exports=async function chain(SET,start,stop){const order=Object.entries(r
  for(const n of order.slice(order.indexOf(start))){if(stop&&n===stop)break;const t=BY[n]&&BY[n].type;const st=(rd[n][rd[n].length-1].data||{}).main||[];
   if(/\.code$/.test(t)){const code=lib(n)||BY[n].parameters.jsCode;const r=await run(code,n,rd,over,n==='Alternate Build'?(over['Alternate Needed?']||[])[0]:null);if(r&&r.err){if(lib(n))return {err:n+': '+r.err,over};fb.push(n+' ('+r.err.slice(0,60)+')');over[n]=st;}else over[n]=[r.map(j=>({json:j}))];}
   else if(/\.if$/.test(t)){const inp=inOf(n);over[n]=st.map(o=>o&&o.length?inp:[]);}
+  else if(n==='Send Back Call openrouter'){/* replies renumbered to the candidate's items: a withheld item's lines are removed (W2's method, 4224) */
+   const key=it=>it.rule+'|'+String(it.item||'').replace(/\bS\d+\b/g,'S#')+'|'+it.line;const B0=(rd['Send Back Build'][0].data.main[0]||[]).map(x=>x.json).filter(j=>!j.sb_skip),B1=(over['Send Back Build'][0]||[]).map(x=>x.json).filter(j=>!j.sb_skip);
+   over[n]=[st[0].map((r,i)=>{const b0=B0[i],b1=B1.find(j=>j.seat===(b0&&b0.seat));if(!b0||!b1)return r;const mp={};(b0.items||[]).forEach(it=>{const k=key(it);const t=(b1.items||[]).find(z=>key(z)===k);mp[it.sid]=t?t.sid:null;});
+    const r2=JSON.parse(JSON.stringify(r));const c=r2.json.choices[0].message;/* the reply may be JSON with SENDBACK lines inside a string (escaped \\n): split on both real and escaped line breaks, keep separators */
+    const parts=String(c.content).split(/(\n|\\n)/);const out=[];let keep=true;for(let q=0;q<parts.length;q+=2){const l=parts[q],sep=q+1<parts.length?parts[q+1]:'';const m=l.match(/^SENDBACK:\s*S(\d+)\b/);if(m){const to=mp['S'+m[1]];keep=to!==null;if(keep&&to){out.push(l.replace(/^SENDBACK:\s*S\d+/,'SENDBACK: '+to));out.push(sep);}else if(keep){out.push(l);out.push(sep);}}else if(keep||/^\s*"/.test(l)){out.push(l);out.push(sep);}}c.content=out.join('');return r2;})].concat(st.slice(1));}
   else over[n]=st;}
  return {over,fb};};

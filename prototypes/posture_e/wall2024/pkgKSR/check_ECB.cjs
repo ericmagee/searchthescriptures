@@ -3,7 +3,7 @@ const fs=require('fs');const run=require('./run_node.cjs');
 const X=JSON.parse(fs.readFileSync('/mnt/project-files/wall2024/ex34626_full.json','utf8'));const rd=(X.data||X).resultData.runData;
 const src=(set,n)=>fs.readFileSync('pkgLIB/strip_'+set+'/patched/'+n.replace(/ /g,'_')+'.js','utf8');
 const items=o=>{const out=[];for(const j of o){const s=JSON.stringify(j.items||j.sb_items||j);for(const it of (j.items||[]))out.push({seat:j.seat||it.seat,line:it.line,rule:it.rule,item:String(it.item).replace(/\bS\d+\b/g,'S#')});}return out;};
-(async()=>{const n='Send Back Build';const a=await run(src('R1',n),n,rd),b=await run(src('ECB',n),n,rd);
+(async()=>{const n='Send Back Build';const a=await run(src('R1',n),n,rd),b=await run(src(process.argv[2]||'ECB',n),n,rd);
  const key=x=>x.seat+'|'+x.rule+'|'+x.item+'|'+x.line;const ia=a.flatMap(j=>(j.items||[]).map(it=>({seat:j.seat,...it})));const ib=b.flatMap(j=>(j.items||[]).map(it=>({seat:j.seat,...it})));
  console.log('fields of an output item: '+Object.keys(a[0]||{}).join(','));console.log('items base '+ia.length+', candidate '+ib.length);
  const kb=new Set(ib.map(x=>key({...x,item:String(x.item).replace(/\bS\d+\b/g,'S#')})));const gone=ia.filter(x=>!kb.has(key({...x,item:String(x.item).replace(/\bS\d+\b/g,'S#')})));
