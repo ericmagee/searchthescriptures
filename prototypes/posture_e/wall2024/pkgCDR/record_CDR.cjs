@@ -1,6 +1,6 @@
 // pkgCDR rev 1 (W1): Close Enforcer Record (live code, unchanged) on the pkgCDR Build output for 34108, with written enforcer replies.
 process.chdir(__dirname+'/..');const fs=require('fs');const {harness}=require('../pkgGSL/harness.cjs');
-const g=f=>{let d=JSON.parse(fs.readFileSync(f,'utf8'));d=d.data||d;return d.workflow||d;};const CAND=g('pkgCDR/parent_s102_CDR.json');const code=n=>CAND.nodes.find(z=>z.name===n).parameters.jsCode;
+const g=f=>{let d=JSON.parse(fs.readFileSync(f,'utf8'));d=d.data||d;return d.workflow||d;};const CAND=g('pkgCDR/parent_s103_CDR.json');const code=n=>CAND.nodes.find(z=>z.name===n).parameters.jsCode;
 const J=x=>({json:x});const run=async(c,over,inp)=>(await harness('34108',over||{})('return (async()=>{\n'+c+'\n})();',inp||'Quote Report'))[0].json;
 const reply=t=>[J({choices:[{message:{role:'assistant',content:t},finish_reason:'stop'}]})];let ok=0,bad=0;const T=(n,c,i)=>{if(c)ok++;else bad++;console.log((c?'OK   ':'FAIL ')+n+(i?': '+i:''));};
 (async()=>{const B=await run(code('Close Enforcer Build'));const U=B.body.messages[1].content;

@@ -1,6 +1,16 @@
-# pkgCDR rev 1 (W1): feed the closing contradiction enforcer (item A countermeasure)
+# pkgCDR rev 2 (W1): feed the closing contradiction enforcer (item A countermeasure)
 
-NOT FOR WRITE until the operator answers (coordinator 02:22Z 11-10). Base: live s102. Write file parent_s102_CDR.json, built by
+## Rev 2 (W2 FAIL of rev 1, w2_grade/grade_CDR_w2.md)
+- Fault: a refused drop ("I drop nothing: the wording ... stands.", "I withdraw none of ...", "I give up no part of ...", "I retract nothing; ...") was read
+  as a drop, and the close repeating the kept wording was listed. Fix (cdr_fn.js, W2's proposal): the drop verb must not be followed by nothing, none,
+  no, neither or not. Another "I drop ..." later in the same sentence is still read (case R2).
+- Built on live s103 (the three nodes are the same in s102 and s103): parent_s103_CDR.json.
+- My cases (R1-R3 added before the run, commit bcd29617): 14 of 15. The one MISS is still C9, my label error from rev 1. W2's 16 cases: 16 of 16.
+- Corpus: 39 debates, 2 listings, both on 34108. Record: 4 OK. Log rows are byte-equal to rev 1, so rev 1's rolled-back insert covers them.
+
+# Rev 1
+
+NOT FOR WRITE until the operator answers (coordinator 02:22Z 11-10). Base: live s102 (rev 2: s103). Write file parent_s103_CDR.json (rev 2), built by
 `node pkgCDR/build_CDR.cjs /mnt/project-files/wall2024/fetchback_live_s102.json pkgCDR/parent_s102_CDR.json`. Three code nodes change. No library node,
 no connection, no prompt wording, and no log row shape change.
 

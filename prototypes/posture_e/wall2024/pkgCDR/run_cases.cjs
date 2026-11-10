@@ -2,7 +2,7 @@
 // Pre-panel: Close Enforcer Build on run 34108's stored outputs, with the closing round changed per case. Post-panel: Judge Contradiction Build on
 // execution 34299's stored node outputs (/mnt/project-files/wall2024/ex34299_full.json).
 process.chdir(__dirname+'/..');const fs=require('fs');const {harness}=require('../pkgGSL/harness.cjs');
-const g=f=>{let d=JSON.parse(fs.readFileSync(f,'utf8'));d=d.data||d;return d.workflow||d;};const BASE=g(process.env.BASE||'/mnt/project-files/wall2024/fetchback_live_s102.json'),CAND=g(process.env.CAND||'pkgCDR/parent_s102_CDR.json');
+const g=f=>{let d=JSON.parse(fs.readFileSync(f,'utf8'));d=d.data||d;return d.workflow||d;};const BASE=g(process.env.BASE||'/mnt/project-files/wall2024/fetchback_live_s103.json'),CAND=g(process.env.CAND||'pkgCDR/parent_s103_CDR.json');
 const code=(W,n)=>W.nodes.find(z=>z.name===n).parameters.jsCode;const J=x=>({json:x});const cl=x=>JSON.parse(JSON.stringify(x));
 const FO=JSON.parse(fs.readFileSync('/mnt/project-files/wall2024/inputs/34108_Final_Output.json','utf8'))[0].data.main[0];const F0=FO[0].json;
 const C=JSON.parse(fs.readFileSync(__dirname+'/cases.json','utf8'));const D6C='Christ had no biological father.';
@@ -15,6 +15,8 @@ const N=s=>String(s).toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();let ok=0,ba
   const hit=cs?B.cands.filter(x=>x.side===c.side&&N(x.closing_q)===N(cs)):[];const hitE=c.earlier?hit.filter(x=>N(x.earlier_q)===N(c.earlier)):hit;
   let good;if(c.want==='LISTED')good=hitE.length===1;else if(c.id==='C9')good=!B.cands.some(x=>x.side==='DEFENDER'&&/biological father/i.test(x.closing_q));else good=hit.length===0;
   T(c.id+' want '+c.want+' | '+(cs||'(D6 close removed)'),good,'listed: '+B.cands.length+(hit.length?' | hit '+hit.map(x=>x.id+' ['+x.earlier_round+'] '+x.earlier_q.slice(0,80)).join(' ; '):''));}
+ for(const c of (C.rev2||{cases:[]}).cases){const F=cl(F0);for(const [r,x] of c.adds)F[r]=F[r]+'\n'+x;const B=await build(CAND,F);const hit=B.cands.filter(x=>x.side===c.side&&N(x.closing_q)===N(c.closing));
+  T(c.id+' want '+c.want+' | '+c.adds.map(a=>'['+a[0]+'] '+a[1]).join(' + '),c.want==='LISTED'?hit.length===1:hit.length===0,'listed: '+B.cands.length+(hit.length?' | hit '+hit.map(x=>x.id+' '+x.earlier_q.slice(0,80)).join(' ; '):''));}
  // post-panel, execution 34299
  const EX=JSON.parse(fs.readFileSync('/mnt/project-files/wall2024/ex34299_full.json','utf8')).data.resultData.runData;
  const mk=()=>name=>{const r=EX[name];const items=r&&r[0]&&r[0].data?r[0].data.main[0]:[];return {isExecuted:!!(r&&r.length),first:()=>{if(!items||!items.length)throw new Error('no data '+name);return items[0];},all:()=>items,item:items&&items[0]};};

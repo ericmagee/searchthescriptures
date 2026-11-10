@@ -5,7 +5,7 @@ const CDR_SW=new Set('a an the and or of to in on at by for from with as is are 
 const cdrCore=x=>x.split(' ').filter(w=>w&&!CDR_SW.has(w)&&w.length>2).length;
 const cdrUnq=s=>String(s).replace(/"[^"\n]*"|“[^”\n]*”|‘[^’\n]*’/g,' ');
 const cdrSentsRaw=raw=>String(raw||'').split(/\n+|(?<=[.!?]["”’')\]]*)\s+/).map(x=>x.trim()).filter(Boolean);
-const cdrDrop=/\bI\s+(?:now\s+|also\s+|therefore\s+)?(?:drop|withdraw|retract|give\s+up|abandon)\b/i;
+const cdrDrop=/\bI\s+(?:now\s+|also\s+|therefore\s+)?(?:drop|withdraw|retract|give\s+up|abandon)\b(?!\s+(?:nothing|none|no\b|neither|not\b))/i; /* rev 2 (W2 grade): a refused drop (\"I drop nothing\", \"I withdraw none of\", \"I give up no part\") is not a drop */
 const cdrSelf=/\b(?:drop|dropped|withdr[a-z]*|retract[a-z]*|gave\s+up|give\s+up|abandon[a-z]*|grant|granted|grants)\b/i;
 const cdrWords=s=>{const W=[];for(const m of String(s).matchAll(/"([^"\n]+)"|“([^”\n]+)”|‘([^’\n]+)’/g)){const q=cecN(m[1]||m[2]||m[3]);if(q.split(' ').length>=3&&cdrCore(q)>=2)W.push(q);}
  const u=cdrUnq(s).replace(/[*_`]+/g,'');const m=u.match(/\b(?:claim|limb|wording|sentence|reading|premise|step)\s+that\s+((?:[^,;:\n]|:(?=\d))+?)(?:[,;]|:(?!\d)|\.\s*$|$)/i);

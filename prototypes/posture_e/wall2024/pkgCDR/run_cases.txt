@@ -19,6 +19,12 @@ OK   C8 want NOT LISTED | I grant the word alone is not needed.
        listed: 2
 MISS C9 want NOT LISTED | (D6 close removed)
        listed: 1
+OK   R1 want NOT LISTED | [cr3] I drop nothing more: the wording "the register stops at Joseph" stands. + [cr4] The register stops at Joseph.
+       listed: 2
+OK   R2 want LISTED | [cr3] I withdraw nothing else, but I drop the wording "the register stops at Joseph". + [cr4] The register stops at Joseph.
+       listed: 3 | hit P3 I withdraw nothing else, but I drop the wording "the register stops at Joseph".
+OK   R3 want NOT LISTED | [dr3] I abandon none of the claim that the register runs through the fathers of Joseph. + [dr4] The register runs through the fathers of Joseph.
+       listed: 2
 34299 Judge Contradiction Build: live candidates 1; pkgCDR candidates 2
    J1 DEFENDER | [CR3] I drop the wording "closes the espousal to any knowing." | [CR4] The rows state a not-knowing at each stage, and the knowing the challenger adds is the challenger's  | by the judges' CONTRADICTION lines (chatgpt, sol, luna); also named by the ANTI-CHEAT CHECK
    J2 DEFENDER | [CR3] Genesis 4:1, Adam knew Eve his wife; and she conceived, and bare Cain: I grant that this is the ordi | [CR4] Genesis 4:1 therefore cannot supply the sequence for Matthew, because Matthew 1:23 sets the virgin a | by the CLOSE-ROUND REVERSAL CHECK served to the judges (ruling 412)
@@ -28,4 +34,4 @@ OK   J-A1 the Luke 1:34 pair listed once, joined with the judges' pair
        J1 by the judges' CONTRADICTION lines (chatgpt, sol, luna); also named by the ANTI-CHEAT CHECK
 OK   J-0 no other new candidate than J-R1 and J-A1
        live 1, pkgCDR 2
-11 OK, 1 MISS
+14 OK, 1 MISS
