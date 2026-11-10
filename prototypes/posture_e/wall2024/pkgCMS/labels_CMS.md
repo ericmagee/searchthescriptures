@@ -1,4 +1,4 @@
-# pkgR2 labels (W1, written before the build, 09:4x CST 11-10)
+# pkgCMS labels (R2, the comment strip; W1, written before the build, 09:4x CST 11-10). Folder renamed from pkgR2, a name an old package already used (my error).
 
 R2 (Eric: ASK 9 option 1 at 08:29 CST, block comments option 1 at 08:37 CST 11-10): strip every comment, line and block, from the 145 Code nodes
 that were not library nodes before pkgR1 (the 133 plain Code nodes plus the 12 R1 nodes, whose sources are stripped and repacked). Not in scope:
