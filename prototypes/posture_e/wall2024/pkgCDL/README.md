@@ -1,4 +1,4 @@
-# pkgCDL rev 2 (W1): record-only follow-on to pkgCDF rev 2 (W2's note, coordinator 05:20Z). No ruling changes beyond reading the enforcer's own link word.
+# pkgCDL rev 3 (W1): record-only follow-on to pkgCDF rev 2 (W2's note, coordinator 05:20Z). No ruling changes beyond reading the enforcer's own link word.
 
 Built on pkgCDF rev 2's write file: `node pkgCDL/build_CDL.cjs pkgCDF/parent_s103_CDR11_CDF.json pkgCDL/parent_s103_CDR11_CDF_CDL.json`.
 Against pkgCDF rev 2 only Close Enforcer Record differs.
@@ -28,3 +28,10 @@ Rev 2 (W2 FAIL of rev 1, coordinator 05:24Z)
   given up, so it breaks one link). Now the first keeps its break; the second is NOT CONFIRMED (second link) with RECORD-ONLY FOR REVIEW (C10).
   NEW lines are not one candidate and are unchanged (C11). This is the one ruling change: it can break one link fewer, never more.
 - Checks on rev 2: record_CDL 11 OK; pkgCDF's 10 on the pkgCDL file 10 OK; W2's w2_cdl.cjs 27 forms 27 OK.
+
+Rev 3 (W2 FAIL of rev 2, coordinator 05:26Z)
+- Rev 2's second-link refusal is REMOVED. My Wall 4049 statement that breaking both links was not intended was wrong: a drop confirmed on
+  LINK 6 and LINK 5 with standing quotations breaks both, as in pkgCDR rev 11; with rev 2 a LINK 5 line placed first set the keystone LINK 6 free.
+- Rev 2's change 1 (no length limit on the LINK word) is kept.
+- Checks on rev 3: record_CDL 11 OK (C10 relabeled first, 628d6e04: both links break); pkgCDF's 10 on the pkgCDL file 10 OK; W2's w2_cdl.cjs
+  27 OK (L24 breaks links 6 and 5).
