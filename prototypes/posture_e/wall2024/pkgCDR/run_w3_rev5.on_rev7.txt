@@ -2,13 +2,19 @@ OK   M1 want NOT LISTED | live cands 0 | CDR cands 2 | The register stops at Jos
 OK   M2 want NOT LISTED | live cands 0 | CDR cands 2 | The register stops at Joseph.
 OK   M3 want NOT LISTED | live cands 0 | CDR cands 2 | The register stops at Joseph.
 OK   M4 want NOT LISTED | live cands 0 | CDR cands 2 | The register stops at Joseph.
-OK   M5 want NOT LISTED | live cands 0 | CDR cands 2 | The register stops at Joseph.
+MISS M5 want NOT LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
+       hit: P3 [CR3] I drop the wording "the register stops at Joseph" for the sake of argument only, and the chain still
 OK   M6 want NOT LISTED | live cands 0 | CDR cands 2 | The register stops at Joseph.
-OK   M7 want NOT LISTED | live cands 0 | CDR cands 2 | The register stops at Joseph.
-OK   M8 want NOT LISTED | live cands 0 | CDR cands 2 | The register stops at Joseph.
-OK   M9 want NOT LISTED | live cands 0 | CDR cands 2 | The register stops at Joseph.
-OK   M10 want NOT LISTED | live cands 0 | CDR cands 2 | The register stops at Joseph.
-OK   M11 want NOT LISTED | live cands 0 | CDR cands 2 | The register stops at Joseph.
+MISS M7 want NOT LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
+       hit: P3 [CR3] I drop the wording "the register stops at Joseph" arguendo.
+MISS M8 want NOT LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
+       hit: P3 [CR3] I drop the wording "the register stops at Joseph" hypothetically, to test the chain; I do not in fac
+MISS M9 want NOT LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
+       hit: P3 [CR3] I drop the wording "the register stops at Joseph" the day the challenger shows a row, and not before
+MISS M10 want NOT LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
+       hit: P3 [CR3] I drop the wording "the register stops at Joseph" once the challenger shows a row; he has shown none
+MISS M11 want NOT LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
+       hit: P3 [CR3] I drop the wording "the register stops at Joseph" when the rows fail, and they have not.
 OK   M12 want LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
        hit: P3 [CR3] I drop the wording "the register stops at Joseph", which I had held until now.
 OK   M13 want LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
@@ -23,4 +29,4 @@ OK   M17 want LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph
        hit: P3 [CR3] I drop the wording "the register stops at Joseph" in any case.
 OK   M18 want LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
        hit: P3 [CR3] I drop the wording "the register stops at Joseph" on the terms of ruling 412.
-18 of 18 as labeled
+12 of 18 as labeled

@@ -1,4 +1,14 @@
-# pkgCDR rev 6 (W1): feed the closing contradiction enforcer (item A countermeasure)
+# pkgCDR rev 7 (W1): feed the closing contradiction enforcer (item A countermeasure)
+
+## Rev 7 (W3 FAIL of rev 6: the position rule hid 5 true drops and listed 10 false ones; W3 states the fault is its rule)
+- W3's request: no condition test after the drop. cdr_fn.js is rev 3 plus the question test of rev 4 (diff against 218d7a94: the cdrCond
+  filter only). Kept: the drop verb opens the sentence or clause with the wording directly after it (so a condition before the drop is not read),
+  the verb is not negated, the sentence is not a question. Every other drop is listed; the enforcer is shown the whole earlier sentence.
+- True drops not listed, all sets: 0 of mine, W2's W17 (as every revision), W3's H4 and H5 (a lead-in before the verb; the rev 3 structure).
+- Conditional and argument's-sake drops are now LISTED by design, for the enforcer: my labels 37 (plus C9, my label error) of 79 read
+  as misses; W2's 60 cases 58 of 73 in total with 14 such listings; W3's sets cases 11 of 15, rev3 6 of 12, rev4 5 of 9, rev5 12 of 18,
+  rev6 10 of 20.
+- Questions stay not listed. Corpus 39 debates, 2 listings, both on 34108. Record 4 OK. pkgCEC probe 62 OK, 8 FAIL (the same 8).
 
 ## Rev 6 (W3 FAIL of rev 5: six false listings and five true drops hidden by condition words elsewhere in the clause)
 - W3's position rule (cdr_fn.js, cdrAfter in cdrObj): a condition counts only where it governs the drop. Before the drop verb it already does

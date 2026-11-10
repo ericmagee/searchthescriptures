@@ -40,34 +40,47 @@ OK   W31 want LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph
 OK   W32 want LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
        hit: P3 [CR3] I withdraw the claim that the register stops at Joseph.
 OK   W33 want NOT LISTED | live cands 0 | CDR cands 2 | The register stops at Joseph.
-OK   W34 want NOT LISTED | live cands 0 | CDR cands 2 | The register stops at Joseph.
+MISS W34 want NOT LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
+       hit: P3 [CR3] I withdraw the wording "the register stops at Joseph" if the challenger shows a row against it; he h
 OK   W35 want NOT LISTED | live cands 0 | CDR cands 2 | The register stops at Joseph.
-OK   W36 want NOT LISTED | live cands 0 | CDR cands 2 | The register stops at Joseph.
-OK   W37 want NOT LISTED | live cands 0 | CDR cands 2 | The register stops at Joseph.
+MISS W36 want NOT LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
+       hit: P3 [CR3] I drop the wording "the register stops at Joseph" unless the rows bear it, and they do.
+MISS W37 want NOT LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
+       hit: P3 [CR3] I drop the wording "the register stops at Joseph", provided the challenger proves the gap; he has no
 OK   W38 want LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
        hit: P3 [CR3] I drop the wording "the register stops at Joseph" for now.
 OK   W39 want LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
        hit: P3 [CR3] I drop the wording "the register stops at Joseph", as the challenger asked.
 OK   W40 want LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
        hit: P3 [CR3] I drop the wording "the register stops at Joseph" because the rows do not state it.
-OK   W41 want NOT LISTED | live cands 0 | CDR cands 2 | The register stops at Joseph.
-OK   W42 want NOT LISTED | live cands 0 | CDR cands 2 | The register stops at Joseph.
+MISS W41 want NOT LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
+       hit: P3 [CR3] I drop the wording "the register stops at Joseph" in case the rows fail; they do not.
+MISS W42 want NOT LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
+       hit: P3 [CR3] I drop the wording "the register stops at Joseph" on condition that the challenger shows the gap; he
 OK   W43 want NOT LISTED | live cands 0 | CDR cands 2 | The register stops at Joseph.
 OK   W44 want NOT LISTED | live cands 0 | CDR cands 2 | The register stops at Joseph.
-OK   W45 want NOT LISTED | live cands 0 | CDR cands 2 | The register stops at Joseph.
+MISS W45 want NOT LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
+       hit: P3 [CR3] I drop the wording "the register stops at Joseph" should the rows fail, and they stand.
 OK   W46 want LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
        hit: P3 [CR3] I drop the wording "the register stops at Joseph"; if the challenger objects, so be it.
 OK   W47 want LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
        hit: P3 [CR3] I drop the wording "the register stops at Joseph", even if it costs LINK 6.
 OK   W48 want LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
        hit: P3 [CR3] I drop the wording "the register stops at Joseph" since the rows do not state it.
-OK   W49 want NOT LISTED | live cands 0 | CDR cands 2 | The register stops at Joseph.
-OK   W50 want NOT LISTED | live cands 0 | CDR cands 2 | The register stops at Joseph.
-OK   W51 want NOT LISTED | live cands 0 | CDR cands 2 | The register stops at Joseph.
-OK   W52 want NOT LISTED | live cands 0 | CDR cands 2 | The register stops at Joseph.
-OK   W53 want NOT LISTED | live cands 0 | CDR cands 2 | The register stops at Joseph.
-OK   W54 want NOT LISTED | live cands 0 | CDR cands 2 | The register stops at Joseph.
-OK   W55 want NOT LISTED | live cands 0 | CDR cands 2 | The register stops at Joseph.
+MISS W49 want NOT LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
+       hit: P3 [CR3] I drop the wording "the register stops at Joseph" supposing the rows fail; they do not.
+MISS W50 want NOT LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
+       hit: P3 [CR3] I drop the wording "the register stops at Joseph" assuming the challenger shows the gap, which he ha
+MISS W51 want NOT LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
+       hit: P3 [CR3] I drop the wording "the register stops at Joseph" in the event that the rows fail; they stand.
+MISS W52 want NOT LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
+       hit: P3 [CR3] I drop the wording "the register stops at Joseph" so long as the challenger proves the gap; he has n
+MISS W53 want NOT LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
+       hit: P3 [CR3] I drop the wording "the register stops at Joseph" only when the rows fail, and they have not.
+MISS W54 want NOT LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
+       hit: P3 [CR3] I drop the wording "the register stops at Joseph" but only if the challenger shows a row; he has non
+MISS W55 want NOT LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
+       hit: P3 [CR3] I drop the wording "the register stops at Joseph" were the rows to fail; they do not.
 OK   W56 want LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
        hit: P3 [CR3] I drop the wording "the register stops at Joseph", if only to narrow LINK 6.
 OK   W57 want LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
@@ -78,4 +91,27 @@ OK   W59 want LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph
        hit: P3 [CR3] I drop the wording "the register stops at Joseph" as though it were never written.
 OK   W60 want LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
        hit: P3 [CR3] I drop the wording "the register stops at Joseph"; I would keep it only if the rows stated it, and t
-59 of 60 as labeled
+OK   W61 want LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
+       hit: P3 [CR3] I drop the wording "the register stops at Joseph" now that the challenger has shown the gap.
+OK   W62 want LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
+       hit: P3 [CR3] I drop the wording "the register stops at Joseph", and if the challenger objects, I answer in round 
+OK   W63 want LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
+       hit: P3 [CR3] I drop the wording "the register stops at Joseph", but only the wording, not the verse.
+OK   W64 want LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
+       hit: P3 [CR3] I drop the wording "the register stops at Joseph" when I narrow LINK 6 in this round.
+OK   W65 want LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
+       hit: P3 [CR3] I drop the wording "the register stops at Joseph" once and for all.
+OK   W66 want LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
+       hit: P3 [CR3] I drop the wording "the register stops at Joseph"; should the challenger press it, I have no answer.
+OK   W67 want NOT LISTED | live cands 0 | CDR cands 2 | The register stops at Joseph.
+OK   W68 want NOT LISTED | live cands 0 | CDR cands 2 | The register stops at Joseph.
+OK   W69 want NOT LISTED | live cands 0 | CDR cands 2 | The register stops at Joseph.
+OK   W70 want LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
+       hit: P3 [CR3] I drop the wording "the register stops at Joseph" provisionally, pending the challenger's row.
+OK   W71 want LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
+       hit: P3 [CR3] I drop the wording "the register stops at Joseph" - if the challenger asks, I give my reason in roun
+OK   W72 want LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
+       hit: P3 [CR3] I drop the wording "the register stops at Joseph", the day it was challenged.
+MISS W73 want NOT LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
+       hit: P3 [CR3] I drop the wording "the register stops at Joseph" if need be.
+58 of 73 as labeled

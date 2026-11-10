@@ -41,16 +41,16 @@ OK   R3-G12 want NOT LISTED | [cr3] I retract only the word "alone"; the wording
        listed: 2
 OK   R3-T1 want LISTED | [cr3] - **LINK 6: NARROWED TO:** I drop the wording "the register stops at Joseph" as a bare statement. + [cr4] The register stops at Joseph.
        listed: 3 | hit P3 **LINK 6: NARROWED TO:** I drop the wording "the register stops at Joseph" as a 
-OK   R4-H7 want NOT LISTED | [cr3] I withdraw the wording "the register stops at Joseph" if the challenger shows a row against it; he has shown none. + [cr4] The register stops at Joseph.
-       listed: 2
+MISS R4-H7 want NOT LISTED | [cr3] I withdraw the wording "the register stops at Joseph" if the challenger shows a row against it; he has shown none. + [cr4] The register stops at Joseph.
+       listed: 3 | hit P3 I withdraw the wording "the register stops at Joseph" if the challenger shows a 
 OK   R4-H8 want NOT LISTED | [cr3] I drop the wording "the register stops at Joseph"? No. + [cr4] The register stops at Joseph.
        listed: 2
-OK   R4-U1 want NOT LISTED | [cr3] I drop the wording "the register stops at Joseph" unless the challenger answers row 4. + [cr4] The register stops at Joseph.
-       listed: 2
-OK   R4-U2 want NOT LISTED | [cr3] I withdraw the claim that the register of Luke 3 stops at Joseph, provided the challenger grants Heli. + [cr4] The register of Luke 3 stops at Joseph.
-       listed: 2
-OK   R4-U3 want NOT LISTED | [cr3] I drop the wording "the register stops at Joseph" only if the rows fail. + [cr4] The register stops at Joseph.
-       listed: 2
+MISS R4-U1 want NOT LISTED | [cr3] I drop the wording "the register stops at Joseph" unless the challenger answers row 4. + [cr4] The register stops at Joseph.
+       listed: 3 | hit P3 I drop the wording "the register stops at Joseph" unless the challenger answers 
+MISS R4-U2 want NOT LISTED | [cr3] I withdraw the claim that the register of Luke 3 stops at Joseph, provided the challenger grants Heli. + [cr4] The register of Luke 3 stops at Joseph.
+       listed: 3 | hit P3 I withdraw the claim that the register of Luke 3 stops at Joseph, provided the c
+MISS R4-U3 want NOT LISTED | [cr3] I drop the wording "the register stops at Joseph" only if the rows fail. + [cr4] The register stops at Joseph.
+       listed: 3 | hit P3 I drop the wording "the register stops at Joseph" only if the rows fail.
 OK   R4-U4 want NOT LISTED | [cr3] **I retract the wording "the register stops at Joseph"?** + [cr4] The register stops at Joseph.
        listed: 2
 OK   R4-K1 want LISTED | [cr3] I drop the wording "the register stops at Joseph". + [cr4] The register stops at Joseph.
@@ -61,72 +61,72 @@ OK   R4-K3 want LISTED | [cr3] I withdraw the wording "the register stops at Jos
        listed: 3 | hit P3 I withdraw the wording "the register stops at Joseph"!
 OK   R4-K4 want LISTED | [cr3] I drop the wording "the register stops at Joseph". If the challenger asks, the rows stand. + [cr4] The register stops at Joseph.
        listed: 3 | hit P3 I drop the wording "the register stops at Joseph".
-OK   R5-N1 want NOT LISTED | [cr3] I drop the wording "the register stops at Joseph" in case the rows fail; they do not. + [cr4] The register stops at Joseph.
-       listed: 2
-OK   R5-N2 want NOT LISTED | [cr3] I withdraw the wording "the register stops at Joseph" on condition that the challenger shows the gap; he has not. + [cr4] The register stops at Joseph.
-       listed: 2
-OK   R5-N3 want NOT LISTED | [cr3] I drop the wording "the register stops at Joseph" should the rows fail, and they stand. + [cr4] The register stops at Joseph.
-       listed: 2
-OK   R5-N4 want NOT LISTED | [cr3] I withdraw the wording "the register stops at Joseph" on the condition that the rows fail. + [cr4] The register stops at Joseph.
-       listed: 2
-OK   R5-N5 want NOT LISTED | [cr3] I drop the wording "the register stops at Joseph" supposing the rows fail. + [cr4] The register stops at Joseph.
-       listed: 2
-OK   R5-N6 want NOT LISTED | [cr3] I withdraw the wording "the register stops at Joseph" assuming the challenger answers row 4. + [cr4] The register stops at Joseph.
-       listed: 2
-OK   R5-N7 want NOT LISTED | [cr3] I drop the wording "the register stops at Joseph" only when the rows fail. + [cr4] The register stops at Joseph.
-       listed: 2
-OK   R5-N8 want NOT LISTED | [cr3] I withdraw the wording "the register stops at Joseph" providing the rows fail. + [cr4] The register stops at Joseph.
-       listed: 2
-OK   R5-N9 want NOT LISTED | [cr3] I drop the wording "the register stops at Joseph" provided that the rows fail. + [cr4] The register stops at Joseph.
-       listed: 2
-OK   R5-N10 want NOT LISTED | [cr3] I withdraw the wording "the register stops at Joseph" so long as the challenger shows the gap. + [cr4] The register stops at Joseph.
-       listed: 2
-OK   R5-N11 want NOT LISTED | [cr3] I drop the wording "the register stops at Joseph" as long as the challenger shows the gap. + [cr4] The register stops at Joseph.
-       listed: 2
-OK   R5-N12 want NOT LISTED | [cr3] I withdraw the wording "the register stops at Joseph" in the event that the rows fail. + [cr4] The register stops at Joseph.
-       listed: 2
-OK   R5-N13 want NOT LISTED | [cr3] I drop the wording "the register stops at Joseph" in the event of a failed row. + [cr4] The register stops at Joseph.
-       listed: 2
-OK   R5-N14 want NOT LISTED | [cr3] I withdraw the wording "the register stops at Joseph" if and only if the rows fail. + [cr4] The register stops at Joseph.
-       listed: 2
-OK   R5-N15 want NOT LISTED | [cr3] I drop the wording "the register stops at Joseph" but only if the rows fail. + [cr4] The register stops at Joseph.
-       listed: 2
-OK   R5-N16 want NOT LISTED | [cr3] I withdraw the wording "the register stops at Joseph" were the rows to fail. + [cr4] The register stops at Joseph.
-       listed: 2
-OK   R5-N17 want NOT LISTED | [cr3] I drop the wording "the register stops at Joseph" had the challenger shown the gap. + [cr4] The register stops at Joseph.
-       listed: 2
-OK   R5-N18 want NOT LISTED | [cr3] I withdraw the wording "the register stops at Joseph" should he show the gap. + [cr4] The register stops at Joseph.
-       listed: 2
-OK   R5-N19 want NOT LISTED | [cr3] I drop the wording "the register stops at Joseph" should it be shown wrong. + [cr4] The register stops at Joseph.
-       listed: 2
+MISS R5-N1 want NOT LISTED | [cr3] I drop the wording "the register stops at Joseph" in case the rows fail; they do not. + [cr4] The register stops at Joseph.
+       listed: 3 | hit P3 I drop the wording "the register stops at Joseph" in case the rows fail; they do
+MISS R5-N2 want NOT LISTED | [cr3] I withdraw the wording "the register stops at Joseph" on condition that the challenger shows the gap; he has not. + [cr4] The register stops at Joseph.
+       listed: 3 | hit P3 I withdraw the wording "the register stops at Joseph" on condition that the chal
+MISS R5-N3 want NOT LISTED | [cr3] I drop the wording "the register stops at Joseph" should the rows fail, and they stand. + [cr4] The register stops at Joseph.
+       listed: 3 | hit P3 I drop the wording "the register stops at Joseph" should the rows fail, and they
+MISS R5-N4 want NOT LISTED | [cr3] I withdraw the wording "the register stops at Joseph" on the condition that the rows fail. + [cr4] The register stops at Joseph.
+       listed: 3 | hit P3 I withdraw the wording "the register stops at Joseph" on the condition that the 
+MISS R5-N5 want NOT LISTED | [cr3] I drop the wording "the register stops at Joseph" supposing the rows fail. + [cr4] The register stops at Joseph.
+       listed: 3 | hit P3 I drop the wording "the register stops at Joseph" supposing the rows fail.
+MISS R5-N6 want NOT LISTED | [cr3] I withdraw the wording "the register stops at Joseph" assuming the challenger answers row 4. + [cr4] The register stops at Joseph.
+       listed: 3 | hit P3 I withdraw the wording "the register stops at Joseph" assuming the challenger an
+MISS R5-N7 want NOT LISTED | [cr3] I drop the wording "the register stops at Joseph" only when the rows fail. + [cr4] The register stops at Joseph.
+       listed: 3 | hit P3 I drop the wording "the register stops at Joseph" only when the rows fail.
+MISS R5-N8 want NOT LISTED | [cr3] I withdraw the wording "the register stops at Joseph" providing the rows fail. + [cr4] The register stops at Joseph.
+       listed: 3 | hit P3 I withdraw the wording "the register stops at Joseph" providing the rows fail.
+MISS R5-N9 want NOT LISTED | [cr3] I drop the wording "the register stops at Joseph" provided that the rows fail. + [cr4] The register stops at Joseph.
+       listed: 3 | hit P3 I drop the wording "the register stops at Joseph" provided that the rows fail.
+MISS R5-N10 want NOT LISTED | [cr3] I withdraw the wording "the register stops at Joseph" so long as the challenger shows the gap. + [cr4] The register stops at Joseph.
+       listed: 3 | hit P3 I withdraw the wording "the register stops at Joseph" so long as the challenger 
+MISS R5-N11 want NOT LISTED | [cr3] I drop the wording "the register stops at Joseph" as long as the challenger shows the gap. + [cr4] The register stops at Joseph.
+       listed: 3 | hit P3 I drop the wording "the register stops at Joseph" as long as the challenger show
+MISS R5-N12 want NOT LISTED | [cr3] I withdraw the wording "the register stops at Joseph" in the event that the rows fail. + [cr4] The register stops at Joseph.
+       listed: 3 | hit P3 I withdraw the wording "the register stops at Joseph" in the event that the rows
+MISS R5-N13 want NOT LISTED | [cr3] I drop the wording "the register stops at Joseph" in the event of a failed row. + [cr4] The register stops at Joseph.
+       listed: 3 | hit P3 I drop the wording "the register stops at Joseph" in the event of a failed row.
+MISS R5-N14 want NOT LISTED | [cr3] I withdraw the wording "the register stops at Joseph" if and only if the rows fail. + [cr4] The register stops at Joseph.
+       listed: 3 | hit P3 I withdraw the wording "the register stops at Joseph" if and only if the rows fa
+MISS R5-N15 want NOT LISTED | [cr3] I drop the wording "the register stops at Joseph" but only if the rows fail. + [cr4] The register stops at Joseph.
+       listed: 3 | hit P3 I drop the wording "the register stops at Joseph" but only if the rows fail.
+MISS R5-N16 want NOT LISTED | [cr3] I withdraw the wording "the register stops at Joseph" were the rows to fail. + [cr4] The register stops at Joseph.
+       listed: 3 | hit P3 I withdraw the wording "the register stops at Joseph" were the rows to fail.
+MISS R5-N17 want NOT LISTED | [cr3] I drop the wording "the register stops at Joseph" had the challenger shown the gap. + [cr4] The register stops at Joseph.
+       listed: 3 | hit P3 I drop the wording "the register stops at Joseph" had the challenger shown the g
+MISS R5-N18 want NOT LISTED | [cr3] I withdraw the wording "the register stops at Joseph" should he show the gap. + [cr4] The register stops at Joseph.
+       listed: 3 | hit P3 I withdraw the wording "the register stops at Joseph" should he show the gap.
+MISS R5-N19 want NOT LISTED | [cr3] I drop the wording "the register stops at Joseph" should it be shown wrong. + [cr4] The register stops at Joseph.
+       listed: 3 | hit P3 I drop the wording "the register stops at Joseph" should it be shown wrong.
 MISS R5-N20 want NOT LISTED | [cr3] I withdraw the wording "the register stops at Joseph" until the challenger answers row 4. + [cr4] The register stops at Joseph.
        listed: 3 | hit P3 I withdraw the wording "the register stops at Joseph" until the challenger answe
 MISS R5-N21 want NOT LISTED | [cr3] I drop the wording "the register stops at Joseph" pending the challenger's answer. + [cr4] The register stops at Joseph.
        listed: 3 | hit P3 I drop the wording "the register stops at Joseph" pending the challenger's answe
 MISS R5-N22 want NOT LISTED | [cr3] I withdraw the wording "the register stops at Joseph" subject to the challenger's answer. + [cr4] The register stops at Joseph.
        listed: 3 | hit P3 I withdraw the wording "the register stops at Joseph" subject to the challenger'
-OK   R5-N23 want NOT LISTED | [cr3] I drop the wording "the register stops at Joseph" contingent on the rows failing. + [cr4] The register stops at Joseph.
-       listed: 2
-OK   R5-N24 want NOT LISTED | [cr3] I withdraw the wording "the register stops at Joseph" conditional upon the rows failing. + [cr4] The register stops at Joseph.
-       listed: 2
-OK   R5-N25 want NOT LISTED | [cr3] I drop the wording "the register stops at Joseph" unless and until the rows fail. + [cr4] The register stops at Joseph.
-       listed: 2
-OK   R5-N26 want NOT LISTED | [cr3] I withdraw the wording "the register stops at Joseph" except if the rows fail. + [cr4] The register stops at Joseph.
-       listed: 2
-OK   R5-N27 want NOT LISTED | [cr3] I drop the wording "the register stops at Joseph" when and if the rows fail. + [cr4] The register stops at Joseph.
-       listed: 2
-OK   R5-N28 want NOT LISTED | [cr3] I withdraw the wording "the register stops at Joseph" in the case that the rows fail. + [cr4] The register stops at Joseph.
-       listed: 2
-OK   R5-N29 want NOT LISTED | [cr3] I drop the wording "the register stops at Joseph" on the understanding that the rows fail. + [cr4] The register stops at Joseph.
-       listed: 2
+MISS R5-N23 want NOT LISTED | [cr3] I drop the wording "the register stops at Joseph" contingent on the rows failing. + [cr4] The register stops at Joseph.
+       listed: 3 | hit P3 I drop the wording "the register stops at Joseph" contingent on the rows failing
+MISS R5-N24 want NOT LISTED | [cr3] I withdraw the wording "the register stops at Joseph" conditional upon the rows failing. + [cr4] The register stops at Joseph.
+       listed: 3 | hit P3 I withdraw the wording "the register stops at Joseph" conditional upon the rows 
+MISS R5-N25 want NOT LISTED | [cr3] I drop the wording "the register stops at Joseph" unless and until the rows fail. + [cr4] The register stops at Joseph.
+       listed: 3 | hit P3 I drop the wording "the register stops at Joseph" unless and until the rows fail
+MISS R5-N26 want NOT LISTED | [cr3] I withdraw the wording "the register stops at Joseph" except if the rows fail. + [cr4] The register stops at Joseph.
+       listed: 3 | hit P3 I withdraw the wording "the register stops at Joseph" except if the rows fail.
+MISS R5-N27 want NOT LISTED | [cr3] I drop the wording "the register stops at Joseph" when and if the rows fail. + [cr4] The register stops at Joseph.
+       listed: 3 | hit P3 I drop the wording "the register stops at Joseph" when and if the rows fail.
+MISS R5-N28 want NOT LISTED | [cr3] I withdraw the wording "the register stops at Joseph" in the case that the rows fail. + [cr4] The register stops at Joseph.
+       listed: 3 | hit P3 I withdraw the wording "the register stops at Joseph" in the case that the rows 
+MISS R5-N29 want NOT LISTED | [cr3] I drop the wording "the register stops at Joseph" on the understanding that the rows fail. + [cr4] The register stops at Joseph.
+       listed: 3 | hit P3 I drop the wording "the register stops at Joseph" on the understanding that the 
 MISS R5-N30 want NOT LISTED | [cr3] I withdraw the wording "the register stops at Joseph" granted that the rows fail. + [cr4] The register stops at Joseph.
        listed: 3 | hit P3 I withdraw the wording "the register stops at Joseph" granted that the rows fail
-OK   R5-N31 want NOT LISTED | [cr3] I drop the wording "the register stops at Joseph" if it comes to that. + [cr4] The register stops at Joseph.
-       listed: 2
-OK   R5-N32 want NOT LISTED | [cr3] I withdraw the wording "the register stops at Joseph" only on condition the rows fail. + [cr4] The register stops at Joseph.
-       listed: 2
-OK   R5-N33 want NOT LISTED | [cr3] I drop the wording "the register stops at Joseph" barring an answer from the challenger. + [cr4] The register stops at Joseph.
-       listed: 2
+MISS R5-N31 want NOT LISTED | [cr3] I drop the wording "the register stops at Joseph" if it comes to that. + [cr4] The register stops at Joseph.
+       listed: 3 | hit P3 I drop the wording "the register stops at Joseph" if it comes to that.
+MISS R5-N32 want NOT LISTED | [cr3] I withdraw the wording "the register stops at Joseph" only on condition the rows fail. + [cr4] The register stops at Joseph.
+       listed: 3 | hit P3 I withdraw the wording "the register stops at Joseph" only on condition the rows
+MISS R5-N33 want NOT LISTED | [cr3] I drop the wording "the register stops at Joseph" barring an answer from the challenger. + [cr4] The register stops at Joseph.
+       listed: 3 | hit P3 I drop the wording "the register stops at Joseph" barring an answer from the cha
 OK   R5-N34 want NOT LISTED | [cr3] If the rows fail, I drop the wording "the register stops at Joseph". + [cr4] The register stops at Joseph.
        listed: 2
 OK   R5-N35 want NOT LISTED | [cr3] Should the rows fail, I drop the wording "the register stops at Joseph". + [cr4] The register stops at Joseph.
@@ -162,4 +162,4 @@ OK   J-A1 the Luke 1:34 pair listed once, joined with the judges' pair
        J1 by the judges' CONTRADICTION lines (chatgpt, sol, luna); also named by the ANTI-CHEAT CHECK
 OK   J-0 no other new candidate than J-R1 and J-A1
        live 1, pkgCDR 2
-74 OK, 5 MISS
+41 OK, 38 MISS
