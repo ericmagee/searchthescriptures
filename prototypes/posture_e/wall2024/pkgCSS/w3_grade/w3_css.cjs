@@ -30,13 +30,18 @@ const show=(n,R)=>{const L=typeof R.cec_log==='string'?JSON.parse(R.cec_log):R.c
  show('P7 defender reply is prose with no line, challenger NONE',await rec(r,F,BC,['I have read the rounds and find nothing to report.',N]));
  show('P8 defender reply empty string, challenger NONE',await rec(r,F,BC,['',N]));
  show('P9 the defender call answers with a line labeled CHALLENGER quoting the defender rounds (wrong side label)',await rec(r,F,BC,[L6.replace('DEFENDER','CHALLENGER'),N]));
+ show('P13 (rev 2) defender reply holds a NONE line and a CONFIRMED line, challenger NONE',await rec(r,F,BC,[N+'\n'+L6,N]));
+ show('P14 (rev 2) defender reply is spaces only, challenger NONE',await rec(r,F,BC,['   \n ',N]));
+ show('P15 (rev 2) defender reply unreadable CLOSE-CONTRADICTION line, challenger call FAILS',await rec(r,F,BC,['CLOSE-CONTRADICTION: the defender contradicts itself on link 6',null]));
+ show('P16 (rev 2) two Build items but only ONE reply item arrives (the challenger has no reply item)',await rec(r,F,BC,[N]));
+ show('P17 (rev 2) reply cut by length: content empty, finish length, both sides',await (async()=>(await harness(r,{'Final Output':[J(F)],'Close Enforcer Build':BC.map(J),'Close Enforcer Call deepseek':[J({choices:[{message:{role:'assistant',content:''},finish_reason:'length'}]}),J({choices:[{message:{role:'assistant',content:null},finish_reason:'length'}]})]})('return (async()=>{\n'+code(CAND,'Close Enforcer Record')+'\n})();','Close Enforcer Call deepseek'))[0].json)());
  // Oracle candidate planted in DR4
  const F2={...F,dr4:F.dr4+'\n\nOPPONENT\'S CONTRADICTIONS:\nX1 LINK 6 | EARLIER [CR3] "I drop the wording "no biological father" as a bare statement." | CLOSING [CR4] "Christ had no biological father." | reclaimed'};
  const B2=await runB(CAND,r,F2);console.log('P10 Oracle candidate X1 planted: defender call cands '+JSON.stringify(B2[0].cands.map(c=>c.id))+', challenger call cands '+JSON.stringify(B2[1].cands.map(c=>c.id))+'; candidate text in challenger prompt: '+/X1 -- DEFENDER/.test(B2[1].body.messages[1].content));
  const X1=L6.replace('NEW','X1');
  show('P11 X1 answered CONFIRMED by the defender call, challenger NONE',await rec(r,F2,B2,[X1,N]));
  const L=show('P12 X1 planted, defender call FAILS, challenger NONE',await rec(r,F2,B2,[null,N]));
- fs.writeFileSync('pkgCSS/w3_grade/rows_w3.json',JSON.stringify(L.map(x=>({...x,run_token:'W3-ROLLBACK-TEST-CSS',prompt_sent:x.prompt_sent?String(x.prompt_sent).slice(0,80):null,full_reply:x.full_reply?String(x.full_reply).slice(0,80):null}))));
+ fs.writeFileSync('pkgCSS/w3_grade/rows_w3_rev2.json',JSON.stringify(L.map(x=>({...x,run_token:'W3-ROLLBACK-TEST-CSS',prompt_sent:x.prompt_sent?String(x.prompt_sent).slice(0,80):null,full_reply:x.full_reply?String(x.full_reply).slice(0,80):null}))));
  // live behaviour for comparison on a failed call
  const BLv=await runB(LIVE,r,F);const RL=(await harness(r,{'Final Output':[J(F)],'Close Enforcer Build':[J(BLv[0])],'Close Enforcer Call deepseek':[rep(null)]})('return (async()=>{\n'+code(LIVE,'Close Enforcer Record')+'\n})();','Close Enforcer Call deepseek'))[0].json;show('LIVE s104 for comparison: the one call FAILS',RL);
 })();
