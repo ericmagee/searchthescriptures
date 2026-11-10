@@ -1,0 +1,25 @@
+
+===== Enforcer Record
+  "Gn/An.n": lines 35, found in a row 35, verdict equal 35
+
+===== Judge Enforcer Record
+  "gemini": lines 3, found in a row 3, verdict equal 3, seat named 3, seat equal 3
+  "chatgpt": lines 8, found in a row 8, verdict equal 8, seat named 8, seat equal 8
+  "sol": lines 10, found in a row 10, verdict equal 10, seat named 10, seat equal 10
+  "Pn.n (gemini)": lines 10, found in a row 10, verdict equal 10, seat named 10, seat equal 10
+  "Pn.n (chatgpt)": lines 10, found in a row 10, verdict equal 10, seat named 10, seat equal 10
+  "Pn.n (sol)": lines 10, found in a row 10, verdict equal 10, seat named 10, seat equal 10
+  "Bn.n (chatgpt)": lines 43, found in a row 43, verdict equal 43, seat named 43, seat equal 43
+  "Bn.n (sol)": lines 13, found in a row 13, verdict equal 13, seat named 13, seat equal 13
+  "(no ENFORCER head) Yn.n": lines 3, found in a row 0, verdict equal 0, NOT READ OR WRONG 3
+      33815: Y6.1 -- DISAGREE -- RIGHT: OVERSTATED -- The own sentences grant that "Joseph is father by law, naming and household" and that "the betrothed is called 'wife' here," but none supports the synthesis's 
+      33815: Y7.1 -- AGREE -- RIGHT: TRUE -- The defender's own words state "I withdraw the lexical gloss I gave for the Hebrew word," which gives up the same Hebrew lexical gloss named in the synthesis.
+      33815: Y8.1 -- AGREE -- RIGHT: TRUE -- The defender's own words state "LINK 4: NARROWED TO: Isaiah 7:14 as the sign is the virgin's conceiving, and Matthew 1:22-23 says "all this was done" to fulfil it," mat
+
+===== Alt Judge Enforcer Record
+  "Pn.n (grok)": lines 2, found in a row 2, verdict equal 2, seat named 2, seat equal 2
+  "Rn.n (grok)": lines 1, found in a row 1, verdict equal 1, seat named 1, seat equal 1
+  "grok": lines 11, found in a row 11, verdict equal 11, seat named 11, seat equal 11
+  "grok (Hn)": lines 4, found in a row 4, verdict equal 4, seat named 4, seat equal 4
+  "grok (Zn)": lines 1, found in a row 1, verdict equal 1, seat named 1, seat equal 1
+  "grok (Pn)": lines 8, found in a row 8, verdict equal 7, seat named 8, seat equal 8

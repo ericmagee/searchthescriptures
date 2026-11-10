@@ -1,0 +1,157 @@
+
+===== Enforcer Record
+ id forms seen (digits shown as n): 
+    1720 x "An.n" in 29 debates, last 34108
+      49 x "Gn" in 2 debates, last 33506
+      35 x "Gn/An.n" in 1 debates, last 33506   e.g. ENFORCER: G2/A2.1 -- AGREE -- NEEDS: NO -- The side withdraws those rows only "as independent footing," and the judge re
+ per debate:
+   33218: rows 84, lines 84, NO VERDICT rows 0, calls with no text 0
+   33222: rows 73, lines 73, NO VERDICT rows 0, calls with no text 0
+   33249: rows 42, lines 42, NO VERDICT rows 0, calls with no text 0
+   33261: rows 39, lines 39, NO VERDICT rows 0, calls with no text 0
+   33276: rows 0, lines 0, NO VERDICT rows 0, calls with no text 1
+   33289: rows 0, lines 0, NO VERDICT rows 0, calls with no text 1
+   33299: rows 45, lines 45, NO VERDICT rows 0, calls with no text 0
+   33311: rows 0, lines 0, NO VERDICT rows 0, calls with no text 1
+   33322: rows 0, lines 0, NO VERDICT rows 0, calls with no text 1
+   33345: rows 56, lines 56, NO VERDICT rows 0, calls with no text 0
+   33371: rows 51, lines 51, NO VERDICT rows 0, calls with no text 0
+   33389: rows 55, lines 55, NO VERDICT rows 0, calls with no text 0
+   33411: rows 31, lines 31, NO VERDICT rows 0, calls with no text 0
+   33430: rows 40, lines 40, NO VERDICT rows 0, calls with no text 0
+   33442: rows 47, lines 47, NO VERDICT rows 0, calls with no text 0
+   33461: rows 53, lines 53, NO VERDICT rows 0, calls with no text 0
+   33482: rows 67, lines 0, NO VERDICT rows 67, calls with no text 1
+   33490: rows 49, lines 49, NO VERDICT rows 0, calls with no text 0
+   33497: rows 52, lines 48, NO VERDICT rows 0, calls with no text 0
+   33506: rows 36, lines 36, NO VERDICT rows 0, calls with no text 0, odd id forms: 35 x "Gn/An.n"
+   33575: rows 72, lines 72, NO VERDICT rows 0, calls with no text 0
+   33592: rows 63, lines 63, NO VERDICT rows 0, calls with no text 0
+   33605: rows 62, lines 62, NO VERDICT rows 0, calls with no text 0
+   33617: rows 77, lines 77, NO VERDICT rows 0, calls with no text 0
+   33627: rows 63, lines 63, NO VERDICT rows 0, calls with no text 0
+   33644: rows 56, lines 56, NO VERDICT rows 0, calls with no text 0
+   33682: rows 63, lines 63, NO VERDICT rows 0, calls with no text 0
+   33705: rows 61, lines 0, NO VERDICT rows 61, calls with no text 1
+   33731: rows 39, lines 39, NO VERDICT rows 0, calls with no text 0
+   33750: rows 74, lines 74, NO VERDICT rows 0, calls with no text 0
+   33774: rows 46, lines 46, NO VERDICT rows 0, calls with no text 0
+   33798: rows 61, lines 61, NO VERDICT rows 0, calls with no text 0
+   33815: rows 81, lines 81, NO VERDICT rows 0, calls with no text 0
+   33828: rows 99, lines 99, NO VERDICT rows 0, calls with no text 0
+   33846: rows 81, lines 81, NO VERDICT rows 0, calls with no text 0
+   34016: rows 44, lines 44, NO VERDICT rows 0, calls with no text 0
+   34108: rows 74, lines 74, NO VERDICT rows 0, calls with no text 0
+
+===== Judge Enforcer Record
+ id forms seen (digits shown as n): 
+    5066 x "Bn.n" in 33 debates, last 34108
+    1104 x "Pn.n" in 33 debates, last 34108
+     565 x "Hn.n" in 33 debates, last 34108
+     223 x "Kn.n" in 28 debates, last 33846
+     134 x "Yn.n" in 30 debates, last 34108
+      96 x "Zn.n" in 32 debates, last 34108
+      72 x "Rn.n" in 31 debates, last 34108
+      58 x "Vn.n" in 21 debates, last 34108
+      43 x "Bn.n (chatgpt)" in 1 debates, last 33411   e.g. ENFORCER: B70.1 (chatgpt) -- AGREE -- RIGHT: MEETS -- The answer "The word carries descent from a forefather across the 
+      27 x "Hn" in 2 debates, last 33461
+      23 x "Bn" in 1 debates, last 33442
+      13 x "Bn.n (sol)" in 1 debates, last 33411   e.g. ENFORCER: B70.2 (sol) -- AGREE -- RIGHT: MEETS -- The same answer "The word carries descent from a forefather across the
+      10 x "sol" in 1 debates, last 33389   e.g. ENFORCER: sol -- AGREE -- RIGHT: UNDERDETERMINED -- The defender's [CR3] answer "So the taking of 1:24 comes after the f
+      10 x "Pn.n (gemini)" in 1 debates, last 33389   e.g. ENFORCER: P1.1 (gemini) -- AGREE -- RIGHT: SPARED -- "None of the six premises listed against the defender stand concede
+      10 x "Pn.n (chatgpt)" in 1 debates, last 33389   e.g. ENFORCER: P1.2 (chatgpt) -- AGREE -- RIGHT: SPARED -- "Premises 1–6 are spared."
+      10 x "Pn.n (sol)" in 1 debates, last 33389   e.g. ENFORCER: P1.3 (sol) -- AGREE -- RIGHT: SPARED -- "None counted; premises 1–6 are spared."
+      10 x "Pn" in 1 debates, last 33442
+       8 x "chatgpt" in 1 debates, last 33389   e.g. ENFORCER: chatgpt -- AGREE -- RIGHT: UNDERDETERMINED -- The defender's [CR2] answer "Even on the challenger's reading of
+       8 x "Kn" in 1 debates, last 33442
+       4 x "Yn" in 2 debates, last 33411
+       3 x "gemini" in 1 debates, last 33389   e.g. ENFORCER: gemini -- DISAGREE -- RIGHT: BROKEN -- The line's own answer check grades the challenger [DR3] "FAILS" on "for
+       3 x "NO ENFORCER HEAD" in 1 debates, last 33815   e.g. Y6.1 -- DISAGREE -- RIGHT: OVERSTATED -- The own sentences grant that "Joseph is father by law, naming and household" an
+       2 x "Rn" in 1 debates, last 33442
+ per debate:
+   33218: rows 221, lines 219, NO VERDICT rows 1, calls with no text 0
+   33222: rows 258, lines 173, NO VERDICT rows 89, calls with no text 1
+   33249: rows 211, lines 208, NO VERDICT rows 0, calls with no text 0
+   33261: rows 257, lines 252, NO VERDICT rows 0, calls with no text 0
+   33276: rows 0, lines 0, NO VERDICT rows 0, calls with no text 1
+   33289: rows 0, lines 0, NO VERDICT rows 0, calls with no text 1
+   33299: rows 204, lines 202, NO VERDICT rows 0, calls with no text 0
+   33311: rows 0, lines 0, NO VERDICT rows 0, calls with no text 1
+   33322: rows 0, lines 0, NO VERDICT rows 0, calls with no text 1
+   33345: rows 241, lines 239, NO VERDICT rows 0, calls with no text 0
+   33371: rows 195, lines 194, NO VERDICT rows 0, calls with no text 0
+   33389: rows 207, lines 204, NO VERDICT rows 0, calls with no text 0, odd id forms: 3 x "gemini", 8 x "chatgpt", 10 x "sol", 10 x "Pn.n (gemini)", 10 x "Pn.n (chatgpt)", 10 x "Pn.n (sol)"
+   33411: rows 244, lines 238, NO VERDICT rows 0, calls with no text 0, odd id forms: 43 x "Bn.n (chatgpt)", 13 x "Bn.n (sol)"
+   33430: rows 205, lines 178, NO VERDICT rows 25, calls with no text 0
+   33442: rows 231, lines 211, NO VERDICT rows 0, calls with no text 0
+   33461: rows 261, lines 256, NO VERDICT rows 1, calls with no text 0
+   33482: rows 205, lines 205, NO VERDICT rows 0, calls with no text 0
+   33490: rows 243, lines 229, NO VERDICT rows 0, calls with no text 0
+   33497: rows 275, lines 271, NO VERDICT rows 0, calls with no text 0
+   33506: rows 252, lines 252, NO VERDICT rows 0, calls with no text 0
+   33575: rows 239, lines 238, NO VERDICT rows 0, calls with no text 0
+   33592: rows 217, lines 215, NO VERDICT rows 0, calls with no text 0
+   33605: rows 222, lines 221, NO VERDICT rows 0, calls with no text 0
+   33617: rows 310, lines 307, NO VERDICT rows 0, calls with no text 0
+   33627: rows 230, lines 228, NO VERDICT rows 0, calls with no text 0
+   33644: rows 226, lines 224, NO VERDICT rows 0, calls with no text 0
+   33682: rows 192, lines 189, NO VERDICT rows 0, calls with no text 0
+   33705: rows 214, lines 213, NO VERDICT rows 0, calls with no text 0
+   33731: rows 270, lines 268, NO VERDICT rows 0, calls with no text 0
+   33750: rows 234, lines 232, NO VERDICT rows 0, calls with no text 0
+   33774: rows 245, lines 244, NO VERDICT rows 0, calls with no text 0
+   33798: rows 225, lines 223, NO VERDICT rows 0, calls with no text 0
+   33815: rows 233, lines 234, NO VERDICT rows 0, calls with no text 0, odd id forms: 3 x "NO ENFORCER HEAD"
+   33828: rows 240, lines 236, NO VERDICT rows 0, calls with no text 0
+   33846: rows 253, lines 251, NO VERDICT rows 0, calls with no text 0
+   34016: rows 210, lines 209, NO VERDICT rows 0, calls with no text 0
+   34108: rows 242, lines 239, NO VERDICT rows 0, calls with no text 1
+
+===== Alt Judge Enforcer Record
+ id forms seen (digits shown as n): 
+     991 x "Bn.n" in 17 debates, last 33846
+     192 x "Pn.n" in 18 debates, last 33846
+     175 x "Wn.n" in 7 debates, last 34016
+      93 x "Hn.n" in 16 debates, last 33846
+      59 x "Kn.n" in 11 debates, last 33731
+      58 x "Bn" in 1 debates, last 33461
+      16 x "Zn.n" in 16 debates, last 33846
+      15 x "Pn" in 2 debates, last 33461
+      14 x "Rn.n" in 14 debates, last 33846
+      14 x "Vn.n" in 10 debates, last 33846
+      11 x "grok" in 1 debates, last 33371   e.g. ENFORCER: grok -- AGREE -- RIGHT: SPARED -- The block sets [L1] Luke 1:13 "thy wife Elisabeth shall bear thee a son" aga
+       8 x "grok (Pn)" in 1 debates, last 33411   e.g. ENFORCER: grok (P1) -- DISAGREE -- RIGHT: SPARED -- The premise-1 block is "NARROWED TO" with "[L1] Matthew 1:20: \"for 
+       7 x "Kn" in 1 debates, last 33461
+       4 x "grok (Hn)" in 1 debates, last 33411   e.g. ENFORCER: grok (H1) -- AGREE -- RIGHT: UNDERDETERMINED -- The line takes both senses from Luke 1:35 itself ("The Holy Gh
+       3 x "Hn" in 1 debates, last 33461
+       2 x "Pn.n (grok)" in 1 debates, last 33249   e.g. ENFORCER: P11.1 (grok) -- DISAGREE -- RIGHT: SPARED -- The answering block exhibits the premise's own footing ("[L2] pat
+       2 x "Rn" in 2 debates, last 33461
+       2 x "Sn.n" in 2 debates, last 33490
+       1 x "Rn.n (grok)" in 1 debates, last 33249   e.g. ENFORCER: R1.1 (grok) -- AGREE -- RIGHT: FOLLOWS -- The reason rests on the verses' own words, "Mary was found with chil
+       1 x "grok (Zn)" in 1 debates, last 33411   e.g. ENFORCER: grok (Z1) -- AGREE -- RIGHT: BROKEN -- The judge's own collision line reads "D6 vs C2 (Romans 1:3): DEFENDER L
+       1 x "Zn" in 1 debates, last 33461
+ per debate:
+   33222: rows 77, lines 76, NO VERDICT rows 0, calls with no text 0
+   33249: rows 90, lines 89, NO VERDICT rows 0, calls with no text 0, odd id forms: 2 x "Pn.n (grok)", 1 x "Rn.n (grok)"
+   33261: rows 80, lines 79, NO VERDICT rows 0, calls with no text 0
+   33276: rows 0, lines 0, NO VERDICT rows 0, calls with no text 1
+   33289: rows 0, lines 0, NO VERDICT rows 0, calls with no text 1
+   33299: rows 76, lines 28, NO VERDICT rows 47, calls with no text 0
+   33311: rows 0, lines 0, NO VERDICT rows 0, calls with no text 1
+   33345: rows 96, lines 95, NO VERDICT rows 0, calls with no text 0
+   33371: rows 71, lines 70, NO VERDICT rows 0, calls with no text 0, odd id forms: 11 x "grok"
+   33411: rows 82, lines 81, NO VERDICT rows 0, calls with no text 0, odd id forms: 4 x "grok (Hn)", 1 x "grok (Zn)", 8 x "grok (Pn)"
+   33442: rows 75, lines 74, NO VERDICT rows 0, calls with no text 0
+   33461: rows 84, lines 82, NO VERDICT rows 0, calls with no text 0
+   33482: rows 69, lines 68, NO VERDICT rows 0, calls with no text 0
+   33490: rows 78, lines 77, NO VERDICT rows 0, calls with no text 0
+   33506: rows 87, lines 87, NO VERDICT rows 0, calls with no text 0
+   33617: rows 82, lines 81, NO VERDICT rows 0, calls with no text 0
+   33627: rows 73, lines 73, NO VERDICT rows 0, calls with no text 0
+   33644: rows 145, lines 145, NO VERDICT rows 0, calls with no text 0
+   33731: rows 104, lines 103, NO VERDICT rows 0, calls with no text 0
+   33774: rows 23, lines 23, NO VERDICT rows 0, calls with no text 0
+   33798: rows 137, lines 137, NO VERDICT rows 0, calls with no text 0
+   33828: rows 59, lines 59, NO VERDICT rows 0, calls with no text 0
+   33846: rows 130, lines 130, NO VERDICT rows 0, calls with no text 0
+   34016: rows 12, lines 12, NO VERDICT rows 0, calls with no text 0

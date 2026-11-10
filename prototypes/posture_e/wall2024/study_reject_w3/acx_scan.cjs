@@ -1,0 +1,16 @@
+// W3 scan: stored anti-cheat replies through the live s108 Anticheat Record. Which reply lines does the live code not read?
+const {fs,IN,LIVE,saved,run,cl}=require('./h.cjs');
+const runs=fs.readdirSync(IN).map(f=>(f.match(/^(\d+)_Anticheat_Call_deepseek\.json$/)||[])[1]).filter(Boolean).sort();
+let deb=0,lines=0,rowsN=0,rej=[],naNoLine=0,errs=[],callFail=0;const txtOf=c=>{const j=c.json;return (j.choices&&j.choices[0]&&j.choices[0].message&&j.choices[0].message.content)||'';};
+for(const r of runs){const call=saved(r,'Anticheat Call deepseek');if(!call||!call.length)continue;const a=run(LIVE,r,'Anticheat Record',null,'Anticheat Call deepseek')[0].json.acx;if(a.skipped)continue;deb++;
+ const L=call.map(txtOf).join('\n').split('\n').filter(l=>l.trim());lines+=L.length;rowsN+=(a.rows||[]).length;const ids=new Set((a.rows||[]).map(x=>x.id));const lineIds=new Set();
+ for(const l of L){const m=l.match(/ANTICHEAT:\s*(X\d+)/);if(m)lineIds.add(m[1]);if(!m||!ids.has(m[1]))rej.push(r+': '+l);}
+ for(const id of a.no_answer||[])if(!lineIds.has(id))naNoLine++;
+ call.forEach((c,k)=>{if(!txtOf(c))callFail++;});for(const e of a.errors||[])errs.push(r+': '+JSON.stringify(e).slice(0,260));}
+console.log('debates with an anti-cheat reply: '+deb+'; reply lines '+lines+'; rows read '+rowsN+'; lines the live Record does not read: '+rej.length);rej.forEach(x=>console.log('  '+x));
+console.log('items logged NO ANSWER with no line at all in the reply: '+naNoLine+'; calls with no reply text: '+callFail+'; errors recorded: '+errs.length);errs.forEach(x=>console.log('  '+x));
+// plants: a real REVERSED line, as stored, and with the two forms found above
+let done=false;for(const r of runs){if(done)break;const call=saved(r,'Anticheat Call deepseek');if(!call||!call.length)continue;const a0=run(LIVE,r,'Anticheat Record',null,'Anticheat Call deepseek')[0].json.acx;const rv=(a0.rows||[]).find(x=>x.answer==='REVERSED');if(!rv)continue;
+ const k=call.findIndex(c=>new RegExp('ANTICHEAT:\\s*'+rv.id+'\\b').test(txtOf(c)));const line=txtOf(call[k]).split('\n').find(l=>new RegExp('ANTICHEAT:\\s*'+rv.id+'\\b').test(l));
+ const P=(nm,nl)=>{const c2=cl(call);c2[k].json.choices[0].message.content=txtOf(call[k]).replace(line,nl);const a=run(LIVE,r,'Anticheat Record',{'Anticheat Call deepseek':c2},'Anticheat Call deepseek')[0].json.acx;const row=(a.rows||[]).find(x=>x.id===rv.id);console.log('  plant '+nm+': '+(row?'read as '+row.answer:'NOT READ')+'; in no_answer: '+(a.no_answer||[]).includes(rv.id)+'; shown to judges (reversed list): '+[].concat(a.reversed.D||[],a.reversed.C||[]).some(x=>x.id===rv.id));};
+ console.log('real REVERSED line of debate '+r+': '+line.slice(0,200));P('as stored',line);P('a period after the last quote mark',line.replace(/\s*$/,'.'));P('EARLIER without quote marks',line.replace(/EARLIER:\s*"([^]*)"\s*$/,'EARLIER: $1'));P('single quote marks around both quotations',line.replace(/CLOSE:\s*"([^]*)"\s*--\s*EARLIER:\s*"([^]*)"\s*$/,"CLOSE: '$1' -- EARLIER: '$2'"));P('bold markers around ANTICHEAT',line.replace('ANTICHEAT:','**ANTICHEAT:**'));P('answer in lower case',line.replace('REVERSED','Reversed'));P('a trailing note after the last quote',line.replace(/\s*$/,' (the grant is taken back)'));done=true;}
