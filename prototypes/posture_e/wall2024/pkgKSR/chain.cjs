@@ -3,7 +3,7 @@
 // HTTP (model) nodes keep their stored output. Usage: module chain(SET, start) -> {out: map node -> main}
 const fs=require('fs');const run=require('./run_node.cjs');
 const X=JSON.parse(fs.readFileSync('/mnt/project-files/wall2024/ex34626_full.json','utf8'));const rd=(X.data||X).resultData.runData;
-let W=JSON.parse(fs.readFileSync('/mnt/project-files/wall2024/fetchback_live_s110.json','utf8'));W=W.data||W;W=W.workflow||W;const BY={};W.nodes.forEach(n=>BY[n.name]=n);
+let W=JSON.parse(fs.readFileSync(process.env.CHAIN_WF||'/mnt/project-files/wall2024/fetchback_live_s110.json','utf8'));W=W.data||W;W=W.workflow||W;const BY={};W.nodes.forEach(n=>BY[n.name]=n);
 module.exports=async function chain(SET,start,stop,hook){const order=Object.entries(rd).map(([n,r])=>[n,r[0].startTime]).sort((a,b)=>a[1]-b[1]).map(x=>x[0]);
  const over={};const fb=[];if(hook)hook('__start',over,rd);const lib=n=>{const f='pkgLIB/strip_'+SET+'/patched/'+n.replace(/ /g,'_')+'.js';return fs.existsSync(f)?fs.readFileSync(f,'utf8'):null;};
  const inOf=n=>{const s=(rd[n][rd[n].length-1].source||[])[0];if(!s)return [];const m=over[s.previousNode]||(rd[s.previousNode]?(rd[s.previousNode][rd[s.previousNode].length-1].data||{}).main:null);return m?(m[s.previousNodeOutput||0]||[]):[];};
