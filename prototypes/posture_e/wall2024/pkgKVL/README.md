@@ -17,3 +17,16 @@ Proof:
 - Rolled-back insert through record_enforcer_log of 2 rows (panel send_back UNCURED with the pkgKVQ reason; CURED): accepted, 0 remain. Row shape and reason text are pkgKVQ's.
 Limits: verse words with no quotation marks are not cut; a verse quoted nowhere next to its reference is not known as verse.
 Manual part: "A quoted span of six words or more that stands inside a verse quotation the debate gives next to its reference counts as scripture wherever it is quoted, not as the side's own words."
+
+## Rev 2 (W2, 2026-11-10; W1 FAIL 3892, W3 FAIL: a debater's quoted claim beside a reference was taken as verse text)
+
+Fix (W3's way (a)): verse text now comes only from the run's own KJV rows (the "Cited Verses" node, which Send Back Record already reads), never from what a debater writes.
+On a line with no verse reference, a quoted span of 6 words or more is cut when its words stand, in order and whole, in the KJV text of a verse the run serves. Lines with a verse reference are pkgKVQ's and unchanged. Rev 1's verse-quotation regex (__VA) and its pairing fault are gone.
+Built on pkgKDV rev 2 (which carries pkgKBG rev 5): `node pkgKVL/build_KVL2.cjs pkgKDV/parent_s98_KDV2.json pkgKVL/parent_s98_KVL2.json`. Write file parent_s98_KVL2.json: 418 nodes; only the 3 Send Back Record nodes differ from parent_s98_KDV2.json; connections equal.
+
+Proof:
+- plant_KVL2.cjs / .txt (33798 terra Job 14:1, base KDV2 against KVL2): 29 OK, 0 FAIL. KJV words on a no-reference line in five markup forms and with commas read UNCURED; W3's A2 and A3 and W1's P1 (a debater's quoted claim beside a reference, repeated with none) stay CURED; verse plus own words, out-of-order words, W1's scan form stay CURED; a verse the run does not serve, and no Cited Verses at all, stay CURED (limit); every other row field equal; 34108 stored rows equal.
+- W1's and W3's rev 1 plants on rev 2 (w1_grade/w1_plant_KVL_on_KVL2.txt, w3_grade/w3_plant_KVL_on_KVL2.txt): the planted verses 1 Samuel 1:20 and Luke 2:1 are not cited in 33798, so rev 2 does not cut them (limit). Rerun with those two verses served (serve_planted.cjs preload, KJV text from kjv_verses; files *_on_KVL2_served.txt): W3 7 of 7 as wanted; W1 14 of 16. W1's O3 (5-word fragment) was W1's own wrong expectation in the rev 1 grade. W1's O5 ("verse words with no reference in any round", wanted CURED) reads UNCURED once the verse is served: the words are KJV text, so the KEEP quotes only scripture. In a real run a verse no round cites is not served, so O5 reads CURED there.
+- replay_KVL2.cjs / .txt: 42 stored runs, 68 KEEP rows, 0 differ. Every stored run with a send-back call has a stored Cited Verses output.
+- Rolled-back insert (rollback_KVL2.sql, tag W2-ROLLBACK-TEST-KVL2, one UNCURED and one CURED row): accepted, {"rows": 2, "recorded": true}; 0 rows remain.
+Limits (safe direction, stays CURED as on live): KJV words of a verse the run does not serve; a quotation that crosses two verses; unquoted verse words; a quotation whose wording differs from the KJV text.
