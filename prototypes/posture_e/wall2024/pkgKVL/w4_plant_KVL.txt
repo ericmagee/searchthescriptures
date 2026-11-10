@@ -1,0 +1,14 @@
+     base CURED | KVL UNCURED | CURE (record-only until promoted): UNCURED -- KEEP whose reason quotes only scripture the answering side quoted ("christ is the seed of david"), not the side's own answer (pkgKVQ) | TRIAL pkgVP3: code
+FAIL W4-1 own paraphrase in quotes beside a reference, then quoted alone on a no-reference line: an own claim, not a verse: base CURED, KVL CURED
+OK   W4-1 own paraphrase in quotes beside a reference, then quoted alone on a no-reference line: an own claim, not a verse: every other field equal
+     base CURED | KVL UNCURED | CURE (record-only until promoted): UNCURED -- KEEP whose reason quotes only scripture the answering side quoted ("the flesh of david is the"), not the side's own answer (pkgKVQ) | TRIAL pkgVP3: code c
+FAIL W4-2 own claim in the colon form beside a reference: Romans 1:3: "the flesh of David is the flesh of Mary here": base CURED, KVL CURED
+OK   W4-2 own claim in the colon form beside a reference: Romans 1:3: "the flesh of David is the flesh of Mary here": every other field equal
+     base CURED | KVL UNCURED | CURE (record-only until promoted): UNCURED -- KEEP whose reason quotes only scripture the answering side quoted ("and declared to be the son"), not the side's own answer (pkgKVQ) | TRIAL pkgVP3: code 
+OK   W4-3 true verse given with its reference, quoted on a no-reference line in curly quotes: verse, cut: base CURED, KVL UNCURED (pkgKVQ reason)
+OK   W4-3 true verse given with its reference, quoted on a no-reference line in curly quotes: verse, cut: every other field equal
+     base CURED | KVL CURED | CURE (record-only until promoted): CURED -- KEEP whose reason quotes the answering side's round: "names the resurrection as the declaring" | TRIAL pkgVP3: code check does not agree, not an item -- [CR
+OK   W4-4 verse cut, own words after it on the same line are quoted: stays CURED: base CURED, KVL CURED
+OK   W4-4 verse cut, own words after it on the same line are quoted: stays CURED: every other field equal
+OK   34108 stored send-back rows: all equal to the base (27 rows)
+7 OK, 2 FAIL
