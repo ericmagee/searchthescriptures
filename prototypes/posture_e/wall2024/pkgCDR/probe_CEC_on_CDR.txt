@@ -1,4 +1,4 @@
-OK   1a builds one DeepSeek body (model from Resolve Seats, temperature 0, no reasoning field): deepseek-flash, 155007 characters
+OK   1a builds one DeepSeek body (model from Resolve Seats, temperature 0, no reasoning field): deepseek-flash, 155348 characters
 OK   1b every round is given in full, under its judge label
 OK   1c declared links read: defender D1-D6 from the [CR1] DECLARED CHAIN, challenger C1-C6 from the [DR3] LINK blocks: {"DEFENDER":[1,2,3,4,5,6],"CHALLENGER":[1,2,3,4,5,6]}
 FAIL 1d the prompt is the A2 prompt with the re-assertion sentence; no candidate in 34108

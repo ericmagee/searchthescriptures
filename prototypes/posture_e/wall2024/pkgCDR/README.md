@@ -1,4 +1,15 @@
-# pkgCDR rev 10 (W1): feed the closing contradiction enforcer (item A countermeasure)
+# pkgCDR rev 11 (W1): feed the closing contradiction enforcer (item A countermeasure)
+
+## Rev 11 (W3 FAIL of rev 10: 124 of 366 hints print LINK ?, and Record could not read an answer copying it; W2 PASS with two points, Wall 4028)
+- Close Enforcer Record reads LINK ? (regex (\d+|\?)): a NOT A CONTRADICTION answer to such a hint is read by its id (not NO ANSWER); a CONFIRMED
+  answer with LINK ? is NOT CONFIRMED (form), as for any undeclared link. The prompt says to write LINK ? only when the link cannot be told.
+- W2 point 1: hints capped at 30 per side again; the rounds are given in full, so the cap hides no drop and padding cannot inflate the prompt.
+- W2 point 2: the prompt now says a restatement in the same or other words is a contradiction, and that the rule on a closing sentence that
+  differs only in wording covers what the side still holds, never what it gave up.
+- Record 7 OK (R5: a LINK ? hint answered NOT A CONTRADICTION is read; R6: CONFIRMED with LINK ? refused). Rolled-back insert of a LINK ? row:
+  rows 1, recorded true. Hint coverage (run11.txt): 212 of 214; not hinted: W131 ("concede", left out) and W150 (past the cap, W2's padding
+  case); both reach the enforcer in the full rounds. Prompt size (size_CDR.txt): added 1,660 to 9,843 characters, mean 4,914 (about 1,230 tokens,
+  estimate); 3.4% larger on average. pkgCEC probe 62 OK, 8 FAIL (the same 8).
 
 ## Rev 10 (W2 FAIL of rev 9: 31 true drops used verbs outside the list, 2 split forms, 1 past the cap; coordinator 04:58Z, weighed on the Wall 4023)
 - No code filter decides whether a drop reaches the enforcer: it already receives every round in full. The prompt gains one passage: read every

@@ -1,40 +1,40 @@
-33197: live 146064 chars, pkgCDR 148610 (+2546, +1.7%), hints 5
-33218: live 136437 chars, pkgCDR 141763 (+5326, +3.9%), hints 13
-33222: live 143175 chars, pkgCDR 148906 (+5731, +4.0%), hints 13
-33249: live 137170 chars, pkgCDR 142238 (+5068, +3.7%), hints 12
-33261: live 148756 chars, pkgCDR 157325 (+8569, +5.8%), hints 22
+33197: live 146064 chars, pkgCDR 148951 (+2887, +2.0%), hints 5
+33218: live 136437 chars, pkgCDR 142104 (+5667, +4.2%), hints 13
+33222: live 143175 chars, pkgCDR 149247 (+6072, +4.2%), hints 13
+33249: live 137170 chars, pkgCDR 142579 (+5409, +3.9%), hints 12
+33261: live 148756 chars, pkgCDR 157666 (+8910, +6.0%), hints 22
 33276 skip
 33289 skip
-33299: live 127552 chars, pkgCDR 133767 (+6215, +4.9%), hints 16
+33299: live 127552 chars, pkgCDR 134108 (+6556, +5.1%), hints 16
 33311 skip
 33322 skip
-33345: live 122726 chars, pkgCDR 125700 (+2974, +2.4%), hints 6
-33371: live 129902 chars, pkgCDR 131509 (+1607, +1.2%), hints 2
-33389: live 124892 chars, pkgCDR 130898 (+6006, +4.8%), hints 15
-33411: live 144745 chars, pkgCDR 153159 (+8414, +5.8%), hints 21
-33430: live 131948 chars, pkgCDR 137327 (+5379, +4.1%), hints 12
-33442: live 139980 chars, pkgCDR 149482 (+9502, +6.8%), hints 24
-33461: live 149868 chars, pkgCDR 155400 (+5532, +3.7%), hints 13
-33482: live 155019 chars, pkgCDR 159993 (+4974, +3.2%), hints 11
-33490: live 134066 chars, pkgCDR 141320 (+7254, +5.4%), hints 18
-33497: live 154464 chars, pkgCDR 157012 (+2548, +1.6%), hints 5
-33506: live 140457 chars, pkgCDR 144541 (+4084, +2.9%), hints 9
-33530: live 143844 chars, pkgCDR 147265 (+3421, +2.4%), hints 7
-33575: live 152341 chars, pkgCDR 156437 (+4096, +2.7%), hints 9
-33592: live 124886 chars, pkgCDR 127177 (+2291, +1.8%), hints 4
-33605: live 153557 chars, pkgCDR 156634 (+3077, +2.0%), hints 6
-33617: live 169002 chars, pkgCDR 173714 (+4712, +2.8%), hints 11
-33627: live 155890 chars, pkgCDR 159144 (+3254, +2.1%), hints 6
-33644: live 141150 chars, pkgCDR 142774 (+1624, +1.2%), hints 2
-33682: live 133549 chars, pkgCDR 136054 (+2505, +1.9%), hints 4
-33705: live 120398 chars, pkgCDR 126277 (+5879, +4.9%), hints 15
-33731: live 152011 chars, pkgCDR 155488 (+3477, +2.3%), hints 8
-33750: live 135521 chars, pkgCDR 140752 (+5231, +3.9%), hints 12
-33774: live 165549 chars, pkgCDR 166868 (+1319, +0.8%), hints 1
-33798: live 159085 chars, pkgCDR 162204 (+3119, +2.0%), hints 6
-33815: live 149611 chars, pkgCDR 155218 (+5607, +3.7%), hints 13
-33828: live 160197 chars, pkgCDR 165489 (+5292, +3.3%), hints 13
-33846: live 142623 chars, pkgCDR 147262 (+4639, +3.3%), hints 11
-34016: live 140598 chars, pkgCDR 145554 (+4956, +3.5%), hints 12
-34108: live 151422 chars, pkgCDR 155263 (+3841, +2.5%), hints 9
-35 debates: added characters min 1319, median 4712, max 9502, mean 4573 (about 1143 tokens); whole prompt 3.2% larger on average; live prompt mean 143384 chars
+33345: live 122726 chars, pkgCDR 126041 (+3315, +2.7%), hints 6
+33371: live 129902 chars, pkgCDR 131850 (+1948, +1.5%), hints 2
+33389: live 124892 chars, pkgCDR 131239 (+6347, +5.1%), hints 15
+33411: live 144745 chars, pkgCDR 153500 (+8755, +6.0%), hints 21
+33430: live 131948 chars, pkgCDR 137668 (+5720, +4.3%), hints 12
+33442: live 139980 chars, pkgCDR 149823 (+9843, +7.0%), hints 24
+33461: live 149868 chars, pkgCDR 155741 (+5873, +3.9%), hints 13
+33482: live 155019 chars, pkgCDR 160334 (+5315, +3.4%), hints 11
+33490: live 134066 chars, pkgCDR 141661 (+7595, +5.7%), hints 18
+33497: live 154464 chars, pkgCDR 157353 (+2889, +1.9%), hints 5
+33506: live 140457 chars, pkgCDR 144882 (+4425, +3.2%), hints 9
+33530: live 143844 chars, pkgCDR 147606 (+3762, +2.6%), hints 7
+33575: live 152341 chars, pkgCDR 156778 (+4437, +2.9%), hints 9
+33592: live 124886 chars, pkgCDR 127518 (+2632, +2.1%), hints 4
+33605: live 153557 chars, pkgCDR 156975 (+3418, +2.2%), hints 6
+33617: live 169002 chars, pkgCDR 174055 (+5053, +3.0%), hints 11
+33627: live 155890 chars, pkgCDR 159485 (+3595, +2.3%), hints 6
+33644: live 141150 chars, pkgCDR 143115 (+1965, +1.4%), hints 2
+33682: live 133549 chars, pkgCDR 136395 (+2846, +2.1%), hints 4
+33705: live 120398 chars, pkgCDR 126618 (+6220, +5.2%), hints 15
+33731: live 152011 chars, pkgCDR 155829 (+3818, +2.5%), hints 8
+33750: live 135521 chars, pkgCDR 141093 (+5572, +4.1%), hints 12
+33774: live 165549 chars, pkgCDR 167209 (+1660, +1.0%), hints 1
+33798: live 159085 chars, pkgCDR 162545 (+3460, +2.2%), hints 6
+33815: live 149611 chars, pkgCDR 155559 (+5948, +4.0%), hints 13
+33828: live 160197 chars, pkgCDR 165830 (+5633, +3.5%), hints 13
+33846: live 142623 chars, pkgCDR 147603 (+4980, +3.5%), hints 11
+34016: live 140598 chars, pkgCDR 145895 (+5297, +3.8%), hints 12
+34108: live 151422 chars, pkgCDR 155604 (+4182, +2.8%), hints 9
+35 debates: added characters min 1660, median 5053, max 9843, mean 4914 (about 1229 tokens); whole prompt 3.4% larger on average; live prompt mean 143384 chars
