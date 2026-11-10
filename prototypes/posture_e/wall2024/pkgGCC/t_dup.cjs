@@ -1,0 +1,22 @@
+// pkgGCCN rev 2 (W1): the exact G1 and G2 patch code run on stored judgment 1062's count line, plus W2's double-cure plant (two cured gate items from one counted S).
+const fs=require('fs');const P=process.argv[2]||'n2';const g1=fs.readFileSync(__dirname+'/patches/G1'+(P==='n2'?'n2':P==='n'?'n':'')+'.to','utf8'),g2=fs.readFileSync(__dirname+'/patches/G2'+(P==='n2'?'n2':'')+'.to','utf8');console.log('patch G1'+(P==='n2'?'n2':P==='n'?'n':'')+' + G2'+(P==='n2'?'n2':''));
+const counted="[AUDIT v41: E-COL UNCURED (pkgECF, W3 2534) -- SEAT: gemini; ITEMS: S8 (COLLISION D4 vs C6: CHANGE TO keeps the break and quotes no 6 words in a row of the answering side's own words); counted in drv_uncured. REVIEW THIS ROW.]";
+const two="[AUDIT v41: E-COL UNCURED (pkgECF, W3 2534) -- SEAT: gemini; ITEMS: S8 (x); S9 (y); counted in drv_uncured. REVIEW THIS ROW.]";
+const A='the gate change was applied',N='the gate change was not applied',Y='the gate change is already in the corrected text (another change wrote the same line; W3 2319)';
+const mk=g=>g.map(([gid,s,c,w,ans])=>({gid,src:'E-APPLY '+s,cured:!!c,kind:'NOT APPLIED',ans:ans||'CHANGE',why:w}));
+const base=[['G1','S3',0,N],['G2','S4',1,A],['G3','S5',0,N],['G4','S6',1,A],['G5','S7',0,N],['G6','S8',1,A],['G7','S10',1,Y],['G8','S11',1,Y],['G9','S12',1,A]];
+const run=(drv,raw,seat,res)=>{const f=new Function('p','res','g','C','any','safe',g1+';const marks=res.filter(r=>'+g2+".includes('comes off')).map(r=>r.gid);return {p,marks};");return f({drv_uncured:drv,verdict_raw:raw},res,{seat},null,false,x=>x);};
+const show=(t,o)=>console.log(t+' -> '+o.p.drv_uncured+'; marked: '+(o.marks.join(',')||'none'));
+show('stored 1062 (drv 12)',run(12,'r\n'+counted,'gemini',mk(base)));
+show('plant D1: two applied gate items from S8 (G6, G10)',run(12,'r\n'+counted,'gemini',mk(base.concat([['G10','S8',1,A]]))));
+show('plant D2: three applied gate items from S8',run(12,'r\n'+counted,'gemini',mk(base.concat([['G10','S8',1,A],['G11','S8',1,A]]))));
+show('plant D3: S8 twice and S9 once, both counted on one line',run(12,'r\n'+two,'gemini',mk(base.concat([['G10','S8',1,A],['G11','S9',1,A]]))));
+show('plant D4: S8 applied once, S8 again by KEEP',run(12,'r\n'+counted,'gemini',mk(base.concat([['G10','S8',1,'KEEP: the change stays unapplied','KEEP']]))));
+show('plant D5: S8 KEEP first, S8 applied second',run(12,'r\n'+counted,'gemini',mk(base.filter(x=>x[1]!=='S8').concat([['G6','S8',1,'KEEP: the change stays unapplied','KEEP'],['G10','S8',1,A]]))));
+show('plant D6: drv 1, S8 twice',run(1,'r\n'+counted,'gemini',mk(base.concat([['G10','S8',1,A]]))));
+show('plant: other seat',run(12,'r\n'+counted,'sol',mk(base)));
+show('plant: record-only',run(12,'r\n'+counted.replace('counted in drv_uncured','RECORD-ONLY, not counted'),'gemini',mk(base)));
+show('plant T1: TRIAL v48 line names S8 (not counted), drv 12 from other items',run(12,'r\n[AUDIT v48: E-COL RECORD-ONLY TRIAL -- SEAT: gemini; ITEMS: S8 (x); not counted in drv_uncured]','gemini',mk(base)));
+show('plant T2: TRIAL v51 line names S8 and the counted line names S8',run(12,'r\n[AUDIT v51: E-ANS RECORD-ONLY TRIAL -- SEAT: gemini; ITEMS: S8 (x); not counted in drv_uncured]\n'+counted,'gemini',mk(base)));
+show('plant: S8 by KEEP only',run(12,'r\n'+counted,'gemini',mk(base.map(x=>x[1]==='S8'?['G6','S8',1,'KEEP: the change stays unapplied','KEEP']:x))));
+show('plant: S8 already written by another change',run(12,'r\n'+counted,'gemini',mk(base.map(x=>x[1]==='S8'?['G6','S8',1,Y]:x))));
