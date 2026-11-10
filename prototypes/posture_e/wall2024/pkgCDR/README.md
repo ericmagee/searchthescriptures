@@ -1,0 +1,45 @@
+# pkgCDR rev 1 (W1): feed the closing contradiction enforcer (item A countermeasure)
+
+NOT FOR WRITE until the operator answers (coordinator 02:22Z 11-10). Base: live s102. Write file parent_s102_CDR.json, built by
+`node pkgCDR/build_CDR.cjs /mnt/project-files/wall2024/fetchback_live_s102.json pkgCDR/parent_s102_CDR.json`. Three code nodes change. No library node,
+no connection, no prompt wording, and no log row shape change.
+
+**The miss (execution 34299, dry regrade of 34108; W1 Wall 3950, W3 3958).** With no candidate listed, DeepSeek read only the challenger, answered NONE,
+and missed the D6 drop and reclaim. The "ordinary means" pair, which the CLOSE-ROUND REVERSAL CHECK served to the judges, reached no enforcer.
+
+**Changes**
+1. Close Enforcer Build (before the panel), cdr_fn.js. Wording a side dropped or withdrew in rounds 1-3 is listed as candidate P<n> when the same
+   side states it again as its own in its closing round. A drop sentence is "I drop / withdraw / retract / give up / abandon ...". The wording is a
+   quoted span of 3+ words with 2+ content words, or an unquoted "claim / limb / wording / sentence / reading / premise / step that ..." clause of
+   5+ words. A closing sentence counts when the wording is outside its quote marks and the sentence does not itself drop, withdraw or grant.
+   There are at most 12 per side. Oracle candidates (item B) come first, and a P pair on the same closing sentence as an Oracle pair is left out.
+2. Close Enforcer Record reads a P<n> id as it reads X<n> and J<n>. All checks on an answer are unchanged.
+3. Judge Contradiction Build (after the panel), jc_feed.js. The pairs of the CLOSE-ROUND REVERSAL CHECK (ruling 412, as served in Panel Build) and
+   the ANTI-CHEAT CHECK (ruling 427, Anticheat Record's REVERSED rows) are listed beside the judges' pairs. The earlier round is found by
+   word-for-word search of that side's rounds 1-3. A pair overlapping one already listed joins it ("also named by ..."). The reversal check runs in
+   Panel Build, after the closing enforcer, so it can feed only this later call. Known limit (pkgCEC rev 2): a break confirmed after the panel does
+   not reach the single judge.
+
+**Checks** (labels in cases.json, committed before each part was written or run: 5ddd06f1, 050480b1)
+- run_cases.txt: 11 of 12.
+  - C1: the 34108 D6 pair is listed as P2.
+  - C2, C3, C4: planted restatements are listed.
+  - C5 to C8: a reported drop, a quote, a paraphrase and a one-word drop are not listed.
+  - C9 MISS is a wrong label of mine: with "Christ had no biological father." removed, [CR4] still holds "... with no biological father needed to
+    complete it." (P1), which carries the dropped wording. The listing is right; whether it contradicts is DeepSeek's answer.
+  - Post-panel on 34299: the "ordinary means" pair is listed (J2, by the reversal check). The Luke 1:34 pair is listed once (J1, the judges' pair,
+    "also named by the ANTI-CHEAT CHECK"). No other new candidate.
+- corpus_CDR.txt: 39 stored debates (4 have no closing round). Only 34108 lists anything (P1 and P2); every other debate lists none.
+- record_CDR.txt, 4 OK:
+  - the prompt lists P1 and P2;
+  - a CONFIRMED P2 breaks D6, and a NOT A CONTRADICTION P1 breaks nothing;
+  - a NONE reply leaves P1 and P2 NO ANSWER;
+  - the log rows keep the rev 4 shape.
+- pkgCEC probe on these nodes: 62 OK, 8 FAIL. All 8 assert that 34108 has no candidate, so its written replies now leave P1 and P2 NO ANSWER rows
+  or extra candidates. With the drop check switched off (same nodes otherwise): 70 OK, 0 FAIL.
+- Rolled-back insert (rollback_CDR.sql, 5 rows: CONFIRMED, NOT A CONTRADICTION, 2 NO ANSWER, NONE FOUND): {"rows": 5, "recorded": true}.
+
+**Not in this package**
+- W3 3958 point 6: the K-W withdrawal list has no item for the D6 drop. That is the library's withdrawal reader, a separate fix.
+- Point 4: the served checks still say "DISREGARDED". That wording is the operator's.
+- Point 9: question-round answers are W3's.

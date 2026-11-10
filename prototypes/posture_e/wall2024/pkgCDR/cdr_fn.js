@@ -8,7 +8,7 @@ const cdrSentsRaw=raw=>String(raw||'').split(/\n+|(?<=[.!?]["”’')\]]*)\s+/).
 const cdrDrop=/\bI\s+(?:now\s+|also\s+|therefore\s+)?(?:drop|withdraw|retract|give\s+up|abandon)\b/i;
 const cdrSelf=/\b(?:drop|dropped|withdr[a-z]*|retract[a-z]*|gave\s+up|give\s+up|abandon[a-z]*|grant|granted|grants)\b/i;
 const cdrWords=s=>{const W=[];for(const m of String(s).matchAll(/"([^"\n]+)"|“([^”\n]+)”|‘([^’\n]+)’/g)){const q=cecN(m[1]||m[2]||m[3]);if(q.split(' ').length>=3&&cdrCore(q)>=2)W.push(q);}
- const u=cdrUnq(s).replace(/[*_`]+/g,'');const m=u.match(/\b(?:claim|limb|wording|sentence|reading|premise|step)\s+that\s+([^,;:\n]+?)(?:[,;:]|\.\s*$|$)/i);
+ const u=cdrUnq(s).replace(/[*_`]+/g,'');const m=u.match(/\b(?:claim|limb|wording|sentence|reading|premise|step)\s+that\s+((?:[^,;:\n]|:(?=\d))+?)(?:[,;]|:(?!\d)|\.\s*$|$)/i);
  if(m){const q=cecN(m[1]);if(q.split(' ').length>=5&&cdrCore(q)>=2)W.push(q);}return [...new Set(W)];};
 const cdrLinkAt=(raw,sent)=>{const t=String(raw||'');const i=t.indexOf(sent);if(i<0)return null;let n=null;for(const h of t.slice(0,i).matchAll(/\bLINK\s+(\d+)\b/gi))n=+h[1];return n;};
 const cecDropped=F=>{const out=[];const SD=[['DEFENDER',[['CR1','cr1'],['CR2','cr2'],['CR3','cr3']],['CR4','cr4']],['CHALLENGER',[['DR1','gr1'],['DR2','gr2'],['DR3','dr3']],['DR4','dr4']]];

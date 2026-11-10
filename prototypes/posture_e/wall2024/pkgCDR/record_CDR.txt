@@ -1,0 +1,5 @@
+OK   B1 the prompt lists P1 and P2 under CANDIDATES ALREADY NAMED, named by the code check
+OK   R1 P2 CONFIRMED breaks D6; P1 NOT A CONTRADICTION breaks nothing: ["P1 NOT A CONTRADICTION","P2 CONFIRMED"]
+OK   R2 a NONE reply leaves both listed candidates NO ANSWER, nothing confirmed: ["P1","P2"]
+OK   R3 log rows: seat_role panel, cure_status empty, rule E-CLOSECON: NOT A CONTRADICTION -- The close rests t | CONFIRMED -- The close asserts as its ow | NO ANSWER -- the enforcer did not answer | NO ANSWER -- the enforcer did not answer | NONE FOUND
+4 OK, 0 FAIL

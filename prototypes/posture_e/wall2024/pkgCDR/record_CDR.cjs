@@ -1,0 +1,16 @@
+// pkgCDR rev 1 (W1): Close Enforcer Record (live code, unchanged) on the pkgCDR Build output for 34108, with written enforcer replies.
+process.chdir(__dirname+'/..');const fs=require('fs');const {harness}=require('../pkgGSL/harness.cjs');
+const g=f=>{let d=JSON.parse(fs.readFileSync(f,'utf8'));d=d.data||d;return d.workflow||d;};const CAND=g('pkgCDR/parent_s102_CDR.json');const code=n=>CAND.nodes.find(z=>z.name===n).parameters.jsCode;
+const J=x=>({json:x});const run=async(c,over,inp)=>(await harness('34108',over||{})('return (async()=>{\n'+c+'\n})();',inp||'Quote Report'))[0].json;
+const reply=t=>[J({choices:[{message:{role:'assistant',content:t},finish_reason:'stop'}]})];let ok=0,bad=0;const T=(n,c,i)=>{if(c)ok++;else bad++;console.log((c?'OK   ':'FAIL ')+n+(i?': '+i:''));};
+(async()=>{const B=await run(code('Close Enforcer Build'));const U=B.body.messages[1].content;
+ T('B1 the prompt lists P1 and P2 under CANDIDATES ALREADY NAMED, named by the code check',/CANDIDATES ALREADY NAMED \(answer each one by its id\):\nP1 -- DEFENDER -- LINK 6 -- EARLIER \[CR3\]/.test(U)&&U.includes('P2 -- DEFENDER -- LINK 6 -- EARLIER [CR3] "I drop the wording "no biological father" as a bare statement." -- CLOSING [CR4] "Christ had no biological father." -- named by the code check'));
+ const rec=async t=>run(code('Close Enforcer Record'),{'Close Enforcer Build':[J(B)],'Close Enforcer Call deepseek':reply(t)},'Close Enforcer Call deepseek');
+ const L2='CLOSE-CONTRADICTION: P2 -- DEFENDER -- LINK 6 -- CONFIRMED -- EARLIER [CR3] "I drop the wording "no biological father" as a bare statement." -- CLOSING [CR4] "Christ had no biological father." -- The close asserts as its own the wording dropped in [CR3].';
+ const L1='CLOSE-CONTRADICTION: P1 -- DEFENDER -- LINK 6 -- NOT A CONTRADICTION -- EARLIER [CR3] "I drop the wording "no biological father" as a bare statement." -- CLOSING [CR4] "A descent from David\'s loins that comes by Mary is the descent the rows state, with no biological father needed to complete it." -- The close rests the point on the rows, not on the bare statement.';
+ const R1=await rec(L1+'\n'+L2);T('R1 P2 CONFIRMED breaks D6; P1 NOT A CONTRADICTION breaks nothing',R1.cec.confirmed.length===1&&R1.cec.confirmed[0].link===6&&R1.cec.confirmed[0].side==='DEFENDER',JSON.stringify(R1.cec.rows.map(r=>r.id+' '+r.status)));
+ const R2=await rec('CLOSE-CONTRADICTION: NONE');T('R2 a NONE reply leaves both listed candidates NO ANSWER, nothing confirmed',R2.cec.confirmed.length===0&&JSON.stringify(R2.cec.no_answer)==='["P1","P2"]',JSON.stringify(R2.cec.no_answer));
+ const L=[...(typeof R1.cec_log==='string'?JSON.parse(R1.cec_log):R1.cec_log),...(typeof R2.cec_log==='string'?JSON.parse(R2.cec_log):R2.cec_log)];
+ T('R3 log rows: seat_role panel, cure_status empty, rule E-CLOSECON',L.length>0&&L.every(r=>r.seat_role==='panel'&&r.cure_status==null&&r.rule==='E-CLOSECON'),L.map(r=>String(r.cure_reason).slice(0,40)).join(' | '));
+ fs.writeFileSync(__dirname+'/rows_CDR.json',JSON.stringify(L.map(r=>({...r,run_token:'W1-ROLLBACK-TEST-CDR',prompt_sent:r.prompt_sent==null?null:String(r.prompt_sent).slice(0,100),full_reply:r.full_reply==null?null:String(r.full_reply).slice(0,100)}))));
+ console.log(ok+' OK, '+bad+' FAIL');})();
