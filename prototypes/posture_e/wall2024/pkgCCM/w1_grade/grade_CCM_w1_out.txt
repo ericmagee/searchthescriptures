@@ -1,0 +1,6 @@
+K1 418 418 | differ C2 Build, C3 Build, C4 Build | code -327 | non-code diffs 0 | connections equal true
+K2 pass 216 fail 0
+K3 pass 36 fail 0
+K4 pass 864 fail 0
+K5 pass 108 fail 0
+K7 (record) C3/C4 message 0 equal to C1 message 0: 0 of 72
