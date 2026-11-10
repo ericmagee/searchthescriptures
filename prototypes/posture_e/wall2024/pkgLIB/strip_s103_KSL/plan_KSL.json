@@ -3,49 +3,49 @@
  "library": {
   "Alt_Gate_Build.js": {
    "base": "aea19f785124",
-   "patched": "03426b5c03f9",
+   "patched": "1a66f4cc80ec",
    "changes": [
     "KSL"
    ]
   },
   "Alt_Gate_Record.js": {
    "base": "ebc06829ef0d",
-   "patched": "f279bc5588e3",
+   "patched": "07348eddc1ed",
    "changes": [
     "KSL"
    ]
   },
   "Alternate_Build.js": {
    "base": "52b09ec2ad5f",
-   "patched": "4385cb1d7c25",
+   "patched": "80f2a2d451d0",
    "changes": [
     "KSL"
    ]
   },
   "Alternate_Cure_Build.js": {
    "base": "ce808bb5fabc",
-   "patched": "0b0b99d46ec6",
+   "patched": "e2f767fa8f36",
    "changes": [
     "KSL"
    ]
   },
   "Alternate_Cure_Normalize.js": {
    "base": "b54d3259b473",
-   "patched": "ce8a71a5e2d9",
+   "patched": "0039067b3764",
    "changes": [
     "KSL"
    ]
   },
   "Alternate_Merge_1.js": {
    "base": "8fcab44e2807",
-   "patched": "a01e8e41a20f",
+   "patched": "df4daa482d47",
    "changes": [
     "KSL"
    ]
   },
   "Alternate_Merge_Seat.js": {
    "base": "bac8e41806ec",
-   "patched": "60ebe902f221",
+   "patched": "cd67914557e7",
    "changes": [
     "KSL"
    ]
@@ -57,21 +57,21 @@
   },
   "Cure_Build.js": {
    "base": "b0dd3d0d0bb6",
-   "patched": "2ad39f22f513",
+   "patched": "198ea2db5abc",
    "changes": [
     "KSL"
    ]
   },
   "Cure_Check.js": {
    "base": "8357544ba3f0",
-   "patched": "a38db7c03ed5",
+   "patched": "51d3c70a067c",
    "changes": [
     "KSL"
    ]
   },
   "Cure_Normalize.js": {
    "base": "b687b3b783df",
-   "patched": "5d70f8928439",
+   "patched": "75e6c6753eb9",
    "changes": [
     "KSL"
    ]
@@ -83,63 +83,63 @@
   },
   "Gate_Build.js": {
    "base": "d19d88f71e93",
-   "patched": "d94c42d57659",
+   "patched": "c2cd68126770",
    "changes": [
     "KSL"
    ]
   },
   "Gate_Record.js": {
    "base": "e932de0954ab",
-   "patched": "432d3f758e29",
+   "patched": "c1653227e11c",
    "changes": [
     "KSL"
    ]
   },
   "Panel_Cure_Build_1.js": {
    "base": "ed81612189fe",
-   "patched": "d1875944e97c",
+   "patched": "7cf14b9f4573",
    "changes": [
     "KSL"
    ]
   },
   "Panel_Cure_Build_2.js": {
    "base": "4ab86227949a",
-   "patched": "3047649dff0c",
+   "patched": "dc97f1188076",
    "changes": [
     "KSL"
    ]
   },
   "Panel_Cure_Build_3.js": {
    "base": "80f51b2a913b",
-   "patched": "10377fe64481",
+   "patched": "5a63a0789af0",
    "changes": [
     "KSL"
    ]
   },
   "Panel_Cure_Check.js": {
    "base": "f5e3a2ada2ec",
-   "patched": "a4fef09a42cf",
+   "patched": "ac7661449c07",
    "changes": [
     "KSL"
    ]
   },
   "Panel_Cure_Normalize_1.js": {
    "base": "0498b03ed071",
-   "patched": "6909bdb863cc",
+   "patched": "d5531cc02ae6",
    "changes": [
     "KSL"
    ]
   },
   "Panel_Cure_Normalize_2.js": {
    "base": "c7e85a631577",
-   "patched": "b915ff097ef2",
+   "patched": "b99f2a2e3816",
    "changes": [
     "KSL"
    ]
   },
   "Panel_Cure_Normalize_3.js": {
    "base": "a9f56e586370",
-   "patched": "6381a0d21c4b",
+   "patched": "ecb2d3d53221",
    "changes": [
     "KSL"
    ]
@@ -151,49 +151,49 @@
   },
   "R2_Alt_Gate_Build.js": {
    "base": "1d028006dc84",
-   "patched": "cd6a5cc09a55",
+   "patched": "33f18442bb4d",
    "changes": [
     "KSL"
    ]
   },
   "R2_Alt_Gate_Record.js": {
    "base": "36a54d6b4ec7",
-   "patched": "05508f0036c5",
+   "patched": "f103071ed79f",
    "changes": [
     "KSL"
    ]
   },
   "R2_Alternate_Build.js": {
    "base": "06a0f57d280d",
-   "patched": "3e818ac70913",
+   "patched": "b883d70c41e7",
    "changes": [
     "KSL"
    ]
   },
   "R2_Alternate_Cure_Build.js": {
    "base": "2d786efd09f2",
-   "patched": "105cf17b2c10",
+   "patched": "954c5947ad0a",
    "changes": [
     "KSL"
    ]
   },
   "R2_Alternate_Cure_Normalize.js": {
    "base": "ec6f6ae7a484",
-   "patched": "1982aa1ba588",
+   "patched": "9f5b64b68219",
    "changes": [
     "KSL"
    ]
   },
   "R2_Alternate_Merge.js": {
    "base": "770a42c963d5",
-   "patched": "7306f6133fa2",
+   "patched": "32a3f0fbe902",
    "changes": [
     "KSL"
    ]
   },
   "R2_Alternate_Merge_Seat.js": {
    "base": "adcd9fe352bb",
-   "patched": "2d9ea43097aa",
+   "patched": "ca77357e5d34",
    "changes": [
     "KSL"
    ]

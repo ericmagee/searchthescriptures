@@ -19,3 +19,20 @@ Checks on s103
   record-only note ("COUNTED. The defender granted it.\nIt should not be counted.", "COUNTED.\nThe grant is in round 3.\nI do not count it
   after all."); rulings unchanged (record-only). Which next-line refusals are noted or enforced depends on the reader stacked on it.
 Stacking: anchors lie outside pkgFUN's and pkgKRO's changes (built on FUN4 at s100 and on KRO2 here without edits).
+
+## Rev 2 (repacked on s104)
+
+Base: s104 (pkgKRO rev 2 live). `pkgLIB/strip_KRO2` rebuilt on the s104 fetch-back equals s104 node for node, so the candidate is `pkgLIB/strip_KRO2_KSL` and the write file is `pkgKSL/parent_s104_KSL.json`. Only the Shared Library differs from s104.
+
+Changes from rev 1:
+1. A RESPONSE line ending in a colon ("COUNTED:" or "COUNTED:**") no longer joins the next line with a space; it joins with ". ", the same as a line ending in a full stop. Rev 1 joined "COUNTED: the grant is not withdrawn" into one first sentence and the strict reader refused it where live cures it (W3 FAIL, Wall 4057).
+2. An unlabeled line that names another item ends the continuation: "#2", "Item 2", "point 3", "no. 2", a K-code not in the label (K-S9), or DEFENDER/CHALLENGER CRn/DRn not in the label. It stays in prose. A line naming the item's own number or code continues as before.
+
+Size: Shared Library jsCode 605,188 bytes on s104, 606,270 with KSL rev 2, +1,082 bytes (+0.18%). Each of the 26 strip sources that carry the library grows by 1,052 bytes. No prompt text changes; no model call is added.
+
+Checks on s104 (base `strip_KRO2`, candidate `strip_KRO2_KSL`):
+- `gate_KSL_s104_rev2.txt`: 767 node runs equal, GATE PASS.
+- `replay_KSL_s104_rev2.txt`: 176 stored cure replies byte-equal.
+- `ksl_run_rev2.txt`: 26 labeled cases, 0 correct answers refused on any library; other-item lines not noted on KRO2+KSL, own-item refusal noted.
+- `w3_plant_GOOD_rev2.txt`, `w3_plant_BAD_rev2.txt`: W3's 17 plants, 0 correct answers refused, 0 pkgKRO rev 2 rulings changed.
+- `w2set_287_s104_rev2.txt`: 287 set per case, s104 vs s104+KSL.
