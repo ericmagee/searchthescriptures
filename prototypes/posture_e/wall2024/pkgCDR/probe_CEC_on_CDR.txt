@@ -1,11 +1,11 @@
-OK   1a builds one DeepSeek body (model from Resolve Seats, temperature 0, no reasoning field): deepseek-flash, 153868 characters
+OK   1a builds one DeepSeek body (model from Resolve Seats, temperature 0, no reasoning field): deepseek-flash, 155007 characters
 OK   1b every round is given in full, under its judge label
 OK   1c declared links read: defender D1-D6 from the [CR1] DECLARED CHAIN, challenger C1-C6 from the [DR3] LINK blocks: {"DEFENDER":[1,2,3,4,5,6],"CHALLENGER":[1,2,3,4,5,6]}
 FAIL 1d the prompt is the A2 prompt with the re-assertion sentence; no candidate in 34108
-FAIL 1e item B: the Oracle's OPPONENT'S CONTRADICTIONS lines in [DR4] become candidates X1, X2 (defender): ["X1 DEFENDER LINK 6","X2 DEFENDER LINK 1","P1 DEFENDER LINK 1","P2 DEFENDER LINK 2","P3 DEFENDER LINK 3","P4 DEFENDER LINK 4","P5 DEFENDER LINK 5","P6 DEFENDER LINK 6","P7 CHALLENGER LINK 4"]
+FAIL 1e item B: the Oracle's OPPONENT'S CONTRADICTIONS lines in [DR4] become candidates X1, X2 (defender): ["X1 DEFENDER LINK 6","X2 DEFENDER LINK 1","P1 DEFENDER LINK ?","P2 DEFENDER LINK 1","P3 DEFENDER LINK 2","P4 DEFENDER LINK 3","P5 DEFENDER LINK 4","P6 DEFENDER LINK 5","P7 DEFENDER LINK 6","P8 CHALLENGER LINK ?","P9 CHALLENGER LINK 4"]
 OK   1f no DeepSeek model row: skipped, says why
 OK   2a 34108: the dropped "no biological father" wording said again in [CR4] is CONFIRMED on D6 (both quotes found, rounds right, link declared): ["NEW DEFENDER 6 CONFIRMED","NEW DEFENDER 1 NOT A CONTRADICTION"]
-FAIL 2b 34108: terra's Genesis 4:1 flag answered NOT A CONTRADICTION breaks nothing and is logged: NEW DEFENDER LINK 6: null | NEW DEFENDER LINK 1: null | P1: null | P2: null | P3: null | P4: null | P5: null | P6: null | P7: null
+FAIL 2b 34108: terra's Genesis 4:1 flag answered NOT A CONTRADICTION breaks nothing and is logged: NEW DEFENDER LINK 6: null | NEW DEFENDER LINK 1: null | P1: null | P2: null | P3: null | P4: null | P5: null | P6: null | P7: null | P8: null | P9: null
 OK   2c a CONFIRMED line whose earlier quote is not word for word: NOT CONFIRMED (form): the earlier quotation is not found word for word in CR3
 OK   2d a closing quote not in [CR4]: NOT CONFIRMED (form): the closing quotation is not found word for word in CR4
 OK   2e the earlier quote placed in the closing round: NOT CONFIRMED (form): the earlier round CR4 is not one of the defender's rounds 1 to 3; the earlier quotation is not found word for word in CR4
@@ -48,7 +48,7 @@ OK   5c on the cured seat texts from 4b: after the send-back every seat still re
 OK   6a Cure Check, no Close Enforcer Record: strip_CEC equals strip_SJR
 OK   6b the single judge takes the same break when its text has D6 collision lines: 34108 single judge (terra) was unreadable: no collision lines, checked in 6c
 OK   6c a single judge with no rule item (luna's text put in its place): D6 lines BROKEN, verdict BROKEN, AUDIT v25 recompute line; without the record: unchanged: with: BROKEN; without: HELD
-   7a lengths 458 449 E-CLOSECON
+   7a lengths 460 449 E-CLOSECON
 FAIL 7a Alternate Merge adds the E-CLOSECON rows to the run's enforcer_log, ahead of the rest, which is unchanged
 OK   8a 34108 with no pre-panel record: terra's CONTRADICTION line ([CR3] grant against [CR4] Genesis 4:1) becomes candidate J1, named by chatgpt (terra): ["J1 DEFENDER CR3>CR4 by the judges' CONTRADICTION lines (chatgpt); also named by the CLOSE-ROUND REVERSAL CHECK"]
 OK   8b the post-panel prompt answers candidates only, with the same rules
@@ -66,7 +66,7 @@ OK   10d a throw inside Judge Contradiction Build: a skip that says why (logged,
 OK   10e ... Judge Contradiction Record passes Panel Payloads' item on with one NOT CHECKED row
 OK   10f a throw inside Judge Contradiction Record: Panel Payloads' item passes on unchanged, no break, one NOT CHECKED row: Judge Contradiction Record failed: probe: forced throw
 OK   10g with no Panel Payloads item to pass on, Judge Contradiction Record throws as before (nothing to carry)
-OK   9a every E-CLOSECON log row the probe made (173) passes the seat_role, cure_status and kind checks: []
+OK   9a every E-CLOSECON log row the probe made (213) passes the seat_role, cure_status and kind checks: []
 OK   9b the enforcer's own answer leads cure_reason (CONFIRMED, NO ANSWER, NONE FOUND, NOT A CANDIDATE, NOT A CONTRADICTION, NOT CHECKED)
 OK   9c both seats are logged: close enforcer and judge contradiction enforcer
 

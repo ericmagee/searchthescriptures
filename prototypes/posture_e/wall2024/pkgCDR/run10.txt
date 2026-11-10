@@ -1,0 +1,11 @@
+W1 cases.json (rev2..rev8 sets): true drops reach the enforcer 43 of 43; other labeled sentences that reach it 68 of 68
+W2 cases.json: true drops reach the enforcer 101 of 102; other labeled sentences that reach it 48 of 49
+   NOT REACHED W131 | I concede "the register stops at Joseph" to the challenger.
+W3 cases.json: true drops reach the enforcer 3 of 3; other labeled sentences that reach it 12 of 12
+W3 cases_rev3.json: true drops reach the enforcer 6 of 6; other labeled sentences that reach it 6 of 6
+W3 cases_rev4.json: true drops reach the enforcer 4 of 4; other labeled sentences that reach it 5 of 5
+W3 cases_rev5.json: true drops reach the enforcer 7 of 7; other labeled sentences that reach it 11 of 11
+W3 cases_rev6.json: true drops reach the enforcer 8 of 8; other labeled sentences that reach it 12 of 12
+W3 cases_rev7.json: true drops reach the enforcer 22 of 22; other labeled sentences that reach it 6 of 6
+W3 cases_rev8.json: true drops reach the enforcer 19 of 19; other labeled sentences that reach it 5 of 5
+ALL: true drops reach the enforcer 213 of 214; other labeled sentences that reach it 173 of 174

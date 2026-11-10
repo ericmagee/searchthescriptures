@@ -1,107 +1,271 @@
-33197: 3 listed
-  P1 DEFENDER LINK 3
+33197: 5 listed
+  P1 DEFENDER LINK ?
+    EARLIER [CR2] I yield where a row has earned it, and I put the challenger's own rows to work.
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P2 DEFENDER LINK 3
     EARLIER [CR3] I drop the sweeping form of the quoted sentence.
     CLOSING [CR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P2 DEFENDER LINK 5
+  P3 DEFENDER LINK 5
     EARLIER [CR3] I drop the claim that Numbers 1:18 itself states the taking.**
     CLOSING [CR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P3 DEFENDER LINK 5
+  P4 DEFENDER LINK 5
     EARLIER [CR3] I drop any claim that Luke 1:27 places Mary in David's house.
     CLOSING [CR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-33218: 7 listed
+  P5 CHALLENGER LINK ?
+    EARLIER [DR1] ASSUMES: the passive of Matthew 1:16 removes Joseph from the begetting.
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+33218: 13 listed
   P1 DEFENDER LINK 5
     EARLIER [CR2] I do not claim Luke 2:49 withdraws the title from Joseph.
     CLOSING [CR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P2 DEFENDER LINK 3
+  P2 DEFENDER LINK 2
+    EARLIER [CR3] I grant that *eperchomai* (G1904, to come upon) there yields power for witness.
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P3 DEFENDER LINK 3
     EARLIER [CR3] I drop the phrase "closed on both sides."
     CLOSING [CR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P3 DEFENDER LINK 5
+  P4 DEFENDER LINK 5
     EARLIER [CR3] I drop "each is complete without a named begetter" for Hebrews 7:5 and 7:10.
     CLOSING [CR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P4 CHALLENGER LINK ?
-    EARLIER [DR1] ASSUMES: Luke 2:49 withdraws the name "father" from Joseph.
-    CLOSING [DR4] (not named)
-    find whether the closing round asserts again what this sentence gives up
-  P5 CHALLENGER LINK ?
-    EARLIER [DR2] The defender also concedes that the Davidic descent is carried by the mother's line, and so gives up that claim.
-    CLOSING [DR4] (not named)
+  P5 DEFENDER LINK 5
+    EARLIER [CR3] Genesis 1:12 "herb yielding seed after his kind" and 1 Corinthians 15:39 "one [kind of] flesh of men".
+    CLOSING [CR4] (not named)
     find whether the closing round asserts again what this sentence gives up
   P6 CHALLENGER LINK ?
-    EARLIER [DR2] The defender's answer setting Solomon's title against this one was struck, so that press stands.
+    EARLIER [DR1] The fear the angel removes is the fear of taking his wife.
     CLOSING [DR4] (not named)
     find whether the closing round asserts again what this sentence gives up
   P7 CHALLENGER LINK ?
+    EARLIER [DR1] ASSUMES: Luke 2:49 withdraws the name "father" from Joseph.
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P8 CHALLENGER LINK ?
+    EARLIER [DR2] The defender also concedes that the Davidic descent is carried by the mother's line, and so gives up that claim.
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P9 CHALLENGER LINK ?
+    EARLIER [DR2] The defender's answer setting Solomon's title against this one was struck, so that press stands.
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P10 CHALLENGER LINK ?
     EARLIER [DR2] The defender has given up the claim that Mary's line carries the Davidic descent.
     CLOSING [DR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-33222: 4 listed
-  P1 DEFENDER LINK 1
+  P11 CHALLENGER LINK 6
+    EARLIER [DR2] Genesis 1:12 "herb yielding seed after his kind" -- MEANS: the Creator's order is seed after its kind.
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P12 CHALLENGER LINK 2
+    EARLIER [DR3] In Acts 1:8 the same verb yields power: "But ye shall receive power, after that the Holy Ghost is come upon you ...
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P13 CHALLENGER LINK 2
+    EARLIER [DR3] What it yields is a calling (*kaleō*): "shall be called."
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+33222: 13 listed
+  P1 DEFENDER LINK 4
+    EARLIER [CR2] **[L1]** Jeremiah 22:30: "no man of his seed shall prosper, sitting upon the throne of David, and ruling any more in Judah."
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P2 DEFENDER LINK 4
+    EARLIER [CR2] The "for" in 1:20 states the ground of his fear removed: the source is the Holy Ghost.
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P3 DEFENDER LINK 1
     EARLIER [CR3] I drop the claim that a row names Mary's house as David's; that belongs to premise 2.
     CLOSING [CR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P2 CHALLENGER LINK 2
+  P4 DEFENDER LINK 1
+    EARLIER [CR3] Jeremiah 22:30 bars "sitting upon the throne of David, and ruling any more in Judah", and the two statements differ.
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P5 DEFENDER LINK 5
+    EARLIER [CR3] It does not remove "of the Holy Ghost" in Matthew 1:20 for the conception.
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P6 DEFENDER LINK 5
+    EARLIER [CR3] Jeremiah 22:30 "no man of his seed shall prosper, sitting upon the throne of David, and ruling any more in Judah" -- MEANS: the sentence on his seed concerns sitting on David's throne -- [L2] *zera'* (H2233, seed) | [L3] Jeremiah 22:24 "[As
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P7 CHALLENGER LINK ?
+    EARLIER [DR1] ASSUMES: the feminine *ex hēs* ("out of whom") at Matthew 1:16 removes the husband from the begetting.
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P8 CHALLENGER LINK 2
+    EARLIER [DR2] LINK 3: The defender's reading of the passive props "Joseph was not the begetter"; ASSUMES: ex hēs with egennēthē removes the husband -- ROWS GIVE: Matthew 1:5 "Booz begat Obed of Ruth"; Matthew 11:11 "born of women", said of John.
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P9 CHALLENGER LINK 2
     EARLIER [DR3] I drop the limb that rests this on Jeremiah 18:8.
     CLOSING [DR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P3 CHALLENGER LINK 2
+  P10 CHALLENGER LINK 2
+    EARLIER [DR3] [L1] Jeremiah 22:30: "no man of his seed shall prosper, sitting upon the throne of David, and ruling any more in Judah."
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P11 CHALLENGER LINK 2
     EARLIER [DR3] My narrowed link has dropped the limb that leaned on this verse.
     CLOSING [DR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P4 CHALLENGER LINK 6
+  P12 CHALLENGER LINK 5
+    EARLIER [DR3] The title it yields is the Davidic title already given with "the throne of his father David."
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P13 CHALLENGER LINK 6
     EARLIER [DR3] I drop the limb that "fear not...
     CLOSING [DR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-33249: 1 listed
-  P1 DEFENDER LINK 3
+33249: 12 listed
+  P1 DEFENDER LINK 5
+    EARLIER [CR3] [L3] Hebrews 7:5: "though they come out of the loins of Abraham" is said of Levi's sons at many generations' remove.
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P2 DEFENDER LINK 5
+    EARLIER [CR3] [L4] "Fruit of loins" names descent from David at any remove.
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P3 DEFENDER LINK 4
+    EARLIER [CR3] [L3] Hebrews 7:5 uses "come out of the loins of Abraham" of the sons of Levi at remove.
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P4 DEFENDER LINK 3
+    EARLIER [CR3] [L3] Hebrews 7:5 shows "seed" and "loins" of Abraham at remove.
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P5 DEFENDER LINK 2
+    EARLIER [CR3] [L4] Declaring and determining at the resurrection do not remove the ground Luke 1:35 gives.
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P6 DEFENDER LINK 3
     EARLIER [CR3] The limb dropped is that this act set the tribe.
     CLOSING [CR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-33261: 9 listed
+  P7 DEFENDER LINK 1
+    EARLIER [CR3] Hebrews 7:5 "though they come out of the loins of Abraham" -- MEANS: coming out of the loins is said of descent at any remove -- [L2] osphys (loin) | [L3] Acts 2:30 "of the fruit of his loins, according to the flesh"
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P8 CHALLENGER LINK 2
+    EARLIER [DR3] MEANS [CR3] P2.2: "coming out of the loins is said of descent at any remove"
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P9 CHALLENGER LINK 2
+    EARLIER [DR3] [L4] The same chapter names whose loins carry the remove: "the loins of his father" (7:10).
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P10 CHALLENGER LINK 2
+    EARLIER [DR3] Descent at any remove runs through fathers' loins, step by step.
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P11 CHALLENGER LINK 2
+    EARLIER [DR3] So the remove from David reaches Joseph by fathers.
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P12 CHALLENGER LINK 5
+    EARLIER [DR3] The Father over does not remove the father beside; both stand in one verse.
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+33261: 22 listed
   P1 DEFENDER LINK 3
     EARLIER [CR2] I take back "points to Mary alone" as a claim about the pronoun by itself.
     CLOSING [CR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P2 DEFENDER LINK 5
+  P2 DEFENDER LINK 6
+    EARLIER [CR2] *Osphys* (G3751), "loins," therefore reaches descent at a remove.
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P3 DEFENDER LINK 1
+    EARLIER [CR3] [L4] On Matthew 1:19, 1:20 and the two Greek words, the finding raised alarm and a purpose to put her away, and the angel removed it by naming the source.
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P4 DEFENDER LINK 5
     EARLIER [CR3] I drop the limb that "of the house of David" in the register is Mary's.
     CLOSING [CR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P3 DEFENDER LINK 5
+  P5 DEFENDER LINK 5
+    EARLIER [CR3] *Patēr* (G3962) there is Abraham, an ancestor at a remove.
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P6 DEFENDER LINK 5
     EARLIER [CR3] I drop two limbs: that every house-row points to Mary alone, and that Joseph's name and house stand outside the register.
     CLOSING [CR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P4 CHALLENGER LINK ?
+  P7 DEFENDER LINK 5
+    EARLIER [CR3] So "seed" and "father" are language of descent at a remove.
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P8 DEFENDER LINK 5
+    EARLIER [CR3] -- MEANS: "his father" is Abraham, an ancestor at a remove, so loins and father name descent over generations -- [L2] osphys G3751 (loin, procreative power) | [L3] Luke 1:32 "the throne of his father David"
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P9 DEFENDER LINK 5
+    EARLIER [CR3] Luke 1:32 "the throne of his father David" -- MEANS: David is called the child's father at a remove, as Abraham is Levi's -- [L2] patēr G3962 (father) | [L3] Hebrews 7:10 "For he was yet in the loins of his father"
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P10 CHALLENGER LINK ?
     EARLIER [DR1] The defender's five links each read one register and set aside the witness beside it.
     CLOSING [DR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P5 CHALLENGER LINK ?
+  P11 CHALLENGER LINK ?
+    EARLIER [DR1] It does not remove the father.
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P12 CHALLENGER LINK ?
     EARLIER [DR2] The defender has granted ground on three links, and the keystone still stands on what was given up.
     CLOSING [DR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P6 CHALLENGER LINK ?
+  P13 CHALLENGER LINK ?
     EARLIER [DR2] **D3.** The defender withdrew "points to Mary alone."
     CLOSING [DR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P7 CHALLENGER LINK ?
+  P14 CHALLENGER LINK ?
     EARLIER [DR2] **A register through the wife's house was struck.**
     CLOSING [DR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P8 CHALLENGER LINK 3
+  P15 CHALLENGER LINK ?
+    EARLIER [DR2] **"Loins at a remove" runs father to father.**
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P16 CHALLENGER LINK 3
     EARLIER [DR3] I drop the limb that the penalty "put from the priesthood" applies outside the priests.
     CLOSING [DR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P9 CHALLENGER LINK 3
+  P17 CHALLENGER LINK 3
     EARLIER [DR3] The priesthood is what that register was sought for, and its penalty is the limb I dropped.
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P18 CHALLENGER LINK 4
+    EARLIER [DR3] Descent "at a remove" is a chain of fathers begetting in turn.
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P19 CHALLENGER LINK 4
+    EARLIER [DR3] MEANS [CR3] P4.1: ""his father" is Abraham, an ancestor at a remove, so loins and father name descent over generations"
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P20 CHALLENGER LINK 4
+    EARLIER [DR3] The remove from Abraham to Levi is filled by each "begat" of Matthew 1:2.
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P21 CHALLENGER LINK 4
+    EARLIER [DR3] MEANS [CR3] P4.2: "David is called the child's father at a remove, as Abraham is Levi's"
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P22 CHALLENGER LINK 4
+    EARLIER [DR3] The remove is a line of fathers ending in Joseph.
     CLOSING [DR4] (not named)
     find whether the closing round asserts again what this sentence gives up
 33276 skip: no closing round
 33289 skip: no closing round
-33299: 15 listed
+33299: 16 listed
   P1 DEFENDER LINK 2
     EARLIER [CR2] ## LINK 3: SUPPORTED, narrowed (Genesis 3:15 is withdrawn as load-bearing)
     CLOSING [CR4] (not named)
@@ -134,283 +298,559 @@
     EARLIER [CR2] **Galatians 4:4** is withdrawn as load-bearing for Link 6.
     CLOSING [CR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P9 DEFENDER LINK 3
+  P9 DEFENDER LINK 2
+    EARLIER [CR3] Both stand, and the covenant does not remove the ground given to Mary's "How."
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P10 DEFENDER LINK 3
     EARLIER [CR3] I drop any claim about the word "virgin" alone.
     CLOSING [CR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P10 DEFENDER LINK 4
+  P11 DEFENDER LINK 4
     EARLIER [CR3] I drop "guardian" as a separate claim.
     CLOSING [CR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P11 CHALLENGER LINK ?
+  P12 CHALLENGER LINK ?
     EARLIER [DR1] **ASSUMES:** The feminine *hēs* ("of whom") with the passive *egennēthē* ("was born") in Matthew 1:16 sets aside the man Matthew names in the next verses.
     CLOSING [DR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P12 CHALLENGER LINK ?
+  P13 CHALLENGER LINK ?
     EARLIER [DR2] The defender's link round withdrew Genesis 3:15 as load-bearing.
     CLOSING [DR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P13 CHALLENGER LINK ?
+  P14 CHALLENGER LINK ?
     EARLIER [DR2] It also withdrew Galatians 4:4 as load-bearing, withdrew the motive read into Matthew 1:19, and withdrew the guardian sense of *patēr* (father).
     CLOSING [DR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P14 CHALLENGER LINK 6
+  P15 CHALLENGER LINK 6
     EARLIER [DR2] The register struck those "called after the name" of the wife's house (Ezra 2:62).
     CLOSING [DR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P15 CHALLENGER LINK 6
+  P16 CHALLENGER LINK 6
     EARLIER [DR2] -- MEANS: the register struck those called after the wife's house.
     CLOSING [DR4] (not named)
     find whether the closing round asserts again what this sentence gives up
 33311 skip: no closing round
 33322 skip: no closing round
-33345: 2 listed
-  P1 DEFENDER LINK 3
-    EARLIER [CR3] I drop "fifteen times," which I did not count against the chapter.
-    CLOSING [CR4] (not named)
-    find whether the closing round asserts again what this sentence gives up
-  P2 DEFENDER LINK 5
-    EARLIER [CR3] I drop "the flesh comes through Mary" and the assumption that Mary is of David's house.
-    CLOSING [CR4] (not named)
-    find whether the closing round asserts again what this sentence gives up
-33371: 0 listed
-33389: 10 listed
+33345: 6 listed
   P1 DEFENDER LINK ?
-    EARLIER [CR2] I withdraw one premise that does not stand.
+    EARLIER [CR2] That ground removes the alarm only if the child's origin was other than Joseph's.
     CLOSING [CR4] (not named)
     find whether the closing round asserts again what this sentence gives up
   P2 DEFENDER LINK ?
-    EARLIER [CR2] **Withdrawn premise (discipline).** I rested "Mary, a virgin of the house of David" on Luke 1:27.
+    EARLIER [CR2] A word that named Joseph as source would give no ground for removing it.
     CLOSING [CR4] (not named)
     find whether the closing round asserts again what this sentence gives up
   P3 DEFENDER LINK ?
-    EARLIER [CR2] I withdraw that footing.
-    CLOSING [CR4] (not named)
-    find whether the closing round asserts again what this sentence gives up
-  P4 DEFENDER LINK ?
-    EARLIER [CR2] The only agent Acts 2:30 gives for the raising up is God.
-    CLOSING [CR4] (not named)
-    find whether the closing round asserts again what this sentence gives up
-  P5 DEFENDER LINK 6
-    EARLIER [CR3] I do not rest the keystone on Mary's house, whose footing I withdrew.
-    CLOSING [CR4] (not named)
-    find whether the closing round asserts again what this sentence gives up
-  P6 DEFENDER LINK 5
-    EARLIER [CR3] I drop the claim that the shared verb by itself makes the woman the carrier of David's seed.
-    CLOSING [CR4] (not named)
-    find whether the closing round asserts again what this sentence gives up
-  P7 CHALLENGER LINK ?
-    EARLIER [DR2] The defender's round 2 withdrew one footing: "Mary, a virgin of the house of David."
-    CLOSING [DR4] (not named)
-    find whether the closing round asserts again what this sentence gives up
-  P8 CHALLENGER LINK 6
-    EARLIER [DR2] A house-name taken by marriage was struck from the register.
-    CLOSING [DR4] (not named)
-    find whether the closing round asserts again what this sentence gives up
-  P9 CHALLENGER LINK 6
-    EARLIER [DR2] Ezra 2:61-62 [L3] strikes a house-name carried by marriage.
-    CLOSING [DR4] (not named)
-    find whether the closing round asserts again what this sentence gives up
-  P10 CHALLENGER LINK 6
-    EARLIER [DR2] 2 Samuel 7:12-14 [L3] gives God's "my son" over the seed before it was set up.
-    CLOSING [DR4] (not named)
-    find whether the closing round asserts again what this sentence gives up
-33411: 13 listed
-  P1 DEFENDER LINK 2
-    EARLIER [CR2] That sentence floats free and I withdraw it.
-    CLOSING [CR4] (not named)
-    find whether the closing round asserts again what this sentence gives up
-  P2 DEFENDER LINK 5
-    EARLIER [CR2] **Narrowed.** I withdraw "at the one place where the pattern would require it" as a proof of absence.
-    CLOSING [CR4] (not named)
-    find whether the closing round asserts again what this sentence gives up
-  P3 DEFENDER LINK 8
-    EARLIER [CR2] I withdraw it from Hebrews 10:5 and keep only what its words carry.
-    CLOSING [CR4] (not named)
-    find whether the closing round asserts again what this sentence gives up
-  P4 DEFENDER LINK 6
-    EARLIER [CR3] The route of Davidic flesh through Mary is dropped.
-    CLOSING [CR4] (not named)
-    find whether the closing round asserts again what this sentence gives up
-  P5 DEFENDER LINK 6
-    EARLIER [CR3] I withdrew it, and I do not rest the keystone on it.
-    CLOSING [CR4] (not named)
-    find whether the closing round asserts again what this sentence gives up
-  P6 DEFENDER LINK 6
-    EARLIER [CR3] The presses under this premise, Luke 1:27, Luke 2:4, Luke 1:36, Luke 1:5, Numbers 1:18, Ezra 2:62, Hebrews 7:10 and Matthew 1:2, bear only on that dropped limb.
-    CLOSING [CR4] (not named)
-    find whether the closing round asserts again what this sentence gives up
-  P7 CHALLENGER LINK ?
-    EARLIER [DR1] ASSUMES: God's preparing of the body sets aside a father's loins -- ROWS GIVE: "he also himself likewise took part of the same" (Hebrews 2:14); "For he was yet in the loins of his father" (Hebrews 7:10); "I went unto the prophetess; and she
-    CLOSING [DR4] (not named)
-    find whether the closing round asserts again what this sentence gives up
-  P8 CHALLENGER LINK 6
-    EARLIER [DR2] The first is a flesh route through Mary, which the defender has now withdrawn.
-    CLOSING [DR4] (not named)
-    find whether the closing round asserts again what this sentence gives up
-  P9 CHALLENGER LINK 6
-    EARLIER [DR2] The keystone's flesh route was withdrawn and then used again
-    CLOSING [DR4] (not named)
-    find whether the closing round asserts again what this sentence gives up
-  P10 CHALLENGER LINK 6
-    EARLIER [DR2] **The defender withdrew Mary's descent.** The defender conceded: "That sentence floats free and I withdraw it."
-    CLOSING [DR4] (not named)
-    find whether the closing round asserts again what this sentence gives up
-  P11 CHALLENGER LINK 6
-    EARLIER [DR2] That rests the keystone on the row just withdrawn.
-    CLOSING [DR4] (not named)
-    find whether the closing round asserts again what this sentence gives up
-  P12 CHALLENGER LINK 6
-    EARLIER [DR2] LINK 6: The flesh route to David through the mother props the keystone after the defender withdrew Mary's descent.
-    CLOSING [DR4] (not named)
-    find whether the closing round asserts again what this sentence gives up
-  P13 CHALLENGER LINK 2
-    EARLIER [DR3] The defender withdrew the route of Davidic flesh through the mother.
-    CLOSING [DR4] (not named)
-    find whether the closing round asserts again what this sentence gives up
-33430: 4 listed
-  P1 DEFENDER LINK 5
-    EARLIER [CR2] I grant it, and I do not say Luke 2:49 withdraws Luke 2:48's title.
-    CLOSING [CR4] (not named)
-    find whether the closing round asserts again what this sentence gives up
-  P2 DEFENDER LINK 5
-    EARLIER [CR2] I withdraw "corrects", and I do not claim a withdrawal of Luke 2:48.
-    CLOSING [CR4] (not named)
-    find whether the closing round asserts again what this sentence gives up
-  P3 DEFENDER LINK 6
-    EARLIER [CR3] I drop any claim that rests on her line.
-    CLOSING [CR4] (not named)
-    find whether the closing round asserts again what this sentence gives up
-  P4 CHALLENGER LINK ?
-    EARLIER [DR1] ASSUMES: Luke 2:49 as a withdrawal of Luke 2:48.
-    CLOSING [DR4] (not named)
-    find whether the closing round asserts again what this sentence gives up
-33442: 9 listed
-  P1 DEFENDER LINK 2
-    EARLIER [CR3] I drop the sentence "The text names no human male source, so there is no room for a biological father among men."
-    CLOSING [CR4] (not named)
-    find whether the closing round asserts again what this sentence gives up
-  P2 DEFENDER LINK 3
-    EARLIER [CR3] I drop the limb that Hebrews 7:14's "evident" rests on a public reckoning in Joseph's name.
-    CLOSING [CR4] (not named)
-    find whether the closing round asserts again what this sentence gives up
-  P3 DEFENDER LINK 5
-    EARLIER [CR3] I drop "and in it the seed of David" from this link.
-    CLOSING [CR4] (not named)
-    find whether the closing round asserts again what this sentence gives up
-  P4 DEFENDER LINK 6
-    EARLIER [CR3] I drop "alone" as a claim from silence.
-    CLOSING [CR4] (not named)
-    find whether the closing round asserts again what this sentence gives up
-  P5 CHALLENGER LINK ?
-    EARLIER [DR1] ASSUMES: the sign sets aside a man's part.
-    CLOSING [DR4] (not named)
-    find whether the closing round asserts again what this sentence gives up
-  P6 CHALLENGER LINK 3
-    EARLIER [DR2] Ezra 2:62 "These sought their register [among] those that were reckoned by genealogy, but they were not found: therefore were they, as polluted, put from the priesthood" -- MEANS: a reckoning by another house's name was struck.
-    CLOSING [DR4] (not named)
-    find whether the closing round asserts again what this sentence gives up
-  P7 CHALLENGER LINK 3
-    EARLIER [DR2] LINK 4: the inference that the sign sets aside a man's part, propping "Scripture foretold a woman-only conception as a sign" — "A sign (Isaiah 7:11) fulfilled in a virgin (Isaiah 7:14, Matthew 1:23) is a conception without a man's part."
-    CLOSING [DR4] (not named)
-    find whether the closing round asserts again what this sentence gives up
-  P8 CHALLENGER LINK 1
-    EARLIER [DR3] I drop the sentence "Naming is the begetting father's act."
-    CLOSING [DR4] (not named)
-    find whether the closing round asserts again what this sentence gives up
-  P9 CHALLENGER LINK 5
-    EARLIER [DR3] I drop "a fear the record removes from a begetting father."
-    CLOSING [DR4] (not named)
-    find whether the closing round asserts again what this sentence gives up
-33461: 7 listed
-  P1 DEFENDER LINK 1
-    EARLIER [CR2] Believers also had a separate birth in the flesh, and that is the birth John 1:13 sets aside.
-    CLOSING [CR4] (not named)
-    find whether the closing round asserts again what this sentence gives up
-  P2 DEFENDER LINK 1
-    EARLIER [CR3] I drop the sentence "So the verses give no human male source for the child."
-    CLOSING [CR4] (not named)
-    find whether the closing round asserts again what this sentence gives up
-  P3 DEFENDER LINK 2
-    EARLIER [CR3] I drop any claim that a row names Mary's fathers' house.
+    EARLIER [CR2] That the word may elsewhere be rendered "maid" does not remove 24:43.
     CLOSING [CR4] (not named)
     find whether the closing round asserts again what this sentence gives up
   P4 DEFENDER LINK 3
-    EARLIER [CR3] I drop "had to be."
+    EARLIER [CR3] I drop "fifteen times," which I did not count against the chapter.
     CLOSING [CR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P5 DEFENDER LINK 4
-    EARLIER [CR3] I drop the sentence "A conception within an ordinary marriage is no sign."
+  P5 DEFENDER LINK 5
+    EARLIER [CR3] I drop "the flesh comes through Mary" and the assumption that Mary is of David's house.
     CLOSING [CR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P6 CHALLENGER LINK 4
-    EARLIER [DR3] I drop the comparison to Elisabeth from this link; it stands at LINK 5.
-    CLOSING [DR4] (not named)
+  P6 DEFENDER LINK 6
+    EARLIER [CR3] [L1] Jeremiah 22:30: "no man of his seed shall prosper, sitting upon the throne of David, and ruling any more in Judah."
+    CLOSING [CR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P7 CHALLENGER LINK 6
-    EARLIER [DR3] The intent was set aside, and the husband took his wife.
-    CLOSING [DR4] (not named)
-    find whether the closing round asserts again what this sentence gives up
-33482: 4 listed
-  P1 DEFENDER LINK 6
-    EARLIER [CR3] I drop two things: that Luke 3's line is expressly given as Mary's, and that Joseph is "counted 'of Heli' by marriage".
+33371: 2 listed
+  P1 DEFENDER LINK ?
+    EARLIER [CR2] That cuts the clause from its own sentence.
     CLOSING [CR4] (not named)
     find whether the closing round asserts again what this sentence gives up
   P2 DEFENDER LINK 6
-    EARLIER [CR3] **Ezra 2:59, 2:61, 2:62.** I drop the register through the wife.
+    EARLIER [CR3] Acts 2:30 and Psalms 132:11 state "fruit of his loins" and "fruit of thy body" for descendants at any remove.
     CLOSING [CR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P3 CHALLENGER LINK 1
-    EARLIER [DR3] **LINK 4: NARROWED TO:** The curse of Jeremiah 22:30 does not stand against the line Matthew carries to Joseph, because the LORD took back the plucked signet and set it on Zerubbabel, who is in that line.
+33389: 15 listed
+  P1 DEFENDER LINK ?
+    EARLIER [CR1] **[L2]** *Apolusai* (G630) means "to release, put away".
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P2 DEFENDER LINK ?
+    EARLIER [CR2] I withdraw one premise that does not stand.
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P3 DEFENDER LINK ?
+    EARLIER [CR2] **Withdrawn premise (discipline).** I rested "Mary, a virgin of the house of David" on Luke 1:27.
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P4 DEFENDER LINK ?
+    EARLIER [CR2] I withdraw that footing.
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P5 DEFENDER LINK ?
+    EARLIER [CR2] The only agent Acts 2:30 gives for the raising up is God.
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P6 DEFENDER LINK ?
+    EARLIER [CR2] If Joseph knew the child was his, the angel's ground would remove nothing.
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P7 DEFENDER LINK 6
+    EARLIER [CR3] I do not rest the keystone on Mary's house, whose footing I withdrew.
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P8 DEFENDER LINK 5
+    EARLIER [CR3] I drop the claim that the shared verb by itself makes the woman the carrier of David's seed.
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P9 DEFENDER LINK 6
+    EARLIER [CR3] His intent to put her away, set against 1:20's "fear not to take", is what the angel removes.
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P10 CHALLENGER LINK ?
+    EARLIER [DR1] The angel's reply [L3] removes his *fear*, confirms his Davidic sonship, and commits the father's naming to him.
     CLOSING [DR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P4 CHALLENGER LINK 4
-    EARLIER [DR3] I drop the limb about "the same names in both lines".
+  P11 CHALLENGER LINK ?
+    EARLIER [DR2] The defender's round 2 withdrew one footing: "Mary, a virgin of the house of David."
     CLOSING [DR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-33490: 6 listed
-  P1 DEFENDER LINK 5
-    EARLIER [CR3] I drop the limb that Heli (Luke 3:23) is Mary's father and that Luke's line is Mary's.
+  P12 CHALLENGER LINK 6
+    EARLIER [DR2] A house-name taken by marriage was struck from the register.
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P13 CHALLENGER LINK 6
+    EARLIER [DR2] Ezra 2:61-62 [L3] strikes a house-name carried by marriage.
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P14 CHALLENGER LINK 6
+    EARLIER [DR2] 2 Samuel 7:12-14 [L3] gives God's "my son" over the seed before it was set up.
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P15 CHALLENGER LINK 4
+    EARLIER [DR2] Matthew 1:20 "Joseph, thou son of David, fear not to take unto thee Mary thy wife" -- MEANS: the fear the angel removes concerns taking his wife, and the "for" grounds the taking in God's claim on the child.
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+33411: 21 listed
+  P1 DEFENDER LINK ?
+    EARLIER [CR1] **[L4]** From the active "begat" of verse 2 to the passive "was born" with a feminine "of whom" in verse 16, the text stops saying "Joseph begat Jesus" at the one place where the pattern would require it.
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P2 DEFENDER LINK ?
+    EARLIER [CR1] **[L2]** *Apolysai* (to put away, to release) shows Joseph treating the pregnancy as not his own.
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P3 DEFENDER LINK 2
+    EARLIER [CR2] That sentence floats free and I withdraw it.
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P4 DEFENDER LINK 5
+    EARLIER [CR2] **Narrowed.** I withdraw "at the one place where the pattern would require it" as a proof of absence.
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P5 DEFENDER LINK 7
+    EARLIER [CR2] The reason that removes the fear is the child's source (Matthew 1:20).
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P6 DEFENDER LINK 8
+    EARLIER [CR2] I withdraw it from Hebrews 10:5 and keep only what its words carry.
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P7 DEFENDER LINK 6
+    EARLIER [CR3] The route of Davidic flesh through Mary is dropped.
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P8 DEFENDER LINK 6
+    EARLIER [CR3] I withdrew it, and I do not rest the keystone on it.
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P9 DEFENDER LINK 6
+    EARLIER [CR3] The presses under this premise, Luke 1:27, Luke 2:4, Luke 1:36, Luke 1:5, Numbers 1:18, Ezra 2:62, Hebrews 7:10 and Matthew 1:2, bear only on that dropped limb.
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P10 DEFENDER LINK 6
+    EARLIER [CR3] [L1] Jeremiah 22:30: "for no man of his seed shall prosper, sitting upon the throne of David, and ruling any more in Judah."
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P11 CHALLENGER LINK ?
+    EARLIER [DR1] So D3's claim that the text "stops saying" begetting reads the mother's verb as a verdict on the father.
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P12 CHALLENGER LINK ?
+    EARLIER [DR1] The curse yields the throne to the seed of Joseph's line.
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P13 CHALLENGER LINK ?
+    EARLIER [DR1] **LINK D3:** "the text stops saying "Joseph begat Jesus" at the one place where the pattern would require it."
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P14 CHALLENGER LINK ?
+    EARLIER [DR1] ASSUMES: God's preparing of the body sets aside a father's loins -- ROWS GIVE: "he also himself likewise took part of the same" (Hebrews 2:14); "For he was yet in the loins of his father" (Hebrews 7:10); "I went unto the prophetess; and she
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P15 CHALLENGER LINK 6
+    EARLIER [DR2] The first is a flesh route through Mary, which the defender has now withdrawn.
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P16 CHALLENGER LINK 6
+    EARLIER [DR2] The keystone's flesh route was withdrawn and then used again
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P17 CHALLENGER LINK 6
+    EARLIER [DR2] **The defender withdrew Mary's descent.** The defender conceded: "That sentence floats free and I withdraw it."
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P18 CHALLENGER LINK 6
+    EARLIER [DR2] That rests the keystone on the row just withdrawn.
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P19 CHALLENGER LINK 6
+    EARLIER [DR2] LINK 6: The flesh route to David through the mother props the keystone after the defender withdrew Mary's descent.
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P20 CHALLENGER LINK 2
+    EARLIER [DR3] The defender withdrew the route of Davidic flesh through the mother.
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P21 CHALLENGER LINK 3
+    EARLIER [DR3] The angel's answer removes that very cause by bringing the taking forward.
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+33430: 12 listed
+  P1 DEFENDER LINK ?
+    EARLIER [CR2] **[L1]** Jeremiah 22:30: "Thus saith the LORD, Write ye this man childless, a man that shall not prosper in his days: for no man of his seed shall prosper, sitting upon the throne of David, and ruling any more in Judah."
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P2 DEFENDER LINK ?
+    EARLIER [CR2] **[L2]** *Eperchomai* (G1904, "to come upon") in Acts 1:8 ("after that the Holy Ghost is come upon you") yields witnesses.
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P3 DEFENDER LINK ?
+    EARLIER [CR2] *Episkiazō* (G1982, "to overshadow") in Luke 9:34 yields a cloud.
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P4 DEFENDER LINK ?
+    EARLIER [CR2] What the action yields is set by the context.
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P5 DEFENDER LINK 5
+    EARLIER [CR2] I grant it, and I do not say Luke 2:49 withdraws Luke 2:48's title.
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P6 DEFENDER LINK 5
+    EARLIER [CR2] I withdraw "corrects", and I do not claim a withdrawal of Luke 2:48.
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P7 DEFENDER LINK 5
+    EARLIER [CR3] [L1] Jeremiah 22:30: "for no man of his seed shall prosper, sitting upon the throne of David, and ruling any more in Judah."
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P8 DEFENDER LINK 6
+    EARLIER [CR3] I drop any claim that rests on her line.
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P9 DEFENDER LINK 6
+    EARLIER [CR3] Haggai 1:1 "Zerubbabel the son of Shealtiel, governor of Judah" -- MEANS: Zerubbabel is named governor, not one sitting on David's throne -- [L2] sperma (seed) | [L3] Jeremiah 22:30 "sitting upon the throne of David, and ruling any more in 
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P10 CHALLENGER LINK ?
+    EARLIER [DR1] ASSUMES: Luke 2:49 as a withdrawal of Luke 2:48.
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P11 CHALLENGER LINK 3
+    EARLIER [DR3] [L1] Jeremiah 22:30: "Thus saith the LORD, Write ye this man childless, a man [that] shall not prosper in his days: for no man of his seed shall prosper, sitting upon the throne of David, and ruling any more in Judah."
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P12 CHALLENGER LINK 3
+    EARLIER [DR3] [L3] The sentence is bounded by its own words, "in his days" and "ruling any more in Judah."
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+33442: 24 listed
+  P1 DEFENDER LINK ?
+    EARLIER [CR2] "Fruit of his loins" names descent at any remove.**
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P2 DEFENDER LINK ?
+    EARLIER [CR2] **[L4]** In Acts 2:30, Hebrews 7:5 and Hebrews 7:10 the loins carry descent at any remove.
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P3 DEFENDER LINK ?
+    EARLIER [CR2] A man who knew himself the source would have no fear for the angel's reason to remove.
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P4 DEFENDER LINK 2
+    EARLIER [CR3] I drop the sentence "The text names no human male source, so there is no room for a biological father among men."
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P5 DEFENDER LINK 3
+    EARLIER [CR3] I drop the limb that Hebrews 7:14's "evident" rests on a public reckoning in Joseph's name.
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P6 DEFENDER LINK 5
+    EARLIER [CR3] I drop "and in it the seed of David" from this link.
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P7 DEFENDER LINK 6
+    EARLIER [CR3] I drop "alone" as a claim from silence.
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P8 DEFENDER LINK 6
+    EARLIER [CR3] That is said of sons of Levi at many removes.
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P9 DEFENDER LINK 6
+    EARLIER [CR3] "Loins", "bowels" and "fruit of thy body" are used of descent at remove, so these verses do not require a father at the last step.
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P10 DEFENDER LINK 6
+    EARLIER [CR3] **Hebrews 7:10.** "In the loins of his father" says "father" of Abraham for Levi, at remove.
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P11 DEFENDER LINK 6
+    EARLIER [CR3] Hebrews 7:5 "though they come out of the loins of Abraham" -- MEANS: "loins" is said of descent at many removes, so Acts 2:30 needs a descendant of David, not a father at the last step.
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P12 DEFENDER LINK 6
+    EARLIER [CR3] The inference that Matthew 1:20's "for" matches Luke 1:13's, propping "Joseph feared as a father would": "So a fear met by an angel's "for" is a fear the record removes from a begetting father."
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P13 CHALLENGER LINK ?
+    EARLIER [DR1] ASSUMES: the sign sets aside a man's part.
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P14 CHALLENGER LINK ?
+    EARLIER [DR2] "Loins at any remove" runs father to father
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P15 CHALLENGER LINK ?
+    EARLIER [DR2] The remove is a line of fathers.
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P16 CHALLENGER LINK ?
+    EARLIER [DR2] The defender's press means: "A man who knew himself the source would have no fear for the angel's reason to remove."
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P17 CHALLENGER LINK ?
+    EARLIER [DR2] So a fear met by an angel's "for" is a fear the record removes from a begetting father.
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P18 CHALLENGER LINK 3
+    EARLIER [DR2] Ezra 2:62 "These sought their register [among] those that were reckoned by genealogy, but they were not found: therefore were they, as polluted, put from the priesthood" -- MEANS: a reckoning by another house's name was struck.
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P19 CHALLENGER LINK 3
+    EARLIER [DR2] LINK 4: the inference that the sign sets aside a man's part, propping "Scripture foretold a woman-only conception as a sign" — "A sign (Isaiah 7:11) fulfilled in a virgin (Isaiah 7:14, Matthew 1:23) is a conception without a man's part."
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P20 CHALLENGER LINK 1
+    EARLIER [DR3] I drop the sentence "Naming is the begetting father's act."
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P21 CHALLENGER LINK 2
+    EARLIER [DR3] MEANS [CR3] P2.3: ""loins" is said of descent at many removes, so Acts 2:30 needs a descendant of David, not a father at the last step."
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P22 CHALLENGER LINK 2
+    EARLIER [DR3] Levi was in Abraham's loins through each remove, and each remove in Matthew 1:2 is a father who "begat."
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P23 CHALLENGER LINK 2
+    EARLIER [DR3] Loins at remove run through the loins of every father in the line.
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P24 CHALLENGER LINK 5
+    EARLIER [DR3] I drop "a fear the record removes from a begetting father."
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+33461: 13 listed
+  P1 DEFENDER LINK ?
+    EARLIER [CR1] Genesis 4:1 shows that "knew" is the word for the act that otherwise yields conception, and in Luke 1:34 that act has not taken place.
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P2 DEFENDER LINK ?
+    EARLIER [CR1] **[L2]** *Apolysai* (G630, "to release, put away") is what Joseph was minded to do when he found her with child (Matthew 1:18).
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P3 DEFENDER LINK ?
+    EARLIER [CR1] Mary had not known a man, and "knowing" is the word for the act that yields conception: Luke 1:34 and Luke 1:35 [L1]; *ginōskō* ("to know") and *anēr* ("man") [L2]; Genesis 4:1 [L3] shows "knew" followed by conception, so Mary's not knowing
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P4 DEFENDER LINK 1
+    EARLIER [CR2] Believers also had a separate birth in the flesh, and that is the birth John 1:13 sets aside.
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P5 DEFENDER LINK 5
+    EARLIER [CR2] **[L2]** *apolysai* (G630, "to release, put away"), *dikaios* (G1342, "just"), *paradeigmatisai* (G3856, "to make a public example of").
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P6 DEFENDER LINK 1
+    EARLIER [CR3] I drop the sentence "So the verses give no human male source for the child."
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P7 DEFENDER LINK 2
+    EARLIER [CR3] I drop any claim that a row names Mary's fathers' house.
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P8 DEFENDER LINK 3
+    EARLIER [CR3] I drop "had to be."
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P9 DEFENDER LINK 4
+    EARLIER [CR3] I drop the sentence "A conception within an ordinary marriage is no sign."
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P10 DEFENDER LINK 5
+    EARLIER [CR3] The angel removes the alarm by giving the source, "of the Holy Ghost."
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P11 CHALLENGER LINK 4
+    EARLIER [DR3] I drop the comparison to Elisabeth from this link; it stands at LINK 5.
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P12 CHALLENGER LINK 5
+    EARLIER [DR3] Elisabeth's was removed by God, and the son is borne to her husband.
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P13 CHALLENGER LINK 6
+    EARLIER [DR3] The intent was set aside, and the husband took his wife.
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+33482: 11 listed
+  P1 DEFENDER LINK 6
+    EARLIER [CR2] Jeremiah 22:30: "no man of his seed shall prosper, sitting upon the throne of David, and ruling any more in Judah."
     CLOSING [CR4] (not named)
     find whether the closing round asserts again what this sentence gives up
   P2 DEFENDER LINK 5
+    EARLIER [CR3] It names the woman, and the other rows remove the father.
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P3 DEFENDER LINK 6
+    EARLIER [CR3] I drop two things: that Luke 3's line is expressly given as Mary's, and that Joseph is "counted 'of Heli' by marriage".
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P4 DEFENDER LINK 6
+    EARLIER [CR3] **Ezra 2:59, 2:61, 2:62.** I drop the register through the wife.
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P5 CHALLENGER LINK ?
+    EARLIER [DR1] **ASSUMES:** a passive verb of birth told of the mother removes the father, and *nomizō* means a mistaken belief.
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P6 CHALLENGER LINK ?
+    EARLIER [DR2] LINK 1: The *ek*-source inference that removes the husband.
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P7 CHALLENGER LINK 3
+    EARLIER [DR2] LINK 4: The inference that the passive "of whom" and "supposed" remove the father.
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P8 CHALLENGER LINK 4
+    EARLIER [DR2] ASSUMES: a passive verb of bearing told of the mother removes the father named in the same verse -- ROWS GIVE: Matthew 1:16, "Joseph the husband of Mary, of whom was born Jesus"; Luke 2:48, "thy father and I."
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P9 CHALLENGER LINK 1
+    EARLIER [DR3] **LINK 4: NARROWED TO:** The curse of Jeremiah 22:30 does not stand against the line Matthew carries to Joseph, because the LORD took back the plucked signet and set it on Zerubbabel, who is in that line.
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P10 CHALLENGER LINK 4
+    EARLIER [DR3] I drop the limb about "the same names in both lines".
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P11 CHALLENGER LINK 4
+    EARLIER [DR3] [L1] Jeremiah 22:30: "for no man of his seed shall prosper, sitting upon the throne of David, and ruling any more in Judah".
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+33490: 18 listed
+  P1 DEFENDER LINK ?
+    EARLIER [CR2] My reading removes the conflict.
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P2 DEFENDER LINK ?
+    EARLIER [CR2] The "for" gives the ground on which Joseph's fear is removed.
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P3 DEFENDER LINK ?
+    EARLIER [CR2] The challenger's reading removes "virgin" at the time of Matthew 1:23.
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P4 DEFENDER LINK 2
+    EARLIER [CR3] In Luke 1:35 what the overshadowing yields is named: "that holy thing which shall be born of thee".
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P5 DEFENDER LINK 5
+    EARLIER [CR3] I drop the limb that Heli (Luke 3:23) is Mary's father and that Luke's line is Mary's.
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P6 DEFENDER LINK 5
     EARLIER [CR3] **Luke 3:23**, **Luke 2:5**, **Numbers 36:8**, **Ezra 2:62** and **Ezra 2:61** press the dropped limb, the genealogy route.
     CLOSING [CR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P3 CHALLENGER LINK 1
+  P7 DEFENDER LINK 5
+    EARLIER [CR3] The inference that Joseph's "awe" is why he stepped back props the challenger's answer to Matthew 1:19.
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P8 DEFENDER LINK 5
+    EARLIER [CR3] Quote: "A just man in awe of a holy thing that God claims as his own son is minded to step back."
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P9 DEFENDER LINK 5
+    EARLIER [CR3] Matthew 1:20 "fear not to take unto thee Mary thy wife: for that which is conceived in her is of the Holy Ghost" -- MEANS: the "for" gives the source of the conception as the ground that removes his fear -- [L2] *phobeō* (G5399, to be alarm
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P10 CHALLENGER LINK ?
+    EARLIER [DR2] A just man in awe of a holy thing that God claims as his own son is minded to step back.
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P11 CHALLENGER LINK ?
+    EARLIER [DR2] The angel removes the fear and tells him to take his wife.
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P12 CHALLENGER LINK 1
     EARLIER [DR3] I drop the limb that awe is the stated cause of his purpose in Matthew 1:19.
     CLOSING [DR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P4 CHALLENGER LINK 1
+  P13 CHALLENGER LINK 1
     EARLIER [DR3] I hold both grounds as written and have dropped awe as their cause.
     CLOSING [DR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P5 CHALLENGER LINK 4
+  P14 CHALLENGER LINK 1
+    EARLIER [DR3] MEANS [CR3] P1.2: "the "for" gives the source of the conception as the ground that removes his fear"
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P15 CHALLENGER LINK 1
+    EARLIER [DR3] [L2] The fear removed is *phobeō*, "to be in awe of, i.e.
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P16 CHALLENGER LINK 1
+    EARLIER [DR3] So the ground that removes his fear sends the son of David to take his wife.
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P17 CHALLENGER LINK 4
     EARLIER [DR3] I drop the limb that the child of Isaiah 8:4 is the child named Immanuel.
     CLOSING [DR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P6 CHALLENGER LINK 6
+  P18 CHALLENGER LINK 6
     EARLIER [DR3] they were polluted from the priesthood]" The name taken from the wife's house is the name the register struck.
     CLOSING [DR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-33497: 4 listed
+33497: 5 listed
   P1 DEFENDER LINK 5
     EARLIER [CR2] **Narrowed.** I withdraw "marks a false report" for *enomizeto*.
     CLOSING [CR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P2 DEFENDER LINK 4
+  P2 DEFENDER LINK 5
+    EARLIER [CR2] The angel removes the fear by giving the Holy Ghost as the source.
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P3 DEFENDER LINK 4
     EARLIER [CR3] I drop any claim that a row states Mary's descent in its own words.
     CLOSING [CR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P3 CHALLENGER LINK ?
+  P4 CHALLENGER LINK ?
     EARLIER [DR2] In the link round the defender gave up the ground several of them stood on.
     CLOSING [DR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P4 CHALLENGER LINK ?
+  P5 CHALLENGER LINK ?
     EARLIER [DR2] **The defender withdrew** "marks a false report."
     CLOSING [DR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-33506: 5 listed
+33506: 9 listed
   P1 DEFENDER LINK ?
     EARLIER [CR2] I withdraw them as independent footing.
     CLOSING [CR4] (not named)
@@ -419,19 +859,35 @@
     EARLIER [CR2] The pattern is: *ek theou* (out of God) in a begetting verb sets aside the man's will as source.
     CLOSING [CR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P3 DEFENDER LINK 5
+  P3 DEFENDER LINK 2
+    EARLIER [CR3] The fear is removed by the source stated after "for".
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P4 DEFENDER LINK 5
     EARLIER [CR3] I drop my earlier wording that all the father rows come from the crowd.
     CLOSING [CR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P4 CHALLENGER LINK ?
+  P5 DEFENDER LINK 5
+    EARLIER [CR3] Matthew 1:20 "fear not to take unto thee Mary thy wife: for that which is conceived in her is of the Holy Ghost" -- MEANS: the fear is removed by the source stated after "for".
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P6 CHALLENGER LINK ?
     EARLIER [DR2] **Romans 1:3 and *ginomai*.** In round 2 the defender granted that "born of a woman" is said "of men with fathers," and withdrew Galatians 4:4 as independent footing.
     CLOSING [DR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P5 CHALLENGER LINK ?
+  P7 CHALLENGER LINK ?
     EARLIER [DR2] The defender reads John 1:13's "of God" as setting aside a man.
     CLOSING [DR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-33530: 4 listed
+  P8 CHALLENGER LINK 4
+    EARLIER [DR3] MEANS [CR3] P4.3: "the fear is removed by the source stated after "for"."
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P9 CHALLENGER LINK 4
+    EARLIER [DR3] So the ground removes the fear of taking her, and it fits a husband who meant to shield her.
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+33530: 7 listed
   P1 DEFENDER LINK ?
     EARLIER [CR1] [L4] Matthew keeps the verb "begat" for every male line and drops it exactly where Joseph and Jesus are named.
     CLOSING [CR4] (not named)
@@ -440,36 +896,64 @@
     EARLIER [CR1] Matthew 1:16 drops "begat" at Joseph and gives Mary alone as the one "of whom was born Jesus": Matthew 1:16 [L1], *egennēsen* (begat) in verse 2 against *egennēthē* (was born) with the feminine *hēs* (of whom) [L2], Luke 3:23 "as was suppos
     CLOSING [CR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P3 DEFENDER LINK 4
+  P3 DEFENDER LINK 2
+    EARLIER [CR2] They do not remove the ground given in Luke 1:35.
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P4 DEFENDER LINK 4
     EARLIER [CR2] I withdraw that clause as footing for *'almah*'s own force.
     CLOSING [CR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P4 CHALLENGER LINK ?
+  P5 DEFENDER LINK 6
+    EARLIER [CR3] At Christ's remove it is loins-descent at a distance (Hebrews 7:10).
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P6 CHALLENGER LINK ?
     EARLIER [DR1] [L4] D5 sets aside John 6:42 as the crowd's unbelief.
     CLOSING [DR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-33575: 5 listed
-  P1 DEFENDER LINK 3
+  P7 CHALLENGER LINK 4
+    EARLIER [DR3] [L2] *apolyō* (G630, to release, put away): the verb of putting away a wife.
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+33575: 9 listed
+  P1 DEFENDER LINK ?
+    EARLIER [CR2] It is used there of a descendant removed from the forefather by generations.
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P2 DEFENDER LINK ?
+    EARLIER [CR2] That removes C5's third footing.
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P3 DEFENDER LINK 3
     EARLIER [CR3] I drop the claim that a row names Mary of David's house, and I hold the Heli reading only as an inference.
     CLOSING [CR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P2 DEFENDER LINK 5
+  P4 DEFENDER LINK 5
     EARLIER [CR3] I drop the claim that the knowing-clause is carried by the word *almah* at Genesis 24:43.
     CLOSING [CR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P3 CHALLENGER LINK 3
+  P5 CHALLENGER LINK ?
+    EARLIER [DR2] [L4] Verse 35 yields the same calling, with the same verb, as verse 32.
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P6 CHALLENGER LINK 3
     EARLIER [DR2] Ezra 2:61 "which took a wife of the daughters of Barzillai the Gileadite, and was called after their name" -- MEANS: a register reckoned by the wife's house is the case the law struck.
     CLOSING [DR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P4 CHALLENGER LINK 1
+  P7 CHALLENGER LINK 1
     EARLIER [DR3] I drop the limb that says the parenthesis marks no link as different.
     CLOSING [DR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P5 CHALLENGER LINK 5
+  P8 CHALLENGER LINK 5
     EARLIER [DR3] I drop the limb that makes the son of Isaiah 8:3 the same child as the one named in Isaiah 7:14.
     CLOSING [DR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-33592: 3 listed
+  P9 CHALLENGER LINK 6
+    EARLIER [DR3] Matthew 1:16 gives the mother's part with the verb's extended sense, "born," and names her husband at the same link.
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+33592: 4 listed
   P1 DEFENDER LINK 2
     EARLIER [CR2] Genesis 3:15 and Genesis 4:25 are withdrawn as carrying the exclusion, because Eve's "seed" there has a father who knew her.
     CLOSING [CR4] (not named)
@@ -482,18 +966,78 @@
     EARLIER [DR2] The defender withdrew Genesis 3:15 because Eve's "seed" has a father who knew her (Genesis 4:25).
     CLOSING [DR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-33605: 0 listed
-33617: 3 listed
+  P4 CHALLENGER LINK 4
+    EARLIER [DR2] LINK 1: the genealogy's verb change is read as removing the father.
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+33605: 6 listed
+  P1 DEFENDER LINK ?
+    EARLIER [CR2] [L4] The angel's remedy is the "for": the fear is removed by naming the source.
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P2 DEFENDER LINK ?
+    EARLIER [CR2] [L4] Matthew 1:16 changes the verb at the one link where the list stops saying "begat", and Matthew 1:18 at once says the birth was "on this wise", with the Holy Ghost named as the source.
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P3 CHALLENGER LINK ?
+    EARLIER [DR2] So the plan is Joseph yielding to an outward consideration.
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P4 CHALLENGER LINK ?
+    EARLIER [DR2] Joseph's mind yielded to that outward consideration (*boulomai*), and the angel answered the fear (1:20).
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P5 CHALLENGER LINK 1
+    EARLIER [DR2] -- MEANS: Joseph is her husband before the taking, and his plan yields to the public finding.
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P6 CHALLENGER LINK 4
+    EARLIER [DR3] What they yield is a consecrated thing that "shall be called" Son.
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+33617: 11 listed
   P1 DEFENDER LINK ?
     EARLIER [CR1] Matthew 1:16 drops that formula at exactly the place where a father would be named.
     CLOSING [CR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P2 DEFENDER LINK 6
+  P2 DEFENDER LINK ?
+    EARLIER [CR1] **[L2]** The Greek *apolusai* (G630) means "to release, put away."
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P3 DEFENDER LINK ?
+    EARLIER [CR1] He thought of releasing her until the angel explained its origin.
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P4 DEFENDER LINK 1
+    EARLIER [CR2] The ground the angel gives to remove it is the Holy Ghost as source.
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P5 DEFENDER LINK 5
+    EARLIER [CR2] **[L2]** *Apolusai* (G630, to release, put away) is the verb in Matthew 1:19.
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P6 DEFENDER LINK 6
     EARLIER [CR3] The limb I drop is any claim that the text names Mary's father outright.
     CLOSING [CR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P3 CHALLENGER LINK 3
+  P7 DEFENDER LINK 6
+    EARLIER [CR3] Jeremiah 22:30 bars "sitting upon the throne of David, and ruling any more in Judah", sworn with "[As] I live" (22:24).
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P8 DEFENDER LINK 6
+    EARLIER [CR3] Jeremiah 22:30 "for no man of his seed shall prosper, sitting upon the throne of David, and ruling any more in Judah."
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P9 DEFENDER LINK 6
+    EARLIER [CR3] -- [L3] Jeremiah 22:30 "sitting upon the throne of David, and ruling any more in Judah."
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P10 CHALLENGER LINK 3
     EARLIER [DR3] The limb I drop is any wording beyond the signet and the giver.
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P11 CHALLENGER LINK 3
+    EARLIER [DR3] **[L1]** Jeremiah 22:30: "for no man of his seed shall prosper, sitting upon the throne of David, and ruling any more in Judah."
     CLOSING [DR4] (not named)
     find whether the closing round asserts again what this sentence gives up
 33627: 6 listed
@@ -521,12 +1065,16 @@
     EARLIER [DR3] The "carnal commandment" set aside is the Aaronic priesthood's law, which 7:12 names as changed.
     CLOSING [DR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-33644: 1 listed
-  P1 DEFENDER LINK 4
+33644: 2 listed
+  P1 DEFENDER LINK ?
+    EARLIER [CR2] "Put away" is ἀπολύω (apolyō, "to release, divorce").
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P2 DEFENDER LINK 4
     EARLIER [CR3] At Genesis 25:23 and Romans 9:10 she is a wife who "had conceived by one," and the verse no longer calls her virgin.
     CLOSING [CR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-33682: 2 listed
+33682: 4 listed
   P1 DEFENDER LINK ?
     EARLIER [CR1] [L4] The verb that carries every earlier father-to-son link is dropped at Joseph, and the origin is traced to Mary by a feminine pronoun.
     CLOSING [CR4] (not named)
@@ -535,7 +1083,15 @@
     EARLIER [CR1] Matthew's genealogy drops the "begat" formula at Joseph and traces Jesus' birth to Mary alone.
     CLOSING [CR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-33705: 13 listed
+  P3 DEFENDER LINK 5
+    EARLIER [CR3] Jeremiah 22:30 "for no man of his seed shall prosper, sitting upon the throne of David, and ruling any more in Judah" -- MEANS: the seed of Coniah is barred from David's throne.
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P4 CHALLENGER LINK ?
+    EARLIER [DR2] **[L1]** Jeremiah 22:30: "for no man of his seed shall prosper, sitting upon the throne of David, and ruling any more in Judah."
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+33705: 15 listed
   P1 DEFENDER LINK ?
     EARLIER [CR2] **Luke 1:27.** I withdraw "on the plain statement of Luke 1:27" for Mary's Davidic descent.
     CLOSING [CR4] (not named)
@@ -569,27 +1125,67 @@
     CLOSING [CR4] (not named)
     find whether the closing round asserts again what this sentence gives up
   P9 CHALLENGER LINK ?
-    EARLIER [DR2] He withdrew Luke 1:27 as the "plain statement" of Mary's Davidic descent.
+    EARLIER [DR1] ASSUMES: *ex hēs* at Matthew 1:16 removes the male begetter.
     CLOSING [DR4] (not named)
     find whether the closing round asserts again what this sentence gives up
   P10 CHALLENGER LINK ?
-    EARLIER [DR2] He withdrew "seed reckoned to the woman" as proof.
+    EARLIER [DR2] He withdrew Luke 1:27 as the "plain statement" of Mary's Davidic descent.
     CLOSING [DR4] (not named)
     find whether the closing round asserts again what this sentence gives up
   P11 CHALLENGER LINK ?
+    EARLIER [DR2] He withdrew "seed reckoned to the woman" as proof.
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P12 CHALLENGER LINK ?
     EARLIER [DR2] He withdrew Luke 2:49 as a correction of Mary's "thy father."
     CLOSING [DR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P12 CHALLENGER LINK 1
+  P13 CHALLENGER LINK 1
     EARLIER [DR3] I drop the limb "whoever the father is."
     CLOSING [DR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P13 CHALLENGER LINK 5
+  P14 CHALLENGER LINK 2
+    EARLIER [DR3] **[L3]** The title the "therefore" yields was given before Mary's question.
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P15 CHALLENGER LINK 5
     EARLIER [DR3] Ezra 2 records the one wife's-house naming and then strikes that register (2:62).
     CLOSING [DR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-33731: 0 listed
-33750: 9 listed
+33731: 8 listed
+  P1 DEFENDER LINK 5
+    EARLIER [CR3] That the Holy Ghost's coming yields only a title.
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P2 DEFENDER LINK 5
+    EARLIER [CR3] Challenger: "The Spirit's coming yields the calling."
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P3 CHALLENGER LINK ?
+    EARLIER [DR1] of whom" removes the husband from the begetting.
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P4 CHALLENGER LINK ?
+    EARLIER [DR2] The Spirit's coming yields the calling.
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P5 CHALLENGER LINK ?
+    EARLIER [DR2] LINK 1: Matthew 1:16's passive is read as removing the husband from the begetting.
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P6 CHALLENGER LINK 1
+    EARLIER [DR2] ASSUMES: the passive "was born" with "of whom" removes the husband from the begetting.
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P7 CHALLENGER LINK 2
+    EARLIER [DR3] **LINK 2: SUPPORTED** (the premise "The Spirit's coming yields the calling")
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P8 CHALLENGER LINK 2
+    EARLIER [DR3] So the coming at 1:35 yields the calling.
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+33750: 12 listed
   P1 DEFENDER LINK ?
     EARLIER [CR1] [L1] Matthew 1:16, Luke 3:23; [L2] *egennēsen* "begat" is dropped for *ex hēs* "of whom" (feminine) and *enomizeto* "supposed"; [L3] Luke 2:48 and Luke 2:49, John 6:42.
     CLOSING [CR4] (not named)
@@ -599,31 +1195,43 @@
     CLOSING [CR4] (not named)
     find whether the closing round asserts again what this sentence gives up
   P3 DEFENDER LINK 4
+    EARLIER [CR2] for" in Matthew 1:20 removes his fear by naming the Holy Ghost as the source.
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P4 DEFENDER LINK 4
     EARLIER [CR2] I withdraw the Galatians 4:4 and Genesis 3:15 "woman alone" reading and the Luke 1:27 reading as said of Mary.
     CLOSING [CR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P4 DEFENDER LINK 5
+  P5 DEFENDER LINK 5
     EARLIER [CR3] I drop any claim that the throne-seed verses name Mary's tribe in words.
     CLOSING [CR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P5 DEFENDER LINK 5
+  P6 DEFENDER LINK 5
     EARLIER [CR3] I also drop any claim that the seed reaches the child by a man's begetting.
     CLOSING [CR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P6 DEFENDER LINK 4
+  P7 DEFENDER LINK 4
     EARLIER [CR3] I drop the claim that a row states Mary's tribe.
     CLOSING [CR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P7 DEFENDER LINK 3
+  P8 DEFENDER LINK 3
     EARLIER [CR3] I drop the claim that a verse states Heli to be Mary's father.
     CLOSING [CR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P8 CHALLENGER LINK ?
+  P9 CHALLENGER LINK ?
+    EARLIER [DR1] ASSUMES: the passive "of whom was born" removes Joseph as begetter.
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P10 CHALLENGER LINK ?
     EARLIER [DR2] The one house in these rows "called after" the wife's father is the house struck from the register.
     CLOSING [DR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P9 CHALLENGER LINK 5
+  P11 CHALLENGER LINK 5
     EARLIER [DR2] Ezra 2:62 "therefore were they, as polluted, put from the priesthood" -- MEANS: a house called after the wife's name was struck from the register -- [L3] Ezra 2:61 "which took a wife of the daughters of Barzillai the Gileadite, and was call
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P12 CHALLENGER LINK 3
+    EARLIER [DR2] LINK 2: The angel's "for" is made to remove Joseph.
     CLOSING [DR4] (not named)
     find whether the closing round asserts again what this sentence gives up
 33774: 1 listed
@@ -631,7 +1239,7 @@
     EARLIER [DR1] **[L4]** A just husband, afraid before a conception the angel names holy and of covenant origin, resolves to withdraw.
     CLOSING [DR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-33798: 5 listed
+33798: 6 listed
   P1 DEFENDER LINK 1
     EARLIER [CR3] I drop the limb that the passive verb and the feminine relative, taken alone, name who begat.
     CLOSING [CR4] (not named)
@@ -645,14 +1253,18 @@
     CLOSING [CR4] (not named)
     find whether the closing round asserts again what this sentence gives up
   P4 CHALLENGER LINK ?
+    EARLIER [DR1] The angel removes the fear and seats him as father by the naming act Luke 1:13 gives to a father.
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P5 CHALLENGER LINK ?
     EARLIER [DR2] Ezra 2:62 strikes a register reckoned by a house joined through marriage.
     CLOSING [DR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P5 CHALLENGER LINK 5
+  P6 CHALLENGER LINK 5
     EARLIER [DR2] -- MEANS: a register reckoned by a house joined through marriage was struck -- [L3] Ezra 2:61 "which took a wife of the daughters of Barzillai the Gileadite, and was called after their name" | [L2] yachas (reckoned by genealogy)
     CLOSING [DR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-33815: 7 listed
+33815: 13 listed
   P1 DEFENDER LINK ?
     EARLIER [CR2] I withdraw the lexical gloss I gave for the Hebrew word.
     CLOSING [CR4] (not named)
@@ -665,23 +1277,47 @@
     EARLIER [CR2] **Link 3.** I drop the claim that Matthew 1:25 by itself covers the time before the taking.
     CLOSING [CR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P4 DEFENDER LINK 2
+  P4 DEFENDER LINK 5
+    EARLIER [CR2] It does not by itself yield a begetting in Joseph's name.
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P5 DEFENDER LINK 6
+    EARLIER [CR2] The challenger's premise that the loins-word is the father's rests on Hebrews 7:10, where "father" is Abraham at a remove of three generations.
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P6 DEFENDER LINK 2
     EARLIER [CR3] I withdraw any claim that the two verbs by themselves name a begetting.
     CLOSING [CR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P5 CHALLENGER LINK ?
+  P7 CHALLENGER LINK ?
     EARLIER [DR2] He withdrew "alone" from D1, withdrew the claim that Matthew 1:25 covers the time before the taking, and withdrew his gloss on the Hebrew of Isaiah 7:14.
     CLOSING [DR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P6 CHALLENGER LINK ?
+  P8 CHALLENGER LINK ?
+    EARLIER [DR2] **[L3]** The defender says Hebrews 7:10 shows loins "at a remove of three generations."
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P9 CHALLENGER LINK ?
+    EARLIER [DR2] That remove is itself a chain of fathers.
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P10 CHALLENGER LINK ?
+    EARLIER [DR2] **[L4]** At every remove the loins-word runs through fathers.
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P11 CHALLENGER LINK ?
     EARLIER [DR2] A name taken after the wife's house (Ezra 2:61) was struck from the register (Ezra 2:62).
     CLOSING [DR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P7 CHALLENGER LINK 6
+  P12 CHALLENGER LINK 6
+    EARLIER [DR2] Hebrews 7:10 "For he was yet in the loins of his father" -- MEANS: the loins-word is joined to the father, and its remove runs through begetting fathers.
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P13 CHALLENGER LINK 6
     EARLIER [DR2] Ezra 2:62 "These sought their register [among] those that were reckoned by genealogy, but they were not found: therefore were they, as polluted, put from the priesthood" -- MEANS: the register named after the wife's house was struck, so the
     CLOSING [DR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-33828: 11 listed
+33828: 13 listed
   P1 DEFENDER LINK ?
     EARLIER [CR2] The active verb is dropped, the passive egennēthē ("was born") is used, and the relative ex hēs is feminine singular.
     CLOSING [CR4] (not named)
@@ -707,110 +1343,162 @@
     CLOSING [CR4] (not named)
     find whether the closing round asserts again what this sentence gives up
   P7 CHALLENGER LINK ?
+    EARLIER [DR1] **ASSUMES:** that a son "born of" a mother has his father removed.
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P8 CHALLENGER LINK ?
     EARLIER [DR1] **ASSUMES:** that God's preparing the body sets aside a father's seed.
     CLOSING [DR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P8 CHALLENGER LINK 4
+  P9 CHALLENGER LINK 3
+    EARLIER [DR2] ASSUMES: the passive "was born" with ex hēs ("out of her") removes the begetter from the line.
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P10 CHALLENGER LINK 4
     EARLIER [DR2] -- MEANS: the house called after the wife's name was struck from the register, so reckoning runs by the father's house.
     CLOSING [DR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P9 CHALLENGER LINK 5
+  P11 CHALLENGER LINK 5
     EARLIER [DR2] ASSUMES: God's preparing of the body sets aside a father's seed.
     CLOSING [DR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P10 CHALLENGER LINK 5
+  P12 CHALLENGER LINK 5
     EARLIER [DR3] I drop "a husband in awe".
     CLOSING [DR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P11 CHALLENGER LINK 5
+  P13 CHALLENGER LINK 5
     EARLIER [DR3] [L4] I grant it and have dropped the awe limb.
     CLOSING [DR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-33846: 7 listed
+33846: 11 listed
   P1 DEFENDER LINK ?
+    EARLIER [CR2] It marks the mother at Matthew 1:3, 5 and 6, so the feminine relative in 1:16 does not by itself remove Joseph.
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P2 DEFENDER LINK ?
     EARLIER [CR2] At Jesus he drops it and gives the passive with Mary alone.
     CLOSING [CR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P2 DEFENDER LINK 2
+  P3 DEFENDER LINK 2
     EARLIER [CR3] I drop any reliance on 1 John 5:1 as a proof.
     CLOSING [CR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P3 DEFENDER LINK 2
+  P4 DEFENDER LINK 2
     EARLIER [CR3] 1 Chronicles 28:6 is spoken to a father about a son he begat, and it does not carry over, so I drop it.
     CLOSING [CR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P4 DEFENDER LINK 4
+  P5 DEFENDER LINK 4
     EARLIER [CR3] I drop the wording that the father-language "does not state who begat him."
     CLOSING [CR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P5 DEFENDER LINK 5
+  P6 DEFENDER LINK 5
     EARLIER [CR3] I drop "and not a man's begetting."
     CLOSING [CR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P6 DEFENDER LINK 6
+  P7 DEFENDER LINK 6
     EARLIER [CR3] I drop the Ezra 2:61 route, since Ezra 2:62 puts those men out of the priesthood.
     CLOSING [CR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P7 CHALLENGER LINK ?
+  P8 CHALLENGER LINK ?
+    EARLIER [DR1] ASSUMES: the feminine "of whom" in Matthew 1:16 removes the father from the begetting.
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P9 CHALLENGER LINK ?
+    EARLIER [DR2] The feminine "of whom" in Matthew 1:16 does not by itself remove Joseph, as the defender said in round 2.
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P10 CHALLENGER LINK ?
     EARLIER [DR2] [L4] The defender's own example is the case the register struck.
     CLOSING [DR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-34016: 7 listed
+  P11 CHALLENGER LINK ?
+    EARLIER [DR2] **LINK 1:** The inference that the passive of Matthew 1:16 removes Joseph from the begetting, propping D1.
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+34016: 12 listed
   P1 DEFENDER LINK ?
     EARLIER [CR1] **[L4]** The active "begat" is dropped exactly where Joseph and Jesus meet.
     CLOSING [CR4] (not named)
     find whether the closing round asserts again what this sentence gives up
   P2 DEFENDER LINK ?
+    EARLIER [CR1] **[L2]** *Apolusai* (G630, "to release, put away") describes a plan to end the betrothal.
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P3 DEFENDER LINK ?
+    EARLIER [CR2] *Apolyō* (G630) means "to release, put away."
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P4 DEFENDER LINK ?
+    EARLIER [CR2] The reason that removes Joseph's fear is the source, *ek pneumatos hagiou* (G1537, "out of"; G4151, "spirit").
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P5 DEFENDER LINK ?
+    EARLIER [CR2] **[L1] Matthew 1:16:** the pedigree stops saying "begat" at the last link.
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P6 DEFENDER LINK ?
     EARLIER [CR2] I withdraw **Genesis 3:15** as proof of anything alone.
     CLOSING [CR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P3 DEFENDER LINK 6
+  P7 DEFENDER LINK 6
     EARLIER [CR3] I drop the claim that any row states Mary's house or tribe.
     CLOSING [CR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P4 DEFENDER LINK 1
+  P8 DEFENDER LINK 1
     EARLIER [CR3] I drop the claim that 1:25 alone covers the span from the finding.
     CLOSING [CR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P5 DEFENDER LINK 5
+  P9 DEFENDER LINK 5
     EARLIER [CR3] I drop the claim that the verb always marks an error.
     CLOSING [CR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P6 CHALLENGER LINK ?
+  P10 CHALLENGER LINK ?
     EARLIER [DR1] The New Testament gives it three occasions: the resurrection, "he hath raised up Jesus again" (Acts 13:33); the priesthood (Hebrews 5:5); and beside 2 Samuel 7:14 (Hebrews 1:5).
     CLOSING [DR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P7 CHALLENGER LINK 2
+  P11 CHALLENGER LINK 2
     EARLIER [DR3] I drop the limb that names what Joseph knew of the cause.
     CLOSING [DR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-34108: 7 listed
-  P1 DEFENDER LINK 1
+  P12 CHALLENGER LINK 5
+    EARLIER [DR3] [L3] At Acts 1:8 *eperchomai* yields "power… and ye shall be witnesses".
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+34108: 9 listed
+  P1 DEFENDER LINK ?
+    EARLIER [CR2] That reason removes the cause for putting away by naming a source other than him.
+    CLOSING [CR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P2 DEFENDER LINK 1
     EARLIER [CR3] I drop the limb that Matthew 1:25 alone spans the espousal, and I rest nothing on "till" by itself.
     CLOSING [CR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P2 DEFENDER LINK 2
+  P3 DEFENDER LINK 2
     EARLIER [CR3] I drop the broader claim that justice could never move a husband who knew the child to be his.
     CLOSING [CR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P3 DEFENDER LINK 3
+  P4 DEFENDER LINK 3
     EARLIER [CR3] I drop the word "alone."
     CLOSING [CR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P4 DEFENDER LINK 4
+  P5 DEFENDER LINK 4
     EARLIER [CR3] I drop the wording "closes the espousal to any knowing."
     CLOSING [CR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P5 DEFENDER LINK 5
+  P6 DEFENDER LINK 5
     EARLIER [CR3] I drop the claim that the Hebrew word by itself fixes the manner.
     CLOSING [CR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P6 DEFENDER LINK 6
+  P7 DEFENDER LINK 6
     EARLIER [CR3] I drop the wording "no biological father" as a bare statement.
     CLOSING [CR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-  P7 CHALLENGER LINK 4
+  P8 CHALLENGER LINK ?
+    EARLIER [DR1] The two senses interlock; neither removes the other.
+    CLOSING [DR4] (not named)
+    find whether the closing round asserts again what this sentence gives up
+  P9 CHALLENGER LINK 4
     EARLIER [DR3] I drop any wording that makes the two children one child.
     CLOSING [DR4] (not named)
     find whether the closing round asserts again what this sentence gives up
-39 debates, 194 listings
+39 debates, 366 listings

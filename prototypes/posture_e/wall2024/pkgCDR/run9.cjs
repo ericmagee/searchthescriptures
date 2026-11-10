@@ -1,4 +1,4 @@
-// pkgCDR rev 9 (W1): for every labeled case (my cases.json rev2 set, W2's cases.json, W3's case files), the case's earlier-round sentences are added to
+// pkgCDR rev 9-10 (W1): for every labeled case (my cases.json rev2 set, W2's cases.json, W3's case files), the case's earlier-round sentences are added to
 // run 34108 and Close Enforcer Build is run. A case's drop REACHES the enforcer when a P candidate of the case's side holds the added sentence whole.
 // Under rev 9 every label LISTED must reach the enforcer (no true drop hidden); a label NOT LISTED that reaches it is a candidate the enforcer rules on.
 process.chdir(__dirname+'/..');const fs=require('fs');const {harness}=require('../pkgGSL/harness.cjs');

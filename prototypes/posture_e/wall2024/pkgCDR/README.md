@@ -1,4 +1,22 @@
-# pkgCDR rev 9 (W1): feed the closing contradiction enforcer (item A countermeasure)
+# pkgCDR rev 10 (W1): feed the closing contradiction enforcer (item A countermeasure)
+
+## Rev 10 (W2 FAIL of rev 9: 31 true drops used verbs outside the list, 2 split forms, 1 past the cap; coordinator 04:58Z, weighed on the Wall 4023)
+- No code filter decides whether a drop reaches the enforcer: it already receives every round in full. The prompt gains one passage: read every
+  sentence of each side's rounds 1 to 3 for anything given up, in any words, with or without a verb of giving up, wherever the wording stands
+  (same sentence, next sentence, a list below); each thing given up and asserted again in the closing round is a contradiction, reported as NEW
+  when not among the candidates; the P candidates are HINTS from a code check and are NOT COMPLETE; how to answer a hint (CONFIRMED with the
+  closing quoted, or NOT A CONTRADICTION with CLOSING [<round 4>] "").
+- Hints: the rev 9 sentences, no cap, W2's verbs added (yield, cede, scrap, remove, omit, shelve, release, retire, step back, off the table,
+  jettison, repudiate, disclaim, delete, excise, unsay, recede from, part with, lay down, back off, let ... fall, leave ... behind, cut ... from,
+  stop claiming, cease to, done with, gone from, to one side, any more). "concede" is left out: it marks the side's grants throughout the
+  debates and would list them all.
+- Hint coverage (run10.txt): 213 of 214 labeled true drops are hinted; the one not hinted (W2's W131 "I concede ... to the challenger") still
+  reaches the enforcer in the full round.
+- Prompt size (size_CDR.txt, 35 stored debates with a closing round): added 1,319 to 9,502 characters, median 4,712, mean 4,573 (about 1,100
+  tokens at 4 characters a token, an estimate); the live prompt averages 143,384 characters, so the call is 3.2% larger on average. Hints per
+  debate (corpus_CDR.txt): 1 to 24, median 11; 366 in all.
+- Record 5 OK (the D6 hint found by its text; counts no longer fixed). Row shapes unchanged from rev 9 (rolled-back insert of the four shapes:
+  rows 4, recorded true). pkgCEC probe 62 OK, 8 FAIL (the same 8).
 
 ## Rev 9 (W2 FAIL of rev 8, Wall 4014: 21 true drops hidden; W3 FAIL, grade_CDR8_w3.md: 14 hidden by the opponent, negation and strike rules, 9 short
 ## wordings no wording match can cover). Option (b), weighed on the Wall (4015): the code stops extracting the wording.
