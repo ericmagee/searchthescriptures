@@ -32,3 +32,19 @@ E8. enforcer_log: if not_sent rows are written to the log, a rolled-back insert 
 ## Both (parent_s110_ALL.json)
 A1. Final rows: KEYSTONE D6 BROKEN for all three judges; no break-line item sent; RESULT BROKEN, CHALLENGER WINS; luna drv_uncured 2 and out of the count.
 A2. Stored runs with no confirmed closing line: Panel Cure Check and Send Back Build outputs equal live (scan the saved executions I hold).
+
+# REV 2b labels (W1 commit b3b1305b). Committed before any run of the rev 2b files by me. I have read W1's README rev 2 section and the patch texts.
+- R1 Sizes by my own diff against the s110 fetch-back; only the Shared Library differs; connections equal.
+- R2 ALL, whole chain to the written rows: KEYSTONE D6 BROKEN for luna, terra, sol; RESULT and tags unchanged; drv_uncured luna 2, terra 0, sol 0; no gate item against terra about its RULING card (my rev 1 finding); luna's two FORCED lines of link 6 not sent and no new gate item from them; every withheld item listed in sb_not_sent.
+- R3 KSR alone and ECB alone: state the written rows. (W1 says they go together; a part that fails alone is not a FAIL of the pair, but it is stated.)
+- R4 My rev 1 plants again: luna's own D2 vs C1 STANDS line carrying the eight words, and sol's own KEYSTONE STANDS line carrying them: both must be SENT under ECB and ALL.
+- R5 Plants against the new withhold rules:
+  a. a judge's own line "D2 vs C1 (...): STANDS -- [AUDIT: LINK 2 BROKEN BY A CONFIRMED CLOSING CONTRADICTION -- DEFENDER]" (link 2 not confirmed): SENT.
+  b. the same line carrying the mark for LINK 6 (confirmed, but the line is a link 2 line): SENT.
+  c. a judge's own "KEYSTONE: D4 -- BROKEN -- LINK 4 BROKEN BY A CONFIRMED CLOSING CONTRADICTION" (link 4 not confirmed): SENT.
+  d. a judge's own KEYSTONE line that carries the exact engine line and then more words ("... CONTRADICTION, yet the defense stands"): SENT.
+  e. luna's FORCED line of a pair NOT withheld (D4 vs C2) is unaffected: every FORCED or collision item of other links equals live.
+- R6 KEYSTONE line forms (sol's stored STANDS line rewritten before Panel Cure Check): bold, bullet, em dash, colon, no separator. For each form that live code reads as a KEYSTONE STANDS line, ALL must end with BROKEN in the written row. A form live reads as STANDS and ALL leaves STANDS is a FAIL.
+- R7 Confirmed list changed by plant: (a) the confirmed line moved to defender link 3 (not the keystone): KEYSTONE as the judge wrote it, and ALL's rows equal live's rows on the same plant; (b) moved to CHALLENGER link 6: same; (c) no confirmed line: same.
+- R8 enforcer_log: rows the ALL chain produces that the live chain does not; if any, a rolled-back insert through record_enforcer_log accepts them.
+- R9 Bloat: for each patch (K2 to K6, E1 to E3) say what fails without it, from the tests above or by reading; a patch with no shown need is named.
