@@ -1,0 +1,102 @@
+=== Panel Cure Check KSR
+lines only in base: 4; only in candidate: 10
+- .0.bodies.1.payload.verdict_raw |   "reasoning": "SUPERSEDED BY CURE: verdict HELD to BROKEN; see the cure lines below\nHELD -- [L1] Matthew 1:20 states that what was conceived in Mary was of the Holy Ghost. [L3] Romans 1:3 stat
+- .0.bodies.1.payload.verdict_raw | [AUDIT v25: RECOMPUTED AFTER CURE -- SEAT: chatgpt; TRIGGER: CLOSE-CONTRADICTION D6 vs C5 (UNDERDETERMINED to DEFENDER LINK BROKEN), CLOSE-CONTRADICTION D6 vs C6 (UNDERDETERMINED to DEFENDER LIN
+- .0.bodies.2.payload.verdict_raw |   "reasoning": "SUPERSEDED BY CURE: verdict HELD to BROKEN; see the cure lines below\nHELD. [L1][L3] The conception accounts, descent accounts, and household descriptions remain in the record to
+- .0.bodies.2.payload.verdict_raw | [AUDIT v25: RECOMPUTED AFTER CURE -- SEAT: sol; TRIGGER: CLOSE-CONTRADICTION D6 vs C5 (UNDERDETERMINED to DEFENDER LINK BROKEN), CLOSE-CONTRADICTION D6 vs C6 (UNDERDETERMINED to DEFENDER LINK BR
++ .0.bodies.1.payload.verdict_raw |   "reasoning": "SUPERSEDED BY CURE: verdict HELD to BROKEN; see the cure lines below\nHELD -- [L1] Matthew 1:20 states that what was conceived in Mary was of the Holy Ghost. [L3] Romans 1:3 stat
++ .0.bodies.1.payload.verdict_raw | [AUDIT v25: RECOMPUTED AFTER CURE -- SEAT: chatgpt; TRIGGER: CLOSE-CONTRADICTION D6 vs C5 (UNDERDETERMINED to DEFENDER LINK BROKEN), CLOSE-CONTRADICTION D6 vs C6 (UNDERDETERMINED to DEFENDER LIN
++ .0.bodies.1.payload.verdict_raw | [AUDIT v27: SUPERSEDED LINE -- SEAT: chatgpt; LABEL: KEYSTONE; ORIGINAL: KEYSTONE: D6 -- STANDS -- The declared conclusion that Christ had no biological father was retained on stated rows and ha
++ .0.bodies.1.payload.verdict_raw | [AUDIT v39: K-RECHK -- SEAT: chatgpt; CHANGE: KEYSTONE D6; RULE: K-CMT; NEW: a contested grade line that names no Commitment N; LINE: KEYSTONE: D6 -- BROKEN -- LINK 6 BROKEN BY A CONFIRMED CLOSI
++ .0.bodies.2.payload.verdict_raw |   "reasoning": "SUPERSEDED BY CURE: verdict HELD to BROKEN; see the cure lines below\nHELD. [L1][L3] The conception accounts, descent accounts, and household descriptions remain in the record to
++ .0.bodies.2.payload.verdict_raw | [AUDIT v25: RECOMPUTED AFTER CURE -- SEAT: sol; TRIGGER: CLOSE-CONTRADICTION D6 vs C5 (UNDERDETERMINED to DEFENDER LINK BROKEN), CLOSE-CONTRADICTION D6 vs C6 (UNDERDETERMINED to DEFENDER LINK BR
++ .0.bodies.2.payload.verdict_raw | [AUDIT v27: SUPERSEDED LINE -- SEAT: sol; LABEL: KEYSTONE; ORIGINAL: KEYSTONE: D6 -- STANDS -- The conclusion that Christ had no biological father remains an exhibited inference from the concept
++ .0.bodies.2.payload.verdict_raw | [AUDIT v39: K-RECHK -- SEAT: sol; CHANGE: KEYSTONE D6; RULE: K-CMT; NEW: a contested grade line that names no Commitment N; LINE: KEYSTONE: D6 -- BROKEN -- LINK 6 BROKEN BY A CONFIRMED CLOSING C
++ .0.summary.1.recomputed.trigger.2 | KEYSTONE D6 (STANDS to BROKEN)
++ .0.summary.2.recomputed.trigger.2 | KEYSTONE D6 (STANDS to BROKEN)
+=== Alternate Merge Seat KSR
+lines only in base: 41; only in candidate: 87
+- .0.bodies.0.payload.verdict_raw | {"verdict_tag":"BROKEN","defense_standing":"PROP-DEPENDENT","challenge_standing":"SELF-SUPPORTED","conceded_links":0,"challenger_conceded_links":0,"counted_premises_defender":[],"counted_premise
+- .0.bodies.0.payload.verdict_raw | [AUDIT v37: SEND-BACK APPLIED (E-APPLY; WALL-2024 2236, 2237) -- SEAT: luna; APPLIED: S1, G3, G4, S4, S5, S6, S7, S8, S11, S12, S9, S15, G5, S17, G1, G2, KEYSTONE (derived); G3 replaces S2 on th
+- .0.bodies.0.payload.verdict_raw | [AUDIT v27: SUPERSEDED LINE -- SEAT: luna; LABEL: D6 VS C5; ORIGINAL: D6 vs C5 (Romans 1:3): DEFENDER LINK BROKEN -- (AUDIT: LINK 6 BROKEN BY A CONFIRMED CLOSING CONTRADICTION -- DEFENDER -- EAR
+- .0.bodies.0.payload.verdict_raw | [AUDIT v27: SUPERSEDED LINE -- SEAT: luna; LABEL: LINE; ORIGINAL: FORCED: D6 vs C5 -- MEANS (DR2): “The flesh is therefore of the flesh line.” -- ANSWER (CR4): “A descent from David's loin
+- .0.bodies.0.payload.verdict_raw | [AUDIT v27: SUPERSEDED LINE -- SEAT: luna; LABEL: KEYSTONE; ORIGINAL: KEYSTONE: D6 -- BROKEN -- D6, the conclusion that Christ had no biological father, is broken by the confirmed closing contra
+- .0.bodies.0.payload.verdict_raw | [AUDIT v39: K-RECHK -- SEAT: luna; CHANGE: KEYSTONE (derived); RULE: K-CMT; ALREADY IN THE ORIGINAL: a contested grade line that names no Commitment N; LINE: KEYSTONE: D6 -- STANDS -- derived by
+- .0.summary.0.sb_applied.applied.5 | S6
+- .0.summary.0.sb_applied.applied.6 | S7
+- .0.summary.0.sb_applied.applied.7 | S8
+- .0.summary.0.sb_applied.applied.8 | S11
+- .0.summary.0.sb_applied.applied.9 | S12
+- .0.summary.0.sb_applied.applied.10 | S9
+- .0.summary.0.sb_applied.applied.11 | S15
+- .0.summary.0.sb_applied.applied.12 | G5
+- .0.summary.0.sb_applied.applied.13 | S17
++ .0.bodies.0.payload.verdict_raw | {"verdict_tag":"BROKEN","defense_standing":"PROP-DEPENDENT","challenge_standing":"SELF-SUPPORTED","conceded_links":0,"challenger_conceded_links":0,"counted_premises_defender":[],"counted_premise
++ .0.bodies.0.payload.verdict_raw | [AUDIT v37: SEND-BACK APPLIED (E-APPLY; WALL-2024 2236, 2237) -- SEAT: luna; APPLIED: S1, G3, G4, S4, S5, S8, S11, S12, S9, S15, G5, S17, G1, G2; G3 replaces S2 on the same line (the last change
++ .0.bodies.0.payload.verdict_raw | [AUDIT v37: SEND-BACK ITEM -- SEAT: luna; S6; CONTRADICTION: KEYSTONE D6 BROKEN while no D6 collision line is graded DEFENDER LINK BROKEN, and its GROUND quotes no defender grant found in the na
++ .0.bodies.0.payload.verdict_raw | [AUDIT v37: SEND-BACK ITEM -- SEAT: luna; S7; NOT APPLIED: the collision line of D6 vs C5 is still graded DEFENDER LINK BROKEN (its change was not applied), and a broken link keeps its FORCED li
++ .0.summary.0.sb_applied.applied.5 | S8
++ .0.summary.0.sb_applied.applied.6 | S11
++ .0.summary.0.sb_applied.applied.7 | S12
++ .0.summary.0.sb_applied.applied.8 | S9
++ .0.summary.0.sb_applied.applied.9 | S15
++ .0.summary.0.sb_applied.applied.10 | G5
++ .0.summary.0.sb_applied.applied.11 | S17
++ .0.summary.0.sb_applied.applied.12 | G1
++ .0.summary.0.sb_applied.applied.13 | G2
++ .0.summary.0.sb_applied.items.2.sid | S6
++ .0.summary.0.sb_applied.items.2.kind | CONTRADICTION
+=== Gate Record KSR
+lines only in base: 5; only in candidate: 37
+- .0.gate.seats.0.fresh | 2
+- .0.gate_rows.5.item | NEW RULE K-G4 (K re-read)
+- .0.gate_rows.5.cure_reason | raised after the gate answers: DEBATE RULE VIOLATION (K-G4) -- D4 vs C2 DEFENDER LINK BROKEN counts a witness as unanswered; the rule counts it only with the quoted pressing sentence and its round, a
+- .0.gate_rows.6.item | NEW RULE K-F (K re-read)
+- .0.gate_rows.6.cure_reason | raised after the gate answers: no FORCED line (raised by the gate change of G5, which stays UNCURED and is counted there once; W3 2341)
++ .0.bodies.0.payload.verdict_raw | [AUDIT v38: E-GATE NEW ITEM -- SEAT: luna; CONTRADICTION (E-APPLY S6): KEYSTONE D6 BROKEN while no D6 collision line is graded DEFENDER LINK BROKEN, and its GROUND quotes no defender grant found
++ .0.bodies.0.payload.verdict_raw | [AUDIT v38: E-GATE NEW ITEM -- SEAT: luna; NOT APPLIED (E-APPLY S7): the collision line of D6 vs C5 is still graded DEFENDER LINK BROKEN (its change was not applied), and a broken link keeps its
++ .0.gate.seats.0.fresh | 4
++ .0.gate_rows.5.item | NEW CONTRADICTION (E-APPLY S6)
++ .0.gate_rows.5.cure_reason | raised after the gate answers: KEYSTONE D6 BROKEN while no D6 collision line is graded DEFENDER LINK BROKEN, and its GROUND quotes no defender grant found in the named defender round and names no pre
++ .0.gate_rows.6.item | NEW NOT APPLIED (E-APPLY S7)
++ .0.gate_rows.6.cure_reason | raised after the gate answers: the collision line of D6 vs C5 is still graded DEFENDER LINK BROKEN (its change was not applied), and a broken link keeps its FORCED line (ruling 411; pkgRFL, rechecked
++ .0.gate_rows.7.run_token | ODV1-34108-3to8dgrt
++ .0.gate_rows.7.seat | luna
++ .0.gate_rows.7.seat_role | panel
++ .0.gate_rows.7.judge_model | openai/gpt-6-luna
++ .0.gate_rows.7.kind | send_back
++ .0.gate_rows.7.rule | E-GATE
++ .0.gate_rows.7.item | NEW RULE K-G4 (K re-read)
++ .0.gate_rows.7.flagged_line | null
+=== Send Back Build ECB
+lines only in base: 331; only in candidate: 171
+- .0.items.5.line | D6 vs C5 (Romans 1:3): DEFENDER LINK BROKEN -- [AUDIT: LINK 6 BROKEN BY A CONFIRMED CLOSING CONTRADICTION -- DEFENDER -- EARLIER [CR3] "I drop the wording 'no biological father' as a bare statement. I rest it o
+- .0.items.5.reason | (right: STANDS): The FORCED answer "A descent from David's loins that comes by Mary is the descent the rows state" agrees with "The flesh is therefore of the flesh line" and "made of the seed of David accordi
+- .0.items.5.ecl.applies | true
+- .0.items.5.ecl.forced | false
+- .0.items.5.ecl.l1 | NONE
+- .0.items.5.ecl.l2 | NONE
+- .0.items.5.ecl.meaning | false
+- .0.items.5.ecl.faults.0 | no [L1]: no verse is quoted with its reference under an [L1] tag
+- .0.items.5.ecl.why | no [L1]: no verse is quoted with its reference under an [L1] tag
+- .0.items.5.ecl.ds | true
+- .0.items.6.item | COLLISION D6 vs C5
+- .0.items.6.line | FORCED: D6 vs C5 -- MEANS [DR2]: “The flesh is therefore of the flesh line.” -- ANSWER [CR4]: “A descent from David's loins that comes by Mary is the descent the rows state, with no biological father need
+- .0.items.6.reason | (right: STANDS): The answer "A descent from David's loins that comes by Mary is the descent the rows state" carries the flesh-line meaning, so FAILS "with no biological father needed to complete it" does not 
+- .0.items.7.rule | E-COL
+- .0.items.7.item | COLLISION D6 vs C6
++ .0.items.5.line | FORCED: D6 vs C5 -- MEANS [DR2]: “The flesh is therefore of the flesh line.” -- ANSWER [CR4]: “A descent from David's loins that comes by Mary is the descent the rows state, with no biological father need
++ .0.items.5.reason | (right: STANDS): The answer "A descent from David's loins that comes by Mary is the descent the rows state" carries the flesh-line meaning, so FAILS "with no biological father needed to complete it" does not 
++ .0.items.5.ecl | null
++ .0.items.6.item | COLLISION D6 vs C6
++ .0.items.6.line | FORCED: D6 vs C6 -- MEANS [DR2]: “The reckoning by usage is a house-of-the-fathers reckoning.” -- ANSWER [CR4]: “The household acts by the custom of the law.” -- FAILS: “These rows name the pair who a
++ .0.items.6.reason | (right: STANDS): The CODE CHECK states the MEANS "The reckoning by usage is a house-of-the-fathers reckoning" is a verse re-quoted with "no run of 6 words standing in [DR2]," and the answer "The household act
++ .0.items.7.rule | E-HOLD
++ .0.items.7.item | COLLISION D2 vs C1
++ .0.items.7.line | D2 vs C1 (Matthew 1:19): STANDS -- the defender narrowed this to Joseph’s resolve concerning a pregnancy found before the pair came together, and answered the witnesses in [CR3]; the text does not make his mo
++ .0.items.7.reason | (right: BROKEN): FORCED: D2 vs C1 -- MEANS [CR3]: "the stated grounds are equity and sparing her the infamy of a pregnancy found before the taking." -- ANSWER [CR3]: "I grant the legal title in the espousal."
++ .0.items.7.ecl | null
++ .0.items.8.rule | E-UNG
++ .0.items.8.item | COLLISION D2 (pressed: [DR2] premise 2)
++ .0.items.8.line | (no COLLISION POINTS line for D2)
++ .0.items.8.reason | MISSING COLLISION GRADE (E-UNG, ENFORCED, pkgUND): the challenger presses D2 in the list that closes [DR2], and your COLLISION POINTS has no graded D2 vs C<j> line. A "D2: STANDS" line does not grade a presse

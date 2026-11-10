@@ -1,0 +1,10 @@
+process.chdir('/home/claude/searchthescriptures/prototypes/posture_e/wall2024');
+const fs=require('fs');const run=require('./run_node.cjs');
+const X=JSON.parse(fs.readFileSync('/mnt/project-files/wall2024/ex34626_full.json','utf8'));const rd=(X.data||X).resultData.runData;
+const src=(set,n)=>fs.readFileSync('pkgLIB/strip_'+set+'/patched/'+n.replace(/ /g,'_')+'.js','utf8');
+const flat=(o,p,acc)=>{if(typeof o==='string'){let v=o;try{if(/^[\[{]/.test(v)){flat(JSON.parse(v),p,acc);return;}}catch(e){}v.split('\n').forEach((l,i)=>acc.push(p+'#'+l));}else if(o&&typeof o==='object')for(const k in o)flat(o[k],p+'.'+k,acc);else acc.push(p+'='+o);return acc;};
+(async()=>{const n=process.argv[2];const a=flat(await run(src('R1',n),n,rd),'',[]),b=flat(await run(src(process.argv[3],n),n,rd),'',[]);
+ const A=new Map();a.forEach(x=>A.set(x,(A.get(x)||0)+1));const B=new Map();b.forEach(x=>B.set(x,(B.get(x)||0)+1));
+ const only=(M,N)=>[...M].filter(([k,v])=>(N.get(k)||0)<v).map(([k])=>k);
+ const oa=only(A,B),ob=only(B,A);console.log('lines only in base: '+oa.length+'; only in candidate: '+ob.length);
+ const sh=x=>x.replace(/^(\.[^#=]*)[#=]/,'$1 | ').slice(0,260);oa.slice(0,15).forEach(x=>console.log('- '+sh(x)));ob.slice(0,15).forEach(x=>console.log('+ '+sh(x)));})();
