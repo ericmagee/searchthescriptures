@@ -15,13 +15,13 @@ Every pair found by the close-round reversal check and by the anti-cheat check i
 ## Size (measured, rev 2)
 | Part | Before | After | Change |
 |---|---|---|---|
-| Close Enforcer Build | 7,940 | 9,491 | +1,551 |
+| Close Enforcer Build | 7,940 | 9,514 | +1,574 |
 | Close Enforcer Record | 11,649 | 12,220 | +571 |
 | Anticheat Build | 8,322 | 8,479 | +157 |
 | Anticheat Record | 4,157 | 4,373 | +216 |
 | Panel Build | 174,249 | 174,778 | +529 |
 | Build Independent Verdict | 143,664 | 143,623 | -41 |
-| Code total | | | +2,983 (rev 1 was +2,452) |
+| Code total | | | +3,006 (rev 1 was +2,452) |
 - Connections changed: 4. Nodes: 418 (none added). Model calls: none added.
 - Closing enforcer prompt over the 35 stored debates: +10,156 characters on 5,044,040 (+0.201%), mean +290 per debate (rev 1: +12,112); 17 of 35 prompts equal live (no pair).
 - Judges' prompt: no growth unless the enforcer answers no on a pair (+78 characters per block, less 4 to 7 saved by the shorter sentence).
@@ -32,6 +32,7 @@ Every pair found by the close-round reversal check and by the anti-cheat check i
 3. W4's minor note: a pair answered both ways now ends "examined ... did not confirm". Plant P28.
 4. W1 note 1: the reason on a handed pair no longer states a conclusion. An anti-cheat pair carries its verse only; a reversal pair carries nothing.
 5. W1 note 3: Anticheat Build and Anticheat Record are wrapped so that a failure skips the check with a stated reason (shown in the AUDIT ANTI-CHEAT line) and never stops the debate. Same output as live on 38 of 38 stored debates. Plants P33 to P36.
+6. W1, Wall 4122: the reversal code is cut from Panel Build's source between two code marks ('const REFP=' and the end of the C4X block), not at a comment, so the approved comment strip (R2) does not break it. Plant P37 (Panel Build with its comment lines removed: same candidates).
 
 ## Parts
 1. Connections, so the anti-cheat call runs before the closing enforcer: Quote Report to Anticheat Build; Anticheat Only? (false) to Close Enforcer Build; Regrade After Quotes? (true) to Panel Build; Check Save to Panel Build.
@@ -49,13 +50,13 @@ Every pair found by the close-round reversal check and by the anti-cheat check i
 1. The enforcer's reading of the new candidates is unproven. In set C (W3 reading, /mnt/project-files/w3/setBC_reading_w3.md) the closing enforcer, not handed the anti-cheat pairs, found them in 0 of 5 debates and returned 1 false and 2 doubtful CONFIRMED lines of 23. Handing the pair as a candidate forces an answer on it; whether the answer is right needs the replay below.
 2. The candidate line says "LINK (you name it)". If the enforcer echoes that, the line is recorded NO ANSWER and the pair reads "not examined".
 3. Ellipsis quotations: the part kept can be the neutral one (W2's note on pkgCFP).
-4. If Panel Build is ever moved into the Shared Library, the reversal read fails and is logged NOT CHECKED (loud, not silent). W1's pkgR1 does not move Panel Build.
+4. Close Enforcer Build reads Panel Build's code text; it is the first node to read another node's code (W1). If Panel Build is ever moved into the Shared Library (R1b), the reversal read fails and is logged NOT CHECKED (loud, not silent), and pkgRAC must be rebuilt to read the library. W1's pkgR1 does not move Panel Build.
 5. The "[round N]" label form (W4, Wall 4107) is not handled here; W2's fix covers it in the same node (Close Enforcer Record). Whichever is written second is rebuilt on the other.
 
 ## Difference from pkgCFP rev 2 (W1, shelf)
 pkgCFP sends the anti-cheat pairs to the post-panel judge contradiction enforcer, after the judges have graded, and leaves the reversal pairs out. pkgRAC sends both kinds to the closing enforcer before any judge, so a confirmed pair breaks the link before grading, and it changes the block wording the operator approved. If pkgRAC is written, pkgCFP is not needed.
 
-## Tests (pkgRAC/test_RAC.cjs, output test_RAC.txt): ALL OK, 75 checks
+## Tests (pkgRAC/test_RAC.cjs, output test_RAC.txt): ALL OK, 77 checks
 - T1 the four connections. T2 Build on the 35 stored debates: 34 anti-cheat pairs in 16 debates and 2 reversal pairs in 2 debates all sent, 0 not sent.
 - T3 Record plants P1 to P9 (confirmed A and R ids, not a contradiction, wrong link, quotation not standing, NOT SENT row).
 - T4 Panel Build on 34 stored debates: 16 equal live, 18 differ only in the last sentence of a block (and the character count field). Build Independent Verdict: 32 equal, 2 differ in the reversal ending only; never shows the anti-cheat block. P10 to P17 the three endings and the removal of a confirmed pair.

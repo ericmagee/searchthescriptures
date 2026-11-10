@@ -106,7 +106,7 @@ const cnt=(s,re)=>(s.match(re)||[]).length;
  s=await pba('CLOSE-CONTRADICTION: NONE');ok(blocks(s)===b0&&!/The closing enforcer examined/.test(s)&&!/The close sentence is disregarded/.test(s),'P17 anti-cheat pairs not answered: second sentence only');}
 
 // ---------- T5 failure paths in Close Enforcer Build
-{const r='34108',F=B8.F;const W2=JSON.parse(JSON.stringify(CAND));const p=W2.nodes.find(z=>z.name==='Panel Build');p.parameters.jsCode=p.parameters.jsCode.replace('// cacheall','// moved');
+{const r='34108',F=B8.F;const W2=JSON.parse(JSON.stringify(CAND));const p=W2.nodes.find(z=>z.name==='Panel Build');p.parameters.jsCode=p.parameters.jsCode.replace('const REFP=','const REFQ=');
  const b=mrg(run(W2,r,'Close Enforcer Build',BO(r,F)));ok(!b.cec_skip&&b.not_sent.some(x=>/the reversal pairs: /.test(x))&&!b.cands.some(c=>/^R/.test(c.id)),'P18 Panel Build source without the reversal check: the enforcer still runs, the loss is listed: '+JSON.stringify(b.not_sent));
  const R=rec(r,F,b,'CLOSE-CONTRADICTION: NONE');ok(R.cec_log.some(x=>x.item==='NOT SENT'&&/NOT CHECKED/.test(x.cure_reason)),'P19 Record logs it NOT CHECKED: '+JSON.stringify(R.cec_log.filter(x=>x.item==='NOT SENT').map(x=>x.cure_reason)));
  const AR=cl(saved(acRun,'Anticheat Record'));const row=(AR[0].json.acx.reversed.D[0]||AR[0].json.acx.reversed.C[0]);const sd=AR[0].json.acx.reversed.D[0]?'D':'C';
@@ -145,6 +145,9 @@ const cnt=(s,re)=>(s.match(re)||[]).length;
  const o2=run(CAND,acRun,'Anticheat Record',{'Anticheat Build':[J(o[0].json)]},'Anticheat Call deepseek');ok(o2[0].json.acx.skipped===true&&/Anticheat Build failed/.test(o2[0].json.acx.why),'P34 the Record carries the reason: '+o2[0].json.acx.why);
  let thr2=false;const bad={'Anticheat Build':null};try{run(LIVE,acRun,'Anticheat Record',bad,'Anticheat Call deepseek');}catch(e){thr2=true;}const o3=run(CAND,acRun,'Anticheat Record',bad,'Anticheat Call deepseek');ok(thr2&&o3[0].json.acx.skipped===true&&o3[0].json.acx_only===false&&/Anticheat Record failed/.test(o3[0].json.acx.why),'P35 Anticheat Record fails (live throws: '+thr2+'): candidate skips: '+o3[0].json.acx.why);
  const b=mrg(run(CAND,acRun,'Close Enforcer Build',BO(acRun,BA.F,{'Anticheat Record':o3})));ok(!b.cec_skip&&!b.cands.some(c=>/^A/.test(c.id)),'P36 after a failed anti-cheat check the closing enforcer still builds, with no A pair');}
+// ---------- T9 rev 2 (W1 4122): the reversal read survives a comment strip of Panel Build (R2)
+{const W3=JSON.parse(JSON.stringify(CAND));const p=W3.nodes.find(z=>z.name==='Panel Build');const n0=p.parameters.jsCode.length;p.parameters.jsCode=p.parameters.jsCode.split('\n').filter(l=>!/^\s*\/\//.test(l)).join('\n').replace(/\/\/ cacheall[^\n]*/g,'');
+ for(const r of ['34108','33575']){const b=mrg(run(W3,r,'Close Enforcer Build',BO(r,builds[r].F)));ok(!b.not_sent.length&&JSON.stringify(b.cands)===JSON.stringify(builds[r].C.cands),'P37 '+r+' with Panel Build\'s comment lines and the cacheall mark removed ('+n0+' -> '+p.parameters.jsCode.length+'): same candidates, nothing lost');}}
 console.log(fails?('FAILURES: '+fails):'ALL OK');
 
 })().catch(e=>{console.log("TEST ERROR "+e.stack);});

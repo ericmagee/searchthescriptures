@@ -184,4 +184,6 @@ OK   P33 Anticheat Build fails (live throws: true): candidate skips the check: A
 OK   P34 the Record carries the reason: Anticheat Build failed: Referenced node is unexecuted: Init Seats
 OK   P35 Anticheat Record fails (live throws: true): candidate skips: Anticheat Record failed: Referenced node is unexecuted: Anticheat Build
 OK   P36 after a failed anti-cheat check the closing enforcer still builds, with no A pair
+OK   P37 34108 with Panel Build's comment lines and the cacheall mark removed (174778 -> 156147): same candidates, nothing lost
+OK   P37 33575 with Panel Build's comment lines and the cacheall mark removed (174778 -> 156147): same candidates, nothing lost
 ALL OK
