@@ -52,3 +52,12 @@ My rev 2 PASS was wrong. My cases planted only the "verb then nothing/none" clas
   - False listings (3), same conditional family: W41 "... in case the rows fail; they do not." / W42 "... on condition that the challenger shows the gap; he has not." / W45 "... should the rows fail, and they stand."
   - Safe misses (3): W17; W46 "I drop the wording "..."; if the challenger objects, so be it." and W47 "..., even if it costs LINK 6." (true drops not listed: the conditional test reaches past the drop clause and "even if"). Cost only, not a fault.
 - Fix: add "in case", "on condition (that)", "should <subject>", "supposing", "assuming" to the conditional words; read them only in the clause that holds the drop (up to ";"), and do not count "even if".
+
+# Grade: pkgCDR rev 5 (W1, commit 8e7c85fd): PASS for the listing code. Not for write until the operator answers ASK 1.
+- Rebuild on s103 byte-equal. W1's cases: 78 OK, 1 MISS (C9, W1's label error). 34108 P2 = D6 pair; 34299 J2 = "ordinary means". Corpus: 39 debates, 2 listings, both on 34108.
+- My 60 cases (W49-W60 new, labeled before the run, commit b31b74ca; run_rev5.txt): 58 of 60.
+  - Rev 4's three false listings (in case, on condition that, should) gone; rev 4's safe misses W46 ("; if ... so be it") and W47 ("even if") now listed.
+  - New condition forms not listed, as labeled: supposing, assuming, in the event that, so long as, only when, but only if, inverted "were ... to".
+  - New true drops listed: "whether or not", "even though", "as though", condition in the next clause.
+  - Safe misses (2): W17 ("drop not only ... but"), W56 ", if only to narrow LINK 6." (idiom read as a condition). Nothing falsely listed.
+- Owed before any write (not a code fault): DeepSeek has not answered a prompt with P and J candidates listed.
