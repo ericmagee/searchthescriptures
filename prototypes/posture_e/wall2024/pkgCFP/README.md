@@ -41,3 +41,7 @@ Size (size_CFP2.txt): Judge Contradiction Build 11,164 -> 11,961 (+797; rev 1 +5
 in all, of which about 141,000 is the one new call (33644), as rev 1.
 Checks (labels labels_CFP2.md, dceab771, before the build): plants P1-P4 on 34108 all as labeled (test_CFP2_plants.txt; rev 1 fails all four,
 test_CFP2_plants_on_rev1.txt). P5: test_CFP2.txt 44 of 46 (the same two explained), test_CFP2_record.txt 18 of 18.
+Correction (W1, after W3 f798389f): rev 2's prompt growth is not "as rev 1". The longer merged label makes the 22 existing stored calls grow by +2,836 characters
+in all (rev 1 +1,824); the one new call (33644) is the same. My error: I compared totals without separating the new call.
+Graded: W3 PASS (4104, f798389f), W2 PASS (4105, b18be874). Open notes for any later rev: W2 note 1 (the longest part can leave out the drop words; passing every
+standing part would keep them), W2 note 2 (the cross-round limit leaves no trace). Stays on the shelf; no write request.
