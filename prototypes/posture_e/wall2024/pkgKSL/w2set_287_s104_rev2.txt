@@ -1,0 +1,6 @@
+pkgLIB/strip_KRO2/patched/: 208 match, 79 miss (0 correct answers refused, 79 refusals cured) of 287
+pkgLIB/strip_KRO2_KSL/patched/: 208 match, 79 miss (0 correct answers refused, 79 refusals cured) of 287
+live vs KSL differ 0 KRO2 vs KRO2+KSL differ 0
+[]
+
+per case: s103 vs s103+KSL differ 0; s104 (KRO2) vs s104+KSL differ 0
