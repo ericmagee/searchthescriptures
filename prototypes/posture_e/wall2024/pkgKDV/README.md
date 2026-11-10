@@ -22,3 +22,18 @@ Manual part: "A sentence that only sends the reader to another verse's answer ('
 Write file: pkgKDV/parent_s98_KDV.json (`node pkgKDV/build_KDV.cjs pkgKBG/parent_s98_KBG4.json pkgKDV/parent_s98_KDV.json`). It carries pkgKBG rev 4: writing it writes KBG rev 4 too. Against KBG rev 4 only the 3 Send Back nodes change (__df and a tag); connections equal.
 Proof on rev 4 (base parent_s98_KBG4.json): test_KDV_fn_s98 20 OK; plant_KDV_s98 13 OK; replay_KDV_s98 42 node runs, 68 KEEP rows, 0 differ; rolled-back insert of 2 rows (UNCURED with the pkgKBG reason; CURED) accepted, 0 remain.
 Three-way stack with pkgKVL (same 3 nodes): build_KVL.cjs on parent_s98_KDV.json applies (pkgKVL plants 17 OK on it; pkgKDV plants 13 OK on the KVL-on-KDV file). Whichever is written last is built on the others.
+
+## Rev 2 (W2, 2026-11-10; W3 3903 FAIL, one narrow fix)
+
+W3 found that the deferral test was not tied to the start of the sentence, so a sentence with content of its own that ends by pointing to a verse ("The verse names no father, which is answered under Matthew 1:16.") was read as a deferral and cut.
+
+Fix: the "is answered under <verse>" deferral now matches only when nothing but a verse reference, this, it, that or the same (optionally after an opening quote mark) stands before "is answered". The nodes take opening formatting and an opening verse label off first (__lm), so "- **Matthew 17:5** is answered under Luke 9:34." still reads as a deferral. Built on pkgKBG rev 5.
+
+- build_KDV2.cjs: `node pkgKDV/build_KDV2.cjs pkgKBG/parent_s98_KBG5.json pkgKDV/parent_s98_KDV2.json`.
+- Write file parent_s98_KDV2.json: 418 nodes; only Send Back Record, Alt Send Back Record, R2 Alt Send Back Record differ from parent_s98_KBG5.json; connections equal.
+- test_KDV2_fn.cjs / .txt: __lm then __df, as the nodes call it: 36 OK, 0 FAIL (rev 1's cases, W3's 7 cases, and 4 more: "- **Luke 1:35** The holy thing is answered by Luke 1:35.", "Job 14:1 speaks of all men, and this is answered by Luke 1:35.", "He is answered by Luke 1:35.", "The same is answered under Luke 9:34.").
+- w3_grade/w3_plant_KDV_on_rev2.cjs: W3's 7 sentences with content of their own all read not a deferral. W3's "want true" rows that read false are the stated limits below.
+- plant_KDV2_s98.txt (BASE KBG5, CAND KDV2): 13 OK, 0 FAIL.
+- replay_KDV2_s98.cjs / .txt: 42 stored runs, 68 KEEP rows, 0 differ.
+- Rolled-back insert (tag W2-ROLLBACK-TEST-KDV2, rollback_KDV2.sql): accepted, {"rows": 2, "recorded": true}; 0 rows remain.
+Limits (safe direction: not read as a deferral, stays CURED as on live): "Answered under Luke 9:34." with no subject; "Matthew 17:5: answered under ..."; two references at the end; "... Luke 9:34 above."; "(see above)"; "For Matthew 17:5 see Luke 9:34."; a book name of more than one word; "This has been answered under ...".

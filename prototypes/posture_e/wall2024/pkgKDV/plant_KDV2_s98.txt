@@ -1,0 +1,20 @@
+     base CURED | KDV UNCURED | CURE (record-only until promoted): UNCURED -- KEEP whose reason quotes only another bare grant or deferral of the answering side ("matthew 17 5 is answered under"), not a fuller answer (pkgKBG) | TRIA
+OK   K1 KEEP quoting only the side deferral "Matthew 17:5 is answered under Luke 9:34": base CURED, KDV UNCURED (pkgKBG reason)
+OK   K1 KEEP quoting only the side deferral "Matthew 17:5 is answered under Luke 9:34": every other field equal
+     base CURED | KDV UNCURED | CURE (record-only until promoted): UNCURED -- KEEP whose reason quotes only another bare grant or deferral of the answering side ("isaiah 8 3 is answered with"), not a fuller answer (pkgKBG) | TRIAL p
+OK   K2 KEEP quoting only the side deferral "Isaiah 8:3 is answered with Isaiah 7:14": base CURED, KDV UNCURED (pkgKBG reason)
+OK   K2 KEEP quoting only the side deferral "Isaiah 8:3 is answered with Isaiah 7:14": every other field equal
+     base CURED | KDV CURED | CURE (record-only until promoted): CURED -- KEEP whose reason quotes the answering side's round: "presence and sonship stand together in" | TRIAL pkgVP3: code check does not agree, not an item -- [CR3
+OK   K3 the deferral then the side reasoned sentence in one KEEP: base CURED, KDV CURED
+OK   K3 the deferral then the side reasoned sentence in one KEEP: every other field equal
+     base CURED | KDV CURED | CURE (record-only until promoted): CURED -- KEEP whose reason quotes the answering side's round: "presence and sonship stand together in" | TRIAL pkgVP3: code check does not agree, not an item -- [CR3
+OK   K4 reasoned sentence of the side (Luke 9:34 item): base CURED, KDV CURED
+OK   K4 reasoned sentence of the side (Luke 9:34 item): every other field equal
+     base UNCURED | KDV UNCURED | CURE (record-only until promoted): UNCURED -- KEEP whose reason quotes only another bare grant or deferral of the answering side ("i grant it states what the"), not a fuller answer (pkgKBG) | TRIAL pk
+OK   K5 another bare grant still UNCURED (pkgKBG unchanged): base UNCURED, KDV UNCURED (pkgKBG reason)
+OK   K5 another bare grant still UNCURED (pkgKBG unchanged): every other field equal
+     base CURED | KDV CURED | CURE (record-only until promoted): CURED -- KEEP whose reason quotes the answering side's round: "is a different word from synerchomai" | TRIAL pkgVP3: code check does not agree, not an item -- [CR3] 
+OK   K6 reasoned sentence after "I grant it." still CURED: base CURED, KDV CURED
+OK   K6 reasoned sentence after "I grant it." still CURED: every other field equal
+OK   34108 stored send-back rows: all equal to the base (27 rows)
+13 OK, 0 FAIL
