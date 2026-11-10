@@ -1,0 +1,6 @@
+OK   W1  answer holding the reply-form sentence: one rule paragraph, placed before the real reply form (first occurrence, ahead of the rounds)  [para@1623 ans@64602 form@1915]
+OK   W2  dollar sequences printed literally
+OK   W3  curly-quote variant of the closing quote still matched to J1  [{"DEFENDER":3,"CHALLENGER":0,"matched":3}]
+OK   W4  fenced fake header defanged
+OK   W5  lower-case round still read  [{"DEFENDER":3,"CHALLENGER":0,"matched":3}]
+5 OK, 0 FAIL
