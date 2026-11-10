@@ -153,3 +153,25 @@ Prompt text: the added sentence renders exactly as written in build_CDR.cjs, CLO
 CLOSING [CR4] (not named). Note: "Name what it gives up" has no slot in the reply line format; the model can only put it in the closing
 "one sentence" field, or break "nothing else" by adding a line.
 A verb list cannot be complete. If the family stays a list, the cap should go and split forms should carry the next sentence.
+
+## rev 10 (commit 709bf7b1), graded on attribution, prompt text, Record, prompt size, no text removed (coordinator 05:02Z)
+
+PASS on all five checks.
+- Rebuild on s103 byte-equal to parent_s103_CDR.json.
+- No text removed: on 34108 the rev 10 prompt equals the live prompt except the block from "Reply with one line ..." to the end of the
+  candidate list: live's 496 characters ("... ALREADY NAMED (answer each one by its id):\nnone") are replaced by the passage, the same reply format and
+  the hint lines; every other character (155,042 of 155,538) is the same and in the same place. With 300 padding drop sentences added to [CR3]
+  the same holds (166,333 of 166,829 unchanged); every round stays word for word.
+- Prompt text: the passage renders exactly as written in build_CDR.cjs, with CLOSING [<round 4>] "" in real quotation marks, and hints read
+  CLOSING [CR4] (not named). Note: the existing rule "It is NOT a contradiction when the closing sentence ... differs only in wording" stands
+  next to "gave up in any other words"; the sentence before it says that asserting a dropped thing again IS a contradiction, so I read no
+  conflict, but a model could.
+- Attribution (run_rev10.txt, my 151): a challenger drop hints only as CHALLENGER (W148, W149, W151); defender drops only as DEFENDER.
+  Hint coverage 146 of 151 (W2 and W12 are my harness's wording artifacts); not hinted: W131 (concede ... to the challenger, left out by
+  design), W145 and W146 (split forms). All three are in the rounds the enforcer reads, word for word.
+- Record (record10_w2.cjs, labels fixed before the run, record10_w2.txt): 5 OK. A NEW CONFIRMED line for the bullet-line drop breaks the link;
+  a NEW line quoting the split "I drop it." is read; a forged closing quote is NOT CONFIRMED; a CONFIRMED line naming the wrong side breaks
+  nothing for that side. W1's record_CDR.cjs reproduces 5 OK.
+- Prompt size: size_CDR.cjs reproduces size_CDR.txt exactly (35 debates, +1,319 to +9,502 characters, median 4,712, mean 4,573, +3.2%). With no
+  cap, a side can pad: 300 drop sentences in [CR3] made 34108's prompt 259,907 characters against 166,829 live for the same rounds (+56%). The
+  padding itself is in the rounds, so the growth is about double the padding; noted as a cost, not a fault.

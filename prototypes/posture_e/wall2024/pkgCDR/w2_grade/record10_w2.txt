@@ -1,0 +1,6 @@
+OK   X0 the added rounds text is in the prompt word for word
+OK   X1 NEW CONFIRMED for the bullet-line drop (not hinted with its wording) breaks the link: ["NEW CONFIRMED"]
+OK   X2 NEW CONFIRMED quoting the split verb sentence is read (quotes found word for word): ["NEW CONFIRMED"]
+OK   X3 a CONFIRMED line whose closing quote is not in [CR4] breaks nothing: ["NEW NOT CONFIRMED (form)"]
+OK   X4 a CONFIRMED line naming the wrong side for defender rounds breaks nothing for the challenger: ["NEW NOT CONFIRMED (form) CHALLENGER"]
+5 OK, 0 FAIL
