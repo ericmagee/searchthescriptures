@@ -8,7 +8,7 @@ const run=async(c,over,inp)=>(await harness('34108',Object.assign({'Final Output
 const reply=t=>[J({choices:[{message:{role:'assistant',content:t},finish_reason:'stop'}]})];
 const CASES=[['L1','D6','BREAK6'],['L2','d6','BREAK6'],['L3','D-6','BREAK6'],['L4','D 6','BREAK6'],['L5','6 (D6)','REVIEW'],['L6','D6 (keystone)','REVIEW'],['L7','2, 6','REVIEW'],['L8','2 and 6','REVIEW'],
  ['L9','D9','REFUSE'],['L10','9','REFUSE'],['L11','C6','REVIEW'],['L12','**D6**','BREAK6'],['L13','6.','REVIEW'],['L14','#6','REVIEW'],['L15','Link 6','REVIEW'],['L16','D06','BREAK6'],
- ['L17','0','REFUSE'],['L18','D6 -- D5','REVIEW'],['L19','6','BREAK6'],['L20','N/A','REVIEW'],['L21','keystone','REVIEW']];
+ ['L17','0','REFUSE'],['L18','D6 -- D5','REVIEW'],['L19','6','BREAK6'],['L20','N/A','REVIEW'],['L21','keystone','REVIEW'],['L25','the keystone link of the whole chain','REVIEW']];
 (async()=>{const B=await run(code('Close Enforcer Build'));const D6=B.cands.find(c=>/no biological father/.test(c.earlier_q));let ok=0,bad=0;
  const rec=async t=>run(code('Close Enforcer Record'),{'Close Enforcer Build':[J(B)],'Close Enforcer Call deepseek':reply(t)},'Close Enforcer Call deepseek');
  const line=(side,link,ans)=>'CLOSE-CONTRADICTION: '+D6.id+' -- '+side+' -- LINK '+link+' -- '+ans+' -- EARLIER [CR3] "'+D6.earlier_q+'" -- CLOSING [CR4] "Christ had no biological father." -- why.';
