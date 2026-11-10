@@ -1,0 +1,29 @@
+upstream Init Seats source equal to s110: true
+upstream Regrade Load source equal to s110: true
+upstream QR Ask Build source equal to s110: true
+upstream Regrade Row source equal to s110: true
+upstream Resolve Seats source equal to s110: true
+== Gate Record
+   s110   [{"seat":"luna","items":5,"cured":4,"uncured_counted":1,"fresh":2,"error":null}] alt_needed true  equal to F3A alone: true
+   F3A    [{"seat":"luna","items":5,"cured":4,"uncured_counted":1,"fresh":2,"error":null}] alt_needed true  equal to F3A alone: true
+   GFS    [{"seat":"luna","items":5,"cured":5,"uncured_counted":0,"fresh":0,"error":null}] alt_needed true  equal to F3A alone: false
+   JOINT  [{"seat":"luna","items":5,"cured":5,"uncured_counted":0,"fresh":0,"error":null}] alt_needed true  equal to F3A alone: false
+== Alternate Merge 1
+   s110   items 1  equal to F3A alone: true
+   F3A    items 1  equal to F3A alone: true
+   GFS    items 1  equal to F3A alone: false
+   JOINT  items 1  equal to F3A alone: false
+== Second Alternate?
+   s110   {"run":false,"seats":["luna"],"tried":["anthropic/claude-haiku-5.5"],"free":[],"why":"no pool model is left after round 1 (pool: haiku; tried: anthropic/claude-haiku-5.5)"}  equal to F3A alone: false
+   F3A    {"run":true,"seats":["luna"],"tried":[],"free":["haiku"],"retry":["anthropic/claude-haiku-5.5"],"why":"round 2 for luna; free: haiku"}  equal to F3A alone: true
+   GFS    {"run":false,"seats":["luna"],"tried":["anthropic/claude-haiku-5.5"],"free":[],"why":"no pool model is left after round 1 (pool: haiku; tried: anthropic/claude-haiku-5.5)"}  equal to F3A alone: false
+   JOINT  {"run":true,"seats":["luna"],"tried":[],"free":["haiku"],"retry":["anthropic/claude-haiku-5.5"],"why":"round 2 for luna; free: haiku"}  equal to F3A alone: false
+== Alternate Merge
+   s110   null  equal to F3A alone: true
+   F3A    null  equal to F3A alone: true
+   GFS    null  equal to F3A alone: false
+   JOINT  null  equal to F3A alone: false
+rows s110   luna:BROKEN/drv2 chatgpt:BROKEN/drv0 sol:BROKEN/drv0
+rows F3A    luna:BROKEN/drv2 chatgpt:BROKEN/drv0 sol:BROKEN/drv0
+rows GFS    luna:BROKEN/drv1 chatgpt:BROKEN/drv0 sol:BROKEN/drv0
+rows JOINT  luna:BROKEN/drv1 chatgpt:BROKEN/drv0 sol:BROKEN/drv0

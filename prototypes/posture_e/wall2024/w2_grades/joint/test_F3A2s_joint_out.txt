@@ -1,0 +1,19 @@
+   S1 retry plant s110 luna lines 1 {"seats":["luna"],"tried":["anthropic/claude-haiku-5.5"],"free":[],"result":[{"seat":"luna","seated":null,"lines":0}]}
+OK   S1 s110 keeps one line
+   S1 retry plant ALL luna lines 2 {"seats":["luna"],"tried":[],"free":["haiku"],"retry":["anthropic/claude-haiku-5.5"],"result":[{"seat":"luna","seated":null,"lines":1}]}
+OK   S1 2s keeps the retry line (2 lines)
+OK   S2 alternate_round2.retry names haiku
+OK   S1 control: round 2 tries a different model: same lines as s110 (2)
+OK   S3 C1 34626 | s110: -
+OK   S3 C1 34626 | G1: -
+OK   S3 C1 34626 | RETRY: -
+OK   S3 C1 34626 | ALL: haiku
+OK   S3 C2 glm content null | s110: -
+OK   S3 C2 glm content null | G1: haiku
+OK   S3 C2 glm content null | RETRY: glm
+OK   S3 C2 glm content null | ALL: glm,haiku
+OK   S3 C3 glm uncured | s110: -
+OK   S3 C3 glm uncured | G1: haiku
+OK   S3 C3 glm uncured | RETRY: -
+OK   S3 C3 glm uncured | ALL: haiku
+16 OK, 0 FAIL
