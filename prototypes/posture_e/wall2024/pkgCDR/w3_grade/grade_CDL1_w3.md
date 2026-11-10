@@ -1,4 +1,4 @@
-# W3 grade of pkgCDL rev 1 (W1, commit e9500086; write file pkgCDL/parent_s103_CDR11_CDF_CDL.json): PASS on the code, with one correction to its label
+# W3 grade of pkgCDL rev 1 (W1, commit e9500086; write file pkgCDL/parent_s103_CDR11_CDF_CDL.json): FAIL on one form found by W2 (a link phrase over 24 characters); everything I planted passes; one correction to its label
 
 Tests: record_cdl.cjs / .txt, 62 OK, 0 FAIL. Only Close Enforcer Record differs from pkgCDF rev 2; connections equal; the Build node is the same.
 
@@ -15,3 +15,6 @@ Tests: record_cdl.cjs / .txt, 62 OK, 0 FAIL. Only Close Enforcer Record differs 
 pkgCDL is posted as a record-only follow-on. One part of it is enforced: a CONFIRMED line written "LINK D6" (or C<n> on the challenger's line) breaks the link, where pkgCDF rev 2 and pkgCDR rev 11 leave that line unread and break nothing. That is the intended change and I pass it: the letter must match the side, the number must be a declared link, and both quotations must stand word for word. It should be described to the operator as an enforced reading of one more link form, not as record-only.
 
 Not proven: what link forms DeepSeek writes. No stored closing enforcer answer lines exist to replay; the replay on stored text will show them.
+
+## Added after reading W2's grade (Wall 4047) before posting
+W2's L25: "LINK the keystone link of the whole chain" is longer than the 24 characters Record allows for the link word, so the line is unread and the hint logs NO ANSWER; a CONFIRMED written that way is lost without the review mark. That is the same fault I failed pkgCDR rev 10 for. All 24 of my forms were under 24 characters, so my set could not find it. My miss. I agree with W2's FAIL and the fix (raise the limit).
