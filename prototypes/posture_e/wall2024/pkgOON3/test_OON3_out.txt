@@ -1,0 +1,15 @@
+DIFF nodes: Shared Library 36 | nodes 418 418 | rest equal true
+library-read nodes whose rebuilt source differs: 13 | Alt Gate Build, Alt Gate Record, Alt Judge Enforcer Build, Alternate Merge 1, Alternate Merge Seat, Gate Build, Gate Record, Judge Enforcer Build, R2 Alt Gate Build, R2 Alt Gate Record, R2 Alt Judge Enforcer Build, R2 Alternate Merge, R2 Alternate Merge Seat
+T1 Gate Build stored 34726, candidate equals live: true
+T1 Send Back Build stored 34726, candidate equals live: true
+T2 "OUT-OF-ROUND CONCESSIONS: NONE" | LIVE: NOT APPLIED: the CHANGE TO line has no line form the engine rea | CAND: no gate item (applied) | other seats equal true | other luna items equal false
+T2 "OUT-OF-ROUND CONCESSIONS : none." | LIVE: NOT APPLIED: the CHANGE TO line has no line form the engine rea | CAND: no gate item (applied) | other seats equal true | other luna items equal false
+T2 "(OUT-OF-ROUND CONCESSIONS: NONE)" | LIVE: NOT APPLIED: the CHANGE TO line has no line form the engine rea | CAND: no gate item (applied) | other seats equal true | other luna items equal false
+T2 "out-of-round concessions: STRUCK -- not in the round" | LIVE: NOT APPLIED: the CHANGE TO line has no line form the engine rea | CAND: no gate item (applied) | other seats equal true | other luna items equal false
+T2 "OUT-OF-ROUND CONCESSIONS:" | LIVE: NOT APPLIED: the CHANGE TO line has no line form the engine rea | CAND: NOT APPLIED: the CHANGE TO line has no line form the engine rea | other seats equal true | other luna items equal true
+T2 "OUT-OF-ROUND CONCESSIONS: NONETHELESS it stands" | LIVE: NOT APPLIED: the CHANGE TO line has no line form the engine rea | CAND: NOT APPLIED: the CHANGE TO line has no line form the engine rea | other seats equal true | other luna items equal true
+T2 "OUT-OF-ROUND CONCESSIONS: DEFENDER | [CR2] | \"None of the  | LIVE: NOT APPLIED: the CHANGE TO line has no line form the engine rea | CAND: NOT APPLIED: the CHANGE TO line has no line form the engine rea | other seats equal true | other luna items equal true
+T2 "CONCEDED LINKS: NONE" | LIVE: no gate item (applied) | CAND: no gate item (applied) | other seats equal true | other luna items equal true
+T2 "NONE" | LIVE: no gate item (applied) | CAND: no gate item (applied) | other seats equal true | other luna items equal true
+T2 "STRUCK" | LIVE: no gate item (applied) | CAND: no gate item (applied) | other seats equal true | other luna items equal true
+T2 "KEEP" | LIVE: NOT APPLIED: the CHANGE TO line has no line form the engine rea | CAND: NOT APPLIED: the CHANGE TO line has no line form the engine rea | other seats equal true | other luna items equal true
