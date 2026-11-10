@@ -1,0 +1,15 @@
+DIFF nodes: Shared Library 36 | nodes 418 418 | rest equal true
+library-read nodes whose rebuilt source differs: 13 | Alt Gate Build, Alt Gate Record, Alt Judge Enforcer Build, Alternate Merge 1, Alternate Merge Seat, Gate Build, Gate Record, Judge Enforcer Build, R2 Alt Gate Build, R2 Alt Gate Record, R2 Alt Judge Enforcer Build, R2 Alternate Merge, R2 Alternate Merge Seat
+N1 "**OUT-OF-ROUND CONCESSIONS:** NONE" | LIVE: NOT APPLIED: the CHANGE TO line has no line form the engine reads | CAND: NOT APPLIED: the CHANGE TO line has no line form the engine reads | other seats equal true | CAND equals plain NONE false | LIVE has item true
+N2 "OUT-OF-ROUND CONCESSIONS: REMOVED" | LIVE: NOT APPLIED: the CHANGE TO line has no line form the engine reads | CAND: APPLIED (no item) | other seats equal true | CAND equals plain NONE true | LIVE has item true
+N3 "OUT-OF-ROUND CONCESSIONS: DELETE" | LIVE: NOT APPLIED: the CHANGE TO line has no line form the engine reads | CAND: APPLIED (no item) | other seats equal true | CAND equals plain NONE true | LIVE has item true
+N4 "OUT-OF-ROUND CONCESSIONS: NONE (the concession is | LIVE: NOT APPLIED: the CHANGE TO line has no line form the engine reads | CAND: APPLIED (no item) | other seats equal true | CAND equals plain NONE true | LIVE has item true
+N5 "OUT-OF-ROUND CONCESSION: NONE" | LIVE: NOT APPLIED: the CHANGE TO line has no line form the engine reads | CAND: NOT APPLIED: the CHANGE TO line has no line form the engine reads | other seats equal true | CAND equals plain NONE false | LIVE has item true
+N6 "OUT OF ROUND CONCESSIONS: NONE" | LIVE: NOT APPLIED: the CHANGE TO line has no line form the engine reads | CAND: NOT APPLIED: the CHANGE TO line has no line form the engine reads | other seats equal true | CAND equals plain NONE false | LIVE has item true
+N7 "OUT-OF-ROUND CONCESSIONS: NONEXISTENT" | LIVE: NOT APPLIED: the CHANGE TO line has no line form the engine reads | CAND: NOT APPLIED: the CHANGE TO line has no line form the engine reads | other seats equal true | CAND equals plain NONE false | LIVE has item true
+N8 "OUT-OF-ROUND CONCESSIONS: STRIKE THIS ROW" | LIVE: NOT APPLIED: the CHANGE TO line has no line form the engine reads | CAND: APPLIED (no item) | other seats equal true | CAND equals plain NONE true | LIVE has item true
+N9 item S1 E-ANS
+N9 LIVE: NOT APPLIED: the CHANGE TO line has no line form the engine reads | CAND: NOT APPLIED: the CHANGE TO line has no line form the engine reads | whole output equal true
+S12 rule E-OOR "DEFENDER | [CR2] | “I grant that ‘her husband’ names the espoused man.”"
+N10 LIVE: NOT APPLIED: the CHANGE TO line has no line form the engine reads | CAND: NOT APPLIED: the row ends COUNTED, so striking it would leave the count stale: writ
+N11 item sids LIVE S12,S8,S9,, | CAND S8,S9,,

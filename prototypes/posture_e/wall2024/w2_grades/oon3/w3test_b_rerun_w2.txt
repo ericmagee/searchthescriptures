@@ -1,0 +1,17 @@
+DIFF nodes: Shared Library 36 | nodes 418 418 | rest equal true
+library-read nodes whose rebuilt source differs: 13 | Alt Gate Build, Alt Gate Record, Alt Judge Enforcer Build, Alternate Merge 1, Alternate Merge Seat, Gate Build, Gate Record, Judge Enforcer Build, R2 Alt Gate Build, R2 Alt Gate Record, R2 Alt Judge Enforcer Build, R2 Alternate Merge, R2 Alternat
+rows used: "DEFENDER | [CR2] | “I grant that the ‘how’ of a conception is answered with these verbs,  || "DEFENDER | [CR2] | “I grant that ‘according to the flesh’ marks kinship by descent.”"
+stored nodes edited by the plant: 30
+T3 E-OOR rows live 17 candidate 17
+  live: ENFORCER DISAGREE: the line names CHALLENGER but the round [CR2] is the other side's (code check of the judges' own rules; ruling 443)
+  cand: ENFORCER DISAGREE: the line names CHALLENGER but the round [CR2] is the other side's; write the corrected row, or CHANGE TO: STRUCK (code check of the judges' own rules; ruling 443)
+  live: ENFORCER DISAGREE: COUNTED ends a line from [CR2]; only a close-round ([CR4] or [DR4]) concession enters the counts ("Ground granted in [CR1], [DR1], [CR2] or [DR2] ... does not enter those counts") (code check of the judges' own rules; ruling 443)
+  cand: ENFORCER DISAGREE: COUNTED ends a line from [CR2]; only a close-round ([CR4] or [DR4]) concession enters the counts; CHANGE TO: the row without COUNTED (code check of the judges' own rules; ruling 443)
+T3 rows differing 2 | candidate output equals live once the two edits are reversed: true
+T3 with no plant, candidate equals live: true
+item used S10 "DEFENDER | [CR2] | “I grant that the ‘how’ of a conception is answered with the
+T4 corrected row (side changed) | LIVE: no gate item (applied) | CAND: no gate item (applied)
+T4 STRUCK | LIVE: no gate item (applied) | CAND: no gate item (applied)
+T4 COUNTED row answered the row without COUNTED | LIVE: no gate item (applied) | CAND: no gate item (applied)
+T4 COUNTED row answered STRUCK | LIVE: NOT APPLIED: the row ends COUNTED, so striking it would leave the count stale: write the whole CONCEDED | CAND: NOT APPLIED: the row ends COUNTED, so striking it would leave the count stale: write the whole CONCEDED
+T4 COUNTED row answered OUT-OF-ROUND CONCESSIONS: NONE | LIVE: NOT APPLIED: the CHANGE TO line has no line form the engine reads | CAND: NOT APPLIED: the row ends COUNTED, so striking it would leave the count stale: write the whole CONCEDED
