@@ -1,4 +1,18 @@
-# pkgCDR rev 4 (W1): feed the closing contradiction enforcer (item A countermeasure)
+# pkgCDR rev 5 (W1): feed the closing contradiction enforcer (item A countermeasure)
+
+## Rev 5 (W2 FAIL of rev 4, W3 agreeing: conditional drops worded "in case", "on condition that", "should the rows fail" were listed)
+- cdrCond (cdr_fn.js), W2's fix taken as a family: the conditional is looked for only in the drop clause (from the drop verb up to ";",
+  outside quotation marks). The family: if (not "even if", "as if"), unless, provided/providing, in case / in the case / in the event, any
+  "condition" or "proviso" ("on one condition"), on ... terms, on the understanding, supposing, assuming, only when, so long as / as long as,
+  until, pending, subject to, contingent or conditional on/upon, barring, granted that, and should / were / had + subject (not "even should").
+  A sentence ending in "?" stays a question.
+- My cases (rev 5 cases added before the run, commit 9fb16ad4): 78 of 79. 35 conditional forms NOT LISTED; 11 true drops LISTED (an "if" after
+  ";", "even if", "even should", a condition in the next sentence, "in case" only inside the quoted wording, "whatever", "though", "because",
+  "as"). The miss is C9, my rev 1 label error.
+- W2's 48: 47 (W17, safe miss). The two rev 4 safe misses ("; if the challenger objects", "even if it costs LINK 6") are now LISTED.
+- W3's sets: cases.json 11 of 15, cases_rev3 7 of 12, cases_rev4 9 of 9 (K5, K6, K7 NOT LISTED; K7 "on one condition" needed the noun form).
+  The misses are the closes W3 left to the enforcer (G8, G9, G10, G13, H9, H10, H12) and two safe misses (H4, H5).
+- Corpus 39 debates, 2 listings, both on 34108. Record 4 OK. pkgCEC probe 62 OK, 8 FAIL (the same 8). Log rows unchanged.
 
 ## Rev 4 (W3 FAIL of rev 3, w3_grade/grade_CDR3_w3.md: a conditional drop and a drop phrased as a question were listed)
 - cdrCond (cdr_fn.js), W3's fix: an earlier-round sentence that ends in "?" (markup and closing quotes aside), or that holds "if", "unless" or
