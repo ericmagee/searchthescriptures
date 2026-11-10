@@ -1,0 +1,4 @@
+# from wall2024/: builds pkgLIB/strip_R1bM and pkgLIB_R1bM (remove both first), then measures
+mkdir -p pkgLIB/strip_R1bM/patched && cp pkgLIB/strip_R1R2/patched/*.js pkgLIB/strip_R1bM/patched/
+node -e 'const fs=require("fs");const d=JSON.parse(fs.readFileSync("pkgCMS/parent_s108_CMS.json"));const have=new Set(fs.readdirSync("pkgLIB/strip_R1bM/patched"));const EX=new Set(["Accept Build","Accept Check","Accept Final","Init Seats","Init with Guards"]);for(const x of d.nodes){const c=x.parameters&&x.parameters.jsCode;if(typeof c!=="string"||x.name==="Shared Library"||/^\/\/ pkgLIB stub/.test(c)||c.length<=15000)continue;const f=x.name.replace(/ /g,"_")+".js";if(have.has(f)||EX.has(x.name)||/\$execution|\$env|\$prevNode/.test(c))continue;fs.writeFileSync("pkgLIB/strip_R1bM/patched/"+f,c);}'
+FB=pkgCMS/parent_s108_CMS.json node --max-old-space-size=10000 gate/pack.cjs pkgLIB/strip_R1bM pkgLIB_R1bM
