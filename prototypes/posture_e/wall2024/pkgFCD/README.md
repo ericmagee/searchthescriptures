@@ -14,3 +14,6 @@ Proof:
 - Rolled-back insert through record_enforcer_log of the 4 probe rows (3 K-S3, 1 K-S): accepted, rows 4.
 Not tested: count_dropped produced by a real follow-up through Normalize and Check together in one run (set by hand here).
 Manual part: "When the follow-up's corrected count is not kept, the K-S3 log row says COUNT NOT WRITTEN with the reason."
+
+Gate (on s90, base strip_FUK3): 767 node runs, byte-equal or same error 767, target item changes 0: GATE PASS.
+On live s93 (stub form 3): parent_s93_FCD.json via `node pkgFUK/parent_on.cjs <fb s93> pkgLIB_FCDS pkgLIB/strip_FCD pkgFCD/parent_s93_FCD.json`: 1 node changed (Shared Library); all 30 library sources byte-equal to strip_FCD. It carries pkgFUK rev 3 too, so it replaces parent_s93_FUK3 if both are written; written after FUK rev 3, it is the same 1-node change.

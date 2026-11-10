@@ -14,3 +14,5 @@ Proof:
 - Rolled-back insert through record_enforcer_log of two rows (panel UNCURED with the new reason, panel CURED): accepted, rows 2.
 Limit: a verse quoted with no reference on its line, or without quotation marks, is not cut.
 Manual part: "A send-back KEEP is read as cured only by six words in a row from the answering side's own words: the flagged bare answer and any verse of six words or more that the side quoted on a verse line do not count."
+
+On live s93 (VP3 rev 3 and KQG rev 2 live): `node pkgKVQ/build_KVQ.cjs /mnt/project-files/wall2024/fetchback_live_s93.json pkgKVQ/parent_s93_KVQ.json` (3 nodes). probe_KVQ_s93 13 OK; replay_KVQ_s93 0 status changes; W4's VP3 probe on the stacked file (w1_probe_VP3_on_KVQ) 40 OK; VP3 multi-run 0 would remove.

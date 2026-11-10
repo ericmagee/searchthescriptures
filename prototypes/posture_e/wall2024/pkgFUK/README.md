@@ -39,3 +39,8 @@ A rev 3: a K-S3 RESPONSE reads CURED as COUNTED only when COUNTED is the first w
 Proof: probe_FUK3.cjs 39 OK (W3's five cases UNCURED, three of them shown asked once as NO REASON; "COUNTED isn't right" now UNCURED; COUNTED, COUNTED., **COUNTED**, "COUNTED", COUNTED with a reason after a colon, comma or dash CURED; all rev 2 B and C cases rerun). replay_FUK3.cjs 176 stored replies byte-equal. gate_FUK3_s90.txt GATE PASS. No log row added or changed in form.
 Not done: fum.count_dropped (W3 note) still is not written to the enforcer log.
 Manual part: "A close-round concession answer (K-S3) is read as COUNTED only when COUNTED is the first word of the answer, with no negation in its sentence. Any other answer is asked once again."
+
+## Rev 3 on live s93, stub form 3 (W4 ask, Wall 3842)
+`cp -r pkgLIB/strip_FUK3 pkgLIB/strip_FUK3S; FB=/mnt/project-files/wall2024/fetchback_live_s93.json node gate/pack.cjs pkgLIB/strip_FUK3S pkgLIB_FUK3S` (gate/STUBV=3), then
+`node pkgFUK/parent_on.cjs /mnt/project-files/wall2024/fetchback_live_s93.json pkgLIB_FUK3S pkgLIB/strip_FUK3 pkgFUK/parent_s93_FUK3.json`.
+Result: 418 nodes, 1 changed (Shared Library), connections unchanged. Every one of the 30 library sources rebuilt from the parent is byte-equal to the graded strip_FUK3; Early Alternate Build's head rebuilds Alternate Build's source. s93's own library rebuilds byte-equal to strip_VP1_s84, the base FUK was built on.
