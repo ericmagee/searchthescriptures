@@ -20,12 +20,13 @@ const NEWQ=CQ(Vq,E3);const BADQ=CQ('words that are not in the closing round at a
 const ask=out('QR Ask');const first=ask.map(i=>{const t=i.json.choices[0].message.content;return JSON.parse(t.slice(t.indexOf('{'),t.lastIndexOf('}')+1));});
 const rep=o=>({json:{choices:[{message:{content:JSON.stringify(o)}}]}});const BADCH={round:'DR3',quote:'a quotation that does not stand anywhere',question:'What does this mean?'};
 const norm=s=>String(s||'').toLowerCase().replace(/\s+/g,' ').trim();const isC=q=>q&&q.earlier_quote;
-const same=(p,q)=>isC(p)&&isC(q)&&p.round===q.round&&p.earlier_round===q.earlier_round&&(norm(p.quote).includes(norm(q.quote))||norm(q.quote).includes(norm(p.quote))||norm(p.earlier_quote).includes(norm(q.earlier_quote))||norm(q.earlier_quote).includes(norm(p.earlier_quote)));
+const same=(p,q)=>isC(p)&&isC(q)&&p.round===q.round&&p.earlier_round===q.earlier_round&&(norm(p.quote).includes(norm(q.quote))||norm(q.quote).includes(norm(p.quote)))&&(norm(p.earlier_quote).includes(norm(q.earlier_quote))||norm(q.earlier_quote).includes(norm(p.earlier_quote)));
 let cases=0,fails=[],redirs=0,liveRet=0;
 (async()=>{
  // Q8 chain: judge0 X/E, judge1 Y/E2? need 1 repeats 0, 2 repeats 1 but not 0: 0 = (X,E), 1 = (X? ) use 1=(X,E2) (closing X inside X -> repeats 0), 2=(Yq,E3?) must repeat 1 not 0: 2=(Wq,E2) repeats 1 via earlier E2, not 0 (W not in X, E2 not E)
- {const qs=[CQ(Xq,E),CQ(Xq,E2),CQ(Wq,E2)];const A=qs.map((q,i)=>rep({...first[i],defender:q}));const b=await go(N,'QR Check',{},A);
+ {const qs=[CQ(Yq,E),CQ(Xq,E),CQ(Zq,E)];const A=qs.map((q,i)=>rep({...first[i],defender:q}));const b=await go(N,'QR Check',{},A);
   const ok=b[1].redirect.defender&&b[1].redirect.defender.of===b[0].seat&&!b[2].redirect.defender&&!b[0].redirect.defender;console.log((ok?'OK   ':'FAIL ')+'Q8 chain: judge 1 redirected against judge 0; judge 2 (repeats judge 1 only) not redirected');if(!ok)fails.push('Q8');}
+ {const qs=[CQ(Xq,E),CQ(Wq,E),CQ(Xq,E2)];const A=qs.map((q,i)=>rep({...first[i],defender:q}));const b=await go(N,'QR Check',{},A);const ok=b.every(j=>!j.redirect.defender);console.log((ok?'OK   ':'FAIL ')+'Q10 same round 3 sentence against different closing sentences (and same closing against different round 3 sentences): no judge returned');if(!ok)fails.push('Q10');}
  const idx=[...Array(OPTS.length).keys()];
  for(const a of idx)for(const b2 of idx)for(const c of idx)for(let fm=0;fm<8;fm++){
   const qs=[OPTS[a],OPTS[b2],OPTS[c]];const flt=[fm&1,fm&2,fm&4].map(Boolean);
