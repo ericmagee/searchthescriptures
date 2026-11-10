@@ -1,0 +1,84 @@
+== A. stored shown pairs followed into the candidate list ==
+33218: shown rows 3, distinct pairs 3
+   DEFENDER Luke 3:23 | candidate J1
+   DEFENDER Luke 1:36 | candidate J2
+   DEFENDER Matthew 11:11 | candidate J3
+33222: shown rows 1, distinct pairs 1
+   CHALLENGER Luke 2:49 | candidate J2
+33261: shown rows 3, distinct pairs 3
+   DEFENDER Luke 3:23 | candidate J1
+   DEFENDER Galatians 4:4 | candidate J2
+   CHALLENGER Numbers 1:18 | candidate J3
+33299: shown rows 6, distinct pairs 6
+   DEFENDER Matthew 1:22 | candidate J1
+   DEFENDER Genesis 4:1 | candidate J5
+   DEFENDER Isaiah 7:14 | candidate J6
+   DEFENDER Galatians 4:4 | candidate J2
+   DEFENDER Matthew 1:23 | candidate J7
+   DEFENDER Genesis 3:15 | candidate J3
+33345: shown rows 1, distinct pairs 1
+   DEFENDER Isaiah 7:14 | candidate J2
+33371: shown rows 2, distinct pairs 2
+   DEFENDER Luke 1:36 | candidate J3
+   CHALLENGER Luke 1:35 | candidate J1
+33430: shown rows 1, distinct pairs 1
+   DEFENDER Galatians 4:4 | candidate J1
+33442: shown rows 1, distinct pairs 1
+   DEFENDER Jeremiah 31:22 | candidate J1
+33461: shown rows 1, distinct pairs 1
+   DEFENDER Matthew 1:18 | candidate J1
+33482: shown rows 1, distinct pairs 1
+   DEFENDER Genesis 3:15 | candidate J1
+33530: shown rows 1, distinct pairs 1 | build skip: Judge Contradiction Build failed: "undefined" is not valid JSON
+   CHALLENGER John 6:42 | BUILD FAILED: Judge Contradiction Build failed: "undefined" is not valid JSON
+33592: shown rows 2, distinct pairs 2
+   DEFENDER Genesis 3:15 | candidate J1
+   DEFENDER Luke 1:32 | candidate J3
+33644: shown rows 1, distinct pairs 1
+   DEFENDER Hebrews 7:14 | candidate J1
+33705: shown rows 1, distinct pairs 1
+   DEFENDER Luke 2:49 | candidate J2
+33798: shown rows 3, distinct pairs 3
+   DEFENDER Luke 2:48 | candidate J1
+   DEFENDER Luke 2:49 | candidate J2
+   DEFENDER 1 Chronicles 28:6 | candidate J3
+33846: shown rows 6, distinct pairs 3
+   DEFENDER Matthew 1:18 | candidate J1
+   DEFENDER 1 Chronicles 28:6 | candidate J2
+   DEFENDER Numbers 1:18 | candidate J3
+A totals: {"rows":34,"pairs":31,"cand":30,"pre":0,"noround":0,"lost":1,"closebad":0,"ell":0}
+
+== B. plants ==
+P1 plain defender pair, earlier in CR2 [33644] live cands 0 (skip: no judge CONTRADICTION line on a closing round) | CFP cands 1
+    J1 DEFENDER [CR2] by "the anti-cheat check (found by the system; both quotes checked)" | record: [["J1","CONFIRMED"]] confirmed 1 log rows 1
+P2 challenger pair, earlier in DR1 [33644] live cands 0 (skip: no judge CONTRADICTION line on a closing round) | CFP cands 1
+    J1 CHALLENGER [DR1] by "the anti-cheat check (found by the system; both quotes checked)"
+P3 earlier quote with an ellipsis, parts in two different sentences of CR2 (the anti-cheat test passes it) [33644] live cands 0 (skip: no judge CONTRADICTION line on a closing round) | CFP cands 0 (skip: no judge CONTRADICTION line on a closing round)
+    no anti-cheat candidate | output holds any trace of the dropped pair: false | equals live but for the sentence: true
+P4 earlier quote with an ellipsis, parts in CR1 and CR3 [33644] live cands 0 (skip: no judge CONTRADICTION line on a closing round) | CFP cands 0 (skip: no judge CONTRADICTION line on a closing round)
+    no anti-cheat candidate
+P5 earlier quote that stands in CR1 and again in CR3 [33644] live cands 0 (skip: no judge CONTRADICTION line on a closing round) | CFP cands 1
+    J1 DEFENDER [CR1] by "the anti-cheat check (found by the system; both quotes checked)"
+P6 closing quote with an ellipsis across two sentences of CR4 [33644] live cands 0 (skip: no judge CONTRADICTION line on a closing round) | CFP cands 1
+    J1 DEFENDER [CR2] by "the anti-cheat check (found by the system; both quotes checked)" | record: [["J1","NOT CONFIRMED (form)","the closing quotation is not found word for word in CR4"]]
+P7 two-word earlier quote [33644] live cands 0 (skip: no judge CONTRADICTION line on a closing round) | CFP cands 0 (skip: no judge CONTRADICTION line on a closing round)
+    no anti-cheat candidate
+P8 Anticheat Record with no acx [33644] live cands 0 (skip: no judge CONTRADICTION line on a closing round) | CFP cands 0 (skip: no judge CONTRADICTION line on a closing round)
+    equal to live but for the sentence: true
+P9 rows with missing fields and a null list [33644] live cands 0 (skip: no judge CONTRADICTION line on a closing round) | CFP cands 0 (skip: no judge CONTRADICTION line on a closing round)
+    no anti-cheat candidate
+P10 earlier quote of 2,000 characters (CR2 from its start) [33644] live cands 0 (skip: no judge CONTRADICTION line on a closing round) | CFP cands 1
+    J1 DEFENDER [CR2] by "the anti-cheat check (found by the system; both quotes checked)"
+P11 the same pair twice and once more with other capitals and quote marks [33644] live cands 0 (skip: no judge CONTRADICTION line on a closing round) | CFP cands 1
+    J1 DEFENDER [CR2] by "the anti-cheat check (found by the system; both quotes checked)"
+P12 a defender row filed under the challenger list [33644] live cands 0 (skip: no judge CONTRADICTION line on a closing round) | CFP cands 0 (skip: no judge CONTRADICTION line on a closing round)
+    no anti-cheat candidate
+P13 the pair already answered NOT A CONTRADICTION before the panel [33644] live cands 0 (skip: no judge CONTRADICTION line on a closing round) | CFP cands 0 (skip: every judge-found pair was already answered before the panel)
+    no anti-cheat candidate | no_log true
+P14 quote holding a double quote mark [33644] live cands 0 (skip: no judge CONTRADICTION line on a closing round) | CFP cands 1
+    J1 DEFENDER [CR2] by "the anti-cheat check (found by the system; both quotes checked)" | record: [["J1","CONFIRMED",null]]
+P15 the anti-cheat pair equals a judge pair word for word [34108] live cands 1 | CFP cands 1
+    live [["J1","the judges' CONTRADICTION lines (chatgpt)"]]
+    CFP  [["J1","the judges' CONTRADICTION lines (chatgpt, the anti-cheat check)"]]
+P16 the anti-cheat pair is a judge pair with a shorter earlier quote [34108] live cands 1 | CFP cands 2
+    CFP [["J1","the judges' CONTRADICTION lines (chatgpt"],["J2","the anti-cheat check (found by the syste"]] | record [["J1","CONFIRMED",""],["J2","CONFIRMED","the same link is already broken by an earlier confirmed line"]] confirmed 1
