@@ -1,0 +1,45 @@
+live /mnt/project-files/wall2024/fetchback_live_s110.json (ed644923-1735-4468-ba4e-d92b4d27a5e1); candidate pkgQRD/parent_s110_QRD.json
+OK   R1 nodes 418/418; differing ["QR Check","QR Final"]; connections equal: QR Check 6026 to 7308, QR Final 7842 to 8116; code text total 3838702 to 3840258 (1556)
+     the sentence for one side: 213 characters
+     QR Trial? outputs: [["QR Ask Build"],["Panel Judges Prep"]]; condition: {"conditions":{"combinator":"and","conditions":[{"id":"qr-trial-flag","leftValue":"={{ $('Init Seats').first().json.question_trial === true }}","operator":{"operation":"true","singleValue":true,"type":"boolean"},"rightValue":""}],"options":{"caseSensitive":true,"leftValue":"","typeValidation":"loose"}},"options":{}}
+     live luna:-, chatgpt:-, sol:-; candidate luna:-, chatgpt:redirect-defender, sol:redirect-defender
+OK   R2 stored 34299: live returns none; candidate returns chatgpt and sol on the defender side; qs and faults equal
+     luna defender first question: [CR3] "I drop the wording "closes the espousal to any knowing."" / [CR4] "The rows state a not-knowing at each stage, and the knowing the challenger adds is the cha"
+     chatgpt defender first question: [CR3] "I drop the wording "closes the espousal to any knowing."" / [CR4] "The rows state a not-knowing at each stage, and the knowing the challenger adds is the cha"
+     sol defender first question: [CR3] "I drop the wording "closes the espousal to any knowing."" / [CR4] "The rows state a not-knowing at each stage, and the knowing the challenger adds is the cha"
+     return message to chatgpt (321 characters): === QUESTION ROUND (TRIAL): RETURNED ONCE === / Another judge already asks the defender about the contradiction between CR3 and CR4. If you see a different contradiction in that debater's closing round, ask about it instead; if you see none, keep your question. / Reply again with JSON only, in the same form, both questions.
+     return body messages: live 1 (no-op), candidate 9; candidate body 267508 characters, live 169
+OK   R3 QR Final on the stored 34299 retry input: equal to live apart from the redirect field: 6 items
+     R4a standing judge returned for a fault, its second reply is not JSON; the two others redirected and switch: live returns luna:fault, chatgpt:-, sol:- | candidate returns luna:fault, chatgpt:-, sol:redirect-defender
+       judges asking the defender about the CR3/CR4 pair at the end: live [chatgpt, sol], candidate [chatgpt]
+       candidate record: luna D DROPPED; luna C DROPPED; chatgpt D PASSED; chatgpt C PASSED; sol D PASSED ON RETURN; sol C PASSED
+OK   R4a the pair is still asked by a judge under the candidate where live keeps it: live 2, candidate 1
+     R4b standing judge returned for a fault and changes its defender question; the two others redirected and switch: live returns luna:fault, chatgpt:-, sol:- | candidate returns luna:fault, chatgpt:-, sol:redirect-defender
+       judges asking the defender about the CR3/CR4 pair at the end: live [chatgpt, sol], candidate [chatgpt]
+       candidate record: luna D PASSED ON RETURN; luna C PASSED ON RETURN; chatgpt D PASSED; chatgpt C PASSED; sol D PASSED ON RETURN; sol C PASSED
+OK   R4b the pair is still asked by a judge under the candidate where live keeps it: live 2, candidate 1
+     R4c redirected judges switch to a plain question: live returns luna:-, chatgpt:-, sol:- | candidate returns luna:-, chatgpt:redirect-defender, sol:redirect-defender
+       judges asking the defender about the CR3/CR4 pair at the end: live [luna, chatgpt, sol], candidate [luna]
+       candidate record: luna D PASSED; luna C PASSED; chatgpt D PASSED ON RETURN; chatgpt C PASSED; sol D PASSED ON RETURN; sol C PASSED
+OK   R4c luna still asks about the pair; the plain questions are used
+     R4d redirected judges return nothing: live returns luna:-, chatgpt:-, sol:- | candidate returns luna:-, chatgpt:redirect-defender, sol:redirect-defender
+       judges asking the defender about the CR3/CR4 pair at the end: live [luna, chatgpt, sol], candidate [luna, chatgpt, sol]
+       candidate record: luna D PASSED; luna C PASSED; chatgpt D PASSED (redirect reply failed, first kept); chatgpt C PASSED; sol D PASSED (redirect reply failed, first kept); sol C PASSED
+OK   R4d both keep the first question on both sides; nothing dropped
+OK   R5 a redirected judge that also changes its challenger question: the challenger side keeps the first
+OK   R6a same rounds, quotes not contained: chatgpt not returned: luna:-, chatgpt:-, sol:redirect-defender
+     R6b luna's defender question fails a check at first: luna:fault, chatgpt:-, sol:redirect-defender
+OK   R6b chatgpt is not redirected against a failing question; sol is redirected against chatgpt
+     R7 luna:-, chatgpt:redirect-defender+redirect-challenger, sol:redirect-challenger
+     chatgpt return: === QUESTION ROUND (TRIAL): RETURNED ONCE === / Another judge already asks the defender about the contradiction between CR3 and CR4. If you see a different contradiction in that debater's closing round, ask about it instead; if you see none, keep your question. / Another judge already asks the challenger about the contradiction between DR3 and DR4. If you see a different contradiction in that debater's closing round, ask about it instead; if you see none, keep your question. / Reply again with JSON only, in the same form, both questions.
+OK   R7 chain and both sides: chatgpt redirected on both sides with two sentences naming the right rounds; sol on the challenger side only
+OK   R9 a failing redirect reply: first kept, status PASSED with the note, not PASSED ON RETURN
+     R10 luna:fault, chatgpt:fault, sol:-
+OK   R10 luna and chatgpt both faulted: sol is not redirected
+     R11 luna:fault, chatgpt:-, sol:redirect-defender
+OK   R11 luna not JSON at first: not counted; chatgpt stands; sol redirected against chatgpt
+     R12 first faults (must be empty): [[],[],[]]
+     R12 live returns luna:-, chatgpt:-, sol:- | candidate returns luna:-, chatgpt:redirect-defender, sol:redirect-defender; sol redirected of: chatgpt
+     R12 judges whose final defender question quotes sol's passage: live [chatgpt, sol], candidate []
+FAIL R12 sol's distinct question is not lost where live keeps it
+SOME CHECK FAILED

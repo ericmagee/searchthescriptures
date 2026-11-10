@@ -53,5 +53,16 @@ const rep=o=>({json:{choices:[{message:{content:typeof o==='string'?o:S(o)}}]}})
  {const cq={round:'DR4',quote:d4[0],earlier_round:'DR3',earlier_quote:d3[0],question:'How do these two passages agree?'};const c=await full(N,{0:{...firstOf(0),challenger:cq},1:{...firstOf(1),challenger:cq},2:{defender:plain(0),challenger:cq}},{});console.log('     R7 '+sum(c.c));const t=c.c[1].body.messages[c.c[1].body.messages.length-1].content;console.log('     chatgpt return: '+t.replace(/\n/g,' / '));chk('R7 chain and both sides: chatgpt redirected on both sides with two sentences naming the right rounds; sol on the challenger side only',S(Object.keys(c.c[1].redirect))===S(['defender','challenger'])&&/the defender about the contradiction between CR3 and CR4/.test(t)&&/the challenger about the contradiction between DR3 and DR4/.test(t)&&S(Object.keys(c.c[2].redirect))===S(['challenger'])&&c.c[2].redirect.challenger.of==='luna');}
  // R9
  {const sec={1:{...firstOf(1),defender:{...other(1),quote:'words that are not in the closing round at all, none'}}};const c=await full(N,{},sec);const r=c.rec.find(r=>r.judge==='chatgpt'&&r.side==='defender');chk('R9 a failing redirect reply: first kept, status PASSED with the note, not PASSED ON RETURN',r.status==='PASSED'&&r.redirect_note&&r.quote===firstOf(1).defender.quote&&S(r.faults)==='[]');}
+
+ // rev 2 plants
+ {const f0={0:{...firstOf(0),challenger:badCh},1:{...firstOf(1),challenger:badCh}};const c=await full(N,f0,{0:firstOf(0),1:firstOf(1)});console.log('     R10 '+sum(c.c));chk('R10 luna and chatgpt both faulted: sol is not redirected',!c.c[2].retry);}
+ {const f0={0:'this is not JSON'};const c=await full(N,f0,{0:firstOf(0)});console.log('     R11 '+sum(c.c));chk('R11 luna not JSON at first: not counted; chatgpt stands; sol redirected against chatgpt',!(c.c[1].redirect||{}).defender&&c.c[2].redirect.defender&&c.c[2].redirect.defender.of==='chatgpt');}
+ {// R12 non-transitive containment
+  const A='and I accepted that order.',B="The finding is dated before the pair's coming together.",AB=A+' '+B;if(!String(F.cr3).includes(AB))throw new Error('R12 passage not in CR3');const q=(eq,cq)=>({round:'CR4',quote:cq,earlier_round:'CR3',earlier_quote:eq,question:'How do these two passages agree?'});
+  const f0={0:{...firstOf(0),defender:q(A,s4[0])},1:{...firstOf(1),defender:q(AB,s4[1])},2:{...firstOf(2),defender:q(B,s4[2])}};
+  const sec={1:{...firstOf(1),defender:other(3)},2:{...firstOf(2),defender:other(4)}};
+  const l=await full(L,f0,sec),c=await full(N,f0,sec);console.log('     R12 first faults (must be empty): '+S(c.c.map(j=>j.faults.defender)));console.log('     R12 live returns '+sum(l.c)+' | candidate returns '+sum(c.c)+'; sol redirected of: '+(((c.c[2].redirect||{}).defender||{}).of||'-'));
+  const asksB=x=>x.f.filter(y=>y.side==='defender'&&y.earlier_quote&&(y.earlier_quote===B||y.earlier_quote===AB)).map(y=>y.judge);console.log('     R12 judges whose final defender question quotes sol\'s passage: live ['+asksB(l).join(', ')+'], candidate ['+asksB(c).join(', ')+']');
+  chk('R12 sol\'s distinct question is not lost where live keeps it',!(asksB(l).length>0&&asksB(c).length===0));}
  console.log(ok?'ALL CHECKS OK':'SOME CHECK FAILED');
 })().catch(e=>{console.log('RUNNER ERROR '+e.stack);});
