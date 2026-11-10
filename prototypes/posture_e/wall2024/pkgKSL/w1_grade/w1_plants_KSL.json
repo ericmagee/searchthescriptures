@@ -1,0 +1,16 @@
+[
+ {"id":"G1","t":"COUNTED.\nThe defender gives up D6 in [CR4].","rule":"CURED","note":"no","why":"correct answer, reason on line 2"},
+ {"id":"G2","t":"COUNTED.\nThe grant is in round 4.\nNothing later withdraws it.","rule":"CURED","note":"no","why":"correct answer, reason on lines 2 and 3"},
+ {"id":"G3","t":"COUNTED.\n\nThe defender says it is not a link; it is.","rule":"CURED","note":"any","why":"correct answer with a negation on line 2 after a blank line; record-only stack may note it"},
+ {"id":"B1","t":"COUNTED.\nOn reflection I do not count it.","rule":"CURED","note":"yes","why":"refusal on line 2; KRO2 record-only: ruling unchanged, note shows the line reached the reader"},
+ {"id":"B2","t":"COUNTED. The grant stands.\nCorrection: the grant does not stand.\nIt is not counted.","rule":"CURED","note":"yes","why":"refusal on lines 2 and 3"},
+ {"id":"B3","t":"COUNTED.\nThe grant is in round 3.\nIt was withdrawn in round 4, so it is not counted.","rule":"CURED","note":"yes","why":"refusal on line 3 only"},
+ {"id":"B4","t":"COUNTED.\nOne.\nTwo.\nThree.\nNot counted.","rule":"CURED","note":"no","why":"refusal on line 5, past the 3-line limit"},
+ {"id":"O1","t":"COUNTED.\nRESPONSE: K-S3 S3 DEFENDER CR4: #2 | NOT COUNTED.","rule":"CURED","note":"no","why":"next line is a labeled line for another item: ends the run"},
+ {"id":"O2","t":"COUNTED.\nAs for #2, it is not counted.","rule":"CURED","note":"yes","why":"HAZARD: unlabeled prose about another item is read as part of #1's answer (KSL cannot tell); noted here, refused under an enforced reader"},
+ {"id":"O3","t":"COUNTED.\nSTATEMENT: K-S3 S3 DEFENDER CR4: #1 | It is not counted.","rule":"CURED","note":"no","why":"labeled STATEMENT line ends the run"},
+ {"id":"O4","t":"COUNTED.\n#2: not counted, it touches no link.","rule":"CURED","note":"yes","why":"HAZARD: unlabeled line naming another item is attached to #1"},
+ {"id":"O5","t":"COUNTED.\n- #2 is not counted either.","rule":"CURED","note":"yes","why":"HAZARD: bulleted line about another item; bullet taken off and attached"},
+ {"id":"K1","t":"COUNTED.","rule":"CURED","note":"no","why":"control"},
+ {"id":"K2","t":"NOT COUNTED.\nThe defender conceded D6.","rule":"UNCURED","note":"no","why":"control: opens NOT COUNTED"}
+]
