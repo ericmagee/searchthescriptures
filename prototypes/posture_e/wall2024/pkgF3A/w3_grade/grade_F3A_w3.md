@@ -25,3 +25,30 @@ Labels labels_F3A_w3.md (commit dc7da98f, before any candidate run). Scripts r2.
 
 ## Note for the record
 This walk is the first time the round 2 nodes ran on any data (the four R2 Alt nodes were NOT REACHED in every run). They ran to the end without error on both plants. That is an offline walk, not a run.
+
+
+# REGRADE: rev 2 (W2 commit 47dfe25a) and rev 2s (7131abc0). Labels a365f835 before any run. Script w3_F3A2.cjs, output w3_F3A2_out.txt. 22 OK, 0 FAIL.
+
+## Verdict: rev 2 PASS. rev 2s PASS. My closing condition (finding A, with B) is met by both.
+
+## Sizes (measured, the file with the family exemption): rev 2 +1,190 (Shared Library +261, Second Alternate? +565, Alternate Merge +364). rev 2s +485 (Second Alternate? +349, Alternate Merge +136; no library change). No prompt text. Connections equal.
+
+## Tests, same for both forms
+- H1 same failure text twice: luna's written row carries 2 ALTERNATE TRIED lines (round 1 row: 1), the row gains exactly one line, the merged record names the retried model, both tries are in alternates_tried, seat unfilled. OK.
+- H2 a different failure text the second time: 2 lines, not 3. OK.
+- H3 control (round 1 refused by the rules, round 2 with another pool model): the final Alternate Merge output equals live apart from the retry keys. OK.
+- H4 no round 2: the final Alternate Merge output equals live. OK.
+- H5 Second Alternate? on five other round 1 outcomes: equals live apart from the new keys and the family exemption in a2r.free. OK.
+My first H3 was a wrong control (it planted an unusable round 1 reply, which is the retry case); corrected before the result was counted. It showed the note below.
+
+## H6, H7 and my judgment on findings C and D
+- C (two unfilled seats): rev 2 gives the retried model only to the seat whose reply was unusable (my plant: haiku is refused for luna with "G5 (pkgF3A) ... retried only for sol"). rev 2s gives it to the first failed seat in panel order (my plant: luna).
+- D: rev 2 keeps the retried model in a2r.tried and adds retry_for. rev 2s leaves it out of a2r.tried and names it in retry.
+- JUDGMENT: C and D left open do NOT fail rev 2s. C: the model was never tried for the seat it goes to, which is what the live round 2 rule already does with any free model; a seat is still filled or tried, and no reply the rules refused is asked for again. It needs two removed seats in one debate, which no stored run has. D is a record field; the retry is named in alternate_round2.retry and both tries are in alternates_tried. Neither is a silent drop or a wrong verdict.
+- So the smaller form is enough: +485 with the family exemption (+439 for the retry, +46 for the exemption; on 34626 the retry does nothing without the exemption).
+
+## Note for the choice between the two sketches (not a fault)
+With a second model in the pool and an unusable first reply, both forms call the first model again and the untried model is not called (live would call the untried model). There is one round 2 only, so the retry and the second pool model do not add up: whichever stands first in the pool is called.
+
+## Limits (unchanged)
+Seating after a good retry is not shown (the alternate's cure, enforcer, send-back and gate calls are not replayed). Failure texts other than the three patterns are not retried.

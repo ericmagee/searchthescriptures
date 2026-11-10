@@ -1,0 +1,40 @@
+
+=== rev 2 (pkgF3A/parent_s110_F3A2_ALL.json)
+H0 size 1190 code; differs: Shared Library 261, Second Alternate? 565, Alternate Merge 364; connections equal true
+   a2r {"run":true,"seats":["luna"],"tried":["anthropic/claude-haiku-5.5"],"free":["haiku"],"retry":["anthropic/claude-haiku-5.5"],"retry_for":{"anthropic/claude-haiku-5.5":"luna"},"why":"round 2 for luna; free: haiku; retry of an unusable reply: anthropic/claude-haiku-5.5 for luna"}
+   alternate_round2 {"seats":["luna"],"tried":["anthropic/claude-haiku-5.5"],"free":["haiku"],"retry":["anthropic/claude-haiku-5.5"],"retry_for":{"anthropic/claude-haiku-5.5":"luna"},"result":[{"seat":"luna","seated":null,"lines":1}]}
+OK   H1 same failure text twice: luna row ALTERNATE lines 2 (round 1 row: 1); row lines 129 to 130
+OK   H1 the merged record names the retried model
+OK   H1 both tries in alternates_tried, seat unfilled
+OK   H2 different failure text the second time: ALTERNATE lines 2; second: -5.5; RESULT: NOT SEATED; WHY: seat "haiku" returned no JSON object. First 200 chars: I cannot produce the verdict. run_token=ODV1-34108-3to
+OK   H3 control, round 1 refused by the rules, round 2 with another model: final Alternate Merge output equals live apart from the retry keys (luna ALTERNATE lines 2, live 2)
+OK   H4 no round 2: final Alternate Merge output equals live
+NOTE pool of two (haiku unusable in round 1, glm untried): a2r.free ["haiku","glm"]; R2 Alternate Build calls haiku for luna (live calls glm)
+OK   H5 round 1 seated: equals live apart from new keys [retry,retry_for], free [] (live []); run false
+OK   H5 none tried: equals live apart from new keys [retry,retry_for], free ["haiku"] (live []); run false
+OK   H5 uncured: equals live apart from new keys [retry,retry_for], free [] (live []); run false
+OK   H5 guards: equals live apart from new keys [retry,retry_for], free [] (live []); run false
+OK   H5 timeout text: equals live apart from new keys [retry,retry_for], free [] (live []); run false
+H6/H7 plant (luna<-glm refused by the rules; sol<-haiku unusable): a2r {"run":true,"seats":["sol","luna"],"tried":["anthropic/claude-haiku-5.5","z-ai/glm-5"],"free":["haiku"],"retry":["anthropic/claude-haiku-5.5"],"retry_for":{"anthropic/claude-haiku-5.5":"sol"},"why":"round 2 for sol, luna; free: haiku; retry of an unusable reply: anthropic/claude-haiku-5.5 for sol"}
+   R2 Alternate Build: [{"skip":"no seat has an alternate","why":"","skips":"[{\"idx\":0,\"removed_seat\":\"luna\",\"removed_api_model\":\"openai/gpt-6-luna\",\"qualify\":false,\"skip\":\"no pool model passes the guards: haiku G5 (pkgF3A): anthropic/claude-haiku-5.5 is retried only for sol; glm G5 (pkgA2R): z-ai/glm-5 was tried in the first alternate round\"}]"}]
+
+=== rev 2s (pkgF3A/parent_s110_F3A2s_ALL.json)
+H0 size 485 code; differs: Second Alternate? 349, Alternate Merge 136; connections equal true
+   a2r {"run":true,"seats":["luna"],"tried":[],"free":["haiku"],"retry":["anthropic/claude-haiku-5.5"],"why":"round 2 for luna; free: haiku"}
+   alternate_round2 {"seats":["luna"],"tried":[],"free":["haiku"],"retry":["anthropic/claude-haiku-5.5"],"result":[{"seat":"luna","seated":null,"lines":1}]}
+OK   H1 same failure text twice: luna row ALTERNATE lines 2 (round 1 row: 1); row lines 129 to 130
+OK   H1 the merged record names the retried model
+OK   H1 both tries in alternates_tried, seat unfilled
+OK   H2 different failure text the second time: ALTERNATE lines 2; second: -5.5; RESULT: NOT SEATED; WHY: seat "haiku" returned no JSON object. First 200 chars: I cannot produce the verdict. run_token=ODV1-34108-3to
+OK   H3 control, round 1 refused by the rules, round 2 with another model: final Alternate Merge output equals live apart from the retry keys (luna ALTERNATE lines 2, live 2)
+OK   H4 no round 2: final Alternate Merge output equals live
+NOTE pool of two (haiku unusable in round 1, glm untried): a2r.free ["haiku","glm"]; R2 Alternate Build calls haiku for luna (live calls glm)
+OK   H5 round 1 seated: equals live apart from new keys [retry], free [] (live []); run false
+OK   H5 none tried: equals live apart from new keys [retry], free ["haiku"] (live []); run false
+OK   H5 uncured: equals live apart from new keys [retry], free [] (live []); run false
+OK   H5 guards: equals live apart from new keys [retry], free [] (live []); run false
+OK   H5 timeout text: equals live apart from new keys [retry], free [] (live []); run false
+H6/H7 plant (luna<-glm refused by the rules; sol<-haiku unusable): a2r {"run":true,"seats":["sol","luna"],"tried":["z-ai/glm-5"],"free":["haiku"],"retry":["anthropic/claude-haiku-5.5"],"why":"round 2 for sol, luna; free: haiku"}
+   R2 Alternate Build: [{"removed":"luna","seat":"haiku","why":"","skips":"[]"}]
+
+22 OK, 0 FAIL
