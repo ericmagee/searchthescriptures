@@ -1,0 +1,12 @@
+## P7r count 4: extra K-G7 on D1 (witness form, with its response line) | items 31 | uncured base 3 cand 2 | cec ["D6"] | diffs 1
+   K-G7 D6: UNCURED [the line records an answer and does not say the witness went unanswered, so the break is o] -> CURED [the link is broken by the engine's confirmed closing contradiction, which no count carries (pkgK7C)]
+    [["K-G7","D6","UNCURED","the line records an answer and does not say the witness went unanswered, so the break is one of meaning (ruling 421): a "],["K-G7","D1 vs C1","UNCURED","corrected count 4 is below 5"]]
+    [["K-G7","D6","CURED","the link is broken by the engine's confirmed closing contradiction, which no count carries (pkgK7C)"],["K-G7","D1 vs C1","UNCURED","corrected count 4 is below 5"]]
+## P7r count 5: extra K-G7 on D1 (witness form, with its response line) | items 31 | uncured base 2 cand 1 | cec ["D6"] | diffs 1
+   K-G7 D6: UNCURED [the line records an answer and does not say the witness went unanswered, so the break is o] -> CURED [the link is broken by the engine's confirmed closing contradiction, which no count carries (pkgK7C)]
+    [["K-G7","D6","UNCURED","the line records an answer and does not say the witness went unanswered, so the break is one of meaning (ruling 421): a "],["K-G7","D1 vs C1","CURED","counted: DEFENDER COUNT 5, STANDING COLLAPSED"]]
+    [["K-G7","D6","CURED","the link is broken by the engine's confirmed closing contradiction, which no count carries (pkgK7C)"],["K-G7","D1 vs C1","CURED","counted: DEFENDER COUNT 5, STANDING COLLAPSED"]]
+## P7r count 6: extra K-G7 on D1 (witness form, with its response line) | items 31 | uncured base 2 cand 1 | cec ["D6"] | diffs 1
+   K-G7 D6: UNCURED [the line records an answer and does not say the witness went unanswered, so the break is o] -> CURED [the link is broken by the engine's confirmed closing contradiction, which no count carries (pkgK7C)]
+    [["K-G7","D6","UNCURED","the line records an answer and does not say the witness went unanswered, so the break is one of meaning (ruling 421): a "],["K-G7","D1 vs C1","CURED","counted: DEFENDER COUNT 6, STANDING COLLAPSED"]]
+    [["K-G7","D6","CURED","the link is broken by the engine's confirmed closing contradiction, which no count carries (pkgK7C)"],["K-G7","D1 vs C1","CURED","counted: DEFENDER COUNT 6, STANDING COLLAPSED"]]

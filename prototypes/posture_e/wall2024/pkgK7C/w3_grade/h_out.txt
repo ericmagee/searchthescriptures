@@ -1,0 +1,34 @@
+## R real haiku | items 30 | uncured base 2 cand 1 | cec ["D6"] | diffs 1
+   K-G7 D6: UNCURED [the line records an answer and does not say the witness went unanswered, so the break is o] -> CURED [the link is broken by the engine's confirmed closing contradiction, which no count carries (pkgK7C)]
+## R real chatgpt | items 42 | uncured base 0 cand 0 | cec ["D6"] | diffs 1
+   K-G7 D6 vs C5: CURED [retracted] -> CURED [the link is broken by the engine's confirmed closing contradiction, which no count carries (pkgK7C)]
+## R real luna | items 20 | uncured base 0 cand 0 | cec ["D6"] | diffs 0
+## R real sol | items 33 | uncured base 0 cand 0 | cec ["D6"] | diffs 0
+## P1 no confirmed | items 30 | uncured base 2 cand 2 | cec [] | diffs 0
+## P2 defender link 5 only | items 30 | uncured base 2 cand 2 | cec ["D5"] | diffs 0
+## P3 challenger link 6 only | items 30 | uncured base 2 cand 2 | cec ["C6"] | diffs 0
+## P4 D16 vs C5, links 6 and 1 confirmed | items 30 | uncured base 2 cand 2 | cec ["D1","D6"] | diffs 0
+## P5 D6 vs C2 | items 30 | uncured base 2 cand 1 | cec ["D6"] | diffs 1
+   K-G7 D6 vs C2: UNCURED [the line records an answer and does not say the witness went unanswered, so the break is o] -> CURED [the link is broken by the engine's confirmed closing contradiction, which no count carries (pkgK7C)]
+## P6a CHALLENGER item D2 vs C6, challenger 6 confirmed | items 30 | uncured base 2 cand 1 | cec ["C6"] | diffs 1
+   K-G7 D2 vs C6: UNCURED [the line records an answer and does not say the witness went unanswered, so the break is o] -> CURED [the link is broken by the engine's confirmed closing contradiction, which no count carries (pkgK7C)]
+## P6b CHALLENGER item D2 vs C6, defender 6 confirmed | items 30 | uncured base 2 cand 2 | cec ["D6"] | diffs 0
+## P6c CHALLENGER item D6 vs C2, challenger 6 confirmed | items 30 | uncured base 2 cand 2 | cec ["C6"] | diffs 0
+## P7 extra K-G7 on D1 | items 31 | uncured base 3 cand 2 | cec ["D6"] | diffs 1
+   K-G7 D6: UNCURED [the line records an answer and does not say the witness went unanswered, so the break is o] -> CURED [the link is broken by the engine's confirmed closing contradiction, which no count carries (pkgK7C)]
+   D1: [["D6","UNCURED","the line records an answer and does not say the witness went unanswered, so the break is one of meaning (ruling 421): a count does not cure it; cure it with one"],["D1 vs C1","UNCURED","no written response"]]
+   D1: [["D6","CURED","the link is broken by the engine's confirmed closing contradiction, which no count carries (pkgK7C)"],["D1 vs C1","UNCURED","no written response"]]
+## P8a link as string | items 30 | uncured base 2 cand 1 | cec ["D6"] | diffs 1
+   K-G7 D6: UNCURED [the line records an answer and does not say the witness went unanswered, so the break is o] -> CURED [the link is broken by the engine's confirmed closing contradiction, which no count carries (pkgK7C)]
+## P8b side missing | items 30 | uncured base 2 cand 2 | cec [] | diffs 0
+## P9 from Judge Contradiction Record only | items 30 | uncured base 2 cand 1 | cec ["D6"] | diffs 1
+   K-G7 D6: UNCURED [the line records an answer and does not say the witness went unanswered, so the break is o] -> CURED [the link is broken by the engine's confirmed closing contradiction, which no count carries (pkgK7C)]
+## P10 neither executed | items 30 | uncured base 2 cand 2 | cec [] | diffs 0
+## P11 rule K-G4 on D6 | items 30 | uncured base 2 cand 2 | cec ["D6"] | diffs 0
+## P11 rule K-G1 on D6 | items 30 | uncured base 2 cand 2 | cec ["D6"] | diffs 0
+## P11 rule K-F on D6 | items 30 | uncured base 2 cand 2 | cec ["D6"] | diffs 0
+## P11 rule K-C on D6 | items 30 | uncured base 2 cand 2 | cec ["D6"] | diffs 0
+## P11 rule K-G6 on D6 | items 30 | uncured base 2 cand 2 | cec ["D6"] | diffs 0
+## P12 witness-ground line on D6 | items 30 | uncured base 2 cand 1 | cec ["D6"] | diffs 1
+   K-G7 D6: UNCURED [corrected count 4 is below 5] -> CURED [the link is broken by the engine's confirmed closing contradiction, which no count carries (pkgK7C)]
+JCR present in 34703: true []
