@@ -1,0 +1,5 @@
+# pkgGCC (W1, offline on s110 ed644923): a line the gate cures loses its send-back count
+Finding: Wall 4264. When Send Back Record counts an item in drv_uncured, and the gate later cures the same line (an E-GATE item from "E-APPLY Sn"), Gate Record never takes that count off.
+Fix: in Gate Record (and Alt Gate Record, R2 Alt Gate Record), for each cured gate item whose src is "E-APPLY Sn", if the seat's verdict carries a counted send-back line ("[AUDIT v4x: ... SEAT: <seat>; ITEMS: ... Sn (...) ...; counted in drv_uncured"), drv_uncured drops by one (not below 0). The E-GATE audit line adds "; its send-back count comes off". Nothing else changes.
+Size (measured): +491 Code text, Shared Library only (the three Gate Record nodes are library stubs). No prompt text. Build: SET=GCC node pkgKSR/build_KSR.cjs <fetch-back> <out>; candidate pkgGCC/parent_s110_GCC.json.
+Tests: r2_plant_GCC_out.txt (planted round 2: Haiku seated, gate record drv 1 -> 0); t_1062_out.txt (stored judgment 1062: 12 -> 11, plus 5 plants that stay unchanged); chain_diff_GCC_out.txt (34626 written rows equal to s110).
