@@ -1,0 +1,10 @@
+X1 D6 hint (LINK 6) answered CONFIRMED under LINK 5
+   ["P7 CONFIRMED"] confirmed ["DEFENDER LINK 5"] no answer ["P ... ["P7 CONFIRMED"] confirmed ["DEFENDER LINK 5"]
+X2 hint with LINK ? (P1) answered CONFIRMED under LINK 3
+   ["P1 CONFIRMED"] confirmed ["DEFENDER LINK 3"] no answer ["P ... ["P1 CONFIRMED"] confirmed ["DEFENDER LINK 3"]
+X3 hint with LINK ? answered NOT A CONTRADICTION with LINK ?
+   ["? NOT CONFIRMED (form)"] confirmed [] no answer ["P1","P2" ... ["? NOT CONFIRMED (form)"] confirmed []
+X4 D6 hint CONFIRMED with the earlier sentence shortened to the dropped words only
+   ["P7 CONFIRMED"] confirmed ["DEFENDER LINK 6"] no answer ["P ... ["P7 CONFIRMED"] confirmed ["DEFENDER LINK 6"]
+X5 D6 hint NOT A CONTRADICTION with CLOSING [CR4] omitted
+   ["? NOT CONFIRMED (form)"] confirmed [] no answer ["P1","P2" ... ["? NOT CONFIRMED (form)"] confirmed []
