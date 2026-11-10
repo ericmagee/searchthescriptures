@@ -1,0 +1,413 @@
+{
+ "about": "W3 labeled cases for pkgCDR rev 8, labels fixed before the run. T = the side's own drop against the opponent, negation and strike rules; V = closing side; U = not the side's drop.",
+ "cases": [
+  {
+   "id": "T1",
+   "adds": [
+    [
+     "cr3",
+     "Because the challenger pressed Ezra 2:62, I drop the wording \"the register stops at Joseph\"."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "LISTED",
+   "note": "opponent named in a reason clause before my drop"
+  },
+  {
+   "id": "T2",
+   "adds": [
+    [
+     "cr3",
+     "I grant the challenger this row and withdraw the wording \"the register stops at Joseph\"."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "LISTED",
+   "note": "opponent is the nearest noun before my second verb"
+  },
+  {
+   "id": "T3",
+   "adds": [
+    [
+     "cr3",
+     "As the challenger says, the wording overreaches, and I withdraw \"the register stops at Joseph\"."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "LISTED",
+   "note": "as the challenger says"
+  },
+  {
+   "id": "T4",
+   "adds": [
+    [
+     "cr3",
+     "Matthew says he took his wife, and I drop the claim that the register stops at Joseph in every row."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph in every row."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph in every row.",
+   "want": "LISTED",
+   "note": "he = Joseph in the verse"
+  },
+  {
+   "id": "T5",
+   "adds": [
+    [
+     "cr3",
+     "The rows name no tribe; they set no house, and I drop the wording \"the register stops at Joseph\"."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "LISTED",
+   "note": "they = the rows"
+  },
+  {
+   "id": "T8",
+   "adds": [
+    [
+     "cr3",
+     "I concede to the challenger and withdraw \"the register stops at Joseph\"."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "LISTED",
+   "note": "concede to the challenger and withdraw"
+  },
+  {
+   "id": "T11",
+   "adds": [
+    [
+     "cr3",
+     "Since he asks for a row and I have none, I drop the wording \"the register stops at Joseph\"."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "LISTED",
+   "note": "he asks, I drop"
+  },
+  {
+   "id": "T19",
+   "adds": [
+    [
+     "dr3",
+     "I grant what the defender pressed and drop the claim that the two lists name one man in every row."
+    ],
+    [
+     "dr4",
+     "The two lists name one man in every row."
+    ]
+   ],
+   "side": "CHALLENGER",
+   "closing": "The two lists name one man in every row.",
+   "want": "LISTED",
+   "note": "challenger side"
+  },
+  {
+   "id": "T6",
+   "adds": [
+    [
+     "cr3",
+     "I withdraw not the verse but the wording \"the register stops at Joseph\"."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "LISTED",
+   "note": "not X but the wording"
+  },
+  {
+   "id": "T15",
+   "adds": [
+    [
+     "cr3",
+     "I drop no verse, only the wording \"the register stops at Joseph\"."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "LISTED",
+   "note": "no X, only the wording"
+  },
+  {
+   "id": "T7",
+   "adds": [
+    [
+     "cr3",
+     "The sentence \"the register stops at Joseph\" is struck from my LINK 2."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "LISTED",
+   "note": "passive strike by the side"
+  },
+  {
+   "id": "T20",
+   "adds": [
+    [
+     "cr3",
+     "Strike the wording \"the register stops at Joseph\" from my LINK 2."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "LISTED",
+   "note": "imperative strike"
+  },
+  {
+   "id": "T17",
+   "adds": [
+    [
+     "cr3",
+     "I no longer defend the wording \"the register stops at Joseph\"."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "LISTED",
+   "note": "no longer defend"
+  },
+  {
+   "id": "T21",
+   "adds": [
+    [
+     "cr3",
+     "I drop the Luke 3:23 register reading through Heli alone."
+    ],
+    [
+     "cr4",
+     "The Luke 3:23 register reading through Heli alone stands."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The Luke 3:23 register reading through Heli alone stands.",
+   "want": "LISTED",
+   "note": "verse colon inside the dropped object"
+  },
+  {
+   "id": "T9",
+   "adds": [
+    [
+     "cr3",
+     "The challenger is right that the row is silent; the wording \"the register stops at Joseph\" is withdrawn."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "LISTED",
+   "note": "control: passive after semicolon"
+  },
+  {
+   "id": "T14",
+   "adds": [
+    [
+     "cr3",
+     "I drop the wording \"the register stops at Joseph\", which the challenger struck at in round 2."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "LISTED",
+   "note": "control: opponent after the verb"
+  },
+  {
+   "id": "V1",
+   "adds": [
+    [
+     "cr3",
+     "I drop the wording \"the register stops at Joseph\"."
+    ],
+    [
+     "cr4",
+     "I granted too much in round 3: the register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "I granted too much in round 3: the register stops at Joseph.",
+   "want": "LISTED",
+   "note": "closing holds \"granted\""
+  },
+  {
+   "id": "V2",
+   "adds": [
+    [
+     "cr3",
+     "I drop the wording \"the register stops at Joseph\"."
+    ],
+    [
+     "cr4",
+     "I withdraw my round 3 narrowing, and the register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "I withdraw my round 3 narrowing, and the register stops at Joseph.",
+   "want": "LISTED",
+   "note": "closing withdraws the narrowing"
+  },
+  {
+   "id": "V3",
+   "adds": [
+    [
+     "cr3",
+     "I drop the wording \"the register stops at Joseph\"."
+    ],
+    [
+     "cr4",
+     "I restore the wording \"the register stops at Joseph\"."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "I restore the wording \"the register stops at Joseph\".",
+   "want": "LISTED",
+   "note": "closing restores the wording in quote marks"
+  },
+  {
+   "id": "U1",
+   "adds": [
+    [
+     "cr3",
+     "The challenger would have me withdraw the wording \"the register stops at Joseph\", and I keep it."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "NOT LISTED",
+   "note": "opponent demand"
+  },
+  {
+   "id": "U2",
+   "adds": [
+    [
+     "cr3",
+     "The challenger's demand that the wording \"the register stops at Joseph\" be withdrawn fails."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "NOT LISTED",
+   "note": "possessive opponent, passive"
+  },
+  {
+   "id": "U3",
+   "adds": [
+    [
+     "cr3",
+     "I have not withdrawn the wording \"the register stops at Joseph\"."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "NOT LISTED",
+   "note": "negated perfect"
+  },
+  {
+   "id": "U4",
+   "adds": [
+    [
+     "cr3",
+     "Nothing in LINK 2 is withdrawn, least of all \"the register stops at Joseph\"."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "NOT LISTED",
+   "note": "nothing is withdrawn"
+  },
+  {
+   "id": "U5",
+   "adds": [
+    [
+     "dr3",
+     "The defender dropped the wording \"the two lists name one man\" in round 2."
+    ],
+    [
+     "dr4",
+     "The two lists name one man."
+    ]
+   ],
+   "side": "CHALLENGER",
+   "closing": "The two lists name one man.",
+   "want": "NOT LISTED",
+   "note": "challenger reports the defender"
+  }
+ ]
+}
