@@ -49,3 +49,19 @@ Files:
   differs; connections equal; 30 sources byte-equal to strip_FUN2.
 - Rolled-back insert (tag W1-FUN2-ROLLBACK, one CURED and one UNCURED panel
   K-S3 cure row): accepted, {"rows": 2, "recorded": true}.
+
+## Rev 3 (W1, 2026-11-10)
+
+Rev 2 was failed by W4 (Wall 3890: a leading but/though/yet refused correct answers) and by W3 (Wall 3894: 17 of 20 further
+correct answers read UNCURED; listed words inside a longer sentence were read as a refusal). Rev 3 takes W3's fix
+(w3_grade/w3_whole_sentence_idea.cjs): a refusal is a WHOLE sentence from the closed list, or the whole remainder after
+"COUNTED, but/though/yet/however"; a connector alone is not a refusal, and listed words inside a longer sentence are not a refusal.
+The reader is pkgFUN/fun3_ref.cjs, put into the K-S3 line by build_FUN3.cjs. W1 added whole-sentence refusals from both graders'
+lists (see the file header). Eric ruled (19:05 CST 11-09) that the live version stays and the fix is written on top.
+
+- allplants_FUN3.cjs / .txt: every planted COUNTED answer from W3's and W4's rev 1 and rev 2 grade files, and W1's, through the
+  live s98 line and the rev 3 line. 149 distinct answers. Correct 91: rev 3 reads all 91 CURED; none that live reads CURED
+  is lost; 29 that live reads UNCURED now read CURED. Refusals 58: rev 3 reads 54 UNCURED (live 25). The 4 read CURED are
+  reservations from W3's first list ("COUNTED, though late in the round.", "COUNTED, yet the link stands.", "COUNTED, unless
+  the titles are excluded.", "COUNTED, although it grants only titles."), which W3 now holds should not remove a seat.
+- Write file parent_s98_FUN3.json: against live s98 only the Shared Library differs (form 3 pack, pkgLIB_FUN3S).
