@@ -1,0 +1,16 @@
+{"about":"W1 labeled cases for pkgKBF rev 1 (verse label in bold with the close before the punctuation), labels fixed before any build or run. Same frame as pkgKBN/w1_grade: run 33798, terra, E-ANS Job 14:1 [CR3]; each sentence is added as its own line to [CR4] and the judge's KEEP quotes it. want = the cure reading by meaning: UNCURED when the quoted sentence is only a grant, affirmation or deferral; CURED when it carries an answer of its own. reason = a word the UNCURED reason must hold, if any.",
+"cases":[
+ {"id":"B1","s":"- **On Job 14:1**, I grant the phrase covers kings named by their fathers.","want":"UNCURED","note":"pkgKBN K2"},
+ {"id":"B2","s":"**On Job 14:1**: I grant it is said of all men.","want":"UNCURED"},
+ {"id":"B3","s":"**Job 14:1**, I grant the phrase is general.","want":"UNCURED"},
+ {"id":"B4","s":"1. **Regarding Job 14:1-2**, I grant the words as they stand.","want":"UNCURED"},
+ {"id":"B5","s":"*As to Job 14:1*, granted, it is said of all men born.","want":"UNCURED"},
+ {"id":"B6","s":"__On Job 14:1__, I grant it is said of all men.","want":"UNCURED"},
+ {"id":"B7","s":"**On Job 14:1** — I grant it is said of all men.","want":"UNCURED"},
+ {"id":"B8","s":"**On Job 14:1,** I grant it is said of all men.","want":"UNCURED","note":"comma inside the bold; KBN already reads it"},
+ {"id":"B9","s":"**On Job 14:1**, I affirm D6 stands as declared.","want":"UNCURED","reason":"affirmation"},
+ {"id":"B10","s":"- **On Job 14:1**, I grant it, and the verse names no father of Jesus.","want":"CURED","note":"control: grant plus an answer"},
+ {"id":"B11","s":"**On Job 14:1**, the phrase is said of men who had fathers, so it names no virgin birth.","want":"CURED","note":"control: an answer"},
+ {"id":"B12","s":"**Job 14:1**, the verse speaks of every man born, so it cannot name the virgin birth.","want":"CURED","note":"control: an answer"},
+ {"id":"B13","s":"**I grant the phrase**, it is said of men who had fathers, so it names no virgin birth.","want":"CURED","note":"control: bold that is not a verse label is not taken off"}
+]}
