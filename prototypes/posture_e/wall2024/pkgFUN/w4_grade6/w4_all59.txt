@@ -1,0 +1,59 @@
+CURED|w4-new|COUNTED (the defender's round 4 grant is the concession).|paren|CURED
+CURED|w4-new|COUNTED — yes, the grant is the concession.|emdash|CURED
+CURED|w4-new|COUNTED; my first answer missed it.|semicolon|CURED
+CURED|w4-new|Counted. The grant stands.|lowercase|CURED
+CURED|w4-new|COUNTED.\n\nReason: the defender grants it in round 4.|reason line|CURED
+CURED|w4-new|> COUNTED. The grant stands.|blockquote|CURED
+CURED|w4-new|`COUNTED`. The grant stands.|code mark|CURED
+CURED|w4-new|COUNTED. No other link is touched.|no-other|CURED
+CURED|w4-new|COUNTED. Not a courtesy: a concession.|not-a|CURED
+CURED|w4-new|COUNTED. Nothing withdraws it.|nothing|CURED
+CURED|w4-new|COUNTED. I was wrong before; now it is counted.|own-miss|CURED
+CURED|w4-new|COUNTED! The defender conceded.|bang|CURED
+CURED|w4-new|COUNTED. I do not accept the courtesy plea.|reject-plea|CURED
+CURED|w4-new|COUNTED. No court of appeal changes it.|no-start|CURED
+CURED|w4-new|COUNTED. Never was it a courtesy.|never|CURED
+CURED|w4-new|COUNTED. Not counting it would be wrong.|not-counting|CURED
+CURED|w4-new|COUNTED. Wrong of the defender to call it courtesy.|wrong-start|CURED
+CURED|w4-new|COUNTED. I reverse my earlier answer: it is counted.|reverse-own|CURED
+CURED|w4-new|**COUNTED** — the grant in round 4 is the concession; it is not withdrawn.|bold-dash|CURED
+CURED|w4-new|COUNTED. I disagree with my first line, which missed it.|disagree-own|CURED
+UNCURED|w4-new|COUNTED. Not counted.|refusal|ENFORCED
+UNCURED|w4-new|COUNTED. I decline.|refusal|ENFORCED
+UNCURED|w4-new|COUNTED. Scratch that.|refusal|ENFORCED
+UNCURED|w4-new|COUNTED. I take it back.|refusal|ENFORCED
+UNCURED|w4-new|COUNTED. I do not count it.|refusal|ENFORCED
+UNCURED|w4-new|COUNTED. Nope.|refusal|ENFORCED
+UNCURED|w4-new|COUNTED. Disregard this line.|refusal|ENFORCED
+UNCURED|w4-new|COUNTED, though I do not count it.|refusal|ENFORCED
+UNCURED|w4-new|COUNTED. My answer stays as before.|refusal|ENFORCED
+UNCURED|w4-new|COUNTED. The defender granted it. Scratch that.|refusal-later|NOTED
+UNCURED|w4-new|COUNTED. Round 4 holds the grant. I take it back.|refusal-later|NOTED
+UNCURED|w4-new|COUNTED. It is in the round. Nevertheless, not counted.|refusal-later|NOTED
+CURED|w4-new6|COUNTED. That is right.|p-good|CURED
+CURED|w4-new6|COUNTED. This is the concession.|p-good|CURED
+CURED|w4-new6|COUNTED. It stands.|p-good|CURED
+CURED|w4-new6|COUNTED. Yes.|one-word|CURED
+CURED|w4-new6|COUNTED. Agreed.|one-word|CURED
+CURED|w4-new6|COUNTED. Correct.|one-word|CURED
+CURED|w4-new6|COUNTED. That settles it.|p-good|CURED
+CURED|w4-new6|COUNTED. That is not a courtesy.|p-neg-good|CURED
+CURED|w4-new6|COUNTED. It is not withdrawn.|p-neg-good|CURED
+CURED|w4-new6|COUNTED. This cannot be undone.|p-neg-good|CURED
+CURED|w4-new6|COUNTED. No doubt.|no-good|CURED
+CURED|w4-new6|COUNTED. Not in doubt.|not-good|CURED
+CURED|w4-new6|COUNTED. That was not right of me before.|own-miss|CURED
+CURED|w4-new6|COUNTED!|bare-bang|CURED
+CURED|w4-new6|COUNTED. It is not only LINK 2; it touches D6.|not-only|CURED
+CURED|w4-new6|COUNTED. That is wrong of the defender.|p-wrong-defender|CURED
+UNCURED|w4-new6|COUNTED. That is wrong.|p-whole|ENFORCED
+UNCURED|w4-new6|COUNTED. That is wrong!|p-whole-bang|ENFORCED
+UNCURED|w4-new6|COUNTED. It is not.|p-whole|ENFORCED
+UNCURED|w4-new6|COUNTED. This is mistaken.|p-whole|ENFORCED
+UNCURED|w4-new6|COUNTED. Incorrect.|one-word|ENFORCED
+UNCURED|w4-new6|COUNTED! That is not right.|bang-p|ENFORCED
+UNCURED|w4-new6|COUNTED. Wrong.\n|one-word-nl|ENFORCED
+UNCURED|w4-new6|**COUNTED.** Wrong.|markup-one-word|ENFORCED
+UNCURED|w4-new6|COUNTED. Not counted. The grant does not apply.|b-first|ENFORCED
+UNCURED|w4-new6|COUNTED. That is wrong. I keep my first answer.|p-then-text|NOTED
+UNCURED|w4-new6|COUNTED. It is not. The grant was a courtesy.|p-then-text|NOTED
