@@ -131,3 +131,25 @@ Listed as wanted: W92, W107 (fronted that-clause). Controls not listed, as wante
 demand or strike).
 False listings (cost of the broad reading, not counted toward FAIL under this standard): W24 (drop of another limb, quoted
 wording "stands"), W25 ("I withdraw my objection to the reading that ..."), W33 (drop one quote, "keep" the other).
+
+## rev 9 (commit 976d36a3), standard: no true drop hidden
+
+Cases W115-W151 committed before the run (b1d284dc). Harness pkgCDR/w2_grade/run9_w2.cjs: a case reaches the enforcer when a P candidate of the
+case's side holds the dropped wording. Output run_rev9.txt: 115 OK, 36 MISS of 151. W2 and W12 are my harness's artifacts (their wording
+differs from "the register stops at Joseph"; both sentences do reach as P8), so 117 of 151.
+
+FAIL. 34 true drops do not reach the enforcer:
+- 31 verbs outside the family (W115-W144, W148 challenger mirror): yield, cede, jettison, scrap, repudiate, disclaim, remove, delete, cut,
+  leave behind, let fall, part with, stop claiming, cease to maintain, am done with, is gone from my case, concede ... to the challenger, shelve,
+  omit, set to one side, do not stand by ... any more, release, lay down, back off, excise, retire, unsay, recede from, step back from,
+  take ... off the table.
+- 2 split forms: "I drop it." with the wording in the next sentence (W145); "I drop the following wording:" with the wording on a bullet line
+  (W146). The verb sentence reaches but without the wording, so the enforcer cannot name what is given up. W147 (one sentence, colon) reaches.
+- 1 cap (W150): after 30 other drop-family sentences of the side, the true drop is cut by CDR_MAX=30. A side can push a drop out of reach by
+  padding its earlier rounds.
+
+Speaker attribution: correct. A challenger drop is listed as CHALLENGER only (W151, W149); W148's miss is the verb, not attribution.
+Prompt text: the added sentence renders exactly as written in build_CDR.cjs, CLOSING [<round 4>] "" with real quotation marks; candidates show
+CLOSING [CR4] (not named). Note: "Name what it gives up" has no slot in the reply line format; the model can only put it in the closing
+"one sentence" field, or break "nothing else" by adding a line.
+A verb list cannot be complete. If the family stays a list, the cap should go and split forms should carry the next sentence.
