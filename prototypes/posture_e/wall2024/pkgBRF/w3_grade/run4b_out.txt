@@ -1,0 +1,9 @@
+DIFF nodes 12 each 529 total 6348 non-code differences 0 nodes 418 418 rest equal true
+S1 NOT AS LABELLED dr line,cr line | live ["Deuteronomy 20:7","Deuteronomy 1:18"] | rev4 new ["Deuteronomy 20:7"] line ["1:18 (Matthew 1:18 named earlier)"]  | note len 434 585
+S2 AS LABELLED | live ["Deuteronomy 20:7","Deuteronomy 1:18"] | rev4 new ["Deuteronomy 20:7"] line ["1:18 (Matthew 1:18 named earlier)"]  | note len 434 585
+S3 AS LABELLED | live ["Deuteronomy 20:7","Deuteronomy 1:18"] | rev4 new ["Deuteronomy 20:7"] line ["1:18 (Matthew 1:18 named earlier)"]  | note len 434 585
+S6 AS LABELLED | live ["Deuteronomy 20:7","Deuteronomy 1:20"] | rev4 new ["Deuteronomy 20:7"] line ["1:20 (Matthew 1:20 named earlier)"]  | note len 434 585
+S7 NOT AS LABELLED dr line,cr line | live ["Deuteronomy 20:7"] | rev4 new ["Deuteronomy 20:7"] line []  | note len 274 425
+S8 NOT AS LABELLED dr line,cr line | live ["Deuteronomy 20:7","Deuteronomy 1:1"] | rev4 new ["Deuteronomy 20:7"] line ["1:1 (Matthew 1:1 named earlier)"]  | note len 432 583
+S10 AS LABELLED | live ["Deuteronomy 1:18"] | rev4 new ["Deuteronomy 1:18"] line []  | note len 274 425
+copies 12 disagreeing 0
