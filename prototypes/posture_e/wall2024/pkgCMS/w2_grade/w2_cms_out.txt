@@ -1,0 +1,15 @@
+OK   G1 same nodes, ids, parameters other than jsCode, connections and settings
+     changed jsCode: 132 nodes
+OK   G2 parse trees equal (positions removed) for 143 effective sources whose text changed
+OK   G2b no comment left in the 143 changed sources
+     changed sources with no saved run: 41
+     reader [run]    Init Seats:
+        const TOK=RG||('ODV1-'+String($execution.id)+'-'+Math.random().toString(36).slice(2,10));const RT=' run_token='+TOK;
+     reader [run]    Format Markdown:
+        return [a0, b0, c0, d0].map(v => { let h = ''; for (let i = 0; i < 4; i++) h += ((v >>> (i * 8)) & 255).toString(16).padStart(2, '0'); return h; }).join('');
+     reader [run]    Panel Judges Prep:
+        const out=[];const nonce=(()=>{let z='';for(let i=0;i<4;i++)z+=Math.random().toString(36).slice(2,10);return 'ppj-'+$execution.id+'-'+z;})();  const t0=Date.now
+NO_RUN ["Panel Judge 1 deepseek","Stop: Call Failed","Regrade Load","Replay Rows","Replay Done","Dry Failure Stop","Failure Salvage","Salvage Stop","Accept Return Build","Accept DS Return Build","QR Ask Build","QR Check","QR Final","QR Merge","R2 Alt Seated","R2 Alt Judge Enforcer Build","R2 Alt Judge Enforcer Record","R2 Alt Judge Enforcer Retry Build","R2 Alt Send Back Build","R2 Alt Send Back Record","FUM Merge Panel 1","FUM Merge Panel 2","FUM Merge Panel 3","FUM Merge Alternate","FUM Merge R2 Alternate","FUM Merge Cure","Provider Removed Stop","SJ Re-ask Build","SJ Re-ask Pick","Close Enforcer Build","Close Enforcer Record","Judge Contradiction Build","Judge Contradiction Record","Reread Build","Reread Record","Alt Reread Build","Alt Reread Record","R2 Alt Reread Build","R2 Alt Reread Record","Assume Check Build","Assume Check Record"]
+OK   G4 all 43 stubs rebuild from the new Shared Library
+G5 size: Code text 3838679 -> 3223081 = -615598; Shared Library 913804 -> 845004 (-68800)
+ALL OK
