@@ -1,0 +1,36 @@
+[
+ {
+  "run_token": null,
+  "seat": "luna",
+  "seat_role": "panel",
+  "judge_model": null,
+  "kind": "send_back",
+  "rule": "E-ANS",
+  "item": "ANSWER CHECK Luke 1:34 [CR3]",
+  "flagged_line": null,
+  "prompt_sent": null,
+  "full_reply": null,
+  "reply_error": "NOT SENT: the DeepSeek reason reads a deferral as the whole answer, and the code finds an answer behind it: [CR3] the deferral to LINK 4 names an answer of 480 words with layers (pkgEAD)",
+  "response_line": null,
+  "cure_status": null,
+  "cure_reason": "SEND-BACK NOT SENT: the DeepSeek reason reads a deferral as the whole answer, and the code finds an answer behind it: [CR3] the deferral to LINK 4 names an answer of 480 words with layers (pkgEAD) (ruling 428)",
+  "at": "T"
+ },
+ {
+  "run_token": null,
+  "seat": "chatgpt",
+  "seat_role": "panel",
+  "judge_model": null,
+  "kind": "send_back",
+  "rule": "E-ANS",
+  "item": "ANSWER CHECK Luke 1:34 [CR3]",
+  "flagged_line": null,
+  "prompt_sent": null,
+  "full_reply": null,
+  "reply_error": "NOT SENT: the DeepSeek reason reads a deferral as the whole answer, and the code finds an answer behind it: [CR3] the deferral to LINK 4 names an answer of 480 words with layers (pkgEAD)",
+  "response_line": null,
+  "cure_status": null,
+  "cure_reason": "SEND-BACK NOT SENT: the DeepSeek reason reads a deferral as the whole answer, and the code finds an answer behind it: [CR3] the deferral to LINK 4 names an answer of 480 words with layers (pkgEAD) (ruling 428)",
+  "at": "T"
+ }
+]

@@ -1,0 +1,9 @@
+// W3: compare the written send-back rows and the gate items of the two chain replays (base live s112, candidate)
+const S=process.argv[2];const a=require(S+'/ead_base.json'),b=require(S+'/ead_cand.json');const fs=require('fs');
+const rows=x=>x.sbr[0][0].sb_rows||[];const k=r=>r.seat+'|'+r.rule+'|'+r.item;const cnt={same:0,sid_only:0,other:0,gone:0,new_:0};const used=new Set();
+for(const r of rows(a)){const c=rows(b).filter((s,i)=>!used.has(i)&&k(s)===k(r)&&(s.flagged_line===r.flagged_line));const s=c[0];if(!s){cnt.gone++;console.log('NO ROW WITH THE SAME LINE in candidate:',k(r));continue;}used.add(rows(b).indexOf(s));
+ const n=x=>JSON.stringify({...x,prompt_sent:null,full_reply:null}).replace(/SENDBACK: S\d+/g,'SENDBACK: S#');if(JSON.stringify(r)===JSON.stringify(s))cnt.same++;else if(n(r)===n(s))cnt.sid_only++;else{cnt.other++;console.log('OTHER DIFFERENCE:',k(r));for(const f of Object.keys({...r,...s}))if(f!=='prompt_sent'&&f!=='full_reply'&&JSON.stringify(r[f])!==JSON.stringify(s[f]))console.log('   ',f,'| base:',JSON.stringify(r[f]).slice(0,200),'| cand:',JSON.stringify(s[f]).slice(0,200));}}
+const NS=[];rows(b).forEach((s,i)=>{if(!used.has(i)){cnt.new_++;NS.push(s);console.log('ROW ONLY IN candidate:',JSON.stringify({...s,prompt_sent:s.prompt_sent&&'(cut)',full_reply:s.full_reply&&'(cut)'}));}});
+console.log('rows base',rows(a).length,'cand',rows(b).length,JSON.stringify(cnt));fs.writeFileSync(__dirname+'/g7_notsent_rows.json',JSON.stringify(NS,null,1));
+const gi=x=>x.gb.flat().filter(Boolean).flatMap(j=>(j.items||[]).map(g=>j.seat+' '+g.kind+' '+g.key));const ga=gi(a),gb=gi(b);console.log('gate items only in base:',ga.filter(x=>!gb.includes(x)).join('; ')||'none','| only in candidate:',gb.filter(x=>!ga.includes(x)).join('; ')||'none');
+const el=x=>(x.sbr[0][0].enforcer_log||[]);console.log('enforcer_log rows after Send Back Record: base',el(a).length,'cand',el(b).length);

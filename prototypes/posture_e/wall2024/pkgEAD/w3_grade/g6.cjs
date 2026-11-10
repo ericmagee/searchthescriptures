@@ -1,0 +1,10 @@
+// W3 L4: chain of 34703 from Panel Cure Check with stored replies; the stored send-back reply lines of a withheld item are removed and the rest renumbered by item identity. usage: node g6.cjs <workflow> <out.json>
+const chain=require('../../pkgK7C/w3_grade/chain703.cjs');const fs=require('fs');const rd=chain.rd;
+const key=it=>it.rule+'|'+String(it.item||'').replace(/\bS\d+\b/g,'S#')+'|'+it.line;
+const after={'Send Back Build':async(over,out)=>{const n='Send Back Call openrouter';const st=rd[n][rd[n].length-1].data.main;const B0=(rd['Send Back Build'][0].data.main[0]||[]).map(x=>x.json).filter(j=>!j.sb_skip),B1=(over['Send Back Build'][0]||[]).map(x=>x.json).filter(j=>!j.sb_skip);
+ over[n]=[st[0].map((r,i)=>{const b0=B0[i],b1=B1.find(j=>j.seat===(b0&&b0.seat));if(!b0||!b1)return r;const mp={};(b0.items||[]).forEach(it=>{const t=(b1.items||[]).find(z=>key(z)===key(it));mp[it.sid]=t?t.sid:null;});
+  const r2=JSON.parse(JSON.stringify(r));const c=r2.json.choices[0].message;const parts=String(c.content).split(/(\n|\\n)/);const o=[];let keep=true;for(let q=0;q<parts.length;q+=2){let l=parts[q];const sep=q+1<parts.length?parts[q+1]:'';const m=l.match(/^((?:\s*"reasoning"\s*:\s*")?)SENDBACK:\s*S(\d+)\b/);if(m){const to=mp['S'+m[2]];keep=to!=null;if(keep){o.push(l.replace(/SENDBACK:\s*S\d+/,'SENDBACK: '+to));o.push(sep);}else if(m[1]){o.push(m[1].replace(/\s+$/,''));}}else if(keep||/^\s*["}]/.test(l)){o.push(l);o.push(sep);}}c.content=o.join('');return r2;})].concat(st.slice(1));}};
+(async()=>{let r,err=null;try{r=await chain(process.argv[2],{after});}catch(e){err=e.message;}
+ if(err){console.log('ERR',err.slice(0,300));process.exit(1);}
+ const pick=n=>r.over[n]?r.over[n].map(o=>(o||[]).map(x=>x.json)):null;const o={sbb:pick('Send Back Build'),sbr:pick('Send Back Record'),gb:pick('Gate Build'),gr:pick('Gate Record'),am:pick('Alternate Merge'),rows:r.rows};fs.writeFileSync(process.argv[3],chain.nt(o));
+ console.log(process.argv[2].replace(/.*\//,''),r.rows.map(x=>x.judge_seat+':'+x.drv_uncured+':'+x.verdict_tag).join(' '));})();

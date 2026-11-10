@@ -1,0 +1,6 @@
+// W3: every sent item (live) whose reason matches the pkgEAD deferral words, and what the candidate does with it and why
+const G=require('./g.cjs');const fs=require('fs');const RX=/(?:under|at|in|see)\s+(?:LINK|Link|link|premise)\s*\d|\banswered\s+(?:at|under|in)\b|\banswer(?:s|ed)?\s+it\s+fully\b|\bpointer\b|\bdefers?\b/;
+const runs=process.argv.slice(2);(async()=>{for(const run of runs){const over=/^ex/.test(run)?G.exOver('/mnt/project-files/wall2024/'+run+'_full.json'):null;for(const [node,inp] of G.NODES){let P;try{if(!over&&!fs.existsSync(G.H.IN+'/'+run+'_'+inp.replace(/ /g,'_')+'.json'))continue;if(over&&!over[inp])continue;P=await G.pair(run,node,inp,over);}catch(e){continue;}
+ const ead=(P.b[0].sb_not_sent||[]).filter(x=>/pkgEAD/.test(x.why));const bi=new Set(P.b.flatMap(j=>(j.items||[]).map(i=>j.seat+'|'+i.rule+'|'+i.item+'|'+i.line)));
+ for(const j of P.a)for(const i of (j.items||[])){if(!RX.test(i.reason))continue;const kept=bi.has(j.seat+'|'+i.rule+'|'+i.item+'|'+i.line);
+  console.log(run,'|',node,'|',j.seat,i.sid,i.rule,'|',i.item.slice(0,60),'|',kept?'SENT':'WITHHELD','| und='+!!i.und,'abs='+!!i.abs,'ecl='+!!i.ecl,'\n    LINE:',String(i.line).slice(0,260),'\n    REASON:',i.reason.slice(0,520));}}}})();

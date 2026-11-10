@@ -1,0 +1,10 @@
+33461 Alt Send Back Build WITHHELD 3 | live grok:16 | cand grok:13 | skipB false
+33490 Send Back Build WITHHELD 1 | live gemini:14 chatgpt:4 sol:27 | cand gemini:13 chatgpt:4 sol:27 | skipB false
+33627 Alt Send Back Build WITHHELD 1 | live sol:16 | cand sol:15 | skipB false
+34016 Send Back Build FAIL strong check {"eq":false,"ns":true,"del":2,"ead":1,"order_cand":"luna,chatgpt,sol","order_livedel":"luna,chatgpt,sol"}
+34016 Send Back Build WITHHELD 1 | live luna:16 chatgpt:8 sol:10 | cand luna:15 chatgpt:8 sol:10 | skipB false
+34108 Send Back Build WITHHELD 3 | live luna:10 chatgpt:8 sol:9 | cand luna:9 chatgpt:7 sol:8 | skipB false
+ex34703 Send Back Build WITHHELD 2 | live luna:15 chatgpt:7 sol:11 | cand luna:14 chatgpt:6 sol:11 | skipB false
+
+TOTAL {"node_runs":61,"not_replayable":18,"byte_equal":55,"withheld_runs":6,"withheld_items":11,"strong_ok":5,"FAIL":1}
+TOTAL {"node_runs":61,"not_replayable":18,"byte_equal":55,"withheld_runs":6,"withheld_items":11,"strong_ok":6,"FAIL":0}

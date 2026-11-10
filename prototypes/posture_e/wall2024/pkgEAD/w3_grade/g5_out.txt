@@ -1,0 +1,25 @@
+AS LABELLED P0 control, stored rounds and rows | expected WITHHELD | got WITHHELD (withheld: chatgpt,luna,sol; sent: none)
+      code: [CR3] the deferral to LINK 4 names an answer of 480 words with layers (pkgEAD)
+NOT AS LABELLED a/b. pointer to a LINK 4 that no round holds; other lines of the debate untouched | expected SENT | got WITHHELD (withheld: chatgpt,luna,sol; sent: none)
+      code: [CR3] names Luke 1:34 again (line 102: "2. The angel's answer is a husband's seed under God's power, which props the objection tha") (pkgEAD)
+AS LABELLED a2. same, and no other line of CR3 or CR4 names Luke 1:34 (control) | expected SENT | got SENT (withheld: none; sent: chatgpt,luna,sol)
+NOT AS LABELLED c. pointer to a LINK 4 of 4 words ("As above."); other lines untouched | expected SENT | got WITHHELD (withheld: chatgpt,luna,sol; sent: none)
+      code: [CR3] names Luke 1:34 again (line 104: "2. The angel's answer is a husband's seed under God's power, which props the objection tha") (pkgEAD)
+AS LABELLED c3 (no label; inside the README limit). pointer to a full LINK 4 that says nothing of Luke 1:34 (block 5 text put in its place) | expected WITHHELD | got WITHHELD (withheld: chatgpt,luna,sol; sent: none)
+      code: [CR3] the deferral to LINK 4 names an answer of 397 words with layers (pkgEAD)
+AS LABELLED d. stored rounds; reason has no deferral word | expected SENT | got SENT (withheld: none; sent: chatgpt,luna,sol)
+AS LABELLED e. stored rounds; reason reads the full answer in substance and names where it stands | expected SENT | got SENT (withheld: none; sent: chatgpt,luna,sol)
+NOT AS LABELLED f. truly bare grant (no pointer in the round, LINK 4 silent on the verse, other lines untouched); reason says "does not defer" | expected SENT | got WITHHELD (withheld: chatgpt,luna,sol; sent: none)
+      code: [CR3] names Luke 1:34 again (line 120: "2. The angel's answer is a husband's seed under God's power, which props the objection tha") (pkgEAD)
+NOT AS LABELLED f2. same truly bare round; reason says the judge, not the defender, pointed elsewhere ("the judge looks for it in LINK 4") | expected SENT | got WITHHELD (withheld: chatgpt,luna,sol; sent: none)
+      code: [CR3] names Luke 1:34 again (line 120: "2. The angel's answer is a husband's seed under God's power, which props the objection tha") (pkgEAD)
+AS LABELLED h. E-HOLD (right: BROKEN), sol D1 vs C1 graded STANDS, deferral in the reason, full answer behind [und on the sent item: -] | expected WITHHELD | got WITHHELD (withheld: sol; sent: none)
+      code: [CR1] names Luke 1:34 again (line 32: "[L1] Luke 1:34: "How shall this be, seeing I know not a man?"") (pkgEAD)
+AS LABELLED h2. same, the reason names no side | expected SENT | got SENT (withheld: none; sent: sol)
+AS LABELLED g. 34016 luna absence item with deferral words added (planted rows 1) | expected SENT | sent 1, abs=true
+AS LABELLED i. every item of terra withheld | live sends on the same plant: chatgpt:1 | candidate calls: luna,sol | the other seats' calls byte-equal: true | not-sent entries with the pkgEAD reason: 1
+AS LABELLED i-first. every item of luna (the first seat) withheld | live sends on the same plant: luna:1 | candidate calls: chatgpt,sol | the other seats' calls byte-equal: true | not-sent entries with the pkgEAD reason: 1
+AS LABELLED i2. every item of every seat withheld | live sends on the same plant: luna:1 chatgpt:1 sol:1 | candidate calls: none | the other seats' calls byte-equal: true | not-sent entries with the pkgEAD reason: 3 | skip=true ("no disagreement could be sent")
+AS LABELLED j. no Panel Cure Normalize ran | candidate byte-equal to live: true
+
+16 plants, 4 not as labelled
