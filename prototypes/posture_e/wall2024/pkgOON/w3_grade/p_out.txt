@@ -1,0 +1,18 @@
+p1 "NONE" | LIVE: NOT APPLIED: the CHANGE TO line has no line form the engine reads | CAND: no gate item | S12 equal false | others equal true
+p2 "none." | LIVE: NOT APPLIED: the CHANGE TO line has no line form the engine reads | CAND: no gate item | S12 equal false | others equal true
+p3 "(NONE)" | LIVE: NOT APPLIED: the CHANGE TO line has no line form the engine reads | CAND: no gate item | S12 equal false | others equal true
+p4 "NONE; the row stands as written" | LIVE: NOT APPLIED: the CHANGE TO line has no line form the engine reads | CAND: no gate item | S12 equal false | others equal true
+p11 "NONE OF THE ROWS CHANGE; I KEEP ALL" | LIVE: NOT APPLIED: the CHANGE TO line has no line form the engine reads | CAND: no gate item | S12 equal false | others equal true
+p5 "KEEP" | LIVE: NOT APPLIED: the CHANGE TO line has no line form the engine reads | CAND: NOT APPLIED: the CHANGE TO line has no line form the engine reads | S12 equal true | others equal true
+p6 "NO CHANGE" | LIVE: NOT APPLIED: the CHANGE TO line has no line form the engine reads | CAND: NOT APPLIED: the CHANGE TO line has no line form the engine reads | S12 equal true | others equal true
+p8 "NONETHELESS the row stands" | LIVE: NOT APPLIED: the CHANGE TO line has no line form the engine reads | CAND: NOT APPLIED: the CHANGE TO line has no line form the engine reads | S12 equal true | others equal true
+p10 "Not applicable" | LIVE: NOT APPLIED: the CHANGE TO line has no line form the engine reads | CAND: NOT APPLIED: the CHANGE TO line has no line form the engine reads | S12 equal true | others equal true
+p7 "DEFENDER | [CR2] | “None of the titles give | LIVE: no gate item | CAND: no gate item | S12 equal true | others equal true
+p9 "OUT-OF-ROUND CONCESSIONS: NONE" | LIVE: NOT APPLIED: the CHANGE TO line has no line form the engine reads | CAND: NOT APPLIED: the CHANGE TO line has no line form the engine reads | S12 equal true | others equal true
+p14 "STRUCK" | LIVE: no gate item | CAND: no gate item | S12 equal true | others equal true
+p13 "NONE" | LIVE: NOT APPLIED: the CHANGE TO line has no line form the engine reads | CAND: NOT APPLIED: the CHANGE TO line has no line form the engine reads | S12 equal true | others equal true
+p13b "NONE" | LIVE: no gate item | CAND: no gate item | S12 equal true | others equal true
+p13c "NONE" | LIVE: NOT APPLIED: the flagged line is not in the judge text | CAND: NOT APPLIED: the flagged line is not in the judge text | S12 equal false | others equal true
+p13d "NONE" | LIVE: NOT APPLIED: the CHANGE TO line has no line form the engine reads | CAND: NOT APPLIED: the CHANGE TO line has no line form the engine reads | S12 equal true | others equal true
+p12 COUNTED row | LIVE: NOT APPLIED: the CHANGE TO line has no line form the engine reads | CAND: NOT APPLIED: the row ends COUNTED, so striking it would leave the count
+   cand why: the row ends COUNTED, so striking it would leave the count stale: write the whole CONCEDED LINKS line with its count, or the row without COUNTED (pkgOOS) | line: DEFENDER | [CR2] | “I grant that ‘her husband’ names the espoused man.” -- COUNTED
