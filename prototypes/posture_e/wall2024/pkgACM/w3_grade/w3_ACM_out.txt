@@ -1,0 +1,39 @@
+OK   G1 nodes 418/418, connections equal, differing nodes ["Anticheat Record"]
+OK   G1 size 4157 to 4160; the one difference is "\.?" before "\s*$" in the line pattern
+     code text total 3838699 to 3838702
+     nodes naming both record_enforcer_log and the anti-cheat record: []
+G2 debates with an anti-cheat reply 38; reply lines 3778; unread live 4, candidate 1
+     live unread: 33389: ANTICHEAT: X34 -- CONSISTENT -- CLOSE: "the line's begetting is the fathers': Matthew 1:2 "Abraham begat Isaac."" -- EARLIER: "Abraham begat Isaac; an
+     live unread: 33389: ANTICHEAT: X36 -- CONSISTENT -- CLOSE: "I grant the count includes the child as the close of the line." -- EARLIER: "Matthew 1:17 counts the child as 
+     live unread: 33389: ANTICHEAT: X73 -- CONSISTENT -- CLOSE: "I grant the loins-language runs across generations by successive begetting, and that "his father" in 7:10 is t
+     live unread: 33617: ANTICHEAT: X75 -- CONSISTENT -- CLOSE: "Luke 3:23's '(as was supposed)' is a belief about a person, set in parentheses beside 'son of Joseph'." -- EAR
+     cand unread: 33389: ANTICHEAT: X73 -- CONSISTENT -- CLOSE: "I grant the loins-language runs across generations by successive begetting, and that "his father" in 7:10 is t
+     changed 33389: new rows X34 CONSISTENT, X36 CONSISTENT; other rows equal true; no_answer 3 to 1; counts live {"items":96,"consistent":90,"reversed":0,"shown":0,"quote_not_found":0,"quotes_ok":0,"no_earlier":3,"no_answer":3,"not_checked":0,"calls":4} cand {"items":96,"consistent":92,"reversed":0,"shown":0,"quote_not_found":0,"quotes_ok":0,"no_earlier":3,"no_answer":1,"not_checked":0,"calls":4}; rest equal true
+     changed 33617: new rows X75 CONSISTENT; other rows equal true; no_answer 1 to 0; counts live {"items":125,"consistent":115,"reversed":0,"shown":0,"quote_not_found":0,"quotes_ok":0,"no_earlier":9,"no_answer":1,"not_checked":0,"calls":5} cand {"items":125,"consistent":116,"reversed":0,"shown":0,"quote_not_found":0,"quotes_ok":0,"no_earlier":9,"no_answer":0,"not_checked":0,"calls":5}; rest equal true
+OK   G2 changed debates are 33389 and 33617 only; no shown mark differs
+OK   G2 unread 4 to 1, 33389 X73 stays
+G3 real shown REVERSED lines in stored runs: 33218 X57, 33218 X131, 33218 X135, 33222 X94, 33261 X53, 33261 X62, 33261 X89, 33299 X33, 33299 X37, 33299 X73, 33299 X79, 33299 X83, 33299 X85, 33345 X49, 33371 X43, 33371 X60, 33430 X51, 33442 X83, 33461 X9, 33482 X39, 33530 X106, 33592 X19, 33592 X49, 33644 X7, 33705 X49, 33798 X61, 33798 X63, 33798 X67, 33846 X13, 33846 X19, 33846 X21, 33846 X57, 33846 X73, 33846 X75
+   plant base: debate 33222 X94: ANTICHEAT: X94 -- REVERSED -- CLOSE: "sets another father against it" -- EARLIER: "stand together as they stand for Solomon"
+OK   G3 control, as stored: live REVERSED shown 1; candidate REVERSED shown 1
+OK   G3 a. period after the EARLIER quote: live NOT READ shown 0; candidate REVERSED shown 1
+OK   G3 b. curly closing quote then period: live NOT READ shown 0; candidate REVERSED shown 1
+OK   G3 c. period, spaces, carriage return: live NOT READ shown 0; candidate REVERSED shown 1
+OK   G3 d. period; EARLIER words not in the side text: live NOT READ shown 0; candidate REVERSED/QUOTE NOT FOUND shown 0
+OK   G3 e1. three periods after the quote: live NOT READ shown 0; candidate NOT READ shown 0
+OK   G3 e2. "!" after the quote: live NOT READ shown 0; candidate NOT READ shown 0
+OK   G3 e3. a note after the period: live NOT READ shown 0; candidate NOT READ shown 0
+OK   G3 e4. period then closing bold marks: live NOT READ shown 0; candidate NOT READ shown 0
+OK   G3 f. same id twice: stored line, then the same with a period: live REVERSED shown 1; candidate REVERSED+REVERSED shown 2
+     rows for the id: live 1, candidate 2; counts live {"items":108,"consistent":104,"reversed":1,"shown":1,"quote_not_found":0,"quotes_ok":1,"no_earlier":3,"no_answer":0,"not_checked":0,"calls":4} candidate {"items":108,"consistent":104,"reversed":2,"shown":2,"quote_not_found":0,"quotes_ok":2,"no_earlier":3,"no_answer":0,"not_checked":0,"calls":4}
+     for comparison, the stored line twice with no period: rows live 2 shown 2, candidate 2 shown 2 (a repeated line is counted twice by live already: true)
+OK   G3 g. period line for an id not in the items: live REVERSED shown 1; candidate REVERSED shown 1
+OK   G3 h. bare CONSISTENT with a period: live NOT READ shown 0; candidate CONSISTENT shown 0
+OK   G3 i. period inside the quote only (as live reads today): live REVERSED shown 1; candidate REVERSED shown 1
+OK   G3 j. CLOSE quote only, with a period, on REVERSED: live NOT READ shown 0; candidate REVERSED/QUOTE NOT FOUND shown 0
+G4 33389 Build Save Body: could not run offline: "undefined" is not valid JSON
+G4 33617 Build Save Body: could not run offline: "undefined" is not valid JSON
+G4 33389 Panel Build: output equal (690140 characters)
+G4 33389 Build Independent Verdict: output equal (365251 characters)
+G4 33617 Panel Build: output equal (837229 characters)
+G4 33617 Build Independent Verdict: output equal (454815 characters)
+ALL CHECKS OK
