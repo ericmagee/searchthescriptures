@@ -272,6 +272,74 @@
    "closing": "The register stops at Joseph.",
    "want": "NOT LISTED",
    "note": "added after the first run (W3 class): 'retract nothing'"
+  },
+  {
+   "id": "W17",
+   "adds": [
+    [
+     "cr3",
+     "I drop not only the bare statement but the wording \"the register stops at Joseph\"."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "LISTED",
+   "note": "rev 2 regrade, labeled before the run: a real drop after 'drop not only' (a miss here is the safe direction)"
+  },
+  {
+   "id": "W18",
+   "adds": [
+    [
+     "cr3",
+     "I withdraw nothing further; I drop the wording \"the register stops at Joseph\"."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "LISTED",
+   "note": "rev 2 regrade: second drop verb in the same sentence"
+  },
+  {
+   "id": "W19",
+   "adds": [
+    [
+     "cr3",
+     "I withdraw now the wording \"the register stops at Joseph\"."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "LISTED",
+   "note": "rev 2 regrade: adverb after the verb"
+  },
+  {
+   "id": "W20",
+   "adds": [
+    [
+     "cr3",
+     "I retract the wording \"the register stops at Joseph\", nothing else."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "LISTED",
+   "note": "rev 2 regrade: 'nothing' later in the sentence, not after the verb"
   }
  ]
 }
