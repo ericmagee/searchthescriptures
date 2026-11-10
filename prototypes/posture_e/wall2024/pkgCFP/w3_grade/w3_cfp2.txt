@@ -1,0 +1,58 @@
+== A. rev 2 against rev 1, every stored run with Panel Payloads ==
+33218: same candidates and quotes; 3 label(s) differ, e.g. "the judges' CONTRADICTION lines (gemini, chatgpt) and the anti-cheat check (found by the system; both quotes checked)"
+33261: same candidates and quotes; 3 label(s) differ, e.g. "the judges' CONTRADICTION lines (gemini, chatgpt, sol) and the anti-cheat check (found by the system; both quotes checked)"
+33299: same candidates and quotes; 3 label(s) differ, e.g. "the judges' CONTRADICTION lines (gemini) and the anti-cheat check (found by the system; both quotes checked)"
+33371: same candidates and quotes; 1 label(s) differ, e.g. "the judges' CONTRADICTION lines (gemini) and the anti-cheat check (found by the system; both quotes checked)"
+33430: same candidates and quotes; 1 label(s) differ, e.g. "the judges' CONTRADICTION lines (gemini, sol) and the anti-cheat check (found by the system; both quotes checked)"
+33442: same candidates and quotes; 1 label(s) differ, e.g. "the judges' CONTRADICTION lines (gemini) and the anti-cheat check (found by the system; both quotes checked)"
+33461: same candidates and quotes; 1 label(s) differ, e.g. "the judges' CONTRADICTION lines (chatgpt) and the anti-cheat check (found by the system; both quotes checked)"
+33482: same candidates and quotes; 1 label(s) differ, e.g. "the judges' CONTRADICTION lines (chatgpt, sol) and the anti-cheat check (found by the system; both quotes checked)"
+33592: same candidates and quotes; 2 label(s) differ, e.g. "the judges' CONTRADICTION lines (gemini, chatgpt, grok, single judge) and the anti-cheat check (found by the system; both quotes checked)"
+33798: same candidates and quotes; 3 label(s) differ, e.g. "the judges' CONTRADICTION lines (gemini, chatgpt, grok) and the anti-cheat check (found by the system; both quotes checked)"
+33846: same candidates and quotes; 3 label(s) differ, e.g. "the judges' CONTRADICTION lines (gemini, grok, chatgpt) and the anti-cheat check (found by the system; both quotes checked)"
+A: 46 runs; byte-equal 35; only the merged label differs 11; candidates differ 0
+
+== B. plants on 33644 ==
+Q1 earlier = a CR2 part of 12 words ... a CR3 part of 6 words (the anti-cheat test passes it)
+    rev 1: NO ANTI-CHEAT CANDIDATE
+    rev 2: J1 DEFENDER [CR2] "**[L3]** The open ground the text gives is the house." / [CR4] "Where the challenger's reading touches a link I meet its mea" by "the anti-cheat check (found by the system; both quotes checked)"
+      record, the candidate's quotes copied: [["J1","CONFIRMED",""]]
+Q2 earlier = a part that runs from the end of CR1 into the start of CR2 ... a CR3 part of 7 words
+    rev 1: NO ANTI-CHEAT CANDIDATE
+    rev 2: J1 DEFENDER [CR3] "- **[L2]** The verb is *gennaō* (G1080," / [CR4] "Where the challenger's reading touches a link I meet its mea" by "the anti-cheat check (found by the system; both quotes checked)"
+      record, the candidate's quotes copied: [["J1","CONFIRMED",""]]
+Q3 earlier = only a part that runs from the end of CR1 into the start of CR2 (the stated limit)
+    rev 1: NO ANTI-CHEAT CANDIDATE
+    rev 2: NO ANTI-CHEAT CANDIDATE (skip: no judge CONTRADICTION line on a closing round) | any trace of the pair in the output: false
+Q4 earlier = a part crossing CR1 into CR2 ... a three-word part of CR3
+    rev 1: NO ANTI-CHEAT CANDIDATE
+    rev 2: NO ANTI-CHEAT CANDIDATE (skip: no judge CONTRADICTION line on a closing round)
+Q5 earlier = a CR2 part of 8 words ... words found nowhere (under five words, ignored by the anti-cheat test)
+    rev 1: NO ANTI-CHEAT CANDIDATE
+    rev 2: J1 DEFENDER [CR2] "The text reckons sons into a house by" / [CR4] "Where the challenger's reading touches a link I meet its mea" by "the anti-cheat check (found by the system; both quotes checked)"
+      record, the candidate's quotes copied: [["J1","CONFIRMED",""]]
+Q6 both quotes with an ellipsis across sentences
+    rev 1: NO ANTI-CHEAT CANDIDATE
+    rev 2: J1 DEFENDER [CR2] "By Exodus 2:10, Esther 2:7 and Ezra 2:61, taking" / [CR4] "**[L4]** The verse states the tribe from which" by "the anti-cheat check (found by the system; both quotes checked)"
+      record, the candidate's quotes copied: [["J1","CONFIRMED",""]]
+Q7 closing = a part found only in CR3 ... a CR4 part of 6 words
+    rev 1: 1 candidate(s)
+    rev 2: J1 DEFENDER [CR2] "**[L3]** The open ground the text gives is the house." / [CR4] "The line therefore ends in a" by "the anti-cheat check (found by the system; both quotes checked)"
+      record, the candidate's quotes copied: [["J1","CONFIRMED",""]]
+Q8 closing quote found nowhere in CR4 (cannot be shown by the anti-cheat test)
+    rev 1: 1 candidate(s)
+    rev 2: NO ANTI-CHEAT CANDIDATE (skip: no judge CONTRADICTION line on a closing round)
+Q9 three parts, the longest standing only in CR3, the first in CR1
+    rev 1: NO ANTI-CHEAT CANDIDATE
+    rev 2: J1 DEFENDER [CR3] "- **[L2]** The verb is *gennaō* (G1080, to procreate)." / [CR4] "Where the challenger's reading touches a link I meet its mea" by "the anti-cheat check (found by the system; both quotes checked)"
+      record, the candidate's quotes copied: [["J1","CONFIRMED",""]]
+Q10 the pair is also a judge's contradiction question (question round)
+    rev 1: 1 candidate(s)
+    rev 2: J1 DEFENDER [CR2] "**[L3]** The open ground the text gives is the house." / [CR4] "Where the challenger's reading touches a link I meet its mea" by "the anti-cheat check, luna (found by the system; both quotes checked)"
+Q11 two shown pairs whose fitted parts are the same sentence pair
+    rev 1: NO ANTI-CHEAT CANDIDATE
+    rev 2: J1 DEFENDER [CR2] "**[L3]** The open ground the text gives is the house." / [CR4] "Where the challenger's reading touches a link I meet its mea" by "the anti-cheat check (found by the system; both quotes checked)"
+Q12 challenger pair with an ellipsis earlier quote across DR1 sentences
+    rev 1: NO ANTI-CHEAT CANDIDATE
+    rev 2: J1 CHALLENGER [DR1] "My chain is below, then my presses against D1" / [DR4] "Below is the record's reading of the topic, from the case I " by "the anti-cheat check (found by the system; both quotes checked)"
+      record, the candidate's quotes copied: [["J1","CONFIRMED",""]]
