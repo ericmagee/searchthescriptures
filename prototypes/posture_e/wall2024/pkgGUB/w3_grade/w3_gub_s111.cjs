@@ -1,3 +1,4 @@
+// One chain run per process (several runs in one process gave different counts for the same file).
 // s111 form (KSR+ECB live: stored replies are remapped to the new item numbers; the planted item is S6; labels are one lower because luna's stored count on s111 is 1).
 // W3 grade of pkgGUB: plants through my chain replay of execution 34626, read at the written rows.
 const chain=require('../../pkgKSR/w3_grade/chain.cjs');const {remap,gremap}=require('../../pkgKSR/w3_grade/w3_KSR_ECB.cjs');const SID=process.env.W3_S||'S6';const rd=chain.rd;const cl=x=>JSON.parse(JSON.stringify(x));
@@ -23,8 +24,10 @@ async function run(file,c){
   'Send Back Record':(over)=>{if(!c.audit)return;const o=cl(over['Send Back Record']);const J=o[0][0].json;const i=J.bodies.findIndex(b=>JSON.parse(b).payload.judge_seat==='luna');const b=JSON.parse(J.bodies[i]);b.payload.verdict_raw+='\n'+c.audit;b.payload.drv_uncured=(b.payload.drv_uncured||0)+(c.add==null?1:c.add);J.bodies[i]=JSON.stringify(b);
     if(c.ung){const it=J.sb_items.find(x=>x.seat==='luna'&&x.sid===SID);it.rule='E-UNG';it.item='COLLISION D2 (pressed: [DR2] premise 2)';}
     over['Send Back Record']=o;},
-  'Gate Build':(over)=>{if(!c.g2same)return;const o=cl(over['Gate Build']);const g=o[0].find(x=>x.json.seat==='luna').json;const a=g.items.find(x=>x.gid==='G1'),b=g.items.find(x=>x.gid==='G2');b.lines=cl(a.lines);b.why=a.why;b.to=a.to;if(g.msg)g.msg=g.msg;over['Gate Build']=o;},
-  'Gate Call openrouter':async(over,out)=>{await gremap(over,out);const o=cl(out('Gate Call openrouter'));const k=out('Gate Build')[0].filter(x=>!x.json.gate_skip).findIndex(x=>x.json.seat==='luna');let t=o[0][k].json.choices[0].message.content;const ls=t.split('\n');
+  'Gate Build_unused':(over)=>{},
+  'Gate Call openrouter_pre':null,
+  __g2:(over)=>{if(!c.g2same)return;const o=cl(over['Gate Build']);const g=o[0].find(x=>x.json.seat==='luna').json;const a=g.items.find(x=>x.gid==='G1'),b=g.items.find(x=>x.gid==='G2');b.lines=cl(a.lines);b.why=a.why;b.to=a.to;if(g.msg)g.msg=g.msg;over['Gate Build']=o;},
+  'Gate Call openrouter':async(over,out)=>{await gremap(over,out);opt.after.__g2(over);const o=cl(out('Gate Call openrouter'));const k=out('Gate Build')[0].filter(x=>!x.json.gate_skip).findIndex(x=>x.json.seat==='luna');let t=o[0][k].json.choices[0].message.content;const ls=t.split('\n');
     if(c.g1!=null){const i=ls.findIndex(l=>l.startsWith('GATE: G1 '));ls[i]=G1+c.g1+TAIL;}
     if(c.g2!=null){const i=ls.findIndex(l=>l.startsWith('GATE: G2 '));ls[i]='GATE: G2 || CHANGE TO: '+c.g2+TAIL;}
     o[0][k].json.choices[0].message.content=ls.join('\n');over['Gate Call openrouter']=o;}},
@@ -48,13 +51,17 @@ const CASES=[
  ['j [L1] verse not read this run',{audit:und('luna',SID),g1:LINE.j},'rec'],
  ['k1 G1 fails, later applied G2 passes (same line)',{audit:und('luna',SID),g1:LINE.c,g2:LINE.a,g2same:true,long:true},2],
  ['k2 G1 passes, later applied G2 fails (same line)',{audit:und('luna',SID),g1:LINE.a,g2:LINE.c,g2same:true,long:true},3],
+ ['k4 both S6 and S10 counted, G1 fails, later applied G2 passes (same line): both off',{audit:und('luna',SID)+'\n'+und('luna','S10'),add:2,g1:LINE.c,g2:LINE.a,g2same:true,long:true},2],
+ ['k5 both S6 and S10 counted, G1 passes, later applied G2 fails (same line): both stay',{audit:und('luna',SID)+'\n'+und('luna','S10'),add:2,g1:LINE.a,g2:LINE.c,g2same:true,long:true},4],
  ['l verse rows not available, good line',{audit:und('luna',SID),g1:LINE.a,noverse:true},'rec'],
  ['l2 verse rows not available, failing line c',{audit:und('luna',SID),g1:LINE.c,noverse:true},3],
  ['m1 E-UNG item, graded line passes',{audit:und('luna',SID).replace('E-HOLD on UNDERDETERMINED','E-UNG'),g1:LINE.a,ung:true},2],
  ['m2 E-UNG item, no counted [L1]',{audit:und('luna',SID).replace('E-HOLD on UNDERDETERMINED','E-UNG'),g1:LINE.b,ung:true},3],
 ];
+if(process.argv[2]==='--one'){const c=CASES.find(x=>x[0]===process.argv[4])[1];run(process.argv[3],c).then(o=>console.log('@@'+JSON.stringify(o))).catch(e=>console.log('@@'+JSON.stringify({err:String(e.message||e)})));return;}
+const one=(file,name)=>{const o=require('child_process').execFileSync('node',[__filename,'--one',file,name],{maxBuffer:1<<28,encoding:'utf8'});const r=JSON.parse(o.split('@@').pop());if(r.err)throw new Error(r.err);return r;};
 (async()=>{let fail=0;const only=process.argv[2];
- for(const [name,c,exp] of CASES){if(only&&!name.startsWith(only))continue;let S,N,U;try{S=await run(F.S,c);N=await run(F.N,c);U=await run(F.U,c);}catch(e){console.log('ERR  '+name+' :: '+e.message);fail++;continue;}
+ for(const [name,c,exp] of CASES){if(only&&!name.startsWith(only))continue;let S,N,U;try{S=one(F.S,name);N=S;U=one(F.U,name);}catch(e){console.log('ERR  '+name+' :: '+e.message);fail++;continue;}
   let ok;if(exp==='eq')ok=U.rows===S.rows;else if(exp==='rec')ok=null;else ok=U.u===exp-1;
   if(ok===false)fail++;
   console.log((ok===null?'REC ':ok?'OK  ':'FAIL')+' '+name+' | luna s111 '+S.u+' base '+N.u+' GUB '+U.u+(typeof exp==='number'?' (label '+(exp-1)+')':'')+' | all GUB '+U.all+' | gate rows GUB=base '+(U.gr===N.gr));

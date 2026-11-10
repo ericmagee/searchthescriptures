@@ -20,3 +20,6 @@ L2 PLANTS (luna count at the written row; s110 expected 3 in every case unless t
 L3 ROWS. If any enforcer log row (gate rows) differs between pkgGCCN rev 2 and pkgGUB in any plant, a rolled-back insert through record_enforcer_log is owed. If none differs, none is owed; state it.
 L4 SAME RULE, SAME SOURCES. By reading: the gate recheck calls the same function as Send Back Record with verse rows from the same three nodes and the same filters.
 A FAIL on b, c, d, f or k2 (a count taken off for a line that fails the rule) fails the package. A miss on a, e, k1 (count kept though the line passes) is a finding I would want closed, so also FAIL, narrow.
+
+## Addendum for rev 2 on s111 (committed before the run of k4 and k5)
+On s111 the replay uses remapped replies: luna control 1, planted item S6 (G1), each earlier label reads one lower. New: k4 both S6 and S10 carry a counted pkgUND line, G1's line fails, the later applied G2 on the same line passes: both counts off (luna 1). k5 the reverse (final line fails): both stay (luna 3).
