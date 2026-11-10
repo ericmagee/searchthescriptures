@@ -1,0 +1,14 @@
+OK   Z1 padding in rounds 1 and 2 (40 drops) does not push a round 3 drop out of the hints (rev 11 for reference: not hinted): 30 defender hints
+OK   Z2 every hint sentence of rev 11 with no padding is still a hint (order may change)
+OK   Z2b same hint sentences as rev 11 on 34108, as a set
+OK   Z3 "LINK unknown" NOT A CONTRADICTION is read by id: ["P7 NOT A CONTRADICTION L?"]
+OK   Z3 "LINK none" NOT A CONTRADICTION is read by id: ["P7 NOT A CONTRADICTION L?"]
+OK   Z3 "LINK not known" NOT A CONTRADICTION is read by id: ["P7 NOT A CONTRADICTION L?"]
+FAIL Z3 "LINK N/A" NOT A CONTRADICTION is read by id: ["? NOT CONFIRMED (form) Lundefined"]
+FAIL Z4 "LINK D6" (a mark with a digit) is read (label: should be; W2 expects it may not be): ["? NOT CONFIRMED (form) Lundefined"]
+OK   Z5 CONFIRMED with LINK unknown, quotes word for word: NOT CONFIRMED, marked for review, nothing broken: ["P6 NOT CONFIRMED (form) L? [REVIEW]"]
+OK   Z6 CONFIRMED with an undeclared number (LINK 9): NOT CONFIRMED, not marked (only ? is marked): ["P6 NOT CONFIRMED (form) L9"]
+OK   Z7 CONFIRMED with LINK ? and a forged closing quote: not marked for review: ["P6 NOT CONFIRMED (form) L?"]
+OK   Z8 D6 CONFIRMED with LINK 6 still breaks D6: ["P6 CONFIRMED L6"]
+OK   Z9 the review row keeps the log shape (E-CLOSECON, panel, cure_status empty) and its reason carries the mark: 9 rows
+11 OK, 2 FAIL

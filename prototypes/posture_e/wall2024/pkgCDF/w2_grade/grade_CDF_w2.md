@@ -23,3 +23,19 @@ Change 2 fails. The link read from a D/C mark is often another link, and a wrong
   the README's "No ruling changes".
 - Fix options for W1: drop change 2 and keep 1, 3 and 4; or print the guess as text ("LINK ? (near D6)") and keep the link field ?, so that
   Record's form check still applies; or read only a header line (a line that starts with ### / ## / ** and names one mark).
+
+## rev 2 (commit b490f0a4): PASS, with one gap left open (predates pkgCDF)
+
+- Rebuild byte-equal to parent_s103_CDR11_CDF.json; against rev 11 only Close Enforcer Build and Record differ; the mark code is gone.
+  W1's record_CDF 10 OK.
+- My wrong-link plants (link_run_rev2.txt): K1, K2, K5 now print LINK ? as on rev 11; the copied CONFIRMED answer breaks nothing and is
+  marked RECORD-ONLY FOR REVIEW. K4 is unchanged from rev 11 (the "LINK n before" rule of rev 11, not pkgCDF).
+- New checks cdf2_w2.cjs (labels committed before the run; cdf2_w2.txt): 11 OK, 2 FAIL.
+  - Change 1: with 40 padding drops in rounds 1 and 2, a round 3 drop stays hinted (rev 11: pushed out); same hint set as rev 11 on 34108.
+  - Change 3: "LINK unknown", "LINK none", "LINK not known" read by id. FAIL: "LINK N/A" and "LINK D6" are still unreadable lines, so the
+    hint is left NO ANSWER (as on rev 11). "LINK D6" is a likely form, since the rounds name links D1 to D6: a true CONFIRMED written that
+    way breaks nothing and is not marked for review.
+  - Change 4: CONFIRMED with LINK unknown and both quotes found is marked for review and breaks nothing; LINK 9 (undeclared) and LINK ? with
+    a forged closing quote are not marked; D6 with LINK 6 still breaks D6; log row shape kept.
+- Verdict: PASS for what rev 2 claims; no ruling change. The "LINK D6" / "LINK N/A" gap predates pkgCDF; suggested follow-on: read
+  "LINK D<n>" for the defender and "LINK C<n>" for the challenger as <n> (the enforcer's own answer, not a guess), and any other text as ?.
