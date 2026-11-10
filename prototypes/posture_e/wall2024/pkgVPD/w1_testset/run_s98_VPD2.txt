@@ -1,0 +1,20 @@
+ok   LISTED | ok   LISTED | want LISTED T1 true-bare: W1-A: LINK 4 is short, no layers, and stands only in [CR4]
+ok   LISTED | ok   LISTED | want LISTED T2 true-bare: W1-B: LINK 4 short, in [CR3]
+MISS NOT    | ok   LISTED | want LISTED T3 true-bare: W1-C: no round holds LINK 9; defers to nothing
+MISS NOT    | ok   LISTED | want LISTED T4 true-bare: W1-D: defers to its own round, which holds only this bare answer
+MISS NOT    | ok   LISTED | want LISTED T5 true-bare: W1-E: [CR4] holds text but nothing on the verse
+MISS NOT    | ok   LISTED | want LISTED T6 true-bare: earlier round [CR2] holds nothing on the verse
+MISS NOT    | ok   LISTED | want LISTED T7 true-bare: earlier round names the verse only in another bare grant
+MISS NOT    | MISS NOT    | want LISTED T8 true-bare: earlier round writes the reference another way, but only in a bare grant
+ok   NOT    | ok   NOT    | want NOT    N1 substance: the stored layered LINK 4 block
+ok   NOT    | ok   NOT    | want NOT    N2 substance: W3 G1: [CR4] answers with a layer, no reference written
+ok   NOT    | ok   NOT    | want NOT    N3 substance: W3 G2: reference written "Luke 1, verse 34", with a layer
+ok   NOT    | ok   NOT    | want NOT    N4 substance: reference written "v. 34", with a layer
+ok   NOT    | ok   NOT    | want NOT    N5 substance: no reference; the verse is found by its KJV words, with a layer
+ok   NOT    | ok   NOT    | want NOT    N6 substance: earlier round answers with a reasoned sentence, no layer tag
+ok   NOT    | ok   NOT    | want NOT    N7 substance: earlier round [CR1] answers under the exact reference with layers
+ok   NOT    | ok   NOT    | want NOT    N8 control: the answer itself carries a layer; no deferral
+ok   NOT    | ok   NOT    | want NOT    N9 control: a deferral to the challenger's round: unchanged by pkgVPD (rev 3 reads a round with text as not bare)
+ok   NOT    | ok   NOT    | want NOT    N10 substance: LINK 4 has no layers but runs 25 words or more
+/mnt/project-files/wall2024/fetchback_live_s98.json: 12 of 18 as labeled; misses: T3, T4, T5, T6, T7, T8
+pkgVPD/parent_s98_VPD2.json: 17 of 18 as labeled; misses: T8

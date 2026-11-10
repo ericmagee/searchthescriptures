@@ -75,3 +75,25 @@ lists (see the file header). Eric ruled (19:05 CST 11-09) that the live version 
 - gate on the s98 fetch-back: 767 node runs byte-equal or same error, 0 target item changes, 17 near-miss checks passed, GATE PASS.
 - Rolled-back insert (CURED "COUNTED, though the defender calls it a courtesy.", UNCURED "COUNTED, but I disagree."): accepted, rows 2.
 - Write file parent_s98_FUN3.json: against live s98 only the Shared Library differs (form 3 pack, pkgLIB_FUN3S).
+
+## Rev 4 (W1, 2026-11-10)
+
+Rev 3 was failed by W3 (Wall 3933): it tested every sentence, so a short later sentence that points back at the defender's claim
+("The defender calls it courtesy. It is not.") read as a refusal. W2's extended set (Wall 3928) found five refusals rev 3 read CURED.
+Rev 4 reader: pkgFUN/fun4_ref.cjs, built by build_FUN4.cjs into pkgLIB/strip_FUN4 from strip_KCB_base (the s98 and s100 Shared Library are the same).
+- W3's split: list P (points back: "that is wrong", "it is not", "no", "I disagree", "it does not apply", "withdrawn", "not counted" ...) is a refusal
+  only as the FIRST sentence after COUNTED; list B (names the count or the grant: "I retract my count of it", "I do not count it after all",
+  "my count stands", "the count is wrong", "it should not be counted", "that grant is not a concession of D6", "that grant does not apply to D6",
+  "the defender did not concede it", "I maintain my first answer" ...) is a refusal in any sentence.
+- Markup marks (* _ backtick [ ]) are set aside before the split, so "**COUNTED.** That is not right." reads like the plain form, and
+  "[COUNTED] ..." opens like "**COUNTED** ...". A leading but/though/although/yet/however/and/still/so/then is taken off each sentence.
+Checks:
+- W2's set (now 180 cases): rev 4 175 match, 0 correct answers refused (live s98 120). The 5 misses: 3 refusals on a second line, outside the
+  RESPONSE line (W3 ruled this a limit of what reaches the reader; W2 is building it); 2 pointing-back refusals after a neutral sentence
+  ("The grant is in round 4. I do not agree.", "I have read the note. That is wrong."), which W3's first-sentence rule accepts as misses.
+- W3's 16 pointing-back correct answers: all CURED (line level); W3's node plant on rev 4 (w3_plant_FUN3_nodes_on_FUN4.txt): 0 of 6 correct read UNCURED.
+- All graders' planted answers (allplants_FUN4.txt, 170 distinct): correct 107, all CURED, none lost against live; refusals 63, 57 UNCURED (live 25).
+- probe_FUN4: 80 OK, 4 FAIL (W3's four reservations, CURED as on live). replay_FUN4: 176 stored replies byte-equal.
+- Gate on the s100 fetch-back: 767 node runs equal, 0 target item changes, 17 near-miss checks passed, GATE PASS.
+- Rolled-back insert (CURED "COUNTED. The defender calls it courtesy. It is not.", UNCURED "COUNTED. I retract my count of it."): accepted, rows 2.
+- Write file parent_s100_FUN4.json: against live s100 only the Shared Library differs (form 3 pack, pkgLIB_FUN4S).
