@@ -17,3 +17,12 @@ CURED|control|COUNTED. The defender concedes D6 in [DR3].|One-line control.
 UNCURED|control|COUNTED. That is not right.|One-line refusal control.
 UNCURED|control|NOT COUNTED.\nThe defender conceded D6.|No COUNTED keyword: unchanged.
 CURED|limit|COUNTED.\nOne.\nTwo.\nThree.\nThat is not right.|Stated limit: only 3 lines are read; a refusal on the 4th is not read (CURED by design).
+# rev 2 cases (W3 colon fault, W1 other-item hazard), labeled before the rev 2 run
+CURED|colon-next-line|COUNTED:\nthe grant is not withdrawn|W3: colon, next line holds a negation, correct|CURED
+CURED|colon-next-line|COUNTED:**\nthe grant is not withdrawn|colon then bold close|CURED
+CURED|other-item-line|COUNTED.\nAs for #2: it should not be counted.|W1: a line about item #2|CURED
+CURED|other-item-line|COUNTED.\nItem 2: not counted.|item 2 named in words|CURED
+CURED|other-item-line|COUNTED.\nOn K-S9: I do not count it.|another rule named|CURED
+CURED|other-item-line|COUNTED.\nCHALLENGER DR2: it is not counted.|another side and round named|CURED
+UNCURED|own-item-line|COUNTED.\nOn #1 itself: I withdraw the count.|own item named: still read (refusal)|ENFORCED
+UNCURED|own-item-line|COUNTED.\nFor DEFENDER CR4, I do not count it.|own side and round named: still read (refusal)|ENFORCED
