@@ -113,7 +113,7 @@
   }
  },
  "rev2": {
-  "about": "Added for rev 2 (W2's FAIL: a refused drop read as a drop) before rev 2 is written or run. adds = sentences appended to the rounds named. Rev 3 (W3 FAIL of rev 2): W3's seven false-listing cases and one labeled drop added before rev 3 is written or run. Under the rev 3 anchor, R2 (a real drop after \", but\") is expected to be missed in the safe direction; its label stays LISTED.",
+  "about": "Added for rev 2 (W2's FAIL: a refused drop read as a drop) before rev 2 is written or run. adds = sentences appended to the rounds named. Rev 3 (W3 FAIL of rev 2): W3's seven false-listing cases and one labeled drop added before rev 3 is written or run. Under the rev 3 anchor, R2 (a real drop after \", but\") is expected to be missed in the safe direction; its label stays LISTED. Rev 4 (W3 FAIL of rev 3): W3 H7 and H8 and W1 cases R4-U1..U4 (conditional or question drops, NOT LISTED) and R4-K1..K4 (true drops kept LISTED) added before rev 4 is written or run.",
   "cases": [
    {
     "id": "R1",
@@ -299,6 +299,176 @@
     "closing": "The register stops at Joseph.",
     "want": "LISTED",
     "note": "label ending in a colon before the drop verb"
+   },
+   {
+    "id": "R4-H7",
+    "adds": [
+     [
+      "cr3",
+      "I withdraw the wording \"the register stops at Joseph\" if the challenger shows a row against it; he has shown none."
+     ],
+     [
+      "cr4",
+      "The register stops at Joseph."
+     ]
+    ],
+    "side": "DEFENDER",
+    "closing": "The register stops at Joseph.",
+    "want": "NOT LISTED",
+    "note": "conditional drop, condition not met (W3 rev 3 grade H7)"
+   },
+   {
+    "id": "R4-H8",
+    "adds": [
+     [
+      "cr3",
+      "I drop the wording \"the register stops at Joseph\"? No."
+     ],
+     [
+      "cr4",
+      "The register stops at Joseph."
+     ]
+    ],
+    "side": "DEFENDER",
+    "closing": "The register stops at Joseph.",
+    "want": "NOT LISTED",
+    "note": "drop phrased as a question (W3 rev 3 grade H8)"
+   },
+   {
+    "id": "R4-U1",
+    "adds": [
+     [
+      "cr3",
+      "I drop the wording \"the register stops at Joseph\" unless the challenger answers row 4."
+     ],
+     [
+      "cr4",
+      "The register stops at Joseph."
+     ]
+    ],
+    "side": "DEFENDER",
+    "closing": "The register stops at Joseph.",
+    "want": "NOT LISTED",
+    "note": "unless"
+   },
+   {
+    "id": "R4-U2",
+    "adds": [
+     [
+      "cr3",
+      "I withdraw the claim that the register of Luke 3 stops at Joseph, provided the challenger grants Heli."
+     ],
+     [
+      "cr4",
+      "The register of Luke 3 stops at Joseph."
+     ]
+    ],
+    "side": "DEFENDER",
+    "closing": "The register of Luke 3 stops at Joseph.",
+    "want": "NOT LISTED",
+    "note": "provided, that-clause form"
+   },
+   {
+    "id": "R4-U3",
+    "adds": [
+     [
+      "cr3",
+      "I drop the wording \"the register stops at Joseph\" only if the rows fail."
+     ],
+     [
+      "cr4",
+      "The register stops at Joseph."
+     ]
+    ],
+    "side": "DEFENDER",
+    "closing": "The register stops at Joseph.",
+    "want": "NOT LISTED",
+    "note": "only if"
+   },
+   {
+    "id": "R4-U4",
+    "adds": [
+     [
+      "cr3",
+      "**I retract the wording \"the register stops at Joseph\"?**"
+     ],
+     [
+      "cr4",
+      "The register stops at Joseph."
+     ]
+    ],
+    "side": "DEFENDER",
+    "closing": "The register stops at Joseph.",
+    "want": "NOT LISTED",
+    "note": "question in bold markup"
+   },
+   {
+    "id": "R4-K1",
+    "adds": [
+     [
+      "cr3",
+      "I drop the wording \"the register stops at Joseph\"."
+     ],
+     [
+      "cr4",
+      "The register stops at Joseph."
+     ]
+    ],
+    "side": "DEFENDER",
+    "closing": "The register stops at Joseph.",
+    "want": "LISTED",
+    "note": "plain drop still listed"
+   },
+   {
+    "id": "R4-K2",
+    "adds": [
+     [
+      "cr3",
+      "I drop the wording \"the register stops at Joseph even if Luke names Heli\"."
+     ],
+     [
+      "cr4",
+      "The register stops at Joseph even if Luke names Heli."
+     ]
+    ],
+    "side": "DEFENDER",
+    "closing": "The register stops at Joseph even if Luke names Heli.",
+    "want": "LISTED",
+    "note": "\"if\" only inside the quoted wording"
+   },
+   {
+    "id": "R4-K3",
+    "adds": [
+     [
+      "cr3",
+      "I withdraw the wording \"the register stops at Joseph\"!"
+     ],
+     [
+      "cr4",
+      "The register stops at Joseph."
+     ]
+    ],
+    "side": "DEFENDER",
+    "closing": "The register stops at Joseph.",
+    "want": "LISTED",
+    "note": "exclamation, not a question"
+   },
+   {
+    "id": "R4-K4",
+    "adds": [
+     [
+      "cr3",
+      "I drop the wording \"the register stops at Joseph\". If the challenger asks, the rows stand."
+     ],
+     [
+      "cr4",
+      "The register stops at Joseph."
+     ]
+    ],
+    "side": "DEFENDER",
+    "closing": "The register stops at Joseph.",
+    "want": "LISTED",
+    "note": "condition in the NEXT sentence, not the drop sentence"
    }
   ]
  }
