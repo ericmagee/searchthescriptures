@@ -1,0 +1,10 @@
+patch pkgGCC/patches/G1n2.to
+OK   C8 two cured gate items from S10, one counted line: drv 3 -> 2 (taken off E-APPLY S10)
+OK   C9 pkgRCT path ("the count stays"): drv 3 -> 3
+OK   C10 KEEP, change withdrawn (line as it was): drv 3 -> 3
+REC  C11u cured because a later gate change rewrote the same line and was applied: drv 3 -> 2
+REC  C12u cured because another change already wrote the line: drv 3 -> 3
+OK   C13 TRIAL "not counted" line names S10 only: drv 2 -> 2
+OK   C14 TRIAL line and counted line both name S10: drv 3 -> 2
+OK   C15 three cured items from S10: drv 3 -> 2
+OK   C16 one line counting S10 and S11, cured S10 twice and S11 once: drv 4 -> 2

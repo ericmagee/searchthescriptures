@@ -34,3 +34,12 @@ Not planted by me: W1's case (b), the gate cure not re-running the send-back rul
 - Stored: one gate-cured item has its source counted (1062 G6, source S8, rule E-COL "keeps the break and quotes no 6 words"). The gate's new line
   is "D4 vs C6 (Luke 2:48): UNDERDETERMINED ... GROUND: [L1] Luke 2:48-49 "..." where the record leaves open whether ...": it no longer keeps the
   break, and it carries an [L1] and a leaves-open statement (read by me from the logged text, not run through the rule). 0 of 1 would still fail.
+
+## GCCN rev 2 (W1, Wall 4277, commit 4b3e6b25): PASS
+SIZE (measured): +728 code, Shared Library only, 418 nodes, connections equal, no prompt text.
+Gate Record plants (w2_gcc_GCCN2_out.txt): 8 OK, 0 FAIL (34626 equal to s110; applied off; KEEP stays; not applied stays; other S, other seat, record-only stay).
+Unit, exact patch code (w2_gcc_unit_GCCN2_out.txt): C8 two cured items from one S: 3 -> 2 (fixed); C9 pkgRCT stays; C10 KEEP withdrawn stays;
+C12 already written stays; C13 W4's TRIAL "not counted" line alone: stays; C14 TRIAL line plus counted line for the same S: 3 -> 2; C15 three items
+from one S: 3 -> 2; C16 one line counting S10 and S11, S10 cured twice and S11 once: 4 -> 2. All OK.
+Forgiven by design (recorded, not a fail): C11 cure by a later gate change that was applied (count off); case (b) B1: a new UNDERDETERMINED line the
+pkgUND rule would refuse is cured by the gate and its count comes off (3 -> 2), as in rev 1. Stored cases of (b): 0 of 1.

@@ -1,0 +1,8 @@
+OK   G0 s110 rerun equals stored
+OK   C1 34626 as stored: candidate Gate Record output equals s110
+-- B1  s110 luna:3 chatgpt:0 sol:0 | C luna:2 chatgpt:0 sol:0 | G1 CURED lision line for the same pair) | the gate change was applied | count-off note
+     gate rows C: G1 NOT APPLIED:CURED | G2 NOT APPLIED:CURED | G3 CONTRADICTION:CURED | G4 CONTRADICTION:CURED | G5 CONTRADICTION:UNCURED | NEW RULE K-G4:UNCURED | NEW RULE K-F:UNCURED
+-- B2  s110 luna:3 chatgpt:0 sol:0 | C luna:2 chatgpt:0 sol:0 | G1 CURED lision line for the same pair) | the gate change was applied | count-off note
+     gate rows C: G1 NOT APPLIED:CURED | G2 NOT APPLIED:CURED | G3 CONTRADICTION:CURED | G4 CONTRADICTION:CURED | G5 CONTRADICTION:UNCURED | NEW RULE K-G4:UNCURED | NEW RULE K-F:UNCURED
+-- B3  s110 luna:4 chatgpt:0 sol:0 | C luna:4 chatgpt:0 sol:0 | G1 UNCURED  does not cure; counted once, here) (counted in drv_uncured)
+     gate rows C: G1 NOT APPLIED:UNCURED | G2 NOT APPLIED:CURED | G3 CONTRADICTION:CURED | G4 CONTRADICTION:CURED | G5 CONTRADICTION:UNCURED | NEW RULE K-B:UNCURED | NEW RULE K-G4:UNCURED | NEW RULE K-G4:UNCURED | NEW RULE K-F:UNCURED

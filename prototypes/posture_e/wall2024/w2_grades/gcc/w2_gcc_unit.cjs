@@ -12,3 +12,10 @@ const r11=run([{gid:'G1',kind:'NOT APPLIED',src:'E-APPLY S10',cured:true,ans:'CH
 console.log('REC  C11u cured because a later gate change rewrote the same line and was applied: drv 3 -> '+r11.p.drv_uncured);
 const r12=run([{gid:'G1',kind:'NOT APPLIED',src:'E-APPLY S10',cured:true,ans:'CHANGE',why:'the gate change is already in the corrected text (another change wrote the same line; W3 2319)'}]);
 console.log('REC  C12u cured because another change already wrote the line: drv 3 -> '+r12.p.drv_uncured);
+const TR='[AUDIT v48: KEYSTONE CARD UNCURED (pkgKSC) -- SEAT: luna; ITEMS: S10 (E-KSC KEYSTONE); TRIAL rule: recorded, not counted in drv_uncured; it removes no seat. REVIEW THIS ROW.]';
+const runT=(raw,res,drv)=>{const p={drv_uncured:drv,verdict_raw:raw};const f=new Function('p','res','g','C','any',code+';return {p};');return f(p,res,{seat:'luna'},null,false);};
+const one=[{gid:'G1',kind:'NOT APPLIED',src:'E-APPLY S10',cured:true,ans:'CHANGE',why:'the gate change was applied'}];
+const t1=runT('x\n'+TR,one,2);console.log((t1.p.drv_uncured===2?'OK   ':'FAIL ')+'C13 TRIAL "not counted" line names S10 only: drv 2 -> '+t1.p.drv_uncured);
+const t2=runT('x\n'+TR+'\n'+counted,one,3);console.log((t2.p.drv_uncured===2?'OK   ':'FAIL ')+'C14 TRIAL line and counted line both name S10: drv 3 -> '+t2.p.drv_uncured);
+const t3=runT('x\n'+counted,[...one,{...one[0],gid:'G2'},{...one[0],gid:'G3'}],3);console.log((t3.p.drv_uncured===2?'OK   ':'FAIL ')+'C15 three cured items from S10: drv 3 -> '+t3.p.drv_uncured);
+const t4=runT('x\n'+counted.replace('ITEMS: S10 (E-UNG COLLISION D2)','ITEMS: S10 (E-UNG COLLISION D2); S11 (E-UNG COLLISION D4)'),[...one,{...one[0],gid:'G2',src:'E-APPLY S11'},{...one[0],gid:'G3'}],4);console.log((t4.p.drv_uncured===2?'OK   ':'FAIL ')+'C16 one line counting S10 and S11, cured S10 twice and S11 once: drv 4 -> '+t4.p.drv_uncured);
