@@ -1,4 +1,4 @@
-OK   Q1 only QR Check, QR Final change; QR Check 6026 -> 7238, QR Final 7842 -> 8116
+OK   Q1 only QR Check, QR Final change; QR Check 6026 -> 7308, QR Final 7842 -> 8116
      pkgQRD returns: luna:-, chatgpt:defender, sol:defender
      return text: === QUESTION ROUND (TRIAL): RETURNED ONCE === / Another judge already asks the defender about the contradiction between CR3 and CR4. If you see a different contradiction in that debater's closing round, ask about it instead; if you see none, keep your question. / Reply again with JSON only, in the same form, both questions.
      return text: === QUESTION ROUND (TRIAL): RETURNED ONCE === / Another judge already asks the defender about the contradiction between CR3 and CR4. If you see a different contradiction in that debater's closing round, ask about it instead; if you see none, keep your question. / Reply again with JSON only, in the same form, both questions.
@@ -11,4 +11,6 @@ OK   Q5 fault on challenger and repeat on defender: one return carries both
 OK   Q5 faulted side follows today's rule: second still fails, DROPPED
 OK   Q6 sol with the same rounds but other quotes: not returned (chatgpt still is)
 OK   Q6 three identical non-contradiction challenger questions: none returned for repeating
+OK   Q7 luna faulted on the challenger side: luna not counted; chatgpt stands (not returned); sol redirected by chatgpt
+OK   Q7 luna and chatgpt both faulted: no defender redirect at all (sol keeps its question)
 ALL OK

@@ -22,3 +22,8 @@ Expected (any other result is a FAIL):
   today's rule (dropped if the second still fails).
 - Q6 two contradiction questions that share the rounds but no quote: not a repeat. Non-contradiction questions are never returned for repeating.
 - Cost stated: each return is a full judge call instead of the no-op call (34299 first asks: about 75,000 to 77,000 prompt tokens each, measured).
+
+## Rev 2 (W3 FAIL, Wall 4196): an earlier judge counts as "already asking" only when its first reply has no fault on either side
+(a judge returned for a fault may change or lose its question). Added before rev 2 was run:
+- Q7 luna faulted on the challenger side: luna not counted; chatgpt stands; sol redirected by chatgpt. luna and chatgpt both faulted: no redirect.
+- Q1 to Q6 as before.
