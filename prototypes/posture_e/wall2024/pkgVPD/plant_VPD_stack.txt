@@ -1,0 +1,100 @@
+
+W1-A TRUE: grant + deferral to LINK 4; LINK 4 is short (under 25 words, no layers) and stands only in [CR4]
+     live cure_status UNCURED | package cure_status UNCURED
+     TRIAL pkgVP3: TWO READERS AGREE on Luke 1:34 ([CR3] Luke 1:34: no layer of its own; only grant and deferral: "I grant the present tense states her state when the angel spoke. I answer it fully under LINK 4.") -- WOULD REMOVE chatgpt: the reply (KEEP) keeps the grade and the live cure reading is UNCURED; record-only, no seat remo
+     vp3_trial {"status":"TRIAL","checked":5,"agree":3,"would_remove":{"chatgpt":["S1 (E-ANS ANSWER CHECK Luke 1:34 [CR3])"],"sol":["S1 (E-ANS ANSWER CHECK Luke 1:34 [CR3])"]}}
+OK   W1-A TRUE: grant + deferral to LINK 4; LINK 4 is short (under 25 words, no layers) and stands only in [CR4]: cure_status unchanged by the package
+OK   W1-A TRUE: grant + deferral to LINK 4; LINK 4 is short (under 25 words, no layers) and stands only in [CR4]: LISTED (WOULD REMOVE chatgpt)
+
+W1-B control: same, with LINK 4 short and in [CR3] (W2 T2 shape)
+     live cure_status UNCURED | package cure_status UNCURED
+     TRIAL pkgVP3: TWO READERS AGREE on Luke 1:34 ([CR3] Luke 1:34: no layer of its own; only grant and deferral: "I grant the present tense states her state when the angel spoke. I answer it fully under LINK 4.") -- WOULD REMOVE chatgpt: the reply (KEEP) keeps the grade and the live cure reading is UNCURED; record-only, no seat remo
+     vp3_trial {"status":"TRIAL","checked":5,"agree":3,"would_remove":{"chatgpt":["S1 (E-ANS ANSWER CHECK Luke 1:34 [CR3])"],"sol":["S1 (E-ANS ANSWER CHECK Luke 1:34 [CR3])"]}}
+OK   W1-B control: same, with LINK 4 short and in [CR3] (W2 T2 shape): cure_status unchanged by the package
+OK   W1-B control: same, with LINK 4 short and in [CR3] (W2 T2 shape): LISTED (WOULD REMOVE chatgpt)
+
+W1-C deferral to LINK 9, which no round holds (VPD: listed)
+     live cure_status UNCURED | package cure_status UNCURED
+     TRIAL pkgVP3: TWO READERS AGREE on Luke 1:34 ([CR3] Luke 1:34: no layer of its own; only grant and deferral: "I grant the present tense states her state when the angel spoke. I answer it fully under LINK 9."; its deferral to LINK 9 names a block no round of the side holds (pkgVPD: defers to nothing)) -- WOULD REMOVE chatgpt: the
+     vp3_trial {"status":"TRIAL","checked":5,"agree":3,"would_remove":{"chatgpt":["S1 (E-ANS ANSWER CHECK Luke 1:34 [CR3])"]}}
+OK   W1-C deferral to LINK 9, which no round holds (VPD: listed): cure_status unchanged by the package
+OK   W1-C deferral to LINK 9, which no round holds (VPD: listed): LISTED (WOULD REMOVE chatgpt)
+
+W1-D deferral to its own round "[CR3]" (VPD: listed)
+     live cure_status UNCURED | package cure_status UNCURED
+     TRIAL pkgVP3: TWO READERS AGREE on Luke 1:34 ([CR3] Luke 1:34: no layer of its own; only grant and deferral: "I grant the present tense states her state when the angel spoke. I answer it in [CR3]."; its deferral to [CR3] (its own round) names a round already read (pkgVPD)) -- WOULD REMOVE chatgpt: the reply (KEEP) keeps the grad
+     vp3_trial {"status":"TRIAL","checked":5,"agree":3,"would_remove":{"chatgpt":["S1 (E-ANS ANSWER CHECK Luke 1:34 [CR3])"]}}
+OK   W1-D deferral to its own round "[CR3]" (VPD: listed): cure_status unchanged by the package
+OK   W1-D deferral to its own round "[CR3]" (VPD: listed): LISTED (WOULD REMOVE chatgpt)
+
+W1-E deferral "in [CR4]", [CR4] holds text but nothing on her question (VPD: listed)
+     live cure_status UNCURED | package cure_status UNCURED
+     TRIAL pkgVP3: TWO READERS AGREE on Luke 1:34 ([CR3] Luke 1:34: no layer of its own; only grant and deferral: "I grant the present tense states her state when the angel spoke. I answer it fully in [CR4]."; its deferral to [CR4] names a round already read (pkgVPD)) -- WOULD REMOVE chatgpt: the reply (KEEP) keeps the grade and the 
+     vp3_trial {"status":"TRIAL","checked":5,"agree":3,"would_remove":{"chatgpt":["S1 (E-ANS ANSWER CHECK Luke 1:34 [CR3])"]}}
+OK   W1-E deferral "in [CR4]", [CR4] holds text but nothing on her question (VPD: listed): cure_status unchanged by the package
+OK   W1-E deferral "in [CR4]", [CR4] holds text but nothing on her question (VPD: listed): LISTED (WOULD REMOVE chatgpt)
+
+W2-F deferral to an earlier round [CR2] that answers Luke 1:34 with a layer: not listed
+     live cure_status UNCURED | package cure_status UNCURED
+     TRIAL pkgVP3: code check does not agree, not an item -- [CR3] the answer defers to [CR2], which answers Luke 1:34 ([CR2] answer to Luke 1:34: the answer carries its own layer [L2])
+     vp3_trial {"status":"TRIAL","checked":5,"agree":0,"would_remove":{}}
+OK   W2-F deferral to an earlier round [CR2] that answers Luke 1:34 with a layer: not listed: cure_status unchanged by the package
+OK   W2-F deferral to an earlier round [CR2] that answers Luke 1:34 with a layer: not listed: not listed
+
+W2-G deferral to an earlier round [CR2] that never names Luke 1:34: listed
+     live cure_status UNCURED | package cure_status UNCURED
+     TRIAL pkgVP3: TWO READERS AGREE on Luke 1:34 ([CR3] Luke 1:34: no layer of its own; only grant and deferral: "I grant the present tense states her state when the angel spoke. I answer it in [CR2]."; its deferral to [CR2] finds no answer to Luke 1:34 there (pkgVPD)) -- WOULD REMOVE chatgpt: the reply (KEEP) keeps the grade and th
+     vp3_trial {"status":"TRIAL","checked":5,"agree":3,"would_remove":{"chatgpt":["S1 (E-ANS ANSWER CHECK Luke 1:34 [CR3])"]}}
+OK   W2-G deferral to an earlier round [CR2] that never names Luke 1:34: listed: cure_status unchanged by the package
+OK   W2-G deferral to an earlier round [CR2] that never names Luke 1:34: listed: LISTED (WOULD REMOVE chatgpt)
+
+W2-H deferral to [CR2] whose only answer is a bare grant: listed
+     live cure_status UNCURED | package cure_status UNCURED
+     TRIAL pkgVP3: TWO READERS AGREE on Luke 1:34 ([CR3] Luke 1:34: no layer of its own; only grant and deferral: "I grant the present tense states her state when the angel spoke. I answer it in [CR2]."; its deferral to [CR2] finds only a bare answer there (pkgVPD)) -- WOULD REMOVE chatgpt: the reply (KEEP) keeps the grade and the li
+     vp3_trial {"status":"TRIAL","checked":5,"agree":3,"would_remove":{"chatgpt":["S1 (E-ANS ANSWER CHECK Luke 1:34 [CR3])"]}}
+OK   W2-H deferral to [CR2] whose only answer is a bare grant: listed: cure_status unchanged by the package
+OK   W2-H deferral to [CR2] whose only answer is a bare grant: listed: LISTED (WOULD REMOVE chatgpt)
+
+W2-I deferral to [CR2] whose answer defers again to [CR1]: not listed (one hop)
+     live cure_status UNCURED | package cure_status UNCURED
+     TRIAL pkgVP3: code check does not agree, not an item -- [CR3] the answer defers to [CR2], which answers Luke 1:34 ([CR2] the answer defers to [CR1], a further round (pkgVPD: one hop only))
+     vp3_trial {"status":"TRIAL","checked":5,"agree":0,"would_remove":{}}
+OK   W2-I deferral to [CR2] whose answer defers again to [CR1]: not listed (one hop): cure_status unchanged by the package
+OK   W2-I deferral to [CR2] whose answer defers again to [CR1]: not listed (one hop): not listed
+
+W2-J deferral to the challenger round [DR3] that holds text: not listed (unchanged)
+     live cure_status UNCURED | package cure_status UNCURED
+     TRIAL pkgVP3: code check does not agree, not an item -- [CR3] the answer defers to [DR3], a round that holds text
+     vp3_trial {"status":"TRIAL","checked":5,"agree":0,"would_remove":{}}
+OK   W2-J deferral to the challenger round [DR3] that holds text: not listed (unchanged): cure_status unchanged by the package
+OK   W2-J deferral to the challenger round [DR3] that holds text: not listed (unchanged): not listed
+
+W2-K deferral to [CR4] where [CR4] answers Luke 1:34 with a layer: not listed
+     live cure_status UNCURED | package cure_status UNCURED
+     TRIAL pkgVP3: code check does not agree, not an item -- [CR4] answer to Luke 1:34: the answer carries its own layer [L3]
+     vp3_trial {"status":"TRIAL","checked":5,"agree":0,"would_remove":{}}
+OK   W2-K deferral to [CR4] where [CR4] answers Luke 1:34 with a layer: not listed: cure_status unchanged by the package
+OK   W2-K deferral to [CR4] where [CR4] answers Luke 1:34 with a layer: not listed: not listed
+
+W2-L deferral to LINK 4 that stands whole with layers (stored shape): not listed
+     live cure_status UNCURED | package cure_status UNCURED
+     TRIAL pkgVP3: code check does not agree, not an item -- [CR3] the deferral to LINK 4 names an answer of 478 words with layers
+     vp3_trial {"status":"TRIAL","checked":5,"agree":0,"would_remove":{}}
+OK   W2-L deferral to LINK 4 that stands whole with layers (stored shape): not listed: cure_status unchanged by the package
+OK   W2-L deferral to LINK 4 that stands whole with layers (stored shape): not listed: not listed
+
+W2-M grant only, no deferral: listed (unchanged)
+     live cure_status UNCURED | package cure_status UNCURED
+     TRIAL pkgVP3: TWO READERS AGREE on Luke 1:34 ([CR3] Luke 1:34: no layer of its own; only grant: "I grant the present tense states her state when the angel spoke.") -- WOULD REMOVE chatgpt: the reply (KEEP) keeps the grade and the live cure reading is UNCURED; record-only, no seat removed
+     vp3_trial {"status":"TRIAL","checked":5,"agree":3,"would_remove":{"chatgpt":["S1 (E-ANS ANSWER CHECK Luke 1:34 [CR3])"]}}
+OK   W2-M grant only, no deferral: listed (unchanged): cure_status unchanged by the package
+OK   W2-M grant only, no deferral: listed (unchanged): LISTED (WOULD REMOVE chatgpt)
+
+W2-N deferral to LINK 9 and to LINK 4 with layers: not listed
+     live cure_status UNCURED | package cure_status UNCURED
+     TRIAL pkgVP3: code check does not agree, not an item -- [CR3] the deferral to LINK 4 names an answer of 478 words with layers
+     vp3_trial {"status":"TRIAL","checked":5,"agree":0,"would_remove":{}}
+OK   W2-N deferral to LINK 9 and to LINK 4 with layers: not listed: cure_status unchanged by the package
+OK   W2-N deferral to LINK 9 and to LINK 4 with layers: not listed: not listed
+
+28 OK, 0 FAIL

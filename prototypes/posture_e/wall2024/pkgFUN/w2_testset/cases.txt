@@ -112,3 +112,37 @@ UNCURED|not-counted|COUNTEDLY so.|Not the keyword.
 UNCURED|not-counted|My count stands.|Refuses to correct.
 CURED|touches-no-link|TOUCHES NO LINK: the grant is about Luke 3:23, which no declared link or listed premise uses.|Allowed answer with a one-line reason.
 UNCURED|touches-no-link|TOUCHES NO LINK|Allowed form needs the one-line reason.
+# --- extension (coordinator 01:33Z): formatted openings and multi-sentence answers ---
+CURED|formatted|__COUNTED__ The defender concedes D6 in [DR3].|Underscore bold keyword.
+CURED|formatted|*COUNTED* The defender concedes D6 in [DR3].|Italic keyword.
+CURED|formatted|***COUNTED.*** The defender concedes D6 in [DR3].|Bold italic keyword.
+CURED|formatted|> COUNTED. The defender concedes D6 in [DR3].|Block quote.
+CURED|formatted|1. COUNTED. The defender concedes D6 in [DR3].|Numbered.
+CURED|formatted|• COUNTED. The defender concedes D6 in [DR3].|Bullet dot.
+CURED|formatted|[COUNTED] The defender concedes D6 in [DR3].|Bracketed keyword.
+CURED|formatted|COUNTED: correcting my count, the defender conceded D6 in round 3.|Colon then the rule's words.
+CURED|formatted|COUNTED – the defender conceded D6.|En dash after keyword.
+CURED|formatted|COUNTED -- the defender conceded D6.|Double hyphen after keyword.
+CURED|formatted|COUNTED; the defender conceded D6.|Semicolon after keyword.
+CURED|formatted|COUNTED! The defender conceded D6.|Exclamation after keyword.
+CURED|formatted|  COUNTED. The defender conceded D6.|Leading spaces.
+CURED|formatted|**COUNTED**: the defender conceded D6.|Bold keyword then colon.
+CURED|formatted|- **COUNTED.** The defender conceded D6 in [DR3].|Bullet and bold.
+UNCURED|refusal-formatted|**COUNTED.** That is not right.|Bold keyword then refusal.
+UNCURED|refusal-formatted|> COUNTED. I withdraw the count.|Block quote then withdrawal.
+UNCURED|refusal-formatted|1. COUNTED, but it is not a concession.|Numbered then refusal.
+UNCURED|refusal-formatted|**COUNTED**\nI do not accept this count.|Bold keyword, refusal on the next line.
+CURED|multi-sentence|COUNTED. The defender granted the ordinary means. The defender then said Genesis 4:1 cannot supply the sequence. That later sentence does not undo the grant.|Negations describe the defender's later sentence.
+CURED|multi-sentence|COUNTED. I had not counted it. I count it now.|Corrects the count.
+CURED|multi-sentence|COUNTED. The defender withdrew D6 in round 3. The defender did not restore it.|Withdrawal and negation describe the defender.
+CURED|multi-sentence|COUNTED. It was not in my first count. That was my error. It is in my count now.|Corrects the count.
+CURED|multi-sentence|COUNTED.\n\nThe round 3 grant concedes D6.\n\nNo later round takes it back.|Paragraphs.
+CURED|multi-sentence|COUNTED. Though the defender restated D6 in round 4, the restatement keeps words given up. It does not restore D6.|"Though" and negation describe the defender.
+CURED|multi-sentence|COUNTED. The challenger pressed it; the defender granted it. Nothing more is needed.|Negation describes need.
+CURED|multi-sentence|COUNTED. Is it a concession? Yes: the defender granted the ordinary means.|Question then affirmation.
+UNCURED|refusal-later|COUNTED. The grant is in round 3. It is not a concession of D6, so my count stands.|Later sentence denies the concession.
+UNCURED|refusal-later|COUNTED. I have looked again. I do not count it after all.|Later sentence refuses the count.
+UNCURED|refusal-later|COUNTED. Is it a concession? No.|Question answered no.
+UNCURED|refusal-later|COUNTED. The defender granted it.\n\nCorrection: not counted.|Paragraph retracts the count.
+UNCURED|refusal-later|COUNTED. The defender granted the ordinary means. I retract my count of it.|Later sentence retracts the count.
+UNCURED|refusal-later|COUNTED. The defender granted it. That grant does not apply to D6.|Later sentence denies it applies.

@@ -27,3 +27,12 @@ What FUN rev 2 still misses:
 - The formatted openings in item 3 above.
 
 Borderline labels (graders may rule otherwise): "COUNTED, but only in part." (UNCURED: a partial count does not correct the count); "Counted." (UNCURED: the rule names COUNTED); "ANSWER: COUNTED." and "`COUNTED`" (CURED: markup around the keyword); "COUNTED. I could not count it before the close because I missed it." (CURED: explains the miss).
+
+## Extension and FUN rev 3 run (W2, 2026-11-10 01:45Z)
+
+33 cases added (coordinator 01:33Z): formatted openings (underscore, italic, bold italic, block quote, numbered, dot bullet, brackets, dashes, semicolon, leading spaces, bold then colon, bullet and bold) and multi-sentence answers, with refusals in each form. 146 cases in all; cases 1 to 113 are unchanged.
+- ks3_run_FUN3.txt (pkgLIB/strip_FUN3, W1 commit 9cc64312): 137 of 146 match. Of the first 113: 112 (the miss is "COUNTED.\nThat is not right.", a refusal on a second line, which W3 is ruling on). Of the 33 new: 25.
+- ks3_run_s98_FUN2.txt reruns live s98 and FUN rev 2 on all 146.
+FUN rev 3 misses in the new cases:
+- Refusals read CURED: "**COUNTED.** That is not right." (the same refusal reads UNCURED without bold); "COUNTED. The grant is in round 3. It is not a concession of D6, so my count stands."; "COUNTED. I have looked again. I do not count it after all."; "COUNTED. The defender granted the ordinary means. I retract my count of it."; "COUNTED. The defender granted it. That grant does not apply to D6."; and two second-line refusals ("**COUNTED**\nI do not accept this count.", "COUNTED. The defender granted it.\n\nCorrection: not counted.").
+- Correct answer refused: "[COUNTED] The defender concedes D6 in [DR3]." (borderline label: brackets around the keyword).

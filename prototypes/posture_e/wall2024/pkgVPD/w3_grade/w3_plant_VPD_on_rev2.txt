@@ -1,0 +1,58 @@
+
+G1 deferral "in [CR4]"; [CR4] answers her question with a layer but does not write the reference
+     live cure_status UNCURED | package cure_status UNCURED
+     TRIAL pkgVP3: code check does not agree, not an item -- [CR3] the answer defers to [CR4], which answers Luke 1:34 without its exact reference (line 60: "- [L4] The obstacle differs, and the verses state each obstacle. For Elisabeth it is "who "; pkgVPD rev 2)
+     vp3_trial {"status":"TRIAL","checked":5,"agree":0,"would_remove":{}}
+OK   G1 deferral "in [CR4]"; [CR4] answers her question with a layer but does not write the reference: cure_status unchanged by the package
+OK   G1 deferral "in [CR4]"; [CR4] answers her question with a layer but does not write the reference: not listed
+
+G2 deferral to earlier [CR2], which answers with a layer and writes "Luke 1, verse 34"
+     live cure_status UNCURED | package cure_status UNCURED
+     TRIAL pkgVP3: code check does not agree, not an item -- [CR3] the answer defers to [CR2], which answers Luke 1:34 without its exact reference (line 42: "[L4] The press says the verbs carry power and presence, as in Acts 1:8 and Luke 9:34. What"; pkgVPD rev 2)
+     vp3_trial {"status":"TRIAL","checked":5,"agree":0,"would_remove":{}}
+OK   G2 deferral to earlier [CR2], which answers with a layer and writes "Luke 1, verse 34": cure_status unchanged by the package
+OK   G2 deferral to earlier [CR2], which answers with a layer and writes "Luke 1, verse 34": not listed
+
+G3 deferral to earlier [CR2], which answers Luke 1:34 with a reasoned sentence and no layer tag
+     live cure_status UNCURED | package cure_status UNCURED
+     TRIAL pkgVP3: code check does not agree, not an item -- [CR3] the answer defers to [CR2], which answers Luke 1:34 without its exact reference (line 42: "[L4] The press says the verbs carry power and presence, as in Acts 1:8 and Luke 9:34. What"; pkgVPD rev 2)
+     vp3_trial {"status":"TRIAL","checked":5,"agree":0,"would_remove":{}}
+OK   G3 deferral to earlier [CR2], which answers Luke 1:34 with a reasoned sentence and no layer tag: cure_status unchanged by the package
+OK   G3 deferral to earlier [CR2], which answers Luke 1:34 with a reasoned sentence and no layer tag: not listed
+
+G3b control: the same reasoned sentence, no layer tag, in [CR3] itself (no deferral)
+     live cure_status UNCURED | package cure_status UNCURED
+     TRIAL pkgVP3: code check does not agree, not an item -- [CR3] answer to Luke 1:34: a sentence is neither a grant nor a deferral: "Her words state that she knew no man when the angel spoke, and the angel answers the how by naming the Holy Ghost and th"
+     vp3_trial {"status":"TRIAL","checked":5,"agree":0,"would_remove":{}}
+OK   G3b control: the same reasoned sentence, no layer tag, in [CR3] itself (no deferral): cure_status unchanged by the package
+OK   G3b control: the same reasoned sentence, no layer tag, in [CR3] itself (no deferral): not listed
+
+G4 deferral to [CR1], which answers Luke 1:34 with a layer
+     live cure_status UNCURED | package cure_status UNCURED
+     TRIAL pkgVP3: code check does not agree, not an item -- [CR3] the answer defers to [CR1], which answers Luke 1:34 ([CR1] answer to Luke 1:34: the answer carries its own layer [L2])
+     vp3_trial {"status":"TRIAL","checked":5,"agree":0,"would_remove":{}}
+OK   G4 deferral to [CR1], which answers Luke 1:34 with a layer: cure_status unchanged by the package
+OK   G4 deferral to [CR1], which answers Luke 1:34 with a layer: not listed
+
+G5 deferral names its own round and the challenger round [DR2]
+     live cure_status UNCURED | package cure_status UNCURED
+     TRIAL pkgVP3: code check does not agree, not an item -- [CR3] the answer defers to [CR3], which answers Luke 1:34 without its exact reference (line 57: "**LINK 4: NARROWED TO:** her question's "seeing I know not a man" is the stated ground of "; pkgVPD rev 2)
+     vp3_trial {"status":"TRIAL","checked":5,"agree":0,"would_remove":{}}
+OK   G5 deferral names its own round and the challenger round [DR2]: cure_status unchanged by the package
+OK   G5 deferral names its own round and the challenger round [DR2]: not listed
+
+G6 deferral to earlier [CR2], where the verse is named only in the challenger's quoted press
+     live cure_status UNCURED | package cure_status UNCURED
+     TRIAL pkgVP3: code check does not agree, not an item -- [CR3] the answer defers to [CR2], which answers Luke 1:34 without its exact reference (line 42: "[L4] The press says the verbs carry power and presence, as in Acts 1:8 and Luke 9:34. What"; pkgVPD rev 2)
+     vp3_trial {"status":"TRIAL","checked":5,"agree":0,"would_remove":{}}
+OK   G6 deferral to earlier [CR2], where the verse is named only in the challenger's quoted press: cure_status unchanged by the package
+FAIL G6 deferral to earlier [CR2], where the verse is named only in the challenger's quoted press: LISTED (WOULD REMOVE chatgpt)
+
+G7 deferral to earlier [CR2] under a LINK block there with layers that names the verse
+     live cure_status UNCURED | package cure_status UNCURED
+     TRIAL pkgVP3: code check does not agree, not an item -- [CR3] the deferral to LINK 2 names an answer of 555 words with layers
+     vp3_trial {"status":"TRIAL","checked":5,"agree":0,"would_remove":{}}
+OK   G7 deferral to earlier [CR2] under a LINK block there with layers that names the verse: cure_status unchanged by the package
+OK   G7 deferral to earlier [CR2] under a LINK block there with layers that names the verse: not listed
+
+15 OK, 1 FAIL
