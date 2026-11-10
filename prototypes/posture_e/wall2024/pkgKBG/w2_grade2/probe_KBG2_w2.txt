@@ -1,0 +1,31 @@
+OK   another bare grant of the side (the Luke 2:4 grant): base CURED, candidate UNCURED | KEEP whose reason quotes only the bare flagged answer itself, or words running into it ("i grant it is said of"), not a fuller answer from the answering side's rounds (pk
+OK   another bare grant (Matthew 11:11 item): base CURED, candidate UNCURED | KEEP whose reason quotes only another bare grant or deferral of the answering side ("i grant it is a class"), not a fuller answer (pkgKBG) | TRIAL pkgVP3: code check does
+OK   another bare grant, no quote marks, other case: base CURED, candidate UNCURED | KEEP whose reason quotes only another bare grant or deferral of the answering side ("i grant the espousal and the"), not a fuller answer (pkgKBG) | TRIAL pkgVP3: code che
+OK   straddle: tail of another bare grant running into the next own words: base CURED, candidate UNCURED | KEEP whose reason quotes only another bare grant or deferral of the answering side ("the house is named the verses"), not a fuller answer (pkgKBG) | TRIAL pkgVP3: code ch
+OK   a deferral sentence of the side (planted in CR4): base CURED, candidate UNCURED | KEEP whose reason quotes only another bare grant or deferral of the answering side ("i answer it under link 2"), not a fuller answer (pkgKBG) | TRIAL pkgVP3: code check d
+OK   the side's own reasoned sentence after another grant (not bare): base CURED, candidate CURED | KEEP whose reason quotes the answering side's round: "the verses for gives the holy" | TRIAL pkgVP3: code check does not agree, not an item -- [CR3] names Job 14:1 again 
+OK   the CR2 fuller answer: base CURED, candidate CURED | KEEP whose reason quotes the answering side's round: "i accept it as a phrase" | TRIAL pkgVP3: code check does not agree, not an item -- [CR3] names Job 14:1 again (line 
+OK   bare grant followed by a fuller answer in the same reason: base CURED, candidate CURED | KEEP whose reason quotes the answering side's round: "the verses for gives the holy" | TRIAL pkgVP3: code check does not agree, not an item -- [CR3] names Job 14:1 again 
+OK   pkgKQG stands: the flagged bare grant itself: base UNCURED, candidate UNCURED | KEEP whose reason quotes only the bare flagged answer itself, or words running into it ("i grant it is said of"), not a fuller answer from the answering side's rounds (pk
+OK   pkgKVQ stands: the verse the side quoted: base UNCURED, candidate UNCURED | KEEP whose reason quotes only scripture the answering side quoted ("of few days and full of"), not the side's own answer (pkgKVQ) | TRIAL pkgVP3: code check does not agre
+OK   no six words of the rounds: base UNCURED, candidate UNCURED | KEEP whose reason quotes no 6 words in a row of the answering side's rounds | TRIAL pkgVP3: code check does not agree, not an item -- [CR3] names Job 14:1 again (line 105
+OK   M1 the CR2 sentence as stored, under its bold heading (a grant joined to a further clause: left): CURED (want CURED) | KEEP whose reason quotes the answering side's round: "i accept it as a phrase" | TRIAL pkgVP3: code check does
+OK   M2 the same with the heading removed: CURED (want CURED) | KEEP whose reason quotes the answering side's round: "i accept it as a phrase" | TRIAL pkgVP3: code check does
+OK   M3 planted bare grant, plain line: UNCURED (want UNCURED) | KEEP whose reason quotes only another bare grant or deferral of the answering side ("i grant the phrase covers
+OK   M4 as a bullet: UNCURED (want UNCURED) | KEEP whose reason quotes only another bare grant or deferral of the answering side ("i grant the phrase covers
+OK   M5 after a bold heading: UNCURED (want UNCURED) | KEEP whose reason quotes only another bare grant or deferral of the answering side ("i grant the phrase covers
+OK   M6 after a layer tag: UNCURED (want UNCURED) | KEEP whose reason quotes only another bare grant or deferral of the answering side ("i grant the phrase covers
+OK   M7 after a bullet and a bold verse label: UNCURED (want UNCURED) | KEEP whose reason quotes only another bare grant or deferral of the answering side ("i grant the phrase covers
+OK   M8 numbered, quoted block mark and plain verse label: UNCURED (want UNCURED) | KEEP whose reason quotes only another bare grant or deferral of the answering side ("i grant the phrase covers
+OK   M9 the stored CR line "- **Galatians 4:4.** I grant of a woman is a general phrase (Job 14:1).": UNCURED (want UNCURED) | KEEP whose reason quotes only another bare grant or deferral of the answering side ("i grant of a woman is"), 
+OK   M10 a label alone does not make a reasoned sentence bare: CURED (want CURED) | KEEP whose reason quotes the answering side's round: "it names the mother of every" | TRIAL pkgVP3: code check
+OK   flagged answer quoted with its label: base CURED (not read as bare), rev 2 UNCURED (pkgKQG reason)
+OK   the same item, KEEP quoting the reasoned sentence: CURED
+OK   case 1: 60 rows, only the Job 14:1 row differs
+OK   row passes the table CHECKs: seat_role panel, kind send_back
+OK   flagged answer not bare: a KEEP quoting a bare grant is read as before (CURED): KEEP whose reason quotes the answering side's round: "i grant the registration names josep
+OK   the same KEEP with a bare flagged answer: UNCURED (pkgKBG)
+OK   418 nodes; 3 changed against the pkgKVQ base and against live s94 (Send Back Record, Alt Send Back Record, R2 Alt Send Back Record); connections equal
+OK   enf428Cure is the same text in the 3 nodes
+OK   outside enf428Cure the 3 nodes equal the base
+30 OK, 0 FAIL

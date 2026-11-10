@@ -1,0 +1,47 @@
+     KVQ CURED | KBG2 UNCURED | CURE (record-only until promoted): UNCURED -- KEEP whose reason quotes only another bare grant or deferral of the answering side ("the name stands written in the"), not a fuller answer (pkgKBG) | TRIA
+OK   F0 control: plain grant line: KVQ CURED, KBG2 UNCURED (pkgKBG reason)
+OK   F0 control: plain grant line: every other field equal
+     KVQ CURED | KBG2 UNCURED | CURE (record-only until promoted): UNCURED -- KEEP whose reason quotes only another bare grant or deferral of the answering side ("the name stands written in the"), not a fuller answer (pkgKBG) | TRIA
+OK   F1 bullet: KVQ CURED, KBG2 UNCURED (pkgKBG reason)
+OK   F1 bullet: every other field equal
+     KVQ CURED | KBG2 UNCURED | CURE (record-only until promoted): UNCURED -- KEEP whose reason quotes only another bare grant or deferral of the answering side ("the name stands written in the"), not a fuller answer (pkgKBG) | TRIA
+OK   F2 numbered: KVQ CURED, KBG2 UNCURED (pkgKBG reason)
+OK   F2 numbered: every other field equal
+     KVQ CURED | KBG2 UNCURED | CURE (record-only until promoted): UNCURED -- KEEP whose reason quotes only another bare grant or deferral of the answering side ("the name stands written in the"), not a fuller answer (pkgKBG) | TRIA
+OK   F3 bold label: KVQ CURED, KBG2 UNCURED (pkgKBG reason)
+OK   F3 bold label: every other field equal
+     KVQ CURED | KBG2 UNCURED | CURE (record-only until promoted): UNCURED -- KEEP whose reason quotes only another bare grant or deferral of the answering side ("the name stands written in the"), not a fuller answer (pkgKBG) | TRIA
+OK   F4 layer tag: KVQ CURED, KBG2 UNCURED (pkgKBG reason)
+OK   F4 layer tag: every other field equal
+     KVQ CURED | KBG2 UNCURED | CURE (record-only until promoted): UNCURED -- KEEP whose reason quotes only another bare grant or deferral of the answering side ("the name stands written in the"), not a fuller answer (pkgKBG) | TRIA
+OK   F5 layer tag unbolded: KVQ CURED, KBG2 UNCURED (pkgKBG reason)
+OK   F5 layer tag unbolded: every other field equal
+     KVQ CURED | KBG2 UNCURED | CURE (record-only until promoted): UNCURED -- KEEP whose reason quotes only another bare grant or deferral of the answering side ("the name stands written in the"), not a fuller answer (pkgKBG) | TRIA
+OK   F6 verse label: KVQ CURED, KBG2 UNCURED (pkgKBG reason)
+OK   F6 verse label: every other field equal
+     KVQ CURED | KBG2 CURED | CURE (record-only until promoted): CURED -- KEEP whose reason quotes the answering side's round: "the name stands written in the" | TRIAL pkgVP3: code check does not agree, not an item -- [CR3] names 
+OK   F7 "On" verse label: KVQ CURED, KBG2 CURED
+OK   F7 "On" verse label: every other field equal
+     KVQ CURED | KBG2 UNCURED | CURE (record-only until promoted): UNCURED -- KEEP whose reason quotes only another bare grant or deferral of the answering side ("the name stands written in the"), not a fuller answer (pkgKBG) | TRIA
+OK   F8 all together: bullet, bold tag and verse label: KVQ CURED, KBG2 UNCURED (pkgKBG reason)
+OK   F8 all together: bullet, bold tag and verse label: every other field equal
+     KVQ CURED | KBG2 UNCURED | CURE (record-only until promoted): UNCURED -- KEEP whose reason quotes only another bare grant or deferral of the answering side ("the name stands written in the"), not a fuller answer (pkgKBG) | TRIA
+OK   F9 italic sentence: KVQ CURED, KBG2 UNCURED (pkgKBG reason)
+OK   F9 italic sentence: every other field equal
+     KVQ CURED | KBG2 UNCURED | CURE (record-only until promoted): UNCURED -- KEEP whose reason quotes only another bare grant or deferral of the answering side ("the name stands written in the"), not a fuller answer (pkgKBG) | TRIA
+OK   F10 blockquote: KVQ CURED, KBG2 UNCURED (pkgKBG reason)
+OK   F10 blockquote: every other field equal
+     KVQ CURED | KBG2 CURED | CURE (record-only until promoted): CURED -- KEEP whose reason quotes the answering side's round: "the phrase as was supposed sets" | TRIAL pkgVP3: code check does not agree, not an item -- [CR3] names
+OK   O1 verse label then reasoning stays: KVQ CURED, KBG2 CURED
+OK   O1 verse label then reasoning stays: every other field equal
+     KVQ CURED | KBG2 CURED | CURE (record-only until promoted): CURED -- KEEP whose reason quotes the answering side's round: "the name stands written in the" | TRIAL pkgVP3: code check does not agree, not an item -- [CR3] names 
+OK   O2 bold label grant with "because" stays: KVQ CURED, KBG2 CURED
+OK   O2 bold label grant with "because" stays: every other field equal
+     KVQ CURED | KBG2 CURED | CURE (record-only until promoted): CURED -- KEEP whose reason quotes the answering side's round: "the name stands written in the" | TRIAL pkgVP3: code check does not agree, not an item -- [CR3] names 
+OK   J1 joined clause by rule (", and I ...") stays CURED even when the clause adds no reason: KVQ CURED, KBG2 CURED
+OK   J1 joined clause by rule (", and I ...") stays CURED even when the clause adds no reason: every other field equal
+     KVQ CURED | KBG2 CURED | CURE (record-only until promoted): CURED -- KEEP whose reason quotes the answering side's round: "the name stands written in the" | TRIAL pkgVP3: code check does not agree, not an item -- [CR3] names 
+OK   J2 joined clause: KEEP quoting only the grant part: KVQ CURED, KBG2 CURED
+OK   J2 joined clause: KEEP quoting only the grant part: every other field equal
+OK   34108 stored send-back rows: all equal to the base (27 rows)
+31 OK, 0 FAIL
