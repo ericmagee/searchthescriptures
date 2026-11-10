@@ -1,0 +1,12 @@
+## /mnt/project-files/wall2024/fetchback_live_s110.json
+     [AUDIT v38: E-GATE -- SEAT: haiku; G1 NOT APPLIED (E-APPLY S7); ANSWER: CHANGE; CURED: the gate change was applied]
+     [AUDIT v42: COLLISION GRADE UNCURED (pkgUND) -- SEAT: haiku; ITEMS: S7 (E-HOLD on UNDERDETERMINED COLLISION D2 vs C1: kept UNDERDETERMINED; no [L1]: no verse is quoted with its reference under an [L1] tag); counted in drv_uncured. REVIEW THIS ROW.]
+  R2 merge tried: [{"alt":"haiku","result":"NOT SEATED","why":"unseated after its enforcer send-back and gate: 1 uncured item(s)"}]
+  TRACE R2 Alt Gate Record: drv_uncured 1 tag BROKEN
+  TRACE R2 Alt Send Back Record: drv_uncured 1 tag BROKEN
+## /mnt/project-files/wall2024/parent_s110_GFS.json
+     [AUDIT v38: E-GATE -- SEAT: haiku; G1 NOT APPLIED (E-APPLY S7); ANSWER: CHANGE; CURED: the gate change was applied]
+     [AUDIT v42: COLLISION GRADE UNCURED (pkgUND) -- SEAT: haiku; ITEMS: S7 (E-HOLD on UNDERDETERMINED COLLISION D2 vs C1: kept UNDERDETERMINED; no [L1]: no verse is quoted with its reference under an [L1] tag); counted in drv_uncured. REVIEW THIS ROW.]
+  R2 merge tried: [{"alt":"haiku","result":"NOT SEATED","why":"unseated after its enforcer send-back and gate: 1 uncured item(s)"}]
+  TRACE R2 Alt Gate Record: drv_uncured 1 tag BROKEN
+  TRACE R2 Alt Send Back Record: drv_uncured 1 tag BROKEN
