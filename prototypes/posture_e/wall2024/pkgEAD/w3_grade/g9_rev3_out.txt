@@ -1,0 +1,10 @@
+SENT ( to luna,chatgpt,sol) | n1. truly bare answer, the code agrees with DeepSeek (pointer to nothing, no other line names the verse)
+SENT ( to luna,chatgpt,sol) | n2. pointer to nothing; the only other line naming the verse is a numbered objection line (not an answer line) holding "the answer runs 30 words"
+SENT ( to luna,chatgpt,sol) | n3. pointer to nothing; the only other line naming the verse is a numbered objection line (not an answer line) holding "its own layer"
+SENT ( to luna,chatgpt,sol) | n4 (no label). truly bare answer whose own words are "I grant it. I answer it under LINK 4 with its own layer." (LINK 4 absent, no other line names the verse)
+WITHHELD ( for luna,chatgpt,sol) | n5 (LIMIT expected: WITHHELD). pointer to nothing, no other line names the verse, the answer line adds "Nothing more is needed."
+     written reason: : [CR3] answer to Luke 1:34: a sentence is neither a grant nor a deferral: "Nothing more is needed." (pkgEAD)
+SENT ( to luna,chatgpt,sol) | n6. one hop to a [CR2] replaced by two lines, which names the verse only in a footing quotation
+SENT ( to luna,chatgpt,sol) | n7. the same, and that [CR2] line holds "[CR2] answer to Luke 1:34: the answer runs 99 words"
+WITHHELD ( for luna,chatgpt,sol) | n8 (expected WITHHELD). one hop to a [CR2] with a full answer line on the verse carrying a layer
+     written reason: : [CR3] the answer defers to [CR2], which answers Luke 1:34 ([CR2] answer to Luke 1:34: the answer carries its own layer [L2]) (pkgEAD)
