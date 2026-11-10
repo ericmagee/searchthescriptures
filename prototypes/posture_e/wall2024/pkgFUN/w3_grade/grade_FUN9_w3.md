@@ -9,7 +9,7 @@ Columns: live s105 (version 4b5d599a), rev 8, rev 9. 81 texts.
 - Rolled-back insert through record_enforcer_log (rev 9's UNCURED and CURED K-S3 row shapes): accepted, 2 rows, rolled back.
 - No other log row changes on any text.
 - My rev 8 finding 1 is fixed for "my count": the five forms cure, with and without the CORRECTED COUNT line. "My count stands." stays UNCURED.
-- My rev 8 finding 2 is fixed: the six "Yes." then "COUNTED is wrong." forms read UNCURED as on live. "Yes.\nCOUNTED." with ". : , ; -", bold, or nothing after it cures (11 forms).
+- My rev 8 finding 2 is fixed: the six "Yes." then "COUNTED is wrong." forms read UNCURED as on live. "Yes.\nCOUNTED." with ". : , ; -", bold, or nothing after it cures (9 forms).
 - My rev 8 finding 3 is fixed: "TOUCHES NO LINK:" with "I refuse to answer." / "No reason is needed." / "None." / "N/A" on the next line reads UNCURED, also with a blank line,
   a bullet, or no colon. Six correct next-line reasons cure.
 - Consistency: every next-line form I planted reads as its one-line form reads on rev 9.
