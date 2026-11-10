@@ -10,7 +10,7 @@ ECB:[]};
 const FP=id=>({id,n:10,find:fs.readFileSync('pkgKSR/patches/'+id+'.find','utf8'),to:fs.readFileSync('pkgKSR/patches/'+id+'.to','utf8')});PATCH.KSR.push(FP('K2'),FP('K3'),FP('K5'),FP('K6'));PATCH.ECB.push({...FP('E1'),n:3},{...FP('E2'),n:3}); /* rev 3: K4 and E3 dropped (bloat check) */
 const S0=SET.split('x')[0],SKIP=SET.split('x').slice(1); /* ablation: SET=ALLxK2 leaves K2 out */
 const use=(S0==='ALL'?PATCH.KSR.concat(PATCH.ECB):PATCH[S0]).filter(p=>!SKIP.includes(p.id.split(' ')[0]));let ok=true;const say=(c,m)=>{console.log((c?'OK   ':'FAIL ')+m);if(!c)ok=false;};
-const SRC='pkgLIB/strip_R1/patched/',SD='pkgLIB/strip_'+SET+'/patched/',PK='pkgLIB_'+SET;
+const SRC='pkgLIB/strip_'+(process.env.BASESRC||'R1')+'/patched/',SD='pkgLIB/strip_'+SET+(process.env.BASESRC?'_on_'+process.env.BASESRC:'')+'/patched/',PK='pkgLIB_'+SET+(process.env.BASESRC?'_on_'+process.env.BASESRC:''); /* BASESRC: another base (e.g. GFS) */
 for(const p of [SD.replace('/patched/',''),PK])if(fs.existsSync(p))fs.rmSync(p,{recursive:true});fs.mkdirSync(SD,{recursive:true});
 const hits={};for(const f of fs.readdirSync(SRC).filter(f=>f.endsWith('.js'))){let s=fs.readFileSync(SRC+f,'utf8');
  for(const p of use){const c=s.split(p.find).length-1;if(!c)continue;if(c!==1){say(false,p.id+' found '+c+' times in '+f);continue;}hits[p.id]=(hits[p.id]||0)+1;s=s.replace(p.find,p.to!=null?p.to:p.pre+p.add+p.post);}
