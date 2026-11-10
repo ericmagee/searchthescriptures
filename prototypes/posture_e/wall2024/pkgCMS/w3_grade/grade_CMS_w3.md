@@ -25,3 +25,13 @@ Written 09:42 CST 2026-11-10 by W3. Labels: labels_CMS_w3.md (commit e42c9e4c, b
 
 ## Before the write
 The builder's own condition stands: not posted for write until pkgR1 (live s107) has two clean runs. A write of pkgRAC or any other package first means pkgCMS is rebuilt on that live version and the changed nodes are compared again.
+
+## REGRADE on live s115 (parent_s115_CMS.json, sha256 9cda4e7360290666; W1 Wall 4454), 2026-11-10: PASS
+Same labels G1 to G9 (committed before the first grade); runner w3_CMS_s115.cjs, output w3_CMS_s115_out.txt. All measured by me.
+- G1 418 nodes; only Code text differs from the live fetch-back; connections and all other keys equal.
+- G2 syntax tree equal, live against stripped, 131 of 131 changed plain nodes (2 more plain nodes hold no comment and are unchanged: 133).
+- G3 43 library-read nodes: sources rebuilt from the new Shared Library byte-equal to live in 31, tree-equal in 12; no stub's own text changed. Shared Library 922,823 to 857,737 = -65,086.
+- G4 no comment left. G6 no changed node reads code text or calls toString on a function. No live plain node holds a template literal with a blank line or trailing space before a line break (the one form my plant showed the strip function alters).
+- G7 size: all Code text 3,849,937 to 3,237,961 = -611,976; plain nodes -546,890. Equal to the builder's figures. Prompt 0 (every string equal by G2).
+- G8 Close Enforcer Build byte-equal on 40 of 40 stored debates; Close Enforcer Record on 22 of 22 stored replies.
+- Limit, as the builder states: 35 changed nodes have no saved run and rest on tree equality alone. Not shown by anyone: a live run.
