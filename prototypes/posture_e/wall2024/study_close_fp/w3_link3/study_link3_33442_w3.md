@@ -29,3 +29,14 @@ So the control shows the enforcer reads withdrawals broadly; it does not test th
 ## Recommendation
 Countermeasure 1. A text fix is not worth proposing now: the reading is defensible on the words, it appears in 2 of 6 sends on one debate, and the one-word fix has a risk I cannot size without calls.
 What is open is not a design matter but the reach of the operator's contradiction rule: when a debater restates a link narrower in an earlier round without naming what was left out, and states it wider in closing, is that a contradiction? Under his words ("you can't withdraw after you made the contradiction ... you're caught") I cannot settle it from the text. If the coordinator thinks it worth his time, that single question is the ask; until then I grade such a line as doubtful and say so in the run grade.
+
+
+## RULING (ASK 20, option 1)
+
+The operator approved the coordinator's recommendations on 2026-11-10 (project chat message cmsg_017ZQamDMHrS6fqMHnQDVo58FQVh35KaR89YtUmWibeEV2, answering the post that recommended ASK 20 option 1): a part left out of a narrowed restatement counts as dropped.
+
+Effect on this study: the defender's round 3 "NARROWED TO: Joseph is father only by supposition" drops "by law"; the closing "by supposition and by law only" reclaims it. The enforcer's CONFIRMED reading of link 3 is TRUE under the ruling. The two lines I had labeled doubtful in the stored readings of 33442 are true; the four sends of six that did not confirm link 3 are misses.
+
+At run grades: when I hand-read closing lines, a part present earlier, absent from a NARROWED TO restatement, and present again in closing is a reclaimed drop (true contradiction), whether or not the enforcer confirmed it.
+
+No build follows from the ruling by itself. Raising the enforcer's catch rate on this form would need prompt text; not measured, not built.
