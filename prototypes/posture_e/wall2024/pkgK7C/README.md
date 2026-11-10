@@ -1,4 +1,6 @@
 # pkgK7C (W2, offline study; NOT for write unless W3 rules the count wrongful and the operator approves)
+
+**Rev 2 (current):** build_K7C2.cjs, parent_s112_K7C2.json, +628 code measured (K-G4 added; K-F left out, side BOTH). Tests: t_rev2_real.cjs (out t_rev2_real_out.txt), t_rev2_p11.cjs, h_rev2_34703.txt; W3 harness with W3_C=parent_s112_K7C2.json.
 Question (Wall 4331): K-G7 raised on a link the engine's confirmed closing contradiction already broke.
 Rule today: K-G7 (DEFENDER) fires on a DEFENDER LINK BROKEN line for Dn when counted_premises_defender does not list premise n. The engine's own recompute after a confirmed closing contradiction marks Dn BROKEN and leaves c unchanged (34703 rows: luna L=5 c=0, terra L=6 c=0, sol L=6 c=0, each with D6 BROKEN by contradiction). So K-G7 asks a judge to count a link the engine does not count.
 Change: k7cc2024(x) true when a K-G7 item's link (DEFENDER: Dn; CHALLENGER: Cm) is in cecBroken2024(); the cure check then reads it CURED ("broken by the engine's confirmed closing contradiction, which no count carries (pkgK7C)") and the K-G8 count expectation leaves its premise out. The cure prompt is unchanged (the item is still asked).
