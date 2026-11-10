@@ -1,0 +1,260 @@
+{
+ "about": "W3 labeled cases for pkgCDR rev 2, labels fixed before the run; W2 run format.",
+ "cases": [
+  {
+   "id": "G1",
+   "adds": [
+    [
+     "cr3",
+     "I drop the wording \"the register stops at Joseph\"."
+    ],
+    [
+     "cr4",
+     "Therefore the register stops at Joseph, and the line ends there."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "Therefore the register stops at Joseph, and the line ends there.",
+   "want": "LISTED",
+   "note": "plain drop, restated inside a longer close"
+  },
+  {
+   "id": "G2",
+   "adds": [
+    [
+     "cr3",
+     "I now abandon the claim that the register of Luke 3 stops at the name of Joseph."
+    ],
+    [
+     "cr4",
+     "The register of Luke 3 stops at the name of Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register of Luke 3 stops at the name of Joseph.",
+   "want": "LISTED",
+   "note": "unquoted claim clause"
+  },
+  {
+   "id": "G3",
+   "adds": [
+    [
+     "cr3",
+     "Nor do I drop the wording \"the register stops at Joseph\"."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "NOT LISTED",
+   "note": "negated by inversion: nor do I drop"
+  },
+  {
+   "id": "G4",
+   "adds": [
+    [
+     "cr3",
+     "If I drop the wording \"the register stops at Joseph\", the chain fails, so I keep it."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "NOT LISTED",
+   "note": "conditional, kept"
+  },
+  {
+   "id": "G5",
+   "adds": [
+    [
+     "cr3",
+     "Should I withdraw the wording \"the register stops at Joseph\"? The rows give no cause."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "NOT LISTED",
+   "note": "question, kept"
+  },
+  {
+   "id": "G6",
+   "adds": [
+    [
+     "cr3",
+     "I drop the limb on Matthew 1:25 alone, but the wording \"the register stops at Joseph\" stands."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "NOT LISTED",
+   "note": "drops one thing, keeps the quoted wording in the same sentence"
+  },
+  {
+   "id": "G7",
+   "adds": [
+    [
+     "cr3",
+     "I withdraw my objection to the reading that the register of Luke 3 stops at the name of Joseph."
+    ],
+    [
+     "cr4",
+     "The register of Luke 3 stops at the name of Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register of Luke 3 stops at the name of Joseph.",
+   "want": "NOT LISTED",
+   "note": "drops an objection to the wording, which is acceptance"
+  },
+  {
+   "id": "G8",
+   "adds": [
+    [
+     "cr3",
+     "I drop the wording \"the register stops at Joseph\"."
+    ],
+    [
+     "cr4",
+     "I do not say that the register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "I do not say that the register stops at Joseph.",
+   "want": "NOT LISTED",
+   "note": "the close disclaims the wording"
+  },
+  {
+   "id": "G9",
+   "adds": [
+    [
+     "cr3",
+     "I drop the wording \"the register stops at Joseph\"."
+    ],
+    [
+     "cr4",
+     "The challenger writes as though the register stops at Joseph were still my claim; it is not."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The challenger writes as though the register stops at Joseph were still my claim; it is not.",
+   "want": "NOT LISTED",
+   "note": "the close reports and denies"
+  },
+  {
+   "id": "G10",
+   "adds": [
+    [
+     "cr3",
+     "I drop the wording \"the register stops at Joseph\"."
+    ],
+    [
+     "cr4",
+     "Whether the register stops at Joseph is not a question my chain needs."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "Whether the register stops at Joseph is not a question my chain needs.",
+   "want": "NOT LISTED",
+   "note": "the close leaves it open"
+  },
+  {
+   "id": "G11",
+   "adds": [
+    [
+     "cr3",
+     "The challenger demands that I withdraw the wording \"the register stops at Joseph\"; I refuse."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "NOT LISTED",
+   "note": "reported demand, refused"
+  },
+  {
+   "id": "G12",
+   "adds": [
+    [
+     "cr3",
+     "I retract only the word \"alone\"; the wording \"the register stops at Joseph\" I keep."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "NOT LISTED",
+   "note": "retracts one word, keeps the wording"
+  },
+  {
+   "id": "G13",
+   "adds": [
+    [
+     "cr3",
+     "I drop the wording \"the register stops at Joseph\" only as a bare statement of [L1]; as an [L4] inference from the rows I keep it."
+    ],
+    [
+     "cr4",
+     "As an [L4] inference from the rows, the register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "As an [L4] inference from the rows, the register stops at Joseph.",
+   "want": "NOT LISTED",
+   "note": "narrowed drop, close restates only what was kept (the 34108 D6 form)"
+  },
+  {
+   "id": "G14",
+   "adds": [
+    [
+     "dr3",
+     "I give up the reading that the cloud of Luke 9:34 is the Spirit himself."
+    ],
+    [
+     "dr4",
+     "The cloud of Luke 9:34 is the Spirit himself, as I said."
+    ]
+   ],
+   "side": "CHALLENGER",
+   "closing": "The cloud of Luke 9:34 is the Spirit himself, as I said.",
+   "want": "LISTED",
+   "note": "challenger"
+  },
+  {
+   "id": "G15",
+   "adds": [
+    [
+     "cr3",
+     "I had meant to withdraw the wording \"the register stops at Joseph\", and I do not."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "NOT LISTED",
+   "note": "intent stated, then refused"
+  }
+ ]
+}
