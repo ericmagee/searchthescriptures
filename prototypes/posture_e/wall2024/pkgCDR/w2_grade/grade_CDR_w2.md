@@ -103,3 +103,31 @@ on the rev 6 labels) reproduce W1's committed outputs exactly.
 Classes for rev 8: (1) any lead-in before the subject (adverb, "On <ref>,", "In this round", "To <verb> ...,"),
 (2) "We" as subject, (3) passive "is withdrawn/dropped", (4) verbs outside the list: set aside, give ... up,
 no longer hold, (5) "not only ... but" before the object (W17).
+
+## rev 8 (commit fe6862c8), standard: no true drop hidden
+
+Rebuild on fetchback_live_s103.json byte-equal to parent_s103_CDR.json. New cases W88-W114 committed before the run (d290d64c).
+`STD7=1 ... run.cjs` -> run_rev8.txt: 90 of 114 as labeled. W1-W87 all pass except three false listings (below).
+
+FAIL. 21 true drops of the side, each restated in the closing round, are not listed.
+
+Opponent rules hide the side's own drop (8):
+- W88 "Since the challenger asks for it, I drop the wording ..."
+- W89 "As the challenger argued, I withdraw the wording ..."
+- W90 "I accept the challenger's row and withdraw the wording ..." (nearest-subject rule: "challenger's" after "I")
+- W91 "The challenger pressed row 4, so I withdraw the wording ..."
+- W111 the same as W88 on the challenger side ("Since the defender asks for it, ...")
+- W93 "The defender drops the wording ..." (the defender speaking of itself) and W112 (challenger side, the same)
+- W92 ("Because he showed the gap, I abandon ...") is listed.
+Strike rule (2): W94 "The wording ... is struck from my case.", W95 "Strike the wording ... from my case."
+Negation after the verb (1): W96 "I drop not the bare statement only but the wording ...".
+Verbs outside the list (5): waive (W97), rescind (W98), discard (W99), concede away (W100), back away from (W101).
+Wording not taken (5): single quotes straight (W102) and curly (W103); "my claim the register ..." with no "that" (W104);
+wording after a colon (W105 "the following wording: ...", W106 "I drop it: ...").
+Closing filter (1): W114, the closing sentence "I grant nothing: the register stops at Joseph." is skipped because it holds
+"grant" (cdrSelf filter on closing sentences, unchanged since rev 1).
+
+Listed as wanted: W92, W107 (fronted that-clause). Controls not listed, as wanted: W108, W109, W110, W113 (opponent's drop,
+demand or strike).
+False listings (cost of the broad reading, not counted toward FAIL under this standard): W24 (drop of another limb, quoted
+wording "stands"), W25 ("I withdraw my objection to the reading that ..."), W33 (drop one quote, "keep" the other).
