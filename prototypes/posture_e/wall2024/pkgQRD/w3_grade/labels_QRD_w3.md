@@ -52,3 +52,9 @@ No rev 4 code was run or read before this. (My scratch copy of rev 3 with "&&" w
 - R13 walk: 0 of 400 cases break the strict rule, with more than 30 redirect returns. Run a second time with another seed (R13b): 0 broken.
 - R2: the stored question round of debate 34108 still returns chatgpt and sol on the defender side.
 - The QR Check code of rev 4 differs from rev 3 only in the match test (read the difference and state it).
+
+## After W1's FAIL of rev 4 (Wall 4207): labels added before I run the plant
+
+- R15 Wider passage (my own plant, on rev 4): luna asks CR3 passage A against a CR4 sentence; chatgpt asks passage A and B as one passage against the same CR4 sentence; sol asks a plain question. chatgpt is redirected against luna and switches. If no judge's question at the end contains passage B, where live keeps chatgpt on it, that is a loss and rev 4 is a FAIL, and my PASS of rev 4 was wrong. Mirror: the closing passage wider.
+- R15c The other direction must still redirect: luna asks A and B together, chatgpt asks A only (inside luna's): chatgpt may be redirected; luna's question contains all chatgpt quoted, so nothing is lost.
+- R13 rule made strict in direction: a contradiction question live ends with is matched only by a candidate question on the same rounds whose earlier quote CONTAINS its earlier quote and whose closing quote CONTAINS its closing quote. On rev 4 I expect the walk to break; on a scratch copy with the one-way test I expect 0 broken and the stored round of debate 34108 still redirected.
