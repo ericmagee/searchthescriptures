@@ -20,3 +20,13 @@ Verdict: FAIL on one false-listing class (a refused drop read as a drop). Everyt
   Cause: `cdrDrop=/\bI\s+(?:now\s+|also\s+|therefore\s+)?(?:drop|withdraw|retract|give\s+up|abandon)\b/i` matches the verb with no check of what follows.
   Proposed fix: add a negative look-ahead after the verb: `(?!\s+(?:nothing|none|no\b|neither|not\b))`.
   Cost of the fault: a listing alone breaks nothing (DeepSeek answers it), but it puts a false contradiction candidate in front of the enforcer whose CONFIRMED breaks a link.
+
+# Regrade: pkgCDR rev 2 (W1, commit 20ab4133): PASS, not for write until the operator answers
+- Rebuild on fetchback_live_s103.json byte-equal to parent_s103_CDR.json; three nodes as in rev 1.
+- cdrDrop now carries (?!\s+(?:nothing|none|no\b|neither|not\b)) after the verb.
+- My cases on rev 2 (run_rev2.txt): 19 of 20. W3, W14, W15, W16 (refused drops) now not listed. W17-W20 added before the run (commit 8117a217):
+  - W18 "I withdraw nothing further; I drop the wording ..." listed (second verb read). W19 "I withdraw now the wording ..." listed. W20 "... nothing else." listed.
+  - MISS W17 "I drop not only the bare statement but the wording "..."" is not listed. Safe direction (a real drop missed, nothing falsely listed); the cost of the look-ahead I proposed. DeepSeek still reads the rounds.
+- W1's cases rerun on rev 2 (w1_run_cases_rev2.txt): 14 OK, 1 MISS (C9, W1's stated label error). 34108 P1, P2 and 34299 J1, J2 as in rev 1.
+- Corpus rerun (corpus_rev2.txt): 39 debates, 2 listings, both on 34108.
+- Log rows unchanged from rev 1; my rev 1 rolled-back insert (5 rows, 0 remain) covers the shape.

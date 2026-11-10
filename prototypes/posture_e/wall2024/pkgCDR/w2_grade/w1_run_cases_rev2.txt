@@ -1,0 +1,37 @@
+34108 as stored: live candidates 0; pkgCDR candidates 2
+   P1 DEFENDER LINK 6 | [CR3] I drop the wording "no biological father" as a bare statement. | [CR4] A descent from David's loins that comes by Mary is the descent the rows state, with no biological father neede
+   P2 DEFENDER LINK 6 | [CR3] I drop the wording "no biological father" as a bare statement. | [CR4] Christ had no biological father.
+OK   C1 want LISTED | Christ had no biological father.
+       listed: 2 | hit P2 [CR3] I drop the wording "no biological father" as a bare statement.
+OK   C2 want LISTED | Matthew 1:25 closes the espousal to any knowing.
+       listed: 3 | hit P1 [CR3] I drop the wording "closes the espousal to any knowing."
+OK   C3 want LISTED | Matthew 1:25 alone spans the espousal.
+       listed: 3 | hit P1 [CR3] I drop the limb that Matthew 1:25 alone spans the espousal, and I rest nothing o
+OK   C4 want LISTED | The sign in Isaiah's day makes the two children one child.
+       listed: 3 | hit P3 [DR3] I drop any wording that makes the two children one child.
+OK   C5 want NOT LISTED | I dropped "no biological father" in [CR3] and keep only the stated limb.
+       listed: 1
+OK   C6 want NOT LISTED | The challenger reads "no biological father" as unproved.
+       listed: 1
+OK   C7 want NOT LISTED | Christ had no father among men by biology.
+       listed: 1
+OK   C8 want NOT LISTED | I grant the word alone is not needed.
+       listed: 2
+MISS C9 want NOT LISTED | (D6 close removed)
+       listed: 1
+OK   R1 want NOT LISTED | [cr3] I drop nothing more: the wording "the register stops at Joseph" stands. + [cr4] The register stops at Joseph.
+       listed: 2
+OK   R2 want LISTED | [cr3] I withdraw nothing else, but I drop the wording "the register stops at Joseph". + [cr4] The register stops at Joseph.
+       listed: 3 | hit P3 I withdraw nothing else, but I drop the wording "the register stops at Joseph".
+OK   R3 want NOT LISTED | [dr3] I abandon none of the claim that the register runs through the fathers of Joseph. + [dr4] The register runs through the fathers of Joseph.
+       listed: 2
+34299 Judge Contradiction Build: live candidates 1; pkgCDR candidates 2
+   J1 DEFENDER | [CR3] I drop the wording "closes the espousal to any knowing." | [CR4] The rows state a not-knowing at each stage, and the knowing the challenger adds is the challenger's  | by the judges' CONTRADICTION lines (chatgpt, sol, luna); also named by the ANTI-CHEAT CHECK
+   J2 DEFENDER | [CR3] Genesis 4:1, Adam knew Eve his wife; and she conceived, and bare Cain: I grant that this is the ordi | [CR4] Genesis 4:1 therefore cannot supply the sequence for Matthew, because Matthew 1:23 sets the virgin a | by the CLOSE-ROUND REVERSAL CHECK served to the judges (ruling 412)
+OK   J-R1 the "ordinary means" pair listed after the panel
+       J2 by the CLOSE-ROUND REVERSAL CHECK served to the judges (ruling 412)
+OK   J-A1 the Luke 1:34 pair listed once, joined with the judges' pair
+       J1 by the judges' CONTRADICTION lines (chatgpt, sol, luna); also named by the ANTI-CHEAT CHECK
+OK   J-0 no other new candidate than J-R1 and J-A1
+       live 1, pkgCDR 2
+14 OK, 1 MISS
