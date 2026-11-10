@@ -68,3 +68,8 @@ The item is listed in sb_not_sent, as pkgECB does. An item that also carries an 
 - Same rule as rev 3; E1.add rewritten shorter (1,586 -> 1,306 characters): shorter comment, one loop over Panel Cure Normalize 1 to 3, one regex for the pkgVPD form and the one-hop parenthesis. Rev 3's text kept as patches/E1.add.rev3 and parent_s112_EAD_rev3a.json.
 - Size: +1,874 code measured against s112 (rev 3 +2,162). Joint +2,502 (1,874 + 628).
 - Every test output is identical to rev 3: W3 g5, g8, g9; W2 plants and node replay; my plants (8 OK) and node replay; on the joint, 42 of 42 sources equal to the independent build and pkgK7C's real-run output identical to rev 2 alone.
+
+## Rebased on s113 (live 71898965 = s112 + pkgK7C rev 2)
+- fetchback_live_s113.json stripped: 42 of 42 sources equal the pkgK7C rev 2 parent used for the joint.
+- parent_s113_EAD.json: +1,875 code measured against s113 (packing gives 1 more than on s112); Shared Library only; prompt none.
+- Its 42 sources equal the graded joint (strip_JX) 42 of 42. Plants 8 OK.
