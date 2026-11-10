@@ -1,0 +1,60 @@
+#### joint_GFS_QRD_F3A2s.json
+Second Alternate?: {"run":true,"seats":["luna"],"tried":[],"free":["haiku"],"retry":["anthropic/claude-haiku-5.5"],"why":"round 2 for luna; free: haiku"}
+PLANTED: a card for the alternate's keystone cure item, appended to terra's stored cure reply
+R2 Alternate Merge Seat: haiku SEATED (undefined); seated [{"removed_seat":"luna","alternate_seat":"haiku","alternate_api_model":"anthropic/claude-haiku-5.5"}]
+   haiku KEYSTONE after the recompute: none
+   UNCURED lines: none
+judge enforcer: alternate calls 4; stored calls naming chatgpt: 0,1,2,3,4,5
+R2 Alt Send Back Build: 8 items sent:
+    S1 E-ANS ANSWER CHECK: Luke 1:34 -- [CR3] -- MEANS: "the present tense states her state when the angel s
+    S2 E-ANS ANSWER CHECK: Matthew 1:19 -- [CR4] -- MEANS: "the stated grounds are equity and sparing her th
+    S3 E-ANS ANSWER CHECK: Isaiah 8:3 -- [DR3] -- MEANS: "the woman is called a prophetess and the child is 
+    S4 E-ANS ANSWER CHECK: 1 John 5:1 -- [DR3] -- MEANS: "it is said of a believer already living, a regener
+    S5 E-COL D6 vs C5 (Romans 1:3): DEFENDER LINK BROKEN -- [AUDIT: LINK 6 BROKEN BY A CONFIRMED CLOSING CON
+    S6 E-COL D6 vs C6 (Luke 3:23): DEFENDER LINK BROKEN -- [AUDIT: LINK 6 BROKEN BY A CONFIRMED CLOSING CONT
+    S7 E-HOLD D2 vs C1 (Matthew 1:19): UNDERDETERMINED -- The narrowed link states the finding and the angel'
+    S8 E-HOLD D4 vs C2 (Luke 1:36): UNDERDETERMINED -- Both sides accept Elisabeth's conception and God's pow
+   WITHHELD (pkgECB): 0 [] | link 6 or KEYSTONE items SENT: 2
+   send-back answers: terra's stored answers mapped {"S1":"S1","S2":"S5","S3":"S6","S4":null,"S5":"S7","S6":"S8"}; PLANTED KEEP for S2,S3,S4
+R2 Alt Send Back Record: tally {"KEEP":3,"CHANGE":5,"NO ANSWER":0}; rows not CURED: ["E-ANS ANSWER CHECK Matthew 1:19 [CR4] UNCURED :: SEND-BACK KEEP -- I keep the line; the rows it quotes are in the record. | ENFORCER: (right: MISSES): The answer only restates 'The challenger's \"till\" bounds t","E-ANS ANSWER CHECK Isaiah 8:3 [DR3] UNCURED :: SEND-BACK KEEP -- I keep the line; the rows it quotes are in the record. | ENFORCER: (right: MISSES): The bare grant 'I grant this is regeneration' shows no fit","E-ANS ANSWER CHECK 1 John 5:1 [DR3] UNCURED :: SEND-BACK KEEP -- I keep the line; the rows it quotes are in the record. | ENFORCER: (right: MISSES): The answer only asserts 'The begetting \"of the Holy Ghost\""]
+PLANTED: reread call with an empty reply
+R2 Alt Gate Build: [{"skip":true,"items":[]}]
+R2 Alt Gate Record: seats undefined; gate rows: []
+R2 Alternate Merge tried: [{"alt":"haiku","result":"SEATED","why":""}]
+Alternate Merge: seated [{"removed_seat":"luna","alternate_seat":"haiku","alternate_api_model":"anthropic/claude-haiku-5.5"}]; removed [{"removed_rules":["COLLISION GRADE UNCURED x1","E-GATE CONTRADICTION x1"],"removed_rules_total":2,"removed_rules_match":true,"seat":"luna","api_model":"openai/gpt-6-luna","verdict_tag":"BROKEN","defe
+WRITTEN ROW haiku (anthropic/claude-haiku-5.5): KEYSTONE: D6 -- STANDS -- The declared conclusion that Christ had no biological father | tag BROKEN | drv_uncured 0
+     RESULT: CHALLENGER WINS -- recomputed after the cure from the cured lines (CLOSE-CONTRADICTION D6 vs C5 (UNDERDETERMINED to DEFENDER LINK BROKEN); CLOSE-CONTRADICTION D6 vs C6 (UNDERDETERMINED to DEFENDER LINK BROKEN)): BROKEN-1, CHALLENGE STANDING SELF-SUPPORTED, no collision line stands graded CHA
+     D6 vs C5 (Romans 1:3): DEFENDER LINK BROKEN -- [AUDIT: LINK 6 BROKEN BY A CONFIRMED CLOSING CONTRADICTION -- DEFENDER -- EARLIER [CR3] \"I drop the wording 'no biological father' as a bare statement. I rest it on these rows.\" -- CLOSING [CR4] \"Christ had no biological father.\"]
+     D6 vs C6 (Luke 3:23): DEFENDER LINK BROKEN -- [AUDIT: LINK 6 BROKEN BY A CONFIRMED CLOSING CONTRADICTION -- DEFENDER -- EARLIER [CR3] \"I drop the wording 'no biological father' as a bare statement. I rest it on these rows.\" -- CLOSING [CR4] \"Christ had no biological father.\"]
+     [AUDIT v21: DEBATE RULE VIOLATION REPORT -- SEAT: haiku; ITEM: keystone; RULE: K-RUL; RESULT: UNCURED; WHY: TRIAL rule (recorded and answered; it removes no seat): the NAMED BY line quotes nothing; LINE: deciding ruling keystone: the RULE quote differs from your accepted line for Commitment 2 ("I su
+WRITTEN ROW chatgpt (openai/gpt-6.1-terra): KEYSTONE: D6 -- STANDS -- The declared conclusion that Christ had no biological father | tag BROKEN | drv_uncured 0
+WRITTEN ROW sol (openai/gpt-6.1-sol): KEYSTONE: D6 -- STANDS -- The conclusion that Christ had no biological father remains | tag BROKEN | drv_uncured 0
+#### joint_plus_KSR_ECB_rev3.json
+Second Alternate?: {"run":true,"seats":["luna"],"tried":[],"free":["haiku"],"retry":["anthropic/claude-haiku-5.5"],"why":"round 2 for luna; free: haiku"}
+PLANTED: a card for the alternate's keystone cure item, appended to terra's stored cure reply
+R2 Alternate Merge Seat: haiku SEATED (undefined); seated [{"removed_seat":"luna","alternate_seat":"haiku","alternate_api_model":"anthropic/claude-haiku-5.5"}]
+   haiku KEYSTONE after the recompute: none
+   UNCURED lines: none
+judge enforcer: alternate calls 4; stored calls naming chatgpt: 0,1,2,3,4,5
+R2 Alt Send Back Build: 6 items sent:
+    S1 E-ANS ANSWER CHECK: Luke 1:34 -- [CR3] -- MEANS: "the present tense states her state when the angel s
+    S2 E-ANS ANSWER CHECK: Matthew 1:19 -- [CR4] -- MEANS: "the stated grounds are equity and sparing her th
+    S3 E-ANS ANSWER CHECK: Isaiah 8:3 -- [DR3] -- MEANS: "the woman is called a prophetess and the child is 
+    S4 E-ANS ANSWER CHECK: 1 John 5:1 -- [DR3] -- MEANS: "it is said of a believer already living, a regener
+    S5 E-HOLD D2 vs C1 (Matthew 1:19): UNDERDETERMINED -- The narrowed link states the finding and the angel'
+    S6 E-HOLD D4 vs C2 (Luke 1:36): UNDERDETERMINED -- Both sides accept Elisabeth's conception and God's pow
+   WITHHELD (pkgECB): 2 ["E-COL COLLISION D6 vs C5","E-COL COLLISION D6 vs C6"] | link 6 or KEYSTONE items SENT: 0
+   send-back answers: terra's stored answers mapped {"S1":"S1","S2":null,"S3":null,"S4":null,"S5":"S5","S6":"S6"}; PLANTED KEEP for S2,S3,S4
+R2 Alt Send Back Record: tally {"KEEP":3,"CHANGE":3,"NO ANSWER":0}; rows not CURED: ["E-ANS ANSWER CHECK Matthew 1:19 [CR4] UNCURED :: SEND-BACK KEEP -- I keep the line; the rows it quotes are in the record. | ENFORCER: (right: MISSES): The answer only restates 'The challenger's \"till\" bounds t","E-ANS ANSWER CHECK Isaiah 8:3 [DR3] UNCURED :: SEND-BACK KEEP -- I keep the line; the rows it quotes are in the record. | ENFORCER: (right: MISSES): The bare grant 'I grant this is regeneration' shows no fit","E-ANS ANSWER CHECK 1 John 5:1 [DR3] UNCURED :: SEND-BACK KEEP -- I keep the line; the rows it quotes are in the record. | ENFORCER: (right: MISSES): The answer only asserts 'The begetting \"of the Holy Ghost\""]
+PLANTED: reread call with an empty reply
+R2 Alt Gate Build: [{"skip":true,"items":[]}]
+R2 Alt Gate Record: seats undefined; gate rows: []
+R2 Alternate Merge tried: [{"alt":"haiku","result":"SEATED","why":""}]
+Alternate Merge: seated [{"removed_seat":"luna","alternate_seat":"haiku","alternate_api_model":"anthropic/claude-haiku-5.5"}]; removed [{"removed_rules":["COLLISION GRADE UNCURED x1","E-GATE CONTRADICTION x1"],"removed_rules_total":2,"removed_rules_match":true,"seat":"luna","api_model":"openai/gpt-6-luna","verdict_tag":"BROKEN","defe
+WRITTEN ROW haiku (anthropic/claude-haiku-5.5): KEYSTONE: D6 -- BROKEN -- LINK 6 BROKEN BY A CONFIRMED CLOSING CONTRADICTION | tag BROKEN | drv_uncured 0
+     RESULT: CHALLENGER WINS -- recomputed after the cure from the cured lines (CLOSE-CONTRADICTION D6 vs C5 (UNDERDETERMINED to DEFENDER LINK BROKEN); CLOSE-CONTRADICTION D6 vs C6 (UNDERDETERMINED to DEFENDER LINK BROKEN); KEYSTONE D6 (STANDS to BROKEN)): BROKEN-1, CHALLENGE STANDING SELF-SUPPORTED, no 
+     D6 vs C5 (Romans 1:3): DEFENDER LINK BROKEN -- [AUDIT: LINK 6 BROKEN BY A CONFIRMED CLOSING CONTRADICTION -- DEFENDER -- EARLIER [CR3] \"I drop the wording 'no biological father' as a bare statement. I rest it on these rows.\" -- CLOSING [CR4] \"Christ had no biological father.\"]
+     D6 vs C6 (Luke 3:23): DEFENDER LINK BROKEN -- [AUDIT: LINK 6 BROKEN BY A CONFIRMED CLOSING CONTRADICTION -- DEFENDER -- EARLIER [CR3] \"I drop the wording 'no biological father' as a bare statement. I rest it on these rows.\" -- CLOSING [CR4] \"Christ had no biological father.\"]
+     [AUDIT v21: DEBATE RULE VIOLATION REPORT -- SEAT: haiku; ITEM: keystone; RULE: K-RUL; RESULT: UNCURED; WHY: TRIAL rule (recorded and answered; it removes no seat): the NAMED BY line quotes nothing; LINE: deciding ruling keystone: the RULE quote differs from your accepted line for Commitment 2 ("I su
+WRITTEN ROW chatgpt (openai/gpt-6.1-terra): KEYSTONE: D6 -- STANDS -- The declared conclusion that Christ had no biological father | tag BROKEN | drv_uncured 0
+WRITTEN ROW sol (openai/gpt-6.1-sol): KEYSTONE: D6 -- STANDS -- The conclusion that Christ had no biological father remains | tag BROKEN | drv_uncured 0

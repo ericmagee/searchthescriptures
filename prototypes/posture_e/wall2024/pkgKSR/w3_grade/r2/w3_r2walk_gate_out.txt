@@ -1,0 +1,42 @@
+#### joint_GFS_QRD_F3A2s.json | GATE plant on
+R2 Alternate Merge Seat: haiku SEATED (undefined); seated [{"removed_seat":"luna","alternate_seat":"haiku","alternate_api_model":"anthropic/claude-haiku-5.5"}]
+R2 Alt Send Back Build: 8 items sent:
+   WITHHELD (pkgECB): 0 [] | link 6 or KEYSTONE items SENT: 2
+   send-back answers: terra's stored answers mapped {"S1":"S1","S2":"S5","S3":"S6","S4":null,"S5":"S7","S6":"S8"}; PLANTED KEEP for S2,S3,S4
+   PLANTED: the answer to S7 (D2 vs C1) is an ANSWER CHECK line, not a collision line
+R2 Alt Send Back Record: tally {"KEEP":3,"CHANGE":5,"NO ANSWER":0}; rows not CURED: ["E-ANS ANSWER CHECK Matthew 1:19 [CR4] UNCURED :: SEND-BACK KEEP -- I keep the line; the rows it quotes are in the record. | ENFORCER: (right: MISSES): The answer only restates 'The challenger's \"till\" bounds t","E-ANS ANSWER CHECK Isaiah 8:3 [DR3] UNCURED :: SEND-BACK KEEP -- I keep the line; the rows it quotes are in the record. | ENFORCER: (right: MISSES): The bare grant 'I grant this is regeneration' shows no fit","E-ANS ANSWER CHECK 1 John 5:1 [DR3] UNCURED :: SEND-BACK KEEP -- I keep the line; the rows it quotes are in the record. | ENFORCER: (right: MISSES): The answer only asserts 'The begetting \"of the Holy Ghost\"","E-HOLD COLLISION D2 vs C1 UNCURED :: SEND-BACK CHANGE TO: ANSWER CHECK: Matthew 1:19 -- [CR3] -- MEANS: \"the stated grounds are equity and sparing her\" -- ANSWER: \"The matter he must deal with is a"]
+PLANTED: reread call with an empty reply
+R2 Alt Gate Build: [{"skip":false,"seat":"haiku","items":["G1 NOT APPLIED E-APPLY S7 :: the change has no line label and would replace the whole D2 VS C1 line: write the whole line with its label (p"]}]
+PLANTED: gate answer for each item: terra's stored change of D2 vs C1 (a collision line for the same pair)
+R2 Alt Gate Record: seats [{"seat":"haiku","items":1,"cured":1,"uncured_counted":0,"fresh":0,"error":null}]; gate rows: ["G1 NOT APPLIED (E-APPLY S7) | CURED | NE: the change has no line label and would replace the whole D2 VS C1 line: write the whole line with its label (pkgSGA) | the gate change was applied"]
+R2 Alternate Merge tried: [{"alt":"haiku","result":"NOT SEATED","why":"unseated after its enforcer send-back and gate: 1 uncured item(s)"}]
+Alternate Merge: seated []; removed []
+WRITTEN ROW luna (openai/gpt-6-luna): KEYSTONE: D6 -- STANDS -- derived by the engine from the collision grades of D6 (none | tag BROKEN | drv_uncured 2
+WRITTEN ROW chatgpt (openai/gpt-6.1-terra): KEYSTONE: D6 -- STANDS -- The declared conclusion that Christ had no biological father | tag BROKEN | drv_uncured 0
+WRITTEN ROW sol (openai/gpt-6.1-sol): KEYSTONE: D6 -- STANDS -- The conclusion that Christ had no biological father remains | tag BROKEN | drv_uncured 0
+ALTERNATE TEXT lines with UNCURED or "counted": 
+     [AUDIT v21: DEBATE RULE VIOLATION REPORT -- SEAT: haiku; ITEM: keystone; RULE: K-RUL; RESULT: UNCURED; WHY: TRIAL rule (recorded and answered; it removes no seat): the NAMED BY line quotes nothing; LINE: deciding ruling keystone: the RULE quote differs from your accepted line for Commitment 2 ("I supply no missing step for either side, and an inference counts only when its two lower layers are shown in the record"); 
+     [AUDIT v42: COLLISION GRADE UNCURED (pkgUND) -- SEAT: haiku; ITEMS: S7 (E-HOLD on UNDERDETERMINED COLLISION D2 vs C1: regraded MEETS; no [L1]); counted in drv_uncured. REVIEW THIS ROW.]
+     [AUDIT v38: E-GATE -- SEAT: haiku; G1 NOT APPLIED (E-APPLY S7); ANSWER: CHANGE; CURED: the gate change was applied]
+     [AUDIT v37: SEND-BACK ITEM -- SEAT: haiku; S7; NOT APPLIED: the change has no line label and would replace the whole D2 VS C1 line: write the whole line with its label (pkgSGA); LINE: ANSWER CHECK: Matthew 1:19 -- (CR3) -- MEANS: "the stated grounds are equity and sparing her" -- ANSWER: "The matter he must deal with is a pregnancy found before any coming together of the pair." -- MEETS -- the answer addresses the st
+#### joint_plus_KSR_ECB_rev3.json | GATE plant on
+R2 Alternate Merge Seat: haiku SEATED (undefined); seated [{"removed_seat":"luna","alternate_seat":"haiku","alternate_api_model":"anthropic/claude-haiku-5.5"}]
+R2 Alt Send Back Build: 6 items sent:
+   WITHHELD (pkgECB): 2 ["E-COL COLLISION D6 vs C5","E-COL COLLISION D6 vs C6"] | link 6 or KEYSTONE items SENT: 0
+   send-back answers: terra's stored answers mapped {"S1":"S1","S2":null,"S3":null,"S4":null,"S5":"S5","S6":"S6"}; PLANTED KEEP for S2,S3,S4
+   PLANTED: the answer to S5 (D2 vs C1) is an ANSWER CHECK line, not a collision line
+R2 Alt Send Back Record: tally {"KEEP":3,"CHANGE":3,"NO ANSWER":0}; rows not CURED: ["E-ANS ANSWER CHECK Matthew 1:19 [CR4] UNCURED :: SEND-BACK KEEP -- I keep the line; the rows it quotes are in the record. | ENFORCER: (right: MISSES): The answer only restates 'The challenger's \"till\" bounds t","E-ANS ANSWER CHECK Isaiah 8:3 [DR3] UNCURED :: SEND-BACK KEEP -- I keep the line; the rows it quotes are in the record. | ENFORCER: (right: MISSES): The bare grant 'I grant this is regeneration' shows no fit","E-ANS ANSWER CHECK 1 John 5:1 [DR3] UNCURED :: SEND-BACK KEEP -- I keep the line; the rows it quotes are in the record. | ENFORCER: (right: MISSES): The answer only asserts 'The begetting \"of the Holy Ghost\"","E-HOLD COLLISION D2 vs C1 UNCURED :: SEND-BACK CHANGE TO: ANSWER CHECK: Matthew 1:19 -- [CR3] -- MEANS: \"the stated grounds are equity and sparing her\" -- ANSWER: \"The matter he must deal with is a"]
+PLANTED: reread call with an empty reply
+R2 Alt Gate Build: [{"skip":false,"seat":"haiku","items":["G1 NOT APPLIED E-APPLY S5 :: the change has no line label and would replace the whole D2 VS C1 line: write the whole line with its label (p"]}]
+PLANTED: gate answer for each item: terra's stored change of D2 vs C1 (a collision line for the same pair)
+R2 Alt Gate Record: seats [{"seat":"haiku","items":1,"cured":1,"uncured_counted":0,"fresh":0,"error":null}]; gate rows: ["G1 NOT APPLIED (E-APPLY S5) | CURED | NE: the change has no line label and would replace the whole D2 VS C1 line: write the whole line with its label (pkgSGA) | the gate change was applied"]
+R2 Alternate Merge tried: [{"alt":"haiku","result":"NOT SEATED","why":"unseated after its enforcer send-back and gate: 1 uncured item(s)"}]
+Alternate Merge: seated []; removed []
+WRITTEN ROW luna (openai/gpt-6-luna): KEYSTONE: D6 -- STANDS -- derived by the engine from the collision grades of D6 (none | tag BROKEN | drv_uncured 2
+WRITTEN ROW chatgpt (openai/gpt-6.1-terra): KEYSTONE: D6 -- STANDS -- The declared conclusion that Christ had no biological father | tag BROKEN | drv_uncured 0
+WRITTEN ROW sol (openai/gpt-6.1-sol): KEYSTONE: D6 -- STANDS -- The conclusion that Christ had no biological father remains | tag BROKEN | drv_uncured 0
+ALTERNATE TEXT lines with UNCURED or "counted": 
+     [AUDIT v21: DEBATE RULE VIOLATION REPORT -- SEAT: haiku; ITEM: keystone; RULE: K-RUL; RESULT: UNCURED; WHY: TRIAL rule (recorded and answered; it removes no seat): the NAMED BY line quotes nothing; LINE: deciding ruling keystone: the RULE quote differs from your accepted line for Commitment 2 ("I supply no missing step for either side, and an inference counts only when its two lower layers are shown in the record"); 
+     [AUDIT v42: COLLISION GRADE UNCURED (pkgUND) -- SEAT: haiku; ITEMS: S5 (E-HOLD on UNDERDETERMINED COLLISION D2 vs C1: regraded MEETS; no [L1]); counted in drv_uncured. REVIEW THIS ROW.]
+     [AUDIT v38: E-GATE -- SEAT: haiku; G1 NOT APPLIED (E-APPLY S5); ANSWER: CHANGE; CURED: the gate change was applied]
+     [AUDIT v37: SEND-BACK ITEM -- SEAT: haiku; S5; NOT APPLIED: the change has no line label and would replace the whole D2 VS C1 line: write the whole line with its label (pkgSGA); LINE: ANSWER CHECK: Matthew 1:19 -- (CR3) -- MEANS: "the stated grounds are equity and sparing her" -- ANSWER: "The matter he must deal with is a pregnancy found before any coming together of the pair." -- MEETS -- the answer addresses the st

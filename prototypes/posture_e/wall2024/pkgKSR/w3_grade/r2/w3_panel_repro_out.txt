@@ -1,0 +1,38 @@
+== LIVE | CONTROL (terra's stored answer at the send-back)
+   gate seats: [{"seat":"luna","items":5,"cured":4,"uncured_counted":1,"fresh":2,"error":null}] | und_counted: [{"seat":"luna","items":["S12 (E-UNG COLLISION D3 (pressed: [DR2] premise 3): the CHANGE TO has no graded D3 vs C<j> line)"]}]
+   gate rows terra: []
+   written rows: luna u2, chatgpt u0, sol u0
+   terra final D2 vs C1 line: D2 vs C1 (Matthew 1:19): UNDERDETERMINED -- [CR3] and [CR4] answer the press. -- GROUND: [L1] Matthew 1:19 \"being a just man, and not willing to make her a p
+== LIVE | PLANT (refused at the send-back, cured at the gate)
+   gate seats: [{"seat":"luna","items":5,"cured":4,"uncured_counted":1,"fresh":2,"error":null},{"seat":"chatgpt","items":1,"cured":1,"uncured_counted":0,"fresh":0,"error":null}] | und_counted: [{"seat":"luna","items":["S12 (E-UNG COLLISION D3 (pressed: [DR2] premise 3): the CHANGE TO has no graded D3 vs C<j> line)"]},{"seat":"chatgpt","items":["S5 (E-HOLD on UNDERDETERMINED COLLISION D2 vs C1 (UNDERDETERMINED; pkgUNA
+   gate rows terra: ["G1 NOT APPLIED (E-APPLY S5) | CURED"]
+   written rows: luna u2, chatgpt u1, sol u0
+   terra final D2 vs C1 line: D2 vs C1 (Matthew 1:19): UNDERDETERMINED -- [CR3] and [CR4] answer the press. -- GROUND: [L1] Matthew 1:19 \"being a just man, and not willing to make her a p
+   [AUDIT v42: COLLISION GRADE UNCURED (pkgUND) -- SEAT: chatgpt; ITEMS: S5 (E-HOLD on UNDERDETERMINED COLLISION D2 vs C1 (UNDERDETERMINED; pkgUNA): regraded MEETS; no [L1]); counted in drv_uncured. REVIEW THIS ROW.]
+   [AUDIT v21: ALTERNATE TRIED -- SEAT: chatgpt; ALTERNATE: none; MODEL: none; RESULT: NOT SEATED; WHY: no pool model passes the guards: haiku G4: anthropic/claude-haiku-5.5 is already offered to an earlier removed seat; REMOVED FOR: drv_uncured 1: COLLISION GRAD
+== luna, stored replies, LIVE: drv_uncured 2
+   [AUDIT v42: COLLISION GRADE UNCURED (pkgUND) -- SEAT: luna; ITEMS: S12 (E-UNG COLLISION D3 (pressed: [DR2] premise 3): the CHANGE TO has no graded D3 vs C<j> line); counted in drv_uncured. REVIEW THIS ROW.]
+   [AUDIT v38: E-GATE -- SEAT: luna; G1 NOT APPLIED (E-APPLY S10); ANSWER: CHANGE; CURED: the gate change was applied]
+   [AUDIT v38: E-GATE -- SEAT: luna; G2 NOT APPLIED (E-APPLY S14); ANSWER: CHANGE; CURED: the gate change was applied]
+   [AUDIT v38: E-GATE -- SEAT: luna; G3 CONTRADICTION (E-GATE M); ANSWER: CHANGE; CURED: the gate change was applied and the item is no longer raised]
+   [AUDIT v38: E-GATE -- SEAT: luna; G4 CONTRADICTION (E-GATE M); ANSWER: CHANGE; CURED: the gate change was applied and the item is no longer raised]
+   [AUDIT v38: E-GATE -- SEAT: luna; G5 CONTRADICTION (E-GATE M); ANSWER: CHANGE; UNCURED: the gate change raised a new LIVE item: RULE K-G4 -- DEBATE RULE VIOLATION (K-G4) -- D4 vs C2 DEFENDER LINK BROKEN counts a witness as unanswered; the rule counts it only with the quoted pressing sentence and its round, and only for a verse a
+== parent_s110_GFS.json | CONTROL (terra's stored answer at the send-back)
+   gate seats: [{"seat":"luna","items":5,"cured":5,"uncured_counted":0,"fresh":0,"error":null}] | und_counted: [{"seat":"luna","items":["S12 (E-UNG COLLISION D3 (pressed: [DR2] premise 3): the CHANGE TO has no graded D3 vs C<j> line)"]}]
+   gate rows terra: []
+   written rows: luna u1, chatgpt u0, sol u0
+   terra final D2 vs C1 line: D2 vs C1 (Matthew 1:19): UNDERDETERMINED -- [CR3] and [CR4] answer the press. -- GROUND: [L1] Matthew 1:19 \"being a just man, and not willing to make her a p
+== parent_s110_GFS.json | PLANT (refused at the send-back, cured at the gate)
+   gate seats: [{"seat":"luna","items":5,"cured":5,"uncured_counted":0,"fresh":0,"error":null},{"seat":"chatgpt","items":1,"cured":1,"uncured_counted":0,"fresh":0,"error":null}] | und_counted: [{"seat":"luna","items":["S12 (E-UNG COLLISION D3 (pressed: [DR2] premise 3): the CHANGE TO has no graded D3 vs C<j> line)"]},{"seat":"chatgpt","items":["S5 (E-HOLD on UNDERDETERMINED COLLISION D2 vs C1 (UNDERDETERMINED; pkgUNA
+   gate rows terra: ["G1 NOT APPLIED (E-APPLY S5) | CURED"]
+   written rows: luna u1, chatgpt u1, sol u0
+   terra final D2 vs C1 line: D2 vs C1 (Matthew 1:19): UNDERDETERMINED -- [CR3] and [CR4] answer the press. -- GROUND: [L1] Matthew 1:19 \"being a just man, and not willing to make her a p
+   [AUDIT v42: COLLISION GRADE UNCURED (pkgUND) -- SEAT: chatgpt; ITEMS: S5 (E-HOLD on UNDERDETERMINED COLLISION D2 vs C1 (UNDERDETERMINED; pkgUNA): regraded MEETS; no [L1]); counted in drv_uncured. REVIEW THIS ROW.]
+   [AUDIT v21: ALTERNATE TRIED -- SEAT: chatgpt; ALTERNATE: none; MODEL: none; RESULT: NOT SEATED; WHY: no pool model passes the guards: haiku G4: anthropic/claude-haiku-5.5 is already offered to an earlier removed seat; REMOVED FOR: drv_uncured 1: COLLISION GRAD
+== luna, stored replies, parent_s110_GFS.json: drv_uncured 1
+   [AUDIT v42: COLLISION GRADE UNCURED (pkgUND) -- SEAT: luna; ITEMS: S12 (E-UNG COLLISION D3 (pressed: [DR2] premise 3): the CHANGE TO has no graded D3 vs C<j> line); counted in drv_uncured. REVIEW THIS ROW.]
+   [AUDIT v38: E-GATE -- SEAT: luna; G1 NOT APPLIED (E-APPLY S10); ANSWER: CHANGE; CURED: the gate change was applied]
+   [AUDIT v38: E-GATE -- SEAT: luna; G2 NOT APPLIED (E-APPLY S14); ANSWER: CHANGE; CURED: the gate change was applied]
+   [AUDIT v38: E-GATE -- SEAT: luna; G3 CONTRADICTION (E-GATE M); ANSWER: CHANGE; CURED: the gate change was applied and the item is no longer raised]
+   [AUDIT v38: E-GATE -- SEAT: luna; G4 CONTRADICTION (E-GATE M); ANSWER: CHANGE; CURED: the gate change was applied and the item is no longer raised]
+   [AUDIT v38: E-GATE -- SEAT: luna; G5 CONTRADICTION (E-GATE M); ANSWER: CHANGE; CURED: the gate change was applied and the item is no longer raised]

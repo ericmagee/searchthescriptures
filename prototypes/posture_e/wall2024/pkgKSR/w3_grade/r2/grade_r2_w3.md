@@ -1,0 +1,19 @@
+# W3 grade: round 2 walks with planted replies (W1 Wall 4259, 4261) and W1's finding. Offline. Labels a3a9e055 before any run.
+Walker: my pkgF3A/w3_grade/r2.cjs. PLANTS ARE MINE: the Haiku reply is terra's stored panel verdict (W1 used sol's) with terra's stored cure, judge enforcer and send-back replies; my own keystone card, KEEP answers for three items with no stored answer, an empty reread reply, and for the gate case my own refused change (an ANSWER CHECK line in place of the D2 vs C1 collision line; W1 used another pair) and a gate answer (terra's stored change of that line). Nothing below is a real Haiku answer.
+
+## RESULT: W1's three round 2 claims CONFIRMED with my plants. W1's finding REPRODUCED on s110 and on the pkgGFC base; it is NOT the item pkgGFC cures.
+1. SEATING without a gate item (w3_r2walk_nogate_out.txt): Haiku SEATED for luna in round 2 on the joint base and on the joint file; written row drv_uncured 0.
+2. WITHHOLD in round 2: joint file (rev 3): R2 Alt Send Back Build sends 6 items, withholds 2 (E-COL D6 vs C5, E-COL D6 vs C6), both listed, no link 6 or KEYSTONE item sent. Joint base: 8 items sent, the two link 6 engine lines among them; terra's stored answers change them and the apply breaks them again.
+3. WRITTEN ROW of the Haiku seat: joint file: "KEYSTONE: D6 -- BROKEN -- LINK 6 BROKEN BY A CONFIRMED CLOSING CONTRADICTION", tag BROKEN, CHALLENGER WINS, both link 6 lines DEFENDER LINK BROKEN with the mark. Joint base: the same, KEYSTONE D6 STANDS.
+4. ROUND 2 GATE WITH AN ITEM (w3_r2walk_gate_out.txt), both files: R2 Alt Gate Build raises G1 NOT APPLIED for the refused change; R2 Alt Gate Record: items 1, cured 1, uncured_counted 0. With rev 3 the two engine lines stay withheld.
+5. After the gate, both files: Haiku NOT SEATED, "unseated after its enforcer send-back and gate: 1 uncured item(s)". The counted item, by its row: "COLLISION GRADE UNCURED (pkgUND) ... (E-HOLD on UNDERDETERMINED COLLISION D2 vs C1: regraded MEETS; no [L1]); counted in drv_uncured". The Haiku written row with a cured gate item is NOT REACHED.
+
+## THE FINDING, reproduced in the PANEL (w3_panel_repro_out.txt), terra's own seat, s110 and the pkgGFC rev s file, same result on both:
+- CONTROL, terra's stored answer given at the send-back ("D2 vs C1 (Matthew 1:19): UNDERDETERMINED -- ... -- GROUND: [L1] ..."): terra drv_uncured 0.
+- PLANT, the refused ANSWER CHECK line at the send-back, then THE SAME LINE as the control given at the gate: gate item G1 CURED, terra's final D2 vs C1 line is identical to the control's, and terra drv_uncured is 1 (COLLISION GRADE UNCURED, pkgUND). In a live run terra would be removed for it.
+- So the same final judgment is counted or not by the step at which the line arrived. The count stands in the send-back record (und_counted) before the gate runs and is the same after the gate. I have not read the code line that would have to revisit it; I state the rows only.
+- It occurs only where the send-back item is an E-HOLD on an UNDERDETERMINED collision (the pkgUND count). luna's two refused changes in 34626 (S10, S14) were on STANDS lines: cured at the gate and NOT counted.
+- NOT the pkgGFC item: pkgGFC reads a FORCED line written inside CHANGE TO at the gate (luna's G5). This item is counted on both s110 and the pkgGFC file.
+- W1's guess about luna: luna's count of 2 on s110 is S12 (E-UNG, D3, "the CHANGE TO has no graded D3 vs C<j> line", a pkgUND count) and G5 (the pkgGFC item). S12 was never a gate item. It is the same count (pkgUND, taken at the send-back) but not the same path (refused, then cured at the gate). Whether luna's later gate change of D3 vs C1 would have answered S12 I have NOT traced.
+- Whether a count taken at the send-back should stand after the gate cures the line is a rule question, not mine to decide.
+NOT REACHED: a real Haiku reply; a real reread reply; the Haiku written row after a cured gate item.
