@@ -99,7 +99,7 @@ UNCURED|refusal|COUNTED, but only in part.|Partial count does not correct the co
 UNCURED|refusal|COUNTED. The grant does not touch D6, so my count stands unchanged.|Keeps the old count: no correction.|ENFORCED
 UNCURED|refusal-later|COUNTED. The defender granted the ordinary means in round 3. But that grant is not a concession of D6.|Later sentence denies the concession.|NOTED
 UNCURED|refusal-later|COUNTED. I missed it. On reflection, I withdraw the count.|Later sentence withdraws the count.|NOTED
-UNCURED|second-line|COUNTED.\nThat is not right.|Refusal after a line break. (W3 ruling 1, Wall 3933: label stays UNCURED; the reader gets only the RESPONSE line, a stated limit)|CURED
+UNCURED|second-line|COUNTED.\nThat is not right.|Refusal after a line break. (W3 ruling 1, Wall 3933: label stays UNCURED; the reader gets only the RESPONSE line, a stated limit) (00:25 CST 11-10: narrow field CURED was the pre-KSL stated limit; with pkgKSL the next line reaches the reader, so ENFORCED)|ENFORCED
 UNCURED|refusal-formatted|**COUNTED** That is not right.|Bold keyword then refusal.|ENFORCED
 UNCURED|refusal-formatted|- COUNTED, but that is wrong.|Bullet then refusal.|ENFORCED
 UNCURED|not-counted|Counted.|Rule asks for COUNTED in capitals (flag: borderline; prior ruling reads it UNCURED).|ENFORCED
@@ -132,7 +132,7 @@ CURED|formatted|- **COUNTED.** The defender conceded D6 in [DR3].|Bullet and bol
 UNCURED|refusal-formatted|**COUNTED.** That is not right.|Bold keyword then refusal.|ENFORCED
 UNCURED|refusal-formatted|> COUNTED. I withdraw the count.|Block quote then withdrawal.|ENFORCED
 UNCURED|refusal-formatted|1. COUNTED, but it is not a concession.|Numbered then refusal.|ENFORCED
-UNCURED|second-line|**COUNTED**\nI do not accept this count.|Bold keyword, refusal on the next line. (W3 ruling 1, Wall 3933: label stays UNCURED; the reader gets only the RESPONSE line, a stated limit)|CURED
+UNCURED|second-line|**COUNTED**\nI do not accept this count.|Bold keyword, refusal on the next line. (W3 ruling 1, Wall 3933: label stays UNCURED; the reader gets only the RESPONSE line, a stated limit) (00:25 CST 11-10: narrow field CURED was the pre-KSL stated limit; with pkgKSL the next line reaches the reader, so ENFORCED)|ENFORCED
 CURED|multi-sentence|COUNTED. The defender granted the ordinary means. The defender then said Genesis 4:1 cannot supply the sequence. That later sentence does not undo the grant.|Negations describe the defender's later sentence.|CURED
 CURED|multi-sentence|COUNTED. I had not counted it. I count it now.|Corrects the count.|CURED
 CURED|multi-sentence|COUNTED. The defender withdrew D6 in round 3. The defender did not restore it.|Withdrawal and negation describe the defender.|CURED
@@ -144,7 +144,7 @@ CURED|multi-sentence|COUNTED. Is it a concession? Yes: the defender granted the 
 UNCURED|refusal-later|COUNTED. The grant is in round 3. It is not a concession of D6, so my count stands.|Later sentence denies the concession.|NOTED
 UNCURED|refusal-later|COUNTED. I have looked again. I do not count it after all.|Later sentence refuses the count.|NOTED
 CURED|refusal-later|COUNTED. Is it a concession? No.|Relabeled CURED by W3 ruling (Wall 3933, label ruling 2): code cannot tell it from "Is the grant a courtesy? No."; under an enforced rule the doubtful answer reads CURED.|CURED
-UNCURED|second-line|COUNTED. The defender granted it.\n\nCorrection: not counted.|Paragraph retracts the count. (W3 ruling 1, Wall 3933: label stays UNCURED; the reader gets only the RESPONSE line, a stated limit)|CURED
+UNCURED|second-line|COUNTED. The defender granted it.\n\nCorrection: not counted.|Paragraph retracts the count. (W3 ruling 1, Wall 3933: label stays UNCURED; the reader gets only the RESPONSE line, a stated limit) (00:25 CST 11-10: narrow field CURED was the pre-KSL stated limit; with pkgKSL the next line reaches the reader, so ENFORCED)|ENFORCED
 UNCURED|refusal-later|COUNTED. The defender granted the ordinary means. I retract my count of it.|Later sentence retracts the count.|NOTED
 UNCURED|refusal-later|COUNTED. The defender granted it. That grant does not apply to D6.|Later sentence denies it applies.|NOTED
 # --- W3 3933: correct answers whose later short sentence points back at the defender's claim (W3's 16, labels by W3), plus W2's own of the class ---

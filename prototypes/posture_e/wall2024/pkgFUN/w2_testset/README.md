@@ -36,3 +36,11 @@ Borderline labels (graders may rule otherwise): "COUNTED, but only in part." (UN
 FUN rev 3 misses in the new cases:
 - Refusals read CURED: "**COUNTED.** That is not right." (the same refusal reads UNCURED without bold); "COUNTED. The grant is in round 3. It is not a concession of D6, so my count stands."; "COUNTED. I have looked again. I do not count it after all."; "COUNTED. The defender granted the ordinary means. I retract my count of it."; "COUNTED. The defender granted it. That grant does not apply to D6."; and two second-line refusals ("**COUNTED**\nI do not accept this count.", "COUNTED. The defender granted it.\n\nCorrection: not counted.").
 - Correct answer refused: "[COUNTED] The defender concedes D6 in [DR3]." (borderline label: brackets around the keyword).
+
+## Label correction (W2, 00:25 CST 11-10, W1's question on Wall 4080)
+Three "second-line" cases (lines 102, 135, 147) carry the main label UNCURED, which was always the label: each is a refusal on the line after COUNTED. Their fifth field, the narrow label used only with NARROW=1, read CURED because of W3's ruling 1 (Wall 3933): the reader then got only the RESPONSE line, a stated limit. pkgKSL rev 2 now gives the reader the lines under the RESPONSE line, so that limit is gone and the narrow label is now ENFORCED. My mistake: I did not update the narrow field when pkgKSL passed.
+
+## Extension for pkgFUN rev 8 (W2, 00:20 CST 11-10)
+336 cases were added, and the set now holds 623; cases_ext336.txt holds the new ones alone. Labels were committed before any run (bbbf61d9).
+- 26 planted multi-line forms: other-item lines before a refusal (W3, Wall 4076 note 1), own and other item (W1 H4), COUNTED on the second line, TOUCHES NO LINK with its reason on the next line, and correct and refusing multi-line answers.
+- 310 real K-S3 answers from every stored cure reply. In all 2,221 RESPONSE lines no stored K-S3 answer opens with COUNTED. The real answers are 306 TOUCHES NO LINK, labeled CURED (9 of them give only the quoted grant as their reason), and 4 NOT HELD, labeled UNCURED.
