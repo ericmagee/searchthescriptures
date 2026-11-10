@@ -1,4 +1,6 @@
-OK   Q8 chain: judge 1 redirected against judge 0; judge 2 (repeats judge 1 only) not redirected
+OK   Q8 chain (rev 5: inside-only rule is transitive, so a judge inside a redirected judge is inside the standing one): judges 1 and 2 redirected against judge 0, never against judge 1
+OK   Q11 W1 4207: luna Y, chatgpt X (wider), sol Z (fault-free here): chatgpt not redirected and keeps X; sol (Z inside X) redirected against chatgpt
+OK   Q11 reverse: X first, Y (narrower) second: Y redirected against X
 OK   Q10 same round 3 sentence against different closing sentences (and same closing against different round 3 sentences): no judge returned
-Q9 walk: 5832 first-question settings, 9704 cases with second replies, 1504 settings with a redirect; live returned a judge for a repeat in 0
+Q9 walk: 5832 first-question settings, 8728 cases with second replies, 1160 settings with a redirect; live returned a judge for a repeat in 0
 ALL OK

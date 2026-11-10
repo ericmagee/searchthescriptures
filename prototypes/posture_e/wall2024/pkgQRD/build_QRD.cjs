@@ -8,7 +8,7 @@ const ed=(name,pairs)=>{const n=node(name);let c=n.parameters.jsCode;const c0=c;
 ed('QR Check',[
  ["return A.map((a,i)=>{const t=qrText(R[i]);const o=qrParse(t);",
   "const __Q=A.map((a,i)=>qrParse(qrText(R[i])));const __rr=r=>String(r||'').toUpperCase().replace(/[\\[\\]\\s]/g,'');const __ct=q=>!!(q&&typeof q==='object'&&String(q.earlier_quote||'').trim()&&!/^(?:none|n\\/a|na|null|-+)$/i.test(String(q.earlier_quote).trim()));\n"+
-  "const __in=(x,y)=>{x=qrNorm(x);y=qrNorm(y);return x.length>=8&&y.length>=8&&(x.includes(y)||y.includes(x));};\n"+
+  "const __in=(o,i)=>{o=qrNorm(o);i=qrNorm(i);return i.length>=8&&o.includes(i);};\n"+
   "const __ok=__Q.map(o=>['defender','challenger'].every(s=>!qrCheck(o&&o[s],s,F).length));const __RD=[];A.forEach((a,i)=>{const r={};for(const side of ['defender','challenger']){const q=__Q[i]&&__Q[i][side];if(!__ct(q)||qrCheck(q,side,F).length)continue;for(let j=0;j<i;j++){const p=__Q[j]&&__Q[j][side];if(__ok[j]&&!__RD[j][side]&&__ct(p)&&__rr(p.round)===__rr(q.round)&&__rr(p.earlier_round)===__rr(q.earlier_round)&&__in(p.earlier_quote,q.earlier_quote)&&__in(p.quote,q.quote)){r[side]={of:A[j].seat,earlier:__rr(q.earlier_round),closing:__rr(q.round)};break;}}}__RD.push(r);});\n"+
   "return A.map((a,i)=>{const t=qrText(R[i]);const o=qrParse(t);"],
  [" const RET='=== QUESTION ROUND (TRIAL): RETURNED ONCE ===\\nYour questions are returned once. Faults: '+bad.join(' | ')+'.\\nReply again with JSON only, in the same form, both questions.';",

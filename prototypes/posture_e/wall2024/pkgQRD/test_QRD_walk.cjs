@@ -1,4 +1,4 @@
-// pkgQRD rev 3 walk (labels Q8, Q9 in labels_QRD.md). Three judges, defender side, every combination of first questions, faults and second replies.
+// pkgQRD rev 5 walk (inside-only rule; check (i) directional) (labels Q8, Q9 in labels_QRD.md). Three judges, defender side, every combination of first questions, faults and second replies.
 const fs=require('fs');const RM=require('../pkgLIB/runner_model.cjs');
 const Ld=f=>{let d=JSON.parse(fs.readFileSync(f,'utf8'));d=Array.isArray(d)?d[0]:d;d=d.data||d;return d.workflow||d;};
 const L=Ld('/mnt/project-files/wall2024/fetchback_live_s110.json'),N=Ld('pkgQRD/parent_s110_QRD.json');const code=(w,n)=>w.nodes.find(x=>x.name===n).parameters.jsCode;
@@ -20,12 +20,14 @@ const NEWQ=CQ(Vq,E3);const BADQ=CQ('words that are not in the closing round at a
 const ask=out('QR Ask');const first=ask.map(i=>{const t=i.json.choices[0].message.content;return JSON.parse(t.slice(t.indexOf('{'),t.lastIndexOf('}')+1));});
 const rep=o=>({json:{choices:[{message:{content:JSON.stringify(o)}}]}});const BADCH={round:'DR3',quote:'a quotation that does not stand anywhere',question:'What does this mean?'};
 const norm=s=>String(s||'').toLowerCase().replace(/\s+/g,' ').trim();const isC=q=>q&&q.earlier_quote;
-const same=(p,q)=>isC(p)&&isC(q)&&p.round===q.round&&p.earlier_round===q.earlier_round&&(norm(p.quote).includes(norm(q.quote))||norm(q.quote).includes(norm(p.quote)))&&(norm(p.earlier_quote).includes(norm(q.earlier_quote))||norm(q.earlier_quote).includes(norm(p.earlier_quote)));
+const same=(p,q)=>isC(p)&&isC(q)&&p.round===q.round&&p.earlier_round===q.earlier_round&&norm(p.quote).includes(norm(q.quote))&&norm(p.earlier_quote).includes(norm(q.earlier_quote));
 let cases=0,fails=[],redirs=0,liveRet=0;
 (async()=>{
  // Q8 chain: judge0 X/E, judge1 Y/E2? need 1 repeats 0, 2 repeats 1 but not 0: 0 = (X,E), 1 = (X? ) use 1=(X,E2) (closing X inside X -> repeats 0), 2=(Yq,E3?) must repeat 1 not 0: 2=(Wq,E2) repeats 1 via earlier E2, not 0 (W not in X, E2 not E)
- {const qs=[CQ(Yq,E),CQ(Xq,E),CQ(Zq,E)];const A=qs.map((q,i)=>rep({...first[i],defender:q}));const b=await go(N,'QR Check',{},A);
-  const ok=b[1].redirect.defender&&b[1].redirect.defender.of===b[0].seat&&!b[2].redirect.defender&&!b[0].redirect.defender;console.log((ok?'OK   ':'FAIL ')+'Q8 chain: judge 1 redirected against judge 0; judge 2 (repeats judge 1 only) not redirected');if(!ok)fails.push('Q8');}
+ {const qs=[CQ(Xq,E),CQ(Yq,E),CQ(Yq,E)];const A=qs.map((q,i)=>rep({...first[i],defender:q}));const b=await go(N,'QR Check',{},A);
+  const ok=!b[0].redirect.defender&&b[1].redirect.defender&&b[1].redirect.defender.of===b[0].seat&&b[2].redirect.defender&&b[2].redirect.defender.of===b[0].seat;console.log((ok?'OK   ':'FAIL ')+'Q8 chain (rev 5: inside-only rule is transitive, so a judge inside a redirected judge is inside the standing one): judges 1 and 2 redirected against judge 0, never against judge 1');if(!ok)fails.push('Q8');}
+ {const qs=[CQ(Yq,E),CQ(Xq,E),CQ(Zq,E)];const A=qs.map((q,i)=>rep({...first[i],defender:q}));const b=await go(N,'QR Check',{},A);const ok=!b[0].redirect.defender&&!b[1].redirect.defender&&b[2].redirect.defender&&b[2].redirect.defender.of===b[1].seat;console.log((ok?'OK   ':'FAIL ')+'Q11 W1 4207: luna Y, chatgpt X (wider), sol Z (fault-free here): chatgpt not redirected and keeps X; sol (Z inside X) redirected against chatgpt');if(!ok)fails.push('Q11');}
+ {const qs=[CQ(Xq,E),CQ(Yq,E),CQ(Wq,E)];const A=qs.map((q,i)=>rep({...first[i],defender:q}));const b=await go(N,'QR Check',{},A);const ok=!b[0].redirect.defender&&b[1].redirect.defender&&b[1].redirect.defender.of===b[0].seat&&!b[2].redirect.defender;console.log((ok?'OK   ':'FAIL ')+'Q11 reverse: X first, Y (narrower) second: Y redirected against X');if(!ok)fails.push('Q11r');}
  {const qs=[CQ(Xq,E),CQ(Wq,E),CQ(Xq,E2)];const A=qs.map((q,i)=>rep({...first[i],defender:q}));const b=await go(N,'QR Check',{},A);const ok=b.every(j=>!j.redirect.defender);console.log((ok?'OK   ':'FAIL ')+'Q10 same round 3 sentence against different closing sentences (and same closing against different round 3 sentences): no judge returned');if(!ok)fails.push('Q10');}
  const idx=[...Array(OPTS.length).keys()];
  for(const a of idx)for(const b2 of idx)for(const c of idx)for(let fm=0;fm<8;fm++){
