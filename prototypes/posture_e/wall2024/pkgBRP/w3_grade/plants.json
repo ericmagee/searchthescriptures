@@ -1,0 +1,14 @@
+[
+ {"id":"P1","text":"Matthew 1:24 names the taking, and Deuteronomy 20:7 sets the taking apart from the betrothal (G43). So 1:18 dates the finding before the taking.","note":"the stored fault (34726 challenger round 4). True book of 1:18: Matthew. Live reads Deuteronomy 1:18. A fix must not read Deuteronomy 1:18; reading Matthew 1:18 or no reference are both to be stated by the builder."},
+ {"id":"P2","text":"Luke 1:27 and 1:34 name her a virgin.","expect":["Luke 1:27","Luke 1:34"],"note":"list with 'and'; must stay"},
+ {"id":"P3","text":"The source is stated (Matthew 1:18, 1:20, Luke 1:35).","expect":["Matthew 1:18","Matthew 1:20","Luke 1:35"],"note":"comma list crossing to a new book; must stay"},
+ {"id":"P4","text":"See Matthew 1:18; 1:25; Luke 2:5.","expect":["Matthew 1:18","Matthew 1:25","Luke 2:5"],"note":"semicolon list"},
+ {"id":"P5","text":"2 Samuel 7:14 says of the seed \"out of thy bowels\" (7:12).","expect":["2 Samuel 7:14","2 Samuel 7:12"],"note":"numbered book, bare reference in brackets; must stay"},
+ {"id":"P6","text":"Numbers 1:18 gives the pedigree by the house of their fathers. Then 1:20 begins the count.","expect":["Numbers 1:18","Numbers 1:20"],"note":"bare after a capitalised non-book word, same book truly meant; a fix that drops every bare reference after a capitalised word loses this one: state it"},
+ {"id":"P7","text":"Matthew 1:18 dates the finding. Deuteronomy 22:23 names the betrothed damsel. The former verse, 1:18, stands first.","note":"true book Matthew, nearest Deuteronomy; no code rule can know; builder to state what is read"},
+ {"id":"P8","text":"The ratio is 3:1 against the reading, as Luke 3:23 shows.","expect":["Luke 3:23"],"note":"a ratio before any book; must not become a reference"},
+ {"id":"P9","text":"John 6:42 names him the son of Joseph. At 10:15 on the clock nothing changes.","note":"a clock time after a reference; live likely reads John 10:15; record what each version reads"},
+ {"id":"P10","text":"Song of Solomon 1:2 and 1:4; 1 John 5:1 and 5:18.","expect":["Song of Solomon 1:2","Song of Solomon 1:4","1 John 5:1","1 John 5:18"],"note":"multi-word and numbered books in lists"},
+ {"id":"P11","text":"Matthew 1:24-25 gives the taking; verses 1:18-19 give the finding.","expect":["Matthew 1:24","Matthew 1:18"],"note":"ranges; record the exact form each version returns"},
+ {"id":"P12","text":"So 1:18 dates the finding.","note":"bare reference with no earlier reference at all; must yield no reference and no error"}
+]
