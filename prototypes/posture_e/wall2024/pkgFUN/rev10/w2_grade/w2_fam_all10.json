@@ -1,0 +1,761 @@
+[
+ {
+  "exp": "CURED",
+  "cat": "f1-own-count-wrong",
+  "ans": "COUNTED. My count is wrong.\nCORRECTED COUNT: DEFENDER 3",
+  "why": "W3 finding 1: the judge agrees and corrects its own count.",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO2_KSL/patched/": "CURED",
+   "pkgLIB/strip_KRO2_KSL_FUN10/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "f1-own-count-wrong",
+  "ans": "COUNTED. My count is not right.\nCORRECTED COUNT: DEFENDER 2",
+  "why": "W2 family of finding 1.",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO2_KSL/patched/": "CURED",
+   "pkgLIB/strip_KRO2_KSL_FUN10/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "f1-own-count-wrong",
+  "ans": "COUNTED. My earlier count is wrong; the grant counts.",
+  "why": "W2 family: own earlier count wrong, count stands.",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO2_KSL/patched/": "CURED",
+   "pkgLIB/strip_KRO2_KSL_FUN10/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "f1-own-count-wrong",
+  "ans": "COUNTED.\nMy count is incorrect.\nCORRECTED COUNT: DEFENDER 4",
+  "why": "W2 family, sentence on its own line.",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO2_KSL/patched/": "CURED",
+   "pkgLIB/strip_KRO2_KSL_FUN10/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "UNCURED",
+  "cat": "f1-own-count-wrong",
+  "ans": "COUNTED. The count is wrong.",
+  "why": "Refusal control: the enforcer's count is wrong.",
+  "nar": "ENFORCED",
+  "read": {
+   "pkgLIB/strip_KRO2_KSL/patched/": "CURED",
+   "pkgLIB/strip_KRO2_KSL_FUN10/patched/": "CURED+N"
+  }
+ },
+ {
+  "exp": "UNCURED",
+  "cat": "f2-yes-counted-subject",
+  "ans": "Yes.\nCOUNTED is wrong.",
+  "why": "W3 finding 2.",
+  "nar": "ENFORCED",
+  "read": {
+   "pkgLIB/strip_KRO2_KSL/patched/": "UNCURED",
+   "pkgLIB/strip_KRO2_KSL_FUN10/patched/": "UNCURED"
+  }
+ },
+ {
+  "exp": "UNCURED",
+  "cat": "f2-yes-counted-subject",
+  "ans": "Agreed.\nCOUNTED cannot be right here.",
+  "why": "W2 family of finding 2.",
+  "nar": "ENFORCED",
+  "read": {
+   "pkgLIB/strip_KRO2_KSL/patched/": "UNCURED",
+   "pkgLIB/strip_KRO2_KSL_FUN10/patched/": "UNCURED"
+  }
+ },
+ {
+  "exp": "UNCURED",
+  "cat": "f2-yes-counted-subject",
+  "ans": "Correct.\nCOUNTED is not the right answer.",
+  "why": "W2 family of finding 2.",
+  "nar": "ENFORCED",
+  "read": {
+   "pkgLIB/strip_KRO2_KSL/patched/": "UNCURED",
+   "pkgLIB/strip_KRO2_KSL_FUN10/patched/": "UNCURED"
+  }
+ },
+ {
+  "exp": "UNCURED",
+  "cat": "f2-yes-counted-subject",
+  "ans": "COUNTED is wrong.",
+  "why": "One-line control.",
+  "nar": "ENFORCED",
+  "read": {
+   "pkgLIB/strip_KRO2_KSL/patched/": "CURED",
+   "pkgLIB/strip_KRO2_KSL_FUN10/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "f2-yes-counted-subject",
+  "ans": "Agreed.\nCOUNTED: the grant in [CR4] concedes the premise.",
+  "why": "Correct answer control.",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO2_KSL/patched/": "UNCURED",
+   "pkgLIB/strip_KRO2_KSL_FUN10/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "UNCURED",
+  "cat": "f3-touches-next-refusal",
+  "ans": "TOUCHES NO LINK:\nI refuse to answer.",
+  "why": "W3 finding 3.",
+  "nar": "ENFORCED",
+  "read": {
+   "pkgLIB/strip_KRO2_KSL/patched/": "UNCURED",
+   "pkgLIB/strip_KRO2_KSL_FUN10/patched/": "UNCURED"
+  }
+ },
+ {
+  "exp": "UNCURED",
+  "cat": "f3-touches-next-refusal",
+  "ans": "TOUCHES NO LINK:\nI will not answer this.",
+  "why": "W2 family of finding 3.",
+  "nar": "ENFORCED",
+  "read": {
+   "pkgLIB/strip_KRO2_KSL/patched/": "UNCURED",
+   "pkgLIB/strip_KRO2_KSL_FUN10/patched/": "UNCURED"
+  }
+ },
+ {
+  "exp": "UNCURED",
+  "cat": "f3-touches-next-refusal",
+  "ans": "TOUCHES NO LINK:\nNo reason is needed.",
+  "why": "W2 family: no reason given.",
+  "nar": "ENFORCED",
+  "read": {
+   "pkgLIB/strip_KRO2_KSL/patched/": "UNCURED",
+   "pkgLIB/strip_KRO2_KSL_FUN10/patched/": "UNCURED"
+  }
+ },
+ {
+  "exp": "UNCURED",
+  "cat": "f3-touches-next-refusal",
+  "ans": "TOUCHES NO LINK: I refuse to answer.",
+  "why": "One-line control.",
+  "nar": "ENFORCED",
+  "read": {
+   "pkgLIB/strip_KRO2_KSL/patched/": "UNCURED",
+   "pkgLIB/strip_KRO2_KSL_FUN10/patched/": "UNCURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "f3-touches-next-refusal",
+  "ans": "TOUCHES NO LINK:\nthe grant concerns Luke 3:23, which no declared link uses.",
+  "why": "Correct answer control.",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO2_KSL/patched/": "UNCURED",
+   "pkgLIB/strip_KRO2_KSL_FUN10/patched/": "UNCURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "g1-my-count",
+  "ans": "COUNTED. My count is wrong.\nCORRECTED COUNT: DEFENDER 3",
+  "why": "Own count wrong, corrected.",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO2_KSL/patched/": "CURED",
+   "pkgLIB/strip_KRO2_KSL_FUN10/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "g1-my-count",
+  "ans": "COUNTED. My count was wrong and is now corrected.",
+  "why": "Own earlier count wrong.",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO2_KSL/patched/": "CURED",
+   "pkgLIB/strip_KRO2_KSL_FUN10/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "g1-my-count",
+  "ans": "COUNTED. My count is in error; the grant counts against D5.",
+  "why": "Own count wrong, the grant counts.",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO2_KSL/patched/": "CURED+N",
+   "pkgLIB/strip_KRO2_KSL_FUN10/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "UNCURED",
+  "cat": "g1-my-count",
+  "ans": "COUNTED. My count is right; the grant does not count.",
+  "why": "Keeps the old count and denies the grant.",
+  "nar": "ENFORCED",
+  "read": {
+   "pkgLIB/strip_KRO2_KSL/patched/": "CURED",
+   "pkgLIB/strip_KRO2_KSL_FUN10/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "UNCURED",
+  "cat": "g1-my-count",
+  "ans": "COUNTED. My count is correct as issued.",
+  "why": "Keeps the old count.",
+  "nar": "ENFORCED",
+  "read": {
+   "pkgLIB/strip_KRO2_KSL/patched/": "CURED",
+   "pkgLIB/strip_KRO2_KSL_FUN10/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "UNCURED",
+  "cat": "g1-my-count",
+  "ans": "COUNTED. Your count is wrong.",
+  "why": "The enforcer's count is wrong: refusal.",
+  "nar": "ENFORCED",
+  "read": {
+   "pkgLIB/strip_KRO2_KSL/patched/": "CURED",
+   "pkgLIB/strip_KRO2_KSL_FUN10/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "UNCURED",
+  "cat": "g1-my-count",
+  "ans": "COUNTED. The count is wrong.",
+  "why": "Refusal control.",
+  "nar": "ENFORCED",
+  "read": {
+   "pkgLIB/strip_KRO2_KSL/patched/": "CURED",
+   "pkgLIB/strip_KRO2_KSL_FUN10/patched/": "CURED+N"
+  }
+ },
+ {
+  "exp": "UNCURED",
+  "cat": "g1-my-count",
+  "ans": "COUNTED. My count stands.",
+  "why": "Keeps the old count (separate list entry).",
+  "nar": "ENFORCED",
+  "read": {
+   "pkgLIB/strip_KRO2_KSL/patched/": "CURED",
+   "pkgLIB/strip_KRO2_KSL_FUN10/patched/": "UNCURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "g2-yes-counted",
+  "ans": "Yes.\nCOUNTED.",
+  "why": "Bare COUNTED after Yes.",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO2_KSL/patched/": "UNCURED",
+   "pkgLIB/strip_KRO2_KSL_FUN10/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "g2-yes-counted",
+  "ans": "Yes.\nCOUNTED, the grant concedes D5.",
+  "why": "Comma after COUNTED; correct answer.",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO2_KSL/patched/": "UNCURED",
+   "pkgLIB/strip_KRO2_KSL_FUN10/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "g2-yes-counted",
+  "ans": "Agreed.\n**COUNTED**: the grant stands as written.",
+  "why": "Markup around COUNTED; correct answer.",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO2_KSL/patched/": "UNCURED",
+   "pkgLIB/strip_KRO2_KSL_FUN10/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "g2-yes-counted",
+  "ans": "Confirmed.\nCOUNTED - the defender granted it in [CR4].",
+  "why": "Dash after COUNTED; correct answer.",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO2_KSL/patched/": "UNCURED",
+   "pkgLIB/strip_KRO2_KSL_FUN10/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "UNCURED",
+  "cat": "g2-yes-counted",
+  "ans": "Yes.\nCOUNTED. It should not be counted.",
+  "why": "Refusal after COUNTED.",
+  "nar": "ENFORCED",
+  "read": {
+   "pkgLIB/strip_KRO2_KSL/patched/": "UNCURED",
+   "pkgLIB/strip_KRO2_KSL_FUN10/patched/": "UNCURED"
+  }
+ },
+ {
+  "exp": "UNCURED",
+  "cat": "g2-yes-counted",
+  "ans": "Yes.\nCOUNTED: no.",
+  "why": "Refusal after a colon.",
+  "nar": "ENFORCED",
+  "read": {
+   "pkgLIB/strip_KRO2_KSL/patched/": "UNCURED",
+   "pkgLIB/strip_KRO2_KSL_FUN10/patched/": "UNCURED"
+  }
+ },
+ {
+  "exp": "UNCURED",
+  "cat": "g2-yes-counted",
+  "ans": "Yes.\nCOUNTED? No.",
+  "why": "Question form refusal.",
+  "nar": "ENFORCED",
+  "read": {
+   "pkgLIB/strip_KRO2_KSL/patched/": "UNCURED",
+   "pkgLIB/strip_KRO2_KSL_FUN10/patched/": "UNCURED"
+  }
+ },
+ {
+  "exp": "UNCURED",
+  "cat": "g2-yes-counted",
+  "ans": "Agreed.\nCOUNTED is wrong.",
+  "why": "COUNTED as the subject of a refusal.",
+  "nar": "ENFORCED",
+  "read": {
+   "pkgLIB/strip_KRO2_KSL/patched/": "UNCURED",
+   "pkgLIB/strip_KRO2_KSL_FUN10/patched/": "UNCURED"
+  }
+ },
+ {
+  "exp": "UNCURED",
+  "cat": "g2-yes-counted",
+  "ans": "Correct.\nCOUNTED does not apply here.",
+  "why": "COUNTED as the subject of a refusal.",
+  "nar": "ENFORCED",
+  "read": {
+   "pkgLIB/strip_KRO2_KSL/patched/": "UNCURED",
+   "pkgLIB/strip_KRO2_KSL_FUN10/patched/": "UNCURED"
+  }
+ },
+ {
+  "exp": "UNCURED",
+  "cat": "g2-yes-counted",
+  "ans": "Yes.\nCOUNTED; I withdraw it.",
+  "why": "Withdraws after a semicolon.",
+  "nar": "ENFORCED",
+  "read": {
+   "pkgLIB/strip_KRO2_KSL/patched/": "UNCURED",
+   "pkgLIB/strip_KRO2_KSL_FUN10/patched/": "UNCURED"
+  }
+ },
+ {
+  "exp": "UNCURED",
+  "cat": "g2-yes-counted",
+  "ans": "Yes.\nCOUNTED would be wrong.",
+  "why": "COUNTED as the subject of a refusal.",
+  "nar": "ENFORCED",
+  "read": {
+   "pkgLIB/strip_KRO2_KSL/patched/": "UNCURED",
+   "pkgLIB/strip_KRO2_KSL_FUN10/patched/": "UNCURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "g3-touches-next",
+  "ans": "TOUCHES NO LINK:\nthe grant concerns Luke 3:23.",
+  "why": "Reason on the next line.",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO2_KSL/patched/": "UNCURED",
+   "pkgLIB/strip_KRO2_KSL_FUN10/patched/": "UNCURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "g3-touches-next",
+  "ans": "TOUCHES NO LINK:\nIt does not touch any declared link; it concerns Luke 3:23.",
+  "why": "Reason with a negation describing the links.",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO2_KSL/patched/": "UNCURED",
+   "pkgLIB/strip_KRO2_KSL_FUN10/patched/": "UNCURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "g3-touches-next",
+  "ans": "TOUCHES NO LINK:\n- it concerns Joseph's house, which no link rests on.",
+  "why": "Bullet reason.",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO2_KSL/patched/": "UNCURED",
+   "pkgLIB/strip_KRO2_KSL_FUN10/patched/": "UNCURED"
+  }
+ },
+ {
+  "exp": "UNCURED",
+  "cat": "g3-touches-next",
+  "ans": "TOUCHES NO LINK:\nI refuse to answer.",
+  "why": "Refusal on the next line.",
+  "nar": "ENFORCED",
+  "read": {
+   "pkgLIB/strip_KRO2_KSL/patched/": "UNCURED",
+   "pkgLIB/strip_KRO2_KSL_FUN10/patched/": "UNCURED"
+  }
+ },
+ {
+  "exp": "UNCURED",
+  "cat": "g3-touches-next",
+  "ans": "TOUCHES NO LINK:\nI decline to give a reason.",
+  "why": "Refusal on the next line.",
+  "nar": "ENFORCED",
+  "read": {
+   "pkgLIB/strip_KRO2_KSL/patched/": "UNCURED",
+   "pkgLIB/strip_KRO2_KSL_FUN10/patched/": "UNCURED"
+  }
+ },
+ {
+  "exp": "UNCURED",
+  "cat": "g3-touches-next",
+  "ans": "TOUCHES NO LINK:\nNo.",
+  "why": "Refusal on the next line.",
+  "nar": "ENFORCED",
+  "read": {
+   "pkgLIB/strip_KRO2_KSL/patched/": "UNCURED",
+   "pkgLIB/strip_KRO2_KSL_FUN10/patched/": "UNCURED"
+  }
+ },
+ {
+  "exp": "UNCURED",
+  "cat": "g3-touches-next",
+  "ans": "TOUCHES NO LINK: I decline to give a reason.",
+  "why": "One-line control.",
+  "nar": "ENFORCED",
+  "read": {
+   "pkgLIB/strip_KRO2_KSL/patched/": "CURED",
+   "pkgLIB/strip_KRO2_KSL_FUN10/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "g4-pair-one",
+  "ans": "TOUCHES NO LINK: None.",
+  "why": "consistency pair; compared to the next-line form, label not used",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO2_KSL/patched/": "UNCURED",
+   "pkgLIB/strip_KRO2_KSL_FUN10/patched/": "UNCURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "g4-pair-next",
+  "ans": "TOUCHES NO LINK:\nNone.",
+  "why": "consistency pair; compared to the one-line form, label not used",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO2_KSL/patched/": "UNCURED",
+   "pkgLIB/strip_KRO2_KSL_FUN10/patched/": "UNCURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "g4-pair-one",
+  "ans": "TOUCHES NO LINK: see above.",
+  "why": "consistency pair; compared to the next-line form, label not used",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO2_KSL/patched/": "UNCURED",
+   "pkgLIB/strip_KRO2_KSL_FUN10/patched/": "UNCURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "g4-pair-next",
+  "ans": "TOUCHES NO LINK:\nsee above.",
+  "why": "consistency pair; compared to the one-line form, label not used",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO2_KSL/patched/": "UNCURED",
+   "pkgLIB/strip_KRO2_KSL_FUN10/patched/": "UNCURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "g4-pair-one",
+  "ans": "TOUCHES NO LINK: it is a limb.",
+  "why": "consistency pair; compared to the next-line form, label not used",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO2_KSL/patched/": "UNCURED",
+   "pkgLIB/strip_KRO2_KSL_FUN10/patched/": "UNCURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "g4-pair-next",
+  "ans": "TOUCHES NO LINK:\nit is a limb.",
+  "why": "consistency pair; compared to the one-line form, label not used",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO2_KSL/patched/": "UNCURED",
+   "pkgLIB/strip_KRO2_KSL_FUN10/patched/": "UNCURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "g4-pair-one",
+  "ans": "TOUCHES NO LINK: Not applicable.",
+  "why": "consistency pair; compared to the next-line form, label not used",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO2_KSL/patched/": "UNCURED",
+   "pkgLIB/strip_KRO2_KSL_FUN10/patched/": "UNCURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "g4-pair-next",
+  "ans": "TOUCHES NO LINK:\nNot applicable.",
+  "why": "consistency pair; compared to the one-line form, label not used",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO2_KSL/patched/": "UNCURED",
+   "pkgLIB/strip_KRO2_KSL_FUN10/patched/": "UNCURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "g4-pair-one",
+  "ans": "TOUCHES NO LINK: I will not say.",
+  "why": "consistency pair; compared to the next-line form, label not used",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO2_KSL/patched/": "UNCURED",
+   "pkgLIB/strip_KRO2_KSL_FUN10/patched/": "UNCURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "g4-pair-next",
+  "ans": "TOUCHES NO LINK:\nI will not say.",
+  "why": "consistency pair; compared to the one-line form, label not used",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO2_KSL/patched/": "UNCURED",
+   "pkgLIB/strip_KRO2_KSL_FUN10/patched/": "UNCURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "g4-pair-one",
+  "ans": "TOUCHES NO LINK: the grant is about Luke 3:23, not D1 to D6.",
+  "why": "consistency pair; compared to the next-line form, label not used",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO2_KSL/patched/": "CURED",
+   "pkgLIB/strip_KRO2_KSL_FUN10/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "g4-pair-next",
+  "ans": "TOUCHES NO LINK:\nthe grant is about Luke 3:23, not D1 to D6.",
+  "why": "consistency pair; compared to the one-line form, label not used",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO2_KSL/patched/": "UNCURED",
+   "pkgLIB/strip_KRO2_KSL_FUN10/patched/": "UNCURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "h1-correction",
+  "ans": "COUNTED. The count is wrong.\nCORRECTED COUNT: DEFENDER 3",
+  "why": "Old count wrong, corrected count given (W3 4090 family).",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO2_KSL/patched/": "CURED",
+   "pkgLIB/strip_KRO2_KSL_FUN10/patched/": "CURED+N"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "h1-correction",
+  "ans": "COUNTED. I withdraw my count.\nCORRECTED COUNT: DEFENDER 2",
+  "why": "Withdraws the old count and corrects it.",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO2_KSL/patched/": "CURED",
+   "pkgLIB/strip_KRO2_KSL_FUN10/patched/": "CURED+N"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "h1-correction",
+  "ans": "COUNTED. On reflection, I withdraw the count.\nCORRECTED COUNT: DEFENDER 4",
+  "why": "Withdraws the old count and corrects it.",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO2_KSL/patched/": "CURED",
+   "pkgLIB/strip_KRO2_KSL_FUN10/patched/": "CURED+N"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "h1-correction",
+  "ans": "COUNTED. I was wrong.\nCORRECTED COUNT: DEFENDER 3",
+  "why": "Own error, corrected.",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO2_KSL/patched/": "CURED",
+   "pkgLIB/strip_KRO2_KSL_FUN10/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "h1-correction",
+  "ans": "COUNTED. My earlier answer was wrong.\nCORRECTED COUNT: DEFENDER 3",
+  "why": "Own earlier answer wrong, corrected.",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO2_KSL/patched/": "CURED",
+   "pkgLIB/strip_KRO2_KSL_FUN10/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "h1-correction",
+  "ans": "COUNTED. My mistake.\nCORRECTED COUNT: DEFENDER 3",
+  "why": "Own mistake, corrected.",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO2_KSL/patched/": "CURED",
+   "pkgLIB/strip_KRO2_KSL_FUN10/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "h1-correction",
+  "ans": "COUNTED. That was wrong of me.\nCORRECTED COUNT: DEFENDER 3",
+  "why": "Past tense about own answer, corrected.",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO2_KSL/patched/": "CURED",
+   "pkgLIB/strip_KRO2_KSL_FUN10/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "h1-correction",
+  "ans": "COUNTED. I erred in the first answer.\nCORRECTED COUNT: DEFENDER 3",
+  "why": "Own error, corrected.",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO2_KSL/patched/": "CURED",
+   "pkgLIB/strip_KRO2_KSL_FUN10/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "h1-correction",
+  "ans": "COUNTED.\nThe count I gave is wrong.\nCORRECTED COUNT: DEFENDER 3",
+  "why": "Own count on its own line, corrected.",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO2_KSL/patched/": "CURED",
+   "pkgLIB/strip_KRO2_KSL_FUN10/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "UNCURED",
+  "cat": "h2-refusal",
+  "ans": "COUNTED. It should not be counted.",
+  "why": "Refusal.",
+  "nar": "ENFORCED",
+  "read": {
+   "pkgLIB/strip_KRO2_KSL/patched/": "CURED",
+   "pkgLIB/strip_KRO2_KSL_FUN10/patched/": "UNCURED"
+  }
+ },
+ {
+  "exp": "UNCURED",
+  "cat": "h2-refusal",
+  "ans": "COUNTED. No.",
+  "why": "Bare refusal.",
+  "nar": "ENFORCED",
+  "read": {
+   "pkgLIB/strip_KRO2_KSL/patched/": "CURED",
+   "pkgLIB/strip_KRO2_KSL_FUN10/patched/": "UNCURED"
+  }
+ },
+ {
+  "exp": "UNCURED",
+  "cat": "h2-refusal",
+  "ans": "COUNTED. I do not count it.",
+  "why": "Refusal.",
+  "nar": "ENFORCED",
+  "read": {
+   "pkgLIB/strip_KRO2_KSL/patched/": "CURED",
+   "pkgLIB/strip_KRO2_KSL_FUN10/patched/": "UNCURED"
+  }
+ },
+ {
+  "exp": "UNCURED",
+  "cat": "h2-refusal",
+  "ans": "COUNTED. It should not be counted.\nCORRECTED COUNT: unchanged",
+  "why": "Refusal with an unchanged count line.",
+  "nar": "ENFORCED",
+  "read": {
+   "pkgLIB/strip_KRO2_KSL/patched/": "CURED",
+   "pkgLIB/strip_KRO2_KSL_FUN10/patched/": "UNCURED"
+  }
+ },
+ {
+  "exp": "UNCURED",
+  "cat": "h2-refusal",
+  "ans": "COUNTED. My count stands.\nCORRECTED COUNT: unchanged",
+  "why": "Keeps the old count.",
+  "nar": "ENFORCED",
+  "read": {
+   "pkgLIB/strip_KRO2_KSL/patched/": "CURED",
+   "pkgLIB/strip_KRO2_KSL_FUN10/patched/": "UNCURED"
+  }
+ },
+ {
+  "exp": "UNCURED",
+  "cat": "h2-refusal",
+  "ans": "COUNTED.\nNo.",
+  "why": "Refusal on the next line.",
+  "nar": "ENFORCED",
+  "read": {
+   "pkgLIB/strip_KRO2_KSL/patched/": "CURED",
+   "pkgLIB/strip_KRO2_KSL_FUN10/patched/": "UNCURED"
+  }
+ },
+ {
+  "exp": "UNCURED",
+  "cat": "h2-refusal",
+  "ans": "Yes.\nCOUNTED. It should not be counted.",
+  "why": "Yes then refusal.",
+  "nar": "ENFORCED",
+  "read": {
+   "pkgLIB/strip_KRO2_KSL/patched/": "UNCURED",
+   "pkgLIB/strip_KRO2_KSL_FUN10/patched/": "UNCURED"
+  }
+ }
+]
