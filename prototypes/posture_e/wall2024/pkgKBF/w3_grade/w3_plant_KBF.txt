@@ -1,0 +1,14 @@
+NOTE: the column printed as 'live' is the pkgKBN base; the column printed as 'KBN' is pkgKBN + pkgKBF.
+ok   want cut | live left | KBN cut | - **On Job 14:1**, I grant the phrase covers kings named by their fathers.
+ok   want cut | live left | KBN cut | **Job 14:1**, I grant it.
+ok   want cut | live left | KBN cut | *On Job 14:1*, I grant it is said of all men.
+ok   want cut | live left | KBN cut | __Luke 3:23__: I accept the reckoning as stated.
+ok   want cut | live left | KBN cut | - **Regarding Luke 3:23-24**, granted.
+ok   want cut | live cut | KBN cut | **On Job 14:1**: I grant it.
+ok   want left | live left | KBN left | - **On Job 14:1**, I grant the phrase, and I rest D6 on Matthew 1:18.
+ok   want left | live left | KBN left | **Job 14:1** names the mother only and denies no father.
+ok   want left | live left | KBN left | *On Job 14:1*, the phrase is general, which I grant, so no father is denied.
+ok   want left | live left | KBN left | **On Job 14:1**, I grant it because the phrase is said of all men.
+ok   want left | live left | KBN left | - **Luke 3:23**, as was supposed, marks a supposition; I grant no more.
+ok   want left | live left | KBN left | **Job 14:1** *I answer*: the phrase names the mother.
+0 of 12 differ from what W3 expects
