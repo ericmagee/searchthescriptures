@@ -1,0 +1,44 @@
+     base CURED | KVL2 UNCURED | CURE (record-only until promoted): UNCURED -- KEEP whose reason quotes only scripture the answering side quoted ("the power of the highest shall"), not the side's own ans
+OK   V1 KJV words (Luke 1:35) quoted on a no-reference line: "- [L1] \"...\"": base CURED, KVL2 UNCURED
+OK   V1 KJV words (Luke 1:35) quoted on a no-reference line: "- [L1] \"...\"": every other field equal
+     base CURED | KVL2 UNCURED | CURE (record-only until promoted): UNCURED -- KEEP whose reason quotes only scripture the answering side quoted ("the power of the highest shall"), not the side's own ans
+OK   V2 block quote: base CURED, KVL2 UNCURED
+OK   V2 block quote: every other field equal
+     base CURED | KVL2 UNCURED | CURE (record-only until promoted): UNCURED -- KEEP whose reason quotes only scripture the answering side quoted ("the power of the highest shall"), not the side's own ans
+OK   V3 bold quoted line: base CURED, KVL2 UNCURED
+OK   V3 bold quoted line: every other field equal
+     base CURED | KVL2 UNCURED | CURE (record-only until promoted): UNCURED -- KEEP whose reason quotes only scripture the answering side quoted ("the power of the highest shall"), not the side's own ans
+OK   V4 numbered, curly quotes: base CURED, KVL2 UNCURED
+OK   V4 numbered, curly quotes: every other field equal
+     base CURED | KVL2 UNCURED | CURE (record-only until promoted): UNCURED -- KEEP whose reason quotes only scripture the answering side quoted ("the power of the highest shall"), not the side's own ans
+OK   V5 bullet, bold layer tag: base CURED, KVL2 UNCURED
+OK   V5 bullet, bold layer tag: every other field equal
+     base CURED | KVL2 UNCURED | CURE (record-only until promoted): UNCURED -- KEEP whose reason quotes only scripture the answering side quoted ("jehoshabeath the daughter of the king"), not the side's 
+OK   V6 KJV words with commas (2 Chronicles 22:11): base CURED, KVL2 UNCURED
+OK   V6 KJV words with commas (2 Chronicles 22:11): every other field equal
+     base CURED | KVL2 CURED | CURE (record-only until promoted): CURED -- KEEP whose reason quotes the answering side's round: "joseph is the husband and not" | TRIAL pkgVP3: code check does not agree
+OK   V7 W3 A2: own claim in quotes beside a reference, repeated with no reference: base CURED, KVL2 CURED
+OK   V7 W3 A2: own claim in quotes beside a reference, repeated with no reference: every other field equal
+     base CURED | KVL2 CURED | CURE (record-only until promoted): CURED -- KEEP whose reason quotes the answering side's round: "i hold her question shows she" | TRIAL pkgVP3: code check does not agree
+OK   V8 W1 P1: own sentence after a verse label, repeated with no label: base CURED, KVL2 CURED
+OK   V8 W1 P1: own sentence after a verse label, repeated with no label: every other field equal
+     base CURED | KVL2 CURED | CURE (record-only until promoted): CURED -- KEEP whose reason quotes the answering side's round: "says the begetting is by the" | TRIAL pkgVP3: code check does not agree,
+OK   V9 W3 A3: the other side's claim after a verse label, repeated in quotes: base CURED, KVL2 CURED
+OK   V9 W3 A3: the other side's claim after a verse label, repeated in quotes: every other field equal
+     base CURED | KVL2 CURED | CURE (record-only until promoted): CURED -- KEEP whose reason quotes the answering side's round: "the power of the highest shall" | TRIAL pkgVP3: code check does not agre
+OK   V10 verse words plus own words in one quotation: base CURED, KVL2 CURED
+OK   V10 verse words plus own words in one quotation: every other field equal
+     base CURED | KVL2 CURED | CURE (record-only until promoted): CURED -- KEEP whose reason quotes the answering side's round: "supports c4 luke 1 62 reads" | TRIAL pkgVP3: code check does not agree, 
+OK   V11 W1 scan form: reference ending inside a quotation, then a quoted verse: base CURED, KVL2 CURED
+OK   V11 W1 scan form: reference ending inside a quotation, then a quoted verse: every other field equal
+     base CURED | KVL2 CURED | CURE (record-only until promoted): CURED -- KEEP whose reason quotes the answering side's round: "that she bare a son and" | TRIAL pkgVP3: code check does not agree, not 
+OK   V12 KJV words of a verse the run does not serve (1 Samuel 1:20): not cut (limit): base CURED, KVL2 CURED
+OK   V12 KJV words of a verse the run does not serve (1 Samuel 1:20): not cut (limit): every other field equal
+     base CURED | KVL2 CURED | CURE (record-only until promoted): CURED -- KEEP whose reason quotes the answering side's round: "the power of the highest shall" | TRIAL pkgVP3: code check does not agre
+OK   V13 no Cited Verses served at all: not cut (limit): base CURED, KVL2 CURED
+OK   V13 no Cited Verses served at all: not cut (limit): every other field equal
+     base CURED | KVL2 CURED | CURE (record-only until promoted): CURED -- KEEP whose reason quotes the answering side's round: "the highest shall overshadow the power" | TRIAL pkgVP3: code check does 
+OK   V14 words of a served verse out of order: not cut: base CURED, KVL2 CURED
+OK   V14 words of a served verse out of order: not cut: every other field equal
+OK   34108 stored send-back rows equal to the base (27)
+29 OK, 0 FAIL
