@@ -26,3 +26,10 @@
   - M5 (info, not pkgCDL): NOT A CONTRADICTION then CONFIRMED on the same hint is refused as conflicting answers on rev 11 and rev 2 alike.
 - Fix: keep rev 11's behaviour for distinct declared links (each CONFIRMED line with standing quotations breaks its link); if review is
   wanted, mark the second break for review without refusing it.
+
+## rev 3 (commit 8ffdf61b): PASS
+
+- Rebuild byte-equal; only Close Enforcer Record differs from pkgCDF rev 2. W1's record_CDL 11 OK reproduces.
+- Link forms (w2_cdl_rev3.txt): 27 of 27 as specified, the long LINK text included.
+- Two CONFIRMED lines (w2_cdl2_rev3.txt): M1 breaks 6 and 5, M2 breaks 5 and 6 (either order, as rev 11), M3 one break, M4 the valid line
+  breaks. M5 (NOT A CONTRADICTION then CONFIRMED on one hint, refused as conflicting answers) is the same on rev 11: pre-existing, not counted.

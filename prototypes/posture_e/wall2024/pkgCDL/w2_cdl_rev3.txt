@@ -1,0 +1,29 @@
+OK   L1 DEFENDER LINK "D6" CONFIRMED want BREAK6 got BREAK6 | note: the enforcer wrote LINK D6, read as LINK 6 (pkgCDL)
+OK   L2 DEFENDER LINK "d6" CONFIRMED want BREAK6 got BREAK6 | note: the enforcer wrote LINK d6, read as LINK 6 (pkgCDL)
+OK   L3 DEFENDER LINK "D-6" CONFIRMED want BREAK6 got BREAK6 | note: the enforcer wrote LINK D-6, read as LINK 6 (pkgCDL)
+OK   L4 DEFENDER LINK "D 6" CONFIRMED want BREAK6 got BREAK6 | note: the enforcer wrote LINK D 6, read as LINK 6 (pkgCDL)
+OK   L5 DEFENDER LINK "6 (D6)" CONFIRMED want REVIEW got REVIEW | note:  confirmed a contradiction it could not tie to a link, so nothing is broken (pkgCDF); the enforcer wrote LINK 6 (D6), not a link number, read as LINK ? (pkgCDL)
+OK   L6 DEFENDER LINK "D6 (keystone)" CONFIRMED want REVIEW got REVIEW | note: med a contradiction it could not tie to a link, so nothing is broken (pkgCDF); the enforcer wrote LINK D6 (keystone), not a link number, read as LINK ? (pkgCDL)
+OK   L7 DEFENDER LINK "2, 6" CONFIRMED want REVIEW got REVIEW | note: er confirmed a contradiction it could not tie to a link, so nothing is broken (pkgCDF); the enforcer wrote LINK 2, 6, not a link number, read as LINK ? (pkgCDL)
+OK   L8 DEFENDER LINK "2 and 6" CONFIRMED want REVIEW got REVIEW | note: confirmed a contradiction it could not tie to a link, so nothing is broken (pkgCDF); the enforcer wrote LINK 2 and 6, not a link number, read as LINK ? (pkgCDL)
+OK   L9 DEFENDER LINK "D9" CONFIRMED want REFUSE got REFUSE | note: LINK 9 is not one of the defender's declared links (1, 2, 3, 4, 5, 6); the enforcer wrote LINK D9, read as LINK 9 (pkgCDL)
+OK   L10 DEFENDER LINK "9" CONFIRMED want REFUSE got REFUSE | note: LINK 9 is not one of the defender's declared links (1, 2, 3, 4, 5, 6)
+OK   L11 DEFENDER LINK "C6" CONFIRMED want REVIEW got REVIEW | note: e to a link, so nothing is broken (pkgCDF); the enforcer wrote LINK C6, not a link number (the side letter does not match the defender), read as LINK ? (pkgCDL)
+OK   L12 DEFENDER LINK "**D6**" CONFIRMED want BREAK6 got BREAK6 | note: the enforcer wrote LINK D6, read as LINK 6 (pkgCDL)
+OK   L13 DEFENDER LINK "6." CONFIRMED want REVIEW got REVIEW | note: rcer confirmed a contradiction it could not tie to a link, so nothing is broken (pkgCDF); the enforcer wrote LINK 6., not a link number, read as LINK ? (pkgCDL)
+OK   L14 DEFENDER LINK "#6" CONFIRMED want REVIEW got REVIEW | note: rcer confirmed a contradiction it could not tie to a link, so nothing is broken (pkgCDF); the enforcer wrote LINK #6, not a link number, read as LINK ? (pkgCDL)
+OK   L15 DEFENDER LINK "Link 6" CONFIRMED want REVIEW got REVIEW | note:  confirmed a contradiction it could not tie to a link, so nothing is broken (pkgCDF); the enforcer wrote LINK Link 6, not a link number, read as LINK ? (pkgCDL)
+OK   L16 DEFENDER LINK "D06" CONFIRMED want BREAK6 got BREAK6 | note: the enforcer wrote LINK D06, read as LINK 6 (pkgCDL)
+OK   L17 DEFENDER LINK "0" CONFIRMED want REFUSE got REFUSE | note: LINK 0 is not one of the defender's declared links (1, 2, 3, 4, 5, 6)
+OK   L18 DEFENDER LINK "D6 -- D5" CONFIRMED want REVIEW got REVIEW | note: onfirmed a contradiction it could not tie to a link, so nothing is broken (pkgCDF); the enforcer wrote LINK D6 -- D5, not a link number, read as LINK ? (pkgCDL)
+OK   L19 DEFENDER LINK "6" CONFIRMED want BREAK6 got BREAK6 | note: 
+OK   L20 DEFENDER LINK "N/A" CONFIRMED want REVIEW got REVIEW | note: cer confirmed a contradiction it could not tie to a link, so nothing is broken (pkgCDF); the enforcer wrote LINK N/A, not a link number, read as LINK ? (pkgCDL)
+OK   L21 DEFENDER LINK "keystone" CONFIRMED want REVIEW got REVIEW | note: onfirmed a contradiction it could not tie to a link, so nothing is broken (pkgCDF); the enforcer wrote LINK keystone, not a link number, read as LINK ? (pkgCDL)
+OK   L25 DEFENDER LINK "the keystone link of the whole chain" CONFIRMED want REVIEW got REVIEW | note: could not tie to a link, so nothing is broken (pkgCDF); the enforcer wrote LINK the keystone link of the whole chain, not a link number, read as LINK ? (pkgCDL)
+OK   L22 CHALLENGER LINK D6 on the defender hint CONFIRMED breaks nothing, got REFUSE
+OK   L23 NOT A CONTRADICTION with LINK "D-6" read by id, got READ
+OK   L23 NOT A CONTRADICTION with LINK "6 (D6)" read by id, got READ
+OK   L23 NOT A CONTRADICTION with LINK "2, 6" read by id, got READ
+OK   L23 NOT A CONTRADICTION with LINK "N/A" read by id, got READ
+INFO L24 two CONFIRMED lines on one hint (D6, D5): confirmed links [6,5] rows ["P6 CONFIRMED L6","P6 CONFIRMED L5"]
+27 OK, 0 FAIL

@@ -1,0 +1,6 @@
+OK   M1 CDL breaks [6,5] rows ["CONFIRMED L6","CONFIRMED L5"] | rev 11 breaks [6,5]
+OK   M2 CDL breaks [5,6] rows ["CONFIRMED L5","CONFIRMED L6"] | rev 11 breaks [5,6]
+OK   M3 CDL breaks [6] rows ["CONFIRMED L6","CONFIRMED L6"] | rev 11 breaks [6]
+OK   M4 CDL breaks [6] rows ["NOT CONFIRMED (form) L5","CONFIRMED L6"] | rev 11 breaks [6]
+FAIL M5 CDL breaks [] rows ["NOT A CONTRADICTION L6","NOT CONFIRMED (conflicting answers) L6"] | rev 11 breaks []
+4 OK, 1 FAIL
