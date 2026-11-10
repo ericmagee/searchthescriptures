@@ -36,3 +36,10 @@ Between rev 2 and these labels I ran my runner once on a scratch copy of rev 2 w
 
 - R1 to R12 all OK on rev 3; sizes as W2 states (+1,583 code); prompt text unchanged. In R12 sol is not redirected and keeps its question.
 - R13 A walk of my own, defender side, 400 random cases: each judge's first question is drawn from passage A, passage B, both as one passage, an unrelated pair, a plain question, or a failing question, with a challenger fault at random; each returned judge's second reply is drawn from switch to another contradiction, switch to a plain question, same again, a failing question, not JSON. Rule checked in every case: every contradiction question the defender is asked at the end under live is matched at the end under the candidate by a question on the same rounds with one quote inside the other. 0 cases may break the rule.
+
+## Rev 3, amendment before the walk gives any result
+
+My first R13 run was void: my random number routine drew a challenger fault in every case, so no judge was ever redirected (0 redirect returns; the check failed on my own guard, not on the package). Runner corrected. Before rerunning I add, after reading W1's FAIL on Wall 4202 (relayed by the coordinator):
+
+- R14 Same earlier passage, different closing sentences (my own plant): luna asks CR3 passage A against closing sentence 1; chatgpt asks passage A against closing sentence 2 (the two closing sentences do not contain one another). If chatgpt is redirected and switches, closing sentence 2 is asked about by no one, where live keeps it: a loss, FAIL. The mirrored plant (same closing sentence, different earlier passages) likewise.
+- R13 rule made strict accordingly: a question live ends with is matched only by a candidate question on the same rounds whose earlier quote AND closing quote each contain or are contained in its own.
