@@ -1,7 +1,7 @@
 // pkgCDL rev 1 (W1; W2's note on pkgCDF rev 2, coordinator 05:20Z): Close Enforcer Record reads the enforcer's own "LINK D<n>" / "LINK C<n>" as link n
 // when the side letter matches the side ruled on; any other non-number LINK form is read as LINK ? and, on a CONFIRMED with both quotations
 // standing, carries the RECORD-ONLY FOR REVIEW note instead of being lost as an unreadable line. Labels written before the first run.
-// Runs pkgCDF's 10 record checks on the pkgCDL file, then C1 to C8.
+// Runs pkgCDF's 10 record checks on the pkgCDL file, then C1 to C8; rev 2 adds C9 to C11 (W2 FAIL of rev 1, coordinator 05:24Z).
 process.chdir(__dirname+'/..');const fs=require('fs');const {harness}=require('../pkgGSL/harness.cjs');
 const g=f=>{let d=JSON.parse(fs.readFileSync(f,'utf8'));d=d.data||d;return d.workflow||d;};const CAND=g(process.env.CAND||'pkgCDL/parent_s103_CDR11_CDF_CDL.json');const code=n=>CAND.nodes.find(z=>z.name===n).parameters.jsCode;
 const J=x=>({json:x});const run=async(c,over,inp)=>(await harness('34108',over||{})('return (async()=>{\n'+c+'\n})();',inp||'Quote Report'))[0].json;
@@ -26,4 +26,10 @@ const EQ='EARLIER [CR3] "I drop the wording "no biological father" as a bare sta
  T('C7 DEFENDER "LINK D99" (not declared): read as 99, NOT CONFIRMED (form), breaks nothing, no RECORD-ONLY note (same as LINK 99)',C7.cec.confirmed.length===0&&c7.link===99&&c7.status==='NOT CONFIRMED (form)'&&!/RECORD-ONLY/.test(c7.note||''),sh(c7));
  const C8=await rec('CLOSE-CONTRADICTION: '+D6.id+' -- DEFENDER -- LINK 6 -- CONFIRMED -- '+EQ);const c8=row(C8,D6.id);
  T('C8 plain "LINK 6" unchanged: CONFIRMED, breaks D6, no pkgCDL note',C8.cec.confirmed.length===1&&c8.status==='CONFIRMED'&&!/pkgCDL/.test(c8.note||''),sh(c8));
+ const C9=await rec('CLOSE-CONTRADICTION: '+D6.id+' -- DEFENDER -- LINK the keystone link of the whole chain as declared -- CONFIRMED -- '+EQ);const c9=row(C9,D6.id);
+ T('C9 rev 2: a LINK text of any length (over 24 characters) is read by the id as LINK ?, breaks nothing, RECORD-ONLY FOR REVIEW, note quotes it',C9.cec.confirmed.length===0&&c9.link==='?'&&!C9.cec.rows.some(r=>r.answer==='UNREADABLE')&&/RECORD-ONLY FOR REVIEW/.test(c9.note||'')&&/keystone link of the whole chain/.test(c9.note||''),sh(c9));
+ const C10=await rec(['6','5'].map(n=>'CLOSE-CONTRADICTION: '+D6.id+' -- DEFENDER -- LINK '+n+' -- CONFIRMED -- '+EQ).join('\n'));const c10=C10.cec.rows.filter(r=>r.id===D6.id);
+ T('C10 rev 2: two CONFIRMED lines on one candidate naming links 6 then 5: only link 6 breaks; the second is NOT CONFIRMED (second link) with RECORD-ONLY FOR REVIEW',C10.cec.confirmed.length===1&&C10.cec.confirmed[0].link===6&&c10.length===2&&c10[1].status==='NOT CONFIRMED (second link)'&&/RECORD-ONLY FOR REVIEW/.test(c10[1].note||''),c10.map(sh).join(' || '));
+ const C11=await rec(['NEW 1|6','NEW 2|5'].map(x=>'CLOSE-CONTRADICTION: '+x.split('|')[0]+' -- DEFENDER -- LINK '+x.split('|')[1]+' -- CONFIRMED -- '+EQ).join('\n'));
+ T('C11 rev 2: NEW lines are not one candidate; two NEW lines naming links 6 and 5 each break their link (unchanged)',C11.cec.confirmed.length===2,C11.cec.rows.map(sh).join(' || '));
  console.log(ok+' OK, '+bad+' FAIL');})();
