@@ -1,0 +1,14 @@
+ENFORCER (K-W enforcer): runs 36 answers 1892 NO VERDICT 128 ; with a reply line naming the id or its item: 0 ; with none: 128 ; record step failed: 33060: Referenced node is unexecuted: Enforcer Build | 33083: Referenced node is unexecuted: Enforcer Build | 33107: Referenced node is unexecuted: Enforcer Build | 33129: Referenced node is unexecuted: Enforcer Build | 33149: Referenced node is unexecuted: Enforcer Build | 33160: Referenced node is unexecuted: Enforcer Build | 33197: Referenced node is unexecuted: Enforcer Build
+
+ANTICHEAT: runs 37 items 3769 no answer 102 (with a reply line naming the id: 4) QUOTE NOT FOUND 1 
+  NOANS 33389 X34
+     ANTICHEAT: X34 -- CONSISTENT -- CLOSE: "the line's begetting is the fathers': Matthew 1:2 "Abraham begat Isaac."" -- EARLIER: "Abraham begat Isaac; and Isaac begat Jacob".
+  NOANS 33389 X36
+     ANTICHEAT: X36 -- CONSISTENT -- CLOSE: "I grant the count includes the child as the close of the line." -- EARLIER: "Matthew 1:17 counts the child as a generation of this same line".
+  NOANS 33389 X73
+     ANTICHEAT: X73 -- CONSISTENT -- CLOSE: "I grant the loins-language runs across generations by successive begetting, and that "his father" in 7:10 is the remote Abraham." -- EARLIER: "father" there is the remote forefather Abraham, so the loins-language reaches across generations.
+  NOANS 33617 X75
+     ANTICHEAT: X75 -- CONSISTENT -- CLOSE: "Luke 3:23's '(as was supposed)' is a belief about a person, set in parentheses beside 'son of Joseph'." -- EARLIER: "The parenthesis in Luke 3:23 sets Joseph's sonship as the supposed one".
+  QNF 33218 X133 D close_ok=false earlier_ok=true
+     CLOSE "ANSWER: Luke 1:36 / Luke 1:5 / Luke 1:27 -- D5 / - [L1] Luke 1:5: "his wife [was] of the daughters of Aaron.""
+     EARLIER "Luke 1:36, "thy cousin Elisabeth", and Luke 1:5, "his wife [was] of the daughters of Aaron", I do not rest on."

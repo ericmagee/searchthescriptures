@@ -1,0 +1,14 @@
+Judge Enforcer: answers 7421, NO VERDICT 116; a reply line names the id: 5; no line: 111 by run {"33218":1,"33222":84,"33430":25,"33461":1} errors {"33222":"call 2: no reply (\"Response body timed out after 300000ms without data\")"}
+  33222 Y1.1 (synthesis, E-SYN; judge CLAIM)
+     ENFORCER: Y1.1 -- TRUE -- The challenger's own sentences do give ground, granting "I grant the order of the words" and narrowing "I drop the limb that 'fear not... for' is a form peculiar to fathers."
+  33222 Y2.1 (synthesis, E-SYN; judge CLAIM)
+     ENFORCER: Y2.1 -- TRUE -- The challenger's logged entries quote the defender's grants as given, e.g. "G1 [CR2] 'I grant three things. Joseph is of the house of David' -- SUPPORTS: C1," matching the synthesis's "logged all Defender grants."
+  33222 Y3.1 (synthesis, E-SYN; judge CLAIM)
+     ENFORCER: Y3.1 -- TRUE -- The defender's own words are "I drop the claim that a row names Mary's house as David's" and "That Heli is Mary's father is my [L4] inference from these rows, not a statement of any row," exactly as the synthesis reports.
+  33222 Y4.1 (synthesis, E-SYN; judge CLAIM)
+     ENFORCER: Y4.1 -- TRUE -- The defender's own sentences concede, e.g. "I grant it is said of men with fathers (Job 14:1). I do not rest the absence of a father on it," which supports "Defender conceded in Round 3."
+  33222 Y6.1 (synthesis, E-SYN; judge CLAIM)
+     ENFORCER: Y6.1 -- TRUE -- The defender's own words are "Galatians 4:4, 'made of a woman, made under the law.' I grant it is said of men with fathers (Job 14:1)," matching the synthesis's claim of that grant.
+
+Alt Judge Enforcer: answers 1704, NO VERDICT 47; a reply line names the id: 0; no line: 47 by run {"33299":47} errors {}
+

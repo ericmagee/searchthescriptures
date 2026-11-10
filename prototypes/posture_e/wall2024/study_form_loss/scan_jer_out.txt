@@ -1,0 +1,79 @@
+Judge Enforcer Record: runs 32, rows 7502, NO VERDICT 116 (reply line naming the id: 23; none: 93); ENFORCER lines 7290, not read by any live pattern: 5
+  NV 33222 Y1.1 (synthesis, E-SYN)
+     ENFORCER: Y1.1 -- TRUE -- The challenger's own sentences do give ground, granting "I grant the order of the words" and narrowing "I drop the limb that 'fear not... for' is a form peculiar to fathers."
+  NV 33222 Y2.1 (synthesis, E-SYN)
+     ENFORCER: Y2.1 -- TRUE -- The challenger's logged entries quote the defender's grants as given, e.g. "G1 [CR2] 'I grant three things. Joseph is of the house of David' -- SUPPORTS: C1," matching the synthesis's "logged all Defender grants."
+  NV 33222 Y3.1 (synthesis, E-SYN)
+     ENFORCER: Y3.1 -- TRUE -- The defender's own words are "I drop the claim that a row names Mary's house as David's" and "That Heli is Mary's father is my [L4] inference from these rows, not a statement of any row," exactly as the synthesis reports.
+  NV 33222 Y4.1 (synthesis, E-SYN)
+     ENFORCER: Y4.1 -- TRUE -- The defender's own sentences concede, e.g. "I grant it is said of men with fathers (Job 14:1). I do not rest the absence of a father on it," which supports "Defender conceded in Round 3."
+  NV 33222 Y6.1 (synthesis, E-SYN)
+     ENFORCER: Y6.1 -- TRUE -- The defender's own words are "Galatians 4:4, 'made of a woman, made under the law.' I grant it is said of men with fathers (Job 14:1)," matching the synthesis's claim of that grant.
+  NV 33430 P1.1/P2.1/P3.1/P4.1/P5.1/P6.1 (gemini, E-PREM)
+     ENFORCER: P1.1 -- AGREE -- RIGHT: SPARED -- Premise 1 charges an inference, and the LINK 1 block exhibits [L1] "before they came together, she was found with child of the Holy Ghost," [L2] paradeigmatizō (G3856) and apolyō (G630), [L3] "for that which is conceived in her is of the Holy Ghost," and i
+     ENFORCER: P2.1 -- AGREE -- RIGHT: SPARED -- Premise 2 charges an inference, and the LINK 2 block exhibits [L1] Luke 1:35 "the power of the Highest shall overshadow thee," [L2] gennaō (G1080) and episkiazō (G1982), [L3] Luke 1:37, and an [L4] chain on "therefore also," so it is never an ASSUMES.
+     ENFORCER: P3.1 -- AGREE -- RIGHT: SPARED -- Premise 3 charges an inference from "of whom," and the row Luke 2:7 "she brought forth her firstborn son" with Matthew 1:3 "Judas begat Phares and Zara of Thamar" gives the maternal marking, the defender granting "I grant that 'of' marks the mother," so th
+     ENFORCER: P4.1 -- AGREE -- RIGHT: SPARED -- Premise 4 charges the scope the link reads from Jeremiah 22:30, and the defender answers "Jeremiah 22:30 speaks of 'sitting upon the throne of David'" with Haggai 2:23 "will make thee as a signet," an inference on the verse's own words, not a missing layer
+  NV 33430 P1.2/P2.2/P3.2/P4.2/P5.2/P6.2 (chatgpt, E-PREM)
+     ENFORCER: P1.2 -- AGREE -- RIGHT: SPARED -- The LINK 1 block exhibits [L1] Matthew 1:18-19, [L2] paradeigmatizō and apolyō, [L3] Matthew 1:20 and its [L4] chain ("His justice faces the pregnancy that Matthew 1:18 places before they came together"), an inference rather than a missing row.
+     ENFORCER: P2.2 -- AGREE -- RIGHT: SPARED -- The LINK 2 block exhibits [L1] Luke 1:34-35, [L2] gennaō and episkiazō, [L3] "For with God nothing shall be impossible," with its [L4] chain ("'Therefore also' joins the born-of-thee holy thing to that coming and overshadowing"), so no layer is missing.
+     ENFORCER: P3.2 -- AGREE -- RIGHT: SPARED -- The defender's answer on this link retains the grammatical change while granting "I grant that 'of' marks the mother," with Matthew 1:3 "of Thamar" and Luke 2:7 "she brought forth her firstborn son" giving the assumed fact, so the inference is [L4].
+     ENFORCER: P4.2 -- AGREE -- RIGHT: SPARED -- The premise is an inference from the rows, and the defender exhibits the verses ("The signet is set on a governor, while Jeremiah 22:30 speaks of 'sitting upon the throne of David'"; "These verses state a rule for 'a nation'"), so the question is one of me
+  NV 33430 P1.3/P2.3/P3.3/P4.3/P5.3/P6.3 (sol, E-PREM)
+     ENFORCER: P1.3 -- AGREE -- RIGHT: SPARED -- The premise's charge rests on what the link infers, and the block exhibits [L1] "was minded to put her away privily," [L2] apolyō, [L3] Matthew 1:20 "of the Holy Ghost," and its [L4] chain, so it is graded as [L4], not counted.
+     ENFORCER: P2.3 -- AGREE -- RIGHT: SPARED -- The premise attacks what the link infers from Luke 1:34-35, and the block exhibits that footing ([L2] gennaō in "born of thee"; [L3] Luke 1:37) as its [L4] chain, so it is not counted.
+     ENFORCER: P3.3 -- AGREE -- RIGHT: SPARED -- The judge's ground matches the record: premise 3 "retains the grammatical change while granting maternal language," and the rows "of Thamar" (Matthew 1:3) and "she brought forth her firstborn son" (Luke 2:7) give that fact.
+     ENFORCER: P4.3 -- AGREE -- RIGHT: SPARED -- The judge's ground that premise 4 "exhibits Jeremiah 22:30, Matthew 1:12, and Luke 1:32" matches the record, where the defender reads the verse's own words, an [L4] inference rather than an ASSUMES.
+  NV 33430 P1.1/P2.1/P3.1/P4.1/P5.1/P6.1 (gemini, E-PREM)
+     ENFORCER: P1.1 -- AGREE -- RIGHT: SPARED -- Premise 1 charges an inference, and the LINK 1 block exhibits [L1] "before they came together, she was found with child of the Holy Ghost," [L2] paradeigmatizō (G3856) and apolyō (G630), [L3] "for that which is conceived in her is of the Holy Ghost," and i
+     ENFORCER: P2.1 -- AGREE -- RIGHT: SPARED -- Premise 2 charges an inference, and the LINK 2 block exhibits [L1] Luke 1:35 "the power of the Highest shall overshadow thee," [L2] gennaō (G1080) and episkiazō (G1982), [L3] Luke 1:37, and an [L4] chain on "therefore also," so it is never an ASSUMES.
+     ENFORCER: P3.1 -- AGREE -- RIGHT: SPARED -- Premise 3 charges an inference from "of whom," and the row Luke 2:7 "she brought forth her firstborn son" with Matthew 1:3 "Judas begat Phares and Zara of Thamar" gives the maternal marking, the defender granting "I grant that 'of' marks the mother," so th
+     ENFORCER: P4.1 -- AGREE -- RIGHT: SPARED -- Premise 4 charges the scope the link reads from Jeremiah 22:30, and the defender answers "Jeremiah 22:30 speaks of 'sitting upon the throne of David'" with Haggai 2:23 "will make thee as a signet," an inference on the verse's own words, not a missing layer
+  NV 33430 P1.2/P2.2/P3.2/P4.2/P5.2/P6.2 (chatgpt, E-PREM)
+     ENFORCER: P1.2 -- AGREE -- RIGHT: SPARED -- The LINK 1 block exhibits [L1] Matthew 1:18-19, [L2] paradeigmatizō and apolyō, [L3] Matthew 1:20 and its [L4] chain ("His justice faces the pregnancy that Matthew 1:18 places before they came together"), an inference rather than a missing row.
+     ENFORCER: P2.2 -- AGREE -- RIGHT: SPARED -- The LINK 2 block exhibits [L1] Luke 1:34-35, [L2] gennaō and episkiazō, [L3] "For with God nothing shall be impossible," with its [L4] chain ("'Therefore also' joins the born-of-thee holy thing to that coming and overshadowing"), so no layer is missing.
+     ENFORCER: P3.2 -- AGREE -- RIGHT: SPARED -- The defender's answer on this link retains the grammatical change while granting "I grant that 'of' marks the mother," with Matthew 1:3 "of Thamar" and Luke 2:7 "she brought forth her firstborn son" giving the assumed fact, so the inference is [L4].
+     ENFORCER: P4.2 -- AGREE -- RIGHT: SPARED -- The premise is an inference from the rows, and the defender exhibits the verses ("The signet is set on a governor, while Jeremiah 22:30 speaks of 'sitting upon the throne of David'"; "These verses state a rule for 'a nation'"), so the question is one of me
+  NV 33430 P1.3/P2.3/P3.3/P4.3/P5.3/P6.3 (sol, E-PREM)
+     ENFORCER: P1.3 -- AGREE -- RIGHT: SPARED -- The premise's charge rests on what the link infers, and the block exhibits [L1] "was minded to put her away privily," [L2] apolyō, [L3] Matthew 1:20 "of the Holy Ghost," and its [L4] chain, so it is graded as [L4], not counted.
+     ENFORCER: P2.3 -- AGREE -- RIGHT: SPARED -- The premise attacks what the link infers from Luke 1:34-35, and the block exhibits that footing ([L2] gennaō in "born of thee"; [L3] Luke 1:37) as its [L4] chain, so it is not counted.
+     ENFORCER: P3.3 -- AGREE -- RIGHT: SPARED -- The judge's ground matches the record: premise 3 "retains the grammatical change while granting maternal language," and the rows "of Thamar" (Matthew 1:3) and "she brought forth her firstborn son" (Luke 2:7) give that fact.
+     ENFORCER: P4.3 -- AGREE -- RIGHT: SPARED -- The judge's ground that premise 4 "exhibits Jeremiah 22:30, Matthew 1:12, and Luke 1:32" matches the record, where the defender reads the verse's own words, an [L4] inference rather than an ASSUMES.
+  NV 33430 V1.1/P7.1/P8.1/P9.1/P10.1/P11.1/P12.1 (gemini, E-PREM)
+     ENFORCER: V1.1 -- AGREE -- RIGHT: VOID -- The charge adds "only" while the quoted claim says "is the spirit-origin, spoken beside 'Joseph, thou son of David'."
+  NV 33430 V1.2/P7.2/P8.2/P9.2/P10.2/P11.2/P12.2 (chatgpt, E-PREM)
+     ENFORCER: V1.2 -- AGREE -- RIGHT: VOID -- The charge adds the universal "only" not found in "is the spirit-origin, spoken beside 'Joseph, thou son of David'."
+  NV 33430 V1.1/P7.1/P8.1/P9.1/P10.1/P11.1/P12.1 (gemini, E-PREM)
+     ENFORCER: V1.1 -- AGREE -- RIGHT: VOID -- The charge adds "only" while the quoted claim says "is the spirit-origin, spoken beside 'Joseph, thou son of David'."
+  NV 33430 V1.2/P7.2/P8.2/P9.2/P10.2/P11.2/P12.2 (chatgpt, E-PREM)
+     ENFORCER: V1.2 -- AGREE -- RIGHT: VOID -- The charge adds the universal "only" not found in "is the spirit-origin, spoken beside 'Joseph, thou son of David'."
+  NV 33430 V1.1/P7.1/P8.1/P9.1/P10.1/P11.1/P12.1 (gemini, E-PREM)
+     ENFORCER: V1.1 -- AGREE -- RIGHT: VOID -- The charge adds "only" while the quoted claim says "is the spirit-origin, spoken beside 'Joseph, thou son of David'."
+  NV 33430 V1.2/P7.2/P8.2/P9.2/P10.2/P11.2/P12.2 (chatgpt, E-PREM)
+     ENFORCER: V1.2 -- AGREE -- RIGHT: VOID -- The charge adds the universal "only" not found in "is the spirit-origin, spoken beside 'Joseph, thou son of David'."
+  NV 33430 V1.1/P7.1/P8.1/P9.1/P10.1/P11.1/P12.1 (gemini, E-PREM)
+     ENFORCER: V1.1 -- AGREE -- RIGHT: VOID -- The charge adds "only" while the quoted claim says "is the spirit-origin, spoken beside 'Joseph, thou son of David'."
+  NV 33430 V1.2/P7.2/P8.2/P9.2/P10.2/P11.2/P12.2 (chatgpt, E-PREM)
+     ENFORCER: V1.2 -- AGREE -- RIGHT: VOID -- The charge adds the universal "only" not found in "is the spirit-origin, spoken beside 'Joseph, thou son of David'."
+  NV 33430 V1.1/P7.1/P8.1/P9.1/P10.1/P11.1/P12.1 (gemini, E-PREM)
+     ENFORCER: V1.1 -- AGREE -- RIGHT: VOID -- The charge adds "only" while the quoted claim says "is the spirit-origin, spoken beside 'Joseph, thou son of David'."
+  NV 33430 V1.2/P7.2/P8.2/P9.2/P10.2/P11.2/P12.2 (chatgpt, E-PREM)
+     ENFORCER: V1.2 -- AGREE -- RIGHT: VOID -- The charge adds the universal "only" not found in "is the spirit-origin, spoken beside 'Joseph, thou son of David'."
+  NV 33430 V1.1/P7.1/P8.1/P9.1/P10.1/P11.1/P12.1 (gemini, E-PREM)
+     ENFORCER: V1.1 -- AGREE -- RIGHT: VOID -- The charge adds "only" while the quoted claim says "is the spirit-origin, spoken beside 'Joseph, thou son of David'."
+  NV 33430 V1.2/P7.2/P8.2/P9.2/P10.2/P11.2/P12.2 (chatgpt, E-PREM)
+     ENFORCER: V1.2 -- AGREE -- RIGHT: VOID -- The charge adds the universal "only" not found in "is the spirit-origin, spoken beside 'Joseph, thou son of David'."
+  UNREAD 33222 ENFORCER: Y1.1 -- TRUE -- The challenger's own sentences do give ground, granting "I grant the order of the words" and narrowing "I drop the limb that 'fear not... for' is a form peculiar to fathers."
+  UNREAD 33222 ENFORCER: Y2.1 -- TRUE -- The challenger's logged entries quote the defender's grants as given, e.g. "G1 [CR2] 'I grant three things. Joseph is of the house of David' -- SUPPORTS: C1," matching the synthesis's "logged all Defender grants."
+  UNREAD 33222 ENFORCER: Y3.1 -- TRUE -- The defender's own words are "I drop the claim that a row names Mary's house as David's" and "That Heli is Mary's father is my [L4] inference from these rows, not a statement of any row," exactly as the synthesis reports.
+  UNREAD 33222 ENFORCER: Y4.1 -- TRUE -- The defender's own sentences concede, e.g. "I grant it is said of men with fathers (Job 14:1). I do not rest the absence of a father on it," which supports "Defender conceded in Round 3."
+  UNREAD 33222 ENFORCER: Y6.1 -- TRUE -- The defender's own words are "Galatians 4:4, 'made of a woman, made under the law.' I grant it is said of men with fathers (Job 14:1)," matching the synthesis's claim of that grant.
+
+Alt Judge Enforcer Record: runs 20, rows 1718, NO VERDICT 47 (reply line naming the id: 1; none: 46); ENFORCER lines 1657, not read by any live pattern: 0
+  NV 33299 P1.1/P2.1/P3.1/P4.1/P5.1/P6.1 (grok, E-PREM)
+     ENFORCER: P2.1 -- AGREE -- RIGHT: SPARED -- The line spares premise 2 on "Luke 1:34, Luke 1:35, and Luke 1:37," the very rows the defender's block exhibits ("the question (L1), the agent verbs (L2), the "therefore" and the closing verse (L3)"), so a row the side quoted gives the assumed fact.
+     ENFORCER: P3.1 -- AGREE -- RIGHT: SPARED -- The defender's block reads "LINK 3: NARROWED TO ... I drop any claim about the word "virgin" alone," keeping the order of Matthew 1:18 and 1:25, which is what the judge states: "spared in the narrowed order of Matthew 1:18 and Matthew 1:25."
+     ENFORCER: P4.1 -- AGREE -- RIGHT: SPARED -- The defender's own words are "I drop "guardian" as a separate claim," footed on Genesis 4:25 and Luke 1:31, matching the judge's "drops "guardian" and keeps naming as not the mark of the begetter, footed on Genesis 4:25 and Luke 1:31."
+     ENFORCER: P5.1 -- DISAGREE -- RIGHT: COUNTED -- The record's block is "LINK 5: SUPPORTED" and its answer calls the father-texts "household usage "after the custom of the law" (2:27)," so no drop is shown and no quoted row gives "those who call Joseph father knew Joseph's household and the household 
+     ENFORCER: P6.1 -- AGREE -- RIGHT: SPARED -- The defender's block reads "The legal house is Joseph's (Luke 2:4), and I grant that," keeping only "the flesh-descent from David is carried by the woman out of whom the child is born," as the judge states, "grants the legal house is Joseph's."
+

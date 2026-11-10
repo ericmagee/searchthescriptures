@@ -1,0 +1,344 @@
+Judge Enforcer: ids 9291, read 8918, unread with a line naming the id 5, no line at all 368 {"33060":82,"33129":21,"33149":11,"33160":27,"33197":1,"33218":1,"33222":84,"33249":2,"33389":21,"33411":2,"33430":25,"33442":73,"33461":18}
+  33222 Y1.1 (synthesis, E-SYN)
+     ENFORCER: Y1.1 -- TRUE -- The challenger's own sentences do give ground, granting "I grant the order of the words" and narrowing "I drop the limb that 'fear not... for' is a form peculiar to fathers."
+  33222 Y2.1 (synthesis, E-SYN)
+     ENFORCER: Y2.1 -- TRUE -- The challenger's logged entries quote the defender's grants as given, e.g. "G1 [CR2] 'I grant three things. Joseph is of the house of David' -- SUPPORTS: C1," matching the synthesis's "logged all Defender grants."
+  33222 Y3.1 (synthesis, E-SYN)
+     ENFORCER: Y3.1 -- TRUE -- The defender's own words are "I drop the claim that a row names Mary's house as David's" and "That Heli is Mary's father is my [L4] inference from these rows, not a statement of any row," exactly as the synthesis reports.
+  33222 Y4.1 (synthesis, E-SYN)
+     ENFORCER: Y4.1 -- TRUE -- The defender's own sentences concede, e.g. "I grant it is said of men with fathers (Job 14:1). I do not rest the absence of a father on it," which supports "Defender conceded in Round 3."
+  33222 Y6.1 (synthesis, E-SYN)
+     ENFORCER: Y6.1 -- TRUE -- The defender's own words are "Galatians 4:4, 'made of a woman, made under the law.' I grant it is said of men with fathers (Job 14:1)," matching the synthesis's claim of that grant.
+
+Alt Judge Enforcer: ids 1704, read 1384, unread with a line naming the id 165, no line at all 155 {"33299":47,"33371":11,"33411":13,"33442":4,"33461":80}
+  33461 P11.1 (grok, E-PREM)
+     ENFORCER: P11 -- AGREE -- RIGHT: SPARED -- The challenger's block exhibits the inference on its layers — "[L4] ... So God's power and a husband's begetting stand together in the very sign given to Mary" footing "[L1] Luke 1:36" and "[L3] Luke 1:13: 'thy wife Elisabeth shall bear thee a son'" with "[
+  33461 P12.1 (grok, E-PREM)
+     ENFORCER: P12 -- AGREE -- RIGHT: SPARED -- The challenger's block exhibits the inference — "[L4] ... So Joseph knew Mary his wife within the espousal, and the child is of his loins" footing "[L1] Matthew 1:25: 'And knew her not till she had brought forth her firstborn son'" and "[L3] Genesis 4:1" wi
+  33644 W1.1 (sol, K-S3)
+     ENFORCER: W1.1 -- AGREE -- NEEDS: NO -- The sentence "I grant that this verse joins her seed to Adam's knowing" concedes only Genesis 4:25's example and leaves D1's mother-named-birth claim intact, so it touches no declared link or listed premise.
+  33644 W2.1 (sol, K-S3)
+     ENFORCER: W2.1 -- AGREE -- NEEDS: NO -- "That is granted, since the espousal makes him so" concedes only that Joseph is "her husband," a fact D2 already states ("Joseph her husband"), so it surrenders no part of a link.
+  33644 W3.1 (sol, K-S3)
+     ENFORCER: W3.1 -- AGREE -- NEEDS: NO -- "I grant that it names a woman before her husband" is the very point D4 uses, so it confirms rather than gives up any part of the sign-of-the-virgin link.
+  33644 W4.1 (sol, K-S3)
+     ENFORCER: W4.1 -- AGREE -- NEEDS: NO -- "The oath names David as the source and reaches his descendants as Levi was 'in the loins' of Abraham" grants ancestral source, not the challenger's father's-house inference, so it touches no declared link.
+  33644 W5.1 (sol, K-S3)
+     ENFORCER: W5.1 -- AGREE -- NEEDS: NO -- "It states Joseph's house and lineage" supplies a fact the defense's taking-and-naming construction expressly uses, not a surrendered link or premise.
+  33644 W6.1 (sol, K-S3)
+     ENFORCER: W6.1 -- AGREE -- NEEDS: NO -- "Mary calls Joseph 'thy father' in the household's usage" fits D5's reputed-father argument rather than giving up any part of it.
+  33644 W7.1 (sol, K-S3)
+     ENFORCER: W7.1 -- AGREE -- NEEDS: NO -- "Rebekah is a case of a woman who conceived after becoming a wife" is the very distinction D4 draws, so it touches no declared link.
+  33644 W8.1 (sol, K-W)
+     ENFORCER: W8.1 -- NO ANSWER -- NEEDS: YES -- "I grant it" is a grant the defender keeps using ("answered through Joseph's house"), but the judge's "NOT HELD" is not the K-W form (STANDS WITHOUT IT or CONCEDED).
+  33644 W9.1 (sol, K-W)
+     ENFORCER: W9.1 -- NO ANSWER -- NEEDS: YES -- "I grant that the title 'my son' is given of Solomon with David as father" is answered by retained words ("the title rests on a conception"), but the judge's "NOT HELD" is not the K-W form.
+  33644 W10.1 (sol, K-W)
+     ENFORCER: W10.1 -- NO ANSWER -- NEEDS: NO -- "I grant that 'born of a woman' is said of men who have fathers" is followed by "I do not rest the source of this child on that phrase," so the footing is relocated, yet the judge's "NOT HELD" is not the K-W form.
+  33644 W11.1 (sol, K-W)
+     ENFORCER: W11.1 -- NO ANSWER -- NEEDS: YES -- "I grant that a betrothed damsel is called a wife there" is answered by retained words ("'wife' in this chapter names standing"), but the judge's "NOT HELD" is not the K-W form.
+  33644 W12.1 (sol, K-W)
+     ENFORCER: W12.1 -- NO ANSWER -- NEEDS: YES -- "I grant that this verse joins her seed to Adam's knowing" leaves retained footing ("the woman's line as well as of the man's begetting"), but the judge's "NOT HELD" is not the K-W form.
+  33644 W13.1 (sol, K-W)
+     ENFORCER: W13.1 -- NO ANSWER -- NEEDS: YES -- "I grant that it names a woman before her husband" is retained footing the defender uses ("the conception before the coming together"), but the judge's "NOT HELD" is not the K-W form.
+  33644 W14.1 (sol, K-W)
+     ENFORCER: W14.1 -- NO ANSWER -- NEEDS: YES -- "I grant that 2:62 is the priests' row" is answered by retained words ("the additional row... at 2:59"), but the judge's "NOT HELD" is not the K-W form.
+  33644 W15.1 (sol, K-W)
+     ENFORCER: W15.1 -- NO ANSWER -- NEEDS: YES -- "I grant that seed is said of a woman" is answered by retained words ("Her seed and her husband's begetting stand in one verse"), but the judge's "NOT HELD" is not the K-W form.
+  33644 W16.1 (sol, K-W)
+     ENFORCER: W16.1 -- NO ANSWER -- NEEDS: YES -- "I grant that 'father' reaches a forefather" is answered by retained words ("through each father's act of procreating"), but the judge's "NOT HELD" is not the K-W form.
+  33644 W17.1 (sol, K-W)
+     ENFORCER: W17.1 -- NO ANSWER -- NEEDS: YES -- "I grant that the margin's verb is gennaō (G1080)" is answered by retained words ("The same verb with ek and God appears at 1 John 5:1"), but the judge's "NOT HELD" is not the K-W form.
+  33644 W18.1 (sol, K-W)
+     ENFORCER: W18.1 -- NO ANSWER -- NEEDS: YES -- "I grant that the finding came first" is answered by retained words ("'Came together' is the taking that Matthew 1:24 narrates"), but the judge's "NOT HELD" is not the K-W form.
+  33644 W19.1 (sol, K-W)
+     ENFORCER: W19.1 -- NO ANSWER -- NEEDS: YES -- "I grant the two names" is answered by retained words ("The sign's timing is carried by a conception by a man's approach"), but the judge's "NOT HELD" is not the K-W form.
+  33644 W20.1 (sol, K-W)
+     ENFORCER: W20.1 -- NO ANSWER -- NEEDS: YES -- "I grant it" is answered by retained words ("The word names her state before her husband"), but the judge's "NOT HELD" is not the K-W form.
+  33644 W21.1 (sol, K-W)
+     ENFORCER: W21.1 -- NO ANSWER -- NEEDS: YES -- "I grant her present state [L2]" is answered by retained words ("Her conceiving lies ahead"), but the judge's "NOT HELD" is not the K-W form.
+  33644 W22.1 (sol, K-W)
+     ENFORCER: W22.1 -- NO ANSWER -- NEEDS: YES -- "I grant it" is answered by retained words ("the giving goes 'to every seed'"), but the judge's "NOT HELD" is not the K-W form.
+  33644 W22.2 (sol, K-W)
+     ENFORCER: W22.2 -- NO ANSWER -- NEEDS: YES -- "I grant it" is answered by retained words ("He took part 'likewise' as 'the children' partake"), but the judge's "NOT HELD" is not the K-W form.
+  33731 W1.1 (sol, K-S3)
+     ENFORCER: W1.1 -- AGREE -- NEEDS: NO -- [CR4] keeps D3 while saying "D4 holds him as husband and as father by reckoning," so granting the title "husband" surrenders no declared link.
+  33731 W2.1 (sol, K-S3)
+     ENFORCER: W2.1 -- AGREE -- NEEDS: NO -- [CR4] keeps D3 as "the stated source of the conception is the Holy Ghost," so granting the title's chronological priority touches no link.
+  33731 W3.1 (sol, K-S3)
+     ENFORCER: W3.1 -- AGREE -- NEEDS: NO -- [CR4] keeps D3 as "the stated source of the conception is the Holy Ghost," so granting that he "took on [him] the seed of Abraham" surrenders no link.
+  33731 W4.1 (sol, K-S3)
+     ENFORCER: W4.1 -- AGREE -- NEEDS: NO -- [CR4] keeps D3 as "the stated source of the conception is the Holy Ghost," so granting the resurrection declaration touches no link.
+  33731 W5.1 (sol, K-S3)
+     ENFORCER: W5.1 -- AGREE -- NEEDS: NO -- [CR4] says "So Joseph is father by reckoning and household and not by begetting," which is D4's own claim, not a surrendered link.
+  33731 W6.1 (sol, K-S3)
+     ENFORCER: W6.1 -- AGREE -- NEEDS: NO -- [CR4] says "So Joseph is father by reckoning and household and not by begetting," so granting the household father is D4's affirmative claim.
+  33731 W7.1 (sol, K-S3)
+     ENFORCER: W7.1 -- AGREE -- NEEDS: NO -- [CR4] says "So Joseph is father by reckoning and household and not by begetting," so the pedigree by the house is retained within D4.
+  33731 W8.1 (sol, K-S3)
+     ENFORCER: W8.1 -- AGREE -- NEEDS: NO -- [CR4] says "So Joseph is father by reckoning and household and not by begetting," so granting Joseph as husband and the angel's address touches no link.
+  33731 W9.1 (sol, K-S3)
+     ENFORCER: W9.1 -- AGREE -- NEEDS: NO -- [CR4] says "D3 holds both: the flesh from the seed line through the woman, and the source from the Holy Ghost," which is express retention, not concession.
+  33731 W10.1 (sol, K-W)
+     ENFORCER: W10.1 -- AGREE -- NEEDS: NO -- [CR2] says "My link does not rest on the phrase 'born of a woman' alone. It rests on how Matthew's genealogy is built," so the grant gives up no footing D1 needs.
+  33731 W11.1 (sol, K-W)
+     ENFORCER: W11.1 -- AGREE -- NEEDS: NO -- [CR2] says "Only Luke 1:35 is followed by 'born of thee'," so granting that the verbs carry power and presence gives up no footing D3 needs.
+  33731 W12.1 (sol, K-W)
+     ENFORCER: W12.1 -- AGREE -- NEEDS: NO -- [CR3] says "I rest nothing on the idiom 'born of a woman' for this link" while keeping "the line of begetting carries to Joseph and then passes to Mary."
+  33731 W13.1 (sol, K-W)
+     ENFORCER: W13.1 -- AGREE -- NEEDS: NO -- [CR4] says "D4 holds him as husband and as father by reckoning," so granting Joseph is called "husband" gives up no footing D3 needs.
+  33731 W14.1 (sol, K-W)
+     ENFORCER: W14.1 -- AGREE -- NEEDS: NO -- [CR4] keeps D3 as "the stated source of the conception is the Holy Ghost," so granting the title appears first gives up no footing.
+  33731 W15.1 (sol, K-W)
+     ENFORCER: W15.1 -- AGREE -- NEEDS: NO -- [CR4] keeps D3 as "the stated source of the conception is the Holy Ghost," so granting he "took on [him] the seed of Abraham" gives up no footing.
+  33731 W16.1 (sol, K-W)
+     ENFORCER: W16.1 -- AGREE -- NEEDS: NO -- [CR4] keeps D3 as "the stated source of the conception is the Holy Ghost," so granting the resurrection declaration gives up no footing.
+  33731 W17.1 (sol, K-W)
+     ENFORCER: W17.1 -- AGREE -- NEEDS: NO -- [CR4] says "So Joseph is father by reckoning and household and not by begetting," so granting the counting by the house is D4's own retained claim.
+  33774 W1.1 (sol, K-S3)
+     ENFORCER: W1.1 -- AGREE -- NEEDS: NO -- [CR4] says "I grant it. It raises the weight of the change at 1:16," using the granted pedigree point for D1 rather than surrendering it.
+  33774 W2.1 (sol, K-S3)
+     ENFORCER: W2.1 -- AGREE -- NEEDS: NO -- [CR4] says "I grant 'shall be called' stands in both verses. Luke 1:35 carries a ground, the 'therefore also' after the Holy Ghost's coming."
+  33774 W3.1 (sol, K-S3)
+     ENFORCER: W3.1 -- AGREE -- NEEDS: NO -- [CR4] says "The wonder in Elisabeth's case is age and barrenness, and her conception came by her husband (Luke 1:24)," while retaining "Mary asks 'How shall this be,' and her reason is 'seeing I know not a man.'"
+  33774 W4.1 (sol, K-S3)
+     ENFORCER: W4.1 -- AGREE -- NEEDS: NO -- [CR4] says "I grant that" and then uses the coming-upon reading in Acts 1:8 while retaining its Mary application.
+  33774 W5.1 (sol, K-S3)
+     ENFORCER: W5.1 -- AGREE -- NEEDS: NO -- [CR4] says "I grant the verb is of presence. In Luke 1:35 the verb is attached to the conception 'of thee.'"
+  33774 W6.1 (sol, K-S3)
+     ENFORCER: W6.1 -- AGREE -- NEEDS: NO -- [CR4] says "I grant the order: finding (1:18), the angel (1:20), the taking (1:24)," and D3 continues to rest on the conception's source.
+  33774 W7.1 (sol, K-S3)
+     ENFORCER: W7.1 -- AGREE -- NEEDS: NO -- [CR4] says "I grant 'know' is the idiom of Genesis 4:1," applying it to the not-knowing statements.
+  33774 W8.1 (sol, K-S3)
+     ENFORCER: W8.1 -- AGREE -- NEEDS: NO -- [CR4] says "The near date and the sign's content are two statements of the same prophecy," retaining D5's distinction.
+  33774 W9.1 (sol, K-S3)
+     ENFORCER: W9.1 -- AGREE -- NEEDS: NO -- [CR4] says "I grant the margin 'approached' and the sign-children of 8:18. Isaiah 8:3 carries the prophet's own son with his own name."
+  33774 W10.1 (sol, K-S3)
+     ENFORCER: W10.1 -- AGREE -- NEEDS: NO -- [CR4] says "The two datings are of the same period, and I grant it. Each dating attaches to its own named child and its own woman."
+  33774 W11.1 (sol, K-S3)
+     ENFORCER: W11.1 -- AGREE -- NEEDS: NO -- [CR4] says "I grant the prophet and his children are signs, and I grant that 'the LORD' gives them," while saying "The word 'sign' is said of both."
+  33774 W12.1 (sol, K-S3)
+     ENFORCER: W12.1 -- AGREE -- NEEDS: NO -- [CR4] says "I grant the KJV prints 'maid' here," treating it as compatible with its retained reading.
+  33774 W13.1 (sol, K-S3)
+     ENFORCER: W13.1 -- AGREE -- NEEDS: NO -- [CR4] says "I grant the word is the same word," while distinguishing Proverbs 30:19 from Isaiah 7:14.
+  33774 W14.1 (sol, K-W)
+     ENFORCER: W14.1 -- AGREE -- NEEDS: NO -- [CR2] says "I grant that 'born of women' is said of men who have fathers. My link rests on the verb pattern of Matthew 1:2-16 and on 1:18 and 1:20."
+  33774 W15.1 (sol, K-W)
+     ENFORCER: W15.1 -- AGREE -- NEEDS: NO -- [CR2] says "The verbs' range is not in dispute. What matters is that the answer to 'How shall this be, seeing I know not a man?' (1:34) is 'The Holy Ghost shall come upon thee.'"
+  33774 W16.1 (sol, K-W)
+     ENFORCER: W16.1 -- AGREE -- NEEDS: YES -- [CR4] says "I grant it. It raises the weight of the change at 1:16," still using the pedigree-begetting fact for D1.
+  33774 W17.1 (sol, K-W)
+     ENFORCER: W17.1 -- AGREE -- NEEDS: YES -- [CR4] says "I grant 'shall be called' stands in both verses. Luke 1:35 carries a ground, the 'therefore also' after the Holy Ghost's coming."
+  33774 W18.1 (sol, K-W)
+     ENFORCER: W18.1 -- AGREE -- NEEDS: NO -- [CR4] says "The challenger reads 'come upon' as power and presence (C5, P5.1). I grant that," while retaining "The ground it gives for 'Son of God' is therefore the event just named."
+  33774 W19.1 (sol, K-W)
+     ENFORCER: W19.1 -- AGREE -- NEEDS: NO -- [CR4] says "I grant the verb is of presence. In Luke 1:35 the verb is attached to the conception 'of thee.'"
+  33774 W20.1 (sol, K-W)
+     ENFORCER: W20.1 -- AGREE -- NEEDS: YES -- [CR4] says "I grant the order: finding (1:18), the angel (1:20), the taking (1:24)," and retains "The finding is 'before they came together.'"
+  33774 W21.1 (sol, K-W)
+     ENFORCER: W21.1 -- AGREE -- NEEDS: YES -- [CR4] says "I grant 'know' is the idiom of Genesis 4:1," and applies "knew her not" to the birth.
+  33774 W22.1 (sol, K-W)
+     ENFORCER: W22.1 -- AGREE -- NEEDS: NO -- [CR4] says "I grant both measures are of early childhood and both are tied to the fall of the two kings (C1, P1.3)," while retaining "Each dating attaches to its own named child and its own woman."
+  33774 W23.1 (sol, K-W)
+     ENFORCER: W23.1 -- AGREE -- NEEDS: NO -- [CR4] says "I grant the margin 'approached' and the sign-children of 8:18. Isaiah 8:3 carries the prophet's own son with his own name."
+  33798 W1.1 (sol, K-S3)
+     ENFORCER: W1.1 -- AGREE -- NEEDS: NO -- The side writes "The challenger grants a God-prepared body," attributing the point to the opponent rather than conceding a defender link.
+  33798 W2.1 (sol, K-S3)
+     ENFORCER: W2.1 -- AGREE -- NEEDS: NO -- The side writes "I grant both" after the word meanings and does not surrender the retained claim of D3.
+  33798 W3.1 (sol, K-S3)
+     ENFORCER: W3.1 -- AGREE -- NEEDS: NO -- The side says "I grant that Acts 16:13 uses it of a custom" and then distinguishes "Acts 14:19 uses it of a false belief."
+  33798 W4.1 (sol, K-S3)
+     ENFORCER: W4.1 -- AGREE -- NEEDS: NO -- The side says "I grant 'parents' and the house usage," then explains "It names the household of two who bring in the child."
+  33798 W5.1 (sol, K-S3)
+     ENFORCER: W5.1 -- AGREE -- NEEDS: NO -- The side says "I do not claim a verse that names Mary's line" and retains "I claim that Romans 1:3 and Galatians 4:4 name the flesh and the woman as the Son's making."
+  33798 W6.1 (sol, K-S3)
+     ENFORCER: W6.1 -- AGREE -- NEEDS: NO -- The side says "I grant two objects of one verb" and retains "So the seed of David reaches the Son through the woman."
+  33798 W7.1 (sol, K-S3)
+     ENFORCER: W7.1 -- AGREE -- NEEDS: NO -- The side says "I grant loins language reaches descent at distance" and retains "The loins in Acts 2:30 are David's."
+  33798 W8.1 (sol, K-S3)
+     ENFORCER: W8.1 -- AGREE -- NEEDS: NO -- The side says "I grant that 'seed' is said of a woman's offspring in the verse where the knowing husband stands (Genesis 4:25)."
+  33798 W9.1 (sol, K-S3)
+     ENFORCER: W9.1 -- AGREE -- NEEDS: NO -- The side says "I grant the enrolment registers by Joseph's house and that Joseph is 'thou son of David'" and adds "That is the legal register."
+  33798 W10.1 (sol, K-S3)
+     ENFORCER: W10.1 -- AGREE -- NEEDS: NO -- The side says "I grant it (a round-3 grant that stands)," while the paragraph retains the combined Galatians 4:4 and conception argument.
+  33798 W11.1 (sol, K-W)
+     ENFORCER: W11.1 -- AGREE -- NEEDS: NO -- The side says "I grant that this is the ordinary means" and immediately adds "The Gospel gives the order of events for this child."
+  33798 W12.1 (sol, K-W)
+     ENFORCER: W12.1 -- AGREE -- NEEDS: NO -- The side concedes "born of" alone does not exclude a father and retains "D1 does not stand alone. It stands with D2."
+  33798 W13.1 (sol, K-W)
+     ENFORCER: W13.1 -- AGREE -- NEEDS: NO -- The side grants that "of the house of David" in Luke 1:27 follows Joseph and says "The footing for D5 is section A."
+  33798 W14.1 (sol, K-W)
+     ENFORCER: W14.1 -- AGREE -- NEEDS: NO -- The side concedes "her seed" does not by itself exclude a father and adds "It is offered as fitting only, and carries no weight on its own."
+  33798 W15.1 (sol, K-W)
+     ENFORCER: W15.1 -- AGREE -- NEEDS: NO -- The side says "I drop the limb that the passive verb and the feminine relative, taken alone, name who begat."
+  33798 W16.1 (sol, K-W)
+     ENFORCER: W16.1 -- AGREE -- NEEDS: YES -- The side says "I grant ex hēs (out of whom, feminine) names the bearer," and the retained link still uses the feminine relative with Matthew 1:20.
+  33798 W17.1 (sol, K-W)
+     ENFORCER: W17.1 -- AGREE -- NEEDS: YES -- The side says "I grant the line runs to Joseph," and CR1 already said "The 'begat' chain runs to Joseph and ends."
+  33798 W18.1 (sol, K-W)
+     ENFORCER: W18.1 -- AGREE -- NEEDS: NO -- The side says "I grant it is a class phrase said of men with fathers," then states "My narrowed link does not rest on 'born of' alone."
+  33798 W19.1 (sol, K-W)
+     ENFORCER: W19.1 -- AGREE -- NEEDS: YES -- The side says "I grant the espousal and the dating," and retains "the child already in her before any coming together."
+  33798 W20.1 (sol, K-W)
+     ENFORCER: W20.1 -- AGREE -- NEEDS: NO -- The side says "I grant the father is named there as the one who 'knew'," without transferring Adam's act to Joseph.
+  33798 W21.1 (sol, K-W)
+     ENFORCER: W21.1 -- AGREE -- NEEDS: YES -- The side says "I grant that ginomai (G1096) stands in both verses," then argues "Each verse fills it with its own object."
+  33798 W22.1 (sol, K-W)
+     ENFORCER: W22.1 -- AGREE -- NEEDS: YES -- The side says "I grant en gastri echousa, 'having in the womb' (gastēr, G1064)," and retains the womb-child argument.
+  33798 W23.1 (sol, K-W)
+     ENFORCER: W23.1 -- AGREE -- NEEDS: YES -- The side says "I grant that the body is God-prepared," and retains "A God-prepared body with a named father is the record's own pattern."
+  33798 W24.1 (sol, K-W)
+     ENFORCER: W24.1 -- AGREE -- NEEDS: YES -- The side says "I grant the same ginōskō, and heōs (G2193), 'until'," and retains "Matthew 1:24 opens that span."
+  33798 W25.1 (sol, K-W)
+     ENFORCER: W25.1 -- AGREE -- NEEDS: YES -- The side says "I grant synerchomai, whose lexicon reads 'associate with, or (specially), cohabit,'" and retains the association reading.
+  33798 W26.1 (sol, K-W)
+     ENFORCER: W26.1 -- AGREE -- NEEDS: YES -- The side says "I grant prostassō (G4367), 'enjoin, command,'" and retains "The naming is by command and does not mark him as begetter."
+  33798 W27.1 (sol, K-W)
+     ENFORCER: W27.1 -- AGREE -- NEEDS: YES -- The side says "I grant osphys at distance," and retains "Descent at distance is a chain of fathers' loins, one 'begat' per step."
+  33798 W28.1 (sol, K-W)
+     ENFORCER: W28.1 -- AGREE -- NEEDS: YES -- The side says "I grant zera' (H2233), 'seed... posterity,'" and retains "The woman's seed is the child of the husband who knew her."
+  33828 W1.1 (sol, K-S3)
+     ENFORCER: W1.1 -- DISAGREE -- NEEDS: YES -- 'I drop the word "alone".' narrows D3 and gives up part of the declared link, so it should be COUNTED, not NOT HELD.
+  33828 W2.1 (sol, K-S3)
+     ENFORCER: W2.1 -- AGREE -- NEEDS: NO -- "I grant these rows use the title at a later point." concedes later use only, not D1's conception ground.
+  33828 W3.1 (sol, K-S3)
+     ENFORCER: W3.1 -- AGREE -- NEEDS: NO -- "I grant the alarm and the form \"fear not... for\"." concedes emotional description and form, not the retained link.
+  33828 W4.1 (sol, K-S3)
+     ENFORCER: W4.1 -- AGREE -- NEEDS: NO -- "I grant the tense and the future." accepts temporal grammar without surrendering the answer to Mary's question.
+  33828 W5.1 (sol, K-S3)
+     ENFORCER: W5.1 -- AGREE -- NEEDS: NO -- "I grant the name \"wife\" at betrothal." concedes status, not an accomplished act of knowing.
+  33828 W6.1 (sol, K-S3)
+     ENFORCER: W6.1 -- AGREE -- NEEDS: NO -- "I grant that Luke 1:13 says \"thy wife Elisabeth shall bear thee a son\"." concerns Elisabeth's conception, not Mary's.
+  33828 W7.1 (sol, K-S3)
+     ENFORCER: W7.1 -- AGREE -- NEEDS: NO -- "Elisabeth's conception came through her husband, as Luke 1:13 shows." identifies Elisabeth's means and does not surrender Mary's disputed means.
+  33828 W8.1 (sol, K-S3)
+     ENFORCER: W8.1 -- AGREE -- NEEDS: NO -- "The covenant title is real on both rows." accepts the title while retaining the conception ground.
+  33828 W9.1 (sol, K-S3)
+     ENFORCER: W9.1 -- AGREE -- NEEDS: NO -- "I grant the turn of voice and that Matthew 1:3 and 1:5 name Thamar and Rachab." accepts the textual comparison the narrowed D3 rests on.
+  33828 W10.1 (sol, K-S3)
+     ENFORCER: W10.1 -- AGREE -- NEEDS: NO -- "I grant the remote reach (C6 P6.1)." accepts remote ancestry, not Joseph's biological fatherhood.
+  33828 W11.1 (sol, K-S3)
+     ENFORCER: W11.1 -- AGREE -- NEEDS: NO -- "I grant the woman's seed with the husband's knowing in one row." concerns Eve's case, not Mary's.
+  33828 W12.1 (sol, K-S3)
+     ENFORCER: W12.1 -- AGREE -- NEEDS: NO -- "I accept the challenger's gloss of law and usage." accepts lexical range, not the challenged verdict.
+  33828 W13.1 (sol, K-S3)
+     ENFORCER: W13.1 -- AGREE -- NEEDS: NO -- "I grant that \"think\" and \"supposing\" are the verb of opinion." accepts the lexical point without withdrawing the retained argument.
+  33828 W14.1 (sol, K-S3)
+     ENFORCER: W14.1 -- DISAGREE -- NEEDS: YES -- "I keep only that the register records descent by house" gives up part of D4 and should be COUNTED, not NOT HELD.
+  33828 W15.1 (sol, K-S3)
+     ENFORCER: W15.1 -- AGREE -- NEEDS: NO -- "I grant that the row names Jarha as the one she bore to." accepts the example's named begetter without surrendering the house-register distinction.
+  33828 W16.1 (sol, K-S3)
+     ENFORCER: W16.1 -- AGREE -- NEEDS: NO -- "I grant that the remote \"son\" is filled by \"begat\" at each step." accepts the preceding pattern and retains the final change.
+  33828 W17.1 (sol, K-S3)
+     ENFORCER: W17.1 -- AGREE -- NEEDS: NO -- "I grant that \"seed of David according to the flesh\" is real flesh and real descent." concedes bodily descent, which the retained construction also claims.
+  33828 W18.1 (sol, K-S3)
+     ENFORCER: W18.1 -- AGREE -- NEEDS: NO -- "so that phrase alone proves nothing for Jesus" abandons only reliance on the maternal idiom alone, not the combined conception argument.
+  33828 W19.1 (sol, K-W)
+     ENFORCER: W19.1 -- AGREE -- NEEDS: NO -- "the thing begotten in Mary is \"of the Holy Ghost\", so the Holy Ghost is its source" carries the retained source fact without the dropped exhaustive-source premise.
+  33828 W20.1 (sol, K-W)
+     ENFORCER: W20.1 -- AGREE -- NEEDS: YES -- "so Joseph's not-knowing runs through the conceiving and the carrying" reasserts the withdrawn extension in [CR4].
+  33828 W21.1 (sol, K-W)
+     ENFORCER: W21.1 -- AGREE -- NEEDS: NO -- "the thing begotten in Mary is of the Holy Ghost" carries the retained combined-source claim, not the dropped preparation-alone claim.
+  33828 W22.1 (sol, K-W)
+     ENFORCER: W22.1 -- AGREE -- NEEDS: NO -- "the birth-line of Matthew 1 gives \"begat\" to every father up to Joseph, then writes \"of whom [feminine] was born Jesus\"" retains the formula's change without the dropped "alone".
+  33828 W23.1 (sol, K-W)
+     ENFORCER: W23.1 -- AGREE -- NEEDS: YES -- "a ground in the conceiving" shows the retained conception footing that the later-use grant does not withdraw.
+  33828 W24.1 (sol, K-W)
+     ENFORCER: W24.1 -- AGREE -- NEEDS: YES -- "the grounding words are the Holy Ghost's coming and the power of the Highest" shows the retained source ground the alarm grant does not withdraw.
+  33828 W25.1 (sol, K-W)
+     ENFORCER: W25.1 -- AGREE -- NEEDS: YES -- "The Holy Ghost shall come upon thee" remains the retained proposed means, so the tense grant withdraws no source.
+  33828 W26.1 (sol, K-W)
+     ENFORCER: W26.1 -- AGREE -- NEEDS: YES -- "D5: KEPT, resting on D1, D2 and the narrowed D3 and D4" shows the link retained despite the betrothal-name grant.
+  33828 W27.1 (sol, K-W)
+     ENFORCER: W27.1 -- AGREE -- NEEDS: YES -- "D5: KEPT, resting on D1, D2 and the narrowed D3 and D4" shows the Mary-source link retained despite the Elisabeth grant.
+  33828 W28.1 (sol, K-W)
+     ENFORCER: W28.1 -- AGREE -- NEEDS: YES -- "the active verb is dropped, the passive egennēthē" is the retained textual distinction the voice-and-names grant does not withdraw.
+  33828 W29.1 (sol, K-W)
+     ENFORCER: W29.1 -- AGREE -- NEEDS: YES -- "So, at [L4] on these rows, Joseph knew Mary his wife within the espousal" retains the later-conception claim despite granting her state at the announcement.
+  33828 W30.1 (sol, K-W)
+     ENFORCER: W30.1 -- AGREE -- NEEDS: YES -- "The link uses the name for something else: the right of the union" retains the proposed later act despite the wife-and-virgin grant.
+  33828 W31.1 (sol, K-W)
+     ENFORCER: W31.1 -- AGREE -- NEEDS: YES -- "its context gives its verdict" retains the contextual argument despite the "supposed" grant.
+  33828 W32.1 (sol, K-W)
+     ENFORCER: W32.1 -- AGREE -- NEEDS: YES -- "the verb carries the reckoning and Luke's context carries the verdict" retains the contextual argument despite the "think" grant.
+  33828 W33.1 (sol, K-W)
+     ENFORCER: W33.1 -- AGREE -- NEEDS: YES -- "the coming grounds a holiness and a calling" retains the disputed interpretation despite granting the clause order.
+  33828 W34.1 (sol, K-W)
+     ENFORCER: W34.1 -- AGREE -- NEEDS: YES -- "The answer's verbs are the coming that empowers" retains the interpretation of the answer's means despite granting that 1:35 answers 1:34.
+  33828 W35.1 (sol, K-W)
+     ENFORCER: W35.1 -- AGREE -- NEEDS: YES -- "Its own example, Elisabeth (1:36), is God's ability working through her husband Zacharias" retains the comparison despite granting the ground.
+  33828 W36.1 (sol, K-W)
+     ENFORCER: W36.1 -- AGREE -- NEEDS: YES -- "The dio kai (\"therefore\") in v.35 connects back to v.32, not forward to biological divine paternity" retains the disputed covenant-origin reading despite granting the words "of the Holy Ghost".
+  33828 W37.1 (sol, K-W)
+     ENFORCER: W37.1 -- AGREE -- NEEDS: NO -- "I drop \"a husband in awe\"." withdraws only the awe explanation, which the narrowed link no longer claims.
+  33828 W38.1 (sol, K-W)
+     ENFORCER: W38.1 -- AGREE -- NEEDS: NO -- "I grant it and have dropped the awe limb." drops only the emotional limb while preserving the narrowed account.
+  33846 W1.1 (sol, K-S3)
+     ENFORCER: W1.1 -- AGREE -- NEEDS: NO -- The defender's grant gives up no part of its link, which it keeps on its own words: "The pedigree gives the line to David, and 1:18-20 gives the manner of the birth."
+  33846 W2.1 (sol, K-S3)
+     ENFORCER: W2.1 -- AGREE -- NEEDS: NO -- The grant leaves the link's footing standing in the side's own words: "What Matthew 1:16 states at the next step is "of whom was born Jesus," a clause with the feminine hēs."
+  33846 W3.1 (sol, K-S3)
+     ENFORCER: W3.1 -- AGREE -- NEEDS: NO -- The side keeps its grounded answer: "In Matthew 1:20 the begotten is "in her," in the womb, and Matthew 1:18 says "found with child.""
+  33846 W4.1 (sol, K-S3)
+     ENFORCER: W4.1 -- AGREE -- NEEDS: NO -- The narrowing is not a declared link, for the side says "D2 rests on 1:18 and 1:20, where the source is stated."
+  33846 W5.1 (sol, K-S3)
+     ENFORCER: W5.1 -- AGREE -- NEEDS: NO -- The granted status is not footing D2 needs, which stands on "before they came together, she was found with child of the Holy Ghost."
+  33846 W6.1 (sol, K-S3)
+     ENFORCER: W6.1 -- AGREE -- NEEDS: NO -- The temporal grant leaves D3's answer intact: "The question has her state as its ground and the conceiving as its object."
+  33846 W7.1 (sol, K-S3)
+     ENFORCER: W7.1 -- AGREE -- NEEDS: NO -- The side retains its contextual point: "In Luke 1:35 the outcome stated is "that holy thing which shall be born of thee.""
+  33846 W8.1 (sol, K-S3)
+     ENFORCER: W8.1 -- AGREE -- NEEDS: NO -- The grant of the parallel leaves the distinction stated: "In Luke 1:35 the same coming and overshadowing are followed by the one "born of thee.""
+  33846 W9.1 (sol, K-S3)
+     ENFORCER: W9.1 -- AGREE -- NEEDS: NO -- The grant of address gives up no footing, the side keeping "The verse gives God's choosing of a son David already has".
+  33846 W10.1 (sol, K-S3)
+     ENFORCER: W10.1 -- AGREE -- NEEDS: NO -- D3 rests on its own ground, "The how she is given is the Holy Ghost and the power of the Highest", not on the granted point.
+  33846 W11.1 (sol, K-S3)
+     ENFORCER: W11.1 -- AGREE -- NEEDS: NO -- The lexical grant leaves the correction argument standing: "For Luke 3:23 the correction is in Luke 1:34-35, where the one "born of thee" has the Holy Ghost as source."
+  33846 W12.1 (sol, K-S3)
+     ENFORCER: W12.1 -- AGREE -- NEEDS: NO -- The grant supports rather than surrenders the link: "Ezra 2:61 shows a man called by a house not his by birth, so house-reckoning is a matter of law and naming."
+  33846 W13.1 (sol, K-S3)
+     ENFORCER: W13.1 -- AGREE -- NEEDS: NO -- The grant of Mary's words leaves the household reading in place: "The child's reply in the next verse is "my Father's business.""
+  33846 W14.1 (sol, K-S3)
+     ENFORCER: W14.1 -- AGREE -- NEEDS: NO -- The covenant-title grant gives up no footing, the side adding "Luke 2:51 states that he "was subject unto them," which is the obedience of a child in a household".
+  33846 W15.1 (sol, K-S3)
+     ENFORCER: W15.1 -- AGREE -- NEEDS: NO -- The naming grant leaves the side's use of the naming intact: "Joseph took Mary and called the child's name, and so received him into his house."
+  33846 W16.1 (sol, K-S3)
+     ENFORCER: W16.1 -- AGREE -- NEEDS: NO -- The shared-descent grant leaves the route asserted: "That descent is carried by the legal house, "Joseph, thou son of David" (Matthew 1:20; Luke 2:4), and by the mother, "born of thee" (Luke 1:35)."
+  33846 W17.1 (sol, K-W)
+     ENFORCER: W17.1 -- AGREE -- NEEDS: YES -- The side still claims the granted facts and says so: "The question is how that descent reaches him."
+  33846 W18.1 (sol, K-W)
+     ENFORCER: W18.1 -- AGREE -- NEEDS: YES -- The side keeps the footing the grant touches: "the one the birth is "of" is Mary."
+  33846 W19.1 (sol, K-W)
+     ENFORCER: W19.1 -- AGREE -- NEEDS: YES -- The side keeps its cause-and-result footing: "The reply gives the Holy Ghost and the power of the Highest as the cause of the birth "of thee"".
+  33846 W20.1 (sol, K-W)
+     ENFORCER: W20.1 -- AGREE -- NEEDS: YES -- The side keeps the contextual comparison: "Luke's own uses of "supposing" in 2:44 and Acts 14:19 are of beliefs that turned out wrong".
+  33846 W21.1 (sol, K-W)
+     ENFORCER: W21.1 -- AGREE -- NEEDS: NO -- The conceded force is not the link's declared role, and the side keeps "Together they corroborate D1 to D3, and I rest nothing on D5 alone."
+  33846 W22.1 (sol, K-W)
+     ENFORCER: W22.1 -- AGREE -- NEEDS: YES -- The side still claims the granted propositions: "The heading names the child's descent."
+  33846 W23.1 (sol, K-W)
+     ENFORCER: W23.1 -- AGREE -- NEEDS: YES -- The quoted words stand in CR4 and rest the inference again on the withdrawn proof: "This stands on [L1] 1:20 and 1:18, [L2] G1080 and G5399, and [L3] 1 John 5:1."
+  33846 W24.1 (sol, K-W)
+     ENFORCER: W24.1 -- DISAGREE -- NEEDS: NO -- The side keeps the carry-over dropped in its own words ("1 Chronicles 28:6 is spoken to a father about a son he begat, and it does not carry over, so I drop it"), and the later "Answered with 1 Chronicles 28:6 above" refers to that distinction, not to the 
+  33846 W25.1 (sol, K-W)
+     ENFORCER: W25.1 -- AGREE -- NEEDS: NO -- The side narrowed away the proof the grant concerns and keeps its footing: "Matthew 1:18 and 1:20 name the Holy Ghost as the source of what was conceived in Mary before she and Joseph came together".
+  33846 W26.1 (sol, K-W)
+     ENFORCER: W26.1 -- AGREE -- NEEDS: YES -- The side keeps the footing the status grant touches: "Matthew 1:18 still puts the finding "before they came together.""
+  33846 W27.1 (sol, K-W)
+     ENFORCER: W27.1 -- AGREE -- NEEDS: YES -- The challenger keeps its own dating account: "The finding dates before that taking, while she was already "thy wife" (1:20)."
+  33846 W28.1 (sol, K-W)
+     ENFORCER: W28.1 -- AGREE -- NEEDS: YES -- The challenger keeps its reading in its own words: "It is the source 1 John 5:1 states, with the same verb and the same ek, of men who have fathers."
+  33846 W29.1 (sol, K-W)
+     ENFORCER: W29.1 -- AGREE -- NEEDS: YES -- The challenger keeps the comparison: "In one verse it names the son David begat, "Solomon thy son," and God's claim, "my son.""
+  33846 W30.1 (sol, K-W)
+     ENFORCER: W30.1 -- AGREE -- NEEDS: YES -- The challenger keeps its pedigree account: "That is the entry of a pedigree, and the pedigree is reckoned by the father's house (Numbers 1:18)."
+  33846 W31.1 (sol, K-W)
+     ENFORCER: W31.1 -- AGREE -- NEEDS: YES -- The challenger keeps its loins footing: "The begat brings David's loins to Joseph."
+  33846 W32.1 (sol, K-W)
+     ENFORCER: W32.1 -- AGREE -- NEEDS: YES -- The challenger keeps the fleshly-seed claim: "To become David's seed is to come of David's male seed, "the fruit of his loins.""
+  33846 W33.1 (sol, K-W)
+     ENFORCER: W33.1 -- AGREE -- NEEDS: YES -- The challenger keeps its ek-origin reading: "The ek-origin is the one 1 John 5:1 gives men who have fathers."
+  33846 W34.1 (sol, K-W)
+     ENFORCER: W34.1 -- AGREE -- NEEDS: YES -- The challenger keeps its account of the naming verbs: "Its verbs are empowerment and presence (Acts 1:8; Luke 9:34)."
+
