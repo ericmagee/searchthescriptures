@@ -59,3 +59,12 @@ A2. Stored runs with no confirmed closing line: Panel Cure Check and Send Back B
 - V7 enforcer_log rows the rev 3 chain produces that live does not: rolled-back insert through record_enforcer_log.
 - V8 Stored executions with no confirmed closing line (34299): Panel Cure Check and Send Back Build outputs equal live.
 - NOT REACHED expected: Alt and R2 Alt Send Back Build (no stored alternate send-back in 34626).
+
+# JOINT FILE labels (W1 Wall 4254: JC = /mnt/project-files/wall2024/joint_GFS_QRD_F3A2s_plus_KSR_ECB_rev3.json; JB = pkgKSR/joint_GFS_QRD_F3A2s.json, the joint base without rev 3). Committed before any run of JC or JB by me. I do not grade the pkgGFC part (my build); I state where its effect shows.
+- J1 Assembly: JB's nodes equal, byte for byte, s110 except QR Check, QR Final (equal to pkgQRD's file), Second Alternate?, Alternate Merge (equal to pkgF3A rev 2s ALL) and Shared Library (equal to the pkgGFC rev s file). JC differs from JB only in Shared Library and the three Send Back Build nodes; the three Send Back Build nodes in JC are byte-equal to those of the s110 rev 3 candidate. Sizes by my diff. Connections equal.
+- J2 Source check: for every library stub node, the source rebuilt from JC differs from the source rebuilt from the s110 rev 3 candidate in exactly the lines in which the pkgGFC rev s file differs from s110 for that node, and nowhere else.
+- J3 Chain on 34626 with JC to the written rows: KEYSTONE D6 BROKEN for all three, CHALLENGER WINS; uncured: terra 0, sol 0; luna as JB gives (expected 1, the pkgGFC effect; stated, not graded). JC rows differ from JB rows in verdict_raw only. No gate item against terra or sol. 10 items withheld and listed.
+- J4 My 15 KEYSTONE line forms on JC: same outcome per form as on s110 rev 3.
+- J5 My upstream plant (sol's link 6 lines judge-written DEFENDER LINK BROKEN, sol's stored replies changing them): JC ends BROKEN on that link with no gate item naming KEYSTONE or D6. Ablations of K2, K3, K5 are NOT rebuilt on the joint base; J2 is the ground for carrying them over.
+- J6 Execution 34299 (no confirmed closing line; stopped at Alternate Build): Panel Cure Check, Send Back Build, Send Back Record, Gate Build, Gate Record rerun with live, JB and JC sources on the stored inputs. JC equals JB for each node. JB against live: stated per node (Gate Record is expected to differ by pkgGFC).
+- J7 QR Check, QR Final, Second Alternate?, Alternate Merge in JC: byte-equal to JB (not regraded).
