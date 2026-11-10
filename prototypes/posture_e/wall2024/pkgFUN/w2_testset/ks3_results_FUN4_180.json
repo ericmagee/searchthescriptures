@@ -1316,7 +1316,7 @@
   "why": "Bold keyword, refusal on the next line. (W3 ruling 1, Wall 3933: label stays UNCURED; the reader gets only the RESPONSE line, a stated limit)",
   "read": {
    "pkgLIB/strip_FUN4/patched/": "CURED",
-   "pkgLIB/strip_FUN4_KSL/patched/": "CURED"
+   "pkgLIB/strip_FUN4_KSL/patched/": "UNCURED"
   }
  },
  {
@@ -1425,8 +1425,8 @@
   "ans": "COUNTED. Is it a concession? No.",
   "why": "Relabeled CURED by W3 ruling (Wall 3933, label ruling 2): code cannot tell it from \"Is the grant a courtesy? No.\"; under an enforced rule the doubtful answer reads CURED.",
   "read": {
-   "pkgLIB/strip_FUN4/patched/": "UNCURED",
-   "pkgLIB/strip_FUN4_KSL/patched/": "UNCURED"
+   "pkgLIB/strip_FUN4/patched/": "CURED",
+   "pkgLIB/strip_FUN4_KSL/patched/": "CURED"
   }
  },
  {
@@ -1436,7 +1436,7 @@
   "why": "Paragraph retracts the count. (W3 ruling 1, Wall 3933: label stays UNCURED; the reader gets only the RESPONSE line, a stated limit)",
   "read": {
    "pkgLIB/strip_FUN4/patched/": "CURED",
-   "pkgLIB/strip_FUN4_KSL/patched/": "UNCURED"
+   "pkgLIB/strip_FUN4_KSL/patched/": "CURED"
   }
  },
  {
@@ -1465,8 +1465,8 @@
   "ans": "COUNTED. The defender calls it courtesy. It is not.",
   "why": "W3: \"It is not\" answers the defender's claim.",
   "read": {
-   "pkgLIB/strip_FUN4/patched/": "UNCURED",
-   "pkgLIB/strip_FUN4_KSL/patched/": "UNCURED"
+   "pkgLIB/strip_FUN4/patched/": "CURED",
+   "pkgLIB/strip_FUN4_KSL/patched/": "CURED"
   }
  },
  {
@@ -1475,8 +1475,8 @@
   "ans": "COUNTED. The defender calls it a courtesy. That is wrong.",
   "why": "W3.",
   "read": {
-   "pkgLIB/strip_FUN4/patched/": "UNCURED",
-   "pkgLIB/strip_FUN4_KSL/patched/": "UNCURED"
+   "pkgLIB/strip_FUN4/patched/": "CURED",
+   "pkgLIB/strip_FUN4_KSL/patched/": "CURED"
   }
  },
  {
@@ -1485,8 +1485,8 @@
   "ans": "COUNTED. The defender says the grant is courtesy; I disagree.",
   "why": "W3.",
   "read": {
-   "pkgLIB/strip_FUN4/patched/": "UNCURED",
-   "pkgLIB/strip_FUN4_KSL/patched/": "UNCURED"
+   "pkgLIB/strip_FUN4/patched/": "CURED",
+   "pkgLIB/strip_FUN4_KSL/patched/": "CURED"
   }
  },
  {
@@ -1495,8 +1495,8 @@
   "ans": "COUNTED. Is the grant a courtesy? No.",
   "why": "W3.",
   "read": {
-   "pkgLIB/strip_FUN4/patched/": "UNCURED",
-   "pkgLIB/strip_FUN4_KSL/patched/": "UNCURED"
+   "pkgLIB/strip_FUN4/patched/": "CURED",
+   "pkgLIB/strip_FUN4_KSL/patched/": "CURED"
   }
  },
  {
@@ -1505,8 +1505,8 @@
   "ans": "COUNTED. The defender pleads the courtesy rule. It does not apply.",
   "why": "W3.",
   "read": {
-   "pkgLIB/strip_FUN4/patched/": "UNCURED",
-   "pkgLIB/strip_FUN4_KSL/patched/": "UNCURED"
+   "pkgLIB/strip_FUN4/patched/": "CURED",
+   "pkgLIB/strip_FUN4_KSL/patched/": "CURED"
   }
  },
  {
@@ -1515,8 +1515,8 @@
   "ans": "COUNTED. Before the close: not counted. Now it is in the count.",
   "why": "W3: corrects the count.",
   "read": {
-   "pkgLIB/strip_FUN4/patched/": "UNCURED",
-   "pkgLIB/strip_FUN4_KSL/patched/": "UNCURED"
+   "pkgLIB/strip_FUN4/patched/": "CURED",
+   "pkgLIB/strip_FUN4_KSL/patched/": "CURED"
   }
  },
  {
@@ -1525,8 +1525,8 @@
   "ans": "COUNTED. The defender writes \"I keep D6 as declared\". That cannot stand.",
   "why": "W3.",
   "read": {
-   "pkgLIB/strip_FUN4/patched/": "UNCURED",
-   "pkgLIB/strip_FUN4_KSL/patched/": "UNCURED"
+   "pkgLIB/strip_FUN4/patched/": "CURED",
+   "pkgLIB/strip_FUN4_KSL/patched/": "CURED"
   }
  },
  {
@@ -1535,8 +1535,8 @@
   "ans": "COUNTED. The defender says he conceded nothing. Not so.",
   "why": "W3.",
   "read": {
-   "pkgLIB/strip_FUN4/patched/": "UNCURED",
-   "pkgLIB/strip_FUN4_KSL/patched/": "UNCURED"
+   "pkgLIB/strip_FUN4/patched/": "CURED",
+   "pkgLIB/strip_FUN4_KSL/patched/": "CURED"
   }
  },
  {
@@ -1545,8 +1545,8 @@
   "ans": "COUNTED. The defender calls the grant a courtesy. This is an error.",
   "why": "W3.",
   "read": {
-   "pkgLIB/strip_FUN4/patched/": "UNCURED",
-   "pkgLIB/strip_FUN4_KSL/patched/": "UNCURED"
+   "pkgLIB/strip_FUN4/patched/": "CURED",
+   "pkgLIB/strip_FUN4_KSL/patched/": "CURED"
   }
  },
  {
@@ -1555,8 +1555,8 @@
   "ans": "COUNTED. D6 as a bare statement was dropped in round 3. Withdrawn.",
   "why": "W3: \"Withdrawn\" describes D6.",
   "read": {
-   "pkgLIB/strip_FUN4/patched/": "UNCURED",
-   "pkgLIB/strip_FUN4_KSL/patched/": "UNCURED"
+   "pkgLIB/strip_FUN4/patched/": "CURED",
+   "pkgLIB/strip_FUN4_KSL/patched/": "CURED"
   }
  },
  {
@@ -1565,8 +1565,8 @@
   "ans": "COUNTED. The defender says it gives up nothing. Wrong.",
   "why": "W3.",
   "read": {
-   "pkgLIB/strip_FUN4/patched/": "UNCURED",
-   "pkgLIB/strip_FUN4_KSL/patched/": "UNCURED"
+   "pkgLIB/strip_FUN4/patched/": "CURED",
+   "pkgLIB/strip_FUN4_KSL/patched/": "CURED"
   }
  },
  {
@@ -1575,8 +1575,8 @@
   "ans": "COUNTED. The defender claims it is only a courtesy. That is not right.",
   "why": "W3.",
   "read": {
-   "pkgLIB/strip_FUN4/patched/": "UNCURED",
-   "pkgLIB/strip_FUN4_KSL/patched/": "UNCURED"
+   "pkgLIB/strip_FUN4/patched/": "CURED",
+   "pkgLIB/strip_FUN4_KSL/patched/": "CURED"
   }
  },
  {
@@ -1585,8 +1585,8 @@
   "ans": "COUNTED. The defender says the keystone is untouched; I do not agree.",
   "why": "W3.",
   "read": {
-   "pkgLIB/strip_FUN4/patched/": "UNCURED",
-   "pkgLIB/strip_FUN4_KSL/patched/": "UNCURED"
+   "pkgLIB/strip_FUN4/patched/": "CURED",
+   "pkgLIB/strip_FUN4_KSL/patched/": "CURED"
   }
  },
  {
@@ -1595,8 +1595,8 @@
   "ans": "COUNTED. The defender treats it as courtesy. I reject that.",
   "why": "W3.",
   "read": {
-   "pkgLIB/strip_FUN4/patched/": "UNCURED",
-   "pkgLIB/strip_FUN4_KSL/patched/": "UNCURED"
+   "pkgLIB/strip_FUN4/patched/": "CURED",
+   "pkgLIB/strip_FUN4_KSL/patched/": "CURED"
   }
  },
  {
@@ -1615,8 +1615,8 @@
   "ans": "COUNTED. The defender says D6 stands whole. It cannot stand.",
   "why": "W3.",
   "read": {
-   "pkgLIB/strip_FUN4/patched/": "UNCURED",
-   "pkgLIB/strip_FUN4_KSL/patched/": "UNCURED"
+   "pkgLIB/strip_FUN4/patched/": "CURED",
+   "pkgLIB/strip_FUN4_KSL/patched/": "CURED"
   }
  },
  {
@@ -1625,8 +1625,8 @@
   "ans": "COUNTED. The grant is in round 4. I do not agree.",
   "why": "W3 control: the sentence before is neutral, so \"I do not agree\" refuses the count.",
   "read": {
-   "pkgLIB/strip_FUN4/patched/": "UNCURED",
-   "pkgLIB/strip_FUN4_KSL/patched/": "UNCURED"
+   "pkgLIB/strip_FUN4/patched/": "CURED",
+   "pkgLIB/strip_FUN4_KSL/patched/": "CURED"
   }
  },
  {
@@ -1635,8 +1635,8 @@
   "ans": "COUNTED. I have read the note. That is wrong.",
   "why": "W3 control.",
   "read": {
-   "pkgLIB/strip_FUN4/patched/": "UNCURED",
-   "pkgLIB/strip_FUN4_KSL/patched/": "UNCURED"
+   "pkgLIB/strip_FUN4/patched/": "CURED",
+   "pkgLIB/strip_FUN4_KSL/patched/": "CURED"
   }
  },
  {
@@ -1665,8 +1665,8 @@
   "ans": "COUNTED. The defender says round 3 grants nothing. That is false.",
   "why": "Points back at the defender's claim.",
   "read": {
-   "pkgLIB/strip_FUN4/patched/": "UNCURED",
-   "pkgLIB/strip_FUN4_KSL/patched/": "UNCURED"
+   "pkgLIB/strip_FUN4/patched/": "CURED",
+   "pkgLIB/strip_FUN4_KSL/patched/": "CURED"
   }
  },
  {
@@ -1705,8 +1705,8 @@
   "ans": "COUNTED. Does D6 survive the grant? No.",
   "why": "Question about D6 answered no.",
   "read": {
-   "pkgLIB/strip_FUN4/patched/": "UNCURED",
-   "pkgLIB/strip_FUN4_KSL/patched/": "UNCURED"
+   "pkgLIB/strip_FUN4/patched/": "CURED",
+   "pkgLIB/strip_FUN4_KSL/patched/": "CURED"
   }
  },
  {
@@ -1715,8 +1715,8 @@
   "ans": "COUNTED. The defender calls it a mere courtesy; that is mistaken.",
   "why": "Points back at the defender.",
   "read": {
-   "pkgLIB/strip_FUN4/patched/": "UNCURED",
-   "pkgLIB/strip_FUN4_KSL/patched/": "UNCURED"
+   "pkgLIB/strip_FUN4/patched/": "CURED",
+   "pkgLIB/strip_FUN4_KSL/patched/": "CURED"
   }
  },
  {
@@ -1735,8 +1735,8 @@
   "ans": "COUNTED. The defender says this is not a concession. That is incorrect.",
   "why": "Points back at the defender (a quoted refusal is the defender's).",
   "read": {
-   "pkgLIB/strip_FUN4/patched/": "UNCURED",
-   "pkgLIB/strip_FUN4_KSL/patched/": "UNCURED"
+   "pkgLIB/strip_FUN4/patched/": "CURED",
+   "pkgLIB/strip_FUN4_KSL/patched/": "CURED"
   }
  },
  {
@@ -1765,8 +1765,8 @@
   "ans": "COUNTED. The defender granted it. Still, I do not count it.",
   "why": "Names the count: refusal anywhere (W3 kind b).",
   "read": {
-   "pkgLIB/strip_FUN4/patched/": "CURED",
-   "pkgLIB/strip_FUN4_KSL/patched/": "CURED"
+   "pkgLIB/strip_FUN4/patched/": "UNCURED",
+   "pkgLIB/strip_FUN4_KSL/patched/": "UNCURED"
   }
  },
  {

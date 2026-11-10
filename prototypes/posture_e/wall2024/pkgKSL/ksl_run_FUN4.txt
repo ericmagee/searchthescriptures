@@ -1,14 +1,14 @@
 MISS CURED    | ok   UNCURED  | exp UNCURED  next-line-refusal  "COUNTED.\nThat is not right."
 MISS CURED    | ok   UNCURED  | exp UNCURED  next-line-refusal  "COUNTED.\nI withdraw the count."
-MISS CURED    | MISS CURED    | exp UNCURED  next-line-refusal  "**COUNTED**\nI do not accept this count."
-MISS CURED    | ok   UNCURED  | exp UNCURED  next-line-refusal  "COUNTED. The defender granted it.\n\nCorrection: not counted."
+MISS CURED    | ok   UNCURED  | exp UNCURED  next-line-refusal  "**COUNTED**\nI do not accept this count."
+MISS CURED    | MISS CURED    | exp UNCURED  next-line-refusal  "COUNTED. The defender granted it.\n\nCorrection: not counted."
 MISS CURED    | ok   UNCURED  | exp UNCURED  next-line-refusal  "COUNTED.\n- I retract my count of it."
 MISS CURED    | ok   UNCURED  | exp UNCURED  next-line-refusal  "COUNTED. The defender granted it.\nIt should not be counted."
 MISS CURED    | ok   UNCURED  | exp UNCURED  next-line-refusal  "COUNTED.\nThe grant is in round 3.\nI do not count it after all."
 ok   CURED    | ok   CURED    | exp CURED    next-line-correct  "COUNTED.\nThe defender conceded D6 in round 3."
-ok   CURED    | MISS UNCURED  | exp CURED    next-line-correct  "COUNTED.\nThe defender calls it courtesy. It is not."
+ok   CURED    | ok   CURED    | exp CURED    next-line-correct  "COUNTED.\nThe defender calls it courtesy. It is not."
 ok   CURED    | ok   CURED    | exp CURED    next-line-correct  "COUNTED.\n\nThe round 3 grant concedes D6.\n\nNo later round takes it back."
-ok   CURED    | MISS UNCURED  | exp CURED    next-line-correct  "COUNTED.\nThe defender says D6 stands whole. It cannot stand."
+ok   CURED    | ok   CURED    | exp CURED    next-line-correct  "COUNTED.\nThe defender says D6 stands whole. It cannot stand."
 ok   CURED    | ok   CURED    | exp CURED    next-line-correct  "COUNTED. The defender conceded D6.\nMy first count missed it; it is counted now."
 ok   CURED    | ok   CURED    | exp CURED    other-item         "COUNTED.\nRESPONSE: K-S9 S3 CHALLENGER CR9: #7 "
 ok   CURED    | ok   CURED    | exp CURED    other-item         "COUNTED.\nREASONING: That is not right about the other link."
@@ -17,4 +17,4 @@ ok   UNCURED  | ok   UNCURED  | exp UNCURED  control            "COUNTED. That i
 ok   UNCURED  | ok   UNCURED  | exp UNCURED  control            "NOT COUNTED.\nThe defender conceded D6."
 ok   CURED    | ok   CURED    | exp CURED    limit              "COUNTED.\nOne.\nTwo.\nThree.\nThat is not right."
 pkgLIB/strip_FUN4/patched/: 11 match, 7 miss (0 correct answers refused, 7 refusals cured) of 18
-pkgLIB/strip_FUN4_KSL/patched/: 15 match, 3 miss (2 correct answers refused, 1 refusals cured) of 18
+pkgLIB/strip_FUN4_KSL/patched/: 17 match, 1 miss (0 correct answers refused, 1 refusals cured) of 18

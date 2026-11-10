@@ -26,7 +26,7 @@
   "why": "Bold keyword, refusal next line.",
   "read": {
    "pkgLIB/strip_FUN4/patched/": "CURED",
-   "pkgLIB/strip_FUN4_KSL/patched/": "CURED"
+   "pkgLIB/strip_FUN4_KSL/patched/": "UNCURED"
   }
  },
  {
@@ -36,7 +36,7 @@
   "why": "Blank line, then refusal.",
   "read": {
    "pkgLIB/strip_FUN4/patched/": "CURED",
-   "pkgLIB/strip_FUN4_KSL/patched/": "UNCURED"
+   "pkgLIB/strip_FUN4_KSL/patched/": "CURED"
   }
  },
  {
@@ -86,7 +86,7 @@
   "why": "Point-back on the next line (W3 class).",
   "read": {
    "pkgLIB/strip_FUN4/patched/": "CURED",
-   "pkgLIB/strip_FUN4_KSL/patched/": "UNCURED"
+   "pkgLIB/strip_FUN4_KSL/patched/": "CURED"
   }
  },
  {
@@ -106,7 +106,7 @@
   "why": "Point-back on the next line.",
   "read": {
    "pkgLIB/strip_FUN4/patched/": "CURED",
-   "pkgLIB/strip_FUN4_KSL/patched/": "UNCURED"
+   "pkgLIB/strip_FUN4_KSL/patched/": "CURED"
   }
  },
  {
