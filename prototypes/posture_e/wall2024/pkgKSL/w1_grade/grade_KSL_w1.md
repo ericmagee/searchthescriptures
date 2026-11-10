@@ -18,3 +18,8 @@ Plants with my own refusal wording (w1_grade_KSL.txt, 8 of 14 as labeled): B1 "O
 It is not counted.", B3 "..., so it is not counted." reach the reader but KRO2's reader does not note them; that is the reader's vocabulary
 (KRO2 rev 2 notes only the forms it knows), not KSL. My "note yes" labels on B1-B3 and O2/O4/O5 assumed the reader would recognize them;
 the reach set above separates the two.
+
+MISTAKE (W1): this PASS missed W3's FAIL form. Every plant of mine used "COUNTED." with a full stop; none used "COUNTED:" with a negation on
+the next line, which KSL alone refuses where live cures (join after a colon). My regrade set for rev 2 (w1_plants_KSL2.json, labeled before
+rev 2 exists, 6e5c7bf4) reproduces it on rev 1 (w1_grade_KSL2_on_rev1.txt: S1 and R2 FAIL on "KSL alone changes the live ruling") and adds
+colon, semicolon, comma, dash, bold and no-stop forms, and other-item lines (H1-H3 FAIL on rev 1 as expected).
