@@ -1,0 +1,17 @@
+ok   CURED    | MISS UNCURED  | exp CURED    f1-own-count-wrong "COUNTED. My count is wrong.\nCORRECTED COUNT: DEFENDER 3"
+ok   CURED    | MISS UNCURED  | exp CURED    f1-own-count-wrong "COUNTED. My count is not right.\nCORRECTED COUNT: DEFENDER 2"
+ok   CURED    | ok   CURED    | exp CURED    f1-own-count-wrong "COUNTED. My earlier count is wrong; the grant counts."
+ok   CURED    | MISS UNCURED  | exp CURED    f1-own-count-wrong "COUNTED.\nMy count is incorrect.\nCORRECTED COUNT: DEFENDER 4"
+MISS CURED    | ok   UNCURED  | exp UNCURED  f1-own-count-wrong "COUNTED. The count is wrong."
+ok   UNCURED  | MISS CURED    | exp UNCURED  f2-yes-counted-subject "Yes.\nCOUNTED is wrong."
+ok   UNCURED  | MISS CURED    | exp UNCURED  f2-yes-counted-subject "Agreed.\nCOUNTED cannot be right here."
+ok   UNCURED  | MISS CURED    | exp UNCURED  f2-yes-counted-subject "Correct.\nCOUNTED is not the right answer."
+MISS CURED    | MISS CURED    | exp UNCURED  f2-yes-counted-subject "COUNTED is wrong."
+MISS UNCURED  | ok   CURED    | exp CURED    f2-yes-counted-subject "Agreed.\nCOUNTED: the grant in [CR4] concedes the premise."
+ok   UNCURED  | MISS CURED    | exp UNCURED  f3-touches-next-refusal "TOUCHES NO LINK:\nI refuse to answer."
+ok   UNCURED  | MISS CURED    | exp UNCURED  f3-touches-next-refusal "TOUCHES NO LINK:\nI will not answer this."
+ok   UNCURED  | MISS CURED    | exp UNCURED  f3-touches-next-refusal "TOUCHES NO LINK:\nNo reason is needed."
+ok   UNCURED  | ok   UNCURED  | exp UNCURED  f3-touches-next-refusal "TOUCHES NO LINK: I refuse to answer."
+MISS UNCURED  | ok   CURED    | exp CURED    f3-touches-next-refusal "TOUCHES NO LINK:\nthe grant concerns Luke 3:23, which no declared link uses."
+pkgLIB/strip_KRO2_KSL/patched/: 11 match, 4 miss (2 correct answers refused, 2 refusals cured) of 15
+pkgLIB/strip_KRO2_KSL_FUN8/patched/: 5 match, 10 miss (3 correct answers refused, 7 refusals cured) of 15
