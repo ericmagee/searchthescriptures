@@ -1,0 +1,10 @@
+// W3: both notes (press [DR4], new-verse [CR4]) on every stored F of 7 executions, live s115 against 3c; and every reference 3c reads as bare in a close round.
+const fs=require('fs');const g=f=>{let d=JSON.parse(fs.readFileSync(f,'utf8'));d=d.data||d;return d.workflow||d;};
+const mk=(W)=>{const c=W.nodes.find(x=>x.name==='Build Synthesis').parameters.jsCode;const k=c.indexOf('const REFP=');const ke=c.indexOf('})();',k)+5;const i=c.indexOf('const C4P=');const e=c.indexOf('})();',i)+5;return new Function(c.slice(k,ke)+'\n'+c.slice(i,e)+'\nreturn {REFP,C4P};')();};
+const a=mk(g('/mnt/project-files/wall2024/fetchback_live_s115.json')),b=mk(g('/home/claude/searchthescriptures/prototypes/posture_e/wall2024/pkgBRF/parent_s115_BRF5.json'));
+const Fs=[];const walk=(id,v,d)=>{if(d>12||v==null||typeof v!=='object')return;if(Array.isArray(v)){v.forEach(x=>walk(id,x,d+1));return;}if((typeof v.dr4==='string'||typeof v.cr4==='string')&&typeof v.gr1==='string')Fs.push({id,F:v});for(const k in v)walk(id,v[k],d+1);};
+const seen=new Set();let n=0,dp=0,dd=0;
+for(const e of '33149 33371 33490 34299 34626 34703 34726'.split(' ')){const X=JSON.parse(fs.readFileSync('/mnt/project-files/wall2024/ex'+e+'_full.json','utf8'));const rd=(X.data||X).resultData.runData;Fs.length=0;for(const k in rd)walk(e,rd[k],0);
+ for(const {F} of Fs){const k=e+'|'+(F.dr4||'').length+'|'+(F.cr4||'').length;if(seen.has(k))continue;seen.add(k);n++;const p0=a.C4P.note(F),p1=b.C4P.note(F),d0=a.C4P.noteD(F),d1=b.C4P.noteD(F);if(p0!==p1){dp++;console.log(e,'PRESS live',a.C4P.of(F).join('; '),'| 3c',b.C4P.of(F).join('; '));}if(d0!==d1){dd++;console.log(e,'CR4 live',a.C4P.ofD(F).join('; '),'| 3c',b.C4P.ofD(F).join('; '));}
+  for(const [nm,t] of [['DR4',F.dr4],['CR4',F.cr4]])if(t)for(const r of b.C4P.refs(t))if(r.bare){const P=b.REFP.parse(t,{scoped:true}).find(z=>(z.book||z.ctx)+' '+z.label===r.label&&!z.book);console.log('   bare in',e,nm,r.label,'|',JSON.stringify(t.slice(Math.max(0,P.at-50),P.pos+8).replace(/\s+/g,' ')));}}}
+console.log('distinct stored F:',n,'press notes differing:',dp,'CR4 notes differing:',dd);
