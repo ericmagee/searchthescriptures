@@ -1,0 +1,23 @@
+headed on live: {"AGREE":163,"DISAGREE":4,"NO ANSWER":0,"NO VERDICT":0,"CONTRADICTED":0} errors []
+OK   H1 read: "B3.1 -- DISAGREE -- RIGHT: MIS" live {"AGREE":163,"DISAGREE":3,"NO ANSWER":0,"NO VERDICT":1,"CONTRADICTED": | cand {"AGREE":163,"DISAGREE":4,"NO ANSWER":0,"NO VERDICT":0,"CONTRADICTED":
+OK   H1 read: "- B3.1 -- DISAGREE -- RIGHT: M" live {"AGREE":163,"DISAGREE":3,"NO ANSWER":0,"NO VERDICT":1,"CONTRADICTED": | cand {"AGREE":163,"DISAGREE":4,"NO ANSWER":0,"NO VERDICT":0,"CONTRADICTED":
+OK   H1 read: "• B3.1 -- DISAGREE -- RIGHT: M" live {"AGREE":163,"DISAGREE":3,"NO ANSWER":0,"NO VERDICT":1,"CONTRADICTED": | cand {"AGREE":163,"DISAGREE":4,"NO ANSWER":0,"NO VERDICT":0,"CONTRADICTED":
+OK   H1 read: "> B3.1 -- DISAGREE -- RIGHT: M" live {"AGREE":163,"DISAGREE":3,"NO ANSWER":0,"NO VERDICT":1,"CONTRADICTED": | cand {"AGREE":163,"DISAGREE":4,"NO ANSWER":0,"NO VERDICT":0,"CONTRADICTED":
+OK   H1 read: "**B3.1** -- DISAGREE -- RIGHT:" live {"AGREE":163,"DISAGREE":3,"NO ANSWER":0,"NO VERDICT":1,"CONTRADICTED": | cand {"AGREE":163,"DISAGREE":4,"NO ANSWER":0,"NO VERDICT":0,"CONTRADICTED":
+OK   H1 read: "B3.1 — DISAGREE — RIGHT: MISSE" live {"AGREE":163,"DISAGREE":3,"NO ANSWER":0,"NO VERDICT":1,"CONTRADICTED": | cand {"AGREE":163,"DISAGREE":4,"NO ANSWER":0,"NO VERDICT":0,"CONTRADICTED":
+OK   H1 read: "B3.1 (luna) -- DISAGREE -- RIG" live {"AGREE":163,"DISAGREE":3,"NO ANSWER":0,"NO VERDICT":1,"CONTRADICTED": | cand {"AGREE":163,"DISAGREE":4,"NO ANSWER":0,"NO VERDICT":0,"CONTRADICTED":
+   H2 "1. B3.1 -- DISAGREE -- RIGHT: " not read | cand {"AGREE":163,"DISAGREE":3,"NO ANSWER":0,"NO VERDICT":1,"CONTRADICTED":0} errors 
+   H2 "B3.1: DISAGREE -- RIGHT: MISSE" not read | cand {"AGREE":163,"DISAGREE":3,"NO ANSWER":0,"NO VERDICT":1,"CONTRADICTED":0} errors 
+   H2 "ITEM B3.1 -- DISAGREE -- RIGHT" not read | cand {"AGREE":163,"DISAGREE":3,"NO ANSWER":0,"NO VERDICT":1,"CONTRADICTED":0} errors 
+   H2 "luna (B3.1) -- DISAGREE -- RIG" not read | cand {"AGREE":163,"DISAGREE":3,"NO ANSWER":0,"NO VERDICT":1,"CONTRADICTED":0} errors 
+OK   H3 not read as live: "B3.1 is answered by the layer " cand {"AGREE":163,"DISAGREE":3,"NO ANSWER":0,"NO VERDICT":1,"CONTRADICTED":0} errors 
+OK   H3 not read as live: "B3.1 -- the answer grants the " cand {"AGREE":163,"DISAGREE":3,"NO ANSWER":0,"NO VERDICT":1,"CONTRADICTED":0} errors 
+OK   H3 not read as live: "D6 -- STANDS -- RIGHT: MISSES " cand {"AGREE":163,"DISAGREE":3,"NO ANSWER":0,"NO VERDICT":1,"CONTRADICTED":0} errors 
+OK   H3 not read as live: "B999.1 -- DISAGREE -- RIGHT: M" cand {"AGREE":163,"DISAGREE":3,"NO ANSWER":0,"NO VERDICT":1,"CONTRADICTED":0} errors 
+OK   H4 order rule as two headed lines: headed+headed {"AGREE":163,"DISAGREE":4,"NO ANSWER":0,"NO VERDICT":0,"CONT = headed+headless {"AGREE":163,"DISAGREE":4,"NO ANSWER":0,"NO VERDICT":0,"CONT; reversed true
+OK   H5 Alt headless W1.1: headed {"AGREE":7,"DISAGREE":0,"NO ANSWER":0,"NO VERDICT":0,"CONTRADICTED":0} | live headless {"AGREE":6,"DISAGREE":0,"NO ANSWER":0,"NO VERDICT":1,"CONTRADICTED":0} | cand headless {"AGREE":7,"DISAGREE":0,"NO ANSWER":0,"NO VERDICT":0,"CONTRADICTED":0}
+OK   H6 Retry Build with 0 of 81 lines headless in call 1: live = cand; "esr_why":"error: \";"esr_why":"error: \"
+OK   H6 Retry Build with 1 of 81 lines headless in call 1: live = cand; "esr_why":"error: \";"esr_why":"error: \"
+OK   H6 Retry Build with 2 of 81 lines headless in call 1: live = cand; "esr_why":"short reply: 79 ENFORCER line(s) for 81 item ids (finish_reason stop)";"esr_why":"short reply: 79 ENFORCER li
+OK   H6 Retry Build with 81 of 81 lines headless in call 1: live = cand; "esr_why":"short reply: 0 ENFORCER line(s) for 81 item ids (finish_reason stop)";"esr_why":"short reply: 0 ENFORCER line
+17 OK, 0 FAIL
