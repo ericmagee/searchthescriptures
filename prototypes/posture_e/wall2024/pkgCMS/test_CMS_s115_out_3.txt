@@ -1,0 +1,35 @@
+OK   L4  Init with Guards (input Retrieval Check): 39 of 39 runs byte-equal (39 same error)
+OK   L4  C1 Extract (input C1 Call anthropic +2): 38 of 38 runs byte-equal (4 same error)
+OK   L4  C2 Extract (input C2 Call anthropic +2): 38 of 38 runs byte-equal (4 same error)
+OK   L4  C3 Extract (input C3 Call anthropic +2): 38 of 38 runs byte-equal (4 same error)
+OK   L4  Build Save Body (input Extract Diagnostic): 39 of 39 runs byte-equal (5 same error)
+OK   L4  Panel Judge 2 openrouter (input Panel Judge 2 Route): 39 of 39 runs byte-equal (22 same error)
+OK   L4  Format Markdown (input Get Guards): 34 of 34 runs byte-equal
+OK   L4  Quote Report (input L2 Counts): 46 of 46 runs byte-equal (8 same error)
+OK   L4  Panel Judge 1 openrouter (input Panel Judge 1 Route): 39 of 39 runs byte-equal (22 same error)
+     Replay Rows: no saved run
+OK   L4  Panel Check (input Panel Judge 3 openrouter): 40 of 40 runs byte-equal (5 same error)
+OK   L4  Panel Tokens (input Panel Done +1): 35 of 35 runs byte-equal
+OK   L4  C4 Extract (input C4 Call anthropic +2): 38 of 38 runs byte-equal (4 same error)
+OK   L4  Accept Final (input Accept Return? +2): 39 of 39 runs byte-equal (39 same error)
+OK   L4  D2 Lexicon Plan (input D2 Words Sheet): 38 of 38 runs byte-equal
+OK   L4  D3 Lexicon Plan (input D3 Words Sheet): 38 of 38 runs byte-equal
+OK   L4  D4 Lexicon Plan (input D4 Words Sheet): 38 of 38 runs byte-equal
+OK   L4  L2 Lexicon Plan (input L2 Words): 38 of 38 runs byte-equal
+     QR Final: no saved run
+OK   L4  Anticheat Build (input Check Save +1): 38 of 38 runs byte-equal
+OK   L4  C4G Extract (input C4G Route +3): 37 of 37 runs byte-equal (28 same error)
+OK   L4  C1B Extract (input C1B Route +3): 38 of 38 runs byte-equal (34 same error)
+OK   L4  C2B Extract (input C2B Route +3): 38 of 38 runs byte-equal (34 same error)
+OK   L4  C3B Extract (input C3B Route +3): 38 of 38 runs byte-equal (34 same error)
+OK   L4  C4B Extract (input C4B Route +3): 37 of 37 runs byte-equal (33 same error)
+OK   L4  Panel Judges Collect (input Panel Judges Fetch): 17 of 17 runs byte-equal
+OK   L4  Second Alternate? (input Alternate Merge 1): 7 of 7 runs byte-equal
+     FUM Merge Panel 2: no saved run
+     FUM Merge Cure: no saved run
+     Close Enforcer Build: no saved run
+     Reread Build: no saved run
+     R2 Alt Reread Build: no saved run
+OK   L4  Send Back Record (input Send Back Needed? +1): 37 of 37 runs byte-equal
+OK   L4  Judge Enforcer Build (input Enforcer Record): 44 of 44 runs byte-equal (7 same error)
+27 OK, 0 FAIL

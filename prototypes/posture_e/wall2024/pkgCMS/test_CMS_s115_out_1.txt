@@ -1,0 +1,36 @@
+OK   L4  Resolve Seats (input Fetch Tensions): 40 of 40 runs byte-equal (40 same error)
+OK   L4  D1 Extract (input D1 Call anthropic +2): 39 of 39 runs byte-equal (4 same error)
+OK   L4  D2 Extract (input D2 Call anthropic +2): 38 of 38 runs byte-equal (4 same error)
+OK   L4  D3 Extract (input D3 Call anthropic +2): 38 of 38 runs byte-equal (4 same error)
+OK   L4  Build Independent Verdict (input Regrade After Quotes?): 39 of 39 runs byte-equal (5 same error)
+OK   L4  Panel Build (input Anticheat Only?): 45 of 45 runs byte-equal (11 same error)
+OK   L4  Panel Done (input Derive Outcome): 33 of 33 runs byte-equal (33 same error)
+OK   L4  Citation Scan (input Final Output +1): 38 of 38 runs byte-equal
+OK   L4  Diagnostic Normalizer (input DeepSeek Diagnostic Call +1): 38 of 38 runs byte-equal (38 same error)
+OK   L4  Raise If Incomplete (input Save to Drive): 31 of 31 runs byte-equal (1 same error)
+     Dry Failure Stop: no saved run
+     Failure Salvage: no saved run
+OK   L4  D4 Extract (input D4 Call anthropic +2): 38 of 38 runs byte-equal (5 same error)
+OK   L4  Accept Check (input Accept DS? +1): 39 of 39 runs byte-equal (4 same error)
+     Accept DS Return Build: no saved run
+OK   L4  C2 Lexicon Plan (input C2 Words Sheet): 38 of 38 runs byte-equal
+OK   L4  C3 Lexicon Plan (input C3 Words Sheet): 38 of 38 runs byte-equal
+OK   L4  C4 Lexicon Plan (input C4 Words Sheet): 38 of 38 runs byte-equal
+     QR Ask Build: no saved run
+OK   L4  Enforcer Build (input Panel Cure Check): 37 of 37 runs byte-equal
+OK   L4  Alt Seated (input Alternate Merge Seat): 38 of 38 runs byte-equal (1 same error)
+OK   L4  C3G Extract (input C3G Route +3): 37 of 37 runs byte-equal (30 same error)
+OK   L4  D2B Extract (input D2B Route +3): 38 of 38 runs byte-equal (20 same error)
+OK   L4  D3B Extract (input D3B Route +3): 38 of 38 runs byte-equal (27 same error)
+OK   L4  D4B Extract (input D4B Route +3): 38 of 38 runs byte-equal (4 same error)
+OK   L4  Alt Judge Enforcer Retry Build (input Alt Judge Enforcer Call deepseek): 13 of 13 runs byte-equal
+OK   L4b R2 Alt Seated (input R2 Alternate Merge Seat): 38 of 38 runs byte-equal (1 same error)
+OK   L4  Enforcer Retry Build (input Enforcer Call deepseek): 7 of 7 runs byte-equal
+     FUM Merge Alternate: no saved run
+     SJ Re-ask Build: no saved run
+     Judge Contradiction Build: no saved run
+     Alt Reread Build: no saved run
+     Assume Check Build: no saved run
+OK   L4  Send Back Build (input Judge Enforcer Record): 37 of 37 runs byte-equal
+OK   L4  Judge Enforcer Record (input Judge Enforcer Needed? +2): 37 of 37 runs byte-equal
+26 OK, 0 FAIL

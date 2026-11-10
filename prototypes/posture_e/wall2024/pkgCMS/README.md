@@ -14,3 +14,9 @@ Checks (labels_CMS.md)
   With pkgR1: about -1,739,000 against s106.
 - M7 replay (test_CMS_out_0..3.txt, four shards; test_CMS_out_R2alt.txt, ONLY_R2=1): 106 of 143 changed sources replayed on saved runs, 3,705 node runs, all byte-equal, 0 FAIL.
   37 changed sources have no saved run (incl. Close Enforcer Build and Record); they rest on M1 token equality only. (First count said 37 of 139: the four R2 Alt R1 sources had been left off the list; W2 found it.)
+
+## Rebased on s115 (live a414eabb)
+- Build: CMSX=_s115 node pkgCMS/build_CMS.cjs /mnt/project-files/wall2024/fetchback_live_s115.json pkgLIB/strip_S115L pkgCMS/parent_s115_CMS.json
+- M1 145 of 145, M2-M5 OK. M6: all Code 3,849,937 -> 3,237,961 = -611,976; plain nodes -546,890; Shared Library -65,086; prompt 0.
+- M7: 108 changed sources replayed, 3,831 node runs, all byte-equal, 0 FAIL (test_CMS_s115_out_0..3, R2alt). 35 changed sources have no saved run; they rest on M1.
+- Write file also at /mnt/project-files/wall2024/parent_s115_CMS.json. Manual section /mnt/project-files/w1/manual_section_CMS.md.
