@@ -18,10 +18,13 @@ const cdrWords=s=>{const W=[];for(const m of String(s).matchAll(/"([^"\n]+)"|“
 const cdrObj=s=>{const W=[];let t=String(s).replace(/[*_`]+/g,'').replace(/^\s*(?:(?:[-•>]|\d{1,2}[.)])\s*)+/,'');for(let i=0;i<4;i++){const u=t.replace(/^\s*[A-Z][A-Za-z0-9 ,'’-]{0,40}:\s+/,'');if(u===t)break;t=u;}
  const m=t.match(/^\s*I\s+(?:now\s+|also\s+|therefore\s+|hereby\s+)?(?:drop|withdraw|retract|give\s+up|abandon)\s+(?:(?:now|also|hereby|therefore)\s+)?(?:(?:the|my|this|that|any)\s+(?:wording|word|words|phrase|claim|limb|sentence|reading|premise|step)\s+)?(?:"([^"\n]+)"|“([^”\n]+)”|that\s+((?:[^,;:\n]|:(?=\d))+?)(?:[,;]|:(?!\d)|\.\s*$|$))/i);
  if(!m)return W;if(m[1]||m[2]){const q=cecN(m[1]||m[2]);if(q.split(' ').length>=3&&cdrCore(q)>=2)W.push(q);}else if(m[3]&&/^\s*I\s+(?:now\s+|also\s+|therefore\s+|hereby\s+)?(?:drop|withdraw|retract|give\s+up|abandon)\s+(?:(?:now|also|hereby|therefore)\s+)?(?:the|my|this|that|any)\s+/i.test(t)){const q=cecN(m[3]);if(q.split(' ').length>=5&&cdrCore(q)>=2)W.push(q);}return W;};
+/* rev 4 (W3 grade of rev 3): a drop sentence that ends in "?" (markup and closing quotes aside), or holds "if", "unless" or "provided" after the drop
+   verb outside quotation marks, is a question or a conditional drop and is not read as a drop. */
+const cdrCond=ds=>{const u=cdrUnq(String(ds)).replace(/[*_`]+/g,'').trim();if(/\?["”’')\]]*\s*$/.test(u))return true;const m=u.match(cdrDrop);return !!m&&/\b(?:if|unless|provided)\b/i.test(u.slice(m.index));};
 const cdrLinkAt=(raw,sent)=>{const t=String(raw||'');const i=t.indexOf(sent);if(i<0)return null;let n=null;for(const h of t.slice(0,i).matchAll(/\bLINK\s+(\d+)\b/gi))n=+h[1];return n;};
 const cecDropped=F=>{const out=[];const SD=[['DEFENDER',[['CR1','cr1'],['CR2','cr2'],['CR3','cr3']],['CR4','cr4']],['CHALLENGER',[['DR1','gr1'],['DR2','gr2'],['DR3','dr3']],['DR4','dr4']]];
  for(const [side,early,[cr,ck]] of SD){const close=cdrSentsRaw(F[ck]).filter(z=>!cdrSelf.test(z));let k=0;
-  for(const [er,ek] of early)for(const ds of cdrSentsRaw(F[ek]))for(const w of [...new Set(ds.split(/;\s+|,\s+(?:but|and)\s+(?=I\s)/).flatMap(cdrObj))])for(const cs of close){
+  for(const [er,ek] of early)for(const ds of cdrSentsRaw(F[ek]).filter(z=>!cdrCond(z)))for(const w of [...new Set(ds.split(/;\s+|,\s+(?:but|and)\s+(?=I\s)/).flatMap(cdrObj))])for(const cs of close){
    if(!cecN(cdrUnq(cs)).includes(w))continue;if(out.some(o=>o.side===side&&o.closing_q===cs&&o.earlier_q===ds))continue;if(++k>12)break;
    out.push({id:'P'+(out.length+1),side,by:'the code check (wording the side dropped, found again in its closing round)',kind:'LINK',n:cdrLinkAt(F[ek],ds)||'?',earlier_round:er,earlier_q:ds.replace(/^(?:[-•>]\s+|\d{1,2}[.)]\s+)/,''),closing_round:cr,closing_q:cs.replace(/^(?:[-•>]\s+|\d{1,2}[.)]\s+)/,''),why:'the closing sentence holds the dropped wording "'+w+'"'});}}
  return out;};

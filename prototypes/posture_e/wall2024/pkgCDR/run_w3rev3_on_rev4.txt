@@ -1,0 +1,20 @@
+OK   H1 want LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
+       hit: P3 [CR3] **LINK 2: NARROWED TO:** I drop the wording "the register stops at Joseph" as a bare statement.
+OK   H2 want LISTED | live cands 0 | CDR cands 3 | The register of Luke 3 stops at the name of Joseph.
+       hit: P3 [CR3] I withdraw the claim that the register of Luke 3 stops at the name of Joseph.
+OK   H3 want LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
+       hit: P3 [CR3] I also drop the wording "the register stops at Joseph".
+MISS H4 want LISTED | live cands 0 | CDR cands 2 | The register stops at Joseph.
+MISS H5 want LISTED | live cands 0 | CDR cands 2 | The register stops at Joseph.
+OK   H6 want LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
+       hit: P3 [CR3] I retract the wording "the register stops at Joseph".
+OK   H7 want NOT LISTED | live cands 0 | CDR cands 2 | The register stops at Joseph.
+OK   H8 want NOT LISTED | live cands 0 | CDR cands 2 | The register stops at Joseph.
+MISS H9 want NOT LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
+       hit: P3 [CR3] I drop the wording "the register stops at Joseph": so the challenger would have me say, and I do not
+MISS H10 want NOT LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
+       hit: P3 [CR3] I drop the wording "the register stops at Joseph" no more than I drop the verse itself.
+OK   H11 want NOT LISTED | live cands 0 | CDR cands 2 | The register stops at Joseph.
+MISS H12 want NOT LISTED | live cands 0 | CDR cands 3 | The challenger still argues as if the register stops at Joseph.
+       hit: P3 [CR3] I drop the wording "the register stops at Joseph".
+7 of 12 as labeled

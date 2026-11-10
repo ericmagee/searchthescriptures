@@ -1,4 +1,17 @@
-# pkgCDR rev 3 (W1): feed the closing contradiction enforcer (item A countermeasure)
+# pkgCDR rev 4 (W1): feed the closing contradiction enforcer (item A countermeasure)
+
+## Rev 4 (W3 FAIL of rev 3, w3_grade/grade_CDR3_w3.md: a conditional drop and a drop phrased as a question were listed)
+- cdrCond (cdr_fn.js), W3's fix: an earlier-round sentence that ends in "?" (markup and closing quotes aside), or that holds "if", "unless" or
+  "provided" after the drop verb outside quotation marks, is not read as a drop.
+- Built on live s103: parent_s103_CDR.json (three nodes differ from live, as rev 3).
+- My cases (rev 4 cases added before the run, commit 8702ad59): 32 of 33. NOT LISTED: W3's H7 and H8, and "unless", "provided", "only if",
+  "?" inside bold. Still LISTED: a plain drop, "if" only inside the quoted wording, "!" at the end, a condition in the next sentence.
+  The miss is C9, my rev 1 label error.
+- W2's 40 cases: 39 of 40 (W17, safe miss, as before).
+- W3's 15 rev 2 cases: 11 of 15. W3's 12 rev 3 cases: 7 of 12 (H7 and H8 now right). G8, G9, G10, G13, H9, H10 and H12 are LISTED and left
+  to the enforcer by W3; H4 and H5 are safe misses.
+- Corpus: 39 debates, 2 listings, both on 34108, as rev 3. Record: 4 OK. pkgCEC probe on these nodes: 62 OK, 8 FAIL, the same 8 as rev 3.
+  Log rows unchanged (rows_CDR.json).
 
 ## Rev 3 (W3 FAIL of rev 2, w3_grade/grade_CDR2_w3.md: 7 false listings from sentences that do not drop the wording)
 - cdrObj (cdr_fn.js), W3's proposal:
