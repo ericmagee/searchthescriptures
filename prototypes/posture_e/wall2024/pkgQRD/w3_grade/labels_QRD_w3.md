@@ -18,3 +18,14 @@ Any other result than the one stated is a FAIL.
 - R7 Chain: three judges with the same pair: the second and third are both returned against the first; return text names the right side and rounds; a judge redirected on both sides gets two sentences.
 - R8 QR Merge (the only other reader of QR Final) reads the record with the new fields without error or changed text other than the fields themselves: by reading its code, and by running it if it runs offline.
 - R9 The record never reports a question as PASSED ON RETURN when the first question was kept, and never drops a question that passed at first on a side that was not at fault... except under today's rule for a judge returned for a fault (state it).
+
+## Rev 2 (W2 commit 4d105506, Wall 4197): labels added before any run of rev 2
+
+I read W2's Wall post only; no rev 2 code was run or read before this.
+
+- R1 to R9 as above, with the sizes W2 states (QR Check 6,026 to 7,308; QR Final 7,842 to 8,116; +1,556).
+- R4a, R4b now: luna (returned for a fault) is not counted; chatgpt stands and is not returned; sol is redirected against chatgpt. At the end at least chatgpt asks the defender about the pair in both plants.
+- R6b changes: with luna's defender question failing, luna has a fault and is not counted (as before); sol is redirected against chatgpt.
+- R10 luna and chatgpt both have a fault on the challenger side: sol is not redirected; all three defender questions follow today's rule.
+- R11 luna's first reply is not JSON: not counted; chatgpt stands; sol redirected against chatgpt.
+- R12 MY OWN CONDITION TESTED. Three judges, same rounds: chatgpt's earlier quote is a long passage that contains luna's earlier quote and sol's earlier quote; luna's and sol's quotes do not contain one another; the closing quotes are three different sentences. chatgpt is redirected against luna; sol is redirected against chatgpt, though sol's question is not a repeat of luna's. If chatgpt and sol both switch, sol's distinct question is asked by no one, where live keeps it. If the plant shows that, it is a loss and a FAIL, and the condition I gave on the Wall (4196) was incomplete: the earlier judge must also not be redirected itself on that side.
