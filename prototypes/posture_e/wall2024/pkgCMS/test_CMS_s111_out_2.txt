@@ -1,0 +1,36 @@
+OK   L4  Retrieval Check (input Retrieve Held Conclusions): 37 of 37 runs byte-equal
+OK   L4  C1 Build (input C1 Verse Sheet): 38 of 38 runs byte-equal (4 same error)
+OK   L4  C2 Build (input C2 Lexicon Sheet): 38 of 38 runs byte-equal (4 same error)
+OK   L4  C3 Build (input C3 Lexicon Sheet): 38 of 38 runs byte-equal (4 same error)
+OK   L4  Build Diagnostic Prompt (input Cure Check): 37 of 37 runs byte-equal (4 same error)
+     Panel Judge 1 deepseek: no saved run
+     Stop: Call Failed: no saved run
+OK   L4  Quote Compare (input Cited Verses): 37 of 37 runs byte-equal (4 same error)
+OK   L4  Verdict Normalizer (input Independent Verdict Call +2): 37 of 37 runs byte-equal (37 same error)
+     Regrade Load: no saved run
+OK   L4  Fence Check (input Topic Fence): 37 of 37 runs byte-equal (4 same error)
+     Salvage Stop: no saved run
+OK   L4  C4 Build (input C4 Lexicon Sheet): 38 of 38 runs byte-equal (4 same error)
+     Accept Return Build: no saved run
+OK   L4  D2 Words Plan (input D2 Verse Sheet): 37 of 37 runs byte-equal
+OK   L4  D3 Words Plan (input D3 Verse Sheet): 37 of 37 runs byte-equal
+OK   L4  D4 Words Plan (input D4 Verse Sheet): 37 of 37 runs byte-equal
+OK   L4  L2 Words Plan (input Find Words): 37 of 37 runs byte-equal
+     QR Check: no saved run
+OK   L4  Enforcer Record (input Enforcer Needed? +2): 36 of 36 runs byte-equal
+OK   L4  C4G Build (input C4 Extract): 37 of 37 runs byte-equal
+OK   L4  C1B Build (input C1 Extract): 37 of 37 runs byte-equal
+OK   L4  C2B Build (input C2 Extract): 37 of 37 runs byte-equal
+OK   L4  C3B Build (input C3G Extract): 37 of 37 runs byte-equal
+OK   L4  C4B Build (input C4G Extract): 37 of 37 runs byte-equal
+OK   L4  Panel Judges Prep (input QR Trial? +1): 17 of 17 runs byte-equal
+OK   L4b R2 Alt Judge Enforcer Retry Build (input R2 Alt Judge Enforcer Call deepseek): 13 of 13 runs byte-equal
+     FUM Merge Panel 1: no saved run
+     FUM Merge R2 Alternate: no saved run
+     SJ Re-ask Pick: no saved run
+     Judge Contradiction Record: no saved run
+     Alt Reread Record: no saved run
+     Assume Check Record: no saved run
+OK   L4  Alt Send Back Build (input Alt Judge Enforcer Record): 35 of 35 runs byte-equal
+OK   L4  Alt Judge Enforcer Record (input Alt Judge Enforcer Needed? +2): 36 of 36 runs byte-equal
+23 OK, 0 FAIL
