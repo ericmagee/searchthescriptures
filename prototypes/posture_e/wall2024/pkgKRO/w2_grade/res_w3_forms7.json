@@ -1,0 +1,212 @@
+[
+ {
+  "exp": "CURED",
+  "cat": "w3-good7",
+  "ans": "COUNTED. My count is wrong.\nI add this grant against D6.",
+  "why": "W3",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "w3-good7",
+  "ans": "COUNTED. It is not a concession of D5.\nIt is a concession of D6.",
+  "why": "W3",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "w3-good7",
+  "ans": "COUNTED. My count is wrong. \"I grant 'husband' and 'wife'.\"",
+  "why": "W3",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "w3-good7",
+  "ans": "COUNTED. My count is wrong: D6 is added.",
+  "why": "W3",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "w3-good7",
+  "ans": "COUNTED. My count is wrong; I add D6.",
+  "why": "W3",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "w3-good7",
+  "ans": "COUNTED. My count is wrong - corrected.",
+  "why": "W3",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "w3-good7",
+  "ans": "COUNTED. I do not count it against D5 but against D6.",
+  "why": "W3",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "w3-good7",
+  "ans": "COUNTED. My count is wrong. D6.",
+  "why": "W3",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "w3-good7",
+  "ans": "COUNTED. The count is incorrect... It should include this grant.",
+  "why": "W3",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "w3-good7",
+  "ans": "COUNTED. The count is incorrect… it should include this grant.",
+  "why": "W3",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "w3-good7",
+  "ans": "COUNTED. My count is wrong. **D6 is conceded.**",
+  "why": "W3",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "w3-good7",
+  "ans": "COUNTED. My count is wrong (D6 is conceded).",
+  "why": "W3",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "w3-good7",
+  "ans": "COUNTED. I refuse the courtesy reading.",
+  "why": "W3",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "w3-good7",
+  "ans": "COUNTED. My count stands corrected.",
+  "why": "W3",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "UNCURED",
+  "cat": "w3-bad7",
+  "ans": "COUNTED. My count stands.",
+  "why": "W3",
+  "nar": "ENFORCED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "UNCURED",
+  "cat": "w3-bad7",
+  "ans": "COUNTED. I refuse.",
+  "why": "W3",
+  "nar": "ENFORCED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "UNCURED",
+  "cat": "w3-bad7",
+  "ans": "COUNTED. The count is wrong.",
+  "why": "W3",
+  "nar": "ENFORCED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "UNCURED",
+  "cat": "w3-bad7",
+  "ans": "COUNTED. Not counted.",
+  "why": "W3",
+  "nar": "ENFORCED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "UNCURED",
+  "cat": "w3-bad7",
+  "ans": "COUNTED. I do not count it!",
+  "why": "W3",
+  "nar": "ENFORCED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "UNCURED",
+  "cat": "w3-bad7",
+  "ans": "COUNTED. Under protest.",
+  "why": "W3",
+  "nar": "ENFORCED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "UNCURED",
+  "cat": "w3-bad7",
+  "ans": "COUNTED. My count is wrong.",
+  "why": "W3",
+  "nar": "ENFORCED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED"
+  }
+ }
+]

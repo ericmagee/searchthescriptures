@@ -1,0 +1,592 @@
+[
+ {
+  "exp": "CURED",
+  "cat": "w4-new",
+  "ans": "COUNTED (the defender's round 4 grant is the concession).",
+  "why": "paren",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED+N"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "w4-new",
+  "ans": "COUNTED — yes, the grant is the concession.",
+  "why": "emdash",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "w4-new",
+  "ans": "COUNTED; my first answer missed it.",
+  "why": "semicolon",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "w4-new",
+  "ans": "Counted. The grant stands.",
+  "why": "lowercase",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED+N"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "w4-new",
+  "ans": "COUNTED.\n\nReason: the defender grants it in round 4.",
+  "why": "reason line",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "w4-new",
+  "ans": "> COUNTED. The grant stands.",
+  "why": "blockquote",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "w4-new",
+  "ans": "`COUNTED`. The grant stands.",
+  "why": "code mark",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "w4-new",
+  "ans": "COUNTED. No other link is touched.",
+  "why": "no-other",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "w4-new",
+  "ans": "COUNTED. Not a courtesy: a concession.",
+  "why": "not-a",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "w4-new",
+  "ans": "COUNTED. Nothing withdraws it.",
+  "why": "nothing",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "w4-new",
+  "ans": "COUNTED. I was wrong before; now it is counted.",
+  "why": "own-miss",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "w4-new",
+  "ans": "COUNTED! The defender conceded.",
+  "why": "bang",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "w4-new",
+  "ans": "COUNTED. I do not accept the courtesy plea.",
+  "why": "reject-plea",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "w4-new",
+  "ans": "COUNTED. No court of appeal changes it.",
+  "why": "no-start",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "w4-new",
+  "ans": "COUNTED. Never was it a courtesy.",
+  "why": "never",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "w4-new",
+  "ans": "COUNTED. Not counting it would be wrong.",
+  "why": "not-counting",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "w4-new",
+  "ans": "COUNTED. Wrong of the defender to call it courtesy.",
+  "why": "wrong-start",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "w4-new",
+  "ans": "COUNTED. I reverse my earlier answer: it is counted.",
+  "why": "reverse-own",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "w4-new",
+  "ans": "**COUNTED** — the grant in round 4 is the concession; it is not withdrawn.",
+  "why": "bold-dash",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "w4-new",
+  "ans": "COUNTED. I disagree with my first line, which missed it.",
+  "why": "disagree-own",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "UNCURED",
+  "cat": "w4-new",
+  "ans": "COUNTED. Not counted.",
+  "why": "refusal",
+  "nar": "ENFORCED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "UNCURED",
+  "cat": "w4-new",
+  "ans": "COUNTED. I decline.",
+  "why": "refusal",
+  "nar": "ENFORCED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "UNCURED",
+  "cat": "w4-new",
+  "ans": "COUNTED. Scratch that.",
+  "why": "refusal",
+  "nar": "ENFORCED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "UNCURED",
+  "cat": "w4-new",
+  "ans": "COUNTED. I take it back.",
+  "why": "refusal",
+  "nar": "ENFORCED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "UNCURED",
+  "cat": "w4-new",
+  "ans": "COUNTED. I do not count it.",
+  "why": "refusal",
+  "nar": "ENFORCED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "UNCURED",
+  "cat": "w4-new",
+  "ans": "COUNTED. Nope.",
+  "why": "refusal",
+  "nar": "ENFORCED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "UNCURED",
+  "cat": "w4-new",
+  "ans": "COUNTED. Disregard this line.",
+  "why": "refusal",
+  "nar": "ENFORCED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "UNCURED",
+  "cat": "w4-new",
+  "ans": "COUNTED, though I do not count it.",
+  "why": "refusal",
+  "nar": "ENFORCED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED+N"
+  }
+ },
+ {
+  "exp": "UNCURED",
+  "cat": "w4-new",
+  "ans": "COUNTED. My answer stays as before.",
+  "why": "refusal",
+  "nar": "ENFORCED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "UNCURED",
+  "cat": "w4-new",
+  "ans": "COUNTED. The defender granted it. Scratch that.",
+  "why": "refusal-later",
+  "nar": "NOTED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "UNCURED",
+  "cat": "w4-new",
+  "ans": "COUNTED. Round 4 holds the grant. I take it back.",
+  "why": "refusal-later",
+  "nar": "NOTED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "UNCURED",
+  "cat": "w4-new",
+  "ans": "COUNTED. It is in the round. Nevertheless, not counted.",
+  "why": "refusal-later",
+  "nar": "NOTED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "w4-new6",
+  "ans": "COUNTED. That is right.",
+  "why": "p-good",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "w4-new6",
+  "ans": "COUNTED. This is the concession.",
+  "why": "p-good",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "w4-new6",
+  "ans": "COUNTED. It stands.",
+  "why": "p-good",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "w4-new6",
+  "ans": "COUNTED. Yes.",
+  "why": "one-word",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "w4-new6",
+  "ans": "COUNTED. Agreed.",
+  "why": "one-word",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "w4-new6",
+  "ans": "COUNTED. Correct.",
+  "why": "one-word",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "w4-new6",
+  "ans": "COUNTED. That settles it.",
+  "why": "p-good",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "w4-new6",
+  "ans": "COUNTED. That is not a courtesy.",
+  "why": "p-neg-good",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "w4-new6",
+  "ans": "COUNTED. It is not withdrawn.",
+  "why": "p-neg-good",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "w4-new6",
+  "ans": "COUNTED. This cannot be undone.",
+  "why": "p-neg-good",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "w4-new6",
+  "ans": "COUNTED. No doubt.",
+  "why": "no-good",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "w4-new6",
+  "ans": "COUNTED. Not in doubt.",
+  "why": "not-good",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "w4-new6",
+  "ans": "COUNTED. That was not right of me before.",
+  "why": "own-miss",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "w4-new6",
+  "ans": "COUNTED!",
+  "why": "bare-bang",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "w4-new6",
+  "ans": "COUNTED. It is not only LINK 2; it touches D6.",
+  "why": "not-only",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "CURED",
+  "cat": "w4-new6",
+  "ans": "COUNTED. That is wrong of the defender.",
+  "why": "p-wrong-defender",
+  "nar": "CURED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "UNCURED",
+  "cat": "w4-new6",
+  "ans": "COUNTED. That is wrong.",
+  "why": "p-whole",
+  "nar": "ENFORCED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "UNCURED",
+  "cat": "w4-new6",
+  "ans": "COUNTED. That is wrong!",
+  "why": "p-whole-bang",
+  "nar": "ENFORCED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "UNCURED",
+  "cat": "w4-new6",
+  "ans": "COUNTED. It is not.",
+  "why": "p-whole",
+  "nar": "ENFORCED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "UNCURED",
+  "cat": "w4-new6",
+  "ans": "COUNTED. This is mistaken.",
+  "why": "p-whole",
+  "nar": "ENFORCED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "UNCURED",
+  "cat": "w4-new6",
+  "ans": "COUNTED. Incorrect.",
+  "why": "one-word",
+  "nar": "ENFORCED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "UNCURED",
+  "cat": "w4-new6",
+  "ans": "COUNTED! That is not right.",
+  "why": "bang-p",
+  "nar": "ENFORCED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "UNCURED",
+  "cat": "w4-new6",
+  "ans": "COUNTED. Wrong.\n",
+  "why": "one-word-nl",
+  "nar": "ENFORCED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "UNCURED",
+  "cat": "w4-new6",
+  "ans": "**COUNTED.** Wrong.",
+  "why": "markup-one-word",
+  "nar": "ENFORCED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "UNCURED",
+  "cat": "w4-new6",
+  "ans": "COUNTED. Not counted. The grant does not apply.",
+  "why": "b-first",
+  "nar": "ENFORCED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "UNCURED",
+  "cat": "w4-new6",
+  "ans": "COUNTED. That is wrong. I keep my first answer.",
+  "why": "p-then-text",
+  "nar": "NOTED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED"
+  }
+ },
+ {
+  "exp": "UNCURED",
+  "cat": "w4-new6",
+  "ans": "COUNTED. It is not. The grant was a courtesy.",
+  "why": "p-then-text",
+  "nar": "NOTED",
+  "read": {
+   "pkgLIB/strip_KRO/patched/": "CURED"
+  }
+ }
+]
