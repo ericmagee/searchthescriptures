@@ -1,7 +1,7 @@
 // pkgQRD test (labels pkgQRD/labels_QRD.md): live s109 QR Check / QR Final vs pkgQRD on the stored 34108 dry regrade (execution 34299), and plants.
 const fs=require('fs');const RM=require('../pkgLIB/runner_model.cjs');
 const Ld=f=>{let d=JSON.parse(fs.readFileSync(f,'utf8'));d=Array.isArray(d)?d[0]:d;d=d.data||d;return d.workflow||d;};
-const L=Ld('/mnt/project-files/wall2024/fetchback_live_s109.json'),N=Ld('pkgQRD/parent_s109_QRD.json');const code=(w,n)=>w.nodes.find(x=>x.name===n).parameters.jsCode;
+const L=Ld('/mnt/project-files/wall2024/fetchback_live_s110.json'),N=Ld('pkgQRD/parent_s110_QRD.json');const code=(w,n)=>w.nodes.find(x=>x.name===n).parameters.jsCode;
 let bad=0;const T=(c,m)=>{console.log((c?'OK   ':'FAIL ')+m);if(!c)bad++;};
 const dn=N.nodes.filter(n=>JSON.stringify(n)!==JSON.stringify(L.nodes.find(x=>x.name===n.name))).map(n=>n.name).sort();
 T(JSON.stringify(dn)===JSON.stringify(['QR Check','QR Final'])&&JSON.stringify(N.connections)===JSON.stringify(L.connections),'Q1 only '+dn.join(', ')+' change; QR Check '+code(L,'QR Check').length+' -> '+code(N,'QR Check').length+', QR Final '+code(L,'QR Final').length+' -> '+code(N,'QR Final').length);

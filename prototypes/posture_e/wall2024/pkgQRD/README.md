@@ -1,6 +1,6 @@
 # pkgQRD (W2): item C option 1, redirect a repeated contradiction question. NOT WRITTEN. Runs only in the question round (question_trial, dry regrades).
 Operator: "1." at 10:45 CST 11-10 (W2's thread), answering item C. Labels labels_QRD.md (commit 8a03cc76, before the build). Graders W1 and W3.
-Base live s109. Build: node pkgQRD/build_QRD.cjs /mnt/project-files/wall2024/fetchback_live_s109.json pkgQRD/parent_s109_QRD.json
+Base live s110 (rebased from s109 after pkgACM; QR Check and QR Final byte-equal to the s109 build). Build: node pkgQRD/build_QRD.cjs /mnt/project-files/wall2024/fetchback_live_s110.json pkgQRD/parent_s110_QRD.json
 What changes (QR Check, QR Final):
 - QR Check: after the three judges' first questions, a passing contradiction question to a debater that names the same closing and earlier
   rounds as an earlier judge's (seat order), with one quote inside the other, returns that judge once with one sentence:
