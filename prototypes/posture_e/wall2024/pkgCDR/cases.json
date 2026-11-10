@@ -1,0 +1,13 @@
+{"about":"W1 labeled cases for pkgCDR rev 1 (code check: wording a side dropped in rounds 1-3, found again in its closing round, becomes a listed candidate for the closing enforcer). Labels fixed before the check was written or run. Base text: run 34108 Final Output. want LISTED = a candidate with that side, that earlier drop sentence and that closing sentence; NOT LISTED = no candidate for that closing sentence. op: add = append the sentence as its own line to the closing round; replace = replace the stored D6 close 'Christ had no biological father.' with the sentence (empty = remove it).",
+"cases":[
+ {"id":"C1","op":"none","side":"DEFENDER","closing":"Christ had no biological father.","earlier":"I drop the wording \"no biological father\" as a bare statement.","want":"LISTED","note":"the 34108 D6 pair"},
+ {"id":"C2","op":"add","round":"cr4","s":"Matthew 1:25 closes the espousal to any knowing.","side":"DEFENDER","earlier":"I drop the wording \"closes the espousal to any knowing.\"","want":"LISTED"},
+ {"id":"C3","op":"add","round":"cr4","s":"Matthew 1:25 alone spans the espousal.","side":"DEFENDER","earlier":"I drop the limb that Matthew 1:25 alone spans the espousal, and I rest nothing on \"till\" by itself.","want":"LISTED","note":"unquoted dropped clause restated word for word"},
+ {"id":"C4","op":"add","round":"dr4","s":"The sign in Isaiah's day makes the two children one child.","side":"CHALLENGER","earlier":"I drop any wording that makes the two children one child.","want":"LISTED"},
+ {"id":"C5","op":"replace","s":"I dropped \"no biological father\" in [CR3] and keep only the stated limb.","side":"DEFENDER","want":"NOT LISTED","note":"the close reports the drop"},
+ {"id":"C6","op":"replace","s":"The challenger reads \"no biological father\" as unproved.","side":"DEFENDER","want":"NOT LISTED","note":"the wording only quoted"},
+ {"id":"C7","op":"replace","s":"Christ had no father among men by biology.","side":"DEFENDER","want":"NOT LISTED","note":"paraphrase: a known limit of a word-for-word check; DeepSeek still reads the rounds"},
+ {"id":"C8","op":"add","round":"cr4","s":"I grant the word alone is not needed.","side":"DEFENDER","want":"NOT LISTED","note":"one-word drop (\"alone\") is not listed"},
+ {"id":"C9","op":"replace","s":"","side":"DEFENDER","want":"NOT LISTED","note":"D6 close removed: no defender listing for D6"}
+],
+"corpus":"Every other stored debate with a Final Output (inputs/*_Final_Output.json): every listing is printed and then read; a listing is TRUE when the closing sentence states as the side's own the wording it dropped, FALSE otherwise. These labels are given after the listing and are marked so."}
