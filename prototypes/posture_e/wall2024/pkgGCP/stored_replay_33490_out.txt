@@ -1,0 +1,36 @@
+
+33490 Gate Record
+  stored    : gemini:12 chatgpt:0 sol:1
+  live s111 : gemini:8 chatgpt:0 sol:1
+  candidate : gemini:2 chatgpt:0 sol:1
+  pkgGCP marks: [AUDIT v52: CURE COUNT OFF (pkgGCP) -- SEAT: gemini; ITEM: D1 vs C1; RULE: K-G4; an applied change replaced the line and cleared it; its count comes off]
+    [AUDIT v52: CURE COUNT OFF (pkgGCP) -- SEAT: gemini; ITEM: D2 vs C2; RULE: K-G4; an applied change replaced the line and cleared it; its count comes off]
+    [AUDIT v52: CURE COUNT OFF (pkgGCP) -- SEAT: gemini; ITEM: D4 vs C6; RULE: K-G4; an applied change replaced the line and cleared it; its count comes off]
+    [AUDIT v52: CURE COUNT OFF (pkgGCP) -- SEAT: gemini; ITEM: D1 vs C1; RULE: K-F; an applied change replaced the line and cleared it; its count comes off]
+    [AUDIT v52: CURE COUNT OFF (pkgGCP) -- SEAT: gemini; ITEM: D2 vs C2; RULE: K-F; an applied change replaced the line and cleared it; its count comes off]
+    [AUDIT v52: CURE COUNT OFF (pkgGCP) -- SEAT: gemini; ITEM: D4 vs C6; RULE: K-F; an applied change replaced the line and cleared it; its count comes off]
+  bodies equal apart from the count and the marks: true,true,true; other output fields equal: true
+  gemini not-cured cure lines: 14
+    SEAT: gemini; ITEM: D1 vs C1; RULE: K-G4; RESULT: UNCURED; WHY: RETRACTED with no reason naming the round and its words or verse (rulings 105); LINE: D1 vs 
+    SEAT: gemini; ITEM: D2 vs C2; RULE: K-G4; RESULT: UNCURED; WHY: RETRACTED with no reason naming the round and its words or verse (rulings 105); LINE: D2 vs 
+    SEAT: gemini; ITEM: D3 vs C3; RULE: K-G4; RESULT: UNCURED; WHY: RETRACTED with no reason naming the round and its words or verse (rulings 105); LINE: D3 vs 
+    SEAT: gemini; ITEM: D4 vs C6; RULE: K-G4; RESULT: UNCURED; WHY: RETRACTED with no reason naming the round and its words or verse (rulings 105); LINE: D4 vs 
+    SEAT: gemini; ITEM: CHALLENGER STANDING; RULE: K-G3; RESULT: UNCURED; WHY: RETRACTED with no reason naming the round and its words or verse (rulings 105); n
+    SEAT: gemini; ITEM: D1 vs C1; RULE: K-F; RESULT: UNCURED; WHY: RETRACTED with no reason naming the round and its words or verse (rulings 105); LINE: FORCED:
+    SEAT: gemini; ITEM: D2 vs C2; RULE: K-F; RESULT: UNCURED; WHY: RETRACTED with no reason naming the round and its words or verse (rulings 105); LINE: FORCED:
+    SEAT: gemini; ITEM: D4 vs C6; RULE: K-F; RESULT: UNCURED; WHY: RETRACTED with no reason naming the round and its words or verse (rulings 105); LINE: FORCED:
+    SEAT: gemini; ITEM: D1 vs C1; RULE: K-FC; RESULT: UNCURED; WHY: TRIAL rule (recorded and answered; it removes no seat): RETRACTED with no reason naming the 
+    SEAT: gemini; ITEM: D3 vs C3; RULE: K-FC; RESULT: UNCURED; WHY: TRIAL rule (recorded and answered; it removes no seat): RETRACTED with no reason naming the 
+    SEAT: gemini; ITEM: D1 vs C1; RULE: K-RUL; RESULT: UNCURED; WHY: TRIAL rule (recorded and answered; it removes no seat): RETRACTED with no reason naming the
+    SEAT: gemini; ITEM: D2 vs C2; RULE: K-RUL; RESULT: UNCURED; WHY: TRIAL rule (recorded and answered; it removes no seat): RETRACTED with no reason naming the
+    SEAT: gemini; ITEM: D3 vs C3; RULE: K-RUL; RESULT: UNCURED; WHY: TRIAL rule (recorded and answered; it removes no seat): RETRACTED with no reason naming the
+    SEAT: gemini; ITEM: D4 vs C6; RULE: K-RUL; RESULT: UNCURED; WHY: TRIAL rule (recorded and answered; it removes no seat): RETRACTED with no reason naming the
+  sol not-cured cure lines: 1
+    SEAT: sol; ITEM: DEFENDER CR3 LINK 2 #1; RULE: K-W; RESULT: UNCURED; WHY: neither the RESPONSE nor the STATEMENT line says STANDS WITHOUT IT because <layer>
+
+33490 Alt Gate Record
+  stored    : grok:2
+  live s111 : grok:2
+  candidate : grok:2
+  pkgGCP marks: none
+  bodies equal apart from the count and the marks: true; other output fields equal: true

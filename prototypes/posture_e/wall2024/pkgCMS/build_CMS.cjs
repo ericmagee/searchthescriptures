@@ -14,17 +14,17 @@ const intro=d.nodes.filter(n=>n.parameters&&n.parameters.jsCode&&n.name!=='Share
 say(!intro.length,'M4 no plain Code node reads node code text (.params, jsCode, toString): '+(intro.join(', ')||'none'));
 // strip the plain nodes and the 12 library sources
 const tbad=[],pbad=[];const sx=(name,c)=>{const t=strip(c);if(toks(t)!==toks(c))tbad.push(name);try{new Function('$','$input','return (async()=>{\n'+t+'\n})();');}catch(e){pbad.push(name+': '+e.message);}return t;};
-const SD='pkgLIB/strip_R1R2/patched/';if(fs.existsSync('pkgLIB/strip_R1R2'))throw new Error('pkgLIB/strip_R1R2 exists; remove it first');fs.mkdirSync(SD,{recursive:true});
+const SD='pkgLIB/strip_R1R2'+(process.env.CMSX||'')+'/patched/';if(fs.existsSync('pkgLIB/strip_R1R2'+(process.env.CMSX||'')))throw new Error('pkgLIB/strip_R1R2 exists; remove it first');fs.mkdirSync(SD,{recursive:true});
 for(const f of fs.readdirSync(STRIPDIR+'/patched').filter(f=>f.endsWith('.js'))){const s=fs.readFileSync(STRIPDIR+'/patched/'+f,'utf8');const n=f.slice(0,-3).replace(/_/g,' ');fs.writeFileSync(SD+f,R1.includes(n)?sx(n,s):s);}
 const before={},after={};for(const n of plain){before[n.name]=n.parameters.jsCode.length;n.parameters.jsCode=sx(n.name,n.parameters.jsCode);after[n.name]=n.parameters.jsCode.length;}
 say(!tbad.length,'M1 token-equal after the strip: '+(plain.length+R1.length-tbad.length)+' of '+(plain.length+R1.length)+(tbad.length?' differ: '+tbad.join(', '):''));
 say(!pbad.length,'M2 every stripped source parses: '+(pbad.length?pbad.join('; '):'all'));
 // repack the 42 library sources with the base as fetch-back (E4 heads)
 const TMPFB=path.join(require('os').tmpdir(),'r2_base_'+process.pid+'.json');fs.writeFileSync(TMPFB,JSON.stringify(base));
-if(fs.existsSync('pkgLIB_R1R2'))throw new Error('pkgLIB_R1R2 exists; remove it first');
-const r=cp.spawnSync(process.execPath,['gate/pack.cjs','pkgLIB/strip_R1R2','pkgLIB_R1R2'],{env:{...process.env,FB:TMPFB},encoding:'utf8',maxBuffer:64<<20});fs.unlinkSync(TMPFB);
+if(fs.existsSync('pkgLIB_R1R2'+(process.env.CMSX||'')))throw new Error('pkgLIB_R1R2 exists; remove it first');
+const r=cp.spawnSync(process.execPath,['gate/pack.cjs','pkgLIB/strip_R1R2'+(process.env.CMSX||''),'pkgLIB_R1R2'+(process.env.CMSX||'')],{env:{...process.env,FB:TMPFB},encoding:'utf8',maxBuffer:64<<20});fs.unlinkSync(TMPFB);
 console.log(r.stdout.trim().split('\n').slice(-2).join('\n'));if(r.status)throw new Error('pack failed: '+r.stderr);
-const P='pkgLIB_R1R2/patched/',E4='pkgLIB_R1R2/e4_rebase/';const lib=fs.readFileSync(P+'Shared_Library.js','utf8');const by={};d.nodes.forEach(n=>by[n.name]=n);
+const P='pkgLIB_R1R2'+(process.env.CMSX||'')+'/patched/',E4='pkgLIB_R1R2'+(process.env.CMSX||'')+'/e4_rebase/';const lib=fs.readFileSync(P+'Shared_Library.js','utf8');const by={};d.nodes.forEach(n=>by[n.name]=n);
 by['Shared Library'].parameters.jsCode=lib;const e4=fs.readdirSync(E4);let rb=[];
 for(const f of fs.readdirSync(P).filter(f=>f!=='Shared_Library.js')){const n=f.slice(0,-3).replace(/_/g,' ');const stub=fs.readFileSync(P+f,'utf8');if(rebuild(stub,lib)!==fs.readFileSync(SD+f,'utf8'))rb.push(f);by[n].parameters.jsCode=e4.includes(f)?fs.readFileSync(E4+f,'utf8'):stub;}
 for(const f of e4)by[f.slice(0,-3).replace(/_/g,' ')].parameters.jsCode=fs.readFileSync(E4+f,'utf8');
