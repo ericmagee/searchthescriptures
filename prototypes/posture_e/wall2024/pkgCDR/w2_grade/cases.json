@@ -1,5 +1,5 @@
 {
- "about": "W2 labeled cases for grading pkgCDR rev 1, labels fixed before any run. Base: run 34108 Final Output. Each case appends sentences (adds) to rounds as their own lines, then checks for a candidate whose closing sentence is 'closing' (and side). LISTED = exactly one candidate with that closing sentence on that side; NOT LISTED = none. Rounds: cr1 cr2 cr3 cr4 (defender), gr1 gr2 dr3 dr4 (challenger).",
+ "about": "W2 labeled cases for grading pkgCDR rev 1, labels fixed before any run. Base: run 34108 Final Output. Each case appends sentences (adds) to rounds as their own lines, then checks for a candidate whose closing sentence is 'closing' (and side). LISTED = exactly one candidate with that closing sentence on that side; NOT LISTED = none. Rounds: cr1 cr2 cr3 cr4 (defender), gr1 gr2 dr3 dr4 (challenger). want7 (rev 7 standard, coordinator 04:37Z 11-10): conditional and argument-sake drops may be listed (ANY); every true drop must be LISTED; other non-drops NOT LISTED.",
  "cases": [
   {
    "id": "W1",
@@ -373,7 +373,8 @@
    "side": "DEFENDER",
    "closing": "The register stops at Joseph.",
    "want": "NOT LISTED",
-   "note": "rev 3 regrade, labeled before any rev 3 run: conditional drop, kept"
+   "note": "rev 3 regrade, labeled before any rev 3 run: conditional drop, kept",
+   "want7": "ANY"
   },
   {
    "id": "W23",
@@ -475,7 +476,8 @@
    "side": "DEFENDER",
    "closing": "The register stops at Joseph.",
    "want": "NOT LISTED",
-   "note": "rev 3 regrade, labeled before any rev 3 run: W2 own: subjunctive"
+   "note": "rev 3 regrade, labeled before any rev 3 run: W2 own: subjunctive",
+   "want7": "ANY"
   },
   {
    "id": "W29",
@@ -492,7 +494,8 @@
    "side": "DEFENDER",
    "closing": "The register stops at Joseph.",
    "want": "NOT LISTED",
-   "note": "rev 3 regrade, labeled before any rev 3 run: W2 own: conditional 'would drop'"
+   "note": "rev 3 regrade, labeled before any rev 3 run: W2 own: conditional 'would drop'",
+   "want7": "ANY"
   },
   {
    "id": "W30",
@@ -577,7 +580,8 @@
    "side": "DEFENDER",
    "closing": "The register stops at Joseph.",
    "want": "NOT LISTED",
-   "note": "rev 3 grade, labeled before the run: conditional tail after the wording (W3 rev 3 class)"
+   "note": "rev 3 grade, labeled before the run: conditional tail after the wording (W3 rev 3 class)",
+   "want7": "ANY"
   },
   {
    "id": "W35",
@@ -611,7 +615,8 @@
    "side": "DEFENDER",
    "closing": "The register stops at Joseph.",
    "want": "NOT LISTED",
-   "note": "rev 3 grade, labeled before the run: W2 own: 'unless' tail"
+   "note": "rev 3 grade, labeled before the run: W2 own: 'unless' tail",
+   "want7": "ANY"
   },
   {
    "id": "W37",
@@ -628,7 +633,8 @@
    "side": "DEFENDER",
    "closing": "The register stops at Joseph.",
    "want": "NOT LISTED",
-   "note": "rev 3 grade, labeled before the run: W2 own: 'provided' tail"
+   "note": "rev 3 grade, labeled before the run: W2 own: 'provided' tail",
+   "want7": "ANY"
   },
   {
    "id": "W38",
@@ -696,7 +702,8 @@
    "side": "DEFENDER",
    "closing": "The register stops at Joseph.",
    "want": "NOT LISTED",
-   "note": "rev 4 regrade, labeled before the run: 'in case' tail"
+   "note": "rev 4 regrade, labeled before the run: 'in case' tail",
+   "want7": "ANY"
   },
   {
    "id": "W42",
@@ -713,7 +720,8 @@
    "side": "DEFENDER",
    "closing": "The register stops at Joseph.",
    "want": "NOT LISTED",
-   "note": "rev 4 regrade, labeled before the run: 'on condition that' tail"
+   "note": "rev 4 regrade, labeled before the run: 'on condition that' tail",
+   "want7": "ANY"
   },
   {
    "id": "W43",
@@ -764,7 +772,8 @@
    "side": "DEFENDER",
    "closing": "The register stops at Joseph.",
    "want": "NOT LISTED",
-   "note": "rev 4 regrade, labeled before the run: 'should' conditional tail"
+   "note": "rev 4 regrade, labeled before the run: 'should' conditional tail",
+   "want7": "ANY"
   },
   {
    "id": "W46",
@@ -832,7 +841,8 @@
    "side": "DEFENDER",
    "closing": "The register stops at Joseph.",
    "want": "NOT LISTED",
-   "note": "rev 5 grade, labeled before the run: 'supposing'"
+   "note": "rev 5 grade, labeled before the run: 'supposing'",
+   "want7": "ANY"
   },
   {
    "id": "W50",
@@ -849,7 +859,8 @@
    "side": "DEFENDER",
    "closing": "The register stops at Joseph.",
    "want": "NOT LISTED",
-   "note": "rev 5 grade, labeled before the run: 'assuming'"
+   "note": "rev 5 grade, labeled before the run: 'assuming'",
+   "want7": "ANY"
   },
   {
    "id": "W51",
@@ -866,7 +877,8 @@
    "side": "DEFENDER",
    "closing": "The register stops at Joseph.",
    "want": "NOT LISTED",
-   "note": "rev 5 grade, labeled before the run: 'in the event that'"
+   "note": "rev 5 grade, labeled before the run: 'in the event that'",
+   "want7": "ANY"
   },
   {
    "id": "W52",
@@ -883,7 +895,8 @@
    "side": "DEFENDER",
    "closing": "The register stops at Joseph.",
    "want": "NOT LISTED",
-   "note": "rev 5 grade, labeled before the run: 'so long as'"
+   "note": "rev 5 grade, labeled before the run: 'so long as'",
+   "want7": "ANY"
   },
   {
    "id": "W53",
@@ -900,7 +913,8 @@
    "side": "DEFENDER",
    "closing": "The register stops at Joseph.",
    "want": "NOT LISTED",
-   "note": "rev 5 grade, labeled before the run: 'only when'"
+   "note": "rev 5 grade, labeled before the run: 'only when'",
+   "want7": "ANY"
   },
   {
    "id": "W54",
@@ -917,7 +931,8 @@
    "side": "DEFENDER",
    "closing": "The register stops at Joseph.",
    "want": "NOT LISTED",
-   "note": "rev 5 grade, labeled before the run: 'but only if'"
+   "note": "rev 5 grade, labeled before the run: 'but only if'",
+   "want7": "ANY"
   },
   {
    "id": "W55",
@@ -934,7 +949,8 @@
    "side": "DEFENDER",
    "closing": "The register stops at Joseph.",
    "want": "NOT LISTED",
-   "note": "rev 5 grade, labeled before the run: inverted 'were'"
+   "note": "rev 5 grade, labeled before the run: inverted 'were'",
+   "want7": "ANY"
   },
   {
    "id": "W56",
@@ -1138,7 +1154,8 @@
    "side": "DEFENDER",
    "closing": "The register stops at Joseph.",
    "want": "NOT LISTED",
-   "note": "rev 6 grade, labeled before the run: condition before the drop"
+   "note": "rev 6 grade, labeled before the run: condition before the drop",
+   "want7": "ANY"
   },
   {
    "id": "W68",
@@ -1155,7 +1172,8 @@
    "side": "DEFENDER",
    "closing": "The register stops at Joseph.",
    "want": "NOT LISTED",
-   "note": "rev 6 grade, labeled before the run: arguendo between verb and wording"
+   "note": "rev 6 grade, labeled before the run: arguendo between verb and wording",
+   "want7": "ANY"
   },
   {
    "id": "W69",
@@ -1172,7 +1190,8 @@
    "side": "DEFENDER",
    "closing": "The register stops at Joseph.",
    "want": "NOT LISTED",
-   "note": "rev 6 grade, labeled before the run: arguendo before the drop"
+   "note": "rev 6 grade, labeled before the run: arguendo before the drop",
+   "want7": "ANY"
   },
   {
    "id": "W70",
@@ -1240,7 +1259,260 @@
    "side": "DEFENDER",
    "closing": "The register stops at Joseph.",
    "want": "NOT LISTED",
-   "note": "rev 6 grade, labeled before the run: 'if need be' leaves the drop conditional"
+   "note": "rev 6 grade, labeled before the run: 'if need be' leaves the drop conditional",
+   "want7": "ANY"
+  },
+  {
+   "id": "W74",
+   "adds": [
+    [
+     "cr3",
+     "Accordingly I withdraw the wording \"the register stops at Joseph\"."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "LISTED",
+   "want7": "LISTED",
+   "note": "rev 7 grade, labeled before the run: lead-in 'Accordingly'"
+  },
+  {
+   "id": "W75",
+   "adds": [
+    [
+     "cr3",
+     "On Luke 3:23, I drop the wording \"the register stops at Joseph\"."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "LISTED",
+   "want7": "LISTED",
+   "note": "rev 7 grade, labeled before the run: lead-in verse label"
+  },
+  {
+   "id": "W76",
+   "adds": [
+    [
+     "cr3",
+     "Therefore, I drop the wording \"the register stops at Joseph\"."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "LISTED",
+   "want7": "LISTED",
+   "note": "rev 7 grade, labeled before the run: lead-in 'Therefore,'"
+  },
+  {
+   "id": "W77",
+   "adds": [
+    [
+     "cr3",
+     "In this round I drop the wording \"the register stops at Joseph\"."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "LISTED",
+   "want7": "LISTED",
+   "note": "rev 7 grade, labeled before the run: lead-in phrase"
+  },
+  {
+   "id": "W78",
+   "adds": [
+    [
+     "cr3",
+     "So I retract the claim that the register stops at Joseph."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "LISTED",
+   "want7": "LISTED",
+   "note": "rev 7 grade, labeled before the run: lead-in 'So'"
+  },
+  {
+   "id": "W79",
+   "adds": [
+    [
+     "cr3",
+     "I hereby withdraw the wording \"the register stops at Joseph\"."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "LISTED",
+   "want7": "LISTED",
+   "note": "rev 7 grade, labeled before the run: 'hereby'"
+  },
+  {
+   "id": "W80",
+   "adds": [
+    [
+     "cr3",
+     "I now abandon the wording \"the register stops at Joseph\"."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "LISTED",
+   "want7": "LISTED",
+   "note": "rev 7 grade, labeled before the run: 'now abandon'"
+  },
+  {
+   "id": "W81",
+   "adds": [
+    [
+     "cr3",
+     "The wording \"the register stops at Joseph\" is withdrawn."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "LISTED",
+   "want7": "LISTED",
+   "note": "rev 7 grade, labeled before the run: passive drop"
+  },
+  {
+   "id": "W82",
+   "adds": [
+    [
+     "cr3",
+     "I no longer hold that the register stops at Joseph."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "LISTED",
+   "want7": "LISTED",
+   "note": "rev 7 grade, labeled before the run: 'no longer hold'"
+  },
+  {
+   "id": "W83",
+   "adds": [
+    [
+     "cr3",
+     "I set aside the wording \"the register stops at Joseph\"."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "LISTED",
+   "want7": "LISTED",
+   "note": "rev 7 grade, labeled before the run: 'set aside'"
+  },
+  {
+   "id": "W84",
+   "adds": [
+    [
+     "cr3",
+     "I give the wording \"the register stops at Joseph\" up."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "LISTED",
+   "want7": "LISTED",
+   "note": "rev 7 grade, labeled before the run: split 'give ... up'"
+  },
+  {
+   "id": "W85",
+   "adds": [
+    [
+     "cr3",
+     "We drop the wording \"the register stops at Joseph\"."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "LISTED",
+   "want7": "LISTED",
+   "note": "rev 7 grade, labeled before the run: 'We'"
+  },
+  {
+   "id": "W86",
+   "adds": [
+    [
+     "cr3",
+     "To narrow LINK 6, I drop the wording \"the register stops at Joseph\"."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "LISTED",
+   "want7": "LISTED",
+   "note": "rev 7 grade, labeled before the run: purpose lead-in"
+  },
+  {
+   "id": "W87",
+   "adds": [
+    [
+     "cr3",
+     "I drop the wording \"the register stops at Joseph\"?"
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "ANY",
+   "want7": "ANY",
+   "note": "rev 7 grade, labeled before the run: question form (rev 7 not a drop)"
   }
  ]
 }
