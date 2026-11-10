@@ -1,0 +1,9 @@
+GOOD LIVE s105 CURED | FUN8 UNCURED | FUN9 UNCURED | CORRECT ANSWER REFUSED | DIFFERS FROM LIVE  | "COUNTED. This count is wrong.\nCORRECTED COUNT: DEFENDER 3" 
+     FUN9 reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+GOOD LIVE s105 CURED | FUN8 UNCURED | FUN9 UNCURED | CORRECT ANSWER REFUSED | DIFFERS FROM LIVE  | "COUNTED. The count is not right.\nCORRECTED COUNT: DEFENDER 2" 
+     FUN9 reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+GOOD LIVE s105 CURED | FUN8 UNCURED | FUN9 UNCURED | CORRECT ANSWER REFUSED | DIFFERS FROM LIVE  | "COUNTED.\nThe count is mistaken.\nCORRECTED COUNT: DEFENDER 4" 
+     FUN9 reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+GOOD LIVE s105 CURED | FUN8 UNCURED | FUN9 UNCURED | CORRECT ANSWER REFUSED | DIFFERS FROM LIVE  | "COUNTED. The count is in error.\nCORRECTED COUNT: DEFENDER 3\nCORRECTED STANDING: CHALLENGER" 
+     FUN9 reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+pkgFUN/w3_grade/w3_good9b.json: 4 texts; correct answers refused by rev 9: 4; rev 9 ruling differs from live s105: 4; texts where another log row differs from rev 8: 0

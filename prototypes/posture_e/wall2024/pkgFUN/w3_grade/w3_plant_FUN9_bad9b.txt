@@ -1,0 +1,11 @@
+BAD LIVE s105 CURED | FUN8 CURED | FUN9 CURED | REFUSAL CURED   | "COUNTED, wrongly." 
+     FUN9 reason: answered: the close concession is counted
+BAD LIVE s105 CURED | FUN8 CURED | FUN9 CURED | REFUSAL CURED   | "COUNTED!? No." 
+     FUN9 reason: answered: the close concession is counted (NOTED, record-only: a sentence reads like a refusal: "No")
+BAD LIVE s105 CURED | FUN8 CURED | FUN9 CURED | REFUSAL CURED   | "COUNTED. No.\nMy count stands." 
+     FUN9 reason: answered: the close concession is counted (NOTED, record-only: a sentence reads like a refusal: "No")
+BAD LIVE s105 CURED | FUN8 CURED | FUN9 CURED | REFUSAL CURED   | "COUNTED - no, it is not a grant." 
+     FUN9 reason: answered: the close concession is counted (NOTED, record-only: the strict reader would refuse it: COUNTED is not the first word, or the first sentence holds a negation)
+BAD LIVE s105 CURED | FUN8 CURED | FUN9 CURED | REFUSAL CURED   | "TOUCHES NO LINK: . I refuse to answer." 
+     FUN9 reason: answered: it touches no declared link or listed premise, with its reason
+pkgFUN/w3_grade/w3_bad9b.json: 5 texts; refusals cured by rev 9: 5; rev 9 ruling differs from live s105: 0; texts where another log row differs from rev 8: 0
