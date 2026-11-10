@@ -1,0 +1,29 @@
+K1,K4 build: SIZE (measured): all Code text 3838702 -> 3840482 = +1780; prompt text: none added
+K1,K4: ABL /tmp/claude-0/-home-claude/6883c67b-298d-5583-a27c-a88baefc6cfe/scratchpad/abl/ALLnK1K4.json ["luna:BROKEN/BROKEN/drv2","chatgpt:BROKEN/STANDS/drv0","sol:BROKEN/STANDS/drv0"] L3 false
+K1,K4 diff: luna lines only in full build: 0 only in ablated: 0
+K1,K4 diff: chatgpt lines only in full build: 5 only in ablated: 3
+K1,K4 diff:    full:   "reasoning": "HELD -- [L1] Matthew 1:20 states that what was conceived in Mary was of the Holy Ghost. [L3] Romans 1:3 states that Christ was made of David's seed according to the flesh; [L4] the opp
+K1,K4 diff:    full: [AUDIT v25: RECOMPUTED AFTER CURE -- SEAT: chatgpt; TRIGGER: CLOSE-CONTRADICTION D6 vs C5 (UNDERDETERMINED to DEFENDER LINK BROKEN), CLOSE-CONTRADICTION D6 vs C6 (UNDERDETERMINED to DEFENDER LINK BROK
+K1,K4 diff:    full: [AUDIT v27: SUPERSEDED LINE -- SEAT: chatgpt; LABEL: KEYSTONE; ORIGINAL: KEYSTONE: D6 -- STANDS -- The declared conclusion that Christ had no biological father was retained on stated rows and has not 
+K1,K4 diff:    abl :   "reasoning": "HELD -- [L1] Matthew 1:20 states that what was conceived in Mary was of the Holy Ghost. [L3] Romans 1:3 states that Christ was made of David's seed according to the flesh; [L4] the opp
+K1,K4 diff:    abl : [AUDIT v25: RECOMPUTED AFTER CURE -- SEAT: chatgpt; TRIGGER: CLOSE-CONTRADICTION D6 vs C5 (UNDERDETERMINED to DEFENDER LINK BROKEN), CLOSE-CONTRADICTION D6 vs C6 (UNDERDETERMINED to DEFENDER LINK BROK
+K1,K4 diff:    abl : [AUDIT v37: SEND-BACK APPLIED (E-APPLY; WALL-2024 2236, 2237) -- SEAT: chatgpt; APPLIED: S1, S3, S4; ORIGINAL: BROKEN, DEFENSE PROP-DEPENDENT 0, CHALLENGE SELF-SUPPORTED 0, RESULT CHALLENGER WINS; DER
+K1,K4 diff: sol lines only in full build: 5 only in ablated: 3
+K1,K4 diff:    full:   "reasoning": "HELD. [L1][L3] The conception accounts, descent accounts, and household descriptions remain in the record together. [L4] Both sides exhibit linked readings, but the challenger does not
+K1,K4 diff:    full: [AUDIT v25: RECOMPUTED AFTER CURE -- SEAT: sol; TRIGGER: CLOSE-CONTRADICTION D6 vs C5 (UNDERDETERMINED to DEFENDER LINK BROKEN), CLOSE-CONTRADICTION D6 vs C6 (UNDERDETERMINED to DEFENDER LINK BROKEN),
+K1,K4 diff:    full: [AUDIT v27: SUPERSEDED LINE -- SEAT: sol; LABEL: KEYSTONE; ORIGINAL: KEYSTONE: D6 -- STANDS -- The conclusion that Christ had no biological father remains an exhibited inference from the conception ac
+K1,K4 diff:    abl :   "reasoning": "HELD. [L1][L3] The conception accounts, descent accounts, and household descriptions remain in the record together. [L4] Both sides exhibit linked readings, but the challenger does not
+K1,K4 diff:    abl : [AUDIT v25: RECOMPUTED AFTER CURE -- SEAT: sol; TRIGGER: CLOSE-CONTRADICTION D6 vs C5 (UNDERDETERMINED to DEFENDER LINK BROKEN), CLOSE-CONTRADICTION D6 vs C6 (UNDERDETERMINED to DEFENDER LINK BROKEN);
+K1,K4 diff:    abl : [AUDIT v37: SEND-BACK APPLIED (E-APPLY; WALL-2024 2236, 2237) -- SEAT: sol; APPLIED: S1, S3, S4, S5; ORIGINAL: BROKEN, DEFENSE PROP-DEPENDENT 0, CHALLENGE SELF-SUPPORTED 0, RESULT CHALLENGER WINS; DER
+K2,K3,K5,K6 build: SIZE (measured): all Code text 3838702 -> 3841306 = +2604; prompt text: none added
+K2,K3,K5,K6: ABL /tmp/claude-0/-home-claude/6883c67b-298d-5583-a27c-a88baefc6cfe/scratchpad/abl/ALLnK2K3K5K6.json ["luna:BROKEN/BROKEN/drv2","chatgpt:BROKEN/BROKEN/drv0","sol:BROKEN/BROKEN/drv0"] L3 true
+K2,K3,K5,K6 diff: luna lines only in full build: 0 only in ablated: 0
+K2,K3,K5,K6 diff: chatgpt lines only in full build: 0 only in ablated: 1
+K2,K3,K5,K6 diff:    abl : [AUDIT v38: E-GATE -- SEAT: chatgpt; G1 CONTRADICTION (E-GATE D38); ANSWER: NO REPLY; UNCURED: the gate call failed: no reply; RECORD-ONLY, not counted. REVIEW THIS ROW.]
+K2,K3,K5,K6 diff: sol lines only in full build: 0 only in ablated: 0
+K2,K3,K5,K6,E3 build: SIZE (measured): all Code text 3838702 -> 3841115 = +2413; prompt text: none added
+K2,K3,K5,K6,E3: ABL /tmp/claude-0/-home-claude/6883c67b-298d-5583-a27c-a88baefc6cfe/scratchpad/abl/ALLnK2K3K5K6E3.json ["luna:BROKEN/BROKEN/drv2","chatgpt:BROKEN/BROKEN/drv0","sol:BROKEN/BROKEN/drv0"] L3 true
+K2,K3,K5,K6,E3 diff: luna lines only in full build: 0 only in ablated: 0
+K2,K3,K5,K6,E3 diff: chatgpt lines only in full build: 0 only in ablated: 1
+K2,K3,K5,K6,E3 diff:    abl : [AUDIT v38: E-GATE -- SEAT: chatgpt; G1 CONTRADICTION (E-GATE D38); ANSWER: NO REPLY; UNCURED: the gate call failed: no reply; RECORD-ONLY, not counted. REVIEW THIS ROW.]
+K2,K3,K5,K6,E3 diff: sol lines only in full build: 0 only in ablated: 0

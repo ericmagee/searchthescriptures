@@ -1,0 +1,49 @@
+K1 build: SIZE (measured): all Code text 3838702 -> 3841168 = +2466; prompt text: none added
+K1 build: BUILD OK: /tmp/claude-0/-home-claude/6883c67b-298d-5583-a27c-a88baefc6cfe/scratchpad/abl/ALLnK1.json
+K1: ABL /tmp/claude-0/-home-claude/6883c67b-298d-5583-a27c-a88baefc6cfe/scratchpad/abl/ALLnK1.json ["luna:BROKEN/BROKEN/drv2","chatgpt:BROKEN/BROKEN/drv0","sol:BROKEN/BROKEN/drv0"] L3 true
+K2 build: SIZE (measured): all Code text 3838702 -> 3841519 = +2817; prompt text: none added
+K2 build: BUILD OK: /tmp/claude-0/-home-claude/6883c67b-298d-5583-a27c-a88baefc6cfe/scratchpad/abl/ALLnK2.json
+K2: ABL /tmp/claude-0/-home-claude/6883c67b-298d-5583-a27c-a88baefc6cfe/scratchpad/abl/ALLnK2.json ["luna:BROKEN/BROKEN/drv2","chatgpt:BROKEN/BROKEN/drv0","sol:BROKEN/BROKEN/drv0"] L3 true
+K3 build: SIZE (measured): all Code text 3838702 -> 3841521 = +2819; prompt text: none added
+K3 build: BUILD OK: /tmp/claude-0/-home-claude/6883c67b-298d-5583-a27c-a88baefc6cfe/scratchpad/abl/ALLnK3.json
+K3: ABL /tmp/claude-0/-home-claude/6883c67b-298d-5583-a27c-a88baefc6cfe/scratchpad/abl/ALLnK3.json ["luna:BROKEN/BROKEN/drv2","chatgpt:BROKEN/BROKEN/drv0","sol:BROKEN/BROKEN/drv0"] L3 true
+K4 build: SIZE (measured): all Code text 3838702 -> 3840900 = +2198; prompt text: none added
+K4 build: BUILD OK: /tmp/claude-0/-home-claude/6883c67b-298d-5583-a27c-a88baefc6cfe/scratchpad/abl/ALLnK4.json
+K4: ABL /tmp/claude-0/-home-claude/6883c67b-298d-5583-a27c-a88baefc6cfe/scratchpad/abl/ALLnK4.json ["luna:BROKEN/BROKEN/drv2","chatgpt:BROKEN/BROKEN/drv0","sol:BROKEN/BROKEN/drv0"] L3 true
+K5 build: SIZE (measured): all Code text 3838702 -> 3841520 = +2818; prompt text: none added
+K5 build: BUILD OK: /tmp/claude-0/-home-claude/6883c67b-298d-5583-a27c-a88baefc6cfe/scratchpad/abl/ALLnK5.json
+K5: ABL /tmp/claude-0/-home-claude/6883c67b-298d-5583-a27c-a88baefc6cfe/scratchpad/abl/ALLnK5.json ["luna:BROKEN/BROKEN/drv2","chatgpt:BROKEN/BROKEN/drv0","sol:BROKEN/BROKEN/drv0"] L3 true
+K6 build: SIZE (measured): all Code text 3838702 -> 3841504 = +2802; prompt text: none added
+K6 build: BUILD OK: /tmp/claude-0/-home-claude/6883c67b-298d-5583-a27c-a88baefc6cfe/scratchpad/abl/ALLnK6.json
+K6: ABL /tmp/claude-0/-home-claude/6883c67b-298d-5583-a27c-a88baefc6cfe/scratchpad/abl/ALLnK6.json ["luna:BROKEN/BROKEN/drv2","chatgpt:BROKEN/BROKEN/drv0","sol:BROKEN/BROKEN/drv0"] L3 true
+E1 build: SIZE (measured): all Code text 3838702 -> 3840243 = +1541; prompt text: none added
+E1 build: BUILD OK: /tmp/claude-0/-home-claude/6883c67b-298d-5583-a27c-a88baefc6cfe/scratchpad/abl/ALLnE1.json
+E1: ABL ERR Send Back Build: out is not defined
+E2 build: FAIL parse Alt_Send_Back_Build.js: Identifier 'out' has already been declared
+E2 build: FAIL parse R2_Alt_Send_Back_Build.js: Identifier 'out' has already been declared
+E2 build: FAIL parse Send_Back_Build.js: Identifier 'out' has already been declared
+E2: node:fs:440
+E2:     return binding.readFileUtf8(path, stringToFlags(options.flag));
+E2:                    ^
+E2: 
+E2: Error: ENOENT: no such file or directory, open '/tmp/claude-0/-home-claude/6883c67b-298d-5583-a27c-a88baefc6cfe/scratchpad/abl/ALLnE2.json'
+E2:     at Object.readFileSync (node:fs:440:20)
+E2:     at L (/home/claude/searchthescriptures/prototypes/posture_e/wall2024/w2_grades/fix34626/w2_chain.cjs:6:33)
+E2:     at chain (/home/claude/searchthescriptures/prototypes/posture_e/wall2024/w2_grades/fix34626/w2_chain.cjs:7:53)
+E2:     at /home/claude/searchthescriptures/prototypes/posture_e/wall2024/w2_grades/fix34626/w2_rev2b.cjs:32:21
+E2:     at Object.<anonymous> (/home/claude/searchthescriptures/prototypes/posture_e/wall2024/w2_grades/fix34626/w2_rev2b.cjs:32:320)
+E2:     at Module._compile (node:internal/modules/cjs/loader:1781:14)
+E2:     at Object..js (node:internal/modules/cjs/loader:1913:10)
+E2:     at Module.load (node:internal/modules/cjs/loader:1505:32)
+E2:     at Function._load (node:internal/modules/cjs/loader:1309:12)
+E2:     at wrapModuleLoad (node:internal/modules/cjs/loader:254:19) {
+E2:   errno: -2,
+E2:   code: 'ENOENT',
+E2:   syscall: 'open',
+E2:   path: '/tmp/claude-0/-home-claude/6883c67b-298d-5583-a27c-a88baefc6cfe/scratchpad/abl/ALLnE2.json'
+E2: }
+E2: 
+E2: Node.js v22.23.4
+E3 build: SIZE (measured): all Code text 3838702 -> 3841395 = +2693; prompt text: none added
+E3 build: BUILD OK: /tmp/claude-0/-home-claude/6883c67b-298d-5583-a27c-a88baefc6cfe/scratchpad/abl/ALLnE3.json
+E3: ABL /tmp/claude-0/-home-claude/6883c67b-298d-5583-a27c-a88baefc6cfe/scratchpad/abl/ALLnE3.json ["luna:BROKEN/BROKEN/drv2","chatgpt:BROKEN/BROKEN/drv0","sol:BROKEN/BROKEN/drv0"] L3 true

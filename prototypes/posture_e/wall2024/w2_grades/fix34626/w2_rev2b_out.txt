@@ -1,0 +1,15 @@
+OK   L2 base chain equals the stored Replay Rows
+   Replay Rows keys body
+   base ["luna:BROKEN/STANDS/drv2","chatgpt:BROKEN/STANDS/drv0","sol:BROKEN/STANDS/drv0"]
+   ALL ["luna:BROKEN/BROKEN/drv2","chatgpt:BROKEN/BROKEN/drv0","sol:BROKEN/BROKEN/drv0"]
+OK   L3 both: final KEYSTONE D6 BROKEN for all three at Replay Rows
+OK   L3 both: every written field but verdict_raw equal to base (drv_uncured included)
+   ECB ["luna:BROKEN/BROKEN/drv2","chatgpt:BROKEN/STANDS/drv0","sol:BROKEN/STANDS/drv0"]
+   KSR ["luna:BROKEN/BROKEN/drv2","chatgpt:BROKEN/BROKEN/drv1","sol:BROKEN/BROKEN/drv1"]
+   L5 planted item sent: s110 ["S1"] both ["S1"]
+OK   L5 judge line quoting the engine words on an E-ANS line is still sent
+OK   L6 no confirmed closing contradiction: both equals s110 at Replay Rows
+   L7 s110 ["luna:BROKEN/BROKEN/drv6","chatgpt:BROKEN/STANDS/drv2","sol:BROKEN/STANDS/drv2"] both ["luna:BROKEN/BROKEN/drv5","chatgpt:BROKEN/STANDS/drv1","sol:BROKEN/STANDS/drv1"]
+OK   L7 break on D3: the same D6 items are sent as in s110 (6)
+OK   L7 KEYSTONE D6 as in s110
+7 OK, 0 FAIL
