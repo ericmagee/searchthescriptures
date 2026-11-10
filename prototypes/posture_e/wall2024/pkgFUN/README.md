@@ -119,3 +119,30 @@ Checks:
 - Rolled-back insert (rollback_FUN5.sql, the NOTED CURED row and an UNCURED row): {"rows": 2, "recorded": true}.
 - Write file parent_s102_FUN5.json: against live s102 only the Shared Library differs; connections equal.
 The trade (later refusals noted, not enforced) is the operator's to approve before the write.
+
+## Rev 6 (W1, 2026-11-10)
+
+W3 failed rev 5 (grade_FUN5_w3.md): a first-sentence pointer followed by its explanation ("COUNTED. I withdraw that. The grant is a close concession
+of D6 and I add it to my count.") was enforced; live reads it CURED. The fault was in W3's rule, built faithfully. Rev 6 takes W3's measured fix
+(w3_pointer_idea.cjs):
+- A sentence of list P (that / this / it / one word) is ENFORCED only when it is the whole answer after COUNTED; when text follows, it is NOTED.
+- A sentence of list B (names the count or the grant) stays ENFORCED as the whole first sentence.
+- "!" directly after COUNTED is read as a stop. A first sentence ending in "?" (alone or in a run of marks) is never a refusal.
+- Reader pkgFUN/fun6_ref.cjs; build build_FUN6.cjs -> pkgLIB/strip_FUN6 from strip_KCB_base (Shared Library equal in s98 to s103).
+Checks:
+- fun6_ref against W3's sketch: 387 texts (all of W3's tables, good5 and bad5 included, and W2's 257), 0 differ in enforced or note.
+- W2's 257 (commit 133cd0ee):
+  - narrow column (w2_testset_FUN6_257_narrow.txt): 251 match, 0 correct refused. The 6 misses are those of rev 5 on the 210: "I reverse
+    that: it is not counted." and 5 of W3's first-sentence refusals not in the lists. 3 NOTED cases have no note, and 19 notes fall on cases not
+    labeled NOTED, all on correct answers whose status stays CURED.
+  - old column (w2_testset_FUN6_257_old.txt): 233 match, 0 correct refused.
+- W3's 36 new correct answers through the nodes (w3_plant_FUN5_nodes_on_FUN6.txt): 0 read UNCURED (rev 5: 4).
+- All planted answers (allplants_FUN6.txt): 107 correct all CURED, 0 lost against live; 56 of 63 refusals UNCURED.
+- probe_FUN6: 80 OK, 4 FAIL (W3's four reservations, as live). replay_FUN6: 176 stored replies byte-equal.
+- Node-level reason (note_rows_FUN6.txt):
+  - "COUNTED. I withdraw that. The grant is ..." reads CURED with the NOTED text;
+  - "COUNTED. I withdraw that." alone reads UNCURED.
+- Gate on the s103 fetch-back: 767 node runs equal, GATE PASS. Rolled-back insert (rollback_FUN6.sql): {"rows": 2, "recorded": true}.
+- Write file parent_s103_FUN6.json: against live s103 only the Shared Library differs; connections equal.
+- W4's new forms: not yet posted when this was built; to run on arrival.
+The trade (pointers followed by text and later refusals are noted, not enforced) is the operator's to approve before the write.
