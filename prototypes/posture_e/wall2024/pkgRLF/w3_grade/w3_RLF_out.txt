@@ -1,0 +1,63 @@
+33222_css_CHALLENGER_send1.json: lines 0, rows live 0 cand 0; confirmed live [] cand []
+OK   G3 33222_css_CHALLENGER_send1.json equals live
+33222_css_CHALLENGER_send2.json: lines 0, rows live 0 cand 0; confirmed live [] cand []
+OK   G3 33222_css_CHALLENGER_send2.json equals live
+33442_css_DEFENDER_send1.json: lines 8, rows live 8 cand 8; confirmed live ["D LINK 2 [CR3/CR4]","D LINK 3 [CR3/CR4]","D LINK 5 [CR3/CR4]","D LINK 6 [CR3/CR4]"] cand ["D LINK 2 [CR3/CR4]","D LINK 3 [CR3/CR4]","D LINK 5 [CR3/CR4]","D LINK 6 [CR3/CR4]"]
+OK   G3 33442_css_DEFENDER_send1.json equals live
+33442_css_DEFENDER_send2.json: lines 4, rows live 4 cand 4; confirmed live [] cand ["D LINK 2 [CR3/CR4]","D LINK 6 [CR3/CR4]"]
+OK   G1/G2 33442_css_DEFENDER_send2.json every line has a row
+   BREAK DEFENDER LINK 2: EARLIER "I rest nothing on what the text does not name." / CLOSING "The two sources these verses state for the child are the Holy Ghost and the mother, and ne"
+   BREAK DEFENDER LINK 6: EARLIER "I rest nothing on what the text does not name." / CLOSING "In Luke 1:35 the verse names only the mother and the Holy Ghost."
+OK   G1 33442 send 2: live none, candidate links 2 and 6
+33461_css_DEFENDER_send1.json: lines 0, rows live 0 cand 0; confirmed live [] cand []
+OK   G3 33461_css_DEFENDER_send1.json equals live
+33461_css_DEFENDER_send2.json: lines 1, rows live 1 cand 1; confirmed live ["D LINK 4 [CR2/CR4]"] cand ["D LINK 4 [CR2/CR4]"]
+OK   G3 33461_css_DEFENDER_send2.json equals live
+33482_css_DEFENDER_send1.json: lines 3, rows live 3 cand 3; confirmed live ["D LINK 1 [CR3/CR4]","D LINK 6 [CR3/CR4]"] cand ["D LINK 1 [CR3/CR4]","D LINK 6 [CR3/CR4]"]
+OK   G3 33482_css_DEFENDER_send1.json equals live
+33705_css_DEFENDER_send1.json: lines 3, rows live 3 cand 3; confirmed live ["D LINK 4 [CR2/CR4]","D LINK 6 [CR2/CR4]"] cand ["D LINK 4 [CR2/CR4]","D LINK 6 [CR2/CR4]"]
+OK   G3 33705_css_DEFENDER_send1.json equals live
+33705_css_DEFENDER_send2.json: lines 3, rows live 3 cand 3; confirmed live [] cand ["D LINK 4 [CR2/CR4]"]
+OK   G1/G2 33705_css_DEFENDER_send2.json every line has a row
+   BREAK DEFENDER LINK 4: EARLIER "I do not press it as a correction of Mary's \"thy father.\"" / CLOSING "Mary's \"thy father\" is answered in the next verse by the child's \"my Father's business\"
+OK   G2 33705 send 2: live none, candidate link 4
+OK   G3 set A 34108 both sides equals live; confirmed ["D LINK 3 [CR3/CR4]","D LINK 6 [CR3/CR4]"]
+   base line: CLOSE-CONTRADICTION: NEW -- DEFENDER -- LINK 6 -- CONFIRMED -- EARLIER [CR3] "I drop the wording 'no biological father' as a bare statement." -- CLOSING [CR4] "Christ had no biological father." -- CR3 expressly dropped that bare wording, while the closing rest
+G4 earlier "[round 3]" with a sentence that stands only in round 2
+   line: CLOSE-CONTRADICTION: NEW -- DEFENDER -- LINK 6 -- CONFIRMED -- EARLIER [round 3] "A knowing after the taking cannot beget what is already begotten." -- CLOSING [round 4] "Christ had no biological father." -- CR3 expressly dropped 
+   live [] | cand [] | cand rows: NEW NOT CONFIRMED (form) (the earlier quotation is not found word for word in CR3)
+OK   G4 earlier "[round 3]" with a sentence that stands only in round 2
+G5a closing "[round 9]"
+   line: CLOSE-CONTRADICTION: NEW -- DEFENDER -- LINK 6 -- CONFIRMED -- EARLIER [CR3] "I drop the wording 'no biological father' as a bare statement." -- CLOSING [round 9] "Christ had no biological father." -- CR3 expressly dropped that ba
+   live [] | cand [] | cand rows: NEW NOT CONFIRMED (form) (the closing round CR9 is not the defender's round 4 (CR4))
+OK   G5a closing "[round 9]"
+G5b closing "[round 0]"
+   line: CLOSE-CONTRADICTION: NEW -- DEFENDER -- LINK 6 -- CONFIRMED -- EARLIER [CR3] "I drop the wording 'no biological father' as a bare statement." -- CLOSING [round 0] "Christ had no biological father." -- CR3 expressly dropped that ba
+   live [] | cand [] | cand rows: NEW NOT CONFIRMED (form) (the closing round CR0 is not the defender's round 4 (CR4))
+OK   G5b closing "[round 0]"
+G5c closing "[round 44]"
+   line: CLOSE-CONTRADICTION: NEW -- DEFENDER -- LINK 6 -- CONFIRMED -- EARLIER [CR3] "I drop the wording 'no biological father' as a bare statement." -- CLOSING [round 44] "Christ had no biological father." -- CR3 expressly dropped that b
+   live [] | cand [] | cand rows: ? NOT CONFIRMED (form) (the line is not in the CLOSE-CONTRADICTION form)
+OK   G5c closing "[round 44]"
+G5d closing "[CR  4]" two spaces
+   line: CLOSE-CONTRADICTION: NEW -- DEFENDER -- LINK 6 -- CONFIRMED -- EARLIER [CR3] "I drop the wording 'no biological father' as a bare statement." -- CLOSING [CR  4] "Christ had no biological father." -- CR3 expressly dropped that bare
+   live [] | cand [] | cand rows: ? NOT CONFIRMED (form) (the line is not in the CLOSE-CONTRADICTION form)
+OK   G5d closing "[CR  4]" two spaces
+   first candidate of 34108: none
+G6 NOT A CONTRADICTION with [round N] labels under id NEW
+   line: CLOSE-CONTRADICTION: NEW-- DEFENDER -- LINK 6 -- NOT A CONTRADICTION -- EARLIER [round 3] "I drop the wording 'no biological father' as a bare statement." -- CLOSING [round 4] "Christ had no biological father." -- CR3 expressly dr
+   live [] | cand [] | cand rows: NEW NOT A CONTRADICTION
+OK   G6 NOT A CONTRADICTION with [round N] labels under id NEW
+G7 [CR3]/[CR4] labels and "round 4" in the reason: same as live
+   line: CLOSE-CONTRADICTION: NEW -- DEFENDER -- LINK 6 -- CONFIRMED -- EARLIER [CR3] "I drop the wording 'no biological father' as a bare statement." -- CLOSING [CR4] "Christ had no biological father." -- CR3 expressly dropped that bare w
+   live ["D LINK 6 [CR3/CR4]"] | cand ["D LINK 6 [CR3/CR4]"] | cand rows: NEW CONFIRMED
+OK   G7 [CR3]/[CR4] labels and "round 4" in the reason: same as live
+G8 CHALLENGER line with [round n] labels and the defender's sentences
+   line: CLOSE-CONTRADICTION: NEW -- CHALLENGER -- LINK 6 -- CONFIRMED -- EARLIER [round 3] "I drop the wording 'no biological father' as a bare statement." -- CLOSING [round 4] "Christ had no biological father." -- CR3 expressly dropped t
+   live [] | cand [] | cand rows: NEW NOT CONFIRMED (form) (the earlier quotation is not found word for word in DR3; the closing quotation is not foun)
+OK   G8 CHALLENGER line with [round n] labels and the defender's sentences
+G9 the true D6 pair as "Round 3" / "ROUND 4" without brackets
+   line: CLOSE-CONTRADICTION: NEW -- DEFENDER -- LINK 6 -- CONFIRMED -- EARLIER Round 3 "I drop the wording 'no biological father' as a bare statement." -- CLOSING ROUND 4 "Christ had no biological father." -- CR3 expressly dropped that ba
+   live [] | cand ["D LINK 6 [CR3/CR4]"] | cand rows: NEW CONFIRMED
+OK   G9 the true D6 pair as "Round 3" / "ROUND 4" without brackets
+ALL AS LABELED
