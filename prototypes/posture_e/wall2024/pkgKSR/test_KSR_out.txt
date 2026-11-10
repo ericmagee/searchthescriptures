@@ -6,15 +6,10 @@ OK   K2 Panel Cure Check: line diff 4 base-only and 10 candidate-only lines, all
 OK   K3 Gate Build: no derived STANDS on a link broken by a confirmed closing contradiction
    Gate Record: derived "D6 -- STANDS" lines base 0, candidate 0
 OK   K3 Gate Record: no derived STANDS on a link broken by a confirmed closing contradiction
-   Alternate Merge Seat: derived "D6 -- STANDS" lines base 2, candidate 2
-FAIL K3 Alternate Merge Seat: no derived STANDS on a link broken by a confirmed closing contradiction
+   Alternate Merge Seat: derived "D6 -- STANDS" lines base 2, candidate 0
+OK   K3 Alternate Merge Seat: no derived STANDS on a link broken by a confirmed closing contradiction
 OK   E0 Send Back Build: base source rerun equals the stored output
    items on the engine break lines: base 8, candidate 0; not_sent rows naming it: 8
 OK   E1 Send Back Build: the engine break lines are not sent back and each is recorded in not_sent
-   item headers: base 60, candidate 48
-7 OK, 1 FAIL
-fields of an output item: sb_skip,seat,api_model,run_token,items,msg,body,sb_not_sent
-items base 30, candidate 24
-base items missing from the candidate: 6; of them on a closing-break line: 6
-candidate items on a closing-break line: 0
-OK   E2 only the closing-break items are left out
+   item headers: base 60, candidate 44
+8 OK, 0 FAIL

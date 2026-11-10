@@ -40,3 +40,18 @@ Mistakes:
 - chain.cjs renumbered send-back replies line by line, but terra's and sol's replies are JSON with the SENDBACK lines inside an escaped string. They were not renumbered, so my first ECB and ALL replay showed KEYSTONE "none" and a drv_uncured rise that were the tool's fault. Fixed (split on real and escaped line breaks; JSON still parses).
 - ECB rev 2 as first built missed (c): under ALL the engine's KEYSTONE line was still sent back as an E-KEY item. The E4 label committed before the run did not list (c); it was added after.
 Limit: stored replies only; a new item has no answer.
+
+## Rev 3 (W1, 11-10, Central time). Built on s110 (ed644923). Candidate parent_s110_ALL.json (both packages together; they are not offered alone).
+
+Size (measured): +2,277 Code text; no prompt text.
+
+Changes from rev 2b:
+- K1 now finds the KEYSTONE line the live reader reads when rcLines finds none (W3 4237: a leading bullet "•" or "-"). plants_bullet.cjs: live s110 leaves sol's bulleted line at STANDS; rev 3 writes BROKEN for both bullets.
+- K4 dropped (W2 and W3 ablations, and mine: removing it changes nothing).
+- E3 dropped: with E1 rev 2, the FORCED item of a withheld pair is itself withheld, so the companion loop cannot meet a withheld collision line.
+- K2, K3, K5 kept. plants_KSR.cjs P1 (each judge's D6 collision lines are judge-written DEFENDER LINK BROKEN without the engine mark, a form cureRecompute leaves unmarked; the stored replies then change them). Measured on rev 2b with each guard removed (plants_KSR_P1_rev2b_*):
+  - without K2: luna's derived KEYSTONE STANDS raises a gate CONTRADICTION; luna drv_uncured 2 to 7.
+  - without K3: a send-back item asks each judge to unbreak KEYSTONE ("BROKEN while no D6 collision line is graded DEFENDER LINK BROKEN"); luna drv_uncured 2 to 6.
+  - without K5: rule 2 items "BROKEN while the verdict derived ... is not BROKEN" on terra and sol; luna drv_uncured 2 to 6.
+  - with all three (rev 3, plants_KSR_P1_ALL_out.txt): all BROKEN, drv_uncured 2, 0, 0 as the base.
+Results rev 3: chain_test ALL all three BROKEN; chain_diff ALL no field but verdict_raw differs; test_KSR 8 OK; plants_ECB 14 OK.

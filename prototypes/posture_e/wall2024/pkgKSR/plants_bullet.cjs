@@ -1,0 +1,6 @@
+// W3 4237 form: sol's KEYSTONE line opens with a bullet, planted in the stored run data before Panel Cure Check. Usage: node pkgKSR/plants_bullet.cjs <SET> <bullet>
+const chain=require('./chain.cjs');const [SET,B]=process.argv.slice(2);let n=0;const F='KEYSTONE: D6 -- STANDS -- The conclusion that Christ had no biological father remains';
+const walk=(v,f)=>{if(Array.isArray(v)){v.forEach((x,i)=>{if(typeof x==='string')v[i]=f(x);else walk(x,f);});}else if(v&&typeof v==='object'){for(const k of Object.keys(v)){if(typeof v[k]==='string')v[k]=f(v[k]);else walk(v[k],f);}}};
+const hook=(nm,over,rd)=>{if(nm!=='__start')return;const names=Object.keys(rd).filter(k=>rd[k][0].startTime<rd['Panel Cure Check'][0].startTime);for(const k of names)walk(rd[k],s=>s.split(F).length>1?(n++,s.split(F).join(B+' '+F)):s);};
+(async()=>{const r=await chain(SET,'Panel Cure Check',null,hook);if(r.err){console.log('ERROR '+r.err);return;}const b=r.over['Replay Rows'][0][0].json.body;const rows=(typeof b==='string'?JSON.parse(b):b).p_rows;
+ console.log(SET+' bullet "'+B+'": strings planted '+n);for(const w of rows){const raw=String(w.verdict_raw).replace(/\\n/g,'\n');console.log('== '+w.judge_seat+' | '+((raw.match(/(?:^|\n)[^\n]{0,4}KEYSTONE: D6 -- [^\n]{0,80}/)||['KEYSTONE none'])[0].trim())+' | drv_uncured '+JSON.stringify(w.drv_uncured));}})();
