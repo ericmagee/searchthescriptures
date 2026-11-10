@@ -1,0 +1,30 @@
+
+G8 deferral "in [CR4]"; [CR4] answers by paraphrase with a layer: no reference, no three KJV words in a row
+     live cure_status UNCURED | package cure_status UNCURED
+     TRIAL pkgVP3: code check does not agree, not an item -- [CR3] the answer defers to [CR4], which answers Luke 1:34 without its exact reference (line 60: "- [L4] The obstacle differs, and the verses state each obstacle. For Elisabeth it is "who "; pkgVPD rev 2)
+     vp3_trial {"status":"TRIAL","checked":5,"agree":0,"would_remove":{}}
+OK   G8 deferral "in [CR4]"; [CR4] answers by paraphrase with a layer: no reference, no three KJV words in a row: cure_status unchanged by the package
+OK   G8 deferral "in [CR4]"; [CR4] answers by paraphrase with a layer: no reference, no three KJV words in a row: not listed
+
+G9 deferral to earlier [CR2]; [CR2] holds three KJV words of the verse only in a bare grant line with no reference
+     live cure_status UNCURED | package cure_status UNCURED
+     TRIAL pkgVP3: code check does not agree, not an item -- [CR3] the answer defers to [CR2], which answers Luke 1:34 without its exact reference (line 42: "[L4] The press says the verbs carry power and presence, as in Acts 1:8 and Luke 9:34. What"; pkgVPD rev 2)
+     vp3_trial {"status":"TRIAL","checked":5,"agree":0,"would_remove":{}}
+OK   G9 deferral to earlier [CR2]; [CR2] holds three KJV words of the verse only in a bare grant line with no reference: cure_status unchanged by the package
+FAIL G9 deferral to earlier [CR2]; [CR2] holds three KJV words of the verse only in a bare grant line with no reference: LISTED (WOULD REMOVE chatgpt)
+
+G10 deferral to earlier [CR2]; [CR2] writes "verse 34" in a layered line about a different chapter (Luke 2, verse 34)
+     live cure_status UNCURED | package cure_status UNCURED
+     TRIAL pkgVP3: code check does not agree, not an item -- [CR3] the answer defers to [CR2], which answers Luke 1:34 without its exact reference (line 42: "[L4] The press says the verbs carry power and presence, as in Acts 1:8 and Luke 9:34. What"; pkgVPD rev 2)
+     vp3_trial {"status":"TRIAL","checked":5,"agree":0,"would_remove":{}}
+OK   G10 deferral to earlier [CR2]; [CR2] writes "verse 34" in a layered line about a different chapter (Luke 2, verse 34): cure_status unchanged by the package
+FAIL G10 deferral to earlier [CR2]; [CR2] writes "verse 34" in a layered line about a different chapter (Luke 2, verse 34): LISTED (WOULD REMOVE chatgpt)
+
+G11 deferral "in [CR4]"; [CR4] answers under "v. 34" with a reasoned sentence and no layer tag
+     live cure_status UNCURED | package cure_status UNCURED
+     TRIAL pkgVP3: code check does not agree, not an item -- [CR3] the answer defers to [CR4], which answers Luke 1:34 without its exact reference (line 60: "- [L4] The obstacle differs, and the verses state each obstacle. For Elisabeth it is "who "; pkgVPD rev 2)
+     vp3_trial {"status":"TRIAL","checked":5,"agree":0,"would_remove":{}}
+OK   G11 deferral "in [CR4]"; [CR4] answers under "v. 34" with a reasoned sentence and no layer tag: cure_status unchanged by the package
+OK   G11 deferral "in [CR4]"; [CR4] answers under "v. 34" with a reasoned sentence and no layer tag: not listed
+
+6 OK, 2 FAIL
