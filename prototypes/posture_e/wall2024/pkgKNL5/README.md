@@ -27,3 +27,9 @@ The parent step above refuses on a form 3 base, as it should. Then: pack strip_K
 
 ## Engine manual part
 FORCED none line (pkgKNL): a FORCED line that says no link is forced raises no K-F or K-CMT item. Accepted forms: none / no / nothing / zero / N/A, "none of the collisions/links", "there are no forced links", with an optional FORCED LINES head, a dash or colon lead, and a closing parenthesis only of the form "Commitment N" or "no/none/nothing/not any [links] [is/are] [graded] [forced/broken]". Any other text makes it a checked FORCED line.
+
+## Form 3 parent on live s94 (W2, 11-09 CST)
+`cp -r pkgLIB/strip_KNL5 pkgLIB/strip_KNL5S; FB=/mnt/project-files/wall2024/fetchback_live_s94.json node gate/pack.cjs pkgLIB/strip_KNL5S pkgLIB_KNL5S; node pkgFUK/parent_on.cjs /mnt/project-files/wall2024/fetchback_live_s94.json pkgLIB_KNL5S pkgLIB/strip_KNL5 pkgKNL5/parent_s94_KNL5.json`
+-> parent_s94_KNL5.json: 418 nodes, 1 node changed (Shared Library), connections unchanged, 30 library sources byte-equal to strip_KNL5.
+Base check: live s94's 30 library sources are byte-equal to strip_VP1_s84 (KNL5's base): a pack of it on s94 changes 0 nodes.
+Stacking: pkgFCD (with pkgFUK rev 3) also changes only the Shared Library. Whichever of KNL5 and FCD is written second must be rebuilt on the first.
