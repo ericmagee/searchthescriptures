@@ -1,0 +1,7 @@
+J0 U against live: 14 nodes | C2 Build -9; C3 Build -159; Build Synthesis 529; Build Independent Verdict 529; Build Save Body 529; Panel Build 529; Format Markdown 529; D4 Build 529; D4 Extract 529; C4 Build 370; C4 Extract 529; C4G Extract 529; D4B Extract 529; C4B Extract 529 | non-code 0 | rest equal true
+J0 C4 Build: C4P block equals BRF4 true | rest equals CCM file true
+J0 C2 Build equals CCM file: true
+J0 C3 Build equals CCM file: true
+J2 size: live 3849937 joint 3243982 = -605955 | U 3855958 | nodes 418
+J5 joint against the CMS file: 14 nodes | C2 Build -9; C3 Build -159; Build Synthesis 529; Build Independent Verdict 529; Build Save Body 529; Panel Build 529; Format Markdown 529; D4 Build 529; D4 Extract 529; C4 Build 370; C4 Extract 529; C4G Extract 529; D4B Extract 529; C4B Extract 529 | non-code 0
+joint against live: nodes differing 132 non-code 0 rest equal true

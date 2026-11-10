@@ -1,0 +1,12 @@
+const fs=require('fs');const g=f=>{let d=JSON.parse(fs.readFileSync(f,'utf8'));d=d.data||d;return d.workflow||d;};const S=JSON.stringify;
+const [uF]=process.argv.slice(2);const L=g('/mnt/project-files/wall2024/fetchback_live_s115.json'),U=g(uF),B=g('/mnt/project-files/wall2024/parent_s115_BRF4.json'),C=g('/mnt/project-files/wall2024/parent_s115_CCM.json'),J=g('/mnt/project-files/wall2024/joint_s115_BRF4_CCM_CMS.json'),M=g('/mnt/project-files/wall2024/parent_s115_CMS.json');
+const js=n=>(n.parameters&&n.parameters.jsCode)||'';const N=(W,n)=>W.nodes.find(x=>x.name===n);
+const diff=(X,Y)=>{const o=[];let other=0;for(const n of Y.nodes){const l=N(X,n.name);if(S(l)!==S(n)){o.push(n.name+' '+(js(n).length-js(l).length));if(S({...n,parameters:{...n.parameters,jsCode:0}})!==S({...l,parameters:{...l.parameters,jsCode:0}}))other++;}}return {o,other};};
+const rest=W=>{const {nodes,...r}=W;return S(r);};
+let d=diff(L,U);console.log('J0 U against live:',d.o.length,'nodes |',d.o.join('; '),'| non-code',d.other,'| rest equal',rest(L)===rest(U));
+const seg=c=>{const i=c.indexOf('const C4P=');const e=c.indexOf('})();',i)+5;return [c.slice(i,e),c.slice(0,i)+c.slice(e)];};
+const [up,uo]=seg(js(N(U,'C4 Build'))),[bp]=seg(js(N(B,'C4 Build'))),[,co]=seg(js(N(C,'C4 Build')));console.log('J0 C4 Build: C4P block equals BRF4',up===bp,'| rest equals CCM file',uo===co);
+for(const n of ['C2 Build','C3 Build'])console.log('J0',n,'equals CCM file:',js(N(U,n))===js(N(C,n)));
+const tot=W=>W.nodes.reduce((t,n)=>t+js(n).length,0);console.log('J2 size: live',tot(L),'joint',tot(J),'=',tot(J)-tot(L),'| U',tot(U),'| nodes',J.nodes.length);
+d=diff(M,J);console.log('J5 joint against the CMS file:',d.o.length,'nodes |',d.o.join('; '),'| non-code',d.other);
+d=diff(L,J);console.log('joint against live: nodes differing',d.o.length,'non-code',d.other,'rest equal',rest(L)===rest(J));

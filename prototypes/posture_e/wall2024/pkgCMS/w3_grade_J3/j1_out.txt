@@ -1,0 +1,25 @@
+OK   G1 418 nodes; all but Code text equal live; connections equal
+   other top-level keys that differ from the fetch-back: none
+changed Code nodes: 132 (plain 131, stubs 0, Shared Library 1)
+OK   G2 syntax tree equal, live against stripped, plain nodes: 131 of 131
+OK   G4 no comment left in a stripped plain node
+   characters removed from plain nodes: 546890; comment text counted by the parser in the live nodes (text plus two marker characters each, a lower bound): 538426
+OK   G3 43 stubs: sources rebuilt from the new library byte-equal to live 31, tree-equal after the strip 12
+   stubs whose own text differs from live: none; Shared Library 922823 -> 857737 (-65086)
+OK   G5a "if(x){return /*\n*/ 1;}" -> "if(x){return\n 1;}" : tree equal
+NOTE G5b "const t=`line one  \n\n  // not a comment\n /* nor this */  \n\nend`;return t;" -> "const t=`line one\n  // not a comment\n /* nor this */\nend`;return t;" : TREE CHANGES
+OK   G5c "const u=\"http://x//y\";const r=/\\/\\*|\\/\\//g;return u.replace(r,\"\");" -> "const u=\"http://x//y\";const r=/\\/\\*|\\/\\//g;return u.replace(r,\"\");" : tree equal
+OK   G5d "let a=b /* c */ / d / e;\nlet x=y //c\n(z)" -> "let a=b   / d / e;\nlet x=y\n(z)" : tree equal
+NOTE G5e "i++ /*\n*/\nj\nreturn i //last" -> (no output) : strip or parse refuses: Unexpected token (4:17)
+OK   G5f "const f=async /* c */ (q)=>q;const s=String.raw /* t */ `a//b`;return [f,s];" -> "const f=async   (q)=>q;const s=String.raw   `a//b`;return [f,s];" : tree equal
+NOTE G5g1 "x = 1 <!-- 2" -> (no output) : strip or parse refuses: Assigning to rvalue (1:44)
+NOTE G5g2 "#!shebang\nreturn 1" -> (no output) : strip or parse refuses: Unexpected character '!' (1:34)
+   live plain nodes holding a template literal with a blank line or trailing space before a line break: none
+OK   G6 no changed node holds "cacheall" inside a string
+   toString() calls and code-text reads in changed plain nodes (read by hand below):
+     none
+G7 size measured: all Code text 3855958 -> 3243982 = -611976
+OK   G8 Close Enforcer Build, live against stripped: 40 of 40 stored debates byte-equal
+OK   G8 Close Enforcer Record on the stored set C and replay replies, live against stripped: 22 of 22 byte-equal
+   changed plain nodes with no saved output file in the inputs folder: 37
+ALL AS LABELED (notes above are read by hand)
