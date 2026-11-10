@@ -7,7 +7,7 @@ Gap (predates pkgCDF, found by W2): an enforcer answer written "LINK D6" or "LIN
 the candidate was left NO ANSWER, and a true CONFIRMED written that way was lost without a mark.
 
 Change (reads the enforcer's answer only, never a guess from the round text)
-1. Record takes any LINK word up to the next "--", any length (24 characters at most).
+1. Record takes any LINK word up to the next "--", any length.
 2. A number is read as before. "LINK D<n>" on a DEFENDER line and "LINK C<n>" on a CHALLENGER line are read as LINK n (also "D 6", "D-6",
    lowercase); the note says "the enforcer wrote LINK D6, read as LINK 6". The link must still be one of that side's declared links.
 3. A wrong side letter ("LINK C6" on a DEFENDER line) or any other form ("LINK N/A", "LINK 6 (D6)") is read as LINK ? with a note quoting
