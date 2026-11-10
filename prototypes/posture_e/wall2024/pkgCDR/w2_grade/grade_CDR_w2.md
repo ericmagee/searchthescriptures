@@ -44,3 +44,11 @@ My rev 2 PASS was wrong. My cases planted only the "verb then nothing/none" clas
 - Corpus: 39 debates, 2 listings, both on 34108.
 - Fix: a drop sentence that ends in "?" or holds if / unless / provided (that) after the drop verb is not a drop. "because" / "as" / time words stay a drop (W38-W40 must stay listed).
 - Owed before any write (not a code fault, W3's point): DeepSeek has not answered a prompt with P and J candidates listed.
+
+# Regrade: pkgCDR rev 4 (W1, commit 97a9a504): FAIL on three more conditional forms
+- Rebuild on s103 byte-equal. W1's cases: 32 OK, 1 MISS (C9). 34108 P2 = D6 pair; 34299 J2 = "ordinary means". Corpus: 39 debates, 2 listings, both on 34108.
+- My 48 cases (W41-W48 labeled before the run, commit 79cb4765; run_rev4.txt): 42 of 48.
+  - Fixed since rev 3: W34 (if), W35 (? No.), W36 (unless), W37 (provided), and the new W43 ("Do I drop ...? No."), W44 ("...? Never.").
+  - False listings (3), same conditional family: W41 "... in case the rows fail; they do not." / W42 "... on condition that the challenger shows the gap; he has not." / W45 "... should the rows fail, and they stand."
+  - Safe misses (3): W17; W46 "I drop the wording "..."; if the challenger objects, so be it." and W47 "..., even if it costs LINK 6." (true drops not listed: the conditional test reaches past the drop clause and "even if"). Cost only, not a fault.
+- Fix: add "in case", "on condition (that)", "should <subject>", "supposing", "assuming" to the conditional words; read them only in the clause that holds the drop (up to ";"), and do not count "even if".
