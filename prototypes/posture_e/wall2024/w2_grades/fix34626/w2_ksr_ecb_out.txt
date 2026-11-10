@@ -1,0 +1,25 @@
+OK   H0 s110 Panel Cure Check rerun equals stored output
+ALT Alt Send Back Build s110 items 0 ECB items 0 equal true
+SRC Send Back Build 153410 -> 153872 +462
+SRC Alt Send Back Build 153655 -> 154117 +462
+SRC R2 Alt Send Back Build 153627 -> 154089 +462
+   final KEYSTONE D6 per output item: s110 [ 'luna:BROKEN/BROKEN/BROKEN', 'chatgpt:STANDS', 'sol:STANDS' ] KSR [ 'luna:BROKEN/BROKEN/BROKEN', 'chatgpt:BROKEN', 'sol:BROKEN' ] ECB [ 'luna:BROKEN/BROKEN/BROKEN', 'chatgpt:STANDS', 'sol:STANDS' ] ALL [ 'luna:BROKEN/BROKEN/BROKEN', 'chatgpt:BROKEN', 'sol:BROKEN' ]
+OK   P2.1 KSR writes the engine KEYSTONE BROKEN line
+OK   P2.1 RESULT, CLAUSE, DEFENSE STANDING unchanged by KSR
+OK   ECB alone leaves Panel Cure Check unchanged
+OK   ALL = KSR on Panel Cure Check
+   P2.2 KEYSTONE D6 s110 [ 'luna:BROKEN/BROKEN/BROKEN', 'chatgpt:STANDS', 'sol:STANDS' ] KSR [ 'luna:BROKEN/BROKEN/BROKEN', 'chatgpt:STANDS', 'sol:STANDS' ] break lines on D3: 6
+OK   P2.2 break on non-keystone D3: KSR writes no KEYSTONE change, output equals s110
+   P2.3 KEYSTONE D6 s110 [ 'luna:BROKEN/BROKEN/BROKEN', 'chatgpt:STANDS', 'sol:STANDS' ] KSR [ 'luna:BROKEN/BROKEN/BROKEN', 'chatgpt:STANDS', 'sol:STANDS' ]
+OK   P2.3 no closing break: KSR output equals s110 (judge keystones as written)
+OK   H1 s110 Send Back Build rerun equals stored output
+   items s110 30 ECB 24 removed 6 removed on break lines 6 ECB items on break lines 0
+OK   P1.1 no item on a closing-break line is sent
+OK   P1.1 removed items: 6, all on closing-break lines
+OK   P1.1 items not on a break line equal s110 (24), S numbers aside
+OK   P1.1 each removed item listed in sb_not_sent (8)
+OK   KSR alone leaves Send Back Build unchanged
+OK   ALL = ECB on Send Back Build
+   P1.2 items s110 30 ECB 30 remaining AUDIT break text in plant: 1
+OK   P1.2 judge-written D6 break lines (no engine AUDIT): ECB sends them exactly as s110
+15 OK, 0 FAIL
