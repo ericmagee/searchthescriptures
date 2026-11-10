@@ -1,0 +1,24 @@
+// W3 grade of pkgCDL rev 2: long link text, and two CONFIRMED lines on one candidate.
+process.chdir(__dirname+'/../..');const fs=require('fs');const {harness}=require('../../pkgGSL/harness.cjs');
+const g=f=>{let d=JSON.parse(fs.readFileSync(f,'utf8'));d=d.data||d;return d.workflow||d;};const CDF=g('pkgCDF/parent_s103_CDR11_CDF.json'),CDL=g('pkgCDL/parent_s103_CDR11_CDF_CDL.json'),LIVE=g('/mnt/project-files/wall2024/fetchback_live_s103.json');const code=(W,n)=>W.nodes.find(z=>z.name===n).parameters.jsCode;
+const J=x=>({json:x});const run=async(c,over,inp)=>(await harness('34108',over||{})('return (async()=>{\n'+c+'\n})();',inp||'Quote Report'))[0].json;
+const reply=t=>[J({choices:[{message:{role:'assistant',content:t},finish_reason:'stop'}]})];
+const F=JSON.parse(fs.readFileSync('/mnt/project-files/wall2024/inputs/34108_Final_Output.json','utf8'))[0].data.main[0][0].json;
+(async()=>{const B=await run(code(CDL,'Close Enforcer Build'));const rec=async(W,t)=>run(code(W,'Close Enforcer Record'),{'Close Enforcer Build':[J(B)],'Close Enforcer Call deepseek':reply(t)},'Close Enforcer Call deepseek');
+ const D6=B.cands.find(c=>/no biological father/.test(c.earlier_q));const C1='Christ had no biological father.',C2='A descent from David\'s loins that comes by Mary is the descent the rows state, with no biological father needed to complete it.';
+ const linkOf=s=>{const i=F.cr4.indexOf(s);let n=null;for(const h of F.cr4.slice(0,i).matchAll(/\bLINK\s+(\d+)\b|\bD(\d)\b/g))n=h[1]||h[2];return i<0?'not in CR4':n;};console.log('in [CR4]: "'+C1+'" stands after mark '+linkOf(C1)+'; "'+C2.slice(0,60)+'..." stands after mark '+linkOf(C2));
+ const L=(id,link,verdict,eq,close,er)=>'CLOSE-CONTRADICTION: '+id+' -- DEFENDER -- LINK '+link+' -- '+verdict+' -- EARLIER ['+(er||'CR3')+'] "'+eq+'" -- CLOSING [CR4] "'+close+'" -- test.';
+ const show=R=>'broken '+JSON.stringify(R.cec.confirmed.map(c=>c.side+' LINK '+c.link))+' | rows '+JSON.stringify(R.cec.rows.filter(r=>r.answer==='CONFIRMED'||/CONFIRMED/.test(r.status)).map(r=>r.id+' '+r.status));
+ const cmp=async(name,t,withLive)=>{console.log(name);for(const [nm,W] of [['pkgCDF rev 2',CDF],['pkgCDL rev 2',CDL]]){const R=await rec(W,t);console.log('   '+nm+': '+show(R));if(nm==='pkgCDL rev 2')for(const r of R.cec.rows)if(r.note&&/second link|RECORD-ONLY/.test(r.note))console.log('      note: '+String(r.note).slice(0,230));}};
+ const long='the keystone link of the whole chain as declared in the opening round of this debate, that is to say the sixth';
+ await cmp('T1 CONFIRMED with a link text of '+long.length+' characters',L(D6.id,long,'CONFIRMED',D6.earlier_q,C1));
+ await cmp('T2 NOT A CONTRADICTION with the same long link text',L(D6.id,long,'NOT A CONTRADICTION',D6.earlier_q,''));
+ await cmp('T3 link text that itself holds " -- CONFIRMED -- " before a NOT A CONTRADICTION verdict','CLOSE-CONTRADICTION: '+D6.id+' -- DEFENDER -- LINK 6 -- CONFIRMED -- NOT A CONTRADICTION -- EARLIER [CR3] "'+D6.earlier_q+'" -- CLOSING [CR4] "" -- test.');
+ await cmp('T4 one hint, the dropped wording restated in TWO closing sentences, answered on LINK 6 then LINK 5',L(D6.id,'6','CONFIRMED',D6.earlier_q,C1)+'\n'+L(D6.id,'5','CONFIRMED',D6.earlier_q,C2));
+ await cmp('T5 the same two lines in the other order (LINK 5 first)',L(D6.id,'5','CONFIRMED',D6.earlier_q,C2)+'\n'+L(D6.id,'6','CONFIRMED',D6.earlier_q,C1));
+ await cmp('T6 one hint, the SAME closing sentence, answered on LINK 6 then LINK 5',L(D6.id,'6','CONFIRMED',D6.earlier_q,C1)+'\n'+L(D6.id,'5','CONFIRMED',D6.earlier_q,C1));
+ await cmp('T7 two NEW lines, different pairs, LINK 6 and LINK 5',L('NEW','6','CONFIRMED','I grant that this is the ordinary means.',C1)+'\n'+L('NEW','5','CONFIRMED',D6.earlier_q,C2));
+ await cmp('T8 first line on the hint is refused (closing quotation not in the round), second is good on LINK 6',L(D6.id,'5','CONFIRMED',D6.earlier_q,'Christ had a father.')+'\n'+L(D6.id,'6','CONFIRMED',D6.earlier_q,C1));
+ await cmp('T9 first line LINK ? (record-only), second good on LINK 6',L(D6.id,'?','CONFIRMED',D6.earlier_q,C1)+'\n'+L(D6.id,'6','CONFIRMED',D6.earlier_q,C1));
+ await cmp('T10 first line NOT A CONTRADICTION, second CONFIRMED on LINK 6 for the same hint',L(D6.id,'6','NOT A CONTRADICTION',D6.earlier_q,'')+'\n'+L(D6.id,'6','CONFIRMED',D6.earlier_q,C1));
+})();

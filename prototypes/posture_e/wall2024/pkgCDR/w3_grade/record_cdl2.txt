@@ -1,0 +1,36 @@
+in [CR4]: "Christ had no biological father." stands after mark 6; "A descent from David's loins that comes by Mary is the desce..." stands after mark 6
+T1 CONFIRMED with a link text of 110 characters
+   pkgCDF rev 2: broken [] | rows ["? NOT CONFIRMED (form)"]
+   pkgCDL rev 2: broken [] | rows ["P6 NOT CONFIRMED (form)"]
+      note: LINK ? is not one of the defender's declared links (1, 2, 3, 4, 5, 6); RECORD-ONLY FOR REVIEW: both quotations stand word for word; the enforcer confirmed a contradiction it could not tie to a link, so nothing is broken (pkgCDF); 
+T2 NOT A CONTRADICTION with the same long link text
+   pkgCDF rev 2: broken [] | rows ["? NOT CONFIRMED (form)"]
+   pkgCDL rev 2: broken [] | rows []
+T3 link text that itself holds " -- CONFIRMED -- " before a NOT A CONTRADICTION verdict
+   pkgCDF rev 2: broken [] | rows ["? NOT CONFIRMED (form)"]
+   pkgCDL rev 2: broken [] | rows []
+T4 one hint, the dropped wording restated in TWO closing sentences, answered on LINK 6 then LINK 5
+   pkgCDF rev 2: broken ["DEFENDER LINK 6","DEFENDER LINK 5"] | rows ["P6 CONFIRMED","P6 CONFIRMED"]
+   pkgCDL rev 2: broken ["DEFENDER LINK 6"] | rows ["P6 CONFIRMED","P6 NOT CONFIRMED (second link)"]
+      note: candidate P6 is already confirmed on LINK 6; one candidate breaks one link; RECORD-ONLY FOR REVIEW (pkgCDL)
+T5 the same two lines in the other order (LINK 5 first)
+   pkgCDF rev 2: broken ["DEFENDER LINK 5","DEFENDER LINK 6"] | rows ["P6 CONFIRMED","P6 CONFIRMED"]
+   pkgCDL rev 2: broken ["DEFENDER LINK 5"] | rows ["P6 CONFIRMED","P6 NOT CONFIRMED (second link)"]
+      note: candidate P6 is already confirmed on LINK 5; one candidate breaks one link; RECORD-ONLY FOR REVIEW (pkgCDL)
+T6 one hint, the SAME closing sentence, answered on LINK 6 then LINK 5
+   pkgCDF rev 2: broken ["DEFENDER LINK 6","DEFENDER LINK 5"] | rows ["P6 CONFIRMED","P6 CONFIRMED"]
+   pkgCDL rev 2: broken ["DEFENDER LINK 6"] | rows ["P6 CONFIRMED","P6 NOT CONFIRMED (second link)"]
+      note: candidate P6 is already confirmed on LINK 6; one candidate breaks one link; RECORD-ONLY FOR REVIEW (pkgCDL)
+T7 two NEW lines, different pairs, LINK 6 and LINK 5
+   pkgCDF rev 2: broken ["DEFENDER LINK 6","DEFENDER LINK 5"] | rows ["NEW CONFIRMED","NEW CONFIRMED"]
+   pkgCDL rev 2: broken ["DEFENDER LINK 6","DEFENDER LINK 5"] | rows ["NEW CONFIRMED","NEW CONFIRMED"]
+T8 first line on the hint is refused (closing quotation not in the round), second is good on LINK 6
+   pkgCDF rev 2: broken ["DEFENDER LINK 6"] | rows ["P6 NOT CONFIRMED (form)","P6 CONFIRMED"]
+   pkgCDL rev 2: broken ["DEFENDER LINK 6"] | rows ["P6 NOT CONFIRMED (form)","P6 CONFIRMED"]
+T9 first line LINK ? (record-only), second good on LINK 6
+   pkgCDF rev 2: broken ["DEFENDER LINK 6"] | rows ["P6 NOT CONFIRMED (form)","P6 CONFIRMED"]
+   pkgCDL rev 2: broken ["DEFENDER LINK 6"] | rows ["P6 NOT CONFIRMED (form)","P6 CONFIRMED"]
+      note: LINK ? is not one of the defender's declared links (1, 2, 3, 4, 5, 6); RECORD-ONLY FOR REVIEW: both quotations stand word for word; the enforcer confirmed a contradiction it could not tie to a link, so nothing is broken (pkgCDF)
+T10 first line NOT A CONTRADICTION, second CONFIRMED on LINK 6 for the same hint
+   pkgCDF rev 2: broken [] | rows ["P6 NOT CONFIRMED (conflicting answers)"]
+   pkgCDL rev 2: broken [] | rows ["P6 NOT CONFIRMED (conflicting answers)"]

@@ -1,0 +1,41 @@
+Build node equal in both files: true
+OK   defender CONFIRMED "LINK D6" -> CONFIRMED, broken [6] | pkgCDF rev 2: broken [], NO ANSWER
+OK   defender CONFIRMED "LINK d6" -> CONFIRMED, broken [6] | pkgCDF rev 2: broken [], NO ANSWER
+OK   defender CONFIRMED "LINK D-6" -> CONFIRMED, broken [6] | pkgCDF rev 2: broken [], NO ANSWER
+OK   defender CONFIRMED "LINK D 6" -> CONFIRMED, broken [6] | pkgCDF rev 2: broken [], NO ANSWER
+OK   defender CONFIRMED "LINK **D6**" -> CONFIRMED, broken [6] | pkgCDF rev 2: broken [], NO ANSWER
+OK   defender CONFIRMED "LINK D06" -> CONFIRMED, broken [6] | pkgCDF rev 2: broken [], NO ANSWER
+OK   defender CONFIRMED "LINK C6" -> NOT CONFIRMED (form), broken [], RECORD-ONLY note | pkgCDF rev 2: broken [], NO ANSWER
+OK   defender CONFIRMED "LINK D7" -> NOT CONFIRMED (form), broken [] | pkgCDF rev 2: broken [], NO ANSWER
+OK   defender CONFIRMED "LINK D0" -> NOT CONFIRMED (form), broken [] | pkgCDF rev 2: broken [], NO ANSWER
+OK   defender CONFIRMED "LINK 6." -> NOT CONFIRMED (form), broken [], RECORD-ONLY note | pkgCDF rev 2: broken [], NO ANSWER
+OK   defender CONFIRMED "LINK #6" -> NOT CONFIRMED (form), broken [], RECORD-ONLY note | pkgCDF rev 2: broken [], NO ANSWER
+OK   defender CONFIRMED "LINK 6 (keystone)" -> NOT CONFIRMED (form), broken [], RECORD-ONLY note | pkgCDF rev 2: broken [], NO ANSWER
+OK   defender CONFIRMED "LINK D6 (keystone)" -> NOT CONFIRMED (form), broken [], RECORD-ONLY note | pkgCDF rev 2: broken [], NO ANSWER
+OK   defender CONFIRMED "LINK 6/D6" -> NOT CONFIRMED (form), broken [], RECORD-ONLY note | pkgCDF rev 2: broken [], NO ANSWER
+OK   defender CONFIRMED "LINK : 6" -> NOT CONFIRMED (form), broken [], RECORD-ONLY note | pkgCDF rev 2: broken [], NO ANSWER
+OK   defender CONFIRMED "LINK D6 and D5" -> NOT CONFIRMED (form), broken [], RECORD-ONLY note | pkgCDF rev 2: broken [], NO ANSWER
+OK   defender CONFIRMED "LINK D1-D6" -> NOT CONFIRMED (form), broken [], RECORD-ONLY note | pkgCDF rev 2: broken [], NO ANSWER
+OK   defender CONFIRMED "LINK 5-6" -> NOT CONFIRMED (form), broken [], RECORD-ONLY note | pkgCDF rev 2: broken [], NO ANSWER
+OK   defender CONFIRMED "LINK VI" -> NOT CONFIRMED (form), broken [], RECORD-ONLY note | pkgCDF rev 2: broken [], NOT CONFIRMED (form)
+OK   defender CONFIRMED "LINK 6 -- LINK 5" -> NOT CONFIRMED (form), broken [], RECORD-ONLY note | pkgCDF rev 2: broken [], NO ANSWER
+OK   defender CONFIRMED "LINK the keystone" -> NOT CONFIRMED (form), broken [], RECORD-ONLY note | pkgCDF rev 2: broken [], NOT CONFIRMED (form)
+OK   defender CONFIRMED "LINK DR6" -> NOT CONFIRMED (form), broken [], RECORD-ONLY note | pkgCDF rev 2: broken [], NO ANSWER
+OK   defender CONFIRMED "LINK CR4" -> NOT CONFIRMED (form), broken [], RECORD-ONLY note | pkgCDF rev 2: broken [], NO ANSWER
+OK   defender CONFIRMED "LINK D6D6" -> NOT CONFIRMED (form), broken [], RECORD-ONLY note | pkgCDF rev 2: broken [], NO ANSWER
+challenger hint P8 [DR3] LINK 4; closing sentence used: CHALLENGER (record's reading) -- ROUND 4, CLOSE ROUND
+OK   challenger CONFIRMED "LINK C4" -> CONFIRMED, broken ["CHALLENGER 4"] | note: the enforcer wrote LINK C4, read as LINK 4 (pkgCDL)
+OK   challenger CONFIRMED "LINK c4" -> CONFIRMED, broken ["CHALLENGER 4"] | note: the enforcer wrote LINK c4, read as LINK 4 (pkgCDL)
+OK   challenger CONFIRMED "LINK D4" -> NOT CONFIRMED (form), broken [], RECORD-ONLY note | note: LINK ? is not one of the challenger's declared links (1, 2, 3, 4, 5, 6); RECORD-ONLY FOR REVIEW: both quotations stand word for word; the en
+OK   challenger CONFIRMED "LINK C9" -> NOT CONFIRMED (form), broken [] | note: LINK 9 is not one of the challenger's declared links (1, 2, 3, 4, 5, 6); the enforcer wrote LINK C9, read as LINK 9 (pkgCDL)
+OK   rulings equal to pkgCDF rev 2: all hints NOT A CONTRADICTION with the hint link
+OK   rulings equal to pkgCDF rev 2: NONE
+OK   rulings equal to pkgCDF rev 2: D6 CONFIRMED LINK 6 + rest
+OK   rulings equal to pkgCDF rev 2: D6 CONFIRMED LINK ?
+OK   rulings equal to pkgCDF rev 2: D6 CONFIRMED LINK unknown
+OK   rulings equal to pkgCDF rev 2: D6 CONFIRMED LINK 99
+OK   rulings equal to pkgCDF rev 2: D6 CONFIRMED bad closing quote
+OK   rulings equal to pkgCDF rev 2: NEW CONFIRMED LINK 6
+OK   rulings equal to pkgCDF rev 2: prose reply
+OK   rulings equal to pkgCDF rev 2: three answered
+62 OK, 0 FAIL
