@@ -10,7 +10,7 @@ The first two columns gave the same ruling on every text below, so "live" means 
 - Size confirmed: Shared Library 604,776 to 605,441 characters (+665). No prompt text, no model call.
 - Rolled-back insert through record_enforcer_log (one UNCURED and one CURED K-S3 row in rev 8's shapes): accepted, 2 rows, rolled back.
 - No other log row changes on any of my 142 texts.
-- Enforcement works on the listed whole-answer refusals: 18 refusals that live cures read UNCURED on rev 8 (11 new plants, 7 of my rev 7 set), including
+- Enforcement works on the listed whole-answer refusals: 16 refusals that live cures read UNCURED on rev 8 (9 new plants, 6 of my rev 7 set, 1 of my pkgKSL set), including
   the two-line forms "COUNTED.\nIt should\nnot be counted." and "COUNTED. My count stands.\nCORRECTED COUNT: unchanged".
 - My earlier correct-answer sets (w3_good7.json 14, w3_good_ksl2.json 16): none cured on live is refused by rev 8.
 
@@ -45,7 +45,7 @@ The same words pass on the next line and fail on the same line. "TOUCHES NO LINK
 
 ## Notes (same as live, not counted against rev 8)
 - Correct answers still refused, as on live: "Acknowledged.\nCOUNTED.", "Understood.\nCOUNTED. The grant counts against D5.", "Yes -\nCOUNTED.", "The close concession stands.\nCOUNTED."
-- Refusals not on the lists still cure with a note, as on live (25 of my 40 new refusals; 9 of 14 in the second set), for example "COUNTED. I do not count it,
+- Refusals not on the lists still cure with a note, as on live (19 of my 40 new refusals; 8 of 14 in the second set), for example "COUNTED. I do not count it,
   for the reasons given.", "COUNTED. No. My count stands as issued.", "COUNTED. I decline.", "COUNTED.\n#1 is not counted; #2 is.", and any listed refusal
   followed by a quotation or by "Thank you." (E2 makes the quotation count as text that follows, so the refusal cures).
 - The reason text of an enforced refusal reads "the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK"; it does not say a listed refusal was read.
