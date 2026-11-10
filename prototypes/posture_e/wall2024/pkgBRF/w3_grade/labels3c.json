@@ -1,0 +1,17 @@
+{"_":"W3 labels for pkgBRF rev 3c, committed before any run of 3c by me. E = earlier text, c = the close. Each case is run through of() as [DR4] (F.gr1=E, F.dr4=c) AND through ofD() as [CR4] (F.cr1=E, F.cr4=c). expect = labels a right check returns.",
+"cases":[
+ {"id":"B1","E":"Matthew 1:18 dates the finding.","c":"Numbers 1:2 and 1:18 give the pedigree.","expect":["Numbers 1:2","Numbers 1:18"],"note":"A6: must be marked"},
+ {"id":"B2","E":"Matthew 1:18 dates the finding. Matthew 1:24 names the taking.","c":"Matthew 1:24 names the taking, and Deuteronomy 20:7 sets it apart (G43). So 1:18 dates the finding.","expect":["Deuteronomy 20:7"],"note":"the stored fault"},
+ {"id":"B3","E":"Matthew 1:18 dates the finding.","c":"So Numbers 1:18 gives the pedigree.","expect":["Numbers 1:18"],"note":"MINE. a capitalised non-book word BEFORE a full book reference (the parser's head takes two words): must stay NEW; if dropped, a plainly written new verse is lost: FAIL"},
+ {"id":"B4","E":"Matthew 1:18 dates the finding.","c":"In Luke 1:18 Zacharias asks. The Numbers 1:18 register is by houses. Then Mark 1:18 follows.","expect":["Luke 1:18","Numbers 1:18","Mark 1:18"],"note":"MINE. In/The/Then before a book: all NEW"},
+ {"id":"B5","E":"1 John 5:1 names the begotten.","c":"So Song of Solomon 5:1 speaks. And 2 Samuel 5:1 names Hebron. Thus 1 Peter 5:1 exhorts.","expect":["Song of Solomon 5:1","2 Samuel 5:1","1 Peter 5:1"],"note":"MINE. capitalised word before multi-word and numbered books: all NEW"},
+ {"id":"B6","E":"Matthew 1:18 dates the finding.","c":"Numbers 1:2 opens the count. And 1:18 gives the pedigree.","note":"MINE. limit (1) shape (capitalised And after a full stop): expected dropped; record"},
+ {"id":"B7","E":"Matthew 1:18 dates the finding.","c":"Numbers 1:2 opens the count, And 1:18 gives the pedigree.","note":"MINE. capitalised word inside one sentence after a comma: record what 3c does"},
+ {"id":"B8","E":"Matthew 1:18 dates the finding.","c":"Numbers 1:2, 1:18 and 1:20 give the count; see 1:44 and (1:18).","expect_has":["Numbers 1:2","Numbers 1:18","Numbers 1:20","Numbers 1:44"],"note":"MINE. lists, semicolon, bracket: every one marked as on live"},
+ {"id":"B9","E":"Matthew 1:18 dates the finding.","c":"Deuteronomy 22:23 names the damsel. So 9:9 forbids it.","expect_count":2,"note":"bare, never named: still new"},
+ {"id":"B10","E":"Matthew 1:18 dates the finding.","c":"Mary 1:18 is not a book. Joseph 1:18 neither.","note":"MINE. a capitalised non-book name directly before c:v with no earlier book in the close; record (no ctx: nothing expected)","expect":[]},
+ {"id":"B11","E":"Matthew 1:18 dates the finding.","c":"Deuteronomy 22:23 names the damsel. NOTE 1:18 dates it. So, 1:18 stands. So (1:18) stands.","note":"MINE. all capitals, comma and bracket between the word and the reference: record"},
+ {"id":"B12","E":"Matthew 1:18-25 gives the account.","c":"Deuteronomy 22:23 names the damsel. So 1:20-21 names the dream. Then 1:26 follows.","expect_count":2,"note":"MINE. range inside an earlier range not new; 1:26 never named stays new (2 labels: Deuteronomy 22:23 and the 1:26 one)"},
+ {"id":"B13","E":"","c":"So 1:18 stands.","expect":[],"note":"no earlier text, no book"},
+ {"id":"B14","E":"Matthew 1:18 dates the finding.","c":"Numbers 1:18 gives the pedigree. So 1:18 gives it by houses.","expect":["Numbers 1:18"],"note":"MINE. bare after its own new book: one label, not two, and Numbers 1:18 stays marked"}
+]}
