@@ -1,0 +1,27 @@
+OK   H1 only the Shared Library changes (Shared Library); size 913804 -> 914006 (202)
+     rebuilt sources that change: Judge Enforcer Record, Alt Judge Enforcer Record, R2 Alt Judge Enforcer Record
+OK   H2 Judge Enforcer Record: 36 of 36 stored runs identical to live
+OK   H2 Alt Judge Enforcer Record: 23 of 23 stored runs identical to live
+H3 stored lines that start with an id and carry no head: 3
+     Judge Enforcer Call 33815 call 7 | Y6.1 -- DISAGREE -- RIGHT: OVERSTATED -- The own sentences grant that "Joseph is father by law, naming and household" and that "the betrothe
+     Judge Enforcer Call 33815 call 7 | Y7.1 -- AGREE -- RIGHT: TRUE -- The defender's own words state "I withdraw the lexical gloss I gave for the Hebrew word," which gives up the
+     Judge Enforcer Call 33815 call 7 | Y8.1 -- AGREE -- RIGHT: TRUE -- The defender's own words state "LINK 4: NARROWED TO: Isaiah 7:14 as the sign is the virgin's conceiving, and
+OK   H4 headed (control): live DISAGREE, pkgEHL DISAGREE (expected DISAGREE, DISAGREE)
+OK   H4 no head: live NO VERDICT, pkgEHL DISAGREE (expected NO VERDICT, DISAGREE)
+OK   H4 "- " list mark: live NO VERDICT, pkgEHL DISAGREE (expected NO VERDICT, DISAGREE)
+OK   H4 "• " bullet: live NO VERDICT, pkgEHL DISAGREE (expected NO VERDICT, DISAGREE)
+OK   H4 "> " quote mark: live NO VERDICT, pkgEHL DISAGREE (expected NO VERDICT, DISAGREE)
+OK   H4 "1. " numbered: live NO VERDICT, pkgEHL NO VERDICT (expected NO VERDICT, NO VERDICT)
+OK   H4 "1) " numbered: live NO VERDICT, pkgEHL NO VERDICT (expected NO VERDICT, NO VERDICT)
+OK   H4 single hyphen, no head "B3.1 - DISAGREE": live NO VERDICT, pkgEHL NO VERDICT (expected NO VERDICT, NO VERDICT)
+OK   H4 headed single hyphen "ENFORCER: B3.1 - DISAGREE" (no regression): live DISAGREE, pkgEHL DISAGREE (expected DISAGREE, DISAGREE)
+OK   H4 lower-case head "enforcer:": live DISAGREE, pkgEHL DISAGREE (expected DISAGREE, DISAGREE)
+OK   H4 bold id, no head "**B3.1** -- DISAGREE": live NO VERDICT, pkgEHL DISAGREE (expected NO VERDICT, DISAGREE)
+FAIL H4 "- ENFORCER: B3.1 ..." list mark before the head: live NO VERDICT, pkgEHL DISAGREE (expected DISAGREE, DISAGREE)
+OK   H4 quoted judge line "B3.1 -- MISSES -- ..." (no verdict word): live NO VERDICT, pkgEHL NO VERDICT (expected NO VERDICT, NO VERDICT)
+OK   H4 non-answer line "D6 -- DISAGREE ..." replacing it: live NO VERDICT, pkgEHL NO VERDICT (expected NO VERDICT, NO VERDICT)
+OK   H4 non-answer line "L2, the answer DISAGREE ...": live NO VERDICT, pkgEHL NO VERDICT (expected NO VERDICT, NO VERDICT)
+OK   H4 headless line naming another item of the call (B3.2) in place of B3.1: live NO VERDICT, pkgEHL NO VERDICT (expected NO VERDICT, NO VERDICT)
+OK   H4 no head, AGREE "B3.1 -- AGREE -- RIGHT: MEETS": live NO VERDICT, pkgEHL AGREE (expected NO VERDICT, AGREE)
+OK   H5a Judge Enforcer Retry Build unchanged by pkgEHL
+1 FAIL
