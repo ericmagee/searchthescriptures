@@ -32,3 +32,10 @@ Judge contradiction check: when a judge's contradiction question was answered in
 
 ## Rev 2
 Rev 1 FAILED W2's grade (Wall 3962; W1 agreed, 3968) on the paragraph's wording only: it told the enforcer the answer "may show how the two passages can both be true" without Commitment 9's limit, so an answer given after the close could bring a new verse or argument. Rev 2 adds W2's sentence word for word ("Read it only as an explanation of the two passages: anything beyond them, and any verse not already cited in the rounds, is disregarded.") and corrects "each debater answered" to "the debater asked answered". No code path changed. W4's code checks of rev 1 (3964) stand for the code; the DeepSeek replay is still not done (W4: no path without a system change).
+
+## Variant on top of pkgCDR rev 11 (W3, 23:15 CST 2026-11-09), offline, NOT WRITTEN
+pkgQRA and pkgCDR both change Judge Contradiction Build. So that either write order is ready:
+- parent_s103_QRA.json = pkgQRA rev 2 on live s103 (use if pkgQRA is written first; pkgCDR is then rebuilt on the fetch-back).
+- parent_s103_CDR11_QRA.json = the same pkgQRA rev 2 edits applied to pkgCDR rev 11's write file (commit acff76f2). Against pkgCDR rev 11 only Judge Contradiction Build differs; against live s103 the three pkgCDR nodes differ; connections equal. Probe with pkgCDR rev 11 as base: 23 OK, 0 FAIL (probe_QRA_on_CDR11.txt). Use only as a check: W4 rebuilds on the live fetch-back after whichever package is written first.
+  node pkgQRA/build_QRA.cjs pkgCDR/parent_s103_CDR.json pkgQRA/parent_s103_CDR11_QRA.json
+  node pkgQRA/probe_QRA.cjs pkgCDR/parent_s103_CDR.json pkgQRA/parent_s103_CDR11_QRA.json

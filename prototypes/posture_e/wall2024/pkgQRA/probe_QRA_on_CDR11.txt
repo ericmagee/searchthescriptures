@@ -1,0 +1,27 @@
+Record node equal in live and patched: true
+OK   P1  live s102 code on the fixture gives the prompt stored in the dry regrade (s94)  [cands 1]
+OK   P2a  patched: three defender answers counted, all matched to candidate J1  [{"DEFENDER":3,"CHALLENGER":0,"matched":3}]
+OK   P2b  patched: candidates, links, model, system message unchanged
+OK   P2c  patched: the answer block stands after [CR4] and before the challenger part
+OK   P2d  patched: each stored answer stands whole in the prompt
+OK   P2e  patched: no challenger answer block (its questions were not contradiction questions)
+OK   P2f  patched: the rule paragraph stands once, before the reply form
+OK   P2h  rev 2: the disregard sentence (Commitment 9) stands in the paragraph, between "can both be true." and "An answer cannot withdraw"
+OK   P2g  patched minus the added text equals the live prompt
+     prompt length live 151483, patched 157827
+OK   P3a  Record on the patched output: a CONFIRMED line quoting the rounds is confirmed  [["CONFIRMED"]]
+OK   P3b  Record: a CONFIRMED line whose closing words come from an ANSWER breaks nothing  [NOT CONFIRMED (form) / the closing quotation is not found word for word in CR4]
+OK   P4  question round did not run: output equal to live  [qra {"DEFENDER":0,"CHALLENGER":0,"matched":0}]
+OK   P5  QR Merge holds no question list (qa null): equal to live  [qra {"DEFENDER":0,"CHALLENGER":0,"matched":0}]
+OK   P6  contradiction answers empty, null or spaces: equal to live  [qra {"DEFENDER":0,"CHALLENGER":0,"matched":0}]
+OK   P7  only explanation questions answered (no earlier passage): equal to live  [qra {"DEFENDER":0,"CHALLENGER":0,"matched":0}]
+OK   P8  an answer that imitates a round header, a section bar and a reply line is defanged
+OK   P9  a challenger contradiction answer stands under the challenger, after [DR4], with its candidate id  [{"DEFENDER":3,"CHALLENGER":1,"matched":4}]
+OK   P10  a two-passage question whose later passage is not the closing round is not printed (it is no candidate either)
+OK   P11  a 15,000 character answer is cut at 6,000 and marked
+OK   P12  the pair was answered before the judges sat and no other candidate stands: both skip, equal  [every judge-found pair was already answered before the panel]
+OK   P13  same, with another judge-found pair standing: the answers print marked as answered before, the new pair is the only candidate  [{"DEFENDER":3,"CHALLENGER":0,"matched":0}]
+OK   P14  side written "Defender": still printed
+OK   P15  QR Merge unreadable: equal to live, nothing printed
+
+23 OK, 0 FAIL
