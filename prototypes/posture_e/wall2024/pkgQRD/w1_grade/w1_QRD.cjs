@@ -73,4 +73,12 @@ const recOf=(items,seat,side)=>items[0].record.find(r=>r.judge===seat&&r.side===
     const mk=co=>co.map((j,i)=>!j.retry?undefined:(i===0?ls:{challenger:obj(ask,i).challenger,defender:{...D,quote:s4[2],earlier_quote:s3[2],question:'How do these agree?'}}));
     const fl=await fin(L,l,mk(l)),fn=await fin(N,b,mk(b));const cl_=pairCount(fl),cn=pairCount(fn);
     T(!(cl_>=1&&cn===0),'D9 D8'+k+' luna second reply '+lab+': judges still asking the defender about CR3/CR4: live '+cl_+', candidate '+cn);}}}
+
+ // D11 chain (W3 R12 shape)
+ {const ss=String(F.cr4).split(/(?<=[.!?])\s+/);let i=ss.findIndex((x,j)=>x.length>25&&ss[j+1]&&ss[j+1].length>25&&!/["“”\[]/.test(x+ss[j+1]));const A_=ss[i],B_=ss[i+1];
+  const A=plant(os=>{os[0].defender={...D,quote:A_};os[1].defender={...D,quote:A_+' '+B_};os[2].defender={...D,quote:B_};});
+  const b=await go(N,'QR Check',{},A),l=await go(L,'QR Check',{},A);console.log('   D11 QR Check: '+ret(b)+' (live '+ret(l)+'); faults '+JSON.stringify(b.map(j=>j.why||[])).slice(0,120));
+  const mk=co=>co.map((j,i)=>!j.retry?undefined:{challenger:obj(ask,i).challenger,defender:{...D,quote:s4[2],earlier_quote:s3[2],question:'How do these agree?'}});
+  const fl=await fin(L,l,mk(l)),fn=await fin(N,b,mk(b));const asksB=f=>['luna','chatgpt','sol'].filter(s=>{const r=recOf(f,s,'defender');return r&&r.status!=='DROPPED'&&String(r.quote).includes(B_);}).length;
+  T(!(asksB(fl)>=1&&asksB(fn)===0),'D11 chain: judges still asking about passage B: live '+asksB(fl)+', candidate '+asksB(fn));}
  console.log(out.filter(x=>x.startsWith('OK')).length+' OK, '+out.filter(x=>x.startsWith('FAIL')).length+' FAIL');})().catch(e=>{console.log('ERROR '+e.stack);});

@@ -26,4 +26,6 @@ OK   D9 D8c luna second reply notjson: judges still asking the defender about CR
 OK   D9 D8c luna second reply changed: judges still asking the defender about CR3/CR4: live 1, candidate 1
 OK   D8d: luna:fault, chatgpt:fault, sol:fault (live luna:fault, chatgpt:fault, sol:fault)
 OK   D8e: luna:-, chatgpt:defender, sol:defender (live luna:-, chatgpt:-, sol:-)
-25 OK, 0 FAIL
+   D11 QR Check: luna:-, chatgpt:defender, sol:defender (live luna:-, chatgpt:-, sol:-); faults [[],[],[]]
+FAIL D11 chain: judges still asking about passage B: live 2, candidate 0
+25 OK, 1 FAIL
