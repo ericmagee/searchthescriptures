@@ -1,0 +1,18 @@
+OK   Get Early Alternate: parameters equal s79 and s97
+OK   Early Reply?: parameters equal s79 and s97
+OK   Early Alternate Reply: parameters equal s79 and s97
+OK   Alternate Needed?: parameters equal s79 and s97
+OK   Alternate Calls?: parameters equal s79 and s97
+OK   nodes naming /Get Early Alternate/ at s79 still name it with ABH (1)
+OK   nodes naming /early_all/ at s79 still name it with ABH (2)
+OK   nodes naming /__early_reply/ at s79 still name it with ABH (2)
+OK   nodes naming /__e4h/ at s79 still name it with ABH (2)
+INFO nodes naming "Early Alternate": s79 44, ABH 35; the 10 gone became sub-workflow calls at s80 (XK rev 2): Alternate Cure Call openrouter, Cure Call openrouter, FUM Call Alternate openrouter, FUM Call Cure openrouter, FUM Call Panel 1 openrouter, FUM Call Panel 2 openrouter, FUM Call Panel 3 openrouter, Panel Cure Call 1 openrouter, Panel Cure Call 2 openrouter, Panel Cure Call 3 openrouter
+OK   one alternate call in 34299 (1)
+OK   HTTP error item (continueRegularOutput): output equals today's
+OK   alwaysOutputData empty item: output equals today's
+OK   matching hash, empty choices: output equals today's
+OK   matching hash with error set: output equals today's
+OK   matching row plus an unrelated row: the call carries the matching early reply
+OK   items that are not alternate calls are unchanged when early replies are used
+16 OK, 0 FAIL
