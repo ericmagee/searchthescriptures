@@ -39,3 +39,9 @@ Expected (any other result is a FAIL):
   (ii) no defender question that passed first is DROPPED;
   (iii) every judge that is counted as already asking keeps its first defender question;
   (iv) live s110 returns no judge for a repeat (only for faults).
+
+## Rev 4 (W1 FAIL of rev 3, Wall 4202): two questions are the same contradiction only when BOTH quotes overlap (earlier inside earlier AND closing
+inside closing). Written before rev 4 is built or run.
+- Q10 W1's plant: two judges quote the same round 3 sentence against different closing sentences: neither is a repeat; nobody is returned.
+- Q9 walk again, with the check (i) made strict: a first contradiction question counts as still asked only by a final question whose earlier
+  quote AND closing quote overlap it (rev 3's walk used the same OR as the code, so it could not see this loss).
