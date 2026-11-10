@@ -1,0 +1,38 @@
+M1 CR2 heading sentence as stored ("**On Job 14:1.** I accept ...")
+   base CURED | KBG CURED | CURE (record-only until promoted): CURED -- KEEP whose reason quotes the answering side's round: "i accept it as a phrase" | TRIAL pkgVP3: code check does not agree, not an item -- [CR3] nam
+M2 same CR2 sentence with the bold heading removed
+   base CURED | KBG CURED | CURE (record-only until promoted): CURED -- KEEP whose reason quotes the answering side's round: "i accept it as a phrase" | TRIAL pkgVP3: code check does not agree, not an item -- [CR3] nam
+M3 planted bare grant, plain line
+   base CURED | KBG UNCURED | CURE (record-only until promoted): UNCURED -- KEEP whose reason quotes only another bare grant or deferral of the answering side ("i grant the phrase covers hezekiah"), not a fuller answer (
+M4 the same grant as a bullet ("- I grant ...")
+   base CURED | KBG UNCURED | CURE (record-only until promoted): UNCURED -- KEEP whose reason quotes only another bare grant or deferral of the answering side ("i grant the phrase covers hezekiah"), not a fuller answer (
+M5 the same grant after a bold heading ("**On Job 14:1.** I grant ...")
+   base CURED | KBG UNCURED | CURE (record-only until promoted): UNCURED -- KEEP whose reason quotes only another bare grant or deferral of the answering side ("i grant the phrase covers hezekiah"), not a fuller answer (
+M6 the same grant after a layer tag ("[L1] I grant ...")
+   base CURED | KBG UNCURED | CURE (record-only until promoted): UNCURED -- KEEP whose reason quotes only another bare grant or deferral of the answering side ("i grant the phrase covers hezekiah"), not a fuller answer (
+M7 the same grant after a verse label ("- **Job 14:1** I grant ...")
+   base CURED | KBG UNCURED | CURE (record-only until promoted): UNCURED -- KEEP whose reason quotes only another bare grant or deferral of the answering side ("i grant the phrase covers hezekiah"), not a fuller answer (
+J1 bare grant plus ", and of Mary" (joined clause adds nothing)
+   base CURED | KBG UNCURED | CURE (record-only until promoted): UNCURED -- KEEP whose reason quotes only the bare flagged answer itself, or words running into it ("i grant it is said of"), not a fuller answer from the a
+J2 two grants joined ("I grant the dating, and I grant the espousal.")
+   base CURED | KBG UNCURED | CURE (record-only until promoted): UNCURED -- KEEP whose reason quotes only another bare grant or deferral of the answering side ("i grant the dating and i"), not a fuller answer (pkgKBG) | 
+J3 grant; verse reference ("I grant it is said of kings; Matthew 1:6.")
+   base CURED | KBG UNCURED | CURE (record-only until promoted): UNCURED -- KEEP whose reason quotes only the bare flagged answer itself, or words running into it ("i grant it is said of"), not a fuller answer from the a
+J4 grant plus a reasoned clause ("I grant it, and the verse still names no father of Jesus.")
+   base CURED | KBG CURED | CURE (record-only until promoted): CURED -- KEEP whose reason quotes the answering side's round: "i grant it and the verse" | TRIAL pkgVP3: code check does not agree, not an item -- [CR3] na
+J5 grant plus keep-position clause ("I grant it, and I keep my link.")
+   base CURED | KBG CURED | CURE (record-only until promoted): CURED -- KEEP whose reason quotes the answering side's round: "i grant it and i keep" | TRIAL pkgVP3: code check does not agree, not an item -- [CR3] names
+J6 grant plus "the chain follows"
+   base CURED | KBG CURED | CURE (record-only until promoted): CURED -- KEEP whose reason quotes the answering side's round: "i grant it and the chain" | TRIAL pkgVP3: code check does not agree, not an item -- [CR3] na
+J7 grant then a reason after ";" ("I grant the dating; the record still names no father.")
+   base CURED | KBG CURED | CURE (record-only until promoted): CURED -- KEEP whose reason quotes the answering side's round: "i grant the dating the record" | TRIAL pkgVP3: code check does not agree, not an item -- [CR
+J8 grant with verse list in parentheses ("I grant it (Job 14:1; Matthew 11:11).")
+   base CURED | KBG UNCURED | CURE (record-only until promoted): UNCURED -- KEEP whose reason quotes only another bare grant or deferral of the answering side ("i grant it job 14 1"), not a fuller answer (pkgKBG) | TRIAL
+J9 grant after colon, content only ("I grant both: the dating, and the espousal.")
+   base CURED | KBG UNCURED | CURE (record-only until promoted): UNCURED -- KEEP whose reason quotes only another bare grant or deferral of the answering side ("i grant both the dating and"), not a fuller answer (pkgKBG)
+J10 grant after colon with own I-clause ("I grant both: the dating is said, and I show it binds no father.")
+   base CURED | KBG CURED | CURE (record-only until promoted): CURED -- KEEP whose reason quotes the answering side's round: "i grant both the dating is" | TRIAL pkgVP3: code check does not agree, not an item -- [CR3] 
+J11 grant plus "and I concede the rest"
+   base CURED | KBG UNCURED | CURE (record-only until promoted): UNCURED -- KEEP whose reason quotes only another bare grant or deferral of the answering side ("i grant it and i concede"), not a fuller answer (pkgKBG) | 
+J12 grant plus a short subject clause "and it stands."
+   base CURED | KBG UNCURED | CURE (record-only until promoted): UNCURED -- KEEP whose reason quotes only another bare grant or deferral of the answering side ("i grant it and it stands"), not a fuller answer (pkgKBG) | 
