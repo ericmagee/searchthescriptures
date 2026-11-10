@@ -1,0 +1,73 @@
+OK   1a builds one DeepSeek body (model from Resolve Seats, temperature 0, no reasoning field): deepseek-flash, 155348 characters
+OK   1b every round is given in full, under its judge label
+OK   1c declared links read: defender D1-D6 from the [CR1] DECLARED CHAIN, challenger C1-C6 from the [DR3] LINK blocks: {"DEFENDER":[1,2,3,4,5,6],"CHALLENGER":[1,2,3,4,5,6]}
+FAIL 1d the prompt is the A2 prompt with the re-assertion sentence; no candidate in 34108
+FAIL 1e item B: the Oracle's OPPONENT'S CONTRADICTIONS lines in [DR4] become candidates X1, X2 (defender): ["X1 DEFENDER LINK 6","X2 DEFENDER LINK 1","P1 DEFENDER LINK 1","P2 DEFENDER LINK 2","P3 DEFENDER LINK 3","P4 DEFENDER LINK 4","P5 DEFENDER LINK 5","P6 DEFENDER LINK 6","P7 DEFENDER LINK ?","P8 CHALLENGER LINK 4","P9 CHALLENGER LINK 2"]
+OK   1f no DeepSeek model row: skipped, says why
+OK   2a 34108: the dropped "no biological father" wording said again in [CR4] is CONFIRMED on D6 (both quotes found, rounds right, link declared): ["NEW DEFENDER 6 CONFIRMED","NEW DEFENDER 1 NOT A CONTRADICTION"]
+FAIL 2b 34108: terra's Genesis 4:1 flag answered NOT A CONTRADICTION breaks nothing and is logged: NEW DEFENDER LINK 6: null | NEW DEFENDER LINK 1: null | P1: null | P2: null | P3: null | P4: null | P5: null | P6: null | P7: null | P8: null | P9: null
+OK   2c a CONFIRMED line whose earlier quote is not word for word: NOT CONFIRMED (form): the earlier quotation is not found word for word in CR3
+OK   2d a closing quote not in [CR4]: NOT CONFIRMED (form): the closing quotation is not found word for word in CR4
+OK   2e the earlier quote placed in the closing round: NOT CONFIRMED (form): the earlier round CR4 is not one of the defender's rounds 1 to 3; the earlier quotation is not found word for word in CR4
+OK   2f the closing quote placed in round 3: NOT CONFIRMED (form): the closing round CR3 is not the defender's round 4 (CR4); the closing quotation is not found word for word in CR3
+OK   2g an undeclared link: NOT CONFIRMED (form): LINK 9 is not one of the defender's declared links (1, 2, 3, 4, 5, 6)
+OK   2h the defender's words charged to the challenger: NOT CONFIRMED (form): the earlier round CR3 is not one of the challenger's rounds 1 to 3; the closing round CR4 is not the challenger's round 4 (DR4)
+OK   2i an earlier quote that stands in [CR1] but is named [CR3] is checked in [CR3] only: NOT CONFIRMED (form): the earlier quotation is not found word for word in CR3
+FAIL 2j CLOSE-CONTRADICTION: NONE: nothing confirmed, one NONE FOUND log row
+FAIL 2k a reply with no line in the form: nothing confirmed, error recorded, NOT CHECKED row
+OK   2l a failed call: nothing confirmed, the error is recorded, the run goes on
+OK   2m the same link confirmed twice: one break
+OK   2n bold marks around the line are read
+FAIL 2o candidate X1 answered and confirmed; X2 unanswered: NO ANSWER row
+OK   2p skipped build: Record says NOT CHECKED with the reason
+OK   2q rev 3: a quote spliced with "..." from two [CR4] sentences: NOT CONFIRMED (form): the closing quotation is not found word for word in CR4
+OK   2r rev 3: an ellipsis whose parts stand in one [CR4] sentence, in order, still stands: CONFIRMED
+OK   2s rev 3: one candidate answered CONFIRMED and NOT A CONTRADICTION: NOT CONFIRMED (conflicting answers), nothing breaks: NOT CONFIRMED (conflicting answers) | NOT A CONTRADICTION
+OK   2t rev 3: the same NEW pair (side, link, both quotes) answered both ways: nothing breaks
+OK   3a Panel Build: with no Close Enforcer Record the output equals the base node byte for byte
+OK   3b Panel Build: the judges read CONFIRMED CLOSING CONTRADICTIONS after the defender's [CR4], with both quotes and LINK 6 BROKEN: block at 237004
+OK   3c Panel Build: the challenger gets no block (no challenger contradiction confirmed): 3 block(s), one per judge body
+OK   3a Build Independent Verdict: with no Close Enforcer Record the output equals the base node byte for byte
+OK   3b Build Independent Verdict: the judges read CONFIRMED CLOSING CONTRADICTIONS after the defender's [CR4], with both quotes and LINK 6 BROKEN: block at 318183
+OK   3c Build Independent Verdict: the challenger gets no block (no challenger contradiction confirmed): 1 block(s), one per judge body
+OK   4a Panel Cure Check, no Close Enforcer Record: strip_CEC equals strip_SJR byte for byte
+OK   4b seat luna: every D6 collision line reads DEFENDER LINK BROKEN with the AUDIT line; verdict BROKEN, RESULT CHALLENGER WINS: verdict BROKEN, defense PROP-DEPENDENT; trigger: CLOSE-CONTRADICTION D6 vs C5 (UNDERDETERMINED to DEFENDER LINK BROKEN); CLOSE-CONTRADICTION D6 vs C6 (UNDERDETERMINED to DEFENDER LINK BROKEN)
+OK   4c seat luna: the other links' collision lines are unchanged
+OK   4b seat chatgpt: every D6 collision line reads DEFENDER LINK BROKEN with the AUDIT line; verdict BROKEN, RESULT CHALLENGER WINS: verdict BROKEN, defense PROP-DEPENDENT; trigger: CLOSE-CONTRADICTION D6 vs C5 (UNDERDETERMINED to DEFENDER LINK BROKEN); CLOSE-CONTRADICTION D6 vs C6 (UNDERDETERMINED to DEFENDER LINK BROKEN)
+OK   4c seat chatgpt: the other links' collision lines are unchanged
+OK   4b seat sol: every D6 collision line reads DEFENDER LINK BROKEN with the AUDIT line; verdict BROKEN, RESULT CHALLENGER WINS: verdict BROKEN, defense PROP-DEPENDENT; trigger: CLOSE-CONTRADICTION D6 vs C5 (UNDERDETERMINED to DEFENDER LINK BROKEN); CLOSE-CONTRADICTION D6 vs C6 (UNDERDETERMINED to DEFENDER LINK BROKEN)
+OK   4c seat sol: the other links' collision lines are unchanged
+OK   4d no judge item is raised and no seat is removed by the break (summary cure rows, alt_needed and enforcer_log equal)
+OK   4e a challenger break (C1): every Dn vs C1 line reads CHALLENGER LINK BROKEN; the defender's chain is not broken by it: luna: verdict HELD, challenge PROP-DEPENDENT, 3 lines
+OK   4f both sides on one line (D6 vs C6): the defender's break holds, the challenger's is named in the trigger: CLOSE-CONTRADICTION D6 vs C6 (UNDERDETERMINED to DEFENDER LINK BROKEN); CLOSE-CONTRADICTION D6 vs C6 (CHALLENGER break not set: the line already carries the DEFENDER break)
+OK   4g a broken link no collision line names still counts as one broken line, and says so: CLOSE-CONTRADICTION C9 (no collision line names it; counted as one CHALLENGER LINK BROKEN)
+OK   4h the written line carries no unbalanced quote (JSON body still parses)
+OK   5a Alternate Merge Seat, no Close Enforcer Record: strip_CEC equals strip_SJR
+OK   5b on the saved (uncured) seat texts: after the send-back every seat still reads D6 BROKEN and verdict BROKEN: BROKEN, BROKEN, BROKEN
+OK   5c on the cured seat texts from 4b: after the send-back every seat still reads D6 BROKEN and verdict BROKEN: BROKEN, BROKEN, BROKEN
+OK   6a Cure Check, no Close Enforcer Record: strip_CEC equals strip_SJR
+OK   6b the single judge takes the same break when its text has D6 collision lines: 34108 single judge (terra) was unreadable: no collision lines, checked in 6c
+OK   6c a single judge with no rule item (luna's text put in its place): D6 lines BROKEN, verdict BROKEN, AUDIT v25 recompute line; without the record: unchanged: with: BROKEN; without: HELD
+   7a lengths 460 449 E-CLOSECON
+FAIL 7a Alternate Merge adds the E-CLOSECON rows to the run's enforcer_log, ahead of the rest, which is unchanged
+OK   8a 34108 with no pre-panel record: terra's CONTRADICTION line ([CR3] grant against [CR4] Genesis 4:1) becomes candidate J1, named by chatgpt (terra): ["J1 DEFENDER CR3>CR4 by the judges' CONTRADICTION lines (chatgpt); also named by the CLOSE-ROUND REVERSAL CHECK"]
+OK   8b the post-panel prompt answers candidates only, with the same rules
+OK   8c a pair the pre-panel enforcer already answered is not sent again (34108: no call): every judge-found pair was already answered before the panel
+OK   8d Judge Contradiction Record: J1 CONFIRMED on D1; Panel Payloads' item passes on unchanged (Panel Cure Needed? and Panel Cure Build read it): J1 DEFENDER LINK 1: null
+OK   8e a NEW line in the post-panel call is recorded NOT A CANDIDATE and breaks nothing
+OK   8f skipped (nothing new): Panel Payloads passes on, no log row
+OK   8g the recompute takes a post-panel break: every D1 line DEFENDER LINK BROKEN, verdict BROKEN: luna: 1 line(s), BROKEN
+OK   8h both records: D6 and D1 both break; one break per link
+FAIL 8i Alternate Merge logs both records' rows (2 pre-panel + 1 post-panel)
+OK   10a a throw inside Close Enforcer Build: it returns a skip that says why, with the run token: Close Enforcer Build failed: probe: forced throw on the first read
+OK   10b ... and Close Enforcer Record then writes one NOT CHECKED row in allowed values, nothing confirmed: {"run_token":"T5","seat":"close enforcer","seat_role":"panel","judge_model":null,"kind":"enforcer_check","rule":"E-CLOSECON","reply_error":"Close Enforcer Build failed: probe: forced throw on the firs
+OK   10c a throw inside Close Enforcer Record: no break, one NOT CHECKED row in allowed values: Close Enforcer Record failed: probe: forced throw
+OK   10d a throw inside Judge Contradiction Build: a skip that says why (logged, not no_log): Judge Contradiction Build failed: probe: forced throw on the first read
+OK   10e ... Judge Contradiction Record passes Panel Payloads' item on with one NOT CHECKED row
+OK   10f a throw inside Judge Contradiction Record: Panel Payloads' item passes on unchanged, no break, one NOT CHECKED row: Judge Contradiction Record failed: probe: forced throw
+OK   10g with no Panel Payloads item to pass on, Judge Contradiction Record throws as before (nothing to carry)
+OK   9a every E-CLOSECON log row the probe made (213) passes the seat_role, cure_status and kind checks: []
+OK   9b the enforcer's own answer leads cure_reason (CONFIRMED, NO ANSWER, NONE FOUND, NOT A CANDIDATE, NOT A CONTRADICTION, NOT CHECKED)
+OK   9c both seats are logged: close enforcer and judge contradiction enforcer
+
+62 OK, 8 FAIL
