@@ -6,8 +6,9 @@ OK   P2c  patched: the answer block stands after [CR4] and before the challenger
 OK   P2d  patched: each stored answer stands whole in the prompt
 OK   P2e  patched: no challenger answer block (its questions were not contradiction questions)
 OK   P2f  patched: the rule paragraph stands once, before the reply form
+OK   P2h  rev 2: the disregard sentence (Commitment 9) stands in the paragraph, between "can both be true." and "An answer cannot withdraw"
 OK   P2g  patched minus the added text equals the live prompt
-     prompt length live 151483, patched 157685
+     prompt length live 151483, patched 157827
 OK   P3a  Record on the patched output: a CONFIRMED line quoting the rounds is confirmed  [["CONFIRMED"]]
 OK   P3b  Record: a CONFIRMED line whose closing words come from an ANSWER breaks nothing  [NOT CONFIRMED (form) / the closing quotation is not found word for word in CR4]
 OK   P4  question round did not run: output equal to live  [qra {"DEFENDER":0,"CHALLENGER":0,"matched":0}]
@@ -23,4 +24,4 @@ OK   P13  same, with another judge-found pair standing: the answers print marked
 OK   P14  side written "Defender": still printed
 OK   P15  QR Merge unreadable: equal to live, nothing printed
 
-22 OK, 0 FAIL
+23 OK, 0 FAIL

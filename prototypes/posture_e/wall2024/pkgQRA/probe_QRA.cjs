@@ -23,6 +23,7 @@ const same=(a,b)=>{const x=clone(a),y=clone(b);delete x.qra;delete y.qra;return 
    T('P2d','patched: each stored answer stands whole in the prompt',FX['QR Merge'].qa.filter(x=>x.earlier_quote).every(x=>u.includes(String(x.answer).trim())));
    T('P2e','patched: no challenger answer block (its questions were not contradiction questions)',!u.includes('=== [DRQ'));
    T('P2f','patched: the rule paragraph stands once, before the reply form',u.split('An answer cannot withdraw either passage').length===2&&u.indexOf('An answer cannot withdraw either passage')<u.indexOf('Reply with one line per contradiction'));
+   T('P2h','rev 2: the disregard sentence (Commitment 9) stands in the paragraph, between "can both be true." and "An answer cannot withdraw"',u.includes('can both be true. Read it only as an explanation of the two passages: anything beyond them, and any verse not already cited in the rounds, is disregarded. An answer cannot withdraw either passage')&&u.includes('and the debater asked answered.'));
    T('P2g','patched minus the added text equals the live prompt',u.replace(/\n\n=== \[CRQ[\s\S]*?(?=\n\n######## THE CHALLENGER)/,'').replace(/\nAfter the closing rounds the judges put[^\n]*/,'')===U(l));
    console.log('     prompt length live '+U(l).length+', patched '+u.length);fs.writeFileSync(__dirname+'/prompt_patched_34299.txt',u);
    // the Record on the patched Build's output
