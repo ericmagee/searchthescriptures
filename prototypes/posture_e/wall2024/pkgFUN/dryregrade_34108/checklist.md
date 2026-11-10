@@ -1,6 +1,6 @@
 # Dry regrade of 34108 on the version carrying pkgFUN rev 4: what to check, line by line
 
-W1, 20:40 CST 11-09. Token ODV1-34108-3to8dgrt, regrade_dry true, question_trial true. Each line names what the record should show; mark it MET, NOT MET or NOT REACHED.
+W1, 20:21 CST 11-09. Token ODV1-34108-3to8dgrt, regrade_dry true, question_trial true. Each line names what the record should show; mark it MET, NOT MET or NOT REACHED.
 Sources: pkgCEC/README.md and probe_CEC (item A), pkgQRC/README.md and itemC_second/finding.md (item C), the last dry regrade (execution 34299, /mnt/project-files/wall2024/ex34299_full.json, live s94), and debate_enforcer_log for the live run.
 
 ## 0. Before reading
