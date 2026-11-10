@@ -1,0 +1,60 @@
+OK   G1 want LISTED | live cands 0 | CDR cands 3 | Therefore the register stops at Joseph, and the line ends there.
+       hit: P3 [CR3] I drop the wording "the register stops at Joseph".
+OK   G2 want LISTED | live cands 0 | CDR cands 3 | The register of Luke 3 stops at the name of Joseph.
+       hit: P3 [CR3] I now abandon the claim that the register of Luke 3 stops at the name of Joseph.
+OK   G3 want NOT LISTED | live cands 0 | CDR cands 2 | The register stops at Joseph.
+OK   G4 want NOT LISTED | live cands 0 | CDR cands 2 | The register stops at Joseph.
+OK   G5 want NOT LISTED | live cands 0 | CDR cands 2 | The register stops at Joseph.
+OK   G6 want NOT LISTED | live cands 0 | CDR cands 2 | The register stops at Joseph.
+OK   G7 want NOT LISTED | live cands 0 | CDR cands 2 | The register of Luke 3 stops at the name of Joseph.
+MISS G8 want NOT LISTED | live cands 0 | CDR cands 3 | I do not say that the register stops at Joseph.
+       hit: P3 [CR3] I drop the wording "the register stops at Joseph".
+MISS G9 want NOT LISTED | live cands 0 | CDR cands 3 | The challenger writes as though the register stops at Joseph were still my claim; it is not.
+       hit: P3 [CR3] I drop the wording "the register stops at Joseph".
+MISS G10 want NOT LISTED | live cands 0 | CDR cands 3 | Whether the register stops at Joseph is not a question my chain needs.
+       hit: P3 [CR3] I drop the wording "the register stops at Joseph".
+OK   G11 want NOT LISTED | live cands 0 | CDR cands 2 | The register stops at Joseph.
+OK   G12 want NOT LISTED | live cands 0 | CDR cands 2 | The register stops at Joseph.
+MISS G13 want NOT LISTED | live cands 0 | CDR cands 3 | As an [L4] inference from the rows, the register stops at Joseph.
+       hit: P3 [CR3] I drop the wording "the register stops at Joseph" only as a bare statement of [L1]; as an [L4] infer
+OK   G14 want LISTED | live cands 0 | CDR cands 3 | The cloud of Luke 9:34 is the Spirit himself, as I said.
+       hit: P3 [DR3] I give up the reading that the cloud of Luke 9:34 is the Spirit himself.
+OK   G15 want NOT LISTED | live cands 0 | CDR cands 2 | The register stops at Joseph.
+11 of 15 as labeled
+OK   H1 want LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
+       hit: P3 [CR3] **LINK 2: NARROWED TO:** I drop the wording "the register stops at Joseph" as a bare statement.
+OK   H2 want LISTED | live cands 0 | CDR cands 3 | The register of Luke 3 stops at the name of Joseph.
+       hit: P3 [CR3] I withdraw the claim that the register of Luke 3 stops at the name of Joseph.
+OK   H3 want LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
+       hit: P3 [CR3] I also drop the wording "the register stops at Joseph".
+MISS H4 want LISTED | live cands 0 | CDR cands 2 | The register stops at Joseph.
+MISS H5 want LISTED | live cands 0 | CDR cands 2 | The register stops at Joseph.
+OK   H6 want LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
+       hit: P3 [CR3] I retract the wording "the register stops at Joseph".
+OK   H7 want NOT LISTED | live cands 0 | CDR cands 2 | The register stops at Joseph.
+OK   H8 want NOT LISTED | live cands 0 | CDR cands 2 | The register stops at Joseph.
+MISS H9 want NOT LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
+       hit: P3 [CR3] I drop the wording "the register stops at Joseph": so the challenger would have me say, and I do not
+MISS H10 want NOT LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
+       hit: P3 [CR3] I drop the wording "the register stops at Joseph" no more than I drop the verse itself.
+OK   H11 want NOT LISTED | live cands 0 | CDR cands 2 | The register stops at Joseph.
+MISS H12 want NOT LISTED | live cands 0 | CDR cands 3 | The challenger still argues as if the register stops at Joseph.
+       hit: P3 [CR3] I drop the wording "the register stops at Joseph".
+7 of 12 as labeled
+OK   K1 want LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
+       hit: P3 [CR3] I drop the wording "the register stops at Joseph" because the rows do not state it.
+OK   K2 want LISTED | live cands 0 | CDR cands 3 | If the register stops at Joseph, the line is legal only.
+       hit: P3 [CR3] I drop the wording "if the register stops at Joseph" as overstated.
+OK   K3 want LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
+       hit: P3 [CR3] I withdraw the wording "the register stops at Joseph".
+OK   K4 want LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
+       hit: P3 [CR3] **I drop the wording "the register stops at Joseph".**
+MISS K5 want NOT LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
+       hit: P3 [CR3] I drop the wording "the register stops at Joseph" only when the rows fail, and they do not.
+MISS K6 want NOT LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
+       hit: P3 [CR3] I drop the wording "the register stops at Joseph" should the rows fail; they do not.
+MISS K7 want NOT LISTED | live cands 0 | CDR cands 3 | The register stops at Joseph.
+       hit: P3 [CR3] I withdraw the wording "the register stops at Joseph" on one condition, which the challenger has not
+OK   K8 want NOT LISTED | live cands 0 | CDR cands 2 | The register stops at Joseph.
+OK   K9 want NOT LISTED | live cands 0 | CDR cands 2 | The register stops at Joseph.
+6 of 9 as labeled

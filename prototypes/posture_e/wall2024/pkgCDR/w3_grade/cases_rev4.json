@@ -1,0 +1,158 @@
+{
+ "about": "W3 new labeled cases for pkgCDR rev 4, labels fixed before the run.",
+ "cases": [
+  {
+   "id": "K1",
+   "adds": [
+    [
+     "cr3",
+     "I drop the wording \"the register stops at Joseph\" because the rows do not state it."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "LISTED",
+   "note": "true drop with a reason"
+  },
+  {
+   "id": "K2",
+   "adds": [
+    [
+     "cr3",
+     "I drop the wording \"if the register stops at Joseph\" as overstated."
+    ],
+    [
+     "cr4",
+     "If the register stops at Joseph, the line is legal only."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "If the register stops at Joseph, the line is legal only.",
+   "want": "LISTED",
+   "note": "if inside the quoted wording only"
+  },
+  {
+   "id": "K3",
+   "adds": [
+    [
+     "cr3",
+     "I withdraw the wording \"the register stops at Joseph\". If the challenger wants more, he must show a row."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "LISTED",
+   "note": "condition in the next sentence"
+  },
+  {
+   "id": "K4",
+   "adds": [
+    [
+     "cr3",
+     "**I drop the wording \"the register stops at Joseph\".**"
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "LISTED",
+   "note": "bold whole sentence"
+  },
+  {
+   "id": "K5",
+   "adds": [
+    [
+     "cr3",
+     "I drop the wording \"the register stops at Joseph\" only when the rows fail, and they do not."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "NOT LISTED",
+   "note": "when-condition not met (word not in the list)"
+  },
+  {
+   "id": "K6",
+   "adds": [
+    [
+     "cr3",
+     "I drop the wording \"the register stops at Joseph\" should the rows fail; they do not."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "NOT LISTED",
+   "note": "should-condition not met"
+  },
+  {
+   "id": "K7",
+   "adds": [
+    [
+     "cr3",
+     "I withdraw the wording \"the register stops at Joseph\" on one condition, which the challenger has not met."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "NOT LISTED",
+   "note": "condition named as a noun"
+  },
+  {
+   "id": "K8",
+   "adds": [
+    [
+     "cr3",
+     "I drop the wording \"the register stops at Joseph\" IF the rows fail; they do not."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "NOT LISTED",
+   "note": "upper-case IF"
+  },
+  {
+   "id": "K9",
+   "adds": [
+    [
+     "cr3",
+     "I drop the wording \"the register stops at Joseph\" — if at all — only as a bare statement?"
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "NOT LISTED",
+   "note": "dash, if, question mark"
+  }
+ ]
+}
