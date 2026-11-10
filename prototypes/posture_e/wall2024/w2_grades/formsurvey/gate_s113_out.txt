@@ -1,0 +1,64 @@
+33040 Gate Record 
+  stored: gemini:0 chatgpt:2 grok:1
+  s113.json: ERR unexecuted Send Back Record
+33160 Gate Record 
+  stored: gemini:4 chatgpt:1 sol:1
+  s113.json: ERR unexecuted Send Back Record
+33627 Gate Record 
+  stored: gemini:4 chatgpt:0 grok:0
+  s113: gemini:1 chatgpt:0 grok:0
+     gemini: [AUDIT v38: E-GATE -- SEAT: gemini; G1 NOT APPLIED (E-APPLY S4); ANSWER: CHANGE; CURED: the gate change was applied]
+     gemini: [AUDIT v38: E-GATE -- SEAT: gemini; G2 NOT APPLIED (E-APPLY S6); ANSWER: CHANGE; UNCURED: the gate change raised a new LIVE item: CONTRADICTION -- your ANSWER CHECK on Matthew 1:25 (DR3) grades the answer FAILS, and an answer that MISSES or
+     gemini: [AUDIT v38: E-GATE -- SEAT: gemini; G3 NOT APPLIED (E-APPLY S8); ANSWER: CHANGE; CURED: the gate change was applied]
+     gemini: [AUDIT v38: E-GATE -- SEAT: gemini; G4 NOT APPLIED (E-APPLY S10); ANSWER: CHANGE; CURED: the gate change was applied]
+     gemini: [AUDIT v38: E-GATE -- SEAT: gemini; G5 NOT APPLIED (E-APPLY S12); ANSWER: CHANGE; CURED: the gate change was applied]
+     gemini: [AUDIT v38: E-GATE -- SEAT: gemini; G6 NOT APPLIED (E-APPLY S5); ANSWER: CHANGE; CURED: the gate change repeats S5 word for word, and S5 was applied in the same pass, so its line stands as asked (pkgGDA)]
+     gemini: [AUDIT v38: E-GATE -- SEAT: gemini; G7 NOT APPLIED (E-APPLY S7); ANSWER: CHANGE; CURED: the gate change repeats S7 word for word, and S7 was applied in the same pass, so its line stands as asked (pkgGDA)]
+     gemini: [AUDIT v38: E-GATE -- SEAT: gemini; G8 NOT APPLIED (E-APPLY S9); ANSWER: CHANGE; CURED: the gate change repeats S9 word for word, and S9 was applied in the same pass, so its line stands as asked (pkgGDA)]
+     gemini: [AUDIT v38: E-GATE -- SEAT: gemini; G9 NOT APPLIED (E-APPLY S11); ANSWER: CHANGE; CURED: the gate change repeats S11 word for word, and S11 was applied in the same pass, so its line stands as asked (pkgGDA)]
+     grok: [AUDIT v38: E-GATE -- SEAT: grok; G1 NOT APPLIED (E-APPLY S7); ANSWER: CHANGE; CURED: the gate change is already in the corrected text (another change wrote the same line; W3 2319)]
+     grok: [AUDIT v38: E-GATE -- SEAT: grok; G2 NOT APPLIED (E-APPLY S9); ANSWER: CHANGE; CURED: the gate change is already in the corrected text (another change wrote the same line; W3 2319)]
+     grok: [AUDIT v38: E-GATE -- SEAT: grok; G3 NOT APPLIED (E-APPLY S11); ANSWER: CHANGE; CURED: the gate change is already in the corrected text (another change wrote the same line; W3 2319)]
+     grok: [AUDIT v38: E-GATE -- SEAT: grok; G4 NOT APPLIED (E-APPLY S13); ANSWER: CHANGE; CURED: the gate change was applied]
+     grok: [AUDIT v38: E-GATE -- SEAT: grok; G5 NOT APPLIED (E-APPLY S14); ANSWER: CHANGE; CURED: the later gate change G11 of this judge rewrote the same line (the last change wins) and was applied (apply record; pkgGSU)]
+     grok: [AUDIT v38: E-GATE -- SEAT: grok; G6 NOT APPLIED (E-APPLY S16); ANSWER: CHANGE; CURED: the later gate change G12 of this judge rewrote the same line (the last change wins) and was applied (apply record; pkgGSU)]
+     grok: [AUDIT v38: E-GATE -- SEAT: grok; G7 NOT APPLIED (E-APPLY S18); ANSWER: CHANGE; CURED: the later gate change G12 of this judge rewrote the same line (the last change wins) and was applied (apply record; pkgGSU)]
+     grok: [AUDIT v38: E-GATE -- SEAT: grok; G8 NOT APPLIED (E-APPLY S8); ANSWER: CHANGE; CURED: the gate change was applied]
+     grok: [AUDIT v38: E-GATE -- SEAT: grok; G9 NOT APPLIED (E-APPLY S10); ANSWER: CHANGE; CURED: the gate change was applied]
+     grok: [AUDIT v38: E-GATE -- SEAT: grok; G10 NOT APPLIED (E-APPLY S12); ANSWER: CHANGE; CURED: the gate change was applied]
+     grok: [AUDIT v38: E-GATE -- SEAT: grok; G11 NOT APPLIED (E-APPLY S15); ANSWER: CHANGE; CURED: the gate change was applied]
+     grok: [AUDIT v38: E-GATE -- SEAT: grok; G12 NOT APPLIED (E-APPLY S17); ANSWER: CHANGE; CURED: the gate change was applied]
+33731 Gate Record 
+  stored: gemini:0 chatgpt:0 grok:1
+  s113: gemini:0 chatgpt:0 grok:0
+     gemini: [AUDIT v38: E-GATE -- SEAT: gemini; G1 NOT APPLIED (E-APPLY S5); ANSWER: CHANGE; CURED: the gate change is already in the corrected text (another change wrote the same line; W3 2319)]
+     gemini: [AUDIT v38: E-GATE -- SEAT: gemini; G2 NOT APPLIED (E-APPLY S6); ANSWER: CHANGE; CURED: the gate change was applied]
+     grok: [AUDIT v38: E-GATE -- SEAT: grok; G1 NOT APPLIED (E-APPLY S11); ANSWER: KEEP; CURED: KEEP: the change stays unapplied]
+     grok: [AUDIT v38: E-GATE -- SEAT: grok; G2 NOT APPLIED (E-APPLY S13); ANSWER: CHANGE; CURED: the gate change was applied]
+33798 Gate Record 
+  stored: gemini:0 chatgpt:2 grok:0
+  s113: gemini:0 chatgpt:0 grok:0
+     gemini: [AUDIT v38: E-GATE -- SEAT: gemini; G1 NOT APPLIED (E-APPLY S5); ANSWER: CHANGE; CURED: the gate change is already in the corrected text (another change wrote the same line; W3 2319)]
+     gemini: [AUDIT v38: E-GATE -- SEAT: gemini; G2 NOT APPLIED (E-APPLY S6); ANSWER: CHANGE; CURED: the gate change is already in the corrected text (another change wrote the same line; W3 2319)]
+     gemini: [AUDIT v38: E-GATE -- SEAT: gemini; G3 NOT APPLIED (E-APPLY S7); ANSWER: CHANGE; CURED: the gate change is already in the corrected text (another change wrote the same line; W3 2319)]
+     gemini: [AUDIT v38: E-GATE -- SEAT: gemini; G4 NOT APPLIED (E-APPLY S8); ANSWER: CHANGE; CURED: the gate change was applied]
+     chatgpt: [AUDIT v38: E-GATE -- SEAT: chatgpt; G1 NOT APPLIED (E-APPLY S13); ANSWER: CHANGE; CURED: the gate change is already in the corrected text (another change wrote the same line; W3 2319)]
+     chatgpt: [AUDIT v38: E-GATE -- SEAT: chatgpt; G2 NOT APPLIED (E-APPLY S14); ANSWER: CHANGE; CURED: the gate change was applied]
+33490 Gate Record 
+  stored: gemini:12 chatgpt:0 sol:1
+  s113: gemini:2 chatgpt:0 sol:1
+     gemini: [AUDIT v38: E-GATE -- SEAT: gemini; G1 NOT APPLIED (E-APPLY S3); ANSWER: CHANGE; CURED: the later gate change G2 of this judge rewrote the same line (the last change wins) and was applied (apply record; pkgGSU)]
+     gemini: [AUDIT v38: E-GATE -- SEAT: gemini; G2 NOT APPLIED (E-APPLY S4); ANSWER: CHANGE; CURED: the gate change was applied]
+     gemini: [AUDIT v38: E-GATE -- SEAT: gemini; G3 NOT APPLIED (E-APPLY S5); ANSWER: CHANGE; CURED: the later gate change G4 of this judge rewrote the same line (the last change wins) and was applied (apply record; pkgGSU)]
+     gemini: [AUDIT v38: E-GATE -- SEAT: gemini; G4 NOT APPLIED (E-APPLY S6); ANSWER: CHANGE; CURED: the gate change was applied]
+     gemini: [AUDIT v38: E-GATE -- SEAT: gemini; G5 NOT APPLIED (E-APPLY S7); ANSWER: CHANGE; CURED: the later gate change G6 of this judge rewrote the same line (the last change wins) and was applied (apply record; pkgGSU)]
+     gemini: [AUDIT v38: E-GATE -- SEAT: gemini; G6 NOT APPLIED (E-APPLY S8); ANSWER: CHANGE; CURED: the gate change was applied; its send-back count comes off]
+     gemini: [AUDIT v38: E-GATE -- SEAT: gemini; G7 NOT APPLIED (E-APPLY S10); ANSWER: CHANGE; CURED: the gate change is already in the corrected text (another change wrote the same line; W3 2319)]
+     gemini: [AUDIT v38: E-GATE -- SEAT: gemini; G8 NOT APPLIED (E-APPLY S11); ANSWER: CHANGE; CURED: the gate change is already in the corrected text (another change wrote the same line; W3 2319)]
+     gemini: [AUDIT v38: E-GATE -- SEAT: gemini; G9 NOT APPLIED (E-APPLY S12); ANSWER: CHANGE; CURED: the gate change was applied]
+     sol: [AUDIT v38: E-GATE -- SEAT: sol; G1 NOT APPLIED (E-APPLY S4); ANSWER: CHANGE; CURED: the gate change is already in the corrected text (another change wrote the same line; W3 2319)]
+     sol: [AUDIT v38: E-GATE -- SEAT: sol; G2 NOT APPLIED (E-APPLY S5); ANSWER: CHANGE; CURED: the gate change is already in the corrected text (another change wrote the same line; W3 2319)]
+     sol: [AUDIT v38: E-GATE -- SEAT: sol; G3 NOT APPLIED (E-APPLY S6); ANSWER: CHANGE; CURED: the gate change was applied]
+33289 Gate Record 
+  stored: 
+  s113.json: ERR Cannot read properties of undefined (reading 'slice')
