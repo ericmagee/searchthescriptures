@@ -111,5 +111,59 @@
    "id": "C1",
    "note": "the D6 pair is listed before the panel (case C1 above); the 'ordinary means' pair is listed after the panel (J-R1), because the reversal check runs in Panel Build, after the closing enforcer"
   }
+ },
+ "rev2": {
+  "about": "Added for rev 2 (W2's FAIL: a refused drop read as a drop) before rev 2 is written or run. adds = sentences appended to the rounds named.",
+  "cases": [
+   {
+    "id": "R1",
+    "adds": [
+     [
+      "cr3",
+      "I drop nothing more: the wording \"the register stops at Joseph\" stands."
+     ],
+     [
+      "cr4",
+      "The register stops at Joseph."
+     ]
+    ],
+    "side": "DEFENDER",
+    "closing": "The register stops at Joseph.",
+    "want": "NOT LISTED"
+   },
+   {
+    "id": "R2",
+    "adds": [
+     [
+      "cr3",
+      "I withdraw nothing else, but I drop the wording \"the register stops at Joseph\"."
+     ],
+     [
+      "cr4",
+      "The register stops at Joseph."
+     ]
+    ],
+    "side": "DEFENDER",
+    "closing": "The register stops at Joseph.",
+    "want": "LISTED",
+    "note": "a refusal and a real drop in one sentence: the real drop is still read"
+   },
+   {
+    "id": "R3",
+    "adds": [
+     [
+      "dr3",
+      "I abandon none of the claim that the register runs through the fathers of Joseph."
+     ],
+     [
+      "dr4",
+      "The register runs through the fathers of Joseph."
+     ]
+    ],
+    "side": "CHALLENGER",
+    "closing": "The register runs through the fathers of Joseph.",
+    "want": "NOT LISTED"
+   }
+  ]
  }
 }
