@@ -18,8 +18,8 @@ by['Second Alternate?'].parameters.jsCode=sa;
 if(R){
  // Alternate Merge: a round 2 line equal to a round 1 line is still a new line (count, not set); the record names the retry
  let am=by['Alternate Merge'].parameters.jsCode;
- am=edit(am,"const newLines=(r2raw,r1raw)=>{const have=new Set(r1raw.split('\\n'));return String(r2raw).split('\\n').filter(l=>ALT.test(l.trim())&&!have.has(l));};",
-  "const newLines=(r2raw,r1raw)=>{const have=new Map();r1raw.split('\\n').forEach(l=>have.set(l,(have.get(l)||0)+1));return String(r2raw).split('\\n').filter(l=>{if(!ALT.test(l.trim()))return false;const k=have.get(l)||0;if(k>0){have.set(l,k-1);return false;}return true;});}; /* pkgF3A: counted, so a retry's line equal to round 1's is kept */",'AM1');
+ am=edit(am,"else{const k2=(R2.bodies||[]).findIndex(b=>seatOf(b)===rs);const nl=k2>=0?newLines(rawOf(R2.bodies[k2]),r1raw):[];",
+  "else{const k2=(R2.bodies||[]).findIndex(b=>seatOf(b)===rs);const __rt=SA&&SA.retry_for&&Object.values(SA.retry_for).indexOf(rs)>=0;const __b0=__rt?((($('Second Alternate?').first().json.bodies)||[]).find(b=>seatOf(b)===rs)):null;const nl=k2>=0?newLines(rawOf(R2.bodies[k2]),__b0?rawOf(__b0):r1raw):[]; /* pkgF3A: a retried seat's round 2 lines are read against round 2's own base, so a line equal to round 1's is kept */",'AM1');
  am=edit(am,"alternate_round2:{seats:(SA&&SA.seats)||[],tried:(SA&&SA.tried)||[],free:(SA&&SA.free)||[],result}};","alternate_round2:{seats:(SA&&SA.seats)||[],tried:(SA&&SA.tried)||[],free:(SA&&SA.free)||[],retry:(SA&&SA.retry)||[],retry_for:(SA&&SA.retry_for)||{},result}};",'AM2');
  by['Alternate Merge'].parameters.jsCode=am;
  // R2 Alternate Build (library): G5 lets a retried model through for its own seat only

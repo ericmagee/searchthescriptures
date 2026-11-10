@@ -1,0 +1,24 @@
+   ALL a2r {"run":true,"seats":["luna"],"tried":["anthropic/claude-haiku-5.5"],"free":["haiku"],"retry":["anthropic/claude-haiku-5.5"],"retry_for":{"anthropic/claude-haiku-5.5":"luna"},"why":"round 2 for luna; free: haiku; retry of an unusable reply: anthropic/claude-haiku-5.5 for luna"}
+OK   R2 a2r.tried still names haiku; retry and retry_for name haiku for luna; round 2 runs
+   R2 build [{"r":"luna","s":"haiku","why":""}]
+OK   R2 R2 Alternate Build builds haiku for luna
+   R3 skips [{"idx":0,"removed_seat":"luna","removed_api_model":"openai/gpt-6-luna","qualify":false,"skip":"no pool model passes the guards: haiku G5 (pkgF3A): anthropic/claude-haiku-5.5 is retried only for sol"}]
+   R3 build [{"r":"sol","s":"haiku","why":""}]
+OK   R3 haiku offered to sol (its failed seat) only; luna refused with G5 (pkgF3A)
+   R1 s110 luna ALTERNATE TRIED lines 1 alternate_round2 {"seats":["luna"],"tried":["anthropic/claude-haiku-5.5"],"free":[],"result":[{"seat":"luna","seated":null,"lines":0}]}
+OK   R1 s110 keeps one line (the finding)
+   R1 ALL luna ALTERNATE TRIED lines 2 alternate_round2 {"seats":["luna"],"tried":["anthropic/claude-haiku-5.5"],"free":["haiku"],"retry":["anthropic/claude-haiku-5.5"],"retry_for":{"anthropic/claude-haiku-5.5":"luna"},"result":[{"seat":"luna","seated":null,"lines":1}]}
+OK   R1 rev 2 writes the retry line again (2 lines) and the record names the retry and the tried model
+OK   R4 C1 34626 as stored | s110: - (expected -)
+OK   R4 C1 34626 as stored | G1: - (expected -)
+OK   R4 C1 34626 as stored | RETRY: - (expected -)
+OK   R4 C1 34626 as stored | ALL: haiku (expected haiku)
+OK   R4 C2 glm content null | s110: - (expected -)
+OK   R4 C2 glm content null | G1: haiku (expected haiku)
+OK   R4 C2 glm content null | RETRY: glm (expected glm)
+OK   R4 C2 glm content null | ALL: glm,haiku (expected glm,haiku)
+OK   R4 C3 glm uncured | s110: - (expected -)
+OK   R4 C3 glm uncured | G1: haiku (expected haiku)
+OK   R4 C3 glm uncured | RETRY: - (expected -)
+OK   R4 C3 glm uncured | ALL: haiku (expected haiku)
+17 OK, 0 FAIL

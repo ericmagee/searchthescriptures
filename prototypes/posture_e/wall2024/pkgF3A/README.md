@@ -17,3 +17,12 @@ stays unfilled (debate_removals kind not_counted), so the panel counts two judge
 - G1 alone (parent_s110_F3A_G1.json): the haiku exemption in Second Alternate?'s family rule. +46 code (measured), no prompt.
 - RETRY alone (parent_s110_F3A_RETRY.json): same model once after an unusable reply. +403 code (measured), no prompt.
 - Both (parent_s110_F3A.json): +449. In 34626 only both together run round 2 (haiku is Anthropic and so are both debaters).
+## Rev 2 (W3 FAIL, Wall 4231). Build pkgF3A/build_F3A2.cjs (SET=G1|RETRY|ALL); write files parent_s110_F3A2_<SET>.json. Tests test_F3A2.cjs: 17 OK.
+- A: Alternate Merge reads a retried seat's round 2 lines against round 2's own base (Second Alternate?'s bodies), so a line equal to round 1's
+  is kept: luna's row carries two ALTERNATE TRIED lines after two unusable replies.
+- B and D: a2r.tried keeps naming every model tried in round 1; a2r.retry and a2r.retry_for name the retried model and its seat; the final
+  record alternate_round2 carries retry and retry_for.
+- C: R2 Alternate Build (library) offers a retried model only to the seat whose reply was unusable (G5 (pkgF3A) for any other seat), and lets it
+  past G5 (pkgA2R) for that seat.
+- Size (measured): G1 alone +46 (Second Alternate?). RETRY alone +1,144 (Shared Library +261, Second Alternate? +519, Alternate Merge +364).
+  Both +1,190. No prompt text.
