@@ -1,0 +1,209 @@
+{
+ "about": "W3 new labeled cases for pkgCDR rev 3, labels fixed before the run.",
+ "cases": [
+  {
+   "id": "H1",
+   "adds": [
+    [
+     "cr3",
+     "**LINK 2: NARROWED TO:** I drop the wording \"the register stops at Joseph\" as a bare statement."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "LISTED",
+   "note": "label then drop (the 34108 form)"
+  },
+  {
+   "id": "H2",
+   "adds": [
+    [
+     "cr3",
+     "- I withdraw the claim that the register of Luke 3 stops at the name of Joseph."
+    ],
+    [
+     "cr4",
+     "The register of Luke 3 stops at the name of Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register of Luke 3 stops at the name of Joseph.",
+   "want": "LISTED",
+   "note": "list mark then drop"
+  },
+  {
+   "id": "H3",
+   "adds": [
+    [
+     "cr3",
+     "I also drop the wording \"the register stops at Joseph\"."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "LISTED",
+   "note": "also"
+  },
+  {
+   "id": "H4",
+   "adds": [
+    [
+     "cr3",
+     "On Luke 3:23, I drop the wording \"the register stops at Joseph\"."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "LISTED",
+   "note": "verse lead-in before the drop (a miss is the safe direction)"
+  },
+  {
+   "id": "H5",
+   "adds": [
+    [
+     "cr3",
+     "Accordingly I withdraw the wording \"the register stops at Joseph\"."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "LISTED",
+   "note": "adverb before the drop (a miss is the safe direction)"
+  },
+  {
+   "id": "H6",
+   "adds": [
+    [
+     "cr3",
+     "2. I retract the wording \"the register stops at Joseph\"."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "LISTED",
+   "note": "numbered item"
+  },
+  {
+   "id": "H7",
+   "adds": [
+    [
+     "cr3",
+     "I withdraw the wording \"the register stops at Joseph\" if the challenger shows a row against it; he has shown none."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "NOT LISTED",
+   "note": "conditional after the wording, condition not met"
+  },
+  {
+   "id": "H8",
+   "adds": [
+    [
+     "cr3",
+     "I drop the wording \"the register stops at Joseph\"? No."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "NOT LISTED",
+   "note": "question answered no"
+  },
+  {
+   "id": "H9",
+   "adds": [
+    [
+     "cr3",
+     "I drop the wording \"the register stops at Joseph\": so the challenger would have me say, and I do not."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "NOT LISTED",
+   "note": "reported after the wording, refused"
+  },
+  {
+   "id": "H10",
+   "adds": [
+    [
+     "cr3",
+     "I drop the wording \"the register stops at Joseph\" no more than I drop the verse itself."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "NOT LISTED",
+   "note": "rhetorical refusal"
+  },
+  {
+   "id": "H11",
+   "adds": [
+    [
+     "cr3",
+     "I withdraw the wording \"the register ends with Joseph\" and keep \"the register stops at Joseph\"."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "NOT LISTED",
+   "note": "drops another wording, keeps this one"
+  },
+  {
+   "id": "H12",
+   "adds": [
+    [
+     "cr3",
+     "I drop the wording \"the register stops at Joseph\"."
+    ],
+    [
+     "cr4",
+     "The challenger still argues as if the register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The challenger still argues as if the register stops at Joseph.",
+   "want": "NOT LISTED",
+   "note": "close reports the other side"
+  }
+ ]
+}
