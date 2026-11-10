@@ -1,0 +1,17 @@
+[
+ {"id":"S1","t":"COUNTED:\nThe defender does not keep D6.","rule":"CURED","note":"any","why":"W3's form family: colon, negation on the next line (correct answer)"},
+ {"id":"S2","t":"COUNTED;\nThe defender never takes it back.","rule":"CURED","note":"any","why":"semicolon, negation next line"},
+ {"id":"S3","t":"COUNTED,\nnot as courtesy but as a grant of D6.","rule":"CURED","note":"any","why":"comma, line opening with not"},
+ {"id":"S4","t":"COUNTED -\nNo later round withdraws it.","rule":"CURED","note":"any","why":"dash, line opening with No"},
+ {"id":"S5","t":"COUNTED —\nIt is not courtesy; it gives up D6.","rule":"CURED","note":"any","why":"em dash, negation next line"},
+ {"id":"S6","t":"**COUNTED:**\nNothing in round 4 restores D6.","rule":"CURED","note":"any","why":"bold colon, Nothing next line"},
+ {"id":"S7","t":"COUNTED\nThe defender cannot hold D6 after this grant.","rule":"CURED","note":"any","why":"no stop at all, cannot next line"},
+ {"id":"S8","t":"COUNTED:\n1. The grant is in [CR4].\n2. It is not withdrawn.","rule":"CURED","note":"any","why":"colon then numbered lines, negation on the second"},
+ {"id":"H1","t":"COUNTED.\nAs for #2: it should not be counted.","rule":"CURED","note":"no","why":"other item: the run should end at a line naming another item (rev 2 per coordinator)"},
+ {"id":"H2","t":"COUNTED.\n#2: it should not be counted.","rule":"CURED","note":"no","why":"other item"},
+ {"id":"H3","t":"COUNTED.\nItem 2: it should not be counted.","rule":"CURED","note":"no","why":"other item, word Item"},
+ {"id":"H4","t":"COUNTED.\nThe grant in #1 is not the one in #3; it should not be counted.","rule":"CURED","note":"yes","why":"names #1 itself and another item; label: a line naming this item is still #1's (expected yes; flag if rev 2 cuts it)"},
+ {"id":"R1","t":"COUNTED.\nIt should not be counted.","rule":"CURED","note":"yes","why":"reach still works"},
+ {"id":"R2","t":"COUNTED:\nIt should not be counted.","rule":"CURED","note":"yes","why":"reach after a colon"},
+ {"id":"K2","t":"NOT COUNTED.\nThe defender conceded D6.","rule":"UNCURED","note":"no","why":"control"}
+]
