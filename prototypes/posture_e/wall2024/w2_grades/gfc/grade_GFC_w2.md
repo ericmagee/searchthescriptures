@@ -21,3 +21,13 @@ SCAN COUNTS (why W3 found 0 and I found 4; both are right for their sources)
 - So: 4 stored lines of the form, 0 in written runs. The candidate reads all 4.
 
 NOT REACHED: the alternate's gate path (Alt Gate Record); a K-G4 item answered in this form (G5 here is E-GATE M).
+
+# W2 grade of pkgGFC rev s (W3, Wall 4243, /mnt/project-files/wall2024/parent_s110_GFS.json): PASS
+Same labels and harness (no change); output w2_gfc_out_GFS.txt. 14 OK, 1 by design (below).
+SIZE (measured): Shared Library jsCode +240; no other node changed; 418 nodes; connections equal; no prompt text.
+- Four real luna lines: 34626 G5 CURED (cured 5, uncured 0), 34299 G1 to G3 CURED (cured 3, uncured 0), each equal row for row to live's reading with the FORCED line in the reason field. Chain to Replay Rows: luna drv_uncured 2 -> 1; terra, sol, tags as live.
+- G2, G3 (" -- " and " | " read; line break not read, as live), G4, G5, G6: same results as rev 1.
+- Lower case "forced:" inside CHANGE TO: not read under rev s; result equals live's reading of the same line (G5 UNCURED, K-G4, K-F). Rev 1 read it. W3 stated this difference before the grade, so it is not a silent drop.
+- Lower case in stored text (measured): 0 "forced:" or "Forced:" labels in 45 gate replies, 27,128 enforcer log rows, 519 judgments, 342 replay judgments (FORCED: upper case in 3,255 log rows, 100 judgments, 28 replay judgments).
+- Pair spelling (measured): every FORCED pair in the 45 gate replies is written "D<n> vs C<n>"; no variant spelling occurs.
+NOT REACHED: the alternate's gate path; a K-G4 item answered in this form.
