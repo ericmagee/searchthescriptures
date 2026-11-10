@@ -1,0 +1,28 @@
+OK   R1 | live CURED | KSL CURED | KRO2 CURED | KRO2+KSL CURED+N | "COUNTED.\nIt should not be counted."
+     known refusal sentence on line 2
+     KRO2+KSL reason: answered: the close concession is counted (NOTED, record-only: the rev 7 reader reads the whole answer as a refusal)
+OK   R2 | live CURED | KSL CURED | KRO2 CURED | KRO2+KSL CURED+N | "COUNTED.\nThe grant is in round 3.\nIt should not be counted."
+     on line 3
+     KRO2+KSL reason: answered: the close concession is counted (NOTED, record-only: a sentence reads like a refusal: "It should not be counted")
+OK   R3 | live CURED | KSL CURED | KRO2 CURED | KRO2+KSL CURED+N | "COUNTED.\nThe grant is in round 3.\nRound 4 repeats it.\nIt should not be counted."
+     on line 4 = third line under it, inside the limit
+     KRO2+KSL reason: answered: the close concession is counted (NOTED, record-only: a sentence reads like a refusal: "It should not be counted")
+OK   R4 | live CURED | KSL CURED | KRO2 CURED | KRO2+KSL CURED | "COUNTED.\nOne.\nTwo.\nThree.\nIt should not be counted."
+     past the 3-line limit
+     KRO2+KSL reason: answered: the close concession is counted
+OK   R5 | live CURED | KSL CURED | KRO2 CURED | KRO2+KSL CURED+N | "COUNTED.\n\nIt should not be counted."
+     after a blank line
+     KRO2+KSL reason: answered: the close concession is counted (NOTED, record-only: the rev 7 reader reads the whole answer as a refusal)
+OK   R6 | live CURED | KSL CURED | KRO2 CURED | KRO2+KSL CURED | "COUNTED.\nRESPONSE: K-S3 S3 DEFENDER CR4: #2 | TOUCHES NO LINK: it grants a reading only.\nIt should not be counted."
+     a labeled line for another item ends #1's run
+     KRO2+KSL reason: answered: the close concession is counted
+FAIL R7 | live CURED | KSL CURED | KRO2 CURED | KRO2+KSL CURED | "COUNTED.\nAs for #2: it should not be counted."  <- no note
+     HAZARD: unlabeled line about another item attached to #1
+     KRO2+KSL reason: answered: the close concession is counted
+OK   R8 | live CURED | KSL CURED | KRO2 CURED | KRO2+KSL CURED+N | "COUNTED.\n- It should not be counted."
+     bulleted line
+     KRO2+KSL reason: answered: the close concession is counted (NOTED, record-only: the rev 7 reader reads the whole answer as a refusal)
+OK   R9 | live CURED | KSL CURED | KRO2 CURED | KRO2+KSL CURED | "COUNTED.\nSTATEMENT: K-S3 S3 DEFENDER CR4: #1 | It should not be counted."
+     labeled STATEMENT ends the run
+     KRO2+KSL reason: answered: the close concession is counted
+8 OK, 1 FAIL

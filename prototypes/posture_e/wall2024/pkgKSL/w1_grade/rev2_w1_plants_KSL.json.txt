@@ -1,0 +1,43 @@
+OK   G1 | live CURED | KSL CURED | KRO2 CURED | KRO2+KSL CURED | "COUNTED.\nThe defender gives up D6 in [CR4]."
+     correct answer, reason on line 2
+     KRO2+KSL reason: answered: the close concession is counted
+OK   G2 | live CURED | KSL CURED | KRO2 CURED | KRO2+KSL CURED | "COUNTED.\nThe grant is in round 4.\nNothing later withdraws it."
+     correct answer, reason on lines 2 and 3
+     KRO2+KSL reason: answered: the close concession is counted
+OK   G3 | live CURED | KSL CURED | KRO2 CURED | KRO2+KSL CURED | "COUNTED.\n\nThe defender says it is not a link; it is."
+     correct answer with a negation on line 2 after a blank line; record-only stack may note it
+     KRO2+KSL reason: answered: the close concession is counted
+FAIL B1 | live CURED | KSL CURED | KRO2 CURED | KRO2+KSL CURED | "COUNTED.\nOn reflection I do not count it."  <- no note
+     refusal on line 2; KRO2 record-only: ruling unchanged, note shows the line reached the reader
+     KRO2+KSL reason: answered: the close concession is counted
+FAIL B2 | live CURED | KSL CURED | KRO2 CURED | KRO2+KSL CURED | "COUNTED. The grant stands.\nCorrection: the grant does not stand.\nIt is not counted."  <- no note
+     refusal on lines 2 and 3
+     KRO2+KSL reason: answered: the close concession is counted
+FAIL B3 | live CURED | KSL CURED | KRO2 CURED | KRO2+KSL CURED | "COUNTED.\nThe grant is in round 3.\nIt was withdrawn in round 4, so it is not counted."  <- no note
+     refusal on line 3 only
+     KRO2+KSL reason: answered: the close concession is counted
+OK   B4 | live CURED | KSL CURED | KRO2 CURED | KRO2+KSL CURED | "COUNTED.\nOne.\nTwo.\nThree.\nNot counted."
+     refusal on line 5, past the 3-line limit
+     KRO2+KSL reason: answered: the close concession is counted
+OK   O1 | live CURED | KSL CURED | KRO2 CURED | KRO2+KSL CURED | "COUNTED.\nRESPONSE: K-S3 S3 DEFENDER CR4: #2 | NOT COUNTED."
+     next line is a labeled line for another item: ends the run
+     KRO2+KSL reason: answered: the close concession is counted
+FAIL O2 | live CURED | KSL CURED | KRO2 CURED | KRO2+KSL CURED | "COUNTED.\nAs for #2, it is not counted."  <- no note
+     HAZARD: unlabeled prose about another item is read as part of #1's answer (KSL cannot tell); noted here, refused under an enforced reader
+     KRO2+KSL reason: answered: the close concession is counted
+OK   O3 | live CURED | KSL CURED | KRO2 CURED | KRO2+KSL CURED | "COUNTED.\nSTATEMENT: K-S3 S3 DEFENDER CR4: #1 | It is not counted."
+     labeled STATEMENT line ends the run
+     KRO2+KSL reason: answered: the close concession is counted
+FAIL O4 | live CURED | KSL CURED | KRO2 CURED | KRO2+KSL CURED | "COUNTED.\n#2: not counted, it touches no link."  <- no note
+     HAZARD: unlabeled line naming another item is attached to #1
+     KRO2+KSL reason: answered: the close concession is counted
+FAIL O5 | live CURED | KSL CURED | KRO2 CURED | KRO2+KSL CURED | "COUNTED.\n- #2 is not counted either."  <- no note
+     HAZARD: bulleted line about another item; bullet taken off and attached
+     KRO2+KSL reason: answered: the close concession is counted
+OK   K1 | live CURED | KSL CURED | KRO2 CURED | KRO2+KSL CURED | "COUNTED."
+     control
+     KRO2+KSL reason: answered: the close concession is counted
+OK   K2 | live UNCURED | KSL UNCURED | KRO2 UNCURED | KRO2+KSL UNCURED | "NOT COUNTED.\nThe defender conceded D6."
+     control: opens NOT COUNTED
+     KRO2+KSL reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+8 OK, 6 FAIL

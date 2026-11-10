@@ -1,0 +1,46 @@
+OK   S1 | live CURED | KSL CURED | KRO2 CURED | KRO2+KSL CURED | "COUNTED:\nThe defender does not keep D6."
+     W3's form family: colon, negation on the next line (correct answer)
+     KRO2+KSL reason: answered: the close concession is counted
+OK   S2 | live CURED | KSL CURED | KRO2 CURED | KRO2+KSL CURED | "COUNTED;\nThe defender never takes it back."
+     semicolon, negation next line
+     KRO2+KSL reason: answered: the close concession is counted
+OK   S3 | live CURED | KSL CURED | KRO2 CURED | KRO2+KSL CURED | "COUNTED,\nnot as courtesy but as a grant of D6."
+     comma, line opening with not
+     KRO2+KSL reason: answered: the close concession is counted
+OK   S4 | live UNCURED | KSL UNCURED | KRO2 CURED+N | KRO2+KSL CURED+N | "COUNTED -\nNo later round withdraws it."
+     dash, line opening with No
+     KRO2+KSL reason: answered: the close concession is counted (NOTED, record-only: the strict reader would refuse it: COUNTED is not the first word, or the first sentence holds a negation)
+OK   S5 | live CURED | KSL CURED | KRO2 CURED | KRO2+KSL CURED | "COUNTED —\nIt is not courtesy; it gives up D6."
+     em dash, negation next line
+     KRO2+KSL reason: answered: the close concession is counted
+OK   S6 | live CURED | KSL CURED | KRO2 CURED | KRO2+KSL CURED | "**COUNTED:**\nNothing in round 4 restores D6."
+     bold colon, Nothing next line
+     KRO2+KSL reason: answered: the close concession is counted
+OK   S7 | live CURED | KSL CURED | KRO2 CURED | KRO2+KSL CURED | "COUNTED\nThe defender cannot hold D6 after this grant."
+     no stop at all, cannot next line
+     KRO2+KSL reason: answered: the close concession is counted
+OK   S8 | live CURED | KSL CURED | KRO2 CURED | KRO2+KSL CURED | "COUNTED:\n1. The grant is in [CR4].\n2. It is not withdrawn."
+     colon then numbered lines, negation on the second
+     KRO2+KSL reason: answered: the close concession is counted
+OK   H1 | live CURED | KSL CURED | KRO2 CURED | KRO2+KSL CURED | "COUNTED.\nAs for #2: it should not be counted."
+     other item: the run should end at a line naming another item (rev 2 per coordinator)
+     KRO2+KSL reason: answered: the close concession is counted
+OK   H2 | live CURED | KSL CURED | KRO2 CURED | KRO2+KSL CURED | "COUNTED.\n#2: it should not be counted."
+     other item
+     KRO2+KSL reason: answered: the close concession is counted
+OK   H3 | live CURED | KSL CURED | KRO2 CURED | KRO2+KSL CURED | "COUNTED.\nItem 2: it should not be counted."
+     other item, word Item
+     KRO2+KSL reason: answered: the close concession is counted
+FAIL H4 | live CURED | KSL CURED | KRO2 CURED | KRO2+KSL CURED | "COUNTED.\nThe grant in #1 is not the one in #3; it should not be counted."  <- no note
+     names #1 itself and another item; label: a line naming this item is still #1's (expected yes; flag if rev 2 cuts it)
+     KRO2+KSL reason: answered: the close concession is counted
+OK   R1 | live CURED | KSL CURED | KRO2 CURED | KRO2+KSL CURED+N | "COUNTED.\nIt should not be counted."
+     reach still works
+     KRO2+KSL reason: answered: the close concession is counted (NOTED, record-only: the rev 7 reader reads the whole answer as a refusal)
+OK   R2 | live CURED | KSL CURED | KRO2 CURED | KRO2+KSL CURED+N | "COUNTED:\nIt should not be counted."
+     reach after a colon
+     KRO2+KSL reason: answered: the close concession is counted (NOTED, record-only: the rev 7 reader reads the whole answer as a refusal)
+OK   K2 | live UNCURED | KSL UNCURED | KRO2 UNCURED | KRO2+KSL UNCURED | "NOT COUNTED.\nThe defender conceded D6."
+     control
+     KRO2+KSL reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+14 OK, 1 FAIL
