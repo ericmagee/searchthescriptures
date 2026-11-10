@@ -2,7 +2,7 @@
 
 Base: live s104 (pkgKRO rev 2) + pkgKSL rev 2 = pkgLIB/strip_KRO2_KSL, fetch-back pkgKSL/parent_s104_KSL.json. W4 is writing pkgKSL rev 2; when the
 new live fetch-back exists, rebuild with `node pkgFUN/build_FUN8.cjs` on it and confirm the base equals it (expected: same library).
-Write file pkgFUN/parent_s104KSL_FUN8.json: against s104 + KSL rev 2 only the Shared Library differs. Pack pkgLIB_KRO2_KSL_FUN8 (every stub rebuilds).
+Write file pkgFUN/parent_s105_FUN8.json (repacked on live s105, 4b5d599a; byte-identical to parent_s104KSL_FUN8.json; s105 equals the KSL parent node for node): against s104 + KSL rev 2 only the Shared Library differs. Pack pkgLIB_KRO2_KSL_FUN8 (every stub rebuilds).
 
 Changes (26 library files, the K-S3 line and pkgKSL's other-item test):
 - E1 enforce: pkgKRO's COUNTED cure is withheld when the whole answer, with pkgKSL's lines under it, is one listed refusal (rev 7 whole-answer
