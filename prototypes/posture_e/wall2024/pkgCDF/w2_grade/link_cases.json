@@ -1,0 +1,8 @@
+{"about":"W2 grade of pkgCDF: link read from D/C marks. Labels (true link) fixed before the run. Each case appends 'add' to the round and the closing sentence to round 4.",
+"cases":[
+{"id":"K1","round":"cr2","close":"cr4","side":"DEFENDER","add":"### Press on D2 (Luke 3:23)\nThe challenger presses D1 to D6 in turn.\nI drop the wording \"the register stops at Joseph\".","true_link":2,"note":"range D1 to D6 before, section header D2"},
+{"id":"K2","round":"cr2","close":"cr4","side":"DEFENDER","add":"### Press on D2 (Luke 3:23)\nI drop the wording \"the register stops at Joseph\", which D5 never needed.","true_link":2,"note":"another link's mark inside the sentence"},
+{"id":"K3","round":"cr2","close":"cr4","side":"DEFENDER","add":"### Press on D3 (Luke 3:23)\nI drop the wording \"the register stops at Joseph\".","true_link":3,"note":"control: header mark only"},
+{"id":"K4","round":"gr2","close":"dr4","side":"CHALLENGER","add":"## 2. The register\nThis fits C1 and C4.\nI drop the wording \"the register stops at Joseph\".","true_link":2,"note":"challenger: section 2, references C1 and C4 before"},
+{"id":"K5","round":"cr2","close":"cr4","side":"DEFENDER","add":"### Press on D2 (Luke 3:23)\nThe weight of D6 rests on D1 to D3.\nI drop the wording \"the register stops at Joseph\".","true_link":2,"note":"stored form (33490): 'rests on D1 to D3'"}
+]}
