@@ -1,0 +1,130 @@
+[
+ {
+  "id": "G1",
+  "t": "COUNTED. The count is wrong.\nCORRECTED COUNT: DEFENDER 3",
+  "rule": "CURED",
+  "why": "W3 rev 9 finding"
+ },
+ {
+  "id": "G2",
+  "t": "COUNTED. This count is wrong.\nCORRECTED COUNT: DEFENDER 3",
+  "rule": "CURED",
+  "why": "W3 rev 9 finding"
+ },
+ {
+  "id": "G3",
+  "t": "COUNTED. That count is in error.\nCORRECTED COUNT: DEFENDER 3",
+  "rule": "CURED",
+  "why": "W3 rev 9 finding"
+ },
+ {
+  "id": "G4",
+  "t": "COUNTED. The count is not right.\nCORRECTED COUNT: DEFENDER 2",
+  "rule": "CURED",
+  "why": "W3 rev 9 finding"
+ },
+ {
+  "id": "G5",
+  "t": "COUNTED.\nThe count is mistaken.\nCORRECTED COUNT: DEFENDER 4",
+  "rule": "CURED",
+  "why": "W3 rev 9 finding"
+ },
+ {
+  "id": "G6",
+  "t": "COUNTED. The count is in error.\nCORRECTED COUNT: DEFENDER 3\nCORRECTED STANDING: CHALLENGER",
+  "rule": "CURED",
+  "why": "W3 rev 9 finding"
+ },
+ {
+  "id": "G7",
+  "t": "COUNTED. The count is wrong.",
+  "rule": "CURED",
+  "why": "count noun: note only, as live",
+  "note": "yes"
+ },
+ {
+  "id": "G8",
+  "t": "COUNTED. I withdraw my count.\nCORRECTED COUNT: DEFENDER 3",
+  "rule": "CURED",
+  "why": "count noun: withdrawing the old count, then correcting"
+ },
+ {
+  "id": "G9",
+  "t": "COUNTED. I do not accept the count.\nCORRECTED COUNT: DEFENDER 3",
+  "rule": "CURED",
+  "why": "count noun: the old count"
+ },
+ {
+  "id": "G10",
+  "t": "COUNTED. On reflection, I withdraw my count.\nCORRECTED COUNT: DEFENDER 3",
+  "rule": "CURED",
+  "why": "count noun"
+ },
+ {
+  "id": "G11",
+  "t": "COUNTED. I do not accept this count.",
+  "rule": "CURED",
+  "why": "count noun moved to note only (W2 case); as live",
+  "note": "yes"
+ },
+ {
+  "id": "G12",
+  "t": "COUNTED. I retract my count of it.",
+  "rule": "UNCURED",
+  "why": "count OF the grant: stays enforced"
+ },
+ {
+  "id": "G13",
+  "t": "COUNTED. I withdraw my count after all.",
+  "rule": "UNCURED",
+  "why": "after all reverses COUNTED: stays enforced"
+ },
+ {
+  "id": "G14",
+  "t": "COUNTED. On reflection, no.",
+  "rule": "UNCURED",
+  "why": "stays"
+ },
+ {
+  "id": "G15",
+  "t": "COUNTED. On reflection, I withdraw it.",
+  "rule": "UNCURED",
+  "why": "pronoun: stays"
+ },
+ {
+  "id": "G16",
+  "t": "COUNTED. My count stands.",
+  "rule": "UNCURED",
+  "why": "a count that stands is not corrected: stays"
+ },
+ {
+  "id": "G17",
+  "t": "COUNTED. The count stays as written.",
+  "rule": "UNCURED",
+  "why": "stays"
+ },
+ {
+  "id": "G18",
+  "t": "COUNTED. That is wrong.",
+  "rule": "UNCURED",
+  "why": "pronoun after COUNTED refers to COUNTED: stays"
+ },
+ {
+  "id": "G19",
+  "t": "COUNTED. Counted is wrong.",
+  "rule": "UNCURED",
+  "why": "W3: counted subject stays"
+ },
+ {
+  "id": "G20",
+  "t": "COUNTED. It should not be counted.",
+  "rule": "UNCURED",
+  "why": "stays"
+ },
+ {
+  "id": "G21",
+  "t": "COUNTED. My count is wrong.\nCORRECTED COUNT: DEFENDER 3",
+  "rule": "CURED",
+  "why": "rev 9 F1 kept"
+ }
+]

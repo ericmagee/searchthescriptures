@@ -1,0 +1,59 @@
+GOOD LIVE s105 CURED | FUN8 UNCURED | FUN9 CURED    | "COUNTED. My count is wrong.\nCORRECTED COUNT: DEFENDER 3" 
+     FUN9 reason: answered: the close concession is counted
+GOOD LIVE s105 CURED | FUN8 UNCURED | FUN9 CURED    | "COUNTED. My count is wrong." 
+     FUN9 reason: answered: the close concession is counted
+GOOD LIVE s105 CURED | FUN8 UNCURED | FUN9 CURED    | "COUNTED. My count is in error." 
+     FUN9 reason: answered: the close concession is counted
+GOOD LIVE s105 CURED | FUN8 UNCURED | FUN9 CURED    | "COUNTED.\nMy count is incorrect." 
+     FUN9 reason: answered: the close concession is counted
+GOOD LIVE s105 CURED | FUN8 UNCURED | FUN9 CURED    | "COUNTED. My count seems wrong." 
+     FUN9 reason: answered: the close concession is counted
+GOOD LIVE s105 CURED | FUN8 CURED | FUN9 CURED    | "COUNTED. My count would be wrong without it." 
+     FUN9 reason: answered: the close concession is counted
+GOOD LIVE s105 CURED | FUN8 UNCURED | FUN9 UNCURED | CORRECT ANSWER REFUSED | DIFFERS FROM LIVE  | "COUNTED. The count is wrong.\nCORRECTED COUNT: DEFENDER 3" 
+     FUN9 reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+GOOD LIVE s105 CURED | FUN8 CURED | FUN9 CURED    | "COUNTED. The count is wrong; corrected below.\nCORRECTED COUNT: DEFENDER 3" 
+     FUN9 reason: answered: the close concession is counted (NOTED, record-only: a sentence reads like a refusal: "The count is wrong")
+GOOD LIVE s105 CURED | FUN8 CURED | FUN9 CURED    | "COUNTED. The count was wrong.\nCORRECTED COUNT: DEFENDER 3" 
+     FUN9 reason: answered: the close concession is counted
+GOOD LIVE s105 CURED | FUN8 UNCURED | FUN9 UNCURED | CORRECT ANSWER REFUSED | DIFFERS FROM LIVE  | "COUNTED. That count is in error.\nCORRECTED COUNT: DEFENDER 3" 
+     FUN9 reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+GOOD LIVE s105 CURED | FUN8 CURED | FUN9 CURED    | "COUNTED. The count is incorrect and is corrected." 
+     FUN9 reason: answered: the close concession is counted
+GOOD LIVE s105 UNCURED | FUN8 CURED | FUN9 CURED  | DIFFERS FROM LIVE  | "Yes.\nCOUNTED." 
+     FUN9 reason: answered: the close concession is counted
+GOOD LIVE s105 UNCURED | FUN8 CURED | FUN9 CURED  | DIFFERS FROM LIVE  | "Yes.\nCOUNTED: the grant in CR4 counts against the keystone." 
+     FUN9 reason: answered: the close concession is counted
+GOOD LIVE s105 UNCURED | FUN8 CURED | FUN9 CURED  | DIFFERS FROM LIVE  | "Agreed.\nCOUNTED, and the count is corrected below." 
+     FUN9 reason: answered: the close concession is counted
+GOOD LIVE s105 UNCURED | FUN8 CURED | FUN9 CURED  | DIFFERS FROM LIVE  | "Correct.\nCOUNTED - the grant counts against D5." 
+     FUN9 reason: answered: the close concession is counted (NOTED, record-only: the strict reader would refuse it: COUNTED is not the first word, or the first sentence holds a negation)
+GOOD LIVE s105 UNCURED | FUN8 CURED | FUN9 CURED  | DIFFERS FROM LIVE  | "Confirmed.\n**COUNTED**" 
+     FUN9 reason: answered: the close concession is counted
+GOOD LIVE s105 UNCURED | FUN8 CURED | FUN9 CURED  | DIFFERS FROM LIVE  | "Confirmed.\n**COUNTED.** The grant counts against D5." 
+     FUN9 reason: answered: the close concession is counted
+GOOD LIVE s105 UNCURED | FUN8 CURED | FUN9 CURED  | DIFFERS FROM LIVE  | "Yes.\nCOUNTED; the count is corrected." 
+     FUN9 reason: answered: the close concession is counted
+GOOD LIVE s105 UNCURED | FUN8 CURED | FUN9 CURED  | DIFFERS FROM LIVE  | "Yes.\nCOUNTED" 
+     FUN9 reason: answered: the close concession is counted
+GOOD LIVE s105 UNCURED | FUN8 CURED | FUN9 UNCURED | CORRECT ANSWER REFUSED   | "Yes.\nCOUNTED (the grant counts against D5)." 
+     FUN9 reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+GOOD LIVE s105 UNCURED | FUN8 CURED | FUN9 UNCURED | CORRECT ANSWER REFUSED   | "Yes.\nCOUNTED against D5." 
+     FUN9 reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+GOOD LIVE s105 UNCURED | FUN8 UNCURED | FUN9 UNCURED | CORRECT ANSWER REFUSED   | "Yes.\nCounted." 
+     FUN9 reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+GOOD LIVE s105 UNCURED | FUN8 CURED | FUN9 CURED  | DIFFERS FROM LIVE  | "YES.\nCOUNTED." 
+     FUN9 reason: answered: the close concession is counted
+GOOD LIVE s105 UNCURED | FUN8 CURED | FUN9 CURED  | DIFFERS FROM LIVE  | "TOUCHES NO LINK:\nthe grant concerns the translation history, which no declared link or listed premise rests on." 
+     FUN9 reason: answered: it touches no declared link or listed premise, with its reason
+GOOD LIVE s105 UNCURED | FUN8 CURED | FUN9 CURED  | DIFFERS FROM LIVE  | "TOUCHES NO LINK:\n- the grant concerns the translation history, not a declared link." 
+     FUN9 reason: answered: it touches no declared link or listed premise, with its reason
+GOOD LIVE s105 UNCURED | FUN8 CURED | FUN9 CURED  | DIFFERS FROM LIVE  | "TOUCHES NO LINK:\n\nThe grant concerns the translation history, not a declared link." 
+     FUN9 reason: answered: it touches no declared link or listed premise, with its reason
+GOOD LIVE s105 UNCURED | FUN8 CURED | FUN9 CURED  | DIFFERS FROM LIVE  | "TOUCHES NO LINK\nbecause the grant concerns the translation history, not a declared link." 
+     FUN9 reason: answered: it touches no declared link or listed premise, with its reason
+GOOD LIVE s105 UNCURED | FUN8 CURED | FUN9 CURED  | DIFFERS FROM LIVE  | "TOUCHES NO LINK:\n. The grant concerns the translation history, not a declared link." 
+     FUN9 reason: answered: it touches no declared link or listed premise, with its reason
+GOOD LIVE s105 UNCURED | FUN8 CURED | FUN9 CURED  | DIFFERS FROM LIVE  | "TOUCHES NO LINK:\nD5 rests on Luke 1:35; the grant concerns Matthew 1:16 only." 
+     FUN9 reason: answered: it touches no declared link or listed premise, with its reason
+pkgFUN/w3_grade/w3_good9.json: 29 texts; correct answers refused by rev 9: 5; rev 9 ruling differs from live s105: 17; texts where another log row differs from rev 8: 0

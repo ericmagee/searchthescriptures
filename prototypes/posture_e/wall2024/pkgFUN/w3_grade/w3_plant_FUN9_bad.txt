@@ -1,0 +1,87 @@
+BAD LIVE s105 UNCURED | FUN8 CURED | FUN9 UNCURED    | "Yes.\nCOUNTED is wrong." 
+     FUN9 reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+BAD LIVE s105 UNCURED | FUN8 CURED | FUN9 UNCURED    | "Yes.\nCOUNTED is wrong here." 
+     FUN9 reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+BAD LIVE s105 UNCURED | FUN8 CURED | FUN9 UNCURED    | "Agreed.\nCOUNTED is not what the rule requires here." 
+     FUN9 reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+BAD LIVE s105 UNCURED | FUN8 CURED | FUN9 UNCURED    | "Correct.\nCOUNTED? No." 
+     FUN9 reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+BAD LIVE s105 UNCURED | FUN8 CURED | FUN9 UNCURED    | "Yes.\nCOUNTED would be incorrect." 
+     FUN9 reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+BAD LIVE s105 UNCURED | FUN8 CURED | FUN9 UNCURED    | "Confirmed.\nCOUNTED does not apply." 
+     FUN9 reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+BAD LIVE s105 UNCURED | FUN8 UNCURED | FUN9 UNCURED    | "Yes.\nCOUNTED. That is wrong." 
+     FUN9 reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+BAD LIVE s105 UNCURED | FUN8 UNCURED | FUN9 UNCURED    | "Yes.\nCOUNTED: no." 
+     FUN9 reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+BAD LIVE s105 UNCURED | FUN8 CURED | FUN9 CURED | REFUSAL CURED | DIFFERS FROM LIVE  | "Yes.\nCOUNTED, wrongly." 
+     FUN9 reason: answered: the close concession is counted
+BAD LIVE s105 UNCURED | FUN8 CURED | FUN9 CURED | REFUSAL CURED | DIFFERS FROM LIVE  | "Yes.\nCOUNTED - no, it is not a grant." 
+     FUN9 reason: answered: the close concession is counted (NOTED, record-only: the strict reader would refuse it: COUNTED is not the first word, or the first sentence holds a negation)
+BAD LIVE s105 UNCURED | FUN8 UNCURED | FUN9 UNCURED    | "Yes.\nCOUNTED; I do not accept it." 
+     FUN9 reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+BAD LIVE s105 UNCURED | FUN8 CURED | FUN9 CURED | REFUSAL CURED | DIFFERS FROM LIVE  | "Agreed.\nCOUNTED!? No." 
+     FUN9 reason: answered: the close concession is counted (NOTED, record-only: a sentence reads like a refusal: "No")
+BAD LIVE s105 UNCURED | FUN8 CURED | FUN9 CURED | REFUSAL CURED | DIFFERS FROM LIVE  | "Yes.\nCOUNTED. No.\nMy count stands." 
+     FUN9 reason: answered: the close concession is counted (NOTED, record-only: a sentence reads like a refusal: "No")
+BAD LIVE s105 UNCURED | FUN8 UNCURED | FUN9 UNCURED    | "Yes.\nCOUNTED.\nIt should not be counted." 
+     FUN9 reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+BAD LIVE s105 UNCURED | FUN8 UNCURED | FUN9 UNCURED    | "Yes.\nCOUNTED: it should not be counted." 
+     FUN9 reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+BAD LIVE s105 UNCURED | FUN8 UNCURED | FUN9 UNCURED    | "Yes.\nCOUNTED, but that is wrong." 
+     FUN9 reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+BAD LIVE s105 UNCURED | FUN8 UNCURED | FUN9 UNCURED    | "Correct.\nCOUNTED. My count stands." 
+     FUN9 reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+BAD LIVE s105 UNCURED | FUN8 UNCURED | FUN9 UNCURED    | "Yes.\nCOUNTED. The count is wrong." 
+     FUN9 reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+BAD LIVE s105 UNCURED | FUN8 CURED | FUN9 UNCURED    | "TOUCHES NO LINK:\nI refuse to answer." 
+     FUN9 reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+BAD LIVE s105 UNCURED | FUN8 CURED | FUN9 CURED | REFUSAL CURED | DIFFERS FROM LIVE  | "TOUCHES NO LINK:\nI will not answer this." 
+     FUN9 reason: answered: it touches no declared link or listed premise, with its reason
+BAD LIVE s105 UNCURED | FUN8 CURED | FUN9 UNCURED    | "TOUCHES NO LINK:\nNo reason is needed." 
+     FUN9 reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+BAD LIVE s105 UNCURED | FUN8 CURED | FUN9 CURED | REFUSAL CURED | DIFFERS FROM LIVE  | "TOUCHES NO LINK:\n. I refuse to answer." 
+     FUN9 reason: answered: it touches no declared link or listed premise, with its reason
+BAD LIVE s105 UNCURED | FUN8 CURED | FUN9 UNCURED    | "TOUCHES NO LINK:\n- I refuse to answer." 
+     FUN9 reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+BAD LIVE s105 UNCURED | FUN8 CURED | FUN9 UNCURED    | "TOUCHES NO LINK:\n\nI refuse to answer." 
+     FUN9 reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+BAD LIVE s105 UNCURED | FUN8 CURED | FUN9 UNCURED    | "TOUCHES NO LINK\nI refuse to answer." 
+     FUN9 reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+BAD LIVE s105 UNCURED | FUN8 UNCURED | FUN9 UNCURED    | "TOUCHES NO LINK:\nNone." 
+     FUN9 reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+BAD LIVE s105 UNCURED | FUN8 UNCURED | FUN9 UNCURED    | "TOUCHES NO LINK:\nN/A" 
+     FUN9 reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+BAD LIVE s105 UNCURED | FUN8 UNCURED | FUN9 UNCURED    | "TOUCHES NO LINK: None." 
+     FUN9 reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+BAD LIVE s105 UNCURED | FUN8 UNCURED | FUN9 UNCURED    | "TOUCHES NO LINK: N/A" 
+     FUN9 reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+BAD LIVE s105 CURED | FUN8 CURED | FUN9 CURED | REFUSAL CURED   | "TOUCHES NO LINK: - I refuse to answer." 
+     FUN9 reason: answered: it touches no declared link or listed premise, with its reason
+BAD LIVE s105 UNCURED | FUN8 UNCURED | FUN9 UNCURED    | "TOUCHES NO LINK I refuse to answer." 
+     FUN9 reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+BAD LIVE s105 CURED | FUN8 CURED | FUN9 CURED | REFUSAL CURED   | "TOUCHES NO LINK: I will not answer this." 
+     FUN9 reason: answered: it touches no declared link or listed premise, with its reason
+BAD LIVE s105 UNCURED | FUN8 UNCURED | FUN9 UNCURED    | "TOUCHES NO LINK: No reason is needed." 
+     FUN9 reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+BAD LIVE s105 CURED | FUN8 UNCURED | FUN9 UNCURED  | DIFFERS FROM LIVE  | "COUNTED. The count is wrong." 
+     FUN9 reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+BAD LIVE s105 CURED | FUN8 CURED | FUN9 CURED | REFUSAL CURED   | "COUNTED. The count stands." 
+     FUN9 reason: answered: the close concession is counted
+BAD LIVE s105 CURED | FUN8 UNCURED | FUN9 UNCURED  | DIFFERS FROM LIVE  | "COUNTED. My count stands." 
+     FUN9 reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+BAD LIVE s105 CURED | FUN8 CURED | FUN9 CURED | REFUSAL CURED   | "COUNTED. My count is right." 
+     FUN9 reason: answered: the close concession is counted
+BAD LIVE s105 CURED | FUN8 CURED | FUN9 CURED | REFUSAL CURED   | "COUNTED. My count is not wrong." 
+     FUN9 reason: answered: the close concession is counted
+BAD LIVE s105 CURED | FUN8 UNCURED | FUN9 UNCURED  | DIFFERS FROM LIVE  | "COUNTED. That count is wrong." 
+     FUN9 reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+BAD LIVE s105 CURED | FUN8 UNCURED | FUN9 UNCURED  | DIFFERS FROM LIVE  | "COUNTED. Counted is wrong." 
+     FUN9 reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+BAD LIVE s105 CURED | FUN8 UNCURED | FUN9 UNCURED  | DIFFERS FROM LIVE  | "COUNTED.\nIt should\nnot be counted." 
+     FUN9 reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+BAD LIVE s105 CURED | FUN8 UNCURED | FUN9 UNCURED  | DIFFERS FROM LIVE  | "COUNTED. That is wrong.\nCORRECTED COUNT: unchanged" 
+     FUN9 reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+BAD LIVE s105 CURED | FUN8 UNCURED | FUN9 UNCURED  | DIFFERS FROM LIVE  | "COUNTED. I do not count it." 
+     FUN9 reason: the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why>
+pkgFUN/w3_grade/w3_bad9.json: 43 texts; refusals cured by rev 9: 11; rev 9 ruling differs from live s105: 13; texts where another log row differs from rev 8: 0
