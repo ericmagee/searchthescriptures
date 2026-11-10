@@ -98,7 +98,7 @@ UNCURED|refusal|COUNTED, but only in part.|Partial count does not correct the co
 UNCURED|refusal|COUNTED. The grant does not touch D6, so my count stands unchanged.|Keeps the old count: no correction.
 UNCURED|refusal-later|COUNTED. The defender granted the ordinary means in round 3. But that grant is not a concession of D6.|Later sentence denies the concession.
 UNCURED|refusal-later|COUNTED. I missed it. On reflection, I withdraw the count.|Later sentence withdraws the count.
-UNCURED|refusal-later|COUNTED.\nThat is not right.|Refusal after a line break.
+UNCURED|second-line|COUNTED.\nThat is not right.|Refusal after a line break. (W3 ruling 1, Wall 3933: label stays UNCURED; the reader gets only the RESPONSE line, a stated limit)
 UNCURED|refusal-formatted|**COUNTED** That is not right.|Bold keyword then refusal.
 UNCURED|refusal-formatted|- COUNTED, but that is wrong.|Bullet then refusal.
 UNCURED|not-counted|Counted.|Rule asks for COUNTED in capitals (flag: borderline; prior ruling reads it UNCURED).
@@ -131,7 +131,7 @@ CURED|formatted|- **COUNTED.** The defender conceded D6 in [DR3].|Bullet and bol
 UNCURED|refusal-formatted|**COUNTED.** That is not right.|Bold keyword then refusal.
 UNCURED|refusal-formatted|> COUNTED. I withdraw the count.|Block quote then withdrawal.
 UNCURED|refusal-formatted|1. COUNTED, but it is not a concession.|Numbered then refusal.
-UNCURED|refusal-formatted|**COUNTED**\nI do not accept this count.|Bold keyword, refusal on the next line.
+UNCURED|second-line|**COUNTED**\nI do not accept this count.|Bold keyword, refusal on the next line. (W3 ruling 1, Wall 3933: label stays UNCURED; the reader gets only the RESPONSE line, a stated limit)
 CURED|multi-sentence|COUNTED. The defender granted the ordinary means. The defender then said Genesis 4:1 cannot supply the sequence. That later sentence does not undo the grant.|Negations describe the defender's later sentence.
 CURED|multi-sentence|COUNTED. I had not counted it. I count it now.|Corrects the count.
 CURED|multi-sentence|COUNTED. The defender withdrew D6 in round 3. The defender did not restore it.|Withdrawal and negation describe the defender.
@@ -142,7 +142,42 @@ CURED|multi-sentence|COUNTED. The challenger pressed it; the defender granted it
 CURED|multi-sentence|COUNTED. Is it a concession? Yes: the defender granted the ordinary means.|Question then affirmation.
 UNCURED|refusal-later|COUNTED. The grant is in round 3. It is not a concession of D6, so my count stands.|Later sentence denies the concession.
 UNCURED|refusal-later|COUNTED. I have looked again. I do not count it after all.|Later sentence refuses the count.
-UNCURED|refusal-later|COUNTED. Is it a concession? No.|Question answered no.
-UNCURED|refusal-later|COUNTED. The defender granted it.\n\nCorrection: not counted.|Paragraph retracts the count.
+CURED|refusal-later|COUNTED. Is it a concession? No.|Relabeled CURED by W3 ruling (Wall 3933, label ruling 2): code cannot tell it from "Is the grant a courtesy? No."; under an enforced rule the doubtful answer reads CURED.
+UNCURED|second-line|COUNTED. The defender granted it.\n\nCorrection: not counted.|Paragraph retracts the count. (W3 ruling 1, Wall 3933: label stays UNCURED; the reader gets only the RESPONSE line, a stated limit)
 UNCURED|refusal-later|COUNTED. The defender granted the ordinary means. I retract my count of it.|Later sentence retracts the count.
 UNCURED|refusal-later|COUNTED. The defender granted it. That grant does not apply to D6.|Later sentence denies it applies.
+# --- W3 3933: correct answers whose later short sentence points back at the defender's claim (W3's 16, labels by W3), plus W2's own of the class ---
+CURED|point-back|COUNTED. The defender calls it courtesy. It is not.|W3: "It is not" answers the defender's claim.
+CURED|point-back|COUNTED. The defender calls it a courtesy. That is wrong.|W3.
+CURED|point-back|COUNTED. The defender says the grant is courtesy; I disagree.|W3.
+CURED|point-back|COUNTED. Is the grant a courtesy? No.|W3.
+CURED|point-back|COUNTED. The defender pleads the courtesy rule. It does not apply.|W3.
+CURED|point-back|COUNTED. Before the close: not counted. Now it is in the count.|W3: corrects the count.
+CURED|point-back|COUNTED. The defender writes "I keep D6 as declared". That cannot stand.|W3.
+CURED|point-back|COUNTED. The defender says he conceded nothing. Not so.|W3.
+CURED|point-back|COUNTED. The defender calls the grant a courtesy. This is an error.|W3.
+CURED|point-back|COUNTED. D6 as a bare statement was dropped in round 3. Withdrawn.|W3: "Withdrawn" describes D6.
+CURED|point-back|COUNTED. The defender says it gives up nothing. Wrong.|W3.
+CURED|point-back|COUNTED. The defender claims it is only a courtesy. That is not right.|W3.
+CURED|point-back|COUNTED. The defender says the keystone is untouched; I do not agree.|W3.
+CURED|point-back|COUNTED. The defender treats it as courtesy. I reject that.|W3.
+CURED|point-back|COUNTED. My first line said it was not a concession. That was wrong.|W3: corrects the count.
+CURED|point-back|COUNTED. The defender says D6 stands whole. It cannot stand.|W3.
+UNCURED|refusal-later|COUNTED. The grant is in round 4. I do not agree.|W3 control: the sentence before is neutral, so "I do not agree" refuses the count.
+UNCURED|refusal-later|COUNTED. I have read the note. That is wrong.|W3 control.
+UNCURED|refusal|COUNTED. No.|W3 control.
+UNCURED|refusal|COUNTED - under protest.|W3 control.
+CURED|point-back|COUNTED. The defender says round 3 grants nothing. That is false.|Points back at the defender's claim.
+CURED|point-back|COUNTED. The defender denies the grant. I do not accept that denial.|Refuses the defender's denial, not the count.
+CURED|point-back|COUNTED. The defender says D6 survives. It does not.|Points back at the defender.
+CURED|point-back|COUNTED. The defender claims the grant was withdrawn. It was not.|Points back at the defender.
+CURED|point-back|COUNTED. Does D6 survive the grant? No.|Question about D6 answered no.
+CURED|point-back|COUNTED. The defender calls it a mere courtesy; that is mistaken.|Points back at the defender.
+CURED|point-back|COUNTED. The defender's round 4 says the grant does not count. I reject that reading.|Points back at the defender.
+CURED|point-back|COUNTED. The defender says this is not a concession. That is incorrect.|Points back at the defender (a quoted refusal is the defender's).
+CURED|point-back|COUNTED. I first wrote that it was not counted. That was my error; it is counted.|Corrects the count.
+CURED|point-back|COUNTED. The defender says the grant does not apply to D6. It does.|Points back, then affirms.
+UNCURED|refusal-later|COUNTED. The defender granted it. Still, I do not count it.|Names the count: refusal anywhere (W3 kind b).
+UNCURED|refusal-later|COUNTED. The grant is in round 3. I maintain my first answer.|W3 kind (b).
+UNCURED|refusal-later|COUNTED. The defender granted it. The count is wrong.|W3 kind (b).
+UNCURED|refusal-later|COUNTED. The defender granted it. It should not be counted.|W3 kind (b).

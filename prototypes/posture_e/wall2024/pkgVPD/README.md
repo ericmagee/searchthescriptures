@@ -33,3 +33,6 @@ Proof:
 - probe_VP3_on_VPD2: 40 OK. probe_VP3_multi_on_VPD2: 42 stored runs, rows equal except notes, 0 agreements, 0 listings.
 - Rolled-back insert (rollback_VPD2.sql, tag W2-ROLLBACK-TEST-VPD2, one listed and one rev 2 not-listed row): accepted, {"rows": 2, "recorded": true}; 0 rows remain.
 Limits: a three-word run of the verse's KJV text in a line about something else makes that line count as an answer (safe direction: not listed). A paraphrase of the verse with no three KJV words in a row and no reference is not found (a listing could still happen; the live cure reading must also be UNCURED).
+
+## Write file on live s100 (W2, 01:55Z)
+W3 asked for the write file on the live s100 fetch-back: `node pkgVPD/build_VPD2.cjs /mnt/project-files/wall2024/fetchback_live_s100.json pkgVPD/parent_s100_VPD2.json`. Against s100 only the 3 Send Back Record nodes differ; connections equal. s100 carries KDV rev 2 and KVL rev 2. It is byte-equal in those nodes to parent_s98_VPD2_on_KVL2.json. plant_VPD2_s100.cjs / .txt (base s100): 32 OK, 0 FAIL.
