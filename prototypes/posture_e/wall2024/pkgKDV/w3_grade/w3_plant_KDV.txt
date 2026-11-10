@@ -1,0 +1,18 @@
+DIFF want false got true | The verse names no father, which is answered under Matthew 1:16.
+DIFF want false got true | Joseph is the legal husband and not the begetter, as is answered under Matthew 1:16.
+DIFF want false got true | The phrase is general and denies no father; it is answered with Job 14:1.
+DIFF want false got true | That objection fails because it was answered by Luke 1:35.
+ok   want false got false | It is not answered under Luke 9:34.
+DIFF want false got true | Whether the cloud is the Father is answered in Luke 9:35.
+DIFF want false got true | This cannot be answered by Matthew 1:16.
+ok   want true got true | This is answered under Luke 9:34.
+DIFF want true got false | Answered under Luke 9:34.
+DIFF want true got false | Matthew 17:5: answered under Luke 9:34.
+DIFF want true got false | Matthew 17:5 is answered under Luke 9:34 and Matthew 3:17.
+DIFF want true got false | Matthew 17:5 is answered under Luke 9:34 above.
+DIFF want true got false | Matthew 17:5 is answered under Luke 9:34 (see above).
+DIFF want true got false | For Matthew 17:5 see Luke 9:34.
+ok   want true got true | Matthew 17:5 was answered at Luke 9:34-35.
+ok   want true got true | Matthew 17:5 is answered under 1 John 5:1.
+DIFF want true got false | Matthew 17:5 is answered under Song of Solomon 2:1.
+13 of 17 differ from what W3 expects
