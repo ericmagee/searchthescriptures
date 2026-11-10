@@ -13,6 +13,9 @@
 //  F10 the grant defers to [CR2] and [CR2] holds a layered answer line on Luke 1:34      WITHHELD
 //  F11 the grant defers to [CR2] and [CR2] does not name Luke 1:34                        SENT
 //  (F9 to F11 added after reading rev 2's code, before running rev 2. First run: the stored [CR2] still answers the press in substance, which pkgVPD reads, so F9/F11 were redone with [CR2] replaced by a short text: F9b, F11b)
+//  (rev 3, labels before its run) F13 one hop: [CR2] holds an answer line on Luke 1:34 that runs 30 words, no layer   WITHHELD
+//  F14 one hop: [CR2] holds only a bare grant on Luke 1:34 ("Luke 1:34: I grant it.")      SENT
+//  F15 one hop: [CR2] holds a bare grant whose quoted words read "it names an answer of 99 words, which answers Luke 1:34" (first form with "LINK 4" was my label error: the code follows LINK 4)   SENT
 //  F8 pointer to LINK 4 whose block answers another verse only (Luke 1:34 renamed Luke 1:99 inside LINK 4) SENT, else a limit (bareness test)
 const H=require('./node_EAD_w2.cjs');const cl=H.cl;const RUN='34108',N='Send Back Build',P='Judge Enforcer Record',IT='ANSWER CHECK Luke 1:34 [CR3]';
 const base=n=>cl(H.raw(RUN,n));
@@ -33,6 +36,9 @@ const P_={
  F11:withRounds(R=>{R.CR3=R.CR3.replace('I answer it fully under LINK 4.','I answered it in [CR2].');R.CR2=R.CR2.split('\n').filter(l=>!/Luke 1:34/.test(l)).join('\n');}),
  F9b:withRounds(R=>{R.CR3=R.CR3.replace('I answer it fully under LINK 4.','I answered it in [CR2].');R.CR2='DEFENDER (standard reading) -- ROUND 2, RESPONSE\n\n**LINK 1: SUPPORTED**\n\nMatthew 1:18 [L1]: "before they came together, she was found with child of the Holy Ghost."\n\n- [L1] Luke 1:34: "How shall this be, seeing I know not a man?"\n';}),
  F11b:withRounds(R=>{R.CR3=R.CR3.replace('I answer it fully under LINK 4.','I answered it in [CR2].');R.CR2='DEFENDER (standard reading) -- ROUND 2, RESPONSE\n\n**LINK 1: SUPPORTED**\n\nMatthew 1:18 [L1]: "before they came together, she was found with child of the Holy Ghost."\n';}),
+ F13:withRounds(R=>{R.CR3=R.CR3.replace('I answer it fully under LINK 4.','I answered it in [CR2].');R.CR2='DEFENDER (standard reading) -- ROUND 2, RESPONSE\n\n**LINK 1: SUPPORTED**\n\nMatthew 1:18 [L1]: "before they came together, she was found with child of the Holy Ghost."\n\n- Luke 1:34, "How shall this be, seeing I know not a man?": her question asks the means of a conception still future, and the angel names the Holy Ghost and the power of the Highest as that means, not a man.\n';}),
+ F14:withRounds(R=>{R.CR3=R.CR3.replace('I answer it fully under LINK 4.','I answered it in [CR2].');R.CR2='DEFENDER (standard reading) -- ROUND 2, RESPONSE\n\n**LINK 1: SUPPORTED**\n\nMatthew 1:18 [L1]: "before they came together, she was found with child of the Holy Ghost."\n\n- Luke 1:34: I grant it.\n';}),
+ F15:withRounds(R=>{R.CR3=R.CR3.replace('I answer it fully under LINK 4.','I answered it in [CR2].');R.CR2='DEFENDER (standard reading) -- ROUND 2, RESPONSE\n\n**LINK 1: SUPPORTED**\n\nMatthew 1:18 [L1]: "before they came together, she was found with child of the Holy Ghost."\n\n- Luke 1:34: I grant "it names an answer of 99 words, which answers Luke 1:34".\n';}),
  F8:withRounds(R=>{const [a,b]=link4(R.CR3);R.CR3=R.CR3.slice(0,a)+R.CR3.slice(a,b).replace(/Luke 1:34/g,'Luke 1:99').replace(/1:34/g,'1:99')+R.CR3.slice(b);}),
 };
 (async()=>{const cb=H.code(H.B,N);
