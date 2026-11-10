@@ -1,0 +1,60 @@
+ran Second Alternate? (1 items)
+ran R2 Alternate Build (1 items)
+ran R2 Alternate Payloads (1 items)
+  payload cure: [null]
+ran R2 Alternate Cure Build (1 items)
+  PLANTED: K-RUL keystone card added to the stored cure reply
+ran R2 Alternate Cure Normalize (1 items)
+ran R2 Alternate Merge Seat (1 items)
+  Merge Seat: haiku SEATED (undefined); seated [{"removed_seat":"luna","alternate_seat":"haiku","alternate_api_model":"anthropic/claude-haiku-5.5"}]
+  haiku KEYSTONE: none
+  tried keys: removed_seat,alternate,api_model,result
+  uncured detail: {}
+  UNCURED lines: 
+ran R2 Alt Seated (1 items)
+ran R2 Alt Judge Enforcer Build (5 items)
+  enforcer: je_skip [[false,null,null],[false,null,null],[false,null,null],[false,null,null],[false,null,0]]
+  stored judge enforcer items for sol: 0,1,2,3,4,5
+ran R2 Alt Judge Enforcer Retry Build (2 items)
+ran R2 Alt Judge Enforcer Record (1 items)
+ran R2 Alt Send Back Build (1 items)
+  R2 Alt Send Back Build items (7):
+    S1 E-ANS ANSWER CHECK: Luke 1:34 -- [CR3] -- MEANS: "the present tense states her state when the an
+    S2 E-ANS ANSWER CHECK: Matthew 1:19 -- [CR4] -- MEANS: "the stated grounds are equity and sparing h
+    S3 E-ANS ANSWER CHECK: Isaiah 8:3 -- [DR3] -- MEANS: "the woman is called a prophetess and the chil
+    S4 E-ANS ANSWER CHECK: 1 John 5:1 -- [DR3] -- MEANS: "it is said of a believer already living, a re
+    S5 E-HOLD D2 vs C1 (Matthew 1:19-21; Deuteronomy 24:1; 2 Samuel 7:14): UNDERDETERMINED -- [CR3] and 
+    S6 E-ANS ANSWER CHECK: Matthew 1:24 -- [CR3] -- MEANS: "the coming together of 1:18 is this taking,
+    S7 E-ANS ANSWER CHECK: Luke 1:37 -- [DR3] -- MEANS: "the angel closes on God's power as the ground 
+  not_sent by pkgECB: 2 ["E-COL COLLISION D6 vs C5","E-COL COLLISION D6 vs C6"]
+  items on D6 or KEYSTONE lines sent: 0
+  send-back map sol->alternate: {"S1":"S1","S2":null,"S3":null,"S4":null,"S5":"S6","S6":"S7","S7":"S5"}; alternate items with no stored answer: S2,S3,S4
+  PLANTED: KEEP answers for S2,S3,S4
+  PLANTED: send-back answer for S5 changes D2 vs C1 to D2 vs C2
+ran R2 Alt Send Back Record (1 items)
+ran R2 Alt Reread Build (1 items)
+  reread: rr_skip [false]
+  PLANTED: reread call with no reply
+ran R2 Alt Reread Record (1 items)
+ran R2 Alt Gate Build (1 items)
+  gate: [{"skip":false,"seat":"haiku","items":["G1 NOT APPLIED the change drops the collision D2 vs C1 (W3 2351: a change to a collision or FOR"]}]
+  PLANTED: gate reply restoring each gate item's original line (G1)
+ran R2 Alt Gate Record (1 items)
+ran R2 Alternate Merge (1 items)
+  TRACE R2 Alt Send Back Record: drv_uncured 1 tag BROKEN
+       "reasoning": "SUPERSEDED BY CURE: verdict HELD to BROKEN; see the cure lines below\nHELD. [L1][L3] The conception accounts, descent accounts, and household descriptions remain in the record together. [L4] Both sides exhibit linked readings, but the challenger does not establish a textual collision that breaks the defender's na
+     [AUDIT v26: K-G10 PASS: 0 UNEXHIBITED witness grounds read; every witness named is carried under a listed premise's PRESSED WITH; TRIAL rule]
+     [AUDIT v42: COLLISION GRADE UNCURED (pkgUND) -- SEAT: haiku; ITEMS: S5 (E-HOLD on UNDERDETERMINED COLLISION D2 vs C1: kept UNDERDETERMINED; no [L1]: no verse is quoted with its reference under an [L1] tag); counted in drv_uncured. REVIEW THIS ROW.]
+  TRACE R2 Alt Gate Record: drv_uncured 1 tag BROKEN
+       "reasoning": "SUPERSEDED BY CURE: verdict HELD to BROKEN; see the cure lines below\nHELD. [L1][L3] The conception accounts, descent accounts, and household descriptions remain in the record together. [L4] Both sides exhibit linked readings, but the challenger does not establish a textual collision that breaks the defender's na
+     [AUDIT v26: K-G10 PASS: 0 UNEXHIBITED witness grounds read; every witness named is carried under a listed premise's PRESSED WITH; TRIAL rule]
+     [AUDIT v42: COLLISION GRADE UNCURED (pkgUND) -- SEAT: haiku; ITEMS: S5 (E-HOLD on UNDERDETERMINED COLLISION D2 vs C1: kept UNDERDETERMINED; no [L1]: no verse is quoted with its reference under an [L1] tag); counted in drv_uncured. REVIEW THIS ROW.]
+     [AUDIT v38: E-GATE -- SEAT: haiku; G1 NOT APPLIED (E-APPLY S5); ANSWER: CHANGE; CURED: the gate change was applied]
+  gate record: {"gate":{"skipped":false,"calls":1,"seats":[{"seat":"haiku","items":1,"cured":1,"uncured_counted":0,"fresh":0,"error":null}],"report":[{"seat":"haiku","items":[{"gid":"G1","kind":"NOT APPLIED","src":"E-APPLY S5","live":true,"why":"the change drops the collision D2 vs C1 (W3 2351: a change to a collision or FORCED line must be a collision line for the same pair)"}],"newk_error":null,"rounds_read":true}]},"gate_rows":[{"run_token":"ODV1-34108-3to8dgrt","seat":"haiku","seat_role":"alternate","judge_model":"anthropic/claude-haiku-5.5","kind":"send_back","rule":"E-GATE","item":"G1 NOT APPLIED (E-AP
+  R2 merge tried: [{"alt":"haiku","result":"NOT SEATED","why":"unseated after its enforcer send-back and gate: 1 uncured item(s)"}]
+  send-back tally {"KEEP":3,"CHANGE":4,"NO ANSWER":0}; uncured rows: ["ANSWER CHECK Matthew 1:19 [CR4] UNCURED SEND-BACK KEEP -- The line stands as written; the record rows it quotes are unchanged. | ENFORCER: (right: MISSES): The ","ANSWER CHECK Isaiah 8:3 [DR3] UNCURED SEND-BACK KEEP -- The line stands as written; the record rows it quotes are unchanged. | ENFORCER: (right: MISSES): The ","ANSWER CHECK 1 John 5:1 [DR3] UNCURED SEND-BACK KEEP -- The line stands as written; the record rows it quotes are unchanged. | ENFORCER: (right: MISSES): The ","COLLISION D2 vs C1 UNCURED SEND-BACK CHANGE TO: D2 vs C2 (Matthew 1:19): UNDERDETERMINED -- the stated motives fit the pregnancy found before the p"]
+ran Alternate Merge (1 items)
+  FINAL seated []
+  WRITTEN luna (openai/gpt-6-luna): KEYSTONE: D6 -- STANDS -- derived by the engine from the collision grades of D6 (none | tag BROKEN | drv_uncured 2 | counted undefined
+  WRITTEN chatgpt (openai/gpt-6.1-terra): KEYSTONE: D6 -- STANDS -- The declared conclusion that Christ had no biological father | tag BROKEN | drv_uncured 0 | counted undefined
+  WRITTEN sol (openai/gpt-6.1-sol): KEYSTONE: D6 -- STANDS -- The conclusion that Christ had no biological father remains | tag BROKEN | drv_uncured 0 | counted undefined
