@@ -1,6 +1,6 @@
 process.chdir(__dirname+'/../..');const fs=require('fs');const IN='/mnt/project-files/wall2024/inputs/';
 const g=f=>{let d=JSON.parse(fs.readFileSync(f,'utf8'));d=d.data||d;return d.workflow||d;};
-const LIVE=g('/mnt/project-files/wall2024/fetchback_live_s107.json'),CAND=g('pkgRAC/parent_s107_RAC.json');
+const LIVE=g('/mnt/project-files/wall2024/fetchback_live_s108.json'),CAND=g('pkgRAC/parent_s108_RAC.json');
 const code=(W,n)=>W.nodes.find(z=>z.name===n).parameters.jsCode;const J=x=>({json:x});const cl=x=>JSON.parse(JSON.stringify(x));
 const cache={};const saved=(run,n)=>{const k=run+'|'+n;if(k in cache)return cache[k];const f=IN+run+'_'+n.replace(/ /g,'_')+'.json';if(!fs.existsSync(f))return cache[k]=null;const d=JSON.parse(fs.readFileSync(f,'utf8'));const r=Array.isArray(d)?d[d.length-1]:d;const m=(r&&r.data&&r.data.main)||(r&&r.main);return cache[k]=(m&&m[0])||[];};
 // run one node's code on a stored debate; over = node name -> items (or null for "not executed"); W gives params.jsCode of any node

@@ -3,8 +3,8 @@
  [NEW L2 CONFIRMED] E[DR3] "I drop the limb that rests this on Jeremiah 18:8." / C[DR4] "Jeremiah 18:8 gives the LORD's rule on a pronounced sentence: 'If that nation, against whom I have pronounced, turn from their evil, I will repent of " -- The closing round puts Jeremiah 18:8 back into Link 2 as a supporting row after the earlier round expressly dropped the limb that rested on it.
  [A94 L1 NOT A CONTRADICTION] E[DR2] "stand together as they stand for Solomon" / C[DR4] "sets another father against it" -- The closing phrase is inside the quoted list of the opponent's grants, not the challenger's own assertion, so it does not contradict the earlier challenger statement.
 
-===== 33222_rac_CHALLENGER_send2.json | confirmed: [] | no_answer: ["A94"]
- [? Lundefined NOT CONFIRMED (form) (the line is not in the CLOSE-CONTRADICTION form)] E[undefined] "undefined" / C[undefined] "undefined" -- undefined
+===== 33222_rac_CHALLENGER_send2.json | confirmed: [] | no_answer: []
+ [A94 L1 NOT A CONTRADICTION] E[DR2] "So "my Father's business" (Luke 2:49) and "thy father" (Luke 2:48) stand together as they stand for Solomon." / C[DR4] "The answer in Luke 2:49 sets another father against it: "I must be about my Father's business."" -- The closing words are quoted from the opponent's grant, not the challenger's own assertion, so they can coexist with the earlier own statement.
 
 ===== 33442_rac_DEFENDER_send1.json | confirmed: ["A83 L4","NEW L2"] | no_answer: []
  [A83 L4 CONFIRMED] E[CR3] "I rest on one clause only: "the LORD hath created a new thing in the earth."" / C[CR4] "A woman shall compass a man." -- Earlier he limited his Jeremiah support to the first clause and did not rest on this second clause, but the closing reasserts this second clause as the D4 witness.
@@ -34,12 +34,15 @@
 ===== 33482_rac_DEFENDER_send3.json | confirmed: ["A39 L3","NEW L1"] | no_answer: []
  [A39 L3 CONFIRMED] E[CR2] "I do not rest the exclusion of a father on it." / C[CR4] "The woman's seed is named, with no man alongside it." -- The earlier concedes Genesis 3:15 does not ground excluding a father, while the closing again uses the woman's seed without a man as a footing for the fatherless conception.
  [NEW L1 CONFIRMED] E[CR3] "The challenger says Matthew sets the coming together at the taking. Granted." / C[CR4] "The text keeps the coming together (1:18) apart from the taking (1:20, 24)." -- The earlier grants that the coming together is set at the taking, while the closing says the text keeps those two apart, so the same relation cannot both be granted and denied.
+skip 33575_rac_DEFENDER_exec34562.json
+skip 33575_rac_DEFENDER_exec34563.json
+skip 33575_rac_DEFENDER_exec34564.json
 
-===== 33705_rac_DEFENDER_send1.json | confirmed: [] | no_answer: ["A49"]
- [? Lundefined NOT CONFIRMED (form) (the line is not in the CLOSE-CONTRADICTION form)] E[undefined] "undefined" / C[undefined] "undefined" -- undefined
+===== 33705_rac_DEFENDER_send1.json | confirmed: ["A49 L4"] | no_answer: []
+ [A49 L4 CONFIRMED] E[CR2] "I do not press it as a correction of Mary's 'thy father.'" / C[CR4] "The household word is used, and the child at once names another Father." -- The closing again uses Luke 2:49 to redirect Mary's “thy father” to another Father, which is the correction the earlier sentence gave up pressing.
 
-===== 33705_rac_DEFENDER_send2.json | confirmed: [] | no_answer: ["A49"]
- [? Lundefined NOT CONFIRMED (form) (the line is not in the CLOSE-CONTRADICTION form)] E[undefined] "undefined" / C[undefined] "undefined" -- undefined
+===== 33705_rac_DEFENDER_send2.json | confirmed: ["A49 L4"] | no_answer: []
+ [A49 L4 CONFIRMED] E[CR2] "I do not press it as a correction of Mary's 'thy father.'" / C[CR4] "The household word is used, and the child at once names another Father." -- The closing uses Luke 2:49 as the child's answer/redirect against Mary's "thy father," which is the correction earlier withdrawn.
 
 ===== 34108_rac_DEFENDER_send1.json | confirmed: [] | no_answer: []
  [R11 L1 NOT A CONTRADICTION] E[CR3] "Genesis 4:1, 'Adam knew Eve his wife; and she conceived, and bare Cain': I grant that this is the ordinary means." / C[CR4] "Genesis 4:1 therefore cannot supply the sequence for Matthew, because Matthew 1:23 sets the virgin as the one with child." -- The earlier grant calls Genesis 4:1 the ordinary means generally, while the closing denies it supplies Matthew's virgin-conception sequence, so both can be true.
