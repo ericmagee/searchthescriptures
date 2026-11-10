@@ -1,0 +1,241 @@
+{
+ "base": "pkgLIB/strip_FCD + pkgKNL5/knl5_fn.js",
+ "library": {
+  "Alt_Gate_Build.js": {
+   "strip_FCD": "1497fb469ced",
+   "patched": "449f18a115ae",
+   "changes": [
+    "KNL5",
+    "KCB"
+   ]
+  },
+  "Alt_Gate_Record.js": {
+   "strip_FCD": "1801e20d0cc6",
+   "patched": "d42703fa4d89",
+   "changes": [
+    "KNL5",
+    "KCB"
+   ]
+  },
+  "Alternate_Build.js": {
+   "strip_FCD": "d13234a9ea34",
+   "patched": "9fe24c09569a",
+   "changes": [
+    "KNL5",
+    "KCB"
+   ]
+  },
+  "Alternate_Cure_Build.js": {
+   "strip_FCD": "47f15ba417e7",
+   "patched": "76dc03bcefd3",
+   "changes": [
+    "KNL5",
+    "KCB"
+   ]
+  },
+  "Alternate_Cure_Normalize.js": {
+   "strip_FCD": "d9ac77badc78",
+   "patched": "d36ddf8a8780",
+   "changes": [
+    "KNL5",
+    "KCB"
+   ]
+  },
+  "Alternate_Merge_1.js": {
+   "strip_FCD": "c7cb5f824455",
+   "patched": "b2d5aa45ec1f",
+   "changes": [
+    "KNL5",
+    "KCB"
+   ]
+  },
+  "Alternate_Merge_Seat.js": {
+   "strip_FCD": "6322f5ff345b",
+   "patched": "5281a486320c",
+   "changes": [
+    "KNL5",
+    "KCB"
+   ]
+  },
+  "Alternate_Payloads.js": {
+   "strip_FCD": "62012ea0b123",
+   "patched": "a45e1af6e0db",
+   "changes": [
+    "KNL5"
+   ]
+  },
+  "Cure_Build.js": {
+   "strip_FCD": "8344e5207ab4",
+   "patched": "91240cc7e0c5",
+   "changes": [
+    "KNL5",
+    "KCB"
+   ]
+  },
+  "Cure_Check.js": {
+   "strip_FCD": "7ba2d9390dde",
+   "patched": "c90bf06f0b92",
+   "changes": [
+    "KNL5",
+    "KCB"
+   ]
+  },
+  "Cure_Normalize.js": {
+   "strip_FCD": "8430d5776fac",
+   "patched": "31aca21305cd",
+   "changes": [
+    "KNL5",
+    "KCB"
+   ]
+  },
+  "Extract_Independent_Verdict.js": {
+   "strip_FCD": "2958ec9f484a",
+   "patched": "23cd471e0203",
+   "changes": [
+    "KNL5"
+   ]
+  },
+  "Gate_Build.js": {
+   "strip_FCD": "ac705281fdfe",
+   "patched": "0d8fd11f7e1b",
+   "changes": [
+    "KNL5",
+    "KCB"
+   ]
+  },
+  "Gate_Record.js": {
+   "strip_FCD": "d726c7147d65",
+   "patched": "42c4895cdf61",
+   "changes": [
+    "KNL5",
+    "KCB"
+   ]
+  },
+  "Panel_Cure_Build_1.js": {
+   "strip_FCD": "64d42d0a0866",
+   "patched": "ba2149d0286e",
+   "changes": [
+    "KNL5",
+    "KCB"
+   ]
+  },
+  "Panel_Cure_Build_2.js": {
+   "strip_FCD": "dcf8eeaea58b",
+   "patched": "b46ab83874c3",
+   "changes": [
+    "KNL5",
+    "KCB"
+   ]
+  },
+  "Panel_Cure_Build_3.js": {
+   "strip_FCD": "723f29063dcd",
+   "patched": "3de1613ed700",
+   "changes": [
+    "KNL5",
+    "KCB"
+   ]
+  },
+  "Panel_Cure_Check.js": {
+   "strip_FCD": "1a0bbdd983c2",
+   "patched": "dc27cec92e21",
+   "changes": [
+    "KNL5",
+    "KCB"
+   ]
+  },
+  "Panel_Cure_Normalize_1.js": {
+   "strip_FCD": "651046d77017",
+   "patched": "2002df11394b",
+   "changes": [
+    "KNL5",
+    "KCB"
+   ]
+  },
+  "Panel_Cure_Normalize_2.js": {
+   "strip_FCD": "846957ba956f",
+   "patched": "51c540ab548b",
+   "changes": [
+    "KNL5",
+    "KCB"
+   ]
+  },
+  "Panel_Cure_Normalize_3.js": {
+   "strip_FCD": "1ef0af35533b",
+   "patched": "d76d03094c13",
+   "changes": [
+    "KNL5",
+    "KCB"
+   ]
+  },
+  "Panel_Payloads.js": {
+   "strip_FCD": "f5c8b21809be",
+   "patched": "354cda398866",
+   "changes": [
+    "KNL5"
+   ]
+  },
+  "R2_Alt_Gate_Build.js": {
+   "strip_FCD": "da4d95652573",
+   "patched": "49f5de0767f1",
+   "changes": [
+    "KNL5",
+    "KCB"
+   ]
+  },
+  "R2_Alt_Gate_Record.js": {
+   "strip_FCD": "657347188aec",
+   "patched": "4a2049b10db6",
+   "changes": [
+    "KNL5",
+    "KCB"
+   ]
+  },
+  "R2_Alternate_Build.js": {
+   "strip_FCD": "afdd6ca9ed0e",
+   "patched": "fc3576bd33fa",
+   "changes": [
+    "KNL5",
+    "KCB"
+   ]
+  },
+  "R2_Alternate_Cure_Build.js": {
+   "strip_FCD": "b67145d79b16",
+   "patched": "2cf68126245c",
+   "changes": [
+    "KNL5",
+    "KCB"
+   ]
+  },
+  "R2_Alternate_Cure_Normalize.js": {
+   "strip_FCD": "02a13161a34f",
+   "patched": "d723af03dab9",
+   "changes": [
+    "KNL5",
+    "KCB"
+   ]
+  },
+  "R2_Alternate_Merge.js": {
+   "strip_FCD": "04188e9a02d6",
+   "patched": "dfb62223fef0",
+   "changes": [
+    "KNL5",
+    "KCB"
+   ]
+  },
+  "R2_Alternate_Merge_Seat.js": {
+   "strip_FCD": "75ae3062d6f7",
+   "patched": "a5305243ba5a",
+   "changes": [
+    "KNL5",
+    "KCB"
+   ]
+  },
+  "R2_Alternate_Payloads.js": {
+   "strip_FCD": "f49ebac3cf29",
+   "patched": "08cbb46d0b53",
+   "changes": [
+    "KNL5"
+   ]
+  }
+ }
+}

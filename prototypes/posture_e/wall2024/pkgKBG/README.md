@@ -21,3 +21,13 @@ Limits:
 - Record-only: no verdict changes.
 
 Manual part: "With a bare flagged answer, a send-back KEEP is read as cured only by six words in a row of the answering side outside every bare grant or deferral sentence of that side."
+
+## Rev 2 (W1 FAIL Wall 3857, one fix; W2 PASS 3856)
+Write file: parent_s94_KBG2.json (`node pkgKBG/build_KBG2.cjs pkgKBG/base_s94_KVQ.json pkgKBG/parent_s94_KBG2.json`; 418 nodes, the same 3 changed, connections unchanged). Rev 1's file is superseded.
+1. Opening formatting is taken off a sentence before the bare test: bullet, numbering, ">", a bold label, a [..] tag, a verse label ("Job 14:1.", "On Job 14:1."), stray * _ ` #. W1's plants M3 to M7 all read UNCURED, and so does the stored line "- **Galatians 4:4.** I grant "of a woman" is a general phrase (Job 14:1)."
+2. The same miss stood in the live bare test of the flagged answer (pkgKQG; pkgKVQ uses the same test): a flagged answer the judge quoted with its label ("**Job 14:1.** I grant it is said of all men.") was not read as bare, so the pkgKQG rule did not apply and a KEEP quoting it read CURED. Rev 2 applies the same strip there. Replay: 0 stored rows change.
+3. W1's question (the "CR2 fuller answer" case). Answer: it is meant to stay CURED. "I accept it as a phrase said of all men, and I make no claim from Galatians 4:4 alone." says more than the grant. Rev 2 makes that a rule: in the round cut, a grant joined to a further clause of its own (", and ...", "; ...", "and I ...") is not cut. With or without its heading the case reads CURED (M1, M2). pkgKQG's test of the flagged answer keeps its own definition.
+Proof: probe_KBG2 30 OK (rev 1's 18 cases, M1 to M10, the labelled flagged answer). replay_KBG2: 42 node runs, 68 stored KEEP rows, 0 rows differ from the base. pkgVP3 probe on the stacked file 40 OK; multi-run 0 would remove. Log row shape and reason text are unchanged from rev 1 (rolled-back inserts by W3, W1, W2 accepted; repeated by W3 for rev 2).
+Stored rounds, 45 runs: 1,339 sentences hold a grant verb. 394 opened with the grant before the strip and 727 do after it. Of the 612 others, 525 are grant-list lines (G1 [CR2] "I grant ...", a quotation of the other side) and 87 hold the grant inside a longer sentence; neither is a bare grant sentence.
+Not in this revision (W2 3856): "Matthew 17:5 is answered under Luke 9:34." is not a deferral under pkgKQG's test; a separate item.
+Manual part (rev 2): "With a bare flagged answer, a send-back KEEP is read as cured only by six words in a row of the answering side outside every bare grant or deferral sentence of that side. Opening labels and bullets are ignored when a sentence is tested. A grant joined to a further clause of its own is not treated as bare in the rounds."

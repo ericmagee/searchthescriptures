@@ -1,0 +1,50 @@
+OK   gap "COUNTED, but that is wrong.": base CURED, candidate UNCURED
+OK   gap "COUNTED. That is not right.": base CURED, candidate UNCURED
+OK   gap "COUNTED. However, the count stays as written.": base CURED, candidate UNCURED
+OK   gap "COUNTED; I refuse to add it.": base CURED, candidate UNCURED
+OK   gap "COUNTED: under protest.": base CURED, candidate UNCURED
+OK   gap "COUNTED. I object to this item.": base CURED, candidate UNCURED
+OK   gap "COUNTED, although it grants only titles.": base CURED, candidate UNCURED
+OK   gap "COUNTED. This is an error of the engine.": base CURED, candidate UNCURED
+OK   gap "COUNTED: I retract nothing.": base CURED, candidate UNCURED
+OK   gap "COUNTED. I disagree with the item.": base CURED, candidate UNCURED
+OK   gap "COUNTED, yet the link stands.": base CURED, candidate UNCURED
+OK   gap "COUNTED. It is not a concession.": base CURED, candidate UNCURED
+OK   gap "COUNTED. The sentence does not apply to D6.": base CURED, candidate UNCURED
+OK   gap "COUNTED, unless the titles are excluded.": base CURED, candidate UNCURED
+OK   gap "COUNTED: wrongly asked.": base CURED, candidate UNCURED
+OK   gap "COUNTED. I DO NOT ACCEPT THIS.": base CURED, candidate UNCURED
+OK   gap "COUNTED. It isn’t correct.": base CURED, candidate UNCURED
+OK   stays CURED "COUNTED", row equal to the base
+OK   stays CURED "COUNTED.", row equal to the base
+OK   stays CURED "**COUNTED**", row equal to the base
+OK   stays CURED ""COUNTED"", row equal to the base
+OK   stays CURED "COUNTED. I do not dispute it.", row equal to the base
+OK   stays CURED "COUNTED, and the count is corrected below.", row equal to the base
+OK   stays CURED "COUNTED: the defender gave up D6 in [DR3].", row equal to the base
+OK   stays CURED "COUNTED -- the close round grants it.", row equal to the base
+OK   stays CURED "COUNTED. No objection.", row equal to the base
+OK   stays CURED "COUNTED. My count did not include this grant; corrected to 5.", row equal to the base
+OK   stays CURED "COUNTED: it concedes the premise of D2, as the flagged sentence says.", row equal to the base
+OK   stays CURED "COUNTED. I don’t contest it.", row equal to the base
+OK   stays UNCURED "NOT COUNTED, it is not a concession.", row equal to the base
+OK   stays UNCURED "This cannot be COUNTED.", row equal to the base
+OK   stays UNCURED "COUNTED is wrong here.", row equal to the base
+OK   stays UNCURED "Counted.", row equal to the base
+OK   stays UNCURED "COUNTED: it is not a concession of any link.", row equal to the base
+OK   stays UNCURED "COUNTED (under protest; I do not agree)", row equal to the base
+OK   stays UNCURED "COUNTED? No.", row equal to the base
+OK   stays UNCURED "COUNTED - refused", row equal to the base
+OK   stays UNCURED "UNCOUNTED", row equal to the base
+OK   stored reply: all 81 log rows and the bodies equal the base
+OK   TOUCHES NO LINK: all 81 log rows and the bodies equal the base
+OK   NOT HELD: all 81 log rows and the bodies equal the base
+OK   "COUNTED, but that is wrong." is asked once, as NO REASON (NO REASON K-S3 S3 DEFENDER CR4: #1: DEFENDER CR4: “I grant ‘)
+OK   base: no follow-up for it (read CURED)
+OK   follow-up answer COUNTED with its count: CURED, no second ask
+OK   the same refusal in the follow-up: UNCURED, no second ask
+OK   gap answer: 81 rows, only the K-S3 #1 row differs
+OK   all rows pass the table CHECKs
+     row: UNCURED | the RESPONSE neither counts the close concession (COUNTED) nor says TOUCHES NO LINK: <why> | response_line COUNTED, but that is wrong.
+OK   26 files differ from the base, 26 by the one K-S3 line
+48 OK, 0 FAIL
