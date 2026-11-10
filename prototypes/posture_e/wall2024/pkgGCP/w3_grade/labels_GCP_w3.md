@@ -24,3 +24,15 @@ P17 P1 together with a counted send-back line (v42) on the same item that the ga
 Rows written to debate_enforcer_log: if any gate or send-back row differs from live in any case, a rolled-back insert through record_enforcer_log is owed.
 NOT REACHABLE by me on stored text: the alternate and round 2 alternate Gate Record copies with a real alternate reply; stored runs 33371 and 33490 (no execution export). I read the code of the three nodes for equality of the call instead.
 Size: I measure the candidate against the s111 fetch-back myself.
+
+## Addendum, committed before the runs it names (after the first round of runs on rev 1b, commit 7e67b74a, which is the build on file; rev 1 f2a098b2 was replaced by W1 before my first run)
+Four of my first plants did not meet their own condition and are redone; the labels are the same:
+P6r the report LINE is the D6 vs C5 line, which no change replaces (in P6 I named the D3 vs C1 line, which a gate change does replace): stays.
+P7r S11 and S9 both answered KEEP, so no change replaces the D5 vs C4 line (in P7 the applied S9 replaced it): stays.
+P10c S11 renames the pair and S9 is KEEP (in P10 the applied S9 wrote a good line): stays, or a new counted item appears; no net forgiveness.
+P14r the plant is made from the send-back item's own line on a seat with count 0 (P14's line was not found raised): planted 1, written 0; and the seat must not be removed on it (I read alt_needed and the Alternate Build output).
+P16b the judge text gets a BROKEN D5 vs C4 line with a FORCED line whose MEANS quotation is not in the round; the report is K-F with LINE = that FORCED line; S11 changes the collision line. Record-only (by the rule as written the FORCED line is not replaced, so stays).
+New:
+P20 K-S3 in the real form (ITEM "S3 DEFENDER CR4: #1", LINE "DEFENDER CR4: <sentence>"), and an applied change that ends the judge's own out-of-round line with COUNTED: by the stated rule (raised before, replaced, not raised after) off. If it stays, K-S3 is not covered and I report it as a missed form, with the reason.
+P19 K-S3 report for the LAST numbered item, its line replaced by an applied change that does not cure it, while another K-S3 line is cured (the engine numbers K-S3 items by position, so the last number disappears): stays. Off is a FAIL.
+P14a removal check: any seat whose only count is a planted cure count that pkgGCP takes off must end with count 0 and must not be replaced by an alternate because of it.

@@ -1,0 +1,6 @@
+// W3: library functions of a workflow file's Gate Record (rebuilt from its stub and its Shared Library)
+const fs=require('fs');const {rebuild}=require('../../pkgLIB/unpack.cjs');const cl=x=>JSON.parse(JSON.stringify(x));
+module.exports=(wf,out)=>{let d=JSON.parse(fs.readFileSync(wf,'utf8'));d=d.data||d;d=d.workflow||d;const by={};d.nodes.forEach(n=>by[n.name]=n);const s=rebuild(by['Gate Record'].parameters.jsCode,by['Shared Library'].parameters.jsCode);const cut=s.indexOf("const PASS=$('Send Back Record')");if(cut<0)throw new Error('cut');
+ const $=name=>{const m=out(name);const it=m?m.find(o=>o&&o.length)||m[0]||[]:null;if(!it)return {isExecuted:false,first:()=>{throw new Error('unexecuted '+name)},all:()=>{throw new Error('unexecuted '+name)}};return {isExecuted:true,first:()=>cl(it[0]),all:()=>cl(it),last:()=>cl(it[it.length-1])};};
+ const names=['gnkRun2024','gateNewK2024','sbApply2024','cureJText','gatePromptText2024','ciRounds','drvLinks','gcp2024','enfStatus','cureSafe'].filter(n=>new RegExp('function '+n+'\\(').test(s));
+ return new Function('$','$input','$json','$execution',s.slice(0,cut)+'\n;return {'+names.join(',')+'};')($,{all:()=>[],first:()=>({json:{}})},{},{id:'x'});};

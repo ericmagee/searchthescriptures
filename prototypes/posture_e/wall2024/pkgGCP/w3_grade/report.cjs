@@ -1,0 +1,4 @@
+const fs=require('fs');const O=process.argv[2];const rd=f=>{try{return JSON.parse(fs.readFileSync(f,'utf8').trim().split('\n').pop());}catch(e){return {err:'unreadable '+e.message};}};
+for(const c of 'L0 P1 P2 P3 P4 P5 P6 P7 P8 P9 P10 P10b P11 P12 P13 P14 P15 P16 P17 P18'.split(' ')){const a=rd(O+'/live_'+c+'.json'),b=rd(O+'/cand_'+c+'.json');if(a.err||b.err){console.log(c,'ERR live:',a.err,'cand:',b.err);continue;}
+ console.log(c+' ['+a.seat+'] live '+a.counts+' | cand '+b.counts+' | marks '+b.marks.length+' | rows equal but the mark and count: '+(a.rows.replace(/"drv_uncured":\d+/g,'')===b.rows.replace(/"drv_uncured":\d+/g,''))+' | gate rows equal '+(a.gate_rows===b.gate_rows)+' | alt_needed '+a.alt_needed+'/'+b.alt_needed+' | gate '+(typeof b.gate==='string'?b.gate:JSON.stringify(b.gate).slice(0,90)));
+ console.log('     '+b.diag);b.marks.forEach(m=>console.log('     '+m));console.log('     final: '+b.fin.join(' ## '));}
