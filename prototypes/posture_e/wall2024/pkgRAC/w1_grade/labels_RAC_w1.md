@@ -13,3 +13,11 @@ Each case runs Close Enforcer Record (candidate build) on a planted reply, then 
 - G6 two pairs of one side (33846): one NOT A CONTRADICTION, one CONFIRMED on another link: the first block ends with the approved two-sentence
      ending, the second block leaves.
 - G7 an anti-cheat row with an empty earlier quotation: logged NOT SENT, NOT CHECKED (not dropped).
+
+## Rev 2 regrade (041aef72): labels added before running (10:1x CST 11-10)
+- G1, G2, G5, G6, G7 as above. G3 and G4 (A13+A57; NEW then A73) now must keep the second pair visible (its block, second sentence only).
+- G8 Panel Build stripped of every comment with pkgLIB/strip.cjs (line AND block, the R2 tool): Close Enforcer Build gives the same A and R
+     candidates on all stored debates as with the unstripped Panel Build.
+- G9 Anticheat Build run on a Final Output whose rounds are not strings (cr4 an object): no throw; one skip item with a reason; Close Enforcer
+     Build still runs after it.
+- G10 no candidate line in any stored debate carries "reverses" or "asserts more" (neutral reasons).
