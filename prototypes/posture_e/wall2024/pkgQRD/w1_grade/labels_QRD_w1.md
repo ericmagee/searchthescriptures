@@ -28,3 +28,19 @@ D10 D1 to D7 rerun on rev 2 unchanged.
 ## D11 (after W3's R12, Wall/commit 8a6d1c31), committed before my run of it
 D11 Chain: luna quotes passage A, sol quotes passage B, chatgpt quotes A and B as one passage, all on CR3/CR4, all fault-free.
  After QR Final with each redirected judge switching to another pair, at least one judge still asks about B wherever live has one. 0 is a FAIL.
+
+## M. Full matrix (coordinator request 11:00 CST), committed before any candidate run of it. Runner w1_QRD_matrix.cjs.
+For each side under test (defender, then challenger), on the stored 34299 question round:
+- Passage each judge asks first on that side: A, B (the next sentence), AB (both as one passage), or C (a separate sentence); same earlier quote. 4^3 = 64.
+- Fault state per judge: none; faulted on the other side; faulted on this side (empty question). 3^3 = 27.
+- Second reply per returned judge: fails (error); changes this side's question to its own new passage; keeps the same question. 3^3 = 27.
+- The other side holds three separate passages, one per judge, so other-side counts are tracked too.
+46,656 cases per side, 93,312 in all. Each run through QR Check then QR Final, under live s110 and under the candidate.
+Askers of a passage P at the end = judges whose final record on that side is not DROPPED and whose quote contains P.
+Live counts per case are written by the same run beside the result (matrix_live_counts_*.txt); the rule below is fixed now, before any candidate run.
+Rule (coordinator, 11:00 CST): the candidate never leaves a contradiction with fewer askers than live, except the intended move.
+- LOSS: live >= 1 asker and candidate 0 -> FAIL.
+- Candidate fail-closed (no question passes) where live runs -> FAIL.
+- Fewer askers but >= 1: allowed only when a judge whose first passage contains or is contained in P was redirected on that side (the intended move); otherwise FAIL.
+- Any drop on the other side's passages -> FAIL.
+Limit: the second replies are three fixed forms; a redirected judge that moves to another judge's passage is not planted.
