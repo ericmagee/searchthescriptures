@@ -1,0 +1,26 @@
+     base CURED | KVL UNCURED | CURE (record-only until promoted): UNCURED -- KEEP whose reason quotes only scripture the answering side quoted ("which was made of the seed"), not the side's own answer (pkgKVQ) | TRIAL pkgVP3: code 
+OK   K1 KEEP quoting the Romans 1:3 words that CR4 gives on a line with no reference (stored): base CURED, KVL UNCURED (pkgKVQ reason)
+OK   K1 KEEP quoting the Romans 1:3 words that CR4 gives on a line with no reference (stored): every other field equal
+     base CURED | KVL CURED | CURE (record-only until promoted): CURED -- KEEP whose reason quotes the answering side's round: "i do not claim a verse" | TRIAL pkgVP3: code check does not agree, not an item -- [CR3] names Job 14:1
+OK   K2 KEEP quoting the side own sentence on the same no-reference passage (stored): base CURED, KVL CURED
+OK   K2 KEEP quoting the side own sentence on the same no-reference passage (stored): every other field equal
+     base CURED | KVL CURED | CURE (record-only until promoted): CURED -- KEEP whose reason quotes the answering side's round: "the flesh made of the woman" | TRIAL pkgVP3: code check does not agree, not an item -- [CR3] names Job
+OK   K3 own claim in quotes on a no-reference line (planted): not a verse, not cut: base CURED, KVL CURED
+OK   K3 own claim in quotes on a no-reference line (planted): not a verse, not cut: every other field equal
+     base CURED | KVL CURED | CURE (record-only until promoted): CURED -- KEEP whose reason quotes the answering side's round: "according to the flesh and so" | TRIAL pkgVP3: code check does not agree, not an item -- [CR3] names J
+OK   K4 verse words plus own words in one quoted span (planted): not cut: base CURED, KVL CURED
+OK   K4 verse words plus own words in one quoted span (planted): not cut: every other field equal
+     base CURED | KVL UNCURED | CURE (record-only until promoted): UNCURED -- KEEP whose reason quotes only scripture the answering side quoted ("and declared to be the son"), not the side's own answer (pkgKVQ) | TRIAL pkgVP3: code 
+OK   K5 verse quoted with a reference only by the other side, quoted by this side with none (planted): base CURED, KVL UNCURED (pkgKVQ reason)
+OK   K5 verse quoted with a reference only by the other side, quoted by this side with none (planted): every other field equal
+     base CURED | KVL CURED | CURE (record-only until promoted): CURED -- KEEP whose reason quotes the answering side's round: "the seed of david according is" | TRIAL pkgVP3: code check does not agree, not an item -- [CR3] names 
+OK   K6 a 5-word verse fragment on a no-reference line (planted): under 6 words, not cut: base CURED, KVL CURED
+OK   K6 a 5-word verse fragment on a no-reference line (planted): under 6 words, not cut: every other field equal
+     base UNCURED | KVL UNCURED | CURE (record-only until promoted): UNCURED -- KEEP whose reason quotes only scripture the answering side quoted ("of few days and full of"), not the side's own answer (pkgKVQ) | TRIAL pkgVP3: code che
+OK   K7 pkgKVQ case stands: Job 14:1 text on its verse line: base UNCURED, KVL UNCURED (pkgKVQ reason)
+OK   K7 pkgKVQ case stands: Job 14:1 text on its verse line: every other field equal
+     base CURED | KVL CURED | CURE (record-only until promoted): CURED -- KEEP whose reason quotes the answering side's round: "i accept it as a phrase" | TRIAL pkgVP3: code check does not agree, not an item -- [CR3] names Job 14:
+OK   K8 the CR2 fuller answer stays: base CURED, KVL CURED
+OK   K8 the CR2 fuller answer stays: every other field equal
+OK   34108 stored send-back rows: all equal to the base (27 rows)
+17 OK, 0 FAIL

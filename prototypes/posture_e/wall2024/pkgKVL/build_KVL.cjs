@@ -1,0 +1,17 @@
+// pkgKVL (W2; coordinator 00:57Z 11-10, from pkgKVQ's stated limit, seen by W3 on stored text, Wall 3850). Record-only (enf428Cure, ruling 428).
+// Gap: pkgKVQ cuts a quoted verse of 6 words or more only on a line that names a verse reference. The same verse words quoted on a line with no
+//   reference (34108 CR4: '- [L1] "made of the seed of David according to the flesh."') count as the side's own words, so a KEEP quoting only them reads CURED.
+// Fix (__vq in Send Back Record, Alt Send Back Record, R2 Alt Send Back Record): on a line with no verse reference, a quoted span of 6 words or more is also cut
+//   when its words stand inside a verse quotation of 6 words or more that some round of the debate (either side) gives right after a verse reference
+//   ('Romans 1:3: "..."', '**[L1] Romans 1:3:** "..."') or right before one in parentheses ('"..." (Romans 1:3)'). A quoted debater sentence on a reference line is not verse text and is not used.
+//   A quoted span that adds words of its own (not inside such a verse quotation) is not cut. Unquoted verse words are not cut (limit).
+// Stacks with pkgKBG: the anchor is pkgKVQ's __vq definition, which every pkgKBG revision keeps; build on whichever base is written last.
+//   node pkgKVL/build_KVL.cjs <base with pkgKVQ> <out>
+const fs=require('fs');const die=m=>{console.error('BUILD REFUSED: '+m);process.exit(1);};const [,,FB,OUT]=process.argv;if(!FB||!OUT)die('usage: build_KVL.cjs <base> <out>');
+let d=JSON.parse(fs.readFileSync(FB,'utf8'));d=d.data||d;d=d.workflow||d;if(d.nodes.length!==418)die('base has '+d.nodes.length+' nodes');
+const A0=String.raw`const __vq=s=>String(s).split('\n').map(l=>/\b(?:[1-3]\s*)?[A-Z][a-z]+\.?\s+\d+:\d+/.test(l)?l.replace(/"[^"\n]*"|“[^”\n]*”/g,m=>m.replace(/[^A-Za-z0-9]+/g,' ').trim().split(' ').length>=6?' . zqvz . ':m):l).join('\n');`;
+const A1=String.raw`const __VR=/\b(?:[1-3]\s*)?[A-Z][a-z]+\.?\s+\d+:\d+/,__VQ=/"[^"\n]*"|“[^”\n]*”/g;let __vS=null;const __vset=()=>{if(__vS)return __vS;__vS=[];const __VA=/\b(?:[1-3]\s*)?[A-Z][a-z]+\.?\s+\d+:\d+(?:\s*[-–,]\s*\d+(?::\d+)?)*\s*[:.,]?\s*(?:\*\*)?\s*[:,]?\s*("[^"\n]*"|“[^”\n]*”)|("[^"\n]*"|“[^”\n]*”)\s*\((?:[1-3]\s*)?[A-Z][a-z]+\.?\s+\d+:\d+[^)]*\)/g;for(const k of Object.keys(R||{})){if(typeof R[k]!=='string')continue;for(const l of R[k].split('\n'))for(const mm of l.matchAll(__VA)){const n=N(mm[1]||mm[2]);if(n.split(' ').length>=6)__vS.push(' '+n+' ');}}return __vS;};const __vq=s=>String(s).split('\n').map(l=>__VR.test(l)?l.replace(__VQ,m=>m.replace(/[^A-Za-z0-9]+/g,' ').trim().split(' ').length>=6?' . zqvz . ':m):l.replace(__VQ,m=>{const n=N(m);return n.split(' ').length>=6&&__vset().some(v=>v.includes(' '+n+' '))?' . zqvz . ':m;})).join('\n'); /* pkgKVL: on a line with no verse reference, a quoted span of 6 words or more is cut when it stands inside a verse quotation that some round gives next to its reference */`;
+const NODES=['Send Back Record','Alt Send Back Record','R2 Alt Send Back Record'];
+for(const nm of NODES){const n=d.nodes.find(z=>z.name===nm);if(!n)die('no node '+nm);let s=n.parameters.jsCode;if(!s.includes('pkgKVQ'))die(nm+' lacks pkgKVQ');if(s.includes('pkgKVL'))die(nm+' already has pkgKVL');
+ if(s.split(A0).length!==2)die(nm+': __vq anchor '+(s.split(A0).length-1)+' hits');s=s.replace(A0,A1);new Function('$','$input','return (async()=>{\n'+s+'\n})();');n.parameters.jsCode=s;}
+fs.writeFileSync(OUT,JSON.stringify({nodes:d.nodes,connections:d.connections,settings:d.settings},null,1));console.log(OUT+': 418 nodes; changed '+NODES.join(', '));
