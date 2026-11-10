@@ -22,6 +22,9 @@ const P={ /* plants on luna's stored reply in 34626 */
  G5none:t=>t.split('; '+FL).join(''),
  G5quoted:t=>t.split('; '+FL).join('').split('[L1] Luke 1:36 “thy cousin').join('[L1] Luke 1:36 “FORCED: thy cousin'),
  G6keep:t=>t.replace(/GATE: G1 \|\| CHANGE TO: [^\n]*?\|\| /,'GATE: G1 || KEEP || FORCED: D2 vs C1 -- MEANS [DR2]: “x.” -- ANSWER [CR3]: “y.” -- FAILS: “y.” '),
+ G6keep0:t=>P.G6keep(P.G5none(t)),G6und0:t=>P.G6und(P.G5none(t)),
+ lowC:t=>t.split('; FORCED: D4').join('; forced: D4'),
+ lowR:t=>P.G4reason(t).split('|| FORCED: D4').join('|| forced: D4'),
  G6und:t=>t.replace('fits the verse’s “of whom” and the angel’s “born of thee.”','fits the verse’s “of whom” and the angel’s “born of thee.”; FORCED: D3 vs C1 -- MEANS [DR2]: “x.” -- ANSWER [CR3]: “y.” -- FAILS: “y.”').replace('(Matthew 1:16): STANDS','(Matthew 1:16): UNDERDETERMINED'),
 };
 (async()=>{const RD=EX['34626'];const a=await run(src('s110',GR),GR,RD);T(nt(a)===nt(RD[GR][0].data.main[0].map(x=>x.json)),'G0 s110 Gate Record rerun equals stored (34626)');
@@ -29,6 +32,7 @@ const P={ /* plants on luna's stored reply in 34626 */
   R[k]={};for(const s of Object.keys(W)){R[k][s]=await rec(s,rd);}console.log('-- '+k+(k!=='G1'&&!chg?' (PLANT DID NOT APPLY)':''));for(const s of Object.keys(W))console.log('   '+s.padEnd(5),R[k][s].err||(R[k][s].seat+' '+R[k][s].sum));}
  /* 34299: three real lines with " | FORCED:" inside CHANGE TO */
  const X2=EX['34299'];const b2=await run(src('s110',GR),GR,X2);T(nt(b2)===nt(X2[GR][0].data.main[0].map(x=>x.json)),'G0b s110 Gate Record rerun equals stored (34299)');
+ R.R34299r={};{const rd=cl(X2);const m=rd[GC][0].data.main[0][0].json.choices[0].message;m.content=m.content.split('\n').map(l=>{const i=l.indexOf(' | FORCED:');if(i<0)return l;const j=l.lastIndexOf(' || ');return l.slice(0,i)+' || '+l.slice(i+3,j);}).join('\n');R.R34299r.s110=await rec('s110',rd);console.log('-- 34299 reason-moved s110',R.R34299r.s110.seat+' '+R.R34299r.s110.sum);}
  R.R34299={};for(const s of Object.keys(W)){R.R34299[s]=await rec(s,X2);console.log('-- 34299 '+s.padEnd(5),R.R34299[s].err||(R.R34299[s].seat+' '+R.R34299[s].sum));}
  if(W.C){const E=(k,m)=>T(!R[k].C.err&&R[k].C.sum===R[k].s110.sum,k+' '+m+' (as live)');const g=(k,it)=>((R[k].C.o||{}).gate_rows||[]).filter(r=>r.item.startsWith(it)).map(r=>r.cure_status).join(',');
   T(g('G1','G5')==='CURED'&&!/K-G4|K-F/.test(R.G1.C.sum),'G1 stored G5: FORCED inside CHANGE TO read, G5 CURED, no K-G4 / K-F');
@@ -37,5 +41,8 @@ const P={ /* plants on luna's stored reply in 34626 */
   ['G3a','G3b','G3c'].forEach(k=>console.log('   G3 record',k,'G5 '+g(k,'G5'),R[k].C.sum));
   T(R.G4both.C.sum===R.G4reason.C.sum&&R.G4both.C.sum===R.G4reason.s110.sum,'G4 both fields = reason only = s110 reason only');T(R.G1.C.sum===R.G4reason.s110.sum&&R.G1.C.seat===R.G4reason.s110.seat,'G1 stored form under C = reason-only form under s110');
   T(!/K-F.*K-F/.test(R.G4both.C.sum),'G4 no double count');
-  E('G5quoted','quoted FORCED: in GROUND not read');E('G5none','no FORCED line');E('G6keep','KEEP with FORCED text');E('G6und','UNDERDETERMINED with FORCED text');}
+  E('G5quoted','quoted FORCED: in GROUND not read');E('G5none','no FORCED line');const G6=(k,i)=>T(!R[k].C.err&&g(k,i)===((R[k].s110.o.gate_rows.find(r=>r.item.startsWith(i))||{}).cure_status)&&R[k].C.sum===R.G1.C.sum,k+' planted item '+i+' as live; rest as the candidate on the stored reply');G6('G6keep','G1');G6('G6und','G2');
+  T(R.G6keep0.C.sum===R.G6keep0.s110.sum&&R.G6und0.C.sum===R.G6und0.s110.sum,'G6 on a reply without the stored FORCED line: KEEP and UNDERDETERMINED plants equal live');
+  T(R.lowC.C.sum===R.lowR.s110.sum&&R.lowC.C.seat===R.lowR.s110.seat,'lower case forced: in CHANGE TO under C = lower case as whole reason under s110 ('+R.lowR.s110.seat+')');
+  T(R.R34299.C.sum===R.R34299r.s110.sum&&R.R34299.C.seat===R.R34299r.s110.seat,'G7b 34299 under C = same lines with FORCED moved to the whole reason field under s110 ('+R.R34299r.s110.seat+')');}
  console.log(ok+' OK, '+bad+' FAIL');})();
