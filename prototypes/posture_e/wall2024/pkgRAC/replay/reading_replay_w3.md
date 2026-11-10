@@ -38,3 +38,8 @@ The four "opponent's sentence" pairs (33299 A37, 33345 A49, 33644 A7 and, as W2 
 
 ## Weight of the replay for the pairs the enforcer has not seen
 The enforcer ruled 3 pairs I read as not contradictions (R11, A94, A9) correctly in both sends, 6 answers of 6. That is a small sample: with 0 errors in 6 answers an error rate of several tens of percent cannot be excluded. Against it stands the set C base rate of the same enforcer on lines it found itself: 3 of 23 confirmed lines false or doubtful. So the replay shows the enforcer can reject a false handed pair; it does not show that it will reject the other 8 false and 6 doubtful pairs.
+
+## Debate 33575, pair R11 (sent after the operator's answer; 3 relay executions for 2 sends, W4 Wall 4143)
+R11 ("Joseph's house, naming and legal place are granted" against "... excludes it for this birth"): NOT A CONTRADICTION in all three replies, as required. Right.
+One other CONFIRMED line, in the reply of execution 34562 only (the duplicate request): round 3, link 3 narrowed, "I drop the claim that a row names Mary of David's house, and I hold the Heli reading only as an inference." against the closing under D6, "Matthew 1:16 gives the last link of that descent as 'of whom was born Jesus,' feminine." My reading: TRUE, less confident. Round 3 kept only "Matthew 1:16 passes the birth to the woman"; the closing makes that verse the last link of the descent from David through the woman, which is a row placing Mary in David's line, the claim dropped. Found in 1 of 3 replies.
+Totals with 33575: handed pairs 7, answers 14 counted (plus 2 uncounted duplicates), all as labeled.
