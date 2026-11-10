@@ -1,0 +1,8 @@
+OK   S1 non-adjacent earlier ellipsis: ["J2","CR3","I drop the broader claim that justice could never move a husband","Christ had no biological father."] | Record CONFIRMED
+OK   S2 closing ellipsis across a heading: ["J2","CR3","I drop the wording \"no biological father\" as a bare statement.","They are not the narrator's own word for who begat the child"] | Record CONFIRMED
+OK   S3 both quotes ellipsis: ["J2","CR3","I drop the broader claim that justice could never move a husband","They are not the narrator's own word for who begat the child"] | Record CONFIRMED
+OK   S4 parts in CR1 and CR3: round of the part passed (expect CR3): CR1 part: "I affirm that Jesus had a mother, Mary, and no such father" | ["J2","CR3","I drop the broader claim that justice could never move a husband","Christ had no biological father."] | Record CONFIRMED
+OK   S5 drop words in the shorter part (NOTE: what the enforcer sees): ["J2","CR3","The finding is dated before the pair's coming together","Christ had no biological father."]
+OK   S6 judge names the same pair with the passed part: one merged candidate naming both: J1 the judges' CONTRADICTION lines (luna) and the anti-cheat check (found by the system; both quotes checked)
+OK   S7 stated limit: cross-round earlier quote dropped (NOTE: recorded anywhere?): output keys holding "dropped":  | cands 1
+7 OK, 0 FAIL

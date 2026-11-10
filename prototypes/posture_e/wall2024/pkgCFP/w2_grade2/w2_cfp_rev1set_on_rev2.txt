@@ -1,0 +1,14 @@
+OK   Q1 one DEFENDER candidate CR3->CR4 from the anti-cheat check: [["J2","DEFENDER","CR3","the anti-cheat check (found by the system; both quotes checked)"]]
+OK   Q2 one CHALLENGER candidate, earlier round 1-3, closing DR4 (amended): [["J2","CHALLENGER","DR2","DR4"]]
+FAIL Q3 judge and anti-cheat name the same pair: one candidate naming both: [["J1","the judges' CONTRADICTION lines (luna) and the anti-cheat check (found by the system; both quotes checked)"],["J2","the judges' CONTRADICTION lines (chatgpt)"]] | live judge-only cands 2
+OK   Q4 judge names the pair with a shorter closing quote: the pair is not lost: [["J1","no biological father","the judges' CONTRADICTION lines (luna)"],["J2","Genesis 4:1 therefore cannot supply the sequence for Matthew, because Matthew 1:23 sets the virgin as the one with child.","the judges' CONTRADICTION lines (chatgpt"],["J3","Christ had no biological father.","the anti-cheat check (found by the syste"]] NOTE: 3 candidates for one pair
+OK   Q5 shown pair whose earlier quote joins two CR2 sentences by an ellipsis reaches the enforcer: [["J2","CR2"]]
+FAIL Q6 [precondition anti-cheat shows: true] shown pair whose earlier quote runs across the CR2/CR3 boundary reaches the enforcer: quote: "no man as begetter. DEFENDER (standard reading) --" | []
+OK   Q7 [precondition anti-cheat shows: true] shown pair whose closing quote joins two CR4 sentences: candidate made and Record confirms it: CONFIRMED 
+OK   Q8 pair already answered NOT A CONTRADICTION by the closing enforcer is dropped (NOTE: by design, as for judges): []
+OK   Q9 pair already CONFIRMED by the closing enforcer is dropped: []
+OK   Q10 nothing shown: equal to live except the shortened sentence
+OK   Q11 Record confirms both planted anti-cheat candidates: ["DEFENDER 1","CHALLENGER 1"] | [["J2","CONFIRMED",""],["J3","CONFIRMED",""]]
+OK   Q12 [precondition anti-cheat shows: false] a D row carrying challenger quotes makes no defender candidate: []
+OK   Q13 [precondition anti-cheat shows: true] shown pair whose earlier quote joins two non-adjacent CR3 sentences reaches the enforcer: [["J2","CR3"]]
+11 OK, 2 FAIL
