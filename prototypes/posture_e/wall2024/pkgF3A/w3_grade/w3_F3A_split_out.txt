@@ -1,0 +1,18 @@
+pkgF3A/parent_s110_F3A_G1.json differs: Second Alternate? size 2274 to 2320 46 conn equal true
+  stored: live {"run":false,"seats":["luna"],"tried":["anthropic/claude-haiku-5.5"],"free":[],"why":"no pool model is left after round 1 (pool: haiku; tried: anthrop
+     cand {"run":false,"seats":["luna"],"tried":["anthropic/claude-haiku-5.5"],"free":[],"why":"no pool model is left after round 1 (pool: haiku; tried: anthropic/claude-haiku-5.5)"}
+  none tried: live {"run":false,"seats":[],"tried":[],"free":[],"why":"no alternate was tried in round 1"}
+     cand {"run":false,"seats":[],"tried":[],"free":["haiku"],"why":"no alternate was tried in round 1"}
+  uncured: live {"run":false,"seats":["luna"],"tried":["anthropic/claude-haiku-5.5"],"free":[],"why":"no pool model is left after round 1 (pool: haiku; tried: anthrop
+     cand {"run":false,"seats":["luna"],"tried":["anthropic/claude-haiku-5.5"],"free":[],"why":"no pool model is left after round 1 (pool: haiku; tried: anthropic/claude-haiku-5.5)"}
+  glm in pool: live {"run":true,"seats":["luna"],"tried":["anthropic/claude-haiku-5.5"],"free":["glm"],"why":"round 2 for luna; free: glm"}
+     cand {"run":true,"seats":["luna"],"tried":["anthropic/claude-haiku-5.5"],"free":["glm"],"why":"round 2 for luna; free: glm"}
+pkgF3A/parent_s110_F3A_RETRY.json differs: Second Alternate? size 2274 to 2677 403 conn equal true
+  stored: live {"run":false,"seats":["luna"],"tried":["anthropic/claude-haiku-5.5"],"free":[],"why":"no pool model is left after round 1 (pool: haiku; tried: anthrop
+     cand {"run":false,"seats":["luna"],"tried":[],"free":[],"retry":["anthropic/claude-haiku-5.5"],"why":"no pool model is left after round 1 (pool: haiku; tried: )"}
+  none tried: live {"run":false,"seats":[],"tried":[],"free":[],"why":"no alternate was tried in round 1"}
+     cand {"run":false,"seats":[],"tried":[],"free":[],"retry":[],"why":"no alternate was tried in round 1"}
+  uncured: live {"run":false,"seats":["luna"],"tried":["anthropic/claude-haiku-5.5"],"free":[],"why":"no pool model is left after round 1 (pool: haiku; tried: anthrop
+     cand {"run":false,"seats":["luna"],"tried":["anthropic/claude-haiku-5.5"],"free":[],"retry":[],"why":"no pool model is left after round 1 (pool: haiku; tried: anthropic/claude-haiku-5.5)"}
+  glm in pool: live {"run":true,"seats":["luna"],"tried":["anthropic/claude-haiku-5.5"],"free":["glm"],"why":"round 2 for luna; free: glm"}
+     cand {"run":true,"seats":["luna"],"tried":[],"free":["glm"],"retry":["anthropic/claude-haiku-5.5"],"why":"round 2 for luna; free: glm; retry of an unusable reply: anthropic/claude-haiku-5.5"}
