@@ -2,7 +2,7 @@
 
 - Write file: rebuild from pkgLIB_KRO2 + strip_KRO2 on fetchback_live_s103.json is byte-equal to parent_s103_KRO2.json; against s103 only
   the Shared Library differs; connections equal.
-- New forms (rev2/new_forms.txt, 20 cases, labels committed before the run, 7b... see git log): 0 correct answers refused on rev 1 and rev 2;
+- New forms (rev2/new_forms.txt, 20 cases, labels committed before the run, b5cff47a): 0 correct answers refused on rev 1 and rev 2;
   rulings equal. Forms: em dash, "Answer: COUNTED.", bold, negation before or after the keyword ("I do not deny it: COUNTED.", "COUNTED, not
   withdrawn", "Not contested: COUNTED."), lowercase "Yes. Counted ...", second lines with "cannot" / "No", "NOT COUNTED" inside an agreeing
   answer, bold and lowercase refusals.
