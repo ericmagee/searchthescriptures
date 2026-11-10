@@ -1,0 +1,7 @@
+OK   G0 s110 rerun equals stored
+OK   C1 34626 as stored: candidate Gate Record output equals s110
+-- B1  s110 luna:3 chatgpt:0 sol:0 | C luna:3 chatgpt:0 sol:0 | G1 CURED lision line for the same pair) | the gate change was applied
+-- B2  s110 luna:3 chatgpt:0 sol:0 | C luna:2 chatgpt:0 sol:0 | G1 CURED lision line for the same pair) | the gate change was applied | count-off note
+-- B4  s110 luna:3 chatgpt:0 sol:0 | C luna:3 chatgpt:0 sol:0 | G1 CURED lision line for the same pair) | the gate change was applied
+-- B5  s110 luna:3 chatgpt:0 sol:0 | C luna:2 chatgpt:0 sol:0 | G1 CURED lision line for the same pair) | the gate change was applied | count-off note
+-- B3  s110 luna:4 chatgpt:0 sol:0 | C luna:4 chatgpt:0 sol:0 | G1 UNCURED  does not cure; counted once, here) (counted in drv_uncured)

@@ -1,0 +1,9 @@
+patch __GUB
+stored drv_uncured 12 -> 11; taken off: E-APPLY S8
+plant: count names S9 (not gate-cured) -> 12
+plant: other seat -> 12
+plant: record-only line -> 12
+plant: drv 0 stays 0 -> 0
+plant: S18 is not S8 -> 12
+plant: S8 cured by a gate KEEP -> 12
+plant: S8 cured because another change wrote the line -> 12

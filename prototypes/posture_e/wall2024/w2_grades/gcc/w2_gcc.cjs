@@ -9,6 +9,7 @@ const GR='Gate Record',GC='Gate Call openrouter',SB='Send Back Record';
 const CNT=s=>'[AUDIT v42: COLLISION GRADE UNCURED (pkgUND) -- SEAT: luna; ITEMS: '+s+' (E-UNG COLLISION D2 (pressed: [DR2] premise 2): the CHANGE TO has no graded D2 vs C<j> line); counted in drv_uncured. REVIEW THIS ROW.]';
 const plant=(o)=>{const rd=cl(RD0);const sb=rd[SB][0].data.main[0][0].json;const k=sb.bodies.findIndex(b=>JSON.parse(b).payload.judge_seat===(o.seat||'luna'));const b=JSON.parse(sb.bodies[k]);
  if(o.line){b.payload.verdict_raw+='\n'+o.line;if(o.add!==false)b.payload.drv_uncured=(b.payload.drv_uncured||0)+1;}sb.bodies[k]=JSON.stringify(b);
+ if(o.ung){const it=sb.sb_items.find(x=>x.seat==='luna'&&x.sid==='S10');it.rule='E-UNG';it.item='COLLISION D2 (pressed: [DR2] premise 2)';}
  if(o.reply){const m=rd[GC][0].data.main[0][0].json.choices[0].message;m.content=o.reply(m.content);}return rd;};
 const G=async(s,rd)=>{const a=await run(src(s,GR),GR,rd);if(a&&a.err)return {err:a.err};const o=a[0];const drv=o.bodies.map(b=>{const p=JSON.parse(b).payload;return p.judge_seat+':'+p.drv_uncured;}).join(' ');
  const g1=(o.gate_rows||[]).filter(r=>/^G1 /.test(r.item)&&r.seat==='luna').map(r=>r.cure_status+' '+String(r.cure_reason).slice(-60)).join('');const off=o.bodies.some(b=>/send-back count comes off/.test(JSON.parse(b).payload.verdict_raw));return {o,drv,g1,off};};
@@ -19,7 +20,7 @@ const G1OTHER=t=>t.replace('GATE: G1 || CHANGE TO: D2 vs C1 (Matthew 1:19)','GAT
  if(process.env.CASEB){const UL='[AUDIT v42: COLLISION GRADE UNCURED (pkgUND) -- SEAT: luna; ITEMS: S10 (E-HOLD on UNDERDETERMINED D2 vs C1: no counted [L1]); counted in drv_uncured. REVIEW THIS ROW.]';
   const rep=to=>t=>t.replace(/GATE: G1 \|\| CHANGE TO: [^\n]*/,'GATE: G1 || CHANGE TO: '+to+' || [CR3] says the matter is a pregnancy found before any coming together.');
   const B={B1:{line:UL,reply:rep('D2 vs C1 (Matthew 1:19): UNDERDETERMINED -- the motives are disputed. -- GROUND: [L3] Luke 1:13 “thy wife Elisabeth shall bear thee a son.”')},
-   B2:{line:UL},B3:{line:UL,reply:rep('D2 vs C1 (Matthew 1:19): DEFENDER LINK BROKEN -- the motives exclude him as father. -- GROUND: [L1] Matthew 1:19 “was minded to put her away privily”')}};
+   B2:{line:UL},B4:{line:CNT('S10'),ung:1,reply:rep('D2 vs C1 (Matthew 1:19): UNDERDETERMINED -- the motives are disputed. -- GROUND: [L3] Luke 1:13 “thy wife Elisabeth shall bear thee a son.”')},B5:{line:CNT('S10'),ung:1},B3:{line:UL,reply:rep('D2 vs C1 (Matthew 1:19): DEFENDER LINK BROKEN -- the motives exclude him as father. -- GROUND: [L1] Matthew 1:19 “was minded to put her away privily”')}};
   for(const [k,o] of Object.entries(B)){const rd=plant(o);const s=await G('s110',rd),c=await G('C',rd);const rows=c.o.gate_rows.filter(r=>r.seat==='luna').map(r=>r.item.replace(/ \(.*$/,'')+':'+r.cure_status).join(' | ');
    console.log('-- '+k+'  s110 '+s.drv+' | C '+c.drv+' | G1 '+c.g1+(c.off?' | count-off note':'')+'\n     gate rows C: '+rows);}return;}
  const R={};for(const [k,o] of Object.entries(P)){const rd=plant(o);R[k]={s:await G('s110',rd),c:await G('C',rd)};console.log('-- '+k+'  s110 '+R[k].s.drv+' | C '+R[k].c.drv+' | G1 '+R[k].c.g1+(R[k].c.off?' | count-off note':''));}
