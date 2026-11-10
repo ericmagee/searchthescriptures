@@ -38,9 +38,13 @@ OK   P6 a keep-verb with content: narrowing: CURED (want CURED) | KEEP whose rea
 OK   P7 a keep-verb with a link name: CURED (want CURED) | KEEP whose reason quotes the answering side's round: "i grant that juda is reckoned" | TRIAL pkgVP3:
 OK   P8 a hold-verb with a reason word: CURED (want CURED) | KEEP whose reason quotes the answering side's round: "i grant it and i hold" | TRIAL pkgVP3: code ch
 OK   P9 a denial of reliance: CURED (want CURED) | KEEP whose reason quotes the answering side's round: "i grant that and i do" | TRIAL pkgVP3: code ch
+OK   P10 a verse named as agreeing, nothing more (W1 3885): UNCURED (want UNCURED) | KEEP whose reason quotes only another bare grant or deferral of the answering side ("i grant it and 
+OK   P11 "and the verse says the same": UNCURED (want UNCURED) | KEEP whose reason quotes only another bare grant or deferral of the answering side ("i grant it as t
+OK   P12 a verse clause with content: CURED (want CURED) | KEEP whose reason quotes the answering side's round: "i grant it and matthew 1" | TRIAL pkgVP3: code
+OK   P13 pronoun object with a denial: CURED (want CURED) | KEEP whose reason quotes the answering side's round: "i grant the phrase and i" | TRIAL pkgVP3: code
 OK   N11 own clause after "on that ground": CURED (want CURED) | KEEP whose reason quotes the answering side's round: "i grant the names differ and" | TRIAL pkgVP3: 
 OK   N12 a colon and an own clause opening with I: CURED (want CURED) | KEEP whose reason quotes the answering side's round: "i grant both parts the address" | TRIAL pkgVP3
-OK   stored rounds, 45 runs: 59 grant sentences with ", and", ";" or "and I": 21 left (own clause), 38 cut (kbg4_stored.json lists both)
+OK   stored rounds, 45 runs: 59 grant sentences with ", and", ";" or "and I": 20 left (own clause), 39 cut (kbg4_stored.json lists both)
 OK   flagged answer quoted with its label: base CURED (not read as bare), rev 2 UNCURED (pkgKQG reason)
 OK   the same item, KEEP quoting the reasoned sentence: CURED
 OK   case 1: 60 rows, only the Job 14:1 row differs
@@ -50,4 +54,4 @@ OK   the same KEEP with a bare flagged answer: UNCURED (pkgKBG)
 OK   418 nodes; 3 changed against live s98 (Send Back Record, Alt Send Back Record, R2 Alt Send Back Record); connections equal
 OK   enf428Cure is the same text in the 3 nodes
 OK   outside enf428Cure the 3 nodes equal the base
-52 OK, 0 FAIL
+56 OK, 0 FAIL
