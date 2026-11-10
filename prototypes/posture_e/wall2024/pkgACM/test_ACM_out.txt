@@ -1,0 +1,12 @@
+OK   A1 only Anticheat Record changes; 4157 -> 4160 (+3)
+OK   A2 37 stored runs: changes 33389 X34 NO ANSWER -> CONSISTENT; 33389 X36 NO ANSWER -> CONSISTENT; 33617 X75 NO ANSWER -> CONSISTENT
+     stored line: ANTICHEAT: X57 -- REVERSED -- CLOSE: "That reply sets another Father against it" -- EARLIER: "I do not claim Luke 2:49 withdraws the title from Joseph."
+OK   A3 c control as stored: live REVERSED shown; pkgACM REVERSED shown (expected REVERSED shown / REVERSED shown)
+OK   A3 a period after the EARLIER quote: live not read; pkgACM REVERSED shown (expected not read / REVERSED shown)
+OK   A3 b period after the CLOSE quote, no EARLIER part: live not read; pkgACM REVERSED QUOTE NOT FOUND (expected not read / REVERSED QUOTE NOT FOUND)
+OK   A3 d1 EARLIER with no closing mark: live not read; pkgACM not read (expected not read / not read)
+OK   A3 d2 text after the period: live not read; pkgACM not read (expected not read / not read)
+OK   A3 d3 lower-case "Reversed": live not read; pkgACM not read (expected not read / not read)
+OK   A3 d4 two periods: live not read; pkgACM not read (expected not read / not read)
+OK   A3 e no quotes, "REVERSED.": live not read; pkgACM REVERSED QUOTE NOT FOUND (expected not read / REVERSED QUOTE NOT FOUND)
+ALL OK
