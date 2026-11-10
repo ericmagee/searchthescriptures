@@ -27,14 +27,14 @@ OK   R3 want NOT LISTED | [dr3] I abandon none of the claim that the register ru
        listed: 2
 OK   R3-G3 want NOT LISTED | [cr3] Nor do I drop the wording "the register stops at Joseph". + [cr4] The register stops at Joseph.
        listed: 2
-OK   R3-G4 want NOT LISTED | [cr3] If I drop the wording "the register stops at Joseph", the chain fails, so I keep it. + [cr4] The register stops at Joseph.
-       listed: 2
+MISS R3-G4 want NOT LISTED | [cr3] If I drop the wording "the register stops at Joseph", the chain fails, so I keep it. + [cr4] The register stops at Joseph.
+       listed: 3 | hit P3 If I drop the wording "the register stops at Joseph", the chain fails, so I keep
 OK   R3-G5 want NOT LISTED | [cr3] Should I withdraw the wording "the register stops at Joseph"? The rows give no cause. + [cr4] The register stops at Joseph.
        listed: 2
-OK   R3-G6 want NOT LISTED | [cr3] I drop the limb on Matthew 1:25 alone, but the wording "the register stops at Joseph" stands. + [cr4] The register stops at Joseph.
-       listed: 2
-OK   R3-G7 want NOT LISTED | [cr3] I withdraw my objection to the reading that the register of Luke 3 stops at the name of Joseph. + [cr4] The register of Luke 3 stops at the name of Joseph.
-       listed: 2
+MISS R3-G6 want NOT LISTED | [cr3] I drop the limb on Matthew 1:25 alone, but the wording "the register stops at Joseph" stands. + [cr4] The register stops at Joseph.
+       listed: 3 | hit P3 I drop the limb on Matthew 1:25 alone, but the wording "the register stops at Jo
+MISS R3-G7 want NOT LISTED | [cr3] I withdraw my objection to the reading that the register of Luke 3 stops at the name of Joseph. + [cr4] The register of Luke 3 stops at the name of Joseph.
+       listed: 3 | hit P3 I withdraw my objection to the reading that the register of Luke 3 stops at the 
 OK   R3-G11 want NOT LISTED | [cr3] The challenger demands that I withdraw the wording "the register stops at Joseph"; I refuse. + [cr4] The register stops at Joseph.
        listed: 2
 OK   R3-G12 want NOT LISTED | [cr3] I retract only the word "alone"; the wording "the register stops at Joseph" I keep. + [cr4] The register stops at Joseph.
@@ -127,10 +127,10 @@ MISS R5-N32 want NOT LISTED | [cr3] I withdraw the wording "the register stops a
        listed: 3 | hit P3 I withdraw the wording "the register stops at Joseph" only on condition the rows
 MISS R5-N33 want NOT LISTED | [cr3] I drop the wording "the register stops at Joseph" barring an answer from the challenger. + [cr4] The register stops at Joseph.
        listed: 3 | hit P3 I drop the wording "the register stops at Joseph" barring an answer from the cha
-OK   R5-N34 want NOT LISTED | [cr3] If the rows fail, I drop the wording "the register stops at Joseph". + [cr4] The register stops at Joseph.
-       listed: 2
-OK   R5-N35 want NOT LISTED | [cr3] Should the rows fail, I drop the wording "the register stops at Joseph". + [cr4] The register stops at Joseph.
-       listed: 2
+MISS R5-N34 want NOT LISTED | [cr3] If the rows fail, I drop the wording "the register stops at Joseph". + [cr4] The register stops at Joseph.
+       listed: 3 | hit P3 If the rows fail, I drop the wording "the register stops at Joseph".
+MISS R5-N35 want NOT LISTED | [cr3] Should the rows fail, I drop the wording "the register stops at Joseph". + [cr4] The register stops at Joseph.
+       listed: 3 | hit P3 Should the rows fail, I drop the wording "the register stops at Joseph".
 OK   R5-K1 want LISTED | [cr3] I drop the wording "the register stops at Joseph"; if the challenger objects, so be it. + [cr4] The register stops at Joseph.
        listed: 3 | hit P3 I drop the wording "the register stops at Joseph"; if the challenger objects, so
 OK   R5-K2 want LISTED | [cr3] I drop the wording "the register stops at Joseph", even if it costs LINK 6. + [cr4] The register stops at Joseph.
@@ -153,6 +153,94 @@ OK   R5-K10 want LISTED | [cr3] I withdraw the wording "the register stops at Jo
        listed: 3 | hit P3 I withdraw the wording "the register stops at Joseph" because the rows do not ca
 OK   R5-K11 want LISTED | [cr3] I withdraw the wording "the register stops at Joseph" as the challenger asked. + [cr4] The register stops at Joseph.
        listed: 3 | hit P3 I withdraw the wording "the register stops at Joseph" as the challenger asked.
+OK   R8-L1 want LISTED | [cr3] Accordingly I withdraw the wording "the register stops at Joseph". + [cr4] The register stops at Joseph.
+       listed: 3 | hit P3 Accordingly I withdraw the wording "the register stops at Joseph".
+OK   R8-L2 want LISTED | [cr3] Thus I drop the wording "the register stops at Joseph". + [cr4] The register stops at Joseph.
+       listed: 3 | hit P3 Thus I drop the wording "the register stops at Joseph".
+OK   R8-L3 want LISTED | [cr3] Hence, I retract the wording "the register stops at Joseph". + [cr4] The register stops at Joseph.
+       listed: 3 | hit P3 Hence, I retract the wording "the register stops at Joseph".
+OK   R8-L4 want LISTED | [cr3] For LINK 6, I drop the wording "the register stops at Joseph". + [cr4] The register stops at Joseph.
+       listed: 3 | hit P3 For LINK 6, I drop the wording "the register stops at Joseph".
+OK   R8-L5 want LISTED | [cr3] Since the rows do not carry it, I drop the wording "the register stops at Joseph". + [cr4] The register stops at Joseph.
+       listed: 3 | hit P3 Since the rows do not carry it, I drop the wording "the register stops at Joseph
+OK   R8-L6 want LISTED | [cr3] Finally, I abandon the wording "the register stops at Joseph". + [cr4] The register stops at Joseph.
+       listed: 3 | hit P3 Finally, I abandon the wording "the register stops at Joseph".
+OK   R8-L7 want LISTED | [cr3] In round 3 I drop the wording "the register stops at Joseph". + [cr4] The register stops at Joseph.
+       listed: 3 | hit P3 In round 3 I drop the wording "the register stops at Joseph".
+OK   R8-L8 want LISTED | [cr3] As the challenger showed, I drop the wording "the register stops at Joseph". + [cr4] The register stops at Joseph.
+       listed: 3 | hit P3 As the challenger showed, I drop the wording "the register stops at Joseph".
+OK   R8-L9 want LISTED | [cr3] Although the rows are close, I drop the wording "the register stops at Joseph". + [cr4] The register stops at Joseph.
+       listed: 3 | hit P3 Although the rows are close, I drop the wording "the register stops at Joseph".
+OK   R8-L10 want LISTED | [cr3] We drop the wording "the register stops at Joseph". + [cr4] The register stops at Joseph.
+       listed: 3 | hit P3 We drop the wording "the register stops at Joseph".
+OK   R8-L11 want LISTED | [cr3] We now withdraw the wording "the register stops at Joseph". + [cr4] The register stops at Joseph.
+       listed: 3 | hit P3 We now withdraw the wording "the register stops at Joseph".
+OK   R8-L12 want LISTED | [cr3] The claim that the register stops at Joseph is withdrawn. + [cr4] The register stops at Joseph.
+       listed: 3 | hit P3 The claim that the register stops at Joseph is withdrawn.
+OK   R8-L13 want LISTED | [cr3] The wording "the register stops at Joseph" is now dropped. + [cr4] The register stops at Joseph.
+       listed: 3 | hit P3 The wording "the register stops at Joseph" is now dropped.
+OK   R8-L14 want LISTED | [cr3] My wording "the register stops at Joseph" has been withdrawn. + [cr4] The register stops at Joseph.
+       listed: 3 | hit P3 My wording "the register stops at Joseph" has been withdrawn.
+OK   R8-L15 want LISTED | [cr3] I set aside the wording "the register stops at Joseph". + [cr4] The register stops at Joseph.
+       listed: 3 | hit P3 I set aside the wording "the register stops at Joseph".
+OK   R8-L16 want LISTED | [cr3] I put aside the wording "the register stops at Joseph". + [cr4] The register stops at Joseph.
+       listed: 3 | hit P3 I put aside the wording "the register stops at Joseph".
+OK   R8-L17 want LISTED | [cr3] I relinquish the wording "the register stops at Joseph". + [cr4] The register stops at Joseph.
+       listed: 3 | hit P3 I relinquish the wording "the register stops at Joseph".
+OK   R8-L18 want LISTED | [cr3] I renounce the wording "the register stops at Joseph". + [cr4] The register stops at Joseph.
+       listed: 3 | hit P3 I renounce the wording "the register stops at Joseph".
+OK   R8-L19 want LISTED | [cr3] I let go of the wording "the register stops at Joseph". + [cr4] The register stops at Joseph.
+       listed: 3 | hit P3 I let go of the wording "the register stops at Joseph".
+OK   R8-L20 want LISTED | [cr3] I forgo the wording "the register stops at Joseph". + [cr4] The register stops at Joseph.
+       listed: 3 | hit P3 I forgo the wording "the register stops at Joseph".
+OK   R8-L21 want LISTED | [cr3] I strike the wording "the register stops at Joseph". + [cr4] The register stops at Joseph.
+       listed: 3 | hit P3 I strike the wording "the register stops at Joseph".
+OK   R8-L22 want LISTED | [cr3] I give the wording "the register stops at Joseph" up. + [cr4] The register stops at Joseph.
+       listed: 3 | hit P3 I give the wording "the register stops at Joseph" up.
+OK   R8-L23 want LISTED | [cr3] I no longer hold that the register stops at Joseph. + [cr4] The register stops at Joseph.
+       listed: 3 | hit P3 I no longer hold that the register stops at Joseph.
+OK   R8-L24 want LISTED | [cr3] I no longer claim the wording "the register stops at Joseph". + [cr4] The register stops at Joseph.
+       listed: 3 | hit P3 I no longer claim the wording "the register stops at Joseph".
+OK   R8-L25 want LISTED | [cr3] I drop not only the bare statement but also the wording "the register stops at Joseph". + [cr4] The register stops at Joseph.
+       listed: 3 | hit P3 I drop not only the bare statement but also the wording "the register stops at J
+OK   R8-L26 want LISTED | [cr3] Accordingly, we set aside the claim that the register stops at Joseph. + [cr4] The register stops at Joseph.
+       listed: 3 | hit P3 Accordingly, we set aside the claim that the register stops at Joseph.
+MISS R8-N1 want NOT LISTED | [cr3] If the rows fail, I drop the wording "the register stops at Joseph". + [cr4] The register stops at Joseph.
+       listed: 3 | hit P3 If the rows fail, I drop the wording "the register stops at Joseph".
+MISS R8-N2 want NOT LISTED | [cr3] Unless the rows bear it, I withdraw the wording "the register stops at Joseph". + [cr4] The register stops at Joseph.
+       listed: 3 | hit P3 Unless the rows bear it, I withdraw the wording "the register stops at Joseph".
+MISS R8-N3 want NOT LISTED | [cr3] Should the rows fail, we drop the wording "the register stops at Joseph". + [cr4] The register stops at Joseph.
+       listed: 3 | hit P3 Should the rows fail, we drop the wording "the register stops at Joseph".
+OK   R8-N4 want NOT LISTED | [cr3] Nor do I drop the wording "the register stops at Joseph". + [cr4] The register stops at Joseph.
+       listed: 2
+OK   R8-N5 want NOT LISTED | [cr3] The challenger demands that I withdraw the wording "the register stops at Joseph". + [cr4] The register stops at Joseph.
+       listed: 2
+MISS R8-N6 want NOT LISTED | [cr3] Were I to drop the wording "the register stops at Joseph", the chain would still hold. + [cr4] The register stops at Joseph.
+       listed: 3 | hit P3 Were I to drop the wording "the register stops at Joseph", the chain would still
+MISS R8-N7 want NOT LISTED | [cr3] Suppose I drop the wording "the register stops at Joseph"; the chain still holds. + [cr4] The register stops at Joseph.
+       listed: 3 | hit P3 Suppose I drop the wording "the register stops at Joseph"; the chain still holds
+MISS R8-N8 want NOT LISTED | [cr3] For the sake of argument I drop the wording "the register stops at Joseph". + [cr4] The register stops at Joseph.
+       listed: 3 | hit P3 For the sake of argument I drop the wording "the register stops at Joseph".
+MISS R8-N9 want NOT LISTED | [cr3] Hypothetically, I drop the wording "the register stops at Joseph". + [cr4] The register stops at Joseph.
+       listed: 3 | hit P3 Hypothetically, I drop the wording "the register stops at Joseph".
+OK   R8-N10 want NOT LISTED | [cr3] The challenger says I drop the wording "the register stops at Joseph"; I do not. + [cr4] The register stops at Joseph.
+       listed: 2
+OK   R8-N11 want NOT LISTED | [cr3] The wording "the register stops at Joseph" is not withdrawn. + [cr4] The register stops at Joseph.
+       listed: 2
+OK   R8-N12 want NOT LISTED | [cr3] The wording "the register stops at Joseph" was dropped by the challenger, not by me. + [cr4] The register stops at Joseph.
+       listed: 2
+OK   R8-N13 want NOT LISTED | [cr3] I drop not the wording "the register stops at Joseph" but the word "alone". + [cr4] The register stops at Joseph.
+       listed: 2
+OK   R8-N14 want NOT LISTED | [cr3] I no longer doubt that the register stops at Joseph. + [cr4] The register stops at Joseph.
+       listed: 2
+MISS R8-N15 want NOT LISTED | [cr3] I would drop the wording "the register stops at Joseph" if the rows failed. + [cr4] The register stops at Joseph.
+       listed: 3 | hit P3 I would drop the wording "the register stops at Joseph" if the rows failed.
+OK   R8-N16 want NOT LISTED | [cr3] I do not drop the wording "the register stops at Joseph". + [cr4] The register stops at Joseph.
+       listed: 2
+MISS R8-N17 want NOT LISTED | [cr3] When the rows fail I drop the wording "the register stops at Joseph"; they have not. + [cr4] The register stops at Joseph.
+       listed: 3 | hit P3 When the rows fail I drop the wording "the register stops at Joseph"; they have 
+MISS R8-N18 want NOT LISTED | [cr3] I drop, for the sake of argument, the wording "the register stops at Joseph". + [cr4] The register stops at Joseph.
+       listed: 3 | hit P3 I drop, for the sake of argument, the wording "the register stops at Joseph".
 34299 Judge Contradiction Build: live candidates 1; pkgCDR candidates 2
    J1 DEFENDER | [CR3] I drop the wording "closes the espousal to any knowing." | [CR4] The rows state a not-knowing at each stage, and the knowing the challenger adds is the challenger's  | by the judges' CONTRADICTION lines (chatgpt, sol, luna); also named by the ANTI-CHEAT CHECK
    J2 DEFENDER | [CR3] Genesis 4:1, Adam knew Eve his wife; and she conceived, and bare Cain: I grant that this is the ordi | [CR4] Genesis 4:1 therefore cannot supply the sequence for Matthew, because Matthew 1:23 sets the virgin a | by the CLOSE-ROUND REVERSAL CHECK served to the judges (ruling 412)
@@ -162,4 +250,4 @@ OK   J-A1 the Luke 1:34 pair listed once, joined with the judges' pair
        J1 by the judges' CONTRADICTION lines (chatgpt, sol, luna); also named by the ANTI-CHEAT CHECK
 OK   J-0 no other new candidate than J-R1 and J-A1
        live 1, pkgCDR 2
-41 OK, 38 MISS
+70 OK, 53 MISS
