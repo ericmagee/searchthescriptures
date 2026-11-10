@@ -1,0 +1,59 @@
+OK   "COUNTED: by this grant D6 does not stand.": live UNCURED, FUN CURED (want live UNCURED, FUN CURED)
+OK   "COUNTED: the defender no longer holds D6 as declared.": live UNCURED, FUN CURED (want live UNCURED, FUN CURED)
+OK   "COUNTED: the defender cannot hold husband and wife without conceding D6.": live UNCURED, FUN CURED (want live UNCURED, FUN CURED)
+OK   "COUNTED: the defender withdrew D6 in his close round.": live CURED, FUN CURED (want live CURED, FUN CURED)
+OK   "COUNTED. He retracted the keystone in [DR4].": live CURED, FUN CURED (want live CURED, FUN CURED)
+OK   "COUNTED; the grant concedes what D6 had denied.": live CURED, FUN CURED (want live CURED, FUN CURED)
+OK   "COUNTED. The grant is a concession, though it came late.": live CURED, FUN CURED (want live CURED, FUN CURED)
+OK   "COUNTED: the challenger disputed this and the defender gave way.": live CURED, FUN CURED (want live CURED, FUN CURED)
+OK   "COUNTED. The defender objected earlier but granted it in the close.": live CURED, FUN CURED (want live CURED, FUN CURED)
+OK   "COUNTED. The grant is not a mere title; it gives up D6.": live CURED, FUN CURED (want live CURED, FUN CURED)
+OK   "COUNTED: D6 is not held once husband and wife are granted.": live UNCURED, FUN CURED (want live UNCURED, FUN CURED)
+OK   "COUNTED. I do not dispute it.": live CURED, FUN CURED (want live CURED, FUN CURED)
+OK   "COUNTED. My count did not include this grant; corrected to 5.": live CURED, FUN CURED (want live CURED, FUN CURED)
+OK   "COUNTED": live CURED, FUN CURED (want live CURED, FUN CURED)
+OK   "COUNTED.": live CURED, FUN CURED (want live CURED, FUN CURED)
+OK   "**COUNTED**": live CURED, FUN CURED (want live CURED, FUN CURED)
+OK   "COUNTED: it is not a concession of any link.": live UNCURED, FUN UNCURED (want live UNCURED, FUN UNCURED)
+OK   "COUNTED, not a concession.": live UNCURED, FUN UNCURED (want live UNCURED, FUN UNCURED)
+OK   "COUNTED. That is not right.": live CURED, FUN UNCURED (want live CURED, FUN UNCURED)
+OK   "COUNTED. It should not be counted.": live CURED, FUN UNCURED (want live CURED, FUN UNCURED)
+OK   "COUNTED; it does not apply here.": live CURED, FUN UNCURED (want live CURED, FUN UNCURED)
+OK   "COUNTED. I do not agree.": live CURED, FUN UNCURED (want live CURED, FUN UNCURED)
+OK   "COUNTED. This is not correct.": live CURED, FUN UNCURED (want live CURED, FUN UNCURED)
+OK   "NOT COUNTED, it is not a concession.": live UNCURED, FUN UNCURED (want live UNCURED, FUN UNCURED)
+OK   "COUNTED isn't right; it grants titles.": live UNCURED, FUN UNCURED (want live UNCURED, FUN UNCURED)
+OK   "This cannot be COUNTED.": live UNCURED, FUN UNCURED (want live UNCURED, FUN UNCURED)
+OK   "COUNTED is wrong here.": live UNCURED, FUN UNCURED (want live UNCURED, FUN UNCURED)
+OK   "Refuse: COUNTED does not apply.": live UNCURED, FUN UNCURED (want live UNCURED, FUN UNCURED)
+OK   "Counted.": live UNCURED, FUN UNCURED (want live UNCURED, FUN UNCURED)
+OK   FUN: NOT COUNTED is asked once, as NO REASON
+OK   FUN: "This cannot be COUNTED." is asked once, as NO REASON
+OK   FUN: "COUNTED is wrong here." is asked once, as NO REASON
+OK   FUN: "Refuse: COUNTED does not apply." is asked once, as NO REASON
+OK   B live (base): nothing after the bar is asked (live already has rev 2 B)
+OK   B rev 2: asked alone, as NO ANSWER (NO ANSWER K-S3 S3 DEFENDER CR4: #1: DEFENDER CR4: “I grant ‘husband’ and ‘wife’.”)
+OK   B rev 2: prompt section present
+---- B prompt ----
+FOLLOW-UP, asked once. The items below have no line in your reply above that can be counted. Every other item stands as your reply above left it. Answer only the items below, each on its own line beginning RESPONSE:, in the form the request above gives, and write nothing else.
+
+Items whose RESPONSE line has nothing after the bar (1):
+- K-S3 S3 DEFENDER CR4: #1: DEFENDER CR4: “I grant ‘husband’ and ‘wife’.”
+For each, write: RESPONSE: <the item, as labelled above> | <your answer>, in the form the request above gives for its rule.
+------------------
+OK   B rev 2: trailing spaces after the bar are asked too
+OK   B rev 2: a full follow-up answer cures it, no second ask
+OK   B rev 2: an empty follow-up stays UNCURED, no second ask
+OK   B rev 2: a line with text after the bar is not NO ANSWER
+OK   C setup: short reason asked
+OK   C1 live (base): the count line is kept, as in FUN
+OK   C1 rev 2: the asked side's CORRECTED COUNT kept, the other side's not
+OK   C1 rev 2: the item reads CURED (COUNTED)
+     luna idx 0 0 rev1 cs {"DEFENDER":{"n":4,"st":null}} rev2 cs {"DEFENDER":{"n":4,"st":null}}
+OK   C2: the corrected count DEFENDER 4 is written for luna, live and FUN alike
+OK   C2 rev 2: the CORRECTED STANDING audit line is in luna's verdict_raw
+OK   C2 first reply: COUNTED with CORRECTED COUNT: DEFENDER 4 is written, live and FUN alike
+OK   C1: the follow-up count replaces the first reply's count of the side
+OK   stored 34108 reply: Normalize output byte-equal
+OK   stored 34108: Panel Cure Check output byte-equal
+50 OK, 0 FAIL
