@@ -43,3 +43,12 @@ My first R13 run was void: my random number routine drew a challenger fault in e
 
 - R14 Same earlier passage, different closing sentences (my own plant): luna asks CR3 passage A against closing sentence 1; chatgpt asks passage A against closing sentence 2 (the two closing sentences do not contain one another). If chatgpt is redirected and switches, closing sentence 2 is asked about by no one, where live keeps it: a loss, FAIL. The mirrored plant (same closing sentence, different earlier passages) likewise.
 - R13 rule made strict accordingly: a question live ends with is matched only by a candidate question on the same rounds whose earlier quote AND closing quote each contain or are contained in its own.
+
+## Rev 4 (W2 commit 4c7216b5): labels added before any run of rev 4
+
+No rev 4 code was run or read before this. (My scratch copy of rev 3 with "&&" was run before, as stated in the rev 3 grade.)
+
+- R1 to R14 all OK on rev 4; size +1,581 code as W2 states (QR Check 6,026 to 7,333; QR Final 7,842 to 8,116); prompt text unchanged; only QR Check and QR Final differ from live s110.
+- R13 walk: 0 of 400 cases break the strict rule, with more than 30 redirect returns. Run a second time with another seed (R13b): 0 broken.
+- R2: the stored question round of debate 34108 still returns chatgpt and sol on the defender side.
+- The QR Check code of rev 4 differs from rev 3 only in the match test (read the difference and state it).
