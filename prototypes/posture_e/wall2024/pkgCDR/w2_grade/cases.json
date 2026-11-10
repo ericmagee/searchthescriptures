@@ -680,6 +680,142 @@
    "closing": "The register stops at Joseph.",
    "want": "LISTED",
    "note": "rev 3 grade, labeled before the run: W2 own: a true drop with a reason tail"
+  },
+  {
+   "id": "W41",
+   "adds": [
+    [
+     "cr3",
+     "I drop the wording \"the register stops at Joseph\" in case the rows fail; they do not."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "NOT LISTED",
+   "note": "rev 4 regrade, labeled before the run: 'in case' tail"
+  },
+  {
+   "id": "W42",
+   "adds": [
+    [
+     "cr3",
+     "I drop the wording \"the register stops at Joseph\" on condition that the challenger shows the gap; he has not."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "NOT LISTED",
+   "note": "rev 4 regrade, labeled before the run: 'on condition that' tail"
+  },
+  {
+   "id": "W43",
+   "adds": [
+    [
+     "cr3",
+     "Do I drop the wording \"the register stops at Joseph\"? No."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "NOT LISTED",
+   "note": "rev 4 regrade, labeled before the run: question with 'Do I'"
+  },
+  {
+   "id": "W44",
+   "adds": [
+    [
+     "cr3",
+     "I drop the wording \"the register stops at Joseph\"? Never."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "NOT LISTED",
+   "note": "rev 4 regrade, labeled before the run: question tail, 'Never'"
+  },
+  {
+   "id": "W45",
+   "adds": [
+    [
+     "cr3",
+     "I drop the wording \"the register stops at Joseph\" should the rows fail, and they stand."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "NOT LISTED",
+   "note": "rev 4 regrade, labeled before the run: 'should' conditional tail"
+  },
+  {
+   "id": "W46",
+   "adds": [
+    [
+     "cr3",
+     "I drop the wording \"the register stops at Joseph\"; if the challenger objects, so be it."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "LISTED",
+   "note": "rev 4 regrade, labeled before the run: true drop; 'if' in a later clause (a miss is safe direction)"
+  },
+  {
+   "id": "W47",
+   "adds": [
+    [
+     "cr3",
+     "I drop the wording \"the register stops at Joseph\", even if it costs LINK 6."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "LISTED",
+   "note": "rev 4 regrade, labeled before the run: true drop with 'even if' (a miss is safe direction)"
+  },
+  {
+   "id": "W48",
+   "adds": [
+    [
+     "cr3",
+     "I drop the wording \"the register stops at Joseph\" since the rows do not state it."
+    ],
+    [
+     "cr4",
+     "The register stops at Joseph."
+    ]
+   ],
+   "side": "DEFENDER",
+   "closing": "The register stops at Joseph.",
+   "want": "LISTED",
+   "note": "rev 4 regrade, labeled before the run: true drop, 'since' reason"
   }
  ]
 }
