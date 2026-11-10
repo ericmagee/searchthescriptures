@@ -54,3 +54,12 @@ The item is listed in sb_not_sent, as pkgECB does. An item that also carries an 
 - Node replay: 58 node runs, 52 equal, the same 11 withheld, 0 other.
 - Joint with pkgK7C rev 2 is rebuilt: +2,311 (1,683 + 628). The independent build gives the same 42 sources, and both packages' tests give the same results on the joint.
 - Chain-replay note (W3 limit 5): in chain_EAD_34703_out.txt, the counts after the gate are replay artifacts. The stored gate replies were written for the old item numbers: luna 1, terra 4, and the extra alternate. They are not a result.
+
+## Rev 3 (answers W3 Wall 4363 and W2 Wall 4364)
+- Change: the finding is read only from the code's own words, at the start of the note after "TRIAL pkgVP3: code check does not agree, not an item -- ". A note without that prefix is sent. The one-hop form "the answer defers to [X], which answers V (...)" is positive only when the finding inside the parenthesis is positive. The pkgVPD form "which answers V without its exact reference" is positive.
+- Size: +2,162 code measured against s112 (rev 2 +1,683). Shared Library only; prompt none. Rev 2's write file is kept as parent_s112_EAD_rev2.json.
+- W3 plants (g5, g8, g9 on rev 3): n1 to n4 as labelled (all SENT); g5 15 of 16 as labelled, h is the accepted limit.
+- W2 plants (plants_EAD_w2.cjs): N0 WITHHELD; F1 to F7 SENT; F9b and F11b SENT; F8 WITHHELD (accepted limit); F9, F10, F11 WITHHELD (the stored [CR2] answers in substance; same as W2's rev 2 output for F9 and F11).
+- W2 node replay: 74 node runs, 68 byte-equal, 13 withheld, 1 run with other change (34016, two items sharing one name, W2 hand-checked). It covers 33299 (4 withholds: gemini Genesis 4:1; Job 14:1 for gemini, terra, sol), which my harness cannot replay.
+- My plants 8 OK; my node replay 58 runs, 52 equal, 11 withheld, 0 other.
+- Joint with pkgK7C rev 2: +2,790 (2,162 + 628). Independent build (BASESRC=K7C2): 42 of 42 sources equal. pkgEAD tests on the joint: same results. W2's t_rev2_real.cjs on the joint: output identical to pkgK7C rev 2 alone (k7c_on_joint_rev3.txt).
