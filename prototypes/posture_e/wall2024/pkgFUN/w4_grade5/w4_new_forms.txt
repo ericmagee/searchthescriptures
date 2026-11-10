@@ -1,0 +1,32 @@
+CURED|w4-new|COUNTED (the defender's round 4 grant is the concession).|paren|CURED
+CURED|w4-new|COUNTED — yes, the grant is the concession.|emdash|CURED
+CURED|w4-new|COUNTED; my first answer missed it.|semicolon|CURED
+CURED|w4-new|Counted. The grant stands.|lowercase|CURED
+CURED|w4-new|COUNTED.\n\nReason: the defender grants it in round 4.|reason line|CURED
+CURED|w4-new|> COUNTED. The grant stands.|blockquote|CURED
+CURED|w4-new|`COUNTED`. The grant stands.|code mark|CURED
+CURED|w4-new|COUNTED. No other link is touched.|no-other|CURED
+CURED|w4-new|COUNTED. Not a courtesy: a concession.|not-a|CURED
+CURED|w4-new|COUNTED. Nothing withdraws it.|nothing|CURED
+CURED|w4-new|COUNTED. I was wrong before; now it is counted.|own-miss|CURED
+CURED|w4-new|COUNTED! The defender conceded.|bang|CURED
+CURED|w4-new|COUNTED. I do not accept the courtesy plea.|reject-plea|CURED
+CURED|w4-new|COUNTED. No court of appeal changes it.|no-start|CURED
+CURED|w4-new|COUNTED. Never was it a courtesy.|never|CURED
+CURED|w4-new|COUNTED. Not counting it would be wrong.|not-counting|CURED
+CURED|w4-new|COUNTED. Wrong of the defender to call it courtesy.|wrong-start|CURED
+CURED|w4-new|COUNTED. I reverse my earlier answer: it is counted.|reverse-own|CURED
+CURED|w4-new|**COUNTED** — the grant in round 4 is the concession; it is not withdrawn.|bold-dash|CURED
+CURED|w4-new|COUNTED. I disagree with my first line, which missed it.|disagree-own|CURED
+UNCURED|w4-new|COUNTED. Not counted.|refusal|ENFORCED
+UNCURED|w4-new|COUNTED. I decline.|refusal|ENFORCED
+UNCURED|w4-new|COUNTED. Scratch that.|refusal|ENFORCED
+UNCURED|w4-new|COUNTED. I take it back.|refusal|ENFORCED
+UNCURED|w4-new|COUNTED. I do not count it.|refusal|ENFORCED
+UNCURED|w4-new|COUNTED. Nope.|refusal|ENFORCED
+UNCURED|w4-new|COUNTED. Disregard this line.|refusal|ENFORCED
+UNCURED|w4-new|COUNTED, though I do not count it.|refusal|ENFORCED
+UNCURED|w4-new|COUNTED. My answer stays as before.|refusal|ENFORCED
+UNCURED|w4-new|COUNTED. The defender granted it. Scratch that.|refusal-later|NOTED
+UNCURED|w4-new|COUNTED. Round 4 holds the grant. I take it back.|refusal-later|NOTED
+UNCURED|w4-new|COUNTED. It is in the round. Nevertheless, not counted.|refusal-later|NOTED
