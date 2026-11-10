@@ -64,4 +64,14 @@ lists (see the file header). Eric ruled (19:05 CST 11-09) that the live version 
   is lost; 29 that live reads UNCURED now read CURED. Refusals 58: rev 3 reads 54 UNCURED (live 25). The 4 read CURED are
   reservations from W3's first list ("COUNTED, though late in the round.", "COUNTED, yet the link stands.", "COUNTED, unless
   the titles are excluded.", "COUNTED, although it grants only titles."), which W3 now holds should not remove a seat.
+- W2's independent test set (pkgFUN/w2_testset, 113 cases labeled from the rulebook): rev 3 matches 112 (live s98 73, rev 2 82);
+  w2_testset_FUN3.txt. The one miss is "COUNTED.\nThat is not right.": the refusal is on a second line, outside the RESPONSE line,
+  which Normalize does not pass to the reader (label for W3 to rule). To reach 112, rev 3 also widens the COUNTED opening:
+  a bullet, a numbered opening, ANSWER: or RESPONSE: before COUNTED is taken off, and closing markup then a space, a parenthesis
+  or a single dash may follow COUNTED ("**COUNTED** The defender ...", "- COUNTED. ...", "`COUNTED` the ...",
+  "COUNTED (correcting my count): ...", "COUNTED - the grant ..."). Further whole-sentence refusals from W2's set are in fun3_ref.cjs.
+- probe_FUN3: 80 OK, 4 FAIL; the 4 are the reservations above (read CURED, as live does).
+- replay_FUN3: 176 stored cure replies byte-equal.
+- gate on the s98 fetch-back: 767 node runs byte-equal or same error, 0 target item changes, 17 near-miss checks passed, GATE PASS.
+- Rolled-back insert (CURED "COUNTED, though the defender calls it a courtesy.", UNCURED "COUNTED, but I disagree."): accepted, rows 2.
 - Write file parent_s98_FUN3.json: against live s98 only the Shared Library differs (form 3 pack, pkgLIB_FUN3S).

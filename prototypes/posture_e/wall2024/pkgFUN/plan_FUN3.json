@@ -3,49 +3,49 @@
  "library": {
   "Alt_Gate_Build.js": {
    "base": "aea19f785124",
-   "patched": "a235f7e76e05",
+   "patched": "a3306e31e581",
    "changes": [
     "FUN"
    ]
   },
   "Alt_Gate_Record.js": {
    "base": "ebc06829ef0d",
-   "patched": "d0c7cff232db",
+   "patched": "ecc37f0f4cea",
    "changes": [
     "FUN"
    ]
   },
   "Alternate_Build.js": {
    "base": "52b09ec2ad5f",
-   "patched": "31873ea4995b",
+   "patched": "35d78bc559cf",
    "changes": [
     "FUN"
    ]
   },
   "Alternate_Cure_Build.js": {
    "base": "ce808bb5fabc",
-   "patched": "66893fea92a7",
+   "patched": "58bfc5bb4851",
    "changes": [
     "FUN"
    ]
   },
   "Alternate_Cure_Normalize.js": {
    "base": "b54d3259b473",
-   "patched": "ab8f14946321",
+   "patched": "fa3a296d1116",
    "changes": [
     "FUN"
    ]
   },
   "Alternate_Merge_1.js": {
    "base": "8fcab44e2807",
-   "patched": "87d19d1516b5",
+   "patched": "81e4972552c7",
    "changes": [
     "FUN"
    ]
   },
   "Alternate_Merge_Seat.js": {
    "base": "bac8e41806ec",
-   "patched": "bdcfe16955a5",
+   "patched": "cc656525bc7d",
    "changes": [
     "FUN"
    ]
@@ -57,21 +57,21 @@
   },
   "Cure_Build.js": {
    "base": "b0dd3d0d0bb6",
-   "patched": "00a92c12c514",
+   "patched": "aa58a47b7bc2",
    "changes": [
     "FUN"
    ]
   },
   "Cure_Check.js": {
    "base": "8357544ba3f0",
-   "patched": "b18f633cc6fb",
+   "patched": "ce4965eaadd7",
    "changes": [
     "FUN"
    ]
   },
   "Cure_Normalize.js": {
    "base": "b687b3b783df",
-   "patched": "301763a1a8d2",
+   "patched": "369c4903a923",
    "changes": [
     "FUN"
    ]
@@ -83,63 +83,63 @@
   },
   "Gate_Build.js": {
    "base": "d19d88f71e93",
-   "patched": "71bd61130b0b",
+   "patched": "b93597be2ccd",
    "changes": [
     "FUN"
    ]
   },
   "Gate_Record.js": {
    "base": "e932de0954ab",
-   "patched": "412868fa42b3",
+   "patched": "828e69cb0c0d",
    "changes": [
     "FUN"
    ]
   },
   "Panel_Cure_Build_1.js": {
    "base": "ed81612189fe",
-   "patched": "84648a33acbd",
+   "patched": "dfcc5ab2054f",
    "changes": [
     "FUN"
    ]
   },
   "Panel_Cure_Build_2.js": {
    "base": "4ab86227949a",
-   "patched": "ad53e6550dfb",
+   "patched": "be442ad209ae",
    "changes": [
     "FUN"
    ]
   },
   "Panel_Cure_Build_3.js": {
    "base": "80f51b2a913b",
-   "patched": "eda4f71b47dc",
+   "patched": "988a813199a6",
    "changes": [
     "FUN"
    ]
   },
   "Panel_Cure_Check.js": {
    "base": "f5e3a2ada2ec",
-   "patched": "69b31d53d335",
+   "patched": "458f9794b86e",
    "changes": [
     "FUN"
    ]
   },
   "Panel_Cure_Normalize_1.js": {
    "base": "0498b03ed071",
-   "patched": "a9b86bbd2c60",
+   "patched": "a9d860ba1a88",
    "changes": [
     "FUN"
    ]
   },
   "Panel_Cure_Normalize_2.js": {
    "base": "c7e85a631577",
-   "patched": "3f461b101172",
+   "patched": "76df4e97a176",
    "changes": [
     "FUN"
    ]
   },
   "Panel_Cure_Normalize_3.js": {
    "base": "a9f56e586370",
-   "patched": "60f93621783d",
+   "patched": "af68d79ae54e",
    "changes": [
     "FUN"
    ]
@@ -151,49 +151,49 @@
   },
   "R2_Alt_Gate_Build.js": {
    "base": "1d028006dc84",
-   "patched": "a0d9f47bc367",
+   "patched": "9112ff0e0c64",
    "changes": [
     "FUN"
    ]
   },
   "R2_Alt_Gate_Record.js": {
    "base": "36a54d6b4ec7",
-   "patched": "5d2b00bba483",
+   "patched": "32e20c7084c2",
    "changes": [
     "FUN"
    ]
   },
   "R2_Alternate_Build.js": {
    "base": "06a0f57d280d",
-   "patched": "c57b20f5fbae",
+   "patched": "b2809cce01b9",
    "changes": [
     "FUN"
    ]
   },
   "R2_Alternate_Cure_Build.js": {
    "base": "2d786efd09f2",
-   "patched": "e3e548e13b22",
+   "patched": "1b728cb26ec5",
    "changes": [
     "FUN"
    ]
   },
   "R2_Alternate_Cure_Normalize.js": {
    "base": "ec6f6ae7a484",
-   "patched": "25767f658c27",
+   "patched": "2f755778bc2b",
    "changes": [
     "FUN"
    ]
   },
   "R2_Alternate_Merge.js": {
    "base": "770a42c963d5",
-   "patched": "acbc48a4b32a",
+   "patched": "2a8635077262",
    "changes": [
     "FUN"
    ]
   },
   "R2_Alternate_Merge_Seat.js": {
    "base": "adcd9fe352bb",
-   "patched": "23c9e6fe5350",
+   "patched": "76b8998e376d",
    "changes": [
     "FUN"
    ]
