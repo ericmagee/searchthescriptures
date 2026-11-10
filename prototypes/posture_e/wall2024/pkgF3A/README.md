@@ -26,3 +26,8 @@ stays unfilled (debate_removals kind not_counted), so the panel counts two judge
   past G5 (pkgA2R) for that seat.
 - Size (measured): G1 alone +46 (Second Alternate?). RETRY alone +1,144 (Shared Library +261, Second Alternate? +519, Alternate Merge +364).
   Both +1,190. No prompt text.
+## Rev 2s (bloat rule): build_F3A2s.cjs (SET=RETRY|ALL), write files parent_s110_F3A2s_<SET>.json, tests test_F3A2s.cjs 16 OK.
+- Meets W3's closing condition (the retry line is kept; alternate_round2.retry names the model) with no library change.
+- Size (measured): retry alone +439 (Second Alternate? +303, Alternate Merge +136); with the family exemption +485. No prompt text.
+- Leaves open: C (with two unfilled seats the retried model may go to the first in panel order) and D (a2r.tried omits it; a2r.retry names it).
+- What rev 2's extra +705 over 2s bought: C (+261 library), D (tried kept, retry_for), a longer Alternate Merge form and the why text.
