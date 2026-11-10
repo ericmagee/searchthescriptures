@@ -1,0 +1,13 @@
+const {RD,out}=require('./x.cjs');const f=out('Regrade Load')[0].json.f;
+const N=s=>s.replace(/[“”]/g,'"').replace(/[‘’]/g,"'").replace(/\*/g,'').replace(/\s+/g,' ');
+const chk=(k,q)=>console.log(k,N(f[k]).includes(N(q))?'FOUND':'NOT FOUND','|',q.slice(0,80));
+chk('gr2','the stated grounds are equity and sparing her the infamy of a pregnancy found before the taking.');
+chk('cr3','The angel\'s "for" answers what Joseph pondered, and what answers it is a source, not a title.');
+chk('gr2','the present tense states her state when the angel spoke, before the future conception.');
+chk('cr3','I grant the present tense states her state when the angel spoke. I answer it fully under LINK 4.');
+chk('cr3','I drop the wording "no biological father" as a bare statement. I rest it on these rows.');
+chk('cr4','Christ had no biological father.');
+chk('cr4','with no biological father needed to complete it.');
+chk('cr4','Both verses sit inside the espousal. Mary says she knows not the man to whom she is espoused');
+chk('cr3','I drop the wording "closes the espousal to any knowing."');
+const v=N(f.cr3);let i=v.indexOf('Matthew 1:19');console.log(v.slice(v.indexOf('LINK 2: NARROWED'),v.indexOf('LINK 2: NARROWED')+1800));
