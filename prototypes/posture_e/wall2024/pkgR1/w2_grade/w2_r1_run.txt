@@ -1,0 +1,34 @@
+G1 structure
+  changed 13 nodes (want 13)
+G2/G3 rebuild
+  stubs 41 (existing 29, new 12)
+G4 runner model
+  Send Back Record: source names 9 nodes, stub names 10
+  Alt Send Back Record: source names 10 nodes, stub names 11
+  R2 Alt Send Back Record: source names 10 nodes, stub names 11
+  Send Back Build: source names 14 nodes, stub names 15
+  Alt Send Back Build: source names 15 nodes, stub names 16
+  R2 Alt Send Back Build: source names 14 nodes, stub names 15
+  Judge Enforcer Build: source names 9 nodes, stub names 10
+  Alt Judge Enforcer Build: source names 9 nodes, stub names 10
+  R2 Alt Judge Enforcer Build: source names 9 nodes, stub names 10
+  Judge Enforcer Record: source names 8 nodes, stub names 9
+  Alt Judge Enforcer Record: source names 8 nodes, stub names 9
+  R2 Alt Judge Enforcer Record: source names 8 nodes, stub names 9
+G5 behavior on saved runs
+  Send Back Record (inputs Send Back Needed?, Send Back Call openrouter): 37 runs, 74 node runs, 0 differ, 0 base errors, 0 runs skipped (no saved input)
+  Alt Send Back Record (inputs Alt Send Back Needed?, Alt Send Back Call openrouter): 36 runs, 57 node runs, 0 differ, 0 base errors, 1 runs skipped (no saved input)
+  R2 Alt Send Back Record (inputs R2 Alt Send Back Needed?, R2 Alt Send Back Call openrouter): 36 runs, 57 node runs, 0 differ, 0 base errors, 1 runs skipped (no saved input)
+  Send Back Build (inputs Judge Enforcer Record): 37 runs, 37 node runs, 0 differ, 0 base errors, 0 runs skipped (no saved input)
+  Alt Send Back Build (inputs Alt Judge Enforcer Record): 37 runs, 37 node runs, 0 differ, 0 base errors, 0 runs skipped (no saved input)
+  R2 Alt Send Back Build (inputs R2 Alt Judge Enforcer Record): 37 runs, 37 node runs, 0 differ, 0 base errors, 0 runs skipped (no saved input)
+  Judge Enforcer Build (inputs Enforcer Record): 37 runs, 37 node runs, 0 differ, 0 base errors, 8 runs skipped (no saved input)
+  Alt Judge Enforcer Build (inputs Alt Seated): 37 runs, 37 node runs, 0 differ, 0 base errors, 0 runs skipped (no saved input)
+  R2 Alt Judge Enforcer Build (inputs R2 Alt Seated): 37 runs, 37 node runs, 0 differ, 0 base errors, 0 runs skipped (no saved input)
+  Judge Enforcer Record (inputs Judge Enforcer Needed?, Judge Enforcer Retry Needed?, Judge Enforcer Retry Call deepseek): 37 runs, 63 node runs, 0 differ, 0 base errors, 0 runs skipped (no saved input)
+  Alt Judge Enforcer Record (inputs Alt Judge Enforcer Needed?, Alt Judge Enforcer Retry Needed?, Alt Judge Enforcer Retry Call deepseek): 37 runs, 51 node runs, 0 differ, 0 base errors, 0 runs skipped (no saved input)
+  R2 Alt Judge Enforcer Record (inputs R2 Alt Judge Enforcer Needed?, R2 Alt Judge Enforcer Retry Needed?, R2 Alt Judge Enforcer Retry Call deepseek): 37 runs, 51 node runs, 0 differ, 0 base errors, 0 runs skipped (no saved input)
+  total 575 node runs, 575 equal
+G6 size: node parameters 5221708 -> 4075379 (-1146329); jsCode 4962113 -> 3838493 (-1123620); Shared Library 604776 -> 913804
+G7 stub rebuild ms: median 3.64, max 11.35
+RESULT PASS
