@@ -1,0 +1,15 @@
+{"_":"W1 labels for pkgOON3 (W3, Wall 4469, parent_s115_OON3.json sha f819008ef7c22c0f), before any run. Plant: luna item S12 (E-OOR) answered CHANGE with 'to'. PASS needs: diff Shared Library only +36; stored 34726 no plant equal; every APPLY label applied on the candidate; every KEEP label NOT APPLIED with the item kept (visible) on the candidate; non-E-OOR answers equal live. RECORD rows are reported, not graded.",
+"cases":[
+ {"id":"N1","to":"OUT-OF-ROUND CONCESSIONS: NONE","expect":"APPLY"},
+ {"id":"N2","to":"OUT-OF-ROUND CONCESSIONS: REMOVE","expect":"APPLY"},
+ {"id":"N3","to":"OUT-OF-ROUND CONCESSIONS:   Struck -- the ground is from [CR2]","expect":"APPLY"},
+ {"id":"N4","to":"OUT-OF-ROUND CONCESSIONS: DELETED","expect":"APPLY"},
+ {"id":"N5","to":"OUT OF ROUND CONCESSIONS: NONE","expect":"RECORD"},
+ {"id":"N6","to":"**OUT-OF-ROUND CONCESSIONS:** NONE","expect":"RECORD"},
+ {"id":"N7","to":"OUT-OF-ROUND CONCESSIONS: None of these rows is out of round; the row stands.","expect":"RECORD","note":"strike of a keep-meaning reply; same as live plain 'None of ...'"},
+ {"id":"N8","to":"OUT-OF-ROUND CONCESSIONS: NONED","expect":"KEEP"},
+ {"id":"N9","to":"OUT-OF-ROUND CONCESSIONS: KEEP","expect":"KEEP"},
+ {"id":"N10","to":"the row without COUNTED","expect":"RECORD","note":"placeholder copied literally"},
+ {"id":"N11","to":"OUT-OF-ROUND CONCESSIONS: NONE\nDEFENDER | [CR4] | \"I grant the order.\"","expect":"RECORD"},
+ {"id":"N12","to":"OUT-OF-ROUND CONCESSIONS - NONE","expect":"RECORD"}
+]}
