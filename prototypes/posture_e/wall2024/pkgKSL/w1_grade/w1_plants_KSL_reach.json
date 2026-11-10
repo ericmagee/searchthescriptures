@@ -1,0 +1,11 @@
+[
+ {"id":"R1","t":"COUNTED.\nIt should not be counted.","rule":"CURED","note":"yes","why":"known refusal sentence on line 2"},
+ {"id":"R2","t":"COUNTED.\nThe grant is in round 3.\nIt should not be counted.","rule":"CURED","note":"yes","why":"on line 3"},
+ {"id":"R3","t":"COUNTED.\nThe grant is in round 3.\nRound 4 repeats it.\nIt should not be counted.","rule":"CURED","note":"yes","why":"on line 4 = third line under it, inside the limit"},
+ {"id":"R4","t":"COUNTED.\nOne.\nTwo.\nThree.\nIt should not be counted.","rule":"CURED","note":"no","why":"past the 3-line limit"},
+ {"id":"R5","t":"COUNTED.\n\nIt should not be counted.","rule":"CURED","note":"yes","why":"after a blank line"},
+ {"id":"R6","t":"COUNTED.\nRESPONSE: K-S3 S3 DEFENDER CR4: #2 | TOUCHES NO LINK: it grants a reading only.\nIt should not be counted.","rule":"CURED","note":"no","why":"a labeled line for another item ends #1's run"},
+ {"id":"R7","t":"COUNTED.\nAs for #2: it should not be counted.","rule":"CURED","note":"yes","why":"HAZARD: unlabeled line about another item attached to #1"},
+ {"id":"R8","t":"COUNTED.\n- It should not be counted.","rule":"CURED","note":"yes","why":"bulleted line"},
+ {"id":"R9","t":"COUNTED.\nSTATEMENT: K-S3 S3 DEFENDER CR4: #1 | It should not be counted.","rule":"CURED","note":"no","why":"labeled STATEMENT ends the run"}
+]
