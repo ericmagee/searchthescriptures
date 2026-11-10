@@ -2,7 +2,7 @@
 const fs=require('fs');const RM=require('../../pkgLIB/runner_model.cjs');const D='/mnt/project-files/wall2024/inputs/';
 const Ld=f=>{let d=JSON.parse(fs.readFileSync(f,'utf8'));d=Array.isArray(d)?d[0]:d;d=d.data||d;return d.workflow||d;};
 const code=(W,n)=>{const lib=W.nodes.find(x=>x.name==='Shared Library').parameters.jsCode;const s=W.nodes.find(x=>x.name===n).parameters.jsCode;let i=s.indexOf('\nreturn await new Function(');if(i<0)return s;return new Function('$',s.slice(0,i)+'\nreturn __S;')(()=>({params:{jsCode:lib}}));};
-const A=Ld('/mnt/project-files/wall2024/fetchback_live_s112.json'),B=Ld(process.env.CAND||'/mnt/project-files/wall2024/parent_s112_EAD.json');
+const A=Ld(process.env.BASE||'/mnt/project-files/wall2024/fetchback_live_s112.json'),B=Ld(process.env.CAND||'/mnt/project-files/wall2024/parent_s112_EAD.json');
 const files=new Set(fs.readdirSync(D));const runs=[...new Set([...files].map(f=>f.split('_')[0]).filter(r=>/^\d+$/.test(r)))].sort();
 const raw=(run,n)=>{const k=run+'_'+n.replace(/ /g,'_')+'.json';if(!files.has(k))return null;const d=JSON.parse(fs.readFileSync(D+k,'utf8'));const r=Array.isArray(d)?d[d.length-1]:d;const m=(r.data&&r.data.main)||r.main;return (m&&m[0])||[];};
 const cl=x=>JSON.parse(JSON.stringify(x));const AF=Object.getPrototypeOf(async function(){}).constructor;

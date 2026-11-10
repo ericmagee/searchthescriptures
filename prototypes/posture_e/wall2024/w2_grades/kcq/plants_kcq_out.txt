@@ -1,0 +1,9 @@
+OK   K1 sol 34726 form (Commitment 6 VOID, "quotation ... does not assert") | expected NO RAISE | live RAISE cand NO RAISE
+MISS K2 same with "quote" (stored form 5a92e92d CHALLENGE STANDING) | expected NO RAISE | live RAISE cand RAISE
+MISS K3 same with "quotations" plural | expected NO RAISE | live RAISE cand RAISE
+MISS K4 same with "quoted sentence" | expected NO RAISE | live RAISE cand RAISE
+OK   T1 true K-C, plain (stored shape) | expected RAISE | live RAISE cand RAISE
+MISS T2 true K-C, "quotation" named before the hit in the same clause | expected RAISE | live RAISE cand NO RAISE
+OK   T3 true K-C, "quotation" after the hit | expected RAISE | live RAISE cand RAISE
+OK   T4 true K-C, "quotation" in an earlier clause | expected RAISE | live RAISE cand RAISE
+OK   T5 true K-C on the keystone, "quotation" before the hit | expected RAISE | live RAISE cand RAISE

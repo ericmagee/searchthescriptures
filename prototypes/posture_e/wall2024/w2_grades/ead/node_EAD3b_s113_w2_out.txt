@@ -1,0 +1,7 @@
+33299 Send Back Build | withheld gemini ANSWER CHECK Genesis 4:1 [CR3]; gemini ANSWER CHECK Job 14:1 [CR3]; chatgpt ANSWER CHECK Job 14:1 [CR3]; sol ANSWER CHECK Job 14:1 [CR3] | rest equal (items, order, text): true | seats live gemini,chatgpt,sol EAD gemini,chatgpt,sol
+33490 Send Back Build | withheld gemini ANSWER CHECK Hebrews 2:16 [CR3] | rest equal (items, order, text): true | seats live gemini,chatgpt,sol EAD gemini,chatgpt,sol
+34016 Send Back Build | withheld luna ANSWER CHECK Romans 1:3 [CR3] | rest equal (items, order, text): false | seats live luna,chatgpt,sol EAD luna,chatgpt,sol
+34108 Send Back Build | withheld luna ANSWER CHECK Luke 1:34 [CR3]; chatgpt ANSWER CHECK Luke 1:34 [CR3]; sol ANSWER CHECK Luke 1:34 [CR3] | rest equal (items, order, text): true | seats live luna,chatgpt,sol EAD luna,chatgpt,sol
+33461 Alt Send Back Build | withheld grok ANSWER CHECK Luke 1:36 [CR3]; grok ANSWER CHECK Matthew 1:20 [CR3]; grok ANSWER CHECK Romans 1:3 [CR3] | rest equal (items, order, text): true | seats live grok EAD grok
+33627 Alt Send Back Build | withheld sol ANSWER CHECK Luke 1:27 [CR3] | rest equal (items, order, text): true | seats live sol EAD sol
+node runs 76 byte-equal 70 withheld items 13 runs with other change 1 34016 Send Back Build not replayable 0

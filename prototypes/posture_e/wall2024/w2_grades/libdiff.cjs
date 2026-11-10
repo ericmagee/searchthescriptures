@@ -1,0 +1,5 @@
+// W2: library line diff of two workflow files. usage: node libdiff.cjs <a> <b>
+const fs=require('fs');const g=f=>{let d=JSON.parse(fs.readFileSync(f,'utf8'));d=d.data||d;d=d.workflow||d;const c=d.nodes.find(n=>n.name==='Shared Library').parameters.jsCode;const a=c.indexOf('\n/*LIB*/')+8,b=c.lastIndexOf('\n/*MAP*/');return {c,L:JSON.parse(c.slice(a,b)),nodes:d.nodes};};
+const A=g(process.argv[2]),B=g(process.argv[3]);console.log('lib lines',A.L.length,B.L.length,'library code',B.c.length-A.c.length);
+for(let i=0;i<Math.max(A.L.length,B.L.length);i++)if(A.L[i]!==B.L[i]){const x=A.L[i]||'',y=B.L[i]||'';let p=0;while(x[p]===y[p])p++;let q=0;while(q<x.length-p&&x[x.length-1-q]===y[y.length-1-q])q++;console.log('line',i,'('+(y.length-x.length)+') -',JSON.stringify(x.slice(p,x.length-q)),'+',JSON.stringify(y.slice(p,y.length-q)));}
+const bn={};A.nodes.forEach(n=>bn[n.name]=n);let other=0;for(const n of B.nodes){if(n.name==='Shared Library')continue;const o=bn[n.name];if(!o||JSON.stringify(o)!==JSON.stringify(n)){other++;console.log('node differs:',n.name);}}console.log('other nodes differing:',other,'node count',A.nodes.length,B.nodes.length);

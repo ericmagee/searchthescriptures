@@ -1,0 +1,13 @@
+OK   Q1 single straight (stored) | expected CURED | live UNCURED cand CURED (MUTATION NOT APPLIED)
+OK   Q2 curly single | expected CURED | live UNCURED cand CURED
+OK   Q3 double straight | expected CURED | live CURED cand CURED
+OK   Q4 curly double | expected CURED | live CURED cand CURED
+OK   Q5 mixed: opens single, closes double | expected EITHER | live UNCURED cand CURED
+OK   Q6 apostrophe inside single marks | expected CURED | live UNCURED cand CURED
+MISS Q7 single mark opened, never closed, apostrophe in first word | expected UNCURED | live UNCURED cand CURED
+OK   Q8 no marks | expected UNCURED | live UNCURED cand UNCURED
+OK   Q9 single marks, under six characters | expected UNCURED | live UNCURED cand UNCURED
+MISS Q10 double mark opened, never closed, apostrophe later | expected UNCURED | live UNCURED cand CURED
+OK   Q11 backticks | expected UNCURED | live UNCURED cand UNCURED
+OK   Q12 bracketed round, single marks | expected CURED | live UNCURED cand CURED
+OK   Q13 curly apostrophe inside curly single marks | expected CURED | live UNCURED cand CURED
