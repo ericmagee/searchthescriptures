@@ -6,3 +6,7 @@
 - F4 planted "uncured items" (the rules refused a usable reply) and "no pool model passes the guards": no retry.
 - F5 at most one retry: Second Alternate? runs only after round 1.
 - F6 only Second Alternate? changes.
+
+## Amendment (after the first run, before any result is counted): the first run showed Second Alternate? applies G1 without the haiku exemption
+(pkgJGR rev 6) that R2 Alternate Build applies, so in 34626 (both debaters Anthropic) round 2 could never offer haiku. The sketch adds the same
+exemption to Second Alternate?. F1 to F6 unchanged.
