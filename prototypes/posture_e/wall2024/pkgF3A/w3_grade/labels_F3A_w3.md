@@ -12,3 +12,14 @@ FAIL rule: a silent drop, a missed case, or a finding I would want closed before
 - G7 a2r.tried no longer names the retried model: check every reader of a2r.tried (R2 Alternate Build, Alternate Merge) for a wrong record or a wrong exclusion.
 - G8 Family rule: R2 Alternate Build and Alternate Build carry the haiku exemption today and live Second Alternate? does not (W2's claim); the sketch's test is the same expression.
 - G9 W2's claim (b): live s110 Second Alternate? with a second model planted in the pool runs round 2 with that model (no code change).
+
+# REV 2 and REV 2s labels (W2 commits 47dfe25a and 7131abc0). Committed before any run of these files by me. Both forms get the same tests, on the ALL file of each.
+- H0 Sizes by my own diff; which nodes differ.
+- H1 Unusable twice, the SAME failure text both times (the stored reply planted again): luna's written row carries 2 ALTERNATE TRIED lines; the row gains exactly one line over round 1's row; the merged record names the retried model.
+- H2 Unusable twice with a DIFFERENT failure text the second time: 2 lines, not 3.
+- H3 Control: round 2 with a different pool model (planted), its reply unusable: the final Alternate Merge output equals live's on the same plant apart from added record keys.
+- H4 No round 2 (34626 with a rules refusal in round 1): final Alternate Merge output equals live.
+- H5 Second Alternate? on my rev 1 cases (seated, none tried, uncured, guards, timeout): equals live apart from new keys and the family exemption in a2r.free.
+- H6 Finding C plant (pool of two, the unusable reply belongs to the second seat in panel order): state where the retried model goes in each form.
+- H7 Finding D: what a2r.tried and alternate_round2 say in each form.
+- H8 Judgment, stated plainly: whether C and D left open fail rev 2s.
