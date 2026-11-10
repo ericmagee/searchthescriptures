@@ -1,0 +1,13 @@
+JB vs s110 nodes: QR Check, QR Final, Shared Library, Second Alternate?, Alternate Merge | code 2276
+OK   J1 JB differs from s110 in exactly the five expected nodes
+OK   J1 QR Check, QR Final equal the pkgQRD file
+OK   J1 Second Alternate?, Alternate Merge equal the pkgF3A rev 2s file
+OK   J1 Shared Library equals the pkgGFC rev s file
+JC vs JB nodes: Send Back Build 12, Alt Send Back Build 12, Shared Library 2241, R2 Alt Send Back Build 12 | code 2277 | JC vs s110 code 4553
+OK   J1 JC differs from JB in exactly the four rev 3 nodes
+OK   J1 the three Send Back Build nodes in JC equal those of the s110 rev 3 candidate
+OK   J7 the pkgQRD and pkgF3A nodes in JC equal JB
+OK   J1 JB connections and node count equal s110
+OK   J1 JC connections and node count equal s110
+OK   J2 41 library stub nodes: JC against s110 rev 3 differs in exactly the lines pkgGFC rev s changes against s110 | not unpacked by this tool: Alternate Build, Early Alternate Build
+10 OK, 0 FAIL

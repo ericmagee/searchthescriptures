@@ -1,0 +1,17 @@
+34299 closing enforcer: confirmed 0, none true
+OK   Panel Cure Check: JC equals JB
+OK   Panel Cure Check: s110 rev 3 equals live s110
+     Panel Cure Check: JB equals live s110: true; live s110 rerun equals the stored s94 output: true; output size 393274
+OK   Send Back Build: JC equals JB
+OK   Send Back Build: s110 rev 3 equals live s110
+     Send Back Build: JB equals live s110: true; live s110 rerun equals the stored s94 output: true; output size 922793
+OK   Send Back Record: JC equals JB
+OK   Send Back Record: s110 rev 3 equals live s110
+     Send Back Record: JB equals live s110: true; live s110 rerun equals the stored s94 output: true; output size 467393
+OK   Gate Build: JC equals JB
+OK   Gate Build: s110 rev 3 equals live s110
+     Gate Build: JB equals live s110: true; live s110 rerun equals the stored s94 output: true; output size 309201
+OK   Gate Record: JC equals JB
+OK   Gate Record: s110 rev 3 equals live s110
+     Gate Record: JB equals live s110: false; live s110 rerun equals the stored s94 output: true; output size 438020
+10 OK, 0 FAIL

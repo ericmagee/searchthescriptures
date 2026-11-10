@@ -1,6 +1,6 @@
 // W3 grade of pkgKSR and pkgECB: whole chain on execution 34626 (labels labels_KSR_ECB_w3.md). Run from anywhere.
 const chain=require('./chain.cjs');const nt=chain.nt,rd=chain.rd;const fs=require('fs');
-const F={LIVE:'/mnt/project-files/wall2024/fetchback_live_s110.json',KSR:'pkgKSR/parent_s110_KSR.json',ECB:'pkgKSR/parent_s110_ECB.json',ALL:'pkgKSR/parent_s110_ALL.json'};
+const F={LIVE:process.env.W3_LIVE||'/mnt/project-files/wall2024/fetchback_live_s110.json',KSR:'pkgKSR/parent_s110_KSR.json',ECB:'pkgKSR/parent_s110_ECB.json',ALL:process.env.W3_ALL||'pkgKSR/parent_s110_ALL.json'};
 const cl=x=>JSON.parse(JSON.stringify(x));
 // remap stored send-back replies to the candidate's item numbers, by item identity (rule, item, line); answers to items no longer sent are dropped
 const remap=(node,build)=>async(over,out)=>{const st=rd[build][0].data.main[0],nw=out(build)[0];const calls=cl(rd[node][0].data.main[0]);const res=[];let info=[];

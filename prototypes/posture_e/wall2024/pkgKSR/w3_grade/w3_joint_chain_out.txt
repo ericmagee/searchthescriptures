@@ -1,0 +1,16 @@
+=== JB (joint base)
+   luna | tag BROKEN | drv_uncured 1 | result CHALLENGER WINS :: KEYSTONE: D6 -- STANDS -- derived by the engine from the collision grades of D6 (none DEFENDER LINK BROKEN) after the change of S
+   chatgpt | tag BROKEN | drv_uncured 0 | result CHALLENGER WINS :: KEYSTONE: D6 -- STANDS -- The declared conclusion that Christ had no biological father was retained on stated rows and has not be
+   sol | tag BROKEN | drv_uncured 0 | result CHALLENGER WINS :: KEYSTONE: D6 -- STANDS -- The conclusion that Christ had no biological father remains an exhibited inference from the conception
+=== JC
+ Send Back Build: luna 13; chatgpt 3; sol 4 | not_sent 10: ["luna E-COL COLLISION D6 vs C5","luna E-COL COLLISION D6 vs C5","luna E-COL COLLISION D6 vs C6","luna E-COL COLLISION D6 vs C6","chatgpt E-COL COLLISION D6 vs C5","chatgpt E-COL COLLISION D6 vs C6","sol E-COL COLLISION D6 vs C5","sol E-COL COLLISION D6 vs C6","chatgpt E-KEY KEYSTONE D6","sol E-KEY KEYSTONE D6"]
+ gate seats [{"seat":"luna","items":5,"cured":5,"uncured_counted":0,"fresh":0,"error":null}]
+ gate items: luna NOT APPLIED E-APPLY S6; luna NOT APPLIED E-APPLY S10; luna CONTRADICTION E-GATE M; luna CONTRADICTION E-GATE M; luna CONTRADICTION E-GATE M
+ ROWS:
+   luna | tag BROKEN | drv_uncured 1 | result CHALLENGER WINS
+      KEYSTONE: D6 -- BROKEN -- D6, the conclusion that Christ had no biological father, is broken by the confirmed closing contradicti
+   chatgpt | tag BROKEN | drv_uncured 0 | result CHALLENGER WINS
+      KEYSTONE: D6 -- BROKEN -- LINK 6 BROKEN BY A CONFIRMED CLOSING CONTRADICTION
+   sol | tag BROKEN | drv_uncured 0 | result CHALLENGER WINS
+      KEYSTONE: D6 -- BROKEN -- LINK 6 BROKEN BY A CONFIRMED CLOSING CONTRADICTION
+ row fields differing from JB: verdict_raw
