@@ -1,0 +1,254 @@
+PLANT FIELDS: cec = last(rd,"Close Enforcer Record")[0][0].json.cec ; rows[].{side,status,answer,closing_q,earlier_q}; the NAC row is id X1 side DEFENDER closing_q "the child's descent from David stands through Mary"
+anticheat = last(rd,"Anticheat Record")[0][0].json.acx ; reversed.D[].{verse,close_q,earlier_q,answer,shown}; also rows[]
+NAC rows in stored: X1  reversed.D: Matthew 1:19 X35 | Luke 2:4 X49  reversed.C: 0
+
+## P0 stored 34852   EXPECTED: Luke 2:4 removed, Matthew 1:19 kept
+ Panel Build
+   base len=715053 notes=6 Luke2:4=3 Matt1:19=3 promptLens=136079,139955,137644
+   cand len=713664 notes=3 Luke2:4=0 Matt1:19=3 promptLens=135622,139498,137187
+   equal=false
+ Build Independent Verdict
+   base len=369818 notes=2 Luke2:4=1 Matt1:19=1 promptLens=209594
+   cand len=369355 notes=1 Luke2:4=0 Matt1:19=1 promptLens=209137
+   equal=false
+
+## P1 closing_q upper-case, commas/periods stripped   EXPECTED: still removed
+ Panel Build
+   base len=715053 notes=6 Luke2:4=3 Matt1:19=3 promptLens=136079,139955,137644
+   cand len=713664 notes=3 Luke2:4=0 Matt1:19=3 promptLens=135622,139498,137187
+   equal=false
+ Build Independent Verdict
+   base len=369818 notes=2 Luke2:4=1 Matt1:19=1 promptLens=209594
+   cand len=369355 notes=1 Luke2:4=0 Matt1:19=1 promptLens=209137
+   equal=false
+   (P2 closing_q now: "the child's descent from")
+
+## P2 closing_q first half only   EXPECTED: kept
+ Panel Build
+   base len=715053 notes=6 Luke2:4=3 Matt1:19=3 promptLens=136079,139955,137644
+   cand len=715053 notes=6 Luke2:4=3 Matt1:19=3 promptLens=136079,139955,137644
+   equal=true
+ Build Independent Verdict
+   base len=369818 notes=2 Luke2:4=1 Matt1:19=1 promptLens=209594
+   cand len=369818 notes=2 Luke2:4=1 Matt1:19=1 promptLens=209594
+   equal=true
+
+## P3 NAC row status -> CONFIRMED (answer left NOT A CONTRADICTION)   EXPECTED: kept
+ Panel Build
+   base len=715053 notes=6 Luke2:4=3 Matt1:19=3 promptLens=136079,139955,137644
+   cand len=715053 notes=6 Luke2:4=3 Matt1:19=3 promptLens=136079,139955,137644
+   equal=true
+ Build Independent Verdict
+   base len=369818 notes=2 Luke2:4=1 Matt1:19=1 promptLens=209594
+   cand len=369818 notes=2 Luke2:4=1 Matt1:19=1 promptLens=209594
+   equal=true
+
+## P3b (extra) NAC row ANSWER -> CONFIRMED, status left NOT A CONTRADICTION   EXPECTED: (no expectation)
+ Panel Build
+   base len=715053 notes=6 Luke2:4=3 Matt1:19=3 promptLens=136079,139955,137644
+   cand len=713664 notes=3 Luke2:4=0 Matt1:19=3 promptLens=135622,139498,137187
+   equal=false
+ Build Independent Verdict
+   base len=369818 notes=2 Luke2:4=1 Matt1:19=1 promptLens=209594
+   cand len=369355 notes=1 Luke2:4=0 Matt1:19=1 promptLens=209137
+   equal=false
+
+## P4 status -> NOT CONFIRMED (form)   EXPECTED: kept
+ Panel Build
+   base len=715053 notes=6 Luke2:4=3 Matt1:19=3 promptLens=136079,139955,137644
+   cand len=715053 notes=6 Luke2:4=3 Matt1:19=3 promptLens=136079,139955,137644
+   equal=true
+ Build Independent Verdict
+   base len=369818 notes=2 Luke2:4=1 Matt1:19=1 promptLens=209594
+   cand len=369818 notes=2 Luke2:4=1 Matt1:19=1 promptLens=209594
+   equal=true
+
+## P4 status -> NOT CONFIRMED (conflicting answers)   EXPECTED: kept
+ Panel Build
+   base len=715053 notes=6 Luke2:4=3 Matt1:19=3 promptLens=136079,139955,137644
+   cand len=715053 notes=6 Luke2:4=3 Matt1:19=3 promptLens=136079,139955,137644
+   equal=true
+ Build Independent Verdict
+   base len=369818 notes=2 Luke2:4=1 Matt1:19=1 promptLens=209594
+   cand len=369818 notes=2 Luke2:4=1 Matt1:19=1 promptLens=209594
+   equal=true
+
+## P4 status -> NO ANSWER   EXPECTED: kept
+ Panel Build
+   base len=715053 notes=6 Luke2:4=3 Matt1:19=3 promptLens=136079,139955,137644
+   cand len=715053 notes=6 Luke2:4=3 Matt1:19=3 promptLens=136079,139955,137644
+   equal=true
+ Build Independent Verdict
+   base len=369818 notes=2 Luke2:4=1 Matt1:19=1 promptLens=209594
+   cand len=369818 notes=2 Luke2:4=1 Matt1:19=1 promptLens=209594
+   equal=true
+
+## P4 status -> NOT CHECKED   EXPECTED: kept
+ Panel Build
+   base len=715053 notes=6 Luke2:4=3 Matt1:19=3 promptLens=136079,139955,137644
+   cand len=715053 notes=6 Luke2:4=3 Matt1:19=3 promptLens=136079,139955,137644
+   equal=true
+ Build Independent Verdict
+   base len=369818 notes=2 Luke2:4=1 Matt1:19=1 promptLens=209594
+   cand len=369818 notes=2 Luke2:4=1 Matt1:19=1 promptLens=209594
+   equal=true
+
+## P4 status -> NOT A CANDIDATE   EXPECTED: kept
+ Panel Build
+   base len=715053 notes=6 Luke2:4=3 Matt1:19=3 promptLens=136079,139955,137644
+   cand len=715053 notes=6 Luke2:4=3 Matt1:19=3 promptLens=136079,139955,137644
+   equal=true
+ Build Independent Verdict
+   base len=369818 notes=2 Luke2:4=1 Matt1:19=1 promptLens=209594
+   cand len=369818 notes=2 Luke2:4=1 Matt1:19=1 promptLens=209594
+   equal=true
+
+## P5 closing_q unrelated, earlier_q = anticheat close sentence   EXPECTED: kept
+ Panel Build
+   base len=715053 notes=6 Luke2:4=3 Matt1:19=3 promptLens=136079,139955,137644
+   cand len=715053 notes=6 Luke2:4=3 Matt1:19=3 promptLens=136079,139955,137644
+   equal=true
+ Build Independent Verdict
+   base len=369818 notes=2 Luke2:4=1 Matt1:19=1 promptLens=209594
+   cand len=369818 notes=2 Luke2:4=1 Matt1:19=1 promptLens=209594
+   equal=true
+
+## P6 NAC row side -> CHALLENGER (anticheat row stays D)   EXPECTED: kept
+ Panel Build
+   base len=715053 notes=6 Luke2:4=3 Matt1:19=3 promptLens=136079,139955,137644
+   cand len=713664 notes=3 Luke2:4=0 Matt1:19=3 promptLens=135622,139498,137187
+   equal=false
+ Build Independent Verdict
+   base len=369818 notes=2 Luke2:4=1 Matt1:19=1 promptLens=209594
+   cand len=369355 notes=1 Luke2:4=0 Matt1:19=1 promptLens=209137
+   equal=false
+
+## P7 add 2nd row same closing_q CONFIRMED (original stays NAC; status left as planted)   EXPECTED: (record only)
+ Panel Build
+   base len=715053 notes=6 Luke2:4=3 Matt1:19=3 promptLens=136079,139955,137644
+   cand len=713664 notes=3 Luke2:4=0 Matt1:19=3 promptLens=135622,139498,137187
+   equal=false
+ Build Independent Verdict
+   base len=369818 notes=2 Luke2:4=1 Matt1:19=1 promptLens=209594
+   cand len=369355 notes=1 Luke2:4=0 Matt1:19=1 promptLens=209137
+   equal=false
+
+## P7b (extra) as the Record code would write it: the CONFIRMED copy is downgraded to NOT CONFIRMED (conflicting answers), original stays NAC   EXPECTED: (record only)
+ Panel Build
+   base len=715053 notes=6 Luke2:4=3 Matt1:19=3 promptLens=136079,139955,137644
+   cand len=713664 notes=3 Luke2:4=0 Matt1:19=3 promptLens=135622,139498,137187
+   equal=false
+ Build Independent Verdict
+   base len=369818 notes=2 Luke2:4=1 Matt1:19=1 promptLens=209594
+   cand len=369355 notes=1 Luke2:4=0 Matt1:19=1 promptLens=209137
+   equal=false
+
+## P8a Close Enforcer Record output = empty item list   EXPECTED: no throw, all kept, equal
+ Panel Build
+   base len=712488 notes=6 Luke2:4=3 Matt1:19=3 promptLens=135232,139108,136797
+   cand len=712488 notes=6 Luke2:4=3 Matt1:19=3 promptLens=135232,139108,136797
+   equal=true
+ Build Independent Verdict
+   base len=368963 notes=2 Luke2:4=1 Matt1:19=1 promptLens=208747
+   cand len=368963 notes=2 Luke2:4=1 Matt1:19=1 promptLens=208747
+   equal=true
+
+## P8b Close Enforcer Record key deleted   EXPECTED: no throw, all kept, equal
+ Panel Build
+   base len=712488 notes=6 Luke2:4=3 Matt1:19=3 promptLens=135232,139108,136797
+   cand len=712488 notes=6 Luke2:4=3 Matt1:19=3 promptLens=135232,139108,136797
+   equal=true
+ Build Independent Verdict
+   base len=368963 notes=2 Luke2:4=1 Matt1:19=1 promptLens=208747
+   cand len=368963 notes=2 Luke2:4=1 Matt1:19=1 promptLens=208747
+   equal=true
+
+## P9 NAC closing_q "" and Luke 2:4 anticheat close_q ""   EXPECTED: Luke 2:4 kept
+ Panel Build
+   base len=714903 notes=6 Luke2:4=3 Matt1:19=3 promptLens=136029,139905,137594
+   cand len=713664 notes=3 Luke2:4=0 Matt1:19=3 promptLens=135622,139498,137187
+   equal=false
+ Build Independent Verdict
+   base len=369768 notes=2 Luke2:4=1 Matt1:19=1 promptLens=209544
+   cand len=369355 notes=1 Luke2:4=0 Matt1:19=1 promptLens=209137
+   equal=false
+
+## P9 NAC closing_q "" and Luke 2:4 anticheat close_q "..."   EXPECTED: Luke 2:4 kept
+ Panel Build
+   base len=714912 notes=6 Luke2:4=3 Matt1:19=3 promptLens=136032,139908,137597
+   cand len=713664 notes=3 Luke2:4=0 Matt1:19=3 promptLens=135622,139498,137187
+   equal=false
+ Build Independent Verdict
+   base len=369771 notes=2 Luke2:4=1 Matt1:19=1 promptLens=209547
+   cand len=369355 notes=1 Luke2:4=0 Matt1:19=1 promptLens=209137
+   equal=false
+
+## P10a Luke 2:4 anticheat row answer -> CONSISTENT but left in acx.reversed.D   EXPECTED: equal
+ Panel Build
+   base len=715053 notes=6 Luke2:4=3 Matt1:19=3 promptLens=136079,139955,137644
+   cand len=713664 notes=3 Luke2:4=0 Matt1:19=3 promptLens=135622,139498,137187
+   equal=false
+ Build Independent Verdict
+   base len=369818 notes=2 Luke2:4=1 Matt1:19=1 promptLens=209594
+   cand len=369355 notes=1 Luke2:4=0 Matt1:19=1 promptLens=209137
+   equal=false
+
+## P10b Luke 2:4 row answer CONSISTENT and removed from reversed (as the Record writes it)   EXPECTED: equal
+ Panel Build
+   base len=713664 notes=3 Luke2:4=0 Matt1:19=3 promptLens=135622,139498,137187
+   cand len=713664 notes=3 Luke2:4=0 Matt1:19=3 promptLens=135622,139498,137187
+   equal=true
+ Build Independent Verdict
+   base len=369355 notes=1 Luke2:4=0 Matt1:19=1 promptLens=209137
+   cand len=369355 notes=1 Luke2:4=0 Matt1:19=1 promptLens=209137
+   equal=true
+
+## P10c Luke 2:4 row QUOTE NOT FOUND, shown=false, left in reversed.D   EXPECTED: equal
+ Panel Build
+   base len=715053 notes=6 Luke2:4=3 Matt1:19=3 promptLens=136079,139955,137644
+   cand len=713664 notes=3 Luke2:4=0 Matt1:19=3 promptLens=135622,139498,137187
+   equal=false
+ Build Independent Verdict
+   base len=369818 notes=2 Luke2:4=1 Matt1:19=1 promptLens=209594
+   cand len=369355 notes=1 Luke2:4=0 Matt1:19=1 promptLens=209137
+   equal=false
+
+## P11 every NAC closing_q unrelated   EXPECTED: equal byte for byte
+ Panel Build
+   base len=715053 notes=6 Luke2:4=3 Matt1:19=3 promptLens=136079,139955,137644
+   cand len=715053 notes=6 Luke2:4=3 Matt1:19=3 promptLens=136079,139955,137644
+   equal=true
+ Build Independent Verdict
+   base len=369818 notes=2 Luke2:4=1 Matt1:19=1 promptLens=209594
+   cand len=369818 notes=2 Luke2:4=1 Matt1:19=1 promptLens=209594
+   equal=true
+
+### STEP 3 ex34726_full.json
+ nodes present: Panel Build=true Build Independent Verdict=true Close Enforcer Record=true Anticheat Record=true
+ acx reversed D/C: {"D":["Genesis 3:15"],"C":[]}
+ cec NAC rows: []
+
+## P0 ex34726_full.json   EXPECTED: (equal if no overlap)
+ Panel Build
+   base len=752307 notes=3 Luke2:4=0 Matt1:19=0 promptLens=144124,148440,146193
+   cand len=752307 notes=3 Luke2:4=0 Matt1:19=0 promptLens=144124,148440,146193
+   equal=true
+ Build Independent Verdict
+   base len=391748 notes=1 Luke2:4=0 Matt1:19=0 promptLens=222037
+   cand len=391748 notes=1 Luke2:4=0 Matt1:19=0 promptLens=222037
+   equal=true
+
+### STEP 3 ex34780_full.json
+ nodes present: Panel Build=true Build Independent Verdict=false Close Enforcer Record=true Anticheat Record=true
+ acx reversed D/C: {"D":["Genesis 3:15"],"C":[]}
+ cec NAC rows: []
+
+## P0 ex34780_full.json   EXPECTED: (equal if no overlap)
+ Panel Build
+   base len=751428 notes=3 Luke2:4=0 Matt1:19=0 promptLens=144032,148222,146153
+   cand len=751428 notes=3 Luke2:4=0 Matt1:19=0 promptLens=144032,148222,146153
+   equal=true
+ Build Independent Verdict
+   base len=0 notes=n/a Luke2:4=0 Matt1:19=0
+   cand len=0 notes=n/a Luke2:4=0 Matt1:19=0
+   equal=NOT RUN (node absent)
