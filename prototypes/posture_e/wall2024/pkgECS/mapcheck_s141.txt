@@ -1,0 +1,19 @@
+parent sha256 37b6c018c88aea5e
+stub nodes 43 map entries 42 stubs without map entry [ 'Early Alternate Build' ]
+length or compile faults 0
+rebuilt sources changed vs live [
+  [ 'Alt Judge Enforcer Build', 1421 ],
+  [ 'Judge Enforcer Build', 1417 ],
+  [ 'R2 Alt Judge Enforcer Build', 1421 ]
+]
+Alt Judge Enforcer Build only-window false
+Judge Enforcer Build only-window false
+R2 Alt Judge Enforcer Build only-window false
+library header null
+nodes differing [
+  'Judge Enforcer Build',
+  'Alt Judge Enforcer Build',
+  'Shared Library',
+  'R2 Alt Judge Enforcer Build'
+] conn equal true nodes 418 418
+total code delta 1548

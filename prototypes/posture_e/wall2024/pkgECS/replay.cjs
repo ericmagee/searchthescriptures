@@ -1,6 +1,6 @@
 // pkgECS replay: run the old (s140) and new rebuilt Judge Enforcer Build / Alt Judge Enforcer Build on a stored export's node outputs; compare.
 const fs=require('fs');const [,,exF]=process.argv;const ex=JSON.parse(fs.readFileSync(exF,'utf8'));const rd=ex.data.resultData.runData;const WD=ex.workflowData;
-const P=JSON.parse(fs.readFileSync('/mnt/project-files/wall2024/parent_s140_ECS.json','utf8'));
+const P=JSON.parse(fs.readFileSync('/mnt/project-files/wall2024/parent_s141_ECS.json','utf8'));
 const mk=(name)=>{const r=rd[name];const items=r?r[r.length-1].data.main.flat().filter(Boolean):[];const node=(P.nodes.find(n=>n.name===name)||{});return {isExecuted:!!r,first:()=>items[0],all:()=>items,last:()=>items[items.length-1],item:items[0],params:node.parameters||{}};};
 const $=n=>mk(n);
 const run=async(src,node)=>{const r=rd[node];if(!r)return null;const srcNode=r[0].source&&r[0].source[0]&&r[0].source[0].previousNode;const inp=mk(srcNode);const $input={all:()=>inp.all(),first:()=>inp.first(),item:inp.first()};
