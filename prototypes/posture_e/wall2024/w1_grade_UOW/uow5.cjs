@@ -1,0 +1,10 @@
+const fs=require('fs');const W='/mnt/project-files/wall2024/';
+const par=JSON.parse(fs.readFileSync(W+'parent_s140_UOW2.json','utf8'));const ex=JSON.parse(fs.readFileSync('wf35173.json','utf8'));
+const parts=w=>{const T=w.nodes.find(n=>n.name==='Shared Library').parameters.jsCode;const a=T.indexOf('\n/*LIB*/'),b=T.lastIndexOf('\n/*MAP*/'),c=T.lastIndexOf('\n/*END*/');return {T,Lb:JSON.parse(T.slice(a+8,b)),M:JSON.parse(T.slice(b+8,c))};};
+const A=parts(ex),B=parts(par);
+const dl=[];for(let i=0;i<Math.max(A.Lb.length,B.Lb.length);i++)if(A.Lb[i]!==B.Lb[i])dl.push(i);
+console.log('LIB lines',A.Lb.length,B.Lb.length,'changed',dl, dl.map(i=>B.Lb[i].length-A.Lb[i].length));
+const dm=Object.keys(B.M).filter(k=>JSON.stringify(A.M[k].p)!==JSON.stringify(B.M[k].p));console.log('MAP p changed',dm.length);
+const dn=Object.keys(B.M).filter(k=>A.M[k].n!==B.M[k].n);console.log('MAP n changed',dn.length,dn.join(', '));
+const users=Object.keys(B.M).filter(k=>B.M[k].p.some(x=>typeof x==='number'?dl.includes(x):(typeof x[0]==='number'&&dl.some(i=>i>=x[0]&&i<=x[1]))));console.log('stubs that include the changed line',users.length,'= n changed?',JSON.stringify(users.sort())===JSON.stringify(dn.sort()));
+console.log('jsCode delta',B.T.length-A.T.length);

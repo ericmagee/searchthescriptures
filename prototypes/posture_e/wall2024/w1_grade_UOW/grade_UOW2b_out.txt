@@ -1,0 +1,21 @@
+wf35173.json stubs 42 length mismatches 0 [] compile errors 0 [] header sha 7d7983e604cd503d computed 7d7983e604cd503d file sha256 5e1d49b26fa73794
+parent_s140_UOW2.json stubs 42 length mismatches 0 [] compile errors 0 [] header sha 3cf1228314efca39 computed 3cf1228314efca39 file sha256 d0d7de86967efd26
+LIB lines 3471 3471 changed [ 1898 ] [ 19 ]
+MAP p changed 0
+MAP n changed 9 Alt Gate Record, Alt Send Back Build, Alt Send Back Record, Gate Record, R2 Alt Gate Record, R2 Alt Send Back Build, R2 Alt Send Back Record, Send Back Build, Send Back Record
+stubs that include the changed line 9 = n changed? true
+jsCode delta 19
+live: \b(?:leaves?\s+(?:\w+\s+){0,3}(?:open|disputed|undecided|uns
+cand: \b(?:leaves?\s+(?:(?!--)[^\s.;:,!?()—–]+\s+){0,8}(?:open|dis
+P1 AS EXPECTED "leaves the Davidic-line question open" live false cand true
+P1 AS EXPECTED "leave **the matter** open" live false cand true
+P1 AS EXPECTED "leaves [D4] open" live false cand true
+P1 AS EXPECTED "leaves it open whether" live true cand true
+P2 NOT AS EXPECTED "leaves Joseph’s house and goes up to the open court" live false cand true
+P2 NOT AS EXPECTED "leaves him and the door was open" live false cand true
+P3 files 12 distinct lines 1754 live pass 584 cand pass 595 PASS->FAIL 0 FAIL->PASS 11
+P5 NOT AS EXPECTED "leaves the matter -- for now -- open" live false cand false
+P5 AS EXPECTED "leaves (as was supposed) open" live false cand false
+P5 AS EXPECTED "leaves the so-called question open" live false cand true
+P5 AS EXPECTED "leaves Joseph’s house — open" live false cand false
+P5 AS EXPECTED "leaves the record silent and open" live false cand true
