@@ -1,0 +1,11 @@
+== rev 2
+BAD 34726 Judge Enforcer Build cap 6 chars 20000 lost B98.1 missing items B98 calls 7
+BAD 34780 Judge Enforcer Build cap 4 chars 40000 lost B108.1,B110.1,B111.1,B112.1,B113.1,B114.1,B115.1,V1.1,V1.2,V2.1,K1.1 missing items B108,B110,B111,B112,B113,B114,B115,V1,V2,K1 calls 5
+BAD 34780 Judge Enforcer Build cap 4 chars 20000 lost B67.1 missing items B67 calls 5
+BAD 34780 Judge Enforcer Build cap 10 chars 20000 lost H13.1 missing items H13 calls 10
+BAD 34852 Judge Enforcer Build cap 2 chars 40000 lost B84.1 missing items B84 calls 2
+BAD 34852 Judge Enforcer Build cap 3 chars 40000 lost H13.1 missing items H13 calls 3
+BAD 34852 Judge Enforcer Build cap 1 chars 20000 lost B24.1 missing items B24 calls 1
+cases 380 bad 48 grades lost 105 grades checked by candidate but not live 133
+== rev 3
+cases 380 bad 0 grades lost 0 grades checked by candidate but not live 68
