@@ -1,0 +1,70 @@
+ex33149_full.json          Judge Enforcer Build         oldReplay=stored false | E-COL 6 -> 6 | set aside 0 rows 0 one row each true | non-E-COL kept true | roles 
+ex33149_full.json          Alt Judge Enforcer Build     oldReplay=stored true | E-COL 0 -> 0 | set aside 0 rows 0 one row each true | non-E-COL kept true | roles 
+ex33371_full.json          Judge Enforcer Build         oldReplay=stored false | E-COL 3 -> 3 | set aside 0 rows 0 one row each true | non-E-COL kept true | roles 
+ex33371_full.json          Alt Judge Enforcer Build     oldReplay=stored false | E-COL 11 -> 11 | set aside 0 rows 0 one row each true | non-E-COL kept true | roles 
+ex33490_full.json          Judge Enforcer Build         oldReplay=stored false | E-COL 8 -> 8 | set aside 0 rows 0 one row each true | non-E-COL kept true | roles 
+ex33490_full.json          Alt Judge Enforcer Build     oldReplay=stored false | E-COL 6 -> 6 | set aside 0 rows 0 one row each true | non-E-COL kept true | roles 
+ex33497_full.json          Judge Enforcer Build         oldReplay=stored false | E-COL 8 -> 8 | set aside 0 rows 0 one row each true | non-E-COL kept true | roles 
+ex33497_full.json          Alt Judge Enforcer Build     oldReplay=stored false | E-COL 0 -> 0 | set aside 0 rows 0 one row each true | non-E-COL kept true | roles 
+ex34299_full.json          Judge Enforcer Build         oldReplay=stored false | E-COL 0 -> 0 | set aside 0 rows 0 one row each true | non-E-COL kept true | roles 
+ex34626_full.json          Judge Enforcer Build         oldReplay=stored false | E-COL 8 -> 2 | set aside 6 rows 6 one row each true | non-E-COL kept true | roles panel
+    set aside: luna | D6 vs C5 (Romans 1:3): DEFENDER LINK BROKEN -- [AUDIT: LINK 6 BROKEN BY A CONFIRMED CLOSING CONTRADICTION -- D
+    set aside: luna | D6 vs C6 (Luke 3:23): DEFENDER LINK BROKEN -- [AUDIT: LINK 6 BROKEN BY A CONFIRMED CLOSING CONTRADICTION -- DE
+    set aside: chatgpt | D6 vs C5 (Romans 1:3): DEFENDER LINK BROKEN -- [AUDIT: LINK 6 BROKEN BY A CONFIRMED CLOSING CONTRADICTION -- D
+    set aside: chatgpt | D6 vs C6 (Luke 3:23): DEFENDER LINK BROKEN -- [AUDIT: LINK 6 BROKEN BY A CONFIRMED CLOSING CONTRADICTION -- DE
+    set aside: sol | D6 vs C5 (John 3:6; 1 John 5:1; Romans 1:3): DEFENDER LINK BROKEN -- [AUDIT: LINK 6 BROKEN BY A CONFIRMED CLOS
+    set aside: sol | D6 vs C6 (Luke 2:4; Numbers 1:18): DEFENDER LINK BROKEN -- [AUDIT: LINK 6 BROKEN BY A CONFIRMED CLOSING CONTRA
+ex34626_full.json          Alt Judge Enforcer Build     oldReplay=stored true | E-COL 0 -> 0 | set aside 0 rows 0 one row each true | non-E-COL kept true | roles 
+ex34703_full.json          Judge Enforcer Build         oldReplay=stored false | E-COL 8 -> 0 | set aside 8 rows 8 one row each true | non-E-COL kept true | roles panel
+    set aside: luna | D6 vs C1 (Matthew 1:20): DEFENDER LINK BROKEN -- [AUDIT: LINK 6 BROKEN BY A CONFIRMED CLOSING CONTRADICTION --
+    set aside: luna | D6 vs C5 (Romans 1:3): DEFENDER LINK BROKEN -- [AUDIT: LINK 6 BROKEN BY A CONFIRMED CLOSING CONTRADICTION -- D
+    set aside: luna | D6 vs C6 (Luke 3:23): DEFENDER LINK BROKEN -- [AUDIT: LINK 6 BROKEN BY A CONFIRMED CLOSING CONTRADICTION -- DE
+    set aside: chatgpt | D6 vs C5 (John 3:6): DEFENDER LINK BROKEN -- [AUDIT: LINK 6 BROKEN BY A CONFIRMED CLOSING CONTRADICTION -- DEF
+    set aside: chatgpt | D6 vs C6 (Luke 2:4): DEFENDER LINK BROKEN -- [AUDIT: LINK 6 BROKEN BY A CONFIRMED CLOSING CONTRADICTION -- DEF
+    set aside: sol | D6 vs C1 (John 3:6; 1 John 5:1): DEFENDER LINK BROKEN -- [AUDIT: LINK 6 BROKEN BY A CONFIRMED CLOSING CONTRADI
+    set aside: sol | D6 vs C5 (Romans 1:3): DEFENDER LINK BROKEN -- [AUDIT: LINK 6 BROKEN BY A CONFIRMED CLOSING CONTRADICTION -- D
+    set aside: sol | D6 vs C6 (Luke 2:4; Numbers 1:18): DEFENDER LINK BROKEN -- [AUDIT: LINK 6 BROKEN BY A CONFIRMED CLOSING CONTRA
+ex34703_full.json          Alt Judge Enforcer Build     oldReplay=stored true | E-COL 0 -> 0 | set aside 0 rows 0 one row each true | non-E-COL kept true | roles 
+ex34726_full.json          Judge Enforcer Build         oldReplay=stored false | E-COL 6 -> 2 | set aside 4 rows 4 one row each true | non-E-COL kept true | roles panel
+    set aside: luna | D1 vs C3 (Matthew 1:18): DEFENDER LINK BROKEN -- the defender's own readings make its timing claim inconsisten
+    set aside: chatgpt | D1 vs C3 (Matthew 1:25): DEFENDER LINK BROKEN -- [AUDIT: LINK 1 BROKEN BY A CONFIRMED CLOSING CONTRADICTION --
+    set aside: chatgpt | D4 vs C2 (Genesis 3:15): DEFENDER LINK BROKEN -- [AUDIT: LINK 4 BROKEN BY A CONFIRMED CLOSING CONTRADICTION --
+    set aside: sol | D1 vs C3 (Matthew 1:18; Matthew 1:25): DEFENDER LINK BROKEN -- [AUDIT: LINK 1 BROKEN BY A CONFIRMED CLOSING CO
+ex34726_full.json          Alt Judge Enforcer Build     oldReplay=stored true | E-COL 0 -> 0 | set aside 0 rows 0 one row each true | non-E-COL kept true | roles 
+ex34780_full.json          Judge Enforcer Build         oldReplay=stored false | E-COL 7 -> 4 | set aside 3 rows 3 one row each true | non-E-COL kept true | roles panel
+    set aside: luna | D1 vs C3 (Matthew 1:18): DEFENDER LINK BROKEN -- [AUDIT: LINK 1 BROKEN BY A CONFIRMED CLOSING CONTRADICTION --
+    set aside: chatgpt | D1 vs C3 (Matthew 1:25): DEFENDER LINK BROKEN -- [AUDIT: LINK 1 BROKEN BY A CONFIRMED CLOSING CONTRADICTION --
+    set aside: sol | D1 vs C3 (Matthew 1:18, Matthew 1:24-25): DEFENDER LINK BROKEN (Commitments 3, 5, and 7) -- The accepted house
+ex34780_full.json          Alt Judge Enforcer Build     oldReplay=stored true | E-COL 0 -> 0 | set aside 0 rows 0 one row each true | non-E-COL kept true | roles 
+ex34852_full.json          Judge Enforcer Build         oldReplay=stored false | E-COL 4 -> 0 | set aside 4 rows 4 one row each true | non-E-COL kept true | roles panel
+    set aside: luna | D3 vs C3 (Matthew 1:19): DEFENDER LINK BROKEN -- [AUDIT: LINK 3 BROKEN BY A CONFIRMED CLOSING CONTRADICTION --
+    set aside: chatgpt | D3 vs C5 (Acts 16:13): DEFENDER LINK BROKEN -- [AUDIT: LINK 3 BROKEN BY A CONFIRMED CLOSING CONTRADICTION -- D
+    set aside: sol | D3 vs C3 (Matthew 1:21; Luke 1:13; Luke 1:62; Luke 1:63): DEFENDER LINK BROKEN -- [AUDIT: LINK 3 BROKEN BY A C
+    set aside: sol | D3 vs C5 (Acts 16:13): DEFENDER LINK BROKEN -- [AUDIT: LINK 3 BROKEN BY A CONFIRMED CLOSING CONTRADICTION -- D
+ex34852_full.json          Alt Judge Enforcer Build     oldReplay=stored false | E-COL 4 -> 4 | set aside 0 rows 0 one row each true | non-E-COL kept true | roles 
+ex35067_full.json          Judge Enforcer Build         oldReplay=stored true | E-COL 18 -> 2 | set aside 16 rows 16 one row each true | non-E-COL kept true | roles panel
+    set aside: luna | D1 vs C1 (Matthew 1:25): DEFENDER LINK BROKEN -- [AUDIT: LINK 1 BROKEN BY A CONFIRMED CLOSING CONTRADICTION --
+    set aside: luna | D1 vs C2 (Matthew 1:20): DEFENDER LINK BROKEN -- [AUDIT: LINK 1 BROKEN BY A CONFIRMED CLOSING CONTRADICTION --
+    set aside: luna | D2 vs C1 (Matthew 1:25): DEFENDER LINK BROKEN -- [AUDIT: LINK 2 BROKEN BY A CONFIRMED CLOSING CONTRADICTION --
+    set aside: luna | D2 vs C3 (Matthew 1:23): DEFENDER LINK BROKEN -- [AUDIT: LINK 2 BROKEN BY A CONFIRMED CLOSING CONTRADICTION --
+    set aside: luna | D4 vs C4 (Galatians 4:4): DEFENDER LINK BROKEN -- [AUDIT: LINK 4 BROKEN BY A CONFIRMED CLOSING CONTRADICTION -
+    set aside: chatgpt | D1 vs C1 (Matthew 1:18): DEFENDER LINK BROKEN -- [AUDIT: LINK 1 BROKEN BY A CONFIRMED CLOSING CONTRADICTION --
+    set aside: chatgpt | D1 vs C2 (Matthew 1:20): DEFENDER LINK BROKEN -- [AUDIT: LINK 1 BROKEN BY A CONFIRMED CLOSING CONTRADICTION --
+    set aside: chatgpt | D2 vs C1 (Matthew 1:25): DEFENDER LINK BROKEN -- [AUDIT: LINK 2 BROKEN BY A CONFIRMED CLOSING CONTRADICTION --
+    set aside: chatgpt | D2 vs C3 (Luke 1:34): DEFENDER LINK BROKEN -- [AUDIT: LINK 2 BROKEN BY A CONFIRMED CLOSING CONTRADICTION -- DE
+    set aside: chatgpt | D2 vs C5 (Luke 1:35): DEFENDER LINK BROKEN -- [AUDIT: LINK 2 BROKEN BY A CONFIRMED CLOSING CONTRADICTION -- DE
+    set aside: sol | D1 vs C2 (Matthew 1:19-20; 2 Samuel 7:12; 1 Chronicles 28:6): DEFENDER LINK BROKEN -- [AUDIT: LINK 1 BROKEN BY
+    set aside: sol | D2 vs C1 (Matthew 1:18, 1:24-25; Deuteronomy 20:7; Genesis 4:1): DEFENDER LINK BROKEN -- [AUDIT: LINK 2 BROKEN
+    set aside: sol | D2 vs C3 (Isaiah 7:14; Matthew 1:23; Genesis 24:16): DEFENDER LINK BROKEN -- [AUDIT: LINK 2 BROKEN BY A CONFIR
+    set aside: sol | D2 vs C5 (Luke 1:32-35; Acts 1:8; Luke 9:34): DEFENDER LINK BROKEN -- [AUDIT: LINK 2 BROKEN BY A CONFIRMED CLO
+    set aside: sol | D4 vs C4 (Galatians 4:4; Job 14:1; John 1:6): DEFENDER LINK BROKEN -- [AUDIT: LINK 4 BROKEN BY A CONFIRMED CLO
+    set aside: sol | D4 vs C5 (Romans 1:3; Acts 2:30): DEFENDER LINK BROKEN -- [AUDIT: LINK 4 BROKEN BY A CONFIRMED CLOSING CONTRAD
+ex35067_full.json          Alt Judge Enforcer Build     oldReplay=stored true | E-COL 0 -> 0 | set aside 0 rows 0 one row each true | non-E-COL kept true | roles 
+ex35173_full.json          Judge Enforcer Build         oldReplay=stored true | E-COL 6 -> 0 | set aside 6 rows 6 one row each true | non-E-COL kept true | roles panel
+    set aside: luna | D5 vs C6: DEFENDER LINK BROKEN -- the defender’s close-round assertion that it kept the declared link contradi
+    set aside: chatgpt | D5 vs C4 (Ezra 2:62): DEFENDER LINK BROKEN -- [AUDIT: LINK 5 BROKEN BY A CONFIRMED CLOSING CONTRADICTION -- DE
+    set aside: chatgpt | D5 vs C6 (Romans 1:3): DEFENDER LINK BROKEN -- [AUDIT: LINK 5 BROKEN BY A CONFIRMED CLOSING CONTRADICTION -- D
+    set aside: sol | D5 vs C1 (Luke 1:36; Luke 1:27; Luke 3:23): DEFENDER LINK BROKEN -- [AUDIT: LINK 5 BROKEN BY A CONFIRMED CLOSI
+    set aside: sol | D5 vs C4 (Ezra 2:62; 1 Chronicles 2:35; Numbers 36:8): DEFENDER LINK BROKEN -- [AUDIT: LINK 5 BROKEN BY A CONF
+    set aside: sol | D5 vs C6 (Romans 1:3; Luke 1:35; Matthew 1:25): DEFENDER LINK BROKEN -- [AUDIT: LINK 5 BROKEN BY A CONFIRMED C
+ex35173_full.json          Alt Judge Enforcer Build     oldReplay=stored true | E-COL 10 -> 10 | set aside 0 rows 0 one row each true | non-E-COL kept true | roles 

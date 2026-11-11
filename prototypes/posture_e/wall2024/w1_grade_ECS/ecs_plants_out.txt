@@ -1,0 +1,23 @@
+nodes differing: [
+  'Judge Enforcer Build',
+  'Alt Judge Enforcer Build',
+  'Shared Library',
+  'R2 Alt Judge Enforcer Build'
+]
+rebuilt sources differing: [
+  'Alt Judge Enforcer Build',
+  'Judge Enforcer Build',
+  'R2 Alt Judge Enforcer Build'
+] [ 1421, 1417, 1421 ]
+LIB lines changed/added [ 3068, 3131 ] 3471 3471
+Q4 no CER/JCR              Judge Enforcer Build         oldReplay=stored true | E-COL 6 -> 6 | set aside 0 rows 0 one row each true | non-E-COL kept true | roles 
+Q4 no CER/JCR              Alt Judge Enforcer Build     oldReplay=stored true | E-COL 10 -> 10 | set aside 0 rows 0 one row each true | non-E-COL kept true | roles 
+Q5 flagged not confirmed   Judge Enforcer Build         oldReplay=stored true | E-COL 6 -> 6 | set aside 0 rows 0 one row each true | non-E-COL kept true | roles 
+Q5 flagged not confirmed   Alt Judge Enforcer Build     oldReplay=stored true | E-COL 10 -> 10 | set aside 0 rows 0 one row each true | non-E-COL kept true | roles 
+Q1 confirmed D3 not D5     Judge Enforcer Build         oldReplay=stored true | E-COL 6 -> 6 | set aside 0 rows 0 one row each true | non-E-COL kept true | roles 
+Q1 confirmed D3 not D5     Alt Judge Enforcer Build     oldReplay=stored true | E-COL 10 -> 10 | set aside 0 rows 0 one row each true | non-E-COL kept true | roles 
+Q2 confirmed CHALLENGER 6  Judge Enforcer Build         oldReplay=stored true | E-COL 6 -> 6 | set aside 0 rows 0 one row each true | non-E-COL kept true | roles 
+Q2 confirmed CHALLENGER 6  Alt Judge Enforcer Build     oldReplay=stored true | E-COL 10 -> 7 | set aside 3 rows 3 one row each true | non-E-COL kept true | roles alternate
+    set aside: grok | D1 vs C6 (Matthew 1:20): CHALLENGER LINK BROKEN (Commitment 3) -- the covenant-only reading cannot agree with 
+    set aside: grok | D3 vs C6 (Luke 1:35): CHALLENGER LINK BROKEN (Commitment 3) -- tying the therefore only back to the throne ver
+    set aside: grok | D5 vs C6 (Matthew 1:20): CHALLENGER LINK BROKEN (Commitment 3) -- Joseph as biological father cannot agree wit
