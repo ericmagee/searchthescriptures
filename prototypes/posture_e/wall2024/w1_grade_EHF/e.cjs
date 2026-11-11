@@ -1,0 +1,13 @@
+const fs=require('fs');const L=require('/mnt/project-files/w4/kwn/lib.cjs');const R=require('../pkgLIB/runner_model.cjs');const P='/mnt/project-files/wall2024/';
+const S=L(P+'fetchback_live_s120.json'),E=L(P+'parent_s120_EHF.json'),J0=L(P+'joint_s120_VP1B_KWN_G4Mr2.json'),J=L(P+'joint_s120_VP1B_KWN_G4Mr2_EHF.json');
+const code=w=>w.nodes.reduce((a,x)=>a+((x.parameters&&x.parameters.jsCode)||'').length,0);
+const prm=w=>w.nodes.reduce((a,x)=>{const p=Object.assign({},x.parameters||{});delete p.jsCode;return a+JSON.stringify(p).length;},0);
+const ldiff=(a,b)=>{const o=[];for(let i=0;i<Math.max(a.Lb.length,b.Lb.length);i++)if(a.Lb[i]!==b.Lb[i])o.push(i);return o;};
+const ndiff=(a,b)=>a.w.nodes.filter(x=>x.name!=='Shared Library'&&JSON.stringify(x)!==JSON.stringify(b.w.nodes.find(y=>y.name===x.name))).map(x=>x.name);
+const mp=(a,b)=>{let pd=0,nd=[];for(const k of Object.keys(a.M)){if(JSON.stringify(a.M[k].p)!==JSON.stringify(b.M[k].p))pd++;if(a.M[k].n!==b.M[k].n)nd.push(k);}return 'part lists differ '+pd+', n changed '+nd.join(',');};
+console.log('E1 code',code(E.w)-code(S.w),'prompt',prm(E.w)-prm(S.w),'| lib lines',ldiff(S,E).join(','),'| other nodes',ndiff(E,S).join(',')||'none','| conn equal',JSON.stringify(S.w.connections)===JSON.stringify(E.w.connections),'|',mp(S,E));
+const a=S.Lb[3047],b=E.Lb[3047];let i=0;while(a[i]===b[i])i++;let j=0;while(a[a.length-1-j]===b[b.length-1-j])j++;console.log('E1 old part:',JSON.stringify(a.slice(i,a.length-j)));console.log('   new part:',JSON.stringify(b.slice(i,b.length-j)),'| text growth',b.length-a.length);
+const f2033=S.Lb[2033].match(/FORCED: <Dn vs Cm>[^)]*\)/);const f3047=E.Lb[3047].match(/FORCED: <Dn vs Cm>[^)]*\)/);console.log('E2 2033 form',JSON.stringify(f2033&&f2033[0]));console.log('   3047 form',JSON.stringify(f3047&&f3047[0]),'| equal',!!f2033&&!!f3047&&f2033[0]===f3047[0]);
+console.log('E6 joint vs three-part joint: lib lines',ldiff(J0,J).join(','),'| line equals EHF line',J.Lb[3047]===E.Lb[3047],'| other nodes',ndiff(J,J0).join(',')||'none','| code vs s120',code(J.w)-code(S.w),'| vs joint',code(J.w)-code(J0.w),'| prompt',prm(J.w)-prm(S.w));
+let bad=0,chk=0;for(const W of [E,J])for(const x of W.w.nodes){if(!(x.parameters&&x.parameters.jsCode)||x.name==='Shared Library')continue;chk++;const st=R.needs(x.parameters.jsCode),eff=R.needs(W.code(x.name));const miss=[...eff.nodes].filter(m=>!st.all&&!st.nodes.has(m));const lv=R.needs(S.w.nodes.find(z=>z.name===x.name).parameters.jsCode);if(miss.length||!st.parsed||JSON.stringify([...st.nodes].sort())!==JSON.stringify([...lv.nodes].sort()))bad++;}
+console.log('E5 runner: code nodes checked',chk,'fail',bad);

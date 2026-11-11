@@ -1,0 +1,7 @@
+E1 code 17 prompt 0 | lib lines 3047 | other nodes none | conn equal true | part lists differ 0, n changed Alt Send Back Build,R2 Alt Send Back Build,Send Back Build
+E1 old part: ", on a witness the side answered, with the FORCED line for the pair given only when the gate asks for it (K-G4"
+   new part: " (on a witness the side answered: FORCED: <Dn vs Cm> -- MEANS [<round>]: \"...\" -- ANSWER [<round>]: \"...\" -- FAILS: \"...\"" | text growth 11
+E2 2033 form "FORCED: <Dn vs Cm> -- MEANS [<round>]: \"...\" -- ANSWER [<round>]: \"...\" -- FAILS: \"...\")"
+   3047 form "FORCED: <Dn vs Cm> -- MEANS [<round>]: \"...\" -- ANSWER [<round>]: \"...\" -- FAILS: \"...\")" | equal true
+E6 joint vs three-part joint: lib lines 3047 | line equals EHF line true | other nodes none | code vs s120 1300 | vs joint 17 | prompt 0
+E5 runner: code nodes checked 352 fail 0

@@ -1,0 +1,9 @@
+# W1 grade: pkgEHF (W2, Wall 4678; parent_s120_EHF.json sha256 2c0f66730ace8662; joint_s120_VP1B_KWN_G4Mr2_EHF.json sha256 9905f472ae2e5ceb)
+Against live s120, offline. Claim and plants: Wall 4680. Result: NOT PASSED (one finding). Scripts e.cjs, e3.cjs; outputs e_out.txt, e3_out.txt.
+- E1 PASS: library line 3047 only; three stub length fields only; +17 code, prompt 0; connections equal; no other node.
+- E2 PASS: the new FORCED form in 3047 equals line 2033's form character for character.
+- E5 PASS: 352 Code nodes (both files) pass runner_model; literal $() reads equal live.
+- E6 PASS: the joint equals joint_s120_VP1B_KWN_G4Mr2.json with only line 3047 changed; +1,300 vs s120 (+17 vs the joint); Send Back Build output on 34852 equal between the EHF file and the joint.
+- E3 FINDING: stored 34852 chatgpt item S7 holds TWO send-back texts that defer the FORCED line. pkgEHF changes the CURE_UND text (line 3047). The item's next block, "THE RULE FOR A BROKEN GRADE (the gate checks it, K-G4)", from library line 3115 (read by the same three Send Back Build nodes), already gives the full FORCED form for the pair ("FORCED: D4 vs C1 -- MEANS ... -- FAILS ...") and then says "give the FORCED line when the gate asks for it (K-G4, ruling 421)". With pkgEHF, chatgpt's send-back still carries that sentence twice (S7). The judge is still told to hold the FORCED line until the gate asks, the instruction the package is meant to remove.
+- CORRECTION OF MY OWN Wall 4661 item 1: I confirmed that line 3047 never gives the FORCED form; true of that line, but the S7 item as a whole did give the form, through line 3115. The fault is the deferral ("when the gate asks for it") in both lines, not a missing form.
+- Suggested (W2's decision): also change 3115's clause to "and give the FORCED line with it (K-G4, ruling 421)". Not measured.
