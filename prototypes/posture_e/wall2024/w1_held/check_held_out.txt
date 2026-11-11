@@ -1,0 +1,17 @@
+34299 J1 openai/gpt-6-luna | verdict HELD | RESULT UNDERDETERMINED | collision grades 8 (UNDERDETERMINED) ALL UD
+34299 J2 openai/gpt-6.1-terra | verdict HELD | RESULT UNDERDETERMINED | collision grades 8 (UNDERDETERMINED) ALL UD
+34299 J3 openai/gpt-6.1-sol | verdict HELD | RESULT UNDERDETERMINED | collision grades 10 (UNDERDETERMINED) ALL UD
+34626 J1 openai/gpt-6-luna | verdict BROKEN | RESULT CHALLENGER WINS | collision grades 5 (UNDERDETERMINED/DEFENDER LINK BROKEN)
+34626 J2 openai/gpt-6.1-terra | verdict HELD | RESULT UNDERDETERMINED | collision grades 8 (UNDERDETERMINED) ALL UD
+34626 J3 openai/gpt-6.1-sol | verdict HELD | RESULT UNDERDETERMINED | collision grades 9 (UNDERDETERMINED) ALL UD
+34703 J1 openai/gpt-6-luna | verdict HELD | RESULT UNDERDETERMINED | collision grades 10 (UNDERDETERMINED) ALL UD
+34703 J2 openai/gpt-6.1-terra | verdict BROKEN | RESULT CHALLENGER WINS | collision grades 8 (UNDERDETERMINED/DEFENDER LINK BROKEN)
+34703 J3 openai/gpt-6.1-sol | verdict HELD | RESULT UNDERDETERMINED | collision grades 12 (UNDERDETERMINED) ALL UD
+34726 J1 openai/gpt-6-luna | verdict BROKEN | RESULT CHALLENGER WINS | collision grades 3 (DEFENDER LINK BROKEN/UNDERDETERMINED)
+34726 J2 openai/gpt-6.1-terra | verdict HELD | RESULT UNDERDETERMINED | collision grades 7 (UNDERDETERMINED) ALL UD
+34726 J3 openai/gpt-6.1-sol | verdict HELD | RESULT UNDERDETERMINED | collision grades 8 (UNDERDETERMINED) ALL UD
+34780 J1 openai/gpt-6-luna | verdict HELD | RESULT DEFENDER WINS | collision grades 2 (CHALLENGER LINK BROKEN/UNDERDETERMINED)
+34780 J2 openai/gpt-6.1-terra | verdict HELD | RESULT UNDERDETERMINED | collision grades 12 (UNDERDETERMINED) ALL UD
+34780 J3 openai/gpt-6.1-sol | verdict BROKEN | RESULT CHALLENGER WINS | collision grades 8 (DEFENDER LINK BROKEN/UNDERDETERMINED)
+HELD 11 | BROKEN 4 | other 0 | HELD with RESULT UNDERDETERMINED 10 | HELD with DEFENDER WINS 1
+E-HOLD rows with a response line 116 | AGREE 0
