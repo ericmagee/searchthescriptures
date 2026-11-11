@@ -1,0 +1,15 @@
+length or compile faults 0
+  [ 'Alt Judge Enforcer Build', 2689 ],
+  [ 'Alt Judge Enforcer Record', 320 ],
+  [ 'Judge Enforcer Build', 2689 ],
+  [ 'Judge Enforcer Record', 320 ],
+  [ 'R2 Alt Judge Enforcer Build', 2689 ],
+  [ 'R2 Alt Judge Enforcer Record', 320 ]
+Alt Judge Enforcer Build only-window false
+Alt Judge Enforcer Record only-window false
+Judge Enforcer Build only-window false
+Judge Enforcer Record only-window false
+R2 Alt Judge Enforcer Build only-window false
+R2 Alt Judge Enforcer Record only-window false
+nodes differing [ 'Shared Library' ] conn equal true nodes 418 418
+total code delta 3103
