@@ -1,0 +1,22 @@
+const {LIVE,CAND,load,rec}=require('./h.cjs');
+const RD0=load('ex34852_full.json');const SENT='A man who knew himself the father would have no cause to put her away, and the verse shows Joseph with that cause.';
+const H2='## D2: Mary was a virgin when the conception took place (answers C3 and its presses)';
+const P=async(name,{cr4,reply})=>{const rd=JSON.parse(JSON.stringify(RD0));const F=rd['Final Output'][0].data.main[0][0].json;
+ if(cr4)F.cr4=cr4(F.cr4);const c=rd['Close Enforcer Call deepseek'][0].data.main[0];if(reply)c[0].json.choices[0].message.content=reply(c[0].json.choices[0].message.content);
+ const rd2=JSON.parse(JSON.stringify(rd));const a=await rec(LIVE,rd),b=await rec(CAND,rd2);console.log('##',name,'\n live',JSON.stringify(a),'\n cand',JSON.stringify(b));};
+const X2=/CLOSE-CONTRADICTION: X2 -- DEFENDER -- LINK 3 -- CONFIRMED([^\n]*)/;
+(async()=>{
+await P('N1a NEW pair CONFIRMED on LINK 3 and the same NEW pair NOT A CONTRADICTION on LINK 2',{reply:r=>r.replace(X2,(m,rest)=>'CLOSE-CONTRADICTION: NEW -- DEFENDER -- LINK 3 -- CONFIRMED'+rest+'\nCLOSE-CONTRADICTION: NEW -- DEFENDER -- LINK 2 -- NOT A CONTRADICTION'+rest)});
+await P('N1b candidate X2 answered CONFIRMED on LINK 3 and NOT A CONTRADICTION on LINK 2',{reply:r=>r.replace(X2,(m,rest)=>m+'\nCLOSE-CONTRADICTION: X2 -- DEFENDER -- LINK 2 -- NOT A CONTRADICTION'+rest)});
+if(process.env.ONLY)return;
+await P('N1 same pair CONFIRMED on LINK 3 and NOT A CONTRADICTION on LINK 2',{reply:r=>r.replace(X2,(m,rest)=>m+'\nCLOSE-CONTRADICTION: X3 -- DEFENDER -- LINK 2 -- NOT A CONTRADICTION'+rest)});
+await P('N2 bold ANSWER line naming D1 between the D2 heading and the sentence',{cr4:t=>{const i=t.indexOf(SENT);const j=t.lastIndexOf('\n',i);return t.slice(0,j)+'\n\n**ANSWER: Matthew 1:20 -- D1 --** [L1] "Joseph, thou son of David"'+t.slice(j);}});
+await P('N3 h3 heading "### D2:"',{cr4:t=>t.replace(H2,H2.replace('## ','### '))});
+await P('N4 CRLF line ends',{cr4:t=>t.replace(/\n/g,'\r\n')});
+await P('N5 lower-case heading "## d2:"',{cr4:t=>t.replace(H2,H2.replace('## D2','## d2'))});
+await P('N6 reply already names LINK 2',{reply:r=>r.replace('X2 -- DEFENDER -- LINK 3','X2 -- DEFENDER -- LINK 2')});
+await P('N7 second CONFIRMED pair already on LINK 2 (other sentence), X2 relinks onto 2',{reply:r=>r.replace('X1 -- DEFENDER -- LINK 2 -- NOT A CONTRADICTION','X1 -- DEFENDER -- LINK 2 -- CONFIRMED')});
+await P('N8 sentence quoted with straight single quotes inside the closing quote',{reply:r=>r.replace('"A man who knew himself the father would have no cause to put her away, and the verse shows Joseph with that cause."','"A man who knew himself the father would have no cause to put her away"')});
+await P('N9 heading "## D2 --" with a dash',{cr4:t=>t.replace(H2,'## D2 -- Mary was a virgin')});
+await P('N10 heading names an undeclared link "## D9:"',{cr4:t=>t.replace(H2,'## D9: Mary was a virgin')});
+})();
