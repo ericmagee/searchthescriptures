@@ -1,0 +1,4 @@
+for v in "/mnt/project-files/wall2024/fetchback_live_s125.json live" "pkgEAF/parent_s125_EAF_SU.json SU" "pkgEAF/parent_s125_EAF_AU.json AU"; do set -- $v; for r in 34852 34726 34703 34780; do node pkgEAF/probe_ag.cjs $1 $r | node -e '
+let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{const L=s.trim().split("\n").map(x=>JSON.parse(x));const c={served:0,near:0,none:0};const none=[];
+for(const x of L){if(x.eb)c.served++;else if(Math.max(...x.blk)>0)c.near++;else{c.none++;none.push(x.id+" "+x.verse+" ["+x.rk+"] "+x.ans.slice(0,90));}}
+console.log(process.argv[1],process.argv[2],"items",L.length,"| served",c.served,"| block found, not served (gate, or block not 60+ longer than the quote)",c.near,"| no block found",c.none);if(process.env.SHOW)none.forEach(x=>console.log("   none:",x));});' $2 $r; done; done

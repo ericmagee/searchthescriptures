@@ -1,0 +1,6 @@
+const fs=require('fs');const run=require(process.cwd()+'/pkgKSR/run_node.cjs');const {rebuild}=require(process.cwd()+'/pkgLIB/unpack.cjs');
+const g_=f=>{let d=JSON.parse(fs.readFileSync(f));d=d.data||d;return d.workflow||d;};const W=g_(process.argv[2]);const lt=W.nodes.find(x=>x.name==='Shared Library').parameters.jsCode;let s=rebuild(W.nodes.find(x=>x.name==='Judge Enforcer Build').parameters.jsCode,lt);
+const hook="if(__eb&&ids[0])ids[0].eaw_blk=__eb.t.slice(0,4000);";if(!s.includes(hook))throw new Error('hook');
+s=s.replace(hook,hook+"(globalThis.__P=globalThis.__P||[]).push({id:'B'+gi,verse:g.verse,rk:g.rk,n:AG.filter(x=>x.verse===g.verse&&x.rk===g.rk).length,len:N(g.answer).length,eb:!!__eb,ans:String(g.answer).slice(0,140),blk:(A=>[eawBlock(R,__erk,g.verse,A),eawBlockMeans(R,__erk,g.means,A),eaiBlock(R,__erk,A)])(typeof __ga!=='undefined'?__ga:g.answer).map(x=>x?N(x.t).length:0)});");
+const X=JSON.parse(fs.readFileSync('/mnt/project-files/wall2024/ex'+process.argv[3]+'_full.json'));const rd=(X.data||X).resultData.runData;
+(async()=>{globalThis.__P=[];const o=await run(s,'Judge Enforcer Build',rd);if(o.err)console.log('ERR',o.err);const re=new RegExp(process.argv[4]||'.');for(const x of globalThis.__P)if(re.test(x.verse))console.log(JSON.stringify(x));})();

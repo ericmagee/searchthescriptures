@@ -1,0 +1,8 @@
+// W2 pkgEAF: every Judge Enforcer Build item other than THE ANSWER IN FULL is byte-equal to live s125 (fixed rule text, other item kinds, E-ANS item heads), on stored runs.
+const fs=require('fs');const run=require(process.cwd()+'/pkgKSR/run_node.cjs');const {rebuild}=require(process.cwd()+'/pkgLIB/unpack.cjs');
+const g_=f=>{let d=JSON.parse(fs.readFileSync(f));d=d.data||d;return d.workflow||d;};const src=f=>{const W=g_(f);const lt=W.nodes.find(x=>x.name==='Shared Library').parameters.jsCode;return rebuild(W.nodes.find(x=>x.name==='Judge Enforcer Build').parameters.jsCode,lt);};
+const items=o=>{const M={},P=new Set();for(const it of o){const u=((it.body||it).messages||[]).map(m=>m.content);const sys=u.slice(0,-1).join('\n');P.add(sys);const t=u[u.length-1];for(const m of ('\n\n'+t).matchAll(/\n\nITEM ([A-Z]+\d+)([\s\S]*?)(?=\n\nITEM |$)/g))M[m[1]]=m[2].replace(/\nTHE ANSWER IN FULL, FROM[\s\S]*?(?=\nTHE JUDGES' GRADES:)/,'');}return {M,P:[...P].sort().join('|')};};
+(async()=>{for(const r of ['34852','34726','34703','34780']){const X=JSON.parse(fs.readFileSync('/mnt/project-files/wall2024/ex'+r+'_full.json'));const rd=(X.data||X).resultData.runData;
+ const b=items(await run(src('/mnt/project-files/wall2024/fetchback_live_s125.json'),'Judge Enforcer Build',rd));
+ for(const v of ['SU','AU']){const o=await run(src('pkgEAF/parent_s125_EAF_'+v+'.json'),'Judge Enforcer Build',rd);const n=items(o);const ks=new Set([...Object.keys(b.M),...Object.keys(n.M)]);let diff=[];for(const k of ks)if(b.M[k]!==n.M[k])diff.push(k);
+  console.log(r,v,'items',ks.size,'| differ outside THE ANSWER IN FULL:',diff.length?diff.join(' '):'none','| system text equal:',b.P===n.P);}}})();
