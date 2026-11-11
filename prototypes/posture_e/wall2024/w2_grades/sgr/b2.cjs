@@ -1,0 +1,4 @@
+const fs=require('fs');const E=JSON.parse(fs.readFileSync('/mnt/project-files/wall2024/ex35173_full.json','utf8'));const rd=E.data.resultData.runData;
+const order=Object.entries(rd).map(([n,r])=>[n,r[0].startTime||0]).sort((a,b)=>a[1]-b[1]).map(x=>x[0]);
+for(const n of order){const s=JSON.stringify(rd[n]);if(!/grok/.test(s))continue;const m=s.match(/RESULT: CHALLENGER WINS -- recomputed[^"]{0,60}?(\d+|no) collision line\(s\)?/g);const lines=[...new Set((s.match(/D[345] vs C6 \(Matthew 1:20\)?[^\\"]{0,6}|D[345] vs C6[^\\"]{0,40}?: (?:CHALLENGER|DEFENDER) LINK BROKEN|D[345] vs C6[^\\"]{0,40}?: (?:STANDS|UNDERDETERMINED)/g)||[]))];
+ const hdr=[...new Set(s.match(/(\d+) collision line\(s\) stand graded CHALLENGER LINK BROKEN/g)||[])];if(hdr.length||/D4 vs C6/.test(s))console.log(n,'| hdr',hdr.join(';'),'| ',lines.filter(x=>/LINK BROKEN|STANDS|UNDER/.test(x)).slice(0,8).join(' ; '));}

@@ -1,0 +1,4 @@
+const fs=require('fs');const rd=JSON.parse(fs.readFileSync('/mnt/project-files/wall2024/ex35173_full.json','utf8')).data.resultData.runData;
+const walk=(v,f,p='')=>{if(typeof v==='string')f(v,p);else if(v&&typeof v==='object')Object.entries(v).forEach(([k,x])=>walk(x,f,p+'.'+k));};
+for(const n of ['Alternate Cure Build','Alternate Merge Seat','Alt Gate Record','Alternate Merge']){walk(rd[n][0].data.main,(s,p)=>{if(s.length<2000||!/COLLISION POINTS/.test(s)||!/grok|CHALLENGER/.test(s))return;const col=s.slice(s.indexOf('COLLISION POINTS'));const lines=col.split('\n').filter(l=>/^\s*(?:FORCED\s*:\s*)?D\d+\s+vs\.?\s+C\d+/.test(l));
+ const cb=lines.filter(l=>/:\s*CHALLENGER LINK BROKEN/.test(l));const h=(s.match(/(\d+) collision line\(s\) stand graded/)||[])[1];if(h||cb.length)console.log(n,p.slice(0,60),'hdr',h,'| lines',lines.length,'| CLB',cb.length,cb.map(l=>l.slice(0,40)).join(' ; '));});}

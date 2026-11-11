@@ -1,0 +1,5 @@
+const fs=require('fs');const R=r=>{const E=JSON.parse(fs.readFileSync('/mnt/project-files/wall2024/ex'+r+'_full.json','utf8'));const rd=E.data.resultData.runData;for(const [n,x] of Object.entries(rd)){const j=x[0]&&x[0].data&&x[0].data.main&&x[0].data.main[0]&&x[0].data.main[0][0]&&x[0].data.main[0][0].json;if(j&&j.cr1&&j.dr3)return j;}};
+const ctx=(t,q,w=300)=>{const out=[];let i=-1;while((i=t.indexOf(q,i+1))>=0&&out.length<3)out.push(t.slice(Math.max(0,i-w),i+q.length+w).replace(/\n/g,' ⏎ '));return out;};
+let j=R('33497');for(const k of ['cr1','cr2','cr3','cr4']){for(const q of ['as the challenger says','Granted:','household and its naming'])ctx(j[k]||'',q,250).forEach(x=>console.log('33497',k,q,'|',x));}
+j=R('33371');for(const k of ['dr1','dr2','dr3','dr4','gr1','gr2']){for(const q of ['I grant','without a human father','state otherwise'])ctx(j[k]||'',q,200).forEach(x=>console.log('33371',k,q,'|',x));}
+j=R('33490');for(const k of ['dr4']){for(const q of ['G11','G+','GRANTS'])ctx(j[k]||'',q,250).forEach(x=>console.log('33490',k,q,'|',x));}
