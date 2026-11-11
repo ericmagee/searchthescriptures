@@ -1,0 +1,9 @@
+## S1 claude v opus, all accept 
+ live: panel luna,chatgpt,sol | reserve haiku | alt haiku | single chatgpt 
+ cand: panel luna,chatgpt,sol | reserve grok | alt grok,argon,haiku | single chatgpt
+## S2 chatgpt v opus 
+ live: REFUSED: ORACLE_DEBATE_V1 Init refused: NOT GRADED: the derived panel is 0 seat(s) []; the roster is exactly three. 
+ cand: REFUSED: ORACLE_DEBATE_V1 Init refused: NOT GRADED: the derived panel is 0 seat(s) []; the roster is exactly three.
+## S3 claude v opus, sol refuses the posture 
+ live: REFUSED: ORACLE_DEBATE_V1 Init refused: NOT GRADED: the derived panel is 2 seat(s) [luna, chatgpt]; the roster is exactly three (did not accept the posture: sol). 
+ cand: REFUSED: ORACLE_DEBATE_V1 Init refused: NOT GRADED: the derived panel is 2 seat(s) [luna, chatgpt]; the roster is exactly three (did not accept the posture: sol).

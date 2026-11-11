@@ -1,0 +1,5 @@
+stored Fetch Models seats: opus,gemini,chatgpt,grok,kimi,claude_synthesis,deepseek,deepseek_debate,mimo,qwen,alt_minimax31,luna,sol,qwen_flash,haiku,alt_minimax3
+R1 claude v opus: judges chatgpt,sol,luna | reserve grok | alternates grok(x-ai/grok-4.7), argon(google/gemini-4-argon), haiku(anthropic/claude-haiku-5.5)
+R2 gemini v claude: judges chatgpt,sol,luna | reserve grok | alternates grok(x-ai/grok-4.7), haiku(anthropic/claude-haiku-5.5)
+R3 grok v claude: judges chatgpt,sol,luna | reserve argon | alternates argon(google/gemini-4-argon), haiku(anthropic/claude-haiku-5.5)
+R4 claude v opus, argon row missing: judges chatgpt,sol,luna | reserve grok | alternates grok(x-ai/grok-4.7), haiku(anthropic/claude-haiku-5.5)
