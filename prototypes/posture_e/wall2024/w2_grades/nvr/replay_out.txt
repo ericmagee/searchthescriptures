@@ -1,0 +1,20 @@
+ex33490_full.json Alt Gate Build DIFF
+ A: un_token":"ODV1-33490-e1rlkpy2","F":{"verdict_tag":"HELD","defense_standing":"SELF-SUPPORTED","conceded_links":0,"challenge_standing":"PROP-DEPENDENT","challenger_conceded_links":1},"items":[{"kind":"NOT APPLIED","src":"E-APPLY S5","sid":"S5","key":"NOT APPLIED|S5","why":"the change regrades premise 5, which its item does not name (named: 4; pkgPS, W3 2446: a premise change stays inside the premises its items name)","lines":["CHALLENGER CONCEDED  
+ B: un_token":"ODV1-33490-e1rlkpy2","F":{"verdict_tag":"HELD","defense_standing":"SELF-SUPPORTED","conceded_links":0,"challenge_standing":"PROP-DEPENDENT","challenger_conceded_links":1},"items":[{"kind":"CONTRADICTION","src":"E-GATE D38","key":"D38|PREM|CHALLENGER|4","why":"your RULING card grades challenger premise 4 UNEXHIBITED, which counts it, but your CHALLENGER CONCEDED LINKS line counts 0. Change one of the two lines so they agree.","lines":["
+ex35067_full.json Send Back Record DIFF
+ A: ted by Luke 3:23 and Matthew 1:16; premise 5's channel is an inference from its exhibited rows. || The defender's quoted claim says \"father in law and reputation, not in begetting.\"","cure_status":"UNCURED","cure_reason":"SEND-BACK CHANGE TO: CONCEDED LINKS: 0 -- Premises 1 through 6 are spared; premise 4 is not void, and its link is supported by Luke 3:23 and Matthew 1:16; premise 5's channel is an inference from its exhibited rows. -- The def 
+ B: ted by Luke 3:23 and Matthew 1:16; premise 5's channel is an inference from its exhibited rows. || The defender's quoted claim says \"father in law and reputation, not in begetting.\"","cure_status":"CURED","cure_reason":"SEND-BACK CHANGE TO: CONCEDED LINKS: 0 -- Premises 1 through 6 are spared; premise 4 is not void, and its link is supported by Luke 3:23 and Matthew 1:16; premise 5's channel is an inference from its exhibited rows. -- The defen
+{
+ "Alt Gate Build equal": 9,
+ "Alt Gate Record equal": 10,
+ "Alt Send Back Record equal": 10,
+ "Alternate Merge Seat equal": 10,
+ "Cure Check equal": 7,
+ "Gate Build equal": 11,
+ "Gate Record equal": 11,
+ "Panel Cure Check equal": 11,
+ "Send Back Record equal": 10,
+ "Alt Gate Build DIFF": 1,
+ "Alternate Merge 1 equal": 6,
+ "Send Back Record DIFF": 1
+}
