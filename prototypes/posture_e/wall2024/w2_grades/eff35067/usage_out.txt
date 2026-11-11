@@ -1,0 +1,21 @@
+ITEM 1 panel cure calls 3 prompt 254271 cache read 0 cache write 254262 read % 0.0
+    Panel Cure Call 1 openrouter openai/gpt-6-luna 85247 0 85244
+    Panel Cure Call 2 openrouter openai/gpt-6.1-terra 84225 0 84222
+    Panel Cure Call 3 openrouter openai/gpt-6.1-sol 84799 0 84796
+ITEM 2 single judge calls 4 prompt 303788 cache read 0 cache write 303776 read % 0.0
+    Synthesis Call openrouter openai/gpt-6.1-terra 68030 0 68027
+    Verdict Call openrouter openai/gpt-6.1-terra 67451 0 67448
+    Cure Call openrouter openai/gpt-6.1-terra 82056 0 82053
+    Diagnostic Call openrouter openai/gpt-6.1-terra 86251 0 86248
+panel judges calls 3 prompt 208779 cache read 0 cache write 208770 read % 0.0
+    Panel Judge 1 openrouter openai/gpt-6-luna 68974 0 68971
+    Panel Judge 2 openrouter openai/gpt-6.1-terra 70297 0 70294
+    Panel Judge 3 openrouter openai/gpt-6.1-sol 69508 0 69505
+send back calls 3 prompt 239537 cache read 208770 cache write 30758 read % 87.2
+    Send Back Call openrouter openai/gpt-6-luna 79100 68971 10126
+    Send Back Call openrouter openai/gpt-6.1-terra 81087 70294 10790
+    Send Back Call openrouter openai/gpt-6.1-sol 79350 69505 9842
+gate calls 1 prompt 85446 cache read 81084 cache write 4359 read % 94.9
+    Gate Call openrouter openai/gpt-6.1-terra 85446 81084 4359
+response_format: Panel Judges Prep none,none,none | Send Back Build none,none,none | Gate Build none | Panel Cure Build 1-3 json_schema:cure_lines,json_schema:cure_lines,json_schema:cure_lines | Cure Build json_schema:cure_lines | Verdict none | Synthesis none | Diagnostic none
+Gate body extends the chatgpt Send Back body exactly: true (common 283535 of 283536 )
