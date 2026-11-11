@@ -1,0 +1,8 @@
+35067 Panel Tokens old fields equal: true | calls 49 {"anthropic":11,"openrouter":20,"deepseek":18} | billed $1.3942 | unnamed 0
+  PRL priced list (OpenRouter billed, others no price) ok | fields changed ["md","chars"] | old is exact prefix: true | added 5059 chars: "\n## Cost of this run\n\nTotal $1.3942 for 49 model calls: billed by OpenRouter $1.3942 (measured); priced from the price list $0.0000 (estimate); 29 calls have no"
+  PRL row without call_costs                           ok | fields changed ["md","chars"] | old is exact prefix: true | added 61 chars: "\n## Cost of this run\n\nNo cost record is stored for this run.\n"
+  PRL Get Row throws                                   ok | fields changed ["md","chars"] | old is exact prefix: true | added 53 chars: "\n## Cost of this run\n\nThe cost record was not found.\n"
+  PRL call_costs not an array                          ok | fields changed ["md","chars"] | old is exact prefix: true | added 61 chars: "\n## Cost of this run\n\nNo cost record is stored for this run.\n"
+  PRL entry with junk fields                           ok | fields changed ["md","chars"] | old is exact prefix: true | added 297 chars: "\n## Cost of this run\n\nTotal no price for 1 model calls: billed by OpenRouter $0.0000 (measured); priced from the price list $0.0000 (estimate).\n\n| Call | Model "
+34852 Panel Tokens old fields equal: true | calls 53 {"anthropic":11,"openrouter":25,"deepseek":17} | billed $1.4971 | unnamed 0
+33490 Panel Tokens old fields equal: true | calls 49 {"anthropic":10,"openrouter":23,"deepseek":14,"none":2} | billed $2.8728 | unnamed 0
