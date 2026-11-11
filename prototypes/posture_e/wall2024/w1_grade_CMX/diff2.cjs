@@ -1,0 +1,5 @@
+// W1: the two changed Panel Cure Check replays, item by item: seat, fields, trig and replaced lines that differ.
+const fs=require('fs');const L=require('/mnt/project-files/w4/kwn/lib.cjs');const run=require('../pkgKSR/run_node.cjs');const P='/mnt/project-files/wall2024/';
+const A=L('/tmp/claude-0/live_now.json'),B=L('/mnt/project-files/wall2024/parent_s130_CMX.json');
+(async()=>{for(const e of ['ex34780_full.json','ex35067_full.json']){const rd=JSON.parse(fs.readFileSync(P+e,'utf8')).data.resultData.runData;const a=await run(A.code('Panel Cure Check'),'Panel Cure Check',rd),b=await run(B.code('Panel Cure Check'),'Panel Cure Check',rd);
+ const walk=(x,y,p)=>{if(JSON.stringify(x)===JSON.stringify(y))return;if(x&&y&&typeof x==='object'&&typeof y==='object'){for(const k of new Set([...Object.keys(x),...Object.keys(y)]))walk(x[k],y[k],p+'.'+k);return;}console.log(e.slice(2,7),p,'\n   live:',String(JSON.stringify(x)).slice(0,700),'\n   CMX: ',String(JSON.stringify(y)).slice(0,700));};walk(a,b,'');}})();
