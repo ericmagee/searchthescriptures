@@ -1,5 +1,5 @@
-Shared Library code 7 total code 7 prompt 0
+Shared Library code 19 total code 19 prompt 0
 nodes changed [ 'Shared Library' ] node count 418 418 connections equal true
 parse as plain JS: base fails true candidate fails true (the library is a packed map, not plain JS; same result both sides)
 OPEN equals replay candidate true
-sha256 25955e678070dc32
+sha256 42512b47731b9cf4

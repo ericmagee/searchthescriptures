@@ -3,7 +3,7 @@ const fs=require('fs');
 const lib=JSON.parse(fs.readFileSync('/mnt/project-files/wall2024/fetchback_live_s140.json','utf8')).nodes.find(n=>n.name==='Shared Library').parameters.jsCode;
 const grab=s=>{const i=s.indexOf('const OPEN=/');const j=s.indexOf('/i;',i);return JSON.parse('"'+s.slice(i+12,j)+'"');};
 const OLD=new RegExp(grab(lib),'i');
-const NEWSRC=grab(lib).replace(String.raw`leaves?\s+(?:\w+\s+){0,3}(?:open`,String.raw`leaves?\s+(?:[^\s.;:,]+\s+){0,8}(?:open`);
+const NEWSRC=grab(lib).replace(String.raw`leaves?\s+(?:\w+\s+){0,3}(?:open`,String.raw`leaves?\s+(?:(?!--)[^\s.;:,!?()—–]+\s+){0,8}(?:open`);
 if(NEWSRC===grab(lib))throw new Error('anchor');const NEW=new RegExp(NEWSRC,'i');
 const set=new Set();
 for(const f of ['/mnt/project-files/wall2024/ex35173_full.json','/mnt/project-files/wall2024/ex35067_full.json']){const s=fs.readFileSync(f,'utf8').replace(/\\+n/g,'\n').replace(/\\+"/g,'"');
@@ -20,3 +20,5 @@ const P=[['leaves the matter open',1],['leave the biological status of Joseph’
 ['leaves no room; the point is not open',0],['leaves D4 standing. Open',0],['leaves the reading standing, and the press is open',0],['leaves one two three four five six seven eight nine open',0]];
 for(const [t,w] of P)console.log('PLANT',(NEW.test(t)?1:0)===w?'ok ':'BAD',w,t);
 fs.writeFileSync('/mnt/project-files/wall2024/uow_newsrc.txt',NEWSRC);
+const P2=[['leaves the link standing -- the press is open',0],['leaves the link standing — the press is open',0],['leaves the reading (the press) open',0],['leaves it! open',0],['leaves it? open',0],['leaves the so-called sonship open',1],['leaves the link standing – open',0]];
+for(const [t,w] of P2)console.log('PLANT rev2',(NEW.test(t)?1:0)===w?'ok ':'BAD',w,t);
