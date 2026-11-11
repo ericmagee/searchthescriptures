@@ -1,0 +1,4 @@
+const fs=require('fs');const walk=(v,f)=>{if(Array.isArray(v))v.forEach(x=>walk(x,f));else if(v&&typeof v==='object'){if(v.kind==='send_back'&&v.rule)f(v);Object.values(v).forEach(x=>walk(x,f));}};const T={};
+for(const fn of fs.readdirSync('/mnt/project-files/wall2024/').filter(x=>/^ex3\d+_full\.json$/.test(x))){const rd=JSON.parse(fs.readFileSync('/mnt/project-files/wall2024/'+fn,'utf8')).data.resultData.runData;const seen=new Set();
+ for(const n of ['Send Back Record','Alt Send Back Record','R2 Alt Send Back Record'])if(rd[n])walk(rd[n],r=>{const k=r.seat+r.rule+r.flagged_line;if(seen.has(k))return;seen.add(k);const s=(r.cure_reason||'')+' '+(r.response_line||'');const a=/SEND-BACK CHANGE TO/.test(s)?'CHANGE':/SEND-BACK KEEP|\bKEEP\b/.test(s)?'KEEP':'NO ANSWER/other';T[r.rule]=T[r.rule]||{};T[r.rule][a]=(T[r.rule][a]||0)+1;});}
+console.log(JSON.stringify(T,null,0));
