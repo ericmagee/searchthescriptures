@@ -1,0 +1,4 @@
+// pkgRRT limit: model replies (outputs of nodes named ...Call...) with a RETRACTED line lacking the colon form
+const fs=require('fs');for(const e of fs.readdirSync('/mnt/project-files/wall2024/').filter(x=>/^ex3\d+_full\.json$/.test(x))){const rd=JSON.parse(fs.readFileSync('/mnt/project-files/wall2024/'+e,'utf8')).data.resultData.runData;
+let col=0;const no=new Set();for(const n of Object.keys(rd).filter(n=>/call/i.test(n))){const walk=v=>{if(typeof v==='string'){for(const l of v.split(/\n/)){if(/\bRETRACTED\s*:/.test(l))col++;else if(/^\W*(?:(?:SENDBACK|SEND-BACK)[^|]*\|\|\s*)?(?:CHANGE TO\s*:?\s*)?RETRACTED\b(?!\s*:)/.test(l)&&!/LINK BROKEN to/.test(l))no.add(n+' | '+l.trim().slice(0,200));}}else if(v&&typeof v==='object')for(const k in v)walk(v[k]);};walk(rd[n]);}
+console.log(e.slice(2,7),'colon lines',col,'no-colon lines',no.size);[...no].slice(0,5).forEach(x=>console.log('   ',x));}

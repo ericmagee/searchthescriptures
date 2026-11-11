@@ -1,0 +1,15 @@
+// pkgUOW limits: UNDERDETERMINED collision lines, distinct per export; which state what is open only by forms the pattern does not read
+const fs=require('fs');const U=/\bleaves?\b(?:\s+(?!--)[^\s.;:,!?()—–]+){0,8}\s+(?:open|disputed|undecided|unsettled|unresolved|contested|in\s+dispute)\b/i;
+const T={lines:0,read:0,disputing:0,differ:0,nothingopen:0};const ex=[];
+for(const e of fs.readdirSync('/mnt/project-files/wall2024/').filter(x=>/^ex3\d+_full\.json$/.test(x))){const rd=JSON.parse(fs.readFileSync('/mnt/project-files/wall2024/'+e,'utf8')).data.resultData.runData;const seen=new Set();
+ const walk=v=>{if(typeof v==='string'){for(const l of v.split(/\n/)){const t=l.trim().replace(/^[-*•\s]+/,'').replace(/\*\*/g,'');if(/^(?:[A-Z0-9-]+(?:\.\d+)?\s*[:(][^:]{0,40}?:\s*)?D\d+\s*vs\.?\s*C\d+\b[^\n]{0,80}?:\s*UNDERDETERMINED\s*(?:--|—|–)/.test(t))seen.add(t.slice(t.search(/D\d+\s*vs/)));}}else if(v&&typeof v==='object')for(const k in v)walk(v[k]);};walk(rd);
+ for(const l of seen){T.lines++;const r=U.test(l);if(r)T.read++;if(/\bleaves?\s+nothing\s+open\b/i.test(l)){T.nothingopen++;ex.push(e.slice(2,7)+' NOTHING-OPEN: '+l.slice(0,220));}
+  if(!r&&/\bdisput(?:ing|es)\b/i.test(l)){T.disputing++;ex.push(e.slice(2,7)+' DISPUTING: '+l.slice(0,220));}if(!r&&/\bdiffer(?:s|ing)?\s+on\b/i.test(l)){T.differ++;ex.push(e.slice(2,7)+' DIFFER: '+l.slice(0,220));}}}
+console.log(JSON.stringify(T));ex.forEach(x=>console.log('  ',x));
+// exact live OPEN test (library line 1898, s143) on every distinct UNDERDETERMINED line
+{const OPEN=/\b(?:leaves?\s+(?:(?!--)[^\s.;:,!?()—–]+\s+){0,8}(?:open|disputed|undecided|unsettled|unresolved|contested|in\s+dispute)|leaves?\s+(?:\w+\s+){1,4}to\s+(?:the\s+)?other|disputed?|disputes|in\s+dispute|unsettled|unresolved|contested|left\s+open|open\s+(?:question|point|whether)|(?:does|do|did)\s+not\s+(?:decide|settle|determine|say|state|show|fix)|neither\s+(?:reading|side|one)|both\s+readings|either\s+reading|consistent\s+with\s+both|agrees?\s+with\s+both|fits?\s+both|undecided|silent\s+(?:on|about|as\s+to)|not\s+stated)\b/i;
+const res={fail:0,disputing:0,differ:0,nothingopen:0};const out=[];
+for(const e of fs.readdirSync('/mnt/project-files/wall2024/').filter(x=>/^ex3\d+_full\.json$/.test(x))){const rd=JSON.parse(fs.readFileSync('/mnt/project-files/wall2024/'+e,'utf8')).data.resultData.runData;const seen=new Set();
+ const walk=v=>{if(typeof v==='string'){for(const l of v.split(/\n/)){const t=l.trim().replace(/^[-*•\s]+/,'').replace(/\*\*/g,'');if(/^(?:[A-Z0-9-]+(?:\.\d+)?\s*[:(][^:]{0,40}?:\s*)?D\d+\s*vs\.?\s*C\d+\b[^\n]{0,80}?:\s*UNDERDETERMINED\s*(?:--|—|–)/.test(t))seen.add(t.slice(t.search(/D\d+\s*vs/)));}}else if(v&&typeof v==='object')for(const k in v)walk(v[k]);};walk(rd);
+ for(const l of seen){const L=l.replace(/\\+"/g,'"');if(/\bleaves?\s+nothing\s+open\b/i.test(L))res.nothingopen++;if(!OPEN.test(L)){res.fail++;if(/\bdisputing\b/i.test(L))res.disputing++;if(/\bdiffer(?:s|ing)?\s+on\b/i.test(L))res.differ++;out.push(e.slice(2,7)+' FAILS OPEN: '+L.slice(0,200));}}}
+console.log('LIVE OPEN TEST',JSON.stringify(res));out.forEach(x=>console.log('  ',x));}
