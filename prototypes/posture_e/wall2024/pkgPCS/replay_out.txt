@@ -1,0 +1,44 @@
+PLANTS (A = Gate/Send Back copy, B = Cure Check copy)
+sol 35173        A live {"1":"VOID","2":"VOID","3":"VOID","4":"VOID","5":"VOID","6":"VOID"} A new {"1":"VOID","2":"SPARED","3":"SPARED","4":"SPARED","5":"SPARED","6":"VOID"} | B live {"1":"VOID","2":"VOID","3":"VOID","4":"VOID","5":"VOID","6":"VOID"} B new {"1":"VOID","2":"SPARED","3":"SPARED","4":"SPARED","5":"SPARED","6":"VOID"} AS EXPECTED
+33149            A live {"1":"SPARED","2":"COUNTED","3":"SPARED","4":"SPARED","5":"COUNTED","6":"SPARED"} A new {"1":"VOID","2":"COUNTED","3":"SPARED","4":"VOID","5":"COUNTED","6":"VOID"} | B live {"1":"SPARED","2":"COUNTED","3":"SPARED","4":"SPARED","5":"COUNTED","6":"SPARED"} B new {"1":"VOID","2":"COUNTED","3":"SPARED","4":"VOID","5":"COUNTED","6":"VOID"} AS EXPECTED
+while            A live {"2":"VOID","3":"VOID","4":"VOID","5":"VOID"} A new {"2":"VOID","3":"SPARED","4":"SPARED","5":"SPARED"} | B live {"2":"VOID","3":"VOID","4":"VOID","5":"VOID"} B new {"2":"VOID","3":"SPARED","4":"SPARED","5":"SPARED"} AS EXPECTED
+but              A live {"1":"SPARED","4":"SPARED"} A new {"1":"SPARED","4":"VOID"} | B live {"1":"SPARED","4":"SPARED"} B new {"1":"SPARED","4":"VOID"} AS EXPECTED
+list and         A live {"2":"SPARED","3":"SPARED","5":"SPARED"} A new {"2":"SPARED","3":"SPARED","5":"SPARED"} | B live {"2":"SPARED","3":"SPARED","5":"SPARED"} B new {"2":"SPARED","3":"SPARED","5":"SPARED"} AS EXPECTED
+gradeless first  A live {"1":"SPARED","2":"SPARED","3":"SPARED","4":"SPARED","5":"SPARED","6":"SPARED"} A new {"1":"SPARED","2":"SPARED","3":"SPARED","4":"SPARED","5":"SPARED","6":"SPARED"} | B live {"1":"SPARED","2":"SPARED","3":"SPARED","4":"SPARED","5":"SPARED","6":"SPARED"} B new {"1":"SPARED","2":"SPARED","3":"SPARED","4":"SPARED","5":"SPARED","6":"SPARED"} AS EXPECTED
+not void         A live {"4":"SPARED","5":"SPARED"} A new {"4":"SPARED","5":"VOID"} | B live {"4":"VOID","5":"VOID"} B new {"4":"SPARED","5":"VOID"} (recorded)
+no comma         A live {"1":"VOID","2":"VOID"} A new {"1":"VOID","2":"VOID"} | B live {"1":"VOID","2":"VOID"} B new {"1":"VOID","2":"VOID"} (recorded)
+
+STORED: files 12 distinct CONCEDED LINKS strings 1764 changed in A 2 changed in B 9
+A ex33149_full.json | CHALLENGER CONCEDED LINKS: 2 -- Premises 2 and 5 UNEXHIBITED; premises 3 is spared, and premises 1, 4 and 6 remain VOID as charged (Commitment 6). 
+   live {"1":"SPARED","2":"COUNTED","3":"SPARED","4":"SPARED","5":"COUNTED","6":"SPARED"} 
+   new  {"1":"VOID","2":"COUNTED","3":"SPARED","4":"VOID","5":"COUNTED","6":"VOID"}
+A ex35173_full.json | CHALLENGER CONCEDED LINKS: 0 -- No premises counted; premises 1 and 6 remain VOID as previously charged, and premises 2 through 5 remain spared. 
+   live {"1":"VOID","2":"VOID","3":"VOID","4":"VOID","5":"VOID","6":"VOID"} 
+   new  {"1":"VOID","2":"SPARED","3":"SPARED","4":"SPARED","5":"SPARED","6":"VOID"}
+B ex33149_full.json | CHALLENGER CONCEDED LINKS: 2 -- Premises 2 and 5 UNEXHIBITED; premises 3 is spared, and premises 1, 4 and 6 remain VOID as charged (Commitment 6). 
+   live {"1":"SPARED","2":"COUNTED","3":"SPARED","4":"SPARED","5":"COUNTED","6":"SPARED"} 
+   new  {"1":"VOID","2":"COUNTED","3":"SPARED","4":"VOID","5":"COUNTED","6":"VOID"}
+B ex33490_full.json | CHALLENGER CONCEDED LINKS: 0" = no conceded links. So premise 1 is not counted-conceded; and since the premised inference was narrowed, spared. Right = SPARED → AGREE. 
+   live {"1":"COUNTED"} 
+   new  {"1":"SPARED"}
+B ex33490_full.json | CHALLENGER CONCEDED LINKS: 0 -- premise 4 is not counted UNEXHIBITED. Premise 2 VOID (Commitment 6): "in place of a begetting" is a claim the quote does not make. Premise 6 VOID (Commitment 6): "means begetting" is a claim the quote does not make. Premises 1, 3, 4 and 5 are spared. || [DR3] answers  
+   live {"1":"SPARED","2":"VOID","3":"SPARED","4":"COUNTED","5":"SPARED","6":"VOID"} 
+   new  {"1":"SPARED","2":"VOID","3":"SPARED","4":"SPARED","5":"SPARED","6":"VOID"}
+B ex33490_full.json | CHALLENGER CONCEDED LINKS: 0 -- premise 4 is not counted UNEXHIBITED. Premise 2 VOID (Commitment 6): "in place of a begetting" is a claim the quote does not make. Premise 6 VOID (Commitment 6): "means begetting" is a claim the quote does not make. Premises 1, 3, 4 and 5 are spared. || [DR3] answers  
+   live {"1":"SPARED","2":"VOID","3":"SPARED","4":"COUNTED","5":"SPARED","6":"VOID"} 
+   new  {"1":"SPARED","2":"VOID","3":"SPARED","4":"SPARED","5":"SPARED","6":"VOID"}
+B ex33490_full.json | CHALLENGER CONCEDED LINKS: 0 -- premise 4 is not counted UNEXHIBITED. Premise 2 VOID (Commitment 6): "in place of a begetting" is a claim the quote does not make. Premise 6 VOID (Commitment 6): "means begetting" is a claim the quote does not make. Premises 1, 3, 4 and 5 are spared.","why":"[DR3] ans 
+   live {"1":"SPARED","2":"VOID","3":"SPARED","4":"COUNTED","5":"SPARED","6":"VOID"} 
+   new  {"1":"SPARED","2":"VOID","3":"SPARED","4":"SPARED","5":"SPARED","6":"VOID"}
+B ex33490_full.json | CHALLENGER CONCEDED LINKS: 0 -- premise 4 is not counted UNEXHIBITED. Premise 2 VOID (Commitment 6): \\"in place of a begetting\\" is a claim the quote does not make. Premise 6 VOID (Commitment 6): \\"means begetting\\" is a claim the quote does not make. Premises 1, 3, 4 and 5 are spared. 
+   live {"1":"SPARED","2":"VOID","3":"SPARED","4":"COUNTED","5":"SPARED","6":"VOID"} 
+   new  {"1":"SPARED","2":"VOID","3":"SPARED","4":"SPARED","5":"SPARED","6":"VOID"}
+B ex34626_full.json | CONCEDED LINKS: 0 -- None; D1–D6 are not counted as conceded or unexhibited in [CR3] or [CR4]." It doesn't mention premise 4 specifically but says D1-D6 not counted. That is a spared ruling. So if right SPARED, AGREE. 
+   live {"4":"COUNTED"} 
+   new  {"4":"SPARED"}
+B ex35173_full.json | CONCEDED LINKS: 0 -- Premises 1–6 are not counted as conceded or unexhibited; premise 6 was narrowed, not wholly surrendered. 
+   live {"1":"COUNTED","2":"COUNTED","3":"COUNTED","4":"COUNTED","5":"COUNTED","6":"COUNTED"} 
+   new  {"1":"SPARED","2":"SPARED","3":"SPARED","4":"SPARED","5":"SPARED","6":"SPARED"}
+B ex35173_full.json | CHALLENGER CONCEDED LINKS: 0 -- No premises counted; premises 1 and 6 remain VOID as previously charged, and premises 2 through 5 remain spared. 
+   live {"1":"VOID","2":"VOID","3":"VOID","4":"VOID","5":"VOID","6":"VOID"} 
+   new  {"1":"VOID","2":"SPARED","3":"SPARED","4":"SPARED","5":"SPARED","6":"VOID"}
