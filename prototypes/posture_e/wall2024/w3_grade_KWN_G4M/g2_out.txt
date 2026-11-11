@@ -1,0 +1,42 @@
+## 1 stored sol line 
+ live: UNCURED | neither the RESPONSE nor the STATEMENT line says STANDS WITHOUT IT because <layer> with an 
+ F1  : CURED | answered: NOT HELD, with a reason that quotes the flagged sentence (pkgKW)
+## 2a lead joined by a dash 
+ live: UNCURED | neither the RESPONSE nor the STATEMENT line says STANDS WITHOUT IT because <layer> with an 
+ F1  : UNCURED | neither the RESPONSE nor the STATEMENT line says STANDS WITHOUT IT because <layer> with an
+## 2b lead joined by a colon 
+ live: UNCURED | neither the RESPONSE nor the STATEMENT line says STANDS WITHOUT IT because <layer> with an 
+ F1  : UNCURED | neither the RESPONSE nor the STATEMENT line says STANDS WITHOUT IT because <layer> with an
+## 3 NOT HELD after a lead, quote of another sentence 
+ live: UNCURED | neither the RESPONSE nor the STATEMENT line says STANDS WITHOUT IT because <layer> with an 
+ F1  : UNCURED | neither the RESPONSE nor the STATEMENT line says STANDS WITHOUT IT because <layer> with an
+## 4 prose, not held inside a sentence 
+ live: UNCURED | neither the RESPONSE nor the STATEMENT line says STANDS WITHOUT IT because <layer> with an 
+ F1  : UNCURED | neither the RESPONSE nor the STATEMENT line says STANDS WITHOUT IT because <layer> with an
+## 5 lead then bare not held 
+ live: UNCURED | neither the RESPONSE nor the STATEMENT line says STANDS WITHOUT IT because <layer> with an 
+ F1  : UNCURED | neither the RESPONSE nor the STATEMENT line says STANDS WITHOUT IT because <layer> with an
+## 6a lead says CONCEDED then NOT HELD 
+ live: CURED | answered: the link is conceded 
+ F1  : CURED | answered: the link is conceded
+## 6b REASSERTED first 
+ live: CURED | answered: the withdrawn footing is reasserted in a later round, with its quote 
+ F1  : CURED | answered: the withdrawn footing is reasserted in a later round, with its quote
+## 7 NOT HELD only inside a quotation 
+ live: UNCURED | neither the RESPONSE nor the STATEMENT line says STANDS WITHOUT IT because <layer> with an 
+ F1  : CURED | answered: NOT HELD, with a reason that quotes the flagged sentence (pkgKW)
+## 9 leading spaces before NOT HELD (live accepts) 
+ live: CURED | answered: NOT HELD, with a reason that quotes the flagged sentence (pkgKW) 
+ F1  : CURED | answered: NOT HELD, with a reason that quotes the flagged sentence (pkgKW)
+## 10 leading bold 
+ live: UNCURED | neither the RESPONSE nor the STATEMENT line says STANDS WITHOUT IT because <layer> with an 
+ F1  : CURED | answered: NOT HELD, with a reason that quotes the flagged sentence (pkgKW)
+## 11 leading quote mark 
+ live: UNCURED | neither the RESPONSE nor the STATEMENT line says STANDS WITHOUT IT because <layer> with an 
+ F1  : UNCURED | neither the RESPONSE nor the STATEMENT line says STANDS WITHOUT IT because <layer> with an
+## 12 statement line only, after a lead 
+ live: UNCURED | no written response 
+ F1  : UNCURED | no written response
+## 13 newline then NOT HELD 
+ live: UNCURED | neither the RESPONSE nor the STATEMENT line says STANDS WITHOUT IT because <layer> with an 
+ F1  : UNCURED | neither the RESPONSE nor the STATEMENT line says STANDS WITHOUT IT because <layer> with an
