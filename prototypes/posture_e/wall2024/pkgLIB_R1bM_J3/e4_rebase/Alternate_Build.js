@@ -1,0 +1,14 @@
+// pkgLIB stub, form 3: "Alternate Build". The node's full code is rebuilt line for line from the "Shared Library" node, which holds the shared lines once
+// and, under this node's name, its line list, its own lines and its length. This stub changes only when the nodes it reads change. The code runs unchanged with the same $ and $input.
+if(false){$("Accept Final");$("Fetch Models");$("Init Seats");$("Panel Build");$("Reserve Build");$("Resolve Seats");$(String());} /* pkgLIB v2: never runs. The task runner sends a Code node only the nodes its code text names in literal $() calls (all nodes on a non-literal $() call); the rebuilt source below is string data the runner cannot see, so its reads are named here. Run 33094. */
+const __LT=$('Shared Library').params.jsCode;const __L=JSON.parse(__LT.slice(__LT.indexOf('\n/*LIB*/')+8,__LT.lastIndexOf('\n/*MAP*/')));const __M=JSON.parse(__LT.slice(__LT.lastIndexOf('\n/*MAP*/')+8,__LT.lastIndexOf('\n/*END*/')))["Alternate Build"];if(!__M)throw new Error('pkgLIB: the Shared Library holds no entry for Alternate Build');
+const __N=__M.n,__P=__M.p;
+const __S=__P.map(e=>typeof e==='number'?__L[e]:typeof e[0]==='string'?e[0]:__L.slice(e[0],e[1]+1).join('\n')).join('\n');
+if(__S.length!==__N)throw new Error('pkgLIB: rebuilt source is '+__S.length+' bytes, expected '+__N+' (Shared Library does not match this stub)');
+const __e4h=s=>{s=String(s);let a=0x811c9dc5,b=0x01000193^0x9e3779b9;for(let i=0;i<s.length;i++){const c=s.charCodeAt(i);a^=c;a=Math.imul(a,0x01000193)>>>0;b^=c;b=Math.imul(b,0x01000193)>>>0;b^=b>>>13;}return a.toString(16).padStart(8,'0')+b.toString(16).padStart(8,'0');};
+const __R0=await new Function('$','$input','return (async()=>{\n'+__S+'\n})();')($,{first:()=>$('Alternate Needed?').first(),last:()=>$('Alternate Needed?').last(),all:()=>$('Alternate Needed?').all(),get item(){return $('Alternate Needed?').first();}}); /* pkgE4: Get Early Alternate sits between Alternate Needed? and this node */
+let __E=[];try{if($('Get Early Alternate').isExecuted)__E=$('Get Early Alternate').all().map(i=>i.json).filter(e=>e&&typeof e.seat_for==='string');}catch(e){__E=[];} /* the HTTP node splits the returned array into items */
+const __C=(__R0||[]).filter(x=>x&&x.json&&x.json.alt&&!x.json.alt.skip&&x.json.alt.body);
+const __EM=__C.map(x=>{const h=__e4h(JSON.stringify(x.json.alt.body));const r=__E.find(e=>e.seat_for===x.json.alt.removed_seat&&e.payload_sha===h&&e.reply&&!e.error&&Array.isArray(e.reply.choices)&&e.reply.choices.length);return {x,h,r};});
+if(!(__EM.length>0&&__EM.every(m=>m.r)))return __R0; /* all or nothing: otherwise the output is exactly today's and the normal call runs */
+return (__R0||[]).map(x=>{const m=__EM.find(z=>z.x===x);return m?{json:{...x.json,early_all:true,__early_reply:m.r.reply}}:x;}); /* the n8n task runner refuses the AsyncFunction constructor (probe 11:45 CST): a plain Function returns an async IIFE */

@@ -1,0 +1,382 @@
+const __RL=(function(){const module={exports:{}};const exports=module.exports;
+const SEP='(?:--|\\u2014|\\u2013)';
+const PAIR='(D\\d+)\\s+[vV][sS]\\.?\\s+(C\\d+)';
+const RND='\\[{0,2}\\s*((?:CR|DR)[1-4]|(?:Defender|Challenger)\\s*R(?:ound)?\\s*[1-4])\\s*\\]{0,2}';
+const rnd=x=>{const u=String(x).toUpperCase().replace(/\s+/g,'');const w=u.match(/^(DEFENDER|CHALLENGER)R(?:OUND)?(\d)$/);return w?(w[1]==='DEFENDER'?'CR':'DR')+w[2]:u;};
+const TAG='\\(\\s*[Cc]ommitment\\s+(\\d+)\\s*\\)';
+const COL_GRADE='DEFENDER LINK BROKEN|CHALLENGER LINK BROKEN|UNDERDETERMINED|STANDS|WITHDRAWN';
+const RES_TAG='BROKEN-1|BROKEN-2|PARTIAL-1|PARTIAL-2|PARTIAL-3|HELD-1';
+const STAND='SELF-SUPPORTED|PROP-DEPENDENT|COLLAPSED|FORFEIT(?:ED)?';
+function judgeText(raw){const s=String(raw==null?'':s0(raw));const a=s.indexOf('{');if(a>=0&&/"reason(?:ing)?"\s*:/.test(s)){try{const o=JSON.parse(s.slice(a,s.lastIndexOf('}')+1));if(o&&typeof o.reasoning==='string')return {text:o.reasoning,src:'json'};if(o&&typeof o.reason==='string')return {text:o.reason,src:'json'};}catch(e){}
+  const m=s.slice(a).match(/"reason(?:ing)?"\s*:\s*"([\s\S]*)"\s*\}/);if(m)return {text:m[1].replace(/\\n/g,'\n').replace(/\\"/g,'"').replace(/\\\\/g,'\\'),src:'json-malformed'};}
+ const i=s.indexOf('\n\n[AUDIT');return {text:unescapeOnce(i<0?s:s.slice(0,i)),src:'plain'};}
+function s0(x){return typeof x==='string'?x:JSON.stringify(x);}
+function unescapeOnce(t){t=String(t==null?'':t);if(!/\n/.test(t)&&/\\n/.test(t))t=t.replace(/\\n/g,'\n');return t.replace(/\\"/g,'"');}
+function normLine(l){return String(l==null?'':l).replace(/\\+/g,'').replace(/[*_`]+/g,'').replace(/^\s*(?:[-\u2022>]|\d+[.)])\s*/,'').replace(/[ \t]+/g,' ').trim();}
+function quoteAt(s,next){const m=s.match(/^\s*:?\s*(["\u201c'])/);if(!m)return null;const body=s.slice(m[0].length);
+ let sep=-1;if(next){const k=body.search(new RegExp('\\s'+SEP+'\\s*'+next+'\\b','i'));if(k>=0)sep=k;}if(sep<0)sep=body.search(new RegExp('\\s'+SEP+'\\s'));const seg=sep<0?body:body.slice(0,sep);const close=Math.max(seg.lastIndexOf('"'),seg.lastIndexOf('\u201d'),m[1]==="'"?seg.lastIndexOf("'"):-1);
+ if(close<0)return null;return {q:seg.slice(0,close),rest:body.slice(close+1)};}
+const P={};
+P.FORCED=s=>{const m=s.match(new RegExp('^FORCED\\s*(?:'+TAG+')?\\s*:\\s*'+PAIR+'(?:\\s*'+TAG.replace('(\\d+)','(\\d+)')+')?\\s*'+SEP+'\\s*MEANS\\s*'+RND+'\\s*:?','i'));if(!m)return null;
+ const f={tag:m[1]?+m[1]:(m[4]?+m[4]:null),pair:m[2]+' vs '+m[3],meansRound:rnd(m[5])};let r=s.slice(m[0].length);let q=quoteAt(r,'ANSWER');if(!q)return {why:'FORCED: MEANS has no quotation',code:'FORCED_MEANS_HAS_NO_QUOTATION'};f.means=q.q;r=q.rest.replace(/^\s*\([^\n]*?\)/,'');
+ let a=r.match(new RegExp('^\\s*'+SEP+'\\s*ANSWER\\s*'+RND+'\\s*:?','i'));if(!a)return {why:'FORCED: no ANSWER <round> after MEANS',code:'FORCED_NO_ANSWER_ROUND_AFTER_MEANS'};f.answerRound=rnd(a[1]);r=r.slice(a[0].length);q=quoteAt(r,'FAILS');if(!q)return {why:'FORCED: ANSWER has no quotation',code:'FORCED_ANSWER_HAS_NO_QUOTATION'};f.answer=q.q;r=q.rest.replace(/^\s*\([^\n]*?\)/,'');
+ a=r.match(new RegExp('^\\s*'+SEP+'\\s*FAILS\\s*:?','i'));if(!a)return {why:'FORCED: no FAILS after ANSWER',code:'FORCED_NO_FAILS_AFTER_ANSWER'};r=r.slice(a[0].length);q=quoteAt(r);if(!q)return {why:'FORCED: FAILS has no quotation',code:'FORCED_FAILS_HAS_NO_QUOTATION'};f.fails=q.q;f.tail=q.rest.trim();
+ f.breaks=f.meansRound.startsWith('CR')?'CHALLENGER':'DEFENDER';return f;};
+P.COLLISION=s=>{const m=s.match(new RegExp('^(RESTATED\\s*:\\s*)?'+PAIR+'\\b'));if(!m)return null;let r=s.slice(m[0].length);
+ const f={restated:!!m[1],pair:m[2]+' vs '+m[3]};const v=r.match(/^\s*\(([^)\n]*)\)/);if(v){f.verse=v[1].trim();r=r.slice(v[0].length);}
+ const c=r.match(/^[^:\n(]*:/);if(!c)return {why:'COLLISION: no ":" after the pair (CP2)',code:'COLLISION_NO_COLON_AFTER_THE_PAIR_CP2'};const pre=c[0].slice(0,-1).trim();if(pre)f.text=pre;r=r.slice(c[0].length);
+ const g=r.match(new RegExp('^\\s*('+COL_GRADE+')\\b'));if(!g){const lc=r.match(new RegExp('^\\s*('+COL_GRADE+')\\b','i'));return lc?{why:'COLLISION: grade word not upper case (CP2)',code:'COLLISION_GRADE_NOT_UPPER_CASE_CP2'}:{why:'COLLISION: no grade word after ":"',code:'COLLISION_NO_GRADE_WORD'};}
+ f.grade=g[1];r=r.slice(g[0].length);const t=r.match(new RegExp('^\\s*'+TAG));if(t){f.tag=+t[1];r=r.slice(t[0].length);}
+ const gi=r.search(/\bGROUND\s*:/i);if(gi>=0){f.ground=r.slice(gi).replace(/^GROUND\s*:\s*/i,'').trim();r=r.slice(0,gi);}f.reason=r.replace(new RegExp('^\\s*'+SEP+'\\s*'),'').replace(new RegExp('\\s*'+SEP+'\\s*$'),'').trim();return f;};
+P['ANSWER CHECK']=s=>{const m=s.match(new RegExp('^ANSWER CHECK\\s*:\\s*(.+?)\\s*'+SEP+'\\s*(?:(\\[[^\\]\\n]*\\](?:\\s*(?:[,/;]|and)\\s*\\[[^\\]\\n]*\\])*)|((?:CR|DR)[1-4](?:\\s*[,/;]\\s*(?:CR|DR)[1-4])*))\\s*'+SEP+'\\s*','i'));if(!m)return /^ANSWER CHECK\s*:/i.test(s)?{why:'ANSWER CHECK: no <verse> -- <round> head',code:'ANSWER_CHECK_NO_VERSE_ROUND_HEAD'}:null;
+ const rr=(m[2]!=null?m[2].replace(/\]\s*(?:[,/;]|and)\s*\[/gi,', ').replace(/^\[|\]$/g,''):m[3]).trim();  const rounds=[];for(const x of rr.split(/\s*[,/;]\s*|\s+and\s+/i)){let y=x.trim().toUpperCase();const w=y.match(/^(DEFENDER|CHALLENGER)\s*R(?:OUND)?\s*(\d)$/);if(w)y=(w[1]==='DEFENDER'?'CR':'DR')+w[2];if(/^(CR|DR)[1-4]$/.test(y))rounds.push(y);}
+ const f={verse:m[1].trim(),roundRaw:rr,rounds};if(!rounds.length)f.roundNone=true;                                  let r=s.slice(m[0].length);
+ const fld=(k)=>{const a=r.match(new RegExp('^'+k+'\\s*:?','i'));if(!a)return undefined;r=r.slice(a[0].length);const q=quoteAt(r,k==='MEANS'?'ANSWER':'(?:MEETS|MISSES|FAILS|UNPROVEN)');let v;
+  if(q){v=q.q;const t=q.rest.search(new RegExp('\\s'+SEP+'\\s'));f[k.toLowerCase()+'Note']=(t<0?q.rest:q.rest.slice(0,t)).trim()||undefined;r=t<0?'':q.rest.slice(t);}
+  else{const t=r.search(new RegExp('\\s'+SEP+'\\s'));v=(t<0?r:r.slice(0,t)).trim();f[k.toLowerCase()+'Bare']=true;r=t<0?'':r.slice(t);}
+  r=r.replace(new RegExp('^\\s*'+SEP+'\\s*'),'');return v;};
+ const mv=fld('MEANS');if(mv!==undefined)f.means=mv;const av=fld('ANSWER');if(av!==undefined)f.answer=av;
+ const g=r.match(/^(MEETS|MISSES|FAILS|UNPROVEN)\b/);if(!g){const lc=r.match(/^(MEETS|MISSES|FAILS|UNPROVEN)\b/i);return lc?{why:'ANSWER CHECK: grade word not upper case',code:'ANSWER_CHECK_GRADE_NOT_UPPER_CASE'}:{why:'ANSWER CHECK: no MEETS, MISSES, FAILS or UNPROVEN after the answer',code:'ANSWER_CHECK_NO_GRADE_WORD'};}
+ f.grade=g[1];f.gradeRead=g[1]==='FAILS'?'MISSES':g[1];r=r.slice(g[0].length);const t=r.match(new RegExp('^\\s*'+TAG));if(t){f.tag=+t[1];r=r.slice(t[0].length);}f.tail=r.replace(new RegExp('^\\s*'+SEP+'\\s*'),'').trim();return f;};
+P.KEYSTONE=s=>{const m=s.match(/^KEYSTONE\s*:\s*(D\d+)\s*(?:--|\u2014|\u2013|-|:)?\s*(STANDS|BROKEN|WITHDRAWN)\b/);if(!m)return /^KEYSTONE\s*:/i.test(s)?{why:'KEYSTONE: no D<i> and STANDS, BROKEN or WITHDRAWN',code:'KEYSTONE_NO_D_I_AND_STANDS_BROKEN_OR_WITHDRAWN'}:null;
+ const r=s.slice(m[0].length);return {link:m[1],grade:m[2],tag:m[3]?+m[3]:null,reason:r.replace(new RegExp('^\\s*'+SEP+'\\s*'),'').trim(),derived:/derived by the engine/i.test(r)};};
+P.RESULT=s=>{const m=s.match(/^RESULT\s*:\s*(DEFENDER WINS|CHALLENGER WINS|UNDERDETERMINED)\b/);if(!m)return /^RESULT\s*:/i.test(s)?{why:'RESULT: no DEFENDER WINS, CHALLENGER WINS or UNDERDETERMINED',code:'RESULT_NO_DEFENDER_WINS_CHALLENGER_WINS_OR_UNDERDETERMINED'}:null;return {result:m[1],reason:s.slice(m[0].length).replace(new RegExp('^\\s*'+SEP+'\\s*'),'').trim()};};
+P['CORRECTED RESULT']=s=>{const m=s.match(new RegExp('^CORRECTED RESULT\\s*:\\s*('+RES_TAG+')(?:\\s*(?:--|\\u2014|\\u2013|:|;|,|\\()([\\s\\S]*))?$','i'));if(!m)return /^CORRECTED RESULT\s*:/i.test(s)?{why:'CORRECTED RESULT: no tag',code:'CORRECTED_RESULT_NO_TAG'}:null;return {tag:m[1].toUpperCase(),reason:(m[2]||'').trim()};};
+P['CORRECTED COUNT']=s=>{const m=s.match(/^CORRECTED COUNT\s*:\s*(DEFENDER|CHALLENGER)\s+(\d+)/i);return m?{side:m[1].toUpperCase(),n:+m[2]}:(/^CORRECTED COUNT\s*:/i.test(s)?{why:'CORRECTED COUNT: no <SIDE> <n>',code:'CORRECTED_COUNT_NO_SIDE_N'}:null);};
+P['CORRECTED STANDING']=s=>{const m=s.match(new RegExp('^CORRECTED STANDING\\s*:\\s*(DEFENDER|CHALLENGER)\\s+('+STAND+')','i'));return m?{side:m[1].toUpperCase(),standing:m[2].toUpperCase()}:(/^CORRECTED STANDING\s*:/i.test(s)?{why:'CORRECTED STANDING: no <SIDE> <standing>',code:'CORRECTED_STANDING_NO_SIDE_STANDING'}:null);};
+P.RETRACTED=s=>{const m=s.match(new RegExp('^RETRACTED\\s*:\\s*'+PAIR,'i'));return m?{pair:m[1]+' vs '+m[2],reason:s.slice(m[0].length).replace(new RegExp('^\\s*(?:'+SEP+'|:)\\s*'),'').trim()}:(/^RETRACTED\s*:/i.test(s)?{why:'RETRACTED: no pair',code:'RETRACTED_NO_PAIR'}:null);};
+P['NOT PRESSED']=s=>{const m=s.match(/^NOT PRESSED\s*:\s*(.+?)(?:\s*(?:--|\u2014|\u2013)\s*(.*))?$/i);return m?{verse:m[1].trim(),reason:(m[2]||'').trim()}:null;};
+P.PRESSED=s=>{if(!/^PRESSED\s*:/i.test(s))return null;const r=s.replace(/^PRESSED\s*:\s*/i,'');
+ let m=r.match(new RegExp('^'+PAIR+'\\s*'+SEP+'\\s*'+RND+'\\s*'+SEP+'\\s*'));if(m){const q=quoteAt(r.slice(m[0].length));return {kind:'cure',pair:m[1]+' vs '+m[2],round:m[3].toUpperCase(),quote:q?q.q:null};}
+ m=r.match(new RegExp('^(.+?)\\s*'+SEP+'\\s*'+RND+'\\s*'+SEP+'\\s*'));if(m){const q=quoteAt(r.slice(m[0].length));const st=q?(q.rest.match(new RegExp('^\\s*'+SEP+'\\s*(UNANSWERED|ANSWERED IN\\s*'+RND+')'))||[]):[];
+  return {kind:'ledger',verse:m[1].trim(),round:m[2].toUpperCase(),quote:q?q.q:null,state:st[1]?(st[1].startsWith('UNANSWERED')?'UNANSWERED':'ANSWERED'):null,answeredIn:st[2]?st[2].toUpperCase():null};}
+ return {kind:'other',text:r};};
+P.STANDING=s=>{const m=s.match(new RegExp('^(DEFENSE|CHALLENGE) STANDING\\s*:\\s*('+STAND+')\\b','i'));if(!m)return /^(DEFENSE|CHALLENGE) STANDING\s*:/i.test(s)?{why:'STANDING: no standing word',code:'STANDING_NO_STANDING_WORD'}:null;
+ const L=s.match(/\bL\s*=\s*(\d+)/i),c=s.match(/\bc\s*=\s*(\d+)/i);return {side:m[1].toUpperCase(),standing:m[2].toUpperCase(),L:L?+L[1]:null,c:c?+c[1]:null};};
+P.CONCEDED=s=>{const m=s.match(/^(CHALLENGER CONCEDED LINKS|CONCEDED LINKS)\s*:\s*(\d+)\b/i);if(!m)return /^(CHALLENGER )?CONCEDED LINKS\s*:/i.test(s)?{why:'CONCEDED: no count',code:'CONCEDED_NO_COUNT'}:null;
+ const ent=[...s.slice(m[0].length).matchAll(/premise\s+(\d+)\s+(?:is\s+)?(UNEXHIBITED|CONCEDED|VOID|SPARED)/gi)].map(x=>({premise:+x[1],state:x[2].toUpperCase()}));return {side:/^CHALLENGER/i.test(m[1])?'CHALLENGER':'DEFENDER',n:+m[2],entries:ent};};
+P.CLAUSE=s=>{const m=s.match(/^CLAUSE\s*:\s*(BROKEN-1|BROKEN-2|PARTIAL-1|PARTIAL-2|PARTIAL-3|HELD-1)?/i);if(!m)return null;const g=k=>{const x=s.match(new RegExp('\\b'+k+'\\s*=\\s*(\\d+)','i'));return x?+x[1]:null;};return {tag:m[1]?m[1].toUpperCase():null,n:g('n'),w:g('w'),k:g('k')};};
+P.RULING=s=>{const m=s.match(new RegExp('^RULING\\s*(?:'+SEP+'|:)\\s*(.+?)\\s*'+SEP+'\\s*(.+)$','i'));return m?{subject:m[1].trim(),grade:m[2].trim()}:(/^RULING\b/i.test(s)?{why:'RULING: no subject and grade',code:'RULING_NO_SUBJECT_AND_GRADE'}:null);};
+P['OUT-OF-ROUND']=s=>{const m=s.match(/^(DEFENDER|CHALLENGER)\s*\|\s*\[?\s*((?:CR|DR)\d)\s*\]?\s*\|\s*(.*)$/i);if(!m)return null;const t=m[3].match(/\s*(?:--\s*)?(COUNTED|TOUCHES NO LINK)\b\s*(?:--\s*)?(.*)$/);
+ let sen=(t?m[3].slice(0,t.index):m[3]).trim();let why=t?t[2].trim():'';if(!t){const d=sen.match(/\s+(?:--|\u2014|\u2013)\s+/);if(d){why=sen.slice(d.index+d[0].length).trim();sen=sen.slice(0,d.index).trim();}}
+ return {side:m[1].toUpperCase(),round:m[2].toUpperCase(),sentence:sen,tag:t?t[1]:null,why};};
+P.STATEMENT=s=>{const m=s.match(/^(STATEMENT|RESPONSE)\s*:\s*(.*)$/i);if(!m)return null;const p=m[2].split(/\s*\|\s*/);return {which:m[1].toUpperCase(),item:p.length>1?p[0]:null,text:p.length>1?p.slice(1).join(' | '):p[0]};};
+P['LINK STATE']=s=>{const m=s.match(new RegExp('^(D\\d+)\\s*:?\\s*(?:--|\\u2014|\\u2013|-|:)?\\s*(DEFENDER LINK BROKEN|CHALLENGER LINK BROKEN|UNDERDETERMINED|STANDS|BROKEN|WITHDRAWN)\\b(?:\\s*'+TAG+')?'));if(!m)return null;const r=s.slice(m[0].length);  const gi=r.search(/\bGROUND\s*:/i);
+ return {link:m[1],grade:m[2],ground:gi>=0?r.slice(gi).replace(/^GROUND\s*:\s*/i,'').trim():'',reason:(gi>=0?r.slice(0,gi):r).replace(new RegExp('^\\s*'+SEP+'\\s*'),'').replace(new RegExp('\\s*'+SEP+'\\s*$'),'').trim()};};
+P['RULING PART']=s=>{const m=s.match(/^(CLAIM|NAMED BY|RULE|APPLIED)\s*:\s*(.*)$/i);return m?{part:m[1].toUpperCase(),text:m[2].trim()}:null;};
+P['CHAIN MARK']=s=>{const m=s.match(/^(DEFENDER|CHALLENGER) CHAIN MARK\s*:\s*([A-Z][A-Z-]*)\b/i);return m?{side:m[1].toUpperCase(),mark:m[2].toUpperCase(),reason:s.slice(m[0].length).replace(new RegExp('^\\s*'+SEP+'\\s*'),'').trim()}:null;};
+P['CITATION CHECK']=s=>{const m=s.match(/^(?:#+\s*)?CITATION CHECK\b\s*:?\s*(.*)$/i);return m?{text:m[1]}:null;};
+P.HEADING=s=>{const m=s.match(/^#*\s*([A-Z][A-Z \-/()]{3,60}):\s*$/);return m?{heading:m[1].trim()}:null;};
+P.SHORT=s=>{const m=s.match(/^SHORT\s*:\s*(.*)$/i);return m?{text:m[1]}:null;};
+P.REPLY=s=>{const m=s.match(/^(?:(SENDBACK|GATE)\s*:?\s*)?(?:ITEM\s*)?#?\s*([SG])\s*(\d+)\s*:?\s*\|\|\s*(KEEP|CHANGE\s+TO\s*:?([\s\S]*?))\s*(?:\|\|\s*(.*))?$/i);if(!m)return null;
+ const to=m[5]!=null?m[5].trim():null;return {kind:(m[1]||(m[2].toUpperCase()==='G'?'GATE':'SENDBACK')).toUpperCase(),id:m[2].toUpperCase()+m[3],answer:/^KEEP$/i.test(m[4])?'KEEP':'CHANGE',to,toRow:to?readLine(to.replace(/^["\u201c]([\s\S]*)["\u201d]$/,'$1')):null,sentence:(m[6]||'').trim()};};
+P.PREMISE=s=>{const t=s.replace(/^premise\s+\d+\s+ruled\s+[A-Z ]+?\s*:\s*(?=premise\b)/i,'');const m=t.match(new RegExp('^premise\\s+(\\d+)\\s*(?:is\\s+)?:?\\s*(UNEXHIBITED|CONCEDED|NOT VOID|VOID|SPARED|COUNTED)\\b(?:\\s*'+TAG+')?\\s*(?:'+SEP+'|:|,)?\\s*','i'));if(!m)return null;
+ if(m[2]!==m[2].toUpperCase())return {why:'PREMISE: status word not upper case',code:'PREMISE_STATUS_NOT_UPPER_CASE'};return {premise:+m[1],status:m[2],tag:m[3]?+m[3]:null,reason:t.slice(m[0].length).trim(),engineLabel:t!==s};};
+const ORDER=['REPLY','FORCED','CORRECTED RESULT','CORRECTED COUNT','CORRECTED STANDING','RETRACTED','NOT PRESSED','PRESSED','COLLISION','ANSWER CHECK','KEYSTONE','RESULT','CLAUSE','STANDING','CONCEDED','PREMISE','RULING','RULING PART','CHAIN MARK','LINK STATE','CITATION CHECK','OUT-OF-ROUND','STATEMENT','SHORT','HEADING'];
+const RESTATABLE=['COLLISION','FORCED','ANSWER CHECK','KEYSTONE','STANDING','CONCEDED','RESULT'];
+function readLine(line){const norm=normLine(line);if(!norm)return {form:null,why:'empty',code:'EMPTY',norm};
+ const rs=norm.match(/^RESTATED\s*:\s*/i);if(rs){const r=readLine(norm.slice(rs[0].length));if(r.form&&RESTATABLE.includes(r.form))return {form:r.form,f:Object.assign({},r.f,{restated:true}),norm};
+  if(r.form==null&&r.tried&&RESTATABLE.includes(r.tried))return Object.assign({},r,{norm});return {form:null,tried:'RESTATED',why:'RESTATED wraps no spec form',code:'NOT_A_FORM',norm};}
+ for(const k of ORDER){const f=P[k](norm);if(!f)continue;if(f.code)return {form:null,tried:k,why:f.why,code:'MALFORMED_'+k.replace(/[^A-Z]+/g,'_'),detail:f.code,norm};return {form:k,f,norm};}
+ {const lab=[[/^FORCED\b/i,'FORCED'],[/^D\d+\s+vs\.?\s+C\d+\b/i,'COLLISION'],[/^ANSWER CHECK\s*:/i,'ANSWER CHECK'],[/^KEYSTONE\s*:/i,'KEYSTONE']].find(([r])=>r.test(norm));
+  if(lab)return {form:null,tried:lab[1],why:lab[1]+' label, line does not parse',code:'MALFORMED_'+lab[1].replace(/[^A-Z]+/g,'_'),detail:'NO_PARSE',norm};}
+ return {form:null,why:'no line form',code:'NO_LINE_FORM',norm};}
+function readStored(raw){return readLines(judgeText(raw).text);}
+function readLines(text){return String(text==null?'':text).split('\n').map((l,i)=>{const r=readLine(l);return r.form?{n:i,form:r.form,fields:r.f,norm:r.norm}:{n:i,form:null,why:r.why,code:r.code,detail:r.detail||null,tried:r.tried||null,norm:r.norm};}).filter(r=>r.code!=='EMPTY');}
+module.exports={norm:normLine,readLine,readLines,readStored,judgeText,normLine,unescapeOnce,quoteAt,FORMS:ORDER};
+return module.exports;})();
+const __rl15=l=>{try{return __RL.readLine(String(l==null?'':l));}catch(e){return null;}};
+const __CSP=(()=>{
+const CLR=(()=>{
+ const LBL=/^\s*(?:[-\u2022>]\s*|\d+[.)]\s+)?\**\s*(?:[A-Z][A-Z0-9 '\/()-]{2,60}:|D\d+\s+vs\.?\s+C\d+|C\d+\s+vs\.?\s+D\d+|\[|FORCED\b|RESULT\b|KEYSTONE\b|CLAUSE\b|#)/;
+ const COUNTED=/^(UNEXHIBITED|CONCEDED|WITHDRAWN)$/i,TAGS='UNEXHIBITED|CONCEDED|WITHDRAWN|VOID|SPARED|SUPPORTED';
+ const un=s=>String(s==null?'':s).replace(/\\n/g,'\n').replace(/\\+"/g,'"');
+ function block(text,side){const L=un(text).split('\n');const lab=side==='CHALLENGER'?/^\s*(?:[-\u2022>]\s*)?\**\s*CHALLENGER CONCEDED LINKS\**\s*:\s*\**\s*(\d+)?/i:/^\s*(?:[-\u2022>]\s*)?\**\s*(?:DEFENDER )?CONCEDED LINKS\**\s*:\s*\**\s*(\d+)?/i;
+  let at=-1,cnt=null;L.forEach((l,i)=>{const r=__rl15(l);if(r&&r.form==='CONCEDED'&&r.f&&r.f.side===side&&Number.isInteger(r.f.n)){at=i;cnt=r.f.n;return;}const m=l.match(lab);if(m){at=i;cnt=m[1]!=null?+m[1]:null;}});if(at<0)return null;
+  const parts=[lab.test(L[at])?L[at].replace(lab,''):L[at].replace(/^[^:]*:\s*\**\s*(?:\d+)?/,'')];for(let i=at+1;i<L.length&&i<at+12;i++){const l=L[i];if(!l.trim())break;if(LBL.test(l.replace(/[*_`]/g,'')))break;parts.push(l);}
+  return {count:cnt,line:L[at].trim(),cont:parts.length-1,body:parts.join(' ').replace(/[*_`]/g,'').replace(/\s+/g,' ').trim()};}
+ const REF=new RegExp('(?:\\b(premises?|items?|links?|counted:?)\\s+((?:\\d+(?:\\s*(?:,|and|&|–|-|to|through)\\s*)*)+)|\\b([CD])(\\d)\\b|\\((\\d)\\)|(?:^|--|;|:)\\s*(\\d)(?=\\s+(?:'+TAGS+')\\b))','gi');
+ const nums=s=>{const o=[];const t=String(s).replace(/\s+/g,' ');for(const m of t.matchAll(/(\d+)\s*(?:[–-]|to|through)\s*(\d+)|(\d+)/g)){if(m[1]){for(let k=+m[1];k<=+m[2]&&k<=+m[1]+9;k++)o.push(k);}else o.push(+m[3]);}return o;};
+ function entries(body){const out=[];if(!body)return out;
+  let b=body.replace(/"[^"]*"|\u201c[^\u201d]*\u201d|\u2018[^\u2019]*\u2019|(?<=[\s(])'[^']{3,}?'(?=[\s,.;:)]|$)/g,m=>' '.repeat(m.length));
+  const own=[];b=b.replace(/\(([^()]*)\)/g,(m,c,off)=>{const k=c.match(/^\s*(?:\[?DR2\]?\s*)?LINK\s+(\d+|none)\b/i);if(k)own.push({at:off,link:/none/i.test(k[1])?'none':+k[1]});return /^\s*\d\s*$/.test(c)?m:' '.repeat(m.length);});
+  for(const cl of splitClauses(b)){const lead=cl.text.match(new RegExp('^\\s*(?:--\\s*)?(?:counted\\s*:?\\s*)?('+TAGS+')\\b(?:\\s*\\(stated\\))?\\s*:','i'));
+   const refs=[...cl.text.matchAll(REF)];
+   for(let r=0;r<refs.length;r++){const m=refs[r];let ref,ns;
+    if(m[1]){const w=m[1].toLowerCase();ref=/^link/.test(w)?'LINK':'PREMISE';ns=nums(m[2]);}else if(m[3]&&!new RegExp('^\\s*[:(\\-\\s]*('+TAGS+')\\b','i').test(cl.text.slice(m.index+m[0].length))){continue;}else if(m[3]){ref=m[3];ns=[+m[4]];}else if(m[5]){ref='PREMISE';ns=[+m[5]];}else{ref='PREMISE';ns=[+m[6]];}
+    const from=m.index+m[0].length;let nx=r+1;let inl=null;
+    if(ref==='PREMISE'&&ns.length===1&&refs[nx]&&/^link/i.test(refs[nx][1]||'')&&/^\s*$/.test(cl.text.slice(from,refs[nx].index))){const k=nums(refs[nx][2]);if(k.length===1){inl=k[0];r++;nx++;}}
+    const from2=inl!=null?refs[r].index+refs[r][0].length:from;const to=nx<refs.length?refs[nx].index:cl.text.length;const seg=cl.text.slice(from2,to);
+    let tg=(seg.match(new RegExp('\\b((?:NOT|not|none|no)\\s+)?(UNEXHIBITED|CONCEDED|WITHDRAWN|VOID|SPARED|SUPPORTED|[Ss]pared|[Ss]upported)\\b'))||[]);let tag=tg[2]?(tg[1]?'NOT '+tg[2]:tg[2]).toUpperCase():null;
+    if(!tag&&lead)tag=lead[1].toUpperCase();if(!tag){const back=cl.text.slice(0,m.index).match(new RegExp('\\b('+TAGS+')\\b[^.;]*$','i'));if(back&&!/\b(spared|supported)\b/i.test(cl.text.slice(back.index,m.index)))tag=null;}
+    if(!tag)continue;const ow=own.find(o=>o.at>=cl.off+m.index&&o.at<=cl.off+from+2);
+    for(const n of ns)out.push({ref,num:n,link:inl!=null?inl:(ref==='PREMISE'&&ow?ow.link:null),tag,counted:COUNTED.test(tag)});}}
+  return out;}
+ function splitClauses(b){const o=[];let off=0;for(const p of b.split(/(?<=[.;])\s+(?=[A-Z(\d]|premise|item|counted)/)){o.push({text:p,off:b.indexOf(p,off)});off+=p.length;}return o;}
+ function read(text,side){const B=block(text,side);if(!B)return null;const e=entries(B.body);const counted=B.count===0?[]:[...new Map(e.filter(x=>x.counted).map(x=>[x.ref+x.num,x])).values()];
+  return {...B,entries:e,counted,named:counted.length,agrees:B.count==null?null:counted.length===B.count};}
+ return {read,block,entries};})();
+const nm=x=>(x.ref==='PREMISE'?'premise ':x.ref==='LINK'?'link ':x.ref)+x.num;
+const one=(t,side,stored)=>{const st=(typeof stored==='number'&&isFinite(stored))?stored:null;const r=CLR.read(t,side);if(!r)return {stored:st,stated:null,granted:0,unexhibited:0,broken_at_collision:0,unnamed:null,granted_items:[],unexhibited_items:[],broken_items:[]};
+ const g=r.counted.filter(x=>x.tag==='CONCEDED'||x.tag==='WITHDRAWN'),u=r.counted.filter(x=>x.tag==='UNEXHIBITED');
+ const have=new Set(r.counted.map(x=>x.ref+x.num));const b=[];if(r.count!==0)for(const m of String(r.body||'').matchAll(/\bpremise\s+(\d+)\s+BROKEN AT THE COLLISION\b/g)){const k='PREMISE'+m[1];if(!have.has(k)){have.add(k);b.push({ref:'PREMISE',num:+m[1]});}}
+ return {stored:st,stated:r.count,granted:g.length,unexhibited:u.length,broken_at_collision:b.length,unnamed:r.count==null?null:Math.max(0,r.count-g.length-u.length-b.length),granted_items:g.map(nm),unexhibited_items:u.map(nm),broken_items:b.map(nm)};};
+return (t,dc,cc)=>{try{return {reader:'pkgCLR',defender:one(String(t==null?'':t),'DEFENDER',dc),challenger:one(String(t==null?'':t),'CHALLENGER',cc)};}catch(e){return {reader:'pkgCLR',error:String(e&&e.message||e).slice(0,200)};}};})();
+const __CSPOUT=(()=>{
+const __L={"D1 Extract":()=>$('D1 Extract'),"C1 Extract":()=>$('C1 Extract'),"D2 Extract":()=>$('D2 Extract'),"C2 Extract":()=>$('C2 Extract'),"D3 Extract":()=>$('D3 Extract'),"C3 Extract":()=>$('C3 Extract'),"D4 Extract":()=>$('D4 Extract'),"C4 Extract":()=>$('C4 Extract'),"Synthesis Normalizer":()=>$('Synthesis Normalizer'),"Verdict Normalizer":()=>$('Verdict Normalizer'),"Diagnostic Normalizer":()=>$('Diagnostic Normalizer'),"Cure Call openrouter":()=>$('Cure Call openrouter')};
+const LRF=(()=>{const LINK=/^[ \t>*#_-]*LINK\s+(?:\d+|none)\b[^\n:]{0,80}:/mi;
+ const head=t=>{for(const l of String(t||'').split('\n')){const s=l.replace(/[*_#>`]+/g,'').trim();if(!s||/^(?:DEFENDER|CHALLENGER)\b[^\n]*--\s*ROUND\s*\d+,/i.test(s))continue;return s.slice(0,120);}return '';};
+ const OTHER=/\b(?:CLOS(?:E|ING)\s+(?:ROUND|STATEMENT|WORDS)|OPENING|FINAL\s+(?:ROUND|WORDS|DEFEN[CS]E)|ROUND\s*(?:1|2|4|ONE|TWO|FOUR)\b)/i;
+ const check=t=>{const T=String(t||'');if(!T.trim())return null;const h=head(T);const why=[];
+  if(!LINK.test(T))why.push('it holds no "LINK n:" block');
+  if(OTHER.test(h)&&!/\bLINK\s+ROUND\b|\bROUND\s*(?:3|THREE)\b/i.test(h))why.push('it is headed "'+h.replace(/["\[\]]/g,'')+'", as another round');
+  return why.length?{fault:true,why,head:h}:null;};
+ 
+ const audit=(t,sd)=>{const c=check(t);return c?'[AUDIT v27: LINK-ROUND FORMAT CHECK ('+(sd==='D'?'D3':'C3')+') -- the '+(sd==='D'?'defender':'challenger')+'\'s link round does not keep the link-round form: '+c.why.join('; ').replace(/[\[\]]/g,'')+'. A format fault, recorded; no automatic grading. REVIEW THIS ROW.]':'';};
+ return {check,audit};})();
+const REFP=(()=>{const BOOKS="Genesis|Exodus|Leviticus|Numbers|Deuteronomy|Joshua|Judges|Ruth|1 Samuel|2 Samuel|1 Kings|2 Kings|1 Chronicles|2 Chronicles|Ezra|Nehemiah|Esther|Job|Psalms|Proverbs|Ecclesiastes|Song of Solomon|Isaiah|Jeremiah|Lamentations|Ezekiel|Daniel|Hosea|Joel|Amos|Obadiah|Jonah|Micah|Nahum|Habakkuk|Zephaniah|Haggai|Zechariah|Malachi|Matthew|Mark|Luke|John|Acts|Romans|1 Corinthians|2 Corinthians|Galatians|Ephesians|Philippians|Colossians|1 Thessalonians|2 Thessalonians|1 Timothy|2 Timothy|Titus|Philemon|Hebrews|James|1 Peter|2 Peter|1 John|2 John|3 John|Jude|Revelation".split('|');
+ const key=s=>String(s).toLowerCase().replace(/[^a-z0-9]/g,'');const BK={};BOOKS.forEach(b=>{BK[key(b)]=b;});
+ Object.assign(BK,{psalm:'Psalms',song:'Song of Solomon',songofsongs:'Song of Solomon',canticles:'Song of Solomon',revelations:'Revelation',gen:'Genesis',exod:'Exodus',exo:'Exodus',ex:'Exodus',lev:'Leviticus',num:'Numbers',deut:'Deuteronomy',dt:'Deuteronomy',josh:'Joshua',judg:'Judges',jdg:'Judges','1sam':'1 Samuel','2sam':'2 Samuel','1kgs':'1 Kings','2kgs':'2 Kings','1chr':'1 Chronicles','2chr':'2 Chronicles','1chron':'1 Chronicles','2chron':'2 Chronicles',neh:'Nehemiah',esth:'Esther',ps:'Psalms',psa:'Psalms',prov:'Proverbs',eccl:'Ecclesiastes',eccles:'Ecclesiastes',isa:'Isaiah',jer:'Jeremiah',lam:'Lamentations',ezek:'Ezekiel',dan:'Daniel',hos:'Hosea',obad:'Obadiah',mic:'Micah',nah:'Nahum',hab:'Habakkuk',zeph:'Zephaniah',hag:'Haggai',zech:'Zechariah',mal:'Malachi',matt:'Matthew',mt:'Matthew',mk:'Mark',lk:'Luke',jn:'John',rom:'Romans','1cor':'1 Corinthians','2cor':'2 Corinthians',gal:'Galatians',eph:'Ephesians',phil:'Philippians',col:'Colossians','1thess':'1 Thessalonians','2thess':'2 Thessalonians','1tim':'1 Timothy','2tim':'2 Timothy',tit:'Titus',phlm:'Philemon',philem:'Philemon',heb:'Hebrews',jas:'James','1pet':'1 Peter','2pet':'2 Peter','1jn':'1 John','2jn':'2 John','3jn':'3 John',rev:'Revelation'});
+ const book=x=>{if(!x)return null;let b=BK[key(x)];if(!b){const w=String(x).split(/\s/).pop();b=BK[key(w)]||null;}return b;};
+ const HEAD=/(?<![A-Za-z0-9:])(?:((?:[1-3]\s)?[A-Z][A-Za-z]+(?:\s(?:of\s)?[A-Z][A-Za-z]+)?)\.?\s)?(\d{1,3}):(\d{1,3})/g;
+ const RNG=/^\s?[–—-]\s?(\d{1,3})(?!\d|:\d)/, FULL=/^\s?,\s?(\d{1,3}):(\d{1,3})(?!\d)/, BARE=/^\s?,\s?(\d{1,3})(?!\d|:\d|\s+[A-Z])/;
+ const SENT=/[.!?]["”'’)\]]*\s+(?=["“'‘(\[]*[A-Z])|\n/;
+ const parse=(t,o)=>{const T=String(t||'');const sc=!!(o&&o.scoped);const out=[];
+  const PO=[...T.matchAll(/(?<![A-Za-z0-9])((?:[1-3]\s)?[A-Z][A-Za-z]+)['’]s\b/g)].map(x=>({at:x.index,b:BK[key(x[1])]||null})).filter(x=>x.b);let pi=0,lastBook=null,lastAt=-1;
+  HEAD.lastIndex=0;let m;while((m=HEAD.exec(T))){const b=book(m[1]);
+   while(pi<PO.length&&PO[pi].at<m.index){if(PO[pi].at>lastAt){lastBook=PO[pi].b;lastAt=PO[pi].at;}pi++;}
+   const ctx=b||((sc&&(lastAt<0||SENT.test(T.slice(lastAt,m.index))))?null:lastBook);if(b){lastBook=b;lastAt=m.index;}
+   let c=+m[2];const items=[{book:b,ctx,c,v1:+m[3],v2:+m[3],at:m.index,pos:m.index+(m[1]?m[1].length+1:0),head:true}];let i=m.index+m[0].length,x;
+   for(;;){const rest=T.slice(i);
+    if((x=rest.match(RNG))){const it=items[items.length-1];const z=+x[1];if(z>it.v2)it.v2=z;i+=x[0].length;continue;}
+    if((x=rest.match(FULL))){c=+x[1];items.push({book:b,ctx,c,v1:+x[2],v2:+x[2],at:m.index,pos:i+x[0].search(/\d/),head:false});i+=x[0].length;continue;}
+    if((x=rest.match(BARE))){items.push({book:b,ctx,c,v1:+x[1],v2:+x[1],at:m.index,pos:i+x[0].search(/\d/),head:false});i+=x[0].length;continue;}
+    break;}
+   HEAD.lastIndex=i;items.forEach(it=>{it.label=it.c+':'+it.v1+(it.v2>it.v1?'-'+it.v2:'');it.end=i;out.push(it);});}
+  return out;};
+ const keys=(t,o)=>{const cap=(o&&o.cap)||30;const out=[];for(const r of parse(t,o)){const b=r.book||r.ctx;if(!b)continue;const z=r.v2-r.v1>cap?r.v1:r.v2;for(let v=r.v1;v<=z;v++)out.push({key:b+' '+r.c+':'+v,pos:r.at,ref:b+' '+r.label});}return out;};
+ return {parse,keys,book,BK,BOOKS};})();
+const C4P=(()=>{
+ const refs=t=>{const out=[];for(const r of REFP.parse(t,{scoped:true})){const b=r.book||r.ctx;if(!b)continue;const z=Math.max(r.v1,Math.min(r.v2,r.v1+30));const vs=[];for(let x=r.v1;x<=z;x++)vs.push(b+' '+r.c+':'+x);out.push({label:b+' '+r.label,vs,cv:r.label,bare:r.head&&!r.book&&r.pos>r.at});}return out;};
+ const fresh=(earlier,c4)=>{const S=new Set();const u=[],K=x=>x.replace(/.* /,'');earlier.forEach(t=>refs(t).forEach(r=>r.vs.forEach(x=>{S.add(x);const q=S[K(x)]=S[K(x)]||[];q.includes(x)||q.push(x);})));const seen=new Set();const o=refs(c4).filter(r=>{if(r.vs.some(x=>S.has(x)))return false;const m=r.bare&&[...new Set(r.vs.flatMap(x=>S[K(x)]||[]))].join(', ');return m?(u.push([r.label,r.cv+' ('+m+' named earlier)']),false):true;}).map(r=>r.label).filter(l=>!seen.has(l)&&seen.add(l));o.u=[...new Set(u.filter(z=>!o.includes(z[0])).map(z=>z[1]))];return o;};
+ 
+ const __ogrS=t=>{const __sb=(T,H,G)=>{const i=T.search(H);if(i<0)return T;const L=T.slice(i).split('\n');let n=1;while(n<L.length&&(G.test(L[n])||(!L[n].trim()&&n+1<L.length&&G.test(L[n+1]))))n++;const sec=L.slice(0,n).join('\n');return T.slice(0,i)+sec.replace(/["\u201c][^"\u201d\n]*["\u201d]/g,'""')+T.slice(i+sec.length);};return __sb(__sb(String(t||''),/OPPONENT['\u2019]?S GRANTS\s*:/i,/^\s*[-*]?\s*\**\s*G(?:\d+|\+)/),/OPPONENT['\u2019]?S CONTRADICTIONS\s*:/i,/^\s*[-*]?\s*\**\s*X\d+/);};    const of=F=>F&&F.dr4?fresh([F.gr1,F.gr2,F.dr3],__ogrS(F.dr4)):[];
+ 
+ const ofD=F=>F&&F.cr4?fresh([F.cr1,F.gr1,F.cr2,F.gr2,F.cr3,F.dr3],F.cr4):[];
+ 
+ const declared=F=>{const t=String(F&&F.cr1||'');const i=t.search(/DECLARED CHAIN\b/);if(i<0)return null;const a=t.lastIndexOf('\n',i)+1;const L=t.slice(a).split('\n');const out=[L[0]];let on=false,pre=0;
+  for(const l of L.slice(1)){const num=/^\s*\**\s*\d+[.)]\s+\S/.test(l);if(num){on=true;out.push(l);continue;}if(!on){if(l.trim()){if(/^\s*#/.test(l)||++pre>3)break;}out.push(l);continue;}
+   if(!l.trim()||/^\s+\S/.test(l)||/^\s*[-*•]\s/.test(l)){out.push(l);continue;}break;}
+  return out.join('\n').replace(/\s+$/,'');};
+ const dlinks=F=>{const t=declared(F);if(!t)return [];const L=[];let cur=null;for(const l of t.split('\n').slice(1)){const m=l.match(/^\s*\**\s*(\d+)[.)]\s+(.*)$/);if(m){cur={n:+m[1],text:m[2]};L.push(cur);continue;}if(cur&&l.trim())cur.text+=' '+l.trim();}return L;};
+ const cblocks=F=>{const t=String(F&&F.dr3||'');const H=[];for(const h of t.matchAll(/^[ \t>*#_-]*LINK\s+(\d+)[^\n]*/gmi))H.push({n:+h[1],at:h.index,head:h[0].replace(/^[ \t>*#_-]+/,'').replace(/[*_]+/g,'').trim()});
+  return H.map((x,i)=>({j:i+1,n:x.n,head:x.head,text:t.slice(x.at,i+1<H.length?H[i+1].at:t.length)}));};
+ const nDecl=F=>{const L=dlinks(F);return L.length?Math.max(...L.map(x=>x.n)):0;};
+ const nLink=F=>cblocks(F).length;
+ const RENUM=/\b(?:re-?number\w*|I\s+(?:now\s+)?number|number(?:ed|ing)?\s+(?:my|the|its|our|his)\s+(?:chain|links?|premises)|in\s+the\s+order\s+of\s+the\s+link\s+round|under\s+my\s+own\s+numbers?|(?:my|its|our)\s+own\s+number(?:s|ing)|in\s+the\s+order\s+(?:the|my|its|his|their)\s+[^.\n]{0,60}?\b(?:answer(?:s|ed)?|blocks?|list|took)\b|I\s+(?:now\s+)?(?:take|label|restate)\s+(?:them\s+)?[^.\n]{0,30}?\b[DC]1\s*[–—-]\s*[DC]\d|have\s+not\s+seen\s+the\s+text\s+of\s+my\s+(?:round\s+1\s+)?declaration)/i;
+ const STOP=new Set('that this these those with from which whom what when where their there than then also into upon such have been were will would shall should could being does each very more most some only link links chain round rounds verse verses text says said stated state states before after because under over about against other another child text rows row stands stand holds hold named names'.split(' '));
+ const stems=s=>new Set((String(s).toLowerCase().replace(/[^a-z ]/g,' ').match(/[a-z]{4,}/g)||[]).filter(w=>!STOP.has(w)).map(w=>w.slice(0,5)));
+ const vkeys=s=>new Set(REFP.keys(s,{scoped:true,cap:12}).map(k=>k.key));
+ 
+ const MULTI=/^[ \t>#*_-]*\**\s*[DC]\d+\**\s*(?:,|and\b|&|\/|[-–—]\s*\**[DC]?\d)\s*\**\s*[DC]?\d/i;
+ const closeLabels=(t,sd)=>{const T=String(t||'');const out=[];const L=sd;
+  const lists=[...T.matchAll(new RegExp('(?:^|[:;.]\\s+)((?:\\**'+L+'\\d+\\**\\s+[^,;\\n]{4,160}?(?:,\\s*(?:and\\s+)?|;\\s*|\\.\\s*$|\\.(?=\\s)|$)){3,})','gm'))];
+  for(const m of lists)for(const x of m[1].matchAll(new RegExp('\\**'+L+'(\\d+)\\**\\s+([^,;\\n]{4,160}?)(?=,\\s*(?:and\\s+)?\\**'+L+'\\d|;|\\.\\s|\\.$|$)','g')))if(!/^(?:vs\b|and\b|[-–—]|to\b|through\b)/i.test(x[2]))out.push({n:+x[1],text:x[2],from:'list'});
+  const H=[...T.matchAll(new RegExp('^[ \\t>#*_-]*'+L+'(\\d+)\\b[^\\n]*','gm'))].filter(h=>!/^\s*[^\n]*\bvs\.?\s/i.test(h[0])&&!/ANSWER\s*:/i.test(h[0])&&!MULTI.test(h[0]));
+  H.forEach(h=>{if(out.some(o=>o.n===+h[1]))return;const from=h.index+h[0].length;const tail=T.slice(from);
+   let e=tail.search(/\n\s*\n|\n[ \t]*#{1,6}\s|\n[ \t>*_-]*\**\s*[DC]\d+\b|\n[ \t>*_-]*\**\s*ANSWER\s*:/);e=e<0?tail.length:e;out.push({n:+h[1],text:T.slice(h.index,from+Math.min(e,2500)),from:'block'});});
+  return out;};
+ const mismatch=(labels,targets,lab,tlab)=>{const out=[];const TG=targets.map(x=>({k:x.k,w:stems(x.text),v:vkeys(x.text)}));const df={};TG.forEach(x=>x.w.forEach(w=>{df[w]=(df[w]||0)+1;}));
+  const lim=Math.max(1,Math.floor(TG.length/3));const dist=w=>(df[w]||0)<=lim;
+  const sc=(a,b)=>{let n=0;for(const x of a.w)if(b.w.has(x)&&dist(x))n++;for(const x of a.v)if(b.v.has(x))n+=2;return n;};
+  for(const c of labels){const a={w:stems(c.text),v:vkeys(c.text)};const own=TG.find(x=>x.k===c.n);if(!own)continue;const os=sc(a,own);if(os>0)continue;
+   const best=TG.filter(x=>x.k!==c.n).map(x=>({k:x.k,s:sc(a,x)})).sort((p,q)=>q.s-p.s)[0];
+   if(best&&best.s>=3)out.push(lab+c.n+' ("'+String(c.text).replace(/\s+/g,' ').replace(/[\[\]"*_#]/g,'').trim().slice(0,70)+'") shares no verse and no distinctive word with '+tlab+c.n+' and matches '+tlab+best.k+' (score '+best.s+')');}
+  return out;};
+ const renum=(F,sd)=>{const t=String((sd==='D'?F.cr4:F.dr4)||'');if(!t)return [];const out=[];
+  const rm=[...t.matchAll(new RegExp(RENUM.source,RENUM.flags.replace('g','')+'g'))].find(m=>!/\b(?:not|no|never|nor|without)\b[^.\n]{0,40}$/i.test(t.slice(Math.max(0,m.index-60),m.index)))||null;  if(rm&&/\b[DC]\d+\b/.test(t.slice(Math.max(0,rm.index-200),rm.index+400))){const a=Math.max(0,t.lastIndexOf('\n',rm.index)+1);out.push('it states a numbering of its own ("'+t.slice(Math.max(a,rm.index-40),rm.index+120).replace(/\s+/g,' ').replace(/[\[\]"]/g,'').trim()+'")');}
+  const nd=nDecl(F),nc=nLink(F);const hd=[...new Set([...t.matchAll(/\bD(\d+)\b/g)].map(m=>+m[1]))].filter(x=>nd&&x>nd);const hc=[...new Set([...t.matchAll(/\bC(\d+)\b/g)].map(m=>+m[1]))].filter(x=>nc&&x>nc);
+  if(hd.length)out.push('D'+hd.join(', D')+' above the '+nd+' declared links');if(hc.length)out.push('C'+hc.join(', C')+' above the '+nc+' LINK blocks of [DR3]');
+  try{const DL=dlinks(F).map(x=>({k:x.n,text:x.text}));if(DL.length)mismatch(closeLabels(t,'D'),DL,'D','declared D').forEach(x=>out.push(x));
+   const CB=cblocks(F).map(x=>({k:x.j,text:x.text}));if(CB.length&&sd==='C')mismatch(closeLabels(t,'C'),CB,'C','[DR3] LINK block C').forEach(x=>out.push(x));}catch(e){}
+  return out;};
+ 
+ const GRADE=[['own measure',/\b(?:by|on|in)\s+(?:the\s+)?(?:challenger|defender|defence|defense)['’]s\s+own\s+(?:measure|reading|terms|words|account|admission|rows?)\b/i],
+  ['no reading offered',/\b(?:challenger|defender|defence|defense)\s+(?:has\s+|had\s+)?(?:offered|offers|gave|gives|has|had|left|leaves)\s+no\s+(?:reading|answer|footing|row|reply|response|account|ground)\b/i],
+  ['concession claimed',/\b(?:(?:the\s+)?(?:challenger|defender)|\b[CD]\d+)\s+(?:has\s+|had\s+)?(?:conced(?:es|ed)|grant(?:s|ed)|admit(?:s|ted)|dropp(?:ed)|drops|abandon(?:s|ed)|gave\s+up|gives\s+up)\b/i],
+  ['link graded',/\b[CD]\d+(?:\s*(?:,|and|&)\s*[CD]\d+)*\s+(?:is|are|was|were|stands?|lies)\s+(?:refused|broken|refuted|false|unfooted|unsupported|unexhibited|void|collapsed|defeated|overturned|answered|unanswered|fails?)\b/i],
+  ['inference graded',/\b(?:each\s+)?(?:stands?|rests?)\s+on\s+(?:an?\s+)?inferences?\b[^.]{0,60}\b(?:do(?:es)?\s+not|never|no)\b/i],
+  ['link argued against',/\b[CD]\d+\s+(?:answers|argues|claims|routes|reads|rests)\s+(?:by|that|on)\b|^\s*Against\s+that\b/i],
+  ['link left unanswered',/\b(?:left|leaves)\s+[^.]{0,80}\bunanswered\b/i],
+  ['ground conceded heading',/^#{1,4}\s*(?:ground|points?|links?)\s+(?:the\s+)?(?:challenger|defender)\s+(?:conceded|granted|dropped)\b/i],
+  ['refused',/\brefused\b|\brefutes?\b|\brefuted\b/i],['fails',/\bfail(?:s|ed)?\b/i],
+  ['does not stand',/\b(?:does|do|did)\s+not\s+(?:stand|hold|carry|follow|touch|show|name|state|say|reach|bear)\b|\bcannot\s+(?:stand|hold|carry|bear)\b|\bis\s+not\s+(?:stated|shown|written)\s+(?:by|in)\b/i],
+  ['inference not stated',/\binferences?\b[^.]{0,80}\b(?:not|never)\s+(?:state|stated|say|said|written)\b/i],
+  ['concedes',/\bconced(?:es|ed)\b|\bgrant(?:s|ed)\b|\badmit(?:s|ted)\b/i],
+  ['breaks',/\b(?:breaks?|broke|collapses?|collapsed)\b/i],
+  ['none of them',/\bnot\s+one\s+of\b|\bnone\s+of\s+(?:them|these|those|its|his|her|their)\b/i]];
+ const press=(F,sd)=>{const t=String((sd==='D'?F.cr4:F.dr4)||'');if(!t)return [];
+  const other=sd==='D'?/\bchallenger(?:['’]s)?\b|\bC\d+\b/i:/\bdefen(?:der|ce|se)(?:['’]s)?\b|\bD\d+\b/i;
+  const QW=x=>String(x).toLowerCase().replace(/[^a-z\u00c0-\u024f\u1e00-\u1eff ]+/g,' ').split(/\s+/).filter(w=>w.length>=4&&!/^(?:that|this|with|from|have|been)$/.test(w));
+  const OS=(sd==='D'?[F.gr1,F.gr2,F.dr3,F.dr4]:[F.cr1,F.cr2,F.cr3,F.cr4]).map(x=>String(x||'').replace(/[*_]+/g,'')).join('\n').split(/[.!?](?:\s|$)|\n/).map(QW).filter(w=>w.length);
+  const said=q=>q.length>=2&&OS.some(w=>{for(let st=0;st<w.length;st++){if(w[st]!==q[0])continue;let k=1,e=st;for(let i=st+1;i<w.length&&k<q.length;i++)if(w[i]===q[k]){k++;e=i;}if(k===q.length&&e-st+1<=3*q.length)return true;}return false;});
+  const REPORT=/^(?:[DC]\d+\W+)?(?:the\s+)?(?:defender|challenger)(?:['’]s)?\s+(?:grants|granted|says|said|holds|held|states|stated|writes|wrote|narrows|narrowed|answers|answered|concedes|conceded|admits|admitted|drops|dropped|files|filed|claims|claimed|reads|read)\b/i;
+  const report=s=>{if(!REPORT.test(s)||/[—–]|\s--\s|;|\bbut\b|\byet\b|\bso\b/i.test(s))return false;return said(QW(s.replace(REPORT,'')));};
+  const OWN=/^(?:I|We)\s+(?:grant|concede|accept|withdraw|drop|narrow|do\s+not\s+(?:argue|claim|press|rest))\b|\b(?:I|we)\s+(?:grant|concede|accept|withdraw|drop)\b|\bis\s+accepted\b|^(?:Granted|Conceded)\b/i;
+  const VERD=[['own measure',/\b(?:by|on|in)\s+(?:the\s+)?(?:challenger|defender|defence|defense)['’]s\s+own\s+(?:measure|reading|terms|words|account|admission|rows?)\b/i],
+   ['no reading offered',/\b(?:offered|offers|gave|gives|has|had|left|leaves)\s+no\s+(?:reading|answer|footing|row|reply|response|account|ground)\b/i],
+   ['concession claimed',/\b(?:(?:the\s+)?(?:challenger|defender)(?:['’]s\s+own\s+(?:answer|reading|round|close))?|\b[CD]\d+)\s+(?:has\s+|had\s+)?(?:conced(?:es|ed)|grant(?:s|ed)|admit(?:s|ted)|dropp(?:ed)|drops|abandon(?:s|ed)|gave\s+up|gives\s+up)\b/i],
+   ['link graded',/\b[CD]\d+(?:\s*(?:,|and|&)\s*[CD]\d+)*\s+(?:is|are|was|were|stands?|lies)\s+(?:refused|broken|refuted|false|unfooted|unsupported|unexhibited|void|collapsed|defeated|overturned|unanswered|circular|conceded|withdrawn|floating)\b/i],
+   ['grade word',/\b(?:CONCEDED|BROKEN|UNEXHIBITED|UNSUPPORTED|VOID|COLLAPSED)\b/],
+   ['inference graded',/\b(?:stands?|rests?)\s+on\s+(?:an?\s+)?inferences?\b[^.]{0,60}\b(?:do(?:es)?\s+not|never|no)\b/i],
+   ['left unanswered',/\b(?:left|leaves)\s+[^.]{0,80}\bunanswered\b/i],
+   ['refused',/\brefused\b|\brefutes?\b|\brefuted\b/i],['fails',/\bfail(?:s|ed)?\b/i],['circular',/\bcircular\b|\bbegs\s+the\s+question\b/i],
+   ['does not carry',/\b(?:does|do|did)\s+not\s+(?:stand|hold|carry|follow|reach|bear)\b|\bcannot\s+(?:stand|hold|carry|bear)\b|\bis\s+not\s+(?:stated|shown|written)\s+(?:by|in)\b/i],
+   ['breaks',/\b(?:breaks?|broke|collapses?|collapsed)\b/i],['floats',/\bfloats?\b|\bunfooted\b/i]];
+  const LISTH=/\bUNSUPPORTED-?\s*\[?L4\]?\s*PREMISES\b|\bPREMISES?\s+(?:LIST|AGAINST)\b|\bPREMISE\s+COUNT\s*:/i;const PW=/\bPRESSED\s+WITH\s*:/i;
+  const out=[];const seen=new Set();let list=null;
+  const add=(s0,why)=>{const s=s0.replace(/\*+/g,'').replace(/\s+/g,' ').trim();if(s.length<12)return;const c=s.slice(0,220);if(seen.has(c))return;seen.add(c);out.push({why,s:c});};
+  for(const p0 of t.split(/\n[ \t]*\n/)){let L=p0.split('\n');while(L.length&&/^[ \t]*#{1,6}\s/.test(L[0])){const h=L[0].replace(/^[ \t]*#+\s*/,'').replace(/[*_]+/g,'').trim();list=LISTH.test(h)?'new premise list "'+h.slice(0,60)+'"':null;L=L.slice(1);}
+   const p=L.join('\n').trim();if(!p)continue;if(/^[ \t>*_-]*\**\s*ANSWER\s*:/i.test(p))continue;
+   const bold=p.match(/^[ \t>_-]*\*\*([^*\n]{4,160})\*\*/);if(bold&&LISTH.test(bold[1]))list='new premise list "'+bold[1].trim().slice(0,60)+'"';else if(LISTH.test(p.split('\n')[0])&&p.split('\n')[0].length<160)list='new premise list "'+p.split('\n')[0].replace(/[*_#]+/g,'').trim().slice(0,60)+'"';
+   for(const s0 of p.split(/\n|(?<=[.!?])["”'’)\]]*\s+(?=["“(\[*_]*[A-Z])/)){const s=s0.replace(/\*+/g,'').replace(/^[ \t>_-]+/,'').trim();if(s.length<12)continue;
+    if(list){add(s,list);continue;}if(PW.test(s)){add(s,'PRESSED WITH line');continue;}
+    if(report(s)||OWN.test(s))continue;if(!other.test(s))continue;const g=VERD.find(([k,rx])=>rx.test(s)&&(k!=='concession claimed'||/\b[CD]\d+\b|\b(?:link|chain|premise|ground|point|case)s?\b/i.test(s)));if(g)add(s,g[0]);}}
+  return out;};
+ 
+ 
+ const all=F=>({D:F&&F.cr4?press(F,'D').map(x=>x.s):[],C:F&&F.dr4?press(F,'C').map(x=>x.s):[]});
+ const storeLine=(p,sd)=>'[AUDIT v27: CLOSE-ROUND GRADING CHECK ('+sd+'4) -- STORED, computed once from every round; a TRIAL check: the '+(sd==='D'?'defender':'challenger')+'\'s close round holds '+p.length+' sentence(s) that grade or press the '+(sd==='D'?'challenger':'defender')+'\'s links; each is marked DISREGARDED for the judges'+(p.length?': '+p.map((x,i)=>'('+(i+1)+') "'+String(x).replace(/[\[\]"]/g,'')+'"').join(' ')+'. REVIEW THIS ROW.]':'.]');
+ const stored=(notes,sd)=>{const m=String(notes||'').match(new RegExp('\\[AUDIT v27: CLOSE-ROUND GRADING CHECK \\('+sd+'4\\) -- STORED[^\\]]*?holds (\\d+) sentence\\(s\\)[^\\]]*\\]'));if(!m)return null;
+  const p=[...m[0].matchAll(/\((\d+)\) "([^"]*)"/g)].map(x=>x[2]);return p.length===+m[1]?p:null;};
+ return {refs,fresh,of,ofD,renum,declared,dlinks,cblocks,press,all,storeLine,stored};})();
+const TOK=$('Init Seats').first().json.run_token;const RT=' run_token='+TOK;
+const d=$input.first().json;const S=$('Init Seats').first().json;
+const __CGB=()=>{try{if($('Build Synthesis').isExecuted){const g=$('Build Synthesis').first().json.close_graded;if(g&&Array.isArray(g.D)&&Array.isArray(g.C))return g;}}catch(e){}return C4P.all(d);};
+const __L2RV=(()=>{try{const q=$('Quote Report').first().json;const out=[];if(q&&q.l2&&Array.isArray(q.l2.tags)){const T=q.l2.tags.filter(t=>t.status!=='IGNORED');const n=s=>T.filter(t=>t.status===s).length;out.push('[AUDIT v28: [L2] CHECK -- '+T.length+' tags; '+n('COUNTED')+' COUNTED; '+n('NOT COUNTED')+' NOT COUNTED; '+n('UNVERIFIABLE')+' UNVERIFIABLE'+(n('NOT COUNTED')?': '+T.filter(t=>t.status==='NOT COUNTED').slice(0,12).map(t=>t.round+' '+(t.words||[]).map(w=>w.w).join('/')+' (bound to '+((t.verses||[]).join(', ')||'no verse')+'; map: '+(t.words||[]).map(w=>w.w+(w.ok?' = '+w.num+(w.in?' in '+w.in:''):w.root?' root, not read':' in none of them')).join('; ')+')').join(' | '):'')+'.]');
+ const D=(q.l2.counts||[]).filter(c=>/DIFFERS/.test(c.status));if(D.length)out.push('[AUDIT v28: [L2] COUNT DIFFERS FROM THE RECORD -- '+D.map(c=>c.round+' "'+c.said+'" ('+c.num+'): '+c.status).join('; ')+'. REVIEW THIS ROW.]');}
+ if(q&&q.synthesis){const Y=q.synthesis;if(Y.bad&&Y.bad.length)out.push('[AUDIT v28: SYNTHESIS CITATION CHECK -- '+Y.bad.length+' of '+Y.checked+' quotations do not match the KJV: '+Y.bad.map(b=>b.ref+' ('+b.status+')').join('; ')+'. REVIEW THIS ROW.]');if(Y.verdict_phrases&&Y.verdict_phrases.length)out.push('[AUDIT v28: SYNTHESIS VERDICT -- the synthesis gives no verdict; these phrases read as one: '+Y.verdict_phrases.map(v=>'"'+String(v).replace(/[\[\]"]/g,'')+'"').join('; ')+'. REVIEW THIS ROW.]');}
+ return out;}catch(e){return [];}})();
+const __CC=(()=>{try{const q=$('Quote Report').first().json;if(!q||q.unavailable)return {unavailable:true};return {checked:q.checked,matches:q.matches,not_checked:q.not_checked,mismatches:q.mismatches,items:(q.items||[]).map(i=>({side:i.side,round:i.round,ref:i.ref,status:i.status,link:(i.link==null?null:i.link),load_bearing:i.load_bearing===true,...(i.reason?{reason:i.reason}:{}),...(i.rebound_from?{rebound_from:i.rebound_from}:{}),...(/^MATCHES\b/.test(String(i.status||''))?{}:{quote:String(i.quote==null?'':i.quote).slice(0,300),...(i.alt&&i.alt.ref?{alt:i.alt.ref}:{})})}))  ,...(q.scanned!=null?{scanned:q.scanned,item_cap:q.item_cap}:{})};  }catch(e){return {unavailable:true};}})();
+const RS=$('Resolve Seats').first().json;const IG=$('Init with Guards').first().json;
+const __U=(n)=>{try{return __L[n]().first().json.usage||{};}catch(e){return {};}};const __R=['D1','C1','D2','C2','D3','C3','D4','C4'].map(r=>__U(r+' Extract'));  const __J=['Synthesis Normalizer','Verdict Normalizer','Diagnostic Normalizer'].map(n=>{const x=__U(n);return {input_tokens:Number(x.prompt_tokens)||0,output_tokens:Number(x.completion_tokens)||0,cache_creation_input_tokens:Number(x.prompt_tokens_details&&x.prompt_tokens_details.cache_write_tokens)||0,cache_read_input_tokens:Number((x.prompt_tokens_details&&x.prompt_tokens_details.cached_tokens)||x.prompt_cache_hit_tokens)||0};});
+const __CU=['deepseek','openai','gemini','grok','mimo','openrouter'].map(f=>{let j=null;try{if(!__L['Cure Call '+f]().isExecuted)return null;j=__L['Cure Call '+f]().first().json;}catch(e){return null;}if(!j)return null;if(j.usageMetadata){const m=j.usageMetadata;return {input_tokens:Number(m.promptTokenCount)||0,output_tokens:(Number(m.candidatesTokenCount)||0)+(Number(m.thoughtsTokenCount)||0),cache_creation_input_tokens:0,cache_read_input_tokens:Number(m.cachedContentTokenCount)||0};}const u=j.usage||{};return {input_tokens:Number(u.prompt_tokens)||0,output_tokens:Number(u.completion_tokens)||0,cache_creation_input_tokens:Number(u.prompt_tokens_details&&u.prompt_tokens_details.cache_write_tokens)||0,cache_read_input_tokens:Number((u.prompt_tokens_details&&u.prompt_tokens_details.cached_tokens)||u.prompt_cache_hit_tokens)||0};}).filter(Boolean);
+const __A=__R.concat(__J).concat(__CU);const __S=(k)=>__A.reduce((s,x)=>s+(Number(x[k])||0),0);const ti=__S('input_tokens');const to=__S('output_tokens');const tcw=__S('cache_creation_input_tokens');const tcr=__S('cache_read_input_tokens');const pe=S.panel_expected;if(!Array.isArray(pe)||pe.length===0)throw new Error('ORACLE_DEBATE_V1: panel_expected absent or empty on the Init Seats payload; derive_debate_outcome FENCE 2 refuses to grade a row without it.'+RT);const panel_expected=pe.map(s=>String(s).trim().toLowerCase()).filter(s=>s!=='');if(panel_expected.length!==pe.length)throw new Error('ORACLE_DEBATE_V1: panel_expected contains a blank seat.'+RT);
+const listCount=(text,re)=>{const s=String(text||'');const g=new RegExp(re.source,'gi');let m,last=-1;while((m=g.exec(s))!==null)last=m.index+m[0].length;if(last<0)return {n:0,missing:true};const tail=s.slice(last);const pc=tail.match(/PREMISE COUNT:\s*\**\s*(\d+)/i);if(pc)return {n:+pc[1],missing:false};return {n:(tail.match(/^\s*[*_]*\s*\d+[.)]\s+\S/gm)||[]).length,missing:false};};
+const vsDef=listCount(d.gr2,/UNSUPPORTED-L4 PREMISES/);const vsCh=listCount(d.cr3,/CHALLENGER.{0,2}S UNSUPPORTED-L4 PREMISES/);const FF=[];
+if(vsDef.n===0)FF.push('LINK ROUND FORFEITED: CHALLENGER -- no premises were listed against the defender'+(vsDef.missing?' (list heading absent)':'')+'; the defender link round carries no information.');
+if(vsCh.n===0)FF.push('LINK ROUND FORFEITED: DEFENDER -- no premises were listed against the challenger'+(vsCh.missing?' (list heading absent)':'')+'; the challenger link round carries no information.');
+const FZ=$('Fence Check').first().json.fence||{};if(FZ.override_reason)FF.push('TOPIC FENCE OVERRIDE, operator reason: '+FZ.override_reason);
+const RVW=String(d.independent_verdict_raw||'').match(/\[(?:EXTRACTOR|AUDIT) v\d+[^\]\n]*REVIEW THIS ROW[^\]\n]*\]/g)||[];
+const __CUR=new Set();(String(d.independent_verdict_raw||'').match(/\[AUDIT v21: DEBATE RULE VIOLATION REPORT -- [^\]\n]*\]/g)||[]).forEach(x=>{const m=x.match(/ITEM: ([^;\]]+); RULE: ([^;\]]+); RESULT: ([A-Z]+)/);if(m&&m[3]==='CURED')__CUR.add(m[2].trim()+'|'+m[1].trim().toUpperCase());});
+const __FK=x=>{let m=x.match(/\((K-S|K-S2|K-LXX|K-C|K-N|K-SC|K-K|K-DG8|K-F|K-L2|K-P)\) -- (D\d+(?: vs C\d+)?|REASONING|CITATION CHECK|KEYSTONE|RESULT|(?:DEFENSE|CHALLENGE) STANDING|(?:DEFENDER|CHALLENGER) CHAIN MARK|(?:CHALLENGER )?CONCEDED LINKS)(?=[ ;:.,\]]|$)/);if(m)return m[1]+'|'+m[2].toUpperCase();m=x.match(/\((K-G\d+)\) -- (D\d+ vs C\d+)/);  if(m)return m[1]+'|'+m[2].toUpperCase();m=x.match(/\((K-G3)\) -- (DEFENSE|CHALLENGE) STANDING/);if(m)return 'K-G3|'+(m[2]==='DEFENSE'?'DEFENDER':'CHALLENGER')+' STANDING';m=x.match(/\((K-G6|K-G10|K-V|K-P|K-R)\) -- ((?:DEFENDER|CHALLENGER) premise \d+)/);if(m)return m[1]+'|'+m[2].toUpperCase();  m=x.match(/\((K-G9)\) -- ((?:DEFENDER|CHALLENGER) CITED-IN)/);if(m)return 'K-G9|'+m[2].toUpperCase();m=x.match(/\((K-LB)\) -- ((?:DEFENDER|CHALLENGER) premise \d+)/);if(m)return 'K-LB|'+m[2].toUpperCase();m=x.match(/\((K-G8)\) -- counted_premises_(defender|challenger)/);if(m)return 'K-G8|'+m[2].toUpperCase()+' COUNTED PREMISES';m=x.match(/VIOLATION -- (D\d+ vs C\d+) /);if(m)return 'K-B|'+m[1].toUpperCase();return null;};
+RVW.forEach(x=>{const k=__FK(x);let y=x.replace(/^\[((?:EXTRACTOR|AUDIT) v\d+): /,'[$1: SINGLE JUDGE (second opinion): ').replace(/STATED VALUE STORED\./,"STATED VALUE KEPT IN THE SINGLE JUDGE'S TEXT.");if(k&&__CUR.has(k))y=y.replace(/REVIEW THIS ROW\.?/,"CURED by the single judge's cure reply; recorded, not for review.");FF.push(y);});
+const __SU=(()=>{const g=f=>{try{return f();}catch(e){return undefined;}};const sn=g(()=>$('Synthesis Normalizer').first().json)||null;const u=(sn&&sn.usage)||null;const ch=(sn&&Array.isArray(sn.choices)&&sn.choices[0])||null;const mt=g(()=>$('Build Synthesis').first().json.requestBody.max_tokens);const v=x=>(x===undefined||x===null||x==='')?'unknown':String(x);const rt=u&&u.completion_tokens_details?u.completion_tokens_details.reasoning_tokens:undefined;return '[SYNTHESIS USAGE: prompt='+v(u&&u.prompt_tokens)+' completion='+v(u&&u.completion_tokens)+' reasoning='+(u?((rt===undefined||rt===null)?'not reported':String(rt)):'unknown')+' finish='+v(ch&&ch.finish_reason)+' max_tokens='+v(mt)+']';})();FF.push(__SU);
+['D1','C1','D2','C2','D3','C3','D4','C4'].forEach(r=>{try{const x=__L[r+' Extract']().first().json;if(x&&typeof x.cache_diag==='string'&&x.cache_diag)FF.push(x.cache_diag);}catch(e){}});
+{const SY=String(d.synthesis||'');const SL=SY.split('\n');const QF=s=>String(s||'').toLowerCase().replace(/[“”"’‘'*_`]/g,'').replace(/[^a-z0-9:\s]/g,' ').replace(/\s+/g,' ').trim();
+ const DEF=QF([d.cr1,d.cr2,d.cr3,d.cr4].join('\n')),CHA=QF([d.gr1,d.gr2,d.dr3,d.dr4].join('\n'));  const qin=(q,T)=>{const x=QF(q);return x.split(' ').length>=3&&T.includes(x);};
+ const cut=s=>String(s).replace(/\s+/g,' ').trim().slice(0,200).replace(/[\[\]]/g,'');const SX=[];
+ const cvIn=(cv,T)=>new RegExp('(?<![0-9:])'+cv.replace(':','\\:')+'(?![0-9])').test(T);const RAWD=[d.cr1,d.cr2,d.cr3,d.cr4].join('\n'),RAWC=[d.gr1,d.gr2,d.dr3,d.dr4].join('\n');
+ SL.forEach((l,i)=>{for(const s of l.split(/(?<=[.!?])\s+(?=[A-Z*_"“])/)){if(!/\bboth\s+(?:seats|sides|parties|debaters)\s+(?:now\s+)?(?:agree|state|affirm|hold|accept|grant|concede|use|cite|read)|\bboth\s+(?:now\s+)?(?:agree|affirm|use|cite|accept|hold|read|grant)\b/i.test(s))continue;
+  const qs=[...[s,(/["“]/.test(s)?'':SL[i+1]||'')].join(' ').matchAll(/["“]([^"”]{8,})["”]/g)].map(m=>m[1]);const cvs=(x=>x.length?x:[...l.matchAll(/\b(\d{1,3}:\d{1,3})\b/g)].map(m=>m[1]))([...s.matchAll(/\b(\d{1,3}:\d{1,3})\b/g)].map(m=>m[1]));
+  const ok=qs.length?(qs.some(q=>qin(q,DEF))&&qs.some(q=>qin(q,CHA))):(cvs.length>0&&cvs.every(cv=>cvIn(cv,RAWD)&&cvIn(cv,RAWC)));
+  if(!ok)SX.push('(S-A) -- a "both" item '+(qs.length?'does not quote both sides\' own words':cvs.length?'names a verse one side never names ('+cvs.filter(cv=>!(cvIn(cv,RAWD)&&cvIn(cv,RAWC))).join(', ')+')':'quotes neither side')+': "'+cut(s)+'"');}});
+ const lastAfter=(t,re)=>{t=String(t||'');let i=-1;for(const m of t.matchAll(re))i=m.index;return i<0?'':t.slice(i);};
+ const LD=lastAfter(d.gr2,/UNSUPPORTED-L4 PREMISES/gi),LC=lastAfter(d.cr3,/CHALLENGER.{0,2}S UNSUPPORTED-L4 PREMISES/gi);
+ const unnamed=(list,ans)=>{const A=String(ans||'');const out=[];for(const m of String(list).matchAll(/\b((?:[1-3]\s)?[A-Z][a-z]+)\.?\s+(\d{1,3}):(\d{1,3})/g)){const b3=m[1].replace(/\s/g,'').slice(0,3).toLowerCase();const cv=m[2]+':'+m[3];
+  let ok=false;for(const k of A.matchAll(new RegExp('(?<![0-9:])'+cv.replace(':','\\:')+'(?![0-9])','g'))){const pre=A.slice(Math.max(0,k.index-40),k.index).replace(/\s/g,'').toLowerCase();if(pre.includes(b3)){ok=true;break;}}if(!ok)out.push(m[1]+' '+cv);}return out;};
+ const UN=unnamed(LD,[d.cr2,d.cr3,d.cr4].join('\n')).concat(unnamed(LC,[d.gr2,d.dr3].join('\n')));
+ SL.forEach(l=>{if(/\b(?:every|each)\s+(?:link|premise|pressed\s+(?:row|witness|verse)|witness)\s+(?:\S+\s+){0,3}?(?:was|were|is|are|been)\s+answered\b|\ball\s+(?:the\s+)?(?:links|premises|pressed\s+(?:rows|witnesses|verses)|witnesses)\s+(?:\S+\s+){0,2}?(?:were|are|been)\s+answered\b/i.test(l)&&UN.length)
+  SX.push('(S-B) -- "every link answered" while the closing lists carry verses no later round of the answering side names ('+UN.slice(0,8).join(', ')+(UN.length>8?', ...':'')+'): "'+cut(l)+'"');});
+ const listRefs=new Set([...(LD+'\n'+LC).matchAll(/\b((?:[1-3]\s)?[A-Z][a-z]+)\.?\s+(\d{1,3}):(\d{1,3})/g)].map(m=>m[1].replace(/\s/g,'').slice(0,3).toLowerCase()+' '+m[2]+':'+m[3]));
+ {let on=false;const scRef=[];const LT=QF(LD+'\n'+LC);for(const l of SL){if(/^\s*#/.test(l)){on=/neither side|no charge\b[^\n]{0,60}\bcontests?|no charge on either|uncharged|uncontested|charges? neither/i.test(l);continue;}if(/neither side.s list charges|no charge on either side|no charge\b[^\n]{0,60}\bcontests?|charged by neither/i.test(l)){on=true;continue;}
+  if(!on||!/^\s*(?:[-*•]|\d+[.)])\s+/.test(l))continue;const w=QF(l.replace(/["“][^"”\n]*["”]/g,' | ')).split(' ').filter(Boolean);  let hit=null;for(let k=0;k+5<=w.length;k++){const g=w.slice(k,k+5).join(' ');if(!/\d+:\d+|\|/.test(g)&&LT.includes(g)){hit=g;break;}}
+  if(hit){SX.push('(S-C) -- an item listed as charged by neither side stands in a side\'s premise list ("'+hit+'"): "'+cut(l)+'"');continue;}
+  {let lb=null;const vh=[];for(const m of l.matchAll(/\b((?:[1-3]\s)?[A-Z][a-z]+)\.?\s+(\d{1,3}):(\d{1,3})|\((\d{1,3}):(\d{1,3})\)/g)){if(m[1])lb=m[1];const b=(m[1]||lb||'');const k=b.replace(/\s/g,'').slice(0,3).toLowerCase()+' '+(m[2]||m[4])+':'+(m[3]||m[5]);if(b&&listRefs.has(k))vh.push(b+' '+(m[2]||m[4])+':'+(m[3]||m[5]));}
+   if(vh.length)scRef.push(String(l).replace(/^\s*(?:[-*•]|\d+[.)])\s+/,'').replace(/[*_]/g,'').slice(0,40).trim()+' ('+[...new Set(vh)].join(', ')+')');}}
+  if(scRef.length)SX.push('(S-C) -- '+scRef.length+' item(s) listed as charged by neither side name verses a closing premise list carries: '+scRef.join('; ').slice(0,700));}
+ {const STOPW=new Set('the a an and or of in on at to for with by from this that these those its his her their our your which who what is are was were be been as it he she they not no any all every each both only also than then when while after before into upon withdrew withdrawn withdraws conceded concedes retracted retracts dropped drops outright rather instead defended defender challenger seat side link links round rounds citation'.split(' '));
+  const FAM={w:/\bwithdr(?:aw|ew|awn|aws|awing)\b/i,c:/\bconce(?:de|ded|des|ding|ssion)\b/i,r:/\bretract(?:s|ed|ing)?\b/i,d:/\bdrop(?:s|ped|ping)?\b/i};
+  const NEGV=/\b(?:not|never|nothing|no)\b/i;const SIDEC={DEFENDER:[d.cr1,d.cr2,d.cr3,d.cr4].join('\n'),CHALLENGER:[d.gr1,d.gr2,d.dr3,d.dr4].join('\n')};
+  const affirmed=(T,fr,words)=>{for(const m of String(T).matchAll(new RegExp(fr.source,'gi'))){const a=Math.max(0,m.index-200),b=m.index+m[0].length+200;const pre=T.slice(Math.max(0,m.index-25),m.index),post=T.slice(m.index+m[0].length,m.index+m[0].length+12);
+    if(NEGV.test(pre.split(/[.;,]/).pop())||/^\s*(?:nothing|none)\b/i.test(post))continue;  const win=T.slice(a,b).toLowerCase();if(!words.length||words.some(w=>win.includes(w)))return true;}return false;};
+  const qheld=(s,side,fr)=>{try{const qs=[...s.matchAll(/["“]([^"”\n]{12,})["”]/g)].map(m=>m[1]);const at=SY.indexOf(s);
+   if(at>=0){for(const b of SY.slice(at+s.length).split('\n').slice(1)){if(!/^\s*>/.test(b))break;qs.push(b.replace(/^\s*>\s*/,'').replace(/^["“]|["”]$/g,''));}}
+   const T=QF(SIDEC[side]);const F=new RegExp(fr.source,'gi');
+   for(const q of qs){const x=QF(q);if(x.split(' ').length<4)continue;let p=T.indexOf(x);while(p>=0){const win=T.slice(Math.max(0,p-80),p+x.length);
+    for(const m of win.matchAll(F)){const pre=win.slice(Math.max(0,m.index-25),m.index).split(' ').slice(-3).join(' ');if(!/\b(?:not|never|no)\b/.test(pre)&&!/^\s*(?:nothing|none)\b/.test(win.slice(m.index+m[0].length)))return true;}
+    p=T.indexOf(x,p+1);}}return false;}catch(e){return false;}};
+  for(const s of SY.split(/\n|(?<=[.!?])\s+(?=[A-Z*_"“])/)){const m=s.match(/(?<!\b(?:against|to|for|of|from|with|by|on|over|at)\s+(?:the\s+)?)\b(?:the\s+)?(defender|challenger)\b(?!['’]s)((?:(?!\b(?:judge|seat|panel|synthesis|defender|challenger)\b(?!['’]s))[^.;:]){0,60}?)\b([Ww]ithdr(?:ew|awn)|[Cc]onced(?:ed|es)|[Rr]etract(?:ed|s)|[Dd]ropped)\b|\b([Ww]ithdrawn|[Cc]onceded|[Rr]etracted|[Dd]ropped)\s+by\s+(?:the\s+)?(defender|challenger)\b/);if(!m)continue;
+   if(/\b(?:no|not|never|nothing|neither|nor)\b/i.test((m[2]||'')+' '+s.slice(Math.max(0,m.index-40),m.index)))continue;
+   const side=(m[1]||m[5]).toUpperCase();const verb=(m[3]||m[4]).toLowerCase();const fr=FAM[verb[0]==='w'?'w':verb[0]==='c'?'c':verb[0]==='r'?'r':'d'];
+   const objs=QF(s.slice(s.toLowerCase().indexOf(verb)+verb.length).replace(/["“][^"”]*["”]/g,' ')).split(' ').filter(w=>w.length>=5&&!STOPW.has(w)&&!/^\d/.test(w)).slice(0,6);
+   const held=(()=>{const pre=s.slice(0,s.toLowerCase().indexOf(verb));const rf=[...new Set([...pre.matchAll(/\b((?:[1-3]\s)?[A-Z][a-z]+)\.?\s+(\d{1,3}):(\d{1,3})/g)].map(m=>m[1]+' '+m[2]+':'+m[3]))];if(rf.length<2)return false;
+    const T=String(SIDEC[side]||'').replace(/[*_]+/g,'');const at=rf.map(x=>{const o=[];let i=-1;while((i=T.indexOf(x,i+1))>=0)o.push(i);return o;});return at[0].some(p=>at.every(a=>a.some(q=>Math.abs(q-p)<=300)));})();
+   if(!held&&!qheld(s,side,fr)&&!affirmed(SIDEC[side],fr,objs))SX.push('(S-E) -- the synthesis says the '+side.toLowerCase()+' '+verb+(objs.length?' ('+objs.slice(0,3).join(', ')+')':'')+', but no '+side.toLowerCase()+' round holds those words affirmed: "'+cut(s)+'"');}}
+ SL.forEach(l=>{if(/\bguards?\b[^.\n]{0,80}\bbinds?\b[^.\n]{0,40}\bboth\s+(?:seats|sides)\b|\bbinds?\s+both\s+seats\b|\bboth\s+seats\b[^.\n]{0,40}\bbound\s+by\b[^.\n]{0,30}\bguards?\b/i.test(l))SX.push('(S-D) -- the synthesis says the guards bind both seats; the guards bind the record seat only: "'+cut(l)+'"');
+  else if(/\bguards?\b[^.\n]{0,80}\b(?:binds?|bound|should\s+bind|must\s+bind|run\s+against|tested\s+against|applied\s+to)\b[^.\n]{0,60}\bdefen(?:der|ce|se)(?:['’]s)?\b|\bdefen(?:der|ce|se)(?:['’]s)?\s+seat\b[^.\n]{0,60}\b(?:never|not)\s+(?:run|tested|checked|held)\s+against\s+the\s+guards?\b|\bshould\s+bind\s+the\s+defen(?:der|ce|se)\b|\bguard-tests?\s+the\s+challenger\s+seat\s+only\b/i.test(l))SX.push('(S-D) -- the synthesis says the guards bind, or should bind, the defender; the guards bind the Debate Oracle seat only (ruling 383): "'+cut(l)+'"');});
+ {let pC=[],pD=[];try{const CG=__CGB();pC=C4P.of(d).concat(CG.C||[]);pD=CG.D||[];  }catch(e){}
+  SL.forEach(l=>{for(const s of l.split(/(?<=[.!?])\s+(?=[A-Z*_"“])/)){if(!/\bpress(?:ed|es)?\s+nothing(?:\s+new)?\b|\bno\s+new\s+press\b|\bdid\s+not\s+press\b|\bnothing\s+new\s+(?:was\s+)?pressed\b/i.test(s))continue;
+   const who=/\bchallenger\b|\bDR4\b/i.test(s)?'C':/\bdefen(?:der|ce|se)\b|\bCR4\b/i.test(s)?'D':'?';const hit=who==='C'?pC:who==='D'?pD:pC.concat(pD);
+   if(hit.length)SX.push('(S-F) -- the synthesis says the close pressed nothing new, while the system found '+hit.length+' press(es) in '+(who==='D'?"the defender's":who==='C'?"the challenger's":'a')+' close (first: '+String(hit[0]).slice(0,100).replace(/[\[\]"]/g,'')+'): "'+cut(s)+'"');}});}
+ {const P27=/\bPs(?:a|alm|alms)?\.?\s+2\s*:\s*7(?!\d)|this\s+day\s+have\s+I\s+begotten\s+thee/i;  const NT=[['Acts 13:33',/\bActs\.?\s+13\s*:\s*33(?!\d)/i],['Hebrews 5:5',/\bHeb(?:rews)?\.?\s+5\s*:\s*5(?!\d)/i],['Hebrews 1:5',/\bHeb(?:rews)?\.?\s+1\s*:\s*5(?!\d)/i]];
+  const OR=[];try{if(S.defender&&S.defender.profile==='oracle')OR.push(['defender',[d.cr1,d.cr2,d.cr3,d.cr4]]);if(S.challenger&&S.challenger.profile==='oracle')OR.push(['challenger',[d.gr1,d.gr2,d.dr3,d.dr4]]);}catch(e){}
+  for(const [side,rs] of OR){const T=rs.filter(Boolean).join('\n');if(!P27.test(T))continue;const miss=NT.filter(x=>!x[1].test(T)).map(x=>x[0]);
+   if(miss.length)SX.push('(S-G) -- guard DG-18: the Debate Oracle seat (the '+side+') quotes Psalm 2:7 in its rounds without its three New Testament occasions; missing: '+miss.join(', ')+'; the synthesis guard test is checked against this count');}
+  {const CUT=/that\s+which\s+is\s+conceived\s+in\s+her\s+is\s+of\s+the\s+Holy\s+Ghost/i,HEAD=/Joseph,?\s+thou\s+son\s+of\s+David/i;const RN={defender:['CR1','CR2','CR3','CR4'],challenger:['DR1','DR2','DR3','DR4']};
+   const CUTG=new RegExp(CUT.source,'gi');const cutN=t=>{let n=0;for(const m of String(t||'').matchAll(CUTG))if(!HEAD.test(String(t).slice(Math.max(0,m.index-200),m.index)))n++;return n;};
+   for(const [side,rs] of OR){const cut=rs.map((t,i)=>{const n=cutN(t);return n?RN[side][i]+(n>1?' ('+n+' times)':''):null;}).filter(Boolean);
+    if(cut.length)SX.push('(S-H) -- guard DG-8: the Debate Oracle seat (the '+side+') quotes Matthew 1:20 as "that which is conceived in her is of the Holy Ghost" without "Joseph, thou son of David" just before it, in: '+cut.join(', ')+'; the synthesis guard test is checked against this count');}}}
+ {try{const RD={D:[null,d.cr1,d.cr2,d.cr3,d.cr4].map(QF),C:[null,d.gr1,d.gr2,d.dr3,d.dr4].map(QF)};
+  const strip=t=>String(t).replace(/["“][^"”\n]*["”]/g,' ');
+  const SPF=/(?:^|[.;:(|]\s*|\*+\s*|[-•]\s+)(?:the\s+)?(defend(?:er|ing)|challeng(?:er|ing)|oracle)(?:['’]s\s+(?:R[1-4]\s+|close\s+|link\s+round\s+|initial\s+|opening\s+|own\s+)?(?:answers?|words|repl(?:y|ies)|narrowing|grants?|claim|method\s+declaration|presses|R[1-4]|round|close)\b[^.;"“]{0,30}:|\s*\**\s*:)|\b(?:the\s+)?(defend(?:er|ing)|challeng(?:er|ing)|oracle)\s+(?:then\s+|explicitly\s+|also\s+)?(?:said|says|wrote|writes|states|stated|conceded|concedes|granted|grants|answered|answers|replied|replies|withdrew|withdraws|keeps|kept|held|holds|argued|argues|maintains|responds|responded|narrowed|narrows)\b/gi;
+  const sideOf=x=>{let s=null;for(const m of String(x).matchAll(SPF))s=/^d/i.test(m[1]||m[2])?'D':'C';return s;};
+  const roundsOf=t=>{const R=new Set();t=String(t);for(const m of t.matchAll(/\bR([1-4])\b/g))R.add(+m[1]);for(const m of t.matchAll(/\bround\s*([1-4])\b/gi))R.add(+m[1]);
+   if(/\bclos(?:e|ing)\s+round\b|\bclose\b(?!\s+(?:to|of|reading))/i.test(t))R.add(4);if(/\blink\s+round\b/i.test(t))R.add(3);if(/\b(?:opening|initial)\b/i.test(t))R.add(1);return R;};
+  const quotesOf=i=>{const L=String(SL[i]);const lead=(L.match(/^\s*(?:[-*•]|\d+[.)])?\s*\*+([^*"“]{3,80})\*+/)||[])[1]||'';const LS=sideOf(lead+':'),LR=roundsOf(lead);
+   const qs=[];let last=0;for(const m of L.matchAll(/["“]([^"”\n]*)["”]/g)){const gap=L.slice(last,m.index).replace(/^\s*\([^)]{0,40}\)/,' ');const aft=(L.slice(m.index+m[0].length).match(/^\s*\(([^)]{0,30})\)/)||[])[1]||'';last=m.index+m[0].length;
+    const first=!qs.length&&last===m.index+m[0].length&&L.slice(0,m.index)===gap;const sg=sideOf(gap);let R=roundsOf(gap+' '+aft);if(!R.size&&first)R=LR;
+    for(const part of m[1].split(/\.\.\.|…/))if(part.trim().length>=15)qs.push({q:part,sd:sg||(first?LS:null),R,gap});}
+   for(let k=i+1;k<SL.length&&/^\s*>/.test(SL[k]);k++){const bq=SL[k].replace(/^\s*>\s*/,'').replace(/^["“]|["”]$/g,'');const gap=L.slice(last);const R0=roundsOf(gap);
+    for(const part of bq.split(/\.\.\.|…/))if(part.trim().length>=15)qs.push({q:part,sd:sideOf(gap)||LS,R:R0.size?R0:LR,gap});}return qs;};
+  const where=q=>{const x=QF(q);const o={D:[],C:[]};if(x.split(' ').length<5)return null;for(const s of ['D','C'])for(let r=1;r<=4;r++)if(RD[s][r]&&RD[s][r].includes(x))o[s].push(r);return o;};
+  const NM={D:'defender',C:'challenger'};const seen=new Set();
+  SL.forEach((l,i)=>{if(/^\s*>/.test(l))return;const qs=quotesOf(i);if(!qs.length)return;
+   for(const {q,sd,R,gap} of qs){const named=!!sd;  const w=where(q);if(!w)continue;const key=QF(q)+'|'+sd+'|'+[...R].join();if(seen.has(key))continue;seen.add(key);
+    if(!w.D.length&&!w.C.length){if(named)SX.push('(S-J) -- the synthesis quotes words that stand in no round of either side: "'+cut(q)+'" (line: "'+cut(l)+'")');continue;}
+    if(!sd)continue;const ot=sd==='D'?'C':'D';
+    if(!w[sd].length&&w[ot].length){SX.push('(S-I) -- the synthesis gives the '+NM[sd]+' words that stand only in the '+NM[ot]+'\'s rounds (R'+w[ot].join(', R')+'): "'+cut(q)+'"');continue;}
+    if(R.size&&w[sd].length&&!w[sd].some(r=>R.has(r)))SX.push('(S-I) -- the synthesis places the '+NM[sd]+'\'s words in R'+[...R].sort().join(', R')+', but they stand in R'+w[sd].join(', R')+': "'+cut(q)+'"');}});
+  for(const s of SY.split(/\n|(?<=[.!?]["”]?)\s+(?=[A-Z*_"“\[])/)){if(/\bUNVERIFIED\b/.test(s)||/^\s*>/.test(s))continue;if(((s.match(/["“”]/g)||[]).length)%2)continue;  const sv=strip(s);if(/\b(?:defend(?:er|ing)|challeng(?:er|ing)|oracle|judges?|seats?|panel|sides?)\b/i.test(sv))continue;
+   if(/\b(?:the\s+canon|scripture|the\s+bible|the\s+record|the\s+text)\b[^.\n]{0,80}\b(?:exactly|only)\s+one\b|\b(?:exactly|only)\s+one\s+(?:verse|row|passage|text)\b|\bno\s+(?:verse|row|text|passage)\s+(?:in\s+(?:the\s+)?(?:canon|scripture|bible)\s+)?(?:names|states|says|gives|joins|places|records)\b|\bnowhere\s+(?:in|does|is)\b/i.test(sv))
+    SX.push('(S-K) -- the synthesis states, in its own voice, an absence or a count over scripture, not marked UNVERIFIED (DG-63 shape): "'+cut(s)+'"');}}catch(e){SX.push('(S-I) -- the checks S-I, S-J and S-K stopped on an error and read nothing: '+String(e&&e.message||e).slice(0,120));}}
+ SX.forEach(x=>FF.push('[AUDIT v23: SYNTHESIS CHECK '+x+'. REVIEW THIS ROW.]'));}
+{try{if($('Anticheat Record').isExecuted){const A=$('Anticheat Record').first().json.acx||{};if(A.skipped)FF.push('[AUDIT ANTI-CHEAT (TRIAL): not run: '+(A.why||'no reason given')+'.]');else{const k=A.counts||{};
+ FF.push('[AUDIT ANTI-CHEAT (TRIAL): '+k.items+' close-round verse(s) checked in '+k.calls+' call(s): '+k.consistent+' CONSISTENT, '+k.reversed+' REVERSED ('+k.shown+' shown to the judges, '+k.quote_not_found+' QUOTE NOT FOUND), '+k.no_earlier+' NO EARLIER READING, '+k.no_answer+' NO ANSWER, '+k.not_checked+' NOT CHECKED'+((A.errors||[]).length?'; errors: '+A.errors.join('; '):'')+'.]');
+ for(const r of (A.rows||[]).filter(r=>r.answer==='REVERSED'))FF.push('[AUDIT ANTI-CHEAT (TRIAL): '+(r.side==='D'?'DEFENDER':'CHALLENGER')+' '+r.verse+' REVERSED'+(r.shown?' (shown to the judges)':r.note==='RECORD-ONLY'?' (quotes found; RECORD-ONLY, not shown)':' (QUOTE NOT FOUND, not shown)')+': close "'+String(r.close_q).slice(0,240)+'"; earlier "'+String(r.earlier_q).slice(0,240)+'". REVIEW THIS ROW.]');}}}catch(e){}}
+{let nd=[];try{nd=C4P.ofD(d);}catch(e){nd=[];}if(nd.length)FF.push('[AUDIT v25: CLOSE-ROUND NEW-VERSE CHECK (D4) -- the defender\'s close round names '+nd.length+' verse reference(s) no earlier round of either side names ('+nd.join(', ')+'); each is NEW IN CLOSE, marked NOT COUNTED for the judges. REVIEW THIS ROW.]');}
+for(const sd of ['D','C']){let rn=[];try{rn=C4P.renum(d,sd);}catch(e){rn=[];}if(rn.length)FF.push('[AUDIT v25: CLOSE-ROUND NUMBERING CHECK ('+sd+'4) -- a TRIAL check: the '+(sd==='D'?'defender':'challenger')+'\'s close round does not keep the declared numbering: '+rn.join('; ').replace(/[\[\]]/g,'')+'; the judges grade by the declared numbers. REVIEW THIS ROW.]');}
+{let CG={D:[],C:[]};try{CG=__CGB();}catch(e){}for(const sd of ['D','C']){if(!(sd==='D'?d.cr4:d.dr4))continue;FF.push(C4P.storeLine(CG[sd]||[],sd));}}
+for(const sd of ['D','C']){let a='';try{a=LRF.audit(sd==='D'?d.cr3:d.dr3,sd);}catch(e){a='';}if(a)FF.push(a);}
+{let np=[];try{np=C4P.of(d);}catch(e){np=[];}if(np.length)FF.push('[AUDIT v24: CLOSE-ROUND PRESS CHECK (C4) -- the challenger\'s close round names '+np.length+' verse reference(s) no earlier challenger round names ('+np.join(', ')+'); each is a new press, marked NOT COUNTED for the judges. REVIEW THIS ROW.]');}
+for(const x of __L2RV)FF.push(x);
+const __BARB=[];try{if($('C1B Extract').isExecuted)__BARB.push($('C1B Extract').first().json.bar);}catch(e){}try{if($('D2B Extract').isExecuted)__BARB.push($('D2B Extract').first().json.bar);}catch(e){}try{if($('C2B Extract').isExecuted)__BARB.push($('C2B Extract').first().json.bar);}catch(e){}try{if($('D3B Extract').isExecuted)__BARB.push($('D3B Extract').first().json.bar);}catch(e){}try{if($('C3B Extract').isExecuted)__BARB.push($('C3B Extract').first().json.bar);}catch(e){}try{if($('D4B Extract').isExecuted)__BARB.push($('D4B Extract').first().json.bar);}catch(e){}try{if($('C4B Extract').isExecuted)__BARB.push($('C4B Extract').first().json.bar);}catch(e){}
+for(const b of __BARB){try{if(!b||!b.applies||!b.resent)continue;FF.push('[AUDIT v47: BARRED MOVE RE-CALL (pkgBAR) -- SEAT: '+b.seat+' ('+b.side+'); ROUND: ['+b.round+']; SENT BACK: '+((b.first&&b.first.hits)||[]).length+' sentence(s); KEPT: '+b.kept+' round ('+b.why+'); VOID: '+(b.void||[]).length+'.]');for(const v of (b.void||[]))FF.push('[AUDIT v47: BARRED MOVE VOID (pkgBAR) -- SEAT: '+v.seat+' ('+v.side+'); ROUND: ['+v.round+']; SENTENCE: "'+String(v.sentence).slice(0,300)+'"; '+v.move+'; '+(v.struck?'struck from the round':'not found in the round to strike')+'; the press it answered counts as unanswered. REVIEW THIS ROW.]');}catch(e){}}
+for(const nd of ['D1','C1','D2','C2','D3','C3','D4','C4']){let fx=null;try{if(__L[nd+' Extract']().isExecuted)fx=__L[nd+' Extract']().first().json.round_fix;}catch(e){fx=null;}if(!fx)continue;
+ if(fx.placeholder)FF.push('[AUDIT v27: DEFENDER PLACEHOLDER STRIPPED ('+nd+') -- the round held the placeholder "Noted. Not conceding here. Goes to review." '+fx.placeholder+' time(s); the system removed it: it stands in for an answer and is a defect, not method. REVIEW THIS ROW.]');
+ if(fx.heading)FF.push('[AUDIT v27: ROUND HEADING NORMALIZED ('+nd+') -- the model headed the round "'+String(fx.heading).replace(/[\[\]"]/g,'').slice(0,120)+'", which contradicts its round label; the heading now names round '+nd.slice(1)+'. REVIEW THIS ROW.]');}
+for(const [rk,who,txt,re] of [['DR2','challenger',d.gr2,/UNSUPPORTED-?\s*\[?L4\]?\s*PREMISES/gi],['CR3','defender',d.cr3,/CHALLENGER.{0,2}S\s+UNSUPPORTED-?\s*\[?L4\]?\s*PREMISES/gi]]){const t=String(txt||'');let i=-1;for(const m of t.matchAll(re))i=m.index;if(i<0)continue;
+ const its=t.slice(i).split(/\n(?=\s*\**\s*(?:\d+[.)]\s|LINK\s+(?:\d+|none)\s*:))/i).filter(x=>/^\s*\**\s*(?:\d+[.)]\s|LINK\s+(?:\d+|none)\s*:)/i.test(x));
+ its.forEach((x,k)=>{const j=x.search(/PRESSED WITH\s*:/i);if(j<0)return;let seg=x.slice(j);const b=seg.search(/\n\s*\n/);if(b>=0)seg=seg.slice(0,b);let K=[];  {const REF0='(?:[1-3]\\s)?[A-Z][a-z]+(?:\\s(?:of\\s)?[A-Z][a-z]+)?\\.?\\s\\d{1,3}:\\d{1,3}(?:\\s?[-–]\\s?\\d{1,3})?';const ST=new RegExp('(^|[;\\n]|^\\s*[-*•]|\\n\\s*[-*•])\\s*[*_]*\\s*('+REF0+')[*_]*\\s*[:,]?\\s*(?=["“])','g');const body=seg.replace(/^[\s*_]*PRESSED WITH\s*:\s*/i,'');const kz=t=>{try{return REFP.keys(String(t||''),{scoped:true,cap:12}).map(z=>z.key);}catch(e){return [];}};const H=[...body.matchAll(ST)].map(m=>m[2].replace(/\.\s/,' '));const src=H.length?H.flatMap(kz):kz(body);for(const k of src)if(!K.includes(k))K.push(k);}
+  if(K.length>8)FF.push('[AUDIT v27: PRESSED-WITH CAP (md_notes_rulings 393) -- the '+who+'\'s list ['+rk+'] premise '+(k+1)+' carries '+K.length+' verses under PRESSED WITH:; the '+(K.length-8)+' after the 8th are over the cap and are not witnesses (ruling 392 applies to them): '+K.slice(8).join(', ')+'. REVIEW THIS ROW.]');});}
+try{const AG=$('Accept Final').first().json.acc;(AG.seats||[]).forEach(x=>FF.push('[AGREEMENT -- seat '+x.seat+' ('+x.api_model+'): '+x.status+(x.placed?'; may judge':'; did not accept, not seated')+((x.faults||[]).length?'; first reply faults: '+x.faults.join('; '):'')+(x.return_status?'; after the return: '+x.return_status:'')+']'));}catch(e){FF.push('[AGREEMENT -- record not found: '+String(e.message||e).slice(0,120)+'. REVIEW THIS ROW.]');}
+try{if($('Alternate Merge').isExecuted){const AM=$('Alternate Merge').first().json;const sd=new Set((AM.alternates_seated||[]).map(x=>x.removed_seat));const T=AM.alternates_tried||[];const sf=s=>String(s).replace(/[\[\]]/g,'').replace(/\s+/g,' ').trim();
+ const du=s=>{for(const b of (AM.bodies||[])){try{const p=JSON.parse(b).payload;if(p.judge_seat===s)return p.drv_uncured;}catch(e){}}return null;};
+ [...new Set(T.map(x=>x.removed_seat).filter(Boolean))].filter(s=>!sd.has(s)).forEach(s=>{const tr=T.filter(x=>x.removed_seat===s).map(x=>(x.alternate||'no alternate')+(x.api_model?' ('+x.api_model+')':'')+': '+x.result+(x.why?', '+sf(String(x.why).slice(0,200)):''));
+  FF.push('[AUDIT v36: PANEL SEAT LEFT UNFILLED -- SEAT: '+s+'; drv_uncured '+du(s)+'; no alternate was seated ('+tr.join('; ')+'); this seat is not counted in the panel result. REVIEW THIS ROW.]');});}}catch(e){}
+const RN=FF.length?FF.join(' '):null;
+const sj_values={challenge_standing:d.challenge_standing||null,challenger_conceded_links:(typeof d.challenger_conceded_links==='number'&&isFinite(d.challenger_conceded_links)?d.challenger_conceded_links:null),defense_standing:d.defense_standing||null,conceded_links:(typeof d.conceded_links==='number'&&isFinite(d.conceded_links)?d.conceded_links:null)};
+return [{json:{...d,premises_vs_defender:vsDef.n,premises_vs_challenger:vsCh.n,sj_values,saveBody:{engine:S.challenger.engine,review_notes:RN,panel_expected,variant:'ORACLE_DEBATE_V1',topic:d.topic,guards_loaded:d.gl,claude_r1:d.cr1,engine_r1:d.gr1,claude_r2:d.cr2,engine_r2:d.gr2,engine_r3:d.cr3||null,challenger_r3:d.dr3||null,defender_r4:d.cr4||null,challenger_r4:d.dr4||null,data_class:(d.data_class==='contested'||d.data_class==='study')?d.data_class:'contested',out_of_round_concessions:(Number.isInteger(d.out_of_round_concessions)&&d.out_of_round_concessions>=0)?d.out_of_round_concessions:null,out_of_round_detail:(typeof d.out_of_round_detail==='string'&&d.out_of_round_detail!=='')?d.out_of_round_detail:null,challenger_chain_mark:(['FOOTED','STRAINED','SLACK'].indexOf(d.challenger_chain_mark)!==-1)?d.challenger_chain_mark:null,defender_chain_mark:(['FOOTED','STRAINED','SLACK'].indexOf(d.defender_chain_mark)!==-1)?d.defender_chain_mark:null,challenge_standing:null,challenger_conceded_links:null,defense_standing:null,conceded_links:null,queue_id:S.queue_id,synthesis:d.synthesis,framework_verdict:null,independent_verdict_raw:d.independent_verdict_raw||null,debate_date:d.sd,claude_model:RS.defender.model,engine_model:RS.challenger.model,judge_model:$input.first().json.judge_model,run_token:S.run_token,defender_engine:S.defender.engine,defender_model:RS.defender.model,defender_profile:S.defender.profile,defender_served:IG.d_served,challenger_engine:S.challenger.engine,challenger_model:RS.challenger.model,challenger_profile:S.challenger.profile,challenger_served:IG.c_served,citation_check:__CC,input_tokens:ti,output_tokens:to,cache_write_tokens:tcw,cache_read_tokens:tcr}}}];
+})();
+if(Array.isArray(__CSPOUT))for(const it of __CSPOUT){const j=it&&it.json;if(!j||!j.saveBody||typeof j.saveBody!=='object')continue;it.json={...j,saveBody:{conceded_split:__CSP(j.independent_verdict_raw,j.conceded_links,j.challenger_conceded_links),...j.saveBody}};}
+return __CSPOUT;
