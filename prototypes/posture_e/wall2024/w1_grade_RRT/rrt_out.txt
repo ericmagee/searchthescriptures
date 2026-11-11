@@ -1,0 +1,23 @@
+nodes 418 418 differing [
+  'Reread Build 400',
+  'Reread Record 126',
+  'Alt Reread Build 400',
+  'Alt Reread Record 126',
+  'R2 Alt Reread Build 400',
+  'R2 Alt Reread Record 126'
+]
+connections equal true
+Reread Build change:
+ OLD: d').first().json;
+const skip=(why,nc)=>[{json:{rr_skip:true,rr_why:why,not_checked:nc||[]}}];
+build input node Alt Send Back Record
+flagged CHANGE items S1:ANSWER CHECK: Luke 2:3 | S2:ANSWER CHECK: Matthew  | S3:ANSWER CHECK: Luke 1:3 | S4:ANSWER CHECK: Matthew  | S5:ANSWER CHECK: Luke 1:3 | S6:ANSWER CHECK: Matthew  | S7:D1 vs C6 (Matthew 1:20 | S8:RETRACTED: D1 vs C6 | S9:D2 vs C2 (Matthew 1:25 | S10:RETRACTED: D2 vs C2 | S11:D4 vs C2 (Matthew 1:25 | S12:RETRACTED: D4 vs C2 | S13:D5 vs C6 (Matthew 1:20 | S14:RETRACTED: D5 vs C6
+new build on stored input: items 1 not_checked 4 ["grok S8 (E-COL): the replaced line is a retraction, which carries no grade to read again (pkgRRT): RETRACTED: D1 vs C6","grok S10 (E-COL): the replaced line is a retraction, which carries no grade to read again (pkgRRT): RETRACTED: D2 vs C2","grok S12 (E-COL): the replaced line is a retraction, wh
+R7 build: {"rr_skip":true,"rr_why":"every replaced line DeepSeek had flagged is a retraction (pkgRRT)","not_checked":["grok S8 (E-COL): the replaced line is a retraction, which carries no grade to read again (pkgRRT): RETRACTED: D1 vs C6","grok S10 (E-COL): the replaced line is a retraction, which carries no 
+R7 old Record rows 0 | new Record rows 4
+   grok S8 E-COL | model null | SECOND READING NOT MADE (pkgVP1; RECORD-ONLY): the replaced line is a retraction, which carries no g
+   grok S10 E-COL | model null | SECOND READING NOT MADE (pkgVP1; RECORD-ONLY): the replaced line is a retraction, which carries no g
+   grok S12 E-COL | model null | SECOND READING NOT MADE (pkgVP1; RECORD-ONLY): the replaced line is a retraction, which carries no g
+   grok S14 E-COL | model null | SECOND READING NOT MADE (pkgVP1; RECORD-ONLY): the replaced line is a retraction, which carries no g
+old build equals stored: true | ids old 14 new 10 | body chars old 55341 new 48852
+new request still holds RETRACTED replaced lines: false
