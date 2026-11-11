@@ -1,0 +1,10 @@
+control: reply lines 55 | follow-up asked 0 | reply text starts "RESPONSE: K-S3 S3 DEFENDER CR4: #1 | TOUCHES NO LINK: The grant that taking followed the a"
+SAME fenced ```json | lines 55 | follow-up asked 0
+DIFF prose line before the JSON | lines 2 | follow-up asked 36 | starts "Here are the cure lines.\n{\"cure_lines\":[{\"kind\":\"RESPONSE\",\"item\":\"K-S3 S3 DEFEN"
+SAME prose after the JSON | lines 55 | follow-up asked 0
+SAME pretty-printed JSON | lines 55 | follow-up asked 0
+SAME the same answer as plain RESPONSE lines (no JSON) | lines 55 | follow-up asked 0
+SAME JSON with an extra top-level key | lines 55 | follow-up asked 0
+DIFF entries missing the item key | lines 55 | follow-up asked 32 | starts "RESPONSE:  | TOUCHES NO LINK: The grant that taking followed the angel’s word is"
+DIFF single-quoted (invalid) JSON | lines 1 | follow-up asked 36 | starts "{'cure_lines':[{'kind':'RESPONSE','item':'K-S3 S3 DEFENDER CR4: #1','text':'TOUC"
+DIFF cut off mid-entry (as a schema reply can be today) | lines 29 | follow-up asked 6 | starts "RESPONSE: K-S3 S3 DEFENDER CR4: #1 | TOUCHES NO LINK: The grant that taking foll"

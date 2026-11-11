@@ -1,0 +1,12 @@
+stubs 42 rebuild equal 30 | changed 12: Alternate Cure Build (the two edits + blank xkRF line); Alternate Cure Normalize (the two edits only); Cure Build (the two edits + blank xkRF line); Cure Normalize (the two edits only); Panel Cure Build 1 (the two edits + blank xkRF line); Panel Cure Build 2 (the two edits + blank xkRF line); Panel Cure Build 3 (the two edits + blank xkRF line); Panel Cure Normalize 1 (the two edits only); Panel Cure Normalize 2 (the two edits only); Panel Cure Normalize 3 (the two edits only); R2 Alternate Cure Build (the two edits + blank xkRF line); R2 Alternate Cure Normalize (the two edits only)
+other nodes with different parameters: 0 | connections equal true
+OTHER 33149 Send Back Build
+OTHER 33371 Alt Send Back Build
+OTHER 33371 Send Back Build
+OTHER 33490 Send Back Build
+OTHER 34703 Send Back Build
+OTHER 34780 Send Back Build
+OTHER 34852 Send Back Build
+chained replay {"runs":286,"equal":236,"rf_only":43,"other":7,"err":0}
+by node: Panel Cure Build 2 rf_only, Panel Cure Build 3 rf_only, Send Back Build other, Alt Send Back Build other, Panel Cure Normalize 3 rf_only, Alternate Cure Build rf_only, Alternate Cure Normalize rf_only, Panel Cure Build 1 rf_only, Cure Build rf_only, Panel Cure Normalize 1 rf_only, Panel Cure Normalize 2 rf_only
+follow-up bodies found {"base":0,"cand":0,"both_note":0,"base_note":0,"cand_note":0}
