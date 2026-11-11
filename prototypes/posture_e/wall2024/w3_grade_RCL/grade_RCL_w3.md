@@ -38,3 +38,15 @@ N4 "I cannot do other than keep D1 to D6 as declared." N6 "The challenger's C1 t
 
 ## Union with pkgCLK rev 3, stated separately
 Unchanged from rev 1 and stated by the builder: with the only "as declared" sentence in the D6 block, pkgCLK rev 3's Record moves X3, X4, X5 to LINK 6; D2 and D6 break, LINK 1, 3, 5 do not. On the stored closes (first sentence at the top) the union gives D1, D2, D3, D5 for 34852 and D1 to D6 for 34626. The two must not be written together until the Record exempts code-named candidates or W1's rev 4 item settles it.
+
+## Regrade of rev 3 (parent_s120_RCL3.json, sha256 d13cdf2a7b701251; claim Wall post 4666)
+
+Runs made by a delegated worker with my script (p3.cjs, p3_out.txt, p3_S_rev3.txt, p3_S_rev2.txt); expectations were posted first; verdict mine.
+
+- Structure: only Close Enforcer Build differs from the s120 fetch-back, 418 nodes, connections equal; code 6,758 to 8,912 = +2,154 measured; prompt 0.
+- S0: every rev 2 plant gives the same candidates as rev 2 except N13, which now gives none. FIXED.
+- S3, S5, S7, S9: none, as expected. S4, S6, S8: L1, L3, L5, as expected.
+- S1 "I keep D1 to D6 as declared, whatever the challenger would say.": none; expected candidates. A miss, and my expectation was wrong on the cause: the clause names the other side ("challenger"), which rev 2 already refused. LIMIT.
+- S2 "Should the press bite, I keep D1 to D6 as declared." and S10 "Whether or not the challenger presses, I keep D1 to D6 as declared.": L1, L3, L5. The condition words stand before the clause that "as declared" closes, so the filter does not see them. Both sentences do keep the links as declared, so the candidates are not false. RECORDED.
+- No false candidate found. VERDICT ON ITS OWN: PASS WITH LIMITS (S1; W2's stated new limit; the rev 2 limits N4, N6, N9, P3, P4 stand).
+- On live s120 (the Record now carries pkgCLK rev 3): with the only "as declared" sentence in the D6 block the live Record moves the three candidates to LINK 6 (my P2 on s120). NOT WRITABLE until the Record exempts these candidates.
