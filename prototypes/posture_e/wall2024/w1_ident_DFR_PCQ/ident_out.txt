@@ -1,0 +1,14 @@
+J parent_s144_JOINT_DFR_PCQ.json a0938cbd2ee4877e
+D parent_s143_DFR.json 03b0e907751acb13
+P parent_s143_PCQ.json cad863d584f894f3
+L fetchback_live_s144.json 054e95b169dad552
+nodes J 418 D 418 P 418 L 418
+J vs DFR differ (whole node JSON): [ 'Build Independent Verdict', 'Panel Build' ]
+J vs PCQ differ: [ 'Shared Library' ]
+J vs live s144 differ: [ 'Build Independent Verdict', 'Panel Build', 'Shared Library' ]
+Panel Build J equals PCQ node byte for byte true
+Build Independent Verdict J equals PCQ node byte for byte true
+Shared Library J equals DFR byte for byte true
+connections J=D true J=P true J=L true
+other top-level fields J=D true
+code vs live: SL 60 PB 277 BIV 277
