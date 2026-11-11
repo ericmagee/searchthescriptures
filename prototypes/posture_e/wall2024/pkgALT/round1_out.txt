@@ -1,0 +1,7 @@
+34852 stored pool -> ["luna -> haiku"] | skips ["chatgpt: no pool model passes the guards: haiku G4: anthropic/claude-haiku-5.5 is already offered t","sol: no pool model passes the guards: haiku G4: anthropic/claude-haiku-5.5 is already offered t"]
+34852 pkgALT pool -> ["luna -> grok","chatgpt -> argon","sol -> haiku"] | skips []
+34726 stored pool -> ["luna -> haiku"] | skips ["sol: no pool model passes the guards: haiku G4: anthropic/claude-haiku-5.5 is already offered t"]
+34726 pkgALT pool -> ["luna -> grok","sol -> argon"] | skips []
+34780 Alternate Build not run
+34703 stored pool -> ["chatgpt -> haiku"] | skips []
+34703 pkgALT pool -> ["chatgpt -> grok"] | skips []
