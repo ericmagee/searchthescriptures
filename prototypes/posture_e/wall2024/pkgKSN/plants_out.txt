@@ -1,0 +1,9 @@
+OK    K1 stored 35067 text, defender links 1 and 4 (expect note) | note: STALE KEYSTONE REASON D5 (the reason was written before defender links 1, 4 broke by a confirmed closing contradiction) | all else equal to joint: true
+OK    K2 "No other link is broken" (expect note) | note: STALE KEYSTONE REASON D5 (the reason was written before defender link 2 broke by a confirmed closing contradiction) | all else equal to joint: true
+OK    K3 "all declared links stand" (expect note) | note: STALE KEYSTONE REASON D5 (the reason was written before defender link 2 broke by a confirmed closing contradiction) | all else equal to joint: true
+OK    K4 "it is not itself broken" (about the keystone; expect no note) | note: none | all else equal to joint: true
+OK    K5 keystone link 5 itself broken (STANDS to BROKEN path; expect no note) | note: none | all else equal to joint: true
+OK    K6 challenger contradiction only (expect no note) | note: none | all else equal to joint: true
+OK    K7 reason makes no claim on links (expect no note) | note: none | all else equal to joint: true
+OK    K8 no contradiction (expect no recompute) | note: none | all else equal to joint: true
+plants 8 wrong 0
