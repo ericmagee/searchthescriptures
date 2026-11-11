@@ -1,0 +1,7 @@
+free names of the s127 source not free in s126 (would be unresolved): none | free names in s127: $ $input Array JSON Math Number Object RegExp Set String Symbol WeakSet undefined
+ex34299_full.json | s126 items 1 | s127 items 1 | s126 == s127 true | stored live output items 1 | s127 == stored true
+ex34626_full.json | s126 items 0 | s127 items 0 | s126 == s127 true | stored live output items 0 | s127 == stored true
+ex34703_full.json | s126 items 0 | s127 items 0 | s126 == s127 true | stored live output items 0 | s127 == stored true
+ex34726_full.json | s126 items 1 | s127 items 1 | s126 == s127 true | stored live output items 1 | s127 == stored true
+ex34780_full.json | s126 items 0 | s127 items 0 | s126 == s127 true | stored live output items 0 | s127 == stored true
+ex34852_full.json | s126 items 1 | s127 items 1 | s126 == s127 true | stored live output items 1 | s127 == stored true
