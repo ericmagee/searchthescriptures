@@ -1,0 +1,14 @@
+== CLOSE ENFORCER (exports with a Close Enforcer call)
+34299 debate c357d23f | lines 1 labels {"crn":0,"round":0,"bare":0} | s132 rows 0 conflicting 0 relink set 0 | s120 relink set 0 link differs s120 vs s132 0 | s132 replay equals stored true
+34626 debate c357d23f | lines 2 labels {"crn":1,"round":1,"bare":0} | s132 rows 1 conflicting 0 relink set 0 | s120 relink set 0 link differs s120 vs s132 0 | s132 replay equals stored true
+34703 debate c357d23f | lines 2 labels {"crn":1,"round":1,"bare":0} | s132 rows 1 conflicting 0 relink set 0 | s120 relink set 0 link differs s120 vs s132 0 | s132 replay equals stored true
+34726 debate 36499348 | lines 2 labels {"crn":2,"round":0,"bare":0} | s132 rows 1 conflicting 0 relink set 0 | s120 relink set 0 link differs s120 vs s132 0 | s132 replay equals stored true
+34780 debate 36499348 | lines 2 labels {"crn":2,"round":0,"bare":0} | s132 rows 1 conflicting 0 relink set 0 | s120 relink set 0 link differs s120 vs s132 0 | s132 replay equals stored true
+34852 debate acb918e5 | lines 3 labels {"crn":2,"round":2,"bare":0} | s132 rows 2 conflicting 0 relink set 1 | s120 relink set 1 link differs s120 vs s132 0 | s132 replay equals stored false
+35067 debate 359389a6 | lines 5 labels {"crn":8,"round":0,"bare":0} | s132 rows 4 conflicting 0 relink set 0 | s120 relink set 0 link differs s120 vs s132 0 | s132 replay equals stored true
+== ANTICHEAT (pkgACM): answer lines ending '".'
+runs with an Anticheat call 46 runs with a period line 2 33389:2 33617:1
+== CLOSE-ROUND BOOK CHECK (pkgBRF rev 5)
+runs with F (cr4, dr4) 49 | runs with a book line (rev 4 path) 2 | runs with a line naming two or more books (rev 5 path) 2
+   ex34726 (Numbers 1:18, Matthew 1:18 named earlier)
+   ex34780 (Numbers 1:18, Matthew 1:18 named earlier)

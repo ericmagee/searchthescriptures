@@ -1,0 +1,7 @@
+downstream of Format Markdown: Plain Rule Lines > Save to Drive > Raise If Incomplete
+nodes that name $("Format Markdown"): none
+ex35067 | s132 replay equals stored output: false | flag rows 75 {"review | removes | S3":41,"review | removes | K-W":30,"review | other | K-RUL":4}
+   seats luna,chatgpt,sol | K-W/K-S3 report lines CURED 71 UNCURED 0
+ex34852 | s132 replay equals stored output: false | flag rows 65 {"review | removes | K-W":48,"review | other | K-RUL":5,"review | removes | S3":10,"review | other | ?":2}
+   seats haiku,chatgpt,sol | K-W/K-S3 report lines CURED 57 UNCURED 1
+34780 replay error Cannot read properties of null (reading '0')
