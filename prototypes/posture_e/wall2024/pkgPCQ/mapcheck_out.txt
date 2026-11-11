@@ -1,0 +1,7 @@
+parent sha256 cad863d584f894f3
+stub nodes 43 map entries 42 stubs without map entry [ 'Early Alternate Build' ]
+length or compile faults 0
+rebuilt sources changed vs live []
+library header null
+nodes differing [ 'Build Independent Verdict', 'Panel Build' ] conn equal true nodes 418 418
+total code delta 554

@@ -1,0 +1,26 @@
+// pkgP72 (W1): ruling 372 in DeepSeek's RULE E-PREM, THE COUNTED KIND (W4 Wall 5032 second reading).
+// 1. Line 3122: p372() finds, per judge seat, that judge's own ANSWER CHECK lines graded MISSES or FAILS on a witness
+//    pressed against the premise (its PRESSED WITH verses, first 8 by the cap, kept to the proven witnesses of the ledger
+//    when the ledger lists the premise), answered on the answering side's round.
+// 2. Lines 3125, 3126, 3129: the E-PREM item shows those lines under each judge's line; each id carries r372 (the verses).
+// 3. Line 3212: the rule sentence keeps fit grounds out of COUNTED, except a witness this judge's ANSWER CHECK grades
+//    MISSES or FAILS (ruling 372), written (UNEXHIBITED: <verse> unanswered, ruling 372).
+// 4. Lines 3393, 3411: the pkgEPS hold does not hold a COUNTED push in that form when it names one of those verses.
+// MAP lengths and the header sha are recomputed. Usage: node build.cjs <parent workflow json> <out json>
+const fs=require('fs');const un=p=>{let j=JSON.parse(fs.readFileSync(p,'utf8'));j=j.data||j;return j.workflow||j;};
+const W=un(process.argv[2]);const N=W.nodes.find(n=>n.name==='Shared Library');const T=N.parameters.jsCode;
+const a=T.indexOf('\n/*LIB*/'),b=T.lastIndexOf('\n/*MAP*/'),c=T.lastIndexOf('\n/*END*/');const Lb=JSON.parse(T.slice(a+8,b)),M=JSON.parse(T.slice(b+8,c));
+const T0=T.slice(0,a+8)+JSON.stringify(Lb)+T.slice(b,b+8)+JSON.stringify(M)+T.slice(c);if(T0!==T)throw new Error('serialisation differs from the parent');
+const rep=(i,o,n)=>{if(Lb[i].split(o).length!==2)throw new Error('line '+i+' anchor not unique');Lb[i]=Lb[i].replace(o,()=>n);};
+const app=(i,s)=>{Lb[i]=Lb[i]+s;};
+app(3122,String.raw`const p372=(sd,n,e)=>{const out={};try{const pw=String(e||'').split(/PRESSED WITH\s*:/i)[1];if(!pw)return out;const VK=(bk,ch,vs)=>__wldK(bk)+' '+ch+':'+vs;let K=[];for(const l of pw.split('\n')){const m=l.match(/^\s*(?:[-*•]\s*)?(?:\*\*)?(?:\[L\d\]\s*)?((?:[1-3]\s)?[A-Z][a-z]+(?:\s+of\s+[A-Z][a-z]+)?)\s+(\d+):(\d+)/);if(m){const k=VK(m[1],m[2],m[3]);if(!K.includes(k))K.push(k);}}K=K.slice(0,8);const led=__wldE.filter(x=>x.side===(sd==='D'?'DEFENDER':'CHALLENGER')&&x.n===n);if(led.length){const P=new Set(led.flatMap(x=>x.keys));K=K.filter(k=>P.has(k));}const ans=sd==='D'?/^CR/:/^DR/;for(const g of AG){const m=String(g.verse).match(/^((?:[1-3]\s)?[A-Za-z]+(?:\s+of\s+[A-Za-z]+)?)\s+(\d+):(\d+)/);if(!m||!ans.test(String(g.rk)))continue;if(!K.includes(VK(m[1],m[2],m[3])))continue;for(const x of g.grades)if(x.grade==='MISSES'){const o=out[x.seat]=out[x.seat]||[];if(o.length<3&&!o.some(q=>q.l===x.line))o.push({v:m[1]+' '+m[2]+':'+m[3],l:x.line});}}}catch(err){}return out;}; /* pkgP72 */`);
+rep(3125,"const a=answerFor(sd,n,e);","const a=answerFor(sd,n,e);const __p372=p372(sd,n,e); /* pkgP72 */");
+rep(3126,"response_line:x.line.slice(0,700),","response_line:x.line.slice(0,700),r372:(__p372[x.seat]||[]).map(z=>z.v),");
+rep(3129,"__show(sd,CLN[sd][k],n)).join('\\n')","__show(sd,CLN[sd][k],n)+((__p372[x.seat]||[]).length?'\\n    THIS JUDGE\\'S OWN ANSWER CHECK LINES GRADING A WITNESS PRESSED AGAINST THIS PREMISE MISSES OR FAILS (ruling 372): '+__p372[x.seat].map(z=>cut(z.l,500)).join(' || '):'')).join('\\n')");
+rep(3212,"is not a missing layer: it is graded at the collision (RULE E-COL, RULE E-HOLD), not counted here, so it is not COUNTED.",
+ "is not a missing layer: it is graded at the collision (RULE E-COL, RULE E-HOLD), not counted here, so it is not COUNTED; except (ruling 372) when this judge\\'s own ANSWER CHECK line, given you under its line, grades a witness pressed against this premise MISSES or FAILS: that witness is unanswered and the premise is COUNTED; write (UNEXHIBITED: <the verse> unanswered, ruling 372) (pkgP72).");
+app(3393,String.raw`const __e372={};B.forEach(b=>(b.ids||[]).forEach(x=>{if(x&&x.rule==='E-PREM'&&Array.isArray(x.r372)&&x.r372.length)__e372[x.item+'|'+x.seat]=x.r372;})); /* pkgP72 */`);
+rep(3411,"const blk=__epsBlk[x.item]||'';if(!blk)return null;","if(/^\\s*\\(\\s*UNEXHIBITED\\b[^)]*\\bruling\\s*372\\b/i.test(v.why)&&(__e372[x.item+'|'+x.seat]||[]).some(z=>String(v.why).includes(z)))return null; /* pkgP72 */const blk=__epsBlk[x.item]||'';if(!blk)return null;");
+const reb=e=>M[e].p.map(x=>typeof x==='number'?Lb[x]:typeof x[0]==='string'?x[0]:Lb.slice(x[0],x[1]+1).join('\n')).join('\n');for(const e in M)M[e].n=reb(e).length;
+const LJ=JSON.stringify(Lb);N.parameters.jsCode=(T.slice(0,a+8)+LJ+T.slice(b,b+8)+JSON.stringify(M)+T.slice(c)).replace(/(\/\/ library sha )[0-9a-f]{16}/,(x,h)=>h+require('crypto').createHash('sha256').update(LJ).digest('hex').slice(0,16));
+fs.writeFileSync(process.argv[3],JSON.stringify(W));console.log('written',process.argv[3],'jsCode delta',N.parameters.jsCode.length-T.length);

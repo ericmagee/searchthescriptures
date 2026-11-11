@@ -1,0 +1,10 @@
+// pkgP72: Record stubs (base vs parent) on every stored export, stored inputs; outputs must be equal (no stored reply uses the 372 form).
+const fs=require('fs');const load=p=>{let j=JSON.parse(fs.readFileSync(p,'utf8'));j=j.data||j;return j.workflowData||j.workflow||j;};
+const parts=w=>{const T=w.nodes.find(n=>n.name==='Shared Library').parameters.jsCode;const a=T.indexOf('\n/*LIB*/'),b=T.lastIndexOf('\n/*MAP*/'),c=T.lastIndexOf('\n/*END*/');return {Lb:JSON.parse(T.slice(a+8,b)),M:JSON.parse(T.slice(b+8,c))};};
+const reb=(P,e)=>P.M[e].p.map(x=>typeof x==='number'?P.Lb[x]:typeof x[0]==='string'?x[0]:P.Lb.slice(x[0],x[1]+1).join('\n')).join('\n');
+const A=load(process.env.BASE||'/mnt/project-files/wall2024/parent_s142_JOINT_A21_SRH.json'),B=load(process.argv[2]);const PA=parts(A),PB=parts(B);
+const ch=Object.keys(PB.M).filter(e=>reb(PA,e)!==reb(PB,e)&&/Record$/.test(e));
+(async()=>{const W='/mnt/project-files/wall2024/';let n=0,eq=0,err=0;for(const f of fs.readdirSync(W).filter(f=>/^ex\d+_full\.json$/.test(f)).sort()){const rd=JSON.parse(fs.readFileSync(W+f,'utf8')).data.resultData.runData;
+ for(const node of ch.filter(e=>rd[e])){const run=async src=>{const mk=name=>{const r=rd[name];const items=r?r[r.length-1].data.main.flat().filter(Boolean):[];const nd=(A.nodes.find(x=>x.name===name)||{});return {isExecuted:!!r,first:()=>items[0],all:()=>items,last:()=>items[items.length-1],item:items[0],params:nd.parameters||{}};};const r=rd[node];const sn=r[0].source[0].previousNode;const inp=mk(sn);const $input={all:()=>inp.all(),first:()=>inp.first(),item:inp.first()};return await new Function('$','$input','return (async()=>{\n'+src+'\n})();')(mk,$input);};
+  let o,x;try{o=await run(reb(PA,node));x=await run(reb(PB,node));}catch(e){console.log(f,node,'ERROR',e.message);err++;continue;}n++;const T=s=>JSON.stringify(s).replace(/\d{4}-\d\d-\d\dT[\d:.]+Z/g,'T');const e=T(o)===T(x);if(e)eq++;console.log(f.slice(2,7),node.padEnd(30),'equal',e);}}
+ console.log('TOTAL runs',n,'equal',eq,'errors',err);})();
