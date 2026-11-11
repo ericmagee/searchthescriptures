@@ -1,0 +1,6 @@
+// W1 scan (DS1 second shape): stored E-PREM items whose block was "found by its LINK number" while the list entry tags a different LINK.
+const fs=require('fs');const d='/mnt/project-files/wall2024/inputs/';const rows=[];
+for(const f of fs.readdirSync(d).filter(f=>/_Judge_Enforcer_Build\.json$/.test(f))){const s=fs.readFileSync(d+f,'utf8');if(!s.includes('found by its LINK number'))continue;const T=JSON.stringify(JSON.parse(s)).replace(/\\\\n/g,'\n').replace(/\\n/g,'\n').replace(/\\"/g,'"');
+ let i=-1;while((i=T.indexOf('(found by its LINK number',i+1))>=0){const pre=T.slice(Math.max(0,i-12000),i);const h=[...pre.matchAll(/ITEM (P\d+) \(E-PREM[^\n]*?number (\d+)\)/g)].pop();const e=[...pre.matchAll(/THE LIST ENTRY: ([^\n]{0,140})/g)].pop();if(!h||!e)continue;
+  const tag=(e[1].match(/^\s*\d+[.)]\s*(?:\*\*)?\s*LINK\s+(\d+)\b/i)||[])[1];const key=f.replace('_Judge_Enforcer_Build.json','')+' '+h[1];if(rows.some(r=>r.key===key))continue;const blk=(T.slice(i,i+200).match(/\): ([^\n]{0,50})/)||[])[1];rows.push({key,n:+h[2],tag:tag?+tag:null,entry:e[1].slice(0,60),block:blk});}}
+for(const r of rows.filter(r=>r.tag!=null))console.log(JSON.stringify(r));console.log('found-by-number items',rows.length,'| entry tags a LINK',rows.filter(r=>r.tag!=null).length,'| tag differs from number (wrong block shown)',rows.filter(r=>r.tag!=null&&r.tag!==r.n).length);

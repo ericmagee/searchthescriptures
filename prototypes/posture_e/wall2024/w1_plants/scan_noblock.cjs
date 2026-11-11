@@ -1,0 +1,14 @@
+// W1 scan for DS1 grading: every stored E-PREM "no block" item (Judge Enforcer Build inputs, item text); its entry tag LINK k; whether the answering round
+// (CR3 against the defender, DR3 against the challenger; the B re-call when stored) holds a LINK k block (tagged or not) and a LINK n block, with the live blocksOf split.
+const fs=require('fs');const d='/mnt/project-files/wall2024/inputs/';const J=f=>{try{return JSON.parse(fs.readFileSync(d+f,'utf8'));}catch(e){return null;}};
+const raw=(run,ns)=>{for(const n of ns){const j=J(run+'_'+n+'.json');if(!j)continue;const x=Array.isArray(j)?j[0]:j;const o=x&&x.main&&x.main[0]&&x.main[0][0]&&x.main[0][0].json;if(o&&typeof o.raw==='string')return {n,t:o.raw};}return null;};
+const listCut=t=>{t=String(t||'');const i=t.search(/UNSUPPORTED-?\s*\[?L4\]?\s*PREMISES/i);return i>0?t.slice(0,i):t;};
+const blocksOf=t=>listCut(t).split(/\n(?=\s*(?:#+\s*|\*\*)?\s*LINK\s+\d+\b)/).map(b=>{const h=b.match(/^\s*(?:#+\s*|\*\*)?\s*LINK\s+(\d+)\b([^\n]*)/);if(!h)return null;const p=(h[2].match(/\[premise\s+(\d+)\]/i)||[])[1];return {link:+h[1],prem:p?+p:null};}).filter(Boolean);
+const rows=[];for(const f of fs.readdirSync(d).filter(f=>/_Judge_Enforcer_Build\.json$/.test(f))){const run=f.split('_')[0];const fam=f.replace(/^\d+_/,'').replace('Judge_Enforcer_Build.json','')||'main';
+ const s=fs.readFileSync(d+f,'utf8');if(!s.includes('no block answering'))continue;const t=JSON.parse(s);const T=JSON.stringify(t).replace(/\\\\n/g,'\n').replace(/\\n/g,'\n').replace(/\\"/g,'"');
+ let i=-1;while((i=T.indexOf('(no block answering',i+1))>=0){const pre=T.slice(Math.max(0,i-12000),i);const h=[...pre.matchAll(/ITEM (P\d+) \(E-PREM[^\n]*?against the (defender|challenger)[^\n]*?number (\d+)\)/g)].pop();const e=[...pre.matchAll(/THE LIST ENTRY: ([^\n]{0,140})/g)].pop();if(!h||!e)continue;
+  const key=run+' '+fam+' '+h[1];if(rows.some(r=>r.key===key))continue;const side=h[2]==='defender'?'D':'C';const n=+h[3];const tag=(e[1].match(/^\s*\d+[.)]\s*(?:\*\*)?\s*LINK\s+(\d+)\b/i)||[])[1];
+  const R=raw(run,side==='D'?['D3B_Extract','D3_Extract']:['C3B_Extract','C3_Extract']);const B=R?blocksOf(R.t):null;
+  rows.push({key,side,n,entry:e[1].slice(0,60),tag:tag?+tag:null,round:R?R.n:'(not stored)',blocks:B?B.map(b=>'L'+b.link+(b.prem?'[p'+b.prem+']':'')).join(','):null,tagUntagged:B&&tag?B.some(b=>b.link===+tag&&b.prem===null):null,tagAny:B&&tag?B.some(b=>b.link===+tag):null});}}
+for(const r of rows)console.log(JSON.stringify(r));
+const c=p=>rows.filter(p).length;console.log('no-block items',rows.length,'| runs',new Set(rows.map(r=>r.key.split(' ')[0])).size,'| entry carries a LINK tag',c(r=>r.tag!=null),'| tag differs from number',c(r=>r.tag!=null&&r.tag!==r.n),'| untagged LINK <tag> block present',c(r=>r.tagUntagged===true),'| LINK <tag> block present (any)',c(r=>r.tagAny===true),'| absent',c(r=>r.tagAny===false),'| round not stored',c(r=>r.blocks==null));
