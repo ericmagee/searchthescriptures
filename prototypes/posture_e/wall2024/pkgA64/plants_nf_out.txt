@@ -1,0 +1,15 @@
+AU text kept: "const __ga=String(g.answer).replace(/\\\\+" true true
+AU text kept: "pkgEAF A: served for every answer" true true
+AU text kept: "__eg(eaiBlock(R,__erk,__ga))" true true
+lines changed: 3036, 3037, 3204 | line count 3471 3471
+OK   "This is the naming answered under link 3." -> ["3"]
+OK   "I answer it fully under LINK 4." -> ["4"]
+OK   "carried by the woman (Link 5)." -> ["5"]
+OK   "See under link 2 and under Link 6." -> ["2","6"]
+OK   "(link 2) and again (Link 2)" -> ["2"]
+OK   "It fits Link 1 and Link 2." -> []
+OK   "My link 3 stands." -> []
+OK   "linking 3 verses" -> []
+OK   "under link3" -> []
+OK   "under  Link\n7" -> ["7"]
+plants 10 fail 0

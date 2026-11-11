@@ -1,0 +1,8 @@
+// W2: which E-ANS items get a pointed LINK block, O1N (any "link N") vs O1NF (only "under link N"), on s128, panel and alternate check nodes.
+const fs=require('fs');const run=require(process.cwd()+'/pkgKSR/run_node.cjs');
+const rebuild=(stub,lib)=>{let i=stub.indexOf('\nreturn await new Function(');if(i<0)i=stub.indexOf('\nconst __e4h');const $=n=>({params:{jsCode:lib}});return new Function('$',stub.slice(0,i)+'\nreturn __S;')($);};
+const g=f=>{let d=JSON.parse(fs.readFileSync(f));d=d.data||d;return d.workflow||d;};const eff=(W,n)=>rebuild(W.nodes.find(x=>x.name===n).parameters.jsCode,W.nodes.find(x=>x.name==='Shared Library').parameters.jsCode);
+(async()=>{for(const N of ['Judge Enforcer Build','Alt Judge Enforcer Build']){const A=eff(g('pkgA64/parent_s128_A64_O1N.json'),N),B=eff(g('pkgA64/parent_s128_A64_O1NF.json'),N);
+for(const r of fs.readdirSync('/mnt/project-files/wall2024/').filter(f=>/^ex\d+_full\.json$/.test(f)).sort()){const X=JSON.parse(fs.readFileSync('/mnt/project-files/wall2024/'+r));const rd=(X.data||X).resultData.runData;if(!rd[N])continue;
+ const pick=async C=>{const o=await run(C,N,rd);const m={};if(o.err)return {err:o.err};for(const it of o)for(const c of ((it.body||it).messages||[]).map(x=>x.content))for(const k of ('\n\n'+c).matchAll(/\n\nITEM (B\d+) \(E-ANS[^\n]*\n([\s\S]*?)(?=\n\nITEM |$)/g)){const p=k[2].match(/\[([CD]R\d), LINK (\d+)\]/);if(p)m[k[1]]={blk:p[1]+' LINK '+p[2],ans:((k[2].match(/THE ANSWER: ([^\n]*)/)||[])[1]||'').slice(0,160)};}return m;};
+ const a=await pick(A),b=await pick(B);const ks=[...new Set([...Object.keys(a),...Object.keys(b)])];for(const k of ks)console.log(N,r,k,'O1N:',a[k]?a[k].blk:'-','| O1NF:',b[k]?b[k].blk:'-','|',(a[k]||b[k]).ans);}}})();

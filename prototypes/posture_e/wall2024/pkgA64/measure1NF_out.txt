@@ -1,0 +1,25 @@
+== Judge Enforcer Build O1NF
+ex33149_full.json | E-ANS items 152 | given the side's other lines 35 | check calls 9 -> 10 | check-visible chars 543208 -> 606781 (+63573) 
+ex33371_full.json | E-ANS items 100 | given the side's other lines 29 | check calls 6 -> 6 | check-visible chars 362400 -> 388593 (+26193) 
+ex33490_full.json | E-ANS items 132 | given the side's other lines 71 | check calls 8 -> 9 | check-visible chars 484269 -> 575143 (+90874) 
+ex33497_full.json | E-ANS items 164 | given the side's other lines 89 | check calls 8 -> 10 | check-visible chars 508963 -> 655120 (+146157) 
+ex34299_full.json | E-ANS items 99 | given the side's other lines 42 | check calls 7 -> 8 | check-visible chars 430797 -> 498744 (+67947) 
+ex34626_full.json | E-ANS items 122 | given the side's other lines 48 | check calls 7 -> 8 | check-visible chars 440160 -> 513162 (+73002) 
+ex34703_full.json | E-ANS items 134 | given the side's other lines 57 | check calls 8 -> 9 | check-visible chars 479453 -> 560993 (+81540) 
+ex34726_full.json | E-ANS items 143 | given the side's other lines 69 | check calls 10 -> 10 | check-visible chars 628453 -> 655367 (+26914) 
+ex34780_full.json | E-ANS items 115 | given the side's other lines 56 | check calls 9 -> 10 | check-visible chars 565363 -> 647377 (+82014) 
+ex34852_full.json | E-ANS items 90 | given the side's other lines 45 | check calls 6 -> 7 | check-visible chars 361658 -> 435262 (+73604) 
+TOTAL {"n":1251,"ol":541,"dis":97,"disOl":41}
+== Alt Judge Enforcer Build O1NF
+ex33149_full.json | E-ANS items 0 | given the side's other lines 0 | check calls 1 -> 1 | check-visible chars 0 -> 0 (+0) 
+ex33371_full.json | E-ANS items 41 | given the side's other lines 9 | check calls 4 -> 5 | check-visible chars 252384 -> 289431 (+37047) 
+ex33490_full.json | E-ANS items 49 | given the side's other lines 29 | check calls 5 -> 5 | check-visible chars 284122 -> 309907 (+25785) 
+ex33497_full.json | E-ANS items 0 | given the side's other lines 0 | check calls 1 -> 1 | check-visible chars 118902 -> 118902 (+0) 
+ex34626_full.json | E-ANS items 0 | given the side's other lines 0 | check calls 1 -> 1 | check-visible chars 0 -> 0 (+0) 
+ex34703_full.json | E-ANS items 0 | given the side's other lines 0 | check calls 1 -> 1 | check-visible chars 74067 -> 74067 (+0) 
+ex34726_full.json | E-ANS items 0 | given the side's other lines 0 | check calls 1 -> 1 | check-visible chars 78916 -> 78916 (+0) 
+ex34780_full.json | E-ANS items 0 | given the side's other lines 0 | check calls 1 -> 1 | check-visible chars 0 -> 0 (+0) 
+ex34852_full.json | E-ANS items 1 | given the side's other lines 1 | check calls 2 -> 2 | check-visible chars 147107 -> 148459 (+1352) 
+TOTAL {"n":91,"ol":39,"dis":96,"disOl":0}
+== R2 Alt Judge Enforcer Build O1NF
+TOTAL {"n":0,"ol":0,"dis":0,"disOl":0}
