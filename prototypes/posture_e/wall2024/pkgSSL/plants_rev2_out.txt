@@ -1,0 +1,13 @@
+RIGHT {"old":"grants","draft1":null,"rev2":null} expected null | Challenger listed eleven numbered grants (G1-G11) and six supplemental grants (G+).
+RIGHT {"old":"grants","draft1":null,"rev2":null} expected null | The challenger’s close restated its chain and listed grants.
+RIGHT {"old":"grants","draft1":null,"rev2":"conceded"} expected conceded | The defender cited two grants and conceded the D3 link.
+RIGHT {"old":"grants","draft1":null,"rev2":"withdrew"} expected withdrew | The challenger listed grants and withdrew premise 4.
+RIGHT {"old":"grants","draft1":"grants","rev2":null} expected null | The challenger quoted the defender's grants.
+RIGHT {"old":"grants","draft1":"grants","rev2":"dropped"} expected dropped | The challenger quoted the defender’s grants and dropped limb 2.
+RIGHT {"old":"granted","draft1":"granted","rev2":"granted"} expected granted | The defender granted that Luke 1:27 names Joseph.
+RIGHT {"old":"narrowed","draft1":"narrowed","rev2":"narrowed"} expected narrowed | The challenger narrowed C4 to the timing.
+RIGHT {"old":"narrowed","draft1":"narrowed","rev2":"narrowed"} expected narrowed | Challenger cited each pressed premise, exhibited its footing, and narrowed two specific limbs.
+WRONG {"old":"grants","draft1":null,"rev2":"conceded"} expected null | The defender listed grants but conceded nothing.
+RIGHT {"old":"grants","draft1":"grants","rev2":"grants"} expected grants | The defender grants that the row is legal.
+RIGHT {"old":"grants","draft1":null,"rev2":null} expected null | The defender listed the grants it made.
+11 of 12

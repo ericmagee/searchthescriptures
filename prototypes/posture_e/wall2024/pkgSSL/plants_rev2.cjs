@@ -1,0 +1,9 @@
+// plants through the selector: old (ASK 88 joint), first draft (67ab8233) and rev 2, using the exact selector text of each library line 3166
+const fs=require('fs');const line=f=>{const D=JSON.parse(fs.readFileSync('/mnt/project-files/wall2024/'+f,'utf8'));const W=(D.data||D).workflow||(D.data||D);const c=W.nodes.find(n=>n.name==='Shared Library').parameters.jsCode;const a=c.indexOf('\n/*LIB*/')+8,b=c.lastIndexOf('\n/*MAP*/');return JSON.parse(c.slice(a,b))[3166];};
+const mk=l=>{const body=l.slice(l.indexOf(')){')+3);const f=new Function('SY','for(const s of [SY]){'+body+'return {side:m[1],word:m[2]};}return null;');return s=>f(s);};
+const V={old:mk(line('parent_s142_JOINT_EKR_SGR_AMG.json')),draft1:mk(line('parent_s142_SSL.json')),rev2:mk(line('parent_s142_SSL2.json'))};
+const P=[['Challenger listed eleven numbered grants (G1-G11) and six supplemental grants (G+).',null],['The challenger’s close restated its chain and listed grants.',null],
+['The defender cited two grants and conceded the D3 link.','conceded'],['The challenger listed grants and withdrew premise 4.','withdrew'],['The challenger quoted the defender\'s grants.',null],['The challenger quoted the defender’s grants and dropped limb 2.','dropped'],
+['The defender granted that Luke 1:27 names Joseph.','granted'],['The challenger narrowed C4 to the timing.','narrowed'],['Challenger cited each pressed premise, exhibited its footing, and narrowed two specific limbs.','narrowed'],
+['The defender listed grants but conceded nothing.',null],['The defender grants that the row is legal.','grants'],['The defender listed the grants it made.',null]];
+let ok=0;for(const [s,exp] of P){const r={};for(const k in V){try{const x=V[k](s);r[k]=x?x.word:null;}catch(e){r[k]='ERR '+e.message;}}const good=(r.rev2||null)===exp;ok+=good;console.log(good?'RIGHT':'WRONG',JSON.stringify(r),'expected',exp,'|',s);}console.log(ok,'of',P.length);

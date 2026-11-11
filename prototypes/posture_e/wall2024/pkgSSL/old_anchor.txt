@@ -1,0 +1,1 @@
+const m=s.match(/\b(defender|challenger)\b[^.;:]{0,60}?\b(withdr(?:ew|awn|aws)|conced(?:ed|es)|grant(?:ed|s)|dropp?(?:ed|s)|narrow(?:ed|s))\b/i);if(!m)continue;
