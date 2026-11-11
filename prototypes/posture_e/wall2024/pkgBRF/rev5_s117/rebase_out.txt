@@ -4,3 +4,6 @@ nodes 418 418 | rest equal s117 true
 size vs s117: code 636
 size rev 5 vs s116 (rev 4 live): 636
 wrote parent_s117_BRF5.json sha 92d2a4778fa3a475
+fetchback s117 vs parent_s116_OON3: nodes whose parameters differ: none | counts 418 418
+rev5 on s117 vs fetchback s117: differ 12 Build Synthesis, Build Independent Verdict, Build Save Body, Panel Build, Format Markdown, D4 Build, D4 Extract, C4 Build, C4 Extract, C4G Extract, D4B Extract, C4B Extract
+connections equal true

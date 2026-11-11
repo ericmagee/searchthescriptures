@@ -1,0 +1,5 @@
+// Build an R1b strip folder from a live fetch-back: for each file name in pkgLIB/strip_R1bM_J3/patched, the node's full source on that version (stub rebuilt with its library, else jsCode).
+const fs=require('fs');const {rebuild}=require('../pkgLIB/unpack.cjs');const [fb,out]=process.argv.slice(2);let d=JSON.parse(fs.readFileSync(fb));d=d.data||d;d=d.workflow||d;const by={};d.nodes.forEach(n=>by[n.name.replace(/ /g,'_')+'.js']=n);const lib=d.nodes.find(n=>n.name==='Shared Library').parameters.jsCode;
+const ref='pkgLIB/strip_R1bM_J3/patched/';if(out)fs.mkdirSync(out+'/patched',{recursive:true});let same=0,diff=[];
+for(const f of fs.readdirSync(ref)){const n=by[f];if(!n){diff.push(f+' MISSING');continue;}const c=n.parameters.jsCode;let src;try{src=rebuild(c,lib);}catch(e){src=c;}if(src===fs.readFileSync(ref+f,'utf8'))same++;else diff.push(f);if(out)fs.writeFileSync(out+'/patched/'+f,src);}
+console.log(fb,'| files',fs.readdirSync(ref).length,'| equal to J3 strip',same,'| differ',diff.join(', '));

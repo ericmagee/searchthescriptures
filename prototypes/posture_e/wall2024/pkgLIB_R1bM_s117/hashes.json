@@ -1,0 +1,354 @@
+{
+ "Accept DS Return Build": [
+  "fe9a70020f36",
+  "2c1f81d6fcaa"
+ ],
+ "Accept Return Build": [
+  "4bbeacf73ce1",
+  "8b0d9620f9c8"
+ ],
+ "Alt Gate Build": [
+  "350da756b3df",
+  "350da756b3df"
+ ],
+ "Alt Gate Record": [
+  "0ed4442aa794",
+  "0ed4442aa794"
+ ],
+ "Alt Judge Enforcer Build": [
+  "3820823fbc1b",
+  "3820823fbc1b"
+ ],
+ "Alt Judge Enforcer Record": [
+  "8cecbe7dbc48",
+  "8cecbe7dbc48"
+ ],
+ "Alt Judge Enforcer Retry Build": [
+  "5275727af002",
+  "bafd81d5bdf3"
+ ],
+ "Alt Send Back Build": [
+  "1752191f5e08",
+  "1752191f5e08"
+ ],
+ "Alt Send Back Record": [
+  "de04a8fc64c8",
+  "de04a8fc64c8"
+ ],
+ "Alternate Build": [
+  "e9bcb62192ac",
+  "94ad75034a31"
+ ],
+ "Alternate Cure Build": [
+  "e45beb3a86ec",
+  "e45beb3a86ec"
+ ],
+ "Alternate Cure Normalize": [
+  "b5560f5781fc",
+  "b5560f5781fc"
+ ],
+ "Alternate Merge 1": [
+  "be55f79e2fef",
+  "be55f79e2fef"
+ ],
+ "Alternate Merge Seat": [
+  "2c81952216b7",
+  "2c81952216b7"
+ ],
+ "Alternate Payloads": [
+  "d97eec5379b6",
+  "d97eec5379b6"
+ ],
+ "Build Independent Verdict": [
+  "b04ca2804bb4",
+  "59d8c018b7a0"
+ ],
+ "Build Save Body": [
+  "a2c65e99a88a",
+  "62a8379c8766"
+ ],
+ "Build Synthesis": [
+  "5e2d78f580ea",
+  "3e5b57b901e2"
+ ],
+ "C1B Extract": [
+  "ed27fc229a2e",
+  "af1b6bb5e696"
+ ],
+ "C1 Extract": [
+  "6d1d688e0a6f",
+  "db81091c3f46"
+ ],
+ "C2B Extract": [
+  "ec376321f4fc",
+  "ca1d5a89c874"
+ ],
+ "C2 Build": [
+  "bd02c494e49b",
+  "b7d9ae009561"
+ ],
+ "C2 Extract": [
+  "13b347408cf1",
+  "eda4864ec611"
+ ],
+ "C2 Lexicon Plan": [
+  "c801794abdf2",
+  "7c9f7fd5f034"
+ ],
+ "C3B Extract": [
+  "1607fd166412",
+  "14196992cddc"
+ ],
+ "C3G Extract": [
+  "c2ed60bc9b8a",
+  "94e590723ae4"
+ ],
+ "C3 Build": [
+  "9012222d071c",
+  "032a67b2ba33"
+ ],
+ "C3 Extract": [
+  "dc07ef15cb05",
+  "57c82ead3dbd"
+ ],
+ "C3 Lexicon Plan": [
+  "3aa8cf776e1d",
+  "b1260ac2264c"
+ ],
+ "C4B Extract": [
+  "31d2447859e1",
+  "e030c213f5da"
+ ],
+ "C4G Extract": [
+  "3b482f226685",
+  "0889a8dc55f6"
+ ],
+ "C4 Build": [
+  "522ab3a723e4",
+  "8cbc89f13567"
+ ],
+ "C4 Extract": [
+  "253d08c60cac",
+  "2efcf8e14ce2"
+ ],
+ "C4 Lexicon Plan": [
+  "8212abd5222a",
+  "a051e9c6e4de"
+ ],
+ "Citation Scan": [
+  "4e5d41b82dc1",
+  "f0ab540212c9"
+ ],
+ "Cure Build": [
+  "09a4aecfadf9",
+  "09a4aecfadf9"
+ ],
+ "Cure Check": [
+  "56c02d19cbeb",
+  "56c02d19cbeb"
+ ],
+ "Cure Normalize": [
+  "fc8ba6518fc6",
+  "fc8ba6518fc6"
+ ],
+ "D1 Build": [
+  "bfded06dc13e",
+  "a46498ef5939"
+ ],
+ "D2B Extract": [
+  "57e335b9d1b6",
+  "18d34f2c397c"
+ ],
+ "D2 Build": [
+  "d3d3b4ea4f6a",
+  "106decf54cc5"
+ ],
+ "D2 Extract": [
+  "05c28c21a79b",
+  "b23b79d990f8"
+ ],
+ "D2 Lexicon Plan": [
+  "6d734f902880",
+  "27261058adab"
+ ],
+ "D3B Extract": [
+  "3c1acbc383a3",
+  "fe1400f4ba33"
+ ],
+ "D3 Build": [
+  "16fc13d65159",
+  "17b648763f57"
+ ],
+ "D3 Extract": [
+  "a2800782e756",
+  "ca9c36f4d7a4"
+ ],
+ "D3 Lexicon Plan": [
+  "897c5db2790f",
+  "c0c97f48c436"
+ ],
+ "D4B Extract": [
+  "a14e54943a3f",
+  "5e0ddde6e1f2"
+ ],
+ "D4 Build": [
+  "b4b2a0a883f0",
+  "259bb579fbba"
+ ],
+ "D4 Extract": [
+  "1a6681de65e9",
+  "5473a9c1d7c3"
+ ],
+ "D4 Lexicon Plan": [
+  "ff3fe3e19042",
+  "3c61e03d94eb"
+ ],
+ "Enforcer Build": [
+  "81ca03156ce9",
+  "d65f8353ba9c"
+ ],
+ "Extract Independent Verdict": [
+  "10e555b5804b",
+  "10e555b5804b"
+ ],
+ "Format Markdown": [
+  "a81cb169d2df",
+  "3120807fde9e"
+ ],
+ "Gate Build": [
+  "0b238ef35ae1",
+  "0b238ef35ae1"
+ ],
+ "Gate Record": [
+  "bc384ce62419",
+  "bc384ce62419"
+ ],
+ "Judge Enforcer Build": [
+  "9e510783a2bc",
+  "9e510783a2bc"
+ ],
+ "Judge Enforcer Record": [
+  "667721e17314",
+  "667721e17314"
+ ],
+ "Judge Enforcer Retry Build": [
+  "f770b5b8ca50",
+  "fb288060fc33"
+ ],
+ "L2 Count Plan": [
+  "e5882a72c55e",
+  "b6367ff68f48"
+ ],
+ "L2 Lexicon Plan": [
+  "4c96a60eede9",
+  "d426808ee56c"
+ ],
+ "Panel Build": [
+  "146c500551f9",
+  "c5e1e18078b1"
+ ],
+ "Panel Cure Build 1": [
+  "55f9caa2a14f",
+  "55f9caa2a14f"
+ ],
+ "Panel Cure Build 2": [
+  "b694ccc3c0b8",
+  "b694ccc3c0b8"
+ ],
+ "Panel Cure Build 3": [
+  "9f6f48b4b199",
+  "9f6f48b4b199"
+ ],
+ "Panel Cure Check": [
+  "760cfe9fdaad",
+  "760cfe9fdaad"
+ ],
+ "Panel Cure Normalize 1": [
+  "b49f601c04a3",
+  "b49f601c04a3"
+ ],
+ "Panel Cure Normalize 2": [
+  "e659ebd3259e",
+  "e659ebd3259e"
+ ],
+ "Panel Cure Normalize 3": [
+  "e1da6dcaa803",
+  "e1da6dcaa803"
+ ],
+ "Panel Payloads": [
+  "3ddddeda549d",
+  "3ddddeda549d"
+ ],
+ "Quote Report": [
+  "63e1d95cbecf",
+  "f23d0cf97cfc"
+ ],
+ "R2 Alt Gate Build": [
+  "3474e99aa486",
+  "3474e99aa486"
+ ],
+ "R2 Alt Gate Record": [
+  "2ca1c2af8034",
+  "2ca1c2af8034"
+ ],
+ "R2 Alt Judge Enforcer Build": [
+  "2fcd6b7ca23b",
+  "2fcd6b7ca23b"
+ ],
+ "R2 Alt Judge Enforcer Record": [
+  "8b6087952cb4",
+  "8b6087952cb4"
+ ],
+ "R2 Alt Judge Enforcer Retry Build": [
+  "796c5dc28aff",
+  "133b9b2414b9"
+ ],
+ "R2 Alt Send Back Build": [
+  "770b8128c7ab",
+  "770b8128c7ab"
+ ],
+ "R2 Alt Send Back Record": [
+  "4cc908951b36",
+  "4cc908951b36"
+ ],
+ "R2 Alternate Build": [
+  "163f919a8d12",
+  "163f919a8d12"
+ ],
+ "R2 Alternate Cure Build": [
+  "129102d32b0e",
+  "129102d32b0e"
+ ],
+ "R2 Alternate Cure Normalize": [
+  "5c0b41ea5f49",
+  "5c0b41ea5f49"
+ ],
+ "R2 Alternate Merge": [
+  "db3a864bb89f",
+  "db3a864bb89f"
+ ],
+ "R2 Alternate Merge Seat": [
+  "7d1ec9b45d8e",
+  "7d1ec9b45d8e"
+ ],
+ "R2 Alternate Payloads": [
+  "08b7baf6b79b",
+  "08b7baf6b79b"
+ ],
+ "Reserve Build": [
+  "cf79b755fab9",
+  "6d0f0681820b"
+ ],
+ "Send Back Build": [
+  "e04ae782a8dc",
+  "e04ae782a8dc"
+ ],
+ "Send Back Record": [
+  "12aaaaba4b26",
+  "12aaaaba4b26"
+ ],
+ "Shared Library": [
+  "b2c55fd5c36b",
+  "c9e9a34fbb80"
+ ]
+}
