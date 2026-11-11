@@ -1,0 +1,8 @@
+## ex34299_full.json live==stored true cand==live true
+## ex34626_full.json live==stored true cand==live true
+## ex34703_full.json live==stored true cand==live true
+## ex34726_full.json live==stored true cand==live true
+## ex34780_full.json live==stored true cand==live true
+## ex34852_full.json live==stored true cand==live false
+ live {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","X2|DEFENDER|3|CONFIRMED||"],"confirmed":["DEFENDER 3"]} 
+ cand {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","X2|DEFENDER|2|CONFIRMED|3|LINK 2 set by the code: the closing quotation stands in the block headed for link 2 (the r"],"confirmed":["DEFENDER 2"]}
