@@ -1,0 +1,8 @@
+## Q1 inside a quotation | "The challenger quoted me: \"my chain stands as declared.\"" -> []
+## Q2 inside a quotation, no speaker word | "I once wrote \"I keep D1 to D6 as declared,\" and I now narrow." -> []
+## Q3 range after the phrase | "My chain stands as declared, D1 to D3." -> ["L1","L3"]
+## Q4 range after, then a narrowed clause | "D1 to D6 stand as declared; D3 is kept as narrowed." -> ["L1","L3","L5"]
+## Q5 "but" clause | "I keep D3 and D4 as declared, but D1 as narrowed." -> ["L3"]
+## Q6 contraction negation | "I don't keep D1 to D6 as declared." -> []
+## Q7 never | "My chain never stood as declared after round 3." -> []
+## Q8 plain keep, D5 only | "D5 remains as declared." -> ["L5"]
