@@ -1,0 +1,8 @@
+planted D row X43 Matthew 1:20 | C row X42 Numbers 1:2
+OK   A both sides REVERSED and shown | notes 2 | rest of request equal to hidden: true | notes follow: ["(no header found)","(no header found)"] | save: anti-cheat items 3, REVIEW rows 2, not-run 0 | expected {"notes":2,"flags":2}
+OK   B skipped record | notes 0 | rest of request equal to hidden: true | notes follow: [] | save: anti-cheat items 1, REVIEW rows 0, not-run 1 | expected {"notes":0,"flags":0,"notrun":1}
+OK   C record with no acx field | notes 0 | rest of request equal to hidden: true | notes follow: [] | save: anti-cheat items 1, REVIEW rows 0, not-run 0 | expected {"notes":0,"flags":0}
+OK   D REVERSED rows, record-only (not in reversed lists) | notes 0 | rest of request equal to hidden: true | notes follow: [] | save: anti-cheat items 2, REVIEW rows 1, not-run 0 | expected {"notes":0,"flags":1}
+OK   E close quote with a double quote and a newline | notes 1 | rest of request equal to hidden: true | notes follow: ["(no header found)"] | save: anti-cheat items 2, REVIEW rows 1, not-run 0 | expected {"notes":1,"flags":1}
+  C save item text: "[AUDIT ANTI-CHEAT (TRIAL): undefined close-round verse(s) checked in undefined call(s): undefined CONSISTENT, undefined REVERSED (undefined shown to the judges, undefined QUOTE NOT FOUND), undefined NO EARLIER READING, undefined NO ANSWER, undefined NOT CHECKED.]"
+plants as expected 5 of 5

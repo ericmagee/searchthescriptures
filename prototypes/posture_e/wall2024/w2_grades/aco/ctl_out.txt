@@ -1,0 +1,29 @@
+sha s135 ead9b3c4e60b9f2a ACO 2047f8ee53ce15a1
+nodes 418 418 node differences none | settings equal true
+edges 696 696
+REMOVED:
+  Check Save [main 0] -> Anticheat Build (in 0)
+  Regrade After Quotes? [main 0] -> Anticheat Build (in 0)
+  Anticheat Only? [main 1] -> Panel Build (in 0)
+  Close Enforcer Record [main 0] -> Regrade After Quotes? (in 0)
+ADDED:
+  Check Save [main 0] -> Panel Build (in 0)
+  Regrade After Quotes? [main 0] -> Panel Build (in 0)
+  Anticheat Only? [main 1] -> Regrade After Quotes? (in 0)
+  Close Enforcer Record [main 0] -> Anticheat Build (in 0)
+trigger-like starts: Manual Start, Debate Start
+reachable nodes old 417 new 417 same set true
+READ RELATIONS THAT CHANGE (2):
+  Build Independent Verdict reads Anticheat Record | before R on every path: false -> true | on some path: false -> true
+  Build Save Body reads Anticheat Record | before R on every path: false -> true | on some path: false -> true
+readers of Regrade After Quotes?: none
+readers of Anticheat Only?: none
+readers of Anticheat Needed?: none
+readers of Anticheat Call deepseek: none
+readers of Anticheat Build: Anticheat Record
+readers of Anticheat Record: Build Independent Verdict, Build Save Body, Panel Build
+readers of Check Save: Panel Build, Failure Salvage
+NEW Close Enforcer Record -> Build Save Body: Close Enforcer Record > Anticheat Build > Anticheat Needed? > Anticheat Record > Anticheat Only? > Regrade After Quotes? > Build Independent Verdict > Verdict Judge Route > Independent Verdict Call > Verdict Normalizer > Extract Independent Verdict > SJ Re-ask? > Cure Needed? > Cure Check > Build Diagnostic Prompt > Diagnostic Judge Route > DeepSeek Diagnostic Call > Diagnostic Normalizer > Extract Diagnostic > Build Save Body
+NEW Save -> Panel Build: Build Save Body > Save to DB > Check Save > Panel Build
+OLD Close Enforcer Record -> Build Save Body: Close Enforcer Record > Regrade After Quotes? > Build Independent Verdict > Verdict Judge Route > Independent Verdict Call > Verdict Normalizer > Extract Independent Verdict > SJ Re-ask? > Cure Needed? > Cure Check > Build Diagnostic Prompt > Diagnostic Judge Route > DeepSeek Diagnostic Call > Diagnostic Normalizer > Extract Diagnostic > Build Save Body
+nodes on error settings, anticheat chain: Anticheat Build onError=undefined retry=undefined tries=undefined timeout=undefined | Anticheat Needed? onError=undefined retry=undefined tries=undefined timeout=undefined | Anticheat Call deepseek onError=continueRegularOutput retry=true tries=3 timeout=900000 | Anticheat Record onError=undefined retry=undefined tries=undefined timeout=undefined | Anticheat Only? onError=undefined retry=undefined tries=undefined timeout=undefined

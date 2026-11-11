@@ -1,0 +1,13 @@
+sha s135 ead9b3c4e60b9f2a ACO 2047f8ee53ce15a1
+nodes 418 418 node differences none | settings equal true
+edges 696 696
+REMOVED:
+  Check Save [main 0] -> Anticheat Build (in 0)
+  Regrade After Quotes? [main 0] -> Anticheat Build (in 0)
+  Anticheat Only? [main 1] -> Panel Build (in 0)
+  Close Enforcer Record [main 0] -> Regrade After Quotes? (in 0)
+ADDED:
+  Check Save [main 0] -> Panel Build (in 0)
+  Regrade After Quotes? [main 0] -> Panel Build (in 0)
+  Anticheat Only? [main 1] -> Regrade After Quotes? (in 0)
+  Close Enforcer Record [main 0] -> Anticheat Build (in 0)
