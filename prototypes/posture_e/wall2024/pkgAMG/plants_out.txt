@@ -1,0 +1,8 @@
+OK     old UNCURED  new CURED    want CURED    | FAILS, right MEETS, CHANGE TO MEETS on the same answer | CHANGE TO MEETS, the grade the enforcer gave, on the same answer (pkgAMG)
+OK     old UNCURED  new CURED    want CURED    | MISSES, right MEETS, CHANGE TO MEETS on a shorter cut of it | CHANGE TO MEETS, the grade the enforcer gave, on the same answer (pkgAMG)
+OK     old UNCURED  new UNCURED  want UNCURED  | MEETS, right MISSES, CHANGE TO MEETS on the same answer (old test kept) | the CHANGE TO MEETS quotes the flagged answer again (or a shorter cut of it)
+OK     old UNCURED  new UNCURED  want UNCURED  | FAILS, right MISSES, CHANGE TO MEETS on the same answer | the CHANGE TO MEETS quotes the flagged answer again (or a shorter cut of it)
+OK     old UNCURED  new UNCURED  want UNCURED  | FAILS, right MEETS, CHANGE TO MEETS on words not in the round | the CHANGE TO answer is not found word for word in [CR3]: "words that stand in no round of
+OK     old CURED    new CURED    want CURED    | FAILS, right MEETS, CHANGE TO MISSES (unchanged rule) | CHANGE TO grades MISSES
+OK     old CURED    new CURED    want CURED    | FAILS, right MEETS, CHANGE TO MEETS on a fuller answer (unchanged) | CHANGE TO MEETS with a fuller answer found in [CR3]
+plants 7 right 7
