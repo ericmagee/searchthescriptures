@@ -1,0 +1,138 @@
+## S1 D3 row
+intro
+| Link | Mark | Why |
+|---|---|---|
+| **D1: a** | **NARROWED** | x |
+| **D3: b** | **CITED** | y |
+| D3 (engine) | **BROKEN** | confirmed closing contradiction (X2): earlier [CR2] "earlier words"; closing [CR4] "closing words". Added by code after the closing check. |
+| **D10: c** | **CITED** | z |
+| **C2: d** | **CITED** | w |
+end
+
+## S2 D1 with D10 present
+intro
+| Link | Mark | Why |
+|---|---|---|
+| **D1: a** | **NARROWED** | x |
+| D1 (engine) | **BROKEN** | confirmed closing contradiction (X1): earlier [CR2] "earlier words"; closing [CR4] "closing words". Added by code after the closing check. |
+| **D3: b** | **CITED** | y |
+| **D10: c** | **CITED** | z |
+| **C2: d** | **CITED** | w |
+end
+
+## S3 collision table first
+| Pair | Ruling |
+|---|---|
+| D3 vs C1 | HELD |
+| D3 (engine) | **BROKEN** | confirmed closing contradiction (X2): earlier [CR2] "earlier words"; closing [CR4] "closing words". Added by code after the closing check. |
+
+intro
+| Link | Mark | Why |
+|---|---|---|
+| **D1: a** | **NARROWED** | x |
+| **D3: b** | **CITED** | y |
+| **D10: c** | **CITED** | z |
+| **C2: d** | **CITED** | w |
+end
+
+## S4 two pairs same link
+intro
+| Link | Mark | Why |
+|---|---|---|
+| **D1: a** | **NARROWED** | x |
+| **D3: b** | **CITED** | y |
+| D3 (engine) | **BROKEN** | confirmed closing contradiction (X5): earlier [CR2] "earlier words"; closing [CR4] "closing words". Added by code after the closing check. |
+| D3 (engine) | **BROKEN** | confirmed closing contradiction (X2): earlier [CR2] "earlier words"; closing [CR4] "closing words". Added by code after the closing check. |
+| **D10: c** | **CITED** | z |
+| **C2: d** | **CITED** | w |
+end
+
+## S5 challenger
+intro
+| Link | Mark | Why |
+|---|---|---|
+| **D1: a** | **NARROWED** | x |
+| **D3: b** | **CITED** | y |
+| **D10: c** | **CITED** | z |
+| **C2: d** | **CITED** | w |
+| C2 (engine) | **BROKEN** | confirmed closing contradiction (X7): earlier [CR2] "earlier words"; closing [CR4] "closing words". Added by code after the closing check. |
+end
+
+## S6 pipe and newline in quote
+intro
+| Link | Mark | Why |
+|---|---|---|
+| **D1: a** | **NARROWED** | x |
+| **D3: b** | **CITED** | y |
+| D3 (engine) | **BROKEN** | confirmed closing contradiction (X2): earlier [CR2] "a / b c"; closing [CR4] "d/e". Added by code after the closing check. |
+| **D10: c** | **CITED** | z |
+| **C2: d** | **CITED** | w |
+end
+
+## S7a no table, marker
+text only
+
+**ENGINE: D1 BROKEN** -- confirmed closing contradiction (X1): earlier [CR2] "earlier words"; closing [CR4] "closing words". Added by code after the closing check.
+--- ORACLE_DEBATE_V1 tail ---
+
+## S7b no table, no marker
+text only
+
+**ENGINE: D1 BROKEN** -- confirmed closing contradiction (X1): earlier [CR2] "earlier words"; closing [CR4] "closing words". Added by code after the closing check.
+
+## S8a no link
+intro
+| Link | Mark | Why |
+|---|---|---|
+| **D1: a** | **NARROWED** | x |
+| **D3: b** | **CITED** | y |
+| **D10: c** | **CITED** | z |
+| **C2: d** | **CITED** | w |
+end
+
+**ENGINE: Dundefined BROKEN** -- confirmed closing contradiction (X9): earlier [] ""; closing [] "". Added by code after the closing check.
+
+## S8b no side
+intro
+| Link | Mark | Why |
+|---|---|---|
+| **D1: a** | **NARROWED** | x |
+| **D3: b** | **CITED** | y |
+| **D10: c** | **CITED** | z |
+| **C2: d** | **CITED** | w |
+end
+
+**ENGINE: NaN BROKEN** -- confirmed closing contradiction (X9): earlier [] ""; closing [] "". Added by code after the closing check.
+
+## S9a record not run
+(UNCHANGED)
+
+## S9b nothing confirmed
+(UNCHANGED)
+
+## S9c empty synthesis
+(UNCHANGED)
+
+## S10a two-column
+| L | M |
+|---|---|
+| D3 | B |
+| D3 (engine) | **BROKEN** | confirmed closing contradiction (X2): earlier [CR2] "earlier words"; closing [CR4] "closing words". Added by code after the closing check. |
+
+## S10b six-column
+| a | b | c | d | e | f |
+|---|---|---|---|---|---|
+| D3 | 2 | 3 | 4 | 5 | 6 |
+| D3 (engine) | **BROKEN** | confirmed closing contradiction (X2): earlier [CR2] "earlier words"; closing [CR4] "closing words". Added by code after the closing check. | | | |
+
+## S10c link 3 as string
+intro
+| Link | Mark | Why |
+|---|---|---|
+| **D1: a** | **NARROWED** | x |
+| **D3: b** | **CITED** | y |
+| D3 (engine) | **BROKEN** | confirmed closing contradiction (X2): earlier [CR2] "earlier words"; closing [CR4] "closing words". Added by code after the closing check. |
+| **D10: c** | **CITED** | z |
+| **C2: d** | **CITED** | w |
+end
+

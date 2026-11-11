@@ -1,0 +1,10 @@
+ex33149_full.json | live vs stored paths differing: 29 .saveBody.conceded_split.reader .saveBody.conceded_split.defender.stored .saveBody.conceded_split.defender.stated .saveBody.conceded_split.defender.granted | SYL vs live: 
+ex33371_full.json | live vs stored paths differing: 3 .saveBody.conceded_split.defender.broken_at_collision .saveBody.conceded_split.challenger.broken_at_collision .saveBody.review_notes | SYL vs live: 
+ex33490_full.json | live vs stored paths differing: 3 .saveBody.conceded_split.defender.broken_at_collision .saveBody.conceded_split.challenger.broken_at_collision .saveBody.review_notes | SYL vs live: 
+ex33497_full.json | live vs stored paths differing: 3 .saveBody.conceded_split.defender.broken_at_collision .saveBody.conceded_split.challenger.broken_at_collision .saveBody.review_notes | SYL vs live: 
+ex34726_full.json | live vs stored paths differing: 1 .saveBody.review_notes | SYL vs live: .saveBody.synthesis
+  + **ENGINE: D1 BROKEN** -- confirmed closing contradiction (X1): earlier [CR2] "I grant the challenger's reading that this "coming together" is the taking of Matthew 1:24."; closing [CR4] "The finding in Matthew 1:18 stands before the coming together, and the coming together is distinct from the taking in 1:24.". Added by code after the closing check.
+  lines removed: 0 | added at line 76 of 113 | line before: 
+ex34852_full.json | live vs stored paths differing: 1 .saveBody.review_notes | SYL vs live: .saveBody.synthesis
+  + | D3 (engine) | **BROKEN** | confirmed closing contradiction (X2): earlier [CR3] "I drop the claim that a father would never have thought of putting her away."; closing [CR4] "A man who knew himself the father would have no cause to put her away, and the verse shows Joseph with that cause.". Added by code after the closing check. |
+  lines removed: 0 | added at line 22 of 101 | line before: | **D3: Joseph’s intent and supposed sonship** | **NARROWED-BY-ITS-OWN-SIDE** | The defend

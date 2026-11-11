@@ -1,0 +1,24 @@
+// W2 grade of pkgSYL: plants S1-S10 on __SYL extracted from parent_s125_SYL.json Build Save Body.
+const fs=require('fs');const g=f=>{let d=JSON.parse(fs.readFileSync(f));d=d.data||d;return d.workflow||d;};
+const B=g('/mnt/project-files/wall2024/parent_s125_SYL.json');const src=B.nodes.find(n=>n.name==='Build Save Body').parameters.jsCode;
+const fn=src.slice(0,src.indexOf('/* pkgSYL */'));
+const mk=conf=>new Function('$',fn+'\nreturn __SYL;')(n=>{if(conf===null)throw new Error('not run');return {first:()=>({json:{cec:{confirmed:conf}}})};});
+const X=(id,side,link,eq='earlier words',cq='closing words')=>({id,side,link,earlier_round:'CR2',earlier_q:eq,closing_round:'CR4',closing_q:cq});
+const T4='intro\n| Link | Mark | Why |\n|---|---|---|\n| **D1: a** | **NARROWED** | x |\n| **D3: b** | **CITED** | y |\n| **D10: c** | **CITED** | z |\n| **C2: d** | **CITED** | w |\nend';
+const show=(nm,s,conf)=>{const o=mk(conf)(s);console.log('## '+nm+'\n'+(o===s?'(UNCHANGED)':o)+'\n');};
+show('S1 D3 row',T4,[X('X2','DEFENDER',3)]);
+show('S2 D1 with D10 present',T4,[X('X1','DEFENDER',1)]);
+show('S3 collision table first','| Pair | Ruling |\n|---|---|\n| D3 vs C1 | HELD |\n\n'+T4,[X('X2','DEFENDER',3)]);
+show('S4 two pairs same link',T4,[X('X2','DEFENDER',3),X('X5','DEFENDER',3)]);
+show('S5 challenger',T4,[X('X7','CHALLENGER',2)]);
+show('S6 pipe and newline in quote',T4,[X('X2','DEFENDER',3,'a | b\nc','d|e')]);
+show('S7a no table, marker','text only\n--- ORACLE_DEBATE_V1 tail ---',[X('X1','DEFENDER',1)]);
+show('S7b no table, no marker','text only',[X('X1','DEFENDER',1)]);
+show('S8a no link',T4,[{id:'X9',side:'DEFENDER'}]);
+show('S8b no side',T4,[{id:'X9',link:3}]);
+show('S9a record not run',T4,null);
+show('S9b nothing confirmed',T4,[]);
+show('S9c empty synthesis','',[X('X1','DEFENDER',1)]);
+show('S10a two-column','| L | M |\n|---|---|\n| D3 | B |',[X('X2','DEFENDER',3)]);
+show('S10b six-column','| a | b | c | d | e | f |\n|---|---|---|---|---|---|\n| D3 | 2 | 3 | 4 | 5 | 6 |',[X('X2','DEFENDER',3)]);
+show('S10c link 3 as string',T4,[X('X2','DEFENDER','3')]);
