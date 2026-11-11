@@ -5,7 +5,6 @@ CONFIRMED:
 
 CONFIRMED: 
 live replay equals stored output: true
-replays 1, changed 0
 == 34626 live
 NEW DEFENDER LINK 6 CONFIRMED
 CONFIRMED: DEFENDER LINK 6
@@ -13,7 +12,6 @@ CONFIRMED: DEFENDER LINK 6
 NEW DEFENDER LINK 6 CONFIRMED
 CONFIRMED: DEFENDER LINK 6
 live replay equals stored output: true
-replays 1, changed 0
 == 34703 live
 NEW DEFENDER LINK 6 CONFIRMED
 CONFIRMED: DEFENDER LINK 6
@@ -21,7 +19,6 @@ CONFIRMED: DEFENDER LINK 6
 NEW DEFENDER LINK 6 CONFIRMED
 CONFIRMED: DEFENDER LINK 6
 live replay equals stored output: true
-replays 1, changed 0
 == 34726 live
 X1 DEFENDER LINK 1 CONFIRMED
 CONFIRMED: DEFENDER LINK 1
@@ -29,7 +26,6 @@ CONFIRMED: DEFENDER LINK 1
 X1 DEFENDER LINK 1 CONFIRMED
 CONFIRMED: DEFENDER LINK 1
 live replay equals stored output: true
-replays 1, changed 0
 == 34780 live
 X1 DEFENDER LINK 1 CONFIRMED
 CONFIRMED: DEFENDER LINK 1
@@ -37,14 +33,13 @@ CONFIRMED: DEFENDER LINK 1
 X1 DEFENDER LINK 1 CONFIRMED
 CONFIRMED: DEFENDER LINK 1
 live replay equals stored output: true
-replays 1, changed 0
 == 34852 live
 X1 DEFENDER LINK 2 NOT A CONTRADICTION
 X2 DEFENDER LINK 3 CONFIRMED
 CONFIRMED: DEFENDER LINK 3
 == 34852 pkgCLK
 X1 DEFENDER LINK 2 NOT A CONTRADICTION
-X2 DEFENDER LINK 2 CONFIRMED | LINK 2 set by the code: the closing quotation stands in the block headed for link 2 (the reply named LINK 3; pkgCLK)
+X2 DEFENDER LINK 2 CONFIRMED
 CONFIRMED: DEFENDER LINK 2
 live replay equals stored output: true
-replays 1, changed 1
+replays 6, changed 1
