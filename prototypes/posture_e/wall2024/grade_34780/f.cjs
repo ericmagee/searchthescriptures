@@ -1,0 +1,5 @@
+const {r,out}=require('./x.cjs');
+const am=out('Alternate Merge')[0];
+for(const s of am.summary){const o={...s};const drv=o.drv||[];delete o.drv;const c={};drv.forEach(d=>{c[d.rule+' '+d.side]=(c[d.rule+' '+d.side]||0)+1});for(const k of Object.keys(o))if(typeof o[k]==='string'&&o[k].length>300)o[k]=o[k].slice(0,300);else if(Array.isArray(o[k])&&JSON.stringify(o[k]).length>400)o[k]='['+o[k].length+'] '+JSON.stringify(o[k]).slice(0,400);else if(o[k]&&typeof o[k]==='object'&&JSON.stringify(o[k]).length>500)o[k]=JSON.stringify(o[k]).slice(0,500);console.log(JSON.stringify(o));console.log('DRV',JSON.stringify(c));console.log('----');}
+const grab=(t)=>t.split('\n').filter(l=>/^(?:[-*•]\s*)?(D\d vs C\d|KEYSTONE|VERDICT|RESULT|CHAIN|CONCEDED LINKS|RULING --|WINNER|FORCED|RETRACTED|CONTRADICTION)/.test(l.trim())).map(l=>l.slice(0,260));
+am.bodies.forEach((b,i)=>{const t=typeof b==='string'?b:(b.text||b.body||JSON.stringify(b));console.log('#### BODY',i,typeof b==='object'?Object.keys(b):'' ,t.length);console.log(grab(t).join('\n'));});
