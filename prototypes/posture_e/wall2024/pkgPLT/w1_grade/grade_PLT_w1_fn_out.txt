@@ -1,0 +1,16 @@
+library lines changed: 3274, 3285 | line count 3534 3534
+D1 | entry "4. LINK 1: that the timing rows enclose | live: NONE (no block text shown) | cand: ## LINK 1: SUPPORTED [number] | expected LINK 1
+D2 | entry "4. LINK 2: the naming follows the takin | live: ## LINK 4: SUPPORTED [number] | cand: ## LINK 2: SUPPORTED [number] | expected LINK 2
+D3 | entry "4. LINK 4: the same link." | live: ## LINK 4: SUPPORTED [number] | cand: ## LINK 4: SUPPORTED [number] | expected LINK 4
+D4 | entry "4. The inference that the till clause b | live: ## LINK 4: SUPPORTED [number] | cand: ## LINK 4: SUPPORTED [number] | expected LINK 4
+D5 | entry "4. LINK 1: tagged elsewhere." | live: ## LINK 1 [premise 4]: SUPPORTED [tag] | cand: ## LINK 1 [premise 4]: SUPPORTED [tag] | expected LINK 1 [premise 4]
+D6 | entry "4. LINK 1: tag wins." | live: ## LINK 3 [premise 4]: SUPPORTED [tag] | cand: ## LINK 3 [premise 4]: SUPPORTED [tag] | expected LINK 3 [premise 4]
+D7 | entry "4. LINK 7: an absent link." | live: ## LINK 4: SUPPORTED [number] | cand: NONE (no block text shown) | expected NONE
+D8 | entry "4. **LINK 1:** bold tag." | live: NONE (no block text shown) | cand: **LINK 1: SUPPORTED** [number] | expected LINK 1
+D9 | entry "4) LINK 1 - paren and dash." | live: NONE (no block text shown) | cand: ## LINK 1: SUPPORTED [number] | expected LINK 1|RECORD
+D10 | entry "4. LINKS 1 and 2: two links." | live: NONE (no block text shown) | cand: NONE (no block text shown) | expected RECORD
+D11 | entry "4. LINK 1: duplicate block." | live: NONE (no block text shown) | cand: ## LINK 1: NARROWED TO: the taking [number] | expected RECORD
+D12 | entry "2. LINK 3: challenger side." | live: ## LINK 2: SUPPORTED [number] | cand: ## LINK 3: SUPPORTED [number] | expected LINK 3
+D13 | entry "4. The premise rests on LINK 1 and the  | live: ## LINK 4: SUPPORTED [number] | cand: ## LINK 4: SUPPORTED [number] | expected LINK 4 (LINK not at start: old lookup)
+D14 | entry "4. LINK 01: leading zero." | live: ## LINK 4: SUPPORTED [number] | cand: ## LINK 1: SUPPORTED [number] | expected RECORD
+D15 | entry "4. Link 1: lower-case tag." | live: ## LINK 4: SUPPORTED [number] | cand: ## LINK 1: SUPPORTED [number] | expected RECORD
