@@ -1,0 +1,38 @@
+parent sha256 4b41632112b287c3
+stub nodes 43 map entries 42 stubs without map entry [ 'Early Alternate Build' ]
+length or compile faults 0
+rebuilt sources changed vs live [
+  [ 'Alt Gate Record', 58 ],
+  [ 'Alt Judge Enforcer Build', 2182 ],
+  [ 'Alt Judge Enforcer Record', 320 ],
+  [ 'Alt Send Back Build', 58 ],
+  [ 'Alt Send Back Record', 58 ],
+  [ 'Gate Record', 58 ],
+  [ 'Judge Enforcer Build', 2182 ],
+  [ 'Judge Enforcer Record', 320 ],
+  [ 'R2 Alt Gate Record', 58 ],
+  [ 'R2 Alt Judge Enforcer Build', 2182 ],
+  [ 'R2 Alt Judge Enforcer Record', 320 ],
+  [ 'R2 Alt Send Back Build', 58 ],
+  [ 'R2 Alt Send Back Record', 58 ],
+  [ 'Send Back Build', 58 ],
+  [ 'Send Back Record', 58 ]
+]
+Alt Gate Record only-window false
+Alt Judge Enforcer Build only-window false
+Alt Judge Enforcer Record only-window false
+Alt Send Back Build only-window false
+Alt Send Back Record only-window false
+Gate Record only-window false
+Judge Enforcer Build only-window false
+Judge Enforcer Record only-window false
+R2 Alt Gate Record only-window false
+R2 Alt Judge Enforcer Build only-window false
+R2 Alt Judge Enforcer Record only-window false
+R2 Alt Send Back Build only-window false
+R2 Alt Send Back Record only-window false
+Send Back Build only-window false
+Send Back Record only-window false
+library header null
+nodes differing [ 'Shared Library' ] conn equal true nodes 418 418
+total code delta 2615

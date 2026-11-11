@@ -2,3 +2,6 @@ pkgP72 (W1). Ruling 372 in DeepSeek's RULE E-PREM, THE COUNTED KIND. The rule ke
 
 ## Rev 2 (after W2's FAIL, Wall 5047)
 An ANSWER CHECK line is shown under a premise only when its MEANS matches the MEANS of that verse's press in the premise's PRESSED WITH lines (case and punctuation removed; one contains the other). A line whose MEANS belongs to another premise's press of the same verse is not shown. Limits: a judge who paraphrases the press MEANS gets no line under that premise (DeepSeek then rules as before rev 1); an ANSWER CHECK line with no MEANS clause gets no line.
+
+## Rev 3 (after W3's FAIL, Wall 5053)
+The MEANS test is exact equality after lower case and punctuation are removed (no containment). No ruling-372 block is shown for a premise the same judge's line rules VOID ("Premise N VOID", "Premises 1 and N VOID", "Premise N is VOID"), and no ANSWER CHECK line that itself rules the premise VOID is shown. Limits: a judge who paraphrases the press MEANS gets no block; a VOID ruling in another form (for example "N: void" with no "Premise") is not read.

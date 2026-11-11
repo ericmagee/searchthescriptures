@@ -1,0 +1,18 @@
+OK   void372 6 1 | Premise 6 VOID (Commitment 6): the charge adds ONLY
+OK   void372 6 1 | Premise 1 VOID (Commitment 6): ... Premise 6 VOID (Commitment 6)
+OK   void372 6 1 | Premises 1 and 6 VOID
+OK   void372 4 1 | Premises 1, 4 and 6 are VOID
+OK   void372 6 1 | Premise 6 is VOID, so this is not counted
+OK   void372 6 1 | Premise 6: VOID
+OK   void372 6 0 | Premise 16 VOID
+OK   void372 6 0 | Premise 6 is spared
+OK   void372 5 0 | Premises 2, 3, 4 and 5 are spared
+OK   void372 6 0 | Premise 6 not VOID
+OK   void372 6 0 | Premise 1 VOID. Premise 6 is spared.
+OK   means 0 | "Joseph is her husband" vs ["Joseph is her husband in the espousal, before the taking."]
+OK   means 1 | "“the stated grounds are equity.”" vs ["the stated grounds are equity"]
+OK   means 1 | "**Joseph is her husband.**" vs ["Joseph is her husband"]
+OK   means 0 | "the" vs ["the knowing is withheld","the verb"]
+OK   means 0 | "" vs ["x"]
+OK   means 0 | "x" vs [""]
+plants 17 right 17
