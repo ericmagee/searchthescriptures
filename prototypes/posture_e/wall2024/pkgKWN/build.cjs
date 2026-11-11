@@ -20,6 +20,8 @@ if(/F2/.test(which)){
   "stays uncured.'+__F;")]);}
 if(/F3/.test(which)){const o=', on a witness the side answered, with the FORCED line for the pair given only when the gate asks for it (K-G4),';
  E.push([one(o),l=>rep(l,o,' (on a witness the side answered: FORCED: <Dn vs Cm> -- MEANS [<round>]: "..." -- ANSWER [<round>]: "..." -- FAILS: "..."),')]);} /* pkgEHF: the E-HOLD send-back text names the FORCED form, as the Record copy does */
+if(/F4/.test(which)){const o=', and give the FORCED line when the gate asks for it (K-G4, ruling 421);';
+ E.push([one(o),l=>rep(l,o,', with its FORCED line (K-G4, ruling 421);')]);} /* pkgEHF rev 2: the BROKEN-grade rule asks for the FORCED line with the change, not later */
 const uses=i=>Object.entries(M).filter(([n,v])=>v.p.some(p=>p===i||(Array.isArray(p)&&typeof p[0]==='number'&&p[0]<=i&&i<=p[1])));
 for(const [i,f] of E){const o=L[i];L[i]=f(o);if(L[i]===o)throw new Error('no change at '+i);const d=L[i].length-o.length;for(const [n,v] of uses(i))v.n+=d;console.log('line',i,(d>=0?'+':'')+d,'used by',uses(i).length,'nodes:',uses(i).map(x=>x[0]).join(', '));}
 const LJ=JSON.stringify(L);let nc=c.slice(0,a)+LJ+'\n/*MAP*/'+JSON.stringify(M)+c.slice(e);
