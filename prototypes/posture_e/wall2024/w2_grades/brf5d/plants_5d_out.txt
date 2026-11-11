@@ -1,0 +1,19 @@
+Q1 twenty books | len 0 | (none)
+Q2 three bare refs x10 | len 270 | [CLOSE-ROUND BOOK CHECK -- by code: [DR4] writes 1:1 (Genesis 1:1, Exodus 1:1, Leviticus 1:1, Numbers 1:1, Deuteronomy 1:1, Joshua 1:1, Judges 1:1, Ruth 1:1, Matthew 1:1, Mark 1:1 named earlier) with no book; not marked NEW, not cleared: read the sentence for its book.]
+Q3 borrowed earlier | len 162 | [CLOSE-ROUND BOOK CHECK -- by code: [DR4] writes 1:18 (Deuteronomy 1:18 named earlier) with no book; not marked NEW, not cleared: read the sentence for its book.]
+Q4 control own book | len 158 | [CLOSE-ROUND BOOK CHECK -- by code: [DR4] writes 1:18 (Matthew 1:18 named earlier) with no book; not marked NEW, not cleared: read the sentence for its book.]
+
+Q1 twenty books FULL NOTE: "\n\n[CLOSE-ROUND PRESS CHECK -- computed by the system, not by a model: [DR4] names 1 verse reference(s) that no earlier challenger round names: Deuteronomy 20:7. The close round may not press: each is a NEW PRESS and is NOT COUNTED as evidence, as a witness or as an answer.]"
+ parse dr4: [["20:7","Deuteronomy","Deuteronomy",true,true],["1:1",null,"Deuteronomy",true,true]]
+
+Q2 three bare refs x10 FULL NOTE: "\n\n[CLOSE-ROUND PRESS CHECK -- computed by the system, not by a model: [DR4] names 1 verse reference(s) that no earlier challenger round names: Luke 2:1. The close round may not press: each is a NEW PRESS and is NOT COUNTED as evidence, as a witness or as an answer.]\n\n[CLOSE-ROUND BOOK CHECK -- by code: [DR4] writes 1:1 (Genesis 1:1, Exodus 1:1, Leviticus 1:1, Numbers 1:1, Deuteronomy 1:1, Joshua 1:1, Judges 1:1, Ruth 1:1, Matthew 1:1, Mark 1:1 named earlier) with no book; not marked NEW, not cleared: read the sentence for its book.]"
+ parse dr4: [["2:1","Luke","Luke",true,true],["1:1",null,"Luke",true,true],["1:2",null,null,true,true],["1:3",null,null,true,true]]
+
+Q5 new bare verse, third sentence "\n\n[CLOSE-ROUND PRESS CHECK -- computed by the system, not by a model: [DR4] names 1 verse reference(s) that no earlier challenger round names: Luke 2:1. The close round may not press: each is a NEW PRESS and is NOT COUNTED as evidence, as a witness or as an answer.]\n\n[CLOSE-ROUND BOOK CHECK -- by code: [DR4] writes 1:18 (Matthew 1:18 named earlier) with no book; not marked NEW, not cleared: read the sentence for its book.]"
+ parse: [["2:1","Luke","Luke"],["1:18",null,"Luke"],["5:9",null,null]]
+
+Q6 new bare verse, second sentence "\n\n[CLOSE-ROUND PRESS CHECK -- computed by the system, not by a model: [DR4] names 2 verse reference(s) that no earlier challenger round names: Luke 2:1, Luke 5:9. The close round may not press: each is a NEW PRESS and is NOT COUNTED as evidence, as a witness or as an answer.]"
+ parse: [["2:1","Luke","Luke"],["5:9",null,"Luke"]]
+
+Q7 new bare verse, first sentence, no book before "\n\n[CLOSE-ROUND PRESS CHECK -- computed by the system, not by a model: [DR4] names 1 verse reference(s) that no earlier challenger round names: Luke 2:1. The close round may not press: each is a NEW PRESS and is NOT COUNTED as evidence, as a witness or as an answer.]"
+ parse: [["5:9",null,null],["2:1","Luke","Luke"]]
