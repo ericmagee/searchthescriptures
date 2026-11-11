@@ -1,0 +1,9 @@
+PCS changes 15 nodes: Cure Check, Panel Cure Check, Alternate Merge Seat, Send Back Record, Gate Build, Gate Record, Alt Send Back Record, Alt Gate Build, Alt Gate Record, Alternate Merge 1, R2 Alternate Merge Seat, R2 Alt Send Back Record, R2 Alt Gate Build, R2 Alt Gate Record, R2 Alternate Merge
+ECS changes 3 nodes: Judge Enforcer Build, Alt Judge Enforcer Build, R2 Alt Judge Enforcer Build
+RRT changes 6 nodes: Reread Build, Reread Record, Alt Reread Build, Alt Reread Record, R2 Alt Reread Build, R2 Alt Reread Record
+Shared Library touched by PCS and ECS (different lines); node pairs touching the same node: none listed above means none
+nodes 418 connections equal true faults 0
+SIZE (measured) total code joint vs live 3705 | sum of singles 3705
+joint sha256 3aa73d1ce8caea06
+stub nodes 43 map entries 42 stubs without map entry [ 'Early Alternate Build' ]
+length or compile faults 0
