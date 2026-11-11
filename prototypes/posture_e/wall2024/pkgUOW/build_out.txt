@@ -1,5 +1,6 @@
-Shared Library code 19 total code 19 prompt 0
-nodes changed [ 'Shared Library' ] node count 418 418 connections equal true
-parse as plain JS: base fails true candidate fails true (the library is a packed map, not plain JS; same result both sides)
+lib line 1898 +19 used by Alt Gate Record, Alt Send Back Build, Alt Send Back Record, Gate Record, R2 Alt Gate Record, R2 Alt Send Back Build, R2 Alt Send Back Record, Send Back Build, Send Back Record
+stubs rebuilt and compiled: 42 | rebuilt sources that changed: 9 Alt Gate Record, Alt Send Back Build, Alt Send Back Record, Gate Record, R2 Alt Gate Record, R2 Alt Send Back Build, R2 Alt Send Back Record, Send Back Build, Send Back Record
+SIZE (measured): Shared Library +19 (regex line +19, map lengths and sha header the rest) | prompt 0
+workflow nodes changed [ 'Shared Library' ] | node count 418 | connections equal true
 OPEN equals replay candidate true
-sha256 42512b47731b9cf4
+sha256 d0d7de86967efd26
