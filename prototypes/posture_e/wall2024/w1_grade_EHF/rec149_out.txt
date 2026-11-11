@@ -1,0 +1,17 @@
+chatgpt .items.6.reason | 3047 x 1 3115 x 0 | formula 11 measured 11 | live len 1014 EHF2 len 1025
+chatgpt .msg | 3047 x 4 3115 x 1 | formula 14 measured 3 | live len 9641 EHF2 len 9644
+chatgpt .body.messages.5.content | 3047 x 4 3115 x 1 | formula 14 measured 3 | live len 12547 EHF2 len 12550
+sol .msg | 3047 x 5 3115 x 0 | formula 55 measured 55 | live len 11646 EHF2 len 11701
+sol .body.messages.5.content | 3047 x 5 3115 x 0 | formula 55 measured 55 | live len 14791 EHF2 len 14846
+formula total 149 measured total 127
+first diff 4457 last diff from end 749
+LINE 28 len 920 -> 920 | live tail: "RMINED by CHANGE TO the same line with, after GROUND:, [L1] <reference> \"<the KJV words both readings rest on>\" an [...]" 
+   EHF2 tail: "p UNDERDETERMINED by CHANGE TO the same line with, after GROUND:, [L1] <reference> \"<the KJV words both readings r [...]"
+LINE 29 len 754 -> 724 | live tail: "and give the FORCED line when the gate asks for it (K-G4, ruling 421); never write that the witness was left unanswered." 
+   EHF2 tail: "the meaning the answer fails, with its FORCED line (K-G4, ruling 421); never write that the witness was left unanswered."
+LINE 30 len 751 -> 762 | live tail: "n>\" and what the record leaves open (for example: \"the record leaves open whether ...\"). A KEEP does not cure this item." 
+   EHF2 tail: "n>\" and what the record leaves open (for example: \"the record leaves open whether ...\"). A KEEP does not cure this item."
+LINE 35 len 830 -> 841 | live tail: "n>\" and what the record leaves open (for example: \"the record leaves open whether ...\"). A KEEP does not cure this item." 
+   EHF2 tail: "n>\" and what the record leaves open (for example: \"the record leaves open whether ...\"). A KEEP does not cure this item."
+LINE 40 len 830 -> 841 | live tail: "n>\" and what the record leaves open (for example: \"the record leaves open whether ...\"). A KEEP does not cure this item." 
+   EHF2 tail: "n>\" and what the record leaves open (for example: \"the record leaves open whether ...\"). A KEEP does not cure this item."

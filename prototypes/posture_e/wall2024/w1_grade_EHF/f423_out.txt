@@ -1,0 +1,15 @@
+Lb lengths N F E S 3534 3534 3534 3534
+lib lines N vs F 3047,3115 | E vs S 3047,3115
+changed lines identical text N==E at those lines true | F==S at those lines true
+N vs F outside Shared Library jsCode equal true | connections equal true
+MAP entries differing N vs F Alt Send Back Build ; R2 Alt Send Back Build ; Send Back Build
+MAP p arrays equal N vs F true
+  Alt Send Back Build n N 142286 F 142305 | E 142286 S 142305 | N-F -19 E-S -19 | eff len N 142286
+  R2 Alt Send Back Build n N 142258 F 142277 | E 142258 S 142277 | N-F -19 E-S -19 | eff len N 142258
+  Send Back Build n N 142041 F 142060 | E 142041 S 142060 | N-F -19 E-S -19 | eff len N 142041
+nodes whose effective code differs N vs F only where E differs from S; unexpected 0
+N vs joint-EHF2 lib lines 2 | F vs three-part joint 2 | same set true
+code total N-S 423 F-S 436 E-S -13 J-S 1270
+VP1B lines 1733,1742 N==F there true J==J0 there true
+non-code JSON N==S true
+runner: code nodes 176 fail 0
