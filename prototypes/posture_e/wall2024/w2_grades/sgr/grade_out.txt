@@ -1,0 +1,26 @@
+RIGHT old 0 new 1 expected 1 | past tense own grant | I granted that Joseph is called father.
+RIGHT old 1 new 1 expected 1 | own grant naming the other side's point (possessive) | I grant the defender's point that Luke 2:4 names the house.
+WRONG old 1 new 0 expected 1 | own grant beside a report of the other side (mixed sentence) | I grant, as the defender conceded, that the word is one of coming.
+RIGHT old 0 new 0 expected 0 | report of the other side | The challenger grants that eperchomai is a word of coming.
+RIGHT old 1 new 0 expected 0 | quoted first-person grant | He wrote “I grant that Seth to Adam is by knowing.”
+RIGHT old 0 new 1 expected 1 | passive grant | It is granted that Luke 1:27 puts the house on Joseph.
+WRONG old 1 new 1 expected 0 | negated passive | Nothing is conceded here.
+RIGHT old 0 new 0 expected 0 | negated passive with not between | This is not granted.
+RIGHT old 0 new 0 expected 0 | passive with by the other side | It was granted by the challenger that the line is legal.
+WRONG old 0 new 0 expected 1 | passive with by me | It is granted by me that the line is legal.
+WRONG old 0 new 0 expected 1 | gerund (W1 limit) | Granting that the line is legal, the link stands.
+RIGHT old 0 new 1 expected 1 | bold label | **Concession:** the household names Joseph father.
+RIGHT old 0 new 1 expected 1 | list item label | - Granted: Joseph is the husband.
+RIGHT old 0 new 1 expected 1 | keep-form | I keep what I granted in round 2.
+RIGHT old 0 new 1 expected 1 | stays dropped | Premise 3 stays dropped.
+RIGHT old 0 new 0 expected 0 | negated I grant | I do not grant that the row names Heli.
+WRONG old 1 new 0 expected 1 | mixed: opponent then own, one sentence | The opponent conceded that the verse names no father, and I concede the same.
+RIGHT old 1 new 1 expected 1 | mixed: two sentences | The opponent conceded it. I concede the same.
+RIGHT old 1 new 1 expected 1 | own grant with single-quoted inner phrase | I grant ‘born of women’ is said of men with fathers.
+WRONG old 1 new 1 expected 0 | other side grant, own negative | The defender’s grant stands; I concede nothing.
+14 of 20
+ex34299_full.json no rounds
+ex34626_full.json no rounds
+ex34703_full.json no rounds
+ex34780_full.json no rounds
+{ drop: 177, ownDrop: 0, add: 40, debates: 8 }
