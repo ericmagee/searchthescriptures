@@ -1,0 +1,13 @@
+// W2 second reading of W1 Wall 5034: run live s143 preCheckSide (from Panel Build) on stored round texts; then the same with the ASSUMES cut removed for the quote search
+const fs=require('fs');const D=JSON.parse(fs.readFileSync('/mnt/project-files/wall2024/fetchback_live_s143.json','utf8'));const W=(D.data||D).workflow||(D.data||D);
+const c=W.nodes.find(n=>n.name==='Panel Build').parameters.jsCode;const s=c.indexOf('function preCheckSide');const e=c.indexOf('function preCheckBlock');const src=c.slice(s,e);
+const live=new Function(src+';return preCheckSide;')();
+const findR=v=>{if(v&&typeof v==='object'){if(typeof v.gr2==='string'&&typeof v.cr1==='string')return v;for(const k in v){const r=findR(v[k]);if(r)return r;}}return null;};
+let tot=0,miss=[];for(const f of fs.readdirSync('/mnt/project-files/wall2024/').filter(x=>/^ex3\d+_full\.json$/.test(x))){const r=findR(JSON.parse(fs.readFileSync('/mnt/project-files/wall2024/'+f,'utf8')).data.resultData.runData);if(!r){console.log(f,'no rounds');continue;}
+ const L=[].concat(live(r.gr2,[r.cr1,r.cr2],'CHALLENGER LIST [DR2]'),live(r.cr3,[r.gr1,r.gr2],'DEFENDER LIST [CR3]'));tot+=L.length;L.filter(x=>/no verbatim quote/.test(x)).forEach(x=>miss.push(f.slice(2,7)+' '+x));
+ // cause check: for each miss, does the uncut item hold a quote of >=8 chars standing in the opposing texts?
+ const s2=String(r.gr2||'').replace(/\\(["'\\])/g,'$1');for(const x of L.filter(x=>/CHALLENGER.*no verbatim quote/.test(x))){const k=+x.match(/item (\d+)/)[1];const h=s2.search(/UNSUPPORTED-?\s*\[?L4\]?\s*PREMISES/i);let body=s2.slice(h);const stop=body.slice(1).search(/\n\s*(?:PREMISE COUNT\s*:|-{3,}|#{1,3}\s)/i);if(stop>=0)body=body.slice(0,stop+1);const it=body.split(/\n(?=[ \t]*(?:\*\*)?(?:\d+\.|LINK\s+(?:\d+|[A-Za-z][A-Za-z\/]{0,9})\s*:))/i).slice(1)[k-1];
+  const FOLD=y=>String(y).toLowerCase().replace(/["“”'‘’]/g,'"');const opp=FOLD([r.cr1,r.cr2].join('\n').replace(/\\(["'\\])/g,'$1'));const cutIt=it.split(/PRESSED WITH\s*:/i)[0];const head=cutIt.split(/\bASSUMES\s*:/i)[0];const after=cutIt.slice(head.length);
+  const qs=[];const pos=[];const re=/["“”]/g;let m;while((m=re.exec(after)))pos.push(m.index);for(let i=0;i+1<pos.length;i+=2)qs.push(after.slice(pos[i]+1,pos[i+1]).trim());const hit=qs.filter(q=>q.length>=8&&opp.includes(FOLD(q)));
+  console.log(f.slice(2,7),'item',k,'| before ASSUMES:',JSON.stringify(head.trim().slice(0,110)),'| quotes after the cut standing in CR1/CR2:',hit.length,hit.length?JSON.stringify(hit.sort((a,b)=>b.length-a.length)[0].slice(0,100)):'');}}
+console.log('items',tot,'misses',miss.length);miss.forEach(x=>console.log('  ',x));

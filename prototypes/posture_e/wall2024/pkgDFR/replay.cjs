@@ -1,0 +1,11 @@
+// pkgDFR: library line 1898 OPEN, base (ASK 89 joint) vs new, over every distinct UNDERDETERMINED collision line in the 12 exports, plus plants
+const fs=require('fs');const L=f=>{const D=JSON.parse(fs.readFileSync(f,'utf8'));const W=(D.data||D).workflow||(D.data||D);const c=W.nodes.find(n=>n.name==='Shared Library').parameters.jsCode;return JSON.parse(c.slice(c.indexOf('\n/*LIB*/')+8,c.lastIndexOf('\n/*MAP*/')));};
+const re=l=>new Function('return '+l.trim().replace(/^const OPEN=/,'').replace(/;\s*$/,''))();
+const O=re(L('/mnt/project-files/wall2024/parent_s142_JOINT_A21_SRH.json')[1898]),N=re(L('/mnt/project-files/wall2024/parent_s143_DFR.json')[1898]);
+let n=0,fl=0;const ch=[];for(const e of fs.readdirSync('/mnt/project-files/wall2024/').filter(x=>/^ex3\d+_full\.json$/.test(x))){const rd=JSON.parse(fs.readFileSync('/mnt/project-files/wall2024/'+e,'utf8')).data.resultData.runData;const seen=new Set();
+ const walk=v=>{if(typeof v==='string'){for(const l of v.split(/\n/)){const t=l.trim().replace(/^[-*•\s]+/,'').replace(/\*\*/g,'');if(/D\d+\s*vs\.?\s*C\d+\b[^\n]{0,200}?:\s*UNDERDETERMINED\s*(?:--|—|–)/.test(t))seen.add(t.slice(t.search(/D\d+\s*vs/)).replace(/\\+"/g,'"'));}}else if(v&&typeof v==='object')for(const k in v)walk(v[k]);};walk(rd);
+ for(const l of seen){n++;const a=O.test(l),b=N.test(l);if(a!==b){ch.push(e.slice(2,7)+(b?' NOW PASSES: ':' NOW FAILS: ')+l.slice(0,170));if(!b)fl++;}}}
+console.log('distinct UNDERDETERMINED lines',n,'changed',ch.length,'new fails',fl);ch.forEach(x=>console.log('  ',x));
+const P=[['Both accept the stated tribe and differ on the last step of descent.',true],['The parties differ over whether an earlier knowing is excluded.',true],['Both accept fleshly descent but differ about the immediate parent.',true],['The sides differed as to the timing.',true],['The challenger accepts the purpose while disputing its biological implication.',true],
+['[CR3] and [CR4] answer the press.',false],['The readings are different.',false],['The sides do not differ on the timing.',null],['They differ in tone only.',false],['The defender keeps its reading of the verse.',false]];
+console.log('PLANTS');for(const [s,e] of P){const a=O.test(s),b=N.test(s);console.log((e===null?'LIMIT':(b===e?'RIGHT':'WRONG')),'old',a,'new',b,'|',s);}

@@ -1,0 +1,17 @@
+parent sha256 03b0e907751acb13
+stub nodes 43 map entries 42 stubs without map entry [ 'Early Alternate Build' ]
+length or compile faults 0
+rebuilt sources changed vs live [
+  [ 'Alt Gate Record', 58 ],
+  [ 'Alt Send Back Build', 58 ],
+  [ 'Alt Send Back Record', 58 ],
+  [ 'Gate Record', 58 ],
+  [ 'R2 Alt Gate Record', 58 ],
+  [ 'R2 Alt Send Back Build', 58 ],
+  [ 'R2 Alt Send Back Record', 58 ],
+  [ 'Send Back Build', 58 ],
+  [ 'Send Back Record', 58 ]
+]
+library header null
+nodes differing [ 'Shared Library' ] conn equal true nodes 418 418
+total code delta 60
