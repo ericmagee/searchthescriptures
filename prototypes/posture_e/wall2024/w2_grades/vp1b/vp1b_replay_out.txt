@@ -1,0 +1,16 @@
+nodes differing: 10
+Alternate Merge Seat               replays 29 equal 29
+Gate Build                         replays 1 equal 0
+Gate Record                        replays 29 equal 29
+Alt Gate Build                     replays 1 equal 1
+Alt Gate Record                    replays 29 equal 29
+Alternate Merge 1                  replays 28 equal 28
+R2 Alternate Merge Seat            replays 0 equal 0
+R2 Alt Gate Build                  replays 0 equal 0
+R2 Alt Gate Record                 replays 0 equal 0
+R2 Alternate Merge                 replays 0 equal 0
+TOTAL replays 117 equal 116 differ 1
+
+DIFF Gate Build 34852 at 1657 
+  A: "of Mary, of whom was born Jesus” leaves the competing inferences open on the record’s readings.\"],\"live\":true,\"gid\":\"G1\"},{\"kind\":\"CONTRADICTION\",\"src\":\"E-GATE M\",\"key\":\"ANSWER OPEN|MATTHEW 1:20|CR3|D1\",\"why\":\"your ANSWER CHECK on Matthew 1:20 [CR3] grades the answer MISSES, and an answer that MISSES or FAILS leaves the witness unanswered (md_notes_rulings 372). The list that closes [DR2] carries Matthew 1:20 as a proven press against LINK 1 (D1)" 
+  B: "of Mary, of whom was born Jesus” leaves the competing inferences open on the record’s readings.\"],\"live\":true,\"gid\":\"G1\"},{\"kind\":\"CONTRADICTION\",\"src\":\"E-GATE M\",\"key\":\"ANSWER OPEN|MATTHEW 1:20|CR3|D4\",\"why\":\"your ANSWER CHECK on Matthew 1:20 [CR3] grades the answer MISSES, and an answer that MISSES or FAILS leaves the witness unanswered (md_notes_rulings 372). The list that closes [DR2] carries Matthew 1:20 as a proven press against LINK 4 (D4)"

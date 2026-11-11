@@ -1,0 +1,21 @@
+// W2 grade of pkgVP1B rev 2: new plants (not W3's or W4's). Line 29 of luna's pre-gate text (Matthew 1:20 [CR3] MISSES) is rewritten per plant.
+const fs=require('fs');const {live,cand,runR,rounds}=require('/mnt/project-files/w4/vp1b/h2.cjs');
+const X=JSON.parse(fs.readFileSync('/mnt/project-files/wall2024/ex34852_full.json','utf8'));const RD=X.data.resultData.runData;
+const body=RD['Panel Judges Prep'][0].data.main[0][0].json.body;const R0=rounds(live,body);
+const pre=fs.readFileSync('/mnt/project-files/w3/pkgVP1B/luna_pregate.txt','utf8');
+const re=/^ANSWER CHECK: Matthew 1:20 -- \[CR3\] -- MEANS: “four verses/;
+const sub=f=>pre.split('\n').map(l=>re.test(l)?f(l):l).join('\n');
+const M=m=>sub(l=>l.replace(/MEANS: “[^”]*”/,'MEANS: '+m));
+const show=(n,T,R=R0)=>{const k=h=>runR(h,R,T).filter(x=>/1:20/.test(x)).join(' ; ')||'none';console.log('##',n,'\n live:',k(live),'\n cand:',k(cand));};
+show('N0 control (stored line)',pre);
+show('N1 LINK 1 MEANS, other case and punctuation',M('“THE ROW carrying “of the Holy Ghost” names Joseph, son of David; and Mary his wife!”'));
+show('N2 em dash separators, LINK 4 MEANS',sub(l=>l.replace(/ -- /g,' — ')));
+show('N3 short MEANS (3 words) from LINK 4 only',M('“the child’s naming”'));
+show('N4 MEANS in neither entry',M('“the angel speaks to him in a dream”'));
+show('N5 six-word run from LINK 1 only, inside other words',M('“so to speak, the covenant source stands beside the husband, as I read it”'));
+show('N6 MEANS with straight quotes and a trailing period, LINK 4',M('"four verses after 1:16 the angel greets the husband of 1:16 as David\'s son."'));
+show('N7 MEANS: five words of LINK 1 and four of LINK 4, no six-word run in either',M('“the row carrying of the word, and angel greets the husband”'));
+const re50=/^ANSWER CHECK: Matthew 1:20 -- \[DR3\] -- MEANS: “the stated source/;const sub50=f=>pre.split('\n').map(l=>re50.test(l)?f(l):l).join('\n');
+show('N9 challenger side: [DR3] Matthew 1:20 MISSES, MEANS of the second challenger entry',sub50(l=>l.replace(/MEANS: “[^”]*”/,'MEANS: “the begetting is put to the Holy Ghost, and Joseph is named as the one told to take her”').replace('-- MEETS --','-- MISSES --')));
+show('N10 challenger side: same, MEANS of the first challenger entry',sub50(l=>l.replace('-- MEETS --','-- MISSES --')));
+show('N8 grade MEETS (no item either way)',sub(l=>l.replace(/-- MISSES --/,'-- MEETS --')));
