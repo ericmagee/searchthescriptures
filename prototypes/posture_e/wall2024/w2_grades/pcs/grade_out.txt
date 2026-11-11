@@ -1,0 +1,60 @@
+Gate Record reader function: psGrades 2036 -> 2240
+Panel Cure Check reader function: psGrades 1890 -> 2251
+distinct CONCEDED LINKS lines 629
+ [Gate Record] CHALLENGER CONCEDED LINKS: 2 -- Premises 2 and 5 UNEXHIBITED; premises 3 is spared, and premises 1, 4 and 6 remain VOID as charged (Commitment 6).
+    live {"side":"CHALLENGER","n":2,"g":{"1":"SPARED","2":"COUNTED","3":"SPARED","4":"SPARED","5":"COUNTED","6":"SPARED"}}
+    pcs  {"side":"CHALLENGER","n":2,"g":{"1":"VOID","2":"COUNTED","3":"SPARED","4":"VOID","5":"COUNTED","6":"VOID"}}
+ [Gate Record] CHALLENGER CONCEDED LINKS: 0 -- No premises counted; premises 1 and 6 remain VOID as previously charged, and premises 2 through 5 remain spared.
+    live {"side":"CHALLENGER","n":0,"g":{"1":"VOID","2":"VOID","3":"VOID","4":"VOID","5":"VOID","6":"VOID"}}
+    pcs  {"side":"CHALLENGER","n":0,"g":{"1":"VOID","2":"SPARED","3":"SPARED","4":"SPARED","5":"SPARED","6":"VOID"}}
+Gate Record changed 2 errors 0
+ [Panel Cure Check] CHALLENGER CONCEDED LINKS: 2 -- Premises 2 and 5 UNEXHIBITED; premises 3 is spared, and premises 1, 4 and 6 remain VOID as charged (Commitment 6).
+    live {"side":"CHALLENGER","n":2,"g":{"1":"SPARED","2":"COUNTED","3":"SPARED","4":"SPARED","5":"COUNTED","6":"SPARED"}}
+    pcs  {"side":"CHALLENGER","n":2,"g":{"1":"VOID","2":"COUNTED","3":"SPARED","4":"VOID","5":"COUNTED","6":"VOID"}}
+ [Panel Cure Check] CHALLENGER CONCEDED LINKS: 0" = no conceded links. So premise 1 is not counted-conceded; and since the premised inference was narrowed, spared. Right = SPARED → AGREE.
+    live {"side":"CHALLENGER","n":0,"g":{"1":"COUNTED"}}
+    pcs  {"side":"CHALLENGER","n":0,"g":{"1":"SPARED"}}
+ [Panel Cure Check] CHALLENGER CONCEDED LINKS: 0 -- premise 4 is not counted UNEXHIBITED. Premise 2 VOID (Commitment 6): "in place of a begetting" is a claim the quote does not make. Premise 6 VOID (Commitment 6): "means begetting" is a claim the quo
+    live {"side":"CHALLENGER","n":0,"g":{"1":"SPARED","2":"VOID","3":"SPARED","4":"COUNTED","5":"SPARED","6":"VOID"}}
+    pcs  {"side":"CHALLENGER","n":0,"g":{"1":"SPARED","2":"VOID","3":"SPARED","4":"SPARED","5":"SPARED","6":"VOID"}}
+ [Panel Cure Check] CHALLENGER CONCEDED LINKS: 0 -- premise 4 is not counted UNEXHIBITED. Premise 2 VOID (Commitment 6): "in place of a begetting" is a claim the quote does not make. Premise 6 VOID (Commitment 6): "means begetting" is a claim the quo
+    live {"side":"CHALLENGER","n":0,"g":{"1":"SPARED","2":"VOID","3":"SPARED","4":"COUNTED","5":"SPARED","6":"VOID"}}
+    pcs  {"side":"CHALLENGER","n":0,"g":{"1":"SPARED","2":"VOID","3":"SPARED","4":"SPARED","5":"SPARED","6":"VOID"}}
+ [Panel Cure Check] CONCEDED LINKS: 0 -- None; D1–D6 are not counted as conceded or unexhibited in [CR3] or [CR4]." It doesn't mention premise 4 specifically but says D1-D6 not counted. That is a spared ruling. So if right SPARED, AGREE.
+    live {"side":"DEFENDER","n":0,"g":{"4":"COUNTED"}}
+    pcs  {"side":"DEFENDER","n":0,"g":{"4":"SPARED"}}
+ [Panel Cure Check] CONCEDED LINKS: 0 -- Premises 1–6 are not counted as conceded or unexhibited; premise 6 was narrowed, not wholly surrendered.
+    live {"side":"DEFENDER","n":0,"g":{"1":"COUNTED","2":"COUNTED","3":"COUNTED","4":"COUNTED","5":"COUNTED","6":"COUNTED"}}
+    pcs  {"side":"DEFENDER","n":0,"g":{"1":"SPARED","2":"SPARED","3":"SPARED","4":"SPARED","5":"SPARED","6":"SPARED"}}
+ [Panel Cure Check] CHALLENGER CONCEDED LINKS: 0 -- No premises counted; premises 1 and 6 remain VOID as previously charged, and premises 2 through 5 remain spared.
+    live {"side":"CHALLENGER","n":0,"g":{"1":"VOID","2":"VOID","3":"VOID","4":"VOID","5":"VOID","6":"VOID"}}
+    pcs  {"side":"CHALLENGER","n":0,"g":{"1":"VOID","2":"SPARED","3":"SPARED","4":"SPARED","5":"SPARED","6":"VOID"}}
+Panel Cure Check changed 7 errors 0
+PLANT Gate Record | CONCEDED LINKS: 0 -- premises 1 and 6 spared, while premises 3 to 5 are spared 
+   live {"1":"SPARED","3":"SPARED","4":"SPARED","5":"SPARED","6":"SPARED"}  pcs {"1":"SPARED","3":"SPARED","4":"SPARED","5":"SPARED","6":"SPARED"}
+PLANT Panel Cure Check | CONCEDED LINKS: 0 -- premises 1 and 6 spared, while premises 3 to 5 are spared 
+   live {"1":"SPARED","3":"SPARED","4":"SPARED","5":"SPARED","6":"SPARED"}  pcs {"1":"SPARED","3":"SPARED","4":"SPARED","5":"SPARED","6":"SPARED"}
+PLANT Gate Record | CONCEDED LINKS: 1 -- Premise 2: VOID, but premise 4 is spared 
+   live {"2":"VOID","4":"VOID"}  pcs {"2":"VOID","4":"SPARED"}
+PLANT Panel Cure Check | CONCEDED LINKS: 1 -- Premise 2: VOID, but premise 4 is spared 
+   live {"2":"VOID","4":"VOID"}  pcs {"2":"VOID","4":"SPARED"}
+PLANT Gate Record | CONCEDED LINKS: 0 -- premises 2, 3, and 5 are spared 
+   live {"2":"SPARED","3":"SPARED","5":"SPARED"}  pcs {"2":"SPARED","3":"SPARED","5":"SPARED"}
+PLANT Panel Cure Check | CONCEDED LINKS: 0 -- premises 2, 3, and 5 are spared 
+   live {"2":"SPARED","3":"SPARED","5":"SPARED"}  pcs {"2":"SPARED","3":"SPARED","5":"SPARED"}
+PLANT Gate Record | CONCEDED LINKS: 0 -- premises 1 and 6, and premises 2 to 5, are spared 
+   live {"1":"SPARED","2":"SPARED","3":"SPARED","4":"SPARED","5":"SPARED","6":"SPARED"}  pcs {"1":"SPARED","2":"SPARED","3":"SPARED","4":"SPARED","5":"SPARED","6":"SPARED"}
+PLANT Panel Cure Check | CONCEDED LINKS: 0 -- premises 1 and 6, and premises 2 to 5, are spared 
+   live {"1":"SPARED","2":"SPARED","3":"SPARED","4":"SPARED","5":"SPARED","6":"SPARED"}  pcs {"1":"SPARED","2":"SPARED","3":"SPARED","4":"SPARED","5":"SPARED","6":"SPARED"}
+PLANT Gate Record | CONCEDED LINKS: 1 -- premise 3 is UNEXHIBITED, and premises 1, 2 and 4 are spared 
+   live {"1":"COUNTED","2":"COUNTED","3":"COUNTED","4":"COUNTED"}  pcs {"1":"SPARED","2":"SPARED","3":"COUNTED","4":"SPARED"}
+PLANT Panel Cure Check | CONCEDED LINKS: 1 -- premise 3 is UNEXHIBITED, and premises 1, 2 and 4 are spared 
+   live {"1":"COUNTED","2":"COUNTED","3":"COUNTED","4":"COUNTED"}  pcs {"1":"SPARED","2":"SPARED","3":"COUNTED","4":"SPARED"}
+PLANT Gate Record | CONCEDED LINKS: 0 -- premise 4 is not counted UNEXHIBITED, and premise 5 is VOID 
+   live {"4":"SPARED","5":"SPARED"}  pcs {"4":"SPARED","5":"VOID"}
+PLANT Panel Cure Check | CONCEDED LINKS: 0 -- premise 4 is not counted UNEXHIBITED, and premise 5 is VOID 
+   live {"4":"COUNTED","5":"COUNTED"}  pcs {"4":"SPARED","5":"VOID"}
+PLANT Gate Record | CHALLENGER CONCEDED LINKS: 0 -- VOID: Premise 1 adds "alone", and premise 3 is spared 
+   live {"1":"VOID","3":"VOID"}  pcs {"1":"VOID","3":"SPARED"}
+PLANT Panel Cure Check | CHALLENGER CONCEDED LINKS: 0 -- VOID: Premise 1 adds "alone", and premise 3 is spared 
+   live {"1":"VOID","3":"VOID"}  pcs {"1":"VOID","3":"SPARED"}
