@@ -1,0 +1,351 @@
+DIFF ex34780 Judge Enforcer Build items 169 169
+   ITEM Z3 (E-KEY, the keystone line):
+THE LINE (Z3.1, sol): KEYSTONE: D5 -- STANDS -- The conclusion remains asserted with independent conception-source
+     live: ?
+     cand: ?
+   ITEM P4 (E-PREM, a premise the challenger listed against the defender, number 4): | THE LIST ENTRY: 4. LINK 1: that the timing rows enclose the whole pregnancy. "That covers the whole pregna
+     live: (no block answering this premise was found by its number or tag)
+     cand: ## LINK 1: SUPPORTED
+   ITEM P5 (E-PREM, a premise the challenger listed against the defender, number 5): | THE LIST ENTRY: 5. LINK 2: that the conception is God's begetting of the Son. "Christ's divine begetting i
+     live: (no block answering this premise was found by its number or tag)
+     cand: ## LINK 2: NARROWED TO: "The conception is the Holy Ghost's begetting: Matthew 1:20 names 
+   ITEM P7 (E-PREM, a premise the defender listed against the challenger, number 1): | THE LIST ENTRY: 1. The register-as-seed inference, which props the objection that the register route requi
+     live: ## LINK 1: SUPPORTED
+     cand: ## LINK 1: SUPPORTED
+   ITEM P8 (E-PREM, a premise the defender listed against the challenger, number 2): | THE LIST ENTRY: 2. The loins-descent inference for Hebrews 7:14, which props the objection that the tribe 
+     live: ## LINK 2: SUPPORTED
+     cand: ## LINK 2: SUPPORTED
+DIFF ex34726 Judge Enforcer Build items 192 192
+   ITEM P1 (E-PREM, a premise the challenger listed against the defender, number 1): | THE LIST ENTRY: 1. LINK 5: the keystone, that the seed of David reached the child apart from a man's loins
+     live: ## LINK 5 [premise 1]: SUPPORTED
+     cand: ## LINK 5 [premise 1]: SUPPORTED
+   ITEM P4 (E-PREM, a premise the challenger listed against the defender, number 4): | THE LIST ENTRY: 4. LINK 1: that the timing rows enclose the whole pregnancy. "That covers the whole pregna
+     live: (no block answering this premise was found by its number or tag)
+     cand: ## LINK 1: SUPPORTED
+   ITEM P5 (E-PREM, a premise the challenger listed against the defender, number 5): | THE LIST ENTRY: 5. LINK 2: that the conception is God's begetting of the Son. "Christ's divine begetting i
+     live: (no block answering this premise was found by its number or tag)
+     cand: ## LINK 2: NARROWED TO: "The conception is the Holy Ghost's begetting: Matthew 1:20 names 
+   ITEM P9 (E-PREM, a premise the defender listed against the challenger, number 3): | THE LIST ENTRY: 3. The inference that Joseph knew Mary within the espousal, which props the objection to t
+     live: ## LINK 3: SUPPORTED
+     cand: ## LINK 3: SUPPORTED
+   ITEM P10 (E-PREM, a premise the defender listed against the challenger, number 4): | THE LIST ENTRY: 4. The inference that the coming-upon yields an office only, which props the objection tha
+     live: ## LINK 4: SUPPORTED
+     cand: ## LINK 4: SUPPORTED
+in33218 Judge Enforcer Build ERROR no data Panel Cure Check
+in33218 Alt Judge Enforcer Build ERROR no data Init Seats
+DIFF in33389 Judge Enforcer Build items 172 172
+   ITEM H11 (E-HOLD, a collision line graded UNDERDETERMINED):
+THE LINE (H11.1, sol): D1 vs C4 (Matthew 1:18; Matthew 1:24; Genesis 4:1): UNDERDETERMINED
+     live: ?
+     cand: ?
+   ITEM P1 (E-PREM, a premise the challenger listed against the defender, number 1): | THE LIST ENTRY: 1. LINK 6: The keystone takes a legal-father category as given for Joseph. "His human conc
+     live: **LINK 1: SUPPORTED.**
+     cand: **LINK 6: NARROWED TO:** the child's human conception was by the Holy Ghost in Mary, a vir
+   ITEM P2 (E-PREM, a premise the challenger listed against the defender, number 2): | THE LIST ENTRY: 2. LINK 5: The Davidic flesh is routed through the woman by one verb. "The flesh of David'
+     live: **LINK 2: SUPPORTED.**
+     cand: **LINK 5: NARROWED TO:** Romans 1:3 and Galatians 4:4 carry the verb *ginomai* (G1096, to 
+   ITEM P3 (E-PREM, a premise the challenger listed against the defender, number 3): | THE LIST ENTRY: 3. LINK 4: Joseph's fear is read as doubt of his own paternity. "A man who had known her w
+     live: **LINK 3: SUPPORTED.**
+     cand: **LINK 4: SUPPORTED.**
+   ITEM P4 (E-PREM, a premise the challenger listed against the defender, number 4): | THE LIST ENTRY: 4. LINK 1: The order of events is read as the exclusion of the father. "The source is name
+     live: **LINK 4: SUPPORTED.**
+     cand: **LINK 1: SUPPORTED.**
+   ITEM P5 (E-PREM, a premise the challenger listed against the defender, number 5): | THE LIST ENTRY: 5. LINK 2: Luke 1:35's verbs are read as the cause of the conception. "The cause named for
+     live: **LINK 5: NARROWED TO:** Romans 1:3 and Galatians 4:4 carry the verb *ginomai* (G1096, to 
+     cand: **LINK 2: SUPPORTED.**
+   ITEM P6 (E-PREM, a premise the challenger listed against the defender, number 6): | THE LIST ENTRY: 6. LINK 3: The passive of Matthew 1:16 is read as the end of the begetting line. "The shif
+     live: **LINK 6: NARROWED TO:** the child's human conception was by the Holy Ghost in Mary, a vir
+     cand: **LINK 3: SUPPORTED.**
+DIFF in33411 Judge Enforcer Build items 201 201
+   ITEM H20 (E-HOLD, a collision line graded UNDERDETERMINED):
+THE LINE (H20.1, sol): D6 vs C2 (Luke 1:27, Luke 2:4, Luke 1:36, Luke 1:5, Numbers 1:18, E
+     live: ?
+     cand: ?
+   ITEM P4 (E-PREM, a premise the challenger listed against the defender, number 4): | THE LIST ENTRY: 4. LINK 1: The reading of *ek* with the Holy Ghost as flesh paternity props the source cla
+     live: ## LINK 4: SUPPORTED
+     cand: ## LINK 1: SUPPORTED
+   ITEM P5 (E-PREM, a premise the challenger listed against the defender, number 5): | THE LIST ENTRY: 5. LINK 2: The reading of the coming and the overshadowing as a begetting props the claim.
+     live: (no block answering this premise was found by its number or tag)
+     cand: ## LINK 2: SUPPORTED
+   ITEM P6 (E-PREM, a premise the challenger listed against the defender, number 6): | THE LIST ENTRY: 6. LINK 4: The reading of the named father as a household title props the claim. ""Father"
+     live: (no block answering this premise was found by its number or tag)
+     cand: ## LINK 4: SUPPORTED
+   ITEM P8 (E-PREM, a premise the defender listed against the challenger, number 2): | THE LIST ENTRY: 2. The Davidic descent is routed through Joseph. "The bodily descent from David that the d
+     live: ## LINK 2: SUPPORTED
+     cand: ## LINK 2: SUPPORTED
+   ITEM P9 (E-PREM, a premise the defender listed against the challenger, number 3): | THE LIST ENTRY: 3. Joseph's mind in Matthew 1:19 is read as sparing a wife he had known. "A husband minded
+     live: ## LINK 3: SUPPORTED
+     cand: ## LINK 3: SUPPORTED
+   ITEM Y6 (E-SYN, a sentence of the synthesis about the challenger):
+THE SENTENCE: The Challenger's statements, arguments, citations, and grants across 
+     live: ?
+     cand: ?
+   ITEM Y7 (E-SYN, a sentence of the synthesis about the defender):
+THE SENTENCE:   - The Defender conceded that Mary's Davidic lineage is not an explici
+     live: ?
+     cand: ?
+DIFF in33411 Alt Judge Enforcer Build items 92 92
+   ITEM K2 (E-COL, a collision line graded against a link):
+THE LINE: FORCED: D1 vs C1 -- MEANS [CR3]: "the finding names the Holy Ghost as the source" -
+     live: ?
+     cand: ?
+   ITEM P4 (E-PREM, a premise the challenger listed against the defender, number 4): | THE LIST ENTRY: 4. LINK 1: The reading of *ek* with the Holy Ghost as flesh paternity props the source cla
+     live: ## LINK 4: SUPPORTED
+     cand: ## LINK 1: SUPPORTED
+   ITEM P5 (E-PREM, a premise the challenger listed against the defender, number 5): | THE LIST ENTRY: 5. LINK 2: The reading of the coming and the overshadowing as a begetting props the claim.
+     live: (no block answering this premise was found by its number or tag)
+     cand: ## LINK 2: SUPPORTED
+   ITEM P6 (E-PREM, a premise the challenger listed against the defender, number 6): | THE LIST ENTRY: 6. LINK 4: The reading of the named father as a household title props the claim. ""Father"
+     live: (no block answering this premise was found by its number or tag)
+     cand: ## LINK 4: SUPPORTED
+   ITEM P7 (E-PREM, a premise the defender listed against the challenger, number 1): | THE LIST ENTRY: 1. The keystone: the child is of Joseph's loins, which props the whole challenge. "Joseph 
+     live: ## LINK 1: SUPPORTED
+     cand: ## LINK 1: SUPPORTED
+DIFF in33430 Judge Enforcer Build items 168 168
+   [{"json":{"je_skip":false,"code_rows":[],"call":1,"calls":6,"model":"deepseek-flash","run_token":"ODV1-33430-7gongopz","not_checked":[],"ids":[{"id":"
+     live: ?
+     cand: ?
+   ITEM B64 (E-ANS; the answering side wrote this in [CR4]):
+PRESSED VERSE: Jeremiah 18:8
+WHAT THE PRESS SAYS THE VERSE MEANS: "Jeremiah's own rule gover
+     live: ?
+     cand: ?
+   ITEM B112 (E-ANS; the answering side wrote this in [DR3]):
+PRESSED VERSE: Matthew 1:16
+WHAT THE PRESS SAYS THE VERSE MEANS: "the verb changes from act
+     live: ?
+     cand: ?
+   ITEM H19 (E-HOLD, a collision line graded UNDERDETERMINED):
+THE LINE (H19.1, sol): D2 vs C5 (Acts 1:8; Luke 9:34; Acts 5:15; Luke 1:32): UNDERDETERMIN
+     live: ?
+     cand: ?
+   ITEM P3 (E-PREM, a premise the challenger listed against the defender, number 3): | THE LIST ENTRY: 3. LINK 4: The defender's inference from the feminine pronoun of Matthew 1:16, propping "t
+     live: (no block answering this premise was found by its number or tag)
+     cand: **LINK 4: SUPPORTED**
+   ITEM P4 (E-PREM, a premise the challenger listed against the defender, number 4): | THE LIST ENTRY: 4. LINK 5: The defender's inference that Jeremiah 22:30 bars Joseph's seed, propping "Jose
+     live: **LINK 4: SUPPORTED**
+     cand: **LINK 5: SUPPORTED**
+   ITEM R1 (E-RES, the RESULT line of sol):
+THE LINE (R1.1): RESULT: UNDERDETERMINED -- The record leaves unresolved whether the divine source of the con
+     live: ?
+     cand: ?
+DIFF in33506 Judge Enforcer Build items 202 202
+   ITEM H1 (E-HOLD, a collision line graded UNDERDETERMINED):
+THE LINE (H1.1, gemini): D1 vs C3 (Matthew 1:20): UNDERDETERMINED -- both readings claim th
+     live: ?
+     cand: ?
+   ITEM P1 (E-PREM, a premise the challenger listed against the defender, number 1): | THE LIST ENTRY: 1. LINK 6: the inference that the Davidic flesh reaches the child through Mary's house pro
+     live: ## LINK 1: SUPPORTED
+     cand: ## LINK 6: SUPPORTED
+   ITEM P2 (E-PREM, a premise the challenger listed against the defender, number 2): | THE LIST ENTRY: 2. LINK 1: the inference that ek with gennaō names the Holy Ghost as begetter of the flesh
+     live: ## LINK 2: SUPPORTED
+     cand: ## LINK 1: SUPPORTED
+   ITEM P3 (E-PREM, a premise the challenger listed against the defender, number 3): | THE LIST ENTRY: 3. LINK 2: the inference that Joseph's intent rested on knowing himself excluded as father
+     live: ## LINK 3: SUPPORTED
+     cand: ## LINK 2: SUPPORTED
+   ITEM P4 (E-PREM, a premise the challenger listed against the defender, number 4): | THE LIST ENTRY: 4. LINK 3: the inference that Luke 1:35 answers "How?" with a begetting props the conclusi
+     live: ## LINK 4: SUPPORTED
+     cand: ## LINK 3: SUPPORTED
+   ITEM P5 (E-PREM, a premise the challenger listed against the defender, number 5): | THE LIST ENTRY: 5. LINK 4: the inference that the sign requires a conception apart from a husband props th
+     live: ## LINK 5: NARROWED TO: Luke 3:23's "as was supposed" labels the reckoning of Joseph as fa
+     cand: ## LINK 4: SUPPORTED
+   ITEM P6 (E-PREM, a premise the challenger listed against the defender, number 6): | THE LIST ENTRY: 6. LINK 5: the inference that the father rows are crowd belief props the reading of Joseph
+     live: ## LINK 6: SUPPORTED
+     cand: ## LINK 5: NARROWED TO: Luke 3:23's "as was supposed" labels the reckoning of Joseph as fa
+   ITEM P11 (E-PREM, a premise the defender listed against the challenger, number 5): | THE LIST ENTRY: 5. Joseph is said to have known Mary within the espousal. This props the timing chain. Quo
+     live: ## LINK 5: SUPPORTED
+     cand: ## LINK 5: SUPPORTED
+   ITEM R1 (E-RES, the RESULT line of grok):
+THE LINE (R1.1): RESULT: DEFENDER WINS -- The verses say the child was conceived of the Holy Ghost before th
+     live: ?
+     cand: ?
+DIFF in33506 Alt Judge Enforcer Build items 98 98
+   ITEM B57 (E-ANS; the answering side wrote this in [DR3]):
+PRESSED VERSE: Matthew 1:25
+WHAT THE PRESS SAYS THE VERSE MEANS: "the knowing is set after t
+     live: ?
+     cand: ?
+   ITEM P1 (E-PREM, a premise the challenger listed against the defender, number 1): | THE LIST ENTRY: 1. LINK 6: the inference that the Davidic flesh reaches the child through Mary's house pro
+     live: ## LINK 1: SUPPORTED
+     cand: ## LINK 6: SUPPORTED
+   ITEM P2 (E-PREM, a premise the challenger listed against the defender, number 2): | THE LIST ENTRY: 2. LINK 1: the inference that ek with gennaō names the Holy Ghost as begetter of the flesh
+     live: ## LINK 2: SUPPORTED
+     cand: ## LINK 1: SUPPORTED
+   ITEM P3 (E-PREM, a premise the challenger listed against the defender, number 3): | THE LIST ENTRY: 3. LINK 2: the inference that Joseph's intent rested on knowing himself excluded as father
+     live: ## LINK 3: SUPPORTED
+     cand: ## LINK 2: SUPPORTED
+   ITEM P4 (E-PREM, a premise the challenger listed against the defender, number 4): | THE LIST ENTRY: 4. LINK 3: the inference that Luke 1:35 answers "How?" with a begetting props the conclusi
+     live: ## LINK 4: SUPPORTED
+     cand: ## LINK 3: SUPPORTED
+   ITEM P5 (E-PREM, a premise the challenger listed against the defender, number 5): | THE LIST ENTRY: 5. LINK 4: the inference that the sign requires a conception apart from a husband props th
+     live: ## LINK 5: NARROWED TO: Luke 3:23's "as was supposed" labels the reckoning of Joseph as fa
+     cand: ## LINK 4: SUPPORTED
+   ITEM P6 (E-PREM, a premise the challenger listed against the defender, number 6): | THE LIST ENTRY: 6. LINK 5: the inference that the father rows are crowd belief props the reading of Joseph
+     live: ## LINK 6: SUPPORTED
+     cand: ## LINK 5: NARROWED TO: Luke 3:23's "as was supposed" labels the reckoning of Joseph as fa
+DIFF in33575 Judge Enforcer Build items 181 181
+   ITEM Z2 (E-KEY, the keystone line):
+THE LINE (Z2.1, chatgpt): KEYSTONE: D6 -- STANDS -- The conclusion that Christ had no human biological father was 
+     live: ?
+     cand: ?
+   ITEM P1 (E-PREM, a premise the challenger listed against the defender, number 1): | THE LIST ENTRY: 1. LINK 6: The keystone infers that the Holy Ghost begot the flesh and that the flesh came
+     live: (no block answering this premise was found by its number or tag)
+     cand: **LINK 6: SUPPORTED**
+   ITEM P6 (E-PREM, a premise the challenger listed against the defender, number 6): | THE LIST ENTRY: 6. LINK 5: The defender infers that the almah verse carries the knowing-clause. Defender's
+     live: **LINK 6: SUPPORTED**
+     cand: **LINK 5: NARROWED TO:** the KJV's "virgin" at Genesis 24:43 is the same woman of whom Gen
+DIFF in33644 Judge Enforcer Build items 189 189
+   ITEM Z2 (E-KEY, the keystone line):
+THE LINE (Z2.1, chatgpt): KEYSTONE: D6 -- STANDS -- The conclusion that the child had no biological father was not
+     live: ?
+     cand: ?
+   ITEM P3 (E-PREM, a premise the challenger listed against the defender, number 3): | THE LIST ENTRY: 3. LINK 2: "So no man's begetting lies behind the conception." ASSUMES: "of the Holy Ghost
+     live: **LINK 3: SUPPORTED**
+     cand: **LINK 2: SUPPORTED**
+   ITEM P4 (E-PREM, a premise the challenger listed against the defender, number 4): | THE LIST ENTRY: 4. LINK 3: "A human father's contribution would be an addition the answer in 1:35 never ma
+     live: **LINK 4: SUPPORTED**
+     cand: **LINK 3: SUPPORTED**
+   ITEM P5 (E-PREM, a premise the challenger listed against the defender, number 5): | THE LIST ENTRY: 5. LINK 4: "A biological father would void the sign." ASSUMES: the sign's fulfilment exclu
+     live: **LINK 5: SUPPORTED**
+     cand: **LINK 4: SUPPORTED**
+   ITEM P6 (E-PREM, a premise the challenger listed against the defender, number 6): | THE LIST ENTRY: 6. LINK 5: "That is not how a man acts who knows himself the cause, and Matthew 1:20 then 
+     live: (no block answering this premise was found by its number or tag)
+     cand: **LINK 5: SUPPORTED**
+   ITEM P7 (E-PREM, a premise the defender listed against the challenger, number 1): | THE LIST ENTRY: 1. So "evident" [L1] fits a pedigree carried by the father's seed. This props the objectio
+     live: **LINK 1: SUPPORTED**
+     cand: **LINK 1: SUPPORTED**
+   ITEM Y2 (E-SYN, a sentence of the synthesis about the challenger):
+THE SENTENCE: - **Regarding forefather usage:** In Round 4, the Defender stated: *"
+     live: ?
+     cand: ?
+   ITEM Y3 (E-SYN, a sentence of the synthesis about the challenger):
+THE SENTENCE: - **Regarding the sequence of finding:** In Round 4, the Defender sta
+     live: ?
+     cand: ?
+DIFF in33644 Alt Judge Enforcer Build items 140 140
+   ITEM H1 (E-HOLD, a collision line graded UNDERDETERMINED):
+THE LINE (H1.1, sol): D1 vs C2 (Matthew 1:16): UNDERDETERMINED -- Both readings accept the 
+     live: ?
+     cand: ?
+   ITEM P3 (E-PREM, a premise the challenger listed against the defender, number 3): | THE LIST ENTRY: 3. LINK 2: "So no man's begetting lies behind the conception." ASSUMES: "of the Holy Ghost
+     live: **LINK 3: SUPPORTED**
+     cand: **LINK 2: SUPPORTED**
+   ITEM P4 (E-PREM, a premise the challenger listed against the defender, number 4): | THE LIST ENTRY: 4. LINK 3: "A human father's contribution would be an addition the answer in 1:35 never ma
+     live: **LINK 4: SUPPORTED**
+     cand: **LINK 3: SUPPORTED**
+   ITEM P5 (E-PREM, a premise the challenger listed against the defender, number 5): | THE LIST ENTRY: 5. LINK 4: "A biological father would void the sign." ASSUMES: the sign's fulfilment exclu
+     live: **LINK 5: SUPPORTED**
+     cand: **LINK 4: SUPPORTED**
+   ITEM P6 (E-PREM, a premise the challenger listed against the defender, number 6): | THE LIST ENTRY: 6. LINK 5: "That is not how a man acts who knows himself the cause, and Matthew 1:20 then 
+     live: (no block answering this premise was found by its number or tag)
+     cand: **LINK 5: SUPPORTED**
+DIFF in33682 Judge Enforcer Build items 152 152
+   ITEM Z3 (E-KEY, the keystone line):
+THE LINE (Z3.1, grok): KEYSTONE: D6 -- STANDS -- Jesus had no human biological father; his Father is God, by the H
+     live: ?
+     cand: ?
+   ITEM P1 (E-PREM, a premise the challenger listed against the defender, number 1): | THE LIST ENTRY: 1. LINK 6: the keystone inference that the flesh of David's seed came by the Holy Ghost's 
+     live: **LINK 1: SUPPORTED**
+     cand: **LINK 6: SUPPORTED**
+   ITEM P2 (E-PREM, a premise the challenger listed against the defender, number 2): | THE LIST ENTRY: 2. LINK 1: the inference that "came together" dates the conception before every union of h
+     live: **LINK 2: SUPPORTED**
+     cand: **LINK 1: SUPPORTED**
+   ITEM P3 (E-PREM, a premise the challenger listed against the defender, number 3): | THE LIST ENTRY: 3. LINK 2: the inference that the mother's pronoun sets Joseph aside from the begetting. D
+     live: **LINK 3: SUPPORTED**
+     cand: **LINK 2: SUPPORTED**
+   ITEM P4 (E-PREM, a premise the challenger listed against the defender, number 4): | THE LIST ENTRY: 4. LINK 3: the inference that the angel's answer and its "therefore" name a begetting of t
+     live: **LINK 4: SUPPORTED**
+     cand: **LINK 3: SUPPORTED**
+   ITEM P5 (E-PREM, a premise the challenger listed against the defender, number 5): | THE LIST ENTRY: 5. LINK 4: the inference that Joseph's intent shows knowledge of another's paternity. Defe
+     live: **LINK 5: SUPPORTED**
+     cand: **LINK 4: SUPPORTED**
+   ITEM P6 (E-PREM, a premise the challenger listed against the defender, number 6): | THE LIST ENTRY: 6. LINK 5: the inference that Luke corrects Joseph's fatherhood. Defender: "Luke 3:23 and 
+     live: **LINK 6: SUPPORTED**
+     cand: **LINK 5: SUPPORTED**
+DIFF in33750 Judge Enforcer Build items 196 196
+   ITEM H7 (E-HOLD, a collision line graded UNDERDETERMINED):
+THE LINE (H7.1, chatgpt): D2 vs C6 (Luke 1:32): UNDERDETERMINED -- The parties agree that t
+     live: ?
+     cand: ?
+   ITEM P1 (E-PREM, a premise the challenger listed against the defender, number 1): | THE LIST ENTRY: 1. LINK 5: The keystone rests on the Davidic seed reaching the child through the mother. Q
+     live: **LINK 1: SUPPORTED**
+     cand: **LINK 5: NARROWED TO:** Christ's flesh is "of the seed of David" through the bearing of a
+   ITEM P2 (E-PREM, a premise the challenger listed against the defender, number 2): | THE LIST ENTRY: 2. LINK 4: The body's Davidic line is set on Mary. Quote: "That line reaches him through h
+     live: (no block answering this premise was found by its number or tag)
+     cand: **LINK 4: NARROWED TO:** The line of the body reaches him by Mary's bearing: "born of thee
+   ITEM P4 (E-PREM, a premise the challenger listed against the defender, number 4): | THE LIST ENTRY: 4. LINK 2: The angel's "for" is made to remove Joseph. Quote: "If Joseph's seed were the s
+     live: **LINK 2 [premise 4]: SUPPORTED**
+     cand: **LINK 2 [premise 4]: SUPPORTED**
+   ITEM P5 (E-PREM, a premise the challenger listed against the defender, number 5): | THE LIST ENTRY: 5. LINK 1: Mary's "how" is read as if she were already taken. Quote: "If the conception we
+     live: **LINK 5: NARROWED TO:** Christ's flesh is "of the seed of David" through the bearing of a
+     cand: **LINK 1: SUPPORTED**
+   ITEM Y2 (E-SYN, a sentence of the synthesis about the defender):
+THE SENTENCE:     In Round 3, Defender narrowed further:
+THAT SIDE'S OWN SENTENCES TH
+     live: ?
+     cand: ?
+   ITEM Y3 (E-SYN, a sentence of the synthesis about the challenger):
+THE SENTENCE: The Challenger’s statements, grants, and citations were audited again
+     live: ?
+     cand: ?
+DIFF in33774 Judge Enforcer Build items 221 221
+   ITEM H17 (E-HOLD, a collision line graded UNDERDETERMINED):
+THE LINE (H17.1, grok): D4 vs C6 (Luke 2:48): UNDERDETERMINED -- both agree Mary says thy 
+     live: ?
+     cand: ?
+   ITEM P1 (E-PREM, a premise the challenger listed against the defender, number 1): | THE LIST ENTRY: **1. LINK 5:** "A sign of a virgin who conceives is not a sign of a conception by a man."
+     live: **LINK 1: SUPPORTED**
+     cand: **LINK 5: SUPPORTED**
+   ITEM P5 (E-PREM, a premise the challenger listed against the defender, number 5): | THE LIST ENTRY: **5. LINK 4:** "So Joseph's fatherhood was legal and by opinion, not by begetting."
+     live: **LINK 5: SUPPORTED**
+     cand: **LINK 4: SUPPORTED**
+   ITEM P6 (E-PREM, a premise the challenger listed against the defender, number 6): | THE LIST ENTRY: **6. LINK 1:** "Joseph is not named as the begetter."
+     live: (no block answering this premise was found by its number or tag)
+     cand: **LINK 1: SUPPORTED**
+   ITEM P8 (E-PREM, a premise the defender listed against the challenger, number 2): | THE LIST ENTRY: 2. House and seed are held to travel together in one father, which props the challenger's 
+     live: ## LINK 2: SUPPORTED
+     cand: ## LINK 2: SUPPORTED
+   ITEM P9 (E-PREM, a premise the defender listed against the challenger, number 3): | THE LIST ENTRY: 3. The coming together is made the taking home, which props the challenger's placing of th
+     live: ## LINK 3: SUPPORTED
+     cand: ## LINK 3: SUPPORTED
+DIFF in33828 Judge Enforcer Build items 170 170
+   ITEM Z2 (E-KEY, the keystone line):
+THE LINE (Z2.1, grok): KEYSTONE: D5 -- STANDS -- Therefore Jesus Christ had no biological father, kept in [CR4] an
+     live: ?
+     cand: ?
+   ITEM P6 (E-PREM, a premise the challenger listed against the defender, number 6): | THE LIST ENTRY: 6. LINK 5: The inference from the prepared body props the defender's keystone. The defende
+     live: (no block answering this premise was found by its number or tag)
+     cand: ## LINK 5: NARROWED TO: God prepared the body for the one who "cometh into the world", and
+   ITEM P7 (E-PREM, a premise the defender listed against the challenger, number 1): | THE LIST ENTRY: 1. The jump from a register by father's house to Joseph as begetter props the challenger's
+     live: ## LINK 1: SUPPORTED
+     cand: ## LINK 1: SUPPORTED
+   ITEM P8 (E-PREM, a premise the defender listed against the challenger, number 2): | THE LIST ENTRY: 2. Dating the conceiving within the espousal between husband and wife props the challenger
+     live: ## LINK 2: SUPPORTED
+     cand: ## LINK 2: SUPPORTED
+   ITEM Y4 (E-SYN, a sentence of the synthesis about the defender):
+THE SENTENCE: *   In Link D3, the Defender dropped the word *"alone"* regarding Mary 
+     live: ?
+     cand: ?
+   ITEM Y5 (E-SYN, a sentence of the synthesis about the defender):
+THE SENTENCE: *   In Link D4, the Defender conceded that it could not produce an [L1]
+     live: ?
+     cand: ?
+DIFF in33828 Alt Judge Enforcer Build items 60 60
+   ITEM P3 (E-PREM, a premise the challenger listed against the defender, number 3): | THE LIST ENTRY: 3. LINK 3: The inference from the passive "was born" props the defender's genealogy link. 
+     live: ## LINK 3: SUPPORTED
+     cand: ## LINK 3: SUPPORTED
+   ITEM P6 (E-PREM, a premise the challenger listed against the defender, number 6): | THE LIST ENTRY: 6. LINK 5: The inference from the prepared body props the defender's keystone. The defende
+     live: (no block answering this premise was found by its number or tag)
+     cand: ## LINK 5: NARROWED TO: God prepared the body for the one who "cometh into the world", and
+DIFF in34016 Judge Enforcer Build items 154 154
+   ITEM H26 (E-HOLD, a collision line graded UNDERDETERMINED):
+THE LINE (H26.1, sol): D6 vs C4 (2 Samuel 7:12; Acts 2:30; Romans 1:3): UNDERDETERMINED --
+     live: ?
+     cand: ?
+   ITEM P5 (E-PREM, a premise the challenger listed against the defender, number 5): | THE LIST ENTRY: 5. LINK 3: Mary's question read as ground for a conception apart from marriage — "If the a
+     live: **LINK 5: NARROWED TO:** Luke 3:23's "as was supposed" marks a held opinion of men, report
+     cand: **LINK 3: SUPPORTED.**
+   ITEM P6 (E-PREM, a premise the challenger listed against the defender, number 6): | THE LIST ENTRY: 6. LINK 5: "as was supposed" read as an error — "In the book where Luke 3:23 stands, the v
+     live: (no block answering this premise was found by its number or tag)
+     cand: **LINK 5: NARROWED TO:** Luke 3:23's "as was supposed" marks a held opinion of men, report
+node runs 63 equal 46 differ 17

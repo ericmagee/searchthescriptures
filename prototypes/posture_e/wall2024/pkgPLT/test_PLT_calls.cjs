@@ -1,0 +1,13 @@
+// pkgPLT: per changed node run, compare call grouping and each non-E-PREM item's own text (cut at the next ITEM or call end).
+const fs=require('fs');process.chdir(__dirname+'/..');const {rebuild}=require(process.cwd()+'/pkgLIB/unpack.cjs');const H=require(process.cwd()+'/pkgEAD/harness_clone.cjs');const S=JSON.stringify;
+const W='/mnt/project-files/wall2024/';const wf=f=>{let d=JSON.parse(fs.readFileSync(f,'utf8'));d=d.data||d;return d.workflow||d;};
+const A=wf(W+'fetchback_live_s116.json'),B=wf(W+'parent_s116_PLT.json');const ld=d=>{const by={};d.nodes.forEach(n=>by[n.name]=n);return n=>rebuild(by[n].parameters.jsCode,by['Shared Library'].parameters.jsCode);};const LA=ld(A),LB=ld(B);
+const preds=n=>{const p=[];for(const [k,v] of Object.entries(A.connections))for(const outs of (v.main||[]))for(const c of (outs||[]))if(c.node===n)p.push(k);return p;};const mk=o=>new Proxy(o,{has:()=>true,get:(t,k)=>k in t?t[k]:null});
+const bodyItems=o=>{const m={};for(const x of o){const j=x.json||{};const b=S(j.body||'');for(const seg of b.split(/(?=ITEM [A-Z]\d+ \()/).slice(1)){const id=seg.match(/^ITEM ([A-Z]\d+)/)[1];m[id]=seg.split(/\\n\\n(?=[A-Z])/)[0];}}return m;};
+const NODES=['Judge Enforcer Build','Alt Judge Enforcer Build','R2 Alt Judge Enforcer Build'];let bad=0,tot=0;
+const cmp=async(label,run,st)=>{for(const n of NODES){const ip=preds(n).find(p=>st?st[p]:H.out(run,p));if(!ip)continue;let a,b;try{a=await H.run(LA(n),run,ip,st?mk(st):{});b=await H.run(LB(n),run,ip,st?mk(st):{});}catch(e){continue;}
+ const ca=a.map(x=>(x.json||{}).ids?S(x.json.ids.map?x.json.ids.length:0):'-'),cb=b.map(x=>(x.json||{}).ids?S(x.json.ids.map?x.json.ids.length:0):'-');
+ const ia=bodyItems(a),ib=bodyItems(b);const ch=Object.keys(ib).filter(k=>ia[k]!==ib[k]);const nonP=ch.filter(k=>!k.startsWith('P'));tot++;if(nonP.length)bad++;
+ const bl=o=>o.reduce((s,x)=>s+String((x.json||{}).body?S(x.json.body):'').length,0);if(ch.length)console.log(label,n,'calls',a.length,b.length,'| body chars',bl(a),bl(b),bl(b)-bl(a),'| items changed',ch.join(','),'| non-E-PREM changed',nonP.length?nonP.join(','):'none');}};
+(async()=>{for(const id of ['34780','34726','34703','34626','34299']){const f=W+'ex'+id+'_full.json';if(!fs.existsSync(f))continue;const ex=JSON.parse(fs.readFileSync(f,'utf8'));const r=(ex.data||ex).resultData.runData;const st={};for(const [k,rs] of Object.entries(r)){const l=rs[rs.length-1];st[k]=(l&&l.data&&l.data.main)||null;}await cmp('ex'+id,'x'+id,st);}
+ for(const r of [...new Set(fs.readdirSync(H.IN).filter(f=>/Judge_Enforcer_Build\.json$/.test(f)).map(f=>f.split('_')[0]))].sort())await cmp('in'+r,r,null);console.log('node runs',tot,'with a non-E-PREM item changed',bad);})();
