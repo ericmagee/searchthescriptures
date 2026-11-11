@@ -1,0 +1,28 @@
+A1 "answered under link 3" -> "[CR3, LINK 3] LINK 3: claim 3\n\n[L1] Matthew 1:3 body of link 3.\n\nAnswer line for link 3 naming Luke 2:3." [104]
+A2 "It fits Link 1 and Link 2." -> (nothing)
+A3 "This is met (Link 5)." -> "[CR3, LINK 5] LINK 5: claim 5\n\n[L1] Matthew 1:5 body of link 5.\n\nAnswer line for link 5 naming Luke 2:5." [104]
+A4 "answered under link 10" -> "[CR3, LINK 10] LINK 10: claim 10\n\n[L1] Matthew 1:10 body of link 10.\n\nAnswer line for link 10 naming Luke 2:10." [111]
+A5a "answered under LINK 2" -> "[CR3, LINK 2] LINK 2: claim 2\n\n[L1] Matthew 1:2 body of link 2.\n\nAnswer line for link 2 naming Luke 2:2." [104]
+A5b "answered under link 2" -> "[CR3, LINK 2] LINK 2: claim 2\n\n[L1] Matthew 1:2 body of link 2.\n\nAnswer line for link 2 naming Luke 2:2." [104]
+A5c "answered under Link 2" -> "[CR3, LINK 2] LINK 2: claim 2\n\n[L1] Matthew 1:2 body of link 2.\n\nAnswer line for link 2 naming Luke 2:2." [104]
+A6 "answered under links 2 and 3" -> (nothing)
+A7 "answered under link 9" -> (nothing)
+A8a "under blink 3" -> (nothing)
+A8b "linked 3 shows it" -> (nothing)
+A8c "under linkage 3" -> (nothing)
+A9 "see D3 and C2" -> (nothing)
+A10 "\"and he said, it is under link 2 of the chain\"" -> "[CR3, LINK 2] LINK 2: claim 2\n\n[L1] Matthew 1:2 body of link 2.\n\nAnswer line for link 2 naming Luke 2:2." [104]
+A11 "answered under link 1" -> "[CR3, LINK 1] AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"... [1044]
+A12 "no pointer here" -> (nothing)
+A13 see/in "see link 2; it is in link 4" -> (nothing)
+A14 dup "under link 2 and again under link 2" -> "[CR3, LINK 2] LINK 2: claim 2\n\n[L1] Matthew 1:2 body of link 2.\n\nAnswer line for link 2 naming Luke 2:2." [104]
+A15 header-like prose "under link 1" -> "[CR3, LINK 1] LINK 1: a" [23]
+B1 "I grant it." -> "[CR3] Completed: Matthew 1:25 shows the fit.\n[CR4] Close: as said, Matthew 1:25 fits." [85]
+B2 "as I answered in [CR3]" -> "[CR3] Completed: Matthew 1:25 shows the fit.\n[CR4] Close: as said, Matthew 1:25 fits." [85]
+B3 "x" -> "[CR4] Only here: Matthew 1:25 answered." [39]
+B4 "x" -> "[DR3] Matthew 1:25 other side? no: same side D" [46]
+B5 verse w/o book "x" -> (nothing)
+B6 Mt abbrev "x" -> (nothing)
+B7 verse range "x" -> (nothing)
+B8 1:250 guard "x" -> (nothing)
+B9 no R "under link 2" -> (nothing)

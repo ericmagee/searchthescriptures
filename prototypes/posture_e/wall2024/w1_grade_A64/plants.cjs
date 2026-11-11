@@ -1,0 +1,33 @@
+// W1 plants A and B for pkgA1N: the __ol block from library line 3036, run on invented sides.
+const fs=require('fs');const src=fs.readFileSync(process.argv[2],'utf8');const s=src.indexOf('const __ol=(()=>');const e=src.indexOf('})();',s)+5;
+const body=src.slice(s+'const __ol='.length,e-1);const OL=new Function('R','__rk','g','__ga','return '+body);
+const links=n=>Array.from({length:n},(_,i)=>`LINK ${i+1}: claim ${i+1}\n\n[L1] Matthew 1:${i+1} body of link ${i+1}.\n\nAnswer line for link ${i+1} naming Luke 2:${i+1}.`).join('\n\n');
+const g=(ans,v='Matthew 1:25')=>({verse:v,answer:ans,means:'m'});
+const T=(id,R,rk,ans,v)=>{const o=OL(R,rk,g(ans,v),ans);console.log(id,JSON.stringify(ans),'->',o?JSON.stringify(o.slice(0,160))+(o.length>160?'...':'')+' ['+o.length+']':'(nothing)');};
+const R6={CR3:links(6)},R12={CR3:links(12)};
+T('A1',R6,['CR3'],'answered under link 3');
+T('A2',R6,['CR3'],'It fits Link 1 and Link 2.');
+T('A3',R6,['CR3'],'This is met (Link 5).');
+T('A4',R12,['CR3'],'answered under link 10');
+T('A5a',R6,['CR3'],'answered under LINK 2');T('A5b',R6,['CR3'],'answered under link 2');T('A5c',R6,['CR3'],'answered under Link 2');
+T('A6',R6,['CR3'],'answered under links 2 and 3');
+T('A7',R6,['CR3'],'answered under link 9');
+T('A8a',R6,['CR3'],'under blink 3');T('A8b',R6,['CR3'],'linked 3 shows it');T('A8c',R6,['CR3'],'under linkage 3');
+T('A9',R6,['CR3'],'see D3 and C2');
+T('A10',R6,['CR3'],'"and he said, it is under link 2 of the chain"');
+const long={CR3:'LINK 1: x\n\n'+'A'.repeat(1000)+' needed sentence Matthew 1:25.\n\nLINK 2: y'};T('A11',long,['CR3'],'answered under link 1');
+T('A12',R6,['CR3'],'no pointer here');
+T('A13 see/in',R6,['CR3'],'see link 2; it is in link 4');
+T('A14 dup',R6,['CR3'],'under link 2 and again under link 2');
+T('A15 header-like prose',{CR3:'LINK 1: a\n\nLink 2 holds because Matthew 1:25 ...\n\nmore of link 1\n\nLINK 2: b'},['CR3'],'under link 1');
+// B: later rounds (defender CR rounds 2,3,4; challenger 1,2,3?)
+const Rb={CR2:'pressed-round answer, no verse',CR3:'Completed: Matthew 1:25 shows the fit.\n\nOther para.',CR4:'Close: as said, Matthew 1:25 fits.\n\nMatthew 1:25 PRESSED WITH x',DR3:'other side Matthew 1:25 line'};
+T('B1',Rb,['CR2'],'I grant it.');
+T('B2',Rb,['CR2'],'as I answered in [CR3]');
+T('B3',{CR2:'nothing',CR4:'Only here: Matthew 1:25 answered.'},['CR2'],'x');
+T('B4',{DR2:'x',DR3:'Matthew 1:25 other side? no: same side D',CR3:'Matthew 1:25 from C side'},['DR2'],'x');
+T('B5 verse w/o book',{CR2:'a',CR3:'1:25 shows the fit.'},['CR2'],'x');
+T('B6 Mt abbrev',{CR2:'a',CR3:'Matt. 1:25 shows the fit.'},['CR2'],'x');
+T('B7 verse range',{CR2:'a',CR3:'Matthew 1:24-25 shows the fit.'},['CR2'],'x');
+T('B8 1:250 guard',{CR2:'a',CR3:'Matthew 1:250 is not a verse.'},['CR2'],'x');
+T('B9 no R',null,['CR2'],'under link 2');
