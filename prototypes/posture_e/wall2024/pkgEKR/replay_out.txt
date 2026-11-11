@@ -1,0 +1,70 @@
+# ex33149_full.json
+== Judge Enforcer Build | calls 10 -> 10 | E-KEY 3 -> 3 | E-RES 3 -> 3 | other ids 265 -> 265 | body chars diff 0
+  not asked 0 | rows 0 | each has its row true | only E-KEY/E-RES gone true | roles 
+== Alt Judge Enforcer Build | calls 1 -> 1 | E-KEY 0 -> 0 | E-RES 0 -> 0 | other ids 0 -> 0 | body chars diff 0
+  not asked 0 | rows 0 | each has its row true | only E-KEY/E-RES gone true | roles 
+# ex33371_full.json
+== Judge Enforcer Build | calls 6 -> 6 | E-KEY 3 -> 3 | E-RES 3 -> 3 | other ids 194 -> 194 | body chars diff 0
+  not asked 0 | rows 0 | each has its row true | only E-KEY/E-RES gone true | roles 
+== Alt Judge Enforcer Build | calls 5 -> 5 | E-KEY 1 -> 1 | E-RES 1 -> 1 | other ids 86 -> 86 | body chars diff 0
+  not asked 0 | rows 0 | each has its row true | only E-KEY/E-RES gone true | roles 
+# ex33490_full.json
+== Judge Enforcer Build | calls 9 -> 9 | E-KEY 3 -> 3 | E-RES 2 -> 2 | other ids 229 -> 229 | body chars diff 0
+  not asked 0 | rows 0 | each has its row true | only E-KEY/E-RES gone true | roles 
+== Alt Judge Enforcer Build | calls 5 -> 5 | E-KEY 1 -> 1 | E-RES 1 -> 1 | other ids 92 -> 92 | body chars diff 0
+  not asked 0 | rows 0 | each has its row true | only E-KEY/E-RES gone true | roles 
+# ex33497_full.json
+== Judge Enforcer Build | calls 10 -> 10 | E-KEY 3 -> 3 | E-RES 3 -> 3 | other ids 271 -> 271 | body chars diff 0
+  not asked 0 | rows 0 | each has its row true | only E-KEY/E-RES gone true | roles 
+== Alt Judge Enforcer Build | calls 1 -> 1 | E-KEY 0 -> 0 | E-RES 0 -> 0 | other ids 24 -> 24 | body chars diff 0
+  not asked 0 | rows 0 | each has its row true | only E-KEY/E-RES gone true | roles 
+# ex34299_full.json
+== Judge Enforcer Build | calls 8 -> 8 | E-KEY 3 -> 3 | E-RES 3 -> 3 | other ids 223 -> 223 | body chars diff 0
+  not asked 0 | rows 0 | each has its row true | only E-KEY/E-RES gone true | roles 
+Alt Judge Enforcer Build NOT RUN
+# ex34626_full.json
+== Judge Enforcer Build | calls 8 -> 8 | E-KEY 3 -> 2 | E-RES 1 -> 0 | other ids 232 -> 230 | body chars diff -3100
+  not asked 2 | rows 2 | each has its row true | only E-KEY/E-RES gone true | roles panel
+    E-KEY luna KEYSTONE: D6 -- BROKEN -- D6, the conclusion that Christ had no biological father, is brok | stored: ENFORCER AGREE (right: BROKEN): The judge's own collision line reads "
+    E-RES luna RESULT: CHALLENGER WINS — The defender’s declared conclusion link is broken by the confirm | stored: ENFORCER AGREE (right: FOLLOWS): The reason's "The defender’s declared
+== Alt Judge Enforcer Build | calls 1 -> 1 | E-KEY 0 -> 0 | E-RES 0 -> 0 | other ids 0 -> 0 | body chars diff 0
+  not asked 0 | rows 0 | each has its row true | only E-KEY/E-RES gone true | roles 
+# ex34703_full.json
+== Judge Enforcer Build | calls 8 -> 8 | E-KEY 3 -> 0 | E-RES 1 -> 1 | other ids 215 -> 212 | body chars diff -5935
+  not asked 3 | rows 3 | each has its row true | only E-KEY/E-RES gone true | roles panel
+    E-KEY luna KEYSTONE: D6 -- BROKEN -- LINK 6 BROKEN BY A CONFIRMED CLOSING CONTRADICTION | stored: ENFORCER AGREE (right: BROKEN): The collision lines quote the defender
+    E-KEY chatgpt KEYSTONE: D6 -- BROKEN -- The conclusion that Christ had no biological father is subject t | stored: ENFORCER AGREE (right: BROKEN): The D6 collision lines quote the same 
+    E-KEY sol KEYSTONE: D6 -- BROKEN -- LINK 6 BROKEN BY A CONFIRMED CLOSING CONTRADICTION | stored: ENFORCER AGREE (right: BROKEN): This judge's three D6 collision lines 
+== Alt Judge Enforcer Build | calls 1 -> 1 | E-KEY 0 -> 0 | E-RES 0 -> 0 | other ids 17 -> 17 | body chars diff 0
+  not asked 0 | rows 0 | each has its row true | only E-KEY/E-RES gone true | roles 
+# ex34726_full.json
+== Judge Enforcer Build | calls 10 -> 10 | E-KEY 3 -> 3 | E-RES 1 -> 0 | other ids 242 -> 241 | body chars diff -208
+  not asked 1 | rows 1 | each has its row true | only E-KEY/E-RES gone true | roles panel
+    E-RES luna RESULT: CHALLENGER WINS -- the defender's own contradictory readings break its timing link | stored: ENFORCER AGREE (right: FOLLOWS): The reason rests on the record's "I g
+== Alt Judge Enforcer Build | calls 1 -> 1 | E-KEY 0 -> 0 | E-RES 0 -> 0 | other ids 20 -> 20 | body chars diff 0
+  not asked 0 | rows 0 | each has its row true | only E-KEY/E-RES gone true | roles 
+# ex34780_full.json
+== Judge Enforcer Build | calls 10 -> 10 | E-KEY 3 -> 3 | E-RES 1 -> 1 | other ids 239 -> 239 | body chars diff 0
+  not asked 0 | rows 0 | each has its row true | only E-KEY/E-RES gone true | roles 
+== Alt Judge Enforcer Build | calls 1 -> 1 | E-KEY 0 -> 0 | E-RES 0 -> 0 | other ids 0 -> 0 | body chars diff 0
+  not asked 0 | rows 0 | each has its row true | only E-KEY/E-RES gone true | roles 
+# ex34852_full.json
+== Judge Enforcer Build | calls 7 -> 7 | E-KEY 3 -> 3 | E-RES 1 -> 1 | other ids 188 -> 188 | body chars diff 0
+  not asked 0 | rows 0 | each has its row true | only E-KEY/E-RES gone true | roles 
+== Alt Judge Enforcer Build | calls 2 -> 2 | E-KEY 1 -> 1 | E-RES 1 -> 1 | other ids 31 -> 31 | body chars diff 0
+  not asked 0 | rows 0 | each has its row true | only E-KEY/E-RES gone true | roles 
+# ex35067_full.json
+== Judge Enforcer Build | calls 7 -> 7 | E-KEY 3 -> 3 | E-RES 0 -> 0 | other ids 186 -> 186 | body chars diff 0
+  not asked 0 | rows 0 | each has its row true | only E-KEY/E-RES gone true | roles 
+== Alt Judge Enforcer Build | calls 1 -> 1 | E-KEY 0 -> 0 | E-RES 0 -> 0 | other ids 0 -> 0 | body chars diff 0
+  not asked 0 | rows 0 | each has its row true | only E-KEY/E-RES gone true | roles 
+# ex35173_full.json
+== Judge Enforcer Build | calls 8 -> 8 | E-KEY 3 -> 0 | E-RES 1 -> 0 | other ids 209 -> 205 | body chars diff -4076
+  not asked 4 | rows 4 | each has its row true | only E-KEY/E-RES gone true | roles panel
+    E-KEY luna KEYSTONE: D5 -- BROKEN -- the conclusion that Christ had no biological father among men. | stored: ENFORCER AGREE (right: BROKEN): The judge's own D5 collision line read
+    E-KEY chatgpt KEYSTONE: D5 -- BROKEN -- LINK 5 BROKEN BY A CONFIRMED CLOSING CONTRADICTION | stored: ENFORCER AGREE (right: BROKEN): The judge's own D5 collision lines rea
+    E-KEY sol KEYSTONE: D5 -- BROKEN -- LINK 5 BROKEN BY A CONFIRMED CLOSING CONTRADICTION | stored: ENFORCER AGREE (right: BROKEN): The judge's own D5 collision lines rea
+    E-RES luna RESULT: CHALLENGER WINS -- D5, the defender’s conclusion link, is broken by the record’s c | stored: ENFORCER DISAGREE (right: DOES NOT FOLLOW): "broken by the record’s cl
+== Alt Judge Enforcer Build | calls 5 -> 5 | E-KEY 1 -> 0 | E-RES 0 -> 0 | other ids 81 -> 80 | body chars diff -1579
+  not asked 1 | rows 1 | each has its row true | only E-KEY/E-RES gone true | roles alternate
+    E-KEY grok KEYSTONE: D5 -- BROKEN -- LINK 5 BROKEN BY A CONFIRMED CLOSING CONTRADICTION | stored: ENFORCER DISAGREE (right: STANDS): The D5 collision lines are "CHALLEN
