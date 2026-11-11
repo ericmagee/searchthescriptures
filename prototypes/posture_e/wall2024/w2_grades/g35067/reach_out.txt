@@ -1,0 +1,269 @@
+KSL2 changed 27 
+  Cure Build: equal
+  Cure Normalize: equal
+  Cure Check: equal
+  Panel Cure Build 1: equal
+  Panel Cure Normalize 1: equal
+  Panel Cure Build 2: equal
+  Panel Cure Normalize 2: equal
+  Panel Cure Build 3: equal
+  Panel Cure Normalize 3: equal
+  Panel Cure Check: equal
+  Alternate Build: NOT RUN
+  Alternate Cure Build: NOT RUN
+  Alternate Cure Normalize: NOT RUN
+  Alternate Merge Seat: equal
+  Gate Build: equal
+  Gate Record: equal
+  Alt Gate Build: equal
+  Alt Gate Record: equal
+  Alternate Merge 1: equal
+  Early Alternate Build: equal
+  R2 Alternate Build: NOT RUN
+  R2 Alternate Merge Seat: NOT RUN
+  R2 Alternate Cure Build: NOT RUN
+  R2 Alternate Cure Normalize: NOT RUN
+  R2 Alt Gate Build: NOT RUN
+  R2 Alt Gate Record: NOT RUN
+  R2 Alternate Merge: NOT RUN
+RLF changed 1 
+  Close Enforcer Record: equal
+RLF2 changed 1 
+  Close Enforcer Record: equal
+ACM changed 1 
+  Anticheat Record: equal
+GUB2+GCP1b changed 10 
+  Alternate Merge Seat: equal
+  Gate Build: equal
+  Gate Record: equal
+  Alt Gate Build: equal
+  Alt Gate Record: equal
+  Alternate Merge 1: equal
+  R2 Alternate Merge Seat: NOT RUN
+  R2 Alt Gate Build: NOT RUN
+  R2 Alt Gate Record: NOT RUN
+  R2 Alternate Merge: NOT RUN
+K7C2 changed 27 
+  Cure Build: equal
+  Cure Normalize: equal
+  Cure Check: equal
+  Panel Cure Build 1: equal
+  Panel Cure Normalize 1: equal
+  Panel Cure Build 2: equal
+  Panel Cure Normalize 2: equal
+  Panel Cure Build 3: equal
+  Panel Cure Normalize 3: equal
+  Panel Cure Check: equal
+  Alternate Build: NOT RUN
+  Alternate Cure Build: NOT RUN
+  Alternate Cure Normalize: NOT RUN
+  Alternate Merge Seat: equal
+  Gate Build: equal
+  Gate Record: equal
+  Alt Gate Build: equal
+  Alt Gate Record: equal
+  Alternate Merge 1: equal
+  Early Alternate Build: equal
+  R2 Alternate Build: NOT RUN
+  R2 Alternate Merge Seat: NOT RUN
+  R2 Alternate Cure Build: NOT RUN
+  R2 Alternate Cure Normalize: NOT RUN
+  R2 Alt Gate Build: NOT RUN
+  R2 Alt Gate Record: NOT RUN
+  R2 Alternate Merge: NOT RUN
+J4(OON2,GK1,KCQ,KWQ) changed 34 
+  Extract Independent Verdict: equal
+  Panel Payloads: equal
+  Cure Build: equal
+  Cure Normalize: equal
+  Cure Check: equal
+  Panel Cure Build 1: equal
+  Panel Cure Normalize 1: equal
+  Panel Cure Build 2: equal
+  Panel Cure Normalize 2: equal
+  Panel Cure Build 3: equal
+  Panel Cure Normalize 3: equal
+  Panel Cure Check: equal
+  Alternate Build: NOT RUN
+  Alternate Payloads: NOT RUN
+  Alternate Cure Build: NOT RUN
+  Alternate Cure Normalize: NOT RUN
+  Alternate Merge Seat: equal
+  Judge Enforcer Build: DIFFER
+  Gate Build: equal
+  Gate Record: equal
+  Alt Judge Enforcer Build: equal
+  Alt Gate Build: equal
+  Alt Gate Record: equal
+  Alternate Merge 1: equal
+  Early Alternate Build: equal
+  R2 Alternate Build: NOT RUN
+  R2 Alternate Merge Seat: NOT RUN
+  R2 Alt Judge Enforcer Build: NOT RUN
+  R2 Alternate Payloads: NOT RUN
+  R2 Alternate Cure Build: NOT RUN
+  R2 Alternate Cure Normalize: NOT RUN
+  R2 Alt Gate Build: NOT RUN
+  R2 Alt Gate Record: NOT RUN
+  R2 Alternate Merge: NOT RUN
+J3(CCM,BRF4,CMS) changed 143 
+  Init Seats: ERR Cannot read properties of undefined (reading 'set') | Cannot read properties of undefined (reading 'set')
+  Resolve Seats: ERR Cannot read properties of undefined (reading 'set') | Cannot read properties of undefined (reading 'set')
+  Retrieval Check: equal
+  Init with Guards: ERR Cannot read properties of undefined (reading 'set') | Cannot read properties of undefined (reading 'set')
+  D1 Build: equal
+  D1 Extract: equal
+  C1 Build: equal
+  C1 Extract: equal
+  D2 Build: equal
+  D2 Extract: equal
+  C2 Build: DIFFER
+  C2 Extract: equal
+  D3 Build: equal
+  D3 Extract: equal
+  C3 Build: DIFFER
+  C3 Extract: equal
+  Build Synthesis: equal
+  Build Independent Verdict: equal
+  Build Diagnostic Prompt: equal
+  Build Save Body: equal
+  Check Save: ERR Cannot read properties of undefined (reading 'set') | Cannot read properties of undefined (reading 'set')
+  Panel Build: equal
+  Panel Judge 1 deepseek: NOT RUN
+  Panel Judge 2 openrouter: equal
+  Panel Judge 3 openrouter: equal
+  Panel Done: ERR Cannot read properties of undefined (reading 'set') | Cannot read properties of undefined (reading 'set')
+  Stop: Call Failed: NOT RUN
+  Format Markdown: equal
+  Plain Rule Lines: equal
+  Citation Scan: equal
+  Quote Compare: equal
+  Quote Report: equal
+  Synthesis Normalizer: equal
+  Diagnostic Normalizer: equal
+  Verdict Normalizer: equal
+  Panel Judge 1 openrouter: equal
+  Panel Failure Note: NOT RUN
+  Raise If Incomplete: equal
+  Regrade Load: NOT RUN
+  Replay Rows: NOT RUN
+  Replay Done: NOT RUN
+  Dry Failure Stop: NOT RUN
+  Fence Check: equal
+  Panel Check: equal
+  Reserve Build: NOT RUN
+  Failure Salvage: NOT RUN
+  Salvage Stop: NOT RUN
+  Panel Tokens: equal
+  D4 Build: equal
+  D4 Extract: equal
+  C4 Build: DIFFER
+  C4 Extract: equal
+  Accept Build: equal
+  Accept Check: equal
+  Accept Return Build: NOT RUN
+  Accept Final: ERR Cannot read properties of undefined (reading 'set') | Cannot read properties of undefined (reading 'set')
+  Accept DS Build: equal
+  Accept DS Return Build: NOT RUN
+  D2 Words Plan: equal
+  D2 Lexicon Plan: equal
+  C2 Words Plan: equal
+  C2 Lexicon Plan: equal
+  D3 Words Plan: equal
+  D3 Lexicon Plan: equal
+  C3 Words Plan: equal
+  C3 Lexicon Plan: equal
+  D4 Words Plan: equal
+  D4 Lexicon Plan: equal
+  C4 Words Plan: equal
+  C4 Lexicon Plan: equal
+  L2 Words Plan: equal
+  L2 Lexicon Plan: equal
+  L2 Count Plan: equal
+  QR Ask Build: NOT RUN
+  QR Check: NOT RUN
+  QR Final: NOT RUN
+  QR Merge: NOT RUN
+  Enforcer Build: equal
+  Enforcer Record: equal
+  Anticheat Build: equal
+  Anticheat Record: equal
+  Judge Enforcer Build: equal
+  Judge Enforcer Record: equal
+  Send Back Build: equal
+  Send Back Record: equal
+  Alt Seated: equal
+  Alt Judge Enforcer Build: equal
+  Alt Judge Enforcer Record: equal
+  Alt Send Back Build: equal
+  Alt Send Back Record: equal
+  C4G Build: equal
+  C4G Extract: equal
+  C3G Build: equal
+  C3G Extract: equal
+  C1B Build: equal
+  C1B Extract: equal
+  D2B Build: equal
+  D2B Extract: equal
+  C2B Build: equal
+  C2B Extract: equal
+  D3B Build: equal
+  D3B Extract: equal
+  C3B Build: equal
+  C3B Extract: equal
+  D4B Build: equal
+  D4B Extract: equal
+  C4B Build: equal
+  C4B Extract: equal
+  Judge Enforcer Retry Build: equal
+  Alt Judge Enforcer Retry Build: NOT RUN
+  Panel Judges Prep: DIFFER
+  Panel Judges Collect: equal
+  Early Alternate Reply: NOT RUN
+  R2 Alt Seated: NOT RUN
+  R2 Alt Judge Enforcer Build: NOT RUN
+  R2 Alt Judge Enforcer Record: NOT RUN
+  R2 Alt Judge Enforcer Retry Build: NOT RUN
+  R2 Alt Send Back Build: NOT RUN
+  R2 Alt Send Back Record: NOT RUN
+  Second Alternate?: equal
+  Alternate Merge: equal
+  Enforcer Retry Build: equal
+  FUM Merge Panel 1: NOT RUN
+  FUM Merge Panel 2: NOT RUN
+  FUM Merge Panel 3: NOT RUN
+  FUM Merge Alternate: NOT RUN
+  FUM Merge R2 Alternate: NOT RUN
+  FUM Merge Cure: NOT RUN
+  Provider Removed Stop: NOT RUN
+  SJ Re-ask Build: NOT RUN
+  SJ Re-ask Pick: NOT RUN
+  Close Enforcer Build: equal
+  Close Enforcer Record: equal
+  Judge Contradiction Build: equal
+  Judge Contradiction Record: equal
+  Reread Build: equal
+  Reread Record: equal
+  Alt Reread Build: equal
+  Alt Reread Record: equal
+  R2 Alt Reread Build: NOT RUN
+  R2 Alt Reread Record: NOT RUN
+  Assume Check Build: equal
+  Assume Check Record: equal
+RTE3+PLT changed 16 
+  Alternate Merge Seat: equal
+  Judge Enforcer Build: DIFFER
+  Send Back Build: equal
+  Gate Build: equal
+  Gate Record: equal
+  Alt Judge Enforcer Build: equal
+  Alt Send Back Build: equal
+  Alt Gate Build: equal
+  Alt Gate Record: equal
+  Alternate Merge 1: equal
+  R2 Alternate Merge Seat: NOT RUN
+  R2 Alt Judge Enforcer Build: NOT RUN
+  R2 Alt Send Back Build: NOT RUN
+  R2 Alt Gate Build: NOT RUN
+  R2 Alt Gate Record: NOT RUN
+  R2 Alternate Merge: NOT RUN
