@@ -1,0 +1,30 @@
+const {LIVE,CAND,load,rec}=require('./h.cjs');
+const RD0=load('ex34852_full.json');const SENT='A man who knew himself the father would have no cause to put her away, and the verse shows Joseph with that cause.';
+const H2='## D2: Mary was a virgin when the conception took place (answers C3 and its presses)';
+const X2=/CLOSE-CONTRADICTION: X2 -- DEFENDER -- LINK 3 -- CONFIRMED([^\n]*)/;
+const P=async(name,{cr4,reply,dr4})=>{const rd=JSON.parse(JSON.stringify(RD0));const F=rd['Final Output'][0].data.main[0][0].json;
+ if(cr4){const o=F.cr4;F.cr4=cr4(F.cr4);if(o===F.cr4)console.log('!! plant did not change cr4');}if(dr4)F.dr4=dr4(F.dr4);
+ const c=rd['Close Enforcer Call deepseek'][0].data.main[0];if(reply){const o=c[0].json.choices[0].message.content;c[0].json.choices[0].message.content=reply(o);if(o===c[0].json.choices[0].message.content)console.log('!! plant did not change reply');}
+ const rd2=JSON.parse(JSON.stringify(rd));const a=await rec(LIVE,rd),b=await rec(CAND,rd2);console.log('##',name,'\n live',JSON.stringify(a),'\n cand',JSON.stringify(b));};
+(async()=>{
+await P('C0 control',{});
+await P('C5r heading line removed',{cr4:t=>t.replace(H2+'\n','')});
+await P('C8r bold heading',{cr4:t=>t.replace(H2,'**D2: Mary was a virgin**')});
+await P('C10r NEW pair both answers link 3',{reply:r=>r.replace(X2,(m,rest)=>'CLOSE-CONTRADICTION: NEW -- DEFENDER -- LINK 3 -- CONFIRMED'+rest+'\nCLOSE-CONTRADICTION: NEW -- DEFENDER -- LINK 3 -- NOT A CONTRADICTION'+rest)});
+await P('W1 other side LINK heading',{cr4:t=>t.replace(H2,'## LINK 4 of the challenger: Matthew 1:20 answered')});
+await P('W2a ANSWERS (C3 against D2)',{cr4:t=>t.replace(H2,'## ANSWERS (C3 against D2)')});
+await P('W2b ANSWERS (D2 against C3)',{cr4:t=>t.replace(H2,'## ANSWERS (D2 against C3)')});
+await P('W3 bold lead on own line',{cr4:t=>t.replace('That stance is the response of one who is not the author of the child. '+SENT,'That stance is the response of one who is not the author of the child.\n**D5 also stands.** '+SENT)});
+await P('W4 CONFIRMED on 3, cleared on 2',{reply:r=>r.replace(X2,(m,rest)=>'CLOSE-CONTRADICTION: NEW -- DEFENDER -- LINK 3 -- CONFIRMED'+rest+'\nCLOSE-CONTRADICTION: NEW -- DEFENDER -- LINK 2 -- NOT A CONTRADICTION'+rest)});
+await P('W5 another confirmed on 2 before X2',{reply:r=>r.replace(X2,m=>'CLOSE-CONTRADICTION: NEW -- DEFENDER -- LINK 2 -- CONFIRMED -- EARLIER [CR3] "I drop the claim that a father would never have thought of putting her away." -- CLOSING [CR4] "That stance is the response of one who is not the author of the child." -- planted.\n'+m)});
+await P('W6 D9 heading',{cr4:t=>t.replace(H2,'## D9: Mary was a virgin')});
+await P('W7 "2. Mary was a virgin (D2)"',{cr4:t=>t.replace(H2,'## 2. Mary was a virgin (D2)')});
+await P('W8 reclaim sentence in D6 block, reply LINK 1',{reply:r=>r+'\nCLOSE-CONTRADICTION: NEW -- DEFENDER -- LINK 1 -- CONFIRMED -- EARLIER [CR3] "I drop the claim that a father would never have thought of putting her away." -- CLOSING [CR4] "I keep D1 to D6 as declared." -- planted.'});
+await P('W9 CRLF',{cr4:t=>t.replace(/\n/g,'\r\n')});
+await P('W10 #### **D2 — ...**',{cr4:t=>t.replace(H2,'#### **D2 — Mary was a virgin**')});
+await P('W11 rule and heading removed',{cr4:t=>t.replace('---\n\n'+H2+'\n','')});
+const CS='the planted closing sentence for the challenger side stands here.';const CL='\nCLOSE-CONTRADICTION: NEW -- CHALLENGER -- LINK 3 -- CONFIRMED -- EARLIER [DR3] "QQ" -- CLOSING [DR4] "'+CS+'" -- why.';
+const e3=(()=>{const t=RD0['Final Output'][0].data.main[0][0].json.dr3;const s=t.split('\n').find(l=>l.trim().split(' ').length>8&&!/["“”*#|]/.test(l));return s.trim();})();console.log('earlier dr3 sentence:',e3.slice(0,80));
+await P('W12a challenger under ### C2',{reply:r=>r+CL.replace('QQ',e3),dr4:t=>t.replace(/(### C2:[^\n]*\n)/,'$1\n'+CS+'\n')});
+await P('W12b challenger sentence above the rule (grants part)',{reply:r=>r+CL.replace('QQ',e3),dr4:t=>t.replace(/(## OPPONENT'S GRANTS:[^\n]*\n)/,'$1\n'+CS+'\n')});
+})();
