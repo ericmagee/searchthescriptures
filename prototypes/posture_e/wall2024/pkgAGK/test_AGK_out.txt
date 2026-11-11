@@ -1,0 +1,11 @@
+pkgAGK offline test, 11-11 (pg_temp copies of the live function with the debate_results UPDATE and row lock removed; no shared write).
+Row: debate_results b52fe836-0836-4445-aa9a-a4358246a16b (run 35173), panel_expected chatgpt, luna, sol; luna removed.
+md5 live / new / round trip: 968d39e6151ec06e9eeee8f39d8c4286 / 2f4b916cae710fca0ac8283f966229cd / 968d39e6151ec06e9eeee8f39d8c4286; length +22.
+alternate      before (live s140)                              after (pkgAGK)
+grok           REFUSED (not an active reserve seat ...)        ok, panel chatgpt, grok, sol
+argon          ok, panel argon, chatgpt, sol                   ok, same
+haiku          ok, panel chatgpt, haiku, sol                   ok, same
+gemini         REFUSED                                         REFUSED (unchanged)
+luna, sol      REFUSED (already sits on the panel)             same
+grok+argon for luna+sol (after only): ok, panel argon, chatgpt, grok
+grok twice (after only): REFUSED (grok already sits on the panel)
