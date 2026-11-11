@@ -1,0 +1,97 @@
+stubs changed: [
+  'Alt Judge Enforcer Build 2074',
+  'Alt Send Back Record 200',
+  'Judge Enforcer Build 2070',
+  'R2 Alt Judge Enforcer Build 2074',
+  'R2 Alt Send Back Record 200',
+  'Send Back Record 200'
+]
+33149 Alt Judge Enforcer Build run 0 | cure rows 0 0 | changed 0 | all else equal true
+33149 Alt Send Back Record   run 0 | cure rows 0 0 | changed 0 | all else equal true
+33149 Judge Enforcer Build   run 0 | cure rows 0 0 | changed 0 | all else equal false
+33149 Send Back Record       run 0 | cure rows 110 110 | changed 1 | all else equal true
+     gemini E-ANS UNCURED -> CURED | ANSWER CHECK: Matthew 1:25 -- [DR3] -- MEANS: "no knowing from the taking until the birth." -- ANSWER: "'Till' sets an end to the abstaining 
+       old why:  428; the judge keeps the decision) | CURE (record-only until promoted): UNCURED -- the CHANGE TO MEETS quotes the flagged answer again (or a shorter cut of it) 
+       new why: uling 428; the judge keeps the decision) | CURE (record-only until promoted): CURED -- CHANGE TO MEETS, the grade the enforcer gave, on the same answer (pkgAMG)
+33371 Alt Judge Enforcer Build run 0 | cure rows 0 0 | changed 0 | all else equal true
+33371 Alt Send Back Record   run 0 | cure rows 12 12 | changed 0 | all else equal true
+33371 Judge Enforcer Build   run 0 | cure rows 0 0 | changed 0 | all else equal false
+33371 Send Back Record       run 0 | cure rows 102 102 | changed 1 | all else equal true
+     gemini E-ANS UNCURED -> CURED | ANSWER CHECK: Matthew 1:25 -- [DR3] -- MEANS: "the knowing is withheld from the taking to the birth" -- ANSWER: "The withheld span begins at 
+       old why:  428; the judge keeps the decision) | CURE (record-only until promoted): UNCURED -- the CHANGE TO MEETS quotes the flagged answer again (or a shorter cut of it) 
+       new why: uling 428; the judge keeps the decision) | CURE (record-only until promoted): CURED -- CHANGE TO MEETS, the grade the enforcer gave, on the same answer (pkgAMG)
+33490 Alt Judge Enforcer Build run 0 | cure rows 0 0 | changed 0 | all else equal true
+33490 Alt Send Back Record   run 0 | cure rows 6 6 | changed 1 | all else equal true
+     grok E-ANS UNCURED -> CURED | ANSWER CHECK: Deuteronomy 20:7 -- [DR3] -- MEANS: "the betrothed wife is not yet taken, so union is not given by the espousal" -- ANSWER: "t 
+       old why:  428; the judge keeps the decision) | CURE (record-only until promoted): UNCURED -- the CHANGE TO MEETS quotes the flagged answer again (or a shorter cut of it) 
+       new why: uling 428; the judge keeps the decision) | CURE (record-only until promoted): CURED -- CHANGE TO MEETS, the grade the enforcer gave, on the same answer (pkgAMG)
+33490 Judge Enforcer Build   run 0 | cure rows 0 0 | changed 0 | all else equal false
+33490 Send Back Record       run 0 | cure rows 105 105 | changed 0 | all else equal true
+33497 Alt Judge Enforcer Build run 0 | cure rows 0 0 | changed 0 | all else equal true
+33497 Alt Send Back Record   run 0 | cure rows 0 0 | changed 0 | all else equal true
+33497 Judge Enforcer Build   run 0 | cure rows 0 0 | changed 0 | all else equal false
+33497 Send Back Record       run 0 | cure rows 95 95 | changed 1 | all else equal true
+     gemini E-ANS UNCURED -> CURED | ANSWER CHECK: Matthew 1:25 -- [DR3] -- MEANS: "the same verb denied of Joseph until the birth." -- ANSWER: "The defender granted that 1:25 i 
+       old why:  428; the judge keeps the decision) | CURE (record-only until promoted): UNCURED -- the CHANGE TO MEETS quotes the flagged answer again (or a shorter cut of it) 
+       new why: uling 428; the judge keeps the decision) | CURE (record-only until promoted): CURED -- CHANGE TO MEETS, the grade the enforcer gave, on the same answer (pkgAMG)
+34299 Judge Enforcer Build   run 0 | cure rows 0 0 | changed 0 | all else equal true
+34299 Send Back Record       run 0 | cure rows 94 94 | changed 0 | all else equal true
+34626 Alt Judge Enforcer Build run 0 | cure rows 0 0 | changed 0 | all else equal true
+34626 Alt Send Back Record   run 0 | cure rows 0 0 | changed 0 | all else equal true
+34626 Judge Enforcer Build   run 0 | cure rows 0 0 | changed 0 | all else equal false
+34626 Send Back Record       run 0 | cure rows 131 131 | changed 0 | all else equal true
+34703 Alt Judge Enforcer Build run 0 | cure rows 0 0 | changed 0 | all else equal true
+34703 Alt Send Back Record   run 0 | cure rows 0 0 | changed 0 | all else equal true
+34703 Judge Enforcer Build   run 0 | cure rows 0 0 | changed 0 | all else equal false
+34703 Send Back Record       run 0 | cure rows 127 127 | changed 0 | all else equal true
+34726 Alt Judge Enforcer Build run 0 | cure rows 0 0 | changed 0 | all else equal true
+34726 Alt Send Back Record   run 0 | cure rows 0 0 | changed 0 | all else equal true
+34726 Judge Enforcer Build   run 0 | cure rows 0 0 | changed 0 | all else equal false
+34726 Send Back Record       run 0 | cure rows 140 140 | changed 0 | all else equal true
+34780 Alt Judge Enforcer Build run 0 | cure rows 0 0 | changed 0 | all else equal true
+34780 Alt Send Back Record   run 0 | cure rows 0 0 | changed 0 | all else equal true
+34780 Judge Enforcer Build   run 0 | cure rows 0 0 | changed 0 | all else equal true
+34780 Send Back Record       run 0 | cure rows 141 141 | changed 4 | all else equal true
+     sol E-ANS UNCURED -> CURED | ANSWER CHECK: Matthew 1:25 -- [CR3] -- MEANS: "the abstinence is bounded to the time after the taking, "till" the birth." -- ANSWER: "I gran 
+       old why:  428; the judge keeps the decision) | CURE (record-only until promoted): UNCURED -- the CHANGE TO MEETS quotes the flagged answer again (or a shorter cut of it) 
+       new why: uling 428; the judge keeps the decision) | CURE (record-only until promoted): CURED -- CHANGE TO MEETS, the grade the enforcer gave, on the same answer (pkgAMG)
+     luna E-ANS UNCURED -> CURED | ANSWER CHECK: Hebrews 2:16 -- [CR3] -- MEANS: “He took hold of Abraham's seed.” -- ANSWER: “I hold he is of Abraham's seed, as in Romans 1:3 
+       old why:  428; the judge keeps the decision) | CURE (record-only until promoted): UNCURED -- the CHANGE TO MEETS quotes the flagged answer again (or a shorter cut of it) 
+       new why: uling 428; the judge keeps the decision) | CURE (record-only until promoted): CURED -- CHANGE TO MEETS, the grade the enforcer gave, on the same answer (pkgAMG)
+     luna E-ANS UNCURED -> CURED | ANSWER CHECK: Hebrews 2:16 -- [CR3] -- MEANS: “He took hold of Abraham's seed.” -- ANSWER: “I hold he is of Abraham's seed, as in Romans 1:3 
+       old why:  428; the judge keeps the decision) | CURE (record-only until promoted): UNCURED -- the CHANGE TO MEETS quotes the flagged answer again (or a shorter cut of it) 
+       new why: uling 428; the judge keeps the decision) | CURE (record-only until promoted): CURED -- CHANGE TO MEETS, the grade the enforcer gave, on the same answer (pkgAMG)
+     luna E-ANS UNCURED -> CURED | ANSWER CHECK: Genesis 3:15 -- [DR3] -- MEANS: “Seed-language is spoken of a woman's offspring.” -- ANSWER: “The woman's ‘seed’ is first appl 
+       old why:  428; the judge keeps the decision) | CURE (record-only until promoted): UNCURED -- the CHANGE TO MEETS quotes the flagged answer again (or a shorter cut of it) 
+       new why: uling 428; the judge keeps the decision) | CURE (record-only until promoted): CURED -- CHANGE TO MEETS, the grade the enforcer gave, on the same answer (pkgAMG)
+34852 Alt Judge Enforcer Build run 0 | cure rows 0 0 | changed 0 | all else equal true
+34852 Alt Send Back Record   run 0 | cure rows 16 16 | changed 1 | all else equal true
+     haiku E-ANS UNCURED -> CURED | ANSWER CHECK: Acts 2:30 -- [CR3] -- MEANS: "loins here are the remote forefather's, not the nearest father's." -- ANSWER: "The 'his' is Davi 
+       old why:  428; the judge keeps the decision) | CURE (record-only until promoted): UNCURED -- the CHANGE TO MEETS quotes the flagged answer again (or a shorter cut of it) 
+       new why: uling 428; the judge keeps the decision) | CURE (record-only until promoted): CURED -- CHANGE TO MEETS, the grade the enforcer gave, on the same answer (pkgAMG)
+34852 Judge Enforcer Build   run 0 | cure rows 0 0 | changed 0 | all else equal false
+34852 Send Back Record       run 0 | cure rows 100 100 | changed 0 | all else equal true
+35067 Alt Judge Enforcer Build run 0 | cure rows 0 0 | changed 0 | all else equal true
+35067 Alt Send Back Record   run 0 | cure rows 0 0 | changed 0 | all else equal true
+35067 Judge Enforcer Build   run 0 | cure rows 0 0 | changed 0 | all else equal false
+35067 Send Back Record       run 0 | cure rows 103 103 | changed 0 | all else equal true
+35173 Alt Judge Enforcer Build run 0 | cure rows 0 0 | changed 0 | all else equal false
+35173 Alt Send Back Record   run 0 | cure rows 14 14 | changed 5 | all else equal true
+     grok E-ANS UNCURED -> CURED | ANSWER CHECK: Matthew 1:25 -- [DR3] -- MEANS: "no knowing is stated before the birth" -- ANSWER: "The verse measures the span after the taki 
+       old why:  428; the judge keeps the decision) | CURE (record-only until promoted): UNCURED -- the CHANGE TO MEETS quotes the flagged answer again (or a shorter cut of it) 
+       new why: uling 428; the judge keeps the decision) | CURE (record-only until promoted): CURED -- CHANGE TO MEETS, the grade the enforcer gave, on the same answer (pkgAMG)
+     grok E-ANS UNCURED -> CURED | ANSWER CHECK: Luke 1:34 -- [DR3] -- MEANS: "Mary's seed is named where no man is known" -- ANSWER: "A present know not and a future concepti 
+       old why:  428; the judge keeps the decision) | CURE (record-only until promoted): UNCURED -- the CHANGE TO MEETS quotes the flagged answer again (or a shorter cut of it) 
+       new why: uling 428; the judge keeps the decision) | CURE (record-only until promoted): CURED -- CHANGE TO MEETS, the grade the enforcer gave, on the same answer (pkgAMG)
+     grok E-ANS UNCURED -> CURED | ANSWER CHECK: Matthew 1:20 -- [DR3] -- MEANS: "the begetting is of the Holy Ghost, in the reassurance given to Joseph" -- ANSWER: "The reass 
+       old why:  428; the judge keeps the decision) | CURE (record-only until promoted): UNCURED -- the CHANGE TO MEETS quotes the flagged answer again (or a shorter cut of it) 
+       new why: uling 428; the judge keeps the decision) | CURE (record-only until promoted): CURED -- CHANGE TO MEETS, the grade the enforcer gave, on the same answer (pkgAMG)
+     grok E-ANS UNCURED -> CURED | ANSWER CHECK: Luke 1:35 -- [DR3] -- MEANS: "the birth of thee is grounded in divine action upon Mary" -- ANSWER: "The divine action anoints  
+       old why:  428; the judge keeps the decision) | CURE (record-only until promoted): UNCURED -- the CHANGE TO MEETS quotes the flagged answer again (or a shorter cut of it) 
+       new why: uling 428; the judge keeps the decision) | CURE (record-only until promoted): CURED -- CHANGE TO MEETS, the grade the enforcer gave, on the same answer (pkgAMG)
+     grok E-ANS UNCURED -> CURED | ANSWER CHECK: Matthew 1:25 -- [DR3] -- MEANS: "Joseph's not-knowing is stated up to the birth" -- ANSWER: "The not-knowing runs from the tak 
+       old why:  428; the judge keeps the decision) | CURE (record-only until promoted): UNCURED -- the CHANGE TO MEETS quotes the flagged answer again (or a shorter cut of it) 
+       new why: uling 428; the judge keeps the decision) | CURE (record-only until promoted): CURED -- CHANGE TO MEETS, the grade the enforcer gave, on the same answer (pkgAMG)
+35173 Judge Enforcer Build   run 0 | cure rows 0 0 | changed 0 | all else equal false
+35173 Send Back Record       run 0 | cure rows 66 66 | changed 0 | all else equal true
+TOTAL {"runs":46,"changed":14,"toCured":14,"toUncured":0,"errs":0}
