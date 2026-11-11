@@ -1,0 +1,9 @@
+N8_open_bracket_cut    s133 1 rev2 1 ok
+N9_two_open            s133 0 rev2 0 ok
+N10_two_level          s133 0 rev2 0 ok
+B1_one_pair            s133 0 rev2 1 ok
+B2_two_pairs           s133 0 rev2 1 ok
+B3_pair_after          s133 1 rev2 1 ok
+B4_bold                s133 0 rev2 1 ok
+B5_empty               s133 0 rev2 1 ok
+C0_plain               s133 1 rev2 1 ok
