@@ -1,0 +1,22 @@
+judgments 60
+{
+ "flags": 674,
+ "kw": 537,
+ "s3": 137,
+ "live_cured": 0,
+ "rvf_cured": 375,
+ "newly": 375,
+ "newly_kw": 320,
+ "newly_s3": 55,
+ "nokey_kw": 0,
+ "nokey_s3": 0,
+ "indep_ok": 375,
+ "indep_bad": 0,
+ "uncured_also": 0,
+ "removes": 0,
+ "nonremoves": 674,
+ "non_newly": 375,
+ "non_review_uncured": 284,
+ "non_review_noreport": 15,
+ "non_review_other": 0
+}

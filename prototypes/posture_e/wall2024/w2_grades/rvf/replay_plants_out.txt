@@ -1,0 +1,37 @@
+== (A) replay, live s132 vs pkgRVF
+   stored vs live replay: lines differing 445 first 13 "- Panel judge 1: sol (openai/gpt-6.1-sol): **HELD** (a grade of the defender's chain: Claude, arguing the standard readi" | "- Panel judge 1: Gemini (google/gemini-3.8-flash): **HELD** (a grade of the defender's chain: Claude, arguing the standa"
+33149 | flag rows 48 | Review->Cured 41 {"S3":16,"K-W":25} | other changed lines 0 | lines 7344 7344 | live replay equals stored md false
+   stored vs live replay: lines differing 305 first 13 "- Panel judge 1: sol (openai/gpt-6.1-sol): **HELD** (a grade of the defender's chain: Claude, arguing the standard readi" | "- Panel judge 1: Gemini (google/gemini-3.8-flash): **HELD** (a grade of the defender's chain: Claude, arguing the standa"
+33371 | flag rows 58 | Review->Cured 51 {"S3":9,"K-W":42} | other changed lines 0 | lines 9941 9941 | live replay equals stored md false
+   stored vs live replay: lines differing 359 first 13 "- Panel judge 1: sol (openai/gpt-6.1-sol): **HELD** (a grade of the defender's chain: Claude, arguing the standard readi" | "- Panel judge 1: Gemini (google/gemini-3.8-flash): **HELD** (a grade of the defender's chain: Claude, arguing the standa"
+33490 | flag rows 68 | Review->Cured 48 {"S3":10,"K-W":38} | other changed lines 0 | lines 9340 9340 | live replay equals stored md false
+   stored vs live replay: lines differing 1 first 2096 "**Run time:** 59 min 24 s (started Nov 7, 5:29 PM CST, transcript written Nov 7, 6:29 PM CST)." | "**Run time:** 5361 min 16 s (started Nov 7, 5:29 PM CST, transcript written Nov 11, 10:51 AM CST)."
+33497 | flag rows 54 | Review->Cured 52 {"S3":16,"K-W":36} | other changed lines 0 | lines 9939 9939 | live replay equals stored md false
+34299 no Format Markdown run
+34626 no Format Markdown run
+34703 no Format Markdown run
+   stored vs live replay: lines differing 6973 first 14 "- Panel judge 2: sol (openai/gpt-6.1-sol): **BROKEN** (a grade of the defender's chain: Claude, arguing the standard rea" | "- Panel judge 2: ChatGPT (openai/gpt-6.1-terra): **BROKEN** (a grade of the defender's chain: Claude, arguing the standa"
+34726 | flag rows 139 | Review->Cured 87 {"S3":27,"K-W":60} | other changed lines 0 | lines 9428 9428 | live replay equals stored md false
+34780 no Format Markdown run
+   stored vs live replay: lines differing 243 first 13 "- Panel judge 1: Claude Haiku (anthropic/claude-haiku-5.5): **BROKEN** (a grade of the defender's chain: Claude, arguing" | "- Panel judge 1: luna (openai/gpt-6-luna): **BROKEN** (a grade of the defender's chain: Claude, arguing the standard rea"
+34852 | flag rows 65 | Review->Cured 57 {"K-W":47,"S3":10} | other changed lines 0 | lines 8518 8518 | live replay equals stored md false
+   stored vs live replay: lines differing 296 first 14 "- Panel judge 2: sol (openai/gpt-6.1-sol): **BROKEN** (a grade of the defender's chain: Claude, arguing the standard rea" | "- Panel judge 2: ChatGPT (openai/gpt-6.1-terra): **BROKEN** (a grade of the defender's chain: Claude, arguing the standa"
+35067 | flag rows 75 | Review->Cured 71 {"S3":41,"K-W":30} | other changed lines 0 | lines 7602 7602 | live replay equals stored md false
+TOTAL Review->Cured 407 other 0
+== (B) plants on 35067 (pkgRVF Format Markdown)
+OK   P0 control: luna K-W #1 as stored | rows 1 Cured | expected Cured
+OK   P1 luna K-W #1 report UNCURED | rows 1 Review | expected Review
+OK   P2 luna S3 #1 report UNCURED | rows 1 Review | expected Review
+OK   P3 S3 flag in curly quotes, report straight | rows 1 Cured | expected Cured
+OK   P4 K-W item with a colon (flag and report) | rows 1 Cured | expected Cured
+OK   P5 K-W flag with no #N | rows 1 Review | expected Review
+OK   P6 challenger DR4 S3 (flag and report) | rows 1 Cured | expected Cured
+OK   P7 S3 flag side differs from report (flag CHALLENGER DR4, report DEFENDER CR4) | rows 1 Review | expected Review
+OK   P8 S3 flag round differs (flag CR3, report CR4) | rows 1 Review | expected Review
+OK   P9 other seat: chatgpt report UNCURED leaves luna Cured | rows 10 Cured,Cured,Cured,Cured,Cured,Cured,Cured,Cured,Cured,Cured | expected Cured
+OK   P9b same plant: chatgpt K-W rows Review | rows 10 Review,Review,Review,Review,Review,Review,Review,Review,Review,Review | expected Review
+OK   P10 S3 flag sentence changed after 40 letters (key still equal; stays Cured) | rows 1 Cured | expected Cured
+FAIL P11 LIMIT (W1): two S3 flags share the first 40 letters, second report UNCURED (correct: Review) | rows 1 Cured | expected Review
+FAIL P12 LIMIT: S3 report UNCURED and the flag is word for word another CURED one (correct: Review) | rows 2 Cured,Cured | expected Review
+OK   P13 K-W flag lower-case item, report upper-case | rows 1 Cured | expected Cured
+plants OK 13 of 15
