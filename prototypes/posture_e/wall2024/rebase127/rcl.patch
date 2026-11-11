@@ -1,0 +1,25 @@
+--- a.js	2026-11-11 13:06:28.797839171 +0000
++++ r.js	2026-11-11 13:06:28.797839171 +0000
+@@ -17,13 +17,21 @@
+   if(m){out.push({id:m[1].toUpperCase(),side:'DEFENDER',by:'the Oracle (OPPONENT\'S CONTRADICTIONS, [DR4])',kind:m[2].toUpperCase(),n:+m[3],earlier_round:m[4].toUpperCase(),earlier_q:m[5],closing_round:m[6].toUpperCase(),closing_q:m[7],why:(m[8]||'').trim()});continue;}
+   if(/^#|^[A-Z][A-Z' ]{6,}:/.test(s)&&out.length)break;}
+  return out;};
++const cecReclaim=(F,links,prev)=>{/* pkgRCL rev 3: a close keeps links "as declared" after a narrowing; names from the clause "as declared" closes; no negation, no condition, no question, no other side, not inside a quotation */const out=[],st=x=>x.replace(/[*_]+/g,'').replace(/^[\s>#-]+/,'').trim(),SE=/(?<=[.!?]["”’')\]]*)\s+/;let k=Math.max(0,...prev.map(c=>+String(c.id).slice(1)||0));
++ for(const [sd,P,r,O] of [['DEFENDER','CR',['cr2','cr3','cr4'],/\b(?:challenger|opponent|other side)/i],['CHALLENGER','DR',['gr2','dr3','dr4'],/\b(?:defender|opponent|other side)/i]]){let q=null,cl='';
++  for(const x of String(F[r[2]]||'').split(/\n+/).flatMap(l=>l.split(SE)).map(st)){const m=x.match(/\bas declared\b/i);if(!m)continue;const c=x.slice(0,m.index+11).split(/[;:]|\bbut\b|\bas narrowed\b/i).pop()+x.slice(m.index+11).split(/\band\b|[;:.]|\bbut\b/i)[0];
++   if(/\b(?:stands?|keep|kept|holds?|remains?)\b/i.test(c)&&!/\b(?:not|never|no longer|cannot)\b|n[’']t\b/i.test(c)&&!/\b(?:if|unless|whether|would|should|could)\b/i.test(c)&&!/\?["”’')\]]*$/.test(x)&&!O.test(c)&&(x.slice(0,m.index).match(/["“”]/g)||[]).length%2===0){q=x;cl=c;break;}}
++  if(!q)continue;const T=sd[0],nm=new Set();for(const m of cl.matchAll(new RegExp('\\b'+T+'(\\d+)(?:\\s*(?:to|through|-|–)\\s*'+T+'?(\\d+))?','gi')))for(let i=+m[1];i<=+(m[2]||m[1]);i++)nm.add(i);
++  const last={};r.slice(0,2).forEach((key,j)=>{for(const l of String(F[key]||'').split('\n')){const m=st(l).match(/^LINK\s+(\d+)\s*:\s*(NARROWED TO|CONCEDED?|WITHDRAWN|DROPPED)\b.*$/i);if(m)last[+m[1]]=[P+(j+2),m[0].split(SE)[0],m[2].toLowerCase().replace(/ to$/,'')];}});
++  for(const n of (links[sd]||[]).filter(n=>last[n]&&(!nm.size||nm.has(n)))){const e=last[n];out.push({id:'X'+(++k),side:sd,by:'the code (pkgRCL)',kind:'LINK',n,earlier_round:e[0],earlier_q:e[1],closing_round:P+'4',closing_q:q,why:'the code found a closing sentence that keeps LINK '+n+' "as declared" and a line in ['+e[0]+'] that '+e[2]+' it; decide whether the close asserts again a part the earlier line left out (a part left out of a narrowed restatement counts as dropped)'});}}
++ return out;};
+ const S=$('Init Seats').first().json;let RS=null;try{RS=$('Resolve Seats').first().json;}catch(e){RS=null;}
+ let RGL=null;try{if($('Regrade Load').isExecuted)RGL=$('Regrade Load').first().json;}catch(e){RGL=null;}
+ let F=null;try{F=RGL?RGL.f:$('Final Output').first().json;}catch(e){F=null;}
+ const ds=RS&&RS.deepseek&&RS.deepseek.api_model?RS.deepseek:null;
+ const miss=F?['cr1','cr2','cr3','cr4','gr1','gr2','dr3','dr4'].filter(k=>!String(F[k]||'').trim()):['all rounds'];
+ if(!F||!ds||F&&(!String(F.cr4||'').trim()&&!String(F.dr4||'').trim()))return [{json:{cec_skip:true,why:!F?'no rounds found':!ds?'no DeepSeek model_config row':'no closing round',run_token:S.run_token}}];
+-const links=cecLinks(F);const cands=cecOracle(F);
++const links=cecLinks(F);const cands=cecOracle(F);cands.push(...cecReclaim(F,links,cands));
+ const PROMPT="You are the closing enforcer. A debater's closing round may not contradict what the same debater stated in its earlier rounds. Below are one debater's four rounds.\nRead its closing round against its earlier rounds. List every closing sentence that cannot be true together with an earlier sentence, and answer every candidate listed.\nA contradiction is two statements that cannot both be true. A closing sentence that asserts again, as the debater's own, what it withdrew, dropped or gave up in an earlier round IS a contradiction.\nIt is NOT a contradiction when the closing sentence: grants, concedes, narrows or withdraws something; states or quotes the other side's position; answers a press with a further reason the earlier sentence leaves room for; or differs only in wording.\nQuote both sentences word for word and name the link: the link whose closing block holds the sentence, else the link the earlier sentence supports.\nReply with one line per contradiction and per candidate, and nothing else:\nCLOSE-CONTRADICTION: <candidate id or NEW> -- <DEFENDER|CHALLENGER> -- LINK <n> -- CONFIRMED | NOT A CONTRADICTION -- EARLIER [<round>] \"<words>\" -- CLOSING [<round 4>] \"<words>\" -- <one sentence: why both cannot be true, or why they can>\nIf you find none and there is no candidate, reply: CLOSE-CONTRADICTION: NONE";
+ const R=(lab,k)=>'=== ['+lab+'] ===\n'+(String(F[k]||'').trim()||'(no text)');
+ const lk=sd=>links[sd].length?links[sd].map(n=>(sd==='DEFENDER'?'D':'C')+n+' = LINK '+n).join(', '):'(none read)';
