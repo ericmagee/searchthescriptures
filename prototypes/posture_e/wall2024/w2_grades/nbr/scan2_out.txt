@@ -1,0 +1,12 @@
+patterns equal across nodes: old true new true
+ old \[(?:EXTRACTOR|AUDIT) v\d+[^\]\n]*REVIEW THIS ROW[^\]\n]*\]
+ new \[(?:EXTRACTOR|AUDIT) v\d+(?:[^\]\[\n]|\[[^\]\[\n]*\])*REVIEW THIS ROW(?:[^\]\[\n]|\[[^\]\[\n]*\])*\]|\[(?:EXTRACTOR|AUDIT) v\d+[^\]\n]*REVIEW THIS ROW[^\]\n]*\]
+== PANEL (debate_judgments verdict_raw; Format Markdown filter: not "single judge") {"texts":329,"old":4493,"new":4572,"added":79,"added_inner":79,"lost":0,"changed":0,"rtr_total":4643,"rtr_unmatched":0,"lone_open":0,"two_level":0}
+== SINGLE JUDGE (debate_results independent_verdict_raw; Build Save Body, no filter) {"texts":143,"old":1777,"new":2022,"added":245,"added_inner":245,"lost":0,"changed":0,"rtr_total":2025,"rtr_unmatched":3,"lone_open":0,"two_level":0}
+    unmatched: [AUDIT v18: COLLISION POINTS ENTRY NOT READ: "PRESSED: LUKE 3:31 -- [[CR3]] -- "LUKE 3:31 "WHICH WAS [THE ". REVIEW THIS ROW.]
+    unmatched: [AUDIT v18: COLLISION POINTS ENTRY NOT READ: "PRESSED: ISAIAH 7:11 -- [[CR3]] -- "ISAIAH 7:11 "ASK IT EITH". REVIEW THIS ROW.]
+    unmatched: [AUDIT v18: COLLISION POINTS ENTRY NOT READ: "D6 VS C3 (MATTHEW 1:20): STANDS -- ANSWERED IN [CR3] AND [CR". REVIEW THIS ROW.]
+== review_notes (stored): bracketed single-judge flags 245 found in review_notes 0 | unbracketed 1777 found 1771
+    unbracketed not found: [EXTRACTOR v3: NO PARSEABLE VERDICT - verdict_tag=UNKNOWN (fail-closed). REVIEW THIS ROW.]
+    unbracketed not found: [EXTRACTOR v15: NEW FORMAT PRESENT BUT NO KEYSTONE LINE - keystone=null. REVIEW THIS ROW.]
+    unbracketed not found: [EXTRACTOR v15: N CHECK - CLAUSE n=null AGAINST DECLARED CHAIN COUNT null. REVIEW THIS ROW.]
