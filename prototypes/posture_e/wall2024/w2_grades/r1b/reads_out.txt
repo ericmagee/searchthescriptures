@@ -1,0 +1,87 @@
+NEW D1 Build {"missing":[],"nonlit":[],"glob":["items","this"]}
+NEW C1 Extract {"missing":[],"nonlit":[],"glob":["this","$1","items"]}
+NEW D2 Build {"missing":[],"nonlit":[],"glob":["this","$1","items"]}
+NEW D2 Extract {"missing":[],"nonlit":[],"glob":["this","$1","items"]}
+NEW C2 Build {"missing":[],"nonlit":[],"glob":["this","$1","items"]}
+NEW C2 Extract {"missing":[],"nonlit":[],"glob":["this","$1","items"]}
+NEW D3 Build {"missing":[],"nonlit":[],"glob":["this","$1","items"]}
+NEW D3 Extract {"missing":[],"nonlit":[],"glob":["this","$1","items"]}
+NEW C3 Build {"missing":[],"nonlit":[],"glob":["this","$1","items"]}
+NEW C3 Extract {"missing":[],"nonlit":[],"glob":["this","$1","items"]}
+NEW Build Synthesis {"missing":[],"nonlit":[],"glob":["items","this"]}
+NEW Build Independent Verdict {"missing":[],"nonlit":[],"glob":["this","items","$1"]}
+OLD Extract Independent Verdict {"missing":[],"nonlit":[],"glob":["items","this","$1","$1XCLAUSELINEX"]}
+NEW Build Save Body {"missing":[],"nonlit":[],"glob":["$1","items","this"]}
+NEW Panel Build {"missing":[],"nonlit":[],"glob":["this","items","$1"]}
+OLD Panel Payloads {"missing":[],"nonlit":[],"glob":["this","$1","items"]}
+NEW Format Markdown {"missing":[],"nonlit":[],"glob":["$1","items","this"]}
+NEW Citation Scan {"missing":[],"nonlit":[],"glob":["this","$1","items"]}
+NEW Quote Report {"missing":[],"nonlit":[],"glob":["items","this","$1"]}
+NEW Reserve Build {"missing":[],"nonlit":[],"glob":["this","items"]}
+OLD Cure Build {"missing":[],"nonlit":["n"],"glob":["this","$1","items","$2"]}
+OLD Cure Normalize {"missing":[],"nonlit":["n"],"glob":["this","$1","items","$2"]}
+OLD Cure Check {"missing":[],"nonlit":["n"],"glob":["this","$1","items","$2"]}
+OLD Panel Cure Build 1 {"missing":[],"nonlit":["n"],"glob":["this","$1","items","$2"]}
+OLD Panel Cure Normalize 1 {"missing":[],"nonlit":["n"],"glob":["this","$1","items","$2"]}
+OLD Panel Cure Build 2 {"missing":[],"nonlit":["n"],"glob":["this","$1","items","$2"]}
+OLD Panel Cure Normalize 2 {"missing":[],"nonlit":["n"],"glob":["this","$1","items","$2"]}
+OLD Panel Cure Build 3 {"missing":[],"nonlit":["n"],"glob":["this","$1","items","$2"]}
+OLD Panel Cure Normalize 3 {"missing":[],"nonlit":["n"],"glob":["this","$1","items","$2"]}
+OLD Panel Cure Check {"missing":[],"nonlit":["n"],"glob":["this","$1","items","$2"]}
+OLD Alternate Payloads {"missing":[],"nonlit":[],"glob":["this","$1","items"]}
+OLD Alternate Cure Build {"missing":[],"nonlit":["n"],"glob":["this","$1","items","$2"]}
+OLD Alternate Cure Normalize {"missing":[],"nonlit":["n"],"glob":["this","$1","items","$2"]}
+OLD Alternate Merge Seat {"missing":[],"nonlit":["n"],"glob":["this","$1","items","$2"]}
+NEW D4 Build {"missing":[],"nonlit":[],"glob":["this","$1","items"]}
+NEW D4 Extract {"missing":[],"nonlit":[],"glob":["this","$1","items"]}
+NEW C4 Build {"missing":[],"nonlit":[],"glob":["this","$1","items"]}
+NEW C4 Extract {"missing":[],"nonlit":[],"glob":["this","items"]}
+NEW Accept Return Build {"missing":[],"nonlit":[],"glob":["this","items"]}
+NEW Accept DS Return Build {"missing":[],"nonlit":[],"glob":["this","items"]}
+NEW D2 Lexicon Plan {"missing":[],"nonlit":[],"glob":["this","$1"]}
+NEW C2 Lexicon Plan {"missing":[],"nonlit":[],"glob":["this","$1"]}
+NEW D3 Lexicon Plan {"missing":[],"nonlit":[],"glob":["this","$1"]}
+NEW C3 Lexicon Plan {"missing":[],"nonlit":[],"glob":["this","$1"]}
+NEW D4 Lexicon Plan {"missing":[],"nonlit":[],"glob":["this","$1"]}
+NEW C4 Lexicon Plan {"missing":[],"nonlit":[],"glob":["this","$1"]}
+NEW L2 Lexicon Plan {"missing":[],"nonlit":[],"glob":["this","$1"]}
+NEW L2 Count Plan {"missing":[],"nonlit":[],"glob":["items","this","$1"]}
+NEW Enforcer Build {"missing":[],"nonlit":[],"glob":["$1","this"]}
+OLD Judge Enforcer Build {"missing":[],"nonlit":[],"glob":["this","items","$1"]}
+OLD Judge Enforcer Record {"missing":[],"nonlit":[],"glob":["$1","items","this"]}
+OLD Send Back Build {"missing":[],"nonlit":["n"],"glob":["$1","this","items"]}
+OLD Send Back Record {"missing":[],"nonlit":[],"glob":["this","items","$1"]}
+OLD Gate Build {"missing":[],"nonlit":["n"],"glob":["this","$1","items","$2"]}
+OLD Gate Record {"missing":[],"nonlit":["n"],"glob":["this","$1","items","$2"]}
+OLD Alt Judge Enforcer Build {"missing":[],"nonlit":[],"glob":["this","items","$1"]}
+OLD Alt Judge Enforcer Record {"missing":[],"nonlit":[],"glob":["$1","items","this"]}
+OLD Alt Send Back Build {"missing":[],"nonlit":["n"],"glob":["$1","this","items"]}
+OLD Alt Send Back Record {"missing":[],"nonlit":[],"glob":["this","items","$1"]}
+OLD Alt Gate Build {"missing":[],"nonlit":["n"],"glob":["this","$1","items","$2"]}
+OLD Alt Gate Record {"missing":[],"nonlit":["n"],"glob":["this","$1","items","$2"]}
+OLD Alternate Merge 1 {"missing":[],"nonlit":["n"],"glob":["items","this","$1","$2"]}
+NEW C4G Extract {"missing":[],"nonlit":[],"glob":["this","items"]}
+NEW C3G Extract {"missing":[],"nonlit":[],"glob":["this","$1","items"]}
+NEW C1B Extract {"missing":[],"nonlit":[],"glob":["this","items","$1"]}
+NEW D2B Extract {"missing":[],"nonlit":[],"glob":["this","items","$1"]}
+NEW C2B Extract {"missing":[],"nonlit":[],"glob":["this","items","$1"]}
+NEW D3B Extract {"missing":[],"nonlit":[],"glob":["this","items","$1"]}
+NEW C3B Extract {"missing":[],"nonlit":[],"glob":["this","items","$1"]}
+NEW D4B Extract {"missing":[],"nonlit":[],"glob":["this","items","$1"]}
+NEW C4B Extract {"missing":[],"nonlit":[],"glob":["this","items"]}
+NEW Judge Enforcer Retry Build {"missing":[],"nonlit":[],"glob":["$1"]}
+NEW Alt Judge Enforcer Retry Build {"missing":[],"nonlit":[],"glob":["$1"]}
+OLD R2 Alternate Build {"missing":[],"nonlit":["n"],"glob":["this","items","$1","$2"]}
+OLD R2 Alternate Merge Seat {"missing":[],"nonlit":["n"],"glob":["this","$1","items","$2"]}
+OLD R2 Alt Judge Enforcer Build {"missing":[],"nonlit":[],"glob":["this","items","$1"]}
+OLD R2 Alternate Payloads {"missing":[],"nonlit":[],"glob":["this","$1","items"]}
+OLD R2 Alt Judge Enforcer Record {"missing":[],"nonlit":[],"glob":["$1","items","this"]}
+OLD R2 Alternate Cure Build {"missing":[],"nonlit":["n"],"glob":["this","$1","items","$2"]}
+NEW R2 Alt Judge Enforcer Retry Build {"missing":[],"nonlit":[],"glob":["$1"]}
+OLD R2 Alt Send Back Build {"missing":[],"nonlit":["n"],"glob":["$1","this","items"]}
+OLD R2 Alternate Cure Normalize {"missing":[],"nonlit":["n"],"glob":["this","$1","items","$2"]}
+OLD R2 Alt Send Back Record {"missing":[],"nonlit":[],"glob":["this","items","$1"]}
+OLD R2 Alt Gate Build {"missing":[],"nonlit":["n"],"glob":["this","$1","items","$2"]}
+OLD R2 Alt Gate Record {"missing":[],"nonlit":["n"],"glob":["this","$1","items","$2"]}
+OLD R2 Alternate Merge {"missing":[],"nonlit":["n"],"glob":["items","this","$1","$2"]}
+stubs 86 newly packed 45 with a read missing from the if(false) list 0

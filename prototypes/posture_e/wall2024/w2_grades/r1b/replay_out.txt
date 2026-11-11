@@ -1,0 +1,49 @@
+D1 Build runs 30
+C1 Extract runs 30
+D2 Build runs 30
+D2 Extract runs 30
+C2 Build runs 30
+C2 Extract runs 30
+D3 Build runs 30
+D3 Extract runs 30
+C3 Build runs 30
+C3 Extract runs 30
+Build Synthesis runs 29
+Build Independent Verdict runs 29
+Build Save Body runs 29
+Panel Build runs 29
+DETAIL Format Markdown 34108 first difference at 1365433 | live run twice equal: false (differ at 1365433) | live: "r than surrendering it.\\\\nCORRECTED RESULT: HELD-1\\\"\\n}\\n```\\n\\n\",\"chars\":1340238,\"judges\":3,\"run_token\":\"ODV1-34108-3to8dgrt\"}}]" | r1b: "r than surrendering it.\\\\nCORRECTED RESULT: HELD-1\\\"\\n}\\n```\\n\\n\",\"chars\":1340239,\"judges\":3,\"run_token\":\"ODV1-34108-3to8dgrt\"}}]"
+Format Markdown runs 29
+Citation Scan runs 30
+Quote Report runs 29
+Reserve Build runs 29
+D4 Build runs 30
+D4 Extract runs 30
+C4 Build runs 30
+C4 Extract runs 30
+Accept Return Build runs 29
+Accept DS Return Build runs 0
+D2 Lexicon Plan runs 30
+C2 Lexicon Plan runs 30
+D3 Lexicon Plan runs 30
+C3 Lexicon Plan runs 30
+D4 Lexicon Plan runs 30
+C4 Lexicon Plan runs 30
+L2 Lexicon Plan runs 29
+L2 Count Plan runs 29
+Enforcer Build runs 27
+C4G Extract runs 29
+C3G Extract runs 29
+C1B Extract runs 29
+D2B Extract runs 29
+C2B Extract runs 29
+D3B Extract runs 29
+C3B Extract runs 29
+D4B Extract runs 29
+C4B Extract runs 29
+Judge Enforcer Retry Build runs 29
+Alt Judge Enforcer Retry Build runs 17
+R2 Alt Judge Enforcer Retry Build runs 0
+replays 1254 equal 1253 differ 1
+ DIFF Format Markdown 34108 | live [{"json":{"fileName":"Debate [Claude v Claude Opus] - Did Christ have a biological father? - 2026-11-09.md","md":"# TRUT | r1b [{"json":{"fileName":"Debate [Claude v Claude Opus] - Did Christ have a biological father? - 2026-11-09.md","md":"# TRUT
+no stored input: ["Accept DS Return Build (preds Accept Return Call openrouter,Accept OR Return?)","R2 Alt Judge Enforcer Retry Build (preds R2 Alt Judge Enforcer Call deepseek)"]
