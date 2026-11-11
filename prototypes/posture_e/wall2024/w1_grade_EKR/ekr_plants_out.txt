@@ -1,0 +1,15 @@
+OK     E-KEY set aside | keystone BROKEN on the confirmed link
+OK     E-KEY asked     | keystone BROKEN, another link confirmed
+OK     E-KEY asked     | keystone STANDS on the confirmed link (W2 limit b: still asked)
+OK     E-KEY asked     | keystone BROKEN, only the challenger link 5 confirmed
+OK     E-KEY asked     | keystone BROKEN, nothing confirmed
+OK     E-KEY asked     | keystone WITHDRAWN on the confirmed link
+OK     E-RES set aside | the 35173 form
+OK     E-RES set aside | "contradictory"
+OK     E-RES set aside | names D3 while D5 is confirmed (W2 limit a)
+OK     E-RES set aside | NEW LIMIT: a negated "contradiction" is set aside
+OK     E-RES asked     | only a challenger link confirmed
+OK     E-RES asked     | DEFENDER WINS
+OK     E-RES asked     | UNDERDETERMINED
+OK     E-RES asked     | no contradiction word: still asked
+plants 14 as expected 14

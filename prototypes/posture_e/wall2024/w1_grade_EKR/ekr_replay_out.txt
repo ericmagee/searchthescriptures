@@ -1,0 +1,17 @@
+34626 Judge Enforcer Build         set aside 2 | other items added 0 | pkgEKR rows 2 | other code rows equal true | outputs 8 8 | DeepSeek input -3065
+     luna     E-KEY | rows 1 role panel | stored: ENFORCER AGREE | KEYSTONE: D6 -- BROKEN -- D6, the conclusion that Christ had no biological father, is broken by the confirmed closing co
+     luna     E-RES | rows 1 role panel | stored: ENFORCER AGREE | RESULT: CHALLENGER WINS — The defender’s declared conclusion link is broken by the confirmed closing contradiction, so i
+34703 Judge Enforcer Build         set aside 3 | other items added 0 | pkgEKR rows 3 | other code rows equal true | outputs 8 8 | DeepSeek input -5835
+     luna     E-KEY | rows 1 role panel | stored: ENFORCER AGREE | KEYSTONE: D6 -- BROKEN -- LINK 6 BROKEN BY A CONFIRMED CLOSING CONTRADICTION
+     chatgpt  E-KEY | rows 1 role panel | stored: ENFORCER AGREE | KEYSTONE: D6 -- BROKEN -- The conclusion that Christ had no biological father is subject to the confirmed closing contra
+     sol      E-KEY | rows 1 role panel | stored: ENFORCER AGREE | KEYSTONE: D6 -- BROKEN -- LINK 6 BROKEN BY A CONFIRMED CLOSING CONTRADICTION
+34726 Judge Enforcer Build         set aside 1 | other items added 0 | pkgEKR rows 1 | other code rows equal true | outputs 10 10 | DeepSeek input -205
+     luna     E-RES | rows 1 role panel | stored: ENFORCER AGREE | RESULT: CHALLENGER WINS -- the defender's own contradictory readings break its timing link, while the challenger builds 
+35173 Judge Enforcer Build         set aside 4 | other items added 0 | pkgEKR rows 4 | other code rows equal true | outputs 8 8 | DeepSeek input -4011
+     luna     E-KEY | rows 1 role panel | stored: ENFORCER AGREE | KEYSTONE: D5 -- BROKEN -- the conclusion that Christ had no biological father among men.
+     chatgpt  E-KEY | rows 1 role panel | stored: ENFORCER AGREE | KEYSTONE: D5 -- BROKEN -- LINK 5 BROKEN BY A CONFIRMED CLOSING CONTRADICTION
+     sol      E-KEY | rows 1 role panel | stored: ENFORCER AGREE | KEYSTONE: D5 -- BROKEN -- LINK 5 BROKEN BY A CONFIRMED CLOSING CONTRADICTION
+     luna     E-RES | rows 1 role panel | stored: ENFORCER DISAGREE | RESULT: CHALLENGER WINS -- D5, the defender’s conclusion link, is broken by the record’s closing contradiction rule, and
+35173 Alt Judge Enforcer Build     set aside 1 | other items added 0 | pkgEKR rows 1 | other code rows equal true | outputs 5 5 | DeepSeek input -1541
+     grok     E-KEY | rows 1 role alternate | stored: ENFORCER DISAGREE | KEYSTONE: D5 -- BROKEN -- LINK 5 BROKEN BY A CONFIRMED CLOSING CONTRADICTION
+TOTAL {"aside":11,"rowsOK":11,"otherChange":0,"dis":2,"agr":9}
