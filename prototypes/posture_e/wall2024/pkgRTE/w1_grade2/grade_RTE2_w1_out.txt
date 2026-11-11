@@ -1,0 +1,27 @@
+cand parent_s116_RTE2.json sha e9a617b42e16c1ce
+SIZE Shared Library 328 | nodes 418 418 | rest equal true
+K1 "RETRACTED: D1 vs C3 -- I stand by it" | live N | cand N | expected N PASS 
+K2 "RETRACTED: D1 vs C3 -- the ruling holds" | live N | cand A | expected N FAIL | equals bare form true
+K3 "RETRACTED: D1 vs C3 -- the break is confirmed" | live N | cand A | expected N FAIL | equals bare form true
+K4 "RETRACTED: D1 vs C3 -- left as is" | live N | cand A | expected N FAIL | equals bare form true
+K5 "RETRACTED: D1 vs C3 -- no change" | live N | cand A | expected N FAIL | equals bare form true
+K6 "RETRACTED: D1 vs C3 -- the link stays broken" | live N | cand A | expected N FAIL | equals bare form true
+K7 "RETRACTED: D1 vs C3 -- still broken" | live N | cand A | expected N FAIL | equals bare form true
+K8 "RETRACTED: D1 vs C3 -- correct as written" | live N | cand A | expected N FAIL | equals bare form true
+K9 "RETRACTED: D1 vs C3 -- I don't take it back" | live N | cand A | expected N FAIL | equals bare form true
+K10 "RETRACTED: D1 vs C3 -- the FORCED ruling is right" | live N | cand A | expected N FAIL | equals bare form true
+K11 "RETRACTED: D1 vs C3 -- I will not withdraw it" | live N | cand N | expected N PASS 
+K12 "RETRACTED: D1 vs C3 -- reaffirmed" | live N | cand A | expected N FAIL | equals bare form true
+K13 "RETRACTED: D1 vs C3 -- not retracted" | live N | cand N | expected N PASS 
+K14 "RETRACTED: D1 vs C3 -- ruling sustained" | live N | cand A | expected N FAIL | equals bare form true
+W1 "RETRACTED: D1 vs C3 -- withdrawn" | live N | cand A | expected A PASS | equals bare form true
+W2 "RETRACTED: D1 vs C3 -- the ruling was wrong; [CR3] answers the  | live N | cand A | expected A PASS | equals bare form true
+W3 "RETRACTED: D1 vs C3 -- I retract it: the link is not forced" | live N | cand A | expected A PASS | equals bare form true
+W4 "RETRACTED: D1 vs C3 -- not a contradiction after all" | live N | cand A | expected A PASS | equals bare form true
+W5 "RETRACTED: D1 vs C3 -- the earlier break does not hold" | live N | cand A | expected A PASS | equals bare form true
+W6 "RETRACTED: D1 vs C3 -- the meaning-based ruling is withdrawn (C | live N | cand A | expected A PASS | equals bare form true
+W7 "RETRACTED: D1 vs C3" | live A | cand A | expected A PASS | equals bare form true
+W8 "RETRACTED: D1 vs C3 -- the defender's reading stands, so the ru | live N | cand N | expected A FAIL 
+F1 plants 10 / 22 | fails K2,K3,K4,K5,K6,K7,K8,K9,K10,K12,K14,W8
+F2 stored 34780 not_sent live 4 cand 7
+F2 rev 2 equals rev 1 on 34780: true
