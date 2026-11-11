@@ -14,3 +14,7 @@ const line=(c,v,why)=>'CLOSE-CONTRADICTION: '+c.id+' -- '+c.side+' -- LINK '+c.n
  console.log('##',ex,'all code candidates CONFIRMED\n',JSON.stringify(await sim(ex,(r,cs)=>r+'\n'+cs.map(c=>line(c,'CONFIRMED','planted')).join('\n'))));
  console.log('##',ex,'all code candidates NOT A CONTRADICTION\n',JSON.stringify(await sim(ex,(r,cs)=>r+'\n'+cs.map(c=>line(c,'NOT A CONTRADICTION','planted')).join('\n'))));
  if(fs.existsSync('/mnt/project-files/wall2024/parent_s119_CLK3.json'))console.log('##',ex,'all CONFIRMED, Record of pkgCLK rev 3\n',JSON.stringify(await sim(ex,(r,cs)=>r+'\n'+cs.map(c=>line(c,'CONFIRMED','planted')).join('\n'),'/mnt/project-files/wall2024/parent_s119_CLK3.json')));}})();
+if(process.env.CROSS)(async()=>{const ex='ex34852_full.json';
+ const mk=(r,cs)=>{const c=cs[0];return r+'\n'+line(c,'CONFIRMED','planted')+'\n'+line({...c,id:'NEW'},'NOT A CONTRADICTION','planted');};
+ console.log('## CROSS X3 CONFIRMED + NEW NOT A CONTRADICTION, same quotations, LINK 1 (live Record)\n',JSON.stringify(await sim(ex,mk)));
+ console.log('## same, Record of pkgCLK rev 3\n',JSON.stringify(await sim(ex,mk,'/mnt/project-files/wall2024/parent_s119_CLK3.json')));})();
