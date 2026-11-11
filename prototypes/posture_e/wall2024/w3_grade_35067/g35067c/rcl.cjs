@@ -1,0 +1,11 @@
+const fs=require('fs');
+const L=fs.readFileSync('ceb_code.js','utf8').split('\n');
+const pre=L.slice(1,26).join('\n');
+const row=JSON.parse(fs.readFileSync('row_clean.json'));
+const F={cr1:row.claude_r1,cr2:row.claude_r2,cr3:row.engine_r3,cr4:row.defender_r4,gr1:row.engine_r1,gr2:row.engine_r2,dr3:row.challenger_r3,dr4:row.challenger_r4};
+const f=new Function('F',pre+'\nconst links=cecLinks(F);const out=cecReclaim(F,links,[]);return {links,out,decl:cecDeclared(F),dl:cecDlinks(F),oracle:cecOracle(F)};');
+const r=f(F);
+fs.writeFileSync('rcl_out.json',JSON.stringify(r,null,1));
+console.log(JSON.stringify(r.links),r.out.map(o=>[o.id,o.side,o.n,o.closing_q.slice(0,80)]));
+console.log(r.oracle.map(o=>[o.id,o.n,o.earlier_q.slice(0,60),o.closing_q.slice(0,60)]));
+console.log(r.decl.slice(0,300));

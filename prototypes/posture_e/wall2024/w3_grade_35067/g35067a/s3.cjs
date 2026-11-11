@@ -1,0 +1,10 @@
+const L=require('./lib.cjs');
+const d=L.items('Derive Outcome')[0];
+const c=Object.assign({},d); delete c.citation_block;
+console.log(JSON.stringify(c,null,1).slice(0,9000));
+const an=L.items('Alternate Needed?')[0];
+console.log('SUBST',JSON.stringify(an.substitution), JSON.stringify(an.panel_effective));
+console.log('enf428',JSON.stringify(an.enf428)); console.log('enf421',JSON.stringify(an.enf421));
+console.log('sendback',JSON.stringify(an.sendback).slice(0,3000));
+console.log('gate',JSON.stringify(an.gate).slice(0,3000));
+console.log('summary',JSON.stringify(an.summary).slice(0,2000));
