@@ -3,7 +3,7 @@
 const fs=require('fs');const run=require(process.cwd()+'/pkgKSR/run_node.cjs');
 const rebuild=(stub,lib)=>{let i=stub.indexOf('\nreturn await new Function(');if(i<0)i=stub.indexOf('\nconst __e4h');const $=n=>({params:{jsCode:lib}});return new Function('$',stub.slice(0,i)+'\nreturn __S;')($);};
 const g=f=>{let d=JSON.parse(fs.readFileSync(f));d=d.data||d;return d.workflow||d;};const eff=(W,n)=>rebuild(W.nodes.find(x=>x.name===n).parameters.jsCode,W.nodes.find(x=>x.name==='Shared Library').parameters.jsCode);
-const A=eff(g('/mnt/project-files/wall2024/fetchback_live_s127.json'),'Judge Enforcer Build'),B=eff(g('pkgA64/parent_s127_A64_O1.json'),'Judge Enforcer Build');
+const A=eff(g('/mnt/project-files/wall2024/fetchback_live_s127.json'),'Judge Enforcer Build'),B=eff(g('pkgA64/parent_s127_A64_'+(process.env.V||'O1')+'.json'),'Judge Enforcer Build');
 const out=(rd,n)=>{const r=rd[n];if(!r)return null;const m=(r[r.length-1].data||{}).main;return m&&m[0]?m[0].map(x=>x.json):null;};
 (async()=>{const T={n:0,ol:0,dis:0,disOl:0};for(const r of fs.readdirSync('/mnt/project-files/wall2024/').filter(f=>/^ex\d+_full\.json$/.test(f)).sort()){const X=JSON.parse(fs.readFileSync('/mnt/project-files/wall2024/'+r));const rd=(X.data||X).resultData.runData;if(!rd['Judge Enforcer Build'])continue;
  const oa=await run(A,'Judge Enforcer Build',rd),ob=await run(B,'Judge Enforcer Build',rd);if(oa.err||ob.err){console.log(r,'ERR',oa.err||ob.err);continue;}

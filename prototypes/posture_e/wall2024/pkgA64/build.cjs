@@ -3,7 +3,9 @@
 //     reference, and each E-ANS item is given THE SIDE'S OTHER LINES ON THIS VERSE (paragraphs of the answering round and the side's later rounds
 //     that name the pressed verse, outside the answer already shown; cut at 900).
 // O2: the check stays record-only: E-ANS DISAGREE / NO ANSWER rows no longer enter the send-back (Send Back Build, Alt, R2 Alt); they stay in the record.
-// usage: node pkgA64/build.cjs <fetch-back> <out> <O1|O2>
+// O1N: narrower option 1: only (a) the block the answer points to ("under link N": that LINK N section of the same round, its paragraphs naming the verse,
+//      or the section's opening when none does) and (b) paragraphs of the side's LATER rounds naming the verse; press lists (PRESSED WITH, -- MEANS:) left out; cut 900.
+// usage: node pkgA64/build.cjs <fetch-back> <out> <O1|O1N|O2>
 const fs=require('fs');const crypto=require('crypto');const rebuild=(stub,lib)=>{let i=stub.indexOf('\nreturn await new Function(');if(i<0)i=stub.indexOf('\nconst __e4h');if(i<0)throw new Error('not a stub');const $=n=>({params:{jsCode:lib}});return new Function('$',stub.slice(0,i)+'\nreturn __S;')($);};
 const [,,inF,outF,which]=process.argv;let D=JSON.parse(fs.readFileSync(inF,'utf8'));const W=(D.data||D).workflow||(D.data||D);const by={};W.nodes.forEach(n=>by[n.name]=n);
 const SL=by['Shared Library'];const c=SL.parameters.jsCode;const a=c.indexOf('\n/*LIB*/')+8,b=c.lastIndexOf('\n/*MAP*/'),e=c.lastIndexOf('\n/*END*/');
@@ -14,6 +16,16 @@ const uses=i=>Object.entries(M).filter(([n,v])=>v.p.some(p=>p===i||(Array.isArra
 const edLib=(anchor,f)=>{const i=one(anchor);const o=L[i];L[i]=f(o);const d=L[i].length-o.length;for(const [n,v] of uses(i))v.n+=d;console.log('lib line',i,(d>=0?'+':'')+d,'used by',uses(i).map(x=>x[0]).join(', '));};
 const edOwn=(node,anchor,f)=>{const v=M[node];let hit=0;v.p.forEach((p,k)=>{if(Array.isArray(p)&&typeof p[0]==='string'&&p[0].includes(anchor)){const o=p[0];v.p[k]=[f(o)];v.n+=v.p[k][0].length-o.length;hit++;console.log('own line of',node,(v.p[k][0].length-o.length>=0?'+':'')+(v.p[k][0].length-o.length));}});if(hit!==1)throw new Error('own anchor hits '+hit);};
 let promptD=0;
+if(which==='O1N'){
+ const R0="The answer is every line the answering side wrote under the pressed verse, up to the next pressed verse, its layers included;";
+ const R1="The answer is every line the answering side wrote under the pressed verse, up to the next pressed verse, its layers included, and also the block the answer points to (\"answered under link 3\") and any line of a later round of that side (its round 2, its link round or, for the defender, its close round [CR4]) that quotes the verse or names it by reference, as THE SIDE'S OTHER LINES ON THIS VERSE shows; an answer given there counts as the answer;";
+ promptD=R1.length-R0.length;edLib("const RULES='RULE E-ANS (an answer to a pressed verse). "+R0,l=>rep(l,R0,R1.replace(/'/g,"\\'")));
+ const A0="if(__eb&&ids[0])ids[0].eaw_blk=__eb.t.slice(0,4000);";
+ const A1=A0+"const __ol=(()=>{try{const k0=__rk[0],sd=k0.slice(0,2),r0=+k0[2];const okR=sd==='CR'?[2,3,4]:[1,2,3];const re=new RegExp('(?<![A-Za-z0-9])'+String(g.verse).trim().replace(/[.*+?^${}()|[\\]\\\\]/g,'\\\\$&').replace(/\\s+/g,'\\\\s*')+'(?![0-9])','i');const pl=p=>/PRESSED WITH|--\\s*MEANS:/i.test(p);const out=[];const pt=String(g.answer).match(/\\blink\\s+(\\d+)\\b/i);if(pt&&R&&typeof R[k0]==='string'){const Ls=R[k0].split('\\n'),hd=l=>(l.match(/^[\\s>*#_-]*LINK\\s+(\\d+)\\b/i)||[])[1];let a=-1,b=Ls.length;for(let i=0;i<Ls.length;i++){const h=hd(Ls[i]);if(h===undefined)continue;if(a<0&&h===pt[1])a=i;else if(a>=0){b=i;break;}}if(a>=0){const sec=Ls.slice(a,b).join('\\n');const ps=sec.split(/\\n\\s*\\n/).filter(p=>re.test(p)&&!pl(p));out.push('['+k0+', LINK '+pt[1]+'] '+(ps.length?ps.join('\\n'):sec).trim());}}for(const n of okR){if(n<=r0)continue;const k=sd+n;if(!R||typeof R[k]!=='string')continue;for(const p of R[k].split(/\\n\\s*\\n/))if(re.test(p)&&!pl(p))out.push('['+k+'] '+p.trim());}return out.join('\\n');}catch(e){return '';}})(); /* ASK 64 option 1, narrower form (W2 measure build) */";
+ edLib(A0,l=>rep(l,A0,A1));
+ const P0="'\"':'')+'\\nTHE JUDGES\\' GRADES:\\n'+ids.map((x,k)=>'- '+x.id+' ('+x.seat+'): '+cut(x.response_line,400)).join('\\n')});";
+ const P1="'\"':'')+(__ol?'\\nTHE SIDE\\'S OTHER LINES ON THIS VERSE (the block the answer points to, and its later rounds that name the pressed verse): \"'+cut(__ol,900)+'\"':'')+'\\nTHE JUDGES\\' GRADES:\\n'+ids.map((x,k)=>'- '+x.id+' ('+x.seat+'): '+cut(x.response_line,400)).join('\\n')});";
+ edLib("items.push({ids,text:'ITEM B'+gi+' (E-ANS;",l=>rep(l,P0,P1));}
 if(which==='O1'){
  const R0="The answer is every line the answering side wrote under the pressed verse, up to the next pressed verse, its layers included;";
  const R1="The answer is every line the answering side wrote under the pressed verse, up to the next pressed verse, its layers included, and also any line of a later round of that side (its round 2, its link round or, for the defender, its close round [CR4]) or of another block of the same round that quotes the verse or names it by reference, as THE SIDE'S OTHER LINES ON THIS VERSE shows; an answer given there, or one the answer points to (\"answered under link 3\"), counts as the answer;";
