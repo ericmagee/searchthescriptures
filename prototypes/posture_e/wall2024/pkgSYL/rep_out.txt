@@ -1,0 +1,22 @@
+ex33149_full.json | live==stored synth true | rest equal true | confirmed none | added lines 0 | removed 0
+  export: added lines 0 removed 0 | stored synthesis in Get Row == live BSB synth true
+ex33371_full.json | live==stored synth true | rest equal true | confirmed none | added lines 0 | removed 0
+  export: added lines 0 removed 0 | stored synthesis in Get Row == live BSB synth true
+ex33490_full.json | live==stored synth true | rest equal true | confirmed none | added lines 0 | removed 0
+  export: added lines 0 removed 0 | stored synthesis in Get Row == live BSB synth true
+ex33497_full.json | live==stored synth true | rest equal true | confirmed none | added lines 0 | removed 0
+  export: added lines 0 removed 0 | stored synthesis in Get Row == live BSB synth true
+ex34299_full.json BSB NOT REACHED
+ex34626_full.json BSB NOT REACHED
+ex34703_full.json BSB NOT REACHED
+ex34726_full.json | live==stored synth true | rest equal true | confirmed D1 | added lines 1 | removed 0
+   + **ENGINE: D1 BROKEN** -- confirmed closing contradiction (X1): earlier [CR2] "I grant the challenger's reading that this "coming together" is the taking of Matthew 1:24."; closing [CR4] "The finding in Matthew 1:18 stands before the coming together, and the coming together is distinct from the taking in 1:24.". Added by code after the closing check.
+  export: added lines 1 removed 0 | stored synthesis in Get Row == live BSB synth true
+   export+ **ENGINE: D1 BROKEN** -- confirmed closing contradiction (X1): earlier [CR2] "I grant the challenger's reading that this "coming together" is the taking of Matthew 1:24."; closing [CR4] "The finding in Matthew 1:18 stands before the coming together, and the coming together is distinct from the taking in 1:24.". Added by code after the closing check.
+ex34780_full.json BSB NOT REACHED
+ex34852_full.json | live==stored synth true | rest equal true | confirmed D3 | added lines 1 | removed 0
+   + | D3 (engine) | **BROKEN** | confirmed closing contradiction (X2): earlier [CR3] "I drop the claim that a father would never have thought of putting her away."; closing [CR4] "A man who knew himself the father would have no cause to put her away, and the verse shows Joseph with that cause.". Added by code after the closing check. |
+  export: added lines 1 removed 0 | stored synthesis in Get Row == live BSB synth true
+   export+ | D3 (engine) | **BROKEN** | confirmed closing contradiction (X2): earlier [CR3] "I drop the claim that a father would never have thought of putting her away."; closing [CR4] "A man who knew himself the father would have no cause to put her away, and the verse shows Joseph with that cause.". Added by code after the closing check. |
+
+[exited with code 0]
