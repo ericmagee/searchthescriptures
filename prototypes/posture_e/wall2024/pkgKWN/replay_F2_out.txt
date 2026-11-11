@@ -1,0 +1,31 @@
+nodes differing: 25
+Cure Build                         replays 30 equal 30
+Cure Normalize                     replays 30 equal 30
+Cure Check                         replays 30 equal 30
+Panel Cure Build 1                 replays 29 equal 29
+Panel Cure Normalize 1             replays 29 equal 29
+Panel Cure Build 2                 replays 2 equal 2
+Panel Cure Normalize 2             replays 29 equal 29
+Panel Cure Build 3                 replays 2 equal 2
+Panel Cure Normalize 3             replays 29 equal 29
+Panel Cure Check                   replays 29 equal 29
+Alternate Cure Build               replays 19 equal 19
+Alternate Cure Normalize           replays 19 equal 19
+Alternate Merge Seat               replays 29 equal 29
+Gate Build                         replays 1 equal 0
+Gate Record                        replays 29 equal 29
+Alt Gate Build                     replays 1 equal 1
+Alt Gate Record                    replays 29 equal 29
+Alternate Merge 1                  replays 28 equal 28
+R2 Alternate Build                 replays 9 equal 9
+R2 Alternate Merge Seat            replays 0 equal 0
+R2 Alternate Cure Build            replays 0 equal 0
+R2 Alternate Cure Normalize        replays 0 equal 0
+R2 Alt Gate Build                  replays 0 equal 0
+R2 Alt Gate Record                 replays 0 equal 0
+R2 Alternate Merge                 replays 0 equal 0
+TOTAL replays 403 equal 402 differ 1
+
+DIFF Gate Build 34852 at 292136 
+  A: "NDER LINK BROKEN counts a witness as unanswered; the rule counts it only with the quoted pressing sentence and its round, and only for a verse a listed premise carries under PRESSED WITH (ruling 392).\"},{\"gid\":\"G2\",\"kind\":\"RULE K-G4\",\"src\":\"K re-read\",\"live\":true,\"why\":\"DEBATE RULE VIOLATION (K-G4) -- D6 vs C4 DEFENDER LINK BROKEN counts a witness as unanswered; the rule counts it only with the quoted pressing sentence and its round, and only for" 
+  B: "NDER LINK BROKEN counts a witness as unanswered; the rule counts it only with the quoted pressing sentence and its round, and only for a verse a listed premise carries under PRESSED WITH (ruling 392). THE ENGINE READS THIS LINE: its GROUND names no pressed witness left unanswered, so the break rests on meaning (ruling 421): a KEEP, a PRESSED line or a CHANGE TO that still breaks the link stays uncured. Cure it with one FORCED line: FORCED: D4 vs "

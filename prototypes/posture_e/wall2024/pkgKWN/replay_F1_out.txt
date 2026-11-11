@@ -1,0 +1,31 @@
+nodes differing: 25
+Cure Build                         replays 30 equal 30
+Cure Normalize                     replays 30 equal 30
+Cure Check                         replays 30 equal 30
+Panel Cure Build 1                 replays 29 equal 29
+Panel Cure Normalize 1             replays 29 equal 29
+Panel Cure Build 2                 replays 2 equal 2
+Panel Cure Normalize 2             replays 29 equal 29
+Panel Cure Build 3                 replays 2 equal 2
+Panel Cure Normalize 3             replays 29 equal 29
+Panel Cure Check                   replays 29 equal 28
+Alternate Cure Build               replays 19 equal 19
+Alternate Cure Normalize           replays 19 equal 19
+Alternate Merge Seat               replays 29 equal 29
+Gate Build                         replays 1 equal 1
+Gate Record                        replays 29 equal 29
+Alt Gate Build                     replays 1 equal 1
+Alt Gate Record                    replays 29 equal 29
+Alternate Merge 1                  replays 28 equal 28
+R2 Alternate Build                 replays 9 equal 9
+R2 Alternate Merge Seat            replays 0 equal 0
+R2 Alternate Cure Build            replays 0 equal 0
+R2 Alternate Cure Normalize        replays 0 equal 0
+R2 Alt Gate Build                  replays 0 equal 0
+R2 Alt Gate Record                 replays 0 equal 0
+R2 Alternate Merge                 replays 0 equal 0
+TOTAL replays 403 equal 402 differ 1
+
+DIFF Panel Cure Check 34852 at 161176 
+  A: "side the counting rounds; the replacement timing argument is subsequently narrowed in (CR3).]\\\\n[AUDIT v21: DEBATE RULE VIOLATION REPORT -- SEAT: sol; ITEM: DEFENDER CR2 LINK 2 #2; RULE: K-W; RESULT: UNCURED; WHY: neither the RESPONSE nor the STATEMENT line says STANDS WITHOUT IT because <layer> with an (L1), (L2) or (L3), CONCEDED, REASSERTED IN <round> \\\\\\\"<quote>\\\\\\\", or NOT HELD with a reason that quotes the flagged sentence; LINE: (CR2) LINK" 
+  B: "side the counting rounds; the replacement timing argument is subsequently narrowed in (CR3).]\\\\n[AUDIT v21: DEBATE RULE VIOLATION REPORT -- SEAT: sol; ITEM: DEFENDER CR2 LINK 2 #2; RULE: K-W; RESULT: CURED; WHY: answered: NOT HELD, with a reason that quotes the flagged sentence (pkgKW); LINE: (CR2) LINK 2: \\\\\\\"I grant the present tense of ginōskō (G1097, ‘to know’) at Luke 1:34.\\\\\\\"; STATEMENT: . NOT HELD: (CR2) grants \\\\\\\"the present tense of gi"
