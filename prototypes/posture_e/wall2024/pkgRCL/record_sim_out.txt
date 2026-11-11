@@ -1,0 +1,16 @@
+## ex34852_full.json stored reply (code candidates unanswered)
+ {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION|","X2|DEFENDER|3|CONFIRMED|"],"confirmed":["DEFENDER 3"],"no_answer":["X3","X4","X5"]}
+## ex34852_full.json all code candidates CONFIRMED
+ {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION|","X2|DEFENDER|3|CONFIRMED|","X3|DEFENDER|1|CONFIRMED|","X4|DEFENDER|3|CONFIRMED|the same link is already broken by an earlier confirmed line","X5|DEFENDER|5|CONFIRMED|"],"confirmed":["DEFENDER 3","DEFENDER 1","DEFENDER 5"],"no_answer":[]}
+## ex34852_full.json all code candidates NOT A CONTRADICTION
+ {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION|","X2|DEFENDER|3|CONFIRMED|","X3|DEFENDER|1|NOT A CONTRADICTION|","X4|DEFENDER|3|NOT A CONTRADICTION|","X5|DEFENDER|5|NOT A CONTRADICTION|"],"confirmed":["DEFENDER 3"],"no_answer":[]}
+## ex34852_full.json all CONFIRMED, Record of pkgCLK rev 3
+ {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION|","X2|DEFENDER|2|CONFIRMED|LINK 2 set by the code: the closing quotation stands in the block headed for lin","X3|DEFENDER|1|CONFIRMED|","X4|DEFENDER|3|CONFIRMED|","X5|DEFENDER|5|CONFIRMED|"],"confirmed":["DEFENDER 2","DEFENDER 1","DEFENDER 3","DEFENDER 5"],"no_answer":[]}
+## ex34626_full.json stored reply (code candidates unanswered)
+ {"rows":["NEW|DEFENDER|6|CONFIRMED|"],"confirmed":["DEFENDER 6"],"no_answer":["X1","X2","X3","X4","X5","X6"]}
+## ex34626_full.json all code candidates CONFIRMED
+ {"rows":["NEW|DEFENDER|6|CONFIRMED|","X1|DEFENDER|1|CONFIRMED|","X2|DEFENDER|2|CONFIRMED|","X3|DEFENDER|3|CONFIRMED|","X4|DEFENDER|4|CONFIRMED|","X5|DEFENDER|5|CONFIRMED|","X6|DEFENDER|6|CONFIRMED|the same link is already broken by an earlier confirmed line"],"confirmed":["DEFENDER 6","DEFENDER 1","DEFENDER 2","DEFENDER 3","DEFENDER 4","DEFENDER 5"],"no_answer":[]}
+## ex34626_full.json all code candidates NOT A CONTRADICTION
+ {"rows":["NEW|DEFENDER|6|CONFIRMED|","X1|DEFENDER|1|NOT A CONTRADICTION|","X2|DEFENDER|2|NOT A CONTRADICTION|","X3|DEFENDER|3|NOT A CONTRADICTION|","X4|DEFENDER|4|NOT A CONTRADICTION|","X5|DEFENDER|5|NOT A CONTRADICTION|","X6|DEFENDER|6|NOT A CONTRADICTION|"],"confirmed":["DEFENDER 6"],"no_answer":[]}
+## ex34626_full.json all CONFIRMED, Record of pkgCLK rev 3
+ {"rows":["NEW|DEFENDER|6|CONFIRMED|","X1|DEFENDER|1|CONFIRMED|","X2|DEFENDER|2|CONFIRMED|","X3|DEFENDER|3|CONFIRMED|","X4|DEFENDER|4|CONFIRMED|","X5|DEFENDER|5|CONFIRMED|","X6|DEFENDER|6|CONFIRMED|the same link is already broken by an earlier confirmed line"],"confirmed":["DEFENDER 6","DEFENDER 1","DEFENDER 2","DEFENDER 3","DEFENDER 4","DEFENDER 5"],"no_answer":[]}
