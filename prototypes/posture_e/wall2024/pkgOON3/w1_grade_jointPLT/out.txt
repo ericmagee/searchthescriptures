@@ -1,0 +1,23 @@
+L fetchback_live_s116.json sha 5a054c461907fc3a
+O parent_s116_OON3.json sha 62728a08a95d0193
+P parent_s116_PLT.json sha d85111ebb08967ea
+J joint_s116_OON3_PLT.json sha a4f7ae84c8a2da5d
+lines changed: OON3 1634,3339,3341 | PLT 3274,3285 | joint 1634,3274,3285,3339,3341 | line counts 3534 3534
+joint lines = union true | each equals its package true
+SIZE joint vs live: Shared Library 105 | nodes 418 418 | rest equal true
+stubs 42 | equal to own package 38 | other Alt Judge Enforcer Build touched by both; Alternate Build ERR; Judge Enforcer Build touched by both; R2 Alt Judge Enforcer Build touched by both
+34780 Judge Enforcer Build | OON3 changes 0 | PLT changes 4 | joint-vs-PLT = OON3-vs-live true | joint-vs-OON3 = PLT-vs-live true
+34780 Alt Judge Enforcer Build ERR no data Alt Enforcer Record
+34726 Judge Enforcer Build | OON3 changes 0 | PLT changes 4 | joint-vs-PLT = OON3-vs-live true | joint-vs-OON3 = PLT-vs-live true
+34726 Alt Judge Enforcer Build ERR no data Alt Enforcer Record
+34703 Judge Enforcer Build | OON3 changes 0 | PLT changes 0 | joint-vs-PLT = OON3-vs-live true | joint-vs-OON3 = PLT-vs-live true
+34703 Alt Judge Enforcer Build ERR no data Alt Enforcer Record
+34626 Judge Enforcer Build | OON3 changes 0 | PLT changes 0 | joint-vs-PLT = OON3-vs-live true | joint-vs-OON3 = PLT-vs-live true
+34626 Alt Judge Enforcer Build ERR no data Alt Enforcer Record
+34299 Judge Enforcer Build | OON3 changes 0 | PLT changes 0 | joint-vs-PLT = OON3-vs-live true | joint-vs-OON3 = PLT-vs-live true
+34299 Alt Judge Enforcer Build ERR no data Alt Seated
+Alternate Build on LIVE also errors: not a pkgLIB stub
+OON3 labels 12 | joint Gate Build equals parent_s116_OON3 12
+stored 34726 Gate Build | joint = OON3 true | joint = PLT true
+stored 34726 Send Back Build | joint = OON3 true | joint = PLT true
+stored 34726 Judge Enforcer Build | joint = OON3 false | joint = PLT true
