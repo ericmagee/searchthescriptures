@@ -1,0 +1,6 @@
+A | ex34726 | Judge Contradiction Build |  | [object Object] | live sha ab21496e8cd5 | R1 sha 2e01f0f8b7d1 | chars +180 | model deepseek-flash | temp 0
+B | ex34780 | Judge Contradiction Build |  | [object Object] | live sha 11fa5fe995a4 | R1 sha 3da978b18a11 | chars +180 | model deepseek-flash | temp 0
+C_DEFENDER | ex34703 | Close Enforcer Build | DEFENDER | [object Object] | live sha 3f03afd13022 | R1 sha 350e4935688e | chars +180 | model deepseek-flash | temp 0
+C_CHALLENGER | ex34703 | Close Enforcer Build | CHALLENGER | [object Object] | live sha b175ed701fad | R1 sha eda72dd27b40 | chars +180 | model deepseek-flash | temp 0
+D_DEFENDER | ex34726 | Close Enforcer Build | DEFENDER | [object Object] | live sha a2ad782fb839 | R1 sha 069435ee84c7 | chars +180 | model deepseek-flash | temp 0
+D_CHALLENGER | ex34726 | Close Enforcer Build | CHALLENGER | [object Object] | live sha 6d37860cd3ff | R1 sha e2d3bc290ee7 | chars +180 | model deepseek-flash | temp 0
