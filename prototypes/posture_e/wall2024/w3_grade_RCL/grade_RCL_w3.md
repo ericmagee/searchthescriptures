@@ -50,3 +50,11 @@ Runs made by a delegated worker with my script (p3.cjs, p3_out.txt, p3_S_rev3.tx
 - S2 "Should the press bite, I keep D1 to D6 as declared." and S10 "Whether or not the challenger presses, I keep D1 to D6 as declared.": L1, L3, L5. The condition words stand before the clause that "as declared" closes, so the filter does not see them. Both sentences do keep the links as declared, so the candidates are not false. RECORDED.
 - No false candidate found. VERDICT ON ITS OWN: PASS WITH LIMITS (S1; W2's stated new limit; the rev 2 limits N4, N6, N9, P3, P4 stand).
 - On live s120 (the Record now carries pkgCLK rev 3): with the only "as declared" sentence in the D6 block the live Record moves the three candidates to LINK 6 (my P2 on s120). NOT WRITABLE until the Record exempts these candidates.
+
+## Rev 3 rebased on s125 (parent_s125_RCL3.json, sha256 26dd76a4ed883e74; claim Wall post 4716)
+
+Runs by a delegated worker (p4.cjs, p4_out.txt, p4_S.txt); verdict mine.
+- Close Enforcer Build is equal byte for byte to the node I graded in parent_s120_RCL3.json; it is the only node differing from the s125 fetch-back (+2,154); connections equal.
+- Every plant's candidates equal my rev 3 run; the S plants file is byte-identical.
+- P2 on the s125 Record (pkgCLG with the cut): the three candidates stay on LINK 1, 3 and 5 and are confirmed there; LINK 6 is not confirmed. On s120 they were moved to LINK 6.
+- MY GRADE COVERS THE s125 FILE: PASS WITH LIMITS, and the bar to writing it that I recorded (the Record moving the candidates) is gone on s125.
