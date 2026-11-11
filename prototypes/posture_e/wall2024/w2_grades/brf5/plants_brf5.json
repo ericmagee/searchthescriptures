@@ -1,0 +1,10 @@
+{"recorded":"W2, before the first run","plants":[
+ {"id":"P1","earlier":["Numbers 1:18 says it.","Matthew 1:18 says it."],"close":"As 1:18 states, the finding came first.","expect":"bare 1:18 names Numbers 1:18 and Matthew 1:18, in first-named order"},
+ {"id":"P2","earlier":["Matthew 1:18 says it."],"close":"As 1:18 states, the finding came first.","expect":"same line as rev 4 (one earlier name)"},
+ {"id":"P3","earlier":["Matthew 1:18 says it.","Again Matthew 1:18."],"close":"As 1:18 states.","expect":"Matthew 1:18 listed once"},
+ {"id":"P4","earlier":["Numbers 1:18; Luke 1:18; Matthew 1:18."],"close":"As 1:18 states.","expect":"three names, first-named order"},
+ {"id":"P5","earlier":["Numbers 1:18 and 1:19.","Matthew 1:19."],"close":"As 1:18-19 states.","expect":"bare range: every earlier name of 1:18 and 1:19, each once"},
+ {"id":"P6","earlier":["Numbers 2:3."],"close":"As 1:18 states.","expect":"no earlier name: NEW press line as live, not a book-check line"},
+ {"id":"P7","earlier":["Numbers 1:18."],"close":"Matthew 1:18 states it.","expect":"booked new reference: NEW as live (rev 5 changes only the bare path)"},
+ {"id":"P8","earlier":["Matthew 1:18 says it."],"close":"Matthew 1:18 states it, and 1:18 again.","expect":"booked repeat is cleared as live"}
+]}

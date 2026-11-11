@@ -1,0 +1,48 @@
+
+P1 | expect: bare 1:18 names Numbers 1:18 and Matthew 1:18, in first-named order
+  live C: ""
+  live D: ""
+  rev5 C: ""
+  rev5 D: ""
+
+P2 | expect: same line as rev 4 (one earlier name)
+  live C: ""
+  live D: ""
+  rev5 C: ""
+  rev5 D: ""
+
+P3 | expect: Matthew 1:18 listed once
+  live C: ""
+  live D: ""
+  rev5 C: ""
+  rev5 D: ""
+
+P4 | expect: three names, first-named order
+  live C: ""
+  live D: ""
+  rev5 C: ""
+  rev5 D: ""
+
+P5 | expect: bare range: every earlier name of 1:18 and 1:19, each once
+  live C: ""
+  live D: ""
+  rev5 C: ""
+  rev5 D: ""
+
+P6 | expect: no earlier name: NEW press line as live, not a book-check line
+  live C: ""
+  live D: ""
+  rev5 C: ""
+  rev5 D: ""
+
+P7 | expect: booked new reference: NEW as live (rev 5 changes only the bare path)
+  live C: "\n\n[CLOSE-ROUND PRESS CHECK -- computed by the system, not by a model: [DR4] names 1 verse reference(s) that no earlier challenger round names: Matthew 1:18. The close round may not press: each is a NEW PRESS and is NOT COUNTED as evidence, as a witness or as an answer.]"
+  live D: "\n\n[CLOSE-ROUND NEW-VERSE CHECK -- computed by the system, not by a model: [CR4] names 1 verse reference(s) that no earlier round of either side names: Matthew 1:18. Each is NEW IN CLOSE, NOT COUNTED: not evidence, footing, witness or answer. Material in [CR4] counts only as an answer to a witness already pressed against the d
+  rev5 C: "\n\n[CLOSE-ROUND PRESS CHECK -- computed by the system, not by a model: [DR4] names 1 verse reference(s) that no earlier challenger round names: Matthew 1:18. The close round may not press: each is a NEW PRESS and is NOT COUNTED as evidence, as a witness or as an answer.]"
+  rev5 D: "\n\n[CLOSE-ROUND NEW-VERSE CHECK -- computed by the system, not by a model: [CR4] names 1 verse reference(s) that no earlier round of either side names: Matthew 1:18. Each is NEW IN CLOSE, NOT COUNTED: not evidence, footing, witness or answer. Material in [CR4] counts only as an answer to a witness already pressed against the d
+
+P8 | expect: booked repeat is cleared as live
+  live C: ""
+  live D: ""
+  rev5 C: ""
+  rev5 D: ""

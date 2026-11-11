@@ -1,0 +1,10 @@
+{"recorded":"W2, second set: the first set (plants_brf5.json) did not reach the bare path, because a bare reference needs a capitalised non-book head after a booked reference (pkgBRF README). Recorded before running this set.","plants":[
+ {"id":"Q1","earlier":["Deuteronomy 20:7.","Numbers 1:18 says it.","Matthew 1:18 says it."],"close":"Deuteronomy 20:7 sets it apart. So 1:18 dates the finding.","expect":"book line names Numbers 1:18, Matthew 1:18 in first-named order; live names only Numbers 1:18"},
+ {"id":"Q2","earlier":["Deuteronomy 20:7.","Matthew 1:18 says it."],"close":"Deuteronomy 20:7 sets it apart. So 1:18 dates the finding.","expect":"same line as live (one earlier name)"},
+ {"id":"Q3","earlier":["Deuteronomy 20:7.","Matthew 1:18 says it.","Again Matthew 1:18."],"close":"Deuteronomy 20:7 sets it apart. So 1:18 dates the finding.","expect":"Matthew 1:18 once"},
+ {"id":"Q4","earlier":["Deuteronomy 20:7.","Numbers 1:18; Luke 1:18; Matthew 1:18."],"close":"Deuteronomy 20:7 sets it apart. So 1:18 dates the finding.","expect":"three names in first-named order"},
+ {"id":"Q5","earlier":["Deuteronomy 20:7.","Numbers 1:18 and Numbers 1:19.","Matthew 1:19."],"close":"Deuteronomy 20:7 sets it apart. So 1:18-19 dates the finding.","expect":"bare range: Numbers 1:18, Numbers 1:19, Matthew 1:19, each once"},
+ {"id":"Q6","earlier":["Deuteronomy 20:7.","Numbers 2:3."],"close":"Deuteronomy 20:7 sets it apart. So 1:18 dates the finding.","expect":"no earlier 1:18: NEW, as live"},
+ {"id":"Q7","earlier":["Deuteronomy 20:7.","Deuteronomy 1:18.","Matthew 1:18."],"close":"Deuteronomy 20:7 sets it apart. So 1:18 dates the finding.","expect":"same full key named earlier under the borrowed book: cleared (S.has), as live"},
+ {"id":"Q8","earlier":["Deuteronomy 20:7.","Numbers 1:18."],"close":"Deuteronomy 20:7 sets it apart. So 1:18 dates it. Then 1:18 again.","expect":"listed once"}
+]}

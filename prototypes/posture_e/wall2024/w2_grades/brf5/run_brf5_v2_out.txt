@@ -1,0 +1,48 @@
+
+Q1 | expect: book line names Numbers 1:18, Matthew 1:18 in first-named order; live names only Numbers 1:18
+  live C: "\n\n[CLOSE-ROUND BOOK CHECK -- by code: [DR4] writes 1:18 (Numbers 1:18 named earlier) with no book; not marked NEW, not cleared: read the sentence for its book.]"
+  live D: "\n\n[CLOSE-ROUND BOOK CHECK -- by code: [CR4] writes 1:18 (Numbers 1:18 named earlier) with no book; not marked NEW, not cleared: read the sentence for its book.]"
+  rev5 C: "\n\n[CLOSE-ROUND BOOK CHECK -- by code: [DR4] writes 1:18 (Numbers 1:18, Matthew 1:18 named earlier) with no book; not marked NEW, not cleared: read the sentence for its book.]"
+  rev5 D: "\n\n[CLOSE-ROUND BOOK CHECK -- by code: [CR4] writes 1:18 (Numbers 1:18, Matthew 1:18 named earlier) with no book; not marked NEW, not cleared: read the sentence for its book.]"
+
+Q2 | expect: same line as live (one earlier name)
+  live C: "\n\n[CLOSE-ROUND BOOK CHECK -- by code: [DR4] writes 1:18 (Matthew 1:18 named earlier) with no book; not marked NEW, not cleared: read the sentence for its book.]"
+  live D: "\n\n[CLOSE-ROUND BOOK CHECK -- by code: [CR4] writes 1:18 (Matthew 1:18 named earlier) with no book; not marked NEW, not cleared: read the sentence for its book.]"
+  rev5 C: "\n\n[CLOSE-ROUND BOOK CHECK -- by code: [DR4] writes 1:18 (Matthew 1:18 named earlier) with no book; not marked NEW, not cleared: read the sentence for its book.]"
+  rev5 D: "\n\n[CLOSE-ROUND BOOK CHECK -- by code: [CR4] writes 1:18 (Matthew 1:18 named earlier) with no book; not marked NEW, not cleared: read the sentence for its book.]"
+
+Q3 | expect: Matthew 1:18 once
+  live C: "\n\n[CLOSE-ROUND BOOK CHECK -- by code: [DR4] writes 1:18 (Matthew 1:18 named earlier) with no book; not marked NEW, not cleared: read the sentence for its book.]"
+  live D: "\n\n[CLOSE-ROUND BOOK CHECK -- by code: [CR4] writes 1:18 (Matthew 1:18 named earlier) with no book; not marked NEW, not cleared: read the sentence for its book.]"
+  rev5 C: "\n\n[CLOSE-ROUND BOOK CHECK -- by code: [DR4] writes 1:18 (Matthew 1:18 named earlier) with no book; not marked NEW, not cleared: read the sentence for its book.]"
+  rev5 D: "\n\n[CLOSE-ROUND BOOK CHECK -- by code: [CR4] writes 1:18 (Matthew 1:18 named earlier) with no book; not marked NEW, not cleared: read the sentence for its book.]"
+
+Q4 | expect: three names in first-named order
+  live C: "\n\n[CLOSE-ROUND BOOK CHECK -- by code: [DR4] writes 1:18 (Numbers 1:18 named earlier) with no book; not marked NEW, not cleared: read the sentence for its book.]"
+  live D: "\n\n[CLOSE-ROUND BOOK CHECK -- by code: [CR4] writes 1:18 (Numbers 1:18 named earlier) with no book; not marked NEW, not cleared: read the sentence for its book.]"
+  rev5 C: "\n\n[CLOSE-ROUND BOOK CHECK -- by code: [DR4] writes 1:18 (Numbers 1:18, Luke 1:18, Matthew 1:18 named earlier) with no book; not marked NEW, not cleared: read the sentence for its book.]"
+  rev5 D: "\n\n[CLOSE-ROUND BOOK CHECK -- by code: [CR4] writes 1:18 (Numbers 1:18, Luke 1:18, Matthew 1:18 named earlier) with no book; not marked NEW, not cleared: read the sentence for its book.]"
+
+Q5 | expect: bare range: Numbers 1:18, Numbers 1:19, Matthew 1:19, each once
+  live C: "\n\n[CLOSE-ROUND BOOK CHECK -- by code: [DR4] writes 1:18-19 (Numbers 1:18 named earlier) with no book; not marked NEW, not cleared: read the sentence for its book.]"
+  live D: "\n\n[CLOSE-ROUND BOOK CHECK -- by code: [CR4] writes 1:18-19 (Numbers 1:18 named earlier) with no book; not marked NEW, not cleared: read the sentence for its book.]"
+  rev5 C: "\n\n[CLOSE-ROUND BOOK CHECK -- by code: [DR4] writes 1:18-19 (Numbers 1:18, Numbers 1:19, Matthew 1:19 named earlier) with no book; not marked NEW, not cleared: read the sentence for its book.]"
+  rev5 D: "\n\n[CLOSE-ROUND BOOK CHECK -- by code: [CR4] writes 1:18-19 (Numbers 1:18, Numbers 1:19, Matthew 1:19 named earlier) with no book; not marked NEW, not cleared: read the sentence for its book.]"
+
+Q6 | expect: no earlier 1:18: NEW, as live
+  live C: "\n\n[CLOSE-ROUND PRESS CHECK -- computed by the system, not by a model: [DR4] names 1 verse reference(s) that no earlier challenger round names: Deuteronomy 1:18. The close round may not press: each is a NEW PRESS and is NOT COUNTED as evidence, as a witness or as an answer.]"
+  live D: "\n\n[CLOSE-ROUND NEW-VERSE CHECK -- computed by the system, not by a model: [CR4] names 1 verse reference(s) that no earlier round of either side names: Deuteronomy 1:18. Each is NEW IN CLOSE, NOT COUNTED: not evidence, footing, witness or answer. Material in [CR4] counts only as an answer to a witness already pressed against t
+  rev5 C: "\n\n[CLOSE-ROUND PRESS CHECK -- computed by the system, not by a model: [DR4] names 1 verse reference(s) that no earlier challenger round names: Deuteronomy 1:18. The close round may not press: each is a NEW PRESS and is NOT COUNTED as evidence, as a witness or as an answer.]"
+  rev5 D: "\n\n[CLOSE-ROUND NEW-VERSE CHECK -- computed by the system, not by a model: [CR4] names 1 verse reference(s) that no earlier round of either side names: Deuteronomy 1:18. Each is NEW IN CLOSE, NOT COUNTED: not evidence, footing, witness or answer. Material in [CR4] counts only as an answer to a witness already pressed against t
+
+Q7 | expect: same full key named earlier under the borrowed book: cleared (S.has), as live
+  live C: ""
+  live D: ""
+  rev5 C: ""
+  rev5 D: ""
+
+Q8 | expect: listed once
+  live C: "\n\n[CLOSE-ROUND BOOK CHECK -- by code: [DR4] writes 1:18 (Numbers 1:18 named earlier) with no book; not marked NEW, not cleared: read the sentence for its book.]"
+  live D: "\n\n[CLOSE-ROUND BOOK CHECK -- by code: [CR4] writes 1:18 (Numbers 1:18 named earlier) with no book; not marked NEW, not cleared: read the sentence for its book.]"
+  rev5 C: "\n\n[CLOSE-ROUND BOOK CHECK -- by code: [DR4] writes 1:18 (Numbers 1:18 named earlier) with no book; not marked NEW, not cleared: read the sentence for its book.]"
+  rev5 D: "\n\n[CLOSE-ROUND BOOK CHECK -- by code: [CR4] writes 1:18 (Numbers 1:18 named earlier) with no book; not marked NEW, not cleared: read the sentence for its book.]"
