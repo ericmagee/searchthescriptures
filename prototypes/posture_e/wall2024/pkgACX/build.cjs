@@ -1,0 +1,6 @@
+// pkgACX (fix A): an anti-cheat note is not written when the closing enforcer answered the same close sentence NOT A CONTRADICTION. Panel Build and Build Independent Verdict.
+const fs=require('fs');const P=JSON.parse(fs.readFileSync('/mnt/project-files/wall2024/fetchback_live_s119.json'));
+const OLD="const L=((A.reversed||{})[sd]||[]);if(!L.length)return '';";
+const NEW="const __n=x=>String(x||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();let __X=[];try{if($('Close Enforcer Record').isExecuted)__X=(($('Close Enforcer Record').first().json.cec||{}).rows||[]).filter(x=>x&&x.status==='NOT A CONTRADICTION').map(x=>__n(x.closing_q));}catch(e){}/* pkgACX */const L=((A.reversed||{})[sd]||[]).filter(r=>__X.indexOf(__n(r.close_q))<0);if(!L.length)return '';";
+let d=0;for(const nm of ['Panel Build','Build Independent Verdict']){const N=P.nodes.find(n=>n.name===nm);const s=N.parameters.jsCode;if(s.split(OLD).length!==2)throw new Error('anchor '+nm);const ns=s.replace(OLD,NEW);new Function('$','$input','return (async()=>{'+ns+'})');N.parameters.jsCode=ns;d+=ns.length-s.length;console.log(nm,s.length,'->',ns.length,'+'+(ns.length-s.length));}
+console.log('total +'+d);fs.writeFileSync('/mnt/project-files/wall2024/parent_s119_ACX.json',JSON.stringify(P));

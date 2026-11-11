@@ -1,0 +1,12 @@
+nodes differing: 2
+Build Independent Verdict          replays 30 equal 29
+Panel Build                        replays 30 equal 29
+TOTAL replays 60 equal 58 differ 2
+
+DIFF Build Independent Verdict 34852 at 280654 
+  A: " the claim that a father would never have thought of putting her away.\\\". The close sentence is disregarded; grade this side's earlier answer on Matthew 1:19 on its own words, against the verse.]\\n\\n[ANTI-CHEAT CHECK -- computed by the system's enforcer, not by a judge (a TRIAL check): this close round reverses the same side's own earlier reading of Luke 2:4. The close says: \\\"the child's descent from David stands through Mary\\\". The same side sa" 
+  B: " the claim that a father would never have thought of putting her away.\\\". The close sentence is disregarded; grade this side's earlier answer on Matthew 1:19 on its own words, against the verse.]\\n\\n[CONFIRMED CLOSING CONTRADICTIONS -- found by the system's closing enforcer and confirmed by code, not by a judge (the contradiction rule: a debater that contradicts in its closing round what it stated in its own earlier round has its chain link BROKE"
+
+DIFF Panel Build 34852 at 117 
+  A: "[{\"json\":{\"run_token\":\"ODV1-34852-azssrnkg\",\"debate_id\":\"acb918e5-9436-4336-af41-e47ccd1535db\",\"transcript_chars\":131918,\"judges\":[{\"seat\":\"luna\",\"fam\":\"openrouter\",\"jidx\":4,\"jidx0\":5,\"api_model\":\"openai/gpt-6-luna\",\"body\":{\"model\":\"openai/gpt-6-luna\",\"max_tokens\":64000,\"messages\":[{\"role\":\"system\",\"content\":\"You are ONE of three INDEPENDENT judges of a completed d" 
+  B: "[{\"json\":{\"run_token\":\"ODV1-34852-azssrnkg\",\"debate_id\":\"acb918e5-9436-4336-af41-e47ccd1535db\",\"transcript_chars\":131461,\"judges\":[{\"seat\":\"luna\",\"fam\":\"openrouter\",\"jidx\":4,\"jidx0\":5,\"api_model\":\"openai/gpt-6-luna\",\"body\":{\"model\":\"openai/gpt-6-luna\",\"max_tokens\":64000,\"messages\":[{\"role\":\"system\",\"content\":\"You are ONE of three INDEPENDENT judges of a completed d"
