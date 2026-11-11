@@ -1,0 +1,18 @@
+Panel Cure Normalize 1 | STORED         | old==new except response_format true | asked old/new ? ? | notes old/new 1 1 | response_format old/new 0 0
+Panel Cure Normalize 1 | TOP_ARRAY      | old==new except response_format true | asked old/new 16 16 | notes old/new 3 3 | response_format old/new 1 0
+Panel Cure Normalize 1 | KEY_CASE       | old==new except response_format true | asked old/new 16 16 | notes old/new 3 3 | response_format old/new 1 0
+Panel Cure Normalize 1 | TRAILING_COMMA | old==new except response_format true | asked old/new ? ? | notes old/new 1 1 | response_format old/new 0 0
+Panel Cure Normalize 1 | LOWER_KIND     | old==new except response_format true | asked old/new ? ? | notes old/new 1 1 | response_format old/new 0 0
+Panel Cure Normalize 1 | HALF           | old==new except response_format true | asked old/new 1 1 | notes old/new 3 3 | response_format old/new 1 0
+Panel Cure Normalize 1 | EMPTY          | old==new except response_format true | asked old/new 16 16 | notes old/new 3 3 | response_format old/new 1 0
+Panel Cure Normalize 1 | TABLE          | old==new except response_format true | asked old/new 16 16 | notes old/new 3 3 | response_format old/new 1 0
+Panel Cure Normalize 1 | NESTED_STRING  | old==new except response_format true | asked old/new 16 16 | notes old/new 3 3 | response_format old/new 1 0
+Cure Normalize | STORED         | old==new except response_format true | asked old/new ? ? | notes old/new 1 1 | response_format old/new 0 0
+Cure Normalize | TOP_ARRAY      | old==new except response_format true | asked old/new 1 1 | notes old/new 3 3 | response_format old/new 1 0
+Cure Normalize | KEY_CASE       | old==new except response_format true | asked old/new 1 1 | notes old/new 3 3 | response_format old/new 1 0
+Cure Normalize | TRAILING_COMMA | old==new except response_format true | asked old/new ? ? | notes old/new 1 1 | response_format old/new 0 0
+Cure Normalize | LOWER_KIND     | old==new except response_format true | asked old/new ? ? | notes old/new 1 1 | response_format old/new 0 0
+Cure Normalize | HALF           | old==new except response_format true | asked old/new 2 2 | notes old/new 3 3 | response_format old/new 1 0
+Cure Normalize | EMPTY          | old==new except response_format true | asked old/new 1 1 | notes old/new 3 3 | response_format old/new 1 0
+Cure Normalize | TABLE          | old==new except response_format true | asked old/new 1 1 | notes old/new 3 3 | response_format old/new 1 0
+Cure Normalize | NESTED_STRING  | old==new except response_format true | asked old/new 1 1 | notes old/new 3 3 | response_format old/new 1 0

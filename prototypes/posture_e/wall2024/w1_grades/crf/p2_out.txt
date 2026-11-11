@@ -1,0 +1,2 @@
+old .0.fum.body | messages 8 | response_format true | last ends with note true | last role user | last chars 9146
+new .0.fum.body | messages 8 | response_format false | last ends with note true | last role user | last chars 9146

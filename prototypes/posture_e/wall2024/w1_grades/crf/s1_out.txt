@@ -1,0 +1,15 @@
+code 2927558 2927142 -416 | connections equal true | settings equal true
+nodes changed 1 Shared Library (-416)
+library lines 3471 3471 changed [ 1974, 3335, 3338 ]
+L1974 len 821 -> 827 
+  OLD: y.messages.concat([{role:'assistant',content:String(reply.text==null?'':reply.text)},{role:'user',content:P.join('\n')+((src.body.response_format&&src.body.response_format.type==='json_schema')?xkJsonNote():'')}])})}; /* pkgXK B */
+  NEW: y.messages.concat([{role:'assistant',content:String(reply.text==null?'':reply.text)},{role:'user',content:P.join('\n')+(String((src.body.messages.slice(-1)[0]||{}).content||'').endsWith(xkJsonNote())?xkJsonNote():'')}])})}; /* pkgXK B */
+L3335 len 277 -> 252 
+  OLD:  if(fam!=='gemini'&&xkJsonModels().includes(String(b.model||''))&&b.messages.length){b.response_format=xkRF();const L=b.messages[b.messages.length-1];
+  NEW:  if(fam!=='gemini'&&xkJsonModels().includes(String(b.model||''))&&b.messages.length){const L=b.messages[b.messages.length-1];
+L3338 len 397 -> 0 
+  OLD: function xkRF(){return {type:'json_schema',json_schema:{name:'cure_lines',strict:true,schema:{type:'object',additionalProperties:false,required:['cure_lines'],properties:{cure_lines:{type:'array',items:{type:'object',additionalProperties:false,required:['kind','item','text'],properties:{kind:{type:'string',enum:['RESPONSE','STATEMENT','OTHER']},item:{type:'string'},text:{type:'string'}}}}}}}};}
+  NEW: 
+stubs 42 same 30 differ 12 Alternate Cure Build, Alternate Cure Normalize, Cure Build, Cure Normalize, Panel Cure Build 1, Panel Cure Build 2, Panel Cure Build 3, Panel Cure Normalize 1, Panel Cure Normalize 2, Panel Cure Normalize 3, R2 Alternate Cure Build, R2 Alternate Cure Normalize
+map entries differing beyond n: 0
+stub n != rebuilt length: 0 []
