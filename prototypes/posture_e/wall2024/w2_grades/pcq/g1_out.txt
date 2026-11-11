@@ -1,0 +1,40 @@
+nodes differing [ 'Build Independent Verdict', 'Panel Build' ] conn equal true 418 418
+Panel Build code 277
+Build Independent Verdict code 277
+33497 
+   OLD CHALLENGER LIST [DR2] item 1: no verbatim quote found 
+   NEW CHALLENGER LIST [DR2] item 1: absent from its quote: dating, inference, placed || UNIVERSAL TEST: no negation or universal word beyond its quote
+33497 
+   OLD CHALLENGER LIST [DR2] item 2: no verbatim quote found 
+   NEW CHALLENGER LIST [DR2] item 2: absent from its quote: replacement, inference, words, read, begetting || UNIVERSAL TEST: no negation or universal word beyond its quote
+33497 
+   OLD CHALLENGER LIST [DR2] item 3: no verbatim quote found 
+   NEW CHALLENGER LIST [DR2] item 3: absent from its quote: sign, inference, read, conception, apart, husband || UNIVERSAL TEST: no negation or universal word beyond its quote
+33497 
+   OLD CHALLENGER LIST [DR2] item 4: no verbatim quote found 
+   NEW CHALLENGER LIST [DR2] item 4: absent from its quote: inference, david, seed, routed, through, mary || UNIVERSAL TEST: no negation or universal word beyond its quote
+33497 
+   OLD CHALLENGER LIST [DR2] item 5: no verbatim quote found 
+   NEW CHALLENGER LIST [DR2] item 5: absent from its quote: knowledge, inference, joseph, intent, child || UNIVERSAL TEST: no negation or universal word beyond its quote
+33497 
+   OLD CHALLENGER LIST [DR2] item 6: no verbatim quote found 
+   NEW CHALLENGER LIST [DR2] item 6: absent from its quote: keystone, inference, body, origin, placed, mary, apart, seed, david || UNIVERSAL TEST: no negation or universal word beyond its quote
+35067 
+   OLD CHALLENGER LIST [DR2] item 5: no verbatim quote found 
+   NEW CHALLENGER LIST [DR2] item 5: absent from its quote: inference || UNIVERSAL TEST: no negation or universal word beyond its quote
+items 142 changed 7
+PLANT W2a quote marked "words:" after ASSUMES | expect found 
+   OLD C item 1: no verbatim quote found 
+   NEW C item 1: absent from its quote: dating, inference || UNIVERSAL TEST: no negation or universal word beyond its quote
+PLANT W2b only ROWS GIVE verse quotes that stand in opp | expect none 
+   OLD C item 1: no verbatim quote found 
+   NEW C item 1: no verbatim quote found
+PLANT W2c marker "Quote:" after ASSUMES (limit) | expect ? 
+   OLD C item 1: no verbatim quote found 
+   NEW C item 1: no verbatim quote found
+PLANT W2d "Defender:" quote in the ROWS GIVE list position | expect ? 
+   OLD C item 1: no verbatim quote found 
+   NEW C item 1: absent from its quote: dating, inference || UNIVERSAL TEST: no negation or universal word beyond its quote
+PLANT W2e marker words: with charge word only then | expect found+ONLY 
+   OLD C item 1: no verbatim quote found 
+   NEW C item 1: absent from its quote: ONLY, dating, inference || UNIVERSAL TEST: the charge adds ONLY, which its quote lacks

@@ -1,0 +1,19 @@
+// W2 grade of pkgP72, item-level: parse each request's message text, split into ITEM blocks, compare base vs parent after removing the two additions
+const fs=require('fs');const rebuild=(stub,lib)=>{let i=stub.indexOf('\nreturn await new Function(');if(i<0)i=stub.indexOf('\nconst __e4h');const $=n=>({params:{jsCode:lib}});return new Function('$',stub.slice(0,i)+'\nreturn __S;')($);};
+const ld=f=>{const D=JSON.parse(fs.readFileSync('/mnt/project-files/wall2024/'+f,'utf8'));return (D.data||D).workflow||(D.data||D);};
+const B=ld('parent_s142_JOINT_A21_SRH.json'),P=ld('parent_s143_P72.json');const src=(W,n)=>rebuild(W.nodes.find(x=>x.name===n).parameters.jsCode,W.nodes.find(x=>x.name==='Shared Library').parameters.jsCode);
+const txt=b=>{const m=(b&&b.messages)||[];return m.map(x=>typeof x.content==='string'?x.content:JSON.stringify(x.content)).join('\n<<MSG>>\n');};
+const ADD=/\n    THIS JUDGE'S OWN ANSWER CHECK LINES GRADING A WITNESS PRESSED AGAINST THIS PREMISE MISSES OR FAILS \(ruling 372\): [^\n]*/g;
+(async()=>{let blocks=0,diff=0,rq=0,rqDiff=0,chO=0,chN=0;const out=[];
+for(const f of fs.readdirSync('/mnt/project-files/wall2024/').filter(x=>/^ex3\d+_full\.json$/.test(x))){const rd=JSON.parse(fs.readFileSync('/mnt/project-files/wall2024/'+f,'utf8')).data.resultData.runData;
+ const mk=n=>{const r=rd[n];const items=r?r[r.length-1].data.main.flat().filter(Boolean):[];return {isExecuted:!!r,first:()=>items[0],all:()=>items,last:()=>items[items.length-1],item:items[0],params:{}};};
+ for(const node of ['Judge Enforcer Build','Alt Judge Enforcer Build','R2 Alt Judge Enforcer Build']){if(!rd[node])continue;const inp=mk(rd[node][0].source[0].previousNode);const $i={all:()=>inp.all(),first:()=>inp.first(),item:inp.first()};
+  const o=await new Function('$','$input','return (async()=>{\n'+src(B,node)+'\n})();')(mk,$i),n=await new Function('$','$input','return (async()=>{\n'+src(P,node)+'\n})();')(mk,$i);rq+=o.length;if(o.length!==n.length)rqDiff++;
+  const items=x=>x.flatMap(i=>txt(i.json.body).split(/\n\n(?=ITEM [A-Z]+\d+ \()/).filter(s=>/^ITEM /.test(s)).map(s=>s.split('\n<<MSG>>')[0]));
+  const oi=items(o),ni=items(n);chO+=o.reduce((s,i)=>s+txt(i.json.body).length,0);chN+=n.reduce((s,i)=>s+txt(i.json.body).length,0);
+  const nb=ni.reduce((c,s)=>c+(s.match(ADD)||[]).length,0);blocks+=nb;
+  if(oi.length!==ni.length)console.log('ITEM COUNT',f,node,oi.length,ni.length);
+  oi.forEach((s,k)=>{const t=(ni[k]||'').replace(ADD,'');if(s!==t){diff++;console.log('ITEM TEXT DIFFERS',f,node,k);}});
+  const pr=s=>{const m=s.match(/ITEM (P\d+)/);return m&&m[1];};ni.forEach(s=>{const lines=s.split('\n');lines.forEach((l,k)=>{if(/^    THIS JUDGE'S OWN ANSWER CHECK/.test(l)){const j=lines[k-1].match(/^- (P\d+\.\d+) \(([^)]+)\)/);const ac=l.replace(/^.*?\(ruling 372\): /,'');const segs=ac.split(' || ');const N=x=>String(x).toLowerCase().replace(/[^a-z0-9 ]+/g,' ').replace(/\s+/g,' ').trim();const ok=segs.map(seg=>{const v=(seg.match(/ANSWER CHECK:\s*((?:[1-3]\s)?[A-Za-z]+\s+\d+:\d+)/)||[])[1];const me=N((seg.match(/MEANS:\s*(.*?)\s*--\s*ANSWER/)||[])[1]||'');const pr=s.split("\n").filter(x=>v&&x.replace(/^[\s*•-]+/,"").startsWith(v)&&/MEANS:/.test(x)&&!/ANSWER CHECK/.test(x)).map(x=>N((x.match(/MEANS:\s*(.*?)(?:\s--\s|$)/)||[])[1]||''));return pr.length?(pr.some(q=>q&&me&&(q.includes(me.slice(0,40))||me.includes(q.slice(0,40))))?'MEANS MATCH':'MEANS DIFFER from the press on this premise: '+pr.map(q=>q.slice(0,60)).join(' / ')):'press not in item text';});out.push('['+ok.join('; ')+'] '+f.slice(2,7)+' '+node.split(' ')[0]+' '+(j?j[1]+' '+j[2]:'?')+' | '+(s.match(/THE LIST ENTRY: ([^\n]{0,70})/)||[])[1]+' | '+l.replace(/^.*?\(ruling 372\): /,'').slice(0,150));}});});
+ }}
+console.log('requests',rq,'request-count changes',rqDiff,'item text differences after removing additions',diff,'372 blocks',blocks,'request chars',chN-chO);out.forEach(x=>console.log('  ',x));})();
