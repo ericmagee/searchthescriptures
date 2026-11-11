@@ -1,0 +1,7 @@
+E1 code -13 prompt 0 | lib lines 3047,3115 | other nodes none | conn equal true | part lists differ 0, n changed Alt Send Back Build,R2 Alt Send Back Build,Send Back Build
+E1 line 3047 old: ", on a witness the side answered, with the FORCED line for the pair given only when the gate asks for it (K-G4" | new: " (on a witness the side answered: FORCED: <Dn vs Cm> -- MEANS [<round>]: \"...\" -- ANSWER [<round>]: \"...\" -- FAILS: \"...\"" | growth 11
+E1 line 3115 old: "and give the FORCED line when the gate asks for it" | new: "with its FORCED line" | growth -30
+E2 2033 form "FORCED: <Dn vs Cm> -- MEANS [<round>]: \"...\" -- ANSWER [<round>]: \"...\" -- FAILS: \"...\")"
+   3047 form "FORCED: <Dn vs Cm> -- MEANS [<round>]: \"...\" -- ANSWER [<round>]: \"...\" -- FAILS: \"...\")" | equal true
+E6 joint vs three-part joint: lib lines 3047,3115 | line equals EHF line true | other nodes none | code vs s120 1270 | vs joint -13 | prompt 0
+E5 runner: code nodes checked 352 fail 0
