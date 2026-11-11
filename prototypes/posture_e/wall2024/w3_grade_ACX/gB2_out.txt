@@ -1,0 +1,134 @@
+sha256 candidate: 56cd7e51ea9b4e59a4814671e378479c52d3da1758dc4ba3dacca5408479672e
+
+## B0
+node counts 418 418 name sets equal true
+differing nodes: [["Build Independent Verdict","params differ"],["Panel Build","params differ"]]
+connections equal: true
+  Build Independent Verdict differing param keys: jsCode | jsCode len 123788 -> 123897 delta 109
+  Panel Build differing param keys: jsCode | jsCode len 151065 -> 151174 delta 109
+
+[Build Independent Verdict] diff at offset 44463 removed "" 
+ ADDED: " (this note by itself breaks no link; only a pair listed under CONFIRMED CLOSING CONTRADICTIONS is confirmed)" 
+ context-left (150): "lose says: \"'+String(r.close_q).slice(0,400)+'\". The same side said earlier: \"'+String(r.earlier_q).slice(0,400)+'\". The close sentence is disregarded" 
+ context-right (150): "; grade this side\\'s earlier answer on '+r.verse+' on its own words, against the verse.]').join('');}catch(e){return '';}};\nconst __CEC=sd=>{try{if(!$"
+
+[Panel Build] diff at offset 44463 removed "" 
+ ADDED: " (this note by itself breaks no link; only a pair listed under CONFIRMED CLOSING CONTRADICTIONS is confirmed)" 
+ context-left (150): "lose says: \"'+String(r.close_q).slice(0,400)+'\". The same side said earlier: \"'+String(r.earlier_q).slice(0,400)+'\". The close sentence is disregarded" 
+ context-right (150): "; grade this side\\'s earlier answer on '+r.verse+' on its own words, against the verse.]').join('');}catch(e){return '';}};\nconst __CEC=sd=>{try{if(!$"
+
+change identical in both nodes (added text, removed text, left ctx, right ctx): true ; added==PH: [ true, true ]
+
+# B1
+
+## B1 ex34852 stored
+ Panel Build
+   base notes=6 phrase=0 | prompts-with-note=3
+   cand notes=6 phrase=6 | prompts-with-note=3 | per-prompt notes 2/2,2/2,2/2
+   phrase outside an anti-cheat note (cand)=0
+   raw equal=false ; equal after phrase removed (JSON.stringify)=false ; equal after masking numeric length fields too=true masked: [["[0].transcript_chars",131918,132136]]
+   C3/C4 prompt#13 len 136297 notes=2 CCCblock=1 firstNote@118198 lastNote@118839 CCC@119405
+   C3/C4 prompt#42 len 140173 notes=2 CCCblock=1 firstNote@122200 lastNote@122841 CCC@123407
+   C3/C4 prompt#71 len 137862 notes=2 CCCblock=1 firstNote@119650 lastNote@120291 CCC@120857
+ Build Independent Verdict
+   base notes=2 phrase=0 | prompts-with-note=1
+   cand notes=2 phrase=2 | prompts-with-note=1 | per-prompt notes 2/2
+   phrase outside an anti-cheat note (cand)=0
+   raw equal=false ; equal after phrase removed (JSON.stringify)=true ; equal after masking numeric length fields too=true masked: none
+   C3/C4 prompt#20 len 209812 notes=2 CCCblock=1 firstNote@121032 lastNote@121673 CCC@122239
+
+# B3
+acx.reversed keys [ 'D', 'C' ] D/C lens before 2 0
+
+## B3a Anticheat Record reversed D=[] and C=[]
+ Panel Build
+   base notes=0 phrase=0 | prompts-with-note=0
+   cand notes=0 phrase=0 | prompts-with-note=0 | per-prompt notes 
+   phrase outside an anti-cheat note (cand)=0
+   raw equal=true ; equal after phrase removed (JSON.stringify)=true ; equal after masking numeric length fields too=true masked: none
+ Build Independent Verdict
+   base notes=0 phrase=0 | prompts-with-note=0
+   cand notes=0 phrase=0 | prompts-with-note=0 | per-prompt notes 
+   phrase outside an anti-cheat note (cand)=0
+   raw equal=true ; equal after phrase removed (JSON.stringify)=true ; equal after masking numeric length fields too=true masked: none
+
+## B3b Anticheat Record key deleted
+ Panel Build
+   base notes=0 phrase=0 | prompts-with-note=0
+   cand notes=0 phrase=0 | prompts-with-note=0 | per-prompt notes 
+   phrase outside an anti-cheat note (cand)=0
+   raw equal=true ; equal after phrase removed (JSON.stringify)=true ; equal after masking numeric length fields too=true masked: none
+ Build Independent Verdict
+   base notes=0 phrase=0 | prompts-with-note=0
+   cand notes=0 phrase=0 | prompts-with-note=0 | per-prompt notes 
+   phrase outside an anti-cheat note (cand)=0
+   raw equal=true ; equal after phrase removed (JSON.stringify)=true ; equal after masking numeric length fields too=true masked: none
+
+# B4
+nodes present: Panel Build=true Build Independent Verdict=true Anticheat Record=true
+
+## B4 ex34726_full.json
+ Panel Build
+   base notes=3 phrase=0 | prompts-with-note=3
+   cand notes=3 phrase=3 | prompts-with-note=3 | per-prompt notes 1/1,1/1,1/1
+   phrase outside an anti-cheat note (cand)=0
+   raw equal=false ; equal after phrase removed (JSON.stringify)=false ; equal after masking numeric length fields too=true masked: [["[0].transcript_chars",140510,140619]]
+   C3/C4 prompt#13 len 144233 notes=1 CCCblock=1 firstNote@125717 lastNote@125717 CCC@126280
+   C3/C4 prompt#42 len 148549 notes=1 CCCblock=1 firstNote@129719 lastNote@129719 CCC@130282
+   C3/C4 prompt#71 len 146302 notes=1 CCCblock=1 firstNote@127169 lastNote@127169 CCC@127732
+ Build Independent Verdict
+   base notes=1 phrase=0 | prompts-with-note=1
+   cand notes=1 phrase=1 | prompts-with-note=1 | per-prompt notes 1/1
+   phrase outside an anti-cheat note (cand)=0
+   raw equal=false ; equal after phrase removed (JSON.stringify)=true ; equal after masking numeric length fields too=true masked: none
+   C3/C4 prompt#20 len 222146 notes=1 CCCblock=1 firstNote@128551 lastNote@128551 CCC@129114
+nodes present: Panel Build=true Build Independent Verdict=false Anticheat Record=true
+
+## B4 ex34780_full.json
+ Panel Build
+   base notes=3 phrase=0 | prompts-with-note=3
+   cand notes=3 phrase=3 | prompts-with-note=3 | per-prompt notes 1/1,1/1,1/1
+   phrase outside an anti-cheat note (cand)=0
+   raw equal=false ; equal after phrase removed (JSON.stringify)=false ; equal after masking numeric length fields too=true masked: [["[0].transcript_chars",140477,140586]]
+   C3/C4 prompt#13 len 144141 notes=1 CCCblock=1 firstNote@125717 lastNote@125717 CCC@126247
+   C3/C4 prompt#42 len 148331 notes=1 CCCblock=1 firstNote@129719 lastNote@129719 CCC@130249
+   C3/C4 prompt#71 len 146262 notes=1 CCCblock=1 firstNote@127169 lastNote@127169 CCC@127699
+ Build Independent Verdict: NOT RUN (node absent in runData)
+
+# B5 (candidate, ex34852)
+
+=== Panel Build: prompt length 136297
+--- ANTI-CHEAT NOTE at offset 118198 (len 639)
+[ANTI-CHEAT CHECK -- computed by the system's enforcer, not by a judge (a TRIAL check): this close round reverses the same side's own earlier reading of Matthew 1:19. The close says: "A man who knew himself the father would have no cause to put her away, and the verse shows Joseph with that cause.". The same side said earlier: "I drop the claim that a father would never have thought of putting her away.". The close sentence is disregarded (this note by itself breaks no link; only a pair listed under CONFIRMED CLOSING CONTRADICTIONS is confirmed); grade this side's earlier answer on Matthew 1:19 on its own words, against the verse.]
+--- ANTI-CHEAT NOTE at offset 118839 (len 564)
+[ANTI-CHEAT CHECK -- computed by the system's enforcer, not by a judge (a TRIAL check): this close round reverses the same side's own earlier reading of Luke 2:4. The close says: "the child's descent from David stands through Mary". The same side said earlier: "I drop any claim that the verses by themselves trace Mary's own pedigree.". The close sentence is disregarded (this note by itself breaks no link; only a pair listed under CONFIRMED CLOSING CONTRADICTIONS is confirmed); grade this side's earlier answer on Luke 2:4 on its own words, against the verse.]
+
+--- search hits (de-duplicated by overlapping 600-char window); total raw hits per pattern: CONFIRMED CLOSING CONTRADICTION=3, CLOSING CONTRADICTION=3, close enforcer=0, BROKEN BY=0
+
+>> pattern "CONFIRMED CLOSING CONTRADICTION" at offset 118703 (window 118103-119334)
+de an ANSWER line such a verse is NEW TO THIS SIDE IN CLOSE: it is not footing for any link.]
+
+[ANTI-CHEAT CHECK -- computed by the system's enforcer, not by a judge (a TRIAL check): this close round reverses the same side's own earlier reading of Matthew 1:19. The close says: "A man who knew himself the father would have no cause to put her away, and the verse shows Joseph with that cause.". The same side said earlier: "I drop the claim that a father would never have thought of putting her away.". The close sentence is disregarded (this note by itself breaks no link; only a pair listed under CONFIRMED CLOSING CONTRADICTIONS is confirmed); grade this side's earlier answer on Matthew 1:19 on its own words, against the verse.]
+
+[ANTI-CHEAT CHECK -- computed by the system's enforcer, not by a judge (a TRIAL check): this close round reverses the same side's own earlier reading of Luke 2:4. The close says: "the child's descent from David stands through Mary". The same side said earlier: "I drop any claim that the verses by themselves trace Mary's own pedigree.". The close sentence is disregarded (this note by itself breaks no link; only a pair listed under CONFIRMED CLOSING CONTRADICTIONS is confirmed); grade this si
+
+first anti-cheat note offset: 118198 ; first CONFIRMED CLOSING CONTRADICTION offset: 118703 ; first of any pattern: 118703 (CONFIRMED CLOSING CONTRADICTION)
+
+=== Build Independent Verdict: prompt length 209812
+--- ANTI-CHEAT NOTE at offset 121032 (len 639)
+[ANTI-CHEAT CHECK -- computed by the system's enforcer, not by a judge (a TRIAL check): this close round reverses the same side's own earlier reading of Matthew 1:19. The close says: "A man who knew himself the father would have no cause to put her away, and the verse shows Joseph with that cause.". The same side said earlier: "I drop the claim that a father would never have thought of putting her away.". The close sentence is disregarded (this note by itself breaks no link; only a pair listed under CONFIRMED CLOSING CONTRADICTIONS is confirmed); grade this side's earlier answer on Matthew 1:19 on its own words, against the verse.]
+--- ANTI-CHEAT NOTE at offset 121673 (len 564)
+[ANTI-CHEAT CHECK -- computed by the system's enforcer, not by a judge (a TRIAL check): this close round reverses the same side's own earlier reading of Luke 2:4. The close says: "the child's descent from David stands through Mary". The same side said earlier: "I drop any claim that the verses by themselves trace Mary's own pedigree.". The close sentence is disregarded (this note by itself breaks no link; only a pair listed under CONFIRMED CLOSING CONTRADICTIONS is confirmed); grade this side's earlier answer on Luke 2:4 on its own words, against the verse.]
+
+--- search hits (de-duplicated by overlapping 600-char window); total raw hits per pattern: CONFIRMED CLOSING CONTRADICTION=3, CLOSING CONTRADICTION=3, close enforcer=0, BROKEN BY=0
+
+>> pattern "CONFIRMED CLOSING CONTRADICTION" at offset 121537 (window 120937-122168)
+de an ANSWER line such a verse is NEW TO THIS SIDE IN CLOSE: it is not footing for any link.]
+
+[ANTI-CHEAT CHECK -- computed by the system's enforcer, not by a judge (a TRIAL check): this close round reverses the same side's own earlier reading of Matthew 1:19. The close says: "A man who knew himself the father would have no cause to put her away, and the verse shows Joseph with that cause.". The same side said earlier: "I drop the claim that a father would never have thought of putting her away.". The close sentence is disregarded (this note by itself breaks no link; only a pair listed under CONFIRMED CLOSING CONTRADICTIONS is confirmed); grade this side's earlier answer on Matthew 1:19 on its own words, against the verse.]
+
+[ANTI-CHEAT CHECK -- computed by the system's enforcer, not by a judge (a TRIAL check): this close round reverses the same side's own earlier reading of Luke 2:4. The close says: "the child's descent from David stands through Mary". The same side said earlier: "I drop any claim that the verses by themselves trace Mary's own pedigree.". The close sentence is disregarded (this note by itself breaks no link; only a pair listed under CONFIRMED CLOSING CONTRADICTIONS is confirmed); grade this si
+
+first anti-cheat note offset: 121032 ; first CONFIRMED CLOSING CONTRADICTION offset: 121537 ; first of any pattern: 121537 (CONFIRMED CLOSING CONTRADICTION)
+
+## C4 summary

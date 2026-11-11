@@ -25,3 +25,16 @@ VERDICT: NOT PASSED, on the wording (B5). The code does exactly what it states.
 - B3: no anti-cheat row, and Anticheat Record not run: equal to s120.
 - B5 FAIL: in 34852 the Matthew 1:19 note now reads "The close sentence is disregarded (this note breaks no link; it is not a confirmed closing contradiction)" on the pair "A man who knew himself the father would have no cause to put her away..." against "I drop the claim that a father would never have thought of putting her away." The next block of the same prompt, CONFIRMED CLOSING CONTRADICTIONS, lists the same two sentences as confirmed and D3 as BROKEN. The judge is told of one pair that it is not a confirmed closing contradiction and, a few lines on, that it is one. The phrase is false whenever the closing enforcer confirmed the note's pair.
 - Suggested, W2's decision: wording that is true in both cases, for example "(this note by itself breaks no link; only a pair listed under CONFIRMED CLOSING CONTRADICTIONS is confirmed)".
+
+## Option B rev 2 (parent_s120_ACXB2.json, sha256 56cd7e51ea9b4e59; claim Wall post 4690)
+
+Runs by a delegated worker (gB2.cjs, gB2_out.txt); expectations posted first; verdict mine. The wording is the one I suggested.
+
+VERDICT: PASS, one case NOT REACHED.
+
+- C0: only Panel Build and Build Independent Verdict differ from s120, +109 each, the same insertion; connections equal.
+- C1: on stored 34852, 34726, 34780 each note carries the phrase once, the phrase stands nowhere outside a note, and with it taken out the outputs equal s120 but for transcript_chars (+109 per note). Build Independent Verdict is not in the 34780 export, NOT RUN there.
+- C2: no anti-cheat row, and Anticheat Record not run: equal to s120.
+- C3: in 34852 the title "[CONFIRMED CLOSING CONTRADICTIONS" stands once in each prompt, after the notes.
+- C4 NOT REACHED: no stored prompt has a note without the confirmed block, so the phrase naming an absent block was not read on stored text.
+- Does not cure (W2 stated it): the anti-cheat note and the closing enforcer can still disagree on a pair; the phrase only tells the judge which of the two is a confirmed contradiction.
