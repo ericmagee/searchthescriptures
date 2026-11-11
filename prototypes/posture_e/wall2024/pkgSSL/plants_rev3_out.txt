@@ -1,0 +1,17 @@
+RIGHT {"old":"grants","draft1":null,"rev2":null,"rev3":null} expected null | Challenger listed eleven numbered grants (G1-G11) and six supplemental grants (G+).
+RIGHT {"old":"grants","draft1":null,"rev2":null,"rev3":null} expected null | The challenger’s close restated its chain and listed grants.
+RIGHT {"old":"grants","draft1":null,"rev2":"conceded","rev3":"grants"} expected conceded | The defender cited two grants and conceded the D3 link.
+RIGHT {"old":"grants","draft1":null,"rev2":"withdrew","rev3":"grants"} expected withdrew | The challenger listed grants and withdrew premise 4.
+RIGHT {"old":"grants","draft1":"grants","rev2":null,"rev3":null} expected null | The challenger quoted the defender's grants.
+RIGHT {"old":"grants","draft1":"grants","rev2":"dropped","rev3":"grants"} expected dropped | The challenger quoted the defender’s grants and dropped limb 2.
+RIGHT {"old":"granted","draft1":"granted","rev2":"granted","rev3":"granted"} expected granted | The defender granted that Luke 1:27 names Joseph.
+RIGHT {"old":"narrowed","draft1":"narrowed","rev2":"narrowed","rev3":"narrowed"} expected narrowed | The challenger narrowed C4 to the timing.
+RIGHT {"old":"narrowed","draft1":"narrowed","rev2":"narrowed","rev3":"narrowed"} expected narrowed | Challenger cited each pressed premise, exhibited its footing, and narrowed two specific limbs.
+RIGHT {"old":"grants","draft1":null,"rev2":"conceded","rev3":"grants"} expected null | The defender listed grants but conceded nothing.
+RIGHT {"old":"grants","draft1":"grants","rev2":"grants","rev3":"grants"} expected grants | The defender grants that the row is legal.
+RIGHT {"old":"grants","draft1":null,"rev2":null,"rev3":null} expected null | The defender listed the grants it made.
+RIGHT {"old":"grants","draft1":null,"rev2":null,"rev3":"grants"} expected keep | The challenger listed grants that no one disputes and conceded D3.
+RIGHT {"old":"grants","draft1":null,"rev2":"conceded","rev3":"grants"} expected keep | The challenger listed grants, and the defender conceded the D3 link.
+RIGHT {"old":"grants","draft1":null,"rev2":"withdrew","rev3":"grants"} expected keep | The challenger listed grants; the defender then withdrew premise 2.
+RIGHT {"old":"grants","draft1":null,"rev2":"granted","rev3":"grants"} expected keep | The challenger quoted three grants and granted that the row is legal.
+16 of 16

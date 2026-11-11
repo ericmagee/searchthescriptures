@@ -1,0 +1,24 @@
+33149 Judge Enforcer Build | requests 10 -> 10 | item ids equal true | request chars 0
+33149 Alt Judge Enforcer Build | requests 0 -> 0 | item ids equal true | request chars 0
+33371 Judge Enforcer Build | requests 6 -> 6 | item ids equal true | request chars 0
+33371 Alt Judge Enforcer Build | requests 5 -> 5 | item ids equal true | request chars 0
+33490 Judge Enforcer Build | requests 9 -> 9 | item ids equal false | request chars -2339
+33490 Alt Judge Enforcer Build | requests 5 -> 5 | item ids equal true | request chars 0
+33497 Judge Enforcer Build | requests 10 -> 10 | item ids equal true | request chars 0
+33497 Alt Judge Enforcer Build | requests 1 -> 1 | item ids equal true | request chars 0
+34299 Judge Enforcer Build | requests 8 -> 8 | item ids equal true | request chars 0
+34626 Judge Enforcer Build | requests 8 -> 8 | item ids equal true | request chars 0
+34626 Alt Judge Enforcer Build | requests 0 -> 0 | item ids equal true | request chars 0
+34703 Judge Enforcer Build | requests 8 -> 8 | item ids equal true | request chars 0
+34703 Alt Judge Enforcer Build | requests 1 -> 1 | item ids equal true | request chars 0
+34726 Judge Enforcer Build | requests 10 -> 10 | item ids equal true | request chars 0
+34726 Alt Judge Enforcer Build | requests 1 -> 1 | item ids equal true | request chars 0
+34780 Judge Enforcer Build | requests 10 -> 10 | item ids equal true | request chars 0
+34780 Alt Judge Enforcer Build | requests 0 -> 0 | item ids equal true | request chars 0
+34852 Judge Enforcer Build | requests 7 -> 7 | item ids equal true | request chars 0
+34852 Alt Judge Enforcer Build | requests 2 -> 2 | item ids equal true | request chars 0
+35067 Judge Enforcer Build | requests 7 -> 7 | item ids equal true | request chars 0
+35067 Alt Judge Enforcer Build | requests 0 -> 0 | item ids equal true | request chars 0
+35173 Judge Enforcer Build | requests 8 -> 8 | item ids equal false | request chars -2115
+35173 Alt Judge Enforcer Build | requests 5 -> 5 | item ids equal true | request chars 0
+TOTAL { d: -4454, calls: 121, idsEq: false }
