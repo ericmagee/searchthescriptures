@@ -1,0 +1,48 @@
+DIFF nodes: Shared Library 293 | nodes 418 418 | rest equal true
+T1 not_sent live 4 cand 7 | added: sol E-COL COLLISION D1 vs C3 ; luna E-COL COLLISION D1 vs C3 ; sol E-COL COLLISION D1 vs C3
+T1 luna items live 15 cand 15 | gone:  | new: 0
+T1 chatgpt items live 11 cand 11 | gone:  | new: 0
+T1 sol items live 13 cand 10 | gone: E-COL E-COL|COLLISION D1 vs C3|D1 vs C3 (Matthew 1:18, Matthew 1:24-25): DEF ;; E-COL E-COL|COLLISION D1 vs C3|FORCED: D1 vs C3 -- MEANS [DR2]: "the abstine ;; E-COL E-COL|COLLISION D1 vs C3|FORCED: D1 vs C3 -- MEANS [DR2]: "the abstine | new: 0
+T2 gate out keys gate_skip,seat,idx,api_model,run_token,F,items,msg,body,gate_report n 2
+T2 luna 
+   LIVE: G1 CONTRADICTION E-GATE B: your ANSWER CHECK on Matthew 1:18 [DR3] grade || G2 RULE K-UNX K re-read: DEFENDER premise 5: counted UNEXHIBITED in CO || G3 CONTRADICTION E-GATE M: your ANSWER CHECK on Hebrews 7:14 [DR3] grade || G4 CONTRADICTION E-GATE M: your ANSWER CHECK on Matthew 1:18 [DR3] grade 
+   CAND: G1 CONTRADICTION E-GATE B: your ANSWER CHECK on Matthew 1:18 [DR3] grade || G2 RULE K-UNX K re-read: DEFENDER premise 5: counted UNEXHIBITED in CO || G3 CONTRADICTION E-GATE M: your ANSWER CHECK on Hebrews 7:14 [DR3] grade || G4 CONTRADICTION E-GATE M: your ANSWER CHECK on Matthew 1:18 [DR3] grade
+T2 chatgpt 
+   LIVE: G1 CONTRADICTION E-GATE B: your ANSWER CHECK on Matthew 1:18 [DR3] grade || G2 RULE K-UNX K re-read: DEFENDER premise 5: counted UNEXHIBITED in CO || G3 CONTRADICTION E-GATE M: your ANSWER CHECK on Hebrews 7:14 [DR3] grade || G4 CONTRADICTION E-GATE M: your ANSWER CHECK on Matthew 1:18 [DR3] grade 
+   CAND: G1 CONTRADICTION E-GATE B: your ANSWER CHECK on Matthew 1:18 [DR3] grade || G2 RULE K-UNX K re-read: DEFENDER premise 5: counted UNEXHIBITED in CO || G3 CONTRADICTION E-GATE M: your ANSWER CHECK on Hebrews 7:14 [DR3] grade || G4 CONTRADICTION E-GATE M: your ANSWER CHECK on Matthew 1:18 [DR3] grade
+T2 sol 
+   LIVE: G1 NOT APPLIED E-APPLY S1: the flagged line is not in the judge text || G2 NOT APPLIED E-APPLY S4: the CHANGE TO line has no line form the engin || G3 NOT APPLIED E-APPLY S5: the flagged line is not in the judge text || G4 CONTRADICTION E-GATE D38: your RULING card grades D1 vs C3 DEFENDER LIN 
+   CAND: G1 NOT APPLIED E-APPLY S1: the flagged line is not in the judge text || G2 CONTRADICTION E-GATE D38: your RULING card grades D1 vs C3 DEFENDER LIN
+T3 "RETRACTED: D1 vs C3" | LIVE: applied | CAND: applied | other items equal true
+T3 "RETRACTED: D1 vs C3." | LIVE: applied | CAND: applied | other items equal true
+T3 "RETRACTED: D1 vs C3 -- the meaning-based forced-link ruling is withdr | LIVE: NOT APPLIED: the CHANGE TO line has no line form the en | CAND: applied | other items equal false
+T3 "RETRACTED: D1 vs C3 — withdrawn on [CR3] \"I grant it bounds the abst | LIVE: NOT APPLIED: the CHANGE TO line has no line form the en | CAND: applied | other items equal false
+T3 "RETRACTED: D1 vs C3 -- NOT RETRACTED, the line is right" | LIVE: NOT APPLIED: the CHANGE TO line has no line form the en | CAND: NOT APPLIED: the CHANGE TO line has no line form the en | other items equal true
+T3 "RETRACTED: D1 vs C3 -- the FORCED line stands" | LIVE: NOT APPLIED: the CHANGE TO line has no line form the en | CAND: NOT APPLIED: the CHANGE TO line has no line form the en | other items equal true
+T3 "RETRACTED: D1 vs C3 -- I keep the line" | LIVE: NOT APPLIED: the CHANGE TO line has no line form the en | CAND: NOT APPLIED: the CHANGE TO line has no line form the en | other items equal true
+T3 "RETRACTED: D1 vs C3 -- it remains forced" | LIVE: NOT APPLIED: the CHANGE TO line has no line form the en | CAND: NOT APPLIED: the CHANGE TO line has no line form the en | other items equal true
+T3 "RETRACTED: D1 vs C3; withdrawn" | LIVE: NOT APPLIED: the CHANGE TO line has no line form the en | CAND: NOT APPLIED: the CHANGE TO line has no line form the en | other items equal true
+T3 "RETRACTED: D1 vs C3 (withdrawn)" | LIVE: NOT APPLIED: the CHANGE TO line has no line form the en | CAND: NOT APPLIED: the CHANGE TO line has no line form the en | other items equal true
+T3 "RETRACTED: D2 vs C4 -- withdrawn" | LIVE: NOT APPLIED: the CHANGE TO line has no line form the en | CAND: NOT APPLIED: the CHANGE TO line has no line form the en | other items equal true
+T3 "RETRACTED: D1 vs C3 and D2 vs C4" | LIVE: NOT APPLIED: the CHANGE TO line has no line form the en | CAND: NOT APPLIED: the CHANGE TO line has no line form the en | other items equal true
+T3 "retracted: d1 vs c3 -- withdrawn" | LIVE: NOT APPLIED: the CHANGE TO line has no line form the en | CAND: applied | other items equal false
+T3 "RETRACTED -- D1 vs C3 -- withdrawn" | LIVE: NOT APPLIED: the CHANGE TO line has no line form the en | CAND: NOT APPLIED: the CHANGE TO line has no line form the en | other items equal true
+T3 "RETRACTED: D1 vs C3 --" | LIVE: applied | CAND: applied | other items equal true
+T3 "RETRACTED: D1 vs C3 -- the ruling is not sustained and is withdrawn" | LIVE: NOT APPLIED: the CHANGE TO line has no line form the en | CAND: applied | other items equal false
+T3 "RETRACTED: D1 vs C3 -- I do not retract this ruling" | LIVE: NOT APPLIED: the CHANGE TO line has no line form the en | CAND: NOT APPLIED: the CHANGE TO line has no line form the en | other items equal true
+T3 "RETRACTED: D1 vs C3 -- the break is upheld" | LIVE: NOT APPLIED: the CHANGE TO line has no line form the en | CAND: NOT APPLIED: the CHANGE TO line has no line form the en | other items equal true
+T3 "RETRACTED: D1 vs C3 -- maintained" | LIVE: NOT APPLIED: the CHANGE TO line has no line form the en | CAND: NOT APPLIED: the CHANGE TO line has no line form the en | other items equal true
+T3 "RETRACTED: D1 vs C3 -- not withdrawing it" | LIVE: NOT APPLIED: the CHANGE TO line has no line form the en | CAND: NOT APPLIED: the CHANGE TO line has no line form the en | other items equal true
+T3 "RETRACTED: D1 vs C3 -- still standing" | LIVE: NOT APPLIED: the CHANGE TO line has no line form the en | CAND: NOT APPLIED: the CHANGE TO line has no line form the en | other items equal true
+T3 "RETRACTED: D1 vs C3 -- affirmed" | LIVE: NOT APPLIED: the CHANGE TO line has no line form the en | CAND: NOT APPLIED: the CHANGE TO line has no line form the en | other items equal true
+T3 "RETRACTED: D1 vs C3 -- unchanged" | LIVE: NOT APPLIED: the CHANGE TO line has no line form the en | CAND: NOT APPLIED: the CHANGE TO line has no line form the en | other items equal true
+T3 "RETRACTED: D1 vs C3 -- I decline to retract" | LIVE: NOT APPLIED: the CHANGE TO line has no line form the en | CAND: NOT APPLIED: the CHANGE TO line has no line form the en | other items equal true
+T3 "RETRACTED: D1 vs C3 -- refused" | LIVE: NOT APPLIED: the CHANGE TO line has no line form the en | CAND: NOT APPLIED: the CHANGE TO line has no line form the en | other items equal true
+T3 "RETRACTED: D1 vs C3 -- it cannot be retracted" | LIVE: NOT APPLIED: the CHANGE TO line has no line form the en | CAND: applied | other items equal false
+T3 "RETRACTED: D1 vs C3 -- the FORCED line is retained" | LIVE: NOT APPLIED: the CHANGE TO line has no line form the en | CAND: NOT APPLIED: the CHANGE TO line has no line form the en | other items equal true
+T3 "RETRACTED: D1 vs C3 -- [CR3] says \"I grant it bounds the abstinence  | LIVE: NOT APPLIED: the CHANGE TO line has no line form the en | CAND: applied | other items equal false
+T4 Send Back Build stored 34726, candidate equals live: false
+T4 Gate Build stored 34726, candidate equals live: true
+T4 Gate Record stored 34726, candidate equals live: true
+T4b Gate Record stored 34780, candidate equals live: true
+T4b Alternate Merge ERR not a pkgLIB stub

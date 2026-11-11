@@ -11,7 +11,7 @@ const one=s=>{const i=L.map((l,i)=>l.includes(s)?i:-1).filter(i=>i>=0);if(i.leng
 const rep=(s,o,n)=>{if(s.split(o).length!==2)throw new Error('anchor not once: '+o);return s.replace(o,()=>n);};
 const RO="/^RETRACTED\\s*:\\s*(D\\d+)\\s+VS\\.?\\s+(C\\d+)\\s*\\.?$/i";
 const RN="__rtR";
-const RD="const __rtR=/^RETRACTED\\s*:\\s*(D\\d+)\\s+VS\\.?\\s+(C\\d+)\\s*(?:\\.?$|(?:--|[\\u2013\\u2014])(?!.*\\b(?:NOT\\s+(?:BE\\s+)?(?:RETRACT\\w*|WITHDRAW\\w*)|STAND\\w*|KEEP\\w*|KEPT|REMAIN\\w*|UPH[OE]LD\\w*|MAINTAIN\\w*|RETAIN\\w*|AFFIRM\\w*|UNCHANGED|DECLIN\\w*|REFUS\\w*)\\b))/i;";
+const RD="const __rtR=/^RETRACTED\\s*:\\s*(D\\d+)\\s+VS\\.?\\s+(C\\d+)\\s*(?:\\.?$|(?:--|[\\u2013\\u2014])(?!.*\\b(?:(?:(?:CAN)?NOT|NEVER|\\w+N['\\u2019]T)\\s+(?:BE\\s+)?(?:RETRACT\\w*|WITHDRAW\\w*)|STAND\\w*|KEEP\\w*|KEPT|REMAIN\\w*|UPH[OE]LD\\w*|MAINTAIN\\w*|RETAIN\\w*|AFFIRM\\w*|UNCHANGED|DECLIN\\w*|REFUS\\w*)\\b))/i;";
 const EO="const m=t.match(/^D(\\d+)\\s+vs\\.?\\s+C(\\d+)\\b/i),a=t.match(/\\[AUDIT: LINK (\\d+) BROKEN BY A CONFIRMED CLOSING CONTRADICTION -- (DEFENDER|CHALLENGER)\\b/);return m&&a&&__cc.has(a[2]+' '+a[1])&&(a[2]==='DEFENDER'?m[1]:m[2])===a[1]?'D'+m[1]+' VS C'+m[2]:null;};";
 const EN="const m=t.match(/^D(\\d+)\\s+vs\\.?\\s+C(\\d+)\\b/i),a=t.match(/\\[AUDIT: LINK (\\d+) BROKEN BY A CONFIRMED CLOSING CONTRADICTION -- (DEFENDER|CHALLENGER)\\b/),g=a?a[2]:(t.match(/^D\\d+\\s+vs\\.?\\s+C\\d+\\s*(?:\\([^)]*\\))?\\s*:\\s*(DEFENDER|CHALLENGER) LINK BROKEN\\b/)||[])[1],n=m&&g&&(g==='DEFENDER'?m[1]:m[2]);return n&&(!a||a[1]===n)&&__cc.has(g+' '+n)?'D'+m[1]+' VS C'+m[2]:null;};";
 const E=[];
