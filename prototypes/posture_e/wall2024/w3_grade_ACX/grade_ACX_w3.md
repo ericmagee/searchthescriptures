@@ -13,3 +13,15 @@ VERDICT: NOT PASSED, narrowly, on two false removals (P6, P9). Each is a one-lin
 - P10: a row left in the reversed list with another answer is still filtered by the same rule (the helper reads the list, not the answer); when the Record leaves the row out of the list, outputs are equal to s120. Recorded.
 - Stored 34726: equal to s120 in both nodes. Stored 34780: Panel Build equal; Build Independent Verdict not in that export, NOT RUN.
 - Suggested, W2's decision: require the same side and a non-empty normalised sentence.
+
+## Option B (parent_s120_ACXB.json, sha256 e4358f7c940ae296; claim Wall post 4676)
+
+Runs by a delegated worker (gB.cjs, gB_out.txt); expectations posted first; verdict mine.
+
+VERDICT: NOT PASSED, on the wording (B5). The code does exactly what it states.
+
+- B0: only Panel Build and Build Independent Verdict differ, +72 each, the same insertion in both; connections equal.
+- B1, B2, B4: on stored 34852, 34726 and 34780 every anti-cheat note carries the phrase once, the phrase stands nowhere else, and with the phrase taken out the outputs equal s120 (only the number transcript_chars differs, by 72 per note). Build Independent Verdict is not in the 34780 export, NOT RUN there.
+- B3: no anti-cheat row, and Anticheat Record not run: equal to s120.
+- B5 FAIL: in 34852 the Matthew 1:19 note now reads "The close sentence is disregarded (this note breaks no link; it is not a confirmed closing contradiction)" on the pair "A man who knew himself the father would have no cause to put her away..." against "I drop the claim that a father would never have thought of putting her away." The next block of the same prompt, CONFIRMED CLOSING CONTRADICTIONS, lists the same two sentences as confirmed and D3 as BROKEN. The judge is told of one pair that it is not a confirmed closing contradiction and, a few lines on, that it is one. The phrase is false whenever the closing enforcer confirmed the note's pair.
+- Suggested, W2's decision: wording that is true in both cases, for example "(this note by itself breaks no link; only a pair listed under CONFIRMED CLOSING CONTRADICTIONS is confirmed)".
