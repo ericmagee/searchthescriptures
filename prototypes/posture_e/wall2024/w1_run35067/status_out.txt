@@ -1,0 +1,8 @@
+status success finished true nodes ran 265 lastNode Raise If Incomplete
+node errors 0 
+code-error text hits {}
+95 list: REACHED 75 NOT REACHED 20 
+NOT REACHED: Accept DS Return Build; Accept Return Build; Failure Salvage; R2 Alt Gate Build; R2 Alt Gate Record; R2 Alt Send Back Build; R2 Alt Send Back Record; R2 Alternate Build; R2 Alternate Cure Build; R2 Alternate Cure Normalize; R2 Alternate Merge; R2 Alternate Merge Seat; R2 Alternate Payloads; Reserve Build; QR Ask Build; QR Merge; Alternate Cure Build; Alternate Cure Normalize; Alternate Payloads; Alternate Build
+live code reproduces stored output: 67 differ: Build Independent Verdict; Build Save Body; Cure Check; Format Markdown; Accept Build
+s126 untrimmed vs s130 output differ: none
+replay errors: Early Alternate Build live: Cannot read properties of undefined (reading 'slice') | Init with Guards live: Cannot read properties of undefined (reading 'set') | Accept Final live: Cannot read properties of undefined (reading 'set')
