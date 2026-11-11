@@ -18,7 +18,7 @@ The section is used by Judge Enforcer Build, Alt Judge Enforcer Build and R2 Alt
 
 Size: code +2,203; prompt +322 characters per check call.
 The added section never leaves an item unchecked: when the call cap (10 calls) would push an item out, the code drops the added section from the largest items first until no item is unchecked that would be checked without it (pkgA1N rev 3).
-Cost: +26K to +146K check text per stored run, 0 to 2 more DeepSeek calls per run.
+Cost: +35K to +146K check text per stored run, 0 to 2 more DeepSeek calls per run.
 
 Limits:
 - A pointer in other words ("see link 2", "in link 4") is not followed.
@@ -57,7 +57,7 @@ On the first live run after the write, read the Judge Enforcer Build output (and
    - It holds no paragraph from the other side's rounds.
 3. Every pointed section is labelled "[XRn, LINK N]", and N matches the answer's pointer. An answer that only says "fits Link 1 and Link 2" gets no LINK block.
 4. Check calls: the run makes 0 to 2 more DeepSeek answer-check calls than the same item set would make on s128. Stored range: panel +0 to +2, alternates +0 to +1. More than 2 added calls in one node is a FAIL to explain.
-5. Check text grows by about +26K to +146K characters per run (ESTIMATE for a new debate; MEASURED range on ten stored runs).
+5. Check text grows by about +35K to +146K characters per run (ESTIMATE for a new debate; MEASURED range on ten stored runs).
 6. not_checked is no longer than on s128 for the same items (no item pushed past the cap by the added text). No Judge Enforcer Build, Alt Judge Enforcer Build or R2 Alt Judge Enforcer Build error. Every E-ANS item is still sent, and items are not renumbered against the judges' lines.
 7. The pkgEAF AU lines still act: the full answer block (eaw_blk) is served as on s128.
 8. Record, not pass or fail: each E-ANS row whose DeepSeek grade differs from the judge's, with whether the item had the new section. This is the first live evidence of grade effect, which no stored replay shows.
