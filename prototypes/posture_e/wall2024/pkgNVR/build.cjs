@@ -12,7 +12,7 @@ Lb[1381]+=' /* pkgNVR */';
 rep(2675,"[^.;]{0,80}?\\\\b(VOID|UNEXHIBITED|CONCEDED|COUNTED|SPARED|SUPPORTED|NARROWED|STANDS)\\\\b','i'));if(z){const k=z[1].toUpperCase();","[^.;]{0,80}?\\\\b(not\\\\s+|never\\\\s+)?(VOID|UNEXHIBITED|CONCEDED|COUNTED|SPARED|SUPPORTED|NARROWED|STANDS)\\\\b','i'));if(z){const k=z[1]?'SPARED':z[2].toUpperCase();");
 rep(2678,"const want=right&&/VOID/.test(right)?'VOID':right&&/COUNTED|UNEXHIBITED|CONCEDED/.test(right)?'COUNTED'","const want=right&&/^VOID/.test(right)?'VOID':right&&/^(?:COUNTED|UNEXHIBITED|CONCEDED)/.test(right)?'COUNTED'");
 const reb=e=>M[e].p.map(x=>typeof x==='number'?Lb[x]:typeof x[0]==='string'?x[0]:Lb.slice(x[0],x[1]+1).join('\n')).join('\n');for(const e in M)M[e].n=reb(e).length;
-N.parameters.jsCode=T.slice(0,a+8)+JSON.stringify(Lb)+T.slice(b,b+8)+JSON.stringify(M)+T.slice(c);
+const LJ=JSON.stringify(Lb);N.parameters.jsCode=(T.slice(0,a+8)+LJ+T.slice(b,b+8)+JSON.stringify(M)+T.slice(c)).replace(/(\/\/ library sha )[0-9a-f]{16}/,(x,h)=>h+require('crypto').createHash('sha256').update(LJ).digest('hex').slice(0,16)); // header sha as pkgLIB/pack.cjs
 // check the original serialisation is reproduced byte for byte when nothing changes
 const T0=T.slice(0,a+8)+JSON.stringify(JSON.parse(T.slice(a+8,b)))+T.slice(b,b+8)+JSON.stringify(JSON.parse(T.slice(b+8,c)))+T.slice(c);if(T0!==T)throw new Error('serialisation differs from the parent');
 fs.writeFileSync(process.argv[3],JSON.stringify(W));console.log('written',process.argv[3]);
