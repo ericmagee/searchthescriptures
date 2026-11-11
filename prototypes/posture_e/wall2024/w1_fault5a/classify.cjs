@@ -1,0 +1,7 @@
+// Classify every stored CHALLENGER LINK BROKEN line (scan_clb.json): A = a FORCED line whose ANSWER quotes a challenger round [DR..] (challenger answered back, judged failing);
+// B = the line or the line under it says the challenger left it unanswered / gave no answer / was silent; C = other. And whether DEFENDER WINS depends on a CLB line (challenge SELF-SUPPORTED).
+const fs=require('fs');const o=JSON.parse(fs.readFileSync(__dirname+'/scan_clb.json'));const c={A:0,B:0,C:0};const Bs=[],Cs=[];let dep=0,depB=0;
+for(const x of o){let hasB=false;for(const l of x.clb){const both=l.line+' \n '+l.next;let k;if(/FORCED[^\n]*ANSWER\s*\[DR\d/i.test(l.next)||/ANSWER\s*\[DR\d/i.test(l.line))k='A';else if(/\b(un-?answered|no answer|not answer|never answer|does not answer|did not answer|left (?:it |the [a-z ]+ )?unanswered|silent|silence|does not reply|no reply|not (?:rebut|contest)|no rebuttal|unrebutted|uncontested|does not address|not addressed)/i.test(both))k='B';else k='C';c[k]++;if(k==='B'){hasB=true;Bs.push(x.run+' | '+l.line.slice(0,260));}if(k==='C')Cs.push(x.run+' | '+l.line.slice(0,200)+' || '+l.next.slice(0,120));}
+ if(/DEFENDER WINS/.test(x.result)&&x.challenge_standing==='SELF-SUPPORTED'&&x.clb.length){dep++;if(hasB)depB++;}}
+console.log('CLB lines',c,'| DEFENDER WINS resting on a CLB line (challenge SELF-SUPPORTED)',dep,'| of those with a B line',depB);
+console.log('--- B lines');Bs.forEach(s=>console.log(s));console.log('--- C lines (first 15)');Cs.slice(0,15).forEach(s=>console.log(s));

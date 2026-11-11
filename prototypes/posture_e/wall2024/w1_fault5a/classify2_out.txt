@@ -1,0 +1,13 @@
+CLB line classes {"A-DR":84,"B":8,"A-CR":11,"C":24}
+DEFENDER WINS texts 50 | resting on CLB lines alone 3
+   33461/J1 | challenge SELF-SUPPORTED | CLB A-DR | DW RESTS ON CLB
+   33506/J1 | challenge SELF-SUPPORTED | CLB C,C,C,C,C,C | DW RESTS ON CLB
+   33705/J1 | challenge SELF-SUPPORTED | CLB C,C,C,C | DW RESTS ON CLB
+DW with no CLB and SELF-SUPPORTED challenge (code tie rule should apply?) 7
+   33430/J1 | challenge SELF-SUPPORTED | CLB none | DW with no CLB and SELF-SUPPORTED challenge
+   33430/J2 | challenge SELF-SUPPORTED | CLB none | DW with no CLB and SELF-SUPPORTED challenge
+   33575/J1 | challenge SELF-SUPPORTED | CLB none | DW with no CLB and SELF-SUPPORTED challenge
+   33605/J1 | challenge SELF-SUPPORTED | CLB none | DW with no CLB and SELF-SUPPORTED challenge
+   33750/J2 | challenge SELF-SUPPORTED | CLB none | DW with no CLB and SELF-SUPPORTED challenge
+   33774/J1 | challenge SELF-SUPPORTED | CLB none | DW with no CLB and SELF-SUPPORTED challenge
+   34016/J1 | challenge SELF-SUPPORTED | CLB none | DW with no CLB and SELF-SUPPORTED challenge

@@ -1,0 +1,8 @@
+// Refined: A-DR = FORCED/ANSWER quotes a challenger round [DR..] (challenger answered, judged failing); A-CR = the FORCED ANSWER quotes a defender round [CR..] (ground is the defender's own answer or fit);
+// B = says the challenger left the press unanswered; C = no FORCED line and no unanswered words. DEFENDER WINS route: SELF-SUPPORTED challenge => DW rests on CLB lines only.
+const fs=require('fs');const o=JSON.parse(fs.readFileSync(__dirname+'/scan_clb.json'));const UN=/\b(un-?answered|no answer|not answer|never answer|does not answer|did not answer|silent|silence|no reply|unrebutted|uncontested|not addressed|does not address)/i;
+const cls=l=>{const f=(/^\s*FORCED/.test(l.next)?l.next:'')+' '+l.line;const a=(f.match(/ANSWER\s*\[(CR|DR)\d/i)||[])[1];if(UN.test(l.line+' '+l.next)&&!a)return 'B';if(a)return a.toUpperCase()==='DR'?'A-DR':(UN.test(l.line)?'B':'A-CR');return 'C';};
+const c={};const per=[];for(const x of o){const k=x.clb.map(cls);k.forEach(z=>c[z]=(c[z]||0)+1);const dw=/DEFENDER WINS/.test(x.result);
+ if(dw)per.push(x.run+' | challenge '+x.challenge_standing+' | CLB '+(k.join(',')||'none')+(x.challenge_standing==='SELF-SUPPORTED'?(k.length?' | DW RESTS ON CLB':' | DW with no CLB and SELF-SUPPORTED challenge'):''));}
+console.log('CLB line classes',JSON.stringify(c));const rest=per.filter(s=>/RESTS ON CLB/.test(s));console.log('DEFENDER WINS texts',per.length,'| resting on CLB lines alone',rest.length);rest.forEach(s=>console.log('  ',s));
+const noclb=per.filter(s=>/with no CLB/.test(s));console.log('DW with no CLB and SELF-SUPPORTED challenge (code tie rule should apply?)',noclb.length);noclb.forEach(s=>console.log('  ',s));
