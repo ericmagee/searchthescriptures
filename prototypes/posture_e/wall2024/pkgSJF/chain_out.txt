@@ -1,0 +1,11 @@
+A: re-ask answered with a full judgment (stored 35067 reply)
+   re-ask request: 6 messages, last role user, mode full | Pick used reask | after: tag BROKEN, marks FOOTED/FOOTED, collision map "D1=STANDS D2=STANDS D3=STANDS D4=STANDS D5=STANDS | w=0 k=0" | gate again: false
+A: re-ask answered with the same decline again (ASK 74 reply)
+   re-ask request: 6 messages, last role user, mode full | Pick used reask | after: tag BROKEN, marks null/null, collision map "NO COLLISION POINTS SECTION" | gate again: false
+B: 33149 first Verdict (google/gemini-3.8-flash): s136 none | SJF none  SAME
+B: 33371 first Verdict (google/gemini-3.8-flash): s136 none | SJF none  SAME
+B: 33490 first Verdict (google/gemini-3.8-flash): s136 none | SJF none  SAME
+B: 33497 first Verdict (google/gemini-3.8-flash): s136 none | SJF none  SAME
+B: 34726 first Verdict (openai/gpt-6.1-terra): s136 none | SJF none  SAME
+B: 34852 first Verdict (openai/gpt-6.1-terra): s136 none | SJF none  SAME
+B: 35067 first Verdict (openai/gpt-6.1-terra): s136 none | SJF none  SAME

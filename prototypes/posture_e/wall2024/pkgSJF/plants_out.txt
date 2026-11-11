@@ -1,0 +1,26 @@
+OK   P1 stored 35067 reply (full judgment)
+     tag BROKEN | marks FOOTED/FOOTED | flag false | prompt ODV1-A2 | s136 none -> SJF none
+OK   P2 ASK 74 reply (verdict-word decline)
+     tag BROKEN | marks / | flag true | prompt ODV1-A2 | s136 MARKS -> SJF FULL | miss: no COLLISION POINTS section; no DEFENDER CHAIN MARK line; no CHALLENGER CHAIN MARK line
+OK   P3 34726 reply (partial with LIMITATION)
+     tag BROKEN | marks FOOTED/FOOTED | flag false | prompt ODV1-A2 | s136 none -> SJF none
+OK   P4 35067 judgment in gemini form {"reasoning","verdict"} plain
+     tag BROKEN | marks / | flag true | prompt ODV1-A2 | s136 MARKS -> SJF FULL | miss: no COLLISION POINTS section; no DEFENDER CHAIN MARK line; no CHALLENGER CHAIN MARK line
+OK   P5 the same, fenced ```json
+     tag BROKEN | marks / | flag true | prompt ODV1-A2 | s136 MARKS -> SJF FULL | miss: no COLLISION POINTS section; no DEFENDER CHAIN MARK line; no CHALLENGER CHAIN MARK line
+OK   P6 stored 34108 row c357d23f (terra JSON decline, UNKNOWN)
+     tag UNKNOWN | marks / | flag true | prompt ODV1-A2 | s136 FULL -> SJF FULL | miss: no verdict (HELD, PARTIAL or BROKEN); no COLLISION POINTS section; no DEFENDER CHAIN MARK line; no CHALLENGER CHAIN MARK line
+OK   P7 planted verdict-word decline, no marks, no collision points
+     tag BROKEN | marks / | flag true | prompt ODV1-A2 | s136 MARKS -> SJF FULL | miss: no COLLISION POINTS section; no DEFENDER CHAIN MARK line; no CHALLENGER CHAIN MARK line
+OK   P8 35067 judgment with its COLLISION POINTS block cut out (marks kept)
+     tag BROKEN | marks FOOTED/FOOTED | flag true | prompt ODV1-A2 | s136 none -> SJF FULL | miss: no COLLISION POINTS section
+OK   P9 35067 with heading written **COLLISION POINTS:** (bold)
+     tag BROKEN | marks FOOTED/FOOTED | flag false | prompt ODV1-A2 | s136 none -> SJF none
+OK   P10 35067 with heading written "4. COLLISION POINTS:" (numbered)
+     tag BROKEN | marks FOOTED/FOOTED | flag true | prompt ODV1-A2 | s136 none -> SJF FULL | miss: no COLLISION POINTS section
+OK   P11 35067 with heading written "## COLLISION POINTS" (markdown)
+     tag BROKEN | marks FOOTED/FOOTED | flag false | prompt ODV1-A2 | s136 none -> SJF none
+OK   P12 35067 with "COLLISION POINTS: NONE" and no entries
+     tag BROKEN | marks FOOTED/FOOTED | flag false | prompt ODV1-A2 | s136 none -> SJF none
+OK   P13 ASK 74 reply with jidx 2 (not the single judge): gate false
+FAIL count 0
