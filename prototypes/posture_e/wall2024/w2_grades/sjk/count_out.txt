@@ -1,0 +1,19 @@
+debate_results rows 143
+{
+ "runs_kw": 69,
+ "runs_s3": 39,
+ "kw": 907,
+ "s3": 244,
+ "kw_cured": 861,
+ "kw_uncured": 46,
+ "kw_none": 0,
+ "s3_cured": 239,
+ "s3_uncured": 0,
+ "s3_none": 5,
+ "bs_marked_cured": 0,
+ "stored_review_of_cured": 1100,
+ "stored_cured_text": 0,
+ "stored_absent": 0,
+ "reports_kw_cured": 869,
+ "reports_s3_cured": 239
+}
