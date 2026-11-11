@@ -1,0 +1,17 @@
+ex34780_full.json Panel Cure Check DIFF
+ A: ,\"judge_seat\":\"luna\",\"judge_api_model\":\"openai/gpt-6-luna\",\"verdict_raw\":\"{\\\"verdict_tag\\\":\\\"BROKEN\\\",\\\"defense_standing\\\":\\\"PROP-DEPENDENT\\\",\\\"challenge_standing\\\":\\\"SELF-SUPPORTED\\\",\\\"conceded_links\\\":0,\\\"challenger_conceded_links\\\":0,\\\"counted_premises_defender\\\":[],\\\"counted_premises_challenger\\\":[],\\\"reasoning\\\":\\\"SUPERSEDED BY CURE: verdict HELD to BROKEN; see the cure lines below\\\\ 
+ B: ,\"judge_seat\":\"luna\",\"judge_api_model\":\"openai/gpt-6-luna\",\"verdict_raw\":\"{\\\"verdict_tag\\\":\\\"BROKEN\\\",\\\"defense_standing\\\":\\\"PROP-DEPENDENT\\\",\\\"challenge_standing\\\":\\\"PROP-DEPENDENT\\\",\\\"conceded_links\\\":0,\\\"challenger_conceded_links\\\":0,\\\"counted_premises_defender\\\":[],\\\"counted_premises_challenger\\\":[],\\\"reasoning\\\":\\\"SUPERSEDED BY CURE: verdict HELD to BROKEN; see the cure lines below\\\\
+ex35067_full.json Panel Cure Check DIFF
+ A: t Joseph's knowing caused the conception does not fit the pressed meaning of Matthew 1:25.\\\\nRESULT: CHALLENGER WINS -- recomputed after the cure from the cured lines (CLOSE-CONTRADICTION D1 vs C1 (CHALLENGER LINK BROKEN to DEFENDER LINK BROKEN); CLOSE-CONTRADICTION D1 vs C2 (UNDERDETERMINED to DEFENDER LINK BROKEN); CLOSE-CONTRADICTION D2 vs C1 (CHALLENGER LINK BROKEN to DEFENDER LINK BROKEN); CLOSE-CONTRADICTION D2 vs C3 (UNDERDETERMINED to D 
+ B: t Joseph's knowing caused the conception does not fit the pressed meaning of Matthew 1:25.\\\\nRESULT: CHALLENGER WINS -- recomputed after the cure from the cured lines (CLOSE-CONTRADICTION D1 vs C1 (DEFENDER break not set: the line already carries the CHALLENGER break); CLOSE-CONTRADICTION D1 vs C2 (UNDERDETERMINED to DEFENDER LINK BROKEN); CLOSE-CONTRADICTION D2 vs C1 (DEFENDER break not set: the line already carries the CHALLENGER break); CLOS
+{
+ "Panel Cure Check equal": 9,
+ "Cure Check equal": 7,
+ "Alternate Merge Seat equal": 10,
+ "Gate Build equal": 11,
+ "Gate Record equal": 11,
+ "Alt Gate Build equal": 10,
+ "Alt Gate Record equal": 10,
+ "Alternate Merge 1 equal": 6,
+ "Panel Cure Check DIFF": 2
+}
