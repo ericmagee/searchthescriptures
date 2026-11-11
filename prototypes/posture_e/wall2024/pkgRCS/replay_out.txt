@@ -1,0 +1,11 @@
+ex33149 | old fields equal true | calls 37 (export count 37) | {"anthropic":8,"openrouter":19,"deepseek":10} | billed $1.8931 | estimate $3.0035 | no price 10 | total $4.8967 | old md exact prefix true | added 3963 chars | other fields equal true
+ex33371 | old fields equal true | calls 43 (export count 43) | {"anthropic":9,"openrouter":23,"deepseek":11} | billed $2.8591 | estimate $3.8455 | no price 11 | total $6.7046 | old md exact prefix true | added 4548 chars | other fields equal true
+ex33490 | old fields equal true | calls 49 (export count 49) | {"anthropic":10,"openrouter":23,"deepseek":14,"none":2} | billed $2.8728 | estimate $3.4739 | no price 16 | total $6.3467 | old md exact prefix true | added 5119 chars | other fields equal true
+ex33497 | old fields equal true | calls 42 (export count 42) | {"anthropic":10,"openrouter":19,"deepseek":13} | billed $2.8711 | estimate $3.5799 | no price 13 | total $6.4511 | old md exact prefix true | added 4459 chars | other fields equal true
+ex34299 | Panel Tokens did not run
+ex34626 | Panel Tokens did not run
+ex34703 | Panel Tokens did not run
+ex34726 | old fields equal true | calls 53 (export count 53) | {"anthropic":10,"openrouter":23,"deepseek":20} | billed $1.6949 | estimate $4.2282 | no price 20 | total $5.9231 | old md exact prefix true | added 5514 chars | other fields equal true
+ex34780 | Panel Tokens did not run
+ex34852 | old fields equal true | calls 53 (export count 53) | {"anthropic":11,"openrouter":25,"deepseek":17} | billed $1.4971 | estimate $3.6446 | no price 17 | total $5.1417 | old md exact prefix true | added 5520 chars | other fields equal true
+ex35067 | old fields equal true | calls 49 (export count 49) | {"anthropic":11,"openrouter":20,"deepseek":18} | billed $1.3942 | estimate $3.6211 | no price 18 | total $5.0153 | old md exact prefix true | added 5070 chars | other fields equal true
