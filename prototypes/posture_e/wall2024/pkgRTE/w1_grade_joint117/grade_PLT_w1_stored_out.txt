@@ -1,0 +1,53 @@
+33149 P4 ERROR Cannot read properties of undefined (reading 'replace')
+33160 P3 ERROR Cannot read properties of undefined (reading 'replace')
+33160 P4 ERROR Cannot read properties of undefined (reading 'replace')
+33222_Alt P3 ERROR Cannot read properties of undefined (reading 'replace')
+33222_Alt P4 ERROR Cannot read properties of undefined (reading 'replace')
+33222_Alt P5 ERROR Cannot read properties of undefined (reading 'replace')
+33222 P3 ERROR Cannot read properties of undefined (reading 'replace')
+33222 P4 ERROR Cannot read properties of undefined (reading 'replace')
+33222 P5 ERROR Cannot read properties of undefined (reading 'replace')
+33249_Alt P1 ERROR Cannot read properties of undefined (reading 'replace')
+33249_Alt P2 ERROR Cannot read properties of undefined (reading 'replace')
+33249_Alt P4 ERROR Cannot read properties of undefined (reading 'replace')
+33249 P1 ERROR Cannot read properties of undefined (reading 'replace')
+33249 P2 ERROR Cannot read properties of undefined (reading 'replace')
+33249 P4 ERROR Cannot read properties of undefined (reading 'replace')
+33389 P1 n 1 tag 6 | replay entry same true | live: **LINK 1: SUPPORTED.** | cand: **LINK 6: NARROWED TO: OK
+33389 P2 n 2 tag 5 | replay entry same true | live: **LINK 2: SUPPORTED.** | cand: **LINK 5: NARROWED TO: OK
+33389 P3 n 3 tag 4 | replay entry same true | live: **LINK 3: SUPPORTED.** | cand: **LINK 4: SUPPORTED.** OK
+33389 P4 n 4 tag 1 | replay entry same true | live: **LINK 4: SUPPORTED.** | cand: **LINK 1: SUPPORTED.** OK
+33389 P5 n 5 tag 2 | replay entry same true | live: **LINK 5: NARROWED TO: | cand: **LINK 2: SUPPORTED.** OK
+33389 P6 n 6 tag 3 | replay entry same true | live: **LINK 6: NARROWED TO: | cand: **LINK 3: SUPPORTED.** OK
+33411_Alt P4 n 4 tag 1 | replay entry same true | live: ## LINK 4: SUPPORTED | cand: ## LINK 1: SUPPORTED OK
+33411 P4 n 4 tag 1 | replay entry same true | live: ## LINK 4: SUPPORTED | cand: ## LINK 1: SUPPORTED OK
+33430 P4 n 4 tag 5 | replay entry same true | live: **LINK 4: SUPPORTED** | cand: **LINK 5: SUPPORTED** OK
+33506_Alt P1 n 1 tag 6 | replay entry same true | live: ## LINK 1: SUPPORTED | cand: ## LINK 6: SUPPORTED OK
+33506_Alt P2 n 2 tag 1 | replay entry same true | live: ## LINK 2: SUPPORTED | cand: ## LINK 1: SUPPORTED OK
+33506_Alt P3 n 3 tag 2 | replay entry same true | live: ## LINK 3: SUPPORTED | cand: ## LINK 2: SUPPORTED OK
+33506_Alt P4 n 4 tag 3 | replay entry same true | live: ## LINK 4: SUPPORTED | cand: ## LINK 3: SUPPORTED OK
+33506_Alt P5 n 5 tag 4 | replay entry same true | live: ## LINK 5: NARROWED TO | cand: ## LINK 4: SUPPORTED OK
+33506_Alt P6 n 6 tag 5 | replay entry same true | live: ## LINK 6: SUPPORTED | cand: ## LINK 5: NARROWED TO OK
+33506 P1 n 1 tag 6 | replay entry same true | live: ## LINK 1: SUPPORTED | cand: ## LINK 6: SUPPORTED OK
+33506 P2 n 2 tag 1 | replay entry same true | live: ## LINK 2: SUPPORTED | cand: ## LINK 1: SUPPORTED OK
+33506 P3 n 3 tag 2 | replay entry same true | live: ## LINK 3: SUPPORTED | cand: ## LINK 2: SUPPORTED OK
+33506 P4 n 4 tag 3 | replay entry same true | live: ## LINK 4: SUPPORTED | cand: ## LINK 3: SUPPORTED OK
+33506 P5 n 5 tag 4 | replay entry same true | live: ## LINK 5: NARROWED TO | cand: ## LINK 4: SUPPORTED OK
+33506 P6 n 6 tag 5 | replay entry same true | live: ## LINK 6: SUPPORTED | cand: ## LINK 5: NARROWED TO OK
+33575 P6 n 6 tag 5 | replay entry same true | live: **LINK 6: SUPPORTED** | cand: **LINK 5: NARROWED TO: OK
+33644_Alt P3 n 3 tag 2 | replay entry same true | live: **LINK 3: SUPPORTED** | cand: **LINK 2: SUPPORTED** OK
+33644_Alt P4 n 4 tag 3 | replay entry same true | live: **LINK 4: SUPPORTED** | cand: **LINK 3: SUPPORTED** OK
+33644_Alt P5 n 5 tag 4 | replay entry same true | live: **LINK 5: SUPPORTED** | cand: **LINK 4: SUPPORTED** OK
+33644 P3 n 3 tag 2 | replay entry same true | live: **LINK 3: SUPPORTED** | cand: **LINK 2: SUPPORTED** OK
+33644 P4 n 4 tag 3 | replay entry same true | live: **LINK 4: SUPPORTED** | cand: **LINK 3: SUPPORTED** OK
+33644 P5 n 5 tag 4 | replay entry same true | live: **LINK 5: SUPPORTED** | cand: **LINK 4: SUPPORTED** OK
+33682 P1 n 1 tag 6 | replay entry same true | live: **LINK 1: SUPPORTED** | cand: **LINK 6: SUPPORTED** OK
+33682 P2 n 2 tag 1 | replay entry same true | live: **LINK 2: SUPPORTED** | cand: **LINK 1: SUPPORTED** OK
+33682 P3 n 3 tag 2 | replay entry same true | live: **LINK 3: SUPPORTED** | cand: **LINK 2: SUPPORTED** OK
+33682 P4 n 4 tag 3 | replay entry same true | live: **LINK 4: SUPPORTED** | cand: **LINK 3: SUPPORTED** OK
+33682 P5 n 5 tag 4 | replay entry same true | live: **LINK 5: SUPPORTED** | cand: **LINK 4: SUPPORTED** OK
+33682 P6 n 6 tag 5 | replay entry same true | live: **LINK 6: SUPPORTED** | cand: **LINK 5: SUPPORTED** OK
+33750 P1 n 1 tag 5 | replay entry same true | live: **LINK 1: SUPPORTED** | cand: **LINK 5: NARROWED TO: OK
+33750 P5 n 5 tag 1 | replay entry same true | live: **LINK 5: NARROWED TO: | cand: **LINK 1: SUPPORTED** OK
+34016 P5 n 5 tag 3 | replay entry same true | live: **LINK 5: NARROWED TO: | cand: **LINK 3: SUPPORTED.** OK
+WRONG-BLOCK items 52 | candidate shows tagged block 37 | wrong 0 | not reproduced 15

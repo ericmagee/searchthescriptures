@@ -1,0 +1,38 @@
+cand joint_s117_RTE3_PLT.json sha 61a5da7dae3fcf09
+SIZE Shared Library 370 | nodes 418 418 | rest equal true
+R "RETRACTED: D1 vs. C3 -- [CR3] \"I grant it bounds the absti | live N | cand N+clause | applied same as live true
+K1 "RETRACTED: D1 vs C3 -- I stand by it" | live N | cand N+clause | expected N PASS 
+R "RETRACTED: D1 vs C3; reason: withdrawn" | live N | cand N+clause | applied same as live true
+K2 "RETRACTED: D1 vs C3 -- the ruling holds" | live N | cand N+clause | expected N PASS 
+R "RETRACTED: D2 vs C3 -- withdrawn" | live N | cand N+clause | applied same as live true
+K3 "RETRACTED: D1 vs C3 -- the break is confirmed" | live N | cand N+clause | expected N PASS 
+R "RETRACTED: -- withdrawn" | live N | cand N | applied same as live true
+K4 "RETRACTED: D1 vs C3 -- left as is" | live N | cand N+clause | expected N PASS 
+R "RETRACTED: D1 vs C3 -- withdrawn\nD1 vs C3: STANDS" | live N | cand N+clause | applied same as live true
+K5 "RETRACTED: D1 vs C3 -- no change" | live N | cand N+clause | expected N PASS 
+R "RETRACTED: K-G4 D1 vs C3 -- withdrawn" | live N | cand N | applied same as live true
+K6 "RETRACTED: D1 vs C3 -- the link stays broken" | live N | cand N+clause | expected N PASS 
+R "D1 vs C3: STANDS -- reason" | live A | cand A | applied same as live true
+K7 "RETRACTED: D1 vs C3 -- still broken" | live N | cand N+clause | expected N PASS 
+R "KEEP" | live N | cand N | applied same as live true
+K8 "RETRACTED: D1 vs C3 -- correct as written" | live N | cand N+clause | expected N PASS 
+34726 Gate Build equal live (clause stripped) true
+K9 "RETRACTED: D1 vs C3 -- I don't take it back" | live N | cand N+clause | expected N PASS 
+34726 Send Back Build equal live (clause stripped) false
+K10 "RETRACTED: D1 vs C3 -- the FORCED ruling is right" | live N | cand N+clause | expected N PASS 
+34780 Gate Build as stored: equal live with clause stripped true | clause count 8
+K11 "RETRACTED: D1 vs C3 -- I will not withdraw it" | live N | cand N+clause | expected N PASS 
+K12 "RETRACTED: D1 vs C3 -- reaffirmed" | live N | cand N+clause | expected N PASS 
+K13 "RETRACTED: D1 vs C3 -- not retracted" | live N | cand N+clause | expected N PASS 
+K14 "RETRACTED: D1 vs C3 -- ruling sustained" | live N | cand N+clause | expected N PASS 
+W1 "RETRACTED: D1 vs C3 -- withdrawn" | live N | cand N+clause | expected A PASS 
+W2 "RETRACTED: D1 vs C3 -- the ruling was wrong; [CR3] answers the  | live N | cand N+clause | expected A PASS 
+W3 "RETRACTED: D1 vs C3 -- I retract it: the link is not forced" | live N | cand N+clause | expected A PASS 
+W4 "RETRACTED: D1 vs C3 -- not a contradiction after all" | live N | cand N+clause | expected A PASS 
+W5 "RETRACTED: D1 vs C3 -- the earlier break does not hold" | live N | cand N+clause | expected A PASS 
+W6 "RETRACTED: D1 vs C3 -- the meaning-based ruling is withdrawn (C | live N | cand N+clause | expected A PASS 
+W7 "RETRACTED: D1 vs C3" | live A | cand A | expected A PASS | equals bare form true
+W8 "RETRACTED: D1 vs C3 -- the defender's reading stands, so the ru | live N | cand N+clause | expected A PASS 
+F1 plants 22 / 22 | fails 
+F2 stored 34780 not_sent live 4 cand 7
+F2 rev 2 equals rev 1 on 34780: true

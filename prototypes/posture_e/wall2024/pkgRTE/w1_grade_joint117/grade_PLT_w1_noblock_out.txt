@@ -1,0 +1,21 @@
+33149 main P5 NOT REPLAYABLE (node input not stored) | candidate reads entry tag 3 | stored scan: untagged LINK 3 block in round true
+33149 main P6 NOT REPLAYABLE (node input not stored) | candidate reads entry tag 4 | stored scan: untagged LINK 4 block in round true
+33160 main P2 NOT REPLAYABLE (node input not stored) | candidate reads entry tag 3 | stored scan: untagged LINK 3 block in round null
+33222 Alt_ P6 NOT REPLAYABLE (node input not stored) | candidate reads entry tag 5 | stored scan: untagged LINK 5 block in round true
+33222 main P6 NOT REPLAYABLE (node input not stored) | candidate reads entry tag 5 | stored scan: untagged LINK 5 block in round true
+33249 Alt_ P6 NOT REPLAYABLE (node input not stored) | candidate reads entry tag 1 | stored scan: untagged LINK 1 block in round true
+33249 main P6 NOT REPLAYABLE (node input not stored) | candidate reads entry tag 1 | stored scan: untagged LINK 1 block in round true
+33411 Alt_ P5 n 5 tag 2 | live: (no block answering this premi | cand: ## LINK 2: SUPPORTED OK
+33411 Alt_ P6 n 6 tag 4 | live: (no block answering this premi | cand: ## LINK 4: SUPPORTED OK
+33411 main P5 n 5 tag 2 | live: (no block answering this premi | cand: ## LINK 2: SUPPORTED OK
+33411 main P6 n 6 tag 4 | live: (no block answering this premi | cand: ## LINK 4: SUPPORTED OK
+33430 main P3 n 3 tag 4 | live: (no block answering this premi | cand: **LINK 4: SUPPORTED** OK
+33575 main P1 n 1 tag 6 | live: (no block answering this premi | cand: **LINK 6: SUPPORTED** OK
+33644 Alt_ P6 n 6 tag 5 | live: (no block answering this premi | cand: **LINK 5: SUPPORTED** OK
+33644 main P6 n 6 tag 5 | live: (no block answering this premi | cand: **LINK 5: SUPPORTED** OK
+33750 main P2 n 2 tag 4 | live: (no block answering this premi | cand: **LINK 4: NARROWED TO:** T OK
+33774 main P6 n 6 tag null | live: (no block answering this premi | cand: **LINK 1: SUPPORTED** WRONG
+33828 Alt_ P6 n 6 tag 5 | live: (no block answering this premi | cand: ## LINK 5: NARROWED TO: Go OK
+33828 main P6 n 6 tag 5 | live: (no block answering this premi | cand: ## LINK 5: NARROWED TO: Go OK
+34016 main P6 n 6 tag 5 | live: (no block answering this premi | cand: **LINK 5: NARROWED TO:** L OK
+NO-BLOCK items 20 | candidate shows tagged block 12 | wrong 1 | not replayable 7
