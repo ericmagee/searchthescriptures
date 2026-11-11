@@ -1,0 +1,12 @@
+Alt Seated (input Alternate Merge Seat) equal to stored: true
+Alt Judge Enforcer Build (input Alt Seated) equal to stored: true
+Alt Judge Enforcer Record (input Alt Judge Enforcer Needed?) equal to stored: true
+Alt Send Back Build (input Alt Judge Enforcer Record) equal to stored: true
+Alt Send Back Record (input Alt Send Back Needed?) equal to stored: true
+Alt Reread Build (input Alt Send Back Record) equal to stored: true
+Alt Reread Record (input Alt Reread Needed?) equal to stored: true
+Alt Gate Build (input Alt Reread Record) equal to stored: true
+Alt Gate Record (input Alt Gate Needed?) equal to stored: true
+Alternate Merge 1 (input Alt Gate Record) equal to stored: true
+panel_effective ["chatgpt","luna","sol"] | substitution null | alt_needed true
+STORED panel_effective ["chatgpt","luna","sol"] | substitution null
