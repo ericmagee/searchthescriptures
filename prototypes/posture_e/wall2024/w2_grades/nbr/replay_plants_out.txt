@@ -1,0 +1,41 @@
+== (A) replay
+33149 Format Markdown RVF->RVF_NBR | base lines kept in order 7344/7344 | added 5 (flag rows with inner bracket 5) | other added lines 0 
+33149 Build Save Body RVF->RVF_NBR | fields differing ["saveBody"] | review_notes single-judge flag lines 13 -> 15 | old review_notes is a subsequence of new true | added 2 | saveBody length 1363207 -> 1364048
+33149 Format Markdown s132->NBR | base lines kept in order 7344/7344 | added 5 (flag rows with inner bracket 5) | other added lines 0 
+33149 Build Save Body s132->NBR | fields differing ["saveBody"] | review_notes single-judge flag lines 13 -> 15 | old review_notes is a subsequence of new true | added 2 | saveBody length 1363207 -> 1364048
+33371 Format Markdown RVF->RVF_NBR | base lines kept in order 9941/9941 | added 1 (flag rows with inner bracket 1) | other added lines 0 
+33371 Build Save Body RVF->RVF_NBR | fields differing [] | review_notes single-judge flag lines 22 -> 22 | old review_notes is a subsequence of new true | added 0 | saveBody length 958284 -> 958284
+33371 Format Markdown s132->NBR | base lines kept in order 9941/9941 | added 1 (flag rows with inner bracket 1) | other added lines 0 
+33371 Build Save Body s132->NBR | fields differing [] | review_notes single-judge flag lines 22 -> 22 | old review_notes is a subsequence of new true | added 0 | saveBody length 958284 -> 958284
+33490 Format Markdown RVF->RVF_NBR | base lines kept in order 9340/9340 | added 3 (flag rows with inner bracket 3) | other added lines 0 
+33490 Build Save Body RVF->RVF_NBR | fields differing ["saveBody"] | review_notes single-judge flag lines 18 -> 22 | old review_notes is a subsequence of new true | added 4 | saveBody length 935939 -> 936579
+33490 Format Markdown s132->NBR | base lines kept in order 9340/9340 | added 3 (flag rows with inner bracket 3) | other added lines 0 
+33490 Build Save Body s132->NBR | fields differing ["saveBody"] | review_notes single-judge flag lines 18 -> 22 | old review_notes is a subsequence of new true | added 4 | saveBody length 935939 -> 936579
+33497 Format Markdown RVF->RVF_NBR | base lines kept in order 9939/9939 | added 0 (flag rows with inner bracket 0) | other added lines 0 
+33497 Build Save Body RVF->RVF_NBR | fields differing [] | review_notes single-judge flag lines 14 -> 14 | old review_notes is a subsequence of new true | added 0 | saveBody length 1064156 -> 1064156
+33497 Format Markdown s132->NBR | base lines kept in order 9939/9939 | added 0 (flag rows with inner bracket 0) | other added lines 0 
+33497 Build Save Body s132->NBR | fields differing [] | review_notes single-judge flag lines 14 -> 14 | old review_notes is a subsequence of new true | added 0 | saveBody length 1064156 -> 1064156
+34726 Format Markdown RVF->RVF_NBR | base lines kept in order 9428/9428 | added 0 (flag rows with inner bracket 0) | other added lines 0 
+34726 Build Save Body RVF->RVF_NBR | fields differing [] | review_notes single-judge flag lines 25 -> 25 | old review_notes is a subsequence of new true | added 0 | saveBody length 1076171 -> 1076171
+34726 Format Markdown s132->NBR | base lines kept in order 9428/9428 | added 0 (flag rows with inner bracket 0) | other added lines 0 
+34726 Build Save Body s132->NBR | fields differing [] | review_notes single-judge flag lines 25 -> 25 | old review_notes is a subsequence of new true | added 0 | saveBody length 1076171 -> 1076171
+34852 Format Markdown RVF->RVF_NBR | base lines kept in order 8518/8518 | added 0 (flag rows with inner bracket 0) | other added lines 0 
+34852 Build Save Body RVF->RVF_NBR | fields differing [] | review_notes single-judge flag lines 25 -> 25 | old review_notes is a subsequence of new true | added 0 | saveBody length 1091102 -> 1091102
+34852 Format Markdown s132->NBR | base lines kept in order 8518/8518 | added 0 (flag rows with inner bracket 0) | other added lines 0 
+34852 Build Save Body s132->NBR | fields differing [] | review_notes single-judge flag lines 25 -> 25 | old review_notes is a subsequence of new true | added 0 | saveBody length 1091102 -> 1091102
+35067 Format Markdown RVF->RVF_NBR | base lines kept in order 7602/7602 | added 0 (flag rows with inner bracket 0) | other added lines 0 
+35067 Build Save Body RVF->RVF_NBR | fields differing ["saveBody"] | review_notes single-judge flag lines 27 -> 28 | old review_notes is a subsequence of new true | added 1 | saveBody length 1129472 -> 1129822
+35067 Format Markdown s132->NBR | base lines kept in order 7602/7602 | added 0 (flag rows with inner bracket 0) | other added lines 0 
+35067 Build Save Body s132->NBR | fields differing ["saveBody"] | review_notes single-judge flag lines 27 -> 28 | old review_notes is a subsequence of new true | added 1 | saveBody length 1129472 -> 1129822
+== (B) plants on 35067 (RVF_NBR)
+OK   N1 K-W item with [premise 1], report CURED with same item | RVF_NBR: Cured | RVF (before): missed | expected Cured
+OK   N2 same, report UNCURED | RVF_NBR: Review | RVF (before): missed | expected Review
+OK   N3 two bracket pairs in one flag | RVF_NBR: Review | RVF (before): missed | expected Review
+OK   N4 bracket after REVIEW THIS ROW | RVF_NBR: Review | RVF (before): missed | expected Review
+OK   N5 parenthesised bracket (pressed: [DR2]) | RVF_NBR: Review | RVF (before): missed | expected Review
+OK   N6 bold bracket **[CR3]** | RVF_NBR: Review | RVF (before): missed | expected Review
+OK   N7 LIMIT two levels [[CR3]] (stored form) | RVF_NBR: missed | RVF (before): missed | expected missed
+OK   N8 LIMIT unclosed bracket "[THE" (stored form) | RVF_NBR: missed | RVF (before): Review | expected missed
+OK   N9 empty brackets [] | RVF_NBR: Review | RVF (before): missed | expected Review
+OK   N10 control: plain flag, no bracket | RVF_NBR: Review | RVF (before): Review | expected Review
+plants as expected 10 of 10
