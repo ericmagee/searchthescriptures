@@ -1,0 +1,15 @@
+ex33149_full.json Send Back Record CURED by pkgAMG 1
+ex33371_full.json Send Back Record CURED by pkgAMG 1
+ex33490_full.json Alt Send Back Record CURED by pkgAMG 1
+ex33497_full.json Send Back Record CURED by pkgAMG 1
+ex34780_full.json Send Back Record CURED by pkgAMG 4
+ex34852_full.json Alt Send Back Record CURED by pkgAMG 1
+ex35173_full.json Alt Send Back Record CURED by pkgAMG 5
+{ flipUC: 14, flipCU: 0, other: 0, err: 0, runs: 23 }
+RIGHT old UNCURED new CURED expected CURED | MISSES flagged, right MEETS, change MEETS same answer | CHANGE TO MEETS, the grade the enforcer gave, on the same answer (pkgAMG)
+RIGHT old UNCURED new CURED expected CURED | FAILS flagged, right MEETS, change MEETS shorter cut | CHANGE TO MEETS, the grade the enforcer gave, on the same answer (pkgAMG)
+RIGHT old UNCURED new UNCURED expected UNCURED | MEETS flagged, right MISSES, change MEETS same | the CHANGE TO MEETS quotes the flagged answer again (or a shorter cut of it)
+RIGHT old UNCURED new UNCURED expected UNCURED | MISSES flagged, right FAILS, change MEETS same | the CHANGE TO MEETS quotes the flagged answer again (or a shorter cut of it)
+RIGHT old UNCURED new UNCURED expected UNCURED | MISSES flagged, no right-word in reason, change MEETS same | the CHANGE TO MEETS quotes the flagged answer again (or a shorter cut of it)
+RIGHT old UNCURED new UNCURED expected UNCURED | MISSES flagged, right MEETS, change MEETS with words not in round | the CHANGE TO answer is not found word for word in [DR3]: "A child of Joseph by blood is p
+INFO old UNCURED new UNCURED expected ? | lower-case meets in flagged grade | the CHANGE TO MEETS quotes the flagged answer again (or a shorter cut of it)
