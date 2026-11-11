@@ -8,3 +8,8 @@ E4 plant: a MISSES check on a verse under one link (Luke 1:32): same on both.
 E5 plant: the LINK 1 MEANS graded MISSES: candidate raises D1 only; control D1 and D4.
 E6 plant: the LINK 4 MEANS cut to its first 7 words: candidate D4 only.
 E7 plant: the LINK 4 MEANS cut to its first 4 words (under 6, not all of it): OPEN which way; I expect both links kept only if the 4 words stand in both entries, else D4 only. Record the result as a limit.
+
+## Results (after the run; t2_out.txt)
+E1, E2, E3, E5, E6 as expected. E7: the 4-word MEANS is all of the check's MEANS, so it is matched whole; it stands only in the LINK 4 entry: D4 only. Limit: a short MEANS whose words stand in both entries keeps both links. E8 (MEANS: NONE), E9 (straight quotes, bold), E10 (both checks MISSES: D1 and D4 each from its own check), E11 (only the LINK 1 check MISSES, with luna's shorter MEANS: D1 only): pass.
+NOT TESTED: the challenger side (a [DRn] check against the list that closes [CR3]); stored runs other than 34852; the node run end to end (the function was called through the rebuilt Gate Record source). t1.cjs reads keep.json (the scratch cut of the export, not in the repo).
+Size (measured): code 3,245,024 to 3,245,740 = +716; prompt 0. Parent /mnt/project-files/w3/parent_s119_VP1B.json, sha256 3b6368682d35c30e. 10 gate and merge nodes rebuild; 42 stubs rebuilt and compiled.
