@@ -1,7 +1,7 @@
 // W2 offline builds from run 34852 findings (Wall 4571, second seat W4 4573), on live s119.
 // F1 pkgKWN: the K-W NOT HELD reader reads NOT HELD at the start of the line OR after a lead sentence ("Fact granted: ... . NOT HELD: ..."); the quote test reads the text from NOT HELD on.
 // F2 pkgG4M: a gate K-G4 item whose GROUND names no pressed witness left unanswered (a meaning break, ruling 421) tells the judge that a PRESSED line does not cure it and gives the FORCED form (the same form the answered-witness note already gives).
-// usage: node pkgKWN/build.cjs <fetch-back> <out> <F1|F2|F1F2>
+// usage: node pkgKWN/build.cjs <fetch-back> <out> <F1|F2|F1F2|F3|...>
 const fs=require('fs');const crypto=require('crypto');const rebuild=(stub,lib)=>{let i=stub.indexOf('\nreturn await new Function(');if(i<0)i=stub.indexOf('\nconst __e4h');if(i<0)throw new Error('not a stub');const $=n=>{if(n!=='Shared Library')throw new Error('read '+n);return {params:{jsCode:lib}};};return new Function('$',stub.slice(0,i)+'\nreturn __S;')($);};const [,,inF,outF,which]=process.argv;
 let D=JSON.parse(fs.readFileSync(inF,'utf8'));const W=(D.data||D).workflow||(D.data||D);const by={};W.nodes.forEach(n=>by[n.name]=n);
 const SL=by['Shared Library'];const c=SL.parameters.jsCode;const a=c.indexOf('\n/*LIB*/')+8,b=c.lastIndexOf('\n/*MAP*/'),e=c.lastIndexOf('\n/*END*/');
@@ -18,6 +18,8 @@ if(/F2/.test(which)){
  E.push([one("So the break rests on meaning (ruling 421): a KEEP, or a CHANGE TO that still says the witness was left unanswered, stays uncured. Cure it with one FORCED line: FORCED: '+"),l=>rep(l,
   "stays uncured. Cure it with one FORCED line: FORCED: '+(link?link.replace(/ VS /,' vs '):'D<i> vs C<j>')+' -- MEANS [<round>]: \"<the MEANS sentence>\" -- ANSWER [<round>]: \"<the holding side\\'s answer>\" -- FAILS: \"<why that answer cannot take the meaning>\", or with a CHANGE TO that no longer breaks the link.';",
   "stays uncured.'+__F;")]);}
+if(/F3/.test(which)){const o=', on a witness the side answered, with the FORCED line for the pair given only when the gate asks for it (K-G4),';
+ E.push([one(o),l=>rep(l,o,' (on a witness the side answered: FORCED: <Dn vs Cm> -- MEANS [<round>]: "..." -- ANSWER [<round>]: "..." -- FAILS: "..."),')]);} /* pkgEHF: the E-HOLD send-back text names the FORCED form, as the Record copy does */
 const uses=i=>Object.entries(M).filter(([n,v])=>v.p.some(p=>p===i||(Array.isArray(p)&&typeof p[0]==='number'&&p[0]<=i&&i<=p[1])));
 for(const [i,f] of E){const o=L[i];L[i]=f(o);if(L[i]===o)throw new Error('no change at '+i);const d=L[i].length-o.length;for(const [n,v] of uses(i))v.n+=d;console.log('line',i,(d>=0?'+':'')+d,'used by',uses(i).length,'nodes:',uses(i).map(x=>x[0]).join(', '));}
 const LJ=JSON.stringify(L);let nc=c.slice(0,a)+LJ+'\n/*MAP*/'+JSON.stringify(M)+c.slice(e);
