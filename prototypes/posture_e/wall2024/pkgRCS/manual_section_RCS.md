@@ -1,4 +1,4 @@
-# pkgRCS rev 2, RUN COST (W1; built on s139; NOT written)
+# pkgRCS rev 2, RUN COST (W1; LIVE in s140, version 5062d21e, 13:37 CST 11-11, with its schema change and price fill; graded PASS by W2 and W4)
 
 Purpose: the operator's words of 13:21 CST 11-11: "i would like to move forward with tracking and recording the cost. the cost can go at the end of the debate transcript."
 
@@ -15,7 +15,7 @@ Database change (one transaction, before the flow write; file w1/schema_RCS.sql)
 - Revert: w4/rcs/revert_schema_RCS.sql (W4) restores the live five-argument function and grants.
 - record_debate_row_tokens gains p_calls jsonb DEFAULT NULL. It prices each call: billed if OpenRouter gave a figure; otherwise from model_prices ("price list", an estimate); a model with no row gets no price (NULL, never 0). It stores call_costs and run_cost_usd (sum of priced calls). The old grants are restored exactly. The old five-argument call still works.
 
-Sizes (measured, rev 2): see the Wall post of revision 2. Data the task runner sends to Panel Tokens grows by the outputs of the call nodes (2,412,847 bytes on 35067); Plain Rule Lines receives the Get Row row (281,961 bytes on 35067).
+Sizes (measured, rev 2): code +6,374 (Panel Tokens +4,849, Plain Rule Lines +1,525); Write Tokens body +47; model prompts +0; nodes +0. Transcript +877 to +1,026 characters on the 7 stored runs. Data the task runner sends to Panel Tokens grows by the outputs of the call nodes (2,412,847 bytes on 35067); Plain Rule Lines receives the Get Row row (281,961 bytes on 35067).
 
 Limits:
 - No price is held in the code. A model with no row in model_prices shows "no price" and is left out of the total; the transcript gives the count. Prices change: a seat must update the rows when a provider changes its page.
