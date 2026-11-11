@@ -1,0 +1,71 @@
+### 35173
+== Reread | old Record equals stored rows: true
+ items asked old 11 new 11 | request chars old 56722 new 56722 diff 0 | tally old {"AGREE":11,"DISAGREE":0,"NO ANSWER":0,"NO VERDICT":0} new {"AGREE":11,"DISAGREE":0,"NO ANSWER":0,"NO VERDICT":0}
+ rows old 11 new 11 | NOT MADE rows new 0
+ every non-retraction row unchanged: true
+== Alt Reread | old Record equals stored rows: true
+ items asked old 14 new 10 | request chars old 55339 new 48850 diff -6489 | tally old {"AGREE":10,"DISAGREE":0,"NO ANSWER":4,"NO VERDICT":0} new {"AGREE":10,"DISAGREE":0,"NO ANSWER":0,"NO VERDICT":0}
+ rows old 14 new 14 | NOT MADE rows new 4
+    grok S8 E-COL | SECOND READING NOT MADE (pkgVP1; RECORD-ONLY): the replaced line is a retraction, which carries no grade to read again (pkgRRT): RETRACTED: D1 vs C6
+    grok S10 E-COL | SECOND READING NOT MADE (pkgVP1; RECORD-ONLY): the replaced line is a retraction, which carries no grade to read again (pkgRRT): RETRACTED: D2 vs C2
+    grok S12 E-COL | SECOND READING NOT MADE (pkgVP1; RECORD-ONLY): the replaced line is a retraction, which carries no grade to read again (pkgRRT): RETRACTED: D4 vs C2
+    grok S14 E-COL | SECOND READING NOT MADE (pkgVP1; RECORD-ONLY): the replaced line is a retraction, which carries no grade to read again (pkgRRT): RETRACTED: D5 vs C6
+ every non-retraction row unchanged: true
+### 34780
+== Reread | old Record equals stored rows: true
+ items asked old 14 new 12 | request chars old 96773 new 64850 diff -31923 | tally old {"AGREE":9,"DISAGREE":3,"NO ANSWER":2,"NO VERDICT":0} new {"AGREE":9,"DISAGREE":2,"NO ANSWER":0,"NO VERDICT":1}
+ rows old 14 new 14 | NOT MADE rows new 2
+    sol S4 E-COL | SECOND READING NOT MADE (pkgVP1; RECORD-ONLY): the replaced line is a retraction, which carries no grade to read again (pkgRRT): RETRACTED: D1 vs C3 -- the meaning-based 
+    sol S5 E-COL | SECOND READING NOT MADE (pkgVP1; RECORD-ONLY): the replaced line is a retraction, which carries no grade to read again (pkgRRT): RETRACTED: D1 vs C3 -- the duplicate mean
+ every non-retraction row unchanged: false
+== Alt Reread | old Record equals stored rows: true
+ items asked old 0 new 0 | request chars old 2 new 2 diff 0 | tally old {} new {}
+ rows old 0 new 0 | NOT MADE rows new 0
+ every non-retraction row unchanged: true
+### 34626
+== Reread | old Record equals stored rows: true
+ items asked old 16 new 14 | request chars old 50448 new 47671 diff -2777 | tally old {"AGREE":4,"DISAGREE":10,"NO ANSWER":2,"NO VERDICT":0} new {"AGREE":4,"DISAGREE":10,"NO ANSWER":0,"NO VERDICT":0}
+ rows old 16 new 16 | NOT MADE rows new 2
+    luna S7 E-COL | SECOND READING NOT MADE (pkgVP1; RECORD-ONLY): the replaced line is a retraction, which carries no grade to read again (pkgRRT): RETRACTED: D6 vs C5
+    luna S9 E-COL | SECOND READING NOT MADE (pkgVP1; RECORD-ONLY): the replaced line is a retraction, which carries no grade to read again (pkgRRT): RETRACTED: D6 vs C6
+ every non-retraction row unchanged: true
+== Alt Reread | old Record equals stored rows: true
+ items asked old 0 new 0 | request chars old 2 new 2 diff 0 | tally old {} new {}
+ rows old 0 new 0 | NOT MADE rows new 0
+ every non-retraction row unchanged: true
+### 34852
+== Reread | old Record equals stored rows: true
+ items asked old 11 new 11 | request chars old 39543 new 39543 diff 0 | tally old {"AGREE":10,"DISAGREE":1,"NO ANSWER":0,"NO VERDICT":0} new {"AGREE":10,"DISAGREE":1,"NO ANSWER":0,"NO VERDICT":0}
+ rows old 11 new 11 | NOT MADE rows new 0
+ every non-retraction row unchanged: true
+== Alt Reread | old Record equals stored rows: true
+ items asked old 7 new 7 | request chars old 36809 new 36809 diff 0 | tally old {"AGREE":5,"DISAGREE":2,"NO ANSWER":0,"NO VERDICT":0} new {"AGREE":5,"DISAGREE":2,"NO ANSWER":0,"NO VERDICT":0}
+ rows old 7 new 7 | NOT MADE rows new 0
+ every non-retraction row unchanged: true
+### 34703
+== Reread | old Record equals stored rows: true
+ items asked old 19 new 19 | request chars old 97285 new 97285 diff 0 | tally old {"AGREE":17,"DISAGREE":2,"NO ANSWER":0,"NO VERDICT":0} new {"AGREE":17,"DISAGREE":2,"NO ANSWER":0,"NO VERDICT":0}
+ rows old 19 new 19 | NOT MADE rows new 0
+ every non-retraction row unchanged: true
+== Alt Reread | old Record equals stored rows: true
+ items asked old 0 new 0 | request chars old 2 new 2 diff 0 | tally old {} new {}
+ rows old 0 new 0 | NOT MADE rows new 0
+ every non-retraction row unchanged: true
+### 35067
+== Reread | old Record equals stored rows: true
+ items asked old 6 new 6 | request chars old 43230 new 43230 diff 0 | tally old {"AGREE":6,"DISAGREE":0,"NO ANSWER":0,"NO VERDICT":0} new {"AGREE":6,"DISAGREE":0,"NO ANSWER":0,"NO VERDICT":0}
+ rows old 6 new 6 | NOT MADE rows new 0
+ every non-retraction row unchanged: true
+== Alt Reread | old Record equals stored rows: true
+ items asked old 0 new 0 | request chars old 2 new 2 diff 0 | tally old {} new {}
+ rows old 0 new 0 | NOT MADE rows new 0
+ every non-retraction row unchanged: true
+### 34726
+== Reread | old Record equals stored rows: true
+ items asked old 12 new 12 | request chars old 52424 new 52424 diff 0 | tally old {"AGREE":7,"DISAGREE":5,"NO ANSWER":0,"NO VERDICT":0} new {"AGREE":7,"DISAGREE":5,"NO ANSWER":0,"NO VERDICT":0}
+ rows old 12 new 12 | NOT MADE rows new 0
+ every non-retraction row unchanged: true
+== Alt Reread | old Record equals stored rows: true
+ items asked old 0 new 0 | request chars old 2 new 2 diff 0 | tally old {} new {}
+ rows old 0 new 0 | NOT MADE rows new 0
+ every non-retraction row unchanged: true

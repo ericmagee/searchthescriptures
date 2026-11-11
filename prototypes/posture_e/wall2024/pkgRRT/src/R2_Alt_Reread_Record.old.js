@@ -1,0 +1,15 @@
+const B=$('R2 Alt Reread Build').all().map(x=>x.json);const first=B[0]||{};const T=new Date().toISOString();
+if(first.rr_skip)return [{json:{reread:{skipped:true,why:first.rr_why||'',not_checked:first.not_checked||[]},rr_rows:[]}}];
+const R=$input.all().map(x=>x.json);const rows=[];const tally={AGREE:0,DISAGREE:0,'NO ANSWER':0,'NO VERDICT':0};const errors=[];
+const models={};try{for(const j of (($('R2 Alt Send Back Build').all()||[]).map(x=>x.json)))if(j&&j.seat)models[j.seat]=j.api_model||null;}catch(e){}
+const RX=/^ENFORCER\s*:\s*(?:(?:ITEM|ANSWER|ID)\s+)?([A-Z]+\d+\.\d+)(?:\s*(?:\(\s*[A-Za-z][\w.-]*\s*\)|,\s*[A-Za-z][\w.-]*))?\s*(?:--|—|–|-)\s*(AGREE|DISAGREE|NO ANSWER)\s*(?:--|—|–|-)?\s*(?:RIGHT\s*:\s*(MEETS|MISSES|NOT VOID|VOID|BROKEN|STANDS|UNDERDETERMINED|COUNTED|SPARED|DOES NOT FOLLOW|FOLLOWS|TRUE|OVERSTATED|SAME GROUND|DIFFERENT GROUND)\s*(?:--|—|–|-)?)?\s*(.*)$/i;
+B.forEach((b,i)=>{let txt='',err=null;try{txt=String(R[i].choices[0].message.content||'');}catch(e){err=String((R[i]&&R[i].error&&(R[i].error.message||R[i].error))||'no reply').slice(0,200);}
+ if(err)errors.push('call '+(i+1)+': '+err);const V={};
+ for(const l0 of txt.replace(/\\n/g,'\n').split('\n')){const l=l0.replace(/[*_`]+/g,'').replace(/^\s*(?:[-•>]\s*)?/,'').trim();const m=l.match(RX);if(!m)continue;const id=m[1].toUpperCase();if(V[id])continue;V[id]={v:m[2].toUpperCase(),right:(m[3]||'').toUpperCase(),why:(m[4]||'').trim(),line:l};}
+ (b.ids||[]).forEach((x,k)=>{const v=V[String(x.id).toUpperCase()]||null;const st=v?v.v:'NO VERDICT';tally[st]=(tally[st]||0)+1;
+  rows.push({run_token:b.run_token||null,seat:x.seat,seat_role:'alternate',judge_model:models[x.seat]||null,kind:'send_back',rule:'E-REREAD',item:x.sid+' '+x.rule+(x.item?' '+String(x.item).slice(0,120):''),
+   flagged_line:String(x.to).slice(0,1500),prompt_sent:k===0?String(b.body&&b.body.messages&&b.body.messages[1]&&b.body.messages[1].content||''):null,full_reply:k===0?(txt||null):null,reply_error:err,response_line:v?v.line.slice(0,1500):null,
+   cure_status:st==='AGREE'?'CURED':st==='DISAGREE'?'UNCURED':null,
+   cure_reason:'SECOND READING of the replaced line (pkgVP1; RECORD-ONLY: nothing is sent back, nothing is counted, no seat is removed): ENFORCER '+st+(v&&v.right?' (right: '+v.right+')':'')+(v&&v.why?': '+v.why.slice(0,600):(err?': the call failed: '+err:(v?'':': no ENFORCER line for '+x.id+' in the reply')))+' | FIRST READING ('+x.id+'): '+String(x.reason).slice(0,400),at:T});});});
+(first.not_checked||[]).forEach(w=>{const m=String(w).match(/^(\S+)\s+(\S+)\s+\(([^)]+)\):\s*(.*)$/);rows.push({run_token:first.run_token||null,seat:m?m[1]:null,seat_role:'alternate',judge_model:m?(models[m[1]]||null):null,kind:'send_back',rule:'E-REREAD',item:m?m[2]+' '+m[3]:String(w).slice(0,120),flagged_line:null,prompt_sent:null,full_reply:null,reply_error:null,response_line:null,cure_status:null,cure_reason:'SECOND READING NOT MADE (pkgVP1; RECORD-ONLY): '+(m?m[4]:String(w)),at:T});});
+return [{json:{reread:{skipped:false,calls:B.length,asked:B.reduce((a,b)=>a+(b.ids||[]).length,0),tally,errors,not_checked:first.not_checked||[]},rr_rows:rows}}];
