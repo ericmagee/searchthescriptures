@@ -1,0 +1,4 @@
+const fs=require('fs');
+for(const id of '34626 34703 34726 34780'.split(' ')){const d=JSON.parse(fs.readFileSync('/mnt/project-files/wall2024/ex'+id+'_full.json','utf8'));const rd=(d.data||d).resultData.runData;const j=rd['Judge Enforcer Record'][0].data.main[0][0].json;
+ const rows=[];const walk=(v,dp)=>{if(dp>6||!v||typeof v!=='object')return;if(Array.isArray(v)){v.forEach(x=>walk(x,dp+1));return;}if(/E-COL|E-HOLD/.test(String(v.rule||v.kind||'')))rows.push(v);for(const k in v)walk(v[k],dp+1);};walk(j,0);
+ const seen=new Set();for(const r of rows){if(!/E-COL/.test(r.rule||''))continue;const k=r.seat+r.item;if(seen.has(k))continue;seen.add(k);console.log(id,r.seat,r.rule,'|',String(r.flagged_line||r.line||'').replace(/\s+/g,' ').slice(0,120),'|| DS:',String(r.response_line||'').replace(/\s+/g,' ').slice(0,200));}}

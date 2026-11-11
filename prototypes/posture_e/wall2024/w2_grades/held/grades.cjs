@@ -1,0 +1,5 @@
+const fs=require('fs');const P=s=>{try{return JSON.parse(s)}catch(e){return JSON.parse(s.slice(s.indexOf('{'),s.lastIndexOf('}')+1))}};
+for(const f of fs.readdirSync('.').filter(f=>/^first_\d+_\w+\.txt$/.test(f)).sort()){const j=P(fs.readFileSync(f,'utf8'));const L=String(j.reasoning).split('\n').map(l=>l.replace(/[*_`]/g,'').trim());
+ const col=L.filter(l=>/^D\d+\s+vs\.?\s+C\d+\b/i.test(l)).map(l=>{const m=l.match(/^(D\d+)\s+vs\.?\s+(C\d+)\s*(?:\([^)]*\))?\s*:\s*(DEFENDER LINK BROKEN|CHALLENGER LINK BROKEN|STANDS|UNDERDETERMINED|BOTH LINKS? BROKEN)/i);return m?m[1]+'/'+m[2]+'='+m[3].replace('LINK BROKEN','BRK').replace('UNDERDETERMINED','UND'):null}).filter(Boolean);
+ const res=L.filter(l=>/^RESULT/i.test(l)).map(l=>l.slice(0,40));const ks=L.filter(l=>/^KEYSTONE/i.test(l)).map(l=>l.slice(0,60));const ct=L.filter(l=>/^CONTRADICTION/i.test(l)).length;
+ console.log(f.replace('first_','').replace('.txt',''),'|',j.verdict_tag,'| def',j.defense_standing,'| chal',j.challenge_standing,'| conceded',j.conceded_links,j.challenger_conceded_links,'\n  ',col.join(' '),'\n  ',res.join('')+' | '+ks.join(' | '),'| CONTRADICTION lines',ct);}
