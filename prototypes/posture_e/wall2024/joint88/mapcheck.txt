@@ -1,0 +1,14 @@
+parent sha256 03b8f3fb522eb049
+stub nodes 43 map entries 42 stubs without map entry [ 'Early Alternate Build' ]
+length or compile faults 0
+rebuilt sources changed vs live [
+  [ 'Alt Judge Enforcer Build', 2074 ],
+  [ 'Alt Send Back Record', 200 ],
+  [ 'Judge Enforcer Build', 2070 ],
+  [ 'R2 Alt Judge Enforcer Build', 2074 ],
+  [ 'R2 Alt Send Back Record', 200 ],
+  [ 'Send Back Record', 200 ]
+]
+library header null
+nodes differing [ 'Shared Library' ] conn equal true nodes 418 418
+total code delta 2837
