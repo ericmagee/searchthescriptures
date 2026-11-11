@@ -1,0 +1,46 @@
+enf428 {"code_violations":3,"skipped":false,"calls":8,"counts":{"ans_items":117,"ans_grades":139,"void_items":1,"void_rulings":1},"not_checked":0,"tally":{"E-ANS":{"AGREE":135,"DISAGREE":4,"NO ANSWER":0,"NO VERDICT":0,"CONTRADICTED":0},"E-VOID":{"AGREE":1,"DISAGREE":0,"NO ANSWER":0,"NO VERDICT":0,"CONTRADICTED":0},"E-COL":{"AGREE":0,"DISAGREE":18,"NO ANSWER":0,"NO VERDICT":0,"CONTRADICTED":0},"E-SYN":{"AGREE":2,"DISAGREE":0,"NO ANSWER":0,"NO VERDICT":0,"CONTRADICTED":0},"E-HOLD":{"AGREE":6,"DISAGREE":0,"NO ANSWER":0,"NO VERDICT":0,"CONTRADICTED":0},"E-KEY":{"AGREE":3,"DISAGREE":0,"NO ANSWER":0,"NO VERDICT":0,"CONTRADICTED":0},"E-PREM":{"AGREE":31,"DISAGREE":2,"NO ANSWER":0,"NO VERDICT":0,"CONTRADICTED":0},"E-RES":{"AGREE":0,"DISAGREE":0,"NO ANSWER":0,"NO VERDICT":0,"CONTRADICTED":0},"E-B7":{"AGREE":0,"DISAGREE":0,"NO ANSWER":0,"NO VERDICT":0,"CONTRADICTED":0}},"errors":[],"eid":{"bare_number":0,"seat_beside_id":0,"mapped_by_order":0,"calls_mapped":[],"unmapped":0},"esr":{"retried":[],"halves":0,"why":{}}}
+call 1 finish stop out tokens 11911 in tokens 17939
+call 2 finish stop out tokens 12067 in tokens 17767
+call 3 finish stop out tokens 22425 in tokens 18233
+call 4 finish stop out tokens 17754 in tokens 17729
+call 5 finish stop out tokens 25654 in tokens 15178
+call 6 finish stop out tokens 16969 in tokens 17077
+call 7 finish stop out tokens 17490 in tokens 17471
+call 8 finish stop out tokens 4693 in tokens 10415
+reply lines due 76 answered 76 missing none
+
+DISAGREE luna B1 | FULL true | OTHER LINES true 
+ item: ANSWER CHECK Matthew 1:19 [CR3] 
+ reply: ENFORCER: <line id> -- AGREE | DISAGREE | NO ANSWER -- RIGHT: MEETS | MISSES | VOID | NOT VOID | BROKEN | STANDS | UNDERDETERMINED | COUNTED | SPARED | FOLLOWS | DOES NOT FOLLOW | TRUE | OVERSTATED | SAME GROUND | DIFFERENT GROUND -- <one sentence that quotes the words that decide it>\n\nITEM B1 (E-ANS; the answering side wrote this in [CR3]):\nPRESSED VERSE: Matthew 1:19\nWHAT THE PRESS SAYS THE VERSE ME
+
+DISAGREE luna B23 | FULL true | OTHER LINES true 
+ item: ANSWER CHECK Luke 4:22 [CR3] 
+ reply: ENFORCER: <line id> -- AGREE | DISAGREE | NO ANSWER -- RIGHT: MEETS | MISSES | VOID | NOT VOID | BROKEN | STANDS | UNDERDETERMINED | COUNTED | SPARED | FOLLOWS | DOES NOT FOLLOW | TRUE | OVERSTATED | SAME GROUND | DIFFERENT GROUND -- <one sentence that quotes the words that decide it>\n\nITEM B23 (E-ANS; the answering side wrote this in [CR3]):\nPRESSED VERSE: Luke 4:22\nWHAT THE PRESS SAYS THE VERSE MEAN
+
+DISAGREE luna undefined | FULL false | OTHER LINES false 
+ item: ANSWER CHECK Hebrews 2:14 [CR3] 
+ reply: ENFORCER DISAGREE (right: MISSES): the answer ends \
+
+DISAGREE luna undefined | FULL false | OTHER LINES false 
+ item: ANSWER CHECK Matthew 1:25 [DR3] 
+ reply: ENFORCER DISAGREE (right: MEETS): the answer shows how the verse fits in its own words, 'The \
+
+DISAGREE luna undefined | FULL false | OTHER LINES false 
+ item: ANSWER CHECK Matthew 1:25 [DR3] 
+ reply: ENFORCER DISAGREE (right: MEETS): the answer shows how the verse fits in its own words, \
+
+DISAGREE luna B54 | FULL true | OTHER LINES false 
+ item: ANSWER CHECK Luke 1:35 [DR3] 
+ reply: ENFORCER: <line id> -- AGREE | DISAGREE | NO ANSWER -- RIGHT: MEETS | MISSES | VOID | NOT VOID | BROKEN | STANDS | UNDERDETERMINED | COUNTED | SPARED | FOLLOWS | DOES NOT FOLLOW | TRUE | OVERSTATED | SAME GROUND | DIFFERENT GROUND -- <one sentence that quotes the words that decide it>\n\nITEM B54 (E-ANS; the answering side wrote this in [DR3]):\nPRESSED VERSE: Luke 1:35\nWHAT THE PRESS SAYS THE VERSE MEAN
+
+DISAGREE chatgpt B80 | FULL true | OTHER LINES false 
+ item: ANSWER CHECK Luke 1:13 [DR3] 
+ reply: ENFORCER: <line id> -- AGREE | DISAGREE | NO ANSWER -- RIGHT: MEETS | MISSES | VOID | NOT VOID | BROKEN | STANDS | UNDERDETERMINED | COUNTED | SPARED | FOLLOWS | DOES NOT FOLLOW | TRUE | OVERSTATED | SAME GROUND | DIFFERENT GROUND -- <one sentence that quotes the words that decide it>\n\nITEM B80 (E-ANS; the answering side wrote this in [DR3]):\nPRESSED VERSE: Luke 1:13\nWHAT THE PRESS SAYS THE VERSE MEAN
+
+DISAGREE chatgpt undefined | FULL false | OTHER LINES false 
+ item: ANSWER CHECK Matthew 1:16 [DR3] 
+ reply: ENFORCER DISAGREE (right: MISSES): The answer only says Matthew 1:16 \
+
+DISAGREE sol B112 | FULL true | OTHER LINES false 
+ item: ANSWER CHECK Genesis 24:16 [DR3] 
+ reply: ENFORCER: <line id> -- AGREE | DISAGREE | NO ANSWER -- RIGHT: MEETS | MISSES | VOID | NOT VOID | BROKEN | STANDS | UNDERDETERMINED | COUNTED | SPARED | FOLLOWS | DOES NOT FOLLOW | TRUE | OVERSTATED | SAME GROUND | DIFFERENT GROUND -- <one sentence that quotes the words that decide it>\n\nITEM B112 (E-ANS; the answering side wrote this in [DR3]):\nPRESSED VERSE: Genesis 24:16\nWHAT THE PRESS SAYS THE VERSE

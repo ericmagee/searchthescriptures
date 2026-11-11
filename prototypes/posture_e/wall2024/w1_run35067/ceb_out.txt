@@ -1,0 +1,11 @@
+s130 replay equals stored true | errors  
+s128 candidates: 2 | s130 candidates: 4
+   X1 -- DEFENDER -- LINK 2 -- EARLIER [CR3] 
+   X2 -- DEFENDER -- LINK 4 -- EARLIER [CR3] 
+   X3 -- DEFENDER -- LINK 1 -- EARLIER [CR3] 
+   X4 -- DEFENDER -- LINK 4 -- EARLIER [CR3] 
+first difference at 2614 s128: f Romans 1:3 is assigned to the woman.\n\n######## THE DEFENDER ########\nThe defender's links: D1 = 
+ s130: f Romans 1:3 is assigned to the woman.\nX3 -- DEFENDER -- LINK 1 -- EARLIER [CR3] \"LINK 1: NARROWED TO: Joseph's resolve in Matthew 1:19 is the resolve of a man who did not hold the child to be his own, and the angel's \"for\" answers that
+other keys equal: true
+request with the two reclaim lines removed equals s128 request: true | other fields equal: false
+field differs: cands [{"id":"X1","side":"DEFENDER","by":"the Oracle (OPPONENT'S CONTRADICTIONS, [DR4])","kind":"LINK","n":2,"earlier_round":"CR3","earlier_q":"I grant that | [{"id":"X1","side":"DEFENDER","by":"the Oracle (OPPONENT'S CONTRADICTIONS, [DR4])","kind":"LINK","n":2,"earlier_round":"CR3","earlier_q":"I grant that coming upon is the empowering of existing persons.","closing_round":"CR4","closing_q":"In Luke 1:35 the same verb is followed by a birth and a sonshi

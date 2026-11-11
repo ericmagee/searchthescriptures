@@ -1,0 +1,18 @@
+
+#### Judge Enforcer Build stored calls 8 je_skip false | replay calls s127 6 s128 6 s130 8
+ s130 replay equals stored output: true
+ EAF1 FULL items s127 55 s128 93 lost none
+ EAF2 E-ANS items s127 117 s128 117 same ids true same grades/seats true
+ EAF3 calls s127 6 s128 6 max call chars s128 66674 stored max 66943
+ EAF4 E-ANS items with a backslash before a quote mark (s130): 0 
+ A1N1 new RULE sentence in every stored call: true 8
+ A1N2 items with other-lines section (stored) 58 of E-ANS 117 | faults: none
+ A1N3 pointed blocks: none
+ A1N2b items without the section that differ from s128: none
+ A1N4 calls s128 6 s130 8 stored 8
+ A1N5 check text s128 376348 stored 486458 +110110
+ A1N6 not_checked s128 0 stored 0 lost none | ids sent s128 vs stored equal true
+ A1N7 FULL blocks s128 vs s130 equal true
+
+#### Alt Judge Enforcer Build stored calls 1 je_skip true | replay calls s127 1 s128 1 s130 1
+ skipped: {"je_skip":true,"why":"no panel judgment text","items":[]}
