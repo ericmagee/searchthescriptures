@@ -1,0 +1,33 @@
+## M0 control (stored) 
+ live {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","X2|DEFENDER|3|CONFIRMED||"],"confirmed":["DEFENDER 3"]} 
+ cand {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","X2|DEFENDER|2|CONFIRMED|3|LINK 2 set by the code: the closing quotation stands in the block headed for link 2 (the r"],"confirmed":["DEFENDER 2"]}
+## M1 heading naming two links 
+ live {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","X2|DEFENDER|3|CONFIRMED||"],"confirmed":["DEFENDER 3"]} 
+ cand {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","X2|DEFENDER|3|CONFIRMED||"],"confirmed":["DEFENDER 3"]}
+## M2 reply quotes only the first half of the sentence 
+ live {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","X2|DEFENDER|3|CONFIRMED||"],"confirmed":["DEFENDER 3"]} 
+ cand {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","X2|DEFENDER|2|CONFIRMED|3|LINK 2 set by the code: the closing quotation stands in the block headed for link 2 (the r"],"confirmed":["DEFENDER 2"]}
+## M3 heading "## LINK 2:" 
+ live {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","X2|DEFENDER|3|CONFIRMED||"],"confirmed":["DEFENDER 3"]} 
+ cand {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","X2|DEFENDER|2|CONFIRMED|3|LINK 2 set by the code: the closing quotation stands in the block headed for link 2 (the r"],"confirmed":["DEFENDER 2"]}
+## M4 "---" rule between D2 heading and sentence 
+ live {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","X2|DEFENDER|3|CONFIRMED||"],"confirmed":["DEFENDER 3"]} 
+ cand {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","X2|DEFENDER|3|CONFIRMED||"],"confirmed":["DEFENDER 3"]}
+## M5 CHALLENGER NOT A CONTRADICTION on the same two quotations 
+ live {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","X2|DEFENDER|3|CONFIRMED||","X9|CHALLENGER|2|NOT A CONTRADICTION||"],"confirmed":["DEFENDER 3"]} 
+ cand {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","X2|DEFENDER|2|CONFIRMED|3|LINK 2 set by the code: the closing quotation stands in the block headed for link 2 (the r","X9|CHALLENGER|2|NOT A CONTRADICTION||"],"confirmed":["DEFENDER 2"]}
+## M6 sentence moved into the D3 block (reply already right) 
+ live {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","X2|DEFENDER|3|CONFIRMED||"],"confirmed":["DEFENDER 3"]} 
+ cand {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","X2|DEFENDER|3|CONFIRMED||"],"confirmed":["DEFENDER 3"]}
+## M7 empty closing round 
+ live {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","X2|DEFENDER|3|NOT CONFIRMED (form)||the closing quotation is not found word for word in CR4"],"confirmed":[]} 
+ cand {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","X2|DEFENDER|3|NOT CONFIRMED (form)||the closing quotation is not found word for word in CR4"],"confirmed":[]}
+## M8a reply with straight quote where close has curly (none in this sentence: apostrophe test on X1) 
+ live {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","X2|DEFENDER|3|CONFIRMED||"],"confirmed":["DEFENDER 3"]} 
+ cand {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","X2|DEFENDER|2|CONFIRMED|3|LINK 2 set by the code: the closing quotation stands in the block headed for link 2 (the r"],"confirmed":["DEFENDER 2"]}
+## M8b close sentence with curly apostrophe, reply straight 
+ live {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","X2|DEFENDER|3|NOT CONFIRMED (form)||the closing quotation is not found word for word in CR4"],"confirmed":[]} 
+ cand {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","X2|DEFENDER|3|NOT CONFIRMED (form)||the closing quotation is not found word for word in CR4"],"confirmed":[]}
+## M9 two NEW CONFIRMED on LINK 3: one sentence in D2, one in D3 
+ live {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","NEW|DEFENDER|3|CONFIRMED||","NEW|DEFENDER|3|CONFIRMED||the same link is already broken by an earlier confirmed line"],"confirmed":["DEFENDER 3"]} 
+ cand {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","NEW|DEFENDER|2|CONFIRMED|3|LINK 2 set by the code: the closing quotation stands in the block headed for link 2 (the r","NEW|DEFENDER|3|CONFIRMED||"],"confirmed":["DEFENDER 2","DEFENDER 3"]}
