@@ -1,0 +1,2 @@
+old true new true | old match "leaves the competing timing inferences open" | new match "differ on"
+without the closing "leaves ... open" clause: old false new true
