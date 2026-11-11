@@ -1,0 +1,38 @@
+distinct [CR3] answer lines 33 served 8 gate fail 24
+{
+ "verse": "Matthew 1:25",
+ "rk": "CR3",
+ "means": "the husband of 1:16 performs the father's naming.",
+ "ans": "This is the naming answered under link 3.",
+ "gate": true,
+ "served": false,
+ "w": {
+  "len": 86,
+  "need": 101,
+  "head": "- **Matthew 1:25** \"and he called his name JESUS.\" This is the naming answered under link 3."
+ },
+ "wm": null,
+ "wi": {
+  "len": 86,
+  "need": 101,
+  "head": "- **Matthew 1:25** \"and he called his name JESUS.\" This is the naming answered under link 3."
+ }
+}
+
+### CR3 around Matthew 1:25 @ 226 
+
+**LINK 1: NARROWED TO:** the finding of Matthew 1:18 and the angel's ground in Matthew 1:20 both state the source of the conception as the Holy Ghost. I drop the claim that Matthew 1:25 by its own force closes the espousal period.
+
+- **[L1] Matthew 1:18:** "she was found with child of the Holy Ghost."
+- **[L1] Matthew 1:20:** "fear not to take unto thee Mary thy wife: for that which is conceived in her is of the Holy Ghost." The margin reads "conceived: Gr. begotten."
+- **[L2]** *gennaō* (G1080, to procreate; properly of the father) stands behind "conceived" in 1:20. The verse puts the procreating, as a thing already done in her, to "the Holy Ghost."
+- **[L4]** The
+
+=== logged entries for the six verses
+{"verse":"Hebrews 2:14","rk":"CR3","ans":"The sameness is ‘flesh and blood,’ the thing taken.","gate":true,"served":true,"w":271,"wm":null,"wi":271,"need":109}
+{"verse":"Luke 1:13","rk":"CR3","ans":"This is the husband's son by promise.","gate":true,"served":true,"w":399,"wm":null,"wi":399,"need":96}
+{"verse":"Isaiah 7:16","rk":"CR3","ans":"In 8:3 the child's name is 'Mahershalalhashbaz,' and in 7:14 it is 'Immanuel.'","gate":false,"served":false,"w":457,"wm":null,"wi":457,"need":133}
+{"verse":"Luke 1:13","rk":"CR3","ans":"Zacharias is told 'thou shalt call his name John,' and in 1:62 'they made signs to his father.'","gate":false,"served":false,"w":180,"wm":null,"wi":180,"need":151}
+{"verse":"Matthew 1:25","rk":"CR3","ans":"This is the naming answered under link 3.","gate":true,"served":false,"w":86,"wm":null,"wi":86,"need":101}
+{"verse":"Hebrews 2:14","rk":"CR3","ans":"The sameness is 'flesh and blood,' the thing taken.","gate":true,"served":true,"w":271,"wm":null,"wi":271,"need":109}
+{"verse":"Hebrews 2:16","rk":"CR3","ans":"'he took on [him] the seed of Abraham' sets this against angels.","gate":false,"served":false,"w":271,"wm":null,"wi":271,"need":120}
