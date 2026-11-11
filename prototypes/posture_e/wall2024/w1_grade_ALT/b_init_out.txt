@@ -1,0 +1,27 @@
+## E1 claude v opus, grok on the fault ledger 
+ live: panel chatgpt,sol,luna | reserve haiku | alt haiku | single chatgpt 
+ cand: panel chatgpt,sol,luna | reserve null | alt grok,argon,haiku | single chatgpt
+## E2 claude v opus, chatgpt on the fault ledger 
+ live: panel sol,luna,chatgpt | reserve haiku | alt haiku | single chatgpt 
+ cand: panel sol,luna,chatgpt | reserve grok | alt grok,argon,haiku | single chatgpt
+## E3 claude v opus, argon refuses the posture 
+ live: panel chatgpt,sol,luna | reserve haiku | alt haiku | single chatgpt 
+ cand: panel chatgpt,sol,luna | reserve grok | alt grok,haiku | single chatgpt
+## E4 claude v opus, all three alternates refuse 
+ live: panel chatgpt,sol,luna | reserve null | alt  | single chatgpt 
+ cand: panel chatgpt,sol,luna | reserve null | alt  | single chatgpt
+## E5 claude v opus, chatgpt ledger + grok ledger 
+ live: panel sol,luna,chatgpt | reserve haiku | alt haiku | single chatgpt 
+ cand: panel sol,luna,chatgpt | reserve null | alt grok,argon,haiku | single chatgpt
+## E6 gemini v grok 
+ live: panel chatgpt,sol,luna | reserve haiku | alt haiku | single chatgpt 
+ cand: panel chatgpt,sol,luna | reserve haiku | alt haiku | single chatgpt
+## E7 chatgpt v opus (Wall 4622 case 1) 
+ live: REFUSED: ORACLE_DEBATE_V1 Init refused: NOT GRADED: the derived panel is 0 seat(s) []; the roster is exactly three. 
+ cand: REFUSED: ORACLE_DEBATE_V1 Init refused: NOT GRADED: the derived panel is 0 seat(s) []; the roster is exactly three.
+## E8 claude v opus, sol refuses (Wall 4622 case 2) 
+ live: REFUSED: ORACLE_DEBATE_V1 Init refused: NOT GRADED: the derived panel is 2 seat(s) [chatgpt, luna]; the roster is exactly three (did not accept the posture: sol). 
+ cand: REFUSED: ORACLE_DEBATE_V1 Init refused: NOT GRADED: the derived panel is 2 seat(s) [chatgpt, luna]; the roster is exactly three (did not accept the posture: sol).
+## E9 claude v opus, sol refuses, grok ledger 
+ live: REFUSED: ORACLE_DEBATE_V1 Init refused: NOT GRADED: the derived panel is 2 seat(s) [chatgpt, luna]; the roster is exactly three (did not accept the posture: sol). 
+ cand: REFUSED: ORACLE_DEBATE_V1 Init refused: NOT GRADED: the derived panel is 2 seat(s) [chatgpt, luna]; the roster is exactly three (did not accept the posture: sol).

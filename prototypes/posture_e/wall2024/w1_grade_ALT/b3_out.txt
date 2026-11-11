@@ -1,0 +1,14 @@
+stored debaters [{"engine":"claude","model":"anthropic/claude-sonnet-5.5","family":"anthropic"},{"engine":"opus","model":"anthropic/claude-opus-5.5","family":"anthropic"}] stored alternates haiku:anthropic
+## stored debaters items 3 alt/skips,alt/skips,alt/skips 
+  removed luna -> grok x-ai/grok-4.7
+  removed chatgpt -> argon google/gemini-4-argon
+  removed sol -> haiku anthropic/claude-haiku-5.5
+  live code same input: true
+## gemini debating items 2 alt/skips,alt/skips 
+  removed luna -> grok x-ai/grok-4.7
+  removed chatgpt -> haiku anthropic/claude-haiku-5.5
+  live code same input: true
+## grok debating items 2 alt/skips,alt/skips 
+  removed luna -> argon google/gemini-4-argon
+  removed chatgpt -> haiku anthropic/claude-haiku-5.5
+  live code same input: true
