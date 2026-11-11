@@ -1,0 +1,6 @@
+pkgSGR lines [ 1354 ]
+line 1354 +-138 Alternate Merge Seat, Cure Check, Panel Cure Check, R2 Alternate Merge Seat
+stubs rebuilt and compiled 42 | changed vs EKR parent Alternate Merge Seat +-138; Cure Check +-138; Panel Cure Check +-138; R2 Alternate Merge Seat +-138
+SIZE vs EKR parent -138 | vs s142 base: run mapcheck
+sha256 b6d0d27a67a2c874
+J vs base [ 1354, 3205 ] A21 vs base [ 3205 ] SRH vs base [ 1354 ] 3205=A21 true 1354=SRH true lens 3471 3471

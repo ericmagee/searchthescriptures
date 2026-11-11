@@ -1,0 +1,15 @@
+parent sha256 b6d0d27a67a2c874
+stub nodes 43 map entries 42 stubs without map entry [ 'Early Alternate Build' ]
+length or compile faults 0
+rebuilt sources changed vs live [
+  [ 'Alt Judge Enforcer Build', 94 ],
+  [ 'Alternate Merge Seat', -138 ],
+  [ 'Cure Check', -138 ],
+  [ 'Judge Enforcer Build', 94 ],
+  [ 'Panel Cure Check', -138 ],
+  [ 'R2 Alt Judge Enforcer Build', 94 ],
+  [ 'R2 Alternate Merge Seat', -138 ]
+]
+library header null
+nodes differing [ 'Shared Library' ] conn equal true nodes 418 418
+total code delta -44
