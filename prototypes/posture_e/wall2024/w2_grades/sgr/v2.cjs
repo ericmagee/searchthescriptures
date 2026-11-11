@@ -1,0 +1,7 @@
+const fs=require('fs');const res={};
+for(const fn of fs.readdirSync('/mnt/project-files/wall2024/').filter(x=>/^ex3\d+_full\.json$/.test(x))){const rd=JSON.parse(fs.readFileSync('/mnt/project-files/wall2024/'+fn,'utf8')).data.resultData.runData;
+ const A={};for(const b of ['Judge Enforcer Build','Alt Judge Enforcer Build','R2 Alt Judge Enforcer Build'])if(rd[b]){const s=JSON.stringify(rd[b]).replace(/\\\\n/g,'\n').replace(/\\n/g,'\n');for(const m of s.matchAll(/ITEM P\d+ \(E-PREM, a premise the (challenger|defender) listed against the (defender|challenger), number (\d+)\):\nTHE LIST ENTRY:[^\n]*\n([^\n]*)/g)){A[m[2]+' '+m[3]]=A[m[2]+' '+m[3]]||/^ASSUMES\s*:/.test(m[4]);}}
+ const seen=new Set();for(const n of ['Judge Enforcer Record','Alt Judge Enforcer Record','R2 Alt Judge Enforcer Record'])if(rd[n])for(const r of (rd[n][0].data.main.flat()[0].json.enf428_rows||[])){if(r.rule!=='E-PREM'||!/^ENFORCER (AGREE|DISAGREE)/.test(r.cure_reason||''))continue;const k=r.seat+r.flagged_line+r.item;if(seen.has(k))continue;seen.add(k);
+  const m=(r.item||'').match(/against the (defender|challenger) (\d+)/);if(!m)continue;const as=A[m[1]+' '+m[2]];const dis=/^ENFORCER DISAGREE/.test(r.cure_reason),rv=/right: VOID/.test(r.cure_reason);
+  const key=(as===undefined?'unknown':as?'ASSUMES':'other')+'|'+(dis?(rv?'DISAGREE->VOID':'DISAGREE other'):'AGREE');res[key]=(res[key]||0)+1;if(as&&rv)console.log(fn.slice(2,7),r.seat,r.item,'|',r.cure_reason.slice(25,140));}}
+console.log(res);
