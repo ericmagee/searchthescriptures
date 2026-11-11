@@ -1,0 +1,36 @@
+## N1a NEW pair CONFIRMED on LINK 3 and the same NEW pair NOT A CONTRADICTION on LINK 2 
+ live {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","NEW|DEFENDER|3|CONFIRMED||","NEW|DEFENDER|2|NOT A CONTRADICTION||"],"confirmed":["DEFENDER 3"]} 
+ cand {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","NEW|DEFENDER|3|NOT CONFIRMED (conflicting answers)||the same pair is also answered NOT A CONTRADICTION","NEW|DEFENDER|2|NOT A CONTRADICTION||"],"confirmed":[]}
+## N1b candidate X2 answered CONFIRMED on LINK 3 and NOT A CONTRADICTION on LINK 2 
+ live {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","X2|DEFENDER|3|NOT CONFIRMED (conflicting answers)||the same candidate X2 is also answered NOT A CONTRADICTION","X2|DEFENDER|2|NOT A CONTRADICTION||"],"confirmed":[]} 
+ cand {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","X2|DEFENDER|3|NOT CONFIRMED (conflicting answers)||the same candidate X2 is also answered NOT A CONTRADICTION","X2|DEFENDER|2|NOT A CONTRADICTION||"],"confirmed":[]}
+## N1 same pair CONFIRMED on LINK 3 and NOT A CONTRADICTION on LINK 2 
+ live {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","X2|DEFENDER|3|CONFIRMED||","X3|DEFENDER|2|NOT A CONTRADICTION||"],"confirmed":["DEFENDER 3"]} 
+ cand {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","X2|DEFENDER|3|CONFIRMED||","X3|DEFENDER|2|NOT A CONTRADICTION||"],"confirmed":["DEFENDER 3"]}
+## N2 bold ANSWER line naming D1 between the D2 heading and the sentence 
+ live {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","X2|DEFENDER|3|CONFIRMED||"],"confirmed":["DEFENDER 3"]} 
+ cand {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","X2|DEFENDER|2|CONFIRMED|3|LINK 2 set by the code: the closing quotation stands in the block headed for link 2 (the r"],"confirmed":["DEFENDER 2"]}
+## N3 h3 heading "### D2:" 
+ live {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","X2|DEFENDER|3|CONFIRMED||"],"confirmed":["DEFENDER 3"]} 
+ cand {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","X2|DEFENDER|2|CONFIRMED|3|LINK 2 set by the code: the closing quotation stands in the block headed for link 2 (the r"],"confirmed":["DEFENDER 2"]}
+## N4 CRLF line ends 
+ live {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","X2|DEFENDER|3|CONFIRMED||"],"confirmed":["DEFENDER 3"]} 
+ cand {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","X2|DEFENDER|2|CONFIRMED|3|LINK 2 set by the code: the closing quotation stands in the block headed for link 2 (the r"],"confirmed":["DEFENDER 2"]}
+## N5 lower-case heading "## d2:" 
+ live {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","X2|DEFENDER|3|CONFIRMED||"],"confirmed":["DEFENDER 3"]} 
+ cand {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","X2|DEFENDER|2|CONFIRMED|3|LINK 2 set by the code: the closing quotation stands in the block headed for link 2 (the r"],"confirmed":["DEFENDER 2"]}
+## N6 reply already names LINK 2 
+ live {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","X2|DEFENDER|2|CONFIRMED||"],"confirmed":["DEFENDER 2"]} 
+ cand {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","X2|DEFENDER|2|CONFIRMED||"],"confirmed":["DEFENDER 2"]}
+## N7 second CONFIRMED pair already on LINK 2 (other sentence), X2 relinks onto 2 
+ live {"rows":["X1|DEFENDER|2|CONFIRMED||","X2|DEFENDER|3|CONFIRMED||"],"confirmed":["DEFENDER 2","DEFENDER 3"]} 
+ cand {"rows":["X1|DEFENDER|2|CONFIRMED||","X2|DEFENDER|2|CONFIRMED|3|the same link is already broken by an earlier confirmed line"],"confirmed":["DEFENDER 2"]}
+## N8 sentence quoted with straight single quotes inside the closing quote 
+ live {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","X2|DEFENDER|3|CONFIRMED||"],"confirmed":["DEFENDER 3"]} 
+ cand {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","X2|DEFENDER|2|CONFIRMED|3|LINK 2 set by the code: the closing quotation stands in the block headed for link 2 (the r"],"confirmed":["DEFENDER 2"]}
+## N9 heading "## D2 --" with a dash 
+ live {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","X2|DEFENDER|3|CONFIRMED||"],"confirmed":["DEFENDER 3"]} 
+ cand {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","X2|DEFENDER|2|CONFIRMED|3|LINK 2 set by the code: the closing quotation stands in the block headed for link 2 (the r"],"confirmed":["DEFENDER 2"]}
+## N10 heading names an undeclared link "## D9:" 
+ live {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","X2|DEFENDER|3|CONFIRMED||"],"confirmed":["DEFENDER 3"]} 
+ cand {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","X2|DEFENDER|3|CONFIRMED||"],"confirmed":["DEFENDER 3"]}

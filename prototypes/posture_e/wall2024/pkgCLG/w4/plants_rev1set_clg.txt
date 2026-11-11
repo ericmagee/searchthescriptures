@@ -1,0 +1,36 @@
+## C0 control 
+ live {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","X2|DEFENDER|3|CONFIRMED||"],"confirmed":["DEFENDER 3"]} 
+ cand {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","X2|DEFENDER|2|CONFIRMED|3|LINK 2 set by the code: the closing quotation stands in the block headed for link 2 (the r"],"confirmed":["DEFENDER 2"]}
+## C1 heading with no link ("## Answers") 
+ live {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","X2|DEFENDER|3|CONFIRMED||"],"confirmed":["DEFENDER 3"]} 
+ cand {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","X2|DEFENDER|3|CONFIRMED||"],"confirmed":["DEFENDER 3"]}
+## C2 heading names two links 
+ live {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","X2|DEFENDER|3|CONFIRMED||"],"confirmed":["DEFENDER 3"]} 
+ cand {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","X2|DEFENDER|3|CONFIRMED||"],"confirmed":["DEFENDER 3"]}
+## C3 heading "LINK 2 (D2)" 
+ live {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","X2|DEFENDER|3|CONFIRMED||"],"confirmed":["DEFENDER 3"]} 
+ cand {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","X2|DEFENDER|2|CONFIRMED|3|LINK 2 set by the code: the closing quotation stands in the block headed for link 2 (the r"],"confirmed":["DEFENDER 2"]}
+## C4 heading "Answers on D2" 
+ live {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","X2|DEFENDER|3|CONFIRMED||"],"confirmed":["DEFENDER 3"]} 
+ cand {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","X2|DEFENDER|3|CONFIRMED||"],"confirmed":["DEFENDER 3"]}
+## C5 heading line removed (falls to the D1 heading above) 
+ live {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","X2|DEFENDER|3|CONFIRMED||"],"confirmed":["DEFENDER 3"]} 
+ cand {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","X2|DEFENDER|3|CONFIRMED||"],"confirmed":["DEFENDER 3"]}
+## C6 sentence split across two lines 
+ live {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","X2|DEFENDER|3|CONFIRMED||"],"confirmed":["DEFENDER 3"]} 
+ cand {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","X2|DEFENDER|3|CONFIRMED||"],"confirmed":["DEFENDER 3"]}
+## C7 same sentence also earlier in the D1 block 
+ live {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","X2|DEFENDER|3|CONFIRMED||"],"confirmed":["DEFENDER 3"]} 
+ cand {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","X2|DEFENDER|3|CONFIRMED||"],"confirmed":["DEFENDER 3"]}
+## C8 bold heading, not markdown "**D2:**" 
+ live {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","X2|DEFENDER|3|CONFIRMED||"],"confirmed":["DEFENDER 3"]} 
+ cand {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","X2|DEFENDER|2|CONFIRMED|3|LINK 2 set by the code: the closing quotation stands in the block headed for link 2 (the r"],"confirmed":["DEFENDER 2"]}
+## C9 closing quote with "..." 
+ live {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","X2|DEFENDER|3|CONFIRMED||"],"confirmed":["DEFENDER 3"]} 
+ cand {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","X2|DEFENDER|2|CONFIRMED|3|LINK 2 set by the code: the closing quotation stands in the block headed for link 2 (the r"],"confirmed":["DEFENDER 2"]}
+## C10 NEW pair answered twice: CONFIRMED and NOT A CONTRADICTION, same link 3 
+ live {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","NEW|DEFENDER|3|NOT CONFIRMED (conflicting answers)||the same pair is also answered NOT A CONTRADICTION","NEW|DEFENDER|3|NOT A CONTRADICTION||"],"confirmed":[]} 
+ cand {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","NEW|DEFENDER|3|NOT CONFIRMED (conflicting answers)||the same pair is also answered NOT A CONTRADICTION","NEW|DEFENDER|3|NOT A CONTRADICTION||"],"confirmed":[]}
+## C11 challenger side: line on C3, closing under "## C2" heading of dr4 
+ live {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","X2|DEFENDER|3|CONFIRMED||","NEW|CHALLENGER|3|CONFIRMED||"],"confirmed":["DEFENDER 3","CHALLENGER 3"]} 
+ cand {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","X2|DEFENDER|2|CONFIRMED|3|LINK 2 set by the code: the closing quotation stands in the block headed for link 2 (the r","NEW|CHALLENGER|2|CONFIRMED|3|LINK 2 set by the code: the closing quotation stands in the block headed for link 2 (the r"],"confirmed":["DEFENDER 2","CHALLENGER 2"]}

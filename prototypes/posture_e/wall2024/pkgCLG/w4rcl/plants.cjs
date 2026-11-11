@@ -1,0 +1,22 @@
+const {LIVE,RCL,CLK3,load,build,record,confirmAll}=require('./h.cjs');
+const RD0=load('34852');const OPEN='My chain stands as declared, D1 to D6.';const END='I keep D1 to D6 as declared.';
+const rcl=b=>(b.cands||[]).filter(c=>/pkgRCL/.test(c.by||'')).map(c=>c.id+' '+c.side+' L'+c.n+' ['+c.earlier_round+']');
+const P=async(name,mod,opts={})=>{const rd=JSON.parse(JSON.stringify(RD0));const F=rd['Final Output'][0].data.main[0][0].json;mod&&mod(F);
+ const bl=await build(LIVE,rd),bc=await build(RCL,rd);console.log('##',name,'\n  live cands',(bl.cands||[]).length,'| RCL added:',JSON.stringify(rcl(bc)));
+ if(opts.rec){const base=rd['Close Enforcer Call deepseek'][0].data.main[0][0].json.choices[0].message.content;const rep=confirmAll(bc,base);
+  for(const [nm,f] of [['live Record',LIVE],[(process.env.REC?'CLK3 Record':'CLG Record'),CLK3]]){const r=await record(f,rd,bc,rep);console.log('  ',nm,'all RCL CONFIRMED ->',JSON.stringify(r.confirmed),r.err||'');if(opts.rows)console.log('     rows',JSON.stringify(r.rows));}}};
+(async()=>{
+await P('R0 stored',null,{rec:true,rows:true});
+await P('R1 negated: "I do not keep D1 to D6 as declared."',F=>{F.cr4=F.cr4.split(OPEN).join('I do not keep D1 to D6 as declared; each link is defended as narrowed.').split(END).join('I keep each link as narrowed.');});
+await P('R2 opponent words: "The challenger says my chain does not stand as declared."',F=>{F.cr4=F.cr4.split(OPEN).join('The challenger says my chain does not stand as declared.').split(END).join('I keep each link as narrowed.');});
+await P('R3 challenger close keeps C1 to C5 as declared (planted narrowing LINK 2 in dr3)',F=>{F.dr3=F.dr3+'\n\n**LINK 2: NARROWED TO:** planted narrowing. I drop the planted claim.';F.dr4='My chain stands as declared, C1 to C5.\n\n'+F.dr4;});
+await P('R4 "D2 as declared" only',F=>{F.cr4=F.cr4.split(OPEN).join('D2 stands as declared.').split(END).join('I keep each link as narrowed.');});
+await P('R5a "D1-D6"',F=>{F.cr4=F.cr4.split(OPEN).join('My chain stands as declared, D1-D6.');});
+await P('R5b "all six links" (no D numbers)',F=>{F.cr4=F.cr4.split(OPEN).join('All six links stand as declared.').split(END).join('I keep each link as narrowed.');});
+await P('R5c "My chain stands as declared." only',F=>{F.cr4=F.cr4.split(OPEN).join('My chain stands as declared.').split(END).join('I keep each link as narrowed.');});
+await P('R6 LINK 1 narrowed in CR2 and restored in CR3 ("LINK 1: RESTORED")',F=>{F.cr2='**LINK 1: NARROWED TO:** planted. I drop it.\n'+F.cr2;});
+await P('R8 HARD: every link narrowed in CR3, one "as declared" sentence',F=>{for(const n of [2,4,6])F.cr3+='\n\n**LINK '+n+': NARROWED TO:** planted narrowing of link '+n+'. I drop the planted claim '+n+'.';},{rec:true,rows:true});
+await P('R9 UNION: only "as declared" sentence is the last line of the D6 block',F=>{F.cr4=F.cr4.split(OPEN).join('Each link is defended below.');},{rec:true,rows:true});
+await P('R9b UNION: opening sentence moved under the D3 heading',F=>{F.cr4=F.cr4.split(OPEN).join('Each link is defended below.').split(END).join('Each link is answered.');const h=F.cr4.indexOf('## D3');const e=F.cr4.indexOf('\n',h);F.cr4=F.cr4.slice(0,e+1)+'\n'+OPEN+'\n'+F.cr4.slice(e+1);},{rec:true,rows:true});
+await P('R9c W1: bare "My chain stands as declared." as the only such sentence, placed under the D6 heading',F=>{F.cr4=F.cr4.split(OPEN).join('Each link is defended below.').split(END).join('Each link is answered.');const h=F.cr4.indexOf('## D6');const e=F.cr4.indexOf('\n',h);F.cr4=F.cr4.slice(0,e+1)+'\nMy chain stands as declared.\n'+F.cr4.slice(e+1);},{rec:true,rows:true});
+})();

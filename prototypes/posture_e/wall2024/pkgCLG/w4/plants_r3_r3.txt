@@ -1,0 +1,21 @@
+## R1 X2 CONFIRMED on LINK 3 + NEW NOT A CONTRADICTION same quotations on LINK 2 
+ live {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","X2|DEFENDER|3|CONFIRMED||","NEW|DEFENDER|2|NOT A CONTRADICTION||"],"confirmed":["DEFENDER 3"]} 
+ cand {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","X2|DEFENDER|3|CONFIRMED||","NEW|DEFENDER|2|NOT A CONTRADICTION||"],"confirmed":["DEFENDER 3"]}
+## R2 two NEW rows CONFIRMED same quotations, LINK 3 and LINK 2 
+ live {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","NEW|DEFENDER|3|CONFIRMED||","NEW|DEFENDER|2|CONFIRMED||"],"confirmed":["DEFENDER 3","DEFENDER 2"]} 
+ cand {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","NEW|DEFENDER|2|CONFIRMED|3|LINK 2 set by the code: the closing quotation stands in the block headed for link 2 (the r","NEW|DEFENDER|2|CONFIRMED||the same link is already broken by an earlier confirmed line"],"confirmed":["DEFENDER 2"]}
+## R3 bold lead on the quotation line 
+ live {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","X2|DEFENDER|3|CONFIRMED||"],"confirmed":["DEFENDER 3"]} 
+ cand {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","X2|DEFENDER|2|CONFIRMED|3|LINK 2 set by the code: the closing quotation stands in the block headed for link 2 (the r"],"confirmed":["DEFENDER 2"]}
+## R4 quotation on the first line under the heading 
+ live {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","X2|DEFENDER|3|CONFIRMED||"],"confirmed":["DEFENDER 3"]} 
+ cand {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","X2|DEFENDER|2|CONFIRMED|3|LINK 2 set by the code: the closing quotation stands in the block headed for link 2 (the r"],"confirmed":["DEFENDER 2"]}
+## R5 quotation inside the heading line 
+ live {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","X2|DEFENDER|3|CONFIRMED||"],"confirmed":["DEFENDER 3"]} 
+ cand {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","X2|DEFENDER|3|CONFIRMED||"],"confirmed":["DEFENDER 3"]}
+## R6 CRLF with bold heading 
+ live {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","X2|DEFENDER|3|CONFIRMED||"],"confirmed":["DEFENDER 3"]} 
+ cand {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","X2|DEFENDER|2|CONFIRMED|3|LINK 2 set by the code: the closing quotation stands in the block headed for link 2 (the r"],"confirmed":["DEFENDER 2"]}
+## R7 reply on LINK 2 plus NOT A CONTRADICTION on other quotations 
+ live {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","X2|DEFENDER|2|CONFIRMED||"],"confirmed":["DEFENDER 2"]} 
+ cand {"rows":["X1|DEFENDER|2|NOT A CONTRADICTION||","X2|DEFENDER|2|CONFIRMED||"],"confirmed":["DEFENDER 2"]}
