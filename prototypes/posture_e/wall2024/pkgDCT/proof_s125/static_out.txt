@@ -1,0 +1,16 @@
+S1-S3 nodes checked 94 | problems 0
+S4 runner: code nodes 176 | fail 14
+   Extract Independent Verdict miss  parsed true
+   Cure Build miss  parsed true
+   Cure Normalize miss  parsed true
+   Panel Cure Normalize 1 miss  parsed true
+   Panel Cure Normalize 2 miss  parsed true
+   Panel Cure Normalize 3 miss  parsed true
+   Alternate Cure Build miss  parsed true
+   Alternate Cure Normalize miss  parsed true
+   Alt Gate Build miss  parsed true
+   Alt Gate Record miss  parsed true
+   R2 Alternate Cure Build miss  parsed true
+   R2 Alternate Cure Normalize miss  parsed true
+   R2 Alt Gate Build miss  parsed true
+   R2 Alt Gate Record miss  parsed true

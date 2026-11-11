@@ -1,0 +1,21 @@
+code nodes 176 | trimmed code needs what its stub does not ask for: 0
+stubs that ask for less than live: 19
+   Extract Independent Verdict: Panel Build | trimmed effective code needs none of them: true
+   Cure Build: Panel Build, (all) | trimmed effective code needs none of them: true
+   Cure Normalize: Panel Build | trimmed effective code needs none of them: true
+   Panel Cure Build 1: (all) | trimmed effective code needs none of them: true
+   Panel Cure Normalize 1: Panel Build | trimmed effective code needs none of them: true
+   Panel Cure Build 2: (all) | trimmed effective code needs none of them: true
+   Panel Cure Normalize 2: Panel Build | trimmed effective code needs none of them: true
+   Panel Cure Build 3: (all) | trimmed effective code needs none of them: true
+   Panel Cure Normalize 3: Panel Build | trimmed effective code needs none of them: true
+   Alternate Build: (all) | trimmed effective code needs none of them: true
+   Alternate Cure Build: Panel Build, (all) | trimmed effective code needs none of them: true
+   Alternate Cure Normalize: Panel Build | trimmed effective code needs none of them: true
+   Alt Gate Build: Panel Build | trimmed effective code needs none of them: true
+   Alt Gate Record: Panel Build | trimmed effective code needs none of them: true
+   R2 Alternate Build: (all) | trimmed effective code needs none of them: true
+   R2 Alternate Cure Build: Panel Build, (all) | trimmed effective code needs none of them: true
+   R2 Alternate Cure Normalize: Panel Build | trimmed effective code needs none of them: true
+   R2 Alt Gate Build: Panel Build | trimmed effective code needs none of them: true
+   R2 Alt Gate Record: Panel Build | trimmed effective code needs none of them: true
