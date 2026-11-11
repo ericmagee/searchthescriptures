@@ -1,0 +1,8 @@
+// W2 repeat 4 study: Panel Payloads per-seat drv_uncured and LIVE item rules (pre-cure), stored output vs a given version's code, on stored 34726 and 34852.
+const fs=require('fs');const run=require(process.cwd()+'/pkgKSR/run_node.cjs');const {rebuild}=require(process.cwd()+'/pkgLIB/unpack.cjs');
+const g=f=>{let d=JSON.parse(fs.readFileSync(f));d=d.data||d;return d.workflow||d;};
+const seats=o=>{const j=(o[0]&&(o[0].json||o[0]))||{};return (j.bodies||[]).map(b=>{const p=JSON.parse(b).payload||{};const r=String(p.verdict_raw||'');const rules=[...r.matchAll(/\[AUDIT v21: DEBATE RULE VIOLATION REPORT -- SEAT: [^;]*; ITEM: (.*?); RULE: ([^;]+); RESULT: ([A-Z ]+?)[;\]]/g)].map(m=>m[2]+':'+m[3]);const v23=[...r.matchAll(/\[AUDIT v23: DEBATE RULE VIOLATION \(([^)]+)\)/g)].map(m=>m[1]);return p.judge_seat+' drv='+p.drv_uncured+' v23=['+v23.join(',')+'] v21=['+rules.join(',')+']';});};
+(async()=>{for(const r of ['34726','34852']){const X=JSON.parse(fs.readFileSync('/mnt/project-files/wall2024/ex'+r+'_full.json'));const rd=(X.data||X).resultData.runData;
+ const st=rd['Panel Payloads'];console.log('##',r,'STORED');seats(st[st.length-1].data.main[0].map(i=>i)).forEach(s=>console.log('  ',s));
+ for(const v of process.argv.slice(2)){const L=g('/mnt/project-files/wall2024/fetchback_live_'+v+'.json');const lt=L.nodes.find(x=>x.name==='Shared Library').parameters.jsCode;const code=rebuild(L.nodes.find(x=>x.name==='Panel Payloads').parameters.jsCode,lt);
+  const o=await run(code,'Panel Payloads',rd);if(o.err){console.log('  ',v,'ERR',o.err);continue;}console.log('  ',v);seats(o).forEach(s=>console.log('    ',s));}}})();
