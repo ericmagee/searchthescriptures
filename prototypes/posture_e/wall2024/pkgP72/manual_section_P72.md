@@ -5,3 +5,6 @@ An ANSWER CHECK line is shown under a premise only when its MEANS matches the ME
 
 ## Rev 3 (after W3's FAIL, Wall 5053)
 The MEANS test is exact equality after lower case and punctuation are removed (no containment). No ruling-372 block is shown for a premise the same judge's line rules VOID ("Premise N VOID", "Premises 1 and N VOID", "Premise N is VOID"), and no ANSWER CHECK line that itself rules the premise VOID is shown. Limits: a judge who paraphrases the press MEANS gets no block; a VOID ruling in another form (for example "N: void" with no "Premise") is not read.
+
+## Rev 4 (after W4's FAIL, Wall 5055)
+The VOID reader is wide: "Premise(s) N ... VOID" or "VOIDED" within one clause of up to 60 characters, with no full stop, semicolon or other "premise" between them and no "not", "never" or "no longer" in that span; also "VOID: Premise(s) N". A false read only withholds a block, which leaves the behavior before pkgP72. Limit: a range ("Premises 1-5 VOID") reads only its end numbers.
