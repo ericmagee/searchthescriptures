@@ -1,0 +1,7 @@
+OK   every packed file names a live node
+OK   L1 each of 87 stubs rebuilds its source byte for byte from the new Shared Library, and each source equals what live s119 runs
+OK   E4 heads (Alternate Build, Early Alternate Build) equal live s119
+OK   L5 418 nodes, connections unchanged, no field but jsCode changed; changed nodes 46
+L6 Code node text 3245024 -> 1812268 = -1432756; non-code parameters (prompts) 146398 -> 146398 = 0
+sha256 0f7834baf1fdb688dce0f95ef5350494e1ca74a601343826d2c608f020d4fba3 bytes 5780439
+BUILD OK: /tmp/claude-0/-home-claude/25c53118-408e-5b9f-a314-6593b8f02ba2/scratchpad/r1b_check.json
