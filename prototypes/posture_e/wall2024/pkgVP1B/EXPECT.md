@@ -17,3 +17,8 @@ Size (measured): code 3,245,024 to 3,245,740 = +716; prompt 0. Parent /mnt/proje
 ## Revision 2 (after W4's grade NOT PASSED, Wall 4582): expectations, written before the candidate was run
 W4's plant P2: the check's MEANS is verse words; LINK 1's entry quotes the verse shorter, so the words stand only in LINK 4's verse quotation; rev 1 dropped D1 with no mark. Cause: my match read the whole PRESSED WITH line. Rev 2 reads only the entry line's MEANS part (after "MEANS:" to the next " -- ", "| PROVEN" or the line end).
 R1: P2 keeps D1 and D4 on the candidate (as live). R2: E1 to E11 of rev 1 unchanged. R3: a check MEANS equal to words of an entry's [L3] layer only: both links kept. R4 limit expected: an entry MEANS that itself holds " -- " is read only to that dash; a run after it does not match, and both links are kept (safe side).
+
+## Revision 2 results
+R1: W4's plant P2 (run from a copy of W4's plants.cjs pointed at rev 2) keeps D1 and D4. P0, P1, P3 as W4 recorded. R2: t2_out_r2.txt equals t2_out.txt (E1 to E11 unchanged). R3: both links kept. W4's stored scan (copy of scan2.cjs pointed at rev 2): output byte-equal to W4's scan of rev 1, the same 21 removals in 15 texts. R4 not planted.
+Size (measured): code 3,245,024 to 3,245,871 = +847; prompt 0. Parent /mnt/project-files/w3/parent_s119_VP1B_r2.json, sha256 4ffc220eede09ac2.
+MY MISTAKE in rev 1: I stated "when no entry holds the MEANS, every link is kept" and matched against the whole witness line, so verse words or layer words could pick a link. I planted no MEANS made of verse words. W4 found it.
