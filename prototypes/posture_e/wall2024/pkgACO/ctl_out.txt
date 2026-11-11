@@ -1,0 +1,12 @@
+LIVE (regrade false) old | reached: Anticheat Record, Build Independent Verdict, Build Save Body, Save to DB, Check Save, Panel Build, Regrade After Quotes? | cycle: SJ Re-ask Pick -> Verdict Normalizer | every path to Build Independent Verdict passes Anticheat Record: NO | to Build Save Body: NO | every path to Panel Build passes Check Save: yes | to Panel Build passes Anticheat Record: yes | node count reached 227
+LIVE (regrade false) new | reached: Anticheat Record, Build Independent Verdict, Build Save Body, Save to DB, Check Save, Panel Build, Regrade After Quotes? | cycle: SJ Re-ask Pick -> Verdict Normalizer | every path to Build Independent Verdict passes Anticheat Record: yes | to Build Save Body: yes | every path to Panel Build passes Check Save: yes | to Panel Build passes Anticheat Record: yes | node count reached 227
+REGRADE (regrade true) old | reached: Anticheat Record, Panel Build, Regrade After Quotes? | cycle: FUM Merge Panel 1 -> Panel Cure Normalize 1 | every path to Build Independent Verdict passes Anticheat Record: n/a | to Build Save Body: n/a | every path to Panel Build passes Check Save: NO | to Panel Build passes Anticheat Record: yes | node count reached 195
+REGRADE (regrade true) new | reached: Anticheat Record, Panel Build, Regrade After Quotes? | cycle: FUM Merge Panel 1 -> Panel Cure Normalize 1 | every path to Build Independent Verdict passes Anticheat Record: n/a | to Build Save Body: n/a | every path to Panel Build passes Check Save: NO | to Panel Build passes Anticheat Record: yes | node count reached 195
+ANTICHEAT-ONLY DRY (regrade true, acx_only true) old | reached: Anticheat Record, Regrade After Quotes? | cycle: none | every path to Build Independent Verdict passes Anticheat Record: n/a | to Build Save Body: n/a | every path to Panel Build passes Check Save: n/a | to Panel Build passes Anticheat Record: n/a | node count reached 7
+ANTICHEAT-ONLY DRY (regrade true, acx_only true) new | reached: Anticheat Record | cycle: none | every path to Build Independent Verdict passes Anticheat Record: n/a | to Build Save Body: n/a | every path to Panel Build passes Check Save: n/a | to Panel Build passes Anticheat Record: n/a | node count reached 6
+REGRADE node set old == new: true | LIVE node set old == new: true | DRY node set old == new: false
+connection changes: 4 
+  Check Save[0]: Anticheat Build -> Panel Build
+  Regrade After Quotes?[0]: Anticheat Build -> Panel Build
+  Anticheat Only?[1]: Panel Build -> Regrade After Quotes?
+  Close Enforcer Record[0]: Regrade After Quotes? -> Anticheat Build
