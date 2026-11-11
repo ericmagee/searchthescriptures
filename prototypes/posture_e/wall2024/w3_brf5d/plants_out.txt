@@ -1,0 +1,6 @@
+a | DR4 new [] line [] | CR4 new [] line [] | note chars 0 0
+b | DR4 new [] line [] | CR4 new [] line [] | note chars 0 0
+b2 | DR4 new ["Luke 1:37"] line [] | CR4 new ["Luke 1:37"] line [] | note chars 267 418
+c | DR4 new [] line [] | CR4 new [] line [] | note chars 0 0
+d | DR4 new ["Luke 1:37"] line [] | CR4 new ["Luke 1:37"] line [] | note chars 267 418
+e | DR4 new ["Matthew 1:20"] line [] | CR4 new ["Matthew 1:20"] line [] | note chars 270 421
