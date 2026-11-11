@@ -292,7 +292,7 @@
  {
   "run": "33490/J1",
   "len": 30362,
-  "result": "?",
+  "result": "DEFENDER WINS",
   "verdict": "HELD",
   "challenge_standing": "SELF-SUPPORTED",
   "clb": [
@@ -1296,7 +1296,7 @@
   "run": "34626",
   "slot": 1,
   "len": 23960,
-  "result": "?",
+  "result": "CHALLENGER WINS",
   "verdict": "BROKEN",
   "challenge_standing": "SELF-SUPPORTED",
   "clb": []
@@ -1323,7 +1323,7 @@
   "run": "34703",
   "slot": 1,
   "len": 18953,
-  "result": "?",
+  "result": "UNDERDETERMINED",
   "verdict": "HELD",
   "challenge_standing": "SELF-SUPPORTED",
   "clb": []
