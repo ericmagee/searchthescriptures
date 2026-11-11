@@ -1,0 +1,5 @@
+/(?:^|[.;!?]["\u201d'\u2019)\]]*\s+)\**NOT\s+HELD\b/i
+false | Fact granted: NOT HELD: [CR2] grants "x".
+true | Fact granted: Mary is so. NOT HELD: [CR2] grants "x".
+false | This is NOT HELD by the record "x"
+true | NOT HELD: "x"

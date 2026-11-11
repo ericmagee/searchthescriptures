@@ -1,0 +1,12 @@
+J1 code 3245024 -> 3246307 = 1283 | VP1B 847 KWN 141 G4M 295 | prompt 0
+J1 connections equal true nodes 418 418
+J1 library lines differ 1134,1139,1403,1733,1742 | lib length 3534 3534
+  line 1134 changed by 1 package(s); equals that package line true
+  line 1139 changed by 1 package(s); equals that package line true
+  line 1403 changed by 1 package(s); equals that package line true
+  line 1733 changed by 1 package(s); equals that package line true
+  line 1742 changed by 1 package(s); equals that package line true
+J1 MAP equal false
+J1 effective sources equal 150 differ 27 | node objects differ (not library) none
+J2 code nodes checked 176 fail 0
+J1 MAP: part lists differ 0 | n (length) not equal to rebuilt source 0 (only the n lengths change with the edited lines)
