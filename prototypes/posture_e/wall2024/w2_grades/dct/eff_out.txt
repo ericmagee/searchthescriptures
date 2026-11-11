@@ -1,0 +1,5 @@
+nodes 418 418 | names equal true | connections equal true
+nodes differing outside jsCode: []
+Code nodes 176 | effective source changed 95 | unchanged 81 | set equal true
+code 3247019 -> 2921162 = -325857
+non-code parameters equal (prompts etc.): true

@@ -1,0 +1,3 @@
+exports 10 | replays 989 (of them on a changed node 564) | equal 894 | error in both 95 | differ 0 | error in one only 0 | live nondeterministic 0
+changed nodes 95 | with at least one equal non-error replay 78 | ran but erred in both on every export 3 Init with Guards, Accept Build, Accept Final
+Code nodes with no stored run: 32 | of them changed by the trim: 14 Reserve Build, Failure Salvage, Accept Return Build, Accept DS Return Build, R2 Alternate Build, R2 Alternate Merge Seat, R2 Alternate Payloads, R2 Alternate Cure Build, R2 Alt Send Back Build, R2 Alternate Cure Normalize, R2 Alt Send Back Record, R2 Alt Gate Build, R2 Alt Gate Record, R2 Alternate Merge
