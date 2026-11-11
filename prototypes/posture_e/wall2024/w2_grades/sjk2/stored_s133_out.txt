@@ -1,0 +1,23 @@
+{
+ "rows": 143,
+ "rows_changed": 66,
+ "flags": 1777,
+ "rvw_sets_equal": 143,
+ "kw": 907,
+ "s3": 244,
+ "other": 626,
+ "old_cured": 188,
+ "new_cured": 1288,
+ "became_cured": {
+  "kw": 861,
+  "s3": 239
+ },
+ "lost_cured": 0,
+ "other_changed": 0,
+ "agree_rvf": 1151,
+ "new_not_rvf": 0,
+ "rvf_not_new": 0,
+ "uncured_report_now_cured": 0,
+ "stored_review_lines_changed": 1100,
+ "stored_absent": 0
+}

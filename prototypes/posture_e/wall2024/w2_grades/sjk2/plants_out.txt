@@ -1,0 +1,15 @@
+OK   Q0 control: K-W #1 as stored | SJK: Cured | base: Review | expected Cured
+OK   Q0b control: S3 #1 as stored | SJK: Cured | base: Review | expected Cured
+OK   Q1 K-W item with a colon, flag and report | SJK: Cured | base: Review | expected Cured
+OK   Q2 flag #10 cured only as #1 (report #10 set UNCURED) | SJK: Review | base: Review | expected Review
+OK   Q3 flag item lower case, report upper | SJK: Cured | base: Review | expected Cured
+OK   Q4 S3 flag curly quotes, report straight quotes | SJK: Cured | base: Review | expected Cured
+OK   Q5 S3 report names CHALLENGER DR4, flag DEFENDER CR4 | SJK: Review | base: Review | expected Review
+OK   Q6 K-W item with two bracket pairs, flag and report | SJK: Cured | base: Review | expected Cured
+OK   Q7 LIMIT: K-W report as AUDIT v22 (not read) | SJK: Review | base: Review | expected Review
+OK   Q8 K-W report for #1 removed entirely | SJK: Review | base: Review | expected Review
+OK   Q9 K-W report item without "#N" (ITEM: DEFENDER CR2 no link heading) | SJK: Review | base: Review | expected Review
+OK   Q10 S3 report sentence curly apostrophe dropped, rest equal | SJK: Cured | base: Review | expected Cured
+OK   Q11 S3 report round CR3 vs flag CR4 | SJK: Review | base: Review | expected Review
+OK   Q12 K-W report RESULT lower case "cured" | SJK: Review | base: Review | expected Review
+plants as expected 14 of 14

@@ -1,0 +1,13 @@
+== (A) replay
+33149 | fields outside review_notes equal true | note lines 35 35 | changed 12 K-W 10 S3 2 bad 0
+33371 | fields outside review_notes equal true | note lines 43 43 | changed 16 K-W 14 S3 2 bad 0
+33490 | fields outside review_notes equal true | note lines 46 46 | changed 13 K-W 13 S3 0 bad 0
+33497 | fields outside review_notes equal true | note lines 37 37 | changed 14 K-W 12 S3 2 bad 0
+34299 no Build Save Body
+34626 no Build Save Body
+34703 no Build Save Body
+34726 | fields outside review_notes equal true | note lines 48 48 | changed 21 K-W 20 S3 1 bad 0
+34780 no Build Save Body
+34852 | fields outside review_notes equal true | note lines 53 53 | changed 21 K-W 16 S3 5 bad 0
+35067 | fields outside review_notes equal true | note lines 58 58 | changed 24 K-W 10 S3 14 bad 0
+TOTAL {"items":320,"changed":121,"kw":95,"s3":26,"bad":0}
