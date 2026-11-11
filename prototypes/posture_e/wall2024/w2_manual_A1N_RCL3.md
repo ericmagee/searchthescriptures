@@ -12,7 +12,7 @@ When the code builds each E-ANS item, it adds THE SIDE'S OTHER LINES ON THIS VER
 
 Press lists ("PRESSED WITH", "-- MEANS:") are left out. The section is cut at 900 characters. RULE E-ANS in the check's prompt says that an answer given there counts as the answer.
 
-The check stays record-only (ruling 428), but its send-back still reaches the judges. It corrects in both directions: of 48 stored check-only send-backs, 39 were MISSES corrections and 9 were MEETS corrections.
+The check sets no grade itself (ruling 428, record-only trial); its DISAGREE and NO ANSWER rows go back to the judge in the send-back, and the judge keeps or changes its grade. It corrects in both directions: of 48 stored check-only send-backs, 39 were MISSES corrections and 9 were MEETS corrections.
 
 The section is used by Judge Enforcer Build, Alt Judge Enforcer Build and R2 Alt Judge Enforcer Build (Shared Library).
 
