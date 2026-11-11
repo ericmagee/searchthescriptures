@@ -1,0 +1,38 @@
+DIFF nodes: Shared Library 301 | nodes 418 418 | rest equal true
+E1 34780 not_sent live 4 cand 7 | sol 13->10 gone 3 new 0 ; luna 15->15 gone 0 new 0 ; chatgpt 11->11 gone 0 new 0
+E1 34726 not_sent live 3 cand 4 | luna 26->25 gone 1 new 0 ; sol 10->10 gone 0 new 0 ; chatgpt 2->2 gone 0 new 0
+E2 34780 Gate Build: equal after removing the clause: true | clause count in candidate output: 8 | in live: 0
+   sol G1 NOT APPLIED E-APPLY S1 | the flagged line is not in the judge text
+   sol G2 NOT APPLIED E-APPLY S4 | the CHANGE TO line has no line form the engine reads; a retraction is written "RETRACTED: <pair>" with nothing after the pair
+   sol G3 NOT APPLIED E-APPLY S5 | the flagged line is not in the judge text; a retraction is written "RETRACTED: <pair>" with nothing after the pair
+   sol G4 CONTRADICTION E-GATE D38 | your RULING card grades D1 vs C3 DEFENDER LINK BROKEN, but your collision line for D1 vs C3 now grades it STANDS. Change one of the two lines so they 
+   MSG: ITEM G2 (NOT APPLIED; E-APPLY S4): / THE ENGINE: the CHANGE TO line has no line form the engine reads; a retraction is written "RETRACTED: <pair>" with nothing after the pair / LINE: FORCED: D1 
+E2 34726 Gate Build equal: true
+E2 34780 Gate Record equal: true
+E2 34726 Gate Record equal: true
+E3 "RETRACTED: D1 vs C3" | LIVE: applied | CAND: applied | clause: false | all else equal: true
+E3 "RETRACTED: D1 vs C3." | LIVE: applied | CAND: applied | clause: false | all else equal: true
+E3 "RETRACTED: D1 vs C3 -- the meaning-based forced-link ruling i | LIVE: NOT APPLIED | CAND: NOT APPLIED | clause: true | all else equal: true
+E3 "RETRACTED: D1 vs C3 — withdrawn" | LIVE: NOT APPLIED | CAND: NOT APPLIED | clause: true | all else equal: true
+E3 "RETRACTED: D1 vs C3 -- the ruling holds" | LIVE: NOT APPLIED | CAND: NOT APPLIED | clause: true | all else equal: true
+E3 "RETRACTED: D1 vs C3 -- no change" | LIVE: NOT APPLIED | CAND: NOT APPLIED | clause: true | all else equal: true
+E3 "RETRACTED: D1 vs C3 -- reaffirmed" | LIVE: NOT APPLIED | CAND: NOT APPLIED | clause: true | all else equal: true
+E3 "RETRACTED: D1 vs C3 -- the break is upheld" | LIVE: NOT APPLIED | CAND: NOT APPLIED | clause: true | all else equal: true
+E3 "RETRACTED: D1 vs C3 -- I do not retract this ruling" | LIVE: NOT APPLIED | CAND: NOT APPLIED | clause: true | all else equal: true
+E3 "RETRACTED: D1 vs C3 -- the defender has withdrawn the claim,  | LIVE: NOT APPLIED | CAND: NOT APPLIED | clause: true | all else equal: true
+E3 "RETRACTED: D1 vs C3; withdrawn" | LIVE: NOT APPLIED | CAND: NOT APPLIED | clause: true | all else equal: true
+E3 "RETRACTED: D1 vs C3 (withdrawn)" | LIVE: NOT APPLIED | CAND: NOT APPLIED | clause: true | all else equal: true
+E3 "RETRACTED: D2 vs C4 -- withdrawn" | LIVE: NOT APPLIED | CAND: NOT APPLIED | clause: true | all else equal: true
+E3 "RETRACTED: D2 vs C4" | LIVE: NOT APPLIED | CAND: NOT APPLIED | clause: false | all else equal: true
+E3 "RETRACTED: D1 vs C3 and D2 vs C4" | LIVE: NOT APPLIED | CAND: NOT APPLIED | clause: true | all else equal: true
+E3 "retracted: d1 vs c3 -- withdrawn" | LIVE: NOT APPLIED | CAND: NOT APPLIED | clause: true | all else equal: true
+E3 "RETRACTED -- D1 vs C3 -- withdrawn" | LIVE: NOT APPLIED | CAND: NOT APPLIED | clause: false | all else equal: true
+E3 "RETRACTED: D1 vs C3 --" | LIVE: applied | CAND: applied | clause: false | all else equal: true
+E3 "RETRACTED" | LIVE: NOT APPLIED | CAND: NOT APPLIED | clause: false | all else equal: true
+E3 "RETRACTED: the ruling" | LIVE: NOT APPLIED | CAND: NOT APPLIED | clause: false | all else equal: true
+E3 "WITHDRAWN: D1 vs C3 -- reason" | LIVE: NOT APPLIED | CAND: NOT APPLIED | clause: false | all else equal: true
+E3 "the ruling is retracted: D1 vs C3 -- withdrawn" | LIVE: NOT APPLIED | CAND: NOT APPLIED | clause: false | all else equal: true
+E3 "FORCED: D1 vs C3 -- MEANS [DR2]: \"x\" -- ANSWER [CR3]: \"y\" | LIVE: applied | CAND: applied | clause: false | all else equal: true
+E3 "STANDS" | LIVE: NOT APPLIED | CAND: NOT APPLIED | clause: false | all else equal: true
+E3 "KEEP" | LIVE: NOT APPLIED | CAND: NOT APPLIED | clause: false | all else equal: true
+E3 "" | LIVE: NOT APPLIED | CAND: NOT APPLIED | clause: false | all else equal: true
