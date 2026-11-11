@@ -1,0 +1,61 @@
+###### s130
+## P1 challenger contradiction C1; both C1 lines already CHALLENGER LINK BROKEN (same side, no change expected) | tag undefined result undefined fields {}
+## P2 defender contradiction D2; D2 vs C1 is CHALLENGER LINK BROKEN, D2 vs C3 UNDERDETERMINED | tag "BROKEN-1" result "CHALLENGER WINS" fields {"verdict_tag":"BROKEN","defense_standing":"SELF-SUPPORTED","challenge_standing":"PROP-DEPENDENT"}
+   trig: CLOSE-CONTRADICTION D2 vs C1 (CHALLENGER LINK BROKEN to DEFENDER LINK BROKEN)
+   trig: CLOSE-CONTRADICTION D2 vs C3 (UNDERDETERMINED to DEFENDER LINK BROKEN)
+## P3 defender contradiction D1 only (35067 shape minus D4) | tag "BROKEN-1" result "CHALLENGER WINS" fields {"verdict_tag":"BROKEN","defense_standing":"SELF-SUPPORTED","challenge_standing":"PROP-DEPENDENT"}
+   trig: CLOSE-CONTRADICTION D1 vs C1 (CHALLENGER LINK BROKEN to DEFENDER LINK BROKEN)
+   trig: CLOSE-CONTRADICTION D1 vs C2 (UNDERDETERMINED to DEFENDER LINK BROKEN)
+## P4 challenger contradiction C1; both C1 lines planted DEFENDER LINK BROKEN (no line can take it) | tag "HELD-1" result "UNDERDETERMINED" fields {"verdict_tag":"HELD","defense_standing":"PROP-DEPENDENT","challenge_standing":"PROP-DEPENDENT"}
+   trig: CLOSE-CONTRADICTION D1 vs C1 (DEFENDER LINK BROKEN to CHALLENGER LINK BROKEN)
+   trig: CLOSE-CONTRADICTION D2 vs C1 (DEFENDER LINK BROKEN to CHALLENGER LINK BROKEN)
+## P5 order A: challenger C5 then defender D3, D3 vs C5 judge DEFENDER LINK BROKEN | tag "BROKEN-1" result "CHALLENGER WINS" fields {"verdict_tag":"BROKEN","defense_standing":"PROP-DEPENDENT","challenge_standing":"PROP-DEPENDENT"}
+   trig: CLOSE-CONTRADICTION D3 vs C5 (CHALLENGER break not set: the line already carries the DEFENDER break)
+   trig: CLOSE-CONTRADICTION D5 vs C5 (UNDERDETERMINED to CHALLENGER LINK BROKEN)
+## P6 order B: defender D3 then challenger C5 (same as P5 reversed) | tag "BROKEN-1" result "CHALLENGER WINS" fields {"verdict_tag":"BROKEN","defense_standing":"PROP-DEPENDENT","challenge_standing":"PROP-DEPENDENT"}
+   trig: CLOSE-CONTRADICTION D3 vs C5 (CHALLENGER break not set: the line already carries the DEFENDER break)
+   trig: CLOSE-CONTRADICTION D5 vs C5 (UNDERDETERMINED to CHALLENGER LINK BROKEN)
+## P7 bold grade: D3 vs C5 **DEFENDER LINK BROKEN**, challenger C5 | tag "HELD-1" result "UNDERDETERMINED" fields {"verdict_tag":"HELD","defense_standing":"PROP-DEPENDENT","challenge_standing":"PROP-DEPENDENT"}
+   trig: CLOSE-CONTRADICTION D3 vs C5 (DEFENDER LINK BROKEN to CHALLENGER LINK BROKEN)
+   trig: CLOSE-CONTRADICTION D5 vs C5 (UNDERDETERMINED to CHALLENGER LINK BROKEN)
+## P8 defender contradiction D3 on a line the judge graded DEFENDER LINK BROKEN (same side) | tag undefined result undefined fields {}
+## P9 both sides on two lines: defender D1 and challenger C1 (D1 vs C1 judge CHALLENGER) | tag "BROKEN-1" result "CHALLENGER WINS" fields {"verdict_tag":"BROKEN","defense_standing":"SELF-SUPPORTED","challenge_standing":"PROP-DEPENDENT"}
+   trig: CLOSE-CONTRADICTION D1 vs C1 (CHALLENGER LINK BROKEN to DEFENDER LINK BROKEN)
+   trig: CLOSE-CONTRADICTION D1 vs C2 (UNDERDETERMINED to DEFENDER LINK BROKEN)
+   trig: CLOSE-CONTRADICTION D1 vs C1 (CHALLENGER break not set: the line already carries the DEFENDER break)
+###### CMX
+## P1 challenger contradiction C1; both C1 lines already CHALLENGER LINK BROKEN (same side, no change expected) | tag undefined result undefined fields {}
+## P2 defender contradiction D2; D2 vs C1 is CHALLENGER LINK BROKEN, D2 vs C3 UNDERDETERMINED | tag "BROKEN-1" result "CHALLENGER WINS" fields {"verdict_tag":"BROKEN","defense_standing":"SELF-SUPPORTED","challenge_standing":"PROP-DEPENDENT"}
+   trig: CLOSE-CONTRADICTION D2 vs C1 (DEFENDER break not set: the line already carries the CHALLENGER break)
+   trig: CLOSE-CONTRADICTION D2 vs C3 (UNDERDETERMINED to DEFENDER LINK BROKEN)
+## P3 defender contradiction D1 only (35067 shape minus D4) | tag "BROKEN-1" result "CHALLENGER WINS" fields {"verdict_tag":"BROKEN","defense_standing":"SELF-SUPPORTED","challenge_standing":"PROP-DEPENDENT"}
+   trig: CLOSE-CONTRADICTION D1 vs C1 (DEFENDER break not set: the line already carries the CHALLENGER break)
+   trig: CLOSE-CONTRADICTION D1 vs C2 (UNDERDETERMINED to DEFENDER LINK BROKEN)
+## P4 challenger contradiction C1; both C1 lines planted DEFENDER LINK BROKEN (no line can take it) | tag "BROKEN-1" result "CHALLENGER WINS" fields {"verdict_tag":"BROKEN","defense_standing":"PROP-DEPENDENT","challenge_standing":"PROP-DEPENDENT"}
+   trig: CLOSE-CONTRADICTION D1 vs C1 (CHALLENGER break not set: the line already carries the DEFENDER break)
+   trig: CLOSE-CONTRADICTION D2 vs C1 (CHALLENGER break not set: the line already carries the DEFENDER break)
+   trig: CLOSE-CONTRADICTION C1 (no collision line names it; counted as one CHALLENGER LINK BROKEN)
+## P5 order A: challenger C5 then defender D3, D3 vs C5 judge DEFENDER LINK BROKEN | tag "BROKEN-1" result "CHALLENGER WINS" fields {"verdict_tag":"BROKEN","defense_standing":"PROP-DEPENDENT","challenge_standing":"PROP-DEPENDENT"}
+   trig: CLOSE-CONTRADICTION D3 vs C5 (CHALLENGER break not set: the line already carries the DEFENDER break)
+   trig: CLOSE-CONTRADICTION D5 vs C5 (UNDERDETERMINED to CHALLENGER LINK BROKEN)
+## P6 order B: defender D3 then challenger C5 (same as P5 reversed) | tag "BROKEN-1" result "CHALLENGER WINS" fields {"verdict_tag":"BROKEN","defense_standing":"PROP-DEPENDENT","challenge_standing":"PROP-DEPENDENT"}
+   trig: CLOSE-CONTRADICTION D3 vs C5 (CHALLENGER break not set: the line already carries the DEFENDER break)
+   trig: CLOSE-CONTRADICTION D5 vs C5 (UNDERDETERMINED to CHALLENGER LINK BROKEN)
+## P7 bold grade: D3 vs C5 **DEFENDER LINK BROKEN**, challenger C5 | tag "BROKEN-1" result "CHALLENGER WINS" fields {"verdict_tag":"BROKEN","defense_standing":"PROP-DEPENDENT","challenge_standing":"PROP-DEPENDENT"}
+   trig: CLOSE-CONTRADICTION D3 vs C5 (CHALLENGER break not set: the line already carries the DEFENDER break)
+   trig: CLOSE-CONTRADICTION D5 vs C5 (UNDERDETERMINED to CHALLENGER LINK BROKEN)
+## P8 defender contradiction D3 on a line the judge graded DEFENDER LINK BROKEN (same side) | tag undefined result undefined fields {}
+## P9 both sides on two lines: defender D1 and challenger C1 (D1 vs C1 judge CHALLENGER) | tag "BROKEN-1" result "CHALLENGER WINS" fields {"verdict_tag":"BROKEN","defense_standing":"SELF-SUPPORTED","challenge_standing":"PROP-DEPENDENT"}
+   trig: CLOSE-CONTRADICTION D1 vs C1 (DEFENDER break not set: the line already carries the CHALLENGER break)
+   trig: CLOSE-CONTRADICTION D1 vs C2 (UNDERDETERMINED to DEFENDER LINK BROKEN)
+
+SUMMARY
+same    P1 
+CHANGED P2 
+CHANGED P3 
+CHANGED P4 
+same    P5 
+same    P6 
+CHANGED P7 
+same    P8 
+CHANGED P9 

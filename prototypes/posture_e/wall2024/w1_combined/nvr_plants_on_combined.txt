@@ -1,0 +1,17 @@
+FIXED      Premise 4 is not void. | live {"4":"VOID"} | NVR {"4":"SPARED"}
+FIXED      Premise 4 is NOT VOID and is spared. | live {"4":"VOID"} | NVR {"4":"SPARED"}
+FIXED      Premise 4 is never void. | live {"4":"VOID"} | NVR {"4":"SPARED"}
+FIXED      Premise 4 is not unexhibited. | live {"4":"COUNTED"} | NVR {"4":"SPARED"}
+FIXED      Premise 4 is not conceded. | live {"4":"COUNTED"} | NVR {"4":"SPARED"}
+OK (both)  Premise 4 is not counted. | live {"4":"SPARED"} | NVR {"4":"SPARED"}
+OK (both)  Premise 4 VOID. | live {"4":"VOID"} | NVR {"4":"VOID"}
+OK (both)  Premise 4 UNEXHIBITED. | live {"4":"COUNTED"} | NVR {"4":"COUNTED"}
+OK (both)  Premise 4 is void, not spared. | live {"4":"VOID"} | NVR {"4":"VOID"}
+FIXED      Premises 1 through 6 are spared. | live {"1":"SPARED","6":"SPARED"} | NVR {"1":"SPARED","2":"SPARED","3":"SPARED","4":"SPARED","5":"SPARED","6":"SPARED"}
+FIXED      premises 2 to 4 are spared; premise 5 VOID. | live {"2":"SPARED","4":"SPARED","5":"VOID"} | NVR {"2":"SPARED","3":"SPARED","4":"SPARED","5":"VOID"}
+FIXED      Premises 1 through 6 are spared; premise 4 is not void. | live {"1":"SPARED","4":"VOID","6":"SPARED"} | NVR {"1":"SPARED","2":"SPARED","3":"SPARED","4":"SPARED","5":"SPARED","6":"SPARED"}
+OK (both)  Premises 1-6 are spared. | live {"1":"SPARED","2":"SPARED","3":"SPARED","4":"SPARED","5":"SPARED","6":"SPARED"} | NVR {"1":"SPARED","2":"SPARED","3":"SPARED","4":"SPARED","5":"SPARED","6":"SPARED"}
+FIXED      Premise 2 VOID; premises 3 through 5 UNEXHIBITED. | live {"2":"VOID","3":"COUNTED","5":"COUNTED"} | NVR {"2":"VOID","3":"COUNTED","4":"COUNTED","5":"COUNTED"}
+OK (both)  Premise 3 is not voided through its props. | live {} | NVR {}
+FIXED      Premise 5 is not VOID: "reverses" paraphrases the quote. Premise 6 VOID. | live {"5":"VOID","6":"VOID"} | NVR {"5":"SPARED","6":"VOID"}
+plants 16 both right 6 fixed by NVR 10 NVR wrong 0
