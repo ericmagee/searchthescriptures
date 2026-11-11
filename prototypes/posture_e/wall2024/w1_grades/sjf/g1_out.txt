@@ -1,0 +1,12 @@
+stored 35067 full | tag BROKEN | marks FOOTED FOOTED | no-CP flag false | s136: none || SJF: none
+stored 34852 full (on 35067 inputs) | tag BROKEN | marks FOOTED FOOTED | no-CP flag false | s136: none || SJF: none
+stored 34726 partial (on 35067 inputs) | tag BROKEN | marks FOOTED FOOTED | no-CP flag false | s136: none || SJF: none
+ASK 74 decline | tag BROKEN | marks null null | no-CP flag true | s136: FIRE marks | again after re-ask: shut || SJF: FIRE full [no COLLISION POINTS section; no DEFENDER CHAIN MARK line; no CHALLENGER CHAIN MARK line] | again after re-ask: shut
+W1-a lower-case "Collision points:" | tag BROKEN | marks FOOTED FOOTED | no-CP flag false | s136: none || SJF: none
+W1-b "COLLISION POINTS -" dash | tag BROKEN | marks FOOTED FOOTED | no-CP flag false | s136: none || SJF: none
+W1-c "### 3) COLLISION POINTS" | tag BROKEN | marks FOOTED FOOTED | no-CP flag true | s136: none || SJF: FIRE full [no COLLISION POINTS section] | again after re-ask: shut
+W1-d heading present, body empty | tag BROKEN | marks FOOTED FOOTED | no-CP flag false | s136: none || SJF: none
+W1-e full judgment quoting the audit wording | tag BROKEN | marks FOOTED FOOTED | no-CP flag true | s136: none || SJF: FIRE full [no COLLISION POINTS section] | again after re-ask: shut
+W1-f HELD verdict-word decline, no marks | tag HELD | marks null null | no-CP flag true | s136: FIRE marks | again after re-ask: shut || SJF: FIRE full [no COLLISION POINTS section; no DEFENDER CHAIN MARK line; no CHALLENGER CHAIN MARK line] | again after re-ask: shut
+W1-g no verdict word, no marks | tag UNKNOWN | marks null null | no-CP flag true | s136: FIRE full | again after re-ask: shut || SJF: FIRE full [no verdict (HELD, PARTIAL or BROKEN); no COLLISION POINTS section; no DEFENDER CHAIN MARK line; no CHALLENGER CHAIN MARK line] | again after re-ask: shut
+W1-h "COLLISION POINTS" in a table cell | tag BROKEN | marks FOOTED FOOTED | no-CP flag true | s136: none || SJF: FIRE full [no COLLISION POINTS section] | again after re-ask: shut
