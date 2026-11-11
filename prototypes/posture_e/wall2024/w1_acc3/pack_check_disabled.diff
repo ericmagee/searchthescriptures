@@ -1,0 +1,4 @@
+46c46
+<  const name=f.replace(/\.js$/,'').replace(/_/g,' ');const RN=needs(SRC[k]);if(!RN.parsed||RN.env||RN.execution||RN.prevNode)throw new Error(f+': full source needs runner data pkgLIB v2 does not pass on');
+---
+>  const name=f.replace(/\.js$/,'').replace(/_/g,' ');const RN=needs(SRC[k]);if(!RN.parsed||RN.env||RN.prevNode)throw new Error(f+': full source needs runner data pkgLIB v2 does not pass on');
