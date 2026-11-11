@@ -1,4 +1,4 @@
-DIFF nodes: Shared Library 293 | nodes 418 418 | rest equal true
+DIFF nodes: Shared Library 328 | nodes 418 418 | rest equal true
 T1 not_sent live 4 cand 7 | added: sol E-COL COLLISION D1 vs C3 ; luna E-COL COLLISION D1 vs C3 ; sol E-COL COLLISION D1 vs C3
 T1 luna items live 15 cand 15 | gone:  | new: 0
 T1 chatgpt items live 11 cand 11 | gone:  | new: 0
@@ -38,8 +38,11 @@ T3 "RETRACTED: D1 vs C3 -- affirmed" | LIVE: NOT APPLIED: the CHANGE TO line has
 T3 "RETRACTED: D1 vs C3 -- unchanged" | LIVE: NOT APPLIED: the CHANGE TO line has no line form the en | CAND: NOT APPLIED: the CHANGE TO line has no line form the en | other items equal true
 T3 "RETRACTED: D1 vs C3 -- I decline to retract" | LIVE: NOT APPLIED: the CHANGE TO line has no line form the en | CAND: NOT APPLIED: the CHANGE TO line has no line form the en | other items equal true
 T3 "RETRACTED: D1 vs C3 -- refused" | LIVE: NOT APPLIED: the CHANGE TO line has no line form the en | CAND: NOT APPLIED: the CHANGE TO line has no line form the en | other items equal true
-T3 "RETRACTED: D1 vs C3 -- it cannot be retracted" | LIVE: NOT APPLIED: the CHANGE TO line has no line form the en | CAND: applied | other items equal false
+T3 "RETRACTED: D1 vs C3 -- it cannot be retracted" | LIVE: NOT APPLIED: the CHANGE TO line has no line form the en | CAND: NOT APPLIED: the CHANGE TO line has no line form the en | other items equal true
 T3 "RETRACTED: D1 vs C3 -- the FORCED line is retained" | LIVE: NOT APPLIED: the CHANGE TO line has no line form the en | CAND: NOT APPLIED: the CHANGE TO line has no line form the en | other items equal true
+T3 "RETRACTED: D1 vs C3 -- I don't retract it" | LIVE: NOT APPLIED: the CHANGE TO line has no line form the en | CAND: NOT APPLIED: the CHANGE TO line has no line form the en | other items equal true
+T3 "RETRACTED: D1 vs C3 -- I won’t withdraw the ruling" | LIVE: NOT APPLIED: the CHANGE TO line has no line form the en | CAND: NOT APPLIED: the CHANGE TO line has no line form the en | other items equal true
+T3 "RETRACTED: D1 vs C3 -- never withdrawn" | LIVE: NOT APPLIED: the CHANGE TO line has no line form the en | CAND: NOT APPLIED: the CHANGE TO line has no line form the en | other items equal true
 T3 "RETRACTED: D1 vs C3 -- [CR3] says \"I grant it bounds the abstinence  | LIVE: NOT APPLIED: the CHANGE TO line has no line form the en | CAND: applied | other items equal false
 T4 Send Back Build stored 34726, candidate equals live: false
 T4 Gate Build stored 34726, candidate equals live: true
