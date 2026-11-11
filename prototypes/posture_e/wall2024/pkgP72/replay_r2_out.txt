@@ -1,0 +1,54 @@
+build stubs changed: [
+  'Alt Judge Enforcer Build 1952',
+  'Judge Enforcer Build 1952',
+  'R2 Alt Judge Enforcer Build 1952'
+]
+33149 Alt Judge Enforcer Build     requests 0 | prompt chars 0 | items and rule text equal (372 lines, sentence aside) true | requests with new sentence 0 | ids equal (r372 aside) true | judge lines with 372 checks 0
+33149 Judge Enforcer Build         requests 10 | prompt chars 4153 | items and rule text equal (372 lines, sentence aside) true | requests with new sentence 10 | ids equal (r372 aside) true | judge lines with 372 checks 3
+      gemini premise listed against the challenger 2 <- Matthew 1:25
+      chatgpt premise listed against the challenger 2 <- Matthew 1:19
+      sol premise listed against the challenger 2 <- Matthew 1:19
+33371 Alt Judge Enforcer Build     requests 5 | prompt chars 1922 | items and rule text equal (372 lines, sentence aside) true | requests with new sentence 4 | ids equal (r372 aside) true | judge lines with 372 checks 2
+      grok premise listed against the defender 2 <- John 3:6
+      grok premise listed against the defender 6 <- Ezra 2:59
+33371 Judge Enforcer Build         requests 6 | prompt chars 2978 | items and rule text equal (372 lines, sentence aside) true | requests with new sentence 6 | ids equal (r372 aside) true | judge lines with 372 checks 3
+      chatgpt premise listed against the defender 2 <- John 3:6
+      chatgpt premise listed against the defender 5 <- Isaiah 8:8
+      gemini premise listed against the challenger 1 <- Matthew 1:25
+33490 Alt Judge Enforcer Build     requests 5 | prompt chars 1858 | items and rule text equal (372 lines, sentence aside) true | requests with new sentence 4 | ids equal (r372 aside) true | judge lines with 372 checks 1
+      grok premise listed against the challenger 3 <- Matthew 1:18, Deuteronomy 20:7
+33490 Judge Enforcer Build         requests 9 | prompt chars 2439 | items and rule text equal (372 lines, sentence aside) true | requests with new sentence 9 | ids equal (r372 aside) true | judge lines with 372 checks 0
+33497 Alt Judge Enforcer Build     requests 1 | prompt chars 0 | items and rule text equal (372 lines, sentence aside) true | requests with new sentence 0 | ids equal (r372 aside) true | judge lines with 372 checks 0
+33497 Judge Enforcer Build         requests 10 | prompt chars 3289 | items and rule text equal (372 lines, sentence aside) true | requests with new sentence 10 | ids equal (r372 aside) true | judge lines with 372 checks 1
+      gemini premise listed against the challenger 1 <- Matthew 1:25
+34299 Judge Enforcer Build         requests 8 | prompt chars 2168 | items and rule text equal (372 lines, sentence aside) true | requests with new sentence 8 | ids equal (r372 aside) true | judge lines with 372 checks 0
+34626 Alt Judge Enforcer Build     requests 0 | prompt chars 0 | items and rule text equal (372 lines, sentence aside) true | requests with new sentence 0 | ids equal (r372 aside) true | judge lines with 372 checks 0
+34626 Judge Enforcer Build         requests 8 | prompt chars 3361 | items and rule text equal (372 lines, sentence aside) true | requests with new sentence 8 | ids equal (r372 aside) true | judge lines with 372 checks 3
+      luna premise listed against the defender 2 <- Matthew 1:19
+      luna premise listed against the defender 4 <- Luke 1:36
+      luna premise listed against the challenger 5 <- Hebrews 10:5
+34703 Alt Judge Enforcer Build     requests 1 | prompt chars 0 | items and rule text equal (372 lines, sentence aside) true | requests with new sentence 0 | ids equal (r372 aside) true | judge lines with 372 checks 0
+34703 Judge Enforcer Build         requests 8 | prompt chars 2748 | items and rule text equal (372 lines, sentence aside) true | requests with new sentence 8 | ids equal (r372 aside) true | judge lines with 372 checks 1
+      chatgpt premise listed against the defender 2 <- 2 Samuel 7:14
+34726 Alt Judge Enforcer Build     requests 1 | prompt chars 0 | items and rule text equal (372 lines, sentence aside) true | requests with new sentence 0 | ids equal (r372 aside) true | judge lines with 372 checks 0
+34726 Judge Enforcer Build         requests 10 | prompt chars 3874 | items and rule text equal (372 lines, sentence aside) true | requests with new sentence 10 | ids equal (r372 aside) true | judge lines with 372 checks 2
+      luna premise listed against the defender 1 <- Romans 1:3
+      luna premise listed against the defender 6 <- Luke 2:48, John 1:45, Luke 4:22
+34780 Alt Judge Enforcer Build     requests 0 | prompt chars 0 | items and rule text equal (372 lines, sentence aside) true | requests with new sentence 0 | ids equal (r372 aside) true | judge lines with 372 checks 0
+34780 Judge Enforcer Build         requests 10 | prompt chars 4711 | items and rule text equal (372 lines, sentence aside) true | requests with new sentence 10 | ids equal (r372 aside) true | judge lines with 372 checks 4
+      sol premise listed against the defender 4 <- Matthew 1:25
+      luna premise listed against the challenger 1 <- Hebrews 7:14
+      luna premise listed against the challenger 2 <- Genesis 3:15
+      luna premise listed against the challenger 3 <- Matthew 1:18
+34852 Alt Judge Enforcer Build     requests 2 | prompt chars 271 | items and rule text equal (372 lines, sentence aside) true | requests with new sentence 1 | ids equal (r372 aside) true | judge lines with 372 checks 0
+34852 Judge Enforcer Build         requests 7 | prompt chars 1897 | items and rule text equal (372 lines, sentence aside) true | requests with new sentence 7 | ids equal (r372 aside) true | judge lines with 372 checks 0
+35067 Alt Judge Enforcer Build     requests 0 | prompt chars 0 | items and rule text equal (372 lines, sentence aside) true | requests with new sentence 0 | ids equal (r372 aside) true | judge lines with 372 checks 0
+35067 Judge Enforcer Build         requests 7 | prompt chars 2804 | items and rule text equal (372 lines, sentence aside) true | requests with new sentence 7 | ids equal (r372 aside) true | judge lines with 372 checks 2
+      luna premise listed against the challenger 1 <- Matthew 1:25
+      luna premise listed against the challenger 5 <- Matthew 1:25
+35173 Alt Judge Enforcer Build     requests 5 | prompt chars 3299 | items and rule text equal (372 lines, sentence aside) true | requests with new sentence 4 | ids equal (r372 aside) true | judge lines with 372 checks 3
+      grok premise listed against the challenger 2 <- Matthew 1:25
+      grok premise listed against the challenger 5 <- Luke 1:34
+      grok premise listed against the challenger 6 <- Matthew 1:20, Luke 1:35, Matthew 1:25
+35173 Judge Enforcer Build         requests 8 | prompt chars 2168 | items and rule text equal (372 lines, sentence aside) true | requests with new sentence 8 | ids equal (r372 aside) true | judge lines with 372 checks 0
+TOTAL {"runs":23,"errs":0,"reqs":121,"dch":43940,"lines":25,"rest_equal":23,"ids_equal":23}
