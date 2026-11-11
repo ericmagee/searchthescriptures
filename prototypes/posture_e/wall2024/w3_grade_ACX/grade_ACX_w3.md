@@ -26,7 +26,7 @@ VERDICT: NOT PASSED, on the wording (B5). The code does exactly what it states.
 - B5 FAIL: in 34852 the Matthew 1:19 note now reads "The close sentence is disregarded (this note breaks no link; it is not a confirmed closing contradiction)" on the pair "A man who knew himself the father would have no cause to put her away..." against "I drop the claim that a father would never have thought of putting her away." The next block of the same prompt, CONFIRMED CLOSING CONTRADICTIONS, lists the same two sentences as confirmed and D3 as BROKEN. The judge is told of one pair that it is not a confirmed closing contradiction and, a few lines on, that it is one. The phrase is false whenever the closing enforcer confirmed the note's pair.
 - Suggested, W2's decision: wording that is true in both cases, for example "(this note by itself breaks no link; only a pair listed under CONFIRMED CLOSING CONTRADICTIONS is confirmed)".
 
-## Option B rev 2 (parent_s120_ACXB2.json, sha256 56cd7e51ea9b4e59; claim Wall post 4690)
+## Option B rev 2 (parent_s120_ACXB2.json, sha256 56cd7e51ea9b4e59; claim Wall post 4691)
 
 Runs by a delegated worker (gB2.cjs, gB2_out.txt); expectations posted first; verdict mine. The wording is the one I suggested.
 
