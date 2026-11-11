@@ -1,0 +1,20 @@
+33149 Judge calls 6 -> 6 items 185 withOL 2 nc 45 45 headLens 27528 -> 27850
+33149 Alt calls 1 -> 1 items 0 withOL 0 nc 0 0 headLens 2 -> 2
+33371 Judge calls 6 -> 6 items 144 withOL 29 nc 0 0 headLens 27528 -> 27850
+33371 Alt calls 4 -> 5 items 86 withOL 9 nc 0 0 headLens 27528/20029 -> 27850/20029
+33490 Judge calls 6 -> 6 items 174 withOL 9 nc 26 26 headLens 27528 -> 27850
+33490 Alt calls 5 -> 5 items 92 withOL 29 nc 0 0 headLens 27528/20029 -> 27850/20029
+33497 Judge calls 6 -> 6 items 196 withOL 2 nc 28 28 headLens 27528 -> 27850
+33497 Alt calls 1 -> 1 items 24 withOL 0 nc 0 0 headLens 20029 -> 20029
+34299 Judge calls 6 -> 6 items 142 withOL 7 nc 7 7 headLens 27528 -> 27850
+34626 Judge calls 6 -> 6 items 161 withOL 3 nc 12 12 headLens 27528 -> 27850
+34626 Alt calls 1 -> 1 items 0 withOL 0 nc 0 0 headLens 2 -> 2
+34703 Judge calls 6 -> 6 items 173 withOL 0 nc 30 30 headLens 27528 -> 27850
+34703 Alt calls 1 -> 1 items 17 withOL 0 nc 0 0 headLens 20029 -> 20029
+34726 Judge calls 6 -> 6 items 163 withOL 3 nc 52 52 headLens 27528 -> 27850
+34726 Alt calls 1 -> 1 items 20 withOL 0 nc 0 0 headLens 20029 -> 20029
+34780 Judge calls 6 -> 6 items 152 withOL 2 nc 40 40 headLens 27528 -> 27850
+34780 Alt calls 1 -> 1 items 0 withOL 0 nc 0 0 headLens 2 -> 2
+34852 Judge calls 6 -> 6 items 132 withOL 33 nc 0 0 headLens 27528 -> 27850
+34852 Alt calls 2 -> 2 items 31 withOL 1 nc 0 0 headLens 27528/20029 -> 27850/20029
+TOTAL {"nodeRuns":19,"ncEq":19,"ncDiff":0,"items":1892,"missing":0,"extra":0,"eqRaw":1763,"eqStripped":129,"bad":0,"olDropped":0,"maxCalls":6,"rules":{"E-ANS":1342,"E-VOID":21,"E-COL":78,"E-HOLD":213,"E-KEY":27,"E-RES":13,"E-PREM":87,"E-SYN":2,"K-S3":16,"K-W":92,"E-B7":1}}
