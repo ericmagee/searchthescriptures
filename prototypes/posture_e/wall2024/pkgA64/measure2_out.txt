@@ -1,0 +1,11 @@
+ex33149_full.json | send-back build nodes replayed 2 errors 0 | "rule":"E-ANS" entries in output, live 30 -> O2 9 | stored E-ANS send-back rows 29 | recorded CURED (judge changed to MISSES) 8 | UNCURED 0
+ex33371_full.json | send-back build nodes replayed 2 errors 0 | "rule":"E-ANS" entries in output, live 26 -> O2 2 | stored E-ANS send-back rows 26 | recorded CURED (judge changed to MISSES) 2 | UNCURED 0
+ex33490_full.json | send-back build nodes replayed 2 errors 0 | "rule":"E-ANS" entries in output, live 10 -> O2 1 | stored E-ANS send-back rows 10 | recorded CURED (judge changed to MISSES) 1 | UNCURED 0
+ex33497_full.json | send-back build nodes replayed 2 errors 0 | "rule":"E-ANS" entries in output, live 7 -> O2 0 | stored E-ANS send-back rows 7 | recorded CURED (judge changed to MISSES) 0 | UNCURED 0
+ex34299_full.json | send-back build nodes replayed 1 errors 0 | "rule":"E-ANS" entries in output, live 2 -> O2 1 | stored E-ANS send-back rows 2 | recorded CURED (judge changed to MISSES) 2 | UNCURED 0
+ex34626_full.json | send-back build nodes replayed 2 errors 0 | "rule":"E-ANS" entries in output, live 9 -> O2 2 | stored E-ANS send-back rows 9 | recorded CURED (judge changed to MISSES) 8 | UNCURED 1
+ex34703_full.json | send-back build nodes replayed 2 errors 0 | "rule":"E-ANS" entries in output, live 13 -> O2 2 | stored E-ANS send-back rows 13 | recorded CURED (judge changed to MISSES) 13 | UNCURED 0
+ex34726_full.json | send-back build nodes replayed 2 errors 0 | "rule":"E-ANS" entries in output, live 13 -> O2 4 | stored E-ANS send-back rows 13 | recorded CURED (judge changed to MISSES) 12 | UNCURED 1
+ex34780_full.json | send-back build nodes replayed 2 errors 0 | "rule":"E-ANS" entries in output, live 7 -> O2 1 | stored E-ANS send-back rows 7 | recorded CURED (judge changed to MISSES) 3 | UNCURED 4
+ex34852_full.json | send-back build nodes replayed 2 errors 0 | "rule":"E-ANS" entries in output, live 14 -> O2 0 | stored E-ANS send-back rows 14 | recorded CURED (judge changed to MISSES) 13 | UNCURED 1
+TOTAL {"live":131,"o2":22,"cured":62,"unc":7}
