@@ -1,0 +1,66 @@
+DIFF nodes 12 each 53 total 636 non-code differences 0 nodes 418 418 rest equal false
+C4P copies 12 | REFP block differs in 0
+T1 one earlier book | AS LABELLED 
+   live new ["Deuteronomy 20:7"] line ["1:18 (Matthew 1:18 named earlier)"] 
+   rev5 new ["Deuteronomy 20:7"] line ["1:18 (Matthew 1:18 named earlier)"]  
+   note len live 434 585 rev5 434 585
+T2 two books, one round | AS LABELLED 
+   live new ["Deuteronomy 20:7"] line ["1:18 (Matthew 1:18 named earlier)"] 
+   rev5 new ["Deuteronomy 20:7"] line ["1:18 (Matthew 1:18, Luke 1:18 named earlier)"]  
+   note len live 434 585 rev5 445 596
+T3 three books, three rounds, order of first naming | AS LABELLED 
+   live new ["Deuteronomy 20:7"] line ["1:18 (Luke 1:18 named earlier)"] 
+   rev5 new ["Deuteronomy 20:7"] line ["1:18 (Luke 1:18, Genesis 1:18, Matthew 1:18 named earlier)"]  
+   note len live 431 582 rev5 459 610
+T4 a name repeated in two rounds is listed once | AS LABELLED 
+   live new ["Deuteronomy 20:7"] line ["1:18 (Matthew 1:18 named earlier)"] 
+   rev5 new ["Deuteronomy 20:7"] line ["1:18 (Matthew 1:18, Luke 1:18 named earlier)"]  
+   note len live 434 585 rev5 445 596
+T5 the close names the borrowed book itself earlier: cleared, no line | AS LABELLED 
+   live new ["Deuteronomy 20:7"] line [] 
+   rev5 new ["Deuteronomy 20:7"] line []  
+   note len live 274 425 rev5 274 425
+T6 no earlier book has the verse: NEW, no line | AS LABELLED 
+   live new ["Deuteronomy 20:7","Deuteronomy 1:18"] line [] 
+   rev5 new ["Deuteronomy 20:7","Deuteronomy 1:18"] line []  
+   note len live 292 443 rev5 292 443
+T7 bare range, books differ by verse | AS LABELLED 
+   live new ["Deuteronomy 20:7"] line ["1:18-20 (Matthew 1:18 named earlier)"] 
+   rev5 new ["Deuteronomy 20:7"] line ["1:18-20 (Matthew 1:18, Luke 1:19, Matthew 1:20 named earlier)"]  
+   note len live 437 588 rev5 462 613
+T8 earlier range covers the bare verse, second book beside it | AS LABELLED 
+   live new ["Deuteronomy 20:7"] line ["1:20 (Matthew 1:20 named earlier)"] 
+   rev5 new ["Deuteronomy 20:7"] line ["1:20 (Matthew 1:20, Luke 1:20 named earlier)"]  
+   note len live 434 585 rev5 445 596
+T9 two bare references in one close, each with its own names | NOT AS LABELLED dr line,cr line 
+   live new ["Deuteronomy 20:7"] line ["1:18 (Matthew 1:18 named earlier)"] 
+   rev5 new ["Deuteronomy 20:7"] line ["1:18 (Matthew 1:18, Luke 1:18 named earlier)"]  
+   note len live 434 585 rev5 445 596
+T10 the same bare reference three times: one line entry | AS LABELLED 
+   live new ["Deuteronomy 20:7"] line ["1:18 (Matthew 1:18 named earlier)"] 
+   rev5 new ["Deuteronomy 20:7"] line ["1:18 (Matthew 1:18, Luke 1:18 named earlier)"]  
+   note len live 434 585 rev5 445 596
+T11 RECORD: an earlier round's own bare reference under a borrowed book; record which names the line gives (live rev 4 names the first) | RECORD 
+   live new ["Genesis 20:7"] line ["1:18 (Deuteronomy 1:18 named earlier)"] 
+   rev5 new ["Genesis 20:7"] line ["1:18 (Deuteronomy 1:18, Matthew 1:18 named earlier)"]  
+   note len live 434 585 rev5 448 599
+T12 RECORD length: a wide bare range with two earlier books over the whole range | RECORD 
+   live new ["Deuteronomy 20:7"] line ["1:1-31 (Genesis 1:1 named earlier)"] 
+   rev5 new ["Deuteronomy 20:7"] line ["1:1-31 (Genesis 1:1, John 1:1, Genesis 1:2, John 1:2, Genesis 1:3, John 1:3, Genesis 1:4, John 1:4, Genesis 1:5, John 1:5, Genesis 1:6, John 1:6, Genesis 1:7, John 1:7, Genesis 1:8, John 1:8, Genesis 1:9, John 1:9, Genesis 1:10, John 1:10, Genesis 1:11, John 1:11, Genesis 1:12, John 1:12, Genesis 1:13, John 1:13, Genesis 1:14, John 1:14, Genesis 1:15, John 1:15, Genesis 1:16, John 1:16, Genesis 1:17, John 1:17, Genesis 1:18, John 1:18, Genesis 1:19, John 1:19, Genesis 1:20, John 1:20, Genesis 1:21, John 1:21, Genesis 1:22, John 1:22, Genesis 1:23, John 1:23, Genesis 1:24, John 1:24, Genesis 1:25, John 1:25, Genesis 1:26, John 1:26, Genesis 1:27, John 1:27, Genesis 1:28, John 1:28, Genesis   
+   note len live 435 586 rev5 1179 1330
+T13 full reference in the close (not bare) that an earlier round named: cleared, no line | AS LABELLED 
+   live new [] line [] 
+   rev5 new [] line []  
+   note len live 0 0 rev5 0 0
+T14 no bare reference at all | AS LABELLED 
+   live new ["Deuteronomy 20:7"] line [] 
+   rev5 new ["Deuteronomy 20:7"] line []  
+   note len live 274 425 rev5 274 425
+T15 book-check text planted in the close is not read as a line | NOT AS LABELLED dr line,cr line 
+   live new ["Deuteronomy 20:7"] line [] 
+   rev5 new ["Deuteronomy 20:7"] line []  
+   note len live 274 425 rev5 274 425
+labels not as labelled 2 | copies 12 disagreeing 0
+34726 DR4 line live ["1:18 (Numbers 1:18 named earlier)"] | rev5 ["1:18 (Numbers 1:18, Matthew 1:18 named earlier)"] | NEW list equal true
+34780 DR4 line live ["1:18 (Numbers 1:18 named earlier)"] | rev5 ["1:18 (Numbers 1:18, Matthew 1:18 named earlier)"] | NEW list equal true
+distinct stored F: 8 | with a book line on live: 2 | press notes differing: 2 | CR4 notes differing: 0
