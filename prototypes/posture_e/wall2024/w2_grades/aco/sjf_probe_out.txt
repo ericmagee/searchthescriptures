@@ -1,0 +1,5 @@
+stored 35067 reply                                         | tag BROKEN   | marks FOOTED FOOTED | re-ask today none | no-collision-points flag false
+ASK 74 reply                                               | tag BROKEN   | marks null null | re-ask today MARKS | no-collision-points flag true
+stored reply wrapped {"reasoning": ...}                    | tag BROKEN   | marks null null | re-ask today MARKS | no-collision-points flag true
+stored reply wrapped ```json {"verdict","reasoning"}```    | tag BROKEN   | marks null null | re-ask today MARKS | no-collision-points flag true
+34726 reply (LIMITATION paragraph) on 35067 inputs         | tag BROKEN   | marks FOOTED FOOTED | re-ask today none | no-collision-points flag false
