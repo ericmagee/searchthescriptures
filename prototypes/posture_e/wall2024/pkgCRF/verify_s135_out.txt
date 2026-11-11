@@ -1,0 +1,21 @@
+stubs 42 rebuild equal 36 | changed: Alternate Cure Build (only the removed text); Cure Build (only the removed text); Panel Cure Build 1 (only the removed text); Panel Cure Build 2 (only the removed text); Panel Cure Build 3 (only the removed text); R2 Alternate Cure Build (only the removed text)
+other nodes with different parameters: 0
+OTHER 33149 Send Back Build
+OTHER 33371 Alt Send Back Build
+OTHER 33371 Send Back Build
+OTHER 33490 Send Back Build
+OTHER 34703 Send Back Build
+OTHER 34780 Send Back Build
+OTHER 34852 Send Back Build
+replay {"runs":286,"equal":244,"rf_only":35,"other":7,"err_same":0,"err_diff":0} | nodes whose output differs only by the cure_lines response_format: Panel Cure Build 2, Panel Cure Build 3, Alternate Cure Build, Panel Cure Build 1, Cure Build
+===b
+stubs 42 rebuild equal 36 | changed: Alternate Cure Build (removed text + blank xkRF line); Cure Build (removed text + blank xkRF line); Panel Cure Build 1 (removed text + blank xkRF line); Panel Cure Build 2 (removed text + blank xkRF line); Panel Cure Build 3 (removed text + blank xkRF line); R2 Alternate Cure Build (removed text + blank xkRF line)
+other nodes with different parameters: 0
+OTHER 33149 Send Back Build
+OTHER 33371 Alt Send Back Build
+OTHER 33371 Send Back Build
+OTHER 33490 Send Back Build
+OTHER 34703 Send Back Build
+OTHER 34780 Send Back Build
+OTHER 34852 Send Back Build
+replay {"runs":286,"equal":244,"rf_only":35,"other":7,"err_same":0,"err_diff":0} | nodes whose output differs only by the cure_lines response_format: Panel Cure Build 2, Panel Cure Build 3, Alternate Cure Build, Panel Cure Build 1, Cure Build
