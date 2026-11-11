@@ -1,0 +1,12 @@
+// generic one-line Shared Library edit through the pkgLIB form-3 map. usage: node edlib.cjs <base> <out> <srcdir> <old> <new>
+const fs=require('fs');const crypto=require('crypto');const rebuild=(stub,lib)=>{let i=stub.indexOf('\nreturn await new Function(');if(i<0)i=stub.indexOf('\nconst __e4h');if(i<0)throw new Error('not a stub');const $=n=>({params:{jsCode:lib}});return new Function('$',stub.slice(0,i)+'\nreturn __S;')($);};
+const [,,inF,outF,dir,o,nw]=process.argv;let D=JSON.parse(fs.readFileSync(inF,'utf8'));const W=(D.data||D).workflow||(D.data||D);const W0=JSON.parse(JSON.stringify(W));const by={};W.nodes.forEach(n=>by[n.name]=n);
+const SL=by['Shared Library'];const c=SL.parameters.jsCode;const a=c.indexOf('\n/*LIB*/')+8,b=c.lastIndexOf('\n/*MAP*/'),e=c.lastIndexOf('\n/*END*/');const L=JSON.parse(c.slice(a,b)),M=JSON.parse(c.slice(b+8,e));
+const before={};for(const n of Object.keys(M))if(by[n])before[n]=rebuild(by[n].parameters.jsCode,c);
+const ix=L.map((l,i)=>l.includes(o)?i:-1).filter(i=>i>=0);if(ix.length!==1)throw new Error('not one line '+ix);const i=ix[0];if(L[i].split(o).length!==2)throw new Error('anchor not once');
+const s=L[i];L[i]=s.replace(o,()=>nw);const d=L[i].length-s.length;const has=(v,i)=>v.p.some(p=>p===i||(Array.isArray(p)&&typeof p[0]==='number'&&p[0]<=i&&i<=p[1]));const us=Object.entries(M).filter(([n,v])=>has(v,i));us.forEach(([n,v])=>v.n+=d);
+console.log('lib line',i,(d>=0?'+':'')+d,'used by',us.map(x=>x[0]).join(', '));
+const LJ=JSON.stringify(L);let nc=c.slice(0,a)+LJ+'\n/*MAP*/'+JSON.stringify(M)+c.slice(e);const sha=crypto.createHash('sha256').update(LJ).digest('hex').slice(0,16);nc=nc.replace(/library sha [0-9a-f]{16}, \d+ lines/,'library sha '+sha+', '+L.length+' lines');SL.parameters.jsCode=nc;
+let ok=0;fs.mkdirSync(dir,{recursive:true});for(const n of Object.keys(before)){const s2=rebuild(by[n].parameters.jsCode,nc);if(s2.length!==M[n].n)throw new Error('length '+n);ok++;new Function('$','$input','return (async()=>{\n'+s2+'\n})');if(s2!==before[n]){fs.writeFileSync(dir+'/'+n.replace(/ /g,'_')+'.new.js',s2);fs.writeFileSync(dir+'/'+n.replace(/ /g,'_')+'.old.js',before[n]);}}
+const code=x=>x.nodes.reduce((s,n)=>s+(n.parameters.jsCode||'').length,0);console.log('stubs rebuilt and compiled',ok,'| SIZE code',code(W)-code(W0),'| prompt 0 (no prompt text changed)');
+fs.writeFileSync(outF,JSON.stringify(D));console.log('sha256',crypto.createHash('sha256').update(fs.readFileSync(outF)).digest('hex').slice(0,16));
