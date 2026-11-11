@@ -1,0 +1,4 @@
+plant P0 none reports edited 0 -> Cured flag (panel judge sol) ; Cured flag (panel judge Gemini) ; Cured flag (panel judge ChatGPT)
+plant chatgpt reports edited 1 -> Cured flag (panel judge sol) ; Cured flag (panel judge Gemini) ; Review flag (panel judge ChatGPT)
+plant sol reports edited 1 -> Review flag (panel judge sol) ; Cured flag (panel judge Gemini) ; Cured flag (panel judge ChatGPT)
+plant gemini reports edited 1 -> Cured flag (panel judge sol) ; Review flag (panel judge Gemini) ; Cured flag (panel judge ChatGPT)
