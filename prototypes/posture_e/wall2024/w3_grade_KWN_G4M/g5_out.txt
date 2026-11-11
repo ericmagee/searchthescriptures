@@ -1,0 +1,26 @@
+## 1 terra stored line (meaning break) 
+ live: "" 
+ F2  : " THE ENGINE READS THIS LINE: its GROUND names no pressed witness left unanswered, so the break rests on meaning (ruling 421): a KEEP, a PRESSED line or a CHANGE TO that still breaks the link stays uncured without a FORCED line. Cure it with one FORCED line: FORCED: D4 vs C1 -- MEANS [<round>]: \"<the MEANS sentence>\" -- ANSWER [<round>]: \"<the holding side's answer>\" -- FAILS: \"<the words of that answer that cannot take the meaning, quoted>\", or with a CHANGE TO that no longer breaks the link."
+## 2 line says left unanswered 
+ live: " THE ENGINE READS THIS LINE: \"unanswered\" is false. The pressing quotation stands in [DR2], and a later defender round names every pressed witness the line rests on in an answer: [CR3] Matthew 1:20 at 1857; [CR3] Matthew 1:21 at 5926. So the break rests on meaning (ruling 421): a KEEP, or a CHANGE TO that still says the witne 
+ F2  : " THE ENGINE READS THIS LINE: \"unanswered\" is false. The pressing quotation stands in [DR2], and a later defender round names every pressed witness the line rests on in an answer: [CR3] Matthew 1:20 at 1857; [CR3] Matthew 1:21 at 5926. So the break rests on meaning (ruling 421): a KEEP, or a CHANGE TO that still says the witness was left unanswered, stays uncured. Cure it with one FORCED line: FORCED: D4 vs C1 -- MEANS [<round>]: \"<the MEANS sentence>\" -- ANSWER [<round>]: \"<the holding side's answer>\" -- FAILS: \"<the words of that answer that cannot take the meaning, quoted>\", or with a CHANGE TO that no longer breaks the link."
+## 3 challenger side 
+ live: "" 
+ F2  : " THE ENGINE READS THIS LINE: its GROUND names no pressed witness left unanswered, so the break rests on meaning (ruling 421): a KEEP, a PRESSED line or a CHANGE TO that still breaks the link stays uncured without a FORCED line. Cure it with one FORCED line: FORCED: D4 vs C1 -- MEANS [<round>]: \"<the MEANS sentence>\" -- ANSWER [<round>]: \"<the holding side's answer>\" -- FAILS: \"<the words of that answer that cannot take the meaning, quoted>\", or with a CHANGE TO that no longer breaks the link."
+## 3b no link in key 
+ live: "" 
+ F2  : " THE ENGINE READS THIS LINE: its GROUND names no pressed witness left unanswered, so the break rests on meaning (ruling 421): a KEEP, a PRESSED line or a CHANGE TO that still breaks the link stays uncured without a FORCED line. Cure it with one FORCED line: FORCED: D<i> vs C<j> -- MEANS [<round>]: \"<the MEANS sentence>\" -- ANSWER [<round>]: \"<the holding side's answer>\" -- FAILS: \"<the words of that answer that cannot take the meaning, quoted>\", or with a CHANGE TO that no longer breaks the link."
+## FAILS as the note words it (a reason) | K-F items: ["the FAILS quotation is not in [CR3]"]
+## FAILS as words of the answer | K-F items: []
+## e unknown side 
+ live: "" 
+ cand: ""
+## d empty lines 
+ live: "" 
+ cand: " THE ENGINE READS THIS LINE: its GROUND names no pressed witness left unanswered, so the break rests on meaning (ruling 421): a KEEP, a PRESSED line or a CHANGE TO that still breaks the link stays un
+## d no key 
+ live: "" 
+ cand: ""
+function g4GateNote2024(x,ctx){try{const R=(ctx&&ctx.R)||{};const side=String(x.key||'').split('|')[2]||'';const link=String(x.key||'').split('|')[3]||'';const line=String((x.lines&&x.lines[0])||'');
+ const __F=' Cure it with one FORCED line: FORCED: '+(link?link.replace(/ VS /,' vs '):'D<i> vs C<j>')+' -- MEANS [<round>]: "<the MEANS sentence>" -- ANSWER [<round>]: "<the holding side\'s answer>" -- FAILS: "<the words of that answer that cannot take the meaning, quoted>", or with a CHANGE TO that no longer breaks the link.';if(!CURE_PRESS[side])return '';if(!g4Unans2024(line))return ' THE ENGINE READS THIS LINE: its GROUND names no pressed witness left unanswered, so the break rests on meaning (ruling 421): a KEEP, a PRESSED line or a CHANGE TO that still breaks the link stays uncured without a FORCED line.'+__F; /* pkgG4M */const hits=[];
+ for(const seg of line.split(/(?=\[(?:CR|DR)[1-4

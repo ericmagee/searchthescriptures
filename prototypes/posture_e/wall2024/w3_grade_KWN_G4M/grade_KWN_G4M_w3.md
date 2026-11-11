@@ -29,3 +29,14 @@ NOT RUN by me: luna's and terra's whole gate messages of 34852 (W2's replay cove
 
 ## Combined parent
 Holds the three changed lines of the two packages and nothing else. It carries the pkgG4M fault, so it is NOT PASSED as it stands. pkgKWN alone (parent_s119_F1.json) can go forward.
+
+## pkgG4M rev 2 (parent_s119_F2r2.json, sha256 dda875af81a74c8a): PASS
+Claim and expectations: Wall 4603, before any run. Script g5.cjs, output g5_out.txt (run from my scratch folder beside the export cut). MEASURED.
+- Size: code 3,245,024 to 3,245,319 = +295; Shared Library lines 1134 and 1139 only; connections equal. Agrees with W2.
+- (a) The note appears on terra's stored line, on a challenger-side break, and with no pair in the key ("D<i> vs C<j>"), with FAILS: "<the words of that answer that cannot take the meaning, quoted>" and "stays uncured without a FORCED line". As expected.
+- (b) A line that says "left unanswered" keeps the live note; only the FAILS words change (the fault was on live line 1139 too and is corrected there). As expected.
+- (c) A FORCED line with true MEANS and ANSWER quotations and FAILS as words of the answer gives no K-F item. A FAILS written as a reason is still refused by K-F, as it should be; the note no longer asks for one.
+- (d) My new plant: the shared string is built at the top of the function; "link" is defined on the line above, nothing throws, no silent empty note. An item with no key gives no note, as live.
+- (e) A side with no press cure gives no note, as live.
+- Observation, not a fault: an item with no line text at all would carry the meaning-break note. The only caller (library line 1824) passes K-G4 items, which carry their line.
+- NOT RUN by me: the whole gate messages and the stored replay of the 25 nodes (W2's replay: 402 of 403 equal). The joint file is not graded by me: it holds my own pkgVP1B rev 2.
