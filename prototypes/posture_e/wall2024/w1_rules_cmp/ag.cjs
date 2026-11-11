@@ -1,0 +1,5 @@
+const R=JSON.parse(require("fs").readFileSync("allrows.json"));const seen=new Set();const U=R.filter(r=>{const k=r.run+r.seat+r.rule+(r.fl||"").slice(0,300)+(r.cr||"").slice(0,200);if(seen.has(k))return false;seen.add(k);return true;});
+const cases=[['33149','Isaiah 7:11'],['33497','Isaiah 8:18'],['34299','Ezra 2:61'],['34626','Ezra 2:61'],['34703','Ezra 2:61'],['34726','Ezra 2:61'],['34780','Ezra 2:61'],['34726','Hebrews 2:16'],['34780','Hebrews 2:16'],['34852','Matthew 1:18'],['35173','Luke 1:32'],['33490','Luke 1:31'],['33497','Luke 1:37'],['33149','Jeremiah 18:8']];
+for(const [run,v] of cases){const re=new RegExp(v.replace(/[.]/g,'\\.')+'(?!\\d)');const a=U.filter(r=>r.run===run&&re.test(r.fl||'')&&!/^ENFORCER DISAGREE/.test(r.cr||''));
+ const byV={};a.forEach(r=>{const k=(r.cr||'').split(' ')[1]||'NULL';byV[k]=(byV[k]||0)+1});console.log('\n#####',run,v,a.length,JSON.stringify(byV));
+ a.forEach(r=>{const fl=r.fl||'';const i=fl.search(re);console.log('--',r.seat,r.rule,'|',r.item,'\n  FL@:',fl.slice(Math.max(0,i-200),i+300).replace(/\n/g,' '),'\n  CR:',(r.cr||'').slice(0,250).replace(/\n/g,' '));});}

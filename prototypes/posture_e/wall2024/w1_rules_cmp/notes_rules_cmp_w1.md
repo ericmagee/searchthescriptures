@@ -8,3 +8,22 @@ Stored rows: rows.cjs collects every Enforcer Record row of the 12 exports (6,56
 3. Gaps with no stored wrong reading found: E-VOID lacks the no-verbatim-quote VOID ground and "a verse carried under PRESSED WITH: is a witness, never a charge, and never voids a premise" (2 E-VOID DISAGREE rows, both on the beyond-the-quote ground). E-COL lacks "a press labelled UNPROVEN carries no answering burden" (E-HOLD has it; 0 rows). E-ANS and E-COL lack the citation clauses (quotation at another verse still [L1]; a citation error never counts for or against the other side; an answer in substance without its reference does not answer); 3 DISAGREE rows mention citation, none turns on them. E-ANS lacks NEW IN CLOSE ([CR4] material counts only as an answer to a witness already pressed); 0 rows.
 4. Note: the engine reads FAILS as MISSES (form note, W3 2283 rule 1), so DeepSeek is told "judge wrote MISSES" on a FAILS line.
 5. JAGR reaches DeepSeek. The ASSUMES/INFERS clause is in it; in 34726 and 34780 DeepSeek followed RULE E-VOID over it (W2's pkgA21 still fits, qualified).
+
+## AGREE-row scan (coordinator 22:26Z) and W2 Wall 5031 E-COL second reading
+
+AGREE rows, per clause (judge prompts per run: jp.cjs, jp2.cjs; rows ag.cjs, unp.cjs):
+- NOT COUNTED: every citation-check NOT COUNTED line of the 12 runs (11 lines) traced to its rows (ag_out.txt). No AGREE row grades an answer resting on a marked quotation; the marked quotations sit in rounds the graded answers do not use (R1, R2, R4), except 34726/34780 Hebrews 2:16 R3, which has no AGREE row.
+- No verbatim quote: PRE-CHECK says "no verbatim quote found" for 33497 challenger items 1-6 and 35067 challenger item 5. All 7 quotes are in the defender's rounds verbatim (33497 [CR1]; 35067 line 730 of the judge record). The judges' SPARED and DeepSeek's AGREE are right; the PRE-CHECK finder missed them ("The defender wrote:" list form; ASSUMES form).
+- PRESSED WITH verse as a charge: 0 of the E-VOID AGREE rows rest on one.
+- UNPROVEN: 18 E-COL AGREE rows; none rests on a verse the ledger marks UNPROVEN for that link.
+- ARE AT (33490 Luke 1:31 words at Luke 1:35): 6 AGREE rows, all treat it as footing, which is the rule.
+- NOT NAMED (33149 Jeremiah 18:8, against the challenger): judge counted UNEXHIBITED (the rule); DeepSeek NO VERDICT. Not both wrong.
+- NEW IN CLOSE (33497 Luke 1:37): 0 AGREE rows touch it.
+Result: 0 rows where judge and DeepSeek were both wrong under these six clauses.
+
+Wall 5031 E-COL (col7.txt; challenger DR3 blocks read in the judge record):
+- 33149 gemini D3 vs C2 (Matthew 1:25): answer reads "till" from the taking: [L1] Matthew 1:25 quoted, [L3] Matthew 1:24 "took unto him his wife" and Deuteronomy 20:7 quoted under the 1:18 answer. No [L2] on "till". CONFIRMED, limit: thin footing.
+- 33490 gemini D3 vs C3 line and FORCED (Matthew 1:18): answer P3.1 reads the coming together as the taking: [L1] Matthew 1:18, [L2] paralambano, [L3] Matthew 1:24, 1:19, 1:20 quoted. CONFIRMED. The FORCED also quotes the challenger's own [DR2] sentence as MEANS.
+- 33490 grok D6 vs C3 line and FORCED: the ground is "of the Holy Ghost" as source. The answer's layers foot the timing reading only; on the source it says only "That row names the son of David as the husband of the house." No layered rival reading of the source. NOT CONFIRMED.
+- 35173 grok D3 vs C6 line and FORCED (Luke 1:35): answer P6.2 reads the "therefore" back to v.32 with [L1] Luke 1:35, [L2] eperchomai with Acts 1:8, [L2] episkiazo with Luke 9:34, Acts 5:15, [L3] Hebrews 10:5, 2:14, 2:16, 2:17. CONFIRMED.
+Judges' rule for the confirmed rows: "Grade a link BROKEN when it cannot agree ... and the broken side shows no fit"; "You weigh only the meaning the debaters show and add none of your own".
