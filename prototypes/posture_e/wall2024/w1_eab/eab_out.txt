@@ -1,0 +1,12 @@
+runner needs, s126 stub: ["Accept Final","Fetch Models","Init Seats","Panel Build","Reserve Build","Resolve Seats","Shared Library"] all: true
+runner needs, s127 stub: ["Accept Final","Fetch Models","Init Seats","Panel Build","Reserve Build","Resolve Seats","Shared Library"] all: true
+  vs stored: payload_sha equal true body_sent equal true
+ex34299_full.json stored items 1 | stub out s126 1 s127 1 equal true | bare Alternate Build code s126 1 s127 1 equal true
+ex34626_full.json stored items 0 | stub out s126 0 s127 0 equal true | bare Alternate Build code s126 1 s127 1 equal true
+ex34703_full.json stored items 0 | stub out s126 0 s127 0 equal true | bare Alternate Build code s126 1 s127 1 equal true
+  vs stored: payload_sha equal true body_sent equal true
+ex34726_full.json stored items 1 | stub out s126 1 s127 1 equal true | bare Alternate Build code s126 1 s127 1 equal true
+ex34780_full.json stored items 0 | stub out s126 0 s127 0 equal true | bare Alternate Build code s126 1 s127 1 equal true
+  vs stored: payload_sha equal true body_sent equal true
+ex34852_full.json stored items 1 | stub out s126 1 s127 1 equal true | bare Alternate Build code s126 1 s127 1 equal true
+runs 6 all equal 6 runs with an early alternate on s127 3
