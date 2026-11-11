@@ -1,0 +1,21 @@
+# pkgSGR build notes (W1), parent /mnt/project-files/wall2024/parent_s141_SGR.json
+
+- **Parent:** sha256 19e5829f15136c7f, built on live s141 (wall2024/fetchback_live_s141.json).
+- **Map check:** 42 stubs, 0 length faults, 0 compile errors, and the header sha equals the computed sha (784016807e21a215).
+- **Plants:** plants.cjs, 27 of 27 right (plants_out.txt). This includes one LIMIT plant, the gerund "Granting that", which is unread both before and after.
+- **Replay:** replay.cjs, over the 12 stored exports (replay_out.txt).
+  - It runs the 3 enforcer Build stubs, live and new, and compares their output.
+  - Item ids are equal in every run.
+  - Text outside the E-SYN items is equal, apart from timestamps, except in 33490 and 35173. There the call packing moves: items shift between calls because the E-SYN texts change length.
+  - 38 E-SYN items in total; 33 lists change.
+  - Every removed entry is either one of the other side's grants quoted by this side (the G lists of OPPONENT'S GRANTS), a report of the other side ("The defender wrote ..."), or a system note quoted into a round.
+- **Trace:** trace.cjs, the 6 stored E-SYN DISAGREE rows (trace_out.txt).
+  - **35173, Y4** (defender, Luke 1:27): this fault. The list now holds "It is granted that Luke 1:27 ...", "I keep my earlier grants ..." and "which I granted".
+  - **35173, Y7** (challenger, Luke 1:35 and Matthew 1:24-25): this fault, both parts. The list now holds "This is granted: the verse names divine action upon Mary" and "Matthew 1:24-25 ... This is granted.", and the defender's G lines are gone.
+  - **33497, Y1** (defender, prin governs heurethe): this fault. The defender's "**Grant.** ... does govern heurethe" is now listed.
+  - **33497, Y6** (defender, household naming): this fault. The defender's "Granted: the household and its naming call Joseph father" is now listed.
+  - **33371, Y1:** NOT this fault. The synthesis says the challenger "conceded positions forbidden by DG-8". The list held the challenger's own "I grant that the answer names the Holy Ghost ..." along with the defender's G lines, which pkgSGR now drops. DeepSeek's OVERSTATED reads as right (my reading).
+  - **33490, Y7:** NOT cured by pkgSGR.
+    - The sentence says the challenger "listed eleven numbered grants (G1-G11)". Those G lines are the defender's grants, quoted by the challenger.
+    - The stored list stopped at G10 because of the 3500-character cap.
+    - pkgSGR drops those G lines. Whether DeepSeek's verdict changes is not measured.
