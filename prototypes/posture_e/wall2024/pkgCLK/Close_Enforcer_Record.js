@@ -1,0 +1,56 @@
+try{
+const CEC_RK={CR1:'cr1',CR2:'cr2',CR3:'cr3',CR4:'cr4',DR1:'gr1',DR2:'gr2',DR3:'dr3',DR4:'dr4'};
+const CEC_PRE={DEFENDER:'CR',CHALLENGER:'DR'};const cecRL=(s,P)=>{s=String(s).toUpperCase().replace(/\s+/g,'');return /^\d$/.test(s=s.replace(/^ROUND/,''))?P+s:s;};
+const cecN=s=>String(s||'').toLowerCase().replace(/[“”"’‘'*_`\[\]]/g,'').replace(/[^a-z0-9:\s]/g,' ').replace(/\s+/g,' ').trim();
+const cecSents=raw=>String(raw||'').split(/\n+|(?<=[.!?]["”’')\]]*)\s+/).map(cecN).filter(Boolean);
+const cecStands=(q,raw)=>{const x=cecN(q);if(x.split(' ').length<3)return false;const T=cecN(raw);if(T.includes(x))return true;const parts=String(q).split(/\.\.\.|…/).map(cecN).filter(Boolean);if(parts.length<2||parts.some(p=>p.split(' ').length<5))return false;
+ return cecSents(raw).some(z=>{let at=0;for(const p of parts){const k=z.indexOf(p,at);if(k<0)return false;at=k+p.length;}return true;});};
+const cecBlk=(sd,q,raw)=>{const L=String(raw||'').split('\n');const x=cecN(String(q).split(/\.\.\.|…/)[0]);if(x.split(' ').length<3)return null;const i=L.findIndex(l=>cecN(l).includes(x));if(i<0)return null;for(let j=i;j>=0;j--){const h=L[j].match(/^\s*#{1,4}\s*[*_]*(.*)$/);if(!h)continue;const R=sd==='DEFENDER'?/\b(?:D|LINK\s+)(\d+)\b/gi:/\b(?:C|LINK\s+)(\d+)\b/gi;const N=new Set([...h[1].matchAll(R)].map(m=>+m[1]));return N.size===1&&R.test(h[1].slice(0,12))?[...N][0]:null;}return null;}; /* pkgCLK */
+const cecDeclared=F=>{const t=String(F&&F.cr1||'');const i=t.search(/DECLARED CHAIN\b/);if(i<0)return null;const a=t.lastIndexOf('\n',i)+1;const L=t.slice(a).split('\n');const out=[L[0]];let on=false,pre=0;
+ for(const l of L.slice(1)){const num=/^\s*\**\s*\d+[.)]\s+\S/.test(l);if(num){on=true;out.push(l);continue;}if(!on){if(l.trim()){if(/^\s*#/.test(l)||++pre>3)break;}out.push(l);continue;}
+  if(!l.trim()||/^\s+\S/.test(l)||/^\s*[-*•]\s/.test(l)){out.push(l);continue;}break;}
+ return out.join('\n').replace(/\s+$/,'');};
+const cecDlinks=F=>{const t=cecDeclared(F);if(!t)return [];const L=[];let cur=null;for(const l of t.split('\n').slice(1)){const m=l.match(/^\s*\**\s*(\d+)[.)]\s+(.*)$/);if(m){cur={n:+m[1],text:m[2]};L.push(cur);continue;}if(cur&&l.trim())cur.text+=' '+l.trim();}return L;};
+const cecCblocks=F=>{const t=String(F&&F.dr3||'');const H=[];for(const h of t.matchAll(/^[ \t>*#_-]*LINK\s+(\d+)[^\n]*/gmi))H.push({n:+h[1],at:h.index,head:h[0].replace(/^[ \t>*#_-]+/,'').replace(/[*_]+/g,'').trim()});return H.map(x=>({n:x.n,head:x.head}));};
+const cecLinks=F=>({DEFENDER:[...new Set(cecDlinks(F).map(x=>x.n))],CHALLENGER:[...new Set(cecCblocks(F).map(x=>x.n))]});
+const cecOracle=F=>{const t=String(F&&F.dr4||'');const i=t.search(/OPPONENT['’]S CONTRADICTIONS\s*:?/i);if(i<0)return [];const out=[];
+ for(const l of t.slice(i).split('\n').slice(1,60)){const s=l.replace(/[*_]+/g,'').trim();if(!s)continue;const m=s.match(/^(?:[-•]\s*)?(X\d+)\s+(LINK|PREMISE)\s+(\d+)\s*\|\s*EARLIER\s*\[\s*([CD]R\d)\s*\]\s*["“](.+?)["”]\s*\|\s*CLOSING\s*\[\s*([CD]R\d)\s*\]\s*["“](.+?)["”]\s*(?:\|\s*(.*))?$/i);
+  if(m){out.push({id:m[1].toUpperCase(),side:'DEFENDER',by:'the Oracle (OPPONENT\'S CONTRADICTIONS, [DR4])',kind:m[2].toUpperCase(),n:+m[3],earlier_round:m[4].toUpperCase(),earlier_q:m[5],closing_round:m[6].toUpperCase(),closing_q:m[7],why:(m[8]||'').trim()});continue;}
+  if(/^#|^[A-Z][A-Z' ]{6,}:/.test(s)&&out.length)break;}
+ return out;};
+const BA=$('Close Enforcer Build').all().map(x=>x.json);const B=BA[0];  const RT=B.run_token||null;
+const log=(o)=>{const r={run_token:RT,seat:'close enforcer',seat_role:'panel',judge_model:B.model||null,kind:'enforcer_check',rule:'E-CLOSECON',reply_error:null,cure_status:null,...o};const st=r.cure_status;if(st!=null&&st!=='CURED'&&st!=='UNCURED'){r.cure_reason=st+(r.cure_reason?' -- '+r.cure_reason:'');r.cure_status=null;}r.seat_role='panel';return r;};
+if(B.cec_skip)return [{json:{cec:{skipped:true,why:B.why||'',confirmed:[],rows:[],no_answer:[],errors:[]},cec_log:[log({item:'SKIPPED',flagged_line:null,prompt_sent:null,full_reply:null,response_line:null,cure_status:'NOT CHECKED',cure_reason:'the closing enforcer did not run: '+(B.why||'unknown'),reply_error:B.why||null})]}}];
+let RGL=null;try{if($('Regrade Load').isExecuted)RGL=$('Regrade Load').first().json;}catch(e){RGL=null;}
+let F={};try{F=RGL?RGL.f:$('Final Output').first().json;}catch(e){F={};}
+const links=B.links||cecLinks(F);const cands=BA.flatMap(b=>b.cands||[]);const prompt=BA.map(b=>(((b.body||{}).messages||[])[1]||{}).content||'').filter(Boolean).join('\n\n######## NEXT CALL (pkgCSS) ########\n\n')||null;
+const RP=$input.all().map((it,k)=>{const r=it.json||{},b=BA[k]||{};const o={side:b.side||('call '+(k+1)),prompt:(((b.body||{}).messages||[])[1]||{}).content||null,txt:null,err:null,n:0,none:false};try{o.txt=String(r.choices[0].message.content||'');}catch(e){o.err=o.side+': no reply ('+String((r.error&&(r.error.message||r.error))||r.message||'unknown').slice(0,200)+')';}return o;});
+let txt=RP.some(rp=>rp.txt!=null)?RP.filter(rp=>rp.txt!=null).map(rp=>rp.txt).join('\n'):null,err=RP.filter(rp=>rp.err).map(rp=>rp.err).join('; ')||null;
+const LN=/^[\s>*_-]*CLOSE-CONTRADICTION\s*:\s*\**\s*(X\d+|J\d+|NEW\s*\d*)\s*\**\s*--\s*(DEFENDER|CHALLENGER)\s*--\s*LINK\s*(\d+)\s*--\s*(CONFIRMED|NOT A CONTRADICTION)\s*--\s*EARLIER\s*\[?\s*([CD]R\s?\d|ROUND\s*\d|\d)\s*\]?\s*["“](.*?)["”]\s*--\s*CLOSING\s*\[?\s*([CD]R\s?\d|ROUND\s*\d|\d)\s*\]?\s*["“](.*?)["”]\s*(?:--\s*(.*?))?[\s*_]*$/i;
+const rows=[],errors=[];if(err)errors.push(err);let none=false;
+for(const rp of RP){const n0=rows.length;for(const line of String(rp.txt||'').split('\n')){const s=line.trim();if(!s)continue;if(/^[\s>*_-]*CLOSE-CONTRADICTION\s*:\s*\**\s*NONE\b/i.test(s)){rp.none=true;continue;}
+ const m=s.match(LN);if(!m){if(/CLOSE-CONTRADICTION/i.test(s))rows.push({id:'?',line:s.slice(0,600),answer:'UNREADABLE',status:'NOT CONFIRMED (form)',note:'the line is not in the CLOSE-CONTRADICTION form'});continue;}
+ const side=m[2].toUpperCase(),P=CEC_PRE[side];const row={id:m[1].replace(/\s+/g,'').toUpperCase(),side,link:+m[3],answer:m[4].toUpperCase(),earlier_round:cecRL(m[5],P),earlier_q:m[6],closing_round:cecRL(m[7],P),closing_q:m[8],why:(m[9]||'').trim(),line:s.slice(0,1200)};
+ if(row.answer==='CONFIRMED'){const f=[];
+  if(!(row.earlier_round.startsWith(P)&&/[123]$/.test(row.earlier_round)))f.push('the earlier round '+row.earlier_round+' is not one of the '+side.toLowerCase()+'\'s rounds 1 to 3');
+  if(row.closing_round!==P+'4')f.push('the closing round '+row.closing_round+' is not the '+side.toLowerCase()+'\'s round 4 ('+P+'4)');
+  if(CEC_RK[row.earlier_round]&&!cecStands(row.earlier_q,F[CEC_RK[row.earlier_round]]))f.push('the earlier quotation is not found word for word in '+row.earlier_round);
+  if(CEC_RK[row.closing_round]&&!cecStands(row.closing_q,F[CEC_RK[row.closing_round]]))f.push('the closing quotation is not found word for word in '+row.closing_round);
+  {const b=CEC_RK[row.closing_round]?cecBlk(side,row.closing_q,F[CEC_RK[row.closing_round]]):null;if(b!=null&&b!==row.link){row.link_named=row.link;row.link=b;row.relink='LINK '+b+' set by the code: the closing quotation stands in the block headed for link '+b+' (the reply named LINK '+row.link_named+'; pkgCLK)';}}
+  if(!(links[side]||[]).includes(row.link))f.push('LINK '+row.link+' is not one of the '+side.toLowerCase()+'\'s declared links ('+((links[side]||[]).join(', ')||'none read')+')');
+  row.status=f.length?'NOT CONFIRMED (form)':'CONFIRMED';if(f.length||row.relink)row.note=f.concat(row.relink?[row.relink]:[]).join('; ');
+  if(!f.length&&B.cands_only&&!(cands||[]).some(c=>c.id===row.id)){row.status='NOT A CANDIDATE';row.note='the post-panel call answers the judges\' candidates only; a NEW line is recorded, not applied';}}
+ else row.status='NOT A CONTRADICTION';
+ rows.push(row);}rp.n=rows.length-n0;}
+none=RP.length>0&&RP.every(rp=>rp.none);
+{const gk=x=>/^NEW/.test(x.id)?'P|'+x.side+'|'+x.link+'|'+cecN(x.earlier_q)+'|'+cecN(x.closing_q):'I|'+x.id;const G={};rows.forEach(x=>{if(x.side==null)return;(G[gk(x)]=G[gk(x)]||[]).push(x);});
+ for(const k in G){const g=G[k];const yes=g.filter(x=>x.status==='CONFIRMED'),no=g.filter(x=>x.answer==='NOT A CONTRADICTION');if(yes.length&&no.length)yes.forEach(x=>{x.status='NOT CONFIRMED (conflicting answers)';x.note='the same '+(k[0]==='I'?'candidate '+x.id:'pair')+' is also answered NOT A CONTRADICTION';});}}
+const seen=new Set();const confirmed=[];for(const x of rows){if(x.status!=='CONFIRMED')continue;const k=x.side+' '+x.link;if(seen.has(k)){x.note='the same link is already broken by an earlier confirmed line';continue;}seen.add(k);
+ confirmed.push({id:x.id,side:x.side,link:x.link,earlier_round:x.earlier_round,earlier_q:x.earlier_q,closing_round:x.closing_round,closing_q:x.closing_q,why:x.why});}
+const answered=new Set(rows.map(x=>x.id));const no_answer=cands.map(c=>c.id).filter(id=>!answered.has(id));
+RP.forEach(rp=>{if(rp.txt!=null&&!rp.n&&!rp.none)errors.push(rp.side+': the reply holds no CLOSE-CONTRADICTION line');});
+const cec_log=rows.map((x,i)=>log({item:x.id+(x.side?' '+x.side+' LINK '+x.link:''),flagged_line:x.closing_q!=null?x.side+' '+x.closing_round+': "'+x.closing_q+'"':null,prompt_sent:i===0?prompt:'[SAME prompt_sent AS the first E-CLOSECON row]',full_reply:i===0?txt:'[SAME full_reply AS the first E-CLOSECON row]',response_line:x.line,cure_status:x.status,cure_reason:(x.note?x.note+' -- ':'')+(x.why||'')}))
+ .concat(no_answer.map(id=>log({item:id,flagged_line:null,prompt_sent:null,full_reply:null,response_line:null,cure_status:'NO ANSWER',cure_reason:'the enforcer did not answer this candidate'})))
+ .concat(RP.filter(rp=>!rp.n).map(rp=>log({item:(rp.none?'NONE':rp.txt==null?'NOT CHECKED':'NO LINE')+' '+rp.side,flagged_line:null,prompt_sent:rows.length?'[SAME prompt_sent AS the first E-CLOSECON row]':rp.prompt,full_reply:rp.txt,response_line:rp.none?'CLOSE-CONTRADICTION: NONE':null,cure_status:rp.none?'NONE FOUND':'NOT CHECKED',cure_reason:rp.none?null:(rp.err||rp.side+': the reply holds no CLOSE-CONTRADICTION line'),reply_error:rp.err})));
+return [{json:{cec:{skipped:false,model:B.model||'',confirmed,rows,no_answer,none,errors,links},cec_log}}];
+}catch(__e){const __m='Close Enforcer Record failed: '+String(__e&&__e.message||__e).slice(0,300);let __rt=null;try{__rt=$('Close Enforcer Build').first().json.run_token||null;}catch(e){}const __o={skipped:true,why:__m,confirmed:[],rows:[],no_answer:[],errors:[__m]};return [{json:{cec:__o,cec_log:[{run_token:__rt,seat:'close enforcer',seat_role:'panel',judge_model:null,kind:'enforcer_check',rule:'E-CLOSECON',item:'NOT CHECKED',flagged_line:null,prompt_sent:null,full_reply:null,response_line:null,reply_error:__m,cure_status:null,cure_reason:'NOT CHECKED -- '+__m}]}}];}
