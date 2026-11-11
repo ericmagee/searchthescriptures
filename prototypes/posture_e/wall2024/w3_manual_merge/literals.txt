@@ -1,0 +1,120 @@
+
+
+
+
+
+
+
+
+@LEAD@
+  - CHALLENGER CACHE MARKERS (pkgCCM):
+
+
+@LEAD@
+  - CLOSE-ROUND BOOK CHECK (pkgBRF rev 4): a bare chapter:verse in a close round is not marked NEW under a borrowed book, and is not dropped.
+
+@LEAD@
+  - SINGLE-JUDGE RE-ASK: when the single judge's reply has no verdict, or a chain-mark line is absent under ODV1-A2, an OpenRouter single judge is asked once more in its own conversation (SJ Re-ask? -> SJ Re-ask Build -> SJ Re-ask Call openrouter -> SJ Re-ask Pick -> Verdict Normalizer -> Extract Independent Verdict). With no verdict, it rewrites the complete judgment and the re-ask reply is read. With chain marks absent, it writes only those lines, and they are added to the first reply. A failed or empty re-ask leaves the first reply. Cure Check records an AUDIT v36 SJR line (seat, model, what was missing, the outcome) in review_notes.
+
+@LEAD@
+  - CONTRADICTION IN THE CLOSING ROUND (the perjury rule; pkgCEC):
+  - COMMITMENT 9, last sentence (pkgQRC): a contradiction question quotes the earlier and the closing passage and asks how they agree; the answer cannot withdraw either; the closing enforcer confirms.
+
+
+
+
+@LEAD@
+  - THE CLOSING ENFORCER (E-CLOSECON). Close Enforcer Build -> Close Enforcer Needed? -> Close Enforcer Call deepseek -> Close Enforcer Record, after Quote Report and before Regrade After Quotes?; made before the single judge and before the panel.
+    - One call per side: Close Enforcer Build makes one item per side whose closing round has text, each with a one-side instruction, that side's candidates and that side's four rounds; the Call node runs once per item.
+    - Inputs per side: its four rounds in full; its declared links (the [CR1] DECLARED CHAIN and the [DR3] LINK blocks); the candidates, read straight from the Oracle's OPPONENT'S CONTRADICTIONS lines in the [DR4] text (the contradictions field on C4, C4G and C4B Extract is a record only).
+    - Reply line: `CLOSE-CONTRADICTION: <id|NEW> -- <DEFENDER|CHALLENGER> -- LINK <n> -- CONFIRMED | NOT A CONTRADICTION -- EARLIER [<round>] "<words>" -- CLOSING [<round 4>] "<words>" -- <why>`.
+    - Round labels: "[CR3]" form; also "round N", "[round N]", and a bare number "[3]" or "3", each read as that line's own side's round N (CR N on a DEFENDER line, DR N on a CHALLENGER line). A number out of range, a verse reference or any other bracketed text is NOT CONFIRMED (form).
+    - Code confirms a CONFIRMED line only when all hold: both quotes are found word for word in the rounds named; the earlier round is that side's round 1 to 3; the closing round is its round 4; the link is declared. Otherwise NOT CONFIRMED (form). A quote with "..." stands only when all its parts fall inside one sentence of the named round, in order. A candidate answered both CONFIRMED and NOT A CONTRADICTION is NOT CONFIRMED (conflicting answers) and breaks nothing.
+    - Close Enforcer Record reads every Build item and every reply by position and judges each side's reply by itself: a failed call or a reply with no CLOSE-CONTRADICTION line logs a NOT CHECKED row naming that side; a NONE logs NONE FOUND for that side; "none" is true only when every side answered NONE. Its output item has one shape, so Panel Build, Build Independent Verdict and Judge Contradiction Build read it unchanged.
+    - Failure: Close Enforcer Build and Record and Judge Contradiction Build and Record are wrapped; a failure in any of them writes one E-CLOSECON row "NOT CHECKED -- <reason>", confirms nothing, breaks no link, and the debate goes on. A NOT CHECKED row means the contradiction rule did not run; the run grade reports it as a failure of the check.
+    - Log: debate_enforcer_log, kind enforcer_check, rule E-CLOSECON, seat_role panel, cure_status empty; the answer (CONFIRMED, NOT A CONTRADICTION, NOT CONFIRMED (form), NOT CONFIRMED (conflicting answers), NONE FOUND, NO ANSWER, NOT CHECKED, NOT A CANDIDATE) leads cure_reason. Seats "close enforcer" and "judge contradiction enforcer". Alternate Merge adds the rows to enforcer_log.
+    - Limits: the call's answers differ between sends; in the set C replay 3 of 23 confirmed lines were false or doubtful, and a confirmed line breaks a link by default (section 17).
+  - CONTRADICTIONS A JUDGE FINDS: Judge Contradiction Build -> Needed? -> Call deepseek -> Record, between Panel Payloads and Panel Cure Needed?. Candidates: each judge's CONTRADICTION line whose later sentence stands in that side's closing round (panel and single judge), and each contradiction question of the dry question round. A pair the pre-panel enforcer already answered is not sent again; no candidate means no call. Same prompt rules and code checks; the call answers candidates only. A confirmed line breaks its link in every panel, reserve and alternate seat's recompute. A contradiction confirmed only after the panel does NOT change the single judge's result (the single judge is graded before the panel sits); one confirmed before the judges sit breaks the link for the single judge too.
+  - SHOWN TO THE JUDGES (pkgCEC):
+  - CLOSING BREAK IN THE RECOMPUTE (pkgCEC; library cecBroken2024, cureRecompute, sbApply2024):
+  - KEYSTONE AFTER A CLOSING BREAK, AND THE ENGINE'S BREAK LINES (pkgKSR, pkgECB rev 3; the sentence on the judge's own break line is replaced by pkgRTE rev 3, part EJ, below):
+  - REPLACED LINES ARE READ (pkgVP1; RECORD-ONLY; md_notes_rulings 459):
+  - ANSWER OPEN (pkgVP1; E-GATE M, LIVE):
+  - ASSUMPTION CHARGE CHECK (pkgVP4):
+  - BARE ANSWER CHECK (pkgVP3 rev 3, pkgVPD rev 2):
+  - READING A KEEP ON E-ANS (record-only, ruling 428): a KEEP is read CURED when its reason quotes six words in a row of the answering side's own words. Not counted toward the six:
+    - the flagged answer when it is bare (only grants, or a short deferral): the answer is cut out of each round before the search, so quoting it back, or a window running into it, is not a fuller answer; with a bare flagged answer the six words must also lie outside every bare grant or deferral sentence of that side;
+    - any verse of six words or more that the side quoted on a verse line; and, on a line with no verse reference, a quoted span of six words or more whose words stand whole and in order in the KJV text of a verse the run serves (Cited Verses). Verse text is never taken from what a debater writes, so a debater's own quoted claim beside a reference is not scripture.
+    - Sentence tests: opening labels and bullets are ignored. A grant joined to a further clause of its own is not bare; a clause that only continues the grant, only says the side keeps its position (also when it names a link by number), or only names a verse as agreeing is not a clause of its own. A sentence of 15 words or fewer that reads "X is answered under / with / in / by <verse>" and ends at the reference is a deferral when X is only a verse reference, this, it, that or the same.
+    - Verse labels are taken off before the bare test: a lead-in ("On / In / At / For / Under / As to / Regarding Luke 3:23, I grant ..."), a label ending in a comma, and a bold label whose emphasis closes before or after the punctuation ("- **On Job 14:1**, I grant ..."). The reason text reads "another bare grant, affirmation or deferral".
+    - Limits of the KJV reading: a verse the run does not serve; a quotation crossing two verses; wording that differs from the KJV text; the served text carries the translators' bracketed notes.
+  - K-S3 FOLLOW-UP READING: a K-S3 follow-up answer reads CURED as COUNTED when it holds COUNTED as a whole word, in any case, anywhere in the answer; it is read as live when it opens with NOT COUNTED or holds TOUCHES NO LINK. The strict first-word reading and the whole-answer reading do not refuse: where either would, the log reason carries "(NOTED, record-only: ...)" and the ruling stays CURED. An empty answer is asked once. A close-round concession COUNTED with a CORRECTED COUNT line sets the side's conceded count; when the follow-up's corrected count is not kept, the K-S3 log row says COUNT NOT WRITTEN with the reason.
+    - The reading is given the RESPONSE line plus up to three unlabeled lines written right under it; any labeled line ends the run. A RESPONSE line ending in a full stop, question mark, exclamation mark or semicolon joins the next line with a space; any other ending, a colon included, joins with a full stop. An unlabeled line that names another item ("#2", "Item 2", "point 3", "no. 2", a rule code or a side and round not in this item's label) ends the run and stays prose; a line naming the item's own number continues. COUNTED must still open the RESPONSE line for the strict reading.
+    - Limits: a plain refusal that holds the word "counted" reads CURED with a note (79 of 88 refusals on the 287-case set, 68 of them noted); enforcement of those is a later package. A line naming another item or round hides every line after it from the reader.
+  - FORCED NONE-LINE (pkgKNL rev 5): the none-line allow-list takes the FORCED LINES / FORCED LINKS head, a leading dash, "none of the collisions/links/lines", "there are no forced links", and a closing parenthesis only in the fixed nothing-graded forms; any other text makes it a checked FORCED line.
+  - ANTI-CHEAT ANSWER LINES (pkgACM): a line may end with one period after its last quote mark and is still read. Still not read: more than one period, any other mark or text after the quote, EARLIER without quote marks, a lower-case answer word. A REVERSED answer is shown only when both quotations stand in the side's own rounds.
+  - FORCED LINE INSIDE A GATE CHANGE (pkgGFC rev s):
+  - A GATE CHANGE AND THE SEND-BACK COUNT (pkgGCCN rev 3):
+  - A pkgUND SEND-BACK COUNT AT THE GATE (pkgGUB rev 2):
+  - A LATER CORRECTION AND A CURE-STEP COUNT (pkgGCP rev 1b):
+  - K-G7 AND K-G4 ON A LINK BROKEN BY THE CONFIRMED CLOSING CONTRADICTION (pkgK7C rev 2):
+  - A DEFERRAL READ AS THE WHOLE ANSWER (pkgEAD rev 3b):
+  - OUT-OF-ROUND STRIKE WORDS (pkgOON rev 2; two of its limits are replaced by pkgOON3, next):
+  - OUT-OF-ROUND STRIKE AFTER ITS LABEL, AND THE FORMS TOLD (pkgOON3):
+  - A K-G1 RAISED BY THE GATE'S OWN CONTRADICTION ITEM (pkgGK1 rev 1):
+  - K-C AND A LINE THAT COMPARES A CHARGE WITH A QUOTATION (pkgKCQ rev 2):
+  - K-W ANSWER WITH SINGLE QUOTATION MARKS (pkgKWQ rev 2):
+  - A REASONED RETRACTION, AND THE JUDGE'S OWN BREAK LINE ON A CONFIRMED LINK (pkgRTE rev 3):
+  - THE DEEPSEEK PREMISE ITEM AND THE LINK TAG (pkgPLT):
+
+@LEAD@
+  - EARLY ALTERNATE (pkgABH): Alternate Build: the stub runs the library source with Alternate Needed? as its input (Get Early Alternate sits between them), then uses the early alternate replies only when every alternate call has a matching early reply (same removed seat, same payload hash); otherwise the normal alternate call runs.
+  - UNUSABLE ALTERNATE REPLY (pkgF3A rev 2s):
+
+
+
+
+@LEAD@
+  - THE QUESTION ROUND (QR Ask Build, QR Check, QR Final, QR Merge): runs only in a dry regrade (question_trial true, dry true); running it in a live debate needs the operator's approval.
+    - The ask carries the watch-and-question paragraph; the JSON form takes optional earlier_round and earlier_quote. qrCheck keeps ruling 415's checks and, only when an earlier field holds text, checks that the round is that debater's closing round (CR4 or DR4), earlier_round is one of its earlier rounds, the earlier quote is word for word in that round, and the new-verse check reads the earlier quote too. The debater sees both quotes. The judges' text labels a CONTRADICTION QUESTION with both quotes.
+  - REPEATED CONTRADICTION QUESTION (pkgQRD rev 5):
+
+@LEAD@
+  - THE SHARED LIBRARY (stub form 3): the Shared Library node holds the shared lines once (/*LIB*/) and, for each library node by name, its line list, own lines and source length (/*MAP*/). A library node's stub reads its entry by name, rebuilds its source, checks the length and runs it. A stub changes only when the nodes it reads change; every other library change is a change to the Shared Library node alone. Packing: gate/pack.cjs, form set by gate/STUBV.
+  - Library nodes include the 12 three-copy nodes Send Back Build, Send Back Record, Judge Enforcer Build, Judge Enforcer Record, each with its Alt and R2 Alt copy; each rebuilds its former code byte for byte. A change to any library node is made in the Shared Library sources and repacked.
+  - Library write rule: a library write may change only the Shared Library; packs are made on the live fetch-back.
+  - No comments: the live flow carries no code comments (plain Code nodes and library sources alike). The commented sources stay in git, in the pre-strip library sources and in the revert copy. A comment-strip is verified by equal syntax trees, stub rebuild and byte-equal replay of saved runs; a changed node with no saved run rests on tree and token equality alone.
+
+
+- OPEN LIMITS OF THE RULES WRITTEN AFTER s82 (each is stated with its rule in its home section):
+  - pkgVP1: the record-only out-of-round re-reading reads only STRUCK as a strike (NONE reads UNCURED).
+  - the closing enforcer: closing-enforcer answers differ between sends; 3 of 23 confirmed lines false or doubtful in the set C replay.
+  - ANSWER OPEN: an answered-with-a-fit collision does not count toward a defender win (operator's ruling row 459; not built).
+  - the question round: question round not active in live runs.
+  - K-S3 follow-up reading: a plain refusal holding "counted" reads CURED with a note; enforcement is a later package.
+  - pkgF3A: the round 2 retry limits.
+  - pkgECB: NOT REACHED: the round 2 gate with an item, the reread with a real reply, a real Haiku's answers.
+  - pkgGCCN: a count set at the cure step is not taken off by the gate change rule.
+  - pkgGCP: K-G3 and K-S3 cure-step counts stay; K-C counts are not taken off.
+  - pkgK7C: K-F on a confirmed broken link is not excused.
+  - pkgEAD: the bareness check reads bareness, not fit.
+  - pkgGK1: the K-G1 inconsistency is recorded, not repaired; the UNCURED row over-counts by one.
+  - pkgKCQ: a true K-C worded with all three parts is not raised, and nothing reports it; NOT HELD is not read for K-C.
+  - pkgKWQ: the K-W reader checks form only.
+  - pkgBRF: the parser fault in other scoped uses; a second bare reference read by neither check; the book line names the first book only.
+  - pkgCCM: the cache check owed at the next run.
+  - From the alternate seating (W2 Wall 4485, not a section 18 entry): with one pool model, a second removed seat gets no alternate.
+
+## 18. Write register (every write after s82, newest last)
+- The rules of these writes stand in their home sections (4, 6, 7, 8, 9, 10, 14, 15), each under "RULES WRITTEN AFTER s82"; their open limits are also listed in section 17. This section keeps one entry per write as it was handed in: the version, its packages, sizes, files, grades and what was shown offline.
+- The entries in full, as they stood before this merge, are engine_manual version 103 section 18 and the rows of engine_manual_log.
+- A new write is entered by a new manual version that adds its rule to its home section and its entry here, so the last entry names the live flow.
+  - Anchor as handed in: section 10, after the single-judge cure; placed in section 7 with the single judge.
+  - Revert prewrite_s102_KBN.json.
+  - Revert prewrite_s103_KBF.json.
+  - Largest single call 46.3% smaller
+  - +1,242 characters sent per debate.
+  - Code -1,123,620 (measured).
+  - Code +186, no prompt text.
+  - Code +20 characters, no prompt text.
+  - Found by the four-call check on debate 34108, where DeepSeek labeled the rounds "[3]" and "[4]" in 2 of 2 sends and the true keystone line was rejected for form.

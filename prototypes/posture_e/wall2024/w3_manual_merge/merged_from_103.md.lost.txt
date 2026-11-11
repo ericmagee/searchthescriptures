@@ -1,0 +1,40 @@
+1| Anchor: section 10, after the single-judge cure.
+1| "SINGLE-JUDGE RE-ASK (SJR): when the single judge's reply has no verdict, or a chain-mark line is absent under
+8| CONTRADICTION IN THE CLOSING ROUND (the perjury rule).
+9| It is one DeepSeek call, made before the single judge and before the panel.
+9| each side's four rounds in full;
+9| its declared links: the [CR1] DECLARED CHAIN, and the [DR3] LINK blocks;
+9| the candidates: the Oracle's OPPONENT'S CONTRADICTIONS lines in [DR4].
+9| Code confirms a CONFIRMED line only when all of these hold; otherwise the line is NOT CONFIRMED (form). A quot
+9| Log: debate_enforcer_log, kind enforcer_check, rule E-CLOSECON, seat "close enforcer". Alternate Merge adds th
+12| Judge Contradiction Build -> Needed? -> Call deepseek -> Record sits between Panel Payloads and Panel Cure Nee
+12| each judge's CONTRADICTION line whose later sentence stands in that side's closing round (panel and single jud
+12| Not sent again: a pair the pre-panel enforcer already answered. No candidate means no call.
+12| Checks: the same prompt rules and the same code checks as before; the call answers candidates only.
+12| Limit, in plain words: a contradiction confirmed only after the panel does NOT change the single judge's resul
+12| Log: seat "judge contradiction enforcer", rule E-CLOSECON.
+13| Correction from W1 (Wall 3751), to be applied in the manual text: Close Enforcer Build reads the OPPONENT'S CO
+14| Log rows: seat_role panel, cure_status empty, kind enforcer_check, rule E-CLOSECON; the enforcer's answer (CON
+15| Rev 4: the log line above is live. Rev 5: Close Enforcer Build and Record and Judge Contradiction Build and Re
+18| Shared Library (pkgLIB, stub form 3, pkgSTB): the Shared Library node holds the shared lines once (/*LIB*/) an
+19| Send-back cure reading, E-ANS KEEP (pkgEC2, pkgKQG rev 2): a KEEP is read CURED when its reason quotes 6 words
+20| Judges' closing contradiction question (QR Ask Build, QR Check, QR Final, QR Merge). C1: Commitment 9 gains a 
+21| pkgKVQ (s95, aeea9184; W1 README): "A send-back KEEP is read as cured only by six words in a row from the answ
+21| pkgFUK rev 3 and pkgFCD (s96, 353911eb): a K-S3 answer reads CURED as COUNTED only when COUNTED is the first w
+21| pkgKNL rev 5 (s97, bb78cf97; W4's wording, W2's README to be preferred where it differs): the none-line allow-
+22| pkgABH (614c04fa): "Alternate Build (pkgE4, restored by pkgABH): the stub runs the library source with Alterna
+22| Library write rule from s98: a library write may change only the Shared Library; packs are made on the live fe
+23| pkgKBG rev 5 (W3 README): "With a bare flagged answer, a send-back KEEP is read as cured only by six words in 
+23| pkgKDV rev 2 (W2 README): "A sentence of 15 words or fewer that reads 'X is answered under / with / in / by <v
+24| pkgKVL rev 2 (W2 README, rev 2 wording; W4's relay text described rev 1): "On a line with no verse reference, 
+26| pkgKBN rev 1 (W4 relay): changed Send Back Record, Alt Send Back Record, R2 Alt Send Back Record. (1) A lead-i
+27| pkgKBF rev 1 (W4 relay): changed Send Back Record, Alt Send Back Record, R2 Alt Send Back Record. A bold verse
+28| pkgKRO rev 2 (W4 README; replaces the pkgFUK rev 3 first-word sentence under s96 above): a K-S3 follow-up answ
+29| pkgKSL rev 2 (W2 README): the K-S3 COUNTED reading is given the RESPONSE line plus up to three unlabeled lines
+30| pkgCSS rev 2 (W1 README): the closing enforcer is called once per side. Close Enforcer Build makes one item pe
+30| Known limits (W4 Wall 4107, W3 reading /mnt/project-files/w3/setBC_reading_w3.md): a reply that labels rounds 
+31| s107 pkgR1 (W1): 12 three-copy nodes are now Shared Library stubs (Send Back Build, Send Back Record, Judge En
+31| s108 pkgRLF (W2): Close Enforcer Record reads a round label written "round N" or "[round N]" on a CLOSE-CONTRA
+32| Close Enforcer Record reads a bare round number on a CLOSE-CONTRADICTION line ("[3]", "3") as that line's own 
+33| Anti-cheat answer lines: a line may end with one period after its last quote mark and is still read. Before, s
+51| Where: the plain Code nodes (131 changed; 2 held no comment) and the library sources; the Shared Library is re
