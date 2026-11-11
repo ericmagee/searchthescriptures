@@ -1,0 +1,33 @@
+replays 2133 equal 2133 differ 0
+both ERR (equal): 127
+  Accept Build 33197 ERR FAIL-CLOSED: Accept Build: seat "luna" has no ACTIVE model_config row. execution=33197
+  Accept Build 33218 ERR FAIL-CLOSED: Accept Build: seat "luna" has no ACTIVE model_config row. execution=33218
+  Accept Build 33371 ERR FAIL-CLOSED: Accept Build: seat "luna" has no ACTIVE model_config row. execution=33371
+  Accept Build 33389 ERR FAIL-CLOSED: Accept Build: seat "luna" has no ACTIVE model_config row. execution=33389
+  Accept Build 33411 ERR FAIL-CLOSED: Accept Build: seat "luna" has no ACTIVE model_config row. execution=33411
+  Accept Build 33430 ERR FAIL-CLOSED: Accept Build: seat "luna" has no ACTIVE model_config row. execution=33430
+  Accept Build 33442 ERR FAIL-CLOSED: Accept Build: seat "luna" has no ACTIVE model_config row. execution=33442
+  Accept Build 33461 ERR FAIL-CLOSED: Accept Build: seat "luna" has no ACTIVE model_config row. execution=33461
+  Accept Build 33482 ERR FAIL-CLOSED: Accept Build: seat "luna" has no ACTIVE model_config row. execution=33482
+  Accept Build 33490 ERR FAIL-CLOSED: Accept Build: seat "luna" has no ACTIVE model_config row. execution=33490
+  Accept Build 33497 ERR FAIL-CLOSED: Accept Build: seat "luna" has no ACTIVE model_config row. execution=33497
+  Accept Build 33506 ERR FAIL-CLOSED: Accept Build: seat "luna" has no ACTIVE model_config row. execution=33506
+  Accept Build 33530 ERR FAIL-CLOSED: Accept Build: seat "luna" has no ACTIVE model_config row. execution=33530
+  Accept Build 33575 ERR FAIL-CLOSED: Accept Build: seat "luna" has no ACTIVE model_config row. execution=33575
+  Accept Build 33592 ERR FAIL-CLOSED: Accept Build: seat "luna" has no ACTIVE model_config row. execution=33592
+  Accept Build 33605 ERR FAIL-CLOSED: Accept Build: seat "luna" has no ACTIVE model_config row. execution=33605
+  Accept Build 33617 ERR FAIL-CLOSED: Accept Build: seat "luna" has no ACTIVE model_config row. execution=33617
+  Accept Build 33627 ERR FAIL-CLOSED: Accept Build: seat "luna" has no ACTIVE model_config row. execution=33627
+  Accept Build 33644 ERR FAIL-CLOSED: Accept Build: seat "luna" has no ACTIVE model_config row. execution=33644
+  Accept Build 33682 ERR FAIL-CLOSED: Accept Build: seat "luna" has no ACTIVE model_config row. execution=33682
+  Accept Build 33705 ERR FAIL-CLOSED: Accept Build: seat "luna" has no ACTIVE model_config row. execution=33705
+  Accept Build 33731 ERR FAIL-CLOSED: Accept Build: seat "luna" has no ACTIVE model_config row. execution=33731
+  Accept Build 33750 ERR FAIL-CLOSED: Accept Build: seat "luna" has no ACTIVE model_config row. execution=33750
+  Accept Build 33774 ERR FAIL-CLOSED: Accept Build: seat "luna" has no ACTIVE model_config row. execution=33774
+  Accept Build 33798 ERR FAIL-CLOSED: Accept Build: seat "luna" has no ACTIVE model_config row. execution=33798
+  Accept Build 33815 ERR FAIL-CLOSED: Accept Build: seat "luna" has no ACTIVE model_config row. execution=33815
+  Accept Build 33828 ERR FAIL-CLOSED: Accept Build: seat "luna" has no ACTIVE model_config row. execution=33828
+  Accept Build 33846 ERR FAIL-CLOSED: Accept Build: seat "luna" has no ACTIVE model_config row. execution=33846
+  Alternate Build 33774 ERR Cannot read properties of undefined (reading 'map')
+  Alternate Build 33798 ERR Cannot read properties of undefined (reading 'map')
+no stored input: ["Accept DS Return Build","Alt Gate Build","Assume Check Build","Assume Check Record","Close Enforcer Record","Gate Build","Judge Contradiction Record","QR Merge","R2 Alt Gate Build","R2 Alt Gate Record","R2 Alt Send Back Build","R2 Alt Send Back Record","R2 Alternate Cure Build","R2 Alternate Cure Normalize","R2 Alternate Merge","R2 Alternate Merge Seat","R2 Alternate Payloads"]

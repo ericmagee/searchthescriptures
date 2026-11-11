@@ -1,0 +1,127 @@
+Accept Build 33197 ERR FAIL-CLOSED: Accept Build: seat "luna" has no ACTIVE model_config row. execution=33197
+Accept Build 33218 ERR FAIL-CLOSED: Accept Build: seat "luna" has no ACTIVE model_config row. execution=33218
+Accept Build 33371 ERR FAIL-CLOSED: Accept Build: seat "luna" has no ACTIVE model_config row. execution=33371
+Accept Build 33389 ERR FAIL-CLOSED: Accept Build: seat "luna" has no ACTIVE model_config row. execution=33389
+Accept Build 33411 ERR FAIL-CLOSED: Accept Build: seat "luna" has no ACTIVE model_config row. execution=33411
+Accept Build 33430 ERR FAIL-CLOSED: Accept Build: seat "luna" has no ACTIVE model_config row. execution=33430
+Accept Build 33442 ERR FAIL-CLOSED: Accept Build: seat "luna" has no ACTIVE model_config row. execution=33442
+Accept Build 33461 ERR FAIL-CLOSED: Accept Build: seat "luna" has no ACTIVE model_config row. execution=33461
+Accept Build 33482 ERR FAIL-CLOSED: Accept Build: seat "luna" has no ACTIVE model_config row. execution=33482
+Accept Build 33490 ERR FAIL-CLOSED: Accept Build: seat "luna" has no ACTIVE model_config row. execution=33490
+Accept Build 33497 ERR FAIL-CLOSED: Accept Build: seat "luna" has no ACTIVE model_config row. execution=33497
+Accept Build 33506 ERR FAIL-CLOSED: Accept Build: seat "luna" has no ACTIVE model_config row. execution=33506
+Accept Build 33530 ERR FAIL-CLOSED: Accept Build: seat "luna" has no ACTIVE model_config row. execution=33530
+Accept Build 33575 ERR FAIL-CLOSED: Accept Build: seat "luna" has no ACTIVE model_config row. execution=33575
+Accept Build 33592 ERR FAIL-CLOSED: Accept Build: seat "luna" has no ACTIVE model_config row. execution=33592
+Accept Build 33605 ERR FAIL-CLOSED: Accept Build: seat "luna" has no ACTIVE model_config row. execution=33605
+Accept Build 33617 ERR FAIL-CLOSED: Accept Build: seat "luna" has no ACTIVE model_config row. execution=33617
+Accept Build 33627 ERR FAIL-CLOSED: Accept Build: seat "luna" has no ACTIVE model_config row. execution=33627
+Accept Build 33644 ERR FAIL-CLOSED: Accept Build: seat "luna" has no ACTIVE model_config row. execution=33644
+Accept Build 33682 ERR FAIL-CLOSED: Accept Build: seat "luna" has no ACTIVE model_config row. execution=33682
+Accept Build 33705 ERR FAIL-CLOSED: Accept Build: seat "luna" has no ACTIVE model_config row. execution=33705
+Accept Build 33731 ERR FAIL-CLOSED: Accept Build: seat "luna" has no ACTIVE model_config row. execution=33731
+Accept Build 33750 ERR FAIL-CLOSED: Accept Build: seat "luna" has no ACTIVE model_config row. execution=33750
+Accept Build 33774 ERR FAIL-CLOSED: Accept Build: seat "luna" has no ACTIVE model_config row. execution=33774
+Accept Build 33798 ERR FAIL-CLOSED: Accept Build: seat "luna" has no ACTIVE model_config row. execution=33798
+Accept Build 33815 ERR FAIL-CLOSED: Accept Build: seat "luna" has no ACTIVE model_config row. execution=33815
+Accept Build 33828 ERR FAIL-CLOSED: Accept Build: seat "luna" has no ACTIVE model_config row. execution=33828
+Accept Build 33846 ERR FAIL-CLOSED: Accept Build: seat "luna" has no ACTIVE model_config row. execution=33846
+Alternate Build 33774 ERR Cannot read properties of undefined (reading 'map')
+Alternate Build 33798 ERR Cannot read properties of undefined (reading 'map')
+Alternate Build 33828 ERR Cannot read properties of undefined (reading 'map')
+Alternate Build 33846 ERR Cannot read properties of undefined (reading 'map')
+Alternate Build 34016 ERR Cannot read properties of undefined (reading 'map')
+Alternate Merge Seat 33218 ERR no data Panel Cure Check
+Build Independent Verdict 33218 ERR no data Init Seats
+Build Save Body 33218 ERR no data Init Seats
+Build Synthesis 33218 ERR no data Init Seats
+C1 Build 33197 ERR no data Init Seats
+C1 Build 33218 ERR no data Init Seats
+C2 Build 33197 ERR no data Init Seats
+C2 Build 33218 ERR no data Init Seats
+C3 Build 33197 ERR no data Init Seats
+C3 Build 33218 ERR no data Init Seats
+C3 Extract 33197 ERR no data Init Seats
+C3 Extract 33218 ERR no data Init Seats
+C4 Build 33197 ERR no data Init Seats
+C4 Build 33218 ERR no data Init Seats
+C4 Extract 33197 ERR no data Init Seats
+C4 Extract 33218 ERR no data Init Seats
+Cure Check 33218 ERR no data Init Seats
+D1 Build 33197 ERR no data Init Seats
+D1 Build 33218 ERR no data Init Seats
+D2 Build 33197 ERR no data Init Seats
+D2 Build 33218 ERR no data Init Seats
+D3 Build 33197 ERR no data Init Seats
+D3 Build 33218 ERR no data Init Seats
+D3 Extract 33197 ERR no data Init Seats
+D3 Extract 33218 ERR no data Init Seats
+D4 Build 33197 ERR no data Init Seats
+D4 Build 33218 ERR no data Init Seats
+D4 Extract 33197 ERR no data Init Seats
+D4 Extract 33218 ERR no data Init Seats
+Failure Salvage 33197 ERR no data Init Seats
+Failure Salvage 33218 ERR no data Init Seats
+Init with Guards 33218 ERR no data Init Seats
+Panel Build 33218 ERR no data Init Seats
+Panel Cure Build 1 33218 ERR no data Panel Payloads
+Panel Cure Check 33218 ERR no data Panel Payloads
+Panel Payloads 33218 ERR no data Init Seats
+Panel Payloads 33530 ERR FAIL-CLOSED (reserve judge, second failure of the run): seat "glm_flash" returned an envelope th
+QR Ask Build 33218 ERR no data Init Seats
+QR Ask Build 33371 ERR FAIL-CLOSED: QR Ask Build reached outside a dry question-round trial. run_token=ODV1-33371-smmbh
+QR Ask Build 33389 ERR FAIL-CLOSED: QR Ask Build reached outside a dry question-round trial. run_token=ODV1-33389-ds52a
+QR Ask Build 33411 ERR FAIL-CLOSED: QR Ask Build reached outside a dry question-round trial. run_token=ODV1-33411-fq874
+QR Ask Build 33430 ERR FAIL-CLOSED: QR Ask Build reached outside a dry question-round trial. run_token=ODV1-33430-7gong
+QR Ask Build 33442 ERR FAIL-CLOSED: QR Ask Build reached outside a dry question-round trial. run_token=ODV1-33442-mfuum
+QR Ask Build 33461 ERR FAIL-CLOSED: QR Ask Build reached outside a dry question-round trial. run_token=ODV1-33461-pcc0v
+QR Ask Build 33482 ERR FAIL-CLOSED: QR Ask Build reached outside a dry question-round trial. run_token=ODV1-33482-m86iu
+QR Ask Build 33490 ERR FAIL-CLOSED: QR Ask Build reached outside a dry question-round trial. run_token=ODV1-33490-e1rlk
+QR Ask Build 33497 ERR FAIL-CLOSED: QR Ask Build reached outside a dry question-round trial. run_token=ODV1-33497-65m5w
+QR Ask Build 33506 ERR FAIL-CLOSED: QR Ask Build reached outside a dry question-round trial. run_token=ODV1-33506-up1xp
+QR Ask Build 33530 ERR FAIL-CLOSED: QR Ask Build reached outside a dry question-round trial. run_token=ODV1-33530-m5rsb
+QR Ask Build 33575 ERR FAIL-CLOSED: QR Ask Build reached outside a dry question-round trial. run_token=ODV1-33575-6ry1b
+QR Ask Build 33592 ERR FAIL-CLOSED: QR Ask Build reached outside a dry question-round trial. run_token=ODV1-33592-bthf5
+QR Ask Build 33605 ERR FAIL-CLOSED: QR Ask Build reached outside a dry question-round trial. run_token=ODV1-33605-fcfvr
+QR Ask Build 33617 ERR FAIL-CLOSED: QR Ask Build reached outside a dry question-round trial. run_token=ODV1-33617-2la93
+QR Ask Build 33627 ERR FAIL-CLOSED: QR Ask Build reached outside a dry question-round trial. run_token=ODV1-33627-58uwr
+QR Ask Build 33644 ERR FAIL-CLOSED: QR Ask Build reached outside a dry question-round trial. run_token=ODV1-33644-o5gal
+QR Ask Build 33682 ERR FAIL-CLOSED: QR Ask Build reached outside a dry question-round trial. run_token=ODV1-33682-y14n8
+QR Ask Build 33705 ERR FAIL-CLOSED: QR Ask Build reached outside a dry question-round trial. run_token=ODV1-33705-6qcqx
+QR Ask Build 33731 ERR FAIL-CLOSED: QR Ask Build reached outside a dry question-round trial. run_token=ODV1-33731-lq0uu
+QR Ask Build 33750 ERR FAIL-CLOSED: QR Ask Build reached outside a dry question-round trial. run_token=ODV1-33750-lwqae
+QR Ask Build 33774 ERR FAIL-CLOSED: QR Ask Build reached outside a dry question-round trial. run_token=ODV1-33774-3w3lw
+QR Ask Build 33798 ERR FAIL-CLOSED: QR Ask Build reached outside a dry question-round trial. run_token=ODV1-33798-ithqs
+QR Ask Build 33815 ERR FAIL-CLOSED: QR Ask Build reached outside a dry question-round trial. run_token=ODV1-33815-oqx67
+QR Ask Build 33828 ERR FAIL-CLOSED: QR Ask Build reached outside a dry question-round trial. run_token=ODV1-33828-oe3n5
+QR Ask Build 33846 ERR FAIL-CLOSED: QR Ask Build reached outside a dry question-round trial. run_token=ODV1-33846-0lclk
+QR Ask Build 34016 ERR FAIL-CLOSED: QR Ask Build reached outside a dry question-round trial. run_token=ODV1-34016-53t69
+QR Ask Build 34108 ERR FAIL-CLOSED: QR Ask Build reached outside a dry question-round trial. run_token=ODV1-34108-3to8d
+Reserve Build 33218 ERR no data Init Seats
+Reserve Build 33371 ERR FAIL-CLOSED: Reserve Build reached without a substitution or a reserve seat. run_token=ODV1-3337
+Reserve Build 33389 ERR FAIL-CLOSED: Reserve Build reached without a substitution or a reserve seat. run_token=ODV1-3338
+Reserve Build 33411 ERR FAIL-CLOSED: Reserve Build reached without a substitution or a reserve seat. run_token=ODV1-3341
+Reserve Build 33430 ERR FAIL-CLOSED: Reserve Build reached without a substitution or a reserve seat. run_token=ODV1-3343
+Reserve Build 33442 ERR FAIL-CLOSED: Reserve Build reached without a substitution or a reserve seat. run_token=ODV1-3344
+Reserve Build 33461 ERR FAIL-CLOSED: Reserve Build reached without a substitution or a reserve seat. run_token=ODV1-3346
+Reserve Build 33482 ERR FAIL-CLOSED: Reserve Build reached without a substitution or a reserve seat. run_token=ODV1-3348
+Reserve Build 33490 ERR FAIL-CLOSED: Reserve Build reached without a substitution or a reserve seat. run_token=ODV1-3349
+Reserve Build 33497 ERR FAIL-CLOSED: Reserve Build reached without a substitution or a reserve seat. run_token=ODV1-3349
+Reserve Build 33506 ERR FAIL-CLOSED: Reserve Build reached without a substitution or a reserve seat. run_token=ODV1-3350
+Reserve Build 33575 ERR FAIL-CLOSED: Reserve Build reached without a substitution or a reserve seat. run_token=ODV1-3357
+Reserve Build 33592 ERR FAIL-CLOSED: Reserve Build reached without a substitution or a reserve seat. run_token=ODV1-3359
+Reserve Build 33605 ERR FAIL-CLOSED: Reserve Build reached without a substitution or a reserve seat. run_token=ODV1-3360
+Reserve Build 33617 ERR FAIL-CLOSED: Reserve Build reached without a substitution or a reserve seat. run_token=ODV1-3361
+Reserve Build 33627 ERR FAIL-CLOSED: Reserve Build reached without a substitution or a reserve seat. run_token=ODV1-3362
+Reserve Build 33644 ERR FAIL-CLOSED: Reserve Build reached without a substitution or a reserve seat. run_token=ODV1-3364
+Reserve Build 33682 ERR FAIL-CLOSED: Reserve Build reached without a substitution or a reserve seat. run_token=ODV1-3368
+Reserve Build 33705 ERR FAIL-CLOSED: Reserve Build reached without a substitution or a reserve seat. run_token=ODV1-3370
+Reserve Build 33731 ERR FAIL-CLOSED: Reserve Build reached without a substitution or a reserve seat. run_token=ODV1-3373
+Reserve Build 33750 ERR FAIL-CLOSED: Reserve Build reached without a substitution or a reserve seat. run_token=ODV1-3375
+Reserve Build 33774 ERR FAIL-CLOSED: Reserve Build reached without a substitution or a reserve seat. run_token=ODV1-3377
+Reserve Build 33798 ERR FAIL-CLOSED: Reserve Build reached without a substitution or a reserve seat. run_token=ODV1-3379
+Reserve Build 33815 ERR FAIL-CLOSED: Reserve Build reached without a substitution or a reserve seat. run_token=ODV1-3381
+Reserve Build 33828 ERR FAIL-CLOSED: Reserve Build reached without a substitution or a reserve seat. run_token=ODV1-3382
+Reserve Build 33846 ERR FAIL-CLOSED: Reserve Build reached without a substitution or a reserve seat. run_token=ODV1-3384
+Reserve Build 34016 ERR FAIL-CLOSED: Reserve Build reached without a substitution or a reserve seat. run_token=ODV1-3401
+Reserve Build 34108 ERR FAIL-CLOSED: Reserve Build reached without a substitution or a reserve seat. run_token=ODV1-3410
