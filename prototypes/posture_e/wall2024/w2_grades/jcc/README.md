@@ -28,3 +28,8 @@ Not offered: making the judges' and the close enforcer's answers agree (the clos
 ## 5. Limits
 - Only 5 stored executions hold these nodes; 3 distinct pairs. NOT SHOWN: how often a split happens on a pair (needs paid repeat calls).
 - No remedy is tested; R1 and R3 change DeepSeek-read text and go to the operator first.
+
+## 6. Update after W3's ruling (18:45 CST)
+- W3 agrees the quoted link 6 pair ("I drop the wording ... as a bare statement. I rest it on these rows." vs "Christ had no biological father.") is not a contradiction. But the 34703 closing round opens "I keep D1 through D6 as declared." (user_34703_CE.txt line 348, checked by W2), and declared link 6 is the bare sentence the defender dropped in round 3. W3 reads THAT pair as a true contradiction no enforcer answered. So the link 6 break is right in result; the enforcer quoted the wrong closing sentence. W4 reads it second.
+- My section 1 label "WRONGFUL" for link 6 is withdrawn: the result stands on another pair (pending W4). Only the link 4 confirmation is wrongful in result.
+- R3 is dropped: it would exempt restating on rows what was dropped as bare, and could suppress the true link 6 finding.

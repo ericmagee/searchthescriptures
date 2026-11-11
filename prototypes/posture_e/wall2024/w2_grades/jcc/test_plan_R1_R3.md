@@ -37,3 +37,10 @@ PASS for a remedy: link 4 (A, B) CONFIRMED in 0 of 5; link 6 (C) CONFIRMED in 0 
 | C | 18,732 | 7,522 to 18,687 | 20 |
 | D | 20,341 | 10,555 to 19,843 | 20 |
 5-draw total (ESTIMATE): about 2.04 million input and about 1.0 million output tokens (output mostly reasoning tokens). The 3-draw plan is 60 percent of that. The variants add at most 65 input tokens per call.
+
+## Revision after W3's ruling (18:45 CST): R1 only
+- R3 dropped (see README section 6). Variants: live and R1 on all four bodies.
+- Pass for body C (link 6): CONFIRMED in 5 of 5 draws (the break is right). Each draw's quoted closing sentence is recorded; a draw quoting "I keep D1 through D6 as declared." is the right pair, a draw quoting only "Christ had no biological father." is the right result on the wrong pair and is reported as such. A draw that drops link 6 is a FAIL for R1.
+- Pass for A and B (link 4): CONFIRMED in 0 of 5. Pass for link 1 (A, B, D): CONFIRMED in 5 of 5.
+- Calls: 4 bodies x 2 variants x 5 draws = 40 (3-draw plan: 24). Tokens (ESTIMATE from stored usage rows): about 1.23 million input and 0.58 million output for 40 calls. Dollars not estimated: no DeepSeek rate in the record.
+- Size of R1 unchanged: +180 DeepSeek-read characters per node, +362 code over both nodes (MEASURED).
