@@ -1,0 +1,23 @@
+RUNNER Judge Enforcer Build all: false false nodes equal: true len 85402 87548 2146
+RUNNER Alt Judge Enforcer Build all: false false nodes equal: true len 97831 99977 2146
+RUNNER R2 Alt Judge Enforcer Build all: false false nodes equal: true len 97876 100022 2146
+ex33149_full.json Judge Enforcer Build DIFFER; E-ANS items 152 152 changed 35 chars added 32827 changed without block 0 calls 9 10
+ex33149_full.json Alt Judge Enforcer Build equal; E-ANS items 0
+ex33371_full.json Judge Enforcer Build DIFFER; E-ANS items 100 100 changed 29 chars added 24261 changed without block 0 calls 6 6
+ex33371_full.json Alt Judge Enforcer Build DIFFER; E-ANS items 41 41 changed 9 chars added 8233 changed without block 0 calls 4 5
+ex33490_full.json Judge Enforcer Build DIFFER; E-ANS items 132 132 changed 71 chars added 60450 changed without block 0 calls 8 9
+ex33490_full.json Alt Judge Enforcer Build DIFFER; E-ANS items 49 49 changed 29 chars added 24497 changed without block 0 calls 5 5
+ex33497_full.json Judge Enforcer Build DIFFER; E-ANS items 164 164 changed 89 chars added 87885 changed without block 0 calls 8 10
+ex33497_full.json Alt Judge Enforcer Build equal; E-ANS items 0
+ex34299_full.json Judge Enforcer Build DIFFER; E-ANS items 99 99 changed 42 chars added 37845 changed without block 0 calls 7 8
+ex34626_full.json Judge Enforcer Build DIFFER; E-ANS items 122 122 changed 48 chars added 42900 changed without block 0 calls 7 8
+ex34626_full.json Alt Judge Enforcer Build equal; E-ANS items 0
+ex34703_full.json Judge Enforcer Build DIFFER; E-ANS items 134 134 changed 57 chars added 51116 changed without block 0 calls 8 9
+ex34703_full.json Alt Judge Enforcer Build equal; E-ANS items 0
+ex34726_full.json Judge Enforcer Build DIFFER; E-ANS items 143 143 changed 40 chars added 31817 changed without block 0 calls 10 10
+ex34726_full.json Alt Judge Enforcer Build equal; E-ANS items 0
+ex34780_full.json Judge Enforcer Build DIFFER; E-ANS items 115 115 changed 56 chars added 51268 changed without block 0 calls 9 10
+ex34780_full.json Alt Judge Enforcer Build equal; E-ANS items 0
+ex34852_full.json Judge Enforcer Build DIFFER; E-ANS items 90 90 changed 45 chars added 43824 changed without block 0 calls 6 7
+ex34852_full.json Alt Judge Enforcer Build DIFFER; E-ANS items 1 1 changed 1 chars added 1030 changed without block 0 calls 2 2
+replays 19 fully equal 6
