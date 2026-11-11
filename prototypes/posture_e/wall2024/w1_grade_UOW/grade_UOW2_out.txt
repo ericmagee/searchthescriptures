@@ -1,0 +1,28 @@
+code/body/url differ: [ 'Shared Library' ] 418 418
+connections equal true
+delta 19 live: \\w+\\s+){0,3 cand: (?!--)[^\\s.;:,!?()—–]+\\s+){0,8
+live: \b(?:leaves?\s+(?:\w+\s+){0,3}(?:open|disputed|undecided|uns
+cand: \b(?:leaves?\s+(?:(?!--)[^\s.;:,!?()—–]+\s+){0,8}(?:open|dis
+P1 AS EXPECTED "leaves the Davidic-line question open" live false cand true
+P1 AS EXPECTED "leave **the matter** open" live false cand true
+P1 AS EXPECTED "leaves [D4] open" live false cand true
+P1 AS EXPECTED "leaves it open whether" live true cand true
+P2 NOT AS EXPECTED "leaves Joseph’s house and goes up to the open court" live false cand true
+P2 NOT AS EXPECTED "leaves him and the door was open" live false cand true
+P3 files 12 distinct lines 1754 live pass 584 cand pass 595 PASS->FAIL 0 FAIL->PASS 11
+ F->P ex33490_full.json D6 vs C6 (Hebrews 7:14): UNDERDETERMINED -- [CR3] answers the pedigree press. GROUND: [L1] Hebrews 7:14 'For it is evident that our Lord sprang out of Juda' leaves the competing accounts of the pedigree open.
+ F->P ex34703_full.json D3 vs C1 (Matthew 1:16): UNDERDETERMINED -- The feminine “of whom” and “born of thee” support Mary as mother, while the challenger’s cited mother-birth examples allow a named father alongside the mother. GROUND: [L1] Matthew 1:16 “of whom was born Jesus” and Genesis 4:25 “Adam knew his wife again; and she bare a son” leave the father’s biological role open.\\
+ F->P ex34703_full.json D4 vs C2 (Luke 1:36): UNDERDETERMINED -- Elisabeth’s conception is a sign of God’s power and is also stated as a husband’s son; the analogy does not establish that Mary’s conception has the same means. GROUND: [L1] Luke 1:13 “thy wife Elisabeth shall bear thee a son” and Luke 1:36 “she hath also conceived a son in her old age” leave the analogy’s reach open.\\
+ F->P ex34703_full.json D3 vs C1 (Matthew 1:16): UNDERDETERMINED -- The feminine “of whom” and “born of thee” support Mary as mother, while the challenger’s cited mother-birth examples allow a named father alongside the mother. GROUND: [L1] Matthew 1:16 “of whom was born Jesus” and Genesis 4:25 “Adam knew his wife again; and she bare a son” leave the father’s biological role open.
+ F->P ex34703_full.json D4 vs C2 (Luke 1:36): UNDERDETERMINED -- Elisabeth’s conception is a sign of God’s power and is also stated as a husband’s son; the analogy does not establish that Mary’s conception has the same means. GROUND: [L1] Luke 1:13 “thy wife Elisabeth shall bear thee a son” and Luke 1:36 “she hath also conceived a son in her old age” leave the analogy’s reach open.
+ F->P ex34703_full.json D3 vs C1 (Matthew 1:16): UNDERDETERMINED -- The feminine “of whom” and “born of thee” support Mary as mother, while the challenger’s cited mother-birth examples allow a named father alongside the mother. GROUND: (L1) Matthew 1:16 “of whom was born Jesus” and Genesis 4:25 “Adam knew his wife again; and she bare a son” leave the father’s biological role open. ; END]
+ F->P ex34703_full.json D4 vs C2 (Luke 1:36): UNDERDETERMINED -- Elisabeth’s conception is a sign of God’s power and is also stated as a husband’s son; the analogy does not establish that Mary’s conception has the same means. GROUND: (L1) Luke 1:13 “thy wife Elisabeth shall bear thee a son” and Luke 1:36 “she hath also conceived a son in her old age” leave the analogy’s reach open. ; END]
+ F->P ex35173_full.json D4 vs C6 (Luke 3:23): UNDERDETERMINED -- the qualification “as was supposed” and the challenger’s household evidence leave the biological status of Joseph’s fatherhood open -- GROUND: [L1] Luke 3:23 “being (as was supposed) the son of Joseph, which was [the son] of Heli.” || The defender cites “as was supposed,” while the challenger cites Mary’s words “thy father and I have sought thee sorrowing.”
+ F->P ex35173_full.json D4 vs C6 (Luke 3:23): UNDERDETERMINED -- the qualification “as was supposed” and the challenger’s household evidence leave the biological status of Joseph’s fatherhood open -- GROUND: [L1] Luke 3:23 “being (as was supposed) the son of Joseph, which was [the son] of Heli.” -- The defender cites “as was supposed,” while the challenger cites Mary’s words “thy father and I have sought thee sorrowing.”
+ F->P ex35173_full.json D4 vs C6 (Luke 3:23): UNDERDETERMINED -- the qualification “as was supposed” and the challenger’s household evidence leave the biological status of Joseph’s fatherhood open -- GROUND: [L1] Luke 3:23 “being (as was supposed) the son of Joseph, which was [the son] of Heli.”
+ F->P ex35173_full.json D4 vs C6 (Luke 3:23): UNDERDETERMINED -- the qualification “as was supposed” and the challenger’s household evidence leave the biological status of Joseph’s fatherhood open -- GROUND: [L1] Luke 3:23 “being (as was supposed) the son of Joseph, which was [the son] of Heli.” -- The defender cites “as was supposed,” while the challenger cites Mary’s words “thy father and I have sought thee sorrowing.”
+P5 NOT AS EXPECTED "leaves the matter -- for now -- open" live false cand false
+P5 AS EXPECTED "leaves (as was supposed) open" live false cand false
+P5 AS EXPECTED "leaves the so-called question open" live false cand true
+P5 AS EXPECTED "leaves Joseph’s house — open" live false cand false
+P5 AS EXPECTED "leaves the record silent and open" live false cand true
