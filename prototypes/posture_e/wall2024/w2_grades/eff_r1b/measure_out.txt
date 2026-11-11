@@ -1,0 +1,59 @@
+code nodes 176 stubs 42 plain 134 plain and not in R1b 89 library chars 864548 library lines 3471
+lines >= 200 chars repeated in 2+ out-set nodes: saveable 72207 | nodes holding a repeat 41
+    27444 | 3 | Accept Build, Accept Check, Accept Final
+    3504 | 7 | C1B Build, D2B Build, C2B Build
+    3150 | 4 | QR Ask Build, QR Check, QR Final
+    2040 | 7 | C1B Build, D2B Build, C2B Build
+    1761 | 4 | QR Ask Build, QR Check, QR Final
+    1614 | 7 | C1B Build, D2B Build, C2B Build
+lines >= 80 chars repeated in 2+ out-set nodes: saveable 113267 | nodes holding a repeat 49
+lines >= 1 chars repeated in 2+ out-set nodes: saveable 123803 | nodes holding a repeat 69
+stubs: stub code min 1486 max 2910 mean 1682 | MAP entry mean 3548 max 31269 | map chars per rebuilt line 16.20
+MAP entry shape sample: {"n":206794,"p":[[2012,2035],69,[2036,2045],[" const keystone=t=>{let k=null;for(const raw of String(t||'').split('\\n')){let r=null;try{r=__RL.readLine(raw);}c
+nodes to convert 41 conversion cost (stub mean + MAP entry by line count) ESTIMATE 91907 | gross saving 72207 | net ESTIMATE -19700
+    Init with Guards 31194 chars, 76 lines
+    C1 Build 11660 chars, 58 lines
+    Build Diagnostic Prompt 5056 chars, 23 lines
+    Panel Judge 1 deepseek 937 chars, 8 lines
+    Panel Judge 2 openrouter 939 chars, 8 lines
+    Panel Judge 3 openrouter 939 chars, 8 lines
+    Panel Judge 1 openrouter 939 chars, 8 lines
+    Accept Build 17486 chars, 38 lines
+    Accept Check 18796 chars, 45 lines
+    Accept Final 19955 chars, 49 lines
+    QR Ask Build 4685 chars, 22 lines
+    QR Check 6859 chars, 32 lines
+    QR Final 7728 chars, 33 lines
+    QR Merge 4731 chars, 23 lines
+    Alt Seated 1051 chars, 9 lines
+    R2 Alt Seated 1060 chars, 9 lines
+    C1B Build 8672 chars, 74 lines
+    D2B Build 8793 chars, 74 lines
+    C2B Build 8914 chars, 74 lines
+    D3B Build 9035 chars, 74 lines
+    C3B Build 9313 chars, 75 lines
+    D4B Build 9277 chars, 74 lines
+    C4B Build 9556 chars, 75 lines
+    FUM Merge Panel 1 403 chars, 2 lines
+    FUM Merge Panel 2 403 chars, 2 lines
+    FUM Merge Panel 3 403 chars, 2 lines
+    FUM Merge Alternate 407 chars, 2 lines
+    FUM Merge R2 Alternate 413 chars, 2 lines
+    FUM Merge Cure 397 chars, 2 lines
+    Close Enforcer Build 8315 chars, 45 lines
+    Judge Contradiction Build 8589 chars, 44 lines
+    Judge Contradiction Record 8418 chars, 48 lines
+    Close Enforcer Record 9211 chars, 44 lines
+    Assume Check Record 8164 chars, 49 lines
+    Reread Build 3578 chars, 22 lines
+    Alt Reread Build 3586 chars, 22 lines
+    R2 Alt Reread Build 3592 chars, 22 lines
+    Reread Record 3106 chars, 15 lines
+    Alt Reread Record 3122 chars, 15 lines
+    R2 Alt Reread Record 3128 chars, 15 lines
+    Assume Check Build 5695 chars, 25 lines
+
+MEASURED per-stub overhead (stub + MAP entry - own text): min 2009 Alt Judge Enforcer Record | median 3163 | mean 3031 | max 4612 Alternate Build
+NET for converting the 41 nodes: gross 72207 - overhead at median 129683 = -57476 | at mean -52048
+nodes whose share of the saving exceeds the median overhead: 3 net 20255
+    Accept Build 9773 ; Accept Check 9986 ; Accept Final 9986
