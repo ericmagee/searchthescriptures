@@ -1,0 +1,30 @@
+// pkgRTE rev 3 builder's test (W3): live s116 against parent_s116_RTE3.json (or argv[2]) on stored 34780 and 34726.
+// EXPECTED, written before the first run of rev 3:
+// E1 part EJ as rev 1: Send Back Build on 34780 withholds sol's three items (not_sent 4 -> 7), other items equal; on 34726 one item (luna) withheld.
+// E2 part RT reads NO reason. Gate Build on 34780 with the stored replies: the same items as live for every seat (same ids, kinds, sources); the only difference is that the why of sol's two retraction items (G2, G3) ends with the clause telling the form; the judge message differs by that clause twice and nothing else.
+// E3 plants on sol S4: every answer gives the same kind (applied or NOT APPLIED) on candidate as on live. The clause is present exactly when the answer is RETRACTED: <pair> followed by more text; never on other answers.
+const fs=require('fs');process.chdir(__dirname+'/..');const {rebuild}=require(process.cwd()+'/pkgLIB/unpack.cjs');const H=require(process.cwd()+'/pkgEAD/harness_clone.cjs');const S=JSON.stringify;
+const W='/mnt/project-files/wall2024/';const wf=f=>{let d=JSON.parse(fs.readFileSync(f,'utf8'));d=d.data||d;return d.workflow||d;};
+const A=wf(W+'fetchback_live_s116.json'),B=wf(W+(process.argv[2]||'parent_s116_RTE3.json'));
+const load=d=>{const by={};d.nodes.forEach(n=>by[n.name]=n);const c={};return n=>c[n]||(c[n]=rebuild(by[n].parameters.jsCode,by['Shared Library'].parameters.jsCode));};const LIVE=load(A),CAND=load(B);
+const dn=B.nodes.filter(n=>S(n)!==S(A.nodes.find(x=>x.name===n.name))).map(n=>n.name+' '+(n.parameters.jsCode.length-A.nodes.find(x=>x.name===n.name).parameters.jsCode.length));const {nodes:_1,...ra}=A,{nodes:_2,...rb}=B;
+console.log('DIFF nodes:',dn.join('; '),'| nodes',A.nodes.length,B.nodes.length,'| rest equal',S(ra)===S(rb));
+const mkbase=f=>{const ex=JSON.parse(fs.readFileSync(W+f,'utf8'));const r=(ex.data||ex).resultData.runData;const base={};for(const [n,runs] of Object.entries(r)){const last=runs[runs.length-1];base[n]=(last&&last.data&&last.data.main)||null;}return base;};
+const J=o=>JSON.parse(S(o));const mk=o=>new Proxy(o,{has:()=>true,get:(t,k)=>k in t?t[k]:null});const T=s=>s.replace(/"at":"[^"]+"/g,'"at":0');
+const run=async(src,node,inp,st)=>(await H.run(src(node),'x',inp,mk(st))).map(x=>x.json);
+const CL='; a retraction is written "RETRACTED: <pair>" with nothing after the pair';
+(async()=>{
+ const base=mkbase('ex34780_full.json'),b0=mkbase('ex34726_full.json');
+ for(const [nm,bs] of [['34780',base],['34726',b0]]){const a=await run(LIVE,'Send Back Build','Judge Enforcer Record',bs),b=await run(CAND,'Send Back Build','Judge Enforcer Record',bs);const ns=x=>(x.find(z=>z.sb_not_sent)||{}).sb_not_sent||[];const key=i=>i.rule+'|'+i.item+'|'+String(i.line||i.flagged_line||'');
+  console.log('E1',nm,'not_sent live',ns(a).length,'cand',ns(b).length,'|',a.map(x=>{const y=b.find(z=>z.seat===x.seat)||{};const li=x.items||[],ci=y.items||[];return x.seat+' '+li.length+'->'+ci.length+' gone '+li.filter(i=>!ci.some(j=>key(j)===key(i))).length+' new '+ci.filter(i=>!li.some(j=>key(j)===key(i))).length;}).join(' ; '));}
+ const stripC=s=>s.split(CL).join('');
+ {const a=await run(LIVE,'Gate Build','Reread Record',base),b=await run(CAND,'Gate Build','Reread Record',base);
+  console.log('E2 34780 Gate Build: equal after removing the clause:',T(S(a))===T(stripC(S(b)).split(CL.replace(/"/g,'\\"')).join('')),'| clause count in candidate output:',S(b).split(CL.replace(/"/g,'\\"')).length-1,'| in live:',S(a).split(CL.replace(/"/g,'\\"')).length-1);
+  const sol=b.find(z=>z.seat==='sol');(sol.items||[]).forEach(i=>console.log('   sol',i.gid,i.kind,i.src,'|',String(i.why).slice(0,150)));const m=sol.msg;const k=m.indexOf('ITEM G2');console.log('   MSG:',m.slice(k,k+190).replace(/\n/g,' / '));
+  const a2=await run(LIVE,'Gate Build','Reread Record',b0),b2=await run(CAND,'Gate Build','Reread Record',b0);console.log('E2 34726 Gate Build equal:',T(S(a2))===T(S(b2)));
+  for(const [node,i,bs,nm] of [['Gate Record','Gate Call',base,'34780'],['Gate Record','Gate Call',b0,'34726']]){const x=await run(LIVE,node,i,bs),y=await run(CAND,node,i,bs);console.log('E2',nm,node,'equal:',T(S(x))===T(S(y)));}}
+ const plant=to=>{const o=Object.assign({},base);o['Send Back Record']=J(base['Send Back Record']);const it=o['Send Back Record'][0][0].json.sb_items;const x=it.find(z=>z.seat==='sol'&&z.sid==='S4');x.ans='CHANGE';x.to=to;const y=it.find(z=>z.seat==='sol'&&z.sid==='S5');y.ans='KEEP';y.to='';return o;};
+ const P=['RETRACTED: D1 vs C3','RETRACTED: D1 vs C3.','RETRACTED: D1 vs C3 -- the meaning-based forced-link ruling is withdrawn (Commitments 3 and 13).','RETRACTED: D1 vs C3 — withdrawn','RETRACTED: D1 vs C3 -- the ruling holds','RETRACTED: D1 vs C3 -- no change','RETRACTED: D1 vs C3 -- reaffirmed','RETRACTED: D1 vs C3 -- the break is upheld','RETRACTED: D1 vs C3 -- I do not retract this ruling','RETRACTED: D1 vs C3 -- the defender has withdrawn the claim, so the forced ruling is right','RETRACTED: D1 vs C3; withdrawn','RETRACTED: D1 vs C3 (withdrawn)','RETRACTED: D2 vs C4 -- withdrawn','RETRACTED: D2 vs C4','RETRACTED: D1 vs C3 and D2 vs C4','retracted: d1 vs c3 -- withdrawn','RETRACTED -- D1 vs C3 -- withdrawn','RETRACTED: D1 vs C3 --','RETRACTED','RETRACTED: the ruling','WITHDRAWN: D1 vs C3 -- reason','the ruling is retracted: D1 vs C3 -- withdrawn','FORCED: D1 vs C3 -- MEANS [DR2]: "x" -- ANSWER [CR3]: "y" -- FAILS: "z"','STANDS','KEEP',''];
+ for(const to of P){const st=plant(to);const a=await run(LIVE,'Gate Build','Reread Record',st),b=await run(CAND,'Gate Build','Reread Record',st);const g=arr=>{const s=arr.find(z=>z.seat==='sol');const it=(s.items||[]).find(i=>/S4/.test(i.src||''));return it?it:null;};const x=g(a),y=g(b);
+  const eq=T(S(a))===T(stripC(S(b)).split(CL.replace(/"/g,'\\"')).join(''));console.log('E3',S(to).slice(0,62),'| LIVE:',x?'NOT APPLIED':'applied','| CAND:',y?'NOT APPLIED':'applied','| clause:',!!(y&&String(y.why).endsWith(CL)),'| all else equal:',eq);}
+})();
