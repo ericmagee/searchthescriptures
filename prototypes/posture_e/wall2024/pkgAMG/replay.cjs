@@ -4,7 +4,7 @@ const fs=require('fs');const SP=process.argv[2];
 const load=p=>{let j=JSON.parse(fs.readFileSync(p,'utf8'));j=j.data||j;return j.workflowData||j.workflow||j;};
 const parts=w=>{const T=w.nodes.find(n=>n.name==='Shared Library').parameters.jsCode;const a=T.indexOf('\n/*LIB*/'),b=T.lastIndexOf('\n/*MAP*/'),c=T.lastIndexOf('\n/*END*/');return {Lb:JSON.parse(T.slice(a+8,b)),M:JSON.parse(T.slice(b+8,c))};};
 const reb=(P,e)=>P.M[e].p.map(x=>typeof x==='number'?P.Lb[x]:typeof x[0]==='string'?x[0]:P.Lb.slice(x[0],x[1]+1).join('\n')).join('\n');
-const A=load('/mnt/project-files/wall2024/fetchback_live_s141.json'),B=load(SP);const PA=parts(A),PB=parts(B);
+const A=load(process.env.BASE||'/mnt/project-files/wall2024/fetchback_live_s141.json'),B=load(SP);const PA=parts(A),PB=parts(B);
 const ch=Object.keys(PB.M).filter(e=>reb(PA,e)!==reb(PB,e));console.log('stubs changed:',ch.map(e=>e+' '+(reb(PB,e).length-reb(PA,e).length)));
 const run=async(rd,src,node,ri)=>{const mk=name=>{const r=rd[name];const items=r?r[r.length-1].data.main.flat().filter(Boolean):[];const nd=(A.nodes.find(n=>n.name===name)||{});return {isExecuted:!!r,first:()=>items[0],all:()=>items,last:()=>items[items.length-1],item:items[0],params:nd.parameters||{}};};
  const r=rd[node][ri];const sn=r.source&&r.source[0]&&r.source[0].previousNode;const inp=mk(sn);const $input={all:()=>inp.all(),first:()=>inp.first(),item:inp.first()};

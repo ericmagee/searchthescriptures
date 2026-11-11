@@ -2,7 +2,7 @@
 const fs=require('fs');const load=p=>{let j=JSON.parse(fs.readFileSync(p,'utf8'));j=j.data||j;return j.workflowData||j.workflow||j;};
 const lib=w=>{const T=w.nodes.find(n=>n.name==='Shared Library').parameters.jsCode;const a=T.indexOf('\n/*LIB*/'),b=T.lastIndexOf('\n/*MAP*/');return JSON.parse(T.slice(a+8,b));};
 const mk=L=>new Function('N',L[3163]+L[3164]+';return giveUp;')(s=>String(s).toLowerCase());
-const O=mk(lib(load('/mnt/project-files/wall2024/fetchback_live_s141.json'))),G=mk(lib(load(process.argv[2])));
+const O=mk(lib(load(process.env.BASE||'/mnt/project-files/wall2024/fetchback_live_s141.json'))),G=mk(lib(load(process.argv[2])));
 const P=[ // [side whose text it is, paragraph, expected listed]
  ['D','It is granted that Luke 1:27 puts "of the house of David" on Joseph.',1],
  ['C','[L1] Luke 1:35: "The Holy Ghost shall come upon thee." This is granted: divine action upon Mary.',1],

@@ -1,0 +1,29 @@
+stubs changed: [
+  'Alt Send Back Record 46',
+  'R2 Alt Send Back Record 46',
+  'Send Back Record 46'
+]
+33149 Alt Send Back Record   run 0 | cure rows 0 0 | changed 0 | all else equal true
+33149 Send Back Record       run 0 | cure rows 110 110 | changed 0 | all else equal true
+33371 Alt Send Back Record   run 0 | cure rows 12 12 | changed 0 | all else equal true
+33371 Send Back Record       run 0 | cure rows 102 102 | changed 0 | all else equal true
+33490 Alt Send Back Record   run 0 | cure rows 6 6 | changed 0 | all else equal true
+33490 Send Back Record       run 0 | cure rows 105 105 | changed 0 | all else equal true
+33497 Alt Send Back Record   run 0 | cure rows 0 0 | changed 0 | all else equal true
+33497 Send Back Record       run 0 | cure rows 95 95 | changed 0 | all else equal true
+34299 Send Back Record       run 0 | cure rows 94 94 | changed 0 | all else equal true
+34626 Alt Send Back Record   run 0 | cure rows 0 0 | changed 0 | all else equal true
+34626 Send Back Record       run 0 | cure rows 131 131 | changed 0 | all else equal true
+34703 Alt Send Back Record   run 0 | cure rows 0 0 | changed 0 | all else equal true
+34703 Send Back Record       run 0 | cure rows 127 127 | changed 0 | all else equal true
+34726 Alt Send Back Record   run 0 | cure rows 0 0 | changed 0 | all else equal true
+34726 Send Back Record       run 0 | cure rows 140 140 | changed 0 | all else equal true
+34780 Alt Send Back Record   run 0 | cure rows 0 0 | changed 0 | all else equal true
+34780 Send Back Record       run 0 | cure rows 141 141 | changed 0 | all else equal true
+34852 Alt Send Back Record   run 0 | cure rows 16 16 | changed 0 | all else equal true
+34852 Send Back Record       run 0 | cure rows 100 100 | changed 0 | all else equal true
+35067 Alt Send Back Record   run 0 | cure rows 0 0 | changed 0 | all else equal true
+35067 Send Back Record       run 0 | cure rows 103 103 | changed 0 | all else equal true
+35173 Alt Send Back Record   run 0 | cure rows 14 14 | changed 0 | all else equal true
+35173 Send Back Record       run 0 | cure rows 66 66 | changed 0 | all else equal true
+TOTAL {"runs":23,"changed":0,"toCured":0,"toUncured":0,"errs":0}
