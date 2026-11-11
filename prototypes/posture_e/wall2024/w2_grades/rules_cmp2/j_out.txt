@@ -1,0 +1,20 @@
+JAGR candidates 2974:13959 3282:13722
+UNPROVEN       JAGR: 0
+PRESSED WITH   JAGR: 1
+verbatim       JAGR: 0
+NEW IN CLOSE   JAGR: 0
+NOT COUNTED    JAGR: 0
+another verse  JAGR: 0
+citation       JAGR: 1
+reference      JAGR: 8
+E-ANS reference sentences: [
+  `The answer is every line the answering side wrote under the pressed verse, up to the next pressed verse, its layers included, and also the block the answer points to ("answered under link 3") and any line of a later round of that side (its round 2, its link round or, for the defender, its close round [CR4]) that quotes the verse or names it by reference, as THE SIDE\\'S OTHER LINES ON THIS VERSE shows; an answer given there counts as the answer; when THE ANSWER IN FULL is given, grade it, not a shorter quotation of it in a judge line.`
+]
+E-VOID len 726 | quote mentions: [
+  "A premise is VOID only when its charge says the opponent\\'s quoted words state something they do not state (a negation, a universal, or another claim beyond the quote).",
+  `The charge is the premise\\'s own words before its quote (for example "The inference that .`,
+  '"), read against the words of that quote.',
+  'AGREE with the VOID ruling when the charge goes beyond its quote; DISAGREE when it does not.'
+]
+UNPROVEN row 33149 chatgpt E-HOLD ENFORCER AGREE (right: UNDERDETERMINED): Both defender and challenger answers on Luke 1:36 are MEETS, and the challenger's MISSES is marked "UNPROVEN press: no 
+UNPROVEN row 33149 chatgpt E-HOLD ENFORCER AGREE (right: UNDERDETERMINED): The defender's and challenger's answers on Matthew 1:20 are MEETS, and the only MISSES is on an "UNPROVEN press: no ans
