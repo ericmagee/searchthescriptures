@@ -1,0 +1,14 @@
+== Judge Enforcer Build | old replay equals stored output: true
+ calls old 8 new 8 | E-COL ids old 6 new 0 | other ids old 209 new 209 | request body chars old 532190 new 525687 diff -6503
+ E-COL ids no longer asked 6 | NOT ASKED code rows 6 | every one has its row true
+   luna COLLISION D5 vs C6 | stored verdict: ENFORCER DISAGREE (right: STANDS): The line's ground is a cl
+   chatgpt COLLISION D5 vs C4 | stored verdict: ENFORCER DISAGREE (right: STANDS): The line rests on the def
+   chatgpt COLLISION D5 vs C6 | stored verdict: ENFORCER DISAGREE (right: STANDS): The line's ground is a cl
+   sol COLLISION D5 vs C1 | stored verdict: ENFORCER DISAGREE (right: STANDS): The break is stated as a 
+   sol COLLISION D5 vs C4 | stored verdict: ENFORCER DISAGREE (right: STANDS): The line quotes no answer
+   sol COLLISION D5 vs C6 | stored verdict: ENFORCER DISAGREE (right: STANDS): The ground given is the d
+ every non-E-COL item still asked: true
+== Alt Judge Enforcer Build | old replay equals stored output: true
+ calls old 5 new 5 | E-COL ids old 10 new 10 | other ids old 71 new 71 | request body chars old 303690 new 303690 diff 0
+ E-COL ids no longer asked 0 | NOT ASKED code rows 0 | every one has its row true
+ every non-E-COL item still asked: true

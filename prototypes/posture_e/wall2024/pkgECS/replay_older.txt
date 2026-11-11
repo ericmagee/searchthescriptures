@@ -1,0 +1,54 @@
+### 35067
+== Judge Enforcer Build | old replay equals stored output: true
+ calls old 8 new 7 | E-COL ids old 18 new 2 | other ids old 184 new 184 | request body chars old 494993 new 445756 diff -49237
+ E-COL ids no longer asked 16 | NOT ASKED code rows 16 | every one has its row true
+ every non-E-COL item still asked: true
+== Alt Judge Enforcer Build | old replay equals stored output: true
+ calls old 1 new 1 | E-COL ids old 0 new 0 | other ids old 0 new 0 | request body chars old 2 new 2 diff 0
+ E-COL ids no longer asked 0 | NOT ASKED code rows 0 | every one has its row true
+ every non-E-COL item still asked: true
+### 34852
+== Judge Enforcer Build | old replay equals stored output: false
+ calls old 7 new 7 | E-COL ids old 4 new 0 | other ids old 188 new 188 | request body chars old 442606 new 439161 diff -3445
+ E-COL ids no longer asked 4 | NOT ASKED code rows 4 | every one has its row true
+ every non-E-COL item still asked: true
+== Alt Judge Enforcer Build | old replay equals stored output: false
+ calls old 2 new 2 | E-COL ids old 4 new 4 | other ids old 27 new 27 | request body chars old 151381 new 151381 diff 0
+ E-COL ids no longer asked 0 | NOT ASKED code rows 0 | every one has its row true
+ every non-E-COL item still asked: true
+### 34780
+== Judge Enforcer Build | old replay equals stored output: false
+ calls old 10 new 10 | E-COL ids old 7 new 4 | other ids old 235 new 235 | request body chars old 658584 new 651077 diff -7507
+ E-COL ids no longer asked 3 | NOT ASKED code rows 3 | every one has its row true
+ every non-E-COL item still asked: true
+== Alt Judge Enforcer Build | old replay equals stored output: true
+ calls old 1 new 1 | E-COL ids old 0 new 0 | other ids old 0 new 0 | request body chars old 2 new 2 diff 0
+ E-COL ids no longer asked 0 | NOT ASKED code rows 0 | every one has its row true
+ every non-E-COL item still asked: true
+### 34726
+== Judge Enforcer Build | old replay equals stored output: false
+ calls old 10 new 10 | E-COL ids old 6 new 2 | other ids old 240 new 240 | request body chars old 675461 new 675814 diff 353
+ E-COL ids no longer asked 4 | NOT ASKED code rows 4 | every one has its row true
+ every non-E-COL item still asked: true
+== Alt Judge Enforcer Build | old replay equals stored output: true
+ calls old 1 new 1 | E-COL ids old 0 new 0 | other ids old 20 new 20 | request body chars old 80678 new 80678 diff 0
+ E-COL ids no longer asked 0 | NOT ASKED code rows 0 | every one has its row true
+ every non-E-COL item still asked: true
+### 34703
+== Judge Enforcer Build | old replay equals stored output: false
+ calls old 9 new 8 | E-COL ids old 8 new 0 | other ids old 215 new 215 | request body chars old 570263 new 535638 diff -34625
+ E-COL ids no longer asked 8 | NOT ASKED code rows 8 | every one has its row true
+ every non-E-COL item still asked: true
+== Alt Judge Enforcer Build | old replay equals stored output: true
+ calls old 1 new 1 | E-COL ids old 0 new 0 | other ids old 17 new 17 | request body chars old 75681 new 75681 diff 0
+ E-COL ids no longer asked 0 | NOT ASKED code rows 0 | every one has its row true
+ every non-E-COL item still asked: true
+### 34626
+== Judge Enforcer Build | old replay equals stored output: false
+ calls old 8 new 8 | E-COL ids old 8 new 2 | other ids old 230 new 230 | request body chars old 521964 new 515728 diff -6236
+ E-COL ids no longer asked 6 | NOT ASKED code rows 6 | every one has its row true
+ every non-E-COL item still asked: true
+== Alt Judge Enforcer Build | old replay equals stored output: true
+ calls old 1 new 1 | E-COL ids old 0 new 0 | other ids old 0 new 0 | request body chars old 2 new 2 diff 0
+ E-COL ids no longer asked 0 | NOT ASKED code rows 0 | every one has its row true
+ every non-E-COL item still asked: true
