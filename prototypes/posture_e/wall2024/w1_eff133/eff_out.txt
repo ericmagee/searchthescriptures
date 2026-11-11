@@ -1,0 +1,46 @@
+code nodes 176 stubs 42 library chars 864548
+  146639 Panel Build
+  121232 Build Independent Verdict
+   83942 Format Markdown
+   76603 Build Save Body
+   64420 D4 Build
+   53865 C4 Build
+   52991 D4B Extract
+   47640 C3 Build
+   47291 C3B Extract
+   46760 D3 Build
+   44432 D3B Extract
+   43216 D2B Extract
+   43175 C2B Extract
+   42850 C1B Extract
+   42596 Enforcer Build
+dup lines >=200 in >=2 non-stub nodes: 306 saveable chars 693648
+82332 | 7 | 13722 | Panel Build, Reserve Build, Accept Build, Accept Check |  const PART2="You are an adjudicator of a debate record. You decide which side the verses 
+39136 | 33 | 1223 | Init with Guards, D1 Build, C1 Build, C1 Extract |  Object.assign(BK,{psalm:'Psalms',song:'Song of Solomon',songofsongs:'Song of Solomon',can
+22275 | 26 | 891 | C1 Extract, D2 Build, D2 Extract, C2 Build |   return '[L2] SHEET -- read by the system from the record\'s original-words table (origin
+20940 | 6 | 4188 | D3 Build, C3 Build, Build Independent Verdict, Panel Build |  const CHL=(()=>{const o={};'Luke=80,52,38,44,39,49,50,56,62,42,54,59,35,35,32,31,37,43,48
+19392 | 33 | 606 | Init with Guards, D1 Build, C1 Build, C1 Extract | const REFP=(()=>{const BOOKS="Genesis|Exodus|Leviticus|Numbers|Deuteronomy|Joshua|Judges|R
+15840 | 17 | 990 | D1 Extract, C1 Extract, D2 Extract, C2 Extract | const RF=(()=>{const d=$input.first().json||{};if(B.fam==='anthropic')return d.stop_reason
+9952 | 9 | 1244 | Init with Guards, D1 Build, C1 Build, D2 Build | const __PROVE9="PROVEN STRUCTURE (md_notes_rulings 397 to 400: the layers are the language
+8920 | 21 | 446 | D1 Build, C1 Build, C1 Extract, D2 Build |   return 'VERSE SHEET -- '+head+' Read by the system from the record\'s KJV table (kjv_ver
+7781 | 32 | 251 | Init with Guards, D1 Build, C1 Build, C1 Extract |  const keys=(t,o)=>{const cap=(o&&o.cap)||30;const out=[];for(const r of parse(t,o)){const
+7664 | 17 | 479 | D1 Extract, C1 Extract, D2 Extract, C2 Extract |  else{const c=(d.choices||[])[0]||{};text=(c.message&&c.message.content)||null;trunc=(c.fi
+7592 | 14 | 584 | C1B Build, C1B Extract, D2B Build, D2B Extract |  const AB=/\b(?:do(?:es)?\s+not|did\s+not|doesn['’]t|didn['’]t|never)\s+(?:deny|denies|dis
+7425 | 26 | 297 | C1 Extract, D2 Build, D2 Extract, C2 Build |   const tail=[].concat(unread.length?['verses read with no rows (Apocrypha, no such verse,
+7088 | 17 | 443 | D1 Extract, C1 Extract, D2 Extract, C2 Extract |  else if(fam==='gemini'){const c=(d.candidates||[])[0]||{};text=(((c.content||{}).parts||[
+7056 | 29 | 252 | C1 Extract, D2 Build, D2 Extract, C2 Build |  const APOC=/\b((?:1|2|I|II)\s+(?:Maccabees|Esdras)|Tobit|Judith|Wisdom(?:\s+of\s+Solomon)
+6780 | 21 | 339 | C1 Extract, D2 Build, D2 Extract, C2 Build |    const blk=blockAt(t,i);const own=refsIn(seg);const __ls=t.lastIndexOf('\n',i)+1,__le=(x
+
+OUTSIDE R1b: nodes 89 code 373727 dup lines 55 saveable 72207
+27444 | 3 | 13722 | Accept Build, Accept Check, Accept Final |  const PART2="You are an adjudicator of a debate record. You decide wh
+3504 | 7 | 584 | C1B Build, D2B Build, C2B Build, D3B Build, C3B Build, D4B Build, C4B Build |  const AB=/\b(?:do(?:es)?\s+not|did\s+not|doesn['’]t|didn['’]t|never)\
+3150 | 4 | 1050 | QR Ask Build, QR Check, QR Final, QR Merge | const QR_C8="Commitment 9. I ask only for explanation.\nA question I p
+2040 | 7 | 340 | C1B Build, D2B Build, C2B Build, D3B Build, C3B Build, D4B Build, C4B Build |  const GIVE=/\bI\s+(?:drop|withdraw|narrow|grant|concede|accept|allow|
+1761 | 4 | 587 | QR Ask Build, QR Check, QR Final, QR Merge | const QR_BOOKS="Genesis|Exodus|Leviticus|Numbers|Deuteronomy|Joshua|Ju
+1614 | 7 | 269 | C1B Build, D2B Build, C2B Build, D3B Build, C3B Build, D4B Build, C4B Build |  const LINE=/^[\s>*_\-•]*IMPOSED\s*:\s*\[\s*((?:CR|DR)[1-4])\s*\]\s*["
+1578 | 7 | 263 | C1B Build, D2B Build, C2B Build, D3B Build, C3B Build, D4B Build, C4B Build |   const md=l=>{const m=l.match(/^\s*(#{1,6})\s/);return m?m[1].length:
+1488 | 7 | 248 | C1B Build, D2B Build, C2B Build, D3B Build, C3B Build, D4B Build, C4B Build |      const key=k+'|'+W(s);if(seen.has(key))continue;seen.add(key);cons
+1464 | 7 | 244 | C1B Build, D2B Build, C2B Build, D3B Build, C3B Build, D4B Build, C4B Build |  function note(c){return "BARRED MOVES CHECK -- computed by the system
+1392 | 7 | 232 | C1B Build, D2B Build, C2B Build, D3B Build, C3B Build, D4B Build, C4B Build |    for(const para of t.split(/(\n)/)){const at=off;off+=para.length;if
+1362 | 7 | 227 | C1B Build, D2B Build, C2B Build, D3B Build, C3B Build, D4B Build, C4B Build |   +"If a sentence only denies a requirement that the other side impose
+1344 | 7 | 224 | C1B Build, D2B Build, C2B Build, D3B Build, C3B Build, D4B Build, C4B Build |  function rebutOk(l,round,R){if(!l||!l.nar)return {ok:false,why:'not a
