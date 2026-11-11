@@ -1,0 +1,31 @@
+cand sha 71d4e8af75c9eb0e
+SIZE changed nodes: Shared Library 326 | node count 418 418 | connections and rest equal true
+F2 B9 no confirmed list: candidate equals live true
+F1 R1 | live NOT APPLIED | cand APPLIED | expected APPLIED PASS | applied result equals bare form true | other seats equal live true
+F1 R2 | live APPLIED | cand APPLIED | expected APPLIED PASS | applied result equals bare form true | other seats equal live true
+F1 R3 | live NOT APPLIED | cand APPLIED | expected APPLIED PASS | applied result equals bare form true | other seats equal live true
+F1 R4 | live NOT APPLIED | cand APPLIED | expected APPLIED|RECORD PASS | applied result equals bare form true | other seats equal live true
+F1 R5 | live NOT APPLIED | cand NOT APPLIED | expected NOT APPLIED PASS | applied result equals bare form - | other seats equal live true
+F1 R6 | live NOT APPLIED | cand NOT APPLIED | expected NOT APPLIED PASS | applied result equals bare form - | other seats equal live true
+F1 R7 | live NOT APPLIED | cand NOT APPLIED | expected NOT APPLIED PASS | applied result equals bare form - | other seats equal live true
+F1 R8 | live NOT APPLIED | cand NOT APPLIED | expected NOT APPLIED PASS | applied result equals bare form - | other seats equal live true
+F1 R9 | live NOT APPLIED | cand NOT APPLIED | expected NOT APPLIED PASS | applied result equals bare form - | other seats equal live true
+F1 R10 | live NOT APPLIED | cand APPLIED | expected APPLIED PASS | applied result equals bare form true | other seats equal live true
+F1 total 10 / 10
+F2 B1 | live SENT | cand HELD | expected HELD PASS | not_sent added 3 gone 0 | luna+chatgpt items equal true
+   added: sol E-COL COLLISION D1 vs C3 |  | 
+   added: sol E-COL COLLISION D1 vs C3 |  | 
+   added: sol E-COL COLLISION D1 vs C3 |  | 
+F2 B2 | live SENT | cand HELD | expected HELD PASS | not_sent added 4 gone 0 | luna+chatgpt items equal true
+F2 B3 | live SENT | cand HELD | expected HELD PASS | not_sent added 4 gone 0 | luna+chatgpt items equal true
+F2 B4 | live SENT | cand SENT | expected SENT PASS | not_sent added 3 gone 0 | luna+chatgpt items equal true
+F2 B5 | live SENT | cand SENT | expected SENT PASS | not_sent added 3 gone 0 | luna+chatgpt items equal true
+F2 B6 | live SENT | cand SENT | expected SENT PASS | not_sent added 3 gone 0 | luna+chatgpt items equal true
+F2 B7 | live SENT | cand SENT | expected SENT PASS | not_sent added 3 gone 0 | luna+chatgpt items equal true
+F2 B10 | live SENT | cand HELD | expected HELD PASS | not_sent added 4 gone 0 | luna+chatgpt items equal true
+F2 B8 sol non-E-COL items equal live false 10 10
+F2 total 8 / 9
+34726 not_sent added luna COLLISION D1 vs C3 |  gone 0
+34726 luna items live 26 cand 25
+34726 sol items live 10 cand 10
+34726 chatgpt items live 2 cand 2
