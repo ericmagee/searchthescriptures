@@ -16,8 +16,8 @@ The check sets no grade itself (ruling 428, record-only trial); its DISAGREE and
 
 The section is used by Judge Enforcer Build, Alt Judge Enforcer Build and R2 Alt Judge Enforcer Build (Shared Library).
 
-Size: code +2,192; prompt +322 characters per check call.
-The added section never leaves an item unchecked: when the call cap (10 calls) would push an item out, the code drops the added section from the largest items first until every item fits as it would without it (pkgA1N rev 2).
+Size: code +2,203; prompt +322 characters per check call.
+The added section never leaves an item unchecked: when the call cap (10 calls) would push an item out, the code drops the added section from the largest items first until no item is unchecked that would be checked without it (pkgA1N rev 3).
 Cost: +26K to +146K check text per stored run, 0 to 2 more DeepSeek calls per run.
 
 Limits:
