@@ -1,0 +1,46 @@
+FAIL Alt_Gate_Build.js step cap
+FAIL Alternate_Build.js step cap
+FAIL Alternate_Cure_Build.js step cap
+FAIL Alternate_Merge_1.js step cap
+FAIL Build_Synthesis.js at live 21006 trim 20029 "stored};})();\nconst __orc=(b,fam,model,key)=>{if(fam!=='openrouter'||!b||!Array." VS "};})();\nconst __orc=(b,fam,model,key)=>{if(fam!=='openrouter'||!b||!Array.isArra"
+FAIL C1B_Build.js at live 8285 trim 4434 "roundsOf};})();\nconst BAR=(()=>{\n const W=s=>String(s||'').toLowerCase().replace" VS "};})();\nconst BAR=(()=>{\n const W=s=>String(s||'').toLowerCase().replace(/[‘’]/g"
+FAIL C2B_Build.js at live 8285 trim 4434 "roundsOf};})();\nconst BAR=(()=>{\n const W=s=>String(s||'').toLowerCase().replace" VS "};})();\nconst BAR=(()=>{\n const W=s=>String(s||'').toLowerCase().replace(/[‘’]/g"
+FAIL C2_Lexicon_Plan.js step cap
+FAIL C3B_Build.js at live 8285 trim 4434 "roundsOf};})();\nconst BAR=(()=>{\n const W=s=>String(s||'').toLowerCase().replace" VS "};})();\nconst BAR=(()=>{\n const W=s=>String(s||'').toLowerCase().replace(/[‘’]/g"
+FAIL C3B_Extract.js at live 8291 trim 6026 "Of};})();\nconst BAR=(()=>{\n const W=s=>String(s||'').toLowerCase().replace(/[‘’]" VS "};})();\nconst BAR=(()=>{\n const W=s=>String(s||'').toLowerCase().replace(/[‘’]/g"
+FAIL C3G_Extract.js at live 22314 trim 21706 "audit};})();\nconst REFP=(()=>{const BOOKS=\"Genesis|Exodus|Leviticus|Numbers|Deut" VS "};})();\nconst REFP=(()=>{const BOOKS=\"Genesis|Exodus|Leviticus|Numbers|Deuterono"
+FAIL C3_Extract.js at live 21828 trim 21220 "audit};})();\nconst REFP=(()=>{const BOOKS=\"Genesis|Exodus|Leviticus|Numbers|Deut" VS "};})();\nconst REFP=(()=>{const BOOKS=\"Genesis|Exodus|Leviticus|Numbers|Deuterono"
+FAIL C3_Lexicon_Plan.js step cap
+FAIL C4B_Build.js at live 8285 trim 4434 "roundsOf};})();\nconst BAR=(()=>{\n const W=s=>String(s||'').toLowerCase().replace" VS "};})();\nconst BAR=(()=>{\n const W=s=>String(s||'').toLowerCase().replace(/[‘’]/g"
+FAIL C4B_Extract.js at live 8285 trim 5767 "roundsOf};})();\nconst BAR=(()=>{\n const W=s=>String(s||'').toLowerCase().replace" VS "};})();\nconst BAR=(()=>{\n const W=s=>String(s||'').toLowerCase().replace(/[‘’]/g"
+FAIL C4G_Extract.js at live 25129 trim 15755 "stored};})();\nconst TOK=$('Init Seats').first().json.run_token;const RT=' run_to" VS "};})();\nconst TOK=$('Init Seats').first().json.run_token;const RT=' run_token='+"
+FAIL C4_Build.js at live 28080 trim 26784 ",CAP_C};})();\nconst REFP=(()=>{const BOOKS=\"Genesis|Exodus|Leviticus|Numbers|Deu" VS "{text,CAP_V,CAP_C};})();\nconst REFP=(()=>{const BOOKS=\"Genesis|Exodus|Leviticus|"
+FAIL C4_Extract.js at live 24641 trim 15267 "stored};})();\nconst TOK=$('Init Seats').first().json.run_token;const RT=' run_to" VS "};})();\nconst TOK=$('Init Seats').first().json.run_token;const RT=' run_token='+"
+FAIL C4_Lexicon_Plan.js step cap
+FAIL Citation_Scan.js step cap
+FAIL Cure_Build.js step cap
+FAIL D2B_Build.js at live 8285 trim 4434 "roundsOf};})();\nconst BAR=(()=>{\n const W=s=>String(s||'').toLowerCase().replace" VS "};})();\nconst BAR=(()=>{\n const W=s=>String(s||'').toLowerCase().replace(/[‘’]/g"
+FAIL D2_Lexicon_Plan.js step cap
+FAIL D3B_Build.js at live 8285 trim 4434 "roundsOf};})();\nconst BAR=(()=>{\n const W=s=>String(s||'').toLowerCase().replace" VS "};})();\nconst BAR=(()=>{\n const W=s=>String(s||'').toLowerCase().replace(/[‘’]/g"
+FAIL D3B_Extract.js at live 8291 trim 6026 "Of};})();\nconst BAR=(()=>{\n const W=s=>String(s||'').toLowerCase().replace(/[‘’]" VS "};})();\nconst BAR=(()=>{\n const W=s=>String(s||'').toLowerCase().replace(/[‘’]/g"
+FAIL D3_Extract.js at live 21828 trim 21220 "audit};})();\nconst REFP=(()=>{const BOOKS=\"Genesis|Exodus|Leviticus|Numbers|Deut" VS "};})();\nconst REFP=(()=>{const BOOKS=\"Genesis|Exodus|Leviticus|Numbers|Deuterono"
+FAIL D3_Lexicon_Plan.js step cap
+FAIL D4B_Build.js at live 8285 trim 4434 "roundsOf};})();\nconst BAR=(()=>{\n const W=s=>String(s||'').toLowerCase().replace" VS "};})();\nconst BAR=(()=>{\n const W=s=>String(s||'').toLowerCase().replace(/[‘’]/g"
+FAIL D4B_Extract.js step cap
+FAIL D4_Build.js at live 37967 trim 36671 ",CAP_C};})();\nconst REFP=(()=>{const BOOKS=\"Genesis|Exodus|Leviticus|Numbers|Deu" VS "{text,CAP_V,CAP_C};})();\nconst REFP=(()=>{const BOOKS=\"Genesis|Exodus|Leviticus|"
+FAIL D4_Extract.js at live 43819 trim 35959 ",stored};})();\nconst TOK=$('Init Seats').first().json.run_token;const RT=' run_t" VS "D,renum,declared,dlinks,cblocks,};})();\nconst TOK=$('Init Seats').first().json.r"
+FAIL D4_Lexicon_Plan.js step cap
+FAIL Early_Alternate_Build.js step cap
+FAIL Gate_Build.js step cap
+FAIL L2_Lexicon_Plan.js step cap
+FAIL Panel_Cure_Build_1.js step cap
+FAIL Panel_Cure_Build_2.js step cap
+FAIL Panel_Cure_Build_3.js step cap
+FAIL Quote_Report.js step cap
+FAIL R2_Alt_Gate_Build.js step cap
+FAIL R2_Alternate_Build.js step cap
+FAIL R2_Alternate_Cure_Build.js step cap
+FAIL R2_Alternate_Merge.js step cap
+changed nodes 95 | proven as whole-node cuts 52 | failed 43 | cuts 1994 | characters removed (effective sources) 1603454 | kinds {"VariableDeclaration":297,"FunctionDeclaration":1441,"Property":256}
+removed names still read in the trimmed source and not declared there: none
+trimmed sources with eval( or with(: none

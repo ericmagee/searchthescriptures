@@ -1,0 +1,14 @@
+changed nodes 95 | AST proven: trimmed = live minus whole list elements 95 | failed 0 | elements removed 6621 {"Property":1066,"VariableDeclaration":1287,"FunctionDeclaration":4268} | characters removed in effective sources 5078915
+removed names read in the trimmed source and declared nowhere in it: none
+trimmed sources containing eval( or with(: none
+removed elements whose value is not plainly side-effect free: 0
+removed names that still occur as identifiers in the trimmed source (a same-named binding elsewhere in the file): 0
+new Function in trimmed sources: 0 | computed reads of globalThis/self/this: 0 | strings naming a removed function as a call: 8
+   Alternate_Cure_Build.js entries in "\n\nANSWER FORMAT: return one JSON object with one key, cure_lines: an array holding, in order, every "
+   Alternate_Merge_1.js premise in " counted premise(s) ("
+   Cure_Build.js entries in "\n\nANSWER FORMAT: return one JSON object with one key, cure_lines: an array holding, in order, every "
+   Panel_Cure_Build_1.js entries in "\n\nANSWER FORMAT: return one JSON object with one key, cure_lines: an array holding, in order, every "
+   Panel_Cure_Build_2.js entries in "\n\nANSWER FORMAT: return one JSON object with one key, cure_lines: an array holding, in order, every "
+   Panel_Cure_Build_3.js entries in "\n\nANSWER FORMAT: return one JSON object with one key, cure_lines: an array holding, in order, every "
+   R2_Alternate_Cure_Build.js entries in "\n\nANSWER FORMAT: return one JSON object with one key, cure_lines: an array holding, in order, every "
+   R2_Alternate_Merge.js premise in " counted premise(s) ("
