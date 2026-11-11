@@ -14,7 +14,7 @@
 
 ## Debate B
 - terra 34726 and sol 34726 grade every pair UNDERDETERMINED (sol D4 STANDS): RIGHT by the same reading as terra 34780 (11 of 12 right; D4 vs C2 OPEN on the defender's own grants G3, G7, G8, G9).
-- luna 34780 (RESULT: DEFENDER WINS): D1 vs C3 graded CHALLENGER LINK BROKEN is WRONG by the test: C3's knowing within the espousal is an [L4] the record neither states nor refutes, and the defender itself granted the timing readings (G4, G24, G25). Its STANDS grades (D2 vs C5, C6; D3 vs C1, C3; D5 vs C2, C5) are stronger than the record gives (both sides footed, last step inferential on both): UNDERDETERMINED would be right. DEFENDER WINS rests on those: WRONG on the RESULT line (the HELD tag itself follows from k=0).
+- [Corrected 19:03 CST, Wall 4551: OPEN, a meaning call on a FORCED answer quoting [DR3], not an error the rulebook settles.] luna 34780 (RESULT: DEFENDER WINS): D1 vs C3 graded CHALLENGER LINK BROKEN was first read here as WRONG by the test: C3's knowing within the espousal is an [L4] the record neither states nor refutes, and the defender itself granted the timing readings (G4, G24, G25). Its STANDS grades (D2 vs C5, C6; D3 vs C1, C3; D5 vs C2, C5) are stronger than the record gives (both sides footed, last step inferential on both): UNDERDETERMINED would be right. DEFENDER WINS rests on those: WRONG on the RESULT line (the HELD tag itself follows from k=0).
 
 ## Result
 - 10 of 11 first HELD texts: the HELD tag is right by the rulebook (k=0 on the arguments; the break comes from the contradiction rule after judging). Open on the count side: D6 in debate A, D4 in debate B.
