@@ -1,0 +1,36 @@
+const fs=require('fs');const run=require(process.cwd()+'/pkgKSR/run_node.cjs');
+const g=f=>{let d=JSON.parse(fs.readFileSync(f,'utf8'));d=d.data||d;return d.workflow||d;};
+const src=(f,n)=>g(f).nodes.find(x=>x.name===n).parameters.jsCode;
+const LIVE='/mnt/project-files/wall2024/fetchback_live_s119.json',RCL='/mnt/project-files/wall2024/parent_s119_RCL2.json',CLK='/mnt/project-files/wall2024/parent_s119_CLK3.json';
+const load=ex=>JSON.parse(fs.readFileSync('/mnt/project-files/wall2024/'+ex,'utf8')).data.resultData.runData;
+const Fof=rd=>rd['Regrade Load']?rd['Regrade Load'][0].data.main[0][0].json.f:rd['Final Output'][0].data.main[0][0].json;
+const build=async(file,rd)=>{const b=await run(src(file,'Close Enforcer Build'),'Close Enforcer Build',JSON.parse(JSON.stringify(rd)));if(b.err)return {err:b.err};return b.map(x=>x.json||x);};
+const cs=b=>b.err?('ERR '+b.err):b.flatMap(x=>x.cands||[]).filter(c=>/pkgRCL/.test(c.by)).map(c=>c.id+' '+c.side+' L'+c.n+' ['+c.earlier_round+'] "'+c.earlier_q.slice(0,60)+'" | "'+c.closing_q.slice(0,70)+'" | '+c.why.slice(0,70));
+const line=(c,v)=>'CLOSE-CONTRADICTION: '+c.id+' -- '+c.side+' -- LINK '+c.n+' -- '+v+' -- EARLIER ['+c.earlier_round+'] "'+c.earlier_q+'" -- CLOSING ['+c.closing_round+'] "'+c.closing_q+'" -- planted';
+const rec=async(recFile,rd,b)=>{rd=JSON.parse(JSON.stringify(rd));rd['Close Enforcer Build'][rd['Close Enforcer Build'].length-1].data.main[0]=b.map(x=>({json:x}));const c=b.flatMap(x=>x.cands||[]).filter(c=>/pkgRCL/.test(c.by));const call=rd['Close Enforcer Call deepseek'];const m=call[call.length-1].data.main[0][0].json.choices[0].message;m.content=m.content+'\n'+c.map(x=>line(x,'CONFIRMED')).join('\n');
+ const o=await run(src(recFile,'Close Enforcer Record'),'Close Enforcer Record',rd);if(o.err)return 'ERR '+o.err;const j=(o[0]&&(o[0].json||o[0]))||{};const C=j.cec||j;return {rows:(C.rows||[]).map(r=>[r.id,r.link,r.status,(r.note||'').slice(0,70)].join('|')),confirmed:(C.confirmed||[]).map(x=>x.side+' '+x.link)};};
+const P=async(name,ex,mut,opt={})=>{const rd=load(ex);const F=Fof(rd);if(mut)mut(F);const b=await build(RCL,rd);console.log('##',name);const c=cs(b);console.log(Array.isArray(c)&&c.length?c.join('\n'):c.length?c:'(no pkgRCL candidate)');if(opt.rec&&!b.err)for(const [n,f] of [['live Record',LIVE],['CLK3 Record',CLK]])console.log(' ',n,JSON.stringify(await rec(f,rd,b)));};
+const TOP='My chain stands as declared, D1 to D6.';
+(async()=>{
+const S=(name,sent,opt)=>P(name,'ex34852_full.json',F=>{if(!F.cr4.includes(TOP))console.log('!! top missing');F.cr4=F.cr4.replace(TOP,sent).replace('I keep D1 to D6 as declared.','');},opt);
+await P('P0 stored 34852, all CONFIRMED','ex34852_full.json',null,{rec:true});
+await S('N1','My chain, D1 to D6, stands as declared.');
+await S('N2','As declared, I keep D1 to D6.');
+await S('N3','I keep D1 to D6 as declared, and I do not retreat from any of them.');
+await S('N4','I cannot do other than keep D1 to D6 as declared.');
+await S('N5','Nothing the challenger pressed moves me: D1 to D6 stand as declared.');
+await S('N6',"The challenger's C1 to C5 fail, and my D1 to D6 stand as declared.");
+await S('N7','In round 1 I wrote "my chain stands as declared" and I now keep only D2.');
+await S('N8','D1, D3 and D5 stand as narrowed; D2, D4 and D6 stand as declared.');
+await S('N9','D2, D4 and D6 stand as narrowed and D1, D3 and D5 as declared.');
+await S('N10 (P1)','I keep D2, D4 and D6 as declared and D1, D3 and D5 as narrowed in round 3.');
+await S('N11','The challenger says my chain cannot stand as declared. I answer plainly. I keep D1 to D6 as declared.');
+await S('N12','I keep D1 to D6 as declared only where round 3 did not narrow them.');
+await S('N13','If I kept D1 to D6 as declared, the press would bite; I keep them as narrowed.');
+await P('P2 only the last-line sentence (D6 block), all CONFIRMED','ex34852_full.json',F=>{F.cr4=F.cr4.replace(TOP,'My answers follow.');},{rec:true});
+await P('P5 34626 six candidates, all CONFIRMED','ex34626_full.json',null,{rec:true});
+await P('P6a empty close','ex34852_full.json',F=>{F.cr4='';});
+await P('P6c no narrowing','ex34852_full.json',F=>{F.cr3=F.cr3.replace(/NARROWED TO:/g,'SUPPORTED.');});
+for(const ex of ['ex34726_full.json','ex34780_full.json']){const rd=load(ex);const a=await build(LIVE,rd),b=await build(RCL,rd);console.log('## P7',ex,'byte-equal to live',JSON.stringify(a)===JSON.stringify(b));}
+await P('P8 challenger','ex34852_full.json',F=>{F.dr3=F.dr3.replace('**LINK 2: SUPPORTED.**','**LINK 2: NARROWED TO:**');F.dr4=F.dr4+'\n\nMy chain stands as declared, C1 to C5.\n';},{rec:true});
+})();
