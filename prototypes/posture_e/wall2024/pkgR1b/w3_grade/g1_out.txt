@@ -1,0 +1,53 @@
+sha 80146a7831bd6411 0f7834baf1fdb688 nodes 418 418
+code 3245024 1812268 -1432756 | changed nodes 46 | non-code node differences 0 | missing 0 | top-level keys differing none
+  Shared Library | 858143 | 1249281
+  Panel Build | 151065 | 1699
+  Build Independent Verdict | 123788 | 1707
+  Format Markdown | 84504 | 1980
+  D4 Build | 81846 | 1858
+  Build Save Body | 78103 | 1985
+  C4 Build | 70745 | 1875
+  D4B Extract | 64346 | 1619
+  C3B Extract | 52445 | 1603
+  C3 Build | 51447 | 1824
+  D3 Build | 50567 | 1808
+  D4 Extract | 50091 | 1599
+  D3B Extract | 48565 | 1585
+  C4B Extract | 47481 | 1637
+  D2B Extract | 46736 | 1551
+  C2B Extract | 46695 | 1568
+  C1B Extract | 46370 | 1534
+  Enforcer Build | 42596 | 1599
+  Citation Scan | 39646 | 1491
+  C3G Extract | 39226 | 1602
+  C3 Extract | 38136 | 1582
+  C2 Build | 37324 | 1807
+  D2 Build | 35519 | 1790
+  D3 Extract | 34552 | 1565
+  C4G Extract | 34023 | 1636
+  D2 Extract | 32965 | 1531
+  C4 Extract | 32926 | 1616
+  C2 Extract | 32799 | 1548
+  C1 Extract | 32716 | 1514
+  L2 Count Plan | 31541 | 1522
+  Build Synthesis | 27854 | 1671
+  Quote Report | 27213 | 1540
+  Reserve Build | 27002 | 1560
+  L2 Lexicon Plan | 20849 | 1475
+  D2 Lexicon Plan | 20708 | 1481
+  C2 Lexicon Plan | 20708 | 1481
+  D3 Lexicon Plan | 20708 | 1481
+  C3 Lexicon Plan | 20708 | 1481
+  D4 Lexicon Plan | 20708 | 1481
+  C4 Lexicon Plan | 20708 | 1481
+  Accept Return Build | 19539 | 1556
+  Accept DS Return Build | 19461 | 1547
+  R2 Alt Judge Enforcer Retry Build | 18770 | 1548
+  Alt Judge Enforcer Retry Build | 18767 | 1536
+  Judge Enforcer Retry Build | 18762 | 1520
+  D1 Build | 15441 | 1701
+--- smallest-source stub:
+// pkgLIB stub, form 3: "D1 Build". The node's full code is rebuilt line for line from the "Shared Library" node, which holds the shared lines once
+// and, under this node's name, its line list, its own lines and its length. This stub changes only when the nodes it reads change. The code runs unchanged with the same $ and $input.
+if(false){$("C1 Call anthropic");$("C2 Call anthropic");$("C3 Call anthropic");$("C4 Call anthropic");$("D1 Call anthropic");$("D1 Verse Sheet");$("D2 Call anthropic");$("D3 Call anthropic");$("D4 Call anthropic");$("Init Seats");$("Init with Guards");$("Resolve Seats");} /* pkgLIB v2: never runs. The task runner sends a Code node only the nodes its code text names in literal $() calls (all nodes on a non-literal $() call); the rebuilt source below is string data the runner cannot see, so its reads are named here. Run 33094. */
+const __LT=$('Shared Library').par

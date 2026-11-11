@@ -1,0 +1,49 @@
+D1 Build {"items":6}
+C1 Extract {"items":6}
+D2 Build {"items":6}
+D2 Extract {"items":6}
+C2 Build {"items":6}
+C2 Extract {"items":6}
+D3 Build {"items":9}
+D3 Extract {"items":6}
+C3 Build {"items":9}
+C3 Extract {"items":6}
+Build Synthesis {"items":6,"this":1}
+Build Independent Verdict {"items":24,"this":4}
+Build Save Body {"item":2,"items":7,"this":2}
+Panel Build {"items":26,"this":4}
+Format Markdown {"item":1,"items":6,"this":1}
+Citation Scan {"items":14}
+Quote Report {"items":12}
+Reserve Build {"items":8}
+D4 Build {"this":2,"items":9}
+D4 Extract {"items":6,"this":1}
+C4 Build {"items":9,"this":2}
+C4 Extract {"items":6,"this":1}
+Accept Return Build {"items":2}
+Accept DS Return Build {"items":2}
+L2 Count Plan {"items":6}
+Enforcer Build {"item":3}
+C4G Extract {"items":6,"this":1}
+C3G Extract {"items":6}
+C1B Extract {"this":1,"items":8}
+D2B Extract {"this":1,"items":8}
+C2B Extract {"this":1,"items":8}
+D3B Extract {"this":1,"items":8}
+C3B Extract {"this":1,"items":8}
+D4B Extract {"this":2,"items":8}
+C4B Extract {"this":2,"items":8}
+Judge Enforcer Retry Build {"item":1}
+Alt Judge Enforcer Retry Build {"item":1}
+R2 Alt Judge Enforcer Retry Build {"item":1}
+newly packed 45 | with a hit 38
+--- contexts
+D1 Build items :: ndex;} let c=+m[2];const items=[{book:b,ctx,  ||  =rest.match(RNG))){const it=items[items.length-  ||  match(RNG))){const it=items[items.length-1];con  ||  =rest.match(FULL))){c=+x[1];items.push({book:b,  ||   if((x=rest.match(BARE))){items.push({book:b,  ||  break;} HEAD.lastIndex=i;items.forEach(it=>{
+Panel Build items :: r in it.';} const __AGR_SB=(items)=>{const seen  ||  t.keys(o))walk(o[k],d+1);};(items||[]).forEach(  ||  walk(it&&it.json,0));return items;}; const __MT  ||  return items;}; const __MT=(items)=>{const seen  ||  walk(it&&it.json,0));return items;}; const __R=  ||  ndex;} let c=+m[2];const items=[{book:b,ctx,  ||  =rest.match(RNG))){const it=items[items.length-  ||  match(RNG))){const it=items[items.length-1];con
+Panel Build this :: ah 28:10), the framework of this debate and of  ||  ACCEPTED, shown back before this decision. You  ||  n|on|at|to|for|with|by|from|this|that|these|th  ||   ['+rk+']: no such round in this debate'}; i  ||   or but that which who whom this these those h  ||  ; const STOP=new Set('that this these those w  ||  (w=>w.length>=4&&!/^(?:that|this|with|from|hav  ||  by a judge (a TRIAL check): this close round r
+Enforcer Build item :: n {which:m[1].toUpperCase(),item:p.length>1?p[  ||  that request gives, one per item, and never in  ||   its reason, I answer every item it sends: I k  ||  d; a KEEP does not cure the item, and an item   ||  s not cure the item, and an item left uncured   ||  h; a KEEP does not cure the item, and an item   ||  rows.length?'no K-W or K-S3 item was asked':'n  ||  e,rk:rkOf(r),sent:sentOf(r),item:r.item,lab:(S
+Accept Return Build items :: K-KJV':12}; function quote(items,a){if(!a||PLA  ||  t out=[]; for(const x of (items||[])){const c
+Citation Scan items :: ndex;} let c=+m[2];const items=[{book:b,ctx,  ||  =rest.match(RNG))){const it=items[items.length-  ||  match(RNG))){const it=items[items.length-1];con  ||  =rest.match(FULL))){c=+x[1];items.push({book:b,  ||   if((x=rest.match(BARE))){items.push({book:b,  ||  break;} HEAD.lastIndex=i;items.forEach(it=>{  ||  r:+c,v1:+v,v2:+v}];}; const items=[];const seen  ||  pter:+m[2],verse:v1,v2}; items.push({ref:fre
+Build Save Body item :: n {which:m[1].toUpperCase(),item:p.length>1?p[  ||  [.;])\s+(?=[A-Z(\d]|premise|item|counted)/)){o  ||  )SX.push('(S-A) -- a "both" item '+(qs.length?  ||  f(hit){SX.push('(S-C) -- an item listed as cha  ||  ('(S-C) -- '+scRef.length+' item(s) listed as 
+Judge Enforcer Retry Build item :: n {which:m[1].toUpperCase(),item:p.length>1?p[  ||  FORCER line(s) for '+want+' item ids (finish_r
+C1B Extract this :: ords\b|\bI\s+hold\s+(?:that|this|the)\s+limb\b  ||  ck by the system. The press this answered coun  ||  +"\nReturn the whole round; this is the only r  ||   are was were be been being this that these th  ||  .join(', ')+' were not read this run';} els  ||  every verse cited so far in this debate (the v  ||  nal-words row could be read this round)')+(tai  ||  rgin notes. Quote only from this sheet, or fro

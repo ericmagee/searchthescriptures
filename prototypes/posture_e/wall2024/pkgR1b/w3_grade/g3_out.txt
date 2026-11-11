@@ -1,0 +1,12 @@
+Alternate Build | code equal to live true len 2922
+  map names used Alternate Build
+  rebuilt from live library 336233 | from candidate library 336233 | equal true
+  tail:  / const __e4h=s=>{s=String(s);let a=0x811c9dc5,b=0x01000193^0x9e3779b9;for(let i=0;i<s.length;i++){const c=s.charCodeAt(i);a^=c;a=Math.imul(a,0x01000193)>>>0;b^=c;b=Math.imul(b,0x01000193)>>>0;b^=b>>>13;}return a.toString(16).padStart(8,'0')+b.toString(16).padStart(8,'0');}; / const __R0=await new Function('$','$input','return (async()=>{\n'+__S+'\n})();')($,{first:()=>$('Alternate Needed?').first(),last:()=>$('Alternate Needed?').last(),all:()=>$('Alternate Needed?').all(),get item(){return $('Alt
+Early Alternate Build | code equal to live true len 4490
+  map names used Alternate Build
+  rebuilt from live library 336233 | from candidate library 336233 | equal true
+  tail:  / const __e4h=s=>{s=String(s);let a=0x811c9dc5,b=0x01000193^0x9e3779b9;for(let i=0;i<s.length;i++){const c=s.charCodeAt(i);a^=c;a=Math.imul(a,0x01000193)>>>0;b^=c;b=Math.imul(b,0x01000193)>>>0;b^=b>>>13;}return a.toString(16).padStart(8,'0')+b.toString(16).padStart(8,'0');}; / let __R0=[];try{__R0=await new Function('$','$input','return (async()=>{\n'+__S+'\n})();')($,$input);}catch(e){return [];} /* pkgE4: same build as Alternate Build; any fault starts nothing */ / const __tok=$('Init Seats').first
+live header: // pkgLIB: the shared library for the 22 library nodes (gate, cure, payload and merge node | // library sha ec3c5ca7acd9776d, 3534 lines
+cand header: // pkgLIB: the shared library for the 22 library nodes (gate, cure, payload and merge node | // library sha beee902d77f00d5f, 4021 lines
+lines 3534 4021 map 42 87 | library node itself returns: return [];
+GUARD throws: pkgLIB: rebuilt source is 151066 bytes, expected 151065 (Shared Library does not match this stub)

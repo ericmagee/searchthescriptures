@@ -1,0 +1,36 @@
+stubs live 41 | stubs candidate 86 | newly packed 45 | rebuilt equal to live 86 | not equal or error 2
+  FAIL Alternate Build no loader tail
+  FAIL Early Alternate Build no loader tail
+parse failures 0
+read-list gaps 0
+non-literal $() in sources 28
+   Cure Build non-literal $() calls in source: 1
+   Cure Normalize non-literal $() calls in source: 1
+   Cure Check non-literal $() calls in source: 1
+   Panel Cure Build 1 non-literal $() calls in source: 1
+   Panel Cure Normalize 1 non-literal $() calls in source: 1
+   Panel Cure Build 2 non-literal $() calls in source: 1
+   Panel Cure Normalize 2 non-literal $() calls in source: 1
+   Panel Cure Build 3 non-literal $() calls in source: 1
+   Panel Cure Normalize 3 non-literal $() calls in source: 1
+   Panel Cure Check non-literal $() calls in source: 1
+   Alternate Cure Build non-literal $() calls in source: 1
+   Alternate Cure Normalize non-literal $() calls in source: 1
+   Alternate Merge Seat non-literal $() calls in source: 1
+   Send Back Build non-literal $() calls in source: 1
+   Gate Build non-literal $() calls in source: 1
+   Gate Record non-literal $() calls in source: 1
+   Alt Send Back Build non-literal $() calls in source: 1
+   Alt Gate Build non-literal $() calls in source: 1
+   Alt Gate Record non-literal $() calls in source: 1
+   Alternate Merge 1 non-literal $() calls in source: 1
+   R2 Alternate Build non-literal $() calls in source: 1
+   R2 Alternate Merge Seat non-literal $() calls in source: 1
+   R2 Alternate Cure Build non-literal $() calls in source: 1
+   R2 Alt Send Back Build non-literal $() calls in source: 1
+   R2 Alternate Cure Normalize non-literal $() calls in source: 1
+   R2 Alt Gate Build non-literal $() calls in source: 1
+   R2 Alt Gate Record non-literal $() calls in source: 1
+   R2 Alternate Merge non-literal $() calls in source: 1
+library header: // pkgLIB: the shared library for the 22 library nodes (gate, cure, payload and merge nodes). ONE copy; each node reads it. / // This node is not wired to anything and never runs. A stub reads this text through $('Shared Library').params.jsCode and rebuilds its own / // full source from these lines. Do not edit by hand: patch the full sources and re-pack (pkgLIB/pack.cjs in the repo). / // library sha beee902d77f00d5f, 4021 lines
+library lines 4021 map entries 87
