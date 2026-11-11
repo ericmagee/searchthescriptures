@@ -1,0 +1,34 @@
+// pkgRTE builder's test (W3): live s116 against parent_s116_RTE.json (or argv[2]) on the stored node outputs of the dry regrade 34780 (and 34726 with argv[3]).
+// EXPECTED, written before the first run: T1 Send Back Build on 34780: sol's S3 (own BROKEN line of D1 vs C3) and its two FORCED items are withheld (not_sent 4 -> 7), every other item equal.
+// T2 Gate Build on 34780 as stored (sol answered "RETRACTED: D1 vs C3 -- reason" twice): the two NOT APPLIED retraction items are gone, sol's S1 item stays, luna and chatgpt equal.
+// T3 plants on sol S4: tails that negate the retraction, another pair, other separators stay NOT APPLIED; the bare form and the dashed reason apply.
+// T4 on stored 34726 (no confirmed own-BROKEN line sent, no reasoned retraction NOT APPLIED expected): outputs equal live, or the differences are listed.
+const fs=require('fs');process.chdir(__dirname+'/..');const {rebuild}=require(process.cwd()+'/pkgLIB/unpack.cjs');const H=require(process.cwd()+'/pkgEAD/harness_clone.cjs');const S=JSON.stringify;
+const W='/mnt/project-files/wall2024/';const wf=f=>{let d=JSON.parse(fs.readFileSync(f,'utf8'));d=d.data||d;return d.workflow||d;};
+const A=wf(W+'fetchback_live_s116.json'),B=wf(W+(process.argv[2]||'parent_s116_RTE.json'));
+const load=d=>{const by={};d.nodes.forEach(n=>by[n.name]=n);const c={};return n=>c[n]||(c[n]=rebuild(by[n].parameters.jsCode,by['Shared Library'].parameters.jsCode));};const LIVE=load(A),CAND=load(B);
+const dn=B.nodes.filter(n=>S(n)!==S(A.nodes.find(x=>x.name===n.name))).map(n=>n.name+' '+(n.parameters.jsCode.length-A.nodes.find(x=>x.name===n.name).parameters.jsCode.length));const {nodes:_1,...ra}=A,{nodes:_2,...rb}=B;
+console.log('DIFF nodes:',dn.join('; '),'| nodes',A.nodes.length,B.nodes.length,'| rest equal',S(ra)===S(rb));
+const mkbase=f=>{const ex=JSON.parse(fs.readFileSync(W+f,'utf8'));const r=(ex.data||ex).resultData.runData;const base={};for(const [n,runs] of Object.entries(r)){const last=runs[runs.length-1];base[n]=(last&&last.data&&last.data.main)||null;}return base;};
+const J=o=>JSON.parse(S(o));const mk=o=>new Proxy(o,{has:()=>true,get:(t,k)=>k in t?t[k]:null});const T=s=>s.replace(/"at":"[^"]+"/g,'"at":0');
+const run=async(src,node,inp,st)=>(await H.run(src(node),'x',inp,mk(st))).map(x=>x.json);
+(async()=>{
+ const base=mkbase('ex34780_full.json');const store=edit=>{const o=Object.assign({},base);for(const [n,f] of Object.entries(edit||{})){o[n]=J(base[n]);f(o[n]);}return o;};
+ // T1
+ {const a=await run(LIVE,'Send Back Build','Judge Enforcer Record',store()),b=await run(CAND,'Send Back Build','Judge Enforcer Record',store());
+  const ns=x=>(x.find(z=>z.sb_not_sent)||{}).sb_not_sent||[];const ids=x=>x.map(z=>z.seat+':'+(z.items||[]).map(i=>i.rule+'|'+i.item+'|'+String(i.line||i.flagged_line||'').slice(0,40)).join(' ; '));
+  console.log('T1 not_sent live',ns(a).length,'cand',ns(b).length,'| added:',ns(b).slice(ns(a).length).map(z=>z.seat+' '+z.rule+' '+z.item).join(' ; '));
+  for(const seat of ['luna','chatgpt','sol']){const x=a.find(z=>z.seat===seat),y=b.find(z=>z.seat===seat);const li=(x&&x.items||[]),ci=(y&&y.items||[]);const key=i=>i.rule+'|'+i.item+'|'+String(i.line||i.flagged_line||'');const gone=li.filter(i=>!ci.some(j=>key(j)===key(i)));const neu=ci.filter(i=>!li.some(j=>key(j)===key(i)));console.log('T1',seat,'items live',li.length,'cand',ci.length,'| gone:',gone.map(i=>i.rule+' '+key(i).slice(0,70)).join(' ;; '),'| new:',neu.length);}}
+ // T2, T3 gate build
+ const f=(arr,seat)=>{const s=arr.find(z=>z.seat===seat)||arr[0];return (s.items||[]).map(it=>(it.gid||'')+' '+it.kind+' '+(it.src||'')+': '+String(it.why).slice(0,45)).join(' || ');};
+ {const a=await run(LIVE,'Gate Build','Reread Record',store()),b=await run(CAND,'Gate Build','Reread Record',store());console.log('T2 gate out keys',Object.keys(a[0]).join(','),'n',a.length);
+  for(const seat of ['luna','chatgpt','sol'])console.log('T2',seat,'\n   LIVE:',f(a,seat),'\n   CAND:',f(b,seat));}
+ const plant=to=>({'Send Back Record':o=>{const x=o[0][0].json.sb_items.find(z=>z.seat==='sol'&&z.sid==='S4');x.ans='CHANGE';x.to=to;const y=o[0][0].json.sb_items.find(z=>z.seat==='sol'&&z.sid==='S5');y.ans='KEEP';y.to='';}});
+ for(const to of ['RETRACTED: D1 vs C3','RETRACTED: D1 vs C3.','RETRACTED: D1 vs C3 -- the meaning-based forced-link ruling is withdrawn (Commitments 3 and 13).','RETRACTED: D1 vs C3 — withdrawn on [CR3] "I grant it bounds the abstinence"','RETRACTED: D1 vs C3 -- NOT RETRACTED, the line is right','RETRACTED: D1 vs C3 -- the FORCED line stands','RETRACTED: D1 vs C3 -- I keep the line','RETRACTED: D1 vs C3 -- it remains forced','RETRACTED: D1 vs C3; withdrawn','RETRACTED: D1 vs C3 (withdrawn)','RETRACTED: D2 vs C4 -- withdrawn','RETRACTED: D1 vs C3 and D2 vs C4','retracted: d1 vs c3 -- withdrawn','RETRACTED -- D1 vs C3 -- withdrawn','RETRACTED: D1 vs C3 --','RETRACTED: D1 vs C3 -- the ruling is not sustained and is withdrawn']){
+  const st=store(plant(to));const a=await run(LIVE,'Gate Build','Reread Record',st),b=await run(CAND,'Gate Build','Reread Record',st);const g=(arr)=>{const s=arr.find(z=>z.seat==='sol');const it=(s.items||[]).find(i=>/S4/.test(i.src||''));return it?'NOT APPLIED: '+String(it.why).slice(0,42):'applied';};
+  const rest=arr=>S(arr.map(s=>({...s,items:(s.items||[]).filter(i=>!/S4/.test(i.src||'')).map(i=>({k:i.kind,s:i.src,w:i.why})),body:0,msg:0})));
+  console.log('T3',S(to).slice(0,70),'| LIVE:',g(a),'| CAND:',g(b),'| other items equal',rest(a)===rest(b));}
+ // T4 stored 34726
+ {const b0=mkbase('ex34726_full.json');for(const [node,i] of [['Send Back Build','Judge Enforcer Record'],['Gate Build','Reread Record'],['Gate Record','Gate Call']]){try{const a=await run(LIVE,node,i,b0),b=await run(CAND,node,i,b0);console.log('T4',node,'stored 34726, candidate equals live:',T(S(a))===T(S(b)));}catch(e){console.log('T4',node,'ERR',String(e.message).slice(0,120));}}
+  for(const [node,i] of [['Gate Record','Gate Call'],['Alternate Merge','Alternate Merge 1']]){try{const a=await run(LIVE,node,i,base),b=await run(CAND,node,i,base);console.log('T4b',node,'stored 34780, candidate equals live:',T(S(a))===T(S(b)));}catch(e){console.log('T4b',node,'ERR',String(e.message).slice(0,120));}}}
+})();
