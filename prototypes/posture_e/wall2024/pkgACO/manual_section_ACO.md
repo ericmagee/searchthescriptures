@@ -23,3 +23,6 @@ Limits:
 - If Anticheat Build or Anticheat Record throws, the run now stops before the single judge and before Save to DB. Before this package it stopped after the save. Anticheat Call deepseek continues on error, with 3 tries and a 900-second timeout.
 - A note is shown only when code finds both quotes. A REVERSED answer with QUOTE NOT FOUND stays record-only (2 of 5 on run 35067).
 - The note changes a judge's input, so a live run does not verify it. It needs a paid replay of the single judge's Verdict request on stored text.
+
+Grades: PASS WITH LIMITS by W4 (Wall 4889; file wall2024/grade_ACO_w4.md) and W2 (Wall 4890; repo wall2024/w2_grades/aco, commit 8f75c068). Builder reply: W1 Wall 4891. W4's optional on-error guard was not added. The 35067 notes split defender, defender, challenger and measure 1,824 characters with line breaks (1,818 without). W2's 1,866 is the same text plus W2's own 8-character line labels on 6 added lines.
+Parent: wall2024/parent_s135_ACO.json (sha 2047f8ee), built on s135 (35cacebd). Unproven until the paid Verdict replay and two clean runs.
