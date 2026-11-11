@@ -1,0 +1,80 @@
+33149 EKR_res_noword=0 EKR_res_all_cw=0 EKR_res_contradict=0 SGR_cond=3 SGR_nothing=0 SGR_granting=0 RRT_nocolon=13 RRT_colon=9 AMG_rightq=0 AMG_right=107 UOW_disputing=50 UOW_nothing=0
+33371 EKR_res_noword=0 EKR_res_all_cw=2 EKR_res_contradict=0 SGR_cond=3 SGR_nothing=3 SGR_granting=2 RRT_nocolon=23 RRT_colon=31 AMG_rightq=0 AMG_right=148 UOW_disputing=23 UOW_nothing=0
+33490 EKR_res_noword=0 EKR_res_all_cw=0 EKR_res_contradict=0 SGR_cond=0 SGR_nothing=1 SGR_granting=4 RRT_nocolon=29 RRT_colon=84 AMG_rightq=0 AMG_right=180 UOW_disputing=42 UOW_nothing=0
+33497 EKR_res_noword=0 EKR_res_all_cw=0 EKR_res_contradict=0 SGR_cond=1 SGR_nothing=1 SGR_granting=1 RRT_nocolon=3 RRT_colon=18 AMG_rightq=0 AMG_right=169 UOW_disputing=51 UOW_nothing=0
+34299 EKR_res_noword=0 EKR_res_all_cw=0 EKR_res_contradict=0 SGR_cond=0 SGR_nothing=0 SGR_granting=0 RRT_nocolon=1 RRT_colon=4 AMG_rightq=0 AMG_right=87 UOW_disputing=14 UOW_nothing=0
+34626 EKR_res_noword=0 EKR_res_all_cw=2 EKR_res_contradict=2 SGR_cond=0 SGR_nothing=1 SGR_granting=5 RRT_nocolon=13 RRT_colon=24 AMG_rightq=0 AMG_right=161 UOW_disputing=35 UOW_nothing=0
+34703 EKR_res_noword=0 EKR_res_all_cw=3 EKR_res_contradict=2 SGR_cond=1 SGR_nothing=1 SGR_granting=4 RRT_nocolon=20 RRT_colon=9 AMG_rightq=0 AMG_right=134 UOW_disputing=19 UOW_nothing=0
+34726 EKR_res_noword=0 EKR_res_all_cw=6 EKR_res_contradict=6 SGR_cond=0 SGR_nothing=0 SGR_granting=1 RRT_nocolon=6 RRT_colon=14 AMG_rightq=0 AMG_right=177 UOW_disputing=23 UOW_nothing=0
+34780 EKR_res_noword=0 EKR_res_all_cw=4 EKR_res_contradict=3 SGR_cond=1 SGR_nothing=0 SGR_granting=0 RRT_nocolon=9 RRT_colon=22 AMG_rightq=0 AMG_right=175 UOW_disputing=27 UOW_nothing=0
+34852 EKR_res_noword=0 EKR_res_all_cw=9 EKR_res_contradict=4 SGR_cond=3 SGR_nothing=1 SGR_granting=3 RRT_nocolon=11 RRT_colon=17 AMG_rightq=0 AMG_right=120 UOW_disputing=36 UOW_nothing=0
+35067 EKR_res_noword=0 EKR_res_all_cw=7 EKR_res_contradict=7 SGR_cond=0 SGR_nothing=0 SGR_granting=0 RRT_nocolon=8 RRT_colon=13 AMG_rightq=0 AMG_right=134 UOW_disputing=16 UOW_nothing=0
+35173 EKR_res_noword=1 EKR_res_all_cw=6 EKR_res_contradict=5 SGR_cond=1 SGR_nothing=1 SGR_granting=2 RRT_nocolon=16 RRT_colon=44 AMG_rightq=0 AMG_right=199 UOW_disputing=27 UOW_nothing=0
+TOTAL {"EKR_res_noword":1,"EKR_res_all_cw":39,"EKR_res_contradict":29,"SGR_cond":13,"SGR_nothing":9,"SGR_granting":22,"RRT_nocolon":152,"RRT_colon":289,"AMG_rightq":0,"AMG_right":1791,"UOW_disputing":363,"UOW_nothing":0}
+-- EKR_res_noword
+   35173: RESULT: CHALLENGER WINS -- The defender narrowed D5 in [CR3] and later said in [CR4] “I keep D1 to D5 exactly as declared,” so the record’s own words conflict on the conclusion link.
+-- EKR_res_all_cw
+   33371: RESULT: CHALLENGER WINS -- The defender's chain is broken under the unanswered-witness rule, without a finding that every part of the challenger's alternative is proved.
+   33371: RESULT: CHALLENGER WINS -- The defender's source link and conclusion link were broken because the answers did not meet the flesh-birth verse and the register verse, so the chain that Christ had no human biological father does not stand.
+   34626: RESULT: CHALLENGER WINS — The defender’s declared conclusion link is broken by the confirmed closing contradiction, so its chain does not stand.
+   34626: RESULT: CHALLENGER WINS -- recomputed after the cure from the cured lines (CLOSE-CONTRADICTION D6 vs C5 (UNDERDETERMINED to DEFENDER LINK BROKEN); CLOSE-CONTRADICTION D6 vs C6 (UNDERDETERMINED to DEFENDER LINK BROKEN)): BROKEN-1, CHALLENGE STANDING SELF-SUPPOR
+   34703: RESULT: CHALLENGER WINS -- The defender's chain is broken under the debate's answering and closing rules.
+   34703: RESULT: CHALLENGER WINS -- recomputed after the cure from the cured lines (CLOSE-CONTRADICTION D6 vs C1 (UNDERDETERMINED to DEFENDER LINK BROKEN); CLOSE-CONTRADICTION D6 vs C5 (UNDERDETERMINED to DEFENDER LINK BROKEN); CLOSE-CONTRADICTION D6 vs C6 (UNDERDETERM
+-- EKR_res_contradict
+   34626: RESULT: CHALLENGER WINS — The defender’s declared conclusion link is broken by the confirmed closing contradiction, so its chain does not stand.
+   34626: RESULT: CHALLENGER WINS -- recomputed after the cure from the cured lines (CLOSE-CONTRADICTION D6 vs C5 (UNDERDETERMINED to DEFENDER LINK BROKEN); CLOSE-CONTRADICTION D6 vs C6 (UNDERDETERMINED to DEFENDER LINK BROKEN)): BROKEN-1, CHALLENGE STANDING SELF-SUPPOR
+   34703: RESULT: CHALLENGER WINS -- recomputed after the cure from the cured lines (CLOSE-CONTRADICTION D6 vs C1 (UNDERDETERMINED to DEFENDER LINK BROKEN); CLOSE-CONTRADICTION D6 vs C5 (UNDERDETERMINED to DEFENDER LINK BROKEN); CLOSE-CONTRADICTION D6 vs C6 (UNDERDETERM
+   34703: RESULT: CHALLENGER WINS -- The conclusion link is broken under the confirmed closing-contradiction rule: the defender dropped the wording as a bare statement in [CR3] and repeated it in [CR4].
+   34726: RESULT: CHALLENGER WINS -- The confirmed contradiction breaks a link in the defender’s declared chain under the record’s rule; it does not independently establish the challenger’s answer to the topic.
+   34726: RESULT: CHALLENGER WINS -- the defender's own contradictory readings break its timing link, while the challenger builds a footed opposing chain.
+-- SGR_cond
+   33149: I'm revisiting CR3 to meticulously assess the challenger's six premises, ensuring each link is accounted for. It appears the defender responded to all six in CR3, and I must verify if any were conceded in the defender's response. I will now examine premise 1, 
+   33149: I'm now determining if the defender's claim of Davidic flesh through Mary is unexhibited. I'm cross-referencing this against conceded links and the maintained links in the defender's chain. I must clarify if Premise 1 or 2 is conceded and confirm the current s
+   33149: Let's understand the debate structure and the premise rules. A premise listed by challenger against defender is a claim the defender made (or inference) that the challenger says is unsupported/assumes something not given. The answering side (defender) gives a 
+   33371: I'm wrestling with the interplay between "BROKEN" challenger links and "SELF-SUPPORTED" status. If any challenger link is broken at a collision, the challenge can't be self-supported. I'm clarifying how a broken link impacts the challenger's overall standing, 
+   33371: G7: sentence "I grant the present tense." Link 3. Fact: present tense of "know not a man" (Mary's state). Does side still claim same fact? It says "I grant the present tense. It is her state..." It still claims present state? Actually it grants present tense, 
+   33371: But hmm, actually, wait. There's a wrinkle: if the press's meaning is granted and the press's meaning harms the answerer's link, the link is broken. If the press's meaning doesn't harm the link (the link already includes it), the grant is harmless — but still 
+-- SGR_nothing
+   33371: I'm wrestling with the interplay between "BROKEN" challenger links and "SELF-SUPPORTED" status. If any challenger link is broken at a collision, the challenge can't be self-supported. I'm clarifying how a broken link impacts the challenger's overall standing, 
+   33371: "line_7": "CHALLENGE STANDING: PROP-DEPENDENT - Though no links are conceded, the broken C1 renders the challenge PROP-DEPENDENT, due to the broken link.",
+   33371: The verdict will be HELD only if the defender's links stand and no premises are conceded. The JSON must be exhaustive.
+   33490: No links are withdrawn. The defender narrowed links five and six but kept them intact. The challenger narrowed items four through six while keeping the keystone. No link is conceded. The withdrawal count is zero. The next step is checking for concessioned link
+   33497: ITEM G3 (K-S3): "I grant that 'her husband' fits the law's reckoning of the betrothed woman as 'his neighbour's wife' (Deuteronomy 22:24)." Blocks: [CR4] D1. The judge: TOUCHES NO LINK — grants the legal status while maintaining no conjugal knowing. Does the g
+   34626: CHALLENGE STANDING: SELF-SUPPORTED -- L=6 c=0 -- The defender listed six premises against the challenger, and the challenger gives layer footing and answers the proven presses for each; none is conceded or unexhibited in [DR3].
+-- SGR_granting
+   33371: - G8: "I grant the verse's stated grounds: justice, and unwillingness to expose her." This is actually agreeing with challenger's point that those are stated grounds. Does the side no longer claim them? It does use them: "The verse's own words meet that." It s
+   33371: Need infer from examples and rule. For E-ANS item B1 answer: "I grant that she was Joseph's wife in law during the espousal, and that came together (1:18) is the taking home." Judge MEETS. Does answer show how verse fits case? It grants parts; yes it acknowled
+   33490: ITEM B15: Romans 1:4 press: "the title is declared by the resurrection." Answer (full): "I grant that this is a declaration by the resurrection. My link rests on Luke 1:35 and Matthew 1:18 and 1:20." This is a bare grant followed by a pointer to other verses, 
+   33490: Hmm, let me reconsider: maybe both are MEETS. The grant accepts the verse's meaning, and the retained ground shows the link doesn't depend on denying it — i.e., the verse fits because the link's claim is narrower. In B15, the link's claim (per the debate) is t
+   33490: The defender grants that "born of women" applies to men whose fathers are named, but it does not mean the woman is the only human source. The kept limb is now supported by Romans 1:3, Genesis 3:15, and Luke 1:35. Granting the idiom and relocating the footing i
+   33490: And the answer that got MEETS: "I grant the name" — a grant of the name. That is on the narrow point of the name. The premise 4 count is that kept words still assert identity of the sign's child. So the judge grants the name (8:3 child is Mahershalalhashbaz, n
+-- RRT_nocolon
+   33149: Write one STATEMENT line for every flagged item, cured or not; it is recorded beside the item. Instead of a cure line you may state why the line stands: the statement is run through the same check as the cure. For a layer item it must exhibit two different kin
+   33149: K-G4 D3 vs C2: D3 vs C2 (Matthew 1:19): CHALLENGER LINK BROKEN -- The answer does not meet the press about why Joseph considered putting Mary away (Commitment 5) -- GROUND: [L1] Matthew 1:19 “not willing to make her a publick example, was minded to put her awa
+   33149: K-G4 D3 vs C2: D3 vs C2 (Matthew 1:19): CHALLENGER LINK BROKEN -- DR3 does not answer the proven press's meaning, "a husband who knew himself the father had no cause to put her away"; its answer instead says, "Putting away is what a husband does to a wife, and
+   33149: (right: BROKEN): The defender's answer is a withdrawal, "I withdraw it," not a fit that can agree with the pressed meaning. (judge wrote UNDERDETERMINED; RECORD-ONLY TRIAL, ruling 428) | UNDERDETERMINED GIVES ITS GROUNDS (E-HOLD on UNDERDETERMINED, ENFORCED, p
+   33149: THE ENFORCER: (right: BROKEN): The defender's answer is a withdrawal, "I withdraw it," not a fit that can agree with the pressed meaning. (judge wrote UNDERDETERMINED; RECORD-ONLY TRIAL, ruling 428) | UNDERDETERMINED GIVES ITS GROUNDS (E-HOLD on UNDERDETERMINE
+   33149: THE COLLISION RULE (pkgUND, ENFORCED): UNDERDETERMINED GIVES ITS GROUNDS (E-HOLD on UNDERDETERMINED, ENFORCED, pkgUND): the enforcer reads this line as BROKEN; the decision stays yours. Either regrade it (CHANGE TO the BROKEN line in its counted layers, Commit
+-- RRT_colon
+   33149: RETRACTED: D<n> vs C<m>
+   33149: RETRACTED: D<n> vs C<m> retracts your BROKEN grade on that line; a retracted line is not a BROKEN line, so that one line cures every item flagged on it (layer, count, pressing). A BROKEN line you retract is regraded in the same reply: UNDERDETERMINED only with
+   33149: THE RULE (E-COL, ENFORCED, pkgECF): a collision line breaks a link by meaning only when the answer's own words cannot agree with the meaning pressed; a rival reading of a contested word, footed by the answer's own layers, is not a break. To keep the line, KEEP
+   33149: SENDBACK: S10 || CHANGE TO: RETRACTED: D3 vs C2 || The challenger's answer explaining that "'Till' sets an end to the abstaining, and the taking sets its start" provides an affirmative layer interpretation that agrees with the boundary in Matthew 1:25.
+   33149: SEND-BACK CHANGE TO: RETRACTED: D3 vs C2 -- The challenger's answer explaining that "'Till' sets an end to the abstaining, and the taking sets its start" provides an affirmative layer interpretation that agrees with the boundary in Matthew 1:25. | ENFORCER: (r
+   33149: YOUR SEND-BACK ANSWER: CHANGE TO: RETRACTED: D3 vs C2
+-- AMG_rightq
+-- AMG_right
+   33149: ENFORCER AGREE (right: MEETS): "The same 'made of' names the woman as the source of the child's flesh and the seed of David as its stock." (judge wrote MEETS; RECORD-ONLY TRIAL, ruling 428)
+   33149: ENFORCER AGREE (right: MEETS): "Both name David's own body as the source of the line." (judge wrote MEETS; RECORD-ONLY TRIAL, ruling 428)
+   33149: ENFORCER AGREE (right: MEETS): "Levi's loins-presence came through generations of fathers and mothers." (judge wrote MEETS; RECORD-ONLY TRIAL, ruling 428)
+   33149: ENFORCER AGREE (right: MEETS): "Numbers 1:18 is a rule of counting and does not make Joseph the begetter." (judge wrote MEETS; RECORD-ONLY TRIAL, ruling 428)
+   33149: ENFORCER AGREE (right: MEETS): "The Ezra case is a priest dropping his own father's name." (judge wrote MEETS; RECORD-ONLY TRIAL, ruling 428)
+   33149: ENFORCER AGREE (right: MEETS): "Joseph's house is the house the child is reckoned into." (judge wrote MEETS; RECORD-ONLY TRIAL, ruling 428)
+-- UOW_disputing
+   33149: RULE E-HOLD (a collision line graded STANDS or UNDERDETERMINED). STANDS is right only when the answering side's own words, as quoted to you in the line or in this judge's ANSWER CHECK lines, carry a meaning the link can agree with for the meaning pressed. UNDE
+   33149: ENFORCER: <judge id> -- AGREE | DISAGREE | NO ANSWER -- RIGHT: MEETS | MISSES | VOID | NOT VOID | BROKEN | STANDS | UNDERDETERMINED | COUNTED | SPARED | FOLLOWS | DOES NOT FOLLOW | TRUE | OVERSTATED -- <one sentence that quotes the words that decide it>
+   33149: Maybe the enforcer expected to mark DISAGREE and RIGHT UNDERDETERMINED? No, DISAGREE means judge's grade not right; must give right. For H1/H3, the judge's ground is judge's own reading, so the line has no valid ground. Could be NO ANSWER? The line has a groun
+   33149: Let's park H1/H3; maybe choose DISAGREE RIGHT STANDS or UNDERDETERMINED. Need decide.
+   33149: H2.1 gemini UNDERDETERMINED -> STANDS DISAGREE.
+   33149: Could the right be BROKEN because the line's failure to show answer fit means the link is broken? No, absence of proof doesn't break. In debate, if judge says underdetermined but ground invalid, the enforcer might simply disagree and say right is UNDERDETERMIN
+-- UOW_nothing

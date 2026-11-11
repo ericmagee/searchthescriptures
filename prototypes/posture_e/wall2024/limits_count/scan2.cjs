@@ -1,0 +1,13 @@
+// targeted counts: debater rounds (CR1-4 = defender, DR1-4 = challenger) for pkgSGR; judge RESULT lines and enforcer/reread texts for the others.
+const fs=require('fs');const D='/mnt/project-files/wall2024/';
+const findR=v=>{if(v&&typeof v==='object'){if(typeof v.CR1==='string'&&typeof v.DR1==='string')return v;for(const k in v){const r=findR(v[k]);if(r)return r;}}return null;};
+// pkgSGR selector, as in the joint, sentence level (without the quote strip and opponent guard for counting purposes we apply them too)
+const sgrHit=(x,sd)=>{const os=(sd==='D'?'challenger':'defender')+'|opponent';const OS=new RegExp('\\b(?:'+os+')\\b(?![\'’]s)[^.;:]{0,60}?\\b(?:grant|conced|withdr|drop|narrow)|\\b(?:granted|conceded|dropped|withdrawn|narrowed)\\s+by\\s+(?:the\\s+)?(?:'+os+')\\b','i');return /\bI\s+(?:withdraw|drop|grant|concede|do\s+not\s+claim|no\s+longer\s+claim)\b|\bNARROWED\s+TO\b|\bConceded\b|\bI\s+(?:have\s+)?(?:granted|conceded|dropped|withdrew)\b|\bI\s+keep\s+(?:my\s+(?:earlier\s+)?(?:grants?|concessions?)|dropped)\b|\b(?:is|are|was|were)\s+(?:also\s+)?(?:granted|conceded)\b(?!\s+by\b)|\bstays?\s+dropped\b|^\s*(?:[-*>•]\s*)*(?:\[[^\]\n]{1,24}\]\s*)*(?:\*\*)?(?:grant(?:ed)?|concession)\b(?:\*\*)?\s*[.:]/i.test(x)&&!OS.test(x);};
+const out={sgr_selected:0,sgr_cond:[],sgr_nothing:[],sgr_granting_missed:[]};
+for(const fn of fs.readdirSync(D).filter(x=>/^ex3\d+_full\.json$/.test(x))){const run=fn.slice(2,7);const R=findR(JSON.parse(fs.readFileSync(D+fn,'utf8')).data.resultData.runData);if(!R){console.log(run,'no rounds');continue;}
+ for(const [sd,keys] of [['D',['CR1','CR2','CR3','CR4']],['C',['DR1','DR2','DR3','DR4']]])for(const k of keys)for(const p of String(R[k]||'').split(/\n+/))for(const x of p.replace(/"[^"\n]*"|“[^”\n]*”|‘[^’\n]*’|(?<![A-Za-z])'[^'\n]*'(?![A-Za-z])/g,' ').split(/(?<=[.!?])\s+/)){
+  const h=sgrHit(x,sd);if(h)out.sgr_selected++;
+  if(h&&/\b(?:if|were\s+it|suppose|even\s+if|assuming|unless|whether)\b[^.;:]{0,60}\b(?:is|are|was|were|be)\s+(?:also\s+)?(?:granted|conceded)\b/i.test(x))out.sgr_cond.push(run+' '+k+': '+x.trim().slice(0,220));
+  if(h&&/\b(?:nothing|none|no\s+\w+|not)\s+(?:\w+\s+)?(?:is|are|was|were)\s+(?:also\s+)?(?:granted|conceded)\b|\b(?:is|are|was|were)\s+not\s+(?:granted|conceded)\b/i.test(x))out.sgr_nothing.push(run+' '+k+': '+x.trim().slice(0,220));
+  if(!h&&/(?:^|\W)Granting\b/.test(x))out.sgr_granting_missed.push(run+' '+k+': '+x.trim().slice(0,220));}}
+console.log('sgr sentences selected',out.sgr_selected);for(const k of ['sgr_cond','sgr_nothing','sgr_granting_missed']){console.log('--',k,out[k].length);out[k].forEach(x=>console.log('  ',x));}
