@@ -1,0 +1,52 @@
+SENDBACK: S1 -- CHANGE
+  old TO=[- ANSWER: "Luke 1:5 names Elisabeth's house." -- MISSES (Commitment 3)]  REASON=["Both bear on the limb I dropped" identifies aband]
+  new TO=[- ANSWER: "Luke 1:5 names Elisabeth's house." -- MISSES (Commitment 3)]  REASON=["Both bear on the limb I dropped" identifies aband]
+SENDBACK: S2 -- CHANGE
+  old TO=[CHANGE TO: ANSWER CHECK: Ezra 2:59]  REASON=[[CR4] -- MEANS: "the register requires father's ho]
+  new TO=[ seed" followed by "the child comes into it by his taking and naming."]  REASON=[]
+SENDBACK: S3 -- CHANGE
+  old TO=[e, not the added application to the child's biological fathering line.]  REASON=[]
+  new TO=[e, not the added application to the child's biological fathering line.]  REASON=[]
+SENDBACK: S4 -- CHANGE
+  old TO=[ign's husband and wife rather than the added identification of Joseph.]  REASON=[]
+  new TO=[ign's husband and wife rather than the added identification of Joseph.]  REASON=[]
+SENDBACK: S5 -- CHANGE
+  old TO=[th." The quoted interval does not itself assert the added earlier act.]  REASON=[]
+  new TO=[th." The quoted interval does not itself assert the added earlier act.]  REASON=[]
+SENDBACK: S6 -- CHANGE
+  old TO=[ danger and Joseph's motive rather than the added angelic explanation.]  REASON=[]
+  new TO=[ danger and Joseph's motive rather than the added angelic explanation.]  REASON=[]
+SENDBACK: S7 -- CHANGE
+  old TO=[e quoted descriptions do not themselves make the added begetter claim.]  REASON=[]
+  new TO=[e quoted descriptions do not themselves make the added begetter claim.]  REASON=[]
+SENDBACK: S8 -- CHANGE
+  old TO=[CHANGE TO: ANSWER CHECK: Ezra 2:59]  REASON=[[CR4] -- MEANS: "standing in Israel is shown by fa]
+  new TO=[house is shown, and the child comes into it by his taking and naming."]  REASON=[]
+SENDBACK: S9 -- CHANGE
+  old TO=[CHANGE TO: ANSWER CHECK: Luke 3:23]  REASON=[[DR3] -- MEANS: "the sonship of Joseph is a suppos]
+  new TO=[ed listed premise is VOID and therefore creates no counted concession.]  REASON=[]
+SENDBACK: S10 -- CHANG
+  old TO=[CHANGE TO: ANSWER CHECK: Luke 2:49]  REASON=[[DR3] -- MEANS: "the child answers 'thy father' wi]
+  new TO=[with "my son" as its positive fit rather than relying on a non-denial.]  REASON=[]
+SENDBACK: S11 -- CHANG
+  old TO=[CHANGE TO: D5 vs C1 (Hebrews 7:14): UNDERDETERMINED]  REASON=[CR3 and CR4 answer the tribal-origin witness throu]
+  new TO=[ born Jesus," while the disputed step is their biological implication.]  REASON=[]
+--- plants
+SENDBACK: S1 -- KEEP -- "the w | expected to end: KEEP
+  old TO=[KEEP]  REASON=["the words" decide it.]
+  new TO=[KEEP]  REASON=["the words" decide it.]
+SENDBACK: S1 || CHANGE TO: ANS | expected to end: (has ||: null)
+  old null
+  new null
+SENDBACK: S2 -- CHANGE TO: CON | expected to end: UNEXHIBITED (y)
+  old TO=[e 4 UNEXHIBITED (x); premise 6 UNEXHIBITED (y) -- The block shows "z".]  REASON=[]
+  new TO=[e 4 UNEXHIBITED (x); premise 6 UNEXHIBITED (y) -- The block shows "z".]  REASON=[]
+SENDBACK: S3 -- CHANGE TO: KEY | expected to end: D2 is broken by "the words"
+  old TO=[ BROKEN -- D2 is broken by "the words" -- The record says "the words".]  REASON=[]
+  new TO=[ BROKEN -- D2 is broken by "the words" -- The record says "the words".]  REASON=[]
+SENDBACK: S4 -- CHANGE TO: Cha | expected to end: (no marker: old rule)
+  old TO=[inst premise 1: VOID (Commitment 6) -- The charge's "x" is beyond "y".]  REASON=[]
+  new TO=[inst premise 1: VOID (Commitment 6) -- The charge's "x" is beyond "y".]  REASON=[]
+GATE: G6 -- CHANGE TO: D1 vs C | expected to end: | [L3] Matthew 1:20 "of the Holy Ghost"
+  old TO=[Matthew 1:20 "of the Holy Ghost" -- The record says "that holy thing".]  REASON=[]
+  new TO=[Matthew 1:20 "of the Holy Ghost" -- The record says "that holy thing".]  REASON=[]
