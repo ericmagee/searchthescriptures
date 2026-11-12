@@ -1,0 +1,24 @@
+AS EXPECTED rev5: withdrawn Luke 1:20, close "Matthew 1:18 and 1:20" (other book) -> 0
+AS EXPECTED rev5: withdrawn Matthew 1:20, close "Matthew 1:18 and 1:20" -> 1 | I withdraw Matthew 1:20. || D2 rests on Matthew 1:18 and 1:20.
+NOT AS EXPECTED rev5: withdrawn Matthew 1:20, close list "Matthew 1:18, 20" -> 0
+AS EXPECTED rev5: withdrawn Matthew 1:20, close range "Matthew 1:18-21" -> 1 | I withdraw Matthew 1:20. || D2 rests on Matthew 1:18-21.
+AS EXPECTED rev5: withdrawal short name "Mt 1:20", close full -> 1 | I withdraw Mt 1:20. || D2 rests on Matthew 1:20.
+AS EXPECTED rev5: withdrawal "Gal. 4:4" -> 1 | I withdraw Gal. 4:4. || D6 rests on Galatians 4:4.
+AS EXPECTED rev5: "Jn 1:14" withdrawn, close "1 John 1:14" -> 0
+AS EXPECTED rev5: "Once more, I withdraw Galatians 4:4." -> 1 | Once more, I withdraw Galatians 4:4. || D6 rests on Galatians 4:4.
+AS EXPECTED rev5: "But if he shows a row, I withdraw ..." -> 0
+AS EXPECTED rev5: condition after verse "I withdraw Galatians 4:4 if he shows a row." -> 0
+AS EXPECTED rev5: condition after a semicolon does not reach back -> 1 | I withdraw Galatians 4:4; if he shows a row, I will say more. || D6 rests on Galatians 4:4.
+AS EXPECTED rev5: question in close "Does D6 rest on Galatians 4:4? It does not." -> 0
+AS EXPECTED rev5: close states after question "Does it? Yes: D6 rests on Galatians 4:4." -> 1 | I withdraw Galatians 4:4. || D6 rests on Galatians 4:4.
+AS EXPECTED rev5: "Genesis 3:15 and Galatians 4:4 stay withdrawn." -> 1 | Genesis 3:15 and Galatians 4:4 stay withdrawn. || D6 rests on Galatians 4:4.
+AS EXPECTED rev5: "Galatians 4:4: withdrawn." -> 1 | Galatians 4:4: withdrawn. || D6 rests on Galatians 4:4.
+AS EXPECTED rev5: "it" sentence before, own sentence has object -> 0
+AS EXPECTED rev5: "it" sentence before, bare -> 1 | Galatians 4:4 does not exclude a father. I withdraw it. || D6 rests on Galatians 4:4.
+NOT AS EXPECTED rev5: "it" sentence before, words before I -> 0
+AS EXPECTED rev5: clause-in-verse in sentence before -> 0
+AS EXPECTED rev5: reading of verse, then withdraw it -> 0
+AS EXPECTED rev5: withdraw from one link, close other link same verse (scoped) -> 1 | LINK 3: I drop Galatians 4:4 from link 3. || D6 rests on Galatians 4:4.
+AS EXPECTED rev5: challenger "Rom 1:3" short in withdrawal -> 1 | I withdraw Rom 1:3. || C2 rests on Romans 1:3.
+AS EXPECTED rev5: close cites verse in quotation of the opponent -> 0
+21 of 23

@@ -1677,6 +1677,331 @@
   "exp": 1
  },
  {
+  "src": "plants_w2_rev4_cross.cjs",
+  "name": "clause-in-verse then semicolon it",
+  "F": {
+   "cr2": "The clause \"of the house of David\" in Luke 1:27 is weak; I withdraw it.",
+   "cr3": "",
+   "cr4": "## D3\nD3 rests on Luke 1:27.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 0
+ },
+ {
+  "src": "plants_w2_rev4_cross.cjs",
+  "name": "\"If anything, I withdraw Galatians 4:4.\" (idiom, real)",
+  "F": {
+   "cr2": "If anything, I withdraw Galatians 4:4 too.",
+   "cr3": "",
+   "cr4": "## D6\nD6 rests on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1
+ },
+ {
+  "src": "plants_w2_rev5.cjs",
+  "name": "rev5: withdrawn Luke 1:20, close \"Matthew 1:18 and 1:20\" (other book)",
+  "F": {
+   "cr2": "I withdraw Luke 1:20.",
+   "cr3": "",
+   "cr4": "## D2\nD2 rests on Matthew 1:18 and 1:20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 0
+ },
+ {
+  "src": "plants_w2_rev5.cjs",
+  "name": "rev5: withdrawn Matthew 1:20, close \"Matthew 1:18 and 1:20\"",
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D2\nD2 rests on Matthew 1:18 and 1:20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1
+ },
+ {
+  "src": "plants_w2_rev5.cjs",
+  "name": "rev5: withdrawn Matthew 1:20, close list \"Matthew 1:18, 20\"",
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D2\nD2 rests on Matthew 1:18, 20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1
+ },
+ {
+  "src": "plants_w2_rev5.cjs",
+  "name": "rev5: withdrawn Matthew 1:20, close range \"Matthew 1:18-21\"",
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D2\nD2 rests on Matthew 1:18-21.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1
+ },
+ {
+  "src": "plants_w2_rev5.cjs",
+  "name": "rev5: withdrawal short name \"Mt 1:20\", close full",
+  "F": {
+   "cr2": "I withdraw Mt 1:20.",
+   "cr3": "",
+   "cr4": "## D2\nD2 rests on Matthew 1:20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1
+ },
+ {
+  "src": "plants_w2_rev5.cjs",
+  "name": "rev5: withdrawal \"Gal. 4:4\"",
+  "F": {
+   "cr2": "I withdraw Gal. 4:4.",
+   "cr3": "",
+   "cr4": "## D6\nD6 rests on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1
+ },
+ {
+  "src": "plants_w2_rev5.cjs",
+  "name": "rev5: \"Jn 1:14\" withdrawn, close \"1 John 1:14\"",
+  "F": {
+   "cr2": "I withdraw Jn 1:14.",
+   "cr3": "",
+   "cr4": "## D2\nD2 rests on 1 John 1:14.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 0
+ },
+ {
+  "src": "plants_w2_rev5.cjs",
+  "name": "rev5: \"Once more, I withdraw Galatians 4:4.\"",
+  "F": {
+   "cr2": "Once more, I withdraw Galatians 4:4.",
+   "cr3": "",
+   "cr4": "## D6\nD6 rests on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1
+ },
+ {
+  "src": "plants_w2_rev5.cjs",
+  "name": "rev5: \"But if he shows a row, I withdraw ...\"",
+  "F": {
+   "cr2": "But if he shows a row, I withdraw Galatians 4:4.",
+   "cr3": "",
+   "cr4": "## D6\nD6 rests on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 0
+ },
+ {
+  "src": "plants_w2_rev5.cjs",
+  "name": "rev5: condition after verse \"I withdraw Galatians 4:4 if he shows a row.\"",
+  "F": {
+   "cr2": "I withdraw Galatians 4:4 if he shows a row.",
+   "cr3": "",
+   "cr4": "## D6\nD6 rests on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 0
+ },
+ {
+  "src": "plants_w2_rev5.cjs",
+  "name": "rev5: condition after a semicolon does not reach back",
+  "F": {
+   "cr2": "I withdraw Galatians 4:4; if he shows a row, I will say more.",
+   "cr3": "",
+   "cr4": "## D6\nD6 rests on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1
+ },
+ {
+  "src": "plants_w2_rev5.cjs",
+  "name": "rev5: question in close \"Does D6 rest on Galatians 4:4? It does not.\"",
+  "F": {
+   "cr2": "I withdraw Galatians 4:4.",
+   "cr3": "",
+   "cr4": "## D6\nDoes D6 rest on Galatians 4:4? It does not.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 0
+ },
+ {
+  "src": "plants_w2_rev5.cjs",
+  "name": "rev5: close states after question \"Does it? Yes: D6 rests on Galatians 4:4.\"",
+  "F": {
+   "cr2": "I withdraw Galatians 4:4.",
+   "cr3": "",
+   "cr4": "## D6\nDoes it hold? Yes. D6 rests on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1
+ },
+ {
+  "src": "plants_w2_rev5.cjs",
+  "name": "rev5: \"Genesis 3:15 and Galatians 4:4 stay withdrawn.\"",
+  "F": {
+   "cr2": "",
+   "cr3": "Genesis 3:15 and Galatians 4:4 stay withdrawn.",
+   "cr4": "## D6\nD6 rests on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1
+ },
+ {
+  "src": "plants_w2_rev5.cjs",
+  "name": "rev5: \"Galatians 4:4: withdrawn.\"",
+  "F": {
+   "cr2": "Galatians 4:4: withdrawn.",
+   "cr3": "",
+   "cr4": "## D6\nD6 rests on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1
+ },
+ {
+  "src": "plants_w2_rev5.cjs",
+  "name": "rev5: \"it\" sentence before, own sentence has object",
+  "F": {
+   "cr2": "Galatians 4:4 is weak. I withdraw the idiom reading of it.",
+   "cr3": "",
+   "cr4": "## D6\nD6 rests on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 0
+ },
+ {
+  "src": "plants_w2_rev5.cjs",
+  "name": "rev5: \"it\" sentence before, bare",
+  "F": {
+   "cr2": "Galatians 4:4 does not exclude a father. I withdraw it.",
+   "cr3": "",
+   "cr4": "## D6\nD6 rests on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1
+ },
+ {
+  "src": "plants_w2_rev5.cjs",
+  "name": "rev5: \"it\" sentence before, words before I",
+  "F": {
+   "cr2": "Galatians 4:4 does not exclude a father. For that reason I withdraw it.",
+   "cr3": "",
+   "cr4": "## D6\nD6 rests on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1
+ },
+ {
+  "src": "plants_w2_rev5.cjs",
+  "name": "rev5: clause-in-verse in sentence before",
+  "F": {
+   "cr2": "The phrase \"made under the law\" in Galatians 4:4 is not at issue. I withdraw it.",
+   "cr3": "",
+   "cr4": "## D6\nD6 rests on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 0
+ },
+ {
+  "src": "plants_w2_rev5.cjs",
+  "name": "rev5: reading of verse, then withdraw it",
+  "F": {
+   "cr2": "My reading of Galatians 4:4 overstated; I withdraw it.",
+   "cr3": "",
+   "cr4": "## D6\nD6 rests on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 0
+ },
+ {
+  "src": "plants_w2_rev5.cjs",
+  "name": "rev5: withdraw from one link, close other link same verse (scoped)",
+  "F": {
+   "cr2": "LINK 3: I drop Galatians 4:4 from link 3.",
+   "cr3": "",
+   "cr4": "## D6\nD6 rests on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1
+ },
+ {
+  "src": "plants_w2_rev5.cjs",
+  "name": "rev5: challenger \"Rom 1:3\" short in withdrawal",
+  "F": {
+   "cr2": "",
+   "cr3": "",
+   "cr4": "",
+   "gr2": "I withdraw Rom 1:3.",
+   "dr3": "LINK 2: x",
+   "dr4": "**LINK 2**\nC2 rests on Romans 1:3."
+  },
+  "exp": 1
+ },
+ {
+  "src": "plants_w2_rev5.cjs",
+  "name": "rev5: close cites verse in quotation of the opponent",
+  "F": {
+   "cr2": "I withdraw Galatians 4:4.",
+   "cr3": "",
+   "cr4": "## D6\nThe challenger says \"D6 rests on Galatians 4:4\", but D6 rests on Luke 1:35.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 0
+ },
+ {
   "src": "plants.cjs (W1)",
   "name": "withdraw then layer of D6",
   "F": {

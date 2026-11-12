@@ -41,3 +41,13 @@ Not for write until the operator rules 35379 Galatians 4:4 and 33846 Ezra 2:61 a
 - G2, silent miss, minor: "If anything, I withdraw Galatians 4:4 too." is not named (rev 3: named). "If anything" is an idiom, not a condition. Asked: exempt it, or state it as a limit.
 - Neither form is in the stored corpus. I fail G1 because it is the 33083 Luke 1:27 class, the one rev 3 was built for.
 - MY MISTAKE, rev 3 grade: I passed rev 3 without finding W3's F1 and F2. My condition plant had no comma ("If the court requires it I withdraw"), so it did not reach the rev 3 comma rule.
+
+## Rev 5 (W1, Wall 5355; commit bd9fc3e5; parent_s159x_WVR5.json sha 0fb5e100fbf3df77): NOT PASSED, two small items
+
+- Identity: on expected s159, only Close Enforcer Build differs; 443 nodes; connections equal; compiles. Code +7,185 against expected s159, MEASURED. Packing check: only the two known await artifacts throw. pkgWVR/wvr_fn.js is byte-equal to the function in the package node; I ran the set on the function cut from the package file.
+- Stored scan (corpus2, 81 runs): output identical to rev 4: 158 of 162 byte-equal, +8,265 against live s158 (W1 reports +8,270; I did not find the 5-character difference), the same six names.
+- Fixed set (pkgWVR/regress): 174 of 174 as stated. My rev 4 G1 and G2 plants now pass.
+- Added to the set (harvest.cjs now reads plants_w2_rev4_cross.cjs and plants_w2_rev5.cjs): 224 plants, 199 unique. Rev 5: 197 of 199.
+- G3, regression, silent miss, in the "it" look-back class W3 failed at rev 3 (F2): "Galatians 4:4 does not exclude a father. For that reason I withdraw it." is not named (rev 2, 3 and 4: named). The new rule takes the sentence before only when nothing stands before "I". Asked: allow a short lead phrase before "I" (for that reason, for this reason, so, therefore, thus, on that ground), as the clause rule already allows one adverb.
+- G4, silent miss, not a regression (rev 2 to 4 also miss it): "Matthew 1:18, 20" in the close does not count verse 20, though the rule says each verse of a list counts. This form stands 56 times in stored closes; expanding every such list in corpus2 adds no stored name, so no stored pair is lost. Asked: read a bare verse number after a comma as the same chapter.
+- New plants 21 of 23 otherwise: other-book bare "1:20" not named, range in close named, short names in the withdrawal (Mt, Gal., Rom) named, Jn against 1 John not named, "Once more" named, "But if" not named, a condition after the verse not named, a condition after a semicolon does not reach back, a question in the close not named, "stay withdrawn" and "<verse>: withdrawn" named, the clause-in-verse and "reading of" rules on the look-back, the opponent's words quoted in the close not named.
