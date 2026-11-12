@@ -5,7 +5,8 @@ PASS heading line alone | parent 3 pkg 1 want 1
       [CR2] no link heading: "I drop the limb that Mary is of the house of David."
 PASS heading with colon | parent 2 pkg 1 want 1
       [CR2] no link heading: "I concede that the word can mean descent."
-PASS heading three verbs | parent 3 pkg 0 want 0
+PASS heading three verbs, then real grant | parent 4 pkg 1 want 1
+      [CR2] no link heading: "I grant that seed may mean descent."
 PASS real: What I withdraw is LINK 3 | parent 1 pkg 1 want 1
       [CR2] no link heading: "I withdraw is LINK 3 and its ground."
 PASS real: which I withdraw | parent 1 pkg 1 want 1
@@ -18,11 +19,26 @@ PASS real: what I grant here is limited | parent 1 pkg 1 want 1
       [CR2] no link heading: "I grant here is that seed may mean descent."
 PASS real: inline colon grant | parent 1 pkg 1 want 1
       [CR2] no link heading: "I grant: seed may mean descent."
-PASS KNOWN MISS: heading colon at line end, item has no K-W verb | parent 1 pkg 0 want 0
+PASS rev3 (W3 c): heading colon, item with no K-W verb is raised as live | parent 1 pkg 1 want 1
+      [CR2] no link heading: "I withdraw:"
 PASS rev2: bold heading, no end punctuation, blank line, then real grant | parent 3 pkg 1 want 1
       [CR2] no link heading: "I grant that seed may mean descent."
-PASS rev2: plain heading, no end punctuation | parent 1 pkg 0 want 0
-PASS rev2: heading at end of text | parent 1 pkg 0 want 0
+PASS rev2: plain heading, no end punctuation, then real withdrawal | parent 3 pkg 1 want 1
+      [CR2] no link heading: "I withdraw LINK 3."
+PASS rev3 (W3 d): line holding only What I concede is raised as live | parent 1 pkg 1 want 1
+      [CR2] no link heading: "What I concede"
+PASS rev3 (W3 a): What I withdraw. LINK 3 as an exclusion witness. | parent 1 pkg 1 want 1
+      [CR2] no link heading: "What I withdraw."
+PASS rev3 (W3 b): broken across lines | parent 1 pkg 1 want 1
+      [CR2] no link heading: "what I withdraw"
+PASS rev3: K-W verb only after the next # heading does not count | parent 2 pkg 2 want 2
+      [CR2] no link heading: "What I withdraw."
+      [CR2] no link heading: "I grant that seed may mean descent."
+PASS rev3: two heading clauses, verb after the second | parent 3 pkg 2 want 2
+      [CR2] no link heading: "What I grant."
+      [CR2] no link heading: "I withdraw LINK 3."
+PASS KNOWN MISS rev3: heading, verbless withdrawal, later K-W sentence | parent 2 pkg 1 want 1
+      [CR2] no link heading: "I grant that seed may mean descent."
 CHANGE ODV1-35379-2yvjfj38 parent 20 pkg 18
    removed [CR2] no link heading: "I grant and what I withdraw."
    removed [CR2] no link heading: "What I grant and what I withdraw."

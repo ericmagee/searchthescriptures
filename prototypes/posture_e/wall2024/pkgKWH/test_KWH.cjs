@@ -12,17 +12,22 @@ let fail=0;const plant=(name,txt,want)=>{const R={CR2:txt};const a=items(A,R),b=
 plant('heading bold, then real grant','**What I grant and what I withdraw.** I grant that "born of women" is said of men. I withdraw LINK 3.',2);
 plant('heading line alone','What I grant and what I withdraw.\nI drop the limb that Mary is of the house of David.',1);
 plant('heading with colon','What I concede:\n- I concede that the word can mean descent.',1);
-plant('heading three verbs','What I grant, what I drop, and what I withdraw.\nNothing else.',0);
+plant('heading three verbs, then real grant','What I grant, what I drop, and what I withdraw.\nI grant that seed may mean descent.',1);
 plant('real: What I withdraw is LINK 3','What I withdraw is LINK 3 and its ground.',1);
 plant('real: which I withdraw','LINK 3, which I withdraw.',1);
 plant('real: That is what I grant (mid-sentence)','That is what I grant.',1);
 plant('real: plain withdrawal','I withdraw the claim that Mary is of the house of David.',1);
 plant('real: what I grant here is limited','What I grant here is that seed may mean descent.',1);
 plant('real: inline colon grant','What I grant: seed may mean descent.',1);
-plant('KNOWN MISS: heading colon at line end, item has no K-W verb','What I withdraw:\n- LINK 3.',0);
+plant('rev3 (W3 c): heading colon, item with no K-W verb is raised as live','What I withdraw:\n- LINK 3.',1);
 plant('rev2: bold heading, no end punctuation, blank line, then real grant','**What I grant and what I withdraw**\n\nI grant that seed may mean descent.',1);
-plant('rev2: plain heading, no end punctuation','What I grant and what I withdraw\n\nNothing here.',0);
-plant('rev2: heading at end of text','Some words.\nWhat I concede',0);
+plant('rev2: plain heading, no end punctuation, then real withdrawal','What I grant and what I withdraw\n\nI withdraw LINK 3.',1);
+plant('rev3 (W3 d): line holding only What I concede is raised as live','Some words.\nWhat I concede',1);
+plant('rev3 (W3 a): What I withdraw. LINK 3 as an exclusion witness.','What I withdraw. LINK 3 as an exclusion witness.',1);
+plant('rev3 (W3 b): broken across lines','The idiom of Galatians 4:4 is\nwhat I withdraw\nfrom LINK 5.',1);
+plant('rev3: K-W verb only after the next # heading does not count','What I withdraw.\n## Next\nI grant that seed may mean descent.',2);
+plant('rev3: two heading clauses, verb after the second','What I grant.\nWhat I withdraw.\nI withdraw LINK 3.',2);
+plant('KNOWN MISS rev3: heading, verbless withdrawal, later K-W sentence','What I withdraw. LINK 3 as an exclusion witness. I grant that seed may mean descent.',1);
 const R0={};for(const f of process.argv.slice(4))Object.assign(R0,require('../pkgCNP/rounds.cjs')(f));const R={};const UP={cr1:'CR1',cr2:'CR2',cr3:'CR3',cr4:'CR4',gr1:'DR1',gr2:'DR2',dr3:'DR3',dr4:'DR4'};for(const k in R0){R[k]={};for(const f in R0[k])R[k][UP[f]]=R0[k][f];}let d=0;
 for(const k in R){const a=items(A,R[k]),b=items(B,R[k]);const gone=a.filter(x=>!b.includes(x)),add=b.filter(x=>!a.includes(x));if(gone.length||add.length){d++;console.log('CHANGE',k,'parent',a.length,'pkg',b.length);gone.forEach(x=>console.log('   removed',x.slice(0,160)));add.forEach(x=>console.log('   added',x.slice(0,160)));}}
 console.log('stored runs',Object.keys(R).length,'changed',d,'| planted fails',fail);
