@@ -1,0 +1,6 @@
+LIMIT  curly apostrophe in close, straight in quote => ""
+LIMIT  sentence quoted earlier in close: picks first hit => "# CLOSE\nI quote the challenger: \"So the flesh comes by the mother and not by Joseph.\""
+LIMIT  Dn: body line splits block => "D2: the second link body text stands here.\n- [L4] So the point stands from row three today"
+AS EXPECTED blank lines and next ## heading => "## D1\nAlpha beta gamma delta epsilon."
+AS EXPECTED blockquote LINK heading => "> **LINK 2** quoted heading\n- [L4] So the quoted point is kept whole now."
+AS EXPECTED regex chars in quote => "# H\nWhat (of) it [x] $5 + 2? Done here now."
