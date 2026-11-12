@@ -14,7 +14,9 @@ const [_,to8,why8]=H[0];
 T('C1 open point in the line, reason empty',ung(2),{ans:'CHANGE',to:to8+' -- the record leaves open whether the reach holds',why:''},'CURED','CURED');
 T('C2 open point nowhere',ung(2),{ans:'CHANGE',to:to8,why:'Both sides argue it from the same rows.'},'UNCURED','UNCURED');
 T('C3 open point in reason, no [L1] in the line',ung(2),{ans:'CHANGE',to:'D2 vs C6 (Luke 1:35): UNDERDETERMINED -- both sides read the reach',why:why8},'UNCURED','UNCURED');
-T('C4 [L1] only in the reason, open point in reason',ung(2),{ans:'CHANGE',to:'D2 vs C6 (Luke 1:35): UNDERDETERMINED -- both sides read the reach',why:'[L1] Luke 1:35 "therefore also that holy thing" and the record leaves it open.'},'UNCURED','UNCURED');
+T('C4 [L1] only in the reason, open point in reason',ung(2),{ans:'CHANGE',to:'D2 vs C6 (Luke 1:35): UNDERDETERMINED -- both sides read the reach',why:'[L1] Luke 1:35 "therefore also that holy thing" and the record leaves it open.'},'UNCURED','CURED');
+T('C4b [L1] in the reason, open point nowhere',ung(2),{ans:'CHANGE',to:'D2 vs C6 (Luke 1:35): UNDERDETERMINED -- both sides read the reach',why:'[L1] Luke 1:35 "therefore also that holy thing".'},'UNCURED','UNCURED');
+T('C4c [L1] in the line is not replaced by the reason',ung(2),{ans:'CHANGE',to:to8,why:'[L1] Luke 1:35 "therefore" and the record leaves it open.'},'UNCURED','CURED');
 T('C5 KEEP with the open point in the reason',ung(2),{ans:'KEEP',to:'',why:why8},'UNCURED','UNCURED');
 T('C6 no answer',ung(2),{ans:'NO ANSWER'},'UNCURED','UNCURED');
 T('C7 graded line names another link (D3), reason open',ung(2),{ans:'CHANGE',to:H[1][1],why:why8},'UNCURED','UNCURED');
@@ -23,4 +25,5 @@ T('C9 E-HOLD, open point nowhere',hold,{ans:'CHANGE',to:to8,why:'kept'},'UNCURED
 T('C10 reason with escaped quotes',ung(2),{ans:'CHANGE',to:to8,why:'The \\"therefore\\" reach: the record leaves it open.'},'UNCURED','CURED');
 T('C11 why undefined',ung(2),{ans:'CHANGE',to:to8},'UNCURED','UNCURED');
 T('C12 RETRACTED with open reason',ung(2),{ans:'CHANGE',to:'RETRACTED',why:why8},'UNCURED','UNCURED');
+T('sol 35296 S11 (as stored: grade, then "||", then grounds and open point)',hold,{ans:'CHANGE',to:'D5 vs C1 (Hebrews 7:14): UNDERDETERMINED',why:'CR3 and CR4 answer the tribal-origin witness through descent and household readings -- GROUND: [L1] Hebrews 7:14 "For it is evident that our Lord sprang out of Juda" | [L3] Matthew 1:16 "Joseph the husband of Mary, of whom was born Jesus"; the record leaves open whether this acknowledged tribal origin entails Joseph\'s biological begetting or is consistent with the defender\'s maternal-birth and household reading.'},'UNCURED','CURED');
 console.log('\n'+pass+' as expected, '+fail+' not');
