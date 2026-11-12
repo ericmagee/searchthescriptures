@@ -1,6 +1,6 @@
 # pkgCRX: shared contradiction rule text and CLOSING BLOCK on the judge path (ASK 123, option 1)
 
-- Parent: parent_s160_WVR9.json (live s160 + pkgWVR rev 9). Output: /mnt/project-files/wall2024/parent_s160_WVR9_CRX.json (sha 8f64fd44f3fd48e6). Rebased from rev 8 at 13:3x 11-12: the judge node is byte-equal to the rev 8 build, so the stored-prompt replay and the ASK 125 bodies stand.
+- Parent: parent_s160_WVR9.json (live s160 + pkgWVR rev 9). Output: /mnt/project-files/wall2024/parent_s160_WVR9_CRX.json (sha 8f64fd44f3fd48e6). Rebased from rev 8 at 13:27 CST 11-12: the judge node is byte-equal to the rev 8 build, so the stored-prompt replay and the ASK 125 bodies stand.
 - Changes only Judge Contradiction Build. Close Enforcer Build is untouched and is the source of the shared text.
 - The judge prompt is now: its own head (both sides, judge-named candidates) + the Close Enforcer RULES (definition, NOT list, CLOSING BLOCK sentence) + its own quote-and-link line (DECLARED CHAIN / LINK blocks) + the Close Enforcer FORMAT (reply lines, NONE line).
 - Each judge-named candidate now carries its CLOSING BLOCK, built by the same cecBlock function (byte-equal copy) and the same "as under" de-duplication as Close Enforcer Build.
