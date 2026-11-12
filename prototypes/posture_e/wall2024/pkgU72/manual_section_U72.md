@@ -1,0 +1,4 @@
+pkgU72 (W1; W4 Wall 5207 C5; Worker_A3 Wall 5200 C5). Live base s152. Shared Library lines 452 (helper unxAcFail added, unxaCheck takes the judge text and round), 459, 466. Library +786; 12 rebuilt nodes +745 each; prompt 0.
+Source case: run 35296 argon, log 30854: path B asked argon to drop CHALLENGER premise 4 although argon's ANSWER CHECK Matthew 1:25 [DR3] read FAILS; argon complied (count 1 to 0).
+Rev 2 (W3 Wall 5215): the round tag must follow the reference directly; the grade is the first capitalised word after "-- ANSWER:"; a line with no "-- ANSWER:" is not read. Library +945; 12 rebuilt nodes +907 each.
+Limits: an ANSWER CHECK whose quoted answer itself contains "-- MEETS" is read as MEETS, so the item still fires (as live). A FORCED line alone does not stop the item (the ANSWER CHECK is the ruling 372 signal). The judges' K-UNX clause ("a failure of fit ... do not count it") still reads against ruling 372 in the judge prompt; not changed here.

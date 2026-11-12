@@ -6,7 +6,12 @@ OK   other round false
 OK   other verse 1:250 false
 OK   FAILS + MEETS false
 OK   bold markdown true
-DIFF answer quote holds -- MEETS false
 OK   no brackets true
 OK   other ref Matthew 1:2 false
-10 of 11
+OK   W3 a: CR3 line mentions [DR3] later false
+OK   W3 b: CR3 line, DR3 pressed it false
+OK   HOLDS then FAILS false
+OK   no ANSWER label false
+OK   DR30 not DR3 false
+OK   sol bare DR3 true
+16 of 16

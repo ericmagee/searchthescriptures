@@ -2,7 +2,7 @@
 // count as "answered" because the block quotes the press's MEANS, although the judge's own ANSWER CHECK on that press grades the answer
 // MISSES or FAILS. Under ruling 372 such a witness is unanswered, so the count stands. Change (kunxLines, library lines 452, 459, 466):
 // path B does not fire for a press when the judge's own ANSWER CHECK lines on that reference in the answering round read MISSES or FAILS
-// and none reads MEETS. Path A (ASSUMES), the layer-name path and the plain path are unchanged. Prompt 0.
+// and none reads MEETS. Rev 2 (W3 Wall 5215): the round tag must follow the reference directly; the grade is the first capitalised word after "-- ANSWER:"; a line with no "-- ANSWER:" is not read. Path A (ASSUMES), the layer-name path and the plain path are unchanged. Prompt 0.
 // Usage: node build.cjs <parent workflow json> <out json>
 const fs=require('fs'),crypto=require('crypto');const un=p=>{let j=JSON.parse(fs.readFileSync(p,'utf8'));j=j.data||j;return j.workflow||j;};
 const W=un(process.argv[2]);const N=W.nodes.find(z=>z.name==='Shared Library');const T=N.parameters.jsCode;
@@ -15,7 +15,8 @@ const E=[
 ];
 for(const [li,o,n] of E){if(Lb[li].split(o).length!==2)throw new Error('anchor at '+li+': '+o.slice(0,40));Lb[li]=Lb[li].replace(o,()=>n);}
 // helper placed at the head of line 452, before unxaCheck
-const H="function unxAcFail(TX,ref,RK){if(typeof TX!=='string'||!ref||!RK)return false;const rf=String(ref).replace(/\\s+/g,'\\\\s+').replace(/\\./g,'\\\\.');const re=new RegExp('^[\\\\s>*_-]*ANSWER\\\\s+CHECK\\\\s*:?[\\\\s*_]*'+rf+'\\\\b(?!\\\\s*[-\\u2013]?\\\\d)[^\\\\n]*?--\\\\s*\\\\[?\\\\s*'+RK+'\\\\s*\\\\]?','i');let f=0,m=0;for(const l of TX.split('\\n')){if(!re.test(l))continue;const i=l.search(/--\\s*ANSWER\\s*:/i);const g=(i<0?l:l.slice(i)).match(/--\\s*\\**\\s*(MEETS|MISSES|FAILS)\\b/);if(!g)continue;if(g[1].toUpperCase()==='MEETS')m++;else f++;}return f>0&&m===0;} /* pkgU72: under ruling 372 an answer the judge's own ANSWER CHECK grades MISSES or FAILS leaves the witness unanswered, so K-UNX-A path B does not ask to drop that count */\n";
+function unxAcFail(TX,ref,RK){if(typeof TX!=='string'||!ref||!RK)return false;const rf=String(ref).replace(/\s+/g,'\\s+').replace(/\./g,'\\.');const re=new RegExp('^[\\s>*_-]*ANSWER\\s+CHECK\\s*:?[\\s*_]*'+rf+'(?!\\s*[-–]?\\d)(?![0-9])[\\s*_]*--\\s*\\[?\\s*'+RK+'\\s*\\]?(?![A-Za-z0-9])','i');let f=0,m=0;for(const l of TX.split('\n')){if(!re.test(l))continue;const i=l.search(/--\s*ANSWER\s*:/i);if(i<0)continue;const g=l.slice(i+2).match(/--\s*\**\s*([A-Z]{3,})\b/);if(!g)continue;if(g[1]==='MEETS')m++;else if(g[1]==='MISSES'||g[1]==='FAILS')f++;}return f>0&&m===0;}
+const H=unxAcFail.toString()+" /* pkgU72 rev 2: under ruling 372 an answer the judge's own ANSWER CHECK grades MISSES or FAILS leaves the witness unanswered, so K-UNX-A path B does not ask to drop that count; the round tag must follow the reference directly, and the grade is the first capitalised word after the ANSWER label */\n";
 Lb[452]=H+Lb[452];
 const reb=e=>M[e].p.map(x=>typeof x==='number'?Lb[x]:typeof x[0]==='string'?x[0]:Lb.slice(x[0],x[1]+1).join('\n')).join('\n');for(const e in M)M[e].n=reb(e).length;
 const LJ=JSON.stringify(Lb);N.parameters.jsCode=(T.slice(0,a+8)+LJ+T.slice(b,b+8)+JSON.stringify(M)+T.slice(c)).replace(/(\/\/ library sha )[0-9a-f]{16}/,(x,h)=>h+crypto.createHash('sha256').update(LJ).digest('hex').slice(0,16));
