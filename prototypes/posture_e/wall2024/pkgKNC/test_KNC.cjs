@@ -23,6 +23,11 @@ const P=[
  ['10 skipped matches (questions), then a withdrawal',{CR3:Array.from({length:10},(_,i)=>`Do I grant point ${i+1}?`).join(' ')+' I withdraw D3.'},0,1,1],
  ['10 skipped grants (questions), then a grant',{CR3:Array.from({length:10},(_,i)=>`Do I grant point ${i+1}?`).join(' ')+' I grant D3 stands on Joseph.'},0,1,1],
  ['sides counted apart: 10 defender grants, 1 challenger grant',{CR3:G(10),DR3:'I grant the verse names Mary.'},11,11,11],
+ ['rev 2: 10 plain grants, then "I concede D4." (W3 Wall 5456)',{CR3:G(10)+' I concede D4.'},10,11,11],
+ ['rev 2: 10 plain grants, then "I CONCEDE the Matthew 1:25 limb of D3."',{CR4:G(10)+'\nI CONCEDE the Matthew 1:25 limb of D3.'},10,11,11],
+ ['rev 2: 10 plain grants, then a pointing-back grant of a link',{CR3:G(10)+' The challenger says C2 holds the house. I grant it.'},10,11,11],
+ ['rev 2: 10 plain grants, then LINK 3 named',{CR3:G(10)+' I grant that LINK 3 rests on the register.'},10,11,11],
+ ['rev 2: 10 plain grants, then a plain grant naming no link',{CR3:G(10)+' I grant the verse names Mary.'},10,10,11],
  ['negated and conditional withdrawals stay unread',{CR3:G(10)+' I never withdraw D4. If I withdraw D4 the chain falls.'},10,10,10],
 ];
 let ok=0;for(const [nm,R,el,ea,eb] of P){const l=kw(L,R).length,a=kw(A,R).length,b=kw(B,R).length;const pass=l===el&&a===ea&&b===eb;if(pass)ok++;
