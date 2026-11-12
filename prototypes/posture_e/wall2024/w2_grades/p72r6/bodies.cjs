@@ -1,0 +1,10 @@
+// W2: full request bodies of the 3 enforcer Builds, rev 5 vs rev 6 vs live s145, over the 12 exports
+const fs=require('fs');const D='/mnt/project-files/wall2024/';
+const rebuild=(stub,lib)=>{let i=stub.indexOf('\nreturn await new Function(');if(i<0)i=stub.indexOf('\nconst __e4h');const $=n=>({params:{jsCode:lib}});return new Function('$',stub.slice(0,i)+'\nreturn __S;')($);};
+const go=async(pf,fn,node)=>{const X=JSON.parse(fs.readFileSync(D+pf,'utf8'));const PW=(X.data||X).workflow||(X.data||X);const lib=PW.nodes.find(n=>n.name==='Shared Library').parameters.jsCode;const rd=JSON.parse(fs.readFileSync(D+fn,'utf8')).data.resultData.runData;
+ const mk=name=>{const r=rd[name];const items=r?r[r.length-1].data.main.flat().filter(Boolean):[];return {isExecuted:!!r,first:()=>items[0],all:()=>items,last:()=>items[items.length-1],item:items[0],params:{}};};
+ const src=rebuild(PW.nodes.find(n=>n.name===node).parameters.jsCode,lib);const inp=mk(rd[node][0].source[0].previousNode);const o=await new Function('$','$input','return (async()=>{\n'+src+'\n})();')(mk,{all:()=>inp.all(),first:()=>inp.first(),item:inp.first()});return o.map(i=>JSON.stringify(i.json.body||''));};
+(async()=>{let eq=0,ne=0,req=0,d6=0;for(const fn of fs.readdirSync(D).filter(x=>/^ex3\d+_full\.json$/.test(x)))for(const node of ['Judge Enforcer Build','Alt Judge Enforcer Build','R2 Alt Judge Enforcer Build']){const rd=JSON.parse(fs.readFileSync(D+fn,'utf8')).data.resultData.runData;if(!rd[node])continue;
+ const a=await go('parent_s145_P72r5.json',fn,node),b=await go('parent_s145_P72r6.json',fn,node),l=await go('fetchback_live_s145.json',fn,node);req+=b.filter(x=>x!=='""').length;JSON.stringify(a)===JSON.stringify(b)?eq++:ne++;
+ const sum=x=>x.reduce((s,y)=>s+(y==='""'?0:JSON.parse(y).messages?JSON.parse(y).messages.reduce((t,m)=>t+String(m.content).length,0):y.length),0);d6+=sum(b)-sum(l);}
+console.log('node runs: rev5 bodies equal to rev6',eq,'differ',ne,'| requests',req,'| request message chars rev6 minus live s145',d6);})();

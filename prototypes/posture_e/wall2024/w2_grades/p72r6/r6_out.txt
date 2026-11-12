@@ -1,0 +1,25 @@
+E-PREM ids 468 with prompt block 24 with r372 24 errors 0
+33149 Judge P8.1 gemini | premise listed against the challenger 2 | r372 ["Matthew 1:25"] | prompt block YES
+33149 Judge P8.2 chatgpt | premise listed against the challenger 2 | r372 ["Matthew 1:19"] | prompt block YES
+33149 Judge P8.3 sol | premise listed against the challenger 2 | r372 ["Matthew 1:19"] | prompt block YES
+33371 Judge P2.2 chatgpt | premise listed against the defender 2 | r372 ["John 3:6"] | prompt block YES
+33371 Judge P5.2 chatgpt | premise listed against the defender 5 | r372 ["Isaiah 8:8"] | prompt block YES
+33371 Judge P7.1 gemini | premise listed against the challenger 1 | r372 ["Matthew 1:25"] | prompt block YES
+33371 Alt P2.1 grok | premise listed against the defender 2 | r372 ["John 3:6"] | prompt block YES
+33371 Alt P6.1 grok | premise listed against the defender 6 | r372 ["Ezra 2:59"] | prompt block YES
+33490 Alt P9.1 grok | premise listed against the challenger 3 | r372 ["Matthew 1:18","Deuteronomy 20:7"] | prompt block YES
+33497 Judge P7.1 gemini | premise listed against the challenger 1 | r372 ["Matthew 1:25"] | prompt block YES
+34626 Judge P2.1 luna | premise listed against the defender 2 | r372 ["Matthew 1:19"] | prompt block YES
+34626 Judge P4.1 luna | premise listed against the defender 4 | r372 ["Luke 1:36"] | prompt block YES
+34626 Judge P11.1 luna | premise listed against the challenger 5 | r372 ["Hebrews 10:5"] | prompt block YES
+34703 Judge P2.2 chatgpt | premise listed against the defender 2 | r372 ["2 Samuel 7:14"] | prompt block YES
+34726 Judge P1.1 luna | premise listed against the defender 1 | r372 ["Romans 1:3"] | prompt block YES
+34726 Judge P6.1 luna | premise listed against the defender 6 | r372 ["Luke 2:48","John 1:45","Luke 4:22"] | prompt block YES
+34780 Judge P4.3 sol | premise listed against the defender 4 | r372 ["Matthew 1:25"] | prompt block YES
+34780 Judge P7.1 luna | premise listed against the challenger 1 | r372 ["Hebrews 7:14"] | prompt block YES
+34780 Judge P8.1 luna | premise listed against the challenger 2 | r372 ["Genesis 3:15"] | prompt block YES
+34780 Judge P9.1 luna | premise listed against the challenger 3 | r372 ["Matthew 1:18"] | prompt block YES
+35067 Judge P7.1 luna | premise listed against the challenger 1 | r372 ["Matthew 1:25"] | prompt block YES
+35067 Judge P11.1 luna | premise listed against the challenger 5 | r372 ["Matthew 1:25"] | prompt block YES
+35173 Alt P8.1 grok | premise listed against the challenger 2 | r372 ["Matthew 1:25"] | prompt block YES
+35173 Alt P11.1 grok | premise listed against the challenger 5 | r372 ["Luke 1:34"] | prompt block YES

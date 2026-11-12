@@ -1,0 +1,56 @@
+A0 stored line | prompt/r372 mismatches in run: 0
+    33371 Judge P2.2 keep: block YES, r372 YES
+    33371 Judge P5.2 keep: block YES, r372 YES
+A1 "Premise 2: VOID (Commitment 6)" | prompt/r372 mismatches in run: 1
+    33371 Judge P2.2 withhold: block YES, r372 no  <<< WRONG
+    33371 Judge P5.2 keep: block YES, r372 YES
+A2 "VOID: premise 2" | prompt/r372 mismatches in run: 1
+    33371 Judge P2.2 withhold: block YES, r372 no  <<< WRONG
+    33371 Judge P5.2 keep: block YES, r372 YES
+A3 "Premise 2 -- VOID" | prompt/r372 mismatches in run: 1
+    33371 Judge P2.2 withhold: block YES, r372 no  <<< WRONG
+    33371 Judge P5.2 keep: block YES, r372 YES
+A4 "Premise 2 (VOID)" | prompt/r372 mismatches in run: 1
+    33371 Judge P2.2 withhold: block YES, r372 no  <<< WRONG
+    33371 Judge P5.2 keep: block YES, r372 YES
+A5 "Premise 2's charge is VOID" | prompt/r372 mismatches in run: 1
+    33371 Judge P2.2 withhold: block YES, r372 no  <<< WRONG
+    33371 Judge P5.2 keep: block YES, r372 YES
+A6 "Premises 2 and 5 are VOID" | prompt/r372 mismatches in run: 2
+    33371 Judge P2.2 withhold: block YES, r372 no  <<< WRONG
+    33371 Judge P5.2 withhold: block YES, r372 no  <<< WRONG
+A7 "Premise 2 is not VOID but premise 5 is VOID" | prompt/r372 mismatches in run: 1
+    33371 Judge P2.2 keep: block YES, r372 YES
+    33371 Judge P5.2 withhold: block YES, r372 no  <<< WRONG
+A8 "Premise 2 was not ruled VOID" | prompt/r372 mismatches in run: 0
+    33371 Judge P2.2 keep: block YES, r372 YES
+    33371 Judge P5.2 keep: block YES, r372 YES
+A9 "Premise 2 is no longer held VOID" | prompt/r372 mismatches in run: 0
+    33371 Judge P2.2 keep: block YES, r372 YES
+    33371 Judge P5.2 keep: block YES, r372 YES
+A10 "Premise 2 is not counted and is VOID" | prompt/r372 mismatches in run: 0
+    33371 Judge P2.2 withhold: block YES, r372 YES  <<< WRONG
+    33371 Judge P5.2 keep: block YES, r372 YES
+A11 "Premise 12 is VOID" (other number) | prompt/r372 mismatches in run: 0
+    33371 Judge P2.2 keep: block YES, r372 YES
+    33371 Judge P5.2 keep: block YES, r372 YES
+A12 "Premise 2 stands VOIDED" | prompt/r372 mismatches in run: 1
+    33371 Judge P2.2 withhold: block YES, r372 no  <<< WRONG
+    33371 Judge P5.2 keep: block YES, r372 YES
+A13 "VOID -- premises 2, 5" | prompt/r372 mismatches in run: 2
+    33371 Judge P2.2 withhold: block YES, r372 no  <<< WRONG
+    33371 Judge P5.2 withhold: block YES, r372 no  <<< WRONG
+A14 "Premise 2 is VOID under Commitment 6" in lower case "void" | prompt/r372 mismatches in run: 1
+    33371 Judge P2.2 withhold: block YES, r372 no  <<< WRONG
+    33371 Judge P5.2 keep: block YES, r372 YES
+B1 ANSWER CHECK line itself rules premise 2 VOID | prompt/r372 mismatches in run: 0
+    33371 Judge P2.2 withhold: block no, r372 no
+    33371 Alt P2.1 keep: block YES, r372 YES
+    33371 Judge P5.2 keep: block YES, r372 YES
+C1 alternate path: grok "Premise 5 VOID" in CHALLENGER CONCEDED LINKS | prompt/r372 mismatches in run: 1
+    35173 Alt P11.1 withhold: block YES, r372 no  <<< WRONG
+    35173 Alt P8.1 keep: block YES, r372 YES
+C2 alternate path: grok "Premises 2 through 5 VOID" | prompt/r372 mismatches in run: 2
+    35173 Alt P11.1 withhold: block YES, r372 no  <<< WRONG
+    35173 Alt P8.1 withhold: block YES, r372 no  <<< WRONG
+TOTAL checks right 21 wrong 16 block/r372 mismatches 15
