@@ -1,0 +1,20 @@
+// W2 grade of pkgOLK (W1 Wall 5223): plants on olkOrder, taken from library line 3036 of the parent.
+const fs=require('fs');const W=JSON.parse(fs.readFileSync(process.argv[2],'utf8'));const T=W.nodes.find(z=>z.name==='Shared Library').parameters.jsCode;
+const Lb=JSON.parse(T.slice(T.indexOf('\n/*LIB*/')+8,T.lastIndexOf('\n/*MAP*/')));const hits=Lb.map((l,i)=>l.includes('function olkOrder(')?i:-1).filter(i=>i>=0);console.log('olkOrder defined on lines',hits.join(','),'| uses',Lb.filter(l=>l.includes('olkOrder(')).length,'lines');
+const l=Lb[hits[0]];const src=l.slice(l.indexOf('function olkOrder('),l.indexOf('/* pkgOLK'));const f=new Function(src+'\nreturn olkOrder;')();
+let n=0,ok=0;const lines=s=>String(s).split('\n').filter(x=>x.trim()).sort().join('\n');
+const t=(name,sec,ans,want,check)=>{n++;const g=f(sec,ans);if(sec===null){const p=g===null;if(p)ok++;console.log(p?'OK  ':'DIFF',name,'->',g);return;}const keep=lines(g)===lines(sec);const pass=keep&&(want===null?g===sec:g.split('\n').filter(x=>x.trim())[0].startsWith(want))&&(!check||check(g));if(pass)ok++;console.log(pass?'OK  ':'DIFF',name,'| lines kept',keep,'| first:',JSON.stringify(g.split('\n')[0].slice(0,60)));};
+const B15='LINK 3: The father is not marked by this act.\nI narrow LINK 3 to the act at the birth.\n\nAnswers to the presses:\n\nMatthew 1:21: "thou shalt call his name JESUS." Naming is given to Joseph here. It is also given to Mary in Luke 1:31.\n\nLuke 1:13, 1:62, 1:63: Zacharias names John.\n\nActs 16:13: the river side.\n\nRuth 4:17: the women gave it a name.';
+t('B15 form: naming paragraphs first','B15'&&B15,'This is the naming answered under link 3.','Matthew 1:21');
+t('no key word in answer: unchanged',B15,'See link 3.',null);
+t('only stop words of 5+: unchanged',B15,'This answered there, under link 3.',null);
+t('every unit shares the key: unchanged','Naming one.\n\nNaming two.','the naming',null);
+t('bullet lines are units','LINK 2: head\n- seed of David\n- naming by Joseph\n- river','the naming under link 2','- naming by Joseph');
+t('LIMIT: named vs naming differ in the first five letters (named/namin), so unchanged',B15,'It was named under link 3.',null);
+t('case-insensitive, punctuation','x\n\nNAMING, by the mother.','naming!','NAMING');
+t('short words only (Mary, seed, son): unchanged',B15,'Mary bore the seed, link 3.',null);
+t('order kept inside each group',B15,'naming','Matthew 1:21',g=>g.indexOf('Matthew 1:21')<g.indexOf('Luke 1:13')&&g.indexOf('Acts 16:13')<g.indexOf('Ruth 4:17'));
+t('LIMIT: opening paragraph shares the key word, so it stays first',B15.replace('this act','naming'),'naming under link 3','LINK 3');
+t('empty answer: unchanged',B15,'',null);
+t('non-string sec',null,'naming',null);
+console.log(ok+' of '+n);

@@ -1,0 +1,14 @@
+olkOrder defined on lines 3036 | uses 1 lines
+OK   B15 form: naming paragraphs first | lines kept true | first: "Matthew 1:21: \"thou shalt call his name JESUS.\" Naming is gi"
+OK   no key word in answer: unchanged | lines kept true | first: "LINK 3: The father is not marked by this act."
+OK   only stop words of 5+: unchanged | lines kept true | first: "LINK 3: The father is not marked by this act."
+OK   every unit shares the key: unchanged | lines kept true | first: "Naming one."
+OK   bullet lines are units | lines kept true | first: "- naming by Joseph"
+OK   LIMIT: named vs naming differ in the first five letters (named/namin), so unchanged | lines kept true | first: "LINK 3: The father is not marked by this act."
+OK   case-insensitive, punctuation | lines kept true | first: "NAMING, by the mother."
+OK   short words only (Mary, seed, son): unchanged | lines kept true | first: "LINK 3: The father is not marked by this act."
+OK   order kept inside each group | lines kept true | first: "Matthew 1:21: \"thou shalt call his name JESUS.\" Naming is gi"
+OK   LIMIT: opening paragraph shares the key word, so it stays first | lines kept true | first: "LINK 3: The father is not marked by naming."
+OK   empty answer: unchanged | lines kept true | first: "LINK 3: The father is not marked by this act."
+OK   non-string sec -> null
+12 of 12
