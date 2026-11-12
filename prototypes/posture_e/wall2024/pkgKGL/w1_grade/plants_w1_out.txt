@@ -1,0 +1,13 @@
+PASS quoted new form: live 0, new 0, expected 0
+PASS If, no comma: live 0, new 0, expected 0
+PASS If, with comma (taken): live 0, new 1, expected 1
+PASS question: live 0, new 0, expected 0
+PASS give up nothing: live 0, new 0, expected 0
+PASS also concede none: live 0, new 0, expected 0
+PASS adverb outside list: live 0, new 0, expected 0
+PASS three adverbs: live 0, new 0, expected 0
+PASS bold new form: live 0, new 1, expected 1
+PASS heading What I also concede over plain row: live 0, new 0, expected 0
+FAIL cap: 12 old + 1 new: live 10, new 10, expected 11
+PASS cap: 12 new: live 0, new 12, expected 12
+11/12
