@@ -1,0 +1,25 @@
+PASS heading bold, then real grant | parent 4 pkg 2 want 2
+      [CR2] no link heading: "I grant that ‘born of women’ is said of men."
+      [CR2] no link heading: "I withdraw LINK 3."
+PASS heading line alone | parent 3 pkg 1 want 1
+      [CR2] no link heading: "I drop the limb that Mary is of the house of David."
+PASS heading with colon | parent 2 pkg 1 want 1
+      [CR2] no link heading: "I concede that the word can mean descent."
+PASS heading three verbs | parent 3 pkg 0 want 0
+PASS real: What I withdraw is LINK 3 | parent 1 pkg 1 want 1
+      [CR2] no link heading: "I withdraw is LINK 3 and its ground."
+PASS real: which I withdraw | parent 1 pkg 1 want 1
+      [CR2] no link heading: "LINK 3, which I withdraw."
+PASS real: That is what I grant (mid-sentence) | parent 1 pkg 1 want 1
+      [CR2] no link heading: "That is what I grant."
+PASS real: plain withdrawal | parent 1 pkg 1 want 1
+      [CR2] no link heading: "I withdraw the claim that Mary is of the house of David."
+PASS real: what I grant here is limited | parent 1 pkg 1 want 1
+      [CR2] no link heading: "I grant here is that seed may mean descent."
+PASS real: inline colon grant | parent 1 pkg 1 want 1
+      [CR2] no link heading: "I grant: seed may mean descent."
+PASS KNOWN MISS: heading colon at line end, item has no K-W verb | parent 1 pkg 0 want 0
+CHANGE ODV1-35379-2yvjfj38 parent 20 pkg 18
+   removed [CR2] no link heading: "I grant and what I withdraw."
+   removed [CR2] no link heading: "What I grant and what I withdraw."
+stored runs 5 changed 1 | planted fails 0

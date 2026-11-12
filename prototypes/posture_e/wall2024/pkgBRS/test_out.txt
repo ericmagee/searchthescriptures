@@ -1,0 +1,8 @@
+PASS sentence-initial bare ref, verse named earlier in another book | parent {"fresh":["1 Corinthians 1:17","1 Corinthians 1:18"],"named_earlier":[]} | pkg {"fresh":["1 Corinthians 1:17"],"named_earlier":["1:18 (Matthew 1:18 named earlier)"]}
+PASS control: book written out stays new | parent {"fresh":["1 Corinthians 1:18"],"named_earlier":[]} | pkg {"fresh":["1 Corinthians 1:18"],"named_earlier":[]}
+PASS bare ref, verse never named earlier: still new | parent {"fresh":["1 Corinthians 1:17","1 Corinthians 1:23"],"named_earlier":[]} | pkg {"fresh":["1 Corinthians 1:17","1 Corinthians 1:23"],"named_earlier":[]}
+PASS KNOWN MISS: bare ref to a new verse whose chapter:verse was named earlier in another book | parent {"fresh":["1 Corinthians 1:17","1 Corinthians 1:23"],"named_earlier":[]} | pkg {"fresh":["1 Corinthians 1:17"],"named_earlier":["1:23 (Matthew 1:23 named earlier)"]}
+CHANGE ODV1-35379-2yvjfj38 ofD 
+   parent {"fresh":["1 Corinthians 1:18"],"named_earlier":[]} 
+   pkg    {"fresh":[],"named_earlier":["1:18 (Matthew 1:18, Numbers 1:18 named earlier)"]}
+stored runs 5 changed lists 1 | planted fails 0
