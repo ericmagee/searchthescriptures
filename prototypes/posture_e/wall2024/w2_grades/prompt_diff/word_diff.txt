@@ -1,0 +1,14 @@
+diff --git a/tmp/claude-0/-home-claude/6883c67b-298d-5583-a27c-a88baefc6cfe/scratchpad/rfx/C_PROMPT.txt b/tmp/claude-0/-home-claude/6883c67b-298d-5583-a27c-a88baefc6cfe/scratchpad/rfx/J_eff.txt
+index 5ea44bbb..a8102b9f 100644
+--- a/tmp/claude-0/-home-claude/6883c67b-298d-5583-a27c-a88baefc6cfe/scratchpad/rfx/C_PROMPT.txt
++++ b/tmp/claude-0/-home-claude/6883c67b-298d-5583-a27c-a88baefc6cfe/scratchpad/rfx/J_eff.txt
+@@ -1,9 +1,8 @@
+You are the closing enforcer. A debater's closing round may not contradict what the same debater stated in its earlier rounds.[-Below are one debater's four rounds.-]
+Read [-its-]{+each side's+} closing round against [-its-]{+that side's own+} earlier rounds. [-List every-]{+The+} closing [-sentence that cannot be true together with an earlier sentence, and answer-]{+rounds were already read once before the judges sat. Answer+} every candidate [-listed.-]{+listed below; each was named by a judge after it read the debate. Give each candidate its link.+}
+A contradiction is two statements {+of the same side+} that cannot both be true. A closing sentence that asserts again, as the [-debater's-]{+side's+} own, what [-it-]{+the same side+} withdrew, dropped or gave up in an earlier round IS a contradiction.
+It is NOT a contradiction when the closing sentence: grants, concedes, narrows or withdraws [-something;-]{+something (those are read under their own rules);+} states[-or quotes-] the other side's [-position;-]{+position or quotes it;+} answers a press with a further reason {+that+} the earlier sentence leaves room for; or differs only in wording.
+[-Read-]{+For+} each [-candidate's closing sentence together with the rows of its CLOSING BLOCK: a closing sentence that draws its point from a row ("So", "Therefore", "Thus") asserts what that row says, so if the earlier sentence withdrew, dropped or rested nothing on that row, the close asserts it again.-]
+[-Quote-]{+contradiction, quote+} both sentences word for [-word-]{+word, each from the round it stands in,+} and name the [-link:-]{+link it belongs to:+} the link whose[-closing-] block {+in the closing round+} holds the {+closing+} sentence, [-else-]{+or, where the block names no link,+} the link the earlier sentence supports. {+The defender's links are the numbers of its DECLARED CHAIN in [CR1]; the challenger's links are the numbers of its LINK blocks in [DR3].+}
+Reply with one line per contradiction and {+one line+} per candidate, and nothing else:
+CLOSE-CONTRADICTION: <candidate id or NEW> -- <DEFENDER|CHALLENGER> -- LINK <n> -- CONFIRMED | NOT A CONTRADICTION -- EARLIER [<round>] "<words>" -- CLOSING [<round 4>] "<words>" -- <one sentence: why both cannot be true, or why they can>
+If you find [-none-]{+no contradiction+} and there is no candidate, [-reply:-]{+reply with the one line:+} CLOSE-CONTRADICTION: NONE

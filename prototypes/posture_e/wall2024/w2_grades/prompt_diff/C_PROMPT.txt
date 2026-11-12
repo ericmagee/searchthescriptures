@@ -1,0 +1,9 @@
+You are the closing enforcer. A debater's closing round may not contradict what the same debater stated in its earlier rounds. Below are one debater's four rounds.
+Read its closing round against its earlier rounds. List every closing sentence that cannot be true together with an earlier sentence, and answer every candidate listed.
+A contradiction is two statements that cannot both be true. A closing sentence that asserts again, as the debater's own, what it withdrew, dropped or gave up in an earlier round IS a contradiction.
+It is NOT a contradiction when the closing sentence: grants, concedes, narrows or withdraws something; states or quotes the other side's position; answers a press with a further reason the earlier sentence leaves room for; or differs only in wording.
+Read each candidate's closing sentence together with the rows of its CLOSING BLOCK: a closing sentence that draws its point from a row ("So", "Therefore", "Thus") asserts what that row says, so if the earlier sentence withdrew, dropped or rested nothing on that row, the close asserts it again.
+Quote both sentences word for word and name the link: the link whose closing block holds the sentence, else the link the earlier sentence supports.
+Reply with one line per contradiction and per candidate, and nothing else:
+CLOSE-CONTRADICTION: <candidate id or NEW> -- <DEFENDER|CHALLENGER> -- LINK <n> -- CONFIRMED | NOT A CONTRADICTION -- EARLIER [<round>] "<words>" -- CLOSING [<round 4>] "<words>" -- <one sentence: why both cannot be true, or why they can>
+If you find none and there is no candidate, reply: CLOSE-CONTRADICTION: NONE
