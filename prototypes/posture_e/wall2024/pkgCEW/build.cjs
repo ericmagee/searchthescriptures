@@ -1,0 +1,10 @@
+// W2 pkgCEW (ASK 139 option 1; proposal rev 2, Wall 5473): close-enforcer wording. Four sentences added after the NOT list
+// ("... or differs only in wording.") of PROMPT in Close Enforcer Build and Judge Contradiction Build. Consistent with ASK 144
+// option 2 (a withdrawal "for" a named use covers only that use): the fourth sentence is scoped to the same link or purpose.
+// usage: node pkgCEW/build.cjs <parent in> <parent out>
+const fs=require('fs');const [,,fin,fout]=process.argv;const raw=JSON.parse(fs.readFileSync(fin,'utf8'));const W=(raw.data||raw).workflow||(raw.data||raw);
+const ADD='Read a withdrawal by its meaning, not its words: a closing sentence that says again in other words what the earlier sentence withdrew, dropped or gave up, or rests its reason on it, asserts it again. "Differs only in wording" clears two sentences that make the same claim; it never clears a closing sentence that makes again a claim the debater withdrew. A closing sentence that states only what the debater kept, or rests the same conclusion on other rows, does not assert it again. When the earlier sentence rests no weight on a verse or row, a closing sentence that uses that verse or row as a footing for the same link or the same purpose asserts it again; a use for a purpose the withdrawal left open does not.';
+const A='or differs only in wording.\\n';const B='or differs only in wording.\\n'+ADD.replace(/"/g,'\\"')+'\\n';
+let d=0;for(const nm of ['Close Enforcer Build','Judge Contradiction Build']){const n=W.nodes.find(x=>x.name===nm);let s=n.parameters.jsCode;const s0=s;const c=s.split(A).length-1;if(c!==1)throw new Error(nm+': anchor '+c);
+ s=s.replace(A,()=>B);new Function('$','$input','$execution','return (async()=>{'+s+'})');n.parameters.jsCode=s;d+=s.length-s0.length;console.log(nm,s0.length,'->',s.length,'+'+(s.length-s0.length));}
+fs.writeFileSync(fout,JSON.stringify(raw));console.log('SIZE (measured): code +'+d+' | prompt +'+(ADD.length+1)+' per enforcer call (sentences plus one newline)');
