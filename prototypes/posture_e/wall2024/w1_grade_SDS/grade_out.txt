@@ -1,0 +1,21 @@
+sol reply md5 1ce4abf9ebae88754870b5617f3211c4 (database 1ce4abf9ebae88754870b5617f3211c4)
+chatgpt  live 23/23/0 pkg 23/23/0 IDENTICAL
+grok     live 34/36/0 pkg 34/36/0 IDENTICAL
+haiku    live 4/43/0 pkg 4/43/0 IDENTICAL
+luna     live 25/25/0 pkg 25/25/0 IDENTICAL
+single   live 26/29/0 pkg 26/29/0 IDENTICAL
+sol      live 0/0/54 pkg 27/27/0 differs
+items live {"K-S3 UNCURED":6,"K-W UNCURED":20,"K-KJV UNCURED":1}
+items pkg {"K-S3 CURED":6,"K-W CURED":18,"K-W UNCURED":2,"K-KJV UNCURED":1}
+   still K-W DEFENDER CR3 LINK 5 #10 | neither the RESPONSE nor the STATEMENT line says STANDS WITHOUT IT because <layer> with an [L1], [L2] or [L3], CONCEDED, REASSERTED IN <roun
+   still K-W CHALLENGER DR3 LINK 2 #6 | neither the RESPONSE nor the STATEMENT line says STANDS WITHOUT IT because <layer> with an [L1], [L2] or [L3], CONCEDED, REASSERTED IN <roun
+   still K-KJV KJV QUOTE Hebrews 7:5 | TRIAL rule (recorded and answered; it removes no seat): the reply neither quotes the KJV words of  nor withdraws the ruling
+RESPONSE: K-W DEFENDER CR3 LINK 3 #7 -- NOT HELD: "betrothal | live malformed | pkg RESP[K-W DEFENDER CR3 LINK 3 #7 | NOT HELD: "betrothal and takin]
+RESPONSE: K-W DEFENDER CR3 LINK 3 #7 — NOT HELD: x           | live malformed | pkg RESP[K-W DEFENDER CR3 LINK 3 #7 | NOT HELD: x]
+RESPONSE: K-W DEFENDER CR3 LINK 3 #7 -- NOT HELD | y         | live RESP[K-W DEFENDER CR3 LINK 3 #7 -- NOT HELD | y] | pkg RESP[K-W DEFENDER CR3 LINK 3 #7 -- NOT HELD | y]
+STATEMENT: D3 vs C3 -- STANDS                                | live malformed | pkg malformed
+RESPONSE: K-W DEFENDER CR3 LINK 3 #7--NOT HELD: z            | live malformed | pkg malformed
+RESPONSE: K-LB DEFENDER LINK 4: NARROWED TO: the house -- of | live malformed | pkg RESP[K-LB DEFENDER LINK 4: NARROWED TO: the house | of David -- NOT HELD: w]
+**RESPONSE: K-S3 S3 DEFENDER CR4: #1 -- TOUCHES NO LINK: v** | live malformed | pkg RESP[K-S3 S3 DEFENDER CR4: #1 | TOUCHES NO LINK: v]
+RESULT: HELD -- the reason                                   | live prose/other | pkg prose/other
+RESPONSE:K-W DEFENDER CR3 LINK 3 #7 -- NOT HELD: q           | live malformed | pkg RESP[K-W DEFENDER CR3 LINK 3 #7 | NOT HELD: q]
