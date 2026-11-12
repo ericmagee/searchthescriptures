@@ -1,0 +1,10 @@
+== 34726 fields differ: calls
+   + calls {"n":"Get Early Alternate","k":0,"m":"anthropic/claude-haiku-5.5","f":"openrouter","cr":0,"w5":101561,"i":4,"o":2316,"b":0.069267625}
+   Get Early Alternate items 1 | Early Alternate Reply not run
+== 34852 fields differ: calls
+   + calls {"n":"Get Early Alternate","k":0,"m":"anthropic/claude-haiku-5.5","f":"openrouter","cr":0,"w5":95754,"i":4,"o":2515,"b":0.01322715}
+   Get Early Alternate items 1 | Early Alternate Reply not run
+== 35296 fields differ: calls
+   + calls {"n":"Get Early Alternate","k":0,"m":"x-ai/grok-4.7","f":"openrouter","cr":1152,"w5":0,"i":65505,"o":79931,"b":0.611172}
+   Get Early Alternate items 1 | Early Alternate Reply not run
+Panel Tokens runs 9 equal 6

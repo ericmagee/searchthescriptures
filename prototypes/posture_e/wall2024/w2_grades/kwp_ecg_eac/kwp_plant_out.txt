@@ -1,0 +1,6 @@
+as run (control)             hits 0 | live: UNCURED | pkgKWP: CURED
+unrelated 4 words            hits 179 | live: UNCURED | pkgKWP: UNCURED
+3 words of it                hits 179 | live: UNCURED | pkgKWP: UNCURED
+4-word piece                 hits 179 | live: UNCURED | pkgKWP: CURED
+parenthetical words only     hits 179 | live: UNCURED | pkgKWP: UNCURED
+clause plus parenthetical    hits 179 | live: CURED | pkgKWP: CURED

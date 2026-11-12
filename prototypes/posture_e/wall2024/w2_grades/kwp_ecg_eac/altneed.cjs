@@ -1,0 +1,1 @@
+const run=require('./rep.cjs');run('parent_s148_JOINT_KWP_ECG_EAC.json',['Panel Cure Check'],(fn,n,a,b)=>{if(a.ERR||b.ERR)return;const x=a[0].json.alt_needed,y=b[0].json.alt_needed;if(JSON.stringify(x)!==JSON.stringify(y))console.log(fn,'alt_needed',JSON.stringify(x),'->',JSON.stringify(y));});

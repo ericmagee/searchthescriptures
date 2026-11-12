@@ -1,0 +1,5 @@
+// W2 plant: Early Alternate Reply ran with the same stored grok reply (the all-early or pkgEAS path) -> one cost row, not two; and a reply with no id -> count rows
+const run=require('./rep.cjs');
+const ear=rd=>{const it=rd['Get Early Alternate'].slice(-1)[0].data.main.flat().filter(Boolean).map(x=>({json:x.json.reply}));return {isExecuted:true,first:()=>it[0],all:()=>it,last:()=>it[0],item:it[0],params:{}};};
+(async()=>{for(const [lab,over,pl] of [['Early Alternate Reply ran (same reply id)',{'Early Alternate Reply':ear},null],['same, reply id removed',{'Early Alternate Reply':ear},raw=>raw.replace(/"id":"gen-[^"]+"/g,'"id":null')]]){global.PLANT=(raw,fn)=>fn==='ex35296_full.json'&&pl?pl(raw):raw;
+ await run('parent_s148_EAC.json',['Panel Tokens'],(fn,n,a,b)=>{if(fn!=='35296')return;const g=o=>o.ERR?o.ERR:(o[0].json.calls||[]).filter(c=>/grok/.test(c.m||'')&&/Early/.test(c.n)).map(c=>c.n+' $'+c.b).join('; ');console.log(lab.padEnd(42),'| live:',g(a)||'none','| pkgEAC:',g(b)||'none');},over);}})();

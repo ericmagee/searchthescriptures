@@ -1,0 +1,22 @@
+== 34626 Panel Payloads | cec ["D6"] jcc []
+   luna drv 40 -> 38 moved K-G7 D6 vs C5 (Romans 1:3): DEFENDER LINK BROKEN -- [ | K-G7 D6 vs C6 (Luke 3:23): DEFENDER LINK BROKEN -- [L
+   drv_uncured [["luna",28],["chatgpt",30],["sol",34]] -> [["luna",26],["chatgpt",30],["sol",34]]
+== 34703 Panel Payloads | cec ["D6"] jcc []
+   chatgpt drv 42 -> 40 moved K-G4 D6 vs C5 (John 3:6): DEFENDER LINK BROKEN (Commi | K-G7 D6 vs C5 (John 3:6): DEFENDER LINK BROKEN (Commi
+   drv_uncured [["luna",19],["chatgpt",37],["sol",33]] -> [["luna",19],["chatgpt",35],["sol",33]]
+== 34726 Panel Payloads | cec ["D1"] jcc ["D4"]
+   luna drv 33 -> 31 moved K-G4 D1 vs C3 (Matthew 1:18): DEFENDER LINK BROKEN -- | K-G7 D1 vs C3 (Matthew 1:18): DEFENDER LINK BROKEN --
+   drv_uncured [["luna",24],["chatgpt",31],["sol",36]] -> [["luna",22],["chatgpt",31],["sol",36]]
+== 34852 Panel Payloads | cec ["D3"] jcc []
+   luna drv 33 -> 30 moved K-B D3 vs C3 (Matthew 1:19): DEFENDER LINK BROKEN -- | K-G4 D3 vs C3 (Matthew 1:19): DEFENDER LINK BROKEN -- | K-G7 D3 vs C3 (Matthew 1:19): DEFENDER LINK BROKEN --
+   drv_uncured [["luna",26],["chatgpt",21],["sol",22]] -> [["luna",23],["chatgpt",21],["sol",22]]
+== 35173 Panel Payloads | cec ["D5"] jcc []
+   luna drv 17 -> 16 moved K-G4 D5 vs C6: DEFENDER LINK BROKEN -- the defender’s
+   drv_uncured [["luna",11],["chatgpt",12],["sol",14]] -> [["luna",10],["chatgpt",12],["sol",14]]
+== 35296 Panel Payloads | cec ["D4","D2","D3"] jcc ["D2"]
+   luna drv 49 -> 37 moved K-G4 D2 vs C3 (Luke 1:35): DEFENDER LINK BROKEN -- Th | K-G4 D3 vs C2 (Isaiah 7:14): DEFENDER LINK BROKEN --  | K-G4 D4 vs C1 (Matthew 1:16): DEFENDER LINK BROKEN -- | K-G4 D4 vs C4 (Matthew 1:25): DEFENDER LINK BROKEN -- | K-G4 D4 vs C5 (Matthew 1:19): DEFENDER LINK BROKEN -- | K-G4 D4 vs C6 (Luke 2:48): DEFENDER LINK BROKEN -- Th | K-G7 D2 vs C3 (Luke 1:35): DEFENDER LINK BROKEN -- Th | K-G7 D3 vs C2 (Isaiah 7:14): DEFENDER LINK BROKEN --  | K-G7 D4 vs C1 (Matthew 1:16): DEFENDER LINK BROKEN -- | K-G7 D4 vs C4 (Matthew 1:25): DEFENDER LINK BROKEN -- | K-G7 D4 vs C5 (Matthew 1:19): DEFENDER LINK BROKEN -- | K-G7 D4 vs C6 (Luke 2:48): DEFENDER LINK BROKEN -- Th
+   drv_uncured [["luna",22],["chatgpt",11],["sol",15]] -> [["luna",10],["chatgpt",11],["sol",15]]
+== 35296 R2 Alternate Payloads | cec ["D4","D2","D3"] jcc ["D2"]
+   haiku drv 26 -> 22 moved K-B D3 vs C3 (Isaiah 7:14; Galatians 4:4): DEFENDER  | K-G4 D4 vs C4 (Luke 1:27; Luke 2:48): DEFENDER LINK B | K-G7 D2 vs C2 (Luke 1:35): DEFENDER LINK BROKEN -- th | K-G7 D4 vs C4 (Luke 1:27; Luke 2:48): DEFENDER LINK B
+   drv_uncured [["haiku",15]] -> [["haiku",11]]
+equal apart from ecg 16 of 23
