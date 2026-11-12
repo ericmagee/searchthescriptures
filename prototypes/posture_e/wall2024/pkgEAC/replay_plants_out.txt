@@ -1,0 +1,25 @@
+34726 live: 53 rows,  
+      pkg:  54 rows, Get Early Alternate anthropic/claude-haiku-5.5 $0.069267625
+      added rows: [{"n":"Get Early Alternate","k":0,"m":"anthropic/claude-haiku-5.5","f":"openrouter","cr":0,"w5":101561,"i":4,"o":2316,"b":0.069267625}] | other fields equal: true
+34852 live: 53 rows,  
+      pkg:  54 rows, Get Early Alternate anthropic/claude-haiku-5.5 $0.01322715
+      added rows: [{"n":"Get Early Alternate","k":0,"m":"anthropic/claude-haiku-5.5","f":"openrouter","cr":0,"w5":95754,"i":4,"o":2515,"b":0.01322715}] | other fields equal: true
+35296 live: 74 rows,  
+      pkg:  75 rows, Get Early Alternate x-ai/grok-4.7 $0.611172
+      added rows: [{"n":"Get Early Alternate","k":0,"m":"x-ai/grok-4.7","f":"openrouter","cr":1152,"w5":0,"i":65505,"o":79931,"b":0.611172}] | other fields equal: true
+Panel Tokens runs 9 equal 6
+P1 all early: Early Alternate Reply also ran with the same reply 
+  live: 75 rows, Early Alternate Reply x-ai/grok-4.7 $0.611172 
+  pkg:  75 rows, Early Alternate Reply x-ai/grok-4.7 $0.611172
+P2 the stored row carries an error and no reply 
+  live: 74 rows,  
+  pkg:  74 rows, 
+P3 Get Early Alternate did not run 
+  live: 74 rows,  
+  pkg:  74 rows, 
+P4 two stored replies (luna and sol) 
+  live: 74 rows,  
+  pkg:  76 rows, Get Early Alternate x-ai/grok-4.7 $0.611172; Get Early Alternate x-ai/grok-4.7 $0.611172
+P5 stored reply with no usage 
+  live: 74 rows,  
+  pkg:  74 rows, 

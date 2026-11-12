@@ -1,0 +1,23 @@
+V0 as run (quotes "I grant that her know is present") 
+  live: follow-up asks #4: yes; luna #4 after follow-up UNCURED 
+  pkg:  follow-up asks #4: no; luna #4 after follow-up CURED
+  replaced in replies: 150 | flagged line intact: true
+V1 quote without the lead: "that her know is present" 
+  live: follow-up asks #4: yes; luna #4 after follow-up UNCURED 
+  pkg:  follow-up asks #4: no; luna #4 after follow-up CURED
+  replaced in replies: 150 | flagged line intact: true
+V2 two-word quote: "her know" 
+  live: follow-up asks #4: yes; luna #4 after follow-up UNCURED 
+  pkg:  follow-up asks #4: yes; luna #4 after follow-up UNCURED
+  replaced in replies: 150 | flagged line intact: true
+V3 quote from inside the parenthetical: "thou shalt conceive is future" 
+  live: follow-up asks #4: yes; luna #4 after follow-up UNCURED 
+  pkg:  follow-up asks #4: yes; luna #4 after follow-up UNCURED
+  replaced in replies: 150 | flagged line intact: true
+V4 unrelated five words: "the angel came in unto" 
+  live: follow-up asks #4: yes; luna #4 after follow-up UNCURED 
+  pkg:  follow-up asks #4: yes; luna #4 after follow-up UNCURED
+  replaced in replies: 150 | flagged line intact: true
+V5 four words of the clause: "her know is present" 
+  live: follow-up asks #4: yes; luna #4 after follow-up UNCURED 
+  pkg:  follow-up asks #4: no; luna #4 after follow-up CURED

@@ -1,0 +1,13 @@
+l 1 run_token,debate_id,bodies,summary,substitution,panel_effective,vc_single,vc_error,kkjv_report,alt_needed,enforcer_log,sb_apply,alternates_seated,drv_removed,alternates_tried,qualify_alternate 500
+p 1 run_token,debate_id,bodies,summary,substitution,panel_effective,vc_single,vc_error,kkjv_report,alt_needed,enforcer_log,sb_apply,alternates_seated,drv_removed,alternates_tried,qualify_alternate 500
+live 1 pkg 0 haiku|cure|K-B|D3 vs C3|UNCURED
+live 1 pkg 0 haiku|cure|K-G4|D4 vs C4|UNCURED
+live 1 pkg 0 haiku|cure|K-G7|D2 vs C2|CURED
+live 1 pkg 0 haiku|cure|K-G7|D4 vs C4|UNCURED
+pkg only 1 haiku|enforcer_check|K-B|D3 vs C3|null
+pkg only 1 haiku|enforcer_check|K-G4|D4 vs C4|null
+pkg only 1 haiku|enforcer_check|K-G7|D2 vs C2|null
+pkg only 1 haiku|enforcer_check|K-G7|D4 vs C4|null
+stored len 500
+l tried [{"removed_seat":"luna","alternate":"haiku","api_model":"anthropic/claude-haiku-5.5","result":"NOT SEATED","why":"3 uncured item(s)","verdict_raw":"{\"verdict_tag\":\"BROKEN\",\"defense_standing\":\"COLLAPSED\",\"challenge_standing\":\"PROP-DEPENDENT\",\"conceded_links\":3,\"challenger_conceded_links\":0,\"counted_premises_defender\":[],\"counted_premises_challenger\":[],\"reasoning\":\"CONTRADICTIONS: the engine's closing-round contradictions for D2, D3 and D4 are confirmed by code: [CR4] \\\"I keep D1, D2, D3, D4 and D5 as declared\\\" and \\\"Nothing is conceded or narrowed\\\" against [CR3] narrowing LINK 2, LINK 4 limbs, and [CR2] \\\"I rest nothing now on Genesis 3:15 and Galatians 4:4 seated []
+p tried [{"removed_seat":"luna","alternate":"haiku","api_model":"anthropic/claude-haiku-5.5","result":"SEATED"}] seated [{"removed_seat":"luna","alternate_seat":"haiku","alternate_api_model":"anthropic/claude-haiku-5.5"}]
