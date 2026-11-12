@@ -1,0 +1,50 @@
+P1 reason opens with quote
+  old TO=[ANSWER CHECK: Ezra 2:59 -- [CR4] -- MEANS: "a" -- ANSWER: "b" -- MISSES (Commitment 3)]
+         WHY=["house and seed" decides it.]
+  new TO=[ANSWER CHECK: Ezra 2:59 -- [CR4] -- MEANS: "a" -- ANSWER: "b" -- MISSES (Commitment 3)]
+         WHY=["house and seed" decides it.]
+P2 grade word in reason
+  old TO=[ANSWER CHECK: Ezra 2:59]
+         WHY=[[CR4] -- MEANS: "a" -- ANSWER: "b" -- MISSES -- The answer FAILS -- MEETS no test.]
+  new TO=[ANSWER CHECK: Ezra 2:59 -- [CR4] -- MEANS: "a" -- ANSWER: "b" -- MISSES -- The answer FAILS -- MEETS no test.]
+         WHY=[]
+P3 unspaced em dashes, plain reason
+  old TO=[ANSWER CHECK: Ezra 2:59]
+         WHY=[[CR4]—MEANS: "a"—ANSWER: "b"—MISSES (Commitment 3)—The answer supplies acts.]
+  new TO=[ANSWER CHECK: Ezra 2:59]
+         WHY=[[CR4]—MEANS: "a"—ANSWER: "b"—MISSES (Commitment 3)—The answer supplies acts.]
+P4 reason opens with bracket round tag
+  old TO=[ANSWER CHECK: Ezra 2:59 -- [CR4] -- MEANS: "a" -- ANSWER: "b" -- MISSES (Commitment 3)]
+         WHY=[[CR4] supplies acts, not seed.]
+  new TO=[ANSWER CHECK: Ezra 2:59 -- [CR4] -- MEANS: "a" -- ANSWER: "b" -- MISSES (Commitment 3) -- [CR4] supplies acts, not seed.]
+         WHY=[]
+P5 reason opens with bare round tag
+  old TO=[ANSWER CHECK: Ezra 2:59 -- [CR4] -- MEANS: "a" -- ANSWER: "b" -- MISSES (Commitment 3)]
+         WHY=[CR4 supplies acts, not seed.]
+  new TO=[ANSWER CHECK: Ezra 2:59 -- [CR4] -- MEANS: "a" -- ANSWER: "b" -- MISSES (Commitment 3)]
+         WHY=[CR4 supplies acts, not seed.]
+P6 collision, no field after grade
+  old TO=[D5 vs C1 (Hebrews 7:14): UNDERDETERMINED]
+         WHY=[CR3 and CR4 answer the witness.]
+  new TO=[D5 vs C1 (Hebrews 7:14): UNDERDETERMINED]
+         WHY=[CR3 and CR4 answer the witness.]
+P7 collision with layer, reason quote
+  old TO=[D1 vs C2 (Luke 1:35): DEFENDER LINK BROKEN -- [L1] Luke 1:35 "that holy thing"]
+         WHY=["that holy thing" is the record.]
+  new TO=[D1 vs C2 (Luke 1:35): DEFENDER LINK BROKEN -- [L1] Luke 1:35 "that holy thing"]
+         WHY=["that holy thing" is the record.]
+P8 en dashes spaced
+  old TO=[ANSWER CHECK: Ezra 2:59]
+         WHY=[[CR4] – MEANS: "a" – ANSWER: "b" – MISSES – The answer supplies acts.]
+  new TO=[ANSWER CHECK: Ezra 2:59 – [CR4] – MEANS: "a" – ANSWER: "b" – MISSES – The answer supplies acts.]
+         WHY=[]
+P9 KEEP with fields
+  old TO=[KEEP -- ANSWER CHECK: Ezra 2:59]
+         WHY=[[CR4] -- the reason.]
+  new TO=[KEEP -- ANSWER CHECK: Ezra 2:59]
+         WHY=[[CR4] -- the reason.]
+P10 lowercase grade in reason
+  old TO=[ANSWER CHECK: Ezra 2:59 -- [CR4] -- MEANS: "a" -- ANSWER: "b" -- MISSES -- the answer misses]
+         WHY=["seed" decides.]
+  new TO=[ANSWER CHECK: Ezra 2:59 -- [CR4] -- MEANS: "a" -- ANSWER: "b" -- MISSES -- the answer misses]
+         WHY=["seed" decides.]

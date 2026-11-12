@@ -1,0 +1,10 @@
+lines 3471 3471
+DIFF line 1756 180 825
+OLD:  const rest=m[3];let at=-1,len=0;for(const x of rest.matchAll(/\s*(?:--|—|–)\s*(?=\[\s*(?:CR|DR)[1-4]|\(\s*(?:CR|DR)[1-4]|(?:CR|DR)[1-4]\b|["“‘'])/gi)){at=x.index;len=x[0].length;}
+NEW:  const rest=m[3];let at=-1,len=0;const __fm=/^CHANGE/i.test(m[2])?[...rest.matchAll(/\s(?:--|—|–)\s*(?=GROUND\s*:|MEANS\s*(?:\[[^\]\n]*\])?\s*:|ANSWER\s*(?:\[[^\]\n]*\])?\s*:|FAILS\s*:|\[L[1-4]\]|\[\s*(?:CR|DR)[1-4]|(?:MEETS|MISSES|FAILS|BROKEN|STANDS|UNDERDETERMINED|WITHDRAWN|FORCED|SPARED|VOID|COUNTED|UNEXHIBITED|CONCEDED|NOT HELD|DEFENDER LINK BROKEN|CHALLENGER LINK BROKEN)\b)/g)].pop():null;const __lf=__fm?__fm.index:-1; /* pkgGDC: in a CHANGE TO, the reason bar never goes before the corrected line's last field (round tag, MEANS, ANSWER, GROUND, FAILS, a layer or a grade word); with no dash after that field the whole rest stays the line */ for(const x of rest.matchAll(/\s*(?:--|—|–)\s*(?=\[\s*(?:CR|DR)[1-4]|\(\s*(?:CR|DR)[1-4]|(?:CR|DR)[1-4]\b|["“‘'])/gi)){if(x.index<=__lf)continue;at=x.index;len=x[0].length;}
+MAP Alt Gate Record 237368 238013
+MAP Alt Send Back Record 132313 132958
+MAP Gate Record 237359 238004
+MAP R2 Alt Gate Record 237380 238025
+MAP R2 Alt Send Back Record 132361 133006
+MAP Send Back Record 132341 132986

@@ -1,0 +1,12 @@
+as run changed: false
+  live UNCURED | SEND-BACK CHANGE TO: ANSWER CHECK: Ezra 2:59 -- [CR4] -- MEANS: "the register requires father's house and seed" -- ANSWER: "Joseph's house is shown, and the chi
+  pkg  CURED | SEND-BACK CHANGE TO: ANSWER CHECK: Ezra 2:59 -- [CR4] -- MEANS: "the register requires father's house and seed" -- ANSWER: "Joseph's house is shown, and the chi
+P4 S2 reason opens with [CR4] changed: true
+  live CURED | SEND-BACK CHANGE TO: ANSWER CHECK: Ezra 2:59 -- [CR4] -- MEANS: "the register requires father's house and seed" -- ANSWER: "Joseph's house is shown, and the chi
+  pkg  CURED | SEND-BACK CHANGE TO: ANSWER CHECK: Ezra 2:59 -- [CR4] -- MEANS: "the register requires father's house and seed" -- ANSWER: "Joseph's house is shown, and the chi
+P5 S2 reason opens with bare CR4 changed: true
+  live CURED | SEND-BACK CHANGE TO: ANSWER CHECK: Ezra 2:59 -- [CR4] -- MEANS: "the register requires father's house and seed" -- ANSWER: "Joseph's house is shown, and the chi
+  pkg  CURED | SEND-BACK CHANGE TO: ANSWER CHECK: Ezra 2:59 -- [CR4] -- MEANS: "the register requires father's house and seed" -- ANSWER: "Joseph's house is shown, and the chi
+P3 S2 unspaced em dashes changed: true
+  live UNCURED | SEND-BACK CHANGE TO: ANSWER CHECK: Ezra 2:59 -- [CR4]—MEANS: "the register requires father's house and seed"—ANSWER: "Joseph's house is shown, and the child com
+  pkg  UNCURED | SEND-BACK CHANGE TO: ANSWER CHECK: Ezra 2:59 -- [CR4]—MEANS: "the register requires father's house and seed"—ANSWER: "Joseph's house is shown, and the child com
