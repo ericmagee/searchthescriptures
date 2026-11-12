@@ -1,0 +1,4 @@
+pkgOLK (W1; DeepSeek issue (d); W1 Wall 5214, W4 Wall 5216). Live base s152. Shared Library line 3036 (pkgA1N other-lines builder; helper olkOrder). Library +986; Judge Enforcer Build, Alt Judge Enforcer Build, R2 Alt Judge Enforcer Build +977 each. Prompt 0.
+Source case: run 34852 item B15 (Matthew 1:25 [CR3], "This is the naming answered under link 3"): the served block was cut inside the naming answer; with the package the naming answer and its conclusion come first.
+Key words: words of five or more letters in the answer, less a short stop list, compared on their first five letters.
+Limits: blank lines between paragraphs are not kept in the served text; a key word shared by many paragraphs moves them all forward in their own order, so the topic paragraph can still be cut when many share it; whether DeepSeek then grades MEETS needs a paid call.
