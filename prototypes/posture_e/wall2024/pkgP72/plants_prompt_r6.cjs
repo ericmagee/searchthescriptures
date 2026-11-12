@@ -1,0 +1,15 @@
+// pkgP72 rev 6 prompt plants (W3 Wall 5076 fault 1 and 2): stored run 34626, luna's defender CONCEDED LINKS line is replaced by a
+// planted line; Judge Enforcer Build of rev 5 and rev 6 are run; the premise 2 item is checked for the ruling-372 block and r372.
+const fs=require('fs');const load=p=>{let j=JSON.parse(fs.readFileSync(p,'utf8'));j=j.data||j;return j.workflowData||j.workflow||j;};
+const reb=(B,e)=>{const T=B.nodes.find(n=>n.name==='Shared Library').parameters.jsCode;const a=T.indexOf('\n/*LIB*/'),b=T.lastIndexOf('\n/*MAP*/'),c=T.lastIndexOf('\n/*END*/');const Lb=JSON.parse(T.slice(a+8,b)),M=JSON.parse(T.slice(b+8,c));return M[e].p.map(x=>typeof x==='number'?Lb[x]:typeof x[0]==='string'?x[0]:Lb.slice(x[0],x[1]+1).join('\n')).join('\n');};
+const run=async(B,rd,node)=>{const src=reb(B,node);const mk=name=>{const r=rd[name];const items=r?r[r.length-1].data.main.flat().filter(Boolean):[];const nd=(B.nodes.find(n=>n.name===name)||{});return {isExecuted:!!r,first:()=>items[0],all:()=>items,last:()=>items[items.length-1],item:items[0],params:nd.parameters||{}};};
+ const r=rd[node];const sn=r[0].source&&r[0].source[0]&&r[0].source[0].previousNode;const inp=mk(sn);const $input={all:()=>inp.all(),first:()=>inp.first(),item:inp.first()};
+ return await new Function('$','$input','return (async()=>{\n'+src+'\n})();')(mk,$input);};
+const OLD='CONCEDED LINKS: 0 -- None; D1–D6 are not counted as conceded or unexhibited in [CR3] or [CR4].';
+const P=[['stored line (no VOID)',null,1],['CONCEDED LINKS: 0 -- Premise 2 is VOID (Commitment 6): planted.',0],['CONCEDED LINKS: 0 -- Premise 2, which the challenger did not exhibit, is VOID.',0],['CONCEDED LINKS: 0 -- Premises 1-3 are VOID as charged.',0],['CONCEDED LINKS: 0 -- Premise **2** VOID.',0],['CONCEDED LINKS: 0 -- the earlier void rulings on premises 2 and 5 remain unchanged.',0],['CONCEDED LINKS: 0 -- Premise 2 is not VOID; premise 4 is VOID.',1]];
+const raw=fs.readFileSync('/mnt/project-files/wall2024/ex34626_full.json','utf8');
+(async()=>{let ok=0,n=0;for(const fn of process.argv.slice(2)){const B=load(fn);console.log('==',fn.split('/').pop());
+ for(const [line,want,w0] of P){const wantBlock=want===null?w0:(P.find(q=>q[0]===line)[2]??want);const t=line.startsWith('stored')?raw:raw.split(OLD).join(line);const rd=JSON.parse(t).data.resultData.runData;const o=await run(B,rd,'Judge Enforcer Build');
+  let blk=null,r=null;for(const i of o){for(const z of (i.json.ids||[]))if(z.seat==='luna'&&/defender 2$/.test(z.item))r=(z.r372||[]).length;const j=i.json.body;if(!j)continue;const u=String(j.messages[j.messages.length-1].content);for(const it of u.split(/\n\n(?=ITEM )/))if(/listed against the defender, number 2\)/.test(it)||/challenger listed against the defender, number 2\)/.test(it)){const seg=it.slice(it.indexOf('(luna)'));blk=/ruling 372\): /.test(seg.split('\n- ')[0]);}}
+  const exp=!!wantBlock;n++;const good=(blk===exp)&&((r>0)===exp);if(good)ok++;console.log(good?'OK  ':'FAIL','block in prompt',blk,'| r372 count',r,'| want',exp,'|',line);}}
+ console.log('checks',n,'right',ok);})();

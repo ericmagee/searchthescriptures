@@ -1,0 +1,17 @@
+== parent_s145_P72r5.json
+OK   block in prompt true | r372 count 1 | want true | stored line (no VOID)
+FAIL block in prompt true | r372 count 0 | want false | CONCEDED LINKS: 0 -- Premise 2 is VOID (Commitment 6): planted.
+FAIL block in prompt true | r372 count 1 | want false | CONCEDED LINKS: 0 -- Premise 2, which the challenger did not exhibit, is VOID.
+FAIL block in prompt true | r372 count 0 | want false | CONCEDED LINKS: 0 -- Premises 1-3 are VOID as charged.
+FAIL block in prompt true | r372 count 1 | want false | CONCEDED LINKS: 0 -- Premise **2** VOID.
+FAIL block in prompt true | r372 count 1 | want false | CONCEDED LINKS: 0 -- the earlier void rulings on premises 2 and 5 remain unchanged.
+OK   block in prompt true | r372 count 1 | want true | CONCEDED LINKS: 0 -- Premise 2 is not VOID; premise 4 is VOID.
+== parent_s145_P72r6.json
+OK   block in prompt true | r372 count 1 | want true | stored line (no VOID)
+OK   block in prompt false | r372 count 0 | want false | CONCEDED LINKS: 0 -- Premise 2 is VOID (Commitment 6): planted.
+OK   block in prompt false | r372 count 0 | want false | CONCEDED LINKS: 0 -- Premise 2, which the challenger did not exhibit, is VOID.
+OK   block in prompt false | r372 count 0 | want false | CONCEDED LINKS: 0 -- Premises 1-3 are VOID as charged.
+OK   block in prompt false | r372 count 0 | want false | CONCEDED LINKS: 0 -- Premise **2** VOID.
+OK   block in prompt false | r372 count 0 | want false | CONCEDED LINKS: 0 -- the earlier void rulings on premises 2 and 5 remain unchanged.
+OK   block in prompt true | r372 count 1 | want true | CONCEDED LINKS: 0 -- Premise 2 is not VOID; premise 4 is VOID.
+checks 14 right 9

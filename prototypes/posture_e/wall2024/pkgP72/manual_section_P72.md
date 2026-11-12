@@ -11,3 +11,6 @@ The VOID reader is wide: "Premise(s) N ... VOID" or "VOIDED" within one clause o
 
 ## Rev 5 (after W4's FAIL, Wall 5067)
 Number ranges in a VOID ruling are expanded: "Premises 1-5", "1–5", "1 to 5", "1 through 5" read every premise in the range (a range wider than 20, or reversed, reads only its ends).
+
+## Rev 6 (after W3's FAIL, Wall 5076)
+The block in the DeepSeek prompt (line 3129) now tests the judge's CONCEDED LINKS line, as the ids at line 3126 do; before, a VOID ruling made only in CONCEDED LINKS emptied r372 but left the block in the prompt (present since rev 3). The negation guard applies only when "not", "never" or "no longer" stands directly before VOID (allowing "be", "been", "ruled", "held" or "found" between), so a "not" in a relative clause no longer releases the block. "void ruling(s) on premise(s) N" is read, and bold markers are removed before reading. Limits: VOID in another sentence from its premise number is not read; an unnumbered "the charge is VOID" is not read; a false read withholds a block.
