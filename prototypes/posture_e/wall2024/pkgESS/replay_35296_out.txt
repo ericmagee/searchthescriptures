@@ -1,0 +1,23 @@
+
+== as run
+live early: [] | called: ["grok","argon"] | via: Alternate Call (all items)
+     payloads [{"seat":"grok","ok":false,"why":"call failed: aborted","len":232412},{"seat":"argon","ok":true,"why":null,"len":294101}]
+pkg  early: ["luna"] | called: ["argon"] | via: Alternate Call (1 item(s)); Early Alternate Reply 1 item(s) stops at Early All? (false)
+     payloads [{"seat":"grok","ok":true,"why":null,"len":290412},{"seat":"argon","ok":true,"why":null,"len":294101}]
+     argon payload equal live/pkg: true | grok payload equal live/pkg: false
+
+== none early
+live early: [] | called: ["grok","argon"] | via: Alternate Call (all items)
+     payloads [{"seat":"grok","ok":false,"why":"call failed: aborted","len":232412},{"seat":"argon","ok":true,"why":null,"len":294101}]
+pkg  early: [] | called: ["grok","argon"] | via: Alternate Call (2 item(s)); Early Alternate Reply 0 item(s) stops at Early All? (false)
+     payloads [{"seat":"grok","ok":false,"why":"call failed: aborted","len":232412},{"seat":"argon","ok":true,"why":null,"len":294101}]
+     argon payload equal live/pkg: true | grok payload equal live/pkg: true
+
+== all early (plant)
+live early: ["luna","sol"] | called: [] | via: Early Alternate Reply
+     payloads [{"seat":"grok","ok":true,"why":null,"len":290412},{"seat":"argon","ok":true,"why":null,"len":294101}]
+pkg  early: ["luna","sol"] | called: [] | via: Early Alternate Reply -> Early All? (true)
+     payloads [{"seat":"grok","ok":true,"why":null,"len":290412},{"seat":"argon","ok":true,"why":null,"len":294101}]
+     argon payload equal live/pkg: true | grok payload equal live/pkg: true
+
+pkg as-run grok payload equals live all-early grok payload (the early path today): true

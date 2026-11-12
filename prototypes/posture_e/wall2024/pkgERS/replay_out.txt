@@ -1,0 +1,44 @@
+33149 Enforcer Record                equal true | Resend Build would send: -
+33149 Judge Enforcer Record          equal true | Resend Build would send: -
+33149 Alt Judge Enforcer Record      equal true | Resend Build would send: -
+33371 Enforcer Record                equal true | Resend Build would send: -
+33371 Judge Enforcer Record          equal true | Resend Build would send: -
+33371 Alt Judge Enforcer Record      equal true | Resend Build would send: -
+33490 Enforcer Record                equal true | Resend Build would send: -
+33490 Judge Enforcer Record          equal true | Resend Build would send: -
+33490 Alt Judge Enforcer Record      equal true | Resend Build would send: -
+33497 Enforcer Record                equal true | Resend Build would send: -
+33497 Judge Enforcer Record          equal true | Resend Build would send: -
+33497 Alt Judge Enforcer Record      equal true | Resend Build would send: -
+34299 Enforcer Record                equal true | Resend Build would send: -
+34299 Judge Enforcer Record          equal true | Resend Build would send: -
+34626 Enforcer Record                equal true | Resend Build would send: -
+34626 Judge Enforcer Record          equal true | Resend Build would send: -
+34626 Alt Judge Enforcer Record      equal true | Resend Build would send: -
+34703 Enforcer Record                equal true | Resend Build would send: -
+34703 Judge Enforcer Record          equal true | Resend Build would send: -
+34703 Alt Judge Enforcer Record      equal true | Resend Build would send: -
+34726 Enforcer Record                equal true | Resend Build would send: -
+34726 Judge Enforcer Record          equal true | Resend Build would send: -
+34726 Alt Judge Enforcer Record      equal true | Resend Build would send: -
+34780 Enforcer Record                equal true | Resend Build would send: -
+34780 Judge Enforcer Record          equal true | Resend Build would send: -
+34780 Alt Judge Enforcer Record      equal true | Resend Build would send: -
+34852 Enforcer Record                equal true | Resend Build would send: -
+34852 Judge Enforcer Record          equal true | Resend Build would send: -
+34852 Alt Judge Enforcer Record      equal true | Resend Build would send: -
+35067 Enforcer Record                equal true | Resend Build would send: -
+35067 Judge Enforcer Record          equal true | Resend Build would send: -
+35067 Alt Judge Enforcer Record      equal true | Resend Build would send: -
+35173 Enforcer Record                equal true | Resend Build would send: -
+35173 Judge Enforcer Record          equal true | Resend Build would send: -
+35173 Alt Judge Enforcer Record      equal true | Resend Build would send: ["none"]
+35296 Enforcer Record                equal true | Resend Build would send: -
+35296 Judge Enforcer Record          equal true | Resend Build would send: -
+35296 Alt Judge Enforcer Record      equal true | Resend Build would send: ["k1"]
+35296 R2 Alt Judge Enforcer Record   equal true | Resend Build would send: -
+TOTAL (A) records 39 equal 39
+
+(B) 35296 Resend Build output: [{"ers_resend":true,"ers_k":1,"ids":13,"same_body":true}]
+(B) NO VERDICT before 13 after planted resend 0 | esr {"retried":[2,3],"halves":4,"why":{"2":"finish_reason length (the reply was cut at the token cap)","3":"empty content"},"resent":1} | errors after []
+(C) resend also aborted: NO VERDICT 13 | esr {"retried":[2,3],"halves":4,"why":{"2":"finish_reason length (the reply was cut at the token cap)","3":"empty content"},"resent":1}

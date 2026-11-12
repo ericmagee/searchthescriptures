@@ -1,0 +1,9 @@
+Enforcer calls 1 | Resend Build picks [0] | bodies equal to the stored call bodies true
+verdicts (tally and per-row results) with resend equal to the stored run: true | without resend equal: false | errors without resend: null | with resend: null
+Judge Enforcer calls 8 | Resend Build picks [0,1,2,3,4,5,6,7] | bodies equal to the stored call bodies true
+verdicts (tally and per-row results) with resend equal to the stored run: true | without resend equal: false | errors without resend: ["call 1: no reply (\"aborted\")","call 2: no reply (\"aborted\")","call 3: no reply (\"aborted\")","call 4: no reply (\"aborted\")","call 5: no reply (\"aborte | with resend: []
+Alt Judge Enforcer calls 5 | Resend Build picks [0,1,2,3,4] | bodies equal to the stored call bodies true
+verdicts (tally and per-row results) with resend equal to the stored run: false | without resend equal: false | errors without resend: ["call 1: no reply (\"aborted\")","call 2: no reply (\"aborted\")","call 3: no reply (\"aborted\")","call 4: no reply (\"aborted\")","call 5: no reply (\"aborte | with resend: ["call 2: empty content (finish_reason length)","call 3: empty content (finish_reason stop)"]
+  keys bodies,judges,alt_seats,run_token,f,enf421_rows,enf428_rows,alt_needed,enf428
+R2 Alt Judge Enforcer calls 1 | Resend Build picks [0] | bodies equal to the stored call bodies true
+verdicts (tally and per-row results) with resend equal to the stored run: true | without resend equal: false | errors without resend: ["call 1: no reply (\"aborted\")"] | with resend: []
