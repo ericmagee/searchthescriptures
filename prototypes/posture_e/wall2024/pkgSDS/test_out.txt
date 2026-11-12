@@ -1,0 +1,17 @@
+chatgpt  live st 23 / resp 23 / malformed 0 / prose 0 | parent st 23 / resp 23 / malformed 0 / prose 0 | identical true
+grok     live st 34 / resp 36 / malformed 0 / prose 33 | parent st 34 / resp 36 / malformed 0 / prose 33 | identical true
+haiku    live st 4 / resp 43 / malformed 0 / prose 15 | parent st 4 / resp 43 / malformed 0 / prose 15 | identical true
+luna     live st 25 / resp 25 / malformed 0 / prose 5 | parent st 25 / resp 25 / malformed 0 / prose 5 | identical true
+single   live st 26 / resp 29 / malformed 0 / prose 1 | parent st 26 / resp 29 / malformed 0 / prose 1 | identical true
+sol      live st 0 / resp 0 / malformed 54 / prose 35 | parent st 27 / resp 27 / malformed 0 / prose 35 | identical false
+sol labels read: 27 e.g. {"label":"K-S3 S3 DEFENDER CR4: #1","text":"NOT HELD: [CR4] \"I grant the child is conceived before the taking (Matthew 1:24).\" grants the chronology used to defend the links, not their contrary. TOU
+sol K-KJV: {"label":"K-KJV KJV QUOTE Hebrews 7:5","text":"NOT HELD as a misquotation of Hebrews 7:5: My answer check attributed \"Of the fruit of thy b
+plant em dash          live st 0 / resp 0 / malformed 1 / prose 0 | parent st 0 / resp 1 / malformed 0 / prose 0 {"label":"K-W DEFENDER CR3 LINK 3 #7","text":"NOT HELD: \"x\" -- y","line":"RESPONSE: K-W DEFENDER CR3 LINK 3 #7 | NOT H
+plant en dash          live st 0 / resp 0 / malformed 1 / prose 0 | parent st 1 / resp 0 / malformed 0 / prose 0 {"label":"K-S3 S3 DEFENDER CR4: #1","text":"TOUCHES NO LINK: z","line":"STATEMENT: K-S3 S3 DEFENDER CR4: #1 | TOUCHES NO
+plant bold             live st 0 / resp 0 / malformed 1 / prose 0 | parent st 0 / resp 1 / malformed 0 / prose 0 {"label":"K-W DEFENDER CR3 LINK 3 #7","text":"NOT HELD: q","line":"RESPONSE: K-W DEFENDER CR3 LINK 3 #7 | NOT HELD: q","
+plant pipe kept        live st 0 / resp 1 / malformed 0 / prose 0 | parent st 0 / resp 1 / malformed 0 / prose 0 {"label":"K-W DEFENDER CR3 LINK 3 #7","text":"NOT HELD: a -- b","line":"RESPONSE: K-W DEFENDER CR3 LINK 3 #7 | NOT HELD:
+plant no K label       live st 0 / resp 0 / malformed 1 / prose 0 | parent st 0 / resp 0 / malformed 1 / prose 0 
+plant no spaced dash   live st 0 / resp 0 / malformed 1 / prose 0 | parent st 0 / resp 0 / malformed 1 / prose 0 
+plant unspaced dash    live st 0 / resp 0 / malformed 1 / prose 0 | parent st 0 / resp 0 / malformed 1 / prose 0 
+plant other form       live st 0 / resp 0 / malformed 0 / prose 1 | parent st 0 / resp 0 / malformed 0 / prose 1 
+nodes 442 442 differ [ 'Shared Library' ] connections equal true
