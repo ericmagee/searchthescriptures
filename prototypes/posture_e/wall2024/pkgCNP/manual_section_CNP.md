@@ -1,7 +1,7 @@
 # pkgCNP: code-found closing pairs (Close Enforcer Build)
 
 Base: live s151. Node changed: Close Enforcer Build only. Library, prompts and every other node unchanged.
-Size (MEASURED): Close Enforcer Build jsCode 8,315 to 13,741 (+5,426). Prompt text +0.
+Size (MEASURED, rev 2): Close Enforcer Build jsCode 8,315 to 14,549 (+6,234). Prompt text +0.
 File: /mnt/project-files/wall2024/parent_s151_CNP.json. Build and tests: prototypes/posture_e/wall2024/pkgCNP/.
 
 ## Why
@@ -18,12 +18,17 @@ enforcer still decides each candidate.
    - Denial: "I/we narrow (concede, withdraw, drop, give up, surrender, retract, yield) nothing / no link",
      "Nothing is/has been ... narrowed (conceded ...)", "No link (premise, limb, part, claim, ground, witness) of mine is ... narrowed",
      "I have not withdrawn anything", "without narrowing anything".
-   - Keep-all: keep/stand/hold/remain with D1 to D6 (C1 to C6), "all/every/each (six) links", "my chain" or "the chain",
-     ending "as numbered / as stated / as first stated / as written / as given / unchanged / intact / in full / whole / undiminished / untouched".
+   - Keep-all: "I keep" a span, or a span that "stands / holds / remains", where the span is D1 to D6 (C1 to C6), "all/every/each (six) links",
+     "my chain" or "the chain", ending "as numbered / as stated / as first stated / as written / as given / as I gave (stated, declared) it /
+     exactly as stated / unchanged / intact / in full / whole / entire / undiminished / untouched". "As declared" alone is left to pkgRCL.
+   - More denials: "Not one link has been narrowed", "None of my links is narrowed", "No concession has been made", "Nothing I said has been withdrawn".
    - Not taken: inside a quotation (odd number of quote marks before it), a question, a conditional (if, unless, whether,
      would, should, could, might), naming the other side, with an exception word (beyond, except, further, more, else, new,
      again, here, since, after, in this close), or negated before the match ("I do not say that nothing is conceded").
-   - A denial that names links ("I concede nothing on D5") pairs only with those links.
+   - A close that names links ("I concede nothing on D5", "I keep D1 to D4 as numbered") pairs only with those links. A link the
+     same sentence marks as narrowed ("D5 stands as narrowed", "D5 as narrowed") is never paired. An exception before the match in
+     the same clause ("Apart from LINK 5, I keep ...") stops the pair. A LINK "?" withdrawal pairs with a named range only when the
+     range covers every declared link.
 2. Earlier lines, in the same side's rounds 2 and 3:
    - "LINK n: NARROWED TO / CONCEDED / WITHDRAWN / DROPPED" lines.
    - "I withdraw / drop / concede / give up / no longer claim ... <object>" anywhere in a sentence (not "I withdraw nothing",
@@ -33,12 +38,13 @@ enforcer still decides each candidate.
    One earlier line per link (the latest round). At most 8 per side. A pair already named (same side, link and closing
    sentence; for "?" the same earlier text) is not repeated.
 
-## Tests (MEASURED, file cases_out.txt): 41 pass, 0 fail
+## Tests (MEASURED, file cases_out.txt): 67 pass, 0 fail
 - W1's cases.json A1 to A7 all found, each with and without the Oracle's section (A4 found by the code alone).
 - N1 to N7: no pkgCNP pair.
 - Plants P1 to P6 on 35379 with both real close sentences removed first: negated, question and conditional give no pair;
   six variant closes pair with LINK 5; the same six on a side with no earlier narrowing give no pair; bold markup gives
   the same result, quoted closes give none.
+- W3's false pairs (Wall 5179 F1) give no LINK 5 pair; the wordings W3 and W1 listed as missed now pair, and give no pair on a side with no earlier narrowing.
 - Corpus replay of every export with Final Output data: identical except 35296, which gains X6 (LINK 2 against
   "Nothing is conceded or narrowed."). The 35379 export holds a crash stub; its rounds were rebuilt from the stored
   close-enforcer prompt (row 31032) instead.
@@ -47,5 +53,5 @@ enforcer still decides each candidate.
 - English patterns only. A close that denies narrowing in other words is not found.
 - A single link kept "as stated" is not a keep-all and is not taken.
 - A free withdrawal with no heading goes out as LINK "?" for the enforcer to name.
-- More candidates mean a longer enforcer prompt (35379: 2 to 8 candidates, about +1.5 KB of candidate lines, ESTIMATE).
+- More candidates mean a longer enforcer prompt (35379: 2 to 6 candidates, about +1 KB of candidate lines, ESTIMATE).
 - Run outcome not shown until a real run.
