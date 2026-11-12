@@ -1,3 +1,5 @@
 {
- "plants_w2.cjs | reinstated in round 3, then cited": {"exp": 1, "why": "Named on purpose: a verse withdrawn in round 2 and taken up again in round 3 is the same class; W2 accepted this at Wall 5337, and W3 plant 14 expects it named."}
+ "plants_w2.cjs | reinstated in round 3, then cited": {"exp": 1, "why": "Named on purpose: a verse withdrawn in round 2 and taken up again in round 3 is the same class; W2 accepted this at Wall 5337, and W3 plant 14 expects it named."},
+ "plant5.cjs | 29 it: sentence before names two, keeps one": {"exp": "D LINK 1", "why": "W3 states it as a limit at Wall 5357: named, and the enforcer rules on the quoted sentence (prefer naming when the words cannot decide)."},
+ "plant5.cjs | 33 withdraw after reinstating in close block heading only": {"exp": "none", "why": "W3 states it as a limit at Wall 5357: a verse cited only in the close block's heading line is not named."}
 }

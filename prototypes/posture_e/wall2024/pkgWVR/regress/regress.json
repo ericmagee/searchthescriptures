@@ -1170,6 +1170,448 @@
   "exp": "none"
  },
  {
+  "src": "plant5.cjs",
+  "name": "1 bare ref in close, other book on the line",
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Luke 1:20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant5.cjs",
+  "name": "2 bare ref after another book: \"Luke 1:5 and 1:20\"",
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Luke 1:5 and 1:20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant5.cjs",
+  "name": "3 bare ref after own book: \"Matthew 1:18 and 1:20\"",
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Matthew 1:18 and 1:20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 1"
+ },
+ {
+  "src": "plant5.cjs",
+  "name": "4 bare ref, no book on the line",
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on 1:20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 1"
+ },
+ {
+  "src": "plant5.cjs",
+  "name": "5 a time or ratio \"at 1:20 odds\" no book",
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1\nThe ratio 1:20 is not my point; D1 stands on Luke 3:23.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant5.cjs",
+  "name": "7 close range not holding it",
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Matthew 1:21-25.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant5.cjs",
+  "name": "8 close list \"Matthew 1:16, 18, 20\"",
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Matthew 1:16, 18, 20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 1"
+ },
+ {
+  "src": "plant5.cjs",
+  "name": "9 close list not holding \"Matthew 1:16, 18, 21\"",
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Matthew 1:16, 18, 21.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant5.cjs",
+  "name": "10 other chapter same verse \"Matthew 2:20\"",
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Matthew 2:20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant5.cjs",
+  "name": "11 longer verse number \"Matthew 1:201\"/\"11:20\"",
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Matthew 11:20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant5.cjs",
+  "name": "12 short \"Mt 1:20\" in close",
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Mt 1:20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 1"
+ },
+ {
+  "src": "plant5.cjs",
+  "name": "13 short \"Mk 1:20\" in close",
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Mk 1:20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant5.cjs",
+  "name": "14 \"Mal 1:20\"/\"Mic\" vs Matthew",
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Mal. 1:20 and Mic. 1:20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant5.cjs",
+  "name": "15 \"Ma 1:20\"? ambiguous prefix (Matthew, Mark, Malachi)",
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Ma 1:20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant5.cjs",
+  "name": "16 numbered books: withdraw 1 Samuel 2:1, close 2 Samuel 2:1",
+  "F": {
+   "cr2": "I withdraw 1 Samuel 2:1.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on 2 Samuel 2:1.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant5.cjs",
+  "name": "17 withdraw \"1 Sam. 2:1\", close \"1 Samuel 2:1\"",
+  "F": {
+   "cr2": "I withdraw 1 Sam. 2:1.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on 1 Samuel 2:1.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 1"
+ },
+ {
+  "src": "plant5.cjs",
+  "name": "18 withdrawn range, close single inside",
+  "F": {
+   "cr2": "I withdraw Matthew 1:18-25.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Matthew 1:20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 1"
+ },
+ {
+  "src": "plant5.cjs",
+  "name": "19 withdrawn list with bare numbers",
+  "F": {
+   "cr2": "I withdraw Matthew 1:16, 18 and 20.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Matthew 1:18.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 1"
+ },
+ {
+  "src": "plant5.cjs",
+  "name": "20 \"I withdraw Matthew 1:20, not 1:18.\" close on 1:18",
+  "F": {
+   "cr2": "I withdraw Matthew 1:20, not 1:18.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Matthew 1:18.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant5.cjs",
+  "name": "21 close question then assertion",
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1\nDoes D1 rest on Matthew 1:20? Yes. D1 rests on Matthew 1:20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 1"
+ },
+ {
+  "src": "plant5.cjs",
+  "name": "22 close rhetorical question only",
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1\nWhy would D1 need Matthew 1:20? It rests on Luke 3:23.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant5.cjs",
+  "name": "23 close: opponent cites it",
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1\nThe challenger cites Matthew 1:20 against me. D1 rests on Luke 3:23.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant5.cjs",
+  "name": "24 close: \"I withdrew Matthew 1:20 and do not rest on it.\"",
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1\nI withdrew Matthew 1:20 and do not rest on it. D1 rests on Luke 3:23.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant5.cjs",
+  "name": "25 \"Matthew 1:20: withdrawn.\" then close",
+  "F": {
+   "cr2": "",
+   "cr3": "Matthew 1:20: withdrawn.",
+   "cr4": "## D1\nD1 stands on Matthew 1:20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 1"
+ },
+ {
+  "src": "plant5.cjs",
+  "name": "26 \"Matthew 1:20: not withdrawn.\"",
+  "F": {
+   "cr2": "",
+   "cr3": "Matthew 1:20: not withdrawn.",
+   "cr4": "## D1\nD1 stands on Matthew 1:20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant5.cjs",
+  "name": "27 \"Matthew 1:18 stays; Matthew 1:20 stays withdrawn.\"",
+  "F": {
+   "cr2": "",
+   "cr3": "Matthew 1:18 stays; Matthew 1:20 stays withdrawn.",
+   "cr4": "## D1\nD1 stands on Matthew 1:18.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant5.cjs",
+  "name": "28 it: sentence before, own sentence bare",
+  "F": {
+   "cr2": "Matthew 1:20 was my second layer. I withdraw it.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Matthew 1:20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 1"
+ },
+ {
+  "src": "plant5.cjs",
+  "name": "29 it: sentence before names two, keeps one",
+  "F": {
+   "cr2": "Matthew 1:20 stands and the Heli reading is weak. I withdraw it.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Matthew 1:20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant5.cjs",
+  "name": "30 once condition: \"Once he shows a row, I withdraw Matthew 1:20.\"",
+  "F": {
+   "cr2": "Once he shows a row, I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Matthew 1:20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant5.cjs",
+  "name": "31 \"Once again I withdraw Matthew 1:20.\"",
+  "F": {
+   "cr2": "Once again I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Matthew 1:20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 1"
+ },
+ {
+  "src": "plant5.cjs",
+  "name": "32 \"Should he object, the answer is below; I withdraw Matthew 1:20.\"",
+  "F": {
+   "cr2": "Should he object, the answer is below; I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Matthew 1:20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 1"
+ },
+ {
+  "src": "plant5.cjs",
+  "name": "33 withdraw after reinstating in close block heading only",
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1 (Matthew 1:20)\nD1 stands.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 1"
+ },
+ {
+  "src": "plant5.cjs",
+  "name": "34 challenger withdraws, DEFENDER close cites it",
+  "F": {
+   "cr2": "",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Matthew 1:20.",
+   "gr2": "I withdraw Matthew 1:20.",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant5.cjs",
+  "name": "35 huge input",
+  "F": {
+   "cr2": "I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. ",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Matthew 1:20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 1"
+ },
+ {
   "src": "plants_w2.cjs",
   "name": "reinstated in round 3, then cited",
   "F": {
