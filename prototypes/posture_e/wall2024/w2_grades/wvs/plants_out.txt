@@ -1,0 +1,45 @@
+#### fetchback_live_s167.json
+S1 32924 form, close link 2 (other purpose) | expect scope | got none
+S2 32924 form, close link 4 (the given-up purpose) | expect scope (enforcer decides) | got D LINK 4
+S3 35379 ruled form, no "for" limit | expect no scope | got D LINK 4
+S4 whole withdrawal | expect no scope | got D LINK 4
+S5 "from D4", close D2 | expect scope | got none
+S6 "for now" (time, not a purpose) | expect no scope (watch) | got D LINK 4
+S7 "for" as because | expect no scope (watch) | got D LINK 4
+S8 "in this round" (time) | expect no scope (watch) | got D LINK 4
+S9 rest form with "for" | expect scope | got none
+S10 mixed: one limited, one whole | expect scope on Gal 4:4 only | got none
+S11 quote marks inside the limit | expect scope, quotes safe | got none
+S12 challenger side | expect scope | got none
+S13 "as load-bearing" with no "for" | expect no scope (ruled: lesser weight still a rest) | got none
+S14 limit to a link number | expect scope | got none
+#### parent_s167_WVL2_WVS.json
+S1 32924 form, close link 2 (other purpose) | expect scope | got D LINK 2 [scope: for the exclusion]
+S2 32924 form, close link 4 (the given-up purpose) | expect scope (enforcer decides) | got D LINK 4 [scope: for the exclusion]
+S3 35379 ruled form, no "for" limit | expect no scope | got D LINK 4 [scope: exclusion witness]
+S4 whole withdrawal | expect no scope | got D LINK 4
+S5 "from D4", close D2 | expect scope | got D LINK 2 [scope: from D4]
+S6 "for now" (time, not a purpose) | expect no scope (watch) | got D LINK 4 [scope: for now]
+S7 "for" as because | expect no scope (watch) | got D LINK 4
+S8 "in this round" (time) | expect no scope (watch) | got D LINK 4 [scope: in this round]
+S9 rest form with "for" | expect scope | got D LINK 2 [scope: for the exclusion of a father]
+S10 mixed: one limited, one whole | expect scope on Gal 4:4 only | got D LINK 2 [scope: for the exclusion]; D LINK 2
+S11 quote marks inside the limit | expect scope, quotes safe | got D LINK 2
+S12 challenger side | expect scope | got C LINK 2 [scope: for the begetting]
+S13 "as load-bearing" with no "for" | expect no scope (ruled: lesser weight still a rest) | got D LINK 2
+S14 limit to a link number | expect scope | got D LINK 2 [scope: from Link 4]
+#### parent_s167_WVL2v_WVS.json
+S1 32924 form, close link 2 (other purpose) | expect scope | got D LINK 2 [scope: for the exclusion]
+S2 32924 form, close link 4 (the given-up purpose) | expect scope (enforcer decides) | got D LINK 4 [scope: for the exclusion]
+S3 35379 ruled form, no "for" limit | expect no scope | got D LINK 4 [scope: exclusion witness]
+S4 whole withdrawal | expect no scope | got D LINK 4
+S5 "from D4", close D2 | expect scope | got D LINK 2 [scope: from D4]
+S6 "for now" (time, not a purpose) | expect no scope (watch) | got D LINK 4 [scope: for now]
+S7 "for" as because | expect no scope (watch) | got D LINK 4
+S8 "in this round" (time) | expect no scope (watch) | got D LINK 4 [scope: in this round]
+S9 rest form with "for" | expect scope | got D LINK 2 [scope: for the exclusion of a father]
+S10 mixed: one limited, one whole | expect scope on Gal 4:4 only | got D LINK 2 [scope: for the exclusion]; D LINK 2
+S11 quote marks inside the limit | expect scope, quotes safe | got D LINK 2
+S12 challenger side | expect scope | got C LINK 2 [scope: for the begetting]
+S13 "as load-bearing" with no "for" | expect no scope (ruled: lesser weight still a rest) | got D LINK 2
+S14 limit to a link number | expect scope | got D LINK 2 [scope: from Link 4]
