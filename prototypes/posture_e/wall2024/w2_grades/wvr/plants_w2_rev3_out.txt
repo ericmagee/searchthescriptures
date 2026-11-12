@@ -1,0 +1,20 @@
+AS EXPECTED scoped clause, no bold marks -> 0
+AS EXPECTED "I do not rest on it" with verse as object -> 1 | Luke 1:27 is contested, and I do not rest on it. || D3 rests on Luke 1:27.
+AS EXPECTED "the word ... in Luke 1:27", then it -> 0
+AS EXPECTED it in a later clause after a semicolon -> 0
+AS EXPECTED condition in the same clause: "If the court requires, I withdraw" -> 0
+AS EXPECTED "For clarity, I withdraw X" (not a condition) -> 1 | For clarity, I withdraw Isaiah 7:14. || D2 rests on Isaiah 7:14.
+AS EXPECTED "Jud 6:12" close after Judges 6:12 withdrawn -> 1 | I withdraw Judges 6:12. || D2 rests on Judg 6:12.
+AS EXPECTED "Jude 1:6" withdrawn, close Judges 1:6 -> 0
+AS EXPECTED "Phil 2:7" close after Philippians 2:7 withdrawn -> 1 | I withdraw Philippians 2:7. || D2 rests on Phil 2:7.
+AS EXPECTED "Philem 1:10" close after Philippians 1:10 withdrawn -> 0
+AS EXPECTED "Luke 1:5: I withdraw it." -> 1 | Luke 1:5: I withdraw it. || D2 rests on Luke 1:5.
+AS EXPECTED "I drop Genesis 3:15, and Galatians 4:4 stays" close Gal 4:4 -> 0
+AS EXPECTED "I drop Genesis 3:15 and Galatians 4:4." close Gal 4:4 -> 1 | I drop Genesis 3:15 and Galatians 4:4. || D2 rests on Galatians 4:4.
+AS EXPECTED bold heading verse then withdrawal -> 1 | I withdraw Luke 1:27 from D3. || D3 rests on Luke 1:27.
+AS EXPECTED "has not answered that D6 rests on X" -> 1 | I withdraw Galatians 4:4. || The challenger has not answered that D6 rests on Galatians 4:4.
+15 of 15
+AS EXPECTED clause named, then verse withdrawn by name -> 1 | The clause in Luke 1:27 is weak, so I withdraw Luke 1:27. || D3 rests on Luke 1:27.
+AS EXPECTED "I withdraw Luke 1:27 entirely" then clause sentence -> 1 | I withdraw Luke 1:27 entirely. || D3 rests on Luke 1:27.
+AS EXPECTED challenger side, stored-like scoped clause -> 0
+3 of 3
