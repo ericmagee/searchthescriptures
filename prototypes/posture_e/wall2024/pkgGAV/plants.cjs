@@ -1,7 +1,7 @@
-// node plants.cjs : runs the grants finder (OGR.harvest) cut from live s160 and from parent_s160_GAV2.json on fixed plants
+// node plants.cjs : runs the grants finder (OGR.harvest) cut from live s160 and from parent_s160_GAV3.json on fixed plants
 const fs=require('fs');
 const ogr=f=>{const c=JSON.parse(fs.readFileSync(f)).nodes.find(n=>n.name==='C4 Build').parameters.jsCode;const i=c.indexOf('const OGR=');const e=c.indexOf('})();',i)+5;return new Function(c.slice(i,e)+';return OGR;')();};
-const A=ogr('/mnt/project-files/wall2024/fetchback_live_s160.json'),B=ogr('/mnt/project-files/wall2024/parent_s160_GAV2.json');
+const A=ogr('/mnt/project-files/wall2024/fetchback_live_s160.json'),B=ogr('/mnt/project-files/wall2024/parent_s160_GAV3.json');
 // [text, expected count new, expected count old]
 const P=[
 ['I also concede that Mary\'s descent from David is not stated in a row. It stands only as an inference.',1,0],
@@ -35,7 +35,10 @@ const P=[
 ['I set aside the genealogy for the moment and turn to Luke 1:35.',0,0],
 ['If I admit this, the chain falls, so I do not.',0,0],
 ['If I grant this, the chain falls, so I do not.',0,1],
-['If he shows a row, I readily concede the limb.',0,0],
+['If he shows a row, I readily concede the limb.',1,0], // rev 3: grant in the main clause after the comma is read (W4)
+['If the challenger presses Luke 3:23, I grant that it reports a supposing.',1,1],
+['Unless a row names him, I concede the point.',1,1],
+['If I concede this limb the chain falls.',0,1],
 ['Nor do I now concede that the seed is Joseph\'s.',0,0],
 ['Do I also concede the point? No.',0,0],
 ['Do I concede the point? No.',0,1],

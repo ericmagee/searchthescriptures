@@ -12,7 +12,7 @@ const R=[
 [String.raw`if(/^\s*(?:none|nothing|no)\b/i.test(t.slice(m.index+m[0].length)))continue;`,
  String.raw`if(/^(?:\s*,?\s*(?:and\s+|or\s+)?(?:set\s+aside|`+VB+String.raw`))*\s*(?:none|nothing|no)\b/i.test(t.slice(m.index+m[0].length)))continue;/*pkgGAV*/`],
 [String.raw`if(/^what i (?:grant|withdraw|concede|drop)(?: and what i (?:grant|withdraw|concede|drop))?$/.test(W(s)))continue;`,
- String.raw`if(/^what i (?:\w+ ){0,2}(?:grant|withdraw|concede|drop|admit|retract|give up|set aside|release|no longer (?:claim|rest)|do not claim)(?: and what i (?:\w+ ){0,2}(?:grant|withdraw|concede|drop|admit|retract|give up|set aside|release|no longer (?:claim|rest)|do not claim))?$/.test(W(s)))continue;if(/\?["')\]]?$/.test(ss[0].trim())||/^(?:if|unless|should|nor)\b/i.test(__ld.trim()))continue;`],
+ String.raw`if(/^what i (?:\w+ ){0,2}(?:grant|withdraw|concede|drop|admit|retract|give up|set aside|release|no longer (?:claim|rest)|do not claim)(?: and what i (?:\w+ ){0,2}(?:grant|withdraw|concede|drop|admit|retract|give up|set aside|release|no longer (?:claim|rest)|do not claim))?$/.test(W(s)))continue;if(/\?["')\]]?$/.test(ss[0].trim())||/^(?:if|unless|should|nor)\b[^,;:]*$/i.test(__ld.trim()))continue;`],
 ];
 const NODES=['C4 Build','C4 Extract','C4G Extract','C4B Extract'];const rep={};
 for(const nm of NODES){const n=w.nodes.find(x=>x.name===nm);let c=n.parameters.jsCode;const c0=c;
