@@ -1,0 +1,5 @@
+live ROWS ["DEFENDER | [CR4] | \"I grant that \\\"of a woman\\\" is said of men with fathers, so I do not rest the source on those words.\""]
+live items ["NOT APPLIED: the flagged line is not in the judge text"] 
+--- pkgCLP build:
+live ROWS ["DEFENDER | [CR4] | \"I grant that \"of a woman\" is said of men with fathers, so I do not rest the source on those words.\" COUNTED"]
+live items [] 
