@@ -41,12 +41,16 @@ const C=[
  ['A5 heading flagged, to = NONE (strike path, unchanged)',H,'NONE','SAME'],
  ['A6 heading flagged, to = prose (unchanged)',H,'The defender conceded nothing more.','SAME'],
  ['A7 heading with colon flagged, new row',H+':',RN,'ADD',H+':'],
+ ['A9 heading flagged, prose after DEFENDER (W3 H4)',H,'DEFENDER conceded nothing that touches a link.','NA'],
+ ['A10 heading flagged, chain mark label (W3 H5)',H,'DEFENDER CHAIN MARK: BROKEN -- D2 fails.','NA'],
+ ['A11 heading flagged, row without bars, no match (W3 H6)',H,'DEFENDER CR4: “I give up D2 entirely.” COUNTED','NA'],
+ ['A12 heading flagged, row without bars, existing row',H,'DEFENDER CR4: “I drop the ‘alone’ from D5.” COUNTED','R2+'],
  ['A8 control: flagged row absent, prefix + existing row','some line not there',P+R2+' COUNTED','R2+'],
 ];
 const run=(M,c)=>{const t=text(c[4]);let r;try{r=M.sbApply2024('luna',t,Object.assign({},F),[{sid:'S1',ans:'CHANGE',line:c[1],to:c[2],rule:'K-S3',item:'S1'}],null);}catch(e){return {err:e.message};}
  const base=t.split('\n'),now=String(r.text).split('\n');return {it:(r.items||[]).map(x=>x.kind).join(','),add:now.filter(l=>!base.includes(l)),gone:base.filter(l=>!now.includes(l)),f:r.fields&&[r.fields.verdict_tag,r.fields.conceded_links,r.fields.challenger_conceded_links].join('/'),n:now.length};};
 const ok=(e,r,old,c)=>{if(r.err)return false;const h=c[4]||H;if(e==='SAME')return JSON.stringify(r)===JSON.stringify(old);
  if(e==='R1+'||e==='R2+'){const R=e==='R1+'?R1:R2;return !r.it&&r.gone.length===1&&r.gone[0]===R&&r.add.length===1&&r.add[0].startsWith(R)&&/COUNTED$/.test(r.add[0]);}
- if(e==='ADD'){return !r.it&&r.gone.length===0&&r.add.length===1&&r.add[0]===RN;}return false;};
+ if(e==='NA'){return r.it==='NOT APPLIED'&&!r.add.length&&!r.gone.length;}if(e==='ADD'){return !r.it&&r.gone.length===0&&r.add.length===1&&r.add[0]===RN;}return false;};
 let p=0;for(const c of C){const a=run(O,c),b=run(N,c);const g=ok(c[3],b,a,c);p+=g;console.log((g?'PASS ':'FAIL ')+c[0]+'\n   live '+JSON.stringify(a)+'\n   new  '+(JSON.stringify(a)===JSON.stringify(b)?'(same)':JSON.stringify(b)));}
 console.log(p+'/'+C.length);

@@ -1,0 +1,180 @@
+
+H1 heading flagged, existing row COUNTED
+  live applied | new: ["5:DEFENDER | [CR4] | “D5: NARROWED TO: Galatians 4:4 and Genesis 3:15 name the woman as the human"] | removed: ["OUT-OF-ROUND CONCESSIONS"] | f HELD,0,0
+  A    applied | new: ["6:DEFENDER | [CR4] | “D5: NARROWED TO: Galatians 4:4 and Genesis 3:15 name the woman as the human"] | removed: ["DEFENDER | [CR4] | “D5: NARROWED TO: Galatian"] | f HELD,0,0
+  B    (same as live)
+  AB    applied | new: ["6:DEFENDER | [CR4] | “D5: NARROWED TO: Galatians 4:4 and Genesis 3:15 name the woman as the human"] | removed: ["DEFENDER | [CR4] | “D5: NARROWED TO: Galatian"] | f HELD,0,0
+
+H2 heading flagged, new row
+  live applied | new: ["5:DEFENDER | [CR4] | “I give up D2 entirely.” COUNTED"] | removed: ["OUT-OF-ROUND CONCESSIONS"] | f HELD,0,0
+  A    applied | new: ["6:DEFENDER | [CR4] | “I give up D2 entirely.” COUNTED"] | removed: [] | f HELD,0,0
+  B    (same as live)
+  AB    applied | new: ["6:DEFENDER | [CR4] | “I give up D2 entirely.” COUNTED"] | removed: [] | f HELD,0,0
+
+H3 bold heading in text and flagged
+  live applied | new: ["5:DEFENDER | [CR4] | “I give up D2 entirely.” COUNTED"] | removed: ["**OUT-OF-ROUND CONCESSIONS**"] | f HELD,0,0
+  A    applied | new: ["6:DEFENDER | [CR4] | “I give up D2 entirely.” COUNTED"] | removed: [] | f HELD,0,0
+  B    (same as live)
+  AB    applied | new: ["6:DEFENDER | [CR4] | “I give up D2 entirely.” COUNTED"] | removed: [] | f HELD,0,0
+
+H4 heading flagged, prose after DEFENDER
+  live S1 NOT APPLIED: the CHANGE TO line has no line form the engine reads | new: [] | removed: [] | f HELD,0,0
+  A    S1 NOT APPLIED: the flagged line is the OUT-OF-ROUND CONCESSIONS heading and | new: [] | removed: [] | f HELD,0,0
+  B    (same as live)
+  AB    S1 NOT APPLIED: the flagged line is the OUT-OF-ROUND CONCESSIONS heading and | new: [] | removed: [] | f HELD,0,0
+
+H5 heading flagged, DEFENDER CHAIN MARK label, no such line in text
+  live S1 NOT APPLIED: the CHANGE TO line has no line form the engine reads | new: [] | removed: [] | f HELD,0,0
+  A    S1 NOT APPLIED: the flagged line is the OUT-OF-ROUND CONCESSIONS heading and | new: [] | removed: [] | f HELD,0,0
+  B    (same as live)
+  AB    S1 NOT APPLIED: the flagged line is the OUT-OF-ROUND CONCESSIONS heading and | new: [] | removed: [] | f HELD,0,0
+
+H5b same, chain mark line present
+  live S1 NOT APPLIED: the CHANGE TO line has no line form the engine reads | new: [] | removed: [] | f HELD,0,0
+  A    S1 NOT APPLIED: the flagged line is the OUT-OF-ROUND CONCESSIONS heading and | new: [] | removed: [] | f HELD,0,0
+  B    (same as live)
+  AB    S1 NOT APPLIED: the flagged line is the OUT-OF-ROUND CONCESSIONS heading and | new: [] | removed: [] | f HELD,0,0
+
+H6 heading flagged, row without bars
+  live S1 NOT APPLIED: the CHANGE TO line has no line form the engine reads | new: [] | removed: [] | f HELD,0,0
+  A    S1 NOT APPLIED: the flagged line is the OUT-OF-ROUND CONCESSIONS heading and | new: [] | removed: [] | f HELD,0,0
+  B    (same as live)
+  AB    S1 NOT APPLIED: the flagged line is the OUT-OF-ROUND CONCESSIONS heading and | new: [] | removed: [] | f HELD,0,0
+
+H7 heading flagged, NONE
+  live S1 NOT APPLIED: the CHANGE TO line has no line form the engine reads | new: [] | removed: [] | f HELD,0,0
+  A    (same as live)
+  B    (same as live)
+  AB    (same as live)
+
+H8 text has "heading: NONE" on one line, flagged, new row
+  live applied | new: ["5:DEFENDER | [CR4] | “I give up D2 entirely.” COUNTED"] | removed: ["OUT-OF-ROUND CONCESSIONS: NONE"] | f HELD,0,0
+  A    (same as live)
+  B    (same as live)
+  AB    (same as live)
+
+H8b text has heading then NONE line, heading flagged, new row
+  live applied | new: ["5:DEFENDER | [CR4] | “I give up D2 entirely.” COUNTED"] | removed: ["OUT-OF-ROUND CONCESSIONS"] | f HELD,0,0
+  A    applied | new: ["6:DEFENDER | [CR4] | “I give up D2 entirely.” COUNTED"] | removed: [] | f HELD,0,0
+  B    (same as live)
+  AB    applied | new: ["6:DEFENDER | [CR4] | “I give up D2 entirely.” COUNTED"] | removed: [] | f HELD,0,0
+
+H9 two changes on the heading, two new rows
+  live applied | new: ["5:CHALLENGER | [DR4] | “I withdraw C3.” COUNTED"] | removed: ["OUT-OF-ROUND CONCESSIONS"] | f HELD,0,0
+  A    applied | new: ["6:DEFENDER | [CR4] | “I give up D2 entirely.” COUNTED","7:CHALLENGER | [DR4] | “I withdraw C3.” COUNTED"] | removed: [] | f HELD,0,0
+  B    (same as live)
+  AB    applied | new: ["6:DEFENDER | [CR4] | “I give up D2 entirely.” COUNTED","7:CHALLENGER | [DR4] | “I withdraw C3.” COUNTED"] | removed: [] | f HELD,0,0
+
+H10 heading flagged, prefix + existing row
+  live applied | new: ["5:DEFENDER | [CR4] | “I drop the ‘alone’ from D5.” COUNTED"] | removed: ["OUT-OF-ROUND CONCESSIONS"] | f HELD,0,0
+  A    applied | new: ["7:DEFENDER | [CR4] | “I drop the ‘alone’ from D5.” COUNTED"] | removed: ["DEFENDER | [CR4] | “I drop the ‘alone’ from D"] | f HELD,0,0
+  B    (same as live)
+  AB    applied | new: ["7:DEFENDER | [CR4] | “I drop the ‘alone’ from D5.” COUNTED"] | removed: ["DEFENDER | [CR4] | “I drop the ‘alone’ from D"] | f HELD,0,0
+
+H11 heading flagged, new row lower-case side
+  live applied | new: ["5:defender | [CR4] | “I give up D2 entirely.” COUNTED"] | removed: ["OUT-OF-ROUND CONCESSIONS"] | f HELD,0,0
+  A    applied | new: ["6:defender | [CR4] | “I give up D2 entirely.” COUNTED"] | removed: [] | f HELD,0,0
+  B    (same as live)
+  AB    applied | new: ["6:defender | [CR4] | “I give up D2 entirely.” COUNTED"] | removed: [] | f HELD,0,0
+
+H12 other heading flagged (COLLISION POINTS), row
+  live applied | new: ["3:DEFENDER | [CR4] | “I give up D2 entirely.” COUNTED"] | removed: ["COLLISION POINTS"] | f HELD,0,0
+  A    (same as live)
+  B    (same as live)
+  AB    (same as live)
+
+H13 heading flagged with markdown ## in text
+  live applied | new: ["5:DEFENDER | [CR4] | “I give up D2 entirely.” COUNTED"] | removed: ["## OUT-OF-ROUND CONCESSIONS"] | f HELD,0,0
+  A    applied | new: ["6:DEFENDER | [CR4] | “I give up D2 entirely.” COUNTED"] | removed: [] | f HELD,0,0
+  B    (same as live)
+  AB    applied | new: ["6:DEFENDER | [CR4] | “I give up D2 entirely.” COUNTED"] | removed: [] | f HELD,0,0
+
+B1 no colon
+  live S1 NOT APPLIED: the CHANGE TO line has no line form the engine reads | new: [] | removed: [] | f HELD,0,0
+  A    (same as live)
+  B    applied | new: ["6:DEFENDER | [CR4] | “D5: NARROWED TO: Galatians 4:4 and Genesis 3:15 name the woman as the human"] | removed: ["DEFENDER | [CR4] | “D5: NARROWED TO: Galatian"] | f HELD,0,0
+  AB    applied | new: ["6:DEFENDER | [CR4] | “D5: NARROWED TO: Galatians 4:4 and Genesis 3:15 name the woman as the human"] | removed: ["DEFENDER | [CR4] | “D5: NARROWED TO: Galatian"] | f HELD,0,0
+
+B2 dash --
+  live S1 NOT APPLIED: the CHANGE TO line has no line form the engine reads | new: [] | removed: [] | f HELD,0,0
+  A    (same as live)
+  B    applied | new: ["6:DEFENDER | [CR4] | “D5: NARROWED TO: Galatians 4:4 and Genesis 3:15 name the woman as the human"] | removed: ["DEFENDER | [CR4] | “D5: NARROWED TO: Galatian"] | f HELD,0,0
+  AB    applied | new: ["6:DEFENDER | [CR4] | “D5: NARROWED TO: Galatians 4:4 and Genesis 3:15 name the woman as the human"] | removed: ["DEFENDER | [CR4] | “D5: NARROWED TO: Galatian"] | f HELD,0,0
+
+B3 bold
+  live S1 NOT APPLIED: the CHANGE TO line has no line form the engine reads | new: [] | removed: [] | f HELD,0,0
+  A    (same as live)
+  B    applied | new: ["6:DEFENDER | [CR4] | “D5: NARROWED TO: Galatians 4:4 and Genesis 3:15 name the woman as the human"] | removed: ["DEFENDER | [CR4] | “D5: NARROWED TO: Galatian"] | f HELD,0,0
+  AB    applied | new: ["6:DEFENDER | [CR4] | “D5: NARROWED TO: Galatians 4:4 and Genesis 3:15 name the woman as the human"] | removed: ["DEFENDER | [CR4] | “D5: NARROWED TO: Galatian"] | f HELD,0,0
+
+B4 bullet
+  live S1 NOT APPLIED: the CHANGE TO line has no line form the engine reads | new: [] | removed: [] | f HELD,0,0
+  A    (same as live)
+  B    applied | new: ["6:DEFENDER | [CR4] | “D5: NARROWED TO: Galatians 4:4 and Genesis 3:15 name the woman as the human"] | removed: ["DEFENDER | [CR4] | “D5: NARROWED TO: Galatian"] | f HELD,0,0
+  AB    applied | new: ["6:DEFENDER | [CR4] | “D5: NARROWED TO: Galatians 4:4 and Genesis 3:15 name the woman as the human"] | removed: ["DEFENDER | [CR4] | “D5: NARROWED TO: Galatian"] | f HELD,0,0
+
+B5 singular
+  live S1 NOT APPLIED: the CHANGE TO line has no line form the engine reads | new: [] | removed: [] | f HELD,0,0
+  A    (same as live)
+  B    applied | new: ["6:DEFENDER | [CR4] | “D5: NARROWED TO: Galatians 4:4 and Genesis 3:15 name the woman as the human"] | removed: ["DEFENDER | [CR4] | “D5: NARROWED TO: Galatian"] | f HELD,0,0
+  AB    applied | new: ["6:DEFENDER | [CR4] | “D5: NARROWED TO: Galatians 4:4 and Genesis 3:15 name the woman as the human"] | removed: ["DEFENDER | [CR4] | “D5: NARROWED TO: Galatian"] | f HELD,0,0
+
+B6 twice
+  live S1 NOT APPLIED: the CHANGE TO line has no line form the engine reads | new: [] | removed: [] | f HELD,0,0
+  A    (same as live)
+  B    applied | new: ["6:DEFENDER | [CR4] | “D5: NARROWED TO: Galatians 4:4 and Genesis 3:15 name the woman as the human"] | removed: ["DEFENDER | [CR4] | “D5: NARROWED TO: Galatian"] | f HELD,0,0
+  AB    applied | new: ["6:DEFENDER | [CR4] | “D5: NARROWED TO: Galatians 4:4 and Genesis 3:15 name the woman as the human"] | removed: ["DEFENDER | [CR4] | “D5: NARROWED TO: Galatian"] | f HELD,0,0
+
+B7 no hyphens, em dash, challenger
+  live S1 NOT APPLIED: the CHANGE TO line has no line form the engine reads | new: [] | removed: [] | f HELD,0,0
+  A    (same as live)
+  B    applied | new: ["8:CHALLENGER | [DR4] | “I grant that Matthew 1:16 does not name a begetter.” COUNTED"] | removed: ["CHALLENGER | [DR4] | “I grant that Matthew 1:"] | f HELD,0,0
+  AB    applied | new: ["8:CHALLENGER | [DR4] | “I grant that Matthew 1:16 does not name a begetter.” COUNTED"] | removed: ["CHALLENGER | [DR4] | “I grant that Matthew 1:"] | f HELD,0,0
+
+B8 bold side name
+  live S1 NOT APPLIED: the CHANGE TO line has no line form the engine reads | new: [] | removed: [] | f HELD,0,0
+  A    (same as live)
+  B    (same as live)
+  AB    (same as live)
+
+B9 hash before prefix
+  live S1 NOT APPLIED: the CHANGE TO line has no line form the engine reads | new: [] | removed: [] | f HELD,0,0
+  A    (same as live)
+  B    (same as live)
+  AB    (same as live)
+
+B10 prose: prefix + DEFENDERS argue
+  live S1 NOT APPLIED: the CHANGE TO line has no line form the engine reads | new: [] | removed: [] | f HELD,0,0
+  A    (same as live)
+  B    (same as live)
+  AB    (same as live)
+
+B11 prose: bullet + prefix no colon + DEFENDER conceded nothing
+  live S1 NOT APPLIED: the CHANGE TO line has no line form the engine reads | new: [] | removed: [] | f HELD,0,0
+  A    (same as live)
+  B    (same as live)
+  AB    (same as live)
+
+B12 prefix + NONE
+  live S1 NOT APPLIED: the CHANGE TO line has no line form the engine reads | new: [] | removed: [] | f HELD,0,0
+  A    (same as live)
+  B    (same as live)
+  AB    (same as live)
+
+B13 "OUT-OF-ROUND CONCESSIONS -DEFENDER | row" (hyphen, no space)
+  live S1 NOT APPLIED: the CHANGE TO line has no line form the engine reads | new: [] | removed: [] | f HELD,0,0
+  A    (same as live)
+  B    applied | new: ["7:DEFENDER | [CR4] | “I drop the ‘alone’ from D5.” COUNTED"] | removed: ["DEFENDER | [CR4] | “I drop the ‘alone’ from D"] | f HELD,0,0
+  AB    applied | new: ["7:DEFENDER | [CR4] | “I drop the ‘alone’ from D5.” COUNTED"] | removed: ["DEFENDER | [CR4] | “I drop the ‘alone’ from D"] | f HELD,0,0
+
+B14 other heading word then side: "COLLISION POINTS: DEFENDER | row"
+  live S1 NOT APPLIED: the CHANGE TO line has no line form the engine reads | new: [] | removed: [] | f HELD,0,0
+  A    (same as live)
+  B    (same as live)
+  AB    (same as live)
+
+K control no prefix
+  live applied | new: ["6:DEFENDER | [CR4] | “D5: NARROWED TO: Galatians 4:4 and Genesis 3:15 name the woman as the human"] | removed: ["DEFENDER | [CR4] | “D5: NARROWED TO: Galatian"] | f HELD,0,0
+  A    (same as live)
+  B    (same as live)
+  AB    (same as live)

@@ -1,0 +1,88 @@
+PASS B1 real prefix (pkgOAD form)
+   live {"it":"","add":["DEFENDER | [CR4] | “D5: NARROWED TO: Galatians 4:4 and Genesis 3:15 name the woman as the human source of the Son.” COUNTED"],"gone":["DEFENDER | [CR4] | “D5: NARROWED TO: Galatians 4:4 and Genesis 3:15 name the woman as the human source of the Son.”"],"f":"HELD/0/0","n":11}
+   new  (same)
+PASS B2 prefix no colon
+   live {"it":"NOT APPLIED","add":[],"gone":[],"f":"HELD/0/0","n":11}
+   new  {"it":"","add":["DEFENDER | [CR4] | “D5: NARROWED TO: Galatians 4:4 and Genesis 3:15 name the woman as the human source of the Son.” COUNTED"],"gone":["DEFENDER | [CR4] | “D5: NARROWED TO: Galatians 4:4 and Genesis 3:15 name the woman as the human source of the Son.”"],"f":"HELD/0/0","n":11}
+PASS B3 prefix with --
+   live {"it":"NOT APPLIED","add":[],"gone":[],"f":"HELD/0/0","n":11}
+   new  {"it":"","add":["DEFENDER | [CR4] | “D5: NARROWED TO: Galatians 4:4 and Genesis 3:15 name the woman as the human source of the Son.” COUNTED"],"gone":["DEFENDER | [CR4] | “D5: NARROWED TO: Galatians 4:4 and Genesis 3:15 name the woman as the human source of the Son.”"],"f":"HELD/0/0","n":11}
+PASS B4 prefix with en dash
+   live {"it":"NOT APPLIED","add":[],"gone":[],"f":"HELD/0/0","n":11}
+   new  {"it":"","add":["DEFENDER | [CR4] | “D5: NARROWED TO: Galatians 4:4 and Genesis 3:15 name the woman as the human source of the Son.” COUNTED"],"gone":["DEFENDER | [CR4] | “D5: NARROWED TO: Galatians 4:4 and Genesis 3:15 name the woman as the human source of the Son.”"],"f":"HELD/0/0","n":11}
+PASS B5 bold prefix
+   live {"it":"NOT APPLIED","add":[],"gone":[],"f":"HELD/0/0","n":11}
+   new  {"it":"","add":["DEFENDER | [CR4] | “D5: NARROWED TO: Galatians 4:4 and Genesis 3:15 name the woman as the human source of the Son.” COUNTED"],"gone":["DEFENDER | [CR4] | “D5: NARROWED TO: Galatians 4:4 and Genesis 3:15 name the woman as the human source of the Son.”"],"f":"HELD/0/0","n":11}
+PASS B6 bullet before prefix
+   live {"it":"NOT APPLIED","add":[],"gone":[],"f":"HELD/0/0","n":11}
+   new  {"it":"","add":["DEFENDER | [CR4] | “D5: NARROWED TO: Galatians 4:4 and Genesis 3:15 name the woman as the human source of the Son.” COUNTED"],"gone":["DEFENDER | [CR4] | “D5: NARROWED TO: Galatians 4:4 and Genesis 3:15 name the woman as the human source of the Son.”"],"f":"HELD/0/0","n":11}
+PASS B7 singular heading
+   live {"it":"NOT APPLIED","add":[],"gone":[],"f":"HELD/0/0","n":11}
+   new  {"it":"","add":["DEFENDER | [CR4] | “D5: NARROWED TO: Galatians 4:4 and Genesis 3:15 name the woman as the human source of the Son.” COUNTED"],"gone":["DEFENDER | [CR4] | “D5: NARROWED TO: Galatians 4:4 and Genesis 3:15 name the woman as the human source of the Son.”"],"f":"HELD/0/0","n":11}
+PASS B8 unhyphenated
+   live {"it":"NOT APPLIED","add":[],"gone":[],"f":"HELD/0/0","n":11}
+   new  {"it":"","add":["DEFENDER | [CR4] | “D5: NARROWED TO: Galatians 4:4 and Genesis 3:15 name the woman as the human source of the Son.” COUNTED"],"gone":["DEFENDER | [CR4] | “D5: NARROWED TO: Galatians 4:4 and Genesis 3:15 name the woman as the human source of the Son.”"],"f":"HELD/0/0","n":11}
+PASS B9 prefix twice
+   live {"it":"NOT APPLIED","add":[],"gone":[],"f":"HELD/0/0","n":11}
+   new  {"it":"","add":["DEFENDER | [CR4] | “D5: NARROWED TO: Galatians 4:4 and Genesis 3:15 name the woman as the human source of the Son.” COUNTED"],"gone":["DEFENDER | [CR4] | “D5: NARROWED TO: Galatians 4:4 and Genesis 3:15 name the woman as the human source of the Son.”"],"f":"HELD/0/0","n":11}
+PASS B10 lower case, whole quoted
+   live {"it":"","add":["DEFENDER | [CR4] | “I drop the ‘alone’ from D5.” COUNTED"],"gone":["DEFENDER | [CR4] | “I drop the ‘alone’ from D5.”"],"f":"HELD/0/0","n":11}
+   new  (same)
+PASS B11 control: no prefix
+   live {"it":"","add":["DEFENDER | [CR4] | “D5: NARROWED TO: Galatians 4:4 and Genesis 3:15 name the woman as the human source of the Son.” COUNTED"],"gone":["DEFENDER | [CR4] | “D5: NARROWED TO: Galatians 4:4 and Genesis 3:15 name the woman as the human source of the Son.”"],"f":"HELD/0/0","n":11}
+   new  (same)
+PASS B12 prefix then prose DEFENDER sentence
+   live {"it":"NOT APPLIED","add":[],"gone":[],"f":"HELD/0/0","n":11}
+   new  (same)
+PASS B13 prefix: NONE
+   live {"it":"NOT APPLIED","add":[],"gone":[],"f":"HELD/0/0","n":11}
+   new  (same)
+PASS B14 prefix + chain mark label
+   live {"it":"NOT APPLIED","add":[],"gone":[],"f":"HELD/0/0","n":11}
+   new  (same)
+PASS B15 prefix + row without bars, flagged line found (old pkgRPS limit, unchanged)
+   live {"it":"NOT APPLIED","add":[],"gone":[],"f":"HELD/0/0","n":11}
+   new  (same)
+PASS B15b prefix + row without bars, flagged line absent
+   live {"it":"","add":["DEFENDER | [CR4] | “I drop the ‘alone’ from D5.” COUNTED"],"gone":["DEFENDER | [CR4] | “I drop the ‘alone’ from D5.”"],"f":"HELD/0/0","n":11}
+   new  (same)
+PASS B16 other section word before DEFENDER, kept
+   live {"it":"NOT APPLIED","add":[],"gone":[],"f":"HELD/0/0","n":11}
+   new  (same)
+PASS A1 heading flagged, to = existing row COUNTED
+   live {"it":"","add":["DEFENDER | [CR4] | “D5: NARROWED TO: Galatians 4:4 and Genesis 3:15 name the woman as the human source of the Son.” COUNTED"],"gone":["OUT-OF-ROUND CONCESSIONS"],"f":"HELD/0/0","n":11}
+   new  {"it":"","add":["DEFENDER | [CR4] | “D5: NARROWED TO: Galatians 4:4 and Genesis 3:15 name the woman as the human source of the Son.” COUNTED"],"gone":["DEFENDER | [CR4] | “D5: NARROWED TO: Galatians 4:4 and Genesis 3:15 name the woman as the human source of the Son.”"],"f":"HELD/0/0","n":11}
+PASS A2 heading flagged, to = prefix + existing row
+   live {"it":"","add":["DEFENDER | [CR4] | “D5: NARROWED TO: Galatians 4:4 and Genesis 3:15 name the woman as the human source of the Son.” COUNTED"],"gone":["OUT-OF-ROUND CONCESSIONS"],"f":"HELD/0/0","n":11}
+   new  {"it":"","add":["DEFENDER | [CR4] | “D5: NARROWED TO: Galatians 4:4 and Genesis 3:15 name the woman as the human source of the Son.” COUNTED"],"gone":["DEFENDER | [CR4] | “D5: NARROWED TO: Galatians 4:4 and Genesis 3:15 name the woman as the human source of the Son.”"],"f":"HELD/0/0","n":11}
+PASS A3 heading flagged, to = new row
+   live {"it":"","add":["DEFENDER | [CR4] | “I give up D2 entirely.” COUNTED"],"gone":["OUT-OF-ROUND CONCESSIONS"],"f":"HELD/0/0","n":11}
+   new  {"it":"","add":["DEFENDER | [CR4] | “I give up D2 entirely.” COUNTED"],"gone":[],"f":"HELD/0/0","n":12}
+PASS A4 bold heading flagged, existing row
+   live {"it":"","add":["DEFENDER | [CR4] | “I drop the ‘alone’ from D5.” COUNTED"],"gone":["**OUT-OF-ROUND CONCESSIONS**"],"f":"HELD/0/0","n":11}
+   new  {"it":"","add":["DEFENDER | [CR4] | “I drop the ‘alone’ from D5.” COUNTED"],"gone":["DEFENDER | [CR4] | “I drop the ‘alone’ from D5.”"],"f":"HELD/0/0","n":11}
+PASS A5 heading flagged, to = NONE (strike path, unchanged)
+   live {"it":"NOT APPLIED","add":[],"gone":[],"f":"HELD/0/0","n":11}
+   new  (same)
+PASS A6 heading flagged, to = prose (unchanged)
+   live {"it":"NOT APPLIED","add":[],"gone":[],"f":"HELD/0/0","n":11}
+   new  (same)
+PASS A7 heading with colon flagged, new row
+   live {"it":"","add":["DEFENDER | [CR4] | “I give up D2 entirely.” COUNTED"],"gone":["OUT-OF-ROUND CONCESSIONS:"],"f":"HELD/0/0","n":11}
+   new  {"it":"","add":["DEFENDER | [CR4] | “I give up D2 entirely.” COUNTED"],"gone":[],"f":"HELD/0/0","n":12}
+PASS A9 heading flagged, prose after DEFENDER (W3 H4)
+   live {"it":"NOT APPLIED","add":[],"gone":[],"f":"HELD/0/0","n":11}
+   new  (same)
+PASS A10 heading flagged, chain mark label (W3 H5)
+   live {"it":"NOT APPLIED","add":[],"gone":[],"f":"HELD/0/0","n":11}
+   new  (same)
+PASS A11 heading flagged, row without bars, no match (W3 H6)
+   live {"it":"NOT APPLIED","add":[],"gone":[],"f":"HELD/0/0","n":11}
+   new  (same)
+PASS A12 heading flagged, row without bars, existing row
+   live {"it":"NOT APPLIED","add":[],"gone":[],"f":"HELD/0/0","n":11}
+   new  {"it":"","add":["DEFENDER | [CR4] | “I drop the ‘alone’ from D5.” COUNTED"],"gone":["DEFENDER | [CR4] | “I drop the ‘alone’ from D5.”"],"f":"HELD/0/0","n":11}
+PASS A8 control: flagged row absent, prefix + existing row
+   live {"it":"","add":["DEFENDER | [CR4] | “I drop the ‘alone’ from D5.” COUNTED"],"gone":["DEFENDER | [CR4] | “I drop the ‘alone’ from D5.”"],"f":"HELD/0/0","n":11}
+   new  (same)
+29/29
