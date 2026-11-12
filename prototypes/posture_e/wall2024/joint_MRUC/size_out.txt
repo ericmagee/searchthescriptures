@@ -1,0 +1,21 @@
+nodes 442 442 connections equal true
+differs: Shared Library 878291 -> 880701 (+2410)
+differs: Close Enforcer Build 8315 -> 14549 (+6234)
+total stored jsCode change 8644
+  rebuilt Alt Gate Build 193222 -> 193615 (+393)
+  rebuilt Alt Gate Record 238013 -> 238890 (+877)
+  rebuilt Alt Send Back Build 124650 -> 125122 (+472)
+  rebuilt Alt Send Back Record 132958 -> 133442 (+484)
+  rebuilt Alternate Merge 1 149781 -> 150174 (+393)
+  rebuilt Alternate Merge Seat 320108 -> 321251 (+1143)
+  rebuilt Gate Build 193209 -> 193602 (+393)
+  rebuilt Gate Record 238004 -> 238881 (+877)
+  rebuilt R2 Alt Gate Build 193243 -> 193636 (+393)
+  rebuilt R2 Alt Gate Record 238025 -> 238902 (+877)
+  rebuilt R2 Alt Send Back Build 124622 -> 125094 (+472)
+  rebuilt R2 Alt Send Back Record 133006 -> 133490 (+484)
+  rebuilt R2 Alternate Merge 149841 -> 150234 (+393)
+  rebuilt R2 Alternate Merge Seat 320126 -> 321275 (+1149)
+  rebuilt Send Back Build 124405 -> 124877 (+472)
+  rebuilt Send Back Record 132986 -> 133470 (+484)
+rebuilt node code at run time, sum of changes 9756

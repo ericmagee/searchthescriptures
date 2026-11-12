@@ -1,0 +1,13 @@
+nodes 442 442 differ: Shared Library, Close Enforcer Build | connections equal: true
+Shared Library size 878291 -> 880701
+Alternate Merge Seat 320108 -> 321251 (+1143) inserted: "let __fx=null;if(!SB_ROW.test(to)){const __k=to.match(/^(DEFENDER|CHALLENGER)\\s*(?:\\|\\s*)?\\[?\\s*([CD]R\\d)\\s*\\]?\\s*:?\\s*([\"\\u201c][\\s\\S]+)$/i);if(...
+R2 Alternate Merge Seat 320126 -> 321275 (+1149) inserted: "let __fx=null;if(!SB_ROW.test(to)){const __k=to.match(/^(DEFENDER|CHALLENGER)\\s*(?:\\|\\s*)?\\[?\\s*([CD]R\\d)\\s*\\]?\\s*:?\\s*([\"\\u201c][\\s\\S]+)$/i);if(...
+OK  G1 split: grok(k0) delivery from run 1 -> GO
+OK  G2 split: argon(k1) delivery from run 0, after run 1 -> STOP
+OK  G3 split: argon delivered before grok follow-up ran -> STOP
+OK  G4 no split, one delivery holding both -> GO
+OK  G5 one alternate, with follow-up (34852 shape) -> GO
+OK  G6 both need follow-up, one delivery from run 1 -> GO
+OK  G7 skip item (no k) -> GO
+OK  G8 Normalize not run -> GO
+BAD G9 RISK: run-1 item keyed to the wrong alternate (itemMatching fallback) -> STOP

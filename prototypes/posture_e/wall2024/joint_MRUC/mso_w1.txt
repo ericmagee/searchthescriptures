@@ -1,0 +1,9 @@
+Merge Seat replay runs 13 equal 13
+OK   P1 35379 order, grok delivery from run 1 (first) | package goes on | live goes on
+OK   P2 35379 order, argon delivery from run 0 (second) | package stops | live goes on
+OK   P3 argon delivery first, grok still waits | package stops | live goes on
+OK   P4 no follow-up, both in one delivery | package goes on | live goes on
+OK   P5 one alternate with a follow-up (34852 shape) | package goes on | live goes on
+OK   P6 input with no cure key (skip path) | package goes on | live goes on
+OK   P7 Normalize not run | package goes on | live goes on
+R2 stale delivery: stops | R2 last delivery: goes on

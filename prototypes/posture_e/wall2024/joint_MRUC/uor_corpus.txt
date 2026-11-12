@@ -1,0 +1,15 @@
+9853 33149 sol E-UNG live UNCURED pkg UNCURED same -- a KEEP does not cure this item (pkgUND)
+9873 33149 chatgpt E-UNG live CURED pkg CURED same -- graded UNDERDETERMINED; [L1] UNVERIFIABLE; states what the record leaves open
+9874 33149 chatgpt E-UNG live CURED pkg CURED same -- graded UNDERDETERMINED; [L1] UNVERIFIABLE; states what the record leaves open
+14695 33371 chatgpt E-HOLD live CURED pkg CURED same -- kept UNDERDETERMINED; [L1] UNVERIFIABLE; states what the record leaves open
+14699 33371 chatgpt E-HOLD live CURED pkg CURED same -- kept UNDERDETERMINED; [L1] UNVERIFIABLE; states what the record leaves open
+14700 33371 chatgpt E-HOLD live CURED pkg CURED same -- kept UNDERDETERMINED; [L1] UNVERIFIABLE; states what the record leaves open
+14701 33371 chatgpt E-HOLD live CURED pkg CURED same -- kept UNDERDETERMINED; [L1] UNVERIFIABLE; states what the record leaves open
+14702 33371 chatgpt E-HOLD live CURED pkg CURED same -- kept UNDERDETERMINED; [L1] UNVERIFIABLE; states what the record leaves open
+30786 35296 sol E-HOLD live UNCURED pkg CURED CHANGED -- kept UNDERDETERMINED; [L1] UNVERIFIABLE; states what the record leaves open ([L1] and open point in the reason after "||", pkgUOR)
+31674 35379 haiku E-UNG live UNCURED pkg CURED CHANGED -- graded UNDERDETERMINED; [L1] UNVERIFIABLE; states what the record leaves open (open point in the reason after "||", pkgUOR)
+31675 35379 haiku E-UNG live UNCURED pkg CURED CHANGED -- graded UNDERDETERMINED; [L1] UNVERIFIABLE; states what the record leaves open (open point in the reason after "||", pkgUOR)
+31676 35379 haiku E-UNG live UNCURED pkg CURED CHANGED -- graded UNDERDETERMINED; [L1] UNVERIFIABLE; states what the record leaves open (open point in the reason after "||", pkgUOR)
+31677 35379 haiku E-UNG live UNCURED pkg CURED CHANGED -- graded UNDERDETERMINED; [L1] UNVERIFIABLE; states what the record leaves open (open point in the reason after "||", pkgUOR)
+
+13 rows; 5 change (all UNCURED to CURED expected only where the open point or [L1] sits after "||")

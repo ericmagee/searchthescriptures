@@ -1,0 +1,21 @@
+OK  haiku S8 (as stored) | live UNCURED | pkg CURED -- graded UNDERDETERMINED; [L1] UNVERIFIABLE; states what the record leaves open (open point in the reason after "||", pkgUOR)
+OK  haiku S9 (as stored) | live UNCURED | pkg CURED -- graded UNDERDETERMINED; [L1] UNVERIFIABLE; states what the record leaves open (open point in the reason after "||", pkgUOR)
+OK  haiku S10 (as stored) | live UNCURED | pkg CURED -- graded UNDERDETERMINED; [L1] UNVERIFIABLE; states what the record leaves open (open point in the reason after "||", pkgUOR)
+OK  haiku S11 (as stored) | live UNCURED | pkg CURED -- graded UNDERDETERMINED; [L1] UNVERIFIABLE; states what the record leaves open (open point in the reason after "||", pkgUOR)
+OK  C1 open point in the line, reason empty | live CURED | pkg CURED -- graded UNDERDETERMINED; [L1] UNVERIFIABLE; states what the record leaves open
+OK  C2 open point nowhere | live UNCURED | pkg UNCURED -- graded UNDERDETERMINED; the line does not state what the record leaves open (for example: "the record leaves open whether ...", "both readings agree w
+OK  C3 open point in reason, no [L1] in the line | live UNCURED | pkg UNCURED -- graded UNDERDETERMINED; no [L1]: no verse is quoted with its reference under an [L1] tag
+OK  C4 [L1] only in the reason, open point in reason | live UNCURED | pkg CURED -- graded UNDERDETERMINED; [L1] UNVERIFIABLE; states what the record leaves open ([L1] and open point in the reason after "||", pkgUOR)
+OK  C4b [L1] in the reason, open point nowhere | live UNCURED | pkg UNCURED -- graded UNDERDETERMINED; the line does not state what the record leaves open (for example: "the record leaves open whether ...", "both readings agree w
+OK  C4c [L1] in the line is not replaced by the reason | live UNCURED | pkg CURED -- graded UNDERDETERMINED; [L1] UNVERIFIABLE; states what the record leaves open (open point in the reason after "||", pkgUOR)
+OK  C5 KEEP with the open point in the reason | live UNCURED | pkg UNCURED -- a KEEP does not cure this item (pkgUND)
+OK  C6 no answer | live UNCURED | pkg UNCURED -- no answer (pkgUND)
+OK  C7 graded line names another link (D3), reason open | live UNCURED | pkg UNCURED -- the CHANGE TO has no graded D2 vs C<j> line
+OK  C8 E-HOLD on UNDERDETERMINED, open point in reason | live UNCURED | pkg CURED -- kept UNDERDETERMINED; [L1] UNVERIFIABLE; states what the record leaves open (open point in the reason after "||", pkgUOR)
+OK  C9 E-HOLD, open point nowhere | live UNCURED | pkg UNCURED -- kept UNDERDETERMINED; the line does not state what the record leaves open (for example: "the record leaves open whether ...", "both readings agree wit
+OK  C10 reason with escaped quotes | live UNCURED | pkg CURED -- graded UNDERDETERMINED; [L1] UNVERIFIABLE; states what the record leaves open (open point in the reason after "||", pkgUOR)
+OK  C11 why undefined | live UNCURED | pkg UNCURED -- graded UNDERDETERMINED; the line does not state what the record leaves open (for example: "the record leaves open whether ...", "both readings agree w
+OK  C12 RETRACTED with open reason | live UNCURED | pkg UNCURED -- CHANGE TO RETRACTED does not grade a pressed link
+OK  sol 35296 S11 (as stored: grade, then "||", then grounds and open point) | live UNCURED | pkg CURED -- kept UNDERDETERMINED; [L1] UNVERIFIABLE; states what the record leaves open ([L1] and open point in the reason after "||", pkgUOR)
+
+19 as expected, 0 not
