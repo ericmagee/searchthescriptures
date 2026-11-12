@@ -84,3 +84,16 @@ Not for write until the operator rules ASK 117 (33846 Ezra 2:61) and the paid re
 - Limit L3, prompt (new): the ruling sentence ("a lesser weight is still a rest, and such a close does not answer the withdrawal") is added to every named note. It states the ASK 116 ruling in general form. The finder's stated limit (a withdrawal scoped to one link, named against another link) means the sentence can reach a note the ruling did not cover, and push a false CONFIRMED. Code cannot settle this; the paid replay can.
 - Synthetic negative control built for the replay: the rev 2 request for 33083 X2 (Luke 1:27, held NOT A CONTRADICTION in ASK 119) with the rev 8 sentence appended to its note (ctl8.cjs, ctl8_body.json, +312 characters, sha d449e0bdb0c24750). Rev 8 itself does not name 33083 X2, so the plain rev 2 request would not test the sentence.
 - Replay plan moved to rev 8: replay_plan_WVR8.md (10 calls, up to 12 with resends, ESTIMATE under 0.18 USD from the ASK 119 MEASURED 0.0144 USD per completed call).
+
+## Rev 9 (W1, Wall 5395; commit b9afaea6; parent_s160_WVR9.json sha 6d98d73e9395a2ff): PASS WITH LIMITS (code); the note goes to the paid replay
+
+All MEASURED.
+- Against live s160: only Close Enforcer Build differs; 443 nodes; connections equal; compiles; code +8,639, +437 over rev 8.
+- Packing check: 43 stubs; only Alternate Build and Early Alternate Build throw; header e5df76c2.
+- Fixed set on the function cut from the node: 287 of 287.
+- My plants: rev 5 set 23 of 23; rev 6 set 10 of 11 (L1, stated limit); rev 7 set 6 of 6.
+- Rev 9 is prompt only. The finder's only change from rev 8 is its header comment, and the names on the four replay runs are the same.
+- Defender prompt change against s160: 32924 +1,834; 33083 +1,490; 33846 +6,129; 35379 +2,327. That is +274 per named pair over rev 8.
+- The note is scoped to its own pair ("for X<n> only", "any other pair"). This answers my L3 and the 35379 X1 failure in the code text. Whether it answers them for the model is unproven.
+- Limit L4: I agree with W3's watch on the "or reading" carve-out against 35379 X7.
+- Control CTL9 is built: the rev 9 note rendered for the Luke 1:27 pair, appended to the rev 2 33083 X2 note (ctl9.cjs, +578, sha c62ec1096b67f87c).
