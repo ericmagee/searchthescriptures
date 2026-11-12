@@ -1,0 +1,4 @@
+lines 3471 3471
+~L2416
+  OLD: const callOut=$input.all().map(x=>x.json); 
+  NEW: const callOut=(()=>{const IN=$input.all().map(x=>x.json),EB=ALTB.__eb||[];let c=0;return ALTB.map((a,k)=>EB[k]||IN[c++]);})(); /* pkgESS: a stored reply for an early seat, the call output in order for the rest */
