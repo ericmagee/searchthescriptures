@@ -1,0 +1,4 @@
+(a) error lands only in Anticheat item 3: true | Close Enforcer unchanged: true | Assume Check unchanged: true
+(b) Anticheat skipped: batch tags ["C","C","S"] | Close Enforcer unchanged: true | Assume Check unchanged: true
+(c) all skipped: Batch Build output [{"bt_skip":true}]
+(d) batch call not run: Judge Enforcer Call gives 8 error items: true

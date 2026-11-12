@@ -1,0 +1,13 @@
+pkgPDS (W1). Two groups of DeepSeek checks sent as one HTTP node each (ASK 93, Eric "1"). Built offline on live s146 (n8n 18df3909): parent_s146_PDS.json sha256 86a7d1a217cc5307; with pkgEAS and pkgERS: parent_s146_JOINT_EAS_ERS_PDS.json sha256 6080afdb187dd854. Code +3,834 (measured, jsCode), node JSON other than code -817 (five HTTP nodes become Code nodes; two IF and two HTTP nodes are added), 11 more nodes, prompt 0 (every request body is unchanged).
+
+Measured first: the calls inside one DeepSeek HTTP node already run side by side (each reply's "created" time is within 1 second of the node's start, in all 13 stored runs). The nodes run one after another, so the saving comes from putting independent nodes' calls in one node.
+
+Group 1, at Close Enforcer's place right after Quote Report: Close Enforcer, Anticheat and Assume Check. Their Build nodes read only Init Seats, Resolve Seats, Regrade Load and Final Output, so Anticheat Build and Assume Check Build now run right after Close Enforcer Build. Group 2, at Enforcer's place right after Panel Cure Check: Enforcer and Judge Enforcer. Judge Enforcer Build does not read Enforcer Record or Enforcer Call (it was only wired after them), so it now runs right after Enforcer Build.
+
+For each group: "G Batch Build" lists every non-skipped item of the member Builds with a tag; "G Batch Needed?" and "G Batch Call deepseek" (a copy of the old Close Enforcer Call node) send them in one node. Each member's "X Call deepseek" is now a Code node of the same name that hands back its own replies from the batch, in order. So the Records, the retry paths and Panel Tokens read the same items as before, and pkgERS's resend paths are unchanged. Each moved member's old entry point (Check Save, Regrade After Quotes?, Judge Contradiction Record, Enforcer Record) now feeds "X Resume", which hands on that Build's items to X Needed?.
+
+Time (measured from stored node times; each group takes its longest member's time): saving per run 2.0 to 5.8 minutes over the 13 stored runs, mean 4.0; run 35067 4.0, run 35296 4.6.
+
+How it combines with pkgERS: only the first call of each check moves into the batch. The retry halves and pkgERS's resend still run after the member's Call node, one path at a time, as before.
+
+Limits: a run that stops before Anticheat or Assume Check (for example a panel failure, or an anticheat-only run before Assume Check) now still pays for those calls. The time saving is a bound from stored times; DeepSeek may answer more slowly with more calls at once (not measured; a live run shows it). A batch call that does not run makes each member's Call give error items, never another member's reply. Only a live run shows the paths ran.

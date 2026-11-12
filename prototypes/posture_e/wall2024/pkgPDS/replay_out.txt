@@ -1,0 +1,14 @@
+33149 | Close Group: batch items 4, all equal true, calls [140] s, saving 0 s | Enforcer Group: batch items 6, all equal true, calls [261,226] s, saving 226 s | run saving 3.8 min
+33371 | Close Group: batch items 4, all equal true, calls [231] s, saving 0 s | Enforcer Group: batch items 5, all equal true, calls [121,240] s, saving 121 s | run saving 2.0 min
+33490 | Close Group: batch items 5, all equal true, calls [121] s, saving 0 s | Enforcer Group: batch items 8, all equal true, calls [170,302] s, saving 170 s | run saving 2.8 min
+33497 | Close Group: batch items 5, all equal true, calls [154] s, saving 0 s | Enforcer Group: batch items 8, all equal true, calls [117,211] s, saving 117 s | run saving 2.0 min
+34299 | Close Group: batch items 7, all equal true, calls [136,154,14] s, saving 150 s | Enforcer Group: batch items 7, all equal true, calls [111,208] s, saving 111 s | run saving 4.3 min
+34626 | Close Group: batch items 8, all equal true, calls [64,100,47] s, saving 111 s | Enforcer Group: batch items 7, all equal true, calls [148,143] s, saving 143 s | run saving 4.2 min
+34703 | Close Group: batch items 8, all equal true, calls [97,176,18] s, saving 115 s | Enforcer Group: batch items 8, all equal true, calls [185,156] s, saving 156 s | run saving 4.5 min
+34726 | Close Group: batch items 7, all equal true, calls [54,145,58] s, saving 112 s | Enforcer Group: batch items 10, all equal true, calls [161,205] s, saving 161 s | run saving 4.6 min
+34780 | Close Group: batch items 7, all equal true, calls [91,120,71] s, saving 163 s | Enforcer Group: batch items 9, all equal true, calls [242,181] s, saving 181 s | run saving 5.7 min
+34852 | Close Group: batch items 6, all equal true, calls [109,166] s, saving 109 s | Enforcer Group: batch items 6, all equal true, calls [236,306] s, saving 236 s | run saving 5.8 min
+35067 | Close Group: batch items 7, all equal true, calls [109,226,17] s, saving 126 s | Enforcer Group: batch items 9, all equal true, calls [113,143] s, saving 113 s | run saving 4.0 min
+35173 | Close Group: batch items 7, all equal true, calls [108,132,62] s, saving 170 s | Enforcer Group: batch items 9, all equal true, calls [76,123] s, saving 76 s | run saving 4.1 min
+35296 | Close Group: batch items 7, all equal true, calls [126,161,26] s, saving 153 s | Enforcer Group: batch items 9, all equal true, calls [125,124] s, saving 124 s | run saving 4.6 min
+TOTAL {"builds":53,"builds_eq":53,"calls":56,"calls_eq":56,"save_s":3143.304,"runs":13} mean saving per run 4.0 min
