@@ -1,0 +1,7 @@
+AS EXPECTED rev7: "Matthew 1:18 & 20" close -> 1 | I withdraw Matthew 1:20. || D2 rests on Matthew 1:18 & 20.
+AS EXPECTED rev7: withdrawal "Matthew 1:18 & 20" -> 1 | I withdraw Matthew 1:18 & 20. || D2 rests on Matthew 1:20.
+AS EXPECTED rev7: "; 20" then a new clause -> 1 | I withdraw Matthew 1:20. || D2 rests on Matthew 1:18; 20 more rows agree.
+AS EXPECTED rev7: semicolon then other verse with book, withdrawn Luke -> 0
+AS EXPECTED rev7: "; 2 Samuel 7:12" not read as verse 2 -> 0
+AS EXPECTED rev7: "& 1 John 5:1" not read as verse 1 -> 0
+6 of 6

@@ -2847,6 +2847,84 @@
   "exp": 1
  },
  {
+  "src": "plants_w2_rev7.cjs",
+  "name": "rev7: \"Matthew 1:18 & 20\" close",
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D2\nD2 rests on Matthew 1:18 & 20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1
+ },
+ {
+  "src": "plants_w2_rev7.cjs",
+  "name": "rev7: withdrawal \"Matthew 1:18 & 20\"",
+  "F": {
+   "cr2": "I withdraw Matthew 1:18 & 20.",
+   "cr3": "",
+   "cr4": "## D2\nD2 rests on Matthew 1:20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1
+ },
+ {
+  "src": "plants_w2_rev7.cjs",
+  "name": "rev7: \"; 20\" then a new clause",
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D2\nD2 rests on Matthew 1:18; 20 more rows agree.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1
+ },
+ {
+  "src": "plants_w2_rev7.cjs",
+  "name": "rev7: semicolon then other verse with book, withdrawn Luke",
+  "F": {
+   "cr2": "I withdraw Luke 1:20.",
+   "cr3": "",
+   "cr4": "## D2\nD2 rests on Matthew 1:18; Luke 1:35.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 0
+ },
+ {
+  "src": "plants_w2_rev7.cjs",
+  "name": "rev7: \"; 2 Samuel 7:12\" not read as verse 2",
+  "F": {
+   "cr2": "I withdraw Matthew 1:2.",
+   "cr3": "",
+   "cr4": "## D2\nD2 rests on Matthew 1:18; 2 Samuel 7:12.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 0
+ },
+ {
+  "src": "plants_w2_rev7.cjs",
+  "name": "rev7: \"& 1 John 5:1\" not read as verse 1",
+  "F": {
+   "cr2": "I withdraw Matthew 1:1.",
+   "cr3": "",
+   "cr4": "## D2\nD2 rests on Matthew 1:18 & 1 John 5:1.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 0
+ },
+ {
   "src": "plants.cjs (W1)",
   "name": "withdraw then layer of D6",
   "F": {

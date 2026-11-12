@@ -64,3 +64,12 @@ Not for write until the operator rules ASK 117 (33846 Ezra 2:61) and the paid re
   - Limit L2, silent: in the close, "Matthew 1:18; 20" does not count verse 20, though Wall 5361 lists "; 20" as read. No stored case found (stored "; <n>" hits are book prefixes such as "; 2 Samuel"). W1: fix it or state it in the rule text, then drop the override.
 - Neither limit is a regression, and neither loses a stored pair.
 - Replay plan moved to rev 6: replay_plan_WVR6.md. Sizes and candidates are the same as rev 3; 35379 X7, 32924 X1 and 33083 X1 must be CONFIRMED (ASK 116 ruling).
+
+## Rev 7 (W1, Wall 5367; commit 724d1d82; parent_s160_WVR7.json sha 3b1535e0569a18f0): PASS WITH LIMITS
+
+- Identity against live s160: only Close Enforcer Build differs; 443 nodes; connections equal; compiles; code +7,795 MEASURED. Packing check: only the two known await artifacts throw.
+- Stored scan: identical to rev 4 to 6, the same six names.
+- Fixed set on the function cut from the package file: 264 of 264. With my 6 new plants (plants_w2_rev7.cjs, harvested): 270 of 270. I agree with the new overrides (W3 plant6 5, 6, 7, 15).
+- My rev 5 plants 23 of 23; rev 6 plants 10 of 11, the one left is L1, now stated in the rule text and kept by override.
+- New plants 6 of 6: "&" lists on both sides; "; 20 more rows" counts 20 (toward naming, the same class as L1); "; Luke 1:35", "; 2 Samuel 7:12" and "& 1 John 5:1" are not read as bare verses.
+- Replay plan moved to rev 7: replay_plan_WVR7.md. Sizes and candidates unchanged. 35379 X7, 32924 X1, 33083 X1 and 33846 X7 must be CONFIRMED; the control 33083 X2 (rev 2 request) must be NOT A CONTRADICTION.

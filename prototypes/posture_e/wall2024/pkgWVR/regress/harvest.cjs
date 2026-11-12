@@ -1,7 +1,7 @@
 // Builds regress.json: every plant from every grade of pkgWVR (W1 plants.cjs, W3 plant*.cjs, W2 plants_w2*.cjs), with its expected answer.
 const fs=require('fs');const B={cr2:'',cr3:'',cr4:'',gr2:'',dr3:'',dr4:''};const REC=[];
 const W3='/mnt/project-files/w3/grade_WVR/',W2=__dirname+'/../../w2_grades/wvr/';
-const files=[[W3+'plant.cjs','W3'],[W3+'plant_r2.cjs','W3'],[W3+'plant2.cjs','W3'],[W3+'plant3.cjs','W3'],[W3+'plant4.cjs','W3b'],[W3+'plant5.cjs','W3'],[W3+'plant6.cjs','W3c'],[W2+'plants_w2.cjs','W2'],[W2+'plants_w2_rev2.cjs','W2'],[W2+'plants_w2_rev3.cjs','W2'],[W2+'plants_w2_rev4.cjs','W2'],[W2+'plants_w2_rev4_cross.cjs','W2'],[W2+'plants_w2_rev5.cjs','W2'],[W2+'plants_w2_rev6.cjs','W2']];
+const files=[[W3+'plant.cjs','W3'],[W3+'plant_r2.cjs','W3'],[W3+'plant2.cjs','W3'],[W3+'plant3.cjs','W3'],[W3+'plant4.cjs','W3b'],[W3+'plant5.cjs','W3'],[W3+'plant6.cjs','W3c'],[W2+'plants_w2.cjs','W2'],[W2+'plants_w2_rev2.cjs','W2'],[W2+'plants_w2_rev3.cjs','W2'],[W2+'plants_w2_rev4.cjs','W2'],[W2+'plants_w2_rev4_cross.cjs','W2'],[W2+'plants_w2_rev5.cjs','W2'],[W2+'plants_w2_rev6.cjs','W2'],[W2+'plants_w2_rev7.cjs','W2']];
 for(const [p,k] of files){let s=fs.readFileSync(p,'utf8').split('\n');
  if(k==='W2')s=s.filter(l=>!/^const (fs|i|f)=|^const fs=require/.test(l));else s=s.filter(l=>!/require\(.*scan/i.test(l));
  let src=s.join('\n');
