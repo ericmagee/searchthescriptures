@@ -11,3 +11,12 @@ Verdict: NOT PASSED. I agree with W3's F1 and F2 (Wall 5322) and add four forms 
   4. A withdrawn range ("I drop Matthew 1:18-20.") keeps only its first verse, so a close citing Matthew 1:20 is not found. Silent.
   As expected: a range in the close ("Galatians 4:4-5") is found; a withdrawal scoped to one link is named against another link (W3's stated limit).
 - Not a fault: the package waits on the operator's ruling of 35379 C2 and 33846 before any write.
+
+# Rev 2 (W1, commit d4125bf8, parent_s158_WVR2.json sha d2edc150fb5f270b, Wall 5335)
+
+Verdict: PASS WITH LIMITS. Not for write until the operator rules 35379 C2 and the 33846 pair.
+
+- Identity: rebuilt from live s158 with build.cjs, same sha. Only Close Enforcer Build differs; connections equal; compiles. Code +4,671 (MEASURED).
+- My plants on rev 2 (plants_w2_rev2_out.txt): 10 of 11 as expected. Now fixed: the opponent's footing, "Gal. 4:4" and "Gal 4:4", a withdrawn range, a negated close, the opponent's withdrawal quoted in the side's own round, and 1 John against John. The challenger side works.
+- Kept on purpose (W1): a verse put back in round 3 is still named. I accept this as noise the enforcer clears, not a fault.
+- New stored name, 33083 X2 Luke 1:27. The withdrawal is scoped: [CR2] "Mary's descent from David is not left to Luke 1:27. I concede the KJV's clause "of the house of David" in Luke 1:27 can attach to Joseph, and I do not rest on it." The close uses Luke 1:27 for another point: "D3 rests on Matthew 1:25 with Luke 1:27 and 1:34", the "virgin espoused" footing. My reading: NOT A CONTRADICTION. It is a candidate the enforcer must clear, which risks a false CONFIRMED (the 35526 class). It is also the named control pair W3 asked for, if a paid replay is approved.
