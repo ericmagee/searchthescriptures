@@ -1,0 +1,29 @@
+{
+ "source": "debate_enforcer_log close enforcer prompts: 35296 row 30363 (s146), 35379 row 31032 (s149). Sentences copied from the prompt text.",
+ "expect_pair": [
+  {"id":"A1","run":35379,"side":"DEFENDER","link":5,"earlier_round":"CR3","earlier":"**LINK 5: NARROWED TO:** Matthew 1:16 traces the birth to Mary by a changed verb and a feminine relative, and Hebrews 10:5 traces the body to God's preparation. I drop any rest on the \"born of a woman\" idiom, since I have granted that it is said of men with fathers.","closing":"I narrow nothing and concede nothing.","note":"the missed pair"},
+  {"id":"A2","run":35379,"side":"DEFENDER","link":5,"earlier_round":"CR3","earlier":"(LINK 5 NARROWED TO, as A1)","closing":"I keep D1 to D6 as numbered.","note":"keep-all with 'as numbered'; pkgRCL matches only 'as declared'"},
+  {"id":"A3","run":35379,"side":"DEFENDER","link":"6 or 5 (withdrawal in CR2 of Galatians 4:4)","earlier_round":"CR2","earlier":"I withdraw Galatians 4:4 as an exclusion witness.","closing":"I narrow nothing and concede nothing.","note":"a withdrawal against a no-concession close; link attribution is the package's call"},
+  {"id":"A4","run":35296,"side":"DEFENDER","link":4,"earlier_round":"CR3","earlier":"**LINK 4 [premise 4]: NARROWED TO:** \"Mary is the only human parent named as the source of the birth.\" I drop the limb that Mary is of the house of David.","closing":"Nothing is conceded or narrowed.","note":"35296 Oracle X1; the code must find it without the Oracle"},
+  {"id":"A5","run":35296,"side":"DEFENDER","link":2,"earlier_round":"CR3","earlier":"**LINK 2: NARROWED TO:** \"An answer built on God's power fits a conception that is his work.\" I drop the exclusion limb.","closing":"Nothing is conceded or narrowed.","note":"same close sentence, other narrowed link"},
+  {"id":"A6","run":35296,"side":"DEFENDER","link":2,"earlier_round":"CR3","earlier":"(LINK 2 NARROWED TO, as A5)","closing":"I keep D1, D2, D3, D4 and D5 as declared.","note":"pkgRCL X4 today; must still be found (no regression)"},
+  {"id":"A7","run":35296,"side":"DEFENDER","link":4,"earlier_round":"CR3","earlier":"**LINK 4 [premise 6]: NARROWED TO:** \"The child is placed in Joseph's house by the husband's acts of naming and taking.\"","closing":"I keep D1, D2, D3, D4 and D5 as declared.","note":"pkgRCL X5 today; no regression"}
+ ],
+ "expect_no_pair": [
+  {"id":"N1","run":35296,"side":"DEFENDER","closing":"ANSWER: Luke 1:37 -- D2 -- \"For with God nothing shall be impossible.\"","why":"'nothing' inside a verse quotation"},
+  {"id":"N2","run":35379,"side":"CHALLENGER","closing":"- [L1] Hebrews 7:14: \"For [it is] evident that our Lord sprang out of Juda; of which tribe Moses spake nothing concerning priesthood.","why":"'nothing' inside a verse quotation"},
+  {"id":"N3","run":35379,"side":"DEFENDER","closing":"If he knew himself the father, the finding gives justice nothing to act on, and no infamy needs sparing.","why":"'nothing' not about the debater's own concessions"},
+  {"id":"N4","run":35379,"side":"DEFENDER","closing":"This supports D3 as stated: he planned to put her away.","why":"one link 'as stated', not a keep-all; D3 was not narrowed"},
+  {"id":"N5","run":35296,"side":"CHALLENGER","closing":"I keep C1 to C6 as stated in my link round.","why":"keep-all, but the challenger has no NARROWED/drop/withdraw line in DR2-DR3 (measured by the same scan)"},
+  {"id":"N6","run":35296,"side":"CHALLENGER","closing":"Nothing below is new.","why":"not a concession claim"},
+  {"id":"N7","run":35296,"side":"CHALLENGER","closing":"\" | CLOSING [CR4] \"Nothing is conceded or narrowed.","why":"the challenger quoting the defender's close (other side's words)"}
+ ],
+ "plants_to_add": [
+  "P1 negated: 'I do not say that nothing is conceded.' -> no pair",
+  "P2 question: 'Is nothing narrowed?' -> no pair",
+  "P3 conditional: 'If nothing were conceded, D2 would stand.' -> no pair",
+  "P4 variants -> pair when the side narrowed/dropped/withdrew earlier: 'I concede nothing.', 'Nothing has been narrowed.', 'I withdraw nothing.', 'No link is narrowed.', 'All six links stand as first stated.', 'I keep every link whole.'",
+  "P5 the same sentences on a side with no earlier narrowing -> no pair",
+  "P6 curly quotes and bold markup around the close sentence -> same result as plain"
+ ]
+}
