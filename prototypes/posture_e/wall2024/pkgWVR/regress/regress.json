@@ -3767,7 +3767,7 @@
   },
   "exp": 1,
   "prev": [],
-  "chk": "o=>/a lesser weight is still a rest/.test(o[0].why)"
+  "chk": "o=>/a lesser weight is still a rest/.test(o[0].why)&&/for X\\d+ only/.test(o[0].why)&&/does not apply to any other pair/.test(o[0].why)"
  },
  {
   "src": "plants.cjs (W1)",
@@ -3782,7 +3782,7 @@
   },
   "exp": 1,
   "prev": [],
-  "chk": "o=>o[0].n==='4'&&/a lesser weight is still a rest/.test(o[0].why)"
+  "chk": "o=>o[0].n==='4'&&/a lesser weight is still a rest/.test(o[0].why)&&/for X\\d+ only/.test(o[0].why)&&/does not apply to any other pair/.test(o[0].why)"
  },
  {
   "src": "plants.cjs (W1)",
@@ -3797,7 +3797,7 @@
   },
   "exp": 1,
   "prev": [],
-  "chk": "o=>o[0].n==='5'&&/a lesser weight is still a rest/.test(o[0].why)"
+  "chk": "o=>o[0].n==='5'&&/a lesser weight is still a rest/.test(o[0].why)&&/for X\\d+ only/.test(o[0].why)&&/does not apply to any other pair/.test(o[0].why)"
  },
  {
   "src": "plants.cjs (W1)",
@@ -3812,7 +3812,7 @@
   },
   "exp": 1,
   "prev": [],
-  "chk": "o=>o[0].n==='6'&&/a lesser weight is still a rest/.test(o[0].why)"
+  "chk": "o=>o[0].n==='6'&&/a lesser weight is still a rest/.test(o[0].why)&&/for X\\d+ only/.test(o[0].why)&&/does not apply to any other pair/.test(o[0].why)"
  },
  {
   "src": "plants.cjs (W1)",
@@ -3827,6 +3827,21 @@
   },
   "exp": 1,
   "prev": [],
-  "chk": "o=>o[0].n==='4'&&/a lesser weight is still a rest/.test(o[0].why)"
+  "chk": "o=>o[0].n==='4'&&/a lesser weight is still a rest/.test(o[0].why)&&/for X\\d+ only/.test(o[0].why)&&/does not apply to any other pair/.test(o[0].why)"
+ },
+ {
+  "src": "plants.cjs (W1)",
+  "name": "rev9 must stay NOT (ASK 124, 35379 X1): idiom dropped, close keeps the \"made of a woman\" verb parallel",
+  "F": {
+   "cr2": "",
+   "cr3": "I drop any rest on the \"born of a woman\" idiom, since I have granted that it is said of men with fathers.",
+   "cr4": "**ANSWER: Hebrews 7:10 -- D5 --**\n- [L3] Romans 1:3 and Galatians 4:4 use the same verb \"made\".\n- [L4] So the seed of David is \"made\" of a woman, as Matthew 1:16 \"of whom\" traces.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 0,
+  "prev": [],
+  "chk": null
  }
 ]
