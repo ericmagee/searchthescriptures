@@ -1,0 +1,43 @@
+PASS C1 35856 form: CONCEDED -- before a barred row
+   live {"it":"NOT APPLIED","add":[],"gone":[],"f":"HELD/0/0","n":11}
+   new  {"it":"","add":["DEFENDER | [CR4] | “I drop the ‘alone’ from D5.” COUNTED"],"gone":["DEFENDER | [CR4] | “I drop the ‘alone’ from D5.”"],"f":"HELD/0/0","n":11}
+PASS C2 CONCEDED: before a barred row
+   live {"it":"NOT APPLIED","add":[],"gone":[],"f":"HELD/0/0","n":11}
+   new  {"it":"","add":["DEFENDER | [CR4] | “I drop the ‘alone’ from D5.” COUNTED"],"gone":["DEFENDER | [CR4] | “I drop the ‘alone’ from D5.”"],"f":"HELD/0/0","n":11}
+PASS C3 bold CONCEDED with em dash
+   live {"it":"NOT APPLIED","add":[],"gone":[],"f":"HELD/0/0","n":11}
+   new  {"it":"","add":["DEFENDER | [CR4] | “I drop the ‘alone’ from D5.” COUNTED"],"gone":["DEFENDER | [CR4] | “I drop the ‘alone’ from D5.”"],"f":"HELD/0/0","n":11}
+PASS C4 bullet then CONCEDED --
+   live {"it":"NOT APPLIED","add":[],"gone":[],"f":"HELD/0/0","n":11}
+   new  {"it":"","add":["DEFENDER | [CR4] | “I drop the ‘alone’ from D5.” COUNTED"],"gone":["DEFENDER | [CR4] | “I drop the ‘alone’ from D5.”"],"f":"HELD/0/0","n":11}
+PASS C5 lower case conceded:
+   live {"it":"NOT APPLIED","add":[],"gone":[],"f":"HELD/0/0","n":11}
+   new  {"it":"","add":["DEFENDER | [CR4] | “I drop the ‘alone’ from D5.” COUNTED"],"gone":["DEFENDER | [CR4] | “I drop the ‘alone’ from D5.”"],"f":"HELD/0/0","n":11}
+PASS G1 guard: CONCEDED LINKS: 1
+   live {"it":"","add":["CONCEDED LINKS: 1"],"gone":["CONCEDED LINKS: 0"],"f":"HELD/1/0","n":11}
+   new  (same)
+PASS G2 guard: CONCEDED LINKS: before a barred row
+   live {"it":"","add":["CONCEDED LINKS: DEFENDER | [CR4] | “I drop the ‘alone’ from D5.” COUNTED"],"gone":["CONCEDED LINKS: 0"],"f":"HELD/0/0","n":11}
+   new  (same)
+PASS G3 guard: CONCEDED LINKS: NONE
+   live {"it":"","add":["CONCEDED LINKS: NONE"],"gone":["CONCEDED LINKS: 0"],"f":"HELD/0/0","n":11}
+   new  (same)
+PASS G4 guard: CONCEDED: D2
+   live {"it":"NOT APPLIED","add":[],"gone":[],"f":"HELD/0/0","n":11}
+   new  (same)
+PASS G5 guard: key-word answer opening CONCEDED
+   live {"it":"NOT APPLIED","add":[],"gone":[],"f":"HELD/0/0","n":11}
+   new  (same)
+PASS G6 guard: CONCEDED -- then DEFENDER prose, no bar
+   live {"it":"NOT APPLIED","add":[],"gone":[],"f":"HELD/0/0","n":11}
+   new  (same)
+PASS G7 guard: flagged line found, CONCEDED -- row
+   live {"it":"NOT APPLIED","add":[],"gone":[],"f":"HELD/0/0","n":11}
+   new  {"it":"","add":["DEFENDER | [CR4] | “D5: NARROWED TO: Galatians 4:4 and Genesis 3:15 name the woman as the human source of the Son.” COUNTED"],"gone":["DEFENDER | [CR4] | “D5: NARROWED TO: Galatians 4:4 and Genesis 3:15 name the woman as the human source of the Son.”"],"f":"HELD/0/0","n":11}
+PASS G8 control: OUT-OF-ROUND prefix still stripped
+   live {"it":"","add":["DEFENDER | [CR4] | “I drop the ‘alone’ from D5.” COUNTED"],"gone":["DEFENDER | [CR4] | “I drop the ‘alone’ from D5.”"],"f":"HELD/0/0","n":11}
+   new  (same)
+PASS G9 control: COLLISION POINTS: kept (plant B16)
+   live {"it":"NOT APPLIED","add":[],"gone":[],"f":"HELD/0/0","n":11}
+   new  (same)
+14/14

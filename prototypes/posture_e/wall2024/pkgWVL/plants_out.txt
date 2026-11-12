@@ -1,0 +1,10 @@
+P1 row after withdrawal (35856 form) | expected Y | got 1 LINK 3 "[L3] Luke 2:4 and Ezra 2:61: \"which took a wife\""
+P2 "[L4] On" argument row | expected Y | got 1 LINK 4 "[L4] On Matthew 1:22 and Galatians 4:4: \"all this\""
+P3 row that refuses the verse | expected N | got 0 
+P4 row naming the opponent's link only | expected N | got 0 
+P5 same numbers, other book | expected N | got 0 
+P6 duplicate of a "stands on" candidate (cap not spent) | expected Y1 | got 1 LINK 4 "Link 4 stands on [L3] Galatians 4:4."
+P7 scoped withdrawal, row of another link | expected Y | got 1 LINK 2 "[L3] Galatians 4:4: \"made of a woman\""
+P8 withdrawal only "rest no weight on it" (verbs option) | expected V | got 0 
+P9 row with no withdrawal | expected N | got 0 
+P10 verse cited in row body, not the row head | expected N | got 0 
