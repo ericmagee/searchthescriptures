@@ -1,0 +1,2 @@
+## pkgGUR: the gate-change count check reads the reason too
+pkgGUB lifts a pkgUND count only when the gate's new line passes the UNDERDETERMINED rule. Since pkgUOR, that rule accepts the open point (and the [L1]) written in the reason after "||". The pkgGUB check now hands the gate row's reason to the same rule, so a gate change that states its open point only in its reason is read the same way as a send-back answer.

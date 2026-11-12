@@ -1,0 +1,8 @@
+ok  live:false new:true  open point only in the reason (haiku S8 form)
+ok  live:true new:true  open point in the line
+ok  live:false new:false  open point nowhere
+ok  live:false new:false  no [L1] anywhere
+ok  live:false new:true  [L1] only in the reason, open in the line
+ok  live:false new:true  E-HOLD line, open point only in the reason
+ok  live:true new:true  not counted by pkgUND (no audit line): returns true as before
+PASS 7/7; changed by the package: 3
