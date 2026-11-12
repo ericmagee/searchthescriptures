@@ -1,7 +1,5 @@
-// pkgWVS (measure only, W1): scope of a withdrawal. When the withdrawal limits itself ("as load-bearing for the exclusion", "for Link 4", "from D1"),
-// also "as an exclusion witness" (a named purpose; not "independent", "sufficient" and other weight words). The finder keeps the limit and the pkgWVR note for that pair adds one sentence: a close that uses the verse only for a purpose or link the limit left open does not rest again.
+// pkgWVS rev 2 (W1, ASK 144 option 2; W3's option (a), Wall after 5499): no limit is read in code. Every pkgWVR note carries one fixed sentence:
+// a withdrawal limited to a named use covers only that use; the enforcer reads the limit from the quoted earlier line.
 module.exports=s=>{const R=(a,b)=>{const k=s.split(a).length-1;if(k!==1)throw 'anchor x'+k+': '+a;s=s.replace(a,()=>b);};
-R("const add=(i,q,rs)=>{for(const x of rs)for(let v=x.a;v<=Math.min(x.b,x.a+200);v++)W.push({round:P+(i+2),q,","const add=(i,q,rs,sc)=>{for(const x of rs)for(let v=x.a;v<=Math.min(x.b,x.a+200);v++)W.push({round:P+(i+2),q,sc,");
-R("rs=rs.slice(0,-1);add(i,s,rs);continue;}","rs=rs.slice(0,-1);add(i,s,rs,(tail.match(/^\\s+(?:as\\s+[\\w\\s'’-]{0,40}?\\s+)?((?:for|in)\\s+(?:the\\s+)?[\\w\\s'’-]{3,40}?|from\\s+(?:D|Link\\s+)\\d)\\s*(?=[.;,]|$)/i)||tail.match(/^\\s+as\\s+an?\\s+((?!(?:independent|sufficient|decisive|main|primary|separate|direct|standalone|load)\\b)[\\w-]+\\s+(?:witness|proof|ground))\\b/i)||[])[1]);continue;} /* pkgWVS */");
-R("it does not apply to any other pair'","it does not apply to any other pair'+(w.sc?'. The earlier line limits the withdrawal to \"'+w.sc+'\": if the close uses '+w.ref+' only for a purpose or a link that this limit left open, it does not rest again on what was given up':'')");
+R("it does not apply to any other pair'","it does not apply to any other pair. By the operator\\'s ruling, if the earlier line limited the withdrawal to a named use (a purpose, a link or a point) and the close uses '+w.ref+' only for a use that limit left open, the close does not rest again on what was given up'");
 return s;};

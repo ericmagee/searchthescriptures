@@ -1,13 +1,13 @@
-PASS S1 32924 form "as load-bearing for the exclusion" | expected S:for the exclusion | got S:for the exclusion
-PASS S2 "for Link 4" | expected S:for Link 4 | got S:for Link 4
-PASS S3 "from D1" | expected S:from D1 | got S:from D1
-PASS S4 "as a witness for the exclusion of a father" | expected S:for the exclusion of a father | got S:for the exclusion of a father
-PASS S5 "in the exclusion argument" | expected S:in the exclusion argument | got S:in the exclusion argument
-PASS P1 no limit | expected P | got P
-PASS P2 "as load-bearing" (ruled: a lesser weight is still a rest) | expected P | got P
-PASS S6 "as an exclusion witness" (35379 form; a named use under ASK 144-2) | expected S:exclusion witness | got S:exclusion witness
-PASS P4 limit in the next sentence is not read | expected P | got P
-PASS P5 "it" form keeps no limit (not read) | expected P | got P
-PASS P6 "as an independent proof" is a weight, not a use | expected P | got P
-PASS N1 "alone" stays a partial (not named, as before) | expected N | got N
+PASS S1 32924 form | named 1
+PASS S2 for Link 4 | named 1
+PASS S3 from D1 | named 1
+PASS S4 as an exclusion witness | named 1
+PASS W1 for now (W3) | named 1
+PASS W2 for good (W3) | named 1
+PASS W3 in full (W3) | named 1
+PASS W4 as a supporting witness (W3) | named 1
+PASS W5 for D2. (W3) | named 1
+PASS P1 no limit | named 1
+PASS P2 as load-bearing | named 1
+PASS N1 "alone" not named
 12/12
