@@ -20,3 +20,13 @@ Verdict: PASS WITH LIMITS.
 ## Limits
 - The new instruction sentence ("rested nothing on that row ... the close asserts it again") is a rule for the model. Read loosely it could confirm a close that only quotes a row the earlier sentence set aside for another purpose. A false CONFIRMED breaks a chain, the costlier error (35526). Graders of the next run should hand-read every CONFIRMED that cites a CLOSING BLOCK row.
 - Prompt about +1,686 per run (W1, MEASURED over 14 runs).
+
+# Rev 2 (W1, commit b7f748be, parent_s156_CRB2.json sha 46fe57cf34ce35c6, Wall 5294)
+
+Verdict: PASS WITH LIMITS. The new prompt sentence stays UNPROVEN until the paid replay W3 listed.
+
+- Identity: rebuilt from live s156 with build.cjs, same sha. Code +2,182 (MEASURED).
+- Replay (rp2.cjs, prompts from debate_enforcer_log): 35554 defender +1,678. X1 still opens at the Romans 1:3 ANSWER line and holds rows [L2] to [L4]. X2 to X6 share one block. 35526 +550; 35478 +1,378, unchanged from rev 1; 35379 defender +3,297; every challenger call +295.
+- My plants (myplants2_out.txt): 9 of 10 as expected. Now fixed are the rev 1 limits and W3's F1 and F2: the curly apostrophe, the quote taken earlier, bold row labels "**[L3]**" and whole-bold rows, two alike closings, and a bold lead-in on the sentence's own line. A cut quote ("...") gets no block. That fails safe.
+- Limit (stated by W1): a bold lead-in row inside an answer block ("**Note.** ...") on an earlier line opens a new block, so rows above it are cut off.
+- Timing: a 20,000-word close with no hit takes 1 ms.

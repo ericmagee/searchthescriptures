@@ -1,0 +1,12 @@
+AS EXPECTED W2-1 curly apostrophe in close => "**ANSWER: A**\n- [L4] Joseph’s line is not the route here at all."
+AS EXPECTED W2-2 quoted earlier, then own row => "**ANSWER: B**\n- [L4] So the flesh comes by the mother and not by Joseph."
+AS EXPECTED W3-F1 bold row labels => "**ANSWER: Romans 1:3 -- D2 --** \"verse\"\n**[L3]** Luke 1:35: \"born of thee.\"\n**[L"
+AS EXPECTED W3-F1 bold row label whole => "**ANSWER: Romans 1:3 -- D2 --** \"verse\"\n**[L3] Luke 1:35: born of thee.**\n**[L4]"
+AS EXPECTED bold lead-in on own line => "**ANSWER: Romans 1:3 -- D2 --** \"verse\"\n- [L3] Row.\n**The point.** So the flesh "
+AS EXPECTED W3-F2 two alike closings => "**ANSWER: A2**\n- [L4] So the flesh comes by the mother in Romans one."
+AS EXPECTED cut quote (ellipsis) => ""
+NOT AS EXPECTED bold lead-in row inside block splits (limit) => "**Note.** a remark.\n- [L4] So the point stands from row three today."
+AS EXPECTED regex chars => "# H\nWhat (of) it [x] $5 + 2? Done here now."
+AS EXPECTED empty => ""
+9/10
+ms 1
