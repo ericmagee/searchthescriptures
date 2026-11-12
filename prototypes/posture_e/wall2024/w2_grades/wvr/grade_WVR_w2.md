@@ -73,3 +73,14 @@ Not for write until the operator rules ASK 117 (33846 Ezra 2:61) and the paid re
 - My rev 5 plants 23 of 23; rev 6 plants 10 of 11, the one left is L1, now stated in the rule text and kept by override.
 - New plants 6 of 6: "&" lists on both sides; "; 20 more rows" counts 20 (toward naming, the same class as L1); "; Luke 1:35", "; 2 Samuel 7:12" and "& 1 John 5:1" are not read as bare verses.
 - Replay plan moved to rev 7: replay_plan_WVR7.md. Sizes and candidates unchanged. 35379 X7, 32924 X1, 33083 X1 and 33846 X7 must be CONFIRMED; the control 33083 X2 (rev 2 request) must be NOT A CONTRADICTION.
+
+## Rev 8 (W1, Wall 5385; parent_s160_WVR8.json sha 58efab41ff8c9ea6): PASS WITH LIMITS (code); the new sentence goes to the paid replay
+
+- Identity against live s160: only Close Enforcer Build differs; connections equal; compiles; code +8,202 MEASURED.
+- Fixed set on the function cut from the package file: 282 of 282.
+- My plants: rev 5 set 23 of 23; rev 6 set 10 of 11 (L1, stated limit); rev 7 set 6 of 6.
+- Stored scan: 158 of 162 calls byte-equal to rev 7; the same six names; prompt +10,137 over the scan.
+- Defender prompt sizes, MEASURED (change against live s160): 32924 +1,560; 33083 +1,216; 33846 +5,313; 35379 +2,053.
+- Limit L3, prompt (new): the ruling sentence ("a lesser weight is still a rest, and such a close does not answer the withdrawal") is added to every named note. It states the ASK 116 ruling in general form. The finder's stated limit (a withdrawal scoped to one link, named against another link) means the sentence can reach a note the ruling did not cover, and push a false CONFIRMED. Code cannot settle this; the paid replay can.
+- Synthetic negative control built for the replay: the rev 2 request for 33083 X2 (Luke 1:27, held NOT A CONTRADICTION in ASK 119) with the rev 8 sentence appended to its note (ctl8.cjs, ctl8_body.json, +312 characters, sha d449e0bdb0c24750). Rev 8 itself does not name 33083 X2, so the plain rev 2 request would not test the sentence.
+- Replay plan moved to rev 8: replay_plan_WVR8.md (10 calls, up to 12 with resends, ESTIMATE under 0.18 USD from the ASK 119 MEASURED 0.0144 USD per completed call).
