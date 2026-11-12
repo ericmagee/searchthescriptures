@@ -1,0 +1,111 @@
+
+== as run
+live early: [] | called: ["grok","argon"] | via: Alternate Call (all items)
+     payloads [{"seat":"grok","ok":false,"why":"call failed: aborted","len":232412},{"seat":"argon","ok":true,"why":null,"len":294101}]
+pkg  early: ["luna"] | called: ["argon"] | via: Alternate Call (1 item(s)); Early Alternate Reply 1 item(s) stops at Early All? (false)
+     payloads [{"seat":"grok","ok":true,"why":null,"len":290412},{"seat":"argon","ok":true,"why":null,"len":294101}]
+     argon payload equal live/pkg: true | grok payload equal live/pkg: false
+
+== none early
+live early: [] | called: ["grok","argon"] | via: Alternate Call (all items)
+     payloads [{"seat":"grok","ok":false,"why":"call failed: aborted","len":232412},{"seat":"argon","ok":true,"why":null,"len":294101}]
+pkg  early: [] | called: ["grok","argon"] | via: Alternate Call (2 item(s)); Early Alternate Reply 0 item(s) stops at Early All? (false)
+     payloads [{"seat":"grok","ok":false,"why":"call failed: aborted","len":232412},{"seat":"argon","ok":true,"why":null,"len":294101}]
+     argon payload equal live/pkg: true | grok payload equal live/pkg: true
+
+== all early (plant)
+live early: ["luna","sol"] | called: [] | via: Early Alternate Reply
+     payloads [{"seat":"grok","ok":true,"why":null,"len":290412},{"seat":"argon","ok":true,"why":null,"len":294101}]
+pkg  early: ["luna","sol"] | called: [] | via: Early Alternate Reply -> Early All? (true)
+     payloads [{"seat":"grok","ok":true,"why":null,"len":290412},{"seat":"argon","ok":true,"why":null,"len":294101}]
+     argon payload equal live/pkg: true | grok payload equal live/pkg: true
+
+pkg as-run grok payload equals live all-early grok payload (the early path today): true
+33149 Alternate Build        items 1 equal true
+33371 Alternate Build        items 1 equal true
+33371 Alternate Payloads     items 1 equal true
+33490 Alternate Build        items 1 equal true
+33490 Alternate Payloads     items 1 equal true
+33497 Alternate Build        items 1 equal true
+33497 Alternate Payloads     items 1 equal true
+34299 Alternate Build        items 1 equal true
+34626 Alternate Build        items 1 equal true
+34626 Alternate Payloads     items 1 equal true
+34703 Alternate Build        items 1 equal true
+34703 Alternate Payloads     items 1 equal true
+34726 Alternate Build        items 1 equal true
+34726 Alternate Payloads     items 1 equal true
+34852 Alternate Build        items 1 equal true
+34852 Alternate Payloads     items 1 equal true
+35173 Alternate Build        items 1 equal true
+35173 Alternate Payloads     items 1 equal true
+35296 Alternate Build        items 2 equal false
+35296 Alternate Payloads     items 2 equal true
+35296 R2 Alternate Payloads  items 1 equal true
+TOTAL runs 21 equal 20
+33149 Enforcer Record                equal true | Resend Build would send: -
+33149 Judge Enforcer Record          equal true | Resend Build would send: -
+33149 Alt Judge Enforcer Record      equal true | Resend Build would send: -
+33371 Enforcer Record                equal true | Resend Build would send: -
+33371 Judge Enforcer Record          equal true | Resend Build would send: -
+33371 Alt Judge Enforcer Record      equal true | Resend Build would send: -
+33490 Enforcer Record                equal true | Resend Build would send: -
+33490 Judge Enforcer Record          equal true | Resend Build would send: -
+33490 Alt Judge Enforcer Record      equal true | Resend Build would send: -
+33497 Enforcer Record                equal true | Resend Build would send: -
+33497 Judge Enforcer Record          equal true | Resend Build would send: -
+33497 Alt Judge Enforcer Record      equal true | Resend Build would send: -
+34299 Enforcer Record                equal true | Resend Build would send: -
+34299 Judge Enforcer Record          equal true | Resend Build would send: -
+34626 Enforcer Record                equal true | Resend Build would send: -
+34626 Judge Enforcer Record          equal true | Resend Build would send: -
+34626 Alt Judge Enforcer Record      equal true | Resend Build would send: -
+34703 Enforcer Record                equal true | Resend Build would send: -
+34703 Judge Enforcer Record          equal true | Resend Build would send: -
+34703 Alt Judge Enforcer Record      equal true | Resend Build would send: -
+34726 Enforcer Record                equal true | Resend Build would send: -
+34726 Judge Enforcer Record          equal true | Resend Build would send: -
+34726 Alt Judge Enforcer Record      equal true | Resend Build would send: -
+34780 Enforcer Record                equal true | Resend Build would send: -
+34780 Judge Enforcer Record          equal true | Resend Build would send: -
+34780 Alt Judge Enforcer Record      equal true | Resend Build would send: -
+34852 Enforcer Record                equal true | Resend Build would send: -
+34852 Judge Enforcer Record          equal true | Resend Build would send: -
+34852 Alt Judge Enforcer Record      equal true | Resend Build would send: -
+35067 Enforcer Record                equal true | Resend Build would send: -
+35067 Judge Enforcer Record          equal true | Resend Build would send: -
+35067 Alt Judge Enforcer Record      equal true | Resend Build would send: -
+35173 Enforcer Record                equal true | Resend Build would send: -
+35173 Judge Enforcer Record          equal true | Resend Build would send: -
+35173 Alt Judge Enforcer Record      equal true | Resend Build would send: ["none"]
+35296 Enforcer Record                equal true | Resend Build would send: -
+35296 Judge Enforcer Record          equal true | Resend Build would send: -
+35296 Alt Judge Enforcer Record      equal true | Resend Build would send: ["k1"]
+35296 R2 Alt Judge Enforcer Record   equal true | Resend Build would send: -
+TOTAL (A) records 39 equal 39
+
+(B) 35296 Resend Build output: [{"ers_resend":true,"ers_k":1,"ids":13,"same_body":true}]
+(B) NO VERDICT before 13 after planted resend 0 | esr {"retried":[2,3],"halves":4,"why":{"2":"finish_reason length (the reply was cut at the token cap)","3":"empty content"},"resent":1} | errors after []
+(C) resend also aborted: NO VERDICT 13 | esr {"retried":[2,3],"halves":4,"why":{"2":"finish_reason length (the reply was cut at the token cap)","3":"empty content"},"resent":1}
+33149 | Close Group: batch items 4, all equal true, calls [140] s, saving 0 s | Enforcer Group: batch items 6, all equal true, calls [261,226] s, saving 226 s | run saving 3.8 min
+33371 | Close Group: batch items 4, all equal true, calls [231] s, saving 0 s | Enforcer Group: batch items 5, all equal true, calls [121,240] s, saving 121 s | run saving 2.0 min
+33490 | Close Group: batch items 5, all equal true, calls [121] s, saving 0 s | Enforcer Group: batch items 8, all equal true, calls [170,302] s, saving 170 s | run saving 2.8 min
+33497 | Close Group: batch items 5, all equal true, calls [154] s, saving 0 s | Enforcer Group: batch items 8, all equal true, calls [117,211] s, saving 117 s | run saving 2.0 min
+34299 | Close Group: batch items 7, all equal true, calls [136,154,14] s, saving 150 s | Enforcer Group: batch items 7, all equal true, calls [111,208] s, saving 111 s | run saving 4.3 min
+34626 | Close Group: batch items 8, all equal true, calls [64,100,47] s, saving 111 s | Enforcer Group: batch items 7, all equal true, calls [148,143] s, saving 143 s | run saving 4.2 min
+34703 | Close Group: batch items 8, all equal true, calls [97,176,18] s, saving 115 s | Enforcer Group: batch items 8, all equal true, calls [185,156] s, saving 156 s | run saving 4.5 min
+34726 | Close Group: batch items 7, all equal true, calls [54,145,58] s, saving 112 s | Enforcer Group: batch items 10, all equal true, calls [161,205] s, saving 161 s | run saving 4.6 min
+34780 | Close Group: batch items 7, all equal true, calls [91,120,71] s, saving 163 s | Enforcer Group: batch items 9, all equal true, calls [242,181] s, saving 181 s | run saving 5.7 min
+34852 | Close Group: batch items 6, all equal true, calls [109,166] s, saving 109 s | Enforcer Group: batch items 6, all equal true, calls [236,306] s, saving 236 s | run saving 5.8 min
+35067 | Close Group: batch items 7, all equal true, calls [109,226,17] s, saving 126 s | Enforcer Group: batch items 9, all equal true, calls [113,143] s, saving 113 s | run saving 4.0 min
+35173 | Close Group: batch items 7, all equal true, calls [108,132,62] s, saving 170 s | Enforcer Group: batch items 9, all equal true, calls [76,123] s, saving 76 s | run saving 4.1 min
+35296 | Close Group: batch items 7, all equal true, calls [126,161,26] s, saving 153 s | Enforcer Group: batch items 9, all equal true, calls [125,124] s, saving 124 s | run saving 4.6 min
+TOTAL {"builds":53,"builds_eq":53,"calls":56,"calls_eq":56,"save_s":3143.304,"runs":13} mean saving per run 4.0 min
+(a) error lands only in Anticheat item 3: true | Close Enforcer unchanged: true | Assume Check unchanged: true
+(b) Anticheat skipped: batch tags ["C","C","S"] | Close Enforcer unchanged: true | Assume Check unchanged: true
+(c) all skipped: Batch Build output [{"bt_skip":true}]
+(d) batch call not run: Judge Enforcer Call gives 8 error items: true
+triggers [ 'Manual Start', 'Debate Start', 'Respond Accepted' ]
+without Close Enforcer Build : Close Enforcer Resume reachable false; Anticheat Resume reachable false; Assume Check Resume reachable false
+without Enforcer Build : Enforcer Resume reachable false; Judge Enforcer Resume reachable false
+all Resume nodes reachable with the full graph: true
