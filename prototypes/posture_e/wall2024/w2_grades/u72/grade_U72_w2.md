@@ -9,3 +9,9 @@ VERDICT: PASS WITH LIMITS. MEASURED unless marked.
 - LIMIT 1 (the UNSAFE direction, the one DIFF): an answer quote that itself holds "-- FAILS" or "-- MISSES" before a real "-- MEETS" is read as a failure, so path B would not fire when it should. In the stored lines: 0 of 12,547.
 - LIMIT 2 (W1's): a quote holding "-- MEETS" before a real failure is read as MEETS; the item fires as on live (safe). In the stored lines: 0 of 12,547.
 - LIMIT 3 (ESTIMATE, by reading): the check is by reference and round, not by premise. If the same verse is pressed under two premises of one round and the judge fails it under one, path B is also held back for the other.
+
+## Rev 2 (W1 Wall 5219, parent sha256 e177cbe5261791ef): PASS WITH LIMITS (W2 confirms)
+- Identity: W1's build.cjs on s152 reproduces the parent exactly.
+- W2 plants: 16 of 17 as wanted (plants_rev2_out.txt). New: a [CR3] line with a later "[DR3]" is not read; "-- HOLDS -- ... -- FAILS" is not read; a line with no "-- ANSWER:" label is not read.
+- LIMIT 1 unchanged (the one DIFF): "-- FAILS" inside the quoted answer before a real "-- MEETS" is read as a failure. Stored 0 of 12,547.
+- LIMIT 3 unchanged: keyed on reference and round, not premise.

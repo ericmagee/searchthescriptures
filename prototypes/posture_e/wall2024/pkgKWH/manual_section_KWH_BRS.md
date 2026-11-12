@@ -13,6 +13,10 @@ Size (MEASURED): stored code +728 (Shared Library +848; 12 nodes -10 each). Rebu
 - Fault fixed: 35379 [CR2] "**What I grant and what I withdraw.** I grant that ..." gave two false K-W rows in every seat ("I grant and what I withdraw." and "What I grant and what I withdraw."). Two seats were left uncured on it (sol, argon).
 - Still raised as on live (tested): "What I withdraw is LINK 3 ...", "LINK 3, which I withdraw.", "That is what I grant.", "What I grant here is that ...", "What I grant: seed may mean descent.", the real "I grant that ..." after the heading, and every heading with no K-W sentence after it: "What I withdraw. LINK 3 as an exclusion witness.", "is / what I withdraw / from LINK 5" across lines, "What I withdraw:" then "- LINK 3.", and a line holding only "What I concede".
 - GENUINE CASE THIS WILL MISS (as W1 asked): a heading clause followed by a real withdrawal with no K-W verb AND, later in the same section, some other K-W sentence. Example: "What I withdraw. LINK 3 as an exclusion witness. I grant that seed may mean descent." The heading is skipped, so the LINK 3 withdrawal raises no item; the later "I grant ..." still raises its own item.
+- FURTHER LIMITS (W3 Wall 5220, MEASURED by W3):
+  - The following verb is any K-W verb, even one the reader then sets aside. "What I withdraw / LINK 3 as an exclusion witness. I concede nothing else." gives 0 items (live 1): the heading is skipped and "I concede nothing" is not an item.
+  - A following K-W verb inside a quotation also counts.
+  - The following verb may stand any distance below, up to the next "#" heading or "What I <verb>" clause.
   Measured on every stored ODV1 round text in debate_enforcer_log: the only "What I <verb>" forms are 35379 (the heading fixed here), 35296 "## What I grant, so that I do not rest on it" and 33020 "## 0. What I concede, so the rest can stand" (both already skipped by the existing "#" heading rule). The miss does not occur in the stored runs.
 
 ## pkgBRS: a bare reference with no book of its own goes to the named-earlier list

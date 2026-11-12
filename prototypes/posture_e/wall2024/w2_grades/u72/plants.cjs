@@ -1,5 +1,5 @@
 // W2 grade of pkgU72 (W1 Wall 5210): new plants on unxAcFail, taken from the rebuilt Gate Record of the parent.
-const {src}=require('../../pkgU72/u72_load.cjs')(process.argv[2]);const i=src.indexOf('function unxAcFail(');const f=new Function(src.slice(i,src.indexOf('\n',i))+'\nreturn unxAcFail;')();
+const {src}=require('../../pkgU72/u72_load.cjs')(process.argv[2]);const i=src.indexOf('function unxAcFail(');const f=new Function(src.slice(i,src.indexOf('\nfunction unxaCheck(',i))+'\nreturn unxAcFail;')();
 const R='Matthew 1:25',Q=' -- MEANS: "he knew her not" -- ANSWER: "the verse says till" -- ';let n=0,ok=0;
 const t=(name,TX,want,ref=R,rk='DR3')=>{n++;const g=f(TX,ref,rk);if(g===want)ok++;console.log(g===want?'OK  ':'DIFF',name,'->',g,'(want',want+')');};
 t('bullet + bold label + bold grade','- **ANSWER CHECK:** Matthew 1:25 -- [DR3]'+Q+'**FAILS** (Commitment 3)',true);
@@ -16,4 +16,7 @@ t('other book same verse','ANSWER CHECK: Luke 1:25 -- [DR3]'+Q+'FAILS',false);
 t('quoted answer holds "-- FAILS", grade MEETS (UNSAFE direction)','ANSWER CHECK: Matthew 1:25 -- [DR3] -- MEANS: "x" -- ANSWER: "it -- FAILS here" -- MEETS',false);
 t('grade inside the MEANS before ANSWER, real grade MEETS','ANSWER CHECK: Matthew 1:25 -- [DR3] -- MEANS: "a -- FAILS b" -- ANSWER: "c" -- MEETS',false);
 t('ref with a period (1 Cor.)','ANSWER CHECK: 1 Cor. 7:5 -- [DR3]'+Q+'FAILS',true,'1 Cor. 7:5');
+t('rev2: CR3 line with a later [DR3]','ANSWER CHECK: Matthew 1:25 -- [CR3]'+Q+'FAILS -- [DR3] had already shown it',false);
+t('rev2: HOLDS then FAILS','ANSWER CHECK: Matthew 1:25 -- [DR3]'+Q.replace(' -- $','')+' -- HOLDS -- note -- FAILS',false);
+t('rev2: no ANSWER label','ANSWER CHECK: Matthew 1:25 -- [DR3] -- MEANS: "x" -- FAILS',false);
 console.log(ok+' of '+n);
