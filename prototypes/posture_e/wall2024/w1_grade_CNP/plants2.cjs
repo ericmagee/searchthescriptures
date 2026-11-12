@@ -25,3 +25,17 @@ const P=[
 ];
 let ok=0;for(const [nm,s,want] of P){const F={...d.F,cr4:base+'\n\n'+s};const out=cecDeny(F,d.links,[]).filter(c=>c.side==='DEFENDER'&&s.includes(c.closing_q.replace(/\*/g,'').slice(0,10)));const got=[...new Set(out.map(c=>String(c.n)))].sort();const w=[...want].sort();const g=JSON.stringify(got)===JSON.stringify(w);if(g)ok++;console.log(g?'OK  ':'DIFF',nm,'want',w.join(',')||'none','got',got.join(',')||'none');}
 console.log('plants',ok,'of',P.length);
+const X=[
+ ['W3-1','Save D5, every link stands as I first gave it.',[]],
+ ['W3-2','D5 aside, my chain stands unchanged.',[]],
+ ['W3-3','I keep D1 to D6 as numbered, D5 in its narrowed form.',[]],
+ ['W3-4','I keep D1 to D6 as numbered, as narrowed above.',[]],
+ ['K1 keep D1-D4 and D6','I keep D1 to D4 and D6 as numbered.',[]],
+ ['K2 name other link alone','D2 aside, my chain stands unchanged.',['5']],
+ ['K3 keep-all, "withdrawn" in matched phrase','Nothing I said has been withdrawn.',['5','?']],
+ ['K4 keep-all with "the challenger conceded"','My chain stands unchanged, and the challenger conceded C3.',['5','?']],
+ ['K5 denial names D5','I concede nothing on D5.',['5']],
+ ['K6 keep every link, then quoting verse','I keep every link as I declared it; Luke 1:35 stands.',['5','?']],
+];
+let ok2=0;for(const [nm,s,want] of X){const F={...d.F,cr4:base+'\n\n'+s};const out=cecDeny(F,d.links,[]).filter(c=>c.side==='DEFENDER'&&s.includes(c.closing_q.replace(/\*/g,'').slice(0,10)));const got=[...new Set(out.map(c=>String(c.n)))].sort();const w=[...want].sort();const g=JSON.stringify(got)===JSON.stringify(w);if(g)ok2++;console.log(g?'OK  ':'DIFF',nm,'want',w.join(',')||'none','got',got.join(',')||'none');}
+console.log('rev3 plants',ok2,'of',X.length);
