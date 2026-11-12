@@ -1,0 +1,10 @@
+const kwRe=t=>/\bREASSERTED\s+IN\s+\[?[CD]R\d+\]?\s*(?:[:,]|--|\u2014)?\s*["\u201c'\u2018](?:[^"\u201d]{6,}|[^\n]{6,}?)["\u201d'\u2019](?![A-Za-z])/i.test(t);
+sol10              old false new true
+sol10bs            old false new true
+normal             old true new true
+curly              old true new true
+noquote            old false new false
+short_then_later   old false new true
+apostrophe         old false new false
+tooShort           old false new false
+twolines           old true new true
