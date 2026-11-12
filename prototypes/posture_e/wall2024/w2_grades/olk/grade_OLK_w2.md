@@ -17,3 +17,10 @@ VERDICT: PASS WITH LIMITS. MEASURED unless marked.
   2. "The challenger says that" / "naming marks the father alone." (a paragraph on two lines): the second line moves first, alone.
 - Stored rounds (5 runs, every CR and DR round): 596 pairs of consecutive non-blank, non-bullet lines (each pair is split into two units by rev 2), 53 of them after a line ending in a colon; 84 numbered lines, 1 directly after a colon line.
 - FIX ASKED: build units by paragraph (lines up to a blank line), and attach a following bullet or numbered list (one blank line allowed) to the paragraph before it.
+
+## Rev 3 (W1 Wall 5234, sha256 05eb325d00b96da0): PASS WITH LIMITS. MEASURED.
+- Identity: W1's build.cjs on s152 reproduces the parent exactly; line 3036 only.
+- W2 plants: 19 of 19 (plants_rev3_out.txt). My two rev 2 forms (numbered item under an intro; a two-line paragraph) now keep the intro with its item; "(a)/(b)" items move with their intro; "PRESSED WITH:" with entries stays; every plant keeps its lines.
+- Stored 34852 B15, my own run on the [CR3] LINK 3 block: the conclusion "Naming therefore does not mark the father alone." is within the 900-character cut; the served block opens "Answers to the presses:" with its bullets (b15_rev3_out.txt).
+- LIMITS: W1's (attribution in a separate paragraph is lost when the second paragraph moves; planted, confirmed); my A (named/naming) and B (opening paragraph sharing the key stays first).
+- Built on live s153: wall2024/parent_s153_OLK.json. Only line 3036 differs from fetchback_live_s153 and it equals the rev 3 line; 442 nodes; connections equal; MAP 0 faults; library sha header correct. Stored code +1,228; rebuilt run-time +3,645 (3 Judge Enforcer Build nodes +1,215 each); prompt 0.

@@ -12,6 +12,9 @@ t('every unit shares the key: unchanged','Naming one.\n\nNaming two.','the namin
 t('rev2: bullets stay with their intro line (one unit), unchanged','LINK 2: head\n- seed of David\n- naming by Joseph\n- river','the naming under link 2',null);
 t('rev2: intro + bullets move together','LINK 2: head\n\nThe challenger says:\n- naming marks the father.\n\nMy answer: the river.','the naming under link 2','The challenger says:',g=>g.indexOf('- naming')===g.indexOf('The challenger says:')+21);
 t('rev2: PRESSED WITH unit never moves','LINK 2: head\n\nPRESSED WITH: Luke 1:31 -- MEANS: naming by Mary','the naming',null);
+t('rev3 W2: (a)/(b) items under an intro line','LINK 2: head\n\nThe challenger says:\n(a) naming marks the father alone.\n(b) the register.\n\nMy answer: the river.','the naming under link 2','The challenger says:');
+t('rev3 W2: PRESSED WITH: heading line + entries stays','LINK 2: head\n\nPRESSED WITH:\nLuke 1:31 naming by Mary\n\nMy answer: the river.','the naming',null);
+t('LIMIT (W1): attribution in a separate paragraph is lost','LINK 2: head\n\nThe challenger puts it this way.\n\nNaming marks the father alone.','the naming','Naming marks');
 t('rev2 W2: numbered item under an intro line','LINK 2: head\n\nThe challenger says:\n1. naming marks the father alone.\n\nMy answer: the river.','the naming under link 2','The challenger says:');
 t('rev2 W2: wrapped paragraph, second line holds the key','LINK 2: head\n\nThe challenger says that\nnaming marks the father alone.\n\nMy answer: the river.','the naming under link 2','The challenger says that');
 t('LIMIT: named vs naming differ in the first five letters (named/namin), so unchanged',B15,'It was named under link 3.',null);

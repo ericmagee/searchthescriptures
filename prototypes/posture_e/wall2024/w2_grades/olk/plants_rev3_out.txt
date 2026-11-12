@@ -1,0 +1,21 @@
+olkOrder defined on lines 3036 | uses 1 lines
+OK   B15 form: naming paragraphs first | lines kept true | first: "Matthew 1:21: \"thou shalt call his name JESUS.\" Naming is gi"
+OK   no key word in answer: unchanged | lines kept true | first: "LINK 3: The father is not marked by this act."
+OK   only stop words of 5+: unchanged | lines kept true | first: "LINK 3: The father is not marked by this act."
+OK   every unit shares the key: unchanged | lines kept true | first: "Naming one."
+OK   rev2: bullets stay with their intro line (one unit), unchanged | lines kept true | first: "LINK 2: head"
+OK   rev2: intro + bullets move together | lines kept true | first: "The challenger says:"
+OK   rev2: PRESSED WITH unit never moves | lines kept true | first: "LINK 2: head"
+OK   rev3 W2: (a)/(b) items under an intro line | lines kept true | first: "The challenger says:"
+OK   rev3 W2: PRESSED WITH: heading line + entries stays | lines kept true | first: "LINK 2: head"
+OK   LIMIT (W1): attribution in a separate paragraph is lost | lines kept true | first: "Naming marks the father alone."
+OK   rev2 W2: numbered item under an intro line | lines kept true | first: "The challenger says:"
+OK   rev2 W2: wrapped paragraph, second line holds the key | lines kept true | first: "The challenger says that"
+OK   LIMIT: named vs naming differ in the first five letters (named/namin), so unchanged | lines kept true | first: "LINK 3: The father is not marked by this act."
+OK   case-insensitive, punctuation | lines kept true | first: "NAMING, by the mother."
+OK   short words only (Mary, seed, son): unchanged | lines kept true | first: "LINK 3: The father is not marked by this act."
+OK   order kept inside each group | lines kept true | first: "Matthew 1:21: \"thou shalt call his name JESUS.\" Naming is gi"
+OK   LIMIT: opening paragraph shares the key word, so it stays first | lines kept true | first: "LINK 3: The father is not marked by naming."
+OK   empty answer: unchanged | lines kept true | first: "LINK 3: The father is not marked by this act."
+OK   non-string sec -> null
+19 of 19
