@@ -1872,6 +1872,149 @@
   "exp": "D LINK 1"
  },
  {
+  "src": "plant7.cjs",
+  "name": 1,
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Matthew 1:18; 20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 1"
+ },
+ {
+  "src": "plant7.cjs",
+  "name": 3,
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1\nD1 does not rest on Matthew 1:20; 3 other rows carry it.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant7.cjs",
+  "name": 4,
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1\nThe challenger cites Matthew 1:18; 20 I answered above.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant7.cjs",
+  "name": 5,
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Luke 1:5; Matthew 1:20 I leave to the challenger.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant7.cjs",
+  "name": 6,
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1\nI leave Matthew 1:20 aside; D1 stands on Luke 1:5.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant7.cjs",
+  "name": 7,
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Luke 1:5; 20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant7.cjs",
+  "name": 8,
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Matthew 1:18; Luke 1:5; 20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant7.cjs",
+  "name": 9,
+  "F": {
+   "cr2": "I withdraw Matthew 1:18 & 20.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Matthew 1:20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 1"
+ },
+ {
+  "src": "plant7.cjs",
+  "name": 10,
+  "F": {
+   "cr2": "I withdraw Matthew 1:18; 20 I keep.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Matthew 1:20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant7.cjs",
+  "name": 11,
+  "F": {
+   "cr2": "I withdraw Matthew 1:18; I keep Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Matthew 1:20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant7.cjs",
+  "name": 12,
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Matthew 1:20; the rest is argument.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 1"
+ },
+ {
   "src": "plants_w2.cjs",
   "name": "reinstated in round 3, then cited",
   "F": {

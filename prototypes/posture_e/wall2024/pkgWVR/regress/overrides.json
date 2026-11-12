@@ -30,5 +30,9 @@
  "plant6.cjs | 15": {
   "exp": "none",
   "why": "W3 limit at Wall 5364: \"I keep Matthew 1:18 and withdraw 20.\" is not read (no \"I\" before the verb). Silent; stated in the rule text at rev 7. No stored case."
+ },
+ "plant7.cjs | 10": {
+  "exp": "D LINK 1",
+  "why": "W3 limit at Wall 5370 (same in rev 6): \"I withdraw Matthew 1:18; 20 I keep.\" reads verse 20 as withdrawn. Toward naming; the enforcer clears it. No stored case."
  }
 }
