@@ -20,3 +20,16 @@ Verdict: PASS WITH LIMITS.
 - W2's own limit stands: "**Round 2 grants stand.**" is still treated as a heading.
 - Behavior change: when a body sentence among the first three lines is skipped, the loop continues and may rewrite a later heading line ("I said in my round 4 ...\n# Round 3" now becomes "# Round 4 (close)"; live left it). This is the intended heading fix, noted so graders see it.
 - Pre-existing, unchanged: "### The Defender's Round 2 Link Round" in round 3 becomes "Round 3 (link round) Link Round".
+
+# Rev 2 (commit 8e3ef115, parent_s156_RHN2.json sha 05b4d4bd18879d02): PASS WITH LIMITS
+
+MY MISS IN THE REV 1 GRADE: I did not plant a noun possessive ("The defender's round 3 ...") or a sentence that opens with "Round" at a wrong number; W3 found it (F1).
+
+Checks:
+1. Mapcheck: 17 Extract nodes, connections equal, code +7,786. W2 tests rerun: 48 of 48.
+2. Replay (replay_rhn2_w1.cjs, out file beside it), live vs rev 2 on my 11 stored wrong-number lines and 40 plants:
+   - Fixed (live rewrites, rev 2 leaves): 35554 and 33040 body lines; W3's forms "The defender's round 3 conceded three things:", "Round 3 narrowed five of my links; ...", "Under Round 3 ...", "Both sides' Round 3 ...", curly "The challenger’s Round 3 ...", "The record in Round 3 stands", "Round 3 was where ...", "**Round 2 grants stand.**".
+   - Still normalized, equal to live: all stored "#" headings, "# Defender's Round 3: close", "**Defender — Round 3 (close)**", "Round 3 (close)", "ROUND 3 CLOSE", "Defender Round 3", "> Round 3 (close)", "Challenger — Round 2", "Round 2 – Link round".
+Limits (record only):
+- Plain unmarked headings where words follow "close/closing" are now left alone: "DEFENDER ROUND 3 — CLOSING ARGUMENT", "Round 3: Closing statement of the defender" (live rewrites them, and also drops "— CLOSING"/": Closing"). SQL over all stored runs: 0 such lines among the first three lines.
+- Rev 1 limits stand ("# My Round 3 close", "Round 3. Close.").
