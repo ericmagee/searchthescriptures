@@ -24,5 +24,5 @@ const P=[
 ];
 for(const f of process.argv.slice(2)){const fn=fnOf(f);console.log('#### '+f.split('/').pop());
  for(const [nm,Fi,exp] of P){let o;try{o=fn(Fi,[]);}catch(e){console.log('THROW',nm,e.message);continue;}
-  const sc=o.map(c=>{const t=JSON.stringify(c);const m=t.match(/limits the withdrawal to \\"([^\\]*)\\"/);return c.side[0]+' LINK '+c.n+(m?' [scope: '+m[1]+']':'');});
+  const sc=o.map(c=>{const t=JSON.stringify(c);const k=(t.match(/limited the withdrawal to a named use/g)||[]).length;const m=t.match(/limits the withdrawal to \\"([^\\]*)\\"/);return c.side[0]+' LINK '+c.n+(m?' [scope: '+m[1]+']':'')+(k?' [fixed sentence x'+k+']':'');});
   console.log(nm+' | expect '+exp+' | got '+(sc.join('; ')||'none'));}}
