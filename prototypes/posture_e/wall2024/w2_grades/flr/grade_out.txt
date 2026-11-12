@@ -1,0 +1,22 @@
+1. stored exports, live vs FLR vs JOINT (JOINT compared with SDS parent):
+   ex33149_full.json Alternate Merge Seat live==FLR true SDS==JOINT true {"nocure":0,"tried":"null:NOT SEATED","mark":0}
+   ex33371_full.json Alternate Merge Seat live==FLR true SDS==JOINT true {"nocure":0,"tried":"grok:SEATED","mark":0}
+   ex33490_full.json Alternate Merge Seat live==FLR true SDS==JOINT true {"nocure":0,"tried":"null:NOT SEATED grok:SEATED","mark":0}
+   ex33497_full.json Alternate Merge Seat live==FLR true SDS==JOINT true {"nocure":0,"tried":"sol:NOT SEATED","mark":0}
+   ex34626_full.json Alternate Merge Seat live==FLR true SDS==JOINT true {"nocure":0,"tried":"haiku:NOT SEATED","mark":0}
+   ex34703_full.json Alternate Merge Seat live==FLR true SDS==JOINT true {"nocure":0,"tried":"haiku:NOT SEATED","mark":0}
+   ex34726_full.json Alternate Merge Seat live==FLR true SDS==JOINT true {"nocure":0,"tried":"null:NOT SEATED haiku:SEATED","mark":0}
+   ex34780_full.json Alternate Merge Seat live==FLR true SDS==JOINT true {"nocure":0,"tried":"","mark":0}
+   ex34852_full.json Alternate Merge Seat live==FLR true SDS==JOINT true {"nocure":0,"tried":"null:NOT SEATED haiku:SEATED","mark":0}
+   ex35067_full.json Alternate Merge Seat live==FLR true SDS==JOINT true {"nocure":0,"tried":"","mark":0}
+   ex35173_full.json Alternate Merge Seat live==FLR true SDS==JOINT true {"nocure":0,"tried":"grok:SEATED","mark":0}
+   ex35296_full.json Alternate Merge Seat live==FLR true SDS==JOINT true {"nocure":0,"tried":"grok:NOT SEATED argon:SEATED","mark":0}
+   ex35296_full.json R2 Alternate Merge Seat live==FLR true SDS==JOINT true {"nocure":0,"tried":"haiku:NOT SEATED","mark":0}
+2. plants on 35296 Alternate Merge Seat:
+   P1 one run [argon]                             live {"nocure":0,"tried":"grok:NOT SEATED argon:SEATED","mark":0} | FLR {"nocure":0,"tried":"grok:NOT SEATED argon:SEATED","mark":0} | JOINT {"nocure":0,"tried":"grok:NOT SEATED argon:SEATED","mark":0}
+   P2 [argon,other] then [other] (35379 shape)    live {"nocure":34,"tried":"grok:NOT SEATED argon:NOT SEATED","mark":0} | FLR {"nocure":0,"tried":"grok:NOT SEATED argon:SEATED","mark":0} | JOINT {"nocure":0,"tried":"grok:NOT SEATED argon:SEATED","mark":0}
+   P3 [argon,other] then [argon]                  live {"nocure":0,"tried":"grok:NOT SEATED argon:SEATED","mark":0} | FLR {"nocure":0,"tried":"grok:NOT SEATED argon:SEATED","mark":0} | JOINT {"nocure":0,"tried":"grok:NOT SEATED argon:SEATED","mark":0}
+   P4 [argon] then [argon marked] (latest wins)   live {"nocure":0,"tried":"grok:NOT SEATED argon:SEATED","mark":1} | FLR {"nocure":0,"tried":"grok:NOT SEATED argon:SEATED","mark":1} | JOINT {"nocure":0,"tried":"grok:NOT SEATED argon:SEATED","mark":1}
+   P5 [argon,other] then [] (empty last run)      live {"nocure":34,"tried":"grok:NOT SEATED argon:NOT SEATED","mark":0} | FLR {"nocure":0,"tried":"grok:NOT SEATED argon:SEATED","mark":0} | JOINT {"nocure":0,"tried":"grok:NOT SEATED argon:SEATED","mark":0}
+   P6 three runs [argon,other],[other],[other]    live {"nocure":34,"tried":"grok:NOT SEATED argon:NOT SEATED","mark":0} | FLR {"nocure":0,"tried":"grok:NOT SEATED argon:SEATED","mark":0} | JOINT {"nocure":0,"tried":"grok:NOT SEATED argon:SEATED","mark":0}
+3. R2 plant [haiku,other] then [other]: live {"nocure":52,"tried":"haiku:NOT SEATED","mark":0} | FLR {"nocure":0,"tried":"haiku:NOT SEATED","mark":0}
