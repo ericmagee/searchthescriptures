@@ -1,0 +1,1 @@
+module.exports=s=>{const a="|(?:do\\\\s+not|no\\\\s+longer)\\\\s+rest";const k=s.split(a).length-1;if(k!==1)throw 'anchor '+k;return s.replace(a,()=>"|rest\\\\s+(?:no\\\\s+weight|nothing)\\\\s+(?:now\\\\s+)?on"+a);};
