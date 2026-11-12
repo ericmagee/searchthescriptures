@@ -1,0 +1,20 @@
+OK   R1 luna as sent (no second separator, curly) | live: not placed: the flagged line is not in the judge text | package: placed
+      placed line: DEFENDER | [CR4] | “I grant the narration names Joseph among ‘his parents’ (Luke 2:41; C5, P5.3).” COUNTED
+OK   R2 both separators (control) | live: placed | package: placed
+      placed line: DEFENDER | [CR4] | “I grant the narration names Joseph among ‘his parents’ (Luke 2:41; C5, P5.3).” COUNTED
+OK   R3 straight quotes | live: not placed: the flagged line is not in the judge text | package: placed
+      placed line: DEFENDER | [CR4] | "I grant the narration names Joseph among 'his parents' (Luke 2:41; C5, P5.3)." COUNTED
+OK   R4 the label form | live: not placed: the flagged line is not in the judge text | package: placed
+      placed line: DEFENDER | [CR4] | “I grant the narration names Joseph among ‘his parents’ (Luke 2:41; C5, P5.3).” COUNTED
+OK   R5 other side | live: not placed: the flagged line is not in the judge text | package: not placed: the flagged line is not in the judge text
+OK   R6 other round | live: not placed: the flagged line is not in the judge text | package: not placed: the flagged line is not in the judge text
+OK   R7 other sentence | live: not placed: the flagged line is not in the judge text | package: not placed: the flagged line is not in the judge text
+OK   R8 round without brackets, no second separator | live: not placed: the flagged line is not in the judge text | package: placed
+      placed line: DEFENDER | [CR4] | “I grant the narration names Joseph among ‘his parents’ (Luke 2:41; C5, P5.3).” COUNTED
+OK   R10 label form, other round | live: not placed: the flagged line is not in the judge text | package: not placed: the flagged line is not in the judge text
+OK   R11 no quote after the round | live: not placed: the flagged line is not in the judge text | package: not placed: the flagged line is not in the judge text
+OK   R3b straight quotes, both separators (control) | live: placed | package: placed
+      placed line: DEFENDER | [CR4] | "I grant the narration names Joseph among 'his parents' (Luke 2:41; C5, P5.3)." COUNTED
+OK   R9 lower case side | live: not placed: the flagged line is not in the judge text | package: placed
+      placed line: DEFENDER | [CR4] | “I grant the narration names Joseph among ‘his parents’ (Luke 2:41; C5, P5.3).” COUNTED
+plants 12 of 12
