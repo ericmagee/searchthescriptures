@@ -24,7 +24,7 @@ Package: parent_s158_WVR3.json, sha 305dda8d6793ad1f (W1, Wall 5345). Replaces t
 1. 33846 X5, 1 John 5:1: CONFIRMED (the single judge confirmed this pair in that run).
 2. 33846 X6, 1 Chronicles 28:6: CONFIRMED.
 3. 33846 X7, Ezra 2:61, and 35379 X7, Galatians 4:4: match the operator's ruling.
-4. 32924 X1 and 33083 X1, Galatians 4:4: the hand reading owed by W3 (Wall 5339) sets the expected verdict before the send.
+4. 32924 X1 and 33083 X1, Galatians 4:4: W2 hand reading (Wall, 11:01 CST): both CONFIRMED, the same kind as 35379 X7. If the operator rules 35379 X7 not a contradiction, these two follow that ruling.
 5. Every other candidate (33846 X1 to X4, 35379 X1 to X6): the same verdict as without the package (35379 against its stored reply; 33846 against the baseline sends).
 6. No NEW item that a hand reading does not support.
 
