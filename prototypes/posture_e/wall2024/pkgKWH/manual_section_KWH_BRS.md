@@ -6,12 +6,13 @@ Size (MEASURED): stored code +394 (Shared Library +514; 12 nodes -10 each). Rebu
 ## pkgKWH: K-W skips a heading-shaped "What I grant and what I withdraw."
 - Where: kwLines421 (Shared Library), the skip test, one line. It reaches Panel Payloads, Alternate Payloads, R2 Alternate Payloads and Extract Independent Verdict.
 - Rule: a K-W match ("I grant", "I withdraw", "I concede", "I drop", "I do not claim", "I no longer claim") is skipped when it is only a heading-shaped clause:
-  "What" begins the sentence or line, the clause may chain ", what I <verb>" or "and/or what I <verb>", and it ends at once with . ! or ?, or with a colon that ends the line.
+  "What" begins the sentence or line, the clause may chain ", what I <verb>" or "and/or what I <verb>", and it ends at once with . ! or ?, or with the end of the line (with or without a colon). Rev 2 (W1 Wall 5211): the line end closes the clause, so "**What I grant and what I withdraw**" with no end punctuation is skipped too.
 - Fault fixed: 35379 [CR2] "**What I grant and what I withdraw.** I grant that ..." gave two false K-W rows in every seat ("I grant and what I withdraw." and "What I grant and what I withdraw."). Two seats were left uncured on it (sol, argon).
 - Still caught (tested): "What I withdraw is LINK 3 ...", "LINK 3, which I withdraw.", "That is what I grant.", "What I grant here is that ...", "What I grant: seed may mean descent." (text after the colon on the same line), and the real "I grant that ..." after the heading.
 - GENUINE CASES THIS WILL MISS (as W1 asked):
   1. A heading line "What I withdraw:" (colon ends the line) followed by items that carry no K-W verb, for example "- LINK 3." The parent raised a K-W row on the heading; pkgKWH raises none, and the items below are not K-W matches. A real withdrawal written only as a list under such a heading is not caught.
-  2. A bare one-sentence answer "What I withdraw." or "What I grant and what I withdraw." used as a full statement rather than a heading. It is skipped.
+  2. A line holding only "What I withdraw" (no punctuation) meant as a statement, not a heading. It is skipped.
+  3. A bare one-sentence answer "What I withdraw." or "What I grant and what I withdraw." used as a full statement rather than a heading. It is skipped.
   Measured on every stored ODV1 round text in debate_enforcer_log: the only "What I <verb>" forms are 35379 (the heading fixed here), 35296 "## What I grant, so that I do not rest on it" and 33020 "## 0. What I concede, so the rest can stand" (both already skipped by the existing "#" heading rule). Neither miss occurs in the stored runs.
 
 ## pkgBRS: a bare reference with no book of its own goes to the named-earlier list

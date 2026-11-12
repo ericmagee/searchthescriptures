@@ -19,6 +19,10 @@ PASS real: what I grant here is limited | parent 1 pkg 1 want 1
 PASS real: inline colon grant | parent 1 pkg 1 want 1
       [CR2] no link heading: "I grant: seed may mean descent."
 PASS KNOWN MISS: heading colon at line end, item has no K-W verb | parent 1 pkg 0 want 0
+PASS rev2: bold heading, no end punctuation, blank line, then real grant | parent 3 pkg 1 want 1
+      [CR2] no link heading: "I grant that seed may mean descent."
+PASS rev2: plain heading, no end punctuation | parent 1 pkg 0 want 0
+PASS rev2: heading at end of text | parent 1 pkg 0 want 0
 CHANGE ODV1-35379-2yvjfj38 parent 20 pkg 18
    removed [CR2] no link heading: "I grant and what I withdraw."
    removed [CR2] no link heading: "What I grant and what I withdraw."

@@ -20,6 +20,9 @@ plant('real: plain withdrawal','I withdraw the claim that Mary is of the house o
 plant('real: what I grant here is limited','What I grant here is that seed may mean descent.',1);
 plant('real: inline colon grant','What I grant: seed may mean descent.',1);
 plant('KNOWN MISS: heading colon at line end, item has no K-W verb','What I withdraw:\n- LINK 3.',0);
+plant('rev2: bold heading, no end punctuation, blank line, then real grant','**What I grant and what I withdraw**\n\nI grant that seed may mean descent.',1);
+plant('rev2: plain heading, no end punctuation','What I grant and what I withdraw\n\nNothing here.',0);
+plant('rev2: heading at end of text','Some words.\nWhat I concede',0);
 const R0={};for(const f of process.argv.slice(4))Object.assign(R0,require('../pkgCNP/rounds.cjs')(f));const R={};const UP={cr1:'CR1',cr2:'CR2',cr3:'CR3',cr4:'CR4',gr1:'DR1',gr2:'DR2',dr3:'DR3',dr4:'DR4'};for(const k in R0){R[k]={};for(const f in R0[k])R[k][UP[f]]=R0[k][f];}let d=0;
 for(const k in R){const a=items(A,R[k]),b=items(B,R[k]);const gone=a.filter(x=>!b.includes(x)),add=b.filter(x=>!a.includes(x));if(gone.length||add.length){d++;console.log('CHANGE',k,'parent',a.length,'pkg',b.length);gone.forEach(x=>console.log('   removed',x.slice(0,160)));add.forEach(x=>console.log('   added',x.slice(0,160)));}}
 console.log('stored runs',Object.keys(R).length,'changed',d,'| planted fails',fail);
