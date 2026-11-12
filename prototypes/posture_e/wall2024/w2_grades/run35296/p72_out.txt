@@ -1,0 +1,47 @@
+E-PREM ids 48 | in prompt 48 | with block 11 | with r372 11 | mismatches 0 | block headers in all request text 11
+
+# Judge Enforcer Build run 0 P1.1 luna | premise listed against the defender 1 | r372 ["Hebrews 7:14","Luke 2:48"] 
+  JUDGE LINE: CONCEDED LINKS: 0 -- No challenger-listed premise was conceded as a whole or left without link-round footing; premises 1–6 are spared as claims answered or narrowed with footing. 
+  BLOCK: ANSWER CHECK: Hebrews 7:14 -- [CR3] -- MEANS: "his tribe is evident by the register of the father's house" -- ANSWER: "It names a rising out of a tribe and uses no begetting verb" -- MISSES -- This does not answer the pressed meaning that the tribe's register is by fathers. || ANSWER CHECK: Luke 2:48 -- [CR3] -- MEANS: "Mary herself names Joseph his father" -- ANSWER: "The child's reply answers 'thy father' with 'my Father'" -- MISSES -- The answer does not show that Mary's words do not name Joseph as father.
+
+# Judge Enforcer Build run 0 P2.1 luna | premise listed against the defender 2 | r372 ["Matthew 1:20","1 John 5:1","Romans 1:3"] 
+  JUDGE LINE: CONCEDED LINKS: 0 -- No challenger-listed premise was conceded as a whole or left without link-round footing; premises 1–6 are spared as claims answered or narrowed with footing. 
+  BLOCK: ANSWER CHECK: Matthew 1:20 -- [CR3] -- MEANS: "the row that gives the covenant origin names Joseph of David's house and grounds the taking of his wife" -- ANSWER: "This names Joseph's house" -- MISSES -- It does not establish that the row's covenant reading excludes biological begetting. || ANSWER CHECK: 1 John 5:1 -- [CR3] -- MEANS: "gennaō with ek God marks a covenant origin of men who have fathers" -- ANSWER: "the 'of him' names the begetter" -- MISSES -- It does not resolve whether Matthew uses the phrase for biological or covenant origin. || ANSWER CHECK: Romans 1:3 -- [CR3] -- MEANS: "kata sarka marks fleshly origin, and it is David's seed" -- ANSWER: "the verb is ginomai, 'to come into being,' and it speaks of offspring" -- MISSES -- The answer does not resolve the pressed claim that the seed is David's fleshly seed.
+
+# Judge Enforcer Build run 0 P3.1 luna | premise listed against the defender 3 | r372 ["Luke 1:36"] 
+  JUDGE LINE: CONCEDED LINKS: 0 -- No challenger-listed premise was conceded as a whole or left without link-round footing; premises 1–6 are spared as claims answered or narrowed with footing. 
+  BLOCK: ANSWER CHECK: Luke 1:36 -- [CR3] -- MEANS: "the angel's sign of God's power is a conception by a husband and wife" -- ANSWER: "The sign is the overcoming of barrenness" -- MISSES -- The answer does not explain why Luke 1:13's husband does not bear on the sign.
+
+# Judge Enforcer Build run 0 P4.1 luna | premise listed against the defender 4 | r372 ["Numbers 1:18","Ezra 2:59"] 
+  JUDGE LINE: CONCEDED LINKS: 0 -- No challenger-listed premise was conceded as a whole or left without link-round footing; premises 1–6 are spared as claims answered or narrowed with footing. 
+  BLOCK: ANSWER CHECK: Numbers 1:18 -- [CR3] -- MEANS: "descent is declared by the father's house with the begetting-verb" -- ANSWER: "I keep the narrowed limb, which concerns the source of the birth" -- MISSES -- This keeps a different limb and does not answer the register meaning pressed. || ANSWER CHECK: Ezra 2:59 -- [CR3] -- MEANS: "standing in Israel is shown by father's house and seed" -- ANSWER: "These concern a priestly register" -- MISSES -- The answer does not address Ezra 2:59's stated father's-house and seed test.
+
+# Judge Enforcer Build run 0 P5.1 luna | premise listed against the defender 5 | r372 ["Deuteronomy 22:24"] 
+  JUDGE LINE: CONCEDED LINKS: 0 -- No challenger-listed premise was conceded as a whole or left without link-round footing; premises 1–6 are spared as claims answered or narrowed with footing. 
+  BLOCK: ANSWER CHECK: Deuteronomy 22:24 -- [CR3] -- MEANS: "a public penalty threatened a betrothed damsel found with child before the taking" -- ANSWER: "the law names 'the damsel' and 'the man' who lay with her" -- MISSES -- It does not explain why the penalty establishes the alleged public threat in this case.
+
+# Judge Enforcer Build run 0 P8.1 luna | premise listed against the challenger 2 | r372 ["Luke 1:42"] 
+  JUDGE LINE: CHALLENGER CONCEDED LINKS: 0 -- None of the defender-listed premises was conceded or left without link-round footing; premises 1–6 are spared on the layer-footing count. 
+  BLOCK: ANSWER CHECK: Luke 1:42 -- [DR3] -- MEANS: "the fruit of David's loins (Acts 2:30) is named the fruit of Mary's womb, the woman being the line's link" -- ANSWER: "the fruit of thy womb names where the fruit was carried" -- MISSES -- The answer does not establish that the womb is merely a carrier rather than a source of the child.
+
+# Judge Enforcer Build run 0 P9.1 luna | premise listed against the challenger 3 | r372 ["Luke 1:34"] 
+  JUDGE LINE: CHALLENGER CONCEDED LINKS: 0 -- None of the defender-listed premises was conceded or left without link-round footing; premises 1–6 are spared on the layer-footing count. 
+  BLOCK: ANSWER CHECK: Luke 1:34 -- [DR3] -- MEANS: "the question names a man, and the answer gives the Holy Ghost and the power" -- ANSWER: "Joseph knew Mary his wife within the espousal" -- MISSES -- It does not show how the claim of knowing fits the question and answer as pressed.
+
+# Judge Enforcer Build run 0 P10.1 luna | premise listed against the challenger 4 | r372 ["Matthew 1:25"] 
+  JUDGE LINE: CHALLENGER CONCEDED LINKS: 0 -- None of the defender-listed premises was conceded or left without link-round footing; premises 1–6 are spared on the layer-footing count. 
+  BLOCK: ANSWER CHECK: Matthew 1:25 -- [DR3] -- MEANS: "no knowing until the birth" -- ANSWER: "So Joseph knew Mary his wife within the espousal" -- MISSES -- The assertion of knowing before the birth does not fit the pressed reading of abstinence until the birth.
+
+# Alt Judge Enforcer Build run 0 P4.1 argon | premise listed against the defender 4 | r372 ["Ezra 2:62","Ezra 2:59"] 
+  JUDGE LINE: CONCEDED LINKS: 0 -- recomputed after the cure from the cured lines (CLOSE-CONTRADICTION D2 vs C3 (UNDERDETERMINED to DEFENDER LINK BROKEN); CLOSE-CONTRADICTION D3 (no collision line names it; counted as one DEFENDER LINK BROKEN); CLOSE-CONTRADICTION D4 vs C5 (UNDERDETERMINED to DEFENDER LINK BROKEN); CLOSE-CONTRADICTION D4 vs C6 (UNDERDETERMINED to DEFENDER LINK BROKEN); CORRECTED COUNT DEFENDER 0; CORRECTED COUNT CHALLENGER 0). 
+  BLOCK: ANSWER CHECK: Ezra 2:62 -- [CR3] -- MEANS: "a house called after a wife's family name was refused the register" -- ANSWER: "These concern a priestly register: "put from the priesthood" (Ezra 2:62)." -- FAILS (Commitment 3, Commitment 7) -- "therefore were they, as polluted, put from the priesthood" || ANSWER CHECK: Ezra 2:59 -- [CR3] -- MEANS: "standing in Israel is shown by father's house and seed" -- ANSWER: "These concern a priestly register: "put from the priesthood" (Ezra 2:62)." -- FAILS (Commitment 3, Commitment 7) -- "they could not shew their father's house, and their seed, whether they were of Israel"
+
+
+# Alt Judge Enforcer Build run 0 P6.1 argon | premise listed against the defender 6 | r372 ["Ezra 2:59","Ezra 2:62"] 
+  JUDGE LINE: CONCEDED LINKS: 0 -- recomputed after the cure from the cured lines (CLOSE-CONTRADICTION D2 vs C3 (UNDERDETERMINED to DEFENDER LINK BROKEN); CLOSE-CONTRADICTION D3 (no collision line names it; counted as one DEFENDER LINK BROKEN); CLOSE-CONTRADICTION D4 vs C5 (UNDERDETERMINED to DEFENDER LINK BROKEN); CLOSE-CONTRADICTION D4 vs C6 (UNDERDETERMINED to DEFENDER LINK BROKEN); CORRECTED COUNT DEFENDER 0; CORRECTED COUNT CHALLENGER 0). 
+  BLOCK: ANSWER CHECK: Ezra 2:59 -- [CR3] -- MEANS: "the register requires father's house and seed" -- ANSWER: "Ezra 2:62 records a failed priestly register. It does not touch the acts Matthew gives to Joseph." -- FAILS (Commitment 3, Commitment 7) -- "they could not shew their father's house, and their seed, whether they were of Israel" || ANSWER CHECK: Ezra 2:62 -- [CR3] -- MEANS: "a name taken from a wife's house was refused" -- ANSWER: "Ezra 2:62 records a failed priestly register. It does not touch the acts Matthew gives to Joseph." -- FAILS (Commitment 3, Commitment 7) -- "therefore were they, as polluted, put from the priesthood"
+
+# Alt Judge Enforcer Build run 0 P10.1 argon | premise listed against the challenger 4 | r372 ["Matthew 1:25"] 
+  JUDGE LINE: CHALLENGER CONCEDED LINKS: 0 -- recomputed after the cure from the cured lines (CLOSE-CONTRADICTION D2 vs C3 (UNDERDETERMINED to DEFENDER LINK BROKEN); CLOSE-CONTRADICTION D3 (no collision line names it; counted as one DEFENDER LINK BROKEN); CLOSE-CONTRADICTION D4 vs C5 (UNDERDETERMINED to DEFENDER LINK BROKEN); CLOSE-CONTRADICTION D4 vs C6 (UNDERDETERMINED to DEFENDER LINK BROKEN); CORRECTED COUNT DEFENDER 0; CORRECTED COUNT CHALLENGER 0). 
+  BLOCK: ANSWER CHECK: Matthew 1:25 -- [DR3] -- MEANS: "no knowing until the birth" -- ANSWER: "So Joseph knew Mary his wife within the espousal, and the abstinence of 1:25 runs from the taking to the birth." -- FAILS (Commitment 3, Commitment 7) -- "And knew her not till she had brought forth her firstborn son"
+

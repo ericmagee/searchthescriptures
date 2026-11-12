@@ -1,0 +1,18 @@
+[NOTCOUNTED] Build Independent Verdict,Verdict Judge Route,Extract Independent Verdict,SJ Re-ask? 
+    CONCEDED LINKS: <integer> -- the count of challenger-listed premises the defender CONCEDED or failed to exhibit its layer footing in [CR3] (UNEXHIBITED means a layer is missing: a premise you count UNEXHIBITED whose link-round block exhibits two or more layers names the layer it lacks, [L1], [L2], [L3] or [L4]; when its layers are there and you judge that its answer does not fit, grade that at its
+[NOTCOUNTED] Build Independent Verdict,Verdict Judge Route,Extract Independent Verdict,SJ Re-ask? 
+    CHALLENGER CONCEDED LINKS: <integer> -- the count of defender-listed premises the challenger CONCEDED or failed to exhibit its layer footing in [DR3]; a premise the challenger concedes in its close round [DR4] is counted CONCEDED (stated) the same way (ruling 412). Itemize the counted links and tag each with the clause that fired: CONCEDED (stated) when the block itself states the surrender, only 
+[NOTCOUNTED] Reread Call deepseek 
+    For premise 4 (defender's premise? Wait P4 is challenger-listed premise number 4 against defender). Luna counts Premise 4 UNEXHIBITED, citing Numbers 1:18 and Ezra 2:59 unanswered. Need check whether right: premise 4 ASSUMES Mary is of house of David. Defender's link-round block narrows, drops limb that Mary is of house of David, keeps "Mary is the only human parent named as source of birth." Unde
+[JOIN] Alternate Merge Seat,Alt Seated,Alt Judge Enforcer Record,Alt Send Back Record 
+    [AUDIT v25: RECOMPUTED AFTER CURE -- SEAT: argon; TRIGGER: CLOSE-CONTRADICTION D2 vs C3 (UNDERDETERMINED to DEFENDER LINK BROKEN), CLOSE-CONTRADICTION D3 (no collision line names it; counted as one DEFENDER LINK BROKEN), CLOSE-CONTRADICTION D4 vs C5 (UNDERDETERMINED to DEFENDER LINK BROKEN), CLOSE-CONTRADICTION D4 vs C6 (UNDERDETERMINED to DEFENDER LINK BROKEN), CORRECTED COUNT DEFENDER 0, CORRECT
+[NOTCOUNTED] Alt Judge Enforcer Call deepseek 
+    But need consider Commitment 15: keystone does not stand on premise counted unexhibited or conceded. Here CONCEDED LINKS: 0 recomputed, stored counted premises none. Premise 1 is not counted. Good.
+[NOTCOUNTED] Alt Judge Enforcer Call deepseek 
+    Need judge's line P1.1: "CONCEDED LINKS: 0 -- recomputed after the cure ... THE ENGINE RECOUNTED THIS LINE. STORED COUNTED PREMISES FOR THIS SIDE: none -- premise 1 is not counted (SPARED) in this judge's stored ruling ... THIS JUDGE'S OWN LINE BEFORE THE RECOUNT: CONCEDED LINKS: 2 -- Premise 4 (LINK 4): UNEXHIBITED ..."
+[NOTCOUNTED] Alt Judge Enforcer Retry Call deepseek 
+    Hmm, but does the keystone line need to note that D5 is not counted unexhibited? P1.1's CONCEDED LINKS: 0. So fine.
+[NOTCOUNTED] Alt Judge Enforcer Retry Call deepseek 
+    But wait — check Commitment 15 also requires that my CONCEDED LINKS line doesn't count LINK 5. P1.1: "CONCEDED LINKS: 0". Hmm, "0" — that's from the recount. But the judge's line before the recount said "CONCEDED LINKS: 2 -- Premise 4 (LINK 4): UNEXHIBITED ...". The current line says 0. Under E-PREM recounted, the stored count governs: none. So LINK 5 is not counted. Good.
+[NOTCOUNTED] Alt Judge Enforcer Retry Call deepseek 
+    But hold on — is P1.1's recount a "cure" that changed CONCEDED LINKS from 2 to 0? Then premise 4 is no longer counted, so CONCEDED LINKS: 0. Then LINK 5 not counted. Z1 STANDS consistent.

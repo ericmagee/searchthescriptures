@@ -1,0 +1,8 @@
+planted 0
+sol drv [{"rule":"K-S3","side":"DEFENDER","link":"S3 DEFENDER CR4: #1","line":"DEFENDER CR4: 'The abstinence of Matthew 1:25 attaches to this taking.' -- This acknowledges the narrated interval without surrendering the earlier-finding argument; it conce"},{"rule":"K-S3","side":"DEFENDER","link":"S3 DEFENDER
+ row ANSWER CHECK Luke 1:5 [CR3] CURED  Luke 1:5 again (line 109: "- **Luke 2:4 and Luke 1:5.** Luke 2:4 names Joseph's house: "he was of the house and linea")
+ row ANSWER CHECK Ezra 2:59 [CR4] UNCURED TRIAL pkgVP3: code check does not agree, not an item -- [CR4] answer to Ezra 2:59: the answer carries its own layer [L1]
+ row ANSWER CHECK Ezra 2:59 [CR4] UNCURED t regraded MISSES, BROKEN or FORCED (pkgABS) | record-only reading: UNCURED -- the CHANGE TO is not an ANSWER CHECK line
+ row ANSWER CHECK Luke 3:23 [DR3] UNCURED t regraded MISSES, BROKEN or FORCED (pkgABS) | record-only reading: UNCURED -- the CHANGE TO is not an ANSWER CHECK line
+ row ANSWER CHECK Luke 2:49 [DR3] UNCURED t regraded MISSES, BROKEN or FORCED (pkgABS) | record-only reading: UNCURED -- the CHANGE TO is not an ANSWER CHECK line
+replay equals stored (summary, sb_rows): true true

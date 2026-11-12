@@ -1,0 +1,21 @@
+35296 Judge P1.1 luna DEFENDER premise 1 | judge text found true | lines naming VOID and this number: 0
+35296 Judge P2.1 luna DEFENDER premise 2 | judge text found true | lines naming VOID and this number: 0
+35296 Judge P3.1 luna DEFENDER premise 3 | judge text found true | lines naming VOID and this number: 0
+35296 Judge P4.1 luna DEFENDER premise 4 | judge text found true | lines naming VOID and this number: 0
+35296 Judge P5.1 luna DEFENDER premise 5 | judge text found true | lines naming VOID and this number: 0
+35296 Judge P8.1 luna CHALLENGER premise 2 | judge text found true | lines naming VOID and this number: 0
+35296 Judge P9.1 luna CHALLENGER premise 3 | judge text found true | lines naming VOID and this number: 0
+35296 Judge P10.1 luna CHALLENGER premise 4 | judge text found true | lines naming VOID and this number: 0
+35296 Alt P4.1 argon DEFENDER premise 4 | judge text found true | lines naming VOID and this number: 4
+      [AUDIT v25: RECOMPUTED AFTER CURE -- SEAT: argon; TRIGGER: CLOSE-CONTRADICTION D2 vs C3 (UNDERDETERMINED to DEFENDER LINK BROKEN), CLOSE-CONTRADICTION D3 (no collision line names it; counted as one DEFENDER LINK BROKEN), CLOSE-CONTRADICTION D4 vs C5 (UNDERDETE
+      [AUDIT v27: SUPERSEDED LINE -- SEAT: argon; LABEL: CHALLENGE STANDING; ORIGINAL: CHALLENGE STANDING: PROP-DEPENDENT -- L=5 c=1 -- Of the 6 premises the defender listed against the challenger at the close of (CR3), Premise 2 is VOID (Commitment 6) leaving 5 cou
+      [AUDIT v27: SUPERSEDED LINE -- SEAT: argon; LABEL: CHALLENGER CONCEDED LINKS; ORIGINAL: CHALLENGER CONCEDED LINKS: 1 -- Premise 4 (C4): UNEXHIBITED (pressed witness Matthew 1:25 left unanswered because the challenger's answer in (DR3) fails to show a fit with 
+      [AUDIT v39: K-RECHK -- SEAT: argon; CHANGE: change; RULE: K-CMT; NEW: a contested grade line that names no Commitment N; LINE: CHALLENGER CONCEDED LINKS: 0 -- recomputed after the cure from the cured lines (CLOSE-CONTRADICTION D2 vs C3 (UNDERDETERMINED to DEFE
+35296 Alt P6.1 argon DEFENDER premise 6 | judge text found true | lines naming VOID and this number: 2
+      [AUDIT v25: RECOMPUTED AFTER CURE -- SEAT: argon; TRIGGER: CLOSE-CONTRADICTION D2 vs C3 (UNDERDETERMINED to DEFENDER LINK BROKEN), CLOSE-CONTRADICTION D3 (no collision line names it; counted as one DEFENDER LINK BROKEN), CLOSE-CONTRADICTION D4 vs C5 (UNDERDETE
+      [AUDIT v27: SUPERSEDED LINE -- SEAT: argon; LABEL: CHALLENGER CONCEDED LINKS; ORIGINAL: CHALLENGER CONCEDED LINKS: 1 -- Premise 4 (C4): UNEXHIBITED (pressed witness Matthew 1:25 left unanswered because the challenger's answer in (DR3) fails to show a fit with 
+35296 Alt P10.1 argon CHALLENGER premise 4 | judge text found true | lines naming VOID and this number: 4
+      [AUDIT v25: RECOMPUTED AFTER CURE -- SEAT: argon; TRIGGER: CLOSE-CONTRADICTION D2 vs C3 (UNDERDETERMINED to DEFENDER LINK BROKEN), CLOSE-CONTRADICTION D3 (no collision line names it; counted as one DEFENDER LINK BROKEN), CLOSE-CONTRADICTION D4 vs C5 (UNDERDETE
+      [AUDIT v27: SUPERSEDED LINE -- SEAT: argon; LABEL: CHALLENGE STANDING; ORIGINAL: CHALLENGE STANDING: PROP-DEPENDENT -- L=5 c=1 -- Of the 6 premises the defender listed against the challenger at the close of (CR3), Premise 2 is VOID (Commitment 6) leaving 5 cou
+      [AUDIT v27: SUPERSEDED LINE -- SEAT: argon; LABEL: CHALLENGER CONCEDED LINKS; ORIGINAL: CHALLENGER CONCEDED LINKS: 1 -- Premise 4 (C4): UNEXHIBITED (pressed witness Matthew 1:25 left unanswered because the challenger's answer in (DR3) fails to show a fit with 
+      [AUDIT v39: K-RECHK -- SEAT: argon; CHANGE: change; RULE: K-CMT; NEW: a contested grade line that names no Commitment N; LINE: CHALLENGER CONCEDED LINKS: 0 -- recomputed after the cure from the cured lines (CLOSE-CONTRADICTION D2 vs C3 (UNDERDETERMINED to DEFE
