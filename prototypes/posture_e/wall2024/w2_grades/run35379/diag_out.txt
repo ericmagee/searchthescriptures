@@ -1,0 +1,11 @@
+chatgpt  {"statement":23,"response":23,"malformed":0,"prose":0}
+grok     {"statement":34,"response":36,"malformed":0,"prose":33}
+haiku    {"statement":4,"response":43,"malformed":0,"prose":15}
+luna     {"statement":25,"response":25,"malformed":0,"prose":5}
+single   {"statement":26,"response":29,"malformed":0,"prose":1}
+sol      {"statement":0,"response":0,"malformed":54,"prose":35}
+sol unwrapped starts: "HELD. [L1][L3] The flagged gra" lines 89
+first malformed: STATEMENT: K-S3 S3 DEFENDER CR4: #1 -- TOUCHES NO LINK: This is not a surrender of D1 or D3 or of a listed premise; conc
+readLine on sol STATEMENT: {"form":"STATEMENT","f":{"which":"STATEMENT","item":null,"text":"K-S3 S3 DEFENDER CR4: #1 -- TOUCHES NO LINK: This is not a surrender of D1 or D3 or of a listed premise; conception before the taking is part of the defender's retained chronology."},"norm":"STATEMENT: K-S3 S3 DEFENDER CR4: #1 -- TOUCH
+sol with " | " plant: {"statement":27,"response":27,"malformed":0,"prose":35}
+same plant inside JSON wrapper: {"statement":27,"response":27,"malformed":0,"prose":35}
