@@ -31,3 +31,4 @@ Package: parent_s158_WVR3.json, sha 305dda8d6793ad1f (W1, Wall 5345). Replaces t
 ## Change from the rev 2 plan
 - 33083 Luke 1:27 is no longer named, so it is no longer in the call and cannot serve as the control. Its false-break risk is closed offline (W2 rev 3 grade). The control is now item 5: candidates the package does not touch must not change.
 - 33083 prompt: 67,978 (+904), down from 68,895 (+1,821).
+- Control (W1 proposal, Wall 5347, accepted): one extra request built from rev 2 for the 33083 defender call (68,895 characters, carries X2 Luke 1:27), two sends. X2 must be NOT A CONTRADICTION on both. It shows how the enforcer treats a false name. Added cost ESTIMATE about 0.02 USD. Total: 12 calls, ESTIMATE under 0.12 USD.
