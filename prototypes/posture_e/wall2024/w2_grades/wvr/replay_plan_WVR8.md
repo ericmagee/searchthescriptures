@@ -19,8 +19,9 @@ Package: rev 8 (W1, Wall 5385), /mnt/project-files/wall2024/parent_s160_WVR8.jso
 2. 32924 X1 and 33083 X1, Galatians 4:4 (same kind as ASK 116): CONFIRMED on both sends. 32924 has one completed sample so far.
 3. 33846 X5 (1 John 5:1), X6 (1 Chronicles 28:6), X7 (Ezra 2:61, ASK 117): CONFIRMED on both sends, as in ASK 119.
 4. Synthetic control 33083 X2, Luke 1:27 (rev 2 request plus the rev 8 sentence): NOT A CONTRADICTION on both sends. A prompt rule that "a reduced weight is still a rest" must not turn a scoped clause into a break.
-5. 33846 X1 to X4 and 35379 X1 to X6: no worse than the ASK 119 sends and the 33846 baseline (these already vary 1-1 without the package). Any change toward CONFIRMED gets a hand reading.
+4b. 35379 X1 and X2 (the kept verb-parallel use, W3 caution 1 at Wall 5392): NOT A CONTRADICTION on both sends. They ride in the same call at no added cost.
+5. 33846 X1 to X4 and 35379 X3 to X6: no worse than the ASK 119 sends and the 33846 baseline (these already vary 1-1 without the package). Any change toward CONFIRMED gets a hand reading.
 6. Every NEW line is hand-read; keep only those the text supports.
 
 ## Pass
-All of 1 to 4 on every completed send, and 5 and 6 clean. Anything else is reported as a split, with the replies quoted.
+All of 1 to 4b on every completed send, and 5 and 6 clean. Anything else is reported as a split, with the replies quoted.
