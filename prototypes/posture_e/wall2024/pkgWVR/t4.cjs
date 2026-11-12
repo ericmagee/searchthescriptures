@@ -1,0 +1,2 @@
+const fs=require('fs');eval(fs.readFileSync(__dirname+'/wvr_fn.js','utf8').replace('const cecWvr','globalThis.cecWvr'));
+for(const F of JSON.parse(fs.readFileSync(process.argv[2]))){const o=cecWvr(F,[]);console.log(F.t.slice(5,10),o.length);for(const c of o)console.log('  ',c.side,'LINK',c.n,'|',c.earlier_round,JSON.stringify(c.earlier_q.slice(0,90)),'\n    CLOSE',JSON.stringify(c.closing_q.slice(0,200)));}
