@@ -5,7 +5,7 @@ const src=f=>{const W=JSON.parse(fs.readFileSync(f,'utf8'));const T=W.nodes.find
 const mk=S=>{const s=S.indexOf('const ECL=(()=>{'),e=S.indexOf('return {rounds,undOk,cure,CURE_UND};})();',s);const g=S.indexOf('const __gub=');const ge=S.indexOf('\n',g);if(s<0||e<0||g<0)throw new Error('blocks not found');
  const $=()=>({isExecuted:false,all:()=>[],first:()=>({json:{}})});
  return new Function('$','L2C','PASS',S.slice(s,e+41)+'\n'+S.slice(g,ge)+'\nreturn {ECL,UND,__gub};')($,{tags:()=>[]},{sb_items:[{seat:'haiku',sid:'S8',rule:'E-UNG',item:'COLLISION D2 (pressed: [DR2] premise 3)'},{seat:'haiku',sid:'S12',rule:'E-HOLD',item:'UND'}]});};
-const L=mk(src('/mnt/project-files/wall2024/fetchback_live_s156.json')),P=mk(src('/mnt/project-files/wall2024/parent_s156_GUR.json'));
+const L=mk(src('/mnt/project-files/wall2024/fetchback_live_s157.json')),P=mk(src('/mnt/project-files/wall2024/parent_s157_GUR2.json'));
 const VR='[AUDIT v45: E-APPLY (pkgUND) SEAT: haiku; ITEMS: S8 (counted in drv_uncured); S12 (counted in drv_uncured)]';
 const LINE='D2 vs C6 (Luke 1:35): UNDERDETERMINED -- the dio kai reach to Luke 1:32 is shown by both sides, not decided -- GROUND: [L1] Luke 1:35 "therefore also that holy thing which shall be born of thee shall be called the Son of God" | [L1] Luke 1:32 "shall be called the Son of the Highest"';
 const C=[
