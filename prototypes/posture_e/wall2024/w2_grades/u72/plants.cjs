@@ -1,0 +1,19 @@
+// W2 grade of pkgU72 (W1 Wall 5210): new plants on unxAcFail, taken from the rebuilt Gate Record of the parent.
+const {src}=require('../../pkgU72/u72_load.cjs')(process.argv[2]);const i=src.indexOf('function unxAcFail(');const f=new Function(src.slice(i,src.indexOf('\n',i))+'\nreturn unxAcFail;')();
+const R='Matthew 1:25',Q=' -- MEANS: "he knew her not" -- ANSWER: "the verse says till" -- ';let n=0,ok=0;
+const t=(name,TX,want,ref=R,rk='DR3')=>{n++;const g=f(TX,ref,rk);if(g===want)ok++;console.log(g===want?'OK  ':'DIFF',name,'->',g,'(want',want+')');};
+t('bullet + bold label + bold grade','- **ANSWER CHECK:** Matthew 1:25 -- [DR3]'+Q+'**FAILS** (Commitment 3)',true);
+t('no brackets, MISSES','ANSWER CHECK: Matthew 1:25 -- DR3'+Q+'MISSES',true);
+t('blockquote prefix','> ANSWER CHECK: Matthew 1:25 -- [DR3]'+Q+'FAILS',true);
+t('double space in ref','ANSWER CHECK: Matthew  1:25 -- [DR3]'+Q+'FAILS',true);
+t('other round CR3','ANSWER CHECK: Matthew 1:25 -- [CR3]'+Q+'FAILS',false);
+t('range 1:25-26','ANSWER CHECK: Matthew 1:25-26 -- [DR3]'+Q+'FAILS',false);
+t('FAILS then MEETS on a second line','ANSWER CHECK: Matthew 1:25 -- [DR3]'+Q+'FAILS\nANSWER CHECK: Matthew 1:25 -- [DR3]'+Q+'MEETS',false);
+t('numbered line (safe miss)','1. ANSWER CHECK: Matthew 1:25 -- [DR3]'+Q+'FAILS',false);
+t('lowercase fails (safe miss)','ANSWER CHECK: Matthew 1:25 -- [DR3]'+Q+'fails',false);
+t('not a string','',false);
+t('other book same verse','ANSWER CHECK: Luke 1:25 -- [DR3]'+Q+'FAILS',false);
+t('quoted answer holds "-- FAILS", grade MEETS (UNSAFE direction)','ANSWER CHECK: Matthew 1:25 -- [DR3] -- MEANS: "x" -- ANSWER: "it -- FAILS here" -- MEETS',false);
+t('grade inside the MEANS before ANSWER, real grade MEETS','ANSWER CHECK: Matthew 1:25 -- [DR3] -- MEANS: "a -- FAILS b" -- ANSWER: "c" -- MEETS',false);
+t('ref with a period (1 Cor.)','ANSWER CHECK: 1 Cor. 7:5 -- [DR3]'+Q+'FAILS',true,'1 Cor. 7:5');
+console.log(ok+' of '+n);
