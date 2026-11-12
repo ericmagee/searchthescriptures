@@ -1,0 +1,9 @@
+# W2 grade of pkgSJO (W3, parent_s158_SJO.json sha cd992b541ac74154, Wall 5340)
+
+Verdict: PASS WITH LIMITS. Not for write: the operator's own word comes first.
+
+- Identity against fetchback_live_s158.json: 443 nodes (442 + "SJ Off", 414 characters, compiles). No existing node is changed. Two connection changes: "Regrade After Quotes?" output 1 now goes to SJ Off instead of Build Independent Verdict, and SJ Off goes to Build Save Body. Output 1 is the non-regrade branch; the regrade branch (output 0, Anticheat Resume) is unchanged. Build Save Body inputs: Extract Diagnostic (now unreached) and SJ Off.
+- Packing check (w3/grade_GUR/stub2.cjs): 43 stubs. Only Alternate Build and Early Alternate Build throw, the same 2 as live (a script artifact). Library sha unchanged, 05d90123c018293f.
+- The three Payloads nodes, rebuilt from the library and EXECUTED in their single-judge paths (smm.cjs). The SJ object comes from W3's new Build Save Body output: SJ.judge_model null, independent_verdict_raw null. sameModelMarks returns [] in all three nodes, and voidCounts is never reached. The VC single and KJV single blocks are skipped (ST and __ST null). A whole-node run needs three judge envelopes and was not done. Old and new both stop at the same first unmocked read ("Panel Build").
+- Format Markdown EXECUTED (fm.cjs) on stored run 35554: the debate_results row, its 3 debate_judgments, and Init Seats with single_judge. Run once as stored and once with independent_verdict_raw, judge_model, both chain marks and the out-of-round fields null. No throw, and the markdown is byte-equal (333,854 characters). The formatter's SJV value is computed but never used; the synthesis analyst name comes from Init Seats.single_judge, which is unchanged.
+- Limits: no n8n run. The stored synthesis used in the formatter check still carries the diagnostic block, so the loss of that block (W3's list) was not seen there. The 24 unreached nodes stay in the flow.
