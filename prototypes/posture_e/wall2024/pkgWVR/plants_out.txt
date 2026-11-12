@@ -28,4 +28,15 @@ OK  rev2 W2 abbreviation 1 DEFENDER L6
 OK  rev2 W2 withdrawn range 1 DEFENDER L2
 OK  rev2 LINK heading without letter 1 DEFENDER L6
 OK  rev2 sentence split kept after a name 0 
-30/30
+OK  rev3 clause in verse then "it" (33083 Luke 1:27) 0 
+OK  rev3 list item that stays 0 
+OK  rev3 list first item still named 1 DEFENDER L4
+OK  rev3 Jude is not Judges 0 
+OK  rev3 Philippians is not Philemon 0 
+OK  rev3 Phil. is Philippians 1 DEFENDER L4
+OK  rev3 "Whether or not it matters, I withdraw" is a withdrawal 1 DEFENDER L6
+OK  rev3 "Since he asks, I withdraw" is a withdrawal 1 DEFENDER L6
+OK  rev3 close "has not answered that D6 rests on" 1 DEFENDER L6
+OK  rev3 "it" only in its own clause 0 
+OK  rev3 colon after the verses, "them" 1 DEFENDER L2
+41/41
