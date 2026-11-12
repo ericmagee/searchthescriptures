@@ -3768,5 +3768,65 @@
   "exp": 1,
   "prev": [],
   "chk": "o=>/a lesser weight is still a rest/.test(o[0].why)"
+ },
+ {
+  "src": "plants.cjs (W1)",
+  "name": "stored 32924 X1 (ASK 116 class): withdrawn as load-bearing, close rests D4 on it",
+  "F": {
+   "cr2": "I withdraw Genesis 3:15 and Galatians 4:4 as load-bearing for the exclusion.",
+   "cr3": "",
+   "cr4": "## D4\nD4 rests on Isaiah 7:14, Matthew 1:23, and Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1,
+  "prev": [],
+  "chk": "o=>o[0].n==='4'&&/a lesser weight is still a rest/.test(o[0].why)"
+ },
+ {
+  "src": "plants.cjs (W1)",
+  "name": "stored 33083 X1 (ASK 116 class): \"it\" of the sentence before, close rests D5 on it",
+  "F": {
+   "cr2": "[L4] Job 14:1 and Matthew 11:11 apply \"of a woman\" to men who had fathers, so Galatians 4:4 does not carry the exclusion alone. I withdraw it as load-bearing.",
+   "cr3": "",
+   "cr4": "## D5\nD5 rests on Luke 3:23 with Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1,
+  "prev": [],
+  "chk": "o=>o[0].n==='5'&&/a lesser weight is still a rest/.test(o[0].why)"
+ },
+ {
+  "src": "plants.cjs (W1)",
+  "name": "stored 35379 (ASK 116): withdrawn as exclusion witness, close third layer of D6",
+  "F": {
+   "cr2": "I do not rest the source on that idiom, and I withdraw Galatians 4:4 as an exclusion witness.",
+   "cr3": "",
+   "cr4": "Galatians 4:4 -- D6. \"God sent forth his Son, made of a woman, made under the law\" is the third layer of D6, beside Luke 3:23 [L1] and enomizeto (G3543) [L2].",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1,
+  "prev": [],
+  "chk": "o=>o[0].n==='6'&&/a lesser weight is still a rest/.test(o[0].why)"
+ },
+ {
+  "src": "plants.cjs (W1)",
+  "name": "stored 33846 (ASK 117): Ezra 2:61 route dropped, close stands on it",
+  "F": {
+   "cr2": "",
+   "cr3": "I drop the Ezra 2:61 route, since Ezra 2:62 puts those men out of the priesthood.",
+   "cr4": "## D4\nThis stands on [L1] Numbers 1:18 and [L3] Ezra 2:61 and Matthew 1:24-25.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1,
+  "prev": [],
+  "chk": "o=>o[0].n==='4'&&/a lesser weight is still a rest/.test(o[0].why)"
  }
 ]
