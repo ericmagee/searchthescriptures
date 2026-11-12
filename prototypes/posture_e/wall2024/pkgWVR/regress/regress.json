@@ -3753,5 +3753,20 @@
   "exp": 1,
   "prev": [],
   "chk": null
+ },
+ {
+  "src": "plants.cjs (W1)",
+  "name": "rev8 35379 form: withdrawn as exclusion witness, close cites it as a lesser layer; note carries the lesser-weight rule",
+  "F": {
+   "cr2": "I do not rest the source on that idiom, and I withdraw Galatians 4:4 as an exclusion witness.",
+   "cr3": "",
+   "cr4": "Galatians 4:4 -- D6. \"God sent forth his Son, made of a woman\" is the third layer of D6, not weight-bearing alone.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1,
+  "prev": [],
+  "chk": "o=>/a lesser weight is still a rest/.test(o[0].why)"
  }
 ]

@@ -46,4 +46,5 @@ const P=[
 ['rev4 "Even if ..., I withdraw" stays conditional',f({cr2:'Even if he shows a row, I withdraw Galatians 4:4.',cr4:'D6 stands on Galatians 4:4.'}),0],
 ['rev4 "...; I withdraw it." takes the clause before',f({cr2:'Galatians 4:4 was my third layer; I withdraw it.',cr4:'D6 stands on Galatians 4:4.'}),1],
 ['rev4 "...; and I drop it." takes the clause before',f({cr2:'Galatians 4:4 was my third layer; and I drop it.',cr4:'D6 stands on Galatians 4:4.'}),1],
+['rev8 35379 form: withdrawn as exclusion witness, close cites it as a lesser layer; note carries the lesser-weight rule',f({cr2:'I do not rest the source on that idiom, and I withdraw Galatians 4:4 as an exclusion witness.',cr4:'Galatians 4:4 -- D6. "God sent forth his Son, made of a woman" is the third layer of D6, not weight-bearing alone.'}),1,[],o=>/a lesser weight is still a rest/.test(o[0].why)],
 ];let ok=0;for(const [n,F,want,prev,chk] of P){const o=cecWvr(F,prev||[]);const p=o.length===want&&(!chk||chk(o));if(p)ok++;console.log(p?'OK ':'BAD',n,o.length,o.map(c=>c.side+' L'+c.n).join(','));}console.log(ok+'/'+P.length);
