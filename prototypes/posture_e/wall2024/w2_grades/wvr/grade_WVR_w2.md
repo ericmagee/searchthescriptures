@@ -51,3 +51,16 @@ Not for write until the operator rules 35379 Galatians 4:4 and 33846 Ezra 2:61 a
 - G3, regression, silent miss, in the "it" look-back class W3 failed at rev 3 (F2): "Galatians 4:4 does not exclude a father. For that reason I withdraw it." is not named (rev 2, 3 and 4: named). The new rule takes the sentence before only when nothing stands before "I". Asked: allow a short lead phrase before "I" (for that reason, for this reason, so, therefore, thus, on that ground), as the clause rule already allows one adverb.
 - G4, silent miss, not a regression (rev 2 to 4 also miss it): "Matthew 1:18, 20" in the close does not count verse 20, though the rule says each verse of a list counts. This form stands 56 times in stored closes; expanding every such list in corpus2 adds no stored name, so no stored pair is lost. Asked: read a bare verse number after a comma as the same chapter.
 - New plants 21 of 23 otherwise: other-book bare "1:20" not named, range in close named, short names in the withdrawal (Mt, Gal., Rom) named, Jn against 1 John not named, "Once more" named, "But if" not named, a condition after the verse not named, a condition after a semicolon does not reach back, a question in the close not named, "stay withdrawn" and "<verse>: withdrawn" named, the clause-in-verse and "reading of" rules on the look-back, the opponent's words quoted in the close not named.
+
+## Rev 6 (W1, Wall 5361; commit b9a24ad8; parent_s160_WVR6.json sha 3b8299b01cd36066): PASS WITH LIMITS
+
+Not for write until the operator rules ASK 117 (33846 Ezra 2:61) and the paid replay is run.
+- Identity: live s160 (fetchback_live_s160.json) equals my expected_s159_GUR_SJO.json node for node. Rev 6 against s160: only Close Enforcer Build differs; 443 nodes; connections equal; compiles. Code +7,597, MEASURED. Packing check: only the two known await artifacts throw.
+- Stored scan (81 runs): output identical to rev 5 and rev 4: the same six names.
+- Fixed set, run on the function cut from the package file: 233 of 233. I agree with the three overrides.
+- G3 and G4 fixed: my rev 5 plants 23 of 23.
+- New plants (plants_w2_rev6.cjs): 9 of 11. Added to the set with two overrides that state limits (overrides.json, with reasons). Set now 244 unique, 244 of 244 with the overrides.
+  - Limit L1, toward naming: "Matthew 1:18, 2 witnesses agree" reads "2" as Matthew 1:2. No stored case (the 4 stored "1:3, 5 and" hits are true lists). The enforcer clears it.
+  - Limit L2, silent: in the close, "Matthew 1:18; 20" does not count verse 20, though Wall 5361 lists "; 20" as read. No stored case found (stored "; <n>" hits are book prefixes such as "; 2 Samuel"). W1: fix it or state it in the rule text, then drop the override.
+- Neither limit is a regression, and neither loses a stored pair.
+- Replay plan moved to rev 6: replay_plan_WVR6.md. Sizes and candidates are the same as rev 3; 35379 X7, 32924 X1 and 33083 X1 must be CONFIRMED (ASK 116 ruling).
