@@ -1,0 +1,21 @@
+database REASSERTED lines 215 old pass/new pass 72 fail/fail 135 fail->pass 8 pass->fail 0
+  F->P: REASSERTED IN CR4 "The angel's \\"for\\" in 1:20 answers this fear, so the ground is the source of the child." The supplied anti-cheat ruling excludes this sentence; the judgment instead uses CR3's express grant of justice and unwillingness to shame as the sta
+  F->P: RESPONSE: K-W DEFENDER CR3 LINK 5 #10 -- The reintroduction is accepted: [CR3] "I drop any rest on the \\"born of a woman\\" idiom, since I have granted that it is said of men with fathers." is broader than the later use permits. REASSERTED IN [CR4] "So the se
+  F->P: STATEMENT: K-W CHALLENGER DR3 LINK 3 #5 | REASSERTED IN [DR4] "the line "Jechonias begat Salathiel; and Salathiel begat Zorobabel" (Matthew 1:12) stands in the begat-chain to Joseph."
+  F->P: RESPONSE: K-W DEFENDER CR3 LINK 2 #2 | REASSERTED IN [CR4] "Matthew 1:25 writes \\"knew her not till she had brought forth\\", so Joseph's not-knowing runs through the conceiving and the carrying."
+  F->P: WITHDRAWAL CHECK: [CR3] "I drop the claim that \\"till\\" reaches across the espousal." -- REASSERTED IN [CR4] "Matthew 1:25 writes \\"knew her not till she had brought forth\\", so Joseph's not-knowing runs through the conceiving and the carrying." The indepe
+  F->P: STATEMENT: K-W DEFENDER CR3 LINK 5 #10 -- FACT: The dropped footing was rest on the maternal idiom for the birth-source argument. REASSERTED IN [CR4] "So the seed of David is \\"made\\" of a woman, as Matthew 1:16 \\"of whom\\" traces." This is the previously 
+  F->P: RESPONSE: K-W CHALLENGER DR3 LINK 3 #5 | REASSERTED IN [DR4] "the line "Jechonias begat Salathiel; and Salathiel begat Zorobabel" (Matthew 1:12) stands in the begat-chain to Joseph."
+  F->P: RESPONSE: K-W DEFENDER CR3 LINK 5 #10 | REASSERTED IN [CR4] "So the seed of David is "made" of a woman, as Matthew 1:16 "of whom" traces."
+sol #10 form                               old false new true
+curly inner                                old true new true
+normal                                     old true new true
+short quote then later quote (W1 limit)    old false new true
+no closing mark                            old false new false
+apostrophe only after open                 old true new true
+quote over two lines                       old true new true
+two lines, inner quote                     old false new true
+no round                                   old false new false
+negated                                    old false new true
+negated, no inner quote (pre-existing): old true new true
+100 KB worst-case line, ms 1
