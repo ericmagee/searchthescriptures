@@ -1,7 +1,7 @@
 # pkgCNP: code-found closing pairs (Close Enforcer Build)
 
 Base: live s151. Node changed: Close Enforcer Build only. Library, prompts and every other node unchanged.
-Size (MEASURED, rev 2): Close Enforcer Build jsCode 8,315 to 14,549 (+6,234). Prompt text +0.
+Size (MEASURED, rev 3): Close Enforcer Build jsCode 8,315 to 14,953 (+6,638). Prompt text +0.
 File: /mnt/project-files/wall2024/parent_s151_CNP.json. Build and tests: prototypes/posture_e/wall2024/pkgCNP/.
 
 ## Why
@@ -29,6 +29,11 @@ enforcer still decides each candidate.
      same sentence marks as narrowed ("D5 stands as narrowed", "D5 as narrowed") is never paired. An exception before the match in
      the same clause ("Apart from LINK 5, I keep ...") stops the pair. A LINK "?" withdrawal pairs with a named range only when the
      range covers every declared link.
+   - Two rules for keep-all closes: (1) a link the sentence names on its own, outside a range ("Save D5, ...", "D5 aside, ...",
+     "I keep D1 to D4 and D6"), is set apart and is not paired by that sentence; (2) a keep-all sentence that itself carries a word of
+     the narrowing family (narrowed, amended, revised, restated, conceded, withdrawn, dropped) outside the matched phrase is not paired.
+     Both rules apply to keep-alls only; a denial that names a link ("I concede nothing on D5") still pairs with that link.
+     The enforcer still reads the whole close and can name such a pair itself.
 2. Earlier lines, in the same side's rounds 2 and 3:
    - "LINK n: NARROWED TO / CONCEDED / WITHDRAWN / DROPPED" lines.
    - "I withdraw / drop / concede / give up / no longer claim ... <object>" anywhere in a sentence (not "I withdraw nothing",
@@ -38,13 +43,13 @@ enforcer still decides each candidate.
    One earlier line per link (the latest round). At most 8 per side. A pair already named (same side, link and closing
    sentence; for "?" the same earlier text) is not repeated.
 
-## Tests (MEASURED, file cases_out.txt): 67 pass, 0 fail
+## Tests (MEASURED, file cases_out.txt): 75 pass, 0 fail
 - W1's cases.json A1 to A7 all found, each with and without the Oracle's section (A4 found by the code alone).
 - N1 to N7: no pkgCNP pair.
 - Plants P1 to P6 on 35379 with both real close sentences removed first: negated, question and conditional give no pair;
   six variant closes pair with LINK 5; the same six on a side with no earlier narrowing give no pair; bold markup gives
   the same result, quoted closes give none.
-- W3's false pairs (Wall 5179 F1) give no LINK 5 pair; the wordings W3 and W1 listed as missed now pair, and give no pair on a side with no earlier narrowing.
+- W3's false pairs (Wall 5179 F1 and Wall 5189) give no LINK 5 pair; the wordings W3 and W1 listed as missed now pair, and give no pair on a side with no earlier narrowing.
 - Corpus replay of every export with Final Output data: identical except 35296, which gains X6 (LINK 2 against
   "Nothing is conceded or narrowed."). The 35379 export holds a crash stub; its rounds were rebuilt from the stored
   close-enforcer prompt (row 31032) instead.

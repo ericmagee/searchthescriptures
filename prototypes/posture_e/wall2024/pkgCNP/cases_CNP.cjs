@@ -1,7 +1,7 @@
 // W1's cases.json (A1-A7 expect a pair, N1-N7 expect none) and plants P1-P6, replayed on Close Enforcer Build of parent_s151_CNP.
 const fs=require('fs');const R=require('./rounds.cjs')(process.argv[2]);const C=JSON.parse(fs.readFileSync('/mnt/project-files/w1/cfp_cases/cases.json','utf8'));
 const code=f=>JSON.parse(fs.readFileSync('/mnt/project-files/wall2024/'+f,'utf8')).nodes.find(n=>n.name==='Close Enforcer Build').parameters.jsCode;
-const LIVE=code('fetchback_live_s151.json'),PAR=code('parent_s151_CNP.json');
+const LIVE=code('fetchback_live_s151.json'),PAR=code((process.env.PKG||'parent_s151_CNP.json'));
 const run=(js,F)=>{const $=n=>({'Init Seats':{isExecuted:true,first:()=>({json:{run_token:'T'}})},'Resolve Seats':{isExecuted:true,first:()=>({json:{deepseek:{api_model:'deepseek-flash',max_tokens:16000}}})},'Final Output':{isExecuted:true,first:()=>({json:F})},'Regrade Load':{isExecuted:false,first:()=>{throw new Error('no')}}})[n]||{isExecuted:false,first:()=>{throw new Error('no node '+n)},all:()=>[]};
  return new Function('$',js)($).flatMap(x=>x.json.cands||[]);};
 const tok=r=>Object.keys(R).find(k=>k.includes('-'+r+'-'));const st=x=>String(x).replace(/[*_]+/g,'').trim();
@@ -30,5 +30,8 @@ for(const s of ['**I concede nothing.**','“I narrow nothing and concede nothin
 // W3 Wall 5179 F1 (false pair) and the wording limits named by W3 (5179) and W1 (5181a)
 for(const s of ['I keep D1 to D4 as numbered.','I keep D1 to D4 and D6 as numbered; D5 stands as narrowed.','Apart from LINK 5, I keep D1 to D6 as numbered.','I keep D1 to D6 as numbered, D5 as narrowed.','Except for D5, nothing is conceded.']){const h=cnp(add(clean,s)).filter(x=>x.n===5);ok('F1 '+s,h.length===0,h.map(x=>x.id+' LINK '+x.n).join(' ; ')||'no LINK 5 pair');}
 for(const s of ['My chain stands entire.','Every link stands as I first gave it.','Not one link has been narrowed.','None of my links is narrowed or withdrawn.','D1 through D6 remain exactly as stated.','No concession has been made.','Nothing I said has been withdrawn.','My chain stands unchanged.','D1 to D6 stand as first stated.','I keep every link as I declared it.']){const h=cnp(add(clean,s));ok('W '+s,h.some(x=>x.n===5),h.map(x=>'LINK '+x.n).join(', ')||'none');const h2=cnp(add(bare,s));ok('W/bare '+s,h2.length===0,h2.map(x=>'LINK '+x.n).join(', ')||'no pair');}
+for(const s of ['Save D5, every link stands as I first gave it.','D5 aside, my chain stands unchanged.','I keep D1 to D6 as numbered, D5 in its narrowed form.','I keep D1 to D6 as numbered, as narrowed above.','I keep D1 to D6 as amended.','My chain stands unchanged except as restated in CR3.']){const h=cnp(add(clean,s)).filter(x=>x.n===5);ok('F2 '+s,h.length===0,h.map(x=>x.id+' LINK '+x.n).join(' ; ')||'no LINK 5 pair');}
+{const h=cnp(add(clean,'I keep D5 to D6 as numbered.'));ok('F2c range D5 to D6 still pairs LINK 5',h.some(x=>x.n===5),h.map(x=>'LINK '+x.n).join(', ')||'none');}
+{const h=cnp(add(clean,'I concede nothing on D5.'));ok('F2d a denial naming D5 alone still pairs LINK 5 (rule 1 is for keep-alls)',h.some(x=>x.n===5),h.map(x=>'LINK '+x.n).join(', ')||'none');}
 {const h=cnp(add(clean,'I keep D1 to D6 as numbered.'));ok('R full range keeps the LINK ? withdrawal pair',h.some(x=>x.n==='?')&&h.some(x=>x.n===5),h.map(x=>'LINK '+x.n).join(', '));}
 console.log('\n'+pass+' pass, '+fail+' fail');

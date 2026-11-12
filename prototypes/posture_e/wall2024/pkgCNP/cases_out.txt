@@ -64,6 +64,14 @@ PASS W D1 to D6 stand as first stated.  LINK ?, LINK 5
 PASS W/bare D1 to D6 stand as first stated.  no pair
 PASS W I keep every link as I declared it.  LINK ?, LINK 5
 PASS W/bare I keep every link as I declared it.  no pair
+PASS F2 Save D5, every link stands as I first gave it.  no LINK 5 pair
+PASS F2 D5 aside, my chain stands unchanged.  no LINK 5 pair
+PASS F2 I keep D1 to D6 as numbered, D5 in its narrowed form.  no LINK 5 pair
+PASS F2 I keep D1 to D6 as numbered, as narrowed above.  no LINK 5 pair
+PASS F2 I keep D1 to D6 as amended.  no LINK 5 pair
+PASS F2 My chain stands unchanged except as restated in CR3.  no LINK 5 pair
+PASS F2c range D5 to D6 still pairs LINK 5  LINK 5
+PASS F2d a denial naming D5 alone still pairs LINK 5 (rule 1 is for keep-alls)  LINK 5
 PASS R full range keeps the LINK ? withdrawal pair  LINK ?, LINK 5
 
-67 pass, 0 fail
+75 pass, 0 fail

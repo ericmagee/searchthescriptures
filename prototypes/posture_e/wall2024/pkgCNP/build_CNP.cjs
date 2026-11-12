@@ -3,7 +3,7 @@
 // and concede nothing." after [CR3] "LINK 5: NARROWED TO: ..."; no candidate was named and the close enforcer never tested it.
 // Builds on live s151. Changes only the Close Enforcer Build node (own code, not the Shared Library).
 const fs=require('fs');const crypto=require('crypto');
-const SRC='/mnt/project-files/wall2024/fetchback_live_s151.json',OUT='/mnt/project-files/wall2024/parent_s151_CNP.json';
+const SRC=process.argv[2]||'/mnt/project-files/wall2024/fetchback_live_s151.json',OUT=process.argv[3]||'/mnt/project-files/wall2024/parent_s151_CNP.json';
 const X=JSON.parse(fs.readFileSync(SRC,'utf8'));const node=X.nodes.find(n=>n.name==='Close Enforcer Build');const c=node.parameters.jsCode;
 const FN=fs.readFileSync(__dirname+'/cnp_fn.js','utf8').trim();
 const A="\nconst S=$('Init Seats').first().json;",B="cands.push(...cecReclaim(F,links,cands));";

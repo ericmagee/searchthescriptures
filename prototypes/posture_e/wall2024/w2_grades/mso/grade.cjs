@@ -1,5 +1,5 @@
 // W2 grade of W1's pkgMSO: diff s151 vs package, then run the guard line alone (as built into the Merge Seat source) on cases.
-const fs=require('fs');const L=f=>JSON.parse(fs.readFileSync('/mnt/project-files/wall2024/'+f,'utf8'));const A=L('fetchback_live_s151.json'),B=L('parent_s151_MSO.json');
+const fs=require('fs');const L=f=>JSON.parse(fs.readFileSync('/mnt/project-files/wall2024/'+f,'utf8'));const A=L('fetchback_live_s151.json'),B=L(process.env.PKG||'parent_s151_MSO.json');
 const src=(W,e)=>{const T=W.nodes.find(z=>z.name==='Shared Library').parameters.jsCode;const a=T.indexOf('\n/*LIB*/'),b=T.lastIndexOf('\n/*MAP*/'),c=T.lastIndexOf('\n/*END*/');const Lb=JSON.parse(T.slice(a+8,b)),M=JSON.parse(T.slice(b+8,c));return M[e].p.map(x=>typeof x==='number'?Lb[x]:typeof x[0]==='string'?x[0]:Lb.slice(x[0],x[1]+1).join('\n')).join('\n');};
 const dn=A.nodes.filter(n=>JSON.stringify(n)!==JSON.stringify(B.nodes.find(m=>m.name===n.name))).map(n=>n.name);console.log('nodes',A.nodes.length,B.nodes.length,'differ:',dn.join(', '),'| connections equal:',JSON.stringify(A.connections)===JSON.stringify(B.connections));
 console.log('Shared Library size',A.nodes.find(z=>z.name==='Shared Library').parameters.jsCode.length,'->',B.nodes.find(z=>z.name==='Shared Library').parameters.jsCode.length);
