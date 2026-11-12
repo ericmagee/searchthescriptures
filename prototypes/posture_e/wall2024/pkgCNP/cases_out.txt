@@ -1,0 +1,43 @@
+PASS A1 (with Oracle)  X6 by the code LINK 5 E[CR3] LINK 5: NARROWED TO: Matthew 1:16 traces the birth
+PASS A1 (Oracle removed)  X4 by the code LINK 5 E[CR3] LINK 5: NARROWED TO: Matthew 1:16 traces the birth
+PASS A2 (with Oracle)  X3 by the code LINK ? E[CR2] I withdraw Galatians 4:4 as an exclusion witness. ; X4 by the code LINK 5 E[CR3] LINK 5: NARROWED TO: Matthew 1:16 traces the birth
+PASS A2 (Oracle removed)  X1 by the code LINK ? E[CR2] I withdraw Galatians 4:4 as an exclusion witness. ; X2 by the code LINK 5 E[CR3] LINK 5: NARROWED TO: Matthew 1:16 traces the birth
+PASS A3 (with Oracle)  X5 by the code LINK ? E[CR2] I withdraw Galatians 4:4 as an exclusion witness.
+PASS A3 (Oracle removed)  X3 by the code LINK ? E[CR2] I withdraw Galatians 4:4 as an exclusion witness.
+PASS A4 (with Oracle)  X1 by the Oracle LINK 4 E[CR3] I drop the limb that Mary is of the house of David
+PASS A4 (Oracle removed)  X4 by the code LINK 4 E[CR3] LINK 4 [premise 4]: NARROWED TO: "Mary is the only
+PASS A5 (with Oracle)  X6 by the code LINK 2 E[CR3] LINK 2: NARROWED TO: "An answer built on God's pow
+PASS A5 (Oracle removed)  X3 by the code LINK 2 E[CR3] LINK 2: NARROWED TO: "An answer built on God's pow
+PASS A6 (with Oracle)  X4 by the code LINK 2 E[CR3] LINK 2: NARROWED TO: "An answer built on God's pow
+PASS A6 (Oracle removed)  X1 by the code LINK 2 E[CR3] LINK 2: NARROWED TO: "An answer built on God's pow
+PASS A7 (with Oracle)  X5 by the code LINK 4 E[CR3] LINK 4 [premise 6]: NARROWED TO: "The child is pla
+PASS A7 (Oracle removed)  X2 by the code LINK 4 E[CR3] LINK 4 [premise 6]: NARROWED TO: "The child is pla
+PASS N1  no pkgCNP pair on this sentence
+PASS N2  no pkgCNP pair on this sentence
+PASS N3  no pkgCNP pair on this sentence
+PASS N4  no pkgCNP pair on this sentence
+PASS N5  no pkgCNP pair on this sentence
+PASS N6  no pkgCNP pair on this sentence
+PASS N7  no pkgCNP pair on this sentence
+PASS P0 clean base (both closes removed)  no pkgCNP pair
+PASS P1 negated: I do not say that nothing is conceded.  no pair
+PASS P2 question: Is nothing narrowed?  no pair
+PASS P3 conditional: If nothing were conceded, D2 would stand.  no pair
+PASS P4 I concede nothing.  LINK ?, LINK 5
+PASS P4 Nothing has been narrowed.  LINK ?, LINK 5
+PASS P4 I withdraw nothing.  LINK ?, LINK 5
+PASS P4 No link is narrowed.  LINK ?, LINK 5
+PASS P4 All six links stand as first stated.  LINK ?, LINK 5
+PASS P4 I keep every link whole.  LINK ?, LINK 5
+PASS P5 base has no earlier narrowing  
+PASS P5 I concede nothing.  no pair
+PASS P5 Nothing has been narrowed.  no pair
+PASS P5 I withdraw nothing.  no pair
+PASS P5 No link is narrowed.  no pair
+PASS P5 All six links stand as first stated.  no pair
+PASS P5 I keep every link whole.  no pair
+PASS P6 **I concede nothing.**  LINK ?, LINK 5
+PASS P6 “I narrow nothing and concede nothing.”  none (quoted)
+PASS P6 **“Nothing has been narrowed.”**  none (quoted)
+
+41 pass, 0 fail
