@@ -1,0 +1,3 @@
+stored Normalize items [ 'argon k1' ]
+as stored (one Normalize run) | argon cure rows 17 | "no cure call was made": 0 | argon ["SEATED "]
+last run lacks argon (follow-up loop for another alternate) | argon cure rows 17 | "no cure call was made": 17 | argon ["NOT SEATED 10 uncured item(s)"]

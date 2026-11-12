@@ -1,0 +1,2 @@
+const fs=require('fs');for(const f of fs.readdirSync('.').filter(f=>/^ex3\d+_full\.json$/.test(f))){const rd=JSON.parse(fs.readFileSync(f,'utf8')).data.resultData.runData;const n=rd['Alternate Cure Normalize'];if(!n){console.log(f,'no alternate cure');continue;}
+const runs=n.map(r=>(r.data&&r.data.main&&r.data.main[0]||[]).length);let ap=0;try{ap=rd['Alternate Payloads'][0].data.main[0].filter(x=>x.json&&x.json.alt).length;}catch(e){}console.log(f,'normalize runs',JSON.stringify(runs),'alternates',ap,'FUM call ran',!!rd['FUM Call Alternate openrouter']);}
