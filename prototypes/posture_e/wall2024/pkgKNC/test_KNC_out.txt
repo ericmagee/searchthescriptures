@@ -1,0 +1,13 @@
+AS EXPECTED live 10 (10) A 11 (11) B 11 (11) | 10 plain grants, then a withdrawal
+AS EXPECTED live 10 (10) A 10 (10) B 12 (12) | 12 plain grants
+AS EXPECTED live 10 (10) A 10 (10) B 12 (12) | 6 grants, 6 concessions
+AS EXPECTED live 10 (10) A 12 (12) B 12 (12) | 12 withdrawals
+AS EXPECTED live 10 (10) A 15 (15) B 15 (15) | 10 grants, then "I drop", "I no longer claim", "I do not claim", "I retract", "I give up"
+AS EXPECTED live 10 (10) A 12 (12) B 12 (12) | 10 grants, then an adverb grant and "I admit"
+AS EXPECTED live 10 (10) A 11 (11) B 11 (11) | withdrawal in round 4 after 10 grants in round 3
+AS EXPECTED live 0 (0) A 1 (1) B 1 (1) | 10 skipped matches (questions), then a withdrawal
+AS EXPECTED live 0 (0) A 1 (1) B 1 (1) | 10 skipped grants (questions), then a grant
+AS EXPECTED live 11 (11) A 11 (11) B 11 (11) | sides counted apart: 10 defender grants, 1 challenger grant
+AS EXPECTED live 10 (10) A 10 (10) B 10 (10) | negated and conditional withdrawals stay unread
+AS EXPECTED live item ids kept in A: DEFENDER CR3 no link heading #10 | DEFENDER CR3 no link heading #11
+plants 12 of 12
