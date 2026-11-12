@@ -39,4 +39,8 @@ OK  rev3 "Since he asks, I withdraw" is a withdrawal 1 DEFENDER L6
 OK  rev3 close "has not answered that D6 rests on" 1 DEFENDER L6
 OK  rev3 "it" only in its own clause 0 
 OK  rev3 colon after the verses, "them" 1 DEFENDER L2
-41/41
+OK  rev4 sentence opens with "If": conditional 0 
+OK  rev4 "Even if ..., I withdraw" stays conditional 0 
+OK  rev4 "...; I withdraw it." takes the clause before 1 DEFENDER L6
+OK  rev4 "...; and I drop it." takes the clause before 1 DEFENDER L6
+45/45

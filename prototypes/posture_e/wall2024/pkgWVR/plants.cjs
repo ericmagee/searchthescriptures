@@ -42,4 +42,8 @@ const P=[
 ['rev3 close "has not answered that D6 rests on"',f({cr2:'I withdraw Galatians 4:4.',cr4:'The challenger has not answered that D6 rests on Galatians 4:4.'}),1],
 ['rev3 "it" only in its own clause',f({cr2:'Galatians 4:4 stands; the "born of a woman" idiom is weaker, and I drop it.',cr4:'D6 stands on Galatians 4:4.'}),0],
 ['rev3 colon after the verses, "them"',f({cr3:'- Luke 1:36 and Luke 1:5: I do not rest on them.',cr4:'D2 rests on Luke 1:5.'}),1],
+['rev4 sentence opens with "If": conditional',f({cr2:'If the challenger shows a row, I withdraw Galatians 4:4.',cr4:'D6 stands on Galatians 4:4.'}),0],
+['rev4 "Even if ..., I withdraw" stays conditional',f({cr2:'Even if he shows a row, I withdraw Galatians 4:4.',cr4:'D6 stands on Galatians 4:4.'}),0],
+['rev4 "...; I withdraw it." takes the clause before',f({cr2:'Galatians 4:4 was my third layer; I withdraw it.',cr4:'D6 stands on Galatians 4:4.'}),1],
+['rev4 "...; and I drop it." takes the clause before',f({cr2:'Galatians 4:4 was my third layer; and I drop it.',cr4:'D6 stands on Galatians 4:4.'}),1],
 ];let ok=0;for(const [n,F,want,prev,chk] of P){const o=cecWvr(F,prev||[]);const p=o.length===want&&(!chk||chk(o));if(p)ok++;console.log(p?'OK ':'BAD',n,o.length,o.map(c=>c.side+' L'+c.n).join(','));}console.log(ok+'/'+P.length);
