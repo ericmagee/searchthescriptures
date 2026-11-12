@@ -1,0 +1,26 @@
+// pkgUOR test: evaluate the library's ECL and UND blocks (lines 1850 to 1921) from live s151 and from the package, then cure haiku's
+// four real E-UNG items (run 35379, S8-S11, CHANGE TO line and reason as stored) and plants. ctx is empty: an [L1] verse the run did not read is UNVERIFIABLE and counts as given (pkgUND rule).
+const fs=require('fs');const lib=f=>{const W=JSON.parse(fs.readFileSync('/mnt/project-files/wall2024/'+f,'utf8'));const T=W.nodes.find(z=>z.name==='Shared Library').parameters.jsCode;const a=T.indexOf('\n/*LIB*/'),b=T.lastIndexOf('\n/*MAP*/'),c=T.lastIndexOf('\n/*END*/');const Lb=JSON.parse(T.slice(a+8,b)),M=JSON.parse(T.slice(b+8,c));return M['Send Back Record'].p.map(x=>typeof x==='number'?Lb[x]:typeof x[0]==='string'?x[0]:Lb.slice(x[0],x[1]+1).join('\n')).join('\n');};
+const mk=S=>{const s=S.indexOf('const ECL=(()=>{'),e=S.indexOf('return {rounds,undOk,cure,CURE_UND};})();',s);if(s<0||e<0)throw new Error('blocks not found');return new Function('$','L2C',S.slice(s,e+41)+'\nreturn {ECL,UND};')(()=>({isExecuted:false,all:()=>[],first:()=>({json:{}})}),{tags:()=>[]});};
+const L=mk(lib('fetchback_live_s151.json')),P=mk(lib('parent_s151_UOR.json'));const ctx={rows:[],ow:[],lex:[]};
+const H=[["S8",'D2 vs C6 (Luke 1:35): UNDERDETERMINED -- the dio kai reach to Luke 1:32 is shown by both sides, not decided -- GROUND: [L1] Luke 1:35 "therefore also that holy thing which shall be born of thee shall be called the Son of God" | [L1] Luke 1:32 "shall be called the Son of the Highest"','The "therefore" reach is argued on both sides from the same rows and the record leaves it open.'],
+["S9",'D3 vs C4 (Matthew 1:25): UNDERDETERMINED -- the order of 1:18, 1:24 and 1:25 is granted by both sides -- GROUND: [L1] Matthew 1:25 "And knew her not till she had brought forth her firstborn son" | [L1] Matthew 1:18 "before they came together, she was found with child"','The order is shared, and the record leaves open whether the knowing reaches back into the espousal.'],
+["S10",'D4 vs C4 (Isaiah 7:14): UNDERDETERMINED -- the two children carry different names, and both sides read the sign from its own rows -- GROUND: [L1] Isaiah 7:14 "a virgin shall conceive, and bear a son, and shall call his name Immanuel" | [L1] Isaiah 8:3 "Call his name Mahershalalhashbaz"',"The pressed Isaiah 8:3 meaning is answered on its names, and the record leaves the sign's child open."],
+["S11",'D5 vs C5 (Matthew 1:16): UNDERDETERMINED -- the feminine relative and the passive verb are read by both sides from the same row -- GROUND: [L1] Matthew 1:16 "Jacob begat Joseph the husband of Mary, of whom was born Jesus" | [L1] Genesis 4:25 "Adam knew his wife again; and she bare a son"','Both readings rest on the same row and the record leaves the source open.']];
+let pass=0,fail=0;const T=(id,it,a,wl,wp)=>{const l=L.UND.cure(it,a,ctx),p=P.UND.cure(it,a,ctx);const ok=l.status===wl&&p.status===wp;ok?pass++:fail++;console.log((ok?'OK  ':'BAD ')+id+' | live '+l.status+' | pkg '+p.status+' -- '+p.why.slice(0,150));};
+const ung=n=>({rule:'E-UNG',item:'D'+n+' pressed, no graded collision line'}),hold={rule:'E-HOLD',und:true};
+for(const [s,to,why] of H){const n=+to.match(/^D(\d+)/)[1];T('haiku '+s+' (as stored)',ung(n),{ans:'CHANGE',to,why},'UNCURED','CURED');}
+const [_,to8,why8]=H[0];
+T('C1 open point in the line, reason empty',ung(2),{ans:'CHANGE',to:to8+' -- the record leaves open whether the reach holds',why:''},'CURED','CURED');
+T('C2 open point nowhere',ung(2),{ans:'CHANGE',to:to8,why:'Both sides argue it from the same rows.'},'UNCURED','UNCURED');
+T('C3 open point in reason, no [L1] in the line',ung(2),{ans:'CHANGE',to:'D2 vs C6 (Luke 1:35): UNDERDETERMINED -- both sides read the reach',why:why8},'UNCURED','UNCURED');
+T('C4 [L1] only in the reason, open point in reason',ung(2),{ans:'CHANGE',to:'D2 vs C6 (Luke 1:35): UNDERDETERMINED -- both sides read the reach',why:'[L1] Luke 1:35 "therefore also that holy thing" and the record leaves it open.'},'UNCURED','UNCURED');
+T('C5 KEEP with the open point in the reason',ung(2),{ans:'KEEP',to:'',why:why8},'UNCURED','UNCURED');
+T('C6 no answer',ung(2),{ans:'NO ANSWER'},'UNCURED','UNCURED');
+T('C7 graded line names another link (D3), reason open',ung(2),{ans:'CHANGE',to:H[1][1],why:why8},'UNCURED','UNCURED');
+T('C8 E-HOLD on UNDERDETERMINED, open point in reason',hold,{ans:'CHANGE',to:to8,why:why8},'UNCURED','CURED');
+T('C9 E-HOLD, open point nowhere',hold,{ans:'CHANGE',to:to8,why:'kept'},'UNCURED','UNCURED');
+T('C10 reason with escaped quotes',ung(2),{ans:'CHANGE',to:to8,why:'The \\"therefore\\" reach: the record leaves it open.'},'UNCURED','CURED');
+T('C11 why undefined',ung(2),{ans:'CHANGE',to:to8},'UNCURED','UNCURED');
+T('C12 RETRACTED with open reason',ung(2),{ans:'CHANGE',to:'RETRACTED',why:why8},'UNCURED','UNCURED');
+console.log('\n'+pass+' as expected, '+fail+' not');
