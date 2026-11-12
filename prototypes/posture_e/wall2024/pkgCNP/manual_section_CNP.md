@@ -1,7 +1,7 @@
 # pkgCNP: code-found closing pairs (Close Enforcer Build)
 
 Base: live s151. Node changed: Close Enforcer Build only. Library, prompts and every other node unchanged.
-Size (MEASURED, rev 3): Close Enforcer Build jsCode 8,315 to 14,953 (+6,638). Prompt text +0.
+Size (MEASURED, rev 4): Close Enforcer Build jsCode 8,315 to 15,050 (+6,735). Prompt text +0.
 File: /mnt/project-files/wall2024/parent_s151_CNP.json. Build and tests: prototypes/posture_e/wall2024/pkgCNP/.
 
 ## Why
@@ -32,6 +32,7 @@ enforcer still decides each candidate.
    - Two rules for keep-all closes: (1) a link the sentence names on its own, outside a range ("Save D5, ...", "D5 aside, ...",
      "I keep D1 to D4 and D6"), is set apart and is not paired by that sentence; (2) a keep-all sentence that itself carries a word of
      the narrowing family (narrowed, amended, revised, restated, conceded, withdrawn, dropped) outside the matched phrase is not paired.
+     A set-apart link also stops the sentence's LINK "?" pairs, since the "?" may be that link.
      Both rules apply to keep-alls only; a denial that names a link ("I concede nothing on D5") still pairs with that link.
      The enforcer still reads the whole close and can name such a pair itself.
 2. Earlier lines, in the same side's rounds 2 and 3:
@@ -43,7 +44,7 @@ enforcer still decides each candidate.
    One earlier line per link (the latest round). At most 8 per side. A pair already named (same side, link and closing
    sentence; for "?" the same earlier text) is not repeated.
 
-## Tests (MEASURED, file cases_out.txt): 75 pass, 0 fail
+## Tests (MEASURED, file cases_out.txt): 78 pass, 0 fail
 - W1's cases.json A1 to A7 all found, each with and without the Oracle's section (A4 found by the code alone).
 - N1 to N7: no pkgCNP pair.
 - Plants P1 to P6 on 35379 with both real close sentences removed first: negated, question and conditional give no pair;

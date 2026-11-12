@@ -154,11 +154,14 @@ PASS F2 I keep D1 to D6 as numbered, D5 in its narrowed form.  no LINK 5 pair
 PASS F2 I keep D1 to D6 as numbered, as narrowed above.  no LINK 5 pair
 PASS F2 I keep D1 to D6 as amended.  no LINK 5 pair
 PASS F2 My chain stands unchanged except as restated in CR3.  no LINK 5 pair
+PASS F3 no pair at all (W1 Wall: the LINK ? withdrawal too) D5 aside, my chain stands unchanged.  no pair
+PASS F3 no pair at all (W1 Wall: the LINK ? withdrawal too) Save D5, every link stands as I first gave it.  no pair
+PASS F3 no pair at all (W1 Wall: the LINK ? withdrawal too) I keep D1 to D4 and D6 as numbered; D5 stands as narrowed.  no pair
 PASS F2c range D5 to D6 still pairs LINK 5  LINK 5
 PASS F2d a denial naming D5 alone still pairs LINK 5 (rule 1 is for keep-alls)  LINK 5
 PASS R full range keeps the LINK ? withdrawal pair  LINK ?, LINK 5
 
-75 pass, 0 fail
+78 pass, 0 fail
 == CNP corpus
 ex33149_full.json cands live 0 CNP 0 | without the new ones identical: true
 ex33371_full.json cands live 0 CNP 0 | without the new ones identical: true
@@ -178,8 +181,8 @@ ex35379_full.json cands live 0 CNP 0 | without the new ones identical: true
 == SIZE
 nodes 442 442 connections equal true
 differs: Shared Library 878291 -> 880701 (+2410)
-differs: Close Enforcer Build 8315 -> 14953 (+6638)
-total stored jsCode change 9048
+differs: Close Enforcer Build 8315 -> 15050 (+6735)
+total stored jsCode change 9145
   rebuilt Alt Gate Build 193222 -> 193615 (+393)
   rebuilt Alt Gate Record 238013 -> 238890 (+877)
   rebuilt Alt Send Back Build 124650 -> 125122 (+472)
