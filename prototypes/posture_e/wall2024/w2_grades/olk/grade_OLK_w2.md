@@ -8,3 +8,12 @@ VERDICT: PASS WITH LIMITS. MEASURED unless marked.
 - LIMIT B: when the opening paragraph (the LINK heading and narrowing) shares the key word it stays first, so the cut can still fall as today (as live).
 - LIMIT C (ESTIMATE, by reading): the reordered block can serve answer paragraphs before the LINK heading and narrowing lines; the label "[CR3, LINK n]" still leads the served text.
 - Not re-run by me: W1's replay of the three Judge Enforcer Build nodes (29 runs, 3 reordered).
+
+## Rev 2 (W1 Wall 5229, sha256 69875dbceeefa823): NOT PASSED, one condition. MEASURED.
+- Identity: W1's build.cjs on s152 reproduces the parent exactly; line 3036 only.
+- W2 plants: 14 of 16 (plants_rev2_out.txt). W3's form (intro + bullets) moves together; PRESSED WITH units stay; B15 still fixed; every plant keeps its lines.
+- CONDITION (same class as W3's Wall 5226): the unit is one line plus the bullets under it, so a line that continues or is introduced by the line above it without a "- " bullet moves alone.
+  1. "The challenger says:" then "1. naming marks the father alone." (numbered item): the numbered line moves first, its intro stays behind.
+  2. "The challenger says that" / "naming marks the father alone." (a paragraph on two lines): the second line moves first, alone.
+- Stored rounds (5 runs, every CR and DR round): 596 pairs of consecutive non-blank, non-bullet lines (each pair is split into two units by rev 2), 53 of them after a line ending in a colon; 84 numbered lines, 1 directly after a colon line.
+- FIX ASKED: build units by paragraph (lines up to a blank line), and attach a following bullet or numbered list (one blank line allowed) to the paragraph before it.

@@ -9,7 +9,11 @@ t('B15 form: naming paragraphs first','B15'&&B15,'This is the naming answered un
 t('no key word in answer: unchanged',B15,'See link 3.',null);
 t('only stop words of 5+: unchanged',B15,'This answered there, under link 3.',null);
 t('every unit shares the key: unchanged','Naming one.\n\nNaming two.','the naming',null);
-t('bullet lines are units','LINK 2: head\n- seed of David\n- naming by Joseph\n- river','the naming under link 2','- naming by Joseph');
+t('rev2: bullets stay with their intro line (one unit), unchanged','LINK 2: head\n- seed of David\n- naming by Joseph\n- river','the naming under link 2',null);
+t('rev2: intro + bullets move together','LINK 2: head\n\nThe challenger says:\n- naming marks the father.\n\nMy answer: the river.','the naming under link 2','The challenger says:',g=>g.indexOf('- naming')===g.indexOf('The challenger says:')+21);
+t('rev2: PRESSED WITH unit never moves','LINK 2: head\n\nPRESSED WITH: Luke 1:31 -- MEANS: naming by Mary','the naming',null);
+t('rev2 W2: numbered item under an intro line','LINK 2: head\n\nThe challenger says:\n1. naming marks the father alone.\n\nMy answer: the river.','the naming under link 2','The challenger says:');
+t('rev2 W2: wrapped paragraph, second line holds the key','LINK 2: head\n\nThe challenger says that\nnaming marks the father alone.\n\nMy answer: the river.','the naming under link 2','The challenger says that');
 t('LIMIT: named vs naming differ in the first five letters (named/namin), so unchanged',B15,'It was named under link 3.',null);
 t('case-insensitive, punctuation','x\n\nNAMING, by the mother.','naming!','NAMING');
 t('short words only (Mary, seed, son): unchanged',B15,'Mary bore the seed, link 3.',null);
