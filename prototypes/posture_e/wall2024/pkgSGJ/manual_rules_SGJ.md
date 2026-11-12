@@ -1,0 +1,4 @@
+# pkgSGJ: the defender's grants list (rule text)
+
+The grants list given to the challenger before its close (C4 Build) and re-read by C4 Extract, C4G Extract and C4B Extract takes each grant as the whole sentence that holds the grant word, from that sentence's start within its line. Leading list marks and bracket tags such as [L4] are left off; a sentence start more than 160 characters before the grant word is cut back at a word. A grant of fewer than seven words is joined only to the next sentence on the same line, never to the next line or bullet. A heading that is only "What I grant" / "What I withdraw" (or both joined by "and") is not a grant.
+Limits: a grant whose sentence starts on an earlier line (a sentence broken across lines) starts at its own line. A short grant that ends its line stands alone ("I grant it.").
