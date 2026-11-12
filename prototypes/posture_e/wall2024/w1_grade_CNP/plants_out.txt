@@ -1,0 +1,14 @@
+OK   W1-1 "I have narrowed nothing." -> pair LINK ?,LINK 5
+OK   W1-2 "I drop nothing." -> pair LINK ?,LINK 5
+MISS W1-3 "Nothing I said has been withdrawn." -> none 
+MISS W1-4 "My chain stands unchanged." -> none 
+MISS W1-5 "D1 to D6 stand as first stated." -> none 
+OK   W1-6 "The challenger narrowed nothing." -> none 
+OK   W1-7 "Nothing was conceded, except the idiom." -> none 
+OK   W1-8 "I concede nothing new." -> none 
+OK   W1-9 verse "for with God nothing shall be impossible" -> none 
+OK   W1-10 "I withdraw nothing that bears on D5." -> pair LINK 5
+OK   W1-11 "No link of mine has been narrowed." -> pair LINK ?,LINK 5
+MISS W1-12 "I keep every link as I declared it." -> none 
+challenger close, pairs: CHALLENGER LINK 4 [DR3] LINK 4: NARROWED TO: "The exposure (G3856) that Joseph would
+plants 8 of 12
