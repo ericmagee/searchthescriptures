@@ -8,3 +8,5 @@ P7 scoped withdrawal, row of another link | expected Y | got 1 LINK 2 "[L3] Gala
 P8 withdrawal only "rest no weight on it" (verbs option) | expected V | got 0 
 P9 row with no withdrawal | expected N | got 0 
 P10 verse cited in row body, not the row head | expected N | got 0 
+P11 row cites the verse to grant against itself, refusal after the quotation (32980 form) | expected N | got 0 
+P12 row refusal worded "I rest no weight on it" | expected N | got 0 

@@ -11,6 +11,8 @@ const P=[
 ['P8 withdrawal only "rest no weight on it" (verbs option)','V','It shows the reckoning (Ezra 2:61). I rest no weight on it.','## D3\n- [L3] Ezra 2:61: "called after their name"'],
 ['P9 row with no withdrawal','N','Ezra 2:61 shows the usage.','## D3\n- [L3] Ezra 2:61: "called after their name"'],
 ['P10 verse cited in row body, not the row head','N','I drop Galatians 4:4 as load-bearing.','## D4\n- [L4] The text sends the Son (Galatians 4:4).'],
+['P11 row cites the verse to grant against itself, refusal after the quotation (32980 form)','N','Genesis 3:15 and Job 14:1 are set aside as not decisive.','## D5\n- [L3] Job 14:1: "Man [that is] born of a woman" and Matthew 11:11: "Among them." I grant that "of a woman" alone does not exclude a father, and I do not rest on the phrase by itself.'],
+['P12 row refusal worded "I rest no weight on it"','N','I drop Galatians 4:4 as load-bearing.','## D4\n- [L3] Galatians 4:4: "made of a woman." I rest no weight on it.'],
 ];
 for(const [nm,exp,e,c] of P){const F={t:'ODV1-00000-plant',cr2:e,cr3:'',cr4:c,gr2:'',dr3:'',dr4:''};const o=g.f(F,[]);const n=o.length;
  console.log(nm,'| expected',exp,'| got',n,o.map(x=>'LINK '+x.n+' '+JSON.stringify(x.closing_q.slice(0,50))).join(' ; '));}
