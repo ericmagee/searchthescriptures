@@ -1,0 +1,13 @@
+nodes 442 442 differ: Shared Library | connections equal: true
+Shared Library size 878291 -> 879799
+Alternate Merge Seat 320108 -> 320858 (+750) inserted: "try{if($('Alternate Cure Normalize').isExecuted){const __lr=new Map();let __rm=-1;for(let __r=0;__r<20;__r++){let __a;try{__a=$('Alternate Cure Normalize').all...
+R2 Alternate Merge Seat 320126 -> 320882 (+756) inserted: "try{if($('R2 Alternate Cure Normalize').isExecuted){const __lr=new Map();let __rm=-1;for(let __r=0;__r<20;__r++){let __a;try{__a=$('R2 Alternate Cure Normalize...
+OK  G1 split: grok(k0) delivery from run 1 -> GO
+OK  G2 split: argon(k1) delivery from run 0, after run 1 -> STOP
+OK  G3 split: argon delivered before grok follow-up ran -> STOP
+OK  G4 no split, one delivery holding both -> GO
+OK  G5 one alternate, with follow-up (34852 shape) -> GO
+OK  G6 both need follow-up, one delivery from run 1 -> GO
+OK  G7 skip item (no k) -> GO
+OK  G8 Normalize not run -> GO
+BAD G9 RISK: run-1 item keyed to the wrong alternate (itemMatching fallback) -> STOP
