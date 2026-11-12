@@ -18,7 +18,7 @@ Package: rev 9 (W1, building after the ASK 124 FAIL). Sizes and the sha are fill
 1. 35379 X7, Galatians 4:4 (ASK 116): CONFIRMED on both sends (rev 8 fixed the ASK 119 split; rev 9 must keep it).
 2. 32924 X1 and 33083 X1, Galatians 4:4 (same kind as ASK 116): CONFIRMED on both sends. 32924 has one completed sample so far.
 3. 33846 X5 (1 John 5:1), X6 (1 Chronicles 28:6), X7 (Ezra 2:61, ASK 117): CONFIRMED on both sends, as in ASK 119.
-4. Synthetic control 33083 X2, Luke 1:27 (rev 2 request plus the rev 8 sentence): NOT A CONTRADICTION on both sends. A prompt rule that "a reduced weight is still a rest" must not turn a scoped clause into a break.
+4. Synthetic control 33083 X2, Luke 1:27 (rev 2 request plus the rev 9 note text): NOT A CONTRADICTION on both sends. The new note text must not turn a scoped clause into a break.
 4b. 35379 X1 and X2 (the kept verb-parallel use, W3 caution 1 at Wall 5392): NOT A CONTRADICTION on both sends. Rev 8 FAILED X1 on send 2 ("drops all rest on the woman-source idiom"). They ride in the same call at no added cost.
 5. 33846 X1 to X4 and 35379 X3 to X6: no worse than the ASK 119 sends and the 33846 baseline (these already vary 1-1 without the package). Any change toward CONFIRMED gets a hand reading.
 5b. 33846 X2 to X4 varied in ASK 124 (NOT, then CONFIRMED) as they vary without the package; a CONFIRMED there is hand-read, not a FAIL by itself.
