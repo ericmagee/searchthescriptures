@@ -30,3 +30,14 @@ Not for write until the operator rules 35379 Galatians 4:4 and 33846 Ezra 2:61 a
 - My rev 1 and rev 2 plants: unchanged (10 of 11; form 1 accepted at 5337).
 - New plants on the rev 3 readers (plants_w2_rev3.cjs): 18 of 18. Covered: the stored Luke 1:27 form without bold marks; "the word ... in <verse>" then "it" (not named); a whole verse then "it" (named); "it" in a later clause after a semicolon (not named); a condition with no comma (not named); "For clarity, I withdraw" (named); Judg/Jude and Phil/Philem prefixes; "Luke 1:5: I withdraw it."; "Galatians 4:4 stays" (not named) against "I drop Genesis 3:15 and Galatians 4:4." (named); a bold verse heading before a withdrawal; "has not answered that D6 rests on"; a clause named then the verse withdrawn by name (named); the challenger side with a scoped phrase (not named).
 - Limit: the replay can no longer test the Luke 1:27 false-break risk, because that pair is no longer sent. The offline result above is the evidence for it.
+
+## Rev 4 (W1, Wall 5352; commit e1519426; parent_s159x_WVR4.json sha dc2918ce2e3df4e9): NOT PASSED
+
+- Identity: built on expected s159 (expected_s159_GUR_SJO.json sha 56ec019d). Only Close Enforcer Build differs; 443 nodes; connections equal; compiles. Code +5,527 against expected s159 (+237 over rev 3), MEASURED. Packing check: only the two known await artifacts throw; library sha e5df76c23a60d658.
+- Stored scan (corpus2, 81 runs): 158 of 162 calls byte-equal, +8,265; the same six names as rev 3.
+- My earlier plants: rev 2 set 10 of 11 (form 1 accepted), rev 3 set 18 of 18.
+- F1 and F2 (W3 5351) are fixed: plants_w2_rev4.cjs, 12 of 13 (unless, should, once, provided, "If ..., then"; "Even though" and "As he asks" still named; "; so I drop it", "; then I withdraw it", challenger side).
+- NEW FAULT G1, regression toward a false name, in the class rev 3 was built to close: "The clause "of the house of David" in Luke 1:27 is weak; I withdraw it." is named by rev 4 (rev 3: not named; rev 2: named). The F2 look-back takes the verse from the clause before the semicolon without the rev 3 rule that a verse named only as the place of a clause, phrase or word is not the thing withdrawn. The same path names "Isaiah 7:14 stands; the challenger's reading of Galatians 4:4 fails; I withdraw it." (rev 3: not named). Asked: apply the rev 3 clause-in-verse rule (and the opponent's-verse rule) to the clause before the semicolon.
+- G2, silent miss, minor: "If anything, I withdraw Galatians 4:4 too." is not named (rev 3: named). "If anything" is an idiom, not a condition. Asked: exempt it, or state it as a limit.
+- Neither form is in the stored corpus. I fail G1 because it is the 33083 Luke 1:27 class, the one rev 3 was built for.
+- MY MISTAKE, rev 3 grade: I passed rev 3 without finding W3's F1 and F2. My condition plant had no comma ("If the court requires it I withdraw"), so it did not reach the rev 3 comma rule.

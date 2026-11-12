@@ -1,0 +1,26 @@
+AS EXPECTED "Unless he answers, I drop Galatians 4:4." -> 0
+AS EXPECTED "Should the court ask, I withdraw Galatians 4:4." -> 0
+AS EXPECTED "Once he shows a row, I withdraw Galatians 4:4." -> 0
+AS EXPECTED "Provided that he shows a row, I withdraw ..." -> 0
+AS EXPECTED "If the challenger shows a row, then I withdraw ..." -> 0
+AS EXPECTED "Even though he asks, I withdraw ..." (concessive, real) -> 1 | Even though he asks, I withdraw Galatians 4:4. || D6 rests on Galatians 4:4.
+AS EXPECTED withdrawal, then a conditional restore sentence -> 1 | I withdraw Galatians 4:4. || D6 rests on Galatians 4:4.
+AS EXPECTED "As he asks, I withdraw ..." (not a condition) -> 1 | As he asks, I withdraw Galatians 4:4. || D6 rests on Galatians 4:4.
+AS EXPECTED F2 with "so": "...third layer; so I drop it." -> 1 | Galatians 4:4 was my third layer; so I drop it. || D6 rests on Galatians 4:4.
+AS EXPECTED F2 with "then": "...; then I withdraw it." -> 1 | Galatians 4:4 was my third layer; then I withdraw it. || D6 rests on Galatians 4:4.
+NOT AS EXPECTED semicolon, clause before names the opponent verse -> 1 | Isaiah 7:14 stands; the challenger's reading of Galatians 4:4 fails; I || D6 rests on Galatians 4:4.
+AS EXPECTED semicolon chain, "it" clause names a verse itself -> 0
+AS EXPECTED challenger side F2 form -> 1 | Romans 1:3 was my second layer; I withdraw it. || C2 rests on Romans 1:3.
+12 of 13
+== parent_s158_WVR2
+NOT AS EXPECTED opponent verse in clause before -> 1 | Isaiah 7:14 stands; the challenger's reading of Galatians 4:4 fails; I || D6 rests on Galatians 4:4.
+NOT AS EXPECTED clause-in-verse then semicolon it -> 1 | The clause "of the house of David" in Luke 1:27 is weak; I withdraw it || D3 rests on Luke 1:27.
+NOT AS EXPECTED "If anything, I withdraw Galatians 4:4." (idiom, real) -> 0
+== parent_s158_WVR3
+AS EXPECTED opponent verse in clause before -> 0
+AS EXPECTED clause-in-verse then semicolon it -> 0
+AS EXPECTED "If anything, I withdraw Galatians 4:4." (idiom, real) -> 1 | If anything, I withdraw Galatians 4:4 too. || D6 rests on Galatians 4:4.
+== parent_s159x_WVR4
+NOT AS EXPECTED opponent verse in clause before -> 1 | Isaiah 7:14 stands; the challenger's reading of Galatians 4:4 fails; I || D6 rests on Galatians 4:4.
+NOT AS EXPECTED clause-in-verse then semicolon it -> 1 | The clause "of the house of David" in Luke 1:27 is weak; I withdraw it || D3 rests on Luke 1:27.
+NOT AS EXPECTED "If anything, I withdraw Galatians 4:4." (idiom, real) -> 0
