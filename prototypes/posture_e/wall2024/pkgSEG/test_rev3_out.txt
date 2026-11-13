@@ -1,0 +1,6 @@
+OK   35856 synthesis sentence | live held=false [narrowed,specified,limbs,continued,contest,challengers] | new held=true [] | expect held=true
+OK   named object present | live held=true [route] | new held=true [route] | expect held=true
+OK   named object absent (must still flag) | live held=false [galatians,witness] | new held=false [galatians,witness] | expect held=false
+OK   negated withdrawal only (must flag) | live held=false [specified,limbs] | new held=false [] | expect held=false
+OK   object after comma not used | live held=true [register,claim,contested,bethlehem] | new held=true [register,claim] | expect held=true
+checks 5 of 5
