@@ -13,7 +13,9 @@ const L2=L.slice();
 for(const [a,b] of EDITS){const hits=[];L2.forEach((x,i)=>{let k=-1,c=0;while((k=x.indexOf(a,k+1))>=0)c++;if(c)hits.push([i,c]);});
  if(hits.length!==1||hits[0][1]!==1)throw new Error('edit must match exactly once: '+a+' -> '+JSON.stringify(hits));L2[hits[0][0]]=L2[hits[0][0]].replace(a,b);console.log('edited LIB line',hits[0][0]);}
 const M2={};let changed=[];for(const n of Object.keys(M)){const before=src(L,M,n),after=src(L2,M,n);if(before.length!==M[n].n)throw new Error('parent map length mismatch '+n);M2[n]={...M[n],n:after.length};if(after!==before)changed.push(n+' '+M[n].n+' -> '+after.length);}
-const code2=head+JSON.stringify(L2)+mid+JSON.stringify(M2)+tail;
+const libtxt=JSON.stringify(L2),oldsha=(head.match(/library sha (\w+),/)||[])[1];if(!oldsha)throw new Error('no library sha in header');
+const newsha=crypto.createHash('sha256').update(libtxt).digest('hex').slice(0,16);
+const code2=head.replace('library sha '+oldsha+',','library sha '+newsha+',')+libtxt+mid+JSON.stringify(M2)+tail;console.log('header library sha',oldsha,'->',newsha);
 for(const n of Object.keys(M2))if(src(L2,M2,n).length!==M2[n].n)throw new Error('rebuilt length mismatch '+n);
 lib.parameters.jsCode=code2;fs.writeFileSync(OUT,JSON.stringify(W));
 const sha=s=>crypto.createHash('sha256').update(s).digest('hex').slice(0,16);
