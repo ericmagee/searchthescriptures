@@ -1,6 +1,6 @@
 -- pkgCFO (W1; ASK 167 "Both forfeit, after 2 confirmations", ASK 178 "Neither: UNDERDETERMINED"), part B of ASK 167.
 -- A confirmed closing contradiction forfeits the debate for the side that made it, in the outcome W-D writes:
---   both sides: UNDERDETERMINED; the challenger alone: DEFENDER PREVAILS; the defender alone: as now (BROKEN, CHALLENGER PREVAILS).
+--   both sides: UNDERDETERMINED; the challenger alone: DEFENDER PREVAILS (a DEFENDER PREVAILS, WEAKENED stays as it is); the defender alone: as now (BROKEN, CHALLENGER PREVAILS).
 -- A review outcome (UNGRADED -- REVIEW) is left as it is. Only debates created at or after the write time (v_cfo_from) are read,
 -- so stored debates keep their outcome on any later re-derive. "Confirmed" is the pkgDFL reading (dfl_counted): close enforcer and
 -- judge-found rows of the debate's own run token whose cure_reason begins CONFIRMED (pkgTWC's "CONFIRMED (second check)" and
@@ -35,7 +35,7 @@ BEGIN
    || E'  IF v_created >= v_cfo_from AND v_outcome IS NOT NULL AND v_outcome <> v_review THEN\n'
    || E'    v_cfo := cfo_sides(p_debate_id);\n'
    || E'    IF v_cfo @> ARRAY[''DEFENDER'',''CHALLENGER''] THEN v_outcome := ''UNDERDETERMINED'';\n'
-   || E'    ELSIF v_cfo @> ARRAY[''CHALLENGER''] THEN v_outcome := ''DEFENDER PREVAILS'';\n'
+   || E'    ELSIF v_cfo @> ARRAY[''CHALLENGER''] AND v_outcome <> ''DEFENDER PREVAILS, WEAKENED'' THEN v_outcome := ''DEFENDER PREVAILS'';\n'
    || E'    END IF;\n  END IF;\n\n' || a2);
  d := replace(d, a3, a3 || E'    ''close_forfeit'',              v_cfo,\n');
  EXECUTE d;

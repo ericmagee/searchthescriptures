@@ -7,6 +7,7 @@ b4 challenger rows "NOT CONFIRMED (one check of two)" and "CONFIRMED (second che
 b5 review outcome (CONTESTED) with a challenger contradiction => UNGRADED — REVIEW | null
 b6 challenger row under another run token => as panel | []
 b7 NOT A CONTRADICTION => as panel | []
+b8 (rev 2) PARTIAL panel, challenger contradiction => DEFENDER PREVAILS, WEAKENED (kept)
 anon: permission denied for function cfo_sides
 revert: md5 back to base, cfo_sides dropped
 Live, read only: derive_debate_outcome md5 f9f1c6127c02223a00b931a4c05d49a0 (the guard), each anchor found once, one overload.
