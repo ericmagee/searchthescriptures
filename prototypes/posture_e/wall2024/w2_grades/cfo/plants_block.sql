@@ -1,6 +1,6 @@
 \set ON_ERROR_STOP 1
 \c cfo_w2
-DROP TABLE IF EXISTS plant; DROP FUNCTION IF EXISTS wd(uuid);
+DROP TABLE IF EXISTS plant; DROP FUNCTION IF EXISTS wd(int);
 CREATE TABLE plant(k serial, id uuid, created timestamptz, outcome text, cite_bad_side text);
 CREATE FUNCTION wd(p_k int) RETURNS text LANGUAGE plpgsql AS $f$
 DECLARE v_review constant text := E'UNGRADED — REVIEW'; v_outcome text; v_created timestamptz; v_bad text; v_side text;
@@ -10,7 +10,7 @@ BEGIN
   IF v_created >= v_cfo_from AND v_outcome IS NOT NULL AND v_outcome <> v_review THEN
     v_cfo := cfo_sides(p_id);
     IF v_cfo @> ARRAY['DEFENDER','CHALLENGER'] THEN v_outcome := 'UNDERDETERMINED';
-    ELSIF v_cfo @> ARRAY['CHALLENGER'] THEN v_outcome := 'DEFENDER PREVAILS';
+    ELSIF v_cfo @> ARRAY['CHALLENGER'] AND v_outcome <> 'DEFENDER PREVAILS, WEAKENED' THEN v_outcome := 'DEFENDER PREVAILS';
     END IF;
   END IF;
   v_side := CASE WHEN v_outcome IN ('DEFENDER PREVAILS', 'DEFENDER PREVAILS, WEAKENED') THEN 'DEFENDER' WHEN v_outcome = 'CHALLENGER PREVAILS' THEN 'CHALLENGER' END;

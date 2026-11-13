@@ -49,3 +49,10 @@ The block (exact pkgCFO text, between a stubbed outcome and the citation rule):
 - L2. Review outcomes stay review. In two stored runs (34726, 34852) the defender confirmed and the outcome is REVIEW.
 - L3. Close Enforcer Record accepts the id "NEW 2", which becomes the item "NEW2 ...". dfl_counted does not read that item, so such a row would not forfeit (Q3). No stored row has that form.
 - L4. W1's limits (1) to (5) stand. The judge-found path (jcc) forfeits on one check.
+
+## Rev 2 regrade, 22:12 CST 11-12: PASS WITH LIMITS
+- Change from rev 1: the ELSIF gains "AND v_outcome <> 'DEFENDER PREVAILS, WEAKENED'", and the header comment is updated (pkgCFO.sql 3,761 characters).
+- cfo_sides is byte-equal to rev 1.
+- Block plants R1 to R6 pass 6 of 6. R2 now keeps "DEFENDER PREVAILS, WEAKENED".
+- The revert's regex still removes the new block: round trip to md5 f9f1c612 on the live text (SELECT only).
+- L1 to L4 stand.
