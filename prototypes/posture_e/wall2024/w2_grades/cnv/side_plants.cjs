@@ -1,0 +1,30 @@
+// W2 side plants for pkgCNV rev 3. usage: node w2_grades/cnv/side_plants.cjs <base json> <new json>
+const fs=require('fs');const path=require('path');
+const src=fs.readFileSync(path.join(__dirname,'../../pkgCNV/w2_grade_test.cjs'),'utf8');
+const head=src.slice(0,src.indexOf('let ok=0,n=0;')).replace("require('../pkgLIB/unpack.cjs')","require('"+path.join(__dirname,'../../pkgLIB/unpack.cjs')+"')");
+const body=`
+let ok=0,n=0;const T=(nm,c,info)=>{n++;if(c)ok++;console.log((c?'OK   ':'FAIL ')+nm+(info?' | '+info:''));};
+const re=/^(?:MISSES|FAILS)$/i,J=JSON.stringify;
+const tg=(t,side)=>N.g4Ac2024(t,LINE,re,0,side);
+const it=(acm,side)=>[{rule:'K-G4',side,link:'D4 vs C3',line:LINE,acm}];
+const cv=(acm,side,txt)=>N.cureVerdicts(it(acm,side),REPLY(txt),null,R)[0];
+const DR=AC_MISS.replace('[CR3]','[DR3]'),GR=AC_MISS.replace('[CR3]','[GR2]'),NOR=AC_MISS.replace(' -- [CR3]','');
+const MEETS_DR=AC_MEETS.replace('[CR3]','[DR3]'),MEETS_NOR=AC_MEETS.replace(' -- [CR3]','');
+let v;
+v=tg(AC_MISS,'DEFENDER');T('S1 own side [CR3] MISSES, DEFENDER item: tag',v.length===1,J(v));
+v=tg(DR,'DEFENDER');T('S2 W3 F1: other side [DR3] MISSES, DEFENDER item: no tag',v.length===0,J(v));
+v=tg(DR,'CHALLENGER');T('S3 [DR3] MISSES, CHALLENGER item: tag',v.length===1,J(v));
+v=tg(AC_MISS,'CHALLENGER');T('S4 [CR3] MISSES, CHALLENGER item: no tag',v.length===0,J(v));
+v=tg(GR,'CHALLENGER');console.log('INFO S5 [GR2] MISSES, CHALLENGER item => '+J(v)+' (W3: reader gives no round for GR)');
+v=tg(NOR,'DEFENDER');console.log('INFO S6 MISSES with no round label, DEFENDER item => '+J(v));
+v=tg(AC_MISS.replace('[CR3]','[CR3], [DR3]'),'DEFENDER');console.log('INFO S7 rounds [CR3], [DR3] in one line, DEFENDER item => '+J(v));
+v=tg(DR+'\\n'+AC_MISS,'DEFENDER');T('S8 other side MISSES then own side MISSES: tag',v.length===1,J(v));
+v=N.g4Ac2024(DR,LINE,re);T('S9 no side argument: side-blind as rev 2 (other callers)',v.length===1,J(v));
+v=cv(['isaiah 7:16'],'DEFENDER',RET+'\\nRESTATED: '+AC_MEETS);T('S10 tagged DEFENDER, reply restates own-side MEETS [CR3]: CURED',v.status==='CURED',v.status);
+v=cv(['isaiah 7:16'],'DEFENDER',RET+'\\nRESTATED: '+MEETS_DR);T('S11 tagged DEFENDER, reply restates MEETS on other side [DR3]: UNCURED',v.status==='UNCURED',v.status);
+v=cv(['isaiah 7:16'],'DEFENDER',RET+'\\nRESTATED: '+MEETS_NOR);console.log('INFO S12 tagged DEFENDER, reply restates MEETS with no round label => '+v.status);
+v=cv(['isaiah 7:16'],'CHALLENGER',RET+'\\nRESTATED: '+MEETS_DR);T('S13 tagged CHALLENGER, reply restates MEETS [DR3]: tag cleared (not the pkgCNV reason)',!/pkgCNV/.test(String(v.why)),v.status+' '+String(v.why).slice(0,90));
+v=cv(['isaiah 7:16'],undefined,RET+'\\nRESTATED: '+MEETS_DR);console.log('INFO S14 item with no side, reply restates MEETS [DR3] => '+v.status);
+console.log('checks '+ok+' of '+n);
+`;
+eval(head+body);

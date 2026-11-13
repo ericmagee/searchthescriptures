@@ -1,0 +1,15 @@
+OK   S1 own side [CR3] MISSES, DEFENDER item: tag | ["isaiah 7:16"]
+OK   S2 W3 F1: other side [DR3] MISSES, DEFENDER item: no tag | []
+OK   S3 [DR3] MISSES, CHALLENGER item: tag | ["isaiah 7:16"]
+OK   S4 [CR3] MISSES, CHALLENGER item: no tag | []
+INFO S5 [GR2] MISSES, CHALLENGER item => [] (W3: reader gives no round for GR)
+INFO S6 MISSES with no round label, DEFENDER item => []
+INFO S7 rounds [CR3], [DR3] in one line, DEFENDER item => ["isaiah 7:16"]
+OK   S8 other side MISSES then own side MISSES: tag | ["isaiah 7:16"]
+OK   S9 no side argument: side-blind as rev 2 (other callers) | ["isaiah 7:16"]
+OK   S10 tagged DEFENDER, reply restates own-side MEETS [CR3]: CURED | CURED
+OK   S11 tagged DEFENDER, reply restates MEETS on other side [DR3]: UNCURED | UNCURED
+INFO S12 tagged DEFENDER, reply restates MEETS with no round label => UNCURED
+OK   S13 tagged CHALLENGER, reply restates MEETS [DR3]: tag cleared (not the pkgCNV reason) | CURED retracted with a quoted reason the transcript verifies: [DR1] names Isaiah 7:16 (Eric 15:1
+INFO S14 item with no side, reply restates MEETS [DR3] => CURED
+checks 9 of 9
