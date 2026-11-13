@@ -1,0 +1,53 @@
+PASS nodes other than Shared Library and the connections are byte-identical -> 455 nodes
+PASS every MAP entry has a stub node and every stub node a MAP entry -> 46 stubs
+PASS stub Extract Independent Verdict (entry Extract Independent Verdict): rebuilds and passes its length check on target; parses; only the edits differ -> 212584 -> 212584
+PASS stub Panel Payloads (entry Panel Payloads): rebuilds and passes its length check on target; parses; only the edits differ -> 205403 -> 205403
+PASS stub Cure Build (entry Cure Build): rebuilds and passes its length check on target; parses; only the edits differ -> 78410 -> 78415
+PASS stub Cure Normalize (entry Cure Normalize): rebuilds and passes its length check on target; parses; only the edits differ -> 227346 -> 227356
+PASS stub Cure Check (entry Cure Check): rebuilds and passes its length check on target; parses; only the edits differ -> 254307 -> 254317
+PASS stub Panel Cure Build 1 (entry Panel Cure Build 1): rebuilds and passes its length check on target; parses; only the edits differ -> 94671 -> 94676
+PASS stub Panel Cure Normalize 1 (entry Panel Cure Normalize 1): rebuilds and passes its length check on target; parses; only the edits differ -> 227362 -> 227372
+PASS stub Panel Cure Build 2 (entry Panel Cure Build 2): rebuilds and passes its length check on target; parses; only the edits differ -> 94671 -> 94676
+PASS stub Panel Cure Normalize 2 (entry Panel Cure Normalize 2): rebuilds and passes its length check on target; parses; only the edits differ -> 227362 -> 227372
+PASS stub Panel Cure Build 3 (entry Panel Cure Build 3): rebuilds and passes its length check on target; parses; only the edits differ -> 94671 -> 94676
+PASS stub Panel Cure Normalize 3 (entry Panel Cure Normalize 3): rebuilds and passes its length check on target; parses; only the edits differ -> 227362 -> 227372
+PASS stub Panel Cure Check (entry Panel Cure Check): rebuilds and passes its length check on target; parses; only the edits differ -> 253308 -> 253318
+PASS stub Alternate Build (entry Alternate Build): rebuilds and passes its length check on target; parses; only the edits differ -> 95577 -> 95582
+PASS stub Alternate Payloads (entry Alternate Payloads): rebuilds and passes its length check on target; parses; only the edits differ -> 197892 -> 197892
+PASS stub Alternate Cure Build (entry Alternate Cure Build): rebuilds and passes its length check on target; parses; only the edits differ -> 94318 -> 94323
+PASS stub Alternate Cure Normalize (entry Alternate Cure Normalize): rebuilds and passes its length check on target; parses; only the edits differ -> 227353 -> 227363
+PASS stub Alternate Merge Seat (entry Alternate Merge Seat): rebuilds and passes its length check on target; parses; only the edits differ -> 326186 -> 326168
+PASS stub Judge Enforcer Build (entry Judge Enforcer Build): rebuilds and passes its length check on target; parses; only the edits differ -> 98047 -> 98047
+PASS stub Judge Enforcer Record (entry Judge Enforcer Record): rebuilds and passes its length check on target; parses; only the edits differ -> 42577 -> 42577
+PASS stub Send Back Build (entry Send Back Build): rebuilds and passes its length check on target; parses; only the edits differ -> 124877 -> 124877
+PASS stub Send Back Record (entry Send Back Record): rebuilds and passes its length check on target; parses; only the edits differ -> 133470 -> 133470
+PASS stub Gate Build (entry Gate Build): rebuilds and passes its length check on target; parses; only the edits differ -> 197822 -> 197799
+PASS stub Gate Record (entry Gate Record): rebuilds and passes its length check on target; parses; only the edits differ -> 247173 -> 247145
+PASS stub Alt Judge Enforcer Build (entry Alt Judge Enforcer Build): rebuilds and passes its length check on target; parses; only the edits differ -> 110484 -> 110484
+PASS stub Alt Judge Enforcer Record (entry Alt Judge Enforcer Record): rebuilds and passes its length check on target; parses; only the edits differ -> 42630 -> 42630
+PASS stub Alt Send Back Build (entry Alt Send Back Build): rebuilds and passes its length check on target; parses; only the edits differ -> 125122 -> 125122
+PASS stub Alt Send Back Record (entry Alt Send Back Record): rebuilds and passes its length check on target; parses; only the edits differ -> 133442 -> 133442
+PASS stub Alt Gate Build (entry Alt Gate Build): rebuilds and passes its length check on target; parses; only the edits differ -> 197835 -> 197812
+PASS stub Alt Gate Record (entry Alt Gate Record): rebuilds and passes its length check on target; parses; only the edits differ -> 247206 -> 247178
+PASS stub Alternate Merge 1 (entry Alternate Merge 1): rebuilds and passes its length check on target; parses; only the edits differ -> 151157 -> 151134
+PASS stub Early Alternate Build (entry Alternate Build): rebuilds and passes its length check on target; parses; only the edits differ -> 95577 -> 95582
+PASS stub R2 Alternate Build (entry R2 Alternate Build): rebuilds and passes its length check on target; parses; only the edits differ -> 95954 -> 95959
+PASS stub R2 Alternate Merge Seat (entry R2 Alternate Merge Seat): rebuilds and passes its length check on target; parses; only the edits differ -> 326210 -> 326192
+PASS stub R2 Alt Judge Enforcer Build (entry R2 Alt Judge Enforcer Build): rebuilds and passes its length check on target; parses; only the edits differ -> 110529 -> 110529
+PASS stub R2 Alternate Payloads (entry R2 Alternate Payloads): rebuilds and passes its length check on target; parses; only the edits differ -> 197798 -> 197798
+PASS stub R2 Alt Judge Enforcer Record (entry R2 Alt Judge Enforcer Record): rebuilds and passes its length check on target; parses; only the edits differ -> 42660 -> 42660
+PASS stub R2 Alternate Cure Build (entry R2 Alternate Cure Build): rebuilds and passes its length check on target; parses; only the edits differ -> 94321 -> 94326
+PASS stub R2 Alt Send Back Build (entry R2 Alt Send Back Build): rebuilds and passes its length check on target; parses; only the edits differ -> 125094 -> 125094
+PASS stub R2 Alternate Cure Normalize (entry R2 Alternate Cure Normalize): rebuilds and passes its length check on target; parses; only the edits differ -> 227359 -> 227369
+PASS stub R2 Alt Send Back Record (entry R2 Alt Send Back Record): rebuilds and passes its length check on target; parses; only the edits differ -> 133490 -> 133490
+PASS stub R2 Alt Gate Build (entry R2 Alt Gate Build): rebuilds and passes its length check on target; parses; only the edits differ -> 197856 -> 197833
+PASS stub R2 Alt Gate Record (entry R2 Alt Gate Record): rebuilds and passes its length check on target; parses; only the edits differ -> 247233 -> 247205
+PASS stub R2 Alternate Merge (entry R2 Alternate Merge): rebuilds and passes its length check on target; parses; only the edits differ -> 151217 -> 151194
+PASS stub Late Gate Build (entry Late Gate Build): rebuilds and passes its length check on target; parses; only the edits differ -> 240734 -> 240706
+PASS stub Alt Late Gate Build (entry Alt Late Gate Build): rebuilds and passes its length check on target; parses; only the edits differ -> 240739 -> 240711
+PASS stub R2 Alt Late Gate Build (entry R2 Alt Late Gate Build): rebuilds and passes its length check on target; parses; only the edits differ -> 240754 -> 240726
+PASS the rebuilt sources changed in 30 stub nodes (29 MAP entries; Early Alternate Build reads the Alternate Build entry) -> 30
+PASS no node parameter carries the name
+PASS library header sha matches its /*LIB*/ text -> fbf4eff2f5f3b259
+
+51 pass, 0 fail
