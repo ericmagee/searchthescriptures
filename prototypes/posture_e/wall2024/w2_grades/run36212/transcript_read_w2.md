@@ -17,3 +17,11 @@ F6 (MEASURED). The AUDIT v23 DG-8 flag ("REVIEW THIS ROW"): the Oracle quoted Ma
 F7 (MEASURED). The challenger's close (G2) labels the defender's 1 John 5:1 grant as a Galatians 4:4 grant. The synthesis caught it. No effect: G4 is a real Galatians 4:4 grant.
 
 No change to the package verdicts in grade_run36212_w2.md (pkgMUS rev 3, pkgTWC rev 2, pkgSRA rev 3a, pkgOWR count). The outcome line ("sound ... tie rule") is withdrawn and replaced by F1.
+
+## CORRECTION 23:44 CST 11-12 (after reading the compaction set of drift guards in full, op doc section 25 (1b))
+MY MISTAKE: I did doctrinal reading of run 36212 after compaction without first reading the compaction set. Section 25 (1b) requires it before any work on scripture or doctrine.
+WITHDRAWN: the F1 sentence "C2's fact (a knowing within the espousal) is stated by no row ... against Luke 1:34, Matthew 1:18, 1:20 and 1:25". It is the single-verse demand DG-61 forbids, and it sets verse against verse (DG-59). DG-8 (b) holds at L4, footed on the seed rows, that Joseph knew Mary his wife within the espousal (Sight 32), and that Matthew 1:25 bounds the abstinence to the pregnancy. The challenger's C2 is the record's own chain. The defender's conclusion ("no human biological father") is the reading DG-8 (a) bars.
+F1 CORRECTED: the mechanics stand (MEASURED): terra graded C2 BROKEN, E-COL disagreed, and the pkgECF send-back changed it to UNDERDETERMINED, which set the outcome. But the send-back kept the record's chain from being graded broken. My framing that it cost the defender an outcome was wrong.
+F5 framing kept, re-anchored: Mary's Davidic descent is not established (DG-8, Sight 6), so "the seed through the woman" routes the flesh through Mary alone, which DG-8 (a) forbids.
+F6 CORRECTED: the DG-8 audit flag (the Oracle cut "Joseph, thou son of David" from Matthew 1:20) is a guard hit on the Oracle. My "no effect" was a doctrinal judgment I should not have made; it is left for review.
+F2, F3, F4, F7 stand (procedural).
