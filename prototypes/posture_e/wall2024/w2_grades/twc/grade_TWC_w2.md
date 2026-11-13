@@ -50,3 +50,12 @@ VERDICT: NOT PASSED. One defect (F1), with a tested fix of +158 characters.
 - Against s175: code +3,447. Connections are equal; 443 nodes.
 - Packing check: 43 stubs, 2 throwing.
 - Identity CONFIRMED. The file carries F1. It needs a rebuild once the fix lands.
+
+## Rev 2 regrade, 22:04 CST 11-12: PASS WITH LIMITS
+- File: parent_s175_TWC.json, sha 97943aed26523f12.
+- W1's build.cjs on s175 reproduces that sha, with code +874 (Build +216, Record +658).
+- Only the two Close Enforcer nodes differ. Connections are equal; 443 nodes.
+- Packing check: 43 stubs, 2 throwing.
+- F1 is fixed: the relabel is in place, with a shorter comment than my version.
+- My plants pass 9 of 9, with one ledger row per link (out_rev2.txt). W1's plants pass 9 of 9.
+- Limits L1 to L4 stand.
