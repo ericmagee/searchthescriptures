@@ -1,13 +1,14 @@
-pkgCFO local test (postgres 16, stub derive_debate_outcome holding the three live anchors; pkgDFL rev 3 applied first):
-a1 both sides confirmed, debate created before the write => CHALLENGER PREVAILS | close_forfeit null (unchanged)
-b1 both (close enforcer DEFENDER + judge-found CHALLENGER) => UNDERDETERMINED | [CHALLENGER, DEFENDER]
-b2 challenger only => DEFENDER PREVAILS | [CHALLENGER]
-b3 defender only => CHALLENGER PREVAILS | [DEFENDER]
-b4 challenger rows "NOT CONFIRMED (one check of two)" and "CONFIRMED (second check)" only => DEFENDER PREVAILS (as panel HELD) | []
-b5 review outcome (CONTESTED) with a challenger contradiction => UNGRADED — REVIEW | null
-b6 challenger row under another run token => as panel | []
-b7 NOT A CONTRADICTION => as panel | []
-b8 (rev 2) PARTIAL panel, challenger contradiction => DEFENDER PREVAILS, WEAKENED (kept)
-anon: permission denied for function cfo_sides
+pkgCFO rev 3 local test (postgres 16, stub derive_debate_outcome holding the three live anchors; pkgDFL rev 3 applied first). 11 of 11 as wanted:
+a1 both sides confirmed, debate created before the write => CHALLENGER PREVAILS (unchanged)
+b1 defender X (close enforcer) + challenger J (judge-found, one check, not read) => CHALLENGER PREVAILS
+b2 challenger X only, panel HELD => DEFENDER PREVAILS
+b3 defender X only, panel BROKEN => CHALLENGER PREVAILS
+b4 challenger rows "NOT CONFIRMED (one check of two)" and "CONFIRMED (second check)" only => DEFENDER PREVAILS (as panel HELD)
+b5 review outcome (CONTESTED) with a challenger contradiction => UNGRADED — REVIEW
+b6 challenger row under another run token => as panel
+b7 NOT A CONTRADICTION => as panel
+b8 PARTIAL panel, challenger X => DEFENDER PREVAILS, WEAKENED (kept)
+b9 HELD panel, defender X => CHALLENGER PREVAILS (W3 F3)
+c1 both sides X => UNDERDETERMINED
 revert: md5 back to base, cfo_sides dropped
 Live, read only: derive_debate_outcome md5 f9f1c6127c02223a00b931a4c05d49a0 (the guard), each anchor found once, one overload.

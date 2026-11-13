@@ -1,10 +1,11 @@
 -- pkgCFO (W1; ASK 167 "Both forfeit, after 2 confirmations", ASK 178 "Neither: UNDERDETERMINED"), part B of ASK 167.
 -- A confirmed closing contradiction forfeits the debate for the side that made it, in the outcome W-D writes:
---   both sides: UNDERDETERMINED; the challenger alone: DEFENDER PREVAILS (a DEFENDER PREVAILS, WEAKENED stays as it is); the defender alone: as now (BROKEN, CHALLENGER PREVAILS).
+--   both sides: UNDERDETERMINED; the challenger alone: DEFENDER PREVAILS (a DEFENDER PREVAILS, WEAKENED stays as it is);
+--   the defender alone: CHALLENGER PREVAILS (also when the panel verdict is HELD or PARTIAL, or a tie).
 -- A review outcome (UNGRADED -- REVIEW) is left as it is. Only debates created at or after the write time (v_cfo_from) are read,
 -- so stored debates keep their outcome on any later re-derive. "Confirmed" is the pkgDFL reading (dfl_counted): close enforcer and
--- judge-found rows of the debate's own run token whose cure_reason begins CONFIRMED (pkgTWC's "CONFIRMED (second check)" and
--- "NOT CONFIRMED (one check of two)" do not count, so a link counts once and only after two confirmations on the close path).
+-- close enforcer rows only (two checks, pkgTWC; the judge-found J rows rest on one check and are not read), of the debate's own run
+-- token, whose cure_reason begins CONFIRMED ("CONFIRMED (second check)" and "NOT CONFIRMED (one check of two)" do not count).
 -- Database only: n8n code 0, prompt 0. Needs pkgDFL (dfl_counted), live in s175. One transaction. Revert: pkgCFO_revert.sql.
 BEGIN;
 CREATE OR REPLACE FUNCTION public.cfo_sides(p_debate_id uuid)
@@ -12,7 +13,7 @@ CREATE OR REPLACE FUNCTION public.cfo_sides(p_debate_id uuid)
  SELECT coalesce(array_agg(DISTINCT s ORDER BY s), ARRAY[]::text[]) FROM (
    SELECT (regexp_match(l.item, '^(?:[XJ]\d+|NEW) (DEFENDER|CHALLENGER) LINK'))[1] AS s
      FROM public.debate_enforcer_log l JOIN public.debate_results r ON r.id = l.debate_id AND r.run_token = l.run_token
-    WHERE l.debate_id = p_debate_id AND public.dfl_counted(l.kind, l.rule, l.run_token, l.item, l.cure_reason)) q
+    WHERE l.debate_id = p_debate_id AND l.seat = 'close enforcer' AND public.dfl_counted(l.kind, l.rule, l.run_token, l.item, l.cure_reason)) q
   WHERE s IS NOT NULL $f$;
 REVOKE ALL ON FUNCTION public.cfo_sides(uuid) FROM PUBLIC, anon, authenticated;
 GRANT EXECUTE ON FUNCTION public.cfo_sides(uuid) TO lab_seat, service_role, berean_ro;
@@ -36,6 +37,7 @@ BEGIN
    || E'    v_cfo := cfo_sides(p_debate_id);\n'
    || E'    IF v_cfo @> ARRAY[''DEFENDER'',''CHALLENGER''] THEN v_outcome := ''UNDERDETERMINED'';\n'
    || E'    ELSIF v_cfo @> ARRAY[''CHALLENGER''] AND v_outcome <> ''DEFENDER PREVAILS, WEAKENED'' THEN v_outcome := ''DEFENDER PREVAILS'';\n'
+   || E'    ELSIF v_cfo @> ARRAY[''DEFENDER''] THEN v_outcome := ''CHALLENGER PREVAILS'';\n'
    || E'    END IF;\n  END IF;\n\n' || a2);
  d := replace(d, a3, a3 || E'    ''close_forfeit'',              v_cfo,\n');
  EXECUTE d;
