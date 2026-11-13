@@ -1,0 +1,11 @@
+PASS T1 both checks confirm both sides -> [C2,D4] want [C2,D4]
+PASS T2 second check says NOT A CONTRADICTION (defender) -> [C2] want [C2]
+PASS T3 second check finds nothing (defender NONE) -> [C2] want [C2]
+PASS T4 second check fails (no reply) -> [] want []
+PASS T5 only the second check confirms -> [] want []
+PASS T6 both NONE -> [] want []
+PASS T7 old one-copy Build (no copy field): one confirmation as live -> [C2,D4] want [C2,D4]
+PASS T8 refused line is recorded with its reason -> [] want []
+   T8 status: NOT CONFIRMED (conflicting answers) | the same pair is also answered NOT A CONTRADICTION
+PASS T9 Build emits copy 1 and copy 2 (temperature 0.6)
+9 of 9 pass
