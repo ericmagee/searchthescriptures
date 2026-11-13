@@ -1,0 +1,11 @@
+PASS P1 34852 B13: a same-round naming answer is served
+PASS P2 answer uses every word of the meaning: nothing served
+PASS P3 a line naming the pressed verse is not served (it is the answer block)
+PASS P4 press lines are not served
+PASS P5 the round header is not served
+PASS P6 a line already served as other lines is not served again
+PASS P7 only common words of the meaning (df > 3): nothing served
+PASS P8 at most two lines, each cut at 400
+PASS P9 a bad verse string does not throw
+PASS P10 library line 3036 starts with helper.js
+10 of 10 pass
