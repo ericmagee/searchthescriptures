@@ -1,0 +1,12 @@
+PASS only the 4 Resend Build nodes change; connections identical
+PASS Enforcer Resend Build: cases
+PASS Judge Enforcer Resend Build: cases
+PASS Alt Judge Enforcer Resend Build: cases
+PASS R2 Alt Judge Enforcer Resend Build: cases
+PASS record merge block found unchanged (live library)
+PASS 36677 shape: call k=2 split in 2 halves, half 0 cut at cap and resent -> the resent reply is read for half 0 -> calls 4, resent 1
+PASS W4 plant: a cap-cut half holding verdict lines is not resent; with an errored or empty resend the Record keeps its 2 lines -> kept 2 verdict lines under both resend failures
+PASS an empty cap-cut half resent and the resend errors: the half held nothing before, so nothing is lost
+PASS replay over stored retry calls (21 halves): only cap-cut halves change -> new resends: ODV1-36677-0hxbzcd2|Alt Judge Enforcer Retry Call deepseek k=0
+
+10 pass, 0 fail
