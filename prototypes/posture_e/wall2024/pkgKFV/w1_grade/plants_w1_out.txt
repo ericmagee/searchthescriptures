@@ -1,0 +1,8 @@
+OK   W1 MEANS words on the second press line; first line has them before MEANS only | live Luke 1:27 | new Ezra 2:62 | expect Ezra 2:62
+OK   W2 two MEANS lines both carry the words: first kept | live Luke 2:4 | new Luke 2:4 | expect Luke 2:4
+OK   W3 lower-case means: on a press line | live Isaiah 7:16 | new Isaiah 7:16 | expect Isaiah 7:16
+OK   W4 words only before MEANS on every line: old first-line path | live Luke 1:27 | new Luke 1:27 | expect Luke 1:27
+OK   W5 bold markup around MEANS | live Hebrews 7:10 | new Hebrews 7:10 | expect Hebrews 7:10
+OK   W6 MEANS line names no verse before MEANS: first ref of the line | live Romans 1:3 | new Romans 1:3 | expect Romans 1:3
+OK   W7 LIMIT: words after MEANS on line 1 only inside its [L3] layer | live Luke 1:27 | new Luke 1:27 | expect Luke 1:27
+checks 7 of 7
