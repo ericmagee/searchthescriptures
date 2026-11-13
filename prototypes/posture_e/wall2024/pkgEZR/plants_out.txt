@@ -1,0 +1,7 @@
+PASS E1 old TEXTPROOF is a prefix of new
+PASS E2 added text is the sentence, quotes intact
+PASS E3 only TEXTPROOF changed in the node
+PASS E4 TEXTPROOF used once (definition) plus once in the oracle branch only: 2
+PASS E5 non-oracle return line has no TEXTPROOF
+PASS E6 node compiles
+pass 6 fail 0
