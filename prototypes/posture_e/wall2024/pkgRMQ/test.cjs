@@ -28,13 +28,13 @@ const NB=libX(process.argv[2],'Panel Cure Check'),NN=libX(process.argv[3],'Panel
 const acm=(L,t,sd)=>L.g4Ac2024(t,LINE,/^(?:MISSES|FAILS)$/i,0,sd||'DEFENDER');
 T('A2 new: "[CR3]" MISSES line tags isaiah 7:16',JSON.stringify(acm(NN,MISSB))==='["isaiah 7:16"]');
 T('A3 new: "[CR3]" tags as base',JSON.stringify(acm(NN,MISSB))===JSON.stringify(acm(NB,MISSB)));
-T('A4 new: g4Aq2024 returns the graded answer',JSON.stringify(NN.g4Aq2024(MISSB,LINE,'DEFENDER'))==='["Matthew 1:22 gives its own reading of the word"]');
+T('A4 new: g4Aq2024 returns the graded answer',JSON.stringify(NN.g4Aq2024(MISSB,LINE,'DEFENDER'))==='[{"a":"Matthew 1:22 gives its own reading of the word","r":["CR3"]}]');
 T('A5 MEETS: no answer returned',NN.g4Aq2024(MEETB,LINE,'DEFENDER').length===0);
 T('A6 side filter: [DR3] MISSES gives none for a DEFENDER item',NN.g4Aq2024(MISSB.replace('[CR3]','[DR3]'),LINE,'DEFENDER').length===0);
 T('A7 another verse: none',NN.g4Aq2024(MISSB.replace('Isaiah 7:16','Luke 1:27'),LINE,'DEFENDER').length===0);
 const item=(acm,acq)=>[{rule:'K-G4',side:'DEFENDER',link:'D4 vs C2',line:LINE,...(acm===undefined?{}:{acm}),...(acq===undefined?{}:{acq})}];
 const run=(L,acm,acq,txt)=>L.cureVerdicts(item(acm,acq),REPLY(txt),null,R)[0];
-const AQ=['Matthew 1:22 gives its own reading of the word'];
+const AQ=[{a:'Matthew 1:22 gives its own reading of the word',r:['CR3']}];
 const b1=run(NB,undefined,undefined,RETQ),n1=run(NN,['isaiah 7:16'],AQ,RETQ);
 T('C1 base: the 36156 retraction quoting the missed answer is CURED',b1.status==='CURED',b1.status+' '+String(b1.why).slice(0,100));
 T('C2 new: the same retraction is UNCURED with the pkgRMQ reason',n1.status==='UNCURED'&&/pkgRMQ/.test(n1.why),n1.status+' '+String(n1.why).slice(-220));
@@ -43,5 +43,17 @@ const b4=run(NB,undefined,undefined,RETO),n4=run(NN,['isaiah 7:16'],AQ,RETO);T('
 const n5=run(NN,undefined,undefined,RETQ);T('C5 untagged item (no acq): same as base',n5.status===b1.status&&n5.why===b1.why);
 const n6=run(NN,[],AQ,RETQ.replace('"Matthew 1:22 gives its own reading of the word"','"Matthew 1:22 gives its own reading of the word itself here"'));T('C6 a longer quotation holding the 6 words is refused',n6.status==='UNCURED',n6.status);
 {const LB=libX(process.argv[3],'Panel Cure Build 1'),LB0=libX(process.argv[2],'Panel Cure Build 1');const x=item(['isaiah 7:16'],AQ)[0],y=item(undefined,undefined)[0],z=item(['isaiah 7:16'],undefined)[0];const s1=LB.g4Label2024(x),s0=LB0.g4Label2024(y),s2=LB.g4Label2024(y),s3=LB.g4Label2024(z),s30=LB0.g4Label2024(z);
+// rev 2: W3's F1 plants (w3/grade_RMQ/w3_plants.cjs), graded answers in [CR3], retraction quoting [CR4]
+const R3={CR1:'x',DR1:'x',CR2:'x',DR2:'the sign is bounded in Isaiah\'s own day',CR3,DR3:'x',CR4:'- **Isaiah 7:16** The verse reads "before the child shall know to refuse the evil", and I answer the timing: the near sign in the day of Ahaz does not exhaust the word, as Isaiah 8:8 carries the name beyond that day.\n- The conception is of the Holy Ghost in Matthew 1:20 and that source governs how the sign is read.',DR4:'x'};
+const ret4=q=>'RETRACTED: D4 vs C2 -- [CR4] "'+q+'" answers the timing press.\nCORRECTED RESULT: HELD-1\nRESPONSE: K-G4 D4 vs C2 | retracted with the quoted reason.';
+const ret3=q=>ret4(q).replace('[CR4]','[CR3]');
+const W3=(nm,ans,q,want,rt)=>{const rr=rt||ret4;const b=NB.cureVerdicts(item(undefined,undefined),REPLY(rr(q)),null,R3)[0],v=NN.cureVerdicts(item(['isaiah 7:16'],[{a:ans,r:['CR3']}]),REPLY(rr(q)),null,R3)[0];T(nm,b.status==='CURED'&&v.status===want,'base '+b.status+' new '+v.status+' '+String(v.why).slice(0,90));};
+W3('F1-W1 short missed answer, CR4 sentence holding it: cures','of the Holy Ghost','The conception is of the Holy Ghost in Matthew 1:20 and that source governs how the sign is read','CURED');
+W3('F1-W2 missed answer holds verse words, CR4 answer quoting the verse: cures','The verse says before the child shall know to refuse the evil and stops there','before the child shall know to refuse the evil", and I answer the timing: the near sign in the day of Ahaz does not exhaust the word','CURED');
+W3('F1-W2b quotation without the verse words: cures','The verse says before the child shall know to refuse the evil and stops there','the near sign in the day of Ahaz does not exhaust the word','CURED');
+{const q='the near sign in the day of Ahaz does not exhaust the word, granted that it is near';const b=NB.cureVerdicts(item(undefined,undefined),REPLY(ret4(q)),null,R3)[0],v=NN.cureVerdicts(item(['isaiah 7:16'],[{a:'Granted',r:['CR3']}]),REPLY(ret4(q)),null,R3)[0];T('F1-W4 one-word missed answer: same as base (the quotation does not stand in [CR4] word for word)',b.status===v.status,b.status+' / '+v.status);}
+W3('F1-S3 six words from inside the answer, same round: refused','Matthew 1:22 gives its own reading of the word','gives its own reading of the word','UNCURED',ret3);
+W3('F1-S4 a quotation the answer does not hold, same round: cures','Matthew 1:22 gives its own reading of the word','and the fulfilment is stated there','CURED',ret3);
+
  T('P1 prompt: item with acq gets the sentence',/Quoting an answer your own ANSWER CHECK grades MISSES or FAILS does not cure it either\./.test(s1),String(s1.length-s3.length)+' chars added');T('P2 untagged item text equals base',s2===s0);T('P3 pkgCNV-only tag equals base',s3===s30);}
 console.log('checks',ok,'of',n);
