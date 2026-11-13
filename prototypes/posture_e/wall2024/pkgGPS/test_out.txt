@@ -1,0 +1,20 @@
+seed: 5296 rows, ties: 301 groups, largest 1084
+PASS new: per call, returned ids = ids marked in that call -> 0
+PASS new: drain returns every row exactly once -> 5296/5296
+PASS new: nothing left pending -> 0
+PASS new: calls of 100 -> 53
+PASS new: order within a call is triggered_at then id -> 0
+PASS shape: same keys -> t
+PASS shape: same 50 rows (batch inside one tie group of 1,084 takes ids 1..50 new; old takes some 50) -> 50/50
+PASS empty queue returns [] -> []
+
+PASS concurrent: both got 500 -> 500/500
+PASS concurrent: no row in both -> 0
+PASS concurrent: marked = returned -> 1000
+  gps_old_pause: marked but not returned 1; returned but left pending 1
+PASS old (2 s pause): late row is marked exported without being returned (lost) -> 1/1
+  get_pending_snapshots: marked but not returned 0; returned but left pending 0
+PASS new: same timing, marked = returned -> 0/0
+old function, no pause, tie drain: calls where returned <> marked: 0 (reported only)
+
+13 pass, 0 fail
