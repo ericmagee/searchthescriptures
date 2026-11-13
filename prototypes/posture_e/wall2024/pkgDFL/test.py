@@ -1,11 +1,6 @@
 import json,subprocess,sys,re
 F='/root/.claude/projects/-home-claude/ce829ea6-86e3-51b0-af44-4033b35f6682/tool-results/mcp-supbase-fix-execute_sql-1794539764858.txt'
-raw=open(F).read()
-try: raw=json.loads(raw)['result']
-except Exception: pass
-i=raw.index('[{"j"'); j=raw.rindex('}]')+2
-data=json.loads(raw[i:j])[0]['j']
-json.dump(data,open('stored_closecon_rows.json','w'))
+data=json.load(open('stored_closecon_rows.json'))
 log,res=data['log'],data['res']
 def psql(sql,ok=True):
     p=subprocess.run(['psql','-h','127.0.0.1','-p','5544','-U','postgres','-d','dfl','-v','ON_ERROR_STOP=1','-AtX','-F','|','-c',sql],capture_output=True,text=True)
@@ -34,14 +29,14 @@ def ins(r):
     return psql('insert into debate_enforcer_log('+','.join(cols)+') values ('+','.join(q(r.get(c)) for c in cols)+')',ok=False)
 # 1. replay of the stored rows, in id order, as the engine inserts them
 for r in log: ins(r)
-want=[r for r in log if re.match(r'^[XJ]\d+ (DEFENDER|CHALLENGER) LINK \d+$',r['item'] or '') and re.match(r'^CONFIRMED( --|$)',r['cure_reason'] or '')]
+want=[r for r in log if re.match(r'^(?:[XJ]\d+|NEW) (DEFENDER|CHALLENGER) LINK \d+$',r['item'] or '') and re.match(r'^CONFIRMED( --|$)',r['cure_reason'] or '')]
 T('S1 stored rows replayed: ledger rows',psql('select count(*) from debater_fault_ledger')[0],len(want))
 T('S2 same log ids',psql('select coalesce(string_agg(log_id::text,\',\' order by log_id),\'\') from debater_fault_ledger')[0],','.join(str(r['id']) for r in sorted(want,key=lambda r:r['id'])))
 T('S3 rows with no model',psql('select count(*) from debater_fault_ledger where debater_model is null or debater_engine is null')[0],0)
 print('   by side/source:',psql("select side||' '||source||' '||count(*) from debater_fault_ledger group by side,source order by 1")[0].replace('\n','; '))
 print('   report:',psql("select debater_model||' runs '||array_to_string(runs,',')||' n_runs '||n_runs||' lines '||n_lines||' links '||n_links from dfl_report order by 1")[0].replace('\n','; '))
 T('S4 36156 row',psql("select side||'|'||link||'|'||debater_model||'|'||source||'|'||item from debater_fault_ledger where run=36156")[0],'DEFENDER|6|anthropic/claude-sonnet-5.5|close enforcer|X2 DEFENDER LINK 6')
-T('S5 NEW line of the post-panel call (NOT A CANDIDATE) not recorded',psql("select count(*) from debater_fault_ledger where item like 'NEW %'")[0],0)
+T('S5 NEW items: CONFIRMED recorded, NOT A CANDIDATE not',psql("select string_agg(log_id::text,',' order by log_id) from debater_fault_ledger where item like 'NEW %'")[0],'30368,30369,32054')
 # 2. plants
 base=dict(debate_id=res[0]['id'],run_token=res[0]['run_token'],seat='close enforcer',seat_role='panel',kind='enforcer_check',rule='E-CLOSECON',flagged_line='CHALLENGER DR4: "x"',response_line='CLOSE-CONTRADICTION: X1 -- CHALLENGER -- LINK 2 -- CONFIRMED -- ...')
 def plant(i,**kw):

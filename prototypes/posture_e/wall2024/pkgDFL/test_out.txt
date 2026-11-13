@@ -1,11 +1,11 @@
 apply: BEGIN CREATE TABLE COMMENT CREATE FUNCTION CREATE FUNCTION CREATE FUNCTION CREAT
-OK   S1 stored rows replayed: ledger rows => 28 
-OK   S2 same log ids => 28737,28739,29380,29896,29897,29899,29900,29901,30363,30366,30367,30371,32053,32498,32499,32500,32501,32502,32504,32505,32506,32507,33364,33365,33367,33368,33369,33957 
+OK   S1 stored rows replayed: ledger rows => 31 
+OK   S2 same log ids => 28737,28739,29380,29896,29897,29899,29900,29901,30363,30366,30367,30368,30369,30371,32053,32054,32498,32499,32500,32501,32502,32504,32505,32506,32507,33364,33365,33367,33368,33369,33957 
 OK   S3 rows with no model => 0 
-   by side/source: CHALLENGER judge contradiction enforcer 1; DEFENDER close enforcer 19; DEFENDER judge contradiction enforcer 8
-   report: anthropic/claude-opus-5.5 runs 35554 n_runs 1 lines 1 links 1; anthropic/claude-sonnet-5.5 runs 34726,34852,35067,35296,35526,35554,35856,36156 n_runs 8 lines 27 links 17
+   by side/source: CHALLENGER close enforcer 1; CHALLENGER judge contradiction enforcer 1; DEFENDER close enforcer 21; DEFENDER judge contradiction enforcer 8
+   report: anthropic/claude-opus-5.5 runs 35526,35554 n_runs 2 lines 2 links 2; anthropic/claude-sonnet-5.5 runs 34726,34852,35067,35296,35526,35554,35856,36156 n_runs 8 lines 29 links 18
 OK   S4 36156 row => DEFENDER|6|anthropic/claude-sonnet-5.5|close enforcer|X2 DEFENDER LINK 6 
-OK   S5 NEW line of the post-panel call (NOT A CANDIDATE) not recorded => 0 
+OK   S5 NEW items: CONFIRMED recorded, NOT A CANDIDATE not => 30368,30369,32054 
 OK   P1 challenger confirmed is recorded => 1 
 OK   P1b its model is the challenger model => anthropic/claude-opus-5.5 
 OK   P2 NOT A CONTRADICTION not recorded => 0 
@@ -29,8 +29,8 @@ OK   K3 struck row leaves the report => 0
 OK   K4 a struck row is kept when the log row changes => 1 
 OK   F1 ledger write fails: engine log row still inserted, warning raised => 1|0|warning 
 OK   W1 trigger WHEN clause => t 
-OK   B1 optional backfill gives the same stored rows => 27 
-OK   B2 backfill twice adds nothing => 27 
+OK   B1 optional backfill gives the same stored rows => 30 
+OK   B2 backfill twice adds nothing => 30 
 OK   R1 revert leaves no object => 0 
 OK   R2 after revert the engine insert works => 1 
 32 of 32

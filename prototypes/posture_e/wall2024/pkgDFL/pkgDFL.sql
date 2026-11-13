@@ -29,14 +29,14 @@ COMMENT ON TABLE public.debater_fault_ledger IS 'pkgDFL: confirmed closing contr
 CREATE OR REPLACE FUNCTION public.dfl_counted(k text, r text, tok text, it text, why text)
  RETURNS boolean LANGUAGE sql IMMUTABLE AS $f$
  SELECT coalesce(k = 'enforcer_check' AND r = 'E-CLOSECON' AND tok ~ '^ODV1-\d+-'
-   AND it ~ '^[XJ]\d+ (DEFENDER|CHALLENGER) LINK \d+$' AND why ~ '^CONFIRMED( --|$)', false) $f$;
+   AND it ~ '^(?:[XJ]\d+|NEW) (DEFENDER|CHALLENGER) LINK \d+$' AND why ~ '^CONFIRMED( --|$)', false) $f$;
 
 CREATE OR REPLACE FUNCTION public.dfl_put(l public.debate_enforcer_log)
  RETURNS void LANGUAGE plpgsql SECURITY DEFINER SET search_path TO 'public' AS $f$
 DECLARE v_side text; v_eng text; v_model text;
 BEGIN
  IF public.dfl_counted(l.kind, l.rule, l.run_token, l.item, l.cure_reason) THEN
-  v_side := (regexp_match(l.item, '^[XJ]\d+ (DEFENDER|CHALLENGER) LINK'))[1];
+  v_side := (regexp_match(l.item, '^(?:[XJ]\d+|NEW) (DEFENDER|CHALLENGER) LINK'))[1];
   SELECT CASE v_side WHEN 'DEFENDER' THEN r.defender_engine ELSE r.challenger_engine END,
          CASE v_side WHEN 'DEFENDER' THEN r.defender_model  ELSE r.challenger_model  END
     INTO v_eng, v_model FROM public.debate_results r
