@@ -19,7 +19,7 @@ d+=ed('Close Enforcer Record',[
 ["const row={id:m[1].replace(/\\s+/g,'').toUpperCase(),side,",
  "const row={copy:rp.copy,id:m[1].replace(/\\s+/g,'').toUpperCase(),side,",'row copy'],
 ["const seen=new Set();const confirmed=[];",
- "if(__two)rows.forEach(x=>{if(x.status!=='CONFIRMED')return;if(rows.some(y=>y!==x&&y.copy!==x.copy&&y.status==='CONFIRMED'&&y.side===x.side&&y.link===x.link))return;x.status='NOT CONFIRMED (one check of two)';x.note=(x.note?x.note+'; ':'')+'the other independent check did not confirm '+x.side+' LINK '+x.link+' (pkgTWC: two confirmations needed)';});\nconst seen=new Set();const confirmed=[];",'two'],
+ "if(__two)rows.forEach(x=>{if(x.status!=='CONFIRMED')return;if(rows.some(y=>y!==x&&y.copy!==x.copy&&y.status==='CONFIRMED'&&y.side===x.side&&y.link===x.link))return;x.status='NOT CONFIRMED (one check of two)';x.note=(x.note?x.note+'; ':'')+'the other independent check did not confirm '+x.side+' LINK '+x.link+' (pkgTWC: two confirmations needed)';});if(__two)rows.forEach(x=>{if(x.copy===2&&x.status==='CONFIRMED')x.status='CONFIRMED (second check)';}); /* W2: one ledger row per link */\nconst seen=new Set();const confirmed=[];",'two'],
 ["const no_answer=cands.map(c=>c.id).filter(id=>!answered.has(id));",
  "const no_answer=[...new Set(cands.map(c=>c.id))].filter(id=>!answered.has(id));",'no_answer']]);
 const s=JSON.stringify(raw);fs.writeFileSync(fout,s);console.log('code +'+d,'sha256',require('crypto').createHash('sha256').update(s).digest('hex').slice(0,16));
