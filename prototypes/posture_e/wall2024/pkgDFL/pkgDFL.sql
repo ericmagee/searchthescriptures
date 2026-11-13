@@ -81,7 +81,7 @@ CREATE VIEW public.dfl_report AS
         array_agg(DISTINCT run ORDER BY run) AS runs,
         count(DISTINCT run) AS n_runs,
         count(*) AS n_lines,
-        count(DISTINCT (run, link)) AS n_links
+        count(DISTINCT (run, side, link)) AS n_links
    FROM public.debater_fault_ledger WHERE NOT struck GROUP BY debater_model, fault_kind;
 
 ALTER TABLE public.debater_fault_ledger ENABLE ROW LEVEL SECURITY;
@@ -90,4 +90,6 @@ GRANT SELECT ON public.debater_fault_ledger, public.dfl_report TO berean_ro;
 GRANT SELECT, INSERT, UPDATE ON public.debater_fault_ledger TO lab_seat;
 GRANT USAGE, SELECT ON SEQUENCE public.debater_fault_ledger_id_seq TO lab_seat;
 GRANT SELECT ON public.dfl_report TO lab_seat;
+REVOKE ALL ON FUNCTION public.dfl_put(public.debate_enforcer_log), public.dfl_strike(integer, text, text, text, text), public.dfl_from_log() FROM PUBLIC, anon, authenticated;
+GRANT EXECUTE ON FUNCTION public.dfl_put(public.debate_enforcer_log), public.dfl_strike(integer, text, text, text, text) TO lab_seat, service_role;
 COMMIT;
