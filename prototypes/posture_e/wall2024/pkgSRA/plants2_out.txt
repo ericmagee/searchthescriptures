@@ -6,4 +6,5 @@ PASS Q5 a line holding the answer in its middle not served
 PASS Q6 the good line is still served
 PASS Q7 the good line is still served beside echo lines
 PASS Q8 numbered charge line without "The inference" not served (W3, run 35296)
-8 of 8 pass
+PASS Q9 bold number line "**2.** ..." not served (W2)
+9 of 9 pass

@@ -13,4 +13,5 @@ T('Q5 a line holding the answer in its middle not served',!/So 7/.test(sv(R(['So
 T('Q6 the good line is still served',sv(R([])).includes('Luke 1:13'),sv(R([])));
 T('Q7 the good line is still served beside echo lines',sv(R(['MEANS [CR3] P1.1: "the stated source of the begetting is the Holy Ghost"','2. The inference that the stated source of the begetting is the Holy Ghost alone fails.'])).includes('Luke 1:13'));
 T('Q8 numbered charge line without "The inference" not served (W3, run 35296)',!/charge/.test(sraSame(R(['3. The charge: "the stated source of the begetting is the Holy Ghost" stands against the defender.']),'Matthew 1:20',MEANS,ANS,'')));
+T('Q9 bold number line "**2.** ..." not served (W2)',!/charge/.test(sraSame(R(['**2.** The charge: "the stated source of the begetting is the Holy Ghost" stands against the defender.']),'Matthew 1:20',MEANS,ANS,'')));
 console.log(ok+' of '+n+' pass');
