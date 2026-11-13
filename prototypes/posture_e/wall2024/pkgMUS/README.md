@@ -26,3 +26,12 @@ insert into model_config (seat, provider, role, api_model, endpoint, max_tokens,
   Rows missing: ember and spark drop out of alternates and the reserve becomes null (live: grok). Accept Build throws on a seat with no row. So the rows go first.
 - Packing: 43 stubs, only Alternate Build and Early Alternate Build throw (mapcheck_out.txt).
 - Not checked: a paid call to either model (W4 check owed, as for hydrogen). ember and spark are alternates only; they are not debater engines.
+
+## Rev 2 (operator 21:08 CST 11-12, W4 thread: "add gemini 3.8 flash as an alternate before grok"; spark last per ASK 164)
+- build2.cjs on s173. Output /mnt/project-files/wall2024/parent_s173_MUS2.json (sha256 1bb81519a28b4679); library sha 5d6ceab43ac76e87.
+- Order: ember, hydrogen, gemini, grok, argon, haiku, spark. Seat gemini (google/gemini-3.8-flash) and its row are already live; no new row for it.
+- OpenRouter (endpoints listing): 7 Google endpoints, context 1,048,576, max completion 65,536 on every endpoint; 0.75 USD in / 3.75 USD out per million (standard), reasoning billed as output. Supports reasoning and reasoning_effort; the page states no default. W4 reports: reasoning mandatory, efforts high/medium/low, default medium (W4's reading, not on the pages I read).
+- Effort: gemini gets effort low ONLY when the request key does not end ":defender" or ":challenger", so debater turns by gemini are unchanged; panel, reserve, alternate and acceptance calls get low. A body that sets reasoning keeps it.
+- SIZE (MEASURED): code +2,985 over s173 (+2,159 over rev 1; Init Seats +114, Resolve Seats +38, Accept Build +53, the rest the 15 finisher copies); prompt text 0.
+- test2.cjs: 15 copies, 269 of 269 (rev 1 fails 45, the gemini judge-side cases; live s173 fails 75). sim2.cjs: sim2_out.txt. Packing: 43 stubs, 2 throwing (mapcheck_rev2_out.txt).
+- Rows: the ember and spark rows above only, active BEFORE the code.
