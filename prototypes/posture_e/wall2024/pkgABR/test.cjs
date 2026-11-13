@@ -1,4 +1,4 @@
-// pkgABR rev 2 unit tests on ABS.check of parent and target "Send Back Build". node test.cjs <parent json> <target json>
+// pkgABR rev 3 unit tests on ABS.check of parent and target "Send Back Build". node test.cjs <parent json> <target json>
 const fs=require('fs');const {load}=require(__dirname+'/mods.cjs');const [,,P,T]=process.argv;
 const wf=f=>{const W=JSON.parse(fs.readFileSync(f,'utf8'));return (W.nodes||W.workflow.nodes).find(n=>n.name==='Shared Library').parameters.jsCode;};
 const O=load(wf(P),'Send Back Build'),N=load(wf(T),'Send Back Build');
@@ -18,6 +18,7 @@ tp('luna 35380: the answer\'s own line in the round names Jeremiah 22:30: clears
 t('luna 35380 with no transcript: still raises (the line names no verse)',LUNA,true,true);
 tp('luna 35380, transcript line that names no verse: still raises',LUNA,PT.replace('Those are the words of Jeremiah 22:30, so','So'),true,true);
 t('answer names Jeremiah 22:30 itself: clears',L('Haggai 2:23',"Haggai 2:23 says nothing of 'sitting upon the throne'. Jeremiah 22:30 bars the seat."),true,false);
+t('W2 5989: the reason names Jeremiah 22:30 only to dismiss it: still raises',L('Haggai 2:23',"The verse does not state 'upon the throne of David, and ruling'.","the answer meets it; Jeremiah 22:30 is not in play."),true,true);
 t('W4 ABR1: words of Luke 3:31 not named: still raises',L('Luke 1:27','The verse does not state \'the son of David\' of the child.'),true,true);
 t('W4 ABR2: 3 common words not named: still raises',L('Luke 1:27','It does not say \'of the house\' here.'),true,true);
 t('named verse that does not hold the words: still raises',L('Luke 1:27','It does not state \'the son of David\'; see Romans 1:3.'),true,true);
