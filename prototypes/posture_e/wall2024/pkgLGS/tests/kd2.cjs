@@ -1,0 +1,11 @@
+const fs=require('fs');const {harness}=require('/home/claude/searchthescriptures/prototypes/posture_e/wall2024/pkgGSL/harness.cjs');
+const S=process.env.LGS_DIR||(__dirname+'/out/');const U=process.env.LIVE_UN||(__dirname+'/live_un/');const wrap=f=>'return (async()=>{\n'+fs.readFileSync(f,'utf8')+'\n})();';
+const okNote=(L,N,mk)=>{if(L===N)return 'same';const i=N.indexOf(mk);if(i<0)return 'DIFF';return (N.slice(0,i)===L.slice(0,i)&&N.endsWith(L.slice(i)))?'note':'DIFF';};
+(async()=>{const [run,pl]=process.argv.slice(2);const live=(await harness(run)(wrap(U+'Gate_Record.js'),'Gate Call openrouter'))[0].json;const b=require(S+'out_'+run+'_'+pl+'.json')[0].json;
+ const nb=b.gate_rows.filter(r=>!/^LATE /.test(r.item));let rs={};if(nb.length!==live.gate_rows.length)rs.LEN=1;
+ live.gate_rows.forEach((r,i)=>{const n=nb[i];const o={...n,cure_reason:r.cure_reason};const k=JSON.stringify(o)!==JSON.stringify(r)?'DIFF':okNote(r.cure_reason,n.cure_reason,' [late gate (pkgLGS):');rs[k]=(rs[k]||0)+1;});
+ let vs={};live.bodies.forEach((x,i)=>{const X=JSON.parse(x),Y=JSON.parse(b.bodies[i]);const a=X.payload.verdict_raw.split('\n'),c=Y.payload.verdict_raw.split('\n').filter(l=>!/^\[AUDIT v38: E-GATE LATE/.test(l));
+  if(a.length!==c.length)vs.LEN=(vs.LEN||0)+1;a.forEach((l,k)=>{const t=okNote(l,c[k],' (late gate (pkgLGS):');vs[t]=(vs[t]||0)+1;});Y.payload.verdict_raw=X.payload.verdict_raw;if(JSON.stringify(X)!==JSON.stringify(Y))vs.BODY=(vs.BODY||0)+1;});
+ const g=JSON.parse(JSON.stringify(b.gate));g.seats.forEach(s=>delete s.late);
+ const other=Object.keys(b).filter(k=>!['bodies','gate','gate_rows'].includes(k)&&JSON.stringify(b[k])!==JSON.stringify(live[k]));
+ console.log(run,pl,'rows',JSON.stringify(rs),'| verdict lines',JSON.stringify(vs),'| gate eq w/o late',JSON.stringify(g)===JSON.stringify(live.gate),'| other keys differ',other.join(',')||'none','| LATE rows',b.gate_rows.length-nb.length);})();

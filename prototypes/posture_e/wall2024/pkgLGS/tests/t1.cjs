@@ -1,0 +1,11 @@
+const fs=require('fs');const {harness}=require('/home/claude/searchthescriptures/prototypes/posture_e/wall2024/pkgGSL/harness.cjs');
+const S=process.env.LGS_DIR||(__dirname+'/out/');const U=process.env.LIVE_UN||(__dirname+'/live_un/');
+const wrap=f=>'return (async()=>{\n'+fs.readFileSync(f,'utf8')+'\n})();';
+const cases=[['33644',''],['33627',''],['33731',''],['33461',''],['33461','Alt ']];
+(async()=>{for(const [run,P] of cases){const n=(P+'Gate Record').replace(/ /g,'_'),lb=(P+'Late Gate Build').replace(/ /g,'_');
+ const live=await harness(run)(wrap(U+''+n+'.js'),P+'Gate Call openrouter');
+ const neu=await harness(run)(wrap(S+'new/'+n+'.js'),P+'Late Gate Needed?');
+ const L=await harness(run)(wrap(S+'new/'+lb+'.js'),P+'Gate Call openrouter');
+ const eq=JSON.stringify(live)===JSON.stringify(neu);
+ console.log(run,P||'panel','GR new==live (no late call):',eq,'| LGB:',L.map(x=>x.json.lgs_send?('send '+x.json.seat+' items '+x.json.items.map(i=>i.gid+'<'+i.hang.join('/')+' '+i.kind+' '+i.src).join(', ')+' msg '+x.json.msg.length):('skip: '+x.json.lgs_why)).join(' ; '));
+ if(L[0].json.lgs_send)fs.writeFileSync(S+'lgb_'+run+'_'+(P||'panel').trim()+'.json',JSON.stringify(L,null,1));}})().catch(e=>console.log('ERR',e.stack));

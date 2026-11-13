@@ -1,0 +1,12 @@
+const fs=require('fs');const {harness}=require('/home/claude/searchthescriptures/prototypes/posture_e/wall2024/pkgGSL/harness.cjs');
+const S=process.env.LGS_DIR||(__dirname+'/out/');const U=process.env.LIVE_UN||(__dirname+'/live_un/');const wrap=f=>'return (async()=>{\n'+fs.readFileSync(f,'utf8')+'\n})();';
+const run=process.argv[2],P=process.argv[3]||'',tag=(P||'panel').trim();const L=JSON.parse(fs.readFileSync(S+'lgb_'+run+'_'+tag+'.json'));
+const plants=JSON.parse(fs.readFileSync(process.argv[4]));
+(async()=>{const live=await harness(run)(wrap(U+''+(P+'Gate Record').replace(/ /g,'_')+'.js'),P+'Gate Call openrouter');
+ const sum=o=>{const j=o[0].json;return JSON.stringify(j.gate.seats.map(s=>({seat:s.seat,cured:s.cured,uncured_counted:s.uncured_counted,fresh:s.fresh,late:s.late})));};
+ console.log('LIVE seats',sum(live));
+ for(const [name,txt] of Object.entries(plants)){const over={[P+'Late Gate Build']:L,[P+'Late Gate Call openrouter']:[{json:{choices:[{message:{content:txt}}]}}]};
+  const o=await harness(run,over)(wrap(S+'new/'+(P+'Gate Record').replace(/ /g,'_')+'.js'),P+'Late Gate Call openrouter');const j=o[0].json;
+  console.log('\n== plant',name);console.log('seats',sum(o));
+  (j.gate_rows||[]).filter(r=>/^LATE /.test(r.item)||/late gate|pkgLGS/.test(r.cure_reason||'')).forEach(r=>console.log(' ROW',r.seat,r.item,r.cure_status,'|',String(r.cure_reason).slice(0,260)));
+  fs.writeFileSync(S+'out_'+run+'_'+name+'.json',JSON.stringify(o,null,1));}})().catch(e=>console.log('ERR',e.stack));
