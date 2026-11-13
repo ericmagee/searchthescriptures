@@ -22,6 +22,9 @@ const cases = [
   ['challenger cites the defender round CR4 as its earlier round', L('CHALLENGER', 1, 'CR4', A1, 'DR4', d4[0]), 'NOT CONFIRMED (form)', 'NOT CONFIRMED (form)'],
   ['earlier CR4, closing CR3 (closing must be round 4)', L('DEFENDER', 4, 'CR4', A1, 'CR3', A2), 'NOT CONFIRMED (form)', 'NOT CONFIRMED (form)'],
   ['challenger DR4 -> DR4, two different stored sentences', L('CHALLENGER', (LK.CHALLENGER || [1])[0], 'DR4', d4[0], 'DR4', d4[1]), 'NOT CONFIRMED (form)', 'CONFIRMED'],
+  ['rev 2: run 36677 J2 reversed (EARLIER quote stands after the CLOSING one in CR4)', L('DEFENDER', 4, 'CR4', A2, 'CR4', A1), 'NOT CONFIRMED (form)', 'NOT CONFIRMED (form)'],
+  ['rev 2: challenger DR4 pair reversed', L('CHALLENGER', (LK.CHALLENGER || [1])[0], 'DR4', d4[1], 'DR4', d4[0]), 'NOT CONFIRMED (form)', 'NOT CONFIRMED (form)'],
+  ['rev 2: in-order pair with an ellipsis in the earlier quote', L('DEFENDER', 4, 'CR4', 'I do not rest any link ... on a verse whose row I granted.', 'CR4', A2), 'NOT CONFIRMED (form)', 'CONFIRMED'],
   ['CR3 -> CR4 as live (J1 shape, answered CONFIRMED)', L('DEFENDER', 5, 'CR3', "I grant the flesh is David's seed.", 'CR4', A1), 'CONFIRMED', 'CONFIRMED'],
   ['close enforcer form "ROUND 4" for both (closing enforcer only)', L('DEFENDER', 4, 'ROUND 4', A1, 'ROUND 4', A2), 'NOT CONFIRMED (form)', 'CONFIRMED', 'close'],
 ];
