@@ -11,7 +11,7 @@ Builder: W1. Operator approval: 2026-11-13 02:59 CST, W3 thread, his item 2 ("ap
 
 Without 2 and 3, Sight 266 is 12th and falls past the limit.
 
-Revert: the three revert_*.sql files. The revert function files equal live; md5 of the live definitions is 337bb576 for the arsenal and 7fd09f8e for sight links.
+Revert: the five revert_*.sql files, in this order: revert_debate_arsenal_guarded.sql, revert_debate_sight_links.sql, revert_guard8.sql, revert_sight266_passage.sql, then revert_9_guard_check.sql last. The function files equal live (md5 337bb576 arsenal, 7fd09f8e sight links).
 
 ## Checks
 - All 12 sights are production_safe.
