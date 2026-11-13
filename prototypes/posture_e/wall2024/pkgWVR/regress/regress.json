@@ -1,0 +1,3847 @@
+[
+ {
+  "src": "plant.cjs",
+  "name": "0 control (35379 form)",
+  "F": {
+   "cr2": "I withdraw Galatians 4:4 as an exclusion witness.",
+   "cr3": "",
+   "cr4": "## D6\nGalatians 4:4 is the third layer of D6.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 6"
+ },
+ {
+  "src": "plant.cjs",
+  "name": "1 close excludes it: \"rests on Luke 3:23, not on Galatians 4:4\"",
+  "F": {
+   "cr2": "I withdraw Galatians 4:4 as an exclusion witness.",
+   "cr3": "",
+   "cr4": "## D6\nD6 rests on Luke 3:23, not on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant.cjs",
+  "name": "2 close reports the opponent: \"The challenger says D6 rests on Galatians 4:4; it does not.\"",
+  "F": {
+   "cr2": "I withdraw Galatians 4:4 as an exclusion witness.",
+   "cr3": "",
+   "cr4": "## D6\nThe challenger says D6 rests on Galatians 4:4; it does not.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant.cjs",
+  "name": "3 close names the opponent's footing: \"C2 rests on Galatians 4:4, which I answered.\"",
+  "F": {
+   "cr2": "I withdraw Galatians 4:4 as an exclusion witness.",
+   "cr3": "",
+   "cr4": "## D6\nC2 rests on Galatians 4:4, which I answered.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant.cjs",
+  "name": "4 withdrawal scoped to another link",
+  "F": {
+   "cr2": "I withdraw Matthew 1:20 from D1.",
+   "cr3": "",
+   "cr4": "## D4\nD4 stands on Matthew 1:20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none or enforcer"
+ },
+ {
+  "src": "plant.cjs",
+  "name": "5 book prefix: John 3:6 withdrawn, 1 John 3:6 cited",
+  "F": {
+   "cr2": "",
+   "cr3": "I drop John 3:6 from the chain.",
+   "cr4": "## D2\nThis stands on 1 John 3:6.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant.cjs",
+  "name": "6 challenger quotes the defender's withdrawal in its own round",
+  "F": {
+   "cr2": "",
+   "cr3": "",
+   "cr4": "",
+   "gr2": "",
+   "dr3": "The defender wrote: \"I withdraw Galatians 4:4 as an exclusion witness.\" I press it.",
+   "dr4": "## C2\nC2 rests on Galatians 4:4 and Romans 1:3."
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant.cjs",
+  "name": "7 pronoun withdrawal (33846, 33083 form)",
+  "F": {
+   "cr2": "",
+   "cr3": "1 Chronicles 28:6 is spoken to a father about a son he begat, and it does not carry over, so I drop it.",
+   "cr4": "## D5\nThis stands on [L1] 1 Chronicles 28:6 and Matthew 1:20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 5"
+ },
+ {
+  "src": "plant.cjs",
+  "name": "8 second verse of a list (32924 form)",
+  "F": {
+   "cr2": "I withdraw Genesis 3:15 and Galatians 4:4 as load-bearing for the exclusion.",
+   "cr3": "",
+   "cr4": "- D4 rests on Isaiah 7:14, Matthew 1:23, and Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 4"
+ },
+ {
+  "src": "plant.cjs",
+  "name": "9 \"alone\" elsewhere in the withdrawal sentence",
+  "F": {
+   "cr2": "I withdraw Galatians 4:4, since the woman alone is named there.",
+   "cr3": "",
+   "cr4": "## D6\nGalatians 4:4 is the third layer of D6.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 6"
+ },
+ {
+  "src": "plant.cjs",
+  "name": "10 heading \"LINK 6\" without the side letter",
+  "F": {
+   "cr2": "I withdraw Galatians 4:4 as an exclusion witness.",
+   "cr3": "",
+   "cr4": "LINK 6: KEPT\nThis stands on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 6"
+ },
+ {
+  "src": "plant.cjs",
+  "name": "11 bare reference in the close",
+  "F": {
+   "cr2": "I withdraw Matthew 1:20 as a footing.",
+   "cr3": "",
+   "cr4": "## D2\nThis stands on [L1] 1:20 and 1:18.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 2"
+ },
+ {
+  "src": "plant.cjs",
+  "name": "12 heading above is the other side's link, own link in sentence",
+  "F": {
+   "cr2": "I withdraw Galatians 4:4 as an exclusion witness.",
+   "cr3": "",
+   "cr4": "## Answer to C3\nD6 still stands on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 6"
+ },
+ {
+  "src": "plant.cjs",
+  "name": "13 past tense report: \"D6 rested on Galatians 4:4 until round 2; it now stands on Luke 3:23.\"",
+  "F": {
+   "cr2": "I withdraw Galatians 4:4 as an exclusion witness.",
+   "cr3": "",
+   "cr4": "## D6\nD6 rested on Galatians 4:4 until round 2; it now stands on Luke 3:23.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant.cjs",
+  "name": "14 withdrawn in [CR2], taken up again in [CR3] is still named",
+  "F": {
+   "cr2": "I withdraw Galatians 4:4 as an exclusion witness.",
+   "cr3": "D6 rests on Galatians 4:4 after all.",
+   "cr4": "## D6\nD6 stands on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 6"
+ },
+ {
+  "src": "plant.cjs",
+  "name": "15 \"I do not withdraw Galatians 4:4\"",
+  "F": {
+   "cr2": "I do not withdraw Galatians 4:4.",
+   "cr3": "",
+   "cr4": "## D6\nD6 stands on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant.cjs",
+  "name": "16 \"If I withdraw Galatians 4:4, the link still holds\" (conditional)",
+  "F": {
+   "cr2": "Even if I withdraw Galatians 4:4, the link holds.",
+   "cr3": "",
+   "cr4": "## D6\nD6 stands on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant.cjs",
+  "name": "17 \"The challenger asks that I withdraw Galatians 4:4. I keep it.\"",
+  "F": {
+   "cr2": "The challenger asks that I withdraw Galatians 4:4. I keep it.",
+   "cr3": "",
+   "cr4": "## D6\nD6 stands on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant2.cjs",
+  "name": "a own quoted phrase before the verb",
+  "F": {
+   "cr2": "I granted \"born of thee\" and I withdraw Galatians 4:4.",
+   "cr3": "",
+   "cr4": "## D6\nD6 stands on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 6"
+ },
+ {
+  "src": "plant2.cjs",
+  "name": "a2 one opening quote mark earlier (odd count: an apostrophe-style inch mark)",
+  "F": {
+   "cr2": "The 6\" rule aside, I withdraw Galatians 4:4.",
+   "cr3": "",
+   "cr4": "## D6\nD6 stands on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 6"
+ },
+ {
+  "src": "plant2.cjs",
+  "name": "b \"whether or not it matters, I withdraw\"",
+  "F": {
+   "cr2": "Whether or not it matters, I withdraw Galatians 4:4.",
+   "cr3": "",
+   "cr4": "## D6\nD6 stands on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 6"
+ },
+ {
+  "src": "plant2.cjs",
+  "name": "b2 \"The challenger presses Job 14:1, and I withdraw Galatians 4:4.\"",
+  "F": {
+   "cr2": "The challenger presses Job 14:1, and I withdraw Galatians 4:4.",
+   "cr3": "",
+   "cr4": "## D6\nD6 stands on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 6"
+ },
+ {
+  "src": "plant2.cjs",
+  "name": "b3 \"Since he asks, I withdraw Galatians 4:4.\"",
+  "F": {
+   "cr2": "Since he asks, I withdraw Galatians 4:4.",
+   "cr3": "",
+   "cr4": "## D6\nD6 stands on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 6"
+ },
+ {
+  "src": "plant2.cjs",
+  "name": "c \"alone\" in a later clause",
+  "F": {
+   "cr2": "I drop Galatians 4:4, since it speaks of the woman alone.",
+   "cr3": "",
+   "cr4": "## D6\nD6 stands on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 6"
+ },
+ {
+  "src": "plant2.cjs",
+  "name": "c2 \"I withdraw Galatians 4:4 alone\" (partial)",
+  "F": {
+   "cr2": "I withdraw Galatians 4:4 alone as proof.",
+   "cr3": "",
+   "cr4": "## D6\nD6 stands on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant2.cjs",
+  "name": "d close: \"The challenger has not answered that D6 rests on Galatians 4:4.\"",
+  "F": {
+   "cr2": "I withdraw Galatians 4:4.",
+   "cr3": "",
+   "cr4": "## D6\nThe challenger has not answered that D6 rests on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 6"
+ },
+ {
+  "src": "plant2.cjs",
+  "name": "e close: \"D6 rests on Galatians 4:4, not on tradition.\"",
+  "F": {
+   "cr2": "I withdraw Galatians 4:4.",
+   "cr3": "",
+   "cr4": "## D6\nD6 rests on Galatians 4:4, not on tradition.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 6"
+ },
+ {
+  "src": "plant2.cjs",
+  "name": "e2 close: \"D6 does not stand alone; it rests on Galatians 4:4.\"",
+  "F": {
+   "cr2": "I withdraw Galatians 4:4.",
+   "cr3": "",
+   "cr4": "## D6\nD6 does not stand alone; it rests on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 6"
+ },
+ {
+  "src": "plant2.cjs",
+  "name": "f close: \"D6 rested and still rests on Galatians 4:4.\"",
+  "F": {
+   "cr2": "I withdraw Galatians 4:4.",
+   "cr3": "",
+   "cr4": "## D6\nD6 rested and still rests on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 6"
+ },
+ {
+  "src": "plant2.cjs",
+  "name": "g list overreach: \"I withdraw Genesis 3:15, and I keep Galatians 4:4.\"",
+  "F": {
+   "cr2": "I withdraw Genesis 3:15, and I keep Galatians 4:4.",
+   "cr3": "",
+   "cr4": "## D6\nD6 stands on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant2.cjs",
+  "name": "g2 \"I withdraw Genesis 3:15 and keep Galatians 4:4.\"",
+  "F": {
+   "cr2": "I withdraw Genesis 3:15 and keep Galatians 4:4.",
+   "cr3": "",
+   "cr4": "## D6\nD6 stands on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant2.cjs",
+  "name": "g3 \"I drop Genesis 3:15, since Galatians 4:4 says it better.\"",
+  "F": {
+   "cr2": "I drop Genesis 3:15, since Galatians 4:4 says it better.",
+   "cr3": "",
+   "cr4": "## D6\nD6 stands on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant2.cjs",
+  "name": "g4 \"I drop Genesis 3:15 and Galatians 4:4 stays.\"",
+  "F": {
+   "cr2": "I drop Genesis 3:15 and Galatians 4:4 stays.",
+   "cr3": "",
+   "cr4": "## D6\nD6 stands on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant2.cjs",
+  "name": "h \"it\" = a phrase, verse earlier in the sentence (33083 Luke 1:27 class)",
+  "F": {
+   "cr2": "Galatians 4:4 stands; the \"born of a woman\" idiom is weaker, and I drop it.",
+   "cr3": "",
+   "cr4": "## D6\nD6 stands on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant2.cjs",
+  "name": "h2 \"them\" with two verses before",
+  "F": {
+   "cr2": "",
+   "cr3": "- Luke 1:36 and Luke 1:5: I do not rest on them.",
+   "cr4": "## D2\nD2 rests on Luke 1:5.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 2"
+ },
+ {
+  "src": "plant2.cjs",
+  "name": "h3 \"it\" takes the sentence before, which names a verse only to keep it",
+  "F": {
+   "cr2": "I keep Galatians 4:4 as stated. The Heli claim is another matter. I drop it.",
+   "cr3": "",
+   "cr4": "## D6\nD6 stands on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant2.cjs",
+  "name": "h4 \"it\" after an own-sentence verse kept: \"Galatians 4:4 I keep. The reading of Job I had, I drop it.\"",
+  "F": {
+   "cr2": "Galatians 4:4 I keep. I drop it only as to the reading of Job.",
+   "cr3": "",
+   "cr4": "## D6\nD6 stands on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant2.cjs",
+  "name": "i range in the withdrawal over 20 verses",
+  "F": {
+   "cr2": "I drop Matthew 1:1-25 as a single witness.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Matthew 1:25.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 1"
+ },
+ {
+  "src": "plant2.cjs",
+  "name": "j abbreviation prefix clash: \"Mat\" = Matthew; withdrawn Mark 1:1? prefix \"Mar\"",
+  "F": {
+   "cr2": "I withdraw Mark 1:1.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Mary 1:1 and Mar. 1:1.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 1"
+ },
+ {
+  "src": "plant2.cjs",
+  "name": "j2 prefix clash: withdrawn \"Judges 5:1\", close \"Jude 5:1\"? (Jud)",
+  "F": {
+   "cr2": "I withdraw Judges 1:5.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Jude 1:5.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant2.cjs",
+  "name": "j3 prefix clash: withdrawn \"Philemon 1:5\", close \"Philippians 1:5\"",
+  "F": {
+   "cr2": "I withdraw Philemon 1:5.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Philippians 1:5.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant2.cjs",
+  "name": "k challenger side with own link",
+  "F": {
+   "cr2": "",
+   "cr3": "",
+   "cr4": "",
+   "gr2": "",
+   "dr3": "I withdraw Jeremiah 22:30.",
+   "dr4": "## C3\nC3 rests on Jeremiah 22:30."
+  },
+  "exp": "C LINK 3"
+ },
+ {
+  "src": "plant2.cjs",
+  "name": "l close cites a range holding the verse",
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Matthew 1:18-25.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 1"
+ },
+ {
+  "src": "plant2.cjs",
+  "name": "m opponent mentioned after the verb only",
+  "F": {
+   "cr2": "I withdraw Galatians 4:4.",
+   "cr3": "",
+   "cr4": "## D6\nD6 rests on Galatians 4:4, which the challenger never answered.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 6"
+ },
+ {
+  "src": "plant2.cjs",
+  "name": "n defender close names its link and the opponent link",
+  "F": {
+   "cr2": "I withdraw Galatians 4:4.",
+   "cr3": "",
+   "cr4": "## D6 vs C2\nAgainst C2, D6 stands on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 6"
+ },
+ {
+  "src": "plant2.cjs",
+  "name": "o \"Against the challenger, D6 stands on Galatians 4:4.\"",
+  "F": {
+   "cr2": "I withdraw Galatians 4:4.",
+   "cr3": "",
+   "cr4": "## D6\nAgainst the challenger, D6 stands on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 6"
+ },
+ {
+  "src": "plant3.cjs",
+  "name": "1 true condition before a comma: \"If the challenger shows a row, I withdraw Galatians 4:4.\"",
+  "F": {
+   "cr2": "If the challenger shows a row, I withdraw Galatians 4:4.",
+   "cr3": "",
+   "cr4": "## D6\nD6 stands on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant3.cjs",
+  "name": "2 \"Should that fail, I would withdraw Galatians 4:4.\"",
+  "F": {
+   "cr2": "Should that fail, I would withdraw Galatians 4:4.",
+   "cr3": "",
+   "cr4": "## D6\nD6 stands on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant3.cjs",
+  "name": "3 \"Unless he answers, I withdraw nothing; Galatians 4:4 stands.\"",
+  "F": {
+   "cr2": "Unless he answers, I withdraw nothing; Galatians 4:4 stands.",
+   "cr3": "",
+   "cr4": "## D6\nD6 stands on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant3.cjs",
+  "name": "4 condition after: \"I withdraw Galatians 4:4 if he shows a row.\"",
+  "F": {
+   "cr2": "I withdraw Galatians 4:4 if he shows a row.",
+   "cr3": "",
+   "cr4": "## D6\nD6 stands on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant3.cjs",
+  "name": "5 word in verse, then verse withdrawn by name",
+  "F": {
+   "cr2": "The word \"made\" in Galatians 4:4 does not carry it. I withdraw Galatians 4:4.",
+   "cr3": "",
+   "cr4": "## D6\nD6 stands on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 6"
+ },
+ {
+  "src": "plant3.cjs",
+  "name": "6 word in verse then \"it\" (the word)",
+  "F": {
+   "cr2": "The word \"made\" in Galatians 4:4 is weak, and I drop it.",
+   "cr3": "",
+   "cr4": "## D6\nD6 stands on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant3.cjs",
+  "name": "7 verse subject then \"it\" same clause",
+  "F": {
+   "cr2": "Galatians 4:4 does not carry the point and I withdraw it.",
+   "cr3": "",
+   "cr4": "## D6\nD6 stands on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 6"
+ },
+ {
+  "src": "plant3.cjs",
+  "name": "8 verse, comma, \"I withdraw it\" (own clause rule)",
+  "F": {
+   "cr2": "As to Galatians 4:4, I withdraw it.",
+   "cr3": "",
+   "cr4": "## D6\nD6 stands on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 6"
+ },
+ {
+  "src": "plant3.cjs",
+  "name": "9 bold verse heading then next sentence it",
+  "F": {
+   "cr2": "**Galatians 4:4.** I withdraw it as a witness.",
+   "cr3": "",
+   "cr4": "## D6\nD6 stands on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 6"
+ },
+ {
+  "src": "plant3.cjs",
+  "name": "10 bold heading, next sentence about a phrase",
+  "F": {
+   "cr2": "**Luke 1:27.** The clause \"of the house of David\" I leave. I drop it as proof of Mary.",
+   "cr3": "",
+   "cr4": "## D2\nD2 stands on Luke 1:27.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant3.cjs",
+  "name": "11 colon after verse, keeps",
+  "F": {
+   "cr2": "",
+   "cr3": "Luke 1:5: I rest on it.",
+   "cr4": "## D2\nD2 rests on Luke 1:5.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant3.cjs",
+  "name": "12 colon after verse, withdraws",
+  "F": {
+   "cr2": "",
+   "cr3": "Luke 1:5: withdrawn.",
+   "cr4": "## D2\nD2 rests on Luke 1:5.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 2"
+ },
+ {
+  "src": "plant3.cjs",
+  "name": "13 staying verse first: \"Galatians 4:4 stays and I drop Genesis 3:15.\" close on Gen",
+  "F": {
+   "cr2": "Galatians 4:4 stays and I drop Genesis 3:15.",
+   "cr3": "",
+   "cr4": "## D6\nD6 stands on Genesis 3:15.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 6"
+ },
+ {
+  "src": "plant3.cjs",
+  "name": "14 \"Genesis 3:15 and Galatians 4:4 stay withdrawn.\"",
+  "F": {
+   "cr2": "Genesis 3:15 and Galatians 4:4 stay withdrawn.",
+   "cr3": "",
+   "cr4": "## D6\nD6 stands on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 6"
+ },
+ {
+  "src": "plant3.cjs",
+  "name": "15 short name: \"Gal. 4:4\" withdrawn, close full",
+  "F": {
+   "cr2": "I withdraw Gal. 4:4.",
+   "cr3": "",
+   "cr4": "## D6\nD6 stands on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 6"
+ },
+ {
+  "src": "plant3.cjs",
+  "name": "16 short name \"Phil. 2:7\" vs close Philemon 1:7",
+  "F": {
+   "cr2": "I withdraw Phil. 2:7.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Philemon 2:7.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant3.cjs",
+  "name": "17 \"Jn 1:14\" (not a prefix) vs John 1:14",
+  "F": {
+   "cr2": "I withdraw Jn 1:14.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on John 1:14.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 1"
+ },
+ {
+  "src": "plant3.cjs",
+  "name": "18 \"1 Jn 5:1\" vs \"1 John 5:1\"",
+  "F": {
+   "cr2": "I withdraw 1 Jn 5:1.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on 1 John 5:1.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 1"
+ },
+ {
+  "src": "plant3.cjs",
+  "name": "19 John vs 1 John must not cross",
+  "F": {
+   "cr2": "I withdraw John 5:1.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on 1 John 5:1.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant3.cjs",
+  "name": "20 opponent quoted in own round: The challenger says \"I withdraw Galatians 4:4\".",
+  "F": {
+   "cr2": "The challenger says \"I withdraw Galatians 4:4\". I do not.",
+   "cr3": "",
+   "cr4": "## D6\nD6 stands on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant3.cjs",
+  "name": "21 semicolon then it",
+  "F": {
+   "cr2": "Galatians 4:4 was my third layer; I withdraw it.",
+   "cr3": "",
+   "cr4": "## D6\nD6 stands on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 6"
+ },
+ {
+  "src": "plant3.cjs",
+  "name": "22 close: question form \"Does D6 rest on Galatians 4:4? No.\"",
+  "F": {
+   "cr2": "I withdraw Galatians 4:4.",
+   "cr3": "",
+   "cr4": "## D6\nDoes D6 rest on Galatians 4:4? No. It rests on Romans 1:3.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant3.cjs",
+  "name": "23 challenger side",
+  "F": {
+   "cr2": "",
+   "cr3": "",
+   "cr4": "",
+   "gr2": "I withdraw Matthew 1:16 as a witness.",
+   "dr3": "",
+   "dr4": "## C2\nC2 stands on Matthew 1:16."
+  },
+  "exp": "C LINK 2"
+ },
+ {
+  "src": "plant3.cjs",
+  "name": "24 empty rounds",
+  "F": {
+   "cr2": "",
+   "cr3": "",
+   "cr4": "",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant4.cjs",
+  "name": "1",
+  "F": {
+   "cr2": "If he presses Job 14:1, I answer below; and I withdraw Galatians 4:4.",
+   "cr3": "",
+   "cr4": "## D6\nD6 stands on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 6"
+ },
+ {
+  "src": "plant4.cjs",
+  "name": "2",
+  "F": {
+   "cr2": "If he presses Job 14:1, I answer below. I withdraw Galatians 4:4.",
+   "cr3": "",
+   "cr4": "## D6\nD6 stands on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 6"
+ },
+ {
+  "src": "plant4.cjs",
+  "name": "3",
+  "F": {
+   "cr2": "Once more, I withdraw Galatians 4:4.",
+   "cr3": "",
+   "cr4": "## D6\nD6 stands on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 6"
+ },
+ {
+  "src": "plant4.cjs",
+  "name": "4",
+  "F": {
+   "cr2": "Until now I held it, but I withdraw Galatians 4:4.",
+   "cr3": "",
+   "cr4": "## D6\nD6 stands on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 6"
+ },
+ {
+  "src": "plant4.cjs",
+  "name": "5",
+  "F": {
+   "cr2": "Should I keep it? No, I withdraw Galatians 4:4.",
+   "cr3": "",
+   "cr4": "## D6\nD6 stands on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 6"
+ },
+ {
+  "src": "plant4.cjs",
+  "name": "6",
+  "F": {
+   "cr2": "And if he shows a row, I withdraw Galatians 4:4.",
+   "cr3": "",
+   "cr4": "## D6\nD6 stands on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant4.cjs",
+  "name": "7",
+  "F": {
+   "cr2": "But unless he answers, I do not withdraw Galatians 4:4.",
+   "cr3": "",
+   "cr4": "## D6\nD6 stands on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant4.cjs",
+  "name": "8",
+  "F": {
+   "cr2": "Provided he shows a row, I will withdraw Galatians 4:4.",
+   "cr3": "",
+   "cr4": "## D6\nD6 stands on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant4.cjs",
+  "name": "9",
+  "F": {
+   "cr2": "If I must choose, then I withdraw Galatians 4:4.",
+   "cr3": "",
+   "cr4": "## D6\nD6 stands on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant4.cjs",
+  "name": "10",
+  "F": {
+   "cr2": "If the challenger is right about Job 14:1, as I now grant he is, I withdraw Galatians 4:4.",
+   "cr3": "",
+   "cr4": "## D6\nD6 stands on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant4.cjs",
+  "name": "11",
+  "F": {
+   "cr2": "Galatians 4:4 was my third layer; I withdraw it as an exclusion witness.",
+   "cr3": "",
+   "cr4": "## D6\nD6 stands on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 6"
+ },
+ {
+  "src": "plant4.cjs",
+  "name": "12",
+  "F": {
+   "cr2": "Galatians 4:4 was my third layer; I now withdraw it.",
+   "cr3": "",
+   "cr4": "## D6\nD6 stands on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 6"
+ },
+ {
+  "src": "plant4.cjs",
+  "name": "13",
+  "F": {
+   "cr2": "Galatians 4:4 was my third layer; therefore I withdraw it.",
+   "cr3": "",
+   "cr4": "## D6\nD6 stands on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 6"
+ },
+ {
+  "src": "plant4.cjs",
+  "name": "14",
+  "F": {
+   "cr2": "Galatians 4:4 stands; the idiom is weaker; I withdraw it.",
+   "cr3": "",
+   "cr4": "## D6\nD6 stands on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant4.cjs",
+  "name": "15",
+  "F": {
+   "cr2": "Galatians 4:4 and Romans 1:3 were my layers; I withdraw them.",
+   "cr3": "",
+   "cr4": "## D6\nD6 stands on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 6"
+ },
+ {
+  "src": "plant4.cjs",
+  "name": "16",
+  "F": {
+   "cr2": "I keep Romans 1:3; I withdraw it only as to the word \"made\" in Galatians 4:4.",
+   "cr3": "",
+   "cr4": "## D6\nD6 stands on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant4.cjs",
+  "name": "17",
+  "F": {
+   "cr2": "Galatians 4:4 was my third layer; I do not withdraw it.",
+   "cr3": "",
+   "cr4": "## D6\nD6 stands on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant4.cjs",
+  "name": "18",
+  "F": {
+   "cr2": "The challenger cites Galatians 4:4; I withdraw it from my own chain.",
+   "cr3": "",
+   "cr4": "## D6\nD6 stands on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 6"
+ },
+ {
+  "src": "plant4.cjs",
+  "name": "19",
+  "F": {
+   "cr2": "He says \"Galatians 4:4 fails\"; I withdraw it.",
+   "cr3": "",
+   "cr4": "## D6\nD6 stands on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 6"
+ },
+ {
+  "src": "plant4.cjs",
+  "name": "20",
+  "F": {
+   "cr2": "If he shows a row, I withdraw Luke 1:27; so I withdraw it.",
+   "cr3": "",
+   "cr4": "## D6\nD6 stands on Luke 1:27.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant5.cjs",
+  "name": "1 bare ref in close, other book on the line",
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Luke 1:20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant5.cjs",
+  "name": "2 bare ref after another book: \"Luke 1:5 and 1:20\"",
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Luke 1:5 and 1:20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant5.cjs",
+  "name": "3 bare ref after own book: \"Matthew 1:18 and 1:20\"",
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Matthew 1:18 and 1:20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 1"
+ },
+ {
+  "src": "plant5.cjs",
+  "name": "4 bare ref, no book on the line",
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on 1:20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 1"
+ },
+ {
+  "src": "plant5.cjs",
+  "name": "5 a time or ratio \"at 1:20 odds\" no book",
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1\nThe ratio 1:20 is not my point; D1 stands on Luke 3:23.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant5.cjs",
+  "name": "7 close range not holding it",
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Matthew 1:21-25.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant5.cjs",
+  "name": "8 close list \"Matthew 1:16, 18, 20\"",
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Matthew 1:16, 18, 20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 1"
+ },
+ {
+  "src": "plant5.cjs",
+  "name": "9 close list not holding \"Matthew 1:16, 18, 21\"",
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Matthew 1:16, 18, 21.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant5.cjs",
+  "name": "10 other chapter same verse \"Matthew 2:20\"",
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Matthew 2:20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant5.cjs",
+  "name": "11 longer verse number \"Matthew 1:201\"/\"11:20\"",
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Matthew 11:20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant5.cjs",
+  "name": "12 short \"Mt 1:20\" in close",
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Mt 1:20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 1"
+ },
+ {
+  "src": "plant5.cjs",
+  "name": "13 short \"Mk 1:20\" in close",
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Mk 1:20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant5.cjs",
+  "name": "14 \"Mal 1:20\"/\"Mic\" vs Matthew",
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Mal. 1:20 and Mic. 1:20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant5.cjs",
+  "name": "15 \"Ma 1:20\"? ambiguous prefix (Matthew, Mark, Malachi)",
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Ma 1:20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant5.cjs",
+  "name": "16 numbered books: withdraw 1 Samuel 2:1, close 2 Samuel 2:1",
+  "F": {
+   "cr2": "I withdraw 1 Samuel 2:1.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on 2 Samuel 2:1.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant5.cjs",
+  "name": "17 withdraw \"1 Sam. 2:1\", close \"1 Samuel 2:1\"",
+  "F": {
+   "cr2": "I withdraw 1 Sam. 2:1.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on 1 Samuel 2:1.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 1"
+ },
+ {
+  "src": "plant5.cjs",
+  "name": "18 withdrawn range, close single inside",
+  "F": {
+   "cr2": "I withdraw Matthew 1:18-25.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Matthew 1:20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 1"
+ },
+ {
+  "src": "plant5.cjs",
+  "name": "19 withdrawn list with bare numbers",
+  "F": {
+   "cr2": "I withdraw Matthew 1:16, 18 and 20.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Matthew 1:18.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 1"
+ },
+ {
+  "src": "plant5.cjs",
+  "name": "20 \"I withdraw Matthew 1:20, not 1:18.\" close on 1:18",
+  "F": {
+   "cr2": "I withdraw Matthew 1:20, not 1:18.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Matthew 1:18.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant5.cjs",
+  "name": "21 close question then assertion",
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1\nDoes D1 rest on Matthew 1:20? Yes. D1 rests on Matthew 1:20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 1"
+ },
+ {
+  "src": "plant5.cjs",
+  "name": "22 close rhetorical question only",
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1\nWhy would D1 need Matthew 1:20? It rests on Luke 3:23.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant5.cjs",
+  "name": "23 close: opponent cites it",
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1\nThe challenger cites Matthew 1:20 against me. D1 rests on Luke 3:23.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant5.cjs",
+  "name": "24 close: \"I withdrew Matthew 1:20 and do not rest on it.\"",
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1\nI withdrew Matthew 1:20 and do not rest on it. D1 rests on Luke 3:23.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant5.cjs",
+  "name": "25 \"Matthew 1:20: withdrawn.\" then close",
+  "F": {
+   "cr2": "",
+   "cr3": "Matthew 1:20: withdrawn.",
+   "cr4": "## D1\nD1 stands on Matthew 1:20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 1"
+ },
+ {
+  "src": "plant5.cjs",
+  "name": "26 \"Matthew 1:20: not withdrawn.\"",
+  "F": {
+   "cr2": "",
+   "cr3": "Matthew 1:20: not withdrawn.",
+   "cr4": "## D1\nD1 stands on Matthew 1:20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant5.cjs",
+  "name": "27 \"Matthew 1:18 stays; Matthew 1:20 stays withdrawn.\"",
+  "F": {
+   "cr2": "",
+   "cr3": "Matthew 1:18 stays; Matthew 1:20 stays withdrawn.",
+   "cr4": "## D1\nD1 stands on Matthew 1:18.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant5.cjs",
+  "name": "28 it: sentence before, own sentence bare",
+  "F": {
+   "cr2": "Matthew 1:20 was my second layer. I withdraw it.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Matthew 1:20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 1"
+ },
+ {
+  "src": "plant5.cjs",
+  "name": "29 it: sentence before names two, keeps one",
+  "F": {
+   "cr2": "Matthew 1:20 stands and the Heli reading is weak. I withdraw it.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Matthew 1:20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant5.cjs",
+  "name": "30 once condition: \"Once he shows a row, I withdraw Matthew 1:20.\"",
+  "F": {
+   "cr2": "Once he shows a row, I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Matthew 1:20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant5.cjs",
+  "name": "31 \"Once again I withdraw Matthew 1:20.\"",
+  "F": {
+   "cr2": "Once again I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Matthew 1:20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 1"
+ },
+ {
+  "src": "plant5.cjs",
+  "name": "32 \"Should he object, the answer is below; I withdraw Matthew 1:20.\"",
+  "F": {
+   "cr2": "Should he object, the answer is below; I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Matthew 1:20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 1"
+ },
+ {
+  "src": "plant5.cjs",
+  "name": "33 withdraw after reinstating in close block heading only",
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1 (Matthew 1:20)\nD1 stands.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 1"
+ },
+ {
+  "src": "plant5.cjs",
+  "name": "34 challenger withdraws, DEFENDER close cites it",
+  "F": {
+   "cr2": "",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Matthew 1:20.",
+   "gr2": "I withdraw Matthew 1:20.",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant5.cjs",
+  "name": "35 huge input",
+  "F": {
+   "cr2": "I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. I withdraw Matthew 1:20. ",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Matthew 1:20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 1"
+ },
+ {
+  "src": "plant6.cjs",
+  "name": 1,
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Matthew 1:18, 20-21.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 1"
+ },
+ {
+  "src": "plant6.cjs",
+  "name": 2,
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Matthew 1:18, 19-21.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 1"
+ },
+ {
+  "src": "plant6.cjs",
+  "name": 3,
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Matthew 1:18, 21-25.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant6.cjs",
+  "name": 4,
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Matthew 1:18, 20 [L1].",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 1"
+ },
+ {
+  "src": "plant6.cjs",
+  "name": 5,
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands (Matthew 1:18, 20).",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 1"
+ },
+ {
+  "src": "plant6.cjs",
+  "name": 6,
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Matthew 1:18, 20 years before the census.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant6.cjs",
+  "name": 7,
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Matthew 1:18, and 20 generations are counted.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant6.cjs",
+  "name": 8,
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Matthew 1:18, 2:20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant6.cjs",
+  "name": 9,
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Matthew 2:18, 20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant6.cjs",
+  "name": 10,
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Luke 1:18, 20 and Matthew 1:21.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant6.cjs",
+  "name": 11,
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Matthew 1:18, Luke 1:5, 20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant6.cjs",
+  "name": 12,
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Matthew 1:16, 18, 19, 20, 21.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 1"
+ },
+ {
+  "src": "plant6.cjs",
+  "name": 13,
+  "F": {
+   "cr2": "I withdraw Matthew 1:18, 20, but not 21.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Matthew 1:21.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant6.cjs",
+  "name": 14,
+  "F": {
+   "cr2": "I withdraw Matthew 1:18, 20, but not 21.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Matthew 1:20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 1"
+ },
+ {
+  "src": "plant6.cjs",
+  "name": 15,
+  "F": {
+   "cr2": "I keep Matthew 1:18 and withdraw 20.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Matthew 1:20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 1"
+ },
+ {
+  "src": "plant6.cjs",
+  "name": 16,
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on 3 rows: Matthew 1:18, 6 words in all.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant6.cjs",
+  "name": 17,
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Matthew 1:18,20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 1"
+ },
+ {
+  "src": "plant6.cjs",
+  "name": 18,
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Matthew 1:18 & 20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 1"
+ },
+ {
+  "src": "plant6.cjs",
+  "name": 19,
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Matthew 1:18-19, 20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 1"
+ },
+ {
+  "src": "plant6.cjs",
+  "name": 20,
+  "F": {
+   "cr2": "I withdraw 1 John 5:1, 4.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on 1 John 5:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 1"
+ },
+ {
+  "src": "plant7.cjs",
+  "name": 1,
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Matthew 1:18; 20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 1"
+ },
+ {
+  "src": "plant7.cjs",
+  "name": 3,
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1\nD1 does not rest on Matthew 1:20; 3 other rows carry it.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant7.cjs",
+  "name": 4,
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1\nThe challenger cites Matthew 1:18; 20 I answered above.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant7.cjs",
+  "name": 5,
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Luke 1:5; Matthew 1:20 I leave to the challenger.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant7.cjs",
+  "name": 6,
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1\nI leave Matthew 1:20 aside; D1 stands on Luke 1:5.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant7.cjs",
+  "name": 7,
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Luke 1:5; 20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant7.cjs",
+  "name": 8,
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Matthew 1:18; Luke 1:5; 20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant7.cjs",
+  "name": 9,
+  "F": {
+   "cr2": "I withdraw Matthew 1:18 & 20.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Matthew 1:20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 1"
+ },
+ {
+  "src": "plant7.cjs",
+  "name": 10,
+  "F": {
+   "cr2": "I withdraw Matthew 1:18; 20 I keep.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Matthew 1:20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant7.cjs",
+  "name": 11,
+  "F": {
+   "cr2": "I withdraw Matthew 1:18; I keep Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Matthew 1:20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "none"
+ },
+ {
+  "src": "plant7.cjs",
+  "name": 12,
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D1\nD1 stands on Matthew 1:20; the rest is argument.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": "D LINK 1"
+ },
+ {
+  "src": "plants_w2.cjs",
+  "name": "reinstated in round 3, then cited",
+  "F": {
+   "cr2": "I withdraw Galatians 4:4 as a witness.",
+   "cr3": "I restore Galatians 4:4: it rests the link again.",
+   "cr4": "## D6\nD6 rests on Galatians 4:4 and Luke 1:35.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 0
+ },
+ {
+  "src": "plants_w2.cjs",
+  "name": "withdrawal scoped to another link, close names other link",
+  "F": {
+   "cr2": "",
+   "cr3": "LINK 2: I drop Isaiah 7:14 from link 2.",
+   "cr4": "## D5\nD5 rests on Isaiah 7:14.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1
+ },
+ {
+  "src": "plants_w2.cjs",
+  "name": "withdraw in CR2, close uses verse as opponent footing",
+  "F": {
+   "cr2": "I withdraw Isaiah 7:14.",
+   "cr3": "",
+   "cr4": "## D3\nThe challenger rests on Isaiah 7:14, and I answered it.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 0
+ },
+ {
+  "src": "plants_w2.cjs",
+  "name": "verse abbreviation in close (Gal 4:4)",
+  "F": {
+   "cr2": "I withdraw Galatians 4:4.",
+   "cr3": "",
+   "cr4": "## D6\nD6 rests on Gal. 4:4 and Luke 1:35.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1
+ },
+ {
+  "src": "plants_w2.cjs",
+  "name": "range in close (Galatians 4:4-5)",
+  "F": {
+   "cr2": "I withdraw Galatians 4:4.",
+   "cr3": "",
+   "cr4": "## D6\nD6 rests on Galatians 4:4-5.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1
+ },
+ {
+  "src": "plants_w2.cjs",
+  "name": "withdraw with range (Matthew 1:18-20), close cites 1:20",
+  "F": {
+   "cr2": "I drop Matthew 1:18-20.",
+   "cr3": "",
+   "cr4": "## D2\nD2 rests on Matthew 1:20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1
+ },
+ {
+  "src": "plants_w2_rev2.cjs",
+  "name": "abbrev without period (Gal 4:4)",
+  "F": {
+   "cr2": "I withdraw Galatians 4:4.",
+   "cr3": "",
+   "cr4": "## D6\nD6 rests on Gal 4:4 and Luke 1:35.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1
+ },
+ {
+  "src": "plants_w2_rev2.cjs",
+  "name": "withdrawal of 1 John 3:6, close cites John 3:6",
+  "F": {
+   "cr2": "I withdraw 1 John 3:6.",
+   "cr3": "",
+   "cr4": "## D6\nD6 rests on John 3:6.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 0
+ },
+ {
+  "src": "plants_w2_rev2.cjs",
+  "name": "challenger side, verse withdrawn, close rests",
+  "F": {
+   "cr2": "",
+   "cr3": "",
+   "cr4": "",
+   "gr2": "I withdraw Romans 1:3.",
+   "dr3": "LINK 2: x",
+   "dr4": "**LINK 2**\nC2 rests on Romans 1:3."
+  },
+  "exp": 1
+ },
+ {
+  "src": "plants_w2_rev2.cjs",
+  "name": "withdraw, close negated \"does not rest on\"",
+  "F": {
+   "cr2": "I withdraw Isaiah 7:14.",
+   "cr3": "",
+   "cr4": "## D3\nD3 does not rest on Isaiah 7:14.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 0
+ },
+ {
+  "src": "plants_w2_rev2.cjs",
+  "name": "quoted opponent withdrawal in own round",
+  "F": {
+   "cr2": "The challenger said: \"I withdraw Isaiah 7:14.\"",
+   "cr3": "",
+   "cr4": "## D3\nD3 rests on Isaiah 7:14.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 0
+ },
+ {
+  "src": "plants_w2_rev3.cjs",
+  "name": "scoped clause, no bold marks",
+  "F": {
+   "cr2": "Mary's descent from David is not left to Luke 1:27. I concede the KJV's clause \"of the house of David\" in Luke 1:27 can attach to Joseph, and I do not rest on it.",
+   "cr3": "",
+   "cr4": "## D3\nD3 rests on Matthew 1:25 with Luke 1:27 and 1:34.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 0
+ },
+ {
+  "src": "plants_w2_rev3.cjs",
+  "name": "\"I do not rest on it\" with verse as object",
+  "F": {
+   "cr2": "Luke 1:27 is contested, and I do not rest on it.",
+   "cr3": "",
+   "cr4": "## D3\nD3 rests on Luke 1:27.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1
+ },
+ {
+  "src": "plants_w2_rev3.cjs",
+  "name": "\"the word ... in Luke 1:27\", then it",
+  "F": {
+   "cr2": "The word \"espoused\" in Luke 1:27 is disputed, and I do not rest on it.",
+   "cr3": "",
+   "cr4": "## D3\nD3 rests on Luke 1:27.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 0
+ },
+ {
+  "src": "plants_w2_rev3.cjs",
+  "name": "it in a later clause after a semicolon",
+  "F": {
+   "cr2": "Isaiah 7:14 is plain; the challenger reads Micah 5:2 another way, and I drop it.",
+   "cr3": "",
+   "cr4": "## D2\nD2 rests on Isaiah 7:14.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 0
+ },
+ {
+  "src": "plants_w2_rev3.cjs",
+  "name": "condition in the same clause: \"If the court requires, I withdraw\"",
+  "F": {
+   "cr2": "If the court requires it I withdraw Isaiah 7:14.",
+   "cr3": "",
+   "cr4": "## D2\nD2 rests on Isaiah 7:14.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 0
+ },
+ {
+  "src": "plants_w2_rev3.cjs",
+  "name": "\"For clarity, I withdraw X\" (not a condition)",
+  "F": {
+   "cr2": "For clarity, I withdraw Isaiah 7:14.",
+   "cr3": "",
+   "cr4": "## D2\nD2 rests on Isaiah 7:14.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1
+ },
+ {
+  "src": "plants_w2_rev3.cjs",
+  "name": "\"Jud 6:12\" close after Judges 6:12 withdrawn",
+  "F": {
+   "cr2": "I withdraw Judges 6:12.",
+   "cr3": "",
+   "cr4": "## D2\nD2 rests on Judg 6:12.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1
+ },
+ {
+  "src": "plants_w2_rev3.cjs",
+  "name": "\"Jude 1:6\" withdrawn, close Judges 1:6",
+  "F": {
+   "cr2": "I withdraw Jude 1:6.",
+   "cr3": "",
+   "cr4": "## D2\nD2 rests on Judges 1:6.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 0
+ },
+ {
+  "src": "plants_w2_rev3.cjs",
+  "name": "\"Phil 2:7\" close after Philippians 2:7 withdrawn",
+  "F": {
+   "cr2": "I withdraw Philippians 2:7.",
+   "cr3": "",
+   "cr4": "## D2\nD2 rests on Phil 2:7.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1
+ },
+ {
+  "src": "plants_w2_rev3.cjs",
+  "name": "\"Philem 1:10\" close after Philippians 1:10 withdrawn",
+  "F": {
+   "cr2": "I withdraw Philippians 1:10.",
+   "cr3": "",
+   "cr4": "## D2\nD2 rests on Philem 1:10.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 0
+ },
+ {
+  "src": "plants_w2_rev3.cjs",
+  "name": "\"Luke 1:5: I withdraw it.\"",
+  "F": {
+   "cr2": "Luke 1:5: I withdraw it.",
+   "cr3": "",
+   "cr4": "## D2\nD2 rests on Luke 1:5.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1
+ },
+ {
+  "src": "plants_w2_rev3.cjs",
+  "name": "\"I drop Genesis 3:15, and Galatians 4:4 stays\" close Gal 4:4",
+  "F": {
+   "cr2": "I drop Genesis 3:15, and Galatians 4:4 stays.",
+   "cr3": "",
+   "cr4": "## D2\nD2 rests on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 0
+ },
+ {
+  "src": "plants_w2_rev3.cjs",
+  "name": "\"I drop Genesis 3:15 and Galatians 4:4.\" close Gal 4:4",
+  "F": {
+   "cr2": "I drop Genesis 3:15 and Galatians 4:4.",
+   "cr3": "",
+   "cr4": "## D2\nD2 rests on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1
+ },
+ {
+  "src": "plants_w2_rev3.cjs",
+  "name": "bold heading verse then withdrawal",
+  "F": {
+   "cr2": "**Luke 1:27.** I withdraw Luke 1:27 from D3.",
+   "cr3": "",
+   "cr4": "## D3\nD3 rests on Luke 1:27.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1
+ },
+ {
+  "src": "plants_w2_rev3.cjs",
+  "name": "\"has not answered that D6 rests on X\"",
+  "F": {
+   "cr2": "I withdraw Galatians 4:4.",
+   "cr3": "",
+   "cr4": "## D6\nThe challenger has not answered that D6 rests on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1
+ },
+ {
+  "src": "plants_w2_rev4.cjs",
+  "name": "\"Unless he answers, I drop Galatians 4:4.\"",
+  "F": {
+   "cr2": "Unless he answers, I drop Galatians 4:4.",
+   "cr3": "",
+   "cr4": "## D6\nD6 rests on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 0
+ },
+ {
+  "src": "plants_w2_rev4.cjs",
+  "name": "\"Should the court ask, I withdraw Galatians 4:4.\"",
+  "F": {
+   "cr2": "Should the court ask, I withdraw Galatians 4:4.",
+   "cr3": "",
+   "cr4": "## D6\nD6 rests on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 0
+ },
+ {
+  "src": "plants_w2_rev4.cjs",
+  "name": "\"Once he shows a row, I withdraw Galatians 4:4.\"",
+  "F": {
+   "cr2": "Once he shows a row, I withdraw Galatians 4:4.",
+   "cr3": "",
+   "cr4": "## D6\nD6 rests on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 0
+ },
+ {
+  "src": "plants_w2_rev4.cjs",
+  "name": "\"Provided that he shows a row, I withdraw ...\"",
+  "F": {
+   "cr2": "Provided that he shows a row, I withdraw Galatians 4:4.",
+   "cr3": "",
+   "cr4": "## D6\nD6 rests on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 0
+ },
+ {
+  "src": "plants_w2_rev4.cjs",
+  "name": "\"If the challenger shows a row, then I withdraw ...\"",
+  "F": {
+   "cr2": "If the challenger shows a row, then I withdraw Galatians 4:4.",
+   "cr3": "",
+   "cr4": "## D6\nD6 rests on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 0
+ },
+ {
+  "src": "plants_w2_rev4.cjs",
+  "name": "\"Even though he asks, I withdraw ...\" (concessive, real)",
+  "F": {
+   "cr2": "Even though he asks, I withdraw Galatians 4:4.",
+   "cr3": "",
+   "cr4": "## D6\nD6 rests on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1
+ },
+ {
+  "src": "plants_w2_rev4.cjs",
+  "name": "withdrawal, then a conditional restore sentence",
+  "F": {
+   "cr2": "I withdraw Galatians 4:4. If he shows a row, I will restore it.",
+   "cr3": "",
+   "cr4": "## D6\nD6 rests on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1
+ },
+ {
+  "src": "plants_w2_rev4.cjs",
+  "name": "\"As he asks, I withdraw ...\" (not a condition)",
+  "F": {
+   "cr2": "As he asks, I withdraw Galatians 4:4.",
+   "cr3": "",
+   "cr4": "## D6\nD6 rests on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1
+ },
+ {
+  "src": "plants_w2_rev4.cjs",
+  "name": "F2 with \"so\": \"...third layer; so I drop it.\"",
+  "F": {
+   "cr2": "Galatians 4:4 was my third layer; so I drop it.",
+   "cr3": "",
+   "cr4": "## D6\nD6 rests on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1
+ },
+ {
+  "src": "plants_w2_rev4.cjs",
+  "name": "F2 with \"then\": \"...; then I withdraw it.\"",
+  "F": {
+   "cr2": "Galatians 4:4 was my third layer; then I withdraw it.",
+   "cr3": "",
+   "cr4": "## D6\nD6 rests on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1
+ },
+ {
+  "src": "plants_w2_rev4.cjs",
+  "name": "semicolon, clause before names the opponent verse",
+  "F": {
+   "cr2": "Isaiah 7:14 stands; the challenger's reading of Galatians 4:4 fails; I withdraw it.",
+   "cr3": "",
+   "cr4": "## D6\nD6 rests on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 0
+ },
+ {
+  "src": "plants_w2_rev4.cjs",
+  "name": "semicolon chain, \"it\" clause names a verse itself",
+  "F": {
+   "cr2": "Galatians 4:4 was my third layer; I withdraw Luke 2:4 instead.",
+   "cr3": "",
+   "cr4": "## D6\nD6 rests on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 0
+ },
+ {
+  "src": "plants_w2_rev4.cjs",
+  "name": "challenger side F2 form",
+  "F": {
+   "cr2": "",
+   "cr3": "",
+   "cr4": "",
+   "gr2": "Romans 1:3 was my second layer; I withdraw it.",
+   "dr3": "LINK 2: x",
+   "dr4": "**LINK 2**\nC2 rests on Romans 1:3."
+  },
+  "exp": 1
+ },
+ {
+  "src": "plants_w2_rev4_cross.cjs",
+  "name": "clause-in-verse then semicolon it",
+  "F": {
+   "cr2": "The clause \"of the house of David\" in Luke 1:27 is weak; I withdraw it.",
+   "cr3": "",
+   "cr4": "## D3\nD3 rests on Luke 1:27.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 0
+ },
+ {
+  "src": "plants_w2_rev4_cross.cjs",
+  "name": "\"If anything, I withdraw Galatians 4:4.\" (idiom, real)",
+  "F": {
+   "cr2": "If anything, I withdraw Galatians 4:4 too.",
+   "cr3": "",
+   "cr4": "## D6\nD6 rests on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1
+ },
+ {
+  "src": "plants_w2_rev5.cjs",
+  "name": "rev5: withdrawn Luke 1:20, close \"Matthew 1:18 and 1:20\" (other book)",
+  "F": {
+   "cr2": "I withdraw Luke 1:20.",
+   "cr3": "",
+   "cr4": "## D2\nD2 rests on Matthew 1:18 and 1:20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 0
+ },
+ {
+  "src": "plants_w2_rev5.cjs",
+  "name": "rev5: withdrawn Matthew 1:20, close \"Matthew 1:18 and 1:20\"",
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D2\nD2 rests on Matthew 1:18 and 1:20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1
+ },
+ {
+  "src": "plants_w2_rev5.cjs",
+  "name": "rev5: withdrawn Matthew 1:20, close list \"Matthew 1:18, 20\"",
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D2\nD2 rests on Matthew 1:18, 20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1
+ },
+ {
+  "src": "plants_w2_rev5.cjs",
+  "name": "rev5: withdrawn Matthew 1:20, close range \"Matthew 1:18-21\"",
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D2\nD2 rests on Matthew 1:18-21.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1
+ },
+ {
+  "src": "plants_w2_rev5.cjs",
+  "name": "rev5: withdrawal short name \"Mt 1:20\", close full",
+  "F": {
+   "cr2": "I withdraw Mt 1:20.",
+   "cr3": "",
+   "cr4": "## D2\nD2 rests on Matthew 1:20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1
+ },
+ {
+  "src": "plants_w2_rev5.cjs",
+  "name": "rev5: withdrawal \"Gal. 4:4\"",
+  "F": {
+   "cr2": "I withdraw Gal. 4:4.",
+   "cr3": "",
+   "cr4": "## D6\nD6 rests on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1
+ },
+ {
+  "src": "plants_w2_rev5.cjs",
+  "name": "rev5: \"Jn 1:14\" withdrawn, close \"1 John 1:14\"",
+  "F": {
+   "cr2": "I withdraw Jn 1:14.",
+   "cr3": "",
+   "cr4": "## D2\nD2 rests on 1 John 1:14.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 0
+ },
+ {
+  "src": "plants_w2_rev5.cjs",
+  "name": "rev5: \"Once more, I withdraw Galatians 4:4.\"",
+  "F": {
+   "cr2": "Once more, I withdraw Galatians 4:4.",
+   "cr3": "",
+   "cr4": "## D6\nD6 rests on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1
+ },
+ {
+  "src": "plants_w2_rev5.cjs",
+  "name": "rev5: \"But if he shows a row, I withdraw ...\"",
+  "F": {
+   "cr2": "But if he shows a row, I withdraw Galatians 4:4.",
+   "cr3": "",
+   "cr4": "## D6\nD6 rests on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 0
+ },
+ {
+  "src": "plants_w2_rev5.cjs",
+  "name": "rev5: condition after verse \"I withdraw Galatians 4:4 if he shows a row.\"",
+  "F": {
+   "cr2": "I withdraw Galatians 4:4 if he shows a row.",
+   "cr3": "",
+   "cr4": "## D6\nD6 rests on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 0
+ },
+ {
+  "src": "plants_w2_rev5.cjs",
+  "name": "rev5: condition after a semicolon does not reach back",
+  "F": {
+   "cr2": "I withdraw Galatians 4:4; if he shows a row, I will say more.",
+   "cr3": "",
+   "cr4": "## D6\nD6 rests on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1
+ },
+ {
+  "src": "plants_w2_rev5.cjs",
+  "name": "rev5: question in close \"Does D6 rest on Galatians 4:4? It does not.\"",
+  "F": {
+   "cr2": "I withdraw Galatians 4:4.",
+   "cr3": "",
+   "cr4": "## D6\nDoes D6 rest on Galatians 4:4? It does not.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 0
+ },
+ {
+  "src": "plants_w2_rev5.cjs",
+  "name": "rev5: close states after question \"Does it? Yes: D6 rests on Galatians 4:4.\"",
+  "F": {
+   "cr2": "I withdraw Galatians 4:4.",
+   "cr3": "",
+   "cr4": "## D6\nDoes it hold? Yes. D6 rests on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1
+ },
+ {
+  "src": "plants_w2_rev5.cjs",
+  "name": "rev5: \"Genesis 3:15 and Galatians 4:4 stay withdrawn.\"",
+  "F": {
+   "cr2": "",
+   "cr3": "Genesis 3:15 and Galatians 4:4 stay withdrawn.",
+   "cr4": "## D6\nD6 rests on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1
+ },
+ {
+  "src": "plants_w2_rev5.cjs",
+  "name": "rev5: \"Galatians 4:4: withdrawn.\"",
+  "F": {
+   "cr2": "Galatians 4:4: withdrawn.",
+   "cr3": "",
+   "cr4": "## D6\nD6 rests on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1
+ },
+ {
+  "src": "plants_w2_rev5.cjs",
+  "name": "rev5: \"it\" sentence before, own sentence has object",
+  "F": {
+   "cr2": "Galatians 4:4 is weak. I withdraw the idiom reading of it.",
+   "cr3": "",
+   "cr4": "## D6\nD6 rests on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 0
+ },
+ {
+  "src": "plants_w2_rev5.cjs",
+  "name": "rev5: \"it\" sentence before, bare",
+  "F": {
+   "cr2": "Galatians 4:4 does not exclude a father. I withdraw it.",
+   "cr3": "",
+   "cr4": "## D6\nD6 rests on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1
+ },
+ {
+  "src": "plants_w2_rev5.cjs",
+  "name": "rev5: \"it\" sentence before, words before I",
+  "F": {
+   "cr2": "Galatians 4:4 does not exclude a father. For that reason I withdraw it.",
+   "cr3": "",
+   "cr4": "## D6\nD6 rests on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1
+ },
+ {
+  "src": "plants_w2_rev5.cjs",
+  "name": "rev5: clause-in-verse in sentence before",
+  "F": {
+   "cr2": "The phrase \"made under the law\" in Galatians 4:4 is not at issue. I withdraw it.",
+   "cr3": "",
+   "cr4": "## D6\nD6 rests on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 0
+ },
+ {
+  "src": "plants_w2_rev5.cjs",
+  "name": "rev5: reading of verse, then withdraw it",
+  "F": {
+   "cr2": "My reading of Galatians 4:4 overstated; I withdraw it.",
+   "cr3": "",
+   "cr4": "## D6\nD6 rests on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 0
+ },
+ {
+  "src": "plants_w2_rev5.cjs",
+  "name": "rev5: withdraw from one link, close other link same verse (scoped)",
+  "F": {
+   "cr2": "LINK 3: I drop Galatians 4:4 from link 3.",
+   "cr3": "",
+   "cr4": "## D6\nD6 rests on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1
+ },
+ {
+  "src": "plants_w2_rev5.cjs",
+  "name": "rev5: challenger \"Rom 1:3\" short in withdrawal",
+  "F": {
+   "cr2": "",
+   "cr3": "",
+   "cr4": "",
+   "gr2": "I withdraw Rom 1:3.",
+   "dr3": "LINK 2: x",
+   "dr4": "**LINK 2**\nC2 rests on Romans 1:3."
+  },
+  "exp": 1
+ },
+ {
+  "src": "plants_w2_rev5.cjs",
+  "name": "rev5: close cites verse in quotation of the opponent",
+  "F": {
+   "cr2": "I withdraw Galatians 4:4.",
+   "cr3": "",
+   "cr4": "## D6\nThe challenger says \"D6 rests on Galatians 4:4\", but D6 rests on Luke 1:35.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 0
+ },
+ {
+  "src": "plants_w2_rev6.cjs",
+  "name": "rev6: withdrawal list \"Matthew 1:16, 18 and 20\", close Matthew 1:20",
+  "F": {
+   "cr2": "I withdraw Matthew 1:16, 18 and 20.",
+   "cr3": "",
+   "cr4": "## D2\nD2 rests on Matthew 1:20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1
+ },
+ {
+  "src": "plants_w2_rev6.cjs",
+  "name": "rev6: list with range \"Matthew 1:18, 20-22\", close 1:21",
+  "F": {
+   "cr2": "I withdraw Matthew 1:21.",
+   "cr3": "",
+   "cr4": "## D2\nD2 rests on Matthew 1:18, 20-22.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1
+ },
+ {
+  "src": "plants_w2_rev6.cjs",
+  "name": "rev6: \"Luke 9:34, 1 Samuel 16:13\" withdrawal Luke 9:1 not matched",
+  "F": {
+   "cr2": "I withdraw Luke 9:1.",
+   "cr3": "",
+   "cr4": "## D2\nD2 rests on Luke 9:34, 1 Samuel 16:13.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 0
+ },
+ {
+  "src": "plants_w2_rev6.cjs",
+  "name": "rev6: prose number after list \"Matthew 1:18, 20 times\" (false)",
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D2\nD2 rests on Matthew 1:18, cited 20 times.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 0
+ },
+ {
+  "src": "plants_w2_rev6.cjs",
+  "name": "rev6: bare number then word \"Matthew 1:18, 2 witnesses\"",
+  "F": {
+   "cr2": "I withdraw Matthew 1:2.",
+   "cr3": "",
+   "cr4": "## D2\nD2 rests on Matthew 1:18, 2 witnesses agree.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 0
+ },
+ {
+  "src": "plants_w2_rev6.cjs",
+  "name": "rev6: list after semicolon \"Matthew 1:18; 20\"",
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D2\nD2 rests on Matthew 1:18; 20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1
+ },
+ {
+  "src": "plants_w2_rev6.cjs",
+  "name": "rev6: G3 six words \"For that very same reason, I withdraw it.\"",
+  "F": {
+   "cr2": "Galatians 4:4 does not exclude a father. For that very same reason, I withdraw it.",
+   "cr3": "",
+   "cr4": "## D6\nD6 rests on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1
+ },
+ {
+  "src": "plants_w2_rev6.cjs",
+  "name": "rev6: seven+ words before I (stated limit, not named)",
+  "F": {
+   "cr2": "Galatians 4:4 does not exclude a father. Having weighed the rows the challenger pressed, I withdraw it.",
+   "cr3": "",
+   "cr4": "## D6\nD6 rests on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 0
+ },
+ {
+  "src": "plants_w2_rev6.cjs",
+  "name": "rev6: quotation before I blocks look-back",
+  "F": {
+   "cr2": "Galatians 4:4 is weak. He said \"drop it\", so I withdraw it.",
+   "cr3": "",
+   "cr4": "## D6\nD6 rests on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 0
+ },
+ {
+  "src": "plants_w2_rev6.cjs",
+  "name": "rev6: lead phrase naming another verse \"Since Luke 1:35 stands, I withdraw it.\"",
+  "F": {
+   "cr2": "Galatians 4:4 is weak. Since Luke 1:35 stands, I withdraw it.",
+   "cr3": "",
+   "cr4": "## D6\nD6 rests on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 0
+ },
+ {
+  "src": "plants_w2_rev6.cjs",
+  "name": "rev6: challenger list withdrawal \"Romans 1:3, 4\"",
+  "F": {
+   "cr2": "",
+   "cr3": "",
+   "cr4": "",
+   "gr2": "I withdraw Romans 1:3, 4.",
+   "dr3": "LINK 2: x",
+   "dr4": "**LINK 2**\nC2 rests on Romans 1:4."
+  },
+  "exp": 1
+ },
+ {
+  "src": "plants_w2_rev7.cjs",
+  "name": "rev7: \"Matthew 1:18 & 20\" close",
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D2\nD2 rests on Matthew 1:18 & 20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1
+ },
+ {
+  "src": "plants_w2_rev7.cjs",
+  "name": "rev7: withdrawal \"Matthew 1:18 & 20\"",
+  "F": {
+   "cr2": "I withdraw Matthew 1:18 & 20.",
+   "cr3": "",
+   "cr4": "## D2\nD2 rests on Matthew 1:20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1
+ },
+ {
+  "src": "plants_w2_rev7.cjs",
+  "name": "rev7: \"; 20\" then a new clause",
+  "F": {
+   "cr2": "I withdraw Matthew 1:20.",
+   "cr3": "",
+   "cr4": "## D2\nD2 rests on Matthew 1:18; 20 more rows agree.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1
+ },
+ {
+  "src": "plants_w2_rev7.cjs",
+  "name": "rev7: semicolon then other verse with book, withdrawn Luke",
+  "F": {
+   "cr2": "I withdraw Luke 1:20.",
+   "cr3": "",
+   "cr4": "## D2\nD2 rests on Matthew 1:18; Luke 1:35.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 0
+ },
+ {
+  "src": "plants_w2_rev7.cjs",
+  "name": "rev7: \"; 2 Samuel 7:12\" not read as verse 2",
+  "F": {
+   "cr2": "I withdraw Matthew 1:2.",
+   "cr3": "",
+   "cr4": "## D2\nD2 rests on Matthew 1:18; 2 Samuel 7:12.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 0
+ },
+ {
+  "src": "plants_w2_rev7.cjs",
+  "name": "rev7: \"& 1 John 5:1\" not read as verse 1",
+  "F": {
+   "cr2": "I withdraw Matthew 1:1.",
+   "cr3": "",
+   "cr4": "## D2\nD2 rests on Matthew 1:18 & 1 John 5:1.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 0
+ },
+ {
+  "src": "plants.cjs (W1)",
+  "name": "withdraw then layer of D6",
+  "F": {
+   "cr2": "I withdraw Galatians 4:4 as an exclusion witness.",
+   "cr3": "",
+   "cr4": "**ANSWER: Luke 1:35 -- D6 --** \"x\"\n**Galatians 4:4 -- D6.** \"made of a woman\" is the third layer of D6, beside Luke 3:23.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1,
+  "prev": [],
+  "chk": null
+ },
+ {
+  "src": "plants.cjs (W1)",
+  "name": "drop the route then stands on",
+  "F": {
+   "cr2": "",
+   "cr3": "I drop the Ezra 2:61 route, since Ezra 2:62 puts them out.",
+   "cr4": "ANSWER: Numbers 1:18 -- D4 -- \"x\"\n- [L4] This stands on [L1] Numbers 1:18 and [L3] Ezra 2:61.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1,
+  "prev": [],
+  "chk": null
+ },
+ {
+  "src": "plants.cjs (W1)",
+  "name": "partial drop (by themselves) skipped",
+  "F": {
+   "cr2": "",
+   "cr3": "I drop Romans 1:3 together with John 3:6 as sufficient by themselves.",
+   "cr4": "This stands on Romans 1:3, Galatians 4:4 and Matthew 1:20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 0,
+  "prev": [],
+  "chk": null
+ },
+ {
+  "src": "plants.cjs (W1)",
+  "name": "drop the claim that skipped",
+  "F": {
+   "cr2": "",
+   "cr3": "I drop the claim that Matthew 1:25 closes the espousal.",
+   "cr4": "This stands on Matthew 1:25 and Matthew 1:18.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 0,
+  "prev": [],
+  "chk": null
+ },
+ {
+  "src": "plants.cjs (W1)",
+  "name": "close negated skipped",
+  "F": {
+   "cr2": "I do not rest the source on Galatians 4:4.",
+   "cr3": "",
+   "cr4": "I do not rest D6 on Galatians 4:4; it stands on Luke 1:35.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 0,
+  "prev": [],
+  "chk": null
+ },
+ {
+  "src": "plants.cjs (W1)",
+  "name": "close \"carries\" not a footing word",
+  "F": {
+   "cr2": "I do not rest the source on Galatians 4:4.",
+   "cr3": "",
+   "cr4": "Mary's descent carries it, as Romans 1:3 and Galatians 4:4 together say.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 0,
+  "prev": [],
+  "chk": null
+ },
+ {
+  "src": "plants.cjs (W1)",
+  "name": "verse only answered, no footing word",
+  "F": {
+   "cr2": "I withdraw Galatians 4:4.",
+   "cr3": "",
+   "cr4": "ANSWER: Galatians 4:4 -- D6 -- \"made of a woman\" is said of men with fathers too.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 0,
+  "prev": [],
+  "chk": null
+ },
+ {
+  "src": "plants.cjs (W1)",
+  "name": "different verse not paired",
+  "F": {
+   "cr2": "I withdraw Galatians 4:4.",
+   "cr3": "",
+   "cr4": "This stands on Galatians 4:5.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 0,
+  "prev": [],
+  "chk": null
+ },
+ {
+  "src": "plants.cjs (W1)",
+  "name": "chapter-verse prefix not matched (4:40)",
+  "F": {
+   "cr2": "I withdraw Galatians 4:4.",
+   "cr3": "",
+   "cr4": "This stands on Galatians 4:40.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 0,
+  "prev": [],
+  "chk": null
+ },
+ {
+  "src": "plants.cjs (W1)",
+  "name": "challenger side",
+  "F": {
+   "cr2": "",
+   "cr3": "",
+   "cr4": "",
+   "gr2": "",
+   "dr3": "I withdraw Jeremiah 22:30 as a bar.",
+   "dr4": "C3 rests on Jeremiah 22:30 and Matthew 1:12."
+  },
+  "exp": 1,
+  "prev": [],
+  "chk": null
+ },
+ {
+  "src": "plants.cjs (W1)",
+  "name": "defender verse not taken for challenger",
+  "F": {
+   "cr2": "I withdraw Jeremiah 22:30.",
+   "cr3": "",
+   "cr4": "",
+   "gr2": "",
+   "dr3": "",
+   "dr4": "C3 rests on Jeremiah 22:30."
+  },
+  "exp": 0,
+  "prev": [],
+  "chk": null
+ },
+ {
+  "src": "plants.cjs (W1)",
+  "name": "already named pair skipped",
+  "F": {
+   "cr2": "I withdraw Galatians 4:4.",
+   "cr3": "",
+   "cr4": "This stands on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 0,
+  "prev": [
+   {
+    "id": "X1",
+    "earlier_q": "I withdraw Galatians 4:4.",
+    "closing_q": "This stands on Galatians 4:4."
+   }
+  ],
+  "chk": null
+ },
+ {
+  "src": "plants.cjs (W1)",
+  "name": "cap 3 per side",
+  "F": {
+   "cr2": "I withdraw Luke 1:1. I withdraw Luke 1:2. I withdraw Luke 1:3. I withdraw Luke 1:4.",
+   "cr3": "",
+   "cr4": "This stands on Luke 1:1. This stands on Luke 1:2. This stands on Luke 1:3. This stands on Luke 1:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 3,
+  "prev": [],
+  "chk": null
+ },
+ {
+  "src": "plants.cjs (W1)",
+  "name": "ids continue after prev",
+  "F": {
+   "cr2": "I withdraw Galatians 4:4.",
+   "cr3": "",
+   "cr4": "This stands on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1,
+  "prev": [
+   {
+    "id": "X4",
+    "earlier_q": "a",
+    "closing_q": "b"
+   }
+  ],
+  "chk": "o=>o[0].id==='X5'"
+ },
+ {
+  "src": "plants.cjs (W1)",
+  "name": "rev2 F1 pronoun same sentence (33846)",
+  "F": {
+   "cr2": "",
+   "cr3": "1 Chronicles 28:6 is spoken to a father about a son he begat, and it does not carry over, so I drop it.",
+   "cr4": "## D5\nThis stands on [L1] 1 Chronicles 28:6 and Matthew 1:20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1,
+  "prev": [],
+  "chk": null
+ },
+ {
+  "src": "plants.cjs (W1)",
+  "name": "rev2 F1 second verse of a list (32924)",
+  "F": {
+   "cr2": "I withdraw Genesis 3:15 and Galatians 4:4 as load-bearing for the exclusion.",
+   "cr3": "",
+   "cr4": "- D4 rests on Isaiah 7:14, Matthew 1:23, and Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1,
+  "prev": [],
+  "chk": null
+ },
+ {
+  "src": "plants.cjs (W1)",
+  "name": "rev2 F1 pronoun previous sentence (33083)",
+  "F": {
+   "cr2": "So Galatians 4:4 does not carry the exclusion alone. I withdraw it as load-bearing.",
+   "cr3": "",
+   "cr4": "D5 rests on Luke 3:23 with Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1,
+  "prev": [],
+  "chk": null
+ },
+ {
+  "src": "plants.cjs (W1)",
+  "name": "rev2 F2 quoted withdrawal of the other side",
+  "F": {
+   "cr2": "",
+   "cr3": "",
+   "cr4": "",
+   "gr2": "The defender also withdrew it (\"I do not rest the exclusion on Galatians 4:4\").",
+   "dr3": "",
+   "dr4": "C2 rests on Galatians 4:4."
+  },
+  "exp": 0,
+  "prev": [],
+  "chk": null
+ },
+ {
+  "src": "plants.cjs (W1)",
+  "name": "rev2 F2 conditional",
+  "F": {
+   "cr2": "Even if I withdraw Galatians 4:4, the link holds.",
+   "cr3": "",
+   "cr4": "D6 stands on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 0,
+  "prev": [],
+  "chk": null
+ },
+ {
+  "src": "plants.cjs (W1)",
+  "name": "rev2 F2 asked to withdraw",
+  "F": {
+   "cr2": "The challenger asks that I withdraw Galatians 4:4. I keep it.",
+   "cr3": "",
+   "cr4": "D6 stands on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 0,
+  "prev": [],
+  "chk": null
+ },
+ {
+  "src": "plants.cjs (W1)",
+  "name": "rev2 F3 not on",
+  "F": {
+   "cr2": "I withdraw Galatians 4:4.",
+   "cr3": "",
+   "cr4": "D6 rests on Luke 3:23, not on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 0,
+  "prev": [],
+  "chk": null
+ },
+ {
+  "src": "plants.cjs (W1)",
+  "name": "rev2 F3 opponent says",
+  "F": {
+   "cr2": "I withdraw Galatians 4:4.",
+   "cr3": "",
+   "cr4": "The challenger says D6 rests on Galatians 4:4; it does not.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 0,
+  "prev": [],
+  "chk": null
+ },
+ {
+  "src": "plants.cjs (W1)",
+  "name": "rev2 F3 opponent link",
+  "F": {
+   "cr2": "I withdraw Galatians 4:4.",
+   "cr3": "",
+   "cr4": "C2 rests on Galatians 4:4, which I answered.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 0,
+  "prev": [],
+  "chk": null
+ },
+ {
+  "src": "plants.cjs (W1)",
+  "name": "rev2 F3 past tense then now",
+  "F": {
+   "cr2": "I withdraw Galatians 4:4.",
+   "cr3": "",
+   "cr4": "D6 rested on Galatians 4:4 until round 2; it now stands on Luke 3:23.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 0,
+  "prev": [],
+  "chk": null
+ },
+ {
+  "src": "plants.cjs (W1)",
+  "name": "rev2 F3 John vs 1 John",
+  "F": {
+   "cr2": "",
+   "cr3": "I drop John 3:6 from the chain.",
+   "cr4": "This stands on 1 John 3:6.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 0,
+  "prev": [],
+  "chk": null
+ },
+ {
+  "src": "plants.cjs (W1)",
+  "name": "rev2 W2 opponent subject",
+  "F": {
+   "cr2": "I withdraw Isaiah 7:14.",
+   "cr3": "",
+   "cr4": "The challenger rests on Isaiah 7:14, and I answered it.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 0,
+  "prev": [],
+  "chk": null
+ },
+ {
+  "src": "plants.cjs (W1)",
+  "name": "rev2 W2 abbreviation",
+  "F": {
+   "cr2": "I withdraw Galatians 4:4.",
+   "cr3": "",
+   "cr4": "D6 rests on Gal. 4:4 and Luke 1:35.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1,
+  "prev": [],
+  "chk": null
+ },
+ {
+  "src": "plants.cjs (W1)",
+  "name": "rev2 W2 withdrawn range",
+  "F": {
+   "cr2": "I drop Matthew 1:18-20.",
+   "cr3": "",
+   "cr4": "D2 rests on Matthew 1:20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1,
+  "prev": [],
+  "chk": null
+ },
+ {
+  "src": "plants.cjs (W1)",
+  "name": "rev2 LINK heading without letter",
+  "F": {
+   "cr2": "I withdraw Galatians 4:4.",
+   "cr3": "",
+   "cr4": "LINK 6: KEPT\nThis stands on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1,
+  "prev": [],
+  "chk": "o=>o[0].n==='6'"
+ },
+ {
+  "src": "plants.cjs (W1)",
+  "name": "rev2 sentence split kept after a name",
+  "F": {
+   "cr2": "The verse is born of Mary. I withdraw it.",
+   "cr3": "",
+   "cr4": "D2 rests on Matthew 1:20.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 0,
+  "prev": [],
+  "chk": null
+ },
+ {
+  "src": "plants.cjs (W1)",
+  "name": "rev3 clause in verse then \"it\" (33083 Luke 1:27)",
+  "F": {
+   "cr2": "Mary's descent from David is not left to Luke 1:27. I concede the KJV's clause \"of the house of David\" in Luke 1:27 can attach to Joseph, and I do not rest on it.",
+   "cr3": "",
+   "cr4": "D3 rests on Matthew 1:25 with Luke 1:27 and 1:34.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 0,
+  "prev": [],
+  "chk": null
+ },
+ {
+  "src": "plants.cjs (W1)",
+  "name": "rev3 list item that stays",
+  "F": {
+   "cr2": "I drop Genesis 3:15 and Galatians 4:4 stays.",
+   "cr3": "",
+   "cr4": "D4 rests on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 0,
+  "prev": [],
+  "chk": null
+ },
+ {
+  "src": "plants.cjs (W1)",
+  "name": "rev3 list first item still named",
+  "F": {
+   "cr2": "I drop Genesis 3:15 and Galatians 4:4 stays.",
+   "cr3": "",
+   "cr4": "D4 rests on Genesis 3:15.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1,
+  "prev": [],
+  "chk": null
+ },
+ {
+  "src": "plants.cjs (W1)",
+  "name": "rev3 Jude is not Judges",
+  "F": {
+   "cr2": "I withdraw Judges 1:5.",
+   "cr3": "",
+   "cr4": "D4 rests on Jude 1:5.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 0,
+  "prev": [],
+  "chk": null
+ },
+ {
+  "src": "plants.cjs (W1)",
+  "name": "rev3 Philippians is not Philemon",
+  "F": {
+   "cr2": "I withdraw Philemon 1:6.",
+   "cr3": "",
+   "cr4": "D4 rests on Philippians 1:6.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 0,
+  "prev": [],
+  "chk": null
+ },
+ {
+  "src": "plants.cjs (W1)",
+  "name": "rev3 Phil. is Philippians",
+  "F": {
+   "cr2": "I withdraw Philippians 1:6.",
+   "cr3": "",
+   "cr4": "D4 rests on Phil. 1:6.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1,
+  "prev": [],
+  "chk": null
+ },
+ {
+  "src": "plants.cjs (W1)",
+  "name": "rev3 \"Whether or not it matters, I withdraw\" is a withdrawal",
+  "F": {
+   "cr2": "Whether or not it matters, I withdraw Galatians 4:4.",
+   "cr3": "",
+   "cr4": "D6 stands on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1,
+  "prev": [],
+  "chk": null
+ },
+ {
+  "src": "plants.cjs (W1)",
+  "name": "rev3 \"Since he asks, I withdraw\" is a withdrawal",
+  "F": {
+   "cr2": "Since he asks, I withdraw Galatians 4:4.",
+   "cr3": "",
+   "cr4": "D6 stands on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1,
+  "prev": [],
+  "chk": null
+ },
+ {
+  "src": "plants.cjs (W1)",
+  "name": "rev3 close \"has not answered that D6 rests on\"",
+  "F": {
+   "cr2": "I withdraw Galatians 4:4.",
+   "cr3": "",
+   "cr4": "The challenger has not answered that D6 rests on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1,
+  "prev": [],
+  "chk": null
+ },
+ {
+  "src": "plants.cjs (W1)",
+  "name": "rev3 \"it\" only in its own clause",
+  "F": {
+   "cr2": "Galatians 4:4 stands; the \"born of a woman\" idiom is weaker, and I drop it.",
+   "cr3": "",
+   "cr4": "D6 stands on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 0,
+  "prev": [],
+  "chk": null
+ },
+ {
+  "src": "plants.cjs (W1)",
+  "name": "rev3 colon after the verses, \"them\"",
+  "F": {
+   "cr2": "",
+   "cr3": "- Luke 1:36 and Luke 1:5: I do not rest on them.",
+   "cr4": "D2 rests on Luke 1:5.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1,
+  "prev": [],
+  "chk": null
+ },
+ {
+  "src": "plants.cjs (W1)",
+  "name": "rev4 sentence opens with \"If\": conditional",
+  "F": {
+   "cr2": "If the challenger shows a row, I withdraw Galatians 4:4.",
+   "cr3": "",
+   "cr4": "D6 stands on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 0,
+  "prev": [],
+  "chk": null
+ },
+ {
+  "src": "plants.cjs (W1)",
+  "name": "rev4 \"Even if ..., I withdraw\" stays conditional",
+  "F": {
+   "cr2": "Even if he shows a row, I withdraw Galatians 4:4.",
+   "cr3": "",
+   "cr4": "D6 stands on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 0,
+  "prev": [],
+  "chk": null
+ },
+ {
+  "src": "plants.cjs (W1)",
+  "name": "rev4 \"...; I withdraw it.\" takes the clause before",
+  "F": {
+   "cr2": "Galatians 4:4 was my third layer; I withdraw it.",
+   "cr3": "",
+   "cr4": "D6 stands on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1,
+  "prev": [],
+  "chk": null
+ },
+ {
+  "src": "plants.cjs (W1)",
+  "name": "rev4 \"...; and I drop it.\" takes the clause before",
+  "F": {
+   "cr2": "Galatians 4:4 was my third layer; and I drop it.",
+   "cr3": "",
+   "cr4": "D6 stands on Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1,
+  "prev": [],
+  "chk": null
+ },
+ {
+  "src": "plants.cjs (W1)",
+  "name": "rev8 35379 form: withdrawn as exclusion witness, close cites it as a lesser layer; note carries the lesser-weight rule",
+  "F": {
+   "cr2": "I do not rest the source on that idiom, and I withdraw Galatians 4:4 as an exclusion witness.",
+   "cr3": "",
+   "cr4": "Galatians 4:4 -- D6. \"God sent forth his Son, made of a woman\" is the third layer of D6, not weight-bearing alone.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1,
+  "prev": [],
+  "chk": "o=>/a lesser weight is still a rest/.test(o[0].why)&&/for X\\d+ only/.test(o[0].why)&&/does not apply to any other pair/.test(o[0].why)"
+ },
+ {
+  "src": "plants.cjs (W1)",
+  "name": "stored 32924 X1 (ASK 116 class): withdrawn as load-bearing, close rests D4 on it",
+  "F": {
+   "cr2": "I withdraw Genesis 3:15 and Galatians 4:4 as load-bearing for the exclusion.",
+   "cr3": "",
+   "cr4": "## D4\nD4 rests on Isaiah 7:14, Matthew 1:23, and Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1,
+  "prev": [],
+  "chk": "o=>o[0].n==='4'&&/a lesser weight is still a rest/.test(o[0].why)&&/for X\\d+ only/.test(o[0].why)&&/does not apply to any other pair/.test(o[0].why)"
+ },
+ {
+  "src": "plants.cjs (W1)",
+  "name": "stored 33083 X1 (ASK 116 class): \"it\" of the sentence before, close rests D5 on it",
+  "F": {
+   "cr2": "[L4] Job 14:1 and Matthew 11:11 apply \"of a woman\" to men who had fathers, so Galatians 4:4 does not carry the exclusion alone. I withdraw it as load-bearing.",
+   "cr3": "",
+   "cr4": "## D5\nD5 rests on Luke 3:23 with Galatians 4:4.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1,
+  "prev": [],
+  "chk": "o=>o[0].n==='5'&&/a lesser weight is still a rest/.test(o[0].why)&&/for X\\d+ only/.test(o[0].why)&&/does not apply to any other pair/.test(o[0].why)"
+ },
+ {
+  "src": "plants.cjs (W1)",
+  "name": "stored 35379 (ASK 116): withdrawn as exclusion witness, close third layer of D6",
+  "F": {
+   "cr2": "I do not rest the source on that idiom, and I withdraw Galatians 4:4 as an exclusion witness.",
+   "cr3": "",
+   "cr4": "Galatians 4:4 -- D6. \"God sent forth his Son, made of a woman, made under the law\" is the third layer of D6, beside Luke 3:23 [L1] and enomizeto (G3543) [L2].",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1,
+  "prev": [],
+  "chk": "o=>o[0].n==='6'&&/a lesser weight is still a rest/.test(o[0].why)&&/for X\\d+ only/.test(o[0].why)&&/does not apply to any other pair/.test(o[0].why)"
+ },
+ {
+  "src": "plants.cjs (W1)",
+  "name": "stored 33846 (ASK 117): Ezra 2:61 route dropped, close stands on it",
+  "F": {
+   "cr2": "",
+   "cr3": "I drop the Ezra 2:61 route, since Ezra 2:62 puts those men out of the priesthood.",
+   "cr4": "## D4\nThis stands on [L1] Numbers 1:18 and [L3] Ezra 2:61 and Matthew 1:24-25.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 1,
+  "prev": [],
+  "chk": "o=>o[0].n==='4'&&/a lesser weight is still a rest/.test(o[0].why)&&/for X\\d+ only/.test(o[0].why)&&/does not apply to any other pair/.test(o[0].why)"
+ },
+ {
+  "src": "plants.cjs (W1)",
+  "name": "rev9 must stay NOT (ASK 124, 35379 X1): idiom dropped, close keeps the \"made of a woman\" verb parallel",
+  "F": {
+   "cr2": "",
+   "cr3": "I drop any rest on the \"born of a woman\" idiom, since I have granted that it is said of men with fathers.",
+   "cr4": "**ANSWER: Hebrews 7:10 -- D5 --**\n- [L3] Romans 1:3 and Galatians 4:4 use the same verb \"made\".\n- [L4] So the seed of David is \"made\" of a woman, as Matthew 1:16 \"of whom\" traces.",
+   "gr2": "",
+   "dr3": "",
+   "dr4": ""
+  },
+  "exp": 0,
+  "prev": [],
+  "chk": null
+ }
+]
