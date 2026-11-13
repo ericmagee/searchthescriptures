@@ -1,0 +1,60 @@
+parent sha256 9a45a1a2efe1a71b
+stub nodes 43 map entries 42 stubs without map entry [ 'Early Alternate Build' ]
+length or compile faults 0
+rebuilt sources changed vs live [
+  [ 'Alt Gate Build', 585 ],
+  [ 'Alt Gate Record', 585 ],
+  [ 'Alternate Cure Build', 143 ],
+  [ 'Alternate Cure Normalize', 837 ],
+  [ 'Alternate Merge Seat', 883 ],
+  [ 'Alternate Payloads', 585 ],
+  [ 'Cure Build', 143 ],
+  [ 'Cure Check', 837 ],
+  [ 'Cure Normalize', 837 ],
+  [ 'Extract Independent Verdict', 585 ],
+  [ 'Gate Build', 585 ],
+  [ 'Gate Record', 585 ],
+  [ 'Panel Cure Build 1', 143 ],
+  [ 'Panel Cure Build 2', 143 ],
+  [ 'Panel Cure Build 3', 143 ],
+  [ 'Panel Cure Check', 837 ],
+  [ 'Panel Cure Normalize 1', 837 ],
+  [ 'Panel Cure Normalize 2', 837 ],
+  [ 'Panel Cure Normalize 3', 837 ],
+  [ 'Panel Payloads', 585 ],
+  [ 'R2 Alt Gate Build', 585 ],
+  [ 'R2 Alt Gate Record', 585 ],
+  [ 'R2 Alternate Cure Build', 143 ],
+  [ 'R2 Alternate Cure Normalize', 837 ],
+  [ 'R2 Alternate Merge Seat', 883 ],
+  [ 'R2 Alternate Payloads', 585 ]
+]
+Alt Gate Build only-window false
+Alt Gate Record only-window false
+Alternate Cure Build only-window false
+Alternate Cure Normalize only-window false
+Alternate Merge Seat only-window false
+Alternate Payloads only-window false
+Cure Build only-window false
+Cure Check only-window false
+Cure Normalize only-window false
+Extract Independent Verdict only-window false
+Gate Build only-window false
+Gate Record only-window false
+Panel Cure Build 1 only-window false
+Panel Cure Build 2 only-window false
+Panel Cure Build 3 only-window false
+Panel Cure Check only-window false
+Panel Cure Normalize 1 only-window false
+Panel Cure Normalize 2 only-window false
+Panel Cure Normalize 3 only-window false
+Panel Payloads only-window false
+R2 Alt Gate Build only-window false
+R2 Alt Gate Record only-window false
+R2 Alternate Cure Build only-window false
+R2 Alternate Cure Normalize only-window false
+R2 Alternate Merge Seat only-window false
+R2 Alternate Payloads only-window false
+library header null
+nodes differing [ 'Shared Library' ] conn equal true nodes 443 443
+total code delta 1034
