@@ -35,3 +35,4 @@ insert into model_config (seat, provider, role, api_model, endpoint, max_tokens,
 - SIZE (MEASURED): code +2,985 over s173 (+2,159 over rev 1; Init Seats +114, Resolve Seats +38, Accept Build +53, the rest the 15 finisher copies); prompt text 0.
 - test2.cjs: 15 copies, 269 of 269 (rev 1 fails 45, the gemini judge-side cases; live s173 fails 75). sim2.cjs: sim2_out.txt. Packing: 43 stubs, 2 throwing (mapcheck_rev2_out.txt).
 - Rows: the ember and spark rows above only, active BEFORE the code.
+- W4 (21:11 CST): source of the gemini defaults is the OpenRouter models API (/api/v1/models), entry google/gemini-3.8-flash: reasoning mandatory, default_enabled true, supported_efforts high/medium/low, default_effort medium, max_completion_tokens 65536. Check calls at effort low passed: ember (execution 36162), spark 1.3 (36163) under ASK 163; gemini 3.8 flash (36173) under ASK 173, 0.0555 USD.
