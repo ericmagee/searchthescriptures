@@ -1,4 +1,4 @@
-// pkgPTS (ASK 227, plan Wall 5879): two fixes to "TRUTH App — Protected Table Snapshot to Drive" (kXlKbZpceulxtWvQ).
+// pkgPTS rev 2 (ASK 227, plan Wall 5879; rev 2 after W3 FAIL Wall 5887): two fixes to "TRUTH App — Protected Table Snapshot to Drive" (kXlKbZpceulxtWvQ).
 // Fix 1: "Fetch Pending Snapshots" authenticates with the stored "Supabase account" credential instead of the hard-coded
 //        anon headers (anon's 3 s statement_timeout cancels the RPC; measured mean 2,240 ms).
 // Fix 2: "Build Snapshot Content" builds one file item per table group (it read only $input.first(), while the RPC marks
@@ -24,6 +24,22 @@ F.parameters.authentication = 'predefinedCredentialType';
 F.parameters.nodeCredentialType = 'supabaseApi';
 F.credentials = { supabaseApi: { id: '0Ap4HeISSH05ZS9s', name: 'Supabase account' } };
 note('Fetch Pending Snapshots node JSON', f0, JSON.stringify(F).length);
+
+// ---- Fix 2a (rev 2, W3 FAIL Wall 5887): Group By Table reads every input item ----
+// Live shape (execution 36577): the HTTP node splits the RPC's jsonb array into one item PER ROW, so the old code,
+// which read only $input.first().json and accepted an array or a one-key object, found no rows and returned [] on every run.
+const G = by('Group By Table'); const g0 = G.parameters.jsCode;
+const gOld = "const raw = $input.first().json;\nlet rows = [];\nif (Array.isArray(raw)) {\n  rows = raw;\n} else if (raw && typeof raw === 'object') {\n  const keys = Object.keys(raw);\n  if (keys.length === 1) rows = raw[keys[0]] || [];\n}\n";
+if (!g0.startsWith(gOld) || g0.split(gOld).length !== 2) throw new Error('group anchor');
+const gNew = "// ASK 227 rev 2: the HTTP node emits one item PER ROW (execution 36577), so rows come from every input item.\n" +
+  "// The two older shapes (the whole array as one item, or an object with one key holding it) are still accepted.\n" +
+  "const ins = $input.all().map(i => i.json);\nlet rows = [];\n" +
+  "if (ins.length === 1 && Array.isArray(ins[0])) {\n  rows = ins[0];\n" +
+  "} else if (ins.length === 1 && ins[0] && typeof ins[0] === 'object' && !('table_name' in ins[0]) && Object.keys(ins[0]).length === 1) {\n  rows = ins[0][Object.keys(ins[0])[0]] || [];\n" +
+  "} else {\n  rows = ins.filter(r => r && typeof r === 'object' && typeof r.table_name === 'string');\n}\n";
+G.parameters.jsCode = gNew + g0.slice(gOld.length);
+if (G.parameters.mode && G.parameters.mode !== 'runOnceForAllItems') throw new Error('group mode ' + G.parameters.mode);
+note('Group By Table jsCode', g0.length, G.parameters.jsCode.length);
 
 // ---- Fix 2 ----
 const B = by('Build Snapshot Content'); const b0 = B.parameters.jsCode;
