@@ -1,0 +1,39 @@
+rows read 76 | not in line form (NONE, NO LINE, UNREADABLE) 20 | unchanged 54
+old -> new status counts {"CONFIRMED -> CONFIRMED":34,"NOT A CONTRADICTION -> NOT A CONTRADICTION":19,"NOT CONFIRMED (form) -> NOT CONFIRMED (form)":1,"NOT CONFIRMED (form) -> CONFIRMED":2}
+differences 2
+  {"id":35245,"run":"ODV1-36677-0hxbzcd2","seat":"judge contradiction enforcer","item":"J2 DEFENDER LINK 4","old":"NOT CONFIRMED (form) -- the earlier round CR4 is not one of the defender's rounds 1 to 3","new":"CONFIRMED"}
+  {"id":35247,"run":"ODV1-36677-0hxbzcd2","seat":"judge contradiction enforcer","item":"J2 DEFENDER LINK 4","old":"NOT CONFIRMED (form) -- the earlier round CR4 is not one of the defender's rounds 1 to 3","new":"CONFIRMED"}
+
+OLD | skipped false | errors []
+    J1 DEFENDER LINK 5 CR3->CR4 | NOT A CONTRADICTION 
+    J2 DEFENDER LINK 4 CR4->CR4 | NOT CONFIRMED (form) | the earlier round CR4 is not one of the defender's rounds 1 to 3
+    J1 DEFENDER LINK 6 CR3->CR4 | NOT A CONTRADICTION 
+    J2 DEFENDER LINK 4 CR4->CR4 | NOT CONFIRMED (form) | the earlier round CR4 is not one of the defender's rounds 1 to 3
+   confirmed (link broken by the contradiction rule): []
+   log rows: 4 J1 DEFENDER LINK 5 = NOT A CONTRADICTION -- The defender can grant the Romans 1:3 || J2 DEFENDER LINK 4 = NOT CONFIRMED (form) -- the earlier round CR4 is not one of  || J1 DEFENDER LINK 6 = NOT A CONTRADICTION -- A grant can stand as conceded fact wh || J2 DEFENDER LINK 4 = NOT CONFIRMED (form) -- the earlier round CR4 is not one of 
+NEW | skipped false | errors []
+    J1 DEFENDER LINK 5 CR3->CR4 | NOT A CONTRADICTION 
+    J2 DEFENDER LINK 4 CR4->CR4 | CONFIRMED 
+    J1 DEFENDER LINK 6 CR3->CR4 | NOT A CONTRADICTION 
+    J2 DEFENDER LINK 4 CR4->CR4 | CONFIRMED (second check) 
+   confirmed (link broken by the contradiction rule): ["DEFENDER LINK 4 J2"]
+   log rows: 4 J1 DEFENDER LINK 5 = NOT A CONTRADICTION -- The defender can grant the Romans 1:3 || J2 DEFENDER LINK 4 = CONFIRMED -- The closing makes Luke 2:48 one of D4's two foo || J1 DEFENDER LINK 6 = NOT A CONTRADICTION -- A grant can stand as conceded fact wh || J2 DEFENDER LINK 4 = CONFIRMED (second check) -- The close makes Luke 2:48 a foot
+
+OK   Judge Contradiction Record: run 36677 J2 as stored (CR4 -> CR4, two sentences) | old NOT CONFIRMED (form) | new CONFIRMED
+OK   Judge Contradiction Record: same sentence quoted twice in CR4 | old NOT CONFIRMED (form) | new NOT CONFIRMED (form) | both quotations are in CR4 and one holds the other: a contradiction within the closing round needs two different sentences (pkgJ2)
+OK   Judge Contradiction Record: one quote holds the other (part of the same sentence) | old NOT CONFIRMED (form) | new NOT CONFIRMED (form) | both quotations are in CR4 and one holds the other: a contradiction within the closing round needs two different sentences (pkgJ2)
+OK   Judge Contradiction Record: earlier quote not word for word in CR4 | old NOT CONFIRMED (form) | new NOT CONFIRMED (form) | the earlier quotation is not found word for word in CR4
+OK   Judge Contradiction Record: challenger cites the defender round CR4 as its earlier round | old NOT CONFIRMED (form) | new NOT CONFIRMED (form) | the earlier round CR4 is not one of the challenger's rounds 1 to 4
+OK   Judge Contradiction Record: earlier CR4, closing CR3 (closing must be round 4) | old NOT CONFIRMED (form) | new NOT CONFIRMED (form) | the closing round CR3 is not the defender's round 4 (CR4); the closing quotation is not found word for word in CR3
+OK   Judge Contradiction Record: challenger DR4 -> DR4, two different stored sentences | old NOT CONFIRMED (form) | new CONFIRMED
+OK   Judge Contradiction Record: CR3 -> CR4 as live (J1 shape, answered CONFIRMED) | old CONFIRMED | new CONFIRMED
+OK   Close Enforcer Record: run 36677 J2 as stored (CR4 -> CR4, two sentences) | old NOT CONFIRMED (form) | new CONFIRMED
+OK   Close Enforcer Record: same sentence quoted twice in CR4 | old NOT CONFIRMED (form) | new NOT CONFIRMED (form) | both quotations are in CR4 and one holds the other: a contradiction within the closing round needs two different sentences (pkgJ2)
+OK   Close Enforcer Record: one quote holds the other (part of the same sentence) | old NOT CONFIRMED (form) | new NOT CONFIRMED (form) | both quotations are in CR4 and one holds the other: a contradiction within the closing round needs two different sentences (pkgJ2)
+OK   Close Enforcer Record: earlier quote not word for word in CR4 | old NOT CONFIRMED (form) | new NOT CONFIRMED (form) | the earlier quotation is not found word for word in CR4
+OK   Close Enforcer Record: challenger cites the defender round CR4 as its earlier round | old NOT CONFIRMED (form) | new NOT CONFIRMED (form) | the earlier round CR4 is not one of the challenger's rounds 1 to 4
+OK   Close Enforcer Record: earlier CR4, closing CR3 (closing must be round 4) | old NOT CONFIRMED (form) | new NOT CONFIRMED (form) | the closing round CR3 is not the defender's round 4 (CR4); the closing quotation is not found word for word in CR3
+OK   Close Enforcer Record: challenger DR4 -> DR4, two different stored sentences | old NOT CONFIRMED (form) | new CONFIRMED
+OK   Close Enforcer Record: CR3 -> CR4 as live (J1 shape, answered CONFIRMED) | old CONFIRMED | new CONFIRMED
+OK   Close Enforcer Record: close enforcer form "ROUND 4" for both (closing enforcer only) | old NOT CONFIRMED (form) | new CONFIRMED
+17 OK, 0 FAIL
