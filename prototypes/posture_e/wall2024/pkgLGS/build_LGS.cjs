@@ -31,6 +31,7 @@ const want={};
 for(const [P,ROLE,SBR,FALLB] of PATHS){
  const GR=P+'Gate Record';let S=before[GR];
  S=one(S,RET,RET2,GR+' gateCure2024 return');
+ S=one(S,"fresh=(R2.items||[]).filter(z=>!keys0.has(z.key)).map(z=>({kind:z.kind,","fresh=(R2.items||[]).filter(z=>!keys0.has(z.key)).map(z=>({key:z.key,kind:z.kind,",GR+' fresh key (W3 F2)');
  // replies by name; late build and late call read by name
  S=one(S,"const R=$input.all().map(x=>x.json);",
   "const R=$('"+P+"Gate Call openrouter').all().map(x=>x.json);const __LRL='"+ROLE+"'; /* pkgLGS: the gate replies by name; $input is now the late call */\n"+
@@ -38,7 +39,7 @@ for(const [P,ROLE,SBR,FALLB] of PATHS){
  // the late pass, right after the first cure
  const CUR="let C=null,cerr=null;if(!err){try{C=gateCure2024(g.seat,p.verdict_raw,g.F,its,g.items,txt,ctx);}catch(e){cerr=String(e&&e.message||e).slice(0,300);}}";
  S=one(S,CUR,CUR+"\n let LG=null;{const __k=LGB.findIndex(x=>x&&x.lgs_send===true&&x.seat===g.seat);if(C&&__k>=0){const L=LGB[__k];let lt='',le=null,C2=null;try{lt=String(LGR[__k].choices[0].message.content||'');}catch(e){le=String((LGR[__k]&&LGR[__k].error&&(LGR[__k].error.message||LGR[__k].error))||'no reply').slice(0,200);} /* pkgLGS (ASK 191): one late answer */\n"+
-  "  if(!le){try{C2=gateCure2024(g.seat,p.verdict_raw,g.F,its.concat(C.add),L.items,lt,ctx);}catch(e){le=String(e&&e.message||e).slice(0,300);}}LG={L,lt,le,C2,off:0};const done=new Set();\n"+
+  "  if(!le){try{C2=gateCure2024(g.seat,p.verdict_raw,g.F,its.concat(C.add),L.items,lt,ctx);}catch(e){le=String(e&&e.message||e).slice(0,300);}}LG={L,lt,le,C2,off:0};{const __kn=new Set([...(g.items||[]),...((C.R2&&C.R2.items)||[]),...L.items].map(x=>x&&x.key));LG.nf=C2?C2.fresh.filter(f=>!__kn.has(f.key)):[];} /* W3 F2: only items no pass raised before */const done=new Set();\n"+
   "  for(const r of C.res){const mine=L.items.filter(x=>(x.hang||[]).includes(r.gid));if(!mine.length)continue;const st=mine.map(x=>{const q=C2?C2.res.find(z=>z.gid===x.gid):null;return {x,q};});\n"+
   "   if(C2&&st.every(o=>o.q&&o.q.cured)){r.cured=true;r.why='the gate change was applied; the new LIVE item it raised ('+mine.map(x=>x.gid).join(', ')+') was cured at the late gate (pkgLGS, ASK 191)';done.add(r.gid);if(r.live)LG.off++;}\n"+
   "   else r.why=String(r.why)+' [late gate (pkgLGS): '+(le?'no late answer read: '+le:'not cured: '+st.map(o=>o.x.gid+' '+(o.q?o.q.why:'not read')).join('; ')).slice(0,700)+']';}\n"+
@@ -46,8 +47,9 @@ for(const [P,ROLE,SBR,FALLB] of PATHS){
  S=one(S,"const u=C?C.uncured:0;","const u=C?Math.max(0,C.uncured-(LG?LG.off:0)):0;",GR+' u');
  S=one(S,"'raised by the gate change of '+f.by+', which stays UNCURED and is counted there once'","'raised by the gate change of '+f.by+(f.lgs?'; '+f.lgs:', which stays UNCURED and is counted there once')",GR+' fresh audit');
  S=one(S,"' (raised by the gate change of '+f.by+', which stays UNCURED and is counted there once; W3 2341)'","' (raised by the gate change of '+f.by+(f.lgs?'; '+f.lgs+')':', which stays UNCURED and is counted there once; W3 2341)')",GR+' fresh row');
+ S=one(S,"item:'NEW '+f.kind+' ('+f.src+')',flagged_line:null,prompt_sent:null,full_reply:null,reply_error:null,response_line:null,cure_status:'UNCURED',","item:'NEW '+f.kind+' ('+f.src+')',flagged_line:null,prompt_sent:null,full_reply:null,reply_error:null,response_line:null,cure_status:f.lgs?'CURED':'UNCURED',",GR+' fresh row status (W2 5745)');
  S=one(S," bodies[g.idx]=JSON.stringify(b);if(C)C.add.forEach(x=>add.push(x));",
-  " if(LG)p.verdict_raw+='\\n'+(LG.C2?LG.C2.res.map(r=>'[AUDIT v38: E-GATE LATE (pkgLGS) -- SEAT: '+g.seat+'; '+r.gid+' '+r.kind+' ('+r.src+'; raised by '+((LG.L.items.find(x=>x.gid===r.gid)||{}).hang||[]).join(', ')+'); ANSWER: '+r.ans+'; '+(r.cured?'CURED':'UNCURED')+': '+safe(r.why)+'; RECORD-ONLY: the count stays on the gate change that raised it]').join('\\n')+(LG.C2.fresh.length?'\\n'+LG.C2.fresh.map(f=>'[AUDIT v38: E-GATE LATE NEW ITEM (pkgLGS) -- SEAT: '+g.seat+'; '+f.kind+' ('+f.src+'): '+safe(f.why).slice(0,300)+'; RECORD-ONLY, no further gate]').join('\\n'):''):'[AUDIT v38: E-GATE LATE (pkgLGS) -- SEAT: '+g.seat+'; no late answer read: '+safe(LG.le)+'; the gate changes stay as graded]');\n"+
+  " if(LG)p.verdict_raw+='\\n'+(LG.C2?LG.C2.res.map(r=>'[AUDIT v38: E-GATE LATE (pkgLGS) -- SEAT: '+g.seat+'; '+r.gid+' '+r.kind+' ('+r.src+'; raised by '+((LG.L.items.find(x=>x.gid===r.gid)||{}).hang||[]).join(', ')+'); ANSWER: '+r.ans+'; '+(r.cured?'CURED':'UNCURED')+': '+safe(r.why)+'; RECORD-ONLY: the count stays on the gate change that raised it]').join('\\n')+(LG.nf.length?'\\n'+LG.nf.map(f=>'[AUDIT v38: E-GATE LATE NEW ITEM (pkgLGS) -- SEAT: '+g.seat+'; '+f.kind+' ('+f.src+'): '+safe(f.why).slice(0,300)+'; RECORD-ONLY, no further gate]').join('\\n'):''):'[AUDIT v38: E-GATE LATE (pkgLGS) -- SEAT: '+g.seat+'; no late answer read: '+safe(LG.le)+'; the gate changes stay as graded]');\n"+
   " bodies[g.idx]=JSON.stringify(b);if(C)C.add.forEach(x=>add.push(x));if(LG&&LG.C2)LG.C2.add.forEach(x=>add.push(x));",GR+' late audit and add');
  S=one(S,",fresh:C?C.fresh.length:0,error:err||cerr||null});",",fresh:C?C.fresh.length:0,error:err||cerr||null,...(LG?{late:{items:LG.L.items.length,cured_changes:LG.off,error:LG.le||null}}:{})});",GR+' seats');
  // late rows: after the fresh rows of this seat
