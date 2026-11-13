@@ -1,0 +1,12 @@
+pkgCFO local test (postgres 16, stub derive_debate_outcome holding the three live anchors; pkgDFL rev 3 applied first):
+a1 both sides confirmed, debate created before the write => CHALLENGER PREVAILS | close_forfeit null (unchanged)
+b1 both (close enforcer DEFENDER + judge-found CHALLENGER) => UNDERDETERMINED | [CHALLENGER, DEFENDER]
+b2 challenger only => DEFENDER PREVAILS | [CHALLENGER]
+b3 defender only => CHALLENGER PREVAILS | [DEFENDER]
+b4 challenger rows "NOT CONFIRMED (one check of two)" and "CONFIRMED (second check)" only => DEFENDER PREVAILS (as panel HELD) | []
+b5 review outcome (CONTESTED) with a challenger contradiction => UNGRADED — REVIEW | null
+b6 challenger row under another run token => as panel | []
+b7 NOT A CONTRADICTION => as panel | []
+anon: permission denied for function cfo_sides
+revert: md5 back to base, cfo_sides dropped
+Live, read only: derive_debate_outcome md5 f9f1c6127c02223a00b931a4c05d49a0 (the guard), each anchor found once, one overload.
