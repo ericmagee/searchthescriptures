@@ -79,7 +79,7 @@ T('X1 anon cannot call dfl_strike',('refused' if 'permission denied' in psql("se
 T('X2 anon cannot call dfl_put',('refused' if 'permission denied' in psql("set role anon; select dfl_put(l) from debate_enforcer_log l limit 1",ok=False)[1] else 'accepted'),'refused')
 psql("set role service_role; insert into debate_enforcer_log(id,run_token,seat,kind,rule,item,cure_reason) values (900030,'ODV1-99990-x','close enforcer','enforcer_check','E-CLOSECON','X1 DEFENDER LINK 2','CONFIRMED -- x')")
 T('X3 an insert by a non-owner role still records',psql("select count(*) from debater_fault_ledger where log_id=900030")[0],1)
-T('X4 lab_seat can strike',psql("set role lab_seat; select dfl_strike(99990,'DEFENDER','X1%','test','w3/x.md')")[0.split()[-1],1)
+T('X4 lab_seat can strike',psql("set role lab_seat; select dfl_strike(99990,'DEFENDER','X1%','test','w3/x.md')")[0].split()[-1],1)
 T('W1 trigger WHEN clause',psql("select pg_get_triggerdef(oid) ~ 'WHEN \\(\\(new.rule = ''E-CLOSECON''' from pg_trigger where tgname='dfl_from_log'")[0],'t')
 # backfill on a fresh ledger equals the replay
 ids_before=psql("select string_agg(log_id::text,',' order by log_id) from debater_fault_ledger where log_id<900000 and not struck")[0]
