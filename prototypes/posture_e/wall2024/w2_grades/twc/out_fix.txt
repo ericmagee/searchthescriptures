@@ -1,0 +1,11 @@
+PASS P1 two copies confirm the same link on DIFFERENT pairs (E1/C1 vs E2/C2) -> confirmed [D4] want [D4]; ledger rows 1 want 1
+PASS P2 copy 2 confirms with a quote not in the transcript (form refusal) -> confirmed [] want []; ledger rows 0 want 0
+PASS P3 pkgCLK: copy 1 names LINK 3, copy 2 LINK 4; block heads D4 -> confirmed [D4] want [D4]; ledger rows 1 want 1
+PASS P4 copy 1 confirms two lines of one link, copy 2 none -> confirmed [] want []; ledger rows 0 want 0
+PASS P5 same link confirmed on both copies by candidate X1 (both answer X1) -> confirmed [D4] want [D4]; ledger rows 1 want 1
+PASS P6 copies agree on side but different links (D4 vs D2) -> confirmed [] want []; ledger rows 0 want 0
+PASS P7 a challenger copy-2 confirmation cannot pair with a defender copy-1 one -> confirmed [] want []; ledger rows 0 want 0
+PASS P8 copy 1 CONFIRMED, copy 2 lines are lower-case markdown (bold) and still read -> confirmed [D4] want [D4]; ledger rows 1 want 1
+PASS P9 both sides both copies confirm (ledger one row per side) -> confirmed [C2,D4] want [C2,D4]; ledger rows 2 want 2
+   P10 errors: ["CHALLENGER (second check): no reply (timeout)"] | log items: NEW DEFENDER LINK 4=CONFIRMED -- why ; NEW DEFENDER LINK 4=CONFIRMED (second check) -- why ; NONE CHALLENGER=NONE FOUND ; NOT CHECKED CHALLENGER (second check)=NOT CHECKED -- CHALLENGER (second check)
+9 of 9 pass
