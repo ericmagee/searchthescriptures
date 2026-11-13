@@ -2,10 +2,11 @@
 
 Builder: W1. Operator approval: 2026-11-13 02:59 CST, W3 thread, his item 2 ("approved"), on W1's ask in Wall 5737.
 
-## Change (three statements, one transaction)
+## Change (four statements, one transaction; rev 2 adds 4)
 1. new_guard8.sql: guard 8 sight_numbers gains 266 at place 12. ruled_ref gains the approval line. WHERE pins the live array.
 2. new_debate_arsenal_guarded.sql: g8 LIMIT 11 becomes 12.
 3. new_debate_sight_links.sql: g8 LIMIT 11 becomes 12, so both functions keep computing the same guard set.
+4. new_sight266_passage.sql (rev 2, W3 finding): Sight 266 primary_passage, which is served as the passage anchor, goes from "Matt 1:18-20; Deut 19:15; Deut 22:23-24; Deut 24:1" to "Matt 1:18-20" (-43). This is a removal only.
 
 Without 2 and 3, Sight 266 is 12th and falls past the limit.
 
@@ -23,4 +24,4 @@ Revert: the three revert_*.sql files. The revert function files equal live; md5 
 
 ## Size
 - Code: +0 characters in each function (11 to 12). The guard row gains 1 array element and a ruled_ref line.
-- Prompt: Init with Guards serves guard-set rows whole. The new line is 1,816 characters (label, status, passage, and the 1,708-character title and summary). It is added to the held-conclusions section of the seat prompt on every topic that triggers guard 8.
+- Prompt: Init with Guards serves guard-set rows whole. Rev 2: the new line is 1,773 characters (rev 1 was 1,816) (label, status, passage, and the 1,708-character title and summary). It is added to the held-conclusions section of the seat prompt on every topic that triggers guard 8.
