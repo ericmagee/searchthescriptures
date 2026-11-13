@@ -1,0 +1,7 @@
+OK   R1 case and punctuation differ: refused | UNCURED
+OK   R2 acq set, acm empty (MISSES on the answer, verse cleared): quote still refused | UNCURED
+OK   R3 curly quotes: refused | UNCURED
+OK   R4 a 2-word graded answer does not block an unrelated 9-word quote | CURED retracted with a quoted reason the transcript verifies: [CR3] "Matthew 1:22 give
+OK   R5 5-word fragment of the answer: no cure by quote (under 6) and no throw | UNCURED retracted, but the BROKEN grade rests on meaning and the retraction gives no quoted reason the trans
+OK   R6 acq after a JSON round trip: refused | UNCURED
+W2 checks 6 of 6
