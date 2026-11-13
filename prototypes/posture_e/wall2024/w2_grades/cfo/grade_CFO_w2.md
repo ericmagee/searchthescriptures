@@ -56,3 +56,26 @@ The block (exact pkgCFO text, between a stubbed outcome and the citation rule):
 - Block plants R1 to R6 pass 6 of 6. R2 now keeps "DEFENDER PREVAILS, WEAKENED".
 - The revert's regex still removes the new block: round trip to md5 f9f1c612 on the live text (SELECT only).
 - L1 to L4 stand.
+
+## Rev 3 regrade, 22:14 CST 11-12: PASS WITH LIMITS
+- Changes:
+  - cfo_sides reads only rows with seat = 'close enforcer' (W3 F1).
+  - New branch: ELSIF DEFENDER gives CHALLENGER PREVAILS on any panel (W3 F3).
+  - SQL is 3,938 characters.
+- cfo_sides plants, 9 of 9:
+  - J3 judge-found is no longer read;
+  - a defender X on debate 8 gives {DEFENDER};
+  - judge-found J1 plus seat 'Close Enforcer' (wrong case) gives {}. On live, 0 rows have another case.
+  - anon is refused.
+- Block plants, 9 of 9:
+  - DEFENDER PREVAILS plus defender X gives CHALLENGER PREVAILS;
+  - UNDERDETERMINED plus defender X, then a challenger citation failure, gives REVIEW;
+  - WEAKENED with no rows stays;
+  - both sides give UNDERDETERMINED;
+  - an old debate is unchanged;
+  - a review outcome stays.
+- The revert is unchanged; its block regex still matches (the block ends "    END IF;\n  END IF;\n\n").
+- Limits:
+  - L1 (defender forfeit) is closed by the new branch.
+  - L2 and L3 stand.
+  - WRITE ORDER (with W3): pkgTWC must be live before or with pkgCFO. Without it, close enforcer rows rest on one check.
