@@ -1,0 +1,53 @@
+library lines changed: 2212, 2213, 2214, 2215
+PASS nodes other than Shared Library and the connections are byte-identical -> 455 nodes
+PASS stub Extract Independent Verdict -> 213433 -> 214082
+PASS stub Panel Payloads -> 206252 -> 206901
+PASS stub Cure Build -> 78410 -> 78410
+PASS stub Cure Normalize -> 227346 -> 227346
+PASS stub Cure Check -> 254307 -> 254307
+PASS stub Panel Cure Build 1 -> 94671 -> 94671
+PASS stub Panel Cure Normalize 1 -> 227362 -> 227362
+PASS stub Panel Cure Build 2 -> 94671 -> 94671
+PASS stub Panel Cure Normalize 2 -> 227362 -> 227362
+PASS stub Panel Cure Build 3 -> 94671 -> 94671
+PASS stub Panel Cure Normalize 3 -> 227362 -> 227362
+PASS stub Panel Cure Check -> 253308 -> 253308
+PASS stub Alternate Build -> 95577 -> 95577
+PASS stub Alternate Payloads -> 198741 -> 199390
+PASS stub Alternate Cure Build -> 94318 -> 94318
+PASS stub Alternate Cure Normalize -> 227353 -> 227353
+PASS stub Alternate Merge Seat -> 326186 -> 326186
+PASS stub Judge Enforcer Build -> 98047 -> 98047
+PASS stub Judge Enforcer Record -> 42577 -> 42577
+PASS stub Send Back Build -> 124877 -> 124877
+PASS stub Send Back Record -> 133470 -> 133470
+PASS stub Gate Build -> 197822 -> 197822
+PASS stub Gate Record -> 247173 -> 247173
+PASS stub Alt Judge Enforcer Build -> 110484 -> 110484
+PASS stub Alt Judge Enforcer Record -> 42630 -> 42630
+PASS stub Alt Send Back Build -> 125122 -> 125122
+PASS stub Alt Send Back Record -> 133442 -> 133442
+PASS stub Alt Gate Build -> 197835 -> 197835
+PASS stub Alt Gate Record -> 247206 -> 247206
+PASS stub Alternate Merge 1 -> 151157 -> 151157
+PASS stub Early Alternate Build -> 95577 -> 95577
+PASS stub R2 Alternate Build -> 95954 -> 95954
+PASS stub R2 Alternate Merge Seat -> 326210 -> 326210
+PASS stub R2 Alt Judge Enforcer Build -> 110529 -> 110529
+PASS stub R2 Alternate Payloads -> 198647 -> 199296
+PASS stub R2 Alt Judge Enforcer Record -> 42660 -> 42660
+PASS stub R2 Alternate Cure Build -> 94321 -> 94321
+PASS stub R2 Alt Send Back Build -> 125094 -> 125094
+PASS stub R2 Alternate Cure Normalize -> 227359 -> 227359
+PASS stub R2 Alt Send Back Record -> 133490 -> 133490
+PASS stub R2 Alt Gate Build -> 197856 -> 197856
+PASS stub R2 Alt Gate Record -> 247233 -> 247233
+PASS stub R2 Alternate Merge -> 151217 -> 151217
+PASS stub Late Gate Build -> 240734 -> 240734
+PASS stub Alt Late Gate Build -> 240739 -> 240739
+PASS stub R2 Alt Late Gate Build -> 240754 -> 240754
+PASS stub count is 46
+PASS rebuilt source changed in exactly the 4 K-W reader nodes -> 4
+PASS header library sha matches its /*LIB*/ text -> 16a7647803f08953
+
+50 pass, 0 fail
