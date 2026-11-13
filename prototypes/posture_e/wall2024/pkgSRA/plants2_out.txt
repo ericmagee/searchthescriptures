@@ -1,0 +1,8 @@
+PASS Q1 MEANS echo line not served
+PASS Q2 bold MEANS echo line not served
+PASS Q3 numbered inference line not served
+PASS Q4 a line holding the meaning whole not served
+PASS Q5 a line holding the answer in its middle not served
+PASS Q6 the good line is still served
+PASS Q7 the good line is still served beside echo lines
+7 of 7 pass
