@@ -1,0 +1,21 @@
+ex33149_full.json D4 Build ERR Referenced node is unexecuted: C1B Extract Referenced node is unexecuted: C1B Extract
+ex33149_full.json C4 Build ERR Referenced node is unexecuted: C1B Extract Referenced node is unexecuted: C1B Extract
+33371 D4 Build block yes +957 rest equal true other fields equal true
+33371 C4 Build block yes +937 rest equal true other fields equal true
+33490 D4 Build block yes +1586 rest equal true other fields equal true
+33490 C4 Build block yes +1212 rest equal true other fields equal true
+33497 D4 Build block yes +3414 rest equal true other fields equal true
+33497 C4 Build block yes +802 rest equal true other fields equal true
+34726 D4 Build block yes +3231 rest equal true other fields equal true
+34726 C4 Build block yes +1179 rest equal true other fields equal true
+34852 D4 Build block yes +1759 rest equal true other fields equal true
+34852 C4 Build block yes +800 rest equal true other fields equal true
+35067 D4 Build block yes +4327 rest equal true other fields equal true
+35067 C4 Build block no +0 rest equal true other fields equal true
+35173 D4 Build block yes +833 rest equal true other fields equal true
+35173 C4 Build block no +0 rest equal true other fields equal true
+35296 D4 Build block yes +1997 rest equal true other fields equal true
+35296 C4 Build block no +0 rest equal true other fields equal true
+ex35379_full.json D4 Build ERR Cannot read properties of undefined (reading 'fam') Cannot read properties of undefined (reading 'fam')
+ex35379_full.json C4 Build ERR Cannot read properties of undefined (reading 'fam') Cannot read properties of undefined (reading 'fam')
+requests 16 added D4 18104 C4 4930 bad 4
