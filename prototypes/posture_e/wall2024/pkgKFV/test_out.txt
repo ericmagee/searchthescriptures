@@ -1,0 +1,8 @@
+OK   35856 DR2 Isaiah 7:16 press | live Luke 1:27 | new Isaiah 7:16 | expect Isaiah 7:16
+OK   35856 DR2 Isaiah 8:4 press | live Isaiah 8:4 | new Isaiah 8:4 | expect Isaiah 8:4
+OK   head reference wins | live Isaiah 7:14 | new Isaiah 7:14 | expect Isaiah 7:14
+OK   press line only | live Luke 1:27 | new Luke 1:27 | expect Luke 1:27
+OK   prose line only (old path kept) | live Luke 1:27 | new Luke 1:27 | expect Luke 1:27
+OK   prose first, press later | live Matthew 1:23 | new Luke 1:27 | expect Luke 1:27
+OK   no line | live null | new null | expect null
+checks 7 of 7
