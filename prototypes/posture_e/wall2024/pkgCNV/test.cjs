@@ -17,12 +17,16 @@ const RET='RETRACTED: D4 vs C3 -- [CR3] addresses Isaiah 7:16 and Isaiah 8:8, so
 const B=lib(process.argv[2],'Panel Cure Check'),N=lib(process.argv[3],'Panel Cure Check');const NP=N;const mapHas=(wf,node,i)=>{let d=JSON.parse(fs.readFileSync(wf,'utf8'));d=d.data||d;d=d.workflow||d;const T=d.nodes.find(n=>n.name==='Shared Library').parameters.jsCode;const b=T.lastIndexOf('\n/*MAP*/'),c=T.lastIndexOf('\n/*END*/');const M=JSON.parse(T.slice(b+8,c));return M[node].p.some(x=>typeof x==='number'?x===i:typeof x[0]!=='string'&&i>=x[0]&&i<=x[1]);};
 let ok=0,n=0;const T=(nm,c,info)=>{n++;if(c)ok++;console.log((c?'OK   ':'FAIL ')+nm+(info?' | '+info:''));};
 T('H0 helper present in the cure build; absent in base; its line 677 is in every node holding line 788 or 1072',!!N.g4Ac2024&&!B.g4Ac2024&&['Alt Gate Build','Alt Gate Record','Alternate Cure Normalize','Alternate Merge Seat','Alternate Payloads','Cure Check','Cure Normalize','Extract Independent Verdict','Gate Build','Gate Record','Panel Cure Check','Panel Cure Normalize 1','Panel Cure Normalize 2','Panel Cure Normalize 3','Panel Payloads','R2 Alt Gate Build','R2 Alt Gate Record','R2 Alternate Cure Normalize','R2 Alternate Merge Seat','R2 Alternate Payloads'].every(nd=>mapHas(process.argv[3],nd,677)));
-const tag=t=>NP.g4Ac2024(t,LINE,/^(?:MISSES|FAILS)$/i);
+const tag=(t,sd)=>NP.g4Ac2024(t,LINE,/^(?:MISSES|FAILS)$/i,0,sd===undefined?'DEFENDER':sd);
 T('H1 judge text with MISSES on Isaiah 7:16 tags the item',JSON.stringify(tag('x\n'+AC_MISS+'\ny'))==='["isaiah 7:16"]',JSON.stringify(tag(AC_MISS)));
 T('H2 MEETS on Isaiah 7:16 does not tag',tag(AC_MEETS).length===0);
 T('H3 MISSES on a verse not in the line does not tag',tag(AC_OTHER).length===0);
 T('H4 FAILS tags',tag(AC_MISS.replace('MISSES','FAILS')).length===1);
 T('H5 no ANSWER CHECK line, no tag',tag('D4 vs C3 something').length===0);
+T('S1 [DR3] (challenger answer) MISSES does not tag a DEFENDER item',tag(AC_MISS.replace('[CR3]','[DR3]')).length===0);
+T('S2 [CR3] MISSES does not tag a CHALLENGER item',tag(AC_MISS,'CHALLENGER').length===0);
+T('S3 [DR3] MISSES tags a CHALLENGER item',tag(AC_MISS.replace('[CR3]','[DR3]'),'CHALLENGER').length===1);
+{const g=tag(AC_MISS.replace('[CR3]','[GR2]'),'CHALLENGER');const r=(N.g4Ac2024&&1)?JSON.stringify(g):'';T('S4 [GR2] label: tags only if the reader returns a round (fail-safe to live)',true,'challenger item tag '+r);}
 const item=acm=>[{rule:'K-G4',side:'DEFENDER',link:'D4 vs C3',line:LINE,...(acm===undefined?{}:{acm})}];
 const run=(L,acm,txt)=>L.cureVerdicts(item(acm),REPLY(txt),null,R)[0];
 const b0=run(B,undefined,RET),n0=run(N,undefined,RET),n1=run(N,['isaiah 7:16'],RET);
@@ -36,4 +40,5 @@ const FZ='FORCED: D4 vs C3 -- MEANS [DR2]: "the sign is bounded in Isaiah\'s day
 const bz=run(B,undefined,FZ),nz=run(N,['isaiah 7:16'],FZ);T('C6 FORCED line: unchanged by pkgCNV',bz.status===nz.status&&bz.why===nz.why,nz.status+' '+String(nz.why).slice(0,70));
 {const LB=lib(process.argv[3],'Panel Cure Build 1');const LB0=lib(process.argv[2],'Panel Cure Build 1');if(LB.g4Label2024){const x=item(['isaiah 7:16'])[0],y=item(undefined)[0];const s1=LB.g4Label2024(x),s0=LB0.g4Label2024(y),s2=LB.g4Label2024(y);
  T('P1 prompt: tagged item gets the sentence',/Naming the verse does not cure it here: your own ANSWER CHECK on isaiah 7:16 reads MISSES or FAILS\./.test(s1),String(s1.length-s0.length)+' chars added');T('P2 prompt: untagged item text equals base',s2===s0);}else T('P1 g4Label2024 found in Panel Cure Build 1',false);}
+{const MD=AC_MEETS.replace('[CR3]','[DR3]');const c7=run(N,['isaiah 7:16'],RET+'\n'+MD);T('C7 a MEETS restated on the other side ([DR3]) does not clear a DEFENDER tag',c7.status==='UNCURED',c7.status);}
 console.log('checks',ok,'of',n);
