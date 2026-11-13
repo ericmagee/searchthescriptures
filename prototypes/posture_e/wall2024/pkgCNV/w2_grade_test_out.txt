@@ -1,0 +1,16 @@
+OK   H0 helper present in the cure build; absent in base; its line 677 is in every node holding line 788 or 1072
+OK   H1 judge text with MISSES on Isaiah 7:16 tags the item | ["isaiah 7:16"]
+OK   H2 MEETS on Isaiah 7:16 does not tag
+OK   H3 MISSES on a verse not in the line does not tag
+OK   H4 FAILS tags
+OK   H5 no ANSWER CHECK line, no tag
+OK   C1 base: the stored retraction is CURED by "names" (as in run 35856) | CURED retracted with a quoted reason the transcript verifies: [CR3] names Isaiah 7:16 (Eric 15:1
+OK   C2 new, untagged item: same as base
+OK   C3 new, tagged item: UNCURED with the pkgCNV reason | UNCURED retracted, but the BROKEN grade rests on meaning and the retraction gives no quoted reason the transcript verifies (a quotation of 6 or more words standing in a
+OK   C4 new, tagged, reply restates ANSWER CHECK MEETS on Isaiah 7:16: CURED as base | CURED retracted with a quoted reason the transcript verifies: [CR3] names Isaiah 7:16 
+OK   C5 route (a), 6-word quote: unchanged by pkgCNV | CURED / CURED retracted with a quoted reason the transcript verifies: [CR3] "The press needs t
+OK   C6 FORCED line: unchanged by pkgCNV | CURED forced link: a FORCED line for D4 vs C3 (ruling 411); K-F reads its qu
+OK   P1 prompt: tagged item gets the sentence | 100 chars added
+OK   P2 prompt: untagged item text equals base
+FAIL W2-C4b tagged, reply writes RESTATED: ANSWER CHECK ... MEETS (ANSWER CHECK is RESTATABLE): should CURE as base | UNCURED retracted, but the BROKEN grade rests on meaning and the retraction gives no quoted reason the transcript verifies (a qu
+checks 14 of 15
