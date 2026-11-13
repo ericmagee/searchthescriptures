@@ -20,6 +20,9 @@ t('a line that is not a collision or FORCED line is not read',F,'KEYSTONE: D6 --
 t('ground prose with no quotation is not read',F,'D6 vs C2 (Luke 1:27): UNDERDETERMINED -- x. GROUND: The record leaves open the house.',false);
 t('escaped quotes as stored are read',F,'D6 vs C1 (Haggai 2:23): DEFENDER LINK BROKEN -- x. GROUND: [L1] Haggai 2:23 \\"I will make thee as a signet\\"',true);
 t('bulleted collision line is read',F,'- D6 vs C1 (Haggai 2:23): DEFENDER LINK BROKEN -- x. GROUND: [L1] Haggai 2:23 “I will make thee as a signet”',true);
+t('single-quoted ground, non-KJV: refused (rev 2)',F,"D6 vs C1 (Haggai 2:23): DEFENDER LINK BROKEN -- x. GROUND: [L1] Haggai 2:23 'I will make thee as a signet'",true);
+t('single-quoted ground, KJV: passes (rev 2)',F,"D6 vs C1 (Jeremiah 22:24): UNDERDETERMINED -- x. GROUND: [L1] Jeremiah 22:24 'Coniah the son of Jehoiakim king of Judah'",false);
+t('curly single-quoted ground, non-KJV: refused (rev 2)',F,'D6 vs C1 (Haggai 2:23): DEFENDER LINK BROKEN -- x. GROUND: [L1] Haggai 2:23 ‘I will make thee as a signet’',true);
 const C=LIB.includes("why=__rct?(__rct.gkv?'pkgGKV':'pkgRCT')+' refused the gate change")&&LIB.includes("find(z=>z&&z.sid===x.gid&&z.gkv);if(__gk){cured=true;");
 if(C){ok++;console.log('OK   gate cure: a gkv refusal is cured and recorded on the NOT APPLIED path and on the change path');}else{bad++;console.log('FAIL gate cure edits not found');}
 console.log('\n'+ok+' OK, '+bad+' FAIL');process.exit(bad?1:0);
