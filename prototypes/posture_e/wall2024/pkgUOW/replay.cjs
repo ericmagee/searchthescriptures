@@ -4,7 +4,7 @@ const w=JSON.parse(fs.readFileSync(process.argv[3]));const s=w.nodes.find(n=>n.n
 const LIB=JSON.parse(s.slice(s.indexOf('\n/*LIB*/')+8,s.lastIndexOf('\n/*MAP*/')));
 const oldLine=LIB[1896];
 const ANCH='|both\\s+readings|';
-const ADD='|both\\s+readings|both\\s+(?:(?!--)[^\\s.;:,!?()—–]+\\s+){1,6}and\\s+(?:(?!--)[^\\s.;:,!?()—–]+\\s+){0,6}(?:readings?|senses?|meanings?|uses?)\\b|(?:two|rival|competing)\\s+(?:(?!--)[^\\s.;:,!?()—–]+\\s+){0,2}(?:readings|senses|meanings)|';
+const ADD='|both\\s+readings|both\\s+(?:(?!--)[^\\s.;:,!?()—–]+\\s+){1,6}and\\s+(?:(?!--)[^\\s.;:,!?()—–]+\\s+){0,6}(?:readings?|senses?|meanings?)\\b|(?:two|rival|competing)\\s+(?:(?!--)[^\\s.;:,!?()—–]+\\s+){0,2}(?:readings|senses|meanings)|';
 if(oldLine.split(ANCH).length!==2)throw 'anchor';
 const newLine=oldLine.replace(ANCH,ADD);
 const mk=l=>eval(l.trim().replace(/^const OPEN=/,'(').replace(/;$/,')'));

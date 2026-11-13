@@ -1,5 +1,5 @@
 // pkgUOW: the pkgUND open-point test (OPEN, Shared Library) also reads a line that names two readings the record gives:
-// "both <X> and <Y> reading/sense/meaning/use" and "two/rival/competing readings/senses/meanings". Run 36791 luna D5 (log 36189) was
+// "both <X> and <Y> reading/sense/meaning" (rev 2: "use" dropped, it matched the verb, W4 Wall 6055) and "two/rival/competing readings/senses/meanings". Run 36791 luna D5 (log 36189) was
 // refused on wording alone: "the record gives both a mistaken-supposition use and a household-usage reading of the sonship".
 // Operator's standing ruling: relax too-strict line formats. Only alternatives are added; nothing that passed before can fail.
 // usage: node build.cjs <live json> <target json>
@@ -16,7 +16,7 @@ const LIB = JSON.parse(T.slice(iL + 8, iM)), MAP = JSON.parse(T.slice(iM + 8, iE
 const rebuild = (L, m) => m.p.map(e => typeof e === 'number' ? L[e] : typeof e[0] === 'string' ? e[0] : L.slice(e[0], e[1] + 1).join('\n')).join('\n');
 for (const k in MAP) if (rebuild(LIB, MAP[k]).length !== MAP[k].n) throw new Error('live rebuild length differs for ' + k);
 const A = '|both\\s+readings|';
-const B = '|both\\s+readings|both\\s+(?:(?!--)[^\\s.;:,!?()—–]+\\s+){1,6}and\\s+(?:(?!--)[^\\s.;:,!?()—–]+\\s+){0,6}(?:readings?|senses?|meanings?|uses?)\\b|(?:two|rival|competing)\\s+(?:(?!--)[^\\s.;:,!?()—–]+\\s+){0,2}(?:readings|senses|meanings)|';
+const B = '|both\\s+readings|both\\s+(?:(?!--)[^\\s.;:,!?()—–]+\\s+){1,6}and\\s+(?:(?!--)[^\\s.;:,!?()—–]+\\s+){0,6}(?:readings?|senses?|meanings?)\\b|(?:two|rival|competing)\\s+(?:(?!--)[^\\s.;:,!?()—–]+\\s+){0,2}(?:readings|senses|meanings)|';
 const hit = LIB.map((l, i) => [i, l]).filter(([i, l]) => l.includes('const OPEN=') && l.includes(A));
 if (hit.length !== 1 || hit[0][1].split(A).length !== 2) throw new Error('anchor');
 const i0 = hit[0][0]; const before = LIB[i0]; LIB[i0] = before.replace(A, () => B);
