@@ -18,3 +18,6 @@
    if(typeof v.reasoning==='string'&&!/\n/.test(v.reasoning)&&(v.reasoning.match(/\\n/g)||[]).length>1){v.reasoning=v.reasoning.replace(/\\n/g,'\n');env.text=JSON.stringify(v);}
    SIZE (ESTIMATE): 268 chars per copy with comment; +268 if the three share one library line, up to +804 if not; prompt 0. Proof owed: the replay above at FIX, plus a check that downstream readers (gate, cure, derive) see the same lines.
 2. Order only: move ember off first alternate until fix 1 is live (Init Seats ORDER0 / Accept Build ORDER): about +/-0 code; the operator's own order, so his decision.
+
+## Update 00:31 CST 11-13
+Eric ruled in W4's thread: "remove Ember from alternate list". W4 carries the write. Fix candidate 2 is settled by his ruling. Fix candidate 1 (pkgNLF) stays open with him and is not built; it now guards against any seat that escapes its newlines twice, not ember.
