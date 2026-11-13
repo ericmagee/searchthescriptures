@@ -1,0 +1,10 @@
+OK   S1 run 35856 sentence on its real rounds (true claim) | live flag (narrowed, specified, limbs) | pkgSEG no flag | right no flag
+OK   S2 named object the defender never withdrew | live flag (galatians, reading) | pkgSEG flag (galatians, reading) | right flag
+OK   S3 generic claim, defender only denies withdrawing | live flag (narrowed, specified, limbs) | pkgSEG flagundefined | right flag
+OK   S4 generic claim, defender withdrew nothing at all | live flag (several, claims) | pkgSEG flagundefined | right flag
+OK   S5 comma after the verb, then a named object never withdrawn | live flag (barzillai, route, through) | pkgSEG flag (barzillai, route, through) | right flag
+OK   S6 semicolon case with a named object withdrawn | live no flag | pkgSEG no flag | right no flag
+OK   S7 generic word then a named object never withdrawn | live flag (certain, claims, about) | pkgSEG flag (about, barzillai, register) | right flag
+OK   S8 named object after a generic first clause | live flag (specified, limbs, namely) | pkgSEG flag (namely, barzillai, register) | right flag
+OK   S9 true generic claim | live flag (several, points) | pkgSEG no flag | right no flag
+MISS S10 negated synthesis sentence | live flag (premises, across) | pkgSEG flag (premises, across) | right no flag
