@@ -1,0 +1,7 @@
+P1 last index: calls 1 ["reply 0","reply 1","reply 2","reply 3","reply 4","RETRY 5"]
+P2 all error: calls 6 ["RETRY 0","RETRY 1","RETRY 2","RETRY 3","RETRY 4","RETRY 5"]
+P3 empty retry reply: new A0 {} | live A0 {"error":{"message":"e"}}
+P4 short retry output: ["reply 0","RETRY first","reply 2","ERR","reply 4","reply 5"]
+P5 batch not run: equal to live true
+P6 no body: [{"rt_skip":true}]
+P7 string error: [{"rt":0,"body":{"model":"deepseek","messages":[{"role":"user","content":"C0"}]}
