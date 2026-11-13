@@ -1,0 +1,48 @@
+ODV1-34726-wpl9mvyd: cands 2 | live confirmed DEFENDER 4 | stored rows reproduce true
+  both confirm: confirmed DEFENDER 4 | ledger rows 1 (live 1) | statuses CONFIRMED; NOT A CONTRADICTION; NOT A CANDIDATE; CONFIRMED (second check)
+  second NONE: confirmed - | NOT CONFIRMED (one check of two); NOT A CONTRADICTION; NOT A CANDIDATE | log tail NONE (second check) NONE FOUND
+  second answers NOT A CONTRADICTION: confirmed - | NOT CONFIRMED (conflicting answers); NOT A CONTRADICTION; NOT A CANDIDATE
+  second errors: confirmed - | errors ["second check: no reply (planted timeout)"] | logged NOT CHECKED (second check)
+  first errors: confirmed - | statuses NOT CONFIRMED (one check of two); NOT A CONTRADICTION; NOT A CANDIDATE
+ODV1-34852-azssrnkg: cands 1 | live confirmed - | stored rows reproduce true
+  both confirm: confirmed - | ledger rows 0 (live 0) | statuses NOT A CANDIDATE; NOT A CONTRADICTION
+  second NONE: confirmed - | NOT A CANDIDATE; NOT A CONTRADICTION | log tail NONE (second check) NONE FOUND
+  second answers NOT A CONTRADICTION: confirmed - | NOT A CANDIDATE; NOT A CONTRADICTION
+  second errors: confirmed - | errors ["second check: no reply (planted timeout)"] | logged NOT CHECKED (second check)
+  first errors: confirmed - | statuses NOT A CANDIDATE; NOT A CONTRADICTION
+ODV1-35067-z8obkqib: cands 3 | live confirmed DEFENDER 1,DEFENDER 4,DEFENDER 2 | stored rows reproduce true
+  both confirm: confirmed DEFENDER 1,DEFENDER 4,DEFENDER 2 | ledger rows 3 (live 3) | statuses CONFIRMED; CONFIRMED (second check)
+  second NONE: confirmed - | NOT CONFIRMED (one check of two) | log tail NONE (second check) NONE FOUND
+  second answers NOT A CONTRADICTION: confirmed - | NOT CONFIRMED (conflicting answers)
+  second errors: confirmed - | errors ["second check: no reply (planted timeout)"] | logged NOT CHECKED (second check)
+  first errors: confirmed - | statuses NOT CONFIRMED (one check of two)
+ODV1-35296-nb5vsshb: cands 2 | live confirmed DEFENDER 2 | stored rows reproduce true
+  both confirm: confirmed DEFENDER 2 | ledger rows 1 (live 1) | statuses CONFIRMED; NOT A CONTRADICTION; CONFIRMED (second check)
+  second NONE: confirmed - | NOT CONFIRMED (one check of two); NOT A CONTRADICTION | log tail NONE (second check) NONE FOUND
+  second answers NOT A CONTRADICTION: confirmed - | NOT CONFIRMED (conflicting answers); NOT A CONTRADICTION
+  second errors: confirmed - | errors ["second check: no reply (planted timeout)"] | logged NOT CHECKED (second check)
+  first errors: confirmed - | statuses NOT CONFIRMED (one check of two); NOT A CONTRADICTION
+ODV1-35554-wx6tlc3h: cands 4 | live confirmed CHALLENGER 6,DEFENDER 4,DEFENDER 5,DEFENDER 6 | stored rows reproduce true
+  both confirm: confirmed CHALLENGER 6,DEFENDER 4,DEFENDER 5,DEFENDER 6 | ledger rows 4 (live 4) | statuses CONFIRMED; CONFIRMED (second check)
+  second NONE: confirmed - | NOT CONFIRMED (one check of two) | log tail NONE (second check) NONE FOUND
+  second answers NOT A CONTRADICTION: confirmed - | NOT CONFIRMED (conflicting answers)
+  second errors: confirmed - | errors ["second check: no reply (planted timeout)"] | logged NOT CHECKED (second check)
+  first errors: confirmed - | statuses NOT CONFIRMED (one check of two)
+ODV1-35856-z9f3p7s7: cands 1 | live confirmed - | stored rows reproduce true
+  both confirm: confirmed - | ledger rows 0 (live 0) | statuses NOT A CONTRADICTION
+  second NONE: confirmed - | NOT A CONTRADICTION | log tail NONE (second check) NONE FOUND
+  second answers NOT A CONTRADICTION: confirmed - | NOT A CONTRADICTION
+  second errors: confirmed - | errors ["second check: no reply (planted timeout)"] | logged NOT CHECKED (second check)
+  first errors: confirmed - | statuses NOT A CONTRADICTION
+ODV1-36212-ld47uzqy: cands 1 | live confirmed - | stored rows reproduce true
+  both confirm: confirmed - | ledger rows 0 (live 0) | statuses NOT A CONTRADICTION
+  second NONE: confirmed - | NOT A CONTRADICTION | log tail NONE (second check) NONE FOUND
+  second answers NOT A CONTRADICTION: confirmed - | NOT A CONTRADICTION
+  second errors: confirmed - | errors ["second check: no reply (planted timeout)"] | logged NOT CHECKED (second check)
+  first errors: confirmed - | statuses NOT A CONTRADICTION
+BUILD candidate: live items 1, new items 2 | item 1 equal to live except copy true | item 2 temperature 0.6, otherwise equal to item 1 true
+BUILD no candidate: byte-equal to live true ({"cec_skip":true,"no_log":true,"why":"no judge CONTRADICTION line on a closing round","answered_before":0,"run_token":"O)
+RECORD no candidate: byte-equal to live true
+W3 F1 plant (J2 by check 1, J9 by check 2, both DEFENDER LINK 4): confirmed - | J2 NOT CONFIRMED (one check of two); J9 NOT CONFIRMED (one check of two)
+control (J2 by both checks): confirmed DEFENDER 4 | J2 CONFIRMED; J2 CONFIRMED (second check)
+ALL CHECKS PASS

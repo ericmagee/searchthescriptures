@@ -53,4 +53,11 @@ for(const R of rows){const F=R.f,cands=candsFrom(R.prompt);const B1={cec_skip:fa
  console.log('BUILD no candidate: byte-equal to live '+(JSON.stringify(ln)===JSON.stringify(nn))+' ('+JSON.stringify(nn[0].json).slice(0,120)+')');ok(JSON.stringify(ln)===JSON.stringify(nn),'no-candidate build differs');
  const lr=runNode(L.jcr,{'Panel Payloads':{x:1},'Judge Contradiction Build':ln.map(x=>x.json)},[]),nr=runNode(N.jcr,{'Panel Payloads':{x:1},'Judge Contradiction Build':nn.map(x=>x.json)},[]);
  console.log('RECORD no candidate: byte-equal to live '+(JSON.stringify(lr)===JSON.stringify(nr)));ok(JSON.stringify(lr)===JSON.stringify(nr),'no-candidate record differs');}
+// W3 F1 plant: first check confirms J1 on a link, second confirms a different id J9 on the same link and is silent on J1
+{const R=rows.find(r=>r.run_token.includes('35554'));const F=R.f,cands=candsFrom(R.prompt);const B1={cec_skip:false,cands_only:true,answered_before:0,body:{messages:[{},{content:R.prompt}]},cands:[...cands,{...cands[1],id:'J9'}],missing_rounds:[],model:'deepseek',run_token:R.run_token,copy:1};const B2={...B1,copy:2};
+ const l1=R.reply.split('\n').find(l=>/J2 -- DEFENDER -- LINK 4 -- CONFIRMED/.test(l));const l9=l1.replace('J2 --','J9 --');
+ const o=runNode(N.jcr,{'Panel Payloads':{},'Final Output':F,'Judge Contradiction Build':[B1,B2]},[rep(l1),rep(l9)])[0].json;
+ console.log('W3 F1 plant (J2 by check 1, J9 by check 2, both DEFENDER LINK 4): confirmed '+conf(o)+' | '+o.jcc.rows.map(x=>x.id+' '+x.status).join('; '));ok(conf(o)==='-','F1 plant still breaks');
+ const o2=runNode(N.jcr,{'Panel Payloads':{},'Final Output':F,'Judge Contradiction Build':[B1,B2]},[rep(l1),rep(l1)])[0].json;
+ console.log('control (J2 by both checks): confirmed '+conf(o2)+' | '+o2.jcc.rows.map(x=>x.id+' '+x.status).join('; '));ok(conf(o2)==='DEFENDER 4','control');}
 console.log(fails?'FAILS '+fails:'ALL CHECKS PASS');

@@ -1,3 +1,4 @@
+// pkgJC2 rev 2 (W3 5825 F1: the two confirmations must be of the same candidate id, side and link)
 // pkgJC2 (W2, ASK 181; plan W1 Wall 5789): the judge-found contradiction path gets two independent checks, as pkgTWC gave
 // the close enforcer. Judge Contradiction Build sends the same body twice (copy 1 at temperature 0, copy 2 at 0.6); the HTTP
 // node already sends one call per item. Judge Contradiction Record reads both replies; a CONFIRMED row stays CONFIRMED only when
@@ -23,7 +24,7 @@ const size={};
  sub1(n,"const side=m[2].toUpperCase(),P=CEC_PRE[side];const row={id:","const side=m[2].toUpperCase(),P=CEC_PRE[side];const row={copy:rp.copy,id:",'row copy');
  sub1(n," else row.status='NOT A CONTRADICTION';\n rows.push(row);}\n"," else row.status='NOT A CONTRADICTION';\n rows.push(row);}rp.n=rows.length-n0;}\nnone=RP.length>0&&RP.every(rp=>rp.none); /* pkgJC2 */\n",'loop tail');
  sub1(n,"const seen=new Set();const confirmed=[];",
- "if(__two)rows.forEach(x=>{if(x.status!=='CONFIRMED')return;if(rows.some(y=>y!==x&&y.copy!==x.copy&&y.status==='CONFIRMED'&&y.side===x.side&&y.link===x.link))return;x.status='NOT CONFIRMED (one check of two)';x.note=(x.note?x.note+'; ':'')+'the other independent check did not confirm '+x.side+' LINK '+x.link+' (pkgJC2: two confirmations needed)';});if(__two)rows.forEach(x=>{if(x.copy===2&&x.status==='CONFIRMED')x.status='CONFIRMED (second check)';}); /* pkgJC2, as pkgTWC: one ledger row per link */\nconst seen=new Set();const confirmed=[];",'two-check rule');
+ "if(__two)rows.forEach(x=>{if(x.status!=='CONFIRMED')return;if(rows.some(y=>y!==x&&y.copy!==x.copy&&y.status==='CONFIRMED'&&y.id===x.id&&y.side===x.side&&y.link===x.link))return;x.status='NOT CONFIRMED (one check of two)';x.note=(x.note?x.note+'; ':'')+'the other independent check did not confirm '+x.id+' on '+x.side+' LINK '+x.link+' (pkgJC2 rev 2: two confirmations of the same candidate needed)';});if(__two)rows.forEach(x=>{if(x.copy===2&&x.status==='CONFIRMED')x.status='CONFIRMED (second check)';}); /* pkgJC2, as pkgTWC: one ledger row per link */\nconst seen=new Set();const confirmed=[];",'two-check rule');
  sub1(n,"if(txt!=null&&!rows.length&&!none)errors.push('the reply holds no CLOSE-CONTRADICTION line');",
  "RP.forEach(rp=>{if(rp.txt!=null&&!rp.n&&!rp.none)errors.push((__two?rp.lab+': ':'')+'the reply holds no CLOSE-CONTRADICTION line');}); /* pkgJC2 */",'errors');
  sub1(n," .concat(!rows.length?[log({item:none?'NONE':'NO LINE',flagged_line:null,prompt_sent:prompt,full_reply:txt,response_line:none?'CLOSE-CONTRADICTION: NONE':null,cure_status:none?'NONE FOUND':'NOT CHECKED',cure_reason:errors.join('; ')||null,reply_error:err})]:[]);",
