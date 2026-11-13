@@ -1,0 +1,31 @@
+FAIL D1 Build meta/muse-ember undefined
+FAIL D1 Build meta/muse-spark-1.3 undefined
+FAIL C1 Build meta/muse-ember undefined
+FAIL C1 Build meta/muse-spark-1.3 undefined
+FAIL D2 Build meta/muse-ember undefined
+FAIL D2 Build meta/muse-spark-1.3 undefined
+FAIL C2 Build meta/muse-ember undefined
+FAIL C2 Build meta/muse-spark-1.3 undefined
+FAIL D3 Build meta/muse-ember undefined
+FAIL D3 Build meta/muse-spark-1.3 undefined
+FAIL C3 Build meta/muse-ember undefined
+FAIL C3 Build meta/muse-spark-1.3 undefined
+FAIL Build Synthesis meta/muse-ember undefined
+FAIL Build Synthesis meta/muse-spark-1.3 undefined
+FAIL Build Independent Verdict meta/muse-ember undefined
+FAIL Build Independent Verdict meta/muse-spark-1.3 undefined
+FAIL Build Diagnostic Prompt meta/muse-ember undefined
+FAIL Build Diagnostic Prompt meta/muse-spark-1.3 undefined
+FAIL Panel Build meta/muse-ember undefined
+FAIL Panel Build meta/muse-spark-1.3 undefined
+FAIL Reserve Build meta/muse-ember undefined
+FAIL Reserve Build meta/muse-spark-1.3 undefined
+FAIL D4 Build meta/muse-ember undefined
+FAIL D4 Build meta/muse-spark-1.3 undefined
+FAIL C4 Build meta/muse-ember undefined
+FAIL C4 Build meta/muse-spark-1.3 undefined
+FAIL Accept Build meta/muse-ember undefined
+FAIL Accept Build meta/muse-spark-1.3 undefined
+FAIL Shared Library meta/muse-ember undefined
+FAIL Shared Library meta/muse-spark-1.3 undefined
+copies 15 pass 134 fail 30
