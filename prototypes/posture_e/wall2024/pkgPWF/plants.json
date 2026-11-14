@@ -70,5 +70,23 @@
 "want": "CURED",
 "to": "ANSWER CHECK: Luke 2:4 -- [CR3] -- MEANS: \"x\" -- ANSWER: \"Luke 2:4 gives the lineage.\" -- MEETS -- Luke 2:4 \"the house and lineage of David\" [L1]; fit.",
 "why": ""
+},
+{
+"id": "plant-bookless-In",
+"want": "CURED",
+"to": "ANSWER CHECK: Galatians 4:4 -- [CR3] -- MEANS: \"x\" -- ANSWER: \"In 4:4 the sending stands first, and the rest follows from it in order.\" -- MEETS -- [L1] Galatians 4:4 \"God sent forth his Son\"; fit.",
+"why": ""
+},
+{
+"id": "plant-bookless-See",
+"want": "CURED",
+"to": "ANSWER CHECK: Galatians 4:4 -- [CR3] -- MEANS: \"x\" -- ANSWER: \"See 4:4: the sending stands first, and the rest follows from it in order.\" -- MEETS -- [L1] Galatians 4:4 \"God sent forth his Son\"; fit.",
+"why": ""
+},
+{
+"id": "plant-other-book",
+"want": "UNCURED",
+"to": "ANSWER CHECK: Galatians 4:4 -- [CR3] -- MEANS: \"x\" -- ANSWER: \"Romans 4:4 is the reckoning, and the rest follows from it in order here.\" -- MEETS -- [L1] Galatians 4:4 \"God sent forth his Son\"; fit.",
+"why": ""
 }
 ]
