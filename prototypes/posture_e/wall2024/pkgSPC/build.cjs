@@ -1,4 +1,4 @@
-// ASK 279 (pkgSPC): record-only check of a Strong's number named in an [L2] row against original_words for each verse that row names, and of a stated Greek voice against the stored morph code. L2 Count Plan computes; Build Save Body writes the audit line.
+// ASK 279 (pkgSPC rev 2, with W2 6350 tightening T1-T4): record-only check of a Strong's number named in an [L2] row against original_words for each verse that row names, and of a stated Greek voice against the stored morph code. L2 Count Plan computes; Build Save Body writes the audit line.
 const fs=require('fs');const [, , fin, fout]=process.argv;const raw=JSON.parse(fs.readFileSync(fin,'utf8'));const W=(raw.data||raw).workflow||(raw.data||raw);
 const SPC=fs.readFileSync(__dirname+'/spc.js','utf8').trim();
 const P=W.nodes.find(x=>x.name==='L2 Count Plan');let p=P.parameters.jsCode;const A1="const tags=l2EnglishPass2024(L2C.check(S.l2_tags||[],ow,lex,[...read]),read);";
