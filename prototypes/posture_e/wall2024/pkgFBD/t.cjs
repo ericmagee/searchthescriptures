@@ -1,0 +1,8 @@
+// ASK 296 test: (1) every user node's rebuilt code compiles (async wrapper, as n8n runs it); (2) fbdRefuse2024, taken from the BUILT library in node line order, on the 13 stored send-back changes the SQL screen flagged; (3) extra negatives.
+const fs=require('fs');const W=JSON.parse(fs.readFileSync(__dirname+'/target.json','utf8'));const T=W.nodes.find(n=>n.name==='Shared Library').parameters.jsCode;
+const L=JSON.parse(T.slice(T.indexOf('\n/*LIB*/')+8,T.lastIndexOf('\n/*MAP*/'))),M=JSON.parse(T.slice(T.lastIndexOf('\n/*MAP*/')+8,T.lastIndexOf('\n/*END*/')));
+const rb=m=>m.p.map(e=>typeof e==='number'?L[e]:typeof e[0]==='string'?e[0]:L.slice(e[0],e[1]+1).join('\n')).join('\n');
+const AF=Object.getPrototypeOf(async function(){}).constructor;let ok=0;for(const k in M){const s=rb(M[k]);if(s.length!==M[k].n)throw new Error('n '+k);if(!s.includes('fbdRefuse2024'))continue;new AF('$','$input','items',s);ok++;}console.log('user nodes compiled',ok);
+const f=new Function(L.slice(1528,1531).join('\n')+'\nreturn {fbdRefuse2024,fbdHit2024};')();
+for(const r of JSON.parse(fs.readFileSync(__dirname+'/rows.json','utf8'))){const w=f.fbdRefuse2024(r.to);console.log(r.id,w?'REFUSED '+w.slice(0,110):'applies');}
+for(const t of ['ANSWER CHECK: Luke 1:35 -- [CR3] -- MEANS: "x" -- ANSWER: "y" -- MISSES -- the answer says David\'s seed is in Mary.','D2 vs C1 (Luke 1:27): DEFENDER LINK BROKEN -- GROUND: no human father','ANSWER CHECK: Matthew 1:16 -- [DR2] -- MEANS: "z" -- ANSWER: "w" -- MEETS -- the answer refutes the claim that Christ had no human father.'])console.log('neg',f.fbdRefuse2024(t)?'REFUSED':'applies');
