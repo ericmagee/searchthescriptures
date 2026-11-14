@@ -1,0 +1,8 @@
+// runs the BUILT node's candidate makers in node order (cecOracle, cecReclaim, cecDeny, cecWvr, cecQph) on stored rounds; links from the node's own cecLinks.
+const fs=require('fs'),zlib=require('zlib');const code=f=>JSON.parse(fs.readFileSync(f,'utf8')).nodes.find(n=>n.name==='Close Enforcer Build').parameters.jsCode;
+const run=c=>{const a=c.indexOf('\n',c.indexOf('try{'))+1,b=c.indexOf("\nconst S=$('Init Seats')");const defs=c.slice(a,b);const has=c.includes('cecQph(F,links,cands)');return new Function('F',defs+'\nconst links=cecLinks(F);const cands=cecOracle(F);cands.push(...cecReclaim(F,links,cands));cands.push(...cecDeny(F,links,cands));cands.push(...cecWvr(F,cands));'+(has?'cands.push(...cecQph(F,links,cands));':'')+'return cands;');};
+const f0=run(code(__dirname+'/../w293/fresh_s206.json')),f1=run(code(__dirname+'/target.json'));
+const R=JSON.parse(fs.readFileSync(__dirname+'/../a287/runs.json','utf8'));let rows=Object.values(R).map(x=>x.r).concat(JSON.parse(zlib.gunzipSync(fs.readFileSync(__dirname+'/data/rounds8.json.gz'))));
+const seen=new Set();let a=0,b=0,same=0,n=0;for(const r of rows){if(seen.has(r.id))continue;seen.add(r.id);n++;const F={cr1:r.claude_r1,cr2:r.claude_r2,cr3:r.engine_r3,cr4:r.defender_r4,gr1:r.engine_r1,gr2:r.engine_r2,dr3:r.challenger_r3,dr4:r.challenger_r4};
+ const x=f0(F),y=f1(F);a+=x.length;b+=y.length;if(JSON.stringify(y.slice(0,x.length))===JSON.stringify(x))same++;if(String(r.id).startsWith('eaef1fa9'))y.slice(x.length).forEach(c=>console.log('37113 new',c.id,c.side,'LINK',c.n,'|',c.earlier_q.slice(0,90),'||',c.closing_q.slice(0,90)));}
+console.log('debates',n,'candidates',a,'->',b,'old candidates kept as prefix in',same,'of',n);
