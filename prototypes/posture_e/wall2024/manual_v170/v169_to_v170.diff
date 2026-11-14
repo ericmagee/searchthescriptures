@@ -1,5 +1,5 @@
 --- /tmp/claude-0/-home-claude/ce829ea6-86e3-51b0-af44-4033b35f6682/scratchpad/m169/v169.txt	2026-11-14 19:40:21.247912016 +0000
-+++ /tmp/claude-0/-home-claude/ce829ea6-86e3-51b0-af44-4033b35f6682/scratchpad/m169/v170.txt	2026-11-14 19:52:00.978866912 +0000
++++ /tmp/claude-0/-home-claude/ce829ea6-86e3-51b0-af44-4033b35f6682/scratchpad/m169/v170.txt	2026-11-14 19:53:33.030850644 +0000
 @@ -1145,2 +1145,31 @@
      - Limits: 7 blocks are not covered (6 headed "LINK n: SUPPORTED, narrowed ..." and 1 "Premise 1: LINK 1: NARROWED TO:"); 18 of the 43 challenger kept claims in a 60-debate set name the union, knowing or fatherhood and get the same test.
 +  - THE COUNT LIST NOTE IS CUT FROM THE ROUND TEXT (pkgACT part 1, ASK 273; Shared Library line 1891, the round parser; 12 round-parser users):
@@ -27,10 +27,10 @@
 +    - Limits: RESULT and ruling-card prose are not re-checked; the count is not re-derived; a range in NAMED BY ("Luke 1:13-15") is read as its first verse only; a failing FORCED line left on the verse does not stop the line (the still-failing test reads ANSWER CHECK and collision lines only). Not shown by a run.
 +  - AN ANSWER CHECK WHOSE QUOTED ANSWER STANDS ONLY IN THE OTHER SIDE'S ROUNDS IS RECORDED (pkgACL, ASK 277 part (b); Build Save Body, after the close-round press check; TRIAL, record-only):
 +    - Why: in run 37032 luna labelled the Luke 1:35 check [CR3], though its quoted ANSWER stands only in [DR3]. The readers take the label as the round that holds the ANSWER (LIB 2754, 2506, 3185), so they were sent to the wrong side's rounds.
-+    - What it does: for each judge body in Alternate Merge's bodies, each ANSWER CHECK line's quoted ANSWER (its first 10 normalised words, at least 5) is looked up in the eight rounds. When it stands only in rounds of the side other than the label's, one line is written: "[AUDIT v51: ANSWER CHECK ROUND LABEL (pkgACL, ASK 277; TRIAL, record-only) -- SEAT; verse [label]: the quoted ANSWER "..." stands only in DRn ... REVIEW THIS ROW.]", at most 12 per judge. An answer found in both sides' rounds is not flagged. No grade, count or send-back changes.
++    - What it does: for each judge body in Alternate Merge's bodies, each ANSWER CHECK line's quoted ANSWER (its first 10 normalised words, at least 5) is looked up in the eight rounds. When it stands only in rounds of the side other than the label's, one line is written: "[AUDIT v51: ANSWER CHECK ROUND LABEL (pkgACL, ASK 277; TRIAL, record-only) -- SEAT: <seat>; <verse> [<label>]: the quoted ANSWER "..." stands only in DRn ... REVIEW THIS ROW.]", at most 12 per judge. An answer found in both sides' rounds is not flagged. No grade, count or send-back changes.
 +    - Size: Build Save Body 77,940 to 79,599 (+1,659); no other node.
 +    - Shown offline: over 1,690 ANSWER CHECK lines of 30 judgments in the 10 newest debates with a close round, 16 flags, all luna, each an answer quoted from the other side's round 3; 0 for the other seats.
-+    - Limits: whether every panel seat's body is in Alternate Merge's bodies on a live run is not measured. Not shown by a run.
++    - Limits: an answer found in no round, shorter than 5 words, or not quoted is skipped with no record; whether every panel seat's body is in Alternate Merge's bodies on a live run is not measured. Not shown by a run.
  
 @@ -1519,3 +1548,3 @@
  - The register entries up to version 126 are in the engine_manual_log row for version 127 and in engine_manual version 126 section 18. A reference elsewhere in this manual to "the entry in section 18" means that row.
