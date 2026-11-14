@@ -23,13 +23,19 @@ E='''  - THE COUNT LIST NOTE IS CUT FROM THE ROUND TEXT (pkgACT part 1, ASK 273;
     - Size: LIB 1562 536 to 3,513; Shared Library 928,397 to 931,428, sha a894ff926b24be72.
     - Shown offline: of 71 change pairs in the 7 matching judgments of the newest 40, 1 flag (luna, run 37032, premise 2).
     - Limits: RESULT and ruling-card prose are not re-checked; the count is not re-derived; a range in NAMED BY (\"Luke 1:13-15\") is read as its first verse only; a failing FORCED line left on the verse does not stop the line (the still-failing test reads ANSWER CHECK and collision lines only). Not shown by a run.
+  - AN ANSWER CHECK WHOSE QUOTED ANSWER STANDS ONLY IN THE OTHER SIDE'S ROUNDS IS RECORDED (pkgACL, ASK 277 part (b); Build Save Body, after the close-round press check; TRIAL, record-only):
+    - Why: in run 37032 luna labelled the Luke 1:35 check [CR3], though its quoted ANSWER stands only in [DR3]. The readers take the label as the round that holds the ANSWER (LIB 2754, 2506, 3185), so they were sent to the wrong side's rounds.
+    - What it does: for each judge body in Alternate Merge's bodies, each ANSWER CHECK line's quoted ANSWER (its first 10 normalised words, at least 5) is looked up in the eight rounds. When it stands only in rounds of the side other than the label's, one line is written: "[AUDIT v51: ANSWER CHECK ROUND LABEL (pkgACL, ASK 277; TRIAL, record-only) -- SEAT; verse [label]: the quoted ANSWER "..." stands only in DRn ... REVIEW THIS ROW.]", at most 12 per judge. An answer found in both sides' rounds is not flagged. No grade, count or send-back changes.
+    - Size: Build Save Body 77,940 to 79,599 (+1,659); no other node.
+    - Shown offline: over 1,690 ANSWER CHECK lines of 30 judgments in the 10 newest debates with a close round, 16 flags, all luna, each an answer quoted from the other side's round 3; 0 for the other seats.
+    - Limits: whether every panel seat's body is in Alternate Merge's bodies on a live run is not measured. Not shown by a run.
 '''
 anchor='\n\n## 10. The panel\n'; assert v.count(anchor)==1
 v2=v.replace(anchor,'\n'+E.rstrip('\n')+anchor)
 old='- Live flow: s198 (n8n version eaeb774a, 455 nodes; Shared Library 927,952 characters, sha c7e7505f6d74d860).'
 assert v2.count(old)==1
-v2=v2.replace(old,'- Live flow: s200 (n8n version 47809843, 455 nodes; Shared Library 931,428 characters, sha a894ff926b24be72).')
+v2=v2.replace(old,'- Live flow: s201 (n8n version c2501cd3, 455 nodes; Shared Library 931,428 characters, sha a894ff926b24be72).')
 old2=' + pkgNRW rev 3 (s198).'; assert v2.count(old2)==1
-v2=v2.replace(old2,' + pkgNRW rev 3 (s198). s200 = s198 + pkgACT part 1 (s199) + pkgACT part 2 (s200).')
+v2=v2.replace(old2,' + pkgNRW rev 3 (s198). s201 = s198 + pkgACT part 1 (s199) + pkgACT part 2 (s200) + pkgACL (s201).')
 open('v170.txt','w',encoding='utf-8').write(v2)
 print(len(v),len(v2),len(v2)-len(v),hashlib.md5(v2.encode()).hexdigest(), v2.count('—'))
