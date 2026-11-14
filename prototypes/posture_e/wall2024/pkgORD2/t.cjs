@@ -1,0 +1,3 @@
+const fs=require('fs');const blk=f=>{const c=JSON.parse(fs.readFileSync(f,'utf8')).nodes.find(n=>n.name==='Build Save Body').parameters.jsCode;const i=c.indexOf('try{const __OR=(t)=>');const j=c.indexOf('*/',c.indexOf('/* pkgORD, ASK 278',i))+2;return new Function('d','FF',c.slice(i,j));};
+const f0=blk(__dirname+'/../w287/fresh_s205.json'),f1=blk(__dirname+'/target.json');const R=JSON.parse(fs.readFileSync(__dirname+'/../a287/runs.json','utf8'));
+for(const [t,{r}] of Object.entries(R)){const d={cr1:r.claude_r1,cr2:r.claude_r2,cr3:r.engine_r3,cr4:r.defender_r4,gr1:r.engine_r1,gr2:r.engine_r2,dr3:r.challenger_r3,dr4:r.challenger_r4};const a=[],b=[];f0(d,a);f1(d,b);console.log(t.slice(5,10),'old',a.length,'new',b.length);if(b[0])console.log('  ',b[0].slice(0,400));}
