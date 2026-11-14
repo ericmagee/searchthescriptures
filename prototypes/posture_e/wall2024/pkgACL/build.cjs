@@ -1,0 +1,10 @@
+// pkgACL (ASK 277, 6272 item 11): record-only TRIAL check in Build Save Body. For each ANSWER CHECK line of each judge body, the quoted ANSWER (first 10 normalised words, at least 5) is looked up in the eight rounds; when it stands only in rounds of the side other than the label's, one AUDIT line is written. The engine reads the label as the round holding the answer (LIB 2754, 2506, 3185). No grade, count or send-back changes.
+// usage: node build.cjs <live s199/s200 json> <target json>
+const fs=require('fs');const [, , fin, fout]=process.argv;const raw=JSON.parse(fs.readFileSync(fin,'utf8'));const W=(raw.data||raw).workflow||(raw.data||raw);
+if(W.id!=='moMxiV4Irg1uRBZN')throw new Error('wrong workflow');
+const n=W.nodes.filter(x=>x.name==='Build Save Body');if(n.length!==1)throw new Error('node');const c=n[0].parameters.jsCode;
+const A="if(np.length)FF.push('[AUDIT v24: CLOSE-ROUND PRESS CHECK (C4) -- the challenger\\'s close round names '+np.length+' verse reference(s) no earlier challenger round names ('+np.join(', ')+'); each is a new press, marked NOT COUNTED for the judges. REVIEW THIS ROW.]');}";
+if(c.split(A).length!==2)throw new Error('anchor '+(c.split(A).length-1));
+const L=fs.readFileSync(__dirname+'/acl.js','utf8').trim().replace(/\n\s*/g,'');
+const B=A+"\n{try{"+L+"const __RR={CR1:d.cr1,CR2:d.cr2,CR3:d.cr3,CR4:d.cr4,DR1:d.gr1,DR2:d.gr2,DR3:d.dr3,DR4:d.dr4};const __AB=($('Alternate Merge').first().json.bodies)||[];for(const b of __AB){let p;try{p=JSON.parse(b).payload||{};}catch(e){continue;}for(const x of __acl(p.verdict_raw,__RR).slice(0,12))FF.push('[AUDIT v51: ANSWER CHECK ROUND LABEL (pkgACL, ASK 277; TRIAL, record-only) -- SEAT: '+(p.judge_seat||'?')+'; '+x.verse+' ['+x.lab+']: the quoted ANSWER \"'+x.answer.slice(0,120).replace(/[\\[\\]]/g,'')+'\" stands only in '+x.found.join(', ')+', the other side\\'s round; the engine reads the label as the round that holds the answer. REVIEW THIS ROW.]');}}catch(e){}}";
+n[0].parameters.jsCode=c.replace(A,B);fs.writeFileSync(fout,JSON.stringify(raw));console.log('Build Save Body',c.length,'->',n[0].parameters.jsCode.length);

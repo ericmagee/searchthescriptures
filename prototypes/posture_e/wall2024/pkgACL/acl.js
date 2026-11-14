@@ -1,0 +1,5 @@
+const __acl=(T,R)=>{const N=x=>String(x==null?'':x).toLowerCase().replace(/[‘’“”"'`*_]/g,'').replace(/[^a-z0-9]+/g,' ').trim();const RN={};for(const k of ['CR1','CR2','CR3','CR4','DR1','DR2','DR3','DR4'])RN[k]=' '+N(R[k])+' ';const out=[];
+ for(const l0 of String(T||'').replace(/\\n/g,'\n').replace(/\\"/g,'"').split('\n')){const l=l0.replace(/[*_`]+/g,'').replace(/^\s*(?:[-•]\s*)?/,'');const m=l.match(/^ANSWER CHECK\s*:\s*(.+?)\s*(?:--|—)\s*\[\s*([CD]R[1-4])\s*\]/i);if(!m)continue;const a=l.match(/(?:--|—)\s*ANSWER\s*:\s*["“]([^"”\n]+)/);if(!a)continue;
+  const q=N(a[1].split(/\.\.\.|…/)[0]);if(q.split(' ').length<5)continue;const key=' '+q.split(' ').slice(0,10).join(' ')+' ';const lab=m[2].toUpperCase();const hit=k=>RN[k].includes(key);const inC=['CR1','CR2','CR3','CR4'].filter(hit),inD=['DR1','DR2','DR3','DR4'].filter(hit);
+  const own=lab[0]==='C'?inC:inD,oth=lab[0]==='C'?inD:inC;if(!own.length&&oth.length)out.push({verse:m[1].trim(),lab,found:oth,answer:a[1].slice(0,160)});}
+ return out;};
