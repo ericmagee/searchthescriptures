@@ -1,0 +1,5 @@
+W2 grade aid, ASK 294 pkgKRB: the rests-on reader takes a bare verse number as a link.
+cd0f41dd [CR4] "D2 rests on 1:18 and 1:20" -> read as D2 on D1; b52fe836 [CR4] "D3 rests on 1:35" -> read as D3 on D1.
+OLD group 2: ((?:(?:D|LINK\s+|LINKS\s+)?\d+)(?:\s*(?:,|and|&)\s*(?:D|LINK\s+)?\d+)*)
+NEW group 2: ((?:D|LINKS?\s+)\d+(?![:\d])(?:\s*(?:,|and|&)\s*(?:D|LINK\s+)?\d+(?![:\d]))*)
+Effect (+6 chars): t0.cjs 13 -> 12 debates; exactly those 2 verse reads removed; all 12 true declarations kept, incl. 37113 "D7 rests on D2 and D3".
