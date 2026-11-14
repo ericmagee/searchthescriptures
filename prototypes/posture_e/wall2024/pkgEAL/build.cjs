@@ -1,5 +1,5 @@
 // ASK 289: LIB 2977/2979 (Judge Enforcer Build + 2 Alts): E-ANS groups also read "[CRn, <label tail>]" and a MEANS not wholly quoted.
-// The original AC is tried first (byte-equal for every line it took before); __ac2 falls back to the library line reader __RL.readLine (LIB 240), the reader Send Back Record already uses (__acm4).
+// The original AC is tried first (byte-equal for every line it took before); __ac2 is a regex fallback declared on the same line as AC, so it uses no name declared later in the stub (rev 2, after W2 6420: rev 1 read __RL in its TDZ).
 const fs=require('fs'),crypto=require('crypto');const sha=s=>crypto.createHash('sha256').update(s).digest('hex').slice(0,16);
 const [, , fin, fout]=process.argv;const raw=JSON.parse(fs.readFileSync(fin,'utf8'));const W=raw;
 if(W.id!=='moMxiV4Irg1uRBZN')throw new Error('wrong workflow');
@@ -9,7 +9,7 @@ const LIB=JSON.parse(T.slice(iL+8,iM)),MAP=JSON.parse(T.slice(iM+8,iE));
 const rb=(L,m)=>m.p.map(e=>typeof e==='number'?L[e]:typeof e[0]==='string'?e[0]:L.slice(e[0],e[1]+1).join('\n')).join('\n');
 for(const k in MAP)if(rb(LIB,MAP[k]).length!==MAP[k].n)throw new Error('base rebuild length differs for '+k);
 const out=[];const ed=(i,A,B,cnt)=>{const l=LIB[i];const k=l.split(A).length-1;if(k!==cnt)throw new Error('anchor at '+i+' found '+k);LIB[i]=l.split(A).join(B);out.push('LIB '+i+' '+l.length+'->'+LIB[i].length);};
-const AC2=String.raw`const __ac2=l=>{let r=null;try{r=__RL.readLine(String(l));}catch(e){return null;}const f=r&&r.form==='ANSWER CHECK'&&r.f;if(!f||f.restated||!Array.isArray(f.rounds)||!f.rounds.length||f.means==null||f.answer==null||!/^(MEETS|MISSES|FAILS)$/.test(String(f.grade||'')))return null;return [l,String(f.verse||''),f.rounds.join('; '),String(f.means)+(f.meansNote?' '+f.meansNote:''),String(f.answer),String(f.grade),f.tail==null?undefined:String(f.tail)];}; /* pkgEAL, ASK 289: library line reader as fallback */`;
+const AC2=String.raw`const __AC2=/^ANSWER CHECK:\s*(.+?)\s*--\s*\[((?:CR|DR)[1-4](?:\s*[;,]\s*(?:CR|DR)[1-4])*)(?:\s*,[^\]\n]*)?\]\s*--\s*MEANS:\s*([\s\S]*?)\s*--\s*ANSWER:\s*["'\u201c\u2018]([\s\S]*)["'\u201d\u2019]\s*--\s*(MEETS|MISSES|FAILS)\b\s*(?:\([^)]*\)\s*)?\s*(?:--\s*([\s\S]*))?$/;const __ac2=l=>{const m=l.match(__AC2);if(!m)return null;const q=m[3].match(/^\u201c([^\u201d]*)\u201d$/)||m[3].match(/^"([^"]*)"$/)||m[3].match(/^\u2018([^\u2019]*)\u2019$/);if(q)m[3]=q[1];return m;}; /* pkgEAL rev 2, ASK 289: own regex, no later-declared name */`;
 if(!LIB[2977].startsWith('const AC=/^ANSWER CHECK:'))throw new Error('2977 not AC');
 LIB[2977]=LIB[2977]+AC2;out.push('LIB 2977 +'+AC2.length);
 ed(2979,"const m=l.match(AC);if(!m)continue;","const m=l.match(AC)||__ac2(l);if(!m)continue;",1);
