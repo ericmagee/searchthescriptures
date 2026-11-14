@@ -1,0 +1,74 @@
+[
+{
+"id": 36588,
+"want": "UNCURED",
+"to": "ANSWER CHECK: Galatians 4:4 -- [CR3] -- MEANS: \"'of a woman' names the mother of a man under the law of the fathers' houses.\" -- ANSWER: \"The count to Christ runs through the house of Joseph, who took Mary and named the child (Matthew 1:24-25).\" -- MEETS -- [L1] Galatians 4:4 \"made of a woman, made under the law\" | [L3] Matthew 1:16 \"Joseph the husband of Mary, of whom was born Jesus\"; the answer positively assigns maternal birth to Mary and the counted house to Joseph.",
+"why": "[CR3] joins \"The count to Christ runs through the house of Joseph\" to Matthew 1:16's \"Joseph the husband of Mary, of whom was born Jesus.\""
+},
+{
+"id": 36587,
+"want": "CURED",
+"to": "ANSWER CHECK: Luke 1:35 -- [DR3] -- MEANS: \"the Son-of-God name rests on the conception by the Holy Ghost's coming\" -- ANSWER: \"Luke 1:35's 'also' adds the calling to the same title.\" -- MEETS -- [L1] Luke 1:35 \"therefore also that holy thing which shall be born of thee shall be called the Son of God\" | [L3] Luke 1:32 \"shall be called the Son of the Highest\"; the answer connects the calling.",
+"why": "[DR3] positively identifies the connection as \"adds the calling to the same title\" and quotes Luke 1:32's \"shall be called the Son of the Highest.\""
+},
+{
+"id": 36586,
+"want": "CURED",
+"to": "ANSWER CHECK: 2 Samuel 7:14 -- [DR3] -- MEANS: \"the covenant row continues with a son who may sin\" -- ANSWER: \"The covenant clause is the clause Hebrews 1:5 gives the Son. It stands upon a son 'out of thy bowels.'\" -- MEETS -- [L1] Hebrews 1:5 \"I will be to him a Father, and he shall be to me a Son\" | [L3] 2 Samuel 7:12 \"which shall proceed out of thy bowels\"; the answer connects.",
+"why": "[DR3] states \"The condition stands as a condition\" and exhibits the covenant clause applied to the Son alongside \"which shall proceed out of thy bowels.\""
+},
+{
+"id": 17091,
+"want": "CURED",
+"to": "ANSWER CHECK: Luke 1:35 -- [DR3] -- MEANS: \"the therefore follows the means just named in that verse.\" -- ANSWER: \"'Therefore also' gives again the calling already given at 1:32, before the question\" -- MEETS -- [L1] Luke 1:35 \"therefore also that holy thing which shall be born of thee shall be called the Son of God\" | [L3] Luke 1:32 \"shall be called the Son of the Highest\" positively exhibit the reading.",
+"why": "The answer's positive fit is its repeated title, \"shall be called the Son of the Highest,\" joined to the exhibited result \"ye shall receive power,\" rather than a claim of non-denial."
+},
+{
+"id": 26268,
+"want": "CURED",
+"to": "ANSWER CHECK: Genesis 4:1 -- [CR2] -- MEANS: \"the canon gives the bearing to the wife\" -- ANSWER: \"The change of verb at the last link and the stated source of the pregnancy work together.\" -- MEETS -- [L1] Matthew 1:18 \"before they came together, she was found with child of the Holy Ghost\" supplies the stated source.",
+"why": "The defender says, \"In Matthew 1:16-18 the form changes from 'begat' to 'was born,' and the next verse states 'before they came together' and 'of the Holy Ghost.'\""
+},
+{
+"id": 31495,
+"want": "CURED",
+"to": "ANSWER CHECK: Luke 2:48 -- [DR3] -- MEANS: \"Mary's household speech is answered at once by the child's 'my Father's'.\" -- ANSWER: \"2:49 sets the covenant Father beside the household father of 2:48\" -- MEETS -- [L1] 1 Chronicles 28:6 \"Solomon thy son, he shall build my house and my courts: for I have chosen him [to be] my son, and I will be his father\".",
+"why": "[DR3] applies the comparison: \"2:49 sets the covenant Father beside the household father of 2:48, as 1 Chronicles 28:6 does.\""
+},
+{
+"id": 34313,
+"want": "UNCURED",
+"to": "ANSWER CHECK: Luke 2:41 -- [CR3] -- MEANS: \"the narrator's own voice names the pair 'his parents'.\" -- ANSWER: \"In Luke 2:33 Luke writes 'Joseph and his mother'.\" -- MEETS -- [L1] Luke 2:41 \"Now his parents went to Jerusalem every year\" identifies the pair as parents; [L3] Luke 2:33 \"And Joseph and his mother marvelled\" identifies that pair.",
+"why": "[CR3]'s statement \"The household word does not settle begetting\" is grounded positively in the narrator's identification \"Joseph and his mother\" and qualification \"as was supposed\", rather than in an unquoted absence."
+},
+{
+"id": 35207,
+"want": "CURED",
+"to": "ANSWER CHECK: Luke 1:13 -- [CR3] -- MEANS: \"the wife bears to the husband, and the father names the child.\" -- ANSWER: \"I grant the father is given the naming. Mary is also given it\" -- MEETS -- [L1] Luke 1:31 \"shalt call his name JESUS\" positively assigns naming to Mary.",
+"why": "The defender expressly supports \"Mary is also given it\" with Luke 1:31's \"shalt call his name JESUS,\" so the fit rests on an exhibited naming role."
+},
+{
+"id": "plant-after-form",
+"want": "UNCURED",
+"to": "ANSWER CHECK: Luke 2:4 -- [CR3] -- MEANS: \"the house is Joseph's\" -- ANSWER: \"Matthew 1:16 is the register, and the register is what this answer rests on throughout.\" -- MEETS -- Luke 2:4 \"the house and lineage of David\" [L1]; the answer fits.",
+"why": "no quotes here"
+},
+{
+"id": "plant-range",
+"want": "CURED",
+"to": "ANSWER CHECK: Matthew 1:19 -- [CR3] -- MEANS: \"x\" -- ANSWER: \"He took her, Matthew 1:24-25.\" -- MEETS -- [L1] Matthew 1:25 \"knew her not till she had brought forth\"; fit.",
+"why": ""
+},
+{
+"id": "plant-two-L1",
+"want": "CURED",
+"to": "ANSWER CHECK: Galatians 4:4 -- [CR3] -- MEANS: \"x\" -- ANSWER: \"The count runs through Matthew 1:16.\" -- MEETS -- [L1] Galatians 4:4 \"made of a woman\" and [L1] Matthew 1:16 \"Joseph the husband of Mary\"; fit.",
+"why": ""
+},
+{
+"id": "plant-after-form-own",
+"want": "CURED",
+"to": "ANSWER CHECK: Luke 2:4 -- [CR3] -- MEANS: \"x\" -- ANSWER: \"Luke 2:4 gives the lineage.\" -- MEETS -- Luke 2:4 \"the house and lineage of David\" [L1]; fit.",
+"why": ""
+}
+]
