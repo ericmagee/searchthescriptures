@@ -1,0 +1,6 @@
+Actual live order 2026-11-14 14:20 CST:
+s202 ef01b7c0 = ASK 279 pkgSPC (folder w204; revert w204/prewrite_s204_SPC_full.json)
+s203 648c7d43 = ASK 281 pkgVBC (folder w203; revert w203/prewrite_s203_VBC_full.json)
+s204 98c97547 = ASK 277(a) pkgACL template (folder w202; revert w202/prewrite_s202_ACLa_full.json)
+s205 7d290a06 = ASK 278 pkgORD (folder w205; revert w205/prewrite_s205_ORD_full.json)
+File names inside folders follow the script, not the live order.
