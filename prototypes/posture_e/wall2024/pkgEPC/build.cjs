@@ -1,9 +1,9 @@
 // pkgEPC (ASKs 267, 268, 269; Eric 11:08 CST 11-14 on Wall 6235 items 1, 8, 9; team sort W1 6237, W2 6238/6242, W3 6239/6240, W4 6243).
 // ASK 267 pkgECB: E-COL footing rule (enforcer RULES LIB 3198, judge send-back LIB 2958, code note LIB 3061). No DG-8 text; E-KEY untouched.
-// ASK 268 pkgPWS: PRESSED-WITH entry heads: a ";" inside a layer field ([Ln] ... up to the next "|" or line end) is not an entry start. LIB 4 + Panel Build, Build Independent Verdict, D4 Build (PRS START) + Build Save Body (ST).
+// ASK 268 pkgPWS rev 2 (W1 6250 F1): a ";" inside a layer field ("-- [Ln]" or "| [Ln]" up to the next "|" or line end) is not an entry start unless the text after it, up to the next ";" or line end, holds "-- MEANS". LIB 4 + Panel Build, Build Independent Verdict, D4 Build (PRS START) + Build Save Body (ST).
 // ASK 269 pkgCLN: one system line after [DR1] in the judge transcript (Panel Build, Build Independent Verdict) when [DR1] holds an UNSUPPORTED-L4 PREMISES list.
 // ASK 270 pkgVBN: Citation Scan [L2] tags bind a bare "verse N" / "v.N" only when every full reference in the tag's row and block is in one chapter (W3 6246 limits a-d).
-// (ASK 268 replay: t268b.cjs; ASK 267: t267.cjs; ASK 270: t270.cjs)
+// (ASK 268 replay: t268c.cjs; ASK 267: t267.cjs; ASK 270: t270.cjs)
 // usage: node build.cjs <live s196 json> <target json>
 const fs=require('fs'),crypto=require('crypto');const sha=s=>crypto.createHash('sha256').update(s).digest('hex').slice(0,16);
 const [, , fin, fout]=process.argv;const raw=JSON.parse(fs.readFileSync(fin,'utf8'));const W=(raw.data||raw).workflow||(raw.data||raw);
@@ -20,7 +20,7 @@ const rb=(L,m)=>m.p.map(e=>typeof e==='number'?L[e]:typeof e[0]==='string'?e[0]:
 for(const k in MAP)if(rb(LIB,MAP[k]).length!==MAP[k].n)throw new Error('live rebuild length differs for '+k);
 // ASK 268 head pattern (JS string source as it stands inside single quotes)
 const PA="'(^|[;\\\\n]|^\\\\s*[-*•]|\\\\n\\\\s*[-*•])";
-const PB="'(^|(?<!(?:--|\\\\|)\\\\s*\\\\[L[1-4]\\\\][^\\\\n|]*);|\\\\n|^\\\\s*[-*•]|\\\\n\\\\s*[-*•])";
+const PB="'(^|(?<!(?:--|\\\\|)\\\\s*\\\\[L[1-4]\\\\][^\\\\n|]*);|;(?=[^;\\\\n]*--\\\\s*MEANS)|\\\\n|^\\\\s*[-*•]|\\\\n\\\\s*[-*•])";
 const ed=(i,A,B)=>{const l=LIB[i];LIB[i]=rep(l,A,B,1,'LIB '+i);out.push('LIB '+i+' '+l.length+'->'+LIB[i].length);};
 ed(4,PA,PB);
 // ASK 267 enforcer rule
@@ -42,9 +42,9 @@ const T1=head+'\n/*LIB*/'+LJ+'\n/*MAP*/'+JSON.stringify(MAP)+T.slice(iE);Ls.para
 out.push('Shared Library '+T.length+'->'+T1.length+' sha '+sha(JSON.stringify(JSON.parse(T.slice(iL+8,iM))))+'->'+sha(LJ)+' users '+users.length);
 // ---------- PRS copies (ASK 268)
 const PRA="'(^|[;\\\\n]|^\\\\s*[-*•]|\\\\n\\\\s*[-*•])\\\\s*[*_]*\\\\s*('+REF+')";
-const PRB="'(^|(?<!(?:--|\\\\|)\\\\s*\\\\[L[1-4]\\\\][^\\\\n|]*);|\\\\n|^\\\\s*[-*•]|\\\\n\\\\s*[-*•])\\\\s*[*_]*\\\\s*('+REF+')";
+const PRB="'(^|(?<!(?:--|\\\\|)\\\\s*\\\\[L[1-4]\\\\][^\\\\n|]*);|;(?=[^;\\\\n]*--\\\\s*MEANS)|\\\\n|^\\\\s*[-*•]|\\\\n\\\\s*[-*•])\\\\s*[*_]*\\\\s*('+REF+')";
 for(const nm of ['Panel Build','Build Independent Verdict','D4 Build']){const n=N(nm);const a=n.parameters.jsCode.length;n.parameters.jsCode=rep(n.parameters.jsCode,PRA,PRB,1,nm);out.push(nm+' '+a+'->'+n.parameters.jsCode.length);}
-{const n=N('Build Save Body');const a=n.parameters.jsCode;const A="'(^|[;\\\\n]|^\\\\s*[-*•]|\\\\n\\\\s*[-*•])\\\\s*[*_]*\\\\s*('+REF0+')";const B="'(^|(?<!(?:--|\\\\|)\\\\s*\\\\[L[1-4]\\\\][^\\\\n|]*);|\\\\n|^\\\\s*[-*•]|\\\\n\\\\s*[-*•])\\\\s*[*_]*\\\\s*('+REF0+')";n.parameters.jsCode=rep(a,A,B,1,'BSB');out.push('Build Save Body '+a.length+'->'+n.parameters.jsCode.length);}
+{const n=N('Build Save Body');const a=n.parameters.jsCode;const A="'(^|[;\\\\n]|^\\\\s*[-*•]|\\\\n\\\\s*[-*•])\\\\s*[*_]*\\\\s*('+REF0+')";const B="'(^|(?<!(?:--|\\\\|)\\\\s*\\\\[L[1-4]\\\\][^\\\\n|]*);|;(?=[^;\\\\n]*--\\\\s*MEANS)|\\\\n|^\\\\s*[-*•]|\\\\n\\\\s*[-*•])\\\\s*[*_]*\\\\s*('+REF0+')";n.parameters.jsCode=rep(a,A,B,1,'BSB');out.push('Build Save Body '+a.length+'->'+n.parameters.jsCode.length);}
 // ---------- count-list note (ASK 269)
 const CLN="const __CLN=(r1,r2)=>{try{const H=/UNSUPPORTED-?\\s*\\[?L4\\]?\\s*PREMISES/gi;const mx=t=>{t=String(t||'');let i=-1;for(const m of t.matchAll(H))i=m.index;if(i<0)return 0;let x=0;for(const m of t.slice(i).matchAll(/^[ \\t>#*_-]*(\\d{1,2})[.)]\\s/gm))x=Math.max(x,+m[1]);return x;};const a=mx(r1),b=mx(r2);if(!a)return '';return '\\n\\n[COUNT LIST NOTE -- computed by the system, not by a model (pkgCLN, ASK 269): the UNSUPPORTED-L4 PREMISES list in [DR1] (numbered 1 to '+a+') is not the count list. L, c, every count of CONCEDED or UNEXHIBITED premises and every \"Premise <p>\" read only the list that closes [DR2]'+(b?' (numbered 1 to '+b+')':'')+'.]';}catch(e){return '';}};";
 {const n=N('Panel Build');let c=n.parameters.jsCode;const a=c.length;
