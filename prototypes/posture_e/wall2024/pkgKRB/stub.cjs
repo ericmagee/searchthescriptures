@@ -1,0 +1,4 @@
+// rebuilt node source split into [library-and-own segments]; returns lines and the start line of each own (node) segment
+module.exports=(file,node)=>{const fs=require('fs');const W=JSON.parse(fs.readFileSync(file,'utf8'));const T=W.nodes.find(n=>n.name==='Shared Library').parameters.jsCode;const L=JSON.parse(T.slice(T.indexOf('\n/*LIB*/')+8,T.lastIndexOf('\n/*MAP*/'))),M=JSON.parse(T.slice(T.lastIndexOf('\n/*MAP*/')+8,T.lastIndexOf('\n/*END*/')));
+ const segs=M[node].p.map(e=>typeof e==='number'?{own:false,t:L[e]}:typeof e[0]==='string'?{own:true,t:e[0]}:{own:false,t:L.slice(e[0],e[1]+1).join('\n')});let ln=0;const own=[];for(const s of segs){if(s.own)own.push([ln,s.t.split('\n').length,s.t.slice(0,80)]);ln+=s.t.split('\n').length;}
+ return {S:segs.map(s=>s.t).join('\n').split('\n'),own,code:W.nodes.find(n=>n.name===node).parameters.jsCode};};
