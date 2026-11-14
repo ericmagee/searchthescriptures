@@ -22,7 +22,7 @@ E='''  - THE COUNT LIST NOTE IS CUT FROM THE ROUND TEXT (pkgACT part 1, ASK 273;
     - What it does: when a RULING card "Premise N -- UNEXHIBITED" names verses in its NAMED BY line, every one of them had a BROKEN collision line or a MISSES/FAILS answer check moved to a non-failing grade in this change, and no failing line on that verse remains, a K-RECHK row is written: "Premise N is still counted UNEXHIBITED, but its NAMED BY line names only <verse>, and this change moved that grade (...); the count is not re-derived". counted_premises, conceded_links, the RESULT line and the ruling cards do not change.
     - Size: LIB 1562 536 to 3,513; Shared Library 928,397 to 931,428, sha a894ff926b24be72.
     - Shown offline: of 71 change pairs in the 7 matching judgments of the newest 40, 1 flag (luna, run 37032, premise 2).
-    - Limits: RESULT and ruling-card prose are not re-checked; the count is not re-derived. Not shown by a run.
+    - Limits: RESULT and ruling-card prose are not re-checked; the count is not re-derived; a range in NAMED BY (\"Luke 1:13-15\") is read as its first verse only; a failing FORCED line left on the verse does not stop the line (the still-failing test reads ANSWER CHECK and collision lines only). Not shown by a run.
 '''
 anchor='\n\n## 10. The panel\n'; assert v.count(anchor)==1
 v2=v.replace(anchor,'\n'+E.rstrip('\n')+anchor)
