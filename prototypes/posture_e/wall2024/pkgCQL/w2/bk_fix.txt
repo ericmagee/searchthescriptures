@@ -1,0 +1,4 @@
+W2 6443 proposed fix (pkgCQL, ASK 293): a give-up sentence that carries its own quote never points back.
+OLD: if(!qs.length&&i>0&&BK.test(x.slice(u.index)))
+NEW: if(!qs.length&&i>0&&BK.test(x.slice(u.index))&&!/"[^"\n]+"|“[^”\n]+”|‘[^’\n]+’/.test(x.slice(u.index)))
+Effect on 62 debates: 134 -> 132 candidates; removes 6641b8c2 and c357d23f (NARROWED TO kept phrase taken as given up via "the word"); keeps both 37113 pairs.
