@@ -1,5 +1,5 @@
 --- /tmp/claude-0/-home-claude/ce829ea6-86e3-51b0-af44-4033b35f6682/scratchpad/m169/v170r6.txt	2026-11-14 20:24:25.465051298 +0000
-+++ prototypes/posture_e/wall2024/manual_v171/engine_manual_v171_draft.txt	2026-11-14 22:53:43.583005596 +0000
++++ prototypes/posture_e/wall2024/manual_v171/engine_manual_v171_draft.txt	2026-11-14 23:07:16.144252265 +0000
 @@ -1171,7 +1171,7 @@
      - What it does: for each judge body in Alternate Merge's bodies, each ANSWER CHECK line's quoted ANSWER (its first 10 normalised words, at least 5) is looked up in the eight rounds. When it stands only in rounds of the side other than the label's, one line is written: "[AUDIT v51: ANSWER CHECK ROUND LABEL (pkgACL, ASK 277; TRIAL, record-only) -- SEAT: <seat>; <verse> [<label>]: the quoted ANSWER "..." stands only in DRn ... REVIEW THIS ROW.]", at most 12 per judge. An answer found in both sides' rounds is not flagged. No grade, count or send-back changes.
      - Size: Build Save Body 77,940 to 79,599 (+1,659); no other node.
@@ -30,7 +30,7 @@
 +    - What it does: when the existing pattern AC does not match, a fallback __ac2 reads "[CRn, <label tail>]" and a MEANS that is not wholly quoted, up to "-- ANSWER:". One pair of outer quotes is stripped only when the MEANS is wholly quoted with no inner quote of the same kind. AC is tried first, so every line it read before is read the same way.
 +    - Size: Shared Library 931,428 to 932,018 (built alone on s205).
 +    - Shown offline (rebuilt stubs, run in line order): run 37113 groups 59 to 152 (chatgpt 61 to 61, luna 0 to 58, sol 0 to 56), all 59 earlier groups kept; run 37032 172 to 172 groups, byte-equal.
-+    - Limits: whether a send-back item ever carries the tail form is not measured; more groups mean more E-ANS prompt text per run (not measured). Not shown by a run.
++    - Limits: when a seat writes two quoted answers in one ANSWER field ("..." / "..."), the group key takes both, so that group does not merge with another seat's group on the same answer (12 new sol groups in run 37113; 0 in run 37032); whether a send-back item ever carries the tail form is not measured; more groups mean more E-ANS prompt text per run (not measured). Not shown by a run.
 +  - THE CURE ROUND PARSER ALSO CUTS THE COUNT LIST NOTE (pkgCLN2, ASK 290; Shared Library line 858, cureRounds):
 +    - Why: in run 37113 chatgpt's E-SYN item Y1 listed "[COUNT LIST NOTE -- computed by the system ...]" as the first of the challenger's own sentences that give ground. The s199 cut (ASK 273) went into the round parser at line 1891 only. cureRounds, which feeds cure.rounds and from there the E-SYN side sentences, still returned the note inside [DR1]. It moved no count.
 +    - What it does: after the COUNTING RULE cut, cureRounds also cuts at "\n\n[COUNT LIST NOTE", as line 1891 does. An inline note with no blank line before it is kept.
