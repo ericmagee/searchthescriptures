@@ -69,6 +69,8 @@ REPL=[
  ("; ASK 270; ruling W3 6246)", "; ASK 270)"),
  (" (W2 6242). W3 ruled that an [L2] row may name any verse the same block cites, not only the block's [L1] verse (W3 6246).", ". Rule: an [L2] row may name any verse the same block cites, not only the block's [L1] verse."),
  (" is not resolved (W3 6246 limit b).", " is not resolved."),
+ ("each of 3 users' map length +476", "each of 3 users' map length +2,504"),
+ ("18 of 43 challenger kept claims", "18 of the 43 challenger kept claims in a 60-debate set"),
  (" [MISSING: pkgPWS alone]", " pkgPWS alone is not measured."),
 ]
 used=[0]*len(REPL)
@@ -98,9 +100,10 @@ before(blankbefore('## 12. Citation check against the KJV'),P3)
 # edits U1 U2 I1 I2 and live flow
 ED=[
  ("the pkgEPS hold releases that form when it names a block verse.", "the pkgEPS hold, TRIAL since s191 (pkgEPT), no longer stops any push; it records \"(TRIAL pkgEPS: would not be sent: ...)\" and the push is sent."),
- ("is held by the pkgEPS hold when both are true:", "is recorded by the pkgEPS hold as \"(TRIAL pkgEPS: would not be sent: <reason>)\" when both are true, and is sent to the judge all the same (EPS_STATUS is 'TRIAL' since s191, pkgEPT); a push whose reason carries \"footing borrowed from contested Links <n>\" is not recorded as held (pkgBFX rev 2):"),
+ ("is held by the pkgEPS hold when both are true:", "is recorded by the pkgEPS hold as \"(TRIAL pkgEPS: would not be sent: <reason>)\", and is sent to the judge all the same (EPS_STATUS is 'TRIAL' since s191, pkgEPT), when both are true:"),
+ ("An E-ANS item with no DeepSeek ruling counts under (2) and stops the hold.", "An E-ANS item with no DeepSeek ruling counts under (2) and stops the hold. A push whose reason carries \"footing borrowed from contested Links <n>\" is not recorded as held (pkgBFX rev 2)."),
  ("The other non-layer grounds stay exempt, read only up to the entry's last stop |", "The other non-layer grounds stay exempt, read only up to the entry's last stop. A count carrying \"footing borrowed from contested Link(s) <n>\" is also exempt (pkgBFX rev 2) |"),
- ("so a later change that restores the count is read as new by the K re-read (UNX0, TRIAL) |", "so a later change that restores the count is read as new by the K re-read (UNX0, TRIAL). A count that names premise j above the highest listed block of the side's round raises item a:'RANGE' (TRIAL; pkgBFX rev 2), cured only by a CORRECTED COUNT below the count |"),
+ ("so a later change that restores the count is read as new by the K re-read (UNX0, TRIAL) |", "so a later change that restores the count is read as new by the K re-read (UNX0, TRIAL). A count that names premise j above the highest listed block of the side's round raises item a:'RANGE' (TRIAL; pkgBFX rev 2), cured by a CORRECTED COUNT below the count and cleared by a CHANGE TO that renumbers |"),
  ("- Live flow: s184 (n8n version 1bf4bb8d-58b5-4255-b7a9-8622a7ce1125, 455 nodes; Shared Library sha 87eb2391d957ad34, 3,497 lines). `derive_debate_outcome` md5 4ad4e2ab746eb2cdf124836daf731196.",
   "- Live flow: s198 (n8n version eaeb774a, 455 nodes; Shared Library 927,952 characters, sha c7e7505f6d74d860). s189 = s184 + pkgABR rev 3 + pkgGKV rev 2 (s185) + pkgKDN rev 3 (s186) + pkgERC rev 2 (s187) + pkgJ2 rev 2 (s188) + pkgONR + pkgAJN (s189). s198 = s189 + pkgD22 (s190) + pkgEPT (s191) + pkgPWF rev 2 (s192) + pkgBCL rev 4 (s193) + pkgJBC rev 2 (s194) + pkgPSN (s195) + pkgBFX rev 2 (s196) + pkgEPC rev 2 (s197: pkgECB, pkgPWS, pkgCLN, pkgVBN) + pkgNRW rev 3 (s198). `derive_debate_outcome` md5 4ad4e2ab746eb2cdf124836daf731196."),
 ]
