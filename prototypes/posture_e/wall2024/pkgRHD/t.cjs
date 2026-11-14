@@ -1,0 +1,7 @@
+// ASK 297 test: the built Alternate Merge tail (pkgRHD) run on every stored judgment as a body; counts changed heads by (judge word -> tag).
+const fs=require('fs');const c=JSON.parse(fs.readFileSync(__dirname+'/target.json','utf8')).nodes.find(n=>n.name==='Alternate Merge').parameters.jsCode;const seg=c.slice(c.indexOf('try{const __rhd='),c.lastIndexOf('\nreturn __AMOUT;'));
+const run=bodies=>new Function('__AMOUT',seg+'\nreturn __AMOUT;')([{json:{bodies}}])[0].json.bodies;
+let J=[];for(const o of [0,300,600])J=J.concat(JSON.parse(fs.readFileSync(__dirname+'/data/j'+o+'.json','utf8')));
+const B=J.map(r=>JSON.stringify({payload:{judge_seat:r.judge_seat,verdict_tag:r.verdict_tag,verdict_raw:r.verdict_raw}}));const A=run(B);const cnt={};let ch=0;
+A.forEach((s,i)=>{if(s===B[i])return;ch++;const a=JSON.parse(s).payload.verdict_raw,b=J[i].verdict_raw;const m=a.match(/"reasoning"\s*:\s*"\s*([A-Z]+) \(recomputed by the engine; the judge wrote ([A-Z]+)\)/);const k=m?m[2]+'->'+m[1]:'?';cnt[k]=(cnt[k]||0)+1;const d=a.length-b.length;if(J[i].id>=1182)console.log(J[i].id,J[i].judge_seat,k,'| head:',a.slice(a.indexOf('"reasoning"'),a.indexOf('"reasoning"')+110).replace(/\n/g,' '));if(a.replace(/ \(recomputed by the engine; the judge wrote [A-Z]+\)/,'').replace(/("reasoning"\s*:\s*"\s*)[A-Z]+/,'$1X')!==b.replace(/("reasoning"\s*:\s*"\s*)[A-Z]+/,'$1X'))console.log('OTHER TEXT CHANGED',J[i].id);});
+console.log('judgments',J.length,'changed',ch,JSON.stringify(cnt));
