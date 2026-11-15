@@ -1,0 +1,43 @@
+E-GATE rows excluded: K re-read items 14 | gate change not applied 47
+REPLAY: counted refused cures 96 | no CHANGE TO (KEEP or none, counted) 7 | CHANGE TO still counted 14 | off the tally under 331 14
+  OFF 14695 ODV1-33371 chatgpt panel E-HOLD COLLISION D2 vs C6 | the grade (UNDERDETERMINED) and every count field are identical in the judge's line and the corrected line
+  OFF 14699 ODV1-33371 chatgpt panel E-HOLD COLLISION D1 vs C1 (UNDERDETERMINED; pkgUNA) | the grade (UNDERDETERMINED) and every count field are identical in the judge's line and the corrected line
+  OFF 14700 ODV1-33371 chatgpt panel E-HOLD COLLISION D3 vs C6 (UNDERDETERMINED; pkgUNA) | the grade (UNDERDETERMINED) and every count field are identical in the judge's line and the corrected line
+  OFF 14701 ODV1-33371 chatgpt panel E-HOLD COLLISION D4 vs C3 (UNDERDETERMINED; pkgUNA) | the grade (UNDERDETERMINED) and every count field are identical in the judge's line and the corrected line
+  OFF 14702 ODV1-33371 chatgpt panel E-HOLD COLLISION D6 vs C2 (UNDERDETERMINED; pkgUNA) | the grade (UNDERDETERMINED) and every count field are identical in the judge's line and the corrected line
+  OFF 17103 ODV1-33461 sol panel E-MNP ANSWER CHECK Matthew 1:24 [CR4] (MEANS NONE) | the grade (MEETS) and every count field are identical in the judge's line and the corrected line
+  OFF 17105 ODV1-33461 sol panel E-MNP ANSWER CHECK Luke 1:32 [CR4] (MEANS NONE) | the grade (MEETS) and every count field are identical in the judge's line and the corrected line
+  OFF 17108 ODV1-33461 sol panel E-MNP ANSWER CHECK Ezra 2:61 [DR3] (MEANS NONE) | the grade (MEETS) and every count field are identical in the judge's line and the corrected line
+  OFF 17109 ODV1-33461 sol panel E-MNP ANSWER CHECK Luke 1:35 [DR3] (MEANS NONE) | the grade (MEETS) and every count field are identical in the judge's line and the corrected line
+  OFF 30786 ODV1-35296 sol panel E-HOLD COLLISION D5 vs C1 (UNDERDETERMINED; pkgUNA) | the grade (UNDERDETERMINED) and every count field are identical in the judge's line and the corrected line
+  OFF 33788 ODV1-35856 luna panel E-ANS ANSWER CHECK Genesis 24:16 [DR3] | the grade (MEETS) and every count field are identical in the judge's line and the corrected line
+  OFF 35636 ODV1-36677 sol panel E-ANS ANSWER CHECK Luke 1:32 [CR3] | the grade (MEETS) and every count field are identical in the judge's line and the corrected line
+  OFF 40025 ODV1-37281 sol panel E-ANS ANSWER CHECK Luke 2:48 [CR4] | the grade (MEETS) and every count field are identical in the judge's line and the corrected line
+  OFF 41074 ODV1-37372 sol panel E-GATE G3 CONTRADICTION (E-GATE M) | the grade (MISSES) and every count field are identical in the judge's line and the corrected line
+PASS 37281 sol Luke 2:48 (row 40025) is off the tally
+PASS 37372 sol E-GATE G3 (row 41074) is off the tally
+PASS grade differs is counted
+PASS count differs is counted
+PASS standing differs is counted
+PASS same standing and counts is off
+PASS unreadable line is counted
+PASS KEEP is counted
+PASS NO ANSWER is counted
+PASS panel seat: matching CHANGE TO is off, reason written once
+PASS alternate seat (Alt Seated bodies): matching CHANGE TO is off
+PASS line not in the seat text (cannot be replaced) is counted
+PASS seat with no body found is counted
+PASS NOT HELD under CHANGE TO is counted
+PASS collision grade equal is off
+PASS collision grade changed is counted
+PASS RETRACTED is counted
+TOTAL 17 of 17
+PASS E-GATE equal grade and counts: off the tally
+PASS E-GATE different grade: counted
+PASS E-GATE different count: counted
+PASS E-GATE no readable grade: counted
+PASS E-GATE KEEP: counted
+PASS E-GATE RECORD-ONLY row: unchanged
+PASS E-GATE K re-read item: counted
+PASS E-GATE change not applied: counted
+TOTAL 25 of 25

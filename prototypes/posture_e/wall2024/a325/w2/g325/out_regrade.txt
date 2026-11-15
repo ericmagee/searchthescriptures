@@ -1,0 +1,21 @@
+REPLAY rows 35 changed 3
+  40639 ODV1-37372: CONFIRMED -> NOT CONFIRMED (other side's words)
+  40640 ODV1-37372: CONFIRMED -> NOT CONFIRMED (other side's words)
+  40641 ODV1-37372: CONFIRMED -> NOT CONFIRMED (other side's words)
+PASS P1_37372_shape expect DEMOTE got DEMOTE (live: CONFIRMED; built: NOT CONFIRMED (other side's words))
+PASS P2_round_label expect DEMOTE got DEMOTE (live: CONFIRMED; built: NOT CONFIRMED (other side's words))
+PASS P3_missing_quote expect KEEP got KEEP (live: NOT CONFIRMED (form); built: NOT CONFIRMED (form))
+PASS P4_paraphrased_quote expect KEEP got KEEP (live: NOT CONFIRMED (form); built: NOT CONFIRMED (form))
+PASS P5_short_quote expect KEEP got KEEP (live: CONFIRMED; built: CONFIRMED)
+PASS P6_defender_mirror expect DEMOTE got DEMOTE (live: CONFIRMED; built: NOT CONFIRMED (other side's words))
+PASS P7_quote_then_adopt expect KEEP got KEEP (live: CONFIRMED; built: CONFIRMED)
+PASS P8_misattribution_sentence expect DEMOTE got DEMOTE (live: CONFIRMED; built: NOT CONFIRMED (other side's words))
+PASS P9_mirror_true_contradiction expect KEEP got KEEP (live: CONFIRMED; built: CONFIRMED)
+PASS P10_engine_echo_only expect KEEP got KEEP (live: CONFIRMED; built: CONFIRMED)
+   note undefined
+PASS P11_names_other_not_owner expect KEEP got KEEP (live: CONFIRMED; built: CONFIRMED)
+   note undefined
+PASS P12_names_other_next_sentence_own expect KEEP got KEEP (live: CONFIRMED; built: CONFIRMED)
+PASS P13_label_quote_spans_sentence expect DEMOTE got DEMOTE (live: CONFIRMED; built: NOT CONFIRMED (other side's words))
+PASS P14_owner_word_after_quote_same_line expect KEEP got KEEP (live: CONFIRMED; built: CONFIRMED)
+PLANTS 14 of 14
