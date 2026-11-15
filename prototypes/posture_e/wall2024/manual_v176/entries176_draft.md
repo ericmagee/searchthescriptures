@@ -15,13 +15,13 @@ Each written ASK also adds one "WRITTEN AS s2xx" line and moves the Live flow li
   - Size: Sight 519 summary 2,552 to 2,615 characters (md5 4c8b7787 to cea0bca2); Sight 266 summary 1,543 to 1,559 (md5 166fe44f to e4cc8dfa); no node changes.
   - Limits: kb_sights.notes still carries "legal" on rows 281 and 374; no node reads notes. Sight 519 "Legal adoption produces no seed" is about adoption and stays. Not shown by a run.
 
-## 319 pkgPWF: test every quote after an [L1]
-- AN E-ANS CURE KEEPS ITS [L1] WHEN ANY QUOTE UNDER THAT TAG MATCHES THE ANSWER, AND THE PRESSED VERSE ALONE NEVER CARRIES THE FIT (pkgPWF rev 3, ASK 319; Shared Library pwf, LIB 2532 [AT BUILD: lines]):
+## 319 pkgPWF: test every quote after an [L1] ((b) only)
+- AN E-ANS CURE KEEPS ITS [L1] WHEN ANY QUOTE UNDER THAT TAG MATCHES THE ANSWER (pkgPWF, ASK 319, (b) only; Shared Library pwf, LIB 2532 [AT BUILD: lines]):
   - Why: in run 37281 sol's E-ANS cure 40025 was marked UNCURED and sol was removed. pwf() tested only the first quote after the [L1] ("his mother said unto him"); the second quote, which the judge's reason quotes ("thy father and I have sought thee sorrowing"), would have kept it (W2 6662 control D; W1 6666).
-  - What it does: pwf() tests every quote after an [L1] up to the next layer tag, not only the first. Condition 3 (W3 6676): the pressed verse may stand at [L1] as the row being answered, but the fit must be carried by another layer the answer gives; a cure whose only quoted verse is the pressed verse does not cure.
+  - What it does: pwf() tests every quote after an [L1] up to the next layer tag, not only the first.
   - Size: [AT BUILD].
   - Shown offline: [AT BUILD: replay over the stored pkgABS and pkgPWF rows; 40025 must read CURED].
-  - Limits: fix (a) of 6662 (count "the row" as naming the checked verse) is not built (team DISAGREE). [AT BUILD].
+  - Limits: fix (a) of 6662 (count "the row" as naming the checked verse) is not built (team DISAGREE). Condition 3 (a cure whose only layer verse is the pressed verse does not cure) was withdrawn before the write: it would have turned 21 of 168 stored cures UNCURED, and a press can be answered from the pressed row read whole (W4 6778, W3 6779). fit() was stubbed in the replay. [AT BUILD].
 
 ## 320 E-ASSUME reads the Oracle's round 1 list
 - THE ASSUMPTION CHECK ALSO READS THE ORACLE'S ROUND 1 ASSUMES CHARGES, MATCHED TO THE ROUND 2 PREMISE BY QUOTED TEXT (E-ASSUME option (a), ASK 320; Assume Check Build):
