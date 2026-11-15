@@ -30,3 +30,31 @@ Every [PENDING] field is filled from the build's own readback and grades. Nothin
 ## Correction to the v176 ASK 323 part 1 entry (W3 Wall 6916; Worker_A3 6912)
 - In the K-UNX gate entry, after "Three options, none preferred.", add: "The case-sensitive UNXA_ASM pattern was a code misread. Offering the ASSUMES route on the plain path extends the gate rule to a case its stated rule did not reach (an assumed fact with no row); that extension was the operator's decision, given by his card for ASK 323."
 - Open for the operator (Worker_A3 6912 item 8): whether a removal applies when a judge's grade matched the send-back's own. ASK 319 (pwf reads every quote) is a misread fix and does not answer it.
+
+## ASK 330 (gate form for an assumed fact) and ASK 331 (Option A removal test). Operator approval 14:56Z ("approved. proceed and assign") on the team's agreed forms (Wall 6919 to 6928). HELD until each is built, graded, written and read back. [Confirm the ASK numbers against the coordinator's assignment: 330 = gate form, 331 = removal test, as assumed here.]
+
+### Rule wording (for section 4 or 8, rulings; the operator's ruling of 14:56Z on the team form)
+- RULING 421, GATE FORM (operator, 2026-11-15 14:56Z): a premise counted UNEXHIBITED at the K-UNX gate may give as its reason an assumed fact with no row, in this form, on one line:
+  STEP: "<the side's own words that take the step>" -- ASSUMES: <one fact the step takes as given> -- ROWS GIVE: "<the cited rows' words as written>".
+  - STEP is a verbatim quote from the side's own rounds. ROWS GIVE quotes the cited verses verbatim. Code checks both against the text.
+  - ASSUMES is written by the judge. It names one fact. It is never the opponent's or the debate's contested conclusion (that is a dependency, graded PROP-DEPENDENT), and never an inferred act ("an inferred act ... is never an ASSUMES").
+  - The charge fails when the side has laid out a chain to that fact with the links shown. ROWS GIVE never demands one verse stating the premise or conclusion.
+  - An answer in this form can be CURED at the K-UNX cure check, as a named layer or a CORRECTED COUNT can.
+  - Ground: ruling 421 and the text check. The judges grade the text alone; no guard text is read (Ruling 383).
+- REMOVAL TEST, OPTION A (operator, 2026-11-15 14:56Z): when a judge refuses a send-back's correction (UNCURED), the send-back's line replaces the judge's line and the refusal is recorded as UNCURED. The seat stays counted only when code shows the grade word and every count field of the judge's line identical to the send-back's line. When that cannot be shown (no send-back grade, as in a K-C cure refused for "no RESTATED line", or the line cannot be replaced), the seat is removed as before.
+
+### ASK 330 entry, section 8 under the K-UNX gate (after the ASK 323 part 1 entry)
+- THE K-UNX GATE AND ITS CURE CHECK ACCEPT THE STEP / ASSUMES / ROWS GIVE FORM (ASK 330; [nodes PENDING]):
+  - Why: in run 37281 luna counted defender premises 5 and 6 UNEXHIBITED on an assumed fact ("assumed Davidic descent through Mary"); the defender's close reads "I rest this route on Romans 1:3, Luke 1:32 and Luke 1:35, and not on Mary's genealogy stated in a row." The gate's stated rule accepted only a named missing layer, and the cure check could never CURE an ASSUMES answer (W2 6921 b), though ruling 421 already stood in the judge prompts (W1 6920 a). Whether the rule reached this case was the operator's question (Worker_A3 6912 item 3); he ruled at 14:56Z.
+  - What it does: [PENDING on the build; per the rule wording above].
+  - Shown offline: [PENDING]. Expected from the record: no seat or count moves in 37281 or 37372; luna's 37281 lines carry no STEP quote, and its 37372 ASSUMES names contested conclusions (W4 6922 items 4, 5; 6926 item 3).
+  - Limits: [PENDING]. Live and UNEXERCISED until a run fires it.
+  - WRITTEN AS [PENDING].
+
+### ASK 331 entry, section 7 under panel removal (debate rule violations)
+- A JUDGE WHOSE UNCURED LINE CHANGES NO GRADE AND NO COUNT KEEPS ITS SEAT (ASK 331, Option A; [nodes PENDING]):
+  - Why: in run 37281 sol was removed for one uncured answer check (40025, Luke 2:48 [CR4]) whose grade, MEETS, matched the send-back's own. Whether removal should apply there was the operator's question (Worker_A3 6912 item 8); he ruled at 14:56Z.
+  - What it does: [PENDING on the build; per the rule wording above].
+  - Expected from the record: 37281, sol keeps the seat and hydrogen is not called; the counted panel is chatgpt, luna, sol, all BROKEN, outcome unchanged (W4 6922 item 6, 6926 item 2). 37372, sol stays removed (its K-C cure has no send-back grade), so no re-derive. A case like hydrogen's in 37281 (uncured lines moving challenger conceded links 0 to 1) would remove that seat.
+  - Shown offline: [PENDING]. Limits: [PENDING]. ASK 319's pwf fix already turns 40025 CURED, so 37281 is not itself a live case.
+  - WRITTEN AS [PENDING].
