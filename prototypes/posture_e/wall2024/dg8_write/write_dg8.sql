@@ -8,5 +8,6 @@ update drift_guards set rule = replace(replace(rule,
 Also forbidden: resolving the genealogy$a$), updated_at = now()
 where rule_num=8 and md5(rule)='9e75e3ed4a25d589a6a4a97760743779'
 returning rule_num, length(rule) len, md5(rule) md5, updated_at;
-update model_config set notes = coalesce(notes,'') || E'\n2026-11-14 23:45 CST: active false -> true on the operator's "enable glm for debating" (W4, Wall 6702); debater only.', updated_at = now() where seat='glm' returning seat, active, updated_at;
+update model_config set notes = coalesce(notes,'') || $n$
+2026-11-14 23:45 CST: active false -> true on the operator's "enable glm for debating" (W4, Wall 6702); debater only.$n$, updated_at = now() where seat='glm' returning seat, active, updated_at;
 -- REVERT: revert_dg8.sql (reverse replace, guarded).
