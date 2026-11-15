@@ -15,13 +15,13 @@ Each written ASK also adds one "WRITTEN AS s2xx" line and moves the Live flow li
   - Size: Sight 519 summary 2,552 to 2,615 characters (md5 4c8b7787 to cea0bca2); Sight 266 summary 1,543 to 1,559 (md5 166fe44f to e4cc8dfa); no node changes.
   - Limits: kb_sights.notes still carries "legal" on rows 281 and 374; no node reads notes. Sight 519 "Legal adoption produces no seed" is about adoption and stays. Not shown by a run.
 
-## 319 pkgPWF: test every quote after an [L1] ((b) only)
-- AN E-ANS CURE KEEPS ITS [L1] WHEN ANY QUOTE UNDER THAT TAG MATCHES THE ANSWER (pkgPWF, ASK 319, (b) only; Shared Library pwf, LIB 2532 [AT BUILD: lines]):
+## 319 pkgPWF: test every quote after an [L1] ((b) only) (WRITTEN AS s213)
+- AN E-ANS CURE KEEPS ITS [L1] WHEN ANY QUOTE UNDER THAT TAG MATCHES THE ANSWER (pkgPWF, ASK 319, (b) only; Shared Library pwf, LIB 2532; users Send Back Record, Alt Send Back Record and R2 Alt Send Back Record):
   - Why: in run 37281 sol's E-ANS cure 40025 was marked UNCURED and sol was removed. pwf() tested only the first quote after the [L1] ("his mother said unto him"); the second quote, which the judge's reason quotes ("thy father and I have sought thee sorrowing"), would have kept it (W2 6662 control D; W1 6666).
   - What it does: pwf() tests every quote after an [L1] up to the next layer tag, not only the first.
-  - Size: [AT BUILD].
-  - Shown offline: [AT BUILD: replay over the stored pkgABS and pkgPWF rows; 40025 must read CURED].
-  - Limits: fix (a) of 6662 (count "the row" as naming the checked verse) is not built (team DISAGREE). Condition 3 (a cure whose only layer verse is the pressed verse does not cure) was withdrawn before the write: it would have turned 21 of 168 stored cures UNCURED, and a press can be answered from the pressed row read whole (W4 6778, W3 6779). fit() was stubbed in the replay. [AT BUILD].
+  - Size: Shared Library +191 (945,761 to 945,952 on s212); three MAP lengths move; no other node changes.
+  - Shown offline: t.cjs 11 of 11, including the parse of all three users and case 40025 (live UNCURED, (b) CURED) (W2 6781; W1 6780). The written library line equals the graded target_319_bonly line (W2 6832).
+  - Limits: fix (a) of 6662 (count "the row" as naming the checked verse) is not built. Condition 3 (a cure whose only layer verse is the pressed verse does not cure) was withdrawn before the write: it would have turned 21 of 168 stored cures UNCURED, and a press can be answered from the pressed row read whole (W4 6778, W3 6779). fit() was stubbed in the replay. Live and UNEXERCISED: no run has fired it.
 
 ## 320 E-ASSUME reads the Oracle's round 1 list
 - THE ASSUMPTION CHECK ALSO READS THE ORACLE'S ROUND 1 ASSUMES CHARGES, MATCHED TO THE ROUND 2 PREMISE BY QUOTED TEXT (E-ASSUME option (a), ASK 320; Assume Check Build):
@@ -63,7 +63,27 @@ Each written ASK also adds one "WRITTEN AS s2xx" line and moves the Live flow li
   - Shown offline: 42 hits in 18 debates (W1), 63 to 67 under a wider label pattern (W2, W1), all in challenger_r4; 0 in citation form by hand (W2 6745); a synthetic "*abba* (G5)" with a G5 grant label in the round stays counted (W4 6746 condition) [AT BUILD].
   - Limits: the same token is counted through Citation Scan, L2 Count Plan and PRS_LB; any reader that would still void the tag changes in step (W4 6746) [AT BUILD].
 
-## Standing rule: reasoning settings (section 4, NO REASONING FIELD line)
-Append to the end of the section 4 line that begins "- NO REASONING FIELD:" (after "... describe removed code."):
-" Reasoning, effort and thinking settings change only on the operator's own instruction. No seat adds, removes or adjusts one for any model or call on its own reading. A model that spends its output on reasoning is reported with its measured tokens and finish reason, not re-tuned without the operator's instruction."
-Body law: no name or date in the body. The v176 log row records the source (the operator's instruction of 2026-11-15, 03:03 CST).
+## s210, s211, s212: spark seated as a debater; every reasoning setting removed
+These replace the v175 text named below. Each changed line is given whole. Sources of the instructions go in the v176 log row only (body law).
+
+A. Section 4, the line that begins "- NO REASONING FIELD:" is replaced whole by:
+"- NO REASONING FIELD: no call sets a reasoning, effort or thinking field for any model; every model runs at the provider's default. The request finisher passes a model's own reasoning_details from its earlier turn back to it, which sets nothing. Token limits and temperature are not reasoning settings and stay as stored: MiMo (`xiaomi/mimo-v2.6-pro`) keeps 131,072 output tokens on Panel Build, Reserve Build, Accept Build and the library, and MiMo is in no judge order now (§10). Reasoning, effort and thinking settings change only on the operator's own instruction. No seat adds, removes or adjusts one for any model or call on its own reading. A model that spends its output on reasoning is reported with its measured tokens and finish reason, not re-tuned without the operator's instruction. Node comments that speak of "effort medium" or "max(mt*2,8000)" describe removed code."
+(This supersedes the earlier "Standing rule" append; the rule sentences are inside the new line.)
+
+B. Section 10, ALTERNATE HYDROGEN: the two lines "- REASONING EFFORT LOW: the request finisher adds ... No other model's body changes." and "- Why effort low: ..." are replaced by one line:
+"    - NO EFFORT SETTING: no request to hydrogen carries a reasoning field; it runs at the provider's default (§4, NO REASONING FIELD). Measured risk: at the default effort one full-body check call, at max_tokens 64,000 and at a request of 128,000 that the provider capped at 65,536, returned no complete verdict because the model spent its output on reasoning. Hydrogen's fitness at the default on a full judge body is not shown."
+
+C. Section 10, ALTERNATES GEMINI AND SPARK: the line "- REASONING EFFORT LOW: the request finisher adds ... The finisher stands in the same 15 places as for hydrogen." is replaced by:
+"    - NO EFFORT SETTING: no request to hydrogen, gemini or spark carries a reasoning field, on any call, debater or judge; each runs at the provider's default (§4, NO REASONING FIELD)."
+And after the Init Seats line of the same block, one line is added:
+"    - SPARK AS A DEBATER: Init Seats ENG holds spark (fam openrouter, mc spark), so spark can be named as challenger or defender. Spark also stays on the alternate list, and Init Seats does not remove a debater's own seat from the alternates; hydrogen is the first alternate, so in the usual debate spark is not reached. Not shown by a run: a debate where the spark debater's own seat is reached as an alternate."
+
+D. Section 17 (limits), the line "- Node comments in the Build nodes still describe "effort medium" ..." stays as written.
+In the pkgMUS rev 3 limit, "(ember, gemini and spark as alternates, reasoning effort low)" becomes "(ember, gemini and spark as alternates)", and "Each model's fitness rests on one full-body check call at effort low." becomes "Each model's fitness rests on one full-body check call at effort low; none has been checked at the default, which is how every model now runs."
+In the pkgHYD rev 2 limit, "(hydrogen as second alternate, reasoning effort low)" becomes "(hydrogen as second alternate)", and "The model's fitness rests on one full-body check call at effort low." becomes "The model's fitness rests on one full-body check call at effort low; at the default it has not returned a complete verdict on a full judge body (§10, ALTERNATE HYDROGEN)."
+Run 37372 (spark challenger at the default, 11-15) completed every round (W4 6818); it is a debater run, not a judge-body check, and is not cited as fitness for any judge seat.
+
+E. Section 18, the Live flow line: "Live flow: s209 (n8n version f97bdbb6, 455 nodes; Shared Library 946,100 characters, sha f3adbaa1f7064da7)." becomes "Live flow: s213 (n8n version dfcce94c, 455 nodes; Shared Library 945,952 characters, header sha 290dae86d89ac713)." and after "s209 = s208 + pkgBKC (ASK 313, one write)." add " s210 = s209 + spark in Init Seats ENG (one node). s211 = s210 - the hydrogen and spark effort-low statement (15 nodes). s212 = s211 + pkgRDF (every remaining reasoning statement removed: gemini-3.8-flash low, MiMo medium, xiaomi reasoning off; 15 nodes). s213 = s212 + pkgPWF (b) only (ASK 319, Shared Library only)."
+[CHECK BEFORE BUILD: the Shared Library header sha form used by the v175 line (sha f3adbaa1f7064da7) against W2 6832's "header sha 290dae86d89ac713"; read both from live, do not copy.]
+
+F. Write register entries for s210 to s213 go in the v176 engine_manual_log row, not the body.
