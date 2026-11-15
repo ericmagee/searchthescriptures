@@ -1,4 +1,4 @@
-# ASK 327 / 328 grading baseline (W1, session_01H1X3ANxr57MZvsu7fHB9kh)
+# ASK 327 / 328 grading baseline, REV 2 (W1, session_01H1X3ANxr57MZvsu7fHB9kh)
 
 Run 37372 (n8n execution 37372, run token ODV1-37372-6n5n7sh9, debate 6c62698b-58d1-4f5f-9d8e-cd57f096e96c).
 Ran on s211. Read 2026-11-15 from the stored execution and the live s218 code. Everything here is MEASURED unless it is marked GUESS.
@@ -56,18 +56,20 @@ The risk: Format Markdown treats every drv_removed entry as a removed judge with
 
 reply_error is read by the Shared Library (33 sites), 8 Record nodes, and database function record_enforcer_log.
 
-## D. ASK 327 criteria (removal record and panel text)
+## D. ASK 327 criteria, REV 2 (per W4 6879 and W1 6883)
 
-Replay on 37372's stored inputs:
-1. (REVISED, 6877) drv_removed stays a list of REPLACED seats only, and for 37372 it stays empty. The recorder is never called with a removal that has no alternate. debate_removals shows sol exactly once, as not_counted, and its removed_rules now names K-C (cure) x1 and E-GATE CONTRADICTION x1. The alternates tried (hydrogen x2 and their reasons) are recorded on that same not_counted path.
-2. panel_split names the seat and the rules in place of the bare "debate rule". The counts stay 2-0.
-3. panel_verdict BROKEN and judged_by are unchanged. The outcome and every count are unchanged.
-4. Format Markdown shows sol once (unchanged criterion) as a counted-out judge, not twice. The cure rows of sol are not counted twice in COR.
+This is a view-only change to debate_removals. There is no table write, no n8n change, no change to drv_removed, and no change to the recorder. panel_split is left as is (option a). removed_rules is read at view time.
 
-On a run where an alternate sat (for example 36677, sol to hydrogen), the output equals today's except for the added fields.
-On runs with no removal, the output is byte-identical.
-
-Open, not graded: whether panel_effective should still list sol. Today it does.
+1. Run 37372, sol's not_counted row:
+   - removed_rules = ["K-C (cure) x1","E-GATE CONTRADICTION x1"]. It is a jsonb array split on "; ", the same shape the replaced path uses. It appears ONCE, even though sol's text holds two identical REMOVED FOR lines.
+   - The new last column alternates_tried has 2 entries. Each is {seat sol, alternate hydrogen, model google/gemini-4-hydrogen, result NOT SEATED, why}. The why texts are the two reasons: content null with finish_reason length, and no JSON object.
+2. Every other row is identical in all old columns, and the row count is identical. That covers every replaced row, including the 41 with removed_rules NULL. Those stay NULL, with no back-fill from text.
+3. A not_counted row with no REMOVED FOR or ALTERNATE TRIED text gets NULL in both fields, never a guess.
+4. Plants and variants. Ten judgment rows carry REMOVED FOR. Two forms must each give a stated, consistent result:
+   - "drv_uncured 2: K-W (cure) x1 (read 1, count differs)": the builder states whether the suffix is kept or stripped.
+   - "drv_uncured 26: K-S3 (cure) x6; K-W (cure) x20": gives 2 elements.
+   The 38 judgment rows with "ALTERNATE: none" must parse without error.
+5. Readers: none. No function, view or n8n node reads debate_removals or odv1_drv_removals (checked at 6883). The new column goes at the end.
 
 ## E. ASK 328 criteria (USAGE line on a failed alternate)
 
