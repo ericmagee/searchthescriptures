@@ -1,6 +1,6 @@
-# Engine manual v177: FINAL entries (W3). ASKs 325, 327 to 331, 333 to 337 and 341 WRITTEN and read back by W4 (15 Nov 09:51 to 12:30 CST); ASK 342 HELD for its card. Entries filled from the graded builds.
+# Engine manual v177: FINAL entries (W3). ASKs 325, 327 to 331, 333 to 337, 341 and 342 WRITTEN and read back by W4 (15 Nov 09:51 to 13:08 CST). Entries filled from the graded builds.
 Sources: ASK 325 plan 6844 with revision 1 at 6863, plants 6846, baseline W1 6842. ASK 327 and 328 proposal 6864, W1 baseline 6872 (a327/w1_baseline.md, fc638c5c), W3 marks 6837 and 6869.
-Fields are filled from W4's build posts (6953, 6958, 6968, 6971, 6973, 6991), the grades (W1 6959/6992, W2 6963/6993 and the 327/328 passes), and W4's write reports in its own thread (09:54 and 10:06 CST). Run 37510 (started 10:11 CST on 67e89720) exercised ASKs 327, 328 and 329 (W1 7005, W4 7006). ASKs 325, 330 and 331 were not exercised in it. ASKs 333 to 337 and 341 were written after it and are UNEXERCISED until a run.
+Fields are filled from W4's build posts (6953, 6958, 6968, 6971, 6973, 6991), the grades (W1 6959/6992, W2 6963/6993 and the 327/328 passes), and W4's write reports in its own thread (09:54 and 10:06 CST). Run 37510 (started 10:11 CST on 67e89720) exercised ASKs 327, 328 and 329 (W1 7005, W4 7006). ASKs 325, 330 and 331 were not exercised in it. ASKs 333 to 337, 341 and 342 were written after it and are UNEXERCISED until a run.
 
 ## ASK 325 (close enforcer misattribution), section 6 under the close enforcer, after the pkgNRH entry
 - A CLOSING CONTRADICTION WHOSE EARLIER WORDS ARE THE OTHER SIDE'S, ONLY QUOTED BY THE FLAGGED SIDE, IS NOT COUNTED AGAINST IT (ASK 325; Close Enforcer Record):
@@ -129,10 +129,11 @@ Ruling numbers 460 and 461: the highest three-digit "ruling N" in the record is 
   - Graded PASS by W1 (7081) and W2 (7083). Live and UNEXERCISED until a run.
   - WRITTEN AS s226 (ASK 341, on the operator's card "Write 341", 15 Nov 12:30 CST; n8n version defaa968; diff Init with Guards only, read back by W4 7090).
 
-## ASK 342 (the 336 D4 departure: an [L2] paragraph that names its own verse in book-less form; W4 7071 B, 7077; form (iii) W2 7083, marks W3 7086, W1 7088; condition e W1 7094; build W4 7092, rebuilt 7101). Section 8 under the ASK 336 entry. HELD until written.
+## ASK 342 (the 336 D4 departure: an [L2] paragraph that names its own verse in book-less form; W4 7071 B, 7077; form (iii) W2 7083, marks W3 7086, W1 7088; condition e W1 7094; build W4 7092, rebuilt 7101). Section 8 under the ASK 336 entry.
 - __run336 is replaced in the same 22 copies. An [L2] paragraph that names a book-less c:v ("(1:24)") or a verse word ("v. 24", "vv. 18-24", "verse 24") binds to the verses it names, resolved against the [L1] run's book (and chapter, for a verse word), instead of being widened by 336. It resolves only when the run holds one book, one chapter for a verse word, and (condition e) the c:v's chapter is a chapter of the run; otherwise today's pre-336 binding stands. Strong's numbers are stripped first; "7 verses" does not read as a verse.
   - Why: under 336 D4 as written, a paragraph that names its own verse keeps its binding, but refsIn did not read a book-less "(1:24)", so 336 widened such paragraphs to verses the writer did not point to (32791 DR1, W4 7071).
   - Replay (68 debates, PRE s226): 10,773 tags unchanged, 7 changed. 32791 DR1 and 37000 DR1 COUNTED to NOT COUNTED (each names verse 24 only; G4905 stands at Matthew 1:18, not 1:24); 37000 DR2 stays COUNTED (it names 1:18); 33107 CR2 and 37203 CR1 keep COUNTED with verse lists changed; 33040 DR2, 37203 CR1 and 36212 DR2 widened, status unchanged.
   - Limits: a book-less verse that does not exist ("1:95") is printed in the tag's verse list; it holds no word, so it can never make a tag COUNTED (option 1, W1 7094, W2 7093, W3 7104). The live resolver binding "v. 24" under a chapter-2 head to Matthew 2:24 is existing behaviour and a separate item.
   - Graded PASS by W1 (7094) and W2 (7093; change with e 7103). Target target_342e.json ead0399927d7.
-  - WRITTEN AS: fill on the write.
+  - Live and UNEXERCISED until a run.
+  - WRITTEN AS s227 (ASK 342 with condition e, on the operator's card "Write 342", 15 Nov 13:07 CST; n8n version d23c65ca; 22 places read back equal to the target, lib sha 515f047ee6cad94f, W4 7106).
