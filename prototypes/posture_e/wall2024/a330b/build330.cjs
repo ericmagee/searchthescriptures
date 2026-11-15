@@ -15,6 +15,10 @@ L[466]=once(L[466],"PR.filter(p=>p.n===j),text,rk):null); /* pkgBKC */","PR.filt
 const CUREIN="{let __af=null;try{__af=__af330(st,x.side,rounds&&Object.keys(rounds).length?rounds:null);}catch(e){__af=null;}if(__af&&__af.ok)return res('CURED','TRIAL rule (K-UNX, ASK 330, ruling 460): the STATEMENT is in the assumed-fact form: '+__af.why+'; the count stands',['STATEMENT: '+st]);} /* pkgAFF */";
 L[1219]=once(L[1219],"if(x.rule==='K-UNX'&&x.a){const st=stmtOf(x);","if(x.rule==='K-UNX'&&x.a){const st=stmtOf(x);"+CUREIN,'1219');
 L[1227]=once(L[1227],"if(x.rule==='K-UNX'){const st=stmtOf(x);","if(x.rule==='K-UNX'){const st=stmtOf(x);"+CUREIN,'1227');
+// 2b F1 (W2 6963; W1 6965, W3 6966 agree): the two K-UNX send-backs with no a field ask for the form the cure reader takes
+const F1OLD="or, if the step takes for granted a fact no row in the rounds gives, write ASSUMES: <that fact> and quote the block\\'s [L1]; or write";
+const F1NEW="or, if the step takes for granted a fact no row in the rounds gives, write the assumed-fact form (ruling 460), three parts in this order, each separated by \" -- \" (a space, two hyphens, a space): STEP: \"<the step\\'s words, quoted exactly from the '+side.toLowerCase()+'\\'s own rounds>\" -- ASSUMES: <one given fact> -- ROWS GIVE: <book chapter:verse> \"<that verse\\'s own words, quoted>\". The ASSUMES must be one fact, not a contested conclusion or an inferred act, and each ROWS GIVE verse must be one cited in the rounds; or write";
+L[476]=once(L[476],F1OLD,F1NEW,'476');L[480]=once(L[480],F1OLD,F1NEW,'480');
 // 3 new line, added to every node that carries either path
 const NL=L.length;L.push(fs.readFileSync(__dirname+'/af330.js','utf8').trim());
 const TOUCH=[...new Set([...RAISE,...CURE])];for(const k of TOUCH)M[k].p.push(NL);

@@ -7,9 +7,9 @@ let PT='';const $=n=>{if(n==='Cited Verses')return {isExecuted:true,all:()=>VR.m
 const ld=(U,k)=>T.load(T.rb(U.L,U.M[k]),$);
 const GO=ld(OLD,'Gate Record'),GN=ld(NEW,'Gate Record');const CO=ld(OLD,'Cure Check'),CN=ld(NEW,'Cure Check');
 const txt=raw=>{let t=String(raw||'');const s=t.trim();if(s[0]==='{'){const i=s.lastIndexOf('}');try{const J=JSON.parse(s.slice(0,i+1));if(J&&typeof J.reasoning==='string')t=J.reasoning;}catch(e){}}return t.replace(/\n\n\[AUDIT v[\s\S]*$/,'');};
-let n=0,same=0,diff=[],KX=0;
-for(const r of D){PT=ptOf(r);for(const j of (r.js||[])){n++;const t=txt(j.raw);let a,b;try{a=JSON.stringify(GO.kunxLines(t,PT));}catch(e){a='ERR '+e.message;}try{b=JSON.stringify(GN.kunxLines(t,PT));}catch(e){b='ERR '+e.message;}if(a===b){same++;try{KX+=JSON.parse(a).items.length;}catch(e){}}else diff.push(r.run_token.slice(0,10)+' '+j.seat);}}
-console.log('REPLAY kunxLines: judge texts',n,'K-UNX items seen',KX,'identical',same,'differ',diff.length,diff.join('; '));
+let n=0,same=0,diff=[],KX=0,f1only=0;
+for(const r of D){PT=ptOf(r);for(const j of (r.js||[])){n++;const t=txt(j.raw);let a,b;try{a=JSON.stringify(GO.kunxLines(t,PT));}catch(e){a='ERR '+e.message;}try{b=JSON.stringify(GN.kunxLines(t,PT));}catch(e){b='ERR '+e.message;}const f1=x=>x.replace(/write ASSUMES: <that fact> and quote the block's \[L1\]; or write|write the assumed-fact form \(ruling 460\)[^]*?cited in the rounds; or write/g,'<F1>');let KI=0;try{KI=JSON.parse(b).items.length;}catch(e){}KX+=KI;if(a===b)same++;else if(f1(a)===f1(b)){f1only++;}else diff.push(r.run_token.slice(0,10)+' '+j.seat);}}
+console.log('REPLAY kunxLines: judge texts',n,'K-UNX items seen',KX,'identical',same,'differ only in the F1 send-back wording',f1only,'differ otherwise',diff.length,diff.join('; '));
 // plants on 37372 rounds
 const r72=D.find(r=>r.run_token.startsWith('ODV1-37372'));PT=ptOf(r72);
 VR=JSON.parse(fs.readFileSync('verses_plant.json'));
@@ -41,4 +41,14 @@ console.log('  raise plant old items',KO.items.map(x=>x.rule+' '+x.link+' '+x.a)
  const a=st(CO,goodS),b=st(CN,goodS);ok('cure: STATEMENT in full form CURED (live: '+a.slice(0,40)+')',/^CURED .*ASK 330/.test(b),b);
  const bad=goodS.replace('Assembled','Gathered');ok('cure: STEP not verbatim falls to today\'s reading (identical)',st(CO,bad)===st(CN,bad),st(CN,bad));
  const none='The premise stands as counted.';ok('cure: no form, identical to live',st(CO,none)===st(CN,none));}
+// F1 (W2 6963): the K-UNX send-back with no a field now asks for the full form; a STATEMENT that fills that template exactly cures
+{const RD=GO.ciRounds(PT);const itN=GN.kunxLines(sec('the step stands'),PT).items,itO=GO.kunxLines(sec('the step stands'),PT).items;
+ ok('F1: no-a-field item raised on both, live line has the old ask, new line has the full form',itN.length===1&&itO.length===1&&itN[0].a===undefined&&/write ASSUMES: <that fact> and quote the block's \[L1\]/.test(itO[0].line)&&/assumed-fact form \(ruling 460\)/.test(itN[0].line)&&!/quote the block's \[L1\];/.test(itN[0].line));
+ const tm=itN[0].line.match(/STEP: "<[^>]*>" -- ASSUMES: <[^>]*> -- ROWS GIVE: <[^>]*> "<[^>]*>"/);
+ const filled=tm?tm[0].replace(/<the step's words[^>]*>/,STEP).replace('<one given fact>','Mary is of the house of David').replace('<book chapter:verse>','Luke 1:27').replace(/<that verse's own words, quoted>/,'a virgin espoused to a man whose name was Joseph, of the house of David'):'';
+ console.log('  F1 template:',tm&&tm[0]);console.log('  F1 filled:',filled);
+ const rep=x=>({ok:true,text:'RESPONSE: K-UNX DEFENDER premise 1 | The count stands; the step takes a given fact no row states.\nSTATEMENT: K-UNX DEFENDER premise 1 | '+x});
+ const st=(C,it,x)=>C.cureVerdicts(JSON.parse(JSON.stringify(it)),rep(x),{},RD).map(v=>v.status+' '+String(v.why).slice(0,110)).join(' / ');
+ const a=st(CO,itO,filled),b=st(CN,itN,filled);ok('F1: the filled template cures on the target (live: '+a.slice(0,60)+')',!!tm&&/^CURED .*ASK 330/.test(b),b);
+ const old='ASSUMES: Mary is of the house of David, and the block\'s [L1] Luke 1:27 "of the house of David"';ok('F1: the old ask filled is handled as today (identical)',st(CO,itO,old)===st(CN,itN,old),st(CN,itN,old));}
 console.log('TOTAL',pass,'of',tot);

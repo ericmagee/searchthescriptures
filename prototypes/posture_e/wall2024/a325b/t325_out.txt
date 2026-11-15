@@ -12,4 +12,6 @@ PASS P7_quote_then_adopt expect KEEP got KEEP (live: CONFIRMED; built: CONFIRMED
 PASS P8_misattribution_sentence expect DEMOTE got DEMOTE (live: CONFIRMED; built: NOT CONFIRMED (other side's words))
 PASS P9_mirror_true_contradiction expect KEEP got KEEP (live: CONFIRMED; built: CONFIRMED)
 PASS P10_engine_echo_only expect KEEP got KEEP (live: CONFIRMED; built: CONFIRMED)
-PLANTS 10 of 10
+PASS P11_names_other_not_owner expect KEEP got KEEP (live: CONFIRMED; built: CONFIRMED)
+PASS P12_names_other_next_sentence_own expect KEEP got KEEP (live: CONFIRMED; built: CONFIRMED)
+PLANTS 12 of 12

@@ -12,7 +12,7 @@ for(const r of rows){const D=deb.find(x=>x.id===r.debate_id);if(!D){console.log(
  const a=run(OLD,Fof(D),[r.response_line]),b=run(NEW,Fof(D),[r.response_line]);const sa=(a.rows[0]||{}).status,sb=(b.rows[0]||{}).status;
  if(sa!==sb)flips.push(r.id+' '+r.run_token.slice(0,10)+': '+sa+' -> '+sb);else if(JSON.stringify(a)!==JSON.stringify(b))flips.push(r.id+' OTHER DIFF');}
 console.log('REPLAY rows',n,'changed',flips.length);flips.forEach(f=>console.log('  '+f));
-const P=JSON.parse(fs.readFileSync(W+'w4_plants.json'));const byId={};P.cases.forEach(c=>byId[c.id]=c);let pass=0;
+const P=JSON.parse(fs.readFileSync(W+'w4_plants.json'));JSON.parse(fs.readFileSync(W+'w2/g325/plants2.json')).cases.filter(c=>/^P1[12]_/.test(c.id)).forEach(c=>P.cases.push(c)); /* W2 6967 P11, P12 */const byId={};P.cases.forEach(c=>byId[c.id]=c);let pass=0;
 for(const c of P.cases){const t=c.same_texts_as?byId[c.same_texts_as]:c;const F={};for(const [s,k] of [['defender','cr'],['challenger','x']])for(const r of [1,2,3,4]){const v=(t[s]||{})['r'+r];if(v!=null)F[s==='defender'?'cr'+r:(r<=2?'gr'+r:'dr'+r)]=v;}
  if(t.synthesis)F.synthesis=t.synthesis;const R=c.row;const sd=R.side;const P0=sd==='DEFENDER'?'CR':'DR';const cr=P0+'4';const cq=(F[(sd==='DEFENDER'?'cr4':'dr4')]||'x y z w v').replace(/[."]/g,'').trim();
  let cq2=cq;const k4=sd==='DEFENDER'?'cr4':'dr4';if(!F[k4])F[k4]=cq;if(R.earlier_round===cr){cq2='the closing words here differ from the earlier ones';F[k4]=F[k4]+'\n'+cq2+'.';}
