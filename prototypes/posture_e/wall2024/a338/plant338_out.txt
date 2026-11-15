@@ -1,0 +1,56 @@
+== P1 O row, ", 20" form
+   text: [L1] "before they came together" and "that which is conceived in her is of the Holy Ghost" (Matthew 1:18, 20).
+   PRE  Matthew 1:18,20 | MATCHES | that which is conceived in her is of the Holy Ghost
+   POST Matthew 1:18 [O] | MATCHES | before they came together
+   POST Matthew 1:20 [O] | MATCHES | that which is conceived in her is of the Holy Ghost
+== P2 O row, "; Matthew" form
+   text: [L1] "before they came together" and "that which is conceived in her is of the Holy Ghost" (Matthew 1:18; Matthew 1:20).
+   PRE  Matthew 1:18 | WORDS ARE AT Matthew 1:20 | that which is conceived in her is of the Holy Ghost
+   POST Matthew 1:18 [O] | MATCHES | before they came together
+   POST Matthew 1:20 [O] | MATCHES | that which is conceived in her is of the Holy Ghost
+== P3 L row, same book
+   text: [L1] "of the daughters of Aaron" (Luke 1:36; Luke 1:5).
+   PRE  Luke 1:36 | WORDS ARE AT Luke 1:5 | of the daughters of Aaron
+   POST Luke 1:36; Luke 1:5 [L] | MATCHES | of the daughters of Aaron
+== P4 single reference
+   text: [L1] "of the daughters of Aaron" (Luke 1:5).
+   PRE  Luke 1:5 | MATCHES | of the daughters of Aaron
+   POST Luke 1:5 | MATCHES | of the daughters of Aaron
+== P5 list, quote in no member
+   text: [L1] "of the daughters of Aaron" (Luke 1:36; Luke 1:35).
+   PRE  Luke 1:36 | WORDS ARE AT Luke 1:5 | of the daughters of Aaron
+   POST Luke 1:36; Luke 1:35 [L] | WORDS ARE AT Luke 1:5 | of the daughters of Aaron
+== P6 L row, two books
+   text: [L1] "baptized with the Holy Ghost" (Luke 1:36; Acts 1:5).
+   PRE  Luke 1:36 | WORDING NOT FOUND IN Luke | baptized with the Holy Ghost
+   POST Luke 1:36; Acts 1:5 [L] | MATCHES | baptized with the Holy Ghost
+== P7 reversed pair
+   text: [L1] "in all things" and "made like unto his brethren" (Hebrews 2:17; Hebrews 2:14).
+   PRE  Hebrews 2:17 | MATCHES | made like unto his brethren
+   POST Hebrews 2:17 [O] | MATCHES | in all things
+   POST Hebrews 2:14 [O] | WORDS ARE AT Hebrews 2:17 | made like unto his brethren
+== P8 bad member 1:95
+   text: [L1] "of the daughters of Aaron" (Luke 1:5; Luke 1:95).
+   PRE  Luke 1:5 | MATCHES | of the daughters of Aaron
+   POST Luke 1:95 [L] | CITED VERSE DOES NOT EXIST | of the daughters of Aaron
+== P9 range in a list
+   text: [L1] "of the daughters of Aaron" (Luke 1:5-6; Luke 1:36).
+   PRE  Luke 1:5-6 | MATCHES | of the daughters of Aaron
+   POST Luke 1:5-6; Luke 1:36 [L] | MATCHES | of the daughters of Aaron
+== P10 list closed by [L1]
+   text: "of the daughters of Aaron" (Luke 1:36; Luke 1:5) [L1].
+   PRE  Luke 1:36 | WORDS ARE AT Luke 1:5 | of the daughters of Aaron
+   POST Luke 1:36; Luke 1:5 [L] | MATCHES | of the daughters of Aaron
+== P11 3 quotes, 2 refs
+   text: [L1] "before they came together" and "of the Holy Ghost" and "Joseph her husband" (Matthew 1:18, 19).
+   PRE  Matthew 1:18,19 | MATCHES | Joseph her husband
+   POST Matthew 1:18; Matthew 1:19 [L] | MATCHES | before they came together
+   POST Matthew 1:18; Matthew 1:19 [L] | MATCHES | of the Holy Ghost
+   POST Matthew 1:18; Matthew 1:19 [L] | MATCHES | Joseph her husband
+== P12 same quote twice
+   text: [L1] "of the daughters of Aaron" (Luke 1:36; Luke 1:5). Again: "of the daughters of Aaron" (Luke 1:36; Luke 1:5).
+   PRE  Luke 1:36 | WORDS ARE AT Luke 1:5 | of the daughters of Aaron
+   POST Luke 1:36; Luke 1:5 [L] | MATCHES | of the daughters of Aaron
+== 27795 WORDS ARE AT items
+   PRE  Matthew 1:25 | WORDS ARE AT Matthew 1:21 | thou shalt call his name JESUS
+   POST Matthew 1:25 | WORDS ARE AT Matthew 1:21 | thou shalt call his name JESUS

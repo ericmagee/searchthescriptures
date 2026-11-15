@@ -1,0 +1,6 @@
+const fs=require('fs');const W=f=>JSON.parse(fs.readFileSync(f));const code=f=>W(f).nodes.find(n=>n.name==='Citation Scan').parameters.jsCode;
+const D=W('../a329/debates.json');const r=D.find(x=>x.run_token.includes(process.argv[2]));
+const run=c=>{const F={cr1:r.claude_r1||'',gr1:r.engine_r1||'',cr2:r.claude_r2||'',gr2:r.engine_r2||'',cr3:r.engine_r3||'',dr3:r.challenger_r3||'',cr4:r.defender_r4||'',dr4:r.challenger_r4||'',synthesis:r.synthesis||''};const M={'Final Output':[F],'Init Seats':[{run_token:'X'}]};const $=n=>{const m=M[n];return m?{isExecuted:true,all:()=>m.map(j=>({json:j})),first:()=>({json:m[0]})}:{isExecuted:false,all:()=>[],first:()=>({json:{}})};};return new Function('$','$input',c)($,{all:()=>[{json:{}}],first:()=>({json:{}})})[0].json.items.map(i=>JSON.stringify(i));};
+const A=run(code('../rdf/fetchback_s227_342.json')),B=run(code('target_338.json'));const As=new Set(A),Bs=new Set(B);const a=A.filter(x=>Bs.has(x)),b=B.filter(x=>As.has(x));
+for(let i=0;i<a.length;i++)if(a[i]!==b[i]){console.log(i,JSON.parse(a[i]).ref,JSON.parse(a[i]).quote.slice(0,50),'||',JSON.parse(b[i]).ref,JSON.parse(b[i]).quote.slice(0,50));break;}
+console.log(A.length,B.length,a.length,b.length);
