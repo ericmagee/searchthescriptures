@@ -1,0 +1,29 @@
+# Engine manual v177: draft entries (W3). HELD until each ASK is approved, built, written and read back.
+Sources: ASK 325 plan 6844 with revision 1 at 6863, plants 6846, baseline W1 6842. ASK 327 and 328 proposal 6864, W1 baseline 6872 (a327/w1_baseline.md, fc638c5c), W3 marks 6837 and 6869.
+Every [PENDING] field is filled from the build's own readback and grades. Nothing below describes live code until the matching WRITTEN AS line is added.
+
+## ASK 325 (close enforcer misattribution), section 6 under the close enforcer, after the pkgNRH entry
+- A CLOSING CONTRADICTION WHOSE EARLIER WORDS ARE THE OTHER SIDE'S, ONLY QUOTED BY THE FLAGGED SIDE, IS NOT COUNTED AGAINST IT (ASK 325; Close Enforcer Record):
+  - Why: in run 37372 the close enforcer confirmed a contradiction on challenger link 1 three times (40639, 40640, 40641). Its EARLIER sentence ("the row bounds the not-knowing at the bringing-forth of the firstborn, so any knowing the record allows stands after the birth") is the defender's own round 3 MEANS line. The challenger only quoted it under "MEANS [CR3] P1.3" and answered it. The stored outcome DEFENDER PREVAILS rested on these rows.
+  - What it does: a CONFIRMED row is demoted only when its EARLIER words are found in the other side's round text and not as the flagged side's own claim. The test reads the round text, never a heading or label (W3 6837 C2). A miss or an unreadable case keeps the row as CONFIRMED (fail-safe, C1). Both sides are treated the same way (C3). A true contradiction found by this checker or by the judge-side checker is left as it is.
+  - Size: [PENDING].
+  - Shown offline: [PENDING; DONE requires exactly 3 flips (40639 to 40641) over the 121-row population with 35 CONFIRMED rows, every other row unchanged, and all 10 plants (a325/w4_plants.json) as expected].
+  - Limits: the judge-side checker's confirmation on challenger link 1 in 37372 (40644, 40645: "till bounds abstinence to the pregnancy after the taking" against "the abstinence bounded by till stands after the bringing forth") is a real contradiction and is untouched. 37372's stored outcome is not re-derived. Whether cfo_sides should count judge-side confirmations is the operator's question, outside this ASK (6863). No prompt line is added ((b) held). Live and UNEXERCISED until a run fires it.
+  - WRITTEN AS [PENDING].
+
+## ASK 327 (removal record and panel text), section 10 under alternates, and section 7 under the panel record
+- EVERY REMOVED SEAT ENTERS drv_removed, WHETHER OR NOT AN ALTERNATE SAT, AND panel_split NAMES THE SEAT AND RULES (ASK 327; Shared Library removed.push, Alternate Merge, aggregate_debate_panel, Format Markdown):
+  - Why: in run 37372 sol (HELD) was removed for drv_uncured 2 (K-C cure x1, E-GATE CONTRADICTION x1). Hydrogen was tried twice and was NOT SEATED both times. drv_removed stayed empty and panel_split read only "2-0 (1 not counted: debate rule)". The Shared Library's single removed.push site runs only after an alternate passes, and every NOT SEATED path returns before it (W1 6872 item 1). The rule names stood only in sol's verdict_raw AUDIT v21 lines.
+  - What it does: [PENDING on the build]. Planned: each removal entry gives the seat, its verdict, the uncured items that removed it (rule and item text, joinable by run_token; W3 6869 (a)), and replaced_by, or "none" with each alternate tried and why it failed. panel_split names the seat and the rules in place of "debate rule".
+  - Readers: [PENDING; every reader of drv_removed and panel_split, each with what it does on an entry with replaced_by "none": Format Markdown (drvRead "Panel judge (removed)", COR, DRM), odv1_record_panel_alternates, aggregate_debate_panel, each derive function]. Any reader that counts an entry as a seated seat is a stop (W3 6869 C2).
+  - Shown offline: [PENDING; criteria W1 6872: one entry for sol in 37372, panel still 2-0, verdict and every count unchanged, sol printed once; a run where an alternate sat changes only in the added fields; a run with no removal is byte-identical].
+  - Limits: [PENDING]. Open question, not graded: whether panel_effective keeps a seat that was not counted (W1 6872).
+  - WRITTEN AS [PENDING].
+
+## ASK 328 (failed alternate USAGE line), section 10 under alternates
+- A FAILED ALTERNATE REPLY RECORDS ITS USAGE AND FINISH REASON (ASK 328; Shared Library, the alternate_reply logging; record-only):
+  - Why: in run 37372 both hydrogen alternate calls failed: the first returned no content with finish reason length, and the second was cut before a whole JSON object. The reply_error carried the finish reason as text, but no token counts and no limit (W4 6862, 6864).
+  - What it does: when an alternate reply fails, reply_error ends with one line "USAGE: prompt=<n> completion=<n> reasoning=<n> finish=<reason> max_tokens=<n>", writing "not reported" for any value the provider does not give. max_tokens is read from the request body built for that call. The body is not changed (byte-identical).
+  - Shown offline: [PENDING; 37372 expected lines W1 6872: prompt=104006 completion=64000 reasoning=63997 or 56380, finish=length, max_tokens=64000; successful rows unchanged; Format Markdown's TRIED pattern still closes on "]"].
+  - Limits: this records only and changes no request field. It is not grounds to propose any reasoning, effort, thinking or limit setting without the operator's own instruction (§4, NO REASONING FIELD; W3 6869 C3). Live and UNEXERCISED.
+  - WRITTEN AS [PENDING].
