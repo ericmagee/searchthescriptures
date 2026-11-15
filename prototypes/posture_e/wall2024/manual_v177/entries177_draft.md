@@ -31,7 +31,7 @@ Every [PENDING] field is filled from the build's own readback and grades. Nothin
 - In the K-UNX gate entry, after "Three options, none preferred.", add: "The case-sensitive UNXA_ASM pattern was a code misread. Offering the ASSUMES route on the plain path extends the gate rule to a case its stated rule did not reach (an assumed fact with no row); that extension was the operator's decision, given by his card for ASK 323."
 - Open for the operator (Worker_A3 6912 item 8): whether a removal applies when a judge's grade matched the send-back's own. ASK 319 (pwf reads every quote) is a misread fix and does not answer it.
 
-## ASK 330 (gate form for an assumed fact) and ASK 331 (Option A removal test). The operator's words, 2026-11-15 14:56:43Z (08:56 CST): "approved. proceed and assign". Text approved: the team's amended forms (Wall 6919 to 6928: ASSUMES written by the judge; one grade-or-count test; fail-safe), which the coordinator's post to the operator at 08:53 CST stated exactly (coordinator's account, 14:58Z; W3 has not read that post itself). HELD until each is built, graded, written and read back. (Numbers confirmed by the coordinator 14:57Z.)
+## ASK 330 (gate form for an assumed fact) and ASK 331 (Option A removal test). The operator's words, 2026-11-15 14:56:43Z (08:56 CST): "approved. proceed and assign". Text approved: the team's amended forms (Wall 6919 to 6928: ASSUMES written by the judge; one grade-or-count test; fail-safe), which the coordinator's post to the operator at 08:53 CST stated exactly (confirmed by the coordinator, 15:00Z). HELD until each is built, graded, written and read back. (Numbers confirmed by the coordinator 14:57Z.)
 
 ### Rule wording (for section 4 or 8, rulings; the operator's ruling of 14:56Z on the team form)
 - RULING 460 (operator, 2026-11-15 14:56Z), EXTENDING RULING 421 TO THE K-UNX GATE AND ITS CURE CHECK: a premise counted UNEXHIBITED at the K-UNX gate may give as its reason an assumed fact with no row, in this form, on one line:
@@ -60,4 +60,4 @@ Every [PENDING] field is filled from the build's own readback and grades. Nothin
   - WRITTEN AS [PENDING].
 
 
-Ruling numbers 460 and 461: the highest three-digit "ruling N" in the record is 459 (the_wall 3792, 4551; engine_manual v176 reaches 428; md_notes_rulings reaches 444). Four-digit "ruling NNNN" references on the Wall are a different series (post ids). Coordinator to confirm the numbers.
+Ruling numbers 460 and 461: the highest three-digit "ruling N" in the record is 459 (the_wall 3792, 4551; engine_manual v176 reaches 428; md_notes_rulings reaches 444). Four-digit "ruling NNNN" references on the Wall are a different series (post ids). Confirmed by the coordinator, 15:00Z. OPEN: whether E-GATE CHANGE TO rows take the ruling 461 test (W3 and W2 yes; W1 a separate question for the operator).
