@@ -7,4 +7,4 @@ module.exports=(LIB,ed,out)=>{
  ed(1155,"kvRulingOk(st,x.premise,CH,UNI)","kvRulingOk(st,x.premise,CH,UNI,R,x.side)",1);ed(1155,"kvRulingOk(t,x.premise,CH,UNI)","kvRulingOk(t,x.premise,CH,UNI,R,x.side)",1);
  ed(1165,"kvRulingOk(sg.seg,x.premise,CH,UNI)","kvRulingOk(sg.seg,x.premise,CH,UNI,R,x.side)",1);
  ed(2143,"const v=kvRulingOk(sg.seg,n,CH,UNI);","const v=kvRulingOk(sg.seg,n,CH,UNI,R,side);",1);
- ed(2144,"const miss=(v.q?","const miss=v.vb?'calls premise '+n+' not verbatim, but the engine finds its quote word for word in ['+v.vb.round+']: \"'+v.vb.q.slice(0,160)+'\" (pkgVBC2, ASK 299)':(v.q?",1);};
+ ed(2144,"const miss=(v.q?","const miss=v.vb?'calls premise '+n+' not verbatim; the engine finds its quote word for word in ['+v.vb.round+']: \"'+v.vb.q.slice(0,160)+'\" (pkgVBC2, ASK 299)':(v.q?",1);};
