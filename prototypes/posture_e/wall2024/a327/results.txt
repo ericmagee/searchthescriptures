@@ -1,0 +1,9 @@
+ASK 327 rev 2 test (W4, read-only queries against the live database; nothing written).
+Replay, new view body vs live debate_removals:
+- rows 124 old, 124 new; old columns (all 10) identical on every row (EXCEPT ALL = 0), including replaced removed_rules.
+- replaced rows 55: removed_rules NULL on 41 (stay NULL); alternates_tried NULL on all.
+- not_counted rows 69: removed_rules filled on 10 (every row with a REMOVED FOR line); alternates_tried filled on 68; 1 row (judgment 794, grok) has no ALTERNATE TRIED line, so both NULL.
+- ALTERNATE TRIED lines 72: 0 fail to parse; 38 "ALTERNATE: none" lines parse; 3 WHY texts holding ";" or "]" parse whole.
+- 37372 sol: ["K-C (cure) x1","E-GATE CONTRADICTION x1"], two hydrogen tries, NOT SEATED, both reasons (finish_reason length; no JSON object).
+- Suffix kept as written: 34016 luna ["K-W (cure) x1 (read 1, count differs)"]. Long list: 35379 sol ["K-S3 (cure) x6","K-W (cure) x20"], one array from two identical lines.
+Plants (same expressions on literal text): P1 differing REMOVED FOR lines -> both NULL; P2 malformed TRIED line -> both NULL; P3 duplicate lines, long list, WHY with ; and ] -> one array, two tries, WHY whole; P4 suffix kept; P5 no lines -> both NULL; P6 TRIED line without REMOVED FOR -> rules NULL, one try.
