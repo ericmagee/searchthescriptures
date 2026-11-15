@@ -1,0 +1,9 @@
+ok  MUST S2 39423 count to 0 | the change takes defender premise 1 out of the count (CONCEDED LINKS 0, premise 1 SPARED), but E-ASSUME found the fact it ASSUMES,
+ok  MUST G3 39450 ruling SUPPORTED | the change takes defender premise 1 out of the count (RULING card graded SUPPORTED), but E-ASSUME found the fact it ASSUMES, "Mary
+ok  MUST drop premise 1 keep 2 | the change takes defender premise 1 out of the count (CONCEDED LINKS 1, premise 1 not counted), but E-ASSUME found the fact it ASS
+ok  CTRL G4 premise 2 not BNS | null
+ok  CTRL drop premise 2 keep 1 | null
+ok  CTRL raise to counted | null
+ok  CTRL challenger side premise 1 | null
+ok  CTRL collision line | null
+bad 0

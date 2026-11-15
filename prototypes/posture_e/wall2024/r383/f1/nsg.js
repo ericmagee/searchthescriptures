@@ -1,0 +1,10 @@
+ /* pkgNSG (Wall 6569 item 1, E-GATE part; Ruling 383 text test): a send-back or gate change that takes a premise out of the count, on a RULING card or a CONCEDED LINKS line, is NOT APPLIED while E-ASSUME found a fact that premise ASSUMES BOTH NOT STATED (no verse quoted in the debate states it). The old line stays. */
+function nsgRefuse2024(to,o){try{const F=bnsFacts2024();if(!F.length)return null;const cl=s=>String(s==null?'':s).replace(/\\+/g,'').replace(/[*_`]+/g,'').trim();const t=cl(to),ol=cl(o);
+const fof=(side,n)=>F.find(f=>f.side===side&&+f.n===+n)||null;
+const msg=(side,n,g,f)=>'the change takes '+side.toLowerCase()+' premise '+n+' out of the count ('+g+'), but E-ASSUME found the fact it ASSUMES, "'+String(f.fact).slice(0,160)+'", BOTH NOT STATED: no verse quoted in the debate states it (pkgNSG). CHANGE the other line so the two agree, or KEEP, and the change stays unapplied.';
+const RC=/^\s*(?:[-•]\s*|\d+[.)]\s*)?RULING\s*(?:--|:|—|–)\s*(DEFENDER|CHALLENGER)\s+premise\s+(\d+)\s*(?:--|:|—|–)\s*([A-Za-z][A-Za-z ]*)/i;const CNT=/^(?:UNEXHIBITED|COUNTED|VOID)\b/;
+const mt=t.match(RC);if(mt){const mo=ol.match(RC);if(!mo||mo[1].toUpperCase()!==mt[1].toUpperCase()||+mo[2]!==+mt[2])return null;const side=mt[1].toUpperCase(),n=+mt[2],gt=mt[3].toUpperCase().trim(),go=mo[3].toUpperCase().trim();if(!CNT.test(go)||CNT.test(gt))return null;const f=fof(side,n);return f?msg(side,n,'RULING card graded '+gt,f):null;}
+const P=psGrades(t),Q=psGrades(ol);if(!P||!Q)return null;const sd=s=>/CHALLENGER/i.test(String(s||''))?'CHALLENGER':'DEFENDER';const sq=sd(Q.side),sp=sd(P.side);if(sq!==sp)return null;
+const pk=Object.keys(P.g);if(!pk.length&&!(P.n===0))return null;
+for(const k of Object.keys(Q.g)){if(Q.g[k]!=='COUNTED')continue;const f=fof(sq,k);if(!f)continue;const g=(k in P.g)?P.g[k]:'not counted';if(g!=='COUNTED')return msg(sq,k,(sq==='CHALLENGER'?'CHALLENGER ':'')+'CONCEDED LINKS '+(P.n!=null?P.n:'?')+', premise '+k+' '+g,f);}
+return null;}catch(e){return null;}}
