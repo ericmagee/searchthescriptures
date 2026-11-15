@@ -1,0 +1,18 @@
+// ASK 306 pkgPWR: PW_SEG (LIB 1012) reads a side word ("defender premises", "the challenger's premises") and ranges ("2-6", "2 to 6", "2 through 6"); kvSegments (LIB 1023) and pwSegments (LIB 2123) expand ranges with pwNums2024 and skip a side word that names the other side.
+const fs=require('fs'),crypto=require('crypto');const sha=s=>crypto.createHash('sha256').update(s).digest('hex').slice(0,16);
+const [, , fin, fout]=process.argv;const W=JSON.parse(fs.readFileSync(fin,'utf8'));if(W.id!=='moMxiV4Irg1uRBZN')throw new Error('wrong workflow');const out=[];
+const Ls=W.nodes.filter(n=>n.name==='Shared Library');const T=Ls[0].parameters.jsCode;const iL=T.indexOf('\n/*LIB*/'),iM=T.lastIndexOf('\n/*MAP*/'),iE=T.lastIndexOf('\n/*END*/');const LIB=JSON.parse(T.slice(iL+8,iM)),MAP=JSON.parse(T.slice(iM+8,iE));
+const rb=(L,m)=>m.p.map(e=>typeof e==='number'?L[e]:typeof e[0]==='string'?e[0]:L.slice(e[0],e[1]+1).join('\n')).join('\n');for(const k in MAP)if(rb(LIB,MAP[k]).length!==MAP[k].n)throw new Error('base '+k);
+if(T.includes('pkgPWR'))throw new Error('already');
+const ed=(i,a,b)=>{const l=LIB[i];if(l.split(a).length!==2)throw new Error('anchor at '+i);LIB[i]=l.replace(a,()=>b);out.push('LIB '+i+' '+l.length+'->'+LIB[i].length);};
+const N="\\d+(?:\\s*(?:-|\\u2013|\\u2014|to|through)\\s*\\d+)?";
+ed(1012,String.raw`[*_]*\s*premises?\s+(\d+(?:(?:\s*,\s*(?:and\s+)?|\s+and\s+|\s*&\s*)\d+)*)\b`,String.raw`[*_]*\s*(?:(?:the\s+)?(defender|challenger)(?:'s|’s)?\s+)?premises?\s+(`+N+String.raw`(?:(?:\s*,\s*(?:and\s+)?|\s+and\s+|\s*&\s*)`+N+String.raw`)*)\b`);
+LIB[1012]=LIB[1012]+" /* pkgPWR, ASK 306 */ function pwNums2024(s){const o=[];for(const p of String(s||'').split(/\\s*(?:,|\\band\\b|&)\\s*/)){const r=p.match(/^(\\d+)\\s*(?:-|\\u2013|\\u2014|to|through)\\s*(\\d+)$/);if(r){const a=+r[1],b=+r[2];if(b>=a&&b-a<=20){for(let n=a;n<=b;n++)o.push(n);continue;}}const n=parseInt(p,10);if(n>0)o.push(n);}return o;}";out.push('LIB 1012 + pwNums2024 -> '+LIB[1012].length);
+ed(1023,"while((m=PW_SEG.exec(src)))at.push({i:m.index+m[1].length,ns:m[2].split(/\\s*(?:,|and|&)\\s*/).map(Number).filter(n=>n>0)});","while((m=PW_SEG.exec(src))){if(m[2]&&m[2].toUpperCase()!==side)continue;at.push({i:m.index+m[1].length,ns:pwNums2024(m[3])});}");
+ed(2123,"while((m=PW_SEG.exec(cs)))at.push({i:m.index+m[1].length,ns:m[2].split(/\\s*(?:,|and|&)\\s*/).map(Number).filter(n=>n>0)});","while((m=PW_SEG.exec(cs))){if(m[2]&&m[2].toUpperCase()!==side)continue;at.push({i:m.index+m[1].length,ns:pwNums2024(m[3])});}");
+for(let i=0;i<LIB.length;i++)if(i!==1012&&i!==1023&&i!==2123&&i!==2122&&/PW_SEG/.test(LIB[i]))throw new Error('other PW_SEG reader at '+i);
+const users=[];for(const k in MAP){const n0=MAP[k].n,n1=rb(LIB,MAP[k]).length;if(n1!==n0){MAP[k].n=n1;users.push(k);}}
+for(const n of W.nodes)if(n.name!=='Shared Library'&&/PW_SEG/.test(JSON.stringify(n.parameters||{})))out.push('NOTE: own code reads PW_SEG in '+n.name);
+const LJ=JSON.stringify(LIB);const head=T.slice(0,iL).replace(/\/\/ library sha [0-9a-f]{16}, (\d+) lines/,(m,n)=>{if(+n!==LIB.length)throw new Error('line count');return '// library sha '+sha(LJ)+', '+n+' lines';});
+const T1=head+'\n/*LIB*/'+LJ+'\n/*MAP*/'+JSON.stringify(MAP)+T.slice(iE);Ls[0].parameters.jsCode=T1;out.push('Shared Library '+T.length+'->'+T1.length+' users '+users.length+' '+users.join(', '));
+fs.writeFileSync(fout,JSON.stringify(W));console.log(out.join('\n'));
