@@ -1,0 +1,22 @@
+REPLAY kunxLines: judge texts 78 K-UNX items seen 6 identical 78 differ 0 
+PASS form: valid | STEP found in the side's own rounds; ROWS GIVE quotes found in the cited verses; ASSUMES names a given fact
+PASS form: lower-case labels with bold marks
+PASS form: STEP not in the side rounds | the STEP quote is not found in the defender's own rounds
+PASS form: STEP from the other side only | the STEP quote is not found in the challenger's own rounds
+PASS form: ROWS GIVE quote not in the verse
+PASS form: ROWS GIVE verse not read
+PASS form: ASSUMES names an act
+PASS form: ASSUMES names contested links
+PASS form: no STEP (37281 luna shape)
+PASS form: quote then reference
+PASS raise: valid form raises no K-UNX item
+PASS raise: STEP not verbatim handled as today (byte-identical)
+PASS raise: ROWS GIVE not in verse handled as today (byte-identical)
+PASS raise: ASSUMES act handled as today (byte-identical)
+PASS raise: ASSUMES contested handled as today (byte-identical)
+  raise plant old items K-UNX DEFENDER premise 1 ASSUMES | new items none | new marks [AUDIT v55: ASSUMED FACT FORM PASSED (ASK 330, ruling 460) -- DEFENDER premise 1
+  cure item raised: K-UNX DEFENDER premise 1 a=ASSUMES
+PASS cure: STATEMENT in full form CURED (live: UNCURED TRIAL rule (K-UNX-A): the STATEM) | CURED TRIAL rule (K-UNX, ASK 330, ruling 460): the STATEMENT is in the assumed-fact form: STEP found in the side's o
+PASS cure: STEP not verbatim falls to today's reading (identical) | UNCURED TRIAL rule (K-UNX-A): the STATEMENT does not quote the block's [L1] Matthew 1:18, and no CORRECTED COUNT below
+PASS cure: no form, identical to live
+TOTAL 18 of 18
