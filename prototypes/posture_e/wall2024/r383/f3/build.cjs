@@ -1,0 +1,18 @@
+const fs=require('fs'),crypto=require('crypto');
+const w=JSON.parse(fs.readFileSync('../f6/target_F6.json','utf8'));const ns=w.nodes||w.workflow.nodes;
+const nd=n=>ns.find(x=>x.name===n);const ovs=fs.readFileSync('ovs.js','utf8');
+const R=nd('Anticheat Record');let c=R.parameters.jsCode;const L0=c.length;
+const a1="const stands=(q,T)=>";if(c.split(a1).length!==2)throw 'a1';
+c=c.replace(a1,ovs+"/* pkgOVS */\nconst RAWC={D:String(F.cr4||''),C:String(F.dr4||'')},RAWE={D:[F.cr1,F.cr2,F.cr3].map(s=>String(s||'')),C:[F.gr1,F.gr2,F.dr3].map(s=>String(s||''))};\n"+a1);
+const a2="row.shown=SHOW&&row.quotes_ok;if(!row.quotes_ok)row.note='QUOTE NOT FOUND';";if(c.split(a2).length!==2)throw 'a2';
+c=c.replace(a2,"row.other_verse=row.quotes_ok&&(ovsOther2024(it.key,row.close_q,[RAWC[it.side]])||ovsOther2024(it.key,row.earlier_q,RAWE[it.side]));row.shown=SHOW&&row.quotes_ok&&!row.other_verse;if(!row.quotes_ok)row.note='QUOTE NOT FOUND';else if(row.other_verse)row.note='OTHER VERSE'; /* pkgOVS */ ");
+const a3="quotes_ok:rows.filter(r=>r.answer==='REVERSED'&&r.quotes_ok).length,";if(c.split(a3).length!==2)throw 'a3';
+c=c.replace(a3,a3+"other_verse:rows.filter(r=>r.note==='OTHER VERSE').length,");
+R.parameters.jsCode=c;
+const B=nd('Build Save Body');let b=B.parameters.jsCode;const B0=b.length;
+const a4="r.note==='RECORD-ONLY'?' (quotes found; RECORD-ONLY, not shown)':";if(b.split(a4).length!==2)throw 'a4';
+b=b.replace(a4,a4+"r.note==='OTHER VERSE'?' (a quote stands under another verse; OTHER VERSE, not shown)':");B.parameters.jsCode=b;
+fs.writeFileSync('target_F3.json',JSON.stringify(w));
+const h=s=>crypto.createHash('sha256').update(s).digest('hex').slice(0,12);
+console.log('Anticheat Record',L0,'->',c.length,h(c));console.log('Build Save Body',B0,'->',b.length,h(b));
+console.log('target',h(fs.readFileSync('target_F3.json')));
