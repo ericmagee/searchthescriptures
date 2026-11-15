@@ -1,0 +1,25 @@
+  call 1 (early reply) why: seat "hydrogen" returned content null (finish_reason length). NO ROW IS WRITTEN. run_token=undefined
+  call 1 (early reply) usage_line: USAGE: prompt=104006 completion=64000 reasoning=63997 finish=length max_tokens=64000
+PASS call 1 (early reply): why unchanged
+PASS call 1 (early reply): every other field identical
+PASS call 1 (early reply): reply_error ends with the expected USAGE line | "TTEN. run_token=undefined\nUSAGE: prompt=104006 completion=64000 reasoning=63997 finish=length max_tokens=64000"
+PASS call 1 (early reply): request body byte-identical
+  call 2 (R2 call) why: seat "hydrogen" returned no JSON object. First 200 chars: {
+  "verdict_tag": "HELD",
+  "defense_standing": "SELF-SUPPORTED",
+  "challenge_standing": "PROP-DEPENDENT",
+  "conceded_links": 0,
+  "challenger_conceded_links": 0,
+  "counted_premises_defender": [], run_token=undefined (finish_reason length
+  call 2 (R2 call) usage_line: USAGE: prompt=104006 completion=64000 reasoning=56380 finish=length max_tokens=64000
+PASS call 2 (R2 call): why unchanged
+PASS call 2 (R2 call): every other field identical
+PASS call 2 (R2 call): reply_error ends with the expected USAGE line | "ned (finish_reason length\nUSAGE: prompt=104006 completion=64000 reasoning=56380 finish=length max_tokens=64000"
+PASS call 2 (R2 call): request body byte-identical
+PASS plant: call failed (aborted), no reply | USAGE: prompt=not reported completion=not reported reasoning=not reported finish=not reported max_tokens=64000
+PASS plant: no max_tokens in the body
+PASS plant: native Gemini usage
+PASS plant: null reply
+PASS plant: success row unchanged (no usage_line on ok)
+PASS plant: function does not change its inputs
+TOTAL 14 of 14
