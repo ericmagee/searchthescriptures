@@ -1,0 +1,8 @@
+const L=(()=>{const fs=require('fs');const W=JSON.parse(fs.readFileSync(__dirname+'/../../../writes_s209/fetchback_live_s209.json'));const T=(W.nodes||W.data.nodes).find(n=>n.name==='Shared Library').parameters.jsCode;return JSON.parse(T.slice(T.indexOf('\n/*LIB*/')+8,T.lastIndexOf('\n/*MAP*/')));})();const s=L[2532];const fsrc=s.slice(s.indexOf('function pwf('),s.indexOf(' function cure('));
+const pwf=new Function(L[2521]+'\n'+L[2522]+'\n'+fsrc+';return pwf;')();
+const to="ANSWER CHECK: Luke 2:48 -- [CR4] -- MEANS: \"Mary herself names Joseph the child's father.\" -- ANSWER: \"The row is Mary's speech, and the answer at 2:49 places 'my Father's business' against it.\" -- MEETS -- [L1] Luke 2:48 \"his mother said unto him\" and \"thy father and I have sought thee sorrowing\" positively establish the maternal designation that the answer accepts, while [L3] Luke 2:49 \"my Father's business\" supplies its distinction between the fatherhoods (Commitment 3).";
+const why="CR4 quotes Mary's \"thy father and I have sought thee sorrowing\" and expressly identifies it as \"Mary's speech,\" positively retaining the meaning pressed.";
+console.log('A actual:',pwf(to,{why}));
+console.log('B ANSWER says "Luke 2:49":',pwf(to.replace('the answer at 2:49','the answer at Luke 2:49'),{why}).includes('[L-]'));
+console.log('C ANSWER with no n:n:',pwf(to.replace('the answer at 2:49','the answer that follows'),{why}));
+console.log('D [L1] quotes the second phrase first:',pwf(to.replace('[L1] Luke 2:48 "his mother said unto him" and "thy father and I have sought thee sorrowing"','[L1] Luke 2:48 "thy father and I have sought thee sorrowing" and "his mother said unto him"'),{why}).includes('[L-]'));
