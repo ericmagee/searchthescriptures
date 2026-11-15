@@ -38,6 +38,12 @@ So ASK 327 item 2 touches that function as well as Format Markdown.
 
 ## C. Readers that must be checked (WRONG-IF)
 
+REVISION 1 (Wall 6877, after W4 6875):
+- The views odv1_drv_removals and debate_removals also read drv_removed. My first list missed them because it searched functions only.
+- The recorder odv1_record_panel_alternates RAISES when the length of p_drv_removed differs from the length of p_alternates. On a write it also rewrites panel_expected.
+- debate_removals already lists sol for 37372 as kind not_counted, with drv_uncured 2, replaced_by null and removed_rules null.
+
+
 drv_removed is read by:
 - Format Markdown: the SEATS order; DRV through drvRead "Panel judge (removed)"; DRM and the Alternate judges section.
 - Alternate Merge.
@@ -53,10 +59,10 @@ reply_error is read by the Shared Library (33 sites), 8 Record nodes, and databa
 ## D. ASK 327 criteria (removal record and panel text)
 
 Replay on 37372's stored inputs:
-1. drv_removed gets exactly 1 entry: seat sol, verdict HELD, removed for K-C (cure) x1 and E-GATE CONTRADICTION x1, matching the REMOVED FOR text above. replaced_by is "none", and it lists hydrogen tried twice with both why texts.
+1. (REVISED, 6877) drv_removed stays a list of REPLACED seats only, and for 37372 it stays empty. The recorder is never called with a removal that has no alternate. debate_removals shows sol exactly once, as not_counted, and its removed_rules now names K-C (cure) x1 and E-GATE CONTRADICTION x1. The alternates tried (hydrogen x2 and their reasons) are recorded on that same not_counted path.
 2. panel_split names the seat and the rules in place of the bare "debate rule". The counts stay 2-0.
 3. panel_verdict BROKEN and judged_by are unchanged. The outcome and every count are unchanged.
-4. Format Markdown shows sol once as a counted-out judge, not twice. The cure rows of sol are not counted twice in COR.
+4. Format Markdown shows sol once (unchanged criterion) as a counted-out judge, not twice. The cure rows of sol are not counted twice in COR.
 
 On a run where an alternate sat (for example 36677, sol to hydrogen), the output equals today's except for the added fields.
 On runs with no removal, the output is byte-identical.
