@@ -1,4 +1,4 @@
-# ASK 330 / 331 grading baseline (W1, session_01H1X3ANxr57MZvsu7fHB9kh)
+# ASK 330 / 331 grading baseline, rev 1 (W1, session_01H1X3ANxr57MZvsu7fHB9kh)
 
 Eric approved both at 14:56Z on 11-15 ("approved. proceed and assign"). The form agreed by the team is set out on the Wall: 6920, 6924, 6925, 6926, 6927 and 6928.
 Everything below comes from debate_enforcer_log, debate_judgments and debate_results, read 2026-11-15. Nothing is from training knowledge.
@@ -50,9 +50,10 @@ The test (W1 6924, W3 6925, W4 6926 and 6927):
 - The expected panel is chatgpt, luna and sol, all BROKEN, and hydrogen is not called. The outcome, CHALLENGER PREVAILS 3-0, is unchanged.
 - The stored drv_removed entry for sol (removed_rules ["ABSENCE GRADE UNCURED x1"], in debate_removals) would not exist on a fresh run. A replay compares the in-flow removal decision only. It does not rewrite stored rows.
 
-37281, hydrogen (alternate):
-- Rows 40161, 40162 and 40163 (E-PREM, UNCURED). The judge line reads "CHALLENGER CONCEDED LINKS: 0" and the send-back reads "CHALLENGER CONCEDED LINKS: 1". The count differs.
-- Under the test, hydrogen WOULD be removed. Use this as a plant (P8), because hydrogen is not called in the 37281 replay.
+37281, hydrogen (alternate), CORRECTED in rev 1 (Wall 6934):
+- Rows 40161, 40162 and 40163 are E-PREM, UNCURED, but their cure_reason reads "RECORD-ONLY TRIAL, ruling 428 ... CURE (record-only until promoted): UNCURED".
+- Hydrogen's stored drv_uncured is 0. These rows are record-only, not removal items, so the 331 test never sees them. Hydrogen would NOT be removed under Option A, Option B or the current rule.
+- Each row's count does change (CHALLENGER CONCEDED LINKS 0 to 1), so the shape still serves as plant P8 when applied to a COUNTED row.
 
 37372, sol (panel; stored REMOVED FOR "K-C (cure) x1; E-GATE CONTRADICTION x1"):
 - Row 41074 (E-GATE G3 CONTRADICTION). The judge line grades MISSES and the gate CHANGE TO grades MISSES. Equal, so taken alone it would pass.
@@ -64,7 +65,7 @@ The test (W1 6924, W3 6925, W4 6926 and 6927):
 - Row 40038 (E-REREAD) is RECORD-ONLY ("nothing is sent back, nothing is counted, no seat is removed"). Luna is unchanged.
 
 ### Plants (all required)
-P8. A count field differs (hydrogen 40161 shape, 0 to 1). Expected: REMOVE.
+P8. A COUNTED row in which a count field differs (the 40161 shape, 0 to 1). Expected: REMOVE. The record-only E-PREM rows themselves stay out of the test.
 P9. The grade word differs (MEETS to MISSES). Expected: REMOVE.
 P10. No send-back grade (K-C "no RESTATED line"). Expected: REMOVE (fail-safe).
 P11. Two counted items: one equal, one that cannot be computed (the 37372 sol shape). Expected: REMOVE.
