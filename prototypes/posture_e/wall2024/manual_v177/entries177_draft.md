@@ -26,3 +26,7 @@ Every [PENDING] field is filled from the build's own readback and grades. Nothin
   - Shown offline: [PENDING; 37372 expected lines W1 6872: prompt=104006 completion=64000 reasoning=63997 or 56380, finish=length, max_tokens=64000; successful rows unchanged; Format Markdown's TRIED pattern still closes on "]"].
   - Limits: this records only and changes no request field. It is not grounds to propose any reasoning, effort, thinking or limit setting without the operator's own instruction (§4, NO REASONING FIELD; W3 6869 C3). Live and UNEXERCISED.
   - WRITTEN AS [PENDING].
+
+## Correction to the v176 ASK 323 part 1 entry (W3 Wall 6916; Worker_A3 6912)
+- In the K-UNX gate entry, after "Three options, none preferred.", add: "The case-sensitive UNXA_ASM pattern was a code misread. Offering the ASSUMES route on the plain path extends the gate rule to a case its stated rule did not reach (an assumed fact with no row); that extension was the operator's decision, given by his card for ASK 323."
+- Open for the operator (Worker_A3 6912 item 8): whether a removal applies when a judge's grade matched the send-back's own. ASK 319 (pwf reads every quote) is a misread fix and does not answer it.
