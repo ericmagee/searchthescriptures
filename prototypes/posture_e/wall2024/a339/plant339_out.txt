@@ -1,0 +1,12 @@
+OK   P5 cut-short verse line                      expected note, got note | S-C items stored: 1 | NOTE [SYSTEM CHECK S-C: Genesis 4:1 is named in a premise of a premise list; this line says no side charged it.]
+OK   P6 two lines share the prefix                expected none, got none | S-C items stored: 1 | no note: prefix shared by 2 lines
+OK   P7 line opening [L1]                         expected note, got note | S-C items stored: 1 | NOTE [SYSTEM CHECK S-C: the words "a spirit without flesh and" stand in a premise of a premise list; this line says no side charged it.]
+OK   P8 KJV-wording run not at hand               expected none, got none | S-C items stored: 1 | no note: scripture quotation on the charge line, verse text not at hand
+OK   P9 neither-side item in no list              expected none, got none | S-C items stored: 0 | no S-C hit
+OK   P10 changed markup in the drawn line         expected note, got note | S-C items stored: 1 | NOTE [SYSTEM CHECK S-C: the words "a spirit without flesh and" stand in a premise of a premise list; this line says no side charged it.]
+OK   P11 S-C line not in the drawn text           expected none, got none | S-C items stored: 1 | no note: line not found in the rendered synthesis
+OK   P12 hit on an LD charge line only            expected note, got note | S-C items stored: 1 | NOTE [SYSTEM CHECK S-C: the words "that the sign was a" stand in a premise of a premise list; this line says no side charged it.]
+OK   P13 gram straddles premise and PRESSED WITH  expected none, got none | S-C items stored: 1 | no note: words stand only on across lines
+OK   P14 bare (1:24) in a list                    expected none, got none | S-C items stored: 0 | no S-C hit
+OK   P15 hit only in an earlier premise list      expected none, got none | S-C items stored: 0 | no S-C hit
+OK   P16 hit on an LC charge line                 expected note, got note | S-C items stored: 1 | NOTE [SYSTEM CHECK S-C: the words "that the sign was a" stand in a premise of a premise list; this line says no side charged it.]

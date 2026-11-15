@@ -1,0 +1,4 @@
+const fs=require('fs');const K='sb_publishable_rgfWFjynRqBdzyEeBRHcig_c6pHysAi',B='https://bhffmkginddovmdcpnty.supabase.co/rest/v1/';
+const get=async u=>{for(let k=0;k<5;k++){try{const r=await fetch(u,{headers:{apikey:K,Authorization:'Bearer '+K}});const j=await r.json();if(Array.isArray(j))return j;}catch(e){}await new Promise(r=>setTimeout(r,1000*(k+1)));}throw new Error('fail '+u.slice(0,120));};
+(async()=>{const ids=require('./rows/all.json').map(r=>r.id);const rows=[],jud=[];for(let i=0;i<ids.length;i+=40){const b=ids.slice(i,i+40).join(',');rows.push(...await get(B+'debate_results?select=*&id=in.('+b+')'));jud.push(...await get(B+'debate_judgments?select=*&debate_id=in.('+b+')'));}
+fs.writeFileSync('rows/full.json',JSON.stringify(rows));fs.writeFileSync('rows/jud.json',JSON.stringify(jud));console.log(rows.length,jud.length);})();
