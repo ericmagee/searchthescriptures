@@ -62,3 +62,8 @@ Each written ASK also adds one "WRITTEN AS s2xx" line and moves the Live flow li
   - Size: [AT BUILD].
   - Shown offline: 42 hits in 18 debates (W1), 63 to 67 under a wider label pattern (W2, W1), all in challenger_r4; 0 in citation form by hand (W2 6745); a synthetic "*abba* (G5)" with a G5 grant label in the round stays counted (W4 6746 condition) [AT BUILD].
   - Limits: the same token is counted through Citation Scan, L2 Count Plan and PRS_LB; any reader that would still void the tag changes in step (W4 6746) [AT BUILD].
+
+## Standing rule: reasoning settings (section 4, NO REASONING FIELD line)
+Append to the end of the section 4 line that begins "- NO REASONING FIELD:" (after "... describe removed code."):
+" Reasoning, effort and thinking settings change only on the operator's own instruction. No seat adds, removes or adjusts one for any model or call on its own reading. A model that spends its output on reasoning is reported with its measured tokens and finish reason, not re-tuned."
+Body law: no name or date in the body. The v176 log row records the source (the operator's instruction of 2026-11-15, 03:03 CST).
