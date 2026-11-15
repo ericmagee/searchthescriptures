@@ -1,0 +1,5 @@
+const fs=require('fs');const LD=require('./loadcs.cjs');const PRE=LD('../rdf/fetchback_s222_333_335.json'),POST=LD('target_336.json');
+const D=JSON.parse(fs.readFileSync('../a329/debates.json')).concat(JSON.parse(fs.readFileSync('r37510.json')));
+const RA=r=>[['DEFENDER','CR1',r.claude_r1],['CHALLENGER','DR1',r.engine_r1],['DEFENDER','CR2',r.claude_r2],['CHALLENGER','DR2',r.engine_r2],['DEFENDER','CR3',r.engine_r3],['CHALLENGER','DR3',r.challenger_r3],['DEFENDER','CR4',r.defender_r4],['CHALLENGER','DR4',r.challenger_r4]].filter(x=>x[2]);
+const K=new Set();let nt=0,chg=0;for(const r of D){const a=PRE.tags(RA(r)),b=POST.tags(RA(r));if(a.length!==b.length)throw new Error('len '+r.run_token);for(let x=0;x<a.length;x++){nt++;b[x].verses.forEach(k=>K.add(k));a[x].verses.forEach(k=>K.add(k));if(JSON.stringify(a[x].verses)!==JSON.stringify(b[x].verses))chg++;}}
+console.log('debates',D.length,'tags',nt,'tags with widened verses',chg,'keys',K.size);fs.writeFileSync('keys336.json',JSON.stringify([...K]));
