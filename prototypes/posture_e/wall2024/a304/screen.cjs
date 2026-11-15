@@ -10,3 +10,6 @@ for(const t of ['The same word kaleo ties the calling at 1:32 to the calling at 
 console.log('bad after W3 nulls',bad);
 for(const t of ['The weight of D5 rests on Matthew 1:20\'s "of the Holy Ghost" together with Luke 1:35\'s "therefore also".']){const o=f({cr2:'D1: x. Luke 1:35. '+t});const h=Object.keys(o).length>0;if(h)bad++;console.log((h?'HIT ':'ok  ')+'(W3 null, object not the title) '+t);}
 console.log('bad final',bad);
+for(const t of ['Luke 1:32 gives the throne by descent, and Luke 1:35 gives the ground of the title in that throne.','The title rests on the resurrection, according to the spirit of holiness (Romans 1:4).']){const o=f({cr2:'D1: x. Luke 1:35. '+t});const h=Object.keys(o).length>0;if(h)bad++;console.log((h?'HIT ':'ok  ')+'(W3 null, 6518 item 9/5) '+t);}
+{const t='Luke 1:32 therefore gives the throne by descent, and Luke 1:35 gives the ground of the Son-of-God title.';const h=Object.keys(f({cr2:'D1: x. '+t})).length>0;if(!h)bad++;console.log((h?'hit ':'MISS ')+'(W3: must hit, split form) '+t);}
+console.log('bad final2',bad);
