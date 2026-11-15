@@ -1,6 +1,6 @@
 // ASK 324 test: load L2C from every changed reader (library lines 92-233 and the 21 inline nodes), old vs new; synthetic cases; 60-debate replay.
 const fs=require('fs'),zlib=require('zlib');
-const OLD=JSON.parse(fs.readFileSync('../a323b/target_323.json')).nodes,NEW=JSON.parse(fs.readFileSync('target_324.json')).nodes;
+const OLD=JSON.parse(fs.readFileSync('../a323/target_323.json')).nodes,NEW=JSON.parse(fs.readFileSync('target_324.json')).nodes;
 const libS=(ns,k)=>{const T=ns.find(n=>n.name==='Shared Library').parameters.jsCode;const L=JSON.parse(T.slice(T.indexOf('\n/*LIB*/')+8,T.lastIndexOf('\n/*MAP*/')));const M=JSON.parse(T.slice(T.lastIndexOf('\n/*MAP*/')+8,T.lastIndexOf('\n/*END*/')));const m=M[k];return m.p.map(e=>typeof e==='number'?L[e]:typeof e[0]==='string'?e[0]:L.slice(e[0],e[1]+1).join('\n')).join('\n');};
 const grab=src=>{const i=src.indexOf('const L2C=(()=>{');const j=src.indexOf('return {tags',i);const k=src.indexOf('})();',j)+5;return src.slice(i,k);};
 const ev=s=>new Function(s+'\nreturn L2C;')();
@@ -31,7 +31,7 @@ const XC={a:'G1537',b:'G5',c:'G5'};
 for(const [nm,o,n] of readers){if(!n.countClaims)continue;for(const [k,txt] of Object.entries(CC)){const r=n.countClaims([['C',4,txt]]);ok(nm+' cc '+k+' '+JSON.stringify(r.map(x=>x.subj)),r.length===1&&r[0].subj===XC[k]);
  if(nm==='LIB 92-233')console.log('cc '+k,'old:',o.countClaims([['C',4,txt]]).map(x=>x.subj).join(','),' new:',r.map(x=>x.subj).join(','));}}
 // replay: 60 stored debates, all 8 round columns
-const R=JSON.parse(zlib.gunzipSync(fs.readFileSync('../gw/prototypes/posture_e/wall2024/r383/data/rounds8.json.gz')));
+const R=JSON.parse(zlib.gunzipSync(fs.readFileSync('../r383/data/rounds8.json.gz')));
 const cols=['claude_r1','claude_r2','engine_r3','defender_r4','engine_r1','engine_r2','challenger_r3','challenger_r4'];
 const [nmL,oL,nL]=readers[0];let tg=0,tgd=0,cc=0,ccd=0;const diffs=[];
 for(const d of R)for(const c of cols){const x=d[c];if(!x)continue;const a=oL.tags([['X',1,x]]),b=nL.tags([['X',1,x]]);tg+=a.length;

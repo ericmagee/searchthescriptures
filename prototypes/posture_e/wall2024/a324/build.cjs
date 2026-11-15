@@ -1,5 +1,5 @@
 const fs=require('fs'),cr=require('crypto');
-const d=JSON.parse(fs.readFileSync('../a323b/target_323.json'));const ns=d.nodes||d;
+const d=JSON.parse(fs.readFileSync('../a323/target_323.json'));const ns=d.nodes||d;
 const H=String.raw`function __gLab(t){const S=new Set();for(const m of String(t||'').matchAll(/^[ \t]*(?:\*\*)?G0*(\d{1,5})(?:\*\*)?[ \t]*\[(?:CR|DR)/gm))S.add('G'+m[1]);return S;}function __gCit(s,i){return /(?:[*_][^*_\n]{1,60}[*_]|[Ͱ-Ͽἀ-῿֐-׿])\s?\($/.test(String(s).slice(Math.max(0,i-80),i));}function __gSkip(s,w,GL){if(!GL||!GL.has(w))return false;const mm=String(w).match(/^G(\d+)$/);if(!mm)return false;let any=false;for(const x of String(s).matchAll(new RegExp('\\bG0*'+mm[1]+'\\b','g'))){any=true;if(__gCit(s,x.index))return false;}return any;}function __gTw(s,GL){return tagWords(s).filter(w=>!(w.kind==='strongs'&&__gSkip(s,w.w,GL)));}function __gLast(pre,GL){let r=[];for(const x of String(pre).matchAll(/\b([GH])0*(\d{1,5})\b/g)){if(GL&&GL.has(x[1]+x[2])&&!__gCit(pre,x.index))continue;r=x;}return r;}/* pkgGLB ASK 324 */ `;
 const R=[["let wds=tagWords(seg);if(!wds.length){","const __GL=__gLab(t);let wds=__gTw(seg,__GL);if(!wds.length){"],["const w2=tagWords(seg2);","const w2=__gTw(seg2,__GL);"]];
 const RC=["const num=(pre.match(/\\b([GH])0*(\\d{1,5})\\b(?![\\s\\S]*\\b[GH]\\d)/)||[]);","const num=__gLast(pre,__gLab(t));"];
