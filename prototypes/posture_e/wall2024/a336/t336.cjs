@@ -1,6 +1,6 @@
 // ASK 336 replay: 67 stored debates + 37510. Tags from Citation Scan's L2C (PRE s222, POST target_336), each run through its own L2 Count Plan.
 const fs=require('fs');const LD=require('./loadcs.cjs');
-const PREF='../rdf/fetchback_s222_333_335.json',POSTF='target_336.json';
+const PREF=process.argv[2]||'../rdf/fetchback_s223_334.json',POSTF=process.argv[3]||'target_336_s223.json';
 const W=f=>JSON.parse(fs.readFileSync(f));const code=w=>w.nodes.find(n=>n.name==='L2 Count Plan').parameters.jsCode;
 const S={pre:{L:LD(PREF),c:code(W(PREF))},post:{L:LD(POSTF),c:code(W(POSTF))}};
 const D=W('../a329/debates.json').concat(W('r37510.json'));const OD=W('data336.json');const lexBy={};for(const l of OD.lex)lexBy[l.strongs_number]=l;
