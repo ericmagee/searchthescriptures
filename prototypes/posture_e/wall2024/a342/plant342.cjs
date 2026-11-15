@@ -1,4 +1,4 @@
-const LD=require('../a336/loadcs.cjs');const S={pre:LD('../rdf/fetchback_s226_341.json'),post:LD('../a342/target_342.json')};
+const LD=require('../a336/loadcs.cjs');const S={pre:LD('../rdf/fetchback_s226_341.json'),post:LD('../a342/target_342e.json')};
 const H1='[L1] Matthew 1:18 "Now the birth of Jesus Christ was on this wise: When as his mother Mary was espoused to Joseph, before they came together, she was found with child of the Holy Ghost."';
 const H1b='[L1] Matthew 1:24 "Then Joseph being raised from sleep did as the angel of the Lord had bidden him, and took unto him his wife:"';
 const HL='[L1] Luke 1:35 "The Holy Ghost shall come upon thee"';
@@ -19,3 +19,5 @@ const P=[
 for(const [nm,hs,l2] of P){const t=hs.join('\n\n')+'\n\n'+l2+'\n';const ra=[['CHALLENGER','DR1',t]];
  const f=V=>V.tags(ra).filter(x=>/G4905|synelthein/.test(JSON.stringify(x))).map(x=>x.verses.join(', ')).join(' | ');
  console.log(nm.padEnd(26),'PRE ['+f(S.pre)+']  POST ['+f(S.post)+']');}
+{const t='[L1] Matthew 1:18 "before they came together"\n\n[L2] *synelthein* (G4905) was read at 12:30 today.\n';const ra=[['CHALLENGER','DR1',t]];
+ const f=V=>V.tags(ra).filter(x=>/G4905/.test(JSON.stringify(x))).map(x=>x.verses.join(', ')).join(' | ');console.log('Q12 prose time 12:30'.padEnd(26),'PRE ['+f(S.pre)+']  POST ['+f(S.post)+']');}
