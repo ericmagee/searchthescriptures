@@ -7,3 +7,5 @@ ok  CTRL raise to counted | null
 ok  CTRL challenger side premise 1 | null
 ok  CTRL collision line | null
 bad 0
+ok  CTRL UNEXHIBITED to VOID, count unchanged | null
+ok  MUST VOID premise 1 dropped | the change takes defender premise 1 out of the count (CONCEDED LINKS 1, premise 1 not counted), but 

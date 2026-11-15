@@ -6,5 +6,5 @@ const RC=/^\s*(?:[-•]\s*|\d+[.)]\s*)?RULING\s*(?:--|:|—|–)\s*(DEFENDER|CHA
 const mt=t.match(RC);if(mt){const mo=ol.match(RC);if(!mo||mo[1].toUpperCase()!==mt[1].toUpperCase()||+mo[2]!==+mt[2])return null;const side=mt[1].toUpperCase(),n=+mt[2],gt=mt[3].toUpperCase().trim(),go=mo[3].toUpperCase().trim();if(!CNT.test(go)||CNT.test(gt))return null;const f=fof(side,n);return f?msg(side,n,'RULING card graded '+gt,f):null;}
 const P=psGrades(t),Q=psGrades(ol);if(!P||!Q)return null;const sd=s=>/CHALLENGER/i.test(String(s||''))?'CHALLENGER':'DEFENDER';const sq=sd(Q.side),sp=sd(P.side);if(sq!==sp)return null;
 const pk=Object.keys(P.g);if(!pk.length&&!(P.n===0))return null;
-for(const k of Object.keys(Q.g)){if(Q.g[k]!=='COUNTED')continue;const f=fof(sq,k);if(!f)continue;const g=(k in P.g)?P.g[k]:'not counted';if(g!=='COUNTED')return msg(sq,k,(sq==='CHALLENGER'?'CHALLENGER ':'')+'CONCEDED LINKS '+(P.n!=null?P.n:'?')+', premise '+k+' '+g,f);}
+const inC=g=>g==='COUNTED'||g==='VOID'; /* rev 2 (W2 6600): VOID is in the count */for(const k of Object.keys(Q.g)){if(!inC(Q.g[k]))continue;const f=fof(sq,k);if(!f)continue;const g=(k in P.g)?P.g[k]:'not counted';if(!inC(g))return msg(sq,k,(sq==='CHALLENGER'?'CHALLENGER ':'')+'CONCEDED LINKS '+(P.n!=null?P.n:'?')+', premise '+k+' '+g,f);}
 return null;}catch(e){return null;}}

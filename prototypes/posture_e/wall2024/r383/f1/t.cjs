@@ -15,3 +15,6 @@ const C=[
 ['CTRL collision line',"D5 vs C1 (Luke 1:27): STANDS -- x","D5 vs C1 (Luke 1:27): DEFENDER LINK BROKEN -- y",0],
 ];let bad=0;for(const [nm,to,o,want] of C){const r=f.nsg(to,o),r0=f0.nsg(to,o);const ok=(!!r)===!!want&&!r0;if(!ok)bad++;console.log(ok?'ok ':'BAD',nm,'|',r?r.slice(0,130):'null');}
 console.log('bad',bad);
+// rev 2 case (W2 6600 F1-a)
+{const r=f.nsg("CONCEDED LINKS: 2 -- Premise 1, LINK 5: VOID (adds 'only'). Premise 2, LINK 5: UNEXHIBITED (assumed given fact).",OLDC);console.log(!r?'ok ':'BAD','CTRL UNEXHIBITED to VOID, count unchanged |',r?r.slice(0,100):'null');}
+{const r=f.nsg("CONCEDED LINKS: 1 -- Premise 2, LINK 5: UNEXHIBITED (assumed given fact).","CONCEDED LINKS: 2 -- Premise 1, LINK 5: VOID (adds 'only'). Premise 2, LINK 5: UNEXHIBITED.");console.log(r?'ok ':'BAD','MUST VOID premise 1 dropped |',r?r.slice(0,100):'null');}
