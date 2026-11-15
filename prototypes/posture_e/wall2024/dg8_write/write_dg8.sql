@@ -1,4 +1,4 @@
--- ASK (pending number) DG-8 text fixes (W3 6680 draft, c800aef0) + glm row log (W2 6703 gaps). Guarded: writes only if live DG-8 md5 = 9e75e3ed4a25d589a6a4a97760743779 (3,366 chars). Target md5 6bc9bf5083e007b62a55f3347e9b6e94 (4,548 chars).
+-- ASK 315 DG-8 text fixes (W3 6680 draft, c800aef0) + glm row log (W2 6703 gaps). Guarded: writes only if live DG-8 md5 = 9e75e3ed4a25d589a6a4a97760743779 (3,366 chars). Target md5 6bc9bf5083e007b62a55f3347e9b6e94 (4,548 chars).
 SET LOCAL truth.session_id='session_01H1X3AP1fjeQaEbxPP9UEZH';
 update drift_guards set rule = replace(replace(rule,
  $a$Joseph and Mary were husband and wife in law from the espousal ("Joseph her husband," Matt 1:19; "Mary thy wife," Matt 1:20)$a$,
@@ -8,5 +8,5 @@ update drift_guards set rule = replace(replace(rule,
 Also forbidden: resolving the genealogy$a$), updated_at = now()
 where rule_num=8 and md5(rule)='9e75e3ed4a25d589a6a4a97760743779'
 returning rule_num, length(rule) len, md5(rule) md5, updated_at;
-update model_config set notes = coalesce(notes,'') || E'\n2026-11-14 23:45 CST: active false -> true on Eric "enable glm for debating" (W4, Wall 6702); debater only.', updated_at = now() where seat='glm' returning seat, active, updated_at;
+update model_config set notes = coalesce(notes,'') || E'\n2026-11-14 23:45 CST: active false -> true on the operator's "enable glm for debating" (W4, Wall 6702); debater only.', updated_at = now() where seat='glm' returning seat, active, updated_at;
 -- REVERT: revert_dg8.sql (reverse replace, guarded).
