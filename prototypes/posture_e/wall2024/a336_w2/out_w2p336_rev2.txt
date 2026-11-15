@@ -1,0 +1,19 @@
+M1_two_L2_lines_one_para
+  PRE: [sunerchomai (G4905) means come] bound Matthew 1:20 | NOT COUNTED [G4905!]
+  PRE: [prin (G4250) means before.] bound Matthew 1:20 | NOT COUNTED [G4250!]
+  POST: [sunerchomai (G4905) means come] bound Matthew 1:20, Matthew 1:18 | COUNTED [G4905=]
+  POST: [prin (G4250) means before.] bound Matthew 1:20, Matthew 1:18 | COUNTED [G4250=]
+M2_two_L2_paras
+  PRE: [sunerchomai (G4905) means come] bound Matthew 1:20 | NOT COUNTED [G4905!]
+  PRE: [prin (G4250) means before.] bound  | NOT COUNTED [G4250!]
+  POST: [sunerchomai (G4905) means come] bound Matthew 1:20, Matthew 1:18 | COUNTED [G4905=]
+  POST: [prin (G4250) means before.] bound  | NOT COUNTED [G4250!]
+M3_bold_heads
+  PRE: [** *prin* (G4250) means before] bound Matthew 1:20 | NOT COUNTED [G4250!]
+  POST: [** *prin* (G4250) means before] bound Matthew 1:20, Matthew 1:18 | COUNTED [G4250=]
+M4_L1_para_with_L3_second_line
+  PRE: [sunerchomai (G4905).] bound Matthew 1:20 | NOT COUNTED [G4905!]
+  POST: [sunerchomai (G4905).] bound Matthew 1:20, Matthew 1:18 | COUNTED [G4905=]
+M5_L2_not_para_start
+  PRE: [sunerchomai (G4905).] bound Matthew 1:20 | NOT COUNTED [G4905!]
+  POST: [sunerchomai (G4905).] bound Matthew 1:20 | NOT COUNTED [G4905!]
