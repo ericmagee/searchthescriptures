@@ -10,7 +10,7 @@ function runNode(r){const ra=RA(r);const tg=L2C.tags(ra);const keys=new Set(tg.f
  const lex=[...new Set(ow.map(w=>w.strongs_number))].map(n=>lexBy[n]).filter(Boolean);const kv=OD.kjv.filter(v=>keys.has(v.book+' '+v.chapter+':'+v.verse));
  const S={l2_tags:tg,l2_claims:(L2C.countClaims?L2C.countClaims(ra):[])};const $=n=>{const m={'Citation Scan':[S],'L2 Words':ow,'L2 Lexicon':lex,'Cited Verses':kv}[n];return m?{isExecuted:true,all:()=>m.map(j=>({json:j})),first:()=>({json:m[0]})}:{isExecuted:false,all:()=>[],first:()=>({json:{}})};};
  const o=new Function('$','$input',code)($,{all:()=>[],first:()=>({json:{}})});const J=o[0].json;
- const owAll=OD.ow,lexAll=OD.lex;const tr=trialFn(JSON.parse(JSON.stringify(J.tags)),ra,owAll,lexAll,OD.kjv);return {J,tr};}
+ const owAll=OD.ow,lexAll=OD.lex;const tr=process.env.NODEIN?trialFn(JSON.parse(JSON.stringify(J.tags)),ra,ow,lex,kv):trialFn(JSON.parse(JSON.stringify(J.tags)),ra,owAll,lexAll,OD.kjv);return {J,tr};}
 module.exports={runNode,D,RA};
 if(require.main===module){const res={};let tot={};for(const r of D){const {J,tr}=runNode(r);res[r.run_token]=tr;for(const [k,v] of Object.entries(tr.n))tot[k]=(tot[k]||0)+v;if(tr.error)console.log('ERR',r.run_token,tr.error);}
  fs.writeFileSync('trial_out.json',JSON.stringify(res));console.log('debates',D.length,JSON.stringify(tot));}

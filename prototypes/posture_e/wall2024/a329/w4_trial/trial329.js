@@ -13,9 +13,9 @@ function __l2trial329(TAGS,RA,OW,LEX,KV){/* pkgL2T (ASK 329 TRIAL, record-only; 
    out.n.checked++;const i=t.at;const ls=T.lastIndexOf('\n',i-1)+1,le=(x=>x<0?T.length:x)(T.indexOf('\n',i));const line=T.slice(ls,le),before=T.slice(ls,i),after=T.slice(i+4,le);
    const pa=T.lastIndexOf('\n\n',i);const ps=pa<0?0:pa;const par=T.slice(ps,i);const blk=L2C.blockAt(T,i);const bi=T.indexOf(blk);const sec=bi>=0&&bi<=i?T.slice(bi,i):par;
    let mode='backward in its paragraph',unk=false;const fwd=[];const B={back:keysOf(par),pipe:[],foot:[],press:[],bare:[]}; /* B4: every reference before the marker in its paragraph (this holds the nearest one, so a tag that passes there keeps its status) */
-   const pm=(!keysOf(before).length&&!/\bMEANS\b/.test(before))?after.match(/^[^|\n]*\|\s*\[L3\]\s*([^|\n]*)/):null;if(pm){ /* B2 only where the tag opens its item: "[L2] <tag> | [L3] <ref> -- MEANS"; after a verse and its MEANS the [L3] is a cross-reference (W2 C1 against A) */B.pipe=keysOf(pm[1].split(/\s--\s|\s—\s/)[0]);if(B.pipe.length)mode='pipe form';} /* B2 */
-   {const j=before.lastIndexOf('[L1]');if(j>=0){const r1=before.slice(j+4).split(/\[L[1-4]\]/)[0];if(keysOf(r1).length>=2){B.foot=keysOf(line);mode='footing line';}}} /* B3 */
-   if(/--\s*MEANS\s*:/.test(before)){B.press=keysOf(before);} /* a press line: the verse it presses, before the marker (a later [L3] on that line is a cross-reference) */
+   const pm=after.match(/^[^|\n]*\|\s*\[L3\]\s*([^|\n]*)/);if(pm){ /* B2 (6902): "[L2] <tag> | [L3] <ref>" binds the tag to that ref (team rule 6988) */B.pipe=keysOf(pm[1].split(/\s--\s|\s—\s/)[0]);if(B.pipe.length)mode='pipe form';} /* B2 */
+   let L1K=[];{const j=before.lastIndexOf('[L1]');if(j>=0){const r1=before.slice(j+4).split(/\[L[1-4]\]/)[0];if(keysOf(r1).length>=2){L1K=keysOf(r1);B.foot=keysOf(line);mode='footing line';}}} /* B3 */
+   let PK=[];if(/--\s*MEANS\s*:/.test(before)){B.press=keysOf(before);PK=keysOf(before.split(/--\s*MEANS\s*:/)[0]);} /* a press line: the verse it presses, before the marker (a later [L3] on that line is a cross-reference) */
    {const b1=bare(par,{par:'',parAt:0,sec,secAt:Math.max(0,sec.length-par.length)}),b2=bare(t.seg,{par,parAt:par.length,sec,secAt:sec.length});B.bare=b1.keys.concat(b2.keys);unk=b1.unk||b2.unk;} /* B5 */
    let bound=[...new Set([].concat(B.back,B.pipe,B.foot,B.press,B.bare))];
    for(const m of after.matchAll(/\[L3\]([^\[\n]*)/g))fwd.push(...keysOf(m[1]));
@@ -23,7 +23,13 @@ function __l2trial329(TAGS,RA,OW,LEX,KV){/* pkgL2T (ASK 329 TRIAL, record-only; 
    const rd=bound.filter(k=>(IX.V[k]||[]).length);const unread=bound.filter(k=>!rd.includes(k)); /* W1 6976 point 3: an unread bound verse is never replaced by the whole block */
    const cands=[].concat(...rd.map(k=>IX.V[k]));const ws=t.words||[];
    const okIn=w=>w.route==='KJV English word'?String(w.in||'').split(', ').some(k=>rd.includes(k)):L2C.matchWord({w:w.w,kind:w.kind},cands,IX).ok;
-   const core=(ws.some(w=>!w.root)?ws.filter(w=>!w.root):ws).filter(w=>w.kind==='strongs');const bad=core.filter(w=>!okIn(w)); /* the trial tests Strong's numbers only, the population measured (Wall 6884, 6888) */if(!bad.length){out.n.same++;continue;}
+   const core=(ws.some(w=>!w.root)?ws.filter(w=>!w.root):ws).filter(w=>w.kind==='strongs');const bad=core.filter(w=>!okIn(w)); /* the trial tests Strong's numbers only, the population measured (Wall 6884, 6888) */let pre=null;for(const w of core){const n=w.num||w.w;if(!/^[GH]\d/.test(String(n)))continue;const g=/^G/.test(n);const rk=k=>(IX.V[k]||[]).length>0; /* team rule 6988: R2, R2b, R3 */
+    if(PK.length){if(!PK.every(rk)){pre={w,n,cls:'NOT COUNTED',why:'the pressed verse '+PK.filter(k=>!rk(k)).join(', ')+' was not read this run, so its language cannot be told (R3)'};break;}
+     if(PK.every(k=>nt(k)!==g)){pre={w,n,cls:'NOT COUNTED',why:'cross-language (operator ruling, 15 Nov 09:17 and 09:39 CST): '+n+' is '+(g?'Greek':'Hebrew')+' and the line presses '+PK.join(', ')+', '+(g?'Old':'New')+' Testament (R2)'};break;}}
+    if(L1K.length>=2){if(!L1K.every(rk)){pre={w,n,cls:'NOT COUNTED',why:'the [L1] verse '+L1K.filter(k=>!rk(k)).join(', ')+' was not read this run, so its language cannot be told (R3)'};break;}
+     if(L1K.some(k=>nt(k))&&L1K.some(k=>!nt(k))&&!L1K.filter(k=>nt(k)===g).some(k=>holds(k,n))){pre={w,n,cls:'NOT COUNTED',why:'mixed-testament footing line ([L1] '+L1K.join(', ')+'): '+n+' stands in no [L1] verse of its own language (R2b)'};break;}}}
+   if(pre){out.n.not_counted++;out.items.push({side:t.side,round:t.round,at:t.at,seg:String(t.seg||'').slice(0,160),word:pre.w.w,num:pre.n,today:'COUNTED',trial:pre.cls,binding:mode,bound:rd,why:pre.why});continue;}
+   if(!bad.length){out.n.same++;continue;}
    const holdSecX=n=>(t.verses||[]).filter(k=>n&&holds(k,n));const w0=bad[0];const n=w0.num||(w0.kind==='strongs'?w0.w:null);let cls,why;
    const uq=x=>String(x||'').replace(/["“][^"”]*["”]/g,' ');const holdSec=(t.verses||[]).filter(k=>n&&holds(k,n));const clause=before.split(/(?<=[.!?;])\s+/).pop()||'';
    if(n&&PAIR[n]&&rd.some(k=>holds(k,PAIR[n]))){cls='NUMBERING PAIR';why=n+' is tagged; '+rd.filter(k=>holds(k,PAIR[n])).join(', ')+' holds '+PAIR[n]+' (the fixed pair list holds only H2029/H2030)';}
