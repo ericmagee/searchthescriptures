@@ -134,6 +134,6 @@ Ruling numbers 460 and 461: the highest three-digit "ruling N" in the record is 
   - Why: under 336 D4 as written, a paragraph that names its own verse keeps its binding, but refsIn did not read a book-less "(1:24)", so 336 widened such paragraphs to verses the writer did not point to (32791 DR1, W4 7071).
   - Replay (68 debates, PRE s226): 10,773 tags unchanged, 7 changed. 32791 DR1 and 37000 DR1 COUNTED to NOT COUNTED (each names verse 24 only; G4905 stands at Matthew 1:18, not 1:24); 37000 DR2 stays COUNTED (it names 1:18); 33107 CR2 and 37203 CR1 keep COUNTED with verse lists changed; 33040 DR2, 37203 CR1 and 36212 DR2 widened, status unchanged.
   - Limits: a book-less verse that does not exist ("1:95") is printed in the tag's verse list; it holds no word, so it can never make a tag COUNTED (option 1, W1 7094, W2 7093, W3 7104). The live resolver binding "v. 24" under a chapter-2 head to Matthew 2:24 is existing behaviour and a separate item.
-  - Graded PASS by W1 (7094) and W2 (7093; change with e 7103). Target target_342e.json ead0399927d7.
+  - Graded PASS by W1 (7094; change with e 7105) and W2 (7093; change with e 7103). Target target_342e.json ead0399927d7.
   - Live and UNEXERCISED until a run.
   - WRITTEN AS s227 (ASK 342 with condition e, on the operator's card "Write 342", 15 Nov 13:07 CST; n8n version d23c65ca; 22 places read back equal to the target, lib sha 515f047ee6cad94f, W4 7106).

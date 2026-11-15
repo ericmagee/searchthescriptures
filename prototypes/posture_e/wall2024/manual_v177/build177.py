@@ -13,8 +13,9 @@ E={}
 E['325']=bl('- A CLOSING CONTRADICTION WHOSE EARLIER WORDS')
 E['327']=bl('- THE debate_removals VIEW NAMES')
 E['328']=bl('- A FAILED ALTERNATE REPLY RECORDS')
-E['R460']='\n'.join(block('- RULING 460 (operator')[:]) 
-E['R461']=bl('- RULING 461 (operator')
+E['R460']=bl('- RULING 460 (operator')
+assert 'RULING 461' in E['R460']
+E['R461']=''
 E['330']=bl('- THE K-UNX GATE AND ITS CURE CHECK ACCEPT')
 E['331']=bl('- A JUDGE OR ALTERNATE WHOSE UNCURED LINE')
 E['329']=bl('- A RECORD-ONLY TRIAL BINDS EACH [L2] TAG')
@@ -36,7 +37,7 @@ e341=block('- GUARDHOLD in Init with Guards gains, once')
 E['341']='- THE ORACLE SEAT READS "CAME TOGETHER" AS THE COMING UNDER ONE ROOF (ASK 341; Init with Guards, GUARDHOLD, Oracle seat only, Ruling 383):\n  - What it does: '+e341[0][2:]+'\n'+'\n'.join(e341[1:])
 e342=block('- __run336 is replaced in the same 22 copies')
 E['342']='- AN [L2] PARAGRAPH THAT NAMES ITS OWN VERSE IN BOOK-LESS FORM BINDS TO THAT VERSE (ASK 342 with condition e; 22 copies of tags(rounds), as ASK 336; counted path):\n  - What it does: '+e342[0][2:]+'\n'+'\n'.join(e342[1:])
-for k,v in E.items(): assert v.strip() and '##' not in v,k
+for k,v in E.items(): assert k=='R461' or v.strip() and '##' not in v,k
 lines=src.split('\n')
 def ind(l): return len(l)-len(l.lstrip(' '))
 def find1(pred,what):
@@ -53,7 +54,7 @@ def shift(txt,d): return '\n'.join(' '*d+l for l in txt.split('\n'))
 ins=[]
 m,d=after_entry('- AN [L2] MEANING IN THE ORACLE\'S ROUNDS IS THE LEXICON GLOSS'); ins.append((m,shift(E['335']+'\n'+E['341'],d)))
 m,d=after_entry('- C2 CLOSING ends with UNSUPPORTED-L4 PREMISES'); ins.append((m,shift(E['333']+'\n'+E['334']+'\n'+E['337'],d)))
-m,d=before_heading('## 9. Enforcers'); ins.append((m,E['R460']+'\n'+E['R461']+'\n'+E['OWN']))
+m,d=before_heading('## 9. Enforcers'); ins.append((m,E['R460']+'\n'+E['OWN']))
 m,d=after_entry('- A DEFENDER CLOSE THAT RESTATES A NARROWED LINK\'S ROUND 1 HEADING'); ins.append((m,shift(E['325'],d)))
 m,d=after_entry('- THE K-UNX GATE OFFERS THE ASSUMES ROUTE ON ITS PLAIN PATH'); ins.append((m,shift(E['330'],d)))
 m,d=before_heading('## 11. Persistence and the column map (crossed columns: read before any query)'); ins.append((m,E['327']+'\n'+E['328']+'\n'+E['331']))
@@ -66,10 +67,6 @@ rep('- C2 CLOSING ends with UNSUPPORTED-L4 PREMISES','- C2 PREMISE-LIST ROUND (r
 rep(' Three options, none preferred.',' Three options, none preferred. The case-sensitive UNXA_ASM pattern was a code misread. Offering the ASSUMES route on the plain path extends the gate rule to a case its stated rule did not reach (an assumed fact with no row); that extension was the operator\'s decision, given by his card for ASK 323.')
 rep('- Live flow: s218 (n8n version ffc2f775, 455 nodes; Shared Library 947,963 characters, sha 2bff75837e74ad16).','- Live flow: s227 (n8n version d23c65ca, 455 nodes; Shared Library 963,897 characters, sha 515f047ee6cad94f).')
 rep('s218 = s217 + pkgGLB (ASK 324).','s218 = s217 + pkgGLB (ASK 324). s219 (5d26ce38) = s218 + ASKs 325, 330, 331. s220 (b799dd0b) = s219 + ASK 328; the debate_removals view change (ASK 327) is database only. s221 (67e89720) = s220 + ASK 329 (record-only trial). s222 (3a290d4c) = s221 + ASKs 333, 335. s223 (e7cde216) = s222 + ASK 334 rev 2. s224 (985572ac) = s223 + ASK 336 rev 2. s225 (657d2953) = s224 + ASK 337. s226 (defaa968) = s225 + ASK 341. s227 (d23c65ca) = s226 + ASK 342 with condition e. Run 37510 ran on s221: it exercised ASKs 327, 328 and 329; 325, 330 and 331 were not exercised; 333 to 337, 341 and 342 are UNEXERCISED until a run.')
-# open item for the operator from the correction
-k=c.index('## 17. Known open items (verify live before acting)'); k2=c.index('\n',k)+1
-note=[l for l in dr if l.startswith('- Open for the operator (Worker_A3 6912 item 8)')]; assert len(note)==1
-c=c[:k2]+note[0]+'\n'+c[k2:]
 open('engine_manual_v177_draft.txt','w',encoding='utf-8').write(c)
 print(len(src),len(c),hashlib.md5(c.encode()).hexdigest())
 for wd in ['WRITTEN AS s2','UNEXERCISED','HELD until','fill on','Fill on','(when written)']: print(wd,c.count(wd))
