@@ -65,5 +65,5 @@ Each written ASK also adds one "WRITTEN AS s2xx" line and moves the Live flow li
 
 ## Standing rule: reasoning settings (section 4, NO REASONING FIELD line)
 Append to the end of the section 4 line that begins "- NO REASONING FIELD:" (after "... describe removed code."):
-" Reasoning, effort and thinking settings change only on the operator's own instruction. No seat adds, removes or adjusts one for any model or call on its own reading. A model that spends its output on reasoning is reported with its measured tokens and finish reason, not re-tuned."
+" Reasoning, effort and thinking settings change only on the operator's own instruction. No seat adds, removes or adjusts one for any model or call on its own reading. A model that spends its output on reasoning is reported with its measured tokens and finish reason, not re-tuned without the operator's instruction."
 Body law: no name or date in the body. The v176 log row records the source (the operator's instruction of 2026-11-15, 03:03 CST).
