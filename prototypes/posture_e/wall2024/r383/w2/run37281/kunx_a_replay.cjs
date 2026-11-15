@@ -19,3 +19,8 @@ const C={
  W3_form_act:'CONCEDED LINKS: 1 -- Premise 5: UNEXHIBITED. ASSUMES: the begetting of the flesh in Mary\'s womb, which no row in the rounds gives.',
 };
 for(const [k,t] of Object.entries(C)){const r=kunxLines(head+t,R);console.log('\n##',k,'-> items',r.items.length);r.items.forEach(x=>console.log('  rule',x.rule,'a=',x.a||'(plain)','asm=',JSON.stringify(x.asm||''),'| why:',x.why.slice(0,200)));}
+// keep2024 (pkgBKC) run: stub an E-ASSUME BOTH NOT STATED fact for DEFENDER premise 5 (GUESS of what E-ASSUME would return; not a model output).
+const $b=n=>n==='Assume Check Record'?{isExecuted:true,first:()=>({json:{acx:{facts:[{both_not_stated:true,side:'DEFENDER',n:5,fact:'Mary is of the house of David'}]}}}),all:()=>[]}:{isExecuted:false,first:()=>({json:{}}),all:()=>[]};
+let kB;try{new Function('$','$input','items','$json','$node','$execution','$workflow','require','globalThis.__K=kunxLines;\n'+src)($b,null,[],{},{},{},{},require);}catch(e){}kB=globalThis.__K;
+console.log('\n=== with stubbed E-ASSUME fact (pkgBKC active) ===');
+for(const [k,t] of Object.entries(C)){const r=kB(head+t,R);console.log('##',k,'-> items',r.items.length,r.items.map(x=>(x.a||'plain')+': '+x.why.slice(0,90)).join(' || '));}
