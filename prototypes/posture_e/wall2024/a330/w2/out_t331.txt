@@ -1,0 +1,28 @@
+== DIFF
+  changed nodes: Shared Library
+  OK   only the Shared Library node changes (plan 6932 items 1, 4, 9)
+  LIB lines differing: 19 454,455,466,1219,1227,1929,1932,2794,2798,2800,2802,2804,2806,2808,2810,3466,3467,3497,3498
+  OK   MAP n equals rebuilt length for every library node 
+  OK   header sha matches LIB (3877328d7e1eb219)
+  OK   no model-setting token added or removed (reasoning guard) 
+  library nodes whose rebuilt source changes: Alt Gate Build, Alt Gate Record, Alt Send Back Record, Alternate Cure Normalize, Alternate Merge Seat, Alternate Payloads, Cure Check, Cure Normalize, Extract Independent Verdict, Gate Build, Gate Record, Panel Cure Check, Panel Cure Normalize 1, Panel Cure Normalize 2, Panel Cure Normalize 3, Panel Payloads, R2 Alt Gate Build, R2 Alt Gate Record, R2 Alt Send Back Record, R2 Alternate Cure Normalize, R2 Alternate Merge Seat, R2 Alternate Payloads, Send Back Record, Late Gate Build, Alt Late Gate Build, R2 Alt Late Gate Build
+== ASK 330 (K-UNX cure on the STEP / ASSUMES / ROWS GIVE form)
+  OK   P1 valid form: live UNCURED (expect UNCURED), target CURED (expect CURED) | TRIAL rule (K-UNX, ASK 330, ruling 460): the STATEMENT is in the assumed-fact form: STEP found in the side's o
+  OK   P2 STEP not verbatim in side rounds: live UNCURED (expect UNCURED), target UNCURED (expect UNCURED) | TRIAL rule (K-UNX): the STATEMENT names no layer the block lacks, and no CORRECTED COUNT below 2
+  OK   P3 ROWS GIVE not in the cited verse: live UNCURED (expect UNCURED), target UNCURED (expect UNCURED) | TRIAL rule (K-UNX): the STATEMENT names no layer the block lacks, and no CORRECTED COUNT below 2
+  OK   P4 ROWS GIVE reference only: live UNCURED (expect UNCURED), target UNCURED (expect UNCURED) | TRIAL rule (K-UNX): the STATEMENT names no layer the block lacks, and no CORRECTED COUNT below 2
+  OK   P5 ASSUMES contested conclusions: live UNCURED (expect UNCURED), target UNCURED (expect UNCURED) | TRIAL rule (K-UNX): the STATEMENT names no layer the block lacks, and no CORRECTED COUNT below 2
+  OK   P6 named missing layer (today): live CURED (expect CURED), target CURED (expect CURED) | TRIAL rule (K-UNX): the STATEMENT names a layer the block does not exhibit ([L2])
+  OK   P7 [Ln] inside ASSUMES not read as a missing layer: live UNCURED (expect UNCURED), target UNCURED (expect UNCURED) | TRIAL rule (K-UNX): the STATEMENT names no layer the block lacks, and no CORRECTED COUNT below 2
+== ASK 331 expectations (wired to the built function at grade time)
+  judge MEETS, CHANGE TO MEETS, no count field -> not counted
+  grade differs -> counted
+  CONCEDED LINKS 0 vs 1 (hydrogen 40161 shape) -> counted
+  DEFENSE STANDING differs, grade equal -> counted
+  KEEP answer -> counted
+  no answer -> counted
+  unreadable CHANGE TO -> counted
+  K-C cure, no send-back grade (37372 40694) -> counted
+  E-GATE CHANGE TO MISSES vs MISSES (41074), if in scope -> not counted
+  alternate path, grade equal -> not counted
+RESULT: all checks pass

@@ -1,0 +1,18 @@
+nodes holding oa331.js: 9 Alt Gate Record, Alt Send Back Record, Gate Record, R2 Alt Gate Record, R2 Alt Send Back Record, Send Back Record, Late Gate Build, Alt Late Gate Build, R2 Alt Late Gate Build
+verbatim in each: true
+331 over 330 changes nodes: Alt Gate Record, Alt Send Back Record, Gate Record, R2 Alt Gate Record, R2 Alt Send Back Record, Send Back Record, Late Gate Build, Alt Late Gate Build, R2 Alt Late Gate Build
+OK   judge MEETS, CHANGE TO MEETS, no count field -> not counted | the grade (MEETS) and every count field are identical in the judge's line and the corrected line
+OK   grade differs -> counted | the grade differs (MEETS to MISSES)
+OK   CONCEDED LINKS 0 vs 1 (hydrogen 40161 shape) -> counted | a count field differs (DCL=0 to DCL=1)
+OK   DEFENSE STANDING differs, grade equal -> counted | the grade differs (SELF-SUPPORTED to PROP-DEPENDENT)
+OK   L differs, grade equal -> counted | a count field differs (CHALLENGE=PROP-DEPENDENT,L=4,c=0 to CHALLENGE=PROP-DEPENDENT,L=3,c=0)
+OK   unreadable CHANGE TO -> counted | no grade word could be read in the corrected line
+OK   E-GATE MISSES vs MISSES (41074 shape) -> not counted | the grade (MISSES) and every count field are identical in the judge's line and the corrected line
+OK   quoted grade word inside text ignored -> not counted | the grade (HELD) and every count field are identical in the judge's line and the corrected line
+OK   skip: KEEP answer -> counted
+OK   skip: no answer -> counted
+OK   skip: CHANGE TO NOT HELD -> counted
+OK   skip: CHANGE TO, seat text not found (no bodies) -> counted
+OK   skip: line in seat text, grade equal -> not counted
+OK   skip: line NOT in seat text -> counted
+FAILS 0
