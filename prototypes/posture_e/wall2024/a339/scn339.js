@@ -40,7 +40,7 @@ const __SCNmk=(R,QRd,GVT,INFO)=>md=>{
   if(!vh.length)continue;const pre=String(l).replace(/^\s*(?:[-*•]|\d+[.)])\s+/,'').replace(/[*_]/g,'').slice(0,40).trim();const uniq=[...new Set(vh.map(x=>x.ref))];
   const stored=RN.includes(pre+' ('+uniq.join(', ')+')');const vc=[...new Set(vh.filter(x=>chargeKeys.has(x.k)).map(x=>x.ref))];
   const why=!stored?'no stored S-C item for this line':!vc.length?'verses stand only on '+[...new Set(vh.map(x=>keyClass(x.k)))].join(', '):null;
-  notes.push({kind:'verse',line:pre,verses:uniq.map(r=>r+' ['+keyClass(vh.find(x=>x.ref===r).k)+']'),keyText:pre,note:why?null:'[SYSTEM CHECK S-C: '+(vc.length===1?vc[0]+' is':vc.slice(0,-1).join(', ')+' and '+vc[vc.length-1]+' are')+' named in a premise of a premise list; this line says no side charged it.]',why});}}
+  notes.push({kind:'verse',line:pre,verses:uniq.map(r=>r+' ['+keyClass(vh.find(x=>x.ref===r).k)+']'),keyText:pre,note:why?null:'[SYSTEM CHECK S-C: '+(vc.length===1?vc[0]+' is':vc.slice(0,-1).join(', ')+' and '+vc[vc.length-1]+' are')+' named in a premise of a premise list; this line says no side charged '+(vc.length===1?'it':'them')+'.]',why});}}
  /* placement: unique prefix match of the S-C item's quoted line on the normalized rendered line */
  const ML=String(md).split('\n');const add=new Map();
  for(const n of notes){if(!n.note)continue;const k=NZ(n.keyText);if(k.length<12){n.why='key too short';n.note=null;continue;}const hits=[];ML.forEach((x,i)=>{if(NZ(x).startsWith(k))hits.push(i);});
