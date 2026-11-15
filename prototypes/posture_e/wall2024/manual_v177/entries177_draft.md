@@ -31,7 +31,7 @@ Every [PENDING] field is filled from the build's own readback and grades. Nothin
 - In the K-UNX gate entry, after "Three options, none preferred.", add: "The case-sensitive UNXA_ASM pattern was a code misread. Offering the ASSUMES route on the plain path extends the gate rule to a case its stated rule did not reach (an assumed fact with no row); that extension was the operator's decision, given by his card for ASK 323."
 - Open for the operator (Worker_A3 6912 item 8): whether a removal applies when a judge's grade matched the send-back's own. ASK 319 (pwf reads every quote) is a misread fix and does not answer it.
 
-## ASK 330 (gate form for an assumed fact) and ASK 331 (Option A removal test). Operator approval 14:56Z ("approved. proceed and assign") on the team's agreed forms (Wall 6919 to 6928). HELD until each is built, graded, written and read back. [Confirm the ASK numbers against the coordinator's assignment: 330 = gate form, 331 = removal test, as assumed here.]
+## ASK 330 (gate form for an assumed fact) and ASK 331 (Option A removal test). Operator approval 14:56Z ("approved. proceed and assign") on the team's agreed forms (Wall 6919 to 6928). HELD until each is built, graded, written and read back. (Numbers confirmed by the coordinator 14:57Z.)
 
 ### Rule wording (for section 4 or 8, rulings; the operator's ruling of 14:56Z on the team form)
 - RULING 421, GATE FORM (operator, 2026-11-15 14:56Z): a premise counted UNEXHIBITED at the K-UNX gate may give as its reason an assumed fact with no row, in this form, on one line:
