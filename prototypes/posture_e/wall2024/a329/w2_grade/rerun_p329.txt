@@ -1,0 +1,12 @@
+PASS B3 footing, one testament (6907 pair) | want COUNTED | got COUNTED | today: COUNTED G3933 = G3933, parthenos = G3933
+PASS B3 mirror, one-verse [L1] | want NOT COUNTED | got NOT COUNTED | not in Luke 1:34; stands only in the cross-reference Matthew 1:23 after the tag
+FAIL bare 1:18 under the wrong book (W1 6895 cond. 2) | want REVIEW | got (today NOT COUNTED) | today: NOT COUNTED not in the cited verse: G4905 (cited: Luke 1:34, Luke 1:18)
+PASS en dash range | want COUNTED | got COUNTED | today: COUNTED G3933 = G3933
+FAIL self-correction "wrongly gave" | want REVIEW | got (today NOT COUNTED) | today: NOT COUNTED not in the cited verse: G4160, poieō (cited: Matthew 1:18)
+FAIL clause before the marker quotes verse words (W2 48) | want REVIEW | got (today NOT COUNTED) | today: NOT COUNTED not in the cited verse: G1982, episkiazō (cited: Matthew 1:18)
+PASS grant label G5 (pkgGLB) | want never a number | got never a number | today: NOT COUNTED not in the cited verse: G5 (cited: Matthew 1:23)
+PASS press Isaiah 7:14, pipe Matthew 1:23 (R2) | want NOT COUNTED | got NOT COUNTED | cross-language (operator ruling, 15 Nov 09:17 and 09:39 CST): G3933 is Greek and the line presses Isaiah 7:14, Old Testament (R2)
+PASS press, same-language pipe (B2) | want COUNTED | got COUNTED | today: COUNTED G1097 = G1097, ginōskō = G1097
+PASS mixed-testament footing (R2b) | want NOT COUNTED | got NOT COUNTED | mixed-testament footing line ([L1] Isaiah 7:14, Luke 1:34, Genesis 4:1): G3933 stands in no [L1] verse of its own language (R2b)
+FAIL pressed verse not read (R3) | want NOT COUNTED | got (today UNVERIFIABLE) | today: UNVERIFIABLE the words of Obadiah 1:1 were not read this run
+plants 7 of 11

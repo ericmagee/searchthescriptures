@@ -1,0 +1,20 @@
+debates 67 | output minus l2_trial identical 67 | l2_trial equals standalone 67 | errors 0
+totals {"checked":7577,"same":7463,"not_counted":93,"pair":2,"review":19}
+{
+ "run": "ODV1-37372-6n5n7sh9",
+ "n": {
+  "checked": 233,
+  "same": 227,
+  "not_counted": 4,
+  "pair": 1,
+  "review": 1
+ },
+ "items": [
+  "CR3 G5088 NOT COUNTED -- not in Matthew 1:18, Matthew 1:20, Luke 1:35; stands only in the cross-reference Luke 1:31 after the tag",
+  "CR3 G1080 NOT COUNTED -- cross-language (operator ruling, 15 Nov 09:17 and 09:39 CST): G1080 is Greek and is tagged on Psalms 2:7, Old Testament; it stands in Matthew 1:16, Ma",
+  "CR3 H2029 NUMBERING PAIR -- H2029 is tagged; Isaiah 7:14 holds H2030 (the fixed pair list holds only H2029/H2030)",
+  "CR4 G5088 NOT COUNTED -- not in Matthew 1:16; stands only in the cross-reference Matthew 1:25 after the tag",
+  "CR4 G3384 REVIEW -- the tag or the clause before it says \"not\" or \"wrongly\" in its own words (quoted verse words, and a MEANS argument, are not read for this)",
+  "CR4 G1080 NOT COUNTED -- cross-language (operator ruling, 15 Nov 09:17 and 09:39 CST): G1080 is Greek and is tagged on Psalms 2:7, Old Testament; it stands in Acts 13:33, Hebr"
+ ]
+}
