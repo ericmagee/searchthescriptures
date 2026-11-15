@@ -7,9 +7,10 @@ for(const [lab,f] of [['OLD',process.argv[2]],['NEW',process.argv[3]]]){const sr
  for(const [tok,{r,j}] of Object.entries(R)){const F={...r,cr1:r.claude_r1,gr1:r.engine_r1,cr2:r.claude_r2,gr2:r.engine_r2,cr3:r.engine_r3,dr3:r.challenger_r3,cr4:r.defender_r4,dr4:r.challenger_r4};
   const $=nm=>nm==='Final Output'?{isExecuted:true,first:()=>({json:F}),all:()=>[{json:F}]}:nm==='L2 Words'?{isExecuted:true,first:()=>({json:LW[tok].rows[0]}),all:()=>LW[tok].rows.map(x=>({json:x}))}:{isExecuted:false,first:()=>{throw new Error('no '+nm)},all:()=>[]};
   const fx=new Function('$','$input',src)($,null);
-  for(const x of j){const o=fx.kagLines2024(x.verdict_raw);const d=o.items.filter(i=>i.doc);console.log(lab,tok.slice(5,10),x.judge_seat.padEnd(8),'K-AG items',o.items.length,'doctrine',d.length);for(const i of d)console.log('    ',i.doc.padEnd(26),i.link.slice(0,60),'|',i.line.split(', but ')[1].slice(0,170));}}}
+  for(const x of j){const o=fx.kagLines2024(x.verdict_raw);const d=o.items.filter(i=>i.doc);console.log(lab,tok.slice(5,10),x.judge_seat.padEnd(8),'K-AG items',o.items.length,'doctrine',d.length);for(const i of d)console.log('    ',i.doc.padEnd(26),i.link.slice(0,60),'|',(i.line.split(', but ')[1]||'').slice(0,170));}}}
 // kagCure
 {const src=load(process.argv[3],'Panel Cure Check',['kagCure']);const fx=new Function('$','$input',src)(()=>({isExecuted:false,first:()=>({json:{}}),all:()=>[]}),null);
- const x={rule:'K-AG',verse:'Proverbs 30:19',rk:'CR3',doc:'DG-57 (Strong\'s mismatch)'};
+ const x={rule:'K-AG',verse:'Proverbs 30:19',rk:'CR3',doc:'DG-57 (Strong\'s mismatch)',need:['UNPROVEN']};
  for(const rep of ['ANSWER CHECK: Proverbs 30:19 -- [CR3] -- MEANS: "x" -- ANSWER: "y" -- UNPROVEN -- Genesis 24:16 carries H1330.','ANSWER CHECK: Proverbs 30:19 -- [CR3] -- MEANS: "x" -- ANSWER: "y" -- MEETS -- still.','NOT HELD: the answer is sound.','ANSWER CHECK: Proverbs 30:19 -- [CR3] -- MEANS: "x" -- ANSWER: "y" -- MISSES -- z'])console.log('cure',JSON.stringify(fx.kagCure(x,rep,'')).slice(0,140));
+ const y={rule:'K-AG',verse:'D3 vs C2',doc:'DG-18',coll:'D3 vs C2'};for(const rep of ['D3 vs C2 (Luke 1:34): DEFENDER LINK BROKEN -- GROUND: x','D3 vs C2 (Luke 1:34): UNDERDETERMINED -- x','NOT HELD: x','D3 vs C6 (Luke 1:35): DEFENDER LINK BROKEN -- x'])console.log('cure DG-18',JSON.stringify(fx.kagCure(y,rep,'')).slice(0,110));
  console.log('cure non-doc',JSON.stringify(fx.kagCure({rule:'K-AG',verse:'Luke 1:35',rk:'CR3',none:true},'NOT HELD','NOT HELD x')).slice(0,100));}
