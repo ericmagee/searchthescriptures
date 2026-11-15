@@ -9,3 +9,7 @@ const C=[
 ['same chapter other verse (lenient)','mat 1:19','fear not to take unto thee',['**ANSWER: Matthew 1:20 -- D2 -- x**\n- [L1] fear not to take unto thee Mary.'],false],
 ['Phi collision Philemon vs Philippians','phi 1:9','love and judgment abound more and more',['**ANSWER: Philemon 1:9 -- x**\n- love and judgment abound more and more here.'],false],
 ];for(const [nm,k,q,raws,want] of C){const r=f(k,q,raws);console.log((want==='?'?'?? ':r===want?'ok ':'BAD'),nm,'| OTHER VERSE =',r);}
+const D=[
+['"in 1:19" word before ref, other-verse heading','mat 1:19','he would not make her a publick example',['**ANSWER: Mark 7:8 -- x**\n- [L4] As stated in 1:19, he would not make her a publick example.'],'?'],
+['line verse plus heading verse together','mat 1:19','he would not make her a publick example',['**ANSWER: Matthew 1:19 -- x**\n- [L4] Beside Mark 7:8, he would not make her a publick example.'],false],
+];for(const [nm,k,q,raws,want] of D){const r=f(k,q,raws);console.log((want==='?'?'?? ':r===want?'ok ':'BAD'),nm,'| OTHER VERSE =',r);}
