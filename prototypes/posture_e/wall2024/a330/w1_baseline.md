@@ -1,4 +1,4 @@
-# ASK 330 / 331 grading baseline, rev 1 (W1, session_01H1X3ANxr57MZvsu7fHB9kh)
+# ASK 330 / 331 grading baseline, rev 2 (W1, session_01H1X3ANxr57MZvsu7fHB9kh)
 
 Eric approved both at 14:56Z on 11-15 ("approved. proceed and assign"). The form agreed by the team is set out on the Wall: 6920, 6924, 6925, 6926, 6927 and 6928.
 Everything below comes from debate_enforcer_log, debate_judgments and debate_results, read 2026-11-15. Nothing is from training knowledge.
@@ -58,7 +58,8 @@ The test (W1 6924, W3 6925, W4 6926 and 6927):
 37372, sol (panel; stored REMOVED FOR "K-C (cure) x1; E-GATE CONTRADICTION x1"):
 - Row 41074 (E-GATE G3 CONTRADICTION). The judge line grades MISSES and the gate CHANGE TO grades MISSES. Equal, so taken alone it would pass.
 - Row 40694 (K-C, D1 vs C1). cure_reason reads "no RESTATED line for D1 vs C1". There is no send-back grade to compare, so the test cannot be computed, and the fail-safe applies: REMOVE.
-- Result: sol stays removed. drv_uncured 2, outcome DEFENDER PREVAILS, and panel_split "2-0 (1 not counted: debate rule)" are all unchanged. No re-derive.
+- Result: sol stays removed, and the outcome DEFENDER PREVAILS is unchanged. No re-derive.
+- REV 2 (E-GATE included, Wall 6942 and 6944): row 41074 now takes the test. It is MISSES against MISSES, so it is not counted, and sol's drv_uncured goes from 2 to 1. The K-C row 40694 still counts under the fail-safe. panel_split keeps "2-0 (1 not counted: debate rule)". REMOVED FOR should then read K-C only. The builder states the exact text.
 - Row 41073 (G2 GATE KEEP, RECORD-ONLY) is not a removal item and is ignored.
 
 37281, luna:
@@ -71,6 +72,7 @@ P10. No send-back grade (K-C "no RESTATED line"). Expected: REMOVE (fail-safe).
 P11. Two counted items: one equal, one that cannot be computed (the 37372 sol shape). Expected: REMOVE.
 P12. Two counted items, both equal. Expected: KEEP. Both lines are replaced, and both rows stay UNCURED.
 P13. A record-only row only (E-REREAD, GATE KEEP RECORD-ONLY). Expected: KEEP, unchanged from today.
+P15 to P19 (E-GATE, rev 2): an equal CHANGE TO (not counted); a different grade (counted); a different count field (counted); no readable grade (counted, fail-safe); a GATE KEEP marked RECORD-ONLY (out of the test).
 P14. The grade word is equal, but a STANDING field (defense or challenge standing) differs. Expected: REMOVE. The builder must state which fields count as "count fields", and the list must include the CONCEDED LINKS integers and the standing words.
 
 ### Criteria
