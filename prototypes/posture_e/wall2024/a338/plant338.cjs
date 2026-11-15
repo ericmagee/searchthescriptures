@@ -20,9 +20,11 @@ const P=[
  ['P10 list closed by [L1]','"of the daughters of Aaron" (Luke 1:36; Luke 1:5) [L1].'],
  ['P11 3 quotes, 2 refs','[L1] "before they came together" and "of the Holy Ghost" and "Joseph her husband" (Matthew 1:18, 19).'],
  ['P12 same quote twice','[L1] "of the daughters of Aaron" (Luke 1:36; Luke 1:5). Again: "of the daughters of Aaron" (Luke 1:36; Luke 1:5).'],
+ ['P13 35856 shape, reversed across books','[L1] "according to the flesh" and "of the fruit of his loins" (Acts 2:30; Romans 1:3).'],
+ ['P14 cross-book pair, no member holds it','[L1] "according to the flesh" and "the voice of my beloved" (Acts 2:30; Romans 1:3).'],
 ];
 const show=i=>i.ref+(i.list338?' ['+i.list338+']':'')+' | '+i.status+' | '+String(i.quote).slice(0,60);
 (async()=>{for(const [nm,t] of P){const F={cr2:t};const a=await pipe(PRE,F),b=await pipe(POST,F);console.log('== '+nm+'\n   text: '+t);a.items.forEach(i=>console.log('   PRE  '+show(i)));b.items.forEach(i=>console.log('   POST '+show(i)));}
- const r=W('../f2/ODV1-27795-gg05qfpc.json');const R=Array.isArray(r)?r[0]:r;const F={cr1:R.claude_r1||'',gr1:R.engine_r1||'',cr2:R.claude_r2||'',gr2:R.engine_r2||'',cr3:R.engine_r3||'',dr3:R.challenger_r3||'',cr4:R.defender_r4||'',dr4:R.challenger_r4||'',synthesis:R.synthesis||''};
+ const R=W(__dirname+'/replay72.json').find(x=>/^ODV1-27795-/.test(x.run_token));const F={cr1:R.claude_r1||'',gr1:R.engine_r1||'',cr2:R.claude_r2||'',gr2:R.engine_r2||'',cr3:R.engine_r3||'',dr3:R.challenger_r3||'',cr4:R.defender_r4||'',dr4:R.challenger_r4||'',synthesis:R.synthesis||''};
  const a=await pipe(PRE,F),b=await pipe(POST,F);console.log('== 27795 WORDS ARE AT items');a.items.filter(i=>/WORDS ARE AT/.test(i.status)).forEach(i=>console.log('   PRE  '+show(i)));b.items.filter(i=>/WORDS ARE AT/.test(i.status)).forEach(i=>console.log('   POST '+show(i)));
 })().catch(e=>{console.error(e);process.exit(1);});

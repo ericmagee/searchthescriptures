@@ -2,7 +2,7 @@
 const fs=require('fs');const W=f=>JSON.parse(fs.readFileSync(f));
 const code=f=>W(f).nodes.find(n=>n.name==='Citation Scan').parameters.jsCode;
 const PRE=code(process.argv[2]||'../rdf/fetchback_s227_342.json'),POST=code(process.argv[3]||'target_338.json');
-let D=W('../a329/debates.json').concat(W('../a336/r37510.json'));for(const f of fs.readdirSync('../f2').filter(f=>/^ODV1-.*\.json$/.test(f))){const r=W('../f2/'+f);D.push(Array.isArray(r)?r[0]:r);}
+let D=W(__dirname+'/replay72.json');
 const seenTok=new Set();D=D.filter(r=>r&&!seenTok.has(r.run_token)&&seenTok.add(r.run_token));
 const run=(c,r)=>{const F={cr1:r.claude_r1||'',gr1:r.engine_r1||'',cr2:r.claude_r2||'',gr2:r.engine_r2||'',cr3:r.engine_r3||'',dr3:r.challenger_r3||'',cr4:r.defender_r4||'',dr4:r.challenger_r4||'',synthesis:r.synthesis||''};
  const M={'Final Output':[F],'Init Seats':[{run_token:'X'}]};const $=n=>{const m=M[n];return m?{isExecuted:true,all:()=>m.map(j=>({json:j})),first:()=>({json:m[0]})}:{isExecuted:false,all:()=>[],first:()=>({json:{}})};};

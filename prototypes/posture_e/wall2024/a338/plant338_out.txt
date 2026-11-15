@@ -51,6 +51,16 @@
    text: [L1] "of the daughters of Aaron" (Luke 1:36; Luke 1:5). Again: "of the daughters of Aaron" (Luke 1:36; Luke 1:5).
    PRE  Luke 1:36 | WORDS ARE AT Luke 1:5 | of the daughters of Aaron
    POST Luke 1:36; Luke 1:5 [L] | MATCHES | of the daughters of Aaron
+== P13 35856 shape, reversed across books
+   text: [L1] "according to the flesh" and "of the fruit of his loins" (Acts 2:30; Romans 1:3).
+   PRE  Acts 2:30 | MATCHES | of the fruit of his loins
+   POST Acts 2:30 [O] | MATCHES | according to the flesh
+   POST Romans 1:3 [O] | WORDS ARE AT Acts 2:30 | of the fruit of his loins
+== P14 cross-book pair, no member holds it
+   text: [L1] "according to the flesh" and "the voice of my beloved" (Acts 2:30; Romans 1:3).
+   PRE  Acts 2:30 | WORDING NOT FOUND IN Acts | the voice of my beloved
+   POST Acts 2:30 [O] | MATCHES | according to the flesh
+   POST Romans 1:3 [O] | WORDING NOT FOUND IN Acts, Romans | the voice of my beloved
 == 27795 WORDS ARE AT items
    PRE  Matthew 1:25 | WORDS ARE AT Matthew 1:21 | thou shalt call his name JESUS
    POST Matthew 1:25 | WORDS ARE AT Matthew 1:21 | thou shalt call his name JESUS

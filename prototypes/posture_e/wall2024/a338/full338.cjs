@@ -2,7 +2,7 @@
 const fs=require('fs');const W=f=>JSON.parse(fs.readFileSync(f));const K='sb_publishable_rgfWFjynRqBdzyEeBRHcig_c6pHysAi';
 const codes=f=>{const w=W(f);const g=n=>w.nodes.find(x=>x.name===n).parameters.jsCode;return {cs:g('Citation Scan'),qc:g('Quote Compare'),qr:g('Quote Report')};};
 const PRE=codes(process.argv[2]||'../rdf/fetchback_s227_342.json'),POST=codes(process.argv[3]||'target_338.json');
-let D=W('../a329/debates.json').concat(W('../a336/r37510.json'));for(const f of fs.readdirSync('../f2').filter(f=>/^ODV1-.*\.json$/.test(f))){const r=W('../f2/'+f);D.push(Array.isArray(r)?r[0]:r);}
+let D=W(__dirname+'/replay72.json');
 const st=new Set();D=D.filter(r=>r&&!st.has(r.run_token)&&st.add(r.run_token));
 const cache=new Map();const get=async u=>{if(cache.has(u))return cache.get(u);let j;for(let k=0;k<4;k++){try{const r=await fetch(u,{headers:{apikey:K,Authorization:'Bearer '+K}});j=await r.json();if(Array.isArray(j))break;}catch(e){}await new Promise(r=>setTimeout(r,500*(k+1)));}if(!Array.isArray(j))throw new Error('fetch '+u.slice(0,200));cache.set(u,j);return j;};
 const mk=M=>n=>{const m=M[n];return m?{isExecuted:true,all:()=>m.map(j=>({json:j})),first:()=>({json:m[0]})}:{isExecuted:false,all:()=>[],first:()=>{throw new Error('no '+n);}};};
