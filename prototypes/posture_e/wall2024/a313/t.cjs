@@ -1,0 +1,21 @@
+// ASK 313 pkgBKC test: bkcKeep2024 from the target's LIB 461 with a stubbed Assume Check Record.
+const fs=require('fs');const W=JSON.parse(fs.readFileSync(process.argv[2]));const T=W.nodes.find(n=>n.name==='Shared Library').parameters.jsCode;const L=JSON.parse(T.slice(T.indexOf('\n/*LIB*/')+8,T.lastIndexOf('\n/*MAP*/')));
+const l=L[461];const src=l.slice(0,l.indexOf('function kunxLines('));
+const mk=facts=>new Function('$',src+';return bkcKeep2024;')(n=>({isExecuted:true,first:()=>({json:{acx:{facts}}})}));
+const UA={a:'ASSUMES',asm:''};let p=0,t=0;const ok=(nm,c)=>{t++;if(c)p++;console.log((c?'PASS ':'FAIL ')+nm);};
+const F108=[{side:'DEFENDER',n:1,both_not_stated:true,fact:'Mary is of the house of David'},{side:'DEFENDER',n:1,both_not_stated:true,fact:'Mary is of the lineage of David'}];
+const S108="Premise 1, LINK 5: UNEXHIBITED (assumed given fact). STEP: David's seed reaches the child through Mary -- ASSUMES: Mary is of David's house and lineage -- ROWS GIVE: Luke 1:27,";
+const F792=[{side:'DEFENDER',n:5,both_not_stated:true,fact:'Mary is of the house of David'}];
+const S792="Premise 5: UNEXHIBITED (ASSUMES an unshown fact about Mary’s house); STEP: the reading of Davidic descent through Mary -- ASSUMES: Mary is of David’s house -- ROWS GIVE: “Luke 1:27: ‘a man whose name was Joseph, of the house of David’";
+ok('39108 closes (no item)',mk(F108)('DEFENDER',1,[{seg:S108}],UA)===null);
+ok('38792 closes (no item)',mk(F792)('DEFENDER',5,[{seg:S792}],UA)===null);
+ok('names only (Mary, David) do not close',mk([{side:'DEFENDER',n:1,both_not_stated:true,fact:'Mary is the daughter of David'}])('DEFENDER',1,[{seg:"Premise 1: UNEXHIBITED -- ASSUMES: Mary descends from David -- ROWS GIVE: x"}],UA)===UA);
+ok('other premise number unchanged',mk(F108)('DEFENDER',2,[{seg:S108}],UA)===UA);
+ok('other side unchanged',mk(F108)('CHALLENGER',1,[{seg:S108}],UA)===UA);
+ok('READERS DIFFER fact unchanged',mk([{side:'DEFENDER',n:1,readers_differ:true,fact:'Mary is of the house of David'}])('DEFENDER',1,[{seg:S108}],UA)===UA);
+ok('UNANSWERED item unchanged',mk(F108)('DEFENDER',1,[{seg:S108}],{a:'UNANSWERED'}).a==='UNANSWERED');
+ok('one shared word unchanged',mk([{side:'DEFENDER',n:1,both_not_stated:true,fact:'the census was in Bethlehem'}])('DEFENDER',1,[{seg:"Premise 1: UNEXHIBITED -- ASSUMES: the census order -- ROWS GIVE: x"}],UA)===UA);
+ok('no ASSUMES clause unchanged',mk(F108)('DEFENDER',1,[{seg:'Premise 1: UNEXHIBITED as unanswered'}],UA)===UA);
+ok('ASM (inferred-act) item with matching fact closes',mk(F108)('DEFENDER',1,[{seg:S108}],{a:'ASM',asm:'begat'})===null);
+ok('no Assume Check Record: unchanged',new Function('$',src+';return bkcKeep2024;')(n=>{throw new Error('no node')})('DEFENDER',1,[{seg:S108}],UA)===UA);
+console.log(p+' of '+t);
