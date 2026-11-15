@@ -1,0 +1,60 @@
+{
+ "D1_glm": {
+  "model": "z-ai/glm-5.3",
+  "finish": "stop",
+  "usage": {
+   "prompt_tokens": 2598,
+   "completion_tokens": 42952,
+   "total_tokens": 45550,
+   "cost": 0.192626,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.192626,
+    "upstream_inference_prompt_cost": 0.0036372,
+    "upstream_inference_completions_cost": 0.1889888
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 38049,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "content_chars": 14100,
+  "reasoning_chars": 126169
+ },
+ "C1_mimo": {
+  "model": "xiaomi/mimo-v2.6-pro",
+  "finish": "stop",
+  "usage": {
+   "prompt_tokens": 66274,
+   "completion_tokens": 23984,
+   "total_tokens": 90258,
+   "cost": 0,
+   "is_byok": true,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.04969527,
+    "upstream_inference_prompt_cost": 0.02882919,
+    "upstream_inference_completions_cost": 0.02086608
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 19690,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "content_chars": 13184,
+  "reasoning_chars": 66525
+ }
+}
