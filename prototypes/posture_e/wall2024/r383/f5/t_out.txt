@@ -1,0 +1,10 @@
+ok  MUST 39144 luna (no tag, Luke 3:23 quoted) | true | no served verses: false
+ok  CTRL tagged answer still cures | true | no served verses: true
+ok  CTRL non-KJV words with reference | false | no served verses: false
+ok  CTRL reference, no quote | false | no served verses: false
+ok  CTRL quote, no reference | false | no served verses: false
+ok  CTRL verse not served | false | no served verses: false
+ok  CTRL two-word quote | false | no served verses: false
+ok  CTRL no STANDS WITHOUT IT | false | no served verses: false
+ok  CTRL ellipsis run | true | no served verses: false
+bad 0
