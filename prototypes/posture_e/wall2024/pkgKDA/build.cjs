@@ -1,0 +1,14 @@
+// ASKs 301-303 pkgKDA: Shared Library only. kagLines2024 (LIB 2281/2286) tests each MEETS ANSWER CHECK line with kdaPush2024 (kda.js); kagCure (LIB 689) cures a doctrine item only with UNPROVEN, MISSES or FAILS.
+const fs=require('fs'),crypto=require('crypto');const sha=s=>crypto.createHash('sha256').update(s).digest('hex').slice(0,16);
+const [, , fin, fout]=process.argv;const W=JSON.parse(fs.readFileSync(fin,'utf8'));if(W.id!=='moMxiV4Irg1uRBZN')throw new Error('wrong workflow');const out=[];
+const Ls=W.nodes.filter(n=>n.name==='Shared Library');const T=Ls[0].parameters.jsCode;const iL=T.indexOf('\n/*LIB*/'),iM=T.lastIndexOf('\n/*MAP*/'),iE=T.lastIndexOf('\n/*END*/');const LIB=JSON.parse(T.slice(iL+8,iM)),MAP=JSON.parse(T.slice(iM+8,iE));
+const rb=(L,m)=>m.p.map(e=>typeof e==='number'?L[e]:typeof e[0]==='string'?e[0]:L.slice(e[0],e[1]+1).join('\n')).join('\n');for(const k in MAP)if(rb(LIB,MAP[k]).length!==MAP[k].n)throw new Error('base '+k);
+if(T.includes('pkgKDA'))throw new Error('already');
+const ed=(i,a,b)=>{const l=LIB[i];if(l.split(a).length!==2)throw new Error('anchor at '+i);LIB[i]=l.replace(a,()=>b);out.push('LIB '+i+' '+l.length+'->'+LIB[i].length);};
+ed(2281,"if(!bad&&!noneMeets)continue;","if(!bad&&!noneMeets){try{kdaPush2024(r,items,marks);}catch(e){}continue;} /* pkgKDA */");
+{const l=LIB[2286];if(!/marks\.push\('\[AUDIT v41: ANSWER CHECK GRADE/.test(l))throw new Error('2286');LIB[2286]=l+'\n '+fs.readFileSync(__dirname+'/kda.js','utf8').trim();out.push('LIB 2286 '+l.length+'->'+LIB[2286].length);}
+ed(689,"function kagCure(x,reply,resp){if(!x||x.rule!=='K-AG')return null;","function kagCure(x,reply,resp){if(!x||x.rule!=='K-AG')return null;\n if(x.doc){const V0=kagNorm(x.verse);for(const l of String(reply||'').split('\\n').concat([String(resp||'')])){const r=kagRow(l);if(!r||kagNorm(r.verse)!==V0)continue;if(x.rk&&r.rk&&kagNorm(r.rk)!==kagNorm(x.rk))continue;if(['MISSES','FAILS','UNPROVEN'].includes(r.grade))return {st:'CURED',why:'TRIAL rule (K-AG, '+x.doc+'; pkgKDA): the line is written again graded '+r.grade,line:r.line.slice(0,1500)};}return {st:'UNCURED',why:'TRIAL rule (recorded and answered; it removes no seat): '+x.doc+' (pkgKDA): the reply writes no ANSWER CHECK line on '+x.verse+' graded UNPROVEN or MISSES; MEETS and NOT HELD do not cure a doctrine item',line:null};} /* pkgKDA */");
+const users=[];for(const k in MAP){const n0=MAP[k].n,n1=rb(LIB,MAP[k]).length;if(n1!==n0){MAP[k].n=n1;users.push(k);}}
+const LJ=JSON.stringify(LIB);const head=T.slice(0,iL).replace(/\/\/ library sha [0-9a-f]{16}, (\d+) lines/,(m,n)=>{if(+n!==LIB.length)throw new Error('line count');return '// library sha '+sha(LJ)+', '+n+' lines';});
+const T1=head+'\n/*LIB*/'+LJ+'\n/*MAP*/'+JSON.stringify(MAP)+T.slice(iE);Ls[0].parameters.jsCode=T1;out.push('Shared Library '+T.length+'->'+T1.length+' users '+users.length+' '+users.join(', '));
+fs.writeFileSync(fout,JSON.stringify(W));console.log(out.join('\n'));
