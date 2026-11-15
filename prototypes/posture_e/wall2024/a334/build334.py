@@ -10,7 +10,7 @@ t=json.loads(json.dumps(cum))
 # 334a: C2 round-2 premise form
 A_OLD="and the premise may charge only what that quote says. After the quote, write PRESSED WITH:"
 A_NEW=("and the premise may charge only what that quote says. If the premise charges a fact about a person, house, time or act that the quoted words take as given and no quoted row gives (CHARGE THE ASSUMPTION), write after the quote, on its own line before PRESSED WITH:, "
- "STEP: <the step of the defender\\'s link> -- ASSUMES: <the given fact the step takes for granted, not what it infers> -- ROWS GIVE: <what the rows the defender quotes do give, quoted with book, chapter and verse>. "
+ "STEP: <the step of the defender\\'s link> -- ASSUMES: <the given fact the step takes for granted, not what it infers> -- ROWS GIVE: <what the rows the defender quotes do give, quoted with book, chapter and verse>. End that line there and begin PRESSED WITH: on the next line. "
  "Write that line only for such a premise; it carries none of the words no, not, none, never, only, without, alone, every or no other. After the quote, write PRESSED WITH:")
 c2=[n for n in t['nodes'] if n['name']=='C2 Build'][0]
 s=c2['parameters']['jsCode']; assert s.count(A_OLD)==1; c2['parameters']['jsCode']=s.replace(A_OLD,A_NEW)
