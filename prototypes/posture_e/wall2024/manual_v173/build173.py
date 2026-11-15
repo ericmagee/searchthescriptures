@@ -21,3 +21,12 @@ assert t.count(old)==1
 t=t.replace(old,new)
 open('v173_step1_removal.txt','w',encoding='utf-8').write(t)
 print('step1b',len(t),hashlib.md5(t.encode()).hexdigest())
+# step 2: insert the ASK 311 entries after the WRITTEN AS s207 line
+E=open('entries173.txt',encoding='utf-8').read().rstrip('\n')
+L2=t.split('\n')
+idx=[i for i,x in enumerate(L2) if x.startswith('  - WRITTEN AS s207 (')]
+assert len(idx)==1
+L2[idx[0]+1:idx[0]+1]=E.split('\n')
+t='\n'.join(L2)
+open('engine_manual_v173_draft.txt','w',encoding='utf-8').write(t)
+print('draft',len(t),hashlib.md5(t.encode()).hexdigest(),'placeholders',t.count('{'))
