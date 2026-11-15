@@ -111,3 +111,6 @@ Ruling numbers 460 and 461: the highest three-digit "ruling N" in the record is 
 
 ## ASK 336 ([L2] list binds to the run of [L1] paragraphs above it; design W2 7013; W3 marks 7016; build W4 7043/7048). HELD until written.
 - Counted path. Replay over 68 debates: 10 tags NOT COUNTED to COUNTED, 3 widened with status unchanged, 0 COUNTED to NOT COUNTED (W1 7050, W2 7049). Under Ruling 383 the judges' [L2] lines change; the card must say so. Fill on the write.
+
+## ASK 337 (334 placeholder: drop ", not what it infers"; W1 7036 item 5, W2 7038, W4 7048, W3 7051). HELD until built, graded, written and read back.
+- C2 Build: the ASSUMES placeholder becomes "<the given fact the step takes for granted>". Why: the same sentence bars the word "not" from the line. The inferred-act bar stays in the judges' check (__af330, ruling 460). On the write, amend the ASK 334 entry's quoted placeholder and Limits line.
