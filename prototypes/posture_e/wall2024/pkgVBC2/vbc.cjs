@@ -1,0 +1,10 @@
+// ASK 299 (b), library: a VOID ruling on the ground "no verbatim quote" is not accepted when the engine finds a quote of that premise (4 or more words) word for word in an earlier round of the opponent (the list against the DEFENDER closes DR2 and quotes CR1/CR2; the list against the CHALLENGER closes CR3 and quotes DR1/DR2). The ruling then stays a K-V item (the existing VOID rule: cure, or LIVE).
+module.exports=(LIB,ed,out)=>{
+ const F=" function kvVerb2024(n,CH,R,side){try{if(!R||!side)return null;const c=(CH||[]).find(p=>p.n===n);if(!c||!c.qs||!c.qs.length)return null;const opp=side==='DEFENDER'?['CR1','CR2']:['DR1','DR2'];const T=opp.filter(k=>typeof R[k]==='string').map(k=>[k,' '+kvNorm(R[k])+' ']);if(!T.length)return null;for(const q of c.qs){if(q.split(' ').length<4)continue;const h=T.find(([k,t])=>t.includes(' '+q+' '));if(h)return {round:h[0],q};}return null;}catch(e){return null;}} /* pkgVBC2, ASK 299 */";
+ if(!LIB[1031].startsWith('function kvRulingOk(seg,n,CH,UNI){if(KV_NOQ.test(seg))return {ok:true,why:\'no verbatim quote\'};'))throw new Error('1031 head');
+ ed(1031,"function kvRulingOk(seg,n,CH,UNI){if(KV_NOQ.test(seg))return {ok:true,why:'no verbatim quote'};","function kvRulingOk(seg,n,CH,UNI,R,side){if(KV_NOQ.test(seg)){const vb=kvVerb2024(n,CH,R,side);if(vb)return {ok:false,kind:false,q:null,vb};return {ok:true,why:'no verbatim quote'};}",1);
+ if(!LIB[1033].endsWith("{ok:false,kind,q:q||null};}"))throw new Error('1033 tail');LIB[1033]+=F;out.push('LIB 1033 +'+F.length);
+ ed(1155,"kvRulingOk(st,x.premise,CH,UNI)","kvRulingOk(st,x.premise,CH,UNI,R,x.side)",1);ed(1155,"kvRulingOk(t,x.premise,CH,UNI)","kvRulingOk(t,x.premise,CH,UNI,R,x.side)",1);
+ ed(1165,"kvRulingOk(sg.seg,x.premise,CH,UNI)","kvRulingOk(sg.seg,x.premise,CH,UNI,R,x.side)",1);
+ ed(2143,"const v=kvRulingOk(sg.seg,n,CH,UNI);","const v=kvRulingOk(sg.seg,n,CH,UNI,R,side);",1);
+ ed(2144,"const miss=(v.q?","const miss=v.vb?'calls premise '+n+' not verbatim, but the engine finds its quote word for word in ['+v.vb.round+']: \"'+v.vb.q.slice(0,160)+'\" (pkgVBC2, ASK 299)':(v.q?",1);};
