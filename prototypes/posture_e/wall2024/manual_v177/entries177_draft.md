@@ -1,6 +1,6 @@
 # Engine manual v177: FINAL entries (W3). ASKs 325, 327 to 331 and 333 to 337 WRITTEN and read back by W4 (15 Nov 09:51 to 12:18 CST); entries filled from the graded builds. For the non-writer read the run hold requires, then the v177 write card.
 Sources: ASK 325 plan 6844 with revision 1 at 6863, plants 6846, baseline W1 6842. ASK 327 and 328 proposal 6864, W1 baseline 6872 (a327/w1_baseline.md, fc638c5c), W3 marks 6837 and 6869.
-Fields are filled from W4's build posts (6953, 6958, 6968, 6971, 6973, 6991), the grades (W1 6959/6992, W2 6963/6993 and the 327/328 passes), and W4's write reports in its own thread (09:54 and 10:06 CST). Every ASK below is live and UNEXERCISED until run 37510 (started 10:11 CST on 67e89720) is read.
+Fields are filled from W4's build posts (6953, 6958, 6968, 6971, 6973, 6991), the grades (W1 6959/6992, W2 6963/6993 and the 327/328 passes), and W4's write reports in its own thread (09:54 and 10:06 CST). Run 37510 (started 10:11 CST on 67e89720) exercised ASKs 327, 328 and 329 (W1 7005, W4 7006). ASKs 325, 330 and 331 were not exercised in it. ASKs 333 to 337 were written after it and are UNEXERCISED until a run.
 
 ## ASK 325 (close enforcer misattribution), section 6 under the close enforcer, after the pkgNRH entry
 - A CLOSING CONTRADICTION WHOSE EARLIER WORDS ARE THE OTHER SIDE'S, ONLY QUOTED BY THE FLAGGED SIDE, IS NOT COUNTED AGAINST IT (ASK 325; Close Enforcer Record):
@@ -27,7 +27,7 @@ Fields are filled from W4's build posts (6953, 6958, 6968, 6971, 6973, 6991), th
   - Not changed: the ALTERNATE TRIED line in verdict_raw keeps today's 300-character WHY, so Format Markdown's TRIED pattern and the ASK 327 view parse as before. No node parses reply_error.
   - Shown offline: t328 14 of 14 on run 37372's stored call outputs: call 1 ends "USAGE: prompt=104006 completion=64000 reasoning=63997 finish=length max_tokens=64000", call 2 "... reasoning=56380 ...", matching W1's baseline; request body byte-identical; a success row stays NULL. Graded PASS by W1 and W2.
   - Reasoning guard: REFUSED as written, because the line names reasoning and max_tokens (6 added hits, all inside __use328; 0 existing hits changed). The operator approved the override on his card ("Write both, approve override", 15 Nov 09:52 CST).
-  - Limits: this records only and changes no request field. It is not grounds to propose any reasoning, effort, thinking or limit setting without the operator's own instruction (§4, NO REASONING FIELD; W3 6869 C3). Live and UNEXERCISED.
+  - Limits: this records only and changes no request field. It is not grounds to propose any reasoning, effort, thinking or limit setting without the operator's own instruction (§4, NO REASONING FIELD; W3 6869 C3). EXERCISED in run 37510: debate_enforcer_log holds the USAGE line for both failed hydrogen tries ("USAGE: prompt=92421 completion=64000 reasoning=53087 finish=length max_tokens=64000", and reasoning=61445 on the second; W4 7000, 7009).
   - WRITTEN AS s220 (ASK 328; n8n version b799dd0b; read back by W4).
 
 ## Correction to the v176 ASK 323 part 1 entry (W3 Wall 6916; Worker_A3 6912)
