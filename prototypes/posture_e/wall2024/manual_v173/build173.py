@@ -30,3 +30,21 @@ L2[idx[0]+1:idx[0]+1]=E.split('\n')
 t='\n'.join(L2)
 open('engine_manual_v173_draft.txt','w',encoding='utf-8').write(t)
 print('draft',len(t),hashlib.md5(t.encode()).hexdigest(),'placeholders',t.count('{'))
+# step 3: write facts (W4 Wall 6632; fetchback writes_s208, updatedAt 2026-11-15T03:38:40.953Z = 21:38 CST 11-14)
+F={'{SNAME}':'s208','{PRESS}':'21:38 CST','{SAVE}':'21:38 CST','{VERSION}':'1f6e5c21','{LIBSHA}':'f2fc5e0776f9e945'}
+for k,v in F.items():
+    assert t.count(k)==1,(k,t.count(k)); t=t.replace(k,v)
+o1="- Live flow: s207 (n8n version 9a6d6d51, 455 nodes; Shared Library 957,634 characters, sha 3deca1e26d8109bc)."
+n1="- Live flow: s208 (n8n version 1f6e5c21, 455 nodes; Shared Library 944,510 characters, sha f2fc5e0776f9e945)."
+assert t.count(o1)==1; t=t.replace(o1,n1)
+o2="(ASKs 293 to 306, one write). `derive_debate_outcome`"
+n2="(ASKs 293 to 306, one write). s208 = s207 - pkgFBD rev 2 - pkgFBA rev 3 - pkgKDA rev 3 - pkgKDG rev 4e + pkgNSG rev 2 + pkgNRC + pkgOVS rev 3 + pkgKWV + pkgVNV rev 2 (ASK 311, one write; Ruling 383). `derive_debate_outcome`"
+assert t.count(o2)==1; t=t.replace(o2,n2)
+open('engine_manual_v173_draft.txt','w',encoding='utf-8').write(t)
+print('final',len(t),hashlib.md5(t.encode()).hexdigest())
+# step 4: K-W cure form in the rule table (pkgKWV)
+o3="RESPONSE: STANDS WITHOUT IT because <a layer, [L1]-[L3]>;"
+n3="RESPONSE: STANDS WITHOUT IT because <a layer, [L1]-[L3], or a verse quoted with its reference in three or more exact words of that verse as served this run>;"
+assert t.count(o3)==1; t=t.replace(o3,n3)
+open('engine_manual_v173_draft.txt','w',encoding='utf-8').write(t)
+print('final2',len(t),hashlib.md5(t.encode()).hexdigest())
