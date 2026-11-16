@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__Claude_Code_Remote__get_session",
+      "mcp__n8n__get_workflow_execution",
+      "mcp__n8n__search_workflow_executions",
+      "mcp__n8n__get_workflow_details",
+      "mcp__n8n__get_workflow_version",
+      "mcp__n8n__get_workflow_history",
+      "mcp__n8n__search_workflows",
+      "mcp__n8n__list_credentials",
+      "mcp__Google_Drive__search_files",
+      "mcp__Google_Drive__download_file_content",
+      "mcp__supbase-fix__get_edge_function",
+      "mcp__Claude_Code_Remote__list_triggers"
+    ]
+  }
+}
