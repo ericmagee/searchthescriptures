@@ -1,0 +1,10 @@
+{
+"A1": "function check(TG,OW,LEX,READ){const IX=index(OW,LEX);",
+"B1": "function check(TG,OW,LEX,READ,GD){const IX=index(OW,LEX);if(GD===undefined){GD=null;try{if(typeof $==='function'){const __n=$('L2 Count Plan');if(__n&&__n.isExecuted)GD=__n.first().json.e340||null;}}catch(e){GD=null;}}const __EN=new Set(GD&&GD.ok&&Array.isArray(GD.eng)?GD.eng:[]); /* ASK 340 Part A: a latin word that maps to no number, has no mark, is a KJV word and no lexicon transliteration is set aside as English */",
+"A2": "   const core=ws.some(w=>!w.root)?ws.filter(w=>!w.root):ws;\n",
+"B2": "   const __e=__EN.size?ws.map(w=>(!w.ok&&w.kind==='latin'&&/^[A-Za-z]+$/.test(w.w)&&__EN.has(w.w.toLowerCase()))?{...w,english:true}:w):ws;const __k=__e.some(w=>w.english)&&__e.some(w=>!w.english)?__e.filter(w=>!w.english):ws;const __set=__k===ws?'':'; set aside as English: '+__e.filter(w=>w.english).map(w=>w.w).join(', ');const core=__k.some(w=>!w.root)?__k.filter(w=>!w.root):__k;\n",
+"A3": "why=ws.map(w=>w.w+' = '+(w.ok?w.num:'root, not in the cited verse')).join(', ');}",
+"B3": "why=(__k===ws?ws:__e).map(w=>w.w+' = '+(w.english?'English, set aside':w.ok?w.num:'root, not in the cited verse')).join(', ');}",
+"A4": "why='not in the cited verse: '+core.filter(w=>!w.ok).map(w=>w.w).join(', ')+' (cited: '+vs.join(', ')+')';}\n   return {...t,words:ws,status,why};});}",
+"B4": "why='not in the cited verse: '+core.filter(w=>!w.ok).map(w=>w.w).join(', ')+' (cited: '+vs.join(', ')+')'+__set;}\n   return {...t,words:__k===ws?ws:__e,status,why};});}"
+}
