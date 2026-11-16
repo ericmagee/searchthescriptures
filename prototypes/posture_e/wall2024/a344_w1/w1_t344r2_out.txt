@@ -1,0 +1,10 @@
+== qwen
+{"debaters":["claude","qwen"],"accept_seats":["chatgpt","sol","luna","hydrogen","gemini","grok","argon","haiku","spark","qwen4max","ernie55"],"panel":["chatgpt","sol","luna"],"reserve":"hydrogen","alt_order":["hydrogen","gemini","grok","argon","haiku","spark","qwen4max","ernie55"],"resolved_judges":["chatgpt","sol","luna"],"resolved_alternates":["hydrogen:google/gemini-4-hydrogen:google","gemini:google/gemini-3.8-flash:google","grok:x-ai/grok-4.7:xai","argon:google/gemini-4-argon:google","haiku:anthropic/claude-haiku-5.5:anthropic","spark:meta/muse-spark-1.3:meta","ernie55:baidu/ernie-5.5-flash-preview:free:baidu"]}
+== gemini
+{"debaters":["claude","gemini"],"accept_seats":["chatgpt","sol","luna","hydrogen","gemini","grok","argon","haiku","spark","qwen4max","ernie55"],"panel":["chatgpt","sol","luna"],"reserve":"grok","alt_order":["grok","haiku","spark","qwen4max","ernie55"],"resolved_judges":["chatgpt","sol","luna"],"resolved_alternates":["grok:x-ai/grok-4.7:xai","haiku:anthropic/claude-haiku-5.5:anthropic","spark:meta/muse-spark-1.3:meta","qwen4max:qwen/qwen4-max:qwen","ernie55:baidu/ernie-5.5-flash-preview:free:baidu"]}
+== glm
+{"debaters":["claude","glm"],"accept_seats":["chatgpt","sol","luna","hydrogen","gemini","grok","argon","haiku","spark","qwen4max","ernie55"],"panel":["chatgpt","sol","luna"],"reserve":"hydrogen","alt_order":["hydrogen","gemini","grok","argon","haiku","spark","qwen4max","ernie55"],"resolved_judges":["chatgpt","sol","luna"],"resolved_alternates":["hydrogen:google/gemini-4-hydrogen:google","gemini:google/gemini-3.8-flash:google","grok:x-ai/grok-4.7:xai","argon:google/gemini-4-argon:google","haiku:anthropic/claude-haiku-5.5:anthropic","spark:meta/muse-spark-1.3:meta","qwen4max:qwen/qwen4-max:qwen","ernie55:baidu/ernie-5.5-flash-preview:free:baidu"]}
+== target, rows absent
+{"debaters":["claude","qwen"],"accept_seats":"ERRFAIL-CLOSED:AcceptBuild:seat\"qwen4max\"hasnoACTIVEmodel_configrow.execution=999","panel":["chatgpt","sol","lun
+src 0656ac3107b9
+mine 98544eebdb38
