@@ -1,0 +1,1 @@
+W2 grade of ASK 344b. Own read of live s231 (f96cbf43, 458 nodes) rebuilt with build344.py: 7 edits, sha 8b34c7e2849f (matches W4). Connections equal; only Init Seats, Resolve Seats, Accept Build change. t_* = models_live, tn_* = models_new, body_qwen.

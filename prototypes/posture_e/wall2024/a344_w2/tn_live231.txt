@@ -1,0 +1,44 @@
+{
+ "debaters": [
+  "claude",
+  "qwen"
+ ],
+ "accept_seats": [
+  "chatgpt",
+  "sol",
+  "luna",
+  "hydrogen",
+  "gemini",
+  "grok",
+  "argon",
+  "haiku",
+  "spark"
+ ],
+ "panel": [
+  "chatgpt",
+  "sol",
+  "luna"
+ ],
+ "reserve": "hydrogen",
+ "alt_order": [
+  "hydrogen",
+  "gemini",
+  "grok",
+  "argon",
+  "haiku",
+  "spark"
+ ],
+ "resolved_judges": [
+  "chatgpt",
+  "sol",
+  "luna"
+ ],
+ "resolved_alternates": [
+  "hydrogen:google/gemini-4-hydrogen:google",
+  "gemini:google/gemini-3.8-flash:google",
+  "grok:x-ai/grok-4.7:xai",
+  "argon:google/gemini-4-argon:google",
+  "haiku:anthropic/claude-haiku-5.5:anthropic",
+  "spark:meta/muse-spark-1.3:meta"
+ ]
+}
