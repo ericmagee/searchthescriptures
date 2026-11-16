@@ -13,7 +13,7 @@ function run(src,input,nodes){
 }
 // Accept Build: which seats get the posture call
 let acc;try{acc=run(code('Accept Build'),models,{'Debate Start':[{body:b}],'Dry Run Config':[{}]}).map(o=>o.json.acc.seat);}catch(e){acc='ERR '+e.message.slice(0,200);}
-const seats=['chatgpt','sol','luna','hydrogen','gemini','grok','argon','haiku','spark','qwen','qwen4max','dsv41','ernie55'];
+const seats=['chatgpt','sol','luna','hydrogen','gemini','grok','argon','haiku','spark','qwen','qwen4max','ernie55'];
 const AGR={seats:seats.map(s=>({seat:s,placed:true,status:'ACCEPT'}))};
 const init=run(code('Init Seats'),[{acc:AGR,src:{body:b}}],{'Accept Models':models})[0].json;
 const res=run(code('Resolve Seats'),[],{'Init Seats':[init],'Fetch Models':models,'Fetch Drift Guards':[],'Fetch Tensions':[]})[0].json;
