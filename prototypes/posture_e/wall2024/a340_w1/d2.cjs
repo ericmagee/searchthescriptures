@@ -1,0 +1,3 @@
+const R=require('./t340.cjs');const fs=require('fs');const D=JSON.parse(fs.readFileSync('../a329/debates.json')).concat(JSON.parse(fs.readFileSync('../a336/r37510.json')));
+for(const r of D){const M=R.base(r);const a=R.ex(R.S.pre,R.mk(M))[0].json;const {out:b,reads}=R.runPost(M);
+ if(JSON.stringify(a.l2_trial)!==JSON.stringify(b.l2_trial)){const A=a.l2_trial,B=b.l2_trial;const ka=new Set((A.items||A.rows||[]).map(x=>JSON.stringify(x)));const nb=(B.items||B.rows||[]).filter(x=>!ka.has(JSON.stringify(x)));console.log(r.run_token,JSON.stringify(A.n),'=>',JSON.stringify(B.n),'| new non-SAME rows:',nb.filter(x=>x.status&&x.status!=='SAME').length, Object.keys(B).join(','));}}
