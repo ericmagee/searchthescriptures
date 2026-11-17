@@ -2,7 +2,7 @@ ok   only the six D2B/D3B/D4B Build and Extract nodes change; node order, connec
 ok   no Call node changes (model settings copied by not touching them)
 ok   the two files differ only in the three Extract nodes, at LAY_BARE :: D2B Extract, D3B Extract, D4B Extract
 ok   syntax of the six nodes in both files
-ok   the LAY module is byte-equal in all six nodes :: 7512 chars
+ok   the LAY module is byte-equal in all six nodes :: 7597 chars
 ok   the old barred-moves code is kept: each node still holds its BAR check and note
 ok   REAL 37891 row: "at all" is flagged :: at all
 ok   C4a PLANT: a word standing only in an [L2] gloss is flagged :: never
