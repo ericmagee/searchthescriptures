@@ -3,12 +3,12 @@
 OBJECTIVE: Eric 17:50 CST 11-16: "i want UNDERTERMINED, HELD, AND BROKEN INCLUDED. That's full transparency... we need to SEE and EVERYTHING", with "Structure forces compliance". Card press "Build ASK 346" 18:03 CST 11-16.
 
 Rebuild: `node build346.cjs target_345.json target_346.json` (target_345 = live s232, node sha 4d34d0ab23596871).
-Target: node sha b5daec6dfb760005, library sha ffa1a42a865ccd88, 3502 lines. Replay: `node replay346.cjs` (needs j37719.json, r37719.json, cv37719.json read from debate_judgments, debate_results and kjv_verses), 0 fails.
+Target (rev 2b): node sha 7b2f17f535822e1e, library sha 12ded1fa0d0afd15, 3502 lines. Replay: `node replay346.cjs` (needs j37719.json, r37719.json, cv37719.json read from debate_judgments, debate_results and kjv_verses), 0 fails.
 
 Nodes changed (9): Shared Library; Commitment 13 text in Panel Build, Reserve Build, Accept Build, Accept Check, Accept Return Build, Accept Final, Accept DS Return Build, Enforcer Build. Connections unchanged. Reasoning guard: no model-setting change.
 
 Build choices:
-1. A. Commitment 13 is replaced by W3's 7228 body in all 10 copies (L2966, L3274 and the 8 nodes). The heading count stays 15.
+1. A. Commitment 13 (rev 2b, W1 7266 item 6, W3 7267): the live body stays word for word; W3's four 7228 sentences follow its bare-reason sentence, before "For example:"; the heading reads "I give the layers of every grade." All 10 copies identical; heading count 15.
 2. B. ECW HOLD=true: an E-HOLD DISAGREE pushing to UNDERDETERMINED goes through the same CARRIED BY gate as E-COL. showHold shows the judge the row. The L3200 E-HOLD prompt asks for CARRIED BY.
 3. C. LAY.scan runs in Send Back Build on each judge's text (AUDIT and EXTRACTOR lines removed). An item on a line already sent back joins that item; otherwise it is a new E-LAY item.
 4. LIVE (enforced): a STANDS line with no counted [L1]; a RESULT line with no collision label or no counted [L1]; a KEYSTONE line with no label of its own link or no counted [L1].
