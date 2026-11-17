@@ -55,6 +55,13 @@ P('2.3: a PRESS head is read',LAY.structure('**PRESS on LINK C1:** the record st
 P('2.3: a PRESSED WITH line is not a head (no block opens there)',LAY.structure('PRESSED WITH: Luke 1:34, Matthew 1:18.'+B1).length===0);
 P('2.3: a numbered heading with no content under it is skipped',LAY.structure('## I. ANSWERS TO THE PRESSES\n## II. CLOSE').length===0);
 P('2.3: a plain numbered list line (not a heading) does not open a block',LAY.structure('1. The challenger infers that the conception occurred in the espousal.'+B1).length===0);
+// rev 2.4 (W1 7678 F1 to F3; W3 7679 R1 to R3)
+P('2.4 F1: a PRESSED WITH row of Ref -- "words" pairs reads as [L1] verses',LAY.structure('**PRESS on LINK C1:** the record states it. PRESSED WITH: Matthew 1:1 — "The book of the generation of Jesus Christ"; Luke 3:23 — "being (as was supposed) the son of Joseph"').length===0);
+P('2.4 F1: a PRESSED WITH row of bare references still does not count',LAY.structure('**PRESS on LINK C1:** the record states it plainly here. PRESSED WITH: Matthew 1:1; Luke 3:23; Luke 2:4.').length===1);
+P('2.4 F2: "quote" (Ref [L1]) gives the reference its tag and its words',LAY.structure('## III. CLOSE\nD1: "Jacob begat Joseph the husband of Mary, of whom was born Jesus" (Matthew 1:16 [L1]; gennao [L2]) and "before they came together, she was found with child" (Matthew 1:18 [L1]; prin [L2]).').length===0);
+P('2.4 F2: a [L3] reference in the parenthesis gets no quotation it does not have',LAY.structure('## III. CLOSE\nD1: "Jacob begat Joseph the husband of Mary, of whom was born Jesus" (Matthew 1:16 [L1]; gennao [L2]; Matthew 1:2 [L3]) and nothing more is quoted.').length===1);
+P('2.4 F3: a correction head is not a point',LAY.structure('## 0. A correction on my own opening'+B1).length===0);
+P('2.4 F3: "I do not withdraw" stays a point (negation guard)',LAY.structure('## 2. I do not withdraw LINK 3'+B1).length===1);
 // Node runs
 const rows=JSON.parse(fs.readFileSync('def_rounds.json'));const r91=rows.find(x=>x.run_token.includes('37891'));
 const call={fam:'openrouter',fam_idx:5,model:'m',body:{model:'m',messages:[{role:'user',content:'x'}]}};
@@ -80,5 +87,5 @@ ok('resend-only file: the same record, no line written into the round',!XR.raw.i
 for(const [r,k] of [['D2','r2'],['D4','r4']]){const e={...env(''),[r+' Extract']:{run_token:'T',raw:r91[k],labelled:'L',msg_id:'i',fam:'openrouter',model:'m'},[r+' Build']:{call}};let g=null,er=null;try{g=run(NB[r+'B Build'].parameters.jsCode,e,{})[0].json;}catch(x){er=x.message;}ok('REAL 37891 '+k+': '+r+'B Build runs and reads the layers',!!g&&g.lay_check!==undefined||(!!g&&g.resend===false),er||(g&&g.why));}
 // Replay (G1, F2): every flag listed for the hand read
 const L=[];const per={};for(const x of rows)for(const k of ['r1','r2','r3','r4']){const c=LAY.check(x[k]);per[k]=per[k]||{runs:0,words:0,structure:0};if(c.items.length)per[k].runs++;for(const it of c.items){it.kind==='WORDS'?per[k].words++:per[k].structure++;L.push([x.run_token,k,it.id,it.kind,(it.kind==='WORDS'?it.line:it.head).replace(/\s+/g,' ').slice(0,400),it.why].join(' | '));}}
-fs.writeFileSync('replay364_flags_rev23.txt',L.join('\n')+'\n');console.log('   replay over '+rows.length+' stored runs (rounds 2 to 4 are Part A): '+JSON.stringify(per));
+fs.writeFileSync('replay364_flags_rev24.txt',L.join('\n')+'\n');console.log('   replay over '+rows.length+' stored runs (rounds 2 to 4 are Part A): '+JSON.stringify(per));
 console.log(n-fails+' of '+n+' pass');process.exit(fails?1:0);
