@@ -38,4 +38,5 @@ let r=runP([body('x',good+stale)]);ok('PLANT: a stale gate-time line over a now-
 r=runP([body('x','RESULT: CHALLENGER WINS -- the answer fails.')]);ok('PLANT: a final RESULT with no layers is flagged (a)(b)(c)(d)',v(r[0]).length===1&&/\(a\).*\(b\).*\(c\).*\(d\)/.test(v(r[0])[0]));
 r=runP(['not json',body('',good)]);ok('PLANT: a body that is not JSON, or has no seat, passes through unchanged',r[0]==='not json'&&v(r[1]).length===0);
 const otherAudit='\n[AUDIT v54: GRADE CONSISTENCY ... REVIEW THIS ROW.]';r=runP([body('x',good+otherAudit+stale)]);ok('PLANT: other AUDIT lines are kept',r[0].verdict_raw.includes(otherAudit.trim()));
+r=runP([body('x',null)].map(s=>s));ok('PLANT (W1 7749 item 2): a null verdict_raw stays null, not ""',r[0].verdict_raw===null,JSON.stringify(r[0].verdict_raw));
 console.log((fails?'FAILED ':'PASSED ')+(n-fails)+'/'+n);process.exit(fails?1:0);
