@@ -1,0 +1,124 @@
+ASK 379 results, W4, 2026-11-17. Target t379_on260.json sha256 3e8462b3adf7, child c379.json sha256 900dd4c719bd, base s260 (rdf/fetchback_s260.json).
+
+== engine check on 38450
+PASS Second Alternate? a2r (first entry)
+PASS Second Alternate? item apart from __a379
+PASS live code reproduces the stored Alternate Merge
+PASS Alternate Merge (fold) == live
+PASS Panel Tokens output == live
+PASS Format Markdown markdown == live (7612 lines)
+pass 6 fail 0
+
+== drift check
+EXCEPTION FUM Call R2 Alternate openrouter ($execution.id -> parent_exec)
+EXCEPTION R2 Alt Gate Call openrouter ($execution.id -> parent_exec)
+EXCEPTION R2 Alt Late Gate Call openrouter ($execution.id -> parent_exec)
+EXCEPTION R2 Alt Send Back Call openrouter ($execution.id -> parent_exec)
+EXCEPTION R2 Alternate Call openrouter ($execution.id -> parent_exec)
+EXCEPTION R2 Alternate Cure Call openrouter ($execution.id -> parent_exec)
+chain nodes equal 33 | listed exceptions 6 | drift 0 | Shared Library byte-equal true
+
+== n8n replay of 38450 (parent exec 38555, child exec 38556)
+child R2 Alternate Merge == stored R2 Alternate Merge: false bytes 1325772
+  differs enforcer_log [{"run_token":"ODV1-38450-bz66jhy3","seat":"sol62","seat_role":"panel","judge_model":"openai/gpt-6.2-sol","kind":"cure","rule":"K-G4","item":"D1 vs C2","flagged_line":"D1 vs C2 (Romans 1:3; Luke 1:
+  node R2 Alternate Build ran true stored ran true equal true
+  node R2 Alternate Cure Build ran false stored ran false equal true
+  node R2 Alternate Cure Normalize ran false stored ran false equal true
+  node R2 Alternate Call openrouter ran true stored ran true equal true
+  node R2 Alternate Cure Call openrouter ran false stored ran false equal true
+  node R2 Alt Judge Enforcer Call deepseek ran false stored ran false equal true
+  node R2 Alt Judge Enforcer Retry Call deepseek ran false stored ran false equal true
+  node R2 Alt Send Back Call openrouter ran false stored ran false equal true
+  node R2 Alt Gate Call openrouter ran false stored ran false equal true
+  node R2 Alt Late Gate Call openrouter ran false stored ran false equal true
+  node R2 Alt Reread Call deepseek ran false stored ran false equal true
+  node FUM Call R2 Alternate openrouter ran false stored ran false equal true
+chain nodes run: child 20 stored 20 only child [] only stored []
+  node output differs R2 Alternate Merge 1325774 1325774
+  node output differs R2 Alternate Merge Seat 1322487 1322487
+chain node outputs differing: 2
+-- node by node, s260 code on the same inputs:
+equal 13 differ 0 errors 0
+
+== n8n replay of 37372 (parent exec 38557, child exec 38558)
+child R2 Alternate Merge == stored R2 Alternate Merge: false bytes 2075839
+  differs bodies ["{\"payload\":{\"debate_id\":\"6c62698b-58d1-4f5f-9d8e-cd57f096e96c\",\"judge_seat\":\"chatgpt\",\"judge_api_model\":\"openai/gpt-6.1-terra\",\"verdict_raw\":\"{\\n  \\\"verdict_tag\\\": \\\"BROKEN\\ | 
+  differs enforcer_log [{"run_token":"ODV1-37372-6n5n7sh9","seat":"chatgpt","seat_role":"panel","judge_model":"openai/gpt-6.1-terra","kind":"cure","rule":"K-S3","item":"S3 DEFENDER CR4: #1","flagged_line":"DEFENDER CR4: 
+  node R2 Alternate Build ran true stored ran true equal true
+  node R2 Alternate Cure Build ran false stored ran false equal true
+  node R2 Alternate Cure Normalize ran false stored ran false equal true
+  node R2 Alternate Call openrouter ran true stored ran true equal true
+  node R2 Alternate Cure Call openrouter ran false stored ran false equal true
+  node R2 Alt Judge Enforcer Call deepseek ran false stored ran false equal true
+  node R2 Alt Judge Enforcer Retry Call deepseek ran false stored ran false equal true
+  node R2 Alt Send Back Call openrouter ran false stored ran false equal true
+  node R2 Alt Gate Call openrouter ran false stored ran false equal true
+  node R2 Alt Late Gate Call openrouter ran false stored ran false equal true
+  node R2 Alt Reread Call deepseek ran false stored ran false equal true
+  node FUM Call R2 Alternate openrouter ran false stored ran false equal true
+chain nodes run: child 20 stored 20 only child [] only stored []
+  node output differs R2 Alternate Merge 2076432 2075841
+  node output differs R2 Alternate Merge Seat 2068787 2068347
+  node output differs R2 Alternate Payloads 358902 358802
+chain node outputs differing: 3
+-- node by node, s260 code on the same inputs:
+equal 13 differ 0 errors 0
+
+== n8n replay of 37510 (parent exec 38559, child exec 38560)
+child R2 Alternate Merge == stored R2 Alternate Merge: false bytes 1724084
+  differs enforcer_log [{"run_token":"ODV1-37510-6gpyl6l8","seat":"chatgpt","seat_role":"panel","judge_model":"openai/gpt-6.1-terra","kind":"cure","rule":"K-G4","item":"D3 vs C2","flagged_line":"D3 vs C2 (Luke 1:31): CHA
+  node R2 Alternate Build ran true stored ran true equal true
+  node R2 Alternate Cure Build ran false stored ran false equal true
+  node R2 Alternate Cure Normalize ran false stored ran false equal true
+  node R2 Alternate Call openrouter ran true stored ran true equal true
+  node R2 Alternate Cure Call openrouter ran false stored ran false equal true
+  node R2 Alt Judge Enforcer Call deepseek ran false stored ran false equal true
+  node R2 Alt Judge Enforcer Retry Call deepseek ran false stored ran false equal true
+  node R2 Alt Send Back Call openrouter ran false stored ran false equal true
+  node R2 Alt Gate Call openrouter ran false stored ran false equal true
+  node R2 Alt Late Gate Call openrouter ran false stored ran false equal true
+  node R2 Alt Reread Call deepseek ran false stored ran false equal true
+  node FUM Call R2 Alternate openrouter ran false stored ran false equal true
+chain nodes run: child 20 stored 20 only child [] only stored []
+  node output differs R2 Alternate Merge 1724086 1724086
+  node output differs R2 Alternate Merge Seat 1719278 1719278
+chain node outputs differing: 2
+-- node by node, s260 code on the same inputs:
+equal 13 differ 0 errors 0
+
+== n8n replay of 35296 (parent exec 38561, child exec 38562)
+the child returned no item (its chain stopped before R2 Alternate Merge)
+chain nodes run: child 19 stored 29 only child [ 'R2 Alt Judge Enforcer Retry Call deepseek' ] only stored [
+  'R2 Alt Gate Build',
+  'R2 Alt Gate Needed?',
+  'R2 Alt Gate Record',
+  'R2 Alt Judge Enforcer Record',
+  'R2 Alt Reread Build',
+  'R2 Alt Reread Needed?',
+  'R2 Alt Reread Record',
+  'R2 Alt Send Back Build',
+  'R2 Alt Send Back Needed?',
+  'R2 Alt Send Back Record',
+  'R2 Alternate Merge'
+]
+  node output differs FUM Merge R2 Alternate 12328 11530
+  node output differs R2 Alt Judge Enforcer Build 76163 45056
+  node output differs R2 Alt Judge Enforcer Needed? 76163 45056
+  node output differs R2 Alt Judge Enforcer Retry Build 99295 21
+  node output differs R2 Alt Judge Enforcer Retry Needed? 99295 2
+  node output differs R2 Alternate Cure Build 420033 424031
+  node output differs R2 Alternate Cure Needed? 266022 263788
+  node output differs R2 Alternate Cure Normalize 186529 192499
+  node output differs R2 Alternate Merge Seat 1900365 1899502
+  node output differs R2 Alternate Payloads 266022 263788
+chain node outputs differing: 10
+-- node by node, s260 code on the same inputs:
+equal 9 differ 0 errors 0
+
+== notes
+1. 38450, 37510: R2 Alternate Merge and Merge Seat equal the record apart from enforcer_log "at" timestamps (checked with "at" removed: equal).
+2. 37372: also differs by the usage line (R2 Alternate Payloads usage_line, null in the 11-15 record, "USAGE: prompt=104006 completion=64000 reasoning=56380 finish=length max_tokens=64000" now): code added after 11-15. Every chain code node the child ran gives what s260 code gives on the same inputs (13 of 13).
+3. 35296 (11-13): s260 code takes another path than the 11-13 code did (R2 Alternate Payloads and the cure items differ: K-G8 and K-W items now), so the recorded model replies do not fit; the enforcer reply is short for the new items, the retry runs, its pinned reply is empty (never made in 35296), and the chain stops. Every chain code node the child ran gives what s260 code gives (9 of 9). Same-as-live on 35296 cannot be shown with recorded replies.
+4. 35379: its Second Alternate? record has no a2r (older code); not comparable.
+5. Memory: first build crashed the n8n instance on 37372 (13.3 MB input; executions 38551 and 38552 "possible out-of-memory"; no other execution failed; engine stayed at s260). Rebuilt: input check returns flags only; holders read the input node; gates check once; one empty item between holders; Pass Accumulate keeps only this pass's node items; the pass input leaves the engine pass state out. 38450 child: 48.3 MB / 80 s before, 20.7 MB / 11.7 s after, same result. 37372 now runs (11.3 MB input, child 36.7 MB file).
+6. Engine bytes kept per pass (estimate): 38450 about 15 MB, 37372 about 24 MB (the pass input is 6.5 / 11.3 MB of it). With the cap at 6 the engine could keep up to about 145 MB more on a 37372-sized run.

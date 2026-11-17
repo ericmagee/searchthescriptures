@@ -1,0 +1,34 @@
+[
+ {
+  "node": "R2 Alt Gate Call openrouter",
+  "what": "$execution.id -> the engine execution id passed in (1)"
+ },
+ {
+  "node": "R2 Alt Late Gate Call openrouter",
+  "what": "$execution.id -> the engine execution id passed in (1)"
+ },
+ {
+  "node": "R2 Alt Send Back Call openrouter",
+  "what": "$execution.id -> the engine execution id passed in (1)"
+ },
+ {
+  "node": "R2 Alternate Call openrouter",
+  "what": "$execution.id -> the engine execution id passed in (1)"
+ },
+ {
+  "node": "R2 Alternate Cure Call openrouter",
+  "what": "$execution.id -> the engine execution id passed in (1)"
+ },
+ {
+  "node": "FUM Call R2 Alternate openrouter",
+  "what": "$execution.id -> the engine execution id passed in (1)"
+ },
+ {
+  "node": "Format Markdown",
+  "what": "3 reads moved to the pass record"
+ },
+ {
+  "node": "Panel Tokens",
+  "what": "12 reads moved to the pass record"
+ }
+]
