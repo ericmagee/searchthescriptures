@@ -21,4 +21,9 @@ ok   FLAG (live FLAG) | Nothing is VOID but premise 4.
 ok   FLAG (live FLAG) | None of the premises is VOID other than premise 3.
 ok   FLAG (live skip) | No premise is VOID save premise 1.
 ok   FLAG (live FLAG) | No listed premise is VOID, besides premise 5.
+ok   skip (live skip) | Premise 4 is not VOID but UNEXHIBITED.
+ok   skip (live skip) | No premise is VOID, but premise 4 is UNEXHIBITED.
+ok   skip (live skip) | Premise 2 is not VOID, but it is weak.
+ok   FLAG (live skip) | No premise is VOID except premises 2 and 3.
+ok   FLAG (live FLAG) | Nothing is VOID except for premise 1;
 ALL OK

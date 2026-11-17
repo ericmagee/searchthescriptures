@@ -6,7 +6,7 @@ const NEG=new RegExp([
  '\\bnone\\s+(?:of\\s+(?:the\\s+|them\\s*)'+W+'(?:'+N+'\\s+)?)?(?:is|are|was|were)\\s+(?:ruled\\s+)?VOID\\b',
  '\\b(?:rule|ruled|rules|find|finds|found)\\s+no\\s+'+W+N+'\\s+VOID\\b',
  '\\bneither\\b[^.;:]{0,60}?\\b(?:is|are)\\s+VOID\\b',
- '\\bnothing\\s+(?:is\\s+|was\\s+)?(?:ruled\\s+)?VOID\\b'].map(a=>'(?:'+a+')(?!\\s*,?\\s*(?:except|but|save|besides|other\\s+than)\\b)').join('|'),'gi'); // rev 2 (W2 7385): an exception clause keeps the VOID
+ '\\bnothing\\s+(?:is\\s+|was\\s+)?(?:ruled\\s+)?VOID\\b'].map(a=>'(?:'+a+')(?!\\s*,?\\s*(?:except|but|save|besides|other\\s+than)\\s+(?:for\\s+)?(?:premises?\\s+)?\\d+(?:\\s*(?:,|and|or)\\s*(?:premises?\\s+)?\\d+)*\\s*(?:[.;:]|$))').join('|'),'gim'); // rev 3 (W2 7385, 7390): an exception keeps the VOID only when a premise number follows and the clause ends
 const skip=t=>!/\bVOID\b/.test(t.replace(NEG,' '));
 const OLD=/\b(?:not|never)\s+(?:be\s+)?VOID\b|\bno\s+(?:premise|charge|link)s?\s+(?:is|are|was|were)\s+VOID\b|\bnone\s+(?:is|are|of\s+them\s+(?:is|are))\s+VOID\b/i;
 const C=[ // [text, expected: true = skip (no VOID ruling), false = flag]
@@ -23,6 +23,8 @@ const C=[ // [text, expected: true = skip (no VOID ruling), false = flag]
  ['No premise is VOID except premise 2.',false],['Nothing is VOID but premise 4.',false],
  ['None of the premises is VOID other than premise 3.',false],['No premise is VOID save premise 1.',false],
  ['No listed premise is VOID, besides premise 5.',false],
+ ['Premise 4 is not VOID but UNEXHIBITED.',true],['No premise is VOID, but premise 4 is UNEXHIBITED.',true],['Premise 2 is not VOID, but it is weak.',true],
+ ['No premise is VOID except premises 2 and 3.',false],['Nothing is VOID except for premise 1;',false],
 ];
 let bad=0;for(const [t,e] of C){const s=skip(t);if(s!==e)bad++;console.log((s===e?'ok  ':'FAIL')+' '+(s?'skip':'FLAG')+' (live '+(!/\bVOID\b/.test(t)||OLD.test(t)?'skip':'FLAG')+') | '+t);}
 console.log(bad?'FAILS '+bad:'ALL OK');
