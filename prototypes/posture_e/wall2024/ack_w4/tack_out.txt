@@ -1,0 +1,38 @@
+ok   library lines changed are 2647, 2688, 3354, 3361, 3406 only, line count unchanged :: 2647, 2688, 3354, 3361, 3406
+ok   no changed line holds a newline
+ok   only the Shared Library node changed :: Shared Library
+ok   connections and settings unchanged
+ok   every MAP entry rebuilds to its n :: 45 entries
+ok   changed entries are the 3 Judge Enforcer Record and 3 Send Back Record nodes :: Alt Judge Enforcer Record, Alt Send Back Record, Judge Enforcer Record, R2 Alt Judge Enforcer Record, R2 Alt Send Back Record, Send Back Record
+ok   syntax of every changed entry
+ok   each changed entry defines ackFoot2024 once
+ok   loaders find ETC, enf428Cure and ackFoot2024
+ok   reader: "missing footing" read
+ok   reader: "assumed-fact defect" read
+ok   reader: bare "assumed" in passing NOT read
+ok   reader: bare "unexhibited" NOT read
+ok   reader: inside a quotation NOT read
+ok   reader: negated NOT read
+ok   reader: "rather than exhibiting" read
+ok   REAL 42486 (sol, run 37891): judge line in footing form ("unexhibited genealogical fact" outside quotes); live sends the STANDS push; ASK 353 records it CONTRADICTED, not sent :: BROKEN (its own reason names a footing defect, "missing footing": a missing fact is not a meaning that can agree, so the
+ok   PLANT judge meaning line (no footing form) + enforcer reason saying "missing footing": sent as live (W2 7492 condition 1)
+ok   PLANT judge line whose footing words stand only inside its quotations: not footing form
+ok   PLANT judge line with ASSUMES: is footing form
+ok   PLANT meaning DISAGREE using "assumed" in passing still goes back as STANDS (W3 7485 condition 2)
+ok   PLANT the same footing reason on E-HOLD, E-KEY and on right BROKEN: unchanged
+ok   REPLAY Part A over 331 stored E-COL enforcer rows: changes are 42486 only (42492, the second line of the same seat, says "the given genealogical fact", not a footing form, and stays HELD by pkgECW live) :: 42486 STANDS
+ok   REAL 42554 (sol, run 37891): RETRACTED with "assumed-fact defect" in its reason reads UNCURED :: UNCURED: withdrawn, but its own words name a footing defect ("assumed-fact"): a missing fact is not cured by withdrawin
+ok   REAL 42680 to 42683 (grok meaning withdrawals): still CURED, same reason as live :: 42680 CURED: CHANGE TO a line that does not grade the pair BROKEN or FORCED | 42681 CURED: CHANGE TO a line that does not grade the pair BROKEN or FORCED | 42682 CURED: CHANGE TO a line that does not grade the pair BROKEN or FORCED | 42683 CURED: CHANGE TO a line that does not grade the pair BROKEN or FORCED
+ok   PLANT RETRACTED whose reason says "missing footing" on a judge meaning line (no footing form): CURED as live
+ok   REAL 18229 and 18231 (RETRACTED holding FORCED, no footing words): CURED, now as CHANGE TO RETRACTED :: 18229 CURED: CHANGE TO RETRACTED | 18231 CURED: CHANGE TO RETRACTED
+ok   REAL 18233 (RETRACTED holding FORCED, no footing words): stored UNCURED, ASK 353 CURED as a retraction (stated change) :: CURED: CHANGE TO RETRACTED
+ok   PLANT RETRACTED with "missing footing" on a grt2 item: CURED (pkgGRT2 companion kept)
+ok   PLANT CHANGE TO STANDS whose reason says "missing footing": UNCURED
+ok   PLANT CHANGE TO STANDS whose reason says "not a footing defect": CURED as live
+ok   PLANT a KEEP that names "missing footing": same as live (KEEP path untouched)
+REPLAY Part B (rounds not read on either side, so 42554 reads UNCURED on live too here; the stored CURED came from both() with rounds): 314 parsed of 348 stored E-COL send-backs; status or reason changed on 4: 18229 UNCURED->CURED (stored CURED); 18231 UNCURED->CURED (stored CURED); 18233 UNCURED->CURED (stored UNCURED); 42554 UNCURED->UNCURED (stored CURED)
+ok   REPLAY Part B: the only rows whose status or reason changes are 42554, 18229, 18231, 18233 :: status changes: 18229 UNCURED->CURED, 18231 UNCURED->CURED, 18233 UNCURED->CURED; other: 
+
+NOTE (W1 7488 item 4): 42680 to 42683 come from grok pushes 42659 to 42662. Under ASK 355 those pushes are HELD (CARRIED BY is the line's own verse), so in a run with both ASKs those send-backs are not issued: a combined replay shows them as NOT SENT, not UNCURED. The test above checks the ASK 353 cure code alone.
+
+33/33 OK
