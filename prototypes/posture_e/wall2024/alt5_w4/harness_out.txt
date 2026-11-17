@@ -1,0 +1,45 @@
+== chatgpt_gemini
+  fetchback_s256.json const fail=m=>{throw new Error('ORACLE_DEBATE_V1 Init refused: '+m+RT);};
+  talt5_on256.json panel haiku,spark,ernie | res ember | alt ember,sonnet | judges haiku,spark,ernie
+== chatgpt_sol
+  fetchback_s256.json const fail=m=>{throw new Error('ORACLE_DEBATE_V1 Init refused: '+m+RT);};
+  talt5_on256.json const fail=m=>{throw new Error('ORACLE_DEBATE_V1 Init refused: '+m+RT);};
+== claude_opus
+  fetchback_s256.json panel chatgpt,sol,sol62 | res haiku | alt haiku,hydrogen,gemini,argon,spark,ernie,ember,sonnet | judges chatgpt,sol,sol62
+  talt5_on256.json panel chatgpt,sol,sol62 | res haiku | alt haiku,hydrogen,gemini,argon,spark,ernie,ember,sonnet | judges chatgpt,sol,sol62
+== gemini_mimo
+  fetchback_s256.json panel chatgpt,sol,sol62 | res haiku | alt haiku,spark,ernie,ember,sonnet | judges chatgpt,sol,sol62
+  talt5_on256.json panel chatgpt,sol,sol62 | res haiku | alt haiku,spark,ernie,ember,sonnet | judges chatgpt,sol,sol62
+== gemini_spark
+  fetchback_s256.json panel chatgpt,sol,sol62 | res haiku | alt haiku,ernie,sonnet | judges chatgpt,sol,sol62
+  talt5_on256.json panel chatgpt,sol,sol62 | res haiku | alt haiku,ernie,sonnet | judges chatgpt,sol,sol62
+== glm_spark
+  fetchback_s256.json panel chatgpt,sol,sol62 | res haiku | alt haiku,hydrogen,gemini,argon,ernie,sonnet | judges chatgpt,sol,sol62
+  talt5_on256.json panel chatgpt,sol,sol62 | res haiku | alt haiku,hydrogen,gemini,argon,ernie,sonnet | judges chatgpt,sol,sol62
+== haiku_gemini
+  fetchback_s256.json panel chatgpt,sol,sol62 | res spark | alt spark,ernie,ember | judges chatgpt,sol,sol62
+  talt5_on256.json panel chatgpt,sol,sol62 | res spark | alt spark,ernie,ember | judges chatgpt,sol,sol62
+== opus_gemini
+  fetchback_s256.json panel chatgpt,sol,sol62 | res spark | alt spark,ernie,ember | judges chatgpt,sol,sol62
+  talt5_on256.json panel chatgpt,sol,sol62 | res spark | alt spark,ernie,ember | judges chatgpt,sol,sol62
+== opus_spark
+  fetchback_s256.json panel chatgpt,sol,sol62 | res hydrogen | alt hydrogen,gemini,argon,ernie | judges chatgpt,sol,sol62
+  talt5_on256.json panel chatgpt,sol,sol62 | res hydrogen | alt hydrogen,gemini,argon,ernie | judges chatgpt,sol,sol62
+== qwen4max_spark
+  fetchback_s256.json panel chatgpt,sol,sol62 | res haiku | alt haiku,hydrogen,gemini,argon,ernie,sonnet | judges chatgpt,sol,sol62
+  talt5_on256.json panel chatgpt,sol,sol62 | res haiku | alt haiku,hydrogen,gemini,argon,ernie,sonnet | judges chatgpt,sol,sol62
+== chatgpt v claude
+  fetchback_s256.json Init refused: '+m+RT);};
+  talt5_on256.json panel hydrogen,gemini,argon | res spark | alt spark,ernie,ember | judges hydrogen,gemini,argon
+== chatgpt v spark
+  fetchback_s256.json Init refused: '+m+RT);};
+  talt5_on256.json panel haiku,hydrogen,gemini | res argon | alt argon,ernie,sonnet | judges haiku,hydrogen,gemini
+== chatgpt v opus
+  fetchback_s256.json Init refused: '+m+RT);};
+  talt5_on256.json panel hydrogen,gemini,argon | res spark | alt spark,ernie,ember | judges hydrogen,gemini,argon
+== claude v haiku
+  fetchback_s256.json panel chatgpt,sol,sol62 | res hydrogen | alt hydrogen,gemini,argon,spark,ernie,ember,sonnet | judges chatgpt,sol,sol62
+  talt5_on256.json panel chatgpt,sol,sol62 | res hydrogen | alt hydrogen,gemini,argon,spark,ernie,ember,sonnet | judges chatgpt,sol,sol62
+== gemini v spark
+  fetchback_s256.json panel chatgpt,sol,sol62 | res haiku | alt haiku,ernie,sonnet | judges chatgpt,sol,sol62
+  talt5_on256.json panel chatgpt,sol,sol62 | res haiku | alt haiku,ernie,sonnet | judges chatgpt,sol,sol62
