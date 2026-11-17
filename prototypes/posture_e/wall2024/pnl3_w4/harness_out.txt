@@ -1,0 +1,42 @@
+== gemini_spark stk/tpnl2_on252.json
+ "debaters": [  "gemini",  "spark" "accept_seats": [  "chatgpt",  "sol",  "haiku",  "hydrogen",  "gemini",  "argon",  "spark" "panel": [  "chatgpt",  "sol",  "haiku" "reserve": null, "alt_order": [], "resolved_judges": [  "chatgpt",  "sol",  "haiku" "resolved_alternates": []
+
+== gemini_spark pnl/tpnl3_on252.json
+ "debaters": [  "gemini",  "spark" "accept_seats": [  "chatgpt",  "sol",  "haiku",  "hydrogen",  "gemini",  "argon",  "spark",  "ernie",  "ember",  "sonnet" "panel": [  "chatgpt",  "sol",  "haiku" "reserve": "ernie", "alt_order": [  "ernie",  "sonnet" "resolved_judges": [  "chatgpt",  "sol",  "haiku" "resolved_alternates": [  "ernie:baidu/ernie-5.5-flash-preview:free:baidu",  "sonnet:anthropic/claude-sonnet-5.5:anthropic"
+
+== opus_gemini stk/tpnl2_on252.json
+ "debaters": [  "opus",  "gemini" "accept_seats": [  "chatgpt",  "sol",  "haiku",  "hydrogen",  "gemini",  "argon",  "spark" "panel": [  "chatgpt",  "sol",  "haiku" "reserve": "spark", "alt_order": [  "spark" "resolved_judges": [  "chatgpt",  "sol",  "haiku" "resolved_alternates": [  "spark:meta/muse-spark-1.3:meta"
+
+== opus_gemini pnl/tpnl3_on252.json
+const fail=m=>{throw new Error('ORACLE_DEBATE_V1 Init refused: '+m+RT);};Error: ORACLE_DEBATE_V1 Init refused: NOT GRADED: the derived panel is 2 seat(s) [chatgpt, sol]; the roster is exactly three. run_token=ODV1-999-n1rsieah
+
+== claude_opus stk/tpnl2_on252.json
+ "debaters": [  "claude",  "opus" "accept_seats": [  "chatgpt",  "sol",  "haiku",  "hydrogen",  "gemini",  "argon",  "spark" "panel": [  "chatgpt",  "sol",  "haiku" "reserve": "hydrogen", "alt_order": [  "hydrogen",  "gemini",  "argon",  "spark" "resolved_judges": [  "chatgpt",  "sol",  "haiku" "resolved_alternates": [  "hydrogen:google/gemini-4-hydrogen:google",  "gemini:google/gemini-3.8-flash:google",  "argon:google/gemini-4-argon:google",  "spark:meta/muse-spark-1.3:meta"
+
+== claude_opus pnl/tpnl3_on252.json
+ "debaters": [  "claude",  "opus" "accept_seats": [  "chatgpt",  "sol",  "haiku",  "hydrogen",  "gemini",  "argon",  "spark",  "ernie",  "ember",  "sonnet" "panel": [  "chatgpt",  "sol",  "haiku" "reserve": "hydrogen", "alt_order": [  "hydrogen",  "gemini",  "argon",  "spark",  "ernie",  "ember",  "sonnet" "resolved_judges": [  "chatgpt",  "sol",  "haiku" "resolved_alternates": [  "hydrogen:google/gemini-4-hydrogen:google",  "gemini:google/gemini-3.8-flash:google",  "argon:google/gemini-4-argon:google",  "spark:meta/muse-spark-1.3:meta",  "ernie:baidu/ernie-5.5-flash-preview:free:baidu",  "ember:meta/muse-ember:meta",  "sonnet:anthropic/claude-sonnet-5.5:anthropic"
+
+== opus_spark stk/tpnl2_on252.json
+ "debaters": [  "opus",  "spark" "accept_seats": [  "chatgpt",  "sol",  "haiku",  "hydrogen",  "gemini",  "argon",  "spark" "panel": [  "chatgpt",  "sol",  "haiku" "reserve": "hydrogen", "alt_order": [  "hydrogen",  "gemini",  "argon" "resolved_judges": [  "chatgpt",  "sol",  "haiku" "resolved_alternates": [  "hydrogen:google/gemini-4-hydrogen:google",  "gemini:google/gemini-3.8-flash:google",  "argon:google/gemini-4-argon:google"
+
+== opus_spark pnl/tpnl3_on252.json
+const fail=m=>{throw new Error('ORACLE_DEBATE_V1 Init refused: '+m+RT);};Error: ORACLE_DEBATE_V1 Init refused: NOT GRADED: the derived panel is 2 seat(s) [chatgpt, sol]; the roster is exactly three. run_token=ODV1-999-qpyzbwem
+
+== haiku_gemini stk/tpnl2_on252.json
+const fail=m=>{throw new Error('ORACLE_DEBATE_V1 Init refused: '+m+RT);};Error: ORACLE_DEBATE_V1 Init refused: NOT GRADED: the derived panel is 2 seat(s) [chatgpt, sol]; the roster is exactly three. run_token=ODV1-999-k9ycy4pc
+
+== haiku_gemini pnl/tpnl3_on252.json
+const fail=m=>{throw new Error('ORACLE_DEBATE_V1 Init refused: '+m+RT);};Error: ORACLE_DEBATE_V1 Init refused: NOT GRADED: the derived panel is 2 seat(s) [chatgpt, sol]; the roster is exactly three. run_token=ODV1-999-2lfx3pzc
+
+== chatgpt_gemini stk/tpnl2_on252.json
+const fail=m=>{throw new Error('ORACLE_DEBATE_V1 Init refused: '+m+RT);};Error: ORACLE_DEBATE_V1 Init refused: NOT GRADED: the derived panel is 1 seat(s) [haiku]; the roster is exactly three. run_token=ODV1-999-p85w925o
+
+== chatgpt_gemini pnl/tpnl3_on252.json
+const fail=m=>{throw new Error('ORACLE_DEBATE_V1 Init refused: '+m+RT);};Error: ORACLE_DEBATE_V1 Init refused: NOT GRADED: the derived panel is 1 seat(s) [haiku]; the roster is exactly three. run_token=ODV1-999-la8i5oyy
+
+== qwen4max_spark stk/tpnl2_on252.json
+ "debaters": [  "qwen4max",  "spark" "accept_seats": [  "chatgpt",  "sol",  "haiku",  "hydrogen",  "gemini",  "argon",  "spark" "panel": [  "chatgpt",  "sol",  "haiku" "reserve": "hydrogen", "alt_order": [  "hydrogen",  "gemini",  "argon" "resolved_judges": [  "chatgpt",  "sol",  "haiku" "resolved_alternates": [  "hydrogen:google/gemini-4-hydrogen:google",  "gemini:google/gemini-3.8-flash:google",  "argon:google/gemini-4-argon:google"
+
+== qwen4max_spark pnl/tpnl3_on252.json
+ "debaters": [  "qwen4max",  "spark" "accept_seats": [  "chatgpt",  "sol",  "haiku",  "hydrogen",  "gemini",  "argon",  "spark",  "ernie",  "ember",  "sonnet" "panel": [  "chatgpt",  "sol",  "haiku" "reserve": "hydrogen", "alt_order": [  "hydrogen",  "gemini",  "argon",  "ernie",  "sonnet" "resolved_judges": [  "chatgpt",  "sol",  "haiku" "resolved_alternates": [  "hydrogen:google/gemini-4-hydrogen:google",  "gemini:google/gemini-3.8-flash:google",  "argon:google/gemini-4-argon:google",  "ernie:baidu/ernie-5.5-flash-preview:free:baidu",  "sonnet:anthropic/claude-sonnet-5.5:anthropic"
+
