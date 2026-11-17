@@ -1,0 +1,9 @@
+ok   library lines changed are 987, 1024, 2187 only :: 987, 1024, 2187
+ok   only the Shared Library node changed :: Shared Library
+ok   every MAP entry rebuilds to its n :: 45 entries
+ok   syntax of every changed library entry :: 14 entries
+ok   14 kvSegments entries carry the new guard (W4 miscounted 16 at Wall 7379 and 7383) :: 14 entries
+ok   the three copies hold one identical guard literal
+ok   design cases on the built literal :: 28 cases
+ok   sol's 37891 sentence clears (rows 42373 to 42376)
+ALL OK
