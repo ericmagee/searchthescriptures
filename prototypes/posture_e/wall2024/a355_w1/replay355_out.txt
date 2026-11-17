@@ -35,4 +35,8 @@ ok   PLANT: another seat's collision line is not read (no pressed verse found; t
 ok   PLANT: the pressed-verse rule does not apply to an AGREE :: {"applies":false}
 ok   PLANT: an absence ground with no CARRIED BY stays exempt as live
 ok   PLANT (row 42661 form): an absence word plus a CARRIED BY goes through the gate :: its CARRIED BY Matthew 1:25 is the line's own pressed verse; the words in dispute cannot carry a rival reading of themselves; a rival reading is carried by another row read with it (Commitment 16; ASK 355)
-18 checks, ALL OK
+ok   REAL line (judgment 1208, luna D5 vs C4): pressed() reads both [L1] verses, Luke 2:48 and Luke 3:23 :: [{"book":"Luke","ch":2,"v1":48,"v2":48},{"book":"Luke","ch":2,"v1":48,"v2":48},{"book":"Luke","ch":3,"v1":23,"v2":23}]
+ok   PLANT (1208 line as a break): a CARRIED BY on the second [L1], Luke 3:23, is HELD :: its CARRIED BY Luke 3:23 is the line's own pressed verse; the words in dispute cannot carry a rival reading of themselves; a rival reading is carried by another row read with it (Commitment 16; ASK 355)
+ok   PLANT: an E-HOLD push on a line with no answering side, CARRIED BY its [L1] Luke 3:23, is HELD (the check runs before NOT CHECKED) :: its CARRIED BY Luke 3:23 is the line's own pressed verse; the words in dispute cannot carry a rival reading of themselves; a rival reading is carried by another row read with it (Commitment 16; ASK 355)
+ok   PLANT: the same push with another row reads as live (NOT CHECKED, sent) :: NOT CHECKED: the line names no answering side
+22 checks, ALL OK

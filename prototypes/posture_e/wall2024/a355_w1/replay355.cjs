@@ -39,4 +39,15 @@ g=T.gate(x,{v:'DISAGREE',right:'STANDS',why:'the break rests on an absence'},{R:
 ok('PLANT: an absence ground with no CARRIED BY stays exempt as live',g.exempt===true);
 g=T.gate(x,{v:'DISAGREE',right:'STANDS',why:'the answer\'s words rest on an absence, while the row gives a rival reading -- CARRIED BY: Matthew 1:25 "And knew her not till she had brought forth her firstborn son"'},{R:{...Rp,DR3:Rp.DR3+' Matthew 1:25'},rows:pv,words:[],sib:[x]});
 ok('PLANT (row 42661 form): an absence word plus a CARRIED BY goes through the gate',g.applies===true&&g.send===false,g.why);
+// rev 2 plants (W3 7502 F1): every [L1] of the GROUND
+const LU='D5 vs C4 (Luke 2:48): UNDERDETERMINED -- GROUND: [L1] Luke 2:48 \u201cbehold, thy father and I have sought thee sorrowing\u201d | [L1] Luke 3:23 \u201cbeing (as was supposed) the son of Joseph\u201d -- [CR3] says Mary used \u201ccustomary parental speech,\u201d while the challenger takes her words as naming Joseph father; the record leaves open whether \u201cthy father\u201d establishes biological paternity or parental standing (Commitment 7).';
+const xl={id:'P3',rule:'E-HOLD',seat:'luna',item:'COLLISION D5 vs C4',flagged_line:LU};
+ok('REAL line (judgment 1208, luna D5 vs C4): pressed() reads both [L1] verses, Luke 2:48 and Luke 3:23',JSON.stringify([...new Set(T.pressed(xl,[]).refs.map(p=>p.book+' '+p.ch+':'+p.v1))])==='["Luke 2:48","Luke 3:23"]',JSON.stringify(T.pressed(xl,[]).refs));
+const LB=LU.replace(': UNDERDETERMINED --',': CHALLENGER LINK BROKEN --');const xb={...xl,rule:'E-COL',flagged_line:LB};
+g=T.gate(xb,{v:'DISAGREE',right:'STANDS',why:'the answer reads the son as supposed -- CARRIED BY: Luke 3:23 "being (as was supposed) the son of Joseph"'},{R:{...Rp,DR3:'Luke 3:23 "being (as was supposed) the son of Joseph"'},rows:pv,words:[],sib:[xb]});
+ok('PLANT (1208 line as a break): a CARRIED BY on the second [L1], Luke 3:23, is HELD',g.send===false&&/pressed verse/.test(g.why),g.why);
+g=T.gate({...xl,rule:'E-HOLD',flagged_line:LU.replace(': UNDERDETERMINED --',': STANDS --')},{v:'DISAGREE',right:'UNDERDETERMINED',why:'both readings fit -- CARRIED BY: Luke 3:23 "being (as was supposed) the son of Joseph"'},{R:Rp,rows:pv,words:[],sib:[]});
+ok('PLANT: an E-HOLD push on a line with no answering side, CARRIED BY its [L1] Luke 3:23, is HELD (the check runs before NOT CHECKED)',g.send===false&&/pressed verse/.test(g.why),g.why||g.note);
+g=T.gate({...xl,rule:'E-HOLD',flagged_line:LU.replace(': UNDERDETERMINED --',': STANDS --')},{v:'DISAGREE',right:'UNDERDETERMINED',why:'both readings fit -- CARRIED BY: Matthew 1:16 "Joseph the husband of Mary, of whom was born Jesus"'},{R:Rp,rows:pv,words:[],sib:[]});
+ok('PLANT: the same push with another row reads as live (NOT CHECKED, sent)',g.send===true&&/NOT CHECKED/.test(g.note||''),g.note);
 console.log(n+' checks, '+(f?'FAILS '+f:'ALL OK'));
