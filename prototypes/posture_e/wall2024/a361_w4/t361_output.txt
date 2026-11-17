@@ -1,10 +1,15 @@
-ok   library line changed is 1754 only; line count unchanged :: 1754
+ok   library lines changed are 1754, 2400, 3491 only; line count unchanged; no newline added inside a line :: 1754,2400,3491
 ok   only the Shared Library node changed; node order, connections, settings equal :: Shared Library
 ok   every MAP entry rebuilds to its n :: 45 entries
 ok   changed MAP entries are exactly the nine (W1 7589 item 6) :: 9: Alt Gate Build, Alt Gate Record, Alt Late Gate Build, Gate Build, Gate Record, Late Gate Build, R2 Alt Gate Build, R2 Alt Gate Record, R2 Alt Late Gate Build
 ok   syntax of every changed entry (9)
 ok   rudPair2024 byte for byte (W1 7589 item 6) :: 2215 chars
 ok   loader gives gateVnv2024 on both
+ok   line 2400: the layers paragraph is sent when an E-GATE V item is raised, and only then :: 530 / 0
+ok   line 2400: the text before the new paragraph is unchanged
+ok   line 3491: the layers paragraph is sent when an E-GATE V item is raised, and only then :: 530 / 0
+ok   line 3491: the text before the new paragraph is unchanged
+ok   Gate Build and Late Gate Build entries each hold the paragraph once
 ok   REAL sol 1213: base gives no item
 ok   REAL sol 1213: target gives one item VNV|CHALLENGER|3 :: VNV|CHALLENGER|3
    lines: ["CHALLENGE STANDING: SELF-SUPPORTED -- L=6 c=0 -- Premises 1, 2, 4, 5, and 6 exhibit [L1] and [L3] independently of their disputed lexical se","CHALLENGER CONCEDED LINKS: 0 -- Premises 1 through 6 are spared as footed inferences with substantive answers; premise 3 is included in that"]
@@ -41,4 +46,4 @@ ok   LIMIT (base, unchanged): "is not void of support" reads as not VOID in base
       | CHALLENGE STANDING: SELF-SUPPORTED -- L=6 c=0 -- Premises 1, 2, 4, 5, and 6 exhibit [L1] and [L3] independently of their disputed lexical selections; premise 3 is VOID as charged, and the remaining answers positively explain the chronology, covenant reading, and descent reading.
       | CHALLENGER CONCEDED LINKS: 0 -- Premises 1 through 6 are spared as footed inferences with substantive answers; premise 3 is included in that examination, not excluded as void, and its earlier void ruling card is retracted.
 ok   REPLAY: no item is lost :: 0 lost
-38 of 38 pass
+43 of 43 pass

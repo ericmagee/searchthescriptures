@@ -2,7 +2,7 @@
 const fs=require('fs');const {unpack,rb,load}=require('../tools/lib.cjs');
 let fails=0,n=0;const ok=(t,c,d)=>{n++;console.log((c?'ok  ':'FAIL')+' '+t+(d?' :: '+d:''));if(!c)fails++;};
 const tw=JSON.parse(fs.readFileSync(process.argv[2]||'target_361.json')),lw=JSON.parse(fs.readFileSync(process.argv[3]||'../rdf/fetchback_s245.json'));const tu=unpack(tw),lu=unpack(lw);
-const dl=tu.L.map((l,i)=>l!==lu.L[i]?i:-1).filter(i=>i>=0);ok('library line changed is 1754 only; line count unchanged',tu.L.length===lu.L.length&&dl.join()==='1754',dl.join(','));
+const dl=tu.L.map((l,i)=>l!==lu.L[i]?i:-1).filter(i=>i>=0);ok('library lines changed are 1754, 2400, 3491 only; line count unchanged; no newline added inside a line',tu.L.length===lu.L.length&&dl.join()==='1754,2400,3491'&&dl.every(i=>tu.L[i].split('\n').length===lu.L[i].split('\n').length),dl.join(','));
 const LN={};for(const x of lw.nodes)LN[x.name]=x;const dn=tw.nodes.filter(x=>JSON.stringify(x)!==JSON.stringify(LN[x.name])).map(x=>x.name);ok('only the Shared Library node changed; node order, connections, settings equal',dn.join()==='Shared Library'&&tw.nodes.map(x=>x.name).join()===lw.nodes.map(x=>x.name).join()&&JSON.stringify(tw.connections)===JSON.stringify(lw.connections)&&JSON.stringify(tw.settings)===JSON.stringify(lw.settings),dn.join(','));
 const bad=Object.keys(tu.M).filter(k=>rb(tu.L,tu.M[k]).length!==tu.M[k].n);ok('every MAP entry rebuilds to its n',bad.length===0,Object.keys(tu.M).length+' entries');
 const ch=Object.keys(tu.M).filter(k=>rb(tu.L,tu.M[k])!==rb(lu.L,lu.M[k])).sort();const W=['Alt Gate Build','Alt Gate Record','Alt Late Gate Build','Gate Build','Gate Record','Late Gate Build','R2 Alt Gate Build','R2 Alt Gate Record','R2 Alt Late Gate Build'];ok('changed MAP entries are exactly the nine (W1 7589 item 6)',ch.join()===W.join(),ch.length+': '+ch.join(', '));
@@ -12,6 +12,16 @@ ok('rudPair2024 byte for byte (W1 7589 item 6)',cut(tu.L[1754],'rudPair2024')===
 const $=()=>({all:()=>[],first:()=>({json:{}}),isExecuted:false});
 const T=load(rb(tu.L,tu.M['Gate Build']),$),B=load(rb(lu.L,lu.M['Gate Build']),$);ok('loader gives gateVnv2024 on both',typeof T.gateVnv2024==='function'&&typeof B.gateVnv2024==='function');
 const K=(F,t)=>F.gateVnv2024(t).map(x=>x.key).sort().join(',');
+
+// rev 3: the layers paragraph (operator 10:20 CST)
+const VPX="An E-GATE V item (one of your lines calls a premise VOID and another calls it not VOID) is answered by a CHANGE TO one of its two lines";
+for(const [i,v] of [[2400,'G'],[3491,'items']]){const l=tu.L[i];const j=l.indexOf(' +('+v+(v==='G'?'.items':'')+".some(x=>x.src==='E-GATE V')?");const ex=l.slice(j+2);
+ const f=new Function(v,'return '+ex.replace(/\s*\/\*.*\*\/\s*$/,'').replace(/^\(/,'(').trim()+';');
+ const mk=src=>v==='G'?{items:[{src}]}:[{src}];
+ const yes=f(mk('E-GATE V')),no=f(mk('E-GATE M'));
+ ok('line '+i+': the layers paragraph is sent when an E-GATE V item is raised, and only then',yes.includes(VPX)&&/\[L1\].*\[L3\].*\[L4\].*single verse doctrine is prohibited \(Isaiah 28:10\)/.test(yes)&&no==='',yes.length+' / '+no.length);
+ ok('line '+i+': the text before the new paragraph is unchanged',l.slice(0,j)===lu.L[i]);}
+const gb=rb(tu.L,tu.M['Gate Build']),lg=rb(tu.L,tu.M['Late Gate Build']);ok('Gate Build and Late Gate Build entries each hold the paragraph once',gb.split(VPX).length===2&&lg.split(VPX).length===2);
 // REAL sol 1213 (run 38106)
 const rows=JSON.parse(fs.readFileSync('void_lines.json'));const sol=rows.find(r=>r.id===1213);
 ok('REAL sol 1213: base gives no item',K(B,sol.k)==='',K(B,sol.k));
