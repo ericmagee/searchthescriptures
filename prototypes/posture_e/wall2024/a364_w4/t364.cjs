@@ -25,10 +25,27 @@ const u=[
 ];
 for(const [t,l,want] of u){const g=LAY.words(l).map(x=>x.add.join(',')).join(';');ok(t,g===want,g||'(none)');}
 const S1='LINK 2: SUPPORTED\n[L1] Luke 1:34: "Then said Mary unto the angel, How shall this be, seeing I know not a man?"\n[L2] G1097 ginosko (to know) in Luke 1:34.\n[L4] Chain: she knew no man, so the conception had no human father, on the verse and the word read together here.';
-ok('C4b PLANT: a critical point with [L1] and [L2] but no [L3] is short',LAY.structure(S1).length===1&&/no \[L3\]/.test(LAY.structure(S1)[0].why),LAY.structure(S1).map(x=>x.why).join());
+ok('C4b PLANT: a critical point with one quoted [L1] verse and an [L2] is short (one verse only)',LAY.structure(S1).length===1&&/one verse only/.test(LAY.structure(S1)[0].why),LAY.structure(S1).map(x=>x.why).join());
 const S2=S1+'\n[L3] Matthew 1:18: "Now the birth of Jesus Christ was on this wise: When as his mother Mary was espoused to Joseph, before they came together, she was found with child of the Holy Ghost."';
 ok('PLANT: the same point with an [L3] verse passes',LAY.structure(S2).length===0);
 ok('PLANT: a PRESSED WITH list is not read for structure',LAY.structure('PRESSED WITH:\n'+V1+' -- MEANS: x -- [L2] y | PROVEN IN [DR1]. and more words to pass the length floor here').length===0);
+// rev 2 (W1 7653, W3 7654, amended C1 agreed W1 7656, W2, W3)
+const P=(t,c,d)=>ok('REV2 '+t,c,d);
+P('F1: the press\'s MEANS quoted by the defender is not read',LAY.words('ANSWER: Mark 6:3 -- D4 -- "Is not this the carpenter, the son of Mary?" The press\'s MEANS: "naming by the mother removes all fathers"').length===0);
+P('F1: a MEANS whose text opens with a quotation is not read',LAY.words('*Matthew 1:19* "Then Joseph her husband, being a just man" -- MEANS: "espousal is only husband-wife." Granted').length===0);
+P('F1: prose "means:" in lower case is not read',LAY.words('Genesis 4:25 "And Adam knew his wife again" The row states its own means: no other seed').length===0);
+P('F2 (W1): "not only" widens and is not flagged',LAY.words('Matthew 1:3 "Judas begat Phares and Zara of Thamar" -- MEANS: descent is not only father to son').length===0);
+P('"only" said of the Bible is not flagged',LAY.words('Isaiah 7:14 "Behold, a virgin shall conceive, and bear a son" -- MEANS: the only Bible in this debate prints a virgin').length===0);
+P('W3 F4: a word that describes what the record states is not flagged',LAY.words('Matthew 1:18 "before they came together, she was found with child" -- MEANS: the child is found before any stated union').length===0);
+P('W3 F2: a KJV quote on the row after the MEANS carries the word',LAY.words('Numbers 1:2 "Take ye the sum" -- MEANS: reckoning counts every male -- [L1] "every male by their polls"').length===0);
+P('REAL row still flagged after rev 2: "at all" on Matthew 1:25',LAY.words(V1+' -- MEANS: Joseph did not know her at all until she brought forth her firstborn son. -- [L2] ginosko (to know) | PROVEN IN [DR1]').map(x=>x.add.join()).join()==='at all');
+const T2='LINK 4: SUPPORTED\n[L1] Matthew 1:18 "before they came together, she was found with child of the Holy Ghost" and [L1] Luke 1:34 "How shall this be, seeing I know not a man?"\nThe two rows read together.';
+P('amended C1: two different verses quoted on tagged [L1] lines pass, whatever the second tag',LAY.structure(T2).length===0);
+P('amended C1: bare tagged references with no quoted words do not count',LAY.structure('LINK 4: SUPPORTED\n[L1] John 1:13 -- [L2] G1080; [L1] John 3:6 -- [L2] G1080; [L1] Acts 1:8 -- [L2] G1904. These rows read together.').length===1);
+P('amended C1: a reference in prose does not count',LAY.structure('LINK 4: SUPPORTED\n[L1] Matthew 1:18 "before they came together, she was found with child of the Holy Ghost"\nRead with Luke 1:34 "How shall this be" in prose here.').length===1);
+P('amended C1: two [L3] verses and no [L1] are short',/no \[L1\]/.test((LAY.structure('LINK 4: SUPPORTED\n[L3] Matthew 1:18 "before they came together, she was found with child"\n[L3] Luke 1:34 "How shall this be, seeing I know not a man?"')[0]||{}).why||''));
+P('F3: the ANSWER row form reads as an [L1] with its reference',LAY.structure('## D3: Mary a virgin; Joseph knew her not until the birth\nANSWER: Matthew 1:25 -- D3 -- "And knew her not till she had brought forth her firstborn son"\n- [L3] Genesis 4:1: "Adam knew Eve his wife; and she conceived."').length===0);
+P('F3: the MEANS row form reads as an [L1] with its reference',LAY.structure('PREMISE 2: the order\nMatthew 1:18 "before they came together, she was found with child" -- MEANS: the finding precedes the union\n[L3] Luke 1:34 "How shall this be, seeing I know not a man?"').length===0);
 // Node runs
 const rows=JSON.parse(fs.readFileSync('def_rounds.json'));const r91=rows.find(x=>x.run_token.includes('37891'));
 const call={fam:'openrouter',fam_idx:5,model:'m',body:{model:'m',messages:[{role:'user',content:'x'}]}};
@@ -52,5 +69,5 @@ ok('resend-only file: the same record, no line written into the round',!XR.raw.i
 for(const [r,k] of [['D2','r2'],['D4','r4']]){const e={...env(''),[r+' Extract']:{run_token:'T',raw:r91[k],labelled:'L',msg_id:'i',fam:'openrouter',model:'m'},[r+' Build']:{call}};let g=null,er=null;try{g=run(NB[r+'B Build'].parameters.jsCode,e,{})[0].json;}catch(x){er=x.message;}ok('REAL 37891 '+k+': '+r+'B Build runs and reads the layers',!!g&&g.lay_check!==undefined||(!!g&&g.resend===false),er||(g&&g.why));}
 // Replay (G1, F2): every flag listed for the hand read
 const L=[];const per={};for(const x of rows)for(const k of ['r1','r2','r3','r4']){const c=LAY.check(x[k]);per[k]=per[k]||{runs:0,words:0,structure:0};if(c.items.length)per[k].runs++;for(const it of c.items){it.kind==='WORDS'?per[k].words++:per[k].structure++;L.push([x.run_token,k,it.id,it.kind,(it.kind==='WORDS'?it.line:it.head).replace(/\s+/g,' ').slice(0,400),it.why].join(' | '));}}
-fs.writeFileSync('replay364_flags.txt',L.join('\n')+'\n');console.log('   replay over '+rows.length+' stored runs (rounds 2 to 4 are Part A): '+JSON.stringify(per));
+fs.writeFileSync('replay364_flags_rev2.txt',L.join('\n')+'\n');console.log('   replay over '+rows.length+' stored runs (rounds 2 to 4 are Part A): '+JSON.stringify(per));
 console.log(n-fails+' of '+n+' pass');process.exit(fails?1:0);
