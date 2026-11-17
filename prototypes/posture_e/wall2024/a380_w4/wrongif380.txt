@@ -1,0 +1,17 @@
+KNOWN-BAD (live s259), lines naming ernie or REMOVED FOR:
+  - Panel judge 2's seat stayed empty: ChatGPT was not counted, and no judge was counted in its place. Alternates tried: Claude Haiku, not seated (10 uncured items); ernie, no verdict returned (finish_reason length).
+  - ChatGPT: alternate ernie (baidu/ernie-5.5-flash-preview:free) tried, NOT SEATED: seat "ernie" returned content null (finish_reason length). NO ROW IS WRITTEN. run_token=ODV1-38450-bz66jhy3; REMOVED FOR: drv_uncured 1: K-V (cure) x1.
+  Sent to: alternate judge ernie (baidu/ernie-5.5-flash-preview:free) sent as alternate for ChatGPT, not seated.
+KNOWN-GOOD (target), same lines:
+  - Panel judge 2's seat stayed empty: ChatGPT was not counted, and no judge was counted in its place. Alternates tried: Claude Haiku, not seated (10 uncured items); ernie, no verdict returned (finish_reason length).
+  - ChatGPT: alternate ernie (baidu/ernie-5.5-flash-preview:free) tried, NOT SEATED: seat "ernie" returned content null (finish_reason length). NO ROW IS WRITTEN. run_token=ODV1-38450-bz66jhy3.
+  Sent to: alternate judge ernie (baidu/ernie-5.5-flash-preview:free) sent as alternate for ChatGPT, not seated.
+target lines with ChatGPT reason (K-V on CHALLENGER premise 4):
+  - Panel judge 2: ChatGPT (openai/gpt-6.1-terra): **BROKEN** (a grade of the defender's chain: Gemini, arguing the standard reading) (NOT COUNTED: 1 debate rule violation not cured (K-V on CHALLENGER premise 4)). Reason: D1 vs C2 breaks because the answer to the fleshly-descent press relies on an une
+  - ChatGPT was not counted: 1 debate rule violation not cured (K-V on CHALLENGER premise 4).
+DIFF:
+- - ChatGPT: alternate ernie (baidu/ernie-5.5-flash-preview:free) tried, NOT SEATED: seat "ernie" returned content null (finish_reason length). NO ROW IS WRITTEN. run_token=ODV1-38450-bz66jhy3; REMOVED FOR: drv_uncured 1: K-V (cure) x1.
+- **Run time:** 93 min 54 s (started Nov 17, 3:10 PM CST, transcript written Nov 17, 4:44 PM CST).
++ - ChatGPT was not counted: 1 debate rule violation not cured (K-V on CHALLENGER premise 4).
++ - ChatGPT: alternate ernie (baidu/ernie-5.5-flash-preview:free) tried, NOT SEATED: seat "ernie" returned content null (finish_reason length). NO ROW IS WRITTEN. run_token=ODV1-38450-bz66jhy3.
++ **Run time:** 93 min 55 s (started Nov 17, 3:10 PM CST, transcript written Nov 17, 4:44 PM CST).

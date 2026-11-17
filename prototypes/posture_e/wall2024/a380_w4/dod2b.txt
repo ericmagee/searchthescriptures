@@ -1,0 +1,15 @@
+clauses 17 distinct (row,seat) 13
+  ODV1-33774-3w3lwzi5 None chatgpt -> a (judge line) | clause: drv_uncured 1: K-W (cure) x1
+  ODV1-34016-53t69eso None luna -> a (judge line) | clause: drv_uncured 2: K-W (cure) x1 (read 1, count differs)
+  ODV1-34726-wpl9mvyd None luna -> a (judge line) | clause: drv_uncured 12: E-GATE NOT APPLIED x11; E-GATE CONTRADICTION x1
+  ODV1-34726-wpl9mvyd None sol -> a (judge line) | clause: drv_uncured 1: K-C (cure) x1
+  ODV1-34852-azssrnkg None chatgpt -> a (judge line) | clause: drv_uncured 2: E-GATE RULE K-G4 x2
+  ODV1-34852-azssrnkg None sol -> a (judge line) | clause: drv_uncured 1: K-W (cure) x1
+  ODV1-35296-nb5vsshb None luna -> a (judge line) | clause: drv_uncured 3: K-W (cure) x1; E-GATE CONTRADICTION x2
+  ODV1-35379-2yvjfj38 None luna -> a (judge line) | clause: drv_uncured 1: E-GATE NOT APPLIED x1
+  ODV1-35379-2yvjfj38 None sol -> a (judge line) | clause: drv_uncured 26: K-S3 (cure) x6; K-W (cure) x20
+  ODV1-37372-6n5n7sh9 None sol -> a (judge line) | clause: drv_uncured 2: K-C (cure) x1; E-GATE CONTRADICTION x1
+  ODV1-37510-6gpyl6l8 None luna -> a (judge line) | clause: drv_uncured 1: K-F (cure) x1
+  ODV1-38226-mydua15p None chatgpt -> a (judge line) | clause: drv_uncured 1: K-G4 (cure) x1
+  ODV1-38450-bz66jhy3 None chatgpt -> a (judge line) | clause: drv_uncured 1: K-V (cure) x1
+source a 13 source b 0 drv_removed 0 none 0
