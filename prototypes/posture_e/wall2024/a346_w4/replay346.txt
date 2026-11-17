@@ -1,0 +1,70 @@
+  chatgpt LIVE  RESULT     RESULT     a RESULT line that names no deciding collision line by its label (for example "D6 vs C6") and carries no counted [L1] (Commitment 13)
+  chatgpt LIVE  KEYSTONE   D6         a KEYSTONE line that names no collision line of D6 by its label (for example "D6 vs C<m>") and carries no counted [L1] (Commitment 13)
+  chatgpt TRIAL UND-SIDES  D1 vs C1   an UNDERDETERMINED line that does not quote 6 words in a row from each side (neither side) (Commitment 13)
+  chatgpt TRIAL UND-SIDES  D2 vs C5   an UNDERDETERMINED line that does not quote 6 words in a row from each side (not the challenger) (Commitment 13)
+  chatgpt TRIAL UND-SIDES  D3 vs C1   an UNDERDETERMINED line that does not quote 6 words in a row from each side (not the challenger) (Commitment 13)
+  chatgpt TRIAL UND-SIDES  D3 vs C2   an UNDERDETERMINED line that does not quote 6 words in a row from each side (not the defender) (Commitment 13)
+  chatgpt TRIAL UND-SIDES  D4 vs C6   an UNDERDETERMINED line that does not quote 6 words in a row from each side (not the challenger) (Commitment 13)
+  chatgpt TRIAL UND-SIDES  D6 vs C6   an UNDERDETERMINED line that does not quote 6 words in a row from each side (neither side) (Commitment 13)
+  sol     LIVE  RESULT     RESULT     a RESULT line that names no deciding collision line by its label (for example "D6 vs C6") and carries no counted [L1] (Commitment 13)
+  sol     LIVE  KEYSTONE   D6         a KEYSTONE line that names no collision line of D6 by its label (for example "D6 vs C<m>") and carries no counted [L1] (Commitment 13)
+  sol     TRIAL UND-SIDES  D2 vs C1   an UNDERDETERMINED line that does not quote 6 words in a row from each side (not the challenger) (Commitment 13)
+  sol     TRIAL UND-SIDES  D3 vs C1   an UNDERDETERMINED line that does not quote 6 words in a row from each side (not the challenger) (Commitment 13)
+  luna    LIVE  STANDS-L1  D2 vs C5   a STANDS line with no counted [L1] (Commitment 13: every grade carries [L1], the verse words quoted as the record holds them)
+  luna    TRIAL UND-SIDES  D2 vs C2   an UNDERDETERMINED line that does not quote 6 words in a row from each side (not the challenger) (Commitment 13)
+ok   P1 LIVE items on the final 37719 text :: chatgpt KEYSTONE D6 | chatgpt RESULT RESULT | luna STANDS-L1 D2 vs C5 | sol KEYSTONE D6 | sol RESULT RESULT
+ok   P1 luna derived RESULT and KEYSTONE exempt
+  TRIAL items: 9 of 14 ; UND-SIDES 9 STANDS-FIT 0
+ok   P1b luna original D3 vs C2 STANDS -> STANDS-L1 LIVE :: STANDS-L1
+ok   P2 STANDS with counted [L1]: no LIVE item :: none
+ok   P3 STANDS with an [L1] not in the verse -> STANDS-L1 NOT COUNTED ::  holds them); its [L1] words do not stand in the verse named
+ok   P4 WITHDRAWN, recomputed and a labelled [L1] KEYSTONE: no items
+ok   P4b KEYSTONE naming another link only -> KEYSTONE item
+ok   P5 STANDS-L1 KEEP, no [L1] -> UNCURED :: still no counted [L1]
+ok   P5 STANDS-L1 CHANGE TO with counted [L1] -> CURED :: [L1] COUNTED
+ok   P5 STANDS-L1 CHANGE TO with [L1] not in the verse -> UNCURED :: still no counted [L1]
+ok   P5 STANDS-L1 CHANGE TO RETRACTED -> CURED :: CHANGE TO RETRACTED
+ok   P5 STANDS-L1 regraded UNDERDETERMINED with [L1] -> CURED :: CHANGE TO a regraded line with a counted [L1]
+ok   P5 STANDS-L1 NO ANSWER -> UNCURED :: no answer to the send-back
+ok   P5 KEYSTONE CHANGE TO label + [L1] -> CURED :: names the label and carries a counted [L1]
+ok   P5 KEYSTONE CHANGE TO other link label -> UNCURED :: still names no collision label
+ok   P5 KEYSTONE CHANGE TO RETRACTED -> UNCURED :: still names no collision label
+ok   P5 KEYSTONE KEEP whose sentence gives label and [L1] -> CURED :: names the label and carries a counted [L1]
+ok   P5 RESULT CHANGE TO label + [L1] -> CURED :: names the label and carries a counted [L1]
+ok   P5 RESULT CHANGE TO no label -> UNCURED :: still names no collision label
+ok   P5 UND-SIDES CHANGE TO a STANDS line -> CURED :: CHANGE TO a line not graded UNDERDETERMINED
+ok   P5 UND-SIDES KEEP, no quotes -> UNCURED :: still does not quote 6 words in a row from either side
+  quoting: holy ghost the angels row to / and the stated means of conceiving
+ok   P5 UND-SIDES CHANGE TO quoting 6 words of each side -> CURED :: quotes the defender ("holy ghost the angels row to") and the challenger ("and the stated means of conceiving")
+ok   P6 rule STANDS-L1 :: 
+THE LAYERS RULE (Commitment 13, ENFORCED, pkgLAY): a STANDS line carries after GROUND: [L
+ok   P6 rule UND-SIDES :: 
+THE LAYERS RULE (Commitment 13, TRIAL for one run, pkgLAY: answer it; it removes no seat)
+ok   P6 rule RESULT :: 
+THE LAYERS RULE (Commitment 13, ENFORCED, pkgLAY): your RESULT line names, by label, the 
+ok   P6 rule KEYSTONE :: 
+THE LAYERS RULE (Commitment 13, ENFORCED, pkgLAY): your KEYSTONE line names, by its full 
+ok   P7 ECW HOLD=true in target
+ok   P7 E-HOLD toward UNDERDETERMINED is gated :: {"applies":true,"send":true,"note":"NOT CHECKED: no rounds were read"}
+ok   P7 E-HOLD toward STANDS is not gated
+ok   P8 LAY exempts derived lines
+ok   P8 L280 KEYSTONE :: D6|STANDS
+ok   P8 L282 RESULT :: UNDERDETERMINED
+ok   P8 L605 derived RESULT
+ok   P8 L721 KEYSTONE :: 6|STANDS
+ok   P8 L2033 KS :: 6|STANDS
+ok   P8 L2255 link :: D6
+ok   P8 L3093 KEYSTONE :: D6|STANDS
+ok   P8 L3137 KEYSTONE :: 6|STANDS
+ok   P8 rcLines: key and result read, one collision line :: key true result true col 1
+  E1 ->  -- GROUND: D6 vs C6 | [L1] Romans 1:3 “which was made of the seed of David according to the flesh” (the labels and [L1] of the lines it is derived from; pkgLAY)
+  E2 ->  GROUND: D6 vs C6 | [L1] Romans 1:3 “which was made of the seed of David according to the flesh” (the labels and [L1] of the lines it is derived from; pkgLAY)
+ok   P8 E1 derived KEYSTONE GROUND carries label and [L1]
+ok   P8 E2 derived RESULT GROUND carries label and [L1]
+ok   P8 E1 with no lines adds nothing
+ok   P9 Accept Check has Commitment 13 and parses
+ok   P9 Accept Final has Commitment 13 and parses
+ok   P9 Enforcer Build has Commitment 13 and parses
+ok   P9 Panel Build has Commitment 13 and parses
+
+FAILS 0
