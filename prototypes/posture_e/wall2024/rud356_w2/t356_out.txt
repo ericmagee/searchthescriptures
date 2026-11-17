@@ -1,0 +1,23 @@
+ok   library lines changed are 1753 and 1754 only; line count equal :: 1753,1754
+ok   only the Shared Library node changed :: Shared Library
+ok   connections and node order equal
+ok   every MAP entry rebuilds to its n :: 45 entries
+   changed entries: Alt Gate Build, Alt Gate Record, Alt Late Gate Build, Gate Build, Gate Record, Late Gate Build, R2 Alt Gate Build, R2 Alt Gate Record, R2 Alt Late Gate Build
+ok   changed entries are the 9 gate nodes that hold gateItems2024
+ok   syntax of every changed entry
+ok   model setting words unchanged
+ok   the K-RUD pair push follows the pkgVNV push inside gateItems2024
+ok   loader finds rudPair2024 and gateItems2024 in Gate Build and Gate Record
+ok   REAL 1211 after the apply (luna, run 38051): MUST CATCH D2 vs C2 :: RUD PAIR D2 vs C2
+ok   REAL 1211 before the apply (D2 vs C2 lines as superseded, AUDIT v27): gives nothing
+ok   PLANT RESULT rewritten in the same reply without D2 vs C2: MUST NOT CATCH
+ok   PLANT MUST NOT CATCH: RESULT: DEFENDER WINS -- D1 vs C1 decides; D2 vs C2 does not decide the outcome.
+ok   PLANT MUST NOT CATCH: RESULT: DEFENDER WINS -- D1 vs C1 decides, D2 vs C2 aside.
+ok   PLANT MUST NOT CATCH: RESULT: DEFENDER WINS -- D1 vs C1 decides without D2 vs C2.
+ok   PLANT MUST NOT CATCH: RESULT: DEFENDER WINS -- D1 vs C1 decides; D2 vs C2 remains open.
+ok   PLANT MUST NOT CATCH: RESULT: UNDERDETERMINED -- D2 vs C2 stands.
+ok   PLANT MUST CATCH: RESULT: CHALLENGER WINS -- D2 vs C2 decides.
+ok   PLANT MUST NOT CATCH: KEYSTONE: D2 -- STANDS -- D2 vs C2 stands.
+ok   REPLAY over 45 stored judgments (1167 to 1211, final text): 1 hit, 1211 D2 vs C2 :: 1211 luna RUD PAIR D2 vs C2
+ok   the item is TRIAL record only: why names it, and the push sets live:false
+21 checks, ALL OK

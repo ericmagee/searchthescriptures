@@ -1,0 +1,25 @@
+// ASK 356 tests. Usage: node t356.cjs <target> <base> <lib.cjs> <rows45.json>
+const fs=require('fs');const {unpack,rb,load}=require(process.argv[4]);let n=0,f=0;const ok=(t,c,d)=>{n++;if(!c)f++;console.log((c?'ok   ':'FAIL ')+t+(d?' :: '+d:''));};
+const tw=JSON.parse(fs.readFileSync(process.argv[2])),bw=JSON.parse(fs.readFileSync(process.argv[3]));const tu=unpack(tw),bu=unpack(bw);
+const dl=tu.L.map((l,i)=>l!==bu.L[i]?i:-1).filter(i=>i>=0);ok('library lines changed are 1753 and 1754 only; line count equal',tu.L.length===bu.L.length&&dl.join()==='1753,1754',dl.join());
+const BN={};for(const x of bw.nodes)BN[x.name]=x;const dn=tw.nodes.filter(x=>JSON.stringify(x)!==JSON.stringify(BN[x.name])).map(x=>x.name);ok('only the Shared Library node changed',dn.join()==='Shared Library',dn.join());
+ok('connections and node order equal',JSON.stringify(tw.connections)===JSON.stringify(bw.connections)&&tw.nodes.map(x=>x.name).join()===bw.nodes.map(x=>x.name).join());
+const bad=Object.keys(tu.M).filter(k=>rb(tu.L,tu.M[k]).length!==tu.M[k].n);ok('every MAP entry rebuilds to its n',!bad.length,Object.keys(tu.M).length+' entries');
+const ch=Object.keys(tu.M).filter(k=>rb(tu.L,tu.M[k])!==rb(bu.L,bu.M[k])).sort();console.log('   changed entries: '+ch.join(', '));
+ok('changed entries are the 9 gate nodes that hold gateItems2024',ch.join()===['Alt Gate Build','Alt Gate Record','Alt Late Gate Build','Gate Build','Gate Record','Late Gate Build','R2 Alt Gate Build','R2 Alt Gate Record','R2 Alt Late Gate Build'].join());
+const syn=[];for(const k of ch){try{new Function('$','$input','return (async()=>{\n'+rb(tu.L,tu.M[k])+'\n})();');}catch(e){syn.push(k+': '+e.message);}}ok('syntax of every changed entry',!syn.length,syn.join('; '));
+const cnt=(w,s)=>JSON.stringify(w.nodes).split(s).length-1;ok('model setting words unchanged',['max_tokens','temperature','reasoning','effort','thinking'].every(s=>cnt(tw,s)===cnt(bw,s)));
+ok('the K-RUD pair push follows the pkgVNV push inside gateItems2024',/pkgVNV: last[^\n]*rudPair2024\(T1\)[^\n]*live:false/.test(tu.L[1753]));
+const $=()=>({all:()=>[],first:()=>({json:{}}),isExecuted:false});const G=load(rb(tu.L,tu.M['Gate Build']),$),GR=load(rb(tu.L,tu.M['Gate Record']),$);
+ok('loader finds rudPair2024 and gateItems2024 in Gate Build and Gate Record',typeof G.rudPair2024==='function'&&typeof GR.rudPair2024==='function'&&typeof G.gateItems2024==='function');
+const P=G.rudPair2024;const R=JSON.parse(fs.readFileSync(process.argv[5]));const txt=r=>{let t=r.raw||'';try{t=JSON.parse(t).reasoning||t;}catch(e){}return String(t);};
+const r1211=R.find(r=>r.id===1211);const post=txt(r1211);
+const h=P(post);ok('REAL 1211 after the apply (luna, run 38051): MUST CATCH D2 vs C2',h.length===1&&h[0].key==='RUD PAIR D2 vs C2',h.map(x=>x.key).join());
+const T2=post.replace(/\\n/g,'\n');const ORIG='D2 vs C2 (Luke 1:35): CHALLENGER LINK BROKEN -- The covenant-only account does not fit the reply that names the Holy Ghost’s action and the child to be born. GROUND: (L1) Luke 1:35 "The Holy Ghost shall come upon thee, and the power of the Highest shall overshadow thee: therefore also that holy thing which shall be born of thee" | (L2) G1982 (to overshadow); these layers carry the stated connection to the child’s birth.';
+const pre=T2.split('\n').map(l=>/^D2 vs C2 \(Luke 1:35\): UNDERDETERMINED/.test(l.trim())?ORIG:l).join('\n');ok('REAL 1211 before the apply (D2 vs C2 lines as superseded, AUDIT v27): gives nothing',P(pre).length===0&&pre!==T2);
+const rew=T2.replace(/^RESULT: DEFENDER WINS[^\n]*/m,'RESULT: DEFENDER WINS -- D1 vs C1 stands: [L1] Matthew 1:18 says “before they came together, she was found with child of the Holy Ghost.”');ok('PLANT RESULT rewritten in the same reply without D2 vs C2: MUST NOT CATCH',P(rew).length===0);
+const base='D2 vs C2 (Luke 1:35): UNDERDETERMINED -- GROUND: [L1] Luke 1:35 "x"; the record leaves open whether y.\nD1 vs C1 (Matthew 1:18): STANDS -- GROUND: [L1] Matthew 1:18 "x"\n';
+for(const [s,want] of [['RESULT: DEFENDER WINS -- D1 vs C1 decides; D2 vs C2 does not decide the outcome.',0],['RESULT: DEFENDER WINS -- D1 vs C1 decides, D2 vs C2 aside.',0],['RESULT: DEFENDER WINS -- D1 vs C1 decides without D2 vs C2.',0],['RESULT: DEFENDER WINS -- D1 vs C1 decides; D2 vs C2 remains open.',0],['RESULT: UNDERDETERMINED -- D2 vs C2 stands.',0],['RESULT: CHALLENGER WINS -- D2 vs C2 decides.',1],['KEYSTONE: D2 -- STANDS -- D2 vs C2 stands.',0]])ok('PLANT '+(want?'MUST CATCH':'MUST NOT CATCH')+': '+s,P(base+s).length===want);
+let hits=[];for(const r of R){for(const x of P(txt(r)))hits.push(r.id+' '+r.seat+' '+x.key);}ok('REPLAY over '+R.length+' stored judgments (1167 to 1211, final text): 1 hit, 1211 D2 vs C2',hits.length===1&&hits[0]==='1211 luna RUD PAIR D2 vs C2',hits.join('; '));
+ok('the item is TRIAL record only: why names it, and the push sets live:false',/TRIAL rule \(K-RUD, ASK 356; record only/.test(h[0].why));
+console.log(n+' checks, '+(f?'FAILS '+f:'ALL OK'));
