@@ -1,0 +1,23 @@
+ok   library line changed is 1450 only; line count equal :: 1450
+ok   header and tail equal
+ok   only the Shared Library node changed :: Shared Library
+ok   connections and node order equal
+ok   every MAP entry rebuilds to its n :: 45 entries
+ok   changed entries are the 13 that hold line 1450 (W1 7592) :: Alt Gate Build, Alt Gate Record, Alt Late Gate Build, Alternate Merge 1, Alternate Merge Seat, Gate Build, Gate Record, Late Gate Build, R2 Alt Gate Build, R2 Alt Gate Record, R2 Alt Late Gate Build, R2 Alternate Merge, R2 Alternate Merge Seat
+ok   syntax of every changed entry
+ok   model setting words unchanged
+ok   no oos flag on the strike (W1 P2)
+ok   REAL 1214 base (s244): each of the three pairs holds its collision line twice (the run 38106 record) :: D1 vs C2 2,0; D3 vs C1 2,0; D3 vs C2 2,0
+ok   REAL 1214 ASK 362: each pair holds one collision line and no FORCED line :: D1 vs C2 1,0; D3 vs C1 1,0; D3 vs C2 1,0
+ok   REAL 1214: the same changes are applied, no new item :: ["G1","G2","G3"]
+ok   REAL 1214: the texts differ only at the three struck lines, which the base holds as the copies :: struck at lines 13,18,20
+ok   W1 P1: the struck FORCED lines stay in rp as replaced originals
+ok   W1 P1: the stored rewrite holds one collision line per pair (base: two)
+ok   W1 P1: AUDIT v27 records the struck FORCED line of G1 as an original :: [AUDIT v27: SUPERSEDED LINE -- SEAT: grok; LABEL: LINE; ORIGINAL: FORCED: D1 vs C2 -- MEANS (CR3): "Joseph abstained from carnal knowledge of Mary unt
+ok   W1 P1: pkgGCP gives the same result before and after on 1214
+ok   PLANT unchanged: no standing collision line for the pair (the FORCED line takes the text)
+ok   PLANT unchanged: a FORCED-to-FORCED change
+ok   PLANT unchanged: a change to the collision line itself
+ok   PLANT unchanged: a FORCED line changed to another pair's collision line (refused at line 1447 as before)
+ok   W1 P3 PLANT: a keyChecks CONTRADICTION on the change removes both the strike and the write; the text keeps its FORCED and collision line :: 1,1
+22 checks, ALL OK
