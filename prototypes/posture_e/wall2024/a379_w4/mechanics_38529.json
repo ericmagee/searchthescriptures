@@ -1,0 +1,170 @@
+{
+ "out": [
+  {
+   "scenario": "A stale cure: pass 2 skips its cure branch",
+   "passes": 3,
+   "stop": "the cap of 3 is reached",
+   "tries": [
+    {
+     "si": 0,
+     "alt": "a1",
+     "pass": 1,
+     "result": "NOT SEATED",
+     "why": "scratch pass 1",
+     "cureFromItem": "cure of pass 1",
+     "cureNodeExecuted": true,
+     "cureNodeRead": "cure of pass 1",
+     "parent_exec": "38529",
+     "child_exec": "38530",
+     "callAlt": "a1"
+    },
+    {
+     "si": 0,
+     "alt": "a2",
+     "pass": 2,
+     "result": "NOT SEATED",
+     "why": "scratch pass 2",
+     "cureFromItem": null,
+     "cureNodeExecuted": false,
+     "cureNodeRead": null,
+     "parent_exec": "38529",
+     "child_exec": "38531",
+     "callAlt": "a2"
+    },
+    {
+     "si": 0,
+     "alt": "a3",
+     "pass": 3,
+     "result": "NOT SEATED",
+     "why": "scratch pass 3",
+     "cureFromItem": "cure of pass 3",
+     "cureNodeExecuted": true,
+     "cureNodeRead": "cure of pass 3",
+     "parent_exec": "38529",
+     "child_exec": "38532",
+     "callAlt": "a3"
+    }
+   ]
+  },
+  {
+   "scenario": "B dropped input in pass 1, then pass 2 runs",
+   "passes": 2,
+   "stop": "the cap of 2 is reached",
+   "tries": [
+    {
+     "si": 1,
+     "alt": "b1",
+     "pass": 1,
+     "result": "NOT SEATED",
+     "why": "sub-workflow error: ASK 379 input check: missing input lib [line 2]"
+    },
+    {
+     "si": 1,
+     "alt": "b2",
+     "pass": 2,
+     "result": "NOT SEATED",
+     "why": "scratch pass 2",
+     "cureFromItem": "cure of pass 2",
+     "cureNodeExecuted": true,
+     "cureNodeRead": "cure of pass 2",
+     "parent_exec": "38529",
+     "child_exec": "38534",
+     "callAlt": "b2"
+    }
+   ]
+  },
+  {
+   "scenario": "C error in pass 2, pass 3 runs, b-alt not re-picked",
+   "passes": 3,
+   "stop": "the cap of 3 is reached",
+   "tries": [
+    {
+     "si": 2,
+     "alt": "c1",
+     "pass": 1,
+     "result": "NOT SEATED",
+     "why": "scratch pass 1",
+     "cureFromItem": "cure of pass 1",
+     "cureNodeExecuted": true,
+     "cureNodeRead": "cure of pass 1",
+     "parent_exec": "38529",
+     "child_exec": "38535",
+     "callAlt": "c1"
+    },
+    {
+     "si": 2,
+     "alt": "c2",
+     "pass": 2,
+     "result": "NOT SEATED",
+     "why": "sub-workflow error: planted failure in pass 2 [line 2]"
+    },
+    {
+     "si": 2,
+     "alt": "c3",
+     "pass": 3,
+     "result": "NOT SEATED",
+     "why": "scratch pass 3",
+     "cureFromItem": "cure of pass 3",
+     "cureNodeExecuted": true,
+     "cureNodeRead": "cure of pass 3",
+     "parent_exec": "38529",
+     "child_exec": "38537",
+     "callAlt": "c3"
+    }
+   ]
+  },
+  {
+   "scenario": "D cap 2 stops with alternates left",
+   "passes": 2,
+   "stop": "the cap of 2 is reached",
+   "tries": [
+    {
+     "si": 3,
+     "alt": "d1",
+     "pass": 1,
+     "result": "NOT SEATED",
+     "why": "scratch pass 1",
+     "cureFromItem": "cure of pass 1",
+     "cureNodeExecuted": true,
+     "cureNodeRead": "cure of pass 1",
+     "parent_exec": "38529",
+     "child_exec": "38538",
+     "callAlt": "d1"
+    },
+    {
+     "si": 3,
+     "alt": "d2",
+     "pass": 2,
+     "result": "NOT SEATED",
+     "why": "scratch pass 2",
+     "cureFromItem": "cure of pass 2",
+     "cureNodeExecuted": true,
+     "cureNodeRead": "cure of pass 2",
+     "parent_exec": "38529",
+     "child_exec": "38539",
+     "callAlt": "d2"
+    }
+   ]
+  },
+  {
+   "scenario": "E seat filled in pass 1 starts no pass 2",
+   "passes": 1,
+   "stop": "the seat is filled",
+   "tries": [
+    {
+     "si": 4,
+     "alt": "seatme",
+     "pass": 1,
+     "result": "SEATED",
+     "why": "scratch pass 1",
+     "cureFromItem": "cure of pass 1",
+     "cureNodeExecuted": true,
+     "cureNodeRead": "cure of pass 1",
+     "parent_exec": "38529",
+     "child_exec": "38540",
+     "callAlt": "seatme"
+    }
+   ]
+  }
+ ]
+}
