@@ -1,0 +1,22 @@
+ctx: rounds DR1,CR1,DR2,CR2,DR3,CR3,DR4,CR4; declared chain 5 links
+ok   rcLines collision lines: the distinct graded entries are equal before and after [ask false] :: base 11 entries (8 distinct), target 8 (8 distinct)
+   base per pair: {"D1 vs C1":["UNDERDETERMINED"],"D1 vs C2":["UNDERDETERMINED","UNDERDETERMINED"],"D2 vs C3":["UNDERDETERMINED"],"D2 vs C4":["CHALLENGER LINK BROKEN"],"D3 vs C1":["UNDERDETERMINED","UNDERDETERMINED"],"D3 vs C2":["UNDERDETERMINED","UNDERDETERMINED"],"D4 vs C5":["DEFENDER LINK BROKEN"],"D5 vs C5":["DEFENDER LINK BROKEN"]}
+   target per pair: {"D1 vs C1":["UNDERDETERMINED"],"D1 vs C2":["UNDERDETERMINED"],"D2 vs C3":["UNDERDETERMINED"],"D2 vs C4":["CHALLENGER LINK BROKEN"],"D3 vs C1":["UNDERDETERMINED"],"D3 vs C2":["UNDERDETERMINED"],"D4 vs C5":["DEFENDER LINK BROKEN"],"D5 vs C5":["DEFENDER LINK BROKEN"]}
+ok   gate items equal before and after (every gate reader) [ask false] :: 0 items
+ok   gateNewK2024 items equal [ask false]
+ok   gateAnsOpen2024 items equal [ask false] :: 0 items
+ok   gateVnv2024 items equal [ask false] :: 0 items
+ok   drvCheck items (drv_uncured count source) equal before and after [ask false] :: base 0, target 0
+ok   rcLines collision lines: the distinct graded entries are equal before and after [ask true] :: base 11 entries (8 distinct), target 8 (8 distinct)
+ok   gate items equal before and after (every gate reader) [ask true] :: 0 items
+ok   gateNewK2024 items equal [ask true]
+ok   gateAnsOpen2024 items equal [ask true] :: 0 items
+ok   gateVnv2024 items equal [ask true] :: 0 items
+ok   drvCheck items (drv_uncured count source) equal before and after [ask true] :: base 0, target 0
+ok   pkgGCP (gcp2024) equal before and after, drv_uncured 0, no prompt :: no count-off on either side (null)
+ok   pkgGCP (gcp2024) equal before and after, drv_uncured 0, with the assembled prompt :: no count-off on either side (null)
+ok   pkgGCP (gcp2024) equal before and after, drv_uncured 1, no prompt :: no count-off on either side (null)
+ok   pkgGCP (gcp2024) equal before and after, drv_uncured 1, with the assembled prompt :: no count-off on either side (null)
+ok   pkgGCP (gcp2024) equal before and after, drv_uncured 3, no prompt :: no count-off on either side (null)
+ok   pkgGCP (gcp2024) equal before and after, drv_uncured 3, with the assembled prompt :: no count-off on either side (null)
+18 checks, ALL OK
