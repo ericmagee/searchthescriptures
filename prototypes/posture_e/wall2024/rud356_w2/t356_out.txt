@@ -1,4 +1,4 @@
-ok   library lines changed are 1753 and 1754 only; line count equal :: 1753,1754
+ok   library lines changed are 1753, 1754, 1816, 1922, 1933 and 2392 only; line count equal :: 1753,1754,1816,1922,1933,2392
 ok   only the Shared Library node changed :: Shared Library
 ok   connections and node order equal
 ok   every MAP entry rebuilds to its n :: 45 entries
@@ -20,4 +20,11 @@ ok   PLANT MUST CATCH: RESULT: CHALLENGER WINS -- D2 vs C2 decides.
 ok   PLANT MUST NOT CATCH: KEYSTONE: D2 -- STANDS -- D2 vs C2 stands.
 ok   REPLAY over 45 stored judgments (1167 to 1211, final text): 1 hit, 1211 D2 vs C2 :: 1211 luna RUD PAIR D2 vs C2
 ok   the item is TRIAL record only: why names it, and the push sets live:false
-21 checks, ALL OK
+ok   F1: a CHANGE answering the K-RUD item is not added to the applied changes; the other item still is :: G1
+ok   F1 control: the base line adds both
+ok   F2: a seat with only K-RUD items gets no gate call, and its report carries the record
+ok   F2: a seat with K-RUD and another item still gets its call, no record entry
+ok   F2: no items, no call, no record (as base)
+ok   F2 record: Gate Record makes one RECORD-ONLY UNCURED E-GATE row per K-RUD item of a seat with no call :: {"run_token":"rt1","seat":"luna","seat_role":"alternate","judge_model":"m1","kind":"send_back","rule":"E-GATE","item":"G1 RULE K-RUD (E-GATE RUD)","flagged_line":"RESULT: x\nD2 vs C2 (y): UNDERDETERMI
+ok   F2 record: both Gate Record paths (skip, line 1922; calls, line 1933) add the rows
+28 checks, ALL OK

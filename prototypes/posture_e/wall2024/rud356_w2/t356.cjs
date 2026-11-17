@@ -1,7 +1,7 @@
 // ASK 356 tests. Usage: node t356.cjs <target> <base> <lib.cjs> <rows45.json>
 const fs=require('fs');const {unpack,rb,load}=require(process.argv[4]);let n=0,f=0;const ok=(t,c,d)=>{n++;if(!c)f++;console.log((c?'ok   ':'FAIL ')+t+(d?' :: '+d:''));};
 const tw=JSON.parse(fs.readFileSync(process.argv[2])),bw=JSON.parse(fs.readFileSync(process.argv[3]));const tu=unpack(tw),bu=unpack(bw);
-const dl=tu.L.map((l,i)=>l!==bu.L[i]?i:-1).filter(i=>i>=0);ok('library lines changed are 1753 and 1754 only; line count equal',tu.L.length===bu.L.length&&dl.join()==='1753,1754',dl.join());
+const dl=tu.L.map((l,i)=>l!==bu.L[i]?i:-1).filter(i=>i>=0);ok('library lines changed are 1753, 1754, 1816, 1922, 1933 and 2392 only; line count equal',tu.L.length===bu.L.length&&dl.join()==='1753,1754,1816,1922,1933,2392',dl.join());
 const BN={};for(const x of bw.nodes)BN[x.name]=x;const dn=tw.nodes.filter(x=>JSON.stringify(x)!==JSON.stringify(BN[x.name])).map(x=>x.name);ok('only the Shared Library node changed',dn.join()==='Shared Library',dn.join());
 ok('connections and node order equal',JSON.stringify(tw.connections)===JSON.stringify(bw.connections)&&tw.nodes.map(x=>x.name).join()===bw.nodes.map(x=>x.name).join());
 const bad=Object.keys(tu.M).filter(k=>rb(tu.L,tu.M[k]).length!==tu.M[k].n);ok('every MAP entry rebuilds to its n',!bad.length,Object.keys(tu.M).length+' entries');
@@ -22,4 +22,16 @@ const base='D2 vs C2 (Luke 1:35): UNDERDETERMINED -- GROUND: [L1] Luke 1:35 "x";
 for(const [s,want] of [['RESULT: DEFENDER WINS -- D1 vs C1 decides; D2 vs C2 does not decide the outcome.',0],['RESULT: DEFENDER WINS -- D1 vs C1 decides, D2 vs C2 aside.',0],['RESULT: DEFENDER WINS -- D1 vs C1 decides without D2 vs C2.',0],['RESULT: DEFENDER WINS -- D1 vs C1 decides; D2 vs C2 remains open.',0],['RESULT: UNDERDETERMINED -- D2 vs C2 stands.',0],['RESULT: CHALLENGER WINS -- D2 vs C2 decides.',1],['KEYSTONE: D2 -- STANDS -- D2 vs C2 stands.',0]])ok('PLANT '+(want?'MUST CATCH':'MUST NOT CATCH')+': '+s,P(base+s).length===want);
 let hits=[];for(const r of R){for(const x of P(txt(r)))hits.push(r.id+' '+r.seat+' '+x.key);}ok('REPLAY over '+R.length+' stored judgments (1167 to 1211, final text): 1 hit, 1211 D2 vs C2',hits.length===1&&hits[0]==='1211 luna RUD PAIR D2 vs C2',hits.join('; '));
 ok('the item is TRIAL record only: why names it, and the push sets live:false',/TRIAL rule \(K-RUD, ASK 356; record only/.test(h[0].why));
+// rev 2 (W1 7539): F1 line 1816 and F2 line 2392, run on stubs
+{const f=new Function('G','A','seat','gateIsForced2024','gateLineFor2024','const add=[];'+tu.L[1816]+';return add;');
+ const Gs=[{gid:'G1',kind:'NOT APPLIED',src:'E-APPLY'},{gid:'G2',kind:'RULE K-RUD',src:'E-GATE RUD',live:false}];const As={G1:{ans:'CHANGE',to:'a',why:'w'},G2:{ans:'CHANGE',to:'b',why:'w'}};
+ const ad=f(Gs,As,'luna',()=>false,(x,t)=>t);ok('F1: a CHANGE answering the K-RUD item is not added to the applied changes; the other item still is',ad.length===1&&ad[0].sid==='G1',ad.map(x=>x.sid).join());
+ const fb=new Function('G','A','seat','gateIsForced2024','gateLineFor2024','const add=[];'+bu.L[1816]+';return add;');ok('F1 control: the base line adds both',fb(Gs,As,'luna',()=>false,(x,t)=>t).length===2);}
+{const g=new Function('G','SBB','seat','rp',tu.L[2392]+';return "CALL";');const SB=[{seat:'luna',run_token:'rt1',api_model:'m1'}];
+ const rp1={seat:'luna'};const it1={gid:'G1',kind:'RULE K-RUD',src:'E-GATE RUD',why:'TRIAL rule (K-RUD',lines:['RESULT: x','D2 vs C2 (y): UNDERDETERMINED']};
+ ok('F2: a seat with only K-RUD items gets no gate call, and its report carries the record',g({items:[it1]},SB,'luna',rp1)===undefined&&rp1.rud_rec&&rp1.rud_rec.run_token==='rt1'&&rp1.rud_rec.items.length===1);
+ const rp2={seat:'luna'};ok('F2: a seat with K-RUD and another item still gets its call, no record entry',g({items:[it1,{src:'E-APPLY'}]},SB,'luna',rp2)==='CALL'&&!rp2.rud_rec);
+ ok('F2: no items, no call, no record (as base)',g({items:[]},SB,'luna',{})===undefined);
+ const rows=GR.rudRows2024([rp1,rp2,{seat:'sol',error:'x'}]);ok('F2 record: Gate Record makes one RECORD-ONLY UNCURED E-GATE row per K-RUD item of a seat with no call',rows.length===1&&rows[0].run_token==='rt1'&&rows[0].seat==='luna'&&rows[0].rule==='E-GATE'&&rows[0].cure_status==='UNCURED'&&/RECORD-ONLY\)$/.test(rows[0].cure_reason)&&rows[0].flagged_line==='RESULT: x\nD2 vs C2 (y): UNDERDETERMINED'&&rows[0].item==='G1 RULE K-RUD (E-GATE RUD)',JSON.stringify(rows[0]).slice(0,200));
+ ok('F2 record: both Gate Record paths (skip, line 1922; calls, line 1933) add the rows',/gate_rows:rudRows2024\(first\.gate_report\)/.test(tu.L[1922])&&/gate_rows:rows\.concat\(rudRows2024\(first\.gate_report\)\)/.test(tu.L[1933]));}
 console.log(n+' checks, '+(f?'FAILS '+f:'ALL OK'));
