@@ -14,8 +14,8 @@
 - Panel judge 1: sol62 (openai/gpt-6.2-sol): **HELD** (a grade of the defender's chain: Gemini, arguing the standard reading) (counted). The engine recomputed its verdict after the cure: the judge wrote BROKEN, and it counts as HELD; its RESULT was also recomputed: the judge wrote CHALLENGER WINS, and it reads UNDERDETERMINED
 - Panel judge 2: ChatGPT (openai/gpt-6.1-terra): **BROKEN** (a grade of the defender's chain: Gemini, arguing the standard reading) (NOT COUNTED: 1 debate rule violation not cured (K-V on CHALLENGER premise 4)). Reason: D1 vs C2 breaks because the answer to the fleshly-descent press relies on an unestablished maternal lineage.
 - Panel judge 3: sol (openai/gpt-6.1-sol): **HELD** (a grade of the defender's chain: Gemini, arguing the standard reading) (counted). Reason: Collisions D1 vs C1, D3 vs C4, and D5 vs C1/C4 leave the topic open: [L1] Matthew 1:18 says "before they came together, she was found with child of the Holy Ghost", while [L3] Matthew 1:25 says "And knew her not till she had brought forth her firstborn son", and Luke 1:35 says "therefore also that holy thing which shall be born of thee shall be called the Son of God"; [L4] the dispute concerns whether these combined descriptions exclude earlier human generation or describe the finding, subsequent abstinence, and divine calling, and neither side establishes its exclusion against the other's exhibited construction.
-- Panel result: **HELD** (2-0 (1 not counted: debate rule)) (a grade of the defender's chain: Gemini, arguing the standard reading). Counted: 2 of 3 panel seats.
-- Seat 2 stayed empty: ChatGPT was not counted and no judge was counted in its place. Alternates tried: Claude Haiku, not seated (10 uncured items); ernie, no verdict returned (finish_reason length).
+- Panel result: **HELD** (2-0 (1 not counted: debate rule)) (a grade of the defender's chain: Gemini, arguing the standard reading). Counted: 2 of 3 panel seats (a seat counts when its judge, or the alternate seated in its place, is counted).
+- Panel judge 2's seat stayed empty: ChatGPT was not counted, and no judge was counted in its place. Alternates tried: Claude Haiku, not seated (10 uncured items); ernie, no verdict returned (finish_reason length).
 
 ## Result
 
@@ -1264,7 +1264,7 @@ CHALLENGER CHAIN MARK: FOOTED -- C1–C4 construct an alternative through the ho
 
 *Debate complete.*
 
-**Run time:** 77 min 27 s (started Nov 17, 3:10 PM CST, transcript written Nov 17, 4:28 PM CST).
+**Run time:** 81 min 3 s (started Nov 17, 3:10 PM CST, transcript written Nov 17, 4:31 PM CST).
 
 ---
 
