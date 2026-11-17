@@ -19,7 +19,7 @@ ed(2963,"line:i.line,reason:i.reason,ecl:i.ecl||null,","line:i.line,reason:i.rea
 ed(2781,"ecl:it.ecl||null},a||","ecl:it.ecl||null,ecw:it.ecw||null},a||",'E5');
 ed(2690,"const p=press(a.why);if(p)return res(true,'KEEP that '+p);const b2=both(a.why);return res(b2.ok,'KEEP that '+b2.why);}","const p=press(a.why);if(p)return res(true,'KEEP that '+p);const b2=both(a.why);if(!b2.ok&&it.ecw){const k3=ECW.keep3(a.why,it.ecw,PRS);if(k3)return res(true,'KEEP that '+k3);}return res(b2.ok,'KEEP that '+b2.why);}",'E6');
 // E7/E8 true-status label (C3)
-ed(3410,"' (judge wrote '+x.grade+'; RECORD-ONLY TRIAL, ruling 428)'","' (judge wrote '+x.grade+'; '+ECW.label(x.rule,v,x)+', ruling 428)'",'E7');
+ed(3410,"' (judge wrote '+x.grade+'; RECORD-ONLY TRIAL, ruling 428)'","' (judge wrote '+x.grade+'; '+ECW.label(x.rule)+', ruling 428)'",'E7');
 ed(3415,"' (judge wrote FORCED; RECORD-ONLY TRIAL, ruling 428)'","' (judge wrote FORCED; '+ECW.label('E-COL')+', ruling 428)'",'E8');
 // E9 the gate (C1, C2), on the enforcer's full sentence
 ed(3461,"rows.push(...CODE);","const __ecw=(()=>{const ids=[];B.forEach(b=>(b.ids||[]).forEach(x=>ids.push(x)));try{return ECW.apply(rows,ids,V,__rdRounds);}catch(e){return {error:String(e&&e.message||e).slice(0,160)};}})(); /* pkgECW */rows.push(...CODE);",'E9');
