@@ -1,0 +1,17 @@
+ok   six nodes added, none removed, the old order kept
+ok   changed existing nodes are code nodes only, and only in jsCode :: 33 nodes
+ok   D1B Call anthropic equals D1 Call anthropic in type, version, parameters, credentials, retry and error settings
+ok   D1B Call openrouter equals D1 Call openrouter in type, version, parameters, credentials, retry and error settings
+ok   D1B Call deepseek equals D1 Call deepseek in type, version, parameters, credentials, retry and error settings
+ok   D1B Route equals D2B Route in parameters
+ok   wiring: D1 Extract -> D1B Build -> D1B Route; error output of D1 Extract unchanged :: D1B Build | Failure Salvage
+ok   wiring: D1B Route as D2B Route (7 = no resend, straight to D1B Extract) :: D1B Call anthropic | Provider Removed Stop | Provider Removed Stop | Provider Removed Stop | Provider Removed Stop | D1B Call openrouter | D1B Call deepseek | D1B Extract
+ok   wiring: each D1B Call, both outputs -> D1B Extract; D1B Extract -> C1 Verse Sheet
+ok   no other edge changed
+ok   no reader outside D1B, Failure Salvage and Build Save Body still names D1 Extract
+ok   syntax of every new or changed code node
+ok   REAL 37891 round 1 (clean under rev 2): no resend :: no barred move harvested
+ok   PLANT round 1 short of its layers: resend, layers note only, defender call continued :: 0 barred sentence(s); 1 layer point(s)
+ok   no resend: D1B Extract passes D1 Extract's output through, raw and labelled byte-equal
+ok   resend: the second round replaces the first, labelled as ROUND 1, re-checked clean :: the replacement round (203 -> 391 chars; barred sentences 0 -> 0)
+16 of 16 pass
