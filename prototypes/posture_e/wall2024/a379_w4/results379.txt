@@ -1,4 +1,7 @@
-ASK 379 results, W4, 2026-11-17. Target t379_on260.json sha256 61785684e0e9, child c379.json sha256 900dd4c719bd, base s260 (rdf/fetchback_s260.json). A379_CAP=6 (placeholder).
+ASK 379 results rev 2 (item 6 (b) built), W4, 2026-11-17. Target t379_on260.json sha256 987045e36bee (458 to 421 nodes), child c379.json sha256 2d05d9002727 (161 nodes), base s260. A379_CAP=6 is a placeholder; the cap is the operator's.
+
+== what changed from rev 1 (Wall 7968)
+The engine node Alternate Pass Input is gone. The call node maps one input, pass, built by an expression from the engine's nodes when the call runs, so the engine no longer keeps a copy of the input in its run data. The child's trigger takes that one input; its check, holders and entry read it under .pass. The input itself is unchanged (38450 identical; 37372 identical apart from the run id, which was missing in my rev 1 harness).
 
 == engine check on 38450 (one pass)
 PASS Second Alternate? a2r (first entry)
@@ -9,7 +12,7 @@ PASS Panel Tokens output == live
 PASS Format Markdown markdown == live (7612 lines)
 pass 6 fail 0
 
-== multi-pass check of the target's own code, cap 3 build (t379_cap3.json), 37372
+== multi-pass, target's own code (cap 3 build), 37372
 PASS pass 2 decision: hydrogen retried once
 PASS pass 3 decision: no third try of hydrogen; gemini first free
 PASS pass 4 decision: gemini retried once
@@ -23,7 +26,7 @@ PASS sol body: no duplicate tried lines
 PASS Panel Tokens reads both passes of R2 Alternate Call (two calls, two counted in panel_calls)
 pass 11 fail 0
 
-== multi-pass check through Format Markdown and Panel Tokens, 38450
+== multi-pass through Format Markdown and Panel Tokens, 38450
 PASS pass 2 decision equals the record
 PASS pass 3 decision: ernie retried once
 PASS pass 4 decision: no third try of ernie; sonnet
@@ -48,110 +51,52 @@ EXCEPTION R2 Alternate Call openrouter ($execution.id -> parent_exec)
 EXCEPTION R2 Alternate Cure Call openrouter ($execution.id -> parent_exec)
 chain nodes equal 33 | listed exceptions 6 | drift 0 | Shared Library byte-equal true
 
-== n8n replay of 38450 (parent exec 38555, child exec 38556; child built before the alwaysOutputData change, which is on the engine's call node only)
-child R2 Alternate Merge == stored R2 Alternate Merge: false bytes 1325772
-  differs enforcer_log [{"run_token":"ODV1-38450-bz66jhy3","seat":"sol62","seat_role":"panel","judge_model":"openai/gpt-6.2-sol","kind":"cure","rule":"K-G4","item":"D1 vs C2","flagged_line":"D1 vs C2 (Romans 1:3; Luke 1:
-  node R2 Alternate Build ran true stored ran true equal true
-  node R2 Alternate Cure Build ran false stored ran false equal true
-  node R2 Alternate Cure Normalize ran false stored ran false equal true
-  node R2 Alternate Call openrouter ran true stored ran true equal true
-  node R2 Alternate Cure Call openrouter ran false stored ran false equal true
-  node R2 Alt Judge Enforcer Call deepseek ran false stored ran false equal true
-  node R2 Alt Judge Enforcer Retry Call deepseek ran false stored ran false equal true
-  node R2 Alt Send Back Call openrouter ran false stored ran false equal true
-  node R2 Alt Gate Call openrouter ran false stored ran false equal true
-  node R2 Alt Late Gate Call openrouter ran false stored ran false equal true
-  node R2 Alt Reread Call deepseek ran false stored ran false equal true
-  node FUM Call R2 Alternate openrouter ran false stored ran false equal true
-chain nodes run: child 20 stored 20 only child [] only stored []
-  node output differs R2 Alternate Merge 1325774 1325774
-  node output differs R2 Alternate Merge Seat 1322487 1322487
-chain node outputs differing: 2
--- node by node, s260 code on the same inputs:
-equal 13 differ 0 errors 0
-
-== n8n replay of 37372 (parent exec 38557, child exec 38558; child built before the alwaysOutputData change, which is on the engine's call node only)
-child R2 Alternate Merge == stored R2 Alternate Merge: false bytes 2075839
-  differs bodies ["{\"payload\":{\"debate_id\":\"6c62698b-58d1-4f5f-9d8e-cd57f096e96c\",\"judge_seat\":\"chatgpt\",\"judge_api_model\":\"openai/gpt-6.1-terra\",\"verdict_raw\":\"{\\n  \\\"verdict_tag\\\": \\\"BROKEN\\ | 
-  differs enforcer_log [{"run_token":"ODV1-37372-6n5n7sh9","seat":"chatgpt","seat_role":"panel","judge_model":"openai/gpt-6.1-terra","kind":"cure","rule":"K-S3","item":"S3 DEFENDER CR4: #1","flagged_line":"DEFENDER CR4: 
-  node R2 Alternate Build ran true stored ran true equal true
-  node R2 Alternate Cure Build ran false stored ran false equal true
-  node R2 Alternate Cure Normalize ran false stored ran false equal true
-  node R2 Alternate Call openrouter ran true stored ran true equal true
-  node R2 Alternate Cure Call openrouter ran false stored ran false equal true
-  node R2 Alt Judge Enforcer Call deepseek ran false stored ran false equal true
-  node R2 Alt Judge Enforcer Retry Call deepseek ran false stored ran false equal true
-  node R2 Alt Send Back Call openrouter ran false stored ran false equal true
-  node R2 Alt Gate Call openrouter ran false stored ran false equal true
-  node R2 Alt Late Gate Call openrouter ran false stored ran false equal true
-  node R2 Alt Reread Call deepseek ran false stored ran false equal true
-  node FUM Call R2 Alternate openrouter ran false stored ran false equal true
-chain nodes run: child 20 stored 20 only child [] only stored []
-  node output differs R2 Alternate Merge 2076432 2075841
-  node output differs R2 Alternate Merge Seat 2068787 2068347
-  node output differs R2 Alternate Payloads 358902 358802
-chain node outputs differing: 3
--- node by node, s260 code on the same inputs:
-equal 13 differ 0 errors 0
-
-== n8n replay of 37510 (parent exec 38559, child exec 38560; child built before the alwaysOutputData change, which is on the engine's call node only)
-child R2 Alternate Merge == stored R2 Alternate Merge: false bytes 1724084
-  differs enforcer_log [{"run_token":"ODV1-37510-6gpyl6l8","seat":"chatgpt","seat_role":"panel","judge_model":"openai/gpt-6.1-terra","kind":"cure","rule":"K-G4","item":"D3 vs C2","flagged_line":"D3 vs C2 (Luke 1:31): CHA
-  node R2 Alternate Build ran true stored ran true equal true
-  node R2 Alternate Cure Build ran false stored ran false equal true
-  node R2 Alternate Cure Normalize ran false stored ran false equal true
-  node R2 Alternate Call openrouter ran true stored ran true equal true
-  node R2 Alternate Cure Call openrouter ran false stored ran false equal true
-  node R2 Alt Judge Enforcer Call deepseek ran false stored ran false equal true
-  node R2 Alt Judge Enforcer Retry Call deepseek ran false stored ran false equal true
-  node R2 Alt Send Back Call openrouter ran false stored ran false equal true
-  node R2 Alt Gate Call openrouter ran false stored ran false equal true
-  node R2 Alt Late Gate Call openrouter ran false stored ran false equal true
-  node R2 Alt Reread Call deepseek ran false stored ran false equal true
-  node FUM Call R2 Alternate openrouter ran false stored ran false equal true
-chain nodes run: child 20 stored 20 only child [] only stored []
-  node output differs R2 Alternate Merge 1724086 1724086
-  node output differs R2 Alternate Merge Seat 1719278 1719278
-chain node outputs differing: 2
--- node by node, s260 code on the same inputs:
-equal 13 differ 0 errors 0
-
-== n8n replay of 35296 (parent exec 38561, child exec 38562; child built before the alwaysOutputData change, which is on the engine's call node only)
-the child returned no item (its chain stopped before R2 Alternate Merge)
-chain nodes run: child 19 stored 29 only child [ 'R2 Alt Judge Enforcer Retry Call deepseek' ] only stored [
-  'R2 Alt Gate Build',
-  'R2 Alt Gate Needed?',
-  'R2 Alt Gate Record',
-  'R2 Alt Judge Enforcer Record',
-  'R2 Alt Reread Build',
-  'R2 Alt Reread Needed?',
-  'R2 Alt Reread Record',
-  'R2 Alt Send Back Build',
-  'R2 Alt Send Back Needed?',
-  'R2 Alt Send Back Record',
-  'R2 Alternate Merge'
+== n8n loop replays at cap 3 (scratch parent = the target's Second Alternate?, Second Alternate Needed?, Alternate Pass Call with the mapped input, Pass Accumulate, Alternate Merge; stubs return the stored nodes; child = c379 with recorded replies pinned)
+38450: parent 38568 success; children 38569, 38570, 38571 success (about 10 s each).
+pass 2 child input sa equals the engine decision item: true | a2r {"run":true,"seats":["chatgpt"],"tried":["anthropic/claude-haiku-5.5"],"free":["ernie","sonnet"],"retry":[],"why":"round | parent_exec 38568
+pass 3 child input sa equals the engine decision item: true | a2r {"run":true,"seats":["chatgpt"],"tried":["anthropic/claude-haiku-5.5"],"free":["ernie","sonnet"],"retry":["baidu/ernie-5 | parent_exec 38568
+pass 4 child input sa equals the engine decision item: true | a2r {"run":true,"seats":["chatgpt"],"tried":["anthropic/claude-haiku-5.5","baidu/ernie-5.5-flash-preview:free"],"free":["son | parent_exec 38568
+decision 5 run false: the cap of 3 further alternate passes is reached
+Alternate Merge MB 1.67
+ engine keeps for pass 2 : { pass: 2, SA: 1.93, SAN: 1.93, Call: 2.03, Acc: 2.24 } total 8.1 MB
+ engine keeps for pass 3 : { pass: 3, SA: 1.93, SAN: 1.93, Call: 2.03, Acc: 2.25 } total 8.1 MB
+ engine keeps for pass 4 : { pass: 4, SA: 1.93, SAN: 1.93, Call: 2.03, Acc: 2.25 } total 8.1 MB
+ tried [
+  'chatgpt>haiku:unseated after its enforcer send-back an',
+  'chatgpt>ernie:seat "ernie" returned content null (fini',
+  'chatgpt>ernie:seat "ernie" returned content null (fini',
+  'chatgpt>sonnet:seat "sonnet" returned content null (fin',
+  'chatgpt>none:the cap of 3 further alternate passes is'
 ]
-  node output differs FUM Merge R2 Alternate 12328 11530
-  node output differs R2 Alt Judge Enforcer Build 76163 45056
-  node output differs R2 Alt Judge Enforcer Needed? 76163 45056
-  node output differs R2 Alt Judge Enforcer Retry Build 99295 21
-  node output differs R2 Alt Judge Enforcer Retry Needed? 99295 2
-  node output differs R2 Alternate Cure Build 420033 424031
-  node output differs R2 Alternate Cure Needed? 266022 263788
-  node output differs R2 Alternate Cure Normalize 186529 192499
-  node output differs R2 Alternate Merge Seat 1900365 1899502
-  node output differs R2 Alternate Payloads 266022 263788
-chain node outputs differing: 10
--- node by node, s260 code on the same inputs:
-equal 9 differ 0 errors 0
+
+37372: parent 38572 success; children 38573, 38574, 38575 success (about 17 s each, 35.6 MB data each).
+pass 2 child input sa equals the engine decision item: true | a2r {"run":true,"seats":["sol"],"tried":[],"free":["hydrogen","gemini","grok","argon","haiku"],"retry":["google/gemini-4-hyd | parent_exec 38572
+pass 3 child input sa equals the engine decision item: true | a2r {"run":true,"seats":["sol"],"tried":["google/gemini-4-hydrogen"],"free":["gemini","grok","argon","haiku"],"retry":[],"wh | parent_exec 38572
+pass 4 child input sa equals the engine decision item: true | a2r {"run":true,"seats":["sol"],"tried":["google/gemini-4-hydrogen"],"free":["gemini","grok","argon","haiku"],"retry":["goog | parent_exec 38572
+decision 5 run false: the cap of 3 further alternate passes is reached
+Alternate Merge MB 2.56
+ engine keeps for pass 2 : { pass: 2, SA: 2.7, SAN: 2.7, Call: 3.51, Acc: 3.51 } total 12.4 MB
+ engine keeps for pass 3 : { pass: 3, SA: 2.7, SAN: 2.7, Call: 3.51, Acc: 3.51 } total 12.4 MB
+ engine keeps for pass 4 : { pass: 4, SA: 2.71, SAN: 2.71, Call: 3.51, Acc: 3.51 } total 12.4 MB
+ tried [
+  'sol>hydrogen:seat "hydrogen" returned content null (f',
+  'sol>hydrogen:seat "hydrogen" returned no JSON object.',
+  'sol>gemini:seat "gemini" returned no JSON object. F',
+  'sol>gemini:seat "gemini" returned no JSON object. F',
+  'sol>none:the cap of 3 further alternate passes is'
+]
+
+== pass 2 of each loop against the record and s260 code
+38450 (child 38569): equal 13 differ 0 errors 0
+37372 (child 38573): equal 13 differ 0 errors 0
+
+== earlier single-pass replays (rev 1 child form; same chain nodes)
+37510 (child 38560): equal 13 differ 0 errors 0
+35296 (child 38562): equal 9 differ 0 errors 0
 
 == notes
-1. 38450, 37510: R2 Alternate Merge and Merge Seat equal the record apart from enforcer_log "at" timestamps (checked with "at" removed: equal).
-2. 37372: differs from the 11-15 record in three places, all from code written after 11-15: (a) R2 Alternate Payloads usage_line, null then, now "USAGE: prompt=104006 completion=64000 reasoning=56380 finish=length max_tokens=64000"; (b) the same USAGE line now ends hydrogen's reply_error in enforcer_log; (c) luna's derived KEYSTONE line, in the verdict and in its K-RECHK line, now ends with its GROUND clause "-- GROUND: D6 vs C4 | [L1] Acts 2:30 ... (pkgLAY)". The first 16 chain nodes are equal to the record. s260 code on the child's inputs gives the child's output, 13 of 13 code nodes.
-3. 35296 (11-13): s260 code takes another path (R2 Alternate Payloads and the cure items differ: K-G8 and K-W items now), so the recorded replies do not fit; the enforcer reply is short for the new items, the retry runs, its pinned reply is empty, and the chain stops with no item. Same-as-live cannot be shown on 35296 with recorded replies. s260 code gives the child's output, 9 of 9.
-4. 35379: its Second Alternate? record has no a2r (older code); not comparable.
-5. Memory: the first build crashed the n8n instance on 37372 (13.3 MB input; executions 38551 and 38552, "possible out-of-memory"; no other execution recorded as failed in 23:10-23:14Z; a call arriving during the restart would leave no record; engine stayed at s260). Cause: each gate read the 13 MB check output once per incoming item (L2 Words: 1294 items; one gate took 86 s), and the input was held four times. Rebuilt: the check returns flags only; holders read the input node; gates check once; an empty item between holders; Pass Accumulate keeps only this pass's node items; the pass input leaves the engine pass state out. 38450 child: 48.3 MB and 80 s before, 20.7 MB and 11.7 s after, same result. 37372 now runs (11.3 MB input).
-6. Engine bytes kept per pass (estimate): 38450 about 15 MB, 37372 about 24 MB (the pass input is 6.5 and 11.3 MB of it). With the cap at 6 the engine could keep up to about 145 MB more on a 37372-sized run. The engine's own total is not measured (its executions are too large for the API to show).
-7. A pass that ends with no item (35296 replay) would have stopped the engine silently: no item reaches Pass Accumulate. Fixed: the call node now always outputs (scratch 38563: one empty item), and Pass Accumulate records "the pass returned no result" as NOT SEATED (multi-pass check).
-8. The call nodes in the child read only $json and the passed-in engine execution id; none reads a holder by paired item. Their expressions were not evaluated in n8n (the replays pin them); the gates evaluated the same kind of read.
-9. Live wording seen in later passes: "no pool model is left after round 1" (Second Alternate?) and the header's "no verdict returned" for an errored pass (Format Markdown). Unchanged.
+1. Engine data kept per pass after (b), from the loop replays: 38450 8.1 MB, 37372 12.4 MB (Second Alternate? and Second Alternate Needed? 2.7 each, call result 3.5, Pass Accumulate 3.5); rev 1 was about 15 and 24 MB. At cap 3 a 37372-sized run keeps about 37 MB more than before the loop, plus Alternate Merge 2.6 MB; at cap 6 about 75 MB. Each pass's child holds about 36 MB while it runs. The engine's own total is not measured.
+2. Loop replay results are synthetic after pass 2 (the pinned replies are pass 2's), so they test the loop and memory, not verdicts.
+3. DoD 2 (W1 7969, W3): 38450 and 37510 MET; 37372 MET BY CODE EQUIVALENCE (USAGE line, pkgLAY GROUND clause); 35296 PARTIAL (node by node only); 35379 NOT APPLICABLE; the production path has NOT RUN.
+4. Outage 17:13 CST: the last engine run before it was 38450 (15:10 CST); no engine run fell in 17:10 to 17:14 CST.
+5. Live wording in later passes, unchanged: "round 2 for ..." and "no pool model is left after round 1" (Second Alternate?), the header's "no verdict returned" for an errored pass (Format Markdown).

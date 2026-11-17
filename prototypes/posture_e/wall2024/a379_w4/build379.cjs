@@ -20,19 +20,19 @@ BACK.forEach(n=>{if(!inChain.has(n))fail('BACK node not in chain: '+n);});
 const JS=s=>JSON.stringify(s);
 // ================= CHILD =================
 const CH=[];const CC={};const link=(a,b,i=0,j=0)=>{CC[a]=CC[a]||{main:[]};while(CC[a].main.length<=i)CC[a].main.push([]);CC[a].main[i].push({node:b,type:'main',index:j});};
-CH.push({id:'a379-in',name:'Alternate Pass In',type:'n8n-nodes-base.executeWorkflowTrigger',typeVersion:1.1,position:[-3400,0],parameters:{inputSource:'passthrough'}});
+CH.push({id:'a379-in',name:'Alternate Pass In',type:'n8n-nodes-base.executeWorkflowTrigger',typeVersion:1.1,position:[-3400,0],parameters:{inputSource:'workflowInputs',workflowInputs:{values:[{name:'pass',type:'object'}]}}}); // one input, mapped on the engine's call node (W1 7969, W3, W2 7971: the engine keeps only each pass's result)
 const checkCode="// ASK 379: input check (W2 7935 item 1, W3 7939 item 1). Every input the pass reads is present; a node that ran in the engine brings at least one item.\n"+
- "const HOLD="+JS(HOLD)+";\nconst j=$input.first().json;const miss=[];\nif(!j||typeof j!=='object')throw new Error('ASK 379 input check: no input item');\n"+
+ "const HOLD="+JS(HOLD)+";\nconst j=($input.first().json||{}).pass;const miss=[];\nif(!j||typeof j!=='object')throw new Error('ASK 379 input check: no input item');\n"+
  "if(!j.sa||typeof j.sa!=='object'||!j.sa.a2r)miss.push('sa (the pass decision)');if(!j.parent_exec)miss.push('parent_exec');if(!j.h||typeof j.h!=='object')miss.push('h');\n"+
  "else for(const n of HOLD){const x=j.h[n];if(!x||typeof x.ran!=='boolean')miss.push(n);else if(x.ran&&!(Array.isArray(x.items)&&x.items.length))miss.push(n+' (ran, no items)');}\n"+
  "if(miss.length)throw new Error('ASK 379 input check: missing input '+miss.join(', '));\nconst ran={};for(const n of HOLD)ran[n]=j.h[n].ran;\nreturn [{json:{parent_exec:j.parent_exec,ran}}]; // flags only: the items stay once, in Alternate Pass In";
 CH.push({id:'a379-chk',name:'Alternate Pass Check',type:'n8n-nodes-base.code',typeVersion:2,position:[-3200,0],parameters:{jsCode:checkCode}});link('Alternate Pass In','Alternate Pass Check');
 HOLD.forEach((n,k)=>{const g='A379 Gate '+String(k+1).padStart(2,'0');
  CH.push({id:'a379-g'+k,name:g,type:'n8n-nodes-base.if',typeVersion:2,position:[-3000+k*0,200+k*120],executeOnce:true,parameters:{conditions:{options:{caseSensitive:true,leftValue:'',typeValidation:'loose'},conditions:[{id:'a379g'+k,leftValue:"={{ $('Alternate Pass Check').first().json.ran["+JS(n)+"] === true }}",rightValue:true,operator:{type:'boolean',operation:'true',singleValue:true}}],combinator:'and'},options:{}}});
- CH.push({id:'a379-h'+k,name:n,type:'n8n-nodes-base.code',typeVersion:2,position:[-2800,200+k*120],parameters:{jsCode:"// ASK 379 holder: this engine node's items as they stood when the pass was called.\nreturn $('Alternate Pass In').first().json.h["+JS(n)+"].items.map(json=>({json}));"}});
+ CH.push({id:'a379-h'+k,name:n,type:'n8n-nodes-base.code',typeVersion:2,position:[-2800,200+k*120],parameters:{jsCode:"// ASK 379 holder: this engine node's items as they stood when the pass was called.\nreturn $('Alternate Pass In').first().json.pass.h["+JS(n)+"].items.map(json=>({json}));"}});
  const tk='A379 Tick '+String(k+1).padStart(2,'0');CH.push({id:'a379-t'+k,name:tk,type:'n8n-nodes-base.set',typeVersion:3.4,position:[-2600,200+k*120],executeOnce:true,parameters:{mode:'manual',assignments:{assignments:[]},includeOtherFields:false,options:{}}}); // one empty item to the next gate
  if(k===0)link('Alternate Pass Check',g);link(g,n,0);const nx=k+1<HOLD.length?'A379 Gate '+String(k+2).padStart(2,'0'):'Alternate Pass Entry';link(n,tk);link(tk,nx);link(g,nx,1);});
-CH.push({id:'a379-entry',name:'Alternate Pass Entry',type:'n8n-nodes-base.code',typeVersion:2,position:[-2600,0],parameters:{jsCode:"// ASK 379: the pass decision item (Second Alternate? in the engine) enters the pass, as live R2 Alternate Build's input.\n$('Alternate Pass Check').first();return [{json:$('Alternate Pass In').first().json.sa}];"}});
+CH.push({id:'a379-entry',name:'Alternate Pass Entry',type:'n8n-nodes-base.code',typeVersion:2,position:[-2600,0],parameters:{jsCode:"// ASK 379: the pass decision item (Second Alternate? in the engine) enters the pass, as live R2 Alternate Build's input.\n$('Alternate Pass Check').first();return [{json:$('Alternate Pass In').first().json.pass.sa}];"}});
 link('Alternate Pass Entry','R2 Alternate Build');
 const PARENT_EXEC="$('Alternate Pass Check').first().json.parent_exec";
 const DRIFT=[];
@@ -57,12 +57,14 @@ rep('Second Alternate?'," a2r.retry=[...new Set(T.filter(x=>x.result==='NOT SEAT
 rep('Second Alternate?'," a2r.free=free.map(a=>a.seat);a2r.run=a2r.seats.length>0&&free.length>0;"," a2r.free=free.map(a=>a.seat);a2r.run=a2r.seats.length>0&&free.length>0&&__P.length<__CAP;");
 rep('Second Alternate?',"  :!T.length?","  :(a2r.seats.length>0&&free.length>0&&__P.length>=__CAP)?'the cap of '+__CAP+' further alternate pass'+(__CAP===1?'':'es')+' is reached'\n  :!T.length?");
 rep('Second Alternate?',"return [{json:{...G,a2r}}];","return [{json:{...G,a2r,__a379:{R:R1,passes:__P,pass:__P.length+2}}}]; /* ASK 379 */");
-// 2. Alternate Pass Input
-const inCode="// ASK 379: the input of one alternate pass: the pass decision, the engine execution id, and the items of every engine node the pass reads (W3 7939 item 1).\nconst A={"+HOLD.map(n=>JS(n)+":()=>$("+JS(n)+")").join(',')+"};\nconst h={};for(const n of Object.keys(A)){let x=null;try{x=A[n]();}catch(e){x=null;}const ran=!!(x&&x.isExecuted);h[n]={ran,items:ran?x.all().map(i=>i.json):[]};}\nconst {__a379,...sa}=$input.first().json; /* the pass state stays in the engine */\nreturn [{json:{sa,parent_exec:$execution.id,h}}];";
-T.nodes.push({id:'a379-pin',name:'Alternate Pass Input',type:'n8n-nodes-base.code',typeVersion:2,position:[TN['Second Alternate Needed?'].position[0]+220,TN['Second Alternate Needed?'].position[1]-200],parameters:{jsCode:inCode}});
+// 2. the pass input, mapped on the call node: built by n8n from the engine's nodes when the call runs, and not kept in the engine's run data
+const HX=HOLD.map(n=>JS(n)+": ($("+JS(n)+").isExecuted ? { ran: true, items: $("+JS(n)+").all().map(i => i.json) } : { ran: false, items: [] })").join(", ");
+const PASS_X="({ sa: Object.fromEntries(Object.entries($json).filter(e => e[0] !== '__a379')), parent_exec: $execution.id, h: { "+HX+" } })";
+if(/\{\{|\}\}/.test(PASS_X))fail('the pass expression holds a double brace');
+const inCode=PASS_X;
 // 3. Alternate Pass Call (waits; an error comes back as an item)
 T.nodes.push({id:'a379-call',name:'Alternate Pass Call',type:'n8n-nodes-base.executeWorkflow',typeVersion:1.2,position:[TN['Second Alternate Needed?'].position[0]+440,TN['Second Alternate Needed?'].position[1]-200],onError:'continueRegularOutput',alwaysOutputData:true, /* a pass that ends with no item still reaches Pass Accumulate, which records it as NOT SEATED (scratch 38563) */
- parameters:{source:'database',workflowId:{__rl:true,mode:'id',value:CHILD},mode:'once',options:{waitForSubWorkflow:true},workflowInputs:{mappingMode:'defineBelow',value:{},matchingColumns:[],schema:[],attemptToConvertTypes:false,convertFieldsToString:false}}});
+ parameters:{source:'database',workflowId:{__rl:true,mode:'id',value:CHILD},mode:'once',options:{waitForSubWorkflow:true},workflowInputs:{mappingMode:'defineBelow',value:{pass:'={{ '+PASS_X+' }}'},matchingColumns:[],schema:[{id:'pass',displayName:'pass',required:false,defaultMatch:false,display:true,canBeUsedToMatch:true,type:'object',removed:false}],attemptToConvertTypes:false,convertFieldsToString:false}}});
 // 4. Pass Accumulate: live Alternate Merge's merge, applied to one pass; an errored pass is recorded as NOT SEATED tries.
 const AMc=N['Alternate Merge'].parameters.jsCode;const amHead="const __AMOUT=(()=>{\nconst R1=$('Alternate Merge 1').first().json;\nlet R2=null;try{if($('R2 Alternate Merge').isExecuted)R2=$('R2 Alternate Merge').first().json;}catch(e){R2=null;}\n";
 if(AMc.indexOf(amHead)!==0)fail('Alternate Merge head anchor');const core=AMc.slice(amHead.length,AMc.indexOf('\n})();\n'));
@@ -90,13 +92,12 @@ for(const node of ['Format Markdown','Panel Tokens']){let c=TN[node].parameters.
  if(node==='Panel Tokens'){const a="const n=(String(f).match(/\\$\\('(.+)'\\)/)||[])[1]||'?';";if(c.split(a).length!==2)fail('Panel Tokens name anchor');c=c.replace(a,()=>"const n=(String(f).match(/(?:\\$|__A379)\\('(.+)'\\)/)||[])[1]||'?'; /* ASK 379: a pass node's name, read through the pass record */");k++;}
  if(/\$\('R2 /.test(c)||/\$\('FUM [^']*R2 /.test(c))fail(node+' still names an R2 node');TN[node].parameters.jsCode=SHIM+c;DRIFT.push({node,what:k+' reads moved to the pass record'});}
 // 7. connections
-T.connections['Second Alternate Needed?'].main[0]=[{node:'Alternate Pass Input',type:'main',index:0}];
-T.connections['Alternate Pass Input']={main:[[{node:'Alternate Pass Call',type:'main',index:0}]]};
+T.connections['Second Alternate Needed?'].main[0]=[{node:'Alternate Pass Call',type:'main',index:0}];
 T.connections['Alternate Pass Call']={main:[[{node:'Pass Accumulate',type:'main',index:0}]]};
 T.connections['Pass Accumulate']={main:[[{node:'Second Alternate?',type:'main',index:0}]]};
 // ---- asserts
 for(const x of T.nodes){if(x.name==='Shared Library')continue;const p=JSON.stringify(x.parameters);for(const n of CHAIN)if(p.indexOf("$('"+n+"')")>=0||p.indexOf('$(\\"'+n+'\\")')>=0)fail('engine node '+x.name+' still reads '+n);}
-for(const s of Object.keys(T.connections))if(!TN[s]&&!['Alternate Pass Input','Alternate Pass Call','Pass Accumulate'].includes(s))fail('dangling connection from '+s);
+for(const s of Object.keys(T.connections))if(!TN[s]&&!['Alternate Pass Call','Pass Accumulate'].includes(s))fail('dangling connection from '+s);
 const sl=CH.find(x=>x.name==='Shared Library');if(JSON.stringify(sl.parameters)!==JSON.stringify(N['Shared Library'].parameters))fail('Shared Library copy differs');
 const newCode=[inCode,accCode.replace(core2,''),checkCode,outCode,SHIM].join('\n');if(/\b(terra|ernie|haiku|sonnet|chatgpt|sol62|hydrogen|argon|spark|ember|grok|luna|qwen|gemini|deepseek|openai|anthropic)\b/i.test(newCode.replace(/deepseek'\)|deepseek"|Call deepseek/g,'')))console.log('NOTE: a model-like word appears in new code; check it');
 fs.writeFileSync(OUT_E,JSON.stringify(T));fs.writeFileSync(OUT_C,JSON.stringify(CHILDW));fs.writeFileSync(OUT_E.replace(/\.json$/,'_drift.json'),JSON.stringify(DRIFT,null,1));
