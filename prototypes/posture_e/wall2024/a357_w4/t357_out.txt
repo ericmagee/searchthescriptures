@@ -1,0 +1,19 @@
+ok   library line changed is 850 only, line count unchanged :: 850
+ok   only the Shared Library node changed; connections and settings equal :: Shared Library
+ok   every MAP entry rebuilds to its n :: 45 entries
+ok   syntax of every changed entry (25)
+ok   every entry holding g4Unans2024 also holds g4Press2024 exactly once
+ok   REPLAY reader over 340 stored K-G4 rows: exactly 5210, 9448, 32562, 37080, 41106, 42704 change (meaning to press) :: 5210,9448,32562,37080,41106,42704
+ok   REAL 42366 (footing, run 37891) still meaning
+ok   REAL 18942 (grok "the answer misses that meaning") still meaning
+ok   REAL 42704 (terra, run 38051) + REAL retraction: live UNCURED (meaning), ASK 357 CURED (press break retracted) :: UNCURED: retracted, but the GROUND names no pressed witness left unanswered, so the BROKEN grade rests on meaning: only a FORCED line cures it; a ret || CURED: retracted
+ok   REAL 42366 + REAL retraction: UNCURED, same as live (MUST NOT PASS) :: UNCURED: retracted, but the GROUND names no pressed witness left unanswered, so the BROKEN grade rests on meaning: only a FORCED line cures it; a ret
+ok   REAL 41138 + REAL retraction: UNCURED, same as live (MUST NOT PASS) :: UNCURED: retracted, but the GROUND names no pressed witness left unanswered, so the BROKEN grade rests on meaning: only a FORCED line cures it; a ret
+ok   PLANT "the press was met" not read
+ok   PLANT "the answer does not meet the meaning" not read
+ok   PLANT P1 words only inside a quotation not read
+ok   PLANT negated: "it is not that the press is not met" not read
+ok   PLANT "the answer misses the pressed inference" read before GROUND
+ok   PLANT the ASK 352 "does not address" reason before GROUND is still not read (P1 needs the press as object)
+ok   no new operator name in the library
+18 checks, ALL OK

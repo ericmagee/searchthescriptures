@@ -1,0 +1,12 @@
+// ASK 357 Part A (plan Wall 7529 / 7527): the K-G4 press reader. A line that says the answer does not meet the PRESS is a pressed-witness break (ruling 372). Base: live s242 (1278baca).
+const fs=require('fs');const {unpack,rb}=require('../tools/lib.cjs');
+const w=JSON.parse(fs.readFileSync(process.argv[2]||'../rdf/fetchback_w353.json'));const BASEV=process.argv[3]||'1278baca-464e-45fa-bb55-189fbdafd691';if(w.versionId!==BASEV)throw new Error('base moved: '+w.versionId);
+const u=unpack(w);const L=u.L.slice();
+const rep=(i,o,n)=>{const c=L[i].split(o).length-1;if(c!==1)throw new Error('line '+i+' anchor count '+c);L[i]=L[i].replace(o,()=>n);};
+const H=String.raw`function g4Press2024(line){const o=String(line||'').replace(/\\+"/g,'"').replace(/"[^"]*"|“[^”]*”|(^|[\s(\[])['‘](?:[^'‘’]|['’](?=[A-Za-z]))*?['’](?=$|[\s.,;:!?)\]])/g,'$1 ');const P=[/\banswer\s+(?:misses|does\s+not\s+meet|did\s+not\s+meet|fails\s+to\s+meet|does\s+not\s+answer)\s+the\s+(?:[\w'’-]+\s+){0,3}press(?:ed)?\b/i,/\bpress(?:ed)?\s+(?:[\w'’-]+\s+){0,2}(?:is|was)\s+not\s+met\b/i];for(const p of P){const m=p.exec(o);if(m&&!/\b(?:not|never|no)\s+(?:\w+\s+){0,2}$/i.test(o.slice(Math.max(0,m.index-30),m.index)))return true;}return false;} /* ASK 357 Part A: an answer that does not meet the PRESS leaves the pressed witness unanswered (ruling 372), read on the whole line outside quotations */ `;
+rep(850,"function g4Unans2024(line){const s=String(line||'');if(DRV_WORDS.test(s))return true;",H+"function g4Unans2024(line){const s=String(line||'');if(DRV_WORDS.test(s)||g4Press2024(s))return true;");
+const M=JSON.parse(JSON.stringify(u.M));const fixed=[];for(const k in M){const len=rb(L,M[k]).length;if(len!==M[k].n){fixed.push(k);M[k].n=len;}}
+const T=u.T;const iL=T.indexOf('\n/*LIB*/'),iM=T.lastIndexOf('\n/*MAP*/'),iE=T.lastIndexOf('\n/*END*/');
+if(JSON.stringify(u.L)!==T.slice(iL+8,iM)||JSON.stringify(u.M)!==T.slice(iM+8,iE))throw new Error('LIB/MAP serialization differs; stop');
+w.nodes.find(n=>n.name==='Shared Library').parameters.jsCode=T.slice(0,iL+8)+JSON.stringify(L)+T.slice(iM,iM+8)+JSON.stringify(M)+T.slice(iE);
+fs.writeFileSync(process.argv[4]||'target_357.json',JSON.stringify(w));console.log('MAP n updated',fixed.length,fixed.join(', '));
