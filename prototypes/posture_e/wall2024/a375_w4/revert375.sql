@@ -5,6 +5,6 @@ DECLARE d text; o1 text := $o1$'luna','haiku']; --$o1$;
   o2 text := $o2$AND v_alt <> 'haiku' /* pkgJGR rev 6: haiku exempt from G1 (operator 08:34Z 11-09) */$o2$;
   n2 text := $n2$AND NOT (v_af = 'anthropic' AND v_deb_f <@ ARRAY['anthropic']::text[]) /* ASK 375: a Claude judge only when both debaters are Claude (operator 14:09 CST 11-17); replaces the 11-09 haiku exemption */$n2$;
 BEGIN
-  SELECT pg_get_functiondef('public.odv1_record_panel_substitution(uuid,jsonb)'::regprocedure) INTO d; EXECUTE replace(d, n1, o1);
-  SELECT pg_get_functiondef('public.odv1_record_panel_alternates(uuid,jsonb,jsonb)'::regprocedure) INTO d; EXECUTE replace(d, n2, o2);
+  SELECT pg_get_functiondef('public.odv1_record_panel_substitution(uuid,jsonb)'::regprocedure) INTO d; IF (length(d) - length(replace(d, n1, ''))) / length(n1) <> 1 THEN RAISE EXCEPTION 'ASK 375 revert: substitution anchor count'; END IF; EXECUTE replace(d, n1, o1);
+  SELECT pg_get_functiondef('public.odv1_record_panel_alternates(uuid,jsonb,jsonb)'::regprocedure) INTO d; IF (length(d) - length(replace(d, n2, ''))) / length(n2) <> 1 THEN RAISE EXCEPTION 'ASK 375 revert: alternates anchor count'; END IF; EXECUTE replace(d, n2, o2);
 END $r375$;
