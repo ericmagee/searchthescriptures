@@ -1,17 +1,7 @@
-# ASK 349 build (W4)
 
-Judge notice from Eric's approval (W3 card option A, 21:56 CST 11-16), text from Wall 7350 unchanged.
-
-Base: live s235, versionId 88054ae5-58a5-4491-a874-1e526bff59a8 (fresh fetch).
-Target: target_349.json.gz (sha256 of the unzipped file starts 39daa1c73c71).
-
-Edits (build349.py):
-1. Commitment 16 added to PART2 after Commitment 15: 10 raw copies.
-2. Notice placed after the __METHOD_TOP title line: 4 copies.
-3. Notice placed before the reply form in send-back, re-check and gate templates: 3 library templates (9 runtime prompts).
-4. Notice appended to the E-COL enforcer SYS: 3 copies.
-
-Touched nodes (10): Accept Build, Accept Check, Accept DS Return Build, Accept Final, Accept Return Build, Build Independent Verdict, Enforcer Build, Panel Build, Reserve Build, Shared Library.
-Not changed: Close Enforcer, Judge Contradiction, Assume Check, Anticheat. No model settings changed.
-
-Tests: t349.cjs, output t349_out.txt (ALL OK).
+## Rev 2 (after W3's FAIL at Wall 7356 and W1's FAIL at Wall 7358)
+Defect: rev 1 left the Shared Library MAP n values unchanged, so 19 of the 45 library entries rebuilt to a length that did not match their n.
+Fix: fixmap349.cjs sets each n to the rebuilt length and changes nothing else. It first confirms that live MAP text equals JSON.stringify of the parsed MAP, and that live has 0 mismatches.
+Rev 1 to rev 2 changes only the Shared Library node.
+t349.cjs now also checks that every MAP entry rebuilds to its n (rev 1 FAILS this test; rev 2 passes ALL OK).
+Target: target_349r2.json.gz (sha256 of the unzipped file starts f5988464116a). W3's rb.cjs on rev 2: 45 entries, 0 bad.

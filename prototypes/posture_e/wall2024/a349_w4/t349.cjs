@@ -6,7 +6,7 @@ const sources=f=>{const w=JSON.parse(fs.readFileSync(f));const out={};for(const 
  const U=T.unpack(w);for(const k of Object.keys(U.M))out['LIB:'+k]=T.rb(U.L,U.M[k]);return out;};
 const lit=(src,decl)=>{const out=[];let i=0;while((i=src.indexOf(decl+'"',i))>=0){let j=i+decl.length+1;let s='';while(src[j]!=='"'){if(src[j]==='\\'){s+=src[j]+src[j+1];j+=2;}else s+=src[j++];}out.push(eval('"'+s+'"'));i=j;}return out;};
 let fails=0;const ok=(n,c,i)=>{console.log((c?'ok   ':'FAIL ')+n+(i?' :: '+i:''));if(!c)fails++;};
-const L=sources('live.json'),G=sources('target_349.json');
+const TF=process.argv[2]||'target_349r2.json';const L=sources('live.json'),G=sources(TF);
 const changed=Object.keys(G).filter(k=>G[k]!==L[k]);console.log('changed sources:',changed.length,changed.filter(k=>!k.startsWith('LIB:')).join(', '));
 for(const k of changed){try{acorn.parse('(async function(){'+G[k]+'\n})',{ecmaVersion:'latest'});}catch(e){ok('syntax '+k,false,e.message);}}
 ok('syntax of every changed source',fails===0);
@@ -20,4 +20,5 @@ ok('__METHOD_TOP copies identical and start with the title then the notice',uniq
 const sqN=NOTICE.replace(/'/g,"\\'");
 const tpl=Object.keys(G).filter(k=>G[k].includes("\\n\\n"+sqN+"\\n\\nThis reply is not a judgment"));ok('notice before the reply form in send-back and gate prompts',tpl.length>0,tpl.join(', '));
 const ens=Object.keys(G).filter(k=>G[k].includes("You do not judge the debate. "+sqN+"'"));ok('notice in enforcer SYS',ens.length>0,ens.join(', '));
+{const u=T.unpack(JSON.parse(fs.readFileSync(TF)));const bad=Object.keys(u.M).filter(k=>T.rb(u.L,u.M[k]).length!==u.M[k].n);ok('every Shared Library MAP entry rebuilds to its n',bad.length===0,Object.keys(u.M).length+' entries'+(bad.length?', mismatched: '+bad.join(', '):''));}
 console.log(fails?'FAILS '+fails:'ALL OK');

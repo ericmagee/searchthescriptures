@@ -7,4 +7,5 @@ ok   PART2 live minus Commitment 16 equals target
 ok   __METHOD_TOP copies identical and start with the title then the notice :: 5 copies
 ok   notice before the reply form in send-back and gate prompts :: LIB:Alt Gate Build, LIB:Alt Send Back Build, LIB:Gate Build, LIB:R2 Alt Gate Build, LIB:R2 Alt Send Back Build, LIB:Send Back Build, LIB:Late Gate Build, LIB:Alt Late Gate Build, LIB:R2 Alt Late Gate Build
 ok   notice in enforcer SYS :: Enforcer Build, LIB:Alt Judge Enforcer Build, LIB:Judge Enforcer Build, LIB:R2 Alt Judge Enforcer Build
+ok   every Shared Library MAP entry rebuilds to its n :: 45 entries
 ALL OK
