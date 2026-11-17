@@ -3,7 +3,7 @@ DoD1 counted vs panel_split: agree 138 disagree 1 [["ODV1-33222-yf115n54",null,"
 DoD2 listed != drv_uncured: 31 [["ODV1-29820-ubx1yyyz","NOT COUNTED: 7 debate rule violations not cured (K-G4 on D2 vs C1; K-G4 on D2 vs C5; K-G4 on D3 vs C5; K-G4 on D5 vs C6; K-G4 on D6 vs C1; K-G4 on D6 vs C5); 6 of the 7 are named in the judgment's own record"],["ODV1-29912-7t5z4jce","NOT COUNTED: 1 debate rule violation not cured; none is named in the judgment's own record"],["ODV1-30350-vrmkjaau","NOT COUNTED: 3 debate rule violations not cured (K-G7 on D4 vs C3; K-G7 on D6 vs C1); 2 of the 3 are named in the judgment's own record"],["ODV1-31360-v6c4tt3a","NOT COUNTED: 2 debate rule violations not cured; none is named in the judgment's own record"],["ODV1-31360-v6c4tt3a","NOT COUNTED: 5 debate rule violations not cured (K-G7 on D2 vs C4; K-G7 on D4 vs C4); 2 of the 5 are named in the judgment's own record"]]
 
 ## ODV1-29199-9q9jtfij
-**Outcome:** UNDERDETERMINED. HELD by DeepSeek, Gemini and Grok (three counted). DeepSeek, Gemini and Grok wrote RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict write RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
+**Outcome:** UNDERDETERMINED. HELD by DeepSeek, Gemini and Grok (three counted). DeepSeek, Gemini and Grok carry RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict carry RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
 - Verdict of the debate: **HELD** (the panel) (a grade of the defender's chain: Claude, arguing the standard reading)
 - Panel judge 1: DeepSeek (deepseek-flash): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). Reason: The defender's six-link case that Christ had no human father survived unbroken, but the challenger's rival reading also stood with every premise footed, so neither case displaced the other.
 - Panel judge 2: Gemini (gemini-3.1-pro-preview): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted)
@@ -11,7 +11,7 @@ DoD2 listed != drv_uncured: 31 [["ODV1-29820-ubx1yyyz","NOT COUNTED: 7 debate ru
 - Panel result: **HELD** (3-0) (a grade of the defender's chain: Claude, arguing the standard reading). Counted: 3 of 3 panel seats (a seat counts when its judge, or the alternate seated in its place, is counted).
 
 ## ODV1-29333-n0q3die8
-**Outcome:** UNDERDETERMINED. HELD by DeepSeek and Grok (two counted). DeepSeek and Grok wrote RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict write RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
+**Outcome:** UNDERDETERMINED. HELD by DeepSeek and Grok (two counted). DeepSeek and Grok carry RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict carry RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
 - Verdict of the debate: **HELD** (the panel) (a grade of the defender's chain: Claude, arguing the standard reading)
 - Panel judge 1: DeepSeek (deepseek-flash): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). Reason: the text does not establish either side: the defender's keystone stands on Matthew 1:18-20 and Luke 1:34-35, but three supporting inferences were conceded and the challenger's seed-row reading was
 - Panel judge 2: Gemini (gemini-3.1-pro-preview): **BROKEN** (a grade of the defender's chain: Claude, arguing the standard reading) (counted)
@@ -19,7 +19,7 @@ DoD2 listed != drv_uncured: 31 [["ODV1-29820-ubx1yyyz","NOT COUNTED: 7 debate ru
 - Panel result: **HELD** (2-1) (a grade of the defender's chain: Claude, arguing the standard reading). Counted: 3 of 3 panel seats (a seat counts when its judge, or the alternate seated in its place, is counted).
 
 ## ODV1-29328-4ewfod4t
-**Outcome:** UNDERDETERMINED. HELD by Gemini, GLM and Grok (three counted). Gemini, GLM and Grok wrote RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict write RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
+**Outcome:** UNDERDETERMINED. HELD by Gemini, GLM and Grok (three counted). Gemini, GLM and Grok carry RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict carry RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
 - Verdict of the debate: **HELD** (the panel) (a grade of the defender's chain: Claude, arguing the standard reading)
 - Panel judge 1: DeepSeek (deepseek-flash): **BROKEN** (a grade of the defender's chain: Claude, arguing the standard reading) (removed: 1 debate rule violation(s) not cured; not counted; GLM sat in its place)
 - Panel judge 1, alternate: GLM (z-ai/glm-5.3): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted; sat in DeepSeek's place). Reason: the defender's chain stands unbroken, but the challenger also carried its own case without conceding, so neither side's reading is settled over the other by this debate.
@@ -53,7 +53,7 @@ DoD2 listed != drv_uncured: 31 [["ODV1-29820-ubx1yyyz","NOT COUNTED: 7 debate ru
 - Panel result: **CONTESTED** (1-1-1) (a grade of the defender's chain: Claude, arguing the standard reading). Counted: 3 of 3 panel seats (a seat counts when its judge, or the alternate seated in its place, is counted).
 
 ## ODV1-29662-0b7exh6b
-**Outcome:** UNDERDETERMINED. HELD by GLM and Grok (two counted). GLM and Grok wrote RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict write RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
+**Outcome:** UNDERDETERMINED. HELD by GLM and Grok (two counted). GLM and Grok carry RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict carry RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
 - Verdict of the debate: **HELD** (the panel) (a grade of the defender's chain: Claude, arguing the standard reading)
 - Panel judge 1: DeepSeek (deepseek-flash): **BROKEN** (a grade of the defender's chain: Claude, arguing the standard reading) (removed: 1 debate rule violation(s) not cured; not counted; GLM sat in its place)
 - Panel judge 1, alternate: GLM (z-ai/glm-5.3): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted; sat in DeepSeek's place). Reason: both sides built textually footed chains, no defender link was broken, and the challenger lost no link either, so the record leaves the contested inferences standing against each other without dec
@@ -80,7 +80,7 @@ DoD2 listed != drv_uncured: 31 [["ODV1-29820-ubx1yyyz","NOT COUNTED: 7 debate ru
 - Panel judge 3's seat stayed empty: GLM was not counted, and no judge was counted in its place. Alternates tried: Qwen, no verdict returned (finish_reason length).
 
 ## ODV1-29955-stutnd4m
-**Outcome:** UNDERDETERMINED. HELD by DeepSeek and GLM (two counted). DeepSeek and GLM wrote RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict write RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
+**Outcome:** UNDERDETERMINED. HELD by DeepSeek and GLM (two counted). DeepSeek and GLM carry RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict carry RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
 - Verdict of the debate: **HELD** (the panel) (a grade of the defender's chain: Claude, arguing the standard reading)
 - Panel judge 1: DeepSeek (deepseek-flash): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). Reason: Both constructions are footed and neither was broken from the text in either link round, so the record does not settle whether Christ had a human begetter.
 - Panel judge 2: Gemini (gemini-3.1-pro-preview): **BROKEN** (a grade of the defender's chain: Claude, arguing the standard reading) (NOT COUNTED: 3 debate rule violations not cured (K-B on D3 vs C4; K-G7 on D3 vs C4; K-G7 on D5 vs C6))
@@ -98,7 +98,7 @@ DoD2 listed != drv_uncured: 31 [["ODV1-29820-ubx1yyyz","NOT COUNTED: 7 debate ru
 - Panel judge 3's seat stayed empty: GLM was not counted, and no judge was counted in its place. Alternates tried: Qwen, no verdict returned (finish_reason length).
 
 ## ODV1-30009-whhw87q0
-**Outcome:** UNDERDETERMINED. HELD by DeepSeek, Gemini and Qwen (three counted). DeepSeek, Gemini and Qwen wrote RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict write RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
+**Outcome:** UNDERDETERMINED. HELD by DeepSeek, Gemini and Qwen (three counted). DeepSeek, Gemini and Qwen carry RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict carry RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
 - Verdict of the debate: **HELD** (the panel) (a grade of the defender's chain: Claude, arguing the standard reading)
 - Panel judge 1: DeepSeek (deepseek-flash): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). Reason: the defender's chain on 'no human biological father' is not broken from the text, but the challenger's seed-row and naming-register reading is also footed, so the text as argued does not settle wh
 - Panel judge 2: Gemini (google/gemini-3.8-flash): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted)
@@ -107,7 +107,7 @@ DoD2 listed != drv_uncured: 31 [["ODV1-29820-ubx1yyyz","NOT COUNTED: 7 debate ru
 - Panel result: **HELD** (3-0) (a grade of the defender's chain: Claude, arguing the standard reading). Counted: 3 of 3 panel seats (a seat counts when its judge, or the alternate seated in its place, is counted).
 
 ## ODV1-30091-lh9ksyfv
-**Outcome:** UNDERDETERMINED. PARTIAL by DeepSeek, Gemini and GLM (three counted). DeepSeek, Gemini and GLM wrote RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict write RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
+**Outcome:** UNDERDETERMINED. PARTIAL by DeepSeek, Gemini and GLM (three counted). DeepSeek, Gemini and GLM carry RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict carry RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
 - Verdict of the debate: **PARTIAL** (the panel) (a grade of the defender's chain: Claude, arguing the standard reading)
 - Panel judge 1: DeepSeek (deepseek-flash): **PARTIAL** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). Reason: The defender's six-link chain lost two links by concession but its conclusion link was answered, and the challenger's alternative reading of Joseph as the father is also contested, so the text as
 - Panel judge 2: Gemini (google/gemini-3.8-flash): **PARTIAL** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). Reason: The scriptural evidence leaves unresolved whether Christ's legal descent through Joseph excludes biological paternity.
@@ -123,7 +123,7 @@ DoD2 listed != drv_uncured: 31 [["ODV1-29820-ubx1yyyz","NOT COUNTED: 7 debate ru
 - Panel result: **HELD** (3-0) (a grade of the defender's chain: Claude, arguing the standard reading). Counted: 3 of 3 panel seats (a seat counts when its judge, or the alternate seated in its place, is counted).
 
 ## ODV1-30268-3q7ubjd7
-**Outcome:** UNDERDETERMINED. HELD by Gemini and Qwen (two counted). Gemini and Qwen wrote RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict write RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
+**Outcome:** UNDERDETERMINED. HELD by Gemini and Qwen (two counted). Gemini and Qwen carry RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict carry RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
 - Verdict of the debate: **HELD** (the panel) (a grade of the defender's chain: Claude, arguing the standard reading)
 - Panel judge 1: DeepSeek (deepseek-flash): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (removed: 2 debate rule violation(s) not cured; not counted; Qwen sat in its place)
 - Panel judge 1, alternate: Qwen (qwen/qwen3.8-max-0902): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted; sat in DeepSeek's place). Reason: the defender's chain survived unbroken but the challenger's counter-chain also stood on its own footing, so neither side's reading was displaced.
@@ -133,7 +133,7 @@ DoD2 listed != drv_uncured: 31 [["ODV1-29820-ubx1yyyz","NOT COUNTED: 7 debate ru
 - Panel judge 3's seat stayed empty: GLM was not counted, and no judge was counted in its place. No alternate could be tried: no pool model passes the guards: qwen G3: qwen/qwen3.8-max-0902 already sits as the other alternate.
 
 ## ODV1-30304-tz1mntnx
-**Outcome:** UNDERDETERMINED. HELD by DeepSeek and Gemini (two counted). DeepSeek wrote RESULT: UNDERDETERMINED. When exactly half of the counted judges who give the panel verdict write RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule, ruling 304).
+**Outcome:** UNDERDETERMINED. HELD by DeepSeek and Gemini (two counted). DeepSeek carries RESULT: UNDERDETERMINED. When exactly half of the counted judges who give the panel verdict carry RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule, ruling 304).
 - Verdict of the debate: **HELD** (the panel) (a grade of the defender's chain: Claude, arguing the standard reading)
 - Panel judge 1: DeepSeek (deepseek-flash): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). Reason: both sides built footed chains out of the same verses and each answered the other's pressed witnesses, so the question is left open on this record and neither side is defeated.
 - Panel judge 2: Gemini (google/gemini-3.8-flash): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). Reason: The defender's scriptural chain establishing Christ's conception by the Holy Ghost without human fatherhood stands intact, while the challenger's claim of marital union within the espousal is refu
@@ -163,7 +163,7 @@ DoD2 listed != drv_uncured: 31 [["ODV1-29820-ubx1yyyz","NOT COUNTED: 7 debate ru
 - Panel judge 3's seat stayed empty: ChatGPT was not counted, and no judge was counted in its place. No alternate could be tried: no pool model passes the guards: qwen G3: qwen/qwen3.8-max-0902 already sits as the other alternate.
 
 ## ODV1-32141-45rrtk69
-**Outcome:** UNDERDETERMINED. HELD by Gemini and GLM (two counted). Gemini and GLM wrote RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict write RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
+**Outcome:** UNDERDETERMINED. HELD by Gemini and GLM (two counted). Gemini and GLM carry RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict carry RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
 - Verdict of the debate: **HELD** (the panel) (a grade of the defender's chain: Claude, arguing the standard reading)
 - Panel judge 1: DeepSeek (deepseek-flash): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (NOT COUNTED: 3 debate rule violations not cured (K-G4 on D3 vs C3; K-G4 on D3 vs C5; K-G4 on D6 vs C5)). Reason: the text places the conception 'of the Holy Ghost' before Joseph and Mary came together and says Joseph knew her not till the birth, so the defender's chain ending in 'no human biological father'
 - Panel judge 2: Gemini (google/gemini-3.8-flash): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). Reason: Both sides maintained their chains with valid layer footing, leaving the question unresolved by explicit scriptural statement.
@@ -183,7 +183,7 @@ DoD2 listed != drv_uncured: 31 [["ODV1-29820-ubx1yyyz","NOT COUNTED: 7 debate ru
 - Reserve seated: panel seat DeepSeek gave no usable judgment (error; HTTP status not exposed by the node); the reserve ChatGPT judged in its place.
 
 ## ODV1-32194-98wxl1wp
-**Outcome:** UNDERDETERMINED. PARTIAL by Gemini and GLM (two counted). GLM wrote RESULT: UNDERDETERMINED. When exactly half of the counted judges who give the panel verdict write RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule, ruling 304).
+**Outcome:** UNDERDETERMINED. PARTIAL by Gemini and GLM (two counted). GLM carries RESULT: UNDERDETERMINED. When exactly half of the counted judges who give the panel verdict carry RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule, ruling 304).
 - Verdict of the debate: **PARTIAL** (the panel) (a grade of the defender's chain: Claude, arguing the standard reading)
 - Panel judge 1: Gemini (google/gemini-3.8-flash): **PARTIAL** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). Reason: The text affirms the Holy Ghost conception and excludes human biological paternity.
 - Panel judge 2: GLM (z-ai/glm-5.3): **PARTIAL** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). Reason: the defender's chain held, but the challenger's own counter-reading was fully self-supported and no collision broke it, so the text as argued leaves the question open rather than deciding it for t
@@ -193,7 +193,7 @@ DoD2 listed != drv_uncured: 31 [["ODV1-29820-ubx1yyyz","NOT COUNTED: 7 debate ru
 - Reserve seated: panel seat DeepSeek gave no usable judgment (error; HTTP status not exposed by the node); the reserve ChatGPT judged in its place.
 
 ## ODV1-32205-iz6ryl2d
-**Outcome:** UNDERDETERMINED. HELD by DeepSeek, Gemini and GLM (three counted). Gemini and GLM wrote RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict write RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
+**Outcome:** UNDERDETERMINED. HELD by DeepSeek, Gemini and GLM (three counted). Gemini and GLM carry RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict carry RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
 - Verdict of the debate: **HELD** (the panel) (a grade of the defender's chain: Claude, arguing the standard reading)
 - Panel judge 1: DeepSeek (deepseek-flash): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). Reason: none of the six links of the defender's chain was refuted from the text, and the challenger's case left one of its load-bearing inferences resting on a single layer of footing.
 - Panel judge 2: Gemini (google/gemini-3.8-flash): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). Reason: Both combatants sustained their respective textual chains through layer-footed arguments and answers without either side breaking the other's declared links.
@@ -233,7 +233,7 @@ DoD2 listed != drv_uncured: 31 [["ODV1-29820-ubx1yyyz","NOT COUNTED: 7 debate ru
 - Reserve seated: panel seat GLM gave no usable judgment (unreadable); the reserve ChatGPT judged in its place.
 
 ## ODV1-32266-dzm9ve0y
-**Outcome:** UNDERDETERMINED. HELD by sol, DeepSeek and Gemini (three counted). DeepSeek and Gemini wrote RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict write RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
+**Outcome:** UNDERDETERMINED. HELD by sol, DeepSeek and Gemini (three counted). DeepSeek and Gemini carry RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict carry RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
 - Verdict of the debate: **HELD** (the panel) (a grade of the defender's chain: Claude, arguing the standard reading)
 - Panel judge 1: sol (openai/gpt-6.1-sol): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted; sat in GLM's place). Reason: The challenge did not break the declared chain and is not self-supported under the prescribed counting rules.
 - Panel judge 2: DeepSeek (deepseek-flash): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). Reason: The text says the child was conceived 'of the Holy Ghost' before Joseph and Mary came together and that Joseph 'knew her not till she had brought forth,' so the challenger's claim that Joseph bega
@@ -242,7 +242,7 @@ DoD2 listed != drv_uncured: 31 [["ODV1-29820-ubx1yyyz","NOT COUNTED: 7 debate ru
 - Panel result: **HELD** (3-0) (a grade of the defender's chain: Claude, arguing the standard reading). Counted: 3 of 3 panel seats (a seat counts when its judge, or the alternate seated in its place, is counted).
 
 ## ODV1-32284-bysy7bwx
-**Outcome:** UNDERDETERMINED. HELD by Gemini, GLM and ChatGPT (three counted). Gemini and GLM wrote RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict write RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
+**Outcome:** UNDERDETERMINED. HELD by Gemini, GLM and ChatGPT (three counted). Gemini (the engine recomputed it from DEFENDER WINS) and GLM carry RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict carry RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
 - Verdict of the debate: **HELD** (the panel) (a grade of the defender's chain: Claude, arguing the standard reading)
 - Panel judge 1: Gemini (google/gemini-3.8-flash): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). The engine recomputed its RESULT after the cure: the judge wrote DEFENDER WINS, and it reads UNDERDETERMINED. Reason: recomputed after the cure from the cured lines (RETRACTED D3 vs C1 (CHALLENGER LINK BROKEN to UNDERDETERMINED)): HELD-1, CHALLENGE STANDING SELF-SUPPORTED, no collision line stands graded CHALLENG
 - Panel judge 2: GLM (z-ai/glm-5.3): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). Reason: the defender's chain that Christ had no biological father survived intact, but the challenger's opposing chain also stood self-supported, so the record leaves the question open.
@@ -251,7 +251,7 @@ DoD2 listed != drv_uncured: 31 [["ODV1-29820-ubx1yyyz","NOT COUNTED: 7 debate ru
 - Reserve seated: panel seat DeepSeek gave no usable judgment (empty reply; HTTP status not exposed by the node; reply text 0 characters); the reserve ChatGPT judged in its place.
 
 ## ODV1-32293-mh6wvhd1
-**Outcome:** UNDERDETERMINED. HELD by sol, Gemini and ChatGPT (three counted). Gemini and ChatGPT wrote RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict write RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
+**Outcome:** UNDERDETERMINED. HELD by sol, Gemini and ChatGPT (three counted). Gemini and ChatGPT carry RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict carry RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
 - Verdict of the debate: **HELD** (the panel) (a grade of the defender's chain: Claude, arguing the standard reading)
 - Panel judge 1: sol (openai/gpt-6.1-sol): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted; sat in GLM's place). Reason: The challenge did not break the defender's chain and did not sustain all its own listed premises.
 - Panel judge 2: Gemini (google/gemini-3.8-flash): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). Reason: While the text affirms the virgin conception without an earthly begetter, the competing prophetic lineages and flesh-descent promises leave the debate unresolved on the text alone.
@@ -269,7 +269,7 @@ DoD2 listed != drv_uncured: 31 [["ODV1-29820-ubx1yyyz","NOT COUNTED: 7 debate ru
 - Panel judge 2's seat stayed empty: GLM was not counted, and no judge was counted in its place. Alternates tried: sol, not seated (2 uncured items).
 
 ## ODV1-32306-ccyhzcuy
-**Outcome:** UNDERDETERMINED. HELD by Gemini, GLM and ChatGPT (three counted). Gemini, GLM and ChatGPT wrote RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict write RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
+**Outcome:** UNDERDETERMINED. HELD by Gemini, GLM and ChatGPT (three counted). Gemini, GLM and ChatGPT carry RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict carry RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
 - Verdict of the debate: **HELD** (the panel) (a grade of the defender's chain: Claude, arguing the standard reading)
 - Panel judge 1: Gemini (google/gemini-3.8-flash): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). Reason: Both sides built text-grounded arguments and answered every opposing verse, leaving the conflict between the paternal seed requirement and the virgin conception textually unresolved.
 - Panel judge 2: GLM (z-ai/glm-5.3): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). Reason: the defender's chain survived with no link withdrawn or broken, but the challenger's opposing chain also survived the link round fully footed, so the transcript does not settle which reading the t
@@ -277,7 +277,7 @@ DoD2 listed != drv_uncured: 31 [["ODV1-29820-ubx1yyyz","NOT COUNTED: 7 debate ru
 - Panel result: **HELD** (3-0) (a grade of the defender's chain: Claude, arguing the standard reading). Counted: 3 of 3 panel seats (a seat counts when its judge, or the alternate seated in its place, is counted).
 
 ## ODV1-32341-9i604cq1
-**Outcome:** UNDERDETERMINED. HELD by sol, Gemini and ChatGPT (three counted). sol, Gemini and ChatGPT wrote RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict write RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
+**Outcome:** UNDERDETERMINED. HELD by sol, Gemini and ChatGPT (three counted). sol, Gemini and ChatGPT carry RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict carry RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
 - Verdict of the debate: **HELD** (the panel) (a grade of the defender's chain: Claude, arguing the standard reading)
 - Panel judge 1: sol (openai/gpt-6.1-sol): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted; sat in GLM's place). Reason: The defender's chain survived, but the challenger also maintained a supported alternative that this exchange did not decisively refute.
 - Panel judge 2: Gemini (google/gemini-3.8-flash): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). Reason: Neither side demonstrated from the text that its rival reading is impossible, leaving the biological paternity of Christ textually unresolved.
@@ -286,7 +286,7 @@ DoD2 listed != drv_uncured: 31 [["ODV1-29820-ubx1yyyz","NOT COUNTED: 7 debate ru
 - Panel result: **HELD** (3-0) (a grade of the defender's chain: Claude, arguing the standard reading). Counted: 3 of 3 panel seats (a seat counts when its judge, or the alternate seated in its place, is counted).
 
 ## ODV1-32373-zti722h5
-**Outcome:** UNDERDETERMINED. HELD by Gemini, GLM and ChatGPT (three counted). Gemini, GLM and ChatGPT wrote RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict write RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
+**Outcome:** UNDERDETERMINED. HELD by Gemini, GLM and ChatGPT (three counted). Gemini, GLM (the engine recomputed it from DEFENDER WINS) and ChatGPT carry RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict carry RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
 - Verdict of the debate: **HELD** (the panel) (a grade of the defender's chain: Claude, arguing the standard reading)
 - Panel judge 1: Gemini (google/gemini-3.8-flash): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). Reason: Neither side demonstrated its position to the exclusion of the other because both answered all pressed witnesses with scriptural evidence.
 - Panel judge 2: GLM (z-ai/glm-5.3): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). The engine recomputed its RESULT after the cure: the judge wrote DEFENDER WINS, and it reads UNDERDETERMINED. Reason: recomputed after the cure from the cured lines (RETRACTED D5 vs C6 (CHALLENGER LINK BROKEN to UNDERDETERMINED); RETRACTED D6 vs C6 (CHALLENGER LINK BROKEN to UNDERDETERMINED)): HELD-1, CHALLENGE S
@@ -294,7 +294,7 @@ DoD2 listed != drv_uncured: 31 [["ODV1-29820-ubx1yyyz","NOT COUNTED: 7 debate ru
 - Panel result: **HELD** (3-0) (a grade of the defender's chain: Claude, arguing the standard reading). Counted: 3 of 3 panel seats (a seat counts when its judge, or the alternate seated in its place, is counted).
 
 ## ODV1-32404-4sgd8mmp
-**Outcome:** UNDERDETERMINED. HELD by Gemini, GLM and ChatGPT (three counted). Gemini and GLM wrote RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict write RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
+**Outcome:** UNDERDETERMINED. HELD by Gemini, GLM and ChatGPT (three counted). Gemini and GLM carry RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict carry RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
 - Verdict of the debate: **HELD** (the panel) (a grade of the defender's chain: Claude, arguing the standard reading)
 - Panel judge 1: Gemini (google/gemini-3.8-flash): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). Reason: The biblical text affirms both conception by the Holy Ghost and bodily descent from David's line, leaving the biological question open under the arguments presented.
 - Panel judge 2: GLM (z-ai/glm-5.3): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). Reason: the defender's chain held, but the challenger also built and kept a fully footed, fully answered chain of its own, so the record does not settle whether Christ had a biological human father.
@@ -302,7 +302,7 @@ DoD2 listed != drv_uncured: 31 [["ODV1-29820-ubx1yyyz","NOT COUNTED: 7 debate ru
 - Panel result: **HELD** (3-0) (a grade of the defender's chain: Claude, arguing the standard reading). Counted: 3 of 3 panel seats (a seat counts when its judge, or the alternate seated in its place, is counted).
 
 ## ODV1-32437-cqvqv8q9
-**Outcome:** UNDERDETERMINED. HELD by Gemini, GLM and ChatGPT (three counted). Gemini, GLM and ChatGPT wrote RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict write RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
+**Outcome:** UNDERDETERMINED. HELD by Gemini, GLM and ChatGPT (three counted). Gemini, GLM and ChatGPT carry RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict carry RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
 - Verdict of the debate: **HELD** (the panel) (a grade of the defender's chain: Claude, arguing the standard reading)
 - Panel judge 1: Gemini (google/gemini-3.8-flash): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). Reason: While the defender's chain stands unbroken, the challenger also maintained a self-supported textual case that leaves the debate unresolved under the rules.
 - Panel judge 2: GLM (z-ai/glm-5.3): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). Reason: Both sides built fully footed chains and answered every pressed witness, and the record leaves open whether the conception being 'of the Holy Ghost' excludes a human begetter; neither side's readi
@@ -319,7 +319,7 @@ DoD2 listed != drv_uncured: 31 [["ODV1-29820-ubx1yyyz","NOT COUNTED: 7 debate ru
 - Reserve seated: panel seat alt_minimax31 gave no usable judgment (empty reply; HTTP status not exposed by the node; reply text 0 characters); the reserve DeepSeek judged in its place.
 
 ## ODV1-32595-5ypgyat0
-**Outcome:** UNDERDETERMINED. HELD by ChatGPT and Grok (two counted). ChatGPT wrote RESULT: UNDERDETERMINED. When exactly half of the counted judges who give the panel verdict write RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule, ruling 304).
+**Outcome:** UNDERDETERMINED. HELD by ChatGPT and Grok (two counted). ChatGPT carries RESULT: UNDERDETERMINED. When exactly half of the counted judges who give the panel verdict carry RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule, ruling 304).
 - Verdict of the debate: **HELD** (the panel) (a grade of the defender's chain: Claude, arguing the standard reading)
 - Panel judge 1: Gemini (google/gemini-3.8-flash): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (NOT COUNTED: 3 debate rule violations not cured (K-G4 on D1 vs C1; K-G4 on D2 vs C6; K-G4 on D3 vs C1)). Reason: The scriptures in the record establish that Jesus was conceived of the Holy Ghost before Joseph and Mary came together, leaving Joseph as legal and reputed father rather than biological begetter.
 - Panel judge 2: ChatGPT (openai/gpt-6.1-terra): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). Reason: The exhibited verses support competing readings of whether Joseph begat the child, without settling their disputed steps.
@@ -328,7 +328,7 @@ DoD2 listed != drv_uncured: 31 [["ODV1-29820-ubx1yyyz","NOT COUNTED: 7 debate ru
 - Panel judge 1's seat stayed empty: Gemini was not counted, and no judge was counted in its place. No alternate could be tried: no pool model passes the guards (the pool is empty).
 
 ## ODV1-32605-lkuacfjh
-**Outcome:** UNDERDETERMINED. HELD by Gemini, ChatGPT and Grok (three counted). ChatGPT and Grok wrote RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict write RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
+**Outcome:** UNDERDETERMINED. HELD by Gemini, ChatGPT and Grok (three counted). ChatGPT and Grok carry RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict carry RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
 - Verdict of the debate: **HELD** (the panel) (a grade of the defender's chain: Claude, arguing the standard reading)
 - Panel judge 1: Gemini (google/gemini-3.8-flash): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). Reason: The scripture testifies that Jesus was conceived of the Holy Ghost in a virgin without a human biological father.
 - Panel judge 2: ChatGPT (openai/gpt-6.1-terra): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). Reason: The record does not establish whether the Davidic descent must pass through Joseph's begetting or can agree with the defender's account.
@@ -336,7 +336,7 @@ DoD2 listed != drv_uncured: 31 [["ODV1-29820-ubx1yyyz","NOT COUNTED: 7 debate ru
 - Panel result: **HELD** (3-0) (a grade of the defender's chain: Claude, arguing the standard reading). Counted: 3 of 3 panel seats (a seat counts when its judge, or the alternate seated in its place, is counted).
 
 ## ODV1-32613-yg4yoin7
-**Outcome:** UNDERDETERMINED. HELD by Gemini and ChatGPT (two counted). ChatGPT wrote RESULT: UNDERDETERMINED. When exactly half of the counted judges who give the panel verdict write RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule, ruling 304).
+**Outcome:** UNDERDETERMINED. HELD by Gemini and ChatGPT (two counted). ChatGPT carries RESULT: UNDERDETERMINED. When exactly half of the counted judges who give the panel verdict carry RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule, ruling 304).
 - Verdict of the debate: **HELD** (the panel) (a grade of the defender's chain: Claude, arguing the standard reading)
 - Panel judge 1: Gemini (google/gemini-3.8-flash): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). Reason: The scriptural record read line upon line demonstrates that Christ was conceived of the Holy Ghost without the biological seed of Joseph, whose marital knowing is explicitly denied until after the
 - Panel judge 2: ChatGPT (openai/gpt-6.1-terra): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). Reason: The declared chain was not broken under the rules, but the exhibited readings leave the biological-father question open.
@@ -352,7 +352,7 @@ DoD2 listed != drv_uncured: 31 [["ODV1-29820-ubx1yyyz","NOT COUNTED: 7 debate ru
 - Panel result: **CONTESTED** (1-1-1) (a grade of the defender's chain: Claude, arguing the standard reading). Counted: 3 of 3 panel seats (a seat counts when its judge, or the alternate seated in its place, is counted).
 
 ## ODV1-32677-dbhfgk43
-**Outcome:** UNDERDETERMINED. HELD by Gemini, ChatGPT and Grok (three counted). Gemini and ChatGPT wrote RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict write RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
+**Outcome:** UNDERDETERMINED. HELD by Gemini, ChatGPT and Grok (three counted). Gemini (the engine recomputed it from DEFENDER WINS) and ChatGPT carry RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict carry RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
 - Verdict of the debate: **HELD** (the panel) (a grade of the defender's chain: Claude, arguing the standard reading)
 - Panel judge 1: Gemini (google/gemini-3.8-flash): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). The engine recomputed its RESULT after the cure: the judge wrote DEFENDER WINS, and it reads UNDERDETERMINED. Reason: recomputed after the cure from the cured lines (TIE (KB-0030)): HELD-1, CHALLENGE STANDING SELF-SUPPORTED, no collision line stands graded CHALLENGER LINK BROKEN.
 - Panel judge 2: ChatGPT (openai/gpt-6.1-terra): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). Reason: The record supports competing readings of the conception without establishing which one excludes the other.
@@ -395,7 +395,7 @@ DoD2 listed != drv_uncured: 31 [["ODV1-29820-ubx1yyyz","NOT COUNTED: 7 debate ru
 - Panel result: **HELD** (2-1) (a grade of the defender's chain: Claude, arguing the standard reading). Counted: 3 of 3 panel seats (a seat counts when its judge, or the alternate seated in its place, is counted).
 
 ## ODV1-32905-domzf7yq
-**Outcome:** UNDERDETERMINED. HELD by Gemini and Grok (two counted). Gemini wrote RESULT: UNDERDETERMINED. When exactly half of the counted judges who give the panel verdict write RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule, ruling 304).
+**Outcome:** UNDERDETERMINED. HELD by Gemini and Grok (two counted). Gemini (the engine recomputed it from DEFENDER WINS) carries RESULT: UNDERDETERMINED. When exactly half of the counted judges who give the panel verdict carry RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule, ruling 304).
 - Verdict of the debate: **HELD** (the panel) (a grade of the defender's chain: Claude, arguing the standard reading)
 - Panel judge 1: sol (openai/gpt-6.1-sol): **BROKEN** (a grade of the defender's chain: Claude, arguing the standard reading) (counted; sat in ChatGPT's place). Reason: The defender's conclusion fails under the unanswered-witness rule because its final answers do not reconcile that conclusion with the proven press concerning descent and registration by fathers' h
 - Panel judge 2: Gemini (google/gemini-3.8-flash): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). The engine recomputed its RESULT after the cure: the judge wrote DEFENDER WINS, and it reads UNDERDETERMINED. Reason: recomputed after the cure from the cured lines (TIE (KB-0030)): HELD-1, CHALLENGE STANDING PROP-DEPENDENT, no collision line stands graded CHALLENGER LINK BROKEN.
@@ -404,7 +404,7 @@ DoD2 listed != drv_uncured: 31 [["ODV1-29820-ubx1yyyz","NOT COUNTED: 7 debate ru
 - Panel result: **HELD** (2-1) (a grade of the defender's chain: Claude, arguing the standard reading). Counted: 3 of 3 panel seats (a seat counts when its judge, or the alternate seated in its place, is counted).
 
 ## ODV1-32924-mpdqm55s
-**Outcome:** UNDERDETERMINED. HELD by Gemini and ChatGPT (two counted). ChatGPT wrote RESULT: UNDERDETERMINED. When exactly half of the counted judges who give the panel verdict write RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule, ruling 304).
+**Outcome:** UNDERDETERMINED. HELD by Gemini and ChatGPT (two counted). ChatGPT (the engine recomputed it from CHALLENGER WINS) carries RESULT: UNDERDETERMINED. When exactly half of the counted judges who give the panel verdict carry RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule, ruling 304).
 - Verdict of the debate: **HELD** (the panel) (a grade of the defender's chain: Claude, arguing the standard reading)
 - Panel judge 1: Gemini (google/gemini-3.8-flash): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). Reason: The scriptures, read line upon line, establish that Christ was conceived of the Holy Ghost in a virgin without a human biological father.
 - Panel judge 2: ChatGPT (openai/gpt-6.1-terra): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). The engine recomputed its RESULT after the cure: the judge wrote CHALLENGER WINS, and it reads UNDERDETERMINED. Reason: recomputed after the cure from the cured lines (RETRACTED D4 vs C5 (DEFENDER LINK BROKEN to UNDERDETERMINED)): HELD-1, CHALLENGE STANDING SELF-SUPPORTED, no collision line stands graded CHALLENGER
@@ -488,7 +488,7 @@ DoD2 listed != drv_uncured: 31 [["ODV1-29820-ubx1yyyz","NOT COUNTED: 7 debate ru
 - Panel result: **HELD** (3-0) (a grade of the defender's chain: Claude, arguing the standard reading). Counted: 3 of 3 panel seats (a seat counts when its judge, or the alternate seated in its place, is counted).
 
 ## ODV1-33020-tt4c4003
-**Outcome:** UNDERDETERMINED. HELD by Gemini and ChatGPT (two counted). Gemini wrote RESULT: UNDERDETERMINED. When exactly half of the counted judges who give the panel verdict write RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule, ruling 304).
+**Outcome:** UNDERDETERMINED. HELD by Gemini and ChatGPT (two counted). Gemini carries RESULT: UNDERDETERMINED. When exactly half of the counted judges who give the panel verdict carry RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule, ruling 304).
 - Verdict of the debate: **HELD** (the panel) (a grade of the defender's chain: Claude, arguing the standard reading)
 - Panel judge 1: Gemini (google/gemini-3.8-flash): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). Reason: derived after the send-back from the judge's own changed lines (S1, S2, S3, S4, S5, S6, S7, S8, S9, G2; CHANGED D1 vs C2 (CHALLENGER LINK BROKEN to UNDERDETERMINED)): HELD-1.
 - Panel judge 2: ChatGPT (openai/gpt-6.1-terra): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). Reason: The cited conception and union passages support the defender's chain against the proposed knowing by Joseph.
@@ -515,7 +515,7 @@ DoD2 listed != drv_uncured: 31 [["ODV1-29820-ubx1yyyz","NOT COUNTED: 7 debate ru
 - Panel judge 4's seat stayed empty: Grok was not counted, and no judge was counted in its place. No alternate could be tried: no pool model passes the guards: sol G4: openai/gpt-6.1-sol is already offered to an earlier removed seat.
 
 ## ODV1-33040-4attrqbw
-**Outcome:** UNDERDETERMINED. HELD by sol and Gemini (two counted). sol and Gemini wrote RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict write RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
+**Outcome:** UNDERDETERMINED. HELD by sol and Gemini (two counted). sol and Gemini (the engine recomputed it from DEFENDER WINS) carry RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict carry RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
 - Verdict of the debate: **HELD** (the panel) (a grade of the defender's chain: Claude, arguing the standard reading)
 - Panel judge 1: sol (openai/gpt-6.1-sol): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted; sat in ChatGPT's place). Reason: The record supports competing explanations of the conception and Davidic descent without decisively establishing whether Joseph supplied the child's flesh.
 - Panel judge 2: Gemini (google/gemini-3.8-flash): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). The engine recomputed its RESULT after the cure: the judge wrote DEFENDER WINS, and it reads UNDERDETERMINED. Reason: recomputed after the cure from the cured lines (TIE (KB-0030)): HELD-1, CHALLENGE STANDING SELF-SUPPORTED, no collision line stands graded CHALLENGER LINK BROKEN.
@@ -530,7 +530,7 @@ DoD2 listed != drv_uncured: 31 [["ODV1-29820-ubx1yyyz","NOT COUNTED: 7 debate ru
 - Panel result: **?** (a grade of the defender's chain: Claude, arguing the standard reading)
 
 ## ODV1-33060-wea06ltq
-**Outcome:** UNDERDETERMINED. HELD by Gemini and ChatGPT (two counted). Gemini wrote RESULT: UNDERDETERMINED. When exactly half of the counted judges who give the panel verdict write RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule, ruling 304).
+**Outcome:** UNDERDETERMINED. HELD by Gemini and ChatGPT (two counted). Gemini (the engine recomputed it from DEFENDER WINS) carries RESULT: UNDERDETERMINED. When exactly half of the counted judges who give the panel verdict carry RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule, ruling 304).
 - Verdict of the debate: **HELD** (the panel) (a grade of the defender's chain: Claude, arguing the standard reading)
 - Panel judge 1: sol (openai/gpt-6.1-sol): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (NOT COUNTED: 2 debate rule violations not cured (K-S3 on S3 CHALLENGER DR4: #11; K-W on DEFENDER CR2 LINK 1 #1)). Reason: The combined conception, question-and-answer, and abstinence passages support the defender's conclusion more strongly than the proposed union within the espousal.
 - Panel judge 2: Gemini (google/gemini-3.8-flash): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). The engine recomputed its RESULT after the cure: the judge wrote DEFENDER WINS, and it reads UNDERDETERMINED. Reason: recomputed after the cure from the cured lines (TIE (KB-0030)): HELD-1, CHALLENGE STANDING SELF-SUPPORTED, no collision line stands graded CHALLENGER LINK BROKEN.
@@ -550,7 +550,7 @@ DoD2 listed != drv_uncured: 31 [["ODV1-29820-ubx1yyyz","NOT COUNTED: 7 debate ru
 - Panel judge 2's seat stayed empty: Gemini was not counted, and no judge was counted in its place. Alternates tried: GLM, no verdict returned (finish_reason length).
 
 ## ODV1-33107-be4qsnna
-**Outcome:** UNDERDETERMINED. HELD by sol and Gemini (two counted). sol and Gemini wrote RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict write RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
+**Outcome:** UNDERDETERMINED. HELD by sol and Gemini (two counted). sol and Gemini carry RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict carry RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
 - Verdict of the debate: **HELD** (the panel) (a grade of the defender's chain: Claude, arguing the standard reading)
 - Panel judge 1: sol (openai/gpt-6.1-sol): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). Reason: The record supports both the attribution of the conception to the Holy Ghost and descent according to the flesh, but the competing explanations of how those facts fit together do not settle the fa
 - Panel judge 2: Gemini (google/gemini-3.8-flash): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). Reason: derived after the send-back from the judge's own changed lines (S1, S2, S3, S4, S5, S6, S8, S9; COUNT CHALLENGER 1 to 0): HELD-1.
@@ -601,7 +601,7 @@ DoD2 listed != drv_uncured: 31 [["ODV1-29820-ubx1yyyz","NOT COUNTED: 7 debate ru
 - Panel judge 3's seat stayed empty: ChatGPT was not counted, and no judge was counted in its place. No alternate could be tried: no pool model passes the guards (the pool is empty).
 
 ## ODV1-33197-lusvgfxp
-**Outcome:** UNDERDETERMINED. HELD by sol and ChatGPT (two counted). sol wrote RESULT: UNDERDETERMINED. When exactly half of the counted judges who give the panel verdict write RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule, ruling 304).
+**Outcome:** UNDERDETERMINED. HELD by sol and ChatGPT (two counted). sol carries RESULT: UNDERDETERMINED. When exactly half of the counted judges who give the panel verdict carry RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule, ruling 304).
 - Verdict of the debate: **HELD** (the panel) (a grade of the defender's chain: Claude, arguing the standard reading)
 - Panel judge 1: sol (openai/gpt-6.1-sol): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). Reason: The record supports competing, textually footed explanations of the conception and descent, without establishing the break required to defeat the defender's chain.
 - Panel judge 2: Gemini (google/gemini-3.8-flash): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (NOT COUNTED: 1 debate rule violation not cured; none is named in the judgment's own record). Reason: derived after the send-back from the judge's own changed lines (S1, S4, S6, S7, S8, S9; CHANGED D2 vs C1 (CHALLENGER LINK BROKEN to UNDERDETERMINED)): HELD-1.
@@ -610,7 +610,7 @@ DoD2 listed != drv_uncured: 31 [["ODV1-29820-ubx1yyyz","NOT COUNTED: 7 debate ru
 - Panel judge 2's seat stayed empty: Gemini was not counted, and no judge was counted in its place. No alternate could be tried: no pool model passes the guards (the pool is empty).
 
 ## ODV1-33218-9jl680vy
-**Outcome:** UNDERDETERMINED. HELD by sol, Gemini and ChatGPT (three counted). sol and ChatGPT wrote RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict write RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
+**Outcome:** UNDERDETERMINED. HELD by sol, Gemini and ChatGPT (three counted). sol and ChatGPT (the engine recomputed it from CHALLENGER WINS) carry RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict carry RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
 - Verdict of the debate: **HELD** (the panel) (a grade of the defender's chain: Claude, arguing the standard reading)
 - Panel judge 1: sol (openai/gpt-6.1-sol): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). Reason: The record supports competing, textually footed explanations of the child's conception and Joseph's fatherhood without establishing a chain-breaking contradiction.
 - Panel judge 2: Gemini (google/gemini-3.8-flash): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). Reason: The text in Matthew 1:18 and Matthew 1:20 states that the child was
@@ -650,7 +650,7 @@ DoD2 listed != drv_uncured: 31 [["ODV1-29820-ubx1yyyz","NOT COUNTED: 7 debate ru
 - Panel result: **?** (a grade of the defender's chain: Claude, arguing the standard reading). Counted: 3 of 3 panel seats (a seat counts when its judge, or the alternate seated in its place, is counted).
 
 ## ODV1-33289-sd6xpstf
-**Outcome:** UNDERDETERMINED. HELD by Gemini, ChatGPT and Grok (three counted). Gemini and ChatGPT wrote RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict write RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
+**Outcome:** UNDERDETERMINED. HELD by Gemini, ChatGPT and Grok (three counted). Gemini and ChatGPT carry RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict carry RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
 - Verdict of the debate: **HELD** (the panel) (a grade of the defender's chain: Claude, arguing the standard reading)
 - Panel judge 1: sol (openai/gpt-6.1-sol): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (removed: 3 debate rule violation(s) not cured; not counted; Grok sat in its place)
 - Panel judge 1, alternate: Grok (x-ai/grok-4.7): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted; sat in sol's place). Reason: The verses that tell how the child was conceived name the Holy Ghost and say Joseph knew her not until the birth, so they support no biological human father against the claim that Joseph begat him
@@ -682,7 +682,7 @@ DoD2 listed != drv_uncured: 31 [["ODV1-29820-ubx1yyyz","NOT COUNTED: 7 debate ru
 - Panel result: **?** (a grade of the defender's chain: Claude, arguing the standard reading)
 
 ## ODV1-33345-gj841rzr
-**Outcome:** UNDERDETERMINED. HELD by Gemini and Grok (two counted). Gemini wrote RESULT: UNDERDETERMINED. When exactly half of the counted judges who give the panel verdict write RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule, ruling 304).
+**Outcome:** UNDERDETERMINED. HELD by Gemini and Grok (two counted). Gemini carries RESULT: UNDERDETERMINED. When exactly half of the counted judges who give the panel verdict carry RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule, ruling 304).
 - Verdict of the debate: **HELD** (the panel) (a grade of the defender's chain: Claude, arguing the standard reading)
 - Panel judge 1: sol (openai/gpt-6.1-sol): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (NOT COUNTED: 1 debate rule violation not cured; none is named in the judgment's own record). Reason: The recorded verses support competing explanations of Joseph's fatherhood, and the challenge does not conclusively displace the defender's explanation.
 - Panel judge 2: Gemini (google/gemini-3.8-flash): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). Reason: The scriptures leave the topic open as both legal reckoning through the house of David and biological descent are maintained without explicit resolution.
@@ -692,7 +692,7 @@ DoD2 listed != drv_uncured: 31 [["ODV1-29820-ubx1yyyz","NOT COUNTED: 7 debate ru
 - Panel judge 1's seat stayed empty: sol was not counted, and no judge was counted in its place. No alternate could be tried: no pool model passes the guards: grok G4: x-ai/grok-4.7 is already offered to an earlier removed seat.
 
 ## ODV1-33371-smmbhc7u
-**Outcome:** UNDERDETERMINED. HELD by sol, Gemini and Grok (three counted). sol, Gemini and Grok wrote RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict write RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
+**Outcome:** UNDERDETERMINED. HELD by sol, Gemini and Grok (three counted). sol, Gemini and Grok carry RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict carry RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
 - Verdict of the debate: **HELD** (the panel) (a grade of the defender's chain: Claude, arguing the standard reading)
 - Panel judge 1: sol (openai/gpt-6.1-sol): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). Reason: The record leaves disputed whether the conception passages exclude the human begetting that the challenger infers from the descent passages.
 - Panel judge 2: Gemini (google/gemini-3.8-flash): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). Reason: derived after the send-back from the judge's own changed lines (S1, S2, S3, S4, S5, S6, S9, S10; CHANGED D1 vs C1 (CHALLENGER LINK BROKEN to UNDERDETERMINED); CHANGED D5 vs C4 (UNDERDETERMINED to
@@ -701,7 +701,7 @@ DoD2 listed != drv_uncured: 31 [["ODV1-29820-ubx1yyyz","NOT COUNTED: 7 debate ru
 - Panel result: **HELD** (3-0) (a grade of the defender's chain: Claude, arguing the standard reading). Counted: 3 of 3 panel seats (a seat counts when its judge, or the alternate seated in its place, is counted).
 
 ## ODV1-33389-ds52amc3
-**Outcome:** UNDERDETERMINED. HELD by sol, Gemini and ChatGPT (three counted). sol and ChatGPT wrote RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict write RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
+**Outcome:** UNDERDETERMINED. HELD by sol, Gemini and ChatGPT (three counted). sol and ChatGPT carry RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict carry RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
 - Verdict of the debate: **HELD** (the panel) (a grade of the defender's chain: Claude, arguing the standard reading)
 - Panel judge 1: sol (openai/gpt-6.1-sol): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). Reason: The record supports competing constructions of the conception and descent passages without conclusively establishing whether Joseph begat the child.
 - Panel judge 2: Gemini (google/gemini-3.8-flash): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). Reason: The record shows that Mary
@@ -709,7 +709,7 @@ DoD2 listed != drv_uncured: 31 [["ODV1-29820-ubx1yyyz","NOT COUNTED: 7 debate ru
 - Panel result: **HELD** (3-0) (a grade of the defender's chain: Claude, arguing the standard reading). Counted: 3 of 3 panel seats (a seat counts when its judge, or the alternate seated in its place, is counted).
 
 ## ODV1-33411-fq874c0l
-**Outcome:** UNDERDETERMINED. HELD by Gemini, ChatGPT and Grok (three counted). ChatGPT and Grok wrote RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict write RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
+**Outcome:** UNDERDETERMINED. HELD by Gemini, ChatGPT and Grok (three counted). ChatGPT (the engine recomputed it from CHALLENGER WINS) and Grok carry RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict carry RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
 - Verdict of the debate: **HELD** (the panel) (a grade of the defender's chain: Claude, arguing the standard reading)
 - Panel judge 1: sol (openai/gpt-6.1-sol): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (removed: 2 debate rule violation(s) not cured; not counted; Grok sat in its place)
 - Panel judge 1, alternate: Grok (x-ai/grok-4.7): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted; sat in sol's place). Reason: Matthew 1:18
@@ -718,7 +718,7 @@ DoD2 listed != drv_uncured: 31 [["ODV1-29820-ubx1yyyz","NOT COUNTED: 7 debate ru
 - Panel result: **HELD** (3-0) (a grade of the defender's chain: Claude, arguing the standard reading). Counted: 3 of 3 panel seats (a seat counts when its judge, or the alternate seated in its place, is counted).
 
 ## ODV1-33430-7gongopz
-**Outcome:** UNDERDETERMINED. HELD by Gemini and ChatGPT (two counted). Gemini and ChatGPT wrote RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict write RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
+**Outcome:** UNDERDETERMINED. HELD by Gemini and ChatGPT (two counted). Gemini (the engine recomputed it from DEFENDER WINS) and ChatGPT (the engine recomputed it from DEFENDER WINS) carry RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict carry RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
 - Verdict of the debate: **HELD** (the panel) (a grade of the defender's chain: Claude, arguing the standard reading)
 - Panel judge 1: sol (openai/gpt-6.1-sol): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (NOT COUNTED: 1 debate rule violation not cured (K-W on DEFENDER CR2 no link heading #1)). Reason: The record leaves unresolved whether the divine source of the conception excludes the human fatherhood inferred from Davidic descent and Joseph's household.
 - Panel judge 2: Gemini (google/gemini-3.8-flash): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). The engine recomputed its RESULT after the cure: the judge wrote DEFENDER WINS, and it reads UNDERDETERMINED. Reason: recomputed after the cure from the cured lines (TIE (KB-0030)): HELD-1, CHALLENGE STANDING SELF-SUPPORTED, no collision line stands graded CHALLENGER LINK BROKEN.
@@ -727,7 +727,7 @@ DoD2 listed != drv_uncured: 31 [["ODV1-29820-ubx1yyyz","NOT COUNTED: 7 debate ru
 - Panel judge 1's seat stayed empty: sol was not counted, and no judge was counted in its place. Alternates tried: Grok, not seated (1 uncured items).
 
 ## ODV1-33442-mfuumqsi
-**Outcome:** UNDERDETERMINED. HELD by sol, Gemini and Grok (three counted). sol, Gemini and Grok wrote RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict write RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
+**Outcome:** UNDERDETERMINED. HELD by sol, Gemini and Grok (three counted). sol, Gemini and Grok carry RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict carry RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
 - Verdict of the debate: **HELD** (the panel) (a grade of the defender's chain: Claude, arguing the standard reading)
 - Panel judge 1: sol (openai/gpt-6.1-sol): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). Reason: The record supports competing, textually footed accounts of Joseph's fatherhood without establishing that either account must overturn the defender's chain.
 - Panel judge 2: Gemini (google/gemini-3.8-flash): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). Reason: The record leaves the question open because the text affirms both
@@ -746,7 +746,7 @@ DoD2 listed != drv_uncured: 31 [["ODV1-29820-ubx1yyyz","NOT COUNTED: 7 debate ru
 - Panel judge 2's seat stayed empty: Gemini was not counted, and no judge was counted in its place. Alternates tried: Grok, not seated (1 uncured items).
 
 ## ODV1-33482-m86iutt6
-**Outcome:** UNDERDETERMINED. HELD by sol and Grok (two counted). sol wrote RESULT: UNDERDETERMINED. When exactly half of the counted judges who give the panel verdict write RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule, ruling 304).
+**Outcome:** UNDERDETERMINED. HELD by sol and Grok (two counted). sol carries RESULT: UNDERDETERMINED. When exactly half of the counted judges who give the panel verdict carry RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule, ruling 304).
 - Verdict of the debate: **HELD** (the panel) (a grade of the defender's chain: Claude, arguing the standard reading)
 - Panel judge 1: sol (openai/gpt-6.1-sol): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). Reason: The record supports both constructed readings sufficiently to leave biological fatherhood unresolved, although the challenger has not broken the defender's chain.
 - Panel judge 2: Gemini (google/gemini-3.8-flash): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (removed: 1 debate rule violation(s) not cured; not counted; Grok sat in its place)
@@ -766,7 +766,7 @@ DoD2 listed != drv_uncured: 31 [["ODV1-29820-ubx1yyyz","NOT COUNTED: 7 debate ru
 - Panel judge 2's seat stayed empty: Gemini was not counted, and no judge was counted in its place. Alternates tried: Grok, not seated (2 uncured items).
 
 ## ODV1-33497-65m5wrdr
-**Outcome:** UNDERDETERMINED. HELD by ChatGPT and Grok (two counted). ChatGPT and Grok wrote RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict write RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
+**Outcome:** UNDERDETERMINED. HELD by ChatGPT and Grok (two counted). ChatGPT and Grok carry RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict carry RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
 - Verdict of the debate: **HELD** (the panel) (a grade of the defender's chain: Claude, arguing the standard reading)
 - Panel judge 1: Gemini (google/gemini-3.8-flash): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (NOT COUNTED: 1 debate rule violation not cured; none is named in the judgment's own record). Reason: derived after the send-back from the judge's own changed lines (S1, S2, S3, S4, S5, S6, S7, S8, S9, S10, S11; CHANGED D1 vs C1 (CHALLENGER LINK BROKEN to UNDERDETERMINED)): HELD-1.
 - Panel judge 2: ChatGPT (openai/gpt-6.1-terra): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). Reason: The exhibited verses support more than one reading of the child's conception and descent, and the challenger has not broken the declared chain under the governing rules.
@@ -775,7 +775,7 @@ DoD2 listed != drv_uncured: 31 [["ODV1-29820-ubx1yyyz","NOT COUNTED: 7 debate ru
 - Panel judge 1's seat stayed empty: Gemini was not counted, and no judge was counted in its place. Alternates tried: sol, not seated (1 uncured items).
 
 ## ODV1-33506-up1xppfc
-**Outcome:** UNDERDETERMINED. HELD by sol, Gemini and Grok (three counted). sol and Gemini wrote RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict write RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
+**Outcome:** UNDERDETERMINED. HELD by sol, Gemini and Grok (three counted). sol and Gemini (the engine recomputed it from DEFENDER WINS) carry RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict carry RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
 - Verdict of the debate: **HELD** (the panel) (a grade of the defender's chain: Claude, arguing the standard reading)
 - Panel judge 1: sol (openai/gpt-6.1-sol): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted; sat in ChatGPT's place). Reason: The defender reads Matthew 1:20's
 - Panel judge 2: Gemini (google/gemini-3.8-flash): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). The engine recomputed its RESULT after the cure: the judge wrote DEFENDER WINS, and it reads UNDERDETERMINED. Reason: recomputed after the cure from the cured lines (RETRACTED D1 vs C3 (CHALLENGER LINK BROKEN to UNDERDETERMINED); RETRACTED D2 vs C4 (CHALLENGER LINK BROKEN to UNDERDETERMINED); RETRACTED D3 vs C5 (
@@ -789,7 +789,7 @@ DoD2 listed != drv_uncured: 31 [["ODV1-29820-ubx1yyyz","NOT COUNTED: 7 debate ru
 - Panel result: **?** (a grade of the defender's chain: Claude, arguing the standard reading)
 
 ## ODV1-33575-6ry1b6io
-**Outcome:** UNDERDETERMINED. HELD by Gemini, ChatGPT and Grok (three counted). Gemini and ChatGPT wrote RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict write RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
+**Outcome:** UNDERDETERMINED. HELD by Gemini, ChatGPT and Grok (three counted). Gemini (the engine recomputed it from DEFENDER WINS) and ChatGPT (the engine recomputed it from CHALLENGER WINS) carry RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict carry RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
 - Verdict of the debate: **HELD** (the panel) (a grade of the defender's chain: Claude, arguing the standard reading)
 - Panel judge 1: Gemini (google/gemini-3.8-flash): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). The engine recomputed its RESULT after the cure: the judge wrote DEFENDER WINS, and it reads UNDERDETERMINED. Reason: recomputed after the cure from the cured lines (TIE (KB-0030)): HELD-1, CHALLENGE STANDING SELF-SUPPORTED, no collision line stands graded CHALLENGER LINK BROKEN.
 - Panel judge 2: ChatGPT (openai/gpt-6.1-terra): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). The engine recomputed its RESULT after the cure: the judge wrote CHALLENGER WINS, and it reads UNDERDETERMINED. Reason: recomputed after the cure from the cured lines (RETRACTED D4 vs C3 (DEFENDER LINK BROKEN to UNDERDETERMINED)): HELD-1, CHALLENGE STANDING SELF-SUPPORTED, no collision line stands graded CHALLENGER
@@ -797,7 +797,7 @@ DoD2 listed != drv_uncured: 31 [["ODV1-29820-ubx1yyyz","NOT COUNTED: 7 debate ru
 - Panel result: **HELD** (3-0) (a grade of the defender's chain: Claude, arguing the standard reading). Counted: 3 of 3 panel seats (a seat counts when its judge, or the alternate seated in its place, is counted).
 
 ## ODV1-33592-bthf5vkp
-**Outcome:** UNDERDETERMINED. HELD by Gemini and ChatGPT (two counted). Gemini and ChatGPT wrote RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict write RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
+**Outcome:** UNDERDETERMINED. HELD by Gemini and ChatGPT (two counted). Gemini and ChatGPT carry RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict carry RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
 - Verdict of the debate: **HELD** (the panel) (a grade of the defender's chain: Claude, arguing the standard reading)
 - Panel judge 1: Gemini (google/gemini-3.8-flash): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). Reason: derived after the send-back from the judge's own changed lines (S1, S2, S3, S4, S5, S6, G5, S11, S12; CHANGED D1 vs C6 (CHALLENGER LINK BROKEN to UNDERDETERMINED); CHANGED D2 vs C1 (CHALLENGER LIN
 - Panel judge 2: ChatGPT (openai/gpt-6.1-terra): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). Reason: Matthew describes the conception as “of the Holy Ghost,” and Acts describes Christ as raised from David's loins “according to the flesh”; the exhibited chains disagree about how those descriptions
@@ -805,7 +805,7 @@ DoD2 listed != drv_uncured: 31 [["ODV1-29820-ubx1yyyz","NOT COUNTED: 7 debate ru
 - Panel result: **HELD** (2-1) (a grade of the defender's chain: Claude, arguing the standard reading). Counted: 3 of 3 panel seats (a seat counts when its judge, or the alternate seated in its place, is counted).
 
 ## ODV1-33605-fcfvr6f8
-**Outcome:** UNDERDETERMINED. HELD by Gemini, ChatGPT and Grok (three counted). Gemini and ChatGPT wrote RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict write RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
+**Outcome:** UNDERDETERMINED. HELD by Gemini, ChatGPT and Grok (three counted). Gemini (the engine recomputed it from DEFENDER WINS) and ChatGPT (the engine recomputed it from CHALLENGER WINS) carry RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict carry RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
 - Verdict of the debate: **HELD** (the panel) (a grade of the defender's chain: Claude, arguing the standard reading)
 - Panel judge 1: Gemini (google/gemini-3.8-flash): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). The engine recomputed its RESULT after the cure: the judge wrote DEFENDER WINS, and it reads UNDERDETERMINED. Reason: recomputed after the cure from the cured lines (TIE (KB-0030)): HELD-1, CHALLENGE STANDING SELF-SUPPORTED, no collision line stands graded CHALLENGER LINK BROKEN.
 - Panel judge 2: ChatGPT (openai/gpt-6.1-terra): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). The engine recomputed its RESULT after the cure: the judge wrote CHALLENGER WINS, and it reads UNDERDETERMINED. Reason: recomputed after the cure from the cured lines (RETRACTED D1 vs C2 (DEFENDER LINK BROKEN to UNDERDETERMINED); RETRACTED D5 vs C6 (CHALLENGER LINK BROKEN to UNDERDETERMINED); CORRECTED COUNT CHALLE
@@ -822,7 +822,7 @@ DoD2 listed != drv_uncured: 31 [["ODV1-29820-ubx1yyyz","NOT COUNTED: 7 debate ru
 - Panel result: **HELD** (3-0) (a grade of the defender's chain: Claude, arguing the standard reading). Counted: 3 of 3 panel seats (a seat counts when its judge, or the alternate seated in its place, is counted).
 
 ## ODV1-33627-58uwr0s4
-**Outcome:** UNDERDETERMINED. HELD by sol, ChatGPT and Grok (three counted). sol, ChatGPT and Grok wrote RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict write RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
+**Outcome:** UNDERDETERMINED. HELD by sol, ChatGPT and Grok (three counted). sol, ChatGPT (the engine recomputed it from DEFENDER WINS) and Grok carry RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict carry RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
 - Verdict of the debate: **HELD** (the panel) (a grade of the defender's chain: Claude, arguing the standard reading)
 - Panel judge 1: sol (openai/gpt-6.1-sol): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted; sat in Gemini's place). Reason: The defender answers through the conception's being
 - Panel judge 2: Gemini (google/gemini-3.8-flash): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (removed: 4 debate rule violation(s) not cured; not counted; sol sat in its place)
@@ -831,7 +831,7 @@ DoD2 listed != drv_uncured: 31 [["ODV1-29820-ubx1yyyz","NOT COUNTED: 7 debate ru
 - Panel result: **HELD** (3-0) (a grade of the defender's chain: Claude, arguing the standard reading). Counted: 3 of 3 panel seats (a seat counts when its judge, or the alternate seated in its place, is counted).
 
 ## ODV1-33644-o5galp37
-**Outcome:** UNDERDETERMINED. HELD by sol, Gemini and Grok (three counted). sol, Gemini and Grok wrote RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict write RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
+**Outcome:** UNDERDETERMINED. HELD by sol, Gemini and Grok (three counted). sol, Gemini and Grok carry RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict carry RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
 - Verdict of the debate: **HELD** (the panel) (a grade of the defender's chain: Claude, arguing the standard reading)
 - Panel judge 1: sol (openai/gpt-6.1-sol): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted; sat in ChatGPT's place). Reason: The defender's chain survives, but the competing accounts of descent and conception leave the biological-father question disputed on this record.
 - Panel judge 2: Gemini (google/gemini-3.8-flash): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). Reason: derived after the send-back from the judge's own changed lines (S1, S2, S3, S4, S5, S6, S8, S9; CHANGED D2 vs C3 (CHALLENGER LINK BROKEN to UNDERDETERMINED)): HELD-1.
@@ -840,7 +840,7 @@ DoD2 listed != drv_uncured: 31 [["ODV1-29820-ubx1yyyz","NOT COUNTED: 7 debate ru
 - Panel result: **HELD** (3-0) (a grade of the defender's chain: Claude, arguing the standard reading). Counted: 3 of 3 panel seats (a seat counts when its judge, or the alternate seated in its place, is counted).
 
 ## ODV1-33682-y14n87hx
-**Outcome:** UNDERDETERMINED. HELD by Gemini, ChatGPT and Grok (three counted). Gemini, ChatGPT and Grok wrote RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict write RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
+**Outcome:** UNDERDETERMINED. HELD by Gemini, ChatGPT and Grok (three counted). Gemini, ChatGPT (the engine recomputed it from CHALLENGER WINS) and Grok carry RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict carry RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
 - Verdict of the debate: **HELD** (the panel) (a grade of the defender's chain: Claude, arguing the standard reading)
 - Panel judge 1: Gemini (google/gemini-3.8-flash): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). Reason: derived after the send-back from the judge's own changed lines (S1, S2, S3, S4, S5, S6, S7, S8; CHANGED D1 vs C2 (CHALLENGER LINK BROKEN to UNDERDETERMINED)): HELD-1.
 - Panel judge 2: ChatGPT (openai/gpt-6.1-terra): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). The engine recomputed its RESULT after the cure: the judge wrote CHALLENGER WINS, and it reads UNDERDETERMINED. Reason: recomputed after the cure from the cured lines (RETRACTED D2 vs C1 (DEFENDER LINK BROKEN to UNDERDETERMINED); RETRACTED D6 vs C6 (CHALLENGER LINK BROKEN to UNDERDETERMINED); CORRECTED COUNT DEFEND
@@ -848,7 +848,7 @@ DoD2 listed != drv_uncured: 31 [["ODV1-29820-ubx1yyyz","NOT COUNTED: 7 debate ru
 - Panel result: **HELD** (3-0) (a grade of the defender's chain: Claude, arguing the standard reading). Counted: 3 of 3 panel seats (a seat counts when its judge, or the alternate seated in its place, is counted).
 
 ## ODV1-33705-6qcqx9co
-**Outcome:** UNDERDETERMINED. HELD by Gemini, ChatGPT and Grok (three counted). Gemini and ChatGPT wrote RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict write RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
+**Outcome:** UNDERDETERMINED. HELD by Gemini, ChatGPT and Grok (three counted). Gemini (the engine recomputed it from DEFENDER WINS) and ChatGPT carry RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict carry RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
 - Verdict of the debate: **HELD** (the panel) (a grade of the defender's chain: Claude, arguing the standard reading)
 - Panel judge 1: Gemini (google/gemini-3.8-flash): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). The engine recomputed its RESULT after the cure: the judge wrote DEFENDER WINS, and it reads UNDERDETERMINED. Reason: recomputed after the cure from the cured lines (RETRACTED D1 vs C3 (CHALLENGER LINK BROKEN to UNDERDETERMINED); RETRACTED D2 vs C2 (CHALLENGER LINK BROKEN to UNDERDETERMINED); RETRACTED D3 vs C1 (
 - Panel judge 2: ChatGPT (openai/gpt-6.1-terra): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). Reason: The exhibited passages and answers leave the biological-father question open without a counted break in the defender's chain.
@@ -856,7 +856,7 @@ DoD2 listed != drv_uncured: 31 [["ODV1-29820-ubx1yyyz","NOT COUNTED: 7 debate ru
 - Panel result: **HELD** (3-0) (a grade of the defender's chain: Claude, arguing the standard reading). Counted: 3 of 3 panel seats (a seat counts when its judge, or the alternate seated in its place, is counted).
 
 ## ODV1-33731-lq0uumwp
-**Outcome:** UNDERDETERMINED. HELD by sol, Gemini and ChatGPT (three counted). Gemini and ChatGPT wrote RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict write RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
+**Outcome:** UNDERDETERMINED. HELD by sol, Gemini and ChatGPT (three counted). Gemini and ChatGPT carry RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict carry RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
 - Verdict of the debate: **HELD** (the panel) (a grade of the defender's chain: Claude, arguing the standard reading)
 - Panel judge 1: sol (openai/gpt-6.1-sol): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted; sat in Grok's place). Reason: Read together, the conception accounts support the defender's account of the child's origin more strongly than the challenger's proposed knowing before the taking.
 - Panel judge 2: Gemini (google/gemini-3.8-flash): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). Reason: derived after the send-back from the judge's own changed lines (S1, S2, S3, S4, G2, S8, S9, S10, S11, S12; COUNT CHALLENGER 2 to 0; CHANGED D1 vs C1 (STANDS to UNDERDETERMINED); CHANGED D2 vs C1 (
@@ -865,7 +865,7 @@ DoD2 listed != drv_uncured: 31 [["ODV1-29820-ubx1yyyz","NOT COUNTED: 7 debate ru
 - Panel result: **HELD** (3-0) (a grade of the defender's chain: Claude, arguing the standard reading). Counted: 3 of 3 panel seats (a seat counts when its judge, or the alternate seated in its place, is counted).
 
 ## ODV1-33750-lwqaemkb
-**Outcome:** UNDERDETERMINED. HELD by Gemini, ChatGPT and Grok (three counted). Gemini, ChatGPT and Grok wrote RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict write RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
+**Outcome:** UNDERDETERMINED. HELD by Gemini, ChatGPT and Grok (three counted). Gemini, ChatGPT (the engine recomputed it from DEFENDER WINS) and Grok carry RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict carry RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
 - Verdict of the debate: **HELD** (the panel) (a grade of the defender's chain: Claude, arguing the standard reading)
 - Panel judge 1: Gemini (google/gemini-3.8-flash): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). Reason: derived after the send-back from the judge's own changed lines (S1, S2, S3, S4, G1; CHANGED D1 vs C1 (CHALLENGER LINK BROKEN to UNDERDETERMINED)): HELD-1.
 - Panel judge 2: ChatGPT (openai/gpt-6.1-terra): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). The engine recomputed its RESULT after the cure: the judge wrote DEFENDER WINS, and it reads UNDERDETERMINED. Reason: recomputed after the cure from the cured lines (TIE (KB-0030)): HELD-1, CHALLENGE STANDING SELF-SUPPORTED, no collision line stands graded CHALLENGER LINK BROKEN.
@@ -873,7 +873,7 @@ DoD2 listed != drv_uncured: 31 [["ODV1-29820-ubx1yyyz","NOT COUNTED: 7 debate ru
 - Panel result: **HELD** (3-0) (a grade of the defender's chain: Claude, arguing the standard reading). Counted: 3 of 3 panel seats (a seat counts when its judge, or the alternate seated in its place, is counted).
 
 ## ODV1-33774-3w3lwzi5
-**Outcome:** UNDERDETERMINED. HELD by Gemini and Grok (two counted). Gemini wrote RESULT: UNDERDETERMINED. When exactly half of the counted judges who give the panel verdict write RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule, ruling 304).
+**Outcome:** UNDERDETERMINED. HELD by Gemini and Grok (two counted). Gemini (the engine recomputed it from DEFENDER WINS) carries RESULT: UNDERDETERMINED. When exactly half of the counted judges who give the panel verdict carry RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule, ruling 304).
 - Verdict of the debate: **HELD** (the panel) (a grade of the defender's chain: Claude, arguing the standard reading)
 - Panel judge 1: Gemini (google/gemini-3.8-flash): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). The engine recomputed its RESULT after the cure: the judge wrote DEFENDER WINS, and it reads UNDERDETERMINED. Reason: recomputed after the cure from the cured lines (TIE (KB-0030)): HELD-1, CHALLENGE STANDING SELF-SUPPORTED, no collision line stands graded CHALLENGER LINK BROKEN.
 - Panel judge 2: ChatGPT (openai/gpt-6.1-terra): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (NOT COUNTED: 1 debate rule violation not cured (K-W on DEFENDER CR4 D3 #7)). Reason: Matthew 1:20 says
@@ -882,7 +882,7 @@ DoD2 listed != drv_uncured: 31 [["ODV1-29820-ubx1yyyz","NOT COUNTED: 7 debate ru
 - Panel judge 2's seat stayed empty: ChatGPT was not counted, and no judge was counted in its place. Alternates tried: sol, not seated (1 uncured items).
 
 ## ODV1-33798-ithqsbay
-**Outcome:** UNDERDETERMINED. HELD by sol, Gemini and Grok (three counted). sol and Grok wrote RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict write RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
+**Outcome:** UNDERDETERMINED. HELD by sol, Gemini and Grok (three counted). sol and Grok carry RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict carry RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
 - Verdict of the debate: **HELD** (the panel) (a grade of the defender's chain: Claude, arguing the standard reading)
 - Panel judge 1: sol (openai/gpt-6.1-sol): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted; sat in ChatGPT's place). Reason: The defender's chain survives the challenge, but the record's competing explanations of conception and descent leave the biological-father question unresolved under this debate's evidentiary rules
 - Panel judge 2: Gemini (google/gemini-3.8-flash): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). Reason: The scriptures in the record, read precept upon precept, demonstrate that Christ was conceived of the Holy Ghost without a human biological father.
@@ -891,7 +891,7 @@ DoD2 listed != drv_uncured: 31 [["ODV1-29820-ubx1yyyz","NOT COUNTED: 7 debate ru
 - Panel result: **HELD** (3-0) (a grade of the defender's chain: Claude, arguing the standard reading). Counted: 3 of 3 panel seats (a seat counts when its judge, or the alternate seated in its place, is counted).
 
 ## ODV1-33815-oqx67m92
-**Outcome:** UNDERDETERMINED. HELD by Gemini, ChatGPT and Grok (three counted). Gemini, ChatGPT and Grok wrote RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict write RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
+**Outcome:** UNDERDETERMINED. HELD by Gemini, ChatGPT and Grok (three counted). Gemini, ChatGPT and Grok carry RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict carry RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
 - Verdict of the debate: **HELD** (the panel) (a grade of the defender's chain: Claude, arguing the standard reading)
 - Panel judge 1: Gemini (google/gemini-3.8-flash): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). Reason: derived after the send-back from the judge's own changed lines (S1, S2, S3, S4, RULING (derived); CHANGED D3 vs C2 (CHALLENGER LINK BROKEN to UNDERDETERMINED)): HELD-1.
 - Panel judge 2: ChatGPT (openai/gpt-6.1-terra): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). Reason: The recorded arguments leave open whether the stated source of the conception excludes Joseph as a biological father.
@@ -899,7 +899,7 @@ DoD2 listed != drv_uncured: 31 [["ODV1-29820-ubx1yyyz","NOT COUNTED: 7 debate ru
 - Panel result: **HELD** (3-0) (a grade of the defender's chain: Claude, arguing the standard reading). Counted: 3 of 3 panel seats (a seat counts when its judge, or the alternate seated in its place, is counted).
 
 ## ODV1-33828-oe3n5aq8
-**Outcome:** UNDERDETERMINED. HELD by sol, Gemini and ChatGPT (three counted). sol, Gemini and ChatGPT wrote RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict write RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
+**Outcome:** UNDERDETERMINED. HELD by sol, Gemini and ChatGPT (three counted). sol (the engine recomputed it from CHALLENGER WINS), Gemini (the engine recomputed it from DEFENDER WINS) and ChatGPT carry RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict carry RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
 - Verdict of the debate: **HELD** (the panel) (a grade of the defender's chain: Claude, arguing the standard reading)
 - Panel judge 1: sol (openai/gpt-6.1-sol): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted; sat in Grok's place). The engine recomputed its RESULT after the cure: the judge wrote CHALLENGER WINS, and it reads UNDERDETERMINED. Reason: recomputed after the cure from the cured lines (RETRACTED D5 vs C1 (DEFENDER LINK BROKEN to UNDERDETERMINED); CORRECTED COUNT DEFENDER 0): HELD-1, CHALLENGE STANDING SELF-SUPPORTED, no collision l
 - Panel judge 2: Gemini (google/gemini-3.8-flash): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). The engine recomputed its RESULT after the cure: the judge wrote DEFENDER WINS, and it reads UNDERDETERMINED. Reason: recomputed after the cure from the cured lines (RETRACTED D1 vs C4 (CHALLENGER LINK BROKEN to UNDERDETERMINED); RETRACTED D2 vs C2 (CHALLENGER LINK BROKEN to UNDERDETERMINED); RETRACTED D3 vs C6 (
@@ -908,7 +908,7 @@ DoD2 listed != drv_uncured: 31 [["ODV1-29820-ubx1yyyz","NOT COUNTED: 7 debate ru
 - Panel result: **HELD** (3-0) (a grade of the defender's chain: Claude, arguing the standard reading). Counted: 3 of 3 panel seats (a seat counts when its judge, or the alternate seated in its place, is counted).
 
 ## ODV1-33846-0lclkjab
-**Outcome:** UNDERDETERMINED. HELD by sol, Gemini and ChatGPT (three counted). sol, Gemini and ChatGPT wrote RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict write RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
+**Outcome:** UNDERDETERMINED. HELD by sol, Gemini and ChatGPT (three counted). sol, Gemini and ChatGPT (the engine recomputed it from CHALLENGER WINS) carry RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict carry RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
 - Verdict of the debate: **HELD** (the panel) (a grade of the defender's chain: Claude, arguing the standard reading)
 - Panel judge 1: sol (openai/gpt-6.1-sol): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted; sat in Grok's place). Reason: The defender connects the conception to
 - Panel judge 2: Gemini (google/gemini-3.8-flash): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). Reason: derived after the send-back from the judge's own changed lines (S1, S2, S3, S4, S5, S6, S7, S8, RULING (derived); CHANGED D2 vs C2 (CHALLENGER LINK BROKEN to UNDERDETERMINED)): HELD-1.
@@ -917,7 +917,7 @@ DoD2 listed != drv_uncured: 31 [["ODV1-29820-ubx1yyyz","NOT COUNTED: 7 debate ru
 - Panel result: **HELD** (3-0) (a grade of the defender's chain: Claude, arguing the standard reading). Counted: 3 of 3 panel seats (a seat counts when its judge, or the alternate seated in its place, is counted).
 
 ## ODV1-34016-53t69eso
-**Outcome:** UNDERDETERMINED. HELD by sol and ChatGPT (two counted). sol and ChatGPT wrote RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict write RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
+**Outcome:** UNDERDETERMINED. HELD by sol and ChatGPT (two counted). sol and ChatGPT carry RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict carry RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
 - Verdict of the debate: **HELD** (the panel) (a grade of the defender's chain: Claude, arguing the standard reading)
 - Panel judge 1: luna (openai/gpt-6-luna): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (NOT COUNTED: 2 debate rule violations not cured (K-W on CHALLENGER DR3 LINK 3 #3; K-RUL on keystone)). The engine recomputed its RESULT after the cure: the judge wrote DEFENDER WINS, and it reads UNDERDETERMINED. Reason: recomputed after the cure from the cured lines (TIE (KB-0030)): HELD-1, CHALLENGE STANDING SELF-SUPPORTED, no collision line stands graded CHALLENGER LINK BROKEN.
 - Panel judge 2: sol (openai/gpt-6.1-sol): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). Reason: The competing readings leave unresolved whether Joseph's fatherhood was biological or a household relationship.
@@ -926,7 +926,7 @@ DoD2 listed != drv_uncured: 31 [["ODV1-29820-ubx1yyyz","NOT COUNTED: 7 debate ru
 - Panel judge 1's seat stayed empty: luna was not counted, and no judge was counted in its place. Alternates tried: Claude Haiku, not seated (17 uncured items).
 
 ## ODV1-34108-3to8dgrt
-**Outcome:** UNDERDETERMINED. HELD by luna, sol and ChatGPT (three counted). luna, sol and ChatGPT wrote RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict write RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
+**Outcome:** UNDERDETERMINED. HELD by luna, sol and ChatGPT (three counted). luna, sol and ChatGPT carry RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict carry RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
 - Verdict of the debate: **HELD** (the panel) (a grade of the defender's chain: Claude, arguing the standard reading)
 - Panel judge 1: luna (openai/gpt-6-luna): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). Reason: Matthew says Mary “was found with child of the Holy Ghost” before they came together (Matthew 1:18), and names Joseph “her husband” and “thou son of David” (Matthew 1:19-20); the record supports r
 - Panel judge 2: sol (openai/gpt-6.1-sol): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). Reason: The record supports competing explanations of the conception and father-language without establishing a textual break in the defender's retained chain.
@@ -988,7 +988,7 @@ DoD2 listed != drv_uncured: 31 [["ODV1-29820-ubx1yyyz","NOT COUNTED: 7 debate ru
 - Panel judge 2's seat stayed empty: sol was not counted, and no judge was counted in its place. Alternates tried: argon, not seated (25 uncured items).
 
 ## ODV1-35478-2208y39d
-**Outcome:** UNDERDETERMINED. HELD by luna, sol and ChatGPT (three counted). luna, sol and ChatGPT wrote RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict write RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
+**Outcome:** UNDERDETERMINED. HELD by luna, sol and ChatGPT (three counted). luna, sol and ChatGPT carry RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict carry RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
 - Verdict of the debate: **HELD** (the panel) (a grade of the defender's chain: Claude, arguing the standard reading)
 - Panel judge 1: luna (openai/gpt-6-luna): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). Reason: The record supports the stated Holy Ghost source but also presents a layered, disputed reading in which Joseph fathered the child, and does not finally resolve the conflict.
 - Panel judge 2: sol (openai/gpt-6.1-sol): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). Reason: The debate leaves open whether Joseph's place in the child's family establishes biological fatherhood or a family relationship accompanying a conception attributed to the Holy Ghost.
@@ -1012,7 +1012,7 @@ DoD2 listed != drv_uncured: 31 [["ODV1-29820-ubx1yyyz","NOT COUNTED: 7 debate ru
 - Panel result: **BROKEN** (3-0) (a grade of the defender's chain: Claude, arguing the standard reading). Counted: 3 of 3 panel seats (a seat counts when its judge, or the alternate seated in its place, is counted).
 
 ## ODV1-35696-mgptelec
-**Outcome:** UNDERDETERMINED. HELD by luna, sol and ChatGPT (three counted). luna, sol and ChatGPT wrote RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict write RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
+**Outcome:** UNDERDETERMINED. HELD by luna, sol and ChatGPT (three counted). luna (the engine recomputed it from DEFENDER WINS), sol and ChatGPT carry RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict carry RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
 - Verdict of the debate: **HELD** (the panel) (a grade of the defender's chain: Claude, arguing the standard reading)
 - Panel judge 1: luna (openai/gpt-6-luna): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). The engine recomputed its RESULT after the cure: the judge wrote DEFENDER WINS, and it reads UNDERDETERMINED. Reason: recomputed after the cure from the cured lines (TIE (KB-0030)): HELD-1, CHALLENGE STANDING SELF-SUPPORTED.
 - Panel judge 2: sol (openai/gpt-6.1-sol): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). Reason: The presented arguments leave unresolved whether the stated origin of the conception excludes a human father or expresses God's claim upon a child descended through Joseph.
@@ -1037,7 +1037,7 @@ DoD2 listed != drv_uncured: 31 [["ODV1-29820-ubx1yyyz","NOT COUNTED: 7 debate ru
 - Panel result: **BROKEN** (3-0) (a grade of the defender's chain: Claude, arguing the standard reading). Counted: 3 of 3 panel seats (a seat counts when its judge, or the alternate seated in its place, is counted).
 
 ## ODV1-36212-ld47uzqy
-**Outcome:** UNDERDETERMINED. HELD by ember, sol and ChatGPT (three counted). sol and ChatGPT wrote RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict write RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
+**Outcome:** UNDERDETERMINED. HELD by ember, sol and ChatGPT (three counted). sol and ChatGPT carry RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict carry RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
 - Verdict of the debate: **HELD** (the panel) (a grade of the defender's chain: Claude, arguing the standard reading)
 - Panel judge 1: ember (meta/muse-ember): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted; sat in luna's place). Reason: the verses read together give the Holy Ghost as source of the conception in her womb and give no knowing by Joseph before the birth.
 - Panel judge 2: sol (openai/gpt-6.1-sol): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). Reason: The record supports the defender's reading of a conception without a human father, but does not conclusively eliminate the challenger's distinction between fleshly descent and the child's origin o
@@ -1063,7 +1063,7 @@ DoD2 listed != drv_uncured: 31 [["ODV1-29820-ubx1yyyz","NOT COUNTED: 7 debate ru
 - Panel result: **BROKEN** (2-1) (a grade of the defender's chain: Claude, arguing the standard reading). Counted: 3 of 3 panel seats (a seat counts when its judge, or the alternate seated in its place, is counted).
 
 ## ODV1-36791-0cz8umbx
-**Outcome:** UNDERDETERMINED. HELD by hydrogen, sol and ChatGPT (three counted). hydrogen, sol and ChatGPT wrote RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict write RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
+**Outcome:** UNDERDETERMINED. HELD by hydrogen, sol and ChatGPT (three counted). hydrogen (the engine recomputed it from DEFENDER WINS), sol and ChatGPT carry RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict carry RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
 - Verdict of the debate: **HELD** (the panel) (a grade of the defender's chain: Claude, arguing the standard reading)
 - Panel judge 1: hydrogen (google/gemini-4-hydrogen): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted; sat in luna's place). The engine recomputed its RESULT after the cure: the judge wrote DEFENDER WINS, and it reads UNDERDETERMINED. Reason: recomputed after the cure from the cured lines (TIE (KB-0030)): HELD-1, CHALLENGE STANDING SELF-SUPPORTED.
 - Panel judge 2: sol (openai/gpt-6.1-sol): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). Reason: The defender preserves its chain, but the record does not conclusively distinguish conception without a man from the challenger's construction of divine power working alongside a human father.
@@ -1080,7 +1080,7 @@ DoD2 listed != drv_uncured: 31 [["ODV1-29820-ubx1yyyz","NOT COUNTED: 7 debate ru
 - Panel result: **BROKEN** (2-1) (a grade of the defender's chain: Claude, arguing the standard reading). Counted: 3 of 3 panel seats (a seat counts when its judge, or the alternate seated in its place, is counted).
 
 ## ODV1-36916-jm52130i
-**Outcome:** UNDERDETERMINED. HELD by sol and ChatGPT (two counted). sol and ChatGPT wrote RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict write RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
+**Outcome:** UNDERDETERMINED. HELD by sol and ChatGPT (two counted). sol and ChatGPT carry RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict carry RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
 - Verdict of the debate: **HELD** (the panel) (a grade of the defender's chain: Claude, arguing the standard reading)
 - Panel judge 1: luna (openai/gpt-6-luna): **BROKEN** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). Reason: derived after the send-back from the judge's own changed lines (S1, S2, S3, S4, S5, S6, S7, S8, S10, S11, S12, G1, G1F, S14, G4, G4F, S16, S17, S18, G2, G2F; COUNT CHALLENGER 2 to 1; CHANGED D1 vs
 - Panel judge 2: sol (openai/gpt-6.1-sol): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). Reason: The record supplies a layered argument for conception without a man and a layered alternative through Joseph, but does not settle the disputed scope of the timing and source statements.
@@ -1105,7 +1105,7 @@ DoD2 listed != drv_uncured: 31 [["ODV1-29820-ubx1yyyz","NOT COUNTED: 7 debate ru
 - Panel result: **BROKEN** (3-0) (a grade of the defender's chain: Claude, arguing the standard reading). Counted: 3 of 3 panel seats (a seat counts when its judge, or the alternate seated in its place, is counted).
 
 ## ODV1-37032-m7yxtyxj
-**Outcome:** UNDERDETERMINED. HELD by sol and ChatGPT (two counted). sol and ChatGPT wrote RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict write RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
+**Outcome:** UNDERDETERMINED. HELD by sol and ChatGPT (two counted). sol and ChatGPT carry RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict carry RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
 - Verdict of the debate: **HELD** (the panel) (a grade of the defender's chain: Claude, arguing the standard reading)
 - Panel judge 1: sol (openai/gpt-6.1-sol): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). Reason: The record supports the defender's connected reading but also exhibits an alternative whose disputed timing and descent inferences are not conclusively excluded by the arguments presented.
 - Panel judge 2: luna (openai/gpt-6-luna): **BROKEN** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). Reason: The defender’s claim that the genealogy excludes Joseph as begetter fails against the unanswered comparison showing that a wife may bear a son to a named father.
@@ -1121,7 +1121,7 @@ DoD2 listed != drv_uncured: 31 [["ODV1-29820-ubx1yyyz","NOT COUNTED: 7 debate ru
 - Panel result: **BROKEN** (3-0) (a grade of the defender's chain: Claude, arguing the standard reading). Counted: 3 of 3 panel seats (a seat counts when its judge, or the alternate seated in its place, is counted).
 
 ## ODV1-37203-6um4inkh
-**Outcome:** UNDERDETERMINED. HELD by sol, hydrogen and ChatGPT (three counted). sol, hydrogen and ChatGPT wrote RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict write RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
+**Outcome:** UNDERDETERMINED. HELD by sol, hydrogen and ChatGPT (three counted). sol, hydrogen (the engine recomputed it from DEFENDER WINS) and ChatGPT (the engine recomputed it from CHALLENGER WINS) carry RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict carry RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
 - Verdict of the debate: **HELD** (the panel) (a grade of the defender's chain: Claude, arguing the standard reading)
 - Panel judge 1: sol (openai/gpt-6.1-sol): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted). Reason: Read together, the submitted verses support a conception attributed to the Holy Ghost and a Davidic descent, but the competing explanations of their relationship remain unresolved in this debate.
 - Panel judge 2: hydrogen (google/gemini-4-hydrogen): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading) (counted; sat in luna's place). The engine recomputed its RESULT after the cure: the judge wrote DEFENDER WINS, and it reads UNDERDETERMINED. Reason: recomputed after the cure from the cured lines (TIE (KB-0030)): HELD-1, CHALLENGE STANDING SELF-SUPPORTED.
@@ -1139,7 +1139,7 @@ DoD2 listed != drv_uncured: 31 [["ODV1-29820-ubx1yyyz","NOT COUNTED: 7 debate ru
 - Panel result: **BROKEN** (3-0) (a grade of the defender's chain: Claude, arguing the standard reading). Counted: 3 of 3 panel seats (a seat counts when its judge, or the alternate seated in its place, is counted).
 
 ## ODV1-37325-s81kgmur
-**Outcome:** UNDERDETERMINED. HELD by hydrogen, luna and ChatGPT (three counted). hydrogen and ChatGPT wrote RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict write RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
+**Outcome:** UNDERDETERMINED. HELD by hydrogen, luna and ChatGPT (three counted). hydrogen and ChatGPT carry RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict carry RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
 - Verdict of the debate: **HELD** (the panel) (a grade of the defender's chain: GLM, arguing the standard reading)
 - Panel judge 1: hydrogen (google/gemini-4-hydrogen): **HELD** (a grade of the defender's chain: GLM, arguing the standard reading) (counted; sat in sol's place). Reason: derived after the send-back from the judge's own changed lines (S1, S2, S3, S7, G2, S6, RULING (derived); CHANGED D1 vs C1 (CHALLENGER LINK BROKEN to UNDERDETERMINED); CHANGED D6 vs C2 (STANDS to
 - Panel judge 2: luna (openai/gpt-6-luna): **HELD** (a grade of the defender's chain: GLM, arguing the standard reading) (counted). Reason: derived after the send-back from the judge's own changed lines (S1, S2, S3, S4, S5, S6, S7, S8, S9, S10, S11, S12, S13, S14, S15, S16, S17, S18, S20, S21, S23, S24, S25, S26, KEYSTONE (derived); C
@@ -1157,7 +1157,7 @@ DoD2 listed != drv_uncured: 31 [["ODV1-29820-ubx1yyyz","NOT COUNTED: 7 debate ru
 - Panel judge 1's seat stayed empty: sol was not counted, and no judge was counted in its place. Alternates tried: hydrogen, no verdict returned (finish_reason length).
 
 ## ODV1-37510-6gpyl6l8
-**Outcome:** UNDERDETERMINED. HELD by sol and ChatGPT (two counted). sol wrote RESULT: UNDERDETERMINED. When exactly half of the counted judges who give the panel verdict write RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule, ruling 304).
+**Outcome:** UNDERDETERMINED. HELD by sol and ChatGPT (two counted). sol carries RESULT: UNDERDETERMINED. When exactly half of the counted judges who give the panel verdict carry RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule, ruling 304).
 - Verdict of the debate: **HELD** (the panel) (a grade of the defender's chain: GLM, arguing the standard reading)
 - Panel judge 1: sol (openai/gpt-6.1-sol): **HELD** (a grade of the defender's chain: GLM, arguing the standard reading) (counted). Reason: Both sides construct scriptural readings, but the exhibited answers and counteranswers do not conclusively settle whether Joseph's stated fatherhood includes begetting this child.
 - Panel judge 2: luna (openai/gpt-6-luna): **BROKEN** (a grade of the defender's chain: GLM, arguing the standard reading) (NOT COUNTED: 1 debate rule violation not cured (K-F on D6 vs C6)). Reason: The record’s flesh-seed and bowels language cannot be reconciled with the defender’s conclusion that Christ had no biological father.
@@ -1166,7 +1166,7 @@ DoD2 listed != drv_uncured: 31 [["ODV1-29820-ubx1yyyz","NOT COUNTED: 7 debate ru
 - Panel judge 2's seat stayed empty: luna was not counted, and no judge was counted in its place. Alternates tried: hydrogen, no verdict returned.
 
 ## ODV1-37719-7h5d9el2
-**Outcome:** UNDERDETERMINED. HELD by sol, luna and ChatGPT (three counted). sol and luna wrote RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict write RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
+**Outcome:** UNDERDETERMINED. HELD by sol, luna and ChatGPT (three counted). sol and luna carry RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict carry RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
 - Verdict of the debate: **HELD** (the panel) (a grade of the defender's chain: GLM, arguing the standard reading)
 - Panel judge 1: sol (openai/gpt-6.1-sol): **HELD** (a grade of the defender's chain: GLM, arguing the standard reading) (counted). Reason: The defender's chain survives the challenge, but these arguments do not conclusively settle whether Joseph's named fatherhood was biological.
 - Panel judge 2: luna (openai/gpt-6-luna): **HELD** (a grade of the defender's chain: GLM, arguing the standard reading) (counted). Reason: derived after the send-back from the judge's own changed lines (S1, S2, S3, S4, S5, S6, S7, S19, S20, S8, S9, S14, G4, KEYSTONE (derived); COUNT DEFENDER 1 to 0; COUNT CHALLENGER 3 to 0; CHANGED D
@@ -1191,7 +1191,7 @@ DoD2 listed != drv_uncured: 31 [["ODV1-29820-ubx1yyyz","NOT COUNTED: 7 debate ru
 - Panel result: **HELD** (3-0) (a grade of the defender's chain: Gemini, arguing the standard reading). Counted: 3 of 3 panel seats (a seat counts when its judge, or the alternate seated in its place, is counted).
 
 ## ODV1-38051-souv1g6j
-**Outcome:** UNDERDETERMINED. HELD by sol, luna and ChatGPT (three counted). sol and ChatGPT wrote RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict write RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
+**Outcome:** UNDERDETERMINED. HELD by sol, luna and ChatGPT (three counted). sol and ChatGPT carry RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict carry RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
 - Verdict of the debate: **HELD** (the panel) (a grade of the defender's chain: Gemini, arguing the standard reading)
 - Panel judge 1: sol (openai/gpt-6.1-sol): **HELD** (a grade of the defender's chain: Gemini, arguing the standard reading) (counted). Reason: D1 vs C1, D1 vs C2, D5 vs C4 and D5 vs C5 leave the immediate agency of conception unresolved: [L1] Matthew 1:18
 - Panel judge 2: luna (openai/gpt-6-luna): **HELD** (a grade of the defender's chain: Gemini, arguing the standard reading) (counted). Reason: D1 vs C1 and D2 vs C2 stand: [L1] Matthew 1:18 says “before they came together, she was found with child of the Holy Ghost,” and [L1] Luke 1:35 says “that holy thing which shall be born of thee sh
@@ -1199,7 +1199,7 @@ DoD2 listed != drv_uncured: 31 [["ODV1-29820-ubx1yyyz","NOT COUNTED: 7 debate ru
 - Panel result: **HELD** (3-0) (a grade of the defender's chain: Gemini, arguing the standard reading). Counted: 3 of 3 panel seats (a seat counts when its judge, or the alternate seated in its place, is counted).
 
 ## ODV1-38106-ax8g49bx
-**Outcome:** UNDERDETERMINED. HELD by sol and ChatGPT (two counted). sol wrote RESULT: UNDERDETERMINED. When exactly half of the counted judges who give the panel verdict write RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule, ruling 304).
+**Outcome:** UNDERDETERMINED. HELD by sol and ChatGPT (two counted). sol carries RESULT: UNDERDETERMINED. When exactly half of the counted judges who give the panel verdict carry RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule, ruling 304).
 - Verdict of the debate: **HELD** (the panel) (a grade of the defender's chain: Gemini, arguing the standard reading)
 - Panel judge 1: sol (openai/gpt-6.1-sol): **HELD** (a grade of the defender's chain: Gemini, arguing the standard reading) (counted). Reason: D1 vs C2, D2 vs C4, and D5 vs C5 leave the biological question unresolved because [L1] Matthew 1:18 says
 - Panel judge 2: luna (openai/gpt-6-luna): **HELD** (a grade of the defender's chain: Gemini, arguing the standard reading) (removed: 1 debate rule violation(s) not cured; not counted; Grok sat in its place)
@@ -1218,7 +1218,7 @@ DoD2 listed != drv_uncured: 31 [["ODV1-29820-ubx1yyyz","NOT COUNTED: 7 debate ru
 - Panel judge 3's seat stayed empty: ChatGPT was not counted, and no judge was counted in its place. Alternates tried: Claude Haiku, not seated (3 uncured items).
 
 ## ODV1-38450-bz66jhy3
-**Outcome:** UNDERDETERMINED. HELD by sol62 and sol (two counted). sol62 and sol wrote RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict write RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
+**Outcome:** UNDERDETERMINED. HELD by sol62 and sol (two counted). sol62 (the engine recomputed it from CHALLENGER WINS) and sol carry RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict carry RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
 - Verdict of the debate: **HELD** (the panel) (a grade of the defender's chain: Gemini, arguing the standard reading)
 - Panel judge 1: sol62 (openai/gpt-6.2-sol): **HELD** (a grade of the defender's chain: Gemini, arguing the standard reading) (counted). The engine recomputed its verdict after the cure: the judge wrote BROKEN, and it counts as HELD; its RESULT was also recomputed: the judge wrote CHALLENGER WINS, and it reads UNDERDETERMINED. Reason: recomputed after the cure from the cured lines (RETRACTED D1 vs C2 (DEFENDER LINK BROKEN to UNDERDETERMINED); RETRACTED D1 vs C1 (CHALLENGER LINK BROKEN to UNDERDETERMINED); RETRACTED D2 vs C3 (CH
 - Panel judge 2: sol (openai/gpt-6.1-sol): **HELD** (a grade of the defender's chain: Gemini, arguing the standard reading) (counted). Reason: Collisions D1 vs C1, D3 vs C4, and D5 vs C1/C4 leave the topic open: [L1] Matthew 1:18 says

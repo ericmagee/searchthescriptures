@@ -6,14 +6,14 @@
  const HS=(pv==='HELD'||pv==='PARTIAL')?J.filter(j=>j.verdict_tag===pv&&!j.truncated&&(+j.drv_uncured||0)===0):[];const HU=HS.filter(j=>UDS.includes(j.judge_seat+':RESULT'));
  const tieMaj=HS.length>0&&cr>=Date.parse('2026-10-14T01:45:00Z')&&HU.length*2>HS.length,tieHalf=!tieMaj&&HS.length>0&&cr>=Date.parse('2026-10-30T23:00:41Z')&&HU.length*2===HS.length;
  const afterTie=(tieMaj||tieHalf)?'UNDERDETERMINED':(MAPV[pv]||null);const REV=/REVIEW/.test(String(oc||''));
- const hn=a=>a.map(j=>nm(j.judge_seat));let why='';
+ const hn=a=>a.map(j=>nm(j.judge_seat));const rc=j=>{const m=String(j.verdict_raw||'').replace(/\\"/g,'"').match(/\[AUDIT v25: RECOMPUTED AFTER CURE -- [^\n]*?ORIGINAL: [^;]*?RESULT ([A-Z][A-Z ]*?); RECOMPUTED: [^;]*?RESULT ([A-Z][A-Z ]*?);/);return m&&m[1]!==m[2]?' (the engine recomputed it from '+m[1]+')':'';};const hu=a=>a.map(j=>nm(j.judge_seat)+rc(j));let why='';
  if(!oc)why='';
  else if(r.citation_block)why=held+', but '+String(r.citation_block).replace(/\.$/,'')+'. Under the citation rule, a side that would prevail on a load-bearing quotation the KJV citation check cannot find does not prevail, so the outcome goes to review.';
  else if(REV)why=held+'; '+(pv&&MAPV[pv]?'the outcome goes to review.':pv?'the verdict '+pv+' has no outcome in the map, so the outcome goes to review.':'fewer than two judges were counted, so the result is ungraded and goes to review.');
  else if(afterTie&&oc!==afterTie&&!REV){const side=oc==='UNDERDETERMINED'?'both sides':oc==='DEFENDER PREVAILS'?'the challenger':oc==='CHALLENGER PREVAILS'?'the defender':null;
   why=held+(tieMaj||tieHalf?' and the tie rule gave UNDERDETERMINED':'')+'; the outcome is '+oc+' because '+(side?'a confirmed closing contradiction by '+side+' forfeits the debate'+(side==='both sides'?' for both':' for that side'):'a later rule applied')+' (closing-contradiction rule).';}
- else if(tieMaj)why=pv+' by '+lst(hn(HS))+' ('+nw(HS.length)+' counted). '+lst(hn(HU))+' wrote RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict write RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).';
- else if(tieHalf)why=pv+' by '+lst(hn(HS))+' ('+nw(HS.length)+' counted). '+lst(hn(HU))+' wrote RESULT: UNDERDETERMINED. When exactly half of the counted judges who give the panel verdict write RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule, ruling 304).';
+ else if(tieMaj)why=pv+' by '+lst(hn(HS))+' ('+nw(HS.length)+' counted). '+lst(hu(HU))+(HU.length===1?' carries':' carry')+' RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict carry RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).';
+ else if(tieHalf)why=pv+' by '+lst(hn(HS))+' ('+nw(HS.length)+' counted). '+lst(hu(HU))+(HU.length===1?' carries':' carry')+' RESULT: UNDERDETERMINED. When exactly half of the counted judges who give the panel verdict carry RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule, ruling 304).';
  else if(pv&&MAPV[pv]===oc)why=held+'; the panel verdict '+pv+' gives '+oc+'.';
  else why=held+'; the outcome is '+oc+'.';
  t += '**Outcome:** ' + (oc || 'not recorded') + (why ? '. ' + why : '') + '\n\n';}

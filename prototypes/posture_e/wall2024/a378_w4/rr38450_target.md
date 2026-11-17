@@ -1,6 +1,6 @@
 # TRUTH App Debate
 
-**Outcome:** UNDERDETERMINED. HELD by sol62 and sol (two counted). sol62 and sol wrote RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict write RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
+**Outcome:** UNDERDETERMINED. HELD by sol62 and sol (two counted). sol62 (the engine recomputed it from CHALLENGER WINS) and sol carry RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict carry RESULT: UNDERDETERMINED, the outcome is UNDERDETERMINED (tie rule).
 
 **Topic:** Did Christ have a biological father?
 
@@ -1264,7 +1264,7 @@ CHALLENGER CHAIN MARK: FOOTED -- C1–C4 construct an alternative through the ho
 
 *Debate complete.*
 
-**Run time:** 81 min 3 s (started Nov 17, 3:10 PM CST, transcript written Nov 17, 4:31 PM CST).
+**Run time:** 81 min 30 s (started Nov 17, 3:10 PM CST, transcript written Nov 17, 4:32 PM CST).
 
 ---
 

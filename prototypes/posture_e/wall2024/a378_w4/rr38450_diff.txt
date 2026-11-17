@@ -5,7 +5,7 @@ stored run output == live re-render (except run time): false lines live 7610 tar
 - - Panel judge 3: sol (openai/gpt-6.1-sol): **HELD** (a grade of the defender's chain: Gemini, arguing the standard reading). Reason: Collisions D1 vs C1, D3 vs C4, and D5 vs C1/C4 leave the topic open: [L1] Matthew 1:18 
 - - Panel result: **HELD** (2-0 (1 not counted: debate rule)) (a grade of the defender's chain: Gemini, arguing the standard reading)
 - **Effect on the verdict.** A panel judge with any violation not cured is not counted in the panel result; if fewer than two panel judges are counted, the result is ungraded and goes to review.
-+ **Outcome:** UNDERDETERMINED. HELD by sol62 and sol (two counted). sol62 and sol wrote RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel verdict write RESULT: UNDERDETERMINED, the outc
++ **Outcome:** UNDERDETERMINED. HELD by sol62 and sol (two counted). sol62 (the engine recomputed it from CHALLENGER WINS) and sol carry RESULT: UNDERDETERMINED. When more than half of the counted judges who give the panel
 + - Panel judge 1: sol62 (openai/gpt-6.2-sol): **HELD** (a grade of the defender's chain: Gemini, arguing the standard reading) (counted). The engine recomputed its verdict after the cure: the judge wrote BROKEN, and it co
 + - Panel judge 2: ChatGPT (openai/gpt-6.1-terra): **BROKEN** (a grade of the defender's chain: Gemini, arguing the standard reading) (NOT COUNTED: 1 debate rule violation not cured (K-V on CHALLENGER premise 4)). Reason: 
 + - Panel judge 3: sol (openai/gpt-6.1-sol): **HELD** (a grade of the defender's chain: Gemini, arguing the standard reading) (counted). Reason: Collisions D1 vs C1, D3 vs C4, and D5 vs C1/C4 leave the topic open: [L1] Mat
