@@ -1,4 +1,4 @@
-const {nextAlternate:N}=require('./next_alt.js');const fs=require('fs');
+const {nextAlternate:N}=require('./next_alt.cjs');const fs=require('fs');
 const E=JSON.parse(fs.readFileSync('../run/exec_38450.json'));const RD=E.data.resultData.runData;const out=n=>RD[n][RD[n].length-1].data.main[0][0].json;
 const RS=out('Resolve Seats'),R1=out('Alternate Merge 1'),AM=out('Alternate Merge');
 const R2tries=AM.alternates_tried.filter(x=>x.alternate==='ernie');
