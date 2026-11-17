@@ -1,0 +1,34 @@
+ok   library line changed is 1754 only; line count unchanged :: 1754
+ok   only the Shared Library node changed; node order, connections, settings equal :: Shared Library
+ok   every MAP entry rebuilds to its n :: 45 entries
+ok   changed MAP entries are exactly the nine (W1 7589 item 6) :: 9: Alt Gate Build, Alt Gate Record, Alt Late Gate Build, Gate Build, Gate Record, Late Gate Build, R2 Alt Gate Build, R2 Alt Gate Record, R2 Alt Late Gate Build
+ok   syntax of every changed entry (9)
+ok   rudPair2024 byte for byte (W1 7589 item 6) :: 2215 chars
+ok   loader gives gateVnv2024 on both
+ok   REAL sol 1213: base gives no item
+ok   REAL sol 1213: target gives one item VNV|CHALLENGER|3 :: VNV|CHALLENGER|3
+   lines: ["CHALLENGE STANDING: SELF-SUPPORTED -- L=6 c=0 -- Premises 1, 2, 4, 5, and 6 exhibit [L1] and [L3] independently of their disputed lexical se","CHALLENGER CONCEDED LINKS: 0 -- Premises 1 through 6 are spared as footed inferences with substantive answers; premise 3 is included in that"]
+ok   PLANT: "not excluded as void" in its own premise segment :: VNV|CHALLENGER|3
+ok   PLANT: "is not void" lower case (already read in base) :: VNV|CHALLENGER|3
+ok   PLANT: retraction alone, "its earlier void ruling card is retracted" :: VNV|CHALLENGER|3
+ok   PLANT: "I withdraw the VOID ruling" form :: VNV|CHALLENGER|3
+ok   B1 PLANT: "not only void" is not read as not VOID :: (none)
+ok   B1 PLANT: "not merely void" is not read as not VOID :: (none)
+ok   B1 PLANT: "is not, if it stands, void" (conditional in the gap) :: (none)
+ok   PLANT: "not ruled void" is read :: VNV|CHALLENGER|3
+ok   PLANT: "do not revive the void charges" is not read (REAL 1172 shape) :: (none)
+ok   PLANT: "not excluded as void of support" is not read by the new pattern :: (none)
+ok   PLANT: three words between "not" and "void" is not read :: (none)
+ok   B2 PLANT: a retraction about premise 4 in the same line is not read for premise 3 :: (none)
+ok   N1 PLANT: "Premise 2 is counted; the charge is not treated as void." gives no item :: (none)
+ok   B3 PLANT: "the NOT VOID ruling card is retracted" is not read as not VOID :: (none)
+ok   B3 PLANT: same, lower case "not void ruling card is withdrawn" :: (none)
+ok   PLANT: other side is not mixed (DEFENDER not void, CHALLENGER VOID) :: (none)
+ok   PLANT: plural list "Premises 2 and 3 are not treated as void" :: VNV|CHALLENGER|3
+ok   LIMIT (base, unchanged): "is not void of support" reads as not VOID in base and target alike :: VNV|CHALLENGER|3 / VNV|CHALLENGER|3
+   replay 304 judgments holding a labelled line with "void": 303 unchanged; new items 1; items lost 0
+   NEW 1213 sol VNV|CHALLENGER|3
+      | CHALLENGE STANDING: SELF-SUPPORTED -- L=6 c=0 -- Premises 1, 2, 4, 5, and 6 exhibit [L1] and [L3] independently of their disputed lexical selections; premise 3 is VOID as charged, and the remaining answers positively explain the chronology, covenant reading, and descent reading.
+      | CHALLENGER CONCEDED LINKS: 0 -- Premises 1 through 6 are spared as footed inferences with substantive answers; premise 3 is included in that examination, not excluded as void, and its earlier void ruling card is retracted.
+ok   REPLAY: no item is lost :: 0 lost
+28 of 28 pass
