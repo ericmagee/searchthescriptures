@@ -49,5 +49,14 @@ ok('gate label for an unanswered-witness break: same as live',TB.g4Label2024(iun
  const f=r=>r?r.fields.challenge_standing+'/'+r.fields.challenger_conceded_links+' '+r.trig.join('; '):'no change';
  ok('recompute, live library: the cured retraction is applied and the challenge standing moves',!!rL&&rL.trig.some(t=>/^RETRACTED D4 vs C4/.test(t)),f(rL));
  ok('recompute, ASK 352: the retraction is not applied; the BROKEN grade stands',!rT||!rT.trig.some(t=>/^RETRACTED/.test(t)),f(rT));}
+// 28855: a K-G4 item on a link the engine's confirmed closing contradiction broke is cured at line 1065 (pkgK7C), before the retraction path
+{const L28855='D1 vs C3 (Matthew 1:18, 1:25): DEFENDER LINK BROKEN (Commitment 10) -- The confirmed closing contradiction breaks D1 by default. GROUND: [L1] Matthew 1:18 \u201cbefore they came together, she was found with child of the Holy Ghost\u201d | [L3] Matthew 1:25 \u201cAnd knew her not till she had brought forth her firstborn son.\u201d This is the record\u2019s contradiction rule, not a forced-verse ruling.';
+ const i28={rule:'K-G4',side:'DEFENDER',link:'D1 vs C3',line:L28855};const rx28='RESPONSE: K-G4 D1 vs C3 | x\nRETRACTED: D1 vs C3 -- [CR3] \u201c'+qD+'\u201d\nCORRECTED RESULT: HELD-1';
+ const $c=n=>n==='Close Enforcer Record'?{isExecuted:true,all:()=>[],first:()=>({json:{cec:{confirmed:[{side:'DEFENDER',link:1,earlier_round:'CR1',closing_round:'CR4',earlier_q:'a',closing_q:'b'}]}}})}:{isExecuted:false,all:()=>[],first:()=>({json:{}})};
+ const Tc=load(rb(tu.L,tu.M['Panel Cure Check']),$c),Lc=load(rb(lu.L,lu.M['Panel Cure Check']),$c);
+ const a=Lc.cureVerdicts([i28],{ok:true,text:rx28},{},R)[0],b=Tc.cureVerdicts([i28],{ok:true,text:rx28},{},R)[0];
+ ok('REAL line 28855 with a confirmed closing contradiction on D1 (PLANT record): CURED by pkgK7C, same as live; ASK 352 does not reach it',b.status==='CURED'&&/closing contradiction/.test(b.why)&&JSON.stringify(a)===JSON.stringify(b),show(b));
+ const b2=T.cureVerdicts([i28],{ok:true,text:rx28},{},R)[0];ok('REAL line 28855 with no confirmed closing contradiction recorded: ASK 352 reads UNCURED',b2.status==='UNCURED'&&/ruling 421/.test(b2.why),show(b2));}
+ok('no new operator name in the library (operational doc 0 (7))',tu.L.filter(l=>/Eric/.test(l)).length===lu.L.filter(l=>/Eric/.test(l)).length);
 ok('K-G4 is LIVE in ENF_STATUS (an uncured item counts in drv_uncured)',T.ENF_STATUS&&T.ENF_STATUS['K-G4']==='LIVE',T.ENF_STATUS&&T.ENF_STATUS['K-G4']);
 console.log(n+' checks, '+(fails?'FAILS '+fails:'ALL OK'));

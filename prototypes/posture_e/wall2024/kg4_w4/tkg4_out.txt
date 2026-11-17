@@ -18,5 +18,8 @@ ok   gate label for a meaning break: FORCED line form, "A retraction does not cu
 ok   gate label for an unanswered-witness break: same as live
 ok   recompute, live library: the cured retraction is applied and the challenge standing moves :: PROP-DEPENDENT/1 RETRACTED D4 vs C4 (CHALLENGER LINK BROKEN to UNDERDETERMINED)
 ok   recompute, ASK 352: the retraction is not applied; the BROKEN grade stands :: no change
+ok   REAL line 28855 with a confirmed closing contradiction on D1 (PLANT record): CURED by pkgK7C, same as live; ASK 352 does not reach it :: CURED: the link is broken by the engine's confirmed closing contradiction, which no count carries (pkgK7C)
+ok   REAL line 28855 with no confirmed closing contradiction recorded: ASK 352 reads UNCURED :: UNCURED: retracted, but the GROUND names no pressed witness left unanswered, so the BROKEN grade rests on meaning: only a FORCED line cures it; a retraction does not (ruling 421; 
+ok   no new operator name in the library (operational doc 0 (7))
 ok   K-G4 is LIVE in ENF_STATUS (an uncured item counts in drv_uncured) :: LIVE
-21 checks, ALL OK
+24 checks, ALL OK
