@@ -1,5 +1,5 @@
 const {nextAlternate:N}=require('./next_alt.cjs');const fs=require('fs');
-const E=JSON.parse(fs.readFileSync('../run/exec_38450.json'));const RD=E.data.resultData.runData;const out=n=>RD[n][RD[n].length-1].data.main[0][0].json;
+const E=JSON.parse(fs.readFileSync((process.argv[2]||'../run/exec_38450.json')));const RD=E.data.resultData.runData;const out=n=>RD[n][RD[n].length-1].data.main[0][0].json;
 const RS=out('Resolve Seats'),R1=out('Alternate Merge 1'),AM=out('Alternate Merge');
 const R2tries=AM.alternates_tried.filter(x=>x.alternate==='ernie');
 const S={dry:false};let ok=0,bad=0;const chk=(name,got,exp)=>{const g=JSON.stringify(got),e=JSON.stringify(exp);if(g===e){ok++;console.log('PASS',name,g);}else{bad++;console.log('FAIL',name,'got',g,'expected',e);}};
