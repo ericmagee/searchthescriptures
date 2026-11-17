@@ -1,0 +1,18 @@
+== gemini_spark
+   chback_s255.json panel ['chatgpt', 'sol', 'haiku'] res ernie alt ['ernie', 'sonnet'] | judges ['chatgpt', 'sol', 'haiku'] alts ['ernie', 'sonnet']
+   tpnl4_on255.json panel ['chatgpt', 'sol', 'sol62'] res haiku alt ['haiku', 'ernie', 'sonnet'] | judges ['chatgpt', 'sol', 'sol62'] alts ['haiku', 'ernie', 'sonnet']
+== opus_gemini
+   chback_s255.json ["const fail=m=>{throw new Error('ORACLE_DEBATE_V1 Init refused: '+m+RT);};"]
+   tpnl4_on255.json panel ['chatgpt', 'sol', 'sol62'] res spark alt ['spark', 'ernie', 'ember'] | judges ['chatgpt', 'sol', 'sol62'] alts ['spark', 'ernie', 'ember']
+== claude_opus
+   chback_s255.json panel ['chatgpt', 'sol', 'haiku'] res hydrogen alt ['hydrogen', 'gemini', 'argon', 'spark', 'ernie', 'ember', 'sonnet'] | judges ['chatgpt', 'sol', 'haiku'] alts ['hydrogen', 'gemini', 'argon', 'spark', 'ernie', 'ember', 'sonnet']
+   tpnl4_on255.json panel ['chatgpt', 'sol', 'sol62'] res haiku alt ['haiku', 'hydrogen', 'gemini', 'argon', 'spark', 'ernie', 'ember', 'sonnet'] | judges ['chatgpt', 'sol', 'sol62'] alts ['haiku', 'hydrogen', 'gemini', 'argon', 'spark', 'ernie', 'ember', 'sonnet']
+== opus_spark
+   chback_s255.json ["const fail=m=>{throw new Error('ORACLE_DEBATE_V1 Init refused: '+m+RT);};"]
+   tpnl4_on255.json panel ['chatgpt', 'sol', 'sol62'] res hydrogen alt ['hydrogen', 'gemini', 'argon', 'ernie'] | judges ['chatgpt', 'sol', 'sol62'] alts ['hydrogen', 'gemini', 'argon', 'ernie']
+== qwen4max_spark
+   chback_s255.json panel ['chatgpt', 'sol', 'haiku'] res hydrogen alt ['hydrogen', 'gemini', 'argon', 'ernie', 'sonnet'] | judges ['chatgpt', 'sol', 'haiku'] alts ['hydrogen', 'gemini', 'argon', 'ernie', 'sonnet']
+   tpnl4_on255.json panel ['chatgpt', 'sol', 'sol62'] res haiku alt ['haiku', 'hydrogen', 'gemini', 'argon', 'ernie', 'sonnet'] | judges ['chatgpt', 'sol', 'sol62'] alts ['haiku', 'hydrogen', 'gemini', 'argon', 'ernie', 'sonnet']
+== chatgpt_gemini
+   chback_s255.json ["const fail=m=>{throw new Error('ORACLE_DEBATE_V1 Init refused: '+m+RT);};"]
+   tpnl4_on255.json ["const fail=m=>{throw new Error('ORACLE_DEBATE_V1 Init refused: '+m+RT);};"]
