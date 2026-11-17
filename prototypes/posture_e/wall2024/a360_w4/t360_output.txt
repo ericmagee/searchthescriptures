@@ -1,0 +1,25 @@
+ok   library lines changed are 1579, 1582, 1583 only; line count unchanged :: 1579,1582,1583
+ok   only the Shared Library node changed; node order, connections, settings equal :: Shared Library
+ok   every MAP entry rebuilds to its n :: 45 entries
+ok   changed MAP entries are exactly Alternate Merge Seat, R2 Alternate Merge Seat :: Alternate Merge Seat,R2 Alternate Merge Seat
+ok   syntax of every changed entry (2)
+ok   loader gives rmrOf and __rmrLive (K-F LIVE, K-RUL not LIVE) :: true,false
+   base  : drv_uncured 1: K-F (cure) x1; E-GATE CONTRADICTION x1 (read 2, count differs)
+   target: drv_uncured 1: E-GATE CONTRADICTION x1
+ok   REAL luna 38106: base reads K-F x1 and E-GATE x1, count differs :: drv_uncured 1: K-F (cure) x1; E-GATE CONTRADICTION x1 (read 2, count differs)
+ok   REAL luna 38106: target reads E-GATE CONTRADICTION x1 only, match true :: drv_uncured 1: E-GATE CONTRADICTION x1
+   A2 forms: v21 ITEM [D5 vs C5] RULE [K-F]; v52 ITEM [D5 vs C5] RULE [K-F]
+ok   A2/A3: v21 and v52 ITEM and RULE are byte equal in the real lines
+ok   A1 PLANT: v52 matching a CURED v21 subtracts nothing :: K-F (cure) x1 | total 1
+ok   A1 PLANT: v52 matching a not-LIVE (TRIAL) v21 subtracts nothing :: K-F (cure) x1 | total 1
+ok   W2 PLANT: v52 ITEM in other case and spacing still matches ::  | total 0
+ok   PLANT: one v52 takes off one of two equal v21 lines :: K-F (cure) x1 | total 1
+ok   PLANT: v52 of another RULE subtracts nothing :: K-F (cure) x1 | total 1
+ok   PLANT: v52 of another ITEM subtracts nothing :: K-F (cure) x1 | total 1
+ok   PLANT: v52 line written before its v21 line still matches ::  | total 0
+ok   PLANT: no v52 line gives the base reading :: K-F (cure) x1; K-G4 (cure) x1 | total 2
+ok   R2 Alternate Merge Seat entry gives the same luna reading
+   replay 57 stored removals: 56 unchanged, 1 changed
+   CHANGED ODV1-38106-ax8g49bx luna: drv_uncured 1: K-F (cure) x1; E-GATE CONTRADICTION x1 (read 2, count differs) => drv_uncured 1: E-GATE CONTRADICTION x1 [has v52]
+ok   REPLAY: every changed reading holds an AUDIT v52 line :: 1 changed
+19 of 19 pass
