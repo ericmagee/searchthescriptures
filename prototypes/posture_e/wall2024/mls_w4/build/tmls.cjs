@@ -2,13 +2,13 @@
 const fs=require('fs');const {unpack,rb,load}=require('../../tools/lib.cjs');
 let fails=0;const ok=(n,c,d)=>{console.log((c?'ok  ':'FAIL')+' '+n+(d?' :: '+d:''));if(!c)fails++;};
 const lw=JSON.parse(fs.readFileSync('../live.json')),tw=JSON.parse(fs.readFileSync(process.argv[2]||'target_mls.json'));const lu=unpack(lw),tu=unpack(tw);
-const dl=tu.L.map((l,i)=>l!==lu.L[i]?i:-1).filter(i=>i>=0);ok('library lines changed are 514, 517, 701, 849, 1263, 2174, 2278, 3318 only',tu.L.length===lu.L.length&&dl.join()==='514,517,701,849,1263,2174,2278,3318',dl.join(', '));
+const dl=tu.L.map((l,i)=>l!==lu.L[i]?i:-1).filter(i=>i>=0);ok('library lines changed are 514, 517, 701, 849, 1263, 1311, 2174, 2278, 3318 only',tu.L.length===lu.L.length&&dl.join()==='514,517,701,849,1263,1311,2174,2278,3318',dl.join(', '));
 const LN={};for(const n of lw.nodes)LN[n.name]=n;const dn=tw.nodes.filter(n=>JSON.stringify(n)!==JSON.stringify(LN[n.name])).map(n=>n.name);ok('only the Shared Library node changed',dn.join()==='Shared Library',dn.join(', '));
 ok('connections and settings unchanged',JSON.stringify(tw.connections)===JSON.stringify(lw.connections)&&JSON.stringify(tw.settings)===JSON.stringify(lw.settings));
 const bad=Object.keys(tu.M).filter(k=>rb(tu.L,tu.M[k]).length!==tu.M[k].n);ok('every MAP entry rebuilds to its n',bad.length===0,Object.keys(tu.M).length+' entries');
 const ch=Object.keys(tu.M).filter(k=>rb(tu.L,tu.M[k])!==rb(lu.L,lu.M[k]));let syn=[];for(const k of ch){try{new Function('$','$input','return (async()=>{\n'+rb(tu.L,tu.M[k])+'\n})();');}catch(e){syn.push(k+': '+e.message);}}
 ok('syntax of every changed library entry',syn.length===0,ch.length+' entries'+(syn.length?' '+syn.join('; '):''));
-const old=dl.map(i=>lu.L[i]);ok('each changed line keeps its live text as a prefix or by one anchor',dl.every(i=>tu.L[i].startsWith(lu.L[i])||[514,517,849,3318].includes(i)));
+const old=dl.map(i=>lu.L[i]);ok('each changed line keeps its live text as a prefix or by one anchor',dl.every(i=>tu.L[i].startsWith(lu.L[i])||[514,517,849,1311,3318].includes(i)));
 const ROWS=JSON.parse(fs.readFileSync('rows.json'));
 const $=n=>({all:()=>n==='Cited Verses'?ROWS.map(r=>({json:r})):[],first:()=>({json:{}}),isExecuted:true});
 const P=load(rb(tu.L,tu.M['Panel Payloads']),$);const CC=load(rb(tu.L,tu.M['Panel Cure Check']),$);
@@ -55,4 +55,24 @@ c=CC.mlsCure(su,'D3 vs C3 (Matthew 1:25): CHALLENGER LINK BROKEN -- GROUND: [L1]
 c=CC.mlsCure(su,'nothing');ok('cure K-SU: no line is UNCURED and removes no seat',c.st==='UNCURED'&&/removes no seat/.test(c.why),c.why);
 ok('cure check ignores other rules',CC.mlsCure({rule:'K-KJV'},'x')===null);
 const ck=load(rb(tu.L,tu.M['Panel Cure Build 1']),$);ok('cure prompt shows the K-ML line text, not the K-G3 default',typeof ck.cureLabel==='function'&&ck.cureLabel(ml)==='K-ML MEANS LAYER D3 vs C3'&&ck.cureAsk([ml],{}).includes('A meaning without its layers is a bare claim'));
+// rev 2: W2 7446 items 1-3
+o=run(F('CR3','his kingdom stands forever','Luke 1:33 "x"'),Rp('Luke 1:33 "..." -- MEANS: his kingdom stands forever -- [L2] aion (ever)'));ok('PLANT rev 2 "forever" against the KJV "for ever" (Luke 1:33) passes (W2 7446 item 1)',o.items.length===0,JSON.stringify(o.items.map(x=>x.add)));
+o=run(F('CR3','he shall save his people from their sins','Matthew 1:21 "x"'),Rp('Matthew 1:21 "..." -- MEANS: he shall save his people from their sins -- [L2] sozo (to save)'));ok('PLANT rev 2 "save" as a verb passes (W2 7446 item 2, W3 7450)',o.items.length===0,JSON.stringify(o.items.map(x=>x.add)));
+o=run(F('CR3','Joseph never knew her','Matthew 1:25 "x"'),Rp('Matthew 1:25 "..." -- MEANS: Joseph never knew her -- [L2] ginosko (to know not)'));ok('PLANT rev 2 "never" is not carried by a plain "not" in a layer (W2 7446 item 3)',rules(o).startsWith('K-ML')&&o.items[0].add.includes('never'),JSON.stringify(o.items.map(x=>x.add)));
+o=run(F('CR3','Joseph never knew her','Matthew 1:25 "x"'),Rp('Matthew 1:25 "..." -- MEANS: Joseph never knew her -- [L2] ginosko (never known)'));ok('PLANT rev 2 "never" carried by "never" in a layer passes',o.items.length===0,JSON.stringify(o.items.map(x=>x.add)));
+o=run(F('CR3','Mary knows no man','Luke 1:34 "x"'),Rp('Luke 1:34 "..." -- MEANS: Mary knows no man -- [L2] aner (a man)'));ok('PLANT rev 2 negation class unchanged: "no man" on Luke 1:34 still passes',o.items.length===0,rules(o));
+// rev 2: W1 7448 list-only through cureRecompute
+{const text=['D3 vs C3 (Matthew 1:25): CHALLENGER LINK BROKEN -- x (Commitment 3) -- GROUND: [L1] Matthew 1:25 "And knew her not till she had brought forth her firstborn son"','DEFENSE STANDING: HELD','CONCEDED LINKS: 0','CHALLENGE STANDING: BROKEN','CHALLENGER CONCEDED LINKS: 1','RESULT: DEFENDER PREVAILS (HELD)'].join('\n');
+ const F0={verdict_tag:'HELD',defense_standing:'HELD',conceded_links:0,challenge_standing:'BROKEN',challenger_conceded_links:1};
+ const reply={ok:true,text:'RETRACTED: D3 vs C3 -- [DR3] reads "knew her not till states the withholding from the taking to the birth"\nCORRECTED RESULT: BROKEN-1'};
+ const CR=load(rb(tu.L,tu.M['Panel Cure Check']),$);const LR=load(rb(lu.L,lu.M['Panel Cure Check']),$);
+ const kml=Object.assign({},ml,{status:'UNCURED',why:'TRIAL rule'});const ksu=Object.assign({},su,{status:'UNCURED',why:'TRIAL rule'});
+ const g4={rule:'K-G1',side:'CHALLENGER',link:'D3 vs C3',line:'D3 vs C3 (Matthew 1:25): CHALLENGER LINK BROKEN -- x',status:'CURED',why:'retracted'};
+ const f=rc=>rc?rc.fields.challenge_standing+'/'+rc.fields.challenger_conceded_links+' '+rc.trig.join('; '):'no change';
+ let a=LR.cureRecompute('grok',text,F0,[kml],[kml],reply);ok('W1 rc.cjs case on the LIVE s237 library: the retraction is applied (the fault)',!!a&&a.trig.some(t=>/^RETRACTED D3 vs C3/.test(t)),f(a));
+ a=CR.cureRecompute('grok',text,F0,[kml],[kml],reply);ok('rev 2: K-ML-only send-back: the retraction is not applied, standings unchanged (W1 7448)',!a||!a.trig.some(t=>/^RETRACTED/.test(t)),f(a));
+ a=CR.cureRecompute('grok',text,F0,[ksu],[ksu],reply);ok('rev 2: K-SU-only send-back: the retraction is not applied',!a||!a.trig.some(t=>/^RETRACTED/.test(t)),f(a));
+ a=CR.cureRecompute('grok',text,F0,[kml,ksu],[kml,ksu],reply);ok('rev 2: K-ML and K-SU together: the retraction is not applied',!a||!a.trig.some(t=>/^RETRACTED/.test(t)),f(a));
+ a=CR.cureRecompute('grok',text,F0,[kml,g4],[kml,g4],reply);ok('rev 2: a LIVE item on the same link beside the K-ML item: the retraction is applied as today',!!a&&a.trig.some(t=>/^RETRACTED D3 vs C3/.test(t)),f(a));
+ a=CR.cureRecompute('grok',text,F0,[g4],[g4],reply);const b=LR.cureRecompute('grok',text,F0,[g4],[g4],reply);ok('rev 2: a LIVE-only send-back reads the same as the live library',JSON.stringify(a)===JSON.stringify(b),f(a));}
 console.log(fails?'FAILS '+fails:'ALL OK');

@@ -1,8 +1,8 @@
  /* pkgMLS (ASK 351, Wall 7430; reviews W1 7432, W3 7433, W2 7434): K-ML the MEANS-layer check and K-SU the SENTENCE check. TRIAL and list only: an item asks the judge and records the reply; it accepts no withdrawal, moves no count and removes no seat. */
 const MLS_NEG=['not','no','nor','neither','none','nothing','nought','naught','never'];
-const MLS_PH=['at all','in any wise','in any way','in no way','by no means','of any kind','at any time','nothing but','whatsoever','only','alone','solely','merely','exclusively','ever','always','all','every','any','entirely','wholly','completely','fully','absolutely','utterly','altogether','save','for ever','from then on','after that','forever','perpetually','permanently','continually','henceforth','thereafter','afterward','afterwards','never'].sort((a,b)=>b.split(' ').length-a.split(' ').length||b.length-a.length);
+const MLS_PH=['at all','in any wise','in any way','in no way','by no means','of any kind','at any time','nothing but','whatsoever','only','alone','solely','merely','exclusively','ever','always','all','every','any','entirely','wholly','completely','fully','absolutely','utterly','altogether','for ever','from then on','after that','perpetually','permanently','continually','henceforth','thereafter','afterward','afterwards','never'].sort((a,b)=>b.split(' ').length-a.split(' ').length||b.length-a.length);
 function mlsNoMargin(s){return String(s==null?'':s).replace(/\[[^\]]*:[^\]]*\]/g,' ');}
-function mlsFold(s){return ' '+mlsNoMargin(s).toLowerCase().replace(/n['’]t\b/g,' not').replace(/\bcannot\b/g,'can not').replace(/[^a-z ]/g,' ').replace(/\s+/g,' ').trim()+' ';}
+function mlsFold(s){return ' '+mlsNoMargin(s).toLowerCase().replace(/\bforever\b/g,'for ever').replace(/n['’]t\b/g,' not').replace(/\bcannot\b/g,'can not').replace(/[^a-z ]/g,' ').replace(/\s+/g,' ').trim()+' ';}
 function mlsIdx(rows){const I={};(rows||[]).forEach(r=>{if(r&&r.book&&r.chapter!=null&&r.verse!=null)I[r.book+'|'+r.chapter+'|'+r.verse]=String(r.text||'');});return I;}
 function mlsEnd(t){return mlsNoMargin(t).trim().slice(-1);}
 function mlsUnit(I,b,c,v1,v2){for(let v=v1;v<=v2;v++)if(I[b+'|'+c+'|'+v]==null)return {ok:false,miss:b+' '+c+':'+v};let a=v1,z=v2;
@@ -20,7 +20,7 @@ function mlsBlock(round,q){const f=mlsFold(q).trim();if(!f)return null;const key
  for(let i=0;i<L.length;i++){if(!mlsFold(L[i]).includes(key))continue;const out=[L[i]];
   for(let j=i+1;j<L.length&&j<i+8;j++){const l=L[j];if(!l.trim()||/^\s*(?:\d+[.)]\s|MEANS\b|LINK\s+\d|(?:[1-3] )?[A-Z][a-z]+ \d{1,3}:\d{1,3}\s*["“])/.test(l))break;out.push(l);}
   return out.join('\n').slice(0,1500);}return null;}
-function mlsCarried(p,block,I){const B=String(block||'');const k=' '+p+' ';const neg=MLS_NEG.includes(p);const has=t=>neg?MLS_NEG.some(w=>mlsFold(t).includes(' '+w+' ')):mlsFold(t).includes(k);const nc=[];
+function mlsCarried(p,block,I){const B=String(block||'');const k=' '+p+' ';const neg=MLS_NEG.includes(p)&&p!=='never'; /* rev 2 (W2 7446 item 3): never is carried only by never */const has=t=>neg?MLS_NEG.some(w=>mlsFold(t).includes(' '+w+' ')):mlsFold(t).includes(k);const nc=[];
  for(const m of B.matchAll(/\[L2\]([^\[|]*)/g))if(has(m[1]))return {carried:true,by:'[L2]'+m[1].trim().slice(0,80)};
  for(const m of B.matchAll(new RegExp('\\[L3\\]\\s*:?\\s*'+MLS_REF.source,'g'))){const b=m[1],c=+m[2],a=+m[3],z=+(m[4]||m[3]);const ref=b+' '+c+':'+a+(z!==a?'-'+z:'');const vs=[];let miss=false;
   for(let v=a;v<=z;v++){const t=I[b+'|'+c+'|'+v];if(t==null){miss=true;break;}vs.push(t);}if(miss){nc.push(ref);continue;}if(has(vs.join(' ')))return {carried:true,by:'[L3] '+ref};}

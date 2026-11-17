@@ -1,4 +1,4 @@
-ok   library lines changed are 514, 517, 701, 849, 1263, 2174, 2278, 3318 only :: 514, 517, 701, 849, 1263, 2174, 2278, 3318
+ok   library lines changed are 514, 517, 701, 849, 1263, 1311, 2174, 2278, 3318 only :: 514, 517, 701, 849, 1263, 1311, 2174, 2278, 3318
 ok   only the Shared Library node changed :: Shared Library
 ok   connections and settings unchanged
 ok   every MAP entry rebuilds to its n :: 45 entries
@@ -36,4 +36,15 @@ ok   cure K-SU: the same verse alone is UNCURED :: TRIAL rule (recorded and answ
 ok   cure K-SU: no line is UNCURED and removes no seat :: TRIAL rule (recorded and answered; it removes no seat; list only): the reply writes no line on D3 vs C3 that does not grade it on the whole sentence Matthew 1:24-25 or withdraw the line
 ok   cure check ignores other rules
 ok   cure prompt shows the K-ML line text, not the K-G3 default
+ok   PLANT rev 2 "forever" against the KJV "for ever" (Luke 1:33) passes (W2 7446 item 1) :: []
+ok   PLANT rev 2 "save" as a verb passes (W2 7446 item 2, W3 7450) :: []
+ok   PLANT rev 2 "never" is not carried by a plain "not" in a layer (W2 7446 item 3) :: [["never"]]
+ok   PLANT rev 2 "never" carried by "never" in a layer passes :: []
+ok   PLANT rev 2 negation class unchanged: "no man" on Luke 1:34 still passes
+ok   W1 rc.cjs case on the LIVE s237 library: the retraction is applied (the fault) :: PROP-DEPENDENT/1 RETRACTED D3 vs C3 (CHALLENGER LINK BROKEN to UNDERDETERMINED)
+ok   rev 2: K-ML-only send-back: the retraction is not applied, standings unchanged (W1 7448) :: no change
+ok   rev 2: K-SU-only send-back: the retraction is not applied :: no change
+ok   rev 2: K-ML and K-SU together: the retraction is not applied :: no change
+ok   rev 2: a LIVE item on the same link beside the K-ML item: the retraction is applied as today :: PROP-DEPENDENT/1 RETRACTED D3 vs C3 (CHALLENGER LINK BROKEN to UNDERDETERMINED)
+ok   rev 2: a LIVE-only send-back reads the same as the live library :: PROP-DEPENDENT/1 RETRACTED D3 vs C3 (CHALLENGER LINK BROKEN to UNDERDETERMINED)
 ALL OK
