@@ -28,3 +28,4 @@ OK   C4 regression: pkgECF2 KEEP (answer 6 + verse 6): CURED -- KEEP that quotes
 OK   C5 regression: CHANGE TO UNDERDETERMINED: CURED -- CHANGE TO a line that does not grade the pair BROKEN or FORCED
 C6 same third KEEP with no row shown (live today): UNCURED -- KEEP that quotes the answering side ("of whom as concerning the flesh") but no 6 words in a row of the quoted verse it cannot agree with
 FAILS: 0
+OK   D1 E-HOLD push toward UNDERDETERMINED is not gated in ASK 345 (ASK 346 turns it on)

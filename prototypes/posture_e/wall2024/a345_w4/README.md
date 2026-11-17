@@ -1,7 +1,7 @@
 # ASK 345 (pkgECW rev 3) — W4 build, offline. NOT LIVE.
 Design: Wall 7221 + 7223 + 7225. Design passes: W2 7224, W1 7229. Eric card "Build ASK 345" (00:03Z 11-17).
 Input: live s231 f96cbf43 = writes_s231/fetchback_s231_340c.json (node sha 29719f066a6468b2, same as a fresh read 00:03Z).
-Run: `node build345.cjs <live.json> target_345.json` then `node replay345.cjs`. Target node sha f558132ac29eaad4, library sha e4345c170fcc1bbb, 3501 lines.
+Run: `node build345.cjs <live.json> target_345.json` then `node replay345.cjs`. Target node sha cd2b57da754a0070, library sha 9e45af29eaac92fe, 3501 lines.
 Nodes changed: Shared Library; stubs of Judge Enforcer Record, Alt Judge Enforcer Record, R2 Alt Judge Enforcer Record. Connections, settings, model settings: unchanged.
 Library sources changed (12): Judge Enforcer Build x3 (RULES), Judge Enforcer Record x3, Send Back Build x3, Send Back Record x3.
 
@@ -26,7 +26,8 @@ Library sources changed (12): Judge Enforcer Build x3 (RULES), Judge Enforcer Re
 8. Label: E-COL ENFORCED; E-HOLD on UNDERDETERMINED with right BROKEN ENFORCED (pkgUND); E-SYN, K-W RECORD-ONLY; others "SENT BACK, CURE RECORD-ONLY". It is judge-facing (it sits in THE ENFORCER text). Side effect: DB function jfl_counted skips text with "record-only|TRIAL"; E-COL and pkgUND UNCURED send-backs will now count there, as they already count in drv_uncured. Assume Check Record's "RECORD-ONLY TRIAL (VP4)" is true and is left as is.
 9. C5 location: the second copy is DeepSeek's RULES, not text the judges read. The judges' prompts hold no copy (full search of all 458 nodes and 45 rebuilt sources).
 10. ESR_W / ESR_BASE unchanged (RULES grows by about 900 characters).
-11. Third KEEP when the row text was not read: name the reference and quote 6 words of the meaning pressed.
+11. ECW.gate also reads E-HOLD pushes toward UNDERDETERMINED, but the switch HOLD is false in ASK 345; ASK 346 turns it on.
+12. Third KEEP when the row text was not read: name the reference and quote 6 words of the meaning pressed.
 
 ## Readers read back
 __ecfR (3 Send Back Build); RULE E-COL (3 Judge Enforcer Build); L3045 FAILS note (unchanged); label readers: why() L2920, " (judge wrote " regexes L2752, L3414, L3422, L3431, L3459; DB jfl_counted.

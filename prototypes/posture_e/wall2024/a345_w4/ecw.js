@@ -1,5 +1,5 @@
 const ECW=(()=>{ /* pkgECW (ASK 345, Wall 7221/7223/7225; passes W2 7224, W1 7229): a STANDS push on meaning shows the row words that carry it; one gate for any rule (E-COL now; ASK 346 calls it for E-HOLD) */
- const LIVE=true;
+ const LIVE=true;const HOLD=false; /* E-HOLD pushes toward UNDERDETERMINED: ASK 346 turns this on */
  const N=s=>String(s==null?'':s).toLowerCase().replace(/\\+"/g,'"').replace(/[‘’ʼ`]/g,"'").replace(/[“”]/g,'"').replace(/\[(?:l[1-4]|[cd]r[1-4])\]/g,' ').replace(/[\[\]]/g,'').replace(/'/g,'').replace(/[^a-z0-9Ͱ-Ͽἀ-῿֐-׿]+/g,' ').replace(/\s+/g,' ').trim();
  const NM=s=>String(s==null?'':s).replace(/\[[^\]]*:[^\]]*\]/g,' ').replace(/\([^)]*:\s*(?:Gr\.|Heb\.|or,|that is)[^)]*\)/g,' ');
  const has=(t,q)=>{const a=' '+N(t)+' ',b=N(q);return !!b&&a.includes(' '+b+' ');};
@@ -23,7 +23,7 @@ const ECW=(()=>{ /* pkgECW (ASK 345, Wall 7221/7223/7225; passes W2 7224, W1 722
  function quotesIn(why,c){const w=String(why||'').replace(/\\+"/g,'"');const cut=c&&c.raw?w.lastIndexOf(c.raw.slice(0,20)):-1;const body=(cut>0?w.slice(0,cut):w);const out=[];for(const m of body.matchAll(/"([^"\n]{8,})"|“([^”\n]{8,})”/g))out.push(m[1]||m[2]);return out;}
  function inOrder(q,t){const ps=String(q).split(/\.\.\.|…/).map(N).filter(x=>x.split(' ').length>=2);if(!ps.length)return true;const T=' '+N(t)+' ';let at=0;for(const p of ps){const k=T.indexOf(' '+p+' ',at);if(k<0)return false;at=k+p.length+1;}return true;}
  /* gate: {applies:false} | {send:true,note,cb} | {send:false,why} */
- function gate(x,v,ctx){if(!v||v.v!=='DISAGREE')return {applies:false};const want=x.rule==='E-COL'?'STANDS':x.rule==='E-HOLD'?'UNDERDETERMINED':null;if(!want||v.right!==want)return {applies:false};
+ function gate(x,v,ctx){if(!v||v.v!=='DISAGREE')return {applies:false};const want=x.rule==='E-COL'?'STANDS':(HOLD&&x.rule==='E-HOLD')?'UNDERDETERMINED':null;if(!want||v.right!==want)return {applies:false};
   const why=String(v.why||'');if(EX.test(why))return {applies:false,exempt:true};
   const R=ctx&&ctx.R;const sd=side(x.flagged_line,x.item);if(!R||!sd.s)return {applies:true,send:true,note:'NOT CHECKED: '+(!R?'no rounds were read':'the line names no answering side')};
   const keys=Object.keys(R).filter(k=>k[0]===sd.s&&/^[CD]R[1-4]$/.test(k));const ans=(sd.round&&R[sd.round]?[sd.round]:keys).map(k=>String(R[k]||''));
