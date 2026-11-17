@@ -1,0 +1,16 @@
+const fs=require('fs');const T='../../g349/tools/';const {unpack,rb}=require(T+'lib.cjs');
+const base=JSON.parse(fs.readFileSync(process.argv[2]));const u=unpack(base);const L=u.L.slice();
+const rep=(i,a,b)=>{if(L[i].split(a).length!==2)throw new Error('anchor '+i+' x'+(L[i].split(a).length-1));L[i]=L[i].replace(a,()=>b);};
+rep(514,"'K-ML':'TRIAL','K-SU':'TRIAL'","'K-ML':'TRIAL','K-SU':'TRIAL','K-RUD':'TRIAL'");
+rep(517,"x.rule!=='K-SU');","x.rule!=='K-SU'&&x.rule!=='K-RUD');");
+rep(849,"||x.rule==='K-SU')","||x.rule==='K-SU'||x.rule==='K-RUD')");
+rep(3318,"||x.rule==='K-SU')","||x.rule==='K-SU'||x.rule==='K-RUD')");
+L[701]=L[701]+'\n'+fs.readFileSync('frag_cure.js','utf8').replace(/\n$/,'');
+rep(1263,"/* pkgMLS (ASK 351) */","/* pkgMLS (ASK 351) */\n  {const rd=rudCure(x,reply&&reply.ok?reply.text:'');if(rd)return res(rd.st,rd.why,rd.line?[rd.line]:null);} /* ASK 354 */");
+rep(1311,"(y.rule==='K-ML'||y.rule==='K-SU')&&U(y.pair)===U(l))&&!(items||[]).some(y=>y&&y.rule!=='K-ML'&&y.rule!=='K-SU'&&","(y.rule==='K-ML'||y.rule==='K-SU'||y.rule==='K-RUD')&&U(y.pair)===U(l))&&!(items||[]).some(y=>y&&y.rule!=='K-ML'&&y.rule!=='K-SU'&&y.rule!=='K-RUD'&&");
+rep(2174,"/* pkgMLS (ASK 351) */","/* pkgMLS (ASK 351) */\n {const RD=rudLines2024(text,kkjvRows());RD.items.forEach(x=>items.push(x));RD.marks.forEach(x=>marks.push(x));} /* ASK 354 */");
+L[2278]=L[2278]+'\n'+fs.readFileSync('frag_lib.js','utf8').replace(/\n$/,'');
+const M=JSON.parse(JSON.stringify(u.M));for(const k of Object.keys(M))M[k].n=rb(L,M[k]).length;
+const code=u.hdr+'\n/*LIB*/'+JSON.stringify(L)+'\n/*MAP*/'+JSON.stringify(M)+u.tail;
+const out=JSON.parse(JSON.stringify(base));out.nodes.find(n=>n.name==='Shared Library').parameters.jsCode=code;
+fs.writeFileSync(process.argv[3],JSON.stringify(out));console.log('written',code.length);
