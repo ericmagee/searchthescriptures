@@ -15,5 +15,11 @@ ok   PLANT P1 words only inside a quotation not read
 ok   PLANT negated: "it is not that the press is not met" not read
 ok   PLANT "the answer misses the pressed inference" read before GROUND
 ok   PLANT the ASK 352 "does not address" reason before GROUND is still not read (P1 needs the press as object)
+ok   PLANT (W1 7535) not read: the answer misses the meaning pressed.
+ok   PLANT (W1 7535) not read: the answer does not meet the meaning pressed by CR3.
+ok   PLANT (W1 7535) not read: The answer misses the pressed meaning of the verse.
+ok   PLANT (W1 7535) not read: the pressed meaning is not met by the answer.
+ok   PLANT (W1 7535) not read: it is not true that the answer misses the press.
+ok   PLANT (W1 7535) not read: the meaning pressed is not met.
 ok   no new operator name in the library
-18 checks, ALL OK
+24 checks, ALL OK

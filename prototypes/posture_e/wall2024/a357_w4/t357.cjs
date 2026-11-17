@@ -32,5 +32,6 @@ ok('PLANT P1 words only inside a quotation not read',!T.g4Press2024('D1 vs C1 (x
 ok('PLANT negated: "it is not that the press is not met" not read',!T.g4Press2024('D1 vs C1 (x): CHALLENGER LINK BROKEN -- it is not that the press is not met; the meaning fails -- GROUND: [L1] Luke 1:1 "a"'));
 ok('PLANT "the answer misses the pressed inference" read before GROUND',T.g4Press2024('D1 vs C1 (x): CHALLENGER LINK BROKEN (Commitment 5) -- The answer misses the pressed inference. GROUND: [L1] Luke 1:1 "a"'));
 ok('PLANT the ASK 352 "does not address" reason before GROUND is still not read (P1 needs the press as object)',!T.g4Unans2024('D1 vs C1 (x): CHALLENGER LINK BROKEN -- the answer does not address it -- GROUND: [L1] Luke 1:1 "a b c"'));
+for(const t of ['the answer misses the meaning pressed.','the answer does not meet the meaning pressed by CR3.','The answer misses the pressed meaning of the verse.','the pressed meaning is not met by the answer.','it is not true that the answer misses the press.','the meaning pressed is not met.'])ok('PLANT (W1 7535) not read: '+t,!T.g4Press2024('D1 vs C1 (x): CHALLENGER LINK BROKEN -- '+t+' GROUND: [L1] Luke 1:1 "a"'));
 ok('no new operator name in the library',tu.L.filter(l=>/Eric/.test(l)).length===lu.L.filter(l=>/Eric/.test(l)).length);
 console.log(n+' checks, '+(fails?'FAILS '+fails:'ALL OK'));process.exit(fails?1:0);
