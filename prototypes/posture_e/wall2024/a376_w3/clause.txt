@@ -1,0 +1,1 @@
+\bexclu(?:sions?|des?|ding)\b[^.;]{0,40}\b(?:quote|quoted|quotation)\b[^.;]{0,40}\b(?:do(?:es)?\s+not|never)\s+(?:[a-z]+\s+)?(?:make|exclude)\b\s*(?=$|[.;,:)\]])|\b(?:quote|quoted|quotation)\b[^.;]{0,60}\b(?:do(?:es)?\s+not|never)\s+(?:[a-z]+\s+)?(?:make|exclude)\b\s+(?:that|this|the|such|an|any)\s+\bexclu(?:sions?|des?|ding)\b\s*(?=$|[.;,:)\]])
