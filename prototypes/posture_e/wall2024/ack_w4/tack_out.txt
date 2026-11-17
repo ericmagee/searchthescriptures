@@ -13,6 +13,14 @@ ok   reader: bare "assumed" in passing NOT read
 ok   reader: bare "unexhibited" NOT read
 ok   reader: inside a quotation NOT read
 ok   reader: negated NOT read
+ok   reader (W3 7499 F1): a denial NOT read: the break has no footing defect; the words cannot agree :: null
+ok   reader (W3 7499 F1): a denial NOT read: there is no footing problem here :: null
+ok   reader (W3 7499 F1): a denial NOT read: the line does not rest on an assumed fact :: null
+ok   reader (W3 7499 F1): a denial NOT read: there is no assumed fact in the ground :: null
+ok   reader (W3 7499 F1): a denial NOT read: no unexhibited genealogical fact is named :: null
+ok   reader (W3 7499 F1): a denial NOT read: the enforcer found no footing gap in the line :: null
+ok   reader (W3 7499 F1): a denial NOT read: nothing here is an assumed fact :: null
+ok   reader: "no footing" alone still read
 ok   reader: "rather than exhibiting" read
 ok   REAL 42486 (sol, run 37891): judge line in footing form ("unexhibited genealogical fact" outside quotes); live sends the STANDS push; ASK 353 records it CONTRADICTED, not sent :: BROKEN (its own reason names a footing defect, "missing footing": a missing fact is not a meaning that can agree, so the
 ok   PLANT judge meaning line (no footing form) + enforcer reason saying "missing footing": sent as live (W2 7492 condition 1)
@@ -35,4 +43,4 @@ ok   REPLAY Part B: the only rows whose status or reason changes are 42554, 1822
 
 NOTE (W1 7488 item 4): 42680 to 42683 come from grok pushes 42659 to 42662. Under ASK 355 those pushes are HELD (CARRIED BY is the line's own verse), so in a run with both ASKs those send-backs are not issued: a combined replay shows them as NOT SENT, not UNCURED. The test above checks the ASK 353 cure code alone.
 
-33/33 OK
+41/41 OK

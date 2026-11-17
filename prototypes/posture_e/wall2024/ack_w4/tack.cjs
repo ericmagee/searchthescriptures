@@ -23,6 +23,8 @@ ok('reader: bare "assumed" in passing NOT read',F('the answer assumed the readin
 ok('reader: bare "unexhibited" NOT read',F('the premise is unexhibited in the round, but the meaning can agree')===null);
 ok('reader: inside a quotation NOT read',F('the ground calls it "missing footing" yet the meaning can agree')===null&&F('the ground says “an assumed fact” and the words agree')===null);
 ok('reader: negated NOT read',F('this is not missing footing but a meaning that can agree')===null&&F('the break is not a footing defect')===null&&F('without any assumed fact the words agree')===null);
+for(const t of ['the break has no footing defect; the words cannot agree','there is no footing problem here','the line does not rest on an assumed fact','there is no assumed fact in the ground','no unexhibited genealogical fact is named','the enforcer found no footing gap in the line','nothing here is an assumed fact'])ok('reader (W3 7499 F1): a denial NOT read: '+t,F(t)===null,String(F(t)));
+ok('reader: "no footing" alone still read',F('the FORCED line has no footing in the record')==='no footing');
 ok('reader: "rather than exhibiting" read',/^rather than exhibit/.test(F('the answer asserts the lineage rather than exhibiting it')||''));
 // Part A: the enforcer push (ETC) on every stored E-COL DISAGREE
 const rows=JSON.parse(fs.readFileSync('ecol_rows.json'));
