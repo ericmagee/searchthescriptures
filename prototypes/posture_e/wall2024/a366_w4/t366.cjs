@@ -1,7 +1,7 @@
 // ASK 366 tests. Usage: node t366.cjs. REAL = stored round of execution 38226; PLANT = made for the test.
 const fs=require('fs');
 const mk=f=>new Function(fs.readFileSync(f,'utf8')+'\nreturn LAY;')();
-const NEW=mk(__dirname+'/../a364/lay_module.js'),OLD=mk(__dirname+'/../a364/lay_module_r26.js');
+const NEW=mk(__dirname+'/lay_module.js'),OLD=mk(__dirname+'/lay_module_r26.js');
 let fails=0,n=0;const ok=(t,c,d)=>{n++;console.log((c?'ok  ':'FAIL')+' '+t+(d?' :: '+d:''));if(!c)fails++;};
 const R=JSON.parse(fs.readFileSync(__dirname+'/rounds38226.json'));
 const heads=c=>c.items.filter(x=>x.kind==='STRUCTURE').map(x=>x.head);

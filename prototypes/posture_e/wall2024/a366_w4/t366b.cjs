@@ -1,7 +1,7 @@
 // ASK 366 combined tests (rev 2.7 back-reference + rev 2.8 verse-row match). Usage: node t366b.cjs. REAL = execution 38226 with the rows each node could read; PLANT = made for the test.
 const fs=require('fs');
 const mk=f=>new Function(fs.readFileSync(f,'utf8')+'\nreturn LAY;')();
-const NEW=mk(__dirname+'/../a364/lay_module.js'),OLD=mk(__dirname+'/../a364/lay_module_r26.js');
+const NEW=mk(__dirname+'/lay_module.js'),OLD=mk(__dirname+'/lay_module_r26.js');
 let fails=0,n=0;const ok=(t,c,d)=>{n++;console.log((c?'ok  ':'FAIL')+' '+t+(d?' :: '+d:''));if(!c)fails++;};
 const R=JSON.parse(fs.readFileSync(__dirname+'/rounds38226.json')),RW=JSON.parse(fs.readFileSync(__dirname+'/rows38226.json'));
 const rowsFor=k=>RW[k.slice(0,2)+'B '+(k.endsWith('first')?'Build':'Extract')];
@@ -50,8 +50,20 @@ ok('PLANT 2a: a range back-reference does not count',has(NEW.check(D1+D6.replace
 const D1bad=P('**D1: KEPT**',['[L1] Matthew 1:18: "before they came together, seeing I know not a man" [L1]','[L4] a conclusion on Matthew 1:18 long enough to read as a point for this plant. [L4]']);
 ok('PLANT: "quoted above" does not count when the earlier quote of that reference is a misquote',has(NEW.check(D1bad+D6,RG),'D6'));
 ok('PLANT 2c: challenger side, same module',!has(NEW.check(D1.replace('D1: KEPT','C1 -- AGAINST D1')+D6.replace('D6: KEPT','C6 -- AGAINST D6'),RG),'C6')&&has(NEW.check(D6.replace('D6: KEPT','C6 -- AGAINST D6'),RG),'C6'));
+// rev 2.9 (W1 7768, W2 7772, W1 7773): a fragment under 2 words is skipped; the quote counts when it has a fragment of 2 or more words and every such fragment matches
+const F=q=>P('**D5: KEPT**',['[L1] Matthew 1:18: "'+q+'" [L1]',L134,L4]);
+ok('W1 7768 PLANT: "Now ... before they came together, she was found with child" counts',!has(chk(F('Now ... before they came together, she was found with child')),'D5'));
+ok('W1 7768 PLANT: "know" alone still credits nothing',has(chk(F('know')),'D5'));
+ok('W1 7768 PLANT: "Now ... know" (only one-word fragments) credits nothing',has(chk(F('Now ... know')),'D5'));
+ok('W1 7768 PLANT: a modernised second fragment still fails ("Now the birth ... you shall be found")',has(chk(F('Now the birth ... you shall be found')),'D5'));
+ok('W2 7772 PLANT b: "Behold ... before they came together, she was found with child" flags (Behold is not in Matthew 1:18)',has(chk(F('Behold ... before they came together, she was found with child')),'D5'));
+const G41R={book:'Genesis',chapter:4,verse:1,text:'And Adam knew Eve his wife; and she conceived, and bare Cain, and said, I have gotten a man from the LORD. [Cain: that is, Gotten, or, Acquired]'};
+const G=q=>P('**D5: KEPT**',['[L1] Genesis 4:1: "'+q+'" [L1]',L134,L4]);
+ok('W2 7772 PLANT c: "knew ... and she conceived" for Genesis 4:1 passes',!has(NEW.check(G('knew ... and she conceived'),RS.concat([G41R])),'D5'));
+ok('PLANT: "knew ... and she bare a son" for Genesis 4:1 flags (second fragment not in the row)',has(NEW.check(G('knew ... and she bare a son'),RS.concat([G41R])),'D5'));
+ok('control: the full Matthew 1:18 quote with Luke 1:34 passes',!has(chk(P('**D5: KEPT**',[M118,L134,L4])),'D5'));
 // sheet(): reads the eight Verse Sheet nodes by literal name
-const src=fs.readFileSync(__dirname+'/../a364/lay_module.js','utf8');
+const src=fs.readFileSync(__dirname+'/lay_module.js','utf8');
 ok('sheet() names each of the eight Verse Sheet nodes in a literal $() call',['D1','C1','D2','C2','D3','C3','D4','C4'].every(s=>src.includes("$('"+s+" Verse Sheet')")));
 const $=n=>({isExecuted:n==='D4 Verse Sheet',all:()=>rowsFor('D4_first').map(j=>({json:j}))});
 const L2=new Function('$',src+'\nreturn LAY;')($);
