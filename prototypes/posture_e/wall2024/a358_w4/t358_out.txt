@@ -1,0 +1,16 @@
+ok   only Accept Build and Init Seats changed :: Accept Build,Init Seats
+ok   connections, node order and settings equal
+ok   Accept Build: the only change is where grok stands
+ok   Accept Build: syntax
+ok   Accept Build: other node fields unchanged
+ok   Init Seats: the only change is where grok stands
+ok   Init Seats: syntax
+ok   Init Seats: other node fields unchanged
+ok   ORDER0 = chatgpt, sol, luna, hydrogen, gemini, argon, haiku, spark, qwen, grok
+ok   Accept Build ORDER equals ORDER0
+ok   __ALT = hydrogen, gemini, argon, haiku, spark, grok
+ok   same seats as before (no seat added or dropped)
+ok   spark vs gemini (run 38106): panel chatgpt, sol, luna; alternates haiku, then grok :: {"panel":"chatgpt,sol,luna","alts":"haiku,grok"}
+ok   spark vs glm: alternates hydrogen, gemini, argon, haiku, grok :: {"panel":"chatgpt,sol,luna","alts":"hydrogen,gemini,argon,haiku,grok"}
+ok   base, spark vs gemini: alternates grok, haiku (as run 38106) :: {"panel":"chatgpt,sol,luna","alts":"grok,haiku"}
+15 checks, ALL OK
