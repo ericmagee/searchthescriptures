@@ -1,0 +1,84 @@
+ok   library lines changed: 1922, 1933, 2966, 3274; line count equal :: 1922,1933,2966,3274
+ok   library header and tail equal
+ok   nodes changed: Shared Library and the 8 Commitment 13 nodes :: Accept Build, Accept Check, Accept DS Return Build, Accept Final, Accept Return Build, Enforcer Build, Panel Build, Reserve Build, Shared Library
+ok   Accept Build: only the sentence changed (all other fields and code equal)
+ok   Accept Check: only the sentence changed (all other fields and code equal)
+ok   Accept DS Return Build: only the sentence changed (all other fields and code equal)
+ok   Accept Final: only the sentence changed (all other fields and code equal)
+ok   Accept Return Build: only the sentence changed (all other fields and code equal)
+ok   Enforcer Build: only the sentence changed (all other fields and code equal)
+ok   Panel Build: only the sentence changed (all other fields and code equal)
+ok   Reserve Build: only the sentence changed (all other fields and code equal)
+ok   connections, node order and settings equal
+ok   L3: in nodes, old sentence 10 copies in base, 0 in target; new sentence 10 in target :: 10 / 0 / 10
+ok   every MAP entry rebuilds to its n :: 45 entries
+   changed MAP entries (13): Alt Gate Record, Alt Judge Enforcer Build, Alternate Build, Alternate Cure Build, Gate Record, Judge Enforcer Build, Panel Cure Build 1, Panel Cure Build 2, Panel Cure Build 3, R2 Alt Gate Record, R2 Alt Judge Enforcer Build, R2 Alternate Build, R2 Alternate Cure Build
+ok   syntax of every changed entry
+ok   syntax Accept Build
+ok   syntax Accept Check
+ok   syntax Accept DS Return Build
+ok   syntax Accept Final
+ok   syntax Accept Return Build
+ok   syntax Enforcer Build
+ok   syntax Panel Build
+ok   syntax Reserve Build
+   PART2 length: base 15023, target 15256 (+233); headings 16 and 16. No PART2 length limit is read in any node (searched PART2.length, PROMPT.length).
+ok   L4: heading count unchanged :: 16
+ok   loader gives lyr2024 in target Gate Record, none in base
+   REAL 1212 chatgpt: 2 record line(s)
+      [AUDIT v59: LAYERS READ TOGETHER (K-LYR, ASK 363, TRIAL) -- SEAT: chatgpt; LINE: RESULT: (b) no [L3] with a reference other than its [L1]; (c) no [L4] step; record-only, not counted in drv_uncured; it removes no seat and moves no grade]
+      [AUDIT v59: LAYERS READ TOGETHER (K-LYR, ASK 363, TRIAL) -- SEAT: chatgpt; LINE: KEYSTONE D5: (b) no [L3] with a reference other than its [L1]; (c) no [L4] step; the GROUNDs of D5 VS C5 name no [L3]; record-only, not counted in drv_uncured; it removes no seat and moves no grade]
+ok   REAL 1212: every verdict RESULT and KEYSTONE line is recorded (none carries [L3] and [L4])
+   REAL 1213 sol: 2 record line(s)
+      [AUDIT v59: LAYERS READ TOGETHER (K-LYR, ASK 363, TRIAL) -- SEAT: sol; LINE: RESULT: (b) no [L3] with a reference other than its [L1]; (c) no [L4] step; record-only, not counted in drv_uncured; it removes no seat and moves no grade]
+      [AUDIT v59: LAYERS READ TOGETHER (K-LYR, ASK 363, TRIAL) -- SEAT: sol; LINE: KEYSTONE D5: (b) no [L3] with a reference other than its [L1]; (c) no [L4] step; record-only, not counted in drv_uncured; it removes no seat and moves no grade]
+ok   REAL 1213: every verdict RESULT and KEYSTONE line is recorded (none carries [L3] and [L4])
+   REAL 1214 grok: 2 record line(s)
+      [AUDIT v59: LAYERS READ TOGETHER (K-LYR, ASK 363, TRIAL) -- SEAT: grok; LINE: RESULT: (b) no [L3] with a reference other than its [L1]; (c) no [L4] step; record-only, not counted in drv_uncured; it removes no seat and moves no grade]
+      [AUDIT v59: LAYERS READ TOGETHER (K-LYR, ASK 363, TRIAL) -- SEAT: grok; LINE: KEYSTONE D5: (a) no [L1] with its reference; (b) no [L3] with a reference other than its [L1]; (c) no [L4] step; record-only, not counted in drv_uncured; it removes no seat and moves no grade]
+ok   REAL 1214: every verdict RESULT and KEYSTONE line is recorded (none carries [L3] and [L4])
+ok   PLANT pass: [L1], [L3] in the named GROUND, [L4] on the line: no record :: 0
+ok   PLANT (b),(c): [L1] only (single verse) is recorded :: 1 :: [AUDIT v59: LAYERS READ TOGETHER (K-LYR, ASK 363, TRIAL) -- SEAT: x; LINE: RESULT: (b) no [L3] with a reference other than its [L1]; (c) no [L4] step; record-only, not counted in drv_uncured; it removes no seat and moves
+ok   PLANT E1/L2: [L4] without an [L3] on the line is recorded :: 1 :: [AUDIT v59: LAYERS READ TOGETHER (K-LYR, ASK 363, TRIAL) -- SEAT: x; LINE: RESULT: (b) no [L3] with a reference other than its [L1]; (c) its [L4] stands on a line without both an [L1] and an [L3]; record-only, not counte
+ok   PLANT (b): an [L3] that repeats the [L1] reference does not count :: 1 :: [AUDIT v59: LAYERS READ TOGETHER (K-LYR, ASK 363, TRIAL) -- SEAT: x; LINE: RESULT: (b) no [L3] with a reference other than its [L1]; (c) its [L4] stands on a line without both an [L1] and an [L3]; record-only, not counte
+ok   PLANT (d): an [L3] standing in no GROUND of the named line is recorded :: 1 :: [AUDIT v59: LAYERS READ TOGETHER (K-LYR, ASK 363, TRIAL) -- SEAT: x; LINE: RESULT: (d) [L3] Ezra 2:59 stands in no GROUND of D5 VS C5; record-only, not counted in drv_uncured; it removes no seat and moves no grade]
+ok   PLANT (d): a KEYSTONE naming no collision line is recorded :: 1 :: [AUDIT v59: LAYERS READ TOGETHER (K-LYR, ASK 363, TRIAL) -- SEAT: x; LINE: KEYSTONE D5: (d) names no collision line to read its [L3] against; record-only, not counted in drv_uncured; it removes no seat and moves no grade
+ok   PLANT: the GROUNDs of the named lines carry no [L3]: recorded as the record's own gap :: 1 :: [AUDIT v59: LAYERS READ TOGETHER (K-LYR, ASK 363, TRIAL) -- SEAT: x; LINE: RESULT: (b) no [L3] with a reference other than its [L1]; (c) no [L4] step; the GROUNDs of D5 VS C5 name no [L3]; record-only, not counted in drv
+ok   PLANT: a KEYSTONE WITHDRAWN line is passed over :: 0
+ok   PLANT: an engine-derived RESULT is passed over :: 0
+ok   PLANT: AUDIT lines (RESULT: CURED inside) are passed over :: 0
+ok   PLANT: (L1)/(L3)/(L4) round-bracket tags read the same as square :: 0
+ok   PLANT: a duplicated verdict line is recorded once :: 1 :: [AUDIT v59: LAYERS READ TOGETHER (K-LYR, ASK 363, TRIAL) -- SEAT: x; LINE: RESULT: (b) no [L3] with a reference other than its [L1]; (c) no [L4] step; record-only, not counted in drv_uncured; it removes no seat and moves
+ok   PLANT: a body already holding AUDIT v59 is left as it is (no double record)
+ok   PLANT: a body with no judge_seat is left as it is
+ok   PLANT: nothing to record returns null (the record node keeps its bodies)
+ok   record only: drv_uncured, verdict_tag and every other payload field unchanged; verdict_raw only grows
+ok   W1 E2: rudPair2024 items equal on REAL 1212 :: 0 items
+ok   W1 E2: rudPair2024 items equal on REAL 1213 :: 0 items
+ok   W1 E2: rudPair2024 items equal on REAL 1214 :: 0 items
+ok   gcp2024 source equal in base and target Gate Record
+   REPLAY judgments 1150-1214: 65 judgments, 94 record lines
+   by seat: {"chatgpt":{"judgments":22,"recorded":22,"lines":35},"sol":{"judgments":18,"recorded":17,"lines":31},"luna":{"judgments":16,"recorded":12,"lines":18},"ember":{"judgments":1,"recorded":1,"lines":2},"hydrogen":{"judgments":6,"recorded":4,"lines":4},"grok":{"judgments":2,"recorded":2,"lines":4}}
+   run ODV1-35856-z9f3p7s7: {"judgments":2,"lines":4,"lack":{"a":4,"b":4,"c":4,"d":4}}
+   run ODV1-36156-ylw7rvr9: {"judgments":3,"lines":4,"lack":{"a":4,"b":4,"c":4,"d":4}}
+   run ODV1-36212-ld47uzqy: {"judgments":3,"lines":5,"lack":{"a":5,"b":5,"c":5,"d":5}}
+   run ODV1-36530-ktnxftyv: {"judgments":3,"lines":3,"lack":{"a":3,"b":3,"c":3,"d":3}}
+   run ODV1-36677-0hxbzcd2: {"judgments":3,"lines":1,"lack":{"a":1,"b":1,"c":1,"d":1}}
+   run ODV1-36791-0cz8umbx: {"judgments":3,"lines":5,"lack":{"a":5,"b":5,"c":5,"d":5}}
+   run ODV1-36842-yfvipbff: {"judgments":3,"lines":3,"lack":{"a":3,"b":3,"c":3,"d":3}}
+   run ODV1-36916-jm52130i: {"judgments":3,"lines":4,"lack":{"a":4,"b":4,"c":4,"d":4}}
+   run ODV1-36968-yiwo6aot: {"judgments":3,"lines":3,"lack":{"a":3,"b":3,"c":3,"d":3}}
+   run ODV1-37000-wxskzqjd: {"judgments":3,"lines":5,"lack":{"a":5,"b":5,"c":5,"d":5}}
+   run ODV1-37032-m7yxtyxj: {"judgments":3,"lines":6,"lack":{"a":6,"b":6,"c":6,"d":6}}
+   run ODV1-37113-vaaf3hwh: {"judgments":3,"lines":4,"lack":{"a":4,"b":4,"c":4,"d":4}}
+   run ODV1-37203-6um4inkh: {"judgments":3,"lines":4,"lack":{"a":4,"b":4,"c":4,"d":4}}
+   run ODV1-37281-70812cud: {"judgments":3,"lines":3,"lack":{"a":3,"b":3,"c":3,"d":3}}
+   run ODV1-37325-s81kgmur: {"judgments":3,"lines":3,"lack":{"a":3,"b":3,"c":3,"d":3}}
+   run ODV1-37372-6n5n7sh9: {"judgments":3,"lines":5,"lack":{"a":5,"b":5,"c":5,"d":5}}
+   run ODV1-37510-6gpyl6l8: {"judgments":3,"lines":6,"lack":{"a":6,"b":6,"c":6,"d":6}}
+   run ODV1-37719-7h5d9el2: {"judgments":3,"lines":4,"lack":{"a":4,"b":4,"c":4,"d":4}}
+   run ODV1-37812-v2znf46s: {"judgments":3,"lines":5,"lack":{"a":1,"b":5,"c":5,"d":0}}
+   run ODV1-37891-22dsnmk0: {"judgments":3,"lines":5,"lack":{"a":2,"b":5,"c":5,"d":0}}
+   run ODV1-38051-souv1g6j: {"judgments":3,"lines":6,"lack":{"a":0,"b":5,"c":6,"d":0}}
+   run ODV1-38106-ax8g49bx: {"judgments":3,"lines":6,"lack":{"a":1,"b":6,"c":6,"d":0}}
+48 checks, ALL OK
