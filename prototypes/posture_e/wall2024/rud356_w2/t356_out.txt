@@ -1,4 +1,4 @@
-ok   library lines changed are 1753, 1754, 1816, 1922, 1933 and 2392 only; line count equal :: 1753,1754,1816,1922,1933,2392
+ok   library lines changed are 1753, 1754, 1816, 1837, 1922, 1933 and 2392 only; line count equal :: 1753,1754,1816,1837,1922,1933,2392
 ok   only the Shared Library node changed :: Shared Library
 ok   connections and node order equal
 ok   every MAP entry rebuilds to its n :: 45 entries
@@ -27,4 +27,13 @@ ok   F2: a seat with K-RUD and another item still gets its call, no record entry
 ok   F2: no items, no call, no record (as base)
 ok   F2 record: Gate Record makes one RECORD-ONLY UNCURED E-GATE row per K-RUD item of a seat with no call :: {"run_token":"rt1","seat":"luna","seat_role":"alternate","judge_model":"m1","kind":"send_back","rule":"E-GATE","item":"G1 RULE K-RUD (E-GATE RUD)","flagged_line":"RESULT: x\nD2 vs C2 (y): UNDERDETERMI
 ok   F2 record: both Gate Record paths (skip, line 1922; calls, line 1933) add the rows
-28 checks, ALL OK
+ok   F4 CURED: CHANGE the RESULT without D2 vs C2 :: WOULD CURE: with the CHANGE in place on a copy, the RESULT no longer rests on an UNDERDETERMINED pair (TRIAL K-RUD: recorded, not applied, not counted)
+ok   F4 CURED: CHANGE the D2 vs C2 line to a grade :: WOULD CURE: with the CHANGE in place on a copy, the RESULT no longer rests on an UNDERDETERMINED pair (TRIAL K-RUD: recorded, not applied, not counted)
+ok   F4 UNCURED: CHANGE the D2 vs C2 line but keep UNDERDETERMINED :: STILL RAISED: with the CHANGE in place on a copy, the RESULT still rests on the UNDERDETERMINED pair (TRIAL K-RUD: recorded, not applied, not counted)
+ok   F4 UNCURED: CHANGE that names another line :: the CHANGE TO names neither the RESULT line nor the D2 vs C2 line (TRIAL K-RUD: recorded, not applied, not counted)
+ok   F4 UNCURED: CHANGE the RESULT, still resting on D2 vs C2 :: STILL RAISED: with the CHANGE in place on a copy, the RESULT still rests on the UNDERDETERMINED pair (TRIAL K-RUD: recorded, not applied, not counted)
+ok   F4 UNCURED: KEEP :: KEEP does not settle a K-RUD item (TRIAL K-RUD: recorded, not applied, not counted)
+ok   F4: the corrected text is unchanged after the reads
+ok   F4: the K-RUD branch stands before the generic cure branch at line 1837
+ok   F4: a cured K-RUD row takes no count off: the count-off at line 3476 reads only src E-APPLY S<n>, and the uncured tally at line 3467 only live items
+37 checks, ALL OK

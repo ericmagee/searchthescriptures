@@ -1,7 +1,7 @@
 // ASK 356 tests. Usage: node t356.cjs <target> <base> <lib.cjs> <rows45.json>
 const fs=require('fs');const {unpack,rb,load}=require(process.argv[4]);let n=0,f=0;const ok=(t,c,d)=>{n++;if(!c)f++;console.log((c?'ok   ':'FAIL ')+t+(d?' :: '+d:''));};
 const tw=JSON.parse(fs.readFileSync(process.argv[2])),bw=JSON.parse(fs.readFileSync(process.argv[3]));const tu=unpack(tw),bu=unpack(bw);
-const dl=tu.L.map((l,i)=>l!==bu.L[i]?i:-1).filter(i=>i>=0);ok('library lines changed are 1753, 1754, 1816, 1922, 1933 and 2392 only; line count equal',tu.L.length===bu.L.length&&dl.join()==='1753,1754,1816,1922,1933,2392',dl.join());
+const dl=tu.L.map((l,i)=>l!==bu.L[i]?i:-1).filter(i=>i>=0);ok('library lines changed are 1753, 1754, 1816, 1837, 1922, 1933 and 2392 only; line count equal',tu.L.length===bu.L.length&&dl.join()==='1753,1754,1816,1837,1922,1933,2392',dl.join());
 const BN={};for(const x of bw.nodes)BN[x.name]=x;const dn=tw.nodes.filter(x=>JSON.stringify(x)!==JSON.stringify(BN[x.name])).map(x=>x.name);ok('only the Shared Library node changed',dn.join()==='Shared Library',dn.join());
 ok('connections and node order equal',JSON.stringify(tw.connections)===JSON.stringify(bw.connections)&&tw.nodes.map(x=>x.name).join()===bw.nodes.map(x=>x.name).join());
 const bad=Object.keys(tu.M).filter(k=>rb(tu.L,tu.M[k]).length!==tu.M[k].n);ok('every MAP entry rebuilds to its n',!bad.length,Object.keys(tu.M).length+' entries');
@@ -34,4 +34,17 @@ ok('the item is TRIAL record only: why names it, and the push sets live:false',/
  ok('F2: no items, no call, no record (as base)',g({items:[]},SB,'luna',{})===undefined);
  const rows=GR.rudRows2024([rp1,rp2,{seat:'sol',error:'x'}]);ok('F2 record: Gate Record makes one RECORD-ONLY UNCURED E-GATE row per K-RUD item of a seat with no call',rows.length===1&&rows[0].run_token==='rt1'&&rows[0].seat==='luna'&&rows[0].rule==='E-GATE'&&rows[0].cure_status==='UNCURED'&&/RECORD-ONLY\)$/.test(rows[0].cure_reason)&&rows[0].flagged_line==='RESULT: x\nD2 vs C2 (y): UNDERDETERMINED'&&rows[0].item==='G1 RULE K-RUD (E-GATE RUD)',JSON.stringify(rows[0]).slice(0,200));
  ok('F2 record: both Gate Record paths (skip, line 1922; calls, line 1933) add the rows',/gate_rows:rudRows2024\(first\.gate_report\)/.test(tu.L[1922])&&/gate_rows:rows\.concat\(rudRows2024\(first\.gate_report\)\)/.test(tu.L[1933]));}
+// rev 3 (W1 7547 F4): the K-RUD answer is read on a copy; REAL 1211 text, PLANT answers
+{const C=GR.rudCure2024;const x=P(post)[0];const T0=String(post);const cp=T0.slice();
+ const und=x.lines[1];const reg=und.replace(/UNDERDETERMINED/,'DEFENDER LINK STANDS');
+ const cs=[['CHANGE the RESULT without D2 vs C2',{ans:'CHANGE',to:'RESULT: DEFENDER WINS -- D1 vs C1 decides: [L1] Matthew 1:18 “she was found with child of the Holy Ghost.”'},true],
+  ['CHANGE the D2 vs C2 line to a grade',{ans:'CHANGE',to:'"'+reg+'"'},true],
+  ['CHANGE the D2 vs C2 line but keep UNDERDETERMINED',{ans:'CHANGE',to:und.replace(/ -- /,' -- still open -- ')},false],
+  ['CHANGE that names another line',{ans:'CHANGE',to:'D1 vs C1 (Matthew 1:18): CHALLENGER LINK BROKEN -- z'},false],
+  ['CHANGE the RESULT, still resting on D2 vs C2',{ans:'CHANGE',to:'RESULT: DEFENDER WINS -- D2 vs C2 decides.'},false],
+  ['KEEP',{ans:'KEEP'},false]];
+ for(const [nm,a,want] of cs){const r=C(x,a,T0);ok('F4 '+(want?'CURED':'UNCURED')+': '+nm,r.cured===want&&/not applied, not counted\)$/.test(r.why)&&(!/^CHANGE/.test(a.ans)||!/^(WOULD|STILL)/.test(r.why)||(want?/^WOULD CURE/:/^STILL RAISED/).test(r.why)),r.why);}
+ ok('F4: the corrected text is unchanged after the reads',T0===cp&&post===cp);
+ ok('F4: the K-RUD branch stands before the generic cure branch at line 1837',/else if\(x\.src==='E-GATE RUD'\)\{const __rc=rudCure2024\(x,a,R2\.T1\)[^\n]*else\{const st=/.test(tu.L[1837]));}
+ok('F4: a cured K-RUD row takes no count off: the count-off at line 3476 reads only src E-APPLY S<n>, and the uncured tally at line 3467 only live items',/__offR=res\.filter\(r=>r\.cured&&r\.ans==='CHANGE'&&\/was applied\/\.test\(r\.why\)&&\/\^E-APPLY S\\d\+\$\/\.test\(r\.src\)/.test(tu.L[3476])&&/uncured:res\.filter\(r=>!r\.cured&&r\.live&&!r\.oa\)/.test(tu.L[3467]));
 console.log(n+' checks, '+(f?'FAILS '+f:'ALL OK'));
