@@ -16,4 +16,4 @@ const run=(file)=>{
  }
  return out;};
 console.log('LIVE  ',JSON.stringify(run('live.json'),null,1));
-console.log('TARGET',JSON.stringify(run('target_348.json'),null,1));
+console.log('TARGET',JSON.stringify(run(process.argv[2]||'target_348.json'),null,1));
