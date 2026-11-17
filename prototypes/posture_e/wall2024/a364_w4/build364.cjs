@@ -8,7 +8,7 @@ for(const r of ['D2','D3','D4']){
  const b=r+'B Build',x=r+'B Extract';
  rep(b,'const __RD=',LAYM+'\nconst __RD=');
  rep(b,"if(!c.applies)return pass('no round text',c);if(c.pass)return pass(","let __lc=null;try{__lc=LAY.check(X.raw);}catch(e){__lc=null;}const __ln=__lc&&__lc.items?__lc.items.length:0; /* ASK 364 */\nif(!c.applies)return pass('no round text',c);if(c.pass&&!__ln)return pass(");
- rep(b,'const note=BAR.note(c);',"const note=[c.pass?'':BAR.note(c),__ln?LAY.note(__lc):''].filter(Boolean).join('\\n\\n'); /* ASK 364: one resend carries both checks */");
+ rep(b,'const note=BAR.note(c);',"const note=[__ln?LAY.note(__lc,!c.pass):'',c.pass?'':BAR.note(c)].filter(Boolean).join('\\n\\n'); /* ASK 364: one resend carries both checks */");
  rep(b,"why:c.hits.length+' barred sentence(s)',note,bar_check:c,","why:c.hits.length+' barred sentence(s); '+__ln+' layer point(s)',note,bar_check:c,lay_check:__lc,");
  rep(x,'const __RD=',LAYM+'\nconst LAY_BARE='+(BARE?'true':'false')+'; /* ASK 364: '+(BARE?'a point still short after the resend is written into the round as a BARE CLAIM line':'record only: a point still short after the resend is recorded, not written into the round')+' */\nconst __RD=');
  rep(x,"return [{json:{...__K,raw:__S.raw,labelled:typeof __K.labelled==='string'?__SL.raw:__K.labelled,bar:__rec({",

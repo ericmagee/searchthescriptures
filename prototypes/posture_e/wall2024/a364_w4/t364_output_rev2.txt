@@ -2,7 +2,7 @@ ok   only the six D2B/D3B/D4B Build and Extract nodes change; node order, connec
 ok   no Call node changes (model settings copied by not touching them)
 ok   the two files differ only in the three Extract nodes, at LAY_BARE :: D2B Extract, D3B Extract, D4B Extract
 ok   syntax of the six nodes in both files
-ok   the LAY module is byte-equal in all six nodes :: 7597 chars
+ok   the LAY module is byte-equal in all six nodes :: 7752 chars
 ok   the old barred-moves code is kept: each node still holds its BAR check and note
 ok   REAL 37891 row: "at all" is flagged :: at all
 ok   C4a PLANT: a word standing only in an [L2] gloss is flagged :: never
@@ -35,6 +35,8 @@ ok   PLANT clean round: no resend :: no barred move harvested
 ok   G4 PLANT clean round: it passes through Extract byte-equal
 ok   PLANT barred-only round: the note is the barred-moves note alone :: 1 barred sentence(s); 0 layer point(s)
 ok   PLANT both faults: one resend carries both notes :: 1 barred sentence(s); 1 layer point(s)
+ok   N3 (W1): with both notes, the one-request line stands once
+ok   N2 (W3): the note asks for each verse's reference and quoted words on an [L1] or [L3] line
 ok   C3: the resent round replaces the first before the next node reads it
 ok   N2: the kept round is checked again and every point still short is recorded :: 9 -> 8
 ok   bare file: one BARE CLAIM line per point still short, written into the round and the labelled round
@@ -42,4 +44,4 @@ ok   resend-only file: the same record, no line written into the round
 ok   REAL 37891 r2: D2B Build runs and reads the layers :: no barred move harvested
 ok   REAL 37891 r4: D4B Build runs and reads the layers :: no barred move harvested
    replay over 12 stored runs (rounds 2 to 4 are Part A): {"r1":{"runs":0,"words":0,"structure":0},"r2":{"runs":4,"words":0,"structure":14},"r3":{"runs":6,"words":12,"structure":5},"r4":{"runs":2,"words":0,"structure":12}}
-43 of 43 pass
+45 of 45 pass
