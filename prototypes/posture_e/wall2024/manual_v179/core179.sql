@@ -90,6 +90,16 @@ v(i,a,b) as (values
 (87,$w3e$ (125 rows, W1 6784; 92, W4 6782)$w3e$,$w3e$ (125 rows by one count, 92 by another)$w3e$),
 (88,$w3e$ (6863)$w3e$,$w3e$$w3e$),
 (89,$w3e$ (6879 item 3)$w3e$,$w3e$$w3e$),
-(90,$w3e$ (6932 item 6)$w3e$,$w3e$$w3e$)),
+(90,$w3e$ (6932 item 6)$w3e$,$w3e$$w3e$),
+(91,$w3e$ (A3 7007 A2, B3)$w3e$,$w3e$$w3e$),
+(92,$w3e$ (A3 7007 A6)$w3e$,$w3e$$w3e$),
+(93,$w3e$ (A3 7007)$w3e$,$w3e$$w3e$),
+(94,$w3e$ (W1 Wall 6504, MEASURED with the live s206 Panel Build press ledger on each stored DR2)$w3e$,$w3e$ (MEASURED with the live s206 Panel Build press ledger on each stored DR2)$w3e$),
+(95,$w3e$ (Wall 6574)$w3e$,$w3e$$w3e$),
+(96,$w3e$(W2's P11 and P12 KEEP added)$w3e$,$w3e$(P11 and P12 KEEP added)$w3e$),
+(97,$w3e$matching W1's baseline$w3e$,$w3e$matching the baseline$w3e$),
+(98,$w3e$ The written library line equals the graded target_319_bonly line.$w3e$,$w3e$$w3e$),
+(99,$w3e$ Live readback equals the graded build.$w3e$,$w3e$$w3e$),
+(100,$w3e$Shown offline: W4 cases 11 of 11$w3e$,$w3e$Shown offline: cases 11 of 11$w3e$)),
 r(i,t) as (select 0, x from s union all select r.i+1, replace(r.t, v.a, v.b) from r join v on v.i=r.i),
-n as (select t as content from r where i=91)
+n as (select t as content from r where i=101)
