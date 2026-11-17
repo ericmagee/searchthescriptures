@@ -1,22 +1,78 @@
-node:fs:560
-  return binding.open(
-                 ^
+=== STORED: "ALTERNATE: none" with the clause (ODV1-34852)
+  LIVE s259 header empty-seat lines:
+    - Panel judge 2's seat stayed empty: sol was not counted, and no judge was counted in its place. No alternate could be tried: no pool model passes the guards: haiku G4: anthropic/claude-haiku-5.5 is already offered to an earlier removed seat; REMOVED FOR: drv_uncured 1: K-W (cure) x1.
+    - Panel judge 4's seat stayed empty: ChatGPT was not counted, and no judge was counted in its place. No alternate could be tried: no pool model passes the guards: haiku G4: anthropic/claude-haiku-5.5 is already offered to an earlier removed seat; REMOVED FOR: drv_uncured 2: E-GATE RULE K-G.
+  TARGET header empty-seat lines:
+    - Panel judge 2's seat stayed empty: sol was not counted, and no judge was counted in its place. No alternate could be tried: no pool model passes the guards: haiku G4: anthropic/claude-haiku-5.5 is already offered to an earlier removed seat.
+    - Panel judge 4's seat stayed empty: ChatGPT was not counted, and no judge was counted in its place. No alternate could be tried: no pool model passes the guards: haiku G4: anthropic/claude-haiku-5.5 is already offered to an earlier removed seat.
+  LIVE s259 Alternate judges:
+    - luna was not counted (2 debate rule violation(s) not cured); Claude Haiku (anthropic/claude-haiku-5.5) sat in its place.
+    - sol: alternate none tried, NOT SEATED: no pool model passes the guards: haiku G4: anthropic/claude-haiku-5.5 is already offered to an earlier removed seat; REMOVED FOR: drv_uncured 1: K-W (cure) x1.
+    - ChatGPT: alternate none tried, NOT SEATED: no pool model passes the guards: haiku G4: anthropic/claude-haiku-5.5 is already offered to an earlier removed seat; REMOVED FOR: drv_uncured 2: E-GATE RULE K-G4 x2.
+    - luna: alternate Claude Haiku (anthropic/claude-haiku-5.5) tried, SEATED: REMOVED FOR: drv_uncured 2: E-GATE CONTRADICTION x2.
+    
+    ---
+  TARGET Alternate judges:
+    - luna was not counted (2 debate rule violation(s) not cured); Claude Haiku (anthropic/claude-haiku-5.5) sat in its place.
+    - sol was not counted: 1 debate rule violation not cured (K-W on DEFENDER CR2 LINK 2 #2).
+    - sol: no alternate, NOT SEATED: no pool model passes the guards: haiku G4: anthropic/claude-haiku-5.5 is already offered to an earlier removed seat.
+    - ChatGPT was not counted: 2 debate rule violations not cured; none is named in the judgment's own record.
+    - ChatGPT: no alternate, NOT SEATED: no pool model passes the guards: haiku G4: anthropic/claude-haiku-5.5 is already offered to an earlier removed seat.
+    - luna: alternate Claude Haiku (anthropic/claude-haiku-5.5) tried, SEATED.
+    
+    ---
+=== STORED: SEATED line whose WHY is only the clause (ODV1-38226)
+  LIVE s259 header empty-seat lines:
+    - Panel judge 3's seat stayed empty: ChatGPT was not counted, and no judge was counted in its place. Alternates tried: Claude Haiku, not seated (3 uncured items).
+  TARGET header empty-seat lines:
+    - Panel judge 3's seat stayed empty: ChatGPT was not counted, and no judge was counted in its place. Alternates tried: Claude Haiku, not seated (3 uncured items).
+  LIVE s259 Alternate judges:
+    - luna was not counted (2 debate rule violation(s) not cured); Grok (x-ai/grok-4.7) sat in its place.
+    - ChatGPT: alternate Claude Haiku (anthropic/claude-haiku-5.5) tried, NOT SEATED: 3 uncured item(s); REMOVED FOR: drv_uncured 1: K-G4 (cure) x1.
+    - luna: alternate Grok (x-ai/grok-4.7) tried, SEATED: REMOVED FOR: drv_uncured 2: E-GATE NOT APPLIED x1; E-GATE CONTRADICTION x1.
+    
+    ---
+  TARGET Alternate judges:
+    - luna was not counted (2 debate rule violation(s) not cured); Grok (x-ai/grok-4.7) sat in its place.
+    - ChatGPT was not counted: 1 debate rule violation not cured (K-G4 on D4 vs C3).
+    - ChatGPT: alternate Claude Haiku (anthropic/claude-haiku-5.5) tried, NOT SEATED: 3 uncured item(s).
+    - luna: alternate Grok (x-ai/grok-4.7) tried, SEATED.
+    
+    ---
+=== STORED: header plant W3 C1 (ODV1-35296)
+  LIVE s259 header empty-seat lines:
+    - Panel judge 1's seat stayed empty: luna was not counted, and no judge was counted in its place. Alternates tried: Grok, not seated: call failed: aborted; REMOVED FOR: drv_uncured 3: K-W (cure) x1; E-GATE CONTRADICTION x2; Claude Haiku, not seated (3 uncured items).
+  TARGET header empty-seat lines:
+    - Panel judge 1's seat stayed empty: luna was not counted, and no judge was counted in its place. Alternates tried: Grok, not seated: call failed: aborted; Claude Haiku, not seated (3 uncured items).
+  LIVE s259 Alternate judges:
+    - sol was not counted (4 debate rule violation(s) not cured); argon (google/gemini-4-argon) sat in its place.
+    - luna: alternate Grok (x-ai/grok-4.7) tried, NOT SEATED: call failed: aborted; REMOVED FOR: drv_uncured 3: K-W (cure) x1; E-GATE CONTRADICTION x2.
+    - luna: alternate Claude Haiku (anthropic/claude-haiku-5.5) tried, NOT SEATED: 3 uncured item(s); REMOVED FOR: drv_uncured 3: K-W (cure) x1; E-GATE CONTRADICTION x2.
+    - sol: alternate argon (google/gemini-4-argon) tried, SEATED: REMOVED FOR: drv_uncured 4: COLLISION GRADE UNCURED x1; ABSENCE GRADE UNCURED x3.
+    
+    ---
+  TARGET Alternate judges:
+    - sol was not counted (4 debate rule violation(s) not cured); argon (google/gemini-4-argon) sat in its place.
+    - luna was not counted: 3 debate rule violations not cured (K-W on DEFENDER CR2 no link heading #4); 1 of the 3 are named in the judgment's own record.
+    - luna: alternate Grok (x-ai/grok-4.7) tried, NOT SEATED: call failed: aborted.
+    - luna: alternate Claude Haiku (anthropic/claude-haiku-5.5) tried, NOT SEATED: 3 uncured item(s).
+    - sol: alternate argon (google/gemini-4-argon) tried, SEATED.
+    
+    ---
+(plant: removed judgment row of seat chatgpt; moved its 2 tried lines to row of sol62)
+=== PLANT source b: no judge line for the seat, so the clause gives the reason
+  LIVE s259 header empty-seat lines:
 
-Error: ENOENT: no such file or directory, open '../rdf/fetchback_s259.json'
-    at Object.openSync (node:fs:560:18)
-    at Object.readFileSync (node:fs:444:35)
-    at code (/tmp/claude-0/-home-user/86d59483-62fd-5fa0-b8c4-6322500f4823/scratchpad/a380/plants380.cjs:2:52)
-    at Object.<anonymous> (/tmp/claude-0/-home-user/86d59483-62fd-5fa0-b8c4-6322500f4823/scratchpad/a380/plants380.cjs:6:14)
-    at Module._compile (node:internal/modules/cjs/loader:1781:14)
-    at Object..js (node:internal/modules/cjs/loader:1913:10)
-    at Module.load (node:internal/modules/cjs/loader:1505:32)
-    at Function._load (node:internal/modules/cjs/loader:1309:12)
-    at wrapModuleLoad (node:internal/modules/cjs/loader:254:19)
-    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5) {
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: '../rdf/fetchback_s259.json'
-}
+  TARGET header empty-seat lines:
 
-Node.js v22.23.4
+  LIVE s259 Alternate judges:
+    - ChatGPT: alternate Claude Haiku (anthropic/claude-haiku-5.5) tried, NOT SEATED: unseated after its enforcer send-back and gate: 10 uncured item(s) (E-GATE G1 NOT APPLIED (E-APPLY S4); E-GATE G2 NOT APPLIED (E-APPLY S5); E-GATE G3 NOT APPLIED (E-APPLY S6); E-GATE G4 NOT APPLIED (E-APPLY S7); E-GATE G5 NOT APPLIED (E-APPLY S8)).
+    - ChatGPT: alternate ernie (baidu/ernie-5.5-flash-preview:free) tried, NOT SEATED: seat "ernie" returned content null (finish_reason length). NO ROW IS WRITTEN. run_token=ODV1-38450-bz66jhy3; REMOVED FOR: drv_uncured 1: K-V (cure) x1.
+    
+    ---
+  TARGET Alternate judges:
+    - ChatGPT was not counted: drv_uncured 1: K-V (cure) x1.
+    - ChatGPT: alternate Claude Haiku (anthropic/claude-haiku-5.5) tried, NOT SEATED: unseated after its enforcer send-back and gate: 10 uncured item(s) (E-GATE G1 NOT APPLIED (E-APPLY S4); E-GATE G2 NOT APPLIED (E-APPLY S5); E-GATE G3 NOT APPLIED (E-APPLY S6); E-GATE G4 NOT APPLIED (E-APPLY S7); E-GATE G5 NOT APPLIED (E-APPLY S8)).
+    - ChatGPT: alternate ernie (baidu/ernie-5.5-flash-preview:free) tried, NOT SEATED: seat "ernie" returned content null (finish_reason length). NO ROW IS WRITTEN. run_token=ODV1-38450-bz66jhy3.
+    
+    ---
