@@ -1,0 +1,73 @@
+ok   library lines changed: 1922, 1933, 2966, 3274; line count equal :: 1922,1933,2966,3274
+ok   library header and tail equal
+ok   nodes changed: Shared Library, the 8 Commitment 8 nodes, Build Independent Verdict :: Accept Build, Accept Check, Accept DS Return Build, Accept Final, Accept Return Build, Build Independent Verdict, Enforcer Build, Panel Build, Reserve Build, Shared Library
+ok   Accept Build: only the stated sentence(s) added; all else equal
+ok   Accept Check: only the stated sentence(s) added; all else equal
+ok   Accept DS Return Build: only the stated sentence(s) added; all else equal
+ok   Accept Final: only the stated sentence(s) added; all else equal
+ok   Accept Return Build: only the stated sentence(s) added; all else equal
+ok   Build Independent Verdict: only the stated sentence(s) added; all else equal
+ok   Enforcer Build: only the stated sentence(s) added; all else equal
+ok   Panel Build: only the stated sentence(s) added; all else equal
+ok   Reserve Build: only the stated sentence(s) added; all else equal
+ok   connections, node order and settings equal
+ok   S1 in 2 nodes (judges' ANSWER CHECK form); S2 in 10 copies (Commitment 8: 8 nodes and 2 library lines)
+ok   every MAP entry rebuilds to its n :: 45 entries
+   changed MAP entries (13): Alt Gate Record, Alt Judge Enforcer Build, Alternate Build, Alternate Cure Build, Gate Record, Judge Enforcer Build, Panel Cure Build 1, Panel Cure Build 2, Panel Cure Build 3, R2 Alt Gate Record, R2 Alt Judge Enforcer Build, R2 Alternate Build, R2 Alternate Cure Build
+ok   syntax of every changed entry
+ok   syntax Accept Build
+ok   syntax Accept Check
+ok   syntax Accept DS Return Build
+ok   syntax Accept Final
+ok   syntax Accept Return Build
+ok   syntax Build Independent Verdict
+ok   syntax Enforcer Build
+ok   syntax Panel Build
+ok   syntax Reserve Build
+   PART2 length: base 15256, target 15472 (+216); headings 16 and 16
+ok   heading count unchanged
+ok   loader gives ans359 and lyr2024 in target Gate Record
+   REPLAY judgments 1000-1214 (215): 16 record lines in 7 judgments
+      1111 sol ODV1-33828-oe3n5aq8 :: ANSWER CHECK Hebrews 7:14 [CR3]; WORD: unexhibited; TERMS: none read; STATUS: OPEN (under option A this MEETS would grade MISSES); PRESS: not marked UNPROVEN on the line
+      1177 sol ODV1-37000-wxskzqjd :: ANSWER CHECK Acts 2:30 [CR3]; WORD: separately counted; TERMS: none read; STATUS: OPEN (under option A this MEETS would grade MISSES); PRESS: not marked UNPROVEN on the line
+      1208 luna ODV1-37891-22dsnmk0 :: ANSWER CHECK Romans 1:3 [CR3]; WORD: unexhibited; TERMS: mary; STATUS: OPEN (under option A this MEETS would grade MISSES); PRESS: not marked UNPROVEN on the line
+      1208 luna ODV1-37891-22dsnmk0 :: ANSWER CHECK 2 Samuel 7:12 [CR3]; WORD: unexhibited; TERMS: mary; STATUS: OPEN (under option A this MEETS would grade MISSES); PRESS: not marked UNPROVEN on the line
+      1208 luna ODV1-37891-22dsnmk0 :: ANSWER CHECK Psalms 132:11 [CR3]; WORD: unexhibited; TERMS: mary; STATUS: OPEN (under option A this MEETS would grade MISSES); PRESS: not marked UNPROVEN on the line
+      1209 chatgpt ODV1-38051-souv1g6j :: ANSWER CHECK Romans 1:3 [CR3]; WORD: unexhibited; TERMS: mary david; STATUS: OPEN (under option A this MEETS would grade MISSES); PRESS: not marked UNPROVEN on the line
+      1209 chatgpt ODV1-38051-souv1g6j :: ANSWER CHECK Psalms 132:11 [CR4]; WORD: unexhibited; TERMS: mary david; STATUS: OPEN (under option A this MEETS would grade MISSES); PRESS: not marked UNPROVEN on the line
+      1210 sol ODV1-38051-souv1g6j :: ANSWER CHECK Hebrews 7:14, defender premise 4 [CR4]; WORD: separately counted; TERMS: mary david; STATUS: OPEN (under option A this MEETS would grade MISSES); PRESS: not marked UNPROVEN on the line
+      1210 sol ODV1-38051-souv1g6j :: ANSWER CHECK Hebrews 7:14, challenger premise 6 [DR3]; WORD: unexhibited; TERMS: mary david; STATUS: OPEN (under option A this MEETS would grade MISSES); PRESS: not marked UNPROVEN on the line
+      1212 chatgpt ODV1-38106-ax8g49bx :: ANSWER CHECK Luke 1:27 [CR3]; WORD: unexhibited; TERMS: mary david; STATUS: OPEN (under option A this MEETS would grade MISSES); PRESS: not marked UNPROVEN on the line
+      1212 chatgpt ODV1-38106-ax8g49bx :: ANSWER CHECK Romans 1:3 [CR3]; WORD: counted assumption; TERMS: mary david; STATUS: OPEN (under option A this MEETS would grade MISSES); PRESS: not marked UNPROVEN on the line
+      1213 sol ODV1-38106-ax8g49bx :: ANSWER CHECK Luke 1:27 [CR3]; WORD: assumed ancestry; TERMS: mary david; STATUS: OPEN (under option A this MEETS would grade MISSES); PRESS: not marked UNPROVEN on the line
+      1213 sol ODV1-38106-ax8g49bx :: ANSWER CHECK Romans 1:3 [CR3]; WORD: counted assumption; TERMS: mary david; STATUS: OPEN (under option A this MEETS would grade MISSES); PRESS: not marked UNPROVEN on the line
+      1213 sol ODV1-38106-ax8g49bx :: ANSWER CHECK Acts 2:30 [CR3]; WORD: unexhibited; TERMS: mary david; STATUS: OPEN (under option A this MEETS would grade MISSES); PRESS: marked UNPROVEN on the line
+      1213 sol ODV1-38106-ax8g49bx :: ANSWER CHECK 2 Samuel 7:12 [CR3]; WORD: unexhibited; TERMS: mary david; STATUS: OPEN (under option A this MEETS would grade MISSES); PRESS: marked UNPROVEN on the line
+      1213 sol ODV1-38106-ax8g49bx :: ANSWER CHECK Hebrews 7:14 [CR3]; WORD: carries no independent footing; TERMS: mary david; STATUS: OPEN (under option A this MEETS would grade MISSES); PRESS: not marked UNPROVEN on the line
+ok   REPLAY: the 8 judgments of plan rev 2 item 3 are all recorded (1111, 1177, 1208, 1209, 1210, 1212, 1213; 1069 is the negated case) :: 1111,1177,1208,1209,1210,1212,1213
+ok   REPLAY: 1069 "contested, not unexhibited" is not recorded (negation guard)
+ok   REPLAY: the 1210 premise 6 false hit is listed (W1 7593) :: 2 line(s) for 1210
+ok   PLANT: a MEETS reason naming an unexhibited fact is recorded OPEN :: 1 :: [AUDIT v60: ASSUMED FACT UNDER MEETS (ASK 359, TRIAL) -- SEAT: x; LINE: ANSWER CHECK Romans 1:3 [CR3]; WORD: unexhibited; TERMS: mary david; STATUS: OPEN (under option A this MEETS would grade MISSES); PRESS: not marked UNPROVEN on the line; record-only, not c
+ok   PLANT: negated, "not unexhibited", is not recorded :: 0
+ok   PLANT: the word inside a quotation is not read :: 0
+ok   PLANT: a MISSES line is not read :: 0
+ok   PLANT: bare "lineage" is not read (W1 C1) :: 0
+ok   PLANT: negated through a verb, "does not rest on an unexhibited fact", is not recorded :: 0
+ok   PLANT: negated, "is not an assumed fact", is not recorded :: 0
+ok   PLANT: the ASSUMES clause ends at " -- " (the ROWS GIVE field is not read as terms) :: 1 :: [AUDIT v60: ASSUMED FACT UNDER MEETS (ASK 359, TRIAL) -- SEAT: x; LINE: ANSWER CHECK Romans 1:3 [CR3]; WORD: unexhibited; TERMS: mary; STATUS: OPEN (under option A this MEETS would grade MISSES); PRESS: not marked UNPROVEN on the line; record-only, not counted
+ok   PLANT: "assumed ancestry" (W2) is read :: 1 :: [AUDIT v60: ASSUMED FACT UNDER MEETS (ASK 359, TRIAL) -- SEAT: x; LINE: ANSWER CHECK Romans 1:3 [CR3]; WORD: assumed ancestry; TERMS: mary david; STATUS: OPEN (under option A this MEETS would grade MISSES); PRESS: not marked UNPROVEN on the line; record-only, 
+ok   PLANT D3 (W1): Luke 1:27 alone does not cure :: 1 :: [AUDIT v60: ASSUMED FACT UNDER MEETS (ASK 359, TRIAL) -- SEAT: x; LINE: ANSWER CHECK Romans 1:3 [CR3]; WORD: unexhibited; TERMS: mary david; STATUS: OPEN (under option A this MEETS would grade MISSES); PRESS: not marked UNPROVEN on the line; record-only, not c
+ok   PLANT E5 (W2): Luke 1:27 joined to Romans 1:3 only by "David" does not cure (padding row) :: 1 :: [AUDIT v60: ASSUMED FACT UNDER MEETS (ASK 359, TRIAL) -- SEAT: x; LINE: ANSWER CHECK Romans 1:3 [CR3]; WORD: unexhibited; TERMS: mary david; STATUS: OPEN (under option A this MEETS would grade MISSES); PRESS: not marked UNPROVEN on the line; record-only, not c
+ok   PLANT: a misquoted row does not cure :: 1 :: [AUDIT v60: ASSUMED FACT UNDER MEETS (ASK 359, TRIAL) -- SEAT: x; LINE: ANSWER CHECK Romans 1:3 [CR3]; WORD: unexhibited; TERMS: mary david; STATUS: OPEN (under option A this MEETS would grade MISSES); PRESS: not marked UNPROVEN on the line; record-only, not c
+ok   PLANT: two rows, each holding a term the other lacks, joined by a name (Joseph), cure (structure only; W1 D1: necessary, not sufficient) :: 1 :: [AUDIT v60: ASSUMED FACT UNDER MEETS (ASK 359, TRIAL) -- SEAT: x; LINE: ANSWER CHECK Romans 1:3 [CR3]; WORD: unexhibited; TERMS: mary david; STATUS: CURED BY ROWS Matthew 1:16, Matthew 1:20; PRESS: not marked UNPROVEN on the line; record-only, not counted in d
+ok   PLANT: a third row whose term another row already holds is padding, so no cure (W2 E5) :: 1 :: [AUDIT v60: ASSUMED FACT UNDER MEETS (ASK 359, TRIAL) -- SEAT: x; LINE: ANSWER CHECK Romans 1:3 [CR3]; WORD: unexhibited; TERMS: mary david; STATUS: OPEN (under option A this MEETS would grade MISSES); PRESS: not marked UNPROVEN on the line; record-only, not c
+ok   PLANT: two verified rows that share no name or term do not join, so no cure (brackets are read as plain words, W2 E4) :: 1 :: [AUDIT v60: ASSUMED FACT UNDER MEETS (ASK 359, TRIAL) -- SEAT: x; LINE: ANSWER CHECK Romans 1:3 [CR3]; WORD: unexhibited; TERMS: mary david; STATUS: OPEN (under option A this MEETS would grade MISSES); PRESS: not marked UNPROVEN on the line; record-only, not c
+ok   PLANT: the pressed verse alone, quoted twice, does not cure :: 1 :: [AUDIT v60: ASSUMED FACT UNDER MEETS (ASK 359, TRIAL) -- SEAT: x; LINE: ANSWER CHECK Romans 1:3 [CR3]; WORD: unexhibited; TERMS: mary david; STATUS: OPEN (under option A this MEETS would grade MISSES); PRESS: not marked UNPROVEN on the line; record-only, not c
+ok   PLANT: clause end at "Rom. 1:3" (W2 E2): the clause runs past the abbreviation :: 1 :: [AUDIT v60: ASSUMED FACT UNDER MEETS (ASK 359, TRIAL) -- SEAT: x; LINE: ANSWER CHECK Romans 1:3 [CR3]; WORD: unexhibited; TERMS: mary david per rom judah; STATUS: OPEN (under option A this MEETS would grade MISSES); PRESS: not marked UNPROVEN on the line; reco
+ok   PLANT: an UNPROVEN press is marked on the record line :: 1 :: [AUDIT v60: ASSUMED FACT UNDER MEETS (ASK 359, TRIAL) -- SEAT: x; LINE: ANSWER CHECK Romans 1:3 [CR3]; WORD: unexhibited; TERMS: mary david; STATUS: OPEN (under option A this MEETS would grade MISSES); PRESS: marked UNPROVEN on the line; record-only, not count
+ok   PLANT: a body already holding AUDIT v60 is left as it is
+ok   record only: every payload field but verdict_raw unchanged; verdict_raw only grows
+ok   MUST AGREE row 43241 shape: a MISSES for "asserts Mary's Davidic descent without a supporting row" raises no record (the rule agrees with MISSES)
+   STOP list (135): a an the and or of to in on at by for with from as is are was were be been being it its this that these those he she they him her his them their which who whom whose what not no nor but if then than so such through into upon unto via also both own one any all each every some there here has have had having do does did shall will would may might can could must should carries carry carried carrying gives give given gave comes came come belongs belonged belong stands stand stood is line lines route routes reckoning reckoned fact facts maternal paternal physical bodily biological flesh seed descent descended ancestry lineage house tribe tribal family fathers father via i lord god herself himself itself individual individually line
+   VAR pairs: {"juda":"judah","davidic":"david"}
+51 checks, ALL OK
