@@ -46,6 +46,15 @@ P('amended C1: a reference in prose does not count',LAY.structure('LINK 4: SUPPO
 P('amended C1: two [L3] verses and no [L1] are short',/no \[L1\]/.test((LAY.structure('LINK 4: SUPPORTED\n[L3] Matthew 1:18 "before they came together, she was found with child"\n[L3] Luke 1:34 "How shall this be, seeing I know not a man?"')[0]||{}).why||''));
 P('F3: the ANSWER row form reads as an [L1] with its reference',LAY.structure('## D3: Mary a virgin; Joseph knew her not until the birth\nANSWER: Matthew 1:25 -- D3 -- "And knew her not till she had brought forth her firstborn son"\n- [L3] Genesis 4:1: "Adam knew Eve his wife; and she conceived."').length===0);
 P('F3: the MEANS row form reads as an [L1] with its reference',LAY.structure('PREMISE 2: the order\nMatthew 1:18 "before they came together, she was found with child" -- MEANS: the finding precedes the union\n[L3] Luke 1:34 "How shall this be, seeing I know not a man?"').length===0);
+// rev 2.3 (W3 7674, W1 7676): heads read as critical points
+const B1='\n[L1] Luke 1:34: "Then said Mary unto the angel, How shall this be, seeing I know not a man?"\nThe point rests on this one verse alone and on nothing more said here.';
+P('2.3: a numbered prefix before LINK is read ("**1. LINK 6")',LAY.structure('**1. LINK 6 -- the record states it.**'+B1).length===1);
+P('2.3: a roman-numbered heading with content under it is read',LAY.structure('## II. PRESSES ON THE CHAIN'+B1).length===1);
+P('2.3: a "Point n" heading is read',LAY.structure('#### Point 3: the body'+B1).length===1);
+P('2.3: a PRESS head is read',LAY.structure('**PRESS on LINK C1:** the record states it.'+B1).length===1);
+P('2.3: a PRESSED WITH line is not a head (no block opens there)',LAY.structure('PRESSED WITH: Luke 1:34, Matthew 1:18.'+B1).length===0);
+P('2.3: a numbered heading with no content under it is skipped',LAY.structure('## I. ANSWERS TO THE PRESSES\n## II. CLOSE').length===0);
+P('2.3: a plain numbered list line (not a heading) does not open a block',LAY.structure('1. The challenger infers that the conception occurred in the espousal.'+B1).length===0);
 // Node runs
 const rows=JSON.parse(fs.readFileSync('def_rounds.json'));const r91=rows.find(x=>x.run_token.includes('37891'));
 const call={fam:'openrouter',fam_idx:5,model:'m',body:{model:'m',messages:[{role:'user',content:'x'}]}};
@@ -71,5 +80,5 @@ ok('resend-only file: the same record, no line written into the round',!XR.raw.i
 for(const [r,k] of [['D2','r2'],['D4','r4']]){const e={...env(''),[r+' Extract']:{run_token:'T',raw:r91[k],labelled:'L',msg_id:'i',fam:'openrouter',model:'m'},[r+' Build']:{call}};let g=null,er=null;try{g=run(NB[r+'B Build'].parameters.jsCode,e,{})[0].json;}catch(x){er=x.message;}ok('REAL 37891 '+k+': '+r+'B Build runs and reads the layers',!!g&&g.lay_check!==undefined||(!!g&&g.resend===false),er||(g&&g.why));}
 // Replay (G1, F2): every flag listed for the hand read
 const L=[];const per={};for(const x of rows)for(const k of ['r1','r2','r3','r4']){const c=LAY.check(x[k]);per[k]=per[k]||{runs:0,words:0,structure:0};if(c.items.length)per[k].runs++;for(const it of c.items){it.kind==='WORDS'?per[k].words++:per[k].structure++;L.push([x.run_token,k,it.id,it.kind,(it.kind==='WORDS'?it.line:it.head).replace(/\s+/g,' ').slice(0,400),it.why].join(' | '));}}
-fs.writeFileSync('replay364_flags_rev2.txt',L.join('\n')+'\n');console.log('   replay over '+rows.length+' stored runs (rounds 2 to 4 are Part A): '+JSON.stringify(per));
+fs.writeFileSync('replay364_flags_rev23.txt',L.join('\n')+'\n');console.log('   replay over '+rows.length+' stored runs (rounds 2 to 4 are Part A): '+JSON.stringify(per));
 console.log(n-fails+' of '+n+' pass');process.exit(fails?1:0);

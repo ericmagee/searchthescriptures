@@ -2,7 +2,7 @@ ok   only the six D2B/D3B/D4B Build and Extract nodes change; node order, connec
 ok   no Call node changes (model settings copied by not touching them)
 ok   the two files differ only in the three Extract nodes, at LAY_BARE :: D2B Extract, D3B Extract, D4B Extract
 ok   syntax of the six nodes in both files
-ok   the LAY module is byte-equal in all six nodes :: 7752 chars
+ok   the LAY module is byte-equal in all six nodes :: 8032 chars
 ok   the old barred-moves code is kept: each node still holds its BAR check and note
 ok   REAL 37891 row: "at all" is flagged :: at all
 ok   C4a PLANT: a word standing only in an [L2] gloss is flagged :: never
@@ -28,6 +28,13 @@ ok   REV2 amended C1: a reference in prose does not count
 ok   REV2 amended C1: two [L3] verses and no [L1] are short
 ok   REV2 F3: the ANSWER row form reads as an [L1] with its reference
 ok   REV2 F3: the MEANS row form reads as an [L1] with its reference
+ok   REV2 2.3: a numbered prefix before LINK is read ("**1. LINK 6")
+ok   REV2 2.3: a roman-numbered heading with content under it is read
+ok   REV2 2.3: a "Point n" heading is read
+ok   REV2 2.3: a PRESS head is read
+ok   REV2 2.3: a PRESSED WITH line is not a head (no block opens there)
+ok   REV2 2.3: a numbered heading with no content under it is skipped
+ok   REV2 2.3: a plain numbered list line (not a heading) does not open a block
 ok   REAL 37891 round 3: the defender is sent back (layers alone, no barred sentence) :: 0 barred sentence(s); 9 layer point(s)
 ok   the resend continues the defender's own call (assistant = its round, user = the note)
 ok   the base would not have sent this round back :: no barred move harvested
@@ -43,5 +50,5 @@ ok   bare file: one BARE CLAIM line per point still short, written into the roun
 ok   resend-only file: the same record, no line written into the round
 ok   REAL 37891 r2: D2B Build runs and reads the layers :: no barred move harvested
 ok   REAL 37891 r4: D4B Build runs and reads the layers :: no barred move harvested
-   replay over 12 stored runs (rounds 2 to 4 are Part A): {"r1":{"runs":0,"words":0,"structure":0},"r2":{"runs":4,"words":0,"structure":14},"r3":{"runs":6,"words":12,"structure":5},"r4":{"runs":2,"words":0,"structure":12}}
-45 of 45 pass
+   replay over 12 stored runs (rounds 2 to 4 are Part A): {"r1":{"runs":1,"words":0,"structure":1},"r2":{"runs":7,"words":0,"structure":22},"r3":{"runs":6,"words":12,"structure":5},"r4":{"runs":3,"words":0,"structure":13}}
+52 of 52 pass
