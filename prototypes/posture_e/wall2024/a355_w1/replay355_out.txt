@@ -1,0 +1,38 @@
+42223 37812 E-COL sol COLLISION D6 vs C6 | CB Matthew 1:20 | live SENT -> ASK355 SENT 
+42224 37812 E-COL sol COLLISION D6 vs C6 | CB Matthew 1:20 | live SENT -> ASK355 SENT 
+42227 37812 E-COL luna COLLISION D6 vs C6 | CB Acts 2:30 | live SENT -> ASK355 HELD   CHANGED: its CARRIED BY Acts 2:30 is the line's own pressed verse; the words in dispute cannot carry a rival reading of themselves; a rival reading is carried by another
+42228 37812 E-COL luna COLLISION D6 vs C6 | CB Acts 2:30 | live SENT -> ASK355 HELD   CHANGED: its CARRIED BY Acts 2:30 is the line's own pressed verse, read from its collision line; the words in dispute cannot carry a rival reading of themselves; a rival
+42229 37812 E-COL luna COLLISION D6 vs C6 | CB Acts 2:30 | live SENT -> ASK355 HELD   CHANGED: its CARRIED BY Acts 2:30 is the line's own pressed verse, read from its collision line; the words in dispute cannot carry a rival reading of themselves; a rival
+42232 37812 E-HOLD chatgpt COLLISION D1 vs C3 | CB undefined | live n/a -> ASK355 n/a 
+42233 37812 E-HOLD chatgpt COLLISION D2 vs C1 | CB undefined | live n/a -> ASK355 n/a 
+42243 37812 E-HOLD luna COLLISION D2 vs C1 | CB undefined | live n/a -> ASK355 n/a 
+42486 37891 E-COL sol COLLISION D4 vs C4 | CB 2 Samuel 7:12 | live SENT -> ASK355 HELD   CHANGED: its CARRIED BY 2 Samuel 7:12 is the line's own pressed verse, read from its collision line; the words in dispute cannot carry a rival reading of themselves; a r
+42492 37891 E-COL sol COLLISION D4 vs C4 | CB 2 Samuel 7:12 | live HELD -> ASK355 HELD 
+42496 37891 E-HOLD chatgpt COLLISION D4 vs C4 | CB undefined | live n/a -> ASK355 n/a 
+42497 37891 E-HOLD chatgpt COLLISION D5 vs C4 | CB Luke 2:48 | live n/a -> ASK355 n/a 
+42498 37891 E-HOLD sol COLLISION D1 vs C1 | CB undefined | live n/a -> ASK355 n/a 
+42502 37891 E-HOLD luna COLLISION D2 vs C2 | CB undefined | live n/a -> ASK355 n/a 
+42503 37891 E-HOLD luna COLLISION D4 vs C4 | CB undefined | live n/a -> ASK355 n/a 
+42659 37891 E-COL grok COLLISION D1 vs C1 | CB Matthew 1:20 | live SENT -> ASK355 HELD   CHANGED: its CARRIED BY Matthew 1:20 is the line's own pressed verse; the words in dispute cannot carry a rival reading of themselves; a rival reading is carried by anot
+42660 37891 E-COL grok COLLISION D1 vs C1 | CB Matthew 1:20 | live SENT -> ASK355 HELD   CHANGED: its CARRIED BY Matthew 1:20 is the line's own pressed verse, read from its collision line; the words in dispute cannot carry a rival reading of themselves; a ri
+42661 37891 E-COL grok COLLISION D2 vs C2 | CB Luke 1:35 | live EXEMPT(sent) -> ASK355 HELD   CHANGED: its CARRIED BY Luke 1:35 is the line's own pressed verse; the words in dispute cannot carry a rival reading of themselves; a rival reading is carried by another
+42662 37891 E-COL grok COLLISION D2 vs C2 | CB Luke 1:35 | live SENT -> ASK355 HELD   CHANGED: its CARRIED BY Luke 1:35 is the line's own pressed verse, read from its collision line; the words in dispute cannot carry a rival reading of themselves; a rival
+ok   MUST NOT PASS 42486 is HELD on the pressed verse :: HELD
+ok   MUST NOT PASS 42659 is HELD on the pressed verse :: HELD
+ok   MUST NOT PASS 42660 is HELD on the pressed verse :: HELD
+ok   MUST NOT PASS 42661 is HELD on the pressed verse :: HELD
+ok   MUST NOT PASS 42662 is HELD on the pressed verse :: HELD
+ok   MUST NOT PASS 42227 is HELD on the pressed verse :: HELD
+ok   MUST NOT PASS 42228 is HELD on the pressed verse :: HELD
+ok   MUST NOT PASS 42229 is HELD on the pressed verse :: HELD
+ok   MUST STILL PASS 42223 reads as live :: SENT
+ok   MUST STILL PASS 42224 reads as live :: SENT
+ok   no other row changes status :: 42227,42228,42229,42486,42659,42660,42661,42662
+ok   PLANT MUST STILL PASS: CARRIED BY an [L3] verse of the GROUND (Matthew 1:24) is sent :: CARRIED BY Matthew 1:24 "did as the angel of the Lord had bidden him, and took unto him his wife": the words stand in the verse and the answering round cites it
+ok   PLANT MUST NOT PASS: CARRIED BY the [L1] verse is HELD :: its CARRIED BY Matthew 1:25 is the line's own pressed verse; the words in dispute cannot carry a rival reading of themselves; a rival reading is carried by another row read with it (Commitment 16; ASK 355)
+ok   PLANT: a FORCED item reads its pressed verse from the same seat's collision line :: its CARRIED BY Matthew 1:25 is the line's own pressed verse, read from its collision line; the words in dispute cannot carry a rival reading of themselves; a rival reading is carried by another row read with it (Commitment 16; ASK 355)
+ok   PLANT: another seat's collision line is not read (no pressed verse found; the gate reads as live) :: CARRIED BY Matthew 1:25 "And knew her not till she had brought forth her firstborn son": the words stand in the verse and the answering round cites it
+ok   PLANT: the pressed-verse rule does not apply to an AGREE :: {"applies":false}
+ok   PLANT: an absence ground with no CARRIED BY stays exempt as live
+ok   PLANT (row 42661 form): an absence word plus a CARRIED BY goes through the gate :: its CARRIED BY Matthew 1:25 is the line's own pressed verse; the words in dispute cannot carry a rival reading of themselves; a rival reading is carried by another row read with it (Commitment 16; ASK 355)
+18 checks, ALL OK
