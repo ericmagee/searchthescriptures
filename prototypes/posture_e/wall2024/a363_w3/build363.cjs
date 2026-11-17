@@ -1,4 +1,4 @@
-// ASK 363 (plan Wall 7616; reads W1 7618 E1-E3, W2 7619 L1-L5): verdict lines rest on the verses read together through the layers.
+// ASK 363 rev 2 (W1 7623: (d) matches the whole reference). ASK 363 (plan Wall 7616; reads W1 7618 E1-E3, W2 7619 L1-L5): verdict lines rest on the verses read together through the layers.
 // Base: W2's ASK 362 target (target362.json, file sha256 b405f30f7d10; on s245 + ASK 360). Usage: node build363.cjs <base> <out>
 const fs=require('fs'),crypto=require('crypto');const {unpack,rb}=require(process.env.LIBCJS||'../a336/inputs/tools/lib.cjs');
 const bt=fs.readFileSync(process.argv[2]);if(crypto.createHash('sha256').update(bt).digest('hex').slice(0,12)!=='b405f30f7d10')throw new Error('base moved');
@@ -24,7 +24,7 @@ const o=B.map(s=>{let b;try{b=JSON.parse(s);}catch(e){return s;}const p=b.payloa
   if(!a.length)f.push('(a) no [L1] with its reference');if(!c3.length)f.push('(b) no [L3] with a reference other than its [L1]');
   if(!has(l,4))f.push('(c) no [L4] step');else if(!a.length||!c3.length)f.push('(c) its [L4] stands on a line without both an [L1] and an [L3]');
   const labs=[...new Set([...l.matchAll(/\b(D\d+)\s+vs\.?\s+(C\d+)\b/gi)].map(m=>(m[1]+' VS '+m[2]).toUpperCase()))];const gr=labs.map(x=>G[x]||'').join(' ');
-  if(!labs.length)f.push('(d) names no collision line to read its [L3] against');else{const miss=c3.filter(r=>!gr.includes(r));if(miss.length)f.push('(d) [L3] '+miss.join(', ')+' stands in no GROUND of '+labs.join(', '));if(!/[\[(]L3[\])]/.test(gr))f.push('the GROUNDs of '+labs.join(', ')+' name no [L3]');}
+  if(!labs.length)f.push('(d) names no collision line to read its [L3] against');else{const hasRef=(g,r)=>new RegExp('(?:^|[^A-Za-z0-9])'+r.replace(/[.*+?^$(){}|[\]\\]/g,'\\$&').replace(/ /g,'\\s+')+'(?![0-9]|:\\d)').test(g);const miss=c3.filter(r=>!hasRef(gr,r)); /* rev 2 (W1 7623): the whole reference, so Romans 1:3 does not match Romans 1:30 */if(miss.length)f.push('(d) [L3] '+miss.join(', ')+' stands in no GROUND of '+labs.join(', '));if(!/[\[(]L3[\])]/.test(gr))f.push('the GROUNDs of '+labs.join(', ')+' name no [L3]');}
   if(f.length)rec.push((k?'KEYSTONE '+k[1].toUpperCase():'RESULT')+': '+f.join('; '));}
  const U=[...new Set(rec)];if(!U.length)return s;p.verdict_raw=raw+U.map(x=>'\n[AUDIT v59: LAYERS READ TOGETHER (K-LYR, ASK 363, TRIAL) -- SEAT: '+p.judge_seat+'; LINE: '+x+'; record-only, not counted in drv_uncured; it removes no seat and moves no grade]').join('');ch++;return JSON.stringify(b);});
 return ch?o:null;}`.replace(/\n/g,'');

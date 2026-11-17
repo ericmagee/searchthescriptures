@@ -44,6 +44,8 @@ ok   PLANT (b): an [L3] that repeats the [L1] reference does not count :: 1 :: [
 ok   PLANT (d): an [L3] standing in no GROUND of the named line is recorded :: 1 :: [AUDIT v59: LAYERS READ TOGETHER (K-LYR, ASK 363, TRIAL) -- SEAT: x; LINE: RESULT: (d) [L3] Ezra 2:59 stands in no GROUND of D5 VS C5; record-only, not counted in drv_uncured; it removes no seat and moves no grade]
 ok   PLANT (d): a KEYSTONE naming no collision line is recorded :: 1 :: [AUDIT v59: LAYERS READ TOGETHER (K-LYR, ASK 363, TRIAL) -- SEAT: x; LINE: KEYSTONE D5: (d) names no collision line to read its [L3] against; record-only, not counted in drv_uncured; it removes no seat and moves no grade
 ok   PLANT: the GROUNDs of the named lines carry no [L3]: recorded as the record's own gap :: 1 :: [AUDIT v59: LAYERS READ TOGETHER (K-LYR, ASK 363, TRIAL) -- SEAT: x; LINE: RESULT: (b) no [L3] with a reference other than its [L1]; (c) no [L4] step; the GROUNDs of D5 VS C5 name no [L3]; record-only, not counted in drv
+ok   PLANT rev 2 (W1 7623): [L3] Romans 1:3 against a GROUND holding only Romans 1:30 is recorded (d) :: 1 :: [AUDIT v59: LAYERS READ TOGETHER (K-LYR, ASK 363, TRIAL) -- SEAT: x; LINE: RESULT: (d) [L3] Romans 1:3 stands in no GROUND of D5 VS C5; record-only, not counted in drv_uncured; it removes no seat and moves no grade]
+ok   PLANT rev 2: [L3] Romans 1:3 against a GROUND holding Romans 1:3-4 passes (d) :: 0
 ok   PLANT: a KEYSTONE WITHDRAWN line is passed over :: 0
 ok   PLANT: an engine-derived RESULT is passed over :: 0
 ok   PLANT: AUDIT lines (RESULT: CURED inside) are passed over :: 0
@@ -81,4 +83,4 @@ ok   gcp2024 source equal in base and target Gate Record
    run ODV1-37891-22dsnmk0: {"judgments":3,"lines":5,"lack":{"a":2,"b":5,"c":5,"d":0}}
    run ODV1-38051-souv1g6j: {"judgments":3,"lines":6,"lack":{"a":0,"b":5,"c":6,"d":0}}
    run ODV1-38106-ax8g49bx: {"judgments":3,"lines":6,"lack":{"a":1,"b":6,"c":6,"d":0}}
-48 checks, ALL OK
+50 checks, ALL OK
