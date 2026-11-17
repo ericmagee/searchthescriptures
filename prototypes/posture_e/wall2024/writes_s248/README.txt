@@ -1,0 +1,1 @@
+ASK 363 (W3 build rev 2, TRIAL record only), written 11-17 on the operator card press. Target sha 9a57c179c3d1. Live before: 7abccbaa (s247). Live after: 803532f8-e4ac-4dfb-a217-f90f1fe6918a. Revert: PUT prewrite_s247.json.gz nodes and connections.

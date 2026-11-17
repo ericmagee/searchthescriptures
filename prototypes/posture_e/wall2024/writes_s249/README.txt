@@ -1,0 +1,1 @@
+ASK 361 rev 3 (W4 build), written 11-17 on the operator card press, after ASK 363. Target sha 887cc8b0f0c8. Live before: 803532f8 (s248). Live after: 0d298e3a-33b3-405d-a42d-d2dec54cce3e. Revert: PUT prewrite_s248.json.gz nodes and connections.
