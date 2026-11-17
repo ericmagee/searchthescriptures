@@ -21,5 +21,18 @@ ok   PLANT (W1 7535) not read: The answer misses the pressed meaning of the vers
 ok   PLANT (W1 7535) not read: the pressed meaning is not met by the answer.
 ok   PLANT (W1 7535) not read: it is not true that the answer misses the press.
 ok   PLANT (W1 7535) not read: the meaning pressed is not met.
+ok   PLANT (W3 7542) not read: the meaning that was pressed is not met.
+ok   PLANT (W3 7542) not read: The answer misses the meanings pressed.
+ok   PLANT (W3 7542) not read: The answer does not meet the pressed meanings.
+ok   PLANT (W3 7542) not read: The answer fails to meet the pressed words’ meaning.
+ok   PLANT (W3 7542) not read: The answer fails to meet the pressed words' meaning.
+ok   PLANT (W3 7542) still read: The answer misses the press.
+ok   PLANT (W3 7542) still read: The press is not met.
+ok   PLANT (W3 7542) still read: The answer does not meet the proven timing press.
+ok   PLANT (W3 7542) still read: The answer misses the pressed inference about the meaning of 'knew'.
+ok   PLANT (W1 7543) not read: the answer misses the meanings pressed.
+ok   PLANT (W1 7543) not read: the answer misses the senses pressed.
+ok   PLANT (W1 7543) not read: the answer misses the readings pressed.
+ok   PLANT (W1 7543) not read: the answer misses the pressed meanings.
 ok   no new operator name in the library
-24 checks, ALL OK
+37 checks, ALL OK
