@@ -1,0 +1,22 @@
+ok   library lines changed are 809, 1068-1074, 3315 only, line count unchanged :: 809, 1068, 1069, 1070, 1071, 1072, 1073, 1074, 3315
+ok   only the Shared Library node changed :: Shared Library
+ok   connections and settings unchanged
+ok   every MAP entry rebuilds to its n :: 45 entries
+ok   syntax of every changed library entry :: 29 entries
+ok   lines 1069-1074 hold only the one comment (1069) and empty lines
+ok   no library line still offers the quoted-reason retraction cure
+ok   prompt line 809 reads "cured only by one FORCED line; a retraction does not cure it (ruling 421)"
+ok   REAL line 41138 + REAL retraction lines: the live library cures the retraction by its quoted reason :: CURED: retracted with a quoted reason the transcript verifies: [DR3] "the terminus-event stated; till bounds abstinence to pregnancy, begetting by knowing within wedlock before 
+ok   REAL line 41138 + REAL retraction lines: ASK 352 reads UNCURED (ruling 421) :: UNCURED: retracted, but the GROUND names no pressed witness left unanswered, so the BROKEN grade rests on meaning: only a FORCED line cures it; a retraction does not (ruling 421; 
+ok   REAL line 42366 (terra, run 37891) + REAL retraction lines: live CURED, ASK 352 UNCURED (manual row: its GROUND names no witness left unanswered) :: CURED: retracted with a quoted reason the transcript verifies: [CR3] "2 Samuel 7:12 promises seed proceeding from David's body, which is transmitted through Mary to Christ who w || UNCURED: retracted, but the GROUND names no pressed witness left unanswered, so the BROKEN grade rests on meaning: only a FORCED line cures it; a retraction does not (ruling 421; 
+ok   PLANT GROUND names a witness left unanswered: retraction CURED, same as live :: CURED: retracted
+ok   PLANT FORCED line on the meaning break 41138: CURED, same as live :: CURED: forced link: a FORCED line for D4 vs C4 (ruling 411); K-F reads its quotations
+ok   PLANT retraction with no reason: UNCURED as live (ruling 105 path unchanged) :: UNCURED: RETRACTED with no reason naming the round and its words or verse (rulings 105)
+ok   PLANT retraction with two CORRECTED RESULT lines: UNCURED as live :: UNCURED: RETRACTED without exactly one CORRECTED RESULT line
+ok   PLANT the same retraction on a K-G7 item reads the same as live (only K-G4 changes) :: CURED: retracted
+ok   gate label for a meaning break: FORCED line form, "A retraction does not cure it (ruling 421)", no quoted-reason cure ::  [MEANING BREAK: your GROUND names no pressed witness left unanswered, so this break rests on meaning. One FORCED line cures it: FORCED: D<n> vs C<m> -- MEANS [<round>]: "<...>" -- ANSWER [<round>]: "<...>" -- FAILS: "<.
+ok   gate label for an unanswered-witness break: same as live
+ok   recompute, live library: the cured retraction is applied and the challenge standing moves :: PROP-DEPENDENT/1 RETRACTED D4 vs C4 (CHALLENGER LINK BROKEN to UNDERDETERMINED)
+ok   recompute, ASK 352: the retraction is not applied; the BROKEN grade stands :: no change
+ok   K-G4 is LIVE in ENF_STATUS (an uncured item counts in drv_uncured) :: LIVE
+21 checks, ALL OK
