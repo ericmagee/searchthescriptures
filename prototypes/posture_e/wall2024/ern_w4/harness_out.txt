@@ -1,42 +1,42 @@
 == chatgpt_claude
-  fetchback_s257.json accept chatgpt,sol,sol62,haiku,hydrogen,gemini,argon,spark,ernie,ember,sonnet | panel hydrogen,gemini,argon | res spark | alt spark,ernie,ember | single hydrogen | ralts spark,ernie,ember
-  tern_on257.json accept chatgpt,sol,sol62,haiku,hydrogen,gemini,argon,spark,ember,sonnet | panel hydrogen,gemini,argon | res spark | alt spark,ember | single hydrogen | ralts spark,ember
+  fetchback_s257.json panel hydrogen,gemini,argon | res spark | alt spark,ernie,ember | single hydrogen | accept 11
+  tern_on257.json panel hydrogen,gemini,argon | res spark | alt spark,ember | single hydrogen | accept 10
 == chatgpt_gemini
-  fetchback_s257.json accept chatgpt,sol,sol62,haiku,hydrogen,gemini,argon,spark,ernie,ember,sonnet | panel haiku,spark,ernie | res ember | alt ember,sonnet | single spark | ralts ember,sonnet
-  tern_on257.json accept chatgpt,sol,sol62,haiku,hydrogen,gemini,argon,spark,ember,sonnet | panel haiku,spark,ember | res sonnet | alt sonnet | single spark | ralts sonnet
+  fetchback_s257.json panel haiku,spark,ernie | res ember | alt ember,sonnet | single spark | accept 11
+  tern_on257.json panel haiku,spark,ember | res sonnet | alt sonnet | single spark | accept 10
 == chatgpt_opus
-  fetchback_s257.json accept chatgpt,sol,sol62,haiku,hydrogen,gemini,argon,spark,ernie,ember,sonnet | panel hydrogen,gemini,argon | res spark | alt spark,ernie,ember | single hydrogen | ralts spark,ernie,ember
-  tern_on257.json accept chatgpt,sol,sol62,haiku,hydrogen,gemini,argon,spark,ember,sonnet | panel hydrogen,gemini,argon | res spark | alt spark,ember | single hydrogen | ralts spark,ember
+  fetchback_s257.json panel hydrogen,gemini,argon | res spark | alt spark,ernie,ember | single hydrogen | accept 11
+  tern_on257.json panel hydrogen,gemini,argon | res spark | alt spark,ember | single hydrogen | accept 10
 == chatgpt_sol
   fetchback_s257.json Init refused: '+m+RT);};
   tern_on257.json Init refused: '+m+RT);};
 == chatgpt_spark
-  fetchback_s257.json accept chatgpt,sol,sol62,haiku,hydrogen,gemini,argon,spark,ernie,ember,sonnet | panel haiku,hydrogen,gemini | res argon | alt argon,ernie,sonnet | single hydrogen | ralts argon,ernie,sonnet
-  tern_on257.json accept chatgpt,sol,sol62,haiku,hydrogen,gemini,argon,spark,ember,sonnet | panel haiku,hydrogen,gemini | res argon | alt argon,sonnet | single hydrogen | ralts argon,sonnet
+  fetchback_s257.json panel haiku,hydrogen,gemini | res argon | alt argon,ernie,sonnet | single hydrogen | accept 11
+  tern_on257.json panel haiku,hydrogen,gemini | res argon | alt argon,sonnet | single hydrogen | accept 10
 == claude_haiku
-  fetchback_s257.json accept chatgpt,sol,sol62,haiku,hydrogen,gemini,argon,spark,ernie,ember,sonnet | panel chatgpt,sol,sol62 | res hydrogen | alt hydrogen,gemini,argon,spark,ernie,ember,sonnet | single chatgpt | ralts hydrogen,gemini,argon,spark,ernie,ember,sonnet
-  tern_on257.json accept chatgpt,sol,sol62,haiku,hydrogen,gemini,argon,spark,ember,sonnet | panel chatgpt,sol,sol62 | res hydrogen | alt hydrogen,gemini,argon,spark,ember,sonnet | single chatgpt | ralts hydrogen,gemini,argon,spark,ember,sonnet
+  fetchback_s257.json panel chatgpt,sol,sol62 | res hydrogen | alt hydrogen,gemini,argon,spark,ernie,ember,sonnet | single chatgpt | accept 11
+  tern_on257.json panel chatgpt,sol,sol62 | res hydrogen | alt hydrogen,gemini,argon,spark,ember,sonnet | single chatgpt | accept 10
 == claude_opus
-  fetchback_s257.json accept chatgpt,sol,sol62,haiku,hydrogen,gemini,argon,spark,ernie,ember,sonnet | panel chatgpt,sol,sol62 | res haiku | alt haiku,hydrogen,gemini,argon,spark,ernie,ember,sonnet | single chatgpt | ralts haiku,hydrogen,gemini,argon,spark,ernie,ember,sonnet
-  tern_on257.json accept chatgpt,sol,sol62,haiku,hydrogen,gemini,argon,spark,ember,sonnet | panel chatgpt,sol,sol62 | res haiku | alt haiku,hydrogen,gemini,argon,spark,ember,sonnet | single chatgpt | ralts haiku,hydrogen,gemini,argon,spark,ember,sonnet
+  fetchback_s257.json panel chatgpt,sol,sol62 | res haiku | alt haiku,hydrogen,gemini,argon,spark,ernie,ember,sonnet | single chatgpt | accept 11
+  tern_on257.json panel chatgpt,sol,sol62 | res haiku | alt haiku,hydrogen,gemini,argon,spark,ember,sonnet | single chatgpt | accept 10
 == gemini_mimo
-  fetchback_s257.json accept chatgpt,sol,sol62,haiku,hydrogen,gemini,argon,spark,ernie,ember,sonnet | panel chatgpt,sol,sol62 | res haiku | alt haiku,spark,ernie,ember,sonnet | single chatgpt | ralts haiku,spark,ernie,ember,sonnet
-  tern_on257.json accept chatgpt,sol,sol62,haiku,hydrogen,gemini,argon,spark,ember,sonnet | panel chatgpt,sol,sol62 | res haiku | alt haiku,spark,ember,sonnet | single chatgpt | ralts haiku,spark,ember,sonnet
+  fetchback_s257.json panel chatgpt,sol,sol62 | res haiku | alt haiku,spark,ernie,ember,sonnet | single chatgpt | accept 11
+  tern_on257.json panel chatgpt,sol,sol62 | res haiku | alt haiku,spark,ember,sonnet | single chatgpt | accept 10
 == gemini_spark
-  fetchback_s257.json accept chatgpt,sol,sol62,haiku,hydrogen,gemini,argon,spark,ernie,ember,sonnet | panel chatgpt,sol,sol62 | res haiku | alt haiku,ernie,sonnet | single chatgpt | ralts haiku,ernie,sonnet
-  tern_on257.json accept chatgpt,sol,sol62,haiku,hydrogen,gemini,argon,spark,ember,sonnet | panel chatgpt,sol,sol62 | res haiku | alt haiku,sonnet | single chatgpt | ralts haiku,sonnet
+  fetchback_s257.json panel chatgpt,sol,sol62 | res haiku | alt haiku,ernie,sonnet | single chatgpt | accept 11
+  tern_on257.json panel chatgpt,sol,sol62 | res haiku | alt haiku,sonnet | single chatgpt | accept 10
 == glm_spark
-  fetchback_s257.json accept chatgpt,sol,sol62,haiku,hydrogen,gemini,argon,spark,ernie,ember,sonnet | panel chatgpt,sol,sol62 | res haiku | alt haiku,hydrogen,gemini,argon,ernie,sonnet | single chatgpt | ralts haiku,hydrogen,gemini,argon,ernie,sonnet
-  tern_on257.json accept chatgpt,sol,sol62,haiku,hydrogen,gemini,argon,spark,ember,sonnet | panel chatgpt,sol,sol62 | res haiku | alt haiku,hydrogen,gemini,argon,sonnet | single chatgpt | ralts haiku,hydrogen,gemini,argon,sonnet
+  fetchback_s257.json panel chatgpt,sol,sol62 | res haiku | alt haiku,hydrogen,gemini,argon,ernie,sonnet | single chatgpt | accept 11
+  tern_on257.json panel chatgpt,sol,sol62 | res haiku | alt haiku,hydrogen,gemini,argon,sonnet | single chatgpt | accept 10
 == haiku_gemini
-  fetchback_s257.json accept chatgpt,sol,sol62,haiku,hydrogen,gemini,argon,spark,ernie,ember,sonnet | panel chatgpt,sol,sol62 | res spark | alt spark,ernie,ember | single chatgpt | ralts spark,ernie,ember
-  tern_on257.json accept chatgpt,sol,sol62,haiku,hydrogen,gemini,argon,spark,ember,sonnet | panel chatgpt,sol,sol62 | res spark | alt spark,ember | single chatgpt | ralts spark,ember
+  fetchback_s257.json panel chatgpt,sol,sol62 | res spark | alt spark,ernie,ember | single chatgpt | accept 11
+  tern_on257.json panel chatgpt,sol,sol62 | res spark | alt spark,ember | single chatgpt | accept 10
 == opus_gemini
-  fetchback_s257.json accept chatgpt,sol,sol62,haiku,hydrogen,gemini,argon,spark,ernie,ember,sonnet | panel chatgpt,sol,sol62 | res spark | alt spark,ernie,ember | single chatgpt | ralts spark,ernie,ember
-  tern_on257.json accept chatgpt,sol,sol62,haiku,hydrogen,gemini,argon,spark,ember,sonnet | panel chatgpt,sol,sol62 | res spark | alt spark,ember | single chatgpt | ralts spark,ember
+  fetchback_s257.json panel chatgpt,sol,sol62 | res spark | alt spark,ernie,ember | single chatgpt | accept 11
+  tern_on257.json panel chatgpt,sol,sol62 | res spark | alt spark,ember | single chatgpt | accept 10
 == opus_spark
-  fetchback_s257.json accept chatgpt,sol,sol62,haiku,hydrogen,gemini,argon,spark,ernie,ember,sonnet | panel chatgpt,sol,sol62 | res hydrogen | alt hydrogen,gemini,argon,ernie | single chatgpt | ralts hydrogen,gemini,argon,ernie
-  tern_on257.json accept chatgpt,sol,sol62,haiku,hydrogen,gemini,argon,spark,ember,sonnet | panel chatgpt,sol,sol62 | res hydrogen | alt hydrogen,gemini,argon | single chatgpt | ralts hydrogen,gemini,argon
+  fetchback_s257.json panel chatgpt,sol,sol62 | res hydrogen | alt hydrogen,gemini,argon,ernie | single chatgpt | accept 11
+  tern_on257.json panel chatgpt,sol,sol62 | res hydrogen | alt hydrogen,gemini,argon | single chatgpt | accept 10
 == qwen4max_spark
-  fetchback_s257.json accept chatgpt,sol,sol62,haiku,hydrogen,gemini,argon,spark,ernie,ember,sonnet | panel chatgpt,sol,sol62 | res haiku | alt haiku,hydrogen,gemini,argon,ernie,sonnet | single chatgpt | ralts haiku,hydrogen,gemini,argon,ernie,sonnet
-  tern_on257.json accept chatgpt,sol,sol62,haiku,hydrogen,gemini,argon,spark,ember,sonnet | panel chatgpt,sol,sol62 | res haiku | alt haiku,hydrogen,gemini,argon,sonnet | single chatgpt | ralts haiku,hydrogen,gemini,argon,sonnet
+  fetchback_s257.json panel chatgpt,sol,sol62 | res haiku | alt haiku,hydrogen,gemini,argon,ernie,sonnet | single chatgpt | accept 11
+  tern_on257.json panel chatgpt,sol,sol62 | res haiku | alt haiku,hydrogen,gemini,argon,sonnet | single chatgpt | accept 10
