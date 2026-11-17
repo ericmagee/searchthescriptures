@@ -1,0 +1,13 @@
+stubs 45 compile fails 0
+OK   GOOD RESPONSE 43873 true
+OK   GOOD STATEMENT 43873 true
+OK   GOOD VOID terra true
+OK   BAD quoted charge false
+OK   BAD topic prose false
+OK   BAD topic + quote false
+OK   curly quote’s true
+OK   BAD after-order prose false
+OK   BAD quoted charge after-order false
+INFO LIMIT makes false
+INFO LIMIT made false
+INFO LIMIT made2 false
