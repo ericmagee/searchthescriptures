@@ -16,4 +16,9 @@ ok   FLAG (live FLAG) | Premises 1 and 4 are VOID.
 ok   FLAG (live FLAG) | No premise stands; premise 2 is VOID.
 ok   FLAG (live FLAG) | Premise 5 is VOID; it is not spared.
 ok   FLAG (live FLAG) | no premise, as the defender says, is VOID; premise 1 is VOID.
+ok   FLAG (live skip) | No premise is VOID except premise 2.
+ok   FLAG (live FLAG) | Nothing is VOID but premise 4.
+ok   FLAG (live FLAG) | None of the premises is VOID other than premise 3.
+ok   FLAG (live skip) | No premise is VOID save premise 1.
+ok   FLAG (live FLAG) | No listed premise is VOID, besides premise 5.
 ALL OK
