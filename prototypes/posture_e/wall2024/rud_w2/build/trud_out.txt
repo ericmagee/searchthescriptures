@@ -28,4 +28,9 @@ ok   CURE: another rule returns null
 ok   LIST ONLY: a retraction on a link only K-RUD names is not applied (standings unchanged) :: null
 ok   LIST ONLY: with a LIVE item on the same link the retraction applies as on live :: ["D1 vs C1"] vs live ["D1 vs C1"]
 ok   LIST ONLY control: the same K-RUD-only reply on the live library (no guard) applies the retraction :: ["D1 vs C1"]
-29 checks, ALL OK
+ok   PLANT (W1 7493 F1 a): a RESULT or KEYSTONE that keeps the point open: not caught
+ok   PLANT (W1 7493 F1 b): a RESULT or KEYSTONE that keeps the point open: not caught
+ok   PLANT (W1 7493 F1 c): a RESULT or KEYSTONE that keeps the point open: not caught
+ok   PLANT (W1 7493 F1 d): a RESULT or KEYSTONE that keeps the point open: not caught
+ok   PLANT rev 2: a decisive clause with the phrase is still caught :: 1
+34 checks, ALL OK
