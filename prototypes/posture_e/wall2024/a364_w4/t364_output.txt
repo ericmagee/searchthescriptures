@@ -1,0 +1,31 @@
+ok   only the six D2B/D3B/D4B Build and Extract nodes change; node order, connections, settings equal :: D2B Build, D2B Extract, D3B Build, D3B Extract, D4B Build, D4B Extract
+ok   no Call node changes (model settings copied by not touching them)
+ok   the two files differ only in the three Extract nodes, at LAY_BARE :: D2B Extract, D3B Extract, D4B Extract
+ok   syntax of the six nodes in both files
+ok   the LAY module is byte-equal in all six nodes :: 4482 chars
+ok   the old barred-moves code is kept: each node still holds its BAR check and note
+ok   REAL 37891 row: "at all" is flagged :: at all
+ok   C4a PLANT: a word standing only in an [L2] gloss is flagged :: never
+ok   C4c PLANT: the same word standing in a quoted [L3] verse passes :: (none)
+ok   NEG PLANT: "not" in the verse carries "no" and "any" :: (none)
+ok   NEG PLANT: "not" never carries "without" :: without
+ok   PLANT: MEANS words that stand in the verse pass :: (none)
+ok   REAL 38106 row: "without male seed" on Galatians 4:4 is flagged :: without
+ok   C4b PLANT: a critical point with [L1] and [L2] but no [L3] is short :: no [L3] verse with its reference (an [L2] does not stand in its place); its [L4] does not stand on both
+ok   PLANT: the same point with an [L3] verse passes
+ok   PLANT: a PRESSED WITH list is not read for structure
+ok   REAL 37891 round 3: the defender is sent back (layers alone, no barred sentence) :: 0 barred sentence(s); 7 layer point(s)
+ok   the resend continues the defender's own call (assistant = its round, user = the note)
+ok   the base would not have sent this round back :: no barred move harvested
+ok   PLANT clean round: no resend :: no barred move harvested
+ok   G4 PLANT clean round: it passes through Extract byte-equal
+ok   PLANT barred-only round: the note is the barred-moves note alone :: 1 barred sentence(s); 0 layer point(s)
+ok   PLANT both faults: one resend carries both notes :: 1 barred sentence(s); 1 layer point(s)
+ok   C3: the resent round replaces the first before the next node reads it
+ok   N2: the kept round is checked again and every point still short is recorded :: 7 -> 6
+ok   bare file: one BARE CLAIM line per point still short, written into the round and the labelled round
+ok   resend-only file: the same record, no line written into the round
+ok   REAL 37891 r2: D2B Build runs and reads the layers :: 0 barred sentence(s); 4 layer point(s)
+ok   REAL 37891 r4: D4B Build runs and reads the layers :: no barred move harvested
+   replay over 12 stored runs (rounds 2 to 4 are Part A): {"r1":{"runs":1,"words":0,"structure":1},"r2":{"runs":7,"words":6,"structure":14},"r3":{"runs":9,"words":33,"structure":4},"r4":{"runs":4,"words":2,"structure":11}}
+29 of 29 pass
