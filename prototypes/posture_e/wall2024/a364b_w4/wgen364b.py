@@ -31,7 +31,7 @@ for f in ['anthropic','openrouter','deepseek']: EC['D1B Call '+f]={'main':[[e('D
 EC['D1B Extract']={'main':[[e('C1 Verse Sheet')]]}
 assert js(TG['connections'])==js(EC),'connections differ from the allowance'
 T['connections']=EC
-print('connection allowance OK: 1 edge replaced (D1 Extract -> C1 Verse Sheet), 12 added')
+print('connection allowance OK: 1 edge replaced (D1 Extract -> C1 Verse Sheet), 16 added (Build 1, Route 8, Calls 6, Extract 1)')
 for f in ['anthropic','openrouter','deepseek']:
   a,b=LN['D1 Call '+f],TN['D1B Call '+f]
   for k in ['type','typeVersion','parameters','credentials','retryOnFail','maxTries','waitBetweenTries','onError']: assert js(a.get(k))==js(b.get(k)),'D1B Call '+f+' differs from D1 Call '+f+' at '+k
