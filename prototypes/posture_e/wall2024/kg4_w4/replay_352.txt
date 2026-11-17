@@ -1,7 +1,9 @@
 ASK 352 replay (debate_enforcer_log, rule K-G4, every row whose cure went through the quoted-reason retraction path, library line 1068). Read by SQL 02:2x CST 11-17.
 Under ASK 352 that path returns UNCURED. No other K-G4 path changes (FORCED cure, unanswered-witness retraction, no-reason and two-RESULT retractions read as live; tkg4.cjs).
 
-A. STATUS CHANGES: 53 rows CURED -> UNCURED (the 11-06 15:18 quoted-reason cure no longer applies).
+REV 2 NOTE: line 852's reader now reads "does not address" and its forms as unanswered (W3 7462/7466, ruling 372). Group 3 below (5 rows) therefore stays CURED (retraction on the unanswered path). Net status changes: 48. Across all stored K-G4 and K-G7 rows, the new words occur in a GROUND only in these 5 and in 10766 (already read unanswered).
+
+A. ROWS ON THE CHANGED PATH: 53 (rev 1 read all 53 CURED -> UNCURED; rev 2: 48) (the 11-06 15:18 quoted-reason cure no longer applies).
  Hand read of each flagged_line (the judge's BROKEN line), by what the line rests on:
  1. Meaning of the link (no press named; GROUND names no witness left unanswered): 38 rows.
     12309 17141 17144 18888 18889 18890 18891 18892 18893 19519 19520 19521 19522 19523 19524
@@ -11,7 +13,7 @@ A. STATUS CHANGES: 53 rows CURED -> UNCURED (the 11-06 15:18 quoted-reason cure 
     20397 22840 24725 25159 26991 37080 41106
  3. Press not met, the line says the answer "does not address" / "without addressing" / "without engaging" the pressed point: 5 rows.
     26990 33411 33992 37724 37725
-    FLAG: the code's unanswered reader (g4Unans2024) does not read these words as "left unanswered". If the manual reads "does not address the pressed timing" as a witness left unanswered, these 5 belong on the cured retraction path and the reader needs those words (a separate change).
+    REV 2: read as unanswered by line 852; their retractions stay CURED (tested on the REAL lines).
  4. Footing not exhibited: 2 rows. 39082 (Mary's Davidic house taken as given); 42366 (terra, run 37891: "assumes her Davidic lineage rather than exhibiting it", with a press).
  5. Closing contradiction: 1 row. 28855 ("The confirmed closing contradiction breaks D1 by default").
     FLAG: this BROKEN rests on the engine's confirmed closing contradiction, which the engine counts by itself (pkgCEC); the retraction never moved that count.
@@ -20,4 +22,4 @@ B. REASON TEXT ONLY: 30 rows stay UNCURED; their reason now cites ruling 421 ins
 
 C. UNCHANGED: 91 unanswered-witness retractions (CURED "retracted"), 7 no-reason and 6 two-RESULT retractions (UNCURED).
 
-D. SEAT EFFECT: K-G4 is LIVE. Each of the 53 rows would have counted in that seat's drv_uncured, so that judge would not have been seated unless another line cured the item. In run 37891 this is terra (42366): its retraction is not applied (the BROKEN grade stays in its own lines), and terra's seat is not counted.
+D. SEAT EFFECT: K-G4 is LIVE. Each of the 48 rows would have counted in that seat's drv_uncured, so that judge would not have been seated unless another line cured the item. In run 37891 this is terra (42366): its retraction is not applied (the BROKEN grade stays in its own lines), and terra's seat is not counted.

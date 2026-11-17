@@ -1,4 +1,4 @@
-ok   library lines changed are 809, 1068-1074, 3315 only, line count unchanged :: 809, 1068, 1069, 1070, 1071, 1072, 1073, 1074, 3315
+ok   library lines changed are 809, 852, 1068-1074, 3315 only, line count unchanged :: 809, 852, 1068, 1069, 1070, 1071, 1072, 1073, 1074, 3315
 ok   only the Shared Library node changed :: Shared Library
 ok   connections and settings unchanged
 ok   every MAP entry rebuilds to its n :: 45 entries
@@ -21,5 +21,13 @@ ok   recompute, ASK 352: the retraction is not applied; the BROKEN grade stands 
 ok   REAL line 28855 with a confirmed closing contradiction on D1 (PLANT record): CURED by pkgK7C, same as live; ASK 352 does not reach it :: CURED: the link is broken by the engine's confirmed closing contradiction, which no count carries (pkgK7C)
 ok   REAL line 28855 with no confirmed closing contradiction recorded: ASK 352 reads UNCURED :: UNCURED: retracted, but the GROUND names no pressed witness left unanswered, so the BROKEN grade rests on meaning: only a FORCED line cures it; a retraction does not (ruling 421; 
 ok   no new operator name in the library (operational doc 0 (7))
+ok   REAL line 26990 ("does not address"): the reader reads it unanswered; ASK 352 cures its retraction (live: CURED) :: CURED: retracted
+ok   REAL line 33411 ("does not address"): the reader reads it unanswered; ASK 352 cures its retraction (live: CURED) :: CURED: retracted
+ok   REAL line 33992 ("does not address"): the reader reads it unanswered; ASK 352 cures its retraction (live: CURED) :: CURED: retracted
+ok   REAL line 37724 ("does not address"): the reader reads it unanswered; ASK 352 cures its retraction (live: CURED) :: CURED: retracted
+ok   REAL line 37725 ("does not address"): the reader reads it unanswered; ASK 352 cures its retraction (live: CURED) :: CURED: retracted
+ok   PLANT "does not address" inside a quotation in the GROUND is not read (quotes are stripped)
+ok   PLANT "does not address" before GROUND only (in the reason) is not read
+ok   REAL line 41138 (meaning) still reads not unanswered
 ok   K-G4 is LIVE in ENF_STATUS (an uncured item counts in drv_uncured) :: LIVE
-24 checks, ALL OK
+32 checks, ALL OK
