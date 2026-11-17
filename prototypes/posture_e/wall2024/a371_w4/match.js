@@ -6,5 +6,9 @@ const stem=w=>{if(IRR[w])return IRR[w];for(const sf of ['eth','est','ing','ed','
 const content=t=>{const m=new Map();for(const w of FOLD(t).split(' ')){if(!w||STOP.has(w)||/^\d+$/.test(w))continue;const s=stem(w);if(!m.has(s))m.set(s,w);}return m;};
 const TOPIC=new Set(['god','son','christ','lord','jesus','holy','ghost'].map(stem));
 // rev 4 (W1 7799): a CARRIED BY passes when one content word of its row words also stands in the answer's ANSWER or FAILS words and NOT in the pressed MEANS words
-function carry(cb,ans,means){const C=content(cb),A=content(ans),M=content(means);const shared=[...C.keys()].filter(s=>A.has(s)&&!M.has(s));return {pass:shared.length>0,shared:shared.map(s=>C.get(s)+'/'+A.get(s)),topicOnly:shared.length>0&&shared.every(s=>TOPIC.has(s))};}
-module.exports={FOLD,stem,content,carry,STOP,IRR};
+// rev 5 (W1 7805, option b): the shared word must not be a topic word; a carry that shares only topic words is refused (they are still reported)
+// REF (W2 7806 item 2, NOT RULED): a carry also passes when the answer words name the carry's own reference
+function carry(cb,ans,means,opt){opt=opt||{};const C=content(cb),A=content(ans),M=content(means);const shared=[...C.keys()].filter(s=>A.has(s)&&!M.has(s));const real=shared.filter(s=>!TOPIC.has(s));
+ const refHit=!!(opt.ref&&opt.ref.c&&new RegExp('\\b'+opt.ref.book.replace(/\s+/g,'\\s+')+'\\.?\\s+'+opt.ref.c+'\\s*:\\s*'+opt.ref.v+'(?![0-9])').test(String(ans)));
+ return {pass:real.length>0||refHit,byRef:!real.length&&refHit,shared:real.map(s=>C.get(s)+'/'+A.get(s)),topic:shared.filter(s=>TOPIC.has(s)).map(s=>C.get(s))};}
+module.exports={FOLD,stem,content,carry,STOP,IRR,TOPIC};
