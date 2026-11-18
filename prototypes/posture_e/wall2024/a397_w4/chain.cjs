@@ -1,0 +1,55 @@
+// ASK 381 chained replay (W2 8198): from the first changed node (Send Back Record), re-run every Code node of the stored execution in execution order,
+// feeding each node the replayed outputs of earlier nodes (s262 chain and target chain kept apart). Non-code nodes keep stored outputs; any whose input differs is flagged.
+const fs=require('fs');const {unpack,rb}=require('../tools/lib.cjs');
+const [EX,BASE,TGT]=process.argv.slice(2);const E=JSON.parse(fs.readFileSync(EX));const RD=E.data.resultData.runData;const EXID=String(E.id);
+const wf=f=>{const w=JSON.parse(fs.readFileSync(f));const {L,M}=unpack(w);const ty={};w.nodes.forEach(n=>ty[n.name]=n.type);return {w,L,M,ty,sl:w.nodes.find(n=>n.name==='Shared Library').parameters.jsCode};};
+const B=wf(BASE),T=wf(TGT);
+const seq=[];for(const[k,v] of Object.entries(RD))v.forEach((r,i)=>seq.push({k,i,x:r.executionIndex,r}));seq.sort((a,b)=>a.x-b.x);
+const sOut=(k,i)=>{const x=RD[k]&&RD[k][i];return (x&&x.data&&x.data.main&&x.data.main[0])||[];};
+const START=process.env.FROMX!=null?+process.env.FROMX:Math.min(...['Send Back Record','Alternate Merge Seat'].map(k=>RD[k][0].executionIndex));
+const norm=v=>JSON.stringify(v,(k,x)=>(k==='at'||k==='ts'||k==='created_at')?undefined:x);
+async function chain(W){const ov={};const res={};
+ const CL=v=>v==null?v:JSON.parse(JSON.stringify(v));const latest=(k,x)=>{const o=(ov[k]||[]).filter(e=>e.x<x);if(o.length)return CL(o[o.length-1].out);const s=(RD[k]||[]).map((r,i)=>({r,i})).filter(e=>e.r.executionIndex<x);return s.length?CL(sOut(k,s[s.length-1].i)):null;};
+ for(const s of seq){if(s.x<START)continue;const isCode=/\.code$/.test(W.ty[s.k]||'');
+  const src0=(s.r.source||[])[0];const inp=src0?(()=>{const o=(ov[src0.previousNode]||[]).find(e=>e.run===(src0.previousNodeRun||0));return CL(o?o.out:sOut(src0.previousNode,src0.previousNodeRun||0));})():[];
+  if(!isCode&&s.k==='Get Judgments'&&process.env.PLANT){const am=(ov['Alternate Merge']||[]).slice(-1)[0];const bod=am?JSON.parse(am.out[0].json.bodies[1]).payload:null;const o=sOut(s.k,s.i).map(it=>it.json.id===1222&&bod?{...it,json:{...it.json,verdict_raw:bod.verdict_raw}}:it);(ov[s.k]=ov[s.k]||[]).push({x:s.x,run:s.i,out:o});res[s.k+'#'+s.i]={code:false,inChanged:false,inp:o};continue;}
+  if(!isCode){res[s.k+'#'+s.i]={code:false,inChanged:src0?norm(inp.map(i=>i.json))!==norm(sOut(src0.previousNode,src0.previousNodeRun||0).map(i=>i.json)):false,inp};continue;}
+  const src=W.M[s.k]?rb(W.L,W.M[s.k]):W.w.nodes.find(n=>n.name===s.k).parameters.jsCode;
+  const own=W.w.nodes.find(n=>n.name===s.k).parameters.jsCode||'';const lit=new Set([...own.matchAll(/\$\(\s*(['"])([^'"]+)\1\s*\)/g)].map(m=>m[2]));const nonlit=/\$\(\s*[^'"\s)]/.test(own.replace(/\$\(\s*(['"])[^'"]+\1\s*\)/g,''));if(process.env.DBGLIT&&s.k===process.env.DBGLIT)console.error('LIT',s.k,[...lit].join('|'),'nonlit',nonlit);
+  const $=nm=>{if(process.env.RUNNER&&!nonlit&&!lit.has(nm)&&nm!=='Shared Library')throw new Error("Referenced node doesn't exist");if(nm==='Shared Library')return {isExecuted:false,params:{jsCode:W.sl},first:()=>{throw new Error('lib not run')},all:()=>[]};const it=latest(nm,s.x);if(!it)return {isExecuted:false,first:()=>{throw new Error('not run '+nm)},all:()=>{throw new Error('not run '+nm)},last:()=>{throw new Error('not run '+nm)},item:null,params:{}};return {isExecuted:true,first:()=>it[0]||{json:{}},last:()=>it[it.length-1],all:()=>it,item:it[0],params:{}};};
+  const $input={all:()=>inp,first:()=>inp[0],last:()=>inp[inp.length-1],item:inp[0]};const cd={};
+  const NOW=new Date(s.r.startTime).toISOString();const T0=Date;class FD extends T0{constructor(...a){if(a.length)super(...a);else super(NOW);}static now(){return new T0(NOW).getTime();}}
+  let out,err=null;try{const AF=Object.getPrototypeOf(async function(){}).constructor;let __sd=0;for(const ch of s.k+'#'+s.i)__sd=(__sd*31+ch.charCodeAt(0))>>>0;const MM=Object.create(Math);MM.random=()=>{__sd=(__sd*1664525+1013904223)>>>0;return __sd/4294967296;};const f=new AF('$','$input','$execution','$workflow','$now','require','Date','Math',src);out=await f($,$input,{id:EXID,mode:'trigger',customData:{set:(k,v)=>{cd[k]=v;},get:k=>cd[k]}},{id:'moMxiV4Irg1uRBZN'},new T0(NOW),require,FD,MM);out=Array.isArray(out)?out:[out];}catch(e){err=e.message+(process.env.STK?' '+String(e.stack).split('\n').slice(1,4).join(' / '):'');out=sOut(s.k,s.i);}
+  out=JSON.parse(JSON.stringify(out));(ov[s.k]=ov[s.k]||[]).push({x:s.x,run:s.i,out});res[s.k+'#'+s.i]={code:true,out:JSON.parse(JSON.stringify(out)),err,src};}
+ return res;}
+(async()=>{const A=await chain(B),Z=await chain(T);let nChanged=0;
+for(const s of seq){if(s.x<START)continue;const key=s.k+'#'+s.i;const a=A[key],z=Z[key];
+ if(!a.code){if(a.inChanged||z.inChanged||norm(a.inp.map(i=>i.json))!==norm(z.inp.map(i=>i.json)))console.log('NONCODE',key,'input differs: s262 vs stored',a.inChanged,'| target vs s262',norm(a.inp.map(i=>i.json))!==norm(z.inp.map(i=>i.json)));continue;}
+ const repro=norm(a.out.map(i=>i.json))===norm(sOut(s.k,s.i).map(i=>i.json));const same=norm(a.out.map(i=>i.json))===norm(z.out.map(i=>i.json));
+ const reads=/counted_premises_challenger/.test(z.src)||/counted_premises_challenger/.test(B.w.nodes.find(n=>n.name===s.k).parameters.jsCode||'');
+ if(!same)nChanged++;
+ console.log((same?'same   ':'CHANGED'),key.padEnd(34),'x',s.x,'| s262 reproduces stored',repro,'| reads field',reads,a.err?'| s262 ERR '+a.err.slice(0,90):'',z.err?'| tgt ERR '+z.err.slice(0,90):'');
+ if(!same){const d=(x,y,p,dp)=>{if(dp>30||norm(x)===norm(y))return;if(x&&y&&typeof x==='object'&&typeof y==='object'){for(const k of new Set([...Object.keys(x),...Object.keys(y)]))d(x[k],y[k],p+'.'+k,dp+1);return;}console.log('     ',p,'\n        s262:  ',String(norm(x)).slice(0,300),'\n        target:',String(norm(y)).slice(0,300));};d(a.out.map(i=>i.json),z.out.map(i=>i.json),'out',0);}
+ if(!repro&&process.env.REPRO){const d=(x,y,p,dp)=>{if(dp>30||norm(x)===norm(y))return;if(x&&y&&typeof x==='object'&&typeof y==='object'){for(const k of new Set([...Object.keys(x),...Object.keys(y)]))d(x[k],y[k],p+'.'+k,dp+1);return;}console.log('      repro',p,String(norm(x)).slice(0,160),'| stored',String(norm(y)).slice(0,160));};d(a.out.map(i=>i.json),sOut(s.k,s.i).map(i=>i.json),'out',0);}}
+console.log('START x',START,'| code-node runs changed:',nChanged);
+})();
+if(process.env.BODYDIFF)(async()=>{const A=await chain(B),Z=await chain(T);const a=A['Alternate Merge#0'].out[0].json,z=Z['Alternate Merge#0'].out[0].json;
+ const flat=(o,p,r)=>{if(o&&typeof o==='object'){for(const k of Object.keys(o))flat(o[k],p+'.'+k,r);}else r[p]=o;return r;};
+ const pb=x=>{try{return JSON.parse(x);}catch(e){return x;}};
+ const fa=flat(JSON.parse(JSON.stringify(a,(k,v)=>typeof v==='string'&&/^\{"payload"/.test(v)?pb(v):v)),'AM',{}),fz=flat(JSON.parse(JSON.stringify(z,(k,v)=>typeof v==='string'&&/^\{"payload"/.test(v)?pb(v):v)),'AM',{});
+ for(const k of new Set([...Object.keys(fa),...Object.keys(fz)]))if(JSON.stringify(fa[k])!==JSON.stringify(fz[k]))console.log('BODYDIFF',k,'|',String(JSON.stringify(fa[k])).slice(0,140),'=>',String(JSON.stringify(fz[k])).slice(0,140));})();
+if(process.env.VRDIFF)(async()=>{const A=await chain(B),Z=await chain(T);const a=A['Alternate Merge#0'].out[0].json,z=Z['Alternate Merge#0'].out[0].json;
+ const va=JSON.parse(a.bodies[1]).payload,vz=JSON.parse(z.bodies[1]).payload;const sd=(x,y)=>{let i=0;while(x[i]===y[i])i++;let j=0;while(j<x.length-i&&x[x.length-1-j]===y[y.length-1-j])j++;return [x.slice(Math.max(0,i-120),x.length-j+20),y.slice(Math.max(0,i-120),y.length-j+20)];};
+ const s=a=>{const t=String(a);const b=t.lastIndexOf('}');return t;};
+ const pj=t=>{const a=t.indexOf("{"),b=t.lastIndexOf("}");try{return JSON.parse(t.slice(a,b+1));}catch(e){return {__unparsed:t.length};}};const ja=pj(va.verdict_raw),jz=pj(vz.verdict_raw);for(const k of new Set([...Object.keys(ja),...Object.keys(jz)]))if(JSON.stringify(ja[k])!==JSON.stringify(jz[k]))console.log("VR key",k,JSON.stringify(ja[k]).slice(0,200),"=>",JSON.stringify(jz[k]).slice(0,200));{const ta=va.verdict_raw.slice(va.verdict_raw.lastIndexOf("}")),tz=vz.verdict_raw.slice(vz.verdict_raw.lastIndexOf("}"));const A2=ta.split(/(?=\[AUDIT)/),Z2=tz.split(/(?=\[AUDIT)/);console.log("VR tail tags",A2.length,Z2.length);Z2.filter(x=>!A2.includes(x)).forEach(x=>console.log("VR target-only:",x.slice(0,400)));A2.filter(x=>!Z2.includes(x)).forEach(x=>console.log("VR s262-only:",x.slice(0,400)));}
+ for(const n of [111,112]){const [p,q]=sd(a.enforcer_log[n].cure_reason,z.enforcer_log[n].cure_reason);console.log('CR',n,'s262 :',p.slice(-300));console.log('CR',n,'target:',q.slice(-300));}})();
+if(process.env.RPC)(async()=>{const A=await chain(B),Z=await chain(T);const K='sb_publishable_rgfWFjynRqBdzyEeBRHcig_c6pHysAi';
+ for(const [lab,X] of [['s262',A],['target',Z]]){const p=JSON.parse(X['Alternate Merge#0'].out[0].json.bodies[1]).payload;
+  const r=await fetch('https://bhffmkginddovmdcpnty.supabase.co/rest/v1/rpc/judgment_result_word',{method:'POST',headers:{apikey:K,Authorization:'Bearer '+K,'Content-Type':'application/json'},body:JSON.stringify({p_raw:p.verdict_raw,p_seat:p.judge_seat,p_challenge_standing:p.challenge_standing})});
+  const ud=/(^|\n|\\n)[ \t*_>-]*[DC][0-9]+[^\n\\]*?\bvs\b[^\n\\]*?:[ \t*_]*UNDERDETERMINED/i.test(p.verdict_raw);
+  console.log('RPC',lab,r.status,(await r.text()).slice(0,200),'| UD vs-line',ud,'| drv_uncured',p.drv_uncured,'| verdict_tag',p.verdict_tag,'| ccl',p.challenger_conceded_links);}})();
+if(process.env.FMDIFF)(async()=>{const A=await chain(B),Z=await chain(T);for(const nm of ['Format Markdown#0','Plain Rule Lines#0']){const a=A[nm].out[0].json,z=Z[nm].out[0].json;
+ for(const k of new Set([...Object.keys(a),...Object.keys(z)])){if(JSON.stringify(a[k])===JSON.stringify(z[k]))continue;if(typeof a[k]==='string'&&typeof z[k]==='string'){const la=a[k].split('\n'),lz=z[k].split('\n');const sa=new Set(la),sz=new Set(lz);console.log('FMDIFF',nm,k,'lines',la.length,lz.length);la.filter(l=>!sz.has(l)).forEach(l=>console.log('  - ',l.slice(0,500)));lz.filter(l=>!sa.has(l)).forEach(l=>console.log('  + ',l.slice(0,500)));}else console.log('FMDIFF',nm,k,JSON.stringify(a[k]).slice(0,300),'=>',JSON.stringify(z[k]).slice(0,300));}}})();
+if(process.env.FMREPRO)(async()=>{const A=await chain(B);const a=A['Format Markdown#0'].out[0].json.md,st=sOut('Format Markdown',0)[0].json.md;const la=a.split('\n'),ls=st.split('\n');const sa=new Set(la),ss=new Set(ls);
+ console.log('FMREPRO lines',la.length,ls.length);la.filter(l=>!ss.has(l)).slice(0,6).forEach(l=>console.log(' replay-only:',l.slice(0,300)));ls.filter(l=>!sa.has(l)).slice(0,6).forEach(l=>console.log(' stored-only:',l.slice(0,300)));})();
+if(process.env.SBDUMP)(async()=>{const A=await chain(B),Z=await chain(T);const o={};for(const [lab,X] of [['s262',A],['target',Z]]){o[lab]={};for(const k of Object.keys(X))if(new RegExp(process.env.SBRE||"Send Back Build|Gate Build").test(k)&&X[k].out)o[lab][k]=X[k].out.map(i=>i.json);}fs.writeFileSync(process.env.SBDUMP,JSON.stringify(o));console.log('SBDUMP written');})();

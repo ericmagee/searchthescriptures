@@ -1,0 +1,310 @@
+624	deepseek	D1 D2 D3 D4 D5
+625	gemini	D1 D2 D3 D4 D5
+626	grok	D1 D2 D3 D4 D5
+630	deepseek	D1 D2 D3 D4
+631	gemini	D1 D2 D3 D4 D5 D6 D7 D8 D9 D10
+632	grok	D1 D2 D3
+633	deepseek	D1
+634	gemini	D2 D5
+635	grok	D1 D6
+636	deepseek	D1 D3 D4
+637	gemini	D1 D4 D6
+638	grok	D1 D4
+639	gemini	D2 D3 D4 D5 D6
+640	grok	D1 D2 D3 D4 D5 D6
+641	chatgpt	D3 D4
+642	deepseek	D1 D2
+643	gemini	D1 D2 D3 D4 D5
+644	mimo	D1 D2 D3 D4 D5
+645	deepseek	D1 D2 D3 D4 D5
+646	gemini	D1 D2 D3 D4 D5
+647	mimo	D1 D4
+648	deepseek	D1 D2 D3 D4
+649	gemini	D1 D2
+650	mimo	D1 D2 D3 D4
+651	deepseek	D1 D2 D5 D6
+652	gemini	D1 D2 D5 D6
+653	mimo	D1 D2 D5
+654	deepseek	D1 D3 D4 D5
+655	gemini	D3 D5 D6
+657	deepseek	D1 D2 D4
+658	gemini	D1 D2 D3 D4 D5 D6
+659	mimo	D1 D2
+660	deepseek	D1 D2 D3 D4 D5
+661	gemini	D1 D2 D3 D4 D5
+662	mimo	D1 D2 D3 D4
+663	deepseek	D1 D2 D6
+664	gemini	D4 D7
+665	mimo	D1 D2 D4
+666	deepseek	D1 D2 D3 D4 D5
+667	gemini	D1 D2
+668	mimo	D1 D2
+669	deepseek	D1 D2 D3 D4 D5
+671	chatgpt	D1 D3
+672	deepseek	D2 D3
+673	gemini	D2 D3
+674	chatgpt	D2 D3
+675	deepseek	D1
+676	gemini	D1
+677	chatgpt	D1
+678	deepseek	D1 D2
+679	gemini	D1 D2
+680	chatgpt	D1 D2
+681	deepseek	D1 D3
+682	gemini	D3
+683	chatgpt	D1
+686	chatgpt	D4
+687	deepseek	D1 D3 D5
+688	gemini	D1
+689	chatgpt	D1
+690	deepseek	D1 D2 D3 D4 D5 D6
+691	gemini	D5
+692	chatgpt	D3
+693	deepseek	D1
+695	chatgpt	D1
+696	deepseek	D3
+697	gemini	D3
+699	deepseek	D1 D2 D3 D4 D5
+700	gemini	D1 D2 D4
+701	chatgpt	D1 D2 D4
+702	deepseek	D1 D2
+703	gemini	D1 D2 D3 D4 D5
+704	chatgpt	D1
+705	deepseek	D1 D2 D3 D4 D5 D6
+706	gemini	D1 D2 D3 D4 D5 D6 D7
+707	grok	D1 D2 D3 D4 D5 D6
+711	deepseek	D1
+712	gemini	D1 D3
+713	chatgpt	D1 D2
+717	deepseek	D1 D5
+718	gemini	D1 D4 D5
+719	chatgpt	D1 D2
+720	deepseek	D1 D2 D3 D4 D5
+721	gemini	D1 D2 D3 D4 D5
+722	grok	D1 D2 D3 D4 D5
+723	deepseek	D1 D2 D4
+724	gemini	D2
+725	grok	D2
+726	deepseek	D3 D4
+728	grok	D3
+729	deepseek	D4 D5
+730	gemini	D5
+731	grok	D5
+732	deepseek	D2 D6
+734	grok	D2 D5 D6
+739	gemini	D3
+740	grok	D3
+741	deepseek	D1 D2 D3 D4 D5
+742	gemini	D1 D2 D3 D4 D5 D6
+743	grok	D1 D3
+744	deepseek	D1 D2 D3 D4 D5
+745	gemini	D1 D2 D3 D4 D5 D6
+746	grok	D4 D5
+747	deepseek	D1
+749	grok	D2
+750	deepseek	D3 D4 D6
+751	gemini	D3 D6
+752	grok	D3 D4
+753	gemini	D3 D5
+754	grok	D3 D5
+755	chatgpt	D3 D4 D5
+756	deepseek	D1 D2
+757	gemini	D1 D2 D3 D4 D5 D6
+758	grok	D1 D2
+759	deepseek	D3 D4
+760	grok	D3 D4
+761	chatgpt	D3
+762	deepseek	D1 D2 D3
+764	grok	D1 D2 D3
+765	deepseek	D1 D2 D3 D4
+768	deepseek	D1 D2 D3 D5
+769	gemini	D1 D2 D3 D4 D5
+770	grok	D1 D2 D3
+771	deepseek	D1 D2 D3
+773	grok	D1 D2 D3
+775	gemini	D1 D2 D5
+776	grok	D1 D2 D3 D4 D5
+777	deepseek	D1 D2 D3
+779	chatgpt	D1 D3
+780	glm	D1 D3 D4
+782	grok	D1 D3
+783	glm	D2 D6
+784	gemini	D1 D2 D4 D6
+785	grok	D1 D2 D3
+787	gemini	D1 D2 D3 D4 D5
+788	grok	D1 D2 D5
+789	deepseek	D1
+791	grok	D1 D2
+792	deepseek	D1 D2 D3 D4
+793	gemini	D1 D2
+794	grok	D1 D2 D4
+795	glm	D2
+798	deepseek	D2 D3 D5
+800	grok	D2 D5
+802	gemini	D2 D4 D5
+803	grok	D1 D3
+804	deepseek	D1 D2 D3
+805	gemini	D1 D2 D3 D5
+806	grok	D1 D3
+807	deepseek	D2 D3
+808	mimo	D1 D2 D3 D4
+809	grok	D1 D2 D3 D4
+810	deepseek	D1
+811	gemini	D1
+812	grok	D1
+813	deepseek	D1 D2
+814	gemini	D6
+815	grok	D1 D2
+817	glm	D3 D4
+819	deepseek	D1 D3 D5
+820	gemini	D1 D3
+821	grok	D2 D3 D4
+823	gemini	D1 D2 D3 D4
+824	grok	D1 D2 D3 D4 D5 D6
+826	gemini	D1 D3 D4
+827	grok	D4
+828	deepseek	D1
+829	gemini	D1 D3
+830	grok	D1
+831	deepseek	D1
+832	gemini	D6
+833	grok	D1
+835	gemini	D1 D3
+836	grok	D1
+839	grok	D1 D2 D3 D4 D5 D6
+840	deepseek	D1
+841	gemini	D1
+842	grok	D1 D4
+843	deepseek	D1 D3 D6
+845	glm	D1
+846	deepseek	D2
+848	glm	D2
+849	deepseek	D6
+850	gemini	D1 D2 D3 D4 D5
+851	glm	D4 D6
+852	deepseek	D4
+853	gemini	D4
+854	qwen	D3 D4
+855	deepseek	D2 D3
+856	gemini	D3
+857	glm	D3
+858	deepseek	D1 D2
+861	qwen	D6
+863	glm	D5
+864	deepseek	D6
+865	gemini	D6
+866	glm	D6
+867	deepseek	D2 D4 D6
+868	gemini	D2 D4 D6
+869	chatgpt	D1
+873	deepseek	D1 D2 D5
+878	glm	D1 D3
+879	chatgpt	D1 D4
+880	gemini	D1 D2 D4 D5 D6
+881	glm	D1 D5
+882	deepseek	D1
+883	gemini	D1 D3
+885	deepseek	D1 D2 D3 D4 D5 D6
+886	gemini	D1 D2 D3 D4 D5 D6
+887	chatgpt	D1 D3
+888	qwen	D1 D2 D3 D4
+891	deepseek	D1 D2 D3 D4 D6
+892	gemini	D6
+893	chatgpt	D4
+894	deepseek	D1 D2 D5
+897	chatgpt	D3 D5
+898	gemini	D2 D6
+901	sol	D4
+903	gemini	D5
+904	glm	D5
+905	chatgpt	D5
+909	gemini	D1
+910	sol	D1
+911	chatgpt	D1 D2
+913	glm	D2 D4
+914	chatgpt	D4
+915	gemini	D1
+916	glm	D1
+917	chatgpt	D1 D4
+918	gemini	D1 D2 D3 D4 D5 D6
+922	deepseek	D3 D4
+924	gemini	D4
+926	grok	D1 D2 D4 D5
+928	chatgpt	D3
+929	grok	D3
+930	gemini	D1 D3 D4 D5 D6
+932	grok	D1 D3 D5 D6
+934	chatgpt	D2
+936	gemini	D1 D2 D3 D4 D5
+938	grok	D1 D4
+939	gemini	D1 D2 D4 D5 D6
+941	grok	D3
+942	gemini	D1 D2 D3 D4 D5 D6
+944	grok	D4 D6
+945	gemini	D6
+947	grok	D1 D2 D3 D4
+950	grok	D1 D4 D5 D6
+951	gemini	D1 D2 D3 D4 D5 D6
+952	sol	D5
+953	grok	D5
+954	gemini	D1 D2 D3 D4 D5
+957	gemini	D5 D6 D5
+958	chatgpt	D5
+959	grok	D5
+961	chatgpt	D1 D5 D6
+962	grok	D1 D5
+963	gemini	D2 D3 D4 D5 D6
+964	chatgpt	D2 D3 D5
+965	grok	D2 D3 D4 D5
+967	sol	D3 D6
+968	grok	D1 D2 D3 D4 D5
+969	gemini	D4
+970	chatgpt	D4
+971	grok	D4
+972	gemini	D1 D2 D4 D5 D6
+975	gemini	D5 D6
+976	chatgpt	D5
+978	gemini	D1 D2 D3 D4 D5 D6
+979	sol	D3
+980	grok	D3 D5
+981	gemini	D2
+982	chatgpt	D3 D6
+983	grok	D4 D6
+984	gemini	D1 D1 D2 D3 D4 D5
+990	gemini	D1 D2 D4 D5 D6
+992	grok	D1 D3 D4 D5 D6
+995	sol	D5
+996	gemini	D6
+998	sol	D6
+999	gemini	D1 D2 D3 D4 D5 D6
+1002	gemini	D1 D2 D3 D4 D5 D6
+1004	sol	D4
+1007	sol	D5
+1020	gemini	D6
+1021	chatgpt	D6
+1022	sol	D6
+1047	gemini	D3 D5
+1048	chatgpt	D3 D5
+1049	grok	D3 D5
+1050	gemini	D3
+1051	chatgpt	D3
+1072	chatgpt	D1
+1073	grok	D1
+1086	gemini	D1
+1088	grok	D1
+1116	luna	D4
+1117	chatgpt	D2 D4
+1122	luna	D4
+1124	sol	D4
+1133	argon	D3
+1146	luna	D5
+1147	chatgpt	D5
+1148	sol	D5
+1155	ember	D1 D2 D3 D4 D5
+1173	hydrogen	D1
+1174	chatgpt	D1
+1182	chatgpt	D1
+1184	luna	D1
+1192	hydrogen	D3
+1193	luna	D3
+1225	chatgpt	D2
