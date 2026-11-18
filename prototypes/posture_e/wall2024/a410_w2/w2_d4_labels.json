@@ -1,0 +1,230 @@
+{
+ "ask": "ASK 410 D4",
+ "labeller": "W2_2026_11_04 (seat 32)",
+ "items_file": "a410_w4/d4_items.json at 58ae47ba; line ids from d4_item_ids.json at 5a1f55ad",
+ "disclosure": "Labelled before reading W1's labels. Before labelling I printed the first item's stored fields once and so saw the stored deepseek-flash reply for row 45264 only (AGREE MEETS). No other stored reply was read.",
+ "gold": {
+  "45264": {
+   "agree": "AGREE",
+   "right": "MEETS"
+  },
+  "45245": {
+   "agree": "DISAGREE",
+   "right": "MEETS"
+  },
+  "45097": {
+   "agree": "AGREE",
+   "right": "MEETS"
+  },
+  "45071": {
+   "agree": "AGREE",
+   "right": "MEETS"
+  },
+  "45046": {
+   "agree": "AGREE",
+   "right": "MEETS"
+  },
+  "45116": {
+   "agree": "DISAGREE",
+   "right": "STANDS"
+  },
+  "44742": {
+   "agree": "DISAGREE",
+   "right": "STANDS"
+  },
+  "44603": {
+   "agree": "DISAGREE",
+   "right": "STANDS"
+  },
+  "44442": {
+   "agree": "AGREE",
+   "right": "BROKEN"
+  },
+  "44438": {
+   "agree": "DISAGREE",
+   "right": "STANDS"
+  },
+  "45128": {
+   "agree": "AGREE",
+   "right": "UNDERDETERMINED"
+  },
+  "44856": {
+   "agree": "AGREE",
+   "right": "STANDS"
+  },
+  "44758": {
+   "agree": "AGREE",
+   "right": "UNDERDETERMINED"
+  },
+  "44754": {
+   "agree": "AGREE",
+   "right": "UNDERDETERMINED"
+  },
+  "44457": {
+   "agree": "AGREE",
+   "right": "UNDERDETERMINED"
+  },
+  "45297": {
+   "agree": "AGREE",
+   "right": "SPARED"
+  },
+  "45159": {
+   "agree": "AGREE",
+   "right": "SPARED"
+  },
+  "45141": {
+   "agree": "AGREE",
+   "right": "COUNTED"
+  },
+  "44951": {
+   "agree": "DISAGREE",
+   "right": "SPARED"
+  },
+  "44781": {
+   "agree": "AGREE",
+   "right": "COUNTED"
+  }
+ },
+ "rows": [
+  {
+   "row": "45264",
+   "line": "B20.1",
+   "agree": "AGREE",
+   "right": "MEETS",
+   "why": "The answer grants John 3:6's two kinds and fits Luke 1:35 to the Spirit side in its own [L4]."
+  },
+  {
+   "row": "45245",
+   "line": "B1.1",
+   "agree": "DISAGREE",
+   "right": "MEETS",
+   "why": "The answer gives its own fit: 'Before they came together dates the finding before the taking in Matthew 1:24'; the grade asks for a fit shown, not a verse stating it."
+  },
+  {
+   "row": "45097",
+   "line": "B72.1",
+   "agree": "AGREE",
+   "right": "MEETS",
+   "why": "The answer grants the custom sense and fits it: 'legally and customarily Joseph was recognized as the father'."
+  },
+  {
+   "row": "45071",
+   "line": "B46.1",
+   "agree": "AGREE",
+   "right": "MEETS",
+   "why": "The answer grants Romans 1:3 and fits it through Galatians 4:4 and Matthew 1:23."
+  },
+  {
+   "row": "45046",
+   "line": "B22.1",
+   "agree": "AGREE",
+   "right": "MEETS",
+   "why": "The answer grants the cloud of Matthew 17:5 and sets Luke 1:35 apart in its own words."
+  },
+  {
+   "row": "45116",
+   "line": "K12.1",
+   "agree": "DISAGREE",
+   "right": "STANDS",
+   "why": "The pressed meaning, abstinence until after the delivery, can agree with the answer 'It bounds the not-knowing with till to the birth after the taking'."
+  },
+  {
+   "row": "44742",
+   "line": "K1.1",
+   "agree": "DISAGREE",
+   "right": "STANDS",
+   "why": "The press was answered in [CR4], and 'knew her not till she had brought forth' can agree with 'The withholding runs from the taking to the birth'."
+  },
+  {
+   "row": "44603",
+   "line": "K4.1",
+   "agree": "DISAGREE",
+   "right": "STANDS",
+   "why": "'The coming together is the taking' can agree with 'The conception took place before the husband and wife came together'."
+  },
+  {
+   "row": "44442",
+   "line": "K9.1",
+   "agree": "AGREE",
+   "right": "BROKEN",
+   "why": "'Of the Holy Ghost marks covenant origin beside the named husband' cannot agree with the procreation directly attributed to the Holy Ghost, and the answer quotes no row carrying the rival reading."
+  },
+  {
+   "row": "44438",
+   "line": "K5.1",
+   "agree": "DISAGREE",
+   "right": "STANDS",
+   "why": "The line quotes no answer words and rests on 'is not shown', an absence; no FORCED line or pressing sentence is given."
+  },
+  {
+   "row": "45128",
+   "line": "H7.1",
+   "agree": "AGREE",
+   "right": "UNDERDETERMINED",
+   "why": "Both sides' answers on Luke 3:23 and Luke 1:34 MEET, and neither side's words show the other reading cannot stand."
+  },
+  {
+   "row": "44856",
+   "line": "H1.1",
+   "agree": "AGREE",
+   "right": "STANDS",
+   "why": "Link-state line: no ANSWER CHECK on the defender's answers to proven presses is MISSES or FAILS."
+  },
+  {
+   "row": "44758",
+   "line": "H6.1",
+   "agree": "AGREE",
+   "right": "UNDERDETERMINED",
+   "why": "Both answers on Matthew 1:16 and Luke 2:48 MEET; 'of whom was born Jesus' holds both readings."
+  },
+  {
+   "row": "44754",
+   "line": "H2.1",
+   "agree": "AGREE",
+   "right": "UNDERDETERMINED",
+   "why": "Both sides' answers MEET; Matthew 1:16 and Luke 2:48 hold both readings, and neither side's words exclude the other."
+  },
+  {
+   "row": "44457",
+   "line": "H11.1",
+   "agree": "AGREE",
+   "right": "UNDERDETERMINED",
+   "why": "Both sides' answers on Luke 3:23, 2:48 and 2:49 MEET; two father-designations stand together in the rows quoted."
+  },
+  {
+   "row": "45297",
+   "line": "P9.1",
+   "agree": "AGREE",
+   "right": "SPARED",
+   "why": "Link 3 exhibits [L1] Luke 3:23, Luke 1:34, [L2] and [L3] under its [L4]; the entry is not an ASSUMES charge and is not stronger than its quote."
+  },
+  {
+   "row": "45159",
+   "line": "P9.1",
+   "agree": "AGREE",
+   "right": "SPARED",
+   "why": "Same premise and block as 45297: footing exhibited, presses answered; SPARED is right."
+  },
+  {
+   "row": "45141",
+   "line": "P3.1",
+   "agree": "AGREE",
+   "right": "COUNTED",
+   "why": "No link-round block answering premise 3 is given, so the link neither exhibits its footing nor concedes: CONCEDED."
+  },
+  {
+   "row": "44951",
+   "line": "P3.1",
+   "agree": "DISAGREE",
+   "right": "SPARED",
+   "why": "Link 2 exhibits [L1], [L2] and [L3] footing and answers each press with a fit; the charge restates the defender's own 'does not remove him'."
+  },
+  {
+   "row": "44781",
+   "line": "P7.1",
+   "agree": "AGREE",
+   "right": "COUNTED",
+   "why": "The [L4] takes as given that a just father would not put her away ('proves he was conscious that he had not begotten the child'); no quoted row gives that, and it is not an inferred act."
+  }
+ ]
+}
