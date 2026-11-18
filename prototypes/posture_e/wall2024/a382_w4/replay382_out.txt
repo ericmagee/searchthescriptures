@@ -1,0 +1,14 @@
+target ren urls carry order=id: true | e.g. https://bhffmkginddovmdcpnty.supabase.co/rest/v1/kjv_word_map?select=kjv_word,book,chapter,verse,word_position&strongs_number=eq.H1121&order=id&limit=1000
+pages planned: H1@1000 H1121@1000 H1121@2000 H1121@3000 H1121@4000
+gloss answers: live 69 | target 69
+  - live  : H1 | meaning father | NO ANSWER | the read holds 1000 of 1212 rows (limit 1000)
+  - live  : H1121 | meaning son | NO ANSWER | the read holds 1000 of 4836 rows (limit 1000)
+  + target: H1 | meaning father | FOUND
+  + target: H1121 | meaning son | FOUND
+PLANT 1 (1,212 rows as two pages = one read of all 1,212; whole gloss records, kjv lists included): true | single-read H1 pages planned: 0 | H1 | meaning father | FOUND
+PLANT 2 (short page keeps the refusal): H1 | meaning father | NO ANSWER | the read holds 1211 of 1212 rows (2 pages of 1000)
+PLANT 3 (1,000 rows or fewer: one page, as today): numbers given pages H1,H1121 | every other ren number gets none: 23 numbers, 0 pages
+PLANT 4 (shuffled pages give the same REN; whole gloss records): true
+PLANT 5 (a failed page keeps the refusal): H1121 | meaning son | NO ANSWER | the read holds 1000 of 4836 rows (limit 1000)
+PLANT 6 (ceiling, 12,000 rows): pages planned 9 offsets 1000..9000 | H1121 | meaning son | NO ANSWER | the read holds 10000 of 12000 rows (10 pages of 1000)
+BOUND: at most 30 numbers x 10 pages = 300 ren reads a run; this replay: 25 first pages + 5 further pages; rows held in L2 Count Plan for H1 and H1121: 6048

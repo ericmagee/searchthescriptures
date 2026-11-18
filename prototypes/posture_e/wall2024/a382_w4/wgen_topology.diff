@@ -1,0 +1,15 @@
+16,17c16,26
+< assert js(TG['connections'])==js(live['connections']),'connections differ'
+< diff=[a['name'] for a,b in zip(live['nodes'],T['nodes']) if js(a)!=js(b)];print('diff',diff)
+---
+> # ASK 382: --topology <names,comma> lets the target add exactly those nodes (appended) and change connections; every live node stays; the connection change is printed
+> if '--topology' in sys.argv:
+>   ADD=sys.argv[sys.argv.index('--topology')+1].split(',');LN={x['name'] for x in live['nodes']}
+>   extra=[x['name'] for x in TG['nodes'] if x['name'] not in LN];assert sorted(extra)==sorted(ADD),('added nodes differ',extra)
+>   assert not ({x['name'] for x in live['nodes']}-set(TN)),'a live node is missing from the target'
+>   T['nodes']+= [TN[n] for n in ADD];T['connections']=TG['connections']
+>   for k in sorted(set(live['connections'])|set(TG['connections'])):
+>     if js(live['connections'].get(k))!=js(TG['connections'].get(k)):print('CONN',k,':',js(live['connections'].get(k)),'->',js(TG['connections'].get(k)))
+>   print('ADDED',ADD)
+> else: assert js(TG['connections'])==js(live['connections']),'connections differ'
+> diff=[a['name'] for a,b in zip(live['nodes'],T['nodes']) if js(a)!=js(b)];print('diff',diff)  # added nodes are listed by ADDED
