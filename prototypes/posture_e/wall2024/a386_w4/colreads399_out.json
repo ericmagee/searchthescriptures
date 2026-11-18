@@ -1,0 +1,324 @@
+{
+ "cureRecompute (stub Panel Cure Check)": {
+  "assembly": [
+   1310,
+   1311,
+   1312,
+   1313,
+   1314,
+   1315,
+   1316,
+   1317,
+   1318,
+   1319,
+   1320,
+   349,
+   1321,
+   1322,
+   1323,
+   1324,
+   1325,
+   1326,
+   1327,
+   1328,
+   1329,
+   1330,
+   1331,
+   1332,
+   1333,
+   1334,
+   1335,
+   1336,
+   1337,
+   1338,
+   1339,
+   1340,
+   1341,
+   1342,
+   1343,
+   1344,
+   1345,
+   1346,
+   1347,
+   1348,
+   1349,
+   1350,
+   1351,
+   1352,
+   1353,
+   1354,
+   1355,
+   1356,
+   1357,
+   1358,
+   1359,
+   1360,
+   1361,
+   1362,
+   1363,
+   1364,
+   1365,
+   1366,
+   1367,
+   1368
+  ],
+  "reads": [
+   {
+    "line": 1312,
+    "hits": [
+     "const col=P.col.map(c=>("
+    ]
+   },
+   {
+    "line": 1313,
+    "hits": [
+     "const c=col.find(z=>U(z.link)===U(w.link))"
+    ]
+   },
+   {
+    "line": 1317,
+    "hits": [
+     "const c=col.find(z=>U(z.link)===U(x.link))"
+    ]
+   },
+   {
+    "line": 1322,
+    "hits": [
+     "for(const c of col)"
+    ]
+   },
+   {
+    "line": 1326,
+    "hits": [
+     "const __r=krbOn2024(__k[1],col,U)",
+     "function krbOn2024(key,col,U)",
+     "const c=(col||[]).find(z=>"
+    ]
+   },
+   {
+    "line": 1328,
+    "hits": [
+     "const z=col.find(q=>U(q.link).replace(/\\s+VS\\.?\\s+/,' VS ')===lk)"
+    ]
+   },
+   {
+    "line": 1337,
+    "hits": [
+     "if(!trig.length&&__tie421(col,F.defense_standing,F.challenge_standing,F.conceded_links,F.challenger_conceded_links,__r0421))trig.push('TIE (KB-0030)')"
+    ]
+   },
+   {
+    "line": 1344,
+    "hits": [
+     "DEFENDER:col.filter(z=>z.grade==='DEFENDER LINK BROKEN').length+__cecX.DEFENDER,CHALLENGER:col.filter(z=>z.grade==='CHALLENGER LINK BROKEN').length+__cecX.CHALLENGER",
+     "/* pkgCEC */const unk=col.filter(z=>!z.grade)"
+    ]
+   },
+   {
+    "line": 1351,
+    "hits": [
+     "verdict:word,cst,dst,cd:c.DEFENDER,cc:c.CHALLENGER,col,retracted:ret386(text,seat,rp.filter(r=>/^RETRACTED /.test(String(r[2]||''))).map(r=>String(r[2]).slice(10)))"
+    ]
+   }
+  ]
+ },
+ "sbApply2024 (stub Gate Record)": {
+  "assembly": [
+   1403,
+   1404,
+   1405,
+   1406,
+   1407,
+   1408,
+   1409,
+   1410,
+   1411,
+   1412,
+   1413,
+   1414,
+   1415,
+   1416,
+   1417,
+   1418,
+   1419,
+   1420,
+   1421,
+   1422,
+   1423,
+   1424,
+   1425,
+   1426,
+   1427,
+   1428,
+   1429,
+   1430,
+   1431,
+   1432,
+   1433,
+   1434,
+   1435,
+   1436,
+   1437,
+   1438,
+   1439,
+   1440,
+   1441,
+   1442,
+   1443,
+   1444,
+   1445,
+   1446,
+   1447,
+   1448,
+   1449,
+   1450,
+   1451,
+   1452,
+   1453,
+   1454,
+   1455,
+   1456,
+   1457,
+   509,
+   1458,
+   1459,
+   1460,
+   1461,
+   1462,
+   1463,
+   1464,
+   1465,
+   1466,
+   1467,
+   1468,
+   1469,
+   1470,
+   1471,
+   1472,
+   1473,
+   1474,
+   1475,
+   1476,
+   1477,
+   1478,
+   1479,
+   1480,
+   1481,
+   1482,
+   1483,
+   1321,
+   1484,
+   1485,
+   1486,
+   1325,
+   1344,
+   1487,
+   1488,
+   1347,
+   1489,
+   1490,
+   1350,
+   1352,
+   1491,
+   1492,
+   1493,
+   1494,
+   1495,
+   1496,
+   1497,
+   1359,
+   1360,
+   1361,
+   1498,
+   1499,
+   1500,
+   1501
+  ],
+  "reads": [
+   {
+    "line": 1453,
+    "hits": [
+     "const kc=P.col.filter(z=>U(z.link).startsWith(m[1]+' VS'))"
+    ]
+   },
+   {
+    "line": 1456,
+    "hits": [
+     "const g0=new Map(rcLines(text).col.map(z=>[U(z.link),z.grade]))",
+     "const fl=P.col.filter(z=>g0.has(U(z.link))&&(g0.get(U(z.link))==='DEFENDER LINK BROKEN')!==(z.grade==='DEFENDER LINK BROKEN'))"
+    ]
+   },
+   {
+    "line": 1458,
+    "hits": [
+     "const g9=P9.col.filter(z=>U(z.link)===c9.rfl).map(z=>z.grade)"
+    ]
+   },
+   {
+    "line": 1460,
+    "hits": [
+     "const g0=new Map(rcLines(text).col.map(z=>[U(z.link),z.grade]))",
+     "const kc=P0.col.filter(z=>U(z.link).startsWith(km[1]+' VS'))"
+    ]
+   },
+   {
+    "line": 1468,
+    "hits": [
+     "const g9=P9b.col.filter(z=>U(z.link)===c9.rfl).map(z=>z.grade)"
+    ]
+   },
+   {
+    "line": 1471,
+    "hits": [
+     "const __g0=new Map(rcLines(text).col.map(z=>[__rk(z.link),z.grade])),__g1=new Map(rcLines(build(map)).col.map(z=>[__rk(z.link),z.grade]))"
+    ]
+   },
+   {
+    "line": 1479,
+    "hits": [
+     "const col=P.col"
+    ]
+   },
+   {
+    "line": 1483,
+    "hits": [
+     "const g0=(rcLines(o).col[0]||",
+     ").grade||null,g1=(rcLines(z.to).col[0]||",
+     "if(g1&&g0!==g1)trig.push('CHANGED '+(rcLines(z.to).col[0].link)+' ('+(g0||'no grade')+' to '+g1+')')"
+    ]
+   },
+   {
+    "line": 1484,
+    "hits": [
+     "for(const c0 of col)"
+    ]
+   },
+   {
+    "line": 1344,
+    "hits": [
+     "DEFENDER:col.filter(z=>z.grade==='DEFENDER LINK BROKEN').length+__cecX.DEFENDER,CHALLENGER:col.filter(z=>z.grade==='CHALLENGER LINK BROKEN').length+__cecX.CHALLENGER",
+     "/* pkgCEC */const unk=col.filter(z=>!z.grade)"
+    ]
+   },
+   {
+    "line": 1491,
+    "hits": [
+     "const tie=!unk.length&&!col.some(z=>/LINK BROKEN$/.test(String(z.grade||'')))&&col.length>0&&!!dst&&!!cst&&typeof c.DEFENDER==='number'&&typeof c.CHALLENGER==='number'&&d"
+    ]
+   },
+   {
+    "line": 1492,
+    "hits": [
+     "verdict:word,cst,dst,cd:c.DEFENDER,cc:c.CHALLENGER,col,retracted:ret386(raw,seat)"
+    ]
+   },
+   {
+    "line": 1496,
+    "hits": [
+     "const dec0=col.filter(z=>/LINK BROKEN$/.test(String(z.grade||'')))",
+     "const dec=dec0.length?dec0:col.filter(z=>z.grade)"
+    ]
+   }
+  ]
+ }
+}

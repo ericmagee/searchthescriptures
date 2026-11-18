@@ -1,0 +1,66 @@
+[
+ {
+  "id": 667,
+  "seat": "gemini",
+  "fields": [
+   "BROKEN",
+   "SELF-SUPPORTED",
+   "SELF-SUPPORTED",
+   0,
+   0
+  ],
+  "long": 0,
+  "short": "D1 STANDS; D2 STANDS; D6 WITHDRAWN",
+  "rev3": "CHALLENGER WINS",
+  "tie_only": "UNDERDETERMINED",
+  "every_test": "UNDERDETERMINED"
+ },
+ {
+  "id": 713,
+  "seat": "chatgpt",
+  "fields": [
+   "BROKEN",
+   "PROP-DEPENDENT",
+   "PROP-DEPENDENT",
+   1,
+   1
+  ],
+  "long": 0,
+  "short": "D1 STANDS; D2 STANDS; D3 WITHDRAWN; D4 WITHDRAWN; D5 WITHDRAWN",
+  "rev3": "CHALLENGER WINS",
+  "tie_only": "UNDERDETERMINED",
+  "every_test": "UNDERDETERMINED"
+ },
+ {
+  "id": 744,
+  "seat": "deepseek",
+  "fields": [
+   "BROKEN",
+   "PROP-DEPENDENT",
+   "PROP-DEPENDENT",
+   3,
+   3
+  ],
+  "long": 0,
+  "short": "D1 STANDS; D2 STANDS; D3 STANDS; D4 STANDS; D5 STANDS; D6 WITHDRAWN",
+  "rev3": "CHALLENGER WINS",
+  "tie_only": "UNDERDETERMINED",
+  "every_test": "UNDERDETERMINED"
+ },
+ {
+  "id": 951,
+  "seat": "gemini",
+  "fields": [
+   "HELD",
+   "PROP-DEPENDENT",
+   "PROP-DEPENDENT",
+   1,
+   1
+  ],
+  "long": 0,
+  "short": "D1 STANDS; D2 STANDS; D3 STANDS; D4 STANDS; D5 STANDS; D6 STANDS",
+  "rev3": "DEFENDER WINS",
+  "tie_only": "UNDERDETERMINED",
+  "every_test": "UNDERDETERMINED"
+ }
+]

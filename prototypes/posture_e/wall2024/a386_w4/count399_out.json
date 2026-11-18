@@ -1,0 +1,470 @@
+[
+ {
+  "id": 793,
+  "seat": "gemini",
+  "verdict": "HELD",
+  "stored": [
+   "SELF-SUPPORTED",
+   "SELF-SUPPORTED",
+   0,
+   0
+  ],
+  "still": [
+   "D4 vs C6 DEFENDER LINK BROKEN",
+   "D5 vs C8 DEFENDER LINK BROKEN",
+   "D6 vs C8 DEFENDER LINK BROKEN"
+  ],
+  "stand_today": [
+   "PROP-DEPENDENT",
+   "SELF-SUPPORTED"
+  ],
+  "stand_399": [
+   "SELF-SUPPORTED",
+   "SELF-SUPPORTED"
+  ],
+  "word_today": "UNDERDETERMINED",
+  "word_399": "UNDERDETERMINED"
+ },
+ {
+  "id": 796,
+  "seat": "gemini",
+  "verdict": "HELD",
+  "stored": [
+   "SELF-SUPPORTED",
+   "SELF-SUPPORTED",
+   0,
+   0
+  ],
+  "still": [
+   "D3 vs C1 DEFENDER LINK BROKEN",
+   "D6 vs C1 DEFENDER LINK BROKEN"
+  ],
+  "stand_today": [
+   "PROP-DEPENDENT",
+   "SELF-SUPPORTED"
+  ],
+  "stand_399": [
+   "SELF-SUPPORTED",
+   "SELF-SUPPORTED"
+  ],
+  "word_today": "UNDERDETERMINED",
+  "word_399": "UNDERDETERMINED"
+ },
+ {
+  "id": 801,
+  "seat": "deepseek",
+  "verdict": "HELD",
+  "stored": [
+   "PROP-DEPENDENT",
+   "SELF-SUPPORTED",
+   1,
+   0
+  ],
+  "still": [
+   "D3 vs C4 DEFENDER LINK BROKEN"
+  ],
+  "stand_today": [
+   "PROP-DEPENDENT",
+   "SELF-SUPPORTED"
+  ],
+  "stand_399": [
+   "PROP-DEPENDENT",
+   "SELF-SUPPORTED"
+  ],
+  "word_today": "UNDERDETERMINED",
+  "word_399": "UNDERDETERMINED"
+ },
+ {
+  "id": 804,
+  "seat": "deepseek",
+  "verdict": "BROKEN",
+  "stored": [
+   "PROP-DEPENDENT",
+   "PROP-DEPENDENT",
+   2,
+   1
+  ],
+  "still": [
+   "D5 vs C3 CHALLENGER LINK BROKEN",
+   "D6 vs C1 DEFENDER LINK BROKEN"
+  ],
+  "stand_today": [
+   "PROP-DEPENDENT",
+   "PROP-DEPENDENT"
+  ],
+  "stand_399": [
+   "PROP-DEPENDENT",
+   "PROP-DEPENDENT"
+  ],
+  "word_today": "CHALLENGER WINS",
+  "word_399": "CHALLENGER WINS"
+ },
+ {
+  "id": 810,
+  "seat": "deepseek",
+  "verdict": "HELD",
+  "stored": [
+   "PROP-DEPENDENT",
+   "SELF-SUPPORTED",
+   0,
+   0
+  ],
+  "still": [
+   "D2 vs C3 DEFENDER LINK BROKEN",
+   "D3 vs C3 DEFENDER LINK BROKEN"
+  ],
+  "stand_today": [
+   "PROP-DEPENDENT",
+   "SELF-SUPPORTED"
+  ],
+  "stand_399": [
+   "SELF-SUPPORTED",
+   "SELF-SUPPORTED"
+  ],
+  "word_today": "UNDERDETERMINED",
+  "word_399": "UNDERDETERMINED"
+ },
+ {
+  "id": 811,
+  "seat": "gemini",
+  "verdict": "HELD",
+  "stored": [
+   "SELF-SUPPORTED",
+   "SELF-SUPPORTED",
+   0,
+   0
+  ],
+  "still": [
+   "D2 vs C1 DEFENDER LINK BROKEN",
+   "D3 vs C4 DEFENDER LINK BROKEN"
+  ],
+  "stand_today": [
+   "PROP-DEPENDENT",
+   "SELF-SUPPORTED"
+  ],
+  "stand_399": [
+   "SELF-SUPPORTED",
+   "SELF-SUPPORTED"
+  ],
+  "word_today": "UNDERDETERMINED",
+  "word_399": "UNDERDETERMINED"
+ },
+ {
+  "id": 812,
+  "seat": "grok",
+  "verdict": "HELD",
+  "stored": [
+   "PROP-DEPENDENT",
+   "PROP-DEPENDENT",
+   1,
+   1
+  ],
+  "still": [
+   "D2 vs C1 DEFENDER LINK BROKEN",
+   "D3 vs C1 DEFENDER LINK BROKEN"
+  ],
+  "stand_today": [
+   "PROP-DEPENDENT",
+   "PROP-DEPENDENT"
+  ],
+  "stand_399": [
+   "PROP-DEPENDENT",
+   "PROP-DEPENDENT"
+  ],
+  "word_today": "UNDERDETERMINED",
+  "word_399": "UNDERDETERMINED"
+ },
+ {
+  "id": 820,
+  "seat": "gemini",
+  "verdict": "HELD",
+  "stored": [
+   "SELF-SUPPORTED",
+   "SELF-SUPPORTED",
+   0,
+   0
+  ],
+  "still": [
+   "D2 vs C4 DEFENDER LINK BROKEN",
+   "D4 vs C5 DEFENDER LINK BROKEN",
+   "D6 vs C5 DEFENDER LINK BROKEN"
+  ],
+  "stand_today": [
+   "PROP-DEPENDENT",
+   "SELF-SUPPORTED"
+  ],
+  "stand_399": [
+   "SELF-SUPPORTED",
+   "SELF-SUPPORTED"
+  ],
+  "word_today": "UNDERDETERMINED",
+  "word_399": "UNDERDETERMINED"
+ },
+ {
+  "id": 826,
+  "seat": "gemini",
+  "verdict": "HELD",
+  "stored": [
+   "PROP-DEPENDENT",
+   "SELF-SUPPORTED",
+   0,
+   0
+  ],
+  "still": [
+   "D2 vs C5 DEFENDER LINK BROKEN",
+   "D5 vs C6 DEFENDER LINK BROKEN",
+   "D6 vs C5 DEFENDER LINK BROKEN"
+  ],
+  "stand_today": [
+   "PROP-DEPENDENT",
+   "SELF-SUPPORTED"
+  ],
+  "stand_399": [
+   "SELF-SUPPORTED",
+   "SELF-SUPPORTED"
+  ],
+  "word_today": "UNDERDETERMINED",
+  "word_399": "UNDERDETERMINED"
+ },
+ {
+  "id": 832,
+  "seat": "gemini",
+  "verdict": "HELD",
+  "stored": [
+   "PROP-DEPENDENT",
+   "SELF-SUPPORTED",
+   1,
+   0
+  ],
+  "still": [
+   "D3 vs C2 CHALLENGER LINK BROKEN"
+  ],
+  "stand_today": [
+   "PROP-DEPENDENT",
+   "PROP-DEPENDENT"
+  ],
+  "stand_399": [
+   "PROP-DEPENDENT",
+   "SELF-SUPPORTED"
+  ],
+  "word_today": "DEFENDER WINS",
+  "word_399": "UNDERDETERMINED"
+ },
+ {
+  "id": 836,
+  "seat": "grok",
+  "verdict": "PARTIAL",
+  "stored": [
+   "COLLAPSED",
+   "PROP-DEPENDENT",
+   6,
+   1
+  ],
+  "still": [
+   "D3 vs C1 CHALLENGER LINK BROKEN",
+   "D6 vs C1 CHALLENGER LINK BROKEN"
+  ],
+  "stand_today": [
+   "COLLAPSED",
+   "PROP-DEPENDENT"
+  ],
+  "stand_399": [
+   "COLLAPSED",
+   "PROP-DEPENDENT"
+  ],
+  "word_today": "UNDERDETERMINED",
+  "word_399": "UNDERDETERMINED"
+ },
+ {
+  "id": 865,
+  "seat": "gemini",
+  "verdict": "HELD",
+  "stored": [
+   "SELF-SUPPORTED",
+   "PROP-DEPENDENT",
+   0,
+   0
+  ],
+  "still": [
+   "D2 vs C3 CHALLENGER LINK BROKEN"
+  ],
+  "stand_today": [
+   "SELF-SUPPORTED",
+   "PROP-DEPENDENT"
+  ],
+  "stand_399": [
+   "SELF-SUPPORTED",
+   "SELF-SUPPORTED"
+  ],
+  "word_today": "DEFENDER WINS",
+  "word_399": "UNDERDETERMINED"
+ },
+ {
+  "id": 887,
+  "seat": "chatgpt",
+  "verdict": "BROKEN",
+  "stored": [
+   "COLLAPSED",
+   "PROP-DEPENDENT",
+   4,
+   1
+  ],
+  "still": [
+   "D4 vs C2 DEFENDER LINK BROKEN"
+  ],
+  "stand_today": [
+   "COLLAPSED",
+   "PROP-DEPENDENT"
+  ],
+  "stand_399": [
+   "COLLAPSED",
+   "PROP-DEPENDENT"
+  ],
+  "word_today": "CHALLENGER WINS",
+  "word_399": "CHALLENGER WINS"
+ },
+ {
+  "id": 894,
+  "seat": "deepseek",
+  "verdict": "HELD",
+  "stored": [
+   "SELF-SUPPORTED",
+   "SELF-SUPPORTED",
+   0,
+   0
+  ],
+  "still": [
+   "D6 vs C4 CHALLENGER LINK BROKEN"
+  ],
+  "stand_today": [
+   "SELF-SUPPORTED",
+   "PROP-DEPENDENT"
+  ],
+  "stand_399": [
+   "SELF-SUPPORTED",
+   "SELF-SUPPORTED"
+  ],
+  "word_today": "DEFENDER WINS",
+  "word_399": "UNDERDETERMINED"
+ },
+ {
+  "id": 973,
+  "seat": "chatgpt",
+  "verdict": "BROKEN",
+  "stored": [
+   "PROP-DEPENDENT",
+   "SELF-SUPPORTED",
+   1,
+   0
+  ],
+  "still": [
+   "D4 vs C5 DEFENDER LINK BROKEN"
+  ],
+  "stand_today": [
+   "PROP-DEPENDENT",
+   "SELF-SUPPORTED"
+  ],
+  "stand_399": [
+   "PROP-DEPENDENT",
+   "SELF-SUPPORTED"
+  ],
+  "word_today": "CHALLENGER WINS",
+  "word_399": "CHALLENGER WINS"
+ },
+ {
+  "id": 1036,
+  "seat": "grok",
+  "verdict": "HELD",
+  "stored": [
+   "SELF-SUPPORTED",
+   "PROP-DEPENDENT",
+   0,
+   0
+  ],
+  "still": [
+   "D4 vs C4 CHALLENGER LINK BROKEN"
+  ],
+  "stand_today": [
+   "SELF-SUPPORTED",
+   "PROP-DEPENDENT"
+  ],
+  "stand_399": [
+   "SELF-SUPPORTED",
+   "PROP-DEPENDENT"
+  ],
+  "word_today": "DEFENDER WINS",
+  "word_399": "DEFENDER WINS"
+ },
+ {
+  "id": 1150,
+  "seat": "chatgpt",
+  "verdict": "BROKEN",
+  "stored": [
+   "PROP-DEPENDENT",
+   "SELF-SUPPORTED",
+   1,
+   0
+  ],
+  "still": [
+   "D4 vs C3 DEFENDER LINK BROKEN"
+  ],
+  "stand_today": [
+   "PROP-DEPENDENT",
+   "SELF-SUPPORTED"
+  ],
+  "stand_399": [
+   "PROP-DEPENDENT",
+   "SELF-SUPPORTED"
+  ],
+  "word_today": "CHALLENGER WINS",
+  "word_399": "CHALLENGER WINS"
+ },
+ {
+  "id": 1153,
+  "seat": "chatgpt",
+  "verdict": "BROKEN",
+  "stored": [
+   "PROP-DEPENDENT",
+   "SELF-SUPPORTED",
+   0,
+   0
+  ],
+  "still": [
+   "D6 vs C3 DEFENDER LINK BROKEN"
+  ],
+  "stand_today": [
+   "PROP-DEPENDENT",
+   "SELF-SUPPORTED"
+  ],
+  "stand_399": [
+   "SELF-SUPPORTED",
+   "SELF-SUPPORTED"
+  ],
+  "word_today": "CHALLENGER WINS",
+  "word_399": "UNDERDETERMINED"
+ },
+ {
+  "id": 1174,
+  "seat": "chatgpt",
+  "verdict": "BROKEN",
+  "stored": [
+   "PROP-DEPENDENT",
+   "SELF-SUPPORTED",
+   1,
+   0
+  ],
+  "still": [
+   "D4 vs C2 DEFENDER LINK BROKEN"
+  ],
+  "stand_today": [
+   "PROP-DEPENDENT",
+   "SELF-SUPPORTED"
+  ],
+  "stand_399": [
+   "PROP-DEPENDENT",
+   "SELF-SUPPORTED"
+  ],
+  "word_today": "CHALLENGER WINS",
+  "word_399": "CHALLENGER WINS"
+ }
+]
