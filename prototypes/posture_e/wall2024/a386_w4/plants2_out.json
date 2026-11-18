@@ -1,0 +1,166 @@
+{
+ "calls": [
+  {
+   "fn": "K",
+   "line": "local in its caller"
+  },
+  {
+   "fn": "String",
+   "line": "builtin"
+  },
+  {
+   "fn": "cjrLoose2024",
+   "line": 904
+  },
+  {
+   "fn": "cureJText",
+   "line": 1288
+  },
+  {
+   "fn": "cureSafe",
+   "line": 1286
+  },
+  {
+   "fn": "cureUnwrap",
+   "line": 903
+  },
+  {
+   "fn": "fld",
+   "line": "local in its caller"
+  },
+  {
+   "fn": "g",
+   "line": "local in its caller"
+  },
+  {
+   "fn": "hd",
+   "line": "local in its caller"
+  },
+  {
+   "fn": "judgeText",
+   "line": 249
+  },
+  {
+   "fn": "normLine",
+   "line": 254
+  },
+  {
+   "fn": "put",
+   "line": "local in its caller"
+  },
+  {
+   "fn": "quoteAt",
+   "line": 255
+  },
+  {
+   "fn": "rcLines",
+   "line": 1291
+  },
+  {
+   "fn": "rcObjEnd",
+   "line": 1287
+  },
+  {
+   "fn": "rcOne",
+   "line": 1299
+  },
+  {
+   "fn": "rd386",
+   "line": 1286
+  },
+  {
+   "fn": "readLine",
+   "line": 318
+  },
+  {
+   "fn": "readLines",
+   "line": 326
+  },
+  {
+   "fn": "ret386",
+   "line": 1286
+  },
+  {
+   "fn": "rnd",
+   "line": "local in its caller"
+  },
+  {
+   "fn": "s0",
+   "line": 252
+  },
+  {
+   "fn": "unescapeOnce",
+   "line": 253
+  }
+ ],
+ "undefined_calls": [],
+ "step_rev1_library_rev1_node": {
+  "bodies": [
+   "a: NO TAG",
+   "b: NO TAG",
+   "c: UNDERDETERMINED"
+  ],
+  "removed": [
+   "r1: UNDERDETERMINED",
+   "r2: NO TAG",
+   "r3: CHALLENGER WINS"
+  ],
+  "ert386_error": null
+ },
+ "step_rev1_library_rev2_node": {
+  "bodies": [
+   "a: NO TAG",
+   "b: NO TAG",
+   "c: UNDERDETERMINED"
+  ],
+  "removed": [
+   "r1: UNDERDETERMINED",
+   "r2: NO TAG",
+   "r3: CHALLENGER WINS"
+  ],
+  "ert386_error": "body 0 seat a: cjrLoose2024 is not defined | body 1 seat b: cjrLoose2024 is not defined | removed 1 seat r2: cjrLoose2024 is not defined"
+ },
+ "step_rev2": {
+  "bodies": [
+   "a: CHALLENGER WINS",
+   "b: CHALLENGER WINS",
+   "c: CHALLENGER WINS"
+  ],
+  "removed": [
+   "r1: CHALLENGER WINS",
+   "r2: CHALLENGER WINS",
+   "r3: CHALLENGER WINS"
+  ],
+  "ert386_error": null
+ },
+ "rd386": {
+  "rev1_BROKEN_no_fields": {
+   "word": "UNDERDETERMINED",
+   "tie": true,
+   "why": null
+  },
+  "rev2_BROKEN_no_fields": {
+   "word": "CHALLENGER WINS",
+   "tie": false,
+   "why": null
+  },
+  "rev2_BROKEN_equal_fields_no_collisions": {
+   "word": "UNDERDETERMINED",
+   "tie": true,
+   "why": null
+  },
+  "rev2_HELD_tie_present": {
+   "word": "UNDERDETERMINED",
+   "tie": true,
+   "why": null
+  }
+ },
+ "tie1336": {
+  "rev1_empty_counts": true,
+  "rev2_empty_counts": false,
+  "rev1_missing_all": true,
+  "rev2_missing_all": false,
+  "rev2_numbers": true
+ },
+ "line1491_rev2": " const tie=!unk.length&&!col.some(z=>/LINK BROKEN$/.test(String(z.grade||'')))&&!!dst&&!!cst&&typeof c.DEFENDER==='number'&&typeof c.CHALLENGER==='number'&&dst===cst&&c.DEFENDER===c.CHALLENGER;"
+}

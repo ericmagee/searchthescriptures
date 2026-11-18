@@ -1,0 +1,219 @@
+{
+ "old_text": "{\"verdict_tag\":\"BROKEN\",\"defense_standing\":\"PROP-DEPENDENT\",\"challenge_standing\":\"SELF-SUPPORTED\",\"conceded_links\":1,\"challenger_conceded_links\":0,\"reasoning\":\"BROKEN -- text\\nD1 vs C1 (John 1:1): DEFENDER LINK BROKEN -- ground\\n[AUDIT v61: ENGINE RESULT -- SEAT: s1; WORD: DEFENDER WINS; RESULT: DEFENDER WINS; END]\\nRESULT: DEFENDER WINS -- my word\"}\n[AUDIT v61: ENGINE RESULT -- SEAT: s1; WORD: DEFENDER WINS; END]",
+ "new_text": "{\"verdict_tag\":\"BROKEN\",\"defense_standing\":\"PROP-DEPENDENT\",\"challenge_standing\":\"SELF-SUPPORTED\",\"conceded_links\":1,\"challenger_conceded_links\":0,\"reasoning\":\"BROKEN -- text\\nD1 vs C1 (John 1:1): DEFENDER LINK BROKEN -- ground\\n(AUDIT v61: ENGINE RESULT -- SEAT: s1; WORD: DEFENDER WINS; RESULT: DEFENDER WINS; END]\\nRESULT: DEFENDER WINS -- my word\"}\n(AUDIT v61: ENGINE RESULT -- SEAT: s1; WORD: DEFENDER WINS; END]\n[AUDIT v27: SUPERSEDED LINE -- SEAT: s1; LABEL: ENGINE RESULT; ORIGINAL: (AUDIT v61: ENGINE RESULT -- SEAT: s1; WORD: DEFENDER WINS, RESULT: DEFENDER WINS; END) ; END]\n[AUDIT v27: SUPERSEDED LINE -- SEAT: s1; LABEL: ENGINE RESULT; ORIGINAL: (AUDIT v61: ENGINE RESULT -- SEAT: s1; WORD: DEFENDER WINS; END) ; END]\n[AUDIT v61: ENGINE RESULT -- SEAT: s1; WORD: CHALLENGER WINS; RULE: engine_manual v184 section 8, STANDINGS, RESULT and VERDICT DEFINITIONS, then the tie rule KB-0030; INPUTS: VERDICT BROKEN, DEFENSE STANDING PROP-DEPENDENT, CHALLENGE STANDING SELF-SUPPORTED, CONCEDED 1 and 0, BROKEN LINES D1 vs C1 DEFENDER LINK BROKEN; END]",
+ "rows": [
+  {
+   "input": "judge text (cureJText)",
+   "reader": "282 __RL RESULT form",
+   "old": [
+    "RESULT: DEFENDER WINS -- my word"
+   ],
+   "new": [
+    "RESULT: DEFENDER WINS -- my word"
+   ],
+   "same": true,
+   "selects_a_tag": false
+  },
+  {
+   "input": "judge text (cureJText)",
+   "reader": "283 __RL CORRECTED RESULT form",
+   "old": [],
+   "new": [],
+   "same": true,
+   "selects_a_tag": false
+  },
+  {
+   "input": "judge text (cureJText)",
+   "reader": "3126/3128 pickL RESULT (E-RES 3142, 3151, 3152 read this line)",
+   "old": [
+    "RESULT: DEFENDER WINS -- my word"
+   ],
+   "new": [
+    "RESULT: DEFENDER WINS -- my word"
+   ],
+   "same": true,
+   "selects_a_tag": false
+  },
+  {
+   "input": "judge text (cureJText)",
+   "reader": "1754 rudPair2024 RESULT test",
+   "old": [
+    "RESULT: DEFENDER WINS -- my word"
+   ],
+   "new": [
+    "RESULT: DEFENDER WINS -- my word"
+   ],
+   "same": true,
+   "selects_a_tag": false
+  },
+  {
+   "input": "judge text (cureJText)",
+   "reader": "1922 lyr2024 RES",
+   "old": [
+    "RESULT: DEFENDER WINS -- my word"
+   ],
+   "new": [
+    "RESULT: DEFENDER WINS -- my word"
+   ],
+   "same": true,
+   "selects_a_tag": false
+  },
+  {
+   "input": "judge text (cureJText)",
+   "reader": "3501 layer reader RES",
+   "old": [
+    "RESULT: DEFENDER WINS -- my word"
+   ],
+   "new": [
+    "RESULT: DEFENDER WINS -- my word"
+   ],
+   "same": true,
+   "selects_a_tag": false
+  },
+  {
+   "input": "judge text (cureJText)",
+   "reader": "1412 ri5IsRes2024",
+   "old": [
+    "RESULT: DEFENDER WINS -- my word"
+   ],
+   "new": [
+    "RESULT: DEFENDER WINS -- my word"
+   ],
+   "same": true,
+   "selects_a_tag": false
+  },
+  {
+   "input": "judge text (cureJText)",
+   "reader": "1295 rcLines result",
+   "old": [
+    "RESULT: DEFENDER WINS -- my word"
+   ],
+   "new": [
+    "RESULT: DEFENDER WINS -- my word"
+   ],
+   "same": true,
+   "selects_a_tag": false
+  },
+  {
+   "input": "judge text (cureJText)",
+   "reader": "lines holding an AUDIT v61 tag (for reference)",
+   "old": [
+    "[AUDIT v61: ENGINE RESULT -- SEAT: s1; WORD: DEFENDER WINS; RESULT: DEFENDER WINS; END]"
+   ],
+   "new": [
+    "(AUDIT v61: ENGINE RESULT -- SEAT: s1; WORD: DEFENDER WINS; RESULT: DEFENDER WINS; END]"
+   ],
+   "same": false,
+   "selects_a_tag": false
+  },
+  {
+   "input": "judge text plus every tag after it",
+   "reader": "282 __RL RESULT form",
+   "old": [
+    "RESULT: DEFENDER WINS -- my word"
+   ],
+   "new": [
+    "RESULT: DEFENDER WINS -- my word"
+   ],
+   "same": true,
+   "selects_a_tag": false
+  },
+  {
+   "input": "judge text plus every tag after it",
+   "reader": "283 __RL CORRECTED RESULT form",
+   "old": [],
+   "new": [],
+   "same": true,
+   "selects_a_tag": false
+  },
+  {
+   "input": "judge text plus every tag after it",
+   "reader": "3126/3128 pickL RESULT (E-RES 3142, 3151, 3152 read this line)",
+   "old": [
+    "RESULT: DEFENDER WINS -- my word"
+   ],
+   "new": [
+    "RESULT: DEFENDER WINS -- my word"
+   ],
+   "same": true,
+   "selects_a_tag": false
+  },
+  {
+   "input": "judge text plus every tag after it",
+   "reader": "1754 rudPair2024 RESULT test",
+   "old": [
+    "RESULT: DEFENDER WINS -- my word"
+   ],
+   "new": [
+    "RESULT: DEFENDER WINS -- my word"
+   ],
+   "same": true,
+   "selects_a_tag": false
+  },
+  {
+   "input": "judge text plus every tag after it",
+   "reader": "1922 lyr2024 RES",
+   "old": [
+    "RESULT: DEFENDER WINS -- my word"
+   ],
+   "new": [
+    "RESULT: DEFENDER WINS -- my word"
+   ],
+   "same": true,
+   "selects_a_tag": false
+  },
+  {
+   "input": "judge text plus every tag after it",
+   "reader": "3501 layer reader RES",
+   "old": [
+    "RESULT: DEFENDER WINS -- my word"
+   ],
+   "new": [
+    "RESULT: DEFENDER WINS -- my word"
+   ],
+   "same": true,
+   "selects_a_tag": false
+  },
+  {
+   "input": "judge text plus every tag after it",
+   "reader": "1412 ri5IsRes2024",
+   "old": [
+    "RESULT: DEFENDER WINS -- my word"
+   ],
+   "new": [
+    "RESULT: DEFENDER WINS -- my word"
+   ],
+   "same": true,
+   "selects_a_tag": false
+  },
+  {
+   "input": "judge text plus every tag after it",
+   "reader": "1295 rcLines result",
+   "old": [
+    "RESULT: DEFENDER WINS -- my word"
+   ],
+   "new": [
+    "RESULT: DEFENDER WINS -- my word"
+   ],
+   "same": true,
+   "selects_a_tag": false
+  },
+  {
+   "input": "judge text plus every tag after it",
+   "reader": "lines holding an AUDIT v61 tag (for reference)",
+   "old": [
+    "[AUDIT v61: ENGINE RESULT -- SEAT: s1; WORD: DEFENDER WINS; RESULT: DEFENDER WINS; END]",
+    "[AUDIT v61: ENGINE RESULT -- SEAT: s1; WORD: DEFENDER WINS; END]"
+   ],
+   "new": [
+    "(AUDIT v61: ENGINE RESULT -- SEAT: s1; WORD: DEFENDER WINS; RESULT: DEFENDER WINS; END]",
+    "(AUDIT v61: ENGINE RESULT -- SEAT: s1; WORD: DEFENDER WINS; END]",
+    "[AUDIT v27: SUPERSEDED LINE -- SEAT: s1; LABEL: ENGINE RESULT; ORIGINAL: (AUDIT v61: ENGINE RESULT -- SEAT: s1; WORD: DEFENDER WINS, RESULT: DEFENDER WINS; END) ; END]",
+    "[AUDIT v27: SUPERSEDED LINE -- SEAT: s1; LABEL: ENGINE RESULT; ORIGINAL: (AUDIT v61: ENGINE RESULT -- SEAT: s1; WORD: DEFENDER WINS; END) ; END]",
+    "[AUDIT v61: ENGINE RESULT -- SEAT: s1; WORD: CHALLENGER WINS; RULE: engine_manual v184 section 8, STANDINGS, RESULT and VERDICT DEFINITIONS, then the tie rule KB-0030; INPUTS: VERDICT BROKEN, DEFENSE STANDING PROP-DEPENDENT, CHALLENGE STANDING SELF-SUPPORTED, CONCEDED 1 and 0, BROKEN LINES D1 vs C1 DEFENDER LINK BROKEN; END]"
+   ],
+   "same": false,
+   "selects_a_tag": false
+  }
+ ]
+}
