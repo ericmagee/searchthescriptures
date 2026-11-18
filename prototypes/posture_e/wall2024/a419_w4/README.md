@@ -14,7 +14,8 @@ The start (the POST of the body to the oracle-debate-v1 webhook) is sent only af
 names the GO output and the body sha.
 
 ## Checks
-1. Nothing running: no execution running in any workflow; none waiting in the engine, the child, Early Alternate or Cure Call.
+0. Live guards: when anything is read live, --body-sha is required and --no385 is refused.
+1. Nothing running: no execution running or new (queued) in any workflow; none waiting in the engine, the child, Early Alternate or Cure Call.
    Waiting executions of other workflows are listed, not refused (two of "Post a Directive" have waited since 2026-08-18 until the year 3000).
 2. Versions: live engine and child versionIds equal the expected ones; each is active and published (activeVersionId equals versionId).
 3. Library: lib_sha (first 16 hex of SHA-256 over JSON.stringify of the /*LIB*/ line array) equal on engine and child, and each equals
