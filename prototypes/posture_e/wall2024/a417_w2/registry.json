@@ -6,7 +6,7 @@
      "mark_sql": "(select coalesce(sum((length(coalesce(r.engine_r3,''))-length(replace(coalesce(r.engine_r3,''),'ASSUMES:','')))/8),0) from r)"},
     {"ask": "374 step 2", "title": "both-not-stated refusal of DEFENDER LINK BROKEN on a challenger premise", "live_since": "2026-11-18T21:19:54Z", "version": "36fcf36b", "probe": "sql",
      "case_sql": "exists(select 1 from e, j where e.rule='E-ASSUME' and e.item like 'CHALLENGER PREMISE%' and e.cure_reason like 'BOTH NOT STATED%' and j.verdict_raw ~ ('D[0-9]+ vs C' || substring(e.item from 'CHALLENGER PREMISE ([0-9]+)') || '[^0-9][^\\n]*DEFENDER LINK BROKEN'))",
-     "mark_sql": "(select count(*) from j where j.verdict_raw like '%ASK 374%') + (select count(*) from e where e.cure_reason like '%ASK 374%')"},
+     "mark_sql": "(select count(*) from j where j.verdict_raw like '%(pkgBNS, ASK 374)%') + (select count(*) from e where coalesce(e.cure_reason,'')||' '||coalesce(e.response_line,'') like '%(pkgBNS, ASK 374)%')"},
     {"ask": "376", "title": "K-V exclusion wording counts as a K-V kind (KV_EXCL)", "live_since": "2026-11-18T21:19:22Z", "version": "9fc1d4a8", "probe": "sql",
      "case_sql": "exists(select 1 from e where e.rule='K-V' and lower(coalesce(e.full_reply,'')||' '||coalesce(e.cure_reason,'')||' '||coalesce(e.flagged_line,'')) like '%exclu%')",
      "mark_sql": "(select count(*) from e where e.rule='K-V' and e.cure_status='CURED' and lower(coalesce(e.full_reply,'')||' '||coalesce(e.cure_reason,'')||' '||coalesce(e.flagged_line,'')) like '%exclu%')"},

@@ -19,7 +19,7 @@ The emitter refuses (exit 3) if the statement holds a write word.
 - 399/402 case: a v21 CORRECTED RESULT tag listing "RETRACTED: Dn vs Cm" (a plain "RETRACTED" also appears in
   statement text, e.g. glm_legal in 39266).
 - 394 s11: no stored mark text is known; mark is null, so a case reads CASE, READ BY HAND.
-- 374 step 2 mark: "ASK 374" in j or e text; the refusal's own wording is not yet seen in a stored row.
+- 374 step 2 mark: the refusal's words "(pkgBNS, ASK 374)" (library line 1530, W3 8865 A.4) in j.verdict_raw or e text.
 - live_since: UTC save time of the engine version named in W4's write post (n8n workflow history).
 
 ## Limits
