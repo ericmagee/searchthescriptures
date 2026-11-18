@@ -1,0 +1,36 @@
+same    Send Back Record#0                 x 264 | s262 reproduces stored true | reads field false  
+same    Reread Build#0                     x 265 | s262 reproduces stored true | reads field false  
+same    Reread Record#0                    x 268 | s262 reproduces stored true | reads field false  
+same    Gate Build#0                       x 269 | s262 reproduces stored true | reads field false  
+same    Late Gate Build#0                  x 272 | s262 reproduces stored true | reads field false  
+same    Gate Record#0                      x 274 | s262 reproduces stored true | reads field false  
+same    Alternate Build#0                  x 277 | s262 reproduces stored true | reads field false | s262 ERR Cannot read properties of undefined (reading 'map') | tgt ERR Cannot read properties of undefined (reading 'map')
+same    Early Alternate Reply#0            x 280 | s262 reproduces stored true | reads field false  
+same    Alternate Payloads#0               x 282 | s262 reproduces stored true | reads field true  
+same    Alternate Cure Build#0             x 284 | s262 reproduces stored true | reads field false  
+same    Alternate Cure Normalize#0         x 286 | s262 reproduces stored true | reads field false  
+same    Alternate Merge Seat#0             x 288 | s262 reproduces stored true | reads field true  
+same    Alt Seated#0                       x 289 | s262 reproduces stored true | reads field false  
+same    Alt Judge Enforcer Build#0         x 290 | s262 reproduces stored true | reads field true  
+same    Alt Judge Enforcer Retry Build#0   x 293 | s262 reproduces stored true | reads field false  
+same    Alt Judge Enforcer Resend Build#0  x 296 | s262 reproduces stored true | reads field false  
+same    Alt Judge Enforcer Record#0        x 298 | s262 reproduces stored true | reads field false  
+same    Alt Send Back Build#0              x 299 | s262 reproduces stored true | reads field false  
+same    Alt Send Back Record#0             x 302 | s262 reproduces stored false | reads field false  
+same    Alt Reread Build#0                 x 303 | s262 reproduces stored true | reads field false  
+same    Alt Reread Record#0                x 306 | s262 reproduces stored true | reads field false  
+same    Alt Gate Build#0                   x 307 | s262 reproduces stored true | reads field false  
+same    Alt Late Gate Build#0              x 310 | s262 reproduces stored true | reads field false  
+same    Alt Gate Record#0                  x 312 | s262 reproduces stored false | reads field false  
+same    Alternate Merge 1#0                x 313 | s262 reproduces stored false | reads field true  
+same    Second Alternate?#0                x 314 | s262 reproduces stored false | reads field false  
+NONCODE Second Alternate Needed?#0 input differs: s262 vs stored true | target vs s262 false
+same    Alternate Merge#0                  x 316 | s262 reproduces stored false | reads field false  
+NONCODE Dry?#0 input differs: s262 vs stored true | target vs s262 false
+same    Panel Done#0                       x 325 | s262 reproduces stored true | reads field false | s262 ERR FAIL-CLOSED: alternates were seated but Record Alternates did not write them. run_token=OD | tgt ERR FAIL-CLOSED: alternates were seated but Record Alternates did not write them. run_token=OD
+same    Panel Tokens#0                     x 326 | s262 reproduces stored true | reads field false  
+same    Format Markdown#0                  x 333 | s262 reproduces stored false | reads field false  
+same    Plain Rule Lines#0                 x 334 | s262 reproduces stored false | reads field false  
+NONCODE Save to Drive#0 input differs: s262 vs stored true | target vs s262 false
+same    Raise If Incomplete#0              x 336 | s262 reproduces stored true | reads field false  
+START x 264 | code-node runs changed: 0
