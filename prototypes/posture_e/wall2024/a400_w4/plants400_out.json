@@ -1,0 +1,284 @@
+[
+ {
+  "plant": "1 prefixed long form (667 shape), BROKEN equal fields",
+  "live386": {
+   "word": "CHALLENGER WINS",
+   "tie": false,
+   "broken": "none"
+  },
+  "t400": {
+   "word": "UNDERDETERMINED",
+   "tie": true,
+   "broken": "none"
+  },
+  "col": [
+   "D3 vs C2:UNDERDETERMINED"
+  ],
+  "ls": []
+ },
+ {
+  "plant": "2 prefix label mismatch \"D3: D4 vs C2\"",
+  "live386": {
+   "word": "CHALLENGER WINS",
+   "tie": false,
+   "broken": "none"
+  },
+  "t400": {
+   "word": "CHALLENGER WINS",
+   "tie": false,
+   "broken": "none"
+  },
+  "col": [
+   "D4 vs C2:UNREAD PREFIX LABEL D3 IS NOT D4"
+  ],
+  "ls": []
+ },
+ {
+  "plant": "3 grade-first form (1224 shape, Q1), BROKEN",
+  "live386": {
+   "word": "CHALLENGER WINS",
+   "tie": false,
+   "broken": "none"
+  },
+  "t400": {
+   "word": "CHALLENGER WINS",
+   "tie": false,
+   "broken": "D2 vs C1 DEFENDER LINK BROKEN"
+  },
+  "col": [
+   "D2 vs C1:DEFENDER LINK BROKEN"
+  ],
+  "ls": []
+ },
+ {
+  "plant": "4 LINK STATE only, all STANDS, HELD equal fields (2c: no tie)",
+  "live386": {
+   "word": "DEFENDER WINS",
+   "tie": false,
+   "broken": "none"
+  },
+  "t400": {
+   "word": "DEFENDER WINS",
+   "tie": false,
+   "broken": "none"
+  },
+  "col": [],
+  "ls": []
+ },
+ {
+  "plant": "5 mixed: long form D2 UND governs over \"D2: DEFENDER LINK BROKEN\"",
+  "live386": {
+   "word": "UNDERDETERMINED",
+   "tie": true,
+   "broken": "none"
+  },
+  "t400": {
+   "word": "UNDERDETERMINED",
+   "tie": true,
+   "broken": "none"
+  },
+  "col": [
+   "D1 vs C1:UNDERDETERMINED",
+   "D2 vs C3:UNDERDETERMINED"
+  ],
+  "ls": []
+ },
+ {
+  "plant": "6 LINK STATE DEFENDER LINK BROKEN on HELD, with a graded collision",
+  "live386": {
+   "word": "UNDERDETERMINED",
+   "tie": true,
+   "broken": "none"
+  },
+  "t400": {
+   "word": "DEFENDER WINS",
+   "tie": false,
+   "broken": "D2 DEFENDER LINK BROKEN"
+  },
+  "col": [
+   "D1 vs C1:UNDERDETERMINED"
+  ],
+  "ls": [
+   "D2:DEFENDER LINK BROKEN"
+  ]
+ },
+ {
+  "plant": "7 LINK STATE DEFENDER LINK BROKEN on BROKEN",
+  "live386": {
+   "word": "UNDERDETERMINED",
+   "tie": true,
+   "broken": "none"
+  },
+  "t400": {
+   "word": "CHALLENGER WINS",
+   "tie": false,
+   "broken": "D2 DEFENDER LINK BROKEN"
+  },
+  "col": [
+   "D1 vs C1:UNDERDETERMINED"
+  ],
+  "ls": [
+   "D2:DEFENDER LINK BROKEN"
+  ]
+ },
+ {
+  "plant": "8 \"D2: CHALLENGER LINK BROKEN\" on HELD, challenge SELF-SUPPORTED (UNREAD)",
+  "live386": {
+   "word": "UNDERDETERMINED",
+   "tie": false,
+   "broken": "none"
+  },
+  "t400": {
+   "word": "UNDERDETERMINED",
+   "tie": false,
+   "broken": "none"
+  },
+  "col": [
+   "D1 vs C1:UNDERDETERMINED"
+  ],
+  "ls": [
+   "D2:UNREAD LINK STATE CHALLENGER LINK BROKEN ON D2"
+  ]
+ },
+ {
+  "plant": "9 bare \"D2: BROKEN\" (UNREAD)",
+  "live386": {
+   "word": "UNDERDETERMINED",
+   "tie": true,
+   "broken": "none"
+  },
+  "t400": {
+   "word": "DEFENDER WINS",
+   "tie": false,
+   "broken": "none"
+  },
+  "col": [
+   "D1 vs C1:UNDERDETERMINED"
+  ],
+  "ls": [
+   "D2:UNREAD LINK STATE BROKEN ON D2"
+  ]
+ },
+ {
+  "plant": "10 WITHDRAWN only",
+  "live386": {
+   "word": "DEFENDER WINS",
+   "tie": false,
+   "broken": "none"
+  },
+  "t400": {
+   "word": "DEFENDER WINS",
+   "tie": false,
+   "broken": "none"
+  },
+  "col": [],
+  "ls": []
+ },
+ {
+  "plant": "11 LINK STATE DEFENDER LINK BROKEN outside COLLISION POINTS (not read)",
+  "live386": {
+   "word": "UNDERDETERMINED",
+   "tie": true,
+   "broken": "none"
+  },
+  "t400": {
+   "word": "UNDERDETERMINED",
+   "tie": true,
+   "broken": "none"
+  },
+  "col": [
+   "D1 vs C1:UNDERDETERMINED"
+  ],
+  "ls": []
+ },
+ {
+  "plant": "12 retraction \"D2 vs C1\" the only key naming D2: link-state break left out",
+  "live386": {
+   "word": "UNDERDETERMINED",
+   "tie": true,
+   "broken": "none, RETRACTED D2 vs C1"
+  },
+  "t400": {
+   "word": "UNDERDETERMINED",
+   "tie": true,
+   "broken": "none, RETRACTED D2 vs C1"
+  },
+  "col": [
+   "D1 vs C4:UNDERDETERMINED"
+  ],
+  "ls": [
+   "D2:DEFENDER LINK BROKEN"
+  ]
+ },
+ {
+  "plant": "13 two retracted keys name D2: the join is ambiguous, entry UNREAD",
+  "live386": {
+   "word": "UNDERDETERMINED",
+   "tie": true,
+   "broken": "none, RETRACTED D2 vs C1, D2 vs C2"
+  },
+  "t400": {
+   "word": "DEFENDER WINS",
+   "tie": false,
+   "broken": "none, RETRACTED D2 vs C1, D2 vs C2"
+  },
+  "col": [
+   "D1 vs C4:UNDERDETERMINED"
+  ],
+  "ls": [
+   "D2:DEFENDER LINK BROKEN"
+  ]
+ },
+ {
+  "plant": "14 v25 recompute with a link-state break (brk DEFENDER 1)",
+  "live386": {
+   "result": "DEFENDER WINS",
+   "fields": {
+    "verdict_tag": "HELD",
+    "defense_standing": "SELF-SUPPORTED",
+    "conceded_links": 0,
+    "challenge_standing": "PROP-DEPENDENT",
+    "challenger_conceded_links": 1
+   },
+   "trig": [
+    "RETRACTED D1 vs C1 (UNDERDETERMINED to UNDERDETERMINED)"
+   ]
+  },
+  "t400": {
+   "result": "CHALLENGER WINS",
+   "fields": {
+    "verdict_tag": "BROKEN",
+    "defense_standing": "PROP-DEPENDENT",
+    "conceded_links": 0,
+    "challenge_standing": "PROP-DEPENDENT",
+    "challenger_conceded_links": 1
+   },
+   "trig": [
+    "RETRACTED D1 vs C1 (UNDERDETERMINED to UNDERDETERMINED)"
+   ]
+  }
+ },
+ {
+  "plant": "14b control: same recompute, long-form D2 vs C3 DEFENDER LINK BROKEN",
+  "live386": {
+   "result": "CHALLENGER WINS",
+   "fields": {
+    "verdict_tag": "BROKEN",
+    "defense_standing": "PROP-DEPENDENT",
+    "conceded_links": 0,
+    "challenge_standing": "PROP-DEPENDENT",
+    "challenger_conceded_links": 1
+   }
+  },
+  "t400": {
+   "result": "CHALLENGER WINS",
+   "fields": {
+    "verdict_tag": "BROKEN",
+    "defense_standing": "PROP-DEPENDENT",
+    "conceded_links": 0,
+    "challenge_standing": "PROP-DEPENDENT",
+    "challenger_conceded_links": 1
+   }
+  }
+ }
+]

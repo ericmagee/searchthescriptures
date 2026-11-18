@@ -1,0 +1,34 @@
+// ASK 400 build (plan W4 8544, adopted W1 after 8544; W2 8549, W3 8552): rcLines reads the prefixed long form ("Dn: Dn vs Cm ..."),
+// the grade-first form ("Dn: GRADE vs Cm ...", Q1), and LINK STATE lines under COLLISION POINTS into P.ls; the result tests see P.ls. Offline.
+// Usage: node build400.cjs IN OUT [--child]
+const fs=require('fs'),cr=require('crypto');const acorn=require('../tools/node_modules/acorn');const T=require('../tools/lib.cjs');
+const [IN,OUT,CH]=process.argv.slice(2);let d=JSON.parse(fs.readFileSync(IN));if(d.data&&d.data.nodes)d=d.data;
+const U=T.unpack(d);const L=U.L,M=U.M;const log=[];
+const rep=(i,a,b)=>{const n=L[i].split(a).length-1;if(n!==1)throw new Error('line '+i+': found '+n+' times: '+a.slice(0,80));L[i]=L[i].replace(a,()=>b);log.push('L'+i);};
+// 1. rcLines
+rep(1291,"const out={col:[],clause:null,key:null,result:null,st:{},cn:{},wdn:0};","const out={col:[],clause:null,key:null,result:null,st:{},cn:{},wdn:0,ls:[]};let __cp400=false;const __ls400=[]; /* ASK 400 (Wall 8544): LINK STATE lines are read only after the COLLISION POINTS heading */");
+rep(1292,"const u=l.toUpperCase();if(!l)continue;","const u=l.toUpperCase();if(!l)continue;if(/^#*\\s*COLLISION POINTS\\b/.test(u))__cp400=true;"
+ +"const __pm400=u.match(/^(?:[-•]|\\d+[.)])?\\s*(D\\d+)\\s*:\\s*(D\\d+)\\s+VS\\.?\\s+(C\\d+)\\b/);if(__pm400){if(__pm400[1]===__pm400[2]){const r=__RL.readLine(l.replace(/^((?:[-•]|\\d+[.)])?\\s*)D\\d+\\s*:\\s*/i,'$1'));const ok=r.form==='COLLISION'&&!(r.f&&r.f.restated);out.col.push(ok?{link:__pm400[2]+' vs '+__pm400[3],grade:r.f.grade,raw}:{link:__pm400[2]+' vs '+__pm400[3],grade:null,raw,unread:r.detail||r.code||'NO_LINE_FORM'});}else out.col.push({link:__pm400[2]+' vs '+__pm400[3],grade:null,raw,unread:'PREFIX LABEL '+__pm400[1]+' IS NOT '+__pm400[2]});continue;} /* ASK 400 item 2a: the prefixed long form \"Dn: Dn vs Cm ...\" is the collision line \"Dn vs Cm ...\" when both labels agree */"
+ +"const __hy400=__cp400&&u.match(/^(?:[-•]|\\d+[.)])?\\s*(D\\d+)\\s*:\\s*(DEFENDER LINK BROKEN|CHALLENGER LINK BROKEN|UNDERDETERMINED|STANDS)\\s+VS\\.?\\s+(C\\d+)\\b/);if(__hy400){out.col.push({link:__hy400[1]+' vs '+__hy400[3],grade:__hy400[2],raw});continue;} /* ASK 400 Q1 (W1 after 8544): \"Dn: GRADE vs Cm ...\" names the pair, so it is that collision */");
+rep(1294,"out.wdn++;","out.wdn++;if(__cp400&&/^(?:[-•]|\\d+[.)])?\\s*D\\d+\\s*:/.test(u)){const r=__RL.readLine(raw);if(r&&r.form==='LINK STATE'&&r.f&&/^D\\d+$/i.test(String(r.f.link||''))){const g=String(r.f.grade||'').toUpperCase(),k=String(r.f.link).toUpperCase();if(g==='DEFENDER LINK BROKEN')__ls400.push({link:k,grade:g,raw,ls:true});else if(g==='CHALLENGER LINK BROKEN'||g==='BROKEN')__ls400.push({link:k,grade:null,raw,ls:true,unread:'LINK STATE '+g+' ON '+k});}} /* ASK 400 items 2b to 2d: a LINK STATE DEFENDER LINK BROKEN is a defender break; CHALLENGER LINK BROKEN on a D label, or a bare BROKEN, is UNREAD; STANDS, UNDERDETERMINED and WITHDRAWN are link states with no collision */");
+rep(1298,"out.col=out.col.filter(z=>z.grade||!out.col.some(y=>y.grade&&y.link===z.link));","out.col=out.col.filter(z=>z.grade||!out.col.some(y=>y.grade&&y.link===z.link));for(const z of __ls400){if(out.col.some(y=>String(y.link).toUpperCase().startsWith(z.link+' VS')))continue;if(out.ls.some(y=>y.link===z.link))continue;out.ls.push(z);} /* ASK 400 item 2e: a long form for the same Dn governs; one entry per Dn */");
+// 2. v25: tie at 1337, brk and unk at 1344, rd386 at 1351
+rep(1337,"__tie421(col,","__tie421(col.concat(P.ls||[]),");
+rep(1344,"const brk={DEFENDER:col.filter(z=>z.grade==='DEFENDER LINK BROKEN').length+__cecX.DEFENDER,CHALLENGER:col.filter(z=>z.grade==='CHALLENGER LINK BROKEN').length+__cecX.CHALLENGER}; /* pkgCEC */const unk=col.filter(z=>!z.grade);",
+ "const __c400=col.concat(P.ls||[]); /* ASK 400: link-state breaks count */const brk={DEFENDER:__c400.filter(z=>z.grade==='DEFENDER LINK BROKEN').length+__cecX.DEFENDER,CHALLENGER:__c400.filter(z=>z.grade==='CHALLENGER LINK BROKEN').length+__cecX.CHALLENGER}; /* pkgCEC */const unk=__c400.filter(z=>!z.grade);");
+rep(1351,"rd386({verdict:word,cst,dst,cd:c.DEFENDER,cc:c.CHALLENGER,col,","rd386({verdict:word,cst,dst,cd:c.DEFENDER,cc:c.CHALLENGER,col:__c400,");
+// 3. v37: tie at 1491, rd386 at 1492 (brk and unk come from 1344)
+rep(1491,"!col.some(z=>/LINK BROKEN$/.test(String(z.grade||'')))&&col.length>0","!__c400.some(z=>/LINK BROKEN$/.test(String(z.grade||'')))&&col.length>0");
+rep(1492,"rd386({verdict:word,cst,dst,cd:c.DEFENDER,cc:c.CHALLENGER,col,","rd386({verdict:word,cst,dst,cd:c.DEFENDER,cc:c.CHALLENGER,col:__c400,");
+// 4. rd386 (item 2f) and ert386 (BROKEN LINES)
+rep(1286,"const col=(i.col||[]).filter(z=>!(ex.has(K(z.link))&&/LINK BROKEN$/.test(String(z.grade||''))));",
+ "const __rn=k=>[...ex].filter(x=>x.startsWith(k+' VS ')).length; /* ASK 400 item 2f (W2 8509 1a, W1 8511 1): a retraction \"Dn vs Cm\" applies to a \"Dn\" link-state entry only when it is the only retracted key naming Dn; when two or more name Dn the join is not guessed and the entry is UNREAD */const col=(i.col||[]).map(z=>(!/ VS /.test(K(z.link))&&__rn(K(z.link))>1)?{...z,grade:null,unread:'RETRACTION JOIN AMBIGUOUS'}:z).filter(z=>!((ex.has(K(z.link))||(!/ VS /.test(K(z.link))&&__rn(K(z.link))===1))&&/LINK BROKEN$/.test(String(z.grade||''))));");
+rep(1286,"const r=rd386({verdict:v,cst,dst,cd,cc,col:P.col,retracted:ret});","const __c400=P.col.concat(P.ls||[]);const r=rd386({verdict:v,cst,dst,cd,cc,col:__c400,retracted:ret});");
+rep(1286,"const lb=P.col.filter(z=>/LINK BROKEN$/.test(String(z.grade||''))&&!ret.some(y=>K(y)===K(z.link)))","const lb=__c400.filter(z=>/LINK BROKEN$/.test(String(z.grade||''))&&!ret.some(y=>K(y)===K(z.link))&&!(z.ls&&ret.filter(y=>K(y).startsWith(K(z.link)+' VS ')).length>=1))");
+// 5. MAP lengths, header, library
+const ch=[];for(const k of Object.keys(M)){const n2=T.rb(L,M[k]).length;if(n2!==M[k].n){ch.push(k);M[k].n=n2;}}
+const LJ=JSON.stringify(L);const lsha=cr.createHash('sha256').update(LJ).digest('hex').slice(0,16);
+const h2=U.hdr.replace(/library sha [0-9a-f]{16}, (\d+) lines/,()=>'library sha '+lsha+', '+L.length+' lines');if(h2===U.hdr)throw new Error('hdr');
+d.nodes.find(n=>n.name==='Shared Library').parameters.jsCode=h2+'\n/*LIB*/'+LJ+'\n/*MAP*/'+JSON.stringify(M)+U.tail;
+const P=s=>acorn.parse(s,{ecmaVersion:'latest',allowReturnOutsideFunction:true,allowAwaitOutsideFunction:true});for(const k of Object.keys(M))P(T.rb(L,M[k]));
+fs.writeFileSync(OUT,JSON.stringify(d));console.log('lines changed',[...new Set(log)].join(' '),'| MAP lengths changed',ch.length,'| lib sha',lsha);

@@ -1,0 +1,65 @@
+{
+ "summary": {
+  "judgments": 624,
+  "word": 1,
+  "tie": 1,
+  "broken": 2,
+  "note": 2,
+  "brk": 2,
+  "unread": 0,
+  "errors": 0,
+  "grade_first_rows": 1,
+  "note_rows_live": 73,
+  "note_rows_400": 71
+ },
+ "rows": [
+  {
+   "id": 667,
+   "seat": "gemini",
+   "verdict": "BROKEN",
+   "word": [
+    "CHALLENGER WINS",
+    "UNDERDETERMINED"
+   ],
+   "tie": [
+    false,
+    true
+   ],
+   "note": [
+    true,
+    false
+   ]
+  },
+  {
+   "id": 983,
+   "seat": "grok",
+   "verdict": "BROKEN",
+   "broken": [
+    "D1 vs C2 DEFENDER LINK BROKEN",
+    "D1 vs C2 DEFENDER LINK BROKEN, D2 DEFENDER LINK BROKEN"
+   ],
+   "brk": [
+    "1/0",
+    "2/0"
+   ]
+  },
+  {
+   "id": 1224,
+   "seat": "haiku",
+   "verdict": "BROKEN",
+   "broken": [
+    "none",
+    "D2 vs C1 DEFENDER LINK BROKEN, D3 vs C3 DEFENDER LINK BROKEN, D4 vs C5 DEFENDER LINK BROKEN, D5 vs C5 DEFENDER LINK BROKEN"
+   ],
+   "note": [
+    true,
+    false
+   ],
+   "brk": [
+    "0/0",
+    "4/0"
+   ],
+   "grade_first": 4
+  }
+ ]
+}
