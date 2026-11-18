@@ -1,0 +1,174 @@
+{
+ "grades": {
+  "STANDS": 789,
+  "WITHDRAWN": 198,
+  "(prefixed long form)": 3,
+  "UNDERDETERMINED": 12,
+  "DEFENDER LINK BROKEN": 5
+ },
+ "only": 73,
+ "mixed": 263,
+ "none": 288,
+ "lose": [
+  {
+   "id": 670,
+   "seat": "gemini",
+   "fields": [
+    "BROKEN",
+    "PROP-DEPENDENT",
+    "PROP-DEPENDENT",
+    2,
+    2
+   ],
+   "long": 3,
+   "short_unread": 3,
+   "rev3": "UNDERDETERMINED",
+   "if_unread": "CHALLENGER WINS",
+   "sql_today": "CHALLENGER WINS"
+  },
+  {
+   "id": 672,
+   "seat": "deepseek",
+   "fields": [
+    "BROKEN",
+    "PROP-DEPENDENT",
+    "PROP-DEPENDENT",
+    2,
+    2
+   ],
+   "long": 3,
+   "short_unread": 4,
+   "rev3": "UNDERDETERMINED",
+   "if_unread": "CHALLENGER WINS",
+   "sql_today": "CHALLENGER WINS"
+  },
+  {
+   "id": 673,
+   "seat": "gemini",
+   "fields": [
+    "BROKEN",
+    "PROP-DEPENDENT",
+    "PROP-DEPENDENT",
+    2,
+    2
+   ],
+   "long": 3,
+   "short_unread": 4,
+   "rev3": "UNDERDETERMINED",
+   "if_unread": "CHALLENGER WINS",
+   "sql_today": "CHALLENGER WINS"
+  },
+  {
+   "id": 724,
+   "seat": "gemini",
+   "fields": [
+    "HELD",
+    "PROP-DEPENDENT",
+    "PROP-DEPENDENT",
+    1,
+    1
+   ],
+   "long": 4,
+   "short_unread": 1,
+   "rev3": "UNDERDETERMINED",
+   "if_unread": "(HELD: by the CHALLENGER LINK BROKEN test)",
+   "sql_today": "DEFENDER WINS"
+  },
+  {
+   "id": 783,
+   "seat": "glm",
+   "fields": [
+    "HELD",
+    "PROP-DEPENDENT",
+    "PROP-DEPENDENT",
+    1,
+    1
+   ],
+   "long": 5,
+   "short_unread": 2,
+   "rev3": "UNDERDETERMINED",
+   "if_unread": "(HELD: by the CHALLENGER LINK BROKEN test)",
+   "sql_today": "DEFENDER WINS"
+  },
+  {
+   "id": 791,
+   "seat": "grok",
+   "fields": [
+    "HELD",
+    "PROP-DEPENDENT",
+    "PROP-DEPENDENT",
+    1,
+    1
+   ],
+   "long": 9,
+   "short_unread": 2,
+   "rev3": "UNDERDETERMINED",
+   "if_unread": "(HELD: by the CHALLENGER LINK BROKEN test)",
+   "sql_today": "DEFENDER WINS"
+  },
+  {
+   "id": 812,
+   "seat": "grok",
+   "fields": [
+    "HELD",
+    "PROP-DEPENDENT",
+    "PROP-DEPENDENT",
+    1,
+    1
+   ],
+   "long": 5,
+   "short_unread": 1,
+   "rev3": "UNDERDETERMINED",
+   "if_unread": "(HELD: by the CHALLENGER LINK BROKEN test)",
+   "sql_today": "DEFENDER WINS"
+  },
+  {
+   "id": 917,
+   "seat": "chatgpt",
+   "fields": [
+    "HELD",
+    "PROP-DEPENDENT",
+    "PROP-DEPENDENT",
+    1,
+    1
+   ],
+   "long": 5,
+   "short_unread": 2,
+   "rev3": "UNDERDETERMINED",
+   "if_unread": "(HELD: by the CHALLENGER LINK BROKEN test)",
+   "sql_today": "DEFENDER WINS"
+  },
+  {
+   "id": 964,
+   "seat": "chatgpt",
+   "fields": [
+    "HELD",
+    "PROP-DEPENDENT",
+    "PROP-DEPENDENT",
+    1,
+    1
+   ],
+   "long": 5,
+   "short_unread": 3,
+   "rev3": "UNDERDETERMINED",
+   "if_unread": "(HELD: by the CHALLENGER LINK BROKEN test)",
+   "sql_today": "UNDERDETERMINED"
+  },
+  {
+   "id": 981,
+   "seat": "gemini",
+   "fields": [
+    "HELD",
+    "PROP-DEPENDENT",
+    "PROP-DEPENDENT",
+    1,
+    1
+   ],
+   "long": 1,
+   "short_unread": 5,
+   "rev3": "UNDERDETERMINED",
+   "if_unread": "(HELD: by the CHALLENGER LINK BROKEN test)",
+   "sql_today": "UNDERDETERMINED"
+  }
+ ]
+}
