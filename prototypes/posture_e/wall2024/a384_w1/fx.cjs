@@ -15,5 +15,9 @@ const F=[
  ['Psalms 119:1-176',12],
  ['Isaiah 7:14, 3 times',12],
  ['Matthew 1:18 to 1:25',12],
+ ['as established in Matthew 1:18, 20 [L1], through gennao',12],
+ ['(Matthew 1:18, 20)',12],
+ ['Matthew 1:18, 20: the angel',12],
+ ['Jude 1:3 and Judges 1:3',12],
 ];
 for(const [t,cap] of F){console.log(JSON.stringify(t),'cap',cap,'=>',R.keys(t,{cap}).map(k=>k.key.replace(/^\S+ /,'')).join(' | ').slice(0,120));}
