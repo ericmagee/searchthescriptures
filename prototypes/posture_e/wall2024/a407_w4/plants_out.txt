@@ -1,0 +1,24 @@
+== stored 38661 inputs (spark vs gemini)
+  live panel ["sol62","chatgpt","sol"] reserve haiku | alternates ["haiku","sonnet"] | dropped hydrogen(google) gemini(google) argon(google) spark(meta) ember(meta)
+  t407 panel ["sol62","chatgpt","sol"] reserve haiku | alternates ["haiku","glm_legal","qwen4max","hy4","sonnet"] | dropped hydrogen(google) gemini(google) argon(google) spark(meta) ember(meta)
+== plant: qwen vs gemini
+  live panel ["sol62","chatgpt","sol"] reserve haiku | alternates ["haiku","spark","sonnet"] | dropped hydrogen(google) gemini(google) argon(google) ember(meta)
+  t407 panel ["sol62","chatgpt","sol"] reserve haiku | alternates ["haiku","spark","glm_legal","hy4","sonnet"] | dropped hydrogen(google) gemini(google) argon(google) ember(meta) qwen4max(qwen)
+== plant: qwen4max vs spark
+  live panel ["sol62","chatgpt","sol"] reserve haiku | alternates ["haiku","hydrogen","gemini","argon","sonnet"] | dropped spark(meta) ember(meta)
+  t407 panel ["sol62","chatgpt","sol"] reserve haiku | alternates ["haiku","hydrogen","gemini","argon","glm_legal","hy4","sonnet"] | dropped spark(meta) ember(meta) qwen4max(qwen)
+== plant: glm vs gemini
+  live panel ["sol62","chatgpt","sol"] reserve haiku | alternates ["haiku","spark","sonnet"] | dropped hydrogen(google) gemini(google) argon(google) ember(meta)
+  t407 panel ["sol62","chatgpt","sol"] reserve haiku | alternates ["haiku","spark","qwen4max","hy4","sonnet"] | dropped hydrogen(google) gemini(google) argon(google) ember(meta) glm_legal(zhipu)
+== plant: chatgpt vs sonnet
+  live ERROR: ORACLE_DEBATE_V1 Init refused: challenger engine "sonnet" is not one of [claude, chatgpt, gemini, grok, mimo, haiku, opus, glm, qwen4max, qwen, spark, deepseek]. run_token=ODV1-X-4fzzzxjy
+  t407 ERROR: ORACLE_DEBATE_V1 Init refused: challenger engine "sonnet" is not one of [claude, chatgpt, gemini, grok, mimo, haiku, opus, glm, qwen4max, qwen, spark, deepseek]. run_token=ODV1-X-4fzzzxjy
+== plant: claude vs opus
+  live panel ["sol62","chatgpt","sol"] reserve haiku | alternates ["haiku","hydrogen","gemini","argon","spark","sonnet"] | dropped ember(meta)
+  t407 panel ["sol62","chatgpt","sol"] reserve haiku | alternates ["haiku","hydrogen","gemini","argon","spark","glm_legal","qwen4max","hy4","sonnet"] | dropped ember(meta)
+== plant: deepseek_debate vs mimo
+  live ERROR: ORACLE_DEBATE_V1 Init refused: DeepSeek never debates (ruling 421): it is the enforcer. run_token=ODV1-X-4fzzzxjy
+  t407 ERROR: ORACLE_DEBATE_V1 Init refused: DeepSeek never debates (ruling 421): it is the enforcer. run_token=ODV1-X-4fzzzxjy
+== plant: t407 with no glm_legal or hy4 model row
+  live panel ["sol62","chatgpt","sol"] reserve haiku | alternates ["haiku","sonnet"] | dropped hydrogen(google) gemini(google) argon(google) spark(meta) ember(meta)
+  t407 panel ["sol62","chatgpt","sol"] reserve haiku | alternates ["haiku","glm_legal","qwen4max","hy4","sonnet"] | dropped hydrogen(google) gemini(google) argon(google) spark(meta) ember(meta)
