@@ -1,5 +1,10 @@
 # ASK 422(c) plan rev 1 (W2): KV_EXCL takes "makes" and "excludes"
 
+## OBJECTIVE (added 11-18 17:45 CST, after the write, under op doc v125 section 29; W2 8936. The plan as graded had none.)
+A K-V ruling or cure that names its kind in the third person ("an exclusion the quote never makes", "the quotation never makes that
+exclusion") is read as the negation kind, as the first-person forms already are under ASK 376. Expected effect: a judge's VOID ruling or
+an enforcer's cure is not left uncounted or UNCURED because the verb takes an "s".
+
 Assignment (W3 Wall 8826, item 15 of 8821; origin W2 8805 card limit, W2 8820 item 2): plan W2, build W4, grade W1
 and W3. A system change: written only on the operator's card in W4's thread. No prompt text, no model setting and no
 reasoning setting changes. ASK 413: engine_manual v192 section 15 governs (library write rule, REPLAY GATE, near-miss
