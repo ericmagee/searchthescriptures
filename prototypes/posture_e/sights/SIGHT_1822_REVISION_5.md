@@ -67,7 +67,7 @@ THE VERB AT 1:20, MET IN PLACE. "Conceived [Gr. begotten]" is gennao (G1080): "t
 (3) THE HOLY GHOST ON A CHILD FROM THE WOMB DOES NOT REMOVE THE FATHER.
 - Luke 1:15: "For he shall be great in the sight of the Lord, and shall drink neither wine nor strong drink; and he shall be filled with the Holy Ghost, even from his mother's womb."
 - His father is named by the same angel: "thy wife Elisabeth shall bear thee a son" (Luke 1:13).
-- This is a precept, not a word parallel (the ek of 1:15 goes with "womb"): the Holy Ghost on a child from the womb, and the father named.
+- This is a precept: the Holy Ghost on a child from the womb, and the father named.
 
 (4) ROMANS 9:10 AGREES: A CONCEPTION IS BY THE MAN.
 - Romans 9:10: "And not only [this]; but when Rebecca also had conceived by one, [even] by our father Isaac;"
