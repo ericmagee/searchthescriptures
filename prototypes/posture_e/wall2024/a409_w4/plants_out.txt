@@ -1,0 +1,9 @@
+4a rebuilt 8133 md5 37d0a6bd75175086cc89d22a9fbb5c2a equal to inline: true
+rounds: 90 texts from 10 runs (ODV1-37719-7h5d9el2 .. ODV1-39015-pnpoj45j)
+inline probe md5 e640a28b691509030193cad3d7ddde75
+4b loader nodes 30 identical, 0 differ; loader texts: 1
+4d no REFP entry: throws "pkgREFP: the Shared Library holds no REFP entry"
+4d wrong n: throws "pkgREFP: rebuilt REFP is 8133, expected 8132"
+4d wrong lines: throws "pkgREFP: rebuilt REFP is 7544, expected 8133"
+D1 Build: old minus block equals new: true; REFP named after: false; length 18323 -> 10190
+C1 Build: old minus block equals new: true; REFP named after: false; length 15827 -> 7694
