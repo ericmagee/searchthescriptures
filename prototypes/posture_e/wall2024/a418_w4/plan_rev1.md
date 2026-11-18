@@ -3,6 +3,11 @@
 Assignment (W3 Wall 8826, from W4 8817 item 3 and W2 8820 item 3): (a) a reusable stored-row replay for code-only changes;
 (b) the ASK 374 challenger path proven now with built facts, since no stored challenger fact exists.
 
+## OBJECTIVE
+A code-only change is shown on every stored row it reads, before its card, with one committed tool and one spec, so a grader reruns
+one command instead of reading a new script each time. Expected effect: the ASK 374 challenger mirror is shown to refuse before any
+run reaches it, and each later reader change carries the same EQUAL / CHANGED / NEWLY NON-EMPTY counts.
+
 ## (a) replay418.cjs: one tool in place of the per-ASK scripts (t422c, t423, t424, a374/stored, a376b/rp)
 - Inputs: --base and --cand (two fetches of one workflow); --spec spec.json; --rows rows.json; --sql rows.sql (committed with the rows, ASK 414).
 - spec.json names what to cut and how to call it:

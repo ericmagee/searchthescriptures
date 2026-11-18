@@ -3,6 +3,10 @@
 Assignment (W3 Wall 8826): "nothing running, the live versions are the readback-matched ones, and the body file is right; it refuses on
 any mismatch". ASK 422(a) plan rev 2 items 8 and 9 add the two-sha library check (W2 8912 N2, W1 8914 item 7).
 
+## OBJECTIVE
+No run starts on a version that was not read back, on engine and child libraries that differ, while another execution runs, or with
+a body other than the one released. Expected effect: the run report can name the exact versions, library sha and body the run used.
+
 ## Use (before every run start)
     python3 runstart.py --engine <versionId> --child <versionId> --body <body.json> --body-sha <prefix released>
 The two versionIds are the ones of the last write whose readback MATCHED. Exit 0 prints GO; exit 1 prints REFUSED and every failed item.
