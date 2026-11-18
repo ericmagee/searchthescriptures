@@ -2,5 +2,9 @@
  {
   "old": "To revise: INSERT version+1 and its `engine_manual_log` row.",
   "new": "To revise: call engine_manual_apply (ASK 421) in the same batch as SET LOCAL truth.session_id. First preview, with p_write false: it refuses unless the base is the max version and has the given md5, and unless each pair's old text occurs exactly once when that pair is applied; it returns the new md5, length and per-pair counts. Then write with p_write true and that md5 and length: it inserts version+1 with its summary, and its `engine_manual_log` row dated by the Central date. Readers preview the same pairs and compare the md5. EXECUTE is revoked from PUBLIC, anon and authenticated. Limit: an old text that overlaps itself is counted once."
+ },
+ {
+  "old": "    - Limits: \"never makes\", \"did not make\" and \"have not made\" are not read, nor is \"makes\" or \"excludes\" in place of \"make\" or \"exclude\".",
+  "new": "    - Third-person forms (ASK 422(c); Shared Library line 1014, engine and child): since ASK 422(c), \"makes\" and \"excludes\" are read beside \"make\" and \"exclude\", in both word orders, so \"an exclusion the quote never makes\" and \"the quotation never makes that exclusion\" read as the kind. Live: engine 3257a833, child 0e006a24, library sha 7b1cd78b3c25da5c. Shown offline: 19 cases (4 new forms, 6 unchanged limits and guards, the 9 wrong-if cases), 0 failures; over 1,040 judgment lines, 228 K-V lines and 332 alternate lines, 0 lines changed. Not shown by a run.\n    - Limits: \"did not make\" and \"have not made\" are not read."
  }
 ]
