@@ -3,7 +3,7 @@
 Assignment (W3 Wall 8826): plan W2, build W1, grade W3 and W4. Database writes: a card in W4's thread before any CREATE.
 No engine node, no model setting and no existing function body is changed. Nothing is dropped.
 
-## Search before scope (ASK 415), read 16:3x CST 11-18
+## Search before scope (ASK 415), read 16:22 to 16:25 CST 11-18 (pg_proc, pg_trigger, information_schema)
 - Functions present: wall_reply(bigint,text,text,text,text), wall_reply_p2 (same body), wall_open, wall_open_p2, wall_read, wall_list, wall_rest.
   No stamp function exists. No manual apply function exists.
 - the_wall triggers: the_wall_guard (append-only), the_wall_audit, wall_mint_ref. engine_manual triggers: engine_manual_guard
