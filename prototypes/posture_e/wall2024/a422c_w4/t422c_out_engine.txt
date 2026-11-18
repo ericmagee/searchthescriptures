@@ -1,0 +1,25 @@
+stubs old 47 fails 0 | new 47 fails 0
+KV_EXCL old: \bexclu(?:sions?|des?|ding)\b[^.;]{0,40}\b(?:quote|quoted|quotation)\b[^.;]{0,40}\b(?:do(?:es)?\s+not|never)\s+(?:[a-z]+\s+)?(?:make|exclude)\b\s*(?=$|[.;,:)\]])|\b(?:quote|quoted|quotation)\b[^.;]{0,60}\b(?:do(?:es)?\s+not|never)\s+(?:[a-z]+\s+)?(?:make|exclude)\b\s+(?:that|this|the|such|an|any)\s+\bexclu(?:sions?|des?|ding)\b\s*(?=$|[.;,:)\]])
+KV_EXCL new: \bexclu(?:sions?|des?|ding)\b[^.;]{0,40}\b(?:quote|quoted|quotation)\b[^.;]{0,40}\b(?:do(?:es)?\s+not|never)\s+(?:[a-z]+\s+)?(?:makes?|excludes?)\b\s*(?=$|[.;,:)\]])|\b(?:quote|quoted|quotation)\b[^.;]{0,60}\b(?:do(?:es)?\s+not|never)\s+(?:[a-z]+\s+)?(?:makes?|excludes?)\b\s+(?:that|this|the|such|an|any)\s+\bexclu(?:sions?|des?|ding)\b\s*(?=$|[.;,:)\]])
+OK   a old false new true | want false true
+OK   b old false new true | want false true
+OK   c old false new true | want false true
+OK   d old false new true | want false true
+OK   e1 W3 GOOD RESPONSE 43873 old true new true | want true true
+OK   e2 W3 GOOD STATEMENT 43873 old true new true | want true true
+OK   e3 W3 GOOD VOID terra old true new true | want true true
+OK   e4 W3 BAD quoted charge old false new false | want false false
+OK   e5 W3 BAD topic prose old false new false | want false false
+OK   e6 W3 BAD topic + quote old false new false | want false false
+OK   e7 W3 curly quote's old true new true | want true true
+OK   e8 W3 BAD after-order prose old false new false | want false false
+OK   e9 W3 BAD quoted charge after-order old false new false | want false false
+OK   f old false new false | want false false
+OK   g1 old false new false | want false false
+OK   g2 old false new false | want false false
+OK   g3 old false new false | want false false
+OK   g4 old false new false | want false false
+OK   h old false new false | want false false
+cases 19 fail 0
+REPLAY: judgments with void 355 | their lines with exclu 1040 | K-V rows 114 lines 228 | alternate lines 332 | LINES CHANGED 0
+SENTENCE LEVEL: sentences changed 0

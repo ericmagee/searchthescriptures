@@ -1,0 +1,116 @@
+[
+ {
+  "id": "a",
+  "text": "an exclusion the quote never makes.",
+  "old": false,
+  "new": true
+ },
+ {
+  "id": "b",
+  "text": "the quotation never makes that exclusion",
+  "old": false,
+  "new": true
+ },
+ {
+  "id": "c",
+  "text": "excludes a reading that the quoted words never excludes.",
+  "old": false,
+  "new": true
+ },
+ {
+  "id": "d",
+  "text": "the exclusion is one the quote's words do not makes;",
+  "old": false,
+  "new": true
+ },
+ {
+  "id": "e1 W3 GOOD RESPONSE 43873",
+  "text": "The mark is accepted: the ruling's kind is an exclusion the quote's words do not make.",
+  "old": true,
+  "new": true
+ },
+ {
+  "id": "e2 W3 GOOD STATEMENT 43873",
+  "text": "The charge says \"rather than as the consequence of the Spirit's overshadowing\"; the quotation's connection back to verse 32 does not itself make that exclusion.",
+  "old": true,
+  "new": true
+ },
+ {
+  "id": "e3 W3 GOOD VOID terra",
+  "text": "excludes a reading that the quoted connection back to verse 32 does not itself exclude",
+  "old": true,
+  "new": true
+ },
+ {
+  "id": "e4 W3 BAD quoted charge",
+  "text": "The charge says \"excludes Joseph\"; the quotation does not make it plain.",
+  "old": false,
+  "new": false
+ },
+ {
+  "id": "e5 W3 BAD topic prose",
+  "text": "The exclusion of Joseph is the defender's whole case.",
+  "old": false,
+  "new": false
+ },
+ {
+  "id": "e6 W3 BAD topic + quote",
+  "text": "The exclusion of Joseph from the line is what the quotation is about, and it does not make sense otherwise.",
+  "old": false,
+  "new": false
+ },
+ {
+  "id": "e7 W3 curly quote's",
+  "text": "an exclusion the quote’s words do not make",
+  "old": true,
+  "new": true
+ },
+ {
+  "id": "e8 W3 BAD after-order prose",
+  "text": "The quotation does not make the exclusion of Joseph plain.",
+  "old": false,
+  "new": false
+ },
+ {
+  "id": "e9 W3 BAD quoted charge after-order",
+  "text": "The quotation does not make \"that exclusion\".",
+  "old": false,
+  "new": false
+ },
+ {
+  "id": "f",
+  "text": "The quotation never makes the exclusion of Joseph plain.",
+  "old": false,
+  "new": false
+ },
+ {
+  "id": "g1",
+  "text": "the quote makes no exclusion",
+  "old": false,
+  "new": false
+ },
+ {
+  "id": "g2",
+  "text": "exclusions are made by the quote",
+  "old": false,
+  "new": false
+ },
+ {
+  "id": "g3",
+  "text": "the quote did not make that exclusion",
+  "old": false,
+  "new": false
+ },
+ {
+  "id": "g4",
+  "text": "the quote has not made that exclusion",
+  "old": false,
+  "new": false
+ },
+ {
+  "id": "h",
+  "text": "The quotation never makes \"that exclusion\".",
+  "old": false,
+  "new": false
+ }
+]
