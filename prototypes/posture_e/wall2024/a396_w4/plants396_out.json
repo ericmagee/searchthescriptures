@@ -52,5 +52,17 @@
   "line": "**OPEN ENFORCER DISAGREEMENTS (recorded, not counted; rulings 428 and 490, ASK 396):** not read: this run holds no enforcer log",
   "rest_identical_to_live": true,
   "dif": null
+ },
+ {
+  "plant": "10 Alternate Merge did not run (W1): $() throws",
+  "line": "**OPEN ENFORCER DISAGREEMENTS (recorded, not counted; rulings 428 and 490, ASK 396):** not read: this run holds no enforcer log",
+  "rest_identical_to_live": true,
+  "dif": null
+ },
+ {
+  "plant": "11 Alternate Merge reference itself throws",
+  "line": "**OPEN ENFORCER DISAGREEMENTS (recorded, not counted; rulings 428 and 490, ASK 396):** not read: this run holds no enforcer log",
+  "rest_identical_to_live": true,
+  "dif": null
  }
 ]

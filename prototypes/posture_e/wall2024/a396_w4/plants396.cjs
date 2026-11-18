@@ -13,8 +13,10 @@ const P=[
  ['6 alternate seat that took over (W3 8552 B2)',[row('sonnet','alternate','E-ANS','ANSWER CHECK Luke 3:23 [CR4]','UNCURED')],null],
  ['7 other rules and statuses are not listed (E-COL UNCURED, E-PREM not sent)',[row('sol','panel','E-COL','COLLISION D3','UNCURED'),row('haiku','panel','E-PREM','premise listed against the defender 1',null)],null],
  ['8 duplicate row listed once',[row('sol','panel','E-PREM','premise listed against the challenger 2','UNCURED'),row('sol','panel','E-PREM','premise listed against the challenger 2','UNCURED')],null],
- ['9 no enforcer log',undefined,null]];
-const mk$=(EL,DR)=>nm=>{let it=out(nm);if(!it)return {isExecuted:false,first:()=>{throw new Error('not run '+nm)},all:()=>{throw new Error('not run '+nm)},params:{}};
+ ['9 no enforcer log',undefined,null],
+ ['10 Alternate Merge did not run (W1): $() throws','NOTRUN',null],
+ ['11 Alternate Merge reference itself throws','THROW',null]];
+const mk$=(EL,DR)=>nm=>{if(nm==='Alternate Merge'&&EL==='NOTRUN')return {isExecuted:false,first:()=>{throw new Error('not run')},all:()=>{throw new Error('not run')},params:{}};if(nm==='Alternate Merge'&&EL==='THROW')throw new Error("Referenced node doesn't exist");let it=out(nm);if(!it)return {isExecuted:false,first:()=>{throw new Error('not run '+nm)},all:()=>{throw new Error('not run '+nm)},params:{}};
  if(nm==='Alternate Merge')it=[{json:{...it[0].json,enforcer_log:EL}}];if(nm==='Get Row'&&DR)it=[{json:{...it[0].json,drv_removed:DR}}];
  return {isExecuted:true,first:()=>it[0]||{json:{}},last:()=>it[it.length-1],all:()=>it,item:it[0],params:{}};};
 const run=async(code,EL,DR)=>{const inp=out('Get Guards')||[];const $input={all:()=>inp,first:()=>inp[0],last:()=>inp[inp.length-1],item:inp[0]};const cd={};
