@@ -1,0 +1,17 @@
+/* ASK 423 (plan W3 rev 2, 5a51ae34; W1 8867 / W3 8868 note): a link label written "LINK D<n>" or "LINK C<n>" at a line head is kept as "LINK <n>". Only the side whose chain this round answers or attacks, only n within that chain; joint labels and other forms are left as written. Every rewrite and every label left alone goes to round_fix.labels; the model's own text stays in raw_labelled_as_written. */
+const __LB423=(raw,side,max,stop)=>{const t=String(raw);let cut=t.length;if(stop){let i=-1;for(const m of t.matchAll(stop))i=m.index;if(i>=0)cut=i;}
+ const head=t.slice(0,cut),rest=t.slice(cut);const rw=[],lf=[];
+ const RE=/^([ \t]*(?:>[ \t]*)?(?:#{1,6}[ \t]*)?(?:\d+[.)][ \t]*)?(?:[*_]{1,3}[ \t]*)?)(LINK)([ \t]*)([^\sA-Za-z0-9]{0,3})([ \t]*)([DC])([ \t]*)(\d+)(?!\d)([^\n]*)$/gim;
+ const out=head.replace(RE,(all,pre,lk,s1,mk,s2,P,s3,n,tail)=>{const lab=(lk+s1+mk+s2+P+s3+n+((tail.match(/^[ \t]*\[premise[ \t]+\d+\]/i)||[''])[0])).trim();const where=/\d+[.)]/.test(pre)?'entry '+pre.match(/(\d+)[.)]/)[1]:'block';
+  if(/^[ \t]*(?:&|\+|\/|,|and\b|to\b|-|–|—)[ \t]*(?:LINK[ \t]*)?(?:[DC][ \t]*)?\d/i.test(tail)){lf.push({label:(lab+tail).trim().slice(0,60),reason:'joint label'});return all;}
+  if(mk||!s1){lf.push({label:lab,reason:'other form'});return all;}
+  if(P.toUpperCase()!==side||max==null||+n<1||+n>max){lf.push({label:lab,reason:'outside the declared chain'+(max==null?' (no chain read)':'')});return all;}
+  const kept=lab.replace(/^LINK[ \t]*[DC][ \t]*/i,lk+' ');rw.push({at:where,as_written:lab,as_kept:kept});return pre+lk+' '+n+tail;});
+ return {text:out+rest,rewritten:rw,left:lf};};
+const __CC423=t=>{if(typeof t!=='string')return null;const L=t.replace(/[‐-―−]/g,'-').split('\n');let hi=-1;for(let i=0;i<L.length;i++){if(/^\s*#*\s*\**\s*DECLARED CHAIN\s*:?\s*\**\s*(?:-{1,3}[^\n]*)?:?\s*$/i.test(L[i]))hi=i;}if(hi<0)return null;let c=0;for(let i=hi+1;i<L.length;i++){const m=L[i].match(/^(?:#+\s*)?[*_]*\s*D?([0-9]+)[*_]*(?:[.:)]|\s+-{1,3}(?:\s|$))/i);if(!m)continue;if(parseInt(m[1],10)===c+1)c++;else break;}return c||null;}; /* the Shared Library's chain_count reader on the defender's round 1, widened to read "D1:" and "1)" heads (run 39266 declared its chain as D1: to D6:, which chain_count reads as 0) */
+const __LC423=t=>{t=String(t||'');let i=-1;for(const m of t.matchAll(/CHALLENGER.{0,2}S\s+UNSUPPORTED-?\s*\[?L4\]?\s*PREMISES/gi))i=m.index;if(i<0)return null;let body=t.slice(t.indexOf('\n',i)+1);const e=body.search(/\n[ \t]*(?:#{1,3}\s|---[ \t]*\n|\*\*[A-Z][A-Z\x27 -]{4,}\*\*)/);if(e>=0)body=body.slice(0,e);let n=0;for(const m of body.matchAll(/^[ \t]*\**[ \t]*(\d+)[.)]\s/gm))n=Math.max(n,+m[1]);return n||null;}; /* the defender's list against the challenger: its highest entry number */
+const __A423=(items,cfg)=>{try{const it=items&&items[0];const j=it&&it.json;if(!j||typeof j.raw!=='string')return items;let max=null;try{max=cfg.side==='D'?__CC423($('D1 Extract').first().json.raw):__LC423($('D3B Extract').first().json.raw);}catch(e){max=null;}
+ const r=__LB423(j.raw,cfg.side,max,cfg.stop);if(!r.rewritten.length&&!r.left.length)return items;
+ const j2={...j,raw:r.text,round_fix:{...((j.round_fix&&typeof j.round_fix==='object')?j.round_fix:{heading:null,placeholder:0}),labels:{rewritten:r.rewritten,left:r.left,side:cfg.side,chain:max}}};
+ if(r.rewritten.length){j2.raw_labelled_as_written=j.raw;if(typeof j.labelled==='string')j2.labelled=__LB423(j.labelled,cfg.side,max,cfg.stop).text;}
+ return [{...it,json:j2},...items.slice(1)];}catch(e){return items;}};
