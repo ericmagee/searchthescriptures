@@ -1,0 +1,24 @@
+PASS stored 804 deepseek                            fires: true (want true) | rest equal to t403: true | run twice, v62 count: 1
+      [AUDIT v62: KEYSTONE CITES A RETRACTED LINE (ASK 402, TRIAL, record only) -- SEAT: deepseek; KEYSTONE: D6 BROKEN; RETRACTED: D6 vs C1; it moves no word, count or seat; END]
+PASS stored 810 deepseek                            fires: true (want true) | rest equal to t403: true | run twice, v62 count: 1
+      [AUDIT v62: KEYSTONE CITES A RETRACTED LINE (ASK 402, TRIAL, record only) -- SEAT: deepseek; KEYSTONE: D3 BROKEN; RETRACTED: D3 vs C3; it moves no word, count or seat; END]
+PASS stored 1163 hydrogen                           fires: false (want false) | rest equal to t403: true | run twice, v62 count: 0
+PASS stored 796 gemini                              fires: false (want false) | rest equal to t403: true | run twice, v62 count: 0
+PASS stored 1153 chatgpt                            fires: false (want false) | rest equal to t403: true | run twice, v62 count: 0
+PASS stored 836 grok                                fires: false (want false) | rest equal to t403: true | run twice, v62 count: 0
+PASS run 39015 whole text, sol62                    fires: false (want false) | rest equal to t403: true | run twice, v62 count: 0
+PASS run 39015 whole text, sonnet                   fires: true (want true) | rest equal to t403: true | run twice, v62 count: 1
+      [AUDIT v62: KEYSTONE CITES A RETRACTED LINE (ASK 402, TRIAL, record only) -- SEAT: sonnet; KEYSTONE: D4 BROKEN; RETRACTED: D4 vs C1; it moves no word, count or seat; END]
+PASS run 39015 whole text, sol                      fires: false (want false) | rest equal to t403: true | run twice, v62 count: 0
+PASS run 39015 whole text, chatgpt (removed)        fires: false (want false) | rest equal to t403: true | run twice, v62 count: 0
+PASS STANDS keystone naming a retracted label       fires: false (want false) | rest equal to t403: true | run twice, v62 count: 0
+PASS bracketed line naming a retracted label        fires: false (want false) | rest equal to t403: true | run twice, v62 count: 0
+PASS bare Cm, pair not retracted (D4 vs C2)         fires: false (want false) | rest equal to t403: true | run twice, v62 count: 0
+PASS bare Cm, pair retracted (D4 vs C1)             fires: true (want true) | rest equal to t403: true | run twice, v62 count: 1
+      [AUDIT v62: KEYSTONE CITES A RETRACTED LINE (ASK 402, TRIAL, record only) -- SEAT: s1; KEYSTONE: D4 BROKEN; RETRACTED: D4 vs C1; it moves no word, count or seat; END]
+PASS label of another link, not retracted (D6 vs C1) fires: false (want false) | rest equal to t403: true | run twice, v62 count: 0
+PASS two keystone lines, last one names nothing     fires: false (want false) | rest equal to t403: true | run twice, v62 count: 0
+PASS markdown bold keystone                         fires: true (want true) | rest equal to t403: true | run twice, v62 count: 1
+      [AUDIT v62: KEYSTONE CITES A RETRACTED LINE (ASK 402, TRIAL, record only) -- SEAT: s1; KEYSTONE: D4 BROKEN; RETRACTED: D4 vs C1; it moves no word, count or seat; END]
+PASS no retraction tag at all                       fires: false (want false) | rest equal to t403: true | run twice, v62 count: 0
+RESULT: PASS
