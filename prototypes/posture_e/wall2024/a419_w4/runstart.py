@@ -3,7 +3,8 @@
 usage: python3 runstart.py --engine <versionId> --child <versionId> --body <body.json> [--body-sha <sha256 prefix>]
          [--files <engine.json> <child.json>] [--running <executions.json>] [--no385]
 Checks:
- 1. NOTHING RUNNING: no execution with status running in any workflow, and none waiting in the debate's own workflows (engine, child,
+ 0. LIVE GUARDS: when anything is read live (no --files, or no --running), --body-sha is required and --no385 is refused (W2 8923 C2).
+ 1. NOTHING RUNNING: no execution with status running or new (queued, not started) in any workflow, and none waiting in the debate's own workflows (engine, child,
     Early Alternate SX4ZWtgHNs96uBOo, Cure Call c7366RPLb8vdMQg6). Waiting executions of other workflows are listed, not refused
     (two of "Post a Directive" have waited since 2026-08-18 until the year 3000).
  2. VERSIONS: the live engine and child versionIds equal the ones given (the readback-matched versions of the last write), and each is active
@@ -27,10 +28,13 @@ bad=[];ok=[]
 def chk(cond,good,fail): (ok if cond else bad).append(good if cond else fail)
 want={'engine':arg('--engine'),'child':arg('--child')};body=arg('--body')
 if not want['engine'] or not want['child'] or not body: sys.exit(__doc__)
+LIVE=('--files' not in A) or ('--running' not in A)
+if LIVE and not arg('--body-sha'): print('FAIL  0 LIVE: --body-sha is required (the released body)');print('REFUSED (1)');sys.exit(1)
+if LIVE and '--no385' in A: print('FAIL  0 LIVE: --no385 is not allowed when reading live');print('REFUSED (1)');sys.exit(1)
 # 1 nothing running
 OWN={'moMxiV4Irg1uRBZN','MqQHRl7mQQ0z8QdT','SX4ZWtgHNs96uBOo','c7366RPLb8vdMQg6'}
 if '--running' in A: R0=json.load(open(arg('--running')))
-else: R0=get('executions?status=running&limit=250')['data']+get('executions?status=waiting&limit=250')['data']
+else: R0=[x for st in ('running','new','waiting') for x in get('executions?status=%s&limit=250'%st)['data']]
 R=[x for x in R0 if x.get('status')!='waiting' or x.get('workflowId') in OWN];IGN=[x for x in R0 if x not in R]
 chk(not R,'1 nothing running','1 RUNNING: '+', '.join('%s (%s, workflow %s)'%(x.get('id'),x.get('status'),x.get('workflowId')) for x in R[:20]))
 if IGN: ok.append('1 waiting in other workflows, not refused: '+', '.join('%s (workflow %s)'%(x.get('id'),x.get('workflowId')) for x in IGN[:20]))
@@ -42,7 +46,10 @@ for k in WF:
   chk(v==want[k],'2 %s version %s'%(k,v),'2 %s VERSION %s is not the expected %s'%(k,v,want[k]))
   chk(bool(w.get('active')) and w.get('activeVersionId')==v,'2 %s active and published'%k,'2 %s NOT PUBLISHED (active %s, activeVersionId %s)'%(k,w.get('active'),w.get('activeVersionId')))
 # 3 library
-S={k:libsha(W[k]) for k in WF}
+S={}
+for k in WF:
+  try: S[k]=libsha(W[k])
+  except Exception as e: S[k]=('unreadable','?');bad.append('3 %s LIBRARY UNREADABLE: %s'%(k,str(e)[:100]))
 chk(S['engine'][0]==S['child'][0],'3 library sha equal %s'%S['engine'][0],'3 LIBRARY DIFFERS: engine %s, child %s'%(S['engine'][0],S['child'][0]))
 for k in WF: chk(S[k][0]==S[k][1],'3 %s header names its sha'%k,'3 %s HEADER names %s, body is %s'%(k,S[k][1],S[k][0]))
 # 4 one copy

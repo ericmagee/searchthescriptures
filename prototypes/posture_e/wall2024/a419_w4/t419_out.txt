@@ -19,6 +19,9 @@
    FAIL  5 BODY TOPIC empty or missing
 == j. body that does not parse: exit 1, REFUSED (1)
    FAIL  5 BODY does not parse: Expecting value: line 1 column 14 (char 13)
-== k. released body sha differs: exit 1, REFUSED (2)
-   FAIL  5 BODY KEYS ['challenger', 'defender', 'extra', 'topic'], expected defender, challenger, topic
-   FAIL  5 BODY SHA 094dfe96ed9e does not match the released 53763d9544a6
+== k. released body sha differs (well-formed body, other topic): exit 1, REFUSED (1)
+   FAIL  5 BODY SHA 7d0838cd9c24 does not match the released 53763d9544a6
+== l. live mode without --body-sha (stops before any read): exit 1, REFUSED (1)
+   FAIL  0 LIVE: --body-sha is required (the released body)
+== m. live mode with --no385 (stops before any read): exit 1, REFUSED (1)
+   FAIL  0 LIVE: --no385 is not allowed when reading live
