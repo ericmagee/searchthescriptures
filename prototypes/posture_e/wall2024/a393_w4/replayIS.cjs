@@ -1,0 +1,15 @@
+// ASK 393: Init Seats s262 vs target on stored inputs (Accept Final, Accept Models); Math.random fixed so run_token is equal.
+const fs=require('fs');const code=f=>JSON.parse(fs.readFileSync(f)).nodes.find(n=>n.name==='Init Seats').parameters.jsCode;
+const A=code('../rdf/fetchback_s262.json'),B=code('t393.json');
+const run=(src,inp,am)=>{const M=Object.create(Math);M.random=()=>0.123456789;const $=nm=>{if(nm==='Accept Models')return{all:()=>am.map(json=>({json}))};throw new Error('no '+nm);};
+ const T0=Date;class FD extends T0{constructor(...a){if(a.length)super(...a);else super('2026-11-18T03:23:25.846Z');}static now(){return new T0('2026-11-18T03:23:25.846Z').getTime();}}
+ const f=new Function('$','$input','$execution','Math','Date',src);return f($,{first:()=>({json:inp})},{id:'X',customData:{set:()=>{}}},M,FD)[0].json;};
+const cases=[];const ld=(f,tag)=>{const d=JSON.parse(fs.readFileSync(f));const rd=d.data.resultData.runData;const g=n=>rd[n][rd[n].length-1].data.main[0].map(i=>i.json);cases.push({tag,inp:g('Accept Final')[0],am:g('Accept Models'),stored:rd['Init Seats']?g('Init Seats')[0]:null});};
+ld('ex38661_acc.json','run 38661');{const e=JSON.parse(fs.readFileSync('exec38661_is_fm.json')).data.resultData.runData['Init Seats'];cases[0].stored=e[e.length-1].data.main[0][0].json;}ld('ex38593_acc.json','run 38593 (every panel seat filled: BROKEN 3-0, 3 of 3 counted)');ld('ex38450_acc.json','run 38450');
+const cc=JSON.parse(JSON.stringify(cases[0]));cc.stored=null;const bd=cc.inp.src?(cc.inp.src.body||cc.inp.src):(cc.inp.body||cc.inp);bd.defender={...bd.defender,engine:'claude'};bd.challenger={...bd.challenger,engine:'opus'};cc.tag='PLANT: 38661 inputs with both debaters Claude (claude vs opus)';cases.push(cc);
+let bad=0;for(const c of cases){let a,b;try{a=run(A,c.inp,c.am);}catch(e){a={ERR:e.message};}try{b=run(B,c.inp,c.am);}catch(e){b={ERR:e.message};}
+ const ka=Object.keys(a),kb=Object.keys(b).filter(k=>k!=='alt_dropped');const same=JSON.stringify(ka)===JSON.stringify(kb)&&ka.every(k=>JSON.stringify(a[k])===JSON.stringify(b[k]));if(!same){const dk=ka.filter(k=>JSON.stringify(a[k])!==JSON.stringify(b[k]));if(dk.every(k=>k==='t0'))console.log('  only t0 differs (wall clock at the call):',a.t0,b.t0);else {bad++;console.log('  DIFF',dk);}}
+ console.log('== '+c.tag);if(c.stored){const ks=Object.keys(c.stored).filter(k=>!['run_token','t0','sd'].includes(k));const dk=ks.filter(k=>JSON.stringify(c.stored[k])!==JSON.stringify(a[k]));console.log('  s262 replay equals the stored Init Seats output (run_token, t0, sd aside):',dk.length===0,dk.join(','));}console.log('  every s262 field byte-equal in the target (alt_dropped is the only new field):',same,'| new fields:',Object.keys(b).filter(k=>!(k in a)).join(','));
+ ['panel_order','panel_reserve','alt_order','alt_models','agreement_out'].forEach(k=>console.log('  '+k+':',JSON.stringify(b[k])));
+ console.log('  alt_dropped:');(b.alt_dropped||[]).forEach(x=>console.log('    '+x.seat+' ('+x.family+'): '+x.reason));if(b.ERR)console.log('  ERR',b.ERR);}
+console.log(bad?'RESULT: FAIL':'RESULT: PASS');

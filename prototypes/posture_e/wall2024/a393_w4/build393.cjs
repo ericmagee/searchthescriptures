@@ -1,0 +1,20 @@
+// ASK 393 rev 4 (W3 8146/8155; grades W2 8144/8154/8157, W1 8145/8147/8156): presentation plus one record-only field.
+// 1. Format Markdown trWhy prints the NOT SEATED reason whole (no .slice(0, 160)).
+// 2. Init Seats records alt_dropped: each ORDER0 model not in alt_order, with the reason taken at the filter that removed it (recorder __d returns false, so no filter result changes).
+// 3. Format Markdown names those models on the empty-seat line when no pool model passes the guards.
+const fs=require('fs');const [IN,OUT]=process.argv.slice(2);const d=JSON.parse(fs.readFileSync(IN));
+if(d.versionId!=='90451490-638d-41d1-abcd-899d9d6648b9')throw new Error('base is not s262: '+d.versionId);
+const rep=(s,a,b,tag)=>{const n=s.split(a).length-1;if(n!==1)throw new Error(tag+': expected 1 match, got '+n);return s.replace(a,()=>b);};
+const IS=d.nodes.find(n=>n.name==='Init Seats');let s=IS.parameters.jsCode;
+s=rep(s,"const ORDER=ORDER0.filter(s=>!__AASKED.has(s)||__AOK.has(s));","const __DROP={};const __d=(s,r)=>{if(!(s in __DROP))__DROP[s]=r;return false;}; /* ASK 393: records where a model left the pool; always false, so no filter changes */\nconst ORDER=ORDER0.filter(s=>!__AASKED.has(s)||__AOK.has(s)||__d(s,'did not accept the posture'));",'ORDER');
+s=rep(s,"const free=ORDER.filter(s=>!seated[s]);","const free=ORDER.filter(s=>!seated[s]||__d(s,'is a debater'));",'free');
+s=rep(s,"const pfree0=free.filter(s=>NOT_PANEL.indexOf(s)<0&&!(FAM_PANEL[s]&&dfam.indexOf(FAM_PANEL[s])>=0&&!(FAM_PANEL[s]==='anthropic'&&__BOTHC)));","const pfree0=free.filter(s=>(NOT_PANEL.indexOf(s)<0||__d(s,'not a panel seat'))&&(!(FAM_PANEL[s]&&dfam.indexOf(FAM_PANEL[s])>=0&&!(FAM_PANEL[s]==='anthropic'&&__BOTHC))||__d(s,'family '+FAM_PANEL[s]+' debates in this debate')));",'pfree0');
+s=rep(s,"const ALT_ORDER=pfree.slice(3).filter(        s=>JFAM_I[s]==='openrouter'&&s!=='mimo'&&JUDGE_TIME_REMOVED.indexOf(s)<0);","panel_order.forEach(s=>__d(s,'sits on the panel'));\nconst ALT_ORDER=pfree.slice(3).filter(        s=>(JFAM_I[s]==='openrouter'||__d(s,'not an OpenRouter seat'))&&(s!=='mimo'||__d(s,'mimo is never an alternate'))&&(JUDGE_TIME_REMOVED.indexOf(s)<0||__d(s,'removed for judge time')));\nconst ALT_DROPPED=ORDER0.filter(s=>s in __DROP).map(s=>({seat:s,family:FAM_PANEL[s]||null,reason:__DROP[s]})); /* ASK 393: record-only */",'ALT_ORDER');
+s=rep(s,"alt_order:ALT_ORDER,alt_models:ALT_MODELS,","alt_order:ALT_ORDER,alt_models:ALT_MODELS,alt_dropped:ALT_DROPPED,",'return');
+IS.parameters.jsCode=s;
+const FM=d.nodes.find(n=>n.name==='Format Markdown');let f=FM.parameters.jsCode;
+f=rep(f,"'not seated' + (x.why ? ': ' + x.why.replace(/\\s+/g, ' ').slice(0, 160) : ''));","'not seated' + (x.why ? ': ' + x.why.replace(/\\s+/g, ' ') : '')); /* ASK 393: the reason whole */",'trWhy');
+f=rep(f,"let G4F = false;","let G4F = false;\n/* ASK 393: models that left the pool before the guards (Init Seats alt_dropped, record-only); panel seats and the debaters, named elsewhere in the header, are left out; a record without the field prints as before */\nconst poolGone = (() => { let L = null; try { L = $('Init Seats').first(0).json.alt_dropped; } catch (e) { L = null; } if (!Array.isArray(L)) return ''; const G = []; L.filter(x => x && x.seat && x.reason !== 'sits on the panel' && x.reason !== 'is a debater').forEach(x => { let g = G.find(y => y.r === x.reason); if (!g) G.push(g = { r: x.reason, s: [] }); g.s.push(nm(x.seat)); }); if (!G.length) return ''; const and = a => a.length < 2 ? a.join('') : a.slice(0, -1).join(', ') + ' and ' + a[a.length - 1]; return ' Removed from the pool before the guards: ' + G.map(g => and(g.s) + ' (' + g.r + ')').join('; ') + '.'; })();",'poolGone');
+f=rep(f,"'No alternate could be tried: ' + trWhy(tl[0]).replace(/^not seated: /, '') + '.'","'No alternate could be tried: ' + trWhy(tl[0]).replace(/^not seated: /, '') + '.' + (/^no pool model passes the guards/.test(tl[0].why) ? poolGone : '')",'line');
+FM.parameters.jsCode=f;
+fs.writeFileSync(OUT,JSON.stringify(d));console.log('Init Seats',IS.parameters.jsCode.length,'Format Markdown',FM.parameters.jsCode.length);
