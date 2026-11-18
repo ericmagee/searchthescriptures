@@ -1,0 +1,113 @@
+{
+ "debates": 166,
+ "errors": 0,
+ "errs": [],
+ "header_changed": 161,
+ "diff_line_kinds": {
+  "- Panel judge": 1095,
+  "- Panel result": 322,
+  "- Reserve seated": 11,
+  "- Panel judge N's seat stayed empty": 24
+ },
+ "panel_seat_numbers_old": 512,
+ "new": 483,
+ "dod1": {
+  "lines": 131,
+  "bad": 30,
+  "ex": [
+   [
+    "ODV1-32998-y1799l9d",
+    "- Panel judge 2: ChatGPT (openai/gpt-6.1-terra): **BROKEN** (a grade of the defender's chain: Claude, arguing the standard reading); RESULT CHALLENGER WINS (NOT COUNTED: 1 debate rule violation not cu"
+   ],
+   [
+    "ODV1-32998-y1799l9d",
+    "- Panel judge 3: Grok (x-ai/grok-4.7): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading); RESULT DEFENDER WINS (NOT COUNTED: 2 debate rule violations not cured (K-B on D"
+   ],
+   [
+    "ODV1-33006-xzfdf09y",
+    "- Panel judge 3: Grok (x-ai/grok-4.7): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading); RESULT DEFENDER WINS (removed: NOT COUNTED: 2 debate rule violations not cured;"
+   ]
+  ]
+ },
+ "resultword_port_vs_sql": {
+  "equal": 542,
+  "differ": 0,
+  "ex": []
+ },
+ "change_kinds": {
+  "1": 10,
+  "2": 55,
+  "3": 44,
+  "12": 28,
+  "23": 2,
+  "123": 6,
+  "none": 397
+ },
+ "dod2_chain": {
+  "rows": 87,
+  "bad": 0,
+  "ex": []
+ },
+ "dod2_last_result_vs_shown": {
+  "rows": 128,
+  "bad": 11,
+  "ex": [
+   [
+    "ODV1-32725-pu2chngi",
+    943,
+    "2:CHALLENGER WINS>UNDERDETERMINED",
+    "shown",
+    "DEFENDER WINS"
+   ],
+   [
+    "ODV1-32791-j2p7xo25",
+    "drv:chatgpt",
+    "2:CHALLENGER WINS>UNDERDETERMINED",
+    "shown",
+    "DEFENDER WINS"
+   ],
+   [
+    "ODV1-32936-ev3gr0ja",
+    958,
+    "2:CHALLENGER WINS>UNDERDETERMINED",
+    "shown",
+    "DEFENDER WINS"
+   ],
+   [
+    "ODV1-32949-cmth25eb",
+    961,
+    "2:CHALLENGER WINS>UNDERDETERMINED",
+    "shown",
+    "DEFENDER WINS"
+   ],
+   [
+    "ODV1-32985-1fvddvps",
+    970,
+    "2:CHALLENGER WINS>UNDERDETERMINED",
+    "shown",
+    "DEFENDER WINS"
+   ],
+   [
+    "ODV1-33025-b70wgimy",
+    988,
+    "2:CHALLENGER WINS>UNDERDETERMINED",
+    "shown",
+    "DEFENDER WINS"
+   ],
+   [
+    "ODV1-33261-bi1ins8r",
+    1024,
+    "2:CHALLENGER WINS>UNDERDETERMINED",
+    "shown",
+    "DEFENDER WINS"
+   ],
+   [
+    "ODV1-37325-s81kgmur",
+    1193,
+    "3:CHALLENGER WINS>UNDERDETERMINED",
+    "shown",
+    "DEFENDER WINS"
+   ]
+  ]
+ }
+}

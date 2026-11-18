@@ -1,6 +1,6 @@
-== build
-ok 104178 -> 109849
-== 38593 whole re-render (Panel Build first() fails as live; first(0) works)
+== build (rev 3.3 + W3 8058 c2 clause)
+ok 104178 -> 110252
+== 38593 whole re-render
 stored == live re-render (except run time): true chars 1400542 1400542
 lines live 7468 target 7468 differing lines 20
 - - Panel judge 1: sonnet (anthropic/claude-sonnet-5.5): **BROKEN** (a grade of the defender's chain: Gemini, arguing the standard reading) (counted; sat in Claude Haiku's place). The engine recomputed its RESULT after the cure: the judge wrote DEFENDER WINS, and it reads UNDERDETERMINED
@@ -23,7 +23,7 @@ lines live 7468 target 7468 differing lines 20
 + ## Panel judge 1, alternate for Claude Haiku: sonnet (anthropic/claude-sonnet-5.5): BROKEN (a grade of the defender's chain: Gemini, arguing the standard reading)
 + ## Panel judge 2: ChatGPT (openai/gpt-6.1-terra): BROKEN (a grade of the defender's chain: Gemini, arguing the standard reading)
 + ## Panel judge 3: sol (openai/gpt-6.1-sol): BROKEN (a grade of the defender's chain: Gemini, arguing the standard reading)
-== population
+== population (extracted tags)
 {
  "debates": 166,
  "errors": 0,
@@ -156,6 +156,120 @@ lines live 7468 target 7468 differing lines 20
   ]
  }
 }
+== population with full verdict_raw for ids 1042, 1049, 1088 (the 3 extraction misses)
+{
+ "debates": 166,
+ "errors": 0,
+ "errs": [],
+ "header_changed": 161,
+ "diff_line_kinds": {
+  "- Panel judge": 1095,
+  "- Panel result": 322,
+  "- Reserve seated": 11,
+  "- Panel judge N's seat stayed empty": 24
+ },
+ "panel_seat_numbers_old": 512,
+ "new": 483,
+ "dod1": {
+  "lines": 131,
+  "bad": 30,
+  "ex": [
+   [
+    "ODV1-32998-y1799l9d",
+    "- Panel judge 2: ChatGPT (openai/gpt-6.1-terra): **BROKEN** (a grade of the defender's chain: Claude, arguing the standard reading); RESULT CHALLENGER WINS (NOT COUNTED: 1 debate rule violation not cu"
+   ],
+   [
+    "ODV1-32998-y1799l9d",
+    "- Panel judge 3: Grok (x-ai/grok-4.7): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading); RESULT DEFENDER WINS (NOT COUNTED: 2 debate rule violations not cured (K-B on D"
+   ],
+   [
+    "ODV1-33006-xzfdf09y",
+    "- Panel judge 3: Grok (x-ai/grok-4.7): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading); RESULT DEFENDER WINS (removed: NOT COUNTED: 2 debate rule violations not cured;"
+   ]
+  ]
+ },
+ "resultword_port_vs_sql": {
+  "equal": 542,
+  "differ": 0,
+  "ex": []
+ },
+ "change_kinds": {
+  "1": 10,
+  "2": 55,
+  "3": 44,
+  "12": 28,
+  "23": 2,
+  "123": 6,
+  "none": 397
+ },
+ "dod2_chain": {
+  "rows": 87,
+  "bad": 0,
+  "ex": []
+ },
+ "dod2_last_result_vs_shown": {
+  "rows": 128,
+  "bad": 11,
+  "ex": [
+   [
+    "ODV1-32725-pu2chngi",
+    943,
+    "2:CHALLENGER WINS>UNDERDETERMINED",
+    "shown",
+    "DEFENDER WINS"
+   ],
+   [
+    "ODV1-32791-j2p7xo25",
+    "drv:chatgpt",
+    "2:CHALLENGER WINS>UNDERDETERMINED",
+    "shown",
+    "DEFENDER WINS"
+   ],
+   [
+    "ODV1-32936-ev3gr0ja",
+    958,
+    "2:CHALLENGER WINS>UNDERDETERMINED",
+    "shown",
+    "DEFENDER WINS"
+   ],
+   [
+    "ODV1-32949-cmth25eb",
+    961,
+    "2:CHALLENGER WINS>UNDERDETERMINED",
+    "shown",
+    "DEFENDER WINS"
+   ],
+   [
+    "ODV1-32985-1fvddvps",
+    970,
+    "2:CHALLENGER WINS>UNDERDETERMINED",
+    "shown",
+    "DEFENDER WINS"
+   ],
+   [
+    "ODV1-33025-b70wgimy",
+    988,
+    "2:CHALLENGER WINS>UNDERDETERMINED",
+    "shown",
+    "DEFENDER WINS"
+   ],
+   [
+    "ODV1-33261-bi1ins8r",
+    1024,
+    "2:CHALLENGER WINS>UNDERDETERMINED",
+    "shown",
+    "DEFENDER WINS"
+   ],
+   [
+    "ODV1-37325-s81kgmur",
+    1193,
+    "3:CHALLENGER WINS>UNDERDETERMINED",
+    "shown",
+    "DEFENDER WINS"
+   ]
+  ]
+ }
+}
 == plants
 PASS  P1 removed seat, drv_uncured 1, prints rule and item (38593 Claude Haiku)
       NEW: (removed: NOT COUNTED: 1 debate rule violation not cured (K-C on DEFENDER CHAIN MARK); sonnet sat in its place) || OLD: 
@@ -168,7 +282,7 @@ PASS  P4 one number per seat; the seat shows sol62 as origin; Reserve line folde
 PASS  P5 v25 only prints the same change text as today (ODV1-32677-dbhfgk43 gemini)
       text: ). The engine recomputed its RESULT after the cure: the judge wrote DEFENDER WINS, and it reads UNDERDETERMINED
 PASS  P6 v37 only prints its one change (ODV1-33371-smmbhc7u grok, id 1042)
-      Change: the engine applied the judge's send-back answers (S1, S2, G3, S4, S5, S6, S7, G4, S9, S12, KEYSTONE (derived)) and derived it again: verdict BROKEN to HELD, RESULT CHALLENGER WINS to UNDERDETERMINED
+      Change: the engine applied the judge's send-back answers (S1, S2, G3, S4, S5, S6, S7, G4, S9, S12, KEYSTONE (derived)) and derived it again: verdict BROKEN to HELD, RESULT CHALLENGER WINS to UNDERDETERMINED. The RESULT s
 PASS  P7 a cure v21 and a later v37 that differ both print, in step order (id 973)
       Changes, in step order: (1) the cure changed its verdict from BROKEN to HELD (retracted: D4 vs C5); (2) the engine recomputed it after the cure (RETRACTED D4 vs C5 (DEFENDER LINK BROKEN to UNDERDETERMINED)): RESULT CHALLENGER WINS to UNDERDETERMINED; (3) the engine applied the judge's send-back answers (S5, S6, S7, G5, S12, S15) and derived it again: verdict HELD to BROKEN, RESULT UNDERDETERMINED 
 PASS  P8 two v21 tags print in step order, not text order (id 1150)
@@ -178,11 +292,10 @@ PASS  P9 planted removed seat (rule K-ZZ, item PLANTED ITEM 9) prints that rule 
 PASS  P10 planted TRIAL row (old-style row, no removed_rules) is not printed as a reason, and the line says the record names none
       
 PLANTS 10 of 10 PASS
-== port check, 3 rows on full text
-1042 js UNDERDETERMINED sql UNDERDETERMINED
-1049 js UNDERDETERMINED sql UNDERDETERMINED
-1088 js UNDERDETERMINED sql UNDERDETERMINED
-== differing rows (outcome RESULT vs engine last RESULT)
+== id 1205 line
+- Panel judge 2: luna (openai/gpt-6-luna): **HELD** (a grade of the defender's chain: GLM, arguing the standard reading); RESULT DEFENDER WINS (counted). Change: the engine applied the judge's send-back answers (G4, S4, S5, S6, S7, G3, S10) and derived it again: verdict BROKEN to HELD, RESULT CHALLENGER WINS to UNDERDETERMINED. The RESULT shown, DEFENDER WINS, is the one the outcome rule reads (judgment_result_word); the engine's last RESULT above is UNDERDETERMINED
+== Get Judgments in run 38593 passes full verdict_raw: 1221 32724, 1222 37839, 1223 43392 chars = debate_judgments length(verdict_raw)
+== differing rows
 11
 {"tok":"ODV1-32725-pu2chngi","id":943,"seat":"chatgpt","vt":"HELD","cs":"PROP-DEPENDENT","engine_last":"UNDERDETERMINED","outcome_reads":"DEFENDER WINS","kind":2,"counted":true,"panel":"HELD","outcome":"DEFENDER PREVAILS","split":"3-0","tie_relevant":true}
 {"tok":"ODV1-32791-j2p7xo25","id":"removed chatgpt","vt":"HELD","engine_last":"UNDERDETERMINED","outcome_reads":"DEFENDER WINS","kind":2,"counted":false,"panel":"HELD","outcome":"DEFENDER PREVAILS","tie_relevant":false}
