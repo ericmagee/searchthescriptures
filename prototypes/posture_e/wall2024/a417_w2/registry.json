@@ -37,6 +37,9 @@
     {"ask": "409", "title": "REFP block held once in the Shared Library", "live_since": "2026-11-18T20:33:12Z", "version": "95c1b2e9", "probe": "sql",
      "case_sql": "exists(select 1 from r)",
      "mark_sql": "(select case when exists(select 1 from x where coalesce(x.error_message,'')||coalesce(x.error_detail::text,'') like '%pkgREFP%') or exists(select 1 from r where to_jsonb(r)::text like '%pkgREFP%') then 0 else 1 end)"},
+    {"ask": "422(c)", "title": "KV_EXCL reads makes and excludes", "live_since": "2026-11-18T22:52:47Z", "version": "3257a833", "probe": "sql",
+     "case_sql": "exists(select 1 from e where e.rule='K-V' and lower(coalesce(e.response_line,'')||' '||coalesce(e.flagged_line,'')) ~ '(d(o|oes) +not|never) +([a-z]+ +)?(makes|excludes)\\M' and lower(coalesce(e.response_line,'')||' '||coalesce(e.flagged_line,'')) like '%exclu%' and lower(coalesce(e.response_line,'')||' '||coalesce(e.flagged_line,'')) like '%quot%')",
+     "mark_sql": "(select count(*) from e where e.rule='K-V' and e.cure_status='CURED' and lower(coalesce(e.response_line,'')||' '||coalesce(e.flagged_line,'')) ~ '(d(o|oes) +not|never) +([a-z]+ +)?(makes|excludes)\\M' and lower(coalesce(e.response_line,'')||' '||coalesce(e.flagged_line,'')) like '%exclu%' and lower(coalesce(e.response_line,'')||' '||coalesce(e.flagged_line,'')) like '%quot%')"},
     {"ask": "396", "title": "OPEN ENFORCER DISAGREEMENTS header line in the report", "live_since": "2026-11-18T17:51:10Z", "version": "afd50593", "probe": "NOT IN DB",
      "note": "Drive export line \"OPEN ENFORCER DISAGREEMENTS\"; read by hand."}
   ]

@@ -32,3 +32,9 @@ The emitter refuses (exit 3) if the statement holds a write word.
 
 ## Grades
 W1 8867 PASS; W4 8869 PASS (both at edd0fa1f).
+
+## Entries added after the grade
+- 422(c) (W4 8879, live 22:52:47Z, engine 3257a833): case = a K-V row whose response or flagged line holds
+  "does not/do not/never [word] makes|excludes" with "exclu" and "quot"; mark = that row CURED. Over all stored K-V rows
+  the case reads false; the same pattern with "make|exclude" matches 26 rows (control). "do" is written d(o|oes) so the
+  emitter's write-word check (which refuses the word DO) does not trip.
