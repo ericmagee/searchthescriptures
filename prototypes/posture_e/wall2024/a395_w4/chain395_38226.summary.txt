@@ -1,0 +1,144 @@
+same    Accept Build#0 | s262 reproduces stored true | reads field false | s262 ERR FAIL-CLOSED: Accept Build: seat "sol62" has no ACTIVE model_config row. execution=38226 | tgt ERR FAIL-CLOSED: Accept Build: seat "sol62" has no ACTIVE model_config row. execution=38226
+same    Accept DS Build#0 | s262 reproduces stored true | reads field false  
+same    Accept Check#0 | s262 reproduces stored true | reads field false  
+same    Accept Final#0 | s262 reproduces stored true | reads field false  
+same    Init Seats#0 | s262 reproduces stored false | reads field false  
+same    Fence Check#0 | s262 reproduces stored false | reads field false  
+same    Resolve Seats#0 | s262 reproduces stored true | reads field false | s262 ERR ORACLE_DEBATE_V1 Resolve refused: seat "sol62" has no ACTIVE model_config row. run_token=O | tgt ERR ORACLE_DEBATE_V1 Resolve refused: seat "sol62" has no ACTIVE model_config row. run_token=O
+same    Retrieval Check#0 | s262 reproduces stored false | reads field false  
+same    Init with Guards#0 | s262 reproduces stored false | reads field false  
+same    D1 Build#0 | s262 reproduces stored false | reads field false  
+same    D1 Extract#0 | s262 reproduces stored false | reads field false  
+same    C1 Build#0 | s262 reproduces stored false | reads field false  
+same    C1 Extract#0 | s262 reproduces stored false | reads field false  
+same    C1B Build#0 | s262 reproduces stored false | reads field false  
+same    C1B Extract#0 | s262 reproduces stored false | reads field false  
+same    D2 Words Plan#0 | s262 reproduces stored true | reads field false  
+same    D2 Lexicon Plan#0 | s262 reproduces stored true | reads field false  
+same    D2 Build#0 | s262 reproduces stored false | reads field false  
+same    D2 Extract#0 | s262 reproduces stored false | reads field false  
+same    D2B Build#0 | s262 reproduces stored false | reads field false  
+same    D2B Extract#0 | s262 reproduces stored true | reads field false | s262 ERR Cannot read properties of undefined (reading 'json') | tgt ERR Cannot read properties of undefined (reading 'json')
+same    C2 Words Plan#0 | s262 reproduces stored true | reads field false  
+same    C2 Lexicon Plan#0 | s262 reproduces stored true | reads field false  
+same    C2 Build#0 | s262 reproduces stored false | reads field false  
+same    C2 Extract#0 | s262 reproduces stored false | reads field false  
+same    C2B Build#0 | s262 reproduces stored false | reads field false  
+same    C2B Extract#0 | s262 reproduces stored true | reads field false | s262 ERR Cannot read properties of undefined (reading 'json') | tgt ERR Cannot read properties of undefined (reading 'json')
+same    D3 Words Plan#0 | s262 reproduces stored true | reads field false  
+same    D3 Lexicon Plan#0 | s262 reproduces stored true | reads field false  
+same    D3 Build#0 | s262 reproduces stored false | reads field false  
+same    D3 Extract#0 | s262 reproduces stored false | reads field false  
+same    D3B Build#0 | s262 reproduces stored false | reads field false  
+same    D3B Extract#0 | s262 reproduces stored false | reads field false  
+same    C3 Words Plan#0 | s262 reproduces stored true | reads field false  
+same    C3 Lexicon Plan#0 | s262 reproduces stored true | reads field false  
+same    C3 Build#0 | s262 reproduces stored false | reads field false  
+same    C3 Extract#0 | s262 reproduces stored false | reads field false  
+same    C3G Build#0 | s262 reproduces stored false | reads field false  
+same    C3G Extract#0 | s262 reproduces stored true | reads field false | s262 ERR Cannot read properties of undefined (reading 'json') | tgt ERR Cannot read properties of undefined (reading 'json')
+same    C3B Build#0 | s262 reproduces stored true | reads field false  
+same    C3B Extract#0 | s262 reproduces stored true | reads field false | s262 ERR Cannot read properties of undefined (reading 'json') | tgt ERR Cannot read properties of undefined (reading 'json')
+same    D4 Words Plan#0 | s262 reproduces stored true | reads field false  
+same    D4 Lexicon Plan#0 | s262 reproduces stored true | reads field false  
+same    D4 Build#0 | s262 reproduces stored false | reads field false  
+same    D4 Extract#0 | s262 reproduces stored false | reads field false  
+same    D4B Build#0 | s262 reproduces stored false | reads field false  
+same    D4B Extract#0 | s262 reproduces stored false | reads field false  
+same    C4 Words Plan#0 | s262 reproduces stored true | reads field false  
+same    C4 Lexicon Plan#0 | s262 reproduces stored true | reads field false  
+same    C4 Build#0 | s262 reproduces stored false | reads field false  
+same    C4 Extract#0 | s262 reproduces stored false | reads field false  
+same    C4G Build#0 | s262 reproduces stored false | reads field false  
+same    C4G Extract#0 | s262 reproduces stored true | reads field false | s262 ERR Cannot read properties of undefined (reading 'json') | tgt ERR Cannot read properties of undefined (reading 'json')
+same    C4B Build#0 | s262 reproduces stored true | reads field false  
+same    C4B Extract#0 | s262 reproduces stored true | reads field false | s262 ERR Cannot read properties of undefined (reading 'json') | tgt ERR Cannot read properties of undefined (reading 'json')
+same    Build Synthesis#0 | s262 reproduces stored false | reads field false  
+same    Synthesis Normalizer#0 | s262 reproduces stored true | reads field false  
+same    Final Output#0 | s262 reproduces stored false | reads field false  
+same    Citation Scan#0 | s262 reproduces stored false | reads field false  
+same    Quote Compare#0 | s262 reproduces stored true | reads field false  
+same    L2 Words Plan#0 | s262 reproduces stored true | reads field false  
+same    L2 Lexicon Plan#0 | s262 reproduces stored true | reads field false  
+same    L2 Gloss Plan#0 | s262 reproduces stored true | reads field false  
+same    L2 Count Plan#0 | s262 reproduces stored false | reads field false  
+same    Quote Report#0 | s262 reproduces stored false | reads field false  
+same    Close Enforcer Build#0 | s262 reproduces stored false | reads field false  
+same    Anticheat Build#0 | s262 reproduces stored false | reads field false  
+same    Assume Check Build#0 | s262 reproduces stored false | reads field false  
+same    Close Group Batch Build#0 | s262 reproduces stored false | reads field false  
+same    Close Group Retry Build#0 | s262 reproduces stored true | reads field false  
+same    Close Enforcer Resume#0 | s262 reproduces stored false | reads field false  
+same    Close Enforcer Call deepseek#0 | s262 reproduces stored true | reads field false  
+same    Close Enforcer Record#0 | s262 reproduces stored false | reads field false  
+same    SJ Off#0 | s262 reproduces stored false | reads field false  
+same    Build Save Body#0 | s262 reproduces stored false | reads field false  
+same    Check Save#0 | s262 reproduces stored false | reads field false  
+same    Anticheat Resume#0 | s262 reproduces stored false | reads field false  
+same    Anticheat Call deepseek#0 | s262 reproduces stored true | reads field false  
+same    Anticheat Record#0 | s262 reproduces stored true | reads field false  
+same    Panel Build#0 | s262 reproduces stored false | reads field true  
+same    Panel Judges Prep#0 | s262 reproduces stored false | reads field false  
+same    Panel Judges Collect#0 | s262 reproduces stored true | reads field false  
+same    Panel Judge 1 openrouter#0 | s262 reproduces stored true | reads field false  
+same    Panel Judge 2 openrouter#0 | s262 reproduces stored true | reads field false  
+same    Panel Judge 3 openrouter#0 | s262 reproduces stored true | reads field false  
+same    Panel Check#0 | s262 reproduces stored false | reads field false  
+same    Panel Payloads#0 | s262 reproduces stored false | reads field true  
+same    Judge Contradiction Build#0 | s262 reproduces stored false | reads field false  
+same    Judge Contradiction Record#0 | s262 reproduces stored false | reads field false  
+same    Assume Check Resume#0 | s262 reproduces stored false | reads field false  
+same    Assume Check Call deepseek#0 | s262 reproduces stored true | reads field false  
+same    Assume Check Record#0 | s262 reproduces stored false | reads field false  
+same    Panel Cure Build 1#0 | s262 reproduces stored false | reads field false  
+same    Panel Cure Normalize 1#0 | s262 reproduces stored false | reads field false  
+same    Panel Cure Build 2#0 | s262 reproduces stored false | reads field false  
+same    Panel Cure Normalize 2#0 | s262 reproduces stored false | reads field false  
+same    Panel Cure Build 3#0 | s262 reproduces stored false | reads field false  
+same    Panel Cure Normalize 3#0 | s262 reproduces stored false | reads field false  
+same    FUM Merge Panel 3#0 | s262 reproduces stored true | reads field false  
+same    Panel Cure Normalize 3#1 | s262 reproduces stored false | reads field false  
+same    Panel Cure Check#0 | s262 reproduces stored false | reads field true  
+same    Early Alternate Build#0 | s262 reproduces stored false | reads field false  
+same    Enforcer Build#0 | s262 reproduces stored true | reads field false  
+same    Judge Enforcer Build#0 | s262 reproduces stored false | reads field true  
+same    Enforcer Group Batch Build#0 | s262 reproduces stored false | reads field false  
+same    Enforcer Resume#0 | s262 reproduces stored true | reads field false  
+same    Enforcer Record#0 | s262 reproduces stored false | reads field false  
+same    Judge Enforcer Resume#0 | s262 reproduces stored false | reads field false  
+same    Judge Enforcer Call deepseek#0 | s262 reproduces stored true | reads field false  
+same    Judge Enforcer Retry Build#0 | s262 reproduces stored true | reads field false  
+same    Judge Enforcer Record#0 | s262 reproduces stored false | reads field false  
+same    Send Back Build#0 | s262 reproduces stored false | reads field false  
+same    Send Back Record#0 | s262 reproduces stored false | reads field false  
+same    Reread Build#0 | s262 reproduces stored false | reads field false  
+same    Reread Record#0 | s262 reproduces stored false | reads field false  
+same    Gate Build#0 | s262 reproduces stored false | reads field false  
+same    Late Gate Build#0 | s262 reproduces stored false | reads field false  
+same    Gate Record#0 | s262 reproduces stored false | reads field false  
+same    Alternate Build#0 | s262 reproduces stored true | reads field false | s262 ERR Cannot read properties of undefined (reading 'map') | tgt ERR Cannot read properties of undefined (reading 'map')
+same    Early Alternate Reply#0 | s262 reproduces stored true | reads field false  
+same    Alternate Payloads#0 | s262 reproduces stored true | reads field true  
+same    Alternate Cure Build#0 | s262 reproduces stored true | reads field false  
+same    Alternate Cure Normalize#0 | s262 reproduces stored true | reads field false  
+same    Alternate Merge Seat#0 | s262 reproduces stored false | reads field true  
+same    Alt Seated#0 | s262 reproduces stored false | reads field false  
+same    Alt Judge Enforcer Build#0 | s262 reproduces stored false | reads field true  
+same    Alt Judge Enforcer Retry Build#0 | s262 reproduces stored true | reads field false  
+same    Alt Judge Enforcer Record#0 | s262 reproduces stored false | reads field false  
+same    Alt Send Back Build#0 | s262 reproduces stored false | reads field false  
+same    Alt Send Back Record#0 | s262 reproduces stored false | reads field false  
+same    Alt Reread Build#0 | s262 reproduces stored false | reads field false  
+same    Alt Reread Record#0 | s262 reproduces stored false | reads field false  
+same    Alt Gate Build#0 | s262 reproduces stored false | reads field false  
+same    Alt Late Gate Build#0 | s262 reproduces stored true | reads field false  
+same    Alt Gate Record#0 | s262 reproduces stored false | reads field false  
+same    Alternate Merge 1#0 | s262 reproduces stored false | reads field true  
+same    Second Alternate?#0 | s262 reproduces stored false | reads field false  
+same    Alternate Merge#0 | s262 reproduces stored false | reads field false  
+same    Panel Done#0 | s262 reproduces stored false | reads field false  
+same    Panel Tokens#0 | s262 reproduces stored false | reads field false  
+same    Format Markdown#0 | s262 reproduces stored false | reads field false  
+same    Plain Rule Lines#0 | s262 reproduces stored false | reads field false  
+same    Raise If Incomplete#0 | s262 reproduces stored true | reads field false  
+START | code-node runs changed: 0

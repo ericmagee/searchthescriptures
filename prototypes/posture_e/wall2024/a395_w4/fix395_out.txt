@@ -1,0 +1,15 @@
+DIFF RETRACTED: K-V D2 vs C1 -- the press is withdrawn
+   text I: {"form":null,"code":"MALFORMED_RETRACTED"}
+   text L: {"form":"RETRACTED","code":null,"pair":"D2 vs C1"}
+DIFF RESTATED: C1 vs D2 (Luke 1:35): STANDS
+   text I: {"form":null,"code":"NOT_A_FORM"}
+   text L: {"form":"COLLISION","code":null,"pair":"D2 vs C1","grade":"STANDS","restated":true}
+DIFF PRESSED: D1 vs C2 | [CR3] | "the power of the Highest shall 
+   text I: {"form":"PRESSED","code":null,"kind":"other","text":"text only"}
+   text L: {"form":"PRESSED","code":null,"kind":"cure","pair":"D1 vs C2","round":"CR3"}
+DIFF SHORT: D1 vs C2 | [DR3] | "made of the seed of David" | the 
+   text I: {"form":"SHORT","code":null,"text":"text only"}
+   text L: {"form":"SHORT","code":null,"pair":"D1 vs C2","round":"DR3","why":"the quote stops before the words that answer"}
+SAME D2 vs C2 (Luke 3:23): STANDS -- PRESSED: D2 vs C2 | [DR2] | 
+   text I: {"form":"COLLISION","code":null,"pair":"D2 vs C2","grade":"STANDS","restated":false}
+   text L: {"form":"COLLISION","code":null,"pair":"D2 vs C2","grade":"STANDS","restated":false}
