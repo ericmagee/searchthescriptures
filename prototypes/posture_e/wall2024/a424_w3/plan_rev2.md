@@ -1,6 +1,8 @@
 # ASK 424 plan, rev 2 (W3, planner)
 
-Rev 2 answers W1 8894: C1 in DONE WHEN 1 and 2, and N1 in section 1 and DONE WHEN 4.
+Rev 2 answers two grades:
+- W1 8894: C1 is met in DONE WHEN 1 and 2, and N1 in section 1 and DONE WHEN 4.
+- W2 8897: W2-C1 and W2-C2 are met in section 3, step 1, and in DONE WHEN 7.
 
 Goal: every reader of the defender's DECLARED CHAIN reads a chain whose links are written "D1:" (and the other heads the ASK 423 reader takes), and gives today's output on every stored run where it reads a chain today.
 
@@ -50,7 +52,16 @@ Limit: this is today's code. I did not check which code version ran 27665 and 38
 
    `^(?:#+\s*)?[*_]*\s*D?([0-9]+)[*_]*(?:[.:)]|\s+-{1,3}(?:\s|$))`, case-insensitive.
 
-   The dash class `[-‐-―−]` is written into the pattern, so readers that do not run DM() read the same heads. The link text is what follows the head, with leading markup and spaces trimmed.
+   Rev 2 makes three changes to that head:
+   - **The dash class.** `[-‐-―−]` is written into the pattern, so readers that do not run DM() read the same heads.
+   - **Leading spaces (W2-C1).** R2 to R5 take `^\s*` before the head, as they do today. R1 keeps its own start.
+   - **No digit after the ending (W2-C2).** ".", ":" or ")" must not be followed by a digit, `(?![0-9])`, so a "28:10" or "1.5" line is not a head.
+
+   For R2 to R5 the head is therefore:
+
+   `^\s*(?:#+\s*)?[*_]*\s*D?([0-9]+)[*_]*(?:[.:)](?![0-9])|\s+[-‐-―−]{1,3}(?:\s|$))`, case-insensitive.
+
+   The link text is what follows the head, with leading markup and spaces trimmed.
 2. **Each reader keeps its own rules.** Its start, continuation, stop and output rules stay as they are. Only the numbered-line test and the number and text capture change:
    - R1: the line test in chain_count.
    - R2: drvLinks's m.
@@ -93,5 +104,8 @@ The write report states the 4 runs and what each reader showed in them.
    - No computed $() is added (section 15).
    - No model setting is touched.
 6. **Inputs in git (ASK 414).** The SQL that makes the test input, and the test scripts, are committed.
+7. **Planted cases (W2 8897).** Equality cannot show these, because SQL finds no such line in the 245 stored chains. So the build shows each one as a planted case:
+   - An indented "  1." chain is read the same before and after.
+   - A "D2:" link followed by a "28:10 ..." line: the 28:10 line stays part of D2's text and is not read as a head.
 
 Grading: W1 and W2. Builder: W4. I do not grade this build.
