@@ -1,0 +1,48 @@
+{
+ "rd386": [
+  {
+   "plant": "one line, retracted, regraded UNDERDETERMINED in place, equal fields (W1 8519 plant)",
+   "rev4b": "DEFENDER WINS",
+   "rev4c": "UNDERDETERMINED"
+  },
+  {
+   "plant": "one line, retracted, still CHALLENGER LINK BROKEN (case B), equal fields",
+   "rev4b": "DEFENDER WINS",
+   "rev4c": "DEFENDER WINS"
+  },
+  {
+   "plant": "HELD challenge SELF-SUPPORTED, its only CHALLENGER LINK BROKEN line retracted and still LINK BROKEN",
+   "rev4b": "UNDERDETERMINED",
+   "rev4c": "UNDERDETERMINED"
+  },
+  {
+   "plant": "no line retracted, equal fields",
+   "rev4b": "UNDERDETERMINED",
+   "rev4c": "UNDERDETERMINED"
+  }
+ ],
+ "three": [
+  {
+   "target": "r4b",
+   "v25": "DEFENDER WINS",
+   "v25_trig": [
+    "RETRACTED D1 vs C1 (CHALLENGER LINK BROKEN to UNDERDETERMINED)"
+   ],
+   "tag_on_v25_output": "UNDERDETERMINED",
+   "tag_tie": true,
+   "v37": "UNDERDETERMINED"
+  },
+  {
+   "target": "r4c",
+   "v25": "UNDERDETERMINED",
+   "v25_trig": [
+    "RETRACTED D1 vs C1 (CHALLENGER LINK BROKEN to UNDERDETERMINED)",
+    "TIE (KB-0030)"
+   ],
+   "tag_on_v25_output": "UNDERDETERMINED",
+   "tag_tie": true,
+   "v37": "UNDERDETERMINED"
+  }
+ ],
+ "stored": []
+}

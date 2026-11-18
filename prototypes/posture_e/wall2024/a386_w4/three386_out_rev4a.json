@@ -1,0 +1,62 @@
+[
+ {
+  "target": "t386_rev1.json",
+  "case": "A",
+  "v25": "UNDERDETERMINED",
+  "v37": "UNDERDETERMINED",
+  "v37_fields": {
+   "verdict_tag": "HELD",
+   "defense_standing": "PROP-DEPENDENT",
+   "conceded_links": 1,
+   "challenge_standing": "SELF-SUPPORTED",
+   "challenger_conceded_links": 0
+  },
+  "tag_on_v25_output": "UNDERDETERMINED",
+  "tag_on_v37_output": "UNDERDETERMINED"
+ },
+ {
+  "target": "t386_rev1.json",
+  "case": "B",
+  "v25": "(case B starts from the v21 text)",
+  "v37": "DEFENDER WINS",
+  "v37_fields": {
+   "verdict_tag": "HELD",
+   "defense_standing": "PROP-DEPENDENT",
+   "conceded_links": 1,
+   "challenge_standing": "PROP-DEPENDENT",
+   "challenger_conceded_links": 0
+  },
+  "tag_on_v25_output": "UNDERDETERMINED",
+  "tag_on_v37_output": "DEFENDER WINS"
+ },
+ {
+  "target": "t386.json",
+  "case": "A",
+  "v25": "UNDERDETERMINED",
+  "v37": "UNDERDETERMINED",
+  "v37_fields": {
+   "verdict_tag": "HELD",
+   "defense_standing": "PROP-DEPENDENT",
+   "conceded_links": 1,
+   "challenge_standing": "SELF-SUPPORTED",
+   "challenger_conceded_links": 0
+  },
+  "tag_on_v25_output": "UNDERDETERMINED",
+  "tag_on_v37_output": "UNDERDETERMINED"
+ },
+ {
+  "target": "t386.json",
+  "case": "B",
+  "v25": "(case B starts from the v21 text)",
+  "v37": "DEFENDER WINS",
+  "v37_fields": {
+   "verdict_tag": "HELD",
+   "defense_standing": "PROP-DEPENDENT",
+   "conceded_links": 1,
+   "challenge_standing": "PROP-DEPENDENT",
+   "challenger_conceded_links": 0
+  },
+  "tag_on_v25_output": "UNDERDETERMINED",
+  "tag_on_v37_output": "DEFENDER WINS"
+ }
+]

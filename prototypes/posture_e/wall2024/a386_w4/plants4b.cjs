@@ -1,0 +1,11 @@
+// ASK 386 rev 4 part 2 (W1 8514 option (i)): stored counts and the three plants (short form only, mixed, long form only).
+const J=require('../a384/judgments_all.json');const D=require('./dbcols.json');const EA=require('./ert_eval.cjs')(__dirname+'/t386_rev4a.json'),EB=require('./ert_eval.cjs')(__dirname+'/t386.json');
+const W=t=>(t.split('\n').pop().match(/WORD: ([A-Z ]+|none);/)||[])[1];const N=t=>/LINK STATE LINES NOT READ \(short form\)/.test(t.split('\n').pop());
+let noted=0,ch=0,other=0;const ids=[];
+for(const j of J){const c=D.find(x=>x[0]===j.id);const F={verdict_tag:c[1],defense_standing:c[2],challenge_standing:c[3],conceded_links:c[4],challenger_conceded_links:c[5]};const a=EA.ert386(j.v,j.seat,F),b=EB.ert386(j.v,j.seat,F);
+ if(N(b)){noted++;ids.push(j.id);}if(W(a)!==W(b))ch++;if(a.split('\n').pop()!==b.split('\n').pop().replace(', LINK STATE LINES NOT READ (short form)',''))other++;}
+console.log({stored:J.length,tag_carries_the_note:noted,word_changes_vs_rev4a:ch,tags_differing_other_than_the_note:other});console.log('noted ids:',ids.join(','));
+const H=(f,r)=>JSON.stringify({verdict_tag:f[0],defense_standing:f[1],challenge_standing:f[2],conceded_links:f[3],challenger_conceded_links:f[4],reasoning:r});const f=['BROKEN','PROP-DEPENDENT','PROP-DEPENDENT',1,1];const Fo={verdict_tag:f[0],defense_standing:f[1],challenge_standing:f[2],conceded_links:f[3],challenger_conceded_links:f[4]};
+const P=[['short form only','BROKEN\nCOLLISION POINTS:\nD1: STANDS\nD2: STANDS\nRESULT: CHALLENGER WINS'],['mixed','BROKEN\nCOLLISION POINTS:\nD1: STANDS\nD2 vs C1 (John 1:1): STANDS -- g\nRESULT: CHALLENGER WINS'],['long form only','BROKEN\nCOLLISION POINTS:\nD1 vs C1 (John 1:1): STANDS -- g\nD2 vs C2 (John 1:3): STANDS -- g\nRESULT: CHALLENGER WINS'],['prefixed form only (667 shape)','BROKEN\nCOLLISION POINTS:\nD3: D3 vs C2 (John 11:48-52): UNDERDETERMINED -- g\nRESULT: CHALLENGER WINS']];
+const out=P.map(([n,r])=>{const a=EA.ert386(H(f,r),'s1',Fo).split('\n').pop(),b=EB.ert386(H(f,r),'s1',Fo).split('\n').pop();return {plant:n,rev4a_word:W(a),rev4a_tie:/TIE yes/.test(a),rev4b_word:W(b),rev4b_tie:/TIE yes/.test(b),rev4b_note:N(b)};});
+out.forEach(o=>console.log(JSON.stringify(o)));require('fs').writeFileSync(__dirname+'/plants4b_out.json',JSON.stringify({noted:ids,plants:out},null,1));
