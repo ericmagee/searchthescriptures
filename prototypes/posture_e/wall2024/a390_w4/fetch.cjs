@@ -1,0 +1,6 @@
+// ASK 390: every stored ODV1 round text (debate_results round columns), for the detector replay
+const fs=require('fs');const src=fs.readFileSync('a394/fetchall.cjs','utf8');const K=src.match(/const K='([^']+)'/)[1],B=src.match(/B='([^']+)'/)[1];
+const cols='id,run_token,variant,defender_engine,challenger_engine,claude_r1,engine_r1,claude_r2,engine_r2,engine_r3,challenger_r3,defender_r4,challenger_r4';
+const get=async u=>{for(let k=0;k<5;k++){try{const r=await fetch(u,{headers:{apikey:K,Authorization:'Bearer '+K}});const j=await r.json();if(Array.isArray(j))return j;console.error(JSON.stringify(j).slice(0,200));}catch(e){console.error(e.message)}await new Promise(r=>setTimeout(r,1000*(k+1)));}throw new Error('fail');};
+(async()=>{const out=[];let off=0;for(;;){const r=await get(B+'debate_results?select='+cols+'&variant=eq.ORACLE_DEBATE_V1&order=created_at&limit=20&offset='+off);if(!r.length)break;out.push(...r);off+=r.length;}
+ fs.writeFileSync('a390/rounds.json',JSON.stringify(out));let n=0;out.forEach(x=>['claude_r1','engine_r1','claude_r2','engine_r2','engine_r3','challenger_r3','defender_r4','challenger_r4'].forEach(c=>{if(x[c])n++;}));console.log('runs',out.length,'rounds',n);})();
