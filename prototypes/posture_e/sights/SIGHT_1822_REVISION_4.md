@@ -1,4 +1,6 @@
-# Sight 1822 Revision 4.1 (proposal, not written)
+# Sight 1822 Revision 4.2 (proposal, not written)
+
+Rev 4.2 (19:58 CST) applies W2's grade at Wall 7986 to 7988: B item 1 now reads "the man is named in the row or its chain", and Luke 1:35 is answered in place. Hebrews 11:11's chain is 11:12 (W2 7987).
 
 Rev 4.1 (19:52 CST) applies W1's grade at Wall 7985: C1 (the title of Change B), C2 (a Romans 9:10 line), and 4.2 (cite Sight 32, and name the sights that hold Luke 1:35).
 
@@ -73,7 +75,7 @@ THE WHOLE COUNT. The canon (66 books) has 60 rows with "conceive", "conceived" o
    - Genesis 4:1, 4:17, 16:4, 16:5, 21:2, 25:21, 29:32-35, 30:5, 30:7, 30:17, 30:19, 30:23, 38:3-5, 38:18;
    - Exodus 2:2; 1 Samuel 1:20, 2:21; 2 Samuel 11:5; 2 Kings 4:17; 1 Chronicles 7:23; Isaiah 8:3; Hosea 1:3, 1:6, 1:8;
    - Luke 1:24, 1:36; Romans 9:10; Hebrews 11:11.
-   In every one, a man is at the conception, named in the row or in its chain. In two of them the woman was not his wife:
+   In every one, the man is named in the row or its chain. The act itself ("knew", "went in unto", "came in unto", "lay with") is stated in 21 of them. In two of them the woman was not his wife:
    - Genesis 38:18, Judah and Tamar: "came in unto her, and she conceived by him";
    - 2 Samuel 11:5, David and Bathsheba ("he lay with her", 11:4).
    At Isaiah 8:3 the text says "I went unto the prophetess [went: Heb. approached]".
@@ -91,7 +93,11 @@ No row in the canon gives a woman's conception without a man.
 - "when he went in unto her, the LORD gave her conception" (Ruth 4:13);
 - "Elkanah knew Hannah his wife; and the LORD remembered her" (1 Samuel 1:19).
 
-The LORD's hand named at a conception never removes the husband. Matthew 1:20 carries both in one row: God's part ("of the Holy Ghost") and the husband ("Joseph, thou son of David ... Mary thy wife"). Read precept upon precept (Isaiah 28:10), "conceived ... of the Holy Ghost" says the child was conceived. It does not say the Holy Ghost impregnated her. That reading has no row in scripture. Luke 1:34, "seeing I know not a man", is a present state, not a vow (Sight 32). Luke 1:35, "come upon" and "overshadow", is held by Sight 8 (Acts 1:8, the parallel for eperchomai) and Sight 9 (every New Testament use of episkiazo is the presence cloud). Its "born of thee" (gennao + ek) is recorded in Sight 1578.
+The LORD's hand named at a conception never removes the husband. Matthew 1:20 carries both in one row: God's part ("of the Holy Ghost") and the husband ("Joseph, thou son of David ... Mary thy wife"). Read precept upon precept (Isaiah 28:10), "conceived ... of the Holy Ghost" says the child was conceived. It does not say the Holy Ghost impregnated her. That reading has no row in scripture. Luke 1:34, "seeing I know not a man", is a present state, not a vow (Sight 32). Luke 1:35: "And the angel answered and said unto her, The Holy Ghost shall come upon thee, and the power of the Highest shall overshadow thee: therefore also that holy thing which shall be born of thee shall be called the Son of God."
+- Its "come upon" (eperchomai, G1904) is the word of Acts 1:8: "But ye shall receive power, after that the Holy Ghost is come upon you: and ye shall be witnesses unto me ... [power...: or, the power of the Holy Ghost coming upon you]". That is power for witness, not a begetting (Sight 8).
+- Its "overshadow" (episkiazo, G1982) is the word of Matthew 17:5: "While he yet spake, behold, a bright cloud overshadowed them: and behold a voice out of the cloud, which said, This is my beloved Son, in whom I am well pleased; hear ye him." That is the presence cloud (Sight 9).
+- Its "born of thee" (gennao + ek) names the mother, and it is recorded in Sight 1578.
+Luke 1:35 is therefore no row of a conception without a man.
 
 ## OPEN for the graders (must be answered before the operator's card)
 
@@ -101,4 +107,4 @@ The LORD's hand named at a conception never removes the husband. Matthew 1:20 ca
    - The graders must say whether Change B and Change C hold whole with Sight 10 and DG-8 (DG-59: none cancels another), or whether Romans 9:10 needs its own line.
 2. ANSWERED in rev 4.1: Change C now cites Sight 32, and Sights 8, 9 and 1578 for Luke 1:35. Original question: Luke 1:34, "seeing I know not a man", is held by Sight 32 (present state, not a vow). The graders must say whether Change C must cite Sight 32.
 3. Size: the summary is 9,261 characters now. Changes A to C add about 4,700. W1 knows of no limit.
-4. The man in the chain, for all 33 narrated rows, was read by W3 in this session. Row in the verse: Genesis 4:1, 4:17, 16:4, 21:2, 30:5, 30:7, 30:17, 30:19, 38:18; 1 Chronicles 7:23; Isaiah 8:3; Hosea 1:3; Luke 1:24; Romans 9:10. Row in the chain: Genesis 16:5 (16:4), 25:21 ("his wife"), 29:32-35 ("my husband", 29:32, 34), 30:23 (Rachel, wife of Jacob, 29:28), 38:3-5 (38:2), Exodus 2:2 (2:1), 1 Samuel 1:20 (1:19), 2:21 (2:20), 2 Samuel 11:5 (11:4), 2 Kings 4:17 ("her husband", 4:14), Hosea 1:6, 1:8 (1:2-3), Luke 1:36 (1:5, 1:13), Hebrews 11:11 (Sarah: Genesis 21:2).
+4. The man in the chain, for all 33 narrated rows, was read by W3 in this session. Row in the verse: Genesis 4:1, 4:17, 16:4, 21:2, 30:5, 30:7, 30:17, 30:19, 38:18; 1 Chronicles 7:23; Isaiah 8:3; Hosea 1:3; Luke 1:24; Romans 9:10. Row in the chain: Genesis 16:5 (16:4), 25:21 ("his wife"), 29:32-35 ("my husband", 29:32, 34), 30:23 (Rachel, wife of Jacob, 29:28), 38:3-5 (38:2), Exodus 2:2 (2:1), 1 Samuel 1:20 (1:19), 2:21 (2:20), 2 Samuel 11:5 (11:4), 2 Kings 4:17 ("her husband", 4:14), Hosea 1:6, 1:8 (1:2-3), Luke 1:36 (1:5, 1:13), Hebrews 11:11 (11:12, "sprang there even of one"; and Genesis 21:2).
