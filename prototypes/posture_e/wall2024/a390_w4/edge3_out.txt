@@ -1,0 +1,27 @@
+normalizers patched: 19
+L623 krulNorm    s:n>Y e:Y>Y in:short s:n>Y e:Y>Y in:Y>Y s:n>Y e:Y>Y in:Y>Y
+L666 kkjvFold    s:n>Y e:Y>Y in:short s:n>Y e:Y>Y in:Y>Y s:n>Y e:Y>Y in:Y>Y
+L1202 nw         s:n>Y e:Y>Y in:short s:n>Y e:Y>Y in:Y>Y s:n>Y e:Y>Y in:Y>Y
+L1684 nz         s:n>Y e:Y>Y in:short s:n>Y e:Y>Y in:Y>Y s:n>Y e:Y>Y in:Y>Y
+L1923 NR         s:n>Y e:Y>Y in:short s:n>Y e:Y>Y in:Y>Y s:n>Y e:Y>Y in:Y>Y
+L2289 nw         s:n>Y e:Y>Y in:short s:n>Y e:Y>Y in:Y>Y s:n>Y e:Y>Y in:Y>Y
+L2493 NN         s:n>Y e:Y>Y in:short s:n>Y e:Y>Y in:Y>Y s:n>Y e:Y>Y in:Y>Y
+L2564 nw         s:n>Y e:Y>Y in:short s:n>Y e:Y>Y in:Y>Y s:n>Y e:Y>Y in:Y>Y
+L2608 nw         s:n>Y e:Y>Y in:short s:n>Y e:Y>Y in:Y>Y s:n>Y e:Y>Y in:Y>Y
+L2649 N          s:n>Y e:Y>Y in:short s:n>Y e:Y>Y in:Y>Y s:n>Y e:Y>Y in:Y>Y
+L2696 N          s:n>Y end:NOFIT in:short s:n>Y e:Y>Y in:Y>Y s:n>Y e:Y>Y in:Y>Y
+L2977 N          s:n>Y end:NOFIT in:short s:n>Y e:Y>Y in:Y>Y s:n>Y e:Y>Y in:Y>Y
+L2992 NN         s:n>Y end:NOFIT in:short s:n>Y e:Y>Y in:Y>Y s:n>Y e:Y>Y in:Y>Y
+L3001 NN         s:n>Y end:NOFIT in:short s:n>Y e:Y>Y in:Y>Y s:n>Y e:Y>Y in:Y>Y
+L3029 NN         s:n>Y e:Y>Y in:short s:n>Y e:Y>Y in:Y>Y s:n>Y e:Y>Y in:Y>Y
+L3079 NN         s:n>Y end:NOFIT in:short s:n>Y e:Y>Y in:Y>Y s:n>Y e:Y>Y in:Y>Y
+L3388 epdWords   s:n>Y e:Y>Y in:short s:n>Y e:Y>Y in:Y>Y s:n>Y e:Y>Y in:Y>Y
+L3501 N          s:n>Y e:Y>Y in:short s:n>Y e:Y>Y in:Y>Y s:n>Y e:Y>Y in:Y>Y
+L3502 N          s:n>Y e:Y>Y in:short s:n>Y e:Y>Y in:Y>Y s:n>Y e:Y>Y in:Y>Y
+quotes that fit the unmarked round: 147 | still match on the marked round, before the fix (t390): 90 | after (t390b): 147
+LAY ODV1-38593 note 1 start "cite from kjv wait verse not" | STANDS-FIT items (LINK STATE/COLLISION) unmarked 0/0 | marked before 0/1 | marked after 0/0
+LAY ODV1-38593 note 1 end "not on sheet i name with" | STANDS-FIT items (LINK STATE/COLLISION) unmarked 0/0 | marked before 0/0 | marked after 0/0
+LAY ODV1-38593 note 2 start "kjv gives it this is challenged" | STANDS-FIT items (LINK STATE/COLLISION) unmarked 0/0 | marked before 0/1 | marked after 0/0
+LAY ODV1-38593 note 2 end "sheet verses here the scorn feared" | STANDS-FIT items (LINK STATE/COLLISION) unmarked 0/0 | marked before 0/0 | marked after 0/0
+LAY ODV1-37812 note 1 start "matthew 1 2 wait exact with" | STANDS-FIT items (LINK STATE/COLLISION) unmarked 0/0 | marked before 0/1 | marked after 0/0
+LAY ODV1-37812 note 1 end "2 wait exact with gennao g1080" | STANDS-FIT items (LINK STATE/COLLISION) unmarked 0/0 | marked before 0/1 | marked after 0/0

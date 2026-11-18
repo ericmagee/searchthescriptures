@@ -1,0 +1,45 @@
+{
+ "names": [
+  "psGrades",
+  "REFP",
+  "ackFoot2024",
+  "ackForm2024",
+  "unxAcFail",
+  "unxaCheck",
+  "lbFoot",
+  "ri5Rd2024",
+  "ri6Col2024",
+  "__RL",
+  "wnOff390"
+ ],
+ "accepted": [
+  {
+   "name": "psGrades",
+   "sha_a": "6d76a01adf18",
+   "sha_b": "8de08f33d202",
+   "reason": "live s262: text B (the 3 Send Back Record stubs) lacks pkgRI3B and pkgPSQ; merge waits on W2's replay condition",
+   "wall": "Wall 8086, 8087"
+  },
+  {
+   "name": "psGrades",
+   "sha_a": "d81bef05e71e",
+   "sha_b": "3468bff70fd5",
+   "reason": "ASK 381 target t381/c381: both texts carry the ASK 381 fix; the A/B difference is unchanged",
+   "wall": "Wall 8085"
+  },
+  {
+   "name": "REFP",
+   "sha_a": "c3b69b4beefb",
+   "sha_b": "3f80dae54ad4",
+   "reason": "trimmed copy (BK and BOOKS only) in Quote Report and 8 library stubs; none of those calls REFP.keys, parse or book",
+   "wall": "Wall 8126"
+  },
+  {
+   "name": "__RL",
+   "sha_a": "0f43c34b3f94",
+   "sha_b": "3be38199f953",
+   "reason": "live before ASK 394: 30 node copies are older than the 66 library copies (library adds K-kind RETRACTED, PRESSED and SHORT pipe forms, C-vs-D reversal); 394 adds no copy; merge is ASK 395",
+   "wall": "Wall 8242, 8243, 8246"
+  }
+ ]
+}
