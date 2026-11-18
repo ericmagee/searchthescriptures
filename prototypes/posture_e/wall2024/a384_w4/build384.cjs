@@ -7,7 +7,8 @@ const U=T.unpack(d);const L=U.L,M=U.M;let at=-1,tail='';for(let i=0;i+RL.length<
 if(at<0)throw new Error('library copy not found');for(let j=0;j<NL.length;j++)L[at+j]=NL[j]+(j===NL.length-1?tail:'');if(tail!==';'&&tail!=='')throw new Error('unexpected tail '+JSON.stringify(tail));
 const nodes=[];for(const n of d.nodes){if(n.name==='Shared Library')continue;const j=n.parameters&&n.parameters.jsCode;if(typeof j!=='string')continue;const c=j.split(R).length-1;if(!c)continue;if(c!==1)throw new Error(n.name+': found '+c+' times');n.parameters.jsCode=j.replace(R,()=>N);nodes.push(n.name);}
 const ch=[];for(const k of Object.keys(M)){const n2=T.rb(L,M[k]).length;if(n2!==M[k].n){ch.push(k);M[k].n=n2;}}
-d.nodes.find(n=>n.name==='Shared Library').parameters.jsCode=U.hdr+'\n/*LIB*/'+JSON.stringify(L)+'\n/*MAP*/'+JSON.stringify(M)+U.tail;
+const LJ=JSON.stringify(L);const lsha=require('crypto').createHash('sha256').update(LJ).digest('hex').slice(0,16);const h2=U.hdr.replace(/library sha [0-9a-f]{16}, (\d+) lines/,()=>'library sha '+lsha+', '+L.length+' lines');if(h2===U.hdr)throw new Error('hdr');
+d.nodes.find(n=>n.name==='Shared Library').parameters.jsCode=h2+'\n/*LIB*/'+JSON.stringify(L)+'\n/*MAP*/'+JSON.stringify(M)+U.tail;
 const P=s=>acorn.parse(s,{ecmaVersion:'latest',allowReturnOutsideFunction:true,allowAwaitOutsideFunction:true});for(const k of Object.keys(M))P(T.rb(L,M[k]));for(const n of d.nodes){if(nodes.includes(n.name))P(n.parameters.jsCode);}
 let left=0;for(const n of d.nodes){const j=n.parameters&&n.parameters.jsCode;if(typeof j==='string'&&j.includes(R))left++;}
-fs.writeFileSync(OUT,JSON.stringify(d));console.log('library lines',at,'to',at+NL.length-1,'replaced');console.log('inline nodes',nodes.length,nodes.join('; '));console.log('MAP lengths changed',ch.length,'; live text left',left);
+fs.writeFileSync(OUT,JSON.stringify(d));console.log('library lines',at,'to',at+NL.length-1,'replaced');console.log('inline nodes',nodes.length,nodes.join('; '));console.log('MAP lengths changed',ch.length,'; live text left',left,'| lib sha',lsha);
