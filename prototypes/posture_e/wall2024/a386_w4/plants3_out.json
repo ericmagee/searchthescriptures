@@ -1,0 +1,32 @@
+{
+ "rd386: BROKEN, equal fields, no collision lines": {
+  "rev2": "UNDERDETERMINED",
+  "rev3": "CHALLENGER WINS"
+ },
+ "rd386: HELD challenge PROP-DEPENDENT, equal fields, no collision lines": {
+  "rev2": "UNDERDETERMINED",
+  "rev3": "DEFENDER WINS"
+ },
+ "rd386: BROKEN, equal fields, one collision STANDS (the proper tie)": {
+  "rev2": "UNDERDETERMINED",
+  "rev3": "UNDERDETERMINED"
+ },
+ "1336: empty collision list, equal fields, DEFENDER WINS": {
+  "rev2": true,
+  "rev3": false
+ },
+ "1336: one collision STANDS, equal fields, DEFENDER WINS": {
+  "rev2": true,
+  "rev3": true
+ },
+ "1491: empty collision list, equal fields": {
+  "rev2": true,
+  "rev3": false
+ },
+ "1491: one collision STANDS, equal fields": {
+  "rev2": true,
+  "rev3": true
+ },
+ "line1336_rev3": " const __tie421=(cl,a1,a2,n1,n2,r)=>!cl.some(z=>!z.grade)&&!cl.some(z=>/LINK BROKEN$/.test(String(z.grade||'')))&&cl.length>0&&!!a1&&!!a2&&typeof n1==='number'&&typeof n2==='number'&&a1===a2&&n1===n2&&(r==='DEFENDER WINS'||r==='CHALLENGER WINS');",
+ "line1491_rev3": " const tie=!unk.length&&!col.some(z=>/LINK BROKEN$/.test(String(z.grade||'')))&&col.length>0&&!!dst&&!!cst&&typeof c.DEFENDER==='number'&&typeof c.CHALLENGER==='number'&&dst===cst&&c.DEFENDER===c.CHALLENGER;"
+}
