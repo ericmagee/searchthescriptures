@@ -1,0 +1,22 @@
+NAME psGrades: 36 copies, 2 text(s)
+  6d76a01adf18 x30  e.g. fetchback_s262.json lib:Alt Gate Build; fetchback_s262.json lib:Alt Gate Record; fetchback_s262.json lib:Alternate Merge 1
+  8de08f33d202 x6  e.g. fetchback_s262.json lib:Alt Send Back Record; fetchback_s262.json lib:R2 Alt Send Back Record; fetchback_s262.json lib:Send Back Record
+  ACCEPTED 6d76a01adf18 vs 8de08f33d202: live s262: text B (the 3 Send Back Record stubs) lacks pkgRI3B and pkgPSQ; merge waits on W2's replay condition (Wall 8086, 8087)
+NAME REFP: 111 copies, 2 text(s)
+  c3b69b4beefb x94  e.g. fetchback_s262.json Init with Guards; fetchback_s262.json D1 Build; fetchback_s262.json C1 Build
+  3f80dae54ad4 x17  e.g. fetchback_s262.json Quote Report; fetchback_s262.json lib:Alternate Build; fetchback_s262.json lib:Alternate Cure Build
+  ACCEPTED c3b69b4beefb vs 3f80dae54ad4: trimmed copy (BK and BOOKS only) in Quote Report and 8 library stubs; none of those calls REFP.keys, parse or book (ASK 385 report)
+RESULT: PASS
+
+NAME psGrades: 18 copies, 3 text(s)
+  73eff29bdcc1 x13  e.g. test_onebyte.json lib:Alt Gate Build; test_onebyte.json lib:Alt Gate Record; test_onebyte.json lib:Alternate Merge 1
+  90484859c29b x3  e.g. test_onebyte.json lib:Alt Send Back Record; test_onebyte.json lib:R2 Alt Send Back Record; test_onebyte.json lib:Send Back Record
+  6d76a01adf18 x2  e.g. test_onebyte.json lib:Cure Check; test_onebyte.json lib:Panel Cure Check
+  FAIL 73eff29bdcc1 vs 90484859c29b
+  FAIL 73eff29bdcc1 vs 6d76a01adf18
+  FAIL 90484859c29b vs 6d76a01adf18
+NAME REFP: 72 copies, 2 text(s)
+  c3b69b4beefb x63  e.g. test_onebyte.json Init with Guards; test_onebyte.json D1 Build; test_onebyte.json C1 Build
+  3f80dae54ad4 x9  e.g. test_onebyte.json Quote Report; test_onebyte.json lib:Alternate Build; test_onebyte.json lib:Alternate Cure Build
+  ACCEPTED c3b69b4beefb vs 3f80dae54ad4: trimmed copy (BK and BOOKS only) in Quote Report and 8 library stubs; none of those calls REFP.keys, parse or book (ASK 385 report)
+RESULT: FAIL (3 differing pair(s))

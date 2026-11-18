@@ -1,0 +1,6 @@
+{"names":["psGrades","REFP"],
+ "accepted":[
+  {"name":"psGrades","sha_a":"6d76a01adf18","sha_b":"8de08f33d202","reason":"live s262: text B (the 3 Send Back Record stubs) lacks pkgRI3B and pkgPSQ; merge waits on W2's replay condition","wall":"Wall 8086, 8087"},
+  {"name":"psGrades","sha_a":"d81bef05e71e","sha_b":"3468bff70fd5","reason":"ASK 381 target t381/c381: both texts carry the ASK 381 fix; the A/B difference is unchanged","wall":"Wall 8085"},
+  {"name":"REFP","sha_a":"c3b69b4beefb","sha_b":"3f80dae54ad4","reason":"trimmed copy (BK and BOOKS only) in Quote Report and 8 library stubs; none of those calls REFP.keys, parse or book","wall":"ASK 385 report"}
+ ]}
