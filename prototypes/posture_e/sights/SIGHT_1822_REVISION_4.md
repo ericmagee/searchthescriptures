@@ -1,5 +1,7 @@
 # Sight 1822 Revision 4.2 (proposal, not written)
 
+W1 regrade condition (19:48 CST) applied: the Sight 1578 citation for "born of thee" is dropped from the text, and the measured word-map fact is kept. Sight 1578 holds it in its notes (its corrections list), not in its summary.
+
 Rev 4.2 (19:58 CST) applies W2's grade at Wall 7986 to 7988: B item 1 now reads "the man is named in the row or its chain", and Luke 1:35 is answered in place. Change C (5) now states the "came in unto her" claim for the 21 rows that state the act (W1, after 7988). Hebrews 11:11's chain is 11:12 (W2 7987).
 
 Rev 4.1 (19:52 CST) applies W1's grade at Wall 7985: C1 (the title of Change B), C2 (a Romans 9:10 line), and 4.2 (cite Sight 32, and name the sights that hold Luke 1:35).
@@ -96,7 +98,7 @@ No row in the canon gives a woman's conception without a man.
 The LORD's hand named at a conception never removes the husband. Matthew 1:20 carries both in one row: God's part ("of the Holy Ghost") and the husband ("Joseph, thou son of David ... Mary thy wife"). Read precept upon precept (Isaiah 28:10), "conceived ... of the Holy Ghost" says the child was conceived. It does not say the Holy Ghost impregnated her. That reading has no row in scripture. Luke 1:34, "seeing I know not a man", is a present state, not a vow (Sight 32). Luke 1:35: "And the angel answered and said unto her, The Holy Ghost shall come upon thee, and the power of the Highest shall overshadow thee: therefore also that holy thing which shall be born of thee shall be called the Son of God."
 - Its "come upon" (eperchomai, G1904) is the word of Acts 1:8: "But ye shall receive power, after that the Holy Ghost is come upon you: and ye shall be witnesses unto me both in Jerusalem, and in all Judaea, and in Samaria, and unto the uttermost part of the earth. [power...: or, the power of the Holy Ghost coming upon you]". That is power for witness, not a begetting (Sight 8).
 - Its "overshadow" (episkiazo, G1982) is the word of Matthew 17:5: "While he yet spake, behold, a bright cloud overshadowed them: and behold a voice out of the cloud, which said, This is my beloved Son, in whom I am well pleased; hear ye him." That is the presence cloud (Sight 9).
-- Its "born of thee" (gennao + ek) names the mother, and it is recorded in Sight 1578.
+- Its "born of thee" is gennao (G1080) + ek (G1537) (kjv_word_map), and it names the mother as the one the child is born of.
 Luke 1:35 is therefore no row of a conception without a man.
 
 ## OPEN for the graders (must be answered before the operator's card)
