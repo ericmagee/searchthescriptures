@@ -1061,7 +1061,6 @@ DEFENDER CHAIN MARK: FOOTED -- D5 (and D1 to D4 beneath it) each carry [L1], [L2
 CHALLENGER CHAIN MARK: STRAINED -- the load-bearing step that Joseph knew Mary before the taking rests on Genesis 4:1 and Matthew 1:19-20 but states no row that says it, and Matthew 1:25 is read against its plain sense; layers exhibited are [L1] and [L3], and the [L4] step lacks a row.
 
 > *Superseded by the cure, line not found in the final text:* RESULT: DEFENDER WINS -- read together line upon line, Matthew 1:18, 1:20, 1:25 and Luke 1:34-35 put the conception of the child 'of the Holy Ghost' before Joseph and Mary came together. The challenger's seed and father rows name David's line but do not say through whom it ran.
-> *Superseded by the cure, line not found in the final text:* CONCEDED LINKS: 1
 > *Superseded by the cure, line not found in the final text:* KEYSTONE: D5 -- STANDS -- the conclusion link rests on Matthew 1:18, 20 and Luke 1:34-35, and the only press carried against it that is counted (Numbers 1:2, Premise 6) is answered. Premise 5 is not counted (see COLLISION POINTS, D5), so Commitment 15 is not offended.
 > *Superseded by the cure, line not found in the final text:* RESULT: UNDERDETERMINED -- recomputed after the cure from the cured lines (TIE (KB-0030)): HELD-1, CHALLENGE STANDING PROP-DEPENDENT.
 
@@ -1298,7 +1297,7 @@ CHALLENGER CHAIN MARK: FOOTED -- C2 and the alternative reading exhibit bodily s
 
 *Debate complete.*
 
-**Run time:** 159 min 1 s (started Nov 17, 7:42 PM CST, transcript written Nov 17, 10:21 PM CST).
+**Run time:** 168 min 7 s (started Nov 17, 7:42 PM CST, transcript written Nov 17, 10:30 PM CST).
 
 ---
 

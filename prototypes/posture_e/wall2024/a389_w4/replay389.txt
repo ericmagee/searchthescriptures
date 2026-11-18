@@ -1,6 +1,12 @@
 seats with v27 tags 262 | unparsed verdict JSON 5 | seats whose labelled marks differ old vs new 0
 LINE tags 1720 | placed old 1 | placed new 1444 | unplaced, printed at end 276 | keys matching >1 line 262 | placed on a line whose head differs 0
-labelled tags 1504 | placed old 1406 | placed new 1406 | unplaced, printed at end 98 | keys matching >1 line 0 | placed on a line whose head differs 0
+labelled tags 1504 | placed old 1406 | placed new 1406 | unplaced, printed at end 93 | keys matching >1 line 0 | placed on a line whose head differs 0
+tags left out because their ORIGINAL repeats a placed tag ORIGINAL in the same seat (whitespace collapsed): 5 | ambiguous choices listed: 262
+990 | CONCEDED LINKS | CONCEDED LINKS: 0
+1035 | CONCEDED LINKS | CONCEDED LINKS: 0
+1047 | KEYSTONE | KEYSTONE: D6 -- STANDS
+1047 | CONCEDED LINKS | CONCEDED LINKS: 0
+1221 | CONCEDED LINKS | CONCEDED LINKS: 1
 NEW ITEM rows 55 | answered at the late gate 7
 1161 -> Review flag |  SEAT: luna; RULE K-G4 (K re-read): DEBATE RULE VIOLATION (K-G4) -- D5 vs C6 DEFENDER LINK BROKEN counts a witness as unanswered; the rule counts it only with the quoted pressing sentence and its roun
 1161 -> Review flag |  SEAT: luna; RULE K-G4 (K re-read): DEBATE RULE VIOLATION (K-G4) -- D6 vs C1 DEFENDER LINK BROKEN counts a witness as unanswered; the rule counts it only with the quoted pressing sentence and its roun
