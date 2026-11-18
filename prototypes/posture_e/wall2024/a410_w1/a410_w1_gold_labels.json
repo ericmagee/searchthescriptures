@@ -1,0 +1,453 @@
+{
+ "ask": "ASK 410",
+ "labeler": "W1 (seat 34)",
+ "basis": "a410_w3/a410_gold_facts.json at commit 5b555738; block read from debate_enforcer_log.prompt_sent by enforcer_row; labels set before any model output and before W2 labels were seen",
+ "inferred_act_reading": "W1 reading of INFERRED ACT: a fact is INFERRED ACT when it asserts that a begetting or a knowing took place, who did it, or that a word names one, and the quoted verse words do not say it. A fact that a begetting or knowing did NOT take place (sole parent, apart from the husband, sets the father aside, her state continued) is not an act; it is labeled STATED or NOT STATED. A fact about word sense, cause, house, lineage or time is labeled STATED or NOT STATED.",
+ "counts": {
+  "NOT STATED": 49,
+  "INFERRED ACT": 20,
+  "STATED": 3
+ },
+ "plants": "P1 STATED, P2 NOT STATED, P3 INFERRED ACT, P4 NOT STATED, P5 STATED (as constructed)",
+ "labels": [
+  {
+   "key": "ODV1-35526-l5l9ej2s P1",
+   "enforcer_row": 32055,
+   "assumes": "Mary's state at the annunciation continued to the conception and to the finding.",
+   "gold_W1": "NOT STATED"
+  },
+  {
+   "key": "ODV1-35526-l5l9ej2s P2",
+   "enforcer_row": 32055,
+   "assumes": "the begetting \"of God\" in 1 John 5:1 as a begetting of flesh.",
+   "gold_W1": "INFERRED ACT"
+  },
+  {
+   "key": "ODV1-35526-l5l9ej2s P3",
+   "enforcer_row": 32055,
+   "assumes": "a knowledge of non-paternity as the cause of the intent.",
+   "gold_W1": "NOT STATED"
+  },
+  {
+   "key": "ODV1-35526-l5l9ej2s P4",
+   "enforcer_row": 32055,
+   "assumes": "the bearing mother as the sole parent.",
+   "gold_W1": "NOT STATED"
+  },
+  {
+   "key": "ODV1-35526-l5l9ej2s P5",
+   "enforcer_row": 32055,
+   "assumes": "nomizō at Luke 3:23 in its mistaken sense.",
+   "gold_W1": "NOT STATED"
+  },
+  {
+   "key": "ODV1-35526-l5l9ej2s P6",
+   "enforcer_row": 32055,
+   "assumes": "Mary of the house of David as the carrier of David's seed.",
+   "gold_W1": "NOT STATED",
+   "note": "Both facts NOT STATED."
+  },
+  {
+   "key": "ODV1-35554-wx6tlc3h P1",
+   "enforcer_row": 32508,
+   "assumes": "\"of the Holy Ghost\" with *gennaō* names the begetter of the child's flesh in the husband's place",
+   "gold_W1": "INFERRED ACT"
+  },
+  {
+   "key": "ODV1-35554-wx6tlc3h P2",
+   "enforcer_row": 32508,
+   "assumes": "*ex hēs* marks the mother as sole parent",
+   "gold_W1": "NOT STATED"
+  },
+  {
+   "key": "ODV1-35554-wx6tlc3h P3",
+   "enforcer_row": 32508,
+   "assumes": "the verbs of Luke 1:35 state the means of conception apart from a husband",
+   "gold_W1": "NOT STATED"
+  },
+  {
+   "key": "ODV1-35554-wx6tlc3h P4",
+   "enforcer_row": 32508,
+   "assumes": "two verses carry the whole origin of the child",
+   "gold_W1": "NOT STATED"
+  },
+  {
+   "key": "ODV1-35554-wx6tlc3h P5",
+   "enforcer_row": 32508,
+   "assumes": "a sign-child is a child apart from a father's approach",
+   "gold_W1": "NOT STATED"
+  },
+  {
+   "key": "ODV1-35554-wx6tlc3h P6",
+   "enforcer_row": 32508,
+   "assumes": "*enomizeto* marks Joseph's sonship as error",
+   "gold_W1": "NOT STATED"
+  },
+  {
+   "key": "ODV1-35696-mgptelec P1",
+   "enforcer_row": 33006,
+   "assumes": "\"of the Holy Ghost\" with *ek* names the begetter of the flesh.",
+   "gold_W1": "INFERRED ACT"
+  },
+  {
+   "key": "ODV1-35696-mgptelec P2",
+   "enforcer_row": 33006,
+   "assumes": "Joseph's intent at Matthew 1:19 arose from doubt of his own fatherhood.",
+   "gold_W1": "NOT STATED"
+  },
+  {
+   "key": "ODV1-35696-mgptelec P3",
+   "enforcer_row": 33006,
+   "assumes": "a passive \"was born of\" the mother marks a birth apart from her husband.",
+   "gold_W1": "NOT STATED"
+  },
+  {
+   "key": "ODV1-35696-mgptelec P4",
+   "enforcer_row": 33006,
+   "assumes": "the means in Luke 1:35 is the means of conceiving.",
+   "gold_W1": "STATED",
+   "note": "STATED by Luke 1:31 \"thou shalt conceive in thy womb\" + Luke 1:34 \"How shall this be, seeing I know not a man?\" + Luke 1:35 \"The Holy Ghost shall come upon thee...\": the question asks how the conceiving shall be; 1:35 is the answer. Several verses read together."
+  },
+  {
+   "key": "ODV1-35696-mgptelec P5",
+   "enforcer_row": 33006,
+   "assumes": "\"therefore\" reaches forward to a divine begetting of the flesh.",
+   "gold_W1": "INFERRED ACT"
+  },
+  {
+   "key": "ODV1-35696-mgptelec P6",
+   "enforcer_row": 33006,
+   "assumes": "Heli as Mary's father, and Mary of the house of David.",
+   "gold_W1": "NOT STATED",
+   "note": "Both facts NOT STATED (no quoted words make Heli Mary's father; \"of the house of David\" words are of Joseph)."
+  },
+  {
+   "key": "ODV1-35856-z9f3p7s7 P1",
+   "enforcer_row": 33372,
+   "assumes": "Mary's state at the angel's word (Luke 1:34) is her state at the conception (Luke 1:31).",
+   "gold_W1": "NOT STATED"
+  },
+  {
+   "key": "ODV1-35856-z9f3p7s7 P2",
+   "enforcer_row": 33372,
+   "assumes": "*ek* with *gennaō* and God names a begetter in the husband's place.",
+   "gold_W1": "INFERRED ACT"
+  },
+  {
+   "key": "ODV1-35856-z9f3p7s7 P3",
+   "enforcer_row": 33372,
+   "assumes": "the register of Luke 3:23-31 is Mary's register.",
+   "gold_W1": "NOT STATED"
+  },
+  {
+   "key": "ODV1-35856-z9f3p7s7 P4",
+   "enforcer_row": 33372,
+   "assumes": "the word \"virgin\" in the sign sets the means of the conception.",
+   "gold_W1": "NOT STATED"
+  },
+  {
+   "key": "ODV1-35856-z9f3p7s7 P5",
+   "enforcer_row": 33372,
+   "assumes": "God's preparing a body sets aside a father's begetting.",
+   "gold_W1": "NOT STATED"
+  },
+  {
+   "key": "ODV1-35856-z9f3p7s7 P6",
+   "enforcer_row": 33372,
+   "assumes": "Mary is of the house of David.",
+   "gold_W1": "NOT STATED"
+  },
+  {
+   "key": "ODV1-36156-ylw7rvr9 P1",
+   "enforcer_row": 33959,
+   "assumes": "the union is the taking of 1:24.",
+   "gold_W1": "NOT STATED"
+  },
+  {
+   "key": "ODV1-36156-ylw7rvr9 P2",
+   "enforcer_row": 33959,
+   "assumes": "the verbs of Luke 1:35 are begetting verbs.",
+   "gold_W1": "INFERRED ACT"
+  },
+  {
+   "key": "ODV1-36156-ylw7rvr9 P3",
+   "enforcer_row": 33959,
+   "assumes": "the passive \"was born of\" a woman sets the begetter aside.",
+   "gold_W1": "NOT STATED"
+  },
+  {
+   "key": "ODV1-36156-ylw7rvr9 P4",
+   "enforcer_row": 33959,
+   "assumes": "\"a virgin\" at the word governs the time of the conceiving.",
+   "gold_W1": "NOT STATED"
+  },
+  {
+   "key": "ODV1-36156-ylw7rvr9 P5",
+   "enforcer_row": 33959,
+   "assumes": "the intent rested on knowledge of the child's origin.",
+   "gold_W1": "NOT STATED"
+  },
+  {
+   "key": "ODV1-36156-ylw7rvr9 P6",
+   "enforcer_row": 33959,
+   "assumes": "a received son is reckoned to the receiver's house.",
+   "gold_W1": "NOT STATED"
+  },
+  {
+   "key": "ODV1-36212-ld47uzqy P1",
+   "enforcer_row": 34347,
+   "assumes": "the begetting-verb with the Holy Ghost marks the begetter of the child's flesh.",
+   "gold_W1": "INFERRED ACT"
+  },
+  {
+   "key": "ODV1-36212-ld47uzqy P2",
+   "enforcer_row": 34347,
+   "assumes": "Joseph's purpose to put her away rested on his knowledge of the pregnancy's cause.",
+   "gold_W1": "NOT STATED"
+  },
+  {
+   "key": "ODV1-36212-ld47uzqy P3",
+   "enforcer_row": 34347,
+   "assumes": "the \"therefore\" of Luke 1:35 joins the title to a begetting by the Holy Ghost.",
+   "gold_W1": "INFERRED ACT"
+  },
+  {
+   "key": "ODV1-36212-ld47uzqy P4",
+   "enforcer_row": 34347,
+   "assumes": "the feminine pronoun sets aside the husband named in the same sentence.",
+   "gold_W1": "NOT STATED"
+  },
+  {
+   "key": "ODV1-36212-ld47uzqy P5",
+   "enforcer_row": 34347,
+   "assumes": "\"sprang out of Juda\" names an entry into a house by reckoning.",
+   "gold_W1": "NOT STATED"
+  },
+  {
+   "key": "ODV1-36212-ld47uzqy P6",
+   "enforcer_row": 34347,
+   "assumes": "the clause of Genesis 24:16 is carried by the word of Genesis 24:43 and Isaiah 7:14.",
+   "gold_W1": "NOT STATED"
+  },
+  {
+   "key": "ODV1-36530-ktnxftyv P1",
+   "enforcer_row": 34707,
+   "assumes": "Matthew's \"came together\" is Joseph's first knowing of Mary his wife.",
+   "gold_W1": "INFERRED ACT"
+  },
+  {
+   "key": "ODV1-36530-ktnxftyv P2",
+   "enforcer_row": 34707,
+   "assumes": "the angel's verbs in Luke 1:35 are a begetting that takes a father's place.",
+   "gold_W1": "INFERRED ACT"
+  },
+  {
+   "key": "ODV1-36530-ktnxftyv P3",
+   "enforcer_row": 34707,
+   "assumes": "Mary is of the house and seed of David.",
+   "gold_W1": "NOT STATED"
+  },
+  {
+   "key": "ODV1-36530-ktnxftyv P4",
+   "enforcer_row": 34707,
+   "assumes": "the passive \"was born\" with the mother's pronoun takes the begetting from Joseph.",
+   "gold_W1": "NOT STATED"
+  },
+  {
+   "key": "ODV1-36530-ktnxftyv P5",
+   "enforcer_row": 34707,
+   "assumes": "\"as was supposed\" and the household words mark a father in name.",
+   "gold_W1": "NOT STATED"
+  },
+  {
+   "key": "ODV1-36530-ktnxftyv P6",
+   "enforcer_row": 34707,
+   "assumes": "\"of the Holy Ghost\" in Matthew 1:20 is a begetting that stands apart from the husband the same verse names.",
+   "gold_W1": "INFERRED ACT"
+  },
+  {
+   "key": "ODV1-36677-0hxbzcd2 P1",
+   "enforcer_row": 35248,
+   "assumes": "Mary was of the house of David, and the sentence on Jechonias bars a son of his line from the throne.",
+   "gold_W1": "NOT STATED",
+   "note": "FACT 2 (Jechonias sentence) STATED by Jeremiah 22:30 \"no man of his seed shall prosper, sitting upon the throne of David\"; FACT 1 (Mary of the house of David) NOT STATED (Luke 1:27 / 2:4 words are of Joseph). Premise NOT STATED."
+  },
+  {
+   "key": "ODV1-36677-0hxbzcd2 P2",
+   "enforcer_row": 35248,
+   "assumes": "the \"came together\" of Matthew 1:18 is the first knowing.",
+   "gold_W1": "INFERRED ACT"
+  },
+  {
+   "key": "ODV1-36677-0hxbzcd2 P3",
+   "enforcer_row": 35248,
+   "assumes": "Luke 1:35's coming upon and overshadowing are the begetting of the flesh.",
+   "gold_W1": "INFERRED ACT"
+  },
+  {
+   "key": "ODV1-36677-0hxbzcd2 P4",
+   "enforcer_row": 35248,
+   "assumes": "\"out of\" with the mother's name sets the father aside.",
+   "gold_W1": "NOT STATED"
+  },
+  {
+   "key": "ODV1-36677-0hxbzcd2 P5",
+   "enforcer_row": 35248,
+   "assumes": "enomizeto carries a verdict that the usage was false.",
+   "gold_W1": "NOT STATED"
+  },
+  {
+   "key": "ODV1-36677-0hxbzcd2 P6",
+   "enforcer_row": 35248,
+   "assumes": "the prepared body came by a route apart from the seed of David's loins.",
+   "gold_W1": "NOT STATED"
+  },
+  {
+   "key": "ODV1-36916-jm52130i P1",
+   "enforcer_row": 36627,
+   "assumes": "the words \"of the Holy Ghost\" name the begetter of the child's flesh.",
+   "gold_W1": "INFERRED ACT"
+  },
+  {
+   "key": "ODV1-36916-jm52130i P2",
+   "enforcer_row": 36627,
+   "assumes": "the \"of whom\" slot of Matthew 1:16 names the begetter.",
+   "gold_W1": "INFERRED ACT"
+  },
+  {
+   "key": "ODV1-36916-jm52130i P3",
+   "enforcer_row": 36627,
+   "assumes": "\"come upon\" and \"overshadow\" are verbs of begetting.",
+   "gold_W1": "INFERRED ACT"
+  },
+  {
+   "key": "ODV1-36916-jm52130i P4",
+   "enforcer_row": 36627,
+   "assumes": "the mark of the sign of Isaiah 7:14 is the manner of the conceiving.",
+   "gold_W1": "NOT STATED"
+  },
+  {
+   "key": "ODV1-36916-jm52130i P5",
+   "enforcer_row": 36627,
+   "assumes": "enomizeto marks a sonship set apart from begetting.",
+   "gold_W1": "NOT STATED"
+  },
+  {
+   "key": "ODV1-36916-jm52130i P6",
+   "enforcer_row": 36627,
+   "assumes": "Mary is of the house of David.",
+   "gold_W1": "NOT STATED"
+  },
+  {
+   "key": "ODV1-36968-yiwo6aot P1",
+   "enforcer_row": 37021,
+   "assumes": "\"of the Holy Ghost\" in Matthew 1:20 names the begetter of the child's flesh.",
+   "gold_W1": "INFERRED ACT"
+  },
+  {
+   "key": "ODV1-36968-yiwo6aot P2",
+   "enforcer_row": 37021,
+   "assumes": "Mary's present-tense \"I know\" (Luke 1:34) is her state through the conception, and Matthew 1:18's \"came together\" is the first knowing of the husband.",
+   "gold_W1": "NOT STATED",
+   "note": "FACT 1 (state through the conception) NOT STATED; FACT 2 (\"came together\" is the first knowing) INFERRED ACT. Premise NOT STATED."
+  },
+  {
+   "key": "ODV1-36968-yiwo6aot P3",
+   "enforcer_row": 37021,
+   "assumes": "a sign the LORD gives in Isaiah is a conception apart from the ordinary means.",
+   "gold_W1": "NOT STATED"
+  },
+  {
+   "key": "ODV1-36968-yiwo6aot P4",
+   "enforcer_row": 37021,
+   "assumes": "\"my Father's business\" (Luke 2:49) withdraws Mary's \"thy father\" (Luke 2:48).",
+   "gold_W1": "NOT STATED"
+  },
+  {
+   "key": "ODV1-36968-yiwo6aot P5",
+   "enforcer_row": 37021,
+   "assumes": "Mary is of the house of David.",
+   "gold_W1": "NOT STATED"
+  },
+  {
+   "key": "ODV1-36968-yiwo6aot P6",
+   "enforcer_row": 37021,
+   "assumes": "Jeremiah 22:30's sentence on Coniah's seed stands over the throne of the Christ.",
+   "gold_W1": "NOT STATED"
+  },
+  {
+   "key": "ODV1-37113-vaaf3hwh P1",
+   "enforcer_row": 38679,
+   "assumes": "\"before they came together\" dates the conceiving, and *ek pneumatos hagiou* names the begetter of the flesh",
+   "gold_W1": "STATED",
+   "note": "FACT 1 \"before they came together dates the conceiving\": STATED in sense, Matthew 1:18 \"before they came together, she was found with child of the Holy Ghost\" (with child = conceived, before the coming together). FACT 2 \"ek pneumatos hagiou names the begetter of the flesh\": INFERRED ACT. Mix of STATED and INFERRED ACT = STATED (split_rule)."
+  },
+  {
+   "key": "ODV1-37113-vaaf3hwh P2",
+   "enforcer_row": 38679,
+   "assumes": "\"come upon\" and \"overshadow\" name a begetting of the flesh, and \"therefore\" grounds the title in that begetting",
+   "gold_W1": "INFERRED ACT"
+  },
+  {
+   "key": "ODV1-37113-vaaf3hwh P3",
+   "enforcer_row": 38679,
+   "assumes": "the sign-word carries a man's absence from the conception",
+   "gold_W1": "NOT STATED"
+  },
+  {
+   "key": "ODV1-37113-vaaf3hwh P4",
+   "enforcer_row": 38679,
+   "assumes": "*enomizeto* carries a verdict of error",
+   "gold_W1": "NOT STATED"
+  },
+  {
+   "key": "ODV1-37113-vaaf3hwh P5",
+   "enforcer_row": 38679,
+   "assumes": "Mary is of the house of David",
+   "gold_W1": "NOT STATED"
+  },
+  {
+   "key": "ODV1-37113-vaaf3hwh P6",
+   "enforcer_row": 38679,
+   "assumes": "the Holy Ghost stands in the begetter's place in Matthew 1:20 and Luke 1:35",
+   "gold_W1": "INFERRED ACT"
+  },
+  {
+   "key": "ODV1-37203-6um4inkh P1",
+   "enforcer_row": 39063,
+   "assumes": "Mary is of the house and lineage of David.",
+   "gold_W1": "NOT STATED"
+  },
+  {
+   "key": "ODV1-37203-6um4inkh P2",
+   "enforcer_row": 39063,
+   "assumes": "the house's reckoning of Numbers 1:18 is a reckoning by taking and naming.",
+   "gold_W1": "NOT STATED"
+  },
+  {
+   "key": "ODV1-37203-6um4inkh P3",
+   "enforcer_row": 39063,
+   "assumes": "the bearing-clause of Matthew 1:16 sets the begetting apart from Joseph.",
+   "gold_W1": "NOT STATED"
+  },
+  {
+   "key": "ODV1-37203-6um4inkh P4",
+   "enforcer_row": 39063,
+   "assumes": "\"of the Holy Ghost\" and the angel's verbs name the begetting of the flesh.",
+   "gold_W1": "INFERRED ACT"
+  },
+  {
+   "key": "ODV1-37203-6um4inkh P5",
+   "enforcer_row": 39063,
+   "assumes": "\"before they came together\" and \"knew her not till\" span the espousal from the conception onward.",
+   "gold_W1": "STATED",
+   "note": "STATED by Matthew 1:18 \"before they came together, she was found with child\" + Matthew 1:25 \"knew her not till she had brought forth her firstborn son\"; \"knew her not till\" bounds no start, so it covers the conception onward. Borderline; the closest call in the set."
+  },
+  {
+   "key": "ODV1-37203-6um4inkh P6",
+   "enforcer_row": 39063,
+   "assumes": "Mary's \"thy father\" and Luke's \"parents\" carry supposition.",
+   "gold_W1": "NOT STATED"
+  }
+ ]
+}
