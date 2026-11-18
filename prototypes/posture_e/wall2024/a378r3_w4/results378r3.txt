@@ -1,0 +1,197 @@
+== build
+ok 104178 -> 109849
+== 38593 whole re-render (Panel Build first() fails as live; first(0) works)
+stored == live re-render (except run time): true chars 1400542 1400542
+lines live 7468 target 7468 differing lines 20
+- - Panel judge 1: sonnet (anthropic/claude-sonnet-5.5): **BROKEN** (a grade of the defender's chain: Gemini, arguing the standard reading) (counted; sat in Claude Haiku's place). The engine recomputed its RESULT after the cure: the judge wrote DEFENDER WINS, and it reads UNDERDETERMINED
+- - Panel judge 2: sol (openai/gpt-6.1-sol): **BROKEN** (a grade of the defender's chain: Gemini, arguing the standard reading) (counted). Reason: D2 vs C2 decides this chain-scoped result: [L1] Acts 2:30 says "of the fruit of his loins, according to the flesh," and [L3] 2 Samuel 7:12 says "which shall proceed out of thy bowels"; [L4] the defense joins these bodily-descent requirements to an unestab
+- - Panel judge 3: Claude Haiku (anthropic/claude-haiku-5.5): **HELD** (a grade of the defender's chain: Gemini, arguing the standard reading) (removed: 1 debate rule violation(s) not cured; not counted; sonnet sat in its place)
+- - Panel judge 4: ChatGPT (openai/gpt-6.1-terra): **BROKEN** (a grade of the defender's chain: Gemini, arguing the standard reading) (counted). Reason: D2 vs C2 and D5 vs C2 fail on unanswered lineage presses: [L1] Romans 1:3 “made of the seed of David according to the flesh” and Hebrews 2:16 “he took on [him] the seed of Abraham”; [L3] Galatians 4:4 “made of a woman”; [L4] these rows do not establ
+- - Panel result: **BROKEN** (3-0) (a grade of the defender's chain: Gemini, arguing the standard reading). Counted: 3 of 3 panel seats (a seat counts when its judge, or the alternate seated in its place, is counted).
+- - Reserve seated: panel seat sol62 gave no usable judgment (unreadable; reply text 6963 characters); the reserve Claude Haiku judged in its place.
+- Each line in which an enforcer reported a violation (a disagreement, or an item the judge left unanswered) went back once to the judge that wrote it, with the enforcer's reason. The judge keeps the decision. Answers: KEEP 3, CHANGE 12, no answer 0. A CHANGE is recorded here; the counts and result above are not recomputed from it.
+- ## Panel judge 1: sonnet (anthropic/claude-sonnet-5.5): BROKEN (a grade of the defender's chain: Gemini, arguing the standard reading)
+- ## Panel judge 2: sol (openai/gpt-6.1-sol): BROKEN (a grade of the defender's chain: Gemini, arguing the standard reading)
+- ## Panel judge 4: ChatGPT (openai/gpt-6.1-terra): BROKEN (a grade of the defender's chain: Gemini, arguing the standard reading)
++ - Panel judge 1: sol62 gave no usable judgment (unreadable; reply text 6963 characters); the reserve Claude Haiku judged in its place.
++ - Panel judge 1, reserve for sol62: Claude Haiku (anthropic/claude-haiku-5.5): **HELD** (a grade of the defender's chain: Gemini, arguing the standard reading); RESULT UNDERDETERMINED (removed: NOT COUNTED: 1 debate rule violation not cured (K-C on DEFENDER CHAIN MARK); sonnet sat in its place). The engine recomputed its RESULT after the cure: the judge wrote DEFENDER WINS, and it reads UNDERDETER
++ - Panel judge 1, alternate for Claude Haiku: sonnet (anthropic/claude-sonnet-5.5): **BROKEN** (a grade of the defender's chain: Gemini, arguing the standard reading); RESULT CHALLENGER WINS (counted). Changes, in step order: (1) the engine recomputed it after the cure (TIE (KB-0030)): RESULT DEFENDER WINS to UNDERDETERMINED; (2) the engine applied the judge's send-back answers (S2, S3, S5, G1, G7,
++ - Panel judge 2: ChatGPT (openai/gpt-6.1-terra): **BROKEN** (a grade of the defender's chain: Gemini, arguing the standard reading); RESULT CHALLENGER WINS (counted). Reason: D2 vs C2 and D5 vs C2 fail on unanswered lineage presses: [L1] Romans 1:3 “made of the seed of David according to the flesh” and Hebrews 2:16 “he took on [him] the seed of Abraham”; [L3] Galatians 4:4 “made of a woman”; [L4] 
++ - Panel judge 3: sol (openai/gpt-6.1-sol): **BROKEN** (a grade of the defender's chain: Gemini, arguing the standard reading); RESULT CHALLENGER WINS (counted). Reason: D2 vs C2 decides this chain-scoped result: [L1] Acts 2:30 says "of the fruit of his loins, according to the flesh," and [L3] 2 Samuel 7:12 says "which shall proceed out of thy bowels"; [L4] the defense joins these bodily-descent re
++ - Panel result: **BROKEN** (3-0) (a grade of the defender's chain: Gemini, arguing the standard reading). Counted: 3 of 3 panel seats (a seat counts when its judge, or the judge seated in its place, is counted).
++ Each line in which an enforcer reported a violation (a disagreement, or an item the judge left unanswered) went back once to the judge that wrote it, with the enforcer's reason. The judge keeps the decision. Answers: KEEP 3, CHANGE 12, no answer 0. A CHANGE is applied to the judge's own lines, and the engine derives the verdict, standings, counts and RESULT again from the changed lines (E-APPLY, W
++ ## Panel judge 1, alternate for Claude Haiku: sonnet (anthropic/claude-sonnet-5.5): BROKEN (a grade of the defender's chain: Gemini, arguing the standard reading)
++ ## Panel judge 2: ChatGPT (openai/gpt-6.1-terra): BROKEN (a grade of the defender's chain: Gemini, arguing the standard reading)
++ ## Panel judge 3: sol (openai/gpt-6.1-sol): BROKEN (a grade of the defender's chain: Gemini, arguing the standard reading)
+== population
+{
+ "debates": 166,
+ "errors": 0,
+ "errs": [],
+ "header_changed": 161,
+ "diff_line_kinds": {
+  "- Panel judge": 1095,
+  "- Panel result": 322,
+  "- Reserve seated": 11,
+  "- Panel judge N's seat stayed empty": 24
+ },
+ "panel_seat_numbers_old": 512,
+ "new": 483,
+ "dod1": {
+  "lines": 131,
+  "bad": 30,
+  "ex": [
+   [
+    "ODV1-32998-y1799l9d",
+    "- Panel judge 2: ChatGPT (openai/gpt-6.1-terra): **BROKEN** (a grade of the defender's chain: Claude, arguing the standard reading); RESULT CHALLENGER WINS (NOT COUNTED: 1 debate rule violation not cu"
+   ],
+   [
+    "ODV1-32998-y1799l9d",
+    "- Panel judge 3: Grok (x-ai/grok-4.7): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading); RESULT DEFENDER WINS (NOT COUNTED: 2 debate rule violations not cured (K-B on D"
+   ],
+   [
+    "ODV1-33006-xzfdf09y",
+    "- Panel judge 3: Grok (x-ai/grok-4.7): **HELD** (a grade of the defender's chain: Claude, arguing the standard reading); RESULT DEFENDER WINS (removed: NOT COUNTED: 2 debate rule violations not cured;"
+   ]
+  ]
+ },
+ "resultword_port_vs_sql": {
+  "equal": 539,
+  "differ": 3,
+  "ex": [
+   [
+    "ODV1-33371-smmbhc7u",
+    1042,
+    "DEFENDER WINS",
+    "UNDERDETERMINED"
+   ],
+   [
+    "ODV1-33411-fq874c0l",
+    1049,
+    "DEFENDER WINS",
+    "UNDERDETERMINED"
+   ],
+   [
+    "ODV1-33644-o5galp37",
+    1088,
+    "DEFENDER WINS",
+    "UNDERDETERMINED"
+   ]
+  ]
+ },
+ "change_kinds": {
+  "1": 10,
+  "2": 55,
+  "3": 44,
+  "12": 28,
+  "23": 2,
+  "123": 6,
+  "none": 397
+ },
+ "dod2_chain": {
+  "rows": 87,
+  "bad": 0,
+  "ex": []
+ },
+ "dod2_last_result_vs_shown": {
+  "rows": 128,
+  "bad": 14,
+  "ex": [
+   [
+    "ODV1-32725-pu2chngi",
+    943,
+    "2:CHALLENGER WINS>UNDERDETERMINED",
+    "shown",
+    "DEFENDER WINS"
+   ],
+   [
+    "ODV1-32791-j2p7xo25",
+    "drv:chatgpt",
+    "2:CHALLENGER WINS>UNDERDETERMINED",
+    "shown",
+    "DEFENDER WINS"
+   ],
+   [
+    "ODV1-32936-ev3gr0ja",
+    958,
+    "2:CHALLENGER WINS>UNDERDETERMINED",
+    "shown",
+    "DEFENDER WINS"
+   ],
+   [
+    "ODV1-32949-cmth25eb",
+    961,
+    "2:CHALLENGER WINS>UNDERDETERMINED",
+    "shown",
+    "DEFENDER WINS"
+   ],
+   [
+    "ODV1-32985-1fvddvps",
+    970,
+    "2:CHALLENGER WINS>UNDERDETERMINED",
+    "shown",
+    "DEFENDER WINS"
+   ],
+   [
+    "ODV1-33025-b70wgimy",
+    988,
+    "2:CHALLENGER WINS>UNDERDETERMINED",
+    "shown",
+    "DEFENDER WINS"
+   ],
+   [
+    "ODV1-33261-bi1ins8r",
+    1024,
+    "2:CHALLENGER WINS>UNDERDETERMINED",
+    "shown",
+    "DEFENDER WINS"
+   ],
+   [
+    "ODV1-33371-smmbhc7u",
+    1042,
+    "3:CHALLENGER WINS>UNDERDETERMINED",
+    "shown",
+    "DEFENDER WINS"
+   ]
+  ]
+ }
+}
+== plants
+PASS  P1 removed seat, drv_uncured 1, prints rule and item (38593 Claude Haiku)
+      NEW: (removed: NOT COUNTED: 1 debate rule violation not cured (K-C on DEFENDER CHAIN MARK); sonnet sat in its place) || OLD: 
+PASS  P2 v25 then v37 print in step order, ending at verdict_tag and the RESULT the outcome reads (38593 sonnet)
+      RESULT CHALLENGER WINS (counted). Changes, in step order: (1) the engine recomputed it after the cure (TIE (KB-0030)): RESULT DEFENDER WINS to UNDERDETERMINED; (2) the engine applied the judge's send-back answers (S2, S3, S5, G1, G7, G5F, G2, G3, S10, S11) and derived it again: verdict HELD to BROKEN, RESULT UNDERDETERMINED to CHALLENGER WINS
+PASS  P3 v21 and v37 with the same from and to print once (38593 sonnet)
+      "verdict HELD to BROKEN" printed 1 time(s)
+PASS  P4 one number per seat; the seat shows sol62 as origin; Reserve line folded (38593)
+      NEW numbers 1,2,3; OLD numbers 1,2,3,4; NEW Reserve line false
+PASS  P5 v25 only prints the same change text as today (ODV1-32677-dbhfgk43 gemini)
+      text: ). The engine recomputed its RESULT after the cure: the judge wrote DEFENDER WINS, and it reads UNDERDETERMINED
+PASS  P6 v37 only prints its one change (ODV1-33371-smmbhc7u grok, id 1042)
+      Change: the engine applied the judge's send-back answers (S1, S2, G3, S4, S5, S6, S7, G4, S9, S12, KEYSTONE (derived)) and derived it again: verdict BROKEN to HELD, RESULT CHALLENGER WINS to UNDERDETERMINED
+PASS  P7 a cure v21 and a later v37 that differ both print, in step order (id 973)
+      Changes, in step order: (1) the cure changed its verdict from BROKEN to HELD (retracted: D4 vs C5); (2) the engine recomputed it after the cure (RETRACTED D4 vs C5 (DEFENDER LINK BROKEN to UNDERDETERMINED)): RESULT CHALLENGER WINS to UNDERDETERMINED; (3) the engine applied the judge's send-back answers (S5, S6, S7, G5, S12, S15) and derived it again: verdict HELD to BROKEN, RESULT UNDERDETERMINED 
+PASS  P8 two v21 tags print in step order, not text order (id 1150)
+      Changes, in step order: (1) the cure changed its verdict from BROKEN to HELD (retracted: D4 vs C3); (2) the engine recomputed it after the cure (RETRACTED D4 vs C3 (DEFENDER LINK BROKEN to UNDERDETERMINED), CLOSE-CONTRADICTION D3 vs C4 (UNDERDETERMINED to DEFENDER LINK BROKEN), CLOSE-CONTRADICTION D
+PASS  P9 planted removed seat (rule K-ZZ, item PLANTED ITEM 9) prints that rule and item
+      (removed: NOT COUNTED: 1 debate rule violation not cured (K-ZZ on PLANTED ITEM 9); sonnet sat in its place)
+PASS  P10 planted TRIAL row (old-style row, no removed_rules) is not printed as a reason, and the line says the record names none
+      
+PLANTS 10 of 10 PASS
+== port check, 3 rows on full text
+1042 js UNDERDETERMINED sql UNDERDETERMINED
+1049 js UNDERDETERMINED sql UNDERDETERMINED
+1088 js UNDERDETERMINED sql UNDERDETERMINED
+== differing rows (outcome RESULT vs engine last RESULT)
+11
+{"tok":"ODV1-32725-pu2chngi","id":943,"seat":"chatgpt","vt":"HELD","cs":"PROP-DEPENDENT","engine_last":"UNDERDETERMINED","outcome_reads":"DEFENDER WINS","kind":2,"counted":true,"panel":"HELD","outcome":"DEFENDER PREVAILS","split":"3-0","tie_relevant":true}
+{"tok":"ODV1-32791-j2p7xo25","id":"removed chatgpt","vt":"HELD","engine_last":"UNDERDETERMINED","outcome_reads":"DEFENDER WINS","kind":2,"counted":false,"panel":"HELD","outcome":"DEFENDER PREVAILS","tie_relevant":false}
+{"tok":"ODV1-32936-ev3gr0ja","id":958,"seat":"chatgpt","vt":"HELD","cs":"PROP-DEPENDENT","engine_last":"UNDERDETERMINED","outcome_reads":"DEFENDER WINS","kind":2,"counted":true,"panel":"HELD","outcome":"DEFENDER PREVAILS","split":"3-0","tie_relevant":true}
+{"tok":"ODV1-32949-cmth25eb","id":961,"seat":"chatgpt","vt":"HELD","cs":"PROP-DEPENDENT","engine_last":"UNDERDETERMINED","outcome_reads":"DEFENDER WINS","kind":2,"counted":false,"panel":"CONTESTED","outcome":"UNGRADED — REVIEW","split":"1-1 (1 not counted: debate rule)","tie_relevant":false}
+{"tok":"ODV1-32985-1fvddvps","id":970,"seat":"chatgpt","vt":"HELD","cs":"PROP-DEPENDENT","engine_last":"UNDERDETERMINED","outcome_reads":"DEFENDER WINS","kind":2,"counted":false,"panel":"UNGRADED","outcome":"UNGRADED — REVIEW","split":"0-0 (3 not counted: debate rule)","tie_relevant":false}
+{"tok":"ODV1-33025-b70wgimy","id":988,"seat":"chatgpt","vt":"HELD","cs":"PROP-DEPENDENT","engine_last":"UNDERDETERMINED","outcome_reads":"DEFENDER WINS","kind":2,"counted":false,"panel":"CONTESTED","outcome":"UNGRADED — REVIEW","split":"1-0 (2 not counted: debate rule)","tie_relevant":false}
+{"tok":"ODV1-33261-bi1ins8r","id":1024,"seat":"chatgpt","vt":"HELD","cs":"PROP-DEPENDENT","engine_last":"UNDERDETERMINED","outcome_reads":"DEFENDER WINS","kind":2,"counted":true,"panel":null,"outcome":null,"split":null,"tie_relevant":false}
+{"tok":"ODV1-37325-s81kgmur","id":1193,"seat":"luna","vt":"HELD","cs":"PROP-DEPENDENT","engine_last":"UNDERDETERMINED","outcome_reads":"DEFENDER WINS","kind":3,"counted":true,"panel":"HELD","outcome":"UNDERDETERMINED","split":"3-0","tie_relevant":true}
+{"tok":"ODV1-37812-v2znf46s","id":1205,"seat":"luna","vt":"HELD","cs":"PROP-DEPENDENT","engine_last":"UNDERDETERMINED","outcome_reads":"DEFENDER WINS","kind":3,"counted":true,"panel":"HELD","outcome":"DEFENDER PREVAILS","split":"2-1","tie_relevant":true}
+{"tok":"ODV1-37891-22dsnmk0","id":"removed sol","vt":"HELD","engine_last":"UNDERDETERMINED","outcome_reads":"DEFENDER WINS","kind":3,"counted":false,"panel":"HELD","outcome":"DEFENDER PREVAILS","tie_relevant":false}
+{"tok":"ODV1-38106-ax8g49bx","id":"removed luna","vt":"HELD","engine_last":"UNDERDETERMINED","outcome_reads":"DEFENDER WINS","kind":3,"counted":false,"panel":"HELD","outcome":"UNDERDETERMINED","tie_relevant":false}
