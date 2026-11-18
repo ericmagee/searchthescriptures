@@ -1,0 +1,6 @@
+[
+ {
+  "old": "To revise: INSERT version+1 and its `engine_manual_log` row.",
+  "new": "To revise: call engine_manual_apply (ASK 421) in the same batch as SET LOCAL truth.session_id. First preview, with p_write false: it refuses unless the base is the max version and has the given md5, and unless each pair's old text occurs exactly once when that pair is applied; it returns the new md5, length and per-pair counts. Then write with p_write true and that md5 and length: it inserts version+1 with its summary, and its `engine_manual_log` row dated by the Central date. Readers preview the same pairs and compare the md5. EXECUTE is revoked from PUBLIC, anon and authenticated. Limit: an old text that overlaps itself is counted once."
+ }
+]
