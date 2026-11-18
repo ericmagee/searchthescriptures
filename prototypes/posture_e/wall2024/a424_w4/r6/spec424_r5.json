@@ -1,0 +1,42 @@
+{
+ "cut": [
+  {
+   "from": [
+    "node:Build Synthesis",
+    "node:Build Independent Verdict",
+    "node:Build Save Body",
+    "node:Panel Build",
+    "node:Format Markdown",
+    "node:D4 Build",
+    "node:D4 Extract",
+    "node:C4 Build",
+    "node:C4 Extract",
+    "node:C4G Extract",
+    "node:D4B Extract",
+    "node:C4B Extract"
+   ],
+   "names": [
+    "declared"
+   ]
+  },
+  {
+   "from": [
+    "node:Build Synthesis",
+    "node:Build Independent Verdict",
+    "node:Build Save Body",
+    "node:Panel Build",
+    "node:Format Markdown",
+    "node:D4 Extract",
+    "node:C4 Extract",
+    "node:C4G Extract",
+    "node:D4B Extract",
+    "node:C4B Extract"
+   ],
+   "names": [
+    "dlinks"
+   ]
+  }
+ ],
+ "call": "{decl:declared({cr1:row.t}),dl:dlinks({cr1:row.t})}",
+ "empty": "out.dl.length===0"
+}

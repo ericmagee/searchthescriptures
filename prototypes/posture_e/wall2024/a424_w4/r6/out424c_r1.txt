@@ -1,0 +1,18 @@
+base 0e006a24-8100-4186-b32c-ae218eb0b236 | cand 0e006a24-8100-4186-b32c-ae218eb0b236 | spec spec424c_r1.json sha f871cde868e8
+CUT base DM: 2 copies, 1 text [dee71f8c93dd] (stub rebuilt from the library; library MAP R2 Alternate Payloads)
+CUT base chain_count: 2 copies, 1 text [714a6daac1bd] (stub rebuilt from the library; library MAP R2 Alternate Payloads)
+CUT cand DM: 2 copies, 1 text [dee71f8c93dd] (stub rebuilt from the library; library MAP R2 Alternate Payloads)
+CUT cand chain_count: 2 copies, 1 text [4c040ad20e9f] (stub rebuilt from the library; library MAP R2 Alternate Payloads)
+FREE NAMES (base): none
+FREE NAMES (cand): none
+ROWS 245 from rows_d1.json sha b4b8f0d5407b
+  EQUAL 241 (non-empty 241, empty 0)
+  CHANGED 0
+  NEWLY NON-EMPTY 4: ODV1-27665-57dyem7r, ODV1-39015-pnpoj45j, ODV1-39266-7g9lzgbr, ODV1-38661-b6km61d3
+    ODV1-27665-57dyem7r base 0 | cand 6
+    ODV1-39015-pnpoj45j base 0 | cand 4
+    ODV1-39266-7g9lzgbr base 0 | cand 5
+  EMPTIED 0
+  ERROR 0
+CASES 0, failed 0 | ERROR rows 0 | CHANGED or EMPTIED outside allow_changed 0
+RESULT: PASS

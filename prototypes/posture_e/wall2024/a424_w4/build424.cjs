@@ -1,4 +1,4 @@
-// ASK 424 build (plan W3 rev 2, 69b4c1cd; grades W1 8899, W2 8900): every reader of the defender's DECLARED CHAIN takes the ASK 423 head, so "D1:" chains are read.
+// ASK 424 build (plan W3 rev 3, 5ceee971; R6 by W3 8930): every reader of the defender's DECLARED CHAIN takes the ASK 423 head, so "D1:" chains are read.
 // Usage: node a424/build424.cjs ENG CHILD ENG_BASEV CHILD_BASEV ENG_OUT CHILD_OUT
 // Library (engine and child alike, by a422a/lib_apply.cjs): R1 chain_count, R2 drvLinks, R3 drvChainOf DEFENDER. Engine nodes: R4 cecDeclared/cecDlinks (3 nodes),
 // R5 declared/dlinks (12 / 10 nodes). Each reader keeps its own rules; only the numbered-line test and the number and text capture change.
@@ -22,7 +22,9 @@ const R={ // [old, new] literal texts
      "const m=l.match(/"+HEAD+"[*_]*\\s*(.*)$/i);if(m){cur={n:+m[1],text:m[2]};"]};
 fs.writeFileSync(path.join(__dirname,'readers.json'),JSON.stringify(R,null,1));
 // library: one pair set, both workflows
-const P=['R1','R2','R3'].map(k=>({old:R[k][0],new:R[k][1]}));fs.writeFileSync(path.join(__dirname,'pairs_424.json'),JSON.stringify(P));
+const P=['R1','R2','R3'].map(k=>({old:R[k][0],new:R[k][1]}));
+// R6 (W3 8930 option b): chainCount and chain_lines, inline MAP text of the entry "Extract Independent Verdict" (engine and child), take R1's head.
+const lit=s=>s.slice(s.indexOf('L[i].match(')+11,s.indexOf(');if(!m)'));P.push({map:'Extract Independent Verdict',old:lit(R.R1[0]),new:lit(R.R1[1]),count:2});fs.writeFileSync(path.join(__dirname,'pairs_424.json'),JSON.stringify(P));
 cp.execFileSync('node',[path.join(__dirname,fs.existsSync(path.join(__dirname,'lib_apply.cjs'))?'lib_apply.cjs':'../a422a/lib_apply.cjs'),EI,CI,path.join(__dirname,'pairs_424.json'),EO+'.lib',CO],{stdio:'inherit'});
 // engine nodes
 const E=ld(EO+'.lib');fs.unlinkSync(EO+'.lib');const N4=['Close Enforcer Build','Judge Contradiction Build','Judge Contradiction Record'];

@@ -1,0 +1,45 @@
+UNCHANGED | engine LIB line 1648 | DECLARED CHAIN | function drvLinks(ptext){const t=String(ptext||'');const i=t.search(/DECLARED CHAIN\b/);if(i<0)return [];const L=[];
+CHANGED   | engine LIB line 1649 | NEW head | 
+UNCHANGED | engine LIB line 2200 | DECLARED CHAIN |  if(side==='DEFENDER'){const i=t.search(/DECLARED CHAIN\b/);if(i<0)return null;const L=[];
+CHANGED   | engine LIB line 2201 | NEW head | 
+UNCHANGED | engine LIB line 2202 | DECLARED CHAIN |  return L.length?{where:'DECLARED CHAIN',links:L}:null;}
+CHANGED   | engine LIB line 2325 | NEW head + DECLARED CHAIN | .split('\n');let hi=-1;for(let i=0;i<L.length;i++){if(/^\s*#*\s*\**\s*DECLARED CHAIN\s*:?\s*\**\s*(?:-{1,3}[^\n]*)?:?\s*
+UNCHANGED | engine MAP Extract Independent Verdict part 115 | DECLARED CHAIN |  for(let i=0;i<L.length;i++){if(/^\s*#*\s*\**\s*DECLARED CHAIN\s*:?\s*\**\s*(?:-{1,3}[^\n]*)?:?\s*$/i.test(L[i])
+CHANGED   | engine MAP Extract Independent Verdict part 117 | NEW head | 
+UNCHANGED | engine MAP Extract Independent Verdict part 121 | DECLARED CHAIN |  for(let i=0;i<L.length;i++){if(/^\s*#*\s*\**\s*DECLARED CHAIN\s*:?\s*\**\s*(?:-{1,3}[^\n]*)?:?\s*$/i.test(L[i])
+CHANGED   | engine MAP Extract Independent Verdict part 123 | NEW head | 
+UNCHANGED | engine MAP Extract Independent Verdict part 125 | DECLARED CHAIN | ain_count){raw+='\n\n[EXTRACTOR v15: N CHECK - CLAUSE n='+n+' AGAINST DECLARED CHAIN COUNT '+chain_count+'. REVIEW THIS 
+UNCHANGED | engine node Init with Guards | DECLARED CHAIN | JV, and say in one sentence what it states. They grade the DEFENDER'S DECLARED CHAIN: the links D1..Dn declared in round
+UNCHANGED | engine node D1 Build | DECLARED CHAIN | 3. Tag every claim.\n\nEND your opening with a section titled exactly DECLARED CHAIN -- the links your case stands on: a
+UNCHANGED | engine node C2 Build | DECLARED CHAIN |  of [L1]-[L3]). EACH NUMBERED LINE, AFTER ITS NUMBER, BEGINS WITH THE DECLARED CHAIN LINK IT ATTACKS, written exactly as
+CHANGED   | engine node Build Synthesis | NEW head + DECLARED CHAIN |  const declared=F=>{const t=String(F&&F.cr1||'');const i=t.search(/DECLARED CHAIN\b/);if(i<0)return null;const a=t.lastI
+CHANGED   | engine node Build Independent Verdict | NEW head + DECLARED CHAIN |  const declared=F=>{const t=String(F&&F.cr1||'');const i=t.search(/DECLARED CHAIN\b/);if(i<0)return null;const a=t.lastI
+CHANGED   | engine node Build Save Body | NEW head + DECLARED CHAIN |  const declared=F=>{const t=String(F&&F.cr1||'');const i=t.search(/DECLARED CHAIN\b/);if(i<0)return null;const a=t.lastI
+CHANGED   | engine node Panel Build | NEW head + DECLARED CHAIN |  const declared=F=>{const t=String(F&&F.cr1||'');const i=t.search(/DECLARED CHAIN\b/);if(i<0)return null;const a=t.lastI
+CHANGED   | engine node Format Markdown | NEW head + DECLARED CHAIN |  const declared=F=>{const t=String(F&&F.cr1||'');const i=t.search(/DECLARED CHAIN\b/);if(i<0)return null;const a=t.lastI
+CHANGED   | engine node D4 Build | NEW head + DECLARED CHAIN |  const declared=F=>{const t=String(F&&F.cr1||'');const i=t.search(/DECLARED CHAIN\b/);if(i<0)return null;const a=t.lastI
+CHANGED   | engine node D4 Extract | NEW head + DECLARED CHAIN |  const declared=F=>{const t=String(F&&F.cr1||'');const i=t.search(/DECLARED CHAIN\b/);if(i<0)return null;const a=t.lastI
+CHANGED   | engine node C4 Build | NEW head + DECLARED CHAIN |  const declared=F=>{const t=String(F&&F.cr1||'');const i=t.search(/DECLARED CHAIN\b/);if(i<0)return null;const a=t.lastI
+CHANGED   | engine node C4 Extract | NEW head + DECLARED CHAIN |  const declared=F=>{const t=String(F&&F.cr1||'');const i=t.search(/DECLARED CHAIN\b/);if(i<0)return null;const a=t.lastI
+CHANGED   | engine node C4G Extract | NEW head + DECLARED CHAIN |  const declared=F=>{const t=String(F&&F.cr1||'');const i=t.search(/DECLARED CHAIN\b/);if(i<0)return null;const a=t.lastI
+UNCHANGED | engine node C2B Extract | DECLARED CHAIN | .split('\n');let hi=-1;for(let i=0;i<L.length;i++){if(/^\s*#*\s*\**\s*DECLARED CHAIN\s*:?\s*\**\s*(?:-{1,3}[^\n]*)?:?\s*
+UNCHANGED | engine node D3B Extract | DECLARED CHAIN | .split('\n');let hi=-1;for(let i=0;i<L.length;i++){if(/^\s*#*\s*\**\s*DECLARED CHAIN\s*:?\s*\**\s*(?:-{1,3}[^\n]*)?:?\s*
+UNCHANGED | engine node C3B Extract | DECLARED CHAIN | .split('\n');let hi=-1;for(let i=0;i<L.length;i++){if(/^\s*#*\s*\**\s*DECLARED CHAIN\s*:?\s*\**\s*(?:-{1,3}[^\n]*)?:?\s*
+CHANGED   | engine node D4B Extract | NEW head + DECLARED CHAIN |  const declared=F=>{const t=String(F&&F.cr1||'');const i=t.search(/DECLARED CHAIN\b/);if(i<0)return null;const a=t.lastI
+CHANGED   | engine node C4B Extract | NEW head + DECLARED CHAIN |  const declared=F=>{const t=String(F&&F.cr1||'');const i=t.search(/DECLARED CHAIN\b/);if(i<0)return null;const a=t.lastI
+CHANGED   | engine node Close Enforcer Build | NEW head + DECLARED CHAIN | const cecDeclared=F=>{const t=String(F&&F.cr1||'');const i=t.search(/DECLARED CHAIN\b/);if(i<0)return null;const a=t.las
+CHANGED   | engine node Judge Contradiction Build | NEW head + DECLARED CHAIN | const cecDeclared=F=>{const t=String(F&&F.cr1||'');const i=t.search(/DECLARED CHAIN\b/);if(i<0)return null;const a=t.las
+CHANGED   | engine node Judge Contradiction Record | NEW head + DECLARED CHAIN | const cecDeclared=F=>{const t=String(F&&F.cr1||'');const i=t.search(/DECLARED CHAIN\b/);if(i<0)return null;const a=t.las
+UNCHANGED | engine node Assume Check Build | OLD R2/R5 head | 
+UNCHANGED | child LIB line 1648 | DECLARED CHAIN | function drvLinks(ptext){const t=String(ptext||'');const i=t.search(/DECLARED CHAIN\b/);if(i<0)return [];const L=[];
+CHANGED   | child LIB line 1649 | NEW head | 
+UNCHANGED | child LIB line 2200 | DECLARED CHAIN |  if(side==='DEFENDER'){const i=t.search(/DECLARED CHAIN\b/);if(i<0)return null;const L=[];
+CHANGED   | child LIB line 2201 | NEW head | 
+UNCHANGED | child LIB line 2202 | DECLARED CHAIN |  return L.length?{where:'DECLARED CHAIN',links:L}:null;}
+CHANGED   | child LIB line 2325 | NEW head + DECLARED CHAIN | .split('\n');let hi=-1;for(let i=0;i<L.length;i++){if(/^\s*#*\s*\**\s*DECLARED CHAIN\s*:?\s*\**\s*(?:-{1,3}[^\n]*)?:?\s*
+UNCHANGED | child MAP Extract Independent Verdict part 115 | DECLARED CHAIN |  for(let i=0;i<L.length;i++){if(/^\s*#*\s*\**\s*DECLARED CHAIN\s*:?\s*\**\s*(?:-{1,3}[^\n]*)?:?\s*$/i.test(L[i])
+CHANGED   | child MAP Extract Independent Verdict part 117 | NEW head | 
+UNCHANGED | child MAP Extract Independent Verdict part 121 | DECLARED CHAIN |  for(let i=0;i<L.length;i++){if(/^\s*#*\s*\**\s*DECLARED CHAIN\s*:?\s*\**\s*(?:-{1,3}[^\n]*)?:?\s*$/i.test(L[i])
+CHANGED   | child MAP Extract Independent Verdict part 123 | NEW head | 
+UNCHANGED | child MAP Extract Independent Verdict part 125 | DECLARED CHAIN | ain_count){raw+='\n\n[EXTRACTOR v15: N CHECK - CLAUSE n='+n+' AGAINST DECLARED CHAIN COUNT '+chain_count+'. REVIEW THIS 
+HITS 44 {"DECLARED CHAIN":35,"NEW head":25,"OLD R2/R5 head":1}

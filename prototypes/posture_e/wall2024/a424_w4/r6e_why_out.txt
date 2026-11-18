@@ -1,0 +1,45 @@
+UNCHANGED | engine LIB line 1648 | DECLARED CHAIN | WHY NOT: heading search only; the reader on the next line is CHANGED
+CHANGED   | engine LIB line 1649 | NEW head | 
+UNCHANGED | engine LIB line 2200 | DECLARED CHAIN | WHY NOT: heading search only; the reader on the next line is CHANGED
+CHANGED   | engine LIB line 2201 | NEW head | 
+UNCHANGED | engine LIB line 2202 | DECLARED CHAIN | WHY NOT: return statement of the reader on line 2201, which is CHANGED
+CHANGED   | engine LIB line 2325 | NEW head + DECLARED CHAIN | .split('\n');let hi=-1;for(let i=0;i<L.length;i++){if(/^\s*#*\s*\**\s*DECLARED CHAIN\s*:?\s*\**\s*(?:-{1,3}[^\n]*)?:?\s*
+UNCHANGED | engine MAP Extract Independent Verdict part 115 | DECLARED CHAIN | WHY NOT: heading search only; the reader two parts later is CHANGED
+CHANGED   | engine MAP Extract Independent Verdict part 117 | NEW head | 
+UNCHANGED | engine MAP Extract Independent Verdict part 121 | DECLARED CHAIN | WHY NOT: heading search only; the reader two parts later is CHANGED
+CHANGED   | engine MAP Extract Independent Verdict part 123 | NEW head | 
+UNCHANGED | engine MAP Extract Independent Verdict part 125 | DECLARED CHAIN | WHY NOT: flag text that prints chain_count; the count comes from part 117, which is CHANGED
+UNCHANGED | engine node Init with Guards | DECLARED CHAIN | WHY NOT: prompt text sent to a model, not a reader
+UNCHANGED | engine node D1 Build | DECLARED CHAIN | WHY NOT: prompt text sent to a model, not a reader
+UNCHANGED | engine node C2 Build | DECLARED CHAIN | WHY NOT: prompt text sent to a model, not a reader
+CHANGED   | engine node Build Synthesis | NEW head + DECLARED CHAIN |  const declared=F=>{const t=String(F&&F.cr1||'');const i=t.search(/DECLARED CHAIN\b/);if(i<0)return null;const a=t.lastI
+CHANGED   | engine node Build Independent Verdict | NEW head + DECLARED CHAIN |  const declared=F=>{const t=String(F&&F.cr1||'');const i=t.search(/DECLARED CHAIN\b/);if(i<0)return null;const a=t.lastI
+CHANGED   | engine node Build Save Body | NEW head + DECLARED CHAIN |  const declared=F=>{const t=String(F&&F.cr1||'');const i=t.search(/DECLARED CHAIN\b/);if(i<0)return null;const a=t.lastI
+CHANGED   | engine node Panel Build | NEW head + DECLARED CHAIN |  const declared=F=>{const t=String(F&&F.cr1||'');const i=t.search(/DECLARED CHAIN\b/);if(i<0)return null;const a=t.lastI
+CHANGED   | engine node Format Markdown | NEW head + DECLARED CHAIN |  const declared=F=>{const t=String(F&&F.cr1||'');const i=t.search(/DECLARED CHAIN\b/);if(i<0)return null;const a=t.lastI
+CHANGED   | engine node D4 Build | NEW head + DECLARED CHAIN |  const declared=F=>{const t=String(F&&F.cr1||'');const i=t.search(/DECLARED CHAIN\b/);if(i<0)return null;const a=t.lastI
+CHANGED   | engine node D4 Extract | NEW head + DECLARED CHAIN |  const declared=F=>{const t=String(F&&F.cr1||'');const i=t.search(/DECLARED CHAIN\b/);if(i<0)return null;const a=t.lastI
+CHANGED   | engine node C4 Build | NEW head + DECLARED CHAIN |  const declared=F=>{const t=String(F&&F.cr1||'');const i=t.search(/DECLARED CHAIN\b/);if(i<0)return null;const a=t.lastI
+CHANGED   | engine node C4 Extract | NEW head + DECLARED CHAIN |  const declared=F=>{const t=String(F&&F.cr1||'');const i=t.search(/DECLARED CHAIN\b/);if(i<0)return null;const a=t.lastI
+CHANGED   | engine node C4G Extract | NEW head + DECLARED CHAIN |  const declared=F=>{const t=String(F&&F.cr1||'');const i=t.search(/DECLARED CHAIN\b/);if(i<0)return null;const a=t.lastI
+UNCHANGED | engine node C2B Extract | DECLARED CHAIN | WHY NOT: ASK 423 __CC423 bound reader; its heading search only, its link reader already uses the ASK 423 head
+UNCHANGED | engine node D3B Extract | DECLARED CHAIN | WHY NOT: ASK 423 __CC423 bound reader; its heading search only, its link reader already uses the ASK 423 head
+UNCHANGED | engine node C3B Extract | DECLARED CHAIN | WHY NOT: ASK 423 __CC423 bound reader; its heading search only, its link reader already uses the ASK 423 head
+CHANGED   | engine node D4B Extract | NEW head + DECLARED CHAIN |  const declared=F=>{const t=String(F&&F.cr1||'');const i=t.search(/DECLARED CHAIN\b/);if(i<0)return null;const a=t.lastI
+CHANGED   | engine node C4B Extract | NEW head + DECLARED CHAIN |  const declared=F=>{const t=String(F&&F.cr1||'');const i=t.search(/DECLARED CHAIN\b/);if(i<0)return null;const a=t.lastI
+CHANGED   | engine node Close Enforcer Build | NEW head + DECLARED CHAIN | const cecDeclared=F=>{const t=String(F&&F.cr1||'');const i=t.search(/DECLARED CHAIN\b/);if(i<0)return null;const a=t.las
+CHANGED   | engine node Judge Contradiction Build | NEW head + DECLARED CHAIN | const cecDeclared=F=>{const t=String(F&&F.cr1||'');const i=t.search(/DECLARED CHAIN\b/);if(i<0)return null;const a=t.las
+CHANGED   | engine node Judge Contradiction Record | NEW head + DECLARED CHAIN | const cecDeclared=F=>{const t=String(F&&F.cr1||'');const i=t.search(/DECLARED CHAIN\b/);if(i<0)return null;const a=t.las
+UNCHANGED | engine node Assume Check Build | OLD R2/R5 head | WHY NOT: vp4List reads the UNSUPPORTED-L4 PREMISES list, not the DECLARED CHAIN; out of scope of rev 3
+UNCHANGED | child LIB line 1648 | DECLARED CHAIN | WHY NOT: heading search only; the reader on the next line is CHANGED
+CHANGED   | child LIB line 1649 | NEW head | 
+UNCHANGED | child LIB line 2200 | DECLARED CHAIN | WHY NOT: heading search only; the reader on the next line is CHANGED
+CHANGED   | child LIB line 2201 | NEW head | 
+UNCHANGED | child LIB line 2202 | DECLARED CHAIN | WHY NOT: return statement of the reader on line 2201, which is CHANGED
+CHANGED   | child LIB line 2325 | NEW head + DECLARED CHAIN | .split('\n');let hi=-1;for(let i=0;i<L.length;i++){if(/^\s*#*\s*\**\s*DECLARED CHAIN\s*:?\s*\**\s*(?:-{1,3}[^\n]*)?:?\s*
+UNCHANGED | child MAP Extract Independent Verdict part 115 | DECLARED CHAIN | WHY NOT: heading search only; the reader two parts later is CHANGED
+CHANGED   | child MAP Extract Independent Verdict part 117 | NEW head | 
+UNCHANGED | child MAP Extract Independent Verdict part 121 | DECLARED CHAIN | WHY NOT: heading search only; the reader two parts later is CHANGED
+CHANGED   | child MAP Extract Independent Verdict part 123 | NEW head | 
+UNCHANGED | child MAP Extract Independent Verdict part 125 | DECLARED CHAIN | WHY NOT: flag text that prints chain_count; the count comes from part 117, which is CHANGED
+HITS 44 {"DECLARED CHAIN":35,"NEW head":25,"OLD R2/R5 head":1}

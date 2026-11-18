@@ -1,0 +1,18 @@
+base db091b9e-4a6b-4c2a-a35a-e83f1c4cbe5f | cand db091b9e-4a6b-4c2a-a35a-e83f1c4cbe5f | spec spec424_r5.json sha 2135ab8e84a8
+CUT base declared: 12 copies, 1 text [1a3c4f55110a] (plain Code node)
+CUT base dlinks: 10 copies, 1 text [dabe5c06bcfc] (plain Code node)
+CUT cand declared: 12 copies, 1 text [6b41e6d84e68] (plain Code node)
+CUT cand dlinks: 10 copies, 1 text [651505505b70] (plain Code node)
+FREE NAMES (base): none
+FREE NAMES (cand): none
+ROWS 245 from rows_d1.json sha b4b8f0d5407b
+  EQUAL 229 (non-empty 229, empty 0)
+  CHANGED 0
+  NEWLY NON-EMPTY 16: ODV1-27177-z7igrc2p, row-16(no run token), ODV1-27433-0lt3ljxt, ODV1-28361-gpyfakyj, ODV1-27563-kbomi62c, ODV1-27613-l1v30j5o, ODV1-27665-57dyem7r, ODV1-27795-gg05qfpc, ODV1-27893-xurofuvd, ODV1-28662-kk3qrsnh, ODV1-27088-cg67a8be, ODV1-27259-75fg8o6t, ODV1-28269-lqp0m6vx, ODV1-39015-pnpoj45j, ODV1-39266-7g9lzgbr, ODV1-38661-b6km61d3
+    ODV1-27177-z7igrc2p base {"decl":"DECLARED CHAIN\nD1 — The promised seed is flesh descent out of a father's body: 2 Sam 7:12 \"out of thy bowels,\" Ps 132:11 \"fruit of thy body,\" Rom  | cand {"decl":"DECLARED CHAIN\nD1 — The promised seed is flesh descent out of a father's body: 2 Sam 7:12 \"out of thy bowels,\" Ps 132:11 \"fruit of thy body,\" Rom 
+    row-16(no run token) base {"decl":"## DECLARED CHAIN\n\n**1.** The word **alla (same kind, G235)** — not heteros (different kind) — establishes the other sheep are the same species of sh | cand {"decl":"## DECLARED CHAIN\n\n**1.** The word **alla (same kind, G235)** — not heteros (different kind) — establishes the other sheep are the same species of sh
+    ODV1-27433-0lt3ljxt base {"decl":"**DECLARED CHAIN**\n\nD1 — The covenant seed is a bodily seed proceeding out of the father's own body: [L1] 2 Samuel 7:12 \"out of thy bowels\"; [L1] P | cand {"decl":"**DECLARED CHAIN**\n\nD1 — The covenant seed is a bodily seed proceeding out of the father's own body: [L1] 2 Samuel 7:12 \"out of thy bowels\"; [L1] P
+  EMPTIED 0
+  ERROR 0
+CASES 0, failed 0 | ERROR rows 0 | CHANGED or EMPTIED outside allow_changed 0
+RESULT: PASS

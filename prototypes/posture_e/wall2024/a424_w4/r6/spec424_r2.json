@@ -1,0 +1,26 @@
+{
+ "cut": [
+  {
+   "from": [
+    "node:Alt Gate Build",
+    "node:Alt Gate Record",
+    "node:Alternate Payloads",
+    "node:Extract Independent Verdict",
+    "node:Gate Build",
+    "node:Gate Record",
+    "node:Panel Payloads",
+    "lib:R2 Alt Gate Build",
+    "lib:R2 Alt Gate Record",
+    "lib:R2 Alternate Payloads",
+    "node:Late Gate Build",
+    "node:Alt Late Gate Build",
+    "lib:R2 Alt Late Gate Build"
+   ],
+   "names": [
+    "drvLinks"
+   ]
+  }
+ ],
+ "call": "drvLinks(row.t)",
+ "empty": "out.length===0"
+}

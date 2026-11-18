@@ -1,0 +1,16 @@
+base db091b9e-4a6b-4c2a-a35a-e83f1c4cbe5f | cand db091b9e-4a6b-4c2a-a35a-e83f1c4cbe5f | spec spec424_r6b.json sha 31a1d5bb2980
+CUT base chain_lines: 1 copy, 1 text [35f68fcc2c10] (stub rebuilt from the library)
+CUT cand chain_lines: 1 copy, 1 text [df9ded6608bd] (stub rebuilt from the library)
+FREE NAMES (base): none
+FREE NAMES (cand): none
+ROWS 245 from rows_d1.json sha b4b8f0d5407b
+  EQUAL 241 (non-empty 241, empty 0)
+  CHANGED 0
+  NEWLY NON-EMPTY 4: ODV1-27665-57dyem7r, ODV1-39015-pnpoj45j, ODV1-39266-7g9lzgbr, ODV1-38661-b6km61d3
+    ODV1-27665-57dyem7r base [] | cand ["D1: The Davidic seed is flesh seed proceeding out of the fat","D2: The father is named Joseph in five voices - mother, town","D3: The named father stands in D
+    ODV1-39015-pnpoj45j base [] | cand ["D1: The promise requires seed out of a man's bowels, loins a","D2: The father is named as Joseph, thou son of David, by Mar","D3: The canon's means is knowing
+    ODV1-39266-7g9lzgbr base [] | cand ["D1: Promise requires seed out of man's bowels/loins accordin","D2: That seed is reckoned by house of fathers and sprang evi","D3: The named Davidic father is 
+  EMPTIED 0
+  ERROR 0
+CASES 0, failed 0 | ERROR rows 0 | CHANGED or EMPTIED outside allow_changed 0
+RESULT: PASS

@@ -1,0 +1,18 @@
+{
+ "cut": [
+  {
+   "from": [
+    "node:Alternate Payloads",
+    "node:Panel Payloads",
+    "lib:R2 Alternate Payloads"
+   ],
+   "names": [
+    "DM",
+    "chain_count"
+   ]
+  }
+ ],
+ "stubs": "const F={cr1:row.t};",
+ "call": "chain_count",
+ "empty": "out===null||out===0"
+}

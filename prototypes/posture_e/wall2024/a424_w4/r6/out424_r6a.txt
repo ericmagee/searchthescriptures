@@ -1,0 +1,16 @@
+base db091b9e-4a6b-4c2a-a35a-e83f1c4cbe5f | cand db091b9e-4a6b-4c2a-a35a-e83f1c4cbe5f | spec spec424_r6a.json sha 433a35b0fdee
+CUT base chainCount: 1 copy, 1 text [06a5021932bc] (stub rebuilt from the library)
+CUT cand chainCount: 1 copy, 1 text [68ed6e5e0ac2] (stub rebuilt from the library)
+FREE NAMES (base): none
+FREE NAMES (cand): none
+ROWS 245 from rows_d1.json sha b4b8f0d5407b
+  EQUAL 241 (non-empty 241, empty 0)
+  CHANGED 0
+  NEWLY NON-EMPTY 4: ODV1-27665-57dyem7r, ODV1-39015-pnpoj45j, ODV1-39266-7g9lzgbr, ODV1-38661-b6km61d3
+    ODV1-27665-57dyem7r base 0 | cand 6
+    ODV1-39015-pnpoj45j base 0 | cand 4
+    ODV1-39266-7g9lzgbr base 0 | cand 5
+  EMPTIED 0
+  ERROR 0
+CASES 0, failed 0 | ERROR rows 0 | CHANGED or EMPTIED outside allow_changed 0
+RESULT: PASS

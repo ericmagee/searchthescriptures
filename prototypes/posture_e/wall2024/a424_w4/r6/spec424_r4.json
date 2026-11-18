@@ -1,0 +1,17 @@
+{
+ "cut": [
+  {
+   "from": [
+    "node:Close Enforcer Build",
+    "node:Judge Contradiction Build",
+    "node:Judge Contradiction Record"
+   ],
+   "names": [
+    "cecDeclared",
+    "cecDlinks"
+   ]
+  }
+ ],
+ "call": "{decl:cecDeclared({cr1:row.t}),dl:cecDlinks({cr1:row.t})}",
+ "empty": "out.dl.length===0"
+}

@@ -1,0 +1,17 @@
+{
+ "cut": [
+  {
+   "from": [
+    "node:Alternate Payloads",
+    "node:Extract Independent Verdict",
+    "node:Panel Payloads",
+    "lib:R2 Alternate Payloads"
+   ],
+   "names": [
+    "drvChainOf"
+   ]
+  }
+ ],
+ "call": "drvChainOf(row.t,'DEFENDER')",
+ "empty": "out===null"
+}

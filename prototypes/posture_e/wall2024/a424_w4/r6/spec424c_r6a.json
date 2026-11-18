@@ -1,0 +1,1 @@
+{"cut":[{"from":"lib:Extract Independent Verdict","names":["chainCount"]}],"call":"chainCount(row.t)","empty":"out===null||out===0"}
