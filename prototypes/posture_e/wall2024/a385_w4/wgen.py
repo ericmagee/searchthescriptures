@@ -17,7 +17,9 @@ assert js(TG['connections'])==js(live['connections']),'connections differ'
 diff=[a['name'] for a,b in zip(live['nodes'],T['nodes']) if js(a)!=js(b)];print('diff',diff)
 json.dump(T,open(D+'_guard_'+tag+'.json','w'))
 if subprocess.call(['node','gw/prototypes/posture_e/wall2024/guards/reasoning_guard.cjs',D+'prewrite_'+tag+'.json',D+'_guard_'+tag+'.json']+(['--allow'] if '--allow-reasoning' in sys.argv else []))!=0: print('REFUSED');sys.exit(1)
-CH=[sys.argv[sys.argv.index('--child')+1]] if '--child' in sys.argv else []
+# ASK 385 (W1 8129 cond 1): the check always covers the ASK 379 child: the target child given with --child, else the live child read now
+if '--child' in sys.argv: CH=[sys.argv[sys.argv.index('--child')+1]]
+else: json.dump(req(API+'workflows/MqQHRl7mQQ0z8QdT'),open(D+'child_live_'+tag+'.json','w'));CH=[D+'child_live_'+tag+'.json']
 if subprocess.call(['node','a385/reg385.cjs',D+'_guard_'+tag+'.json']+CH)!=0: print('REFUSED: ASK 385 one-copy check failed');sys.exit(1)  # ASK 385
 if '--write' not in sys.argv: sys.exit()
 req(URL,'PUT',{'name':live['name'],'nodes':T['nodes'],'connections':T['connections'],'settings':live['settings']})
