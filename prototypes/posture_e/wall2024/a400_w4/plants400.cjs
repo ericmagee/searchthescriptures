@@ -32,4 +32,15 @@ let OUT14R0;const out=[];for(const [n,f,r,tail] of P){const raw=H(f,r)+(tail||''
  const reply='CORRECTED RESULT: HELD-1 -- the retraction below\nRETRACTED: D1 vs C1 -- regraded to UNDERDETERMINED -- in CR2 the challenger wrote "x" (John 1:1)';
  const run=G=>{let r;try{r=G.cureRecompute('s1',R0.join('\n'),Fo(f),[{rule:'K-X',link:'D1 vs C1',line:R0[3]}],[],{ok:true,text:reply});}catch(e){r={error:String(e)}}return {result:r&&r.result,fields:r&&r.fields,error:r&&r.error};};
  out.push({plant:'14b control: same recompute, long-form D2 vs C3 DEFENDER LINK BROKEN',live386:run(F0),t400:run(F)});}
+// 14c (W2 8549 C1, W3 8552 A): retraction "D2 vs C1" is the only key naming D2; D2 has only a LINK STATE DEFENDER LINK BROKEN entry. 14d control: same with the long form D2 vs C1.
+for(const [nm,lineD2] of [['14c 2f: retracted "D2 vs C1", only a LINK STATE D2 entry','D2: DEFENDER LINK BROKEN -- x'],['14d control: retracted "D2 vs C1", long form D2 vs C1','D2 vs C1 (John 1:2): DEFENDER LINK BROKEN -- x']]){
+ const f=['HELD','SELF-SUPPORTED','PROP-DEPENDENT',0,1];const R0=OUT14R0.map(x=>x==='D2: DEFENDER LINK BROKEN -- x'?lineD2:x);
+ const reply='CORRECTED RESULT: HELD-1 -- the retraction below\nRETRACTED: D2 vs C1 -- regraded to UNDERDETERMINED -- in CR2 the challenger wrote "x" (John 1:2)';
+ const run=G=>{let r;try{r=G.cureRecompute('s1',R0.join('\n'),Fo(f),[{rule:'K-X',link:'D2 vs C1',line:lineD2}],[],{ok:true,text:reply});}catch(e){r={error:String(e)}}return {result:r&&r.result,fields:r&&r.fields,trig:r&&r.trig,error:r&&r.error};};
+ out.push({plant:nm,live386:run(F0),t400:run(F)});}
+// 14e: two retractions in one reply, "D1 vs C1" (a long-form line, so v25 recomputes) and "D2 vs C1" (only a LINK STATE D2 entry). Shows what the brk count at 1344 does with the retracted D2 entry (the 386 limit that ASK 399 closes).
+{const f=['HELD','SELF-SUPPORTED','PROP-DEPENDENT',0,1];const R0=OUT14R0;
+ const reply='CORRECTED RESULT: HELD-1 -- the retractions below\nRETRACTED: D1 vs C1 -- regraded to UNDERDETERMINED -- in CR2 the challenger wrote "x" (John 1:1)\nRETRACTED: D2 vs C1 -- regraded to UNDERDETERMINED -- in CR2 the challenger wrote "y" (John 1:2)';
+ const run=G=>{let r;try{r=G.cureRecompute('s1',R0.join('\n'),Fo(f),[{rule:'K-X',link:'D1 vs C1',line:R0[3]},{rule:'K-X',link:'D2 vs C1',line:R0[4]}],[],{ok:true,text:reply});}catch(e){r={error:String(e)}}return {result:r&&r.result,fields:r&&r.fields,trig:r&&r.trig,error:r&&r.error};};
+ out.push({plant:'14e retractions D1 vs C1 and D2 vs C1, D2 only a LINK STATE entry',live386:run(F0),t400:run(F)});}
 for(const o of out)console.log(JSON.stringify(o));require('fs').writeFileSync(__dirname+'/plants400_out.json',JSON.stringify(out,null,1));

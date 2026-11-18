@@ -280,5 +280,78 @@
     "challenger_conceded_links": 1
    }
   }
+ },
+ {
+  "plant": "14c 2f: retracted \"D2 vs C1\", only a LINK STATE D2 entry",
+  "live386": {
+   "result": null,
+   "fields": null,
+   "trig": null,
+   "error": null
+  },
+  "t400": {
+   "result": null,
+   "fields": null,
+   "trig": null,
+   "error": null
+  }
+ },
+ {
+  "plant": "14d control: retracted \"D2 vs C1\", long form D2 vs C1",
+  "live386": {
+   "result": "DEFENDER WINS",
+   "fields": {
+    "verdict_tag": "HELD",
+    "defense_standing": "SELF-SUPPORTED",
+    "conceded_links": 0,
+    "challenge_standing": "PROP-DEPENDENT",
+    "challenger_conceded_links": 1
+   },
+   "trig": [
+    "RETRACTED D2 vs C1 (DEFENDER LINK BROKEN to UNDERDETERMINED)"
+   ]
+  },
+  "t400": {
+   "result": "DEFENDER WINS",
+   "fields": {
+    "verdict_tag": "HELD",
+    "defense_standing": "SELF-SUPPORTED",
+    "conceded_links": 0,
+    "challenge_standing": "PROP-DEPENDENT",
+    "challenger_conceded_links": 1
+   },
+   "trig": [
+    "RETRACTED D2 vs C1 (DEFENDER LINK BROKEN to UNDERDETERMINED)"
+   ]
+  }
+ },
+ {
+  "plant": "14e retractions D1 vs C1 and D2 vs C1, D2 only a LINK STATE entry",
+  "live386": {
+   "result": "DEFENDER WINS",
+   "fields": {
+    "verdict_tag": "HELD",
+    "defense_standing": "SELF-SUPPORTED",
+    "conceded_links": 0,
+    "challenge_standing": "PROP-DEPENDENT",
+    "challenger_conceded_links": 1
+   },
+   "trig": [
+    "RETRACTED D1 vs C1 (UNDERDETERMINED to UNDERDETERMINED)"
+   ]
+  },
+  "t400": {
+   "result": "CHALLENGER WINS",
+   "fields": {
+    "verdict_tag": "BROKEN",
+    "defense_standing": "PROP-DEPENDENT",
+    "conceded_links": 0,
+    "challenge_standing": "PROP-DEPENDENT",
+    "challenger_conceded_links": 1
+   },
+   "trig": [
+    "RETRACTED D1 vs C1 (UNDERDETERMINED to UNDERDETERMINED)"
+   ]
+  }
  }
 ]
