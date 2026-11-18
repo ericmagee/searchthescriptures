@@ -8,9 +8,13 @@ const P5=[
  ['A pair that is one row in a bound verse passes','"And knew her not till she had brought forth her firstborn son" [L1] (Matthew 1:25)\n"Knew" is *ginosko* (G1097), to know [L2]'],
  ['First [L2] preceded only by another [L] mark with no tag word between (limit, W1 8723 A3): reads as today','"That which is born of the flesh is flesh." [L1] (John 3:6)\n"Of" is ek (G1537) [L1] [L2] out of, from'],
  ['Mark after its claim, two marks on one line (8722 A2b form)','"Thou shalt not let thy cattle gender with a diverse kind" [L1] (Leviticus 19:19)\n"Gender" is raba (H7250), to lie down [L2]; "diverse kind" is kilayim (H3610), two kinds [L2]'],
+
+ ['rev 3 (a): phobeomai (G5399) bound to Matthew 1:20 passes','"But while he thought on these things, behold, the angel of the Lord appeared unto him in a dream, saying, Joseph, thou son of David, fear not to take unto thee Mary thy wife" [L1] (Matthew 1:20)\n"Fear not" is *phobeomai* (G5399) [L2] in the angel\'s word.'],
+ ['rev 3 (b): an English word before the number passes','"That which is born of the flesh is flesh." [L1] (John 3:6)\nThe numeral (G1520) does not stand here; "flesh" is sarx (G4561) [L2].'],
+ ['rev 3 (c): ek (G1536) where the verse holds ek as G1537 fails and names both numbers','"That which is born of the flesh is flesh." [L1] (John 3:6)\n"Of" is ek (G1536), out of [L2] in this verse.'],
 ];
 for(const [name,txt] of P5){const r=deb(txt);const A=replay(live,r)['L2 Count Plan'][0].json,B=replay(T5,r)['L2 Count Plan'][0].json;const o=B.l2_t405;const same=JSON.stringify({...A})===JSON.stringify((({l2_t405,...x})=>x)(B));
- console.log('== 405 PLANT: '+name+'\n  live output unchanged: '+same+' | '+JSON.stringify(o.n)+(o.error?' ERROR '+o.error:''));o.changes.forEach(c=>console.log('  CHANGE '+c.round+' '+c.from+' -> '+c.to+' (today: '+(c.was||'none')+'; re-read: '+(c.now||'none')+')'));o.pairs.forEach(p=>console.log('  PAIR NOT ONE ENTRY '+p.word+' ('+p.num+') in '+p.verses+' -- '+p.why));}
+ console.log('== 405 PLANT: '+name+'\n  live output unchanged: '+same+' | '+JSON.stringify(o.n)+(o.error?' ERROR '+o.error:''));o.changes.forEach(c=>console.log('  CHANGE '+c.round+' '+c.from+' -> '+c.to+' (today: '+(c.was||'none')+'; re-read: '+(c.now||'none')+')'));o.pairs.forEach(p=>console.log('  PAIR NOT ONE ENTRY '+p.word+' ('+p.num+', stands as '+p.as+') in '+p.verses+' -- '+p.why));}
 const P6=[
  ['word (Gnnnn), meaning "gloss"','"That which is born of the flesh is flesh." [L1] (John 3:6)\n[L2] "Flesh" is sarx (G4561), meaning "the body, the meat".'],
  ['word (Gnnnn), "gloss"','"That which is born of the flesh is flesh." [L1] (John 3:6)\n[L2] "Flesh" is sarx (G4561), "the body, the meat".'],

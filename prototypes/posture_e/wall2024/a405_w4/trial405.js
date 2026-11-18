@@ -23,7 +23,7 @@ function __l2t405(RA,ST,ow,lex,dec){/* ASK 405 TRIAL (record-only; Wall 8722, 87
     const rows=ow.filter(r=>own.includes(r.book+' '+r.chapter+':'+r.verse));if(!rows.length)continue;
     const kind=/[Ͱ-Ͽἀ-῿]/.test(word)?'greek':/[֐-׿]/.test(word)?'hebrew':'latin';
     const nr=rows.filter(r=>L2C.numOf(r.strongs_number)===num);const one=nr.length?L2C.matchWord({w:word,kind},nr,IX):{ok:false};
-    if(one.ok){out.n.pair_pass++;continue;}const ws=L2C.matchWord({w:word,kind},rows,IX);
-    if(!nr.length&&!ws.ok)continue;out.n.pair_fail++;if(out.pairs.length<40)out.pairs.push({side:t.side,round:t.round,word,num,verses:own.slice(0,6).join('; '),why:nr.length?num+' stands in the bound verses, not as this word':'the word stands as '+(ws.num||'another number')+', not '+num});}}
+    if(one.ok||nr.length){out.n.pair_pass++;continue;}const ws=L2C.matchWord({w:word,kind},rows,IX);
+    if(!ws.ok||!ws.num||ws.num===num){out.n.pair_pass++;continue;}out.n.pair_fail++;if(out.pairs.length<40)out.pairs.push({side:t.side,round:t.round,word,num,as:ws.num,verses:own.slice(0,6).join('; '),why:'the word stands as '+ws.num+'; '+num+' stands in none of these verses'});}} /* rev 3 (W3 8746): a pair fails only when its number stands in none of the bound verses of its language and the word stands there as a row of another number */
  }catch(e){out.error=String(e&&e.message||e).slice(0,200);}
  return out;}

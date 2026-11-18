@@ -1,5 +1,5 @@
 == 405 PLANT: A G pair whose word spells a row of a bound Old Testament verse (W1 8723)
-  live output unchanged: true | {"lines":1,"marks":1,"changed":1,"reworded":0,"pair_fail":0,"pair_pass":0}
+  live output unchanged: true | {"lines":1,"marks":1,"changed":1,"reworded":0,"pair_fail":0,"pair_pass":1}
   CHANGE CR1 IGNORED -> NOT COUNTED (today: none; re-read: G1254)
 == 405 PLANT: Both spans hold tag words (W2 8724): reads as today
   live output unchanged: true | {"lines":0,"marks":0,"changed":0,"reworded":0,"pair_fail":0,"pair_pass":1}
@@ -12,6 +12,16 @@
   live output unchanged: true | {"lines":1,"marks":2,"changed":1,"reworded":1,"pair_fail":0,"pair_pass":2}
   CHANGE CR1 COUNTED -> COUNTED (today: H3610; re-read: H7250)
   CHANGE CR1 IGNORED -> COUNTED (today: none; re-read: H3610)
+== 405 PLANT: rev 3 (a): phobeomai (G5399) bound to Matthew 1:20 passes
+  live output unchanged: true | {"lines":1,"marks":1,"changed":1,"reworded":0,"pair_fail":0,"pair_pass":1}
+  CHANGE CR1 IGNORED -> NOT COUNTED (today: none; re-read: G5399, phobeomai)
+== 405 PLANT: rev 3 (b): an English word before the number passes
+  live output unchanged: true | {"lines":1,"marks":1,"changed":1,"reworded":0,"pair_fail":0,"pair_pass":2}
+  CHANGE CR1 IGNORED -> NOT COUNTED (today: none; re-read: G1520, G4561)
+== 405 PLANT: rev 3 (c): ek (G1536) where the verse holds ek as G1537 fails and names both numbers
+  live output unchanged: true | {"lines":1,"marks":1,"changed":1,"reworded":0,"pair_fail":1,"pair_pass":0}
+  CHANGE CR1 IGNORED -> NOT COUNTED (today: none; re-read: G1536)
+  PAIR NOT ONE ENTRY ek (G1536, stands as G1537) in John 3:6 -- the word stands as G1537; G1536 stands in none of these verses
 == 406 PLANT: word (Gnnnn), meaning "gloss"
   tags unchanged: true | live glosses: 0 | target glosses: 1 (new form 1)
   GLOSS sarx G4561 parts: body | meat
