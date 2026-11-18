@@ -1,5 +1,8 @@
 // rbx.cjs: workflow readback (ASK 420a). Compares a live n8n workflow version with a graded target JSON.
 // Usage: NODE_PATH=<tools>/node_modules node rbx.cjs <live.json> <target.json> <label>
+// DEPENDENCY (W4 8864 C1): lib.cjs loads acorn at its top, and acorn is not in the repo. Install it once:
+//   cd prototypes/posture_e/wall2024/tools && npm i --no-save acorn@8.12.1
+// (or point NODE_PATH at any node_modules that holds acorn). rbx itself does not call acorn.
 // Prints: node count; per-node diffs in parameters, type, typeVersion, credentials, disabled; NEW/GONE nodes;
 // connections equal; Shared Library equal; library sha16 and whether the header carries it; MAP entries whose line count n fails.
 // MATCH = diffs 0, conn eq true, lib eq true, in hdr true, MAP n fail 0.
