@@ -1,0 +1,127 @@
+CHANGED L2 Count Plan#0                    x 130 | s262 reproduces stored true | reads field false  
+      out.0.l2_trial.items.1 
+        s262:   {"side":"DEFENDER","round":"CR2","seg":"*gennao* (G1080, \"to beget, conceive\") and *synerchomai* (G4905, \"to come together\"),","word":"G1080","num":"G1080","today":"COUNTED","trial":"NOT COUNTED","binding":"backward in its paragraph","bound":["Matthew 1:18"],"why":"not in Matthew 1:18; stands on 
+        target: undefined
+      out.0.l2_trial.n.same 
+        s262:   60 
+        target: 61
+      out.0.l2_trial.n.not_counted 
+        s262:   1 
+        target: 0
+NONCODE L2 Counts#0 input differs: s262 vs stored false | target vs s262 true
+CHANGED Quote Report#0                     x 132 | s262 reproduces stored true | reads field false  
+      out.0.l2.trial.items.1 
+        s262:   {"side":"DEFENDER","round":"CR2","seg":"*gennao* (G1080, \"to beget, conceive\") and *synerchomai* (G4905, \"to come together\"),","word":"G1080","num":"G1080","today":"COUNTED","trial":"NOT COUNTED","binding":"backward in its paragraph","bound":["Matthew 1:18"],"why":"not in Matthew 1:18; stands on 
+        target: undefined
+      out.0.l2.trial.n.same 
+        s262:   60 
+        target: 61
+      out.0.l2.trial.n.not_counted 
+        s262:   1 
+        target: 0
+same    Close Enforcer Build#0             x 133 | s262 reproduces stored true | reads field false  
+same    Anticheat Build#0                  x 134 | s262 reproduces stored true | reads field false  
+same    Assume Check Build#0               x 135 | s262 reproduces stored true | reads field false  
+same    Close Group Batch Build#0          x 136 | s262 reproduces stored true | reads field false  
+same    Close Group Retry Build#0          x 139 | s262 reproduces stored true | reads field false  
+same    Close Enforcer Resume#0            x 141 | s262 reproduces stored true | reads field false  
+same    Close Enforcer Call deepseek#0     x 143 | s262 reproduces stored true | reads field false  
+same    Close Enforcer Record#0            x 144 | s262 reproduces stored true | reads field false  
+same    SJ Off#0                           x 146 | s262 reproduces stored true | reads field false  
+CHANGED Build Save Body#0                  x 147 | s262 reproduces stored true | reads field false  
+      out.0.saveBody.review_notes 
+        s262:   "[SYNTHESIS USAGE: prompt=57025 completion=2144 reasoning=1034 finish=stop max_tokens=64000] [AUDIT v23: SYNTHESIS CHECK (S-G) -- guard DG-18: the Debate Oracle seat (the challenger) quotes Psalm 2:7 in its rounds without its three New Testament occasions; missing: Hebrews 5:5, Hebrews 1:5; the synt 
+        target: "[SYNTHESIS USAGE: prompt=57025 completion=2144 reasoning=1034 finish=stop max_tokens=64000] [AUDIT v23: SYNTHESIS CHECK (S-G) -- guard DG-18: the Debate Oracle seat (the challenger) quotes Psalm 2:7 in its rounds without its three New Testament occasions; missing: Hebrews 5:5, Hebrews 1:5; the synt
+NONCODE Save to DB#0 input differs: s262 vs stored false | target vs s262 true
+same    Check Save#0                       x 149 | s262 reproduces stored true | reads field false  
+same    Anticheat Resume#0                 x 150 | s262 reproduces stored true | reads field false  
+same    Anticheat Call deepseek#0          x 152 | s262 reproduces stored true | reads field false  
+same    Anticheat Record#0                 x 153 | s262 reproduces stored true | reads field false  
+same    Panel Build#0                      x 155 | s262 reproduces stored true | reads field true  
+same    Panel Judges Prep#0                x 157 | s262 reproduces stored false | reads field false  
+NONCODE Panel Judges Parallel#0 input differs: s262 vs stored true | target vs s262 false
+same    Panel Judges Collect#0             x 193 | s262 reproduces stored true | reads field false  
+same    Panel Judge 1 openrouter#0         x 195 | s262 reproduces stored true | reads field false  
+same    Panel Judge 2 openrouter#0         x 197 | s262 reproduces stored true | reads field false  
+same    Panel Judge 3 openrouter#0         x 199 | s262 reproduces stored true | reads field false  
+same    Panel Check#0                      x 200 | s262 reproduces stored true | reads field false  
+same    Reserve Build#0                    x 202 | s262 reproduces stored true | reads field false  
+same    Panel Payloads#0                   x 205 | s262 reproduces stored true | reads field true  
+same    Judge Contradiction Build#0        x 206 | s262 reproduces stored true | reads field false  
+same    Judge Contradiction Record#0       x 208 | s262 reproduces stored true | reads field false  
+same    Assume Check Resume#0              x 209 | s262 reproduces stored true | reads field false  
+same    Assume Check Call deepseek#0       x 211 | s262 reproduces stored true | reads field false  
+same    Assume Check Record#0              x 212 | s262 reproduces stored true | reads field false  
+same    Panel Cure Build 1#0               x 214 | s262 reproduces stored true | reads field false  
+same    Panel Cure Normalize 1#0           x 216 | s262 reproduces stored true | reads field false  
+same    FUM Merge Panel 1#0                x 219 | s262 reproduces stored true | reads field false  
+same    Panel Cure Normalize 1#1           x 220 | s262 reproduces stored true | reads field false  
+same    Panel Cure Build 2#0               x 222 | s262 reproduces stored true | reads field false  
+same    Panel Cure Normalize 2#0           x 224 | s262 reproduces stored true | reads field false  
+same    Panel Cure Build 3#0               x 226 | s262 reproduces stored true | reads field false  
+same    Panel Cure Normalize 3#0           x 228 | s262 reproduces stored true | reads field false  
+same    Panel Cure Check#0                 x 230 | s262 reproduces stored true | reads field true  
+same    Early Alternate Build#0            x 231 | s262 reproduces stored true | reads field false  
+same    Enforcer Build#0                   x 233 | s262 reproduces stored true | reads field false  
+same    Judge Enforcer Build#0             x 234 | s262 reproduces stored true | reads field true  
+same    Enforcer Group Batch Build#0       x 235 | s262 reproduces stored true | reads field false  
+same    Enforcer Resume#0                  x 238 | s262 reproduces stored true | reads field false  
+same    Enforcer Call deepseek#0           x 240 | s262 reproduces stored true | reads field false  
+same    Enforcer Retry Build#0             x 241 | s262 reproduces stored true | reads field false  
+same    Enforcer Record#0                  x 243 | s262 reproduces stored true | reads field false  
+same    Judge Enforcer Resume#0            x 244 | s262 reproduces stored true | reads field false  
+same    Judge Enforcer Call deepseek#0     x 246 | s262 reproduces stored true | reads field false  
+same    Judge Enforcer Retry Build#0       x 247 | s262 reproduces stored true | reads field false  
+same    Judge Enforcer Resend Build#0      x 250 | s262 reproduces stored true | reads field false  
+same    Judge Enforcer Record#0            x 252 | s262 reproduces stored true | reads field false  
+same    Send Back Build#0                  x 253 | s262 reproduces stored false | reads field false  
+NONCODE Send Back Needed?#0 input differs: s262 vs stored true | target vs s262 false
+same    Send Back Record#0                 x 256 | s262 reproduces stored false | reads field false  
+same    Reread Build#0                     x 257 | s262 reproduces stored true | reads field false  
+same    Reread Record#0                    x 260 | s262 reproduces stored true | reads field false  
+same    Gate Build#0                       x 261 | s262 reproduces stored true | reads field false  
+same    Late Gate Build#0                  x 264 | s262 reproduces stored true | reads field false  
+same    Gate Record#0                      x 267 | s262 reproduces stored false | reads field false  
+NONCODE Alternate Needed?#0 input differs: s262 vs stored true | target vs s262 false
+same    Alternate Build#0                  x 270 | s262 reproduces stored true | reads field false | s262 ERR Cannot read properties of undefined (reading 'map') | tgt ERR Cannot read properties of undefined (reading 'map')
+same    Early Alternate Reply#0            x 273 | s262 reproduces stored true | reads field false  
+same    Alternate Payloads#0               x 275 | s262 reproduces stored true | reads field true  
+same    Alternate Cure Build#0             x 277 | s262 reproduces stored true | reads field false  
+same    Alternate Cure Normalize#0         x 279 | s262 reproduces stored true | reads field false  
+same    Alternate Merge Seat#0             x 281 | s262 reproduces stored false | reads field true  
+same    Alt Seated#0                       x 282 | s262 reproduces stored true | reads field false  
+same    Alt Judge Enforcer Build#0         x 283 | s262 reproduces stored true | reads field true  
+same    Alt Judge Enforcer Retry Build#0   x 286 | s262 reproduces stored true | reads field false  
+same    Alt Judge Enforcer Record#0        x 288 | s262 reproduces stored true | reads field false  
+same    Alt Send Back Build#0              x 289 | s262 reproduces stored false | reads field false  
+NONCODE Alt Send Back Needed?#0 input differs: s262 vs stored true | target vs s262 false
+same    Alt Send Back Record#0             x 292 | s262 reproduces stored false | reads field false  
+same    Alt Reread Build#0                 x 293 | s262 reproduces stored true | reads field false  
+same    Alt Reread Record#0                x 296 | s262 reproduces stored true | reads field false  
+same    Alt Gate Build#0                   x 297 | s262 reproduces stored true | reads field false  
+same    Alt Late Gate Build#0              x 300 | s262 reproduces stored true | reads field false  
+same    Alt Gate Record#0                  x 302 | s262 reproduces stored false | reads field false  
+same    Alternate Merge 1#0                x 303 | s262 reproduces stored false | reads field true  
+same    Second Alternate?#0                x 304 | s262 reproduces stored false | reads field false  
+NONCODE Second Alternate Needed?#0 input differs: s262 vs stored true | target vs s262 false
+same    Alternate Merge#0                  x 306 | s262 reproduces stored false | reads field false  
+NONCODE Dry?#0 input differs: s262 vs stored true | target vs s262 false
+same    Panel Done#0                       x 315 | s262 reproduces stored true | reads field false  
+same    Panel Tokens#0                     x 316 | s262 reproduces stored true | reads field false  
+CHANGED Format Markdown#0                  x 323 | s262 reproduces stored false | reads field false  
+      out.0.md 
+        s262:   "# TRUTH App Debate\n\n**Outcome:** CHALLENGER PREVAILS. The defender's chain was broken (3-0); the panel verdict BROKEN gives CHALLENGER PREVAILS.\n\n**Topic:** Did Christ have a biological father?\n\n**Defender:** Gemini (google/gemini-3.8-flash), plain, without the framework or the record, arguin 
+        target: "# TRUTH App Debate\n\n**Outcome:** CHALLENGER PREVAILS. The defender's chain was broken (3-0); the panel verdict BROKEN gives CHALLENGER PREVAILS.\n\n**Topic:** Did Christ have a biological father?\n\n**Defender:** Gemini (google/gemini-3.8-flash), plain, without the framework or the record, arguin
+      out.0.chars 
+        s262:   1404664 
+        target: 1404539
+CHANGED Plain Rule Lines#0                 x 324 | s262 reproduces stored false | reads field false  
+      out.0.md 
+        s262:   "# TRUTH App Debate\n\n**Outcome:** CHALLENGER PREVAILS. The defender's chain was broken (3-0); the panel verdict BROKEN gives CHALLENGER PREVAILS.\n\n**Topic:** Did Christ have a biological father?\n\n**Defender:** Gemini (google/gemini-3.8-flash), plain, without the framework or the record, arguin 
+        target: "# TRUTH App Debate\n\n**Outcome:** CHALLENGER PREVAILS. The defender's chain was broken (3-0); the panel verdict BROKEN gives CHALLENGER PREVAILS.\n\n**Topic:** Did Christ have a biological father?\n\n**Defender:** Gemini (google/gemini-3.8-flash), plain, without the framework or the record, arguin
+      out.0.chars 
+        s262:   1432895 
+        target: 1432770
+NONCODE Save to Drive#0 input differs: s262 vs stored true | target vs s262 true
+same    Raise If Incomplete#0              x 326 | s262 reproduces stored true | reads field false  
+START x 130 | code-node runs changed: 5
