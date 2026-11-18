@@ -1,6 +1,7 @@
 /* pkgWN (ASK 390, option C MARK ONLY, ruling 22:09 CST 11-17): a debater's working note to itself is marked, never removed. Quoted text is masked first. */
 function wn390(text){const t=String(text==null?'':text);
- const mask=t.replace(/"[^"\n]*"|“[^”\n]*”/g,m=>' '.repeat(m.length));
+ const unm=(()=>{let o=t,i=-1;while((i=o.indexOf('[working note: ',i+1))>=0){let d=0,j=i;for(;j<o.length;j++){if(o[j]==='[')d++;else if(o[j]===']'&&--d===0)break;}o=o.slice(0,i)+' '.repeat(Math.min(j+1,o.length)-i)+o.slice(j+1);}return o;})(); /* brackets balanced, so a "[L1]" inside a mark does not end it */
+ const mask=unm.replace(/"[^"\n]*"|“[^”\n]*”/g,m=>' '.repeat(m.length)); /* a mark already in the text (a round echoed back) is masked too, so a second pass marks nothing */
  const M1=/(?<=\S)[ \t]*(?:[\u2014\u2013]|-{1,2}|[,;])[ \t]*(?:wait|hmm+|oops|scratch that|no,? wait|correction)[ \t]*[,:;\u2014\u2013-]/gi; /* a mid-sentence self-correction: the separator follows text on the same line, so a list item "- Correction:" is not one */
  const M2=/\bnot (?:on|in) (?:the |my )?(?:verse )?sheet\b|\bto stay safe\b|\bthis is challenged\?|\b(?:will|would|might|could)(?: not)? (?:be|get) flagged\b|\bto avoid (?:a |the |being )?(?:flag|flagged|gate|penalty|strike)\b|\bsafer? to quote\b|\bI (?:must|should|can) (?:only )?quote only\b/gi; /* talk to itself about the engine's own machinery */
  const hits=[];for(const [re,k] of [[M1,'M1'],[M2,'M2']]){re.lastIndex=0;let m;while((m=re.exec(mask)))hits.push({at:m.index,end:m.index+m[0].length,marker:k,word:m[0].trim()});}
