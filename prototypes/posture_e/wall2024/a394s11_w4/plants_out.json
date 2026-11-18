@@ -1,0 +1,427 @@
+[
+ {
+  "plant": "2a vs-line STANDS (row 43734 text)",
+  "text": "D4 vs C2 (Isaiah 7:14): STANDS -- GROUND: [L1] Isaiah 7:14 \"Behold, a virgin shall conceive\"",
+  "Gate Build": {
+   "live386": "REFUSED D4",
+   "t394s11": "REFUSED D4"
+  },
+  "Alt Gate Record": {
+   "live386": "REFUSED D4",
+   "t394s11": "REFUSED D4"
+  },
+  "Alternate Merge Seat": {
+   "live386": "REFUSED D4",
+   "t394s11": "REFUSED D4"
+  },
+  "R2 Alternate Merge Seat": {
+   "live386": "REFUSED D4",
+   "t394s11": "REFUSED D4"
+  },
+  "R2 Alt Late Gate Build": {
+   "live386": "REFUSED D4",
+   "t394s11": "REFUSED D4"
+  },
+  "same_all_stubs": true
+ },
+ {
+  "plant": "3a verse-less",
+  "text": "D4 vs C2: STANDS -- x",
+  "Gate Build": {
+   "live386": "REFUSED D4",
+   "t394s11": "REFUSED D4"
+  },
+  "Alt Gate Record": {
+   "live386": "REFUSED D4",
+   "t394s11": "REFUSED D4"
+  },
+  "Alternate Merge Seat": {
+   "live386": "REFUSED D4",
+   "t394s11": "REFUSED D4"
+  },
+  "R2 Alternate Merge Seat": {
+   "live386": "REFUSED D4",
+   "t394s11": "REFUSED D4"
+  },
+  "R2 Alt Late Gate Build": {
+   "live386": "REFUSED D4",
+   "t394s11": "REFUSED D4"
+  },
+  "same_all_stubs": true
+ },
+ {
+  "plant": "3b bullet and bold",
+  "text": "- **D4 vs C2 (Isaiah 7:14): STANDS** -- x",
+  "Gate Build": {
+   "live386": "REFUSED D4",
+   "t394s11": "REFUSED D4"
+  },
+  "Alt Gate Record": {
+   "live386": "REFUSED D4",
+   "t394s11": "REFUSED D4"
+  },
+  "Alternate Merge Seat": {
+   "live386": "REFUSED D4",
+   "t394s11": "REFUSED D4"
+  },
+  "R2 Alternate Merge Seat": {
+   "live386": "REFUSED D4",
+   "t394s11": "REFUSED D4"
+  },
+  "R2 Alt Late Gate Build": {
+   "live386": "REFUSED D4",
+   "t394s11": "REFUSED D4"
+  },
+  "same_all_stubs": true
+ },
+ {
+  "plant": "3b numbered",
+  "text": "1. D4 vs C2 (Isaiah 7:14): STANDS",
+  "Gate Build": {
+   "live386": "REFUSED D4",
+   "t394s11": "REFUSED D4"
+  },
+  "Alt Gate Record": {
+   "live386": "REFUSED D4",
+   "t394s11": "REFUSED D4"
+  },
+  "Alternate Merge Seat": {
+   "live386": "REFUSED D4",
+   "t394s11": "REFUSED D4"
+  },
+  "R2 Alternate Merge Seat": {
+   "live386": "REFUSED D4",
+   "t394s11": "REFUSED D4"
+  },
+  "R2 Alt Late Gate Build": {
+   "live386": "REFUSED D4",
+   "t394s11": "REFUSED D4"
+  },
+  "same_all_stubs": true
+ },
+ {
+  "plant": "3c \"vs.\" with a period",
+  "text": "D4 vs. C2 (Isaiah 7:14): STANDS",
+  "Gate Build": {
+   "live386": "REFUSED D4",
+   "t394s11": "REFUSED D4"
+  },
+  "Alt Gate Record": {
+   "live386": "REFUSED D4",
+   "t394s11": "REFUSED D4"
+  },
+  "Alternate Merge Seat": {
+   "live386": "REFUSED D4",
+   "t394s11": "REFUSED D4"
+  },
+  "R2 Alternate Merge Seat": {
+   "live386": "REFUSED D4",
+   "t394s11": "REFUSED D4"
+  },
+  "R2 Alt Late Gate Build": {
+   "live386": "REFUSED D4",
+   "t394s11": "REFUSED D4"
+  },
+  "same_all_stubs": true
+ },
+ {
+  "plant": "3c lower case",
+  "text": "d4 vs. c2 (Isaiah 7:14): stands -- x",
+  "Gate Build": {
+   "live386": "REFUSED D4",
+   "t394s11": "REFUSED D4"
+  },
+  "Alt Gate Record": {
+   "live386": "REFUSED D4",
+   "t394s11": "REFUSED D4"
+  },
+  "Alternate Merge Seat": {
+   "live386": "REFUSED D4",
+   "t394s11": "REFUSED D4"
+  },
+  "R2 Alternate Merge Seat": {
+   "live386": "REFUSED D4",
+   "t394s11": "REFUSED D4"
+  },
+  "R2 Alt Late Gate Build": {
+   "live386": "REFUSED D4",
+   "t394s11": "REFUSED D4"
+  },
+  "same_all_stubs": true
+ },
+ {
+  "plant": "3d trailing tag after STANDS",
+  "text": "D4 vs C2 (Isaiah 7:14): STANDS [AUDIT v9: X; END]",
+  "Gate Build": {
+   "live386": "REFUSED D4",
+   "t394s11": "REFUSED D4"
+  },
+  "Alt Gate Record": {
+   "live386": "REFUSED D4",
+   "t394s11": "REFUSED D4"
+  },
+  "Alternate Merge Seat": {
+   "live386": "REFUSED D4",
+   "t394s11": "REFUSED D4"
+  },
+  "R2 Alternate Merge Seat": {
+   "live386": "REFUSED D4",
+   "t394s11": "REFUSED D4"
+  },
+  "R2 Alt Late Gate Build": {
+   "live386": "REFUSED D4",
+   "t394s11": "REFUSED D4"
+  },
+  "same_all_stubs": true
+ },
+ {
+  "plant": "3d trailing parenthesis",
+  "text": "D4 vs C2 (Isaiah 7:14): STANDS (pkgX)",
+  "Gate Build": {
+   "live386": "REFUSED D4",
+   "t394s11": "REFUSED D4"
+  },
+  "Alt Gate Record": {
+   "live386": "REFUSED D4",
+   "t394s11": "REFUSED D4"
+  },
+  "Alternate Merge Seat": {
+   "live386": "REFUSED D4",
+   "t394s11": "REFUSED D4"
+  },
+  "R2 Alternate Merge Seat": {
+   "live386": "REFUSED D4",
+   "t394s11": "REFUSED D4"
+  },
+  "R2 Alt Late Gate Build": {
+   "live386": "REFUSED D4",
+   "t394s11": "REFUSED D4"
+  },
+  "same_all_stubs": true
+ },
+ {
+  "plant": "2b / 3e FORCED prefix",
+  "text": "FORCED: D4 vs C2 (Isaiah 7:14): STANDS -- x",
+  "Gate Build": {
+   "live386": "REFUSED D4",
+   "t394s11": "REFUSED D4"
+  },
+  "Alt Gate Record": {
+   "live386": "REFUSED D4",
+   "t394s11": "REFUSED D4"
+  },
+  "Alternate Merge Seat": {
+   "live386": "REFUSED D4",
+   "t394s11": "REFUSED D4"
+  },
+  "R2 Alternate Merge Seat": {
+   "live386": "REFUSED D4",
+   "t394s11": "REFUSED D4"
+  },
+  "R2 Alt Late Gate Build": {
+   "live386": "REFUSED D4",
+   "t394s11": "REFUSED D4"
+  },
+  "same_all_stubs": true
+ },
+ {
+  "plant": "3e FORCED with a parenthesis",
+  "text": "FORCED (K-F): D4 vs C2 (Isaiah 7:14): STANDS",
+  "Gate Build": {
+   "live386": "REFUSED D4",
+   "t394s11": "REFUSED D4"
+  },
+  "Alt Gate Record": {
+   "live386": "REFUSED D4",
+   "t394s11": "REFUSED D4"
+  },
+  "Alternate Merge Seat": {
+   "live386": "REFUSED D4",
+   "t394s11": "REFUSED D4"
+  },
+  "R2 Alternate Merge Seat": {
+   "live386": "REFUSED D4",
+   "t394s11": "REFUSED D4"
+  },
+  "R2 Alt Late Gate Build": {
+   "live386": "REFUSED D4",
+   "t394s11": "REFUSED D4"
+  },
+  "same_all_stubs": true
+ },
+ {
+  "plant": "2c LINK STATE \"D4: STANDS\" (not added)",
+  "text": "D4: STANDS -- x",
+  "Gate Build": {
+   "live386": "not refused",
+   "t394s11": "not refused"
+  },
+  "Alt Gate Record": {
+   "live386": "not refused",
+   "t394s11": "not refused"
+  },
+  "Alternate Merge Seat": {
+   "live386": "not refused",
+   "t394s11": "not refused"
+  },
+  "R2 Alternate Merge Seat": {
+   "live386": "not refused",
+   "t394s11": "not refused"
+  },
+  "R2 Alt Late Gate Build": {
+   "live386": "not refused",
+   "t394s11": "not refused"
+  },
+  "same_all_stubs": true
+ },
+ {
+  "plant": "no fact on D4",
+  "text": "D4 vs C2 (Isaiah 7:14): STANDS",
+  "Gate Build": {
+   "live386": "not refused",
+   "t394s11": "not refused"
+  },
+  "Alt Gate Record": {
+   "live386": "not refused",
+   "t394s11": "not refused"
+  },
+  "Alternate Merge Seat": {
+   "live386": "not refused",
+   "t394s11": "not refused"
+  },
+  "R2 Alternate Merge Seat": {
+   "live386": "not refused",
+   "t394s11": "not refused"
+  },
+  "R2 Alt Late Gate Build": {
+   "live386": "not refused",
+   "t394s11": "not refused"
+  },
+  "same_all_stubs": true
+ },
+ {
+  "plant": "fact on the challenger side only",
+  "text": "D4 vs C2 (Isaiah 7:14): STANDS",
+  "Gate Build": {
+   "live386": "not refused",
+   "t394s11": "not refused"
+  },
+  "Alt Gate Record": {
+   "live386": "not refused",
+   "t394s11": "not refused"
+  },
+  "Alternate Merge Seat": {
+   "live386": "not refused",
+   "t394s11": "not refused"
+  },
+  "R2 Alternate Merge Seat": {
+   "live386": "not refused",
+   "t394s11": "not refused"
+  },
+  "R2 Alt Late Gate Build": {
+   "live386": "not refused",
+   "t394s11": "not refused"
+  },
+  "same_all_stubs": true
+ },
+ {
+  "plant": "grade UNDERDETERMINED",
+  "text": "D4 vs C2 (Isaiah 7:14): UNDERDETERMINED -- x",
+  "Gate Build": {
+   "live386": "not refused",
+   "t394s11": "not refused"
+  },
+  "Alt Gate Record": {
+   "live386": "not refused",
+   "t394s11": "not refused"
+  },
+  "Alternate Merge Seat": {
+   "live386": "not refused",
+   "t394s11": "not refused"
+  },
+  "R2 Alternate Merge Seat": {
+   "live386": "not refused",
+   "t394s11": "not refused"
+  },
+  "R2 Alt Late Gate Build": {
+   "live386": "not refused",
+   "t394s11": "not refused"
+  },
+  "same_all_stubs": true
+ },
+ {
+  "plant": "DEFENDER LINK STANDS",
+  "text": "D4 vs C2 (Isaiah 7:14): DEFENDER LINK STANDS",
+  "Gate Build": {
+   "live386": "not refused",
+   "t394s11": "not refused"
+  },
+  "Alt Gate Record": {
+   "live386": "not refused",
+   "t394s11": "not refused"
+  },
+  "Alternate Merge Seat": {
+   "live386": "not refused",
+   "t394s11": "not refused"
+  },
+  "R2 Alternate Merge Seat": {
+   "live386": "not refused",
+   "t394s11": "not refused"
+  },
+  "R2 Alt Late Gate Build": {
+   "live386": "not refused",
+   "t394s11": "not refused"
+  },
+  "same_all_stubs": true
+ },
+ {
+  "plant": "compound pair",
+  "text": "D4 vs C4/C6 (Isaiah 7:14): STANDS",
+  "Gate Build": {
+   "live386": "not refused",
+   "t394s11": "not refused"
+  },
+  "Alt Gate Record": {
+   "live386": "not refused",
+   "t394s11": "not refused"
+  },
+  "Alternate Merge Seat": {
+   "live386": "not refused",
+   "t394s11": "not refused"
+  },
+  "R2 Alternate Merge Seat": {
+   "live386": "not refused",
+   "t394s11": "not refused"
+  },
+  "R2 Alt Late Gate Build": {
+   "live386": "not refused",
+   "t394s11": "not refused"
+  },
+  "same_all_stubs": true
+ },
+ {
+  "plant": "text between verse and colon",
+  "text": "D4 vs C2 (Isaiah 7:14) as answered: STANDS",
+  "Gate Build": {
+   "live386": "REFUSED D4",
+   "t394s11": "REFUSED D4"
+  },
+  "Alt Gate Record": {
+   "live386": "REFUSED D4",
+   "t394s11": "REFUSED D4"
+  },
+  "Alternate Merge Seat": {
+   "live386": "REFUSED D4",
+   "t394s11": "REFUSED D4"
+  },
+  "R2 Alternate Merge Seat": {
+   "live386": "REFUSED D4",
+   "t394s11": "REFUSED D4"
+  },
+  "R2 Alt Late Gate Build": {
+   "live386": "REFUSED D4",
+   "t394s11": "REFUSED D4"
+  },
+  "same_all_stubs": true
+ }
+]
