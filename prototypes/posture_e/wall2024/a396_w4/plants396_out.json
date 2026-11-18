@@ -1,0 +1,56 @@
+[
+ {
+  "plant": "1 none open (all CURED)",
+  "line": "**OPEN ENFORCER DISAGREEMENTS (recorded, not counted; rulings 428 and 490, ASK 396):** none",
+  "rest_identical_to_live": true,
+  "dif": null
+ },
+ {
+  "plant": "2 one seat, one E-PREM",
+  "line": "**OPEN ENFORCER DISAGREEMENTS (recorded, not counted; rulings 428 and 490, ASK 396):** sol: E-PREM defender premise 2",
+  "rest_identical_to_live": true,
+  "dif": null
+ },
+ {
+  "plant": "3 two seats, both kinds",
+  "line": "**OPEN ENFORCER DISAGREEMENTS (recorded, not counted; rulings 428 and 490, ASK 396):** sol: E-PREM challenger premise 3; E-ANS Matthew 1:18 [CR4] | ChatGPT: E-PREM defender premise 1; E-ANS Luke 1:34 [DR3]",
+  "rest_identical_to_live": true,
+  "dif": null
+ },
+ {
+  "plant": "4 removed seat",
+  "line": "**OPEN ENFORCER DISAGREEMENTS (recorded, not counted; rulings 428 and 490, ASK 396):** Claude Haiku (removed): E-PREM defender premise 3",
+  "rest_identical_to_live": true,
+  "dif": null
+ },
+ {
+  "plant": "5 item CURED on the send-back is not listed",
+  "line": "**OPEN ENFORCER DISAGREEMENTS (recorded, not counted; rulings 428 and 490, ASK 396):** sol: E-PREM defender premise 4",
+  "rest_identical_to_live": true,
+  "dif": null
+ },
+ {
+  "plant": "6 alternate seat that took over (W3 8552 B2)",
+  "line": "**OPEN ENFORCER DISAGREEMENTS (recorded, not counted; rulings 428 and 490, ASK 396):** sonnet: E-ANS Luke 3:23 [CR4]",
+  "rest_identical_to_live": true,
+  "dif": null
+ },
+ {
+  "plant": "7 other rules and statuses are not listed (E-COL UNCURED, E-PREM not sent)",
+  "line": "**OPEN ENFORCER DISAGREEMENTS (recorded, not counted; rulings 428 and 490, ASK 396):** none",
+  "rest_identical_to_live": true,
+  "dif": null
+ },
+ {
+  "plant": "8 duplicate row listed once",
+  "line": "**OPEN ENFORCER DISAGREEMENTS (recorded, not counted; rulings 428 and 490, ASK 396):** sol: E-PREM challenger premise 2",
+  "rest_identical_to_live": true,
+  "dif": null
+ },
+ {
+  "plant": "9 no enforcer log",
+  "line": "**OPEN ENFORCER DISAGREEMENTS (recorded, not counted; rulings 428 and 490, ASK 396):** not read: this run holds no enforcer log",
+  "rest_identical_to_live": true,
+  "dif": null
+ }
+]
