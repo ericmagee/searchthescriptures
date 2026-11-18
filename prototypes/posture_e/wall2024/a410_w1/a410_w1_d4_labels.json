@@ -1,0 +1,279 @@
+{
+ "ask": "ASK 410 D4",
+ "labeler": "W1 (seat 34)",
+ "basis": "a410_w4/d4_items.json at commit 58ae47ba; each item section and the rule text read from its prompt_sent; labels set before W2 labels and any candidate run were seen. The stored deepseek line was not used to set any label (8823 condition 2); it is shown for reference only.",
+ "close_calls": [
+  6,
+  19,
+  20
+ ],
+ "items": [
+  {
+   "n": 1,
+   "rule": "E-ANS",
+   "enforcer_row": 45264,
+   "run_token": "ODV1-39266-7g9lzgbr",
+   "item": "ANSWER CHECK John 3:6 [DR3]",
+   "right": "MEETS",
+   "judge_lines": {
+    "B20.1": "AGREE"
+   },
+   "reason": "Answer sets John 3:6 as the ordinary division and places this conception by Luke 1:35 and Galatians 4:4: a fit in its own words.",
+   "stored_deepseek_head": "ENFORCER: B20.1 -- AGREE -- RIGHT: MEETS -- The answer says "
+  },
+  {
+   "n": 2,
+   "rule": "E-ANS",
+   "enforcer_row": 45245,
+   "run_token": "ODV1-39266-7g9lzgbr",
+   "item": "ANSWER CHECK Matthew 1:18 [CR2]",
+   "right": "MEETS",
+   "judge_lines": {
+    "B1.1": "DISAGREE"
+   },
+   "reason": "Answer gives its own fit: \"Before they came together dates the finding before the taking in Matthew 1:24 ... The begetting stands before the withheld span, within the espousal.\" The judge demanded a stating verse.",
+   "stored_deepseek_head": "ENFORCER: B1.1 -- DISAGREE -- RIGHT: MEETS -- The answer sho"
+  },
+  {
+   "n": 3,
+   "rule": "E-ANS",
+   "enforcer_row": 45097,
+   "run_token": "ODV1-39266-7g9lzgbr",
+   "item": "ANSWER CHECK Luke 3:23, challenger premise 3 [DR3]",
+   "right": "MEETS",
+   "judge_lines": {
+    "B72.1": "AGREE"
+   },
+   "reason": "Answer takes the gloss and states its reading of the parenthetical.",
+   "stored_deepseek_head": "ENFORCER: B72.1 -- AGREE -- RIGHT: MEETS -- The answer shows"
+  },
+  {
+   "n": 4,
+   "rule": "E-ANS",
+   "enforcer_row": 45071,
+   "run_token": "ODV1-39266-7g9lzgbr",
+   "item": "ANSWER CHECK Romans 1:3 [DR3]",
+   "right": "MEETS",
+   "judge_lines": {
+    "B46.1": "AGREE"
+   },
+   "reason": "Answer shows the fit: seed of David through the woman (Galatians 4:4, Matthew 1:23).",
+   "stored_deepseek_head": "ENFORCER: B46.1 -- AGREE -- RIGHT: MEETS -- \"Romans 1:3 affi"
+  },
+  {
+   "n": 5,
+   "rule": "E-ANS",
+   "enforcer_row": 45046,
+   "run_token": "ODV1-39266-7g9lzgbr",
+   "item": "ANSWER CHECK Matthew 17:5 [DR3]",
+   "right": "MEETS",
+   "judge_lines": {
+    "B22.1": "AGREE",
+    "B22.2": "AGREE"
+   },
+   "reason": "Answer grants the cloud setting and distinguishes Luke 1:35.",
+   "stored_deepseek_head": "ENFORCER: B22.1 -- AGREE -- RIGHT: MEETS -- The answer says "
+  },
+  {
+   "n": 6,
+   "rule": "E-COL",
+   "enforcer_row": 45116,
+   "run_token": "ODV1-39266-7g9lzgbr",
+   "item": "COLLISION D5 vs C1",
+   "right": "STANDS",
+   "judge_lines": {
+    "K12.1": "DISAGREE"
+   },
+   "reason": "MEANS \"Joseph abstained from carnal union with Mary until after the delivery\" names no start; the ANSWER \"bounds the not-knowing with till to the birth after the taking\" agrees with it. The answer's words can agree with the meaning pressed, so no break. Close call.",
+   "stored_deepseek_head": "ENFORCER: K12.1 -- AGREE -- RIGHT: BROKEN -- The answer's ow"
+  },
+  {
+   "n": 7,
+   "rule": "E-COL",
+   "enforcer_row": 44742,
+   "run_token": "ODV1-39015-pnpoj45j",
+   "item": "COLLISION D3 vs C3",
+   "right": "STANDS",
+   "judge_lines": {
+    "K1.1": "DISAGREE"
+   },
+   "reason": "FORCED MEANS \"Joseph knew her not till she had brought forth her firstborn son\"; the answer \"The withholding runs from the taking to the birth\" agrees with it. The ledger gives Matthew 1:25 against the defender as NAMED ONLY IN OTHER TEXT (decides neither), and the [CR4] answer exists, so Commitment 5 does not break it.",
+   "stored_deepseek_head": "ENFORCER: K1.1 -- AGREE -- RIGHT: BROKEN -- The answer's \"th"
+  },
+  {
+   "n": 8,
+   "rule": "E-COL",
+   "enforcer_row": 44603,
+   "run_token": "ODV1-38661-b6km61d3",
+   "item": "COLLISION D4 vs C5",
+   "right": "STANDS",
+   "judge_lines": {
+    "K4.1": "DISAGREE"
+   },
+   "reason": "MEANS \"The conception took place before the husband and wife came together\"; ANSWER \"The coming together is the taking\" puts the conception before the taking, which agrees with the meaning pressed.",
+   "stored_deepseek_head": "ENFORCER: K4.1 -- AGREE -- RIGHT: BROKEN -- The answer \"The "
+  },
+  {
+   "n": 9,
+   "rule": "E-COL",
+   "enforcer_row": 44442,
+   "run_token": "ODV1-38661-b6km61d3",
+   "item": "COLLISION D5 vs C4",
+   "right": "BROKEN",
+   "judge_lines": {
+    "K9.1": "AGREE"
+   },
+   "reason": "MEANS \"The procreation in Mary's womb is directly attributed to the Holy Ghost\"; ANSWER \"Of the Holy Ghost marks covenant origin beside the named husband\" denies that attribution, and the item shows no 6-word row carrying the rival reading other than the pressed verse.",
+   "stored_deepseek_head": "ENFORCER: K9.1 -- AGREE -- RIGHT: BROKEN -- The answer \"Of t"
+  },
+  {
+   "n": 10,
+   "rule": "E-COL",
+   "enforcer_row": 44438,
+   "run_token": "ODV1-38661-b6km61d3",
+   "item": "COLLISION D5",
+   "right": "STANDS",
+   "judge_lines": {
+    "K5.1": "DISAGREE"
+   },
+   "reason": "Line rests on an absence (\"is not shown against\") and quotes no answer words and no pressing sentence with its round; ledger entries against the defender are NAMED ONLY IN OTHER TEXT.",
+   "stored_deepseek_head": "ENFORCER: K5.1 -- DISAGREE -- RIGHT: STANDS -- the line says"
+  },
+  {
+   "n": 11,
+   "rule": "E-HOLD",
+   "enforcer_row": 45128,
+   "run_token": "ODV1-39266-7g9lzgbr",
+   "item": "COLLISION D3 vs C3",
+   "right": "UNDERDETERMINED",
+   "judge_lines": {
+    "H7.1": "AGREE"
+   },
+   "reason": "Both readings sit on Luke 3:23 and Luke 2:48; every answer check MEETS; neither side shows the other cannot.",
+   "stored_deepseek_head": "ENFORCER: H7.1 -- AGREE -- RIGHT: UNDERDETERMINED -- [CR2]'s"
+  },
+  {
+   "n": 12,
+   "rule": "E-HOLD",
+   "enforcer_row": 44856,
+   "run_token": "ODV1-39015-pnpoj45j",
+   "item": "COLLISION D1",
+   "right": "STANDS",
+   "judge_lines": {
+    "H1.1": "AGREE"
+   },
+   "reason": "Link-state line; no defender answer check on a press against this link is MISSES or FAILS.",
+   "stored_deepseek_head": "ENFORCER: H1.1 -- AGREE -- RIGHT: STANDS -- the defender's a"
+  },
+  {
+   "n": 13,
+   "rule": "E-HOLD",
+   "enforcer_row": 44758,
+   "run_token": "ODV1-39015-pnpoj45j",
+   "item": "COLLISION D2 vs C2",
+   "right": "UNDERDETERMINED",
+   "judge_lines": {
+    "H6.1": "AGREE"
+   },
+   "reason": "All answer checks MEETS; both readings agree with Matthew 1:16 as quoted.",
+   "stored_deepseek_head": "ENFORCER: H6.1 -- AGREE -- RIGHT: UNDERDETERMINED -- \"of who"
+  },
+  {
+   "n": 14,
+   "rule": "E-HOLD",
+   "enforcer_row": 44754,
+   "run_token": "ODV1-39015-pnpoj45j",
+   "item": "COLLISION D2 vs C2",
+   "right": "UNDERDETERMINED",
+   "judge_lines": {
+    "H2.1": "AGREE"
+   },
+   "reason": "All answer checks MEETS; the Luke 3:23 press against the defender is UNPROVEN.",
+   "stored_deepseek_head": "ENFORCER: H2.1 -- AGREE -- RIGHT: UNDERDETERMINED -- The ans"
+  },
+  {
+   "n": 15,
+   "rule": "E-HOLD",
+   "enforcer_row": 44457,
+   "run_token": "ODV1-38661-b6km61d3",
+   "item": "COLLISION D3 vs C3",
+   "right": "UNDERDETERMINED",
+   "judge_lines": {
+    "H11.1": "AGREE"
+   },
+   "reason": "All answer checks MEETS; two father designations both carried by quoted rows.",
+   "stored_deepseek_head": "ENFORCER: H11.1 -- AGREE -- RIGHT: UNDERDETERMINED -- Both s"
+  },
+  {
+   "n": 16,
+   "rule": "E-PREM",
+   "enforcer_row": 45297,
+   "run_token": "ODV1-39266-7g9lzgbr",
+   "item": "premise listed against the challenger 3",
+   "right": "SPARED",
+   "judge_lines": {
+    "P9.1": "AGREE"
+   },
+   "reason": "Challenger LINK 3 exhibits [L1] Luke 3:23, Luke 1:34, [L2] nomizo, ginosko, [L3] Luke 1:35 and an [L4]; press P3.1 answered; not VOID (the entry is the side's own sentence).",
+   "stored_deepseek_head": "ENFORCER: P9.1 -- AGREE -- RIGHT: SPARED -- The recounted li"
+  },
+  {
+   "n": 17,
+   "rule": "E-PREM",
+   "enforcer_row": 45159,
+   "run_token": "ODV1-39266-7g9lzgbr",
+   "item": "premise listed against the challenger 3",
+   "right": "SPARED",
+   "judge_lines": {
+    "P9.1": "AGREE",
+    "P9.2": "DISAGREE",
+    "P9.3": "AGREE"
+   },
+   "reason": "As item 16. P9.2 VOID rests on emphasis markers, not on a charge beyond its quote.",
+   "stored_deepseek_head": "ENFORCER: P9.1 -- AGREE -- RIGHT: SPARED -- The stored count"
+  },
+  {
+   "n": 18,
+   "rule": "E-PREM",
+   "enforcer_row": 45141,
+   "run_token": "ODV1-39266-7g9lzgbr",
+   "item": "premise listed against the defender 3",
+   "right": "COUNTED",
+   "judge_lines": {
+    "P3.1": "AGREE",
+    "P3.2": "DISAGREE",
+    "P3.3": "AGREE"
+   },
+   "reason": "No link-round block answers premise 3 by number or tag (CONCEDED), and the stored answer checks grade the Matthew 1:20 and Luke 1:35 answers MISSES (ruling 372).",
+   "stored_deepseek_head": "ENFORCER: P3.1 -- AGREE -- RIGHT: COUNTED -- The line’s own "
+  },
+  {
+   "n": 19,
+   "rule": "E-PREM",
+   "enforcer_row": 44951,
+   "run_token": "ODV1-39015-pnpoj45j",
+   "item": "premise listed against the defender 3",
+   "right": "VOID",
+   "judge_lines": {
+    "P3.1": "DISAGREE"
+   },
+   "reason": "Charge \"The inference that Luke 3:23 preserves Joseph's biological paternity\" against its quote \"(Luke 3:23) does not remove him\": \"biological paternity\" is beyond the quote (E-VOID). The \"props\" clause is set aside. Close call; if VOID is not taken, COUNTED by ruling 372 on the Matthew 1:16 MISSES, and P3.1 would be AGREE.",
+   "stored_deepseek_head": "ENFORCER: P3.1 -- AGREE -- RIGHT: COUNTED -- (UNEXHIBITED: M"
+  },
+  {
+   "n": 20,
+   "rule": "E-PREM",
+   "enforcer_row": 44781,
+   "run_token": "ODV1-39015-pnpoj45j",
+   "item": "premise listed against the challenger 3",
+   "right": "SPARED",
+   "judge_lines": {
+    "P7.1": "DISAGREE",
+    "P7.2": "AGREE",
+    "P7.3": "AGREE"
+   },
+   "reason": "Challenger LINK 3 exhibits [L1] Matthew 1:19, 1:25, [L2] ginosko, paralambano, [L3] Matthew 1:20, Genesis 4:1 and an [L4]. P7.1's ASSUMES (\"justice would require him to marry her if he fathered the child\") is the link's own inference ([L4], DG-61), not a missing row; the Matthew 1:19 answer gives its own fit (MEETS in my reading). Close call.",
+   "stored_deepseek_head": "ENFORCER: P7.1 -- AGREE -- RIGHT: COUNTED -- The line counts"
+  }
+ ]
+}
