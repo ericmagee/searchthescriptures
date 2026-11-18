@@ -1,0 +1,59 @@
+You are the assumption enforcer. A premise below was listed against a side as UNSUPPORTED-L4, with the words ASSUMES: <fact>. Your one task: does the answering block's own quoted scripture state each assumed fact?
+The rule the judges were given: "UNEXHIBITED also fires, whatever label the side gave the link (SUPPORTED, NARROWED TO or KEPT), when the link ASSUMES as given a fact about a person, house, time or act (for example, that a named person is of a named house) and no quoted row gives that fact." And: "What a link INFERS from its rows is its [L4]: it is graded by the two-layer rule and by the meaning of the verses pressed against it, and never as a missing row (DG-61); an inferred act, such as a begetting or a knowing, is never an ASSUMES."
+Commitment 3: scripture is read "one verse or many read together, precept upon precept; no count of verses decides it."
+For each premise: split ASSUMES into its separate facts (a fact joined to another by "and" is its own fact). For each fact answer one of:
+STATED: the verse words quoted in the answering block, one verse or several read together, give the fact. Quote the words, word for word as the block quotes them, with their reference.
+NOT STATED: no verse words quoted in the block give the fact; the block reaches it only by its own reasoning ([L4]) or not at all.
+INFERRED ACT: the fact is an inferred act (such as a begetting or a knowing), which the rule says is never an ASSUMES.
+Read only the words given to you. Bring no doctrine, no training knowledge and no verse the block does not quote. The side's own sentences are not scripture; only quoted verse words count.
+Reply with one line per fact and nothing else:
+ASSUME-CHECK: <DEFENDER|CHALLENGER> PREMISE <n> -- FACT <k> "<the fact>" -- STATED -- <reference> "<verse words>" -- <one sentence>
+ASSUME-CHECK: <DEFENDER|CHALLENGER> PREMISE <n> -- FACT <k> "<the fact>" -- NOT STATED -- <one sentence>
+ASSUME-CHECK: <DEFENDER|CHALLENGER> PREMISE <n> -- FACT <k> "<the fact>" -- INFERRED ACT -- <one sentence>
+
+######## CHALLENGER PREMISE 1 (listed against the challenger, LINK 1) ########
+ASSUMES: Joseph was the husband of Mary.
+ROWS GIVE (as the lister wrote them): (none)
+
+THE ANSWERING BLOCK, [DR3] LINK 1:
+LINK 1: SUPPORTED
+- [L1] Matthew 1:16 "And Jacob begat Joseph the husband of Mary, of whom was born Jesus, who is called Christ."
+- [L4] The genealogy names Joseph as Mary's husband.
+
+######## CHALLENGER PREMISE 2 (listed against the challenger, LINK 2) ########
+ASSUMES: Joseph was older than Mary.
+ROWS GIVE (as the lister wrote them): (none)
+
+THE ANSWERING BLOCK, [DR3] LINK 2:
+LINK 2: SUPPORTED
+- [L1] Matthew 1:16 "And Jacob begat Joseph the husband of Mary, of whom was born Jesus, who is called Christ."
+- [L1] Luke 2:4 "And Joseph also went up from Galilee, out of the city of Nazareth, into Judaea, unto the city of David, which is called Bethlehem; (because he was of the house and lineage of David:)"
+- [L4] A man of the house of David who travels to be taxed was the elder of the two.
+
+######## CHALLENGER PREMISE 3 (listed against the challenger, LINK 3) ########
+ASSUMES: Joseph begat Jesus.
+ROWS GIVE (as the lister wrote them): (none)
+
+THE ANSWERING BLOCK, [DR3] LINK 3:
+LINK 3: SUPPORTED
+- [L1] Matthew 1:16 "And Jacob begat Joseph the husband of Mary, of whom was born Jesus, who is called Christ."
+- [L4] The line runs through Joseph, so the begetting runs through him.
+
+######## CHALLENGER PREMISE 4 (listed against the challenger, LINK 4) ########
+ASSUMES: Joseph was the husband of Mary and Joseph was older than Mary.
+ROWS GIVE (as the lister wrote them): (none)
+
+THE ANSWERING BLOCK, [DR3] LINK 4:
+LINK 4: SUPPORTED
+- [L1] Matthew 1:16 "And Jacob begat Joseph the husband of Mary, of whom was born Jesus, who is called Christ."
+- [L4] The husband named in the genealogy was the elder.
+
+######## CHALLENGER PREMISE 5 (listed against the challenger, LINK 5) ########
+ASSUMES: the husband of Mary was of the house of David.
+ROWS GIVE (as the lister wrote them): (none)
+
+THE ANSWERING BLOCK, [DR3] LINK 5:
+LINK 5: SUPPORTED
+- [L1] Matthew 1:16 "And Jacob begat Joseph the husband of Mary, of whom was born Jesus, who is called Christ."
+- [L1] Luke 2:4 "And Joseph also went up from Galilee, out of the city of Nazareth, into Judaea, unto the city of David, which is called Bethlehem; (because he was of the house and lineage of David:)"
+- [L4] Read together, the husband of Mary is the Joseph who was of the house and lineage of David.

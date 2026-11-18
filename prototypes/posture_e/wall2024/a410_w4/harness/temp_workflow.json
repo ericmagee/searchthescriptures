@@ -1,0 +1,151 @@
+{
+ "name": "W4 TEMP ASK 410 checker test - archive after use",
+ "nodes": [
+  {
+   "parameters": {
+    "httpMethod": "POST",
+    "path": "<webhook path set at creation>",
+    "responseMode": "lastNode",
+    "options": {}
+   },
+   "name": "In",
+   "type": "n8n-nodes-base.webhook",
+   "typeVersion": 2,
+   "position": [
+    0,
+    0
+   ],
+   "webhookId": "<webhook path set at creation>"
+  },
+  {
+   "parameters": {
+    "conditions": {
+     "options": {
+      "caseSensitive": true,
+      "leftValue": "",
+      "typeValidation": "strict"
+     },
+     "conditions": [
+      {
+       "leftValue": "={{ $json.body.route }}",
+       "rightValue": "deepseek",
+       "operator": {
+        "type": "string",
+        "operation": "equals"
+       }
+      }
+     ],
+     "combinator": "and"
+    },
+    "options": {}
+   },
+   "name": "DeepSeek?",
+   "type": "n8n-nodes-base.if",
+   "typeVersion": 2,
+   "position": [
+    220,
+    0
+   ]
+  },
+  {
+   "parameters": {
+    "method": "POST",
+    "url": "https://api.deepseek.com/v1/chat/completions",
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpHeaderAuth",
+    "sendBody": true,
+    "specifyBody": "json",
+    "jsonBody": "={{ JSON.stringify($json.body.body) }}",
+    "options": {
+     "timeout": 900000,
+     "response": {
+      "response": {
+       "neverError": true
+      }
+     }
+    }
+   },
+   "name": "Call deepseek",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.2,
+   "position": [
+    440,
+    -100
+   ],
+   "credentials": {
+    "httpHeaderAuth": {
+     "id": "R3waesZPK7vpsV8E",
+     "name": "DeepSeek Key"
+    }
+   }
+  },
+  {
+   "parameters": {
+    "method": "POST",
+    "url": "https://openrouter.ai/api/v1/chat/completions",
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpHeaderAuth",
+    "sendBody": true,
+    "specifyBody": "json",
+    "jsonBody": "={{ JSON.stringify($json.body.body) }}",
+    "options": {
+     "timeout": 900000,
+     "response": {
+      "response": {
+       "neverError": true
+      }
+     }
+    }
+   },
+   "name": "Call openrouter",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.2,
+   "position": [
+    440,
+    100
+   ],
+   "credentials": {
+    "httpHeaderAuth": {
+     "id": "3KOXDCYCjkii6i56",
+     "name": "OpenRouter"
+    }
+   }
+  }
+ ],
+ "connections": {
+  "In": {
+   "main": [
+    [
+     {
+      "node": "DeepSeek?",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "DeepSeek?": {
+   "main": [
+    [
+     {
+      "node": "Call deepseek",
+      "type": "main",
+      "index": 0
+     }
+    ],
+    [
+     {
+      "node": "Call openrouter",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  }
+ },
+ "settings": {
+  "executionOrder": "v1",
+  "saveDataSuccessExecution": "none",
+  "saveDataErrorExecution": "all"
+ }
+}
