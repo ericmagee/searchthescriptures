@@ -1,0 +1,235 @@
+{
+ "deepseek": {
+  "calls": 98,
+  "call_errors": 0,
+  "empty": 1,
+  "call_error_pct": 1,
+  "EA": {
+   "prem": 238,
+   "noline": 1,
+   "notfound": 14,
+   "lines": 288,
+   "gold": 142,
+   "false_stated": 21,
+   "errors": 42,
+   "fs_parts": {
+    "read": 18,
+    "no_line": 0,
+    "verse_words_not_found": 3
+   },
+   "form_fail_pct": 6.3
+  },
+  "plants": {
+   "right": 10,
+   "of": 10,
+   "detail": [
+    "P1 r1 STATED",
+    "P2 r1 NOT STATED",
+    "P3 r1 INFERRED ACT",
+    "P4 r1 NOT STATED",
+    "P5 r1 STATED",
+    "P1 r2 STATED",
+    "P2 r2 NOT STATED",
+    "P3 r2 INFERRED ACT",
+    "P4 r2 NOT STATED",
+    "P5 r2 STATED"
+   ]
+  },
+  "D4": {
+   "n": 40,
+   "noline": 3,
+   "gold": 40,
+   "wrong_agree": 10,
+   "wrong_right": 11
+  },
+  "stability": {
+   "same": 113,
+   "pairs": 144
+  },
+  "tokens": {
+   "prompt": 936790,
+   "completion": 1324750,
+   "reasoning": 1262831
+  },
+  "cost_usd_reported": 0,
+  "seconds_median": 75.5,
+  "reasoning_default": [
+   "reasoning returned"
+  ]
+ },
+ "ember": {
+  "calls": 98,
+  "call_errors": 0,
+  "empty": 0,
+  "call_error_pct": 0,
+  "EA": {
+   "prem": 238,
+   "noline": 0,
+   "notfound": 1,
+   "lines": 286,
+   "gold": 142,
+   "false_stated": 25,
+   "errors": 40,
+   "fs_parts": {
+    "read": 25,
+    "no_line": 0,
+    "verse_words_not_found": 0
+   },
+   "form_fail_pct": 0.4
+  },
+  "plants": {
+   "right": 10,
+   "of": 10,
+   "detail": [
+    "P1 r1 STATED",
+    "P2 r1 NOT STATED",
+    "P3 r1 INFERRED ACT",
+    "P4 r1 NOT STATED",
+    "P5 r1 STATED",
+    "P1 r2 STATED",
+    "P2 r2 NOT STATED",
+    "P3 r2 INFERRED ACT",
+    "P4 r2 NOT STATED",
+    "P5 r2 STATED"
+   ]
+  },
+  "D4": {
+   "n": 40,
+   "noline": 0,
+   "gold": 40,
+   "wrong_agree": 9,
+   "wrong_right": 9
+  },
+  "stability": {
+   "same": 123,
+   "pairs": 144
+  },
+  "tokens": {
+   "prompt": 926466,
+   "completion": 1049461,
+   "reasoning": 986481
+  },
+  "cost_usd_reported": 0.5861,
+  "seconds_median": 31.3,
+  "reasoning_default": [
+   "reasoning returned",
+   "no reasoning text"
+  ]
+ },
+ "hy4": {
+  "calls": 98,
+  "call_errors": 1,
+  "empty": 93,
+  "call_error_pct": 95.9,
+  "EA": {
+   "prem": 238,
+   "noline": 234,
+   "notfound": 0,
+   "lines": 5,
+   "gold": 142,
+   "false_stated": 100,
+   "errors": 152,
+   "fs_parts": {
+    "read": 0,
+    "no_line": 100,
+    "verse_words_not_found": 0
+   },
+   "form_fail_pct": 98.3
+  },
+  "plants": {
+   "right": 0,
+   "of": 10,
+   "detail": [
+    "P1 r1 NO LINE (gold STATED)",
+    "P2 r1 NO LINE (gold NOT STATED)",
+    "P3 r1 NO LINE (gold INFERRED ACT)",
+    "P4 r1 NO LINE (gold NOT STATED)",
+    "P5 r1 NO LINE (gold STATED)",
+    "P1 r2 NO LINE (gold STATED)",
+    "P2 r2 NO LINE (gold NOT STATED)",
+    "P3 r2 NO LINE (gold INFERRED ACT)",
+    "P4 r2 NO LINE (gold NOT STATED)",
+    "P5 r2 NO LINE (gold STATED)"
+   ]
+  },
+  "D4": {
+   "n": 40,
+   "noline": 40,
+   "gold": 40,
+   "wrong_agree": 40,
+   "wrong_right": 40
+  },
+  "stability": {
+   "same": 142,
+   "pairs": 144
+  },
+  "tokens": {
+   "prompt": 923506,
+   "completion": 5961415,
+   "reasoning": 5961136
+  },
+  "cost_usd_reported": 7.6048,
+  "seconds_median": 364.2,
+  "reasoning_default": [
+   "reasoning returned"
+  ]
+ },
+ "hy4_flash": {
+  "calls": 98,
+  "call_errors": 0,
+  "empty": 9,
+  "call_error_pct": 9.2,
+  "EA": {
+   "prem": 238,
+   "noline": 6,
+   "notfound": 3,
+   "lines": 274,
+   "gold": 142,
+   "false_stated": 15,
+   "errors": 42,
+   "fs_parts": {
+    "read": 14,
+    "no_line": 0,
+    "verse_words_not_found": 1
+   },
+   "form_fail_pct": 3.8
+  },
+  "plants": {
+   "right": 10,
+   "of": 10,
+   "detail": [
+    "P1 r1 STATED",
+    "P2 r1 NOT STATED",
+    "P3 r1 INFERRED ACT",
+    "P4 r1 NOT STATED",
+    "P5 r1 STATED",
+    "P1 r2 STATED",
+    "P2 r2 NOT STATED",
+    "P3 r2 INFERRED ACT",
+    "P4 r2 NOT STATED",
+    "P5 r2 STATED"
+   ]
+  },
+  "D4": {
+   "n": 40,
+   "noline": 8,
+   "gold": 40,
+   "wrong_agree": 16,
+   "wrong_right": 16
+  },
+  "stability": {
+   "same": 113,
+   "pairs": 144
+  },
+  "tokens": {
+   "prompt": 942826,
+   "completion": 1661000,
+   "reasoning": 1608632
+  },
+  "cost_usd_reported": 0.2505,
+  "seconds_median": 72.7,
+  "reasoning_default": [
+   "reasoning returned"
+  ]
+ }
+}
