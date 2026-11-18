@@ -6,7 +6,7 @@ Assignment Wall 8826 (item 8 of 8821): build W1, grade W2 and W3. A tool in git;
   Run it with execute_sql. It applies the pairs to the base version in SQL, in order, with replace(); each pair must
   occur exactly once in the text as it stands when applied. RESULT is MATCH only when every pair occurs once and the
   applied text equals the stored new version in md5 and length; otherwise MISMATCH with the reason. The last row shows
-  the new version's engine_manual_log row. It does not call engine_manual_apply (ASK 421), so it is a second reader of it.
+  the new version's engine_manual_log row; rows are ordered by an explicit ORDER BY (W2 8880 note). It does not call engine_manual_apply (ASK 421), so it is a second reader of it.
 - `plants.cjs`: `node plants.cjs <pairs.json> <out_dir>` writes 4 wrong pair sets (pair 1 new text + one space;
   pair 2 old absent; pair 1 old = one space; last pair dropped).
 - `pairs_v191_v192.json` (sha256 03a7401700e0): the 4 pairs of engine manual v192 (ASK 374 and 376 entries).

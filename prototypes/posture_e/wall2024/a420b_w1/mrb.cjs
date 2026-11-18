@@ -29,9 +29,10 @@ const sql = [
   " union all select a.i+1, replace(a.txt,pr.o,pr.n), ((length(a.txt)-length(replace(a.txt,pr.o,'')))/length(pr.o))::int from a join pr on pr.ord=a.i+1),",
   'fin as (select txt from a where i=(select count(*) from pr)),',
   'bad as (select count(*) c from a where i>0 and occ<>1)',
-  "select 'pair '||a.i step, a.occ occurrences, (select length(o) from pr where ord=a.i) old_len, (select length(n) from pr where ord=a.i) new_len, null::text detail from a where a.i>0",
+  "select step, occurrences, old_len, new_len, detail from (",
+  "select a.i k, 'pair '||a.i step, a.occ occurrences, (select length(o) from pr where ord=a.i) old_len, (select length(n) from pr where ord=a.i) new_len, null::text detail from a where a.i>0",
   'union all',
-  "select 'RESULT', null, null, null,",
+  "select 1000000, 'RESULT', null, null, null,",
   " case when not exists(select 1 from b) then 'MISMATCH: base version " + B + " not found'",
   "      when not exists(select 1 from s) then 'MISMATCH: version " + N + " not found'",
   "      when (select c from bad)>0 then 'MISMATCH: '||(select c from bad)||' pair(s) do not occur exactly once ('||(select string_agg(i::text||'='||occ,', ' order by i) from a where i>0 and occ<>1)||')'",
@@ -39,7 +40,8 @@ const sql = [
   "      when (select md5(txt) from fin)<>(select md5(content) from s) or (select length(txt) from fin)<>(select length(content) from s) then 'MISMATCH: applied '||(select md5(txt)||' / '||length(txt) from fin)||' vs stored '||(select md5(content)||' / '||length(content) from s)",
   "      else 'MATCH: applied = stored v" + N + ", md5 '||(select md5(content) from s)||', length '||(select length(content) from s)||'; base v" + B + " md5 '||(select md5(content) from b)||'; pairs '||(select count(*) from pr) end",
   'union all',
-  "select 'LOG v" + N + "', null, null, null, coalesce((select string_agg(coalesce(entry_date::text,'no date')||' | '||title||' | char_len '||char_len||' | log text length '||length(content), ' || ' order by id) from engine_manual_log where version=" + N + "),'no log row for v" + N + "');",
+  "select 1000001, 'LOG v" + N + "', null, null, null, coalesce((select string_agg(coalesce(entry_date::text,'no date')||' | '||title||' | char_len '||char_len||' | log text length '||length(content), ' || ' order by id) from engine_manual_log where version=" + N + "),'no log row for v" + N + "')",
+  ') z order by k;',
   ''
 ].join('\n');
 process.stdout.write(sql);
