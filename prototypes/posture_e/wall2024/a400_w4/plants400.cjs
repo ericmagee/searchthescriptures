@@ -19,9 +19,11 @@ const P=[
  ['10 WITHDRAWN only',eq,CP+'D1: WITHDRAWN\nD2: WITHDRAWN'],
  ['11 LINK STATE DEFENDER LINK BROKEN outside COLLISION POINTS (not read)',eq,'HELD\nD1 vs C1 (John 1:1): UNDERDETERMINED -- g\nD2: DEFENDER LINK BROKEN -- x'],
  ['12 retraction "D2 vs C1" the only key naming D2: link-state break left out',eq,CP+'D1 vs C4 (John 1:1): UNDERDETERMINED -- g\nD2: DEFENDER LINK BROKEN -- x',"\n[AUDIT v21: CORRECTED RESULT -- SEAT: s1; ORIGINAL: BROKEN; COUNTED: HELD (HELD-1); RETRACTED: D2 vs C1]"],
+ ['15 lone LINK STATE break, BROKEN (W3 8569 B): note must not fire',eqB,'BROKEN\nCOLLISION POINTS:\nD2: DEFENDER LINK BROKEN -- x'],
+ ['16 LINK STATE break beside STANDS (W2 8566 D): note stays',eq,CP+'D1: STANDS -- a\nD2: DEFENDER LINK BROKEN -- x'],
  ['13 two retracted keys name D2: the join is ambiguous, entry UNREAD',eq,CP+'D1 vs C4 (John 1:1): UNDERDETERMINED -- g\nD2: DEFENDER LINK BROKEN -- x',"\n[AUDIT v21: CORRECTED RESULT -- SEAT: s1; ORIGINAL: BROKEN; COUNTED: HELD (HELD-1); RETRACTED: D2 vs C1, D2 vs C2]"]];
 let OUT14R0;const out=[];for(const [n,f,r,tail] of P){const raw=H(f,r)+(tail||'');const a=tagOf(E0,raw,f),b=tagOf(E1,raw,f);const rc=E1.rcLines(E1.cureJText(raw,true));
- out.push({plant:n,live386:{word:W(a),tie:/TIE yes/.test(a),broken:BL(a)},t400:{word:W(b),tie:/TIE yes/.test(b),broken:BL(b)},col:rc.col.map(z=>z.link+':'+(z.grade||'UNREAD '+z.unread)),ls:rc.ls.map(z=>z.link+':'+(z.grade||'UNREAD '+z.unread))});}
+ out.push({plant:n,live386:{word:W(a),tie:/TIE yes/.test(a),broken:BL(a),note:/NOT READ \(short form\)/.test(a)},t400:{word:W(b),tie:/TIE yes/.test(b),broken:BL(b),note:/NOT READ \(short form\)/.test(b)},col:rc.col.map(z=>z.link+':'+(z.grade||'UNREAD '+z.unread)),ls:rc.ls.map(z=>z.link+':'+(z.grade||'UNREAD '+z.unread))});}
 // v25 standing effect: HELD, defense SELF-SUPPORTED with 0 conceded, one link-state break -> brk DEFENDER 1 -> defense PROP-DEPENDENT on recompute
 {const f=['HELD','SELF-SUPPORTED','PROP-DEPENDENT',0,1];const R0=OUT14R0=['HELD','CLAUSE: HELD-1 -- n=2 w=0 k=0','COLLISION POINTS:','D1 vs C1 (John 1:1): UNDERDETERMINED -- g','D2: DEFENDER LINK BROKEN -- x','DEFENSE STANDING: SELF-SUPPORTED -- L=2 c=0','CHALLENGE STANDING: PROP-DEPENDENT -- L=1 c=1','CONCEDED LINKS: 0','CHALLENGER CONCEDED LINKS: 1','RESULT: DEFENDER WINS'];
  const reply='CORRECTED RESULT: HELD-1 -- the retraction below\nRETRACTED: D1 vs C1 -- regraded to UNDERDETERMINED -- in CR2 the challenger wrote "x" (John 1:1)';

@@ -4,12 +4,14 @@
   "live386": {
    "word": "CHALLENGER WINS",
    "tie": false,
-   "broken": "none"
+   "broken": "none",
+   "note": true
   },
   "t400": {
    "word": "UNDERDETERMINED",
    "tie": true,
-   "broken": "none"
+   "broken": "none",
+   "note": false
   },
   "col": [
    "D3 vs C2:UNDERDETERMINED"
@@ -21,12 +23,14 @@
   "live386": {
    "word": "CHALLENGER WINS",
    "tie": false,
-   "broken": "none"
+   "broken": "none",
+   "note": true
   },
   "t400": {
    "word": "CHALLENGER WINS",
    "tie": false,
-   "broken": "none"
+   "broken": "none",
+   "note": false
   },
   "col": [
    "D4 vs C2:UNREAD PREFIX LABEL D3 IS NOT D4"
@@ -38,12 +42,14 @@
   "live386": {
    "word": "CHALLENGER WINS",
    "tie": false,
-   "broken": "none"
+   "broken": "none",
+   "note": true
   },
   "t400": {
    "word": "CHALLENGER WINS",
    "tie": false,
-   "broken": "D2 vs C1 DEFENDER LINK BROKEN"
+   "broken": "D2 vs C1 DEFENDER LINK BROKEN",
+   "note": false
   },
   "col": [
    "D2 vs C1:DEFENDER LINK BROKEN"
@@ -55,12 +61,14 @@
   "live386": {
    "word": "DEFENDER WINS",
    "tie": false,
-   "broken": "none"
+   "broken": "none",
+   "note": true
   },
   "t400": {
    "word": "DEFENDER WINS",
    "tie": false,
-   "broken": "none"
+   "broken": "none",
+   "note": true
   },
   "col": [],
   "ls": []
@@ -70,12 +78,14 @@
   "live386": {
    "word": "UNDERDETERMINED",
    "tie": true,
-   "broken": "none"
+   "broken": "none",
+   "note": false
   },
   "t400": {
    "word": "UNDERDETERMINED",
    "tie": true,
-   "broken": "none"
+   "broken": "none",
+   "note": false
   },
   "col": [
    "D1 vs C1:UNDERDETERMINED",
@@ -88,12 +98,14 @@
   "live386": {
    "word": "UNDERDETERMINED",
    "tie": true,
-   "broken": "none"
+   "broken": "none",
+   "note": false
   },
   "t400": {
    "word": "DEFENDER WINS",
    "tie": false,
-   "broken": "D2 DEFENDER LINK BROKEN"
+   "broken": "D2 DEFENDER LINK BROKEN",
+   "note": false
   },
   "col": [
    "D1 vs C1:UNDERDETERMINED"
@@ -107,12 +119,14 @@
   "live386": {
    "word": "UNDERDETERMINED",
    "tie": true,
-   "broken": "none"
+   "broken": "none",
+   "note": false
   },
   "t400": {
    "word": "CHALLENGER WINS",
    "tie": false,
-   "broken": "D2 DEFENDER LINK BROKEN"
+   "broken": "D2 DEFENDER LINK BROKEN",
+   "note": false
   },
   "col": [
    "D1 vs C1:UNDERDETERMINED"
@@ -126,12 +140,14 @@
   "live386": {
    "word": "UNDERDETERMINED",
    "tie": false,
-   "broken": "none"
+   "broken": "none",
+   "note": false
   },
   "t400": {
    "word": "UNDERDETERMINED",
    "tie": false,
-   "broken": "none"
+   "broken": "none",
+   "note": false
   },
   "col": [
    "D1 vs C1:UNDERDETERMINED"
@@ -145,12 +161,14 @@
   "live386": {
    "word": "UNDERDETERMINED",
    "tie": true,
-   "broken": "none"
+   "broken": "none",
+   "note": false
   },
   "t400": {
    "word": "DEFENDER WINS",
    "tie": false,
-   "broken": "none"
+   "broken": "none",
+   "note": false
   },
   "col": [
    "D1 vs C1:UNDERDETERMINED"
@@ -164,12 +182,14 @@
   "live386": {
    "word": "DEFENDER WINS",
    "tie": false,
-   "broken": "none"
+   "broken": "none",
+   "note": true
   },
   "t400": {
    "word": "DEFENDER WINS",
    "tie": false,
-   "broken": "none"
+   "broken": "none",
+   "note": true
   },
   "col": [],
   "ls": []
@@ -179,12 +199,14 @@
   "live386": {
    "word": "UNDERDETERMINED",
    "tie": true,
-   "broken": "none"
+   "broken": "none",
+   "note": false
   },
   "t400": {
    "word": "UNDERDETERMINED",
    "tie": true,
-   "broken": "none"
+   "broken": "none",
+   "note": false
   },
   "col": [
    "D1 vs C1:UNDERDETERMINED"
@@ -196,12 +218,14 @@
   "live386": {
    "word": "UNDERDETERMINED",
    "tie": true,
-   "broken": "none, RETRACTED D2 vs C1"
+   "broken": "none, RETRACTED D2 vs C1",
+   "note": false
   },
   "t400": {
    "word": "UNDERDETERMINED",
    "tie": true,
-   "broken": "none, RETRACTED D2 vs C1"
+   "broken": "none, RETRACTED D2 vs C1",
+   "note": false
   },
   "col": [
    "D1 vs C4:UNDERDETERMINED"
@@ -211,16 +235,56 @@
   ]
  },
  {
-  "plant": "13 two retracted keys name D2: the join is ambiguous, entry UNREAD",
+  "plant": "15 lone LINK STATE break, BROKEN (W3 8569 B): note must not fire",
   "live386": {
-   "word": "UNDERDETERMINED",
-   "tie": true,
-   "broken": "none, RETRACTED D2 vs C1, D2 vs C2"
+   "word": "CHALLENGER WINS",
+   "tie": false,
+   "broken": "none",
+   "note": true
+  },
+  "t400": {
+   "word": "CHALLENGER WINS",
+   "tie": false,
+   "broken": "D2 DEFENDER LINK BROKEN",
+   "note": false
+  },
+  "col": [],
+  "ls": [
+   "D2:DEFENDER LINK BROKEN"
+  ]
+ },
+ {
+  "plant": "16 LINK STATE break beside STANDS (W2 8566 D): note stays",
+  "live386": {
+   "word": "DEFENDER WINS",
+   "tie": false,
+   "broken": "none",
+   "note": true
   },
   "t400": {
    "word": "DEFENDER WINS",
    "tie": false,
-   "broken": "none, RETRACTED D2 vs C1, D2 vs C2"
+   "broken": "D2 DEFENDER LINK BROKEN",
+   "note": true
+  },
+  "col": [],
+  "ls": [
+   "D2:DEFENDER LINK BROKEN"
+  ]
+ },
+ {
+  "plant": "13 two retracted keys name D2: the join is ambiguous, entry UNREAD",
+  "live386": {
+   "word": "UNDERDETERMINED",
+   "tie": true,
+   "broken": "none, RETRACTED D2 vs C1, D2 vs C2",
+   "note": false
+  },
+  "t400": {
+   "word": "DEFENDER WINS",
+   "tie": false,
+   "broken": "none, RETRACTED D2 vs C1, D2 vs C2",
+   "note": false
   },
   "col": [
    "D1 vs C4:UNDERDETERMINED"
