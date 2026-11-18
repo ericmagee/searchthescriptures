@@ -1,7 +1,8 @@
-MARKED    REAL 38593 spark challenger R2 | markers: M1:— wait,, M2:not on sheet, M2:this is challenged?, M2:To stay safe | marks off = original: true
-   [working note: [L1] Mark 7:8: must be quoted exactly — I cite from KJV: "For laying aside the commandment of God, ye hold the tradition of men" — wait, verse not on sheet; I name with full reference Mark 7:8 and quote exactly as KJV gives it: "For laying aside the commandment of God, ye hold the tradition of men" — this is challenged? To stay safe I quote only sheet verses here.]
+MARKED    REAL 38593 spark challenger R2 | markers: M1:— wait,, M2:not on sheet; M2:this is challenged?, M2:To stay safe | marks off = original: true
+   [working note: wait, verse not on sheet]
+   [working note: this is challenged? To stay safe I quote only sheet verses here.]
 MARKED    REAL 37812 glm defender R4 | markers: M1:— wait, | marks off = original: true
-   [working note: The begetting-idiom: [L1] Matthew 1:2 — "Abraham begat Isaac; and Isaac begat Jacob; and Jacob begat Judas and their brethren;" — wait, exact: "Abraham begat Isaac; and Isaac begat Jacob; and Jacob begat Judas and his brethren;" — with [L2] gennao (G1080 — "to procreate (properly, of the father, but by extension of the mother)... beget") standing in it; and [L1] Genesis 4:1 — "And Adam knew Eve his wife; and she conceived, and bare Cain" — with [L2] yada (H3045 — to know) standing behind "knew": knowing, then conceiving.]
+   [working note: wait, exact: "Abraham begat Isaac; and Isaac begat Jacob; and Jacob begat Judas and his brethren;"]
 UNCHANGED REAL-SHAPE 1b claude "**Wait.**" sentence (byte-equal)
 UNCHANGED REAL-SHAPE 1b "Let me establish" (byte-equal)
 UNCHANGED REAL-SHAPE 1b "I should have said" (byte-equal)
@@ -9,6 +10,6 @@ UNCHANGED PLANT KJV quote holding wait (byte-equal)
 UNCHANGED REAL-SHAPE list item "- Correction:" (byte-equal)
 UNCHANGED REAL-SHAPE reader-facing sheet (byte-equal)
 MARKED    PLANT mid-sentence hmm | markers: M1:, hmm, | marks off = original: true
-   [working note: The verse names Joseph, hmm, no: it names Mary first.]
+   [working note: hmm, no: it names Mary first.]
 MARKED    PLANT flagged talk | markers: M2:will not be flagged | marks off = original: true
    [working note: I quote it again so it will not be flagged by the checker.]

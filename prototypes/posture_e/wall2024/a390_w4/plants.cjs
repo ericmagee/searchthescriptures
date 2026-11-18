@@ -12,4 +12,4 @@ const P=[['REAL 38593 spark challenger R2',g('ODV1-38593','engine_r2')],['REAL 3
 for(const [nm,t] of P){const w=wn390(t);if(!w.notes.length){console.log('UNCHANGED '+nm+(w.text===t?' (byte-equal)':' !! CHANGED'));continue;}
  let back='',o=0,q=0;for(const x of w.notes){const pre=x.span[0]-q;back+=w.text.slice(o,o+pre);o+=pre+'[working note: '.length;const len=x.span[1]-x.span[0];back+=w.text.slice(o,o+len);o+=len+1;q=x.span[1];}back+=w.text.slice(o);
  console.log('MARKED    '+nm+' | markers: '+w.notes.map(x=>x.marker).join('; ')+' | marks off = original: '+(back===t));
- for(const x of w.notes){const s=w.text.indexOf('[working note: ');console.log('   '+w.text.slice(s,s+'[working note: '.length+(x.span[1]-x.span[0])+1).replace(/\s+/g,' '));}}
+ {let s=0;for(const x of w.notes){s=w.text.indexOf('[working note: ',s);console.log('   '+w.text.slice(s,s+'[working note: '.length+(x.span[1]-x.span[0])+1).replace(/\s+/g,' '));s+=1;}}}
