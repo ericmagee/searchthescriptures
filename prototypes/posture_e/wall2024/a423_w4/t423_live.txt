@@ -1,0 +1,39 @@
+the ASK 423 block is byte-identical in C2B, D3B and C3B Extract (3513 chars)
+
+RUN 39266: defender chain 5 | defender list against the challenger 4
+ gr2 rewritten: entry 1: LINK D5 -> LINK 5; entry 2: LINK D5 -> LINK 5; entry 3: LINK D4 -> LINK 4; entry 4: LINK D4 -> LINK 4; entry 5: LINK D3 -> LINK 3; entry 6: LINK D1 -> LINK 1
+ gr2 left: none
+ cr3 rewritten: block: LINK D5 [premise 1] -> LINK 5 [premise 1]; block: LINK D5 [premise 2] -> LINK 5 [premise 2]; block: LINK D4 [premise 3] -> LINK 4 [premise 3]; block: LINK D4 [premise 4] -> LINK 4 [premise 4]; block: LINK D3 -> LINK 3; block: LINK D1 -> LINK 1
+ cr3 left: none
+ (b) Assume Check, old texts:
+   premise 1 link 1 block (none)
+   premise 2 link 2 block (none)
+   premise 3 link 3 block (none)
+   premise 4 link 4 block (none)
+   premise 5 link 5 block (none)
+   premise 6 link 6 block (none)
+ (b) Assume Check, new texts and new vp4Block:
+   premise 1 link 5 block LINK 5 [premise 1]: SUPPORTED
+   premise 2 link 5 block LINK 5 [premise 2]: SUPPORTED
+   premise 3 link 4 block LINK 4 [premise 3]: SUPPORTED
+   premise 4 link 4 block LINK 4 [premise 4]: SUPPORTED
+   premise 5 link 3 block LINK 3: SUPPORTED
+   premise 6 link 1 block LINK 1: SUPPORTED
+ (c) E-PREM blocksOf on the defender round 3: old 0 blocks [] | new 6 blocks [[5,1],[5,2],[4,3],[4,4],[3,null],[1,null]]
+ node output (C2B): raw_labelled_as_written kept true | labelled rewritten true | round_fix.labels 6 rewritten
+
+(d) stored rows with a candidate label: 19 runs; texts unchanged 50 changed 7
+label forms met:
+  29 x LINK Dn => rewritten
+  4 x LINK Dn [premise n] => rewritten
+numbers-only copies of every text (labels made numeric first): not byte-equal 0
+
+(e) plants, chain 5
+   "1. LINK D9: x" -> "1. LINK D9: x" | - | LINK D9 (outside the declared chain)
+   "1. LINK D1 & D2: x" -> "1. LINK D1 & D2: x" | - | LINK D1 & D2: x (joint label)
+   "**LINK D3:** x" -> "**LINK 3:** x" | LINK D3 -> LINK 3 | -
+   "2. LINK D1-D2: x" -> "2. LINK D1-D2: x" | - | LINK D1-D2: x (joint label)
+   "3. LINK C2: x" -> "3. LINK C2: x" | - | LINK C2 (outside the declared chain)
+   "### LINK D4 [premise 2]: x" -> "### LINK 4 [premise 2]: x" | LINK D4 [premise 2] -> LINK 4 [premise 2] | -
+   "LINK 3: numbers only" -> "LINK 3: numbers only" | - | -
+   "4. LINK **D2**: x" -> "4. LINK **D2**: x" | - | LINK **D2 (other form)
