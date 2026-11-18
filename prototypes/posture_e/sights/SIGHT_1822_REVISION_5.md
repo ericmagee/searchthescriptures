@@ -1,6 +1,6 @@
 # Sight 1822 Revision 5 (proposal, not written)
 
-Drafted by W3 (session_01H1X3ANsGiMnhnbkfphocmo) on 2026-11-17 at 19:59 CST. Rev 5.1 (20:02 CST) adds the operator's rows (19:57 CST: "Acts 10:38, 2 Corinthians 1:21-22, 1 John 2:20 and 27") and W2 8005 items 4 and 5 (Acts 4:27; the ruling stated as ground; Matthew 1:20's gennao met in place). Every verse was pulled live from kjv_verses this session, and every Strong's tag from kjv_word_map and lexicon_words.
+Drafted by W3 (session_01H1X3ANsGiMnhnbkfphocmo) on 2026-11-17 at 19:59 CST. Rev 5.2 (20:05 CST) applies W1's grade conditions C1 and C2, W2's 8007 condition (G4905 met with Matthew 1:24), and the operator's test at 20:00 CST. The anointing rows do not share Matthew's ek, so they are stated as carrying the meaning of the title "Christ". Rev 5.1 (20:02 CST) adds the operator's rows (19:57 CST: "Acts 10:38, 2 Corinthians 1:21-22, 1 John 2:20 and 27") and W2 8005 items 4 and 5 (Acts 4:27; the ruling stated as ground; Matthew 1:20's gennao met in place). Every verse was pulled live from kjv_verses this session, and every Strong's tag from kjv_word_map and lexicon_words.
 
 ## Cause
 
@@ -31,12 +31,12 @@ Matthew 1:18: "Now the birth of Jesus Christ was on this wise: When as his mothe
 - 60 canon rows;
 - 33 that narrate a conception;
 - every one of them naming the man in the row or its chain.
-The event itself names the husband: "Joseph her husband" (1:19), "Mary thy wife" (1:20). "Before they came together" is synerchomai, the coming into one household, and the two were husband and wife from the espousal (Sight 32). A doctrine resting on one event against the whole count is single-verse doctrine.
+The event itself names the husband: "Joseph her husband" (1:19), "Mary thy wife" (1:20). "Before they came together" is synerchomai (G4905): "to convene, depart in company with, associate with, or (specially), cohabit (conjugally)". Matthew 1:24 shows that coming together: "Then Joseph being raised from sleep did as the angel of the Lord had bidden him, and took unto him his wife:". The two were husband and wife from the espousal (Sight 32). A doctrine resting on one event against the whole count is single-verse doctrine.
 
 (2) WHAT "OF THE HOLY GHOST" SAYS: THE CHILD IS THE ANOINTED.
 - "Christ" is Christos (G5547), "anointed, i.e. the Messiah".
 - Matthew 1:18 names the child in the same row: "the birth of Jesus Christ".
-- He is the Anointed from his birth, before the Jordan:
+- He is named the Anointed at his birth, before the Jordan:
   - Luke 2:11: "For unto you is born this day in the city of David a Saviour, which is Christ the Lord."
   - Luke 2:26: "And it was revealed unto him by the Holy Ghost, that he should not see death, before he had seen the Lord's Christ."
   - Matthew 2:4: "And when he had gathered all the chief priests and scribes of the people together, he demanded of them where Christ should be born."
@@ -52,9 +52,9 @@ The event itself names the husband: "Joseph her husband" (1:19), "Mary thy wife"
   - "Unction" and "anointing" are chrisma (G5545): "an unguent or smearing, i.e. (figuratively) the special endowment ('chrism') of the Holy Spirit". "Anointed" is chrio (G5548): "to smear or rub with oil, i.e. (by implication) to consecrate to an office or religious service".
   - The Spirit "in our hearts" and the anointing that "abideth in you" consecrate. They do not beget.
 - The child is named as the one anointed: Acts 4:27, "For of a truth against thy holy child Jesus, whom thou hast anointed, both Herod, and Pontius Pilate, with the Gentiles, and the people of Israel, were gathered together,"
-So "found with child of the Holy Ghost" and "that which is conceived in her is of the Holy Ghost" say this: the child in her is the Anointed, anointed from the womb, with the anointing declared at the Jordan. Neither row names a begetter.
+These anointing rows do not use the "of" (ek) of Matthew 1:18-20. They carry the meaning of the title that 1:18 gives the child: "Christ", "anointed". So "found with child of the Holy Ghost" and "that which is conceived in her is of the Holy Ghost" say this: the child in her is the Anointed. He is named so at his birth, and the anointing is declared at the Jordan. The Holy Ghost on a child from the womb is the precept of Luke 1:15 in (3). Neither row names a begetter.
 
-THE VERB AT 1:20, MET IN PLACE. "Conceived [Gr. begotten]" is gennao (G1080): "to procreate (properly, of the father, but by extension of the mother)". The verb says that a child was begotten in her. "Of the Holy Ghost" says what the child is: the Anointed. The row that carries the verb names the husband and the wife: "Joseph, thou son of David, fear not to take unto thee Mary thy wife". The verb's proper subject, the father, is named in the same row. The Spirit is not that subject.
+THE VERB AT 1:20, MET IN PLACE. "Conceived [Gr. begotten]" is gennao (G1080): "to procreate (properly, of the father, but by extension of the mother)". The verb says that a child was begotten in her. "Of the Holy Ghost" says what the child is: the Anointed. [L1] The row that carries the verb names the husband and the wife: "Joseph, thou son of David, fear not to take unto thee Mary thy wife". [L4], footed on the rows of Sight 32: Joseph knew Mary his wife within the espousal, and the child is of his loins. So the verb's proper subject, the father, is the man the row names. The Spirit is not that subject.
 
 (3) THE HOLY GHOST ON A CHILD FROM THE WOMB DOES NOT REMOVE THE FATHER.
 - Luke 1:15: "For he shall be great in the sight of the Lord, and shall drink neither wine nor strong drink; and he shall be filled with the Holy Ghost, even from his mother's womb."
