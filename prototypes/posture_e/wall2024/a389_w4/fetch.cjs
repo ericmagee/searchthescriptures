@@ -1,0 +1,4 @@
+const fs=require('fs');const K='sb_publishable_rgfWFjynRqBdzyEeBRHcig_c6pHysAi',B='https://bhffmkginddovmdcpnty.supabase.co/rest/v1/';
+const get=async u=>{for(let k=0;k<5;k++){try{const r=await fetch(u,{headers:{apikey:K,Authorization:'Bearer '+K}});const j=await r.json();if(Array.isArray(j))return j;console.error(JSON.stringify(j).slice(0,200));}catch(e){console.error(e.message)}await new Promise(r=>setTimeout(r,1000*(k+1)));}throw new Error('fail '+u.slice(0,160));};
+(async()=>{const out=[];let last=0;for(;;){const u=B+'debate_judgments?select=id,debate_id,judge_seat,verdict_raw&or=(verdict_raw.like.*AUDIT%20v27:%20SUPERSEDED%20LINE*,verdict_raw.like.*E-GATE%20NEW%20ITEM*)&id=gt.'+last+'&order=id&limit=25';const r=await get(u);if(!r.length)break;out.push(...r);last=r[r.length-1].id;}
+fs.writeFileSync('a389/jud.json',JSON.stringify(out));console.log('rows',out.length,'chars',out.reduce((a,r)=>a+(r.verdict_raw||'').length,0));})();
