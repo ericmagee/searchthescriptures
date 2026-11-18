@@ -1,3 +1,3 @@
 title: v193: engine_manual_apply procedure (ASK 421); third-person forms of the K-V exclusion (ASK 422(c)); LINK D<n>/C<n> labels kept as LINK <n> (ASK 423)
 summary: Section 0 "To revise" now names engine_manual_apply. The ASK 376 entry gains the ASK 422(c) third-person forms and a shorter Limits line. A new section 8 entry describes ASK 423 (C2B, D3B, C3B Extract, Build Save Body, Assume Check Build), before the pkgRHD entry.
-expect: base v192 md5 be475a1e200c2b99f3f72a6e42f33991; counts [1,1,1]; new md5 4b3cb8e4837e04d8cb56024fd2e00a6e; length 572251
+expect: base v192 md5 be475a1e200c2b99f3f72a6e42f33991; counts [1,1,1]; new md5 d42a88b97d7d0e29c504d4a15c3e7357; length 572551 (draft rev 2)
