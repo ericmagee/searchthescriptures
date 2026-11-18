@@ -1,6 +1,6 @@
 # Sight 1822 Revision 5 (proposal, not written)
 
-Drafted by W3 (session_01H1X3ANsGiMnhnbkfphocmo) on 2026-11-17 at 19:59 CST. Rev 5.3 (20:08 CST) follows the operator's 20:00 CST instruction, "keep in mind context and comprehension ... not word couting". The opening comparison of prepositions with Romans 9:10 is replaced by Matthew 1:18-25 read whole in context, and the line conceding that the anointing rows do not use Matthew's ek is removed. Rev 5.2 (20:05 CST) applies W1's grade conditions C1 and C2, W2's 8007 condition (G4905 met with Matthew 1:24), and the operator's test at 20:00 CST. The anointing rows do not share Matthew's ek, so they are stated as carrying the meaning of the title "Christ". Rev 5.1 (20:02 CST) adds the operator's rows (19:57 CST: "Acts 10:38, 2 Corinthians 1:21-22, 1 John 2:20 and 27") and W2 8005 items 4 and 5 (Acts 4:27; the ruling stated as ground; Matthew 1:20's gennao met in place). Every verse was pulled live from kjv_verses this session, and every Strong's tag from kjv_word_map and lexicon_words.
+Drafted by W3 (session_01H1X3ANsGiMnhnbkfphocmo) on 2026-11-17 at 19:59 CST. Rev 5.4 (20:10 CST) follows the operator's 20:01 CST instruction: "you can't make Matt 1:20 about the holy ghost getting a woman pregnant. you're still stuck on 1 verse doctrine. that doesn't exist ... only Isaiah 28:10". The block no longer argues against a one-verse reading as a rival. It states the method (Isaiah 28:10, already at the head of the sight) and gives the meaning precept upon precept. The "opponent" sentences and the koite word contrast are removed. Rev 5.3 (20:08 CST) follows the operator's 20:00 CST instruction, "keep in mind context and comprehension ... not word couting". The opening comparison of prepositions with Romans 9:10 is replaced by Matthew 1:18-25 read whole in context, and the line conceding that the anointing rows do not use Matthew's ek is removed. Rev 5.2 (20:05 CST) applies W1's grade conditions C1 and C2, W2's 8007 condition (G4905 met with Matthew 1:24), and the operator's test at 20:00 CST. The anointing rows do not share Matthew's ek, so they are stated as carrying the meaning of the title "Christ". Rev 5.1 (20:02 CST) adds the operator's rows (19:57 CST: "Acts 10:38, 2 Corinthians 1:21-22, 1 John 2:20 and 27") and W2 8005 items 4 and 5 (Acts 4:27; the ruling stated as ground; Matthew 1:20's gennao met in place). Every verse was pulled live from kjv_verses this session, and every Strong's tag from kjv_word_map and lexicon_words.
 
 ## Cause
 
@@ -23,6 +23,8 @@ REPLACE the live block, from "L1-L2. ROMANS 9:10 AND MATTHEW 1:20 ARE TWO FORMS,
 
 L1-L2-L3. "OF THE HOLY GHOST" (MATTHEW 1:18, 20): THE CHILD IN HER IS ANOINTED.
 
+By the method above (Isaiah 28:10), no doctrine stands on one verse. Matthew 1:20 cannot be made to say that the Holy Ghost got a woman pregnant. Scripture, precept upon precept, gives its meaning.
+
 Matthew 1:18: "Now the birth of Jesus Christ was on this wise: When as his mother Mary was espoused to Joseph, before they came together, she was found with child of the Holy Ghost."
 
 READ IN CONTEXT. Matthew 1:18-25 is one account, and it is read whole:
@@ -30,9 +32,9 @@ READ IN CONTEXT. Matthew 1:18-25 is one account, and it is read whole:
 - The angel comes to remove that fear: "fear not to take unto thee Mary thy wife". The "for" gives the reason: "for that which is conceived in her is of the Holy Ghost" (1:20). The reason given to a husband for taking his wife is that the child in her is holy, the Anointed. It is not that another is its father. That would be a reason to put her away, not to take her.
 - The same angel gives Joseph the father's office: "And she shall bring forth a son, and thou shalt call his name JESUS: for he shall save his people from their sins. [JESUS: that is, Saviour, Heb]" (1:21).
 - Joseph does it: "Then Joseph being raised from sleep did as the angel of the Lord had bidden him, and took unto him his wife:" (1:24). "And knew her not till she had brought forth her firstborn son: and he called his name JESUS." (1:25).
-The account installs Joseph in the house as husband and father. An opponent who reads "of the Holy Ghost" as a begetter must read the angel's "for" against the angel's own command.
+The account installs Joseph in the house as husband and father.
 
-(1) THE WHOLE COUNT, AND THE HUSBAND IN THE EVENT. The reading that the Holy Ghost begat stands on one event (Matthew 1:18-20) against the whole count above:
+(1) PRECEPT UPON PRECEPT: HOW A WOMAN CONCEIVES, AND THE HUSBAND IN THE EVENT. Scripture tells one way, in every row that tells it (the whole count above):
 - 60 canon rows;
 - 33 that narrate a conception;
 - every one of them naming the man in the row or its chain.
@@ -66,11 +68,9 @@ THE VERB AT 1:20, MET IN PLACE. "Conceived [Gr. begotten]" is gennao (G1080): "t
 - His father is named by the same angel: "thy wife Elisabeth shall bear thee a son" (Luke 1:13).
 - This is a precept, not a word parallel (the ek of 1:15 goes with "womb"): the Holy Ghost on a child from the womb, and the father named.
 
-(4) ROMANS 9:10 NAMES ITS BEGETTER BY KOITE.
+(4) ROMANS 9:10 AGREES: A CONCEPTION IS BY THE MAN.
 - Romans 9:10: "And not only [this]; but when Rebecca also had conceived by one, [even] by our father Isaac;"
-- koite (G2845): "a couch; by extension, cohabitation; by implication, the male sperm".
-- Matthew 1:18-20 has no koite in its rows. What it names is the husband and wife in the event.
-- Both rows stand whole, and neither cancels the other (DG-59). "Of the Holy Ghost" is the covenant-origin and anointing marker (Sight 10; DG-8).
+- Matthew 1:18-25 names that man in the event: Joseph her husband. "Of the Holy Ghost" is the covenant-origin and anointing marker (Sight 10; DG-8). The rows stand whole together, and none cancels another (DG-59).
 
 SUPPORT ONLY: John 3:5, 3:6, 3:8 and John 1:13 give gennao + ek with the Spirit, or with God, for the new birth. They are not womb rows. John 3:6: "That which is born of the flesh is flesh; and that which is born of the Spirit is spirit."
 
