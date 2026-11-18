@@ -1,0 +1,474 @@
+[
+ {
+  "plant": "8 D2: CHALLENGER LINK BROKEN",
+  "live386": {
+   "v25": {
+    "result": "UNDERDETERMINED",
+    "fields": {
+     "verdict_tag": "HELD",
+     "defense_standing": "PROP-DEPENDENT",
+     "conceded_links": 1,
+     "challenge_standing": "PROP-DEPENDENT",
+     "challenger_conceded_links": 1
+    },
+    "trig": [
+     "RETRACTED D1 vs C1 (UNDERDETERMINED to UNDERDETERMINED)",
+     "TIE (KB-0030)"
+    ],
+    "tag": "HELD-1",
+    "rp": [
+     "D1 vs C1 (John 1:1): UNDERDETERMINED -- retracted in the cure -- in CR2 the challenger wrote \"x\" (John 1:1)",
+     "RESULT: UNDERDETERMINED -- recomputed after the cure from the cured lines (RETRACTED D1 vs C1 (UNDERDETERMINED to UNDERDETERMINED); TIE (KB-0030)): HELD-1, CHALLENGE STANDING PROP-DEPENDENT."
+    ]
+   },
+   "v37": {
+    "result": "UNDERDETERMINED",
+    "fields": {
+     "verdict_tag": "HELD",
+     "defense_standing": "PROP-DEPENDENT",
+     "conceded_links": 1,
+     "challenge_standing": "PROP-DEPENDENT",
+     "challenger_conceded_links": 1
+    },
+    "trig": [],
+    "items": [],
+    "lines": [
+     [
+      "CLAUSE: HELD-1 -- n=2 w=0 k=0",
+      "CLAUSE: HELD-1 -- n=2 w=0 k=0, restated",
+      "E-1"
+     ],
+     [
+      "RESULT: DEFENDER WINS",
+      "RESULT: UNDERDETERMINED -- derived after the send-back from the judge's own changed lines (E-1): HELD-1. GROUND: D1 vs C1 (the labels and [L1] of the lines it is derived from; pkgLAY)"
+     ]
+    ],
+    "keys": [
+     "text",
+     "fields",
+     "result",
+     "result0",
+     "tag",
+     "trig",
+     "rp",
+     "audit",
+     "retracted",
+     "cpAdd",
+     "items",
+     "applied",
+     "replace"
+    ]
+   }
+  },
+  "t400": {
+   "v25": {
+    "result": "DEFENDER WINS",
+    "fields": {
+     "verdict_tag": "HELD",
+     "defense_standing": "PROP-DEPENDENT",
+     "conceded_links": 1,
+     "challenge_standing": "PROP-DEPENDENT",
+     "challenger_conceded_links": 1
+    },
+    "trig": [
+     "RETRACTED D1 vs C1 (UNDERDETERMINED to UNDERDETERMINED)",
+     "UNREAD D2 (LINK STATE CHALLENGER LINK BROKEN ON D2)"
+    ],
+    "tag": "UNREAD",
+    "rp": [
+     "D1 vs C1 (John 1:1): UNDERDETERMINED -- retracted in the cure -- in CR2 the challenger wrote \"x\" (John 1:1)"
+    ]
+   },
+   "v37": {
+    "result": "DEFENDER WINS",
+    "fields": {
+     "verdict_tag": "HELD",
+     "defense_standing": "PROP-DEPENDENT",
+     "conceded_links": 1,
+     "challenge_standing": "PROP-DEPENDENT",
+     "challenger_conceded_links": 1
+    },
+    "trig": [
+     "UNREAD D2 (LINK STATE CHALLENGER LINK BROKEN ON D2)"
+    ],
+    "items": [],
+    "lines": [
+     [
+      "CLAUSE: HELD-1 -- n=2 w=0 k=0",
+      "CLAUSE: HELD-1 -- n=2 w=0 k=0, restated",
+      "E-1"
+     ]
+    ],
+    "keys": [
+     "text",
+     "fields",
+     "result",
+     "result0",
+     "tag",
+     "trig",
+     "rp",
+     "audit",
+     "retracted",
+     "cpAdd",
+     "items",
+     "applied",
+     "replace"
+    ]
+   }
+  }
+ },
+ {
+  "plant": "9 bare D2: BROKEN",
+  "live386": {
+   "v25": {
+    "result": "UNDERDETERMINED",
+    "fields": {
+     "verdict_tag": "HELD",
+     "defense_standing": "PROP-DEPENDENT",
+     "conceded_links": 1,
+     "challenge_standing": "PROP-DEPENDENT",
+     "challenger_conceded_links": 1
+    },
+    "trig": [
+     "RETRACTED D1 vs C1 (UNDERDETERMINED to UNDERDETERMINED)",
+     "TIE (KB-0030)"
+    ],
+    "tag": "HELD-1",
+    "rp": [
+     "D1 vs C1 (John 1:1): UNDERDETERMINED -- retracted in the cure -- in CR2 the challenger wrote \"x\" (John 1:1)",
+     "RESULT: UNDERDETERMINED -- recomputed after the cure from the cured lines (RETRACTED D1 vs C1 (UNDERDETERMINED to UNDERDETERMINED); TIE (KB-0030)): HELD-1, CHALLENGE STANDING PROP-DEPENDENT."
+    ]
+   },
+   "v37": {
+    "result": "UNDERDETERMINED",
+    "fields": {
+     "verdict_tag": "HELD",
+     "defense_standing": "PROP-DEPENDENT",
+     "conceded_links": 1,
+     "challenge_standing": "PROP-DEPENDENT",
+     "challenger_conceded_links": 1
+    },
+    "trig": [],
+    "items": [],
+    "lines": [
+     [
+      "CLAUSE: HELD-1 -- n=2 w=0 k=0",
+      "CLAUSE: HELD-1 -- n=2 w=0 k=0, restated",
+      "E-1"
+     ],
+     [
+      "RESULT: DEFENDER WINS",
+      "RESULT: UNDERDETERMINED -- derived after the send-back from the judge's own changed lines (E-1): HELD-1. GROUND: D1 vs C1 (the labels and [L1] of the lines it is derived from; pkgLAY)"
+     ]
+    ],
+    "keys": [
+     "text",
+     "fields",
+     "result",
+     "result0",
+     "tag",
+     "trig",
+     "rp",
+     "audit",
+     "retracted",
+     "cpAdd",
+     "items",
+     "applied",
+     "replace"
+    ]
+   }
+  },
+  "t400": {
+   "v25": {
+    "result": "DEFENDER WINS",
+    "fields": {
+     "verdict_tag": "HELD",
+     "defense_standing": "PROP-DEPENDENT",
+     "conceded_links": 1,
+     "challenge_standing": "PROP-DEPENDENT",
+     "challenger_conceded_links": 1
+    },
+    "trig": [
+     "RETRACTED D1 vs C1 (UNDERDETERMINED to UNDERDETERMINED)",
+     "UNREAD D2 (LINK STATE BROKEN ON D2)"
+    ],
+    "tag": "UNREAD",
+    "rp": [
+     "D1 vs C1 (John 1:1): UNDERDETERMINED -- retracted in the cure -- in CR2 the challenger wrote \"x\" (John 1:1)"
+    ]
+   },
+   "v37": {
+    "result": "DEFENDER WINS",
+    "fields": {
+     "verdict_tag": "HELD",
+     "defense_standing": "PROP-DEPENDENT",
+     "conceded_links": 1,
+     "challenge_standing": "PROP-DEPENDENT",
+     "challenger_conceded_links": 1
+    },
+    "trig": [
+     "UNREAD D2 (LINK STATE BROKEN ON D2)"
+    ],
+    "items": [],
+    "lines": [
+     [
+      "CLAUSE: HELD-1 -- n=2 w=0 k=0",
+      "CLAUSE: HELD-1 -- n=2 w=0 k=0, restated",
+      "E-1"
+     ]
+    ],
+    "keys": [
+     "text",
+     "fields",
+     "result",
+     "result0",
+     "tag",
+     "trig",
+     "rp",
+     "audit",
+     "retracted",
+     "cpAdd",
+     "items",
+     "applied",
+     "replace"
+    ]
+   }
+  }
+ },
+ {
+  "plant": "control: no D2 line",
+  "live386": {
+   "v25": {
+    "result": "UNDERDETERMINED",
+    "fields": {
+     "verdict_tag": "HELD",
+     "defense_standing": "PROP-DEPENDENT",
+     "conceded_links": 1,
+     "challenge_standing": "PROP-DEPENDENT",
+     "challenger_conceded_links": 1
+    },
+    "trig": [
+     "RETRACTED D1 vs C1 (UNDERDETERMINED to UNDERDETERMINED)",
+     "TIE (KB-0030)"
+    ],
+    "tag": "HELD-1",
+    "rp": [
+     "D1 vs C1 (John 1:1): UNDERDETERMINED -- retracted in the cure -- in CR2 the challenger wrote \"x\" (John 1:1)",
+     "RESULT: UNDERDETERMINED -- recomputed after the cure from the cured lines (RETRACTED D1 vs C1 (UNDERDETERMINED to UNDERDETERMINED); TIE (KB-0030)): HELD-1, CHALLENGE STANDING PROP-DEPENDENT."
+    ]
+   },
+   "v37": {
+    "result": "UNDERDETERMINED",
+    "fields": {
+     "verdict_tag": "HELD",
+     "defense_standing": "PROP-DEPENDENT",
+     "conceded_links": 1,
+     "challenge_standing": "PROP-DEPENDENT",
+     "challenger_conceded_links": 1
+    },
+    "trig": [],
+    "items": [],
+    "lines": [
+     [
+      "CLAUSE: HELD-1 -- n=2 w=0 k=0",
+      "CLAUSE: HELD-1 -- n=2 w=0 k=0, restated",
+      "E-1"
+     ],
+     [
+      "RESULT: DEFENDER WINS",
+      "RESULT: UNDERDETERMINED -- derived after the send-back from the judge's own changed lines (E-1): HELD-1. GROUND: D1 vs C1 (the labels and [L1] of the lines it is derived from; pkgLAY)"
+     ]
+    ],
+    "keys": [
+     "text",
+     "fields",
+     "result",
+     "result0",
+     "tag",
+     "trig",
+     "rp",
+     "audit",
+     "retracted",
+     "cpAdd",
+     "items",
+     "applied",
+     "replace"
+    ]
+   }
+  },
+  "t400": {
+   "v25": {
+    "result": "UNDERDETERMINED",
+    "fields": {
+     "verdict_tag": "HELD",
+     "defense_standing": "PROP-DEPENDENT",
+     "conceded_links": 1,
+     "challenge_standing": "PROP-DEPENDENT",
+     "challenger_conceded_links": 1
+    },
+    "trig": [
+     "RETRACTED D1 vs C1 (UNDERDETERMINED to UNDERDETERMINED)",
+     "TIE (KB-0030)"
+    ],
+    "tag": "HELD-1",
+    "rp": [
+     "D1 vs C1 (John 1:1): UNDERDETERMINED -- retracted in the cure -- in CR2 the challenger wrote \"x\" (John 1:1)",
+     "RESULT: UNDERDETERMINED -- recomputed after the cure from the cured lines (RETRACTED D1 vs C1 (UNDERDETERMINED to UNDERDETERMINED); TIE (KB-0030)): HELD-1, CHALLENGE STANDING PROP-DEPENDENT."
+    ]
+   },
+   "v37": {
+    "result": "UNDERDETERMINED",
+    "fields": {
+     "verdict_tag": "HELD",
+     "defense_standing": "PROP-DEPENDENT",
+     "conceded_links": 1,
+     "challenge_standing": "PROP-DEPENDENT",
+     "challenger_conceded_links": 1
+    },
+    "trig": [],
+    "items": [],
+    "lines": [
+     [
+      "CLAUSE: HELD-1 -- n=2 w=0 k=0",
+      "CLAUSE: HELD-1 -- n=2 w=0 k=0, restated",
+      "E-1"
+     ],
+     [
+      "RESULT: DEFENDER WINS",
+      "RESULT: UNDERDETERMINED -- derived after the send-back from the judge's own changed lines (E-1): HELD-1. GROUND: D1 vs C1 (the labels and [L1] of the lines it is derived from; pkgLAY)"
+     ]
+    ],
+    "keys": [
+     "text",
+     "fields",
+     "result",
+     "result0",
+     "tag",
+     "trig",
+     "rp",
+     "audit",
+     "retracted",
+     "cpAdd",
+     "items",
+     "applied",
+     "replace"
+    ]
+   }
+  }
+ },
+ {
+  "plant": "control: long-form UNREAD D2 vs C3",
+  "live386": {
+   "v25": {
+    "result": "DEFENDER WINS",
+    "fields": {
+     "verdict_tag": "HELD",
+     "defense_standing": "PROP-DEPENDENT",
+     "conceded_links": 1,
+     "challenge_standing": "PROP-DEPENDENT",
+     "challenger_conceded_links": 1
+    },
+    "trig": [
+     "RETRACTED D1 vs C1 (UNDERDETERMINED to UNDERDETERMINED)",
+     "UNREAD D2 vs C3 (COLLISION_NO_GRADE_WORD)"
+    ],
+    "tag": "UNREAD",
+    "rp": [
+     "D1 vs C1 (John 1:1): UNDERDETERMINED -- retracted in the cure -- in CR2 the challenger wrote \"x\" (John 1:1)"
+    ]
+   },
+   "v37": {
+    "result": "DEFENDER WINS",
+    "fields": {
+     "verdict_tag": "HELD",
+     "defense_standing": "PROP-DEPENDENT",
+     "conceded_links": 1,
+     "challenge_standing": "PROP-DEPENDENT",
+     "challenger_conceded_links": 1
+    },
+    "trig": [
+     "UNREAD D2 vs C3 (COLLISION_NO_GRADE_WORD)"
+    ],
+    "items": [],
+    "lines": [
+     [
+      "CLAUSE: HELD-1 -- n=2 w=0 k=0",
+      "CLAUSE: HELD-1 -- n=2 w=0 k=0, restated",
+      "E-1"
+     ]
+    ],
+    "keys": [
+     "text",
+     "fields",
+     "result",
+     "result0",
+     "tag",
+     "trig",
+     "rp",
+     "audit",
+     "retracted",
+     "cpAdd",
+     "items",
+     "applied",
+     "replace"
+    ]
+   }
+  },
+  "t400": {
+   "v25": {
+    "result": "DEFENDER WINS",
+    "fields": {
+     "verdict_tag": "HELD",
+     "defense_standing": "PROP-DEPENDENT",
+     "conceded_links": 1,
+     "challenge_standing": "PROP-DEPENDENT",
+     "challenger_conceded_links": 1
+    },
+    "trig": [
+     "RETRACTED D1 vs C1 (UNDERDETERMINED to UNDERDETERMINED)",
+     "UNREAD D2 vs C3 (COLLISION_NO_GRADE_WORD)"
+    ],
+    "tag": "UNREAD",
+    "rp": [
+     "D1 vs C1 (John 1:1): UNDERDETERMINED -- retracted in the cure -- in CR2 the challenger wrote \"x\" (John 1:1)"
+    ]
+   },
+   "v37": {
+    "result": "DEFENDER WINS",
+    "fields": {
+     "verdict_tag": "HELD",
+     "defense_standing": "PROP-DEPENDENT",
+     "conceded_links": 1,
+     "challenge_standing": "PROP-DEPENDENT",
+     "challenger_conceded_links": 1
+    },
+    "trig": [
+     "UNREAD D2 vs C3 (COLLISION_NO_GRADE_WORD)"
+    ],
+    "items": [],
+    "lines": [
+     [
+      "CLAUSE: HELD-1 -- n=2 w=0 k=0",
+      "CLAUSE: HELD-1 -- n=2 w=0 k=0, restated",
+      "E-1"
+     ]
+    ],
+    "keys": [
+     "text",
+     "fields",
+     "result",
+     "result0",
+     "tag",
+     "trig",
+     "rp",
+     "audit",
+     "retracted",
+     "cpAdd",
+     "items",
+     "applied",
+     "replace"
+    ]
+   }
+  }
+ }
+]
