@@ -1,0 +1,106 @@
+{
+ "classes": {
+  "R1drop": 3,
+  "R1add": 24,
+  "R2a_named": 6,
+  "R2a_named_clip": 0,
+  "R2b_refused": 186,
+  "R2b_clipped": 1,
+  "SIDE": 0
+ },
+ "R3": {
+  "cap 12": {
+   "cut": 498,
+   "keysGained": 5976
+  },
+  "cap 30": {
+   "cut": 11,
+   "keysGained": 330
+  },
+  "cap 40": {
+   "cut": 3,
+   "keysGained": 120
+  }
+ },
+ "keys": {
+  "cap 12 scoped": {
+   "lostReal": 2,
+   "lostPhantom": 237,
+   "gainedReal": 3812,
+   "gainedPhantom": 0
+  },
+  "cap 40 scoped": {
+   "lostReal": 2,
+   "lostPhantom": 237,
+   "gainedReal": 121,
+   "gainedPhantom": 0
+  },
+  "cap 30 scoped": {
+   "lostReal": 2,
+   "lostPhantom": 237,
+   "gainedReal": 261,
+   "gainedPhantom": 0
+  },
+  "cap 30 unscoped": {
+   "lostReal": 2,
+   "lostPhantom": 1455,
+   "gainedReal": 257,
+   "gainedPhantom": 0
+  }
+ },
+ "sheet": {
+  "maxN": 205,
+  "maxC": 30031,
+  "newV": [
+   "6ab1c637-2345-40e8-9045-cc35a36a722b 146->155",
+   "a9a85f12-c225-44a3-b6cd-f5a894eb70f1 148->157",
+   "ODV1-24566-hpp2iymr 146->157",
+   "ODV1-26085-34jfk7wt 146->158",
+   "ODV1-26245-m5nh3phz 145->157",
+   "ODV1-27035-vxp28wcr 149->157",
+   "ODV1-27088-cg67a8be 149->165",
+   "ODV1-28424-crfyoutf 145->151",
+   "ODV1-29456-7wi6erod 145->155",
+   "ODV1-29609-uo88rcr2 143->151",
+   "ODV1-32205-iz6ryl2d 148->159",
+   "ODV1-32212-7r5e2xwm 145->161"
+  ],
+  "newC": [
+   "5ac40dec-719c-43a3-b7ca-6bb7dfde5579 23788->25930",
+   "7f68a0c5-d354-4b7b-8e75-5d4d5763b694 22764->24077",
+   "ODV1-25634-z4kq3wse 23664->24561",
+   "ODV1-27259-75fg8o6t 22936->24954"
+  ],
+  "oldOverV": 23,
+  "oldOverC": 9
+ },
+ "ex": {
+  "R2b": [
+   "e9f36f41-b342-4d38-a4e6-36cb1be714f6 | 1 Corinthians 28:11-12 | or 14:21 directly quotes 28:11–12; milk/meat parallel",
+   "53c09ede-95cf-41f7-a635-34046af3a38f | Micah 4:14 | ceding verse (Micah 5:1 [4:14 MT]), where Israel'",
+   "81097479-98d7-42b4-a69c-fc6c8d86a5cf | Micah 2:20 |  2:6 (citing Micah 5:2), 2:20, and 27:42 consiste",
+   "81097479-98d7-42b4-a69c-fc6c8d86a5cf | Micah 27:42 | ng Micah 5:2), 2:20, and 27:42 consistently denote",
+   "ecb73caa-154b-4da6-a572-3431c55ac496 | Matthew 34:5-6 | ttered by bad shepherds (34:5-6, \"scattered upon al",
+   "722ea987-cd61-46e1-b63e-9e38a32f68b5 | Micah 2:20 |  no north/south content. 2:20 — \"land of Israel,\"",
+   "722ea987-cd61-46e1-b63e-9e38a32f68b5 | Micah 19:28 | ael,\" purely geographic. 19:28 — \"twelve tribes of",
+   "722ea987-cd61-46e1-b63e-9e38a32f68b5 | Micah 27:42 |  rather than erasing it. 27:42 — a mocking title, ",
+   "97f635b7-6bc5-40bc-a697-bb72de71bdc1 | Hosea 9:24 | describe those called in 9:24, \"not of the Jews o",
+   "59db5d7b-9620-466d-91b6-5def5d5ff021 | Matthew 11:50 | ς, singular, Israel, per 11:50's \"the people,\" λαό",
+   "de1b1eeb-7cbc-4874-a874-902053a7873d | Luke 49:6 | ulfilling Isaiah 61, not 49:6). The full citation",
+   "58c9af8a-0136-46c4-8dfc-e5358bdecbee | Matthew 1:35 | Highest overshadows her (1:35). [L1] The text al"
+  ],
+  "R2a": [
+   "92e43beb-53fa-42cf-9295-c53233b5314c | Psalms 118:176 |  caused them to err. - **LXX Psalm 118:176 (119:176)** — *epla",
+   "92e43beb-53fa-42cf-9295-c53233b5314c | Psalms 118:176 | ed by shepherds [L2] - **LXX Ps 118:176** — *hōs probaton a",
+   "8b420283-62db-479b-babd-64188f6ef648 | Isaiah 9:27 | lready flags (Paul marks Isa 9:27 \"concerning Israel\"",
+   "46d25153-f15b-449c-987d-4e3f6a513ee5 | Isaiah 9:27 | er notes Paul labels the Isaiah 9:27 citation \"concernin",
+   "336d4a9a-e07f-45a3-87f8-7f8bedf4144e | Romans 28:19 | 19). **L1 ammunition**: Romans 11:13, 9:24, 28:19 use ethnē to addres",
+   "ODV1-23855-7yf0umeo | John 24:26 | cessity (the same δεῖ as John 3:7, 3:14, 24:26); ἀγαγεῖν = to *lea"
+  ],
+  "cut40": [
+   "4fe4caba-09f2-47aa-8a3f-5c15d7c865d0 | Genesis 36:1-43",
+   "ODV1-26245-m5nh3phz | John 4:1-42",
+   "ODV1-26512-af2o9te5 | Luke 1:5-48"
+  ]
+ }
+}
